@@ -1,6 +1,0 @@
-PRNGD is a Pseudo Random Number Generator Daemon. It is intended
-to replace EGD, and provides an EGD compatible interface to obtain
-random data and as an entropy source.
-
-PRNGD is never drained and can never block.  And it has a seed-save
-file, so that it is immediately usable after system start.

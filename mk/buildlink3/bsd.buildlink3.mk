@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.163 2004/11/17 21:01:00 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.163.2.1 2004/11/22 22:48:05 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -183,15 +183,11 @@ BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 # We skip the dependency calculation for some phases since they never
 # use the dependency information.
 #
-_BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure	\
-				build test
-_BLNK_PHASES_RECURSIVE_DEPENDS=	extract
-.if !empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
-_BLNK_DEPENDS_LIST=	# empty
-.elif !empty(_BLNK_PHASES_RECURSIVE_DEPENDS:M${PKG_PHASE})
-_BLNK_DEPENDS_LIST=	${_BLNK_RECURSIVE_DEPENDS}
-.else
+#_BLNK_DEPENDS_LIST=	${_BLNK_RECURSIVE_DEPENDS} # XXXTV PR 24721
+.if !empty(PKG_PHASES:Mextract)
 _BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
+.else
+_BLNK_DEPENDS_LIST=	# empty
 .endif
 
 # Add the proper dependency on each package pulled in by buildlink3.mk
@@ -236,7 +232,7 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 ###
 ### BEGIN: after "wrapper" phase
 ###
-.if !empty(PHASES_AFTER_WRAPPER:M${PKG_PHASE})
+.if !empty(PKG_PHASES:Mwrapper)
 
 # Generate default values for:
 #
@@ -1084,18 +1080,10 @@ ${WRAPPER_TMPDIR}/transform-libtool: ${BUILDLINK_SRCDIR}/transform-libtool
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 WRAPPER_TARGETS+=	pre-buildlink do-buildlink post-buildlink
-.if !target(pre-buildlink)
-pre-buildlink:
-	@${DO_NADA}
-.endif
-.if !target(do-buildlink)
-do-buildlink:
-	@${DO_NADA}
-.endif
-.if !target(post-buildlink)
-post-buildlink:
-	@${DO_NADA}
-.endif
+
+pre-buildlink: .OPTIONAL
+do-buildlink: .OPTIONAL
+post-buildlink: .OPTIONAL
 
 .endif	# PHASES_AFTER_WRAPPER
 ###

@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1 2001/10/31 23:27:46 zuntum Exp $
-#
-if [ "$2" != "POST-INSTALL" ]; then
-  exit 0
-fi
-
-${PKG_PREFIX}/bin/texconfig rehash

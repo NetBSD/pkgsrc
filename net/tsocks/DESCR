@@ -1,8 +1,0 @@
-tsocks allows non SOCKS aware applications (e.g telnet, ssh, ftp etc) to use
-SOCKS without any modification.  It does this by intercepting the calls that
-applications make to establish network connections and negotiating them through
-a SOCKS server as necessary.
-
-tsocks is based on the 'shared library interceptor' concept.  Through use of
-the LD_PRELOAD environment variable, tsocks is automatically loaded into the
-process space of every executed program.

@@ -1,6 +1,0 @@
-The UW imapd is the reference implementation of the IMAP4 protocol for
-interactive remote retrieval of mail and storage of mail folders.  Also
-included are POP2 and POP3 servers and an IMAP protocol tester (mtest).
-
-The Pine mail program includes an IMAP4 client driver, as does Netscape
-version 4 and above.

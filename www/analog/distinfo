@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.18 2004/08/04 10:51:38 tron Exp $
-
-SHA1 (analog-5.32.tar.gz) = 81cd8c018663f905ce8c11175ca826f019765b4d
-Size (analog-5.32.tar.gz) = 1428349 bytes
-SHA1 (patch-aa) = 736bd5c425ec88b62d5d3873367bd3ee134b030c
-SHA1 (patch-ab) = e59f91bedf08f4ece6b36ee06bc8d7d7742948c4

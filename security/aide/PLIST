@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:28 zuntum Exp $
-bin/aide
-man/man1/aide.1
-man/man5/aide.conf.5

@@ -1,7 +1,0 @@
-OpenCM is designed as a secure, high-integrity replacement for CVS. A
-list of the key features can be found on the features page
-(http://www.opencm.org/features.html). While not as ``feature rich''
-as CVS, it supports some useful things that CVS lacks. Briefly, OpenCM
-provides first-class support for renames and configuration,
-cryptographic authentication and access control, and first-class
-branches.

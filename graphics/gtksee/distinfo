@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/28 13:52:51 hubertf Exp $
-
-SHA1 (gtksee-0.5.2.tar.gz) = 1a086b6ea0e148b30abe92473765c2ed8a61f64c
-Size (gtksee-0.5.2.tar.gz) = 251676 bytes
-SHA1 (patch-aa) = 39b140387bc438c287863b5458fdf709c046c261
-SHA1 (patch-ab) = 760a95053b70c7b5fca127f59ec3c2be2767659b
-SHA1 (patch-ac) = 52964ff539380a31e26d49cbff40509ce470bffc

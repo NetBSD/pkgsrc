@@ -1,6 +1,0 @@
-GNOME VFS provides an abstraction layer of the file system; applications
-use this layer to access many different protocols and simulate that they
-are part of the local file system.
-
-This package provides the cdda module for GNOME VFS, which allows it to
-retrieve audio tracks from CDDA capable CDROM drives.

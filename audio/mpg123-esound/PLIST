@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/28 12:15:49 markd Exp $
-bin/mpg123-esound
-man/man1/mpg123-esound.1

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:21 jlam Exp $
-bin/openobex-config
-include/openobex/obex.h
-include/openobex/obex_const.h
-lib/libopenobex.la
-share/aclocal/openobex.m4
-@dirrm include/openobex

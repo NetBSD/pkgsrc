@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/15 12:52:49 grant Exp $
-bin/overnet
-share/doc/overnet/README
-share/examples/overnet/contact.dat
-@dirrm share/examples/overnet
-@dirrm share/doc/overnet

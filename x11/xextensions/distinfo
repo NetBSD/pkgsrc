@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/05/08 22:21:06 minskim Exp $
-
-SHA1 (xextensions-1.0.1.tar.bz2) = b44c51e5e4577b6afc0d888c6997d2c756db8f8a
-Size (xextensions-1.0.1.tar.bz2) = 100782 bytes
-SHA1 (patch-aa) = 635045b5a3ee394419fa2b9d5171e3cfc462f180

@@ -1,4 +1,0 @@
-The FireCracker (CM17A) is a send-only X10 controller that connects
-to a serial port and transmits commands via RF to X10 transceivers.
-This module translates human-readable commands (eg. 'A2J') into the
-bit patterns and control signal pulses accepted by the CM17.

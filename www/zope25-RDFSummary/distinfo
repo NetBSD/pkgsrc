@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/20 22:35:04 drochner Exp $
-
-SHA1 (zope/RDFSummary-2.3.tgz) = 2cb2b241335b27291bd7211eda9b4fe8eab5c217
-Size (zope/RDFSummary-2.3.tgz) = 12367 bytes
-SHA1 (patch-aa) = ce00aeddb6908c961dceadea4fd8df2615cae1bd

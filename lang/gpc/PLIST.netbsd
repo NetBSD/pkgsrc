@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.netbsd,v 1.1 2003/06/06 05:46:22 jtb Exp $
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/specs
-@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/include
-@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
-@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}
-@dirrm lib/gcc-lib

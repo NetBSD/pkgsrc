@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/05/02 17:50:05 xtraeme Exp $
-
-SHA1 (daemontools-0.76.tar.gz) = 70a1be67e7dbe0192a887905846acc99ad5ce5b7
-Size (daemontools-0.76.tar.gz) = 36975 bytes
-SHA1 (daemontools-0.76-man.tar.gz) = 28e167def0e457f2be10aa90504c402fa08723ab
-Size (daemontools-0.76-man.tar.gz) = 8005 bytes

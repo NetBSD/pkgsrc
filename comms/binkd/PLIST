@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/24 18:10:53 jmmv Exp $
-man/man8/binkd.8
-sbin/binkd
-sbin/binkd-0.9.4
-share/examples/binkd/binkd.conf

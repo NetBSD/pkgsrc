@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/04/12 21:39:41 snj Exp $
-
-SHA1 (live.2003.04.04.tar.gz) = f5c7cffd92f5811c004c30e2b1f889f817539afb
-Size (live.2003.04.04.tar.gz) = 276978 bytes
-SHA1 (patch-aa) = dd4a99f255200d89b3bc9c6e709c53d8e4817e5c
-SHA1 (patch-ab) = c1db6185f37f61bf1645d122fbd480c2f9502c79
-SHA1 (patch-ac) = 61b890142c0d8870a245de0d50a3762266419e8c

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/22 17:05:51 jmmv Exp $
-bin/xmp
-bin/xxmp
-man/man1/xmp.1
-man/man1/xxmp.1
-share/examples/xmp/xmp-modules.conf
-share/examples/xmp/xmp.conf
-@dirrm share/examples/xmp

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/02/14 17:21:07 wiz Exp $
-
-SHA1 (doc2html.tar.gz) = 3681eb77c92be67e495826cca0b28ef7977993d6
-Size (doc2html.tar.gz) = 15054 bytes
-SHA1 (patch-aa) = 5ada7d696b60272eef591c5407900b9aab2ea047
-SHA1 (patch-ab) = 4fc655ec753713a25a7f98fd9d3933ba5ff1d6ff

@@ -1,9 +1,0 @@
-ntop version 2 is a tool to sniff traffic on the network and display
-statistics about it. It has a built-in web server for displaying the
-results of the data it collects, and it can also generate data in
-various formats (such as NetFlow) to be passed on to other systems.
-
-Note that version 2 of ntop is significantly different from version 1.
-It is much larger and has many more features. If you're looking for a
-more light-weight tool, you may find that version 1 (the "ntop" package)
-suits you better.

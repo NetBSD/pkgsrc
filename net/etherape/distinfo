@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/11/22 15:27:53 adam Exp $
-
-SHA1 (etherape-0.9.1.tar.gz) = d9eb267e1ff5992bf120f8bbefc974660a203909
-Size (etherape-0.9.1.tar.gz) = 447092 bytes
-SHA1 (patch-aa) = e6b41ead7de0a0ce5f293f742e3e79cfe2d65021

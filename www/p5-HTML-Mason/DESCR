@@ -1,7 +1,0 @@
-Mason allows web pages and sites to be constructed from shared,
-reusable building blocks called components. Components contain a
-mix of Perl and HTML, and can call each other and pass values back
-and forth like subroutines. Components increase modularity and
-eliminate repetitive work: common design elements (headers, footers,
-menus, logos) can be extracted into their own components where they
-need be changed only once to affect the whole site.

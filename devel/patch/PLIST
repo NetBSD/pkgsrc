@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/07 10:33:27 grant Exp $
-bin/${GNU_PROGRAM_PREFIX}patch
-${PATCH_LINK}bin/gpatch
-man/man1/${GNU_PROGRAM_PREFIX}patch.1

@@ -1,5 +1,0 @@
-Logtime prints the date and time in a set format (YYYYMMDD hh:mm:ss).
-
-With the -p option logtime subtracts one day from the date if the time
-is before 8am.  This is a special hack to make scripts that run in
-the early morning hours generate log files with the previous days date.

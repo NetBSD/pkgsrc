@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:55 zuntum Exp $
-bin/swarm
-share/doc/swarm/swarm.pdf
-@dirrm share/doc/swarm

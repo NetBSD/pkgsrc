@@ -1,5 +1,0 @@
-Winbind uses a UNIX implementation of Microsoft RPC calls, Pluggable
-Authentication Modules, and the Name Service Switch to allow Windows NT
-domain users to appear and operate as UNIX users on a UNIX machine.
-Users and groups are allocated as they are resolved to a range of user and
-group ids specified by the administrator of the Samba system.

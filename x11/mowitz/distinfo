@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/03/05 13:14:56 wiz Exp $
-
-SHA1 (Mowitz-0.2.2.tar.gz) = 534a8b9e56b5816f134a9d20410cf77a257586fd
-Size (Mowitz-0.2.2.tar.gz) = 1036719 bytes
-SHA1 (patch-aa) = a154f49e00a8b1fd5819c5c14b72ee986a772629

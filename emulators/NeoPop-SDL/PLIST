@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/25 12:27:46 wiz Exp $
-bin/NeoPop-SDL
-man/man5/neopoprc.5
-man/man6/NeoPop-SDL.6
-share/doc/NeoPop-SDL/TODO
-share/doc/NeoPop-SDL/bugs-core.html
-@dirrm share/doc/NeoPop-SDL

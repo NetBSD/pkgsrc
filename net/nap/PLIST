@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:23 zuntum Exp $
-bin/nap
-share/doc/nap/README
-share/examples/nap/nap.conf
-@dirrm share/examples/nap
-@dirrm share/doc/nap

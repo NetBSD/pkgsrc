@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:42 wiz Exp $
-
-SHA1 (xskat-3.4.tar.gz) = dd74fdb8234ab05fc688a0a95217ca33777bb986
-Size (xskat-3.4.tar.gz) = 291348 bytes
-SHA1 (patch-aa) = 95c42daaa5d713d72514908dfe4af284a774c6c7

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/07/02 10:06:33 jmmv Exp $
-
-SHA1 (scrot-0.8.tar.gz) = 674fcb4860f1dcfa02cde7d82414e1e1c731aa75
-Size (scrot-0.8.tar.gz) = 74324 bytes
-SHA1 (patch-aa) = b42dd5e4e336db20cd1da9ceabb29392bd2c4f5d
-SHA1 (patch-ab) = d4da1775b6174f20785557ab96404514d426c5d0

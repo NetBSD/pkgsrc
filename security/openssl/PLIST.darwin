@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.darwin,v 1.4 2003/10/02 02:34:39 jschauma Exp $
-lib/libcrypto.300.1.dylib
-lib/libcrypto.300.dylib
-lib/libcrypto.dylib
-lib/libssl.300.1.dylib
-lib/libssl.300.dylib
-lib/libssl.dylib

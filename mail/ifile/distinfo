@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/08/20 11:47:40 salo Exp $
-
-SHA1 (ifile-1.3.4.tar.gz) = 38d1d261519ed6b95c4ca65f3aafc38fdf074892
-Size (ifile-1.3.4.tar.gz) = 186236 bytes
-SHA1 (patch-aa) = c61f441f9bcae546fcebe351be02cad9f1e3b00a

@@ -1,7 +1,0 @@
-This is a powerful frontend for the MiniSQL or MySQL database
-engines, that allows the user to search the database through easy
-to use searchforms, select databases and tables from a menu, modify
-records just by clicking them in a browser and much more.  Xsqlmenu
-supports having multiple tablewindows open at the same time (even
-from different databases !).  Also free SQL SELECT statements are
-allowed (although they have a few restrictions to avoid confusion).

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:45 skrll Exp $
-
-SHA1 (tkman.tar.gz) = 0474cbe2704ee5cb01155c655594c669d844e6eb
-Size (tkman.tar.gz) = 224735 bytes
-SHA1 (patch-aa) = 595396ea2c269904523bba1485cb54ac2efc2903
-SHA1 (patch-ab) = 96eb4193fceaa07e2c1f31f0fb44923a1cb5a8f6
-SHA1 (patch-ac) = 4178da9370cdfc5da0231b12735da89f4cc6fe41
-SHA1 (patch-ad) = ca4dbeaa9c4f2d630f025796d464034d6f524eb5

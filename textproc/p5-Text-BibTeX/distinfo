@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:02 skrll Exp $
-
-SHA1 (Text-BibTeX-0.33.tar.gz) = 2e92126e96c8b3b2424a13822893fafdd6978fe0
-Size (Text-BibTeX-0.33.tar.gz) = 85145 bytes
-SHA1 (btparse-0.32.tar.gz) = 8a0a5b10081ad5597975505ac4b8b91fca657df0
-Size (btparse-0.32.tar.gz) = 206992 bytes
-SHA1 (patch-aa) = 5bbfb870bbbd662e7aad59e50f8b254692c66279
-SHA1 (patch-ab) = 067a3d57c9f39323fcf01b1ba096a8458cb6ad74

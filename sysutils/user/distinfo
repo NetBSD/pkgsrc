@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:10 agc Exp $
-
-SHA1 (user-20000509.tar.gz) = 7bdd54a7150c20432dd81fde8d086cd52b3f2fe4
-Size (user-20000509.tar.gz) = 17755 bytes
-SHA1 (patch-aa) = bb47a90980043726052e472f1be21d1a63962b5f

@@ -1,5 +1,0 @@
-# $NetBSD: site.config.m4-starttls,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
-
-# enable STARTTLS
-APPENDDEF(`conf_sendmail_ENVDEF', `-DSTARTTLS')
-APPENDDEF(`conf_sendmail_LIBS', `-lssl -lcrypto')

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 21:51:23 jlam Exp $
-
-SHA1 (glclock-6.0b6.0.tar.gz) = e276a516d543c9a6c04f06cfa046f89a476a8685
-Size (glclock-6.0b6.0.tar.gz) = 811803 bytes
-SHA1 (patch-aa) = 388d8c9e3236f377912dd6261af50cd42064eb22
-SHA1 (patch-ab) = 8d4f12c9948d703e4fbff68282388efc7a352f59

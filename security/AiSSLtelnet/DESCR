@@ -1,2 +1,0 @@
-This SSL patch, which comes from the SSL telnet v0.11 based on
-the OpenSSL, is AiSSL based implementation of the telnet(d).

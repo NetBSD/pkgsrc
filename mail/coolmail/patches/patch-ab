@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:29 agc Exp $
-
---- coolmail.c.orig	Thu Jul 16 05:09:10 1998
-+++ coolmail.c	Thu Jul 16 05:11:28 1998
-@@ -36,3 +36,3 @@
- 
--#define DEFAULT_MAIL_DIR  "/var/spool/mail/"
-+#define DEFAULT_MAIL_DIR  "/var/mail/"
- #define DEFAULT_COMMAND   "xterm -n Elm -e mail\0"

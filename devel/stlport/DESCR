@@ -1,7 +1,0 @@
-STLPort features a complete ANSI C++ standard library. Main features are:
-+ Includes <complex> and SGI iostreams.
-+ Can be configured to use either SGI or native iostreams.
-+ Debug mode containers are implemented in terms of wrappers around non-debug
-  ones. That provides for more clean and efficient implementation. In Debug
-  Mode, different namespace _STLD:: is being used, so no link-time clashes
-  between debug and non-debug versions are possible.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 20:41:22 agc Exp $
-bin/tunesbrowser
-share/tunesbrowser.glade

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/29 11:45:50 abs Exp $
-bin/cpuflags
-man/man1/cpuflags.1
-share/mk/cpuflags.mk
-share/mk/optimize_gcc.mk

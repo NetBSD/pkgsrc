@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 22:48:15 wiz Exp $
-lib/libvisual/actor/actor_nebulus.la
-share/libvisual/actor/actor_nebulus/background_texture.bmp
-share/libvisual/actor/actor_nebulus/child_texture.bmp
-share/libvisual/actor/actor_nebulus/energy_texture.bmp
-share/libvisual/actor/actor_nebulus/tentacle_texture.bmp
-share/libvisual/actor/actor_nebulus/tunnel_texture.bmp
-share/libvisual/actor/actor_nebulus/twist_texture.bmp
-@dirrm share/libvisual/actor/actor_nebulus

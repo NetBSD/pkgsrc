@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/05/24 18:12:36 martin Exp $
-
-SHA1 (pload-0.9.4.tar.gz) = 2e93a7796049d0132629cdd8c85e8ce54a270c60
-Size (pload-0.9.4.tar.gz) = 21244 bytes
-SHA1 (patch-aa) = c5765141126846da5a71a3a35307ebca2dc3f7cc
-SHA1 (patch-ab) = 53a211ff7d0990d649472e69451a144d31603a61
-SHA1 (patch-ac) = 345ac88bb5d279039ae0169c2b468b22964a0c09

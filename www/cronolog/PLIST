@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/11 15:33:29 seb Exp $
-man/man8/cronolog.8
-man/man8/cronosplit.8
-sbin/cronolog
-sbin/cronosplit

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:20 zuntum Exp $
-bin/xmix
-lib/X11/app-defaults/XMix
-man/cat1/xmix.0

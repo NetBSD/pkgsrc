@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.177 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.177.2.1 2004/11/22 22:48:05 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -285,20 +285,34 @@ SHAREMODE?=		${DOCMODE}
 .endif
 
 PKGDIRMODE?=		755
-PKG_PHASE?=		none
-#
-# The PHASES_AFTER_<phase> variables list every phase "greater than or
-# equal to" <phase>.
-#
-PHASES_AFTER_FETCH=	fetch ${PHASES_AFTER_EXTRACT}
-PHASES_AFTER_EXTRACT=	extract ${PHASES_AFTER_PATCH}
-PHASES_AFTER_PATCH=	patch ${PHASES_AFTER_TOOLS}
-PHASES_AFTER_TOOLS=	tools ${PHASES_AFTER_WRAPPER}
-PHASES_AFTER_WRAPPER=	wrapper ${PHASES_AFTER_CONFIGURE}
-PHASES_AFTER_CONFIGURE=	configure ${PHASES_AFTER_BUILD}
-PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
-PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}
-PHASES_AFTER_PACKAGE=	package
+
+.if make(package) || make(real-su-package) || make(show-var) || make(show-vars)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test install package
+.elif make(install) || make (real-su-install) || make(replace) || make(real-su-replace)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test install
+.elif make(test)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test
+.elif make(build)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build
+.elif make(configure)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure
+.elif make(wrapper)
+PKG_PHASES=	fetch checksum depends extract patch tools wrapper
+.elif make(tools)
+PKG_PHASES=	fetch checksum depends extract patch tools
+.elif make(patch)
+PKG_PHASES=	fetch checksum depends extract patch
+.elif make(extract)
+PKG_PHASES=	fetch checksum depends extract
+.elif make(depends)
+PKG_PHASES=	fetch checksum depends
+.elif make(checksum)
+PKG_PHASES=	fetch checksum
+.elif make(fetch)
+PKG_PHASES=	fetch
+.else
+PKG_PHASES=	# empty
+.endif
 
 # Set the style of installation to be performed for the package.  The
 # funky make variable modifiers just select the first word of the value
@@ -351,8 +365,6 @@ USE_XPKGWEDGE=	yes
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_XPKGWEDGE=		yes
 _XPKGWEDGE_REQD=	1.9
-.else
-_XPKGWEDGE_REQD=	1.5
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
@@ -540,5 +552,32 @@ PKG_OPTIONS?=		# empty
 .if exists(${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk)
 .  include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
 .endif
+
+.if !defined(DEPENDS_TARGET)
+.  if make(package)
+DEPENDS_TARGET=	package
+.  elif make(update)
+.    if defined(UPDATE_TARGET) && ${UPDATE_TARGET} == "replace"
+DEPENDS_TARGET=	${UPDATE_TARGET}
+.    else
+DEPENDS_TARGET=	update
+.    endif
+.  elif make(bin-install)
+DEPENDS_TARGET=	bin-install
+.  else
+DEPENDS_TARGET=	reinstall
+.  endif
+.endif
+
+.if !defined(UPDATE_TARGET)
+.  if ${DEPENDS_TARGET} == "update"
+.    if make(package)
+UPDATE_TARGET=	package
+.    else
+UPDATE_TARGET=	install
+.    endif
+.  endif
+.endif
+UPDATE_TARGET?=	${DEPENDS_TARGET}
 
 .endif	# BSD_PKG_MK

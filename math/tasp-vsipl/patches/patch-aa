@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.2 2003/07/10 12:43:10 jtb Exp $
-
---- /dev/null	Sat May  5 19:44:41 2001
-+++ Makefile
-@@ -0,0 +1,3 @@
-+SUBDIR= libvsip libVU libVUX
-+
-+.include <bsd.subdir.mk>

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:50:01 agc Exp $
-
-SHA1 (xbeeb-0.3.6.tgz) = 233f9a3bacfdcb4b6e17ee8e22c712a1c05983d6
-Size (xbeeb-0.3.6.tgz) = 270231 bytes
-SHA1 (patch-aa) = 68b91908397147aecf1e1644f597802d6380aa96
-SHA1 (patch-ab) = 96ad3aa048ed224757ca51e0abe43baeaaceacdb
-SHA1 (patch-ac) = 72622acf9671ac0f72bd9b8271fc17f25d3655f1
-SHA1 (patch-ad) = 120be917d8b0ffa83c537e7a4b9a86f354e46886

@@ -1,12 +1,0 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/05/31 13:01:20 seb Exp $
-
---- ./uip/mhn.c.orig	Tue Feb  9 20:30:00 1999
-+++ ./uip/mhn.c	Mon Nov  1 19:13:30 1999
-@@ -19,4 +19,7 @@
- #include	<locale.h>
- #endif
-+#ifdef	UNISTD
-+#include <unistd.h>
-+#endif
- 
- /*  */

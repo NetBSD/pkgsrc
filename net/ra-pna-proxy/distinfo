@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/10 05:29:39 tron Exp $
-
-SHA1 (raproxy3.0b1.tar.gz) = 72e91a7cae16599d97d97f7fa5eec5380bab642f
-Size (raproxy3.0b1.tar.gz) = 138484 bytes
-SHA1 (patch-aa) = 76d9d05a5c5de0549a10f7268672a5d929af8d06
-SHA1 (patch-ab) = 25e1e53b33a77bd80aca047cad14e722c2f282f9

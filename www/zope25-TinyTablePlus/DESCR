@@ -1,6 +1,0 @@
-TinyTablePlus is a product designed to manage a small amount of
-tabular data.  It's intended to fill the gap between a Z Table or an Z
-SQL Methods accessed SQL table, which are overkill for many tasks, and
-folder token properties, which allow only a single "column".  TinyTablePlus
-also makes it possible to look up an item within the list, or to return
-a subset of the list rows where columns equal particular values.

@@ -1,4 +1,0 @@
-pine-pgp-filters are simple, fast, Bourne Shell-based pgp filters
-for Pine. They use gnupg if it's available. It includes encrypt,
-decrypt, sign, and verify functions and a pseudo-filter to verify
-messages that were sent using MIME encoding to attach the signature.

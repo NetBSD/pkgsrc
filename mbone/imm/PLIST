@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:35:04 zuntum Exp $
-bin/imm
-bin/immserv
-bin/mnm
-bin/mdpsniff

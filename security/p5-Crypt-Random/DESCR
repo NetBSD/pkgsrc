@@ -1,4 +1,0 @@
-Crypt::Random is an interface module to the /dev/random device found on most
-modern Unix systems. The /dev/random driver gathers environmental noise from
-various non-deterministic sources including inter-keyboard timings and
-inter-interrupt timings that occur within the operating system environment.

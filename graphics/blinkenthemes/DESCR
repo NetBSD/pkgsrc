@@ -1,3 +1,0 @@
-Themes for Blinkenlights simulator.  The themes format is defined in the blib
-package which also contains code to parse the format as well as display
-widgets for GTK+ and DirectFB that make use of the themes.

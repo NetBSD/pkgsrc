@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:48 zuntum Exp $
-bin/logsurfer
-man/man1/logsurfer.1.gz
-man/man4/logsurfer.conf.4.gz

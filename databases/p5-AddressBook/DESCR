@@ -1,3 +1,0 @@
-Perl-AddressBook is a collection of perl library modules which provide a
-unified interface for accessing addressbook entries stored in various
-types of databases, e.g. LDAP, LDIF, PalmDB, DBI, text, HTML.

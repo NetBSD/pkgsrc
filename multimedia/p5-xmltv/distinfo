@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/10/27 17:58:33 adrianp Exp $
-
-SHA1 (xmltv-0.5.36.tar.bz2) = e474c99deafebe5d7612498c4d17633bea7d0c8e
-Size (xmltv-0.5.36.tar.bz2) = 409025 bytes
-SHA1 (patch-aa) = b198091168841e5f770ca332772b7351b44bef0b

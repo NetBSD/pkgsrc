@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/07/03 07:05:09 cjep Exp $
-
-SHA1 (ee-1.4.5a.src.tgz) = b8e6a192ae25ef474af258cc3d59c3de7a9639fc
-Size (ee-1.4.5a.src.tgz) = 70378 bytes
-SHA1 (patch-aa) = b06c957864d790b46e7e133f5abb4ceb877aa15a
-SHA1 (patch-ab) = 60f95dc10b4a41f237120784ef6220a9cf2b2408
-SHA1 (patch-ac) = cf3c94a42825a86941a40a8a66c7f413c51d0ac7

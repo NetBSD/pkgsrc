@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:31:44 zuntum Exp $
-bin/lintpkgsrc
-bin/pkglint
-bin/plist-clash
-man/cat1/lintpkgsrc.0
-man/cat1/pkglint.0
-man/man1/lintpkgsrc.1
-man/man1/pkglint.1

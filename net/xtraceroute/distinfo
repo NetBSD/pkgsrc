@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:41 wiz Exp $
-
-SHA1 (xtraceroute-0.8.14.tar.gz) = f7e21072fb653842aaed7ae2be5a0d33573bb654
-Size (xtraceroute-0.8.14.tar.gz) = 981579 bytes
-SHA1 (ndg_files.tar.gz) = 994aeb804dd063f6fd2bf499addd4b5e8aca81cc
-Size (ndg_files.tar.gz) = 90437 bytes
-SHA1 (patch-aa) = f2477f850ffd683fc6c6ef7fd7040ecff20ffa97
-SHA1 (patch-ab) = 752713d3ec6d013987f6b8c48f3a2e59636b421c
-SHA1 (patch-ac) = 7dbf4818d90c6cf85e06ae423daf56e2e1f1df66

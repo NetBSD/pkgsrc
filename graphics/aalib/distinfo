@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/09/15 13:04:35 drochner Exp $
-
-SHA1 (aalib-1.4rc4.tar.gz) = a11c16b258bf9b64b135858afabc7f3a45222a4a
-Size (aalib-1.4rc4.tar.gz) = 390812 bytes
-SHA1 (patch-aa) = 927d69a8f499b99f0bd5f13cf220ce8cbb7ea591

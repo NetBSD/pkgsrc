@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/08/12 00:31:56 dmcmahill Exp $
-
-SHA1 (gkx86info0.0.2.tar.gz) = c8f0855641177c6d2f53a1a98c1ae88469df12eb
-Size (gkx86info0.0.2.tar.gz) = 9429 bytes
-SHA1 (patch-aa) = 2d0253662c5fcbbfb9e81cd04c304866284e229b
-SHA1 (patch-ab) = 1980acc7ab1ad6e617536117622d88a30b9dcde7

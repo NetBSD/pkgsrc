@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2004/04/17 18:40:08 ben Exp $
-man/cat1/fltk-config.0
-man/cat1/fluid.0
-man/cat3/fltk.0

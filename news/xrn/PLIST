@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/03 02:56:01 jschauma Exp $
-bin/xrn
-lib/X11/app-defaults/XRn
-${IMAKE_MAN_DIR}/xrn.${IMAKE_MANNEWSUFFIX}
-share/doc/xrn/COMMON-PROBLMS
-share/doc/xrn/COPYRIGHT
-share/doc/xrn/CREDITS
-share/doc/xrn/ChangeLog
-@dirrm share/doc/xrn

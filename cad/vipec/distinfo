@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/02/06 00:50:54 dmcmahill Exp $
-
-SHA1 (ViPEC-3.1.3.tar.gz) = 987d2dffe04309508cb9fb6e31ed2e7ca09fcb12
-Size (ViPEC-3.1.3.tar.gz) = 178029 bytes
-SHA1 (patch-aa) = 6b6b40760bfcc779d569f0f5a7bcac8f2550ab8b

@@ -1,7 +1,0 @@
-Mod_Layout creates a framework for doing design. Whether you need a
-simple copyright or ad banner attached to every page, or need to have
-something more challenging such a custom look and feel for a site that
-employs an array of technologies (Java Servlets, mod_perl, PHP, CGI's,
-static HTML, etc...), Mod_Layout creates a framework for such an
-environment. By allowing you to cache static components and build sites
-in pieces, it gives you the tools for creating large custom portal sites.

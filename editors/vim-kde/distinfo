@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/03/31 04:31:20 snj Exp $
-
-SHA1 (kvim-6.2.14.tar.bz2) = df6b14439536c4b5c8f3ca38d1a17de5bc284dbe
-Size (kvim-6.2.14.tar.bz2) = 5014326 bytes
-SHA1 (patch-aa) = ddf558e980ac8aaf4004e61cd4a231b380fb6557

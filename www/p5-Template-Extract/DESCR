@@ -1,8 +1,0 @@
-This module is a subclass of the Template toolkit, with added
-template extraction functionality.  It can take a rendered document
-and its template together, and get the original data structure
-back, effectively reversing the "process" function.
-
-This module is considered experimental.  If you just wish to extract
-RSS-type information out of a HTML document, WWW::SherlockSearch
-may be a more robust solution.

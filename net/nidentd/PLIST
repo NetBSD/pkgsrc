@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/05 23:51:27 hubertf Exp $
-etc/nidentd.fake.example
-etc/nidentd.nat.example
-libexec/nidentd

@@ -1,13 +1,0 @@
-$NetBSD: patch-aj,v 1.1 2004/01/01 00:00:02 gavan Exp $
-
---- libgnomevfs/gnome-vfs-method.c.orig	2001-09-04 23:24:22.000000000 +0100
-+++ libgnomevfs/gnome-vfs-method.c
-@@ -36,6 +36,8 @@
- #include <libgnomevfs/gnome-vfs-module.h>
- #include <libgnomevfs/gnome-vfs-private.h>
- 
-+#undef tell
-+
- 
- struct _ModuleElement {
- 	char *name;

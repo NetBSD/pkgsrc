@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/09/12 16:19:51 drochner Exp $
-
-SHA1 (gnomemm-1.2.4.tar.gz) = e579c72a3166fb5ec22857caf5a658bb505f8420
-Size (gnomemm-1.2.4.tar.gz) = 362158 bytes
-SHA1 (patch-aa) = e5adda72de01f514ff541ab48c7e11027cfdd365

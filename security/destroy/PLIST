@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/12 18:01:57 recht Exp $
-bin/destroy
-man/man1/destroy.1

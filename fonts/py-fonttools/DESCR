@@ -1,6 +1,0 @@
-FontTools is a library for manipulating fonts, written in Python.  It
-supports TrueType, OpenType, AFM and to an extent Type 1 and some
-Mac-specific formats.
-
-This package also includes TTX: a tool to convert OpenType and TrueType
-fonts to and from XML.

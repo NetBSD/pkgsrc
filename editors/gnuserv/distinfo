@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/08 05:46:34 epg Exp $
-
-SHA1 (gnuserv-3.12.6.tar.gz) = 6d5a3d2366a9ccb69258b8e6c0ea6924f86f4908
-Size (gnuserv-3.12.6.tar.gz) = 92501 bytes
-SHA1 (patch-aa) = f10c267b84290265df2a757454b0548bf8383889

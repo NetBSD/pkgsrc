@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/03/01 15:54:45 adam Exp $
-
-SHA1 (libmad-0.15.1b.tar.gz) = cac19cd00e1a907f3150cc040ccc077783496d76
-Size (libmad-0.15.1b.tar.gz) = 502379 bytes
-SHA1 (patch-aa) = 82271980d28d151b6b85987e075ad15dace4ed3b

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:47 skrll Exp $
-
-SHA1 (weblint-1.020.tar.gz) = 445cc723ff2a25095c48aa52bd3f082fef22ba0c
-Size (weblint-1.020.tar.gz) = 41264 bytes
-SHA1 (patch-aa) = d21483dab233a9d2c4fe032dcabc705cf767a41c

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/04/29 22:41:44 jtb Exp $
-
-SHA1 (yorick-1.5.12.tgz) = bdc39b62c24f729ed06762b37a0ccac855ea5d8d
-Size (yorick-1.5.12.tgz) = 2095550 bytes
-SHA1 (patch-aa) = 45501359af6fc3ea72a5e71ca1085a02e199603b

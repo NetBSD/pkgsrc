@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/04/30 13:19:03 jschauma Exp $
-
-SHA1 (wmfstatus-0.4.tar.gz) = c6f7bfa9fe51ac4e85912921d04a4ba7f7906b1f
-Size (wmfstatus-0.4.tar.gz) = 20004 bytes
-SHA1 (patch-aa) = 2c4c1fc06509de2a816f83685b9ab64c7ed13622

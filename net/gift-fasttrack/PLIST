@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:47 jlam Exp $
-lib/giFT/libFastTrack.la
-share/giFT/FastTrack/FastTrack.conf.template
-share/giFT/FastTrack/banlist
-share/giFT/FastTrack/nodes
-@dirrm share/giFT/FastTrack

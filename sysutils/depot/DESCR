@@ -1,4 +1,0 @@
-Depot manages packages similar to pkg_* and RPM, but does so by mapping
-several installation trees into a common base (such as /usr/local) using
-symbolic links.  GNU's `stow' was inspired by Depot, though both have
-features that the other does not.

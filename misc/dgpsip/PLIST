@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:53 zuntum Exp $
-bin/dgpsip
-man/man1/dgpsip.1

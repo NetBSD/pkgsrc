@@ -1,9 +1,0 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/04/17 19:13:45 xtraeme Exp $
-
-To run Quake 2(TM), you must place the .pak files from your Quake 2
-CD into:
-
-    ${PREFIX}/share/quake2forge/baseq2
-
-==========================================================================

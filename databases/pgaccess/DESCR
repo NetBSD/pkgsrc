@@ -1,4 +1,0 @@
-PgAccess is a free graphical database management tool for PostgreSQL.  It
-supports table operations, queries, sequence manipulation, function
-definitions for PL/PgSQL and PgTCL, form and report design, and scripting
--- all within a Tcl/Tk GUI.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/07/22 14:11:25 wiz Exp $
-
-SHA1 (poink-1.6.tar.gz) = bc0c28f3901a4cff70ffff89bf7e59e48912f482
-Size (poink-1.6.tar.gz) = 10743 bytes
-SHA1 (patch-aa) = 1df3acd27e332af43e2a67a0110248abf0cbd874
-SHA1 (patch-ab) = 726aa54dc26a79e3d89734ac322bff088b503927

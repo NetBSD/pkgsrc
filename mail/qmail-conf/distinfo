@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/09/30 10:53:43 zuntum Exp $
-
-SHA1 (qmail-conf-0.60.tar.gz) = d9a48e15394b0e7beaf5f7c64db4be101a71fb08
-Size (qmail-conf-0.60.tar.gz) = 6332 bytes
-SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
-Size (djbdns-1.05.tar.gz) = 85648 bytes

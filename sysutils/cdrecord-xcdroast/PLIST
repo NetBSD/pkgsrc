@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/02 18:41:20 drochner Exp $
-lib/xcdroast-0.98/bin/cdda2wav
-lib/xcdroast-0.98/bin/cdrecord
-lib/xcdroast-0.98/bin/mkisofs
-lib/xcdroast-0.98/bin/readcd
-@dirrm lib/xcdroast-0.98/bin
-@dirrm lib/xcdroast-0.98

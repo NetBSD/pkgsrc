@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/11/26 10:40:01 abs Exp $
-
-SHA1 (cxunzip-0.98.tar.gz) = 515721b5e016d0384deadbc61ba0cfe0d042d16f
-Size (cxunzip-0.98.tar.gz) = 188499 bytes
-SHA1 (patch-aa) = fa6c6d1817f43c2f373209cbae5a300189595857

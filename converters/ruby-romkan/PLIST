@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:00:12 seb Exp $
-${RUBY_SITELIBDIR}/romkan.rb
-${RUBY_DOCDIR}/romkan/romkan.html
-${RUBY_DOCDIR}/romkan/romkan.html.ja
-${RUBY_DOCDIR}/romkan/romkan.ja.rd
-${RUBY_DOCDIR}/romkan/romkan.rd
-@dirrm ${RUBY_DOCDIR}/romkan

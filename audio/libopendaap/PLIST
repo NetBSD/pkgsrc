@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:16 jlam Exp $
-include/daap/client.h
-lib/libopendaap.la
-lib/pkgconfig/opendaap.pc
-@dirrm include/daap

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:59 zuntum Exp $
-sbin/pptpd
-sbin/pptpctrl
-man/man8/pptpd.8
-man/man8/pptpctrl.8
-man/man5/pptpd.conf.5

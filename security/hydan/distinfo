@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/09/16 16:12:57 he Exp $
-
-SHA1 (hydan-0.13.tar.gz) = 3c76bf1a1adb36a5124163cbbd55f9aff1afdb6e
-Size (hydan-0.13.tar.gz) = 180409 bytes
-SHA1 (patch-aa) = 34120bf1202ed25060743a9f9a390ba3c73515f8
-SHA1 (patch-ab) = 028a4bb8313b4cf5d016603757865af6bd7f846c
-SHA1 (patch-ac) = bb978ce95b03a3887bd8b91b9494c47fbf3e78b7
-SHA1 (patch-ad) = 2dcf378abfc6f5509fb91173723fbe073ddc8055

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/06/12 12:44:33 grant Exp $
-
-SHA1 (xxgdb-1.12.tar.gz) = dbe55e0fbc1f4b40ce92bfe845dc18c6ac2a084d
-Size (xxgdb-1.12.tar.gz) = 115537 bytes
-SHA1 (patch-aa) = 3dc10633e4c60af814c970f6ee5386401e7c8cd2
-SHA1 (patch-ab) = 06c004ff9cc433805fb35933cbfdb27cdd6c403b
-SHA1 (patch-ac) = 3b6f2ff1dfc703c3110322f4aea9f58c08473c85
-SHA1 (patch-ad) = 27be70ac684ad8f61e33cc4fc25177e8c3b92f13

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:32 agc Exp $
-
-SHA1 (libbf-0.8.2b.tar.gz) = 46b4ae98937ee82dbeaeaf3e446dbabe755934d1
-Size (libbf-0.8.2b.tar.gz) = 40210 bytes
-SHA1 (patch-aa) = 406a6ba0d5a21d3c01816ac2b0a396c3c3085cdd

@@ -1,5 +1,0 @@
-tremor-tools contains an Ogg Vorbis command-line player, it uses the tremor
-library as a backend.
-
-Note that igg123 is the only installed binary, it is identical in behaviour as
-ogg123.

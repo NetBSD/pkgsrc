@@ -1,6 +1,0 @@
-OpenRM Scene Graph is a developers toolkit that implements a scene graph
-API, and which uses OpenGL for hardware accelerated rendering. OpenRM is
-intended to be used to construct high performance, portable graphics and
-scientific visualization application s on Unix/Linux/Windows platforms. It
-supports parallelism at several levels in the application, from use on
-distributed memory parallel platforms to single-CPU systems.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/05/10 23:18:47 minskim Exp $
-
-SHA1 (tnef2txt-1.4.tar.gz) = 012c86f5c3812c38ff1a79efa4f0c4468e92eb78
-Size (tnef2txt-1.4.tar.gz) = 36568 bytes
-SHA1 (patch-aa) = 166a353bd13a4231c77816a1231a95ef21f22d4d

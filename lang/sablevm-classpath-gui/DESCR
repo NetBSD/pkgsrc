@@ -1,7 +1,0 @@
-SableVM is a portable bytecode interpreter written in C, and implementing
-the Java virtual machine specification, second edition.  Its goals are to
-be reasonably small, fast and efficient, as well as providing a well
-designed and robust platform for conducting research.
-
-This package contains the GTK binding required to run AWT and Swing
-applications with sablevm-classpath and sablevm.

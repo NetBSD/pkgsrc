@@ -1,7 +1,0 @@
-GTK+ is a multi-platform toolkit for creating graphical user interfaces.
-Offering a complete set of widgets, GTK+ is suitable for projects ranging
-from small one-off tools to complete application suites.
-
-This meta package installs the GTK+ toolkit together with several extra
-engines and themes, which may be required to install additional third-party
-themes.

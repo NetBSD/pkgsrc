@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/08/25 07:56:18 cjs Exp $
-
-SHA1 (tcpflow-0.20.tar.gz) = 833d369e36828fa132106df93c604cc1c42c23c7
-Size (tcpflow-0.20.tar.gz) = 72131 bytes
-SHA1 (patch-aa) = 20745c63984205324fa8f3ea17035376a1d10844
