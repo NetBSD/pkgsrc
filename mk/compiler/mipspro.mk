@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.10 2004/02/05 03:39:17 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.11 2004/02/05 22:05:42 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -24,9 +24,10 @@ CXX=	${MIPSPROBASE}/bin/CC
 .  endif
 
 .  if exists(${CC})
-CC_VERSION!=	${CC} -V 2>&1 | ${GREP} '^cc'
+# MIPSpro Compilers: Version 7.3.1.2m
+CC_VERSION!=	${CC} -version 2>&1 | ${GREP} '^MIPSpro'
 .  else
-CC_VERSION=	mipspro
+CC_VERSION=	MIPSpro
 .  endif
 .endif	# COMPILER_MIPSPRO_MK
 
