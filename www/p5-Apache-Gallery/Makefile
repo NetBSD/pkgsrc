@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/09/06 03:52:07 kim Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/21 16:21:14 kim Exp $
 #
 
-DISTNAME=	Apache-Gallery-0.6
+DISTNAME=	Apache-Gallery-0.7
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5aga
 CATEGORIES=	www graphics
@@ -11,11 +11,12 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://apachegallery.dk/
 COMMENT=	Perl5/Apache module for handling image directories
 
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
+DEPENDS+=	p5-URI>=1.23:../../www/p5-URI
+DEPENDS+=	p5-Image-Imlib2-[0-9]*:../../graphics/p5-Image-Imlib2
 DEPENDS+=	p5-Image-Info-[0-9]*:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-CGI-FastTemplate-[0-9]*:../../www/p5-CGI-FastTemplate
-DEPENDS+=	p5-Inline-[0-9]*:../../devel/p5-Inline
 DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
 
 USE_BUILDLINK2=		YES
@@ -49,20 +50,27 @@ PLIST_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR:S,${PREFIX}/,,}
 CONF_FILES=		${AG_EGDIR}/${AG}.conf ${PKG_SYSCONFDIR}/${AG}.conf
 
 post-patch:
-	cd ${WRKSRC}/lib/Apache && \
+	@cd ${WRKSRC}/lib/Apache && \
 	${CP} -p Gallery.pm Gallery.pm.orig && \
 	${SED} ${FILES_SUBST_SED} Gallery.pm.orig > Gallery.pm && \
 	${RM} -f Gallery.pm.orig
+	@${MV} -f ${WRKSRC}/templates/default/gallery.css \
+	    ${WRKSRC}/htdocs/gallery-default.css
+	@${MV} -f ${WRKSRC}/templates/new/gallery.css \
+	    ${WRKSRC}/htdocs/gallery-new.css
 
 post-build:
-	@cd ${WRKSRC}/templates; \
-	for i in *.tpl; \
+	@for j in default new; \
 	do \
-	    ${CP} -p $$i $$i.orig && \
-	    ${SED} -e 's,/icons/,/${AG}/,' \
-		   -e 's,/gallery.css,/${AG}/gallery.css,' \
-		$$i.orig > $$i; \
-	    ${RM} -f $$i.orig; \
+	    cd ${WRKSRC}/templates/$$j && \
+	    for i in *.tpl; \
+	    do \
+		${CP} -p $$i $$i.orig && \
+		${SED} -e "s,/icons/,/${AG}/," \
+		       -e "s,/gallery.css,/${AG}/gallery-$$j.css," \
+		    $$i.orig > $$i; \
+		${RM} -f $$i.orig; \
+	    done; \
 	done
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ag.conf > ${WRKDIR}/${AG}.conf
 
