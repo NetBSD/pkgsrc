@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.5 2000/11/06 08:52:09 itojun Exp $
+
+Index: random.c
+===================================================================
+RCS file: /cvsroot/kame/kame/kame/kame/racoon/random.c,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -r1.4 -r1.5
+--- random.c	2000/10/06 13:11:39	1.4
++++ random.c	2000/11/06 08:43:17	1.5
+@@ -60,6 +60,7 @@
+ 	long v;
+ 
+ 	read(fd, &v, sizeof(v));
++	v &= ((~0UL) >> 1);
+ 	return v;
+ }
+ 
