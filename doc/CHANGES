@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4751 2004/02/09 14:48:25 cjep Exp $
+$NetBSD: CHANGES,v 1.4752 2004/02/09 15:42:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -730,3 +730,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdegraphics3 to 3.2.0nb1 [seb 2004-02-09]
 	Updated kde3 to 3.2.0nb3 [seb 2004-02-09]
 	Updated nawk to 20040207 [cjep 2004-02-09]
+	Updated sylpheed-claws to 0.9.9 [adam 2004-02-09]
