@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 1999/03/12 16:08:25 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/04/14 21:39:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
 DISTNAME=       autoconf-2.13
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=/autoconf/}
+MASTER_SITES=	${MASTER_SITE_GNU:=autoconf/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 1999/03/22 16:08:31 bad Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/14 21:39:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/29 09:20:00 obrien Exp
 #
 
 DISTNAME=	indent-1.9.1
 PKGNAME=	gindent-1.9.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=/indent/}
+MASTER_SITES=	${MASTER_SITE_GNU:=indent/}
 
 MAINTAINER=	kchowksey@hss.hns.com
 HOMEPAGE=	http://www.gnu.org/software/indent/indent.html
