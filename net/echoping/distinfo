@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:14 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/12/14 04:08:32 xtraeme Exp $
 
-SHA1 (echoping-4.1.0.tar.gz) = b006a450b5d1eba5787483effce3223106130ce8
-Size (echoping-4.1.0.tar.gz) = 62305 bytes
-SHA1 (patch-ab) = cc2e8339fe8cede33637f23db6f401e414a6a4c1
+SHA1 (echoping-5.1.0.tar.gz) = 61a753c31eed1549f9c53848f37a051ddc36143d
+Size (echoping-5.1.0.tar.gz) = 99661 bytes
