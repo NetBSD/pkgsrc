@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/23 16:56:03 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/30 15:39:30 tron Exp $
 
 .if !defined(GTKGLAREA_BUILDLINK2_MK)
 GTKGLAREA_BUILDLINK2_MK=	# defined
@@ -11,6 +11,9 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkglarea=gtkglarea
 BUILDLINK_PREFIX.gtkglarea_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gtkglarea+=	include/gtkgl/*
 BUILDLINK_FILES.gtkglarea+=	lib/libgtkgl.*
+
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gtkglarea-buildlink
 
