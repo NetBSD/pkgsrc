@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4957 2004/02/22 21:35:16 recht Exp $
+$NetBSD: CHANGES,v 1.4958 2004/02/22 21:51:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -976,3 +976,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-XML-LibXSLT-1.53 [minskim 2004-02-22]
 	Added gnome-devel-2.4.2 [jmmv 2004-02-22]
 	Updated coreutils to 5.2.0 [recht 2004-02-22]
+	Added libtlen-20040212 [minskim 2004-02-22]
