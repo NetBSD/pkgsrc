@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/21 17:08:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/22 16:27:16 jmmv Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -8,6 +8,7 @@ share/gnome/help/zenity/C/figures/zenity-error-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-fileselection-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-information-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/C/figures/zenity-notification-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-progress-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-text-screenshot.png
@@ -100,6 +101,7 @@ share/zenity/zenity-calendar.png
 share/zenity/zenity-entry.png
 share/zenity/zenity-file.png
 share/zenity/zenity-list.png
+share/zenity/zenity-notification.png
 share/zenity/zenity-progress.png
 share/zenity/zenity-text.png
 share/zenity/zenity.glade
