@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/06 21:52:19 dmcmahill Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-3.2.1
@@ -69,3 +69,24 @@ post-install:
 
 # Make bootstrap with compiler != gcc possible.
 LDFLAGS=		${_STRIPFLAG_CC}
+
+# On NetBSD, the gcc-2.95.3 for:
+# 
+#     alpha
+#
+# have an optimization bug when compiling with -O2 that is tickled by:
+# 
+#   java/parse.o
+#
+# note that we don't override CFLAGS and CPPFLAGS because we want the 
+# crosscompiled compiler to be build with optimization.  This only
+# disables optimization for the stage 1 build.
+#
+.if ${OPSYS} == "NetBSD"
+.  if (${MACHINE_ARCH} == "alpha")
+CONFIG_CFLAGS=	${CFLAGS:C/-O[0-9]*//g}
+CONFIG_CPPFLAGS=	${CPPFLAGS:C/-O[0-9]*//g}
+CONFIGURE_ENV+=	CFLAGS="${CONFIG_CFLAGS}" CPPFLAGS="${CONFIG_CPPFLAGS}"
+.  endif
+.endif
+
