@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/05/19 10:20:36 abs Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/23 17:15:15 abs Exp $
 
---- fping.c.orig	Mon Sep 20 13:10:23 1999
-+++ fping.c	Mon Sep 20 13:15:05 1999
+--- fping.c.orig	Thu Aug 23 18:10:14 2001
++++ fping.c
 @@ -185,7 +185,9 @@
  
  extern char *optarg;
  extern int optind,opterr;
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__linux__)
  extern char *sys_errlist[];
 +#endif
  
