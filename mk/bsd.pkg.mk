@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1307 2003/11/27 13:02:38 taya Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1308 2003/12/02 23:08:24 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -371,8 +371,8 @@ LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
 .else
 LIBTOOL_REQD?=		1.4.20010614nb11
 .endif
-LIBTOOL=		${LOCALBASE}/bin/libtool
-SHLIBTOOL=		${LOCALBASE}/bin/shlibtool
+LIBTOOL?=		${LOCALBASE}/bin/libtool
+SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${LIBTOOL}
 PKGSHLIBTOOL=		${SHLIBTOOL}
