@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
+
+--- medusa-idled/Makefile.in.orig	Sun Apr  8 08:48:34 2001
++++ medusa-idled/Makefile.in
+@@ -145,7 +145,7 @@
+ noinst_HEADERS =  	x-screensaver-code.h 	medusa-idled-private.h 	$(NULL)
+ 
+ 
+-INCLUDES =  	-I$(top_srcdir) 	$(X_CFLAGS) 	$(GLIB_CFLAGS) 	$(NULL)	
++INCLUDES =  	-I$(top_srcdir) -I${X11BASE}/include	$(X_CFLAGS) 	$(GLIB_CFLAGS) 	$(NULL)	
+ 
+ 
+ medusa_idled_LDADD =  	$(GLIB_LIBS) 	$(top_builddir)/libmedusa/libmedusa.la 	$(XML_LIBS) 	$(VFS_LIBS) 	$(X_LIBS) 	$(GTK_LIBS) 	$(DB_LIB) 	-lXt 	$(NULL)
