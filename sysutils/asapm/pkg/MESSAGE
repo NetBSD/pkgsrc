@@ -1,0 +1,2 @@
+You need the APM driver enabled in your kernel,
+see man apm(4) for details.

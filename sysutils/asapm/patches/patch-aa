@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/03 13:35:47 frueauf Exp $
+
+--- autoconf/Makefile.common.in.orig	Wed Dec  2 16:02:51 1998
++++ autoconf/Makefile.common.in	Thu Dec  3 05:03:19 1998
+@@ -11,11 +11,11 @@
+ 		$(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)
+ 
+ install.man:
+-		$(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1x
++		$(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1
+ 
+ uninstall:
+ 		$(RMF) $(AFTER_BIN_DIR)/$(PROG)
+-		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1x
++		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1
+ 
+ clean:
+ 		$(RMF) $(PROG) *.o *~ *% *.bak \#* core
