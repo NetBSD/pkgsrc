@@ -1,0 +1,11 @@
+--- nmap-services.orig	Mon Aug 30 01:34:08 1999
++++ nmap-services	Mon Aug 30 01:35:25 1999
+@@ -1706,7 +1706,7 @@
+ dls-monitor       2048/udp   # 
+ nfs               2049/tcp   # networked file system
+ nfs               2049/udp   # networked file system
+-distrib-netassholes 2064/tcp # A bunch of retards working on some closed-source encryption cracking contest (www.distributed.net).  This is the keyblock proxy port
++distrib-net       2064/tcp   # keyblock proxy port for distributed.net-clients
+ dlsrpn            2065/tcp   # Data Link Switch Read Port Number
+ dlsrpn            2065/udp   # Data Link Switch Read Port Number
+ dlswpn            2067/tcp   # Data Link Switch Write Port Number
