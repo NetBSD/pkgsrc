@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/05/25 08:52:37 epg Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/08/28 22:33:14 epg Exp $
 
 DISTNAME=       swig-${SWIG_VERSION}
 CATEGORIES=	devel
@@ -30,8 +30,3 @@ CONFIGURE_ARGS+=	--without-php4
 CONFIGURE_ARGS+=	--without-pike
 CONFIGURE_ARGS+=	--without-ruby
 CONFIGURE_ARGS+=	--without-tcl
-
-pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
-
-.include "../../mk/autoconf.mk"
