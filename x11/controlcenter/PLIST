@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/04/27 14:57:57 cjep Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/12/10 23:07:41 grant Exp $
 bin/background-properties-capplet
 bin/file-types-capplet
 bin/gnome-edit-properties-capplet
@@ -154,7 +154,6 @@ share/pixmaps/control-center.png
 @exec ${MKDIR} -m 0755 %D/share/control-center/capplets
 @dirrm share/omf/control-center
 @comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/wm-properties
 @dirrm share/gnome/help/control-center/C/stylesheet-images
 @dirrm share/gnome/help/control-center/C/figures
 @dirrm share/gnome/help/control-center/C
