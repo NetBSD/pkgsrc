@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:37 skrll Exp $
 etc/rc.conf.d/linuxrtc
 etc/rc.conf.d/vmmon
 etc/rc.conf.d/vmnet
@@ -15,7 +15,7 @@ lkm/linuxrtc_post.sh
 lkm/vmmon.o
 lkm/vmmon_post.sh
 @dirrm etc/rc.conf.d
-@unexec rm -f %D/lkm/if_hub. 2>/dev/null || true
-@unexec rm -f %D/lkm/linuxrtc 2>/dev/null || true
-@unexec rm -f %D/lkm/vmmon 2>/dev/null || true
-@unexec rmdir %D/lkm 2>/dev/null || true
+@unexec ${RM} -f %D/lkm/if_hub. 2>/dev/null || true
+@unexec ${RM} -f %D/lkm/linuxrtc 2>/dev/null || true
+@unexec ${RM} -f %D/lkm/vmmon 2>/dev/null || true
+@unexec ${RMDIR} %D/lkm 2>/dev/null || true

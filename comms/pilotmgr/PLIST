@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:32 skrll Exp $
 bin/PilotManager
 lib/pilotmgr/Backup.pm
 lib/pilotmgr/Installer.pm
@@ -24,7 +24,7 @@ share/doc/pilotmgr/DiscAlias.txt
 share/doc/pilotmgr/SyncPlan.help
 share/doc/pilotmgr/WelcomeMessage
 @exec ln -s %D/share/doc/pilotmgr %D/lib/pilotmgr/docs
-@unexec rm -f %D/lib/pilotmgr/docs
+@unexec ${RM} -f %D/lib/pilotmgr/docs
 @dirrm lib/pilotmgr/lib/test
 @dirrm lib/pilotmgr/lib/perl5
 @dirrm lib/pilotmgr/lib/images

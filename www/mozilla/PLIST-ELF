@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-ELF,v 1.4 2002/02/09 03:54:47 taya Exp $
+@comment $NetBSD: PLIST-ELF,v 1.5 2002/02/15 10:13:03 skrll Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/dirver
@@ -2387,14 +2387,14 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @comment end INCLUDE
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
-@unexec rm %D/lib/mozilla/component.reg
-@unexec rm %D/lib/mozilla/chrome/chrome.rdf
-@unexec rm %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
-@unexec rm %D/lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
-@unexec rm %D/lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
-@unexec rm %D/lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
-@unexec rm %D/lib/mozilla/chrome/overlayinfo/inspector/content/overlays.rdf
-@unexec rm %D/lib/mozilla/components/xpti.dat
+@unexec ${RM} %D/lib/mozilla/component.reg
+@unexec ${RM} %D/lib/mozilla/chrome/chrome.rdf
+@unexec ${RM} %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
+@unexec ${RM} %D/lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
+@unexec ${RM} %D/lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
+@unexec ${RM} %D/lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
+@unexec ${RM} %D/lib/mozilla/chrome/overlayinfo/inspector/content/overlays.rdf
+@unexec ${RM} %D/lib/mozilla/components/xpti.dat
 @dirrm lib/mozilla/chrome/overlayinfo/navigator/content
 @dirrm lib/mozilla/chrome/overlayinfo/navigator
 @dirrm lib/mozilla/chrome/overlayinfo/messenger/content

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/31 23:54:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:13:04 skrll Exp $
 bin/pear
 bin/pearize
 bin/php
@@ -266,7 +266,7 @@ share/php/php4.gif
 @dirrm lib/php/Cache
 @dirrm lib/php/Benchmark
 @dirrm lib/php/Archive
-@unexec rmdir -p %D/${PHP_EXTENSION_DIR} 2>/dev/null || true
+@unexec ${RMDIR} -p %D/${PHP_EXTENSION_DIR} 2>/dev/null || true
 @dirrm include/php/regex
 @dirrm include/php/main
 @dirrm include/php/ext/xml/expat/xmltok

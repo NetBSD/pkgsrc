@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:42 skrll Exp $
 etc/mesa.conf
 include/GL/gl.h
 include/GL/gl_mangle.h
@@ -14,4 +14,4 @@ lib/libGL.so.3
 lib/libGL.so.3.4
 lib/libGL.a
 lib/libGL.la
-@unexec rmdir %D/include/GL >/dev/null 2>&1 || true
+@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || true

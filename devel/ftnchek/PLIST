@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:34 skrll Exp $
 bin/dcl2inc
 bin/ftnchek
 libexec/ftnchek/dcl2inc.awk
@@ -71,7 +71,7 @@ share/doc/ftnchek/html/wordsize.html
 share/doc/ftnchek/html/wrap.html
 share/doc/ftnchek/macro-doc.txt
 share/emacs/site-lisp/ftnchek.el
-@unexec rmdir %D/share/emacs/site-lisp 2>/dev/null || true
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || true
 @dirrm share/doc/ftnchek/html
 @dirrm share/doc/ftnchek
 @dirrm libexec/ftnchek

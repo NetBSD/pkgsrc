@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:27:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:58 skrll Exp $
 bin/scsh
 include/scsh.h
 lib/scsh/big/array.scm
@@ -269,7 +269,7 @@ lib/scsh/emacs/comint.el
 lib/scsh/emacs/jar-hacks.el
 man/man1/scsh.1
 @exec ln -fs %D/lib/scsh/doc %D/share/doc/scsh
-@unexec rm -f %D/share/doc/scsh
+@unexec ${RM} -f %D/share/doc/scsh
 @dirrm lib/scsh/emacs
 @dirrm lib/scsh/big
 @dirrm lib/scsh/cig

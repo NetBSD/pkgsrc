@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:31 skrll Exp $
 bin/ascii-xfr
 bin/minicom
 bin/runscript
@@ -56,4 +56,4 @@ share/locale/pt_BR/LC_MESSAGES/minicom.mo
 @dirrm share/doc/minicom/tables
 @dirrm share/doc/minicom/demos
 @dirrm share/doc/minicom
-@unexec rm -rf %D/etc/minicom
+@unexec ${RM} -rf %D/etc/minicom

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:40 skrll Exp $
 bin/iso-pernangband
 share/iso-pernangband/apex/scores.raw
 share/iso-pernangband/bone/bone004.001
@@ -233,10 +233,10 @@ share/iso-pernangband/xtra/font/xm8x13b.fnt
 share/iso-pernangband/xtra/font/xm8x16.fnt
 share/iso-pernangband/xtra/font/vga8x16.hex
 share/iso-pernangband/xtra/font/vga11x19.hex
-@unexec rm -r %D/share/iso-pernangband/apex
-@unexec rm -r %D/share/iso-pernangband/bone
-@unexec rm -r %D/share/iso-pernangband/data
-@unexec rm -r %D/share/iso-pernangband/save
+@unexec ${RM} -r %D/share/iso-pernangband/apex
+@unexec ${RM} -r %D/share/iso-pernangband/bone
+@unexec ${RM} -r %D/share/iso-pernangband/data
+@unexec ${RM} -r %D/share/iso-pernangband/save
 @dirrm share/iso-pernangband/dngn
 @dirrm share/iso-pernangband/edit
 @dirrm share/iso-pernangband/file

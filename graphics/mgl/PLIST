@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:44 skrll Exp $
 bin/kill_mgl.sh
 bin/mcalc
 bin/mdate
@@ -68,7 +68,7 @@ share/doc/mgl2/mil/mil.doc
 share/doc/mgl2/nine/README.txt
 share/doc/mgl2/nine/CHANGES.doc
 share/mgl2/mgl_fontcreate.c
-@unexec rm -f %D/etc/calibdata
+@unexec ${RM} -f %D/etc/calibdata
 @dirrm share/mgl2
 @dirrm share/doc/mgl2/nine
 @dirrm share/doc/mgl2/mil

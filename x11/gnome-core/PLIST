@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:07 skrll Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1515,18 +1515,18 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/clock_applet/C/figures
 @dirrm share/gnome/help/clock_applet/C
 @dirrm share/gnome/help/clock_applet
-@unexec rmdir %D/share/gnome/apps/Utilities 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/System 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Settings/Session 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Settings/Desktop 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Settings 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Multimedia 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Internet 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Graphics 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Games 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Development 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Utilities 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/System 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Settings/Session 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Settings/Desktop 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Settings 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Multimedia 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Games 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Development 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || true
 @dirrm share/omf/gnome-core
 @dirrm share/gnome-terminal/glade
 @dirrm share/gnome-terminal
