@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/25 11:24:28 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/23 23:44:07 jlam Exp $
 #
 
 DISTNAME=	gtoaster1.0Beta5
@@ -12,13 +12,16 @@ HOMEPAGE=	http://gnometoaster.rulez.org/
 COMMENT=	cd recording frontend for X/Gtk
 
 WRKSRC=		${WRKDIR}/gtoaster
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --with-oss --without-esd
-CONFIGURE_ARGS+= --without-gnome --without-orbit
-USE_LIBINTL=	yes
-USE_GMAKE=	yes
-USE_BUILDLINK_ONLY= yes
 
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+USE_BUILDLINK2=		YES
+USE_X11=		YES
+USE_GMAKE=		YES
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-oss --without-esd
+CONFIGURE_ARGS+=	--without-gnome --without-orbit
+
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
