@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/09/19 11:09:21 fredb Exp $
+$NetBSD: patch-aa,v 1.6 2000/11/02 14:24:32 mjl Exp $
 
 --- ../xmmix-1.2/Imakefile	Sun Jul 14 19:48:56 1996
 +++ ./Imakefile	Fri Oct 24 23:34:17 1997
@@ -7,55 +7,7 @@ $NetBSD: patch-aa,v 1.5 2000/09/19 11:09:21 fredb Exp $
   * #include "Motif.rules"
   */
 -LOCAL_LIBRARIES= XmClientLibs
-+LOCAL_LIBRARIES= -lXm -lXt -lX11 -lossaudio
++LOCAL_LIBRARIES= XmClientLibs -lossaudio
  
  
  /*
---- ../xmmix-1.2/appenv.h	Sun Jul 14 19:48:59 1996
-+++ ./appenv.h	Fri Oct 24 23:33:47 1997
-@@ -59,7 +59,13 @@
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <sys/ioctl.h>
-+#ifdef __NetBSD__
-+#include <soundcard.h>
-+/* Ensure we SIGIO */
-+#undef _POSIX_SOURCE
-+#else
- #include <sys/soundcard.h>
-+#endif
- #include <stdlib.h>
- #include <stdio.h>
- #include <errno.h>
---- ../xmmix-1.2/main.c	Thu Nov  7 17:01:43 1996
-+++ ./main.c	Mon Aug 11 23:12:51 1997
-@@ -159,7 +159,7 @@
- 	post_realize_config(&widgets);
- 
- 	/* Register callback routines */
--	register_callbacks(&widgets);
-+	register_callbacks(&widgets, app);
- 
- 	/* Initialize screen controls */
- 	mx_start(&widgets);
---- ../xmmix-1.2/mixer.h	Sun Jul 14 19:49:04 1996
-+++ ./mixer.h	Mon Aug 11 23:19:17 1997
-@@ -78,6 +78,7 @@
- extern void	mx_fsok_btn(Widget, XtPointer, XtPointer);
- extern void	mx_fscancel_btn(Widget, XtPointer, XtPointer);
- extern void	mx_focuschg(Widget, XtPointer, XtPointer);
-+extern void	mx_change(XtPointer);
- 
- #endif	/* __MIXER_H__ */
- 
---- ../xmmix-1.2/widget.h	Sun Jul 14 19:49:10 1996
-+++ ./widget.h	Mon Aug 11 23:13:43 1997
-@@ -119,7 +119,7 @@
- extern void	widget_init(widgets_t *);
- extern void	create_widgets(widgets_t *);
- extern void	post_realize_config(widgets_t *);
--extern void	register_callbacks(widgets_t *);
-+extern void	register_callbacks(widgets_t *, XtAppContext);
- 
- #endif /* __WIDGET_H__ */
- 
