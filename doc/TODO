@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1072 2003/11/26 23:20:07 wiz Exp $
+$NetBSD: TODO,v 1.1073 2003/11/27 16:11:05 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -129,7 +129,6 @@ Suggested package updates
 	o Amaya-8.2
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
-	o MozillaFirebird-0.7 [xtraeme]
 	o MozillaFirebird-bin-0.7 [grant]
 	o R-1.8.1 [markd]
 	o SDL_gfx-2.0.9
