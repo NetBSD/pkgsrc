@@ -1,6 +1,6 @@
-#!@PREFIX@/bin/perl
+#! @PREFIX@/bin/perl
 #
-# $NetBSD: gpg2dot.pl,v 1.3 2004/04/04 22:16:59 hubertf Exp $
+# $NetBSD: gpg2dot.pl,v 1.4 2005/03/03 22:43:49 agc Exp $
 
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
@@ -20,26 +20,27 @@
 $date = localtime();
 $mykeyid = shift;
 
-$sg = "";
-open(GPG, "gpg --list-keys --verbose 2>/dev/null |");
+open(GPG, "gpg --list-sigs --with-colons --no-sig-cache --verbose 2>/dev/null |");
 while (<GPG>) {
     chomp;
-    if (/^(pub) +(\S+)\s+(\S+)\s+(.+\S)/ ||
-	/^(uid) +\s+(.+\S)/) {
-	if ($1 eq "pub") {
-	    ($lkeyid, $date, $kuid) = ($2, $3, $4);
+    my @fields = split /:/;
+    if ($fields[0] eq "pub" || $fields[0] eq "uid") {
+	if ($fields[0] eq "pub") {
+	    ($lkeyid, $date, $kuid) = ($fields[4], $fields[5], $fields[9]);
 	}
 	else {
-	    ($kuid) = ($2);
+	    next; # XXX --with-colons doesn't seem to produce uid records with useable values
+	    ($kuid) = ($fields[$9]);
 	}
 	$kuid =~ s/\"/\\\"/g;
+	$kuid =~ s/\\x([0-9a-fA-F]+)/chr(hex($1))/eg;
 	($keyid = $lkeyid) =~ s:.*/::;
 	$kuid{$keyid} = $kuid;
 	next if ($label{$keyid} != "");
 	$label{$keyid} = "$lkeyid - $date\\n$kuid";
     }
-    elsif (/^sig (.{7}) (\S+)\s+(\S+)\s+(.+\S)/) {
-	($skeyid, $date, $suid) = ($2, $3, $4);
+    elsif ($fields[0] eq "sig") {
+	($skeyid, $date, $suid) = ($fields[4], $fields[5], $fields[9]);
 	next if ($suid =~ /id not found/ ||
 		 $skeyid eq $keyid);
 	push(@isigs, "$keyid $skeyid $date $suid");

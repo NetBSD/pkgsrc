@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9413 2005/03/03 21:32:54 wiz Exp $
+$NetBSD: CHANGES,v 1.9414 2005/03/03 22:44:43 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmms-flac to 1.1.2 [wiz 2005-03-03]
 	Updated anthy to 6300 [taya 2005-03-03]
 	Updated vte to 0.11.12 [jmmv 2005-03-03]
+	Updated gpg2dot to 1.4 [agc 2005-03-03]
