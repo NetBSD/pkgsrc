@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/10/16 06:58:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/03 08:31:01 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		sysvshm
 CATEGORIES+=		devel
-PHP_PKG_VERS=		# empty
+PKGREVISION=		# empty
 COMMENT=		PHP4 extension for SysV shared memory support
 
 USE_BUILDLINK_ONLY=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2001/11/26 07:34:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2001/12/03 08:31:05 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -13,13 +13,9 @@ HOMEPAGE=		http://www.php.net/
 #
 # PHP_DIST_VERS		version number on the php distfile
 # PHP_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
-# PHP_PKG_VERS		pkgsrc revisions of php (nbX, etc.)
-# PHP_VERS		pkgsrc version number of package
 #
 PHP_DIST_VERS=		4.0.6
 PHP_BASE_VERS=		${PHP_DIST_VERS}
-PHP_PKG_VERS?=		# empty
-PHP_VERS=		${PHP_BASE_VERS}${PHP_PKG_VERS}
 
 # Location of installed PHP4 loadable modules under ${PREFIX}.
 # This is derived from the value of `php-config --extension-dir`.

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/10/29 05:43:47 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/03 08:31:04 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
-PHP_PKG_VERS=		# empty
+PKGREVISION=		# empty
 COMMENT=		PHP4 extension for WDDX support
 
 DEPENDS+=		php-session>=${PHP_BASE_VERS}:../../devel/php4-session

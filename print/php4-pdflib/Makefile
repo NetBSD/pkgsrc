@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/10/16 06:58:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/03 08:31:03 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		pdf
-PKGNAME=		php-pdflib-${PHP_VERS}
+PKGNAME=		php-pdflib-${PHP_BASE_VERS}
 CATEGORIES+=		print
-PHP_PKG_VERS=		# empty
+PKGREVISION=		# empty
 COMMENT=		PHP4 extension for PDFlib on-the-fly PDF generation
 
 USE_BUILDLINK_ONLY=	YES

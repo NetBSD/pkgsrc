@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/16 07:08:38 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/03 08:31:03 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		yp
 CATEGORIES+=		net
-PHP_PKG_VERS=		# empty
+PKGREVISION=		# empty
 COMMENT=		PHP4 extension for YP domain support
 
 USE_BUILDLINK_ONLY=	YES
