@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2000/10/16 15:34:12 rh Exp $
+
+--- wvHtml.in.orig	Mon Oct 16 17:23:11 2000
++++ wvHtml.in
+@@ -2,7 +2,7 @@
+ 
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-libdir=@libdir@
++libdir=${prefix}/share
+ 
+ # argument checking
+ if [ ${#} -ne "2" ]; then
