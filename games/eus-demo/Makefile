@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/07 11:39:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2002/04/04 12:29:47 tron Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -19,7 +18,8 @@ ONLY_FOR_PLATFORM=*-*-i386
 
 .if (${MACHINE_ARCH} == "i386")
 BINTYPE=	x86/glibc-2.1
-# DEPENDS+=	suse_base>=6.1:../../emulators/suse_base
+
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 .elif (${MACHINE_ARCH} == "alpha")
 BINTYPE=	alpha/glibc-2.1
 .elif (${MACHINE_ARCH} == "powerpc")
@@ -52,4 +52,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
 	cd ${WRKSRC} ; ${PAX} -rw [Eai-p]* sounds ${LIBDIR}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"

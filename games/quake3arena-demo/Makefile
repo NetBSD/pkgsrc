@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/24 17:03:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2002/04/04 12:29:47 tron Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGNAME=	quake3arena-demo-1.11.6
@@ -12,8 +11,8 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
-DEPENDS+=	suse_linux>=6.3:../../emulators/suse_linux
-DEPENDS+=	suse_glx>=6.4:../../emulators/suse_glx
+DEPENDS+=	suse_linux>=6.3:../../emulators/${SUSE_DIR_PREFIX}_linux
+DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 
 CONFLICTS=	quake3arena-[0-9]*
 
@@ -56,4 +55,5 @@ do-install:
 	cd ${WRKSRC} ; ${PAX} -rw Help ${SHAREDIR}
 	${MV} ${SHAREDIR}/Help ${SHAREDIR}/quake3arena-Help
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
+
