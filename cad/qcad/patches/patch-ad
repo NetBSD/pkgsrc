@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/26 20:53:54 jtb Exp $
+
+--- relement.cpp.orig	Tue Feb 20 21:30:40 2001
++++ relement.cpp
+@@ -3681,7 +3681,7 @@
+ 
+   // Search pattern in /usr/share/<proj>/hatches dir:
+   if(!QFileInfo(patternPath).exists()) {
+-    patternPath = QString("/usr/share/")+DEF_APPNAME_L+"/hatches/"+_pattern+".dxf";
++    patternPath = QString("@PREFIX@/share/")+DEF_APPNAME_L+"/hatches/"+_pattern+".dxf";
+   }
+ #endif
+   */
