@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030622], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20030715], [grant@NetBSD.org])
 AC_CONFIG_SRCDIR([bits.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -84,6 +84,7 @@ AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 AC_CHECK_FUNCS([strunvis strvis strsvis])
 
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
+AC_CHECK_FUNCS([getopt_long])
 
 if test $ac_cv_func_getpgrp = yes; then
 	AC_FUNC_GETPGRP
@@ -152,6 +153,14 @@ if test $ac_cv_header_vis_h = yes; then
 	#include <vis.h> ], [ int X = VIS_WHITE ], [:],
 	ac_cv_header_vis_h=no )
 fi
+
+AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
+#include <stdlib.h>
+#include <unistd.h> ], [ char *X = optarg ], [:], [AC_DEFINE(HAVE_OPTARG_D, 1)])
+
+AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
+#include <stdlib.h>
+#include <unistd.h> ], [ int X = optind ], [:] [AC_DEFINE(HAVE_OPTIND_D, 1)])
 
 AH_BOTTOM([
 
