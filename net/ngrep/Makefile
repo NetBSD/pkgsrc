@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/05 14:39:08 hubertf Exp $
 #
 
-DISTNAME=	ngrep-1.33
+DISTNAME=	ngrep-1.39
 CATEGORIES=	net
-MASTER_SITES=	http://www.packetfactory.net/Projects/Ngrep/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngrep/}
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.packetfactory.net/Projects/Ngrep/
+HOMEPAGE=	http://ngrep.sourceforge.net/
 COMMENT=	network grep
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-pcre
 WRKSRC=		${WRKDIR}/ngrep
 ALL_TARGET=	ngrep
 
