@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5334 2004/03/29 01:10:52 dillo Exp $
+$NetBSD: CHANGES,v 1.5335 2004/03/29 01:40:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1562,3 +1562,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zoom to 1.0.1anb2 [dillo 2004-03-29]
 	Added libol-0.3.13 [minskim 2004-03-29]
 	Updated scummvm to 0.6.0 [dillo 2004-03-29]
+	Updated p5-XML-Writer to 0.500 [minskim 2004-03-29]
