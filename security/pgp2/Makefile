@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/08/14 02:39:30 grant Exp $
+# $NetBSD: Makefile,v 1.32 2003/03/14 19:37:55 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -24,7 +24,7 @@ LICENCE=	fee-based-commercial-use
 PKGNAME=	pgp-2.6.3a
 DEPENDS+=	rsaref-2.0p3:../../security/rsaref
 RSAINC=		-I${PREFIX}/include
-RSALIBS=	-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lrsaref
+RSALIBS=	-Wl,${RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lrsaref
 RSAOBJS=	rsaglue2.o
 CFLAGS=		-DUSA
 .else
@@ -34,6 +34,8 @@ RSALIBS=
 RSAOBJS=	rsaglue1.o
 CFLAGS=
 .endif
+
+FIX_RPATH+=	RSALIBS
 
 PGPLIB=		${PREFIX}/share/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"

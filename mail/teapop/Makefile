@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/28 22:03:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/14 19:37:47 jlam Exp $
 
 DISTNAME=	teapop-0.3.5
 CATEGORIES=	mail
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=--disable-vpop
 .if defined(TEAPOP_WITH_MYSQL)
 .include "../../databases/mysql-client/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
-LDFLAGS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+LDFLAGS+=	${BUILDLINK_LDFLAGS.mysql-client}
 .endif
 
 post-install:

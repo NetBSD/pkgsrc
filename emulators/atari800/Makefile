@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/12/06 21:06:19 cjep Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/14 19:37:37 jlam Exp $
 #
 
 DISTNAME=	atari800-1.2.5
@@ -33,7 +33,7 @@ post-extract:
 	@cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -Lqo ${DISTDIR}/xf25.zip
 
 do-build:
-	@cd ${WRKSRC} && LDFLAGS="-s -L${X11BASE}/lib -Wl,-R,${X11BASE}/lib" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11-shm
+	@cd ${WRKSRC} && LDFLAGS="-s ${X11_LDFLAGS}" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11-shm
 	@${ECHO} '#define PREFIX "${PREFIX}"' >> ${WRKSRC}/config.h
 	@cd ${WRKSRC} && ${GMAKE}
 	${MV} ${WRKSRC}/atari800 ${WRKSRC}/atari800-shm
@@ -43,7 +43,7 @@ do-build:
 	@cd ${WRKSRC} && ${GMAKE}
 	${MV} ${WRKSRC}/atari800 ${WRKSRC}/atari800-curses
 	@cd ${WRKSRC} && ${GMAKE} clean
-	@cd ${WRKSRC} && LDFLAGS="-s -L${X11BASE}/lib -Wl,-R,${X11BASE}/lib" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11
+	@cd ${WRKSRC} && LDFLAGS="-s ${X11_LDFLAGS}" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11
 	@${ECHO} '#define PREFIX "${PREFIX}"' >> ${WRKSRC}/config.h
 	@cd ${WRKSRC} && ${GMAKE}
 	${SED} -e 's,@PREFIX@,${PREFIX},g' <${FILESDIR}/atari800.cfg \
