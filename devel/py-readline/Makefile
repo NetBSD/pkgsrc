@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2002/03/14 17:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:49 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-readline-0
@@ -28,5 +28,5 @@ do-patch:
 	done)
 
 .include "../../lang/python/srcdist.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/08/11 12:36:55 tron Exp $
+# $NetBSD: Makefile,v 1.41 2002/09/21 23:46:52 jlam Exp $
 
 DISTNAME=	fetchmail-5.9.13
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -25,6 +25,6 @@ do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf ${PREFIX}/bin
 		${LN} -s fetchmail.1 ${PREFIX}/man/man1/fetchmailconf.1
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/29 11:33:54 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:46 jlam Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -17,6 +17,6 @@ CONFIGURE_ENV+=	vi_cv_path_python=${PYTHONBIN}
 LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/rsaref
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/py-Pmw/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

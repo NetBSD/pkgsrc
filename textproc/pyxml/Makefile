@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/18 11:54:06 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/21 23:46:59 jlam Exp $
 #
 
 DISTNAME=	PyXML-0.8.1
@@ -30,6 +30,6 @@ PYTHON_PATCH_SCRIPTS=	${PYXML_SCRIPTS:S/$/${PYVERSSUFFIX}/g}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../textproc/expat/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

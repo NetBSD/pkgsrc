@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:59 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/21 23:47:02 jlam Exp $
 #
 
 DISTNAME=	wxPython-2.2.2
@@ -31,5 +31,5 @@ post-install:
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
 .include "../../x11/wxGTK/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

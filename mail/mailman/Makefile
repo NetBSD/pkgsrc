@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/28 19:48:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:53 jlam Exp $
 
 DISTNAME=	mailman-2.0.12
 CATEGORIES=	mail www
@@ -145,6 +145,6 @@ do-install:
 	${CHOWN} -R root ${EXECDIR}
 	${CHMOD} -R g-w ${EXECDIR}
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

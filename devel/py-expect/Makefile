@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/19 15:03:35 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:48 jlam Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
@@ -31,5 +31,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/examples/$f ${EXAMPLESDIR}
 .endfor
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/18 16:23:27 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/21 23:46:53 jlam Exp $
 #
 
 DISTNAME=	queue-repair-0.8.4
@@ -15,5 +15,5 @@ PYTHON_PATCH_SCRIPTS=	queue_repair.py
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/queue_repair.py ${PREFIX}/bin/queue_repair
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/29 14:39:38 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/21 23:46:47 jlam Exp $
 
 DISTNAME=	MySQL-python-0.9.1
 PKGNAME=	${PYPKGPREFIX}-mysqldb-0.9.1
@@ -19,5 +19,5 @@ post-patch:
 	${MV} ${WRKSRC}/setup.py.tmp ${WRKSRC}/setup.py
 
 .include "../../databases/mysql-client/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
