@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/07 04:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/11 00:34:25 jlam Exp $
 #
 
 DISTNAME=       	CGI.pm-2.752
@@ -41,3 +41,8 @@ post-install:
 	${INSTALL_SCRIPT} *.cgi ${HTMLDIR}/examples
 
 .include "../../mk/bsd.pkg.mk"
+
+.if !defined(PERL5_SITEARCH)
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`;	\
+			${ECHO} $${installsitearch}
+.endif
