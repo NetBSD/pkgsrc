@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2005/01/13 09:58:57 adam Exp $
+# $NetBSD: Makefile,v 1.111 2005/01/24 22:13:52 tv Exp $
 
 DISTNAME=	ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
 CATEGORIES=	net
@@ -12,12 +12,6 @@ COMMENT=	High-performance CORBA ORB with support for the C language
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "NetBSD" && ${OPSYS} != "Linux"
-DEPENDS+=		gindent-[0-9]*:../../devel/gindent
-.endif
 
 USE_GNU_TOOLS+=		lex make yacc
 USE_LIBTOOL=		YES
@@ -35,6 +29,12 @@ ORBIT_MAJOR=		5
 ORBIT_MINOR=		17
 
 INFO_FILES=		libIDL.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "Linux"
+DEPENDS+=		gindent-[0-9]*:../../devel/gindent
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
