@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/06/04 05:25:38 reed Exp $
+# $NetBSD: Makefile,v 1.28 2004/08/31 19:24:42 reed Exp $
 #
 
 DISTNAME=		libiconv-1.9.1
@@ -10,18 +10,18 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/libiconv/
 COMMENT=		Character set conversion library
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Linux"
-# don't use PKG_SKIP_REASON yet so we can make sure the buildlinking is correct
-PKG_FAIL_REASON+=	"${PKGNAME} is not needed for Linux; it is included in GNU libc."
-.endif
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+# don't use PKG_SKIP_REASON yet so we can make sure the buildlinking is correct
+PKG_FAIL_REASON+=	"${PKGNAME} is not needed for Linux; it is included in GNU libc."
+.endif
 
 TEST_TARGET=		check
 
