@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/03/12 02:47:51 snj Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/07 15:53:34 ben Exp $
 #
 
-DISTNAME=		xmms-meta-timidity-0.1
+DISTNAME=		xmms-meta-timidity-0.2
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -19,8 +19,9 @@ NO_BUILDLINK=		# defined
 USE_LANGUAGES=		# empty
 
 do-build:
-	${SED} "s,XXXPREFIXXXX,${PREFIX},g" \
-		<${FILESDIR}/timidity.sh >${WRKSRC}/timidity.sh
+	${SED} <${FILESDIR}/timidity.sh >${WRKSRC}/timidity.sh \
+		-e "s,XXXPREFIXXXX,${PREFIX},g" \
+		-e "s,XXXPKG_SYSCONFDIRXXX,${PKG_SYSCONFDIR},g"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/timidity.sh ${PREFIX}/lib/xmms/Input/Meta
