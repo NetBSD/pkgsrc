@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/20 21:49:00 snj Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -23,7 +23,9 @@ share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
 ${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/openbox.mo
 ${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/openbox.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/openbox.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/openbox.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/openbox.mo
 share/openbox/menu.xsd
 share/openbox/rc.xsd
 share/openbox/themeupdate.py
@@ -61,6 +63,8 @@ share/themes/TheBear/openbox-3/themerc
 @unexec ${RMDIR} %D/share/themes/Artwiz 2>/dev/null || ${TRUE}
 @dirrm share/themes/Allegro/openbox-3
 @unexec ${RMDIR} %D/share/themes/Allegro 2>/dev/null || ${TRUE}
+@comment in xdg-dirs: @dirrm share/themes
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @dirrm share/examples/openbox
