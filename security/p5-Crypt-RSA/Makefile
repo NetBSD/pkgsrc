@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/03 02:31:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/04 12:21:32 wiz Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.47
@@ -16,9 +16,9 @@ DEPENDS+=		p5-Crypt-Primes-[0-9]*:../../security/p5-Crypt-Primes
 DEPENDS+=		p5-Tie-EncryptedHash-[0-9]*:../../security/p5-Tie-EncryptedHash
 DEPENDS+=		p5-Convert-ASCII-Armour-[0-9]*:../../textproc/p5-Convert-ASCII-Armour
 DEPENDS+=		p5-SortVersions-[0-9]*:../../devel/p5-SortVersions
-#DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
-#DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
+DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
+DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
 DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
 
