@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.908 2003/09/27 09:43:02 heinz Exp $
+$NetBSD: TODO,v 1.909 2003/09/28 23:44:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -95,11 +95,11 @@ Suggested package updates
 	o anjuta-1.0.2
 	o atari800-1.3.1
 	o autogen-5.5.6
-	o avidemux-2.0.14
+	o avidemux-2.0.16
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o bins-1.1.23
-	o bogofilter-0.14.5.2
+	o bogofilter-0.14.5.4 [pkg/22983]
 	o bomberclone-0.10.1
 	o bzflag-1.7g2
 	o cervisia-2.0
@@ -125,8 +125,8 @@ Suggested package updates
 	o dylan-interpreter-2.3.11
 	o easytag-0.30
 	o echoping-5.0.1
-	o elk-3.99.4
-	o elm-me-2.4pl107
+	o elk-3.99.5
+	o elm-me-2.4pl107a
 	o ettercap-0.6.b
 	o evilwm-0.99.16
 	o evolution-1.4.4
@@ -173,7 +173,7 @@ Suggested package updates
 	o hpijs-1.4.1
 	o icepref-2.2
 	o inn-2.4.0
-	o iozone-3.200
+	o iozone-3.203
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
@@ -181,7 +181,7 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kbiff-3.7
 	o latd-1.18 [pkg/22735]
-	o lavaps-2.3
+	o lavaps-2.4
 	o lcms-1.0.9
 	o libaudiofile-0.2.4
 	o libgcrypt-1.1.42
@@ -225,6 +225,7 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
+	o nut-9.1
 	o openh323-1.11.2
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
@@ -232,6 +233,7 @@ Suggested package updates
 	o p0f-2.0.2 [pkg/22939]
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
+	o perl-5.8.1
 	o postfix-2.0.16
 	o prboom-2.3.0
 	o proftpd-1.2.9rc2p
@@ -239,6 +241,7 @@ Suggested package updates
 	o pygtk-0.6.11
 	o pysol-4.82
 	o pthon-2.3.1
+	o rdiff-backup-0.12.5
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
@@ -303,7 +306,6 @@ Suggested package updates
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.2
 	o xosview-1.8.0 [pkg/20265]
-	o xplot-0.90.7.1 [dan]
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
