@@ -1,28 +1,66 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/19 16:38:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/14 23:36:38 adrianp Exp $
+share/doc/msf
 share/msf/docs/7f8d5320.0
 share/msf/docs/BUGS
 share/msf/docs/COPYING
 share/msf/docs/COPYING.Artistic
 share/msf/docs/COPYING.GNU
 share/msf/docs/COPYING.InlineEgg
-share/msf/docs/CrashCourse.doc
-share/msf/docs/CrashCourse.html
-share/msf/docs/CrashCourse.pdf
-share/msf/docs/CrashCourse.sxw
+share/msf/docs/CrashCourse_IT.doc
+share/msf/docs/CrashCourse_IT.html
+share/msf/docs/CrashCourse_IT.pdf
+share/msf/docs/CrashCourse_IT.sxw
+share/msf/docs/CrashCourse_BR.sxw
+share/msf/docs/CrashCourse_FR.pdf
 share/msf/docs/Environment.txt
-share/msf/docs/QUICKSTART.cygwin
 share/msf/docs/QUICKSTART.impurity
 share/msf/docs/QUICKSTART.msfcli
 share/msf/docs/QUICKSTART.msfconsole
 share/msf/docs/QUICKSTART.msfweb
-share/msf/docs/QUICKSTART.ssl
-share/msf/docs/QUICKSTART.tabcompletion
 share/msf/docs/SECURITY
 share/msf/docs/VERSION
+share/msf/docs/RELEASE_2.3.txt
+share/msf/docs/meterpreter.pdf
+share/msf/docs/userguide.pdf
+share/msf/docs/userguide.tex
 share/msf/docs/cacert.pem
-share/doc/msf
 share/msf/data/shelldemo
 share/msf/data/vncdll.dll
+share/msf/data/meterpreter/ext_server_fs.dll
+share/msf/data/meterpreter/ext_server_net.dll
+share/msf/data/meterpreter/ext_server_process.dll
+share/msf/data/meterpreter/ext_server_sys.dll
+share/msf/data/meterpreter/metsrv.dll
+share/msf/data/msfweb/icons/favicon.ico
+share/msf/data/msfweb/icons/amiga.gif
+share/msf/data/msfweb/icons/cisco.gif
+share/msf/data/msfweb/icons/win32.gif
+share/msf/data/msfweb/icons/be.gif
+share/msf/data/msfweb/icons/sun.gif
+share/msf/data/msfweb/icons/irix.gif
+share/msf/data/msfweb/icons/aix.gif
+share/msf/data/msfweb/icons/unknown.gif
+share/msf/data/msfweb/icons/hpux.gif
+share/msf/data/msfweb/icons/any.gif
+share/msf/data/msfweb/icons/os2.gif
+share/msf/data/msfweb/icons/osx.gif
+share/msf/data/msfweb/icons/novell.gif
+share/msf/data/msfweb/icons/bsd.gif
+share/msf/data/msfweb/icons/linux.gif
+share/msf/data/msfweb/themes/default/style.css
+share/msf/data/msfweb/themes/default/credits.txt
+share/msf/data/msfweb/themes/default/logo.jpg
+share/msf/data/msfweb/themes/gblack/style.css
+share/msf/data/msfweb/themes/gblack/credits.txt
+share/msf/data/msfweb/themes/gblack/logo.jpg
+share/msf/data/msfweb/themes/gwhite/style.css
+share/msf/data/msfweb/themes/gwhite/credits.txt
+share/msf/data/msfweb/themes/gwhite/logo.jpg
+share/msf/encoders/Alpha2.pm
+share/msf/encoders/Countdown.pm
+share/msf/encoders/JmpCallAdditive.pm
+share/msf/encoders/OSXPPCLongXOR.pm
+share/msf/encoders/OSXPPCLongXORTag.pm
 share/msf/encoders/None.pm
 share/msf/encoders/Pex.pm
 share/msf/encoders/PexAlphaNum.pm
@@ -33,15 +71,30 @@ share/msf/encoders/ShikataGaNai.pm
 share/msf/encoders/Sparc.pm
 share/msf/exploits/Credits.pm
 share/msf/exploits/Tester.pm
-share/msf/exploits/Win32Tester.pm
+share/msf/exploits/aim_goaway.pm
+share/msf/exploits/backupexec_ns.pm
+share/msf/exploits/icecast_header.pm
+share/msf/exploits/iis40_htr.pm
+share/msf/exploits/iis_fp30reg_chunked.pm
+share/msf/exploits/iis_nsiislog_post.pm
+share/msf/exploits/iis_w3who_overflow.pm
+share/msf/exploits/imail_imap_delete.pm
+share/msf/exploits/irix_lpsched_exec.pm
+share/msf/exploits/mssql2000_preauthentication.pm
+share/msf/exploits/openview_omniback.pm
+share/msf/exploits/samba_trans2open_osx.pm
+share/msf/exploits/seattlelab_mail_55.pm
+share/msf/exploits/solaris_dtspcd_noir.pm
+share/msf/exploits/uow_imap4_copy.pm
+share/msf/exploits/uow_imap4_lsub.pm
+share/msf/exploits/webstar_ftp_user.pm
+share/msf/exploits/wins_ms04_045.pm
 share/msf/exploits/afp_loginext.pm
 share/msf/exploits/apache_chunked_win32.pm
 share/msf/exploits/blackice_pam_icq.pm
 share/msf/exploits/distcc_exec.pm
 share/msf/exploits/exchange2000_xexch50.pm
-share/msf/exploits/frontpage_fp30reg_chunked.pm
 share/msf/exploits/ia_webmail.pm
-share/msf/exploits/iis50_nsiislog_post.pm
 share/msf/exploits/iis50_printer_overflow.pm
 share/msf/exploits/iis50_webdav_ntdll.pm
 share/msf/exploits/imail_ldap.pm
@@ -67,33 +120,22 @@ share/msf/extras/Net_SSLeay.pm-1.23.tar.gz
 share/msf/extras/Term-ReadLine-Gnu-1.14.tar.gz
 share/msf/lib/Msf/PayloadComponent/InlineEggPayload.pm
 share/msf/lib/Msf/PayloadComponent/CommandPayload.pm
-share/msf/lib/Msf/PayloadComponent/Win32Execute.pm
-share/msf/lib/Msf/PayloadComponent/Win32StagePayload.pm
 share/msf/lib/Msf/PayloadComponent/SolarisShellStage.pm
 share/msf/lib/Msf/PayloadComponent/ReverseConnection.pm
 share/msf/lib/Msf/PayloadComponent/SolarisStagePayload.pm
 share/msf/lib/Msf/PayloadComponent/DoubleReverseConnection.pm
 share/msf/lib/Msf/PayloadComponent/Console.pm
-share/msf/lib/Msf/PayloadComponent/Win32ShellStage.pm
 share/msf/lib/Msf/PayloadComponent/ConnectionHandler.pm
 share/msf/lib/Msf/PayloadComponent/SolarisPayload.pm
 share/msf/lib/Msf/PayloadComponent/NoConnection.pm
 share/msf/lib/Msf/PayloadComponent/TextConsole.pm
-share/msf/lib/Msf/PayloadComponent/Win32StagePayloadIE.pm
 share/msf/lib/Msf/PayloadComponent/ExternalPayload.pm
 share/msf/lib/Msf/PayloadComponent/BindConnection.pm
 share/msf/lib/Msf/PayloadComponent/FindRecvConnection.pm
-share/msf/lib/Msf/PayloadComponent/Win32UploadExecStage.pm
-share/msf/lib/Msf/PayloadComponent/Win32ReverseStagerIE.pm
 share/msf/lib/Msf/PayloadComponent/SolarisFindStager.pm
 share/msf/lib/Msf/PayloadComponent/SolarisBindStager.pm
-share/msf/lib/Msf/PayloadComponent/Win32BindStagerIE.pm
 share/msf/lib/Msf/PayloadComponent/FindConnection.pm
-share/msf/lib/Msf/PayloadComponent/Win32BindStager.pm
 share/msf/lib/Msf/PayloadComponent/SolarisReverseStager.pm
-share/msf/lib/Msf/PayloadComponent/Win32InjectLibStage.pm
-share/msf/lib/Msf/PayloadComponent/Win32ReverseStager.pm
-share/msf/lib/Msf/PayloadComponent/Win32Payload.pm
 share/msf/lib/Msf/PayloadComponent/WebConsole.pm
 share/msf/lib/Msf/Base.pm
 share/msf/lib/Msf/UI.pm
@@ -118,6 +160,88 @@ share/msf/lib/Msf/Logging.pm
 share/msf/lib/Msf/WebUI.pm
 share/msf/lib/Msf/Config.pm
 share/msf/lib/Msf/Encoder.pm
+share/msf/lib/Pex/SPARC.pm
+share/msf/lib/Pex/Meterpreter/RemoteDispatch.pm
+share/msf/lib/Pex/Meterpreter/Packet.pm
+share/msf/lib/Pex/Meterpreter/LocalDispatch.pm
+share/msf/lib/Pex/Meterpreter/Extension/Client/Sys.pm
+share/msf/lib/Pex/Meterpreter/Extension/Client/Process.pm
+share/msf/lib/Pex/Meterpreter/Extension/Client/Net.pm
+share/msf/lib/Pex/Meterpreter/Extension/Client/Fs.pm
+share/msf/lib/Pex/Meterpreter/Extension/Client/Boiler.pm
+share/msf/lib/Pex/Meterpreter/Crypto/Xor.pm
+share/msf/lib/Pex/Meterpreter/Client.pm
+share/msf/lib/Pex/Meterpreter/Channel.pm
+share/msf/lib/Pex/Meterpreter/Buffer.pm
+share/msf/lib/Pex/Meterpreter/Base.pm
+share/msf/lib/Pex/Meterpreter/Arguments.pm
+share/msf/lib/Pex/Encoding/XorWord.pm
+share/msf/lib/Pex/Encoding/XorDwordFeedbackN.pm
+share/msf/lib/Pex/Encoding/XorDwordFeedback.pm
+share/msf/lib/Pex/Encoding/XorDword.pm
+share/msf/lib/Pex/ELFInfo.pm
+share/msf/lib/Pex/Alpha.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/UploadExecStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseStagerIE.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/ReverseOrdinalStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/PipedShellStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/InjectVncStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/InjectMeterpreterStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/InjectLibStage.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/FindRecvOrdinalStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/ExecuteCommand.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/BindStagerIE.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ia32/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/StagePayloadIE.pm
+share/msf/lib/Msf/PayloadComponent/Windows/StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/Windows/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/Payload.pm
+share/msf/lib/Msf/PayloadComponent/Windows/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/Windows/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/ReverseNFStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/FindRecvPeekStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ppc/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/OSX/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/Payload.pm
+share/msf/lib/Msf/PayloadComponent/OSX/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/OSX/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/ia32/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/Linux/ia32/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/ia32/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/ia32/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/Linux/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/Payload.pm
+share/msf/lib/Msf/PayloadComponent/Linux/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/Linux/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/ia32/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/ia32/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/ia32/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/Payload.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/BSDi/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/ia32/ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/BSD/ia32/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/ia32/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/ia32/BindStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/BSD/ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/Payload.pm
+share/msf/lib/Msf/PayloadComponent/BSD/FindRecvStager.pm
+share/msf/lib/Msf/PayloadComponent/BSD/BindStager.pm
+share/msf/lib/Msf/Nop/OptyNop.pm
+share/msf/lib/Msf/Logo.pm
+share/msf/lib/Msf/Encoder/_Sparc.pm
+share/msf/lib/Msf/Encoder/XorDword.pm
+share/msf/lib/Msf/Encoder/SkyAlphaNum.pm
 share/msf/lib/Pex/Nasm/Instruction.pm
 share/msf/lib/Pex/Nasm/Ndisasm.pm
 share/msf/lib/Pex/Nasm/Nasm.pm
@@ -157,6 +281,9 @@ share/msf/lib/NetPacket/ARP.pm
 share/msf/nops/PPC.pm
 share/msf/nops/Pex.pm
 share/msf/nops/SPARC.pm
+share/msf/nops/Alpha.pm
+share/msf/nops/MIPS.pm
+share/msf/nops/Opty.pm
 share/msf/payloads/external/WindowsSyscall.py
 share/msf/payloads/external/bsdx86bind_ie.py
 share/msf/payloads/external/bsdx86reverse_ie.py
@@ -166,34 +293,10 @@ share/msf/payloads/external/linx86reverse_ie.py
 share/msf/payloads/external/linx86reverse_xor.py
 share/msf/payloads/external/win32_stg_winexec.py
 share/msf/payloads/Empty.pm
-share/msf/payloads/bsdix86_bind.pm
-share/msf/payloads/bsdix86_findsock.pm
-share/msf/payloads/bsdix86_reverse.pm
-share/msf/payloads/bsdx86_bind.pm
-share/msf/payloads/bsdx86_bind_ie.pm
-share/msf/payloads/bsdx86_findsock.pm
-share/msf/payloads/bsdx86_reverse.pm
-share/msf/payloads/bsdx86_reverse_ie.pm
 share/msf/payloads/cmd_generic.pm
 share/msf/payloads/cmd_sol_bind.pm
 share/msf/payloads/cmd_unix_reverse.pm
 share/msf/payloads/cmd_unix_reverse_nss.pm
-share/msf/payloads/linx86_bind.pm
-share/msf/payloads/linx86_bind_ie.pm
-share/msf/payloads/linx86_findrecv.pm
-share/msf/payloads/linx86_findsock.pm
-share/msf/payloads/linx86_reverse.pm
-share/msf/payloads/linx86_reverse_ie.pm
-share/msf/payloads/linx86_reverse_impurity.pm
-share/msf/payloads/linx86_reverse_xor.pm
-share/msf/payloads/osx_bind.pm
-share/msf/payloads/osx_reverse.pm
-share/msf/payloads/solsparc_bind.pm
-share/msf/payloads/solsparc_findsock.pm
-share/msf/payloads/solsparc_reverse.pm
-share/msf/payloads/solx86_bind.pm
-share/msf/payloads/solx86_findsock.pm
-share/msf/payloads/solx86_reverse.pm
 share/msf/payloads/win32_adduser.pm
 share/msf/payloads/win32_bind.pm
 share/msf/payloads/win32_bind_dllinject.pm
@@ -207,6 +310,63 @@ share/msf/payloads/win32_reverse_stg.pm
 share/msf/payloads/win32_reverse_stg_ie.pm
 share/msf/payloads/win32_reverse_stg_upexec.pm
 share/msf/payloads/win32_reverse_vncinject.pm
+share/msf/payloads/bsd_ia32_bind.pm
+share/msf/payloads/bsd_ia32_bind_ie.pm
+share/msf/payloads/bsd_ia32_bind_stg.pm
+share/msf/payloads/bsd_ia32_exec.pm
+share/msf/payloads/bsd_ia32_findrecv.pm
+share/msf/payloads/bsd_ia32_findrecv_stg.pm
+share/msf/payloads/bsd_ia32_findsock.pm
+share/msf/payloads/bsd_ia32_reverse.pm
+share/msf/payloads/bsd_ia32_reverse_ie.pm
+share/msf/payloads/bsd_ia32_reverse_stg.pm
+share/msf/payloads/bsd_sparc_bind.pm
+share/msf/payloads/bsd_sparc_reverse.pm
+share/msf/payloads/bsdi_ia32_bind.pm
+share/msf/payloads/bsdi_ia32_bind_stg.pm
+share/msf/payloads/bsdi_ia32_findsock.pm
+share/msf/payloads/bsdi_ia32_reverse.pm
+share/msf/payloads/bsdi_ia32_reverse_stg.pm
+share/msf/payloads/cmd_irix_bind.pm
+share/msf/payloads/cmd_unix_reverse_bash.pm
+share/msf/payloads/cmd_unix_reverse_cross.pm
+share/msf/payloads/generic_sparc_execve.pm
+share/msf/payloads/irix_mips_execve.pm
+share/msf/payloads/linux_ia32_adduser.pm
+share/msf/payloads/linux_ia32_bind.pm
+share/msf/payloads/linux_ia32_bind_ie.pm
+share/msf/payloads/linux_ia32_bind_stg.pm
+share/msf/payloads/linux_ia32_exec.pm
+share/msf/payloads/linux_ia32_findrecv.pm
+share/msf/payloads/linux_ia32_findrecv_stg.pm
+share/msf/payloads/linux_ia32_findsock.pm
+share/msf/payloads/linux_ia32_reverse.pm
+share/msf/payloads/linux_ia32_reverse_ie.pm
+share/msf/payloads/linux_ia32_reverse_impurity.pm
+share/msf/payloads/linux_ia32_reverse_stg.pm
+share/msf/payloads/linux_ia32_reverse_udp.pm
+share/msf/payloads/linux_ia32_reverse_xor.pm
+share/msf/payloads/linux_sparc_bind.pm
+share/msf/payloads/linux_sparc_reverse.pm
+share/msf/payloads/osx_ppc_bind.pm
+share/msf/payloads/osx_ppc_bind_stg.pm
+share/msf/payloads/osx_ppc_findrecv_peek_stg.pm
+share/msf/payloads/osx_ppc_findrecv_stg.pm
+share/msf/payloads/osx_ppc_reverse.pm
+share/msf/payloads/osx_ppc_reverse_nf_stg.pm
+share/msf/payloads/osx_ppc_reverse_stg.pm
+share/msf/payloads/solaris_ia32_bind.pm
+share/msf/payloads/solaris_ia32_findsock.pm
+share/msf/payloads/solaris_ia32_reverse.pm
+share/msf/payloads/solaris_sparc_bind.pm
+share/msf/payloads/solaris_sparc_reverse.pm
+share/msf/payloads/win32_bind_meterpreter.pm
+share/msf/payloads/win32_findrecv_ord_meterpreter.pm
+share/msf/payloads/win32_findrecv_ord_stg.pm
+share/msf/payloads/win32_findrecv_ord_vncinject.pm
+share/msf/payloads/win32_reverse_meterpreter.pm
+share/msf/payloads/win32_reverse_ord.pm
+share/msf/payloads/win32_reverse_ord_vncinject.pm
 share/msf/tools/README.socketNinja
 share/msf/tools/README.memdump
 share/msf/tools/memdump.exe
@@ -220,6 +380,7 @@ share/msf/sdk/docs/vuln1.c
 share/msf/sdk/docs/vuln1_1.pm
 share/msf/sdk/docs/vuln1_2.pm
 share/msf/sdk/docs/vuln1_3.pm
+share/msf/sdk/docs/exploitTutorial_FR.txt
 share/msf/sdk/formatGen.pl
 share/msf/sdk/patternOffset.pl
 share/msf/sdk/spitCode.pl
@@ -233,14 +394,170 @@ share/msf/msfpayload.cgi
 share/msf/msfpescan
 share/msf/msfweb
 share/msf/msfupdate
+share/msf/msfelfscan
+share/msf/src/shellcode/bsd/ia32/stager_sock_find.asm
+share/msf/src/shellcode/bsd/ia32/single_exec.asm
+share/msf/src/shellcode/bsd/ia32/Makefile
+share/msf/src/shellcode/bsd/ia32/single_bind_tcp_shell.asm
+share/msf/src/shellcode/bsd/ia32/single_reverse_tcp_shell.asm
+share/msf/src/shellcode/bsd/ia32/single_findsock.asm
+share/msf/src/shellcode/bsd/ia32/stage_tcp_shell.asm
+share/msf/src/shellcode/bsd/ia32/single_reverse_libinject.asm
+share/msf/src/shellcode/bsd/ia32/single_find_tcp_shell.asm
+share/msf/src/shellcode/bsd/ia32/stager_sock_bind.asm
+share/msf/src/shellcode/bsd/ia32/stager_sock_reverse.asm
+share/msf/src/shellcode/bsd/ia32/generic.asm
+share/msf/src/shellcode/bsd/sparc/single_bind_tcp.s
+share/msf/src/shellcode/bsd/sparc/single_reverse_tcp.s
+share/msf/src/shellcode/osx/ppc/stub_sock_find_peek_flusher.asm
+share/msf/src/shellcode/osx/ppc/stager_sock_reverse_nf.asm
+share/msf/src/shellcode/osx/ppc/stager_sock_find.asm
+share/msf/src/shellcode/osx/ppc/encoder_dword_xor_tag.asm
+share/msf/src/shellcode/osx/ppc/encoder_dword_xor.asm
+share/msf/src/shellcode/osx/ppc/single_reverse_tcp.asm
+share/msf/src/shellcode/osx/ppc/stage_tcp_shell.asm
+share/msf/src/shellcode/osx/ppc/single_bind_tcp.asm
+share/msf/src/shellcode/osx/ppc/stager_sock_bind.asm
+share/msf/src/shellcode/osx/ppc/stager_sock_find_peek.asm
+share/msf/src/shellcode/osx/ppc/stager_sock_reverse.asm
+share/msf/src/shellcode/bsdi/ia32/syscall_bsdi_4.3.h
+share/msf/src/shellcode/bsdi/ia32/generic.asm
+share/msf/src/shellcode/bsdi/ia32/Makefile
+share/msf/src/shellcode/bsdi/ia32/single_bind_tcp_shell.asm
+share/msf/src/shellcode/bsdi/ia32/stager_sock_find.asm
+share/msf/src/shellcode/bsdi/ia32/single_reverse_tcp_shell.asm
+share/msf/src/shellcode/bsdi/ia32/stage_tcp_shell.asm
+share/msf/src/shellcode/bsdi/ia32/single_find_tcp_shell.asm
+share/msf/src/shellcode/bsdi/ia32/stager_sock_bind.asm
+share/msf/src/shellcode/bsdi/ia32/stager_sock_reverse.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_find.asm
+share/msf/src/shellcode/linux/ia32/single_exec.asm
+share/msf/src/shellcode/linux/ia32/Makefile
+share/msf/src/shellcode/linux/ia32/stager_sock_reverse_udp_dns.asm
+share/msf/src/shellcode/linux/ia32/single_bind_tcp_shell.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_reverse_udp.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_reverse_icmp.asm
+share/msf/src/shellcode/linux/ia32/single_reverse_tcp_shell.asm
+share/msf/src/shellcode/linux/ia32/single_findsock.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_bind_icmp.asm
+share/msf/src/shellcode/linux/ia32/stage_tcp_shell.asm
+share/msf/src/shellcode/linux/ia32/single_find_tcp_shell.asm
+share/msf/src/shellcode/linux/ia32/single_adduser.asm
+share/msf/src/shellcode/linux/ia32/generic.asm
+share/msf/src/shellcode/linux/ia32/single_adduser.template
+share/msf/src/shellcode/linux/ia32/stager_sock_bind_udp.asm
+share/msf/src/shellcode/linux/ia32/single_reverse_udp_shell.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_bind.asm
+share/msf/src/shellcode/linux/ia32/stager_sock_reverse.asm
+share/msf/src/shellcode/linux/ia32/stage_udp_shell.asm
+share/msf/src/shellcode/linux/ia32/.cvsignore
+share/msf/src/shellcode/linux/ia32/stager_egghunt.asm
+share/msf/src/shellcode/linux/sparc/single_bind_tcp.s
+share/msf/src/shellcode/linux/sparc/single_reverse_tcp.s
+share/msf/src/shellcode/win32/standard/new/stager_sock_reverse_ordinal.asm
+share/msf/src/shellcode/win32/standard/new/single_wsa_bind_shell.asm
+share/msf/src/shellcode/win32/standard/new/_kernel32_init.asm
+share/msf/src/shellcode/win32/standard/new/single_wsa_reverse_shell.asm
+share/msf/src/shellcode/win32/standard/new/_wsa_init.asm
+share/msf/src/shellcode/win32/standard/new/stage_wsa_shell.asm
+share/msf/src/shellcode/win32/standard/new/stage_sock_shell.asm
+share/msf/src/shellcode/win32/standard/new/_includes.asm
+share/msf/src/shellcode/win32/standard/new/_hash.asm
+share/msf/src/shellcode/win32/dllinject/libloader.h
+share/msf/src/shellcode/Makefile.incl
+share/msf/src/shellcode/Makefile
+share/msf/src/shellcode/solaris/sparc/single_bind_tcp.s
+share/msf/src/shellcode/solaris/sparc/single_reverse_tcp.s
+share/msf/src/shellcode/generic/ia32/stager_stdin.asm
+share/msf/src/shellcode/generic/sparc/single_shell.s
+share/msf/src/shellcode/import.pl
+share/msf/src/meterpreter/workspace/ext_server_net/ext_server_net.dsp
+share/msf/src/meterpreter/workspace/ext_server_sys/ext_server_sys.dsp
+share/msf/src/meterpreter/workspace/ext_server_fs/ext_server_fs.dsp
+share/msf/src/meterpreter/workspace/ext_client_net/ext_client_net.dsp
+share/msf/src/meterpreter/workspace/ext_client_sys/ext_client_sys.dsp
+share/msf/src/meterpreter/workspace/common/common.dsp
+share/msf/src/meterpreter/workspace/metcli/metcli.dsp
+share/msf/src/meterpreter/workspace/ext_client_process/ext_client_process.dsp
+share/msf/src/meterpreter/workspace/meterpreter.dsw
+share/msf/src/meterpreter/workspace/ext_client_fs/ext_client_fs.dsp
+share/msf/src/meterpreter/workspace/metsrv/metsrv.dsp
+share/msf/src/meterpreter/workspace/ext_server_process/ext_server_process.dsp
+share/msf/src/meterpreter/output/client/.cvskeep
+share/msf/src/meterpreter/output/server/.cvskeep
+share/msf/src/meterpreter/output/extensions/.cvskeep
+share/msf/src/meterpreter/source/client/local_dispatch.c
+share/msf/src/meterpreter/source/client/console.c
+share/msf/src/meterpreter/source/client/metcli.c
+share/msf/src/meterpreter/source/client/metcli.h
+share/msf/src/meterpreter/source/client/module.c
+share/msf/src/meterpreter/source/client/module.h
+share/msf/src/meterpreter/source/client/remote_dispatch.c
+share/msf/src/meterpreter/source/client/console.h
+share/msf/src/meterpreter/source/client/metcli.def
+share/msf/src/meterpreter/source/common/crypto/xor.c
+share/msf/src/meterpreter/source/common/crypto/xor.h
+share/msf/src/meterpreter/source/common/base_dispatch.c
+share/msf/src/meterpreter/source/common/remote.c
+share/msf/src/meterpreter/source/common/remote.h
+share/msf/src/meterpreter/source/common/crypto.h
+share/msf/src/meterpreter/source/common/channel.c
+share/msf/src/meterpreter/source/common/channel.h
+share/msf/src/meterpreter/source/common/base.c
+share/msf/src/meterpreter/source/common/base.h
+share/msf/src/meterpreter/source/common/args.c
+share/msf/src/meterpreter/source/common/args.h
+share/msf/src/meterpreter/source/common/core.c
+share/msf/src/meterpreter/source/common/core.h
+share/msf/src/meterpreter/source/common/scheduler.c
+share/msf/src/meterpreter/source/common/common.c
+share/msf/src/meterpreter/source/common/common.h
+share/msf/src/meterpreter/source/common/buffer.c
+share/msf/src/meterpreter/source/common/buffer.h
+share/msf/src/meterpreter/source/common/scheduler.h
+share/msf/src/meterpreter/source/common/linkage.h
+share/msf/src/meterpreter/source/server/metsrv_test.c
+share/msf/src/meterpreter/source/server/libloader.c
+share/msf/src/meterpreter/source/server/metsrv.c
+share/msf/src/meterpreter/source/server/metsrv.h
+share/msf/src/meterpreter/source/server/remote_dispatch.c
+share/msf/src/meterpreter/source/server/libloader.h
+share/msf/src/meterpreter/source/server/remote_dispatch.h
+share/msf/src/meterpreter/source/server/metsrv.def
+share/msf/src/meterpreter/source/extensions/fs/client/browse.c
+share/msf/src/meterpreter/source/extensions/fs/client/fs.c
+share/msf/src/meterpreter/source/extensions/fs/client/util.c
+share/msf/src/meterpreter/source/extensions/fs/client/xfer.c
+share/msf/src/meterpreter/source/extensions/fs/server/browse.c
+share/msf/src/meterpreter/source/extensions/fs/server/fs.c
+share/msf/src/meterpreter/source/extensions/fs/server/util.c
+share/msf/src/meterpreter/source/extensions/fs/server/xfer.c
+share/msf/src/meterpreter/source/extensions/fs/fs.h
+share/msf/src/meterpreter/source/extensions/net/client/net.c
+share/msf/src/meterpreter/source/extensions/net/client/port.c
+share/msf/src/meterpreter/source/extensions/net/client/system.c
+share/msf/src/meterpreter/source/extensions/net/client/util.c
+share/msf/src/meterpreter/source/extensions/net/common/netchannel.c
+share/msf/src/meterpreter/source/extensions/net/common/netchannel.h
+share/msf/src/meterpreter/source/extensions/net/net.h
+share/msf/src/meterpreter/source/extensions/net/server/net.c
+share/msf/src/meterpreter/source/extensions/net/server/port.c
+share/msf/src/meterpreter/source/extensions/net/server/system.c
+share/msf/src/meterpreter/source/extensions/net/server/util.c
+share/msf/src/meterpreter/source/extensions/sys/client/sys.c
+share/msf/src/meterpreter/source/extensions/sys/client/user.c
+share/msf/src/meterpreter/source/extensions/sys/server/sys.c
+share/msf/src/meterpreter/source/extensions/sys/server/user.c
+share/msf/src/meterpreter/source/extensions/sys/sys.h
+share/msf/src/meterpreter/source/extensions/boiler/client/boiler.c
+share/msf/src/meterpreter/source/extensions/boiler/server/boiler.c
+share/msf/src/meterpreter/source/extensions/process/client/process.c
+share/msf/src/meterpreter/source/extensions/process/client/system.c
+share/msf/src/meterpreter/source/extensions/process/server/process.c
+share/msf/src/meterpreter/source/extensions/process/server/system.c
+share/msf/src/meterpreter/source/extensions/process/process.h
 share/msf/src/shellcode/osx/syscall.h
-share/msf/src/shellcode/osx/osx_reverse.s
-share/msf/src/shellcode/bsdi/ia32/connectback.s
-share/msf/src/shellcode/bsdi/ia32/bind.s
-share/msf/src/shellcode/bsdi/ia32/setuid-execve.s
-share/msf/src/shellcode/bsdi/ia32/findsock.s
 share/msf/src/shellcode/linux/ia32/linux_2.6.7_unistd_ia32.h
-share/msf/src/shellcode/linux/ia32/msfind.asm
 share/msf/src/shellcode/linux/impurity/linux_reverse_impurity.asm
 share/msf/src/shellcode/linux/impurity/Makefile
 share/msf/src/shellcode/linux/impurity/README.metasploit
@@ -482,9 +799,8 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnit
 share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread/nt.h
 share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread/nt.cpp
 share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
-share/msf/src/shellcode/hexify.sh
 @dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread
-@dirrm  share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread
 @dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res
 @dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc
 @dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vncdll
@@ -499,26 +815,93 @@ share/msf/src/shellcode/hexify.sh
 @dirrm share/msf/src/shellcode/win32/dllinject
 @dirrm share/msf/src/shellcode/win32/standard/templates/inc
 @dirrm share/msf/src/shellcode/win32/standard/templates
+@dirrm share/msf/src/shellcode/win32/standard/new
 @dirrm share/msf/src/shellcode/win32/standard
 @dirrm share/msf/src/shellcode/win32
 @dirrm share/msf/src/shellcode/linux/impurity
+@dirrm share/msf/src/shellcode/linux/sparc
 @dirrm share/msf/src/shellcode/linux/ia32
 @dirrm share/msf/src/shellcode/linux
+@dirrm share/msf/src/shellcode/solaris/sparc
+@dirrm share/msf/src/shellcode/solaris
 @dirrm share/msf/src/shellcode/bsdi/ia32
+@dirrm share/msf/src/shellcode/osx/ppc
 @dirrm share/msf/src/shellcode/osx
 @dirrm share/msf/src/shellcode/bsdi
+@dirrm share/msf/src/shellcode/bsd/sparc
+@dirrm share/msf/src/shellcode/bsd/ia32
+@dirrm share/msf/src/shellcode/bsd
+@dirrm share/msf/src/shellcode/generic/sparc
+@dirrm share/msf/src/shellcode/generic/ia32
+@dirrm share/msf/src/shellcode/generic
 @dirrm share/msf/src/shellcode
+@dirrm share/msf/src/meterpreter/workspace/metsrv
+@dirrm share/msf/src/meterpreter/workspace/metcli
+@dirrm share/msf/src/meterpreter/workspace/ext_server_sys
+@dirrm share/msf/src/meterpreter/workspace/ext_server_process
+@dirrm share/msf/src/meterpreter/workspace/ext_server_net
+@dirrm share/msf/src/meterpreter/workspace/ext_server_fs
+@dirrm share/msf/src/meterpreter/workspace/ext_client_sys
+@dirrm share/msf/src/meterpreter/workspace/ext_client_process
+@dirrm share/msf/src/meterpreter/workspace/ext_client_net
+@dirrm share/msf/src/meterpreter/workspace/ext_client_fs
+@dirrm share/msf/src/meterpreter/workspace/common
+@dirrm share/msf/src/meterpreter/workspace
+@dirrm share/msf/src/meterpreter/source/server
+@dirrm share/msf/src/meterpreter/source/extensions/sys/server
+@dirrm share/msf/src/meterpreter/source/extensions/sys/client
+@dirrm share/msf/src/meterpreter/source/extensions/sys
+@dirrm share/msf/src/meterpreter/source/extensions/process/server
+@dirrm share/msf/src/meterpreter/source/extensions/process/client
+@dirrm share/msf/src/meterpreter/source/extensions/process
+@dirrm share/msf/src/meterpreter/source/extensions/net/server
+@dirrm share/msf/src/meterpreter/source/extensions/net/common
+@dirrm share/msf/src/meterpreter/source/extensions/net/client
+@dirrm share/msf/src/meterpreter/source/extensions/net
+@dirrm share/msf/src/meterpreter/source/extensions/fs/server
+@dirrm share/msf/src/meterpreter/source/extensions/fs/client
+@dirrm share/msf/src/meterpreter/source/extensions/fs
+@dirrm share/msf/src/meterpreter/source/extensions/boiler/server
+@dirrm share/msf/src/meterpreter/source/extensions/boiler/client
+@dirrm share/msf/src/meterpreter/source/extensions/boiler
+@dirrm share/msf/src/meterpreter/source/extensions
+@dirrm share/msf/src/meterpreter/source/common/crypto
+@dirrm share/msf/src/meterpreter/source/common
+@dirrm share/msf/src/meterpreter/source/client
+@dirrm share/msf/src/meterpreter/source
+@dirrm share/msf/src/meterpreter/output/server
+@dirrm share/msf/src/meterpreter/output/extensions
+@dirrm share/msf/src/meterpreter/output/client
+@dirrm share/msf/src/meterpreter/output
+@dirrm share/msf/src/meterpreter
 @dirrm share/msf/src
 @dirrm share/msf/encoders
 @dirrm share/msf/exploits
 @dirrm share/msf/extras
-@dirrm share/msf/lib/Msf/PayloadComponent  
 @dirrm share/msf/lib/Msf/Socket       
-@dirrm share/msf/lib/Msf              
 @dirrm share/msf/lib/Pex/Nasm         
 @dirrm share/msf/lib/Pex/Poly/BlockMaster  
 @dirrm share/msf/lib/Pex/Poly         
-@dirrm share/msf/lib/Pex/Socket       
+@dirrm share/msf/lib/Pex/Socket
+@dirrm share/msf/lib/Pex/Meterpreter/Extension/Client
+@dirrm share/msf/lib/Pex/Meterpreter/Extension
+@dirrm share/msf/lib/Pex/Meterpreter/Crypto
+@dirrm share/msf/lib/Pex/Meterpreter
+@dirrm share/msf/lib/Pex/Encoding
+@dirrm share/msf/lib/Msf/PayloadComponent/Windows/ia32
+@dirrm share/msf/lib/Msf/PayloadComponent/Windows
+@dirrm share/msf/lib/Msf/PayloadComponent/OSX/ppc
+@dirrm share/msf/lib/Msf/PayloadComponent/OSX
+@dirrm share/msf/lib/Msf/PayloadComponent/Linux/ia32
+@dirrm share/msf/lib/Msf/PayloadComponent/Linux
+@dirrm share/msf/lib/Msf/PayloadComponent/BSDi/ia32
+@dirrm share/msf/lib/Msf/PayloadComponent/BSDi
+@dirrm share/msf/lib/Msf/PayloadComponent/BSD/ia32
+@dirrm share/msf/lib/Msf/PayloadComponent/BSD
+@dirrm share/msf/lib/Msf/PayloadComponent
+@dirrm share/msf/lib/Msf/Nop
+@dirrm share/msf/lib/Msf/Encoder
+@dirrm share/msf/lib/Msf
 @dirrm share/msf/lib/Pex
 @dirrm share/msf/lib/Digest/Perl
 @dirrm share/msf/lib/Digest           
@@ -529,7 +912,14 @@ share/msf/src/shellcode/hexify.sh
 @dirrm share/msf/payloads             
 @dirrm share/msf/tools                
 @dirrm share/msf/sdk/docs             
-@dirrm share/msf/sdk                  
+@dirrm share/msf/sdk
+@dirrm share/msf/data/msfweb/themes/gwhite
+@dirrm share/msf/data/msfweb/themes/gblack
+@dirrm share/msf/data/msfweb/themes/default
+@dirrm share/msf/data/msfweb/themes
+@dirrm share/msf/data/msfweb/icons
+@dirrm share/msf/data/msfweb
+@dirrm share/msf/data/meterpreter
 @dirrm share/msf/data                 
 @dirrm share/msf/docs
 @dirrm share/msf
