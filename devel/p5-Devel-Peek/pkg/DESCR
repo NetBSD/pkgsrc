@@ -1,0 +1,5 @@
+Devel::Peek contains functions which allows raw Perl datatypes to be
+manipulated from a Perl script.  This is used by those who do XS programming
+to check that the data they are sending from C to Perl looks as they think
+it should look.  The trick, then, is to know what the raw datatype is
+supposed to look like when it gets to Perl.
