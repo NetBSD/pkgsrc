@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/02 17:52:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/09 17:37:29 hubertf Exp $
 #
 
 DISTNAME=		htdocs-share-20041021
@@ -111,5 +111,8 @@ install-htdocs: build
 		${WRKSRC}/pkgsrc.ps \
 		${WRKSRC}/*.html \
 		${HTDOCSDIR}/Documentation/pkgsrc
+
+do-lint:
+	cd ${WRKSRC} ; ${MAKE} lint
 
 .include "../../mk/bsd.pkg.mk"
