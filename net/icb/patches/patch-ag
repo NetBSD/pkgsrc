@@ -1,11 +1,45 @@
---- icb/c_shell.c.orig	Tue Jun  1 10:38:15 1999
-+++ icb/c_shell.c	Tue Jun  1 10:38:47 1999
-@@ -14,7 +14,7 @@ TARGDEFS
- 	static char *usage = "usage: c_shell [command]";
- 	int w, pid;
- 	int shellout = 0;
--	union wait status;
-+	int status;
- 	char *shell, *getenv();
- 	
- 	/* disallow use if restricted mode set */
+$NetBSD: patch-ag,v 1.2 1999/11/26 22:12:37 hubertf Exp $
+
+diff -x *.orig -urN ./icb/print.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/print.c
+--- ./icb/print.c	Fri Feb 24 22:20:25 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/print.c	Fri Nov 26 22:56:31 1999
+@@ -5,6 +5,7 @@
+ 
+ #include "icb.h"
+ #include "externs.h"
++#include <time.h>
+ 
+ extern FILE *logfp;
+ 
+@@ -17,12 +18,22 @@
+ 	char printbuf[1024];
+ 	char *p = printbuf;
+ 	char *t = s;
++	struct tm *tm, *localtime();
++	char timestamp[9];
+ 
+ 	if (continued) {
+ 		linenumber = 0;
+ 		continued = 0;
+ 	}
+ 
++	/* If requested, prepare timestamp */
++	if (gv.printtime) {
++		gettime();
++		tm = localtime(&curtime);
++		snprintf(timestamp, sizeof(timestamp), "[%02d:%02d]",
++		 	tm->tm_hour, tm->tm_min);
++	}
++
+ 	if (flags & PL_SCR) {
+ 		/* if paging in effect, do paging */
+ 		if (gv.pagesize && (++linenumber >= gv.pagesize)) {
+@@ -35,6 +46,8 @@
+ 			*p++ = *t++;
+ 		*p++ = '\r';
+ 		*p++ = '\n';
++		if (gv.printtime)
++			write(1, timestamp, 7);
+ 		write(1, printbuf, p - printbuf);
+ 	}
+ 
