@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2001/12/26 21:20:27 jlam Exp $
+# $NetBSD: Makefile,v 1.87 2002/01/01 06:12:05 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -107,12 +107,7 @@ SUPPORT_FILES=	${EGDIR}/magic.default ${PKG_SYSCONFDIR}/magic
 SUPPORT_FILES+=	${EGDIR}/mime.types.default ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=	apache
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/ssl.crl
-OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.crt
-OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.csr
-OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.key
-OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.prm
-OWN_DIRS+=		/var/log/httpd
+OWN_DIRS=		/var/log/httpd
 OWN_DIRS+=		/var/spool/httpd
 OWN_DIRS_PERMS+=	/var/spool/httpd/proxy nobody nobody 0755
 
