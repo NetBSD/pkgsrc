@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.7 2003/02/24 03:35:30 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.8 2004/07/15 04:00:47 dmcmahill Exp $
 
---- config/Makeso.incl.in.orig	Mon Jun 24 12:22:46 2002
-+++ config/Makeso.incl.in
-@@ -33,7 +33,7 @@ COMPILE = $(CC) $(INCLUDES) $(CPPFLAGS) 
- FCOMPILE = $(FC) $(INCLUDES) $(FFLAGS)
+--- examples/interface-tutorial-so/Makefile.orig	Mon Jul  8 07:49:02 2002
++++ examples/interface-tutorial-so/Makefile
+@@ -19,7 +19,7 @@ tests	: all
+ clean	::
+ 	@echo Cleaning 
+ 	@$(RM) -f -r *.o *.lo *.la *.so *.dll *.a *.dia .job.sce so_locations
+-	@$(RM) -f -r .libs 
++	@$(RM) -f -r .libs libtutorial.c loader.sce
  
- LTCOMPILE = $(LIBTOOL) --mode=compile $(QUIET) $(CC) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
--FLTCOMPILE = $(LIBTOOL) --mode=compile $(QUIET) $(FC) $(INCLUDES) $(FFLAGS)
-+FLTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(QUIET) $(FC) $(INCLUDES) $(FFLAGS)
- 
- LINK = $(LIBTOOL) --mode=link $(QUIET) $(CC) $(CFLAGS) $(LDFLAGS)  $(FLIBS) -o $@
- 
+ distclean:: clean 
+ 	@$(RM) -f *.dia  *_gateway.c 

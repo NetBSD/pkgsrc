@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.7 2004/03/28 17:26:21 dmcmahill Exp $
+$NetBSD: patch-ak,v 1.8 2004/07/15 04:00:47 dmcmahill Exp $
 
---- aclocal.m4.orig	Wed Feb  5 08:23:59 2003
+--- aclocal.m4.orig	Tue Jul  6 14:21:06 2004
 +++ aclocal.m4
 @@ -132,7 +132,11 @@ dnl  TCL_LIB : flag to link against tcl 
  CHK_TCL_MAJ=$1
@@ -35,7 +35,7 @@ $NetBSD: patch-ak,v 1.7 2004/03/28 17:26:21 dmcmahill Exp $
  				break;
  			fi
  		fi
-@@ -416,7 +424,7 @@ dnl In addition, if the test was OK, the
+@@ -417,7 +425,7 @@ dnl In addition, if the test was OK, the
    if test $TK_LIB_OK = 0; then 
          AC_MSG_ERROR([tk library not found])
    else 
