@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2000/12/17 23:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2000/12/18 23:35:04 tsarna Exp $
 #
 
     SUBDIR += 9menu
@@ -26,6 +26,7 @@
     SUBDIR += gnome-utils
     SUBDIR += gperiodic
     SUBDIR += heyu
+    SUBDIR += ibutton-pdkit
     SUBDIR += jitterbug
     SUBDIR += jive
     SUBDIR += kdeutils
@@ -39,6 +40,7 @@
     SUBDIR += most
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Business-CreditCard
+    SUBDIR += p5-ControlX10-CM11
     SUBDIR += p5-File-MMagic
     SUBDIR += p5-Locale-Codes
     SUBDIR += p5-Search
@@ -59,6 +61,7 @@
     SUBDIR += vttest
     SUBDIR += watch
     SUBDIR += xrolodex
+    SUBDIR += xtend
     SUBDIR += zorro
 
 .include "../mk/bsd.pkg.subdir.mk"
