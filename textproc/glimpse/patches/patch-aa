@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:12 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/03 12:39:45 frueauf Exp $
 
-*** agrep/agrep.c.orig	Thu Aug 22 07:51:14 1996
---- agrep/agrep.c	Thu Aug 22 07:51:27 1996
-***************
-*** 3,8 ****
---- 3,9 ----
-   * bgopal: (1993-4) added a library interface and removed some bugs: also
-   * selectively modified many routines to work with our text-compression algo.
-   */
-+ #include <sys/types.h>
-  #include <sys/stat.h>
-  #include "agrep.h"
-  #include "checkfile.h"
+--- main.c.orig	Mon Apr 28 00:14:04 1997
++++ main.c	Sun Nov 29 03:34:48 1998
+@@ -1059,7 +1059,7 @@
+ 		clargc = 0;
+ 		clargv = NULL;
+ 		cli_len = sizeof(cli_addr);
+-		if ((newsockfd = accept(sockfd, &cli_addr, &cli_len)) < 0) continue;
++		if ((newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &cli_len)) < 0) continue;
+ 		if (getreq(newsockfd, glimpse_reqbuf, &clstdin, &clstdout, &clstderr, &clargc, &clargv, &clpid) < 0) {
+ 			ret = -1;
+ #if	DEBUG
