@@ -1,8 +1,8 @@
-$NetBSD: patch-bo,v 1.1 2003/11/27 23:36:42 taya Exp $
+$NetBSD: patch-bo,v 1.2 2004/12/04 03:50:41 taya Exp $
 
---- nsprpub/configure.in.orig	20 Jan 2003 20:49:52 -0000
-+++ nsprpub/configure.in	15 Apr 2003 14:51:35 -0000
-@@ -929,6 +929,9 @@
+--- ../Orig/mozilla/nsprpub/configure.in	2004-04-17 07:28:02.000000000 +0900
++++ ./nsprpub/configure.in	2004-07-27 01:25:32.000000000 +0900
+@@ -933,6 +933,9 @@
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -12,19 +12,11 @@ $NetBSD: patch-bo,v 1.1 2003/11/27 23:36:42 taya Exp $
      ;;
  
  *-hpux*)
-@@ -2144,7 +2147,14 @@
- 	        _PTHREAD_LDFLAGS="-lc_r"
- 	    fi
- 	    ;;
--    *-openbsd*|*-bsdi*|*-netbsd*)
-+    *-netbsd*)
-+	    AC_DEFINE(_REENTRANT)
-+	    AC_DEFINE(_THREAD_SAFE)
-+	    if test "$ac_cv_have_dash_pthread" = "yes"; then
-+	        _PTHREAD_LDFLAGS="-pthread"
-+	    fi
-+	    ;;
-+    *-openbsd*|*-bsdi*)
- 	    AC_DEFINE(_THREAD_SAFE)
- 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
- 	    if test "$ac_cv_have_dash_pthread" = "yes"; then
+@@ -1409,6 +1412,7 @@
+     AC_DEFINE(XP_UNIX)
+     AC_DEFINE(NETBSD)
+     AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
+     USE_NSPR_THREADS=1
+     MDCPUCFG_H=_netbsd.cfg
+     PR_MD_CSRCS=netbsd.c

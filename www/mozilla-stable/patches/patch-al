@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2004/06/05 10:20:55 taya Exp $
+$NetBSD: patch-al,v 1.2 2004/12/04 03:50:40 taya Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h ./gfx/src/ps/nsFontMetricsPS.h
 --- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h	2003-04-23 01:25:09.000000000 +0900
-+++ ./gfx/src/ps/nsFontMetricsPS.h	2004-06-05 15:49:34.000000000 +0900
++++ ./gfx/src/ps/nsFontMetricsPS.h	2004-06-10 23:06:23.000000000 +0900
 @@ -320,7 +320,7 @@
    nsCOMPtr<nsITrueTypeFontCatalogEntry> mFaceID;
    nsCOMPtr<nsIFreeType2> mFt2;

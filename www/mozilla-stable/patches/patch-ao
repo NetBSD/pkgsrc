@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 2004/06/05 10:20:55 taya Exp $
+$NetBSD: patch-ao,v 1.2 2004/12/04 03:50:40 taya Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11shared/nsFontFreeType.cpp
---- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp	2003-04-23 01:25:12.000000000 +0900
-+++ ./gfx/src/x11shared/nsFontFreeType.cpp	2004-06-05 15:49:40.000000000 +0900
+--- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp	2003-12-25 17:24:52.000000000 +0900
++++ ./gfx/src/x11shared/nsFontFreeType.cpp	2004-06-10 23:06:38.000000000 +0900
 @@ -177,7 +177,7 @@
    FTC_Manager mgr;
    nsresult rv;
@@ -65,7 +65,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
    mFt2->GetImageCache(&icache);
    if (!icache)
      return 0;
-@@ -725,7 +717,7 @@
+@@ -723,7 +715,7 @@
      if (y%4==0) (*blendPixelFunc)(sub_image, y, ascent-1, black, 255/2);
  #endif
  
