@@ -1,0 +1,28 @@
+$NetBSD: patch-av,v 1.1 1999/07/26 21:19:32 tron Exp $
+
+--- news.h.orig	Tue Aug 31 23:06:07 1993
++++ news.h	Mon Jul 26 23:11:38 1999
+@@ -13,8 +13,8 @@
+ #	  define N_DIGEST 1	/*   article is part of a digest*/
+ #	  define N_MODERATED 2	/*   group is moderated		*/
+ 
+-	off_t	ng_fpos;	/* position of article text	*/
+-	off_t	ng_lpos;	/* last text offset		*/
++	long    ng_fpos;        /* position of article text     */
++	long    ng_lpos;        /* last text offset             */
+ 				/* header lines:		*/
+ 	char	*ng_from;	/*   from			*/
+ 	char	*ng_name;	/*   senders name		*/
+@@ -51,9 +51,9 @@
+  */
+ 
+ struct digest_header {
+-	off_t	dg_hpos;	/* position of article header	*/
+-	off_t	dg_fpos;	/* position of article text	*/
+-	off_t	dg_lpos;	/* last text position		*/
++	long    dg_hpos;        /* position of article header   */
++	long    dg_fpos;        /* position of article text     */
++	long    dg_lpos;        /* last text position           */
+ 				/* header lines:		*/
+ 	char	*dg_date;	/*   date			*/
+ 	char	*dg_from;	/*   from			*/

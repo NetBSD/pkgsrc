@@ -1,0 +1,49 @@
+$NetBSD: patch-ar,v 1.1 1999/07/26 21:19:31 tron Exp $
+
+--- kill.c.orig	Mon Sep 13 19:42:28 1993
++++ kill.c	Mon Jul 26 23:11:38 1999
+@@ -424,7 +424,7 @@
+ typedef struct {
+     long		ckh_magic;
+     time_t		ckh_db_check;
+-    off_t		ckh_pattern_offset;
++    long                ckh_pattern_offset;
+     long		ckh_pattern_size;
+     long		ckh_entries;
+     long		ckh_regexp_size;
+@@ -579,7 +579,7 @@
+     comp_kill_header header;
+     comp_kill_entry  entry;
+     time_t now, age;
+-    off_t cur_line_start;
++    long cur_line_start;
+     char line[512];
+     register char *cp, *np;
+     register int c;
+@@ -605,7 +605,7 @@
+ 
+     tprintf("\nCompiling kill file\n");
+ 
+-    fseek(compf, (off_t)sizeof(header), 0);
++    fseek(compf, (long)sizeof(header), 0);
+ 
+     now = cur_time();
+ 
+@@ -844,7 +844,7 @@
+ 
+     if (header.ckh_pattern_size > 0) {
+ 	kill_patterns = newstr(header.ckh_pattern_size);
+-	fseek(killf, (off_t)(header.ckh_entries * sizeof(entry)), 1);
++	fseek(killf, (long)(header.ckh_entries * sizeof(entry)), 1);
+ 	if (fread(kill_patterns, sizeof(char), (int)header.ckh_pattern_size, killf)
+ 	    !=  header.ckh_pattern_size) goto err;
+     } else
+@@ -856,7 +856,7 @@
+ 
+     tb = group_regexp_table;
+ 
+-    fseek(killf, (off_t)sizeof(header), 0);
++    fseek(killf, (long)sizeof(header), 0);
+     for (n = header.ckh_entries, kl = kill_tab; --n >= 0; kl++) {
+ 	if (fread((char *)&entry, sizeof(entry), 1, killf) != 1) goto err;
+ 	if (header.ckh_pattern_size <= entry.ck_pattern_index ||

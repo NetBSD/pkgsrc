@@ -1,0 +1,138 @@
+$NetBSD: patch-ba,v 1.1 1999/07/26 21:19:34 tron Exp $
+
+--- term.c.orig	Sat Oct  2 12:34:09 1993
++++ term.c	Mon Jul 26 23:11:39 1999
+@@ -26,6 +26,10 @@
+ #include <setjmp.h>
+ #endif
+ 
++#ifdef HAVE_TERMIOS
++#include <termios.h>
++#endif
++
+ #ifdef USE_TERMINFO
+ # ifdef HPUX80
+ # include <termio.h>
+@@ -46,8 +50,10 @@
+ #  include <termio.h>
+ # endif	/* USE_TERMCAP */
+ #else
++#ifndef HAVE_TERMIOS
+ # include <sgtty.h>
+ #endif
++#endif
+ 
+ /* SYSV curses.h clash */
+ #undef raw
+@@ -206,7 +212,7 @@
+ extern char fake_keyb_siglist[];
+ #endif	/* FAKE_INTERRUPT */
+ 
+-#ifdef HAVE_TERMIO
++#if defined(HAVE_TERMIO) || defined(HAVE_TERMIOS)
+ 
+ /* This used to be 50, but there are some rather complex bugs in the SYSV */
+ /* TERMIO driver... */
+@@ -214,12 +220,20 @@
+ 
+ #undef CBREAK
+ 
++#ifdef HAVE_TERMIOS
++static struct termios norm_tty, raw_tty;
++#else
+ static struct termio norm_tty, raw_tty;
++#endif
+ 
+ #define	IntrC	((key_type) norm_tty.c_cc[VINTR])
+ #define	EraseC	((key_type) norm_tty.c_cc[VERASE])
+ #define KillC	((key_type) norm_tty.c_cc[VKILL])
++#ifdef HAVE_TERMIOS
++#define SuspC   ((key_type) norm_tty.c_cc[VSUSP])
++#else
+ #define SuspC	((key_type) CONTROL_('Z'))	/* norm_tty.c_cc[SWTCH] */
++#endif
+ 
+ #else	/* V7/BSD TTY DRIVER */
+ 
+@@ -390,6 +404,12 @@
+ #endif	/* FAKE_INTERRUPT */
+ 
+ static unsigned sp_table[] = {
++#ifdef B115200
++    B115200, 11520,
++#endif
++#ifdef B57600
++    B57600, 5760,
++#endif
+     B9600, 960,
+ #ifdef B19200
+     B19200, 1920,
+@@ -473,7 +493,11 @@
+ #ifdef HAVE_TERMIO
+     ioctl(0, TCGETA, &norm_tty);
+ #else
++#ifdef HAVE_TERMIOS
++    tcgetattr(0, &norm_tty);
++#else
+     ioctl(0, TIOCGETP, &norm_tty);
++#endif
+ #endif	/* HAVE_TERMIO */
+ 
+ #ifdef USE_TERMINFO
+@@ -581,6 +605,17 @@
+     raw_tty.c_cc[VTIME] = ((int)(raw_tty.c_cflag & CBAUD) > B1200) ? 1 : 2;
+     set_term_speed((unsigned long)(raw_tty.c_cflag & CBAUD));
+ #else
++#ifdef HAVE_TERMIOS
++    cfmakeraw(&raw_tty);
++    /* read a maximum of 10 characters in one burst; timeout in 1-200 ms */
++    raw_tty.c_cc[VMIN] = KEY_BURST;
++    raw_tty.c_cc[VTIME] = (cfgetispeed(&raw_tty) > B1200) ? 1 : 2;
++    set_term_speed((unsigned long)cfgetospeed(&raw_tty));
++#ifdef SV_INTERRUPT
++    siginterrupt(SIGTSTP, 1);
++    siginterrupt(SIGALRM, 1);
++#endif	/* SV_INTERRUPT */
++#else
+     ioctl(0, TIOCGETC, &norm_chars);
+ 
+ #ifdef TIOCGLTC
+@@ -603,6 +638,7 @@
+ #ifdef SV_INTERRUPT
+     siginterrupt(SIGALRM, 1);		/* make read from tty interruptable */
+ #endif	/* SV_INTERRUPT */
++#endif
+ #endif	/* HAVE_TERMIO */
+ 
+     erase_key = EraseC;
+@@ -1124,8 +1160,13 @@
+ #define RAW_MODE_ON    ioctl(0, TCSETAW, &raw_tty)
+ #define RAW_MODE_OFF   ioctl(0, TCSETAW, &norm_tty)
+ #else
++#ifdef HAVE_TERMIOS
++#define RAW_MODE_ON    tcsetattr(0, TCSADRAIN, &raw_tty)
++#define RAW_MODE_OFF   tcsetattr(0, TCSADRAIN, &norm_tty)
++#else
+ #define RAW_MODE_ON    ioctl(0, TIOCSETP, &raw_tty)
+ #define RAW_MODE_OFF   ioctl(0, TIOCSETP, &norm_tty)
++#endif
+ #endif	/* HAVE_TERMIO */
+ 
+ void
+@@ -1344,12 +1385,16 @@
+ #ifdef HAVE_TERMIO
+     ioctl(0, TCFLSH, 0);
+ #else
++#ifdef HAVE_TERMIOS
++    tcflush(0, TCIFLUSH);
++#else
+ #ifdef FREAD
+     arg = FREAD;
+     ioctl(0, TIOCFLUSH, &arg);
+ #else
+     ioctl(0, TIOCFLUSH, 0);
+ #endif	/* FREAD */
++#endif
+ #endif	/* HAVE_TERMIO */
+     rd_count = 0;
+ }

@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 1999/07/26 21:19:29 tron Exp $
+
+--- digest.c.orig	Sun Aug 15 08:59:50 1993
++++ digest.c	Mon Jul 26 23:11:38 1999
+@@ -267,7 +267,7 @@
+ skip_digest_body(f)
+ register FILE *f;
+ {
+-    off_t  backup_p[BACKUP_LINES];
++    long   backup_p[BACKUP_LINES];
+     int	   line_type[BACKUP_LINES];
+     register int backup_index, backup_count;
+     int    more_header_lines, end_or_asterisks, blanks;
