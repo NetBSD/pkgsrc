@@ -1,0 +1,17 @@
+$NetBSD: patch-aw,v 1.5 2005/01/03 08:07:26 agc Exp $
+
+Patch from Rui-Xiang Guo for building on NetBSD-current
+
+--- ../sal/osl/unx/system.h.orig	2004-11-19 09:23:53.000000000 +0800
++++ ../sal/osl/unx/system.h	2004-11-19 09:27:55.000000000 +0800
+@@ -169,7 +169,10 @@
+ #endif
+ 
+ #ifdef NETBSD
++#	include <sys/param.h>
++#if (__NetBSD_Version__ < 200000000)
+ #	define  ETIME ETIMEDOUT
++#endif
+ #	define _POSIX_THREAD_SYSCALL_SOFT 1
+ #	include <pthread.h>
+ #	include <netdb.h>
