@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1437 2003/02/20 08:00:38 wiz Exp $
+$NetBSD: CHANGES,v 1.1438 2003/02/20 13:52:42 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xml-i18n-tools to 0.9nb1 [jmmv 2003-02-19]
 	Updated vm to 7.08 [jtb 2003-02-19]
 	Updated openssl to 0.9.6gnb1 [wiz 2003-02-20]
+	Updated popa3d to 0.6 [salo 2003-02-20]
