@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2082 2003/04/29 22:24:39 jtb Exp $
+$NetBSD: CHANGES,v 1.2083 2003/04/29 22:47:54 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated g2 to 0.49a [jtb 2003-04-29]
 	Updated algae to 4.1.2 [jtb 2003-04-29]
 	Updated euler to 1.60.6 [jtb 2003-04-29]
+	Updated yorick to 1.5.12 [jtb 2003-04-29]
