@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/11/18 23:55:11 seb Exp $
+$NetBSD: distinfo,v 1.2 2002/01/22 10:40:01 agc Exp $
 
-SHA1 (source-highlight-1.1.tar.gz) = fd30f2f7601b120062e5217b1bc5672a65840560
-Size (source-highlight-1.1.tar.gz) = 173434 bytes
+SHA1 (source-highlight-1.2.1.tar.gz) = f95eeda7eed3193772744e300f62fb0c88bb07d1
+Size (source-highlight-1.2.1.tar.gz) = 175484 bytes
