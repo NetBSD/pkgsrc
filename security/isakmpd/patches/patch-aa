@@ -1,12 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2001/02/14 13:27:33 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2001/04/03 13:06:28 itojun Exp $
 
-Index: Makefile
-===================================================================
-RCS file: /cvs/src/sbin/isakmpd/Makefile,v
-retrieving revision 1.31
-diff -u -r1.31 Makefile
---- Makefile	2001/01/27 12:03:31	1.31
-+++ Makefile	2001/02/14 13:12:35
+--- Makefile.orig	Sat Mar 24 01:14:34 2001
++++ Makefile	Tue Apr  3 22:00:03 2001
 @@ -44,9 +44,9 @@
  # openbsd means 2.5 or newer, openbsd-encap is for older kernels with PF_ENCAP
  # linux is the name for Linux with FreeS/WAN integrated, freebsd/netbsd means
@@ -18,4 +13,4 @@ diff -u -r1.31 Makefile
 +OS=		netbsd
  #OS=		freebsd
  #OS=		linux
- 
+ #OS=		bsdi
