@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/07 10:46:10 seb Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -24,7 +24,6 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
-CONFIGURE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/builds/unix/libtool
