@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/04/22 14:13:27 rh Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/14 11:54:54 rh Exp $
 #
 
-DISTNAME=	dat-4134
+DISTNAME=	dat-4137
 PKGNAME=	uvscan-${DISTNAME}
 NO_WRKSUBDIR=	yes
 CATEGORIES=	security
