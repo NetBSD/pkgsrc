@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/08/31 20:27:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/01 16:33:31 jschauma Exp $
 #
 
 DISTNAME=		plt.src.x
 PKGNAME=		drscheme-202
+DIST_SUBDIR=		${PKGNAME:C/-[0-9]*//}/${PKGNAME:C/.*-([0-9]*)/\1/}
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/202/plt/ \
 			http://www.cs.utah.edu/plt/download/202/plt/ \
