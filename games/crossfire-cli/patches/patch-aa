@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2000/12/13 08:31:01 garbled Exp $
 --- configure.orig	Tue Nov 28 22:52:21 2000
 +++ configure	Wed Dec  6 08:57:37 2000
 @@ -3283,7 +3283,7 @@
