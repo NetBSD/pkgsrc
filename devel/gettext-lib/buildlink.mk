@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/07/27 13:33:23 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2001/08/25 02:35:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -51,7 +51,11 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gettext}
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
-LIBS+=			-lintl
+LIBS+=				-L${BUILDLINK_DIR}/lib
+.if ${_NEED_GNU_GETTEXT} == "YES"
+LIBS+=				-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+.endif
+LIBS+=				-lintl
 .endif
 .endif
 
