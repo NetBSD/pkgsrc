@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2004/10/03 00:18:31 tv Exp $
+# $NetBSD: Makefile,v 1.106 2004/11/10 14:49:36 sketch Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -31,6 +31,13 @@ USE_PKGLOCALEDIR=	YES
 
 LOCALSTATEDIR=		${VARBASE}/gnome
 PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR}
+
+SUBST_CLASSES+=		varbase
+SUBST_MESSAGE.varbase=	"Fixing path to score files."
+SUBST_STAGE.varbase=	post-patch
+SUBST_FILES.varbase+=	gnome-data/Makefile.in
+SUBST_FILES.varbase+=	libgnome/gnome-score.c
+SUBST_SED.varbase=	-e 's,@VARBASE@,${VARBASE},g'
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
