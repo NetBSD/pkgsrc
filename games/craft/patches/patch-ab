@@ -1,4 +1,5 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/19 10:26:47 tron Exp $
+
 --- win.hc.orig	Wed Mar 19 07:21:21 1997
 +++ win.hc	Thu Sep 24 11:48:49 1998
 @@ -118,8 +118,8 @@
