@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 1999/10/08 15:33:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.50 1999/10/14 12:22:39 fredb Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -12,7 +12,7 @@
     SUBDIR += apache
     SUBDIR += apache6
 #    SUBDIR += apache-current
-#    SUBDIR += arena		# needs updating for new libwww
+    SUBDIR += arena
 #    SUBDIR += ashe           # requires Motif
 #    SUBDIR += aswedit
     SUBDIR += bozohttpd
