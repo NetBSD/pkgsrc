@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/12 19:43:50 snj Exp $
 
 DISTNAME=	transcode-0.6.11
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Command line video-stream processing tool
 
 BUILD_DEPENDS+=		nasm>=0.98.36:../../devel/nasm
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		yes
@@ -34,31 +34,31 @@ PLIST_SUBST+=		FILTERPV=filter_pv.a
 # aclocal here breaks due to missing DLFCN checking
 post-patch:
 	cd ${WRKSRC} && \
-	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
+	${SED} "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
 	${MV} configure.new configure && ${CHMOD} a+x configure
 	-cd ${WRKSRC} && ${AUTOMAKE}
 
 post-install:
 	${LN} -s ../libxvidcore.so.2.1  ${PREFIX}/lib/transcode/libxvidcore.so.2
 
-.include "../../archivers/liblzo/buildlink2.mk"
-.include "../../audio/liba52/buildlink2.mk"
-.include "../../audio/lame/buildlink2.mk"
-.include "../../audio/libogg/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../devel/libmpeg3/buildlink2.mk"
-.include "../../graphics/ImageMagick/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../multimedia/libdvdread/buildlink2.mk"
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/libogg/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/libmpeg3/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
 # depends on a much later avifile than the one in pkgsrc
-#.include "../../multimedia/avifile/buildlink2.mk"
-.include "../../multimedia/mjpegtools/buildlink2.mk"
-.include "../../multimedia/xvidcore/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+#.include "../../multimedia/avifile/buildlink3.mk"
+.include "../../multimedia/mjpegtools/buildlink3.mk"
+.include "../../multimedia/xvidcore/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
