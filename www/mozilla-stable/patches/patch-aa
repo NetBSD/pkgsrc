@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2002/11/26 22:02:44 cjep Exp $
 diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptthread.c ./nsprpub/pr/src/pthreads/ptthread.c
 --- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptthread.c	Wed Apr 10 12:17:39 2002
 +++ ./nsprpub/pr/src/pthreads/ptthread.c	Wed Sep 11 23:47:35 2002

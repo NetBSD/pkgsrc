@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2002/11/26 22:02:45 cjep Exp $
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Wed Apr 10 12:37:38 2002
 +++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Wed Sep 11 23:47:42 2002

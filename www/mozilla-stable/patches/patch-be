@@ -1,3 +1,4 @@
+$NetBSD: patch-be,v 1.2 2002/11/26 22:02:46 cjep Exp $
 diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c ./nsprpub/pr/src/io/prsocket.c
 --- ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c	Wed Apr 10 12:17:03 2002
 +++ ./nsprpub/pr/src/io/prsocket.c	Wed Sep 11 23:47:59 2002

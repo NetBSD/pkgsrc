@@ -1,3 +1,4 @@
+$NetBSD: patch-ba,v 1.2 2002/11/26 22:02:45 cjep Exp $
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	Wed Apr 10 12:16:42 2002
 +++ ./nsprpub/pr/include/md/_netbsd.cfg	Wed Sep 11 23:47:52 2002

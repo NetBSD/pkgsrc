@@ -1,3 +1,4 @@
+$NetBSD: patch-bj,v 1.2 2002/11/26 22:02:46 cjep Exp $
 diff -ru ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c
 --- ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Mon Jun 17 14:00:43 2002
 +++ ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Wed Sep 11 23:49:04 2002
