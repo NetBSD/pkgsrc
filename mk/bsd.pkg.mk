@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1420 2004/03/11 22:57:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1421 2004/03/13 19:43:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -260,7 +260,7 @@ _PERL5_PKG_SATISFIES_DEP=	YES
 .      for _vers_ in ${PERL5_REQD}
 .        if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
 _PERL5_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_}; then		\
+	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_} 2>/dev/null; then \
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
