@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/05/11 13:09:17 markd Exp $
+# $NetBSD: Makefile,v 1.51 2004/05/18 11:25:19 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	1
@@ -8,6 +8,8 @@ COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
+SITES_Daemon.png=	${MASTER_SITE_LOCAL}	
+SITES_Daemon.README=	${MASTER_SITE_LOCAL}	
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
