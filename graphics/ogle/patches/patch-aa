@@ -1,13 +1,40 @@
-$NetBSD: patch-aa,v 1.1 2001/12/23 00:03:57 mycroft Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/25 23:45:54 wiz Exp $
 
---- include/debug_print.h.orig	Sat Dec 22 13:02:26 2001
-+++ include/debug_print.h	Sat Dec 22 13:02:12 2001
-@@ -26,7 +26,7 @@
- #define ERROR(str, args...) \
- fprintf(stderr, "ERROR[%s]: " str, program_name, ## args)
+--- include/debug_print.h.orig	Sun Nov 25 03:42:29 2001
++++ include/debug_print.h
+@@ -20,20 +20,25 @@
+ 
+ #if defined(__GNUC__) && ( __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 95))
+ 
+-#define FATAL(str, args...) \
+-fprintf(stderr, "FATAL[%s]: " str, program_name, ## args)
++#define FATAL(str...) _FATAL( , ##str)
++#define _FATAL(str, args...) \
++fprintf(stderr, "FATAL[%s]: " str, program_name, ##args)
+ 
+-#define ERROR(str, args...) \
+-fprintf(stderr, "ERROR[%s]: " str, program_name, ## args)
++#define ERROR(str...) _ERROR( , ##str)
++#define _ERROR(str, args...) \
++fprintf(stderr, "ERROR[%s]: " str, program_name, ##args)
  
 -#define WARNING(str, ...) \
-+#define WARNING(str, args...) \
- fprintf(stderr, "WARNING[%s]: " str, program_name, ## args)
+-fprintf(stderr, "WARNING[%s]: " str, program_name, ## args)
++#define WARNING(str...) _WARNING( , ##str)
++#define _WARNING(str, args...) \
++fprintf(stderr, "WARNING[%s]: " str, program_name, ##args)
  
- #define NOTE(str, args...) \
+-#define NOTE(str, args...) \
+-fprintf(stderr, "Note[%s]: " str, program_name, ## args)
++#define NOTE(str...) _NOTE(, ##str)
++#define _NOTE(str, args...) \
++fprintf(stderr, "Note[%s]: " str, program_name, ##args)
+ 
+-#define DNOTE(str, args...) \
+-fprintf(stderr, "Debug[%s]: " str, program_name, ## args)
++#define DNOTE(str...) _DNOTE( , ##str)
++#define _DNOTE(str, args...) \
++fprintf(stderr, "Debug[%s]: " str, program_name, ##args)
+ 
+ #ifdef DEBUG
+ 
