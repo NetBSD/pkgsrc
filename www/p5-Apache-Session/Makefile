@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/26 23:26:42 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/15 22:33:46 mjl Exp $
 #
 
 DISTNAME=		Apache-Session-1.53
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=		packages@netbsd.org
 COMMENT=		perl5 module to provide persistent storage
 
-DEPENDS+=		p5-Storable-1.0.11:../../devel/p5-Storable/
+DEPENDS+=		p5-Storable>=1.0.11:../../devel/p5-Storable/
 DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5/
 
 USE_PERL5=		# defined
