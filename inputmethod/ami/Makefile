@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/10/14 09:41:55 junyoung Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/01 13:42:25 junyoung Exp $
 #
 
 DISTNAME=	ami-1.0.11
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	korean inputmethod
 MASTER_SITES=	http://www.kr.freebsd.org/~hwang/ami/
 
-MAINTAINER=	junyoung@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kr.freebsd.org/~hwang/ami/
 COMMENT=	Korean input method
 
