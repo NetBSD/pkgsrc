@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/16 05:40:54 uebayasi Exp $
+
+--- doc/Makefile.in.orig	Mon May  6 15:12:07 2002
++++ doc/Makefile.in
+@@ -88,7 +88,7 @@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-docdir = $(prefix)/doc/Mowitz
++docdir = $(datadir)/doc/Mowitz
+ 
+ doc_DATA = Filesel.html \
+ 	ListTree.HISTORY ListTree.README ListTree.gif \
