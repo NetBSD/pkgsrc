@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.34 2002/01/21 17:31:02 zuntum Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.35 2002/01/31 21:18:37 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1020,11 +1020,6 @@ PILRC_USE_GTK?=	YES
 # Possible: YES, not defined
 # Default: not defined
 
-#POSTFIX_USE_SASL_AUTH=YES
-# Add support for SMTP authentication with cyrus-sasl
-# Possible: YES, not defined
-# Default: not defined
-
 #POSTFIX_VERP=YES
 # Add support for Variable Envelope Return Paths.
 # Possible: YES, not defined
@@ -1235,6 +1230,11 @@ USE_IDEA?=	NO
 # the built-in code for the RSA algorithm. (Not recommended!)
 # Possible: YES, or NO.
 # Default: not defined.
+
+#USE_SASL=YES
+# Used to specify optional support for SASL authentication
+# Possible: YES, not defined
+# Default: not defined
 
 USE_SJ3?= YES
 # Used in kinput2 to enable SJ3 kana-kanji converter support.
