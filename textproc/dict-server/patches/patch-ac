@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/07/28 16:17:20 tron Exp $
+$NetBSD: patch-ac,v 1.2 2001/10/12 10:51:52 simonb Exp $
 
---- libmaa/maaP.h.orig	Sun Feb 22 14:41:19 1998
-+++ libmaa/maaP.h	Wed Jul 28 17:57:42 1999
-@@ -103,9 +103,11 @@
+--- libmaa/maaP.h.orig	Fri Dec 24 00:30:12 1999
++++ libmaa/maaP.h	Wed Oct 10 14:59:11 2001
+@@ -102,7 +102,7 @@
+ # include <getopt.h>
  #else
  #if !defined(__FreeBSD__) && !defined(__DGUX__) && !defined(__hpux__)
- #if !defined(__bsdi__) && !(defined(__sparc) && defined(__svr4__))
-+#if !defined(__NetBSD__)
+-#if !defined(__bsdi__) && !defined(__OpenBSD__)
++#if !defined(__bsdi__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ #if !(defined(__sparc) && defined(__svr4__))
  extern int  getopt( int, char **, char * );
  extern int  optind;
- extern char *optarg;
-+#endif
- #endif
- #endif
- #endif
