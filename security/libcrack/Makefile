@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/21 11:17:05 rh Exp $
 #
 
 DISTNAME=	cracklib,2.7
@@ -14,6 +14,7 @@ USE_LIBTOOL=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/cracklib
+	${INSTALL_DATA} ${FILESDIR}/crack.h ${PREFIX}/include/cracklib
 	cd ${WRKSRC}/cracklib &&					\
 	${LIBTOOL} --mode=install ${INSTALL_DATA} libcrack.la ${PREFIX}/lib && \
 	${INSTALL_DATA} packer.h ${PREFIX}/include/cracklib
