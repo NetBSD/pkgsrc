@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/08/16 06:02:46 lukem Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/17 05:48:09 lukem Exp $
 
 --- abcde.orig	Thu Aug 16 07:39:29 2001
-+++ abcde	Thu Aug 16 15:53:55 2001
++++ abcde	Fri Aug 17 15:32:59 2001
 @@ -552,7 +552,7 @@
  			fi
  			# List out disc title/author and contents
@@ -29,8 +29,18 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/08/16 06:02:46 lukem Exp $
  				do
  					echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= $ABCDETEMPDIR/cddbread.$X | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
  				done
-@@ -935,8 +935,8 @@
+@@ -926,17 +926,11 @@
+ 	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
+ 
+-# If this is a devfs system, default to /dev/cdroms/cdrom0
+-# instead of /dev/cdrom
+-if [ -f /dev/cdroms/cdrom0 ]; then
+-	CDROM=/dev/cdroms/cdrom0
+-else
+-	CDROM=/dev/cdrom
+-fi
++CDROM=/dev/rcd0d
  
  # Load system defaults
 -if [ -r /etc/abcde.conf ]; then
@@ -40,7 +50,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/08/16 06:02:46 lukem Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -972,7 +972,7 @@
+@@ -972,7 +966,7 @@
  	if [ "$RSTART" = "$REND" ]; then 
  		NEWTRACKS="$RSTART"
  	else
@@ -49,7 +59,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/08/16 06:02:46 lukem Exp $
  	fi
  	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
  
-@@ -1145,7 +1145,7 @@
+@@ -1145,7 +1139,7 @@
  do
  	ENCODELOCATIONS="$ENCODELOCATIONS $REMOTEHOST"
  done
