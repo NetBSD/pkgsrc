@@ -1,17 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/22 15:28:47 drochner Exp $
 
---- dvd.c.orig	2004-02-26 02:14:15.000000000 +0100
-+++ dvd.c	2004-02-26 12:36:40.000000000 +0100
-@@ -23,7 +23,7 @@
+--- dvd.c.orig	2004-03-26 19:53:10.000000000 +0100
++++ dvd.c	2004-04-22 16:27:45.000000000 +0200
+@@ -23,9 +23,18 @@
  #include <unistd.h>
  #include <ctype.h>
  #include <sys/stat.h>
 -#if (defined(__unix__) || defined(unix)) && !defined(USG) || (defined(__APPLE__) && defined(__GNUC__))
 +#if (defined(__unix__) || defined(unix)) && !defined(USG) || (defined(__APPLE__) && defined(__GNUC__)) || defined(__NetBSD__)
  #include <sys/param.h>  
++#define USE_GETMNTINFO
++#if !defined(__NetBSD__) || (__NetBSD_Version__ < 200040000)
  #include <sys/mount.h>
++#define USE_STATFS_FOR_DEV
++#define GETMNTINFO_USES_STATFS
++#else
++#include <sys/statvfs.h>
++#define USE_STATVFS_FOR_DEV
++#define GETMNTINFO_USES_STATVFS
++#endif
  #endif
-@@ -56,9 +56,10 @@
+ #include "vobcopy.h"
+ #if (defined(__sun__))
+@@ -61,9 +70,10 @@
    int  filehandle = 0;
    int  i = 0, last = 0;
    int  bytes_read;
@@ -23,7 +34,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
    {
        /* open failed */
        fprintf( stderr, "[Error] something wrong in dvd_name getting - please specify path as /cdrom or /dvd (mount point) or use -t\n");
-@@ -67,7 +68,7 @@
+@@ -72,7 +82,7 @@
    }
    
    /* seek to title of first track, which is at (track_no * 32768) + 40 */
@@ -32,7 +43,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
    {
        /* seek failed */
        close( filehandle );
-@@ -77,13 +78,15 @@
+@@ -82,13 +92,15 @@
    }
    
    /* read title */
@@ -50,7 +61,32 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
    
    /* make sure string is terminated */
    title[32] = '\0';
-@@ -162,6 +165,9 @@
+@@ -138,9 +150,12 @@
+   char  *k;
+   bool  mounted = FALSE;
+   int mntcheck;
+-#if ( defined( BSD ) && ( BSD >= 199306 ) ) || ( defined( __APPLE__ ) && defined( __GNUC__ ) )
++#ifdef USE_STATFS_FOR_DEV
+   struct statfs buf;
+ #endif
++#ifdef USE_STATVFS_FOR_DEV
++  struct statvfs buf;
++#endif
+ 
+ 
+   /* the string should have no trailing / */
+@@ -166,12 +181,19 @@
+     /*
+      *look through /etc/mtab to see if it's actually mounted
+      */
+-#if ( defined( BSD ) && ( BSD >= 199306 ) )  || ( defined( __APPLE__ ) && defined( __GNUC__ ) )
++#if defined(USE_STATFS_FOR_DEV) || defined(USE_STATVFS_FOR_DEV)
++#ifdef USE_STATFS_FOR_DEV
+     if( !statfs( path, &buf ) )
++#else
++    if( !statvfs( path, &buf ) )
++#endif
+       {
         if( !strcmp( path, buf.f_mntonname ) )
           {
             mounted = TRUE;
@@ -60,7 +96,22 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
           }
        }
      else
-@@ -350,7 +356,8 @@
+@@ -366,9 +388,13 @@
+ /* returns <0 if error                            */
+ int get_device_oyo( char *path, char *device )
+ { /*oyo*/
+-#if (defined(BSD) && (BSD >= 199306)) || (defined(__APPLE__) && defined(__GNUC__))
++#ifdef USE_GETMNTINFO
+   int i, n, dvd_count = 0;
++#ifdef GETMNTINFO_USES_STATFS
+   struct statfs *mntbuf;
++#else
++  struct statvfs *mntbuf;
++#endif
+ 
+   if( ( n = getmntinfo( &mntbuf, MNT_WAIT ) ) > 0 )
+     {
+@@ -378,7 +404,8 @@
              {
                dvd_count++;
                strcpy( path, mntbuf[i].f_mntonname );

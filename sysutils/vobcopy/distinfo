@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
+$NetBSD: distinfo,v 1.2 2004/04/22 15:28:47 drochner Exp $
 
 SHA1 (vobcopy-0.5.13.tar.gz) = dc1f931ed636f8583ddf438c4e195a0f8acec363
 Size (vobcopy-0.5.13.tar.gz) = 48423 bytes
-SHA1 (patch-aa) = 22ad0630c7ea9687125374c15f3fbab1e5227933
-SHA1 (patch-ab) = 80ddf043d98773b4cc7c6af9aaa2cadc11a1b291
+SHA1 (patch-aa) = e4a137071c662752bcdbfcf4abd34b93dedd0fd6
+SHA1 (patch-ab) = d02f258a134e3ba77fac24d4f197e7f7fdd1e7a0
