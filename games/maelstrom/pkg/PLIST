@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/30 23:11:41 tron Exp $
+share/maelstrom/NewSounds/Simpsons_Sounds
+share/maelstrom/NewSounds/Maelstrom Sounds
+share/maelstrom/NewSounds/Martin_Sounds
+share/maelstrom/NewSounds/Funky_Sounds
+share/maelstrom/NewSounds/README
+share/maelstrom/Star_Trek/README_sprites.txt
+share/maelstrom/Star_Trek/%Maelstrom Sprites
+share/maelstrom/Star_Trek/README_sounds.txt
+share/maelstrom/Star_Trek/%Maelstrom Sounds
+share/maelstrom/Star_Trek/INSTALL.txt
+share/maelstrom/Star_Trek/HOWTO.txt
+share/maelstrom/Star_Wars/README_sprites.txt
+share/maelstrom/Star_Wars/%Maelstrom Sprites
+share/maelstrom/Star_Wars/README_sounds.txt
+share/maelstrom/Star_Wars/%Maelstrom Sounds
+share/maelstrom/Star_Wars/INSTALL.txt
+share/maelstrom/Star_Wars/HOWTO.txt
+share/maelstrom/README.Options
+share/maelstrom/README.joystick
+share/maelstrom/README.network
+share/maelstrom/Maelstrom Fonts
+share/maelstrom/Maelstrom Sounds
+share/maelstrom/Maelstrom Sprites
+share/maelstrom/Images/Maelstrom_Sprites#128.icon
+share/maelstrom/Images/Maelstrom_Titles#100.icon
+share/maelstrom/Images/Maelstrom_Titles#101.icon
+share/maelstrom/Images/Maelstrom_Titles#102.icon
+share/maelstrom/Images/Maelstrom_Titles#128.icon
+share/maelstrom/Images/Maelstrom_Titles#129.icon
+share/maelstrom/Images/Maelstrom_Titles#130.icon
+share/maelstrom/Images/Maelstrom_Titles#133.icon
+share/maelstrom/Images/Maelstrom_Titles#134.icon
+share/maelstrom/Images/Maelstrom_Titles#135.icon
+share/maelstrom/Images/Maelstrom_Titles#999.icon
+share/maelstrom/Images/Maelstrom_Icon#100.cicn
+share/maelstrom/Images/Maelstrom_Icon#101.cicn
+share/maelstrom/Images/Maelstrom_Icon#102.cicn
+share/maelstrom/Images/Maelstrom_Icon#103.cicn
+share/maelstrom/Images/Maelstrom_Icon#104.cicn
+share/maelstrom/Images/Maelstrom_Icon#110.cicn
+share/maelstrom/Images/Maelstrom_Icon#128.cicn
+share/maelstrom/Images/Maelstrom_Icon#129.cicn
+share/maelstrom/Images/Maelstrom_Icon#130.cicn
+share/maelstrom/Images/Maelstrom_Icon#131.cicn
+share/maelstrom/Images/Maelstrom_Icon#132.cicn
+share/maelstrom/Images/Maelstrom_Icon#133.cicn
+share/maelstrom/Images/Maelstrom_Icon#134.cicn
+share/maelstrom/Images/Maelstrom_Icon#135.cicn
+share/maelstrom/Images/Maelstrom_Icon#136.cicn
+share/maelstrom/Images/Maelstrom_Icon#137.cicn
+share/maelstrom/Maelstrom-Scores
+bin/Maelstrom_netplayd
+bin/Maelstrom
+bin/Maelstrom_sound
+@dirrm share/maelstrom/Star_Trek
+@dirrm share/maelstrom/NewSounds
+@dirrm share/maelstrom/Star_Wars
+@dirrm share/maelstrom/Images
+@dirrm share/maelstrom
