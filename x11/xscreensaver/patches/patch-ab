@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/01/05 11:34:39 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 1999/07/02 15:23:13 frueauf Exp $
 
---- hacks/Makefile.in-orig	Sun Nov 22 09:00:56 1998
-+++ hacks/Makefile.in	Tue Jan  5 02:17:55 1999
-@@ -41,7 +41,7 @@
+--- hacks/Makefile.in.orig	Thu Jun 24 01:00:24 1999
++++ hacks/Makefile.in	Wed Jun 30 18:33:52 1999
+@@ -42,7 +42,7 @@
  # Note: see comment in ../driver/Makefile.in for explanation of X_LIBS, etc.
  #
  HACK_PRE	= $(LIBS) $(X_LIBS)
@@ -11,3 +11,14 @@ $NetBSD: patch-ab,v 1.1 1999/01/05 11:34:39 frueauf Exp $
  HACK_LIBS	= $(HACK_PRE)            @HACK_LIBS@ $(HACK_POST)
  XPM_LIBS	= $(HACK_PRE) @XPM_LIBS@ @HACK_LIBS@ $(HACK_POST)
  XLOCK_LIBS	= $(HACK_LIBS)
+@@ -181,8 +181,8 @@
+ 	  else								\
+ 	    p=$(srcdir)/$$program ;					\
+ 	  fi ;								\
+-	  echo $(INSTALL_PROGRAM) $$p $(HACKDIR)/$$program ;		\
+-	  $(INSTALL_PROGRAM) $$p $(HACKDIR)/$$program ;			\
++	  echo $(INSTALL) -c -o root -g wheel -m 555 $$p $(HACKDIR)/$$program ;		\
++	  $(INSTALL) -c -o root -g wheel -m 555 $$p $(HACKDIR)/$$program ;			\
+ 	done
+ 
+ munge-scripts: $(SCRIPTS)
