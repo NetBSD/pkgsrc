@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/01/03 23:51:08 reed Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/04 04:51:47 reed Exp $
 
 DISTNAME=	xpkgwedge-1.9
 WRKSRC=		${WRKDIR}
@@ -17,6 +17,7 @@ NO_CONFIGURE=	# defined
 NO_BUILDLINK=	# defined
 NO_CHECKSUM=	# defined
 
+.include "../../mk/bsd.prefs.mk"
 .if ${LOCALBASE} == ${X11BASE}
 PKG_SKIP_REASON+=	"xpkgwedge is not needed when X11BASE is LOCALBASE"
 .endif
