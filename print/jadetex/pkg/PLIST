@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/27 22:59:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/09/02 17:07:02 hubertf Exp $
 bin/jadetex
 bin/pdfjadetex
 @exec cp %D/share/texmf/web2c/texmf.cnf %D/share/texmf/web2c/texmf.cnf-before-jadetex
@@ -50,6 +50,11 @@ share/examples/jadetex/span.tex
 share/examples/jadetex/tables.sgm
 share/examples/jadetex/test-tables.sgm
 share/examples/jadetex/test-tables.tex
+share/sgml/jade/jadetex.dtx
+share/sgml/jade/jadetex.ini
+share/sgml/jade/jadetex.ins
+share/sgml/jade/pdfjadetex.ini
+@dirrm share/sgml/jade
 @dirrm share/examples/jadetex
 @dirrm share/texmf/tex/jadetex
 @unexec %D/bin/mktexlsr
