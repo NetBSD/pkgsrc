@@ -1,0 +1,18 @@
+Mixminion is a communication security application for electronic mail
+messages.  Its purpose is to deny an adversary the ability to
+determine who is communicating with whom and to provide the closely
+related service of anonymous communication.
+
+It does this by sending messages through a series of servers.
+Messages going into and out of each server are encrypted.  Each server
+keeps a pool of messages.  When a message comes in it is placed in the
+pool.  Messages sent out from the pool are difficult to correlate with
+the messages going in.  This process is called "mixing."
+
+Each server reduces the ability of the adversary to determine the
+origin of a message.  Chaining the servers further reduces this
+ability and contains the damage caused by compromised servers.  The
+chain of servers is chosen by the Mixminion software running on the
+user's machine.
+
+See http://mixminion.net for a complete description.
