@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.8 2000/10/23 22:20:47 dmcmahill Exp $
+
+--- nsprpub/pr/include/md/_netbsd.cfg.orig	Wed Mar  8 11:26:18 2000
++++ nsprpub/pr/include/md/_netbsd.cfg	Sat Oct  7 17:26:26 2000
+@@ -78,5 +78,5 @@
+ #elif defined(__sparc__) || defined(__mips__)
+ 
+-#undef IS_LITTLE_ENDIAN 1
++#undef IS_LITTLE_ENDIAN 
+ #define  IS_BIG_ENDIAN 1
+ #define HAVE_LONG_LONG
