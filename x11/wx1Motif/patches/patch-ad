@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/06/17 02:24:58 dmcmahill Exp $
+
+--- src/x/wx_utils.cpp.orig	Tue Oct 21 00:02:44 1997
++++ src/x/wx_utils.cpp
+@@ -70,7 +70,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
+-#if defined(__alpha) && !defined(VMS)
++#if defined(__alpha) && !defined(VMS) && !defined(__NetBSD__)
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+@@ -81,7 +81,7 @@
+ #endif
+ 
+ #ifdef wx_motif
+-#if !(defined(VMS) || defined(linux) || defined(__sgi) || defined(__hpux) || defined(__ultrix)) || defined(__bsdi__)
++#if !(defined(__NetBSD__) || defined(VMS) || defined(linux) || defined(__sgi) || defined(__hpux) || defined(__ultrix)) || defined(__bsdi__)
+ #include <tiuser.h>
+ #endif
+ #endif

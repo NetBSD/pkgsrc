@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/17 02:24:58 dmcmahill Exp $
+
+--- src/make.env.orig	Wed Oct 22 09:13:30 1997
++++ src/make.env
+@@ -37,13 +37,13 @@
+ 
+ # Debug/trace mode. 1 or more for debugging.
+ DEBUG       = 0
+-GUI         = -Dwx_xview
+-GUISUFFIX   = _ol
++GUI         = -Dwx_motif
++GUISUFFIX   = _motif
+ 
+ ########################## Compiler flags #############################
+ 
+ # Misc options
+-OPTIONS     =
++OPTIONS     = -fwritable-strings
+ COPTIONS    =
+ DEBUGFLAGS  = -ggdb
+ INCLUDE     =
+@@ -55,13 +55,12 @@
+ 
+ # Compiler or system-specific include paths
+ COMPPATHS   =
+-XINCLUDE    = -I/usr/openwin/include -I/usr/include/X11 -I/usr/include/Xm \
+-              -I/usr/include/X11/Xm -I/usr/include
+-XLIB        = -L/usr/local/X11/lib -L/usr/openwin/lib -L/usr/X11/lib -L/usr/X11R6/lib
++XINCLUDE    =
++XLIB        =
+ 
+ ############################ Libraries ################################
+ 
+-COMPLIBS    = -lstdc++
++COMPLIBS    = -lstdc++ -lcompat
+ BASICMOTIFLDLIBS = -lwx_motif $(COMPLIBS) -lXm -lXmu -lXt -lX11 -lm
+ MOTIFLDLIBS = $(BASICMOTIFLDLIBS)
+ HPLDLIBS    = -lwx_hp $(COMPLIBS) -lXm -lXmu -lXt -lX11 -lm
+@@ -87,8 +86,8 @@
+ # Directory for object files
+ OBJDIR = objects$(GUISUFFIX)
+ 
+-CPPFLAGS    = $(XINCLUDE) $(INC) $(OPTIONS) $(GUI) $(DEBUGFLAGS) -DDEBUG='$(DEBUG)' $(WARN) $(OPT)
+-CFLAGS      = $(XINCLUDE) $(INC) $(COPTIONS) $(GUI) $(DEBUGFLAGS) -DDEBUG='$(DEBUG)' $(CWARN) $(OPT)
+-LDFLAGS     = $(XLIB) -L$(WXDIR)/lib
+-LDLIBS      = $(XVIEWLDLIBS)
++CPPFLAGS    += $(XINCLUDE) $(INC) $(OPTIONS) $(GUI) $(DEBUGFLAGS) -DDEBUG='$(DEBUG)' $(WARN) $(OPT)
++CFLAGS      += $(XINCLUDE) $(INC) $(COPTIONS) $(GUI) $(DEBUGFLAGS) -DDEBUG='$(DEBUG)' $(CWARN) $(OPT)
++LDFLAGS     += $(XLIB) -L$(WXDIR)/lib
++LDLIBS      = $(MOTIFLDLIBS)
+ 
