@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:41:44 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 00:59:26 jlam Exp $
 
 DISTNAME=	libmng-1.0.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -11,7 +11,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -31,8 +33,8 @@ post-install:
 	cd ${WRKSRC}/doc/man && \
 		${INSTALL_MAN} jng.5 mng.5 ${PREFIX}/man/man5
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/lcms/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
