@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/26 17:55:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/04 22:00:08 jschauma Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -22,6 +22,8 @@ DEPENDS+=		teTeX>=1.0.7:../../print/teTeX
 VERSION=		3.0
 WRKSRC=			${WRKDIR}
 NO_BUILD=		# defined
+CHECK_SHLIBS=		NO
+SHLIB_HANDLING=		NO
 USE_BUILDLINK2=		yes
 
 LICENSE=        	pvs-license
