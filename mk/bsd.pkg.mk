@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.631 2000/12/30 11:19:04 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.632 2000/12/31 12:21:07 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -1728,10 +1728,8 @@ real-su-install:
 		done;							\
 	fi
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-.if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
-.endif # SHLIB_HANDLING == "YES"
 .endif # OPSYS == "NetBSD" || OPSYS == "SunOS"
 .ifdef MESSAGE_FILE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
@@ -1763,6 +1761,7 @@ real-su-install:
 #     real-su-install
 #
 do-shlib-handling:
+.if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
 	if [ "$$sos" != "" ]; then					\
@@ -1862,6 +1861,7 @@ do-shlib-handling:
 			;;						\
 		esac;							\
 	fi
+.endif # SHLIB_HANDLING == "YES"
 
 
 # Check if all binaries and shlibs find their needed libs
