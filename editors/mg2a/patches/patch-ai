@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.2 2000/07/10 18:26:54 tron Exp $
 
---- ./REPACK.orig	Thu Mar 30 08:35:35 2000
-+++ ./REPACK	Thu Mar 30 08:35:35 2000
+--- REPACK.orig	Wed May 31 16:36:32 2000
++++ REPACK	Wed May 31 16:36:32 2000
 @@ -0,0 +1,7 @@
 +# John Refling 
 +rm -f ../mg2a_src

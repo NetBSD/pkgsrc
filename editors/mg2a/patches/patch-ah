@@ -1,8 +1,16 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.2 2000/07/10 18:26:54 tron Exp $
 
---- ./main.c.orig	Sun Jul  3 10:49:25 1988
-+++ ./main.c	Thu Mar 30 08:35:35 2000
-@@ -20,6 +20,35 @@
+--- main.c.orig	Sun Jul  3 10:49:25 1988
++++ main.c	Wed May 31 16:39:32 2000
+@@ -6,6 +6,7 @@
+ #include	"macro.h"
+ #endif
+ 
++static  char *idstr = "mg2a v. 1.11 - refling";
+ int	thisflag;			/* Flags, this command		*/
+ int	lastflag;			/* Flags, last command		*/
+ int	curgoal;			/* Goal column			*/
+@@ -20,6 +21,35 @@
  
  static VOID	edinit();
  
@@ -38,7 +46,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
  VOID
  main(argc, argv)
  int  argc;
-@@ -27,6 +56,8 @@
+@@ -27,11 +57,21 @@
  {
  #ifndef NO_STARTUP
  	char	*startupfile();
@@ -47,7 +55,20 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
  #endif
  	char	*cp;
  	VOID	vtinit(), makename(), eerase();
-@@ -47,7 +78,9 @@
+ 	BUFFER	*findbuffer();
+ 
++	// cheap attempt to avoid starting up if illegal file - refling
++	struct stat st;
++	if (argc > 1 && 0 == stat(argv[1], &st))
++	if ((st.st_mode & S_IFMT) != S_IFREG) {
++		fprintf(stderr, "%s is not a regular file (0x%x)\n", argv[1], st.st_mode & S_IFMT);
++		exit(1);
++	}
++
+ #ifdef SYSINIT
+ 	SYSINIT;				/* system dependent.	*/
+ #endif
+@@ -47,7 +87,9 @@
  	 */
  	update();
  #ifndef NO_STARTUP				/* User startup file.	*/
