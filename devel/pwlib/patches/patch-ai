@@ -1,21 +1,36 @@
-$NetBSD: patch-ai,v 1.1 2002/02/08 06:29:44 jlam Exp $
+$NetBSD: patch-ai,v 1.2 2002/12/01 18:31:42 jdolecek Exp $
 
---- src/ptlib/common/getdate.y.orig	Sun Jul 11 22:37:23 1999
-+++ src/ptlib/common/getdate.y
-@@ -18,6 +18,7 @@
- /* SUPPRESS 288 on yyerrlab *//* Label unused */
+--- make/common.mak.orig	Thu Oct 10 06:43:44 2002
++++ make/common.mak	Sat Nov 30 16:46:15 2002
+@@ -261,11 +261,11 @@
+ #
+ $(OBJDIR)/%.o : %.cxx 
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	@LIBTOOL@ --tag=CXX $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
+ $(OBJDIR)/%.o : %.c 
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	@LIBTOOL@ --tag=CC $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
-+#include <stdio.h>
- #include <time.h>
- #include <string.h>
- #include <ctype.h>
-@@ -99,7 +100,7 @@
- #define VARIABLE ((struct Variables*)parseParam)
+ #
+ # create list of object files 
+@@ -328,7 +328,7 @@
+ # directory
+ 	@if [ ! -L $(OBJDIR)/lib ] ; then cd $(OBJDIR); ln -s $(PW_LIBDIR) lib; fi
+ endif
+-	$(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
++	@LIBTOOL@ --tag=CXX $(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
+ ifeq ($(OSTYPE),VxWorks)
+ 	$(LD)   --split-by-reloc 65535 -r   $(OBJS) -o $@ 
+ endif
+@@ -356,7 +356,7 @@
+ ifndef INSTALL_OVERRIDE
  
+ install:	$(TARGET)
+-	$(INSTALL) $(TARGET) $(INSTALLBIN_DIR)
++	@LIBTOOL@ $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
+ endif
  
--#define YYPURE
-+#define YYPURE		0
- #define YYLEX_PARAM	VARIABLE->yyInput
- #define YYPARSE_PARAM	parseParam
- 
+ # ifdef PROG
