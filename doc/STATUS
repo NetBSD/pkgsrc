@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.21 2003/10/12 04:56:34 grant Exp $
+$NetBSD: STATUS,v 1.22 2003/10/18 04:00:48 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -96,7 +96,7 @@ lang/sun-j*                                         Y
 lang/wonka
 math/gnumeric
 misc/openoffice
-www/mozilla                                                            Y
+www/mozilla                                         Y                  Y
 www/opera
 ---------------------------------------------------------------------------
 'fully supported'
