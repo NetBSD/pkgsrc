@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+
+--- ext/extmk.rb.in.orig	Tue May 29 17:57:26 2001
++++ ext/extmk.rb.in	Fri Jun 29 00:09:27 2001
+@@ -177,7 +177,7 @@
+     mfile.printf "\t@$(RUBY) -r ftools -e 'File::makedirs(*ARGV)' $(DESTDIR)$(pkglibdir)/%s\n", f
+   end
+   for f in path
+-    mfile.printf "\t@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0644, true)' $(srcdir)/lib/%s $(DESTDIR)$(pkglibdir)/%s\n", f, f
++    mfile.printf "\t@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0444, true)' $(srcdir)/lib/%s $(DESTDIR)$(pkglibdir)/%s\n", f, f
+   end
+ end
+ 
