@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2000/10/15 10:25:46 simonb Exp $
+# $NetBSD: Makefile,v 1.70 2000/10/15 17:53:59 rh Exp $
 #
 
     SUBDIR += ac3dec
@@ -50,6 +50,7 @@
     SUBDIR += kdemultimedia
     SUBDIR += lame
     SUBDIR += lame-gui
+    SUBDIR += libac3
     SUBDIR += libaudiofile
     SUBDIR += libcdaudio
     SUBDIR += libmikmod
