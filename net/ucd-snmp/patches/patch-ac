@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.1 1999/08/15 09:44:01 tron Exp $
+
+--- agent/Makefile.in.orig	Tue Mar 16 01:24:39 1999
++++ agent/Makefile.in	Sun Aug 15 11:32:24 1999
+@@ -3,8 +3,8 @@
+ #
+ 
+ TARG=	 snmpd
+-USELIBS= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
+-LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
++USELIBS= ../snmplib/libsnmp.la
++LIBS=	 ${USELIBS} @LIBS@
+ 
+ CPPFLAGS=@CPPFLAGS@ -I.. -I$(srcdir)/.. -I$(srcdir)/../snmplib \
+ 	-I$(srcdir) -I. -I$(srcdir)/mibgroup -Imibgroup
+@@ -20,21 +20,21 @@
+ #	cd dlmods; $(MAKE); cd ..
+ 
+ getkstat: getkstat.o
+-	$(CC) $(CFLAGS) -o $@ $? $(LIBS)
++	${LIBTOOL} $(CC) $(CFLAGS) -o $@ $? $(LIBS)
+ 
+ getkstat.o: mibgroup/kernel_sunos5.c
+-	$(CC) $(CFLAGS) -o $@ -D_GETKSTAT_TEST -DDODEBUG -c $? 
++	${LIBTOOL} $(CC) $(CFLAGS) -o $@ -D_GETKSTAT_TEST -DDODEBUG -c $? 
+ 
+ getmibstat: getmibstat.o
+-	$(CC) $(CFLAGS) -o $@ $? $(LIBS)
++	${LIBTOOL} $(CC) $(CFLAGS) -o $@ $? $(LIBS)
+ 
+ getmibstat.o: mibgroup/kernel_sunos5.c
+-	$(CC) $(CFLAGS) -o $@ -D_GETMIBSTAT_TEST -DDODEBUG -c $? 
++	${LIBTOOL} $(CC) $(CFLAGS) -o $@ -D_GETMIBSTAT_TEST -DDODEBUG -c $? 
+ 
+ AGENTOBJS=snmpd.o snmp2p.o kernel.o snmp_agent.o snmp_vars.o view_parse.o agent_read_config.o auto_nlist.o
+ 
+ snmpd:	${MIBOBJS} ${AGENTOBJS} $(USELIBS)
+-	${CC} -o $@ ${AGENTOBJS} ${MIBOBJS} ${LDFLAGS} ${LIBS}  
++	${LIBTOOL} ${CC} -o $@ ${AGENTOBJS} ${MIBOBJS} ${LDFLAGS} ${LIBS}  
+ 
+ clean:
+ 	rm -f *.o ${TARG}
+@@ -42,7 +42,7 @@
+ 	cd mibgroup; make clean
+ 
+ install:  installdirs
+-	@$(INSTALL) $(TARG) $(sbindir) ; echo "install:  installed $(TARG) in $(sbindir) "
++	@${LIBTOOL} $(INSTALL) $(TARG) $(sbindir) ; echo "install:  installed $(TARG) in $(sbindir) "
+ #	cd dlmods ; $(MAKE) install; cd ..
+ 
+ installdirs:

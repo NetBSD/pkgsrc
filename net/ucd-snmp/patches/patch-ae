@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1 1999/08/15 09:44:01 tron Exp $
+
+--- apps/snmpnetstat/Makefile.in.orig	Sat Mar  6 02:25:46 1999
++++ apps/snmpnetstat/Makefile.in	Sun Aug 15 11:31:31 1999
+@@ -23,13 +23,13 @@
+ CPPFLAGS=@CPPFLAGS@ -I../.. -I$(srcdir)/../.. -I$(srcdir)/../../snmplib
+ CC = @CC@ $(CPPFLAGS)
+ 
+-USELIBS=../../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
+-LIBS=	 -L../../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
++USELIBS=../../snmplib/libsnmp.la
++LIBS=	 ${USELIBS} @LIBS@
+ 
+ all: $(TARG)
+ 
+ snmpnetstat: ${OBJS} ${USELIBS}
+-	${CC} -o $@ ${CFLAGS} ${OBJS} ${LDFLAGS} ${LIBS}
++	${LIBTOOL} ${CC} -o $@ ${CFLAGS} ${OBJS} ${LDFLAGS} ${LIBS}
+ 
+ distclean: clean
+ 
+@@ -49,7 +49,7 @@
+ 	@$(SHELL) $(srcdir)/../../mkinstalldirs $(snmplibdir) $(bindir)
+ 
+ install: installdirs $(TARG)
+-	@for i in $(TARG) ; do $(INSTALL) $$i $(bindir) ; echo "install:  installed $$i in $(bindir)" ; done
++	@for i in $(TARG) ; do ${LIBTOOL} $(INSTALL) $$i $(bindir) ; echo "install:  installed $$i in $(bindir)" ; done
+ 
+ depend: 
+ 	makedepend $(CPPFLAGS) $(srcdir)/*.c
