@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/18 13:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/09/30 09:01:57 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
@@ -21,14 +21,13 @@ SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
-SKINS +=	default-1.8${EXTRACT_SUFX}			\
-		AlienMind-1.2${EXTRACT_SUFX}			\
+SKINS +=	AlienMind-1.2${EXTRACT_SUFX}			\
 		BlueHeart-1.5${EXTRACT_SUFX}			\
 		CornerMP-1.2${EXTRACT_SUFX}			\
 		CornerMP-aqua-1.4${EXTRACT_SUFX}		\
 		Cyrus-1.2${EXTRACT_SUFX}			\
 		MidnightLove-1.6${EXTRACT_SUFX}			\
-		WindowsMediaPlayer6-2.0${EXTRACT_SUFX}		\
+		WMP6-2.2${EXTRACT_SUFX}				\
 		avifile-1.6${EXTRACT_SUFX}			\
 		gnome-1.1${EXTRACT_SUFX}			\
 		hayraphon-1.0${EXTRACT_SUFX}			\
@@ -42,7 +41,7 @@ SKINS +=	default-1.8${EXTRACT_SUFX}			\
 		xanim-1.6${EXTRACT_SUFX}			\
 		xine-lcd-1.2${EXTRACT_SUFX}
 
-.if !defined(SITES_default-1.8.tar.bz2)
+.if !defined(SITES_AlienMind-1.2.tar.bz2)
 .  for skin in ${SKINS}
 SITES_${skin}= ${SKIN_SITES}
 .  endfor
@@ -51,6 +50,7 @@ SITES_${skin}= ${SKIN_SITES}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 DISTINFO_FILE=	${.CURDIR}/distinfo
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/06/18 18:43:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/30 09:01:57 wiz Exp $
 bin/gmplayer
 share/mplayer/Skin/AlienMind/README
 share/mplayer/Skin/AlienMind/VERSION
@@ -159,42 +159,43 @@ share/mplayer/Skin/MidnightLove/stop.png
 share/mplayer/Skin/MidnightLove/sub.png
 share/mplayer/Skin/MidnightLove/symbols.fnt
 share/mplayer/Skin/MidnightLove/symbols.png
-share/mplayer/Skin/WindowsMediaPlayer6/README
-share/mplayer/Skin/WindowsMediaPlayer6/VERSION
-share/mplayer/Skin/WindowsMediaPlayer6/bw10sec.png
-share/mplayer/Skin/WindowsMediaPlayer6/bw1min.png
-share/mplayer/Skin/WindowsMediaPlayer6/close.png
-share/mplayer/Skin/WindowsMediaPlayer6/equalizer.png
-share/mplayer/Skin/WindowsMediaPlayer6/favorites.png
-share/mplayer/Skin/WindowsMediaPlayer6/file.png
-share/mplayer/Skin/WindowsMediaPlayer6/font.fnt
-share/mplayer/Skin/WindowsMediaPlayer6/font.png
-share/mplayer/Skin/WindowsMediaPlayer6/fw10sec.png
-share/mplayer/Skin/WindowsMediaPlayer6/fw1min.png
-share/mplayer/Skin/WindowsMediaPlayer6/go.png
-share/mplayer/Skin/WindowsMediaPlayer6/help.png
-share/mplayer/Skin/WindowsMediaPlayer6/main.png
-share/mplayer/Skin/WindowsMediaPlayer6/maximize.png
-share/mplayer/Skin/WindowsMediaPlayer6/media.png
-share/mplayer/Skin/WindowsMediaPlayer6/menu.png
-share/mplayer/Skin/WindowsMediaPlayer6/menus.png
-share/mplayer/Skin/WindowsMediaPlayer6/minimize.png
-share/mplayer/Skin/WindowsMediaPlayer6/music.png
-share/mplayer/Skin/WindowsMediaPlayer6/mute.png
-share/mplayer/Skin/WindowsMediaPlayer6/next.png
-share/mplayer/Skin/WindowsMediaPlayer6/pause.png
-share/mplayer/Skin/WindowsMediaPlayer6/play.png
-share/mplayer/Skin/WindowsMediaPlayer6/pos.png
-share/mplayer/Skin/WindowsMediaPlayer6/prev.png
-share/mplayer/Skin/WindowsMediaPlayer6/radio.png
-share/mplayer/Skin/WindowsMediaPlayer6/skin
-share/mplayer/Skin/WindowsMediaPlayer6/stop.png
-share/mplayer/Skin/WindowsMediaPlayer6/sub.png
-share/mplayer/Skin/WindowsMediaPlayer6/sub.png.win
-share/mplayer/Skin/WindowsMediaPlayer6/symbols.fnt
-share/mplayer/Skin/WindowsMediaPlayer6/symbols.png
-share/mplayer/Skin/WindowsMediaPlayer6/view.png
-share/mplayer/Skin/WindowsMediaPlayer6/vol.png
+share/mplayer/Skin/WMP6/README
+share/mplayer/Skin/WMP6/VERSION
+share/mplayer/Skin/WMP6/bw10sec.png
+share/mplayer/Skin/WMP6/bw1min.png
+share/mplayer/Skin/WMP6/close.png
+share/mplayer/Skin/WMP6/equalizer.png
+share/mplayer/Skin/WMP6/favorites.png
+share/mplayer/Skin/WMP6/file.png
+share/mplayer/Skin/WMP6/font.fnt
+share/mplayer/Skin/WMP6/font.png
+share/mplayer/Skin/WMP6/fw10sec.png
+share/mplayer/Skin/WMP6/fw1min.png
+share/mplayer/Skin/WMP6/go.png
+share/mplayer/Skin/WMP6/help.png
+share/mplayer/Skin/WMP6/main.png
+share/mplayer/Skin/WMP6/maximize.png
+share/mplayer/Skin/WMP6/media.png
+share/mplayer/Skin/WMP6/menu.png
+share/mplayer/Skin/WMP6/menus.png
+share/mplayer/Skin/WMP6/minimize.png
+share/mplayer/Skin/WMP6/music.png
+share/mplayer/Skin/WMP6/mute.png
+share/mplayer/Skin/WMP6/next.png
+share/mplayer/Skin/WMP6/pause.png
+share/mplayer/Skin/WMP6/play.png
+share/mplayer/Skin/WMP6/playlist.png
+share/mplayer/Skin/WMP6/pos.png
+share/mplayer/Skin/WMP6/prev.png
+share/mplayer/Skin/WMP6/radio.png
+share/mplayer/Skin/WMP6/skin
+share/mplayer/Skin/WMP6/stop.png
+share/mplayer/Skin/WMP6/sub.png
+share/mplayer/Skin/WMP6/sub.png.win
+share/mplayer/Skin/WMP6/symbols.fnt
+share/mplayer/Skin/WMP6/symbols.png
+share/mplayer/Skin/WMP6/view.png
+share/mplayer/Skin/WMP6/vol.png
 share/mplayer/Skin/avifile/README
 share/mplayer/Skin/avifile/VERSION
 share/mplayer/Skin/avifile/alap.png
@@ -214,36 +215,6 @@ share/mplayer/Skin/avifile/sub.png
 share/mplayer/Skin/avifile/symbols.fnt
 share/mplayer/Skin/avifile/symbols.png
 share/mplayer/Skin/avifile/volume.png
-share/mplayer/Skin/default/README
-share/mplayer/Skin/default/VERSION
-share/mplayer/Skin/default/about.png
-share/mplayer/Skin/default/back.png
-share/mplayer/Skin/default/eq.png
-share/mplayer/Skin/default/eqb.png
-share/mplayer/Skin/default/exit.png
-share/mplayer/Skin/default/font.fnt
-share/mplayer/Skin/default/font.png
-share/mplayer/Skin/default/forward.png
-share/mplayer/Skin/default/fsb.png
-share/mplayer/Skin/default/iconify.png
-share/mplayer/Skin/default/load.png
-share/mplayer/Skin/default/main.png
-share/mplayer/Skin/default/menu.png
-share/mplayer/Skin/default/menus.png
-share/mplayer/Skin/default/next.png
-share/mplayer/Skin/default/pause.png
-share/mplayer/Skin/default/play.png
-share/mplayer/Skin/default/playbar.png
-share/mplayer/Skin/default/plb.png
-share/mplayer/Skin/default/pos.png
-share/mplayer/Skin/default/prev.png
-share/mplayer/Skin/default/skin
-share/mplayer/Skin/default/stop.png
-share/mplayer/Skin/default/sub.png
-share/mplayer/Skin/default/subload.png
-share/mplayer/Skin/default/symbols.fnt
-share/mplayer/Skin/default/symbols.png
-share/mplayer/Skin/default/volume.png
 share/mplayer/Skin/gnome/README
 share/mplayer/Skin/gnome/VERSION
 share/mplayer/Skin/gnome/back.png
@@ -552,9 +523,8 @@ share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/hwswskin
 @dirrm share/mplayer/Skin/hayraphon
 @dirrm share/mplayer/Skin/gnome
-@dirrm share/mplayer/Skin/default
 @dirrm share/mplayer/Skin/avifile
-@dirrm share/mplayer/Skin/WindowsMediaPlayer6
+@dirrm share/mplayer/Skin/WMP6
 @dirrm share/mplayer/Skin/MidnightLove
 @dirrm share/mplayer/Skin/Cyrus
 @dirrm share/mplayer/Skin/CornerMP-aqua
