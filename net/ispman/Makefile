@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/08 15:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/08 23:49:25 wiz Exp $
 #
 
 DISTNAME=	ispman-0.5
@@ -16,7 +16,7 @@ DEPENDS+=	apache>=1.3.14nb1:../../www/apache
 DEPENDS+=	p5-${DISTNAME}:../../net/p5-ispman
 
 .if !exists(/usr/sbin/postfix)
-DEPENDS+=	{postfix>=20010228,postfix-1.*}:../../mail/postfix
+DEPENDS+=	{postfix>=20010228,postfix-1.*,postfix-2.*}:../../mail/postfix
 .endif
 
 USE_PERL5=	YES
