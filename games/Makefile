@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2004/08/06 17:06:16 drochner Exp $
+# $NetBSD: Makefile,v 1.229 2004/08/17 12:30:01 wiz Exp $
 #
 
 COMMENT=	Games
@@ -176,6 +176,7 @@ SUBDIR+=	sjeng
 SUBDIR+=	sl
 SUBDIR+=	spellcast
 SUBDIR+=	spider
+SUBDIR+=	stratagus
 SUBDIR+=	svb
 SUBDIR+=	tads
 SUBDIR+=	tanked
