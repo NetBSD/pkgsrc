@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
+$NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
 
---- configure.orig	2004-01-25 12:36:38.000000000 +0000
+--- configure.orig	2004-01-26 01:36:38.000000000 +1300
 +++ configure
 @@ -4424,10 +4424,13 @@ beos*)
    lt_cv_deplibs_check_method=pass_all
@@ -116,3 +116,137 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    # Clean up.
    rm -f a.out a.exe
  else
+@@ -11828,9 +11842,10 @@ beos*)
+   shlibpath_var=LIBRARY_PATH
+   ;;
+ 
+-bsdi4*)
+-  version_type=linux
++bsdi*)
++  version_type=sunos
+   need_version=no
++  need_lib_prefix=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+   soname_spec='${libname}${release}${shared_ext}$major'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
+@@ -11946,15 +11961,15 @@ kfreebsd*-gnu)
+ 
+ freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+-  version_type=freebsd-$objformat
+-  case $version_type in
+-    freebsd-elf*)
+-      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  version_type=sunos
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  case $objformat in
++    elf*)
++      soname_spec='${libname}${release}${shared_ext}$major'
+       need_version=no
+       need_lib_prefix=no
+       ;;
+-    freebsd-*)
+-      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
++    *)
+       need_version=yes
+       ;;
+   esac
+@@ -12033,12 +12048,7 @@ hpux9* | hpux10* | hpux11*)
+ irix5* | irix6* | nonstopux*)
+   case $host_os in
+     nonstopux*) version_type=nonstopux ;;
+-    *)
+-	if test "$lt_cv_prog_gnu_ld" = yes; then
+-		version_type=linux
+-	else
+-		version_type=irix
+-	fi ;;
++    *) version_type=sunos ;;
+   esac
+   need_lib_prefix=no
+   need_version=no
+@@ -12074,7 +12084,7 @@ linux*oldld* | linux*aout* | linux*coff*
+ 
+ # This must be Linux ELF.
+ linux*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -12198,7 +12208,7 @@ sco3.2v5*)
+   ;;
+ 
+ solaris*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -14968,9 +14978,10 @@ beos*)
+   shlibpath_var=LIBRARY_PATH
+   ;;
+ 
+-bsdi4*)
+-  version_type=linux
++bsdi*)
++  version_type=sunos
+   need_version=no
++  need_lib_prefix=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+   soname_spec='${libname}${release}${shared_ext}$major'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
+@@ -15086,15 +15097,15 @@ kfreebsd*-gnu)
+ 
+ freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+-  version_type=freebsd-$objformat
+-  case $version_type in
+-    freebsd-elf*)
+-      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  version_type=sunos
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  case $objformat in
++    elf*)
++      soname_spec='${libname}${release}${shared_ext}$major'
+       need_version=no
+       need_lib_prefix=no
+       ;;
+-    freebsd-*)
+-      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
++    *)
+       need_version=yes
+       ;;
+   esac
+@@ -15173,12 +15184,7 @@ hpux9* | hpux10* | hpux11*)
+ irix5* | irix6* | nonstopux*)
+   case $host_os in
+     nonstopux*) version_type=nonstopux ;;
+-    *)
+-	if test "$lt_cv_prog_gnu_ld" = yes; then
+-		version_type=linux
+-	else
+-		version_type=irix
+-	fi ;;
++    *) version_type=sunos ;;
+   esac
+   need_lib_prefix=no
+   need_version=no
+@@ -15214,7 +15220,7 @@ linux*oldld* | linux*aout* | linux*coff*
+ 
+ # This must be Linux ELF.
+ linux*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -15338,7 +15344,7 @@ sco3.2v5*)
+   ;;
+ 
+ solaris*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
