@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.694 2001/03/23 14:09:23 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.695 2001/03/23 16:02:23 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -697,8 +697,12 @@ uptodate-digest:
 # Latest version of pkgtools required for this file.
 PKGTOOLS_REQD=		20010306
 
-# Check that we're using up-to-date pkg_* tools with this file.
+# Check that we are using up-to-date pkg_* tools with this file.
+.if defined(ZOULARIS_VERSION)
+uptodate-pkgtools: uptodate-zoularis
+.else
 uptodate-pkgtools:
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
 		case ${PKGNAME} in					\
@@ -711,6 +715,20 @@ uptodate-pkgtools:
 			${FALSE} ;;					\
 		esac							\
 	fi
+
+# Latest version of Zoularis required for this file.
+ZOULARIS_REQD=		20010323
+
+# Check that we are using up-to-date Zoularis.
+.if defined(ZOULARIS_VERSION)
+uptodate-zoularis:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ${ZOULARIS_VERSION} -lt ${ZOULARIS_REQD} ]; then		\
+		${ECHO} "Your Zoularis needs to be updated to the ${ZOULARIS_REQD:C|(....)(..)(..)|\1/\2/\3|} version."; \
+		${ECHO} "The installed Zoularis was last updated on ${ZOULARIS_VERSION:C|(....)(..)(..)|\1/\2/\3|}."; \
+		${FALSE};					\
+	fi
+.endif
 
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${WRKDIR}/.build_version
