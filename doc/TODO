@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.994 2003/11/04 18:13:20 jmmv Exp $
+$NetBSD: TODO,v 1.995 2003/11/05 03:59:16 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -265,6 +265,7 @@ Suggested package updates
 	o mozilla-1.5
 	o mozilla-bin-1.5 [grant]
 	o mozilla-thunderbird-0.3
+	o mpich-1.2.5.2 [jschauma]
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
 	o mtools-3.9.9
