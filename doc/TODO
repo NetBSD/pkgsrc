@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2197 2004/10/04 21:32:29 minskim Exp $
+$NetBSD: TODO,v 1.2198 2004/10/04 22:42:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -265,7 +265,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gaim-1.0.0
 	o galeon-1.3.17
-	o gdb-6.2.1
 	o gdm-2.6.0.5
 	o generator-0.35
 	o getmail-4.2.0
