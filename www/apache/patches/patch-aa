@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1998/12/03 17:23:52 tv Exp $
+$NetBSD: patch-aa,v 1.7 1998/12/04 17:23:20 tv Exp $
 
---- Makefile.tmpl.orig	Thu Dec  3 07:42:35 1998
-+++ Makefile.tmpl	Thu Dec  3 08:22:10 1998
+--- Makefile.tmpl.orig	Fri Dec  4 11:41:42 1998
++++ Makefile.tmpl	Fri Dec  4 11:47:53 1998
 @@ -275,7 +275,7 @@
  	$(MKDIR) $(root)$(sysconfdir)/ssl.key
  	$(MKDIR) $(root)$(datadir)/htdocs
@@ -19,27 +19,28 @@ $NetBSD: patch-aa,v 1.6 1998/12/03 17:23:52 tv Exp $
  		< $(TOP)/$(SRC)/support/apachectl > $(TOP)/$(SRC)/.apaci.install.tmp && \
  		$(INSTALL_SCRIPT) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sbindir)/apachectl
  	$(INSTALL_DATA) $(TOP)/$(SRC)/support/apachectl.1 $(root)$(mandir)/man1/apachectl.1
-@@ -413,15 +414,15 @@
+@@ -413,17 +414,13 @@
  		find $(root)$(datadir)/htdocs/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(datadir)/htdocs/ -type f -exec chmod a+r {} \; ; \
  	fi
 -	-@if [ -f $(root)$(datadir)/cgi-bin/printenv ]; then \
 -		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(datadir)/cgi-bin/]"; \
-+	-@if [ -f $(root)$(prefix)/libexec/cgi-bin/printenv ]; then \
-+		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(prefix)/libexec/cgi-bin/]"; \
- 	else \
+-	else \
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
          		> $(TOP)/$(SRC)/.apaci.install.tmp; \
 -			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(datadir)/cgi-bin/$${script}"; \
 -			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(datadir)/cgi-bin/$${script}; \
+-		done; \
+-	fi
 +			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(prefix)/libexec/cgi-bin/$${script}"; \
 +			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(prefix)/libexec/cgi-bin/$${script}; \
- 		done; \
- 	fi
++		done;
  	@echo "Copying tree $(TOP)/icons/ -> $(root)$(datadir)/icons/"; \
-@@ -450,7 +451,7 @@
+ 	(cd $(TOP)/icons/ && $(TAR) cf - *) |\
+ 	(cd $(root)$(datadir)/icons/ && $(TAR) xf -); \
+@@ -450,7 +447,7 @@
  			-e 's;@@ServerRoot@@/conf/ssl.key;$(sysconfdir)/ssl.key;' \
  			-e 's;@@ServerRoot@@/htdocs;$(datadir)/htdocs;' \
  			-e 's;@@ServerRoot@@/icons;$(datadir)/icons;' \
