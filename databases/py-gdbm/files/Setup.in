@@ -1,0 +1,2 @@
+*shared*
+gdbm gdbmmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib -lgdbm
