@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/02/18 15:14:27 seb Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/14 14:54:48 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -15,30 +15,14 @@ COMMENT=		Pentium GNU Compiler Collection
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-BROKEN=			"Has not been updated to gcc-2.95.3 yet."
-
 # 'Pentium GCC' is optimized for the Intel Pentium processor, but should
 # work on all platforms on which GCC works.
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-sparc SunOS-*-*
 
-.include "../../mk/bsd.prefs.mk"
-
-FILESDIR=		${.CURDIR}/../../lang/gcc/files
-PATCHDIR=		${.CURDIR}/../../lang/gcc/patches
-PKGDIR=			${.CURDIR}/../../lang/gcc
-
-DESCR_SRC=		${.CURDIR}/DESCR
-
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}elf
-.else
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}
-.endif
-
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
+CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
@@ -51,8 +35,7 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 PGCC_VERSION=		${PKGNAME:C/.*-//}
 GCC_VERSION=		${PKGNAME}
 MESSAGE_SUBST+=		MAKE=${MAKE}
-PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
-			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
+PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 
@@ -95,9 +78,8 @@ post-build:
 
 .if (${OPSYS} != SunOS)
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .endif
 
