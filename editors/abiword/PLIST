@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/02/24 09:55:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/03/07 10:16:43 adam Exp $
 bin/AbiWord-2.2
 bin/abiword
 bin/ttfadmin.sh
@@ -735,6 +735,7 @@ share/AbiSuite-2.2/AbiWord/strings/id-ID.strings
 share/AbiSuite-2.2/AbiWord/strings/it-IT.strings
 share/AbiSuite-2.2/AbiWord/strings/ja-JP.strings
 share/AbiSuite-2.2/AbiWord/strings/jbo.strings
+share/AbiSuite-2.2/AbiWord/strings/ku.strings
 share/AbiSuite-2.2/AbiWord/strings/lt-LT.strings
 share/AbiSuite-2.2/AbiWord/strings/lv-LV.strings
 share/AbiSuite-2.2/AbiWord/strings/mg-MG.strings
