@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/23 21:50:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/01/26 13:08:20 jmmv Exp $
 
 DISTNAME=	kdemultimedia-3.1.5
 PKGREVISION=	2
@@ -50,8 +50,8 @@ PLIST_SUBST+=		XV_WORKAROUND=""
 .include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../audio/arts/buildlink2.mk"
-.include "../../graphics/xine-lib/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"
+.include "../../multimedia/xine-lib/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"

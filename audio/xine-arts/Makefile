@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 09:27:43 tron Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/26 13:08:20 jmmv Exp $
 #
 
-.include "../../graphics/xine-lib/Makefile.common"
+.include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/lib/arts/}
 CATEGORIES=	audio
 
-DEPENDS+=	xine-lib>=1rc0anb3:../../graphics/xine-lib
+DEPENDS+=	xine-lib>=1rc0anb3:../../multimedia/xine-lib
 
 BUILD_DIRS=	${WRKSRC}/src/audio_out
 
