@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/10/24 22:48:07 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/23 23:23:52 wiz Exp $
 #
 
 DISTNAME=	icepref-1.1
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 
@@ -14,5 +15,8 @@ WRKSRC=		${WRKDIR}/icepref
 
 USE_BUILDLINK2=	yes
 
+PYTHON_PATCH_SCRIPTS=	icepref
+
+.include "../../lang/python/application.mk"
 .include "../../x11/pygtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
