@@ -9,15 +9,14 @@
  
  #define HAVE_WAIT_HEADER
  #define WAIT_USE_INT
-@@ -71,6 +71,11 @@
+@@ -71,6 +71,10 @@
     says where to find X windows at run time.  We convert it to a -rpath option
     which is what OSF1 uses.  */
  #define LD_SWITCH_SYSTEM `echo LD_SWITCH_X_SITE_AUX | sed -e 's/-R/-Wl,-rpath,/'`
 +
 +#define HAVE_TEXT_START		/* No need to define `start_of_text'.  */
 +#define UNEXEC unexelf.c
-+#define START_FILES pre-crt0.o /usr/lib/crt0.o /usr/lib/crtbegin.o
-+#define LIB_STANDARD -lgcc -lc -lgcc /usr/lib/crtend.o
++#define ORDINARY_LINK
  #endif /* __ELF__ */
  
  /* On post 1.3 releases of NetBSD, gcc -nostdlib also clears
