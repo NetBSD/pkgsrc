@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.3 2005/02/15 23:31:06 peter Exp $
+
+--- source/src/tools.h.orig	2004-03-28 21:12:02.000000000 +0200
++++ source/src/tools.h	2005-02-16 00:42:01.000000000 +0100
+@@ -136,6 +136,8 @@
+     void allocnext(int allocsize);
+ };
+ 
++pool *gp();
++
+ template <class T> struct vector
+ {
+     T *buf;
+@@ -259,7 +261,6 @@
+ 
+ #define enumerate(ht,t,e,b) loopi(ht->size) for(ht->enumc = ht->table[i]; ht->enumc; ht->enumc = ht->enumc->next) { t e = &ht->enumc->data; b; }
+ 
+-pool *gp(); 
+ inline char *newstring(char *s)        { return gp()->string(s);    };
+ inline char *newstring(char *s, int l) { return gp()->string(s, l); };
+ inline char *newstringbuf(char *s)     { return gp()->stringbuf(s); };
