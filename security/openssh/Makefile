@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/03/07 16:45:33 tron Exp $
+# $NetBSD: Makefile,v 1.64 2002/03/12 06:23:07 itojun Exp $
 
 DISTNAME=		openssh-3.0.2p1
 PKGNAME=		openssh-3.0.2.1
@@ -27,12 +27,6 @@ BUILD_DEFS+=		USE_INET6
 #BUILD_DEFS+=		KERBEROS
 BUILD_DEFS+=		PKG_SYSCONFDIR
 BUILD_DEFS+=		SSH_SUID
-
-# matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
-ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
-			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
-			NetBSD-*-sparc NetBSD-*-vax SunOS-*-* Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
