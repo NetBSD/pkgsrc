@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/15 09:23:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 21:24:56 grant Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 		http://www.geda.seul.org/devel/${PKGVERSION}/ \
 		http://www.geda.coelacanth.com/devel/${PKGVERSION}/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
 

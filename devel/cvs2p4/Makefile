@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:06 grant Exp $
 #
 
 DISTNAME=	cvs2p4-2.3.3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://public.perforce.com/public/perforce/utils/cvs2p4/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	schmonz@netbsd.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Converts CVS repository to Perforce depot
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:30 grant Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.misc/volume10/ \
 		ftp://sunsite.org.uk/usenet/comp.sources.misc/volume10/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	bjh21@netbsd.org
+MAINTAINER=	bjh21@NetBSD.org
 COMMENT=	8031/8051 assembler
 
 EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | \

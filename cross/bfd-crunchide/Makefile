@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:40:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:27:49 grant Exp $
 
 DISTNAME=	bfd-crunchide-1.1
 WRKSRC=		${WRKDIR}
@@ -6,7 +6,7 @@ CATEGORIES=	cross
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	crunchide using libbfd. Used for cross-building distributions
 
 DEPENDS=	cross-binutils>=2.9.1.1:../binutils

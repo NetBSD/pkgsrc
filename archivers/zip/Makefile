@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/06/01 01:57:16 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 21:21:49 grant Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/
 DISTFILES=	zip23.tar.gz zcrypt29.zip
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
 COMMENT=	Create/update ZIP files compatible with pkzip
 

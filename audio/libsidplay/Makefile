@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/11/23 18:36:30 pooka Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:22:44 grant Exp $
 #
 
 DISTNAME=	libsidplay-1.36.57
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pooka@netbsd.org
+MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Sidplay Library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/14 02:11:25 salo Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:21:25 grant Exp $
 #
 
 DISTNAME=	lzo-1.08
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/ \
 		ftp://ftp.elf.stuba.sk/pub/pc/pack/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library written in ANSI C
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:24:05 grant Exp $
 #
 
 DISTNAME=	iris-0.11
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://cdelfosse.free.fr/xmms-iris/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://cdelfosse.free.fr/xmms-iris/
 COMMENT=	OpenGL Spectrum Analyzer with theme engine and fullscreen modes
 

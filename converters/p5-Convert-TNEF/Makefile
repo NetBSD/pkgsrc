@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:21:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:27:21 grant Exp $
 
 DISTNAME=		Convert-TNEF-0.12
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		p5tnf
 CATEGORIES=		sysutils perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		perl5 module interface to read TNEF files
 
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
