@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/10 17:07:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/03/12 00:30:52 wiz Exp $
 bin/gqmpeg
 bin/gqmpeg-shoutcast-plugin.sh
 man/man1/gqmpeg.1
@@ -40,6 +40,7 @@ share/gqmpeg/skins/mrclean/digit-digital-15-aa.png
 share/gqmpeg/skins/mrclean/digit-digital-24-aa.png
 share/gqmpeg/skins/mrclean/focus-rect-border-1.png
 share/gqmpeg/skins/mrclean/focus-rect-border-7b.png
+share/gqmpeg/skins/mrclean/item-clear-load-aa.png
 share/gqmpeg/skins/mrclean/item-pda-minus.png
 share/gqmpeg/skins/mrclean/item-pda-random-static.png
 share/gqmpeg/skins/mrclean/item-pda-repeat-static.png
