@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2003/08/13 13:24:16 atatat Exp $
+$NetBSD: patch-ac,v 1.11 2003/09/26 03:13:04 atatat Exp $
 
 Patch for vnode/DNLC interface change courtesy of lsof maintainer.
 
@@ -31,3 +31,23 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
  #endif	/* defined(HASNCACHE) */
  
  #if	defined(HASFSTRUCT)
+@@ -394,6 +400,9 @@
+ 		    enter_nm(Namech);
+ 		    return;
+ 		} else
++#if defined(NETBSDV) && defined(KERNFSTOV)
++#define kf_kt kfs_kt
++#endif
+ 		    kn.kf_kt = (struct kern_target *)NULL;
+ 	    }
+ 	/*
+@@ -402,6 +411,9 @@
+ 	 */
+ 	    if (kn.kf_kt
+ 	    &&  kread((KA_T)kn.kf_kt, (char *)&kt, sizeof(kt)) == 0
++#if defined(NETBSDV) && defined(KERNFSTOV)
++#undef kf_kt kfs_kt
++#endif
+ 	    &&  (ktnl = (int)kt.kt_namlen) > 0
+ 	    &&  kt.kt_name)
+ 	    {
