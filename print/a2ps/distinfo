@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:49 agc Exp $
 
-MD5 (a2ps-4.12.tar.gz) = f9e8331f5834525a2178b267b14dfa57
+SHA1 (a2ps-4.12.tar.gz) = 06cf8198fe220fe3441f820baa431523da0c4967
+Size (a2ps-4.12.tar.gz) = 1831809 bytes
 SHA1 (patch-aa) = 84bf431a04b4bd04c54a3fc641c0487a4c095dee
 SHA1 (patch-ag) = 0538fc19c2a323e35405d7f58915d577199b8c5f
 SHA1 (patch-aj) = 31bac372a0d0905f34203afb016fbf1288dc6779

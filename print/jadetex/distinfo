@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:51 agc Exp $
 
-MD5 (jadetex-2.20.zip) = 796a5e229a8e19810ff8924b00783431
+SHA1 (jadetex-2.20.zip) = 235d90328e6d5d7e231a7908ebfb1b132c3f6892
+Size (jadetex-2.20.zip) = 152421 bytes
