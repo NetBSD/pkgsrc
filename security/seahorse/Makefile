@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/11 00:32:34 xtraeme Exp $
 
 DISTNAME=	seahorse-0.7.3
 PKGREVISION=	7
@@ -23,7 +23,7 @@ GCONF2_SCHEMAS= 	seahorse.schemas
 
 .include "../../databases/gnome-mime-data/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/bonobo-activation/buildlink2.mk"
+.include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/eel2/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
