@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7659 2004/11/02 20:10:06 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7660 2004/11/02 20:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5026,3 +5026,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nidentd to 1.0nb2 [symka 2004-11-02]
 	Updated docsis to 0.9.2 [symka 2004-11-02]
 	Updated php4-apc to 2.0.4 [jdolecek 2004-11-02]
+	Added gtl0-0.3.3nb1 [wiz 2004-11-02]
+	Updated cassowary to 0.60nb7 [wiz 2004-11-02]
+	Updated gtl to 1.2.0 [wiz 2004-11-02]
