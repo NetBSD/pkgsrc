@@ -1,16 +1,17 @@
-$NetBSD: patch-ao,v 1.1 1999/05/30 18:18:32 tron Exp $
+$NetBSD: patch-ao,v 1.2 1999/06/27 00:11:03 christos Exp $
 
 --- master/Makefile.orig	Sun May 30 18:49:13 1999
 +++ master/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,16 @@
-+#	$NetBSD: patch-ao,v 1.1 1999/05/30 18:18:32 tron Exp $
+@@ -0,0 +1,17 @@
++#	$NetBSD: patch-ao,v 1.2 1999/06/27 00:11:03 christos Exp $
 +
 +.include "../conf/main.cf"
 +PROG=	master
 +BINDIR=${daemon_directory}
 +SRCS    = master.c master_conf.c master_ent.c master_sig.c master_avail.c \
-+        master_spawn.c master_service.c master_status.c master_listen.c \
-+        master_vars.c master_wakeup.c
++	master_spawn.c master_service.c master_status.c master_listen.c \
++	master_vars.c master_wakeup.c multi_server.c single_server.c \
++	trigger_server.c master_proto.c
 +
 +DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
 +LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
