@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/20 18:11:14 wennmach Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/12 20:51:26 agc Exp $
 #
 
 DISTNAME=	fdgw-20020130
@@ -13,15 +13,12 @@ BSDSRCDIR?=	/usr/src
 _IMG_SRC_DIR =	${WRKSRC}/image.${MACHINE_ARCH}
 _IMG_DST_DIR =	${PREFIX}/fdgw/${MACHINE_ARCH}
 
+ONLY_FOR_PLATFORM=	NetBSD-1.5.*-i386
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/bin/lndir)
 IGNORE=                 "${PKGNAME} requires the 'lndir' command, and hence X11"
-.endif
-
-.if (${MACHINE_ARCH} != "i386")
-IGNORE=  "Sorry, fdgw is currently only available for i386 machines."
-IGNORE+= "Please report to ${MAINTAINER} if you succeed to port fdgw to other architectures"
 .endif
 
 # we need the NetBSD source tree.
