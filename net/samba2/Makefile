@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/17 12:42:07 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/09 20:49:27 kleink Exp $
 
 DISTNAME=	samba-2.0.0beta4
 CATEGORIES=	net
@@ -53,7 +53,7 @@ post-install:
 	${ECHO} '       $$nmbd -D' >> ${STARTUP_SCRIPT};                \
 	${ECHO} "fi" >> ${STARTUP_SCRIPT};                              \
 	chmod 755 ${STARTUP_SCRIPT};                                    \
-	chown bin.bin ${STARTUP_SCRIPT};
+	chown bin:bin ${STARTUP_SCRIPT};
 	@if [ ! -f ${SAMPLE_CONFIG} ]; then                             \
 		${SED} -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g'              \
 		-e 's:__ETCDIR__:${SAMBA_ETCDIR}:g'			\
@@ -64,7 +64,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
 	if [ ! -d ${SAMBA_PRIVATE} ] ; then				\
 		${MKDIR} ${SAMBA_PRIVATE} ;				\
-		chown root.wheel ${SAMBA_PRIVATE} ;			\
+		chown root:wheel ${SAMBA_PRIVATE} ;			\
 		chmod 700 ${SAMBA_PRIVATE} ;				\
 	fi
 	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ] ; then                   \

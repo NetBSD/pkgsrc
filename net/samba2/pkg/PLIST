@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/11 12:05:44 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/01/09 20:49:27 kleink Exp $
 bin/mksmbpasswd.sh
 bin/addtosmbpass
 bin/convert_smbpasswd
@@ -152,5 +152,5 @@ etc/smb.conf.sample
 @dirrm share/swat/include
 @dirrm share/swat
 @dirrm lib/codepages
-@exec mkdir -p __SAMBA_PRIVATE__ ; if [ ! -f __SAMBA_PRIVATE__/smbpasswd ] ; then chown -R root.wheel __SAMBA_PRIVATE__ ;  cat /etc/passwd | %D/bin/mksmbpasswd.sh > __SAMBA_PRIVATE__/smbpasswd ; chmod 500 __SAMBA_PRIVATE__ ; chmod 600 __SAMBA_PRIVATE__/smbpasswd ; fi
+@exec mkdir -p __SAMBA_PRIVATE__ ; if [ ! -f __SAMBA_PRIVATE__/smbpasswd ] ; then chown -R root:wheel __SAMBA_PRIVATE__ ;  cat /etc/passwd | %D/bin/mksmbpasswd.sh > __SAMBA_PRIVATE__/smbpasswd ; chmod 500 __SAMBA_PRIVATE__ ; chmod 600 __SAMBA_PRIVATE__/smbpasswd ; fi
 @unexec echo "Warning: If you will *NOT* use this package anymore, please remove __SAMBA_PRIVATE__/smbpasswd manually."
