@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/02/07 21:31:41 minskim Exp $
+# $NetBSD: Makefile,v 1.67 2004/02/07 21:59:26 minskim Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -38,7 +38,6 @@ SUBDIR+=	php4-iconv
 SUBDIR+=	psiconv
 SUBDIR+=	py-cjkcodecs
 SUBDIR+=	py-jpCodecs
-SUBDIR+=	py-koCodecs
 SUBDIR+=	py-zhCodecs
 SUBDIR+=	qkc
 SUBDIR+=	recode
