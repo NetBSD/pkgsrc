@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2001/07/21 15:23:52 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/08/09 19:03:19 jlam Exp $
 
---- ../Makefile.in.orig	Wed Feb 28 02:34:16 2001
+--- ../Makefile.in.orig	Mon Jun 25 07:14:52 2001
 +++ ../Makefile.in
-@@ -186,8 +186,9 @@
+@@ -180,8 +180,9 @@
  	  cd $(LIBWWW) ; unset LANG; \
  	  if [ ! -f Makefile -o ! -f wwwconf.h ] ; then \
  	  	$$libwwwdir/configure \
