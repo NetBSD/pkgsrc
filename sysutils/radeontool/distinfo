@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/24 15:07:35 jmcneill Exp $
+
+SHA1 (radeontool-1.5.tar.gz) = bd9096d5b18b31a1f1addbea80e6debfc707abf6
+Size (radeontool-1.5.tar.gz) = 20869 bytes
+SHA1 (patch-aa) = 396554a81082c9d326f5b2bbc2aa7fd4585fd91e
