@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1146 2003/02/24 19:49:47 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1147 2003/02/25 15:23:55 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -4276,8 +4276,8 @@ ${PLIST}: ${PLIST_SRC}
 		${_MANINSTALL_CMD}					\
 		${_MANZ_NAWK_CMD} 					\
 		${_IMAKE_MAN_CMD} 					\
-		${SED} 	${_MANZ_EXPRESSION}				\
-			${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
+		${SED} 	${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
+			${_MANZ_EXPRESSION}				\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
 		SHLIB_PLIST_MODE=1 ;					\
