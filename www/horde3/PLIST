@@ -1,19 +1,36 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/16 21:10:17 adrianp Exp $
-share/doc/horde/COPYING
-share/doc/horde/README
+@comment $NetBSD: PLIST,v 1.2 2005/03/04 22:35:22 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
+share/doc/horde/COPYING
 share/doc/horde/CREDITS
 share/doc/horde/HACKING
 share/doc/horde/INSTALL
 share/doc/horde/PERFORMANCE
+share/doc/horde/README
 share/doc/horde/RELEASE
 share/doc/horde/RELEASE_NOTES
 share/doc/horde/SECURITY
 share/doc/horde/TODO
 share/doc/horde/TRANSLATIONS
 share/doc/horde/UPGRADING
+share/horde/admin/cmdshell.php
+share/horde/admin/datatree.php
+share/horde/admin/groups.php
+share/horde/admin/index.php
+share/horde/admin/locale/en_US/help.xml
+share/horde/admin/locale/fi_FI/help.xml
+share/horde/admin/perms/addchild.php
+share/horde/admin/perms/delete.php
+share/horde/admin/perms/edit.php
+share/horde/admin/perms/index.php
+share/horde/admin/phpshell.php
+share/horde/admin/setup/config.php
+share/horde/admin/setup/diff.php
+share/horde/admin/setup/index.php
+share/horde/admin/setup/scripts.php
+share/horde/admin/sqlshell.php
+share/horde/admin/templates.php
 share/horde/config/conf.php.dist
 share/horde/config/conf.xml.dist
 share/horde/config/hooks.php.dist
@@ -1260,6 +1277,7 @@ share/horde/themes/green/info.php
 share/horde/themes/green/screen.css
 share/horde/themes/grey/info.php
 share/horde/themes/grey/screen.css
+share/horde/themes/ie.css
 share/horde/themes/ie5mac.css
 share/horde/themes/kolab/graphics/bg.png
 share/horde/themes/kolab/graphics/kolab.png
@@ -1281,6 +1299,7 @@ share/horde/themes/mozilla/graphics/menu-active.png
 share/horde/themes/mozilla/graphics/menu.png
 share/horde/themes/mozilla/info.php
 share/horde/themes/mozilla/screen.css
+share/horde/themes/opera.css
 share/horde/themes/postnuke/info.php
 share/horde/themes/postnuke/screen.css
 share/horde/themes/print/screen.css
@@ -1485,6 +1504,7 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Net
 @dirrm share/horde/lib/Horde/tests
 @dirrm share/horde/lib/Horde/iCalendar
+@dirrm share/horde/lib/Horde/docs/examples
 @dirrm share/horde/lib/Horde/docs
 @dirrm share/horde/lib/Horde/VC
 @dirrm share/horde/lib/Horde/UI/VarRenderer
@@ -1542,5 +1562,11 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib
 @dirrm share/horde/js
 @dirrm share/horde/config
+@dirrm share/horde/admin/locale/fi_FI
+@dirrm share/horde/admin/locale/en_US
+@dirrm share/horde/admin/locale
+@dirrm share/horde/admin/setup
+@dirrm share/horde/admin/perms
+@dirrm share/horde/admin
 @dirrm share/horde
 @dirrm share/doc/horde
