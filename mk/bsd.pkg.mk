@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1178 2003/05/04 01:20:13 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1179 2003/05/04 02:59:15 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1204,7 +1204,11 @@ all: build
 .  if make(package)
 DEPENDS_TARGET=	package
 .  elif make(update)
+.    if defined(UPDATE_TARGET) && ${UPDATE_TARGET} == "replace"
+DEPENDS_TARGET=	${UPDATE_TARGET}
+.    else
 DEPENDS_TARGET=	update
+.    endif
 .  elif make(bin-install)
 DEPENDS_TARGET=	bin-install
 .  else
