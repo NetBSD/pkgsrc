@@ -1,0 +1,221 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/25 01:32:58 salo Exp $
+bin/tuxracer
+share/doc/html/tuxracer/download.html
+share/doc/html/tuxracer/faq.html
+share/doc/html/tuxracer/game_info.html
+share/doc/html/tuxracer/images/5rate.gif
+share/doc/html/tuxracer/images/5rate_cows.gif
+share/doc/html/tuxracer/images/fgw_top_pick.gif
+share/doc/html/tuxracer/images/ingame.jpg
+share/doc/html/tuxracer/images/manual/1.gif
+share/doc/html/tuxracer/images/manual/2.gif
+share/doc/html/tuxracer/images/manual/3.gif
+share/doc/html/tuxracer/images/manual/4.gif
+share/doc/html/tuxracer/images/manual/5.gif
+share/doc/html/tuxracer/images/manual/6.gif
+share/doc/html/tuxracer/images/manual/7.gif
+share/doc/html/tuxracer/images/manual/cup_menu.jpg
+share/doc/html/tuxracer/images/manual/cup_screen.jpg
+share/doc/html/tuxracer/images/manual/d_key.jpg
+share/doc/html/tuxracer/images/manual/e_key.jpg
+share/doc/html/tuxracer/images/manual/main_menu.jpg
+share/doc/html/tuxracer/images/manual/movement_keys.gif
+share/doc/html/tuxracer/images/manual/practice_screen.jpg
+share/doc/html/tuxracer/images/manual/q_key.jpg
+share/doc/html/tuxracer/images/manual/r_key.jpg
+share/doc/html/tuxracer/images/manual/racing.jpg
+share/doc/html/tuxracer/images/manual/welcome.jpg
+share/doc/html/tuxracer/images/menu_side.jpg
+share/doc/html/tuxracer/images/menu_top.jpg
+share/doc/html/tuxracer/images/menu_top_left.jpg
+share/doc/html/tuxracer/images/palette.png
+share/doc/html/tuxracer/images/palette.rgb
+share/doc/html/tuxracer/images/snow_line.gif
+share/doc/html/tuxracer/index.html
+share/doc/html/tuxracer/manual.html
+share/doc/html/tuxracer/oldnews.html
+share/doc/html/tuxracer/purchase.html
+share/doc/html/tuxracer/screenshots.html
+share/doc/html/tuxracer/support.html
+share/examples/tuxracer/script-fu/README
+share/examples/tuxracer/script-fu/tuxracer-create-level.scm
+share/examples/tuxracer/script-fu/tuxracer-load-level-1.1.scm
+share/examples/tuxracer/script-fu/tuxracer-save-as-rgbs-1.0.scm
+share/examples/tuxracer/script-fu/tuxracer-save-as-rgbs-1.1.scm
+share/tuxracer/README
+share/tuxracer/courses/bumpy_ride/course.tcl
+share/tuxracer/courses/bumpy_ride/elev.rgb
+share/tuxracer/courses/bumpy_ride/preview.rgb
+share/tuxracer/courses/bumpy_ride/terrain.rgb
+share/tuxracer/courses/bumpy_ride/trees.rgb
+share/tuxracer/courses/bunny_hill/course.tcl
+share/tuxracer/courses/bunny_hill/elev.rgb
+share/tuxracer/courses/bunny_hill/preview.rgb
+share/tuxracer/courses/bunny_hill/terrain.rgb
+share/tuxracer/courses/bunny_hill/trees.rgb
+share/tuxracer/courses/common/buttprint.rgb
+share/tuxracer/courses/common/buttstart.rgb
+share/tuxracer/courses/common/buttstop.rgb
+share/tuxracer/courses/common/cloudyback.rgb
+share/tuxracer/courses/common/cloudybottom.rgb
+share/tuxracer/courses/common/cloudyfront.rgb
+share/tuxracer/courses/common/cloudyleft.rgb
+share/tuxracer/courses/common/cloudyright.rgb
+share/tuxracer/courses/common/cloudytop.rgb
+share/tuxracer/courses/common/courseinit.tcl
+share/tuxracer/courses/common/cupicon.rgb
+share/tuxracer/courses/common/envmap.rgb
+share/tuxracer/courses/common/finish.rgb
+share/tuxracer/courses/common/flag.rgb
+share/tuxracer/courses/common/foggy_light.tcl
+share/tuxracer/courses/common/herring_standard.rgb
+share/tuxracer/courses/common/herringrunicon.rgb
+share/tuxracer/courses/common/ice.rgb
+share/tuxracer/courses/common/night_light.tcl
+share/tuxracer/courses/common/nightback.rgb
+share/tuxracer/courses/common/nightbottom.rgb
+share/tuxracer/courses/common/nightenv.rgb
+share/tuxracer/courses/common/nightfront.rgb
+share/tuxracer/courses/common/nightleft.rgb
+share/tuxracer/courses/common/nightright.rgb
+share/tuxracer/courses/common/nighttop.rgb
+share/tuxracer/courses/common/nopreview.rgb
+share/tuxracer/courses/common/rock.rgb
+share/tuxracer/courses/common/shrub.rgb
+share/tuxracer/courses/common/snow.rgb
+share/tuxracer/courses/common/snowparticles.rgb
+share/tuxracer/courses/common/start.rgb
+share/tuxracer/courses/common/sunny_light.tcl
+share/tuxracer/courses/common/sunnyback.rgb
+share/tuxracer/courses/common/sunnybottom.rgb
+share/tuxracer/courses/common/sunnyfront.rgb
+share/tuxracer/courses/common/sunnyleft.rgb
+share/tuxracer/courses/common/sunnyright.rgb
+share/tuxracer/courses/common/sunnytop.rgb
+share/tuxracer/courses/common/tree.rgb
+share/tuxracer/courses/common/tree_barren.rgb
+share/tuxracer/courses/common/tree_polyhedron.tcl
+share/tuxracer/courses/common/tux_moonwalk.tcl
+share/tuxracer/courses/common/tux_walk.tcl
+share/tuxracer/courses/contrib/downhill_fear/course.tcl
+share/tuxracer/courses/contrib/downhill_fear/elev.rgb
+share/tuxracer/courses/contrib/downhill_fear/preview.rgb
+share/tuxracer/courses/contrib/downhill_fear/terrain.rgb
+share/tuxracer/courses/contrib/downhill_fear/trees.rgb
+share/tuxracer/courses/contrib/ice_canyon/course.tcl
+share/tuxracer/courses/contrib/ice_canyon/elev.rgb
+share/tuxracer/courses/contrib/ice_canyon/preview.rgb
+share/tuxracer/courses/contrib/ice_canyon/terrain.rgb
+share/tuxracer/courses/contrib/ice_canyon/trees.rgb
+share/tuxracer/courses/contrib/ingos_speedway/course.tcl
+share/tuxracer/courses/contrib/ingos_speedway/elev.rgb
+share/tuxracer/courses/contrib/ingos_speedway/preview.rgb
+share/tuxracer/courses/contrib/ingos_speedway/terrain.rgb
+share/tuxracer/courses/contrib/ingos_speedway/trees.rgb
+share/tuxracer/courses/contrib/jools_big_mountain/course.tcl
+share/tuxracer/courses/contrib/jools_big_mountain/elev.rgb
+share/tuxracer/courses/contrib/jools_big_mountain/preview.rgb
+share/tuxracer/courses/contrib/jools_big_mountain/terrain.rgb
+share/tuxracer/courses/contrib/jools_big_mountain/trees.rgb
+share/tuxracer/courses/contrib/nebula/course.tcl
+share/tuxracer/courses/contrib/nebula/elev.rgb
+share/tuxracer/courses/contrib/nebula/preview.rgb
+share/tuxracer/courses/contrib/nebula/terrain.rgb
+share/tuxracer/courses/contrib/nebula/trees.rgb
+share/tuxracer/courses/contrib/penguins_cant_fly/course.tcl
+share/tuxracer/courses/contrib/penguins_cant_fly/elev.rgb
+share/tuxracer/courses/contrib/penguins_cant_fly/preview.rgb
+share/tuxracer/courses/contrib/penguins_cant_fly/terrain.rgb
+share/tuxracer/courses/contrib/penguins_cant_fly/trees.rgb
+share/tuxracer/courses/contrib/sentinel_towers/course.tcl
+share/tuxracer/courses/contrib/sentinel_towers/elev.rgb
+share/tuxracer/courses/contrib/sentinel_towers/preview.rgb
+share/tuxracer/courses/contrib/sentinel_towers/terrain.rgb
+share/tuxracer/courses/contrib/sentinel_towers/trees.rgb
+share/tuxracer/courses/contrib/twin_paths/course.tcl
+share/tuxracer/courses/contrib/twin_paths/elev.rgb
+share/tuxracer/courses/contrib/twin_paths/preview.rgb
+share/tuxracer/courses/contrib/twin_paths/terrain.rgb
+share/tuxracer/courses/contrib/twin_paths/trees.rgb
+share/tuxracer/courses/course_idx.tcl
+share/tuxracer/courses/frozen_river/course.tcl
+share/tuxracer/courses/frozen_river/elev.rgb
+share/tuxracer/courses/frozen_river/preview.rgb
+share/tuxracer/courses/frozen_river/terrain.rgb
+share/tuxracer/courses/frozen_river/trees.rgb
+share/tuxracer/courses/path_of_daggers/course.tcl
+share/tuxracer/courses/path_of_daggers/elev.rgb
+share/tuxracer/courses/path_of_daggers/preview.rgb
+share/tuxracer/courses/path_of_daggers/terrain.rgb
+share/tuxracer/courses/path_of_daggers/trees.rgb
+share/tuxracer/courses/twisty_slope/course.tcl
+share/tuxracer/courses/twisty_slope/elev.rgb
+share/tuxracer/courses/twisty_slope/preview.rgb
+share/tuxracer/courses/twisty_slope/terrain.rgb
+share/tuxracer/courses/twisty_slope/trees.rgb
+share/tuxracer/fonts/trebuchet.tfm
+share/tuxracer/fonts/trebuchet_white.rgb
+share/tuxracer/fonts/trebuchet_yel_blk.rgb
+share/tuxracer/music/options1-jt.it
+share/tuxracer/music/race1-jt.it
+share/tuxracer/music/race2-jt.it
+share/tuxracer/music/readme
+share/tuxracer/music/start1-jt.it
+share/tuxracer/music/wonrace1-jt.it
+share/tuxracer/sounds/fish_pickup1.wav
+share/tuxracer/sounds/fish_pickup2.wav
+share/tuxracer/sounds/fish_pickup3.wav
+share/tuxracer/sounds/tux_hit_tree1.wav
+share/tuxracer/sounds/tux_on_ice1.wav
+share/tuxracer/sounds/tux_on_rock1.wav
+share/tuxracer/sounds/tux_on_snow1.wav
+share/tuxracer/textures/checkmark.rgb
+share/tuxracer/textures/conditions_button.rgb
+share/tuxracer/textures/gaugeenergymask.rgb
+share/tuxracer/textures/gaugeoutline.rgb
+share/tuxracer/textures/gaugespeedmask.rgb
+share/tuxracer/textures/herringicon.rgb
+share/tuxracer/textures/listbox_arrows.rgb
+share/tuxracer/textures/menu_bottom_left.rgb
+share/tuxracer/textures/menu_bottom_right.rgb
+share/tuxracer/textures/menu_title.rgb
+share/tuxracer/textures/menu_top_left.rgb
+share/tuxracer/textures/menu_top_right.rgb
+share/tuxracer/textures/mirror_button.rgb
+share/tuxracer/textures/mouse_cursor.rgb
+share/tuxracer/textures/noicon.rgb
+share/tuxracer/textures/snow_button.rgb
+share/tuxracer/textures/splash_bl.rgb
+share/tuxracer/textures/splash_br.rgb
+share/tuxracer/textures/splash_tl.rgb
+share/tuxracer/textures/splash_tr.rgb
+share/tuxracer/textures/tuxlife.rgb
+share/tuxracer/textures/wind_button.rgb
+share/tuxracer/tux.tcl
+share/tuxracer/tuxracer_init.tcl
+@dirrm share/tuxracer/textures
+@dirrm share/tuxracer/sounds
+@dirrm share/tuxracer/music
+@dirrm share/tuxracer/fonts
+@dirrm share/tuxracer/courses/twisty_slope
+@dirrm share/tuxracer/courses/path_of_daggers
+@dirrm share/tuxracer/courses/frozen_river
+@dirrm share/tuxracer/courses/contrib/twin_paths
+@dirrm share/tuxracer/courses/contrib/sentinel_towers
+@dirrm share/tuxracer/courses/contrib/penguins_cant_fly
+@dirrm share/tuxracer/courses/contrib/nebula
+@dirrm share/tuxracer/courses/contrib/jools_big_mountain
+@dirrm share/tuxracer/courses/contrib/ingos_speedway
+@dirrm share/tuxracer/courses/contrib/ice_canyon
+@dirrm share/tuxracer/courses/contrib/downhill_fear
+@dirrm share/tuxracer/courses/contrib
+@dirrm share/tuxracer/courses/common
+@dirrm share/tuxracer/courses/bunny_hill
+@dirrm share/tuxracer/courses/bumpy_ride
+@dirrm share/tuxracer/courses
+@dirrm share/tuxracer
+@dirrm share/examples/tuxracer/script-fu
+@dirrm share/examples/tuxracer
+@dirrm share/doc/html/tuxracer/images/manual
+@dirrm share/doc/html/tuxracer/images
+@dirrm share/doc/html/tuxracer
