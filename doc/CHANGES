@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2425 2003/06/04 16:27:37 taca Exp $
+$NetBSD: CHANGES,v 1.2426 2003/06/04 16:39:02 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.23.0 [gehenna 2003-06-04]
 	Updated dvd+rw-tools to 5.6.4.4.4 [reinoud 2003-06-04]
 	Updated ja-samba to 2.2.8.1.1.0nb1 [taca 2003-06-04]
+	Updated xemacs-current to 21.5.14 [magick 2003-06-04]
