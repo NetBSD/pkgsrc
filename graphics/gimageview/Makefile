@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/01/19 08:48:49 tron Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/20 22:00:38 drochner Exp $
 
-DISTNAME=	gimageview-0.2.10
-PKGREVISION=	1
+DISTNAME=	gimageview-0.2.13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -14,19 +13,21 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_GNU_GETTEXT=	YES
-USE_X11BASE=		YES
+USE_X11=		YES
+BUILDLINK_DEPENDS.libwmf= libwmf>=0.2.8
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-CONFIGURE_ARGS+=	--with-gtk2
-CONFIGURE_ARGS+=	--with-imlib-prefix=${BUILDLINK_PREFIX.imlib2}
+#CONFIGURE_ARGS+=	--with-imlib-prefix=${BUILDLINK_PREFIX.imlib2}
 CONFIGURE_ARGS+=	--disable-xinetest
 
-.include "../../graphics/imlib2/buildlink2.mk"
+# don't need both -- gimageview prefers gdk-pixbuf, so do we
+#.include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
-.include "../../graphics/librsvg2/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../graphics/librsvg/buildlink2.mk"
+.include "../../graphics/libwmf/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
