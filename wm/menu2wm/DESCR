@@ -1,6 +1,0 @@
-Menu2WM is an utility that takes an XML document describing the structure
-of a menu and converts it to the format expected by the most common window
-managers.
-
-The following window managers are currently supported: Blackbox, IceWM,
-OpenBOX 3, PekWM, PWM and WindowMaker.
