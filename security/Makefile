@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2005/02/21 15:37:55 taca Exp $
+# $NetBSD: Makefile,v 1.226 2005/02/28 22:11:14 bad Exp $
 #
 
 COMMENT=	Security tools
@@ -48,6 +48,7 @@ SUBDIR+=	fprot-workstation-bin
 SUBDIR+=	fragroute
 SUBDIR+=	fressh
 SUBDIR+=	fsh
+SUBDIR+=	fwbuilder
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnupg
