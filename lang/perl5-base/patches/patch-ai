@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1 2000/11/08 08:28:01 martin Exp $
+
+--- pp.c.orig	Mon Mar 20 16:35:44 2000
++++ pp.c	Mon Nov  6 23:07:51 2000
+@@ -1834,6 +1834,16 @@
+     }
+ }
+ 
++#ifdef GCC2952_SPARC64_WORKAROUND
++double myLocalModf(double theVal, double * theIntRes)
++{
++   double res, ret;
++   ret = modf(theVal, &res);
++   *theIntRes = res;
++   return ret;
++}
++#endif
++
+ PP(pp_int)
+ {
+     djSP; dTARGET;
+@@ -1846,8 +1856,13 @@
+ 	SETi(iv);
+       }
+       else {
+-	if (value >= 0.0)
++	if (value >= 0.0) {
++#ifdef GCC2952_SPARC64_WORKAROUND
++	  (void)myLocalModf(value, &value);
++#else
+ 	  (void)Perl_modf(value, &value);
++#endif
++	}
+ 	else {
+ 	  (void)Perl_modf(-value, &value);
+ 	  value = -value;
