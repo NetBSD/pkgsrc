@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.4 2000/12/14 21:43:20 itojun Exp $
+$NetBSD: md5,v 1.5 2001/03/10 02:23:01 itojun Exp $
 
-MD5 (totd-1.1p5.tgz) = 54ad20e678285c1c288f6a5dc3e1c75f
+SHA1 (totd-1.1p5.tgz) = 398ab99cc16ea04cede004ae12020b9e151facd4
+SHA1 (totd-1.1p5-20010310a.diff.gz) = ee0c41fed12d1f2ee3dadcb72f83c1b98436db30
