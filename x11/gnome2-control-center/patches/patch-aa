@@ -1,0 +1,11 @@
+--- configure.orig	Sun Aug 31 16:33:12 2003
++++ configure	Sun Aug 31 16:33:04 2003
+@@ -11136,7 +11136,7 @@
+   cat >>confdefs.h <<_ACEOF
+ #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
+ _ACEOF
+- XF86MISC_LIBS="-lXxf86misc"
++ XF86MISC_LIBS="-lXxf86misc -lXext"
+ fi
+ 
+ done
