@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.2 2003/05/22 18:10:43 jschauma Exp $	*/
+/*	$NetBSD: extern.h,v 1.3 2003/07/13 02:36:17 grant Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -77,10 +77,13 @@ char *user_from_uid(uid_t, int);
 char *group_from_gid(gid_t, int);
 #endif
 
+#ifndef HAVE_GETMODE
+mode_t getmode(const void *, mode_t);
+#endif
+
 #ifndef HAVE_SETMODE
 void *setmode(const char *);
 #endif
-
 
 void	 addtag(slist_t *, char *);
 int	 check_excludes(const char *, const char *);
