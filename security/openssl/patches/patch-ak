@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.3 2003/08/25 16:34:02 jschauma Exp $
+
+--- crypto/Makefile.ssl.orig	Sun Aug 24 15:29:26 2003
++++ crypto/Makefile.ssl	Sun Aug 24 15:29:39 2003
+@@ -11,7 +11,7 @@
+ INSTALL_PREFIX=
+ OPENSSLDIR=     /usr/local/ssl
+ INSTALLTOP=	/usr/local/ssl
+-MAKE=           make -f Makefile.ssl
++MAKE=           @MAKE@ -f Makefile.ssl
+ MAKEDEPEND=	$(TOP)/util/domd $(TOP)
+ MAKEFILE=       Makefile.ssl
+ RM=             rm -f

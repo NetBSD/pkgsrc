@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2003/02/28 08:08:20 grant Exp $
+$NetBSD: patch-ac,v 1.11 2003/08/25 16:34:01 jschauma Exp $
 
---- Configure.orig	Fri Aug  9 07:12:40 2002
-+++ Configure
-@@ -129,55 +129,6 @@ my %table=(
+--- Configure.orig	Sun Aug 24 15:03:44 2003
++++ Configure	Sun Aug 24 15:05:19 2003
+@@ -129,55 +129,6 @@
  "gcc",		"gcc:-O3::(unknown)::BN_LLONG:::",
  "cc",		"cc:-O::(unknown):::::",
  
@@ -58,7 +58,7 @@ $NetBSD: patch-ac,v 1.10 2003/02/28 08:08:20 grant Exp $
  # Sunos configs, assuming sparc for the gcc one.
  ##"sunos-cc", "cc:-O4 -DNOPROTO -DNOCONST::(unknown)::DES_UNROLL:::",
  "sunos-gcc","gcc:-O3 -mv8 -Dssize_t=int::(unknown)::BN_LLONG RC4_CHAR RC4_CHUNK DES_UNROLL DES_PTR DES_RISC1:::",
-@@ -275,9 +226,6 @@ my %table=(
+@@ -275,9 +226,6 @@
  #### HP MPE/iX http://jazz.external.hp.com/src/openssl/
  "MPE/iX-gcc", "gcc:-D_ENDIAN -DBN_DIV2W -O3 -DMPE -D_POSIX_SOURCE -D_SOCKET_SOURCE -I/SYSLOG/PUB::(unknown):-L/SYSLOG/PUB -lsyslog -lsocket -lcurses:BN_LLONG DES_PTR DES_UNROLL DES_RISC1:::",
  
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.10 2003/02/28 08:08:20 grant Exp $
  # Dec Alpha, OSF/1 - the alpha164-cc is historical, for the conversion
  # from the older DEC C Compiler to the newer compiler.  It's now the
  # same as the preferred entry, alpha-cc.  If you are still using the
-@@ -336,20 +284,6 @@ my %table=(
+@@ -336,20 +284,6 @@
  
  # The intel boxes :-), It would be worth seeing if bsdi-gcc can use the
  # bn86-elf.o file file since it is hand tweaked assembler.
@@ -89,11 +89,10 @@ $NetBSD: patch-ac,v 1.10 2003/02/28 08:08:20 grant Exp $
  "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::-pthread -D_REENTRANT -D_THREAD_SAFE -D_THREADSAFE::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
  "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
-@@ -500,6 +434,89 @@ my %table=(
- 
+@@ -501,6 +435,89 @@
  ##### VxWorks for various targets
  "vxworks-ppc405","ccppc:-g -msoft-float -mlongcall -DVXWORKS -DCPU=PPC405 -I\$(WIND_BASE)/target/h:::-r:::::",
-+
+ 
 +##### NetBSD
 +"NetBSD-alpha", "gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib:SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-arm32", "gcc:-DTERMIOS -O2 -Wall -DL_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
@@ -176,6 +175,16 @@ $NetBSD: patch-ac,v 1.10 2003/02/28 08:08:20 grant Exp $
 +"linux-s390x", "gcc:-DB_ENDIAN -DTERMIO -DNO_ASM -O3 -fomit-frame-pointer -Wall::-D_REENTRANT:-Wl,-R\$(INSTALLTOP)/lib -ldl:SIXTY_FOUR_BIT_LONG::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT:-ldl:SIXTY_FOUR_BIT_LONG RC4_CHUNK RC4_CHAR:asm/ia64.o:::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +
- 
++
  );
  
+ my @WinTargets=qw(VC-NT VC-WIN32 VC-WIN16 VC-W31-16 VC-W31-32 VC-MSDOS BC-32
+@@ -1188,7 +1205,7 @@
+ EOF
+ 	close(OUT);
+ } else {
+-	(system "make -f Makefile.ssl PERL=\'$perl\' links") == 0 or exit $?
++	(system "@MAKE@ -f Makefile.ssl PERL=\'$perl\' links") == 0 or exit $?
+ 		if $symlink;
+ 	### (system 'make depend') == 0 or exit $? if $depflags ne "";
+ 	# Run "make depend" manually if you want to be able to delete
