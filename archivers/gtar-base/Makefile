@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/12/22 17:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/01/20 23:23:57 jschauma Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -31,11 +31,20 @@ PLIST_SRC=	${.CURDIR}/PLIST.Darwin
 EXTRACT_SUFX=	.tar.gz
 .endif
 
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+PLIST_SUBST+=           GTAR_LINK=""
+.else
+PLIST_SUBST+=           GTAR_LINK="@comment "
+.endif
+
 post-patch:
 	@${ECHO} '' >>${WRKSRC}/po/fr.po
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
 		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}tar.1
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+	${LN} -s ${GNU_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
+.endif
 
 .include "../../mk/bsd.pkg.mk"
