@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: innd.sh,v 1.9 2001/02/20 15:10:53 tron Exp $
+# $NetBSD: innd.sh,v 1.10 2001/05/10 21:58:01 tron Exp $
 #
 # PROVIDE: inn
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 if [ -x @@PREFIX@@/inn/bin/rc.news -a -s @@INN_DATA_DIR@@/db/active ]
 then
