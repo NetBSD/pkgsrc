@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.110 2002/09/29 15:04:24 wiz Exp $
+$NetBSD: CHANGES,v 1.111 2002/09/29 16:25:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3032,3 +3032,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated htmldoc to 1.8.22 [wiz 2002-09-29]
 	Updated htmldoc-x11 to 1.8.22 [wiz 2002-09-29]
 	Updated sml-nj to 110.41 [wiz 2002-09-29]
+	Updated mencoder to 0.90rc8 [wiz 2002-09-29]
+	Updated mplayer to 0.90rc8 [wiz 2002-09-29]
+	Updated mplayer-share to 0.90rc8 [wiz 2002-09-29]
