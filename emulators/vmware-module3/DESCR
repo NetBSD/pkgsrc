@@ -1,0 +1,3 @@
+This package consists of set of kernel modules and scripts that will
+allow owners of the Linux version of VMware to run their binaries under
+NetBSD.
