@@ -1,17 +1,39 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:20 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- compiler/Makefile.orig	Thu Jul 17 17:33:20 1997
-+++ compiler/Makefile	Mon Feb 16 23:58:54 1998
-@@ -104,9 +104,9 @@
+--- compiler/Makefile.orig	Sat Apr 11 07:19:17 1998
++++ compiler/Makefile	Thu Dec  3 04:01:44 1998
+@@ -70,7 +70,7 @@
+ 	$(MOSMLL) $(LINKFLAGS) -o mosmlcmp.w32 Mainc.uo
+ 
+ Opcodes.sml: $(CAMLRT)/instruct.h
+-	perl $(MOSMLTOOLS)/mksmlopc $(CAMLRT)/instruct.h > Opcodes.sml
++	$(PERL) $(MOSMLTOOLS)/mksmlopc $(CAMLRT)/instruct.h > Opcodes.sml
+ 
+ Parser.sml Parser.sig: Parser.grm
+ 	$(MOSMLYACC) Parser.grm
+@@ -85,10 +85,10 @@
+ 	$(MOSMLL) $(LINKFLAGS) -o mosmllnk.w32 Mainl.uo
+ 
+ Predef.sml : $(CAMLRT)/globals.h $(CAMLRT)/fail.h
+-	perl $(MOSMLTOOLS)/mksmlpre $(CAMLRT)/globals.h $(CAMLRT)/fail.h > Predef.sml
++	$(PERL) $(MOSMLTOOLS)/mksmlpre $(CAMLRT)/globals.h $(CAMLRT)/fail.h > Predef.sml
+ 
+ Prim_c.sml : $(CAMLRT)/primitives
+-	perl $(MOSMLTOOLS)/mksmlprc $(CAMLRT)/primitives > Prim_c.sml
++	$(PERL) $(MOSMLTOOLS)/mksmlprc $(CAMLRT)/primitives > Prim_c.sml
+ 
+ mosmltop: $(COMP_OBJS) $(T_OBJS)
+ 	$(MOSMLL) $(LINKFLAGS) -o mosmltop Maint.uo
+@@ -116,9 +116,9 @@
  	rm -f Makefile.bak
  
  install:
 -	cp mosmlcmp $(LIBDIR)
 -	cp mosmllnk $(LIBDIR)
 -	cp mosmltop $(LIBDIR)
-+	${BSD_INSTALL_DATA} mosmlcmp $(LIBDIR)
-+	${BSD_INSTALL_DATA} mosmllnk $(LIBDIR)
-+	${BSD_INSTALL_DATA} mosmltop $(LIBDIR)
++	${INSTALL_DATA} mosmlcmp $(LIBDIR)
++	${INSTALL_DATA} mosmllnk $(LIBDIR)
++	${INSTALL_DATA} mosmltop $(LIBDIR)
  
  depend: Filename.sml Config.sml Opcodes.sml Parser.sml Parser.sig Lexer.sml \
      Predef.sml Prim_c.sml

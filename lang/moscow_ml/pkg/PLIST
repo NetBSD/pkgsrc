@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/17 10:18:37 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/04 11:09:46 frueauf Exp $
 bin/camlrunm
 bin/mosml
 bin/mosmlc
 bin/mosmllex
 bin/mosmlyac
-lib/moscow_ml/README
 lib/moscow_ml/Array.sig
 lib/moscow_ml/Array.ui
 lib/moscow_ml/Array.uo
@@ -50,9 +49,15 @@ lib/moscow_ml/Date.uo
 lib/moscow_ml/Dynarray.sig
 lib/moscow_ml/Dynarray.ui
 lib/moscow_ml/Dynarray.uo
+lib/moscow_ml/Dynlib.sig
+lib/moscow_ml/Dynlib.ui
+lib/moscow_ml/Dynlib.uo
 lib/moscow_ml/FileSys.sig
 lib/moscow_ml/FileSys.ui
 lib/moscow_ml/FileSys.uo
+lib/moscow_ml/Gdbm.sig
+lib/moscow_ml/Gdbm.ui
+lib/moscow_ml/Gdbm.uo
 lib/moscow_ml/General.sig
 lib/moscow_ml/Help.sig
 lib/moscow_ml/Help.ui
@@ -117,12 +122,16 @@ lib/moscow_ml/Parsing.uo
 lib/moscow_ml/Path.sig
 lib/moscow_ml/Path.ui
 lib/moscow_ml/Path.uo
+lib/moscow_ml/Polygdbm.sig
+lib/moscow_ml/Polygdbm.ui
+lib/moscow_ml/Polygdbm.uo
 lib/moscow_ml/Polyhash.sig
 lib/moscow_ml/Polyhash.ui
 lib/moscow_ml/Polyhash.uo
 lib/moscow_ml/Process.sig
 lib/moscow_ml/Process.ui
 lib/moscow_ml/Process.uo
+lib/moscow_ml/README
 lib/moscow_ml/Random.sig
 lib/moscow_ml/Random.ui
 lib/moscow_ml/Random.uo
@@ -168,6 +177,9 @@ lib/moscow_ml/Timer.uo
 lib/moscow_ml/Vector.sig
 lib/moscow_ml/Vector.ui
 lib/moscow_ml/Vector.uo
+lib/moscow_ml/Weak.sig
+lib/moscow_ml/Weak.ui
+lib/moscow_ml/Weak.uo
 lib/moscow_ml/Word.sig
 lib/moscow_ml/Word.ui
 lib/moscow_ml/Word.uo
@@ -185,15 +197,79 @@ lib/moscow_ml/helpsigs.val
 lib/moscow_ml/mosmlcmp
 lib/moscow_ml/mosmllnk
 lib/moscow_ml/mosmltop
-@dirrm lib/moscow_ml
 libexec/moscow_ml/cutdeps
 libexec/moscow_ml/mosmldep
-@dirrm libexec/moscow_ml
 share/doc/moscow_ml/bugs
+share/doc/moscow_ml/copyrght.att
+share/doc/moscow_ml/copyrght.cl
+share/doc/moscow_ml/gpl2
 share/doc/moscow_ml/manual.dvi
+share/doc/moscow_ml/mosmllib/Array.html
+share/doc/moscow_ml/mosmllib/Array2.html
+share/doc/moscow_ml/mosmllib/Arraysort.html
+share/doc/moscow_ml/mosmllib/BasicIO.html
+share/doc/moscow_ml/mosmllib/BinIO.html
+share/doc/moscow_ml/mosmllib/Binarymap.html
+share/doc/moscow_ml/mosmllib/Binaryset.html
+share/doc/moscow_ml/mosmllib/Bool.html
+share/doc/moscow_ml/mosmllib/Byte.html
+share/doc/moscow_ml/mosmllib/Char.html
+share/doc/moscow_ml/mosmllib/CharArray.html
+share/doc/moscow_ml/mosmllib/CharVector.html
+share/doc/moscow_ml/mosmllib/CommandLine.html
+share/doc/moscow_ml/mosmllib/Date.html
+share/doc/moscow_ml/mosmllib/Dynarray.html
+share/doc/moscow_ml/mosmllib/Dynlib.html
+share/doc/moscow_ml/mosmllib/FileSys.html
+share/doc/moscow_ml/mosmllib/Gdbm.html
+share/doc/moscow_ml/mosmllib/General.html
+share/doc/moscow_ml/mosmllib/Help.html
+share/doc/moscow_ml/mosmllib/Int.html
+share/doc/moscow_ml/mosmllib/Intmap.html
+share/doc/moscow_ml/mosmllib/Intset.html
+share/doc/moscow_ml/mosmllib/Lexing.html
+share/doc/moscow_ml/mosmllib/List.html
+share/doc/moscow_ml/mosmllib/ListPair.html
+share/doc/moscow_ml/mosmllib/Listsort.html
+share/doc/moscow_ml/mosmllib/Location.html
+share/doc/moscow_ml/mosmllib/Math.html
+share/doc/moscow_ml/mosmllib/Meta.html
+share/doc/moscow_ml/mosmllib/Mosml.html
+share/doc/moscow_ml/mosmllib/Mosmlcgi.html
+share/doc/moscow_ml/mosmllib/NJ93.html
+share/doc/moscow_ml/mosmllib/Nonstdio.html
+share/doc/moscow_ml/mosmllib/OS.html
+share/doc/moscow_ml/mosmllib/Option.html
+share/doc/moscow_ml/mosmllib/PP.html
+share/doc/moscow_ml/mosmllib/Parsing.html
+share/doc/moscow_ml/mosmllib/Path.html
+share/doc/moscow_ml/mosmllib/Polygdbm.html
+share/doc/moscow_ml/mosmllib/Polyhash.html
+share/doc/moscow_ml/mosmllib/Process.html
+share/doc/moscow_ml/mosmllib/Random.html
+share/doc/moscow_ml/mosmllib/Real.html
+share/doc/moscow_ml/mosmllib/SML90.html
+share/doc/moscow_ml/mosmllib/Splaymap.html
+share/doc/moscow_ml/mosmllib/Splayset.html
+share/doc/moscow_ml/mosmllib/Splaytree.html
+share/doc/moscow_ml/mosmllib/String.html
+share/doc/moscow_ml/mosmllib/StringCvt.html
+share/doc/moscow_ml/mosmllib/Substring.html
+share/doc/moscow_ml/mosmllib/Susp.html
+share/doc/moscow_ml/mosmllib/TextIO.html
+share/doc/moscow_ml/mosmllib/Time.html
+share/doc/moscow_ml/mosmllib/Timer.html
+share/doc/moscow_ml/mosmllib/Vector.html
+share/doc/moscow_ml/mosmllib/Weak.html
+share/doc/moscow_ml/mosmllib/Word.html
+share/doc/moscow_ml/mosmllib/Word8.html
+share/doc/moscow_ml/mosmllib/Word8Array.html
+share/doc/moscow_ml/mosmllib/Word8Vector.html
+share/doc/moscow_ml/mosmllib/idIndex.html
+share/doc/moscow_ml/mosmllib/index.html
 share/doc/moscow_ml/mosmlref.dvi
+share/doc/moscow_ml/recomp
 share/doc/moscow_ml/releases.txt
-@dirrm share/doc/moscow_ml
 share/examples/moscow_ml/Makefile
 share/examples/moscow_ml/README
 share/examples/moscow_ml/calc/Lexer.lex
@@ -209,16 +285,23 @@ share/examples/moscow_ml/cgi/cgiex2.sml
 share/examples/moscow_ml/cgi/cgitest.sml
 share/examples/moscow_ml/cgi/htmlform.html
 share/examples/moscow_ml/cgi/upload.html
+share/examples/moscow_ml/helpsigs/Asynt.sml
 share/examples/moscow_ml/helpsigs/Database.sig
 share/examples/moscow_ml/helpsigs/Database.sml
+share/examples/moscow_ml/helpsigs/Hasht.sig
+share/examples/moscow_ml/helpsigs/Hasht.sml
 share/examples/moscow_ml/helpsigs/Htmlsigs.sig
 share/examples/moscow_ml/helpsigs/Htmlsigs.sml
 share/examples/moscow_ml/helpsigs/Lexer.lex
 share/examples/moscow_ml/helpsigs/Makefile
 share/examples/moscow_ml/helpsigs/Parser.grm
+share/examples/moscow_ml/helpsigs/Parser.output
 share/examples/moscow_ml/helpsigs/Parsspec.sml
 share/examples/moscow_ml/helpsigs/Printbase.sml
 share/examples/moscow_ml/helpsigs/README
+share/examples/moscow_ml/helpsigs/Stack.sig
+share/examples/moscow_ml/helpsigs/Stack.sml
+share/examples/moscow_ml/helpsigs/htmlsigs/.keep_me
 share/examples/moscow_ml/helpsigs/makebase.sml
 share/examples/moscow_ml/lexyacc/Data.sml
 share/examples/moscow_ml/lexyacc/Lexer.lex
@@ -250,6 +333,21 @@ share/examples/moscow_ml/mls/Makefile
 share/examples/moscow_ml/mls/mls.sml
 share/examples/moscow_ml/pretty/Makefile
 share/examples/moscow_ml/pretty/ppexpr.sml
+share/examples/moscow_ml/small/README
+share/examples/moscow_ml/small/countperms.sml
+share/examples/moscow_ml/small/countqueens.sml
+share/examples/moscow_ml/small/perms.sml
+share/examples/moscow_ml/small/queens.sml
+share/examples/moscow_ml/small/roman.sml
+share/examples/moscow_ml/small/subsets.sml
+share/examples/moscow_ml/small/subsum.sml
+share/examples/moscow_ml/weak/Makefile
+share/examples/moscow_ml/weak/README
+share/examples/moscow_ml/weak/hashcons.sml
+@dirrm lib/moscow_ml
+@dirrm libexec/moscow_ml
+@dirrm share/doc/moscow_ml/mosmllib
+@dirrm share/doc/moscow_ml
 @dirrm share/examples/moscow_ml/calc
 @dirrm share/examples/moscow_ml/cgi
 @dirrm share/examples/moscow_ml/helpsigs/htmlsigs
@@ -259,4 +357,6 @@ share/examples/moscow_ml/pretty/ppexpr.sml
 @dirrm share/examples/moscow_ml/manual
 @dirrm share/examples/moscow_ml/mls
 @dirrm share/examples/moscow_ml/pretty
+@dirrm share/examples/moscow_ml/small
+@dirrm share/examples/moscow_ml/weak
 @dirrm share/examples/moscow_ml

@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:21 agc Exp $
+$NetBSD: patch-ae,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- mosmllib/Makefile.orig	Thu Jul 17 17:33:44 1997
-+++ mosmllib/Makefile	Tue Feb 17 00:07:02 1998
+--- mosmllib/Makefile.orig	Mon Apr  6 15:01:10 1998
++++ mosmllib/Makefile	Thu Dec  3 03:05:59 1998
 @@ -27,14 +27,14 @@
- 	rm -f Vector.sml Word.sml Word8Array.sml Word8Vector.sml
+ 	rm -f Vector.sml Word.sml Word8Array.sml Word8Vector.sml Weak.sml
  
  install:
 -	cp README $(LIBDIR)
@@ -14,14 +14,14 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:09:21 agc Exp $
 -	cp Meta.fke $(LIBDIR)/Meta.sig
 -	cp OS.fke $(LIBDIR)/OS.sig
 -	cp helpsigs.val $(LIBDIR)
-+	${BSD_INSTALL_DATA} README $(LIBDIR)
-+	${BSD_INSTALL_DATA} *.ui $(LIBDIR)
-+	${BSD_INSTALL_DATA} *.uo $(LIBDIR)
-+	${BSD_INSTALL_DATA} *.sig $(LIBDIR)
-+	${BSD_INSTALL_DATA} General.fke $(LIBDIR)/General.sig
-+	${BSD_INSTALL_DATA} Meta.fke $(LIBDIR)/Meta.sig
-+	${BSD_INSTALL_DATA} OS.fke $(LIBDIR)/OS.sig
-+	${BSD_INSTALL_DATA} helpsigs.val $(LIBDIR)
++	${INSTALL_DATA} README $(LIBDIR)
++	${INSTALL_DATA} *.ui $(LIBDIR)
++	${INSTALL_DATA} *.uo $(LIBDIR)
++	${INSTALL_DATA} *.sig $(LIBDIR)
++	${INSTALL_DATA} General.fke $(LIBDIR)/General.sig
++	${INSTALL_DATA} Meta.fke $(LIBDIR)/Meta.sig
++	${INSTALL_DATA} OS.fke $(LIBDIR)/OS.sig
++	${INSTALL_DATA} helpsigs.val $(LIBDIR)
  
  depend: Array.sml FileSys.sml Help.sml Int.sml Mosml.sml OS.sml Path.sml \
-     Strbase.sml Vector.sml Word.sml Word8Array.sml Word8Vector.sml
+     Strbase.sml Vector.sml Word.sml Word8Array.sml Word8Vector.sml Weak.sml

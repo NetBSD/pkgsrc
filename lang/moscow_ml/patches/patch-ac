@@ -1,19 +1,18 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:20 agc Exp $
+$NetBSD: patch-ac,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- launch/Makefile.orig	Mon Jul  7 04:38:39 1997
-+++ launch/Makefile	Tue Feb 17 00:04:36 1998
-@@ -14,12 +14,11 @@
+--- launch/Makefile.orig	Mon Jul  7 03:38:39 1997
++++ launch/Makefile	Thu Dec  3 03:19:54 1998
+@@ -14,11 +14,11 @@
  	chmod a+x /tmp/testscr
  	sh -c 'if sh -c /tmp/testscr 2>/dev/null; \
                 then echo "#!$(BINDIR)/camlrunm" > $(LIBDIR)/header; \
 -               else cp camlexec $(LIBDIR)/header; \
-+               else ${BSD_INSTALL_PROGRAM} camlexec $(LIBDIR)/header; \
++               else ${INSTALL_PROGRAM} camlexec $(LIBDIR)/header; \
                 fi'
  	rm -f /tmp/testscr
  	for script in mosml mosmlc; do \
 -	  cp $$script $(BINDIR)/$$script; \
--	  chmod a+x $(BINDIR)/$$script; \
-+	  ${BSD_INSTALL_SCRIPT} $$script $(BINDIR)/$$script; \
++	  ${INSTALL_SCRIPT} $$script $(BINDIR)/$$script; \
+ 	  chmod a+x $(BINDIR)/$$script; \
  	done
  
- mosmlc: mosmlc.tpl
