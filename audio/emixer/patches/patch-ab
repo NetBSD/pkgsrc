@@ -1,15 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/13 02:48:41 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2000/04/16 02:57:22 mycroft Exp $
 
---- nctgui.h.orig	Mon Dec 13 02:15:43 1999
-+++ nctgui.h	Mon Dec 13 02:18:32 1999
-@@ -9,7 +9,11 @@
+--- nctgui.h.orig	Sun Dec  5 21:40:20 1999
++++ nctgui.h	Sat Apr 15 22:16:51 2000
+@@ -8,8 +8,11 @@
+ */
  
  /* include files used by gui.c and main.c */
- #include <ncurses.h>
 +#ifdef __NetBSD__
-+#include <slang.h>
++#include <ncurses.h>
 +#else
- #include <slang/slang.h>
+ #include <ncurses.h>
+-#include <slang/slang.h>
 +#endif
  #include <string.h>
  
