@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.21 2004/02/12 21:08:19 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.22 2004/02/14 00:53:55 jlam Exp $
 #
 # Optionally define:
 #
@@ -79,6 +79,10 @@ _NEED_NCURSES=	YES
 _NEED_NCURSES=	NO
 .endif
 .if !empty(PREFER_PKGSRC:Mncurses)
+_NEED_NCURSES=	YES
+.endif
+
+.if defined(USE_NCURSE)
 _NEED_NCURSES=	YES
 .endif
 
