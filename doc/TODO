@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1800 2004/06/03 20:44:53 abs Exp $
+$NetBSD: TODO,v 1.1801 2004/06/03 22:43:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -281,7 +281,7 @@ Suggested package updates
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailman-2.1.5
-	o maradns-1.0.21
+	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
 	o mhonarc-2.6.10
@@ -289,7 +289,6 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
 	o minicom-2.1
-	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25
 	o moz-bin-plugger-1.5.1
@@ -314,7 +313,6 @@ Suggested package updates
 	o openal-20040215
 	o openh323-1.12.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
-	o opera-7.50 [pkgsrc-wip has beta1]
 	o oss-3.99.1c
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
