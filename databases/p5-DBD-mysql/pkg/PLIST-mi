@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/06/10 18:32:36 bad Exp $
+bin/dbimon
+man/man1/dbimon.1
+lib/perl5/man/man3/Bundle::DBD::mysql.3
+lib/perl5/man/man3/DBD::mysql.3
+lib/perl5/man/man3/Mysql.3
+lib/perl5/site_perl/Bundle/DBD/mysql.pm
+lib/perl5/site_perl/DBD/mysql.pm
+lib/perl5/site_perl/Mysql.pm
+lib/perl5/site_perl/Mysql/Statement.pm
+@dirrm lib/perl5/site_perl/Mysql
+lib/perl5/site_perl/i386-netbsd/auto/Msql-Mysql-modules/.packlist
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/Msql-Mysql-modules

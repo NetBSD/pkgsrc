@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/10 18:32:37 bad Exp $
+
+--- Makefile.PL.orig	Tue Jan 26 21:22:04 1999
++++ Makefile.PL	Thu Jun 10 19:04:20 1999
+@@ -417,7 +417,7 @@
+     $cfg->{'Mysql'}->{'FINAL_LIBS'} = $final_libs;
+ 
+     my(@headerfiles) = ("$headerdir/mysql.h");
+-    $X{dynamic_lib} = { OTHERLDFLAGS => "-L$libdir $linkwith" };
++    $X{dynamic_lib} = { OTHERLDFLAGS => "-R$libdir -L$libdir $linkwith" };
+     $X{DEFINE}   = $defines;
+     $X{LIBS}     = $sysliblist;
+     $X{INC}      = "-I$headerdir -I../dbd  -I\$(INSTALLSITEARCH)/auto/DBI"
