@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/07/30 09:57:54 salo Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 11:24:02 agc Exp $
 
 SHA1 (avifile-0.53.5.tar.gz) = bc9d27c65ab4f8df9006c6037d539ff71adb0ad7
+RMD160 (avifile-0.53.5.tar.gz) = fc497b1715fd6793ff6b33e5c35188f142594265
 Size (avifile-0.53.5.tar.gz) = 848382 bytes
 SHA1 (patch-aa) = e497c4526fa50140dc19cef8cbf171baa13e55c9
 SHA1 (patch-ab) = f6ce2519d56cde66cf88d5180c87ee2453c155e7
