@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.2 2004/12/23 18:57:03 ben Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -54,7 +54,7 @@
 	<title>/etc/mk.conf</title>
 
 	<para>You may want to set things in <filename>/etc/mk.conf</filename>.
-	  Look at <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> for
+	  Look at <filename>pkgsrc/mk/defaults/mk.conf</filename> for
 	  details of the default settings. You will want to ensure that
 	  <varname>ACCEPTABLE_LICENSES</varname> meet your local policy.
 	  As used in this example, <varname>_ACCEPTABLE=yes</varname>
