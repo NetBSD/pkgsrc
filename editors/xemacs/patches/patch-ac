@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.2 1999/12/08 08:18:25 rh Exp $
+$NetBSD: patch-ac,v 1.3 2002/10/09 16:32:17 magick Exp $
 
---- Makefile.in.orig	Sun Aug 15 03:29:45 1999
-+++ Makefile.in	Wed Dec  8 09:14:11 1999
-@@ -444,8 +444,12 @@
+--- Makefile.in.orig	Mon Dec 18 04:03:32 2000
++++ Makefile.in
+@@ -371,7 +371,7 @@
+ ## all.  --cet
+ 
+ check-features: all
+-	${blddir}/src/${PROGNAME} -batch -l check-features.el
++	${blddir}/src/${PROGNAME} -vanilla -batch -l check-features.el
+ 
+ install-only: ${MAKE_SUBDIR} check-features install-arch-dep install-arch-indep
+ 
+@@ -445,8 +445,12 @@
  	## Note it's `xemacs' not ${PROGNAME}
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
