@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/05/22 09:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/19 00:24:02 garbled Exp $
 #
 
-DISTNAME=	crossfire-client-0.95.8
+DISTNAME=	crossfire-client-1.0.0
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/crossfire/
 DISTFILES=	${CF_SRC} ${CF_SND} ${CF_RAW}
@@ -15,7 +15,7 @@ DEPENDS+=	png>=1.0.11:../../graphics/png
 
 EXTRACT_ONLY=	${CF_SRC}
 
-CF_SRC=		crossfire-client-0.95.8.tar.gz
+CF_SRC=		crossfire-client-1.0.0.tar.gz
 CF_SND=		client-0.95.2-au-sounds.tgz
 CF_RAW=		client-0.95.2-raw-sounds.tgz
 

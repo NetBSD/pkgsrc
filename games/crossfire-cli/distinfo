@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:21 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/07/19 00:24:02 garbled Exp $
 
-SHA1 (crossfire-client-0.95.8.tar.gz) = 66fb6c2174afa7e00937cbccb92518b057961610
-Size (crossfire-client-0.95.8.tar.gz) = 235557 bytes
+SHA1 (crossfire-client-1.0.0.tar.gz) = d6861684a40884efe6411d413b9273fa52314236
+Size (crossfire-client-1.0.0.tar.gz) = 244723 bytes
 SHA1 (client-0.95.2-au-sounds.tgz) = 16fe536118a2a8abea906cfb7064469bb44ddaa2
 Size (client-0.95.2-au-sounds.tgz) = 316549 bytes
 SHA1 (client-0.95.2-raw-sounds.tgz) = 61606356eb538198e8ad4ef0dc54b7ad048097af
 Size (client-0.95.2-raw-sounds.tgz) = 326199 bytes
-SHA1 (patch-aa) = 52dc3e94de2e63c9ed12a82fab29fc6e3d08719c
-SHA1 (patch-ab) = f057be4f617ff4c58dfff597961df83945451c51
+SHA1 (patch-aa) = 2b06d2b09e00b118b6e516102aa8860c72fc5094
+SHA1 (patch-ab) = d9afa5c52ef1f4a36d9cc9d347aec6d351413340
