@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/18 07:08:47 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/23 15:09:06 heinz Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	5
@@ -45,7 +45,7 @@ pre-configure:
 			$${file} > $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
 	done
-	if [ -e /usr/include/machine/mouse.h ] ; then \
+	if [ -r /usr/include/machine/mouse.h ] ; then \
 		echo '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
 	else \
 		echo '#define HAVE_MOUSE_H 0' > ${WRKSRC}/netbsdconf.h; \

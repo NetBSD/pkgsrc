@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/13 22:06:03 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/23 15:09:06 heinz Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -38,7 +38,7 @@ INSTALLATION_DIRS=	bin include
 
 post-extract:
 	@${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -e ${PKGSRC_TCL_SRC_DIR} ]; then	\
+	@if [ ! -r ${PKGSRC_TCL_SRC_DIR} ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
 

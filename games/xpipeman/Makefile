@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:15:42 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/23 15:09:06 heinz Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -17,7 +17,7 @@ do-install:
 		${X11PREFIX}/bin/xpipeman
 	${INSTALL_MAN} ${WRKSRC}/xpipeman.man ${X11PREFIX}/man/man6/xpipeman.6
 	${INSTALL} -d -o bin -g games -m 0775 ${X11PREFIX}/share/xpipeman
-	if [ ! -e /var/games/xpipescores ]; then \
+	if [ ! -r /var/games/xpipescores ]; then \
 		${INSTALL} -o bin -g games -m 0664 ${WRKSRC}/xpipescores /var/games ; \
 	fi
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/05/23 15:09:06 heinz Exp $
 
 DISTNAME=		mpich-1.2.5.2
 CATEGORIES=		parallel
@@ -59,7 +59,7 @@ pre-configure:
 .endif
 
 post-build:
-	@(if [ -e ${WRKSRC}/mpe/viewers/jumpshot-2/bin/jumpshot ]; then \
+	@(if [ -r ${WRKSRC}/mpe/viewers/jumpshot-2/bin/jumpshot ]; then \
 		${TOUCH} ${WRKDIR}/with-java; \
 	fi)
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/man/man1/MPI.1 >	\
