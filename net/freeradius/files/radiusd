@@ -4,8 +4,8 @@
 # REQUIRE: network
 
 name="radiusd"
-command="/usr/pkg/sbin/radiusd"
-pidfile="/ust/pkg/var/run/radiusd/radiusd.pid"
+command="!!PREFIX!!/sbin/radiusd"
+pidfile="!!PREFIX!!/var/run/radiusd/radiusd.pid"
 
 if [ ! -d /etc/rc.d ]
 then
