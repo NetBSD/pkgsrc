@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1999/02/10 15:10:47 frueauf Exp $
+
 --- include/rle_config.tlr	Wed Nov 25 23:51:33 1998
 +++ include/rle_config.tlr	Wed Nov 25 23:53:33 1998
 @@ -91,15 +91,15 @@
