@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/22 00:24:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/22 00:40:44 hubertf Exp $
 #
 
 DISTNAME=		htdocs-share-20041021
@@ -23,9 +23,10 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
+HTDOCSDIR?=		/usr/cvs/htdocs
 
 BUILD_DEFS+=		OUTPUTS
-OUTPUTS?=		html html-split ascii pdf
+OUTPUTS?=		html html-split ascii # pdf
 
 # the html is needed to build the ascii version.
 .if !empty(OUTPUTS:Mascii)
@@ -102,5 +103,13 @@ post-install:
 install-doc: build
 	${CP} ${WRKSRC}/pkgsrc.html ${_PKGSRCDIR}/doc
 	${CP} ${WRKSRC}/pkgsrc.txt ${_PKGSRCDIR}/doc
+
+install-htdocs: build
+	${CP} \
+		${WRKSRC}/pkgsrc.txt \
+		${WRKSRC}/pkgsrc.pdf \
+		${WRKSRC}/pkgsrc.ps \
+		${WRKSRC}/*.html \
+		${HTDOCSDIR}/Documentation/pkgsrc
 
 .include "../../mk/bsd.pkg.mk"
