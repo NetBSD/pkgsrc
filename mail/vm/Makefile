@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/12/11 15:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/02/07 14:50:19 seb Exp $
 
 DISTNAME=	vm-7.00
 CATEGORIES=	mail
@@ -17,21 +17,26 @@ COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 .if defined(USE_XEMACS)
 DEPENDS+=	xemacs>=19.14:../../editors/xemacs
 MAKE_ENV+=	EMACS=xemacs
-MAKE_ENV+=	LISPDIR=${PREFIX}/lib/xemacs/xemacs-packages/lisp/vm
-MAKE_ENV+=	INFODIR=${PREFIX}/lib/xemacs/xemacs-packages/info
-MAKE_ENV+=	PIXMAPDIR=${PREFIX}/lib/xemacs/xemacs-packages/etc/vm
-MAKE_ENV+=	BINDIR=${PREFIX}/bin
+LISPDIR=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/vm
+INFODIR=	${PREFIX}/lib/xemacs/xemacs-packages/info
+PIXMAPDIR=	${PREFIX}/lib/xemacs/xemacs-packages/etc/vm
+BINDIR=		${PREFIX}/bin
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 .else
 DEPENDS+=	emacs>=19.34:../../editors/emacs
 MAKE_ENV+=	EMACS=emacs
-MAKE_ENV+=	LISPDIR=${PREFIX}/share/emacs/site-lisp/vm
-MAKE_ENV+=	INFODIR=${PREFIX}/info
-MAKE_ENV+=	PIXMAPDIR=${PREFIX}/share/emacs/site-lisp/vm/pixmaps
-MAKE_ENV+=	BINDIR=${PREFIX}/bin
+LISPDIR=	${PREFIX}/share/emacs/site-lisp/vm
+INFODIR=	${PREFIX}/info
+PIXMAPDIR=	${PREFIX}/share/emacs/site-lisp/vm/pixmaps
+BINDIR=		${PREFIX}/bin
 INFO_FILES=	vm.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .endif
+
+MAKE_ENV+=	LISPDIR=${LISPDIR}
+MAKE_ENV+=	INFODIR=${INFODIR}
+MAKE_ENV+=	PIXMAPDIR=${PIXMAPDIR}
+MAKE_ENV+=	BINDIR=${BINDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${LISPDIR}
