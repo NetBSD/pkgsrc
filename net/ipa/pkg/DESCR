@@ -1,0 +1,16 @@
+IPA allows to make IP accounting (network accounting) based on
+IPv4/v6 Firewall (FreeBSD only) and/or IP Filter accounting rules
+on NetBSD, OpenBSD and FreeBSD.
+
+It supports limits for accounting rules and limits events as "limit is
+reached", "reached limit is expired", etc. It understands time intervals
+like "end of day", "end of week", "end of month", etc.
+
+There is special viewer for accounting database and access control lists,
+which allow or disallow one to view accounting information for rules.
+
+WWW: http://www.simon.org.ua/ipa/
+
+- Andrey Simonenko
+simon@simon.org.ua
+simon@comsys.ntu-kpi.kiev.ua
