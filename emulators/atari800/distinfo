@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/11/22 12:25:48 wiz Exp $
 
-SHA1 (a800s099a.zip) = c976ab757babf9ed8c1e762c38c665730811ee6b
-Size (a800s099a.zip) = 377644 bytes
+SHA1 (atari800-1.2.4.tar.gz) = 4a2becbc87acafd4383d2bc98877c4926f71ccf1
+Size (atari800-1.2.4.tar.gz) = 478075 bytes
 SHA1 (xf25.zip) = e65923fd3a4845c1c72d1677db0fda969187eb42
 Size (xf25.zip) = 188942 bytes
-SHA1 (patch-aa) = 6f21a6286fda8286a2247cb3b96173d3b9753532
-SHA1 (patch-ab) = 36375d1837e71aaf81e201489b8da45d09ba3bf7
-SHA1 (patch-ac) = 1b544c8b40649b8b8d931f440d836ea1ab8455f8
+SHA1 (patch-aa) = fc27bbb36aaec9269db461b8c76b0fbf2e2f5fd9
+SHA1 (patch-ab) = b21e1c68588caa8eb9c191fd0ad5638136ae65e7
