@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/02 23:12:52 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/07 09:41:45 uebayasi Exp $
 #
 
 DISTNAME=	vsftpd-1.2.2
@@ -26,7 +26,7 @@ PKG_USERS=	${VSFTPD_USER}:${VSFTPD_GROUP}::vsftpd\\ user
 DOCDIR=		${PREFIX}/share/doc/vsftpd
 EGDIR=		${PREFIX}/share/examples/vsftpd
 
-CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	${VARBASE}/chroot

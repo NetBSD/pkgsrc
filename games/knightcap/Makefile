@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/07 09:48:37 uebayasi Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -19,7 +19,7 @@ USE_X11=		# defined
 MAKE_ENV+=		MESA=${BUILDLINK_PREFIX.MesaLib}
 MAKE_ENV+=		DEFINES="${DEFINES}"
 
-DEFINES=		-DTB_DIR=\\\"${TBDIR}\\\"
+DEFINES=		-DTB_DIR="\"${TBDIR}\""
 
 TBDIR=			${PREFIX}/share/egtb
 DOCDIR=			${PREFIX}/share/doc/knightcap
