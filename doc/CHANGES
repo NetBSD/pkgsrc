@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3805 2003/11/10 17:19:29 agc Exp $
+$NetBSD: CHANGES,v 1.3806 2003/11/11 07:48:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4331,3 +4331,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dosbox to 0.60 [xtraeme 2003-11-10]
 	Updated gqview-devel to 1.3.5 [xtraeme 2003-11-10]
 	Updated xosview to 1.8.1alpha [agc 2003-11-10]
+	Updated wdg-validate to 1.2 [wiz 2003-11-11]
