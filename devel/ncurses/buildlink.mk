@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.16 2001/12/29 17:16:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.17 2002/01/29 11:14:56 drochner Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -64,6 +64,7 @@ BUILDLINK_FILES.ncurses+=	lib/libncurses++.*
 BUILDLINK_FILES.ncurses+=	lib/libncurses.*
 BUILDLINK_FILES.ncurses+=	lib/libpanel.*
 DEPENDS+=			${BUILDLINK_DEPENDS.ncurses}:../../devel/ncurses
+LDFLAGS+=			-Wl,-R${BUILDLINK_PREFIX.ncurses}/lib
 .else
 BUILDLINK_PREFIX.ncurses=	/usr
 BUILDLINK_FILES.ncurses=	include/curses.h
