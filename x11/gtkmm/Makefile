@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/22 08:59:35 adam Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/27 16:06:12 adam Exp $
 #
 
-DISTNAME=	gtkmm-2.2.5
+DISTNAME=	gtkmm-2.2.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
 
