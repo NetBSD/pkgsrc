@@ -1,0 +1,2 @@
+To actually use xscribble, you need to copy
+@PREFIX@/share/examples/xscribble/*.cl into ~/.classifiers.

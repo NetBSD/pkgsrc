@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/01 19:35:09 itojun Exp $
+
+--- lirec/li_recognizer.c-	Thu Nov  2 04:17:33 2000
++++ lirec/li_recognizer.c	Thu Nov  2 04:17:46 2000
+@@ -925,3 +925,4 @@
+ /*#include <assert.h>*/
+-#include <values.h>
++#include <sys/param.h>
++#define MAXINT	INT_MAX
+ #include <sys/time.h>
