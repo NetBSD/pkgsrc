@@ -1,0 +1,4 @@
+The PostgreSQL Authentication Module (mod_auth_pg) enables Apache to
+authenticate users with the information stored in a PostgreSQL database.
+This module gets a username and password pair in the standard way or
+from a cookie, and you can choose your preferred method.
