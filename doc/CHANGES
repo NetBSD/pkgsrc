@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9435 2005/03/05 23:03:34 fredb Exp $
+$NetBSD: CHANGES,v 1.9436 2005/03/06 03:25:12 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1289,3 +1289,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xli to 1.17.0nb2 [fredb 2005-03-05]
 	Updated imap-uw to 2004c1nb1 [adrianp 2005-03-05]
 	Updated xli to 1.17.0nb3 [fredb 2005-03-05]
+	Updated freepwing to 1.4.4nb1 [uebayasi 2005-03-06]
