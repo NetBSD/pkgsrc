@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/03/24 18:27:14 jlam Exp $
+
+--- configure.in.orig	Fri Aug 20 17:38:37 1999
++++ configure.in	Fri Mar 24 09:07:39 2000
+@@ -31,7 +31,7 @@
+ AM_CONDITIONAL(BONOBO, $have_bonobo)
+ 
+ AC_CHECK_HEADER(paths.h)
+-AC_PATH_PROG(GS_PROG, gs)
++AC_PATH_PROG(GS_PROG, gsx11)
+ AC_PATH_PROG(LPR_PROG, lpr)
+ AC_DEFINE_UNQUOTED(GS_PATH, "$GS_PROG")
+ AC_DEFINE_UNQUOTED(LPR_PATH, "$LPR_PROG")
