@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:45:21 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/08/27 09:14:43 itojun Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=		http://s48.org/0.57/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://s48.org
+HOMEPAGE=		http://s48.org/
 COMMENT=		The Scheme Underground's implementation of R5RS
 
 NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
