@@ -1,12 +1,12 @@
-$NetBSD: patch-aq,v 1.3 2002/04/19 18:42:34 seb Exp $
+$NetBSD: patch-aq,v 1.4 2002/08/28 13:49:38 seb Exp $
 
---- tcldot/Makefile.in.orig	Fri Apr 19 14:31:38 2002
+--- tcldot/Makefile.in.orig	Mon Aug  5 05:11:27 2002
 +++ tcldot/Makefile.in
-@@ -183,23 +183,10 @@
+@@ -185,15 +185,7 @@ Z_LIBS = @Z_LIBS@
  
  AUTOMAKE_OPTIONS = 1.4
  
--INCLUDES = @TCL_CFLAGS@ \
+-INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ \
 -	-I$(top_srcdir)/dotneato/dotgen \
 -	-I$(top_srcdir)/dotneato/neatogen \
 -	-I$(top_srcdir)/dotneato/twopigen \
@@ -14,39 +14,29 @@ $NetBSD: patch-aq,v 1.3 2002/04/19 18:42:34 seb Exp $
 -	-I$(top_srcdir)/graph \
 -	-I$(top_srcdir)/cdt \
 -	-I$(top_srcdir)/pathplan \
--	-I$(top_srcdir)/tclhandle \
--	-I@TCLSH_EXEC_PREFIX@/include
--
--
--LIBS = ${FT_LIBS} \
--	${PNG_LIBS} \
--	${JPEG_LIBS} \
--	${XPM_LIBS} \
--	${Z_LIBS} -lc
-+INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/dotneato/dotgen 	-I$(top_srcdir)/dotneato/neatogen 	-I$(top_srcdir)/dotneato/twopigen 	-I$(top_srcdir)/dotneato/common 	-I$(top_srcdir)/graph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/pathplan 	-I$(top_srcdir)/tclhandle
-+
-+
-+LIBS = ${FT_LIBS} 	${PNG_LIBS} 	${JPEG_LIBS} 	${XPM_LIBS} 	${Z_LIBS} -lc
+-	-I$(top_srcdir)/tclhandle
++INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ 	-I$(top_srcdir)/dotneato/dotgen 	-I$(top_srcdir)/dotneato/neatogen 	-I$(top_srcdir)/dotneato/twopigen 	-I$(top_srcdir)/dotneato/common 	-I$(top_srcdir)/graph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/pathplan 	-I$(top_srcdir)/tclhandle
  
  
- CFLAGS = @CFLAGS@ -DDATE="\"`date`\"" 
-@@ -212,24 +199,12 @@
+ LIBS = @LIBS@ -lc
+@@ -208,25 +200,12 @@ man_MANS = tcldot.n
  
  libtcldot_la_SOURCES = tcldot.c tkgen.c tcldot.h
  
--libtcldot_la_LIBADD = ../tclhandle/libtclhandle.la \
+-libtcldot_la_LIBADD = \
+-	../tclhandle/libtclhandle.la \
 -	../dotneato/common/libdotneato.la \
 -        ../dotneato/dotgen/libdot.la \
 -        ../dotneato/neatogen/libneato.la \
 -        ../dotneato/twopigen/libtwopi.la \
--        ../dotneato/pack/libpack.la \
--        ../pathplan/libpathplan.la \
--        ../graph/libgraph.la \
--        ../cdt/libcdt.la \
--        ../gd/libgd.la \
+-        ../dotneato/pack/libpackconvenience.la \
+-        ../pathplan/libpathplanconvenience.la \
+-        ../graph/libgraphconvenience.la \
+-	../cdt/libcdtconvenience.la \
+-	../gd/libgdconvenience.la \
 -	../gdtclft/gdtclft.lo \
 -	../tclstubs/libtclstubs.la
-+libtcldot_la_LIBADD = ../tclhandle/libtclhandle.la 	../dotneato/common/libdotneato.la         ../dotneato/dotgen/libdot.la         ../dotneato/neatogen/libneato.la         ../dotneato/twopigen/libtwopi.la         ../dotneato/pack/libpack.la         ../pathplan/libpathplan.la         ../graph/libgraph.la         ../cdt/libcdt.la         ../gd/libgd.la 	../gdtclft/gdtclft.lo 	${TCL_STUB_LIB_SPEC}
++libtcldot_la_LIBADD =  	../tclhandle/libtclhandle.la 	../dotneato/common/libdotneato.la         ../dotneato/dotgen/libdot.la         ../dotneato/neatogen/libneato.la         ../dotneato/twopigen/libtwopi.la         ../dotneato/pack/libpackconvenience.la         ../pathplan/libpathplanconvenience.la         ../graph/libgraphconvenience.la 	../cdt/libcdtconvenience.la 	../gd/libgdconvenience.la 	../gdtclft/gdtclft.lo 	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
@@ -57,16 +47,16 @@ $NetBSD: patch-aq,v 1.3 2002/04/19 18:42:34 seb Exp $
  
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../gvconfig.h
-@@ -250,7 +225,7 @@
- ../dotneato/neatogen/libneato.la ../dotneato/twopigen/libtwopi.la \
- ../dotneato/pack/libpack.la ../pathplan/libpathplan.la \
- ../graph/libgraph.la ../cdt/libcdt.la ../gd/libgd.la \
+@@ -248,7 +227,7 @@ libtcldot_la_DEPENDENCIES =  ../tclhandl
+ ../dotneato/pack/libpackconvenience.la \
+ ../pathplan/libpathplanconvenience.la ../graph/libgraphconvenience.la \
+ ../cdt/libcdtconvenience.la ../gd/libgdconvenience.la \
 -../gdtclft/gdtclft.lo ../tclstubs/libtclstubs.la
 +../gdtclft/gdtclft.lo
  libtcldot_la_OBJECTS =  tcldot.lo tkgen.lo
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -267,7 +242,7 @@
+@@ -265,7 +244,7 @@ DIST_COMMON =  README Makefile.am Makefi
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
@@ -75,7 +65,7 @@ $NetBSD: patch-aq,v 1.3 2002/04/19 18:42:34 seb Exp $
  GZIP_ENV = --best
  SOURCES = $(libtcldot_la_SOURCES)
  OBJECTS = $(libtcldot_la_OBJECTS)
-@@ -508,7 +483,6 @@
+@@ -506,7 +485,6 @@ distdir: $(DISTFILES)
  	      || exit 1; \
  	  fi; \
  	done

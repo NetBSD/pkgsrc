@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
+$NetBSD: patch-ab,v 1.5 2002/08/28 13:49:36 seb Exp $
 
---- configure.in.orig	Fri Apr 12 00:09:14 2002
+--- configure.in.orig	Fri Aug  2 22:55:20 2002
 +++ configure.in
-@@ -45,7 +45,10 @@
+@@ -48,7 +48,10 @@ DEFAULT_FONTPATH="C:/WINDOWS/FONTS;C:/WI
  PATHSEPARATOR=";"
  else
  # This sucks!  Whatever happened to standards for file system layout?
@@ -14,35 +14,25 @@ $NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
  PATHSEPARATOR=":"
  fi
  fi
-@@ -166,12 +169,11 @@
- 
- # Some systems don't have Tcl.  Don't build
- # the Tcl products if we don't have the library.
--TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
- if test -f $TCLCONFIG; then
-     AC_MSG_RESULT([using $TCLCONFIG])
-     file=${TCLCONFIG}
+@@ -177,7 +180,7 @@ if test -f $TCLCONFIG; then
      . $file
--    TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
-+    TCL_SUBDIRS="tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
-     TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
- else
-     AC_MSG_WARN([Unable to find tclConfig.sh. The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built])
-@@ -242,12 +244,11 @@
- 
- # Some systems have Tcl, but not TK.  Don't build
- # the Tk products if we don't have the library.
--TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
- if test -f $TKCONFIG; then
-     AC_MSG_RESULT([using $TKCONFIG])
+     # TCL STUBS support is required
+     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
+-        TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
++        TCL_SUBDIRS="tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
+         TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
+     else
+         AC_MSG_WARN([Tcl does not have STUBs support, perhaps it is too old? The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built])
+@@ -266,7 +269,7 @@ if test -f $TKCONFIG; then
      file=${TKCONFIG}
      . $file
--    TK_SUBDIRS="tkstubs tkspline"
-+    TK_SUBDIRS="tkspline"
-     TK_PKGINDEX="tkspline/pkgIndex.tcl"
- else
-     AC_MSG_WARN([Unable to find tkConfig.sh. The package "tkspline" will not be built])
-@@ -568,36 +569,12 @@
+     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
+-        TK_SUBDIRS="tkstubs tkspline"
++        TK_SUBDIRS="tkspline"
+         TK_PKGINDEX="tkspline/pkgIndex.tcl"
+     else
+         AC_MSG_WARN([Tcl does not have STUBs support, so neither does Tk. The packages: "tkspline" will not be built])
+@@ -610,36 +613,12 @@ AC_MSG_RESULT(no)])
  
  # -----------------------------------
  # tclInt.h
@@ -50,7 +40,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
 -TCLINT_INCLUDES="-I$TCL_SRC_DIR/generic"
 -else
 -if test -f "/usr/include/tclInt.h"; then
--TCLINT_INCLUDES="-I/usr/include"
+-TCLINT_INCLUDES=""
 -else
 -if test -f "/usr/local/include/tclInt.h"; then
 -TCLINT_INCLUDES="-I/usr/local/include"
@@ -59,7 +49,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
 -fi
 -fi
 -fi
-+TCLINT_INCLUDES="-I${BUILDLINK_DIR}/include/tcl/generic"
++TCLINT_INCLUDES="-I${BUILDLINK_PREFIX_TCL}/include/tcl/generic"
  AC_SUBST(TCLINT_INCLUDES)
  
  # -----------------------------------
@@ -68,7 +58,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
 -TKINT_INCLUDES="-I$TK_SRC_DIR/generic"
 -else
 -if test -f "/usr/include/tkInt.h"; then
--TKINT_INCLUDES="-I/usr/include"
+-TKINT_INCLUDES=""
 -else
 -if test -f "/usr/local/include/tkInt.h"; then
 -TKINT_INCLUDES="-I/usr/local/include"
@@ -77,7 +67,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/19 18:42:34 seb Exp $
 -fi
 -fi
 -fi
-+TKINT_INCLUDES="-I${BUILDLINK_DIR}/include/tk/generic"
++TKINT_INCLUDES="-I${BUILDLINK_PREFIX_TK}/include/tk/generic"
  AC_SUBST(TKINT_INCLUDES)
  
  # -----------------------------------
