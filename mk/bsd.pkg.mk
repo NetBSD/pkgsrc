@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.134 1998/08/05 19:25:08 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.135 1998/08/06 09:51:20 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -465,6 +465,8 @@ PATCH_SITES:=	${MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
+MAINTAINER?=		packages@netbsd.org
+
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 
 .if defined(IGNOREFILES)
@@ -499,9 +501,9 @@ _IGNOREFILES?=	${IGNOREFILES}
 #  by user.
 EXTRACT_ONLY?=	${DISTFILES}
 
-.if !defined(CATEGORIES) || !defined(DISTNAME) || !defined(MAINTAINER)
+.if !defined(CATEGORIES) || !defined(DISTNAME)
 .BEGIN:
-	@${ECHO_MSG} "CATEGORIES, DISTNAME, and MAINTAINER are mandatory."
+	@${ECHO_MSG} "CATEGORIES and DISTNAME are mandatory."
 	@${FALSE}
 .endif
 
