@@ -1,25 +1,24 @@
-$NetBSD: patch-ab,v 1.7 2003/06/07 16:03:05 jmmv Exp $
+$NetBSD: patch-ab,v 1.8 2003/10/05 15:49:06 wiz Exp $
 
---- Makefile.in.orig	Mon Apr 29 10:36:46 2002
+--- Makefile.in.orig	Fri Jul  4 19:49:07 2003
 +++ Makefile.in
-@@ -224,7 +224,7 @@ awkdatadir = @datadir@/awk
- # stuff for compiling gawk/pgawk
- DEFPATH = "\".$(PATH_SEPARATOR)$(awkdatadir)\""
+@@ -78,7 +78,7 @@ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
  
 -DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(datadir)/locale\""
 +DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(prefix)/$(PKGLOCALEDIR)/locale\""
- 
- INCLUDES = -I$(srcdir)/intl
- 
-@@ -760,10 +760,7 @@ install-exec-hook:
- 	(fullname=gawk-`./gawk --version | sed 1q | awk '{print $$3}'` ; \
+ DEPDIR = @DEPDIR@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
+@@ -888,9 +888,7 @@ install-exec-hook:
  	cd $(DESTDIR)$(bindir); \
- 	$(LN) gawk $$fullname ; \
--	$(LN) pgawk p$$fullname ; \
--	if [ ! -f awk ]; \
--	then	$(LN_S) gawk awk; \
+ 	$(LN) gawk $$fullname 2>/dev/null ; \
+ 	$(LN) pgawk p$$fullname 2>/dev/null ; \
+-	if [ ! -f awk$(EXEEXT) ]; \
+-	then	$(LN_S) gawk$(EXEEXT) awk$(EXEEXT); \
 -	fi; exit 0)
-+	$(LN) pgawk p$$fullname; exit 0) 
++	exit 0)
  
  # Undo the above when uninstalling
  uninstall-links:
