@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 02:28:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/29 05:05:37 jlam Exp $
 
 .if !defined(PTL2_BUILDLINK2_MK)
 PTL2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		ptl2
+BUILDLINK_PKGBASE.ptl2?=	ptl
 BUILDLINK_DEPENDS.ptl2?=	ptl>=2.1.7
 BUILDLINK_PKGSRCDIR.ptl2?=	../../devel/ptl2
 

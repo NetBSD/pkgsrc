@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:41 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:54 jlam Exp $
 
 .if !defined(QT2_DESIGNER_BUILDLINK2_MK)
 QT2_DESIGNER_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=	qt2-designer
-BUILDLINK_DEPENDS.qt2-designer?= \
+BUILDLINK_PACKAGES+=			qt2-designer
+BUILDLINK_PKGBASE.qt2-designer?=	qt2-designer{,-kde}
+BUILDLINK_DEPENDS.qt2-designer?=	\
 		{qt2-designer>=2.3.1nb2,qt2-designer-kde>=2.3.1nb2}
 BUILDLINK_PKGSRCDIR.qt2-designer?=	../../x11/qt2-designer
 
