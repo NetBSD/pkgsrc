@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/27 06:31:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/30 20:17:35 schmonz Exp $
 #
 
-DISTNAME=		feedparser-3.0.1
+DISTNAME=		feedparser-3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=feedparser/}
