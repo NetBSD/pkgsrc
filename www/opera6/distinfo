@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/08/25 21:52:19 jlam Exp $
+$NetBSD: distinfo,v 1.8 2002/08/31 05:25:31 tron Exp $
 
-SHA1 (./opera-6.02-20020701.1-static-qt.i386.rpm) = 8d043a6340907289011a6be7a3bd3ffa2b740a2a
-Size (./opera-6.02-20020701.1-static-qt.i386.rpm) = 4915848 bytes
+SHA1 (./opera-6.03-20020813.1-static-qt.i386.rpm) = f87a7a1480720bc669fb5de8587553fd036ca351
+Size (./opera-6.03-20020813.1-static-qt.i386.rpm) = 4919121 bytes
