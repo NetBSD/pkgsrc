@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.116 2004/08/10 10:07:20 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.117 2004/08/11 11:53:25 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -137,6 +137,73 @@ sub is_verbose()
 }
 #== End of PkgLint::Logging ===============================================
 
+package PkgLint::FileUtils;
+#==========================================================================
+# This package provides some file handling subroutines. The subroutine
+# load_file reads a file into memory as an array of lines. A line is a
+# record that contains the fields C<file>, C<lineno> and C<text>.
+#==========================================================================
+
+package PkgLint::FileUtils::Line;
+	sub new($$$$) {
+		my ($class, $file, $lineno, $text) = @_;
+		my ($self) = ({});
+		bless($self, $class);
+		$self->_init($file, $lineno, $text);
+		return $self;
+	}
+	sub _init($$$$) {
+		my ($self, $file, $lineno, $text) = @_;
+		$self->{"file"} = $file;
+		$self->{"lineno"} = $lineno;
+		$self->{"text"} = $text;
+	}
+	sub file($) {
+		return shift(@_)->{"file"};
+	}
+	sub lineno($) {
+		return shift(@_)->{"lineno"};
+	}
+	sub text($) {
+		return shift(@_)->{"text"};
+	}
+	sub toString($) {
+		my ($self) = @_;
+		return sprintf("%s:%d: %s", $self->file, $self->line, $self->text);
+	}
+# end of PkgLint::FileUtils::Line
+
+package PkgLint::FileUtils;
+BEGIN {
+	use Exporter;
+	use vars qw(@ISA @EXPORT_OK);
+	@ISA = qw(Exporter);
+	@EXPORT_OK = qw(load_file);
+}
+
+sub load_file($) {
+	my ($fname) = @_;
+	my ($result, $line, $lineno);
+
+	$result = [];
+	open(F, "< $fname") or return undef;
+	$lineno = 0;
+	while (defined($line = <F>)) {
+		$lineno++;
+		$line =~ s/\r*\n*\z//;
+		push(@$result, PkgLint::FileUtils::Line->new($fname, $lineno, $line));
+	}
+	close(F) or return undef;
+	return $result;
+}
+
+#== End of PkgLint::FileUtils =============================================
+
+package main;
+#==========================================================================
+# This is the main package of pkglint. Currently it contains a lot of
+# functionality, but that will be moved into separate packages.
+#==========================================================================
 use strict;
 use warnings;
 
@@ -151,6 +218,9 @@ BEGIN {
 		NO_FILE NO_LINE_NUMBER
 		log_error log_warning log_info
 		print_summary_and_exit
+	);
+	import PkgLint::FileUtils qw(
+		load_file
 	);
 }
 
@@ -422,31 +492,11 @@ EOF
 # Subroutines common to all checking routines
 #
 
-# Loads a text file completely into memory. Returns undef on error
-# or a reference to an array of lines. A line itself is an array of
-# three components: the originating file, the line number and the
-# contents of the line.
-sub load_file($) {
-	my ($fname) = @_;
-	my ($result, $line, $lineno);
-
-	$result = [];
-	open(F, "< $fname") or return undef;
-	$lineno = 0;
-	while (defined($line = <F>)) {
-		$lineno++;
-		$line =~ s/\r*\n*\z//;
-		push(@$result, [$fname, $lineno, $line]);
-	}
-	close(F) or return undef;
-	return $result;
-}
-
 sub checkline_length($$) {
 	my ($line, $maxlength) = @_;
 
-	if (length($line->[2]) > $maxlength) {
-		log_warning($line->[0], $line->[1], "Line too long (should be no more than $maxlength characters).");
+	if (length($line->text) > $maxlength) {
+		log_warning($line->file, $line->lineno, "Line too long (should be no more than $maxlength characters).");
 	}
 	return true;
 }
@@ -455,10 +505,10 @@ sub checkline_valid_characters($$) {
 	my ($line, $re_validchars) = @_;
 	my ($rest);
 
-	($rest = $line->[2]) =~ s/$re_validchars//g;
+	($rest = $line->text) =~ s/$re_validchars//g;
 	if ($rest ne "") {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		log_warning($line->[0], $line->[1],
+		log_warning($line->file, $line->lineno,
 			sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
 	}
 	return true;
@@ -467,7 +517,7 @@ sub checkline_valid_characters($$) {
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
 	if ($line =~ /\s+$/) {
-		log_warning($line->[0], $line->[1], "Trailing white space.");
+		log_warning($line->file, $line->lineno, "Trailing white space.");
 	}
 	return true;
 }
@@ -516,16 +566,16 @@ sub checkfile_distinfo($) {
 		return false;
 	}
 
-	if ($distinfo->[0]->[2] !~ /^$regex_rcsidstr$/) {
+	if ($distinfo->[0]->text !~ /^$regex_rcsidstr$/) {
 		log_error($fname, 1, "\$$conf_rcsidstr\$ (and nothing more) expected.");
 	}
 
 	foreach my $line (@$distinfo[1 .. scalar(@$distinfo)-1]) {
-		next unless $line->[2] =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
+		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
 		my ($alg, $patch, $sum) = ($1, $2, $3);
 
 		if ($patch =~ /~$/) {
-			log_warning($line->[0], $line->[1], "possible backup file \"$patch\"?");
+			log_warning($line->file, $line->lineno, "possible backup file \"$patch\"?");
 		}
 
 		if ($patch =~ /^patch-[A-Za-z0-9_]+$/) {
@@ -533,10 +583,10 @@ sub checkfile_distinfo($) {
 				my $chksum = `sed -e '/\$NetBSD.*/d' $opt_packagedir/$patchdir/$patch | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
 				if ($sum ne $chksum) {
-					log_error($line->[0], $line->[1], "checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
+					log_error($line->file, $line->lineno, "checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
 				}
 			} else {
-				log_error($line->[0], $line->[1], "$patch does not exist.");
+				log_error($line->file, $line->lineno, "$patch does not exist.");
 			}
 			$in_distinfo{$patch} = true;
 		}
@@ -566,19 +616,19 @@ sub checkfile_MESSAGE($) {
 		log_warning($fname, NO_LINE_NUMBER, "file too short.");
 		return false;
 	}
-	if ($message->[0]->[2] ne "=" x 75) {
-		log_warning($message->[0]->[0], $message->[0]->[1], "expected a line of exactly 75 \"=\" characters.");
+	if ($message->[0]->text ne "=" x 75) {
+		log_warning($message->[0]->file, $message->[0]->lineno, "expected a line of exactly 75 \"=\" characters.");
 	}
-	if ($message->[1]->[2] !~ /^$regex_rcsidstr$/) {
-		log_error($message->[1]->[0], $message->[1]->[1], "expected the RCS Id tag.");
+	if ($message->[1]->text !~ /^$regex_rcsidstr$/) {
+		log_error($message->[1]->file, $message->[1]->lineno, "expected the RCS Id tag.");
 	}
 	foreach my $line (@$message[2 .. scalar(@$message) - 2]) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
 	}
-	if ($message->[-1]->[2] ne "=" x 75) {
-		log_warning($message->[-1]->[0], $message->[-1]->[1], "expected a line of exactly 75 \"=\" characters.");
+	if ($message->[-1]->text ne "=" x 75) {
+		log_warning($message->[-1]->file, $message->[-1]->lineno, "expected a line of exactly 75 \"=\" characters.");
 	}
 	return true;
 }
@@ -599,20 +649,20 @@ sub checkfile_PLIST($) {
 	foreach my $line (@$plist) {
 		checkline_trailing_whitespace($line);
 
-		if ($line->[2] =~ /<\$ARCH>/) {
-			log_warning($line->[0], $line->[1], "use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
+		if ($line->text =~ /<\$ARCH>/) {
+			log_warning($line->file, $line->text, "use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
 		}
-		if ($line->[2] =~ /^\@([a-z]+)\s+(.*)/) {
+		if ($line->text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 			if ($cmd eq "cwd" || $cmd eq "cd") {
 				$curdir = $arg;
 			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
-				log_warning($line->[0], $line->[1], "use \"\@dirrm\" instead of \"\@unexec rmdir\".");
-			} elsif ($cmd eq "exec" || $cmd eq "unexec") {
+				log_warning($line->file, $line->lineno, "use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
 				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
-					log_warning($line->[0], $line->[1], "\@exec/unexec install-info is deprecated.");
+					log_warning($line->file, $line->lineno, "\@exec/unexec install-info is deprecated.");
 				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
-					log_error($line->[0], $line->[1], "ldconfig must be used with \"||/usr/bin/true\".");
+					log_error($line->file, $line->lineno, "ldconfig must be used with \"||/usr/bin/true\".");
 				}
 			} elsif ($cmd eq "comment") {
 				if ($arg =~ /^$regex_rcsidstr$/) {
@@ -621,60 +671,60 @@ sub checkfile_PLIST($) {
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
 			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
-				log_warning($line->[0], $line->[1], "\"\@mode/owner/group\" are deprecated, please use chmod/".
+				log_warning($line->file, $line->lineno, "\"\@mode/owner/group\" are deprecated, please use chmod/".
 					"chown/chgrp in the pkg Makefile and let tar do the rest.");
 			} else {
-				log_warning($line->[0], $line->[1], "unknown PLIST directive \"\@$cmd\"");
+				log_warning($line->file, $line->lineno, "unknown PLIST directive \"\@$cmd\"");
 			}
 			next line;
 		}
 
-		if ($line->[2] =~ /^\//) {
-			log_error($line->[0], $line->[1], "use of full pathname disallowed.");
+		if ($line->text =~ /^\//) {
+			log_error($line->file, $line->lineno, "use of full pathname disallowed.");
 		}
 
-		if ($line->[2] =~ /^doc/) {
-			log_error($line->[0], $line->[1], "documentation must be installed under share/doc, not doc.");
+		if ($line->text =~ /^doc/) {
+			log_error($line->file, $line->lineno, "documentation must be installed under share/doc, not doc.");
 		}
 
-		if ($line->[2] =~ /^etc/ && $line->[2] !~ /^etc\/rc.d/) {
-			log_error($line->[0], $line->[1], "configuration files must not be ".
+		if ($line->text =~ /^etc/ && $line->text !~ /^etc\/rc.d/) {
+			log_error($line->file, $line->lineno, "configuration files must not be ".
 				"registered in the PLIST (don't you use the ".
 				"PKG_SYSCONFDIR framework?)");
 		}
 
-		if ($line->[2] =~ /^etc\/rc\.d/) {
-			log_error($line->[0], $line->[1], "RCD_SCRIPTS must not be ".
+		if ($line->text =~ /^etc\/rc\.d/) {
+			log_error($line->file, $line->lineno, "RCD_SCRIPTS must not be ".
 				"registered in the PLIST (don't you use the ".
 				"RCD_SCRIPTS framework?)");
 		}
 
-		if ($line->[2] =~ /^info\/dir$/) {
-			log_error($line->[0], $line->[1], "\"info/dir\" should not be listed in ".
+		if ($line->text =~ /^info\/dir$/) {
+			log_error($line->file, $line->lineno, "\"info/dir\" should not be listed in ".
 				"$file. use install-info to add/remove an entry.");
 		}
 
-		if ($line->[2] =~ /^lib\/locale/) {
-			log_error($line->[0], $line->[1], "\"lib/locale\" should not be listed ".
+		if ($line->text =~ /^lib\/locale/) {
+			log_error($line->file, $line->lineno, "\"lib/locale\" should not be listed ".
 				"in $file. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->[2] =~ /^share\/locale/) {
-			log_warning($line->[0], $line->[1], "use of \"share/locale\" in $file is ".
+		if ($line->text =~ /^share\/locale/) {
+			log_warning($line->file, $line->lineno, "use of \"share/locale\" in $file is ".
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->[2] =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK3 && !$seen_USE_PKGLOCALEDIR) {
-			log_warning($line->[0], $line->[1], "PLIST contains \${PKGLOCALEDIR}, ".
+		if ($line->text =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK3 && !$seen_USE_PKGLOCALEDIR) {
+			log_warning($line->file, $line->lineno, "PLIST contains \${PKGLOCALEDIR}, ".
 				"but USE_PKGLOCALEDIR was not found.");
 		}
 
 		if ($curdir !~ m:^$conf_localbase: && $curdir !~ m:^/usr/X11R6:) {
-			log_warning($line->[0], $line->[1], "installing to directory $curdir discouraged. could you please avoid it?");
+			log_warning($line->file, $line->lineno, "installing to directory $curdir discouraged. could you please avoid it?");
 		}
 
-		if ("$curdir/$line->[2]" =~ m:^$conf_localbase/share/doc:) {
-			log_info($line->[0], $line->[1], "seen installation to share/doc ($curdir/$line).");
+		if ("$curdir/$line->text" =~ m:^$conf_localbase/share/doc:) {
+			log_info($line->file, $line->lineno, "seen installation to share/doc ($curdir/$line).");
 		}
 	}
 
@@ -746,11 +796,11 @@ sub check_for_multiple_patches($) {
 	$files_in_patch = 0;
 	$patch_state = "";
 	foreach my $line (@$lines) {
-		if (index($line->[2], "--- ") == 0 && $line->[2] !~ qr"^--- \d+(?:,\d+|) ----$") {
+		if (index($line->text, "--- ") == 0 && $line->text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
-		} elsif (index($line->[2], "*** ") == 0 && $line->[2] !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+		} elsif (index($line->text, "*** ") == 0 && $line->text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
 			$line_type = "*";
-		} elsif (index($line->[2], "+++ ") == 0) {
+		} elsif (index($line->text, "+++ ") == 0) {
 			$line_type = "+";
 		} else {
 			$line_type = "";
@@ -761,14 +811,14 @@ sub check_for_multiple_patches($) {
 				$files_in_patch++;
 				$patch_state = "";
 			} else {
-				log_warning($line->[0], $line->[1], "unknown patch format (might be an internal error)");
+				log_warning($line->file, $line->lineno, "unknown patch format (might be an internal error)");
 			}
 		} elsif ($patch_state eq "-") {
 			if ($line_type eq "+") {
 				$files_in_patch++;
 				$patch_state = "";
 			} else {
-				log_warning($line->[0], $line->[1], "unknown patch format (might be an internal error)");
+				log_warning($line->file, $line->lineno, "unknown patch format (might be an internal error)");
 			}
 		} elsif ($patch_state eq "") {
 			$patch_state = $line_type;
@@ -776,9 +826,9 @@ sub check_for_multiple_patches($) {
 	}
 
 	if ($files_in_patch > 1) {
-		log_warning($lines->[0]->[0], NO_LINE_NUMBER, "contains patches for $files_in_patch files, should be only one");
+		log_warning($lines->[0]->file, NO_LINE_NUMBER, "contains patches for $files_in_patch files, should be only one");
 	} elsif ($files_in_patch == 0) {
-		log_warning($lines->[0]->[0], NO_LINE_NUMBER, "contains no patch");
+		log_warning($lines->[0]->file, NO_LINE_NUMBER, "contains no patch");
 	}
 	return true;
 }
@@ -802,13 +852,13 @@ sub checkfile_patches_patch($) {
 	if (scalar(@$lines) == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Empty patch file.");
 		return false;
-	} elsif ($lines->[0]->[2] !~ /^$regex_rcsidstr$/) {
-		log_error($lines->[0]->[0], $lines->[0]->[1], "Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
+	} elsif ($lines->[0]->text !~ /^$regex_rcsidstr$/) {
+		log_error($lines->[0]->file, $lines->[0]->lineno, "Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
 	}
 
 	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
-		if ($opt_committer && $line->[2] =~ /$regex_known_rcs_tag/) {
-			log_warning($line->[0], $line->[1], "Possible RCS tag \"\$$1\$\".");
+		if ($opt_committer && $line->text =~ /$regex_known_rcs_tag/) {
+			log_warning($line->file, $line->lineno, "Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on commit/import.");
 		}
 	}
 
@@ -1835,10 +1885,10 @@ sub category_check() {
 		log_error($file, NO_LINE_NUMBER, "may not be empty.");
 		return false;
 	}
-	if ($lines->[0]->[2] =~ qr"^# $regex_rcsidstr$") {
-		log_info($lines->[0]->[0], $lines->[0]->[1], "RCS Id tag found.");
-	} elsif (scalar(@$lines) > 1 && $lines->[1]->[2] =~ qr"^# $regex_rcsidstr$") {
-		log_info($lines->[1]->[0], $lines->[1]->[1], "RCS Id tag found.");
+	if ($lines->[0]->text =~ qr"^# $regex_rcsidstr$") {
+		log_info($lines->[0]->file, $lines->[0]->lineno, "RCS Id tag found.");
+	} elsif (scalar(@$lines) > 1 && $lines->[1]->text =~ qr"^# $regex_rcsidstr$") {
+		log_info($lines->[1]->file, $lines->[1]->lineno, "RCS Id tag found.");
 	} else {
 		log_error($file, NO_LINE_NUMBER, "No RCS Id tag found.");
 	}
@@ -1847,31 +1897,31 @@ sub category_check() {
 	
 	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
 	foreach my $line (@$lines) {
-		if ($line->[2] =~ qr"^(#?)SUBDIR(.*?)=\s*(\S+)\s*(?:#\s*(.*?)\s*|)$") {
+		if ($line->text =~ qr"^(#?)SUBDIR(.*?)=\s*(\S+)\s*(?:#\s*(.*?)\s*|)$") {
 			my ($comment_flag, $operator, $subdir, $comment) = ($1, $2, $3, $4);
 			if ($comment_flag eq "#") {
 				if (defined($comment) && $comment eq "") {
-					log_warning($line->[0], $line->[1], "$subdir commented out without giving a reason.");
+					log_warning($line->file, $line->lineno, "$subdir commented out without giving a reason.");
 				}
 				push(@makefile_subdirs, $subdir);
 			} elsif ($first) {
 				$first = false;
 				if ($operator ne "" && $operator ne "+") {
-					log_error($line->[0], $line->[1], "SUBDIR= or SUBDIR+= expected.");
+					log_error($line->file, $line->lineno, "SUBDIR= or SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
 				$last_subdir = $subdir;
 			} else {
 				if ($operator ne "+") {
-					log_error($line->[0], $line->[1], "SUBDIR+= expected.");
+					log_error($line->file, $line->lineno, "SUBDIR+= expected.");
 				}
 				push(@makefile_subdirs, $subdir);
 				if ($last_subdir ge $subdir) {
-					log_error($line->[0], $line->[1], "$subdir should come before $last_subdir.");
+					log_error($line->file, $line->lineno, "$subdir should come before $last_subdir.");
 				}
 				$last_subdir = $subdir;
 			}
-		} elsif ($line->[2] =~ qr"^COMMENT\s*=\s*([^#]*?)") {
+		} elsif ($line->text =~ qr"^COMMENT\s*=\s*([^#]*?)") {
 			my ($comment) = ($1);
 			$comment_seen = true;
 		}
