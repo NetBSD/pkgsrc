@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.826 2002/12/18 19:27:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.827 2002/12/18 20:11:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3997,3 +3997,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated eel2 to 2.0.8 [jmmv 2002-12-18]
 	Updated eog2 to 1.0.4 [jmmv 2002-12-18]
 	Updated gedit to 2.0.6 [jmmv 2002-12-18]
+	Added waimea-0.4.0 [jmmv 2002-12-18]
