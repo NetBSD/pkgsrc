@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:19:17 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/22 09:16:03 recht Exp $
 #
 
 DISTNAME=	html-2.3.3
 PKGNAME=	py23-html-docs-2.3.3
-CATEGORIES=	lang
+CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/doc/2.3.3/
 EXTRACT_SUFX=	.tar.bz2
 
