@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/05 06:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/17 23:38:39 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://glimpse.cs.arizona.edu/
 
 NO_CDROM=	"Restrictive copyright (don't sell for profit)"
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 pre-configure:
