@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.58 2003/10/05 08:20:44 grant Exp $
+# $NetBSD: defs.Darwin.mk,v 1.59 2003/10/10 15:46:08 jschauma Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -107,7 +107,7 @@ IMAKE_MANNEWSUFFIX=    ${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
-.if ${OS_VERSION} >= 6.0
+.if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
