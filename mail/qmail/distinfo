@@ -1,7 +1,21 @@
-$NetBSD: distinfo,v 1.3 2002/05/03 10:39:01 zuntum Exp $
+$NetBSD: distinfo,v 1.4 2004/04/10 05:30:06 schmonz Exp $
 
 SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
 Size (qmail-1.03.tar.gz) = 220668 bytes
-SHA1 (patch-aa) = 9a54276636d5000fb8ae217344158301b91bde1d
-SHA1 (patch-ab) = a37492ce29e86cab7aaf0dc3446ab5db95edcd86
-SHA1 (patch-ac) = 2f1ef6b0490d9792fc8d7d50af5f620b09f58ecf
+SHA1 (patch-aa) = d876fb59c6e1e93d0332696c1ebf06e04a8fafb2
+SHA1 (patch-ab) = 47f788fd28feca2442bbb9094d99633a1578e447
+SHA1 (patch-ac) = e05c2c1c4066a2fd1b6c3763c6fe73d541994014
+SHA1 (patch-ad) = eacd740cf85abbb385b241cf4f33f7b80a03ce4b
+SHA1 (patch-ae) = 56311eb87ee8325ba347c6cdbfd8b5484c7142e0
+SHA1 (patch-af) = 582ce985dde5df7eb507e2abe90c62b6d73485e2
+SHA1 (patch-ag) = bfd2ae4613add0ab9b4c2672466600abf9de38ae
+SHA1 (patch-ah) = 48d9c4f5a47372dd13c380edf50ceeb209d61ea3
+SHA1 (patch-ai) = 67ac4722837e5dd6136d4fbe900ef80eda74ea95
+SHA1 (patch-aj) = a1691a04a90f3969ac8853e7d04833603195880e
+SHA1 (patch-ak) = d1e88006f04874df6c1896b08bbdfb4e5d67f654
+SHA1 (patch-al) = 20a8bb4d44477522135762219c4aaeebddfd6085
+SHA1 (patch-am) = fd1d09686dcdbb58b7a45c114aa56d0b1360035b
+SHA1 (patch-an) = de2bb294c742ee4b512634f37553bdb79ea7ffb1
+SHA1 (patch-ao) = 63176ba524913c6e693de7460d25016a10a438f8
+SHA1 (patch-ap) = de2d4d409c5e588e1cf9c6ca2cd966eeef022a55
+SHA1 (patch-aq) = 2e5f0a4870b13ff60f79edf5dc58eff783fd5bea
