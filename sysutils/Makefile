@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2001/03/13 18:01:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.91 2001/03/13 19:54:06 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -51,6 +51,7 @@ SUBDIR+=	psmisc
 SUBDIR+=	pstree
 SUBDIR+=	roller
 SUBDIR+=	rtty
+SUBDIR+=	sarah
 SUBDIR+=	sh-utils
 SUBDIR+=	skill
 SUBDIR+=	socket
