@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2000/05/31 15:01:01 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2000/12/27 14:08:39 dmcmahill Exp $
 
 --- makefile.orig	Sat Feb 27 09:29:46 1999
 +++ makefile	Tue May 30 21:16:47 2000
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.3 2000/05/31 15:01:01 dmcmahill Exp $
 @@ -325,6 +322,12 @@
  	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CORE)/m6502/src/M6502Low.cxx
  
-+.if (${MACHINE_ARCH} == "mipsel") || (${MACHINE_ARCH} == "sparc")
++.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "mipsel") || (${MACHINE_ARCH} == "sparc")
 +# avoide compiler bug on some systems
 +M6502Hi.o: $(CORE)/m6502/src/M6502Hi.cxx
 +	$(CXX) -c  -fno-rtti -fno-rtti $(INCLUDES) $(SYS_INCLUDES) $(OPTIONS) $(CORE)/m6502/src/M6502Hi.cxx
