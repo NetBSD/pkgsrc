@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/28 01:40:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/28 02:57:51 proff Exp $
 
 DISTNAME=	festvox-ked8-1.4.0
 WRKSRC=		${WRKDIR}/festival
@@ -21,7 +21,7 @@ FHOME=		${PREFIX}/share/festival
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
-	find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
