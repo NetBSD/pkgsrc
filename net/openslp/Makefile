@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/10 22:18:58 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/24 13:47:04 jlam Exp $
 
 DISTNAME=	openslp-1.0.11
 CATEGORIES=	net
@@ -12,12 +12,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
+USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
-
-USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
