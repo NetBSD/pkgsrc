@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.7 2004/08/28 23:10:34 grant Exp $
+# $Id: pkg_chk.sh,v 1.8 2004/09/03 10:19:17 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -333,7 +333,7 @@ while [ $# != 0 ]; do
 	-s )	opt_s=1 ;;
 	-u )	opt_u=1 ; opt_i=1 ;;
 	-v )	opt_v=1 ;;
-	-- )	break ;;
+	-- )	shift; break ;;
     esac
     shift
 done
@@ -348,7 +348,7 @@ if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_l" ];t
     opt_h=1;
 fi
 
-if [ -n "$opt_h" -o $# != 1 ];then
+if [ -n "$opt_h" -o $# != 0 ];then
     echo 'Usage: pkg_chk [opts]
 	-B      Check the "Build version" of packages (implies -i)
 	-C conf Use pkgchk.conf file 'conf'
