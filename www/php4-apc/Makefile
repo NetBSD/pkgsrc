@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/19 13:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/16 19:06:46 cube Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
@@ -6,6 +6,7 @@ MODNAME=	${DISTNAME:C/-[^-]*$//}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES+=	www
 MASTER_SITES=	http://apc.communityconnect.com/sources/
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://apc.communityconnect.com/
