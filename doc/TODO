@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.980 2003/10/30 23:02:53 xtraeme Exp $
+$NetBSD: TODO,v 1.981 2003/10/30 23:24:50 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -162,7 +162,6 @@ Suggested package updates
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
 	o dosbox-0.60
-	o dropbear-0.38 [pkg/22984]
 	o dvd+rw-tools-5.9.4.4.4 [pkg/23106]
 	o dvipng-0.7
 	o dylan-compiler-2.3.11
