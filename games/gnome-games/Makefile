@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2001/03/27 03:19:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/04/07 12:33:01 rh Exp $
 
-DISTNAME=		gnome-games-1.2.0
+DISTNAME=		gnome-games-1.4.0.1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-games/}
 
@@ -10,8 +10,7 @@ COMMENT=		GNOME games collection
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
-BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-core-*:../../x11/gnome-core
+DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 
@@ -22,6 +21,7 @@ USE_X11BASE=		YES
 USE_CURSES=		YES
 USE_LIBTOOL=		YES
 USE_LIBINTL=		YES
+BUILD_USES_MSGFMT=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
