@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 1998/09/10 10:39:02 agc Exp $
+$NetBSD: patch-aa,v 1.8 1998/09/17 12:02:54 agc Exp $
 
 --- Makefile.in.orig	Tue Nov 25 16:31:41 1997
-+++ Makefile.in	Thu Sep 10 10:37:58 1998
++++ Makefile.in	Thu Sep 17 12:09:59 1998
 @@ -55,7 +55,9 @@
  BIN_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/bin
  
@@ -29,18 +29,38 @@ $NetBSD: patch-aa,v 1.7 1998/09/10 10:39:02 agc Exp $
 -	rm -f ${TCL_LIB_FILE}
 -	@MAKE_LIB@
 -	$(RANLIB) ${TCL_LIB_FILE}
-+	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
  # Make target which outputs the list of the .o contained in the Tcl lib
  # usefull to build a single big shared library containing Tcl and other
-@@ -330,7 +330,6 @@
+@@ -330,20 +330,19 @@
  # case
  objs: ${OBJS}
  
 -
  tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
- 	${CC} @LD_FLAGS@ ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
- 		@TCL_LD_SEARCH_FLAGS@ -o tclsh
+-	${CC} @LD_FLAGS@ ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
+-		@TCL_LD_SEARCH_FLAGS@ -o tclsh
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ ${TCLSH_OBJS} \
++		${TCL_LIB_FILE:.a=.la} ${LIBS} @TCL_LD_SEARCH_FLAGS@ -o tclsh
+ 
+ tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE} ${BUILD_DLTEST}
+-	${CC} @LD_FLAGS@ ${TCLTEST_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
+-		@TCL_LD_SEARCH_FLAGS@ -o tcltest
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ ${TCLTEST_OBJS} \
++		${TCL_LIB_FILE:.a=.la} ${LIBS} @TCL_LD_SEARCH_FLAGS@ -o tcltest
+ 
+ xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
+ 	@DL_OBJS@ ${BUILD_DLTEST}
+-	${CC} ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
+-		@DL_OBJS@ @TCL_BUILD_LIB_SPEC@ ${LIBS} \
+-		@TCL_LD_SEARCH_FLAGS@ -lXt -o xttest
++	${LIBTOOL} --mode=link ${CC} ${XTTEST_OBJS} ${GENERIC_OBJS} \
++		${UNIX_OBJS} ${COMPAT_OBJS} @DL_OBJS@ ${TCL_LIB_FILE:.a=.la} \
++		${LIBS} @TCL_LD_SEARCH_FLAGS@ -lXt -o xttest
+ 
+ 
+ # Note, in the target below TCL_LIBRARY needs to be set or else
 @@ -421,21 +420,20 @@
  		fi; \
  	    done;
