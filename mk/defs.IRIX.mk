@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.44 2004/04/09 23:18:18 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.45 2004/04/11 17:06:18 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -32,7 +32,11 @@ GTAR?=		${LOCALBASE}/bin/tar
 GTAR?=		/sbin/tar
 .endif
 GUNZIP_CMD?=	/usr/sbin/gunzip -f
+.if exists(/usr/sbin/gzcat)
+GZCAT?=		/usr/sbin/gzcat
+.else
 GZCAT?=		/usr/bsd/zcat
+.endif
 GZIP?=		-9
 GZIP_CMD?=	/usr/sbin/gzip -nf ${GZIP}
 HEAD?=		/usr/bsd/head
