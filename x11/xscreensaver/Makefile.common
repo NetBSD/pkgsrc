@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2004/02/02 23:55:00 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.70 2004/02/06 19:04:25 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -50,7 +50,7 @@ PLIST_SUBST+=		AVAILABLE=
 
 .ifndef (PERL_VERSION)
 PERL_VERSION!=		if [ -x ${PERL5} ]; then ${PERL5} -e 'print $$]'; else ${ECHO} "5.006"; fi
-MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
+MAKEFLAGS+=		PERL_VERSION=${PERL_VERSION}
 .endif
 
 .if (${OPSYS} == "NetBSD")
