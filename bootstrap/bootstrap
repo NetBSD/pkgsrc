@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.9 2004/03/28 01:55:17 grant Exp $
+# $NetBSD: bootstrap,v 1.10 2004/03/29 02:20:04 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -165,7 +165,7 @@ run_cmd()
 mkdir_p()
 {
 	for dir in $@; do
-		run_cmd "($shprog ./files/install-sh -d -o $user -g $group -m 755 $dir)"
+		run_cmd "($shprog ./files/install-sh -d -o $user -g $group $dir)"
 	done
 }
 
@@ -299,7 +299,9 @@ Interix)
 	need_bsd_install=yes
 	need_sed=yes
 	set_opsys=no
-	groupsprog="id -Gn"
+	# only used for unprivileged builds
+	groupsprog="id -gn"
+	# for bootstrap only; pkgsrc uses CPPFLAGS
 	CC="gcc -D_ALL_SOURCE"; export CC
 	;;
 *)
