@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/09 07:30:21 taca Exp $
 bin/chasen
 bin/chasen-config
 include/chasen.h
@@ -7,26 +7,12 @@ lib/libchasen.la
 lib/libchasen.so
 lib/libchasen.so.0
 lib/libchasen.so.0.1
-libexec/chasen/convary
-libexec/chasen/convdic
-libexec/chasen/makeint
-libexec/chasen/makemat
-libexec/chasen/mkary
-libexec/chasen/pattool
-libexec/chasen/sortdic
-@dirrm libexec/chasen
-@exec mkdir -p %D/share/chasen/dic >/dev/null 2>&1 || true
+sbin/convary
+sbin/convdic
+sbin/makeint
+sbin/makemat
+sbin/mkary
+sbin/pattool
+sbin/sortdic
 @dirrm share/chasen/dic
-share/chasen/doc/manual-j.pdf
-share/chasen/doc/manual-j.tex
-share/chasen/doc/manual.pdf
-share/chasen/doc/manual.tex
-@dirrm share/chasen/doc
-share/chasen/prolog/README.prolog
-share/chasen/prolog/chasen.pl
-share/chasen/prolog/chasen_user.pl
-share/chasen/prolog/jinput.pl
-share/chasen/prolog/juman.pl
-share/chasen/prolog/utils.pl
-@dirrm share/chasen/prolog
 @dirrm share/chasen

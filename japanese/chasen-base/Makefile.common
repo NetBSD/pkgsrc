@@ -1,4 +1,0 @@
-# $NetBSD: Makefile.common,v 1.9 2001/07/25 00:02:47 taca Exp $
-#
-
-CHASEN_VERSION=		2.2.8
