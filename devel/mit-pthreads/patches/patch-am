@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1 1998/08/23 06:22:18 garbled Exp $
+--- include/pthread/types.h.orig	Sat Jul 18 06:02:08 1998
++++ include/pthread/types.h	Sat Jul 18 06:02:20 1998
+@@ -35,2 +35,12 @@
+ 
++#if defined(__STDC__) || defined(__GNUC__)
++#ifndef __P_
++#define __P_(protos)     protos
++#endif
++#else
++#ifndef __P_
++#define __P_(protos)
++#endif
++#endif
++
+ #endif /* pthread_types_h */

@@ -1,0 +1,8 @@
+$NetBSD: patch-al,v 1.1 1998/08/23 06:22:18 garbled Exp $
+*** /dev/null	Thu Jan  8 12:58:03 1998
+--- shlib_version	Thu Jan  8 15:44:03 1998
+***************
+*** 0 ****
+--- 1,2 ----
++ major=1
++ minor=60
