@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.2 1999/06/09 17:05:33 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/11 13:26:16 proff Exp $
 
-DISTNAME=	festvox-en1-1.3.1
+DISTNAME=	festvox-en1-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.3.1/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 DISTFILES=	festvox_en1.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	festival-1.3.1:../festival \
-		festlex-poslex-1.3.1:../festlex-poslex \
-		festlex-oald-1.3.1:../festlex-oald \
-		mbrola-linux-301g1:../mbrola-linux \
+DEPENDS+=	festival-1.4.0:../festival \
+		festlex-poslex-1.4.0:../festlex-poslex \
+		festlex-oald-1.4.0:../festlex-oald \
+		mbrola-301g1:../mbrola \
 		mbrolavox-en1-980910:../mbrolavox-en1
 
 LICENSE=	no-commercial-use
