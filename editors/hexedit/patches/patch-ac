@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1998/09/28 10:35:56 frueauf Exp $
+
+--- Makefile.in.orig	Sat Sep 12 10:25:05 1998
++++ Makefile.in	Tue Sep 15 14:11:35 1998
+@@ -6,7 +6,7 @@
+ SHELL = /bin/sh
+ 
+ CC = @CC@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -I${prefix}/include
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ DEFS = @DEFS@
