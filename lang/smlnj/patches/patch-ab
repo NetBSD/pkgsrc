@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2003/07/01 23:10:34 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/01 23:19:13 jtb Exp $
 
 --- /dev/null
 +++ src/runtime/objs/mk.ppc-netbsd
