@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2893 2005/01/14 09:16:50 adam Exp $
+$NetBSD: TODO,v 1.2894 2005/01/14 09:19:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -746,7 +746,6 @@ Suggested package updates
 	o nslint-2.1a3
 	o nxtvepg-2.7.4
 	o obexftp-0.10.6
-	o objc-3.2.6
 	o ocaml-3.08
 	o odbc-postgresql-7.4.6
 	o offlineimap-4.0.8
