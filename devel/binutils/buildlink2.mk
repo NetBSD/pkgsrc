@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/10/28 15:54:31 heinz Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/05 06:58:03 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -29,6 +29,14 @@ INCOMPAT_BINUTILS?=       # empty
 _NEED_BINUTILS=          YES
 .    endif
 .  endfor
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mbinutils)
+_NEED_BINUTILS=		YES
+.  endif
 .endif
 
 .if ${_NEED_BINUTILS} == "YES"

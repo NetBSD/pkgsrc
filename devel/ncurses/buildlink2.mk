@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2003/12/30 23:14:18 cjep Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2004/02/05 06:58:03 jlam Exp $
 #
 # Optionally define:
 #
@@ -48,6 +48,14 @@ INCOMPAT_CURSES?=	# empty
 _NEED_NCURSES=		YES
 .    endif
 .  endfor
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mncurses)
+_NEED_NCURSES=	YES
+.  endif
 .endif
 
 .if ${_NEED_NCURSES} == "YES"
