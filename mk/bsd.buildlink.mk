@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.5 2001/06/15 08:33:04 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.6 2001/06/15 08:35:34 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -8,12 +8,8 @@
 # (2) Defines BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS to be the flags
 #     needed to find the buildlink include files and buildlink libraries,
 #     respectively.
-# (3) Adds ${BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
-# (4) Adds ${BUILDLINK_LDFLAGS} to LDFLAGS.
-#
-# By including buildlink.mk files before package-specific CFLAGS or LDFLAGS
-# are defined, you can ensure that the buildlink directories are ahead of
-# any package-specific directories in the compiler search paths.
+# (3) Prepends ${BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
+# (4) Prepends ${BUILDLINK_LDFLAGS} to LDFLAGS.
 #
 # The variables required to be defined prior to including this file are
 # listed below.  <pkgname> refers to the name of the package and should be
@@ -70,10 +66,10 @@ BUILDLINK_DIR?=		${WRKDIR}/.buildlink
 BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
 BUILDLINK_LDFLAGS=	-L${BUILDLINK_DIR}/lib
 
-CFLAGS+=		${BUILDLINK_CPPFLAGS}
-CXXFLAGS+=		${BUILDLINK_CPPFLAGS}
-CPPFLAGS+=		${BUILDLINK_CPPFLAGS}
-LDFLAGS+=		${BUILDLINK_LDFLAGS}
+CFLAGS:=		${BUILDLINK_CPPFLAGS} ${CFLAGS}
+CXXFLAGS:=		${BUILDLINK_CPPFLAGS} ${CXXFLAGS}
+CPPFLAGS:=		${BUILDLINK_CPPFLAGS} ${CPPFLAGS}
+LDFLAGS:=		${BUILDLINK_LDFLAGS} ${LDFLAGS}
 
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
 CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
