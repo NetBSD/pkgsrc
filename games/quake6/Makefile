@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/01 17:08:48 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/01 17:11:17 itojun Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.viagenie.qc.ca/en/ipv6-quake.shtml
 WRKSRC=		${WRKDIR}/quakeforge
 
 post-extract:
-	(cd ${WRKSRC}; find . -name \*.o -exec ${RM} {} \;)
+	(cd ${WRKSRC}; ${FIND} . -name \*.o -exec ${RM} {} \;)
 	(cd ${WRKSRC}; ${RM} config.cache)
 
 USE_GMAKE=	yes
