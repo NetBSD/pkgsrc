@@ -1,0 +1,275 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/28 00:02:06 rh Exp $
+share/GNUstep/Local/Applications/Calculator.app/Calculator
+share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.app.tiff
+share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.desktop
+share/GNUstep/Local/Applications/Calculator.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/Calculator.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/Calculator
+share/GNUstep/Local/Applications/Calculator.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/CurrencyConverter.app/CurrencyConverter
+share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/CurrencyConverter.desktop
+share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/CurrencyConverter.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/CurrencyConverter
+share/GNUstep/Local/Applications/CurrencyConverter.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/GSTest.app/GSTest
+share/GNUstep/Local/Applications/GSTest.app/Resources/GSTest.desktop
+share/GNUstep/Local/Applications/GSTest.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/GSTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/GSTest
+share/GNUstep/Local/Applications/GSTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/Ink.app/Ink
+share/GNUstep/Local/Applications/Ink.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/Ink.app/Resources/Ink.desktop
+share/GNUstep/Local/Applications/Ink.app/Resources/Ink_app.tiff
+share/GNUstep/Local/Applications/Ink.app/Resources/Ink_app_Tile.jpg
+share/GNUstep/Local/Applications/Ink.app/Resources/Readme.rtf
+share/GNUstep/Local/Applications/Ink.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/Ink
+share/GNUstep/Local/Applications/Ink.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/NSBrowserTest.app/NSBrowserTest
+share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/NSBrowserTest.desktop
+share/GNUstep/Local/Applications/NSBrowserTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSBrowserTest
+share/GNUstep/Local/Applications/NSBrowserTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/NSPanelTest.app/NSPanelTest
+share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/NSPanelTest.app/Resources/NSPanelTest.desktop
+share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Test.strings
+share/GNUstep/Local/Applications/NSPanelTest.app/Resources/icon.tiff
+share/GNUstep/Local/Applications/NSPanelTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSPanelTest
+share/GNUstep/Local/Applications/NSPanelTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Applications/NSScreenTest.app/NSScreenTest
+share/GNUstep/Local/Applications/NSScreenTest.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/NSScreenTest.app/Resources/NSScreenTest.desktop
+share/GNUstep/Local/Applications/NSScreenTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSScreenTest
+share/GNUstep/Local/Applications/NSScreenTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/Composite-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/Composite-test
+share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/CoordinateCheck-test
+share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/GSHbox-test
+share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/KeyboardInput-test
+share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSBox-test
+share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSColorList-test
+share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSColorWell-test
+share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSForm-test
+share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSOutlineView-test
+share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSSavePanel-test
+share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSScrollView-test
+share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSSecureTextField-test
+share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSSlider-test
+share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSSplitView-test
+share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSTableView-test
+share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSTextView-test
+share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/NSWindowStyleMask-test
+share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Contents/Info.plist
+share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Contents/Resources
+share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Resources/Info.plist
+share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/StringDrawing-test
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/StringDrawing-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSWindowStyleMask-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSTextView-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSTableView-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSSplitView-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSSlider-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSSecureTextField-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSScrollView-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSSavePanel-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSOutlineView-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSForm-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorWell-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSColorList-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/NSBox-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/KeyboardInput-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/GSHbox-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/ix86
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Resources
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Contents
+@dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle
+@dirrm share/GNUstep/Local/Applications/NSScreenTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/NSScreenTest.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/NSScreenTest.app/ix86
+@dirrm share/GNUstep/Local/Applications/NSScreenTest.app/Resources
+@dirrm share/GNUstep/Local/Applications/NSScreenTest.app
+@dirrm share/GNUstep/Local/Applications/NSPanelTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/NSPanelTest.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/NSPanelTest.app/ix86
+@dirrm share/GNUstep/Local/Applications/NSPanelTest.app/Resources
+@dirrm share/GNUstep/Local/Applications/NSPanelTest.app
+@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/ix86
+@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/Resources
+@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app
+@dirrm share/GNUstep/Local/Applications/Ink.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/Ink.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/Ink.app/ix86
+@dirrm share/GNUstep/Local/Applications/Ink.app/Resources
+@dirrm share/GNUstep/Local/Applications/Ink.app
+@dirrm share/GNUstep/Local/Applications/GSTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/GSTest.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/GSTest.app/ix86
+@dirrm share/GNUstep/Local/Applications/GSTest.app/Resources
+@dirrm share/GNUstep/Local/Applications/GSTest.app
+@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app/ix86
+@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app/Resources
+@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app
+@dirrm share/GNUstep/Local/Applications/Calculator.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Applications/Calculator.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/Local/Applications/Calculator.app/ix86
+@dirrm share/GNUstep/Local/Applications/Calculator.app/Resources
+@dirrm share/GNUstep/Local/Applications/Calculator.app
