@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/07 04:31:39 jtb Exp $
+
+--- port/master.mk.in.orig	Wed Feb  7 03:58:38 2001
++++ port/master.mk.in
+@@ -387,7 +387,7 @@
+ WHATIS		= @WHATIS@
+ # The following macro should be empty on systems that don't
+ # allow users to create their own manual-page indexes.
+-MAKEWHATIS_CMD	= @MAKEWHATIS_CMD@
++#MAKEWHATIS_CMD	= @MAKEWHATIS_CMD@
+ 
+ installed_manuals:	FORCE
+ 	@if [ -n "$(MANUALS)" ]; then \
