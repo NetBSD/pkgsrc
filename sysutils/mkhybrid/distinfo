@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:05 agc Exp $
 
-MD5 (mkhybrid-1.12b5.2.tar.gz) = 30de5a1cec363936f66bba0ba876fc65
+SHA1 (mkhybrid-1.12b5.2.tar.gz) = 589c7bd95df114c1555b448a3d0b8e2251120a91
+Size (mkhybrid-1.12b5.2.tar.gz) = 275364 bytes
 SHA1 (patch-aa) = a58c1fbfd1c5de48aef5c9b0d9f7b86b8b39a56b
 SHA1 (patch-ab) = 09a6b40b597f9ed9d541403aac248ba25a576b5e
 SHA1 (patch-ac) = 9873a62ca86dc43dbd541ffe19d6aecff77aabcc

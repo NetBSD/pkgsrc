@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:06 agc Exp $
 
-MD5 (psmisc-19.tar.gz) = 1d56ac6c32b657fdf8f780084b095932
+SHA1 (psmisc-19.tar.gz) = a0f6d1853453d1766832f18a63c39a29a3339c5c
+Size (psmisc-19.tar.gz) = 21552 bytes
 SHA1 (patch-aa) = 7ad490b731c33e146974c634040af0f8180d551c
 SHA1 (patch-ab) = eddb67ac994fbcf3c42babe25432f454b948a737
 SHA1 (patch-ac) = 831406ee351d5807ca6a3f10418302fceeda38fb

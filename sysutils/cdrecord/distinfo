@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:49:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:00 agc Exp $
 
-MD5 (cdrecord-1.9.tar.gz) = 0fa360d9280d16370d7738ec0b62affb
+SHA1 (cdrecord-1.9.tar.gz) = 3f77e9eda5cd0b20dd4e346d4d2f601bb1fbaf56
+Size (cdrecord-1.9.tar.gz) = 1191355 bytes
 SHA1 (patch-aa) = b0040675f8293558f3ec7b33f67a04878fe465dd
 SHA1 (patch-ab) = 206f1cd304a244e6ee207cea63d2d455a17d54f3
 SHA1 (patch-ac) = 654004620f2d3bfa3db68008e98304544887d509

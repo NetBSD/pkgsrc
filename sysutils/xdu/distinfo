@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:12 agc Exp $
 
-MD5 (xdu-3.0.tar.Z) = c23ed4176d7f795e184869f1e534dd91
+SHA1 (xdu-3.0.tar.Z) = 196e2ba03253fd6b8a88fafe6b00e40632183d0c
+Size (xdu-3.0.tar.Z) = 20114 bytes
 SHA1 (patch-aa) = 150fd287c83c67b5f52dc1a4b05ce2be20e8ecae
 SHA1 (patch-ab) = 1fc896ffc82b9259f2cd92b0b461bb3d3af785bf

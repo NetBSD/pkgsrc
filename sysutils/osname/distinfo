@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:46 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:06 agc Exp $
 
-MD5 (osname-1.1.tar.gz) = d3f47173ed173230200838577e65f6d3
+SHA1 (osname-1.1.tar.gz) = 4faefdd1b57412805342314b540d909a3289a8ba
+Size (osname-1.1.tar.gz) = 1531 bytes

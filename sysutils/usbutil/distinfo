@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:10 agc Exp $
 
-MD5 (usbutil-0.4.tar.gz) = 901bee1fd69f3375aa3aa6b6ae554822
+SHA1 (usbutil-0.4.tar.gz) = b64567b19cf55f1baba727ba57ad21c2cff27bc4
+Size (usbutil-0.4.tar.gz) = 11293 bytes

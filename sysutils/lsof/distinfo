@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:05 agc Exp $
 
-MD5 (lsof_4.55_W.tar.gz) = 6cb754acddc5b6e29ec82e5288e68d7f
+SHA1 (lsof_4.55_W.tar.gz) = b08f8c563c76d59a346e2ba9e778b327c6f087bb
+Size (lsof_4.55_W.tar.gz) = 824158 bytes

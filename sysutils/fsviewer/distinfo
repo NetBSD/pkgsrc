@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:02 agc Exp $
 
 SHA1 (fsviewer/FSViewer.app-0.2.3.tar.gz) = 2322d2443a7505748d5b452d366d6881c7a81110
+Size (fsviewer/FSViewer.app-0.2.3.tar.gz) = 203476 bytes
 SHA1 (fsviewer/icons.tar.gz) = 3553149133abebf526ba38795a07fa4d48fc6827
+Size (fsviewer/icons.tar.gz) = 475679 bytes
 SHA1 (patch-aa) = 32f1bc29dc57922b716a360c208be22a4c7aba54
 SHA1 (patch-ab) = 45ba0a57aff86cdbe95c46584597fbc0bd6961cc
 SHA1 (patch-ac) = df943e9b52f4cb00db6021c8a5bae73872f57cf8

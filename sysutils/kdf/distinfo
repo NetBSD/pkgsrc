@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:04 agc Exp $
 
-MD5 (kdf-0.5.1.tgz) = 9ef86199dc5af0a9d19c58bdbcbb06d4
+SHA1 (kdf-0.5.1.tgz) = 66f8fa8fde7ec9984e1c89d041df8a543ad06a74
+Size (kdf-0.5.1.tgz) = 193989 bytes
 SHA1 (patch-aa) = 5e1e76aa521c92ae80368a36940813ef1f184f67
 SHA1 (patch-ab) = 8f7fa93665371eda1448317cd12db2e68c49034e

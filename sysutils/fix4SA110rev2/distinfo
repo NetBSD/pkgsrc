@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:02 agc Exp $
 
-MD5 (fix4SA110rev2.c) = 9df0fdaac8e39126e865a2ebd9de0990
-MD5 (fix4SA110rev2.README) = 0bdb136e9d27f0334042725bdb5920d0
+SHA1 (fix4SA110rev2.c) = c7043743e482087322b4dce346649af5b221ae36
+Size (fix4SA110rev2.c) = 8170 bytes
+SHA1 (fix4SA110rev2.README) = 7ffd9c6dc9c311c4cc47d7544fb2e89961108f3a
+Size (fix4SA110rev2.README) = 2724 bytes
