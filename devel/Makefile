@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2004/12/29 12:59:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.591 2004/12/29 13:02:53 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -408,8 +408,6 @@ SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
-SUBDIR+=	p5-Spiffy
-SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
@@ -418,6 +416,8 @@ SUBDIR+=	p5-Schedule-RateLimiter
 SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-SortVersions
+SUBDIR+=	p5-Spiffy
+SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-ReadKey
@@ -448,6 +448,7 @@ SUBDIR+=	patchutils
 SUBDIR+=	pccts
 SUBDIR+=	pcl-cvs
 SUBDIR+=	pcre
+SUBDIR+=	pcre++
 SUBDIR+=	pedisassem
 SUBDIR+=	php-gettext
 SUBDIR+=	php-gmp
