@@ -1,0 +1,34 @@
+$NetBSD: patch-bc,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/config.h.in.orig	Fri May 14 11:30:37 2004
++++ src/config.h.in
+@@ -30,6 +30,9 @@
+ /* Do we have UnlockResource()? */
+ #undef HAS_UNLOCKRESOURCE
+ 
++/* Enable emulation for USB joysticks. */
++#undef HAS_USB_JOYSTICK
++
+ /* Define to 1 if you have the <allegro.h> header file. */
+ #undef HAVE_ALLEGRO_H
+ 
+@@ -134,6 +137,9 @@
+ /* Define to 1 if you have the `UMSobj' library (-lUMSobj). */
+ #undef HAVE_LIBUMSOBJ
+ 
++/* Define to 1 if you have the <libusbhid.h> header file. */
++#undef HAVE_LIBUSBHID_H
++
+ /* Is libXpm available? */
+ #undef HAVE_LIBXPM
+ 
+@@ -256,6 +262,9 @@
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the <usbhid.h> header file. */
++#undef HAVE_USBHID_H
++
+ /* Define to 1 if you have the `usleep' function. */
+ #undef HAVE_USLEEP
+ 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2004/07/16 22:59:11 kristerw Exp $
+$NetBSD: distinfo,v 1.14 2004/07/26 17:22:40 dillo Exp $
 
 SHA1 (vice-1.14.tar.gz) = 5f2c458533db0b41dd55732e9d9434275904ab29
 Size (vice-1.14.tar.gz) = 3794698 bytes
@@ -6,3 +6,13 @@ SHA1 (patch-aa) = fa152c1d14aad31c0b50fe96c83b4e5cfa06de5f
 SHA1 (patch-ab) = 0be2ec8b98a50e5c879095b1d0327c802b7740e2
 SHA1 (patch-ac) = bb648b8dc668a12540eab9f1be6374aab8cda35a
 SHA1 (patch-ae) = c2ede31953ebaf033c9ae1aa1985012fb0e5f3b6
+SHA1 (patch-ba) = 8f94dd31ef10ae2acc82ed721d71cc9eb7ff13d8
+SHA1 (patch-bb) = 15b84e9f7d20b8518ab77b8ae0765227a1ad7a5d
+SHA1 (patch-bc) = d34ddf4723b45a844fb6ab96b2924e117934f8f9
+SHA1 (patch-bd) = b2f4dca0a259cdb3ffed5ea86c955f47508cdeff
+SHA1 (patch-be) = ec8308214c51a50aa948cf064865cd8cd03ee7e3
+SHA1 (patch-bf) = e19994029b10c2403b53a575bbfb7523c2966ed2
+SHA1 (patch-bg) = 3a396e3cbeddd2c99beebd26bca30e233e89e009
+SHA1 (patch-bh) = 97396118e6abecd9dd464cdae7b918ea025f5f0f
+SHA1 (patch-bi) = 4d94fff17db834031df3b39148dcefac6f7bf968
+SHA1 (patch-bj) = b279df0c6d0700f42fe6cbd1811170171152bf49

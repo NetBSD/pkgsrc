@@ -1,0 +1,55 @@
+$NetBSD: patch-bj,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/arch/unix/joy.c.orig	Sun Dec 28 19:08:37 2003
++++ src/arch/unix/joy.c
+@@ -80,9 +80,9 @@ static const resource_t resources[] = {
+ 
+ static const cmdline_option_t cmdline_options[] = {
+     { "-joydev1", SET_RESOURCE, 1, NULL, NULL, "JoyDevice1", NULL,
+-      "<0-6>", N_("Set device for joystick port 1") },
++      "<0-8>", N_("Set device for joystick port 1") },
+     { "-joydev2", SET_RESOURCE, 1, NULL, NULL, "JoyDevice2", NULL,
+-      "<0-6>", N_("Set device for joystick port 2") },
++      "<0-8>", N_("Set device for joystick port 2") },
+     { NULL },
+ };
+ 
+@@ -135,7 +135,7 @@ static int joyxmax[2];
+ static int joyymin[2];
+ static int joyymax[2];
+ 
+-static log_t joystick_log = LOG_ERR;
++log_t joystick_log = LOG_ERR;
+ 
+ /* ------------------------------------------------------------------------- */
+ 
+@@ -148,6 +148,9 @@ int joy_arch_init(void)
+         old_joystick_init();
+     else
+         new_joystick_init();
++#ifdef HAS_USB_JOYSTICK
++    usb_joystick_init();
++#endif
+     return 0;
+ }
+ 
+@@ -157,6 +160,9 @@ void joystick_close(void)
+         old_joystick_close();
+     else
+         new_joystick_close();
++#ifdef HAS_USB_JOYSTICK
++    usb_joystick_close();
++#endif
+ }
+ 
+ void joystick(void)
+@@ -165,6 +171,9 @@ void joystick(void)
+         old_joystick();
+     else
+         new_joystick();
++#ifdef HAS_USB_JOYSTICK
++    usb_joystick();
++#endif
+ }
+ 
+ /**********************************************************
