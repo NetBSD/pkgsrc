@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2001/05/14 12:42:14 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/05/19 22:30:58 tron Exp $
 
-DISTNAME=       analog-5.0
+DISTNAME=       analog-5.01
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.web42.com/analog/ \
@@ -17,13 +17,14 @@ WRKDISTDIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${WRKDISTDIR}/src
 
 do-install:
+	${INSTALL_PROGRAM} ${WRKDISTDIR}/analog ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDISTDIR}/analog.man ${PREFIX}/man/man1/analog.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/analog \
 	  ${PREFIX}/lib/analog/lang \
 	  ${PREFIX}/lib/analog/images
 	${INSTALL_DATA} ${WRKDISTDIR}/docs/* ${PREFIX}/share/doc/analog
 	${INSTALL_DATA} ${WRKDISTDIR}/images/* ${PREFIX}/lib/analog/images
 	${INSTALL_DATA} ${WRKDISTDIR}/lang/* ${PREFIX}/lib/analog/lang
-	${INSTALL_PROGRAM} ${WRKDISTDIR}/analog ${PREFIX}/bin
 	${INSTALL_DATA} -m 644 ${WRKDISTDIR}/analog.cfg \
 	  ${PREFIX}/etc/analog.cfg.default
 	${TEST} -f ${PREFIX}/etc/analog.cfg || \
