@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/12/31 04:21:31 fredb Exp $
+$NetBSD: patch-aa,v 1.6 2002/05/04 17:06:49 fredb Exp $
 
---- configure.orig	Sun Nov 18 19:37:14 2001
+--- configure.orig	Tue Jan  1 19:30:08 2002
 +++ configure
-@@ -4296,7 +4296,7 @@
+@@ -4474,7 +4474,7 @@
    fi
    ;;
  esac
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2001/12/31 04:21:31 fredb Exp $
  cat >> confdefs.h <<\EOF
  #define SOCKS 1
  EOF
-@@ -5412,12 +5412,25 @@
+@@ -5590,12 +5590,25 @@
  echo "$ac_t""$cf_cv_screen" 1>&6
  
  case $cf_cv_screen in
@@ -28,13 +28,14 @@ $NetBSD: patch-aa,v 1.5 2001/12/31 04:21:31 fredb Exp $
  pdcurses)
  	cf_cv_ncurses_header=xcurses.h
  	;;
- curses)
+-#curses)
++curses)
 +	case $host_os in
 +	netbsd)
 +		ac_cv_header_term_h=no
 +		cf_cv_ncurses_version=no
 +		;;
 +	esac
- 	if eval "test \"`echo '$''{'cf_cv_ncurses_header'+set}'`\" != set"; then
- 		cf_cv_ncurses_header=curses.h
- 	fi
+ #	if eval "test \"`echo '$''{'cf_cv_ncurses_header'+set}'`\" != set"; then
+ #		cf_cv_ncurses_header=curses.h
+ #	fi

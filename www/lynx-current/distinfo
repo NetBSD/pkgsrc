@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/12/31 04:21:30 fredb Exp $
+$NetBSD: distinfo,v 1.4 2002/05/04 17:06:48 fredb Exp $
 
-SHA1 (lynx2.8.5dev.5.tar.bz2) = ecf83a7f0e6d89941d29faa2b6a6f6a51b0e1f46
-Size (lynx2.8.5dev.5.tar.bz2) = 1963309 bytes
-SHA1 (patch-aa) = 2efc89aee3297f1af1b0fe3214b2ae2b9c6d3a0c
-SHA1 (patch-ae) = ebd644a91ad08060baaf724d44bb03bb2f51a260
+SHA1 (lynx2.8.5dev.7.tar.bz2) = 8e9eb4bf11944c24517e99ec0ef76b203022c5fe
+Size (lynx2.8.5dev.7.tar.bz2) = 1966524 bytes
+SHA1 (patch-aa) = 8935e11ef53dc6a686b2fc19359aa2db7fffc226
+SHA1 (patch-ae) = 116b1a797f52b214c125dd362ed1161bab78313f

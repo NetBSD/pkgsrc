@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2001/12/31 19:50:21 fredb Exp $
+# $NetBSD: Makefile,v 1.38 2002/05/04 17:06:48 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.5dev.5
-PKGNAME=		lynx-2.8.5.0.5
+DISTNAME=		lynx2.8.5dev.7
+PKGNAME=		lynx-2.8.5.0.7
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/current/ \
