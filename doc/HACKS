@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.27 2004/08/16 13:10:24 dsainty Exp $
+# $NetBSD: HACKS,v 1.28 2004/09/07 14:31:04 jschauma Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -444,4 +444,19 @@ descr
 	coordinates.  Apparently an aliasing issue with automatic variables on
 	the stack and some fairly dodgy type casting.  The patch file contains
 	more details.
+kcah
+
+hack	libtool nawk line length problem
+cdate	Tue Sep  7 01:23:10 UTC 2004
+who	jschauma
+port	mipseb (IRIX)
+file	x11/gtk2/Makefile
+descr
+	If we're on IRIX and we're using gcc, then, apparently, we need gawk,
+	as otherwise the awk invocation in libtool breaks complaining about
+	the ``Input record [...] too long'' near the end of the build process.
+	Oddly this does not occur using the mipspro compiler.  Possible
+	reason: using gcc we have longer CFLAGS.  Fix:  add USE_GNU_TOOLS+=awk
+	iff IRIX and gcc.  Problem: this might affect other packages as well.
+	One might consider depending libtool on gawk for IRIX.
 kcah
