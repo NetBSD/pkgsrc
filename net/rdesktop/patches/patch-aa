@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/09/25 12:45:59 agc Exp $
+$NetBSD: patch-aa,v 1.1.1.2 2001/09/30 11:08:13 rh Exp $
 
---- Makefile.orig	Sat Sep 15 13:34:32 2001
-+++ Makefile	Tue Sep 25 13:37:46 2001
-@@ -6,12 +6,10 @@
+--- Makefile.orig	Sat Sep 15 22:34:32 2001
++++ Makefile	Tue Sep 25 17:10:37 2001
+@@ -6,10 +6,9 @@
  
  # Configuration defaults
  
@@ -13,7 +13,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/09/25 12:45:59 agc Exp $
 +INCLUDES = -I$(X11BASE)/include
 +LDLIBS   = -L$(X11BASE)/lib -R$(X11BASE)/lib -lX11
  
--PREFIX   = /usr/local
+ PREFIX   = /usr/local
  EPREFIX  = $(PREFIX)
- BINDIR   = $(EPREFIX)/bin
- MANDIR   = $(PREFIX)/man
