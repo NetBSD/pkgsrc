@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.594 2002/11/25 04:22:19 schmonz Exp $
+$NetBSD: CHANGES,v 1.595 2002/11/25 08:48:53 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3710,3 +3710,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cvs to 1.11.2 [hubertf 2002-11-24]
 	Updated bash to 2.05.2 [schmonz 2002-11-25]
 	Updated bash-doc to 2.05.2 [schmonz 2002-11-25]
+	Updated lynx to 2.8.4.1.4 [itojun 2002-11-25]
