@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.127 2000/03/18 19:55:24 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.128 2000/03/26 07:59:30 enami Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -261,6 +261,26 @@
 # Used by dt package to specify the keyboard layout.
 # Possible: US, FI, FR, GER, DV
 # Default: FI
+
+#EMACS_USE_POP
+# Used by emacs package to determine whether pop support is enabled or not.
+# Possible: yes, no
+# Default: yes
+
+#EMACS_USE_X
+# Used by emacs package to determine whether X support is enabled or not.
+# If defined, the value is directly passed as argument of --with-x.
+# If not defined, the configure script will configure automatically.
+# Possible: yes, no, not defined
+# Default: not defined
+
+#EMACS_USE_X_TOOLKIT
+# Used by emacs package to determine what kind of toolkit support is enabled.
+# If defined, the value is directly passed as argument of --with-x-toolkit.
+# If not defined or defined to yes, the configure script will pick up an
+# appropriate one.  E.g, if X11R5 or later is found, lucid will be used.
+# Possible: yes, no, not defined, athena, lucid, motif
+# Default: not defined
 
 #GLX_CHIPSET=
 # Used to select chipset to build "Mesa-glx" package for.  Either
