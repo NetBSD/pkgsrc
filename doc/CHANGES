@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1157 2003/01/18 09:41:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.1158 2003/01/18 10:51:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -322,3 +322,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated docbook-website to 2.3nb1 [grant 2003-01-18]
 	Updated disc-cover to 1.4.0nb1 [jmmv 2003-01-18]
 	Updated docbook-xml to 4.2nb3 [jmmv 2003-01-18]
+	Updated gtk2-engines to 2.2.0 [jmmv 2003-01-18]
