@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:26:53 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/15 07:56:44 rh Exp $
 
---- src/gftp.c.orig	Tue May  1 15:19:17 2001
-+++ src/gftp.c
-@@ -80,6 +80,23 @@
- static int remote_start, local_start, tools_start;
- static GtkItemFactoryEntry *menus;
+--- src/gtk/gftp-gtk.c.orig	Fri Mar 30 04:53:01 2001
++++ src/gtk/gftp-gtk.c
+@@ -68,6 +68,21 @@
+ pthread_mutex_t transfer_mutex = PTHREAD_MUTEX_INITIALIZER;
+ pthread_mutex_t log_mutex = PTHREAD_MUTEX_INITIALIZER;
  
 +#ifdef __NetBSD__
 +#include <gtk/gtk.h>
@@ -13,12 +13,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:26:53 rh Exp $
 +/*
 + * NetBSD uses non-preemptive pth, so we yield the processor periodically
 + */
-+
 +gint
 +pth_nbschedule (gpointer data)
 +{
 +	pthread_yield_np();
-+
 +	return TRUE;
 +}
 +#endif
@@ -26,13 +24,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:26:53 rh Exp $
  int
  main (int argc, char *argv[])
  {
-@@ -138,6 +155,10 @@
-   gftp_connect (window1.hdata->ftpdata);
+@@ -119,6 +134,10 @@
+     gftp_set_directory (window1.request, startup_directory);
+   gftp_connect (window1.request);
    ftp_list_files (&window1, 0);
-   update_ftp_info ();
 +
 +#ifdef __NetBSD__
-+	gtk_timeout_add (200, pth_nbschedule, NULL);
++  gtk_timeout_add (200, pth_nbschedule, NULL);
 +#endif
  
    gtk_main ();
