@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/01/05 19:26:21 jlam Exp $
+$NetBSD: patch-ai,v 1.10 2003/04/03 18:06:14 toshii Exp $
 
 --- src/interfaces/python/Setup.in.raw.orig	Sun Mar 25 14:44:04 2001
 +++ src/interfaces/python/Setup.in.raw
