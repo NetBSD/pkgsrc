@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/22 08:36:21 agc Exp $
+# $NetBSD: Makefile,v 1.15 2002/01/11 17:38:45 seb Exp $
 #
 
 DISTNAME=	gensolpkg-1.10
@@ -11,6 +11,7 @@ COMMENT=	Utility to generate a Solaris package
 ONLY_FOR_PLATFORM=	SunOS-*-*	# uses Solaris pkgmk(1)
 
 MAKE_ENV+=	CPPFLAGS="" CC="${CC}"
+MAKEFLAGS+=	PREFIX=${PREFIX}
 
 do-install:
 	cd ${WRKSRC} && ${MAKE} install PREFIX=${PREFIX}
