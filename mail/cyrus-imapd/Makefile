@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/09/25 21:48:17 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/15 21:30:36 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 CATEGORIES=		mail
@@ -66,8 +66,24 @@ PERL5_PACKLIST= \
 	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/acap/.packlist \
 	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
 
-post-extract:
-	cd ${WRKSRC}/man; ${MV} imapd.8 cyrus-imapd.8
+# Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
+# manpage conflicts with other packages.
+#
+post-patch:
+	cd ${WRKSRC}/man;						\
+	for man in deliver.8 imapd.8 master.8 pop3d.8; do		\
+		${MV} $${man} cyrus-$${man};				\
+		name=$${man%.*};					\
+		suffix=$${man##*.};					\
+		for file in *.[0-9]*; do				\
+			${SED} -e "s|\(\\fB\)\($${name}($${suffix})\)|\1cyrus-\2|g" \
+				$${file} > $${file}.fixed;		\
+			${MV} -f $${file}.fixed $${file};		\
+		done;							\
+		${SED} -e "s|\(\$$(srcdir)/\)\($${man}\)|\1cyrus-\2|g"	\
+			Makefile.in > Makefile.in.fixed;		\
+		${MV} -f Makefile.in.fixed Makefile.in;			\
+	done
 
 pre-install:
 	${SED}	-e "s,@AWK@,${AWK},g" \
