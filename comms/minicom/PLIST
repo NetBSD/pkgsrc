@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:31 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/04 23:47:28 jlam Exp $
 bin/ascii-xfr
 bin/minicom
 bin/runscript
 bin/xminicom
-etc/minicom/minicom.users
 man/man1/minicom.1
 man/man1/runscript.1
 man/man1/ascii-xfr.1
@@ -46,6 +45,7 @@ share/doc/minicom/tables/mc.iso
 share/doc/minicom/tables/mc.noconv
 share/doc/minicom/tables/mc.pc8
 share/doc/minicom/tables/mc.sf7
+share/examples/minicom/minicom.users
 share/locale/fi_FI/LC_MESSAGES/minicom.mo
 share/locale/fr/LC_MESSAGES/minicom.mo
 share/locale/ja/LC_MESSAGES/minicom.mo
@@ -53,7 +53,7 @@ share/locale/ja_JP.SJIS/LC_MESSAGES/minicom.mo
 share/locale/ko/LC_MESSAGES/minicom.mo
 share/locale/pl/LC_MESSAGES/minicom.mo
 share/locale/pt_BR/LC_MESSAGES/minicom.mo
+@dirrm share/examples/minicom
 @dirrm share/doc/minicom/tables
 @dirrm share/doc/minicom/demos
 @dirrm share/doc/minicom
-@unexec ${RM} -rf %D/etc/minicom
