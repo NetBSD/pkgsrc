@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2004/11/12 06:39:20 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2004/11/18 12:30:49 wiz Exp $
 
-DISTNAME=		guile-1.6.4
-PKGREVISION=		4
+DISTNAME=		guile-1.6.5
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -29,7 +28,7 @@ TEST_TARGET=		check
 CPPFLAGS+=		-Dmacosx
 
 post-patch:
-	@mv ${WRKSRC}/guile-config/guile-config.in.orig \
+	@${MV} ${WRKSRC}/guile-config/guile-config.in.orig \
 	    ${WRKSRC}/guile-config/guile-config.in
 .endif
 
