@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/26 00:01:32 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/26 00:48:51 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -28,7 +28,13 @@ LDFLAGS+=		-L${PREFIX}/lib
 INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
 
+GCC_VERSION!=	gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs) && !target(clean)
+IGNORE=		"cannot be built with egcs yet"
+.endif
+
 post-extract:
+	echo ${GCC_VERSION:C/-.*$$//}
 	${MKDIR} ${WRKDIR}/include
 	${LN} -s ${PREFIX}/include/ncurses.h ${WRKDIR}/include
 
@@ -45,3 +51,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.13/doc
 
 .include <../../mk/bsd.pkg.mk>
+
