@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/07/12 13:17:56 dillo Exp $
+# $NetBSD: Makefile,v 1.60 2003/07/17 21:30:43 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
 			${MASTER_SITE_GNOME:=sources/glib/1.2/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/doc/API/glib/index.html
 COMMENT=		Some useful routines for C programming
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/10/20 04:19:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/07/17 21:28:25 grant Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -12,7 +12,7 @@ PGSQL_SITES=		http://www.postgresql.org/ftpsite/ \
 			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
 MASTER_SITES?=		${PGSQL_SITES:=source/v${DIST_VERS}/}
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://odbc.postgresql.org/
 
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*

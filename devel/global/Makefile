@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/06/23 11:00:22 seb Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:30:45 grant Exp $
 #
 
 DISTNAME=	global-4.5
 CATEGORIES=	devel
 MASTER_SITES=   http://www.tamacom.com/global/
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.tamacom.com/global/
 COMMENT=	Source code tag system including web browser output
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/30 17:41:04 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:26:25 grant Exp $
 #
 
 DISTNAME=	tzc-2.6.15
 CATEGORIES=	chat net
 MASTER_SITES=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/
 
-MAINTAINER=	sommerfeld@netbsd.org
+MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/zephyr.html
 COMMENT=	Back-end program for zephyr-mode
 

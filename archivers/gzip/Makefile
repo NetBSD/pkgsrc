@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:21:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:21:17 grant Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	The "meta-package" for the GZIP compression utility
 

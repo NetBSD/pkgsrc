@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:21:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:21:41 grant Exp $
 
 DISTNAME=       unarj-2.43
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.arjsoftware.com/
 COMMENT=	Allows files to be extracted from ARJ archives
 

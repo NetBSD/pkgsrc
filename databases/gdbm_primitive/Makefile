@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:28:06 grant Exp $
 #
 
 DISTNAME=	gdbm-prim-1.15
@@ -9,7 +9,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://homepage.mac.com/leffert/.cv/leffert/Public/
 EXTRACT_SUFX=	.tar.gz-link.gz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://homepage.mac.com/leffert/FileSharing.html
 COMMENT=	Shell primitives for working with GDBMs
 

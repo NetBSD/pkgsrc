@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/12/28 21:22:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:22:03 grant Exp $
 
 DISTNAME=		dap-2.1.2
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.cee.hw.ac.uk/~richardk/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		scw@netbsd.org
+MAINTAINER=		scw@NetBSD.org
 HOMEPAGE=		http://www.cee.hw.ac.uk/~richardk/
 COMMENT=		Digital audio recording and processing package
 

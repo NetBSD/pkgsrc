@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:50:42 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:25:09 grant Exp $
 #
 
 DISTNAME=	ipal-20001210
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/ipal/snapshots/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.icarus.com/eda/ipal/index.html
 COMMENT=	Libs and utils for manipulating PAL designs (development version)
 

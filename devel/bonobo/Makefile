@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/07/13 13:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2003/07/17 21:29:42 grant Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bonobo/1.0/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Architecture for creating reusable software components
 

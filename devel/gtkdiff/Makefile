@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:31:00 grant Exp $
 #
 
 DISTNAME=	gtkdiff-1.8.0
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/index-e.html
 COMMENT=	diff front-end program using GNOME
 

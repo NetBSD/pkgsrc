@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:20:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:30:30 grant Exp $
 
 DISTNAME=	fortran-utils-1.1
 WRKSRC=		${WRKDIR}/fortran-utils
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Utilities for Fortran programmers
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

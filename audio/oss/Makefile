@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/26 23:04:24 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:23:05 grant Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	audio sysutils
 MASTER_SITES=	ftp://ftp.opensound.com/pub/oss/netbsd/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.opensound.com/oss.html
 COMMENT=	Open Sound System(TM) soundcard driver
 
