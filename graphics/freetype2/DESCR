@@ -6,4 +6,4 @@ engine, as the project is now switching to a new version dubbed FreeType
  * A universal and simple API to manage font files
  * Support for several font formats through loadable drivers
  * Even more portable
- * An improved anti-aliased algorithm
+ * An improved anti-aliasing algorithm
