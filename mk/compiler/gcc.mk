@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.15 2004/02/03 04:09:27 jlam Exp $
+# $NetBSD: gcc.mk,v 1.16 2004/02/03 05:14:03 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -86,7 +86,7 @@ _NEED_GCC3=	yes
 .  endif
 .endfor
 
-.if defined(_NEED_GCC2)
+.if !empty(_NEED_GCC2:M[yY][eE][sS])
 #
 # We require gcc-2.x in the lang/gcc directory.
 #
@@ -99,14 +99,15 @@ _LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
 .  if !empty(PKGPATH:Mlang/gcc)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
-.  elif !empty(_LANGUAGES.gcc)
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .    if !empty(_LANGUAGES.gcc:Mc++)
 USE_GCC_SHLIB?=		yes
 .    endif
 .  endif
-.elif defined(_NEED_GCC3)
+.elif !empty(_NEED_GCC3:M[yY][eE][sS])
 #
 # We require gcc-3.x in the lang/gcc3-* directories.
 #
@@ -117,16 +118,22 @@ _LANGUAGES.gcc=		# empty
 _LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
 .  endfor
 .  if !empty(PKGPATH:Mlang/gcc3-c)
-_IGNORE_GCC3C=		yes
-MAKEFLAGS+=		_IGNORE_GCC3C=yes
-.  elif !empty(_LANGUAGES.gcc:Mc)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc)
 _GCC_PKGSRCDIR=		../../lang/gcc3-c
 _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
 .  endif
+.endif
+_GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
+
+.if defined(_NEED_GCC3)
 .  if !empty(PKGPATH:Mlang/gcc3-c++)
 _IGNORE_GCC3CXX=	yes
 MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
-.  elif !empty(_LANGUAGES.gcc:Mc++)
+.  endif
+.  if !defined(_IGNORE_GCC3CXX) && !empty(_LANGUAGES.gcc:Mc++)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-c++
 _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
 USE_GCC_SHLIB?=		yes
@@ -134,15 +141,15 @@ USE_GCC_SHLIB?=		yes
 .  if !empty(PKGPATH:Mlang/gcc3-f77)
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
-.  elif !empty(_LANGUAGES.gcc:Mfortran)
+.  endif
+.  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 USE_GCC_SHLIB?=		yes
 .  endif
 .endif
-_GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
 
-.if defined(_IGNORE_GCC) || defined(_IGNORE_GCC3C)
+.if defined(_IGNORE_GCC)
 _USE_PKGSRC_GCC=	NO
 .endif
 
