@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/02/08 00:13:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/02/08 06:24:12 jlam Exp $
 #
 # This Makefile fragment is included by packages that use unproven-pthreads.
 #
@@ -22,15 +22,8 @@ DEPENDS+=	${BUILDLINK_DEPENDS.unproven-pthreads}:../../devel/unproven-pthreads
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.unproven-pthreads=unproven-pthreads
 BUILDLINK_PREFIX.unproven-pthreads_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.unproven-pthreads=		pthreads/bin/*
-BUILDLINK_FILES.unproven-pthreads+=		pthreads/include/*.h
-BUILDLINK_FILES.unproven-pthreads+=		pthreads/include/*/*.h
-BUILDLINK_FILES.unproven-pthreads+=		pthreads/lib/*
 
-BUILDLINK_TARGETS.unproven-pthreads=	unproven-pthreads-buildlink
-BUILDLINK_TARGETS+=			${BUILDLINK_TARGETS.unproven-pthreads}
-
-pre-configure: ${BUILDLINK_TARGETS.unproven-pthreads}
-unproven-pthreads-buildlink: _BUILDLINK_USE
+CC=		${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/bin/pgcc
+CXX=		${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/bin/pg++
 
 .endif	# UNPROVEN_PTHREADS_BUILDLINK_MK
