@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2004/04/24 04:56:17 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2004/05/02 20:05:53 jmmv Exp $
 
-DISTNAME=		glib-2.4.0
+DISTNAME=		glib-2.4.1
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.4/ \
@@ -33,7 +32,7 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
@@ -57,6 +56,11 @@ SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
 SUBST_MESSAGE.thr=	"Fixing libgthread."
 
 .endif
+
+# Handle directories shared with devel/glib.
+PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
+				{ print "@unexec $${RMDIR} %D/" $$2 \
+				  " 2>/dev/null || $${TRUE}"; next; }
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
