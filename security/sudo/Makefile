@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/09/13 13:24:48 kim Exp $
+# $NetBSD: Makefile,v 1.17 1999/09/13 13:30:45 kim Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -25,11 +25,11 @@ CONFIGURE_ARGS+=--with-skey
 CONFIGURE_ARGS+=--without-skey
 .endif
 
-.ifdef ${USE_KERBEROS4}
+.if defined(USE_KERBEROS4)
 CONFIGURE_ARGS+=--with-kerb4
 .endif
 
-.ifdef ${USE_KERBEROS5}
+.if defined(USE_KERBEROS5)
 CONFIGURE_ARGS+=--with-kerb5
 .endif
 
