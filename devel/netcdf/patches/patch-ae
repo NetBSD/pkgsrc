@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- fortran/Makefile.orig	Sun Sep 27 19:52:28 1998
++++ fortran/Makefile	Sun Sep 27 19:56:28 1998
+@@ -68,7 +68,7 @@
+ #
+ 
+ 
+-all:		$(LIBRARY) $(MANUAL)
++all:		$(LIB_OBJS) $(MANUAL)
+ 
+ test:		ftest FORCE
+ 	./ftest
