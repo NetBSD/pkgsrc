@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.darwin,v 1.1 2002/11/23 00:52:49 schmonz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.1 2002/12/25 12:35:04 grant Exp $
 lib/python2.2/lib-dynload/MacOS.so
 lib/python2.2/lib-dynload/Nav.so
 lib/python2.2/lib-dynload/_AE.so
