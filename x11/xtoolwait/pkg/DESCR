@@ -1,0 +1,5 @@
+Xtoolwait notably decreases the startup time of your X
+sessions, provided that you start a number of X clients
+automatically during the X session startup.
+Xtoolwait starts one X client in the background,
+waits until it has mapped a window and then exits.
