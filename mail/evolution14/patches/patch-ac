@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- shell/main.c.orig	2003-05-19 21:41:05.000000000 +0200
++++ shell/main.c
+@@ -91,6 +91,22 @@ static gboolean killev = FALSE;
+ 
+ extern char *evolution_debug_log;
+ 
++#if defined(__NetBSD__) && defined(_PTH_PTHREAD_H_)
++#include <gtk/gtk.h>
++
++/*
++ * Pth is non-preemptive, so we yield the processor periodically
++ */
++
++static gint
++pth_nbschedule (gpointer data)
++{
++	sched_yield();
++
++	return TRUE;
++}
++#endif /* _PTH_PTHREAD_H_ && __NetBSD__ */
++
+ 
+ static GtkWidget *
+ quit_box_new (void)
+@@ -374,6 +390,10 @@ idle_cb (void *data)
+ 	else
+ 		startup_line_mode = E_SHELL_STARTUP_LINE_MODE_OFFLINE;
+ 
++#ifdef _PTH_PTHREAD_H_
++	sched_yield();
++#endif
++
+ 	shell = e_shell_new (evolution_directory, ! no_splash, startup_line_mode, &result);
+ 	g_free (evolution_directory);
+ 
+@@ -634,6 +654,10 @@ main (int argc, char **argv)
+ 
+ 	gtk_idle_add (idle_cb, uri_list);
+ 
++#ifdef _PTH_PTHREAD_H_
++	gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
++
+ 	bonobo_main ();
+ 
+ 	return 0;
