@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/05/05 23:51:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/06/27 08:50:29 hubertf Exp $
 #
 
 DISTNAME=	nidentd-1.0
 CATEGORIES=	net sysutils
-MASTER_SITES=	ftp://ftp.arhea.net/pub/NetBSD/nidentd/
+MASTER_SITES=	ftp://ftp.tgr.lubin.edu.pl/pub/NetBSD/nidentd/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
