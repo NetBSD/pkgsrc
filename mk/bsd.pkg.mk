@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.43 2003/08/29 00:53:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.44 2003/08/29 02:06:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -95,12 +95,18 @@ INTERACTIVE_STAGE?=	none
 PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
 .endif
 
+.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
+PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
+.endif
+
 # The style of PLISTs that are used by the installed package.
 # Possible: dynamic, static
 #
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PLIST_TYPE?=		dynamic
 .elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+PLIST_TYPE?=		static
+.else
 PLIST_TYPE?=		static
 .endif
 
