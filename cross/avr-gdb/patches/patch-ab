@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2003/10/21 14:19:37 wennmach Exp $
+
+*** gdb/avr-tdep.c.org	Sun Oct 12 02:35:53 2003
+--- gdb/avr-tdep.c	Sun Oct 12 02:58:30 2003
+***************
+*** 480,485 ****
+--- 480,488 ----
+  	prologue_end = fi->pc;
+        else if (sal.end < prologue_end)	/* next line begins after fn end */
+  	prologue_end = sal.end;	/* (probably means no prologue)  */
++ 
++       /* Check that we don't use a prologue larger then AVR_MAX_PROLOGUE_SIZE */
++       prologue_end = min (prologue_end, prologue_start + AVR_MAX_PROLOGUE_SIZE);
+      }
+    else
+      /* We're in the boondocks: allow for */
