@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.4 2000/09/01 20:16:59 veego Exp $
+$NetBSD: md5,v 1.5 2001/02/08 16:23:06 tron Exp $
 
-MD5 (inn-2.2.3.tar.gz) = 0c0f71d79cc2b4fbd5bad4a7f093f53f
+MD5 (inn-2.3.1.tar.gz) = 2032f076fb18f5fa87c8b763e83fbdd4
+MD5 (inn-2.3.1-v6-20010204.diff.gz) = f4c8fa7f290cf4ba9d5ac465e366a0ff
