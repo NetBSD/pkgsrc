@@ -3,7 +3,7 @@
 # Date created:		April 2, 1997
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.ORG>
 #
-# $NetBSD: Makefile,v 1.2 1998/02/17 15:37:40 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/18 11:50:33 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -91,7 +91,7 @@ post-install:
 	fi
 	@/usr/sbin/chown -R ${PGUSER}:${PGUSER} ${PREFIX}/pgsql
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
-	@${LDCONFIG} -m ${PREFIX}/pgsql/lib
+	@${LDCONFIG} -m ${PREFIX}/pgsql/lib || ${TRUE}
 	@${ECHO} '${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data' | su -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/pgsql.sh
