@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/27 13:32:16 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/10 13:55:09 salo Exp $
 #
 
 DISTNAME=	psify-19980216
@@ -16,6 +16,7 @@ EXTRACT_ONLY=	#empty
 
 NO_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	lex
 
 INSTALL_TARGET=	install prefix=${PREFIX}
 
