@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 1998/11/12 00:44:39 tron Exp $
+# $NetBSD: Makefile,v 1.30 1998/11/29 16:34:27 frueauf Exp $
 #
 
 DISTNAME=	ghostscript-5.50
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
 		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
-		ftp://bonk.ethz.ch/gs-driver-distrib/ \
+		http://www.erdw.ethz.ch/~bonk/ftp/gs-driver-distrib/ \
 		http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 		${HP850_DRV} ${PDF_SEC}
@@ -37,8 +37,8 @@ GS_SOURCES+=	ghostscript-5.50gnu.tar.gz
 GS_FONTS_STD=	ghostscript-fonts-std-5.10a.tar.gz
 GS_FONTS_OTHER=	ghostscript-fonts-other-5.10.tar.gz
 
-# Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
-HP850_DRV=	hp850.zip
+# Additional driver HP 850, see http://www.erdw.ethz.ch/~bonk/hp850/hp850.html
+HP850_DRV=	hp8xxs13.zip
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=	pdf_sec.ps
@@ -59,7 +59,7 @@ SCRIPT_SUFFIX=	.batch
 
 post-extract:
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
-	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
+	cd ${WRKSRC} && unzip -uLa ${DISTDIR}/${HP850_DRV}
 	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
 
 do-configure:
