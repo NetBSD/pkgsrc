@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+$NetBSD: patch-ac,v 1.2 2003/05/26 06:53:09 martti Exp $
 
---- acconfig.h.orig	Sun Oct 27 14:12:42 2002
-+++ acconfig.h	Sun Oct 27 14:12:46 2002
-@@ -202,6 +202,9 @@
+--- acconfig.h.orig	2003-02-13 21:55:48.000000000 +0200
++++ acconfig.h	2003-05-21 09:11:26.000000000 +0300
+@@ -205,6 +205,9 @@
  /* do we use doors for IPC? */
  #undef USE_DOORS
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
  @BOTTOM@
  
  /* Create a struct iovec if we need one */
-@@ -217,7 +220,9 @@
+@@ -220,7 +223,9 @@
  #endif
  
  /* location of the random number generator */
