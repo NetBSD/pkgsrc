@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2003/03/09 19:28:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.54 2003/03/17 17:31:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-5.06
+DISTNAME=       xlockmore-5.07
 CATEGORIES=	x11
-PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,9 +32,8 @@ XLOCK_NO_DPMS=	YES
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-#USE_GMAKE=	yes
-DEFINES=	-DDEFAULT_SOUND_DIR='\"${PREFIX}/lib/X11/xlock/sounds/\"' \
-		-DDEF_MODULEPATH='\"lib/X11/xlock/modules\"'
+DEFINES=	-DDEFAULT_SOUND_DIR=\"${PREFIX}/lib/X11/xlock/sounds/\" \
+		-DDEF_MODULEPATH=\"lib/X11/xlock/modules\"
 CC+=		${DEFINES}
 CXX+=		${DEFINES}
 
