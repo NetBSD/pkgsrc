@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1 1998/11/11 11:42:57 agc Exp $
+
+Read papersize from a config file, rather than using a compiled-in default.
+
+--- psnup.c	1998/11/11 09:37:52	1.1
++++ psnup.c	1998/11/11 10:25:45
+@@ -22,6 +22,8 @@
+  *		-f	for flipped (wider than tall) pages
+  * 		-d<wid>	to draw the page boundaries
+  */
++#include <sys/types.h>
++#include <sys/param.h>
+ 
+ #include "psutil.h"
+ #include "psspec.h"
+@@ -79,13 +81,21 @@
+    double iwidth, iheight ;			/* input paper size */
+    double tolerance = 100000;			/* layout tolerance */
+    Paper *paper;
++   char	papersize[BUFSIZ];
+ 
+ #ifdef PAPER
+-   if ( (paper = findpaper(PAPER)) != (Paper *)0 ) {
++#if (defined(BSD) && BSD >= 199306)
++   if (!readconfig(papersize, sizeof(papersize))) {
++	(void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++   }
++#else
++   (void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++#endif /* BSD */
++   if ( (paper = findpaper(papersize)) != (Paper *)0 ) {
+       width = (double)PaperWidth(paper);
+       height = (double)PaperHeight(paper);
+    }
+-#endif
++#endif /* PAPER */
+ 
+    margin = border = vshift = hshift = column = flip = 0;
+    leftright = topbottom = 1;

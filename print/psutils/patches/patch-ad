@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1 1998/11/11 11:42:58 agc Exp $
+
+Read papersize from a config file, rather than using a compiled-in default.
+
+--- pstops.c	1998/11/11 09:37:52	1.1
++++ pstops.c	1998/11/11 10:27:21
+@@ -7,6 +7,8 @@
+  * Usage:
+  *       pstops [-q] [-b] [-d] [-w<dim>] [-h<dim>] [-ppaper] <pagespecs> [infile [outfile]]
+  */
++#include <sys/types.h>
++#include <sys/param.h>
+ 
+ #include "psutil.h"
+ #include "psspec.h"
+@@ -118,13 +120,21 @@
+    int nobinding = 0;
+    double draw = 0;
+    Paper *paper;
++   char papersize[BUFSIZ];
+ 
+ #ifdef PAPER
+-   if ( (paper = findpaper(PAPER)) != (Paper *)0 ) {
++#if (defined(BSD) && BSD >= 199306)
++   if (!readconfig(papersize, sizeof(papersize))) {
++	(void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++   }
++#else
++   (void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++#endif /* BSD */
++   if ( (paper = findpaper(papersize)) != (Paper *)0 ) {
+       width = (double)PaperWidth(paper);
+       height = (double)PaperHeight(paper);
+    }
+-#endif
++#endif /* PAPER */
+ 
+    infile = stdin;
+    outfile = stdout;
