@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/15 12:39:12 kei Exp $
+bin/minivmac
+share/doc/html/minivmac/about.html
+share/doc/html/minivmac/build.html
+share/doc/html/minivmac/credits.html
+share/doc/html/minivmac/license.html
+share/doc/html/minivmac/todo.html
+share/doc/html/minivmac/autoquit.html
+share/doc/html/minivmac/contents.html
+share/doc/html/minivmac/default.html
+share/doc/html/minivmac/manual.html
+@dirrm share/doc/html/mminivmac
