@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/02/19 02:05:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2000/06/27 08:17:46 tron Exp $
 #
 
 DISTNAME=       xosview-1.7.0.b
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=   http://www.ece.utexas.edu/~bgrayson/xosview/ \
 		http://lore.ece.utexas.edu/~bgrayson/xosview/
 
-MAINTAINER=	bgrayson@ece.utexas.edu
+MAINTAINER=	bgrayson@netbsd.org
 HOMEPAGE=	http://lore.ece.utexas.edu/~bgrayson/xosview.html
 
 HAS_CONFIGURE=	yes
