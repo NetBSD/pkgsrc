@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2004/08/06 02:09:38 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2004/08/31 08:21:47 jmmv Exp $
 #
 
-DISTNAME=		pango-1.4.0
-PKGREVISION=		1
+DISTNAME=		pango-1.4.1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.4/ \
@@ -31,13 +30,23 @@ PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-qt=no
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+
+# XXX: Set up compatibility links for pango-1.4.0; this is just a workaround
+# for our broken libtool naming, and it should be removed when our libtool
+# is fixed.
+post-install:
+.for f in pango pangoft2 pangox pangoxft
+	cd ${PREFIX}/lib && ${LN} -fs lib${f}-1.0.so.400 lib${f}-1.0.so.399
+	cd ${PREFIX}/lib && ${LN} -fs lib${f}-1.0.so.400.1 lib${f}-1.0.so.399.1
+.endfor
+.undef f
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
