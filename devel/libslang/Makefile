@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2000/06/05 00:56:04 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/22 12:13:47 mjl Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
-DISTNAME=      	slang-1.4.1
+DISTNAME=      	slang-1.4.2
 PKGNAME=       	lib${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=  	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
