@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2001/12/23 17:02:31 bjoern Exp $
+$NetBSD: patch-ac,v 1.3 2004/03/08 19:55:35 minskim Exp $
 
---- tclUnixInit.c.orig	Fri Aug 24 19:13:22 2001
+--- tclUnixInit.c.orig	Mon Nov 10 07:41:58 2003
 +++ tclUnixInit.c
-@@ -22,6 +22,11 @@
+@@ -28,6 +28,11 @@
  #	include <dlfcn.h>
  #   endif
  #endif
@@ -14,9 +14,9 @@ $NetBSD: patch-ac,v 1.2 2001/12/23 17:02:31 bjoern Exp $
  
  /*
   * The Init script (common to Windows and Unix platforms) is
-@@ -550,6 +555,11 @@
+@@ -717,6 +722,11 @@ TclpSetVariables(interp)
      int unameOK;
-     char *user;
+     CONST char *user;
      Tcl_DString ds;
 +#if defined(__NetBSD__)
 +    char machine_arch[SYS_NMLN];
@@ -24,9 +24,9 @@ $NetBSD: patch-ac,v 1.2 2001/12/23 17:02:31 bjoern Exp $
 +    size_t len = sizeof(machine_arch);
 +#endif
  
-     Tcl_SetVar(interp, "tclDefaultLibrary", defaultLibraryDir, TCL_GLOBAL_ONLY);
-     Tcl_SetVar(interp, "tcl_pkgPath", pkgPath, TCL_GLOBAL_ONLY);
-@@ -585,8 +595,16 @@
+ #ifdef HAVE_CFBUNDLE
+     char tclLibPath[MAXPATHLEN + 1];
+@@ -819,8 +829,16 @@ TclpSetVariables(interp)
  	    Tcl_SetVar2(interp, "tcl_platform", "osVersion", name.release,
  		    TCL_GLOBAL_ONLY|TCL_APPEND_VALUE);
  	}
