@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/04 14:57:55 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/12 11:09:48 drochner Exp $
 
 DISTNAME=	LocalFS-1-0-0
 PKGNAME=	zope25-LocalFS-1.0.0
@@ -10,5 +10,5 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.zope.org/Members/jfarr/Products/LocalFS
 COMMENT=	local file access for zope
 
-.include "../../www/zope25/product.buildlink.mk"
+.include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"
