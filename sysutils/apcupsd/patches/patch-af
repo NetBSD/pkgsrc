@@ -1,17 +1,28 @@
-$NetBSD: patch-af,v 1.3 2002/01/03 14:31:09 wiz Exp $
+$NetBSD: patch-af,v 1.4 2002/12/01 22:32:27 bouyer Exp $
 
---- Makefile.in.orig	Thu Jul 29 09:46:32 1999
-+++ Makefile.in
-@@ -13,7 +13,7 @@
- 
- # Ultrix 2.2 make doesn't expand the value of VPATH.
- srcdir = @srcdir@
--libdir = @libdir@/apcupsd
-+#libdir = @libdir@/apcupsd
- VPATH = @srcdir@
+--- Makefile.in.orig	Fri Jan  4 10:08:33 2002
++++ Makefile.in	Sun Dec  1 15:54:19 2002
+@@ -29,18 +29,12 @@
+ #
+ # this is a list of all subdirectories that contain or could contain Makefiles
+ #
+-subdirs = . @INTLSUB@ @POSUB@ cgi doc lib contrib distributions \
+-   distributions/debian distributions/engarde \
+-   distributions/freebsd distributions/hpux distributions/openbsd \
+-   distributions/redhat \
+-   distributions/slackware distributions/sun distributions/suse \
+-   distributions/unifix distributions/netbsd distributions/caldera win32
++subdirs = . @INTLSUB@ @POSUB@ cgi doc lib contrib 
  
  CC = @CC@
-@@ -67,6 +67,8 @@
+ 
+ # For some losing Unix makes.
+ SHELL = /bin/sh
+-MAKE = make
+ 
+ CFLAGS = @CFLAGS@   @PTHREAD_CFLAGS@
+ LDFLAGS = @LDFLAGS@ @PTHREAD_LFLAGS@
+@@ -66,6 +60,8 @@
  
  # Program to install `make'.
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -20,54 +31,62 @@ $NetBSD: patch-af,v 1.3 2002/01/03 14:31:09 wiz Exp $
  # Program to install the man page.
  INSTALL_DATA = @INSTALL_DATA@
  # Generic install program.
-@@ -113,15 +115,15 @@
- 	ar rcs $(apclib) $(libobjs)
- 	$(RANLIB) $(apclib)
- 
--apcupsd: $(dobjs) $(apclib) @INTLLIBS@
-+apcupsd: $(dobjs) $(apclib)
- 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(dobjs) $(apclib) $(LOADLIBS) \
- 		-o apcupsd
- 
--apcaccess: $(aobjs) $(apclib) @INTLLIBS@
-+apcaccess: $(aobjs) $(apclib)
- 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(aobjs) $(apclib) $(LOADLIBS) \
- 		-o apcaccess
- 
--powerflute: $(fobjs) $(apclib) @INTLLIBS@
-+powerflute: $(fobjs) $(apclib)
- 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(fobjs) $(apclib) $(LOADLIBS) \
- 		-o powerflute
- 
-@@ -134,11 +136,10 @@
- dummy:
- 
- .c.o:
--	$(CC) $(defines) -c $(CPFLAGS) -I$(srcdir) -I$(srcdir)/include -I$(srcdir)/lib @INTLINCLUDE@ $(CEFLAGS) $(CFLAGS) $<
-+	$(CC) $(defines) -c $(CPFLAGS) -I$(srcdir) -I$(srcdir)/include -I$(srcdir)/lib @INTLINCLUDE@ $(CEFLAGS) $(CFLAGS) -o $@ $<
- 
- # For some losing Unix makes.
- SHELL = /bin/sh
--MAKE = make
- 
- tagsrcs = $(srcs)
- TAGS: $(tagsrcs)
-@@ -159,15 +160,15 @@
- 
- install-apcupsd:
- 	@echo "Creating installation directories..." 
--	$(SHELL) ${srcdir}/mkinstalldirs $(sbindir) $(mandir) $(libdir)
-+	$(SHELL) ${srcdir}/mkinstalldirs $(sbindir) $(mandir)
+@@ -209,7 +205,7 @@
+ 		$(SHELL) ${srcdir}/scripts/mkinstalldirs $(sysconfdir); \
+ 		chmod 755 $(sysconfdir); \
+ 	fi;
+-	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(sbindir) $(mandir)
++	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(sbindir) $(mandir) $(prefix)/share/examples/apcupsd
  	@echo "Installing apcupsd binary..."
- 	$(INSTALL_PROGRAM) ./apcupsd $(sbindir)/apcupsd
- 	@echo "Installing apcaccess binary..."
- 	$(INSTALL_PROGRAM) ./apcaccess $(sbindir)/apcaccess
- 	@echo "Installing powersc script..."
--	$(INSTALL_PROGRAM) installs/powersc $(sbindir)/powersc
-+	$(INSTALL_SCRIPT) installs/powersc $(sbindir)/powersc
- 	@echo "Installing manual page..."
+ 	@strip $(srcdir)/apcupsd $(srcdir)/apcaccess
+ 	@strip $(srcdir)/apcnisd $(srcdir)/apctest
+@@ -221,31 +217,16 @@
+ 	@echo "Installing apctest binary..."
+ 	$(INSTALL_PROGRAM) $(srcdir)/apctest $(sbindir)/apctest
+ 	@echo "Installing apccontrol script..."
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/distributions/$(DISTNAME)/apccontrol.sh $(sysconfdir)/apccontrol
++	$(INSTALL_SCRIPT) $(srcdir)/distributions/$(DISTNAME)/apccontrol.sh $(prefix)/share/examples/apcupsd/apccontrol
+ 	@echo "Installing manual pages..."
 -	$(INSTALL_DATA) $(srcdir)/doc/apcupsd.man $(mandir)/apcupsd.$(manext)
 +	$(INSTALL_DATA) $(srcdir)/doc/apcupsd.$(manext) $(mandir)/apcupsd.$(manext)
  	@echo "Installing language catalogs..."
  	@POMAKE@ install
+-# don't overwrite any existing config file
+-	echo "Installing apcupsd.conf..."; \
+-	if [ -f $(srcdir)/distributions/$(DISTNAME)/apcupsd.conf ]; then \
+-		srcconf=$(srcdir)/distributions/$(DISTNAME)/apcupsd.conf; \
+-	else \
+-		srcconf=etc/apcupsd.conf; \
+-	fi; \
+-	if test -f $(sysconfdir)/apcupsd.conf; then \
+-		dstconf=apcupsd.conf.new; \
+-		echo "	found old apcupsd.conf, installing new conf file as $$dstconf"; \
+-	else \
+-		dstconf=apcupsd.conf; \
+-	fi; \
+-	echo "$(INSTALL_DATA) $$srcconf $(sysconfdir)/$$dstconf"; \
+-	$(INSTALL_PROGRAM) -m 644 $$srcconf $(sysconfdir)/$$dstconf
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/etc/changeme $(sysconfdir)
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/etc/commfailure $(sysconfdir)
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/etc/commok $(sysconfdir)
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/etc/onbattery $(sysconfdir)
+-	$(INSTALL_PROGRAM) -m 744 $(srcdir)/etc/mainsback $(sysconfdir)
++	$(INSTALL_SCRIPT) $(srcdir)/etc/changeme $(prefix)/share/examples/apcupsd
++	$(INSTALL_SCRIPT) $(srcdir)/etc/commfailure $(prefix)/share/examples/apcupsd
++	$(INSTALL_SCRIPT) $(srcdir)/etc/commok $(prefix)/share/examples/apcupsd
++	$(INSTALL_SCRIPT) $(srcdir)/etc/onbattery $(prefix)/share/examples/apcupsd
++	$(INSTALL_SCRIPT) $(srcdir)/etc/mainsback $(prefix)/share/examples/apcupsd
  
+ 
+ install-apcupsdwin32: apcupsd
+@@ -254,10 +235,6 @@
+ 	 
+ 
+ install-distdir:
+-	@if test @WIN32@x != win32x; then \
+-	   (cd $(srcdir)/distributions/$(DISTNAME); \
+-		$(MAKE) "DISTVER=$(DISTVER)" install); \
+-	fi
+ 
+ install-cgi:
+ 	@CGIMAKE@ install

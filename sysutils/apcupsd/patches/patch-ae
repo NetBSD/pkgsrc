@@ -1,61 +1,27 @@
-$NetBSD: patch-ae,v 1.2 2000/08/05 07:31:19 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2002/12/01 22:32:27 bouyer Exp $
 
---- configure.in.orig	Thu Jul 29 03:46:32 1999
-+++ configure.in	Sat Aug  5 02:52:40 2000
-@@ -17,23 +17,28 @@
- dnl Check for local host architecture.
- dnl
- AC_CANONICAL_HOST		dnl Check for host type.
+--- autoconf/configure.in.orig	Fri Dec 14 16:09:12 2001
++++ autoconf/configure.in	Sun Dec  1 15:42:34 2002
+@@ -57,13 +57,6 @@
+   if test x$sysconfdir = x'${prefix}/etc' ; then
+      sysconfdir='/etc/apcupsd'
+   fi
+-
 -dnl
-+
-+
-+AC_PROG_CC			dnl Determine a C compiler to use.
-+AC_LANG_C
-+
-+dnl Try to get a POSIX.1 environment
-+AC_AIX
-+AC_MINIX
-+AC_ISC_POSIX
-+
+-dnl If the user has not set -sbindir, we set our default as /sbin
+-dnl
+-  if test x$sbindir = x'${exec_prefix}/sbin' ; then
+-     sbindir='/sbin'
+-  fi
+ fi
+ 
  dnl
- dnl	Check for programs.
- dnl
--AC_PROG_CC			dnl Determine a C compiler to use.
- AC_PROG_CPP			dnl Determine a C pre-processor to use.
- AC_PROG_CC_C_O			dnl Determine if C compiler support -c -o.
- AC_PROG_GCC_TRADITIONAL		dnl Determine if ioctl() need -traditional.
- AC_PROG_INSTALL			dnl Determine a BSD install program.
+@@ -155,7 +148,7 @@
+ AC_SUBST(UTILPROGS)
  
  dnl Now check for programs
--AC_PATH_PROGS(SHUTDOWN, shutdown shutdown.bsd,
--				[echo 'ERROR: shutdown program not found !'])
--AC_PATH_PROGS(RANLIB, ranlib true,
--				[echo 'ERROR: ranlib program not found !'])
--AC_PATH_PROGS(WALL, wall,
--				[echo 'ERROR: wall program not found !'])
-+AC_PATH_PROGS(SHUTDOWN, shutdown shutdown.bsd, shutdown, $PATH:/sbin:/usr/sbin)
-+AC_PATH_PROGS(RANLIB, ranlib, true)
-+AC_PATH_PROGS(WALL, wall, cat)
- 
- dnl	Check for libraries.
- dnl
-@@ -112,6 +117,7 @@
-              
- AC_CHECK_FUNC(getopt_long, AC_DEFINE(HAVE_GETOPTLONG),
-     [EXTRASRC="$EXTRASRC \$(srcdir)/lib/getopt.c \$(srcdir)/lib/getopt1.c"
-+     CPPFLAGS="-Ilib"
-      EXTRAOBJ="$EXTRAOBJ lib/getopt.o lib/getopt1.o"])
- 
- dnl
-@@ -172,11 +178,6 @@
- AC_SYS_LONG_FILE_NAMES		dnl Check for long file names.
- AC_SYS_RESTARTABLE_SYSCALLS	dnl Check interrupted syscalls will restart.
- dnl
--dnl
--dnl UNIX variants
--AC_AIX				dnl Check for aix.
--AC_ISC_POSIX			dnl Check for isc.
--AC_MINIX			dnl Check for minix.
- dnl
- dnl
- dnl	Check for enable particular features.
+-AC_PATH_PROGS(SHUTDOWN, shutdown shutdown.bsd, no)
++AC_PATH_PROGS(SHUTDOWN, shutdown shutdown.bsd, no, $PATH:/sbin:/usr/sbin)
+ if test "$SHUTDOWN" = "no"
+ then
+ 	if test "$ac_cv_cygwin" = no
