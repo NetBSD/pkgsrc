@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/01/27 11:05:05 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/29 21:28:26 jmmv Exp $
 #
 
 DISTNAME=	docbook-xsl-1.60.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
@@ -14,12 +15,15 @@ DEPENDS=	docbook-xml>=4.2:../../textproc/docbook-xml
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 NO_PATCH=	YES
+USE_BUILDLINK2=	YES
 
 DOCDIR=		${PREFIX}/share/doc/docbook-xsl
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 XSLDIR=		${PREFIX}/share/xsl/docbook
 XSLMODS=	common extensions fo html htmlhelp images javahelp \
 		lib manpages params profiling tools xhtml
+
+XML_CATALOGS=	${XSLDIR}/catalog
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -33,5 +37,7 @@ do-install:
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/; \
 	done
+	${INSTALL_DATA} ${FILESDIR}/catalog ${XSLDIR}/catalog
 
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
