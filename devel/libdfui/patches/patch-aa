@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/02/20 00:33:18 xtraeme Exp $
+
+--- Makefile.orig	2005-02-20 01:23:24.000000000 +0100
++++ Makefile	2005-02-20 01:23:35.000000000 +0100
+@@ -20,7 +20,7 @@
+ .endif
+ 
+ .if ${OSTYPE} == "NetBSD"
+-NOGCCERROR=D
++NOLINT=yes
+ CPPFLAGS=${CFLAGS}
+ SHLIBDIR=/usr/local/lib
+ USE_SHLIBDIR=yes
