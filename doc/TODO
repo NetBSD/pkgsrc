@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2698 2004/12/05 23:40:20 recht Exp $
+$NetBSD: TODO,v 1.2699 2004/12/06 00:29:08 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ Suggested package updates
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
 	o generator-0.35
-	o getmail-4.2.4
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
