@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/08/11 06:24:19 rh Exp $
+# $NetBSD: Makefile,v 1.23 1999/09/21 09:58:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
@@ -18,7 +18,7 @@
     SUBDIR += pilotmgr
     SUBDIR += plp
     SUBDIR += plptools
-#    SUBDIR += qpage
+    SUBDIR += qpage
 #    SUBDIR += rzsz
 #    SUBDIR += seyon
     SUBDIR += snooper
