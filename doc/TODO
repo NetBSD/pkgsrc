@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3285 2005/03/23 22:59:41 wiz Exp $
+$NetBSD: TODO,v 1.3286 2005/03/23 23:15:12 markd Exp $
 
 Suggested new packages
 ======================
@@ -560,7 +560,6 @@ Suggested package updates
 	o jpilot-0.99.7 [pkg/24635]
 	o kajaani-kombat-0.6.6.6
 	o kapooka-0.3
-	o kde-3.4 [markd]
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmess-1.3
