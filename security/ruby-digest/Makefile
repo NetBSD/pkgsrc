@@ -1,28 +1,23 @@
-# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/27 14:43:13 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}digest-${RUBY_VERSION}
-PKGREVISION=	2
+PKGNAME=	${RUBY_PKGPREFIX}-digest-${RUBY_VERSION}
 CATEGORIES=	security ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.ruby-lang.org/en/
+HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby extension to message digest library
 
-CONFLICTS=	${RUBY_PKGNAMEPREFIX}md5-[0-9]*
-
-DISTINFO_FILE=	${RUBY_DISTINFO}
-
-WRKSRC=		${RUBY_WRKSRC}/ext/digest
-DIST_SUBDIR=	ruby
-RUBY_REQD=	1.6.6
-EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/digest
-USE_RUBY_EXTCONF= yes
+USE_BUILDLINK3=		yes
+USE_RUBY_EXTCONF=	yes
+DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 RUBY_EXTCONF_SUBDIRS=	. md5 rmd160 sha1 sha2
-REPLACE_RUBY=	test.rb
-RUBY_DOCS=	digest.txt digest.txt.ja
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/digest
+WRKSRC=			${RUBY_WRKSRC}/ext/digest
+
+RUBY_DOCS=		digest.txt digest.txt.ja
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/digest
@@ -30,5 +25,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${RUBY_DOCDIR}/digest
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
