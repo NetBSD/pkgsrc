@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3344 2005/03/31 21:52:03 seb Exp $
+$NetBSD: TODO,v 1.3345 2005/03/31 23:26:21 seb Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ Suggested package updates
 	o p5-Math-MatrixReal-1.9
 	o p5-Math-Pari-2.010603
 	o p5-Module-Build-0.2609
-	o p5-Module-CoreList-1.98
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
 	o p5-Net-CIDR-0.15
