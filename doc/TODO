@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.710 2003/07/12 12:24:44 wiz Exp $
+$NetBSD: TODO,v 1.711 2003/07/12 14:54:09 salo Exp $
 
 Suggested new packages
 ======================
@@ -206,7 +206,6 @@ Suggested package updates
 	o pnm2ppa-1.12 [pkg/21667]
 	o povray-3.5
 	o proftpd-1.2.9rc1
-	o pureftpd-1.0.15 [pkg/21941]
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o rdiff-backup-0.12.0 [pkg/22095]
