@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4554 2004/01/22 14:25:32 adam Exp $
+$NetBSD: CHANGES,v 1.4555 2004/01/22 15:18:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added quake3server-ut-3.0 [xtraeme 2004-01-22]
 	Removed xmule [jmmv 2004-01-22]
 	Updated gle to 3.1.0 [adam 2004-01-22]
+	Updated swish-e to 2.4.1 [xtraeme 2004-01-22]

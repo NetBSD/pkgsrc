@@ -1,23 +1,34 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:28:00 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/22 15:17:07 xtraeme Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
-DISTNAME=       swish-efiles.1.3.2
-PKGNAME=        swish-e-1.3.2
+DISTNAME=       swish-e-2.4.1
 CATEGORIES=     www textproc
-MASTER_SITES=   ftp://sunsite.berkeley.edu/pub/swish-e/
+MASTER_SITES=	http://swish-e.org/Download/
 
-MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE= 	http://sunsite.berkeley.edu/SWISH-E/
+MAINTAINER=	dotz@irc.pl
+HOMEPAGE= 	http://swish-e.org/
 COMMENT= 	Simple web indexing for humans - enhanced
 
-WRKSRC=		${WRKDIR}/src
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE=   ${WRKSRC}/libtool
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/swish-e ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/swish-e
-	${INSTALL_DATA} ${WRKSRC}/user.config ${PREFIX}/share/examples/swish-e
-	${INSTALL_DATA} ${WRKSRC}/test.html ${PREFIX}/share/examples/swish-e
-	${INSTALL_DATA} ${WRKSRC}/swishspider ${PREFIX}/share/examples/swish-e
-	${INSTALL_DATA} ${WRKSRC}/README-SWISH-E ${PREFIX}/share/examples/swish-e
+CONFIGURE_ARGS+=    --with-libxml2=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=    --with-pcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=    --with-zlib=${BUILDLINK_PREFIX.zlib}
+
+REPLACE_PERL=	    prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=	LIBSWISH_E="@comment "
+.else
+PLIST_SUBST+=	LIBSWISH_E=
+.endif
+
+.include "../../devel/pcre/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
