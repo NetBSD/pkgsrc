@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1608 2003/03/10 13:07:24 skrll Exp $
+$NetBSD: CHANGES,v 1.1609 2003/03/10 13:16:14 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1017,3 +1017,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bonnie++ to 1.03a [wiz 2003-03-10]
 	Updated iozone to 3.161 [wiz 2003-03-10]
 	Updated wonka to 0.9.5 [skrll 2003-03-10]
+	Deleted jikes112 since the current version of jikes can be used with
+		wonka [skrll 2003-03-10]
