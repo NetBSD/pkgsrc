@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/12/21 18:17:09 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2001/04/07 19:00:10 jtb Exp $
 
 --- etc/Makefile.conf.orig	Sun Mar  5 01:37:06 2000
 +++ etc/Makefile.conf
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.3 2000/12/21 18:17:09 skrll Exp $
 -AR		= ar
 -CC		= gcc
 -CCOPTS		= -O3 -g
-+CCOPTS		= -O3 -ansi
++CCOPTS		= -O2
  CONTRIBDIR	= none
  CONTRIBFLAGS	= 
 -CPP		= /lib/cpp
