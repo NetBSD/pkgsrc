@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/22 15:25:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/09/02 05:03:23 cjs Exp $
 
-SHA1 (xlhtml.0.5.1.tgz) = b399bca7eadb908f636df0012eadaa18d9e00513
-Size (xlhtml.0.5.1.tgz) = 263933 bytes
+SHA1 (xlhtml-0.5.tgz) = b661e061feb72282dbbe80d1dfe09ce08b44ce25
+Size (xlhtml-0.5.tgz) = 271045 bytes
