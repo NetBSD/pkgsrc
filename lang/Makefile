@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2004/06/04 16:35:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.180 2004/06/29 02:59:31 xtraeme Exp $
 #
 
 COMMENT=	Programming languages
@@ -91,6 +91,7 @@ SUBDIR+=	ocaml
 SUBDIR+=	onyx
 SUBDIR+=	oo2c
 SUBDIR+=	openc++
+SUBDIR+=	opencobol
 SUBDIR+=	p2c
 SUBDIR+=	parrot
 SUBDIR+=	perl5
