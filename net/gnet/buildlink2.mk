@@ -1,37 +1,21 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:10:18 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/04/15 12:19:17 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnet.
-#
-# This file was created automatically using createbuildlink 2.1.
 #
 
 .if !defined(GNET_BUILDLINK2_MK)
 GNET_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnet
-BUILDLINK_DEPENDS.gnet?=		gnet>=1.1.7nb1
+BUILDLINK_DEPENDS.gnet?=		gnet>=2.0.0
 BUILDLINK_PKGSRCDIR.gnet?=		../../net/gnet
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnet=gnet
 BUILDLINK_PREFIX.gnet_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gnet+=	include/gnet/conn.h
-BUILDLINK_FILES.gnet+=	include/gnet/gnet.h
-BUILDLINK_FILES.gnet+=	include/gnet/inetaddr.h
-BUILDLINK_FILES.gnet+=	include/gnet/iochannel.h
-BUILDLINK_FILES.gnet+=	include/gnet/mcast.h
-BUILDLINK_FILES.gnet+=	include/gnet/md5.h
-BUILDLINK_FILES.gnet+=	include/gnet/pack.h
-BUILDLINK_FILES.gnet+=	include/gnet/server.h
-BUILDLINK_FILES.gnet+=	include/gnet/sha.h
-BUILDLINK_FILES.gnet+=	include/gnet/socks.h
-BUILDLINK_FILES.gnet+=	include/gnet/tcp.h
-BUILDLINK_FILES.gnet+=	include/gnet/udp.h
-BUILDLINK_FILES.gnet+=	include/gnet/unix.h
-BUILDLINK_FILES.gnet+=	include/gnet/url.h
-BUILDLINK_FILES.gnet+=	lib/gnet/include/gnetconfig.h
-BUILDLINK_FILES.gnet+=	lib/libgnet-1.1.*
-BUILDLINK_FILES.gnet+=	lib/libgnet.*
-BUILDLINK_FILES.gnet+=	lib/pkgconfig/gnet.pc
+BUILDLINK_FILES.gnet+=	include/gnet-2.0/*.h
+BUILDLINK_FILES.gnet+=	lib/gnet-2.0/include/gnetconfig.h
+BUILDLINK_FILES.gnet+=	lib/libgnet-2.0.*
+BUILDLINK_FILES.gnet+=	lib/pkgconfig/gnet-2.0.pc
 
 .include "../../devel/glib2/buildlink2.mk"
 
