@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/02 07:19:20 xtraeme Exp $
+
+--- src/main.c.orig	Tue Jul 15 14:58:26 2003
++++ src/main.c	Tue Jul 15 14:58:55 2003
+@@ -38,6 +38,10 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
++#if HAVE_SETLOCALE
++	#include <locale.h>
++#endif
++
+ #if defined (G_OS_UNIX)
+  
+  #include <signal.h>
