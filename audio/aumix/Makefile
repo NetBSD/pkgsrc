@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/31 02:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/08 14:35:13 wiz Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -13,14 +13,20 @@ HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
+USE_CURSES=	yes
+REPLACE_NCURSES=	${WRKSRC}/configure ${WRKSRC}/src/curses.h \
+			${WRKSRC}/src/gpm-xterm.h
 USE_LIBINTL=	yes
-
-CFLAGS+=        -I${WRKSRC}/src -I${LOCALBASE}/include
 
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS= --enable-own-labels
+
+.include "../../mk/bsd.pkg.mk"
+
+.if ${NEED_NCURSES} == "YES"
+CFLAGS+=        -I${WRKSRC}/src -I${LOCALBASE}/include
+.endif
 
 .include "../../mk/bsd.pkg.mk"
