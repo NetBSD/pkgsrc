@@ -1,15 +1,10 @@
-# $NetBSD: modules.mk,v 1.5 2005/03/08 16:31:02 tv Exp $
+# $NetBSD: modules.mk,v 1.6 2005/03/24 19:20:43 tv Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
 
 .include "../../lang/ruby/rubyversion.mk"
-
-.if empty(USE_BUILDLINK3:M[nN][oO])
 .include "../../lang/ruby/buildlink3.mk"
-.elif !empty(RUBY_NOVERSION:M[nN][oO])
-DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
-.endif
 
 CONFIGURE_ENV+=		RUBY=${RUBY} RDOC=${RDOC}
 
