@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/05/02 23:07:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/05/12 22:25:04 tron Exp $
 @option preserve
 bin/pgs
 bin/tkpod
@@ -646,7 +646,6 @@ lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Tk/Xlib/Xlib.bs
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Tk/Xlib/Xlib.so
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Tk/pTk/extralibs.ld
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Tk/.packlist
-lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/perllocal.pod
 man/man1/tkweb.1.gz
 @dirrm lib/perl5/site_perl/Tk/DragDrop
 @dirrm lib/perl5/site_perl/Tk/HTML
