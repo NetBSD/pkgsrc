@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 14:39:15 xtraeme Exp $
+bin/gzrecover
