@@ -1,12 +1,12 @@
-$NetBSD: patch-al,v 1.4 2003/07/28 10:06:49 seb Exp $
+$NetBSD: patch-al,v 1.5 2004/04/17 16:56:10 seb Exp $
 
---- tcldgr/Makefile.am.orig	2003-06-04 17:12:53.000000000 +0000
-+++ tcldgr/Makefile.am
-@@ -23,7 +23,7 @@ libtcldgr_la_LIBADD = \
+--- tclpathplan/Makefile.am.orig	2003-11-08 11:38:10.000000000 +0000
++++ tclpathplan/Makefile.am
+@@ -23,7 +23,7 @@ libtclplan_la_SOURCES = find_ints.c inte
+ libtclplan_la_LIBADD = \
  	$(top_builddir)/tclhandle/libtclhandle.la \
- 	$(top_builddir)/agraph/libagraphconvenience.la \
- 	$(top_builddir)/cdt/libcdtconvenience.la \
--        $(top_builddir)/tclstubs/libtclstubs.la
+ 	$(top_builddir)/pathplan/libpathplanconvenience.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
 +	${TCL_STUB_LIB_SPEC}
  
  all-local: pkgIndex.tcl
