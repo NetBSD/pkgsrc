@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/27 20:55:44 tv Exp $
 
---- Makefile.in.orig	Sun Apr 16 02:04:02 2000
-+++ Makefile.in	Thu May 11 13:56:05 2000
-@@ -158,8 +158,8 @@
+--- Makefile.in.orig	Tue Jan  6 00:42:09 2004
++++ Makefile.in
+@@ -142,8 +142,8 @@ LN = @LN@
  CP = cp
  MV = mv
  SED = sed
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
  
  VERSION = @VERSION@
  
-@@ -178,11 +178,9 @@
+@@ -164,11 +164,9 @@ installbin: installirc installio install
  
  installirc: irc installdirs
  	$(INSTALL) irc $(INSTALL_IRC)-$(VERSION)
@@ -27,3 +27,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
  
  installscript: installdirs
  	(								\
+@@ -219,7 +217,7 @@ installman:
+ #	$(INSTALL_DATA) $(topdir)/doc/query-pr.1 $(mandir)
+ 
+ installdirs:
+-	umask 022; $(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
++	$(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
+ 		$(TRANS_PATH) $(INSTALL_SCRIPT) $(HELP_DIR)
+ 
+ clena clean:
