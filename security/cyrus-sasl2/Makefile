@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/11/14 22:21:13 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/23 14:44:53 chris Exp $
 
 DISTNAME=		cyrus-sasl-2.1.9
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		csasl
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -26,7 +26,8 @@ CYRUS_GROUP?=		mail
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
-SASLSOCKETDIR=		/var/run/sasl
+# /var/run/saslauthd matches the default value in configure.
+SASLSOCKETDIR=		/var/run/saslauthd
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 PLIST_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 
