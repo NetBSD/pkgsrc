@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2004/03/06 00:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2004/03/08 12:23:36 kristerw Exp $
 #
 
 COMMENT=	Games
@@ -78,7 +78,7 @@ SUBDIR+=	gnome-chess
 SUBDIR+=	gnome-games
 SUBDIR+=	gnome2-games
 SUBDIR+=	gnuchess
-SUBDIR+=	gnuchess-book-chess
+SUBDIR+=	gnuchess-book
 SUBDIR+=	gnuchess-book-medium
 SUBDIR+=	gnuchess-book-small
 SUBDIR+=	gnuchess4
