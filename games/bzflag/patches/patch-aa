@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/24 12:49:10 blymn Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/13 10:32:53 xtraeme Exp $
 
---- Makefile.orig	Sun Sep 22 22:24:02 2002
-+++ Makefile
-@@ -33,6 +33,7 @@ AVAILTARGETS =		\
- 	linux-ppc	\
- 	solaris-cc	\
- 	solaris-gcc	\
-+	netbsd		\
- 	$(NULL)
+--- include/common.h.orig	2003-12-13 10:38:57.000000000 +0100
++++ include/common.h	2003-12-13 10:41:43.000000000 +0100
+@@ -45,7 +45,7 @@
+ #endif
  
- config-sys:
-@@ -42,6 +43,7 @@ config-sys:
- 	@echo "  make linux"
- 	@echo "  make linux-i386"
- 	@echo "  make linux-ppc"
-+	@echo "  make netbsd"
- 	@echo "  make solaris-cc"
- 	@echo "  make solaris-gcc"
- 	@echo "  make win32"
+ // Might we be BSDish? sys/param.h has BSD defined if so
+-#if (defined(__unix__) || defined(unix) || defined(__APPLE__)) && !defined(USG)
++#if defined(__APPLE__) || !defined(USG)
+ #include <sys/param.h>
+ #endif
+ 

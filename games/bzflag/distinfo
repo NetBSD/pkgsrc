@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.2 2003/09/25 02:38:12 jschauma Exp $
+$NetBSD: distinfo,v 1.3 2003/12/13 10:32:53 xtraeme Exp $
 
-SHA1 (bzflag-1.7e6.tgz) = 283a5f4eae87c43a1a7772e9ca40048df0e84bda
-Size (bzflag-1.7e6.tgz) = 2428811 bytes
-SHA1 (patch-aa) = b96af1e1a6a5ecbf1cde1007fc4fd06f7d005c42
-SHA1 (patch-ab) = 54414bd84630f3af19a4401d0342495553275cde
-SHA1 (patch-ac) = 81d06903bd4e7cf433b070562647069247c04b8a
-SHA1 (patch-ad) = 1393333c31a1be69a8a24f7d18e01539651356f8
-SHA1 (patch-ae) = 9c6f5df5f85c5aa8dcd12506bd7129dfbac38acf
-SHA1 (patch-af) = e604489f687ba6858ed7916eed9f63e2d068929b
-SHA1 (patch-ag) = e5f539e70cfb527d0faa05bfe2afb777242df6bb
-SHA1 (patch-ah) = c997a123696e7a26ef8f39950f8bea4a7eaf6ebc
-SHA1 (patch-ai) = 50bfe81735a71abb69b203272d28312a93c0eaaf
-SHA1 (patch-aj) = 2c88ce8add674a9a28d686bd5f7b1d2958f3084f
-SHA1 (patch-ak) = abdef8fe4c4efe622540b3f2da0b6153dbf5cdab
-SHA1 (patch-al) = 586abdf3c690162adb861a00147038bdce4b5543
-SHA1 (patch-am) = f82c2fa9ad22beec209e789ecb463caf58272004
+SHA1 (bzflag-1.10.20031209.tar.gz) = 3bf7fb071707075f9a7a681fe5ae9e03c17a08ec
+Size (bzflag-1.10.20031209.tar.gz) = 3352632 bytes
+SHA1 (patch-aa) = 05df40eb0fbb7dbab583434f25709cb815469393
+SHA1 (patch-ab) = 4c5cf621c5f66768b61669087373e74233d179ab
+SHA1 (patch-ac) = 808f1065b64478248337e84785518d03d230c96b
+SHA1 (patch-ad) = 896097e7cc29c8d186751c299857730be196b228
+SHA1 (patch-ae) = 2b20b1f46510e66c5ac33415af15e25e9acffc8d

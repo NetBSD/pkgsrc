@@ -1,123 +1,22 @@
-$NetBSD: patch-ab,v 1.2 2003/09/25 02:38:13 jschauma Exp $
+$NetBSD: patch-ab,v 1.3 2003/12/13 10:32:53 xtraeme Exp $
 
---- configs/config-netbsd.orig	Mon Sep 23 15:26:33 2002
-+++ configs/config-netbsd
-@@ -0,0 +1,118 @@
-+# bzflag
-+# Copyright (c) 1993 - 2002 Tim Riker
-+#
-+# This package is free software;  you can redistribute it and/or
-+# modify it under the terms of the license found in the file
-+# named LICENSE that should have accompanied this file.
-+#
-+# THIS PACKAGE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
-+# IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
-+# WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-+
-+#
-+# configuration for generic netbsd
-+#
-+CONFIG	= netbsd
-+
-+#
-+# use XF86 vidmode extension (comment out to disable)
-+#
-+XF86VIDMODE_DEF = -DXF86VIDMODE_EXT
-+XF86VIDMODE_LIB = -lXxf86vm
-+
-+#
-+# use XInput extension for joystick support (comment out to disable)
-+#
-+JOYSTICK_DEF = -DXIJOYSTICK
-+JOYSTICK_LIB = -lXi
-+
-+#
-+# accumulate extension definitions and libs
-+#
-+XEXT_DEF = $(XF86VIDMODE_DEF) $(JOYSTICK_DEF)
-+XEXT_LIB = $(XF86VIDMODE_LIB) $(JOYSTICK_LIB)
-+
-+#
-+# install locations
-+#
-+INSTALL_DATA_DIR = $(X11PREFIX)/share/bzflag
-+
-+#
-+# tools
-+#
-+AR	= /usr/bin/ar cru
-+CC	= /usr/bin/gcc
-+CXX	= /usr/bin/g++
-+CD	= cd
-+CP	= /bin/cp
-+LD	= /usr/bin/ld
-+MKDIR	= /bin/mkdir
-+NROFF	= /usr/bin/nroff
-+RM	= /bin/rm -f
-+RMR	= $(RM) -r
-+SHELL	= /bin/sh
-+ECHO	= echo
-+
-+#
-+# compiler definitions
-+#
-+PCDEFS   = -D_BSD_SOURCE -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED -DHALF_RATE_AUDIO $(XEXT_DEF)
-+PCXXDEFS = -D_BSD_SOURCE -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED -DHALF_RATE_AUDIO $(XEXT_DEF)
-+
-+#
-+# compiler options
-+#
-+PCOPTS   = -Wall -W -ansi $(ACOPTS)
-+PCXXOPTS = -Wall -W -fno-exceptions -fno-rtti $(ACXXOPTS)
-+COPT     = -DNDEBUG -O2
-+CXXOPT   = -DNDEBUG -O2 -ffast-math -fomit-frame-pointer -fnonnull-objects \
-+		-fexpensive-optimizations
-+CDEBUG   = -DDEBUG -g
-+CXXDEBUG = -DDEBUG -g
-+CWOFF    =
-+CXXWOFF  =
-+
-+#
-+# search paths
-+#
-+PCINCS   = -I/usr/include -I$(X11BASE)/include
-+PCXXINCS = -I/usr/include -I$(X11BASE)/include
-+
-+#
-+# linker options
-+#
-+PLDOPTS  = -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib
-+
-+#
-+# dirt
-+#
-+PDIRT    = *.[eou] a.out core ar.tmp.*
-+
-+#
-+# libraries
-+#
-+AUDIO_LIBS =				\
-+	$(NULL)
-+
-+DISPLAY_LIBS =				\
-+	$(NULL)
-+
-+GL_LIBS =				\
-+	-lGLU				\
-+	-lGL				\
-+	$(NULL)
-+
-+IMAGE_LIBS =				\
-+	$(NULL)
-+
-+NETWORK_LIBS =				\
-+	$(NULL)
-+
-+WINDOW_LIBS =				\
-+	$(XEXT_LIB)			\
-+	-lXext				\
-+	-lX11				\
-+	-lossaudio			\
-+	-lm				\
-+	$(NULL)
-+
+--- include/network.h.orig	2003-12-13 10:57:47.000000000 +0100
++++ include/network.h	2003-12-13 10:58:05.000000000 +0100
+@@ -46,7 +46,7 @@
+ #include <netinet/tcp.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
+-#if defined(_old_linux_) || (!defined(__linux__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__APPLE__) && !defined(macintosh) && !defined(__BEOS__))
++#if defined(_old_linux_) || (!defined(__linux__) && !defined(sun) && !defined(BSD) && !defined(__APPLE__) && !defined(macintosh) && !defined(__BEOS__))
+ #include <bstring.h>
+ #endif
+ 
+@@ -72,7 +72,7 @@
+ #define SSOType		void*
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(sun)
++#if defined(BSD) || defined(sun)
+ #define AddrLen		socklen_t
+ #endif
+ 
