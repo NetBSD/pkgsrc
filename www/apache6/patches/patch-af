@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.3 2001/02/06 10:58:18 itojun Exp $
+
+--- src/modules/standard/mod_so.c.orig	Tue Jan 16 02:05:49 2001
++++ src/modules/standard/mod_so.c	Tue Feb  6 19:42:56 2001
+@@ -305,7 +305,15 @@
+         return err;
+     }
+     
+-    file = ap_server_root_relative(cmd->pool, filename);
++    /*
++     * If the filename starts with '!', then just dlopen() it without
++     * translating it to a pathname relative to ServerRoot.
++     */
++    if (filename[0] == '!') {
++	file = filename + 1;
++    } else {
++	file = ap_server_root_relative(cmd->pool, filename);
++    }
+     
+     if (!(handle = ap_os_dso_load(file))) {
+ 	const char *my_error = ap_os_dso_error();
