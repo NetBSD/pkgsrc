@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.19 2003/02/28 03:41:39 jschauma Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.20 2003/03/04 14:50:11 seb Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -38,6 +38,7 @@ ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
+M4?=		/usr/bin/m4
 MKDIR?=		/bin/mkdir -p
 .if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
