@@ -1,0 +1,45 @@
+#	$NetBSD: Makefile.in,v 1.1.1.1 2003/03/31 08:51:32 grant Exp $
+
+srcdir	= @srcdir@
+prefix	= @prefix@
+VPATH	= @srcdir@
+SHELL	= /bin/sh
+
+CC	= @CC@
+CCLD	= $(CC)
+CFLAGS	= -I${srcdir} -I. -I${prefix}/include/libnbcompat @INCLUDES@ @CFLAGS@
+CPPFLAGS= @CPPFLAGS@
+DEFS	= @DEFS@
+INSTALL	= @INSTALL@
+LDFLAGS	= @LDFLAGS@
+LIBS	= @LIBS@ -lnbcompat
+
+mandir=		${prefix}/man
+mandircat8=	${mandir}/cat8
+
+all:	mtree
+
+PROG=	mtree
+MAN=
+OBJS=	compare.o crc.o create.o excludes.o mtree.o verify.o
+
+LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
+COMPILE=	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
+
+all: ${PROG}
+
+${PROG}: ${OBJS}
+	${LINK} ${OBJS} ${LIBS}
+
+.c.o:
+	$(COMPILE) -c $< -o $@
+
+clean:
+	rm -f ${OBJS} ${PROG}
+
+distclean: clean
+	rm -f Makefile config.h config.status configure.lineno config.log
+
+install:
+	${INSTALL} ${PROG} ${PREFIX}/sbin
+	${INSTALL} -m 444 ${PROG}.cat8 ${mandircat8}/${PROG}.0
