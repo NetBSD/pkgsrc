@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 1998/08/12 17:12:09 tv Exp $
+
+--- gcc/config/xm-netbsd.h.orig	Wed Aug 12 10:36:54 1998
++++ gcc/config/xm-netbsd.h	Wed Aug 12 10:37:01 1998
+@@ -22,5 +22,3 @@
+    running NetBSD.  This file should not be specified as $xm_file itself;
+    instead $xm_file should be CPU/xm-netbsd.h, which should include both
+    CPU/xm-CPU.h and this file xm-netbsd.h.  */
+-   
+-#define HAVE_VPRINTF
