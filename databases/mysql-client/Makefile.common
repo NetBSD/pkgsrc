@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/03/18 14:17:38 martti Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/06/16 21:45:45 wiz Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -36,6 +36,7 @@ CPPFLAGS+=		-Dunix
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib/mysql
 
 post-extract:
 	cd ${WRKSRC};							\
