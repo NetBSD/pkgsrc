@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/06 00:03:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/06 00:04:02 wiz Exp $
 #
 
 DISTNAME=	aquaified-0.30
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.freshmeat.net/themes/aquaified/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://themes.freshmeat.net/projects/aquaified/
-COMMENT=	Aquaified is a theme for the Sawfish window manager.
+COMMENT=	theme for the Sawfish window manager, similar to Aqua (MacOS X)
 
 DEPENDS+=	sawfish>=1.0.1:../../wm/sawfish
 
