@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/23 07:43:19 rxg Exp $
+bin/mp3blaster
+bin/mp3tag
+bin/nmixer
+man/man1/mp3blaster.1
+man/man1/nmixer.1
+share/mp3blaster/commands.txt
+share/mp3blaster/sample.mp3blasterrc
+share/mp3blaster/sample.mp3blasterrc_for_x
+@dirrm share/mp3blaster

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/02/23 07:43:20 rxg Exp $
+
+--- Makefile.in.orig	Fri Feb 15 22:45:24 2002
++++ Makefile.in
+@@ -76,7 +76,7 @@
+ VERSION = @VERSION@
+ 
+ SUBDIRS = mpegsound nmixer src doc
+-man_MANS = mp3blaster.1 nmixer.1 splay.1
++man_MANS = mp3blaster.1 nmixer.1
+ EXTRA_DIST = CREDITS TODO FAQ id3scripts/id3name.sh mp3blaster.1 nmixer.1 	winnt/AUTHORS winnt/README.txt winnt/getopt.c winnt/getopt.h 	winnt/id3parse.cpp winnt/id3parse.h winnt/mp3tag.cpp winnt/mp3tag.mak 	BUGS splay.1
+ 
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

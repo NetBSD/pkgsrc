@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/02/23 07:43:19 rxg Exp $
+
+--- configure.orig	Thu Feb 14 23:59:31 2002
++++ configure
+@@ -3521,7 +3521,7 @@
+   fi
+ fi
+ 
+-if test "`uname -s`" = "OpenBSD" ; then
++if test "`uname -s`" = "OpenBSD" || test "`uname -s`" = "NetBSD" ; then
+   SOUNDDEV="/dev/audio"
+ else
+   SOUNDDEV="/dev/dsp"
