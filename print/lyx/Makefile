@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/09/29 09:42:38 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2002/09/29 10:10:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -18,6 +18,7 @@ DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
 
 USE_BUILDLINK2=		YES
 USE_PERL5=		YES
+USE_X11=		YES
 USE_CXX=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+= 	--with-extra-lib=${BUILDLINK_PREFIX.xforms}/lib \
@@ -26,8 +27,6 @@ CONFIGURE_ARGS+= 	--with-extra-lib=${BUILDLINK_PREFIX.xforms}/lib \
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/sigc++/libtool
-
-LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 
 post-install:
 	${CHMOD} +x ${PREFIX}/share/lyx/configure
