@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2005/03/02 13:20:40 wiz Exp $
+
+--- doc/Makefile.in.orig	2003-04-19 06:59:56.000000000 +0200
++++ doc/Makefile.in
+@@ -425,8 +425,8 @@ all-local: info html ps pdf
+ 
+ html: 
+ 	mkdir -p avrdude-html
+-	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
+-	mv *.html avrdude-html
++	texi2html --split=node $(srcdir)/$(info_TEXINFOS)
++	mv avrdude/*.html avrdude-html
+ 
+ clean-local:
+ 	rm -rf avrdude-html *.info
