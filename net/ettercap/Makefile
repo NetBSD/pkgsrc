@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/11/12 03:39:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/12/18 03:01:38 xtraeme Exp $
 
-DISTNAME=		ettercap-0.6.9
-PKGREVISION=		5
+DISTNAME=		ettercap-0.6.b
 CATEGORIES=		security net
-MASTER_SITES=		http://ettercap.sourceforge.net/download/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/} \
+			http://ettercap.sourceforge.net/download/
 
 MAINTAINER=		nk@bsdirc.net
 HOMEPAGE=		http://ettercap.sourceforge.net/
@@ -11,7 +11,8 @@ COMMENT=		Multipurpose sniffer/interceptor/logger for switched LAN
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-plugins \
-			--enable-https
+			--enable-https \
+			--disable-gtk
 
 USE_BUILDLINK2=		yes
 
