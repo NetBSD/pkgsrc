@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.17 2003/03/20 19:01:56 kristerw Exp $
+--- src/unix/Makefile.orig	Thu Mar 20 19:26:45 2003
++++ src/unix/Makefile	Thu Mar 20 19:29:35 2003
+@@ -133,9 +133,12 @@
+ $(OBJDIR)/effect.o: effect.h
+ 
+ $(VID_DIR)/x11_window.o: video-drivers/blit.h video-drivers/blit_core.h effect.h
++	$(CC_COMPILE) $(CC) $(MY_CFLAGS) -O -o $@ -c video-drivers/x11_window.c
+ $(VID_DIR)/svgalib.o: video-drivers/blit.h video-drivers/blit_core.h video-drivers/twkmodes.h video-drivers/twkuser.c effect.h
+ $(VID_DIR)/xf86_dga1.o: video-drivers/xf86_dga1.c video-drivers/blit.h video-drivers/blit_core.h effect.h
++	$(CC_COMPILE) $(CC) $(MY_CFLAGS) -O -o $@ -c video-drivers/xf86_dga1.c
+ $(VID_DIR)/xf86_dga2.o: video-drivers/xf86_dga2.c video-drivers/blit.h video-drivers/blit_core.h effect.h
++	$(CC_COMPILE) $(CC) $(MY_CFLAGS) -O -o $@ -c video-drivers/xf86_dga2.c
+ $(VID_DIR)/SDL.o: video-drivers/blit.h video-drivers/blit_core.h effect.h
+ $(VID_DIR)/xinput.o:  video-drivers/xkeyboard.h video-drivers/glmame.h
+ $(VID_DIR)/xinput.o:  video-drivers/xkeyboard.h video-drivers/glmame.h
