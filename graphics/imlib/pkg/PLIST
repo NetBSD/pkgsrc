@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/04 13:13:18 agc Exp $
+bin/imlib_config
+bin/imlib-config
+etc/imrc
+etc/im_palette.pal
+include/gdk_imlib.h
+include/gdk_imlib_private.h
+include/gdk_imlib_types.h
+include/Imlib.h
+include/Imlib_private.h
+include/Imlib_types.h
+lib/libgdk_imlib.a
+lib/libgdk_imlib.so.8.0
+lib/libImlib.so.8.0
+lib/libImlib.a
