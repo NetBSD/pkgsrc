@@ -1,4 +1,4 @@
-/*	$NetBSD: util.h,v 1.2 2003/09/01 15:31:21 jlam Exp $	*/
+/*	$NetBSD: util.h,v 1.3 2003/09/03 03:28:29 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1995
@@ -106,19 +106,14 @@ int		ttylock(const char *, int, pid_t *);
 char	       *ttymsg(struct iovec *, int, const char *, int);
 int		ttyunlock(const char *);
 
-#ifndef HAVE_STRSEP
-char *strsep(char **, const char *);
+#if !HAVE_STRSEP
+char	       *strsep(char **, const char *);
 #endif
 
-#ifndef HAVE_FGETLN
-char		*fgetln(FILE *, size_t *);
-#define LIST_EMPTY(head)                ((head)->lh_first == NULL) 
-#define LIST_FIRST(head)                ((head)->lh_first)
-#define LIST_NEXT(elm, field)           ((elm)->field.le_next)
+#if !HAVE_FGETLN
+char	       *fgetln(FILE *, size_t *);
 #endif
 
 __END_DECLS
-
-static int isescaped(const char *, const char *, int);
 
 #endif /* !_UTIL_H_ */

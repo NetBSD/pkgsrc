@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.10 2003/09/02 01:54:39 jlam Exp $
+# $NetBSD: Makefile.in,v 1.11 2003/09/03 03:28:29 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -19,9 +19,9 @@ RANLIB=		@RANLIB@
 
 LIB=		libnbcompat.a
 
-INCS=		extern.h err.h ftpglob.h fts.h getopt.h md5.h mtree.h \
-		namespace.h nbcompat.h nbtypes.h pack_dev.h pwcache.h \
-		rmd160.h sha1.h sha2.h stat_flags.h util.h vis.h
+INCS=		err.h ftpglob.h fts.h getopt.h md5.h mtree.h \
+		nbcompat.h nbtypes.h pack_dev.h pwcache.h \
+		rmd160.h sha1.h sha2.h util.h vis.h
 
 OBJS=		@LIBOBJS@ \
 		md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
