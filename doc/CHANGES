@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.239 2002/10/13 16:44:54 taca Exp $
+$NetBSD: CHANGES,v 1.240 2002/10/13 19:34:35 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nessus to 1.2.6 [frueauf 2002-10-13]
 	Added Speex-0.99.1 [wiz 2002-10-13]
 	Updated squid to 2.5.1 [taca 2002-10-13]
+	Updated SDL to 1.2.5 [kristerw 2002-10-13]
