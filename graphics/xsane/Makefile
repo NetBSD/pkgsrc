@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.44 2004/03/29 22:32:33 snj Exp $
 
 DISTNAME=	xsane-0.90
 PKGREVISION=	3
@@ -29,7 +29,7 @@ USE_PKGLOCALEDIR=	YES
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/gimp-base/buildlink2.mk"
+.include "../../graphics/gimp1-base/buildlink2.mk"
 .include "../../graphics/sane-backends/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

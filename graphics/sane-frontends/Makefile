@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/29 22:31:58 snj Exp $
 
 .include "../sane-backends/Makefile.common"
 
@@ -12,6 +12,6 @@ BUILDLINK_DEPENDS.sane=	sane-backends>=${SANE_VERSION}
 USE_X11BASE=	YES
 
 .include "../../graphics/sane-backends/buildlink2.mk"
-.include "../../graphics/gimp-base/buildlink2.mk"
+.include "../../graphics/gimp1-base/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
