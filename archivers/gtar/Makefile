@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/18 16:06:37 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/15 00:12:10 tv Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -11,7 +11,10 @@ MAINTAINER=	packages@netbsd.org
 USE_GTEXINFO=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --program-prefix=g
+CONFIGURE_ARGS= --program-prefix=g --with-catgets
+
+post-patch:
+	@${ECHO} '' >>${WRKSRC}/po/fr.po
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 ${PREFIX}/man/man1/
