@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2003/08/07 04:12:25 gson Exp $
+# $NetBSD: Makefile,v 1.203 2003/08/18 17:35:56 agc Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -108,6 +108,7 @@ SUBDIR+=	lq-sp
 SUBDIR+=	makeztxt
 SUBDIR+=	namazu1
 SUBDIR+=	namazu2
+SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	openjade
 SUBDIR+=	opensp
