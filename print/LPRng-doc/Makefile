@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 12:42:22 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:29 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.lprng.com/
 COMMENT=	LPRng documentation in dvi, text, html and ps formats
 
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/26 02:15:05 junyoung Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:19 wiz Exp $
 #
 
 DISTNAME=	baekmuk-ttf-2.0
@@ -13,7 +13,6 @@ COMMENT=	Baekmuk family Korean TrueType fonts
 FONT_FILES=	batang.ttf dotum.ttf gulim.ttf hline.ttf
 
 WRKSRC=		${WRKDIR}
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

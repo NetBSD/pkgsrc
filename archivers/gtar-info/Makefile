@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/11/20 16:57:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/28 21:14:12 wiz Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -16,7 +16,6 @@ COMMENT=	Info format documentation for the GNU tape archiver
 INFO_FILES=	tar.info
 
 USE_BUILDLINK2=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

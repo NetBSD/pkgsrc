@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/29 14:47:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/28 21:14:21 wiz Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 CATEGORIES=	games x11
@@ -14,7 +14,6 @@ COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 DEPENDS+=	rocksndiamonds>=1.4.0:../../games/rocksndiamonds
 
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

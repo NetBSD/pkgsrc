@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/08/25 19:24:02 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:42 wiz Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -21,7 +21,6 @@ USE_X11BASE=	# defined
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
-NO_PATCH=	# defined
 NO_BUILD=	# defined
 NO_CONFIGURE=	# defined
 
