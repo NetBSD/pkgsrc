@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7423 2004/10/13 21:21:54 adrianp Exp $
+$NetBSD: CHANGES,v 1.7424 2004/10/13 22:18:06 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4706,3 +4706,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squid to 2.5.7 [taca 2004-10-13]
 	Updated fprot-workstation-bin to 4.4.7 [ben 2004-10-13]
 	Updated icecast to 2.0.2 [adrianp 2004-10-13]
+	Updated biew to 5.6.2 [ben 2004-10-13]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2213 2004/10/13 20:52:49 markd Exp $
+$NetBSD: TODO,v 1.2214 2004/10/13 22:18:06 ben Exp $
 
 Suggested new packages
 ======================
@@ -199,7 +199,6 @@ Suggested package updates
 	o avidemux-2.0.28
 	o balsa-1.4.4
 	o bash3-3.0
-	o biew-5.6.2
 	o bind-9.3
 	o bioperl-1.4
 	o bitchx-1.1
