@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/13 22:06:42 jmmv Exp $
+bin/asm2html
