@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/08/17 18:09:43 drochner Exp $
+# $NetBSD: Makefile,v 1.22 1999/09/05 13:45:27 mrg Exp $
 #
 
 DISTNAME=		kaffe-1.0.b4
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.transvirtual.com/
 DEPENDS=		jpeg-6b:../../graphics/jpeg \
 			png-1.0.3:../../graphics/png \
 			giflib-3.0:../../graphics/giflib
+
+USE_X11=		yes
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
 
