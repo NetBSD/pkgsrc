@@ -3,7 +3,8 @@
 # Date created:         11 July 1996
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/18 00:39:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/18 00:44:46 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
 DISTNAME=       slang0.99-38
