@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2440 2003/06/06 09:01:47 jtb Exp $
+$NetBSD: CHANGES,v 1.2441 2003/06/06 10:31:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pim6sd to 20030606a [itojun 2003-06-06]
 	Updated pim6dd to 20030606a [itojun 2003-06-06]
 	Updated icon to 9.4.2 [jtb 2003-06-06]
+	Updated rplay to 3.3.2nb1 [jmmv 2003-06-06]
