@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2002/09/29 09:47:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/11/12 12:27:56 martti Exp $
 
-DISTNAME=		xfce-3.8.16
+DISTNAME=		xfce-3.8.18
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
