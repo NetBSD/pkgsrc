@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/05 20:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/02/17 22:34:41 grant Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
@@ -10,19 +10,14 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://home.bawi.org/~minskim/authpg/
 COMMENT=	Module to allow apache authentication against a Postgresql database
 
-DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
-USE_PERL5=	build	# for "apxs"
+USE_BUILDLINK2=	YES
+
+APACHE_MODULE_NAME=	mod_auth_pg.so
 
 CPPFLAGS+=	-I${LOCALBASE}/include/postgresql
-LIBS=		-lpq -lcrypt
+LDFLAGS+=	-lpq -lcrypt
 
-do-build:
-	cd ${WRKSRC} && ${PREFIX}/sbin/apxs \
-		${CPPFLAGS} ${LDFLAGS} ${LIBS} -c mod_auth_pg.c
-
-do-install:
-	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_auth_pg.so
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.html ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.ko.html ${PREFIX}/share/doc/mod_auth_pg
@@ -30,4 +25,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.ko ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/sample.htaccess ${PREFIX}/share/examples/mod_auth_pg.htaccess
 
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
