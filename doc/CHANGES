@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9370 2005/03/01 01:18:48 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9371 2005/03/01 11:18:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1211,3 +1211,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tinyca to 0.6.8 [adrianp 2005-02-28]
 	Updated gqview to 2.0.0 [snj 2005-02-28]
 	Added xmms-wma-1.0.4 [xtraeme 2005-03-01]
+	Updated squid to 2.5.9 [taca 2005-03-01]
