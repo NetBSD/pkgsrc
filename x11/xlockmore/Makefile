@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/04/15 10:38:58 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/04/22 14:22:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -8,8 +8,8 @@ MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/
 
 MAINTAINER=	hubertf@netbsd.org
 
-LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm \
-		MesaGL.2.:${PORTSDIR}/graphics/Mesa
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	Mesa-2.6:../../graphics/Mesa
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \

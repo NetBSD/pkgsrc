@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:21 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:41 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tkcvs-6.0/ \
 
 MAINTAINER=	shanee@augusta.de
 
-LIB_DEPENDS=	tk80.1.:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 NO_BUILD=	yes
 MAN1=		tkcvs.1 tkdiff.1

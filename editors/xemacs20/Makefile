@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/04/15 10:38:23 agc Exp $
+# $NetBSD: Makefile,v 1.21 1998/04/22 14:22:41 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -23,10 +23,10 @@ MAINTAINER=	agc@netbsd.org
 WITH_SOUND=
 .endif
 
-LIB_DEPENDS=	Xaw3d.6.:${PORTSDIR}/x11/Xaw3d \
-		Xpm.4.:${PORTSDIR}/graphics/xpm \
-		jpeg.7.:${PORTSDIR}/graphics/jpeg \
-		png.0.:${PORTSDIR}/graphics/png
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	Xaw3d-1.3:../../x11/Xaw3d
+DEPENDS+=	png-0.96:../../graphics/png
 
 HAS_CONFIGURE=	yes
 

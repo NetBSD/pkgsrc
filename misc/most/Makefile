@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:36 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 
 MAINTAINER=	rhwang@bigpanda.com
 
-LIB_DEPENDS=	slang.0.99[0-9][0-9]:${PORTSDIR}/devel/libslang
+DEPENDS+=	libslang-0.99.38:../../devel/libslang
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/most

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:27 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:46 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    tk80.1:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:11 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/22 14:22:40 agc Exp $
 #
 
 DISTNAME=		snd
@@ -9,8 +9,8 @@ MASTER_SITES=		ftp://ccrma-ftp.stanford.edu/pub/Lisp/
 
 MAINTAINER=		hubertf@netbsd.org
 
-LIB_DEPENDS=		Xpm.4.:${PORTSDIR}/graphics/xpm \
-			Xm.0.:${PORTSDIR}/x11/lesstif
+DEPENDS+=		xpm-3.4j:../../graphics/xpm
+BUILD_DEPENDS+=		${X11BASE}/include/Xm:${PORTSDIR}/x11/lesstif
 
 USE_X11=		YES
 REQUIRES_MOTIF=		YES

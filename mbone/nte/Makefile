@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:59:10 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:45 agc Exp $
 #
 
 DISTNAME=	nt.1.5a23
@@ -11,8 +11,8 @@ MAINTAINER=	mycroft@NetBSD.ORG
 TK_DIR=         ${PORTSDIR}/x11/tk80
 TK_SRC=		${TK_DIR}/${WRKDIR:T}/tk8.0
 
-DEPENDS=	${TK_DIR}:configure
-LIB_DEPENDS=	tk80:${TK_DIR}
+BUILD_DEPENDS=	${PORTSDIR}/x11/tk80/${WRKDIR:T}/tk8.0/generic/default.h:${TK_DIR}:configure
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=no

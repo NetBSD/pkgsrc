@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:47 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -19,7 +19,7 @@ MAINTAINER=	packages@NetBSD.ORG
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 PKGNAME=	pgp-2.6.3a
-LIB_DEPENDS+=	rsaref.2.:${PORTSDIR}/security/rsaref
+DEPENDS+=	rsaref-2.0:../../security/rsaref
 RSAINC=		-I${PREFIX}/include
 RSALIBS=	-L${PREFIX}/lib -lrsaref
 RSAOBJS=	rsaglue2.o
