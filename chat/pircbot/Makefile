@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/10 01:28:14 grant Exp $
 #
 
 DISTNAME=	pircbot-0.9.11
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pircbot.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/pircbot
 	cd ${WRKSRC}/javadocs && \
-	    ${PAX} -rwpppm . ${PREFIX}/share/doc/java/pircbot
+	    ${PAX} -rw -pp -pm . ${PREFIX}/share/doc/java/pircbot
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

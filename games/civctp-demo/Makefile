@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/10 01:28:15 grant Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
@@ -50,7 +50,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINTYPE}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} ; ${PAX} -rw appstr.txt civpaths.txt ctp_data ${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw appstr.txt civpaths.txt ctp_data ${LIBDIR}
 
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

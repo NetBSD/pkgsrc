@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/25 12:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/10 01:28:28 grant Exp $
 #
 
 DISTNAME=		mod_python-2.7.6
@@ -21,15 +21,15 @@ PYTHON_VERSIONS_ACCEPTED=	20
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ap-mod_python
-	( cd ${WRKSRC}; ${PAX} -r -w -s /doc-html/ap-mod_python/ \
-		-p e doc-html ${PREFIX}/share/doc/html )
+	cd ${WRKSRC} && ${PAX} -rw -s /doc-html/ap-mod_python/ \
+		-pe doc-html ${PREFIX}/share/doc/html
 	${ECHO} lib/httpd/mod_python.so >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/mod_python \
+	cd ${PREFIX} && ${FIND} ${PYSITELIB}/mod_python \
 		share/doc/html/ap-mod_python \
-		-type f -print >>${PLIST_SRC} )
-	( cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/mod_python \
+		-type f -print >>${PLIST_SRC}
+	cd ${PREFIX} && ${FIND} -d ${PYSITELIB}/mod_python \
 		share/doc/html/ap-mod_python \
-		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC} )
+		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../lang/python/extension.mk"
 .include "../../www/apache/buildlink2.mk"

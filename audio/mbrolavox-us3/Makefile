@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/18 15:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/10 01:28:12 grant Exp $
 
 DISTNAME=	us3-990208
 PKGNAME=	mbrolavox-${DISTNAME}
@@ -26,6 +26,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${MHOME}
-	cd ${WRKSRC} && ${PAX} -r -w us3 ${MHOME}
+	cd ${WRKSRC} && ${PAX} -rw us3 ${MHOME}
 
 .include "../../mk/bsd.pkg.mk"

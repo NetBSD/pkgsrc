@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/03/29 12:41:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/04/10 01:28:19 grant Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -59,7 +59,6 @@ ALL_TARGET=		bootstrap
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
-MESSAGE=		${PKGDIR}/MESSAGE.SunOS
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 .endif
 

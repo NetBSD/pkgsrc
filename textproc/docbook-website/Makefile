@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/29 21:31:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/10 01:28:25 grant Exp $
 #
 
 DISTNAME=	website-2.3
@@ -27,10 +27,10 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DTDDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	@cd ${WRKSRC}; ${PAX} -rw ChangeLog README VERSION WhatsNew	\
+	cd ${WRKSRC} && ${PAX} -rw ChangeLog README VERSION WhatsNew	\
 		${DOCDIR}
-	@cd ${WRKSRC}/example; ${PAX} -rw . ${EGDIR}
-	@cd ${WRKSRC}; ${PAX} -rw VERSION extensions xsl *.dtd *.mod	\
+	cd ${WRKSRC}/example && ${PAX} -rw . ${EGDIR}
+	cd ${WRKSRC} && ${PAX} -rw VERSION extensions xsl *.dtd *.mod	\
 		${DTDDIR}
 	${INSTALL_DATA} ${FILESDIR}/catalog ${DTDDIR}/catalog
 

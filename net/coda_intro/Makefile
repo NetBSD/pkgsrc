@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/10 01:28:21 grant Exp $
 #
 
 DISTNAME=	coda-intro-4.6.6
@@ -15,7 +15,7 @@ do-build:
 	@${TRUE}
 
 do-install:
-	cd ${WRKSRC}; ${PAX} -r -w -s '|.*CVS||' -s '|.*\.FreeBSD||' \
+	cd ${WRKSRC} && ${PAX} -rw -s '|.*CVS||' -s '|.*\.FreeBSD||' \
 		doc ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
