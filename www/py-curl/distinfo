@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/08/21 11:31:41 recht Exp $
+$NetBSD: distinfo,v 1.10 2004/11/28 13:04:03 recht Exp $
 
-SHA1 (pycurl-7.12.1.tar.gz) = f877f56fc9982d2314e9e39ff9c93955ab149411
-Size (pycurl-7.12.1.tar.gz) = 58524 bytes
+SHA1 (pycurl-7.12.2.tar.gz) = ffc09c512e404e9ec0d56fbbea2e8fea62841e00
+Size (pycurl-7.12.2.tar.gz) = 58694 bytes
 SHA1 (patch-aa) = e13a29b627f46ab82d3d96b1021756d41998b781
