@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.114 2004/03/12 18:45:20 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.115 2004/03/13 03:33:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -135,6 +135,17 @@ _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
 
+# _BLNK_RECURSIVE_DEPENDS lists all of the packages that this package
+# directly or indirectly depends on.
+#
+_BLNK_RECURSIVE_DEPENDS=	# empty
+.for _pkg_ in ${_BLNK_PACKAGES}   
+.  if empty(_BLNK_RECURSIVE_DEPENDS:M${_pkg_}) && \
+      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
+_BLNK_RECURSIVE_DEPENDS+=	${_pkg_}
+.  endif
+.endfor
+
 # _BLNK_DEPENDS contains all of the elements of BUILDLINK_DEPENDS that
 # shouldn't be skipped and that name packages for which we aren't using
 # the built-in software and hence need to add a dependency.
@@ -159,8 +170,11 @@ BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 #
 _BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure	\
 				build test
+_BLNK_PHASES_RECURSIVE_DEPENDS=	extract
 .if !empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
 _BLNK_DEPENDS_LIST=	# empty
+.elif !empty(_BLNK_PHASES_RECURSIVE_DEPENDS:M${PKG_PHASE})
+_BLNK_DEPENDS_LIST=	${_BLNK_RECURSIVE_DEPENDS}
 .else
 _BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
 .endif
