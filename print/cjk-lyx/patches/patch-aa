@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/19 12:32:32 agc Exp $
+
+--- configure.orig	Fri May  3 22:53:34 2002
++++ configure	Tue May 21 12:15:00 2002
+@@ -9743,7 +9743,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lforms  $LIBS"
++LIBS="-lforms -ljpeg -lXpm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 9749 "configure"
+ #include "confdefs.h"
+@@ -9774,7 +9774,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  XFORMS_LIB="-lforms"
++  XFORMS_LIB="-lforms -ljpeg -lXpm"
+ else
+   echo "$ac_t""no" 1>&6
+ echo $ac_n "checking for fl_initialize in -lxforms""... $ac_c" 1>&6
+@@ -9954,6 +9954,7 @@
+ "
+ lyx_warning=yes ;;
+     0.89*) ;;
++    0.9*) ;;
+        *) 
+ lyx_warning_txt="$lyx_warning_txt
+ == Version $lyx_cv_xfversion of xforms might not be compatible with LyX,
+@@ -10159,7 +10160,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lforms  $LIBS"
++LIBS="-lforms -ljpeg -lXpm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 10165 "configure"
+ #include "confdefs.h"
+@@ -10190,7 +10191,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  XFORMS_LIB="-lforms"
++  XFORMS_LIB="-lforms -ljpeg -lXpm"
+ else
+   echo "$ac_t""no" 1>&6
+ echo $ac_n "checking for fl_initialize in -lxforms""... $ac_c" 1>&6
+@@ -11603,7 +11603,7 @@
+ 
+ trap 'rm -f $CONFIG_STATUS conftest*; exit 1' 1 2 15
+ 
+-DEFS=-DHAVE_CONFIG_H
++DEFS="-DHAVE_CONFIG_H -DI18N"
+ 
+ # Without the "./", some shells look in PATH for config.status.
+ : ${CONFIG_STATUS=./config.status}
