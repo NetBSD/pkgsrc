@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/02/17 23:04:36 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/17 23:05:48 grant Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	ap-jk-${TOMCAT_VERSION}
@@ -17,20 +17,15 @@ BUILD_DEPENDS+=	gtar-base:../../archivers/gtar-base
 GTAR=		${LOCALBASE}/bin/gtar
 
 USE_BUILDLINK2=		# defined
-APACHE_MODULE=		# defined
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/native
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/native/apache1.3
 
-do-build:
-	cd ${WRKSRC} &&							\
-	${APXS} -o mod_jk.so						\
-		-I../jk ${BUILDLINK_CPPFLAGS.${PKG_JVM}}		\
-		-c *.c ../jk/*.c
+APACHE_MODULE_NAME=	mod_jk.so
+APACHE_MODULE_SRC=	*.c ../jk/*.c
+CPPFLAGS+=		-I../jk ${BUILDLINK_CPPFLAGS.${PKG_JVM}}
 
-do-install:
-	cd ${WRKSRC} && ${APXS} -i mod_jk.so
 
-.include "../../www/apache/buildlink2.mk"
+.include "../../www/apache/module.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
