@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/05 12:01:24 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/20 13:31:00 rh Exp $
 #
 
 DISTNAME=		vlnx407e
@@ -20,8 +20,10 @@ NO_BUILD=		YES
 MIRROR_DISTFILE=	no
 LICENSE=		shareware
 RESTRICTED=		"restrictive 30 day evaluation license"
-NO_PACKAGE=		${RESTRICTED}
-NO_CDROM=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 do-configure:
 	${SED} <${FILESDIR}/uvscan.sh >${WRKSRC}/uvscan.sh \
