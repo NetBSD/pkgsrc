@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/06/03 20:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.23 2004/06/09 08:25:39 tron Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
@@ -20,9 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/${BINNAME}
 JARNAME=	AirportConfig128Bit.jar
 LIBDIR=		${PREFIX}/lib/${BINNAME}
 
-.include "../../mk/bsd.prefs.mk"
-
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 jdk13 jdk14
 
@@ -35,6 +33,7 @@ do-build:
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif
+	${ECHO} "${ULIMIT_CMD_datasize}" >>${WRKSRC}/${BINNAME}
 	${ECHO} "exec java -jar ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
