@@ -1,7 +1,15 @@
-$NetBSD: patch-al,v 1.6 2003/03/27 21:07:05 jschauma Exp $
-
---- util/mpiinstall.in.orig	Mon Jan 13 18:12:29 2003
-+++ util/mpiinstall.in	Thu Mar 27 12:04:15 2003
+$NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
+--- util/mpiinstall.in.orig	2004-07-02 10:34:43.000000000 -0700
++++ util/mpiinstall.in	2005-03-03 02:43:21.000000000 -0700
+@@ -172,7 +172,7 @@
+     bindir=$prefix/bin
+     sbindir=$prefix/sbin
+     includedir=$prefix/include
+-    sysconfdir=$prefix/etc
++    sysconfdir=$prefix/mpi-ch/etc
+     libdir=$prefix/lib
+     sharedlib_dir=$libdir/shared
+     messagecat_dir=$libdir
 @@ -453,9 +453,11 @@
  MkDir $docdir
  MkDir $sysconfdir
@@ -16,7 +24,7 @@ $NetBSD: patch-al,v 1.6 2003/03/27 21:07:05 jschauma Exp $
      MkDir $includedir/mpi2c++
  fi
  
-@@ -670,7 +672,7 @@
+@@ -697,7 +699,7 @@
      #	$CPRP -r util/machines $prefix/util/machines.anl
      for file in util/machines/machines* ; do
          if [ -s $file ] ; then 
@@ -25,7 +33,7 @@ $NetBSD: patch-al,v 1.6 2003/03/27 21:07:05 jschauma Exp $
  	fi
      done
      #
-@@ -963,6 +965,8 @@
+@@ -994,6 +996,8 @@
  CopyFile $top_srcdir/util/cleanipcs $sbindir $XMODE
  #
  # Example programs
@@ -34,7 +42,7 @@ $NetBSD: patch-al,v 1.6 2003/03/27 21:07:05 jschauma Exp $
  CopyFile $top_srcdir/installtest/Makefile.in $prefix/examples
  #
  # This SHOULD use mpireconfig...
-@@ -996,14 +1000,16 @@
+@@ -1027,14 +1031,16 @@
  $Show "(cd $DESTDIR$prefix/examples ; /bin/rm -f mpirun ; \
  	  ln -s ../bin/mpirun mpirun )"
  echo "/bin/rm -f $prefix/examples/mpirun" >> $UNINSTALLFILE
@@ -53,7 +61,7 @@ $NetBSD: patch-al,v 1.6 2003/03/27 21:07:05 jschauma Exp $
    fi
  fi
  #
-@@ -1012,39 +1018,40 @@
+@@ -1043,39 +1049,40 @@
  if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
  # Removed the installation of these extra examples.  
      # C++ Example programs 

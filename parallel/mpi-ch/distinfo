@@ -1,29 +1,23 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:23:31 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/03/03 12:01:30 garbled Exp $
 
-SHA1 (mpich-1.2.5.2.tar.gz) = a767e56bab24d08a13903493e627e987e1685f50
-RMD160 (mpich-1.2.5.2.tar.gz) = 2960efb9c2a9be2d496292dba1255594525ff9b4
-Size (mpich-1.2.5.2.tar.gz) = 12383519 bytes
+SHA1 (mpich-1.2.6.tar.gz) = d3dba3993bc7b0bd11ec4e4bdb70374283770cea
+RMD160 (mpich-1.2.6.tar.gz) = dae2e2920a9bc0d3ca050fcb78b32d0f99a36dcf
+Size (mpich-1.2.6.tar.gz) = 15248688 bytes
 SHA1 (mpich-docs.tgz) = fb7a9c7459998b9b74584d2afc4553027d94ad10
 RMD160 (mpich-docs.tgz) = 85c7d200794b1d494f812eb4e5de904bcf681f2b
 Size (mpich-docs.tgz) = 326405 bytes
-SHA1 (patch-aa) = fa6d5f16cbc88b850906a7cc970ad73e62bee50d
-SHA1 (patch-ak) = 8ad7340a9a95087649a96c823e5d0965922e209b
-SHA1 (patch-al) = 0f889dba558d9bd5122610f2ce2aecda6d6c5323
-SHA1 (patch-am) = ebebecac0ee222284ba75ea300d0fedc99c7fea8
-SHA1 (patch-ao) = 61b36fd1e38131a3f20db586ee6810f1d506b3dd
-SHA1 (patch-ap) = 5320ef47b74691e52f247d9560954257762b5dd2
-SHA1 (patch-ar) = 6a3518b582a29358715209ed6aa8bd47aedce10d
-SHA1 (patch-as) = 5c3c3de705e9ddca64e95bf9781b4a5147ba788d
-SHA1 (patch-at) = faeec80f8e35546e830873886d00e4332444a29a
-SHA1 (patch-au) = 00a6f439d2bb65269780f2141dbd588b147e890d
-SHA1 (patch-av) = 5d4330ea9ff8e4fe09879f092b0e4032fba54c13
+SHA1 (patch-aa) = 8a25d520a9fce5ae92cdfc0851c9e8e1abe07d00
+SHA1 (patch-al) = b2849603c42c8349fe4da56e6d56c8e8859ed170
+SHA1 (patch-at) = d329f3d8a7d76fdb7d57c60bcea8944a990e0fb4
+SHA1 (patch-au) = 453cbb33db19e47ae79d3f2ed8c131ea14c663cf
+SHA1 (patch-av) = 0c2a655aa31b823fe89530bcb0dd709bdee174e2
 SHA1 (patch-aw) = a1a98f08743cd1d33187b37ceb24ff5c4fcd731a
-SHA1 (patch-ax) = ceffb118aa3ca151dcf387c000895f7405472f87
-SHA1 (patch-ay) = 72ac437696041c4771913e8f36a6b379c9e1057a
+SHA1 (patch-ax) = bc2f39a1ea3570379c5d971f794caeb52b61f9a4
+SHA1 (patch-ay) = 38390be8f6d1778f7eeeddffe33548148a6e6835
 SHA1 (patch-az) = b81cb18c7c9f52d60dd540d1a47f16297e618a10
 SHA1 (patch-ba) = b20d05026031fd5a86c78f6bb9cdfdf821f10543
 SHA1 (patch-bb) = 7f399ed3d4bbaf00b75ec3a5ce8f114e4c6bbd23
 SHA1 (patch-bc) = e89bbf9e1ef9f2aaa6b8000d170c5a158408988d
 SHA1 (patch-bd) = 7c96f575263fbe9adc0514ed64452db04cc68212
 SHA1 (patch-be) = d21a703dbe17a48fb940ce65fd232284a57ff3cf
-SHA1 (patch-ca) = 0fdb9a96df57bb8268d6d4e62e06794248cdbcf1
+SHA1 (patch-ca) = 095f2d5b801299e56b16e17ef1014fd5cf9b3332

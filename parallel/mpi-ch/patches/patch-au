@@ -1,8 +1,7 @@
-$NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
-
---- examples/perftest/Makefile.in.orig	Mon Jan 13 17:20:14 2003
-+++ examples/perftest/Makefile.in	Thu Mar 27 10:40:39 2003
-@@ -101,7 +101,7 @@
+$NetBSD: patch-au,v 1.2 2005/03/03 12:01:30 garbled Exp $
+--- examples/perftest/Makefile.in.orig	2004-08-04 09:08:28.000000000 -0700
++++ examples/perftest/Makefile.in	2004-10-15 09:34:01.000000000 -0700
+@@ -114,7 +114,7 @@
  vectest_SOURCES = vectest.f
  stress_SOURCES = stress.c daytime.c getopts.c
  tcomm_SOURCES = tcomm.c mpe_seq.c getopts.c
@@ -11,7 +10,7 @@ $NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
  
  # Distribution modifications
  EXTRA_DIST = config ${EXTRA_SCRIPTS}
-@@ -115,7 +115,7 @@
+@@ -128,7 +128,7 @@
  DEFS = @DEFS@ -I. -I$(srcdir) -I.
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -20,7 +19,7 @@ $NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
  tunepkt_SOURCES = tunepkt.c
  tunepkt_OBJECTS =  tunepkt.o
  tunepkt_LDADD = $(LDADD)
-@@ -126,7 +126,7 @@
+@@ -139,7 +139,7 @@
  pktuse_LDADD = $(LDADD)
  pktuse_DEPENDENCIES = 
  pktuse_LDFLAGS = 
@@ -29,7 +28,7 @@ $NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
  copytest_LDADD = $(LDADD)
  copytest_DEPENDENCIES = 
  copytest_LDFLAGS = 
-@@ -260,12 +260,18 @@
+@@ -276,12 +276,18 @@
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
@@ -49,7 +48,7 @@ $NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
  
  uninstall-binPROGRAMS:
  	@$(NORMAL_UNINSTALL)
-@@ -326,7 +332,7 @@
+@@ -342,7 +348,7 @@
  
  mpptest: $(mpptest_OBJECTS) $(mpptest_DEPENDENCIES)
  	@rm -f mpptest
@@ -58,7 +57,7 @@ $NetBSD: patch-au,v 1.1 2003/03/27 21:07:06 jschauma Exp $
  
  goptest: $(goptest_OBJECTS) $(goptest_DEPENDENCIES)
  	@rm -f goptest
-@@ -440,7 +446,7 @@
+@@ -456,7 +462,7 @@
  install: install-am
  uninstall-am: uninstall-binPROGRAMS
  uninstall: uninstall-am
