@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/02 18:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/18 19:52:17 dmcmahill Exp $
 
 DISTNAME=	octave-2.1.33
 CATEGORIES=	math
@@ -51,4 +51,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/html/octave
 .endfor
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
