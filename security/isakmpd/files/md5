@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1 2000/03/27 16:04:13 itojun Exp $
+$NetBSD: md5,v 1.2 2000/04/27 14:55:55 itojun Exp $
 
 MD5 (isakmpd-000220.tar.gz) = 1d5c6da522d0a607b35ed5cb5fc26c4e
-MD5 (isakmpd-20000220-20000328a.diff.gz) = 07e7b7305822243c8e7499605c931271
+MD5 (isakmpd-20000220-20000427a.diff.gz) = 61a70f0a4daac408a0dcc7dfb65d202d
