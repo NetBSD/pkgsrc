@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4933 2004/02/21 02:07:04 minskim Exp $
+$NetBSD: CHANGES,v 1.4934 2004/02/21 05:43:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -948,3 +948,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-matplotlib-0.32 [minskim 2004-02-21]
 	Updated p5-XML-Twig to 3.13 [gson 2004-02-21]
 	Added py-gdick-0.9.1 [minskim 2004-02-21]
+	Downgraded jabberd to 1.4.2 [xtraeme 2004-02-21]
