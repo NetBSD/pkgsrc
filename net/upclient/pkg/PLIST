@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2001/06/20 14:30:49 nra Exp $
-bin/upclient
-etc/rc.d/upclient
-etc/upclient.conf
-share/doc/upclient/AUTHORS
-share/doc/upclient/COPYING
-share/doc/upclient/HISTORY
-share/doc/upclient/README
-@dirrm share/doc/upclient
