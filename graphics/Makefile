@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 1999/10/09 20:07:22 jlam Exp $
+# $NetBSD: Makefile,v 1.62 1999/10/16 15:04:58 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -23,11 +23,11 @@
     SUBDIR += gd
 #    SUBDIR += geomview
 #    SUBDIR += gfont
+    SUBDIR += gif2png
     SUBDIR += giflib
-    SUBDIR += giftrans
 #    SUBDIR += gifmerge
 #    SUBDIR += giftool
-#    SUBDIR += giftrans
+    SUBDIR += giftrans
     SUBDIR += gimp
     SUBDIR += giram
     SUBDIR += gnuplot
