@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.21 2002/09/17 23:35:15 mjl Exp $
+# $NetBSD: Makefile,v 1.22 2002/09/24 21:58:43 jlam Exp $
 
-DISTNAME=		sylpheed-0.8.3
-# PKGREVISION=		2
-CATEGORIES=		mail news x11
-MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	sylpheed-0.8.3
+#PKGREVISION=	2
+CATEGORIES=	mail news x11
+MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail and netnews client
 
-CONFLICTS=	sylpheed-claws-*
+CONFLICTS=	sylpheed-claws-[0-9]*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=		yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
+USE_GMAKE=		yes
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
@@ -24,7 +25,7 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5:../../security/gpgme
+BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
@@ -33,11 +34,16 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.include "../../graphics/compface/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../security/gpgme/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
-.include "../../mk/bsd.pkg.install.mk"
+FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
+.if empty(FACES_IS_INSTALLED)
+.  include "../../graphics/compface/buildlink2.mk"
+.else
+.  include "../../mail/faces/buildlink2.mk"
+.endif
+
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../security/gpgme/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
