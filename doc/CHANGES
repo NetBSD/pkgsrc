@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3973 2003/12/04 17:27:34 recht Exp $
+$NetBSD: CHANGES,v 1.3974 2003/12/04 19:43:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4855,3 +4855,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap2-subversion to 0.33.1nb2 [recht 2003-12-04]
 	Renamed subversion-python to py-subversion [recht 2003-12-04]
 	Updated py-subversion to 0.33.1nb1 [recht 2003-12-04]
+	Updated libxml2 to 2.6.2 [xtraeme 2003-12-04]
+	Updated libxslt to 1.1.0 [xtraeme 2003-12-04]
+	Updated imlib2 to 1.1.0 [xtraeme 2003-12-04]
