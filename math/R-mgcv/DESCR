@@ -1,0 +1,3 @@
+Routines for GAMs and other generalized ridge regression problems
+             with multiple smoothing parameter selection by GCV or UBRE.
+             Includes an implementation (not a clone) of gam().
