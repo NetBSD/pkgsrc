@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3051 2005/02/19 00:27:05 wiz Exp $
+$NetBSD: TODO,v 1.3052 2005/02/19 00:46:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,6 +401,7 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dnstop-20040309
 	o dnstracer-1.8
+	o docbook-website-2.5.0
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
