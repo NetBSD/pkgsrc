@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/05 17:41:31 jschauma Exp $
+
+SHA1 (mapserver-4.0.tar.gz) = 1007771932e43f97d868862fdc3a7ad3ab3d9880
+Size (mapserver-4.0.tar.gz) = 857870 bytes
+SHA1 (patch-aa) = f2a6d9d332c55955f3813ca39f2f2c397175e92b
