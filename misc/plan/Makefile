@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 1998/09/04 08:09:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/30 10:02:33 frueauf Exp $
 #
 
 DISTNAME=	plan-1.7.2
+WRKSRC=		${WRKDIR}/src
 CATEGORIES=	misc x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pub/unix/graphics/plan/
 
@@ -10,7 +11,6 @@ HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 
 USE_MOTIF=	YES
 
-WRKSRC=		${WRKDIR}/src
 ALL_TARGET=	netbsd
 
 pre-install:
