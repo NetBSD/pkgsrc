@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6667 2004/07/24 10:33:42 wiz Exp $
+$NetBSD: CHANGES,v 1.6668 2004/07/24 14:44:07 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3538,3 +3538,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gss to 0.0.11 [wiz 2004-07-24]
 	Added patchutils-0.2.30 [recht 2004-07-24]
 	Updated chicken to 1.51nb1 [wiz 2004-07-24]
+	Updated acroread5 to 5.09 [mrg 2004-07-24]
