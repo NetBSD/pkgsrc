@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2004/02/26 07:47:48 uebayasi Exp $
+
+--- stdenv.h~	Tue May 30 06:13:53 1995
++++ stdenv.h	Thu Apr 10 09:32:22 1997
+@@ -283,6 +283,7 @@
+ 
+ /* stdlib */
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__)
+ extern noreturn exit(int);
+ extern noreturn abort(void);
+ extern long strtol(const char *num, char **end, int base);
+@@ -290,6 +291,7 @@
+ 	void *base, size_t nmemb, size_t size,
+ 	int (*compar)(const void *, const void *)
+ );
++#endif
+ 
+ /* setjmp */
+ 
