@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/27 21:09:53 jtb Exp $
+${PERL5_SITELIB}/README.SNMP_Session
