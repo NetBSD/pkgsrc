@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/24 23:39:50 wiz Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGNAME=		${DISTNAME}nb1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
 LDFLAGS+=		-L${LOCALBASE}/lib
-CFLAGS+=		-I${X11BASE}/include
+CPPFLAGS+=		-I${X11BASE}/include
 
 # needs a valid X display to compile its datafiles
 .ifndef DISPLAY
