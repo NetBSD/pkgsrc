@@ -1,0 +1,12 @@
+# $NetBSD: GNUMakefile.install,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+ABI_ROOT:=$(shell pwd)/../../..
+include $(ABI_ROOT)/src/config/abi_defs_wp.mk
+include $(ABI_ROOT)/src/config/abi_rules.mk
+
+install:
+	@TARGET=${ABISUITE_HOME} BINDIR=$(prefix)/bin \
+		LIBEXECDIR=${ABISUITE_LIBEXEC} X11BASE=${X11BASE} \
+		SRCDIR=$(OUTDIR) \
+		SCRIPTDIR=$(ABI_ROOT)/src/pkg/common/unix/scripts \
+		$(ABI_ROOT)/src/pkg/common/unix/scripts/install.sh

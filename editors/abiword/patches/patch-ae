@@ -1,0 +1,162 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+Change the order of directory lookups.  We prefer building in a peer
+directory over preinstalled libraries since the peers are known to work
+with the current version of AbiWord.
+
+--- src/config/require/unix/Makefile.orig	Mon Jul 19 15:21:59 1999
++++ src/config/require/unix/Makefile	Sat Sep 11 00:27:08 1999
+@@ -50,69 +50,110 @@
+ # and "gtk12-config", so we check for those also.  Thanks to 
+ # Ming-I Hsieh <mihs@wm28.csie.ncu.edu.tw> for the patch.
+ 
++GLIB_CONFIG+=	glib-config glib12-config
++GTK_CONFIG+=	gtk-config gtk12-config
++
+ _GLIB_:
+-	@glib-config --version >/dev/null 2>&1 			\
+-	|| glib12-config --version >/dev/null 2>&1 			\
+-	|| (echo glib not found; exit 1)
++	@(found=no;						\
++	  for config in $(GLIB_CONFIG); do			\
++		if $$config --version >/dev/null 2>&1; then	\
++			found=yes;				\
++			break;					\
++		fi;						\
++	  done;							\
++	  if [ "${found}" = "no" ]; then			\
++		echo glib not found; exit 1;			\
++	  fi)
+ 	@echo TODO verify glib version is greater than 1.1.??
+ 
+ _GTK_:
+-	@gtk-config --version >/dev/null 2>&1			\
+-	|| gtk12-config --version >/dev/null 2>&1			\
+-	|| (echo gtk not found; exit 1)
++	@(found=no;						\
++	  for config in $(GTK_CONFIG); do			\
++		if $$config --version >/dev/null 2>&1; then	\
++			found=yes;				\
++			break;					\
++		fi;						\
++	  done;							\
++	  if [ "${found}" = "no" ]; then			\
++		echo glib not found; exit 1;			\
++	  fi)
+ 	@echo TODO verify gtk version is greater than 1.1.??
+ 
++ZLIB_DIR+=	/usr/lib /usr/local/lib /usr/X11R6/lib
++
+ _ZLIB_:
+-	@if [    -r /usr/lib/libz.a				\
+-	      -o -r /usr/local/lib/libz.a			\
+-	      -o -r /usr/X11R6/lib/libz.a			\
+-	    ]; then						\
+-		echo Found zlib in system directories;		\
+-	elif [ -d $(ABI_ROOT)/../zlib ]; then			\
++	@(found=no;						\
++	  if [ -d $(ABI_ROOT)/../zlib ]; then			\
+ 		echo Found zlib in peer directory;		\
+ 		$(MAKE) -C $(ABI_ROOT)/../zlib;			\
+-	else							\
+-		echo zlib not found;				\
+-		echo TODO provide a nicer error message;	\
+-		echo TODO with instructions for obtaining it;	\
+-		exit 1;						\
+-	fi
++	  else							\
++		for dir in $(ZLIB_DIR); do			\
++			if [ -r $$dir/libz.a ]; then		\
++				found=yes;			\
++				break;				\
++			fi;					\
++	  	done;						\
++		if [ "$$found" = "yes" ]; then			\
++			echo Found zlib in system directories;	\
++		else						\
++			echo zlib not found;			\
++			echo TODO provide a nicer error message;	\
++			echo TODO with instructions for obtaining it;	\
++			exit 1;					\
++		fi;						\
++	  fi)
++
++LIBPNG_DIR+=	/usr/lib /usr/local/lib /usr/X11R6/lib
+ 
+ _LIBPNG_:
+-	@if [    -r /usr/lib/libpng.a				\
+-	      -o -r /usr/local/lib/libpng.a			\
+-	      -o -r /usr/X11R6/lib/libpng.a			\
+-	    ]; then						\
+-		echo Found libpng in system directories;	\
+-	elif [ -d $(ABI_ROOT)/../libpng ]; then			\
++	@(found=no;						\
++	  if [ -d $(ABI_ROOT)/../libpng ]; then			\
+ 		echo Found libpng in peer directory;		\
+ 		$(MAKE) -C $(ABI_ROOT)/../libpng;		\
+-	else							\
+-		echo libpng not found;				\
+-		echo TODO provide a nicer error message;	\
+-		echo TODO with instructions for obtaining it;	\
+-		exit 1;						\
+-	fi
++	  else							\
++		for dir in $(LIBPNG_DIR); do			\
++			if [ -r $$dir/libpng.a ]; then		\
++				found=yes;			\
++				break;				\
++			fi;					\
++	  	done;						\
++		if [ "$$found" = "yes" ]; then			\
++			echo Found libpng in system directories;	\
++		else						\
++			echo libpng not found;			\
++			echo TODO provide a nicer error message;	\
++			echo TODO with instructions for obtaining it;	\
++			exit 1;					\
++		fi;						\
++	  fi)
++
++WV_DIR+=	/lib /usr/lib /usr/local/lib
+ 
+ _LIBWV_:
+-	@if [    -r /lib/libwv.a				\
+-	      -o -r /usr/lib/libwv.a				\
+-	      -o -r /usr/local/lib/libwv.a			\
+-	    ]; then						\
+-		echo Found libwv in system directories;		\
+-	elif [ -r $(ABI_ROOT)/../wv ]; then			\
+-		echo Found libwv in peer directory;		\
++	@(found=no;						\
++	  if [ -d $(ABI_ROOT)/../wv ]; then			\
++		echo Found wv in peer directory;		\
+ 		if [ ! -r $(ABI_ROOT)/../wv/config.h ]; then	\
+ 			cd $(ABI_ROOT)/../wv; 			\
+ 			./configure;				\
+ 		fi;						\
+ 		$(MAKE) -f Makefile.abi -C $(ABI_ROOT)/../wv;  	\
+-	else							\
+-		echo wv not found;				\
+-		echo TODO provide a nicer error message;	\
+-		echo TODO with instructions for obtaining it;	\
+-		exit 1;						\
+-	fi
++	  else							\
++		for dir in $(WV_DIR); do			\
++			if [ -r $$dir/libwv.a ]; then		\
++				found=yes;			\
++				break;				\
++			fi;					\
++	  	done;						\
++		if [ "$$found" = "yes" ]; then			\
++			echo Found wv in system directories;	\
++		else						\
++			echo wv not found;			\
++			echo TODO provide a nicer error message;	\
++			echo TODO with instructions for obtaining it;	\
++			exit 1;					\
++		fi;						\
++	  fi)
+ 
+ # if this target fails things aren't fatal, the user
+ # just gets a warning
