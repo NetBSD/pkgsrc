@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8330 2004/12/12 15:37:26 minskim Exp $
+$NetBSD: CHANGES,v 1.8331 2004/12/13 06:06:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated milter-greylist to 1.6 [tron 2004-12-12]
 	Updated pkg_comp to 1.20 [grant 2004-12-12]
 	Updated gconf-editor to 2.8.2nb2 [minskim 2004-12-12]
+	Updated epydoc to 2.1nb1 [minskim 2004-12-13]
