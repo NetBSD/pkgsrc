@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/03/27 03:19:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/17 16:27:20 rh Exp $
 #
 
-DISTNAME=	SDL-1.1.6
+DISTNAME=	SDL-1.2.0
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -9,9 +9,10 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
-BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+= automake-1.4:../../devel/automake
-DEPENDS+=	pth>=1.3.5:../../devel/pth
+BUILD_DEPENDS+= autoconf>=2.13:../../devel/autoconf
+BUILD_DEPENDS+= automake>=1.4:../../devel/automake
+BUILD_DEPENDS+= nasm>=0.98:../../devel/nasm
+DEPENDS+=	pth>=1.4.0:../../devel/pth
 #DEPENDS+=	unproven-pthreads>=0.16
 DEPENDS+=	esound>=0.2.18:../../audio/esound
 
