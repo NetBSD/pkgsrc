@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1364 2004/01/29 09:38:10 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1365 2004/01/29 10:22:01 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -469,7 +469,7 @@ _NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
 _NEED_PATCH=		YES
 .endif
 
-.if ${_NEED_PATCH} == "YES" && !exists(${PATCH:C|-.*||}) && empty(PKGPATH:Mdevel/patch)
+.if ${_NEED_PATCH} == "YES"
 USE_GNU_TOOLS+=		patch
 .endif
 
