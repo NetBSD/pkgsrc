@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.29 2005/03/24 16:21:48 tv Exp $
+# $NetBSD: Interix.mk,v 1.30 2005/03/28 15:04:07 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -46,9 +46,6 @@ AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 .endif
 .if exists(${LOCALBASE}/bin/gtar)
 GTAR?=		${LOCALBASE}/bin/gtar
-.endif
-.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort)
-SORT?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
 .endif
 
 AWK?=		/usr/contrib/bin/gawk
