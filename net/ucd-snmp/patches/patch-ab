@@ -1,11 +1,28 @@
---- agent/Makefile.in.orig	Tue Apr 20 18:13:58 1999
-+++ agent/Makefile.in	Tue Apr 20 18:14:11 1999
-@@ -4,7 +4,7 @@
+$NetBSD: patch-ab,v 1.2 1999/05/04 03:51:57 tv Exp $
+
+--- snmplib/Makefile.in.orig	Mon Mar 15 11:49:10 1999
++++ snmplib/Makefile.in	Mon May  3 23:26:56 1999
+@@ -35,19 +35,18 @@
  
- TARG=	 snmpd
- USELIBS= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
-+LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@ @LIBWRAP@
+ CFLAGS=@CFLAGS@ @SHLIB_CFLAGS@
+ CPPFLAGS=@CPPFLAGS@ -I. -I.. -I$(srcdir) -I$(srcdir)/..
+-CC = @CC@ $(CPPFLAGS)
++CC = $(LIBTOOL) @CC@ $(CPPFLAGS)
  
- CPPFLAGS=@CPPFLAGS@ -I.. -I$(srcdir)/.. -I$(srcdir)/../snmplib \
- 	-I$(srcdir) -I. -I$(srcdir)/mibgroup -Imibgroup
+ all: $(TARG)
+ 
+-libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${OBJS}
+-	$(SHLIB_LD_CMD) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${OBJS}
+-	$(RANLIB) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
++$(TARG): $(OBJS)
++	$(CC) -o $@ $(OBJS:.o=.lo) -version-info 0:0 -rpath $(PREFIX)/lib
+ 
+ installdirs:
+ 	@$(SHELL) $(srcdir)/../mkinstalldirs $(libdir) $(includedir)
+ 
+ install:	$(TARG) installdirs
+-	@for i in $(TARG) ; do $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
++	@for i in $(TARG) ; do $(LIBTOOL) $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
+ 	@for i in $(INSTALLHEADERS) ; do $(INSTALL) $(srcdir)/$$i $(includedir) ; echo "install:  installed $$i in $(includedir)" ; done
+ 	$(SHLIB_LDCONFIG_CMD)
+ 
