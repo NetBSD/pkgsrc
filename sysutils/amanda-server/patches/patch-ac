@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2004/05/12 18:45:26 bouyer Exp $
+$NetBSD: patch-ac,v 1.7 2004/11/12 12:13:45 mjl Exp $
 
---- example/Makefile.in.orig	2004-01-08 10:23:49.000000000 -0800
-+++ example/Makefile.in	2004-02-23 07:54:24.000000000 -0800
-@@ -35,7 +35,7 @@
- mandir = @mandir@
- includedir = @includedir@
- oldincludedir = /usr/include
+--- example/Makefile.in.orig	2004-10-22 15:12:40.000000000 +0200
++++ example/Makefile.in	2004-11-08 00:55:34.000000000 +0100
+@@ -19,7 +19,7 @@
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+ VPATH = @srcdir@
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(datadir)/examples/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@
  top_builddir = ..
-@@ -278,7 +278,16 @@
+@@ -384,7 +384,16 @@
  
  info-am:
  

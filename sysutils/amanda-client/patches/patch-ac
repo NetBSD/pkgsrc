@@ -1,19 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
+$NetBSD: patch-ac,v 1.7 2004/11/12 12:13:44 mjl Exp $
 
---- client-src/Makefile.in.orig	2004-01-08 10:22:34.000000000 -0800
-+++ client-src/Makefile.in	2004-02-23 12:42:44.000000000 -0800
-@@ -184,9 +184,7 @@
- # need to list libamanda twice here, first to override the system library
- # routines, and second to pick up any references in the other libraries.
- ###
--LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
--	libamclient.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+LDADD = libamclient.$(LIB_EXTENSION) -lamanda
- 
- 
- SUFFIXES = .sh .pl
-@@ -237,80 +235,58 @@
+--- client-src/Makefile.in.orig	2004-10-22 15:12:39.000000000 +0200
++++ client-src/Makefile.in	2004-11-08 00:42:06.000000000 +0100
+@@ -74,70 +74,48 @@
  amandad_SOURCES = amandad.c
  amandad_OBJECTS = amandad.$(OBJEXT)
  amandad_LDADD = $(LDADD)
@@ -21,7 +10,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amandad_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- amandad_LDFLAGS =
  amqde_SOURCES = amqde.c
  amqde_OBJECTS = amqde.$(OBJEXT)
  amqde_LDADD = $(LDADD)
@@ -29,7 +17,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amqde_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- amqde_LDFLAGS =
  calcsize_SOURCES = calcsize.c
  calcsize_OBJECTS = calcsize.$(OBJEXT)
  calcsize_LDADD = $(LDADD)
@@ -37,7 +24,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +calcsize_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- calcsize_LDFLAGS =
  am_getfsent_OBJECTS = getfsent.test.$(OBJEXT)
  getfsent_OBJECTS = $(am_getfsent_OBJECTS)
  getfsent_LDADD = $(LDADD)
@@ -45,7 +31,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +getfsent_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- getfsent_LDFLAGS =
  killpgrp_SOURCES = killpgrp.c
  killpgrp_OBJECTS = killpgrp.$(OBJEXT)
  killpgrp_LDADD = $(LDADD)
@@ -53,15 +38,13 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +killpgrp_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- killpgrp_LDFLAGS =
  rundump_SOURCES = rundump.c
  rundump_OBJECTS = rundump.$(OBJEXT)
  rundump_LDADD = $(LDADD)
 -rundump_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
-+rundump_DEPENDENCIES = libamclient.$(LIB_EXTENSION) 
- rundump_LDFLAGS =
++rundump_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
  runtar_SOURCES = runtar.c
  runtar_OBJECTS = runtar.$(OBJEXT)
  runtar_LDADD = $(LDADD)
@@ -69,7 +52,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +runtar_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- runtar_LDFLAGS =
  selfcheck_SOURCES = selfcheck.c
  selfcheck_OBJECTS = selfcheck.$(OBJEXT)
  selfcheck_LDADD = $(LDADD)
@@ -77,7 +59,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +selfcheck_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- selfcheck_LDFLAGS =
  am_sendbackup_OBJECTS = sendbackup.$(OBJEXT) sendbackup-dump.$(OBJEXT) \
  	sendbackup-gnutar.$(OBJEXT)
  sendbackup_OBJECTS = $(am_sendbackup_OBJECTS)
@@ -86,7 +67,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +sendbackup_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- sendbackup_LDFLAGS =
  sendsize_SOURCES = sendsize.c
  sendsize_OBJECTS = sendsize.$(OBJEXT)
  sendsize_LDADD = $(LDADD)
@@ -94,7 +74,6 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +sendsize_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- sendsize_LDFLAGS =
  versionsuffix_SOURCES = versionsuffix.c
  versionsuffix_OBJECTS = versionsuffix.$(OBJEXT)
  versionsuffix_LDADD = $(LDADD)
@@ -102,6 +81,17 @@ $NetBSD: patch-ac,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 -	libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +versionsuffix_DEPENDENCIES = libamclient.$(LIB_EXTENSION)
- versionsuffix_LDFLAGS =
+ libexecSCRIPT_INSTALL = $(INSTALL_SCRIPT)
+ sbinSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  SCRIPTS = $(libexec_SCRIPTS) $(sbin_SCRIPTS)
+@@ -382,9 +360,7 @@
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	libamclient.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = libamclient.$(LIB_EXTENSION) -lamanda
+ 
+ SUFFIXES = .sh .pl
  

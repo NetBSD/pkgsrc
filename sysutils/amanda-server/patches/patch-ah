@@ -1,20 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
+$NetBSD: patch-ah,v 1.6 2004/11/12 12:13:45 mjl Exp $
 
---- server-src/Makefile.in.orig	2004-01-08 10:22:53.000000000 -0800
-+++ server-src/Makefile.in	2004-02-23 14:25:45.000000000 -0800
-@@ -198,10 +198,7 @@
- # need to list libamanda twice here, first to override the system library
- # routines, and second to pick up any references in the other libraries.
- ###
--LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
--	libamserver.$(LIB_EXTENSION) \
--	../tape-src/libamtape.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+LDADD = libamserver.$(LIB_EXTENSION)
- 
- 
- SUFFIXES = .sh .pl
-@@ -259,155 +256,98 @@
+--- server-src/Makefile.in.orig	2004-10-22 15:12:41.000000000 +0200
++++ server-src/Makefile.in	2004-11-08 01:11:07.000000000 +0100
+@@ -88,137 +88,80 @@
  amadmin_SOURCES = amadmin.c
  amadmin_OBJECTS = amadmin.$(OBJEXT)
  amadmin_LDADD = $(LDADD)
@@ -23,7 +11,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amadmin_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amadmin_LDFLAGS =
  amcheck_SOURCES = amcheck.c
  amcheck_OBJECTS = amcheck.$(OBJEXT)
  amcheck_LDADD = $(LDADD)
@@ -32,7 +19,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amcheck_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amcheck_LDFLAGS =
  amcleanupdisk_SOURCES = amcleanupdisk.c
  amcleanupdisk_OBJECTS = amcleanupdisk.$(OBJEXT)
  amcleanupdisk_LDADD = $(LDADD)
@@ -41,7 +27,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amcleanupdisk_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amcleanupdisk_LDFLAGS =
  amflush_SOURCES = amflush.c
  amflush_OBJECTS = amflush.$(OBJEXT)
  amflush_LDADD = $(LDADD)
@@ -50,7 +35,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amflush_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amflush_LDFLAGS =
  am_amgetconf_OBJECTS = getconf.$(OBJEXT)
  amgetconf_OBJECTS = $(am_amgetconf_OBJECTS)
  amgetconf_LDADD = $(LDADD)
@@ -59,7 +43,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amgetconf_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amgetconf_LDFLAGS =
  am_amindexd_OBJECTS = amindexd.$(OBJEXT) disk_history.$(OBJEXT) \
  	list_dir.$(OBJEXT)
  amindexd_OBJECTS = $(am_amindexd_OBJECTS)
@@ -69,7 +52,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amindexd_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amindexd_LDFLAGS =
  amlabel_SOURCES = amlabel.c
  amlabel_OBJECTS = amlabel.$(OBJEXT)
  amlabel_LDADD = $(LDADD)
@@ -78,7 +60,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amlabel_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amlabel_LDFLAGS =
  amlogroll_SOURCES = amlogroll.c
  amlogroll_OBJECTS = amlogroll.$(OBJEXT)
  amlogroll_LDADD = $(LDADD)
@@ -87,7 +68,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amlogroll_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amlogroll_LDFLAGS =
  am_amreport_OBJECTS = reporter.$(OBJEXT)
  amreport_OBJECTS = $(am_amreport_OBJECTS)
  amreport_LDADD = $(LDADD)
@@ -96,7 +76,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amreport_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amreport_LDFLAGS =
  amtape_SOURCES = amtape.c
  amtape_OBJECTS = amtape.$(OBJEXT)
  amtape_LDADD = $(LDADD)
@@ -105,7 +84,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amtape_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amtape_LDFLAGS =
  amtrmidx_SOURCES = amtrmidx.c
  amtrmidx_OBJECTS = amtrmidx.$(OBJEXT)
  amtrmidx_LDADD = $(LDADD)
@@ -114,7 +92,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amtrmidx_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amtrmidx_LDFLAGS =
  amtrmlog_SOURCES = amtrmlog.c
  amtrmlog_OBJECTS = amtrmlog.$(OBJEXT)
  amtrmlog_LDADD = $(LDADD)
@@ -123,7 +100,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +amtrmlog_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- amtrmlog_LDFLAGS =
  am_conffile_OBJECTS = conffile.test.$(OBJEXT)
  conffile_OBJECTS = $(am_conffile_OBJECTS)
  conffile_LDADD = $(LDADD)
@@ -132,7 +108,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +conffile_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- conffile_LDFLAGS =
  am_diskfile_OBJECTS = diskfile.test.$(OBJEXT)
  diskfile_OBJECTS = $(am_diskfile_OBJECTS)
  diskfile_LDADD = $(LDADD)
@@ -141,7 +116,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +diskfile_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- diskfile_LDFLAGS =
  driver_SOURCES = driver.c
  driver_OBJECTS = driver.$(OBJEXT)
  driver_LDADD = $(LDADD)
@@ -150,7 +124,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +driver_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- driver_LDFLAGS =
  dumper_SOURCES = dumper.c
  dumper_OBJECTS = dumper.$(OBJEXT)
  dumper_LDADD = $(LDADD)
@@ -159,7 +132,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +dumper_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- dumper_LDFLAGS =
  am_infofile_OBJECTS = infofile.test.$(OBJEXT)
  infofile_OBJECTS = $(am_infofile_OBJECTS)
  infofile_LDADD = $(LDADD)
@@ -168,7 +140,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +infofile_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- infofile_LDFLAGS =
  planner_SOURCES = planner.c
  planner_OBJECTS = planner.$(OBJEXT)
  planner_LDADD = $(LDADD)
@@ -177,7 +148,6 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +planner_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- planner_LDFLAGS =
  taper_SOURCES = taper.c
  taper_OBJECTS = taper.$(OBJEXT)
  taper_LDADD = $(LDADD)
@@ -186,15 +156,27 @@ $NetBSD: patch-ah,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 -	../tape-src/libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
 +taper_DEPENDENCIES = libamserver.$(LIB_EXTENSION)
- taper_LDFLAGS =
+ sbinSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  SCRIPTS = $(sbin_SCRIPTS)
- 
-@@ -416,7 +356,7 @@
- DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)/config
- CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
+@@ -338,7 +281,7 @@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+ LIBOBJS = @LIBOBJS@
 -LIBS = @LIBS@
 +LIBS = @LIBS@ -lamtape -lamanda
- depcomp = $(SHELL) $(top_srcdir)/config/depcomp
- am__depfiles_maybe = depfiles
- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/amadmin.Po ./$(DEPDIR)/amcheck.Po \
+ LIBTOOL = @LIBTOOL@
+ LIBTOOL_DEPS = @LIBTOOL_DEPS@
+ LN_S = @LN_S@
+@@ -478,10 +421,7 @@
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = libamserver.$(LIB_EXTENSION)
+ 
+ SUFFIXES = .sh .pl
+ 

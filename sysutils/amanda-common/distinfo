@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2004/07/09 12:21:26 salo Exp $
+$NetBSD: distinfo,v 1.6 2004/11/12 12:13:45 mjl Exp $
 
-SHA1 (amanda-2.4.4p2.tar.gz) = c14510260941a3915f4068e6b7e3f91698ab099e
-Size (amanda-2.4.4p2.tar.gz) = 1263075 bytes
-SHA1 (patch-aa) = 6338b1e138ea34e2f9de27da3edf850c4923df5d
-SHA1 (patch-ab) = dae2eedc8672d7137cf528ca5e52462288a7241b
-SHA1 (patch-ac) = 2bd89830f652d74dc82d095affc7079060f7ce55
+SHA1 (amanda-2.4.4p4.tar.gz) = e44b40ea0f8e51336716ab455b27c69f4616d7f6
+Size (amanda-2.4.4p4.tar.gz) = 1422735 bytes
+SHA1 (patch-aa) = c03117e065da4fa3b7dce91c091d6cf044f884ea
+SHA1 (patch-ab) = 8a6233a38207d514e2671eac50e38996ee578530
+SHA1 (patch-ac) = 1c42e18ac4055fe7370acd5a00c126ab9d93f890
 SHA1 (patch-ad) = 510e650c9e9976323b1d27a7895cee6281b89dcd
-SHA1 (patch-ae) = 0aaaf8752727ace218668ab0cb14abad6f2e17ca
+SHA1 (patch-ae) = bcf887d6e1722cf27538cf9d1d190b5c749f587f

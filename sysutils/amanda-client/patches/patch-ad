@@ -1,8 +1,19 @@
-$NetBSD: patch-ad,v 1.6 2004/05/12 18:45:25 bouyer Exp $
+$NetBSD: patch-ad,v 1.7 2004/11/12 12:13:44 mjl Exp $
 
---- recover-src/Makefile.in.orig	2004-01-08 10:23:34.000000000 -0800
-+++ recover-src/Makefile.in	2004-02-23 12:49:20.000000000 -0800
-@@ -172,10 +172,9 @@
+--- recover-src/Makefile.in.orig	2004-10-22 15:12:41.000000000 +0200
++++ recover-src/Makefile.in	2004-11-08 00:44:56.000000000 +0100
+@@ -61,9 +61,7 @@
+ amrecover_OBJECTS = $(am_amrecover_OBJECTS)
+ amrecover_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
+-amrecover_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../client-src/libamclient.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION) $(am__DEPENDENCIES_1)
++amrecover_DEPENDENCIES = ../client-src/libamclient.$(LIB_EXTENSION)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+ am__depfiles_maybe = depfiles
+@@ -291,10 +289,9 @@
  # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
@@ -14,15 +25,4 @@ $NetBSD: patch-ad,v 1.6 2004/05/12 18:45:25 bouyer Exp $
 +	-lamanda \
  	$(READLINE_LIBS)
  
- 
-@@ -200,9 +199,7 @@
- 	uparse.$(OBJEXT) uscan.$(OBJEXT)
- amrecover_OBJECTS = $(am_amrecover_OBJECTS)
- amrecover_LDADD = $(LDADD)
--amrecover_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
--	../client-src/libamclient.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+amrecover_DEPENDENCIES = ../client-src/libamclient.$(LIB_EXTENSION)
- amrecover_LDFLAGS =
- 
- DEFS = @DEFS@
+ amrecover_SOURCES = amrecover.c					\
