@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 2000/01/26 10:59:13 rh Exp $
+$NetBSD: md5,v 1.6 2000/05/30 09:07:30 rh Exp $
 
-MD5 (libxml-1.8.5.tar.gz) = f2d88a9609c80f9300e8da569b4ef8fc
+MD5 (libxml-1.8.7.tar.gz) = ee9498b9b3c433da4155a4148a2146e9
