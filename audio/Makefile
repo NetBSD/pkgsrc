@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2002/04/19 14:36:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.129 2002/04/19 20:24:48 zuntum Exp $
 #
 
 COMMENT=	Audio tools
@@ -102,6 +102,7 @@ SUBDIR+=	mp3to
 SUBDIR+=	mpg123
 SUBDIR+=	mserv
 SUBDIR+=	musicbox
+SUBDIR+=	musicbrainz
 SUBDIR+=	nas
 SUBDIR+=	normalize
 SUBDIR+=	nspmod
