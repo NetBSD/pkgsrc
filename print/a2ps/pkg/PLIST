@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/02/18 11:40:23 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/05/09 00:53:38 hubertf Exp $
 share/a2ps/README
 share/a2ps/ps/base.ps
 share/a2ps/ps/bw.pro
@@ -170,6 +170,7 @@ share/a2ps/printers/level1.ppd
 share/a2ps/printers/level2.ppd
 share/a2ps/printers/printers.map
 lib/liba2ps.so.0.3
+lib/liba2ps.la
 @exec /sbin/ldconfig -m %B || /usr/bin/true
 lib/liba2ps.a
 etc/a2ps.cfg
