@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.66 2001/06/11 06:34:57 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2001/08/27 06:31:36 tron Exp $
 
 DISTNAME=		gnome-core-1.4.0.4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Base component of GNU Network Object Management Environment
 
