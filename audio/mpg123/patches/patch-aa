@@ -1,88 +1,46 @@
-*** Makefile.old	Thu Feb 26 20:21:13 1998
---- Makefile	Thu Feb 26 20:21:56 1998
-***************
-*** 34,40 ****
-  	@echo "make ultrix          DEC Ultrix (tested: 4.4)"
-  	@echo "make aix             IBM AIX (tested: 4.2)"
-  	@echo "make os2             IBM OS/2"
-! 	@echo "make netbsd          NetBSD"
-  	@echo "make bsdos           BSDI BSD/OS"
-  	@echo "make generic         try this one if your system isn't listed above"
-  	@echo ""
---- 34,41 ----
-  	@echo "make ultrix          DEC Ultrix (tested: 4.4)"
-  	@echo "make aix             IBM AIX (tested: 4.2)"
-  	@echo "make os2             IBM OS/2"
-! 	@echo "make netbsd          NetBSD generic"
-! 	@echo "make netbsd-i386     NetBSD optimized for i386"
-  	@echo "make bsdos           BSDI BSD/OS"
-  	@echo "make generic         try this one if your system isn't listed above"
-  	@echo ""
-*** audio_sun.c.old	Thu Feb 26 20:10:37 1998
---- audio_sun.c	Thu Feb 26 20:18:46 1998
-***************
-*** 17,22 ****
---- 17,24 ----
-  
-  #include "mpg123.h"
-  
-+ extern int outburst;
-+ 
-  #include <sys/filio.h>
-  #ifdef SUNOS
-  #include <sun/audioio.h>
-***************
-*** 74,79 ****
---- 76,88 ----
-    }
-  
-  #ifndef NETBSD
-+   AUDIO_INITINFO(&ainfo);
-+   if (ioctl(ai->fn, AUDIO_SETINFO, &ainfo) == -1)
-+     return -1;
-+   outburst = ainfo.blocksize;
-+   if(outburst > MAXOUTBURST)
-+     outburst = MAXOUTBURST;
-+ 
-    AUDIO_INITINFO(&ainfo);
-  
-    switch(ai->output) {
-*** buffer.c.old	Thu Feb 26 20:20:37 1998
---- buffer.c	Thu Feb 26 20:20:45 1998
-***************
-*** 48,54 ****
-  	for (;;) {
-  		if (intflag) {
-  			intflag = FALSE;
-! #if defined(SOLARIS) || defined(__NetBSD__)
-  			if (param.outmode == DECODE_AUDIO)
-  				audio_queueflush (ai);
-  #endif
---- 48,54 ----
-  	for (;;) {
-  		if (intflag) {
-  			intflag = FALSE;
-! #if defined(SOLARIS) || defined(NETBSD)
-  			if (param.outmode == DECODE_AUDIO)
-  				audio_queueflush (ai);
-  #endif
-*** common.c.old	Sat Feb 28 15:42:24 1998
---- common.c	Sat Feb 28 15:42:36 1998
-***************
-*** 587,593 ****
-                 too much distortion in the audio output).  */
-          do {
-            try++;
-!           rd->head_shift(hbuf,&newhead);
-            if (!oldhead)
-              goto init_resync;       /* "considered harmful", eh? */
-  
---- 587,594 ----
-                 too much distortion in the audio output).  */
-          do {
-            try++;
-!           if (rd->head_shift(hbuf,&newhead) == 0)
-! 	    return 0;
-            if (!oldhead)
-              goto init_resync;       /* "considered harmful", eh? */
-  
+--- Makefile.orig	Sun Feb  8 13:23:04 1998
++++ Makefile	Sat Mar  7 08:39:36 1998
+@@ -32,6 +32,7 @@
+ 	@echo "make aix            IBM AIX (tested: 4.2)"
+ 	@echo "make os2            IBM OS/2"
+ 	@echo "make netbsd         NetBSD"
++	@echo "make netbsd-i386    NetBSD optimized for i386"
+ 	@echo "make bsdos          BSDI BSD/OS"
+ 	@echo "make generic        try this one if your system isn't listed above"
+ 	@echo ""
+--- audio_sun.c.orig	Mon Jan  5 06:41:31 1998
++++ audio_sun.c	Sat Mar  7 08:43:50 1998
+@@ -17,6 +17,8 @@
+ 
+ #include "mpg123.h"
+ 
++extern int outburst;
++
+ #include <sys/filio.h>
+ #ifdef SUNOS
+ #include <sun/audioio.h>
+@@ -74,6 +76,13 @@
+   }
+ 
+ #ifndef NETBSD
++  AUDIO_INITINFO(&ainfo);
++  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
++    return -1;
++  outburst = ainfo.blocksize;
++  if(outburst > MAXOUTBURST)
++    outburst = MAXOUTBURST;
++
+   AUDIO_INITINFO(&ainfo);
+ 
+   switch(ai->output) {
+--- buffer.c.orig	Wed Feb 11 15:55:18 1998
++++ buffer.c	Sat Mar  7 08:40:43 1998
+@@ -48,7 +48,7 @@
+ 	for (;;) {
+ 		if (intflag) {
+ 			intflag = FALSE;
+-#if defined(SOLARIS) || defined(__NetBSD__)
++#if defined(SOLARIS) || defined(NETBSD)
+ 			if (param.outmode == DECODE_AUDIO)
+ 				audio_queueflush (ai);
+ #endif
