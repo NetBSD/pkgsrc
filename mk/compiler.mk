@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.38.2.1 2004/11/22 22:48:05 tv Exp $
+# $NetBSD: compiler.mk,v 1.38.2.2 2004/11/30 15:06:34 tv Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -114,8 +114,18 @@ _PKGSRC_COMPILER:=	${_compiler_} ${_PKGSRC_COMPILER}
 .endfor
 _PKGSRC_COMPILER:=	${_COMPILER} ${_PKGSRC_COMPILER}
 
+_COMPILER_STRIP_VARS=	# empty
+
 .for _compiler_ in ${_PKGSRC_COMPILER}
 .  include "../../mk/compiler/${_compiler_}.mk"
+.endfor
+.undef _compiler_
+
+# Strip the leading paths from the toolchain variables since we manipulate
+# the PATH to use the correct executable.
+#
+.for _var_ in ${_COMPILER_STRIP_VARS}
+${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_/1:N_asdf_*}
 .endfor
 
 .if defined(ABI) && !empty(ABI)
