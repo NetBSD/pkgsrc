@@ -1,0 +1,3 @@
+This package contains the Courier IMAP authenticiation daemon that can
+authenticate against a list of mail accounts stored in an external LDAP
+directory.
