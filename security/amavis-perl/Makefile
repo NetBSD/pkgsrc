@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/22 06:57:10 martti Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/02 07:33:00 martti Exp $
 #
 
 DISTNAME=	amavisd-snapshot-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
 CATEGORIES=	security mail
-MASTER_SITES=	http://www.amavis.org/dist/ \
-		http://aachalon.de/AMaViS/
+MASTER_SITES=	http://www.amavis.org/dist/perl/ \
+		${MASTER_SITE_SOURCEFORGE:=amavis/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.amavis.org/
