@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/13 12:54:18 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/16 13:02:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/05 09:31:14 asami Exp $
 
 DISTNAME=	vcg.1.30.r3.17
@@ -13,11 +13,11 @@ USE_X11BASE=	yes
 WRKSRC=		${WRKDIR}/vcg.1.30
 
 pre-patch:
-	@mkdir -p ${WRKSRC}/preconf/X11ccNetBSD
-	@cp ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccNetBSD
-	@cp ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccNetBSD
-	@cp ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccNetBSD
-	@cp ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccNetBSD
+	@${MKDIR} ${WRKSRC}/preconf/X11ccNetBSD
+	@${CP} ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccNetBSD
+	@${CP} ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccNetBSD
+	@${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccNetBSD
+	@${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccNetBSD
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vcg
