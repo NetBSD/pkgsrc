@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/16 00:35:11 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/16 03:25:28 minskim Exp $
 #
 
 DISTNAME=	chef.l
@@ -11,9 +11,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Convert from English to (mock) Swedish - Bork Bork Bork!
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
+NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 
 MAKE_ENV+=	BINDIR=${PREFIX}/bin BINOWN=${BINOWN} BINGRP=${BINGRP}
+
+INSTALLATION_DIRS=	bin
 
 do-extract:
 	${CP} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKDIR}/chef.l
