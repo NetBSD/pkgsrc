@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/12/21 16:59:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2000/12/28 00:09:38 jlam Exp $
 #
 
 DISTNAME=		cups-${VERS}-1-source
@@ -15,6 +15,8 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cups.org/
+
+CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
