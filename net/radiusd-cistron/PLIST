@@ -1,30 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/01 18:35:46 jmmv Exp $
 bin/radclient
 bin/radlast
 bin/radtest
 bin/raduse
 bin/radwho
 bin/radzap
-etc/raddb/clients.sample
-etc/raddb/dictionary
-etc/raddb/dictionary.ascend
-etc/raddb/dictionary.bay
-etc/raddb/dictionary.cisco
-etc/raddb/dictionary.cistron
-etc/raddb/dictionary.compat
-etc/raddb/dictionary.erx
-etc/raddb/dictionary.livingston
-etc/raddb/dictionary.redback
-etc/raddb/dictionary.shiva
-etc/raddb/dictionary.tunnel
-etc/raddb/dictionary.usr
-etc/raddb/dictionary.versanet
-etc/raddb/hints.sample
-etc/raddb/huntgroups.sample
-etc/raddb/naslist.sample
-etc/raddb/naspasswd.sample
-etc/raddb/realms.sample
-etc/raddb/users.sample
 etc/rc.d/radiusd
 man/man1/radclient.1
 man/man1/radlast.1
@@ -52,8 +32,28 @@ share/doc/radiusd-cistron/README.radrelay
 share/doc/radiusd-cistron/README.simul
 share/doc/radiusd-cistron/README.tunnel
 share/doc/radiusd-cistron/README.usersfile
+share/examples/raddb/clients.sample
+share/examples/raddb/dictionary
+share/examples/raddb/dictionary.ascend
+share/examples/raddb/dictionary.bay
+share/examples/raddb/dictionary.cisco
+share/examples/raddb/dictionary.cistron
+share/examples/raddb/dictionary.compat
+share/examples/raddb/dictionary.erx
+share/examples/raddb/dictionary.livingston
+share/examples/raddb/dictionary.redback
+share/examples/raddb/dictionary.shiva
+share/examples/raddb/dictionary.tunnel
+share/examples/raddb/dictionary.usr
+share/examples/raddb/dictionary.versanet
+share/examples/raddb/hints.sample
+share/examples/raddb/huntgroups.sample
+share/examples/raddb/naslist.sample
+share/examples/raddb/naspasswd.sample
+share/examples/raddb/realms.sample
+share/examples/raddb/users.sample
+@dirrm share/examples/raddb
 @dirrm share/doc/radiusd-cistron
-@unexec ${RMDIR} %D/etc/raddbr 2>/dev/null || ${TRUE}
 @unexec ${RM} -f /var/log/radius.log
 @unexec ${RM} -f /var/run/radiusd.pid
 @unexec echo "Leaving /var/run/radutmp, /var/log/radwtmp and /var/log/radacct alone."
