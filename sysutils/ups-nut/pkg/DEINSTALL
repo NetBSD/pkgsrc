@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+#
+
+USER="@NUT_USER@"
+GROUP="@NUT_GROUP@"
+USERDEL="@USERDEL@"
+GROUPDEL="@GROUPDEL@"
+
+case "$2" in
+	DEINSTALL)
+		echo "Removing user ${USER}"
+		${USERDEL} -r ${USER}
+		echo "Removing group ${GROUP}"
+		${GROUPDEL} ${GROUP}
+	;;
+esac
+exit 0

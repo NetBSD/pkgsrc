@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+
+USER=@NUT_USER@
+GROUP=@NUT_GROUP@
+
+ADDUSER="@ADDUSER@"
+ADDGROUP="@ADDGROUP@"
+CHGRP="@CHGRP@"
+GREP="@GREP@"
+RM="@RM@"
+TOUCH="@TOUCH@"
+
+# Group... the default's shipped with NetBSD
+# We need to check that ${GROUP} exists before adding the user.
+# Do it with chgrp to be able to use NIS.
+#
+${TOUCH} "/tmp/grouptest.$$"
+${CHGRP} ${GROUP} "/tmp/grouptest.$$" >/dev/null 2>&1
+if [ $? -eq 0 ]
+then
+	echo "Group '${GROUP}' already exists...proceeding."
+else
+	echo "Creating '${GROUP}' group..."
+	${ADDGROUP} ${GROUP}
+	echo "Done."
+fi
+${RM} -f "/tmp/grouptest.$$"
+
+# Use `finger' to be able to use NIS.
+#
+finger ${USER} 2>&1 | ${GREP} -q "no such user"
+if [ $? -eq 0 ]
+then
+	echo "Creating '${USER}' user..."
+	${ADDUSER} \
+		-c "Network UPS Tools" \
+		-g ${GROUP} -s /bin/sh -m ${USER}
+	echo "Done."
+else
+	echo "User '${USER}' already exists...proceeding."
+fi
+exit 0

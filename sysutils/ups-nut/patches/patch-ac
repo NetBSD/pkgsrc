@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+
+diff -Pur scripts-orig/NetBSD/upsd.sh scripts/NetBSD/upsd.sh
+--- scripts-orig/NetBSD/upsd	Wed Dec 31 16:00:00 1969
++++ scripts/NetBSD/upsd	Thu Dec 14 21:19:34 2000
+@@ -0,0 +1,15 @@
++#!/bin/sh
++UPS_DRIVER="apcsmart"
++DRIVER_OPTIONS=""
++SPECIAL_FILE="/dev/dty00"
++MONITOR_HOST="localhost"
++
++if [ -z "$1" -o "x$1" = xstart ]
++then
++	if [ x$MONITOR_HOST = xlocalhost ]
++	then
++		%%PREFIX%%/bin/$UPS_DRIVER $DRIVER_OPTIONS $SPECIAL_FILE
++		%%PREFIX%%/sbin/upsd
++	fi
++	%%PREFIX%%/sbin/upsmon $MONITOR_HOST
++fi
