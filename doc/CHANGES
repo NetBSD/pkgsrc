@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8079 2004/11/27 16:14:54 salo Exp $
+$NetBSD: CHANGES,v 1.8080 2004/11/27 16:30:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5537,3 +5537,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fillets-ng to 0.6.0 [salo 2004-11-27]
 	Updated fillets-ng-data to 0.6.1 [salo 2004-11-27]
 	Updated fillets-ng-data-cs to 0.6.0 [salo 2004-11-27]
+	Updated ruby-bigfloag to 1.2.1 [taca 2004-11-27]
+	Updated ruby-bitvector to 0.1.7 [taca 2004-11-27]
+	Updated ruby-gsl to 0.2.0 [taca 2004-11-27]
