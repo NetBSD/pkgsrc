@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1998/11/12 23:20:09 frueauf Exp $
+# $NetBSD: Makefile,v 1.25 1998/11/19 15:40:46 agc Exp $
 #
 
 DISTNAME=		xmame-0.34b5.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://drake.dit.upm.es/~mame/
 
-RUN_DEPENDS=		unzip:../../archivers/unzip
+DEPENDS=		unzip-5.32:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1 \

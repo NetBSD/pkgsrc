@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/20 15:17:33 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1998/11/19 15:40:47 agc Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -12,8 +12,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	ftp://mitac11.uia.ac.be/html-test/fvwm95.html
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-BUILD_DEPENDS=	${LOCALBASE}/lib/librplay.a:../../audio/rplay
-RUN_DEPENDS=	xpmroot:../../x11/xpmroot
+DEPENDS+=	xpmroot-1.01:../../x11/xpmroot
+DEPENDS+=	rplay-3.2.0b6:../../audio/rplay
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes

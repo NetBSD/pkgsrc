@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/22 12:52:32 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/19 15:40:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=   ftp://stampede.cs.berkeley.edu/pub/kp/
 
 MAINTAINER=	packages@netbsd.org
 
-RUN_DEPENDS=	wish8.0:../../x11/tk80
+DEPENDS=	tk-8.0p2:../../x11/tk80
 
 pre-configure:
 	for f in `find ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \

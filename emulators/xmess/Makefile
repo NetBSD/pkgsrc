@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/11/12 23:20:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/19 15:40:46 agc Exp $
 #
 
 DISTNAME=		unix02b4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://internetter.com/titan/mess/
 
-RUN_DEPENDS=		unzip:../../archivers/unzip
+DEPENDS=		unzip-5.32:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		xmess-0.1

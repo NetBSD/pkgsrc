@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/20 15:17:09 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1998/11/19 15:40:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -26,12 +26,10 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.beedub.com/exmh/
 
-BUILD_DEPENDS=	tclsh8.0:../../lang/tcl80
-RUN_DEPENDS=	wish8.0:../../x11/tk80
-# exmh is pretty useless without this, but it's not needed to build it.
-RUN_DEPENDS+=   repl:../../mail/nmh
-# full mime support needs mmencode/mmdecode from metamail
-RUN_DEPENDS+=   mmencode:../../mail/metamail
+DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	nmh-0.27:../../mail/nmh
+DEPENDS+=	mm-2.7:../../mail/metamail
 
 DIST_SUBDIR=	${PKGNAME}
 
