@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/08/23 16:59:09 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/01/28 05:18:41 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -26,7 +26,7 @@ post-extract:
 	${MV} ${WRKSRC}/doc/gv.man ${WRKSRC}/source/
 
 post-install:
-	@(cd ${WRKSRC}; ${MAKE} install.doc)
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install.doc
 
 .include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
