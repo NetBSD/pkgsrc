@@ -1,0 +1,28 @@
+$NetBSD: patch-ap,v 1.1 2000/10/22 16:55:21 rh Exp $
+
+--- src/timer/linux/SDL_systimer.c.orig	Fri May 19 23:59:30 2000
++++ src/timer/linux/SDL_systimer.c
+@@ -36,8 +36,13 @@
+ #include "SDL_timer.h"
+ #include "SDL_timer_c.h"
+ 
++#if _POSIX_THREAD_SYSCALL_SOFT
++#include <pthread.h>
++#endif
++
+ #if defined(DISABLE_THREADS) || defined(FORK_HACK)
+ #define USE_ITIMER
++#else
+ #endif
+ 
+ /* The first ticks value of the application */
+@@ -75,6 +80,9 @@
+ 	then = SDL_GetTicks();
+ #endif
+ 	do {
++#if _POSIX_THREAD_SYSCALL_SOFT
++		pthread_yield_np();
++#endif
+ 		errno = 0;
+ #ifndef linux
+ 		/* Calculate the time interval left (in case of interrupt) */

@@ -1,0 +1,27 @@
+$NetBSD: patch-an,v 1.1 2000/10/22 16:55:20 rh Exp $
+
+--- src/audio/solaris/SDL_sysaudio.c.orig	Sun Sep 24 05:07:32 2000
++++ src/audio/solaris/SDL_sysaudio.c
+@@ -52,6 +52,10 @@
+ #include "SDL_audio_c.h"
+ #include "SDL_timer.h"
+ 
++#if _POSIX_THREAD_SYSCALL_SOFT
++#include <pthread.h>
++#endif
++
+ /* Open the audio device for playback, and don't block if busy */
+ #define OPEN_FLAGS	(O_WRONLY|O_NONBLOCK)
+ 
+@@ -109,7 +113,11 @@
+ }
+ 
+ AudioBootStrap AUDIO_bootstrap = {
++#ifdef __NetBSD__
++	"audio", Audio_Available, Audio_CreateDevice
++#else
+ 	"dsp", Audio_Available, Audio_CreateDevice
++#endif
+ };
+ 
+ #ifdef DEBUG_AUDIO

@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2000/10/22 16:55:20 rh Exp $
+
+--- src/audio/Makefile.in.orig	Fri Aug  4 21:23:52 2000
++++ src/audio/Makefile.in
+@@ -110,7 +110,7 @@
+ COMMON_SRCS =  	SDL_audio.c			SDL_audio_c.h			SDL_audiocvt.c			SDL_audiomem.c			SDL_audiomem.h			SDL_mixer.c			SDL_sysaudio.h			SDL_wave.c			SDL_wave.h
+ 
+ 
+-libaudio_la_SOURCES = $(COMMON_SRCS)
++libaudio_la_SOURCES = $(COMMON_SRCS) SDL_esdaudio.c
+ libaudio_la_LIBADD = @AUDIO_ARCH_LIB@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+@@ -128,7 +128,7 @@
+ libaudio_la_LDFLAGS = 
+ libaudio_la_DEPENDENCIES = 
+ libaudio_la_OBJECTS =  SDL_audio.lo SDL_audiocvt.lo SDL_audiomem.lo \
+-SDL_mixer.lo SDL_wave.lo
++SDL_mixer.lo SDL_wave.lo SDL_esdaudio.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)

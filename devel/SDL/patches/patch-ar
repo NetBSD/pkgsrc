@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2000/10/22 16:55:21 rh Exp $
+
+--- src/Makefile.in.orig	Wed Sep 27 08:34:59 2000
++++ src/Makefile.in
+@@ -116,7 +116,7 @@
+ lib_LTLIBRARIES = libSDL.la
+ 
+ libSDL_la_SOURCES = $(GENERAL_SRCS)
+-libSDL_la_LDFLAGS =          -release $(LT_RELEASE)		-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
++libSDL_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ libSDL_la_LIBADD =  	main/libarch.la			@SDL_EXTRALIBS@			@SYSTEM_LIBS@
+ 
