@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/15 11:57:30 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/20 15:10:35 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -10,12 +10,17 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 
 MAINTAINER=	packages@netbsd.org
 
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
 # "kdesupport-2.1b" included "uu" library.
 CONFLICTS=	kdesupport-2.1b
 
 GNU_CONFIGURE=	yes
 
-ALL_TARGET=	libuu.a	libuu.so.1.0
+ALL_TARGET=	libuu.la
+MAKE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
 
 DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 		doc/library.ltx doc/structure.fig doc/td-v1.c doc/td-v2.c \
@@ -24,18 +29,14 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.so.1.0 ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include/uu.h
+	${PREFIX}/bin/libtool ${INSTALL_DATA} ${WRKSRC}/libuu.la ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/uudeview.h ${PREFIX}/include/uu.h
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' <${FILESDIR}/uulib.3 >${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
-.if !defined(NOPORTDOCS)
-	@echo "===>   Installing documentation for ${PKGNAME}"
-	@${MKDIR} ${PREFIX}/share/doc/uulib
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uulib
 	@${INSTALL_MAN} ${FILESDIR}/porting.notes ${PREFIX}/share/doc/uulib
 .for docfile in ${DOCFILES}
-	@${INSTALL_MAN} ${WRKSRC}/${docfile} ${PREFIX}/share/doc/uulib
+	@${INSTALL_MAN} ${WRKSRC}/../${docfile} ${PREFIX}/share/doc/uulib
 .endfor
-.endif
 
 .include "../../mk/bsd.pkg.mk"
