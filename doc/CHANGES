@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2035 2003/04/25 04:51:13 rh Exp $
+$NetBSD: CHANGES,v 1.2036 2003/04/25 06:01:32 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1729,3 +1729,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gstreamer-0.6.1 [rh 2003-04-25]
 	Added gst-plugins-0.6.1 [rh 2003-04-25]
 	Added gnome-media-2.2.1.1 as gnome2-media [rh 2003-04-25]
+	Updated glade2 to 2.0.0 [rh 2003-04-25]
