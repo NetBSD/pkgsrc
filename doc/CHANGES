@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2010 2003/04/22 17:19:29 grant Exp $
+$NetBSD: CHANGES,v 1.2011 2003/04/22 17:25:25 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1666,8 +1666,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated PanoTools to 2.6b1nb1 [rh 2003-04-20]
 	Updated ggv to 1.0.2nb7 [rh 2003-04-20]
 	Updated glade to 0.6.4nb1 [rh 2003-04-20]
-	Added gnome-session-1.4.2 as gnome1-session [rh 2003-04-20]
-	Added gnome-panel-1.4.2 as gnome1-panel [rh 2003-04-20]
+	Added gnome1-session-1.4.2 [rh 2003-04-20]
+	Added gnome1-panel-1.4.2 [rh 2003-04-20]
 	Updated gnome-core to 1.4.2nb4 [rh 2003-04-20]
 	Updated cvsync to 0.19.5 [gehenna 2003-04-20]
 	Updated gnome2-control-center to 2.2.1 [rh 2003-04-20]
@@ -1676,11 +1676,11 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated perlsh to 1.8nb1 [cjep 2003-04-20]
 	Updated p5-DBD-postgresql to 1.22 [mjl 2003-04-20]
 	Updated ipa to 1.3.3 [cjep 2003-04-20]
-	Added gnome-applets-2.2.1 as gnome2-applets [rh 2003-04-21]
+	Added gnome2-applets-2.2.1 [rh 2003-04-21]
 	Added dinotrace-mode-9.1i [dmcmahill 2003-04-21]
-	Added gnome-games-2.2.1 as gnome2-games [rh 2003-04-21]
+	Added gnome2-games-2.2.1 [rh 2003-04-21]
 	Updated gnucap to 0.33 [dmcmahill 2003-04-21]
-	Added gnome-utils-2.2.1 as gnome2-utils [rh 2003-04-21]
+	Added gnome2-utils-2.2.1 [rh 2003-04-21]
 	Updated postfix to 2.0.9 [martti 2003-04-21]
 	Updated ruby-ri to 0.8a [taca 2002-04-21]
 	Updated p5-Class-ReturnValue to 0.51 [mjl 2003-04-21]
