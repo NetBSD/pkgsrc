@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.198 2003/01/19 00:41:57 wiz Exp $
+$NetBSD: TODO,v 1.199 2003/01/19 01:29:23 seb Exp $
 
 Suggested new packages
 ======================
@@ -191,7 +191,6 @@ Suggested package updates
 	o openh323-1.11.2
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
-	o openssh-3.5p1
 	o openssl-0.9.7
 	o opensp-1.5
 	o oss-3.9.7g
