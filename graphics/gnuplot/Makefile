@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/05 14:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/04 18:21:50 jschauma Exp $
 #
 
 DISTNAME=	gnuplot-3.7.3
@@ -13,7 +13,6 @@ HOMEPAGE=	http://sourceforge.net/projects/gnuplot/
 COMMENT=	gnuplot is a nice plotting utility
 
 USE_BUILDLINK2=		YES
-USE_X11=		YES
 # because of missing rl_complete_with_tilde_expansion and rl_terminal_name
 USE_GNU_READLINE=	YES
 GNU_CONFIGURE=		YES
