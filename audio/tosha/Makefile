@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/14 08:19:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/12 11:05:37 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/05/25 08:58:43 andreas Exp
 #
 
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	yes
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 
-INSTALLATION_DIRS=	bin/man/man1
+INSTALLATION_DIRS=	bin man/man1
 
 .include "../../devel/libscsi/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
