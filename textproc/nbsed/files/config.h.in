@@ -16,12 +16,6 @@
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
 
-/* Define to 1 if you have the `fgetln' function. */
-#undef HAVE_FGETLN
-
-/* Define to 1 if you have the `getprogname' function. */
-#undef HAVE_GETPROGNAME
-
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
@@ -42,9 +36,6 @@
 
 /* Define to 1 if you have the <regex.h> header file. */
 #undef HAVE_REGEX_H
-
-/* Define to 1 if you have the `setprogname' function. */
-#undef HAVE_SETPROGNAME
 
 /* Define to 1 if you have the <stdarg.h> header file. */
 #undef HAVE_STDARG_H
