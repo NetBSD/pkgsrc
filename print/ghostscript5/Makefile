@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2000/03/24 18:15:29 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2000/04/09 23:48:50 jlam Exp $
 
 MASTER_SITES+=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=	${GS_FONTS_STD} ${GS_FONTS_OTHER} ${PDF_SEC}
@@ -27,6 +27,8 @@ pre-install:
 		${PAX} -zrf ${_DISTDIR}/${GS_FONTS_OTHER}
 
 post-install:
-	strip ${PREFIX}/bin/gs
+	${LN} -sf gs.1 ${PREFIX}/man/man1/gstty.1
+	${MV} ${PREFIX}/bin/gs ${PREFIX}/bin/gstty
+	strip ${PREFIX}/bin/gstty
 
 .include "../../print/ghostscript5/Makefile.common"
