@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/08/28 00:30:45 epg Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/20 00:49:12 epg Exp $
 #
 
-DISTNAME=	trac-0.7.1
+DISTNAME=	trac-0.8
 CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.com/pub/trac/
 
