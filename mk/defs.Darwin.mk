@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.29 2002/10/04 23:32:17 jlam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.30 2002/10/09 00:00:26 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -15,7 +15,7 @@ DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
-EXPR?=		expr
+EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
