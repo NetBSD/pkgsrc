@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/30 20:17:42 jlam Exp $
 
-DISTNAME=	krb5-1.3.1
+DISTNAME=	krb5-1.3.2
 PKGNAME=	mit-${DISTNAME}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	security
@@ -17,18 +17,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_MIT_KRB5_MASTER_SITE)
-MASTER_SITE=		# empty
-EXTRACT_SUFX=		.tar
-DOWNLOAD=		http://web.mit.edu/network/kerberos-form.html
-INTERACTIVE_STAGE=	fetch
-
-_FETCH_MESSAGE= \
-	${ECHO} "==============================================================="; \
-	${ECHO} "  MIT Kerberos V5 source code (${DISTNAME}${EXTRACT_SUFX}) can be fetched"; \
-	${ECHO} "  into ${DISTDIR} from"; \
-	${ECHO} "  ${DOWNLOAD}."; \
-	${ECHO} "==============================================================="
+USE_MIT_KRB5_MASTER_SITE?=	yes
+.if !empty(USE_MIT_KRB5_MASTER_SITE:M[yY][eE][sS])
+MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.3/
+EXTRACT_SUFX=	.tar
 
 post-extract:
 	cd ${WRKDIR} && ${PAX} -O -rzf ${WRKDIR}/${DISTNAME}.tar.gz
