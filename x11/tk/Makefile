@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2004/04/09 23:39:00 danw Exp $
+# $NetBSD: Makefile,v 1.34 2004/06/15 16:17:48 drochner Exp $
 
 DISTNAME=	tk8.4.6-src
 PKGNAME=	tk-8.4.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -15,7 +15,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ARGS+=	--enable-threads
+# see comment in lang/tcl/Makefile
+#CONFIGURE_ARGS+=	--enable-threads
 MAKE_ENV+=		TOUCH="${TOUCH}"
 
 USE_X11=		yes
