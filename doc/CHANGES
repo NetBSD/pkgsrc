@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5920 2004/05/13 08:35:01 mjl Exp $
+$NetBSD: CHANGES,v 1.5921 2004/05/13 08:50:59 cjs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.4 [xtraeme 2004-05-13]
 	Added p5-I18N-LangTags-0.30 [mjl 2004-05-13]
 	Added p5-Locale-Maketext-10.8 [mjl 2004-05-13]
+	Updated global to 4.7 [cjs 2004-05-13]
