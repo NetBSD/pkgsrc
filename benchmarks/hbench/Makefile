@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/22 20:48:28 jdolecek Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/26 12:54:24 agc Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0nb1
@@ -40,7 +40,7 @@ post-configure:
 	@ ${CHMOD} 0755 ${WRKSRC}/scripts/*
 
 do-install:
-	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
+	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${FILESDIR}/do-install
 
 benchmark:
 	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
