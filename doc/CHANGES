@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1015 2003/01/04 23:37:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.1016 2003/01/05 04:15:43 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bonobo-activation to 2.1.0nb2 [jmmv 2003-01-04]
 	Updated bonobo-activation to 2.1.0nb3 [jmmv 2003-01-04]
 	Updated libbonobo to 2.0.0nb4 [jmmv 2003-01-04]
+	Added moz-linux-plugger-4.0 [rh 2003-01-05]
