@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.30 2000/06/02 06:20:41 rh Exp $
+# $NetBSD: pkglint.pl,v 1.31 2000/06/21 23:28:28 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -517,13 +517,19 @@ sub checklastline {
 	while (<IN>) {
 		$whole .= $_;
 	}
-	if ($whole !~ /\n$/) {
-		&perror("FATAL: the last line of $file has to be ".
-			"terminated by \\n.");
+	if ($whole eq "") {
+		&perror("FATAL: $file is empty.");
 	}
-	if ($whole =~ /\n([ \t]*\n)+$/) {
-		&perror("WARN: $file seems to have unnecessary blank lines ".
-			"at the last part.");
+	else 
+	{
+		if ($whole !~ /\n$/) {
+			&perror("FATAL: the last line of $file has to be ".
+				"terminated by \\n.");
+		}
+		if ($whole =~ /\n([ \t]*\n)+$/) {
+			&perror("WARN: $file seems to have unnecessary ".
+				"blank lines at the last part.");
+		}
 	}
 
 	close(IN);
