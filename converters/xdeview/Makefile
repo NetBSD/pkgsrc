@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2001/12/26 11:12:53 tron Exp $
+# $NetBSD: Makefile,v 1.21 2002/03/24 03:11:08 fredb Exp $
 #
 
-DISTNAME=	uudeview-0.5.15
-PKGNAME=	xdeview-0.5.15
+DISTNAME=	uudeview-0.5.17
+PKGNAME=	xdeview-0.5.17
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
-DEPENDS+=	uulib-0.5.15:../../converters/uulib
+DEPENDS+=	uulib-0.5.17:../../converters/uulib
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
