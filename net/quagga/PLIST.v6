@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST.v6,v 1.1.1.1 2003/08/13 07:26:57 itojun Exp $
-man/man8/ospf6d.8
-man/man8/ripngd.8
+@comment $NetBSD: PLIST.v6,v 1.2 2005/03/02 19:15:07 reed Exp $
 sbin/ospf6d
 sbin/ripngd
 share/examples/quagga/ospf6d.conf.sample
