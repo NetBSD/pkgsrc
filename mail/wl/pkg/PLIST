@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/19 06:16:27 jun Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/23 15:39:10 taca Exp $
+share/doc/wl/en/BUGS
+share/doc/wl/en/NEWS
+share/doc/wl/en/README
+share/doc/wl/ja/BUGS.ja
+share/doc/wl/ja/NEWS.ja
+share/doc/wl/ja/README.ja
+share/doc/wl/ja/TODO.ja
 share/emacs/site-lisp/wl/elmo-util.el
 share/emacs/site-lisp/wl/elmo-util.elc
 share/emacs/site-lisp/wl/elmo-version.el
@@ -39,6 +46,8 @@ share/emacs/site-lisp/wl/elmo-date.el
 share/emacs/site-lisp/wl/elmo-date.elc
 share/emacs/site-lisp/wl/elmo-internal.el
 share/emacs/site-lisp/wl/elmo-internal.elc
+share/emacs/site-lisp/wl/im-wl.el
+share/emacs/site-lisp/wl/im-wl.elc
 share/emacs/site-lisp/wl/utf7.el
 share/emacs/site-lisp/wl/utf7.elc
 share/emacs/site-lisp/wl/pldap.el
@@ -47,10 +56,16 @@ share/emacs/site-lisp/wl/mmelmo.el
 share/emacs/site-lisp/wl/mmelmo.elc
 share/emacs/site-lisp/wl/mmelmo-imap4.el
 share/emacs/site-lisp/wl/mmelmo-imap4.elc
+share/emacs/site-lisp/wl/rfc2368.el
+share/emacs/site-lisp/wl/rfc2368.elc
+share/emacs/site-lisp/wl/ssl.el
+share/emacs/site-lisp/wl/ssl.elc
 share/emacs/site-lisp/wl/wl.el
 share/emacs/site-lisp/wl/wl.elc
 share/emacs/site-lisp/wl/wl-folder.el
 share/emacs/site-lisp/wl/wl-folder.elc
+share/emacs/site-lisp/wl/wl-mailto.el
+share/emacs/site-lisp/wl/wl-mailto.elc
 share/emacs/site-lisp/wl/wl-summary.el
 share/emacs/site-lisp/wl/wl-summary.elc
 share/emacs/site-lisp/wl/wl-message.el
@@ -85,4 +100,16 @@ share/emacs/site-lisp/wl/wl-mule.el
 share/emacs/site-lisp/wl/wl-mule.elc
 share/emacs/site-lisp/wl/wl-mime.el
 share/emacs/site-lisp/wl/wl-mime.elc
+share/examples/wl/en/dot.addresses
+share/examples/wl/en/dot.folders
+share/examples/wl/en/dot.wl
+share/examples/wl/ja/dot.addresses
+share/examples/wl/ja/dot.folders
+share/examples/wl/ja/dot.wl
+@dirrm share/doc/wl/en
+@dirrm share/doc/wl/ja
+@dirrm share/doc/wl
 @dirrm share/emacs/site-lisp/wl
+@dirrm share/examples/wl/en
+@dirrm share/examples/wl/ja
+@dirrm share/examples/wl
