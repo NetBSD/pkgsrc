@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8402 2004/12/22 12:53:43 drochner Exp $
+$NetBSD: CHANGES,v 1.8403 2004/12/22 12:56:21 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5361,6 +5361,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eb to 4.1.1 [uebayasi 2004-11-20]
 	Updated eblook to 1.6.1 [uebayasi 2004-11-20]
 	Added dasm-2.12 [minskim 2004-11-20]
+	Updated howl to 0.9.7 [mjl 2004-11-20]
+	Updated daapd to 0.2.3d [mjl 2004-11-20]
 	Updated libxml to 1.8.17nb3 [jmmv 2004-11-20]
 	Added xdesktopwaves-1.0 [jmmv 2004-11-20]
 	Updated xbindkeys to 1.7.1 [jmmv 2004-11-20]
