@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 06:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/14 21:11:26 jmmv Exp $
 #
 
-DISTNAME=		eog-1.0.4
-PKGREVISION=		1
+DISTNAME=		eog-2.2.0
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/1.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
@@ -12,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Eye of GNOME: an image viewing and cataloging program
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
@@ -20,10 +20,13 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
+GCONF2_SCHEMAS= 	eog.schemas
+
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../print/libgnomeprint/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libbonoboui/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../graphics/librsvg2/buildlink2.mk"
