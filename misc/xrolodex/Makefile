@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/10/08 12:39:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/02 20:21:37 jschauma Exp $
 
 DISTNAME=		xrolodex.1.5.motif
 PKGNAME=		xrolodex-1.5
+PKGREVISIO=		1
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=		.tar.Z
