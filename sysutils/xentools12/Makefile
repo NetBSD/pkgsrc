@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2004/05/08 18:24:00 cl Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/12 08:01:05 wiz Exp $
 #
 
-PKGNAME=		xentools12
 DISTNAME=		xeno-1.2-src-040418
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		netbsd-xen-kernel-headers-040508.tar.gz
-CATEGORIES=		local
+PKGNAME=		xentools12-040418
+CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
 EXTRACT_SUFX=		.tgz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		netbsd-xen-kernel-headers-040508.tar.gz
 
 MAINTAINER=		cl@NetBSD.org
 HOMEPAGE=		http://www.netbsd.org/Ports/xen/
