@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/02 14:04:42 jmmv Exp $
+
+SHA1 (mail-notification-0.6.2.tar.gz) = d5086aac1ea0f9d4e3fb63d0ffb18a02cc64b997
+Size (mail-notification-0.6.2.tar.gz) = 406317 bytes
+SHA1 (patch-aa) = 454502e8ee7d6118b31a4d32b9c82c0103f6fda7
