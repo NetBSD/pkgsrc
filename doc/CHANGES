@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.400 2002/10/29 14:50:09 wiz Exp $
+$NetBSD: CHANGES,v 1.401 2002/10/29 16:51:25 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3435,3 +3435,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libxslt to 1.0.22 [martti 2002-10-29]
 	Updated zope25-XMLWidgets to 0.8.2 [drochner 2002-10-29]
 	Added rocksndiamonds-levels-1.0 [wiz 2002-10-29]
+	Updated cdrdao to 1.1.7 [drochner 2002-10-29]
+	Updated gcdmaster to 1.1.7 [drochner 2002-10-29]
