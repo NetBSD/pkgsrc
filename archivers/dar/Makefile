@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/29 18:07:38 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/29 18:16:15 minskim Exp $
 #
 
 DISTNAME=	dar-2.0.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
