@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/04/22 14:22:48 agc Exp $
+# $NetBSD: Makefile,v 1.18 1998/05/08 10:18:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -91,10 +91,10 @@ fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 	@${ECHO}
 	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  USA residents not at the
-	@${ECHO} Massachusetts Institute of Technology MUST set this
-	@${ECHO} variable to YES.  Users outside the USA MUST set this
-	@${ECHO} variable to NO.  People at MIT may choose -- NO is faster.
+	@${ECHO} in order to build this package.  People with no RSA
+	@${ECHO} licence MUST set this variable to YES.  Users outside
+	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
+	@${ECHO} choose -- NO is faster.
 	@${ECHO}
 	@${ECHO} You may also want to set DONT_USE_IDEA to YES if this program
 	@${ECHO} will be used for a commercial purpose.  There are other
