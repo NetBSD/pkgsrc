@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.4 2003/10/13 15:55:11 veego Exp $
+# $NetBSD: xfree,v 1.5 2003/10/18 18:23:03 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -606,6 +606,7 @@ lib/libXxf86misc.a
 lib/libXxf86misc.so
 lib/libXxf86misc.so.1
 lib/libXxf86misc.so.1.0
+lib/libXxf86misc.so.1.1
 lib/libXxf86vm.a
 lib/libXxf86vm.so
 lib/libXxf86vm.so.1
@@ -661,4 +662,10 @@ lib/libpsres.1.dylib
 lib/libpsres.1.0.dylib
 lib/libxf86config.a
 lib/libxkbfile.a
+lib/libxkbfile.so
+lib/libxkbfile.so.1
+lib/libxkbfile.so.1.0
 lib/libxkbui.a
+lib/libxkbui.so
+lib/libxkbui.so.1
+lib/libxkbui.so.1.0
