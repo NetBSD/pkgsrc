@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/10 15:35:16 tv Exp $
+include/sdbm.h
+lib/libsdbm.a
+man/man3/sdbm.3
