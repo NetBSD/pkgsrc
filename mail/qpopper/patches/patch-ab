@@ -1,66 +1,64 @@
-*** popper.h	Wed Nov 19 13:20:39 1997
---- popper.h	Thu Feb 12 17:31:22 1998
-***************
-*** 32,36 ****
-  #ifdef		HAVE_SYS_PARAM_H
-  #include <sys/param.h>
-! # if (defined(BSD) && (BSD >= 199103))
-  #  define	HAVE_UNISTD_H
-  #  define	HAVE_VPRINTF
---- 32,36 ----
-  #ifdef		HAVE_SYS_PARAM_H
-  #include <sys/param.h>
-! # if (defined(BSD) && (BSD >= 199103)) && 0 /* shouldn't be necessary anymore */
-  #  define	HAVE_UNISTD_H
-  #  define	HAVE_VPRINTF
-***************
-*** 39,43 ****
-  #endif
-  
-! #ifdef BSDI
-  #define BSD44_DBM
-  #endif
---- 39,55 ----
-  #endif
-  
-! #ifdef	HAVE_STDLIB_H
-! # include <stdlib.h>
-! #endif
-! 
-! #ifdef	HAVE_STRING_H
-! # include <string.h>
-! #endif
-! 
-! #ifdef	HAVE_TIME_H
-! # include <time.h>
-! #endif
-! 
-! #if defined (BSDI) || defined (__NetBSD__)
-  #define BSD44_DBM
-  #endif
-***************
-*** 293,297 ****
-  
-  #ifndef KERBEROS_SERVICE
-! # define KERBEROS_SERVICE	"rcmd"
-  #endif
-  
---- 297,301 ----
-  
-  #ifndef KERBEROS_SERVICE
-! # define KERBEROS_SERVICE	"pop"
-  #endif
-  
-***************
-*** 299,303 ****
-  # include <kerberos/krb.h>
-  #else
-! # ifdef BSDI
-  #  include <kerberosIV/des.h>
-  #  include <kerberosIV/krb.h>
---- 303,307 ----
-  # include <kerberos/krb.h>
-  #else
-! # if defined (BSDI) || defined (__NetBSD__)
-  #  include <kerberosIV/des.h>
-  #  include <kerberosIV/krb.h>
+]2;feyrer@miyu:/usr/pkgsrc/mail/qpopper/work/qpopper2.41beta1 ]1;miyu--- popper.h.orig	Wed Nov 19 22:20:39 1997
++++ popper.h	Sat Mar  7 00:42:23 1998
+@@ -31,14 +31,26 @@
+ 
+ #ifdef		HAVE_SYS_PARAM_H
+ #include <sys/param.h>
+-# if (defined(BSD) && (BSD >= 199103))
++# if (defined(BSD) && (BSD >= 199103)) && 0 /* shouldn't be necessary anymore */
+ #  define	HAVE_UNISTD_H
+ #  define	HAVE_VPRINTF
+ #  define	BIND43
+ # endif
+ #endif
+ 
+-#ifdef BSDI
++#ifdef	HAVE_STDLIB_H
++# include <stdlib.h>
++#endif
++
++#ifdef	HAVE_STRING_H
++# include <string.h>
++#endif
++
++#ifdef	HAVE_TIME_H
++# include <time.h>
++#endif
++
++#if defined (BSDI) || defined (__NetBSD__)
+ #define BSD44_DBM
+ #endif
+ 
+@@ -67,12 +79,12 @@
+ #define MAXPARMLEN      10
+ #define ALLOC_MSGS  20
+ 
+-#ifndef OSF1
+-# define POP_FACILITY    LOG_LOCAL0
+-#else
++#if defined(OSF1) || defined(__NetBSD__)
+ # define POP_FACILITY    LOG_MAIL
++#else
++# define POP_FACILITY    LOG_LOCAL0
+ #endif
+-#define POP_PRIORITY    LOG_NOTICE
++#define POP_PRIORITY    LOG_INFO
+ #define POP_DEBUG       LOG_DEBUG
+ #define POP_LOGOPTS     LOG_PID
+ 
+@@ -292,13 +304,13 @@
+ #ifdef KERBEROS
+ 
+ #ifndef KERBEROS_SERVICE
+-# define KERBEROS_SERVICE	"rcmd"
++# define KERBEROS_SERVICE	"pop"
+ #endif
+ 
+ #ifdef SOLARIS2
+ # include <kerberos/krb.h>
+ #else
+-# ifdef BSDI
++# if defined (BSDI) || defined (__NetBSD__)
+ #  include <kerberosIV/des.h>
+ #  include <kerberosIV/krb.h>
+ # else
