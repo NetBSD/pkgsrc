@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3213 2003/09/02 17:47:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.3214 2003/09/02 17:58:22 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3488,3 +3488,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mplayer to 1.0rc1 [jmmv 2003-09-02]
 	Updated gmplayer to 1.0rc1 [jmmv 2003-09-02]
 	Updated mencoder to 1.0rc1 [jmmv 2003-09-02]
+	Updated subversion to 0.28.2 [epg 2003-09-02]
