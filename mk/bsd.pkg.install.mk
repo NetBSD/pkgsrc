@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.79 2005/02/02 10:33:01 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.80 2005/02/03 23:29:08 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -134,7 +134,7 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "# of the package.";					\
 	${ECHO} "#";							\
 	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
 	${ECHO} "";							\
@@ -186,7 +186,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${ECHO} "# package.";						\
 	${ECHO} "#";							\
 	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+PERMS << 'EOF_PERMS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/perms;		\
 	${ECHO} "";							\
@@ -257,7 +257,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "# of the package.";					\
 	${ECHO} "#";							\
 	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+FILES << 'EOF_FILES'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
 	${ECHO} "";							\
@@ -301,7 +301,7 @@ ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
 	${ECHO} "# of the package.";					\
 	${ECHO} "#";							\
 	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+RCD_SCRIPTS << 'EOF_RCD_SCRIPTS'"; \
 	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
 	${ECHO} "";							\
@@ -350,7 +350,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "# package.";						\
 	${ECHO} "#";							\
 	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+DIRS << 'EOF_DIRS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs;		\
 	${ECHO} "";							\
