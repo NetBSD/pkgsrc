@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4863 2004/02/16 19:40:39 hubertf Exp $
+$NetBSD: CHANGES,v 1.4864 2004/02/16 20:53:03 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -874,3 +874,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tkdiff to 3.09 [recht 2004-02-16]
 	Added p5-Scalar-List-Utils-1.13 [minskim 2004-02-16]
 	Updated nicotine to 1.0.7 [hubertf 2004-02-16]
+	Updated roundup to 0.6.5 [recht 2004-02-16]
