@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:46 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/16 21:06:44 drochner Exp $
 #
 
 DISTNAME=	PyXML-0.6.6
@@ -9,13 +9,12 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://pyxml.sourceforge.net/
 COMMENT=	collection of libraries to process XML with Python
 
-DEPENDS+=	python>=2.0:../../lang/python
 DEPENDS+=	expat-[0-9]*:../../textproc/expat
 
-USE_PYTHON=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUPBUILDARGS+=	--with-libexpat=${LOCALBASE}
 PYSETUPBUILDARGS+=	--ldflags=-Wl,-R${LOCALBASE}/lib
 
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
