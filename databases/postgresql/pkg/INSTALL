@@ -1,14 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/03/18 17:43:18 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/12/07 16:56:41 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 USER=@PGUSER@
 GROUP=@PGGROUP@
-PGHOME=@PGHOME@
 USERDIR=@USERDIR@
+PGHOME=${PKG_PREFIX}/${USER}
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -36,7 +36,7 @@ PRE-INSTALL)
 		echo "Creating '${USER}' user..."
 		${USERDIR}/user add \
 			-c "PostgreSQL database administrator" \
-			-d ${PGHOME} \
+			-b ${PKG_PREFIX} \
 			-g ${GROUP} -s /bin/sh ${USER}
 		echo "Done."
 	else
@@ -53,6 +53,7 @@ POST-INSTALL)
 	echo ------------------------------------------------------------------
         echo "${PKG_PREFIX}/bin/initdb --pglib=${PKG_PREFIX}/share/postgresql --pgdata=${PGHOME}/data" | su -l ${USER}
 	;;
+
 *)
 	echo "Unexpected argument: $2"
 	exit 1
