@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/15 16:03:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/28 13:49:38 jmmv Exp $
 bin/gkb_xmmap
 bin/gnome-keyboard-layout
 bin/gswitchit-plugins-capplet
@@ -1178,6 +1178,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
+${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-applets-2.0.mo
