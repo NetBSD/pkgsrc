@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2002/01/02 08:36:55 tron Exp $
+# $NetBSD: Makefile,v 1.77 2002/01/30 23:05:46 jlam Exp $
 
 DISTNAME=		mutt-1.2.5.1
 CATEGORIES=		mail
@@ -17,13 +17,14 @@ BUILD_USES_MSGFMT=	YES
 
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt \
-			--enable-pop --enable-imap \
-			--without-included-gettext
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+			--with-docdir=${PREFIX}/share/doc/mutt \
+			--without-included-gettext \
+			--enable-pop --enable-imap
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 
 LDFLAGS+=		${STRIPFLAG}
-WRKSRC=			${WRKDIR}/${DISTNAME:S/i//}
+WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +36,6 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 MUTT_USE_SSL?=		YES
 
 .if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
-#USE_SSL=		YES
 .include "../../security/openssl/buildlink.mk"
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 .else
@@ -44,26 +44,16 @@ CONFIGURE_ARGS+=	--without-ssl
 
 BUILD_DEFS+=		MUTT_USE_SSL
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-FILES_SUBST=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+EGDIR=			${PREFIX}/share/doc/mutt/samples
+CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+SUPPORT_FILES=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 post-install:
 	${TOUCH} ${TOUCH_FLAGS} ${PREFIX}/share/mutt/.directory
 	${INSTALL_DATA} ${WRKSRC}/Muttrc ${PREFIX}/share/doc/mutt/samples
 	${INSTALL_DATA} ${WRKSRC}/mime.types ${PREFIX}/share/doc/mutt/samples
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
