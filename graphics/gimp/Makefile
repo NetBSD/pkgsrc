@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2000/12/27 17:28:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.61 2000/12/28 15:46:26 tron Exp $
 
 DISTNAME=		gimp-1.2.0
 CATEGORIES=		graphics
@@ -13,6 +13,7 @@ MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		gnome-libs>=1.2.0:../../x11/gnome-libs
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
