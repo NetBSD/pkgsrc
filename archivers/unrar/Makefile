@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 1999/05/22 21:41:44 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/23 23:48:27 wiz Exp $
 
 DISTNAME=	unrar-2.50
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.rarsoft.com/
 
 NO_WRKSUBDIR=
 
