@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7346 2004/10/05 09:11:46 tron Exp $
+$NetBSD: CHANGES,v 1.7347 2004/10/05 09:42:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.4 [minskim 2004-10-04]
 	Updated gdb6 to 6.2.1 [shannonjr 2004-10-04]
 	Updated nessus to 2.0.12 [tron 2004-10-05]
+	Updated dcraw to 1.208 [seb 2004-10-05]
