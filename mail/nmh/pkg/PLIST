@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/19 14:00:14 agc Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -119,5 +120,6 @@ man/man8/fmtdump.8.gz
 man/man8/install-mh.8.gz
 man/man8/mh-mts.8.gz
 man/man8/post.8.gz
+@unexec rm -rf $D/etc/nmh/*.old
 @dirrm etc/nmh
 @dirrm libexec/nmh
