@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.655 2003/06/24 07:34:53 wiz Exp $
+$NetBSD: TODO,v 1.656 2003/06/24 10:23:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -229,6 +229,7 @@ Suggested package updates
 	o sawfish-1.3
 	o scmxx-0.6.3.8
 	o scribus-0.8
+	o scrot-0.8 [pkg/21974]
 	o scsh-0.6.4
 	o sendfile-20010424
 	o sipcalc-1.1.2 [pkg/21846]
@@ -279,7 +280,6 @@ Suggested package updates
 	o xplanet-1.0.0
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.11
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
 	o yasm-0.2.2 [pkg/21850]
