@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/09/07 01:51:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/11 14:46:26 jwise Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -15,6 +15,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+LICENSE=	sun-swing-license
+
 USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 NO_PATCH=
@@ -29,15 +31,29 @@ ROOT_GROUP?=	root
 ROOT_GROUP?=	wheel
 .endif
 
-do-fetch:
-	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "    For licensing reasons, the Swing distfile (${DISTNAME}${EXTRACT_SUFX})"; \
-	    ${ECHO_MSG} "    must be fetched manually into \"${DISTDIR}/${DIST_SUBDIR}\""; \
-	    ${ECHO_MSG} "    from ${HOMEPAGE}download.html "; \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${FALSE}; \
+.include "../../mk/bsd.prefs.mk"
+
+TEMPDIR?=	/tmp
+TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
+
+pre-fetch:
+	@if [ ! -x ${LOCALBASE}/bin/urlget ];\
+	then \
+		${ECHO} "==> Installing urlget to fetch swing" ; \
+		(cd ../../www/urlget && make install) ; \
 	fi
+
+do-fetch:
+	-${LOCALBASE}/bin/urlget -p http://www.javasoft.com/Download3 \
+		referer=http://www.javasoft.com/products/jfc/download.html \
+		protocol="FTP Download" \
+		download-name=swing1_1_1.tar.Z \
+		config-file=swing111.config \
+		platform=compressed \
+		domain-checked= \
+		> ${TEMPFILE}
+	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
+		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'`
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/java/swing
