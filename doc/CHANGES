@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9140 2005/02/14 22:07:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9141 2005/02/14 22:29:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bibtex2html to 1.74nb1 [minskim 2005-02-14]
 	Updated conglomerate to 0.9.0 [jmmv 2005-02-14]
 	Added blogbench-1.0 [xtraeme 2005-02-14]
+	Updated gnome2-games to 2.8.3 [jmmv 2005-02-14]
