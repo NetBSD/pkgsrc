@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/14 02:07:11 hubertf Exp $
+bin/pkg_tarup

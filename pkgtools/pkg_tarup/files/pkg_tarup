@@ -1,0 +1,104 @@
+#!/bin/sh
+# $Id: pkg_tarup,v 1.1.1.1 2000/02/14 02:07:13 hubertf Exp $
+#
+# Tar up installed package
+#
+# (c) Copyright 2000 Hubert Feyrer <hubert@feyrer.de>
+#
+
+PKG_DBDIR=${PKG_DBDIR:-/var/db/pkg}
+PKGREPOSITORY=${PKGREPOSITORY:-/tmp}
+PKG_SUFX=${PKG_SUFX:-tgz}
+
+PKG="$1"
+rPKG="`pkg_info -e \"$PKG\"`"
+
+if [ "$PKG" = "" -o "$rPKG" = "" -o -f "${PKG_DBDIR}/${rPKG}" ]
+then
+     echo Usage: $0 installed_pkg
+     exit 1
+fi
+
+PKG=$rPKG
+echo "Taring up $PKG"
+
+
+check_and_add() {
+	opt="$1"
+	file="$2"
+
+	if [ x"$opt" = x"" -o x"$file" = x"" ]; then
+	   echo Usage: check_and_add -opt +FILE
+	   exit 1
+	fi
+
+	if [ -f "$file" ]
+	then
+	    PKG_ARGS="${PKG_ARGS} ${opt} ${file}"
+	fi
+}
+
+check_and_add -c ${PKG_DBDIR}/${PKG}/+COMMENT
+check_and_add -d ${PKG_DBDIR}/${PKG}/+DESC
+check_and_add -b ${PKG_DBDIR}/${PKG}/+BUILD_VERSION
+check_and_add -B ${PKG_DBDIR}/${PKG}/+BUILD_INFO
+check_and_add -s ${PKG_DBDIR}/${PKG}/+SIZE_PKG
+check_and_add -S ${PKG_DBDIR}/${PKG}/+SIZE_ALL
+check_and_add -i ${PKG_DBDIR}/${PKG}/+INSTALL		#NOTYET#
+check_and_add -k ${PKG_DBDIR}/${PKG}/+DEINSTALL
+check_and_add -r ${PKG_DBDIR}/${PKG}/+REQUIRE
+check_and_add -D ${PKG_DBDIR}/${PKG}/+DISPLAY
+check_and_add -m ${PKG_DBDIR}/${PKG}/+MTREE		#NOTYET#
+
+PLIST=/tmp/+CONTENTS.$$
+sed -n \
+    -e '/^@comment MD5:/d' \
+    -e '/^@cwd \.$/,$d' \
+    -e '/\$NetBSD/,$p' \
+    <${PKG_DBDIR}/${PKG}/+CONTENTS >$PLIST
+
+# Duplicate first @cwd (work around pkg_create "feature" ...)
+grep '^@cwd' $PLIST | head -1 >$PLIST.1
+if [ -s ${PLIST}.1 ]
+then
+    sed \
+       -e "/`cat ${PLIST}.1 | sed 's,/,\\\\/,g'`/r${PLIST}.1" \
+       <${PLIST} >${PLIST}.2
+    mv ${PLIST}.2 ${PLIST}
+fi
+rm ${PLIST}.1
+
+# echo -----
+# cat $PLIST
+# echo -----
+# exit 0
+
+# Just for kicks ...
+# pkg_admin check "${PKG}"
+  
+pkg_create \
+        ${PKG_ARGS} \
+	-v \
+	-f ${PLIST} \
+	-l \
+	-p "`pkg_info -qp ${PKG} | head -1 | awk '{ print $2 }'`" \
+	-P "`pkg_info -qf ${PKG} | grep ^@pkgdep | awk '{ print $2 }'`" \
+	-C "`pkg_info -qf ${PKG} | grep ^@pkgcfl | awk '{ print $2 }'`" \
+	${PKGREPOSITORY}/${PKG}.${PKG_SUFX}
+
+rm -f ${PLIST}
+exit 0
+
+
+
+mtree file considerations:
+ - keeping uncompressed mtree file adds ~10% too size of /var/db/pkg
+ - could gzip file, space saving: 5kb->850b (plus some intelligence to
+   uncompress them when needed)
+ - not keeping mtree file results in pkgs w/o mtree file (but should work)
+
+integration:
+ - how/where? I'd prefer not to have yet another pkg_* utility flying
+    around, integration into pkg_admin would be nice. But how merge a
+    shell script into a C executable?
+ 
