@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/29 17:10:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/29 21:09:27 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--enable-sconfigdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-static-libpam
 
 CFLAGS+=		-DHAVE_UTMP_H=1
+CFLAGS+=		-fpic -fPIC
 MAKE_FLAGS+=		OS_CFLAGS="${CFLAGS}"
 
 PKG_SYSCONFSUBDIR?=	pam
