@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2001/08/02 12:44:18 itojun Exp $
+$NetBSD: distinfo,v 1.7 2001/08/06 08:25:12 itojun Exp $
 
-SHA1 (racoon-20010802a.tar.gz) = 52949efc873e6784666b7d9009a0144c629cb29c
-Size (racoon-20010802a.tar.gz) = 561494 bytes
+SHA1 (racoon-20010806a.tar.gz) = 2c66410bdd45f9ca7442353cefe16987bdbfb38b
+Size (racoon-20010806a.tar.gz) = 561610 bytes
 SHA1 (patch-aa) = 586f7bd5129f3be88cb104244fba2b7b13a7b044
 SHA1 (patch-ab) = 2f720e6214bd10064dba84cdfe5446d0e37a5de0
 SHA1 (patch-ac) = 373b500d11de26b1d56f8d5f64cabcb639aa3e8d
