@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/17 11:21:53 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.rscheme.org/
 COMMENT=		Object-oriented Scheme implementation
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 ALL_TARGET=		base
 
@@ -72,6 +72,6 @@ post-install:
 		${BUILDLINK_DIR}/lib/librs.a
 	${CHMOD} -R g+w ${WRKSRC}
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

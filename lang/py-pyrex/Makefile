@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/10 15:58:09 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=	Pyrex-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
@@ -12,7 +12,7 @@ COMMENT=	A Language for Writing Python Extension Modules
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
 PYDISTUTILSPKG= # defined
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

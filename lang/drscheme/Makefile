@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/21 07:09:54 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/28 05:06:28 snj Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -18,7 +18,7 @@ COMMENT=		R4RS-compliant and nearly R5RS-compliant scheme tailored for teaching
 CONFLICTS+=		mzscheme-[0-9]*:../../lang/mzscheme
 
 WRKSRC=                 ${WRKDIR}/plt/src
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
@@ -69,5 +69,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/../install ${PREFIX}/lib/plt
 	@cd ${PREFIX}/lib/plt && ${ECHO} y | ${SH} install
 
-.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

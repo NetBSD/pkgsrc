@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 21:44:16 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/28 05:06:28 snj Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=		Embeddable Scheme interpreter
 NOT_FOR_PLATFORM=	*-*-alpha *-*-mips* *-*-sparc64
 
 ALL_TARGET=		default
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,14 +29,14 @@ BUILD_DEFS+=	ELK_GUI
 MAKE_ENV+=	X11_LDFLAGS="${X11_LDFLAGS:S/-Wl,//}"
 .  if !empty(ELK_GUI:Mxaw)
 USE_X11=	# defined
-.    include "../../mk/xaw.buildlink2.mk"
+.    include "../../mk/xaw.buildlink3.mk"
 LIBXAW:=	${LIBXAW:S/-Wl,//}
 ELK_SUBDIRS+=	lib/xlib lib/xt lib/xaw
 PLIST_SRC+=	${PKGDIR}/PLIST.X11
 BUILD_DEFS+=	XAW_TYPE
 .  endif
 .  if !empty(ELK_GUI:Mmotif)
-.    include "../../mk/motif.buildlink2.mk"
+.    include "../../mk/motif.buildlink3.mk"
 MOTIFLIB:=	${MOTIFLIB:S/-Wl,//}
 ELK_SUBDIRS+=	lib/xm lib/xm/xt
 PLIST_SRC+=	${PKGDIR}/PLIST.Motif
