@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- Makefile.in.orig	Tue Nov 21 03:31:42 2000
++++ Makefile.in
+@@ -1,6 +1,9 @@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+ LDFLAGS = @LIBS@ 
++.if ${OPSYS} == "NetBSD"
++LDFLAGS+=	-lossaudio	# Not needed on Solaris
++.endif
+ SHELL=/bin/sh
+ 
+ srcdir = @srcdir@

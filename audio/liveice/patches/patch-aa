@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- liveice.h.orig	Tue Nov 21 03:29:51 2000
++++ liveice.h
+@@ -39,7 +39,9 @@
+ #include <signal.h>
+ #include <netdb.h>
+ #include <arpa/inet.h>   
++#ifndef __NetBSD__
+ #include <sched.h>       
++#endif
+ #include <unistd.h>
+ #include <termios.h>
+ #include <sys/wait.h>
