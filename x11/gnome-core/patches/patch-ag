@@ -1,0 +1,48 @@
+--- applets/battery/read-battery.c.orig	Thu Jul 15 13:59:20 1999
++++ applets/battery/read-battery.c	Thu Jul 15 14:41:09 1999
+@@ -185,7 +185,44 @@
+   close(fd);
+   return TRUE;
+ 
+-#else /* ! ( __linux__ || __FreeBSD__) */
++#elif defined(__NetBSD__)
++
++  struct apm_power_info aip;
++  int fd;
++
++  fd = open(APMDEV, O_RDONLY);
++  if (fd == -1)
++    {
++      g_error (_("Cannot open /dev/apm; can't get data."));
++      return FALSE;
++    }
++
++  if (ioctl(fd, APM_IOC_GETPOWER, &aip) == -1) {
++    g_error(_("ioctl failed on /dev/apm."));
++    return FALSE;
++  }
++
++  *hours_remaining = aip.minutes_left / 60;
++  aip.minutes_left %= 60;
++  *minutes_remaining = aip.minutes_left;
++
++  /* if APM is not turned on */
++  if (aip.battery_state == APM_BATT_UNKNOWN)
++    {
++      g_error(_("APM battery state unknown!  Cannot read battery charge information."));
++    }
++  if (aip.ac_state == APM_AC_UNKNOWN)
++    {
++      g_error(_("APM ac state is unknown!  Cannot read battery charge information."));
++    }
++
++  *ac_online = aip.ac_state == APM_AC_ON;
++  *percentage = aip.battery_life;
++
++  close(fd);
++  return TRUE;
++
++#else /* ! ( __linux__ || __FreeBSD__ || __NetBSD__ ) */
+ 
+   /* Assume always connected to power.  */
+   *ac_online = 1;
