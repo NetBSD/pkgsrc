@@ -1,0 +1,76 @@
+$NetBSD: patch-ab,v 1.1 1999/09/07 13:21:03 ad Exp $
+
+--- Local/Makefile.netbsd.orig	Tue Sep  7 13:21:49 1999
++++ Local/Makefile.netbsd	Tue Sep  7 14:31:08 1999
+@@ -75,7 +75,7 @@
+ # CHGRP_COMMAND=/usr/bin/chgrp
+ # MV_COMMAND=/bin/mv
+ # RM_COMMAND=/bin/rm
+-# PERL_COMMAND=/usr/bin/perl
++PERL_COMMAND=@PREFIX@/bin/perl
+ 
+ 
+ # The following macro can be used to change the command for building a library
+@@ -91,7 +91,7 @@
+ # installed in this directory. There is no default for this variable built into
+ # the source files; it must be set in one of the local configuration files.
+ 
+-BIN_DIRECTORY=/usr/exim/bin
++BIN_DIRECTORY=@PREFIX@/sbin
+ 
+ 
+ # The default distribution of Exim contains only the plain text form of the
+@@ -109,7 +109,7 @@
+ # files. Both the name of the command and the suffix that it adds to files
+ # need to be defined here. See also the EXICYCLOG_MAX configuration.
+ 
+-COMPRESS_COMMAND=/opt/gnu/bin/gzip
++COMPRESS_COMMAND=/usr/bin/gzip
+ COMPRESS_SUFFIX=gz
+ 
+ 
+@@ -119,7 +119,7 @@
+ # location of all other runtime files and directories can be changed in the
+ # runtime configuration file.
+ 
+-CONFIGURE_FILE=/usr/exim/configure
++CONFIGURE_FILE=@PREFIX@/etc/exim/configure
+ 
+ 
+ # In some installations there may be multiple machines sharing file systems,
+@@ -221,7 +221,7 @@
+ # are defaulted in the OS/Makefile-Default file, and can be overridden
+ # in local OS-specific make files.
+ 
+-EXIM_MONITOR=eximon.bin
++# EXIM_MONITOR=eximon.bin
+ 
+ 
+ # Compiling in support for embedded Perl: If you want to be able to
+@@ -264,7 +264,7 @@
+ # "panic", "process" or "reject" to form the final file name. For example,
+ # some installations may want something like this:
+ 
+-# LOG_FILE_PATH=/var/log/exim_%slog
++LOG_FILE_PATH=/var/log/exim/%slog
+ 
+ # which results in files with names /var/log/exim_mainlog, etc. The directory
+ # in which the log files are placed must exist; Exim does not try to create
+@@ -364,7 +364,7 @@
+ # the file name, allowing sites that run two separate daemons to distinguish
+ # them. Some installations may want something like this
+ 
+-# PID_FILE_PATH=/var/lock/exim%s.pid
++PID_FILE_PATH=/var/run/exim%s.pid
+ 
+ # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
+ # (see SPOOL_DIRECTORY below) with the name "exim-daemon.pid" for the standard
+@@ -413,7 +413,7 @@
+ # uid and gid.
+ 
+ # Many installations will want something like this:
+-# SPOOL_DIRECTORY=/var/spool/exim
++SPOOL_DIRECTORY=/var/spool/exim
+ 
+ # Others may prefer to keep all Exim things under one directory:
+ # SPOOL_DIRECTORY=/usr/exim/spool
