@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2004/04/15 13:16:35 xtraeme Exp $
+$NetBSD: patch-ag,v 1.4 2004/04/17 15:04:31 jmmv Exp $
 
 --- gnome-cd/freebsd-cdrom.c.orig	Thu Apr 15 15:03:50 2004
 +++ gnome-cd/freebsd-cdrom.c	Thu Apr 15 15:11:36 2004
@@ -34,7 +34,7 @@ $NetBSD: patch-ag,v 1.3 2004/04/15 13:16:35 xtraeme Exp $
 +#ifdef __FreeBSD__
  		if (ioctl (cdrom->fd, CDIOREADTOCENTRY, &tocentry) < 0) {
 +#else
-+		if (ioctl (cdrom->fd, CDIOREADTOCENTRY, &tocentries) < 0) {
++		if (ioctl (cdrom->fd, CDIOREADTOCENTRYS, &tocentries) < 0) {
 +#endif
  			g_warning ("IOCtl failed");
  			continue;
@@ -68,7 +68,7 @@ $NetBSD: patch-ag,v 1.3 2004/04/15 13:16:35 xtraeme Exp $
 +#ifdef __FreeBSD__
  	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.entry.addr.msf);
 +#else
-+	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentries.addr.msf);
++	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.addr.msf);
 +#endif
  	calculate_track_lengths (lcd);
  
