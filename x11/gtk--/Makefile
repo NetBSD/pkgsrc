@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2003/05/02 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2003/05/05 14:41:58 jmmv Exp $
 #
 
 DISTNAME=		gtkmm-1.2.10
 PKGNAME=		gtk---1.2.10
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkmm/} \
 			${MASTER_SITE_GNOME:=sources/gtkmm/1.2/}
