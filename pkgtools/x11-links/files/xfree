@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.1 2003/09/02 07:14:47 jlam Exp $
+# $NetBSD: xfree,v 1.2 2003/09/07 21:53:03 jlam Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -417,6 +417,9 @@ lib/libPEX5.a
 lib/libPEX5.so
 lib/libPEX5.so.6
 lib/libPEX5.so.6.0
+lib/libPEX5.dylib
+lib/libPEX5.6.dylib
+lib/libPEX5.6.0.dylib
 lib/libSM.a
 lib/libSM.so
 lib/libSM.so.6
@@ -437,6 +440,9 @@ lib/libXIE.a
 lib/libXIE.so
 lib/libXIE.so.6
 lib/libXIE.so.6.0
+lib/libXIE.dylib
+lib/libXIE.6.dylib
+lib/libXIE.6.0.dylib
 lib/libXRes.a
 lib/libXTrap.a
 lib/libXTrap.so
@@ -461,6 +467,9 @@ lib/libXcursor.a
 lib/libXcursor.so
 lib/libXcursor.so.1
 lib/libXcursor.so.1.0
+lib/libXcursor.dylib
+lib/libXcursor.1.dylib
+lib/libXcursor.1.0.dylib
 lib/libXdmcp.a
 lib/libXdpms.a
 lib/libXext.a
@@ -506,6 +515,9 @@ lib/libXinerama.a
 lib/libXinerama.so
 lib/libXinerama.so.1
 lib/libXinerama.so.1.0
+lib/libXinerama.dylib
+lib/libXinerama.1.dylib
+lib/libXinerama.1.0.dylib
 lib/libXmu.a
 lib/libXmu.so
 lib/libXmu.so.6
@@ -580,20 +592,36 @@ lib/libdpstk.so.1.0
 lib/libdpstk.dylib
 lib/libdpstk.1.dylib
 lib/libdpstk.1.0.dylib
+lib/libexpat.a
+lib/libexpat.so
+lib/libexpat.so.1
+lib/libexpat.so.1.0
+lib/libexpat.dylib
+lib/libexpat.1.dylib
+lib/libexpat.1.0.dylib
 lib/libfntstubs.a
 lib/libfontconfig.a
 lib/libfontconfig.so
 lib/libfontconfig.so.1
 lib/libfontconfig.so.1.0
+lib/libfontconfig.dylib
+lib/libfontconfig.1.dylib
+lib/libfontconfig.1.0.dylib
 lib/libfontenc.a
 lib/liboldX.a
 lib/liboldX.so
 lib/liboldX.so.6
 lib/liboldX.so.6.0
+lib/liboldX.dylib
+lib/liboldX.6.dylib
+lib/liboldX.6.0.dylib
 lib/libpsres.a
 lib/libpsres.so
 lib/libpsres.so.1
 lib/libpsres.so.1.0
+lib/libpsres.dylib
+lib/libpsres.1.dylib
+lib/libpsres.1.0.dylib
 lib/libxf86config.a
 lib/libxkbfile.a
 lib/libxkbui.a
