@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/29 03:31:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/02 16:53:20 schmonz Exp $
 #
 
 DISTNAME=	cvsps-2.0rc1
@@ -16,4 +16,5 @@ USE_GNU_TOOLS+=		make
 
 INSTALLATION_DIRS=	bin man/man1
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
