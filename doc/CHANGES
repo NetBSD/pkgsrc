@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8487 2004/12/28 04:18:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8488 2004/12/28 05:42:12 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6604,3 +6604,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xenvstat-20041127 [xtraeme 2004-12-27]
 	Added pkg_notify-0.3 [xtraeme 2004-12-27]
 	Added gtk2-chtheme-0.3.1 [minskim 2004-12-28]
+	Updated anthy to 5900nb1 [taya 2004-12-28]
+	Added anthy-elisp-5900 [taya 2004-12-28]
