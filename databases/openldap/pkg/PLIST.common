@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2000/08/14 16:35:32 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2000/08/28 23:02:18 wiz Exp $
 bin/ud
 bin/ldapsearch
 bin/ldapmodify
@@ -177,20 +177,20 @@ man/man8/fax500.8
 man/man8/rcpt500.8
 man/man8/slapd.8
 man/man8/slurpd.8
-@exec [ -f %B/ldap.conf ] || cp %D/%F %B/ldap.conf
 etc/openldap/ldap.conf.default
-@exec [ -f %B/ldapfilter.conf ] || cp %D/%F %B/ldapfilter.conf
+@exec [ -f %B/ldap.conf ] || cp %D/%F %B/ldap.conf
 etc/openldap/ldapfilter.conf.default
-@exec [ -f %B/ldaptemplates.conf ] || cp %D/%F %B/ldaptemplates.conf
+@exec [ -f %B/ldapfilter.conf ] || cp %D/%F %B/ldapfilter.conf
 etc/openldap/ldaptemplates.conf.default
-@exec [ -f %B/ldapsearchprefs.conf ] || cp %D/%F %B/ldapsearchprefs.conf
+@exec [ -f %B/ldaptemplates.conf ] || cp %D/%F %B/ldaptemplates.conf
 etc/openldap/ldapsearchprefs.conf.default
-@exec [ -f %B/slapd.conf ] || cp %D/%F %B/slapd.conf
+@exec [ -f %B/ldapsearchprefs.conf ] || cp %D/%F %B/ldapsearchprefs.conf
 etc/openldap/slapd.conf.default
-@exec [ -f %B/slapd.at.conf ] || cp %D/%F %B/slapd.at.conf
+@exec [ -f %B/slapd.conf ] || cp %D/%F %B/slapd.conf
 etc/openldap/slapd.at.conf.default
-@exec [ -f %B/slapd.oc.conf ] || cp %D/%F %B/slapd.oc.conf
+@exec [ -f %B/slapd.at.conf ] || cp %D/%F %B/slapd.at.conf
 etc/openldap/slapd.oc.conf.default
+@exec [ -f %B/slapd.oc.conf ] || cp %D/%F %B/slapd.oc.conf
 include/ldap.h
 include/lber.h
 include/ldap_cdefs.h
