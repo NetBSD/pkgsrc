@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/30 04:48:43 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/06 14:41:22 agc Exp $
 
 DISTNAME=		Eterm-0.8.8
 PKGNAME=		eterm-0.8.8
@@ -13,12 +13,10 @@ HOMEPAGE=		http://www.eterm.org/
 
 DEPENDS+=		imlib-1.9.4:../../graphics/imlib
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 USE_X11BASE=		yes
+USE_LIBTOOL=		yes
 
 post-extract:
 	${MV} ${WRKDIR}/Eterm/bg/scale/* ${WRKSRC}/bg/scale

@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 1999/04/06 14:41:22 agc Exp $
+
+Use NetBSD's own pkglibtool
+
+--- configure	1999/04/06 14:17:16	1.1
++++ configure	1999/04/06 14:17:39
+@@ -1518,6 +1518,7 @@
+ fi
+ 
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+@@ -1562,6 +1563,8 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++
++fi
+ 
+ 
+ echo $ac_n "checking for distribution root""... $ac_c" 1>&6
