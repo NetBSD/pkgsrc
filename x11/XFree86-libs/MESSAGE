@@ -1,13 +1,10 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/02/02 17:59:12 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2004/03/28 22:06:15 xtraeme Exp $
 
 Make sure you have defined X11BASE in /etc/mk.conf before try to install 
-pkgtools/x11-links. Then you can just add the following:
+any package that uses X11 headers/libraries. Then you can just add the 
+following:
 
-	X11BASE=${X11PREFIX}/X11R6
-
-If you had previously installed x11-links, make sure you have modified 
-X11BASE and then reinstalled x11-links before building any X11 
-application.
+	X11BASE=${X11ROOT}
 
 ==========================================================================

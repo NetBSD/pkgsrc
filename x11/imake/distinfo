@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.2 2004/01/31 14:38:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/03/28 22:06:16 xtraeme Exp $
 
-SHA1 (X430src-1.tgz) = 3aaf219e8c2d3eb299f150bd4a2554a84a19354b
-Size (X430src-1.tgz) = 10993622 bytes
-SHA1 (X430src-3.tgz) = a11e619ba0b628d9e2e39e838379658b3b347f66
-Size (X430src-3.tgz) = 12366363 bytes
+SHA1 (XFree86-4.4.0-src-1.tgz) = 44b38a7044c82d0b2f785b0e6a935349abcb5d79
+Size (XFree86-4.4.0-src-1.tgz) = 11760814 bytes
+SHA1 (XFree86-4.4.0-src-3.tgz) = a012694d5a5aa3df1d9a3a52363d73cf8f03326b
+Size (XFree86-4.4.0-src-3.tgz) = 11239253 bytes
 SHA1 (patch-aa) = 554472267b9a5bc6614b11c6688325c1fd7ffc0e
 SHA1 (patch-ab) = f9da29ae63b2adc563df4230ce8daa9fc75ad8ca
-SHA1 (patch-ac) = 77568c9cddca68e910e6db8d6d7baa5e495a0fb5
-SHA1 (patch-ad) = dc2cd430ed18f950e32e55a262de845e905199ad
-SHA1 (patch-ae) = 8a2032645c204d07ed9a7d501fc929ebe022d741
-SHA1 (patch-af) = ae90c06b50d5d8b84054cc66beec0d0e3049d0aa
-SHA1 (patch-ag) = 32e12b0470daa93964ba489ce650f5ffb1317b0c
-SHA1 (patch-ah) = bec3d071020c9354c7f1203d0467343b32298518
+SHA1 (patch-ac) = ae90c06b50d5d8b84054cc66beec0d0e3049d0aa
+SHA1 (patch-ad) = 90584e5732fb882f431afd69f6fd1c26c9d22bee
+SHA1 (patch-ae) = b34f46d715e90159df3897cf20023b58b9deff67
+SHA1 (patch-af) = a06752ee9f55e64a407fac6fbde3547fd096c71d

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 14:19:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/28 22:06:15 xtraeme Exp $
 
-DISTNAME=	X430src-4
+DISTNAME=	XFree86-4.4.0-src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
-PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
@@ -11,17 +10,16 @@ MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Encoding fonts
 
-DEPENDS=	XFree86-clients>=4.3.0:../../x11/XFree86-clients
+DEPENDS=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
 
-USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	# defined
 WRKSRC=			${WRKDIR}/xc/fonts/encodings
 
 post-extract:
 	@${SED} \
-		-e "s|@PREFIX@|${X11ROOT}|g" \
-		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
-		-e "s|@IMAKE@|${IMAKE}|g" \
+		-e 's,@PREFIX@,${X11ROOT},g' \
+		-e 's,@MAKE@,${MAKE_PROGRAM},g' \
+		-e 's,@IMAKE@,${IMAKE},g' \
 		${FILESDIR}/host.def > ${WRKSRC}/host.def
 
 do-configure:
