@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.19 1999/01/30 23:18:57 agc Exp $
+# $NetBSD: Makefile,v 1.20 1999/02/02 10:24:09 tron Exp $
 
-DISTNAME=		WindowMaker-0.50.2
-PKGNAME=		windowmaker-0.50.2
+DISTNAME=		WindowMaker-0.51.0
+PKGNAME=		windowmaker-0.51.0
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
-			ftp://ftp.windowmaker.org/pub/contrib/icons/
-DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}\
+			ftp://ftp.windowmaker.org/pub/libs/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			WindowMaker-data.tar.gz
 
 MAINTAINER=		lamj@stat.cmu.edu
-HOMEPAGE=		http://windowmaker.org/
+HOMEPAGE=		http://www.windowmaker.org/
 
+DEPENDS+=		libproplist-0.8.3:../../devel/libproplist
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		giflib-3.0:../../graphics/giflib
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
@@ -27,7 +28,10 @@ CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 				-I${LOCALBASE}/include/giflib" \
 			--with-gfx-libs=-L${LOCALBASE}/lib \
 			--with-modelock
-CONFIGURE_ENV+=		INSTALL="${INSTALL}" \
+
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=		-L${LOCALBASE}/lib
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			INSTALL_DATA="${INSTALL_DATA}" \
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
@@ -42,9 +46,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC_WM
 #
 .if defined(LINGUAS)
 DEPENDS+=		gettext-0.10.35:../../devel/gettext
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" LINGUAS="${LINGUAS}"
+CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
 
 # Enable multi-byte character support for languages that need it.
 # Currently, those are: ja, ko
@@ -62,15 +64,19 @@ CONFIGURE_ARGS+=	--enable-kanji
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
 #
-#	kde		KDE WM-compliance
+#	kde		enable support for kde/kwm window manager hints
+#	gnome		enable support for GNOME window manager hints
+#	openlook	enable support for OPEN LOOK(tm) window manager hints
 #	lite		remove Window Maker redundancies with KDE
-#	gnome		GNOME-compliance
 #
 # Default: not defined
 #
 .for option in ${WINDOWMAKER_OPTIONS}
 CONFIGURE_ARGS+=	--enable-${option}
 .endfor
+
+post-extract:
+	${RM} -f ${WRKDIR}/WindowMaker-data/pixmaps/tile.xpm
 
 pre-configure:
 	@${ECHO} "To compile with i18n support, set the variable LINGUAS"
