@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/05 14:49:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/07 11:35:41 jlam Exp $
 
 PKGNAME=		postgresql73-server-${BASE_VERS}
 PKGREVISION=		# empty
@@ -25,7 +25,11 @@ BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 # XXX this breaks PostgreSQL server - see PR pkg/28729
 #.include "../../mk/dlopen.buildlink3.mk"
 
-.if defined(USE_PAM)
+PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql73-server
+PKG_SUPPORTED_OPTIONS=	PAM
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:MPAM)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif

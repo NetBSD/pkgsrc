@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.14 2005/01/14 05:15:39 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.15 2005/02/07 11:35:42 jlam Exp $
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
@@ -44,7 +44,10 @@ PATCHDIR=		${.CURDIR}/../courier-auth/patches
 BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
 
 .include "../../mk/bdb.buildlink3.mk"
-.if defined(USE_PAM)
-BUILD_DEFS+=		USE_PAM
+
+PKG_SUPPORTED_OPTIONS=	PAM
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:MPAM)
 .  include "../../mk/pam.buildlink3.mk"
 .endif
