@@ -1,0 +1,79 @@
+$NetBSD: patch-aj,v 1.6 2000/10/31 18:08:27 mycroft Exp $
+
+--- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	Sat Nov  6 03:39:07 1999
++++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Tue Oct 31 17:33:58 2000
+@@ -129,6 +129,7 @@
+     "jbsr  _invoke_count_words\n\t"     /* count words */
+     "addql #8, sp\n\t"
+     "lsll  #2, d0\n\t"      /* *= 4 */
++    "movl  sp, a2\n\t"	    /* save original sp */
+     "subl  d0, sp\n\t"      /* make room for params */
+     "movl  sp, a0\n\t"
+     "movl  %4, sp@-\n\t"
+@@ -137,18 +138,22 @@
+     "jbsr  _invoke_copy_to_stack\n\t"   /* copy params */
+     "addl  #12, sp\n\t"
+     "movl  %1, a0\n\t"
+-    "movl  a0, sp@-\n\t"
+-    "movl  a0@, a0\n\t"
++    "movl  a0@, a1\n\t"
+     "movl  %2, d0\n\t"      /* function index */
+-    "movl  a0@(12,d0:l:8), a0\n\t"
+-    "jbsr  a0@\n\t"         /* safe to not cleanup sp */
+-    "movl  d0, %0"
++    "movl  a0, d1\n\t"
++    "movw  a1@(8,d0:l:8), a0\n\t"
++    "addl  a0, d1\n\t"
++    "movl  a1@(12,d0:l:8), a1\n\t"
++    "movl  d1, sp@-\n\t"
++    "jbsr  a1@\n\t"
++    "movl  a2, sp\n\t"	    /* restore original sp */
++    "movl  d0, %0\n\t"
+     : "=g" (result)         /* %0 */
+     : "g" (that),           /* %1 */
+       "g" (methodIndex),    /* %2 */
+       "g" (paramCount),     /* %3 */
+       "g" (params)          /* %4 */
+-    : "a0", "a1", "d0", "d1", "memory"
++    : "a0", "a1", "a2", "d0", "d1", "memory"
+     );
+   
+   return result;
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp.orig	Sat Nov  6 03:39:10 1999
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Tue Oct 31 17:45:51 2000
+@@ -108,22 +108,19 @@
+     }
+ }
+ 
+-#define STUB_ENTRY(n) \
+-nsresult nsXPTCStubBase::Stub##n() \
+-{ \
+-  register nsresult result; \
+-  __asm__ __volatile__( \
+-    "lea   a6@(12), a0\n\t"       /* args */ \
+-    "movl  a0, sp@-\n\t" \
+-    "movl  #"#n", sp@-\n\t"       /* method index */ \
+-    "movl  a6@(8), sp@-\n\t"      /* this */ \
+-    "jbsr  _PrepareAndDispatch\n\t" \
+-    "movl  d0, %0" \
+-    : "=d" (result)     /* %0 */ \
+-    : \
+-    : "a0", "a1", "d0", "d1", "memory" ); \
+-    return result; \
+-}
++#define STUB_ENTRY(n)							\
++__asm__(								\
++    ".global	_Stub"#n"__14nsXPTCStubBase\n\t"			\
++"_Stub"#n"__14nsXPTCStubBase:\n\t"					\
++    "link  a6,#0			\n\t"				\
++    "lea   a6@(12), a0			\n\t"	/* pointer to args */	\
++    "movl  a0, sp@-			\n\t"				\
++    "movl  #"#n", sp@-			\n\t"	/* method index */	\
++    "movl  a6@(8), sp@-			\n\t"	/* this */		\
++    "jbsr  _PrepareAndDispatch		\n\t"				\
++    "unlk  a6				\n\t"				\
++    "rts				\n\t"				\
++);
+ 
+ #define SENTINEL_ENTRY(n) \
+ nsresult nsXPTCStubBase::Sentinel##n() \
