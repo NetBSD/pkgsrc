@@ -1,24 +1,25 @@
-$NetBSD: patch-aw,v 1.1 2004/04/22 09:18:40 tron Exp $
+$NetBSD: patch-aw,v 1.2 2005/02/04 21:35:51 adrianp Exp $
 
---- ocamldoc/Makefile.orig	Mon Aug 19 15:28:20 2002
-+++ ocamldoc/Makefile	Thu Apr 22 10:34:37 2004
-@@ -272,23 +272,23 @@
+--- ocamldoc/Makefile.orig	2004-10-15 15:32:30.000000000 +0100
++++ ocamldoc/Makefile	2004-10-15 15:38:04.000000000 +0100
+@@ -252,24 +252,24 @@
  # Installation targets
  ######################
  install: dummy
 -	if test -d $(INSTALL_BINDIR); then : ; else $(MKDIR) $(INSTALL_BINDIR); fi
 -	if test -d $(INSTALL_LIBDIR); then : ; else $(MKDIR) $(INSTALL_LIBDIR); fi
--	$(CP) $(OCAMLDOC) $(INSTALL_BINDIR)
--	$(CP) ocamldoc.sty ocamldoc.hva *.cmi $(GENERATORS) $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
+-	if test -d $(INSTALL_CUSTOMDIR); then : ; else $(MKDIR) $(INSTALL_CUSTOMDIR); fi
+-	$(CP) $(OCAMLDOC)$(EXE) $(INSTALL_BINDIR)/$(OCAMLDOC)$(EXE)
+-	$(CP) ocamldoc.hva *.cmi $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
 -	$(CP) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
--	if test -d $(INSTALL_MANODIR); then : ; else $(MKDIR) $(INSTALL_MANODIR); fi
--	$(CP) stdlib_man/* $(INSTALL_MANODIR)
 +	if test -d $(INSTALL_BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(INSTALL_BINDIR); fi
 +	if test -d $(INSTALL_LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_LIBDIR); fi
-+	${BSD_INSTALL_PROGRAM} $(OCAMLDOC) $(INSTALL_BINDIR)
-+	${BSD_INSTALL_DATA} ocamldoc.sty ocamldoc.hva *.cmi $(GENERATORS) $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
++	if test -d $(INSTALL_CUSTOMDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_CUSTOMDIR); fi
++	${BSD_INSTALL_PROGRAM} $(OCAMLDOC)$(EXE) $(INSTALL_BINDIR)/$(OCAMLDOC)$(EXE)
++	${BSD_INSTALL_DATA} ocamldoc.hva *.cmi $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
 +	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
-+	if test -d $(INSTALL_MANODIR); then : ; else ${BSD_INSTALL_MAN_DIR} $(INSTALL_MANODIR); fi
+ 	if test -d $(INSTALL_MANODIR); then : ; else $(MKDIR) $(INSTALL_MANODIR); fi
+-	$(CP) stdlib_man/* $(INSTALL_MANODIR)
 +	${BSD_INSTALL_MAN} stdlib_man/* $(INSTALL_MANODIR)
  
  installopt:
@@ -27,13 +28,13 @@ $NetBSD: patch-aw,v 1.1 2004/04/22 09:18:40 tron Exp $
  installopt_really:
 -	if test -d $(INSTALL_BINDIR); then : ; else $(MKDIR) $(INSTALL_BINDIR); fi
 -	if test -d $(INSTALL_LIBDIR); then : ; else $(MKDIR) $(INSTALL_LIBDIR); fi
--	$(CP) $(OCAMLDOC_OPT) $(INSTALL_BINDIR)
--	$(CP) ocamldoc.sty ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
+-	$(CP) $(OCAMLDOC_OPT) $(INSTALL_BINDIR)/$(OCAMLDOC_OPT)$(EXE)
+-	$(CP) ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
 -	$(CP) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
 +	if test -d $(INSTALL_BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(INSTALL_BINDIR); fi
 +	if test -d $(INSTALL_LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_LIBDIR); fi
-+	${BSD_INSTALL_PROGRAM} $(OCAMLDOC_OPT) $(INSTALL_BINDIR)
-+	${BSD_INSTALL_DATA} ocamldoc.sty ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
++	${BSD_INSTALL_PROGRAM} $(OCAMLDOC_OPT) $(INSTALL_BINDIR)/$(OCAMLDOC_OPT)$(EXE)
++	${BSD_INSTALL_DATA} ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
 +	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
  
  # Testing :
