@@ -1,7 +1,15 @@
-$NetBSD: patch-ab,v 1.2 1998/09/05 09:05:22 explorer Exp $
-
---- Makefile.ssl.orig	Fri Jun 26 10:25:25 1998
-+++ Makefile.ssl	Sat Aug 22 13:14:34 1998
+$NetBSD: patch-ab,v 1.3 1998/09/17 00:48:02 garbled Exp $
+--- Makefile.ssl.orig	Fri Jun 26 01:25:25 1998
++++ Makefile.ssl	Wed Sep 16 14:33:49 1998
+@@ -62,7 +62,7 @@
+ CC= cc
+ #CFLAG= -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized -DMD5_ASM -DSHA1_ASM -DRMD160_ASM
+ CFLAG= -O -DNOPROTO
+-PEX_LIBS= -L. -L.. -L../.. -L../../..
++PEX_LIBS= -L. -L.. -L../.. -L../../.. -L/usr/pkg/lib
+ EX_LIBS= 
+ AR=ar r
+ 
 @@ -175,7 +175,7 @@
  	VERSION PROBLEMS MINFO makefile.one e_os.h \
  	MICROSOFT makevms.com config PATENTS

@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 1998/09/17 00:48:02 garbled Exp $
+--- Configure.orig	Wed Sep 16 14:09:55 1998
++++ Configure	Wed Sep 16 14:19:53 1998
+@@ -129,9 +129,10 @@
+ "linux-elf",	"gcc:-DL_ENDIAN -DTERMIO -DBN_ASM -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
+ "debug-linux-elf","gcc:-DREF_CHECK -DBN_ASM -DCRYPTO_MDEBUG -DL_ENDIAN -DTERMIO -g -m486 -Wall:-lefence:BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
+ "linux-aout",	"gcc:-DL_ENDIAN -DTERMIO -DBN_ASM -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+-"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-m86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-x86",	"gcc:-DTERMIOS -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
++"NetBSD-sparc",	"gcc:-DTERMIOS -D_ANSI_SOURCE -DRSAref -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN:-lRSAglue -lrsaref:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-m86",	"gcc:-DTERMIOS -D_ANSI_SOURCE -DRSAref -O3 -fomit-frame-pointer -Wall -DB_ENDIAN:-lRSAglue -lrsaref:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-x86",	"gcc:-DTERMIOS -DRSAref -DL_ENDIAN -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall:-lRSAglue -lrsaref:BN_LLONG $x86_gcc_des $x86_gcc_opts:",
++"NetBSD-alpha", "gcc:-DTERMIOS -D_ANSI_SOURCE -DRSAref -DL_ENDIAN -O3:-lRSAglue -lrsaref:SIXTY_FOUR_BIT_LONGS DES_INT DES_PTR DES_RISC2:asm/alpha.o::",
+ "FreeBSD",   "gcc:-DTERMIOS -DBN_ASM -DL_ENDIAN -D_ANSI_SOURCE -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+ #"bsdi-gcc",     "gcc:-O3 -ffast-math -DBN_ASM -DL_ENDIAN -DPERL5 -m486::RSA_LLONG $x86_gc_des $x86_gcc_opts:$x86_bsdi_asm",
+ "nextstep",	"cc:-O3 -Wall -DBN_ASM::BN_LLONG $x86_gcc_des $x86_gcc_opts:::",
