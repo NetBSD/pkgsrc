@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2004/04/16 20:44:54 kristerw Exp $
+# $NetBSD: Makefile,v 1.110 2004/05/16 00:27:30 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.81.1
+DISTNAME=		xmame-0.82.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		ftp://ftp.rx3.net/pub/arc/xmame/0.81.1/
+MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@NetBSD.org
@@ -107,9 +107,15 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
 		${PREFIX}/bin/${TARGET}
+	${INSTALL_PROGRAM} ${WRKSRC}/romcmp ${PREFIX}/bin/romcmp
+	${INSTALL_PROGRAM} ${WRKSRC}/chdman ${PREFIX}/bin/chdman
 	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/html/xmame/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/html/xmame/
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/xmame
+	${INSTALL_DATA} ${WRKSRC}/doc/xmame-doc.txt ${PREFIX}/share/doc/xmame
 
 .include "../../mk/bsd.pkg.mk"
