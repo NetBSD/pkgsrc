@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/16 16:57:55 tv Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -23,10 +23,12 @@ PRGNAME=	xbin
 EXTRACT_ONLY=	# empty
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
-CFLAGS+=	-DBSD
-LDFLAGS+=	-lcompat
+
+.if !empty(OPSYS:M*BSD)
+CFLAGS+=		-DBSD
+LDFLAGS+=		-lcompat
 .endif
+CFLAGS.Interix+=	-DBSD
 
 INSTALLATION_DIRS=	bin man/cat1
 
