@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp import/import_divx.c import/import_divx.c
+*** import/import_divx.c	Mon May 12 16:46:50 2003
+--- import/import_divx.c	Mon Jun  9 17:46:50 2003
+*************** static unsigned char *bufalloc(size_t si
+*** 158,164 ****
+  }
+  
+  static int divx_init(char *path) {
+! #ifdef __FreeBSD__
+      const
+  #endif    
+      char *error;
+--- 158,164 ----
+  }
+  
+  static int divx_init(char *path) {
+! #if defined(__FreeBSD__) || defined(__NetBSD__)
+      const
+  #endif    
+      char *error;

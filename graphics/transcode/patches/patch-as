@@ -1,0 +1,28 @@
+$NetBSD: patch-as,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+--- libvo/cpu_accel.c.orig	2003-03-09 06:13:27.000000000 +1100
++++ libvo/cpu_accel.c	2003-06-21 03:24:18.000000000 +1000
+@@ -33,9 +33,12 @@ static uint32_t arch_accel (void)
+     uint32_t caps;
+ 
+ #define cpuid(op,eax,ebx,ecx,edx)	\
+-    asm ("cpuid"			\
++    asm ("pushl %%ebx\n"		\
++	 "cpuid\n"			\
++	 "movl %%ebx, %1\n"		\
++	 "popl %%ebx\n" 		\
+ 	 : "=a" (eax),			\
+-	   "=b" (ebx),			\
++	   "=r" (ebx),			\
+ 	   "=c" (ecx),			\
+ 	   "=d" (edx)			\
+ 	 : "a" (op)			\
+@@ -50,7 +53,7 @@ static uint32_t arch_accel (void)
+ 	 "pushfl\n\t"
+ 	 "popl %0"
+          : "=a" (eax),
+-	   "=b" (ebx)
++	   "=r" (ebx)
+ 	 :
+ 	 : "cc");
+ 

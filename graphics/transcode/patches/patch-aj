@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp src/dl_loader.c src/dl_loader.c
+*** src/dl_loader.c	Wed Apr 30 18:14:28 2003
+--- src/dl_loader.c	Mon Jun  9 17:45:34 2003
+*************** int tca_import(int opt, void *para1, voi
+*** 128,134 ****
+  
+  void *load_module(char *mod_name, int mode)
+  {
+! #if defined(__FreeBSD__) || defined (__APPLE__)
+    const
+  #endif  
+    char *error;
+--- 128,134 ----
+  
+  void *load_module(char *mod_name, int mode)
+  {
+! #if defined(__FreeBSD__) || defined (__APPLE__) || defined(__NetBSD__)
+    const
+  #endif  
+    char *error;
