@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/05/29 23:14:12 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/05 09:07:55 wulf Exp $
 #
 
-DISTNAME=		xplanet-0.93
-PKGREVISION=		3
+DISTNAME=		xplanet-1.0.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
@@ -21,12 +20,6 @@ CONFIGURE_ARGS+=	--with-glut-dir=${BUILDLINK_PREFIX.Mesa}
 
 LIBS=			-lXext -lpbm -lppm -lpgm
 MAKE_ENV+=		LIBS="${LIBS}"
-
-pre-configure:
-	cd ${WRKSRC} ; \
-	f=xplanet.1 ; \
-	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
 
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
