@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/07/28 12:14:49 shannonjr Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/28 21:30:19 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -130,8 +130,7 @@ MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
-LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -d _ -f 1
-GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/_.*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
@@ -154,23 +153,24 @@ post-patch:
 		${CP} $$i ${WRKSRC}/gcc/ada; \
 	done )
 
-.if ${BUILD_ADA} == "YES"
+.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 .  if defined(USE_GCC34ADA)
 # Overide compiler.mk setup to use gcc-3.4.x-ada
 pre-configure:
 .include "../../lang/gcc34-ada/preconfigure.mk"
 .  elif defined(ALT_GCC)
 pre-configure:
+	(${TEST} -d ${WRKDIR}/.gcc/bin/ || ${MKDIR} ${WRKDIR}/.gcc/bin/)
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
 	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
 	bin_files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${WRKDIR}/.gcc/bin/ && \
 	for filename in ${ALT_GCC:T} $${bin_files} ; do \
-	  $(ECHO) '#!/bin/sh' > $${filename}; \
-	  $(ECHO) -n "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
-	  $(ECHO) '"$$@"' >>$${filename}; \
-	  $(CHMOD) +x $${filename}; \
+		${ECHO} '#!${TOOLS_SHELL}' > $${filename}; \
+		${ECHO} -n "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
+		${ECHO} '"$$@"' >>$${filename}; \
+		${CHMOD} +x $${filename}; \
 	done )
 .  endif
 .endif
@@ -187,7 +187,7 @@ do-build:
 
 do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
-	(cd files && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
+	(cd ${FILESDIR} && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
 .endif
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
