@@ -1,0 +1,17 @@
+$NetBSD: patch-cw,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- arts/tools/environmentview.cpp.orig	2003-11-08 14:04:20.000000000 +0100
++++ arts/tools/environmentview.cpp	2003-11-08 14:04:30.000000000 +0100
+@@ -29,10 +29,11 @@
+ #include "main.h"
+ #include <stdio.h>
+ #include <fstream>
+-#include <vector.h>
++#include <vector>
+ 
+ #define DEFAULT_ENV_FILENAME "~/default.arts-env"
+ 
++using namespace std;
+ using namespace Arts;
+ using Environment::Container;
+ using Environment::Item;
