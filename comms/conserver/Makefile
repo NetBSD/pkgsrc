@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/22 06:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/22 06:39:27 wiz Exp $
 #
 
 DISTNAME=      conserver-7.2.7
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-libwrap
 DEFAULTPORT?=	782
 DEFAULTHOST?=	localhost
 RCD_SCRIPTS=	conserver
+
+TEST_TARGET=	test
 
 EGDIR=		${PREFIX}/share/examples/conserver
 CONF_FILES=	${EGDIR}/conserver.cf.example ${PKG_SYSCONFDIR}/conserver.cf
