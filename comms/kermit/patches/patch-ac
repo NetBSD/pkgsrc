@@ -1,12 +1,15 @@
---- ckuus5.c.orig	Thu Jun 18 04:32:48 1998
-+++ ckuus5.c	Thu Jun 18 05:00:44 1998
-@@ -2540,4 +2540,6 @@
- 		q[i] = m_arg[maclvl][i];
--	    debug(F111,"popclvl mac 8",
--		  (maclvl > -1 && macx[maclvl]) ? macx[maclvl] : "",maclvl);
-+		if (maclvl > -1 && macx[maclvl])
-+		    debug(F111,"popclvl mac 8",macx[maclvl],maclvl);
-+		else
-+		    debug(F111,"popclvl mac 8","",maclvl);
- 	} else maclvl = -1;
-
+--- ckcdeb.h.orig	Mon Nov 25 01:20:48 1996
++++ ckcdeb.h	Sat Jun 20 23:20:14 1998
+@@ -908,10 +908,10 @@
+ /* Now define the debug() macro. */
+ #ifdef IFDEBUG
+ /* Use this form to avoid function calls: */
+-#define debug(a,b,c,d) if (deblog) dodebug(a,b,(char *)c,(long)d)
++#define debug(a,b,c,d) if (deblog) dodebug(a,b,(char *)(c),(long)d)
+ #else
+ /* Use this form to save space: */
+-#define debug(a,b,c,d) dodebug(a,b,(char *)c,(long)d)
++#define debug(a,b,c,d) dodebug(a,b,(char *)(c),(long)d)
+ #endif /* MAC */
+ 
+ #ifdef COMMENT
