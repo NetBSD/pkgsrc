@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/27 11:25:32 simonb Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/30 21:07:22 wiz Exp $
 #
 
 DISTNAME=	pilrc-2_7b
@@ -35,6 +35,7 @@ DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
 post-extract:
 	${CHMOD} +x ${WRKSRC}/configure
+	${CHMOD} +x ${WRKSRC}/missing
 
 post-install:
 	${MKDIR} ${DOCDIR}
