@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.141 1998/08/07 12:30:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.142 1998/08/11 19:30:48 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -61,6 +61,7 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 LOCALBASE?=		${DESTDIR}/usr/local
 .endif
 X11BASE?=		${DESTDIR}/usr/X11R6
+CROSSBASE?=		${LOCALBASE}/cross
 
 PKGSRCDIR=		${.CURDIR}/../..
 DISTDIR?=		${PKGSRCDIR}/distfiles
@@ -110,13 +111,15 @@ PKGDIR?=		${.CURDIR}/pkg
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
 .if defined(USE_LOCALBASE_FOR_X11)
-PREFIX?=		${LOCALBASE}
+PREFIX=			${LOCALBASE}
 BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:../../x11/xpkgwedge
 .else
-PREFIX?=		${X11BASE}
+PREFIX=			${X11BASE}
 .endif
+.elif defined(USE_CROSSBASE)
+PREFIX=			${CROSSBASE}
 .else
-PREFIX?=		${LOCALBASE}
+PREFIX=			${LOCALBASE}
 .endif
 
 .if defined(USE_GMAKE)
