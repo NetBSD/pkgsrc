@@ -1,21 +1,16 @@
-$NetBSD: patch-ad,v 1.6 2003/08/15 23:42:59 epg Exp $
+$NetBSD: patch-ad,v 1.7 2003/08/31 22:09:52 epg Exp $
 
---- Makefile.in.orig	Thu Aug 14 07:21:35 2003
+--- Makefile.in.orig	Thu Aug 28 11:47:57 2003
 +++ Makefile.in
-@@ -107,13 +107,13 @@ SWIG_INCLUDES = -I$(SWIG_SRC_DIR) \
-                 $(SVN_APR_INCLUDES)
- SWIG_LDFLAGS = @SWIG_LDFLAGS@
- SWIG_PY_INCLUDES = @SWIG_PY_INCLUDES@
--SWIG_PY_COMPILE = @SWIG_PY_COMPILE@
-+SWIG_PY_COMPILE = @SWIG_PY_COMPILE@ $(CPPFLAGS)
- SWIG_PY_LINK = @SWIG_PY_LINK@
- SWIG_JAVA_INCLUDES = @SWIG_JAVA_INCLUDES@
--SWIG_JAVA_COMPILE = $(CC) -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC
-+SWIG_JAVA_COMPILE = $(CC) -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC $(CPPFLAGS)
- SWIG_JAVA_LINK = $(CC) -shared
- SWIG_PL_INCLUDES = @SWIG_PL_INCLUDES@
--SWIG_PL_COMPILE = @SWIG_PL_COMPILE@
-+SWIG_PL_COMPILE = @SWIG_PL_COMPILE@  $(CPPFLAGS)
- SWIG_PL_LINK = @SWIG_PL_LINK@
+@@ -149,9 +149,9 @@ RUN_SWIG_PL = $(SWIG) -c -perl $(SWIG_IN
+ RUN_SWIG_JAVA = cd ${SWIG_SRC_DIR}/java/org/tigris/subversion/swig && $(SWIG) -c -java -package 'org.tigris.subversion.swig' $(SWIG_INCLUDES) -o ${abs_builddir}/$@
  
- SVN_APR_INCLUDES = @SVN_APR_INCLUDES@
+ # Compilation of SWIG-generated C source code
+-COMPILE_PY_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=compile $(SWIG_PY_COMPILE) $(SWIG_INCLUDES) $(SWIG_PY_INCLUDES) -prefer-pic -c -o $@
++COMPILE_PY_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=compile $(SWIG_PY_COMPILE) $(CPPFLAGS) $(SWIG_INCLUDES) $(SWIG_PY_INCLUDES) -prefer-pic -c -o $@
+ COMPILE_JAVA_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=compile $(SWIG_JAVA_COMPILE) -DSWIGJAVA $(SWIG_INCLUDES) $(SWIG_JAVA_INCLUDES) -prefer-pic -c -o $@
+-COMPILE_PL_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=compile $(SWIG_PL_COMPILE) $(SWIG_INCLUDES) $(SWIG_PL_INCLUDES) -prefer-pic -c -o $@
++COMPILE_PL_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=compile $(SWIG_PL_COMPILE) $(CPPFLAGS) $(SWIG_INCLUDES) $(SWIG_PL_INCLUDES) -prefer-pic -c -o $@
+ 
+ # these commands link the wrapper objects into an extension library/module
+ LINK_PY_WRAPPER = $(LIBTOOL) $(LTFLAGS) --mode=link $(SWIG_PY_LINK) $(SWIG_LDFLAGS) -rpath $(swig_pydir) -avoid-version -module
