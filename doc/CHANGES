@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8189 2004/11/30 17:34:09 taca Exp $
+$NetBSD: CHANGES,v 1.8190 2004/11/30 19:32:49 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5685,3 +5685,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ruby16-zlib-0.6.0 [taca 2004-11-30]
 	Updated ruby18 to 1.8.1nb1 [taca 2004-11-30]
 	Updated magicpoint to 1.10anb4 [taca 2004-11-30]
+	Updated pkg_chk to 1.52 [abs 2004-11-30]
+
