@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2003/12/29 20:03:31 cjep Exp $
+
+--- ../sqlite/src/parse.y.orig	2003-07-16 03:19:38.000000000 +0100
++++ ../sqlite/src/parse.y
+@@ -33,6 +33,7 @@
+ }
+ %name sqliteParser
+ %include {
++#include "os.h"
+ #include "sqliteInt.h"
+ #include "parse.h"
+ 
