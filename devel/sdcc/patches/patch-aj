@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-aj,v 1.2 2001/04/23 17:33:06 wulf Exp $
 
---- sdcc.src/SDCCval.h.orig	Thu Jul  1 18:28:12 1999
-+++ sdcc.src/SDCCval.h	Fri Aug 25 23:17:26 2000
+--- src/SDCCval.h.orig	Thu Jul  1 18:28:12 1999
++++ src/SDCCval.h	Fri Aug 25 23:17:26 2000
 @@ -67,7 +67,7 @@
  value			*charVal          (char    *            );
  value			*symbolVal        (symbol  *            );

@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-al,v 1.2 2001/04/23 17:33:06 wulf Exp $
 
---- sdcc.src/Makefile.in.orig	Mon May 24 18:40:50 1999
-+++ sdcc.src/Makefile.in	Fri Aug 25 23:17:26 2000
-@@ -34,7 +34,7 @@
- 
+--- Makefile.common.in.orig	Mon Apr  9 21:47:27 2001
++++ Makefile.common.in	Mon Apr  9 21:47:40 2001
+@@ -36,7 +36,7 @@
  # Flags
+ HAVE_LIBGC	= @HAVE_LIBGC@
  DEFS            = $(subs -DHAVE_CONFIG_H,,@DEFS@)
 -CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR)
 +CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR) -Dunix
- CFLAGS          = @CFLAGS@ -Wall
- M_OR_MM         = @M_OR_MM@
- LIBS		= -lgc @LIBS@
+ ifeq ($(HAVE_LIBGC),1)
+ else
+ CPPFLAGS 	+= -I$(PRJDIR)/support
