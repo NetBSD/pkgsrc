@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/21 17:06:40 jmmv Exp $
+include/libgnomecups-1/libgnomecups/gnome-cups-init.h
+include/libgnomecups-1/libgnomecups/gnome-cups-printer.h
+include/libgnomecups-1/libgnomecups/gnome-cups-queue.h
+include/libgnomecups-1/libgnomecups/gnome-cups-request.h
+include/libgnomecups-1/libgnomecups/gnome-cups-util.h
+lib/libgnomecups-1.0.a
+lib/libgnomecups-1.0.la
+lib/libgnomecups-1.0.so
+lib/libgnomecups-1.0.so.1
+lib/libgnomecups-1.0.so.1.0
+lib/pkgconfig/libgnomecups-1.0.pc
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomecups.mo
+@dirrm include/libgnomecups-1/libgnomecups
+@dirrm include/libgnomecups-1
