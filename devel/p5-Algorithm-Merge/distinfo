@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 16:07:56 epg Exp $
+$NetBSD: distinfo,v 1.2 2004/11/27 14:19:05 he Exp $
 
-SHA1 (Algorithm-Merge-0.04.tar.gz) = ae76952486b8cbb944fda3feafe84f071a8adbb0
-Size (Algorithm-Merge-0.04.tar.gz) = 8926 bytes
+SHA1 (Algorithm-Merge-0.05.tar.gz) = 708bc7d1ba1dc53ed164f04009bcbbb6864f8a90
+Size (Algorithm-Merge-0.05.tar.gz) = 9087 bytes
