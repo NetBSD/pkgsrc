@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/13 18:48:32 ben Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/20 14:14:26 ben Exp $
 bin/f-prot
-libexec/fprot-workstation-bin/f-prot
 libexec/fprot-workstation-bin/ENGLISH.TX0
-man/man8/check-updates.pl.8
+libexec/fprot-workstation-bin/f-prot
 man/man1/f-prot.1
+man/man8/check-updates.pl.8
 sbin/check-updates.pl
+share/doc/fprot-workstation-bin/CHANGES
 share/doc/fprot-workstation-bin/LICENSE
 share/doc/fprot-workstation-bin/README
-share/doc/fprot-workstation-bin/CHANGES
 share/doc/fprot-workstation-bin/add_info.html
 share/doc/fprot-workstation-bin/auto_updt.html
 share/doc/fprot-workstation-bin/comm_scan.html
