@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/06/10 08:02:09 agc Exp $
+# $NetBSD: Makefile,v 1.23 1998/06/11 16:17:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -53,9 +53,14 @@ CONFIGURE_ARGS+=	--without-idea
 .endif
 
 # Include SOCKS firewall support
-.if defined(USE_SOCKS) && ${USE_SOCKS} == YES
-CONFIGURE_ARGS+= 	--with-socks="-L${PREFIX}/lib -lsocks5"
+.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
+CONFIGURE_ARGS+= 	--with-socks${USE_SOCKS}="-L${PREFIX}/lib -lsocks${USE_SOCKS}"
 CFLAGS+=	 	-I${PREFIX}/include
+.if ${USE_SOCKS} == 4
+DEPENDS+=		socks4-2.2:../../net/socks4
+.else
+DEPENDS+=		socks5-1.0.2:../../net/socks5
+.endif
 .endif
 
 # Don't install "ssh" setuid
