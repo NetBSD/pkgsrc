@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 1999/01/04 22:37:32 tv Exp $
+$NetBSD: patch-af,v 1.2 2004/07/09 20:43:48 kristerw Exp $
 
---- ld/Makefile.in.orig	Thu Dec 31 15:03:33 1998
-+++ ld/Makefile.in	Thu Dec 31 15:03:43 1998
-@@ -87,7 +87,7 @@
+--- ld/Makefile.in.orig	Fri Jul  9 21:46:22 2004
++++ ld/Makefile.in	Fri Jul  9 21:46:44 2004
+@@ -128,7 +128,7 @@
  # We put the scripts in the directory $(scriptdir)/ldscripts.
  # We can't put the scripts in $(datadir) because the SEARCH_DIR
  # directives need to be different for native and cross linkers.
