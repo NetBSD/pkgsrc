@@ -1,14 +1,32 @@
-In order to use afterstep.. create a directory called 
-~/GNUstep/Library/AfterStep and issue the command:
-
-cp -R /usr/X11R6/share/afterstep/* ~/GNUstep/Library/AfterStep
-
-Replacing /usr/X11R6 with the location of your X tree or installation
-base dir (if different).
-
-Then place afterstep in your .xinitrc or .xsession file, replacing your
+FIRST TIME USERS:
+To use afterstep, put "exec afterstep" at the end of your .xinitrc
+or .xsession file, as applies, commenting out any line(s) for your
 current window manager.
 
-More information about using afterstep is available at:
 
-http://www.afterstep.org/FAQ/
+UPGRADERS:
+The format of many of the config files may change with the minor
+version number, as from 1.5.x to 1.6.10. Upgraders are advised to
+back up their old custom configs,
+"cp ~/GNUstep/Library/AfterStep ~/GNUstep/Library/AfterStep.old",
+review the defaults in ~/usr/X11R6/share/afterstep for compatibility,
+and edit as required before moving them back.
+
+
+EVERYBODY:
+Try the AfterStep Control Panel (available as a separate package,
+x11/ascp) for configuring AfterStep.
+
+If the "Afterstep Documentation" item in the default start menu
+fails to work, it's probably because you don't have a binary called
+either "netscape" or "lynx" on your system.  With your favorite
+browser, try
+
+	file://usr/X11R6/share/afterstep/doc/afterstep.html
+
+AfterStep has a homepage,
+
+	http://www.afterstep.org/FAQ/
+
+There find the latest version of the FAQ and links to subscribe to
+the mailing list.
