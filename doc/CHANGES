@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8581 2005/01/03 14:33:59 wiz Exp $
+$NetBSD: CHANGES,v 1.8582 2005/01/03 15:47:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -65,3 +65,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed kdelibs2 [wiz 2005-01-03]
 	Removed kdelibdocs2 [wiz 2005-01-03]
 	Removed qt2-designer-kde [wiz 2005-01-03]
+	Updated edict to 2004.003 [wiz 2005-01-03]
+	Updated JMdict to 2004.03 [wiz 2005-01-03]
