@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/04 03:57:44 taya Exp $
+bin/anthy-agent
+bin/anthy-dic-tool
+etc/anthy-conf
+include/anthy/anthy.h
+include/anthy/dicutil.h
+include/anthy/input.h
+lib/libanthy.la
+lib/libanthydic.la
+lib/libanthyinput.la
+share/anthy/a.depword
+share/anthy/ajv.depword
+share/anthy/anthy.dic
+share/anthy/av.depword
+share/anthy/conjugate.depword
+share/anthy/conjugate.table
+share/anthy/dic-tool-usage.txt
+share/anthy/fix.depword
+share/anthy/indepword.txt
+share/anthy/master.depword
+share/anthy/noun-variant.depword
+share/anthy/noun.depword
+share/anthy/typetab
+share/anthy/v.depword
+${EMACS_LISPPREFIX}/anthy/anthy-azik.el
+${EMACS_LISPPREFIX}/anthy/anthy-azik.elc
+${EMACS_LISPPREFIX}/anthy/anthy-conf.el
+${EMACS_LISPPREFIX}/anthy/anthy-conf.elc
+${EMACS_LISPPREFIX}/anthy/anthy-dic.el
+${EMACS_LISPPREFIX}/anthy/anthy-dic.elc
+${EMACS_LISPPREFIX}/anthy/anthy-isearch.el
+${EMACS_LISPPREFIX}/anthy/anthy-isearch.elc
+${EMACS_LISPPREFIX}/anthy/anthy.el
+${EMACS_LISPPREFIX}/anthy/anthy.elc
+${EMACS_LISPPREFIX}/anthy/leim-list.el
+${EMACS_LISPPREFIX}/anthy/leim-list.elc
+@dirrm ${EMACS_LISPPREFIX}/anthy
+@dirrm share/anthy
+@dirrm include/anthy
