@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1463 2004/05/24 20:54:12 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1464 2004/05/29 21:41:30 kristerw Exp $
 #
 # This file is in the public domain.
 #
@@ -1068,7 +1068,6 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://aleron.dl.sourceforge.net/sourceforge/ \
 	http://belnet.dl.sourceforge.net/sourceforge/ \
 	http://cesnet.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
@@ -1082,6 +1081,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://flow.dl.sourceforge.net/sourceforge/
+#	http://aleron.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SUSE+=	\
 	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
