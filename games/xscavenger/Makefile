@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:39:44 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/03 17:42:19 wiz Exp $
 #
 
-DISTNAME=	xscavenger-140
-PKGNAME=	xscavenger-1.4.0
+DISTNAME=	xscavenger-1.4.4
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.xdr.com/dash/
