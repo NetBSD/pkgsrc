@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 1998/08/18 09:25:17 frueauf Exp $
+
+--- ball.c.orig	Mon Aug 17 22:31:15 1998
++++ ball.c	Mon Aug 17 22:31:34 1998
+@@ -52,3 +52,5 @@
+ #include <math.h>
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
+ #include <xpm.h>
