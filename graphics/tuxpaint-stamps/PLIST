@@ -1,0 +1,243 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 11:08:19 wiz Exp $
+share/tuxpaint/stamps/cartoon/tux/tux-drat.png
+share/tuxpaint/stamps/cartoon/tux/tux-kiss1.png
+share/tuxpaint/stamps/cartoon/tux/tux-kiss2.png
+share/tuxpaint/stamps/cartoon/tux/tux-yay2.png
+share/tuxpaint/stamps/cartoon/tux/tux-yes1.png
+share/tuxpaint/stamps/cartoon/tux/tux-yes2.png
+share/tuxpaint/stamps/misc/symbols/math/0.dat
+share/tuxpaint/stamps/misc/symbols/math/0.png
+share/tuxpaint/stamps/misc/symbols/math/0.txt
+share/tuxpaint/stamps/misc/symbols/math/0.wav
+share/tuxpaint/stamps/misc/symbols/math/0_es.wav
+share/tuxpaint/stamps/misc/symbols/math/1.dat
+share/tuxpaint/stamps/misc/symbols/math/1.png
+share/tuxpaint/stamps/misc/symbols/math/1.txt
+share/tuxpaint/stamps/misc/symbols/math/1.wav
+share/tuxpaint/stamps/misc/symbols/math/1_es.wav
+share/tuxpaint/stamps/misc/symbols/math/2.dat
+share/tuxpaint/stamps/misc/symbols/math/2.png
+share/tuxpaint/stamps/misc/symbols/math/2.txt
+share/tuxpaint/stamps/misc/symbols/math/2.wav
+share/tuxpaint/stamps/misc/symbols/math/2_es.wav
+share/tuxpaint/stamps/misc/symbols/math/3.dat
+share/tuxpaint/stamps/misc/symbols/math/3.png
+share/tuxpaint/stamps/misc/symbols/math/3.txt
+share/tuxpaint/stamps/misc/symbols/math/3.wav
+share/tuxpaint/stamps/misc/symbols/math/3_es.wav
+share/tuxpaint/stamps/misc/symbols/math/4.dat
+share/tuxpaint/stamps/misc/symbols/math/4.png
+share/tuxpaint/stamps/misc/symbols/math/4.txt
+share/tuxpaint/stamps/misc/symbols/math/4.wav
+share/tuxpaint/stamps/misc/symbols/math/4_es.wav
+share/tuxpaint/stamps/misc/symbols/math/5.dat
+share/tuxpaint/stamps/misc/symbols/math/5.png
+share/tuxpaint/stamps/misc/symbols/math/5.txt
+share/tuxpaint/stamps/misc/symbols/math/5.wav
+share/tuxpaint/stamps/misc/symbols/math/5_es.wav
+share/tuxpaint/stamps/misc/symbols/math/6.dat
+share/tuxpaint/stamps/misc/symbols/math/6.png
+share/tuxpaint/stamps/misc/symbols/math/6.txt
+share/tuxpaint/stamps/misc/symbols/math/6.wav
+share/tuxpaint/stamps/misc/symbols/math/6_es.wav
+share/tuxpaint/stamps/misc/symbols/math/7.dat
+share/tuxpaint/stamps/misc/symbols/math/7.png
+share/tuxpaint/stamps/misc/symbols/math/7.txt
+share/tuxpaint/stamps/misc/symbols/math/7.wav
+share/tuxpaint/stamps/misc/symbols/math/7_es.wav
+share/tuxpaint/stamps/misc/symbols/math/8.dat
+share/tuxpaint/stamps/misc/symbols/math/8.png
+share/tuxpaint/stamps/misc/symbols/math/8.txt
+share/tuxpaint/stamps/misc/symbols/math/8.wav
+share/tuxpaint/stamps/misc/symbols/math/8_es.wav
+share/tuxpaint/stamps/misc/symbols/math/9.dat
+share/tuxpaint/stamps/misc/symbols/math/9.png
+share/tuxpaint/stamps/misc/symbols/math/9.txt
+share/tuxpaint/stamps/misc/symbols/math/9.wav
+share/tuxpaint/stamps/misc/symbols/math/9_es.wav
+share/tuxpaint/stamps/misc/symbols/math/op0_plus.dat
+share/tuxpaint/stamps/misc/symbols/math/op0_plus.png
+share/tuxpaint/stamps/misc/symbols/math/op0_plus.txt
+share/tuxpaint/stamps/misc/symbols/math/op1_minus.dat
+share/tuxpaint/stamps/misc/symbols/math/op1_minus.png
+share/tuxpaint/stamps/misc/symbols/math/op1_minus.txt
+share/tuxpaint/stamps/misc/symbols/math/op2_multiply.dat
+share/tuxpaint/stamps/misc/symbols/math/op2_multiply.png
+share/tuxpaint/stamps/misc/symbols/math/op2_multiply.txt
+share/tuxpaint/stamps/misc/symbols/math/op3_divide.dat
+share/tuxpaint/stamps/misc/symbols/math/op3_divide.png
+share/tuxpaint/stamps/misc/symbols/math/op3_divide.txt
+share/tuxpaint/stamps/misc/symbols/math/op4_equals.dat
+share/tuxpaint/stamps/misc/symbols/math/op4_equals.png
+share/tuxpaint/stamps/misc/symbols/math/op4_equals.txt
+share/tuxpaint/stamps/misc/symbols/math/op5_notequals.dat
+share/tuxpaint/stamps/misc/symbols/math/op5_notequals.png
+share/tuxpaint/stamps/misc/symbols/math/op5_notequals.txt
+share/tuxpaint/stamps/misc/symbols/math/op6_lessthan.dat
+share/tuxpaint/stamps/misc/symbols/math/op6_lessthan.png
+share/tuxpaint/stamps/misc/symbols/math/op6_lessthan.txt
+share/tuxpaint/stamps/misc/symbols/math/op7_greaterthan.dat
+share/tuxpaint/stamps/misc/symbols/math/op7_greaterthan.png
+share/tuxpaint/stamps/misc/symbols/math/op7_greaterthan.txt
+share/tuxpaint/stamps/misc/symbols/math/op8_lessthanequal.dat
+share/tuxpaint/stamps/misc/symbols/math/op8_lessthanequal.png
+share/tuxpaint/stamps/misc/symbols/math/op8_lessthanequal.txt
+share/tuxpaint/stamps/misc/symbols/math/op9_greaterthanequal.dat
+share/tuxpaint/stamps/misc/symbols/math/op9_greaterthanequal.png
+share/tuxpaint/stamps/misc/symbols/math/op9_greaterthanequal.txt
+share/tuxpaint/stamps/misc/symbols/music/clef0_treble.dat
+share/tuxpaint/stamps/misc/symbols/music/clef0_treble.png
+share/tuxpaint/stamps/misc/symbols/music/clef0_treble.txt
+share/tuxpaint/stamps/misc/symbols/music/clef1_bass.dat
+share/tuxpaint/stamps/misc/symbols/music/clef1_bass.png
+share/tuxpaint/stamps/misc/symbols/music/clef1_bass.txt
+share/tuxpaint/stamps/misc/symbols/music/key_flat.dat
+share/tuxpaint/stamps/misc/symbols/music/key_flat.png
+share/tuxpaint/stamps/misc/symbols/music/key_flat.txt
+share/tuxpaint/stamps/misc/symbols/music/key_sharp.dat
+share/tuxpaint/stamps/misc/symbols/music/key_sharp.png
+share/tuxpaint/stamps/misc/symbols/music/key_sharp.txt
+share/tuxpaint/stamps/misc/symbols/music/note_012_a.dat
+share/tuxpaint/stamps/misc/symbols/music/note_012_a.png
+share/tuxpaint/stamps/misc/symbols/music/note_012_a.txt
+share/tuxpaint/stamps/misc/symbols/music/note_012_b.dat
+share/tuxpaint/stamps/misc/symbols/music/note_012_b.png
+share/tuxpaint/stamps/misc/symbols/music/note_012_b.txt
+share/tuxpaint/stamps/misc/symbols/music/note_025_a.dat
+share/tuxpaint/stamps/misc/symbols/music/note_025_a.png
+share/tuxpaint/stamps/misc/symbols/music/note_025_a.txt
+share/tuxpaint/stamps/misc/symbols/music/note_025_b.dat
+share/tuxpaint/stamps/misc/symbols/music/note_025_b.png
+share/tuxpaint/stamps/misc/symbols/music/note_025_b.txt
+share/tuxpaint/stamps/misc/symbols/music/note_050_a.dat
+share/tuxpaint/stamps/misc/symbols/music/note_050_a.png
+share/tuxpaint/stamps/misc/symbols/music/note_050_a.txt
+share/tuxpaint/stamps/misc/symbols/music/note_050_b.dat
+share/tuxpaint/stamps/misc/symbols/music/note_050_b.png
+share/tuxpaint/stamps/misc/symbols/music/note_050_b.txt
+share/tuxpaint/stamps/misc/symbols/music/note_100.dat
+share/tuxpaint/stamps/misc/symbols/music/note_100.png
+share/tuxpaint/stamps/misc/symbols/music/note_100.txt
+share/tuxpaint/stamps/misc/symbols/music/rest_025.dat
+share/tuxpaint/stamps/misc/symbols/music/rest_025.png
+share/tuxpaint/stamps/misc/symbols/music/rest_025.txt
+share/tuxpaint/stamps/photo/flags/blue-and-yellowflag.png
+share/tuxpaint/stamps/photo/flags/blue-and-yellowflag.txt
+share/tuxpaint/stamps/photo/flags/checkeredflag.png
+share/tuxpaint/stamps/photo/flags/checkeredflag.txt
+share/tuxpaint/stamps/photo/flags/greenflag.png
+share/tuxpaint/stamps/photo/flags/greenflag.txt
+share/tuxpaint/stamps/photo/flags/redflag.png
+share/tuxpaint/stamps/photo/flags/redflag.txt
+share/tuxpaint/stamps/photo/flags/whiteflag.png
+share/tuxpaint/stamps/photo/flags/whiteflag.txt
+share/tuxpaint/stamps/photo/flags/yellowflag.png
+share/tuxpaint/stamps/photo/flags/yellowflag.txt
+share/tuxpaint/stamps/photo/food/fruit/apple_green.png
+share/tuxpaint/stamps/photo/food/fruit/apple_green.txt
+share/tuxpaint/stamps/photo/food/fruit/apple_red.png
+share/tuxpaint/stamps/photo/food/fruit/apple_red.txt
+share/tuxpaint/stamps/photo/food/fruit/orange.png
+share/tuxpaint/stamps/photo/food/fruit/orange.txt
+share/tuxpaint/stamps/photo/food/fruit/raspberry.png
+share/tuxpaint/stamps/photo/food/fruit/raspberry.txt
+share/tuxpaint/stamps/photo/food/vegetables/carrot.png
+share/tuxpaint/stamps/photo/food/vegetables/carrot.txt
+share/tuxpaint/stamps/photo/food/vegetables/garlic.png
+share/tuxpaint/stamps/photo/food/vegetables/garlic.txt
+share/tuxpaint/stamps/photo/food/vegetables/lettuce.png
+share/tuxpaint/stamps/photo/food/vegetables/lettuce.txt
+share/tuxpaint/stamps/photo/food/vegetables/mushroom.png
+share/tuxpaint/stamps/photo/food/vegetables/mushroom.txt
+share/tuxpaint/stamps/photo/food/vegetables/onion.png
+share/tuxpaint/stamps/photo/food/vegetables/onion.txt
+share/tuxpaint/stamps/photo/food/vegetables/pepper.png
+share/tuxpaint/stamps/photo/food/vegetables/pepper.txt
+share/tuxpaint/stamps/photo/food/vegetables/potato.png
+share/tuxpaint/stamps/photo/food/vegetables/potato.txt
+share/tuxpaint/stamps/photo/food/vegetables/tomato.png
+share/tuxpaint/stamps/photo/food/vegetables/tomato.txt
+share/tuxpaint/stamps/photo/food/vegetables/yam.png
+share/tuxpaint/stamps/photo/food/vegetables/yam.txt
+share/tuxpaint/stamps/photo/money/us/coins/001penny.png
+share/tuxpaint/stamps/photo/money/us/coins/001penny.txt
+share/tuxpaint/stamps/photo/money/us/coins/005nickel.png
+share/tuxpaint/stamps/photo/money/us/coins/005nickel.txt
+share/tuxpaint/stamps/photo/money/us/coins/010dime.png
+share/tuxpaint/stamps/photo/money/us/coins/010dime.txt
+share/tuxpaint/stamps/photo/money/us/coins/025quarter.png
+share/tuxpaint/stamps/photo/money/us/coins/025quarter.txt
+share/tuxpaint/stamps/photo/money/us/coins/050kennedy-halfdollar.png
+share/tuxpaint/stamps/photo/money/us/coins/050kennedy-halfdollar.txt
+share/tuxpaint/stamps/photo/plants/flowers/iris.png
+share/tuxpaint/stamps/photo/plants/flowers/iris.txt
+share/tuxpaint/stamps/photo/plants/flowers/marigold.dat
+share/tuxpaint/stamps/photo/plants/flowers/marigold.png
+share/tuxpaint/stamps/photo/plants/flowers/marigold.txt
+share/tuxpaint/stamps/photo/plants/flowers/red-gazania.png
+share/tuxpaint/stamps/photo/plants/flowers/red-gazania.txt
+share/tuxpaint/stamps/photo/plants/flowers/rose.dat
+share/tuxpaint/stamps/photo/plants/flowers/rose.png
+share/tuxpaint/stamps/photo/plants/flowers/rose.txt
+share/tuxpaint/stamps/photo/plants/flowers/whitestar-petunia.png
+share/tuxpaint/stamps/photo/plants/flowers/whitestar-petunia.txt
+share/tuxpaint/stamps/photo/space/1_mercury.png
+share/tuxpaint/stamps/photo/space/1_mercury.txt
+share/tuxpaint/stamps/photo/space/2_venus.png
+share/tuxpaint/stamps/photo/space/2_venus.txt
+share/tuxpaint/stamps/photo/space/3_earth.png
+share/tuxpaint/stamps/photo/space/3_earth.txt
+share/tuxpaint/stamps/photo/space/4_mars.png
+share/tuxpaint/stamps/photo/space/4_mars.txt
+share/tuxpaint/stamps/photo/space/5_jupiter.png
+share/tuxpaint/stamps/photo/space/5_jupiter.txt
+share/tuxpaint/stamps/photo/space/6_saturn.png
+share/tuxpaint/stamps/photo/space/6_saturn.txt
+share/tuxpaint/stamps/photo/space/7_uranus.png
+share/tuxpaint/stamps/photo/space/7_uranus.txt
+share/tuxpaint/stamps/photo/space/8_neptune.png
+share/tuxpaint/stamps/photo/space/8_neptune.txt
+share/tuxpaint/stamps/photo/space/apollo_lander.png
+share/tuxpaint/stamps/photo/space/apollo_lander.txt
+share/tuxpaint/stamps/photo/space/moon_3qt.png
+share/tuxpaint/stamps/photo/space/moon_3qt.txt
+share/tuxpaint/stamps/photo/space/moon_crescent.png
+share/tuxpaint/stamps/photo/space/moon_crescent.txt
+share/tuxpaint/stamps/photo/space/moon_full.png
+share/tuxpaint/stamps/photo/space/moon_full.txt
+share/tuxpaint/stamps/photo/space/spacewalk.png
+share/tuxpaint/stamps/photo/space/spacewalk.txt
+share/tuxpaint/stamps/photo/space/voyager2.png
+share/tuxpaint/stamps/photo/space/voyager2.txt
+@dirrm share/tuxpaint/stamps/photo/space
+@dirrm share/tuxpaint/stamps/photo/plants/flowers
+@dirrm share/tuxpaint/stamps/photo/plants
+@dirrm share/tuxpaint/stamps/photo/money/us/coins
+@dirrm share/tuxpaint/stamps/photo/money/us
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/uk
+@dirrm share/tuxpaint/stamps/photo/money/uk
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/mx
+@dirrm share/tuxpaint/stamps/photo/money/mx
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/fr
+@dirrm share/tuxpaint/stamps/photo/money/fr
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/fi
+@dirrm share/tuxpaint/stamps/photo/money/fi
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/de
+@dirrm share/tuxpaint/stamps/photo/money/de
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/ca
+@dirrm share/tuxpaint/stamps/photo/money/ca
+@dirrm share/tuxpaint/stamps/photo/money
+@dirrm share/tuxpaint/stamps/photo/food/vegetables
+@dirrm share/tuxpaint/stamps/photo/food/fruit
+@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/food/drinks
+@dirrm share/tuxpaint/stamps/photo/food/drinks
+@dirrm share/tuxpaint/stamps/photo/food
+@dirrm share/tuxpaint/stamps/photo/flags
+@dirrm share/tuxpaint/stamps/photo
+@dirrm share/tuxpaint/stamps/misc/symbols/music
+@dirrm share/tuxpaint/stamps/misc/symbols/math
+@dirrm share/tuxpaint/stamps/misc/symbols
+@dirrm share/tuxpaint/stamps/misc
+@dirrm share/tuxpaint/stamps/cartoon/tux
+@dirrm share/tuxpaint/stamps/cartoon
+@dirrm share/tuxpaint/stamps
