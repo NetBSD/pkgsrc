@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/08/04 18:55:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/10/08 23:14:37 mycroft Exp $
 
-SHA1 (tads23-unix.tar.gz) = 0d462f19087a257257acf5b57cab30eecd3bfb56
-Size (tads23-unix.tar.gz) = 3470301 bytes
-SHA1 (patch-aa) = 70e1acb58e7a15e05303e69cb77fa68fa454ce3d
+SHA1 (tads23-unix.tar.gz) = e81990782e82dc3c13ca5eedd22549201a92d096
+Size (tads23-unix.tar.gz) = 4029029 bytes
+SHA1 (patch-aa) = 45736a7c22777206a89f1381cf7fe130ee0897ad
 SHA1 (patch-ab) = b8e48ff15ef5fa1834c98a5bcc6df3d732dfe062
-SHA1 (patch-ac) = 43f30f1c1c2c52d3164cb8439b2bb86b5609f0cc
-SHA1 (patch-ad) = 6cd18579922421a17a84abdb93569a5720ca9dd9
+SHA1 (patch-ac) = f2292dda74a8986ffc85794a2f8c04683ebb42f7
