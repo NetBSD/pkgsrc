@@ -1,8 +1,8 @@
-# $NetBSD: subst.mk,v 1.6 2003/12/27 03:05:53 grant Exp $
+# $NetBSD: subst.mk,v 1.7 2003/12/28 15:57:29 jmmv Exp $
 #
 # This Makefile fragment implements a general text replacement facility
 # for different classes of files in ${WRKSRC}.  For each class of files,
-# a target <class>-subst is created to perform the text replacement.
+# a target subst-<class> is created to perform the text replacement.
 #
 # The following variables are used:
 #
