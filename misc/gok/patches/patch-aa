@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2004/11/12 22:10:16 kristerw Exp $
+
+--- gok/gok-keyboard.c.orig	Fri Nov 12 22:40:44 2004
++++ gok/gok-keyboard.c	Fri Nov 12 22:42:15 2004
+@@ -2518,9 +2518,10 @@
+ 			}
+ 			else if ((pKeyboard->search_type == GOK_SPY_SEARCH_ACTIONABLE) && !did_actionkeys) 
+ 			{
++				AccessibleAction *action;
+ 				gint action_count, i;
+ 				did_actionkeys = TRUE;
+-				AccessibleAction *action = 
++				action = 
+ 					Accessible_getAction (pNodeAccessible->paccessible);
+ 				if (!action) 
+ 					break;
