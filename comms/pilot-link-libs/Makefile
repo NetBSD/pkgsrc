@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/08 21:48:09 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 18:31:23 minskim Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=		Libraries for talking to the 3Com Pilot PDA
 
 CONFLICTS+=		pilot-link-0.8.* pilot-link-0.9.[0-3]
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 
 MAKE_ENV+=		PILIB="libsock/libpisock.la"
 MAKE_ENV+=		PICCLIB="libcc/libpicc.a"
@@ -19,7 +19,7 @@ BUILD_DIRS+=		${WRKSRC}/libpisock
 BUILD_DIRS+=		${WRKSRC}/libpisock++
 BUILD_DIRS+=		${WRKSRC}/libpisync
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
