@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/16 19:37:28 bad Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/16 19:50:08 bad Exp $
 
 DISTNAME=	vmware-netbsd-1.2
 PKGNAME=	vmware-module-1.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	veego@netbsd.org
 HOMEPAGE=	http://www.wasabisystems.com/
-COMMENT=	Kernel modules for the VMware emulator
+COMMENT=	Kernel modules for the VMware 2.x emulator
 
 CONFLICTS=	vmware-module-3*
 
