@@ -1,0 +1,13 @@
+--- bfd/config.bfd.dist	Sun Oct  1 20:56:02 2000
++++ bfd/config.bfd	Sun Oct  1 20:56:55 2000
+@@ -195,6 +195,10 @@
+     targ_selvecs=i386bsd_vec
+     targ_underscore=yes
+     ;;
++  i[3456]86-*-netbsdpe*)
++    targ_defvec=i386pe_vec
++    targ_selvecs="i386pe_vec i386pei_vec"
++    ;;
+   i[3456]86-*-netbsd* | i[3456]86-*-openbsd*)
+     targ_defvec=i386netbsd_vec
+     targ_selvecs=i386bsd_vec
