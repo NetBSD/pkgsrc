@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/06/15 16:39:12 jwise Exp $
+# $NetBSD: Makefile,v 1.36 2004/10/01 13:35:53 adam Exp $
 
-DISTNAME=	tk8.4.6-src
-PKGNAME=	tk-8.4.6
-PKGREVISION=	3
+DISTNAME=	tk8.4.7-src
+PKGNAME=	tk-8.4.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -25,14 +24,12 @@ TEST_TARGET=		test
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
-#
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 .include "../../lang/tcl/buildlink3.mk"
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
-#
 post-patch:
 	@cd ${WRKSRC};							\
 	${MV} -f mkLinks mkLinks.tmp;					\
