@@ -1,30 +1,28 @@
-$NetBSD: patch-ah,v 1.12 2000/10/23 19:45:17 jlam Exp $
+$NetBSD: patch-ah,v 1.13 2000/12/22 17:26:19 jlam Exp $
 
---- doc/www.lesstif.org/Makefile.am.orig	Tue Jul 11 12:26:20 2000
-+++ doc/www.lesstif.org/Makefile.am
-@@ -11,8 +11,7 @@
- # Lets put the informational stuff in a sub directory to avoid 
- # polluting /usr/local for default installs.
- #
--docdir=	$(exec_prefix)/LessTif/doc
--doc_DATA=	COPYING.LIB.html FAQ.html INSTALL.html apps.html \
-+html_DATA=	COPYING.LIB.html FAQ.html INSTALL.html apps.html \
- 		bugs.html cdrom.html core.html current.html \
- 		cvs.html download.html index.html links.html lists.html \
- 		mirrors.html platforms.html release-policy.html \
-@@ -20,7 +19,7 @@
- 		versions.html web_button.html known.html help.html \
- 		Advocacy.html Xbae.html Xlt.html feedback.html
+--- clients/Motif-2.0/xmbind/Makefile.am.orig	Fri Nov 24 09:58:21 2000
++++ clients/Motif-2.0/xmbind/Makefile.am
+@@ -4,8 +4,12 @@
  
--rootdir=	$(exec_prefix)/LessTif
-+rootdir=	$(docdir)
- root_DATA=	Install
+ if Version_2_0
+ bin_PROGRAMS=	xmbind
+-endif
++if DefaultVersion20
++bindir = $(prefix)/bin
++else
+ bindir = $(prefix)/LessTif/Motif2.0/bin
++endif
++endif
  
- all-local:      FAQ
-@@ -43,5 +42,5 @@
+ MAINTAINERCLEANFILES=Makefile.in
  
- endif
- 
--root2dir=	$(exec_prefix)/LessTif
-+root2dir=	$(docdir)
- root2_DATA=	FAQ
+@@ -45,9 +49,3 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	   done
+-
+-install-data-hook:
+-if DefaultVersion20
+-	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif2.0/bin/$(bin_PROGRAMS) .)
+-endif

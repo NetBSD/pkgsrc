@@ -1,16 +1,29 @@
-$NetBSD: patch-au,v 1.5 2000/10/23 19:45:19 jlam Exp $
+$NetBSD: patch-au,v 1.6 2000/12/22 17:26:19 jlam Exp $
 
---- scripts/autoconf/Makefile.am.orig	Sun Sep 12 07:13:53 1999
-+++ scripts/autoconf/Makefile.am
-@@ -5,10 +5,6 @@
+--- include/Motif-1.2/uil/Makefile.am.orig	Wed Oct 25 06:16:07 2000
++++ include/Motif-1.2/uil/Makefile.am
+@@ -6,6 +6,7 @@
+ h=	Uil.h        UilDBDef.h   UilDef.h     UilSymDef.h  UilSymGl.h
+ EXTRA_DIST=	$(h)
  
- EXTRA_DIST=	ac_find_motif.m4
++if Version_1_2
+ #
+ # Install headers
+ #
+@@ -14,16 +15,6 @@
+ #
+ uildir =	$(prefix)/LessTif/Motif1.2/include/uil
  
--aclocaldir = @ACLOCALDIR@
+-if Version_1_2
 -
--if Aclocal
-+aclocaldir = ${prefix}/share/aclocal
+ uil_HEADERS=	$(h)
  
- aclocal_DATA = ac_find_motif.m4
--
+ endif
+-install-data-hook:
+-if Version_1_2
+-if DefaultVersion12
+-	if [ -d $(DESTDIR)$(prefix)/include/uil ]; then rm -rf $(DESTDIR)$(prefix)/include/uil; else rm -f $(DESTDIR)$(prefix)/include/uil; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/uil uil)
 -endif
+-endif
+-

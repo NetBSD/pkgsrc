@@ -1,0 +1,45 @@
+$NetBSD: patch-bk,v 1.1 2000/12/22 17:26:21 jlam Exp $
+
+--- lib/Xm-2.1/Makefile.am.orig	Sun Nov 19 08:06:40 2000
++++ lib/Xm-2.1/Makefile.am
+@@ -88,10 +88,13 @@
+ #
+ # Install headers
+ #
+-# Lets put the headers in a sub directory to avoid
+-# poluting /usr/local with more directories for default installs.
++# Let's put the headers in a sub directory if not a default install.
+ #
++if DefaultVersion21
++libdir = $(prefix)/lib
++else
+ libdir = $(prefix)/LessTif/Motif2.1/lib
++endif
+ 
+ lib_LTLIBRARIES=	libXm.la
+ 
+@@ -114,24 +117,4 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	  done
+-endif
+-
+-install-data-hook:
+-if Version_2_1
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.2*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libXm.so.2* .)
+-endif
+-if DefaultVersion21
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libXm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libXm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libXm.a .)
+-endif
+-endif
+ endif
