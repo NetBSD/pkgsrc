@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2503 2003/06/14 06:49:45 tron Exp $
+$NetBSD: CHANGES,v 1.2504 2003/06/14 09:29:30 shell Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2454,3 +2454,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsed to 4.0.7 [grant 2003-06-14]
 	Updated dejagnu to 1.4.3nb2 [thorpej 2003-06-14]
 	Updated BasiliskII to 1.0.20030314 [tron 2003-06-14]
+	Updated p5-Net to 1.15 [shell 2003-06-14]
+	Updated p5-SSLeay to 0.51 [shell 2003-06-14]
+	Updated p5-Net-SSLeay to 1.23 [shell 2003-06-14]
