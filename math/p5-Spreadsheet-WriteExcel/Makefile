@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:47:59 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/27 21:26:09 snj Exp $
 #
 
 DISTNAME=	Spreadsheet-WriteExcel-0.41
@@ -12,7 +12,7 @@ COMMENT=	Create Excel data files
 DEPENDS+=	p5-Parse-RecDescent-*:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-File-Temp-*:../../devel/p5-File-Temp
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Spreadsheet/WriteExcel/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/27 21:26:08 snj Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -20,7 +20,7 @@ DEPENDS+=	gnuplot{,-nox11}>=3.7:../../graphics/gnuplot
 
 CONFLICTS+=	octave-2.1.*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
