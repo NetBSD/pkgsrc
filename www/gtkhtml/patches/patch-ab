@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2001/03/03 18:49:15 tron Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/11 18:35:45 rh Exp $
 
---- src/Makefile.in.orig	Thu Dec 14 20:37:44 2000
-+++ src/Makefile.in	Sat Mar  3 19:42:49 2001
-@@ -161,7 +161,7 @@
+--- src/Makefile.in.orig	Tue Jul 31 19:35:05 2001
++++ src/Makefile.in
+@@ -169,7 +169,7 @@
+ testgtkhtml_SOURCES =  	testgtkhtml.c			htmlurl.h			htmlurl.c
  
- 
- testgtkhtml_CFLAGS = $(GLIBWWW_CFLAGS)
+ testgtkhtml_CFLAGS = 
 -testgtkhtml_LDFLAGS =  -static
 +testgtkhtml_LDFLAGS =
  testgtkhtml_LDADD =  	libgtkhtml.la					$(GNOMEUI_LIBS)					$(GNOME_LIBDIR)					$(EXTRA_GNOME_LIBS)                     	$(GLIBWWW_LIBS)					$(GCONF_LIBS)
  
- 
+ #	-lccmalloc -ldl
