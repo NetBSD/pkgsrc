@@ -1,5 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2004/08/02 03:57:17 schmonz Exp $
+$NetBSD: MESSAGE,v 1.10 2004/08/02 17:28:10 schmonz Exp $
+
+Please read ${DOCDIR}/README.pkgsrc.
 
 There are many ways to enable ${PKGBASE}. One popular, well-regarded
 choice is to follow the directions in Dave Sill's "Life with qmail":

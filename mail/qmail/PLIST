@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/02 03:57:17 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/02 17:28:10 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -162,6 +162,7 @@ share/doc/qmail/PIC.nullclient
 share/doc/qmail/PIC.relaybad
 share/doc/qmail/PIC.relaygood
 share/doc/qmail/PIC.rem2local
+share/doc/qmail/README.pkgsrc
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
 share/doc/qmail/SENDMAIL${OSXSUFX}
