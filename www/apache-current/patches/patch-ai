@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2002/01/04 09:45:10 martti Exp $
+$NetBSD: patch-ai,v 1.1 2002/01/04 09:45:10 martti Exp $
 
---- configure.orig	Mon Nov 12 19:07:39 2001
-+++ configure	Thu Jan  3 19:24:24 2002
-@@ -2608,7 +2608,7 @@
+--- acinclude.m4.orig	Thu Jan  3 19:01:01 2002
++++ acinclude.m4	Thu Jan  3 19:01:41 2002
+@@ -295,7 +295,7 @@
    for var in prefix exec_prefix bindir sbindir libexecdir mandir \
               sysconfdir datadir errordir iconsdir htdocsdir cgidir \
               includedir localstatedir runtimedir logfiledir \
@@ -11,12 +11,3 @@ $NetBSD: patch-ah,v 1.2 2002/01/04 09:45:10 martti Exp $
      eval "val=\"\$$var\""
      case $val in
        *+)
-@@ -10508,7 +10508,7 @@
- EOF
- 
- cat >> confdefs.h <<EOF
--#define SERVER_CONFIG_FILE "conf/$progname.conf"
-+#define SERVER_CONFIG_FILE "etc/httpd/$progname.conf"
- EOF
- 
- cat >> confdefs.h <<EOF
