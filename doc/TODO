@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2862 2005/01/08 19:59:02 schmonz Exp $
+$NetBSD: TODO,v 1.2863 2005/01/08 22:03:08 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -949,7 +949,7 @@ Suggested package updates
 	o posh-0.3.14
 	o postgresql-autodoc-1.24
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
-	o prayer-1.0.11
+	o prayer-1.0.12 [schmonz]
 	o prc-tools-2.3
 	o proj-4.4.9
 	o proxsmtp-1.0
