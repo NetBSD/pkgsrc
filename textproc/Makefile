@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2000/12/20 18:31:34 skrll Exp $
+# $NetBSD: Makefile,v 1.66 2000/12/28 12:40:15 hubertf Exp $
 #
 
     SUBDIR += antiword
@@ -34,6 +34,7 @@
     SUBDIR += p5-Text-CSV_XS
     SUBDIR += p5-Text-DelimMatch
     SUBDIR += p5-Text-Template
+    SUBDIR += p5-XML-Node
     SUBDIR += p5-XML-Parser
     SUBDIR += par
     SUBDIR += py-dtml
