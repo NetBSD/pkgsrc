@@ -1,28 +1,28 @@
-$NetBSD: patch-ab,v 1.6 2003/11/19 12:48:47 adam Exp $
+$NetBSD: patch-ab,v 1.7 2004/11/03 15:14:17 adam Exp $
 
---- src/Makefile.orig	2003-11-09 23:35:32.000000000 +0100
+--- src/Makefile.orig	2004-06-06 23:57:02.000000000 +0000
 +++ src/Makefile
 @@ -21,8 +21,9 @@ endif
  ifdef X11_PATH			# path to X11 specified by top level Makefile
  XINC_PATH = $(X11_PATH)/include
  XLIB_PATH = $(X11_PATH)/lib
 -X11_INCL = -I$(XINC_PATH)
--X11_LIBS = -L$(XLIB_PATH)
+-X11_LIBS = -L$(XLIB_PATH) -lX11
 +# flags for X11 paths will be supplied by pkgsrc
 +X11_INCL = # empty
-+X11_LIBS = # empty
++X11_LIBS = -lX11
  endif
  
  AR = ar
-@@ -128,8 +129,10 @@ ifdef BUILD_DIST				# distribution build
+@@ -134,8 +135,10 @@ ifdef BUILD_DIST				# distribution build
  OPTIONS = -O3 -Wall
  endif
  
--CFLAGS = $(OPTIONS) $(SYS_CFLAGS) $(CONFIG)
--LDFLAGS = $(SYS_LDFLAGS) $(EXTRA_LDFLAGS) -lm
+-CFLAGS = $(OPTIONS) $(SYS_CFLAGS)  $(EXTRA_CFLAGS) $(CONFIG)
+-LDFLAGS =           $(SYS_LDFLAGS) $(EXTRA_LDFLAGS) -lm
 +# pkgsrc presets those variables, so use '+=' to append to them
 +# flags for debugging or optimisation may be supplied from the pkgsrc Makefile
-+CFLAGS += $(SYS_CFLAGS) $(CONFIG)
++CFLAGS += $(SYS_CFLAGS)  $(EXTRA_CFLAGS) $(CONFIG)
 +LDFLAGS += $(SYS_LDFLAGS) $(EXTRA_LDFLAGS) -lm
  
  
