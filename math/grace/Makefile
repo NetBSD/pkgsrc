@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/09/27 12:01:15 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/19 07:07:40 salo Exp $
 #
 
 DISTNAME=	grace-5.1.10
@@ -24,7 +24,6 @@ USE_FORTRAN=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
 CONFIGURE_ARGS+=	--without-bundled-xbae
-MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-install:
 	${RM} -f ${PREFIX}/bin/xmgrace
