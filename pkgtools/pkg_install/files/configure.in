@@ -1,0 +1,64 @@
+enl Process this file with autoconf to produce a configure script.
+AC_INIT(add/add.h)
+AC_CONFIG_HEADER(lib/config.h)
+
+dnl Set the prefix
+AC_PREFIX_DEFAULT(/usr/pkg)
+
+dnl Set the default pkg database dir
+AC_ARG_WITH(pkgdbdir,
+[  --with-pkgdbdir=DIR   Where to put the pkg database (/var/db/pkg)],
+[ pkgdbdir="$with_pkgdbdir" ],
+[ pkgdbdir="/var/db/pkg" ])
+AC_SUBST(pkgdbdir)
+
+dnl Checks for programs.
+AC_PROG_INSTALL
+AC_PROG_CC
+AC_PROG_RANLIB
+AC_CHECK_PROGS(AR, ar)
+AC_PATH_PROGS(CHMOD, chmod)
+AC_PATH_PROGS(CHOWN, chown)
+AC_PATH_PROGS(CHGRP, chgrp)
+AC_PATH_PROGS(DIGEST, digest)
+AC_PATH_PROGS(MKDIR, mkdir)
+AC_PATH_PROGS(MTREE, mtree)
+AC_PATH_PROGS(RM, rm)
+AC_PATH_PROGS(RMDIR, rmdir)
+AC_PATH_PROGS(TAR_FULLPATHNAME, tar)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(db1/db.h)
+AC_CHECK_HEADERS(assert.h db.h dirent.h err.h fcntl.h fnmatch.h limits.h md5.h md5global.h netdb.h pwd.h regex.h signal.h stdlib.h string.h termios.h time.h unistd.h vis.h)
+AC_CHECK_HEADERS(sys/file.h sys/ioctl.h sys/mount.h sys/param.h sys/queue.h sys/resource.h sys/stat.h sys/time.h sys/types.h sys/vfs.h sys/wait.h)
+
+dnl Check for libraries
+AC_CHECK_LIB(md, MD5File)
+AC_CHECK_LIB(db1, dbopen)
+
+dnl Check for functions
+AC_CHECK_FUNCS(chflags)
+AC_CHECK_FUNCS(dbopen)
+AC_CHECK_FUNCS(err)
+AC_CHECK_FUNCS(errx)
+AC_CHECK_FUNCS(fgetln)
+AC_CHECK_FUNCS(getprogname)
+AC_CHECK_FUNCS(mkdtemp)
+AC_CHECK_FUNCS(setenv)
+AC_CHECK_FUNCS(setprogname)
+AC_CHECK_FUNCS(statfs)
+AC_CHECK_FUNCS(statvfs)
+AC_CHECK_FUNCS(strsep)
+AC_CHECK_FUNCS(strlcpy)
+AC_CHECK_FUNCS(unsetenv)
+AC_CHECK_FUNCS(warn)
+AC_CHECK_FUNCS(warnx)
+AC_CHECK_FUNCS(MD5File)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_SIZE_T
+
+dnl that's it for now...
+AC_OUTPUT(Makefile lib/Makefile lib/lib.h add/Makefile admin/Makefile create/Makefile delete/Makefile info/Makefile)
