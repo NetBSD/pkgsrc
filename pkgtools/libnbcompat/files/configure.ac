@@ -69,13 +69,14 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fseeko getenv glob inet_ntop \
 		inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
-		setenv setmode setprogname sl_init snprintf strdup strerror \
+		setenv setprogname sl_init snprintf strdup strerror \
 		strlcat strlcpy strmode strptime strsep strtoll timegm \
 		usleep])
 
 AC_CHECK_FUNCS([MD5File RMD160File SHA1File])
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
+AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([statfs statvfs])
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 		uid_from_user user_from_uid])

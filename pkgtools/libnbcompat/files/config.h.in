@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.4 2003/06/09 17:19:49 grant Exp $ */
+/* $Id: config.h.in,v 1.5 2003/06/10 05:59:16 grant Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -62,6 +62,9 @@
 
 /* Define to 1 if you have the `getenv' function. */
 #undef HAVE_GETENV
+
+/* Define to 1 if you have the `getmode' function. */
+#undef HAVE_GETMODE
 
 /* Define to 1 if you have the `getpassphrase' function. */
 #undef HAVE_GETPASSPHRASE
