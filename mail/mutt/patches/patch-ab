@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.9 2002/11/27 19:05:40 jmmv Exp $
+
+--- Makefile.in.orig	Wed May 29 11:31:04 2002
++++ Makefile.in
+@@ -23,7 +23,8 @@ bindir = @bindir@
+ sbindir = @sbindir@
+ libexecdir = @libexecdir@
+ datadir = @datadir@
+-sysconfdir = @sysconfdir@
++sysconfdir = @datadir@/examples/@PACKAGE@
++realsysconfdir = @sysconfdir@
+ sharedstatedir = @sharedstatedir@
+ localstatedir = @localstatedir@
+ libdir = @libdir@
+@@ -139,7 +140,7 @@ makedoc_DEPENDENCIES = 
+ 
+ CPP = @CPP@
+ 
+-DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" 	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" 	-DHAVE_CONFIG_H=1
++DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(realsysconfdir)\" 	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" 	-DHAVE_CONFIG_H=1
+ 
+ 
+ INCLUDES = -I. -I$(top_srcdir) $(IMAP_INCLUDES) -Iintl
