@@ -1,6 +1,6 @@
 	# Create compiler driver scripts in ${WRKDIR}.
 	(test -d ${WRKDIR}/.gcc/bin || ${MKDIR} ${WRKDIR}/.gcc/bin)
-	(cd ${BUILDLINK_PREFIX.gcc34}/bin && bin_files=`ls *` && \
+	(cd ${BUILDLINK_PREFIX.gcc34}/bin && bin_files=`${LS} *` && \
 	cd ${WRKDIR}/.gcc/bin && \
 	for _target_ in $${bin_files} ; do \
 		${ECHO} '#!${TOOLS_SHELL}' > $${_target_} && \
