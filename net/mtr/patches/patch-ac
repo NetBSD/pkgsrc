@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2001/10/16 15:08:56 agc Exp $
+
+Rip out any mention of GTK from the configure.in script so that mtr
+can build happily without it.
+
+--- configure.in	2001/10/16 11:19:57	1.1
++++ configure.in	2001/10/16 11:20:48
+@@ -1,10 +1,8 @@
+ AC_INIT(mtr.c)
+ AM_INIT_AUTOMAKE(mtr, 0.42)
+ 
+-AC_SUBST(GTK_OBJ)
+ AC_SUBST(CURSES_OBJ)
+ 
+-GTK_OBJ=gtk.o
+ CURSES_OBJ=curses.o
+ 
+ AC_PROG_CC
+@@ -39,11 +37,7 @@
+ 
+ AC_CHECK_LIB(m, floor, , AC_MSG_ERROR(No math library found))
+ 
+-AM_PATH_GTK(1.0.0, CFLAGS="$CFLAGS $GTK_CFLAGS"
+-		   LIBS="$LIBS $GTK_LIBS",
+-		   AC_MSG_WARN(Building without GTK+ display support)
+-		   AC_DEFINE(NO_GTK)
+-		   GTK_OBJ=)
++AC_DEFINE(NO_GTK)
+ 
+ AC_CHECK_FUNC(socket, , 
+   AC_CHECK_LIB(socket, socket, , AC_MSG_ERROR(No socket library found)))
