@@ -1,0 +1,113 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/16 17:53:21 tv Exp $
+jre/CHANGES
+jre/COPYRIGHT
+jre/LICENSE
+jre/README
+jre/README.linux
+jre/bin/.java_wrapper
+jre/bin/i386/green_threads/java
+jre/bin/i386/green_threads/keytool
+jre/bin/i386/green_threads/policytool
+jre/bin/i386/green_threads/rmid
+jre/bin/i386/green_threads/rmiregistry
+jre/bin/i386/green_threads/tnameserv
+jre/bin/i386/native_threads/java
+jre/bin/i386/native_threads/keytool
+jre/bin/i386/native_threads/policytool
+jre/bin/i386/native_threads/rmid
+jre/bin/i386/native_threads/rmiregistry
+jre/bin/i386/native_threads/tnameserv
+jre/bin/i386/realpath
+jre/bin/java
+jre/bin/keytool
+jre/bin/policytool
+jre/bin/rmid
+jre/bin/rmiregistry
+jre/bin/tnameserv
+jre/bin/realpath
+jre/lib/audio/soundbank.gm
+jre/lib/cmm/CIEXYZ.pf
+jre/lib/cmm/GRAY.pf
+jre/lib/cmm/LINEAR_RGB.pf
+jre/lib/cmm/PYCC.pf
+jre/lib/cmm/sRGB.pf
+jre/lib/content-types.properties
+jre/lib/ext/iiimp.jar
+jre/lib/flavormap.properties
+jre/lib/font.properties
+jre/lib/font.properties.tt
+jre/lib/fonts/LucidaBrightDemiBold.ttf
+jre/lib/fonts/LucidaBrightDemiItalic.ttf
+jre/lib/fonts/LucidaBrightItalic.ttf
+jre/lib/fonts/LucidaBrightRegular.ttf
+jre/lib/fonts/LucidaSansDemiBold.ttf
+jre/lib/fonts/LucidaSansDemiOblique.ttf
+jre/lib/fonts/LucidaSansOblique.ttf
+jre/lib/fonts/LucidaSansRegular.ttf
+jre/lib/fonts/LucidaTypewriterBold.ttf
+jre/lib/fonts/LucidaTypewriterBoldOblique.ttf
+jre/lib/fonts/LucidaTypewriterOblique.ttf
+jre/lib/fonts/LucidaTypewriterRegular.ttf
+jre/lib/fonts/fonts.dir
+jre/lib/i18n.jar
+jre/lib/i386/classic/Xusage.txt
+jre/lib/i386/classic/libjvm.so
+jre/lib/i386/green_threads/libhpi.so
+jre/lib/i386/libJdbcOdbc.so
+jre/lib/i386/libaudio.so
+jre/lib/i386/libawt.so
+jre/lib/i386/libcmm.so
+jre/lib/i386/libdcpr.so
+jre/lib/i386/libfontmanager.so
+jre/lib/i386/libhprof.so
+jre/lib/i386/libjava.so
+jre/lib/i386/libjpeg.so
+jre/lib/i386/libmath.so
+jre/lib/i386/libmlib_image.so
+jre/lib/i386/libnet.so
+jre/lib/i386/libsunwjit.so
+jre/lib/i386/libzip.so
+jre/lib/i386/native_threads/libhpi.so
+jre/lib/images/cursors/cursors.properties
+jre/lib/images/cursors/invalid32x32.gif
+jre/lib/images/cursors/motif_CopyDrop32x32.gif
+jre/lib/images/cursors/motif_CopyNoDrop32x32.gif
+jre/lib/images/cursors/motif_LinkDrop32x32.gif
+jre/lib/images/cursors/motif_LinkNoDrop32x32.gif
+jre/lib/images/cursors/motif_MoveDrop32x32.gif
+jre/lib/images/cursors/motif_MoveNoDrop32x32.gif
+jre/lib/jvm.hprof.txt
+jre/lib/locale/de/app-defaults/XApplication
+jre/lib/locale/ja/app-defaults/XApplication
+jre/lib/locale/ja_JP.PCK/app-defaults/XApplication
+jre/lib/locale/ja_JP.UTF-8/app-defaults/XApplication
+jre/lib/rt.jar
+jre/lib/security/cacerts
+jre/lib/security/java.policy
+jre/lib/security/java.security
+@dirrm jre/bin/i386/green_threads
+@dirrm jre/bin/i386/native_threads
+@dirrm jre/bin/i386
+@dirrm jre/bin
+@dirrm jre/lib/audio
+@dirrm jre/lib/cmm
+@dirrm jre/lib/ext
+@dirrm jre/lib/fonts
+@dirrm jre/lib/i386/classic
+@dirrm jre/lib/i386/green_threads
+@dirrm jre/lib/i386/native_threads
+@dirrm jre/lib/i386
+@dirrm jre/lib/images/cursors
+@dirrm jre/lib/images
+@dirrm jre/lib/locale/de/app-defaults
+@dirrm jre/lib/locale/de
+@dirrm jre/lib/locale/ja/app-defaults
+@dirrm jre/lib/locale/ja
+@dirrm jre/lib/locale/ja_JP.PCK/app-defaults
+@dirrm jre/lib/locale/ja_JP.PCK
+@dirrm jre/lib/locale/ja_JP.UTF-8/app-defaults
+@dirrm jre/lib/locale/ja_JP.UTF-8
+@dirrm jre/lib/locale
+@dirrm jre/lib/security
+@dirrm jre/lib
+@dirrm jre
