@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/03/31 11:59:55 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/19 10:50:07 agc Exp $
 bin/elk
 include/elk/compat.h
 include/elk/config.h
@@ -83,6 +83,17 @@ lib/elk/runtime/scm/xlib.scm
 lib/elk/runtime/scm/xt.scm
 lib/elk/runtime/scm/xwidgets.scm
 man/man1/elk.1.gz
+share/doc/elk/bitstring.ps
+share/doc/elk/cprog.ps
+share/doc/elk/kernel.ps
+share/doc/elk/oops.ps
+share/doc/elk/record.ps
+share/doc/elk/regexp.ps
+share/doc/elk/unix.ps
+share/doc/elk/usenix.ps
+share/doc/elk/xlib.ps
+share/doc/elk/xt.ps
+@dirrm share/doc/elk
 @dirrm lib/elk/runtime/scm
 @dirrm lib/elk/runtime/obj/xaw
 @dirrm lib/elk/runtime/obj

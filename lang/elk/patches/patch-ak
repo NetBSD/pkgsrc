@@ -1,0 +1,40 @@
+$NetBSD: patch-ak,v 1.1 1999/08/19 10:51:23 agc Exp $
+
++ Don't mess with Motif, as there's a trong possibility it won't be
+installed.
+
++ install postscript documentation whilst we're here.
+
+--- Makefile.orig	Mon Jul 31 13:56:26 1995
++++ Makefile	Thu Aug 19 11:35:35 1999
+@@ -16,9 +16,9 @@
+ 	 lib/unix\
+ 	 lib/xlib\
+ 	 lib/xt\
+-	 lib/xaw\
+-	 lib/xm\
+-	 lib/xm/xt
++	 lib/xaw
++#	 lib/xm\
++#	 lib/xm/xt
+ 
+ # ----------------------------------------------------------------------
+ 
+@@ -37,10 +37,16 @@
+ 	done
+ 
+ install:
+-	@for i in $(SUBDIRS) ;\
++	@for i in $(SUBDIRS) doc/man;\
+ 	do \
+ 	    echo Installing $$i...; \
+ 	    ( cd $$i ; $(MAKE) install ) || exit $$?; \
++	done
++	mkdir -p ${PREFIX}/share/doc/elk
++	@for i in bitstring cprog kernel oops record regexp unix usenix \
++							xlib xt; do	\
++		echo "Installing postscript docs for $$i";		\
++		${BSD_INSTALL_DATA} doc/$$i/*.ps ${PREFIX}/share/doc/elk; \
+ 	done
+ 
+ localize:
