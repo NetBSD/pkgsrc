@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/20 22:19:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/23 01:43:09 jlam Exp $
 
 DISTNAME=	libyahoo-0.18.2
 CATEGORIES=	chat
@@ -10,5 +10,10 @@ COMMENT=	Yahoo! Messenger client library
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+
+post-install:
+	cd ${WRKSRC}; for file in libyahoo-authors.h; do		\
+		${INSTALL_DATA} $${file} ${PREFIX}/include/libyahoo/$${file}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
