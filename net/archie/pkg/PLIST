@@ -1,2 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 1998/04/18 17:30:13 tron Exp $
 bin/archie
 man/man1/archie.1.gz
