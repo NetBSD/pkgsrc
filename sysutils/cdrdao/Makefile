@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2000/07/19 09:37:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/18 05:46:57 rh Exp $
 #
 
-DISTNAME=	cdrdao-1.1.3.src
-PKGNAME=	cdrdao-1.1.3
-CATEGORIES=	sysutils
-MASTER_SITES=	http://www.ping.de/sites/daneb/
+DISTNAME=		${PKGNAME}.src
+PKGNAME=		cdrdao-1.1.4
+WRKSRC=			${WRKDIR}/${PKGNAME}
+CATEGORIES=		sysutils
+MASTER_SITES=		ftp://cdrdao.sourceforge.net/pub/cdrdao/
 
-MAINTAINER=	David Maxwell <david@maxwell.net>
-HOMEPAGE=	http://www.ping.de/sites/daneb/cdrdao.html
+MAINTAINER=		David Maxwell <david@maxwell.net>
+HOMEPAGE=		http://www.ping.de/sites/daneb/cdrdao.html
 
-BUILD_DEPENDS=  antlr:../../devel/pccts
-BUILD_DEPENDS+=	dlg:../../devel/pccts
-BUILD_DEPENDS+=	genmk:../../devel/pccts
-BUILD_DEPENDS+=	sor:../../devel/pccts
+BUILD_DEPENDS+=		antlr:../../devel/pccts
+BUILD_DEPENDS+=		dlg:../../devel/pccts
+BUILD_DEPENDS+=		genmk:../../devel/pccts
+BUILD_DEPENDS+=		sor:../../devel/pccts
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
 CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads
-
-WRKSRC=		${WRKDIR}/cdrdao-1.1.3
+CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
 
 #override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
