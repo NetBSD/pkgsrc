@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/03/04 16:13:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/22 09:20:31 tron Exp $
 
 DISTNAME=	lablgtk-1.2.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -11,6 +12,8 @@ COMMENT=	GTK+ bindings for ocaml
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
+BUILDLINK_DEPMETHOD.ocaml=	full
+
 .include "../../mk/bsd.prefs.mk"
 
 # currently ocamlopt is only available on i386
@@ -20,12 +23,6 @@ USE_DOTOPT=	YES
 CAMLOPT=	ocamlc
 MAKE_ENV+=	CAMLOPT=${CAMLOPT}
 PLIST_SRC=	${PKGDIR}/PLIST.noopt
-.endif
-
-.if exists(${LOCALBASE}/lib/ocaml/libthreadsnat.a)
-PLIST_SUBST+=		NATIVE_THREADS=
-.else
-PLIST_SUBST+=		NATIVE_THREADS="@comment "
 .endif
 
 do-configure:
