@@ -1,13 +1,52 @@
-$NetBSD: patch-af,v 1.1 2001/01/02 22:11:18 jlam Exp $
+$NetBSD: patch-af,v 1.2 2001/05/26 06:37:46 jlam Exp $
 
---- Makefile.orig	Fri Jun 30 00:23:12 2000
-+++ Makefile
-@@ -25,7 +25,7 @@
+--- makeinclude.in.orig	Sat Apr 14 07:11:43 2001
++++ makeinclude.in
+@@ -39,8 +39,8 @@
+ NROFF		=@NROFF@
  
- SHELL=/bin/sh
+ # compiler names:
+-CXX		=@CXX@
+-CC		=@CC@
++CXX		=$(LIBTOOL) @CXX@
++CC		=$(LIBTOOL) @CC@
+ MAKEDEPEND	=@MAKEDEPEND@
  
--DIRS	=	src fluid test
-+DIRS	=	src fluid
+ # flags for C++ compiler:
+@@ -49,15 +49,26 @@
  
- all: makeinclude
- 	@for dir in $(DIRS); do\
+ # program to make the archive:
+ LIBNAME		=@LIBNAME@
++LIBRARY		=@LIBRARY@
++LIBFLTK		=@LIBFLTK@
++LINKFLTK	=@LINKFLTK@
+ LIBCOMMAND	=@LIBCOMMAND@
++LIBTOOL		=@LIBTOOL@
+ RANLIB		=@RANLIB@
+ DSONAME		=@DSONAME@
+ DSOCOMMAND	=@DSOCOMMAND@
+ 
+ # libraries to link with:
+-LDLIBS		=@LDFLAGS@ @LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
++#LDLIBS		=@LDFLAGS@ @LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
++LDLIBS		=$(GLDLIBS)
+ GLDLIBS		=@LDFLAGS@ @LIBS@ @GLLIB@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
+ 
++# installation programs:
++INSTALL_BIN	=$(LIBTOOL) cp
++INSTALL_DATA	=cp
++INSTALL_LIB	=$(LIBTOOL) cp
++INSTALL_MAN	=cp
++
+ # Man page extensions...
+ CAT1EXT		=@CAT1EXT@
+ CAT3EXT		=@CAT3EXT@
+@@ -70,7 +81,7 @@
+ 
+ .cxx:
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) $< -lfltk $(LDLIBS) -o $@
++	$(CXX) -I.. $(CXXFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
+ 
+ .c.o:
+ 	echo Compiling $@...

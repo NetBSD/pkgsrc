@@ -1,26 +1,28 @@
-$NetBSD: patch-aa,v 1.3 2000/08/04 03:38:15 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2001/05/26 06:37:46 jlam Exp $
 
---- fluid/Makefile.orig	Mon Jun  5 17:20:41 2000
-+++ fluid/Makefile	Thu Aug  3 23:13:08 2000
-@@ -51,7 +51,7 @@
+--- Makefile.orig	Wed Mar 14 12:20:01 2001
++++ Makefile
+@@ -25,7 +25,7 @@
  
- $(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
- 	echo Linking $@...
--	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -lfltk $(LDLIBS)
-+	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(FLTKLIB) $(LDLIBS)
+ SHELL=/bin/sh
  
- clean :
- 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
-@@ -63,10 +63,8 @@
+-DIRS	=	src fluid test
++DIRS	=	src fluid
  
- install: $(PROGRAM)
- 	echo "Installing FLUID..."
--	strip $(PROGRAM)
--	-mkdir -p $(bindir)
--	cp $(PROGRAM) $(bindir)/$(PROGRAM)
--	chmod 755 $(bindir)/$(PROGRAM)
-+	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
-+	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
+ all: makeinclude
+ 	@for dir in $(DIRS); do\
+@@ -35,6 +35,14 @@
+ 		fi;\
+ 		(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
+ 	done
++
++test: makeinclude
++	dir=test;\
++	echo "=== making $$dir ===";\
++	if test ! -f $$dir/makedepend; then\
++		touch $$dir/makedepend;\
++	fi;\
++	(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
  
- uninstall:
- 	-rm -f $(bindir)/$(PROGRAM)
+ install: makeinclude
+ 	@for dir in $(DIRS); do\
