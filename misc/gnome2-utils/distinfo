@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/04/01 19:09:07 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/05/15 17:03:05 jmmv Exp $
 
-SHA1 (gnome-utils-2.6.0.tar.bz2) = 28769efd7fde0292aed444d86c1cf13235c1b508
-Size (gnome-utils-2.6.0.tar.bz2) = 1639773 bytes
+SHA1 (gnome-utils-2.6.1.tar.bz2) = cc7084a9dd2b253a2a13f89a7c6c441f3658a5d4
+Size (gnome-utils-2.6.1.tar.bz2) = 1624647 bytes
