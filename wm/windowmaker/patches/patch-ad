@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2001/06/29 14:28:05 nra Exp $
+$NetBSD: patch-ad,v 1.5 2001/06/29 16:28:51 nra Exp $
 
---- src/main.c.orig	Wed Apr 11 02:14:42 2001
-+++ src/main.c	Thu Jun 28 19:01:47 2001
+--- src/main.c.orig	Tue Apr 10 19:14:42 2001
++++ src/main.c	Fri Jun 29 11:19:34 2001
 @@ -28,6 +28,7 @@
  #include <sys/stat.h>
  #include <sys/types.h>
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.4 2001/06/29 14:28:05 nra Exp $
 +
 +    sa.sa_handler = SIG_DFL;
 +    sigemptyset(&sa.sa_mask);
-+    sa.sa_mask = 0;
++    /* sa.sa_mask = 0; */
 +    sigaction(SIGPIPE, &sa, NULL);
  
      if (multiHead) {
