@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/09 13:46:24 recht Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/05 22:20:11 recht Exp $
 
---- libpqmodule.c.orig	2003-06-17 03:28:30.000000000 +0200
-+++ libpqmodule.c	2003-07-26 15:26:34.000000000 +0200
-@@ -791,7 +791,7 @@
+--- libpqmodule.c.orig	2004-08-03 20:20:48.000000000 +0200
++++ libpqmodule.c	2004-08-03 20:20:56.000000000 +0200
+@@ -364,7 +364,6 @@
+     }
+ 
+     sout[j++] = (forArray ? '"' : '\'');
+-    sout[j] = (char)0;
+ 
+     result = Py_BuildValue("s#", sout, j);
+     PyMem_Free(sout);
+@@ -411,8 +410,6 @@
+ 	}
+     }
+ 
+-    sout[j] = (char)0;
+-
+     result = Py_BuildValue("s#", sout, j);
+     PyMem_Free(sout);
+ 
+@@ -791,7 +788,7 @@
          return PgInt8_FromString(s, (char **)NULL, 10);
      }
  
@@ -11,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/09 13:46:24 recht Exp $
      return (PyObject *)NULL;
  }
  #endif
-@@ -855,7 +855,7 @@
+@@ -855,7 +852,7 @@
          return PgInt2_FromString(s, (char **)NULL, 10);
      }
  
@@ -20,7 +37,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/09 13:46:24 recht Exp $
      return (PyObject *)NULL;
  }
  
-@@ -907,7 +907,7 @@
+@@ -907,7 +904,7 @@
          return libPQbool_FromString(self, args);
      }
  
