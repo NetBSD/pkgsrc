@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.3 2000/10/23 17:32:08 jlam Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.4 2000/12/31 14:17:09 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -35,10 +35,10 @@ X11_ROOT = ProjectRoot
 
 #ifdef UseInstalled
 /*
- *  We need to redefine ImakeCmd so that imake will look in
- *  $(PREFIX)/lib/X11/config *before* looking in the standard X
- *  config directory to override any configurate files installed
- *  there.
+ * We need to redefine ImakeCmd so that imake will look in
+ * $(PREFIX)/lib/X11/config *before* looking in the standard X
+ * config directory to override any configuration files installed
+ * there.
  */
 #undef ImakeCmd
 #define ImakeCmd imake -I$(PREFIX)/lib/X11/config
