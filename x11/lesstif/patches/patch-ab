@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2000/12/22 17:26:18 jlam Exp $
+$NetBSD: patch-ab,v 1.13 2001/03/28 14:57:55 drochner Exp $
 
---- clients/Motif-1.2/mwm/Makefile.am.orig	Tue Dec 19 05:47:42 2000
-+++ clients/Motif-1.2/mwm/Makefile.am
+--- clients/Motif-1.2/mwm/Makefile.am.orig	Mon Jan  1 19:05:42 2001
++++ clients/Motif-1.2/mwm/Makefile.am	Wed Mar 28 13:49:40 2001
 @@ -4,8 +4,8 @@
  
  if Version_1_2
@@ -19,8 +19,8 @@ $NetBSD: patch-ab,v 1.12 2000/12/22 17:26:18 jlam Exp $
 +if Version_1_2
  mwm_SOURCES=	colormaps.c cursors.c decorate.c defaults.c desktop.c \
  		events.c functions.c icons.c menus.c misc.c move.c \
- 		mwm.c mwm.h mwmerr.c mwmparse.y mwmlex.l mwmstrings.h \
-@@ -37,6 +38,7 @@
+ 		mwm.c mwm.h mwmparse.y mwmlex.l mwmstrings.h \
+@@ -39,6 +40,7 @@
  
  mwmddir=	$(libdir)/X11/mwm
  mwmd_DATA=	system.mwmrc alt.map README
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/22 17:26:18 jlam Exp $
  
  EXTRA_DIST=	Mwm.ad Mwm.mlm system.mwmrc alt.map README gethostname.c
  
-@@ -48,12 +50,6 @@
+@@ -50,12 +52,6 @@
  mwmlex.o: mwmparse.h
  
  YFLAGS=		-d
