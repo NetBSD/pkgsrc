@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 13:09:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/17 19:24:42 wiz Exp $
 
 PKGNAME=		realplayer-8.0.1
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
@@ -9,11 +10,15 @@ EXTRACT_SUFX=		.bin
 
 .if ${MACHINE_ARCH} == "i386"
 DISTNAME=		rp8_linux20_libc6_i386_cs2
+EXTRA_DIST=		rv9_libc6_i386_cs2.tgz
+PLIST_SUBST+=		RV9=""
 .elif ${MACHINE_ARCH} == "sparc"
 DISTNAME=		rp8_solaris27_sparc_cs2
+PLIST_SUBST+=		RV9="@comment "
 .else
 DISTNAME=		must_be_defined
 .endif
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${EXTRA_DIST}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.real.com/products/player/
@@ -39,6 +44,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
 
 CONFLICTS=		realplayer-codecs<8nb2
 
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/RealPlayer8
 CRYPTO=			# defined
 INTERACTIVE_STAGE=	fetch extract
@@ -74,6 +80,11 @@ pre-extract:
 		${CHMOD} +x ${RP_INSTALLER};				\
 	fi
 
+post-extract:
+	if [ "X${EXTRA_DIST}" != "X" ]; then \
+		cd ${WRKDIR} && ${TAR} -xzf ${_DISTDIR}/${DISTSUBDIR}/${EXTRA_DIST}; \
+	fi
+
 do-build:
 	cd ${WRKSRC};							\
 		${MV} -f mimeinstall.sh mimeinstall.sh.old;		\
@@ -91,6 +102,12 @@ pre-install:
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/realplay.sh ${PREFIX}/bin/realplay
 	cd ${WRKDIR} && ${PAX} -rw RealPlayer8 ${PREFIX}/lib
+	if [ "X${EXTRA_DIST}" != "X" ]; then \
+		${INSTALL_DATA} ${WRKDIR}/rv9/codecs/drv4.so.6.0 \
+			${PREFIX}/lib/RealPlayer8/Codecs/; \
+		${INSTALL_DATA} ${WRKDIR}/rv9/codecs/rv40.so.6.0 \
+			${PREFIX}/lib/RealPlayer8/Codecs/; \
+	fi
 
 post-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
