@@ -1,38 +1,42 @@
-#	$NetBSD: Makefile.in,v 1.5 2003/07/31 09:34:14 grant Exp $
+#	$NetBSD: Makefile.in,v 1.6 2003/09/05 18:40:48 jlam Exp $
 
-srcdir	= @srcdir@
-prefix	= @prefix@
-VPATH	= @srcdir@
-SHELL	= /bin/sh
+srcdir=		@srcdir@
 
-CC	= @CC@
-CCLD	= $(CC)
-CFLAGS	= -I$(srcdir) -I. -I$(prefix)/include/libnbcompat @INCLUDES@ @CFLAGS@
-CPPFLAGS= @CPPFLAGS@
-DEFS	= @DEFS@
-INSTALL	= @INSTALL@
-LDFLAGS	= @LDFLAGS@ -L$(prefix)/lib
-LIBS	= @LIBS@ -lnbcompat
+prefix=		@prefix@
+exec_prefix=	@exec_prefix@
+bindir=		@bindir@
+mandir=		@mandir@
 
-LINK=	$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
-COMPILE=$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
+man1dir=	$(mandir)/man1
+cat1dir=	$(mandir)/cat1
 
-mandir=		$(prefix)/man
-mandirman1=	$(mandir)/man1
-mandircat1=	$(mandir)/cat1
+CC=		@CC@
+CCLD=		$(CC)
+LIBS=		@LIBS@
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
+DEFS=		@DEFS@
+CFLAGS=		@CFLAGS@
+LDFLAGS=	@LDFLAGS@
 
-PROG=	pax
-OBJS=	ar_io.o ar_subs.o buf_subs.o cpio.o file_subs.o ftree.o\
-        gen_subs.o getoldopt.o options.o pat_rep.o pax.o sel_subs.o tables.o\
-        tar.o tty_subs.o
+INSTALL=	@INSTALL@
+
+PROG=		pax
+
+SRCS=	ar_io.c ar_subs.c buf_subs.c cpio.c file_subs.c ftree.c \
+	gen_subs.c getoldopt.c options.c pat_rep.c pax.c sel_subs.c tables.c \
+	tar.c tty_subs.c
+SRCS+=	getid.c spec.c misc.c stat_flags.c pack_dev.c
+OBJS=	$(SRCS:.c=.o)
+
+.PHONY: all clean install
+
+.c.o:
+	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
 
 all: $(PROG)
 
 $(PROG): $(OBJS)
-	$(LINK) $(OBJS) $(LIBS)
-
-.c.o:
-	$(COMPILE) -c $< -o $@
+	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(OBJS) $(PROG)
@@ -41,15 +45,16 @@ distclean: clean
 	rm -f Makefile config.cache config.h config.status
 	rm -f configure.lineno config.log
 
-# most systems we are aiming this at don't have the macros to format
-# mandoc pages, so only install the catman versions.
 install:
-	$(INSTALL) $(PROG) $(PREFIX)/bin
-	ln -f $(PREFIX)/bin/$(PROG) $(PREFIX)/bin/tar
-	ln -f $(PREFIX)/bin/$(PROG) $(PREFIX)/bin/cpio
-	$(INSTALL) -m 444 $(PROG).1 $(mandirman1)/$(PROG).1
-	$(INSTALL) -m 444 cpio.1 $(mandirman1)/cpio.1
-	$(INSTALL) -m 444 tar.1 $(mandirman1)/tar.1
-	$(INSTALL) -m 444 $(PROG).cat1 $(mandircat1)/$(PROG).0
-	$(INSTALL) -m 444 cpio.cat1 $(mandircat1)/cpio.0
-	$(INSTALL) -m 444 tar.cat1 $(mandircat1)/tar.0
+	$(INSTALL) -m 755 -d $(bindir)
+	$(INSTALL) -m 755 -d $(man1dir)
+	$(INSTALL) -m 755 -d $(cat1dir)
+	$(INSTALL) $(PROG) $(bindir)
+	ln -f $(bindir)/$(PROG) $(bindir)/cpio
+	ln -f $(bindir)/$(PROG) $(bindir)/tar
+	$(INSTALL) -m 444 $(PROG).1 $(man1dir)/$(PROG).1
+	$(INSTALL) -m 444 $(PROG).cat1 $(cat1dir)/$(PROG).0
+	$(INSTALL) -m 444 cpio.1 $(man1dir)/cpio.1
+	$(INSTALL) -m 444 cpio.cat1 $(cat1dir)/cpio.0
+	$(INSTALL) -m 444 tar.1 $(man1dir)/tar.1
+	$(INSTALL) -m 444 tar.cat1 $(cat1dir)/tar.0
