@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2186 2003/05/08 16:58:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.2187 2003/05/08 17:26:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1896,3 +1896,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.20.2 [gehenna 2003-05-08]
 	Updated texi2html to 1.64nb1 [jmmv 2003-05-08]
 	Updated fam to 2.6.9nb1 [jmmv 2003-05-08]
+	Updated eterm to 0.9.2nb3 [jmmv 2003-05-08]
