@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2004/01/11 00:41:13 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2004/07/10 23:15:32 salo Exp $
 
 SAMBA_LOCKDIR="@SAMBA_LOCKDIR@"
 SAMBA_PRIVATE="@SAMBA_PRIVATE@"
@@ -8,7 +8,7 @@ SAMBA_PRIVATE="@SAMBA_PRIVATE@"
 case ${STAGE} in
 POST-INSTALL)
 	# Check for files in old "lock" directory.
-	if [ -e /var/run/samba ]
+	if [ -d /var/run/samba ]
 	then
 		${CAT} << EOF
 ===========================================================================
