@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/28 15:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/06/18 18:43:23 wiz Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 
@@ -6,35 +6,34 @@ SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.lug.udel.edu/MPlayer/Skin/		\
 		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/mplayer/ \
-		http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/MPlayer,Skin-AlienMind/1.1/ \
 		${MASTER_SITE_LOCAL:=mplayer}
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
-SKINS +=	default-1.7${EXTRACT_SUFX}			\
+SKINS +=	default-1.8${EXTRACT_SUFX}			\
 		AlienMind-1.2${EXTRACT_SUFX}			\
 		BlueHeart-1.5${EXTRACT_SUFX}			\
 		CornerMP-1.1${EXTRACT_SUFX}			\
 		CornerMP-aqua-1.3${EXTRACT_SUFX}		\
 		Cyrus-1.2${EXTRACT_SUFX}			\
 		MidnightLove-1.6${EXTRACT_SUFX}			\
-		WindowsMediaPlayer6-1.3${EXTRACT_SUFX}		\
+		WindowsMediaPlayer6-2.0${EXTRACT_SUFX}		\
 		avifile-1.6${EXTRACT_SUFX}			\
 		gnome-1.1${EXTRACT_SUFX}			\
 		hayraphon-1.0${EXTRACT_SUFX}			\
-		hwswskin-1.0${EXTRACT_SUFX}			\
-		mentalic-1.1${EXTRACT_SUFX}			\
-		neutron-1.4${EXTRACT_SUFX}			\
-		phony-1.0${EXTRACT_SUFX}			\
-		plastic-1.1.1${EXTRACT_SUFX}			\
-		proton-1.1${EXTRACT_SUFX}			\
-		slim-1.0${EXTRACT_SUFX}				\
-		xanim-1.5${EXTRACT_SUFX}			\
-		xine-lcd-1.0${EXTRACT_SUFX}
+		hwswskin-1.1${EXTRACT_SUFX}			\
+		mentalic-1.2${EXTRACT_SUFX}			\
+		neutron-1.5${EXTRACT_SUFX}			\
+		phony-1.1${EXTRACT_SUFX}			\
+		plastic-1.2${EXTRACT_SUFX}			\
+		proton-1.2${EXTRACT_SUFX}			\
+		slim-1.2${EXTRACT_SUFX}				\
+		xanim-1.6${EXTRACT_SUFX}			\
+		xine-lcd-1.2${EXTRACT_SUFX}
 
-.if !defined(SITES_default-1.7.tar.bz2)
+.if !defined(SITES_default-1.8.tar.bz2)
 .  for skin in ${SKINS}
 SITES_${skin}= ${SKIN_SITES}
 .  endfor
