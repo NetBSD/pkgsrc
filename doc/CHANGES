@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7041 2004/08/30 18:41:41 martti Exp $
+$NetBSD: CHANGES,v 1.7042 2004/08/30 18:50:06 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4110,3 +4110,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ht to 0.8.0 [jmmv 2004-08-30]
 	Updated tkpasman to 2.2anb4 [jmmv 2004-08-30]
 	Updated mrtg to 2.10.15 [martti 2004-08-30]
+	Updated tidy to 20040811 [reed 2004-08-30]
