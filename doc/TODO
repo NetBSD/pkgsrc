@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1276 2004/01/04 18:27:21 xtraeme Exp $
+$NetBSD: TODO,v 1.1277 2004/01/04 21:38:33 rh Exp $
 
 Suggested new packages
 ======================
@@ -152,7 +152,6 @@ Suggested package updates
 	o elinks-0.9.0
 	o elk-3.99.6
 	o elm-me-2.4pl110a
-	o evolution-1.4 [rh]
 	o exim-4.24
 	o festival-1.4.3
 	o findutils-4.1.20
