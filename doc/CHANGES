@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8377 2004/12/20 23:52:22 dan Exp $
+$NetBSD: CHANGES,v 1.8378 2004/12/21 00:03:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6437,3 +6437,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated centericq to 4.13.0 [hubertf 2004-12-20]
 	Updated clamsmtp to 1.2 [xtraeme 2004-12-20]
 	Updated etherape to 0.9.1nb1 [christos 2004-12-20]
+	Updated dovecot to 0.99.12.1 [xtraeme 2004-12-20]
