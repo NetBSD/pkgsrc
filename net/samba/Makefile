@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/07/20 15:41:09 tron Exp $
+# $NetBSD: Makefile,v 1.35 2000/08/30 17:44:25 kei Exp $
 
 DISTNAME=		samba-2.0.7
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 
 MAINTAINER=		bouyer@netbsd.org
 HOMEPAGE=		http://www.samba.org/
+
+CONFLICTS+=		samba-2.0.7-ja-*
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
