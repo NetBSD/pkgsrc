@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2002/10/16 22:13:52 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2002/11/20 08:48:03 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -11,15 +11,15 @@ BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 .if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
 .else
-_BLNK_LIBINTL_LIST!=         ${ECHO} /usr/lib/libintl.*
-.  if exists(/usr/include/libintl.h) && \
-      (${_BLNK_LIBINTL_LIST} != "/usr/lib/libintl.*")
+_BLNK_LIBINTL_LIST!=	${ECHO} /usr/lib/libintl.*
+.  if ${_BLNK_LIBINTL_LIST} != "/usr/lib/libintl.*"
+_BLNK_LIBINTL_FOUND=	YES
+.  else
+_BLNK_LIBINTL_FOUND=	NO
+.  endif
+.  if exists(/usr/include/libintl.h)
 #
 # Consider the base system libintl to be gettext-lib-0.10.35nb1.
-#
-# XXX This isn't correct on Linux systems, as it may cause the installation
-# XXX of the pkgsrc gettext-lib even if the system one is the latest
-# XXX version.
 #
 _GETTEXT_PKG=		gettext-lib-0.10.35nb1
 _GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
@@ -60,7 +60,7 @@ BUILDLINK_TARGETS+=		gettext-buildlink
 BUILDLINK_TARGETS+=		gettext-libintl-la
 
 # Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
-# gettext.m4 does not add -lintl where it should, and the resulting
+# older gettext.m4 does not add -lintl where it should, and the resulting
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
@@ -70,8 +70,13 @@ _BLNK_LIBINTL=		# empty
 _BLNK_INCINTL+=		-I${BUILDLINK_PREFIX.gettext}/include
 _BLNK_LIBINTL+=		-L${BUILDLINK_PREFIX.gettext}/lib
 _BLNK_LIBINTL+=		-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+_BLNK_LIBINTL+=		-lintl
+.else
+.  if ${_BLNK_LIBINTL_FOUND} == "YES"
+_BLNK_LIBINTL+=		-lintl
+.  endif
 .endif
-_BLNK_LIBINTL+=	-lintl
+
 .if defined(GNU_CONFIGURE)
 LIBS+=			${_BLNK_LIBINTL}
 CONFIGURE_ENV+=		INTLLIBS="${_BLNK_LIBINTL}"
