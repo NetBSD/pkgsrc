@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.99 1998/06/10 08:02:10 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.100 1998/06/17 22:00:15 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -448,16 +448,6 @@ PATCH_SITES+=	${MASTER_SITE_BACKUP}
 .else
 MASTER_SITES:=	${MASTER_SITE_OVERRIDE} ${MASTER_SITES}
 PATCH_SITES:=	${MASTER_SITE_OVERRIDE} ${PATCH_SITES}
-.endif
-
-# Search CDROM first if mounted, symlink instead of copy if
-# FETCH_SYMLINK_DISTFILES is set
-.if exists(/cdrom/ports/distfiles)
-MASTER_SITES:=	file:/cdrom/ports/distfiles/${DIST_SUBDIR}/ ${MASTER_SITES}
-PATCH_SITES:=	file:/cdrom/ports/distfiles/${DIST_SUBDIR}/ ${PATCH_SITES}
-.if defined(FETCH_SYMLINK_DISTFILES)
-FETCH_BEFORE_ARGS+=	-l
-.endif
 .endif
 
 # Derived names so that they're easily overridable.
