@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/03/18 13:56:32 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/03/29 19:00:19 jmc Exp $
 #
 # This Makefile fragment is included by packages that use Xft2.
 #
@@ -17,6 +17,9 @@ BUILDLINK_PREFIX.Xft2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.Xft2+=	include/X11/Xft/*
 BUILDLINK_FILES.Xft2+=	lib/libXft.*
 BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
+
+# Make sure to include the right version of freetype2
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.0.9
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../fonts/fontconfig/buildlink2.mk"
