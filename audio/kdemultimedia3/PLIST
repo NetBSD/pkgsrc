@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/01 12:27:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/04/09 13:45:17 markd Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -147,6 +147,8 @@ lib/kde3/kfile_m3u.la
 lib/kde3/kfile_m3u.so
 lib/kde3/kfile_mp3.la
 lib/kde3/kfile_mp3.so
+lib/kde3/kfile_ogg.la
+lib/kde3/kfile_ogg.so
 lib/kde3/kfile_wav.la
 lib/kde3/kfile_wav.so
 lib/kde3/kmix_panelapplet.la
@@ -210,6 +212,8 @@ lib/libarts_splay.la
 lib/libarts_splay.so
 lib/libarts_splay.so.0
 lib/libarts_splay.so.0.0
+lib/libarts_xine.la
+lib/libarts_xine.so
 lib/libartsbuilder.la
 lib/libartsbuilder.so
 lib/libartsbuilder.so.0
@@ -393,6 +397,7 @@ lib/mcop/noatunarts.mcopclass
 lib/mcop/noatunarts.mcoptype
 lib/mcop/winskinvis.mcopclass
 lib/mcop/winskinvis.mcoptype
+lib/mcop/xinePlayObject.mcopclass
 share/doc/kde/HTML/en/aktion/aktion.png
 share/doc/kde/HTML/en/aktion/aktiontoolbar.png
 share/doc/kde/HTML/en/aktion/common
@@ -1007,6 +1012,7 @@ share/kde/services/kfile_au.desktop
 share/kde/services/kfile_avi.desktop
 share/kde/services/kfile_m3u.desktop
 share/kde/services/kfile_mp3.desktop
+share/kde/services/kfile_ogg.desktop
 share/kde/services/kfile_wav.desktop
 share/kde/services/kmixctrl_restore.desktop
 share/kde/servicetypes/audiomidi.desktop
