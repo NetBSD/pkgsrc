@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 20:39:43 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/03/02 17:49:19 rxg Exp $
 
-SHA1 (cmp3-2.0pre5.tar.gz) = 9f8953fb34fdff8bafe198e1cd860d772e69cb7d
-RMD160 (cmp3-2.0pre5.tar.gz) = fa33128a593a69f1d79207072b8dcc9244a27ea5
-Size (cmp3-2.0pre5.tar.gz) = 40207 bytes
-SHA1 (patch-aa) = 9bfd95a35696361effbfde89d55bcc9c47aaa260
-SHA1 (patch-ab) = dbe2565fe5388528b6a3b32af5cf50da8512bd51
-SHA1 (patch-ac) = f242ccaeed2b194938fad2978c24dc8619dcfaf4
+SHA1 (cmp3-2.0pre6.tar.gz) = 5c1454117be282cf673de7a701f8d08f6224d2f8
+RMD160 (cmp3-2.0pre6.tar.gz) = c7d5f774c05734e8fca8ec8d536b2843cb99ad80
+Size (cmp3-2.0pre6.tar.gz) = 183749 bytes
+SHA1 (patch-aa) = 3881ea3b11f4949e0704ee13414ede93e23a7c50
+SHA1 (patch-ab) = d81276c1264d81455a623ef9c1f1eea98ed152ce
+SHA1 (patch-ac) = 92f7307c86f3e633f1e18a6ab1df421d5b09104c
 SHA1 (patch-ad) = a50d87140e557eb3bef1a5d68ad3e18bba73e03e
 SHA1 (patch-ae) = 4ddb74587d34dc2698c2a49ca7c476b5b90540d9
 SHA1 (patch-af) = f15c60207248248f5cb7efa4c046cd246e247018

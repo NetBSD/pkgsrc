@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.19 2004/10/27 17:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/02 17:49:19 rxg Exp $
 #
 
-DISTNAME=	cmp3-2.0pre5
-PKGNAME=	cmp3-2.0.p5
-PKGREVISION=	1
+DISTNAME=	cmp3-2.0pre6
+PKGNAME=	cmp3-2.0.p6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmp3/}
 
-MAINTAINER=	rxg@ms25.url.com.tw
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cmp3.sourceforge.net/
 COMMENT=	Curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
+DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
-WRKSRC=			${WRKDIR}/cmp3
+WRKSRC=			${WRKDIR}/cmp3-kenrevs
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
