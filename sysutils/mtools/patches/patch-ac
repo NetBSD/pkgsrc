@@ -1,25 +1,20 @@
-$NetBSD: patch-ac,v 1.4 2000/01/04 17:49:43 bouyer Exp $
-
---- floppyd.c.old	Mon Dec 13 18:11:58 1999
-+++ floppyd.c	Mon Dec 13 18:16:52 1999
-@@ -85,7 +85,9 @@
+--- floppyd.c.orig	Sun May 28 13:20:30 2000
++++ floppyd.c	Wed Feb 14 13:42:45 2001
+@@ -574,7 +574,7 @@
+ 		}
+ 	else
+ 		{
+-			uid = 65535;
++			uid = getuserid("nobody");
+ 		}
  
- typedef unsigned char Byte;
- typedef unsigned long Dword;
-+#ifndef OS_solaris2
- typedef unsigned long ipaddr_t;
-+#endif
+ #ifdef DEBUG
+@@ -600,7 +600,7 @@
+ 		}
+ 	else
+ 		{
+-			gid = 65535;
++			gid = getgroupid(uid);
+ 		}
  
- enum Opcodes {
- 	OP_READ,
-@@ -758,8 +760,8 @@
- 	int			run_as_server = 0;
- 	ipaddr_t		bind_ip = INADDR_ANY;
- 	short			bind_port = FLOPPYD_DEFAULT_PORT;
--	uid_t			run_uid = 65535;
--	gid_t			run_gid = 65535;
-+	uid_t			run_uid = getuserid("nobody");
-+	gid_t			run_gid = getgroupid(run_uid);
- 	int			sock;
- 	int			port_is_supplied = 0;
- 	int			no_local = 0;
+ #ifdef DEBUG
