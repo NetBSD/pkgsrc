@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/03/22 22:25:59 snj Exp $
+# $NetBSD: Makefile,v 1.52 2004/03/28 21:31:46 jmmv Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -16,12 +16,13 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
-LIBXML_VERSION=		2.6.7
+LIBXML_VERSION=		2.6.8
 PLIST_SUBST+=		LIBXML_VERSION=${LIBXML_VERSION}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-subdir=libxml2
 CONFIGURE_ARGS+=	--without-python
 
 # Don't use threads - it's not apparent whether it's necessary or not,

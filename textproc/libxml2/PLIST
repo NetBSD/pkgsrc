@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2004/02/23 21:49:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.28 2004/03/28 21:31:46 jmmv Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -37,6 +37,7 @@ include/libxml2/libxml/xmlexports.h
 include/libxml2/libxml/xmlmemory.h
 include/libxml2/libxml/xmlreader.h
 include/libxml2/libxml/xmlregexp.h
+include/libxml2/libxml/xmlsave.h
 include/libxml2/libxml/xmlschemas.h
 include/libxml2/libxml/xmlschemastypes.h
 include/libxml2/libxml/xmlstring.h
@@ -50,7 +51,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.8
-lib/libxml2.so.8.7
+lib/libxml2.so.8.8
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -103,6 +104,7 @@ share/doc/html/libxml2/html/libxml-xmlexports.html
 share/doc/html/libxml2/html/libxml-xmlmemory.html
 share/doc/html/libxml2/html/libxml-xmlreader.html
 share/doc/html/libxml2/html/libxml-xmlregexp.html
+share/doc/html/libxml2/html/libxml-xmlsave.html
 share/doc/html/libxml2/html/libxml-xmlschemas.html
 share/doc/html/libxml2/html/libxml-xmlschemastypes.html
 share/doc/html/libxml2/html/libxml-xmlstring.html
@@ -170,13 +172,13 @@ share/doc/html/libxml2/tutorial/ix01.html
 share/doc/html/libxml2/tutorial/xmltutorial.pdf
 share/doc/html/libxml2/w3c.png
 share/doc/html/libxml2/xml.html
-share/doc/libxml2/Copyright
+share/doc/${PKGNAME}/Copyright
 share/examples/libxml2/testHTML.c
 share/examples/libxml2/testSAX.c
 share/examples/libxml2/testXPath.c
 share/examples/libxml2/xmllint.c
 @dirrm share/examples/libxml2
-@dirrm share/doc/libxml2
+@dirrm share/doc/${PKGNAME}
 @dirrm share/doc/html/libxml2/tutorial/images/callouts
 @dirrm share/doc/html/libxml2/tutorial/images
 @dirrm share/doc/html/libxml2/tutorial
