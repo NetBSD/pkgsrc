@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.15 1998/08/09 21:42:01 kim Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/21 16:09:45 mrg Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
-DISTNAME=		ircii-4.4
-PKGNAME=		ircII-4.4
-WRKSRC=			${WRKDIR}/ircii-4.4
+DISTNAME=		ircii-4.4I
+PKGNAME=		ircII-4.4I
+WRKSRC=			${WRKDIR}/ircii-4.4I
 CATEGORIES=		net
-MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/
+MASTER_SITES=		ftp://ftp.au.netbsd.com/pub/ircII/
 
-MAINTAINER=		mrg@eterna.com.au
+MAINTAINER=		packages@netbsd.org
 
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--with-default-server=SERVER[:PORT]
+CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
+CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
 
