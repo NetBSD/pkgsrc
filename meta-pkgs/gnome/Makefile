@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/06 22:57:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/07 00:31:45 jmmv Exp $
 
 DISTNAME=	gnome-2.4.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -31,6 +31,7 @@ DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
 DEPENDS+=	gpdf>=0.112:../../print/gpdf
 DEPENDS+=	gtk2-extras>=2.2.4:../../meta-pkgs/gtk2-extras
+DEPENDS+=	nautilus-media>=0.3.3.1:../../multimedia/nautilus-media
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
 
 USE_X11=	yes
