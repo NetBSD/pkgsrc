@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/08/04 18:35:26 wiz Exp $
+#
+
+PKGNAME=$1
+
+case $2 in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	cat << EOF
+=============================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove any
+skins that were installed in @PREFIX@/share/gqmpeg/skins.
+=============================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
