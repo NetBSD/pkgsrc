@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.599 2002/11/25 17:56:01 jwise Exp $
+$NetBSD: CHANGES,v 1.600 2002/11/25 18:59:39 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gtk-gnutella to 0.91.1 [jschauma 2002-11-25]
 	Updated tcl-scotty to 2.1.11 [jwise 2002-11-25]
 	Updated tkined to 1.4.11 [jwise 2002-11-25]
+	Updated fltk to 1.0.11nb1 [jlam 2002-11-25]
