@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:53:47 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/21 17:24:32 martti Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.vix.com/pub/vixie/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	multiuser "tip"/"cu" replacement with logging
+COMMENT=	Multiuser "tip"/"cu" replacement with logging
 
 pre-configure:
 	${CHMOD} -R u+w ${WRKDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:24:20 martti Exp $
 #
 
 DISTNAME=		memconf
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.gz
 
 MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		http://netnow.micron.net/~tschmidt/memconf.html
-COMMENT=		physical memory information utility
+COMMENT=		Physical memory information utility
 
 ONLY_FOR_PLATFORM=	SunOS-*-* 	# only for Solaris
 

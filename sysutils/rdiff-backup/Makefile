@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/13 13:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 17:24:25 martti Exp $
 #
 
 DISTNAME=	rdiff-backup-0.10.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://rdiff-backup.stanford.edu/
 
 MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://rdiff-backup.stanford.edu/
-COMMENT=	remote incremental backup utility
+COMMENT=	Remote incremental backup utility
 
 PYTHON_VERSION_REQD=	22
 USE_BUILDLINK2=		yes

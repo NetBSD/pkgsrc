@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:55 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:24:41 martti Exp $
 #
 
 DISTNAME=	tkdesk-1.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://tkdesk.sourceforge.net/dist/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tkdesk.sourceforge.net/
-COMMENT=	graphical file manager
+COMMENT=	Graphical file manager
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES

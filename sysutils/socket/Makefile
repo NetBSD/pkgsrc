@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:52 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:24:34 martti Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/16 10:14:56 wosch Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.freebsd.org/~wosch/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	create tcp socket and connect to stdin/out
+COMMENT=	Create tcp socket and connect to stdin/out
 
 MAKE_ENV+=	INSTALLBASE=${PREFIX}
 
