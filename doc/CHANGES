@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5111 2004/03/06 18:38:25 recht Exp $
+$NetBSD: CHANGES,v 1.5112 2004/03/06 18:58:30 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1189,3 +1189,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated createbuildlink to 3.3 [jlam 2004-03-06]
 	Updated openmortal to 0.6 [xtraeme 2004-03-06]
 	Added gnats-4.0 [recht 2004-03-06]
+	Added py-Gnosis-Utils-1.1.1 [recht 2004-03-06]
