@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2002/12/07 02:38:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/11 15:25:13 uebayasi Exp $
 
-DISTNAME=	irchat-pj-2.4.24.20
+DISTNAME=	irchat-pj-2.4.24.22
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.madoka.org/pub/irchat-pj/
+MASTER_SITES=	http://irc.fan.gr.jp/pj/src/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://www.fan.gr.jp/~simm/irchat/
+HOMEPAGE=	http://irc.fan.gr.jp/pj/
 COMMENT=	Emacs lisp interface to Internet Relay Chat
 
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
 INSTALL_TARGET=	install
-PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .elif ${EMACS_FLAVOR} == "xemacs"
 ALL_TARGET=	package
 INSTALL_TARGET=	install-package
-PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 .else
 PKG_FAIL_REASON+= "Unknown Emacs flavor"
 .endif
