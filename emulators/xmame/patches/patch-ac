@@ -1,7 +1,29 @@
---- src/unix/netbsd_i386.c.orig	Fri Feb 13 05:40:16 1998
-+++ src/unix/netbsd_i386.c	Fri Feb 13 05:46:49 1998
-@@ -96,3 +90,3 @@
+--- src/unix/netbsd_i386.c.orig	Thu Jan  1 20:32:36 1998
++++ src/unix/netbsd_i386.c	Wed Mar 11 15:38:04 1998
+@@ -66,7 +66,6 @@
+       play_sound = FALSE;
+     } else {
+       /* empty buffers before change config */
+-      ioctl(audio_fd, AUDIO_DRAIN, 0);    /* drain everything out */
+       ioctl(audio_fd, AUDIO_FLUSH, 0);        /* flush everything */
+       
+       /* identify audio device. */
+@@ -82,15 +81,12 @@
+ 	AUDIO_INITINFO(&a_info);
+ 	    
+ 	a_info.play.sample_rate = (uint) audio_sample_freq = AUDIO_SAMPLE_FREQ;
+-	a_info.play.encoding = (uint) AUDIO_ENCODING_LINEAR;
++	a_info.play.encoding = (uint) AUDIO_ENCODING_ULINEAR;
+ 	a_info.play.precision = (uint) AUDIO_SAMPLE_BITS;
+ 	a_info.play.channels = (uint) 1;
+-	a_info.play.port = (uint) 1;
+-	a_info.play.pause = (uint) 0;
+-	a_info.play.gain = (uint) 130;
  	a_info.blocksize = AUDIO_SAMPLE_FREQ / AUDIO_TIMER_FREQ;
 -	a_info.buffersize = AUDIO_BUFF_SIZE;
+-	a_info.mode = AUMODE_PLAY;
 +	a_info.play.buffer_size = AUDIO_BUFF_SIZE;
- 	a_info.mode = AUMODE_PLAY;
++	a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
+ 
+ 	if (ioctl(audio_fd, AUDIO_SETINFO, &a_info) < 0) {
+ 	  perror("cannot set audio device parameters");
