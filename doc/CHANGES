@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.523 2002/11/14 22:25:03 seb Exp $
+$NetBSD: CHANGES,v 1.524 2002/11/15 02:52:14 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3622,3 +3622,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-CMFPlone-1.0beta3 [drochner 2002-11-14]
 	Updated xmame to 0.61.1 [kristerw 2002-11-14]
 	Updated cyrus-sasl2 to 2.1.9nb1 [seb 2002-11-14]
+	Updated p5-Time-HiRes to 1.38 [heinz 2002-11-15]
