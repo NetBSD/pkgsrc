@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.57 2003/09/02 06:59:45 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.58 2003/09/05 13:54:14 martti Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -73,7 +73,7 @@ LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4
 MKDIR?=		/bin/mkdir -p
-MTREE?=		${ZOULARISBASE}/sbin/mtree
+MTREE?=		${LOCALBASE}/sbin/mtree
 MV?=		/bin/mv
 .if exists(/bin/nice)
 NICE?=		/bin/nice
@@ -81,7 +81,7 @@ NICE?=		/bin/nice
 NICE?=		/usr/bin/nice
 .endif
 PATCH?=		/usr/bin/patch
-PAX?=		${ZOULARISBASE}/bin/pax
+PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
@@ -129,7 +129,7 @@ GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
@@ -138,7 +138,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		/usr/sbin/useradd
-ZOULARISBASE?=		/usr/pkg
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/linux.cf
@@ -178,3 +177,9 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
+
+LOCALBASE?=		${DESTDIR}/usr/pkg
+.if exists(${LOCALBASE}/sbin/pkg_info)
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+.endif
+PKG_TOOLS_BIN?=		${LOCALBASE}/bin
