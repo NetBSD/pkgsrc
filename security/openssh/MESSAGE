@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/02/05 04:17:31 jlam Exp $
+$NetBSD: MESSAGE,v 1.4 2002/06/25 12:17:54 itojun Exp $
 
                            *===* NOTICE *===*
 
@@ -8,4 +8,11 @@ The config files for ${PKGNAME} must be located in:
 	${PKG_SYSCONFDIR}
 
 and the example files are located in ${EGDIR}.
+
+You need to create UID sshd, and GID sshd, for privilege separation.
+For exapmle, add the following into /etc/passwd and /etc/group:
+
+	sshd:*:16:16:sshd privsep:/var/chroot/sshd:/sbin/nologin
+	sshd:*:16:
+
 ==========================================================================
