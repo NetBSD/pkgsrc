@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.92 1998/06/05 10:27:42 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.93 1998/06/05 11:23:09 frueauf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -200,6 +200,9 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #				  entry is "pkgname:dir". If the "pkgname" package is not
 #				  installed, then it will be built and installed from the
 #				  source package in "dir".
+# CONFLICTS		- A list of other ports this package conflicts with. Use this
+#				  for packages that install identical set of files. The format
+#				  of this entry is "pkgname".
 # EXTRACT_CMD	- Command for extracting archive (default: tar).
 # EXTRACT_SUFX	- Suffix for archive names (default: .tar.gz).
 # EXTRACT_BEFORE_ARGS -
@@ -621,6 +624,14 @@ PLIST=		${WRKDIR}/.PLIST
 PKG_CMD?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
+.if defined(CONFLICTS)
+# The NETBSD_13X_REL check is to make sure that pkg_create really has the
+# -C switch. This should be true for NetBSD > 1.3.2.
+NETBSD_13X_REL!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3$$|yes|' -e 's|^1\.3\.[1-9]$$|yes|'
+.if (${NETBSD_13X_REL} != "yes")
+PKG_ARGS+=		-C "${CONFLICTS}"
+.endif
+.endif
 .if exists(${PKGDIR}/INSTALL)
 PKG_ARGS+=		-i ${PKGDIR}/INSTALL
 .endif
@@ -973,7 +984,7 @@ all:
 	  PATCHDIR=${PATCHDIR} SCRIPTDIR=${SCRIPTDIR} \
 	  FILESDIR=${FILESDIR} PKGSRCDIR=${PKGSRCDIR} PREFIX=${PREFIX} \
 	  DEPENDS="${DEPENDS}" BUILD_DEPENDS="${BUILD_DEPENDS}" \
-	  RUN_DEPENDS="${RUN_DEPENDS}" X11BASE=${X11BASE} \
+	  RUN_DEPENDS="${RUN_DEPENDS}" CONFLICTS="${CONFLICTS}" X11BASE=${X11BASE} \
 	${ALL_HOOK}
 .endif
 
@@ -1294,6 +1305,17 @@ _PORT_USE: .USE
 .endif
 .if make(real-install)
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
+.if defined(CONFLICTS)
+	@for i in ${CONFLICTS}; do \
+		if pkg_info -e $$i; then \
+			${ECHO_MSG} "===>  ${PKGNAME} conflicts with already installed $$i."; \
+			${ECHO_MSG} "      They install the same files into the same place, its therefor not"; \
+			${ECHO_MSG} "      usefull to install ${PKGNAME}. Please remove $$i first with"; \
+			${ECHO_MSG} "      pkg_delete(1)."; \
+			exit 1; \
+		fi; \
+	done
+.endif
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  ${PKGNAME} is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "      If so, you may wish to \`\`${MAKE} deinstall'' and install"; \
