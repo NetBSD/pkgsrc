@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/04/04 22:13:15 rh Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/29 01:36:08 rh Exp $
 #
 
-DISTNAME=	createbuildlink-2.5
+DISTNAME=	createbuildlink-2.6
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
@@ -20,7 +20,8 @@ SCRIPT=		${DISTNAME:C/-.*$//}
 
 do-configure:
 .for scr in ${SCRIPT}
-	${SED} -e 's/@PKGVERSION@/${PKGVERSION}/'		\
+	${SED}	-e 's/@PKGVERSION@/${PKGVERSION}/'		\
+		-e 's/@MAKE@/${MAKE}/'				\
 		< ${FILESDIR}/${scr} > ${WRKSRC}/${scr}
 .endfor
 
