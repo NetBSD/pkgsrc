@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/28 16:02:29 wiz Exp $
 
 DISTNAME=	gtkyahoo-0.18.2
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkyahoo/} \
 		http://www.unixtools.org/gtkyahoo/dist/
 
-MAINTAINER=	ken@246gt.com
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.unixtools.org/gtkyahoo/
 COMMENT=	GTK+ client for Yahoo! Messenger
 

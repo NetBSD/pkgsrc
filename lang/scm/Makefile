@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/28 16:01:57 wiz Exp $
 #
 
 DISTNAME=	scm5d8
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	davids@idiom.com
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM.html
 COMMENT=	Portable scheme interpreter
 
