@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.47 1999/01/26 20:03:12 abs Exp $
+# $NetBSD: Packages.txt,v 1.48 1999/01/30 23:21:26 agc Exp $
 ###########################################################################
 
 			==========================
@@ -823,7 +823,7 @@ and which variables influence this.
 The automatic variable PREFIX indicates where all files of the final
 program shall be installed.  It is usually set to $LOCALBASE (/usr/pkg),
 or $CROSSBASE for pkgs in the "cross" category, though its value becomes
-that of $X11BASE if USE_IMAKE, USE_MOTIF, or USE_X11 is set.  The value
+that of $X11BASE if USE_IMAKE, USE_MOTIF, or USE_X11BASE is set.  The value
 ${PREFIX} needs to be put into the various places in the program's source
 where paths to these files are encoded; see sections 4.3 and 6.2 for
 details on this.
@@ -843,7 +843,7 @@ When choosing which of these variables to use, follow the following rules:
  * X11 based pkgs are special in that they may be installed in either
    X11BASE or LOCALBASE depending on a configuration option in /etc/mk.conf.  
    If you need to find includes or libraries installed by a pkg that has
-   USE_IMAKE, USE_MOTIF, or USE_X11 in its pkg Makefile, you need to use
+   USE_IMAKE, USE_MOTIF, or USE_X11BASE in its pkg Makefile, you need to use
    _both_ of ${X11BASE} and ${LOCALBASE}.
 
 
@@ -906,7 +906,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
 
    If the program uses an Imakefile for configuration, the appropriate
    steps can be invoked by setting USE_IMAKE to YES. (If you only want the
-   package installed in $X11BASE but xmkmf not being run, set USE_X11
+   package installed in $X11BASE but xmkmf not being run, set USE_X11BASE
    instead!)
 
  * build:
