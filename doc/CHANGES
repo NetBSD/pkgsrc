@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.120 2002/09/30 09:12:30 martti Exp $
+$NetBSD: CHANGES,v 1.121 2002/09/30 09:26:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3044,3 +3044,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated evolution to 1.0.8nb3 [rh 2002-09-30]
 	Added distfetch-20020930 [martti 2002-09-30]
 	Updated mrtg to 2.9.22 [martti 2002-09-30]
+	Updated netatalk to 1.5.5 [abs 2002-09-30]
