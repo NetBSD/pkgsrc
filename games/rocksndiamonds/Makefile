@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/02/02 11:59:09 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/19 06:25:57 jmc Exp $
 #
 
 DISTNAME=		rocksndiamonds-2.0.0
@@ -11,6 +11,11 @@ HOMEPAGE=		http://www.artsoft.org/rocksndiamonds/
 COMMENT=		Game like Boulderdash, Emerald Mine, or Sokoban with lots of levels
 
 USE_GMAKE=		YES
+
+.if ( ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
+      ${MACHINE} == "shark" )
+MAKE_ENV+=HAVE_JOYSTICK=1
+.endif
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=		/var/games/rocksndiamonds
