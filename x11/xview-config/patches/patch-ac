@@ -1,35 +1,29 @@
-$NetBSD: patch-ac,v 1.4 2000/09/13 20:21:54 jlam Exp $
-
---- XView.obj.orig	Tue Jun 29 01:13:20 1993
-+++ XView.obj
-@@ -15,7 +15,7 @@
-             STD_DEFINES = StandardDefines LibXViewDefines 
+$NetBSD: patch-ac,v 1.5 2001/05/02 21:46:08 dmcmahill Exp $
+ 
+--- ./XView.obj.orig	Tue Jun 29 01:13:20 1993
++++ ./XView.obj	Tue May  1 22:40:31 2001
+@@ -16,5 +16,5 @@
  #endif
  HEADERS= ${HDRSPUBLIC} ${HDRSPRIVATE}
 -INCLUDES= -I$(BUILDINCDIR)$(INCDIR) 
 +INCLUDES= -I$(BUILDINCDIR)/$(INCDIR) 
  OBJS = $(TEXT_OBJS) $(DATA_OBJS) $(SPECIAL_OBJS)
  #if !NotLibXView
- ALLFILES = $(SRCS) $(HEADERS)
-@@ -85,14 +85,14 @@
- 
+@@ -86,5 +86,5 @@
  #if SubdirHasPublicHeaders
  # if NotLibXView
 -BuildIncludes($(HDRSPUBLIC),$(PUB_INCDIR),/**/)
 +BuildIncludes($(HDRSPUBLIC),$(PUB_INCDIR),.)
  
  install::
- 	$(MKDIRHIER) $(PUB_HEADER_DEST)
- 
+@@ -93,5 +93,5 @@
  InstallMultiple($(HDRSPUBLIC),$(PUB_HEADER_DEST))
  # else
 -BuildIncludes($(HDRSPUBLIC),$(XVPUB_INCDIR),/**/)
 +BuildIncludes($(HDRSPUBLIC),$(XVPUB_INCDIR),.)
  
  install::
- 	$(MKDIRHIER) $(XVPUB_HEADER_DEST)
-@@ -103,9 +103,9 @@
- 
+@@ -104,7 +104,7 @@
  #if SubdirHasPrivateHeaders
  # if NotLibXView
 -BuildIncludes($(HDRSPRIVATE),$(PRI_INCDIR),/**/)
@@ -39,4 +33,3 @@ $NetBSD: patch-ac,v 1.4 2000/09/13 20:21:54 jlam Exp $
 +BuildIncludes($(HDRSPRIVATE),$(XVPRI_INCDIR),.)
  # endif
  # if InstallPrivateHeaders
- #  if NotLibXView
