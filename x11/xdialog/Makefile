@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/05 12:10:43 wiz Exp $
 
 DISTNAME=		Xdialog-1.4.6
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		xdialog-1.4.6
 CATEGORIES=		misc x11
 MASTER_SITES=		http://xdialog.free.fr/
@@ -11,10 +11,9 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://xdialog.free.fr/
 COMMENT=		X11 drop-in replacement for the curses dialog program
 
-DEPENDS+=		gtk+>=1.2.10nb4:../../x11/gtk
-
-USE_X11BASE=		# defined
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
