@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/26 17:35:43 itojun Exp $
 bin/mailpatch
 bin/mailhelp
 bin/maillist
@@ -79,3 +80,9 @@ share/examples/mailagent/misc/unkit/unkit.pl
 @dirrm lib/mailagent/examples
 @dirrm lib/mailagent/help
 @dirrm lib/mailagent
+man/man1/edusers.1
+man/man1/mailagent.1
+man/man1/maildist.1
+man/man1/maillist.1
+man/man1/mailpatch.1
+man/man1/package.1

@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1999/12/26 17:35:43 itojun Exp $
+
 *** agent/mailhelp.SH.orig	Wed Mar 22 05:51:24 1995
 --- agent/mailhelp.SH	Thu Jul 25 19:56:16 1996
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 1999/12/26 17:35:43 itojun Exp $
+
 *** agent/package.SH.orig	Thu Aug 10 15:34:35 1995
 --- agent/package.SH	Thu Jul 25 19:54:42 1996
 ***************
