@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:46:22 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/31 16:07:01 seb Exp $
 # FreeBSD Id: ports/mail/mailcrypt/Makefile,v 1.7 2000/05/14 05:21:52 billf Exp
 
 DISTNAME=	mailcrypt-3.5.6
@@ -15,6 +15,9 @@ EMACS_VERSIONS_ACCEPTED=       emacs21 emacs21nox emacs20
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	mailcrypt.info
+
 .include "../../mk/emacs.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
