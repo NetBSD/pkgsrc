@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2001/11/21 15:44:23 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2001/11/25 18:59:48 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -39,9 +39,7 @@ CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
-BUILD_DEFS+=		APACHE_SYSCONFDIR
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+PKG_SYSCONFSUBDIR?=	httpd
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 APACHE_USER?=		www
@@ -101,17 +99,16 @@ BUILD_DEFS+=		APACHE_SUEXEC
 
 EGDIR=		${PREFIX}/share/examples/httpd
 
-CONF_FILES=	${EGDIR}/httpd.conf.default ${APACHE_SYSCONFDIR}/httpd.conf
-SUPPORT_FILES=	${EGDIR}/magic.default ${APACHE_SYSCONFDIR}/magic
-SUPPORT_FILES+=	${EGDIR}/mime.types.default ${APACHE_SYSCONFDIR}/mime.types
+CONF_FILES=	${EGDIR}/httpd.conf.default ${PKG_SYSCONFDIR}/httpd.conf
+SUPPORT_FILES=	${EGDIR}/magic.default ${PKG_SYSCONFDIR}/magic
+SUPPORT_FILES+=	${EGDIR}/mime.types.default ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=	apache
 
-MAKE_DIRS=		${APACHE_SYSCONFDIR}
-OWN_DIRS=		${APACHE_SYSCONFDIR}/ssl.crl
-OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.crt
-OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.csr
-OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.key
-OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.prm
+OWN_DIRS=		${PKG_SYSCONFDIR}/ssl.crl
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.crt
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.csr
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.key
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.prm
 OWN_DIRS+=		/var/log/httpd
 OWN_DIRS+=		/var/spool/httpd
 OWN_DIRS_PERMS+=	/var/spool/httpd/proxy nobody nobody 0755
@@ -156,9 +153,9 @@ post-install:
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
 	for file in httpd.conf magic mime.types; do			\
-		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$${file}.default	\
+		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${file}.default	\
 			${PREFIX}/share/examples/httpd;			\
-		${RM} -f ${APACHE_SYSCONFDIR}/$${file}.default;		\
+		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
