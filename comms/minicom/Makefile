@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/02/16 13:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/16 14:30:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
-COMMENT=	MS-DOS Telix serial communication program ''workalike"
+COMMENT=	MS-DOS Telix serial communication program "workalike"
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gkermit-*:../../comms/gkermit
