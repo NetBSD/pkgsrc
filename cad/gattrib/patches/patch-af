@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2004/10/02 00:50:14 dmcmahill Exp $
+
+--- config.h.in.orig	Mon Feb  2 16:33:45 2004
++++ config.h.in
+@@ -12,8 +12,7 @@
+ /* Define to 1 if you have the <assert.h> header file. */
+ #undef HAVE_ASSERT_H
+ 
+-/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
+-   */
++/* Define to 1 if you have the <dirent.h> header file. */
+ #undef HAVE_DIRENT_H
+ 
+ /* Define to 1 if you have the <errno.h> header file. */
+@@ -62,6 +61,9 @@
+ /* Define to 1 if you have the <sys/ndir.h> header file, and it defines `DIR'.
+    */
+ #undef HAVE_SYS_NDIR_H
++
++/* Define to 1 if you have the <sys/param.h> header file. */
++#undef HAVE_SYS_PARAM_H
+ 
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
