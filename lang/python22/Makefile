@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/15 16:16:34 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/30 10:55:41 markd Exp $
 #
 
 DISTNAME=	Python-2.2.2
@@ -15,6 +15,10 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LOWER_OPSYS=	sunos
+.endif
 
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 PLIST_SRC=	${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} \
