@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/10 19:24:48 jmmv Exp $
+bin/xmlcatmgr
+man/man1/xmlcatmgr.1
+share/xml/catalog
+@dirrm share/xml
