@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.605 2000/11/12 17:11:03 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.606 2000/11/16 05:36:01 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2600,10 +2600,10 @@ install-build-depends:
 	found=not;							\
 	if expr "$$prog" : '.*/' >/dev/null; then			\
 		if ${TEST} -e "$$prog" ; then				\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on file: $$prog - found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Required file $$prog: found"; \
 			found="";					\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on file: $$prog - not found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Required file $$prog: NOT found"; \
 		fi;							\
 	else								\
 		for d in ${PATH:S/:/ /g}; do				\
@@ -2612,7 +2612,7 @@ install-build-depends:
 				break;					\
 			fi						\
 		done;							\
-		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on executable: $$prog - $$found found"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Required executable $$prog: $$found found"; \
 	fi;								\
 	if [ "$$found" = "not" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$prog in $$dir"; \
@@ -2661,10 +2661,10 @@ install-run-depends: uptodate-pkgtools
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
 		else 							\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$pkg - $${found} found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pkg: $${found} found"; \
 		fi ; 							\
 	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on package: $$pkg"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Required package $$pkg: NOT found"; \
 		target=${DEPENDS_TARGET};				\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
