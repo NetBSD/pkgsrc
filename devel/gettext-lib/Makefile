@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2004/03/08 18:14:33 reed Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
-COMMENT=		Tools for providing messages in different languages, libintl only
+COMMENT=		Internationalized Message Handling Library (libintl)
 
 CONFLICTS=		gettext<=0.10.35
 
