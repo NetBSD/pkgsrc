@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/07 15:25:14 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/29 05:44:48 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -10,6 +10,8 @@ DISTFILES=		XFree86-4.4.0-src-1.tgz XFree86-4.4.0-src-2.tgz \
 MAINTAINER=		xfree86@blef.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 X server and related programs
+
+CONFLICTS=		xorg-server-[0-9]*
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
