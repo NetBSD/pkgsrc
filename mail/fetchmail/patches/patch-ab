@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.6 1998/08/07 11:09:36 agc Exp $
+$NetBSD: patch-ab,v 1.7 1998/10/18 12:08:23 frueauf Exp $
 
---- Makefile.in.orig	Mon Jul 20 06:10:42 1998
-+++ Makefile.in	Wed Jul 22 13:08:14 1998
+--- Makefile.in.orig	Fri Oct 16 18:49:17 1998
++++ Makefile.in	Sun Oct 18 13:45:13 1998
 @@ -80,7 +80,7 @@
  
  protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
-        etrn.o fetchmail.o env.o options.o daemon.o driver.o rfc822.o smtp.o \
--       xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o interface.o netrc.o \
-+       xmalloc.o uid.o mxget.o md5ify.o rpa.o interface.o netrc.o \
-        base64.o error.o unmime.o conf.o checkalias.o
+        etrn.o fetchmail.o env.o options.o daemon.o driver.o sink.o \
+-       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o \
++       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5ify.o rpa.o \
+        interface.o netrc.o base64.o error.o unmime.o conf.o checkalias.o
  
  objs = $(protobjs) $(extras) $(EXTRAOBJ)
 @@ -91,7 +91,7 @@
-        $(srcdir)/options.c $(srcdir)/daemon.c 				\
-        $(srcdir)/driver.c $(srcdir)/rfc822.c $(srcdir)/smtp.c		\
+        $(srcdir)/options.c $(srcdir)/daemon.c $(srcdir)/driver.c	\
+        $(srcdir)/sink.c $(srcdir)/rfc822.c $(srcdir)/smtp.c		\
         $(srcdir)/xmalloc.c $(srcdir)/uid.c $(srcdir)/mxget.c 		\
 -       $(srcdir)/md5c.c $(srcdir)/md5ify.c $(srcdir)/rpa.c	  	\
 +       $(srcdir)/md5ify.c $(srcdir)/rpa.c              \
