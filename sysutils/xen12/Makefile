@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/22 18:12:40 cl Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/22 19:09:53 cl Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -21,6 +21,15 @@ ALL_TARGET=		default
 USE_PKGINSTALL=		yes
 
 USE_GNU_TOOLS+=		make
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		XEN12_USE_COM2
+
+.if !empty(XEN12_USE_COM2:M[Yy][Ee][Ss])
+PATCHFILES+=		xen12-com2-support-040522.diff
+SITES_xen12-com2-support-040522.diff=ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
+.endif
 
 post-extract:
 	@${CP} ${FILESDIR}/gcc333-stdarg.h ${WRKSRC}/include/stdarg.h
