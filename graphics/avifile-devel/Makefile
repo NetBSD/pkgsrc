@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/08/28 02:40:32 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/10/02 23:20:34 wiz Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -12,7 +12,6 @@ HOMEPAGE=	http://divx.euro.ru/
 COMMENT=	MPEG-4 (DivX) video player library
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 WRKSRC=		${WRKDIR}/avifile-0.6
 
@@ -22,6 +21,7 @@ NO_SRC_ON_FTP=		"Already in MASTER_SITE_LOCAL"
 
 BUILD_USES_GETTEXT_M4=	YES
 
+AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
@@ -64,7 +64,12 @@ CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh
+	cd ${WRKSRC} && libtoolize --force --copy
+	cd ${WRKSRC} && ${ACLOCAL}
+	cd ${WRKSRC} && ${AUTOHEADER}
+	cd ${WRKSRC} && ${AUTOCONF}
+	cd ${WRKSRC} && ${AUTOMAKE} --add-missing --copy --foreign
 
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
