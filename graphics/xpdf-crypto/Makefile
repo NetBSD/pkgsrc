@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/25 20:39:46 fredb Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/23 15:12:54 fredb Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -21,8 +21,9 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 RESTRICTED=	"Crypto; export-controlled"
 MIRROR_DISTFILE= no
 
-GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+= --enable-japanese
 
 CONFLICTS=	xpdf-0.[789][a0]
 
@@ -35,5 +36,10 @@ post-install:
 	  done; \
 	  ${ECHO} ${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1; \
 	  ${INSTALL_MAN} ${MAN1:S/.1/.0/} ${PREFIX}/man/cat1
+
+.include "../../mk/bsd.prefs.mk"
+.if ${PAPERSIZE} == "A4"
+CONFIGURE_ARGS+= --enable-a4-paper
+.endif
 
 .include "../../mk/bsd.pkg.mk"
