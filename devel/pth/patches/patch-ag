@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2002/08/25 18:38:45 jlam Exp $
+$NetBSD: patch-ag,v 1.3 2002/10/14 11:49:56 skrll Exp $
 
 --- pth_lib.c.orig	Sun Jan 27 11:03:40 2002
 +++ pth_lib.c
@@ -34,7 +34,7 @@ $NetBSD: patch-ag,v 1.2 2002/08/25 18:38:45 jlam Exp $
  
      /* initialize the scheduler */
      pth_scheduler_init();
-@@ -105,10 +101,28 @@ int pth_init(void)
+@@ -105,10 +101,29 @@ int pth_init(void)
      pth_mctx_switch(&pth_main->mctx, &pth_sched->mctx);
  
      /* came back, so let's go home... */
@@ -54,17 +54,18 @@ $NetBSD: patch-ag,v 1.2 2002/08/25 18:38:45 jlam Exp $
 +        /* if we've already explicitly initialized then error */
 +        if (pth_explicit_initialize)
 +            return_errno(FALSE, EPERM);
++        rv = TRUE;
 +    } else {
 +        rv = pth__init();
 +        pth_explicit_initialize = TRUE;
-+        return rv;
 +    }
++    return rv;
 +}
 +
  /* kill the package internals */
  int pth_kill(void)
  {
-@@ -118,6 +132,7 @@ int pth_kill(void)
+@@ -118,6 +133,7 @@ int pth_kill(void)
      pth_thread_cleanup(pth_main);
      pth_scheduler_kill();
      pth_initialized = FALSE;
@@ -72,7 +73,7 @@ $NetBSD: patch-ag,v 1.2 2002/08/25 18:38:45 jlam Exp $
      pth_tcb_free(pth_sched);
      pth_tcb_free(pth_main);
      pth_debug1("pth_kill: leave");
-@@ -182,6 +197,7 @@ static void pth_spawn_trampoline(void)
+@@ -182,6 +198,7 @@ static void pth_spawn_trampoline(void)
      /* no return! */
      abort();
  }
