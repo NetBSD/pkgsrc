@@ -1,0 +1,21 @@
+$NetBSD: patch-bd,v 1.1 1999/05/30 18:18:33 tron Exp $
+
+--- qmgr/Makefile.orig	Sun May 30 18:49:14 1999
++++ qmgr/Makefile	Sun May 30 18:49:14 1999
+@@ -0,0 +1,16 @@
++#	$NetBSD: patch-bd,v 1.1 1999/05/30 18:18:33 tron Exp $
++.include "../conf/main.cf"
++PROG=	qmgr
++BINDIR=${daemon_directory}
++
++SRCS	= qmgr.c qmgr_active.c qmgr_transport.c qmgr_queue.c qmgr_entry.c \
++	qmgr_message.c qmgr_deliver.c qmgr_move.c qmgr_rcpt_list.c \
++	qmgr_defer.c qmgr_enable.c qmgr_scan.c qmgr_bounce.c
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>
