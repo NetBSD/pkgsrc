@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2000/02/08 03:44:18 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2000/02/08 11:37:55 tron Exp $
 
---- ./configure.orig	Wed Nov 24 00:41:27 1999
-+++ ./configure	Tue Feb  8 04:04:41 2000
+--- configure.orig	Wed Nov 24 00:41:27 1999
++++ configure	Tue Feb  8 12:22:00 2000
 @@ -3990,6 +3990,8 @@
  
  SOUND_DRIVERS=""
@@ -19,6 +19,15 @@ $NetBSD: patch-ac,v 1.4 2000/02/08 03:44:18 wiz Exp $
  
  for ac_hdr in dmedia/audio.h
  do
+@@ -5195,7 +5198,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lreadline  $LIBS"
++LIBS="-ledit -ltermcap  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 5201 "configure"
+ #include "confdefs.h"
 @@ -5223,7 +5226,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
