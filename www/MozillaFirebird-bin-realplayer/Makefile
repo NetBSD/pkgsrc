@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2003/09/27 14:13:08 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/22 05:12:45 reed Exp $
 
-DISTNAME= 		phoenix-bin-realplayer-1.0
+DISTNAME= 		MozillaFirebird-bin-realplayer-1.0
 WRKSRC=			${WRKDIR}
 CATEGORIES=		www audio graphics
 MASTER_SITES=		# empty
@@ -11,6 +11,9 @@ COMMENT=		RealAudio and RealVideo player plugin for MozillaFirebird-bin
 
 DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
 DEPENDS+=		realplayer-[0-9]*:../../audio/realplayer
+
+# this package was previously called "phoenix-bin-realplayer"
+CONFLICTS+=		phoenix-bin-realplayer-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
