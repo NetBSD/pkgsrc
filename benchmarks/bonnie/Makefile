@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 1998/12/26 15:59:55 garbled Exp $
+# $NetBSD: Makefile,v 1.13 1999/05/05 16:54:03 bad Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
 DISTNAME=       Bonnie
 PKGNAME=	bonnie-1.0
 CATEGORIES=	benchmarks
-MASTER_SITES=   ftp://ftp.sunet.se/pub/benchmark/Bonnie/
+MASTER_SITES=   ftp://ftp0.sunet.se/pub/benchmark/Bonnie/
 EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=	packages@netbsd.org
