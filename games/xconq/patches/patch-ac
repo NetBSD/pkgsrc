@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2000/08/31 07:26:23 kleink Exp $
+$NetBSD: patch-ac,v 1.3 2000/09/09 01:53:04 wiz Exp $
 
 --- x11/Makefile.in.orig	Mon Jun 19 17:36:18 2000
-+++ x11/Makefile.in	Thu Aug 31 07:57:43 2000
++++ x11/Makefile.in
 @@ -25,10 +25,10 @@
  krnsrcdir = $(srcdir)/../kernel
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.2 2000/08/31 07:26:23 kleink Exp $
  LIB_RUNTIME_DIR = $(libdir)
  TCL = @TCL_LD_SEARCH_FLAGS@ @TCL_LIB_SPEC@
 -TCL_CFLAGS = @TCLHDIR@
-+TCL_CFLAGS = -I$(LOCALBASE)/include/tcl8.0
++TCL_CFLAGS = -I${LOCALBASE}/include
  TCL_DEPS =
  
  TCL_DL_LIBS = @TCL_DL_LIBS@
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.2 2000/08/31 07:26:23 kleink Exp $
  # Tk stuff.
  TK = @TK_LIB_SPEC@
 -TK_CFLAGS = @TKHDIR@ @TK_BUILD_INCLUDES@
-+TK_CFLAGS = -I$(LOCALBASE)/include/tk8.0
++TK_CFLAGS = -I${LOCALBASE}/include @TK_BUILD_INCLUDES@
  TK_DEPS =
  
  X11_CFLAGS = @TK_XINCLUDES@
