@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.17.2.1 2004/11/28 20:11:32 tv Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.17.2.2 2004/11/30 15:06:34 tv Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -96,7 +96,7 @@
 #
 # PTHREAD_AUTO_VARS is "yes" or "no" for whether the values of the variables
 #	PTHREAD_{CFLAGS,CPPFLAGS,LDFLAGS,LIBS} should be automatically added
-#	to their respective variables.  Defaults to "yes".
+#	to their respective variables.  Defaults to "no".
 #
 # _PKG_PTHREAD is the fall-back package pthread implementation use by
 #	pthread.buildlink3.mk.

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.163.2.3 2004/11/28 20:11:32 tv Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.163.2.4 2004/11/30 15:06:35 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -986,8 +986,8 @@ WRAPPER_TRANSFORM_CMDS+=	${_BLNK_TRANSFORM}
 # building software.
 #
 .if defined(USE_LIBTOOL)
-_WRAPPEES+=		LIBTOOL
-_WRAPPEES+=		SHLIBTOOL
+WRAPPEES+=		LIBTOOL
+WRAPPEES+=		SHLIBTOOL
 _LIBTOOL=		${WRAPPER_LIBTOOL}
 _SHLIBTOOL=		${WRAPPER_SHLIBTOOL}
 .endif
