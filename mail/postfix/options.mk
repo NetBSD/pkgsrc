@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2004/08/07 17:02:57 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2004/08/07 17:05:00 jlam Exp $
 
 # Global and legacy options
 #
@@ -67,6 +67,9 @@ PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
 PLIST_SRC+=		${PKGDIR}/PLIST.inet6
 .endif
 
+###
+### STARTTLS support (http://mirrors.loonybin.net/postfix_tls/)
+###
 .if !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
 .  if empty(PKG_OPTIONS:Minet6)
