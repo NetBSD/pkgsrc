@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/09 06:43:58 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/09 19:16:20 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmcrypt.
 #
@@ -17,7 +17,7 @@ LIBMCRYPT_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libmcrypt?=	libmcrypt>=2.2
+BUILDLINK_DEPENDS.libmcrypt?=	libmcrypt>=2.4.17
 DEPENDS+=	${BUILDLINK_DEPENDS.libmcrypt}:../../security/libmcrypt
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libmcrypt=libmcrypt
@@ -26,9 +26,22 @@ BUILDLINK_FILES.libmcrypt=	include/mcrypt.h
 BUILDLINK_FILES.libmcrypt+=	lib/libmcrypt.*
 
 BUILDLINK_TARGETS.libmcrypt=	libmcrypt-buildlink
+BUILDLINK_TARGETS.libmcrypt+=	libmcrypt-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libmcrypt}
+
+BUILDLINK_CONFIG.libmcrypt=	\
+	${BUILDLINK_PREFIX.libmcrypt}/bin/libmcrypt-config
+BUILDLINK_CONFIG_WRAPPER.libmcrypt=	\
+	${BUILDLINK_DIR}/bin/libmcrypt-config
+
+.if defined(USE_CONFIG_WRAPPER)
+LIBMCRYPT_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.libmcrypt}
+CONFIGURE_ENV+=		LIBMCRYPT_CONFIG="${LIBMCRYPT_CONFIG}"
+MAKE_ENV+=		LIBMCRYPT_CONFIG="${LIBMCRYPT_CONFIG}"
+.endif
 
 pre-configure: ${BUILDLINK_TARGETS.libmcrypt}
 libmcrypt-buildlink: _BUILDLINK_USE
+libmcrypt-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 
 .endif	# LIBMCRYPT_BUILDLINK_MK

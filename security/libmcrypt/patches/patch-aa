@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/10/09 19:16:21 jlam Exp $
+
+--- configure.orig	Thu Sep 27 03:41:28 2001
++++ configure
+@@ -4382,8 +4382,6 @@
+     INCLTDL=
+   fi
+ 
+-LIBLTDL_DIR=libltdl
+-
+ cat >>confdefs.h <<\EOF
+ #define USE_LTDL 1
+ EOF
