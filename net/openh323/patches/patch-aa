@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
+
+--- src/Makefile.orig	Thu Aug 24 15:03:47 2000
++++ src/Makefile	Thu Aug 24 15:21:10 2000
+@@ -97,7 +97,7 @@
+ PWLIBDIR=$(HOME)/pwlib
+ endif
+ 
+-include $(PWLIBDIR)/make/unix.mak
++include $(PWLIBDIR)/share/pwlib/make/unix.mak
+ 
+ ifndef OPENH323DIR
+ OPENH323DIR=$(HOME)/openh323
+@@ -322,13 +322,13 @@
+ 
+ ####################################################
+ 
+-include $(PWLIBDIR)/make/common.mak
++include $(PWLIBDIR)/share/pwlib/make/common.mak
+ 
+ ####################################################
+ 
+ LIB_BASENAME	=	$(OH323_FILE)
+ 
+-include $(PWLIBDIR)/make/lib.mak
++include $(PWLIBDIR)/share/pwlib/make/lib.mak
+ 
+ ####################################################
+ 
+@@ -339,8 +339,8 @@
+ ASNPARSE = $(ASNPARSE_DIR)/obj_$(PLATFORM_TYPE)_r/asnparser 
+ ASNPARSE += -x $(ASN_EXCLUDE)
+ else
+-ASNPARSE_DIR = $(PWLIBDIR)/tools/asnparser
+-ASNPARSE = $(ASNPARSE_DIR)/obj_$(PLATFORM_TYPE)_r/asnparser 
++ASNPARSE_DIR = 
++ASNPARSE = ${PREFIX}/bin/asnparser
+ endif
+ 
+ #### h245
