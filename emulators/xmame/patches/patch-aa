@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.21 2000/01/20 18:54:50 soren Exp $
-
---- makefile.unix.orig	Wed Jan 12 00:13:10 2000
-+++ makefile.unix	Thu Jan 20 19:24:51 2000
-@@ -131,14 +131,14 @@
+--- makefile.unix.orig	Fri Mar  3 10:16:40 2000
++++ makefile.unix	Tue Mar 14 12:02:51 2000
+@@ -142,14 +142,14 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
@@ -20,32 +18,19 @@ $NetBSD: patch-aa,v 1.21 2000/01/20 18:54:50 soren Exp $
  
  
  ##############################################################################
-@@ -161,7 +161,9 @@
+@@ -214,7 +214,7 @@
  # JSLIB   = -lXi
  
- # On iX86 based OS's, if supported, you can use standard joystick driver
+ # *** On iX86 based OS's, if supported, you can use standard joystick driver
 -# JSI386 = -DI386_JOYSTICK
-+ifeq (${NETBSD_JOYSTICK},yes)
 +JSI386 = -DI386_JOYSTICK
-+endif
  
- # Linux FM-TOWNS game PAD joystick emulation support
+ # *** Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -181,8 +183,8 @@
- # *** If your system supports query audio buffer size (like IRIX or Linux )
- # you might decide to use these feature. Otherwise, you should use a 
- # timer based audio code.
--S_TIM = -DDONTUSE_TIMER
--# S_TIM = -DUSE_TIMER
-+# S_TIM = -DDONTUSE_TIMER
-+S_TIM = -DUSE_TIMER
- 
- # *** When using timer, you should provide the frequency to generate audio sample
- # frames in your system. See readme.unix notes about these item
-@@ -267,8 +269,10 @@
+@@ -265,8 +265,10 @@
  MSHM	= -DUSE_MITSHM
  
- #if you are running xfree86 and wnat to use DGA, uncomment the following:
+ # *** If you are running xfree86 and wnat to use DGA, uncomment the following:
 -# DGA     = -DUSE_DGA
 -# DGALIBS = -lXxf86dga -lXxf86vm
 +ifeq (${NETBSD_DGA},yes)
@@ -55,7 +40,7 @@ $NetBSD: patch-aa,v 1.21 2000/01/20 18:54:50 soren Exp $
  
  # *** If you have the XIL library (Solaris 2.5.1 and higher), uncomment
  # the following lines:
-@@ -279,8 +283,8 @@
+@@ -278,8 +280,8 @@
  # X11INC		= -I/usr/include/X11
  # X11LIB		= -L/usr/lib/X11
  # standard location for XFree86
@@ -66,56 +51,17 @@ $NetBSD: patch-aa,v 1.21 2000/01/20 18:54:50 soren Exp $
  # for Sun systems
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
-@@ -305,13 +309,12 @@
- ######## Alpha/Linux
- # ARCH  = linux_alpha
- ######## ix86/Linux
--ARCH  = linux_i386
-+# ARCH  = linux_i386
- ######## ix86/FreeBSD and ix86/BSDi
- # ARCH  = FREEBSD
--######## ix86/NetBSD
--# ARCH  = netbsd_i386
--######## Alpha/NetBSD
--# ARCH  = netbsd_alpha
-+######## NetBSD
-+ARCH	= netbsd
-+MACHINE	= $(shell uname -m)
- ######## Sparc/SunOS ( no sound )
- # ARCH  = sunos
- ######## ix86/Solaris
-@@ -362,8 +365,15 @@
- DEFS.linux_alpha   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__ -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
- DEFS.linux_i386    = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
- DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
--DEFS.netbsd_i386   = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
--DEFS.netbsd_alpha  = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
-+ifeq (${MACHINE},i386)
-+DEFS.netbsd	   = -DLSB_FIRST -DX86_ASM -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
-+else
-+ifeq (${MACHINE},alpha)
-+DEFS.netbsd	   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__ -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
-+else
-+DEFS.netbsd	   = -DLSB_FIRST -DDALIGN_INTS -DALIGN_SHORTS -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
-+endif
-+endif
- DEFS.sunos	   = -DCLOCKS_PER_SEC=1000000 -DALIGN_INTS -DALIGN_SHORTS
- DEFS.solaris	   = -DALIGN_INTS -DALIGN_SHORTS
- DEFS.solaris_i386  = -DLSB_FIRST -Dsolaris
-@@ -390,6 +400,7 @@
- LIBS.irix_al       = -laudio
- LIBS.aix           = -lUMSobj
- LIBS.unixware7	   = -lsocket
-+LIBS.netbsd	   = -lm
- 
+@@ -321,11 +323,11 @@
  ##############################################################################
- # **** Architecture dependent cflags. Only change if you know what're you doing...
-@@ -401,6 +412,8 @@
- CFLAGS.next_sparc    = -traditional-cpp
- CFLAGS.macosx_i386   = -traditional-cpp
- CFLAGS.macosx_ppc    = -traditional-cpp
-+CFLAGS.netbsd	     = -fstrength-reduce -funroll-loops -fomit-frame-pointer \
-+							-fno-strict-aliasing
  
- #############################################################################
- # **** Display dependent libs. Only change if you know what're you doing...
+ ### Linux 
+-ARCH  = linux
++# ARCH  = linux
+ ### FreeBSD
+ # ARCH  = freebsd
+ ### NetBSD
+-# ARCH  = netbsd
++ARCH	= netbsd
+ ### Solaris
+ # ARCH  = solaris
+ ### OpenStep
