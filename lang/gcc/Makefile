@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/08/12 01:53:34 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.45 2002/09/09 03:23:06 dmcmahill Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		gcc-2.95.3-diff-2002-08-11.gz
+PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
