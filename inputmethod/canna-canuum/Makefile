@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/09/23 15:06:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/05 19:09:22 minskim Exp $
 #
 .include "../../inputmethod/canna/Makefile.common"
 
@@ -6,7 +6,7 @@ CANNA_MODULE=	canuum
 
 MAINTAINER=	oishi@ims.ac.jp
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
 do-configure:
@@ -33,6 +33,6 @@ post-install:
 	@${INSTALL_MAN} ${WRKSRC}/canuum/canuum.jmn \
 		${PREFIX}/man/ja_JP.EUC/man1/canuum.1
 
-.include "../../devel/nbitools/buildlink2.mk"
-.include "../../inputmethod/canna-lib/buildlink2.mk"
+.include "../../devel/nbitools/buildlink3.mk"
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
