@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/02 21:20:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/26 06:32:47 minskim Exp $
 #
 
 DISTNAME=		gstreamer-0.8.7
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	HAVE_GTK_DOC=no
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
+PYTHON_VERSIONS_ACCEPTED=	24 24pth 23 23pth 22 22pth
 
 .include "../../mk/bsd.prefs.mk"
 
