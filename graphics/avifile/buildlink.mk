@@ -1,0 +1,43 @@
+# $NetBSD: buildlink.mk,v 1.1 2001/06/26 09:56:28 zuntum Exp $
+#
+# This Makefile fragment is included by packages that use avifile.
+#
+# To use this Makefile fragment, simply:
+#
+# (1) Optionally define BUILDLINK_DEPENDS.avifile to the dependency pattern
+#     for the version of avifile desired.
+# (2) Include this Makefile fragment in the package Makefile,
+# (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
+#     search path, and
+# (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
+#     path.
+
+.if !defined(AVIFILE_BUILDLINK_MK)
+AVIFILE_BUILDLINK_MK=	# defined
+
+BUILDLINK_DEPENDS.avifile?=	avifile>=0.53.5
+DEPENDS+=	${BUILDLINK_DEPENDS.avifile}:../../graphics/avifile
+
+BUILDLINK_PREFIX.avifile=	${LOCALBASE}
+BUILDLINK_FILES.avifile=	lib/libaviplay.*
+BUILDLINK_FILES.avifile+=	include/avifile/*
+BUILDLINK_FILES.avifile+=	include/avifile/wine/*
+
+BUILDLINK_TARGETS.avifile=	avifile-buildlink
+BUILDLINK_TARGETS.avifile+=	avifile-buildlink-config-wrapper
+BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.avifile}
+
+BUILDLINK_CONFIG.avifile=	${LOCALBASE}/bin/avifile-config
+BUILDLINK_CONFIG_WRAPPER.avifile=${BUILDLINK_DIR}/bin/avifile-config
+
+.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+CONFIGURE_ENV+=			AVIFILE_CONFIG="${BUILDLINK_CONFIG_WRAPPER.avifile}"
+.endif
+
+pre-configure: ${BUILDLINK_TARGETS.avifile}
+avifile-buildlink: _BUILDLINK_USE
+avifile-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+
+.include "../../mk/bsd.buildlink.mk"
+
+.endif	# AVIFILE_BUILDLINK_MK
