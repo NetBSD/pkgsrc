@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:52 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/01/15 23:52:11 rh Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -17,17 +17,17 @@ ORBIT_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.1
+BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.12
 DEPENDS+=	${BUILDLINK_DEPENDS.ORBit}:../../net/ORBit
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.ORBit=ORBit
 BUILDLINK_PREFIX.ORBit_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.ORBit=	include/IIOP/*
-BUILDLINK_FILES.ORBit+=	include/ORBitservices/*
-BUILDLINK_FILES.ORBit+=	include/ORBitutil/*
-BUILDLINK_FILES.ORBit+=	include/libIDL/*
-BUILDLINK_FILES.ORBit+=	include/orb/*
-BUILDLINK_FILES.ORBit+=	include/orbit-idl2.h
+BUILDLINK_FILES.ORBit+=	include/libIDL-1.0/libIDL/*
+BUILDLINK_FILES.ORBit=	include/orbit-1.0/IIOP/*
+BUILDLINK_FILES.ORBit+=	include/orbit-1.0/ORBitservices/*
+BUILDLINK_FILES.ORBit+=	include/orbit-1.0/ORBitutil/*
+BUILDLINK_FILES.ORBit+=	include/orbit-1.0/orb/*
+BUILDLINK_FILES.ORBit+=	include/orbit-1.0/orbit-idl2.h
 BUILDLINK_FILES.ORBit+=	lib/libIDLConf.sh
 BUILDLINK_FILES.ORBit+=	lib/libIDL.*
 BUILDLINK_FILES.ORBit+=	lib/libIIOP.*
