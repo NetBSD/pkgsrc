@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/06/28 22:23:00 abs Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/29 11:24:51 abs Exp $
 #
 
-DISTNAME=		cpuflags-0.5
+DISTNAME=		cpuflags-0.6
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -20,6 +20,7 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/cpuflags.${OPSYS} ${PREFIX}/bin/cpuflags
+	${INSTALL_DATA} ${FILESDIR}/cpuflags.mk ${PREFIX}/share/mk/cpuflags.mk
 	${INSTALL_MAN} ${FILESDIR}/cpuflags.1 ${PREFIX}/man/man1/cpuflags.1
 
 .include "../../mk/bsd.pkg.mk"
