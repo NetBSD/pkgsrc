@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.7 2004/09/15 17:55:53 minskim Exp $
+
+--- autoconf/configure.in.orig	2003-03-06 20:32:27.000000000 -0600
++++ autoconf/configure.in
+@@ -393,6 +393,7 @@ AC_CHECK_HEADERS( \
+ 	sys/ioctl.h \
+ 	sys/select.h \
+ 	sys/sockio.h \
++	sys/stropts.h \
+ 	sys/strredir.h \
+ 	sys/time.h \
+ 	utmp.h \
