@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/02/22 16:46:34 agc Exp $
+# $NetBSD: Makefile,v 1.52 2001/03/11 23:24:40 dmcmahill Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -19,6 +19,7 @@ SUBDIR+=	linux-locale
 SUBDIR+=	linuxppc_lib
 SUBDIR+=	netbsd32_compat14
 SUBDIR+=	netbsd32_compat15
+SUBDIR+=	osf1_lib
 SUBDIR+=	pcemu
 SUBDIR+=	plex86
 SUBDIR+=	simh
