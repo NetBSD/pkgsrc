@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/30 01:35:07 hubertf Exp $
+
+--- Makefile.BAK	Wed May 17 23:00:20 2000
++++ Makefile	Tue May 30 03:19:32 2000
+@@ -6,8 +6,8 @@
+ CFLAGS = -Wall $(RPM_OPT_FLAGS) 
+ 
+ XLIBS = -lX11 -lXpm -lXext
+-XLIBDIR = -L/usr/X11R6/lib -L/usr/local/lib 
+-XINCLUDEDIRS = -I/usr/X11R6/include -I/usr/local/include 
++XLIBDIR = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++XINCLUDEDIRS = -I${X11BASE}/include
+ 
+ OBJS = xpenguins.o toon.o
+ PROGRAM = xpenguins
+@@ -17,7 +17,7 @@
+ $(PROGRAM): $(OBJS)
+ 	$(CC) $(CFLAGS) $(XLIBDIR) $(XLIBS) $(OBJS) -o $(PROGRAM)
+ 
+-%.o: %.c
++.c.o:
+ 	$(CC) $(CFLAGS) $(XINCLUDEDIRS) -c $<
+ 
+ clean:
