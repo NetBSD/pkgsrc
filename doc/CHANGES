@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4952 2004/02/22 12:30:08 grant Exp $
+$NetBSD: CHANGES,v 1.4953 2004/02/22 16:38:49 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -967,6 +967,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-DBI-Shell-11.9 [minskim 2004-02-22]
 	Added libtcpa-1.1b [schmonz 2004-02-22]
 	Added p5-Perl-Tidy-20021130 [minskim 2004-02-22]
+	Updated pari to 2.1.5nb2 [heinz 2004-02-22]
 	Updated courier-imap to 2.2.1 [jlam 2004-02-22]
 	Updated fxtv to 1.03nb5 [jmmv 2004-02-22]
 	Deleted rdesktop10 [grant 2004-02-22]
+	Updated p5-Compress-Zlib to 1.33 [heinz 2004-02-22]
