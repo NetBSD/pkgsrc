@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.21 2004/04/30 19:45:29 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.22 2004/05/05 14:37:21 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -95,7 +95,7 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775
 ROOT_CMD?=		${SU} - ${ROOT_USER} -c
 ROOT_USER?=		${BINOWN}
-ROOT_GROUP?=		+Administrators
+ROOT_GROUP?=		131616 # +Administrators or native language equivalent
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
