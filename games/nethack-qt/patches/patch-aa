@@ -1,23 +1,6 @@
-$NetBSD: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
+$NetBSD: patch-aa,v 1.2 1998/08/31 08:43:13 matthias Exp $
 --- win/Qt/nhqt.patch.orig	Tue Apr 14 08:40:16 1998
 +++ win/Qt/nhqt.patch	Sat Aug  8 06:42:11 1998
-@@ -1,16 +1 @@
--diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./doc/tmac.n ../qnethack/doc/tmac.n
--*** ./doc/tmac.n	Tue Aug 21 16:42:05 1990
----- ../qnethack/doc/tmac.n	Mon Mar 16 10:01:07 1998
--***************
--*** 1,4 ****
--! \" @(#)$Id: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
--  .\" The News macro package
--  .\"
--  .\" This  is  the macro package that is used to format news documents.  It
----- 1,4 ----
--! \" @(#)$Id: patch-aa,v 1.1 1998/08/27 13:06:51 garbled Exp $
--  .\" The News macro package
--  .\"
--  .\" This  is  the macro package that is used to format news documents.  It
--diff --exclude ? --exclude *.moc --exclude *.orig --exclude *.o --exclude *.bak --exclude *~ --exclude onames.h --exclude date.h -c -r ./include/config.h ../qnethack/include/config.h
- *** ./include/config.h	Tue Dec 10 21:20:07 1996
 @@ -88,3 +73,3 @@
  + # endif
 -+ # ifndef WIN32
