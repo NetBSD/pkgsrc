@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/26 02:27:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4.4.1 2004/07/14 12:39:00 agc Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napache}
 BUILDLINK_PACKAGES+=	apache
 
 .if !empty(APACHE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.apache+=	apache>=2.0.49
-BUILDLINK_RECOMMENDED.apache?=	apache>=2.0.49nb1
+BUILDLINK_DEPENDS.apache+=	apache>=2.0.50
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache2
 BUILDLINK_DEPMETHOD.apache?=	build
 .  if defined(APACHE_MODULE)
