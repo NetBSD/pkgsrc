@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/11/14 01:46:39 explorer Exp $
+# $NetBSD: Makefile,v 1.37 2004/01/20 14:11:50 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -9,6 +9,8 @@ DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
+
+USE_BUILDLINK2=		yes
 
 .include "../../databases/postgresql/Makefile.common"
 

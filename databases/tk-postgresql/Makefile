@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/20 14:11:50 jlam Exp $
 
 PKGNAME=		tk-postgresql-${BASE_VERS}
 PKGREVISION=		1
 COMMENT=		Tk interface to PostgreSQL
 
+USE_BUILDLINK2=		yes
+
 .include "../postgresql/Makefile.common"
 
-USE_X11=		YES
+USE_X11=		yes
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tk
