@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:54 agc Exp $
 
-MD5 (doscmd-19960502-2.tar.gz) = dc3f8a703d821bf7035438df58c961d0
+SHA1 (doscmd-19960502-2.tar.gz) = 85ec8e478d32d0f2861084d6d19186b5e1f0fc95
+Size (doscmd-19960502-2.tar.gz) = 109791 bytes
 SHA1 (patch-aa) = 56e3f9951ac3dcb6e07cd1f76c665286a694d67b
 SHA1 (patch-ab) = c83d7e5b8b514ca7f88b0bd3a0be963b7f77d3a4
 SHA1 (patch-ac) = 09757f9522e52b7491c3052dbb856a9b3828ce45

@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:59 agc Exp $
 
-MD5 (suse64/xshared.rpm) = 33853e5ecabc721de81c5b3f09159e7f
-MD5 (suse64/xpm.rpm) = efcbb77783beaa1212e95f42a991049a
+SHA1 (suse64/xshared.rpm) = e4eb95693bdf100d9fb789318a10c83669a592f6
+Size (suse64/xshared.rpm) = 876496 bytes
+SHA1 (suse64/xpm.rpm) = cc9fdcb4b4ba6d9d114b757984bcd94f90d2b624
+Size (suse64/xpm.rpm) = 155144 bytes

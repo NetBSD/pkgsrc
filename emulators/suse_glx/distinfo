@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:58 agc Exp $
 
-MD5 (suse64/glx.rpm) = 18a3f02cf9bf2d337516fc982c95c274
+SHA1 (suse64/glx.rpm) = cd4042208af439aa990a63852507c8b11752d1e5
+Size (suse64/glx.rpm) = 978087 bytes

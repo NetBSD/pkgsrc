@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:54 agc Exp $
 
-MD5 (freebsd_lib-2.2.7.tar.gz) = eade1f63ea4451979662539526b4fd25
+SHA1 (freebsd_lib-2.2.7.tar.gz) = fb62fba4a442303d80df6820fd20592850fc877e
+Size (freebsd_lib-2.2.7.tar.gz) = 1950770 bytes
