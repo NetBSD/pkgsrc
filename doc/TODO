@@ -1,16 +1,10 @@
-$NetBSD: TODO,v 1.502 2003/04/26 08:35:58 seb Exp $
+$NetBSD: TODO,v 1.503 2003/04/27 00:45:18 rh Exp $
 
 Suggested new packages
 ======================
 
 	any unresolved PRs (if you have commit access)
 	http://www.netbsd.org/Gnats/category/pkg.html
-
-	balsa-2
-	GNOME2 version of balsa
-	http://balsa.gnome.org/
-	[there currently is a balsa2 package in wip,
-        which might be a good starting point]
 
 	figfonts
 	More fonts for figlet.
