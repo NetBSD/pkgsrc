@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/11/26 22:30:15 pooka Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/30 14:04:26 wiz Exp $
 #
 
 DISTNAME=       spruce-0.5.17
 CATEGORIES=	mail
-MASTER_SITES=   ftp://spruce.sourceforge.net/pub/spruce/stable/
+MASTER_SITES=   http://dl.sourceforge.net/spruce/
 
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://spruce.sourceforge.net/
