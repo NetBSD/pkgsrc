@@ -16,3 +16,4 @@ and interesting things with sirc too :)
 
 See /usr/pkg/lib/sirc/README for more usage instructions, and see
 /usr/pkg/lib/sirc/PROGRAMMING for information on how to extend sirc.
+Some example scripts can be found in /usr/pkg/lib/sirc/scripts.

@@ -1,3 +1,20 @@
-$NetBSD: md5,v 1.4 1998/08/07 13:25:12 agc Exp $
+$NetBSD: md5,v 1.5 1998/10/04 01:59:53 hubertf Exp $
 
-MD5 (sirc-2.21.tar.gz) = 09f8b376e773fcf08cddb4235465cc5c
+MD5 (sirc/sirc-2.211.tar.gz) = deff882465928be699a6324a5f788469
+MD5 (sirc/adcc.pl) = 7c41343ab4d5d7605c72bff91a9139e0
+MD5 (sirc/akickban.pl) = aacbc473f0c3f46d34d1381cc8090612
+MD5 (sirc/avoice.pl) = 5a7c523788668886c6f189d25b8d0520
+MD5 (sirc/country.pl) = e3f67baf7f68d59d194af2fb904604e5
+MD5 (sirc/finger.pl) = 67c4e5df4dc1da7ddc905afda9b091fa
+MD5 (sirc/ftp.pl) = d3453d70c5c07b36f6be5a4fd4bce53a
+MD5 (sirc/howl.pl) = e0fcb3d1aad99ff4860766e0394e30d4
+MD5 (sirc/hotmail.pl) = bb8002418de38f7f479677eed97fcfe4
+MD5 (sirc/lastlog.pl) = 9a77e86093bf559013542bd245b3ea32
+MD5 (sirc/nocolor.pl) = 2b8ff233506c5a1c8799b194270b6129
+MD5 (sirc/patattack.pl) = 53327309665c08fba7e5d08afffcb94a
+MD5 (sirc/prefix.pl) = a85ded4b047cd0a2fb02c9a331914545
+MD5 (sirc/quit.pl) = c7f50ffbf4c51c7d0512d0ae2a36a333
+MD5 (sirc/ssfe.diff) = fe2f16ef6cbfca11fe0fbdf0c0f6798d
+MD5 (sirc/winnuke.pl) = 80627a4f56b334b33e09c1ce99df3ce0
+MD5 (sirc/www.pl) = 9ae8735476bb32e643f7473f46825ee4
+MD5 (sirc/yiff.pl) = e0d8f765a183669126b3cecbde279257
