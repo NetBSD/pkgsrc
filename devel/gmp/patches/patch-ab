@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.1 1999/07/16 21:12:57 jlam Exp $
+
+--- mpn/configure.in.orig	Tue Jun  4 01:52:01 1996
++++ mpn/configure.in	Fri Jul 16 17:02:26 1999
+@@ -38,14 +38,25 @@
+   a29k*-*-*) path="am29000" ;;
+ 
+ # Intel x86 configurations
+-  i[34]86*-*-linuxaout* | i[34]86*-*-linuxoldld* | \
+-  i[34]86*-*-*bsd*)			# x86 running BSD or Linux with a.out
++  i[3456]86*-*-*bsd* | pentium-*-*bsd* | pentiumpro-*-*bsd*)
++	if $CC -E - -dM </dev/null | grep -q __ELF__; then
++		echo '#define ELF_SYNTAX' >asm-syntax.h		# ELF
++	else
++		echo '#define BSD_SYNTAX' >asm-syntax.h		# a.out
++	fi
++	echo '#include "'$srcdir'/x86/syntax.h"' >>asm-syntax.h
++	case "${target}" in
++	  i[34]86*-*-*bsd*)
++		path="x86" ;;
++	  i[56]86*-*-*bsd* | pentium-*-*bsd* | pentiumpro-*-*bsd*)
++		path="x86/pentium x86" ;;
++	esac ;;
++  i[34]86*-*-linuxaout* | i[34]86*-*-linuxoldld*) # x86 running Linux with a.out
+ 	echo '#define BSD_SYNTAX' >asm-syntax.h
+ 	echo '#include "'$srcdir'/x86/syntax.h"' >>asm-syntax.h
+ 	path="x86" ;;
+   i[56]86*-*-linuxaout* | pentium-*-linuxaout* | pentiumpro-*-linuxaout* | \
+-  i[56]86*-*-linuxoldld* | pentium-*-linuxoldld* | pentiumpro-*-linuxoldld* | \
+-  i[56]86*-*-*bsd* | pentium-*-*bsd* | pentiumpro-*-*bsd*)
++  i[56]86*-*-linuxoldld* | pentium-*-linuxoldld* | pentiumpro-*-linuxoldld*)
+ 	echo '#define BSD_SYNTAX' >asm-syntax.h
+ 	echo '#include "'$srcdir'/x86/syntax.h"' >>asm-syntax.h
+ 	path="x86/pentium x86" ;;
+@@ -110,10 +121,22 @@
+ case "${target}" in
+   *-*-linuxaout* | *-*-linuxoldld*) config=bsd.h ;;
+   *-sysv* | *-solaris* | *-*-linux*) config="sysv.h" ;;
++  i[3456]86*-*-*netbsd* | pentium-*-*netbsd* | pentiumpro-*-*netbsd*)
++	if $CC -E - -dM </dev/null | grep -q __ELF__; then
++		config="sysv.h"	# ELF
++	else
++		config="bsd.h"	# a.out
++	fi ;;
+   *) config="bsd.h" ;;
+ esac
+ 
+ case "${target}" in
++  i[3456]86*-*-*netbsd* | pentium-*-*netbsd* | pentiumpro-*-*netbsd*)
++	if $CC -E - -dM </dev/null | grep -q __ELF__; then
++		# ELF
++	else
++		target_makefile_frag=config/t-oldgas # a.out
++	fi ;;
+   i[3456]86*-*-*bsd* | i[3456]86*-*-linuxaout* | i[3456]86*-*-linuxoldld* | \
+   pentium-*-*bsd* | pentium-*-linuxaout* | pentium-*-linuxoldld* | \
+   pentiumpro-*-*bsd* | pentiumpro-*-linuxaout* | pentiumpro-*-linuxoldld*)
