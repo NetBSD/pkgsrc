@@ -1,0 +1,58 @@
+$NetBSD: patch-ac,v 1.1 2001/05/14 20:21:19 skrll Exp $
+
+--- pth_high.c.orig	Sat Mar 24 14:49:58 2001
++++ pth_high.c
+@@ -141,8 +141,43 @@
+     return 0;
+ }
+ 
++#ifdef HAVE_SYS_RESOURCE_H
++/* Pth variant of wait4(2) */
++pid_t pth_wait4(pid_t wpid, int *status, int options, struct rusage *rusage)
++{
++    pth_event_t ev;
++    static pth_key_t ev_key = PTH_KEY_INIT;
++    pid_t pid;
++
++    pth_debug2("pth_wait4: called from thread \"%s\"", pth_current->name);
++
++    for (;;) {
++        /* do a non-blocking poll for the pid */
++        while (   (pid = pth_sc(wait4)(wpid, status, options|WNOHANG, rusage)) < 0 
++               && errno == EINTR) ;
++
++        /* if pid was found or caller requested a polling return immediately */
++        if (pid == -1 || pid > 0 || (pid == 0 && (options & WNOHANG)))
++            break;
++
++        /* else wait a little bit */
++        ev = pth_event(PTH_EVENT_TIME|PTH_MODE_STATIC, &ev_key, pth_timeout(0,250000));
++        pth_wait(ev);
++    }
++
++    pth_debug2("pth_wait4: leave to thread \"%s\"", pth_current->name);
++    return pid;
++}
++
+ /* Pth variant of waitpid(2) */
+-pid_t pth_waitpid(pid_t wpid, int *status, int options)
++pid_t pth_waitpid(pid_t wpid, int *status, int options) 
++{
++    return pth_wait4(wpid, status, options, 0);
++}
++
++#else
++/* Pth variant of wait4(2) */
++pid_t pth_waitpid(pid_t wpid, int *status, int options) 
+ {
+     pth_event_t ev;
+     static pth_key_t ev_key = PTH_KEY_INIT;
+@@ -167,6 +202,8 @@
+     pth_debug2("pth_waitpid: leave to thread \"%s\"", pth_current->name);
+     return pid;
+ }
++#endif
++
+ 
+ /* Pth variant of system(3) */
+ int pth_system(const char *cmd)
