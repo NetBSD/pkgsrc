@@ -1,0 +1,11 @@
+--- Python/getversion.c.orig	Tue Apr 13 23:58:15 1999
++++ Python/getversion.c	Tue Apr 13 23:58:22 1999
+@@ -39,7 +39,7 @@
+ Py_GetVersion()
+ {
+ 	static char version[100];
+-	sprintf(version, "%.10s (%.40s) %.40s", PY_VERSION,
++	sprintf(version, "%.10s (%.40s) %.50s", PY_VERSION,
+ 		Py_GetBuildInfo(), Py_GetCompiler());
+ 	return version;
+ }
