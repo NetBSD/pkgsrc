@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/01/24 21:28:10 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/02/16 08:52:59 frueauf Exp $
 bin/screen
 bin/screen-3.7.4
 man/man1/screen.1.gz
@@ -6,3 +6,5 @@ man/man1/screen.1.gz
 info/screen.info
 @exec %D/bin/install-info %D/info/screen.info %D/info/dir
 @unexec if [ -f %D/bin/screen.old ]; then rm -f %D/bin/screen.old ; fi
+share/examples/screen/screenrc
+@dirrm share/examples/screen
