@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:24 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 21:20:37 seb Exp $
 #
 
 DISTNAME=		Math-Pari-2.001804
@@ -16,7 +16,7 @@ DEPENDS+=		pari-[0-9]*:../../math/pari
 # XXX: to use or not to use...
 #DEPENDS+=		gnuplot-[0-9]*:../../graphics/gnuplot
 
-USE_PERL5=		# defined
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Math/Pari/.packlist
 
 # XXX: could be improved...
@@ -27,10 +27,8 @@ post-extract:
 	${RM} -f ${WRKSRC}/pari-*
 	${LN} -sf ${_PKGSRCDIR}/math/pari/${WRKDIR_BASENAME}/pari-* ${WRKSRC}/
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 pre-clean:
 	cd ${_PKGSRCDIR}/math/pari && ${MAKE} clean
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

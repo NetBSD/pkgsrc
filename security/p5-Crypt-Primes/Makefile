@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:41 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/27 21:20:39 seb Exp $
 #
 
 DISTNAME=		Crypt-Primes-0.49
@@ -15,10 +15,8 @@ COMMENT=		perl5 module for provable prime number generation
 DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
 DEPENDS+=		p5-Crypt-Random-[0-9]*:../../security/p5-Crypt-Random
 
-USE_PERL5=		# defined
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/Primes/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/02 11:41:57 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/27 21:20:40 seb Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-0.17
@@ -29,11 +29,9 @@ DEPENDS+=		p5-Crypt-DSA-[0-9]*:../../security/p5-Crypt-DSA
 
 INTERACTIVE_STAGE=	configure # need to select ciphers and digests
 
-USE_PERL5=		# defined
+USE_BUILDLINK2=		YES
 # more than one?
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/OpenPGP/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/25 18:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 21:20:39 seb Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.07
@@ -26,11 +26,10 @@ DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
 DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
-USE_PERL5=	# defined
+USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Template/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL \
-		 TT_PREFIX=${PREFIX}/share/tt2 TT_ACCEPT=y
+MAKE_PARAMS=	TT_PREFIX=${PREFIX}/share/tt2 TT_ACCEPT=y
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

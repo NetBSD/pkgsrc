@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:41 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 21:20:40 seb Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.47
@@ -24,10 +24,8 @@ DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
 DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
 
-USE_PERL5=		# defined
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/RSA/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:14 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/27 21:20:39 seb Exp $
 #
 
 DISTNAME=	GIFgraph-1.20
@@ -15,11 +15,8 @@ COMMENT=	GIFgraph is a package to generate graphs, using GD::Graph
 DEPENDS+=       p5-GDGraph>=1.33:../../graphics/p5-GDGraph
 DEPENDS+=	p5-PerlMagick>=5.3.9:../../graphics/p5-PerlMagick
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GIFgraph/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
