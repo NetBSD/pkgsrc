@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/08/09 10:44:36 seb Exp $
+# $NetBSD: Makefile,v 1.41 2003/10/19 01:41:59 heinz Exp $
 #
 
 DISTNAME=	automake-1.7.6
@@ -27,6 +27,8 @@ TEXINFO_REQD=		4.0
 INFO_FILES=		automake.info
 
 PERL5_REQD=		5.5
+
+TEST_TARGET=		check
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
