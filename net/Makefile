@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2002/04/25 15:20:36 tron Exp $
+# $NetBSD: Makefile,v 1.296 2002/04/28 22:15:48 hubertf Exp $
 #
 
 COMMENT=	Networking tools
@@ -243,6 +243,7 @@ SUBDIR+=	x2vnc
 SUBDIR+=	xarchie
 SUBDIR+=	xipdump
 SUBDIR+=	xmftp
+SUBDIR+=	xnap
 SUBDIR+=	xrmftp
 SUBDIR+=	xspeakfree
 SUBDIR+=	xtraceroute
