@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.1.2.3 2002/06/06 06:37:50 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.1.2.4 2002/06/29 04:29:12 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -12,6 +12,11 @@ ${BUILDLINK_DIR} to normalize the environment in which the software is
 built, but now we tell the configure process the actual installed locations
 of the libraries and headers we are using, and the compiler wrappers will
 munge them into references into ${BUILDLINK_DIR}.
+
+To-do list:
+
+    (*) regression test targets to make sure _BLNK_TRANSFORM_SED is doing
+	what it's supposed to do
 
 Here are some FAQs and answers regarding buildlink2:
 
