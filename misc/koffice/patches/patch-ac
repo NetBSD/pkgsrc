@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.6 2004/11/02 23:32:19 markd Exp $
+
+--- filters/kword/pdf/xpdf/xpdf/Catalog.cc.orig	2004-10-23 20:01:23.000000000 +1300
++++ filters/kword/pdf/xpdf/xpdf/Catalog.cc
+@@ -12,6 +12,7 @@
+ #pragma implementation
+ #endif
+ 
++#include <limits.h>
+ #include <stddef.h>
+ #include "gmem.h"
+ #include "Object.h"
+@@ -63,8 +64,8 @@ Catalog::Catalog(XRef *xrefA) {
+   }
+   pagesSize = numPages0 = obj.getInt();
+   obj.free();
+-  if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize ||
+-      pagesSize*sizeof(Ref)/sizeof(Ref) != pagesSize) {
++  if ((unsigned) pagesSize >= INT_MAX / sizeof(Page *) ||
++      (unsigned) pagesSize >= INT_MAX / sizeof(Ref)) {
+     error(-1, "Invalid 'pagesSize'");
+     ok = gFalse;
+     return;
+@@ -196,8 +197,8 @@ int Catalog::readPageTree(Dict *pagesDic
+       }
+       if (start >= pagesSize) {
+ 	pagesSize += 32;
+-        if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize ||
+-            pagesSize*sizeof(Ref)/sizeof(Ref) != pagesSize) {
++        if ((unsigned) pagesSize >= INT_MAX / sizeof(Page *) ||
++            (unsigned) pagesSize >= INT_MAX / sizeof(Ref)) {
+           error(-1, "Invalid 'pagesSize' parameter.");
+           goto err3;
+         }
