@@ -1,6 +1,14 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.5 2004/01/04 05:01:03 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.6 2004/01/09 05:15:51 grant Exp $
 
 MOZ_VER=	0.7
-DISTNAME=	MozillaFirebird-${MOZ_VER}-i686-pc-linux-gnu
 
+.if defined(MOZILLA_USE_LINUX)
+DISTNAME=	MozillaFirebird-i686-pc-linux-gnu
 MOZ_PLATFORM=	linux
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
+.else
+DISTNAME=	MozillaFirebird-i386-unknown-netbsdelf1.6
+EXTRACT_SUFX=	.tar.bz2
+MOZ_PLATFORM=	netbsd
+ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+.endif
