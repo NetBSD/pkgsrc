@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/27 08:57:57 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/27 11:31:24 rh Exp $
 #
 
 DISTNAME=		bonobo-activation-0.9.7
@@ -16,6 +16,7 @@ USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK_ONLY=	YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../textproc/libxml2/buildlink.mk"
