@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.908 2002/01/21 16:31:42 zuntum Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.909 2002/01/21 17:31:03 zuntum Exp $
 #
 # This file is in the public domain.
 #
@@ -508,7 +508,8 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		CHOWN=${CHOWN:Q}					\
 		MKDIR=${MKDIR:Q}					\
 		RMDIR=${RMDIR:Q}					\
-		TRUE=${TRUE:Q}
+		TRUE=${TRUE:Q}						\
+		QMAILDIR=${QMAILDIR}
 .if defined(PERL5_SITELIB)
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
 .endif
