@@ -1,17 +1,26 @@
-$NetBSD: patch-ak,v 1.6 2001/09/25 12:18:02 wulf Exp $
+$NetBSD: patch-ak,v 1.7 2002/08/10 13:59:35 skrll Exp $
 
---- perl-shared/Makefile.PL.orig	Thu Jul 13 16:22:17 2000
+--- perl-shared/Makefile.PL.orig	Thu Jul 13 22:22:17 2000
 +++ perl-shared/Makefile.PL
-@@ -10,10 +10,10 @@
+@@ -4,16 +4,18 @@ use Config;
+ # the contents of the Makefile that is written.
+ 
+ # Specify the location of the archive containing PIC compiled object files.
++# This is a cheat.
+ my $librrd = "-L../src/.libs/ -lrrd_private"  ;
+ 
+ WriteMakefile(
      'NAME'         => 'RRDs',
      'VERSION_FROM' => 'RRDs.pm', # finds $VERSION
      'DEFINE'	   => "-DPERLPATCHLEVEL=$Config{PATCHLEVEL}",
 -    'INC'          => '-I../src -I../gd1.3',
 +    'INC'          => '-I../src -I${PREFIX}/include',
++    'LIBS'         => "-L@X11BASE@/lib -L@LOCALBASE@/lib -lcgi -lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl",
      # where to look for the necessary libraries 
      # Perl will figure out which one is valid
-     'depend'	   => {'RRDs.c' => "../src/.libs/librrd_private.a"},
+-    'depend'	   => {'RRDs.c' => "../src/.libs/librrd_private.a"},
 -    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -lm"},
-+    'dynamic_lib'  => {'OTHERLDFLAGS' => '-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib '."$librrd -lcgi -lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl"},
++    'depend'	   => {'RRDs.c' => "../src/librrd_private.la"},
++    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd"},
      'realclean'    => {FILES => 't/demo?.rrd t/demo?.gif' }
  );
