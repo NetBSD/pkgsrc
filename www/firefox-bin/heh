@@ -1,0 +1,23 @@
+* Download Manager
+
+The new streamlined download manager keeps your downloads organized without getting in your way. Select Tools > Downloads or press Ctrl+E to see it or change its behavior.
+
+* New Add Bookmark Dialog
+
+The Add Bookmark dialog has been enhanced and now allows the creation of new bookmark folders.
+
+* Work Offline
+
+It's now possible to view Web pages you've previously visited without being connected to the Internet.
+
+* Better Handling of File Types
+
+Binary files (e.g. .wma and .rar files) served by servers incorrectly sending text/plain should no longer be displayed as garbage in the browser, rather they should be appropriately handled.
+
+* New XPInstall Frontend
+
+The dialog that appears when installing themes and extensions has been redesigned and is easier to use.
+
+* Lots of bug fixes and improvements
+
+Disabling of form auto-completion is now working, the address bar now remembers the edited text across tab switching, among many other bug fixes.
