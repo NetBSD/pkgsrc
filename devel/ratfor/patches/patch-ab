@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/13 00:30:08 jtb Exp $
 
 --- ratfor.man.orig	Sun Feb 14 02:05:24 1999
 +++ ratfor.man
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
 +.Os
 +.Sh NAME
 +.Nm ratfor
-+.Nd a public domain Ratfor preprocessor for Fortran 77
++.Nd a A Preprocessor for the Ratfor dialect of Fortran
 +.Sh SYNOPSIS
 +.Nm
 +.Op Fl l Ar n
@@ -62,7 +62,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
  
          <       .lt.    <=      .le.
          ==      .eq.
-@@ -42,39 +50,55 @@
+@@ -42,39 +50,56 @@
          >=      .ge.    >       .gt.
          |       .or.    &       .and.
          !       .not.   ^       .not.   ~       .not.
@@ -121,6 +121,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
 +.Pp
 +.Sh SEE ALSO
 +.Xr f77 1 ,
++.Xr f2c 1
 +.Pp
 +.Sh HISTORY
 +Derived from a preprocessor distributed by the University of Arizona
@@ -137,4 +138,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:36:53 jtb Exp $
 +.Pp
 +.Sh COPYING
 +This code is in the public domain. In other words, all rights
-+are granted to all recipients, "public" at large.
++are granted to all recipients, the public at large.
