@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2001/08/29 22:41:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/14 15:07:01 wiz Exp $
 #
 
-DISTNAME=	blackbox-0.61.1
+DISTNAME=	blackbox-0.62.1
 CATEGORIES=	x11 wm
-MASTER_SITES=	ftp://portal.alug.org/pub/blackbox/0.6x.x/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
-MAINTAINER=	carneous@carneous.net
-HOMEPAGE=	http://blackbox.alug.org/
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	small and fast X11R6 window manager
 
 USE_BUILDLINK_ONLY=	yes
