@@ -1,27 +1,24 @@
-# $NetBSD: Makefile,v 1.19 2001/11/29 01:12:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2002/06/30 15:31:15 jlam Exp $
 #
 
-DISTNAME=		mod_perl-1.25
-PKGNAME=		ap-perl-1.25
-PKGREVISION=		1
-CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
-			http://perl.apache.org/dist/
+DISTNAME=	mod_perl-1.25
+PKGNAME=	ap-perl-1.25
+PKGREVISION=	1
+CATEGORIES=	www perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/} \
+		http://perl.apache.org/dist/
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://perl.apache.org/
-COMMENT=		Module that embeds a Perl interpreter into Apache
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://perl.apache.org/
+COMMENT=	Module that embeds a Perl interpreter into Apache
 
-DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
-DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
-DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
+DEPENDS+=	{perl>=5.8.0rc2,libperl>=${LIBPERL5_REQD}}:../../lang/libperl
+DEPENDS+=	p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+APACHE_MODULE=		YES
 LIBPERL5_REQD=		${PERL5_REQD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
-
-REPLACE_BUILDLINK=	blib/lib/Apache/MyConfig.pm
-REPLACE_BUILDLINK_SED=	-e "s|${APXS}|${PREFIX}/sbin/apxs|g"
 
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
@@ -35,10 +32,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
-.include "../../lang/perl5/buildlink.mk"
-.include "../../www/apache/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
 
 .if exists(${PERL5_ARCHLIB}/DynaLoader_pic.o)
-MAKE_ENV+=		DYNALOADER_OBJ_PIC="${PERL5_ARCHLIB}/DynaLoader_pic.o"
+DYNALOADER_OBJ_PIC=	${PERL5_ARCHLIB}/DynaLoader_pic.o
+.elif ${OPSYS} == "NetBSD"
+DYNALOADER_OBJ_PIC=	${PERL5_ARCHLIB}/auto/DynaLoader/DynaLoader.a
 .endif
+MAKE_ENV+=	DYNALOADER_OBJ_PIC="${DYNALOADER_OBJ_PIC}"
