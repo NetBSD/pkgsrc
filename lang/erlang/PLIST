@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/29 23:47:45 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/12 01:41:53 jmc Exp $
 bin/ear
 bin/ecc
 bin/elink
@@ -2353,8 +2353,6 @@ lib/erlang/lib/orber-3.4/include/oe_CORBA.hrl
 lib/erlang/lib/orber-3.4/include/oe_OrberIFR.hrl
 lib/erlang/lib/orber-3.4/include/oe_erlang.hrl
 lib/erlang/lib/orber-3.4/include/orber_pi.hrl
-lib/erlang/lib/orber-3.4/java_src/Orber/InitialReference.java
-lib/erlang/lib/orber-3.4/priv/Orber/InitialReference.class
 lib/erlang/lib/orber-3.4/priv/bin/obj_init_port
 lib/erlang/lib/orber-3.4/priv/blank.html
 lib/erlang/lib/orber-3.4/priv/include/InitialReference.hh
@@ -3176,10 +3174,7 @@ lib/erlang/usr/include/obsolete/driver.h
 @dirrm lib/erlang/lib/orber-3.4/priv/lib
 @dirrm lib/erlang/lib/orber-3.4/priv/include
 @dirrm lib/erlang/lib/orber-3.4/priv/bin
-@dirrm lib/erlang/lib/orber-3.4/priv/Orber
 @dirrm lib/erlang/lib/orber-3.4/priv
-@dirrm lib/erlang/lib/orber-3.4/java_src/Orber
-@dirrm lib/erlang/lib/orber-3.4/java_src
 @dirrm lib/erlang/lib/orber-3.4/include
 @dirrm lib/erlang/lib/orber-3.4/examples/Stack
 @dirrm lib/erlang/lib/orber-3.4/examples
