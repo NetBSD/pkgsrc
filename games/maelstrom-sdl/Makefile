@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/11 13:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/27 19:06:57 jlam Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -11,7 +11,9 @@ HOMEPAGE=	http://www.devolution.com/~slouken/Maelstrom/
 COMMENT=	Incredible, fast moving, high resolution version of asteroids (SDL version)
 
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
-USE_BUILDLINK_ONLY=	YES
+
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 
 post-install:
@@ -20,7 +22,7 @@ post-install:
 		${PREFIX}/share/Maelstrom/Images/Makefile \
 		${PREFIX}/share/Maelstrom/Images/Makefile.in
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../net/SDL_net/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
+.include "../../net/SDL_net/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

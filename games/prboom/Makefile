@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/20 12:56:45 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/27 19:08:32 jlam Exp $
 #
 
 DISTNAME=	prboom-2.2.2
@@ -9,10 +9,10 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://prboom.sourceforge.net/
 COMMENT=	multiplayer-capable and modified version of ID's classic doom game
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 #CONFIGURE_ARGS+=	--enable-gl
 
-.include "../../net/SDL_net/buildlink.mk"
+.include "../../net/SDL_net/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
