@@ -1,0 +1,3 @@
+# $NetBSD: config.cache,v 1.1 1999/12/30 09:58:16 fredb Exp $
+
+ac_cv_lib_pthread_pthread_create=${ac_cv_lib_pthread_pthread_create='no'}
