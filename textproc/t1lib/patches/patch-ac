@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 1999/12/02 21:19:13 fredb Exp $
+$NetBSD: patch-ac,v 1.5 2000/05/08 17:23:48 drochner Exp $
 
---- lib/Makefile.in.orig	Sun Oct 24 04:57:22 1999
-+++ lib/Makefile.in	Thu Dec  2 14:44:58 1999
+--- lib/Makefile.in.orig	Sun Jan 23 08:03:45 2000
++++ lib/Makefile.in	Sat Apr 29 10:23:49 2000
 @@ -15,7 +15,7 @@
  #
  # Modified by H.Kakugawa to use libtool
@@ -11,18 +11,22 @@ $NetBSD: patch-ac,v 1.4 1999/12/02 21:19:13 fredb Exp $
  SHELL     = /bin/sh
  CC        = @CC@
  CPP       = @CPP@
-@@ -162,13 +162,13 @@
+@@ -160,17 +160,17 @@
+ install: dummy
+ 	$(MKINSTALLDIRS) $(libdir)
+ 	$(MKINSTALLDIRS) $(includedir)
+-	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
++#	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
+ 	$(LIBTOOL) --mode=install \
  		$(INSTALL_DATA) $(MAIN_TARGET) $(libdir)
  	$(LIBTOOL) --mode=install \
  		$(INSTALL_DATA) $(MAIN_HEADER) $(includedir)
--	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
 -	if (test -f @T1LIB_DATA_DIR@/t1lib.config) \
 -	then \
 -	  echo "Alert: Global configuration file exists, installation skipped!"; \
 -	else \
 -	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config @T1LIB_DATA_DIR@; \
 -	fi;
-+#	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
 +#	if (test -f @T1LIB_DATA_DIR@/t1lib.config) \
 +#	then \
 +#	  echo "Alert: Global configuration file exists, installation skipped!"; \
