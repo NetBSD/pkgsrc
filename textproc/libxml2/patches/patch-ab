@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/24 16:59:03 wiz Exp $
 
---- Makefile.in.orig	Thu Jun 28 15:57:27 2001
-+++ Makefile.in	Thu Jun 28 15:57:54 2001
-@@ -213,7 +213,7 @@
- @WITH_TRIO_SOURCES_FALSE@HTMLparser.lo HTMLtree.lo debugXML.lo xpath.lo \
- @WITH_TRIO_SOURCES_FALSE@xpointer.lo xinclude.lo nanohttp.lo nanoftp.lo \
- @WITH_TRIO_SOURCES_FALSE@DOCBparser.lo catalog.lo
+--- Makefile.in.orig	Wed Aug 15 14:26:06 2001
++++ Makefile.in
+@@ -223,7 +223,7 @@
+ bin_PROGRAMS =  xmllint$(EXEEXT)
+ noinst_PROGRAMS =  testSAX$(EXEEXT) testHTML$(EXEEXT) testXPath$(EXEEXT) \
+ testURI$(EXEEXT) testDocbook$(EXEEXT) testCatalog$(EXEEXT)
 -PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
 +PROGRAMS =
  
- xmllint_OBJECTS =  xmllint.o
- testSAX_OBJECTS =  testSAX.o
+ xmllint_OBJECTS =  xmllint.$(OBJEXT)
+ testSAX_OBJECTS =  testSAX.$(OBJEXT)

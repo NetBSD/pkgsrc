@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/08/17 21:14:15 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/08/24 16:59:01 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libxml2.
 #
@@ -17,7 +17,7 @@ LIBXML2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libxml2?=	libxml2>=2.3.12
+BUILDLINK_DEPENDS.libxml2?=	libxml2>=2.4.2
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml2}:../../textproc/libxml2
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libxml2=libxml2
