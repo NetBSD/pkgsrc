@@ -1,20 +1,18 @@
-#! /bin/sh
+#!@SH@
 #
-# $NetBSD: squid.sh,v 1.13 2002/03/18 21:27:00 tron Exp $
+# $NetBSD: squid.sh,v 1.14 2002/09/15 14:39:51 grant Exp $
 #
 
 # PROVIDE: squid
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-SQUID_CONF_DIR="@PREFIX@/etc/squid"
-
-conf_file="${SQUID_CONF_DIR}/squid.conf"
+conf_file="@PKG_SYSCONFDIR@/squid.conf"
 
 name="squid"
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="${conf_file} ${SQUID_CONF_DIR}/mime.conf"
+required_files="${conf_file} @PKG_SYSCONFDIR@/mime.conf"
 command_args="-Y -f $conf_file"
 
 start_cmd="${command} ${command_args}"
