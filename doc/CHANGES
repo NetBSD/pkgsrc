@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9689 2005/03/30 12:12:45 adam Exp $
+$NetBSD: CHANGES,v 1.9690 2005/03/30 13:51:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1826,3 +1826,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnucash to 1.8.11nb2 [wiz 2005-03-30]
 	Updated sudo to 1.6.8pl7 [cube 2005-03-30]
 	Updated net-snmp to 5.2.1 [adam 2005-03-30]
+	Updated efax-gtk to 2.2.15 [adam 2005-03-30]
