@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/30 21:37:02 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/02 02:58:21 tsarna Exp $
 #
 
 DISTNAME=	Zope-2.1.1-src
 PKGNAME=	py-extclass-2.1.1
-CATEGORIES=	www
+CATEGORIES=	lang
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.1/
 EXTRACT_SUFX=	.tgz
 
@@ -38,5 +38,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PYTHON_LIBDIR}/extclass_doc ; \
 	${INSTALL_DATA} *.txt *.stx ${PYTHON_LIBDIR}/extclass_doc)
 	
-
 .include "../../mk/bsd.pkg.mk"
