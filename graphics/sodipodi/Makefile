@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/03/08 19:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/28 21:02:55 xtraeme Exp $
 #
 
-DISTNAME=	sodipodi-0.33
-PKGREVISION=	3
+DISTNAME=	sodipodi-0.34
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
@@ -13,7 +12,7 @@ COMMENT=	Open source vector graphics drawing program using SVG as native format
 DEPENDS+=	gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
@@ -29,9 +28,9 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
