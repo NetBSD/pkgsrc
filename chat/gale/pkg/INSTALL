@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/02/05 22:34:43 lukem Exp $
+# $NetBSD: INSTALL,v 1.2 2001/02/08 23:13:16 lukem Exp $
 
 USER=@GALE_USER@
 GROUP=@GALE_GROUP@
@@ -35,7 +35,7 @@ if [ $? -eq 0 ]
 then
 	echo "Creating '${USER}' user..."
 	${ADDUSER} \
-		-c "Network UPS Tools" \
+		-c "Gale instant messaging system" \
 		-d /var/${USER} \
 		-g ${GROUP} -s /bin/sh -m ${USER}
 	echo "Done."
