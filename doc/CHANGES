@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1768 2003/03/25 14:13:54 salo Exp $
+$NetBSD: CHANGES,v 1.1769 2003/03/25 16:50:23 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpdf-latin2 to 20021022nb1 [salo 2003-03-25]
 	Updated xpdf-thai to 20020116 [salo 2003-03-25]
 	Updated xpdf-turkish to 20020410 [salo 2003-03-25]
+	Updated cvsync to 0.15.2 [gehenna 2003-03-25]
