@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4847 2004/02/15 21:52:07 minskim Exp $
+$NetBSD: CHANGES,v 1.4848 2004/02/15 22:27:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nsd to 2.0.0 [itojun 2004-02-15]
 	Updated urlget to 1.4 [kim 2004-02-15]
 	Added py-ao-0.81 [minskim 2004-02-15]
+	Added py-mad-0.5.1 [minskim 2004-02-15]
