@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/09 17:40:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/05 15:30:42 hubertf Exp $
 
 DISTNAME=	xwatchwin
 PKGNAME=	xwatchwin-1.1.1
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://sunsite.uio.no/pub/X11/contrib/utilities/
 MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	
 
-ONLY_FOR_PLATFORM=	SunOS-*-*	# not tested on NetBSD yet
 PLIST_SRC=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 USE_X11BASE=	yes
