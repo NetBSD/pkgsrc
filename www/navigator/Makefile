@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/06/25 00:09:23 abs Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/27 00:23:21 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -81,6 +81,7 @@ do-install:
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${PKGNAME}
+	${LN} -sf ${PKGNAME} ${PREFIX}/bin/navigator
 
 .if (${MACHINE_ARCH} == "sparc")
 	# Bizarre magic to handle the NIS and DNS versions. Make DNS default.
