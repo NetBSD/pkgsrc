@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2004/11/25 12:59:21 adam Exp $
+$NetBSD: patch-af,v 1.8 2005/02/22 14:02:31 adam Exp $
 
 --- liboctave/Makefile.in.orig	2004-11-12 05:34:57.000000000 +0000
 +++ liboctave/Makefile.in
@@ -21,7 +21,7 @@ $NetBSD: patch-af,v 1.7 2004/11/25 12:59:21 adam Exp $
 -	  $(INSTALL_DATA) liboctave.$(LIBEXT) \
 -	    $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
 -	  $(RANLIB) $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
-+	  ${LIBTOOL} --mode=install $(INSTALL_DATA) liboctave.$(LIBEXT) \
++	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} liboctave.$(LIBEXT) \
 +	    ${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
