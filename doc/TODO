@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.410 2003/03/22 06:47:53 wiz Exp $
+$NetBSD: TODO,v 1.411 2003/03/22 15:09:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -155,7 +155,7 @@ Suggested package updates
 	o lbreakout2-2.4.1 [pkg/20684]
 	o lcms-1.0.9
 	o lesstif-0.93.41
-	o libgii-0.8.2
+	o libgii-0.8.3
 	o libggi-2.0.3
 	o libole2-2.2.8
 	o libpcap-0.7.2
