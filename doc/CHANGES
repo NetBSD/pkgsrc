@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1830 2003/04/03 08:30:50 wiz Exp $
+$NetBSD: CHANGES,v 1.1831 2003/04/03 11:51:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated prboom to 2.2.3nb2 [wiz 2003-04-03]
 	Updated tuxracer to 0.61nb1 [wiz 2003-04-03]
 	Updated tuxpaint to 0.9.10nb1 [wiz 2003-04-03]
+	Updated nbtscan to 1.5 [wiz 2003-04-03]
