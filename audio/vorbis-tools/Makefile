@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/04/12 23:15:02 salo Exp $
+# $NetBSD: Makefile,v 1.32 2004/07/23 15:49:46 wiz Exp $
 
 DISTNAME=	vorbis-tools-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.vorbis.com/files/1.0.1/unix/
 
