@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.5 2004/02/14 07:45:36 jlam Exp $
+
+--- aclocal.m4.orig	Mon Dec  1 08:35:02 2003
++++ aclocal.m4
+@@ -2905,7 +2905,10 @@ AC_DEFUN([SASL_GSSAPI_CHK],[
+   AC_MSG_RESULT(with implementation ${gss_impl})
+   AC_CHECK_LIB(resolv,res_search,GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lresolv")
+   SASL_MECHS="$SASL_MECHS libgssapiv2.la"
+-  SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
++  if test "$enable_static" = yes; then
++    SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
++    AC_DEFINE(STATIC_GSSAPIV2, [], [Link GSSAPI Staticly])
++  fi
+ 
+   cmu_save_LIBS="$LIBS"
+   LIBS="$LIBS $GSSAPIBASE_LIBS"
