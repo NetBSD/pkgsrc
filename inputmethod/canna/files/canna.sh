@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: canna,v 1.1 2003/05/31 07:24:40 uebayasi Exp $
+# $NetBSD: canna.sh,v 1.1 2003/07/29 19:42:53 jmmv Exp $
 #
 # PROVIDE: canna
 # REQUIRE: DAEMON

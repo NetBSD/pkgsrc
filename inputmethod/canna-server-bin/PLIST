@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/31 08:28:35 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/29 19:42:54 jmmv Exp $
 bin/addwords
 bin/canlisp
 bin/cannacheck
@@ -74,7 +74,3 @@ man/man1/splitword.1
 man/man1/wtoc.1
 sbin/cannakill
 sbin/cannaserver
-@exec ${MKDIR} ${CANNA_SPOOL}
-@exec ${CHOWN} ${CANNA_OWNER}:${CANNA_GROUP} ${CANNA_SPOOL}
-@exec ${CHMOD} ${CANNA_MODE} ${CANNA_SPOOL}
-@unexec ${RMDIR} ${CANNA_SPOOL}
