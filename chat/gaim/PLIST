@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2004/12/03 12:43:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.36.2.1 2005/03/19 15:11:07 salo Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -123,6 +123,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/my_MM/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
@@ -132,10 +133,12 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim.mo
