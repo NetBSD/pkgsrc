@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/04 16:58:16 recht Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/06 16:36:00 jmmv Exp $
 #
 
 DISTNAME=	icu-2.8
@@ -40,6 +40,24 @@ SUPPORT_FILES+=		${CONVRTRS_EG} ${PKG_SYSCONFDIR}/convrtrs.txt
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
 CONFIGURE_ARGS+=	--disable-threads
+.endif
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+PLIST_SUBST+=		MH_NAME=mh-bsd-gcc
+.elif ${OPSYS} == "Linux"
+PLIST_SUBST+=		MH_NAME=mh-linux
+.elif ${OPSYS} == "SunOS"
+.  if !empty(CC_VERSION:Mgcc*)
+PLIST_SUBST+=		MH_NAME=mh-solaris-gcc
+.  else
+PLIST_SUBST+=		MH_NAME=mh-solaris
+.  endif
+.elif ${OPSYS} == "IRIX"
+PLIST_SUBST+=		MH_NAME=mh-irix
+.else
+# For unknown systems, set the filename to mh-unknown so that the user
+# gets a warning about missing files.
+PLIST_SUBST+=		MH_NAME=mh-unknown
 .endif
 
 post-install:
