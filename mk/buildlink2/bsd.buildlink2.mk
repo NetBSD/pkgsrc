@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.18 2002/09/07 07:33:14 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.19 2002/09/16 19:55:56 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -667,6 +667,7 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e "s|@CP@|${CP:Q}|g"					\
 		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
 		-e "s|@ECHO@|${ECHO:Q}|g"				\
+		-e "s|@EGREP@|${EGREP:Q}|g"				\
 		-e "s|@MV@|${MV:Q}|g"					\
 		-e "s|@RM@|${RM:Q}|g"					\
 		-e "s|@SED@|${SED:Q}|g"					\
