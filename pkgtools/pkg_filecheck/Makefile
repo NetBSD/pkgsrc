@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/14 11:45:09 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/14 12:27:57 dillo Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -32,7 +32,8 @@ do-build:
 		> ${WRKSRC}/${f}
 .endfor
 	cd ${WRKSRC} \
-	    && ${CC} ${CFLAGS} ${LDFLAGS} -o pkg_filecheck pkg_filecheck.c \
+	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
+		-o pkg_filecheck pkg_filecheck.c \
 		${BUILDLINK_LIBS.db}
 
 do-install:
