@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/29 19:13:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 23:16:38 wiz Exp $
 bin/BitchX
 bin/BitchX-1.0c17
 bin/scr-bx

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/15 23:20:02 wiz Exp $
 #
 
+    SUBDIR += bitchx
     SUBDIR += gaim
     SUBDIR += icb
     SUBDIR += icqlib
