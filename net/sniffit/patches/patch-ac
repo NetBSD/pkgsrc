@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2002/03/13 08:20:19 jmc Exp $
+$NetBSD: patch-ac,v 1.6 2002/04/04 15:28:24 cjep Exp $
 
---- sn_data.h.orig	Fri Apr 18 09:33:58 1997
-+++ sn_data.h	Wed Mar 13 08:17:30 2002
-@@ -25,6 +25,27 @@
+--- sn_data.h.orig	Fri Apr 18 10:33:58 1997
++++ sn_data.h	Thu Apr  4 16:20:36 2002
+@@ -25,6 +25,31 @@
  char *ETH_DEV[]={"ed"};
  #endif
  
@@ -22,6 +22,10 @@ $NetBSD: patch-ac,v 1.5 2002/03/13 08:20:19 jmc Exp $
 +#elif defined(__powerpc__)
 +#define ETH_DEV_NR	17
 +char *ETH_DEV[]={"de", "fpa", "ep", "epic", "ex", "fxp", "lmc", "ne", "rtk", "sip", "tlp", "gm", "bm", "mc", "mbe", "awi", "wi"};
++#elif defined(__arm__)
++#define ETH_DEV_NR 18
++/* XXX This list may not be complete; cs tested on a DNARD	*/
++char *ETH_DEV[]={"cs", "de", "ea", "eb", "en", "ep", "ex", "fpa", "fxp", "ie", "le", "lmc", "ne", "rtk", "sip", "tl", "tlp", "vr"};
 +#else
 +#error Unknown network devices for this NetBSD architecture.
 +#endif
