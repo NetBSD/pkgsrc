@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2000/11/07 04:39:13 rh Exp $
+# $NetBSD: Makefile,v 1.54 2000/11/25 18:08:46 rh Exp $
 
-DISTNAME=		gnome-core-1.2.3
+DISTNAME=		gnome-core-1.2.4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 
@@ -12,19 +12,19 @@ DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
 DEPENDS+=		libxml-*:../../textproc/libxml
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
 
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
-USE_PERL5=		# defined
+USE_PERL5=		YES
 PERL_SCRIPTS=		help-browser/gnome-convert help-browser/gnome-download
 
 post-patch:
