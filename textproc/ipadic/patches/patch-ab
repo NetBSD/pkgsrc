@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:53 seb Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/06 13:34:19 taca Exp $
 
---- configure.orig	Fri Mar 23 02:51:03 2001
+--- configure.orig	2003-11-15 15:54:10.000000000 +0900
 +++ configure
-@@ -1059,7 +1059,7 @@
- CHASEN_GENDATA="matrix.cha table.cha chadic.int chadic.pat chadic.ary"
+@@ -1793,7 +1793,7 @@ CHASEN_MANUAL_FILES="INSTALL-ja doc/ipad
+ CHASEN_GENDATA="matrix.cha table.cha chadic.da chadic.lex chadic.dat"
  
  
--CHASEN_PREDATA="grammar.cha ctypes.cha cforms.cha chasenrc connect.cha Makefile.bat" 
-+CHASEN_PREDATA="grammar.cha ctypes.cha cforms.cha connect.cha" 
+-CHASEN_PREDATA="grammar.cha ctypes.cha cforms.cha chasenrc connect.cha Makefile.bat"
++CHASEN_PREDATA="grammar.cha ctypes.cha cforms.cha connect.cha"
  
  
- trap '' 1 2 15
+ ac_config_files="$ac_config_files Makefile chasenrc ipadic.spec version.cha doc/Makefile"
