@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2002/11/26 21:42:48 skrll Exp $
+# $NetBSD: Makefile,v 1.54 2002/12/10 15:09:43 drochner Exp $
 #
 
 DISTNAME=		pth-1.4.1
@@ -18,6 +18,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--with-fdsetsize=1024
+#CONFIGURE_ARGS+=	--enable-debug
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
