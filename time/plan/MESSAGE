@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:19:12 zuntum Exp $
+
+You can use one of the ${X11BASE}/share/plan/holiday/holiday_* files
+as example for your ~/.holiday. See `man plan` for details.
+
+======================================================================

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1999/06/03 10:29:52 agc Exp $
-bin/rc
-bin/-
-bin/--
-bin/-p
-bin/--p
-man/man1/history.1.gz
-man/man1/rc.1.gz
