@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1179 2003/05/04 02:59:15 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1180 2003/05/11 07:06:23 jmc Exp $
 #
 # This file is in the public domain.
 #
@@ -2663,11 +2663,21 @@ undo-replace: uptodate-pkgtools real-undo-replace
 .endif
 
 ${EXTRACT_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
+	@${ECHO} "*** The extract stage of this package requires user interaction"
+	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
+.endif
+
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
+
 ${BUILDLINK_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink
+
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
