@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1998/10/22 07:01:48 hubertf Exp $
+$NetBSD: md5,v 1.5 2000/03/03 15:22:19 scw Exp $
 
-MD5 (cdrecord-1.6.1.tar.gz) = c0abc4741f1477515c2e8286686e0fc9
+MD5 (cdrecord-1.8.tar.gz) = ec22b0b1d9a7da2976dee40d2f2cb9e7
