@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/08/09 10:44:50 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/10/28 00:40:38 wiz Exp $
 #
 
 DISTNAME=	vcdimager-0.7.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/vcdimager/
 
@@ -18,5 +18,5 @@ LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 INFO_FILES=	vcdimager.info
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-
+.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
