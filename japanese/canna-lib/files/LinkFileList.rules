@@ -1,0 +1,20 @@
+XCOMM $NetBSD: LinkFileList.rules,v 1.1 2002/04/04 16:03:17 uebayasi Exp $
+
+/*
+ * Old LinkFileList definition necessary to compile Canna on XFree86 4.2.
+ */
+
+#ifdef LinkFileList
+#undef LinkFileList
+#endif
+
+/*
+ * LinkFileList - link a list of files from one place to another
+ */
+#ifndef LinkFileList
+#define LinkFileList(step,list,dir,sub)					@@\
+step:: list								@@\
+	@MakeFlagsToShellFlags(i,set +e); \				@@\
+	echo "  cd" dir; cd dir && \					@@\
+	for i in list; do (set -x; RemoveFile($$i); $(LN) sub/$$i .); done
+#endif
