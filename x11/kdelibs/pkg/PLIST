@@ -1,20 +1,30 @@
-@comment $NetBSD: PLIST,v 1.6 1998/04/28 22:53:01 tron Exp $
-lib/libkdecore.so.0.91
+@comment $NetBSD: PLIST,v 1.7 1998/07/13 20:33:48 tron Exp $
+lib/libkdecore.so.1.0
 lib/libkdecore.la
-lib/libkdeui.so.0.91
+lib/libkdeui.so.1.0
 lib/libkdeui.la
 lib/libjscript.so.0.90
 lib/libjscript.la
-lib/libkhtmlw.so.0.91
+lib/libkhtmlw.so.1.0
 lib/libkhtmlw.la
-lib/libkfile.so.0.90
+lib/libkfile.so.1.0
 lib/libkfile.la
-lib/libkfm.so.0.90
+lib/libkfm.so.1.0
 lib/libkfm.la
-lib/libmediatool.so.0.91
+lib/libmediatool.so.1.0
 lib/libmediatool.la
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
+include/kpixmap.h
+include/kled.h
+include/kcontainer.h
+include/ktoolboxmgr.h
+include/kdbtn.h
+include/knotebook.h
+include/ktabbar.h
+include/kwizard.h
+include/kfilesimpleview.h
+include/kde.pot
 include/kcharsets.h
 include/kstring.h
 include/keditcl.h
@@ -106,6 +116,10 @@ include/kcombiview.h
 include/kpreview.h
 include/xview.h
 include/kfilepreview.h
+share/apps/kde/pics/arrow_up.xbm
+share/apps/kde/pics/arrow_down.xbm
+share/apps/kde/pics/arrow_left.xbm
+share/apps/kde/pics/arrow_right.xbm
 share/apps/kde/pics/error.xpm
 share/apps/kde/pics/exclamation.xpm
 share/apps/kde/pics/info.xpm
@@ -113,7 +127,26 @@ share/apps/kde/pics/stopsign.xpm
 share/apps/kde/pics/question.xpm
 share/apps/khtmlw/pics/khtmlw_dnd.xpm
 share/config/charsets
+share/doc/HTML/en/kfiledialog/back.gif
+share/doc/HTML/en/kfiledialog/bottom.gif
+share/doc/HTML/en/kfiledialog/exec.gif
+share/doc/HTML/en/kfiledialog/flag.gif
+share/doc/HTML/en/kfiledialog/forward.gif
+share/doc/HTML/en/kfiledialog/home.gif
+share/doc/HTML/en/kfiledialog/idea.gif
+share/doc/HTML/en/kfiledialog/index.html
+share/doc/HTML/en/kfiledialog/reload.gif
+share/doc/HTML/en/kfiledialog/toolbar-h.gif
+share/doc/HTML/en/kfiledialog/toolbar.gif
+share/doc/HTML/en/kfiledialog/up.gif
+share/doc/HTML/en/kfiledialog/viewmag.gif
 share/doc/HTML/en/kdelibs/kdebug.html
+share/locale/zh_TW.Big5/LC_MESSAGES/kde.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kde.mo
+share/locale/sl/LC_MESSAGES/kde.mo
+share/locale/en_UK/LC_MESSAGES/kde.mo
+share/locale/mk/LC_MESSAGES/kde.mo
+share/locale/pt_BR/LC_MESSAGES/kde.mo
 share/locale/de/LC_MESSAGES/kde.mo
 share/locale/fr/LC_MESSAGES/kde.mo
 share/locale/sv/LC_MESSAGES/kde.mo
@@ -131,7 +164,6 @@ share/locale/el/LC_MESSAGES/kde.mo
 share/locale/fi/LC_MESSAGES/kde.mo
 share/locale/hr/LC_MESSAGES/kde.mo
 share/locale/ro/LC_MESSAGES/kde.mo
-share/locale/zh/LC_MESSAGES/kde.mo
 share/locale/sk/LC_MESSAGES/kde.mo
 share/locale/ca/LC_MESSAGES/kde.mo
 share/locale/de/charset
@@ -144,10 +176,61 @@ share/locale/pl/charset
 share/locale/fi/charset
 share/locale/ro/charset
 share/locale/pt/charset
+share/locale/sv/charset
+share/locale/es/charset
+share/locale/sk/charset
+share/toolbar/back.xpm
+share/toolbar/bottom.xpm
+share/toolbar/contents.xpm
+share/toolbar/down.xpm
+share/toolbar/editcopy.xpm
+share/toolbar/editcut.xpm
+share/toolbar/editpaste.xpm
+share/toolbar/exclamation.xpm
+share/toolbar/exit.xpm
+share/toolbar/filefloppy.xpm
+share/toolbar/filemail.xpm
+share/toolbar/filenew.xpm
+share/toolbar/filenew2.xpm
+share/toolbar/fileopen.xpm
+share/toolbar/fileprint.xpm
+share/toolbar/finish.xpm
+share/toolbar/flag.xpm
+share/toolbar/forward.xpm
+share/toolbar/help.xpm
+share/toolbar/home.xpm
+share/toolbar/idea.xpm
+share/toolbar/lock.xpm
+share/toolbar/next.xpm
+share/toolbar/page.xpm
+share/toolbar/paintbucket.xpm
+share/toolbar/prev.xpm
+share/toolbar/reload.xpm
+share/toolbar/send.xpm
+share/toolbar/openbook.xpm
+share/toolbar/tick.xpm
+share/toolbar/rightjust.xpm
+share/toolbar/start.xpm
+share/toolbar/top.xpm
+share/toolbar/up.xpm
+share/toolbar/viewmag+.xpm
+share/toolbar/viewmag-.xpm
+share/toolbar/viewmag.xpm
+share/toolbar/viewzoom.xpm
+share/toolbar/stop.xpm
 share/toolbar/configure.xpm
 @exec /bin/ln -sf en %D/share/doc/HTML/default
 @unexec /bin/rm -f %D/share/doc/HTML/default
 @dirrm share/toolbar
+@dirrm share/locale/zh_TW.Big5/LC_MESSAGES
+@dirrm share/locale/zh_TW.Big5
+@dirrm share/locale/zh_CN.GB2312/LC_MESSAGES
+@dirrm share/locale/zh_CN.GB2312
+@dirrm share/locale/en_UK/LC_MESSAGES
+@dirrm share/locale/en_UK
+@dirrm share/locale/pt_BR/LC_MESSAGES
+@dirrm share/locale/pt_BR
+@dirrm share/doc/HTML/en/kfiledialog
 @dirrm share/doc/HTML/en/kdelibs
 @dirrm share/doc/HTML/en
 @dirrm share/doc/HTML
