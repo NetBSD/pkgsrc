@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/04/10 23:44:28 rh Exp $
+$NetBSD: distinfo,v 1.7 2004/08/18 14:01:14 adam Exp $
 
-SHA1 (gnustep-gui-0.9.2.tar.gz) = f188d530cfff19a0a82c2bef0d5c5f415aca7182
-Size (gnustep-gui-0.9.2.tar.gz) = 2275341 bytes
+SHA1 (gnustep-gui-0.9.3.tar.gz) = df330676e5f22c0b15ddff74e0a10aef3093babb
+Size (gnustep-gui-0.9.3.tar.gz) = 2311125 bytes
 SHA1 (patch-aa) = 91c54d7e0fb728c349fba963f86704d0d933b88d
 SHA1 (patch-ab) = 3a0aad91274707c1f935db754dda90b1f6f04d3b
 SHA1 (patch-ac) = 3e30333d462613faf2cedcc6a0b92638aabdc1d6
