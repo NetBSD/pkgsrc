@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2002/05/26 20:24:18 cjep Exp $
+# $NetBSD: Makefile,v 1.136 2002/06/01 08:20:53 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -7,13 +7,13 @@ SUBDIR+=	adjustkernel
 SUBDIR+=	amanda
 SUBDIR+=	amanda-client
 SUBDIR+=	amanda-common
-SUBDIR+=	amanda-plot
-SUBDIR+=	amanda-server
 SUBDIR+=	amanda-dev
 SUBDIR+=	amanda-dev-client
 SUBDIR+=	amanda-dev-common
 SUBDIR+=	amanda-dev-plot
 SUBDIR+=	amanda-dev-server
+SUBDIR+=	amanda-plot
+SUBDIR+=	amanda-server
 SUBDIR+=	apcupsd
 SUBDIR+=	aperture
 SUBDIR+=	asapm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2002/05/31 19:18:37 kei Exp $
+# $NetBSD: Makefile,v 1.129 2002/06/01 08:19:37 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -46,9 +46,9 @@ SUBDIR+=	ja-man
 SUBDIR+=	jhd
 SUBDIR+=	jitterbug
 SUBDIR+=	jive
+SUBDIR+=	kdeaddons2
 SUBDIR+=	kdeadmin2
 SUBDIR+=	kdeadmin3
-SUBDIR+=	kdeaddons2
 SUBDIR+=	kdeartwork2
 SUBDIR+=	kdeedu3
 SUBDIR+=	kdepim2
