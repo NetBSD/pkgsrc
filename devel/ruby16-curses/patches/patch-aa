@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:35:59 taca Exp $
+
+--- extconf.rb.orig	2001-12-03 19:04:46.000000000 +0900
++++ extconf.rb
+@@ -6,17 +6,9 @@ dir_config('termcap')
+ 
+ make=false
+ have_library("mytinfo", "tgetent") if /bow/ =~ RUBY_PLATFORM
+-if have_header("ncurses.h") and have_library("ncurses", "initscr")
++have_library("termcap", "tgetent") 
++if have_header("curses.h") and have_library("curses", "initscr")
+   make=true
+-elsif have_header("ncurses/curses.h") and have_library("ncurses", "initscr")
+-  make=true
+-elsif have_header("curses_colr/curses.h") and have_library("cur_colr", "initscr")
+-  make=true
+-else
+-  have_library("termcap", "tgetent") 
+-  if have_header("curses.h") and have_library("curses", "initscr")
+-    make=true
+-  end
+ end
+ 
+ if make
