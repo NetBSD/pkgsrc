@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2004/05/06 13:46:23 taca Exp $
+# $NetBSD: Makefile,v 1.42 2004/06/22 23:53:52 xtraeme Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		qpopper-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
 
