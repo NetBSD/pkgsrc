@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:35 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/04/26 15:59:08 bad Exp $
 
 SHA1 (netscape/communicator-v477-us.x86-unknown-linux2.2.tar.gz) = 17a687c1a4cfb5ee8784943bdfd624313eccc515
 Size (netscape/communicator-v477-us.x86-unknown-linux2.2.tar.gz) = 17500414 bytes
+SHA1 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = a0d44122101972df47b4f6605c3c7fbca5e71270
+Size (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 16054991 bytes
