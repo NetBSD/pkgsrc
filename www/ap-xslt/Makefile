@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/02/17 21:01:08 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/17 21:21:37 grant Exp $
 
 DISTNAME=	modxslt
 PKGNAME=	ap-xslt-1.1
@@ -13,6 +13,7 @@ COMMENT=	Simple, fast XSLT transformations for apache
 USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	mod_xslt.so
+LDFLAGS+=	        -lsablot -liconv -lstdc++ -lm
 
 .include "../../textproc/sablotron/buildlink2.mk"
 .include "../../www/apache/module.mk"
