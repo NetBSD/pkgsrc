@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/28 11:07:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/26 13:40:43 zuntum Exp $
 
 DISTNAME=		Eterm-0.8.10
 PKGNAME=		eterm-0.8.10
@@ -13,13 +13,12 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.eterm.org/
 COMMENT=		Enlightened terminal emulator for the X Window System
 
-DEPENDS+=		imlib-*:../../graphics/imlib
-
 EXTRACT_ONLY=		${ETERM_SRCS}
 ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -42,4 +41,5 @@ post-install:
 	${CHMOD} 4711 ${PREFIX}/bin/Eterm
 .endif
 
+.include "../../graphics/imlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
