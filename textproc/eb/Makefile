@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/19 15:59:16 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
-DISTNAME=	eb-3.3.2
-PKGREVISION=	1
+DISTNAME=	eb-3.3.4
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
@@ -52,7 +51,7 @@ EB_APPENDICES=	\
 EXTRACT_ONLY=	${EB_DISTFILES}
 DIST_SUBDIR=	eb
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
@@ -84,7 +83,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/eb.conf ${EGDIR}/eb.conf.default
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
