@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 22:55:18 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/09 10:00:58 wiz Exp $
 
 DISTNAME=		jigdo-0.7.0
 CATEGORIES=		net
@@ -12,7 +12,6 @@ COMMENT=		Tool to ease downloading of large files from the Internet
 CONFIGURE_ARGS+=	--without-libdb
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 #.include "../../databases/db3/buildlink3.mk"
