@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1999/09/03 21:10:54 tron Exp $
+
 --- http.c.orig	Tue Aug 24 19:42:55 1999
 +++ http.c	Wed Aug 25 20:43:50 1999
 @@ -44,8 +44,8 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bg,v 1.2 1999/09/03 21:10:54 tron Exp $
+
 --- wwwoffled.c.orig	Tue Aug 24 12:16:05 1999
 +++ wwwoffled.c	Wed Aug 25 10:06:03 1999
 @@ -49,8 +49,8 @@
