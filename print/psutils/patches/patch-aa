@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/11/09 18:02:36 agc Exp $
+$NetBSD: patch-aa,v 1.2 1998/11/11 11:42:57 agc Exp $
 
 Read default papersize from a configuration file at run-time.
 If it's not in the correct format, or it's not found, default to
@@ -14,12 +14,12 @@ the papersize that was compiled in.
  #include <sys/stat.h>
  
  #define iscomment(x,y) (strncmp(x,y,strlen(y)) == 0)
-@@ -64,12 +65,68 @@
+@@ -64,10 +65,62 @@
     { NULL, 0, 0 }
  };
  
 +/* bounds-checking strncpy */
-+static char *
++char *
 +strnncpy(char *to, size_t tosize, char *from, size_t cc)
 +{
 +	size_t	len;
@@ -36,7 +36,7 @@ the papersize that was compiled in.
 +#include <ctype.h>
 +
 +/* read PAPERSIZE from file */
-+static int
++int
 +readconfig(char *name, size_t namesize)
 +{
 +	FILE	*fp;
@@ -73,14 +73,7 @@ the papersize that was compiled in.
  Paper* findpaper(char *name)
  {
     Paper *pp;
-+   char	papersize[BUFSIZ];
 +
-+   if (!readconfig(papersize, sizeof(papersize))) {
-+	(void) strnncpy(papersize, sizeof(papersize), name, strlen(name));
-+   }
     for (pp = papersizes; PaperName(pp); pp++) {
--      if (strcmp(PaperName(pp), name) == 0) {
-+      if (strcmp(PaperName(pp), papersize) == 0) {
+       if (strcmp(PaperName(pp), name) == 0) {
  	 return pp;
-       }
-    }
