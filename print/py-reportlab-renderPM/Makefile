@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/05 04:03:19 snj Exp $
 #
 
 DISTNAME=	renderPM-0-9
@@ -14,8 +14,8 @@ COMMENT=	Pixmap rendering for reportlab
 WRKSRC=		${WRKDIR}
 PYBINMODULE=	yes
 PYDISTUTILSPKG=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../graphics/py-imaging/buildlink2.mk"
+.include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
