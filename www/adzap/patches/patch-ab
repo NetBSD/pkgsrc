@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/25 09:40:25 rh Exp $
+
+--- /dev/null	Tue Apr 25 09:29:59 2000
++++ adzap.conf	Tue Apr 25 10:47:19 2000
+@@ -0,0 +1,18 @@
++# example adzap configuration file
++# copy this file over to /etc/adzap.conf,
++# then modify this to match your install
++
++ZAP_MODE=				# or "CLEAR"
++ZAP_BASE=http://adzap.cs.zip.com.au	# a local web server will be better
++ZAP_CHAINING=				# set to one if chaining redirectors
++ZAP_PREMATCH=				# pathname of extra pattern file
++					# for patterns to preempty the stock
++					# zapper
++ZAP_POSTMATCH=				# pathname of extra pattern file
++					# for patterns in addition to the
++					# stock zapper; this is the one you
++					# should add new ads to
++STUBURL_AD=$ZAP_BASE/ad.gif
++STUBURL_ADJS=$ZAP_BASE/no-op.js
++STUBURL_ADHTML=$ZAP_BASE/no-op.html
++STUBURL_ADPOPUP=$ZAP_BASE/closepopup.html
