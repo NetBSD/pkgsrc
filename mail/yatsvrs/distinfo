@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/11/13 07:02:39 taca Exp $
+$NetBSD: distinfo,v 1.6 2004/09/10 10:41:59 agc Exp $
 
 SHA1 (yatsvrs-5.00p6.tar.gz) = be94b29c8631acc1d7b3c4313501b6d674e6b43f
 Size (yatsvrs-5.00p6.tar.gz) = 210067 bytes
@@ -18,7 +18,7 @@ SHA1 (patch-ao) = f697fe18121dcee1a279b5e4e8d318789cef8211
 SHA1 (patch-ap) = f42ade29527d1910f271c10797f6bd8d9f3710cc
 SHA1 (patch-aq) = a09b4f8869e2231b3715155b85b690901926a4e5
 SHA1 (patch-ar) = 8f26f7a180790070e1137c9840c1e0edcfc02a66
-SHA1 (patch-as) = f02a1402188c9def494dbea60b874bfdd04a7c50
+SHA1 (patch-as) = e6c5d58794a283a285bb54d1792ccb2b84bb9495
 SHA1 (patch-at) = cecd3a6c32e225cb55046dee951bd0b09660fdc7
 SHA1 (patch-au) = 63aa76a7a9c55c9877fe2a336903828d193c3658
 SHA1 (patch-av) = 4c87a76438f97fcafa29083c37d3a225bd219cc2
