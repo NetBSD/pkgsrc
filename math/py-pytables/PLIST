@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/22 15:17:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/09 12:29:10 markd Exp $
+bin/nctoh5${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
 ${PYSITELIB}/tables/Array.py
@@ -16,6 +17,12 @@ ${PYSITELIB}/tables/File.pyo
 ${PYSITELIB}/tables/Group.py
 ${PYSITELIB}/tables/Group.pyc
 ${PYSITELIB}/tables/Group.pyo
+${PYSITELIB}/tables/Index.py
+${PYSITELIB}/tables/Index.pyc
+${PYSITELIB}/tables/Index.pyo
+${PYSITELIB}/tables/IndexArray.py
+${PYSITELIB}/tables/IndexArray.pyc
+${PYSITELIB}/tables/IndexArray.pyo
 ${PYSITELIB}/tables/IsDescription.py
 ${PYSITELIB}/tables/IsDescription.pyc
 ${PYSITELIB}/tables/IsDescription.pyo
@@ -35,7 +42,14 @@ ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
 ${PYSITELIB}/tables/hdf5Extension.so
+${PYSITELIB}/tables/nodes/FileNode.py
+${PYSITELIB}/tables/nodes/FileNode.pyc
+${PYSITELIB}/tables/nodes/FileNode.pyo
+${PYSITELIB}/tables/nodes/__init__.py
+${PYSITELIB}/tables/nodes/__init__.pyc
+${PYSITELIB}/tables/nodes/__init__.pyo
 ${PYSITELIB}/tables/utils.py
 ${PYSITELIB}/tables/utils.pyc
 ${PYSITELIB}/tables/utils.pyo
+@dirrm ${PYSITELIB}/tables/nodes
 @dirrm ${PYSITELIB}/tables
