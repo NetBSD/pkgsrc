@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/28 15:37:37 jmmv Exp $
+
+--- src/fileIO.c.orig	Mon Dec 24 02:15:53 2001
++++ src/fileIO.c
+@@ -344,10 +344,10 @@ runClient()
+     show_error(NULLPATH);
+   } // if the path is null
+   else {
+-    client = g_strdup_printf("%s/%s", seti.path, seti.client);
++    client = g_strdup_printf("%s", seti.client);
+ 
+     if(!stat(client, &statBuf)) {
+-      command = g_strdup_printf("cd %s ; ./%s %s &", seti.path, seti.client, data.args); 
++      command = g_strdup_printf("cd %s ; %s %s &", seti.path, seti.client, data.args); 
+       system(command);
+       g_free(command);
+       update();
