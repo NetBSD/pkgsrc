@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:08 zuntum Exp $
+@comment $NetBSD: PLIST.base,v 1.1 2002/01/09 23:04:54 seb Exp $
 bin/elk
 include/elk/compat.h
 include/elk/config.h
 include/elk/cstring.h
 include/elk/exception.h
+include/elk/extensions/unix.h
 include/elk/extern.h
 include/elk/funcproto.h
 include/elk/gc.h
@@ -13,9 +14,6 @@ include/elk/param.h
 include/elk/scheme.h
 include/elk/stkmem.h
 include/elk/type.h
-include/elk/extensions/unix.h
-include/elk/extensions/xlib.h
-include/elk/extensions/xt.h
 lib/elk/lib/ldflags
 lib/elk/lib/linkscheme
 lib/elk/lib/makedl
@@ -31,32 +29,6 @@ lib/elk/runtime/obj/record.o
 lib/elk/runtime/obj/regexp.o
 lib/elk/runtime/obj/struct.o
 lib/elk/runtime/obj/unix.o
-lib/elk/runtime/obj/xlib.o
-lib/elk/runtime/obj/xt.o
-lib/elk/runtime/obj/xaw/ALIASES
-lib/elk/runtime/obj/xaw/ascii.o
-lib/elk/runtime/obj/xaw/box.o
-lib/elk/runtime/obj/xaw/command.o
-lib/elk/runtime/obj/xaw/dialog.o
-lib/elk/runtime/obj/xaw/form.o
-lib/elk/runtime/obj/xaw/grip.o
-lib/elk/runtime/obj/xaw/label.o
-lib/elk/runtime/obj/xaw/list.o
-lib/elk/runtime/obj/xaw/menubutton.o
-lib/elk/runtime/obj/xaw/paned.o
-lib/elk/runtime/obj/xaw/panner.o
-lib/elk/runtime/obj/xaw/porthole.o
-lib/elk/runtime/obj/xaw/repeater.o
-lib/elk/runtime/obj/xaw/scrollbar.o
-lib/elk/runtime/obj/xaw/shell.o
-lib/elk/runtime/obj/xaw/simplemenu.o
-lib/elk/runtime/obj/xaw/sme.o
-lib/elk/runtime/obj/xaw/smebsb.o
-lib/elk/runtime/obj/xaw/smeline.o
-lib/elk/runtime/obj/xaw/stripchart.o
-lib/elk/runtime/obj/xaw/toggle.o
-lib/elk/runtime/obj/xaw/tree.o
-lib/elk/runtime/obj/xaw/viewport.o
 lib/elk/runtime/scm/apropos.scm
 lib/elk/runtime/scm/bitstring.scm
 lib/elk/runtime/scm/cscheme.scm
@@ -82,7 +54,7 @@ lib/elk/runtime/scm/unix.scm
 lib/elk/runtime/scm/xlib.scm
 lib/elk/runtime/scm/xt.scm
 lib/elk/runtime/scm/xwidgets.scm
-man/man1/elk.1.gz
+man/man1/elk.1
 share/doc/elk/bitstring.ps
 share/doc/elk/cprog.ps
 share/doc/elk/kernel.ps
@@ -95,7 +67,6 @@ share/doc/elk/xlib.ps
 share/doc/elk/xt.ps
 @dirrm share/doc/elk
 @dirrm lib/elk/runtime/scm
-@dirrm lib/elk/runtime/obj/xaw
 @dirrm lib/elk/runtime/obj
 @dirrm lib/elk/runtime
 @dirrm lib/elk/lib
