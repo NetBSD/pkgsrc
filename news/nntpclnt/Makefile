@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2002/09/18 07:05:29 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/18 14:13:54 tron Exp $
 
 DISTNAME=	nntpclnt-1.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
@@ -30,7 +30,7 @@ post-build:
 		${AR} clq libnntpclnt.a nntpclnt.o && ${RANLIB} libnntpclnt.a
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/inews ${PREFIX}/bin
+	${INSTALL_PROGRAM} -g news -m 2555 ${WRKSRC}/inews ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/nntp.h ${PREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/libnntpclnt.a ${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/man/man3/
