@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2001/10/16 04:54:24 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/16 12:44:16 tron Exp $
 
-.include "../php4/Makefile.php"
+.include "Makefile.php"
 
 PKGNAME=		php-${PHP_VERS}
 PHP_PKG_VERS=		# empty
