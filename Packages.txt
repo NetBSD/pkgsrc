@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.121 2000/10/18 03:53:41 garbled Exp $
+# $NetBSD: Packages.txt,v 1.122 2000/10/22 21:25:14 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1470,8 +1470,31 @@ university, where you can't run a "make fetch". But there's no archive of
 the distfiles on ftp.netbsd.org and the one on ftp.freebsd.org contains
 many distfiles for which there are no ports (yet).
 
-The answer here is to do a "make fetch-list" in /usr/pkgsrc and use the
-resulting list.
+The answer here is to do a "make fetch-list" in /usr/pkgsrc, carry the 
+resulting list to your machine at work/school and use it there If you don't
+have a NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget to
+set FETCH_CMD to something that fetches an URL:
+
+At home:
+	cd /usr/pkgsrc
+	make fetch-list FETCH_CMD=wget DISTDIR=/tmp/distfiles >/tmp/fetch.sh
+	scp /tmp/fetch.sh work:/tmp
+
+At work:
+	sh /tmp/fetch.sh
+	tar up /tmp/distfiles and take it home
+
+If you have a machine running NetBSD, and you want to get *all* distfiles
+(even ones that aren't for your machine architecture), you can do so by
+using the above-mentioned 'make fetch-list'-approach, or fetch the distfiles
+directly by typing:
+
+	make mirror-distfiles
+
+If you even decide to ignore NO_{SRC,BIN}_ON_{FTP,CDROM}, then you can 
+get all & everything by typing
+
+	make fetch NO_IGNORE=yes
 
 
  9.7 How to fetch files from behind a firewall
