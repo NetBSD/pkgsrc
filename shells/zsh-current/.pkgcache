@@ -1,0 +1,4 @@
+distdir=/usr/distfiles
+patchdir=/pkgsrc/wip-jp/zsh-current/patches
+wrkdir=/src/TNF/pkgsrc/wip-jp/zsh-current/work.i386
+wrksrc=/src/TNF/pkgsrc/wip-jp/zsh-current/work.i386/zsh-4.1.1
