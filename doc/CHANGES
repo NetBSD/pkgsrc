@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8336 2004/12/14 23:36:48 taya Exp $
+$NetBSD: CHANGES,v 1.8337 2004/12/15 13:10:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated phpmyadmin to 2.6.1rc1 [adrianp 2004-12-14]
 	Updated thunderbird to 1.0 [taya 2004-12-14]
 	Updated thunderbird-gtk2 to 1.0 [taya 2004-12-14]
+	Updated namazu to 2.0.14 [taca 2004-12-15]
