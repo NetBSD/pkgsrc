@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/09/03 21:07:37 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/11/26 06:09:01 itohy Exp $
 
---- Makefile.orig	Thu Dec  3 20:19:46 1998
-+++ Makefile	Fri Sep  3 22:42:44 1999
+--- Makefile.orig	Sun Oct 10 23:31:50 1999
++++ Makefile	Thu Nov 25 20:00:34 1999
 @@ -16,9 +16,9 @@
  
  LOCALHOST=localhost:8080
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 1999/09/03 21:07:37 tron Exp $
  
  # For Cygwin (win32)
  #INSTDIR=/wwwoffle
-@@ -28,13 +28,13 @@
+@@ -37,13 +37,13 @@
  ########
  
  CC=gcc
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 1999/09/03 21:07:37 tron Exp $
  
  # For HP/UX this is a good idea.
  #LDFLAGS=
-@@ -236,15 +236,15 @@
+@@ -272,13 +272,13 @@
  	$(INSTALL) -c -m 644 wwwoffle.conf.man.install $(INSTDIR)/man/man5/wwwoffle.conf.5
  	[ -x $(INSTDIR)/man/man8 ] || $(INSTALL) -d $(INSTDIR)/man/man8
  	$(INSTALL) -c -m 644 wwwoffled.man $(INSTDIR)/man/man8/wwwoffled.8
@@ -41,22 +41,19 @@ $NetBSD: patch-aa,v 1.4 1999/09/03 21:07:37 tron Exp $
 -	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file ;\
 +	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file ;\
  	done
+ 	[ "x$(LANG)" = "x" ] || [ ! -d lang-$(LANG) ] || ( cd lang-$(LANG) && \
+ 	  for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* UPGRADE ; do \
+-	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file-$(LANG) ;\
++	    [ ! -f $$file ] || $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file-$(LANG) ;\
+ 	  done )
  
- install_doc-win32 :
--	[ -x $(INSTDIR)/doc ] || $(INSTALL) -d $(INSTDIR)/doc
-+	[ -x $(INSTDIR)/share/doc ] || $(INSTALL) -d $(INSTDIR)/share/doc
- 	for file in CHANGES.CONF COPYING INSTALL FAQ NEWS README* ; do \
--	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/$$file ;\
-+	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/$$file ;\
- 	done
- 	$(INSTALL) -c -m 644 README.win32 $(CONFDIR)/README.win32
  
-@@ -300,7 +300,7 @@
- 	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 644 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
+@@ -348,7 +348,7 @@
+ 	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
  
  install_fixup-win32:
 -	for file in $(INSTDIR)/doc/* $(CONFDIR)/README.win32 ; do \
 +	for file in $(INSTDIR)/share/doc/* $(CONFDIR)/README.win32 ; do \
  	  [ -f $$file ] && awk '{print $$0 "\r";}' < $$file > $$file.txt && rm -f $$file ;\
  	done
- 	for file in $(CONFDIR)/wwwoffle.conf ; do \
+ #	for file in $(CONFDIR)/wwwoffle.conf ; do \
