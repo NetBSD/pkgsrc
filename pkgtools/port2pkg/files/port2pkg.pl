@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.3 1999/09/14 00:43:20 sakamoto Exp $
+# $NetBSD: port2pkg.pl,v 1.4 2000/04/26 16:18:59 sakamoto Exp $
 #
 
 require 'getopts.pl';
@@ -8,8 +8,9 @@ $^W=1;
 use strict;
 use vars qw($opt_m);
 my($maintainer) = "packages\@netbsd.org";
-my($makefile,$master_site_subdir,$extract_cmd);
+my($makefile, $master_site_subdir, $extract_cmd);
 my($portsdir, $pkgdir);
+my($namespace, $portname, $portversion, $distname, $pkgname);
 my(@man, @cat);
 
 if (! &Getopts('m:')) {&usage_and_exit();}
@@ -27,7 +28,7 @@ if (! -d "$pkgdir") {
 	}
 }
 
-system("tar cCf $portsdir - .|tar xCf $pkgdir -");
+system("${GTAR} cCf $portsdir - .|${GTAR} xCf $pkgdir -");
 
 &read_Makefile();
 &conv_Makefile();
@@ -57,7 +58,14 @@ sub read_Makefile {
 	my ($extract_before_args, $extract_after_args);
 	foreach my $line (split(/\n/, $makefile)) {
 		$_ = $line;
-		if (/^MASTER_SITE_SUBDIR\?*=\s*(.*)/) {
+		if (/^PORTNAME\?*=(\s*)(.*)/) {
+			$namespace = $1;
+			$portname = $2;
+		} elsif (/^PORTVERSION\?*=\s*(.*)/) {
+			$portversion = $1;
+		} elsif (/^DISTNAME\?*=\s*(.*)/) {
+			$distname = $1;
+		} elsif (/^MASTER_SITE_SUBDIR\?*=\s*(.*)/) {
 			$master_site_subdir = $1;
 			if (!($master_site_subdir =~ /\/$/)) {
 				$master_site_subdir .= "/";
@@ -84,6 +92,17 @@ sub read_Makefile {
 		}
 		$extract_cmd = "$extract_cmd$extract_before_args" .
 			" \${DOWNLOADED_DISTFILE}$extract_after_args";
+	}
+
+	if (defined($distname)) {
+		$distname =~ s/\${PORTNAME}/$portname/;
+		$distname =~ s/\${PORTVERSION}/$portversion/;
+
+		if ($distname ne "$portname-$portversion") {
+			$pkgname = "$portname-$portversion";
+		}
+	} else {
+		$distname = "$portname-$portversion";
 	}
 }
 
@@ -112,9 +131,7 @@ sub conv_Makefile {
 	while (<PORTS>) {
 		if (/\\$/) {
 			$nextline++;
-			if ($remove) {
-				next;
-			}
+			next if ($remove);
 		} else {
 			$nextline = 0;
 			if ($remove) {
@@ -150,24 +167,24 @@ sub conv_Makefile {
 			print "WARN: found \"$1\"\n";
 		}
 
-		if (/^MAN(.)\?*=/ ||
+		if (/^PORTVERSION/ ||
+		    /^DISTNAME/ ||
+		    /^MAN(.)\?*=/ ||
 		    /^CAT(.)\?*=/ ||
 		    /^MASTER_SITE_SUBDIR/ ||
 		    /^EXTRACT_BEFORE_ARGS/ ||
 		    /^EXTRACT_AFTER_ARGS/) {
-			if ($nextline) {
-				$remove = 1;
-			}
+			$remove if ($nextline);
+		} elsif (/^PORTNAME/) {
+			print PKG "DISTNAME=$namespace$distname\n";
+			print PKG "PKGNAME=$namespace$pkgname\n" if defined($pkgname);
+			$remove if ($nextline);
 		} elsif (/^(EXTRACT_CMD\?*=)/) {
 			print PKG "$1\t$extract_cmd\n";
-			if ($nextline) {
-				$remove = 1;
-			}
+			$remove if ($nextline);
 		} elsif (/^(MAINTAINER\?*=)/) {
 			print PKG "$1\t$maintainer\n";
-			if ($nextline) {
-				$remove = 1;
-			}
+			$remove if ($nextline);
 
 			open(DESCR, "$pkgdir/pkg/DESCR")
 				|| die "$pkgdir/pkg/DESCR: $!\n";
