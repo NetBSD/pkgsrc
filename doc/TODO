@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1053 2003/11/20 04:52:00 grant Exp $
+$NetBSD: TODO,v 1.1054 2003/11/20 09:27:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -226,7 +226,7 @@ Suggested package updates
 	o gnome-core-2.4
 	o gnome-utils-2.4.1
 	o gnomeicu-0.99
-	o gnucash-1.8.7
+	o gnucash-1.8.8
 	o gnuchess-5.06
 	o gnumeric-1.2.0
 	o gnustep-0.9.0
@@ -365,6 +365,7 @@ Suggested package updates
 	o snd-6.12
 	o snes9x-1.41
 	o snort-2.0.4
+	o speex-1.0.3
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
@@ -398,6 +399,7 @@ Suggested package updates
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
 	o wget-1.9.1
+	o wine-20031118
 	o wmbiff-0.4.17
 	o wv2-0.2
 	o wwwoffle-2.7h
