@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.226 2002/01/11 14:41:41 agc Exp $
+# $NetBSD: Packages.txt,v 1.227 2002/02/12 09:29:56 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -1036,9 +1036,9 @@ be executed in a pre-configure target.  For packages that need only
 autoconf:
 
 	pre-configure:
-		cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
+		cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
-and for packages that need automake:
+and for packages that need automake and autoconf:
 
 	pre-configure:
 		cd ${WRKSRC};						\
