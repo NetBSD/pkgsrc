@@ -1,5 +1,5 @@
 --- Makefile.orig	Thu Jan  9 07:19:34 1997
-+++ Makefile	Tue May 26 23:53:37 1998
++++ Makefile	Tue Jun 30 18:29:59 1998
 @@ -17,8 +17,8 @@
  # can be disabled to make dialog a bit smaller (could be done for more things)
  HAVE_GUAGE=true
@@ -26,7 +26,7 @@
  ifeq ($(HAVE_NCURSES), true)
 -CFLAGS+=-DHAVE_NCURSES -I/usr/include/ncurses
 +#CFLAGS+=-DHAVE_NCURSES -I/usr/include/ncurses
-+CFLAGS+=-DHAVE_NCURSES -I/usr/pkg/include
++CFLAGS+=-DHAVE_NCURSES -I${PREFIX}/include
  LDLIBS+=-lncurses
  endif
  ifeq ($(HAVE_RC_FILE), true)
