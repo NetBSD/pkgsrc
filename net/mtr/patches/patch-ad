@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1 2001/10/16 15:08:56 agc Exp $
+
+Remove the gtk related options since we're not using gtk.
+
+--- mtr.c	2001/10/16 11:22:10	1.1
++++ mtr.c	2001/10/16 11:23:02
+@@ -56,7 +56,6 @@
+     { "report", 0, 0, 'r' },
+     { "report-cycles", 1, 0, 'c' },
+     { "curses", 0, 0, 't' },
+-    { "gtk", 0, 0, 'g' },
+     { "interval", 1, 0, 'i' },
+     { "psize", 1, 0, 'p' },
+     { "no-dns", 0, 0, 'n' },
+@@ -182,8 +181,8 @@
+   }
+ 
+   if(PrintHelp) {
+-    printf("usage: %s [-hvrctglsni] [--help] [--version] [--report]\n"
+-	   "\t\t[--report-cycles=COUNT] [--curses] [--gtk]\n"
++    printf("usage: %s [-hvrctlsni] [--help] [--version] [--report]\n"
++	   "\t\t[--report-cycles=COUNT] [--curses]\n"
+            "\t\t[--raw] [--split] [--no-dns]\n"      /* BL */
+            "\t\t[--psize=bytes/-p=bytes]\n"            /* ok */
+ 	   "\t\t[--interval=SECONDS] HOSTNAME [PACKETSIZE]\n", argv[0]);
