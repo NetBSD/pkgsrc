@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2001/02/09 23:42:27 jtb Exp $
+# $NetBSD: Makefile,v 1.116 2001/02/14 11:52:58 jtb Exp $
 #
 
     SUBDIR += CompuPic
@@ -118,5 +118,6 @@
     SUBDIR += xsane
     SUBDIR += xv
     SUBDIR += xzgv
+    SUBDIR += yplot
 
 .include "../mk/bsd.pkg.subdir.mk"
