@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/04 17:16:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/20 20:15:42 jmmv Exp $
 bin/epiphany
 bin/epiphany-bin
 include/epiphany-1.2/epiphany/ephy-bookmarks.h
@@ -75,6 +75,12 @@ share/gnome/help/epiphany/C/figures/ephy-bookmarkbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/C/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/C/figures/ephy-screenshot.png
 share/gnome/help/epiphany/C/legal.xml
+share/gnome/help/epiphany/es/epiphany.xml
+share/gnome/help/epiphany/es/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/es/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/es/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/es/figures/ephy-screenshot.png
+share/gnome/help/epiphany/es/legal.xml
 share/gnome/help/epiphany/eu/epiphany.xml
 share/gnome/help/epiphany/eu/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/eu/figures/ephy-screenshot.png
@@ -131,6 +137,8 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/epiphany.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/epiphany.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/epiphany.mo
@@ -138,6 +146,7 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/epiphany.mo
 share/omf/epiphany/epiphany-C.omf
+share/omf/epiphany/epiphany-es.omf
 share/omf/epiphany/epiphany-eu.omf
 share/pixmaps/epiphany-bookmarks.png
 @comment in xdg-dirs: @dirrm share/pixmaps
@@ -145,6 +154,8 @@ share/pixmaps/epiphany-bookmarks.png
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/epiphany/eu/figures
 @dirrm share/gnome/help/epiphany/eu
+@dirrm share/gnome/help/epiphany/es/figures
+@dirrm share/gnome/help/epiphany/es
 @dirrm share/gnome/help/epiphany/C/figures
 @dirrm share/gnome/help/epiphany/C
 @dirrm share/gnome/help/epiphany
