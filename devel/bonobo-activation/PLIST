@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/04 20:43:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/01/04 22:07:23 jmmv Exp $
 bin/activation-client
 bin/bonobo-slay
-etc/bonobo-activation/bonobo-activation-config.xml
 include/bonobo-activation-2.0/bonobo-activation/Bonobo_Activation_types.h
 include/bonobo-activation-2.0/bonobo-activation/Bonobo_GenericFactory.h
 include/bonobo-activation-2.0/bonobo-activation/Bonobo_Unknown.h
@@ -57,6 +56,7 @@ share/doc/html/bonobo-activation/query-syntax.html
 share/doc/html/bonobo-activation/server-arch.html
 share/doc/html/bonobo-activation/server-xml-reference.html
 share/doc/html/bonobo-activation/tutorial.html
+share/examples/bonobo-activation/bonobo-activation-config.xml
 share/idl/bonobo-activation-2.0/Bonobo_ActivationContext.idl
 share/idl/bonobo-activation-2.0/Bonobo_Activation_types.idl
 share/idl/bonobo-activation-2.0/Bonobo_GenericFactory.idl
@@ -101,9 +101,9 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-activation.mo
 @dirrm share/idl/bonobo-activation-2.0
+@dirrm share/examples/bonobo-activation
 @dirrm share/doc/html/bonobo-activation
 @dirrm lib/bonobo/servers
 @unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
 @dirrm include/bonobo-activation-2.0/bonobo-activation
 @dirrm include/bonobo-activation-2.0
-@dirrm etc/bonobo-activation
