@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/26 06:06:34 wiz Exp $
+
+--- Makefile.fbsd.orig	2002-03-14 15:51:22.000000000 +0100
++++ Makefile.fbsd
+@@ -29,6 +29,6 @@ LDADD+=		`${SDL_CONFIG} --libs`
+ SRCS+=		fbsd_sup.c sdl_vid.c sdl_timer.c sdl_kbd.c sdl_snd.c icon.c
+ .endif
+ 
+-MAN1=
++NOMAN=
+ 
+ .include <bsd.prog.mk>
