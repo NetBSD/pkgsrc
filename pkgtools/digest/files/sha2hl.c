@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.1 2001/03/12 09:08:40 agc Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.2 2001/03/13 15:09:55 dmcmahill Exp $	 */
 
 /*
  * sha2hl.c
@@ -43,7 +43,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: sha2hl.c,v 1.1 2001/03/12 09:08:40 agc Exp $");
+__RCSID("$NetBSD: sha2hl.c,v 1.2 2001/03/13 15:09:55 dmcmahill Exp $");
 #endif				/* not lint */
 
 #include <sys/types.h>
@@ -55,6 +55,7 @@ __RCSID("$NetBSD: sha2hl.c,v 1.1 2001/03/12 09:08:40 agc Exp $");
 #include <fcntl.h>
 #include <sha2.h>
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 
