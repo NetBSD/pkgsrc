@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/13 06:04:53 explorer Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/22 23:55:49 tron Exp $
 #
 
 #
@@ -21,7 +21,7 @@ CONFLICTS=	lame-*
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(LAME_USE_GTK) || ${LAME_USE_GTK} == YES
-DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 .endif
 
 WRKSRC=		${WRKDIR}/lame3.33
