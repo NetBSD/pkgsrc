@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/12/26 20:52:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/26 22:17:42 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -19,7 +19,7 @@ DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
 USE_BUILDLINK2=	# defined
 USE_JAVA=	# defined
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 post-extract:
 	@${RM} ${WRKSRC}/lib/*.jar
