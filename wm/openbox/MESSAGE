@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/12/18 09:57:27 wiz Exp $
+
+There are no default system-wide configuration files for this package.
+
+Examples of configuration files can be found in
+${PREFIX}/share/examples/openbox/
+
+Copy rc.xml and menu.xml to the desired location. This path must include a
+directory named openbox. For example: /usr/pkg/etc/openbox. Then set the
+environment variable XDG_CONFIG_DIRS in your shell's configuration files.
+If /usr/pkg/etc/openbox is where you want the openbox configuration files
+to go, then you would set XDG_CONFIG_DIRS to /usr/pkg/etc.
+
+See http://www.freedesktop.org/standards/basedir-spec/basedir-spec-0.6.html
+for more information.
+
+If you are not concerned with system-wide configuration, install wip/obconf
+and run it before you start openbox for the first time.
+===========================================================================

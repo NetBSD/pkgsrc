@@ -1,110 +1,69 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/26 01:48:32 wiz Exp $
-bin/epist
+@comment $NetBSD: PLIST,v 1.3 2003/12/18 09:57:27 wiz Exp $
+bin/gnome-panel-control
+bin/kdetrayproxy
 bin/openbox
-man/man1/epist.1
-man/man1/openbox.1
-man/man5/epistrc.5
-share/openbox/buttons/close.xbm
-share/openbox/buttons/fieron-bullet.xbm
-share/openbox/buttons/fieron-bulletl.xbm
-share/openbox/buttons/fieron-close.xbm
-share/openbox/buttons/fieron-icon.xbm
-share/openbox/buttons/fieron-max.xbm
-share/openbox/buttons/fieron-stick.xbm
-share/openbox/buttons/icon.xbm
-share/openbox/buttons/max.xbm
-share/openbox/buttons/stick.xbm
-share/openbox/epistrc
-share/openbox/menu
-share/openbox/nls/C/openbox.cat
-share/openbox/nls/POSIX
-share/openbox/nls/US_ASCII
-share/openbox/nls/da_DK/openbox.cat
-share/openbox/nls/de
-share/openbox/nls/de_DE/openbox.cat
-share/openbox/nls/en
-share/openbox/nls/en_GB
-share/openbox/nls/en_US
-share/openbox/nls/es
-share/openbox/nls/es_AR/openbox.cat
-share/openbox/nls/es_ES/openbox.cat
-share/openbox/nls/et_ET/openbox.cat
-share/openbox/nls/fr
-share/openbox/nls/fr_FR/openbox.cat
-share/openbox/nls/hu_HU/openbox.cat
-share/openbox/nls/it
-share/openbox/nls/it_IT/openbox.cat
-share/openbox/nls/ja_JP/openbox.cat
-share/openbox/nls/ko
-share/openbox/nls/ko_KO/openbox.cat
-share/openbox/nls/nl
-share/openbox/nls/nl_NL/openbox.cat
-share/openbox/nls/no
-share/openbox/nls/no_NO/openbox.cat
-share/openbox/nls/pl
-share/openbox/nls/pl_PL/openbox.cat
-share/openbox/nls/pt
-share/openbox/nls/pt_BR/openbox.cat
-share/openbox/nls/ro
-share/openbox/nls/ro_RO/openbox.cat
-share/openbox/nls/ru_RU/openbox.cat
-share/openbox/nls/sl_SI/openbox.cat
-share/openbox/nls/sv_SE/openbox.cat
-share/openbox/nls/tr_TR/openbox.cat
-share/openbox/nls/uk_UA/openbox.cat
-share/openbox/nls/zh_CN/openbox.cat
-share/openbox/nls/zh_TW/openbox.cat
-share/openbox/styles/artwiz
-share/openbox/styles/bbs
-share/openbox/styles/bluebox
-share/openbox/styles/cthulhain
-share/openbox/styles/deep
-share/openbox/styles/fieron
-share/openbox/styles/fieron2
-share/openbox/styles/flux
-share/openbox/styles/frobozz
-share/openbox/styles/frobust
-share/openbox/styles/mbdtex
-share/openbox/styles/miklos
-share/openbox/styles/nyz
-share/openbox/styles/nyzclone
-share/openbox/styles/ob20
-share/openbox/styles/operation
-share/openbox/styles/outcomes
-share/openbox/styles/paper
-share/openbox/styles/purplehaaze
-share/openbox/styles/shade
-share/openbox/styles/steelblue
-share/openbox/styles/steelblue2
-share/openbox/styles/steelblue3
-share/openbox/styles/the_orange
-share/openbox/styles/trisb
-share/openbox/styles/twice
-share/openbox/styles/warp-xp
-@dirrm share/openbox/styles
-@dirrm share/openbox/nls/zh_TW
-@dirrm share/openbox/nls/zh_CN
-@dirrm share/openbox/nls/uk_UA
-@dirrm share/openbox/nls/tr_TR
-@dirrm share/openbox/nls/sv_SE
-@dirrm share/openbox/nls/sl_SI
-@dirrm share/openbox/nls/ru_RU
-@dirrm share/openbox/nls/ro_RO
-@dirrm share/openbox/nls/pt_BR
-@dirrm share/openbox/nls/pl_PL
-@dirrm share/openbox/nls/no_NO
-@dirrm share/openbox/nls/nl_NL
-@dirrm share/openbox/nls/ko_KO
-@dirrm share/openbox/nls/ja_JP
-@dirrm share/openbox/nls/it_IT
-@dirrm share/openbox/nls/hu_HU
-@dirrm share/openbox/nls/fr_FR
-@dirrm share/openbox/nls/et_ET
-@dirrm share/openbox/nls/es_ES
-@dirrm share/openbox/nls/es_AR
-@dirrm share/openbox/nls/de_DE
-@dirrm share/openbox/nls/da_DK
-@dirrm share/openbox/nls/C
-@dirrm share/openbox/nls
-@dirrm share/openbox/buttons
+include/openbox/${PKGVERSION}/openbox/parse.h
+include/openbox/${PKGVERSION}/openbox/render.h
+include/openbox/${PKGVERSION}/openbox/theme.h
+include/openbox/${PKGVERSION}/openbox/version.h
+lib/libobparser.a
+lib/libobparser.la
+lib/libobparser.so
+lib/libobparser.so.2
+lib/libobparser.so.2.0
+lib/libobrender.a
+lib/libobrender.la
+lib/libobrender.so
+lib/libobrender.so.2
+lib/libobrender.so.2.0
+lib/pkgconfig/obparser-${PKGVERSION}.pc
+lib/pkgconfig/obrender-${PKGVERSION}.pc
+share/gnome/wm-properties/openbox.desktop
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/openbox.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/openbox.mo
+share/examples/openbox/menu.xml
+share/examples/openbox/rc.xml
+share/openbox/menu.xsd
+share/openbox/rc.xsd
+share/openbox/themeupdate.py
+share/pixmaps/openbox.png
+share/themes/Allegro/openbox-3/bullet.xbm
+share/themes/Allegro/openbox-3/themerc
+share/themes/Artwiz/openbox-3/themerc
+share/themes/Blah41/openbox-3/themerc
+share/themes/Om4Ob/openbox-3/close.xbm
+share/themes/Om4Ob/openbox-3/close_hover.xbm
+share/themes/Om4Ob/openbox-3/desk.xbm
+share/themes/Om4Ob/openbox-3/desk_hover.xbm
+share/themes/Om4Ob/openbox-3/desk_toggled.xbm
+share/themes/Om4Ob/openbox-3/iconify.xbm
+share/themes/Om4Ob/openbox-3/iconify_hover.xbm
+share/themes/Om4Ob/openbox-3/iconify_pressed.xbm
+share/themes/Om4Ob/openbox-3/max.xbm
+share/themes/Om4Ob/openbox-3/max_disabled.xbm
+share/themes/Om4Ob/openbox-3/max_hover.xbm
+share/themes/Om4Ob/openbox-3/max_pressed.xbm
+share/themes/Om4Ob/openbox-3/max_toggled.xbm
+share/themes/Om4Ob/openbox-3/shade.xbm
+share/themes/Om4Ob/openbox-3/shade_disabled.xbm
+share/themes/Om4Ob/openbox-3/shade_hover.xbm
+share/themes/Om4Ob/openbox-3/shade_toggled.xbm
+share/themes/Om4Ob/openbox-3/themerc
+share/themes/TheBear/openbox-3/themerc
+@dirrm share/examples/openbox
+@dirrm share/themes/TheBear/openbox-3
+@unexec ${RMDIR} %D/share/themes/TheBear 2>/dev/null || ${TRUE}
+@dirrm share/themes/Om4Ob/openbox-3
+@unexec ${RMDIR} %D/share/themes/Om4Ob 2>/dev/null || ${TRUE}
+@dirrm share/themes/Blah41/openbox-3
+@unexec ${RMDIR} %D/share/themes/Blah41 2>/dev/null || ${TRUE}
+@dirrm share/themes/Artwiz/openbox-3
+@unexec ${RMDIR} %D/share/themes/Artwiz 2>/dev/null || ${TRUE}
+@dirrm share/themes/Allegro/openbox-3
+@unexec ${RMDIR} %D/share/themes/Allegro 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/openbox
+@comment in gnome2-dirs: @dirrm share/gnome/wm-properties
+@dirrm include/openbox/${PKGVERSION}/openbox
+@dirrm include/openbox/${PKGVERSION}
+@dirrm include/openbox
