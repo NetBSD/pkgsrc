@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2003/09/28 23:35:28 manu Exp $
+# $NetBSD: Makefile,v 1.89 2003/12/03 23:35:23 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -82,6 +82,7 @@ SUBDIR+=	suse_xforms
 SUBDIR+=	swarm
 SUBDIR+=	twin
 SUBDIR+=	uae
+SUBDIR+=	vba
 SUBDIR+=	vice
 SUBDIR+=	vmware
 SUBDIR+=	vmware-module
