@@ -1,0 +1,94 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+
+--- build.py.orig	2003-07-05 12:52:49.000000000 +0200
++++ build.py	2003-07-22 15:42:01.000000000 +0200
+@@ -50,7 +50,7 @@
+ pyVersNr = None
+ makefileGen = None
+ makeBin = None
+-buildModules = ["qt"]
++buildModules = []
+ proPatches = {}
+ makefilePatches = {}
+ tempBuildDir = None
+@@ -162,12 +162,13 @@
+     global pyFullVers, pyVersNr
+ 
+     pyFullVers = string.split(sys.version)[0]
++    pyFullVersn = string.replace(pyFullVers, 'p', '.');
+ 
+-    vl = string.split(re.findall("[0-9.]*",pyFullVers)[0],".")
++    vl = string.split(re.findall("[0-9.]*",pyFullVersn)[0],".")
+     major = vl[0]
+     minor = vl[1]
+ 
+-    pyVers = major + "." + minor
++    pyVers = sys.version[0:3]
+     pyVersNr = int(major) * 10 + int(minor)
+ 
+     global platMake, platCopy, platMkdir, platRmdir
+@@ -592,7 +593,7 @@
+         incdirs = incdirs + " " + escape(qtIncDir)
+ 
+     # Find the QScintilla header files.
+-    if qtVersion >= 0x030000:
++    if 0:
+         global sciIncDir
+ 
+         if not sciIncDir:
+@@ -717,7 +718,7 @@
+     print "Type 'no' to decline the terms of the license."
+     print
+ 
+-    while 1:
++    while 0:
+         try:
+             resp = raw_input("Do you accept the terms of the license? ")
+         except:
+@@ -997,7 +998,7 @@
+         buildMakefile("qttest.pro")
+ 
+         # Check the location of the QScintilla library.
+-        if sciVersion >= 0:
++        if 0:
+             global sciLibDir
+ 
+             if not sciLibDir:
+@@ -1551,23 +1552,23 @@
+         subdirs = subdirs + " qtpe"
+ 
+     # See which version of pyuic to build.
+-    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
++#    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
+ 
+-    if qtVersion >= 0x030000:
+-        inform("Creating Makefile for pyuic3.")
+-        subdirs = subdirs + " pyuic3"
+-        olddir = pushDir("pyuic3")
+-    elif qtVersion >= 0x020000:
+-        inform("Creating Makefile for pyuic2.")
+-        subdirs = subdirs + " pyuic2"
+-        olddir = pushDir("pyuic2")
+-
+-    buildMakefile("pyuic.pro")
+-    fixInstallTarget()
+-    popDir(olddir)
++#    if qtVersion >= 0x030000:
++#        inform("Creating Makefile for pyuic3.")
++#        subdirs = subdirs + " pyuic3"
++#        olddir = pushDir("pyuic3")
++#    elif qtVersion >= 0x020000:
++#        inform("Creating Makefile for pyuic2.")
++#        subdirs = subdirs + " pyuic2"
++#        olddir = pushDir("pyuic2")
++
++#    buildMakefile("pyuic.pro")
++#    fixInstallTarget()
++#    popDir(olddir)
+ 
+     # Build pylupdate if Qt v3.0 or later.
+-    if qtVersion >= 0x030000:
++    if 0:
+         inform("Creating Makefile for pylupdate3.")
+         subdirs = subdirs + " pylupdate3"
+         olddir = pushDir("pylupdate3")
