@@ -1,0 +1,5 @@
+  PAM provides a way to develop programs that are independent of
+authentication scheme.  These programs need "authentication modules" to be
+attatched to them at run-time in order to work.  Which authentication module
+is to be attatched is dependent upon the local system setup and is at the
+discretion of the local system administrator.
