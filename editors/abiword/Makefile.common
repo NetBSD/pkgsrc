@@ -1,21 +1,18 @@
-# $NetBSD: Makefile.common,v 1.12 2005/02/10 19:27:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/02/24 09:55:34 adam Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
-ABIWORD_DIST_VERSION=	2.2.3
-DISTNAME=	abiword-${ABIWORD_DIST_VERSION}
+ABIWORD_VERSION=	2.2.4
+DISTNAME=	abiword-${ABIWORD_VERSION}
 
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
+MASTER_SITES=	http://www.abisource.com/downloads/abiword/${ABIWORD_VERSION}/source/ \
+		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.abisource.com/
 
 BUILD_USES_MSGFMT=	yes
-
-# there were two versions of abiword-2.2.3 -- you can
-# remove this line during the next update
-DIST_SUBDIR=		abiword-2.2.3
 
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		yes
@@ -25,9 +22,6 @@ USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
-CONFIGURE_ARGS+=        --enable-threads
-CONFIGURE_ARGS+=        --with-libxml2
-CONFIGURE_ARGS+=        --with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=        --with-libpng=${BUILDLINK_PREFIX.png}
 
 .include "../../converters/fribidi/buildlink3.mk"
