@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/08/26 19:01:51 jdolecek Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/13 11:54:23 jdolecek Exp $
 
-DISTNAME=	vmware-netbsd-3.2.1.4
-PKGNAME=	vmware-module-3.2.1.4
-WRKSRC=		${WRKDIR}
+DISTNAME=	vmware-netbsd-3.2.1.5
+PKGNAME=	vmware-module-3.2.1.5
 CATEGORIES=	emulators
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
 EXTRACT_SUFX=	.tar.bz2
@@ -43,16 +42,16 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lkm
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnetif ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/source/linuxrtc/linuxrtc.o ${PREFIX}/lkm
-	${INSTALL_DATA} ${WRKDIR}/source/vmmon/vmmon.o ${PREFIX}/lkm
-	${INSTALL_DATA} ${WRKDIR}/source/vmnet/vmnet.o ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmnet_post.sh ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/linuxrtc_post.sh ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmmon_post.sh ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnetif ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/source/linuxrtc/linuxrtc.o ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/source/vmmon/vmmon.o ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/source/vmnet/vmnet.o ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmnet_post.sh ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/linuxrtc_post.sh ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmmon_post.sh ${PREFIX}/lkm
 	@cd ${WRKSRC}/rc.d && for f in linuxrtc vmmon vmnet vmnetif; do \
 		${SED}  -e 's,@PREFIX@,${PREFIX},' < $$f > $$f.patched; \
 		${INSTALL_SCRIPT} $$f.patched ${PREFIX}/etc/rc.d/$$f; \
