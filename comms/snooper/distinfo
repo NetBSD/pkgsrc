@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/06/29 23:41:39 recht Exp $
 
 SHA1 (snooper-19991202.tar.gz) = d6aba20cd14449d7b126f393cdb219fd627b7777
 Size (snooper-19991202.tar.gz) = 38239 bytes
+SHA1 (patch-aa) = 669aef2501d5a055116ea71082e20f1101537637
