@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/09 10:44:48 seb Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -34,7 +34,6 @@ USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 AUTOCONF_REQD=	2.50
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	prc-tools.info
 
