@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/09 07:10:49 tls Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/31 05:01:21 dmcmahill Exp $
 
 DISTNAME=		compat
 PKGNAME=		suse_compat-6.3
@@ -10,6 +10,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
 DEPENDS+=		suse_base-6.3:../suse_base
+
+ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
