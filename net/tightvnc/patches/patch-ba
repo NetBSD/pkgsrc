@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2001/09/23 01:34:31 mycroft Exp $
+
+--- Xvnc/config/cf/vnclibs.def.orig	Mon Jan 29 21:24:14 2001
++++ Xvnc/config/cf/vnclibs.def	Sun Sep 23 01:08:42 2001
+@@ -5,5 +5,6 @@
+  * and programs/Xserver/hw/vnc whenever you change this file.
+  */
+ 
+-VNCLIBS = $(TOP)/../libvncauth/libvncauth.a /usr/lib/libjpeg.a
++VNCLIBS = $(TOP)/../libvncauth/libvncauth.a \
++	  ${BUILDLINK_LDFLAGS} -Wl,-rpath ${LOCALBASE}/lib -ljpeg
+ VNCCPPFLAGS = -I$(TOP)/../include

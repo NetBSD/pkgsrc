@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2001/09/23 01:34:30 mycroft Exp $
+
+--- Xvnc/config/imake/imakemdep.h.orig	Sun Jul 27 03:41:05 1997
++++ Xvnc/config/imake/imakemdep.h
+@@ -287,6 +287,11 @@
+  *     that support multiple operating systems).
+  */
+ 
++#ifdef __NetBSD__
++#undef unix
++#define unix 42
++#endif
++
+ #define	ARGUMENTS 50	/* number of arguments in various arrays */
+ char *cpp_argv[ARGUMENTS] = {
+ 	"cc",		/* replaced by the actual program to exec */
