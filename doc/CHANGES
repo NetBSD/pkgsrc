@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.675 2002/12/03 21:23:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.676 2002/12/03 21:50:04 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3802,3 +3802,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xcdroast to 0.98alpha11 [drochner 2002-12-03]
 	Added zope25-ZWeatherApplet-1.50 [drochner 2002-12-03]
 	Updated mutt to 1.4nb3 [jmmv 2002-12-03]
+	Updated openh323 to 1.10.4 [jdolecek 2002-12-03]
