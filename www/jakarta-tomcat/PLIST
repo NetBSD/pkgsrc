@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/06/28 13:58:52 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/07/22 21:30:30 erh Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
@@ -24,12 +24,13 @@ tomcat/bin/tomcat5w.exe
 tomcat/bin/tool-wrapper-using-launcher.sh
 tomcat/bin/tool-wrapper.sh
 tomcat/common/endorsed/xercesImpl.jar
-tomcat/common/endorsed/xmlParserAPIs.jar
+tomcat/common/endorsed/xml-apis.jar
 tomcat/common/lib/ant.jar
-tomcat/common/lib/commons-collections.jar
-tomcat/common/lib/commons-dbcp-1.1.jar
+tomcat/common/lib/ant-launcher.jar
+tomcat/common/lib/commons-collections-2.1.1.jar
+tomcat/common/lib/commons-dbcp-1.2.1.jar
 tomcat/common/lib/commons-el.jar
-tomcat/common/lib/commons-pool-1.1.jar
+tomcat/common/lib/commons-pool-1.2.jar
 tomcat/common/lib/jasper-compiler.jar
 tomcat/common/lib/jasper-runtime.jar
 tomcat/common/lib/jsp-api.jar
@@ -786,6 +787,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/security/packag
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/security/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.CGIEnvironment.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.CGIRunner.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.HTTPHeaderInputStream.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.NameValuePair.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/Constants.html
@@ -1046,6 +1048,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/config/WebXml2Jk.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/config/package-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/config/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/config/package-tree.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/core/JkChannel.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/core/JkHandler.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/core/Msg.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/core/MsgContext.html
