@@ -1,7 +1,0 @@
-I've written a tar that owes nothing to anything else.  It's in the
-public domain and hence is free for NetBSD to steal, anything from
-lifting it verbatim to swiping ideas from.
-
-It doesn't currently have anything like --fast-read; that hadn't
-occurred to me.  Now that it's been pointed out, I'll be adding it; I
-think it's a valuable addition, whether or not NetBSD wants my tar.
