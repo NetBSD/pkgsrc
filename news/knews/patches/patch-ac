@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.5 1999/07/24 12:02:33 tron Exp $
+
+--- src/domain.c.orig	Sun Aug 23 16:23:19 1998
++++ src/domain.c	Sat Jul 24 13:57:12 1999
+@@ -66,10 +66,25 @@
+     }
+ }
+ 
++static void fix_mail_name(void)
++{
++    char	*dn;
++
++    if (!global.mail_name) return;
++
++    dn = strchr(global.mail_name, '@');
++    if (!dn) return;
++    *dn++='\0';
++
++    XtFree(global.domain_name);
++    global.domain_name = XtNewString(dn);
++}
++
+ void fix_domain_stuff()
+ {
+     fix_domain_name();
+     fix_user_id();
++    fix_mail_name();
+ 
+     if (!global.domain_name)
+ 	fputs("knews: Couldn't determine domain name. "
