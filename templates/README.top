@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.6 1998/05/29 03:25:51 hubertf Exp $ -->
+<!-- $NetBSD: README.top,v 1.7 1998/08/23 01:32:19 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -30,7 +30,7 @@ The packages collection is divided into categories of packages.
 For more information on how to build any of the packages from
 the NetBSD Packages Collection, see the included <A HREF="README">README</A> file.
 For a more in-depth description, see the
-<A HREF="http://www.netbsd.org/Documentation/netbsd/Packages.txt">Packages.txt</A> document.
+<A HREF="Packages.txt">Packages.txt</A> document.
 
 The most up-to-date version of the Packages Collection is available from
 <A HREF="ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc">the NetBSD ftp server</A>.
