@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/06/08 20:26:33 grant Exp $
+# $NetBSD: Makefile,v 1.61 2003/06/12 15:48:18 abs Exp $
 
 DISTNAME=       imap-2002b
 PKGNAME=        imap-uw-2002.2
@@ -138,5 +138,8 @@ do-install:
 
 .if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
 .include "../../security/openssl/buildlink2.mk"
+.endif
+.if defined(USE_GCC3)
+.  include "../../lang/gcc3/buildlink2.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
