@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/07/24 19:45:26 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2002/08/25 21:50:19 jlam Exp $
 
 DISTNAME=	wget-1.7
 CATEGORIES=	net
@@ -15,7 +15,7 @@ COMMENT=	Retrieve files from the 'net via HTTP and FTP
 USE_PERL5=	build
 
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=        --enable-ipv6
 CONFIGURE_ARGS+=        --disable-ipv6
 .endif
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/13 08:27:10 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/25 21:50:08 jlam Exp $
 bin/sms
 bin/smsaddr
 share/sms/contrib/mimecut

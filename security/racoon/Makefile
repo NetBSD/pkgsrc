@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/06/28 09:05:18 seb Exp $
+# $NetBSD: Makefile,v 1.53 2002/08/25 21:50:42 jlam Exp $
 #
 
 DISTNAME=	racoon-20020507a
@@ -13,13 +13,13 @@ CRYPTO=		yes
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
-IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
+IGNORE+=	"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
 
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 CONFLICTS+=	racoon-[0-9]*
 
@@ -53,5 +53,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/racoon.conf.sample \
 		${PREFIX}/share/examples/racoon
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

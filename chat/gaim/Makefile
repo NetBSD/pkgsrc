@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2002/07/09 02:10:50 rafal Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/25 21:49:30 jlam Exp $
 #
 
 .include "Makefile.common"
 
+CONFLICTS+=		gaim-gnome-[0-9]*
+
+USE_BUILDLINK2=		YES
+
 CONFIGURE_ARGS+=	--disable-gnome
 CONFIGURE_ARGS+=	--disable-panel
 
-PLIST_SRC+=    ${.CURDIR}/../gaim/PLIST
+PLIST_SRC+=		${.CURDIR}/../gaim/PLIST
 
-CONFLICTS+=	gaim-gnome-[0-9]*
-
-.include "../../audio/esound/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/esound/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

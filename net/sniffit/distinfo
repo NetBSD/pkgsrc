@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/05/25 20:51:26 dmcmahill Exp $
+$NetBSD: distinfo,v 1.6 2002/08/25 21:50:16 jlam Exp $
 
 SHA1 (sniffit.0.3.5.tar.gz) = df9183fca2eec29a56bcfdc68a983c4e7d57bf9d
 Size (sniffit.0.3.5.tar.gz) = 197255 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/16 18:13:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/25 21:49:57 jlam Exp $
 bin/gnet-config
 include/gnet/conn.h
 include/gnet/gnet.h

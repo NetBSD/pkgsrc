@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/07/07 19:27:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 21:49:58 jlam Exp $
 
 SHA1 (gtk-gnutella-0.90.tar.gz) = b31984b6e83b0471a5ee2de2486d85b3400ecb67
 Size (gtk-gnutella-0.90.tar.gz) = 469236 bytes
