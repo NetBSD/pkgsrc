@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/22 13:01:24 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/02 22:08:43 dillo Exp $
 
 DISTNAME=	libesmtp-1.0rc1
 CATEGORIES=	mail devel
@@ -11,15 +11,10 @@ MAINTAINER=	dolemite@wuli.nu
 HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-
 USE_BUILDLINK2=	yes
 USE_GMAKE=      yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-all
-
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 .include "../../devel/pth/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
