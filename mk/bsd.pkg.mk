@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.358 1999/10/20 09:57:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.359 1999/10/21 14:23:38 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1365,14 +1365,9 @@ root-install:
 						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s.%s", lib, v1, v2, v3, slashes[slashc], lib, v1, v2, v3)); \
 						printf("%s.%s.%s.%s\n", lib, v1, v2, v3); \
 					}				\
-					if (v2 >= 0) {			\
-						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
-						printf("%s.%s.%s\n", lib, v1, v2); \
-					}				\
-					if (v1 >= 0) {			\
-						system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
-						printf("%s.%s\n", lib, v1); \
-					}				\
+					system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
+					system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
+					printf("%s.%s.%s\n%s.%s\n", lib, v1, v2, lib, v1); \
 				}					\
 				/^@/ { print; next }			\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
