@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ns-open,v 1.3 2000/09/01 16:05:20 abs Exp $
+# $NetBSD: ns-open,v 1.4 2001/01/12 23:11:05 tron Exp $
 #
 # Simple script to open a URL in Netscape, starting a new process if necessary
 # If a netscape process is not running it will look for a valid netscape
@@ -39,7 +39,8 @@ RAISE=-noraise
 # Check if there are any '-' options which would not be understood by ns-remote
 # Slightly involved to avoid changing $@ in case we need it for real netscape
 #
-for a ; do
+for a
+do
     if [ "$SKIP_ARG" = 1 ];then
 	NS_REMOTE_ARGS="$NS_REMOTE_ARGS $a"
 	SKIP_ARG=0
