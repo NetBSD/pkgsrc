@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 2000/10/15 14:30:23 itojun Exp $
+$NetBSD: md5,v 1.7 2000/11/19 07:44:39 taca Exp $
 
 MD5 (sendmail.8.11.1.tar.gz) = 9118a555141493fb574a588d50f57215
-MD5 (sendmail8.11.0+3.3W.patch.gz) = fcdf9204dd72c895ecf0e80fd9738cc3
+MD5 (sendmail8.11.1+3.4W.patch.gz) = fe4a1bd09c1cbc35776c4d6730e91e37
