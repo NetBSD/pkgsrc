@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2002/09/11 23:07:52 rh Exp $
+
+--- modules/vfolder/Makefile.in.orig	Sat Sep  7 18:20:48 2002
++++ modules/vfolder/Makefile.in	Sat Sep  7 18:24:03 2002
+@@ -215,7 +215,7 @@
+ 
+ 
+ ###  Module setup
+-module_flags = -export_dynamic -avoid-version
++module_flags = -export_dynamic -avoid-version -L$(top_builddir)/libgnomevfs/.libs
+ modulesdir = $(libdir)/gnome-vfs-2.0/modules
+ 
+ modules_LTLIBRARIES = libvfolder-desktop.la
