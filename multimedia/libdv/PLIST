@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/26 17:48:29 grant Exp $
+bin/dubdv
+bin/dvconnect
+bin/encodedv
+bin/playdv
+include/libdv/dv.h
+include/libdv/dv1394.h
+include/libdv/dv_types.h
+lib/libdv.a
+lib/libdv.la
+lib/libdv.so
+lib/libdv.so.4
+lib/libdv.so.4.0
+lib/pkgconfig/libdv.pc
+man/man1/dubdv.1
+man/man1/dvconnect.1
+man/man1/encodedv.1
+man/man1/playdv.1
+@dirrm include/libdv
