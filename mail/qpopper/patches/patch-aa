@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2001/07/31 13:42:42 taca Exp $
+$NetBSD: patch-aa,v 1.8 2002/05/02 16:16:51 martti Exp $
 
---- configure.orig	Tue Jul 31 22:28:30 2001
-+++ configure
-@@ -1315,13 +1315,6 @@
+--- configure.orig	Tue Nov  6 01:45:26 2001
++++ configure	Thu May  2 09:16:00 2002
+@@ -1249,13 +1249,6 @@
  
  
  
