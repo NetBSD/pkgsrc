@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.32 2002/10/23 12:21:30 wiz Exp $
+# $NetBSD: defs.SunOS.mk,v 1.33 2002/10/27 18:27:11 bouyer Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -21,7 +21,11 @@ FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/usr/bin/grep
+.if exists(${LOCALBASE}/bin/gtar)
+GTAR?=		${LOCALBASE}/bin/gtar
+.else
 GTAR?=		${ZOULARISBASE}/bin/tar
+.endif
 .if exists(/usr/bin/gzip)
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
