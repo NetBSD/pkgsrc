@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2004/04/30 11:29:00 adam Exp $
+
+--- qmake/Makefile.unix.orig	2004-04-30 10:53:49.000000000 +0000
++++ qmake/Makefile.unix
+@@ -32,7 +32,7 @@ DEPEND_SRC=project.cpp property.cpp meta
+ 	   @SOURCE_PATH@/src/tools/qsettings.cpp @SOURCE_PATH@/src/tools/qurl.cpp \
+ 	   @SOURCE_PATH@/src/tools/qsettings_mac.cpp @SOURCE_PATH@/src/tools/qlocale.cpp
+ 
+-CXXFLAGS= @QMAKE_CFLAGS@ \
++CXXFLAGS+= @QMAKE_CFLAGS@ \
+ 	-I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac \
+ 	-I@BUILD_PATH@/include/qmake -I@BUILD_PATH@/include -I@SOURCE_PATH@/include \
+ 	-DQT_NO_TEXTCODEC -DQT_NO_UNICODETABLES -DQT_NO_COMPONENT -DQT_NO_STL \
