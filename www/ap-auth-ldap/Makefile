@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/10/26 14:17:18 kleink Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/26 15:02:30 jlam Exp $
 
 DISTNAME=	auth_ldap-1.6.0
 PKGNAME=	ap-auth-ldap-1.6.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.rudedog.org/auth_ldap/
 MAINTAINER=	kleink@netbsd.org
 HOMEPAGE=	http://www.rudedog.org/auth_ldap/
 COMMENT=	Module to allow apache authentication against an LDAP directory
+
+DEPENDS+=	${BUILDLINK_DEPENDS.apache}:../../www/apache
 
 do-build:
 	@cd ${WRKSRC} && ${APXS} -c					\
