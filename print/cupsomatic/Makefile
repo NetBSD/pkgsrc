@@ -1,10 +1,21 @@
-# $NetBSD: Makefile,v 1.5 2001/05/08 15:54:48 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/14 17:54:31 jlam Exp $
 
 DISTNAME=	cupsomatic
-PKGNAME=	cupsomatic-1.3
+PKGNAME=	cupsomatic-1.6
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 EXTRACT_SUFX=	# empty
+
+# Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
+# following does the correct substitution.
+#
+.for subdir in ${PKGNAME}
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
+.endfor
+
+# The definitive location of the distfile is at www.linuxprinting.org,
+# but this file has no revision number.
+#
+#MASTER_SITES+=	http://www.linuxprinting.org/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.linuxprinting.org/cups-doc.html
@@ -29,9 +40,9 @@ post-extract:
 	cd ${WRKSRC}; ${MV} cupsomatic cupsomatic.in
 
 do-build:
-	${SED}	-e "s,@PERL@,${PERL5},g" \
-		-e "s,@LOCALBASE@,${LOCALBASE},g" \
-		< ${WRKSRC}/cupsomatic.in > ${WRKSRC}/cupsomatic
+	${SED}	-e "s,@PERL@,${PERL5},g"				\
+		-e "s,@LOCALBASE@,${LOCALBASE},g"			\
+		${WRKSRC}/cupsomatic.in > ${WRKSRC}/cupsomatic
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cupsomatic ${FILTERDIR}
