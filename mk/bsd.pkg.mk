@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1104 2002/12/10 13:08:34 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1105 2002/12/10 13:11:38 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1109,7 +1109,7 @@ __PLATFORM_OK?=	yes
 .    endif	# MACHINE_PLATFORM
 .  endfor	# __tmp__
 .  if !defined(__PLATFORM_OK)
-PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 
 #
