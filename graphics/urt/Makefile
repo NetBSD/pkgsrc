@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/05/21 01:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/23 13:45:02 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -13,7 +13,7 @@ PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	tiff-*:../tiff
+#DEPENDS+=	tiff-*:../tiff	# netpbm will pull in tiff.
 DEPENDS+=	netpbm-9.*:../netpbm
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
@@ -24,7 +24,6 @@ CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
-MAKE_ENV+=	PKGSRCDIR=${BUILD_ROOT} WORKINGDIRNAME=${WRKDIR:T}
 ALL_TARGET=
 
 post-install:
