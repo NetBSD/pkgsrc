@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/09/14 18:21:52 abs Exp $
+# $NetBSD: Makefile,v 1.35 2001/09/26 05:38:15 jlam Exp $
 #
 
 COMMENT=	Character code converters
@@ -13,6 +13,7 @@ SUBDIR+=	kdesupport
 SUBDIR+=	kdesupport2
 SUBDIR+=	latex2rtf
 SUBDIR+=	libiconv
+SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	p5-Text-Iconv
