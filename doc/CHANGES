@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8052 2004/11/27 07:21:49 skrll Exp $
+$NetBSD: CHANGES,v 1.8053 2004/11/27 07:46:58 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5488,3 +5488,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated verilog-current to 20041004 [dmcmahill 2004-11-27]
 	Updated openslp to 1.2.0 [jlam 2004-11-27]
 	Updated jamjar to 0.7.1 [skrll 2004-11-27]
+	Updated ripmime to 1.4.0.2 [reed 2004-11-27]
