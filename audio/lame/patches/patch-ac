@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2002/08/25 19:21:49 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2002/12/19 00:53:49 wiz Exp $
 
---- frontend/Makefile.in.orig	Fri Apr 12 21:38:18 2002
+--- frontend/Makefile.in.orig	Sun Dec  1 17:18:27 2002
 +++ frontend/Makefile.in
-@@ -166,7 +166,7 @@
+@@ -162,7 +162,7 @@ EXTRA_mp3x__EXEEXT__SOURCES = $(brhist_s
  @WITH_BRHIST_FALSE@mp3x__EXEEXT__SOURCES = mp3x.c gtkanal.c gpkplotting.c $(common_sources)
  
  CFLAGS = @CFLAGS@ @GTK_CFLAGS@ @FRONTEND_CFLAGS@

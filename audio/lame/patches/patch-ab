@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2002/01/07 16:38:32 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2002/12/19 00:53:48 wiz Exp $
 
---- doc/html/Makefile.in.orig	Sun Nov 11 15:57:48 2001
+--- doc/html/Makefile.in.orig	Sun Dec  1 17:18:39 2002
 +++ doc/html/Makefile.in
-@@ -106,9 +106,9 @@
+@@ -102,9 +102,9 @@ install_sh = @install_sh@
  AUTOMAKE_OPTIONS = foreign ansi2knr
  
  docdir = $(datadir)/doc
