@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.3 2004/11/12 20:25:41 sketch Exp $
+# $NetBSD: IRIX.mk,v 1.4 2004/11/15 14:48:18 tv Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -131,7 +131,7 @@ _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
+_OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 .if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
 _PATCH_CAN_BACKUP=	yes		# patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z # switch to patch(1) for backup suffix

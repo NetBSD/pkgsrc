@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.4 2004/10/13 15:31:31 tv Exp $
+# $NetBSD: SunOS.mk,v 1.5 2004/11/15 14:48:18 tv Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -128,7 +128,7 @@ _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
+_OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
