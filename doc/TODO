@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.419 2003/03/25 14:13:55 salo Exp $
+$NetBSD: TODO,v 1.420 2003/03/25 23:56:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,7 @@ Suggested package updates
 	o ctwm-3.6 [pkg/20648]
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.0
-	o dia-0.91
+	o dia-0.91 [pkg/20750]
 	o disc-cover-1.5.0
 	o distcc-1.2.2
 	o dylan-compiler-2.3.9
@@ -213,7 +213,6 @@ Suggested package updates
 	o rox-1.2.2
 	o rox-session-0.1.17
 	o rt-2.1.15
-	o ruby-1.6.8 [pkg/20683, pkg/20686]
 	o rxvt-2.7.9
 	o sablotron-0.97
 	o sane-backends-1.0.11
@@ -231,7 +230,6 @@ Suggested package updates
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.4
-	o squid-2.5.2
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
 	o subversion-0.19.1 [pkg/20725]
