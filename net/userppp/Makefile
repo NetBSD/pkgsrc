@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/26 21:26:25 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/12 12:14:40 agc Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -22,8 +22,12 @@ post-patch:
 			$$i > $$i.done; ${MV} $$i.done $$i;		\
 	done)
 
-pre-install:
-	${GREP} "^network:" /etc/group >/dev/null || \
-	    /usr/sbin/groupadd -g 40 network
+.include "../../mk/bsd.prefs.mk"
 
+USERPPP_GROUP?=	network
+BUILD_DEFS+=	USERPPP_GROUP
+
+PKG_GROUPS=	${USERPPP_GROUP}
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
