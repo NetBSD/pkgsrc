@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/05/06 17:42:00 jmmv Exp $
+$NetBSD: MESSAGE,v 1.5 2004/01/25 16:57:57 mrauch Exp $
 
-  OpenOffice has now been installed in ${PREFIX}/OpenOffice.org1.0.3.
+  OpenOffice has now been installed in ${PREFIX}/OpenOffice.org1.1.0.
 
   Before using this package for the first time, each user has to run
   a setup program, which is automatically invoked at the first start. 

@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 22:09:56 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/25 16:57:57 mrauch Exp $
 
-DISTNAME=		OOo_1.0.3.1_LinuxIntel_install
-PKGNAME=		openoffice-linux-1.0.3.1
+DISTNAME=		OOo_1.1.0_LinuxIntel_install
+PKGNAME=		openoffice-linux-1.1.0
 CATEGORIES=		misc
-MASTER_SITES=		http://mirrors.isc.org/pub/openoffice/stable/1.0.3/ \
+MASTER_SITES=		http://mirrors.isc.org/pub/openoffice/stable/1.1.0/ \
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		openoffice-linux-110-services.rdb.bz2
 
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -18,26 +20,13 @@ CONFLICTS+=		openoffice-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
 
-WRKSRC=			${WRKDIR}/install
 TEMP?=			${WRKSRC}
+CHECK_SHLIBS=		no
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_JVM?=	sun-jdk
 PLIST_SUBST+=	JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
-
-DISPLAY?=       # empty, if unset
-checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
-.  if exists(${X11BASE}/bin/Xvfb)
-	-${X11BASE}/bin/Xvfb :2 &
-DISPLAY= ':2'
-.  else
-	@${ECHO} "Error: Environment variable DISPLAY must be set"
-	@${ECHO} "       and point to a connectible X server."
-	@${FALSE}
-.  endif  #Xvfb
-.endif  #DISPLAY
 
 do-build:
 
@@ -46,27 +35,26 @@ USE_PKGINSTALL=         yes
 SUPPORT_FILES=          /dev/null /emul/linux/etc/mtab
 .endif
 
-pre-install: checkforx
-	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
-		< ${FILESDIR}/oo_setup.resp > ${WRKSRC}/oo_setup.resp
+pre-install:
+	${CP} ${WRKSRC}/setup.ins ${WRKSRC}/setup.ins.orig
+	${SED}  -e "s|/usr/bin/soffice|${PREFIX}/bin/soffice.orig|g"	\
+		<${WRKSRC}/setup.ins.orig >${WRKSRC}/setup.ins
 .     if ${OPSYS}=="NetBSD" && !exists(/emul/linux/etc/mtab)
 	${CP} /dev/null /emul/linux/etc/mtab
 .     endif
 
 do-install:
-	-${SH} -c "cd ${WRKSRC};					\
-		  TEMP=${WRKSRC}; export TEMP;				\
-		  DISPLAY=${DISPLAY}; export DISPLAY;			\
-		  ./setup -r:oo_setup.resp"
-	@if [ ! -x ${PREFIX}/OpenOffice.org1.0.3/setup ]; then		\
-		${ECHO} "Installation was not successful.";		\
-		${FALSE};						\
-	fi
+	${INSTALL_DATA_DIR} ${PREFIX}/OpenOffice.org1.1.0/program
+	${INSTALL_DATA} ${WRKDIR}/openoffice-linux-110-services.rdb	\
+		${PREFIX}/OpenOffice.org1.1.0/program/services.rdb
+	${SH} -c "cd ${WRKSRC}; ./install --prefix=${PREFIX}"
+	${RM} -f ${PREFIX}/bin/soffice.orig
 	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
-	${PATCH} ${PATCH_ARGS} ${PREFIX}/OpenOffice.org1.0.3/program/soffice \
-		< ${FILESDIR}/soffice.test.patch
+.for i in scalc sdraw simpress swriter
+	${LN} -sf ${PREFIX}/OpenOffice.org1.1.0/program/$i ${PREFIX}/bin/$i
+.endfor
 	${LN} -sf ${PKG_JAVA_HOME} ${PKG_JAVA_HOME}/jre
 
 # everything specific to your OS/Arch goes into its own Makefile
