@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/05/02 08:22:31 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+MYSQL_DATADIR="@MYSQL_DATADIR@"
+
+CAT="@CAT@"
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want
+to remove the following directories:
+
+	${MYSQL_DATADIR}
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
