@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/10 13:56:57 simonb Exp $
-bin/gforth-0.4.0
+@comment $NetBSD: PLIST,v 1.2 1999/08/13 14:06:57 agc Exp $
+bin/${PKGNAME}
 bin/gforth
 bin/gforthmi-0.4.0
 bin/gforthmi
