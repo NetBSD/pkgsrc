@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:23 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/29 17:37:57 wiz Exp $
 #
 
 DISTNAME=	arphicttf-2.11
@@ -11,7 +11,7 @@ DISTFILES=	${FONT_SETS} ${MISC_FILES}
 MAINTAINER=	rxg@ms25.url.com.tw
 COMMENT=	Chinese Big5/GB TrueType fonts made by Arphic Technology
 
-DEPENDS+=	mkttfdir-1*:../../fonts/mkttfdir
+DEPENDS+=	mkttfdir>=1.1nb1:../../fonts/mkttfdir
 
 FONT_SETS=	bkai00mp.ttf.gz \
 		bsmi00lp.ttf.gz \
@@ -29,7 +29,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_X11BASE=	yes
-FONTDIR=	${PREFIX}/lib/X11/fonts/arphicttf
+FONTDIR=	${PREFIX}/lib/X11/fonts/TrueType
 
 do-install:
 	${INSTALL_DATA_DIR} ${FONTDIR}
