@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/18 01:14:59 lukem Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/18 01:49:05 grant Exp $
 #
 
 DISTNAME=		tnftpd-20031217
@@ -12,25 +12,25 @@ COMMENT=		The NetBSD FTP Daemon
 
 CONFLICTS=		wu-ftpd-[0-9]*
 CONFLICTS+=		kth-krb4-[0-9]*
-CONFLICTS=		lukemftpd-[0-9]*
+CONFLICTS+=		lukemftpd-[0-9]*
 
-GNU_CONFIGURE=		yes
-MANCOMPRESSED_IF_MANZ=	yes
+GNU_CONFIGURE=		YES
+MANCOMPRESSED_IF_MANZ=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
 # Include SOCKS firewall support
-.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-.if ${USE_SOCKS} == 4
+.if defined(USE_SOCKS) && (${USE_SOCKS} == "4" || ${USE_SOCKS} == "5")
+.  if ${USE_SOCKS} == "4"
 DEPENDS+=		socks4-2.2:../../net/socks4
 CONFIGURE_ARGS+=	--with-socks4
-.else
+.  else
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 CONFIGURE_ARGS+=	--with-socks5
-.endif
+.  endif
 .endif
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
