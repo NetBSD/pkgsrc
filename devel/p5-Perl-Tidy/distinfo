@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/22 01:58:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/04 14:35:19 wiz Exp $
 
-SHA1 (Perl-Tidy-20021130.tar.gz) = 2909f7797a147b0b144ae3683c76baaac082f45c
-Size (Perl-Tidy-20021130.tar.gz) = 305237 bytes
+SHA1 (Perl-Tidy-20031021.tar.gz) = c76530bb52fa43dff2827466644b4adc134c9ecf
+Size (Perl-Tidy-20031021.tar.gz) = 327155 bytes
