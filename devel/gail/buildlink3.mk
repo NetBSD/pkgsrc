@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 03:04:28 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use gail.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAIL_BUILDLINK3_MK:=	${GAIL_BUILDLINK3_MK}+
@@ -12,10 +7,12 @@ GAIL_BUILDLINK3_MK:=	${GAIL_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	gail
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngail}
+BUILDLINK_PACKAGES+=	gail
+
 .if !empty(GAIL_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			gail
-BUILDLINK_DEPENDS.gail+=		gail>=1.4.1nb1
-BUILDLINK_PKGSRCDIR.gail?=		../../devel/gail
+BUILDLINK_DEPENDS.gail+=	gail>=1.4.1nb1
+BUILDLINK_PKGSRCDIR.gail?=	../../devel/gail
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -23,6 +20,6 @@ BUILDLINK_PKGSRCDIR.gail?=		../../devel/gail
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-.endif # GAIL_BUILDLINK3_MK
+.endif	# GAIL_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

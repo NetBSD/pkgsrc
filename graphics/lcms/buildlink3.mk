@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/02/11 19:11:32 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:35 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LCMS_BUILDLINK3_MK:=	${LCMS_BUILDLINK3_MK}+
@@ -7,15 +7,17 @@ LCMS_BUILDLINK3_MK:=	${LCMS_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	lcms
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlcms}
+BUILDLINK_PACKAGES+=	lcms
+
 .if !empty(LCMS_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=		lcms
 BUILDLINK_DEPENDS.lcms+=	lcms>=1.06
 BUILDLINK_PKGSRCDIR.lcms?=	../../graphics/lcms
-.endif # LCMS_BUILDLINK3_MK
 
 BUILDLINK_TARGETS+=	buildlink-include-lcms
 
-buildlink-include-lcms: .PHONY
+.PHONY: buildlink-include-lcms
+buildlink-include-lcms:
 .for _h_ in lcms.h icc34.h
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${BUILDLINK_DIR}/include/lcms/${_h_} ]; then		\
@@ -24,5 +26,7 @@ buildlink-include-lcms: .PHONY
 		${LN} -s ${BUILDLINK_PREFIX.lcms}/include/${_h_} ${BUILDLINK_DIR}/include/lcms/${_h_}; \
 	fi
 .endfor
+
+.endif	# LCMS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
