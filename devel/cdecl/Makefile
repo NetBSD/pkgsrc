@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/22 05:50:51 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/24 08:53:55 jlam Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -14,14 +14,14 @@ COMMENT=	utility to explain and compose C and C++ declarations
 
 ALL_TARGET=	cdecl
 
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
-CFLAGS+=	-I${WRKINCDIR}
-LDFLAGS+=	-L${WRKLIBDIR}
+CFLAGS+=	-I${BUILDLINK_INCDIR}
+LDFLAGS+=	-L${BUILDLINK_LIBDIR}
 
 EGDIR=		${PREFIX}/share/examples/cdecl
 
-pre-configure: link-readline-headers link-readline-libs
+pre-configure: ${BUILDLINK_TARGETS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
