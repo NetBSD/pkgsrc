@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.6 2000/12/15 22:32:17 hubertf Exp $
+$NetBSD: patch-ac,v 1.7 2001/05/29 00:55:35 hubertf Exp $
 
---- configure.orig	Fri Nov 17 18:59:04 2000
+--- configure.orig	Wed Apr 18 16:17:26 2001
 +++ configure
-@@ -4671,7 +4671,7 @@
+@@ -4699,7 +4699,7 @@
  #define USE_GL 1
  EOF
  
 -    XLOCKLIBS="${XLOCKLIBS} -lMesaGL -lMesaGLU"
 +    XLOCKLIBS="${XLOCKLIBS} -lGL -lGLU"
-     test "x$mesagl_includes" = xNONE && mesagl_includes=$ac_mesagl_includes
-     test "x$mesagl_libraries" = xNONE && mesagl_libraries=$ac_mesagl_libraries
+     test "x$mesa_includes" = xNONE && mesa_includes=$ac_mesa_includes
+     test "x$mesa_libraries" = xNONE && mesa_libraries=$ac_mesa_libraries
      case "${canonical}" in
