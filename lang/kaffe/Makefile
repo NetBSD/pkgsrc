@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/09/27 23:18:17 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/02/27 03:02:35 tv Exp $
 #
 
 DISTNAME=		kaffe-1.0.6
@@ -9,13 +9,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		libungif-[0-9]*:../../graphics/libungif
-DEPENDS+=		gmp>=3.0.0:../../devel/gmp
-
-USE_X11=		yes
-USE_LIBTOOL=		yes
+USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
@@ -33,4 +29,9 @@ post-install:
 test:
 	@cd ${WRKSRC}/test && ${MAKE} check
 
+.include "../../devel/gmp/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
