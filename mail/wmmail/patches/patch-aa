@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/10/15 21:54:55 tron Exp $
+$NetBSD: patch-aa,v 1.5 2002/10/27 13:39:08 bouyer Exp $
 
 --- src/Makefile.in.orig	Wed Mar 31 05:34:59 1999
 +++ src/Makefile.in	Sun Jun 27 12:42:49 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2000/10/15 21:54:55 tron Exp $
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
 -LIBS = @LIBS@
-+LIBS = @LIBS@ -lSM -lICE
++LIBS = @LIBS@ -lXt -lSM -lICE
  WMMail_OBJECTS =  global.o imap.o list.o maildir.o mbox.o mh.o net.o \
  pop3.o properties.o std_icons.o wmmail.o wmutil.o
  WMMail_LDADD = $(LDADD)
