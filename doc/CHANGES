@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6835 2004/08/10 02:01:04 lukem Exp $
+$NetBSD: CHANGES,v 1.6836 2004/08/10 05:19:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3774,3 +3774,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_tarup to 1.6.2 [cube 2004-08-09]
 	Updated bwbasic to 2.20pl2 [cube 2004-08-09]
 	Updated tnftpd to 20040810 [lukem 2004-08-10]
+	Updated getmail to 4.0.9 [schmonz 2004-08-10]
