@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.19 2001/09/29 08:24:23 abs Exp $
+# $Id: pkgchk.sh,v 1.20 2001/10/01 12:24:00 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -276,7 +276,7 @@ if [ -n "$opt_c" ];then
 		{ need = 1; }
 	    }
 	}
-    if (NF == 2 || need)
+    if (NF == 1 || need)
 	{ print $1 }
     }
     ' < $PKGCHK_CONF
