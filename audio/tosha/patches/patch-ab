@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2000/09/10 22:50:34 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2000/11/19 12:34:23 fvdl Exp $
 
 --- tosha.c.orig	Wed May 21 02:11:49 1997
-+++ tosha.c
++++ tosha.c	Sun Nov 19 13:01:03 2000
 @@ -49,7 +49,8 @@
  #include <sys/uio.h>
  #include <sys/scsiio.h>
@@ -21,6 +21,16 @@ $NetBSD: patch-ab,v 1.5 2000/09/10 22:50:34 wiz Exp $
  
  struct scsireq *sreq;	/* SCSI device request structure */
  int scsifd;		/* SCSI device file descriptor */
+@@ -127,8 +128,8 @@
+ 	int result;
+ 
+ 	scsireq_reset (sreq);
+-	sreq->timeout = 10000;
+ 	scsireq_build (sreq, size, (char *) buf, flags, cmd);
++	sreq->timeout = 10000;
+ 	result = scsireq_enter (scsifd, sreq);
+ #ifndef DEBUG
+ 	if (SCSIREQ_ERROR (sreq))
 @@ -182,7 +183,8 @@
  
  char *tracklstr	= "1-100";
@@ -31,6 +41,22 @@ $NetBSD: patch-ab,v 1.5 2000/09/10 22:50:34 wiz Exp $
  int indexonly	= FALSE;
  int quiet	= FALSE;
  int verbose	= FALSE;
+@@ -387,7 +389,6 @@
+ 		if ((secread = framesperbuf) > endpp - sec)
+ 			secread = endpp - sec;
+ 		scsireq_reset (sreq);
+-		sreq->timeout = 10000;
+ 		if (readcmd == 0xd8)
+ 			scsireq_build (sreq, FRAMESIZE * secread,
+ 				(char *) buf, SCCMD_READ,
+@@ -398,6 +399,7 @@
+ 				(char *) buf, SCCMD_READ,
+ 				"v 0 0 v:i3 0 0 v 0", readcmd,
+ 				sec, secread);
++		sreq->timeout = 10000;
+ 		result = scsireq_enter (scsifd, sreq);
+ #ifndef DEBUG
+ 		if (SCSIREQ_ERROR (sreq))
 @@ -464,6 +466,8 @@
  	int singlefile = FALSE;
  	int modechange = TRUE, denschange = 0;
