@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/11 04:47:50 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/11 05:08:03 minskim Exp $
 #
 
 DISTNAME=	libcdio-0.68
@@ -17,9 +17,13 @@ PKGCONFIG_OVERRIDE+=	libiso9660.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 # XXX we just replace the freebsd module so save patches
 pre-patch:
 	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/_cdio_freebsd.c
+.endif
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
