@@ -1,20 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
 
-.if !empty(OSS_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.oss?=		oss-[0-9]*
-BUILDLINK_PKGSRCDIR.oss?=	../../audio/oss
-.endif	# OSS_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	oss
 .endif
 
-.if !empty(OSS_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	oss
-BUILDLINK_INCDIRS.oss=	include lib/oss/include
+.if !empty(OSS_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		oss
+BUILDLINK_DEPENDS.oss?=		oss-[0-9]*
+BUILDLINK_PKGSRCDIR.oss?=	../../audio/oss
+BUILDLINK_INCDIRS.oss=		include lib/oss/include
 
 # If we are using audio/oss, then we don't need the NetBSD OSS
 # compatibility library.

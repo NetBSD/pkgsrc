@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
 
-.if !empty(ZLIB_BUILDLINK3_MK:M\+)
+.if !empty(ZLIB_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.zlib?=	zlib>=1.1.4nb1
@@ -56,12 +56,12 @@ MAKEFLAGS+=	_NEED_ZLIB="${_NEED_ZLIB}"
 .endif
 
 .if ${_NEED_ZLIB} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	zlib
 .  endif
 .endif
 
-.if !empty(ZLIB_BUILDLINK3_MK:M\+)
+.if !empty(ZLIB_BUILDLINK3_MK:M+)
 .  if ${_NEED_ZLIB} == "YES"
 BUILDLINK_PACKAGES+=	zlib
 .  else

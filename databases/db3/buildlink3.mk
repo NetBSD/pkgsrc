@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB3_BUILDLINK3_MK:=	${DB3_BUILDLINK3_MK}+
 
-.if !empty(DB3_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.db3?=		db3>=2.9.2
-BUILDLINK_PKGSRCDIR.db3?=	../../databases/db3
-.endif	# DB3_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	db3
 .endif
 
-.if !empty(DB3_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	db3
+.if !empty(DB3_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		db3
+BUILDLINK_DEPENDS.db3?=		db3>=2.9.2
+BUILDLINK_PKGSRCDIR.db3?=	../../databases/db3
 .endif	# DB3_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
