@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/19 17:44:17 wiz Exp $
 #
 
 DISTNAME=	ekg-1.4
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://dev.null.pl/ekg/
 COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
@@ -23,15 +23,15 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--without-debug
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 CONFIGURE_ARGS+=--with-pthread
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
