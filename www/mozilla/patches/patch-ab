@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
+$NetBSD: patch-ab,v 1.11 2000/10/14 09:24:46 martin Exp $
 
---- configure.in.orig	Wed Jul 19 21:52:58 2000
-+++ configure.in	Wed Aug 16 22:16:56 2000
-@@ -344,8 +344,6 @@
+diff -ru /usr/local/src/mozilla/configure.in ./configure.in
+--- /usr/local/src/mozilla/configure.in	Sun Oct  1 15:16:13 2000
++++ ./configure.in	Fri Oct 13 11:23:07 2000
+@@ -360,8 +360,6 @@
  TARGET_MD_ARCH=unix
  DIRENT_INO=d_ino
  NEED_BASE_DLL_NAME_ALSO=
@@ -11,7 +12,7 @@ $NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
  
  MOZ_JPEG_CFLAGS=
  MOZ_JPEG_LIBS='-L$(DIST)/lib -ljpeg'
-@@ -678,31 +676,24 @@
+@@ -705,31 +703,24 @@
      if $CC -E - -dM </dev/null | grep __ELF__ >/dev/null; then
          DLL_SUFFIX=".so"
          DSO_PIC_CFLAGS='-fPIC -DPIC'
@@ -48,7 +49,7 @@ $NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
      fi
      ;;
  
-@@ -954,8 +945,6 @@
+@@ -981,8 +972,6 @@
  
  dnl See above (netbsd)
  AC_SUBST(NEED_BASE_DLL_NAME_ALSO)
@@ -57,7 +58,7 @@ $NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
  
  dnl Only one oddball right now (QNX), but this gives us flexibility
  dnl if any other platforms need to override this in the future.
-@@ -1165,12 +1154,6 @@
+@@ -1195,12 +1184,6 @@
      AM_PATH_GTK($GTK_VERSION,,
        AC_MSG_ERROR(Test for GTK failed.))
  
@@ -70,7 +71,7 @@ $NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
  dnl ========================================================
  dnl =							   =
  dnl = --with-java-supplement				   =
-@@ -1653,13 +1636,6 @@
+@@ -1691,13 +1674,6 @@
  AC_SUBST(GLIB_CFLAGS)
  AC_SUBST(GLIB_LIBS)
  
@@ -84,7 +85,7 @@ $NetBSD: patch-ab,v 1.10 2000/08/30 21:59:52 martin Exp $
  dnl Checks for typedefs, structures, and compiler characteristics.
  dnl ========================================================
  AC_C_CONST
-@@ -1972,6 +1948,9 @@
+@@ -2046,6 +2022,9 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
