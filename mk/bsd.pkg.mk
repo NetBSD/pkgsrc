@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.839 2001/10/30 13:53:15 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.840 2001/10/31 18:05:48 zuntum Exp $
 #
 # This file is in the public domain.
 #
@@ -1469,10 +1469,7 @@ do-patch: uptodate-digest
 .  if defined(REPLACE_PERL)
 .    for f in ${REPLACE_PERL}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
-		${SED}	-e "s,/bin/perl,${PERL5},g"			\
-			-e "s,/usr/bin/perl,${PERL5},g"			\
-			-e "s,/usr/local/bin/perl,${PERL5},g"		\
-			-e "s,/usr/pkg/bin/perl,${PERL5},g"		\
+		${SED} "s,#!.*/bin/perl,#!${PERL5},"			\
 				${f} > ${f}.new;			\
 		if [ -x ${f} ]; then					\
 			${CHMOD} a+x ${f}.new;				\
