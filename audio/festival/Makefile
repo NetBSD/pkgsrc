@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/04/11 16:20:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/08/18 21:44:08 minskim Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DISTFILES=	${DISTNAME}.tar.gz \
 # this behavior not defined in pkgsrc at the time of writing
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Festival is an advanced multi-lingual speech synthesis system
 
 WRKSRC=		${WRKDIR}
