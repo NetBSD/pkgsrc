@@ -1,8 +1,36 @@
-$NetBSD: patch-ac,v 1.4 2002/02/24 21:42:56 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2002/03/01 07:36:07 fredb Exp $
 
---- driver/Makefile.in.orig	Sun Feb 24 18:19:18 2002
+--- driver/Makefile.in.orig	Sun Feb 24 03:56:29 2002
 +++ driver/Makefile.in
-@@ -762,7 +762,7 @@
+@@ -433,10 +433,6 @@
+              echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
+                   $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
+            fi                                                                ;\
+-           if [ ! -d "$(install_prefix)$(GNOME_CCDIR_2)" ]; then              \
+-             echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_2)"        ;\
+-                  $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_2)"        ;\
+-           fi                                                                ;\
+ 	                                                                      \
+            echo    $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop   \
+              $(install_prefix)$(GNOME_CCDIR_1)/screensaver-properties.desktop;\
+@@ -448,16 +444,6 @@
+              lost="$$lost $(install_prefix)$(GNOME_CCDIR_1)"                 ;\
+            fi                                                                ;\
+ 	                                                                      \
+-           echo    $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop   \
+-             $(install_prefix)$(GNOME_CCDIR_2)/screensaver.desktop           ;\
+-	                                                                      \
+-           if      $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop   \
+-             $(install_prefix)$(GNOME_CCDIR_2)/screensaver.desktop           ;\
+-             then true                                                       ;\
+-           else                                                               \
+-             lost="$$lost $(install_prefix)$(GNOME_CCDIR_2)"                 ;\
+-           fi                                                                ;\
+-	                                                                      \
+            if [ ! -d "$(install_prefix)$(GNOME_PANELDIR)" ]; then             \
+              echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_PANELDIR)"       ;\
+                   $(INSTALL_DIRS) "$(install_prefix)$(GNOME_PANELDIR)"       ;\
+@@ -762,7 +748,7 @@
  
  
  xscreensaver-demo: @PREFERRED_DEMO_PROGRAM@
