@@ -1,28 +1,53 @@
-$NetBSD: patch-ae,v 1.3 2002/10/13 11:35:16 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2002/12/06 16:50:04 jmmv Exp $
 
---- configure.orig	Sun May 13 18:16:50 2001
+--- configure.orig	Mon Oct 21 13:09:19 2002
 +++ configure
-@@ -3506,8 +3506,8 @@
+@@ -8364,8 +8364,8 @@ echo "${ECHO_T}Configuring for Unix bina
  
+       if test "$CURSES_CLIENT" != "no" ; then
  
-       if test "$CURSES_CLIENT" = "yes" ; then
--      echo $ac_n "checking for newterm in -lncurses""... $ac_c" 1>&6
--echo "configure:3511: checking for newterm in -lncurses" >&5
-+      echo $ac_n "checking for start_color in -lncurses""... $ac_c" 1>&6
-+echo "configure:3511: checking for start_color in -lncurses" >&5
- ac_lib_var=`echo ncurses'_'newterm | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3520,10 +3520,10 @@
- /* Override any gcc2 internal prototype to avoid an error.  */
+-echo "$as_me:$LINENO: checking for newterm in -lncurses" >&5
+-echo $ECHO_N "checking for newterm in -lncurses... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for start_color in -lncurses" >&5
++echo $ECHO_N "checking for start_color in -lncurses... $ECHO_C" >&6
+ if test "${ac_cv_lib_ncurses_newterm+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -8381,7 +8381,7 @@ extern "C"
+ #endif
  /* We use char because int might match the return type of a gcc2
-     builtin and then its argument prototype would still apply.  */
--char newterm();
-+char start_color();
+    builtin and then its argument prototype would still apply.  */
+-char newterm ();
++char start_color ();
+ #ifdef F77_DUMMY_MAIN
+ #  ifdef __cplusplus
+      extern "C"
+@@ -8391,7 +8391,7 @@ char newterm ();
+ int
+ main ()
+ {
+-newterm ();
++start_color ();
+   ;
+   return 0;
+ }
+@@ -14496,7 +14496,10 @@ cat >>confdefs.h <<_ACEOF
+ #define DPDATADIR "$DPDATADIR"
+ _ACEOF
  
- int main() {
--newterm()
-+start_color()
- ; return 0; }
- EOF
- if { (eval echo configure:3530: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-
++DPLOCALSTATEDIR="${localstatedir}"
++cat >>confdefs.h <<_ACEOF
++#define DPLOCALSTATEDIR "$DPLOCALSTATEDIR"
++_ACEOF
+ 
+ localedir=${datadir}/locale
+ 
+@@ -15321,6 +15324,7 @@ s,@PLUGOBJS@,$PLUGOBJS,;t t
+ s,@PLUGINS_TRUE@,$PLUGINS_TRUE,;t t
+ s,@PLUGINS_FALSE@,$PLUGINS_FALSE,;t t
+ s,@DPDATADIR@,$DPDATADIR,;t t
++s,@DPLOCALSTATEDIR@,$DPLOCALSTATEDIR,;t t
+ s,@localedir@,$localedir,;t t
+ s,@GUI_CLIENT_TRUE@,$GUI_CLIENT_TRUE,;t t
+ s,@GUI_CLIENT_FALSE@,$GUI_CLIENT_FALSE,;t t

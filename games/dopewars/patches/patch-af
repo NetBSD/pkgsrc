@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1 2002/06/28 09:07:14 agc Exp $
+$NetBSD: patch-af,v 1.2 2002/12/06 16:50:04 jmmv Exp $
 
---- src/Makefile.in	2002/06/28 09:04:58	1.1
-+++ src/Makefile.in	2002/06/28 09:05:03
-@@ -180,7 +180,7 @@
- 
- maintainer-clean-compile:
- 
--dopewars: $(dopewars_OBJECTS) $(dopewars_DEPENDENCIES)
-+dopewars: $(dopewars_OBJECTS)
- 	@rm -f dopewars
+--- src/Makefile.in.orig	Mon Oct 21 13:09:21 2002
++++ src/Makefile.in
+@@ -245,7 +245,7 @@ clean-binPROGRAMS:
+ 	  echo " rm -f $$p $$f"; \
+ 	  rm -f $$p $$f ; \
+ 	done
+-dopewars$(EXEEXT): $(dopewars_OBJECTS) $(dopewars_DEPENDENCIES) 
++dopewars$(EXEEXT): $(dopewars_OBJECTS)
+ 	@rm -f dopewars$(EXEEXT)
  	$(LINK) $(dopewars_LDFLAGS) $(dopewars_OBJECTS) $(dopewars_LDADD) $(LIBS)
  
