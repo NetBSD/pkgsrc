@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:27:58 agc Exp $
+# $NetBSD: Makefile,v 1.14 2005/02/24 12:01:25 wiz Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
 CATEGORIES=		www
-MASTER_SITES=		http://www.advasoft.com/asWedit/ \
-			http://gd.tuwien.ac.at/infosys/editors/asWedit/ \
-			ftp://ftp.edelweb.fr/pub/asWedit/ \
-			ftp://sunsite.icm.edu.pl/pub/www/asWedit/ \
-			ftp://sunsite.auc.dk/pub/infosystems/www/asWedit/
+MASTER_SITES=		ftp://ftp.edelweb.fr/pub/asWedit/ \
+			ftp://sunsite.icm.edu.pl/pub/www/asWedit/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.advasoft.com/asWedit.html
+#HOMEPAGE=		http://www.advasoft.com/asWedit.html
 COMMENT=		Motif HTML and text editor
 
 DEPENDS+=		suse_libc5>=6.1:../../emulators/${SUSE_DIR_PREFIX}_libc5
