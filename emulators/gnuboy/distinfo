@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
+
+SHA1 (gnuboy-0.9.13.tar.gz) = 0cf8f99f83282fb836da5c87b08213e00453a9fe
+Size (gnuboy-0.9.13.tar.gz) = 159517 bytes
+SHA1 (patch-aa) = 15f0cea1b6c456ccef97d07f3e88a7cc45f1588e
+SHA1 (patch-ab) = 2814c8b78b074163310300a3f531180e760eb109
+SHA1 (patch-ac) = f141f58c48ccacb2c549d5c2f6a48f58f0d0de4d
+SHA1 (patch-ad) = a76f88b49ad539f3b71c487259fe7a564905c2e2

@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
+
+--- sys/oss/oss.c.orig	Sun Mar 25 08:17:38 2001
++++ sys/oss/oss.c
+@@ -6,6 +6,12 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
++#ifdef IS_NBSD
++#include "sys/ioctl.h"
++#include "soundcard.h"
++#define DSP_DEVICE "/dev/audio"
++#endif
++
+ #ifdef IS_FBSD
+ #include "machine/soundcard.h"
+ #define DSP_DEVICE "/dev/dsp"
