@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2002/10/13 23:13:51 kim Exp $
+# $NetBSD: Makefile,v 1.91 2002/10/20 19:49:37 jlam Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
@@ -39,10 +40,8 @@ SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endif
 
-.if defined(SAMBA_USE_MSDFS)
-BUILD_DEFS+=		SAMBA_USE_MSDFS
+# Microsoft DFS support
 CONFIGURE_ARGS+=	--with-msdfs
-.endif
 
 MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
