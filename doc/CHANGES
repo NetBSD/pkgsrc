@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2252 2003/05/17 05:49:52 salo Exp $
+$NetBSD: CHANGES,v 1.2253 2003/05/17 10:32:29 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bbpager to 0.3.1nb1 [salo 2003-05-17]
 	Updated bsetroot to 0.1nb3 [salo 2003-05-17]
 	Updated fluxbox to 0.1.14nb2 [salo 2003-05-17]
+	Updated nxtvepg to 2.5.1 [magick 2003-05-17]
