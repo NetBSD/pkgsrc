@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2002/06/19 14:07:51 tron Exp $
+# $NetBSD: Makefile,v 1.98 2002/06/19 15:14:16 fredb Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -9,6 +9,8 @@ PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/
+# This must be defined, before it may be referred to on the LHS.
+EXTRACT_SUFX=		.tar.gz
 
 APACHE_DIST=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=		${APACHE_DIST}
