@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 1999/12/28 03:53:06 kim Exp $
+# $NetBSD: Makefile,v 1.70 2000/01/17 16:17:58 jlam Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -54,10 +54,18 @@ CONFIGURE_ARGS+=	--with-secureid
 CONFIGURE_ARGS+=       --with-rsh=${SSH_RSHPATH}
 .endif
 
-# Don't use IDEA. IDEA can be freely used for non-commercial use. However,
-# commercial use may require a license in a number of countries
-# Warning: untested !
+# By default, use IDEA.  IDEA can be freely used for non-commercial use.
+# However, commercial use may require a license in a number of countries.
+#
+USE_IDEA?=		YES
+
+# Handle deprecated option SSH_DONT_USE_IDEA.
+#
 .if defined(SSH_DONT_USE_IDEA) && ${SSH_DONT_USE_IDEA} == YES
+USE_IDEA=		NO
+.endif
+
+.if ${USE_IDEA} != "YES"
 CONFIGURE_ARGS+=	--without-idea
 .endif
 
@@ -146,7 +154,7 @@ fetch-depends:
 	@${ECHO} to YES.  Users outside the USA MUST set this variable to
 	@${ECHO} NO.  Licensees may choose -- NO is faster.
 	@${ECHO}
-	@${ECHO} You may also want to set SSH_DONT_USE_IDEA to YES if this program
+	@${ECHO} You may also want to set USE_IDEA to NO if this program
 	@${ECHO} will be used for a commercial purpose.  There are other
 	@${ECHO} configure options\; look at the pkg Makefile for more info.
 	@${FALSE}
