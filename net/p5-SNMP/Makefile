@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/24 12:33:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/15 17:05:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:53:13 jfitz Exp
 #
 
@@ -10,14 +10,14 @@ MASTER_SITE_SUBDIR=	SNMP
 
 MAINTAINER=	packages@netbsd.org
 
-BUILD_DEPENDS= 	${PREFIX}/lib/libsnmp.a:${PKGSRCDIR}/net/ucd-snmp
+BUILD_DEPENDS= 	${PREFIX}/lib/libsnmp.a:../../net/ucd-snmp
 
-USE_PERL5=	YES
+USE_PERL5=	yes
 
 do-configure:
-		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
 post-install:
-		@ ${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/lib/perl5/site_perl/README.SNMP
+		@${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/lib/perl5/site_perl/README.SNMP
 
 .include "../../mk/bsd.pkg.mk"
