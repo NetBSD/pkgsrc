@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.24 2003/04/15 05:29:47 grant Exp $
+# $NetBSD: defs.IRIX.mk,v 1.25 2003/04/15 14:07:54 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -123,9 +123,12 @@ _USE_GNU_GETTEXT=	no		# Don't use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
-# XXX values for IRIX absent!
-#_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
-#_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
+# XXX:
+# These flags are for the IRIX linker.  If GNU ld is used, these would need
+# to be set to --{no-}whole-archive.  So, ugh, let's say we only do
+# IRIX tools for the time being.
+_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-all
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-notall
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
