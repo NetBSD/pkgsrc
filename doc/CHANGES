@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8135 2004/11/29 09:08:07 adam Exp $
+$NetBSD: CHANGES,v 1.8136 2004/11/29 09:28:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated open2300 and open2300-mysql to 1.8 [martin 2004-11-29]
 	Updated cln to 1.1.9 [adam 2004-11-29]
 	Updated ImageMagick to 6.1.5-7 [adam 2004-11-29]
+	Updated krusader to 1.50 [markd 2004-11-29]
