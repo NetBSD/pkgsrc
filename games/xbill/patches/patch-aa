@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/04/30 20:13:12 tv Exp $
+$NetBSD: patch-aa,v 1.6 2004/04/30 20:29:40 tv Exp $
 
 --- Imakefile.orig	Thu Jan 23 11:38:35 1997
 +++ Imakefile
@@ -37,17 +37,14 @@ $NetBSD: patch-aa,v 1.5 2004/04/30 20:13:12 tv Exp $
  
  TARGET = xbill
  
-@@ -136,6 +133,12 @@ XBMS =	bitmaps/apple.xbm \
+@@ -136,6 +133,9 @@ XBMS =	bitmaps/apple.xbm \
  
  ComplexProgramTarget($(TARGET))
  
 -InstallProgramWithFlags(scores, $(XBILL_DIR), -m 777)
 +install::
 +	mkdir -p $(XBILL_DIR)
-+	if [ ! -d /var/games/xbill.scores ]; then \
-+		${INSTALL} -c -m 0664 -o bin -g games scores /var/games/xbill.scores ; \
-+	fi
-+	${INSTALL} -c -s -m 2755 -o bin -g games xbill $(PREFIX)/bin
++	${INSTALL} -c -s -m 2755 -g games xbill $(PREFIX)/bin
 +
  InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
  InstallMultiple ($(XBMS), $(XBILL_DIR)bitmaps)
