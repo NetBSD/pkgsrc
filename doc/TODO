@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.221 2003/01/28 12:56:05 wiz Exp $
+$NetBSD: TODO,v 1.222 2003/01/28 13:15:40 skrll Exp $
 
 Suggested new packages
 ======================
@@ -155,7 +155,7 @@ Suggested package updates
 	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
 	o jpilot-syncmal-0.71.2
-	o kde-3.1
+	o kde-3.1 [skrll]
 	o kdevelop-2.1.4
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
@@ -213,7 +213,7 @@ Suggested package updates
 	o py-wxWindows-2.4.0.1
 	o pygtk-0.6.11
 	o pyxml-0.8.2
-	o qt3-3.1.1
+	o qt3-3.1.1 [skrll]
 	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc2
 	o rox-1.2.2
