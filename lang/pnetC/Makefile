@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/12 17:18:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/12 17:25:43 xtraeme Exp $
 #
 
 DISTNAME=	pnetC-0.6.0
@@ -13,5 +13,5 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_BUILDLINK2=	yes
 
-.include "../../devel/pnet/buildlink2.mk"
+.include "../../lang/pnet/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
