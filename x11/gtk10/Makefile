@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/01/03 15:20:52 augustss Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:56 agc Exp $
 
 DISTNAME=	gtk+-1.0.6
 CATEGORIES=	x11
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gtk.org/
 CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.* glib-1.1.*
 
 USE_LIBTOOL=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \

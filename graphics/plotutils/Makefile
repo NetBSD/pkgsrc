@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/07 15:23:49 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:50 agc Exp $
 #
 
 DISTNAME=       plotutils-2.1.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/plotutils/plotutils.html
 GNU_CONFIGURE=  yes
 
 USE_LIBTOOL=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 INFO_FILES=	plotutils.info
 

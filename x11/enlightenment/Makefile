@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/16 05:50:28 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/01/30 23:18:55 agc Exp $
 
 DISTNAME=		enlightenment-0.14
 CATEGORIES=		x11
@@ -15,7 +15,7 @@ DEPENDS+=		p5-gtk-0.4:../../x11/p5-gtk
 
 WRKSRC=			${WRKDIR}/e
 USE_PERL5=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 LDFLAGS+=		-L${LOCALBASE}/lib

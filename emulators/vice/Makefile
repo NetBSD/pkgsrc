@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/16 09:37:28 matthias Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:46 agc Exp $
 
 DISTNAME=		vice-0.15.0
 CATEGORIES=		emulators
@@ -14,7 +14,7 @@ MIRROR_DISTFILE=	no
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${X11BASE}/lib"
 USE_GMAKE=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 INFO_FILES=		vice.info
 
 post-install:

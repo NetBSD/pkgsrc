@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.205 1999/01/26 22:03:18 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.206 1999/01/30 23:18:59 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -121,7 +121,7 @@ PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}
 PKGDIR?=		${.CURDIR}/pkg
 .endif
 
-.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if defined(USE_LOCALBASE_FOR_X11)
 PREFIX=			${LOCALBASE}
 BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:../../pkgtools/xpkgwedge
@@ -192,7 +192,7 @@ MD5?=			md5
 .endif
 MD5_FILE?=		${FILESDIR}/md5
 
-.if defined(USE_MOTIF) || defined(USE_X11) || defined(BUILD_USES_X11)
+.if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
 LDFLAGS+=		-Wl,-R${X11BASE}/lib
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
@@ -263,13 +263,13 @@ EXTRACT_SUFX?=		.tar.gz
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
 .if (${OPSYS} == "NetBSD")
-.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.x11.dist
 .else
 MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.pkg.dist
 .endif
 .else # not NetBSD
-.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
 MTREE_FILE=	/etc/mtree/BSD.local.dist
@@ -674,7 +674,7 @@ IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
 IGNORE=	"is restricted: ${RESTRICTED}"
 .elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
-	defined(USE_X11) || defined(BUILD_USES_X11)) && \
+	defined(USE_X11BASE) || defined(USE_X11)) && \
        !exists(${X11BASE}))
 IGNORE=	"uses X11, but ${X11BASE} not found"
 .elif defined(BROKEN)

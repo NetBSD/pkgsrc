@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/12/28 23:36:43 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:55 agc Exp $
 
 DISTNAME=		AfterStep-1.6.0
 PKGNAME=		afterstep-1.6.0
@@ -17,7 +17,7 @@ DEPENDS+=		asclock-11:../../x11/asclock
 
 CONFLICTS=		afterstep-*
 
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include \

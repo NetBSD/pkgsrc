@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/28 12:55:42 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:46 agc Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -9,7 +9,7 @@ DISTFILES=		${DISTNAME}.tgz abuse_data.tar.gz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.crack.com/games/abuse/index.html
 
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${X11BASE}/lib"
 USE_GMAKE=		yes

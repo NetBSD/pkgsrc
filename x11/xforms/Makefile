@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/11/13 13:04:15 matthias Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/30 23:18:57 agc Exp $
 #
 
 DISTNAME=		bxform-088
@@ -29,7 +29,7 @@ OBJMACHINE=		yes
 
 NO_BUILD=		yes
 
-USE_X11=		yes
+USE_X11BASE=		yes
 
 post-patch:
 	${MV} ${WRKSRC}/mkconfig.h ${WRKSRC}/mkconfig.h.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/08/20 15:16:57 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:49 agc Exp $
 #
 
 DISTNAME=	xbomber.0.8
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/xbomber/
 
 WRKSRC=		${WRKDIR}/xbomber
 MAKEFILE=	makefile
-USE_X11=	yes
+USE_X11BASE=	yes
 
 pre-install:
 	${MKDIR} ${PREFIX}/share/doc/xbomber

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:48 agc Exp $
 #
 
 DISTNAME=		spellcast
@@ -10,6 +10,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.edoc.com/zarf/spellcast.html
 
-USE_X11=		yes
+USE_X11BASE=		yes
 
 .include "../../mk/bsd.pkg.mk"

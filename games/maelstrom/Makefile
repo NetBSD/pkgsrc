@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/14 19:34:23 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:48 agc Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -19,7 +19,7 @@ EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
 
-USE_X11=		yes
+USE_X11BASE=		yes
 MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 post-install:

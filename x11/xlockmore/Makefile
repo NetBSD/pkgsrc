@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/09/30 19:49:43 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/01/30 23:18:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -19,6 +19,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \
 		--without-editres --without-dtsaver --without-rplay \
 		--without-nas --without-gtk
-USE_X11=	yes
+USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"

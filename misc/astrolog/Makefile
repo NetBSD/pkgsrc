@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:12 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1999/01/30 23:18:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.astrolog.org/
 
 EPHEM=          LRZ5_24 CHI_24 CPJV_24
 
-USE_X11=	yes
+USE_X11BASE=	yes
 
 EXTRACT_ONLY=   ${DISTNAME}.shr
 EXTRACT_CMD=    ${SH}
