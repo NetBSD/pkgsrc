@@ -1,13 +1,33 @@
-$NetBSD: patch-be,v 1.1 2000/07/31 18:33:55 abs Exp $
+$NetBSD: patch-be,v 1.2 2000/08/15 14:48:24 abs Exp $
 
---- libatalk/nbp/nbp_util.c.orig	Thu Feb  4 07:27:02 1999
-+++ libatalk/nbp/nbp_util.c	Mon Jul 31 18:54:00 2000
-@@ -6,7 +6,7 @@
- #include <sys/types.h>
- #include <sys/param.h>
- #include <sys/socket.h>
--#include <sys/signal.h>
-+#include <signal.h>
- #include <sys/time.h>
- #include <netatalk/endian.h>
- #include <netatalk/at.h>
+--- sys/openbsd/Makefile.orig	Mon Feb 22 23:02:31 1999
++++ sys/openbsd/Makefile
+@@ -19,6 +19,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    AFPLIBS="${AFPLIBS}" \
+@@ -28,9 +29,11 @@
+ 
+ install :
+ 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
++	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" AFPLIBS="${AFPLIBS}" \
+@@ -41,6 +44,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 	    < ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk
+ 	@echo
+ 	@echo "Install is done.  Don't forget to add lines from"
