@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/07 15:14:26 bouyer Exp $
+
+--- Makefile.in.orig	Fri Jun  4 14:41:18 1999
++++ Makefile.in	Tue Jul  6 15:38:03 1999
+@@ -9,10 +9,10 @@
+ INSTALL         = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA    = @INSTALL_DATA@
+-CC              = @CC@
++CC              = @CC@ -fPIC -DPIC
+ SHLIB_CFLAGS    = @TCL_SHLIB_CFLAGS@
+ SHLIB_SUFFIX    = @TCL_SHLIB_SUFFIX@
+-SHLIB_LD        = @TCL_SHLIB_LD@
++SHLIB_LD        = ld -Bshareable
+ TCL_PREFIX      = @TCL_PREFIX@
+ TCL_EXEC_PREFIX	= @TCL_EXEC_PREFIX@
+ TCL_CFLAGS      = @TCL_CFLAGS@ @TCL_STUB_FLAGS@
+@@ -23,7 +23,7 @@
+ STATIC_LIB      = lib$(PACKAGE).a
+ PACKAGEDIR      = $(TCL_EXEC_PREFIX)/lib/$(PACKAGE)
+ 
+-CFLAGS          = $(TCL_CFLAGS) $(SHLIB_CFLAGS) $(INCLUDES) \
++CFLAGS          = $(TCL_CFLAGS) $(INCLUDES) \
+ 		  -DVERSION=\"$(VERSION)\"
+ 
+ MAN_INSTALL_DIR = $(TCL_PREFIX)/man/mann
+@@ -31,7 +31,7 @@
+ all: $(DLL) pkgIndex.tcl
+ 
+ $(DLL): $(OBJS)
+-	$(SHLIB_LD) -o $@ $(OBJS) $(LIBS)
++	$(SHLIB_LD) -o $@ $(OBJS) -L${PREFIX}/lib $(LIBS)
+ 
+ $(STATIC_LIB): $(OBJS)
+ 	ar cr $@ $(OBJS)

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/07 15:14:26 bouyer Exp $
+
+--- configure.orig	Tue Jul  6 14:49:35 1999
++++ configure	Tue Jul  6 14:52:54 1999
+@@ -624,7 +624,7 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+ 
+-file=${exec_prefix}/lib/tclConfig.sh
++file=${exec_prefix}/lib/tcl8.0/tclConfig.sh
+ . $file
+ 
+ if test "${TCL_SUPPORTS_STUBS}" = "1"; then
