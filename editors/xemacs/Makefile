@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/08/23 08:09:45 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/08/25 13:37:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.6
@@ -13,7 +13,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 
-DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
+USE_XAW=	yes
+
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
@@ -28,6 +29,8 @@ DIST_SUBDIR=	xemacs
 BUILD_DEFS+=	USE_XFACE
 
 .include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=	3d
 
 WITH_DIALOGS=	--with-dialogs=athena3d
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/09 11:34:01 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/25 13:37:36 agc Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -13,10 +13,11 @@ PATCH_DIST_STRIP= -p1
 MAINTAINER=	sakamoto@netbsd.org
 
 USE_IMAKE=	yes
+USE_XAW=	yes
 
-.if defined(USE_XAW3DLIB) && ${USE_XAW3DLIB} == YES
-DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
-.endif
+.include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=	3d
 
 .if defined(USE_WALLPAPER) && ${USE_WALLPAPER} == YES
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
