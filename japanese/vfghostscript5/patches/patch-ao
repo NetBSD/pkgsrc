@@ -1,3 +1,4 @@
+$NetBSD: patch-ao,v 1.2 2000/01/05 01:10:03 wiz Exp $
 *** ../gdevrpdl/gdevrpdl.mak.orig	Sun Nov 15 23:30:40 1998
 --- ../gdevrpdl/gdevrpdl.mak	Sun Nov 15 23:46:53 1998
 ***************

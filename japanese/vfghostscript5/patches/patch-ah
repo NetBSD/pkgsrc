@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.2 2000/01/05 01:10:03 wiz Exp $
 --- unixinst.mak.orig	Mon May 31 22:39:43 1999
 +++ unixinst.mak	Mon May 31 22:55:18 1999
 @@ -36,7 +36,7 @@

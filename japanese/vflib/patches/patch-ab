@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/01/05 01:10:03 wiz Exp $
 --- vfontcap.orig	Wed Jan 20 12:33:39 1999
 +++ vfontcap	Mon Aug 30 18:50:34 1999
 @@ -39,8 +39,8 @@
