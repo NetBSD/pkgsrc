@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3075 2005/02/19 22:36:13 jmmv Exp $
+$NetBSD: TODO,v 1.3076 2005/02/20 00:07:00 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ Suggested package updates
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
-	o dspam-3.2.7
 	o dvdrip-0.52.1
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
