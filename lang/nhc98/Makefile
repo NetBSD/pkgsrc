@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 16:12:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2002/11/14 22:38:30 jlam Exp $
 
 DISTNAME=		nhc98src-1.14a
 PKGNAME=		nhc98-1.14a
@@ -12,22 +12,20 @@ COMMENT=		Portable Haskell 98 compiler
 # Not yet ported to 64-bit machines
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
 
-# KEY_RESIZE
-USE_NCURSES=		YES
+USE_BUILDLINK2=		YES
+BUILDLINK_SETENV.CC=	CC=gcc
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+USE_NCURSES=		KEY_RESIZE
 
-HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		CC=gcc
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 			+docs --docdir=${PREFIX}/share/doc/nhc98
 
 # Note that you can also build with ghc (Glasgow Haskell Compiler) or
 # hbc (Chalmers Haskell).
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_GMAKE=		yes
-USE_JAVA=		yes
-
 ALL_TARGET=		default
 
 HARCH=			`${WRKSRC}/script/harch`
@@ -36,5 +34,7 @@ PLIST_SUBST+=		HARCH=${HARCH}
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* | ${XARGS} ${RM} -rf
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
+
