@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2383 2004/11/18 16:49:23 adam Exp $
+$NetBSD: TODO,v 1.2384 2004/11/19 09:56:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ Suggested package updates
 	o gsasl-0.2.0
 	o gtk-send-pr-0.4
 	o gtksee-0.5.6 [pkg/26372]
-	o gtkterm2-0.2.3
 	o gtkyahoo-0.18.3
 	o gtranslator-1.0.1
 	o guile-gtk-0.40.90 [in wip]
