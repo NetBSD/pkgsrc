@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/28 11:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/30 20:54:34 skrll Exp $
 #
 
 DISTNAME=	libsndfile-1.0.1
@@ -13,9 +13,5 @@ USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-
-# needs libm for fmod(3), but somehow it does not end up in
-# libtool's .la file
-LIBS+=	-lm
 
 .include "../../mk/bsd.pkg.mk"
