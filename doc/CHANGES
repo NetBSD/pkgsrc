@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8805 2005/01/18 16:36:56 adam Exp $
+$NetBSD: CHANGES,v 1.8806 2005/01/18 17:38:13 peter Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -406,3 +406,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated awstats to 6.3 [minskim 2005-01-08]
 	Updated netpbm to 10.26.1 [adam 2005-01-08]
 	Updated amaya to 9.0 [adam 2005-01-08]
+	Updated pflkm to 2005018 [peter 2005-01-18]
