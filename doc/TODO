@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3116 2005/02/25 20:01:27 drochner Exp $
+$NetBSD: TODO,v 1.3117 2005/02/26 01:33:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,10 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.18
-	o firefox-bin-1.0
+	o firefox-1.0.1
+	o firefox-bin-1.0.1
+	o firefox-gtk2-1.0.1
+	o firefox-gtk2-bin-1.0.1
 	o flim-1.14.7
 	o fluxbox-0.9.11 [pkg/28736]
 	o fmsx-3.0
