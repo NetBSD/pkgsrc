@@ -1,0 +1,3 @@
+bin/ex @PREFIX@/bin/vim -e
+bin/vi @PREFIX@/bin/vim
+bin/view @PREFIX@/bin/vim -R

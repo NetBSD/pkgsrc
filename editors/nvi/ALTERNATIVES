@@ -1,0 +1,3 @@
+bin/ex @PREFIX@/bin/nex
+bin/vi @PREFIX@/bin/nvi
+bin/view @PREFIX@/bin/nview

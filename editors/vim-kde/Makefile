@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/01/06 14:11:03 tron Exp $
+# $NetBSD: Makefile,v 1.25 2005/01/25 13:48:54 jmmv Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors kde
 MASTER_SITES=	ftp://ftp.rutgers.edu/pub/kde/stable/apps/KDE3.x/utils/ \
 		ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/utils/ \
@@ -17,6 +17,7 @@ KVIM_VERSION=	6.2.14
 
 CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
+CONFLICTS+=	pkg_alternatives-[0-9]*
 
 WRKSRC= 		${WRKDIR}/kvim-${KVIM_VERSION}/src
 USE_BUILDLINK3=		YES
