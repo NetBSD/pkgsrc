@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2002/09/12 23:05:37 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/11/21 15:40:14 salo Exp $
 bin/silc
 etc/silc/silc.conf
+lib/silc/libsilc.la
+lib/silc/libsilc.so
+lib/silc/libsilc.so.0
+lib/silc/libsilc.so.0.0
+lib/silc/libsilcclient.la
+lib/silc/libsilcclient.so
+lib/silc/libsilcclient.so.0
+lib/silc/libsilcclient.so.0.0
 lib/silc/modules/aes.sim.so
 lib/silc/modules/blowfish.sim.so
 lib/silc/modules/cast.sim.so
@@ -12,6 +20,7 @@ lib/silc/modules/rc6.sim.so
 lib/silc/modules/rsa.sim.so
 lib/silc/modules/sha1.sim.so
 lib/silc/modules/twofish.sim.so
+man/man1/silc.1
 share/doc/silc/CHANGES
 share/doc/silc/COPYING
 share/doc/silc/CREDITS
@@ -28,6 +37,7 @@ share/doc/silc/startup-HOWTO.html
 share/silc/help/action
 share/silc/help/admin
 share/silc/help/alias
+share/silc/help/attr
 share/silc/help/away
 share/silc/help/ban
 share/silc/help/beep
@@ -94,6 +104,7 @@ share/silc/help/server
 share/silc/help/set
 share/silc/help/shutdown
 share/silc/help/silcoper
+share/silc/help/stats
 share/silc/help/statusbar
 share/silc/help/toggle
 share/silc/help/topic
