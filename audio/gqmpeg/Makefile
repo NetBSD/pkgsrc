@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2001/06/29 04:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/08/16 11:37:47 rh Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
-DISTNAME=		gqmpeg-0.8.3
-PKGNAME=		${DISTNAME}nb1
+DISTNAME=		gqmpeg-0.9.0
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
@@ -12,7 +11,8 @@ COMMENT=		GTK+ front end to mpg123
 
 BUILD_USES_MSGFMT=	yes
 
-DEPENDS+=		mpg123-0.59r:../../audio/mpg123
+DEPENDS+=		mpg123>=0.59r:../../audio/mpg123
+DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
