@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1468 2003/02/23 03:22:28 salo Exp $
+$NetBSD: CHANGES,v 1.1469 2003/02/23 05:03:44 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -807,3 +807,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmms-madspin to 0.05 [hubertf 2003-02-22]
 	Updated xfstt to 1.4 [salo 2003-02-22]
 	Updated yudit to 2.7.2 [salo 2003-02-23]
+	Added teTeX2-2.0.1 [kei 2003-02-23]
+	Added teTeX2-bin-2.0.1 [kei 2003-02-23]
+	Added teTeX2-share-2.0.1 [kei 2003-02-23]
+	Added teTeX2-sharesrc-2.0.1 [kei 2003-02-23]
