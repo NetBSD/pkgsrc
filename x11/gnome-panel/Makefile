@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/16 22:55:03 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.0.10
+DISTNAME=		gnome-panel-2.0.11
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@hispabsd.org
+MAINTAINER=		jmmv@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
 
@@ -15,6 +15,7 @@ USE_BUILDLINK2=		YES
 USE_GNU_GETTEXT=	YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
