@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.467 2000/06/03 20:31:27 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.468 2000/06/03 20:58:46 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1376,6 +1376,7 @@ package-links:
 				exit 1;					\
 			fi;						\
 		fi;							\
+		${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX};	\
 		${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PACKAGES}/$$cat; \
 	done;
 .endif
