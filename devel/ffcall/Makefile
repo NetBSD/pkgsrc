@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2004/05/03 16:33:45 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.18 2004/06/04 08:16:53 adam Exp $
 
-DISTNAME=	ffcall-1.9
-PKGREVISION=	1
+DISTNAME=	ffcall-1.10
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/} \
-		ftp://ftp.santafe.edu/pub/gnu/ \
-		http://www.haible.de/bruno/gnu/
+MASTER_SITES=	ftp://ftp.santafe.edu/pub/gnu/ \
+		http://www.haible.de/bruno/gnu/ \
+		${MASTER_SITE_GNUSTEP:=libs/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.haible.de/bruno/packages-ffcall.html
