@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.9 2000/08/24 00:59:18 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.10 2000/08/24 02:49:44 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -87,7 +87,7 @@ bulk-check-uptodate:
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
 			for pkg in `${PKG_ADMIN} lsbest ${PACKAGES}/All/$$dep` ; do \
 				if [ "$$pkg" -nt "${REF}" ]; then \
-					${ECHO_MSG} >&2 ">> Required binary package $$dep is newer, rebuilding... " ; \
+					${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
 					uptodate=0 ; \
 				else \
 					${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
