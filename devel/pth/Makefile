@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/02/12 10:52:31 mrauch Exp $
+# $NetBSD: Makefile,v 1.38 2002/02/12 14:59:59 mrauch Exp $
 #
 
 DISTNAME=		pth-1.4.0
@@ -17,8 +17,8 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
-.if (${MACHINE_ARCH} == "i386" && ${CFLAGS} == "-O2")
-CFLAGS=			-O0
+.if (${MACHINE_ARCH} == "i386" && ${CFLAGS:M-O2} == "-O2")
+CFLAGS:=		${CFLAGS:S/-O2/-O0/}
 .endif
 
 # for PLIST
