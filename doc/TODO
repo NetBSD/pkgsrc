@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1051 2003/11/19 14:02:30 recht Exp $
+$NetBSD: TODO,v 1.1052 2003/11/19 23:51:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -158,6 +158,7 @@ Suggested package updates
 	o clisp-2.31
 	o clusterit-2.2
 	o conglomerate-0.7.6
+	o conserver-8.0.6
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.0
 	o courier-auth-0.42.2 [pkg/22371]
@@ -210,7 +211,7 @@ Suggested package updates
 	o gdb-6.0
 	o gdm-2.4.4.4
 	o generator-0.35
-	o gentoo-0.11.41
+	o gentoo-0.11.43
 	o gettext-0.12.1
 	o gforth-0.6.2
 	o gftp-2.0.16
@@ -274,7 +275,7 @@ Suggested package updates
 	o libtasn1-0.2.6 [pkg/23269]
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
-	o libxml2-2.6.2
+	o libxml2-2.6.2 [pkg/23488]
 	o libxslt-1.1.0
 	o lilypond-2.0.0
 	o lmbench-2.0.4
@@ -413,9 +414,9 @@ Suggested package updates
 	o xfce-4.0.1 [martti]
 	o xfstt-1.6
 	o xisp-2.7 [pkg/19566]
-	o xmame-0.76.1
+	o xmame-0.77.1
 	o xmcd-3.2.1
-	o xmess-0.76.1
+	o xmess-0.77.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xmule-1.7.0 [jmmv]
