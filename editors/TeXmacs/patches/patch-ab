@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.7 2004/07/28 10:44:56 recht Exp $
+$NetBSD: patch-ab,v 1.8 2004/08/17 11:18:57 recht Exp $
 
---- configure.orig	2004-07-28 12:21:22.000000000 +0200
-+++ configure	2004-07-28 12:25:37.000000000 +0200
-@@ -3544,10 +3544,10 @@
- case "$enable_optimize" in
-     yes)
- 	# keep optimization options
--  	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE" 1>&6 ;;
-+  	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE ${PKG_CXXFLAGS}" 1>&6 ;;
-     no-inline)
- 	optimize_no_inline="-fno-default-inline -fno-inline"
--	CONFIG_CXXOPTIMIZE="$CONFIG_CXXOPTIMIZE $optimize_no_inline"
-+	CONFIG_CXXOPTIMIZE="$CONFIG_CXXOPTIMIZE ${PKG_CXXFLAGS} $optimize_no_inline"
-   	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE" 1>&6 ;;
-     no)
- 	CONFIG_CXXOPTIMIZE=""
+--- configure.orig	2004-08-03 17:56:28.000000000 +0200
++++ configure	2004-08-17 12:14:25.000000000 +0200
+@@ -5587,9 +5587,9 @@
+       fi
+    fi
+ fi
+-CPPFLAGS=""
+-LDFLAGS=""
+-LIBS=""
++CPPFLAGS="$SAVE_CPPFLAGS"
++LDFLAGS="$SAVE_LDFLAGS"
++LIBS="$SAVE_LIBS"
+ 
+ #--------------------------------------------------------------------
+ # Disable customized allocator
