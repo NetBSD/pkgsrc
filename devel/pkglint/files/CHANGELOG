@@ -1,0 +1,139 @@
+$NetBSD: CHANGELOG,v 1.1 1998/08/07 22:13:43 tsarna Exp $
+
+TODO
+	- report line# for each errors/warnings in Makefile
+	  (need a complete rewrite)
+
+---
+
+r1.65 Fri Aug  7 14:43:24 CDT 1998
+	- Rename to pkglint
+	- apply patches to sources and keep files under ${FILESDIR}.
+	  We're diverged too much to share this well, so we might as
+	  well keep the sources in-tree and under CVS control.
+
+r1.64 Sat Feb 28 11:34:13 JST 1998
+	- manpage checks (Hubert Feyrer)
+	- FreeBSD/NetBSD support (Hubert Feyrer)
+	- PKGNAME check for packages/Latest (satoshi)
+
+r1.63 Mon Jan 19 10:27:11 JST 1998
+	- install-info related fix (thanks satoshi)
+	- display RCS tag in patches/* (thanks goes to Hubert Feyrer, for the
+	  rest of the items)
+	- RCS tag is configurable
+	- PORTSDIR (/usr/ports) is configurable
+	- extra colon in URL
+	- USE_GMAKE
+
+r1.62 Thu Dec 18 12:36:09 JST 1997
+	- info/dir should not be listed in pkg/PLIST. (thanks satoshi)
+
+r1.61 Tue Nov 25 20:41:55 JST 1997
+	- checks improved for comments in Makefile.
+	- add check for PKG_DIST_STRIP. (thanks satoshi)
+
+r1.60 Thu Nov 20 12:20:41 JST 1997
+	- show the line # on check for contiguous blank lines (thanks goes to
+	  fenner@freebsd)
+	- *_DEPENDS ordering check improved (thanks satoshi)
+
+r1.59 Thu Nov 13 22:29:30 JST 1997
+	- "-B #" allowed as well as "-B#"
+	- pkg/COMMENT has to be 70 chars (previously, check was for 80 chars)
+	- EXTRACT_SUFX unnecessery if DISTFILES is defined.
+	  (thanks sheldonh@axl.iafrica.com)
+
+r1.58 Tue Nov 11 09:05:16 JST 1997
+	- option -B#: set # of contiguous blank lines allowed
+	- warn on distfile improved (to some extent)
+	- Id string check improved.
+
+r1.57 Sun Nov  9 09:28:54 JST 1997
+	- fixed RCS ident string check (Id, History and others)
+	- blank lines check (thanks goes to obrien@nuxi.com)
+
+r1.56 Wed Nov  5 11:10:56 JST 1997
+	- warn for emacs backup file (committers mode)
+	- warn for *.orig and *.rej (committers mode)
+
+r1.55 Mon Oct 13 20:27:56 JST 1997
+	- accept DEPENDS_TARGET in *_DEPENDS section (input from satoshi)
+
+r1.54 Sun Oct 12 09:20:40 JST 1997
+	- predefined URLs check fix (info from obrien@nuxi.com)
+
+r1.52 Wed Oct  8 23:21:39 JST 1997
+	- check ${MKDIR} -p
+
+r1.51 Wed Oct  8 07:57:50 JST 1997
+	- generate output to stdout. (we may have to think again about it)
+	- DISTNAME/CATEGORIES has to be there. disallow "?=".
+
+r1.50 Sun Sep 21 11:07:37 JST 1997
+	- typo
+
+r1.49 Sun Sep 21 11:03:28 JST 1997
+	- check for ports listed in *_DEPENDS
+
+r1.48 Sun Sep 14 23:23:58 JST 1997
+	- USE_IMAKE includes USE_X11, so you can omit USE_X11
+	- use of make target "fetch" or "install" discouraged.
+	  use "do-fetch" or "do-install" for override.
+	- check full pathname in pkg/PLIST
+
+r1.46 Tue Aug 12 11:45:26 JST 1997
+	- pkg/PLIST checker fix
+
+r1.45 Tue Aug 12 10:57:39 JST 1997
+	- simple typo fixes
+
+r1.44 Fri Aug  8 15:20:01 JST 1997
+	- bug fix: install-info in pkg/PLIST
+
+r1.43 Mon Aug  4 10:17:19 JST 1997
+	- removed stupid debug message
+
+r1.42 Thu Jul 31 23:18:16 JST 1997
+	- omit checks for parameter to "echo" command
+
+r1.41 Wed Jul 30 09:43:50 JST 1997
+	- fixes on glob (thanks arai-san)
+	- fixes on direct pathname detection (thanks arai-san)
+
+r1.40 Mon Jul 28 11:28:23 JST 1997
+	- fixes on pkg/* check
+	- fixes on WRKSRC checks
+	- check for empty trailing lines in various files
+	- check for RCS tag (need to commit as binary file)
+
+r1.39 Mon Jul 21 08:03:48 JST 1997
+	- enhancement to comitter mode
+
+r1.37 Fri Jul 18 00:00:42 JST 1997
+	- check for uncompressed man files (MAN[1-9NL])
+	- check for localized man files path (MANLANG)
+	- check for "@unexec install-info --delete" and "@exec install-info"
+	- check for PKGNAME suffix ("1.2.1" in "foobaa-1.2.1")
+	- tiny fix to *_DEPENDS section
+
+r1.33 Wed Jul 16 02:21:03 JST 1997
+	- added -c option: committer mode
+	- added check for RESTRICTED/NO_CDROM/NO_PACKAGES
+
+r1.31
+	- check existence of files/md5
+
+r1.30
+	- check empty MASTER_SITES
+
+r1.29
+	- pkg/DESCR restriction change: 20lines -> 24lines
+
+r1.26
+	- added -b option: warn $(FOOBAA)
+
+r1.23
+	- check for DISTNAME/PKGNAME/DISTFILES
+
+r1.1 6/13/97
