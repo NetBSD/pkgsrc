@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2047 2004/08/16 04:53:46 minskim Exp $
+$NetBSD: TODO,v 1.2048 2004/08/16 12:09:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -168,6 +168,7 @@ Suggested package updates
 	o abiword-2.0.9
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.15
+	o amavisd-new-20040815
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
 	o apcupsd-3.10.13
@@ -285,7 +286,7 @@ Suggested package updates
 	o latex2rtf-1.9.15
 	o lavaps-2.5
 	o lbreakout-2.5
-	o leafnode-1.10.3
+	o leafnode-1.10.4
 	o libcddb-0.9.5
 	o libggi-2.0.5
 	o libgii-0.8.5
@@ -294,6 +295,7 @@ Suggested package updates
 	o libnet-1.1.1
 	o libnids-1.19
 	o libole2-2.2.8
+	o libpng-1.2.6
 	o libsigc++-2.0.3
 	o libstatgrab-0.10.1
 	o libtool-1.5.8
@@ -308,6 +310,7 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
+	o metacity-2.8.3 [pkg/26683]
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
@@ -325,6 +328,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
+	o nail-11.2
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -394,10 +398,12 @@ Suggested package updates
 	o snownews-1.5.3
 	o socat-1.4.0.0
 	o source-highlight-1.10
+	o sox-12.17.5
 	o sqlite-3.0.2
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
+	o stella-1.4.1
 	o streamtuner-0.12.5
 	o sweep-0.8.3
 	o tcl-8.4.7
