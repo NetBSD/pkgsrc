@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/12/11 06:12:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/12/31 23:54:24 jlam Exp $
 
 .include "Makefile.php"
 
@@ -29,14 +29,14 @@ LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
-CONF_FILES=	${EGDIR}/php.ini-dist ${PKG_SYSCONFDIR}/php.ini
+CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 
 post-install:
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${LN} -sf ../../bin/php ${CGIDIR}/php
 	${TOUCH} ${PREFIX}/${PHP_EXTENSION_DIR}/.directory
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-optimized ${EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
 	${INSTALL_DATA} ${WRKSRC}/php4.gif ${PREFIX}/share/php
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/16 04:54:24 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/12/31 23:54:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use php4.
 #
@@ -18,7 +18,7 @@ PHP4_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 # This adds a build-dependency as php4 has no libraries.
-BUILDLINK_DEPENDS.php4?=	php>=4.0.6
+BUILDLINK_DEPENDS.php4?=	php>=4.1.0
 BUILD_DEPENDS+=			${BUILDLINK_DEPENDS.php4}:../../www/php4
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.php4=php
