@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2001/11/26 20:07:35 wiz Exp $
+
+--- xbattbar.c.orig	Fri Feb  2 06:25:29 2001
++++ xbattbar.c
+@@ -594,6 +594,7 @@
+                exit(1);
+        }
+ 
++       memset(&info, 0, sizeof(info));
+        if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
+                fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
+                exit(1);
