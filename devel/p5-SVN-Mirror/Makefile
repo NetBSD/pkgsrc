@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/06 23:01:06 epg Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/10 18:09:07 epg Exp $
 
 DISTNAME=	SVN-Mirror-0.49
 PKGNAME=	p5-${DISTNAME}
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Mirrors one Subversion repository to another
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-subversion>=1.0.4:../../devel/p5-subversion
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
