@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.881 2003/09/18 18:19:15 wiz Exp $
+$NetBSD: TODO,v 1.882 2003/09/18 19:11:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -208,7 +208,6 @@ Suggested package updates
 	o openssl-0.9.7b
 	o oss-3.9.7l
 	o p5-Apache-Gallery-0.7
-	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o plib-1.6.0 [pkg/19015,pkg/22612]
