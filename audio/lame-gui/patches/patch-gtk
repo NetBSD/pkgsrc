@@ -1,3 +1,4 @@
+$NetBSD: patch-gtk,v 1.2 1999/12/26 00:32:10 wiz Exp $
 --- Makefile.orig	Tue Sep 28 22:35:33 1999
 +++ Makefile	Wed Sep 29 12:44:42 1999
 @@ -113,6 +113,17 @@
