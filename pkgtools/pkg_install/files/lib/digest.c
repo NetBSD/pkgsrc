@@ -1,4 +1,4 @@
-/* $NetBSD: digest.c,v 1.1.1.1 2002/12/20 18:13:59 schmonz Exp $ */
+/* $NetBSD: digest.c,v 1.2 2002/12/22 12:15:11 grant Exp $ */
 
 /*
  * Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -36,7 +36,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2002 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.1.1.1 2002/12/20 18:13:59 schmonz Exp $");
+__RCSID("$NetBSD: digest.c,v 1.2 2002/12/22 12:15:11 grant Exp $");
 #endif
 #endif
 
@@ -83,8 +83,15 @@ MD5File(char *filename, char *buf)
 	}
 	(void) pclose(pp);
 	cp = strrchr(in, ' ');
-	(void) strcpy(buf, cp + 1);
-	buf[_MD5_ASCII_BUF_SIZE	- 1] = 0;
+	if (buf)
+		(void) strncpy(buf, cp + 1, _MD5_ASCII_BUF_SIZE);
+	else {
+		buf = malloc(_MD5_ASCII_BUF_SIZE);
+		if (buf == NULL)
+			return NULL;
+		(void) strncpy(buf, cp + 1, _MD5_ASCII_BUF_SIZE);
+	}
+	buf[_MD5_ASCII_BUF_SIZE	- 1] = '\0';
 	return buf;
 }
 #endif
