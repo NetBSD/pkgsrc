@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/10/20 17:46:50 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2001/10/22 18:10:28 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -61,6 +61,10 @@ PLIST_SRC=		${PKGDIR}/PLIST.suexec
 BUILD_DEFS+=		APACHE_USER APACHE_SUEXEC_DOCROOT
 .endif
 
+# Note that there is NO static compile module hook here.  This is intentional.
+# Under Apache 1.3, modules can be compiled to link dynamically to the server
+# using the "apxs" program.  See apxs(8).
+
 .if !defined(NOPIC)
 CONFIGURE_ARGS+=	--enable-module=so	# requires dlopen()
 CONFIGURE_ARGS+=	--enable-shared=proxy
@@ -117,14 +121,15 @@ FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
-# Note that there is NO static compile module hook here.  This is intentional.
-# Under Apache 1.3, modules can be compiled to link dynamically to the server
-# using the "apxs" program.  See apxs(8).
-
 pre-patch:
 	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
+	cd ${WRKSRC}/src/support;					\
+	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
+		apxs.pl > apxs.pl.sed;					\
+	${MV} apxs.pl.sed apxs.pl
+
 	for file in ${IPV6_PATCH}; do					\
 		${GZCAT} ${_DISTDIR}/$${file} |				\
 		    ${PATCH} ${PATCH_DIST_ARGS}				\
@@ -132,8 +137,10 @@ post-patch:
 	done
 	${CHMOD} +x ${CONFIGURE_SCRIPT}
 	cp ${WRKSRC}/conf/httpd.conf-dist ${WRKSRC}/conf/httpd.conf-dist-
-	${SED} -e 's/#Listen ::/Listen ::/' -e 's/#Listen 0.0.0.0/Listen 0.0.0.0/' \
-	    <${WRKSRC}/conf/httpd.conf-dist- >${WRKSRC}/conf/httpd.conf-dist
+	${SED}	-e "s|#Listen ::|Listen ::|"				\
+		-e "s|#Listen 0.0.0.0|Listen 0.0.0.0|"			\
+		${WRKSRC}/conf/httpd.conf-dist-				\
+		> ${WRKSRC}/conf/httpd.conf-dist
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
@@ -157,6 +164,7 @@ post-install:
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/httpd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../textproc/expat/buildlink.mk"
