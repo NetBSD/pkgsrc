@@ -1,0 +1,12 @@
+$NetBSD: patch-cf,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- t/io/openpid.t.orig	Fri Apr 23 12:45:43 2004
++++ t/io/openpid.t	Fri Apr 23 12:45:56 2004
+@@ -23,6 +23,7 @@
+ use Config;
+ $| = 1;
+ $SIG{PIPE} = 'IGNORE';
++$SIG{HUP} = 'IGNORE' if $^O eq 'interix';
+ 
+ my $perl = which_perl();
+ $perl .= qq[ "-I../lib"];
