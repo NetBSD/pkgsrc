@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1999/03/04 14:33:51 tron Exp $
+# $NetBSD: Makefile,v 1.34 1999/03/16 15:30:58 agc Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -17,12 +17,18 @@ BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jp
 		unzip:../../archivers/unzip
 DEPENDS=	png-1.0.3:../../graphics/png
 
+.include "../../mk/bsd.prefs.mk"
+
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
 MAKE_ENV+=	MAKEOBJDIR=.
+.if ${OPSYS} == "SunOS"
+MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}" XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/bsd/lib -L${LOCALBASE}/bsd/lib"
+.else
 MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}" XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
+.endif
 
 GS_SOURCES=	ghostscript-5.50.tar.gz
 GS_SOURCES+=	ghostscript-5.50gnu.tar.gz
@@ -40,8 +46,6 @@ HP850_DRV=	hp8xxs13.zip
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=	pdf_sec.ps
-
-.include "../../mk/bsd.prefs.mk"
 
 .ifdef WRKOBJDIR
 BUILD_ROOT=	${WRKOBJDIR}
@@ -71,9 +75,9 @@ do-build:
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
 	(cd ${PREFIX}/share/ghostscript ; \
-			tar -xzf ${DISTDIR}/${GS_FONTS_STD})
+			${GTAR} -xzf ${DISTDIR}/${GS_FONTS_STD})
 	(cd ${PREFIX}/share/ghostscript/fonts ; \
-			tar -xzf ${DISTDIR}/${GS_FONTS_OTHER})
+			${GTAR} -xzf ${DISTDIR}/${GS_FONTS_OTHER})
 
 post-install:
 	strip ${PREFIX}/bin/gs
