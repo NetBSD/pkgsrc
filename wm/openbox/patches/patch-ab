@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/11/20 18:16:19 jschauma Exp $
+
+--- util/Makefile.in.orig	Wed Nov 20 11:21:35 2002
++++ util/Makefile.in	Wed Nov 20 11:24:04 2002
+@@ -73,7 +73,6 @@
+ CPPFLAGS = @CPPFLAGS@ @DEBUG@
+ 
+ SUBDIRS = epist
+-bin_SCRIPTS = bsetbg
+ bin_PROGRAMS = bsetroot xftlsfonts
+ 
+ bsetroot_SOURCES = bsetroot.cc
+@@ -140,10 +139,10 @@
+ 
+ maintainer-clean-binPROGRAMS:
+ 
+-install-binPROGRAMS: $(bin_PROGRAMS)
++install-binPROGRAMS: xftlsfonts
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	@list='$(bin_PROGRAMS)'; for p in $$list; do \
++	@list='xftlsfonts'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    echo "  $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+ 	     $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
