@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
+
+--- texk/tetex/Makefile.in.orig	Sun Feb 16 02:57:16 2003
++++ texk/tetex/Makefile.in	Fri Feb 21 10:27:14 2003
+@@ -8,9 +8,9 @@
+ man5dir = $(mandir)/man5
+ man8dir = $(mandir)/man8
+ 
+-SCRIPTS= dvi2fax ps2frag texconfig dvired pslatex texi2html allcm allneeded fontexport fontimport kpsetool mkfontdesc MakeTeXPK fontinst rubibtex rumakeindex fmtutil texdoc texlinks texexec texdoctk updmap
++SCRIPTS= dvi2fax ps2frag texconfig dvired pslatex allcm allneeded fontexport fontimport kpsetool mkfontdesc MakeTeXPK fontinst rubibtex rumakeindex fmtutil texdoc texlinks texexec texdoctk updmap
+ PDFSCRIPTS=e2pall epstopdf texi2pdf thumbpdf
+-manpgs= allcm allec allneeded dvi2fax dvired e2pall epstopdf fontexport fontimport fontinst kpsepath kpsetool kpsexpand ps2frag pslatex rubibtex rumakeindex texconfig texdoc texexec texi2html texi2pdf texshow texutil thumbpdf texdoctk updmap
++manpgs= allcm allec allneeded dvi2fax dvired e2pall epstopdf fontexport fontimport fontinst kpsepath kpsetool kpsexpand ps2frag pslatex rubibtex rumakeindex texconfig texdoc texexec texi2pdf texshow texutil thumbpdf texdoctk updmap
+ 
+ INFOFILES= latex.info latex.info-1 latex.info-2 latex.info-3
+ POOLFILES = etex-pl.pool pdfetex-pl.pool pdftex-pl.pool tex-pl.pool
