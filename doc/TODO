@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2380 2004/11/18 12:31:37 wiz Exp $
+$NetBSD: TODO,v 1.2381 2004/11/18 12:33:01 markd Exp $
 
 Suggested new packages
 ======================
@@ -244,7 +244,6 @@ Suggested package updates
 =========================
 
 	o BasiliskII-1.0.20041109
-	o R-2.0.0
 	o TeXmacs-1.0.4.4
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
