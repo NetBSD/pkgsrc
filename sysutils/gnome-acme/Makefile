@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/04/01 18:53:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/07 14:04:09 minskim Exp $
 
 DISTNAME=	acme-2.4.2
 PKGNAME=	gnome-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/acme/2.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Small GNOME tool to make use of the multimedia buttons
 
 DEPENDS=	gnome2-control-center>=2.0:../../x11/gnome2-control-center
+
+BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.6.2.1
 
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
