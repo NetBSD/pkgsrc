@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/04 15:01:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/14 14:36:36 drochner Exp $
 lib/zope/lib/python/Products/ZPhotoSlides/IMG_fileobj.py
 lib/zope/lib/python/Products/ZPhotoSlides/IMG_fileobj.pyc
 lib/zope/lib/python/Products/ZPhotoSlides/IMG_img.py
@@ -12,19 +12,54 @@ lib/zope/lib/python/Products/ZPhotoSlides/ZPhotoSlides.py
 lib/zope/lib/python/Products/ZPhotoSlides/ZPhotoSlides.pyc
 lib/zope/lib/python/Products/ZPhotoSlides/__init__.py
 lib/zope/lib/python/Products/ZPhotoSlides/__init__.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/batch_rows.py
+lib/zope/lib/python/Products/ZPhotoSlides/batch_slides.py
+lib/zope/lib/python/Products/ZPhotoSlides/comment.py
+lib/zope/lib/python/Products/ZPhotoSlides/comment.pyc
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/Index.dtml
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/List_files.dtml
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/ZPhotoSlidesAdd.dtml
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/ZPhotoSlidesEdit.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/about.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/add_comment.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/choose_color.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/colorwheel.jpg
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/define_css.dtml
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/edit_photo.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/index_html.pt
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/list_title.dtml
 lib/zope/lib/python/Products/ZPhotoSlides/dtml/make_thumb.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/slide_show.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/stylesheet.css
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/stylesheet_demo.css.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/thumbnails_html.pt
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/user_layout.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/get_all_css.py
+lib/zope/lib/python/Products/ZPhotoSlides/getcomment.py
 lib/zope/lib/python/Products/ZPhotoSlides/image_modif.py
 lib/zope/lib/python/Products/ZPhotoSlides/image_modif.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/initials.py
+lib/zope/lib/python/Products/ZPhotoSlides/layout.py
+lib/zope/lib/python/Products/ZPhotoSlides/layout.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/message_dialog.py
+lib/zope/lib/python/Products/ZPhotoSlides/message_dialog.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/new_index.py
+lib/zope/lib/python/Products/ZPhotoSlides/old_index.py
 lib/zope/lib/python/Products/ZPhotoSlides/refresh.txt
+lib/zope/lib/python/Products/ZPhotoSlides/slide_show.py
+lib/zope/lib/python/Products/ZPhotoSlides/slide_show_old.py
+lib/zope/lib/python/Products/ZPhotoSlides/small_scripts.py
+lib/zope/lib/python/Products/ZPhotoSlides/small_scripts.pyc
 lib/zope/lib/python/Products/ZPhotoSlides/test.py
 lib/zope/lib/python/Products/ZPhotoSlides/test.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/version.txt
+lib/zope/lib/python/Products/ZPhotoSlides/view_photo.py
+lib/zope/lib/python/Products/ZPhotoSlides/viewable_images.py
 lib/zope/lib/python/Products/ZPhotoSlides/www/photo.gif
+lib/zope/lib/python/Products/ZPhotoSlides/zgettext.py
+lib/zope/lib/python/Products/ZPhotoSlides/zgettext.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/zphoto.mo
+lib/zope/lib/python/Products/ZPhotoSlides/zphoto.po
 lib/zope/lib/python/Products/ZPhotoSlides/zphoto.tex
 @dirrm lib/zope/lib/python/Products/ZPhotoSlides/www
 @dirrm lib/zope/lib/python/Products/ZPhotoSlides/dtml
