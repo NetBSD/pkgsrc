@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2001/04/24 20:44:49 jtb Exp $
+# $NetBSD: Makefile,v 1.132 2001/04/27 20:43:13 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -70,6 +70,8 @@ SUBDIR+=	ns-plugger-navigator
 SUBDIR+=	ns-remote
 SUBDIR+=	opera
 SUBDIR+=	p5-Apache-ASP
+SUBDIR+=	p5-Apache-DBILogConfig
+SUBDIR+=	p5-Apache-DBILogger
 SUBDIR+=	p5-Apache-ePerl
 SUBDIR+=	p5-Apache-Session
 SUBDIR+=	p5-CGI
