@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2004/06/05 11:28:11 tron Exp $
+$NetBSD: distinfo,v 1.55 2004/06/06 16:01:01 taca Exp $
 
 SHA1 (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = fd632ebaad656566db11cf875868b19a9b4a71db
 Size (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = 1044932 bytes
@@ -56,20 +56,20 @@ SHA1 (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 73be7a23e0aec3304c159
 Size (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 1408 bytes
 SHA1 (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 9177b064a207fa0582fe18b6a965746bf7b3fa33
 Size (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 16644 bytes
-SHA1 (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 8cb8130b3475fed63aac7dd88cb1c318c66f985c
-Size (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 8582 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = eb95ada3950c3272e4f80b47d3c78498917c9eb5
+Size (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 8337 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
-SHA1 (patch-ad) = 23a906011ffef78d070cc49c94c4f4837eb319ec
+SHA1 (patch-ad) = af55d1ec9cd26653a83bcc3b736115f8528c9afd
 SHA1 (patch-ae) = 5031183c7512573c8c8602d0b0541999f43343f2
-SHA1 (patch-ag) = fc215888a815d2b39f408b980f8bce3bf5ca998c
+SHA1 (patch-ag) = 999f9f86cb85e28cbbf9073838f7f1ef8a7335d7
 SHA1 (patch-aj) = aa2271e53602fe168604aeced6ed66d28fe47707
-SHA1 (patch-ak) = 19861281d8a9ece352ce9e881e1e60f6787933e3
+SHA1 (patch-ak) = f4402cb429fd317650bd886a236eeb8476c5e33b
 SHA1 (patch-al) = 534f273ec63f6de0818f1f86a2b655eac4564213
-SHA1 (patch-an) = 8748cfb50e0acb6588228b87b424f87b0c48cc59
+SHA1 (patch-an) = 932d0bd96ae80c92d4f0320b3ccf082a8373ceca
 SHA1 (patch-ba) = c91bc26e4b6df2cb4b7042591efb4afd7c989462
-SHA1 (patch-bb) = 70e92462230ac3b9920946b089290d9ec814fade
+SHA1 (patch-bb) = 75840a5d893bd9aebe68380fdb4dfc594e5aac5e
 SHA1 (patch-bc) = 536299e59c396829f23484a14bb9a6f5c0a4de35
 SHA1 (patch-ca) = 652e35b253a6b75a3ac452773d681e70c5fc310d
 SHA1 (patch-cb) = 7fb49ee4f9e21dea9ca6e54da9a581866b225853
