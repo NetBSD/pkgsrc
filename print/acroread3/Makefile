@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/13 19:36:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/27 10:29:05 mycroft Exp $
 
 PKGNAME=	acroread-3.01
 CATEGORIES=	print
@@ -17,7 +17,7 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_linux-6.1p1:../../emulators/suse_linux
+DEPENDS=	suse_linux-6.3:../../emulators/suse_linux
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
 .elif (${MACHINE_ARCH} == "alpha")
