@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/26 15:13:04 jmmv Exp $
+
+--- samples/qtrecompress/main.cpp.orig	Fri Aug 10 02:32:19 2001
++++ samples/qtrecompress/main.cpp
+@@ -6,7 +6,7 @@
+ #include <floatingpoint.h>
+ #endif
+ #ifdef __NetBSD__
+-#include <machine/ieeefp.h>
++#include <ieeefp.h>
+ #endif
+ 
+ #include <iostream>
