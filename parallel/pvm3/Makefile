@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/11/04 18:08:45 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/01 23:42:58 garbled Exp $
 
 DISTNAME=		pvm3.4.beta7
 PKGNAME=		pvm-3.4.7
@@ -14,6 +14,16 @@ HOMEPAGE=		http://www.netlib.org/
 WRKSRC=			${WRKDIR}/pvm3
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 ALL_TARGET=		all install
+
+_HAVE_F77!= if [ -e /usr/bin/f77 ]; then echo "YES"; else echo "NO"; fi
+
+.if (${_HAVE_F77} == "YES")
+F77= /usr/bin/f77
+.else
+F77=f2c
+BUILD_DEPENDS+=		f2c:../../lang/f2c
+.endif
+MAKE_FLAGS+=		F77=${F77}
 
 post-patch:
 	@${MV} ${WRKSRC}/lib/pvm ${WRKSRC}/lib/pvm.in
