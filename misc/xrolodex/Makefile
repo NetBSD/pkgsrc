@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/08 19:55:46 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/12 02:30:23 jlam Exp $
 
 DISTNAME=		xrolodex.1.5.motif
 PKGNAME=		xrolodex-1.5
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Motif/X11 rolodex application
 
 WRKSRC=			${WRKDIR}/xrolodex.15
-MAKE_ENV+=		XMLIB='-lXm'
+MAKE_ENV+=		XMLIB="${MOTIFLIB}"
 USE_IMAKE=		yes
 
 .include "../../mk/motif.buildlink.mk"
