@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/01 17:58:04 jwise Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/03 15:07:26 wiz Exp $
 #
 
 DISTNAME=	tclX8.0.4
@@ -6,12 +6,12 @@ PKGNAME=	tclX-8.0.4
 CATEGORIES=	lang x11
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/tclx-distrib/
 
-BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
-
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80
+
+BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
 
 USE_X11=		yes
 USE_LIBTOOL=		yes
