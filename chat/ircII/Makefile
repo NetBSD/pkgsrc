@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/21 15:29:50 mrg Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/21 16:30:59 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -12,7 +12,7 @@ COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*
 
-VERS=			20020321
+VERS=			20020322
 
 .include "../../mk/bsd.prefs.mk"
 
