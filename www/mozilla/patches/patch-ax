@@ -1,82 +1,89 @@
-$NetBSD: patch-ax,v 1.3 2001/09/16 14:03:08 taya Exp $
+$NetBSD: patch-ax,v 1.4 2001/10/16 15:52:09 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/src/nsSocketTransport.cpp
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Wed Aug 22 09:24:26 2001
-+++ ./netwerk/base/src/nsSocketTransport.cpp	Sun Sep 16 20:47:05 2001
-@@ -170,8 +170,7 @@
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Sat Sep 29 17:27:36 2001
++++ ./netwerk/base/src/nsSocketTransport.cpp	Sat Oct 13 19:56:58 2001
+@@ -187,8 +187,7 @@
      //
      // Set up Internet defaults...
      //
 -    memset(&mNetAddress, 0, sizeof(mNetAddress));
 -    PR_SetNetAddr(PR_IpAddrAny, PR_AF_INET6, 0, &mNetAddress);
-+    mNetAddressList = NULL;
++    mNetAddressList = nsnull;
      
      //
      // Initialize the global connect timeout value if necessary...
-@@ -220,6 +219,13 @@
+@@ -237,6 +236,13 @@
          nsAutoMonitor::DestroyMonitor(mMonitor);
          mMonitor = nsnull;
      }
 +
-+    PRNetAddrList *p, *next;;
-+    for(p = mNetAddressList; p; ){
-+      next = p->next;
-+      delete p;
-+      p = next;
++    nsNetAddrList *p, *next;
++    for (p = mNetAddressList; p; ){
++        next = p->next;
++        delete p;
++        p = next;
 +    }
  }
  
  
-@@ -604,14 +610,13 @@
+@@ -641,15 +647,7 @@
      //
      // The hostname has not been resolved yet...
      //
 -    if (PR_IsNetAddrType(&mNetAddress, PR_IpAddrAny)) {
-+    if (mNetAddressList == NULL) {
-         //
-         // Initialize the port used for the connection...
-         //
-         // XXX: The list of ports must be restricted - see net_bad_ports_table[] in 
-         //      mozilla/network/main/mkconect.c
-         //
+-        //
+-        // Initialize the port used for the connection...
+-        //
+-        // XXX: The list of ports must be restricted - see net_bad_ports_table[] in 
+-        //      mozilla/network/main/mkconect.c
+-        //
 -        mNetAddress.ipv6.port = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
- 
+-
++    if (mNetAddressList == nsnull) {
          nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
          if (NS_FAILED(rv)) return rv;
-@@ -635,7 +640,7 @@
+ 
+@@ -672,7 +670,7 @@
              //
              // The DNS lookup has finished...  It has either failed or succeeded.
              //
 -            if (NS_FAILED(mStatus) || !PR_IsNetAddrType(&mNetAddress, PR_IpAddrAny)) {
-+            if (NS_FAILED(mStatus) || mNetAddressList != NULL) {
++            if (NS_FAILED(mStatus) || mNetAddressList) {
                  mDNSRequest = 0;
                  rv = mStatus;
              } 
-@@ -795,7 +800,8 @@
+@@ -832,7 +830,8 @@
          //    This is only done the first time doConnection(...) is called.
          //
          if (NS_SUCCEEDED(rv)) {
 -            status = PR_Connect(mSocketFD, &mNetAddress, gConnectTimeout);
 +try_again:
-+            status = PR_Connect(mSocketFD, &(mNetAddressp->mNetAddress), gConnectTimeout);
++            status = PR_Connect(mSocketFD, &(mNetAddressList->addr), gConnectTimeout);
              if (PR_SUCCESS != status) {
                  PRErrorCode code = PR_GetError();
                  //
-@@ -820,6 +826,9 @@
+@@ -857,6 +856,12 @@
                  //
                  else {
                      // Connection refused...
-+                    if((mNetAddressp = mNetAddressp->next)){
++                    nsNetAddrList *p = mNetAddressList;
++                    mNetAddressList = mNetAddressList->next;
++                    delete p;
++                    if (mNetAddressList){
 +                        goto try_again;
 +                    }
                      LOG(("nsSocketTransport: Connection Refused [%s:%d %x].  PRErrorCode = %x\n",
                          mHostName, mPort, this, code));
                      rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -833,11 +842,17 @@
+@@ -870,11 +875,23 @@
      //
      else if (aSelectFlags) {
          if (PR_POLL_EXCEPT & aSelectFlags) {
-+            if((mNetAddressp = mNetAddressp->next)){
++            nsNetAddrList *p = mNetAddressList;
++            mNetAddressList = mNetAddressList->next;
++            delete p;
++            if (mNetAddressList){
 +                goto try_again;
 +            }
              LOG(("nsSocketTransport: Connection Refused via PR_POLL_EXCEPT. [%s:%d %x].\n", 
@@ -84,63 +91,65 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
              rv = NS_ERROR_CONNECTION_REFUSED;
          }
          else if (PR_POLL_HUP & aSelectFlags) {
-+	    if((mNetAddressp = mNetAddressp->next)){
-+		goto try_again;
-+	    }
++            nsNetAddrList *p = mNetAddressList;
++            mNetAddressList = mNetAddressList->next;
++            delete p;
++            if (mNetAddressList){
++                goto try_again;
++            }
              LOG(("nsSocketTransport: Connection Refused via PR_POLL_HUP. [%s:%d %x].\n", 
                  mHostName, mPort, this));
              rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -880,7 +895,7 @@
+@@ -917,7 +934,7 @@
      //
      // The hostname has not been resolved yet...
      //
 -    if (PR_IsNetAddrType(&mNetAddress, PR_IpAddrAny)) {
-+    if (mNetAddressList == NULL) {
++    if (mNetAddressList == nsnull) {
          nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
          if (NS_FAILED(rv)) return rv;
  
-@@ -899,16 +914,19 @@
+@@ -936,16 +953,18 @@
              return NS_ERROR_FAILURE;
          }
  
-+/****************/
-+        mNetAddressList = new PRNetAddrList;
-+	mNetAddressList->next = NULL;
++        mNetAddressList = new nsNetAddrList;
++        mNetAddressList->next = nsnull;
          if (addr.raw.family == PR_AF_INET)
 -            PR_ConvertIPv4AddrToIPv6(addr.inet.ip, &mNetAddress.ipv6.ip);
-+            PR_ConvertIPv4AddrToIPv6(addr.inet.ip, &(mNetAddressList->mNetAddress.ipv6.ip));
++            PR_ConvertIPv4AddrToIPv6(addr.inet.ip, &(mNetAddressList->addr.ipv6.ip));
          else
 -            memcpy(&mNetAddress.ipv6.ip, &addr.ipv6.ip, sizeof(mNetAddress.ipv6.ip));
-+            memcpy(&(mNetAddressList->mNetAddress.ipv6.ip), &addr.ipv6.ip, sizeof(mNetAddressList->mNetAddress.ipv6.ip));
++            memcpy(&(mNetAddressList->addr.ipv6.ip), &addr.ipv6.ip, sizeof(mNetAddressList->addr.ipv6.ip));
  
 -        mNetAddress.ipv6.port
-+        mNetAddressList->mNetAddress.ipv6.port
++        mNetAddressList->addr.ipv6.port
              = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
  
          LOG(("address { family=%hu, port=%hu }\n",
 -            mNetAddress.ipv6.family, PR_ntohs(mNetAddress.ipv6.port)));
-+            mNetAddressList->mNetAddress.ipv6.family, PR_ntohs(mNetAddressList->mNetAddress.ipv6.port)));
++            mNetAddressList->addr.ipv6.family, PR_ntohs(mNetAddressList->addr.ipv6.port)));
      }
  
      //
-@@ -1373,21 +1391,28 @@
+@@ -1410,21 +1429,27 @@
      // Enter the socket transport lock...
      nsAutoMonitor mon(mMonitor);
      nsresult rv = NS_OK;
 +    char **p;
-+    PRNetAddrList **addrp = &mNetAddressList;
++    nsNetAddrList **addrp = &mNetAddressList;
  
      if (aHostEnt->hostEnt.h_addr_list && aHostEnt->hostEnt.h_addr_list[0]) {
 -        if (aHostEnt->hostEnt.h_addrtype == PR_AF_INET6)
 -            memcpy(&mNetAddress.ipv6.ip, aHostEnt->hostEnt.h_addr_list[0], sizeof(mNetAddress.ipv6.ip));
 -        else
 -            PR_ConvertIPv4AddrToIPv6(*(PRUint32*)aHostEnt->hostEnt.h_addr_list[0], &mNetAddress.ipv6.ip);
-+        for(p = aHostEnt->hostEnt.h_addr_list; *p; p++){
-+	  *addrp = new PRNetAddrList;
-+	  (*addrp)->next = NULL;
-+          (*addrp)->mNetAddress.ipv6.port = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
-+          (*addrp)->mNetAddress.raw.family = PR_AF_INET6;
-+          memcpy(&((*addrp)->mNetAddress.ipv6.ip), *p, sizeof((*addrp)->mNetAddress.ipv6.ip));
++        for (p = aHostEnt->hostEnt.h_addr_list; *p; p++){
++            *addrp = new nsNetAddrList;
++            (*addrp)->next = nsnull;
++            (*addrp)->addr.ipv6.port = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
++            (*addrp)->addr.raw.family = PR_AF_INET6;
++            memcpy(&((*addrp)->addr.ipv6.ip), *p, sizeof((*addrp)->addr.ipv6.ip));
  #if defined(PR_LOGGING)
 -        char addrbuf[50];
 -        PR_NetAddrToString(&mNetAddress, addrbuf, sizeof(addrbuf));
@@ -149,35 +158,34 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
 -            mHostName, mPort, this,
 -            aHostEnt->hostEnt.h_name,
 -            addrbuf));
-+          char addrbuf[50];
-+          PR_NetAddrToString(&((*addrp)->mNetAddress), addrbuf, sizeof(addrbuf));
-+          LOG(("nsSocketTransport: OnFound(...) [%s:%d %x]."
++            char addrbuf[50];
++            PR_NetAddrToString(&((*addrp)->addr), addrbuf, sizeof(addrbuf));
++            LOG(("nsSocketTransport: OnFound(...) [%s:%d %x]."
 +              "  DNS lookup succeeded => %s (%s)\n",
 +              mHostName, mPort, this,
 +              aHostEnt->hostEnt.h_name,
 +              addrbuf));
  #endif
-+          addrp = &((*addrp)->next);
-+      }
-+      mNetAddressp = mNetAddressList;
++            addrp = &((*addrp)->next);
++        }
      } else {
          // XXX: What should happen here?  The GetHostByName(...) succeeded but 
          //      there are *no* A records...
-@@ -1420,7 +1445,7 @@
+@@ -1457,7 +1482,7 @@
      // If the lookup failed, set the status...
      if (NS_FAILED(aStatus))
          mStatus = aStatus;
 -    else if (PR_IsNetAddrType(&mNetAddress, PR_IpAddrAny))
-+    else if (mNetAddressList == NULL)
++    else if (mNetAddressList == nsnull)
          mStatus = NS_ERROR_ABORT;
  
      // Start processing the transport again - if necessary...
-@@ -1741,7 +1766,7 @@
+@@ -1778,7 +1803,7 @@
      *_retval = (char*)nsMemory::Alloc(aLen);
      if (!*_retval) return NS_ERROR_FAILURE;
  
 -    PRStatus status = PR_NetAddrToString(&mNetAddress, *_retval, aLen);
-+    PRStatus status = PR_NetAddrToString(&mNetAddressList->mNetAddress, *_retval, aLen);
++    PRStatus status = PR_NetAddrToString(&mNetAddressList->addr, *_retval, aLen);
  
      if (PR_FAILURE == status) {
          nsMemory::Free(*_retval);
