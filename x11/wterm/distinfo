@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:47 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/10/05 13:33:28 wiz Exp $
 
-SHA1 (wterm-6.2.6.tar.bz2) = d0bed9b5d338dbd1a156207ccce9dfa4c121dbf3
-Size (wterm-6.2.6.tar.bz2) = 239386 bytes
-SHA1 (patch-aa) = 893933197184c47342984e39b8ba023539fb114f
-SHA1 (patch-ab) = 4d24a9005f6332b512dc46bf86e6d5a9478abb19
+SHA1 (wterm-6.2.9.tar.bz2) = e759dea038d07146d70e9cd88ff4c68e4b0fd5b2
+Size (wterm-6.2.9.tar.bz2) = 262049 bytes
