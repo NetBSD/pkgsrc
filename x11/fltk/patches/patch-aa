@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+
+--- makeinclude.in.orig	Fri Mar 26 00:26:28 1999
++++ makeinclude.in	Mon Apr 26 13:41:23 1999
+@@ -42,7 +42,7 @@
+ CXXFLAGS	=@CXXFLAGS@ @X_CFLAGS@
+ 
+ # program to make the archive:
+-LIBNAME		=@LIBNAME@
++LIBNAME		=libfltk.la
+ LIBCOMMAND	=@LIBCOMMAND@
+ RANLIB		=@RANLIB@
+ DSONAME		=@DSONAME@
