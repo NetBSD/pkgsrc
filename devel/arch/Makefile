@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/14 17:56:05 jonb Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/16 15:48:20 wiz Exp $
 #
 
 DISTNAME=	arch-1.0pre7
@@ -10,7 +10,7 @@ MAINTAINER=	schmonz+netbsd@schmonz.com
 HOMEPAGE=	http://www.regexps.com/
 COMMENT=	revision control system ideal for widely distributed development
 
-DEPENDS+=	patch:../../devel/patch
+DEPENDS+=	patch>=2.5.4:../../devel/patch
 
 USE_GMAKE=	# defined
 
