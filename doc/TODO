@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1127 2003/12/04 22:43:43 xtraeme Exp $
+$NetBSD: TODO,v 1.1128 2003/12/05 10:38:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -199,7 +199,6 @@ Suggested package updates
 	o gnucash-1.8.8
 	o gnuchess-5.06
 	o gnumeric-1.2.0
-	o gnustep-0.9.0
 	o gnutls-0.8.12
 	o gossip-0.6
 	o gpa-0.7.0
@@ -217,7 +216,6 @@ Suggested package updates
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
-	o hylafax-4.1.8
 	o icepref-2.2
 	o inn-2.4.0
 	o iozone-3.203
