@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/01/20 23:32:50 adrianp Exp $
+$NetBSD: distinfo,v 1.5 2005/01/23 18:29:22 wiz Exp $
 
-SHA1 (isic/isic-0.06.tgz) = 69433d4c6f351648655991d30e5c64e958a82e6b
-Size (isic/isic-0.06.tgz) = 27611 bytes
+SHA1 (isic-0.06.tgz) = 69433d4c6f351648655991d30e5c64e958a82e6b
+Size (isic-0.06.tgz) = 27611 bytes
