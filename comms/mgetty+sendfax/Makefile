@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/15 00:33:52 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/09 14:42:28 wiz Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -23,7 +23,7 @@ MGETTY_CONFDIR=	${PREFIX}/etc/mgetty+sendfax
 #MGETTY_CONFDIR=/etc/mgetty
 MAKE_ENV+=	MGETTY_CONFDIR=${MGETTY_CONFDIR}
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 pre-patch:
 	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
@@ -47,6 +47,6 @@ post-install:
 	cd ${PREFIX}/share/examples/mgetty+sendfax; \
 	    ${PAX} -r -w -pe -k * ${MGETTY_CONFDIR}
 
-.include "../../graphics/netpbm/buildlink.mk"
+.include "../../graphics/netpbm/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
