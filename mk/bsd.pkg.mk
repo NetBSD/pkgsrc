@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.218 1999/02/25 23:02:38 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.219 1999/03/03 17:48:23 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -541,6 +541,9 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
+# XXX There's a conditinal hack for "pkg_delete -O" for
+#     _PKGTOOLS_VER>=19990302 below which should be backed out if this
+#     is bumped beyond 19990302.  - HF
 PKGTOOLS_REQD=		19990119
 
 # Check that we're using up-to-date pkg_* tools with this file.
@@ -1964,6 +1967,9 @@ fake-pkg: ${PLIST} ${DESCR}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .if defined(FORCE_PKG_REGISTER)
+.if ${_PKGTOOLS_VER} >= 19990302
+	@${PKG_DELETE} -O ${PKGNAME}
+.endif 
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	@${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
