@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:42 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/27 21:20:38 seb Exp $
 #
 
 DISTNAME=		Crypt-Random-1.11
@@ -15,10 +15,8 @@ COMMENT=		perl5 interface to /dev/random
 DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
 
-USE_PERL5=		# defined
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/Random/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
