@@ -1,28 +1,41 @@
-# $NetBSD: Makefile,v 1.18 2002/01/22 18:08:01 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/28 17:34:29 drochner Exp $
 #
 
-DISTNAME=	${PY_DISTNAME}
-PKGNAME=	py-Tk-${PY_VERSION}
+PKGNAME=	${PYPKGPREFIX}-Tk-0
 CATEGORIES=	x11
-MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 COMMENT=	Tkinter -- Python interface to Tcl/Tk
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
+EVAL_PREFIX+=	TCLDIR=tcl
 
 USE_X11=	yes
-WRKSRC=		${PY_WRKSRC}
 
-EXTRACT_ELEMENTS=	${PY_MODULES}/_tkinter.c \
-			${PY_MODULES}/tkappinit.c
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
+			${PYSUBDIR}/Modules/tkappinit.c
+PYDISTUTILSPKG=	yes
+PYBINMODULE=	yes
+PY_PATCHPLIST=	yes
 
-do-configure:	python-std-do-configure
+PY_SETUP_SUBST+= TCLPREFIX=${TCLDIR}
+PY_SETUP_SUBST+= X11PREFIX=${X11BASE}
+PLIST_SUBST+= PYLIB=${PYLIB}
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/_tkinter.so ${PY_LIBDIR}/lib-dynload
-	${INSTALL_DATA} ${WRKSRC}/Setup.in ${PY_CONFIGDIR}/Setup.tk
+# ignore errors due to missing files (EXTRACT_ELEMENTS!)
+do-patch:
+	(cd ${WRKSRC}; \
+	for f in ${PATCHDIR}/patch-*;do \
+	${PATCH} --batch <$$f || true; \
+	done)
 
-.include "../../lang/python20/Makefile.inc"
+# this is needed by graphics/sketch
+post-install:
+	${SED} -e "s|@LOCALBASE@|${LOCALBASE}|g" \
+		-e "s|@X11BASE@|${X11BASE}|g" \
+		<${FILESDIR}/Setup.in >${PREFIX}/${PYLIB}/config/Setup.tk
+
+.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/srcdist.mk"
 .include "../../mk/bsd.pkg.mk"
