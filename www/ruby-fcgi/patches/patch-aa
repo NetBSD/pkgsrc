@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/12 05:12:09 taca Exp $
+
+--- install.rb.orig	2003-08-27 20:28:34.000000000 +0900
++++ install.rb
+@@ -648,7 +648,7 @@ class Installer
+   end
+ 
+   def install_dir_lib( rel )
+-    install_files targfiles, config('rb-dir') + '/' + rel, 0644
++    install_files targfiles, config('rb-dir') + '/' + rel, 0444
+   end
+ 
+   def install_dir_ext( rel )
+@@ -662,7 +662,7 @@ class Installer
+   end
+ 
+   def install_dir_data( rel )
+-    install_files targfiles, config('data-dir') + '/' + rel, 0644
++    install_files targfiles, config('data-dir') + '/' + rel, 0444
+   end
+ 
+   def install_files( list, dest, mode )
