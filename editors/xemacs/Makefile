@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/06/13 10:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/07/24 21:49:07 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.9
@@ -20,7 +20,7 @@ DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_PLATFORM=	*-*-alpha *-*-mips	#fails purespace dumping
+NOT_FOR_PLATFORM=	*-*-alpha *-*-mips*	#fails purespace dumping
 
 HAS_CONFIGURE=	yes
 
