@@ -1,51 +1,23 @@
-$NetBSD: patch-aa,v 1.6 1999/07/15 15:51:43 agc Exp $
-
-NetBSD mods to rely on X11BASE.
-Solaris mods to rely on X11BASE, and to add the libs that Solaris forgot.
-
---- Make-config.orig	Sun Aug 30 04:27:56 1998
-+++ Make-config	Thu Jul 15 16:37:26 1999
-@@ -773,13 +773,13 @@
+$NetBSD: patch-aa,v 1.7 2000/04/03 11:15:02 drochner Exp $
+--- src/X86/assyntax.h.orig	Tue Nov 16 00:22:22 1999
++++ src/X86/assyntax.h	Mon Apr  3 00:11:38 2000
+@@ -237,7 +237,8 @@
  
- netbsd:
- 	$(MAKE) $(MFLAGS) targets \
--	"GL_LIB = libMesaGL.so" \
--	"GLU_LIB = libMesaGLU.so" \
--	"GLUT_LIB = libglut.so" \
-+	"GL_LIB = libMesaGL.a" \
-+	"GLU_LIB = libMesaGLU.a" \
-+	"GLUT_LIB = libglut.a" \
- 	"CC = gcc" \
--	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
-+	"CFLAGS = -O2 -fPIC -DSHM -I${X11BASE}/include -DHZ=100"  \
- 	"MAKELIB = ../mklib.netbsd" \
--	"XLIBS = -L/usr/X11R6/lib -lXext -lXmu -lXi -lX11"
-+	"XLIBS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXext -lXmu -lXi -lSM -lICE -lXt -lX11"
+ #if defined(Lynx) || (defined(SYSV) || defined(SVR4)) && !defined(ACK_ASSEMBLER) \
+  || (defined(linux) || defined(__OS2ELF__)) && defined(__ELF__) \
+- || defined(__FreeBSD__) && __FreeBSD__ >= 3
++ || defined(__FreeBSD__) && __FreeBSD__ >= 3 \
++ || defined(__NetBSD__) && defined(__ELF__)
+ #define GLNAME(a)       a
+ #else
+ #define GLNAME(a)       CONCAT(_,a)
+@@ -932,7 +933,8 @@
  
- next:	
- 	$(MAKE)	-f Makefile.NeXT targets \
-@@ -1002,9 +1002,9 @@
- 	"GLU_LIB = libMesaGLU.a" \
- 	"GLUT_LIB = libglut.a" \
- 	"CC = gcc" \
--	"CFLAGS = -O3 -I/usr/openwin/include -DSHM -DSOLARIS_2_4_BUG" \
--	"MAKELIB = ../mklib.ar-ruv" \
--	"XLIBS = -L/usr/openwin/lib -lX11 -lXext -lXmu -lXi"
-+	"CFLAGS = -O3 -fPIC -I${X11BASE}/include -DSHM -DSOLARIS_2_4_BUG" \
-+	"MAKELIB = ../mklib.sunos5" \
-+	"XLIBS = -L${X11BASE}/lib -lX11 -lXext -lXmu -lXi -lsocket -lnsl"
- 
- sunos5-gcc-sl:
- 	$(MAKE) $(MFLAGS) targets \
-@@ -1012,9 +1012,9 @@
- 	"GLU_LIB = libMesaGLU.so" \
- 	"GLUT_LIB = libglut.so" \
- 	"CC = gcc" \
--	"CFLAGS = -fPIC -O3 -I/usr/openwin/include -DSHM -DSOLARIS_2_4_BUG" \
-+	"CFLAGS = -fPIC -O3 -I${X11BASE}/include -DSHM -DSOLARIS_2_4_BUG" \
- 	"MAKELIB = ../mklib.sunos5" \
--	"XLIBS = -L/usr/openwin/lib -R/usr/openwin/lib -lX11 -lXext -lXmu -lXi"
-+	"XLIBS = -L${X11BASE}/lib -R${X11BASE}/lib -lX11 -lXext -lXmu -lXi -lsocket -lnsl"
- 
- sunos5-x11r6-gcc-sl:
- 	$(MAKE) $(MFLAGS) targets \
+ #if defined(Lynx) || (defined(SYSV) || defined(SVR4)) \
+  || (defined(linux) || defined(__OS2ELF__)) && defined(__ELF__) \
+- || defined(__FreeBSD__) && __FreeBSD__ >= 3
++ || defined(__FreeBSD__) && __FreeBSD__ >= 3 \
++ || defined(__NetBSD__) && defined(__ELF__)
+ #define GLNAME(a) a
+ #else
+ #define GLNAME(a) _ ## a
