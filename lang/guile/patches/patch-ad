@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/08/29 21:42:04 jlam Exp $
+
+--- guile-readline/Makefile.in.orig	Wed Aug 25 11:36:20 1999
++++ guile-readline/Makefile.in	Sun Aug 29 15:43:37 1999
+@@ -153,8 +153,8 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p; \
++	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 

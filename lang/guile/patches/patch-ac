@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 1999/08/29 21:42:04 jlam Exp $
+
+--- guile-readline/configure.orig	Wed Aug 25 07:15:20 1999
++++ guile-readline/configure	Sun Aug 29 14:07:18 1999
+@@ -1450,13 +1450,14 @@
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
+-
++fi
+ 
+ for termlib in ncurses termcap ; do
+    echo $ac_n "checking for tgoto in -l${termlib}""... $ac_c" 1>&6
