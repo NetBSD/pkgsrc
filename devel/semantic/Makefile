@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/09 10:44:49 seb Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	semantic-1.4.2
@@ -23,7 +23,7 @@ EMACS=			xemacs
 BUILD_ENV+=	EMACS=${EMACS}
 
 NO_CONFIGURE=	# set
-USE_GMAKE=	# set
+USE_GNU_TOOLS+=	make
 
 INFO_FILES=	semantic.info
 OTHER_INFO=	semantic.info-1 semantic.info-2

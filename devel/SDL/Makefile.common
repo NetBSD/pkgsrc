@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/10 05:46:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=	SDL-1.2.6
@@ -15,7 +15,7 @@ PATCHDIR=		${.CURDIR}/../../devel/SDL/patches
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=		require
 
 USE_LIBTOOL=		YES

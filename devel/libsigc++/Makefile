@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/11/06 17:11:59 gavan Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/22 08:24:30 grant Exp $
 
 DISTNAME=	libsigc++-1.2.5
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ BUILD_DEPENDS=		m4>=1.4:../../devel/m4
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_GCC_SHLIB=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

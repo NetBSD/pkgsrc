@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/16 07:48:19 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	loudmouth-0.14.1
@@ -13,7 +13,7 @@ COMMENT=	Lightweight Jabber client library
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/loudmouth-1.0.pc.in

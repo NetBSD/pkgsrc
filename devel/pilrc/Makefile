@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/12/03 02:42:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
@@ -25,7 +25,7 @@ COMMENT=	Generate resources for PalmOS applications from textual description
 
 #EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 

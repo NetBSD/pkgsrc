@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/25 10:28:43 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	rpc2-1.19
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	CMU (Coda) remote procedure call package
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERL=${PERL5}

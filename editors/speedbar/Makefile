@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:48:09 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/22 08:30:30 grant Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -15,7 +15,7 @@ COMMENT=	Directory and code browser for emacs
 BUILD_ENV+=	EMACS=${EMACS}
 
 NO_CONFIGURE=	# set
-USE_GMAKE=	# set
+USE_GNU_TOOLS+=	make
 
 INFO_FILES=	speedbar.info
 

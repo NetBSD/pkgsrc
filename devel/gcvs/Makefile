@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/09 10:44:40 seb Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/22 08:24:29 grant Exp $
 
 DISTNAME=		gcvs-1.0a7
 PKGREVISION=		2
@@ -13,7 +13,7 @@ CONFLICTS=		cvs-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_MAKEINFO=		yes
 INFO_FILES=		cvs.info cvsclient.info

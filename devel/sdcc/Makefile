@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/22 08:24:30 grant Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -24,7 +24,8 @@ YACC=		bison
 WRKSRC=			${WRKDIR}/${PKGBASE}
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=      	YES
+USE_GNU_TOOLS+=		make
+
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/sdcc
 
 # needed for some arch's.  -fdollars-in-identifiers is enabled

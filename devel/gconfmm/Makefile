@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:38 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:24:29 grant Exp $
 #
 
 DISTNAME=	gconfmm-2.0.1
@@ -13,7 +13,7 @@ COMMENT=	C++ interface to GConf2
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gconf/gconfmm-2.0.pc.in

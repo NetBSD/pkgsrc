@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 08:24:31 grant Exp $
 #
 
 DISTNAME=	tla-1.1pre8
@@ -13,7 +13,7 @@ COMMENT=	Revision control system ideal for widely distributed development
 DEPENDS+=	patch-[0-9]*:../../devel/patch
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	../configure

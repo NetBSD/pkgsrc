@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/01/03 18:49:36 reed Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=		GConf-2.4.0.1
@@ -21,7 +21,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

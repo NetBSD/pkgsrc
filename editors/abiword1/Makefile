@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 08:30:30 grant Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -25,7 +25,7 @@ CONFLICTS=	abiword-[0-9]* abiword2-[0-9]*
 WRKSRC=		${WRKDIR}/${DISTNAME}/abi
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 USE_GNU_ICONV=	# defined
 GNU_CONFIGURE=	# defined
 MAKEFILE=	GNUmakefile
