@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/20 16:11:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/29 12:48:58 rh Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -16,7 +16,7 @@ MASTER_SITES=	http://gtranscript.linuxbox.com/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtranscript.linuxbox.com/
 
-DEPENDS+=	gnome-core-1.0.7:../../x11/gnome-core
+DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
