@@ -1,0 +1,10 @@
+  Gnetlist is a netlist generation program. It takes .sch (schematic)
+and .sym (symbol) files and converts them into netlists.  Gnetlist is
+currently a text based utility and will probably remain one.
+Gnetlist is a part of gEDA.
+
+  gEDA is a collection of tools which are used to make electrical
+circuit design, simulation and prototyping/production easier/doable.
+gEDA is a project, which was started because of the lack of free EDA
+tools for UNIX.  All of the tools in gEDA are released under the GNU
+Public License version 2 (GPL).
