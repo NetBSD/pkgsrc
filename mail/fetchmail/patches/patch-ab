@@ -23,7 +23,7 @@
  	$(INSTALL_PROGRAM) ./fetchmail $(bindir)/fetchmail
  	@echo "Installing fetchmail configurator..."
 -	$(INSTALL_PROGRAM) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
-+	$(INSTALL_PROGRAM:N-s) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
++	$(BSD_INSTALL_SCRIPT) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
  	@echo "Installing manual page..."
  	$(INSTALL_DATA) $(srcdir)/fetchmail.man $(mandir)/fetchmail.$(manext)
  	ln -f -s $(mandir)/fetchmail.$(manext) $(mandir)/fetchmailconf.$(manext)
