@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.8 2004/05/06 11:05:58 markd Exp $
+$NetBSD: distinfo,v 1.8.6.1 2005/02/19 21:47:14 snj Exp $
 
 SHA1 (Tk-804.027.tar.gz) = a691b6d38783810e3c3a3266bdcf8baba4aaf7dd
 Size (Tk-804.027.tar.gz) = 6011130 bytes
 SHA1 (patch-aa) = 50269dbd48f637791182e833cf620c1da0b9ddbf
 SHA1 (patch-ab) = 67a2f18ceb289e3503ecb66a35b47915736cc52a
+SHA1 (patch-ac) = ce3b99157ffd76eb7924321b09ca653a675aaeee
+SHA1 (patch-ad) = 1237409d5a229c1e560e9a64547f647f094f1a8b
