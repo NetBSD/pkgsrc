@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/10/10 22:42:23 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/10/22 17:00:28 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 libexec/xscreensaver/ant
@@ -139,5 +139,6 @@ man/man1/xjack.1
 man/man1/xlyap.1
 man/man1/xroger.1
 man/man1/xscreensaver-command.1
+man/man1/xscreensaver-demo.1
 man/man1/xscreensaver.1
 @dirrm libexec/xscreensaver
