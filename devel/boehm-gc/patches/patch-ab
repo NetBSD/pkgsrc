@@ -1,74 +1,35 @@
-$NetBSD: patch-ab,v 1.4 1999/09/24 16:42:06 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2000/11/16 10:42:24 abs Exp $
 
-*** gc.man.in.orig	Fri Nov 15 08:56:14 1996
---- gc.man.in	Fri Nov 15 09:30:14 1996
-***************
-*** 9,15 ****
-  ... malloc(...) ...
-  .br
-  .sp
-! cc ... gc.a
-  .LP
-  .SH DESCRIPTION
-  .I GC_malloc
---- 9,17 ----
-  ... malloc(...) ...
-  .br
-  .sp
-! cc ... -lgc
-! .sp
-! cc ... -lleak
-  .LP
-  .SH DESCRIPTION
-  .I GC_malloc
-***************
-*** 67,72 ****
---- 69,116 ----
-  This may temporarily write protect pages in the heap.  See the README file for more information on how this interacts with system calls that write to the heap.
-  .LP
-  Other facilities not discussed here include limited facilities to support incremental collection on machines without appropriate VM support, provisions for providing more explicit object layout information to the garbage collector, more direct support for ``weak'' pointers, support for ``abortable'' garbage collections during idle time, etc.
-+ .LP
-+ .SH "PORT INFORMATION"
-+ .LP
-+ In this (BSD package) installation,
-+ .I gc.h
-+ and
-+ .I gc_cpp.h
-+ will be found in
-+ .I @PREFIX@/include,
-+ and the libraries in
-+ .I @PREFIX@/lib.
-+ .LP
-+ These libraries have been compiled as drop-in replacements
-+ for malloc and free (which is to say, all malloc
-+ calls will allocate garbage-collectable data).
-+ There is no need to include "gc.h" in your C files unless you want
-+ access to the debugging (and other) functions defined there,
-+ or unless you want to explicitly use
-+ .I GC_malloc_uncollectable
-+ for some allocations.
-+ Just link against them whenever you want either garbage
-+ collection or leak detection.
-+ .LP
-+ The C++ header file, "gc_cpp.h",
-+ .I is
-+ necessary for C++ programs, to obtain the appropriate
-+ definitions of the
-+ .I new
-+ and
-+ .I delete
-+ operators.
-+ The comments in both of these header files presently
-+ provide far better documentation
-+ for the package than this man page;
-+ look there for more information.
-+ .LP
-+ Both libraries are compiled without (explicit) support
-+ for the experimental
-+ .I gc
-+ extension of
-+ .I g++.
-+ This may or may not make a difference.
-  .LP
-  .SH "SEE ALSO"
-  The README and gc.h files in the distribution.  More detailed definitions of the functions exported by the collector are given there.  (The above list is not complete.)
+--- dyn_load.c.orig	Tue Apr 25 17:01:16 2000
++++ dyn_load.c
+@@ -50,7 +50,8 @@
+ #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
+     !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \
+     !defined(HPUX) && !(defined(LINUX) && defined(__ELF__)) && \
+-    !defined(RS6000) && !defined(SCO_ELF)
++    !defined(RS6000) && !defined(SCO_ELF) && \
++    !(defined(NETBSD) && defined(__ELF__))
+  --> We only know how to find data segments of dynamic libraries for the
+  --> above.  Additional SVR4 variants might not be too
+  --> hard to add.
+@@ -297,14 +298,19 @@
+ # endif /* !USE_PROC ... */
+ # endif /* SUNOS */
+ 
+-#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF)
++#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF) || \
++    (defined(NETBSD) && defined(__ELF__))
+ 
+ /* Dynamic loading code for Linux running ELF. Somewhat tested on
+  * Linux/x86, untested but hopefully should work on Linux/Alpha. 
+  * This code was derived from the Solaris/ELF support. Thanks to
+  * whatever kind soul wrote that.  - Patrick Bridges */
+ 
++#if defined(NETBSD)
++#include <sys/exec_elf.h>
++#else
+ #include <elf.h>
++#endif
+ #include <link.h>
+ 
+ /* Newer versions of Linux/Alpha and Linux/x86 define this macro.  We
