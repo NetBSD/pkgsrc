@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/07/05 05:09:48 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 1999/07/09 00:08:28 sakamoto Exp $
 
---- ./Makefile.in.orig	Sun Jul  4 23:10:35 1999
-+++ ./Makefile.in	Mon Jul  5 13:22:59 1999
+--- ./Makefile.in.orig	Thu Jul  8 19:34:37 1999
++++ ./Makefile.in	Fri Jul  9 08:51:42 1999
 @@ -193,5 +193,5 @@
  	$(SHTOOL) install -c -m 644 pth.3 $(mandir)/man3/pth.3
  	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
