@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:44 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/14 16:22:21 salo Exp $
 bin/kill_mgl.sh
 bin/mcalc
 bin/mdate
@@ -16,13 +16,13 @@ include/mglkey.h
 lib/libmgl2.so
 lib/libmgl2.so.2
 lib/libmgl2.so.2.0
+lib/mgl2/gpnine.so
 lib/mgl2/imsoft.so
 lib/mgl2/instcap.sh
 lib/mgl2/mcalc.so
 lib/mgl2/mgterm.cap
 lib/mgl2/mini_mil.so
 lib/mgl2/msame.so
-lib/mgl2/gpnine.so
 sbin/calibconf
 sbin/calibdata-update
 sbin/mglcalibrate
@@ -65,8 +65,8 @@ share/doc/mgl2/memo/taskbar.doc
 share/doc/mgl2/mgterm/bugs.doc
 share/doc/mgl2/mgterm/mgterm.doc
 share/doc/mgl2/mil/mil.doc
-share/doc/mgl2/nine/README.txt
 share/doc/mgl2/nine/CHANGES.doc
+share/doc/mgl2/nine/README.txt
 share/mgl2/mgl_fontcreate.c
 @unexec ${RM} -f %D/etc/calibdata
 @dirrm share/mgl2
