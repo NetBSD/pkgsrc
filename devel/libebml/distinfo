@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.2 2004/04/07 10:40:01 salo Exp $
+$NetBSD: distinfo,v 1.2 2004/05/05 15:56:45 salo Exp $
 
-SHA1 (libebml-0.6.5.tar.gz) = 56477ca453340f154a7b52ce6a5006c2100dc9ec
-Size (libebml-0.6.5.tar.gz) = 56354 bytes
+SHA1 (libebml-0.7.0.tar.gz) = 80b9b2bb181c44bbd7d92979731dc379bb014ef0
+Size (libebml-0.7.0.tar.gz) = 58316 bytes
