@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2001/12/19 09:49:43 tron Exp $
+
+--- config/config.sub.orig	Tue Feb 16 15:10:08 1999
++++ config/config.sub	Tue Dec 18 22:24:26 2001
+@@ -424,6 +424,9 @@
+ 		basic_machine=mips-sony
+ 		os=-newsos
+ 		;;
++	newsmips*)
++		basic_machine=mips-sony
++		;;
+ 	next | m*-next )
+ 		basic_machine=m68k-next
+ 		case $os in
+@@ -513,6 +516,9 @@
+ 		;;
+ 	sequent)
+ 		basic_machine=i386-sequent
++		;;
++	sgimips*)
++		basic_machine=mips-sgi
+ 		;;
+ 	sh)
+ 		basic_machine=sh-hitachi
