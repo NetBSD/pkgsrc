@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/12/06 23:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2001/02/17 17:42:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -15,6 +15,7 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 
 MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
+COMMENT=		Lists information about open files
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure

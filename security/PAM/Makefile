@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/08 22:01:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:49:38 wiz Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
+COMMENT=	Pluggable Authentication Modules
 
 BUILD_DEPENDS+=	bison:../../devel/bison
 DEPENDS+=	libcrack-*:../../security/libcrack

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/30 20:25:44 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:22 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
 MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
+COMMENT=	Tk GUI + Tcl Shell for accessing HFS volumes
 
 DEPENDS=	libhfs-3.2.6:../../devel/libhfs
 DEPENDS+=	tk-8.3.2:../../x11/tk

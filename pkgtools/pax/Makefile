@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/10 01:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:51:26 wiz Exp $
 #
 
 DISTNAME=		pax-19980903
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
+COMMENT=		NetBSD-current's pax tool
 
 PREFIX=			/
 WRKSRC=			${WRKDIR}/pax

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/06 03:17:00 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 17:50:12 wiz Exp $
 #
 
 DISTNAME=		stunnel-3.13
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.stunnel.org/download/stunnel/src/
 
 MAINTAINER=		martin@NetBSD.ORG
 HOMEPAGE=		http://www.stunnel.org/
+COMMENT=		Universal SSL tunnel
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=		pth>=1.3.5:../../devel/pth

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/05/10 15:39:07 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/02/17 17:51:44 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
+COMMENT=	PostScript and PDF previewer
 
 DEPENDS+=	ghostscript-[6-9]*:../../print/ghostscript
 

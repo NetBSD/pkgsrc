@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/16 21:59:29 cjones Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 17:42:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
+COMMENT=		Client part of Amanda, a network backup system
 
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		gtar-1.12:../../archivers/gtar

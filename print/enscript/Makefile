@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/01/11 19:31:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 17:51:40 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=enscript/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.ngs.fi/mtr/genscript/
+COMMENT=		ASCII-to-PostScript filter
 
 DEPENDS+=		papersize-*:../../print/papersize
 

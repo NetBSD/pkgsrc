@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/12/20 04:02:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2001/02/17 17:51:26 wiz Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -13,6 +13,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
+COMMENT=		NetBSD-current's pkg_* tools
 
 # No special options needed for IPv6 support
 WRKSRC=			${WRKDIR}/pkg_install

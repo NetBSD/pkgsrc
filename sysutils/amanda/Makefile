@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/01/16 21:59:29 cjones Exp $
+# $NetBSD: Makefile,v 1.30 2001/02/17 17:42:10 wiz Exp $
 #
 
 DISTNAME=	amanda-2.4.2
@@ -8,6 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.amanda.org/
+COMMENT=	The "meta-package" for Amanda, a network backup system
 
 DEPENDS+=	amanda-client-2.4.2:../../sysutils/amanda-client
 DEPENDS+=	amanda-server-2.4.2:../../sysutils/amanda-server

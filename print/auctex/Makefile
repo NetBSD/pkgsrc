@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/02 07:49:25 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:51:37 wiz Exp $
 
 DISTNAME=		auctex-9.9p
 CATEGORIES=		print
@@ -6,6 +6,7 @@ MASTER_SITES=		ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://sunsite.auc.dk/auctex/
+COMMENT=		Enhanced LaTeX mode for Emacs
 
 DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:12 wiz Exp $
 #
 
 DISTNAME=	e2fsprogs-1.19
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 
 MAINTAINER=	hubert.feyrer@rz.uni-regensburg.de
 HOMEPAGE=	http://web.mit.edu/tytso/www/linux/e2fsprogs.html
+COMMENT=	Second extended file system (ext2fs) management programs
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-fsck

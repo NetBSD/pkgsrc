@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/14 15:01:59 is Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/17 17:42:16 wiz Exp $
 #
 
 DISTNAME=	mtools-3.9.7
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
+COMMENT=	FAT (MS-DOS, Atari) disk access tools
 
 NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:21 wiz Exp $
 #
 
 DISTNAME=		nut-0.44.2
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.exploits.org/nut/release/
 
 MAINTAINER=		collver@softhome.net
 HOMEPAGE=		http://www.exploits.org/nut/
+COMMENT=		Network UPS Tools
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"

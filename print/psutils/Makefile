@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/11 01:53:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 17:51:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Utilities for manipulating PostScript documents
 
 DEPENDS+=	papersize-*:../../print/papersize
 

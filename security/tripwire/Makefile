@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/09 13:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:50:14 wiz Exp $
 #
 
 DISTNAME=       tripwire-1.2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
+COMMENT=	File and directory integrity checker
 
 post-extract:
 	(cd ${WRKDIR}; ${PAX} -r < T1.2.tar)

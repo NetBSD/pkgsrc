@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/08 19:05:00 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/17 17:51:38 wiz Exp $
 #
 
 DISTNAME=		cups-${VERS}-2-source
@@ -15,6 +15,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cups.org/
+COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 

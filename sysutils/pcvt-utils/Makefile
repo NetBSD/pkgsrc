@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:16 wiz Exp $
 #
 
 DISTNAME=	netbsd-pcvt-20000611
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://cvsweb.netbsd.org/bsdweb.cgi/syssrc/sys/arch/i386/isa/pcvt/
+COMMENT=	Useful leftovers from pcvt: playvt and two font editors
 
 ONLY_FOR_PLATFORM= NetBSD-*-*
 WRKSRC=		${WRKDIR}/pcvt/Util

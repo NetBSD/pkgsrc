@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2000/09/18 18:46:27 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:49:54 wiz Exp $
 #
 
 DISTNAME=	nessus-libraries-${VERS}
 .include 	"../nessus/Makefile.common"
+
+COMMENT=	Libs required by the Nessus Network security scanner
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \

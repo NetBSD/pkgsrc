@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/09/09 19:40:22 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:50:05 wiz Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.skyport.net/crew/amk/writing/pct/
+COMMENT=	Python Cryptography Toolkit, version 1.0.0
 
 DEPENDS+=	python-1.5.2:../../lang/python
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/17 14:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:54 wiz Exp $
 #
 
 DISTNAME=	ReportLab_1_01
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.reportlab.com/
+COMMENT=	powerful PDF-generating toolkit for Python
 
 WRKSRC=		${WRKDIR}/reportlab/lib
 

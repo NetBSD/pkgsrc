@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/27 12:54:46 kei Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 17:42:16 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/06/16 16:50:06 dburr Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ps.ucl.ac.uk/~jcpearso/mkhybrid.html
+COMMENT=	create a hybrid ISO9660/JOLIET/HFS/Rock Ridge filesystem
 
 GNU_CONFIGURE=	yes
 CFLAGS+=	-Dunix

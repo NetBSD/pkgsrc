@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/01/05 01:40:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:42:14 wiz Exp $
 #
 
 DISTNAME=	kdf-0.5.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.edu.uni-klu.ac.at/~mkropfbe
+COMMENT=	Shows disk usage graphically and lets you mount/umount devices
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	kde-1.1.2:../../x11/kde

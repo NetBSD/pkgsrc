@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/09 17:50:03 abs Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:50:06 wiz Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.flame.org/netbsd-rc5/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.distributed.net/rc5/
+COMMENT=		Binaries for taking part in the rc5des challenge
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386
 

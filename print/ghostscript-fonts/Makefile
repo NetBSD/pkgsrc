@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 14:48:34 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:42 wiz Exp $
 
 DISTNAME=		ghostscript-fonts-6.0
 CATEGORIES=		print
@@ -8,6 +8,7 @@ DISTFILES=		${GS_FONTS_STD} ${GS_FONTS_OTHER}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://gs-fonts.sourceforge.net/
+COMMENT=		Postscript fonts for Aladdin Ghostscript
 
 #  Note: the following two are special files.  In the 5.50 directory
 #  on the FTP site, there are symlinks:

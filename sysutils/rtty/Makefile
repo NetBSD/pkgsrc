@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/12/25 23:37:11 bad Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 17:42:17 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=   ftp://ftp.vix.com/pub/vixie/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	multiuser "tip"/"cu" replacement with logging
 
 NO_WRKSUBDIR=   yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/10/20 02:17:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 17:51:36 wiz Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/3.x/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
+COMMENT=	View, distribute and print PDF documents
 
 IS_INTERACTIVE=	YES
 RESTRICTED=	"Original installer required to redistribute."

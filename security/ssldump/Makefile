@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/31 03:51:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:50:11 wiz Exp $
 #
 
 DISTNAME=	ssldump-0.9a2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.rtfm.com/ssldump/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.rtfm.com/ssldump/
+COMMENT=	SLv3/TLS network protocol analyzer
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-pcap-inc=/usr/include \

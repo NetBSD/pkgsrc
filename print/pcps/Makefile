@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/29 11:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:51:51 wiz Exp $
 #
 
 DISTNAME=	pcps840
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://garbo.uwasa.fi/unix/pcps/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
+COMMENT=	converts text files to PostScript(tm)
 
 MAKEFILE=	makefile
 ALL_TARGET=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/01/18 18:25:19 explorer Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:49:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:23 jfitz Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		packages@netbsd.org
-#HOMEPAGE=		
+COMMENT=		perl5 Blowfish implementation.
 
 CRYPTO=			YES
 

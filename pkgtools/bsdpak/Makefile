@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/09 00:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:51:24 wiz Exp $
 
 DISTNAME=	bsdpak-0.40
 CATEGORIES=	pkgtools
@@ -6,6 +6,7 @@ MASTER_SITES=	http://www.oddbox.org/projects/bsdpak/dists/
 
 MAINTAINER=	collver@softhome.net
 HOMEPAGE=	http://www.oddbox.org/projects/bsdpak/index.php
+COMMENT=	BSD package management utility
 
 USE_PERL5=	yes
 

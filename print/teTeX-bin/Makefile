@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/09/12 16:45:47 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/17 17:51:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tug.org/tetex/
+COMMENT=	TeX distribution for UNIX compatible systems - executables
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
