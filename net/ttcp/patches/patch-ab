@@ -1,5 +1,32 @@
-*** ttcp.c.orig	Sun Dec 14 18:24:05 1997
---- ttcp.c	Sun Dec 14 18:25:43 1997
+*** ttcp.c.orig	Thu Feb 27 13:30:23 1997
+--- ttcp.c	Tue Jan 27 13:51:55 1998
+***************
+*** 55,60 ****
+--- 55,61 ----
+  #include <arpa/inet.h>
+  #include <netdb.h>
+  #include <sys/time.h>		/* struct timeval */
++ #include <stdlib.h>
+  
+  #if defined(SYSV)
+  #include <sys/times.h>
+***************
+*** 263,269 ****
+  	if ( (buf = (char *)malloc(buflen+bufalign)) == (char *)NULL)
+  		err("malloc");
+  	if (bufalign != 0)
+! 		buf +=(bufalign - ((int)buf % bufalign) + bufoffset) % bufalign;
+  
+  	if (trans) {
+  	    fprintf(stdout,
+--- 264,270 ----
+  	if ( (buf = (char *)malloc(buflen+bufalign)) == (char *)NULL)
+  		err("malloc");
+  	if (bufalign != 0)
+! 		buf +=(bufalign - ((u_long)buf % bufalign) + bufoffset) % bufalign;
+  
+  	if (trans) {
+  	    fprintf(stdout,
 ***************
 *** 285,291 ****
   		err("socket");
@@ -9,7 +36,7 @@
   		err("bind");
   
   #if defined(SO_SNDBUF) || defined(SO_RCVBUF)
---- 285,291 ----
+--- 286,292 ----
   		err("socket");
   	mes("socket");
   
@@ -26,7 +53,7 @@
   			err("connect");
   		mes("connect");
   	    } else {
---- 326,332 ----
+--- 327,333 ----
   			mes("nodelay");
   		}
   #endif
@@ -47,7 +74,7 @@
   				&peerlen) < 0) {
   			err("getpeername");
   		  }
---- 348,358 ----
+--- 349,359 ----
   		}
   		fromlen = sizeof(frominet);
   		domain = AF_INET;
@@ -68,7 +95,7 @@
   		numCalls++;
   	} else {
   		if( b_flag )
---- 752,758 ----
+--- 753,759 ----
   	int len = sizeof(from);
   	register int cnt;
   	if( udp )  {
@@ -85,7 +112,7 @@
   		numCalls++;
   		if( cnt<0 && errno == ENOBUFS )  {
   			delay(18000);
---- 782,788 ----
+--- 783,789 ----
   	register int cnt;
   	if( udp )  {
   again:
