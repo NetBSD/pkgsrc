@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/30 04:51:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/20 16:19:12 taca Exp $
 #
 
 DISTNAME=	rexml_${VERSION}
@@ -15,12 +15,10 @@ COMMENT=	Pure Ruby XML parser based on Java Electric XML
 .include "../../lang/ruby/rubyversion.mk"
 
 .if ${RUBY_VER} == "16"
-RUBY_ICONV_DIR=	../../converters/ruby${RUBY_VER}-iconv
+DEPENDS+=	${RUBY_PKGPREFIX}-iconv>=${RUBY_REQD}:../../converters/ruby${RUBY_VER}-iconv
 .else
-RUBY_ICONV_DIR=	../../converters/ruby-iconv
+DEPENDS+=	${RUBY_PKGPREFIX}-iconv>=${RUBY_REQD}:../../converters/ruby-iconv
 .endif
-
-DEPENDS+= {${RUBY_PKGPREFIX}-iconv-[0-9]*,${RUBY_PKGPREFIX}-uconv-[0-9]*}:${RUBY_ICONV_DIR}
 
 VERSION=		3.1.2
 USE_RUBY_INSTALL=	yes
