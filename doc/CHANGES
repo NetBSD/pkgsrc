@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5260 2004/03/16 00:03:54 itojun Exp $
+$NetBSD: CHANGES,v 1.5261 2004/03/16 08:39:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1472,3 +1472,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jwhois to 3.2.2nb3 [kleink 2004-03-15]
 	Updated MesaDemos to 6.0nb1 [jlam 2004-03-15]
 	Updated nsd to 2.0.1 [itojun 2004-03-16]
+	Updated gnome-print to 0.36nb5 [tron 2004-03-16]
