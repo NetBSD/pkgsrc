@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.5 2004/10/07 02:01:38 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.6 2004/10/29 12:30:20 darcy Exp $
 #
 # makefile fragment for packages that use autoconf
 # AUTOCONF_REQD can be set to the minimum version required.
@@ -48,9 +48,9 @@ LIBTOOL_M4_OVERRIDE?=	libtool.m4 */libtool.m4 */*/libtool.m4
 do-libtool-m4-override:
 .for _pattern_ in ${LIBTOOL_M4_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_:S/libtool.m4$/configure/}; do		\
-		if [ -f "$$file" ]; then				\
-			libtool_m4=`${DIRNAME} $$file`/libtool.m4;	\
+	for cfile in ${_pattern_:S/libtool.m4$/configure/}; do		\
+		if [ -f "$$cfile" ]; then				\
+			libtool_m4=`${DIRNAME} $$cfile`/libtool.m4;	\
 			${LN} -sf ${PKGSRCDIR}/mk/gnu-config/libtool-1.4.m4 \
 				$$libtool_m4;				\
 		fi;							\
