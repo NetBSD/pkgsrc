@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:02:05 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/09/09 15:01:59 agc Exp $
 include/utf.h
 include/ure.h
 lib/libutf.a
+lib/libutf.so.2.10
 etc/langcoll.utf
 man/man3/utf.3.gz
 man/man3/ure.3.gz
