@@ -3,7 +3,8 @@
 # Date created:         30 Sep 1994
 # Whom:                 swallace
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:20 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/19 01:20:26 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.8 1997/04/01 23:08:24 swallace Exp
 #
 
 DISTNAME=       xcdplayer-2.2
@@ -15,5 +16,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	swallace@FreeBSD.org
 
 USE_IMAKE=      yes
+MAN1=		xcdplayer.1
 
 .include <bsd.port.mk>
