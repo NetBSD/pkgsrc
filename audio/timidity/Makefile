@@ -4,7 +4,7 @@
 # Date created:         17 Nov 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.7 1998/03/07 19:01:36 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 1998/03/11 18:13:22 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/07 22:08:13 ache Exp 
 #
 
@@ -19,6 +19,7 @@ MAINTAINER=     mycroft@NetBSD.ORG
 
 BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip \
 		wish8.0:${PORTSDIR}/x11/tk80
+RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
 LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
 
 NO_CDROM=       "Uses copyrighted patches"
