@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/12/03 08:06:27 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/31 20:53:53 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -69,7 +69,6 @@ post-install:
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
 	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 
-.include "../../devel/libgetopt/buildlink.mk"
 .include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
