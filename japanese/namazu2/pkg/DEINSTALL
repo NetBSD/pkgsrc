@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2001/01/27 02:29:24 taca Exp $
+#
+
+case "$2" in
+	DEINSTALL) cat <<EOF
+
+=============================================================
+Note that namazu configuration (@CONFDIR@/*), index
+files (@DATADIR@/*) are not removed in the
+de-installation process.  You should remove those by hand,
+if you no longer need them.
+=============================================================
+
+EOF
+	;;
+esac

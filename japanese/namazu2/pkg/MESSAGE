@@ -1,0 +1,5 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2001/01/27 02:29:25 taca Exp $
+
+*WARNING*: Index file format has changed since namazu 2.0.
+If you upgrade from namazu 1.X, you need to rebuild index
+files at least.

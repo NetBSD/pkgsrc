@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/01/27 02:29:25 taca Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	cat <<EOF
+
+=============================================================
+If you customize namazu configuration, copy
+@EXAMPLEDIR@/share/namazu/namazurc.default and
+@EXAMPLEDIR@/mknmzrc.default to @CONFDIR@,
+and edit them.
+=============================================================
+
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
