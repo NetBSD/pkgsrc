@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/05 22:19:45 wennmach Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/06 16:26:23 minskim Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -16,6 +16,7 @@ USE_X11=		yes
 
 CONFIGURE_ENV+=		PREFIX="${PREFIX}"
 CONFIGURE_ENV+=		LDLIBS="-lm ${LDFLAGS} -lX11"
+CONFIGURE_ENV+=		CAT="${CAT}" STRIP=strip INCLUDES="" MORELIBS=""
 
 SUBST_CLASSES+=		install
 SUBST_MESSAGE.install=	"Fixing install options."
