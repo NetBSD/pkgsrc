@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/20 19:46:46 wiz Exp $
+bin/unace
+share/doc/unace/readme.txt
+@dirrm share/doc/unace
