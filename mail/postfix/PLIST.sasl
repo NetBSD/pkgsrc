@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.sasl,v 1.1 2003/11/21 15:33:41 jlam Exp $
-share/examples/postfix/smtpd.conf

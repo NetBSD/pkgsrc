@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.17 2005/03/28 07:07:49 jlam Exp $
+# $NetBSD: options.mk,v 1.18 2005/03/28 08:53:07 jlam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb inet6 ldap mysql mysql4 pcre pgsql sasl tls
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -27,8 +27,6 @@ CCARGS+=	-DUSE_TLS
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 		-lssl -lcrypto
-PLIST_SRC+=	${PKGDIR}/PLIST.tls
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 .endif
 
 ###
@@ -114,8 +112,10 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl
 .  endif
-PLIST_SRC+=	${PKGDIR}/PLIST.sasl
+PLIST_SUBST+=	SASL=
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
+.else
+PLIST_SUBST+=	SASL="@comment "
 .endif
