@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/04/24 22:46:12 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2004/04/26 20:28:54 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.16-1.3.29
 PKGNAME=		ap-ssl-2.8.16
@@ -16,11 +16,11 @@ CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
 BUILDLINK_DEPENDS.apache=	apache>=1.3.29
 
-USE_BUILDLINK2=		YES
-USE_PKGINSTALL=		YES
-APACHE_MODULE=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+APACHE_MODULE=		yes
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 
 .include "../../mk/bsd.prefs.mk"
@@ -48,6 +48,9 @@ SUPPS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
+
+.include "../../security/openssl/buildlink3.mk"
+.include "../../www/apache/buildlink3.mk"
 
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
@@ -97,8 +100,5 @@ post-install:
 		${EGDIR}/ssl.key
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.PRM *.prm	\
 		${EGDIR}/ssl.prm
-
-.include "../../security/openssl/buildlink2.mk"
-.include "../../www/apache/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
