@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.597 2000/11/02 12:17:03 mjl Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.598 2000/11/09 14:02:46 itojun Exp $
 #
 # This file is in the public domain.
 #
@@ -201,8 +201,22 @@ DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 .endif
 
-.if defined(USE_LIBINTL) && !exists(/usr/include/libintl.h)
+# -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
+# (gettext.m4 does not add -lintl where it should, and fails to detect
+# if libintl.a is genuine GNU gettext or not).
+.if defined(USE_LIBINTL)
+.if exists(/usr/include/libintl.h)
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ENV+=	LIBS="-lintl"
+.endif
+.else
 DEPENDS+=	gettext-lib>=0.10.35nb1:../../devel/gettext-lib
+.if defined(GNU_CONFIGURE)
+CPPFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib -lintl"
+.endif
+.endif
 .endif
 
 .if defined(USE_LIBTOOL)
