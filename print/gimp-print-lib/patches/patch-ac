@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/06/30 20:57:13 jlam Exp $
+
+--- src/Makefile.in.orig	Fri Apr 26 20:56:31 2002
++++ src/Makefile.in
+@@ -192,7 +192,7 @@
+ AUTOMAKE_OPTIONS = 1.4 gnu
+ 
+ MAINT_CHARSET = latin1
+-NONGIMP_SUBDIRS = cups foomatic ghost testpattern
++NONGIMP_SUBDIRS = # cups foomatic ghost testpattern
+ SUBDIRS = printdef main escputil gimp $(NONGIMP_SUBDIRS)
+ 
+ MAINTAINERCLEANFILES = Makefile.in
