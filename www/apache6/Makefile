@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.89 2004/04/30 05:25:59 snj Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -28,7 +28,7 @@ COMMENT=		Apache HTTP (Web) server with IPv6 support
 CONFLICTS=		apache-[0-9]* apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
@@ -125,7 +125,7 @@ LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 # Use operating system's db1 functions (where available)
 USE_DB185=		# defined
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
 
 .if defined(BUILDLINK_PREFIX.db_DEFAULT)
@@ -190,7 +190,7 @@ post-install:
 	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
 	  ${PREFIX}/libexec/cgi-bin/test-cgi
 
-.include "../../devel/libmm/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../devel/libmm/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
