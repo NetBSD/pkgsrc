@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.3 2002/03/07 13:33:53 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2003/10/28 12:33:48 cube Exp $
 
---- include/platform.h.orig	Mon Feb 18 08:50:02 2002
+--- include/platform.h.orig	2003-06-10 08:57:04.000000000 +0200
 +++ include/platform.h
-@@ -28,7 +28,7 @@
-   variable is not set. Contributed by Todd Lewis.
+@@ -48,7 +48,7 @@ extern "C" {
+   Contributed by Todd Lewis.
  */
  
 -/* #define SUPPORT_GETPWNAM */
 +#define SUPPORT_GETPWNAM
  
+ 
  /* Enable/disable support for Big5 and Shift_JIS character encodings */
- #ifndef SUPPORT_ASIAN_ENCODINGS
+@@ -496,7 +496,7 @@ extern "C" {
+ #if !defined(HPUX_OS) && !defined(CYGWIN_OS) && !defined(MAC_OS_X) && !defined(BE_OS) && !defined(SOLARIS_OS) && !defined(BSD_BASED_OS) && !defined(OSF_OS) && !defined(IRIX_OS) && !defined(AIX_OS)
+ typedef unsigned int uint;
+ #endif
+-#if defined(HPUX_OS) || defined(CYGWIN_OS) || defined(MAC_OS) || defined(BSD_BASED_OS) || defined(_WIN32)
++#if defined(HPUX_OS) || defined(CYGWIN_OS) || defined(MAC_OS) || (defined(BSD_BASED_OS) && !defined(__NetBSD__)) || defined(_WIN32)
+ typedef unsigned long ulong;
+ #endif
+ 
