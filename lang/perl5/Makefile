@@ -3,7 +3,7 @@
 # Date created:		16 April 1995
 # Whom:			markm
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 20:21:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/14 17:54:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -15,9 +15,12 @@ MASTER_SITES=	ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 
 MAINTAINER=	markm@FreeBSD.ORG
 
+OPSYS!=		uname -s
+LOPSYS!= 	echo ${OPSYS}|tr [A-Z] [a-z]
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=		-sde -Dprefix=${PREFIX}
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
+			-Darchname=${MACHINE_ARCH}-${LOPSYS}
 
 MAN1= 	a2p.1 c2ph.1 h2ph.1 h2xs.1 perl.1 perlapio.1 perlbook.1 perlbot.1 \
 	perlbug.1 perlcall.1 perldata.1 perldebug.1 perldelta.1 perldiag.1 \
@@ -63,14 +66,11 @@ MAN3PREFIX=	${PREFIX}/lib/perl5
 test:
 	@(cd ${WRKSRC}; make test)
 
-OPSYS!= uname -s
-
 post-install:
 	@strip ${PREFIX}/bin/perl
 .if (${OPSYS} != "NetBSD")
 # agc - no suidperl???
 	@strip ${PREFIX}/bin/suidperl
 .endif
-	@strip ${PREFIX}/bin/perl
 
 .include <bsd.port.mk>
