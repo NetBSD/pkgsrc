@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mldonkey.sh,v 1.1.1.1 2003/03/31 15:55:36 jmmv Exp $
+# $NetBSD: mldonkey.sh,v 1.2 2003/05/19 12:52:59 wiz Exp $
 #
 # pkgsrc script to ease mldonkey's startup.
 #
@@ -13,4 +13,4 @@ fi
 echo "Starting mldonkey..."
 cd $HOME/mldonkey
 PATH=@PREFIX@/libexec/mldonkey:$PATH
-@PREFIX@/libexec/mldonkey/mldonkey > $HOME/mldonkey/log 2>&1
+@PREFIX@/libexec/mldonkey/mlnet > $HOME/mldonkey/log 2>&1
