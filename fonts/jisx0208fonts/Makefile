@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2000/05/27 14:18:27 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/14 13:29:49 itojun Exp $
 #
 
-DISTNAME=	jisx0208fonts-0.0
+DISTNAME=	jisx0208fonts-20000614
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=   ftp://ftp.iij.ad.jp/pub/X/X11R6.4/xc/fonts/bdf/misc/ \
 		ftp://ftp.eu.net/X11/R6.4/xc/fonts/bdf/misc/
-DISTFILES=	${ELISA10X8} ${ELISA8X8} ${KANAME12} ${KAPPA20} ${NAGA10}
+DISTFILES=	${ELISA10X8} ${ELISA8X8} ${KANAME12} ${KAPPA20} ${NAGA10} \
+		${K12X10}
 
 MAINTAINER=	itojun@itojun.org
 
@@ -35,6 +36,10 @@ EXTRACT_ONLY+=	Kappa20-0.3.tar.gz
 MASTER_SITES+=	http://hp.vector.co.jp/authors/VA013391/fonts/
 NAGA10=		knj10-1.1.tar.gz 6x12.tar.gz
 EXTRACT_ONLY+=	knj10-1.1.tar.gz 6x12.tar.gz
+
+MASTER_SITES+=	http://www.softclub.co.jp/~zoro/k12x10/
+K12X10=		k12x10bdf.tar.gz
+EXTRACT_ONLY+=	k12x10bdf.tar.gz
 
 FONTDIR=${PREFIX}/lib/X11/fonts/local
 

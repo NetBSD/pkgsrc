@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/09 15:20:48 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/14 13:29:52 itojun Exp $
 lib/X11/fonts/local/10x20b.pcf.gz
 lib/X11/fonts/local/10x20m.pcf.gz
 lib/X11/fonts/local/10x20rkb.pcf.gz
@@ -16,8 +16,10 @@ lib/X11/fonts/local/ipa-10x20b.pcf.gz
 lib/X11/fonts/local/ipa-10x20m.pcf.gz
 lib/X11/fonts/local/jpnhn4-iso.pcf.gz
 lib/X11/fonts/local/jpnhn4-jis.pcf.gz
+lib/X11/fonts/local/k12x10.pcf.gz
 lib/X11/fonts/local/k20b.pcf.gz
 lib/X11/fonts/local/k20m.pcf.gz
+lib/X11/fonts/local/k6x10.pcf.gz
 lib/X11/fonts/local/knj10.pcf.gz
 lib/X11/fonts/local/knj10B.pcf.gz
 lib/X11/fonts/local/knmhn12x.pcf.gz
