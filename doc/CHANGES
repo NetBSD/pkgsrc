@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5907 2004/05/11 17:46:47 recht Exp $
+$NetBSD: CHANGES,v 1.5908 2004/05/11 18:28:32 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cairo to 0.1.23 [recht 2004-05-11]
 	Updated libgdiplus to 0.5 [recht 2004-05-11]
 	Updated winelib to 0.2 [recht 2004-05-11]
+	Updated bmake to 20040511 [sjg 2004-05-11]
