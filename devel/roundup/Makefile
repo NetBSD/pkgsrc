@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/07/03 06:04:12 lukem Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:33:36 grant Exp $
 
 DISTNAME=	roundup-0.5.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundup/}
 
-MAINTAINER=	lukem@netbsd.org
+MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://roundup.sf.net/
 COMMENT=	Issue tracking system with command-line, web and email clients
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/13 13:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 21:33:09 grant Exp $
 #
 
 DISTNAME=	popt-1.7
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
 		ftp://ftp.iks-jena.de/pub/software/unix/misc/		\
 		ftp://sunsite.cnlab-switch.ch/mirror/rpm/dist/rpm-4.1.x/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Command line option parsing library
 
 BUILD_USES_MSGFMT=	yes

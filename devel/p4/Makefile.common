@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2003/03/29 12:40:36 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/07/17 21:32:03 grant Exp $
 #
 
 P4_VERS=	2002.1
 PKGNAME=	${DISTNAME}-${P4_VERS}
 WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
-MAINTAINER=	schmonz@netbsd.org
+MAINTAINER=	schmonz@NetBSD.org
 
 NO_PATCH=	# defined
 NO_CONFIGURE=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/31 19:06:57 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:31:35 grant Exp $
 #
 
 DISTNAME=	mm-1.2.2
@@ -6,7 +6,7 @@ PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ossp.org/pkg/lib/mm/
 
-MAINTAINER=	cjones@netbsd.org
+MAINTAINER=	cjones@NetBSD.org
 HOMEPAGE=	http://www.ossp.org/pkg/lib/mm/
 COMMENT=	Portable abstraction layer for shared memory
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/19 01:29:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:37:46 grant Exp $
 #
 
 DISTNAME=	watanabe-vf
@@ -6,7 +6,7 @@ PKGNAME=	watanabe-vfont-19930318
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://ftp.kuis.kyoto-u.ac.jp/TeX/watanabe-jfonts/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Watanabe-vector Japanese font
 
 USE_BUILDLINK2=	yes

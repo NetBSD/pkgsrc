@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:40:02 grant Exp $
 #
 
 DISTNAME=		PanoTools
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/PTLinux
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.path.unimelb.edu.au/~dersch/
 COMMENT=		view, create, edit, and remap panoramic images
 
