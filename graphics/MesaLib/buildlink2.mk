@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/03/13 07:01:01 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/03/24 18:07:08 jschauma Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -9,18 +9,16 @@ MESA_REQD?=			3.4.2
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
+_REQUIRE_BUILTIN_MESALIB?=	NO
+
 # XXX should be >= 3.4.2
 .if !empty(MESA_REQD:M5.[0-9]*)
-_NEED_MESALIB=		YES
-CPPFLAGS+=              -DGLX_GLXEXT_LEGACY
-CFLAGS+=		-DGLX_GLXEXT_LEGACY
+_IS_BUILTIN_MESALIB=	0
 .else
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
 #
-_REQUIRE_BUILTIN_MESALIB?=	NO
-
 _GL_GLX_H=		${X11BASE}/include/GL/glx.h
 _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
 .if exists(${_GL_GLX_H}) && exists(${_X11_TMPL})
@@ -28,6 +26,8 @@ _IS_BUILTIN_MESALIB!=	${EGREP} -c BuildGLXLibrary ${_X11_TMPL} || ${TRUE}
 .else
 _IS_BUILTIN_MESALIB=	0
 .endif
+
+.endif  # MESA_REQD
 
 .if !empty(_REQUIRE_BUILTIN_MESALIB:M[yY][eE][sS])
 _NEED_MESALIB=		NO
@@ -52,8 +52,6 @@ _NEED_MESALIB!= \
 	fi
 .  endif
 .endif
-
-.endif  # MESA_REQD
 
 .if ${_NEED_MESALIB} == "YES"
 BUILDLINK_PACKAGES+=		MesaLib
