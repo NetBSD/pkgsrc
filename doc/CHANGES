@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6054 2004/05/29 00:21:42 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6055 2004/05/29 01:05:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cyrus-imapd22 to 2.2.5 [recht 2004-05-28]
 	Updated gerbv to 0.16 [dmcmahill 2004-05-28]
 	Added xvidcap-1.1.3 [xtraeme 2004-05-29]
+	Added d2x-0.2.5 [xtraeme 2004-05-29]
