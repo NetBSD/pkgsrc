@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2225 2004/10/18 13:25:47 cube Exp $
+$NetBSD: TODO,v 1.2226 2004/10/18 18:51:39 seb Exp $
 
 Suggested new packages
 ======================
@@ -224,7 +224,6 @@ Suggested package updates
 	o crimsonfields-0.4.5
 	o crossfire-1.5.0
 	o cscope-15.5
-	o cssc-1.00
 	o cups-1.1.21
 	o cvs2cl-2.55
 	o cxref-1.5e
