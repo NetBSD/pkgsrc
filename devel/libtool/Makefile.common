@@ -1,11 +1,9 @@
-# $NetBSD: Makefile.common,v 1.40 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile.common,v 1.41 2004/02/05 20:14:06 skrll Exp $
 #
 
-DISTNAME=	libtool-ml-20010614
-PKGPFX=		${DISTNAME:C/ml-/1.4./}
-PKGREVISION=	19
+DISTNAME=	libtool-1.5.2
 CATEGORIES=	devel pkgtools
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
 MAINTAINER=	skrll@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
@@ -14,7 +12,6 @@ CONFLICTS=	glibtool-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=		${WRKDIR}/libtool-ml
 GNU_CONFIGURE=	# defined
 USE_BUILDLINK3=	# defined
 
@@ -22,4 +19,11 @@ DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 FILESDIR=	${.CURDIR}/../libtool/files
 PATCHDIR=	${.CURDIR}/../libtool/patches
 
+CONFIG_GUESS_OVERRIDE=	\
+	${WRKSRC}/config.guess \
+	${WRKSRC}/libltdl/config.guess
+
+CONFIG_SUB_OVERRIDE=	\
+	${WRKSRC}/config.sub \
+	${WRKSRC}/libltdl/config.sub
 AUTOMAKE_OVERRIDE=	NO
