@@ -2,14 +2,14 @@
 
 case "$2" in
   ""|POST-INSTALL) cat <<EOF
-=============================================================
+=================================================================
 
 In order to enable POP service, you should add the following line
 to your /etc/inetd.conf:
 
-    pop3 stream tcp nowait root ${PKG_PREFIX}/libexec/popper popper -s
+ pop3 stream tcp nowait root ${PKG_PREFIX}/libexec/qpopper qpopper -s
 
-=============================================================
+=================================================================
 EOF
   ;;
 esac
