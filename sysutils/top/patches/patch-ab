@@ -1,6 +1,6 @@
---- machine/m_netbsd13.c.orig	Thu Dec  4 15:33:27 1997
-+++ machine/m_netbsd13.c	Thu Dec  4 15:34:03 1997
-@@ -0,0 +1,841 @@
+--- /dev/null	Thu Feb 19 12:11:00 1998
++++ machine/m_netbsd13.c	Thu Feb 19 12:11:22 1998
+@@ -0,0 +1,872 @@
 +/*
 + * top - a top users display for Unix
 + *
@@ -11,6 +11,7 @@
 + * Based on the FreeBSD 2.0 version by Steven Wallace and Wolfram Schneider.
 + * NetBSD-1.0 port by Arne Helme. Process ordering by Luke Mewburn.
 + * NetBSD-1.3 port by Luke Mewburn, based on code by Matthew Green.
++ * NetBSD-1.4/UVM port by matthew green.
 + *
 + * This is the machine-dependent module for NetBSD-1.3 and later
 + * Works for:
@@ -25,10 +26,10 @@
 + *		Wolfram Schneider <wosch@cs.tu-berlin.de>
 + *		Arne Helme <arne@acm.org>
 + *		Luke Mewburn <lukem@netbsd.org>
-+ *		Matthew Green <mrg@eterna.com.au>
++ *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.3 1997/12/04 23:48:51 hubertf Exp $
++ * $Id: patch-ab,v 1.4 1998/02/20 06:55:27 hubertf Exp $
 + */
 +
 +#include <sys/types.h>
@@ -43,6 +44,10 @@
 +#include <sys/time.h>
 +
 +#include <vm/vm_swap.h>
++
++#if defined(UVM)
++#include <uvm/uvm_extern.h>
++#endif
 +
 +#include "os.h"
 +#include <err.h>
@@ -101,8 +106,10 @@
 +    { "_stathz" },		/* 3 */
 +#define X_AVENRUN	4
 +    { "_averunnable" },		/* 4 */
++#if !defined(UVM)
 +#define X_CNT		5
 +    { "_cnt" },
++#endif
 +
 +    { 0 }
 +};
@@ -266,7 +273,9 @@
 +    /* stash away certain offsets for later use */
 +    cp_time_offset = nlst[X_CP_TIME].n_value;
 +    avenrun_offset = nlst[X_AVENRUN].n_value;
++#if !defined(UVM)
 +    cnt_offset = nlst[X_CNT].n_value;
++#endif
 +
 +    /* this is used in calculating WCPU -- calculate it ahead of time */
 +    logcpu = log(loaddouble(ccpu));
@@ -317,7 +326,13 @@
 +    struct system_info *si;
 +{
 +    long    total;
++#if defined(UVM)
++    size_t  usize;
++    int     mib[2];
++    struct  uvmexp uvmexp;
++#else
 +    struct  vmmeter sum;
++#endif
 +    struct  swapent *sep;
 +    int     totalsize, size, totalinuse, inuse, ncounted;
 +    int     rnswap, nswap;
@@ -337,8 +352,23 @@
 +    /* convert cp_time counts to percentages */
 +    total = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
 +
++#if defined(UVM)
++    mib[0] = CTL_VM;
++    mib[1] = VM_UVMEXP;
++    usize = sizeof(uvmexp);
++    if (sysctl(mib, 2, &uvmexp, &usize, NULL, 0) < 0) {
++	fprintf(stderr, "top: sysctl vm.uvmexp failed: %s\n",
++	    strerror(errno));
++	quit(23);
++    }
++    
++    /* convert memory stats to Kbytes */
++    memory_stats[0] = pagetok(uvmexp.active);
++    memory_stats[1] = pagetok(uvmexp.inactive);
++    memory_stats[2] = pagetok(uvmexp.wired);
++    memory_stats[3] = pagetok(uvmexp.free);
++#else
 +    /* sum memory statistics */
-+
 +    (void) getkval(cnt_offset, (int *)(&sum), sizeof(sum), "_cnt");
 +
 +    /* convert memory stats to Kbytes */
@@ -346,6 +376,7 @@
 +    memory_stats[1] = pagetok(sum.v_inactive_count);
 +    memory_stats[2] = pagetok(sum.v_wire_count);
 +    memory_stats[3] = pagetok(sum.v_free_count);
++#endif
 +
 +    memory_stats[4] = memory_stats[5] = 0;
 +
