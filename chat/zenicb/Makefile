@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/11/27 18:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/02 22:01:36 jwise Exp $
 
 DISTNAME=		zenicb-19981202
+PKGNAME=${DISTNAME}
 PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_LOCAL}
