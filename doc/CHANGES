@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6490 2004/07/07 19:41:10 schmonz Exp $
+$NetBSD: CHANGES,v 1.6491 2004/07/07 20:56:02 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rss2email to 2.511 [schmonz 2004-07-07]
 	Updated pulsar to 0.1.1nb1 [schmonz 2004-07-07]
 	Updated jam to 2.5 [schmonz 2004-07-07]
+	Updated nmap to 3.55 [salo 2004-07-07]
