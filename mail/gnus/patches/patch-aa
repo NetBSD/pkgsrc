@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/05/31 13:56:41 uebayasi Exp $
+
+--- texi/Makefile.in.old	2003-02-07 15:27:59.000000000 +0100
++++ texi/Makefile.in	2003-05-21 12:42:51.000000000 +0200
+@@ -18,7 +18,7 @@
+ INSTALL_DATA = @INSTALL_DATA@
+ SHELL = /bin/sh
+ PAPERTYPE=a4
+-INFO_DEPS=gnus message emacs-mime sieve pgg
++INFO_DEPS=ognus message sieve pgg
+ 
+ all: $(INFO_DEPS)
+ 
