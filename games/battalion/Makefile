@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/01/30 23:18:47 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/05 17:23:01 mycroft Exp $
 #
 
 DISTNAME=	battalion
@@ -20,7 +20,8 @@ USE_X11BASE=	yes
 
 do-install:
 	${INSTALL} -c -s -o root -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin
-	@${EXTRACT_CMD} -xzmf ${DISTDIR}/battalionSUN4.tar.gz -C ${WRKDIR}
+	cd ${WRKDIR} && \
+	    ${GZCAT} ${DISTDIR}/battalionSUN4.tar.gz | ${GTAR} xmf -
 	${MKDIR} ${PREFIX}/share/battalion/HELP
 	${MKDIR} ${PREFIX}/share/battalion/battalion.data/DATA
 	${MKDIR} ${PREFIX}/share/battalion/battalion.data/MUSIC
