@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/19 23:11:19 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -13,9 +13,11 @@ BUILDLINK_PKGSRCDIR.zlib?=	../../devel/zlib
 
 BUILDLINK_CHECK_BUILTIN.zlib?=	NO
 
+_ZLIB_H=	/usr/include/zlib.h
+
 .if !defined(BUILDLINK_IS_BUILTIN.zlib)
 BUILDLINK_IS_BUILTIN.zlib=	NO
-.  if exists(/usr/include/zlib.h)
+.  if exists(${_ZLIB_H})
 BUILDLINK_IS_BUILTIN.zlib=	YES
 .  endif
 .endif
@@ -34,30 +36,57 @@ BUILDLINK_USE_BUILTIN.zlib=	NO
 .  else
 BUILDLINK_USE_BUILTIN.zlib=	YES
 #
-# The listed platforms have a broken (for the purposes of pkgsrc) version
-# of this package.
+# Create an appropriate name for the built-in package distributed
+# with the system.  This package name can be used to check against
+# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc
+# version or if the built-in one is sufficient.
 #
-_INCOMPAT_ZLIB=		SunOS-*-*
-_INCOMPAT_ZLIB+=	IRIX-*-*
-_INCOMPAT_ZLIB+=	Darwin-*-*
-_INCOMPAT_ZLIB+=	Linux-*-*
+_ZLIB_VERSION!=								\
+	${AWK} '/\#define[ 	]*ZLIB_VERSION/ {			\
+			vers = $$3;					\
+			gsub("\"", "", vers);				\
+			print vers;					\
+		}							\
+	' ${_ZLIB_H}
+_ZLIB_PKG=	zlib-${_ZLIB_VERSION}
 #
-# Some NetBSD versions shipped with zlib versions lower than 1.1.3.
+# If the built-in zlib is 1.1.4, then check whether it has the security
+# fix for CAN-2003-0107, which was a buffer overflow in the gzprintf
+# function.  If it does, then treat it as the equivalent of zlib-1.1.4nb1.
 #
-_INCOMPAT_ZLIB+=	NetBSD-0.*-* NetBSD-1.[012]*-*
-_INCOMPAT_ZLIB+=	NetBSD-1.3-* NetBSD-1.3.*-* NetBSD-1.3[A-H]-*
+_HAVE_CAN_2003_0107_FIX=	NetBSD-1.3[I-Z]*-* NetBSD-1.[456]*-*
+_HAVE_CAN_2003_0107_FIX+=	NetBSD-[2-9]*-* NetBSD-1[0-9]*-*
+#
+# XXX These patterns for {Free,Open}BSD are too permissive, but I'm not
+# XXX sure which versions of those OSes provide secure versions of
+# XXX zlib-1.1.4.
+#
+_HAVE_CAN_2003_0107_FIX+=	FreeBSD-*-* OpenBSD-*-*
+.    if ${_ZLIB_VERSION} == "1.1.4"
+.      for _pattern_ in ${_HAVE_CAN_2003_0107_FIX}
+.        if !empty(MACHINE_PLATFORM:M${_pattern_})
+_ZLIB_PKG=	zlib-1.1.4nb1
+.        endif
+.      endfor
+.    endif
 
-INCOMPAT_ZLIB?=		# empty
-.    for _pattern_ in ${_INCOMPAT_ZLIB} ${INCOMPAT_ZLIB}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.      endif
-.    endfor
+_ZLIB_DEPENDS=	${BUILDLINK_DEPENDS.zlib}
+BUILDLINK_USE_BUILTIN.zlib!=	\
+	if ${PKG_ADMIN} pmatch '${_ZLIB_DEPENDS}' ${_ZLIB_PKG}; then	\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib="${BUILDLINK_USE_BUILTIN.zlib}"
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.zlib:M[nN][oO])
+#
+# If we depend on the package, depend on the latest version with a library
+# major number bump.
+#
+BUILDLINK_DEPENDS.zlib=	zlib>=1.2.1
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	zlib
 .  endif
