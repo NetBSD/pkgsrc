@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/22 01:18:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/22 01:31:58 minskim Exp $
 #
 
 DISTNAME=       Text-Reform-1.11
@@ -11,7 +11,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://search.cpan.org/search?module=Text::Reform
 COMMENT=	Manual text wrapping and reformatting
 
-PKG_INSTALLATION_TYPES=	overwrite pkgsrc
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Reform/.packlist
