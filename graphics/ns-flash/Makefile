@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 21:41:57 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/08/27 21:22:51 heinz Exp $
 
 DISTNAME=		flash_${DISTUNAME}
 WRKSRC=			${WRKDIR}/${WRKNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.flash.com/
 COMMENT=		MacroMedia Flash Player Netscape plugin
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
+NOT_FOR_PLATFORM=	SunOS-*-i386
 
 DIST_SUBDIR=		flash/${FLASH_VERS}
 
@@ -56,5 +57,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ShockwaveFlash.class ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
+.if ${OPSYS} != "SunOS"
 .include "../../emulators/suse_linux/Makefile.application"
+.endif
 .include "../../mk/bsd.pkg.mk"
