@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/31 03:47:27 jwise Exp $
---- p2clib.c.orig	Fri Jan 29 15:12:01 1999
-+++ p2clib.c	Fri Jan 29 15:11:31 1999
-@@ -8,6 +8,7 @@
-  */
+$NetBSD: patch-ab,v 1.2 1999/12/08 09:47:21 rh Exp $
+
+--- p2clib.c.orig	Wed Apr 24 22:30:49 1991
++++ p2clib.c	Wed Dec  8 10:47:00 1999
+@@ -9,6 +9,7 @@
+ 
  
  
 +#include <limits.h>
