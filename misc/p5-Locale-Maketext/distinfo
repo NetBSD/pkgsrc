@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/13 08:32:17 mjl Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:57 agc Exp $
 
 SHA1 (Locale-Maketext-1.08.tar.gz) = fe2f78a6c4a1213e0dd3287108c6ae19bd3b495b
+RMD160 (Locale-Maketext-1.08.tar.gz) = 997cad142e5604ba228ec1315cb09aeadb3ff272
 Size (Locale-Maketext-1.08.tar.gz) = 46992 bytes
