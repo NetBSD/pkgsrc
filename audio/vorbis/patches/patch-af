@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2000/08/18 14:48:37 itojun Exp $
+--- configure-	Fri Aug 18 23:41:46 2000
++++ configure	Fri Aug 18 23:42:46 2000
+@@ -1030,3 +1030,3 @@
+ #not everyone uses libm (eg, BeOS)
+-#AC_CHECK_LIB(m, cos, LIBS="-lm"; AC_DEFINE(HAVE_LIBM), LIBS="")
++#AC_CHECK_LIB(m, cos, LIBS="$LIBS -lm"; AC_DEFINE(HAVE_LIBM))
+ # We no longer use config.h
+@@ -1067,6 +1067,5 @@
+   echo "$ac_t""yes" 1>&6
+-  LIBS="-lm"
++  LIBS="$LIBS -lm"
+ else
+   echo "$ac_t""no" 1>&6
+-LIBS=""
+ fi
