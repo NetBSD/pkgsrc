@@ -1,0 +1,11 @@
+--- configure.orig	Wed Apr 21 13:47:39 2004
++++ configure	Wed Apr 21 13:47:59 2004
+@@ -3704,7 +3704,7 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+-	      if test "$MSGFMT" != "no"; then
++	      if true; then
+ 		for ac_func in dcgettext
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
