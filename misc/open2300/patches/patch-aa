@@ -1,0 +1,77 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/10 08:19:46 martin Exp $
+
+--- Makefile.orig	2004-04-23 17:35:30.000000000 +0200
++++ Makefile	2004-11-04 09:28:14.000000000 +0100
+@@ -4,7 +4,7 @@
+ # Default locations are 
+ # 1. Path to config file including filename given as parameter
+ # 2. ./open2300.conf
+-# 3. /usr/local/etc/open2300.conf
++# 3. ${SYSCONFDIR}/open2300.conf
+ # 4. /etc/open2300.conf
+ #
+ # This makefile is made for Linux.
+@@ -12,7 +12,7 @@
+ #
+ # You may want to adjust the 3 directories below
+ 
+-prefix = /usr/local
++prefix = ${PREFIX}
+ exec_prefix = ${prefix}
+ bindir = ${exec_prefix}/bin
+ 
+@@ -37,7 +37,7 @@
+ 
+ VERSION = 1.6
+ 
+-CFLAGS = -Wall -O3 -DVERSION=\"$(VERSION)\"
++CFLAGS += -DVERSION=\"$(VERSION)\" -DSYSCONFDIR=\"$(PKG_SYSCONFDIR)\" -I /usr/pkg/include/mysql
+ CC_LDFLAGS = -lm
+ CC_WINFLAG = 
+ # For Windows - comment the two line above and un-comment the two lines below.
+@@ -80,7 +80,7 @@
+ 	$(CC) $(CFLAGS) -o $@ $(XMLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
+ 
+ mysql2300: $(MYSQLOBJ)
+-	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/mysql -L/usr/lib/mysql -lmysqlclient
++	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -L/usr/pkg/lib/mysql -Wl,-R/usr/pkg/lib/mysql -lmysqlclient
+ 	
+ light2300: $(LIGHTOBJ)
+ 	$(CC) $(CFLAGS) -o $@ $(LIGHTOBJ) $(CC_LDFLAGS)
+@@ -92,19 +92,23 @@
+ 	$(CC) $(CFLAGS) -o $@ $(MINMAXOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
+ 
+ install:
+-	mkdir -p $(bindir)
+-	$(INSTALL) open2300 $(bindir)
+-	$(INSTALL) dump2300 $(bindir)
+-	$(INSTALL) log2300 $(bindir)
+-	$(INSTALL) fetch2300 $(bindir)
+-	$(INSTALL) wu2300 $(bindir)
+-	$(INSTALL) cw2300 $(bindir)
+-	$(INSTALL) histlog2300 $(bindir)
+-	$(INSTALL) xml2300 $(bindir)
+-	$(INSTALL) light2300 $(bindir)
+-	$(INSTALL) interval2300 $(bindir)
+-	$(INSTALL) minmax2300 $(bindir)
+-	
++	${BSD_INSTALL_PROGRAM} open2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} dump2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} log2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} fetch2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} wu2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} cw2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} histlog2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} xml2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} light2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} interval2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} minmax2300 $(bindir)
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/open2300
++	${BSD_INSTALL_DATA} open2300-dist.conf ${PREFIX}/share/examples/open2300/open2300.conf
++
++install-mysql:
++	${BSD_INSTALL_PROGRAM} mysql2300 $(bindir)
++
+ uninstall:
+ 	rm -f $(bindir)/open2300 $(bindir)/dump2300 $(bindir)/log2300 $(bindir)/fetch2300 $(bindir)/wu2300 $(bindir)/cw2300 $(bindir)/xml2300 $(bindir)/light2300 $(bindir)/interval2300 $(bindir)/minmax2300
+ 

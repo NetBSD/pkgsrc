@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/10 08:19:46 martin Exp $
+
+SHA1 (open2300-1.6.tar.gz) = e6483c57126b85e3a8189d023cffe88902e928ed
+Size (open2300-1.6.tar.gz) = 327045 bytes
+SHA1 (patch-aa) = cc3948b297357939a23b55ea6dcd4505d5381d15
+SHA1 (patch-ab) = 0db92f0ab78ed6b5cd949123cee26b01e7d10ba8
+SHA1 (patch-ac) = 5ddd6e4c0ce2df718c4fcb7efed1d9553c415684
