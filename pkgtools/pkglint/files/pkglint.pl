@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.16 1999/11/26 03:30:39 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.17 1999/12/07 21:33:57 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -115,6 +115,8 @@ $sharedocused = 0;
 %plistmangz = ();
 %plistman = ();
 %manlangs = ();
+$seen_PLIST_SRC = 0;
+$seen_NO_PKG_REGISTER = 0;
 
 %predefined = ();
 foreach $i (split("\n", <<EOF)) {
@@ -213,6 +215,12 @@ foreach $i (@checker) {
 				&perror("Cannot open the file $i\n");
 		}
 	}
+}
+if (! -f "$portdir/pkg/PLIST"
+    and ! -f "$portdir/pkg/PLIST-mi"
+    and ! $seen_PLIST_SRC
+    and ! $seen_NO_PKG_REGISTER ) {
+	&perror("WARN: no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
 }
 if ($committer) {
 	if (scalar(@_ = <$portdir/work*/*>) || -d "$portdir/work*") {
@@ -649,6 +657,14 @@ sub checkmakefile {
 		&perror("WARN: use \".if !defined(NOPORTDOCS)\" to wrap ".
 			"installation of files into $localbase/share/doc.")
 	            if $osname ne "NetBSD"; # how do you get this out of PLIST?
+	}
+	print "OK: checking for PLIST_SRC.\n" if ($verbose);
+	if ($whole =~ /\nPLIST_SRC/) {
+		$seen_PLIST_SRC=1;
+	}
+	print "OK: checking for NO_PKG_REGISTER.\n" if ($verbose);
+	if ($whole =~ /\nNO_PKG_REGISTER/) {
+		$seen_NO_PKG_REGISTER=1;
 	}
 
 	#
