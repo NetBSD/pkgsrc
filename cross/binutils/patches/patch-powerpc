@@ -1,0 +1,13 @@
+$NetBSD: patch-powerpc,v 1.1 1999/01/06 01:20:27 tv Exp $
+
+--- ./bfd/config.bfd.orig	Fri May  1 11:48:05 1998
++++ ./bfd/config.bfd	Mon Dec 28 17:43:18 1998
+@@ -467,7 +471,7 @@
+   powerpc-*-*bsd* | powerpc-*-elf* | powerpc-*-sysv4* | powerpc-*-eabi* | \
+   powerpc-*-solaris2* | powerpc-*-linux-gnu* | powerpc-*-rtems*)
+     targ_defvec=bfd_elf32_powerpc_vec
+-    targ_selvecs="rs6000coff_vec bfd_elf32_powerpcle_vec bfd_powerpcle_pei_vec bfd_powerpc_pei_vec bfd_powerpcle_pe_vec bfd_powerpc_pe_vec ppcboot_vec"
++    targ_selvecs="rs6000coff_vec bfd_elf32_powerpcle_vec bfd_powerpcle_pei_vec bfd_powerpc_pei_vec bfd_powerpcle_pe_vec bfd_powerpc_pe_vec ppcboot_vec pmac_xcoff_vec"
+     ;;
+   powerpc-*-macos* | powerpc-*-mpw*)
+     targ_defvec=pmac_xcoff_vec
