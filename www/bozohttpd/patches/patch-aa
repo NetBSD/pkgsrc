@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.6 2002/10/26 20:01:46 wiz Exp $
+
+--- bozohttpd.c.orig	Fri Sep 13 11:02:14 2002
++++ bozohttpd.c
+@@ -1577,13 +1577,26 @@ fix_url_percent(request)
+ 	http_req *request;
+ {
+ 	char	*s, *t, buf[3];
++	char	*url, *end;	/* if end is not-zero, we don't translate beyond that */
++
++	url = request->url;
++	if (strncmp(url + 1, CGIBIN_PREFIX, CGIBIN_PREFIX_LEN) == 0) {
++		end = strchr(request->url + CGIBIN_PREFIX_LEN, '?');
++	} else
++		end = 0;
+ 
+ 	/* fast forward to the first % */
+-	if ((s = strchr(request->url, '%')) == NULL)
++	if ((s = strchr(url, '%')) == NULL)
+ 		return;
+ 
+ 	t = s;
+ 	do {
++		if (end && s >= end) {
++			debug((DEBUG_OBESE, "fu_%%: past end, filling out.."));
++			while (*s)
++				*t++ = *s++;
++			break;
++		}
+ 		debug((DEBUG_OBESE, "fu_%%: got s == %%, s[1]s[2] == %c%c",
+ 		    s[1], s[2]));
+ 		if (s[1] == '\0' || s[2] == '\0')
