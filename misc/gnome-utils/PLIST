@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:50 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/17 13:46:49 rh Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -905,3 +905,5 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gcalc
 @dirrm share/gcolorsel/glade
 @dirrm share/gcolorsel
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
