@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.721 2003/07/14 19:04:41 fredb Exp $
+$NetBSD: TODO,v 1.722 2003/07/14 21:22:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -134,9 +134,10 @@ Suggested package updates
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
 	o guile-1.6.4
+	o hatari-0.40
 	o host-20030604
 	o hp2xx-3.4.4
-	o hpijs-1.4
+	o hpijs-1.4.1
 	o icepref-2.2
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
