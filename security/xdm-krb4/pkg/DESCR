@@ -1,0 +1,7 @@
+This is xdm-krb4-3.3.6.0, a Kerberos IV and AFS-aware version of xdm.
+It is a downsized version of the xdm that comes with XFree86 version 3.3.6,
+with Kerberos IV functionality added.  
+
+xdm-krb4 tries to authenticate to a Kerberos IV server and get Kerberos
+tickets. If AFS/arla is installed and running, it additionaly gets an
+AFS token.
