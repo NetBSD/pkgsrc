@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/25 03:08:47 grant Exp $
 
 DISTNAME=	libsigc++-1.2.5
 CATEGORIES=	devel
@@ -8,18 +8,16 @@ MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 
-BUILD_DEPENDS=		m4>=1.4:../../devel/m4
-
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		m4 make
 USE_GCC_SHLIB=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/sigc++-1.2.pc.in
 
-CONFIGURE_ENV+=		ac_cv_prog_M4=${LOCALBASE}/bin/gm4
+CONFIGURE_ENV+=		ac_cv_prog_M4=${M4}
 
 .include "../../mk/pthread.buildlink2.mk"
 
