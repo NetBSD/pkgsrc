@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/05/22 22:26:01 skrll Exp $
+# $NetBSD: Makefile,v 1.37 2000/07/28 15:56:08 martin Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -8,6 +8,7 @@
     SUBDIR += compat13
     SUBDIR += darcnes
     SUBDIR += doscmd
+    SUBDIR += fmsx
     SUBDIR += freebsd_lib
     SUBDIR += ia64sim
     SUBDIR += linux-locale
