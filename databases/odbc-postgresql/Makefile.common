@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/10/19 03:51:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/10/20 04:19:17 jlam Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -17,6 +17,9 @@ HOMEPAGE=		http://odbc.postgresql.org/
 
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 CONFLICTS+=		unixodbc-postgresql-[0-9]* iodbc-postgresql-[0-9]*
+
+DISTINFO_FILE?=		${.CURDIR}/../odbc-postgresql/distinfo
+PATCHDIR?=		${.CURDIR}/../odbc-postgresql/patches
 
 # Version numbering scheme:
 #
