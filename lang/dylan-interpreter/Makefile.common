@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/01/16 11:52:45 agc Exp $
+# $NetBSD: Makefile.common,v 1.4 2002/01/21 11:20:40 agc Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -25,6 +25,7 @@ DYLAN_VERSION=		2.3.6
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
 
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 USE_PERL5=		yes
 
 USE_LIBTOOL=		yes
