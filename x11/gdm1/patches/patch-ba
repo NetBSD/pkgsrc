@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1.1.1 2004/01/20 13:33:14 xtraeme Exp $
+
+--- daemon/gdm.c.orig	Tue Mar 20 02:55:01 2001
++++ daemon/gdm.c	Tue Mar 20 02:55:20 2001
+@@ -27,6 +27,7 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <syslog.h>
++#include <locale.h>
+ 
+ #include "gdm.h"
+ #include "misc.h"
