@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/09/10 16:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2002/10/07 11:23:29 wiz Exp $
 
 DISTNAME=	galeon-1.2.5
 PKGREVISION=	1
@@ -12,9 +12,9 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
-DEPENDS+=	mozilla-1.1nb1:../../www/mozilla
 
 USE_X11BASE=	yes
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
@@ -26,16 +26,17 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 # XXX to build against mozilla 1.1
 CONFIGURE_ARGS+= --with-mozilla-snapshot=trunk
 
-.include	"../../x11/gnome-libs/buildlink.mk"
-.include	"../../devel/libglade/buildlink.mk"
-.include	"../../sysutils/gnome-vfs/buildlink.mk"
-.include	"../../devel/GConf/buildlink.mk"
-.include	"../../devel/oaf/buildlink.mk"
-.include	"../../textproc/libxml/buildlink.mk"
-.include	"../../textproc/scrollkeeper/buildlink.mk"
-.include	"../../converters/libiconv/buildlink.mk"
-.include	"../../graphics/gdk-pixbuf-gnome/buildlink.mk"
-.include	"../../devel/gettext-lib/buildlink.mk"
+.include	"../../converters/libiconv/buildlink2.mk"
+.include	"../../devel/GConf/buildlink2.mk"
+.include	"../../devel/gettext-lib/buildlink2.mk"
+.include	"../../devel/libglade/buildlink2.mk"
+.include	"../../devel/oaf/buildlink2.mk"
+.include	"../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
+.include	"../../textproc/libxml/buildlink2.mk"
+.include	"../../textproc/scrollkeeper/buildlink2.mk"
+.include	"../../sysutils/gnome-vfs/buildlink2.mk"
+.include	"../../www/mozilla/buildlink2.mk"
+.include	"../../x11/gnome-libs/buildlink2.mk"
 
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
