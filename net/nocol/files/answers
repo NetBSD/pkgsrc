@@ -1,0 +1,11 @@
+@prefix@    
+@prefix@/man/mann
+n
+@FQDN@
+/usr/bin/mail
+root@@FQDN@
+root@@FQDN@
+cc
+-O
+yacc
+@prefix@/bin/perl

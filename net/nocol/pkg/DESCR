@@ -1,0 +1,103 @@
+This document is taken from:
+
+Header: /home/vikas/src/nocol/RCS/README,v 4.0 1994/11/29 20:21:33 vikas Exp vikas
+
+README for NOCOL/NetConsole v4.2
+===========================
+
+NOCOL/NetConsole (Network Operation Center On-Line) is a network monitoring 
+package that runs on Unix platforms and is capable of monitoring network and
+system variables such as ICMP or RPC reachability, RMON variables,
+nameservers, ethernet load, port reachability, host performance, SNMP traps,
+modem line usage, appletalk & novell routes/services, BGP peers, syslog
+files, etc. The software is extensible and new monitors can be added easily.
+
+The software consists of a number of individual, standalone monitoring agents
+that poll the various network and system parameters and put it into a common
+data format.  All the monitors have a common display and postprocessing
+interface (such as logging, notification, etc.). The design allows running
+just one set of monitoring agents and *any* number of display agents, and all
+of the displays see the same consistent set of data. Additionally, each event
+is assigned a severity (determined by comparing against user defined threshold
+values) which is gradually escalated, thus preventing false alarms and a
+customized priority notification based on the severity. There are four
+severity levels ranging from Critical thru Info, and each event typically
+steps through each one of these severities until it reaches its maximum
+allowed level.
+
+The display uses UNIX 'curses' screen management and can thus run on a large
+variety of terminals. The user running the display can select the minimum
+display severity- only events above this minimum severity level are displayed.
+
+A Web interface has also been added which uses the HTML REFRESH meta tag for
+displaying the nocol events.
+
+To date, the various monitoring agents developed are:
+
+	- IP ICMP monitor (using IP 'multiping')
+	- OSI reachability monitor (using OSI ping)
+	- RPC portmapper monitor (using 'rpcping')
+	- Ethernet load (bandwidth & pps)
+	- TCP port monitor
+	- Unix host performance (disks, memory, swap, load, nfs, collisions)
+	- SNMP variables monitor (RMON, Cisco router, terminal server)
+	- TCP data throughput monitor
+	- Nameserver (named)
+	- SNMP traps
+	- Syslog logfile monitor (for specified patterns)
+	- NTP stratum of hosts (Network Time Protocol)
+	- UPS (APC) battery level monitor
+	- Usage of terminal server modem lines (busy lines)
+	- Appletalk route monitor (for cisco routers)
+	- Novell service monitor
+	- BGP peer status
+	
+A PERL interface is available for developing additional monitors in the PERL
+programming language (it is fairly easy to add additional monitors to the
+package).
+
+The logging daemon can be interfaced with a paging program such as
+'sendpage' (ftp://ftp.net.ohio-state.edu/pub/pagers/).
+
+New features in v4.2 are:
+------------------------
+
+ - Unix syslog file monitor (match any specified regular expression)
+ - NTP (Network Time Protocol) stratum monitor
+ - 'mailmon' merged in with 'hostmon-client'
+ - 'nsmon' can monitor multiple domains
+ - 'apcmon' for monitoring APC Smart UPS's
+ - 'ciscomon' for monitoring Cisco router specific parameters
+ - Web interface for displaying events (www/webnocol)
+
+New features in v4.0 were:
+
+ - Unix host performance monitor (distributed client)
+ - SNMP variables monitor
+ - Ethernet load and packet rate monitor.
+ - 'rpcpingmon' for checking status of RPC on hosts.
+ - 'logstats' for generating reports from the log file.
+ - Major rewrite of large portions of the code.
+
+New features in v3.0 were:
+
+ - Logging facility (similar to syslogd)
+ - Perl interface
+ - TCP port monitor
+ - Perl appletalk, Novell, BGP, modem line monitors.
+
+
+Has been compiled on Solaris2.2, SunOS4.1.1, Ultrix4.2, BSDI/386. Linux.
+
+The software is freely available on the Internet from:
+	http://www.netplex-tech.com/software/nocol   or
+	ftp://ftp.navya.com/pub/vikas/nocol.tar.gz 
+
+Please send a message to 'nocol-users-request@navya.com' to be added to the
+'nocol-users' mailing list for updates and bug fixes. Mail comments and
+bugs to 'vikas@navya.com'.
+
+	Vikas Aggarwal
+	(vikas@navya.com)
+	Jan 1997
+	--------
