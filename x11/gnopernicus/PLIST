@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/30 17:56:40 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/17 22:40:30 jmmv Exp $
 bin/brlmonitor
 bin/gnopernicus
 bin/srcore
@@ -51,6 +51,10 @@ lib/gnopernicus-1.0/libsrutil.so.1
 lib/gnopernicus-1.0/libsrutil.so.1.0
 lib/pkgconfig/gnopernicus-1.0.pc
 share/applications/gnopernicus.desktop
+share/examples/gnopernicus/translation_tables/de.a2b
+share/examples/gnopernicus/translation_tables/en_US.a2b
+share/examples/gnopernicus/translation_tables/es.a2b
+share/examples/gnopernicus/translation_tables/sv.a2b
 share/gconf/schemas/brlmonitor.schemas
 share/gconf/schemas/gnopernicus.schemas
 share/gconf/schemas/remote.schemas
@@ -118,6 +122,7 @@ share/omf/gnopernicus/brlmonitor-C.omf
 share/omf/gnopernicus/gnopernicus-C.omf
 share/pixmaps/gnopernicus.png
 @dirrm share/omf/gnopernicus
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnopernicus/glade/gnopi_files/User_Properties
 @dirrm share/gnopernicus/glade/gnopi_files/Speech_Settings
 @dirrm share/gnopernicus/glade/gnopi_files/Screen_Review
@@ -131,7 +136,18 @@ share/pixmaps/gnopernicus.png
 @dirrm share/gnopernicus/glade/gnopi_files/Braille_Settings
 @dirrm share/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings
 @dirrm share/gnopernicus/glade/gnopi_files
+@dirrm share/gnopernicus/glade
 @dirrm share/gnopernicus/fonts
+@dirrm share/gnopernicus
+@dirrm share/gnome/help/gnopernicus/C
+@dirrm share/gnome/help/gnopernicus
+@dirrm share/gnome/help/brlmonitor/C
+@dirrm share/gnome/help/brlmonitor
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/examples/gnopernicus/translation_tables
+@dirrm share/examples/gnopernicus
+@comment in gnome2-dirs: @dirrm share/applications
 @dirrm lib/gnopernicus-1.0
 @dirrm include/gnopernicus-1.0/libsrutil
 @dirrm include/gnopernicus-1.0/libsrs
@@ -140,3 +156,4 @@ share/pixmaps/gnopernicus.png
 @dirrm include/gnopernicus-1.0/libmag
 @dirrm include/gnopernicus-1.0/libke
 @dirrm include/gnopernicus-1.0/libbrl
+@dirrm include/gnopernicus-1.0
