@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/01/05 20:48:45 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2004/02/14 00:54:45 grant Exp $
 #
 
 DISTNAME=		pth-2.0.0
@@ -20,8 +20,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--with-fdsetsize=1024
 #CONFIGURE_ARGS+=	--enable-debug
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 TEST_TARGET=		test
 
