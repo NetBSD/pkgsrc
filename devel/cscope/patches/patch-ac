@@ -1,10 +1,27 @@
---- common/display.c.orig	Thu Apr 20 13:05:36 2000
-+++ common/display.c	Thu Apr 20 13:06:32 2000
-@@ -515,7 +515,6 @@
- 	static	long	start;
- 	long	now;
- 	char	msg[MSGLEN + 1];
--	long	time();
+$NetBSD: patch-ac,v 1.2 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/exec.c /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/exec.c
+--- ./common/exec.c	Tue Apr 18 03:39:45 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/exec.c	Thu May  4 03:24:27 2000
+@@ -37,7 +37,11 @@
  
- 	/* save the start time */
- 	if (searchcount == 0) {
+ #include "global.h"
+ #include <stdarg.h>
++#ifdef __NetBSD__
++#include <sys/wait.h>
++#else
+ #include <wait.h>
++#endif
+ #include <curses.h>
+ 
+ static char const rcsid[] = "$Id: patch-ac,v 1.2 2000/05/04 01:33:07 hubertf Exp $";
+@@ -46,7 +50,9 @@
+ static	SIGTYPE	(*oldsighup)();		/* old value of hangup signal */
+ static	SIGTYPE	(*oldsigstp)();
+ 
++#ifndef __NetBSD__
+ typedef int	pid_t;
++#endif
+ static	int	join(), myexecvp();
+ static	pid_t	myfork();
+ 

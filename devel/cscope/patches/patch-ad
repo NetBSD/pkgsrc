@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/global.h /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/global.h
+--- ./common/global.h	Tue Apr 18 03:40:03 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/global.h	Thu May  4 03:24:27 2000
+@@ -46,10 +46,14 @@
+ #include "invlib.h"	/* inverted index library */
+ #include "library.h"	/* library function return values */
+ 
++#ifdef __NetBSD__
++#define SIGTYPE void
++#else
+ #if SVR2 || BSD && !sun
+ #define SIGTYPE int
+ #else
+ #define SIGTYPE void
++#endif
+ #endif
+ 
+ typedef	enum	{		/* boolean data type */
