@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.774 2001/07/01 21:13:20 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.775 2001/07/02 08:02:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -723,23 +723,15 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 .endif
 .endif	# USE_MOTIF
 
-# Check if we got Xpm distributed with XFree86 4.0 or newer or if we
-# need to use the package.
+# If USE_XPM is set, depend on xpm.
 .if defined(USE_XPM)
-.if !defined(IS_BUILTIN_XPM)
-.if exists(${X11BASE}/include/X11/xpm.h)
-IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-MAKEFLAGS+=		IS_BUILTIN_XPM=${IS_BUILTIN_XPM}
-.else
-IS_BUILTIN_XPM=		0
-.endif
-.endif
-.if (${IS_BUILTIN_XPM} == "0")
+.if ${HAVE_BUILTIN_XPM} == "NO"
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 XPMDIR_DEFAULT=		${X11PREFIX}
 .else
 XPMDIR_DEFAULT=		${X11BASE}
 .endif
+.undef __BUILTIN_XPM
 .endif	# USE_XPM
 
 # If USE_MESA is set, depend on Mesa (or Mesa-glx if USE_GLX is defined and

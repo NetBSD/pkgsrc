@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/08 21:30:35 tron Exp $
+# $NetBSD: Makefile,v 1.19 2001/07/02 08:02:34 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -8,16 +8,14 @@ MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.inria.fr/koala/lehors/xpm.html
 COMMENT=	The X Pixmap library
 
-USE_IMAKE=	yes
-
-.if !defined(CHECK_XPM)
-IS_BUILTIN_XPM!=	${MAKE} CHECK_XPM=YES USE_XPM=YES VARNAME=IS_BUILTIN_XPM show-var
-.if (${IS_BUILTIN_XPM} != "0")
-IGNORE=		"The Xpm library is included in your X11 distribution."
-.endif
-.endif
+USE_IMAKE=		# defined
+CHECK_XPM=		# defined
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_XPM} != "NO"
+IGNORE=		"The Xpm library is included in your X11 distribution."
+.endif
 
 .if (${OPSYS} == SunOS)
 post-install:
