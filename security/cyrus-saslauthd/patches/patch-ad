@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/12/07 09:17:35 adam Exp $
+
+--- md5.c.orig	2004-12-07 10:07:58.000000000 +0000
++++ md5.c
+@@ -27,7 +27,7 @@ documentation and/or software.
+ 
+ #include <config.h>
+ #include "md5global.h"
+-#include "md5.h"
++#include <sys/md5.h>
+ #include "hmac-md5.h"
+ 
+ #ifndef WIN32
