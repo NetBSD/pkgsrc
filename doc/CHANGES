@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3003 2003/08/06 14:55:33 tron Exp $
+$NetBSD: CHANGES,v 1.3004 2003/08/07 04:14:29 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3213,3 +3213,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libbonoboui to 2.2.4 [jmmv 2003-08-05]
 	Updated grhino to 0.7.1 [wiz 2003-08-06]
 	Updated kde to 3.1.3nb1 [tron 2003-08-06]
+	Added p5-XML-Twig [gson 2003-08-06]
