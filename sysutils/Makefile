@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2003/12/17 16:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.208 2003/12/17 19:30:12 jdolecek Exp $
 
 COMMENT=	System utilities
 
@@ -101,6 +101,7 @@ SUBDIR+=	osname
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+= 	pciutils
 SUBDIR+=	pcvt-utils
+SUBDIR+=	pear-Log
 SUBDIR+=	pflogsumm
 SUBDIR+=	psmisc
 SUBDIR+=	pstree
