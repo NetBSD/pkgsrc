@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.9 2004/05/26 20:26:29 wiz Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.10 2004/05/30 10:40:02 grant Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  bdb.buildlink3.mk will:
@@ -98,16 +98,14 @@ _BDB_TYPE=	${_BDB_DEFAULT}
 .    for _bdb_ in ${_BDB_ACCEPTED}
 .      if !empty(_BDB_INSTALLED.${_bdb_}:M[yY][eE][sS])
 _BDB_TYPE?=	${_bdb_}
-.      else
-_BDB_FIRSTACCEPTED?=	${_bdb_}
 .      endif
 .    endfor
 #
 # ...otherwise, just use the first accepted Berkeley DB package.
 #
-.    if defined(_BDB_FIRSTACCEPTED)
-_BDB_TYPE?=	${_BDB_FIRSTACCEPTED}
-.    endif
+.    for _bdb_ in ${_BDB_ACCEPTED:Nnative}
+_BDB_TYPE?=	${_bdb_}
+.    endfor
 _BDB_TYPE?=	none
 MAKEFLAGS+=	_BDB_TYPE=${_BDB_TYPE}
 .  endif
