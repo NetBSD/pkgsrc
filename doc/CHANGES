@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1955 2003/04/17 01:12:18 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1956 2003/04/17 04:57:54 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated frozen-bubble to 1.0.0 [salo 2003-04-16]
 	Updated Mule-UCS to 0.84nb3 [kei 2003-04-16]
 	Updated Mule-UCS to 0.84nb4 [uebayasi 2003-04-17]
+	Updated flim to 1.14.5nb2 [uebayasi 2003-04-17]
