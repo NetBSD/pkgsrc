@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/04 20:03:20 jtb Exp $
 
 DISTNAME=		trn4-test74
 PKGNAME=		trn-4.74
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 MAINTAINER=     	packages@netbsd.org
 HOMEPAGE=		http://trn.sourceforge.net/
 COMMENT=		Threaded version of rn, the classic news reader
+
+LICENSE=		trn-license
 
 .if defined(USE_INN) && ${USE_INN} == YES
 DEPENDS=		inn>=2.2:../inn
