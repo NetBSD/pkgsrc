@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/07 19:27:28 wiz Exp $
 bin/gtk-gnutella
 share/doc/gtk-gnutella/README
+share/gtk-gnutella/pixmaps/arrow_down.xpm
+share/gtk-gnutella/pixmaps/arrow_up.xpm
+share/gtk-gnutella/pixmaps/firewall.xpm
+share/gtk-gnutella/pixmaps/no_firewall.xpm
+@dirrm share/gtk-gnutella/pixmaps
+@dirrm share/gtk-gnutella
 @dirrm share/doc/gtk-gnutella
