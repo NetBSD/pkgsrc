@@ -1,8 +1,9 @@
-$NetBSD: patch-am,v 1.9 2003/01/19 20:22:22 tron Exp $
+$NetBSD: patch-am,v 1.10 2003/03/17 16:07:35 taya Exp $
 
---- nsprpub/pr/src/pthreads/ptio.c.orig	Sun Jan 19 18:55:37 2003
-+++ nsprpub/pr/src/pthreads/ptio.c	Sun Jan 19 18:57:31 2003
-@@ -192,7 +192,7 @@
+diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	2003-01-21 05:50:00.000000000 +0900
++++ ./nsprpub/pr/src/pthreads/ptio.c	2003-03-14 16:58:52.000000000 +0900
+@@ -194,7 +194,7 @@
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
      || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
      || defined(NTO) || defined(OPENBSD) || defined(DARWIN) \
@@ -11,7 +12,7 @@ $NetBSD: patch-am,v 1.9 2003/01/19 20:22:22 tron Exp $
  #define _PRSockOptVal_t void *
  #else
  #error "Cannot determine architecture"
-@@ -3426,6 +3426,15 @@
+@@ -3428,6 +3428,15 @@
      if (osfd == -1) pt_MapError(_PR_MD_MAP_SOCKET_ERROR, errno);
      else
      {
