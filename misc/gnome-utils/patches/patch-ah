@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2000/11/30 06:10:23 mycroft Exp $
+
+--- gdictsrc/gdict-defbox.c.orig	Fri May 19 18:57:46 2000
++++ gdictsrc/gdict-defbox.c	Thu Nov 30 06:07:30 2000
+@@ -284,7 +284,7 @@
+     gchar *word;
+     
+     if (context != defbox->context || 
+-        strcmp (defbox->database, gdict_pref.database))
++        (defbox->database && strcmp (defbox->database, gdict_pref.database)))
+     {
+         defbox->context = context;
+         
