@@ -1,9 +1,15 @@
-$NetBSD: patch-bb,v 1.2 2004/05/08 04:35:39 taya Exp $
+$NetBSD: patch-bb,v 1.3 2004/06/24 23:09:56 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	2003-09-12 02:24:53.000000000 +0900
-+++ ./nsprpub/pr/include/md/_netbsd.h	2004-05-05 23:23:04.000000000 +0900
-@@ -48,12 +48,20 @@
++++ ./nsprpub/pr/include/md/_netbsd.h	2004-06-15 23:56:27.000000000 +0900
+@@ -44,16 +44,26 @@
+ #define _PR_SI_ARCHITECTURE "x86"
+ #elif defined(__alpha__)
+ #define _PR_SI_ARCHITECTURE "alpha"
++#elif defined(__amd64__)
++#define _PR_SI_ARCHITECTURE "amd64"
+ #elif defined(__m68k__)
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)
  #define _PR_SI_ARCHITECTURE "powerpc"
@@ -15,16 +21,16 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define _PR_SI_ARCHITECTURE "mips"
  #elif defined(__arm32__)
  #define _PR_SI_ARCHITECTURE "arm32"
++#elif defined(__ARMEL__)
++#define _PR_SI_ARCHITECTURE "armel"
++#elif defined(__ARMEL__)
++#define _PR_SI_ARCHITECTURE "armeb"
 +#elif defined(__arm__)
 +#define _PR_SI_ARCHITECTURE "arm"
-+#elif defined(__armel__)
-+#define _PR_SI_ARCHITECTURE "armel"
-+#elif defined(__armeb__)
-+#define _PR_SI_ARCHITECTURE "armeb"
  #endif
  
  #if defined(__ELF__)
-@@ -86,6 +94,12 @@
+@@ -86,6 +96,12 @@
  #define _PR_INET6_PROBE
  #endif
  
@@ -37,7 +43,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define USE_SETJMP
  
  #ifndef _PR_PTHREADS
-@@ -108,7 +122,17 @@
+@@ -108,7 +124,17 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
  #endif
@@ -56,12 +62,12 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
  {									\
      sigsetjmp(CONTEXT(_thread), 1);					\
-@@ -150,7 +174,7 @@
+@@ -150,7 +176,7 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[32]
  #endif
 -#ifdef __arm32__
-+#if defined(__arm32__) || defined(__arm__) || defined(__armel__) || defined(__armeb__)
++#ifdef __arm__
  #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
  {									\
      sigsetjmp(CONTEXT(_thread), 1);					\
