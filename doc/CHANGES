@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6337 2004/06/26 21:23:43 minskim Exp $
+$NetBSD: CHANGES,v 1.6338 2004/06/26 22:05:46 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgdiplus to 0.10 [recht 2004-06-26]
 	Updated winelib to 0.3 [recht 2004-06-26]
 	Updated mathomatic to 11.2c [minskim 2004-06-26]
+	Updated p5-Socket6 to 0.17 [adrianp 2004-06-26]
