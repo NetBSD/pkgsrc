@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2020 2003/04/23 16:39:22 wiz Exp $
+$NetBSD: CHANGES,v 1.2021 2003/04/23 21:27:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1708,3 +1708,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated multitail to 2.0 [mjl 2003-04-23]
 	Updated cvsync to 0.19.6 [gehenna 2003-04-23]
 	Updated dnstop to 20021224nb1 [wiz 2003-04-23]
+	Updated naim to 0.11.5.7 [wiz 2003-04-23]
