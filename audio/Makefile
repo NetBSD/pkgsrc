@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2000/11/21 06:03:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.76 2000/12/17 01:42:35 wiz Exp $
 #
 
     SUBDIR += ac3dec
@@ -12,6 +12,7 @@
     SUBDIR += cs4235
     SUBDIR += dap
     SUBDIR += easytag
+    SUBDIR += eawpatches
     SUBDIR += emixer
     SUBDIR += esound
     SUBDIR += festdoc
@@ -47,6 +48,7 @@
     SUBDIR += gogo
     SUBDIR += gqmpeg
     SUBDIR += gsm
+    SUBDIR += guspatches
     SUBDIR += icecast
     SUBDIR += id3ed
     SUBDIR += kdemultimedia
