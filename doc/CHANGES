@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7872 2004/11/16 01:18:07 rh Exp $
+$NetBSD: CHANGES,v 1.7873 2004/11/16 01:21:34 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5293,3 +5293,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated distcc to 2.18.2 [xtraeme 2004-11-15]
 	Updated cyrus-sasl2 to 2.1.20 [jlam 2004-11-15]
 	Updated gnustep-base to 1.10.1nb1 [rh 2004-11-16]
+	Updated gnustep-ssl to 1.10.1 [rh 2004-11-16]
