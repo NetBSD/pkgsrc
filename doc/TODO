@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.364 2003/03/11 09:30:41 wiz Exp $
+$NetBSD: TODO,v 1.365 2003/03/11 14:30:37 markd Exp $
 
 Suggested new packages
 ======================
@@ -151,9 +151,6 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
-	o kdbg-1.2.7
-	o kde-3.1 [skrll]
-	o kdevelop-2.1.5
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4.1
 	o lcms-1.0.9
