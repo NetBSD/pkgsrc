@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/07 11:39:53 wiz Exp $
 #
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
@@ -22,9 +22,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
 
-.if !make(fetch)
 ONLY_FOR_PLATFORM=*-*-i386
-.endif
 
 DISTBINNAME=	q3demo
 BINNAME=	quake3arena-demo
