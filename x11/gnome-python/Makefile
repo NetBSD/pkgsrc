@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.13 2000/11/17 07:53:21 tron Exp $
+# $NetBSD: Makefile,v 1.14 2000/11/20 14:38:27 mycroft Exp $
 
-DISTNAME=	gnome-python-1.0.53
-CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-python/}
+DISTNAME=		gnome-python-1.0.53
+CATEGORIES=		x11 gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-python/}
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.daa.com.au/~james/gnome/
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 
-DEPENDS+=	gnome-core>=1.2.0:../gnome-core
-DEPENDS+=	gtkglarea-*:../../x11/gtkglarea
-DEPENDS+=	libglade-*:../../devel/libglade
-DEPENDS+=	python>=2.0:../../lang/python
+DEPENDS+=		gnome-core>=1.2.0:../gnome-core
+DEPENDS+=		gtkglarea-*:../../x11/gtkglarea
+DEPENDS+=		libglade-*:../../devel/libglade
+DEPENDS+=		python>=1.5.2:../../lang/python
 
-CONFLICTS+=	py-gtk-*
+CONFLICTS+=		py-gtk-*
 
-GNU_CONFIGURE=	yes
-USE_X11=	yes
-USE_GMAKE=	yes
+GNU_CONFIGURE=		yes
+USE_X11=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
