@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 1999/03/07 11:31:47 tron Exp $
+$NetBSD: patch-ae,v 1.3 1999/04/16 21:31:17 tron Exp $
 
 --- devel-docs/Makefile.in.orig	Mon Mar  1 20:57:04 1999
 +++ devel-docs/Makefile.in	Sun Mar  7 12:02:50 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.2 1999/03/07 11:31:47 tron Exp $
  
  
 -docdir = $(prefix)/doc
-+docdir = $(prefix)/share/doc/gnome-libs
++docdir = $(datadir)/doc/gnome-libs
  doc_DATA = $(TEXT_FILES)
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h

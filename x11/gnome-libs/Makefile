@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 1999/04/04 20:22:11 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/04/16 21:31:16 tron Exp $
 #
 
-DISTNAME=	gnome-libs-1.0.5
+DISTNAME=	gnome-libs-1.0.8
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	ORBit-0.4.2:../../corba/ORBit
+DEPENDS+=	ORBit-0.4.3:../../corba/ORBit
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
