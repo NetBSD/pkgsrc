@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/24 20:39:43 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/02 08:46:51 agc Exp $
 #
 
 DISTNAME=		egcs-1.1.2
@@ -10,7 +10,7 @@ HOMEPAGE=		http://egcs.cygnus.com/index.html
 
 GNU_CONFIGURE=		yes
 
-NOT_FOR_PLATFORM=	NetBSD-*-*	# In NetBSD base system
+ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
 PREFIX=			${LOCALBASE}/egcs
 
