@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 1998/06/22 12:44:31 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/07/04 04:11:34 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
 DISTNAME=		tcl8.0p2
 PKGNAME=		tcl-8.0p2
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.sunlabs.com/pub/tcl/
+MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_0/
 
 MAINTAINER=		packages@netbsd.org
 
