@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:01:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/04/14 15:07:16 jlam Exp $
 
 SHA1 (ng-1.4.3.tar.gz) = b5200da6c41f0e4d1d232a1a0c9548f8a37a96e2
 Size (ng-1.4.3.tar.gz) = 586587 bytes
-SHA1 (patch-aa) = bae8b0302e29fb5fb828207616b69c8faa8bc3f0
+SHA1 (patch-aa) = c7a0417f222b5fbfd5664ebce5ed33bd11a532de
