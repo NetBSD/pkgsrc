@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/12 17:15:29 xtraeme Exp $
+#
+
+DISTNAME=	pnetlib-0.6.2
+CATEGORIES=	lang
+MASTER_SITES=	http://www.southern-storm.com.au/download/
+
+MAINTAINER=	pancake@phreaker.net
+HOMEPAGE=	http://www.dotgnu.org/
+COMMENT=	DotGNU Portable .NET C SHARP class libraries
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
+
+DESCR_SRC=	${.CURDIR}/../pnetlib/DESCR
+DISTINFO_FILE=	${.CURDIR}/../pnetlib/distinfo
+PATCHDIR=	${.CURDIR}/../pnetlib/patches
+PLIST_SRC=	${.CURDIR}/../pnetlib/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=	LIBXSHARP="@comment "
+.else
+PLIST_SUBST+=	LIBXSHARP=
+.endif
+
+.include "../../lang/pnet/buildlink2.mk"
