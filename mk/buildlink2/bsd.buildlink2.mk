@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.7 2002/08/29 22:29:03 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.8 2002/09/01 18:38:15 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -466,9 +466,7 @@ buildlink-wrappers: ${_BLNK_WRAP_CACHE}
 buildlink-wrappers: ${_BLNK_WRAP_CACHE_TRANSFORM}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC_TRANSFORM}
-.if defined (USE_LIBTOOL)
 buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
-.endif
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 CONFIGURE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
