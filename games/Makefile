@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2004/01/22 13:42:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.196 2004/02/10 22:05:10 garbled Exp $
 #
 
 COMMENT=	Games
@@ -67,6 +67,8 @@ SUBDIR+=	frotz
 SUBDIR+=	frozen-bubble
 SUBDIR+=	galaxa
 SUBDIR+=	gemdropx
+SUBDIR+=	genecys-client
+SUBDIR+=	genecys-data
 SUBDIR+=	glchess
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
