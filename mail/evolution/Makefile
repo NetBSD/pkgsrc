@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2002/08/13 08:55:04 agc Exp $
+# $NetBSD: Makefile,v 1.22 2002/09/05 23:25:27 rh Exp $
 
 DISTNAME=		evolution-1.0.8
+PKGREVISION=		1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/evolution/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,8 +17,8 @@ BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.11.0nb1
 BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.11.0nb1
-# Using a wildcard here doesn't make sence because the version number of
-# "db3" is hardcoded in the "configure" script.
+# Using a wildcard here doesn't make sense because the version number of
+# "db3" is hardcoded in the "configure" script and some source modules.
 BUILDLINK_DEPENDS.db3=			db3-3.11.2
 BUILDLINK_DEPENDS.gal=			gal>=0.19.2
 
