@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 2004/08/06 13:58:55 minskim Exp $
+
+--- gnome-about/Makefile.in.orig	2004-08-05 22:50:23.000000000 -0500
++++ gnome-about/Makefile.in
+@@ -183,6 +183,7 @@ INCLUDES = \
+ 	-I$(top_builddir)/intl	\
+ 	$(GNOME_INCLUDEDIR)	\
+ 	$(PIXBUF_CFLAGS)	\
++	$(CANVAS_PIXBUF_CFLAGS)	\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale\""
+ 
+ 
