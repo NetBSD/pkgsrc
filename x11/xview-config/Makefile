@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/03 23:30:10 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/01 14:07:56 agc Exp $
 # $FreeBSD Id: Makefile,v 1.9 1998/05/04 03:34:50 steve Exp
 #
 
@@ -10,8 +10,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	packages@netbsd.org
 
 MIRROR_DISTFILE= no
-EXTRACT_AFTER_ARGS=	xview3.2p1-X11R6/config
-WRKSRC=      	${WRKDIR}/${EXTRACT_AFTER_ARGS}
+EXTRACT_ELEMENTS=	xview3.2p1-X11R6/config
+WRKSRC=      	${WRKDIR}/${EXTRACT_ELEMENTS}
 USE_IMAKE=	yes
 NO_BUILD=	yes
 

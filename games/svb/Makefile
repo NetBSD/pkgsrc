@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/07 03:23:09 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:53 agc Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -10,9 +10,7 @@ MAINTAINER=		root@garbled.net
 
 USE_IMAKE=		yes
 NO_WRKSUBDIR=		yes
-EXTRACT_CMD=		zcat
-EXTRACT_BEFORE_ARGS=	#empty
-EXTRACT_AFTER_ARGS=	|sh
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 NO_INSTALL_MANPAGES=	yes
 
 post-install:

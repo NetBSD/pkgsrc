@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/22 20:47:13 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:53 agc Exp $
 #
 
 DISTNAME=	binkd-0.9.2
@@ -12,8 +12,7 @@ HOMEPAGE=	http://www.corbina.net/~maloff/binkd/
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
 GNU_CONFIGURE=	yes
-EXTRACT_CMD=	unzip
-EXTRACT_BEFORE_ARGS= -qo
+EXTRACT_CMD=	unzip -qo ${DOWNLOADED_DISTFILE}
 
 NO_CDROM=	"extremely limited usefulness to the general public"
 

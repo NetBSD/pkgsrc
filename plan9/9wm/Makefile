@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/20 15:17:23 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/01 14:07:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/28 06:18:20 fenner Exp
 #
 
@@ -11,9 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://dhog.g7.org/dhog/9wm.html
 
 NO_WRKSUBDIR=		yes
-EXTRACT_CMD=		zcat
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	|sh
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 USE_IMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"

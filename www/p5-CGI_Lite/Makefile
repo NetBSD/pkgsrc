@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/26 17:57:03 bad Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:56 agc Exp $
 #
 
 DISTNAME=       	CGI_Lite-1.62.pm
@@ -13,9 +13,7 @@ MAINTAINER=		bad@netbsd.org
 
 USE_PERL5=		YES
 
-EXTRACT_CMD=		${GZIP_CMD}
-EXTRACT_BEFORE_ARGS=	-dc
-EXTRACT_AFTER_ARGS=	>CGI_Lite.pm
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} > CGI_Lite.pm
 
 pre-configure:
 	${CP} ${FILESDIR}/Makefile.PL ${WRKDIR}/Makefile.PL
