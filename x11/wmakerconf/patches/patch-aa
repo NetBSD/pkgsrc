@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1999/10/09 21:08:26 rh Exp $
+$NetBSD: patch-aa,v 1.4 2000/01/02 01:03:54 wiz Exp $
 
---- configure.orig	Tue Sep 28 22:01:36 1999
-+++ configure	Sat Oct  9 23:00:48 1999
-@@ -1193,8 +1193,8 @@
+--- configure.orig	Fri Dec  3 16:34:48 1999
++++ configure	Sun Jan  2 01:48:50 2000
+@@ -1212,8 +1212,8 @@
  fi
  
  # Add some common include and library path's
