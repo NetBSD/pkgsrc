@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/03/20 02:42:16 mjl Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/07/23 00:59:21 wiz Exp $
 bin/gdm
 bin/gdmchooser
 bin/gdmconfig
@@ -14,6 +14,7 @@ etc/gdm/locale.alias.default
 etc/gnomerc.default
 etc/gdm/Sessions/Failsafe
 etc/gdm/gnomerc
+etc/rc.d/gdm
 share/doc/gdm/Daemon.README
 share/gnome/help/gdm/C/configuration.html
 share/gnome/help/gdm/C/daemonov.html
@@ -68,6 +69,7 @@ share/pixmaps/nohost.png
 @dirrm share/gnome/help/gdm/C/images
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
+@dirrm share/gdm
 @dirrm share/doc/gdm
 @dirrm etc/gdm/Sessions.default
 @dirrm etc/gdm/PreSession.default
