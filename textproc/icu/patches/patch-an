@@ -1,0 +1,21 @@
+$NetBSD: patch-an,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- tools/genprops/Makefile.in.orig	Tue Aug  1 02:55:50 2000
++++ tools/genprops/Makefile.in
+@@ -46,6 +46,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/genprops
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -91,7 +92,7 @@
+ build-data: $(ICUDATADIR)/uprops.dat
+ 
+ $(ICUDATADIR)/uprops.dat: $(UNICODEDATADIR)/UnicodeData.txt $(UNICODEDATADIR)/Mirror.txt $(TARGET)
+-	./$(TARGET) -s $(UNICODEDATADIR) -d $(ICUDATADIR) -u $(UNICODE_VERSION)
++	$(TOOL) ./$(TARGET) -s $(UNICODEDATADIR) -d $(ICUDATADIR) -u $(UNICODE_VERSION)
+ 
+ dist-local:
+ 

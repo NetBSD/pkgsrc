@@ -1,0 +1,21 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- tools/gennames/Makefile.in.orig	Tue Aug  1 02:55:50 2000
++++ tools/gennames/Makefile.in
+@@ -47,6 +47,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/gennames
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -92,7 +93,7 @@
+ build-data: $(ICUDATADIR)/unames.dat
+ 
+ $(ICUDATADIR)/unames.dat: $(UNICODEFILE) $(TARGET)
+-	./$(TARGET) -d $(ICUDATADIR) $(UNICODEFILE) -u $(UNICODE_VERSION)
++	$(TOOL) ./$(TARGET) -d $(ICUDATADIR) $(UNICODEFILE) -u $(UNICODE_VERSION)
+ 
+ dist-local:
+ 

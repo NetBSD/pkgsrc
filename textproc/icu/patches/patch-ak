@@ -1,0 +1,21 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- tools/Makefile.in.orig	Tue Aug 15 18:20:40 2000
++++ tools/Makefile.in
+@@ -35,6 +35,7 @@
+ ## Build directory information
+ top_builddir = ..
+ subdir = tools
++BUILD_LPATH=$(top_builddir)/../common
+ 
+ ## Type of build
+ @USE_MAPPED_TRUE@  DEFAULT_MODE=common
+@@ -57,7 +58,7 @@
+ TMPDATADIR=./tmp
+ 
+ # relative lib links from pkgdata are the same as for tmp
+-PKGDATA=../pkgdata/pkgdata -T . -s @DATABUILDDIR@ -O ./icupkg.inc -d @DATABUILDDIR@ -v -m $(MODE) 
++PKGDATA=$(TOOL) ../pkgdata/pkgdata -T . -s @DATABUILDDIR@ -O ./icupkg.inc -d @DATABUILDDIR@ -v -m $(MODE) 
+ 
+ ## Install program information
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

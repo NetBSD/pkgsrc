@@ -1,0 +1,21 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- tools/gencnval/Makefile.in.orig	Tue Aug  1 02:55:50 2000
++++ tools/gencnval/Makefile.in
+@@ -45,6 +45,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/gencnval
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -92,7 +93,7 @@
+ # we set the ICU_DATA directory here so that unames.dat ends up in 
+ # icu/data rather than PREFIX/share/icu/VERSION/
+ $(ICUDATADIR)/cnvalias.dat: $(CONVRTRSFILE) $(TARGET)
+-	ICU_DATA=$(ICUDATADIR) ./$(TARGET) $(CONVRTRSFILE)
++	$(TOOL) ICU_DATA=$(ICUDATADIR) ./$(TARGET) $(CONVRTRSFILE)
+ 
+ dist-local:
+ 

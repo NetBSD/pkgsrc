@@ -1,0 +1,21 @@
+$NetBSD: patch-ar,v 1.1.1.1 2000/12/20 18:28:02 skrll Exp $
+
+--- tools/makeconv/Makefile.in.orig	Tue Aug 15 03:40:40 2000
++++ tools/makeconv/Makefile.in
+@@ -43,6 +43,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/makeconv
++BUILD_LPATH=$(top_builddir)/common:$(top_builddir)/tools/toolutil
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -123,7 +124,7 @@
+ # Rule to build a compiled cnv file
+ @DATABUILDDIR@/%.cnv : $(top_srcdir)/../data/%.ucm
+ 	@echo -n "$< -> "
+-	@./makeconv -d @DATABUILDDIR@ $<
++	@$(TOOL) ./makeconv -d @DATABUILDDIR@ $<
+ 
+ ifeq (,$(MAKECMDGOALS))
+ -include $(DEPS)

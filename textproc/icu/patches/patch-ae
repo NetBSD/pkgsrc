@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/20 18:28:05 skrll Exp $
+
+--- test/cintltst/Makefile.in.orig	Thu Aug 10 02:33:28 2000
++++ test/cintltst/Makefile.in
+@@ -43,6 +43,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = test/cintltst
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -103,7 +104,7 @@
+ 	$(RMV) Makefile $(DEPS)
+ 
+ check-local: all-local
+-	ICU_DATA=@DATABUILDDIR@/ TZ=PST8PDT ./$(TARGET)
++	$(TOOL) ICU_DATA=@DATABUILDDIR@/ TZ=PST8PDT ./$(TARGET)
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \

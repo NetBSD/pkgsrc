@@ -1,0 +1,21 @@
+$NetBSD: patch-ap,v 1.1.1.1 2000/12/20 18:28:02 skrll Exp $
+
+--- tools/gentest/Makefile.in.orig	Tue Aug  1 02:55:52 2000
++++ tools/gentest/Makefile.in
+@@ -47,6 +47,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/gentest
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -94,7 +95,7 @@
+ # we set the ICU_DATA directory here so that test.dat ends up in 
+ # icu/data rather than PREFIX/share/icu/VERSION/
+ $(ICUDATADIR)/test.dat: $(TARGET)
+-	ICU_DATA=$(ICUDATADIR) ./$(TARGET) 
++	$(TOOL) ICU_DATA=$(ICUDATADIR) ./$(TARGET) 
+ 
+ dist-local:
+ 

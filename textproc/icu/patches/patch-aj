@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- test/intltest/tsmthred.cpp.orig	Mon Aug 14 22:42:36 2000
++++ test/intltest/tsmthred.cpp
+@@ -12,7 +12,7 @@
+ 
+ #include <unicode/umachine.h>
+ 
+-#if !defined(WIN32) && !defined(XP_MAC) && !defined(U_DARWIN)
++#if !defined(WIN32) && !defined(XP_MAC) && !defined(U_DARWIN) && !defined(U_NETBSD)
+ #define POSIX 1
+ #endif
+ 

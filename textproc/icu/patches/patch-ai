@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/12/20 18:28:04 skrll Exp $
+
+--- test/intltest/restest.cpp.orig	Mon Aug 14 22:42:36 2000
++++ test/intltest/restest.cpp
+@@ -308,8 +308,8 @@
+         uprv_strcat(testdatapath, "testdata");
+ 
+ 
+-        wchar_t* wideDirectory = new wchar_t[256];
+-        mbstowcs(wideDirectory, testdatapath, 256);
++        wchar_t* wideDirectory = new wchar_t[1024];
++        mbstowcs(wideDirectory, testdatapath, 1024);
+         //mbstowcs(wideDirectory, "c:\\icu\\icu\\source\\test\\testdata\\testdata", 256);
+ 
+         ResourceBundle  test2(wideDirectory, locale, err);

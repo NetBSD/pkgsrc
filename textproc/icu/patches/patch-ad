@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/20 18:28:05 skrll Exp $
+
+--- configure.orig	Wed Aug 16 18:02:34 2000
++++ configure
+@@ -1199,6 +1199,7 @@
+ *-*-mips*)	icu_cv_host_frag=$srcdir/config/mh-irix ;;
+ *-*-linux*) 	icu_cv_host_frag=$srcdir/config/mh-linux ;;
+ *-*-freebsd*) 	icu_cv_host_frag=$srcdir/config/mh-freebsd ;;
++*-*-netbsd*) 	icu_cv_host_frag=$srcdir/config/mh-netbsd ;;
+ *-*-aix*) 	
+ 	case "$CXX" in
+ 	*vacpp*)icu_cv_host_frag=$srcdir/config/mh-aix-va ;;
+@@ -2959,6 +2960,7 @@
+ 	*-*-solaris*) 	platform=U_SOLARIS ;;
+ 	*-*-linux*) 	platform=U_LINUX ;;
+ 	*-*-freebsd*) 	platform=U_LINUX ;;
++	*-*-netbsd*) 	platform=U_NETBSD ;;
+ 	*-*-aix*) 	platform=AIX ;;
+ 	*-sequent-*)	platform=PTX ;;
+ 	*-*-hpux*) 	platform=HPUX ;;
+@@ -2976,6 +2978,7 @@
+ 	*-*-solaris*) 	ld_rpath_suf=":" ;;
+ 	*-*-linux*) 	ld_rpath_suf=" " ;;
+ 	*-*-freebsd*) 	ld_rpath_suf=" " ;;
++	*-*-netbsd*) 	ld_rpath_suf=" " ;;
+ 	*-*-aix*) 	ld_rpath_suf="" ;;
+ 	*-sequent-*)	ld_rpath_suf="" ;;
+ 	*-*-hpux*) 	ld_rpath_suf=":" ;;

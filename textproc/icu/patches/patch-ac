@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/20 18:28:06 skrll Exp $
+
+--- common/uresbund.c.orig	Wed Aug 16 21:44:50 2000
++++ common/uresbund.c
+@@ -238,7 +238,7 @@
+             r->fBogus = U_USING_FALLBACK_ERROR;
+         } else { /* if we have a regular entry */
+             /* handle the alias by trying to get out the %%Alias tag.*/
+-            char aliasName[100];
++            char aliasName[256];
+             int32_t aliasLen;
+             /* We'll try to get alias string from the bundle */
+             Resource aliasres = res_getResource(&(r->fData), "%%ALIAS");
+@@ -1027,7 +1027,7 @@
+                     const char* localeID,
+                     UErrorCode* status)
+ {
+-    char path[100];
++    char path[256];
+     UResourceBundle *r;
+     size_t tempSize = uprv_wcstombs(NULL, myPath, ((size_t)-1) >> 1);
+     /*char *temp = new char[tempSize + 1];*/
+@@ -1051,7 +1051,7 @@
+                   const char* localeID, 
+                   UErrorCode* status)
+ {
+-    char path[100];
++    char path[256];
+     UResourceBundle *r;
+     int32_t pathlen = u_strlen(myPath);
+ 

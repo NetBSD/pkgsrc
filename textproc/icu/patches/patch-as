@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2000/12/20 18:28:02 skrll Exp $
+
+--- tools/pkgdata/cmnmode.c.orig	Mon Jul 17 06:37:48 2000
++++ tools/pkgdata/cmnmode.c
+@@ -95,7 +95,7 @@
+     T_FileStream_writeLine(makefile, "\n\n");
+     
+     sprintf(tmp, "install: $(TARGET)\n"
+-            "\t$(INSTALL-S) $(TARGET) $(INSTALLTO)%s$(TARGETNAME)\n\n",
++            "\t$(INSTALL_DATA) $(TARGET) $(INSTALLTO)%s$(TARGETNAME)\n\n",
+             U_FILE_SEP_STRING);
+ 
+     T_FileStream_writeLine(makefile, tmp);
