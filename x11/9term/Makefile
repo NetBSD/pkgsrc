@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/12/15 20:25:39 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/15 20:37:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -19,7 +19,8 @@ USE_BUILDLINK_ONLY=	yes
 
 MANCOMPRESSED=		yes
 WRKSRC=			${WRKDIR}
-MAKE_ENV+=		WRKDIR=${WRKDIR} X11PREFIX=${X11PREFIX}
+EVAL_PREFIX+=		SAM_DIR=qt1
+MAKE_ENV+=		SAM_DIR=${SAM_DIR}
 
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

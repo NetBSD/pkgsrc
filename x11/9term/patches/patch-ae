@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2001/05/05 01:56:21 hubertf Exp $
+$NetBSD: patch-ae,v 1.3 2001/12/15 20:37:54 agc Exp $
 
 --- 9term/Makefile.orig	Mon Mar 14 05:50:54 1994
 +++ 9term/Makefile
@@ -12,7 +12,7 @@ $NetBSD: patch-ae,v 1.2 2001/05/05 01:56:21 hubertf Exp $
 -BINDIR=/usr/pgrad/matty/bin/$(cputype)
 +OS= -D_LIBXG_EXTENSION -DSUNOS
 +
-+SAMPATH=${X11PREFIX}/include/sam
++SAMPATH=${SAM_DIR}/include/sam
 +
 +BINDIR=.			# where we'll install it
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ae,v 1.2 2001/05/05 01:56:21 hubertf Exp $
  # or if you need extra libraries to load with X11 applications
 -LIBS=../libtext/libtext.a ../libframe/libframe.a ../libXg/libXg.a
 -XLIBS=-lXt -lX11
-+LIBS=../libtext/libtext.a $(X11PREFIX)/lib/libframe.a $(X11PREFIX)/lib/libXg.a
++LIBS=../libtext/libtext.a $(SAM_DIR)/lib/libframe.a $(SAM_DIR)/lib/libXg.a
 +XLIBS= -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXt -lX11
  
  OBJECTS=9term.o command.o display.o pty.o
