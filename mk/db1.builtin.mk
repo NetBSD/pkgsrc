@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.2 2004/11/15 18:01:58 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.3 2004/11/15 18:14:10 jlam Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -55,19 +55,19 @@ BUILDLINK_VARS+=	USE_BUILTIN.db1
 CHECK_BUILTIN.db1?=	no
 .if !empty(CHECK_BUILTIN.db1:M[nN][oO])
 .  if !empty(USE_BUILTIN.db1:M[yY][eE][sS])
-BUILDLINK_PREFIX.db1=		/usr
+BUILDLINK_PREFIX.db1=	/usr
 .    if exists(/usr/include/db.h)
-BUILDLINK_INCDIRS.db1=		include
+BUILDLINK_INCDIRS.db1=	include
 .    elif exists(/usr/include/db1/db.h)
-BUILDLINK_INCDIRS.db1=		include/db1
+BUILDLINK_INCDIRS.db1=	include/db1
 .    endif
 .    if !empty(_BLNK_LIB_FOUND.db:M[yY][eE][sS])
-BUILDLINK_LDADD.db1=		-ldb
+BUILDLINK_LDADD.db1=	-ldb
 .    endif
 .    if !empty(_BLNK_LIB_FOUND.db1:M[yY][eE][sS])
-BUILDLINK_LDADD.db1=		-ldb1
-BUILDLINK_TRANSFORM+=		l:db:db1
+BUILDLINK_LDADD.db1=	-ldb1
+BUILDLINK_TRANSFORM+=	l:db:db1
 .    endif
-BUILDLINK_LIBS.db1=		${BUILDLINK_LDADD.db1}
+BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
 .  endif # USE_BUILTIN.db1 == yes
 .endif	# CHECK_BUILTIN.db1
