@@ -1,0 +1,11 @@
+--- tools/rlehdr.c~	Thu Apr 30 07:12:10 1992
++++ tools/rlehdr.c	Wed Nov 25 23:58:39 1998
+@@ -287,7 +287,7 @@
+ 	    for ( ; ncomment > 0; ncomment--, comment_names++ )
+ 		if (the_comment = rle_getcom( *comment_names, the_hdr ))
+ 		{
+-		    if ( (cp = index( the_comment, '\n' )) )
++		    if ( (cp = rle_index( the_comment, '\n' )) )
+ 			printf( ", %s=%.*s", *comment_names,
+ 				cp - the_comment - 1, the_comment );
+ 		    else
