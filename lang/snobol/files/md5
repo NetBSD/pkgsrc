@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 2000/03/11 06:01:56 wiz Exp $
+$NetBSD: md5,v 1.2 2001/02/06 18:13:52 wiz Exp $
 
+MD5 (vanilla.zip) = 36b28ca78fc10ca2a3fa44d72928c329
 MD5 (snobol-0.99.4.tar.gz) = 187e141405e4dd4a2da681090cbf396a
