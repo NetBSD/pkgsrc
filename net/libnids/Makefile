@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/11 08:12:06 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/14 12:04:57 itojun Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.packetfactory.net/Projects/Libnids/dist/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.packetfactory.net/Projects/Libnids/
 
-DEPENDS=	libnet-*:../../net/libnet
+DEPENDS=	libnet-*:../../devel/libnet
 
 GNU_CONFIGURE=	yes
 
