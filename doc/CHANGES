@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2616 2003/06/29 11:46:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.2617 2003/06/29 13:42:49 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lftp to 2.6.6 [uebayasi 2003-06-29]
 	Updated xosd to 2.2.2 [jmmv 2003-06-29]
 	Updated xmms-osd to 2.2.2 [jmmv 2003-06-29]
+	Updated ddskk to 20030629 [uebayasi 2003-06-29]
