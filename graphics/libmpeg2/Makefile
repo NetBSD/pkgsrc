@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/18 10:24:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/29 20:48:16 xtraeme Exp $
 
 DISTNAME=	mpeg2dec-0.4.0
 PKGNAME=	libmpeg2-0.4.0
@@ -12,13 +12,13 @@ COMMENT=	Library for decoding mpeg-2 and mpeg-1 video streams
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 PKGCONFIG_OVERRIDE+=    libmpeg2/convert/libmpeg2convert.pc.in
 PKGCONFIG_OVERRIDE+=    libmpeg2/libmpeg2.pc.in
 
 CONFIGURE_ARGS=	--enable-shared
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
