@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.34 2002/10/20 04:11:39 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.35 2002/10/20 09:10:42 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -260,13 +260,24 @@ post-install-script: install-rcd-scripts
 	${_PKG_SILENT}${_PKG_DEBUG}${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-generate-install-scripts:
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${DEINSTALL_SRC} |		\
-		${SED} ${FILES_SUBST_SED} > ${DEINSTALL_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${DEINSTALL_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${INSTALL_SRC} |		\
-		${SED} ${FILES_SUBST_SED} > ${INSTALL_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${INSTALL_FILE}
+post-build: generate-install-scripts
+generate-install-scripts:	# do nothing
+
+.if !empty(DEINSTALL_SRC)
+generate-install-scripts: ${DEINSTALL_FILE}
+${DEINSTALL_FILE}: ${DEINSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
+		${SED} ${FILES_SUBST_SED} > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.endif
+
+.if !empty(INSTALL_SRC)
+generate-install-scripts: ${INSTALL_FILE}
+${INSTALL_FILE}: ${INSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
+		${SED} ${FILES_SUBST_SED} > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.endif
 
 # rc.d scripts are automatically generated and installed into the rc.d
 # scripts example directory at the post-install step.  The following
