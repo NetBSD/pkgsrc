@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/06/05 00:00:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/23 14:11:50 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	isoENTS
 PKGNAME=	iso8879-1986
 PKGREVISION=	3
 CATEGORIES=	textproc
-MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rh@NetBSD.ORG
