@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/07/19 20:57:47 tv Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/19 21:21:20 tv Exp $
 
 DISTNAME=	gtk+-1.0.4
 CATEGORIES=	x11
@@ -15,7 +15,7 @@ CONFLICTS=	gtk+-1.0.0
 USE_X11=	yes
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool \
+CONFIGURE_ENV=	LIBTOOL=${LOCALBASE}/bin/libtool \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
