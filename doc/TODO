@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1095 2003/12/02 23:34:13 recht Exp $
+$NetBSD: TODO,v 1.1096 2003/12/02 23:41:28 recht Exp $
 
 Suggested new packages
 ======================
@@ -352,7 +352,6 @@ Suggested package updates
 	o postgresql-7.4
 	o proftpd-1.2.9
 	o pureftpd-1.0.17
-	o py-checker-0.8.13 [recht]
 	o py-curl-7.10.8
 	o py-dns-1.2.0
 	o py-psycopg-1.1.10
