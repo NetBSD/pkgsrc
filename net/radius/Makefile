@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/05/03 23:39:22 tv Exp $
+# $NetBSD: Makefile,v 1.11 1999/07/23 21:39:41 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -23,7 +23,7 @@ DECOMPRESS_CMD=	${GZCAT} -f
 DIST_SUBDIR=	radius
 INSTALL_TARGET=	man-install install util-install config-install
 MESSAGE_FILE=   ${WRKDIR}/MESSAGE
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
 MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
