@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/03/04 09:12:07 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2001/05/03 14:41:30 jlam Exp $
 
 --- configure.orig	Mon Feb 26 15:35:33 2001
 +++ configure
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/04 09:12:07 jlam Exp $
  
 +# Use ${PKGLOCALEDIR} for the location of installed locale files.
 +DATADIRNAME="${PKGLOCALEDIR}"
-+localedir='${prefix}/share/locale'
++localedir='${prefix}/${DATADIRNAME}/locale'
  
  
  
