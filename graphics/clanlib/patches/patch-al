@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2000/09/02 19:22:41 wiz Exp $
+$NetBSD: patch-al,v 1.2 2000/12/08 01:33:42 wiz Exp $
 
 --- Makefile.in.orig	Sun Sep 26 18:44:16 1999
 +++ Makefile.in
@@ -11,3 +11,21 @@ $NetBSD: patch-al,v 1.1 2000/09/02 19:22:41 wiz Exp $
  	@ln -s -f libclanlayer1.so.$(D_VERSION_MINOR) libclanlayer1.so.$(D_VERSION_MAJOR)
  	@ln -s -f libclanlayer1.so.$(D_VERSION_MAJOR) libclanlayer1.so
  
+@@ -408,7 +408,7 @@
+ 
+ libclan-display-x11.so: $(OBJF_DISP_X11)
+ 	@echo "Building dynamic library (libclan-display-x11.so)"
+-	@$(LINK_COMMAND) @x_libraries@ -o libclan-display-x11.so.$(D_VERSION_MINOR) $(OBJF_DISP_X11)
++	@$(LINK_COMMAND) -Wl,-R$(X11BASE)/lib @x_libraries@ -o libclan-display-x11.so.$(D_VERSION_MINOR) $(OBJF_DISP_X11)
+ 
+ libclan-display-ptc.so: $(OBJF_DISP_PTC) libclan-display-x11.so
+ 	@echo "Building dynamic library (libclan-display-ptc.so)"
+@@ -416,7 +416,7 @@
+ 
+ libclan-display-glx.so: $(OBJF_DISP_GLX) libclan-display-x11.so
+ 	@echo "Building dynamic library (libclan-display-glx.so)"
+-	@$(LINK_COMMAND) -L . -Wl,-rpath,$(TARGET_PREFIX) libclan-display-x11.so.$(D_VERSION_MINOR) @x_libraries@ -lGL -lGLU -o libclan-display-glx.so.$(D_VERSION_MINOR) $(OBJF_DISP_GLX)
++	@$(LINK_COMMAND) -L . -Wl,-R$(X11BASE)/lib libclan-display-x11.so.$(D_VERSION_MINOR) @x_libraries@ -lGL -lGLU -o libclan-display-glx.so.$(D_VERSION_MINOR) $(OBJF_DISP_GLX)
+ 
+ libclan-display-ggi.so: $(OBJF_DISP_GGI)
+ 	@echo "Building dynamic library (libclan-display-ggi.so)"
