@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3825 2003/11/14 08:52:56 wiz Exp $
+$NetBSD: CHANGES,v 1.3826 2003/11/14 09:20:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4601,3 +4601,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bitchx to 1.0.3.19nb4 [jschauma 2003-11-12]
 	Updated ipa to 1.3.6 [xtraeme 2003-11-13]
 	Updated uvscan to 4.24.0 [wiz 2003-11-14]
+	Updated klavg to 1.1nb3 [wiz 2003-11-14]
