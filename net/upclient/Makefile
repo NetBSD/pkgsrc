@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/16 19:49:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/26 04:45:33 hubertf Exp $
 #
 
 DISTNAME=	upclient-4.09
@@ -84,8 +84,8 @@ do-install:
 		-e 's|@PREFIX@|${PREFIX}|g' \
 		-e 's|@INSTALL@|${INSTALL}|g' \
 		-e 's|@SU@|${SU}|g' \
-		${FILESDIR}/upclient.sh >${PREFIX}/etc/rc.d/upclient.sh
-	${CHMOD} +x ${PREFIX}/etc/rc.d/upclient.sh
+		${FILESDIR}/upclient.sh >${PREFIX}/etc/rc.d/upclient
+	${CHMOD} +x ${PREFIX}/etc/rc.d/upclient
 
 pre-package:
 	@${ECHO} '********************************************************' ;\
