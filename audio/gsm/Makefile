@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/18 16:15:10 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/07/15 11:51:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:39 max Exp 
 #
 
@@ -14,6 +14,5 @@ WRKSRC=         ${WRKDIR}/gsm-1.0-pl10
 
 post-install:
 	@strip ${PREFIX}/bin/toast
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
