@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tofmipd.sh,v 1.1 2004/06/06 05:08:34 schmonz Exp $
+# $NetBSD: tofmipd.sh,v 1.2 2004/06/10 16:33:40 schmonz Exp $
 #
 
 # PROVIDE: mail
@@ -11,6 +11,7 @@
 name="tofmipd"
 rcvar=$name
 command="@PREFIX@/bin/tmda-ofmipd"
+command_args="-b"
 command_interpreter="@PYTHONBIN@"
 
 load_rc_config $name
