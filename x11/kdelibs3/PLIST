@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/02/04 13:58:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/03/09 11:22:23 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -665,6 +665,8 @@ include/renamedlgplugin.h
 include/scriptclientinterface.h
 include/scriptinterface.h
 include/scriptmanager.h
+${CUPS}lib/kde3/cupsdconf.la
+${CUPS}lib/kde3/cupsdconf.so
 lib/kde3/dcopserver.la
 lib/kde3/dcopserver.so
 lib/kde3/kabc_dir.la
@@ -765,10 +767,14 @@ lib/kde3/libkatepart.la
 lib/kde3/libkatepart.so
 lib/kde3/libkcertpart.la
 lib/kde3/libkcertpart.so
+lib/kde3/libkdeprint_management_module.la
+lib/kde3/libkdeprint_management_module.so
 lib/kde3/libkhtmlpart.la
 lib/kde3/libkhtmlpart.so
 lib/kde3/libkmultipart.la
 lib/kde3/libkmultipart.so
+lib/kde3/libshellscript.la
+lib/kde3/libshellscript.so
 lib/kde3/plugins/designer/kdewidgets.la
 lib/kde3/plugins/designer/kdewidgets.so
 lib/kde3/plugins/styles/highcolor.la
@@ -787,8 +793,6 @@ lib/libartskde.la
 lib/libartskde.so
 lib/libartskde.so.3
 lib/libartskde.so.3.0
-${CUPS}lib/libcupsdconf.la
-${CUPS}lib/libcupsdconf.so
 lib/libkabc.la
 lib/libkabc.so
 lib/libkabc.so.3
@@ -826,6 +830,8 @@ lib/libkdefx.la
 lib/libkdefx.so
 lib/libkdefx.so.6
 lib/libkdefx.so.6.0
+${CUPS}lib/libkdeinit_cupsdconf.la
+${CUPS}lib/libkdeinit_cupsdconf.so
 lib/libkdeinit_dcopserver.la
 lib/libkdeinit_dcopserver.so
 lib/libkdeinit_kaddprinterwizard.la
@@ -928,10 +934,6 @@ lib/libkwalletclient.la
 lib/libkwalletclient.so
 lib/libkwalletclient.so.1
 lib/libkwalletclient.so.1.0
-lib/libshellscript.la
-lib/libshellscript.so
-lib/libshellscript.so.0
-lib/libshellscript.so.0.0
 lib/libvcard.la
 lib/libvcard.so
 lib/libvcard.so.0
@@ -1252,6 +1254,7 @@ share/kde/apps/khtml/css/quirks.css
 share/kde/apps/khtml/icons/crystalsvg/128x128/actions/bug.png
 share/kde/apps/khtml/icons/crystalsvg/16x16/actions/bug.png
 share/kde/apps/khtml/icons/crystalsvg/16x16/actions/images_display.png
+share/kde/apps/khtml/icons/crystalsvg/16x16/actions/wallet_open.png
 share/kde/apps/khtml/icons/crystalsvg/22x22/actions/bug.png
 share/kde/apps/khtml/icons/crystalsvg/22x22/actions/dbgnext.png
 share/kde/apps/khtml/icons/crystalsvg/22x22/actions/dbgrun.png
@@ -2622,6 +2625,7 @@ share/kde/icons/crystalsvg/16x16/actions/2rightarrow.png
 share/kde/icons/crystalsvg/16x16/actions/2uparrow.png
 share/kde/icons/crystalsvg/16x16/actions/about_kde.png
 share/kde/icons/crystalsvg/16x16/actions/airbrush.png
+share/kde/icons/crystalsvg/16x16/actions/apply.png
 share/kde/icons/crystalsvg/16x16/actions/attach.png
 share/kde/icons/crystalsvg/16x16/actions/back.png
 share/kde/icons/crystalsvg/16x16/actions/blend.png
@@ -3000,6 +3004,7 @@ share/kde/icons/crystalsvg/22x22/actions/2rightarrow.png
 share/kde/icons/crystalsvg/22x22/actions/2uparrow.png
 share/kde/icons/crystalsvg/22x22/actions/about_kde.png
 share/kde/icons/crystalsvg/22x22/actions/airbrush.png
+share/kde/icons/crystalsvg/22x22/actions/apply.png
 share/kde/icons/crystalsvg/22x22/actions/attach.png
 share/kde/icons/crystalsvg/22x22/actions/back.png
 share/kde/icons/crystalsvg/22x22/actions/blend.png
@@ -3299,6 +3304,7 @@ share/kde/icons/crystalsvg/32x32/actions/2leftarrow.png
 share/kde/icons/crystalsvg/32x32/actions/2rightarrow.png
 share/kde/icons/crystalsvg/32x32/actions/2uparrow.png
 share/kde/icons/crystalsvg/32x32/actions/about_kde.png
+share/kde/icons/crystalsvg/32x32/actions/apply.png
 share/kde/icons/crystalsvg/32x32/actions/attach.png
 share/kde/icons/crystalsvg/32x32/actions/back.png
 share/kde/icons/crystalsvg/32x32/actions/blend.png
@@ -4180,7 +4186,6 @@ share/kde/mimelnk/application/x-lzop.desktop
 share/kde/mimelnk/application/x-magicpoint.desktop
 share/kde/mimelnk/application/x-msaccess.desktop
 share/kde/mimelnk/application/x-msdos-program.desktop
-share/kde/mimelnk/application/x-mswinurl.desktop
 share/kde/mimelnk/application/x-mswrite.desktop
 share/kde/mimelnk/application/x-object.desktop
 share/kde/mimelnk/application/x-ogg.desktop
@@ -4306,6 +4311,7 @@ share/kde/mimelnk/text/x-log.desktop
 share/kde/mimelnk/text/x-lyx.desktop
 share/kde/mimelnk/text/x-makefile.desktop
 share/kde/mimelnk/text/x-moc.desktop
+share/kde/mimelnk/text/x-mswinurl.desktop
 share/kde/mimelnk/text/x-objcsrc.desktop
 share/kde/mimelnk/text/x-pascal.desktop
 share/kde/mimelnk/text/x-perl.desktop
@@ -4376,6 +4382,7 @@ share/kde/services/ppm.kimgio
 share/kde/services/rlogin.protocol
 share/kde/services/rtsp.protocol
 share/kde/services/shellscript.desktop
+share/kde/services/ssh.protocol
 share/kde/services/telnet.protocol
 share/kde/services/tga.kimgio
 share/kde/services/tiff.kimgio
