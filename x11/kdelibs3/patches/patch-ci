@@ -1,0 +1,13 @@
+$NetBSD: patch-ci,v 1.1 2005/03/17 09:46:36 markd Exp $
+
+--- kdecore/network/kresolver.h.orig	2004-07-18 07:22:34.000000000 +1200
++++ kdecore/network/kresolver.h
+@@ -926,6 +926,8 @@ private:
+   KResolverPrivate* d;
+   friend class KResolverResults;
+   friend class ::KNetwork::Internal::KResolverManager;
++  
++  static QStringList *idnDomains;
+ };
+ 
+ }				// namespace KNetwork
