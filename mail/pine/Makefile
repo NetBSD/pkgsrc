@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/05/16 08:35:10 abs Exp $
+# $NetBSD: Makefile,v 1.46 2001/06/04 22:22:44 jtb Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -11,6 +11,8 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet E-mail and News
+
+LICENSE=	pine-license
 
 BUILD_DEFS+=	PINE_USE_LDAP
 
