@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:49 agc Exp $
 
-MD5 (cups-1.1.6-3-source.tar.bz2) = 1f85c53afc8f2eb752eb3f24d220ac3e
+SHA1 (cups-1.1.6-3-source.tar.bz2) = 6c7170974fd31309a7f50c35973cde9bc35dd648
+Size (cups-1.1.6-3-source.tar.bz2) = 4398801 bytes
 SHA1 (patch-aa) = b24523500b38d56530d7a379aa7cd889f21160c9
 SHA1 (patch-ab) = b1d7878e470af8f84a42162275562d28773d94bf
 SHA1 (patch-ac) = 3069f84c48e29f8696586e7ed1b25c8e3ff297ea
