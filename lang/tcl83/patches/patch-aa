@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/10 11:58:29 grant Exp $
 
---- Makefile.in.orig	Fri Oct 19 20:24:15 2001
-+++ Makefile.in	Tue Oct  7 21:57:52 2003
-@@ -87,7 +87,7 @@
+--- Makefile.in.orig	2001-10-20 10:24:15.000000000 +1000
++++ Makefile.in
+@@ -87,7 +87,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -169,8 +169,8 @@
+@@ -169,8 +169,8 @@ SHELL			= /bin/sh
  INSTALL_STRIP_PROGRAM   = -s
  INSTALL_STRIP_LIBRARY  = -S -S
  
@@ -22,18 +22,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  INSTALL_LIBRARY		= ${INSTALL}
  INSTALL_DATA		= ${INSTALL} -m 644
  
-@@ -187,8 +187,8 @@
+@@ -187,8 +187,8 @@ TCL_EXE			= tclsh
  # configure script.  You shouldn't normally need to modify any of
  # these definitions by hand.
  
 -STLIB_LD		= @STLIB_LD@
 -SHLIB_LD		= @SHLIB_LD@
-+STLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
++STLIB_LD		= ${AR} cr
 +SHLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
  SHLIB_CFLAGS		= @SHLIB_CFLAGS@
  
  SHLIB_SUFFIX		= @SHLIB_SUFFIX@
-@@ -235,8 +235,9 @@
+@@ -235,8 +235,9 @@ DLTEST_DIR		= @TCL_SRC_DIR@/unix/dltest
  # Must be absolute to so the corresponding tcltest's tcl_library is absolute.
  TCL_BUILDTIME_LIBRARY	= @TCL_SRC_DIR@/library
  
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  
  #----------------------------------------------------------------
  # The information below should be usable as is.  The configure
-@@ -420,6 +421,7 @@
+@@ -420,6 +421,7 @@ ${TCL_LIB_FILE}: ${OBJS} ${STUB_LIB_FILE
  	@MAKE_LIB@
  	if test "x@DL_OBJS@" = "xtclLoadAout.o"; then \
  		$(RANLIB) ${TCL_LIB_FILE}; \
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	fi
  
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
-@@ -440,11 +442,11 @@
+@@ -440,11 +442,11 @@ objs: ${OBJS}
  
  
  tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  		@TCL_LD_SEARCH_FLAGS@ -o tcltest
  
  # Note, in the target below TCL_LIBRARY needs to be set or else
-@@ -538,7 +540,7 @@
+@@ -538,7 +540,7 @@ install-binaries: binaries
  	    chmod +x $(SRC_DIR)/install-sh; \
  	    fi
  	@echo "Installing $(TCL_LIB_FILE) to $(LIB_INSTALL_DIR)/"
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	@if test "x@DL_OBJS@" = "xtclLoadAout.o"; then \
  	    (cd $(LIB_INSTALL_DIR); $(RANLIB) $(TCL_LIB_FILE)); \
  	    fi
-@@ -989,7 +991,7 @@
+@@ -989,7 +991,7 @@ tclUnixInit.o: $(UNIX_DIR)/tclUnixInit.c
  
  xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
  	@DL_OBJS@ ${BUILD_DLTEST}
