@@ -1,7 +1,7 @@
-# $NetBSD: builtin.mk,v 1.1 2004/10/08 03:59:36 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/10/08 04:02:35 xtraeme Exp $
 
 _COMPOSITE_H=	${X11BASE}/include/X11/extensions/composite.h
-_COMPOSITE_PROTO_H=	${X11BASE}/include/X11/extensions/composite_proto.h
+_COMPOSITE_PROTO_H=	${X11BASE}/include/X11/extensions/compositeproto.h
 
 .if !defined(IS_BUILTIN.compositeext)
 IS_BUILTIN.compositeext=     no
