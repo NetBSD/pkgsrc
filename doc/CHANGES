@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7054 2004/08/31 14:20:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.7055 2004/08/31 15:38:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated yelp to 2.6.2 [jmmv 2004-08-31]
 	Updated drivel to 1.2.0 [jmmv 2004-08-31]
 	Updated libgnome to 2.6.1.2 [jmmv 2004-08-31]
+	Updated getmail to 4.1.3 [schmonz 2004-08-31]
