@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.23 2003/09/12 05:15:07 jlam Exp $
+# $NetBSD: install,v 1.24 2003/09/13 10:06:36 jlam Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -382,8 +382,11 @@ VIEW-INSTALL)
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
 		     -n "${SUPPORT_FILES}" -o				\
-		     -n "${SUPPORT_FILES_PERMS}" ]; then
-			${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
+		     -n "${SUPPORT_FILES_PERMS}" ] ||			\
+		   [ "${_PKG_RCD_SCRIPTS}" = "YES" -a			\
+		     -n "${RCD_SCRIPTS}" ]; then
+			${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
+				${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
 		fi
 	fi
 	;;
