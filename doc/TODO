@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2285 2004/10/30 10:32:47 wiz Exp $
+$NetBSD: TODO,v 1.2286 2004/10/30 10:40:19 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -231,6 +231,9 @@ Suggested new packages
 	http://freepats.opensrc.org/
 	Free and open set of GUS patches (e.g. for timidity)
 
+	grip
+	http://nostatic.org/grip/
+	cd-player and cd-ripper for the Gnome desktop
 
 Suggested package updates
 =========================
