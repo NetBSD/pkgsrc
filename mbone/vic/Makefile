@@ -1,3 +1,11 @@
+# $NetBSD: Makefile,v 1.2 1997/11/19 16:28:18 is Exp $
+#
+# NetBSD package for:	vic
+# Version required:	2.8
+# Date created:		1997 Nov 19
+# By:			is
+# 
+# based on:
 # New ports collection makefile for:	vic
 # Version required:	2.6
 # Date created:		14 December 1994
@@ -11,7 +19,7 @@ CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 DISTFILES=	vicsrc-2.8.tar.gz
 
-MAINTAINER=	fenner@FreeBSD.ORG
+MAINTAINER=	is@netbsd.org
 
 LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
 
