@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.399 2003/08/27 07:39:44 grant Exp $
+# $NetBSD: Makefile,v 1.400 2003/08/30 21:34:03 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -293,6 +293,7 @@ SUBDIR+=	tnftpd
 SUBDIR+=	totd
 SUBDIR+=	traceroute-as
 SUBDIR+=	trafshow
+SUBDIR+=	tsclient
 SUBDIR+=	tspc
 SUBDIR+=	ttt
 SUBDIR+=	ucd-snmp
