@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST-md.shared,v 1.2 1998/01/28 15:33:54 hubertf Exp $
-@comment rest (m68k, arm32, i386, pc532, pica, sparc, vax):
+@comment $NetBSD: PLIST-md.shared,v 1.3 1998/12/02 02:28:31 tv Exp $
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/DB_File.so
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/DB_File.bs
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl/Fcntl.so
