@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.20 2004/02/21 13:08:31 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.21 2004/04/02 18:03:01 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd February 21, 2004
+.Dd April 2, 2004
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -270,7 +270,10 @@ Defaults to
 A list of binary sets to be extracted inside
 .Sy DESTDIR .
 Defaults to
-.Ql base.tgz comp.tgz etc.tgz text.tgz .
+.Ql base.tgz comp.tgz etc.tgz kern-GENERIC.tgz text.tgz .
+If no kernel is extracted by these sets, an empty
+.Pa /netbsd
+file is created inside the chroot.
 .It SETS_X11
 A list of binary sets of the X Window system.
 This has the same behavior
