@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1098 2003/12/03 00:55:43 xtraeme Exp $
+$NetBSD: TODO,v 1.1099 2003/12/03 01:37:53 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Amaya-8.2 [pkg/23607]
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
 	o R-1.8.1 [markd]
