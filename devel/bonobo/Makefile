@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2001/04/27 19:44:39 danw Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/22 05:53:21 rh Exp $
 #
 
-DISTNAME=		bonobo-1.0.2
-PKGNAME=		bonobo-1.0.2nb1
+DISTNAME=		bonobo-1.0.4
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/bonobo/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Architecture for creating reusable software components
 
 BUILD_DEPENDS+=		bison-*:../../devel/bison
-DEPENDS+=		ORBit>=0.5.7:../../net/ORBit
+DEPENDS+=		ORBit>=0.5.8:../../net/ORBit
 DEPENDS+=		gdk-pixbuf-gnome>=0.10.0:../../graphics/gdk-pixbuf-gnome
 DEPENDS+=		oaf>=0.6.5:../../devel/oaf
 DEPENDS+=		gnome-libs>=1.2.13:../../x11/gnome-libs
