@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/05/22 22:32:03 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/05/22 22:38:30 tron Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -10,17 +10,16 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ncftp.com/ncftp/
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+=	--disable-readline
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 .endif
+DEPENDS+=	readline-2.2:../../devel/readline
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-CFLAGS+=	 	-I${PREFIX}/include
 .if ${USE_SOCKS} == 4
 CONFIGURE_ARGS+= 	--enable-socks
 DEPENDS+=		socks4-2.2:../../net/socks4
