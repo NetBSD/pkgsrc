@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2004/11/29 01:10:04 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	bdb dynamic kerberos sasl slp
@@ -12,6 +12,9 @@ PKG_DEFAULT_OPTIONS+=	bdb
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 # db3?
 .  include "../../mk/bdb.buildlink3.mk"
+.endif
+BDB_TYPE?=		none
+.if ${BDB_TYPE} != "none"
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
 .  if !empty(PKG_OPTIONS:Mdynamic)
 CONFIGURE_ARGS+=	--enable-hdb=mod
