@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5608 2004/04/16 14:04:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.5609 2004/04/16 14:34:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1998,3 +1998,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gst-plugins-theora to 0.8.1nb1 [jmmv 2004-04-15]
 	Updated gconf-editor to 2.6.1 [jmmv 2004-04-15]
 	Updated bug-buddy to 2.6.1 [jmmv 2004-04-15]
+	Updated qt3-libs to 3.3.1 [recht 2004-04-15]
+	Updated qt3-tools to 3.3.1 [recht 2004-04-15]
+	Updated qt3-docs to 3.3.1 [recht 2004-04-15]
+	Updated qt3-psql to 3.3.1 [recht 2004-04-15]
+	Updated qt3-mysql to 3.3.1 [recht 2004-04-15]
+	Updated qt3 to 3.3.1 [recht 2004-04-15]
