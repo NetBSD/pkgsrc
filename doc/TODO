@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1572 2004/04/04 23:22:42 recht Exp $
+$NetBSD: TODO,v 1.1573 2004/04/05 02:31:06 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -243,7 +243,6 @@ Suggested package updates
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
-	o lua-5.0.2
 	o lwm-1.2.0
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
