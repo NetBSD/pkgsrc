@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/16 09:02:26 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/16 12:16:51 wiz Exp $
 
 DISTNAME=		fib.c
 PKGNAME=		fib-980203
@@ -25,6 +25,6 @@ benchmark:
 
 results:
 	-@${MKDIR} /tmp/benches/`domainname`
-	-@cp ${WRKSRC}/fib.out /tmp/benches/`domainname`/fib.`uname`-`uname -m`-`uname -r`.`hostname`
+	-@${CP} ${WRKSRC}/fib.out /tmp/benches/`domainname`/fib.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
