@@ -1,14 +1,14 @@
-$NetBSD: patch-ak,v 1.3 2003/09/03 13:08:06 atatat Exp $
+$NetBSD: patch-ak,v 1.4 2003/11/03 00:56:26 heinz Exp $
 
---- rules/30_text_es.cf.orig	2003-03-17 18:56:57.000000000 -0500
-+++ rules/30_text_es.cf
-@@ -55,9 +55,6 @@ lang es describe MDAEMON_2_7_4		Received
- lang es describe SMTPD_IN_RCVD		Received del servidor SMTPD32 (SMTPD32-n.n)
- lang es describe POST_IN_RCVD		Received contene el nombre falso 'Post.cz'
- lang es describe RCVD_IN_RELAYS_ORDB_ORG Recibido de un relay en relays.ordb.org
--lang es describe RCVD_IN_OSIRUSOFT_COM	Recibido de un relay en relays.osirusoft.com
--lang es describe X_OSIRU_SPAM_SRC	Osirusoft.com: el remitente es Confirmada Fuente de Spam
--lang es describe X_OSIRU_SPAMWARE_SITE	Osirusoft.com: el remitente es un sitio afin al Spame o vendedor
- lang es describe RCVD_IN_RBL		Recibido desde un RBLed relay, visite http://www.mail-abuse.org/rbl/
- lang es describe RCVD_IN_RSS		Recibido desde RSSed relay, visite http://www.mail-abuse.org/rss/
- lang es describe RCVD_IN_DUL		Recibido desde dialup, visite http://www.mail-abuse.org/dul/
+--- lib/Mail/SpamAssassin/DBBasedAddrList.pm.orig	Sat Mar 29 00:48:07 2003
++++ lib/Mail/SpamAssassin/DBBasedAddrList.pm
+@@ -5,7 +5,8 @@ use bytes;
+ use Fcntl;
+ 
+ # tell AnyDBM_File to prefer DB_File, if possible.
+-# BEGIN { @AnyDBM_File::ISA = qw(DB_File GDBM_File NDBM_File SDBM_File); }
++# Pkgsrc: enable following line because BayesStore.pm already broke the rule
++BEGIN { @AnyDBM_File::ISA = qw(DB_File GDBM_File NDBM_File SDBM_File); }
+ # off until 3.0; there's lots of existing AWLs out there this breaks.
+ 
+ use AnyDBM_File;
