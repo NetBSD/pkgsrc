@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.302 2003/02/21 14:03:14 wiz Exp $
+$NetBSD: TODO,v 1.303 2003/02/21 14:25:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -265,7 +265,6 @@ Suggested package updates
 	o tuxpaint-0.9.7
 	o tuxpaint-stamps-2003.01.28
 	o vfu-4.00
-	o vice-1.11
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wdm-1.22.1
 	o webalizer-2.01-10 [pkg/20445]
