@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 1999/01/20 02:09:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.50 1999/01/22 00:47:47 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -31,6 +31,7 @@
 #    SUBDIR += ftpsearch
 #    SUBDIR += ftptool
     SUBDIR += gated
+    SUBDIR += gaim
 #    SUBDIR += gnu-finger
 #    SUBDIR += gopher
     SUBDIR += icb
