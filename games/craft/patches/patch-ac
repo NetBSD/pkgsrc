@@ -1,4 +1,5 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/19 10:26:47 tron Exp $
+
 --- craft_def.h.orig	Fri Feb 21 04:49:57 1997
 +++ craft_def.h	Thu Sep 24 09:19:35 1998
 @@ -17,9 +17,9 @@
