@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.10 2004/07/03 20:53:47 grant Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.11 2004/07/04 08:30:46 grant Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -40,6 +40,11 @@ case $arg in
 	arg=
 	addtoprivatecache=yes
 	;;
+--export-dynamic)
+	# Solaris' linker uses -G to create shared objects.
+	arg=-G
+	addtoprivatecache=yes
+	;;
 -f[Pp][Ii][Cc])
 	# SunPro uses -Kpic to create position independent code.
 	#
@@ -47,6 +52,11 @@ case $arg in
 	addtoprivatecache=yes
 	;;
 -fno-gnu-keywords)
+	arg=
+	addtoprivatecache=yes
+	;;
+	# No flag is required to enforce strict prototypes.
+-fstrict-prototypes)
 	arg=
 	addtoprivatecache=yes
 	;;
