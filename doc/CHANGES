@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8058 2004/11/27 10:50:44 gson Exp $
+$NetBSD: CHANGES,v 1.8059 2004/11/27 10:52:51 gson Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5495,3 +5495,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Net-Netmask to 1.9011 [wiz 2004-11-27]
 	Updated gnotime to 2.2.1 [jdolecek 2004-11-27]
 	Updated tcl-snack to 2.2.8 [gson 2004-11-27]
+	Updated wavesurfer to 1.7.4 [gson 2004-11-27]
