@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2002/11/06 21:51:26 heinz Exp $
+$NetBSD: distinfo,v 1.10 2003/01/29 17:34:28 tron Exp $
 
 SHA1 (Mail-SpamAssassin-2.43.tar.gz) = ffe0f4d80ab2367bb3df856ec777bafb6ac7616e
 Size (Mail-SpamAssassin-2.43.tar.gz) = 538505 bytes
+SHA1 (patch-aa) = 734d63b947e934eee8809bbd0b643bc6232f193c
 SHA1 (patch-ab) = df905aebb1e374a549808a5b925fbf9511dc3333
 SHA1 (patch-ac) = 229d234f56d113022f08d5b3250c4f12d6808636
 SHA1 (patch-ad) = 41a0130905fe000613a963acd7bb7cc8e743469c
