@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/03/26 14:34:34 wiz Exp $
 
 .if !defined(SMPEG_BUILDLINK2_MK)
 SMPEG_BUILDLINK2_MK=	# defined
@@ -14,6 +14,7 @@ BUILDLINK_FILES.smpeg+=		lib/libsmpeg-*
 BUILDLINK_FILES.smpeg+=		lib/libsmpeg.*
 
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	smpeg-buildlink
 
