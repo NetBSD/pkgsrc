@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/19 05:36:13 jwise Exp $
+lib/postgresql.jar
+share/doc/jdbc-postgresql/README
+share/doc/jdbc-postgresql/README_6.3
+share/doc/jdbc-postgresql/Implementation
+share/doc/jdbc-postgresql/CHANGELOG
+share/examples/jdbc-postgresql/ImageViewer.java
+share/examples/jdbc-postgresql/basic.java
+share/examples/jdbc-postgresql/blobtest.java
+share/examples/jdbc-postgresql/datestyle.java
+share/examples/jdbc-postgresql/metadata.java
+share/examples/jdbc-postgresql/psql.java
+share/examples/jdbc-postgresql/threadsafe.java
+share/doc/jdbc-postgresql/api/AllNames.html
+share/doc/jdbc-postgresql/api/Package-postgresql.fastpath.html
+share/doc/jdbc-postgresql/api/Package-postgresql.html
+share/doc/jdbc-postgresql/api/Package-postgresql.largeobject.html
+share/doc/jdbc-postgresql/api/packages.html
+share/doc/jdbc-postgresql/api/postgresql.Connection.html
+share/doc/jdbc-postgresql/api/postgresql.Driver.html
+share/doc/jdbc-postgresql/api/postgresql.Field.html
+share/doc/jdbc-postgresql/api/postgresql.PG_Stream.html
+share/doc/jdbc-postgresql/api/postgresql.ResultSet.html
+share/doc/jdbc-postgresql/api/postgresql.fastpath.Fastpath.html
+share/doc/jdbc-postgresql/api/postgresql.fastpath.FastpathArg.html
+share/doc/jdbc-postgresql/api/postgresql.largeobject.LargeObject.html
+share/doc/jdbc-postgresql/api/postgresql.largeobject.LargeObjectManager.html
+share/doc/jdbc-postgresql/api/tree.html
+@dirrm share/doc/jdbc-postgresql/api
+@dirrm share/doc/jdbc-postgresql
+@dirrm share/examples/jdbc-postgresql
