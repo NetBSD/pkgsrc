@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2002/05/11 11:56:58 rh Exp $
+# $NetBSD: Makefile.common,v 1.23 2002/05/12 21:39:20 rh Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.17.0
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_GMAKE=		YES
