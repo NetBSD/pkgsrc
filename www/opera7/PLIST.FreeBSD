@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2004/01/25 19:12:31 heinz Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2004/06/06 23:06:18 heinz Exp $
 bin/opera
 man/man1/opera.1
 share/doc/opera/LICENSE
 share/doc/opera/help
-share/opera/bin/m2.so
 share/opera/bin/missingsyms.so
+share/opera/bin/spellcheck.so
 share/opera/bin/opera
 share/opera/bin/works
 share/opera/chartables.bin
@@ -12,6 +12,7 @@ share/opera/config/opera6rc
 share/opera/config/opera6rc.fixed
 share/opera/help/advertising.html
 share/opera/help/background.png
+share/opera/help/chat.html
 share/opera/help/dialogs.html
 share/opera/help/filetypes.html
 share/opera/help/fonts.html
@@ -32,6 +33,7 @@ share/opera/help/mouse.html
 share/opera/help/multimedia.html
 share/opera/help/network.html
 share/opera/help/page.html
+share/opera/help/panels.html
 share/opera/help/paths.html
 share/opera/help/personal.html
 share/opera/help/preferences.html
@@ -63,7 +65,9 @@ share/opera/images/startup1.png
 share/opera/images/startup2.png
 share/opera/ini/dialog.ini
 share/opera/ini/fastforward.ini
-share/opera/ini/minimal_toolbar.ini
+share/opera/ini/filehandler.ini
+share/opera/ini/pluginpath.ini
+share/opera/ini/spellcheck.ini
 share/opera/ini/standard_keyboard.ini
 share/opera/ini/standard_menu.ini
 share/opera/ini/standard_mouse.ini
@@ -74,6 +78,7 @@ share/opera/java/opera.policy
 share/opera/jsconsole.html
 share/opera/lngcode.txt
 share/opera/locale/en/default.adr
+share/opera/locale/en/lngcode.txt
 share/opera/locale/en/search.ini
 share/opera/locale/english.lng
 share/opera/opera6.adr
@@ -114,7 +119,7 @@ share/opera/styles/OPF.css
 @dirrm share/opera/styles/user
 @dirrm share/opera/styles
 @dirrm share/opera/skin
-@dirrm share/opera/plugins
+@comment @dirrm share/opera/plugins
 @dirrm share/opera/locale/en
 @dirrm share/opera/locale
 @dirrm share/opera/java
@@ -123,4 +128,4 @@ share/opera/styles/OPF.css
 @dirrm share/opera/help
 @dirrm share/opera/config
 @dirrm share/opera/bin
-@dirrm share/opera
+@comment @dirrm share/opera
