@@ -1,13 +1,31 @@
-$NetBSD: patch-ar,v 1.3 1999/07/15 08:46:26 tron Exp $
+$NetBSD: patch-ar,v 1.4 1999/11/12 04:50:00 hubertf Exp $
 
---- kcontrol/info/info.cpp.orig	Mon Apr 12 11:02:27 1999
-+++ kcontrol/info/info.cpp	Wed Jul 14 21:25:26 1999
-@@ -116,6 +116,8 @@ bool GetInfo_XServer_Generic( KTabListBo
- #include "info_fbsd.cpp"
- #elif hpux
- #include "info_hpux.cpp"
-+#elif __NetBSD__
-+#include "info_netbsd.cpp"
- #elif __svr4__
- #include "info_svr4.cpp"
- #else
+--- ./kfm/kioserver.cpp	Mon Aug 23 18:01:03 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kioserver.cpp	Fri Nov 12 05:10:34 1999
+@@ -19,7 +19,7 @@
+ #include <sys/mnttab.h>
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined (__NetBSD__)
+ #include <sys/param.h>
+ #include <sys/ucred.h>
+ #include <sys/mount.h>
+@@ -420,7 +420,7 @@
+ 
+ QString KIOServer::findDeviceMountPoint( const char *_device, const char *_file )
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined (__NetBSD__)
+     if( !strcmp( "/etc/mtab", _file))
+     {
+ 	struct statfs *buf;
+@@ -447,7 +447,7 @@
+ 	}
+     }
+     
+-#endif /* __FreeBSD__ */             
++#endif /* __FreeBSD__ || __NetBSD__ */             
+ 
+ #ifdef HAVE_VOLMGT
+     const char *volpath;

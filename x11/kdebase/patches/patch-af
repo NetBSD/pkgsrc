@@ -1,41 +1,23 @@
-$NetBSD: patch-af,v 1.5 1998/08/07 11:18:07 agc Exp $
+$NetBSD: patch-af,v 1.6 1999/11/12 04:50:00 hubertf Exp $
 
---- kvt/resources.c.orig	Thu Dec 11 16:31:47 1997
-+++ kvt/resources.c	Wed Mar 25 11:07:12 1998
-@@ -27,8 +27,6 @@
- extern int login_shell,fat_sbar, MetaHandling;
- extern WindowInfo MyWinInfo;
- extern KeySym SecureKeysym;
--extern KeySym BigFontKeysym;
--extern KeySym SmallFontKeysym;
- extern KeySym PageUpKeysym;
- extern KeySym PageDownKeysym;
- #ifdef MAPALERT
-@@ -47,7 +45,6 @@
+--- ./kdehelp/khelp.h	Mon Mar 30 21:28:15 1998
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdehelp/khelp.h	Fri Nov 12 05:10:33 1999
+@@ -22,9 +22,15 @@
+ #include <sys/msg.h>
  
- char *mask_string = NULL, *login_shell_string = NULL, *scrollbar = NULL;
- char* SecureKeysym_string=NULL;
--char *BigFontKeysym_string = NULL, *SmallFontKeysym_string = NULL;
- char *PageUpKeysym_string = NULL, *PageDownKeysym_string = NULL;
- #ifdef GREEK_KBD
- char *elot_string = NULL;
-@@ -74,8 +71,6 @@
-   {&saveLines_string,           "saveLines"},
-   {&meta_string,                "meta"},
-   {&SecureKeysym_string,        "secure_key"},
--  {&BigFontKeysym_string,       "bigger_font_key"},
--  {&SmallFontKeysym_string,     "smaller_font_key"},
-   {&PageUpKeysym_string,        "page_up_key"},
-   {&PageDownKeysym_string,      "page_down_key"},
- #ifdef MAPALERT
-@@ -136,10 +131,6 @@
+ #ifndef __osf__
+-#ifdef BSD
+-#define msgbuf mymsg
+-#endif
++# ifdef BSD
++#  define msgbuf mymsg
++#  if __NetBSD_Version__ >= 104110000	/* 1.4K or higher */
++struct mymsg {
++	long	mtype;		/* message type (+ve integer) */
++	char	mtext[1];	/* message body */
++};      
++#  endif
++# endif
+ #endif
  
-   if(SecureKeysym_string)
-     SecureKeysym = XStringToKeysym(SecureKeysym_string);
--  if(BigFontKeysym_string)
--    BigFontKeysym = XStringToKeysym(BigFontKeysym_string);
--  if(SmallFontKeysym_string)
--    SmallFontKeysym = XStringToKeysym(SmallFontKeysym_string);
-   if(PageUpKeysym_string)
-     PageUpKeysym = XStringToKeysym(PageUpKeysym_string);
-   if(PageDownKeysym_string)
+ class KHelpMsg : protected msgbuf

@@ -1,22 +1,45 @@
-$NetBSD: patch-ad,v 1.7 1999/06/04 00:05:51 tron Exp $
+$NetBSD: patch-ad,v 1.8 1999/11/12 04:50:00 hubertf Exp $
 
---- kdm/Makefile.in.orig	Wed Apr 28 17:20:50 1999
-+++ kdm/Makefile.in	Fri Jun  4 01:01:03 1999
-@@ -102,7 +102,7 @@
- LIBXDMCP = @LIBXDMCP@
- LIBZ = @LIBZ@
- LIB_KAB = @LIB_KAB@
--LIB_KDECORE = @LIB_KDECORE@
-+LIB_KDECORE = @prefix@/lib/libkdecore.a -lXext $(LIB_QT)
- LIB_KDEUI = @LIB_KDEUI@
- LIB_KDEUTIL = @LIB_KDEUTIL@
- LIB_KFILE = @LIB_KFILE@
-@@ -234,7 +234,7 @@
- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- CXXLD = $(CXX)
- CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
--CFLAGS = @CFLAGS@
-+CFLAGS = @CFLAGS@ -DPREFIX=\"${prefix}\"
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- CCLD = $(CC)
+--- ./kcontrol/info/memory.cpp	Fri Jul 23 23:56:59 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kcontrol/info/memory.cpp	Fri Nov 12 05:10:32 1999
+@@ -30,6 +30,23 @@
+   freeMem->setAutoResize(TRUE);
+   freeMem->setFont(courierFont);
+ 
++#ifdef __NetBSD__
++  activeMem = new QLabel(klocale->translate("Active memory"), this);
++  activeMem->move(STARTX,STARTY+2*DY);
++  activeMem->setAutoResize(TRUE);
++  activeMem = new QLabel("0k", this);
++  activeMem->move(STARTX2,STARTY+2*DY);
++  activeMem->setAutoResize(TRUE);
++  activeMem->setFont(courierFont);
++
++  inactiveMem = new QLabel(klocale->translate("Inactive memory"), this);
++  inactiveMem->move(STARTX,STARTY+3*DY);
++  inactiveMem->setAutoResize(TRUE);
++  inactiveMem = new QLabel("0k", this);
++  inactiveMem->move(STARTX2,STARTY+3*DY);
++  inactiveMem->setAutoResize(TRUE);
++  inactiveMem->setFont(courierFont);
++#else
+   sharedMem = new QLabel(i18n("Shared memory"), this);
+   sharedMem->move(STARTX,STARTY+2*DY);
+   sharedMem->setAutoResize(TRUE);
+@@ -45,6 +62,7 @@
+   bufferMem->move(STARTX2,STARTY+3*DY);
+   bufferMem->setAutoResize(TRUE);
+   bufferMem->setFont(courierFont);
++#endif
+ 
+   swapMem = new QLabel(i18n("Swap memory"), this);
+   swapMem->move(STARTX,STARTY+5*DY);
+@@ -88,6 +106,8 @@
+ #include "memory_sgi.cpp"
+ #elif __FreeBSD__
+ #include "memory_fbsd.cpp"
++#elif __NetBSD__
++#include "memory_netbsd.cpp"
+ #elif hpux
+ #include "memory_hpux.cpp"
+ #else

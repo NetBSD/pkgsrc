@@ -1,23 +1,25 @@
-$NetBSD: patch-as,v 1.5 1999/09/12 20:41:00 christos Exp $
+$NetBSD: patch-as,v 1.6 1999/11/12 04:50:00 hubertf Exp $
 
---- kdehelp/khelp.h.orig	Mon Mar 30 14:28:15 1998
-+++ kdehelp/khelp.h	Sun Sep 12 16:26:55 1999
-@@ -22,9 +22,15 @@
- #include <sys/msg.h>
+--- ./kfm/kioslave/main.cpp	Thu Apr  8 00:56:48 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kioslave/main.cpp	Fri Nov 12 05:10:33 1999
+@@ -319,7 +319,7 @@
+     return;
+ }
  
- #ifndef __osf__
--#ifdef BSD
--#define msgbuf mymsg
--#endif
-+# ifdef BSD
-+#  define msgbuf mymsg
-+#  if __NetBSD_Version__ >= 104110000	/* 1.4K or higher */
-+struct mymsg {
-+	long	mtype;		/* message type (+ve integer) */
-+	char	mtext[1];	/* message body */
-+};      
-+#  endif
-+# endif
- #endif
- 
- class KHelpMsg : protected msgbuf
+-void KIOSlave::unmount( const char *_point )
++void KIOSlave::unmount( const char *_dev )
+ {
+     char buffer[ 1024 ];
+     int t = (int)time( 0L );
+@@ -352,8 +352,10 @@
+  	err = QString( "Volume Management is not running." );
+     }
+ #else
+-    sprintf( buffer, "umount %s 2>"_PATH_TMP"mnt%i", _point, t );
++    sprintf( buffer, "umount %s 2>"_PATH_TMP"mnt%i", _dev, t );
+     retvalue = system( buffer );
++    sprintf( buffer, "eject %s", _dev);
++    system( buffer );
+     
+     // test logfile here to remove it if it exists
+     // (if there is a warning, it can exist even if revalue==0)
