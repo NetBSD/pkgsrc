@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/01 10:56:51 martti Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/30 23:33:54 jlam Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
@@ -10,21 +10,14 @@ MAINTAINER=	p99dreyf@criens.u-psud.fr
 HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
-GCC_VERSION!=	${CC} --version
-.if ${GCC_VERSION}!="2.95.3"
-DEPENDS+=	{gcc,pgcc}>=${GCC_VERS}:../../lang/gcc
-GCC_VERS=	2.95.3
-.else 
-GCC_BINDIR=	/usr/bin
-.endif
-
+USE_BUILDLINK2=	# defined
 USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
+USE_CXX=	# defined
 
 NO_CONFIGURE=	# defined
+BUILD_DIRS=	${WRKSRC}/src
 
-MAKE_ENV+=	CC="--tag CC ${GCC_BINDIR}/cc"
-MAKE_ENV+=	CXX="--tag CXX ${GCC_BINDIR}/c++"
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 MAKEFILE=	gcc-libtool.mak
 
@@ -35,12 +28,9 @@ INCDIR=		${PREFIX}/include/stlport
 LIBDIR=		${PREFIX}/lib
 HTMLDIR=	${PREFIX}/share/doc/html/stlport
 
-do-build:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
 pre-install:
 	cd ${WRKSRC}/stlport && ${RM} -rf BC50 SC5 config/new_compiler old_hp
-	${FIND} ${WRKSRC}/stlport -name "*.orig" -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC}/stlport -name "*.orig" | ${XARGS} ${RM} -f
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw stlport ${PREFIX}/include
@@ -59,15 +49,5 @@ do-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.css *.html ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} images/* ${HTMLDIR}/images
 
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if !defined(GCC_BINDIR)
-PGCC_DEPEND!=	${PKG_INFO} -e "pgcc>=${GCC_VERS}" || ${ECHO}
-GCC_DEPEND!=	${PKG_INFO} -e "gcc>=${GCC_VERS}" || ${ECHO}
-.if ${PGCC_DEPEND} != ""
-GCC_BINDIR=	${PREFIX}/${PGCC_DEPEND}/bin
-.elif ${GCC_DEPEND} != ""
-GCC_BINDIR=	${PREFIX}/${GCC_DEPEND}/bin
-.endif
-MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
-.endif
