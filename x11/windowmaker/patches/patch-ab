@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.5 1999/01/16 12:38:09 tron Exp $
+$NetBSD: patch-ab,v 1.6 1999/02/02 10:24:11 tron Exp $
 
---- configure.orig	Sat Jan  9 20:55:54 1999
-+++ configure	Mon Jan 11 22:15:49 1999
-@@ -1240,8 +1240,8 @@
+--- configure.orig	Wed Jan 20 10:00:00 1999
++++ configure	Sun Jan 31 03:58:31 1999
+@@ -1300,8 +1300,8 @@
    echo "$ac_t""no" 1>&6
  fi
  
 -# Always use our own libtool.
 -LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+# Use NetBSD's pkglibtool.
++# Use NetBSD's pkglibtool
 +#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
