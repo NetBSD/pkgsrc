@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.10 2002/06/30 08:55:40 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.11 2002/06/30 17:25:04 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -200,6 +200,10 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 _BLNK_TRANSFORM+=	II:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 _BLNK_TRANSFORM+=	LL:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+.endif
+.if ${LOCALBASE} != "/usr/pkg"
+_BLNK_TRANSFORM+=	r:-I/usr/pkg
+_BLNK_TRANSFORM+=	r:-L/usr/pkg
 .endif
 .if ${LOCALBASE} != "/usr/local"
 _BLNK_TRANSFORM+=	r:-I/usr/local
