@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1085 2002/11/17 11:58:49 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1086 2002/11/21 00:49:32 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -142,6 +142,7 @@ PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
 # that if no buildlink.mk files are included, then they still point to
 # where headers and libraries for installed packages and X11R6 may be found.
 #
+USE_BUILDLINK2?=	no		# default to not using buildlink2
 BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
@@ -274,7 +275,7 @@ PKG_FC?=	f2c-f77
 .  if  (${PKG_FC} == "f2c-f77")
 # this is a DEPENDS not BUILD_DEPENDS because of the
 # shared Fortran libs
-.    if defined(USE_BUILDLINK2)
+.    if empty(USE_BUILDLINK2:[nN][oO])
 .      include "../../lang/f2c/buildlink2.mk"
 .    elif defined(USE_BUILDLINK_ONLY)
 .      include "../../lang/f2c/buildlink.mk"
@@ -363,7 +364,7 @@ LDFLAGS+=		${X11_LDFLAGS}
 .if ${_USE_RPATH} == "yes"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 .else
-.  if !defined(USE_BUILDLINK2)	# buildlink2 handles -R on its own
+.  if empty(USE_BUILDLINK2:M[nN][oO])
 LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
 .  endif
 .endif
@@ -1009,11 +1010,7 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if defined(USE_BUILDLINK2)
-.  if (${USE_BUILDLINK2} == "NO") || (${USE_BUILDLINK2} == "no")
-NO_BUILDLINK=		# defined
-.  endif
-.else
+.if !empty(USE_BUILDLINK2:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
 
