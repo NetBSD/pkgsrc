@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/17 22:56:26 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/24 15:30:32 grant Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
