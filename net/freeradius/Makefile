@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/16 13:51:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/19 18:59:12 jlam Exp $
 
 DISTNAME=	freeradius-1.0.1
 PKGREVISION=	4
@@ -81,26 +81,6 @@ CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
 
-pre-build:
-	cd ${WRKSRC} && ${LN} -s src/lib lib
-
-post-build:
-	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/certs
-	${INSTALL_DATA_DIR} ${EGDIR}/certs/demoCA
-
-.	for f in ${EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
-.	endfor
-.	undef f
-
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
-	cd ${WRKSRC} && ${FIND} . -name .libs | ${XARGS} ${RM} -rf
-
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
@@ -120,5 +100,25 @@ SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
 				-lpthread|g" 
 .endif
+
+pre-build:
+	cd ${WRKSRC} && ${LN} -s src/lib lib
+
+post-build:
+	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/certs
+	${INSTALL_DATA_DIR} ${EGDIR}/certs/demoCA
+
+.	for f in ${EGFILES}
+		${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
+.	endfor
+.	undef f
+
+	@${MKDIR} ${PKG_SYSCONFDIR}/certs
+	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
+	cd ${WRKSRC} && ${FIND} . -name .libs | ${XARGS} ${RM} -rf
 
 .include "../../mk/bsd.pkg.mk"
