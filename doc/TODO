@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1810 2004/06/05 12:02:23 dillo Exp $
+$NetBSD: TODO,v 1.1811 2004/06/05 17:14:14 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
-	o raine-0.40.2
 	o rdiff-backup-0.12.7
 	o rep-gtk-0.17
 	o roundup-0.7.2
