@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/27 11:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/03 22:47:34 kristerw Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 CATEGORIES=		misc
@@ -98,14 +98,18 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
+.if defined(DISTNAME)
 .if ${DISTNAME} == "OOo_${OO_VER}_SolarisSparc_install"
 PLIST_SRC=	${PKGDIR}/PLIST.SolarisSparc
-.elif ${DISTNAME} == "OOo_${OO_VER}_SolarisIntel_install"
+.  elif ${DISTNAME} == "OOo_${OO_VER}_SolarisIntel_install"
 PLIST_SRC=	${PKGDIR}/PLIST.SolarisIntel
-.elif ${DISTNAME} == "OOo_${OO_VER}_LinuxIntel_install"
+.  elif ${DISTNAME} == "OOo_${OO_VER}_LinuxIntel_install"
 PLIST_SRC=	${PKGDIR}/PLIST.LinuxIntel
-.else
+.  else
 PKG_FAIL_REASON= '${PKGNAME}:  cannot figure out which PLIST to use'
+.  endif
+.else
+DISTNAME=	# Dummy to prevent error from missing DISTNAME
 .endif
 
 .include "../../mk/bsd.pkg.mk"
