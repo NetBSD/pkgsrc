@@ -1,21 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2000/11/10 00:40:35 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2001/06/19 15:53:11 jlam Exp $
 
---- dialog.h.orig	Fri Aug 18 13:35:06 1995
+--- dialog.h.orig	Fri Aug 18 07:35:06 1995
 +++ dialog.h
-@@ -28,8 +28,12 @@
+@@ -28,7 +28,7 @@
  #ifdef ultrix
  #include <cursesX.h>
  #else
-+#if defined(HAVE_TRUE_NCURSES)
+-#include <curses.h>
 +#include <ncurses.h>
-+#else
- #include <curses.h>
  #endif
-+#endif
  
  /*
-  * Change these if you want
-@@ -42,6 +46,7 @@
+@@ -42,6 +42,7 @@
  #define TAB 9
  #define MAX_LEN 2048
  #define BUF_SIZE (10*1024)
@@ -23,7 +19,7 @@ $NetBSD: patch-ac,v 1.6 2000/11/10 00:40:35 wiz Exp $
  #define MIN(x,y) (x < y ? x : y)
  #define MAX(x,y) (x > y ? x : y)
  
-@@ -151,6 +156,9 @@
+@@ -151,6 +152,9 @@
  void draw_shadow (WINDOW * win, int y, int x, int height, int width);
  #endif
  
@@ -33,7 +29,7 @@ $NetBSD: patch-ac,v 1.6 2000/11/10 00:40:35 wiz Exp $
  int dialog_yesno (const char *title, const char *prompt, int height, int width);
  int dialog_msgbox (const char *title, const char *prompt, int height,
  		int width, int pause);
-@@ -196,6 +204,7 @@
+@@ -196,6 +200,7 @@
  extern __inline__ int
  mouse_wgetch (WINDOW * win)
  {
