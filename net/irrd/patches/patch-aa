@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/28 19:50:19 kim Exp $
+
+--- configure.in.orig	Mon Sep  6 15:31:59 1999
++++ configure.in	Fri Oct 22 19:03:11 1999
+@@ -39,7 +39,7 @@
+ 	CRYPT_LIB="-lcrypt"
+         AC_DEFINE(USE_LOCKF) 
+ 	;;
+-	*freebsd*) IRRD_OPS_LIBS=""
++	*freebsd*|*netbsd*) IRRD_OPS_LIBS=""
+ 	CRYPT_LIB="-lcrypt"
+         AC_DEFINE(USE_FLOCK)
+ 	;;
+@@ -91,11 +91,12 @@
+ fi
+ AC_PATH_PROG(PGPV_PATH,pgpv,no)
+ if test $PGPV_PATH = no; then
+-    AC_PATH_PROG(PGPV_PATH,pgp,no)
+-    if test $PGPV_PATH = no; then
++    AC_PATH_PROG(PGP_PATH,pgp,no)
++    if test $PGP_PATH = no; then
+         PGPV_PATH=""
+         AC_DEFINE(PGP,0)
+     else
++	PGPV_PATH="$PGP_PATH"
+         AC_DEFINE(PGP,26)
+     fi
+ else
+@@ -302,9 +303,10 @@
+ AC_CHECK_HEADERS(gdbm.h, [exist_gdbm=yes],[exist_gdbm=no])
+ fi
+ 
+-AC_CHECK_LIB(db, dbopen, [exist_db1=yes],[exist_db1=no])
+-if test $exist_db1 = yes; then
+ AC_CHECK_HEADERS(db.h, [exist_db1=yes],[exist_db1=no])
++if test $exist_db1 = yes; then
++AC_CHECK_FUNC(dbopen,[db1_lib=no],
++    [AC_CHECK_LIB(db, dbopen, [DB_LIB="-ldb"],[exist_db1=no])])
+ fi
+ 
+ AC_MSG_CHECKING(for GDBM preference)
+@@ -349,7 +351,6 @@
+   if test "$db1_pref" = "DB1"; then
+     if test $exist_db1 = yes; then
+         AC_DEFINE(USE_DB1)
+-        DB_LIB="-ldb"   
+         db_check=done
+         AC_MSG_RESULT(using DB1)
+     fi
+@@ -371,7 +372,6 @@
+   if test "$db1_pref" != "NODB1"; then
+     if test $exist_db1 = yes; then
+       AC_DEFINE(USE_DB1)
+-      DB_LIB="-ldb"
+       db_check=done
+     AC_MSG_RESULT(using DB1)
+     fi
+@@ -435,6 +435,13 @@
+  	      AC_DEFINE(HAVE_LINUX_2_2_5_IPV6)
+ 	    ]
+          )
++    ;;
++    *netbsd0|*netbsd1.[0123]*|*netbsd1.4|*netbsd1.4.*|*netbsd1.4[A-J] )
++            AC_MSG_RESULT(no)
++    ;;
++    *netbsd* )
++	    AC_DEFINE(HAVE_IPV6)
++            AC_MSG_RESULT(yes... NetBSD IPv6)
+     ;;
+     *solaris* )
+ 	AC_FILE_EXIST(/usr/ipv6/sbin/ifconfig, [
