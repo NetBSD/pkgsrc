@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/15 08:18:40 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/10/15 10:28:54 jlam Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -16,6 +16,10 @@ MAINTAINER=		jlam@netbsd.org
 CONFLICTS=		${CHESS_ENGINE}-book-*
 
 DEPENDS+=		crafty>=17.0:../../games/crafty
+
+REASON=			"Files too large"
+NO_SRC_ON_CDROM=	${REASON}
+NO_SRC_ON_FTP=		${REASON}
 
 CHESS_ENGINE=		crafty
 DIST_SUBDIR=		chessbooks
