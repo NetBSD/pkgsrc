@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/09/27 23:18:13 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/11/24 08:55:20 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -28,6 +28,9 @@ HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
 ALL_TARGET=
 
+post-extract:
+	${CHMOD} 644 ${WRKSRC}/man/man1/rletotarga.1
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
 	cd ${PREFIX}/share/doc/urt && (\
@@ -39,7 +42,7 @@ post-install:
 	cd ${PREFIX}/share/examples/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-img.tar; \
 	    ${CHOWN} -R root:wheel . ; \
-	    ${FIND} . -type d -exec ${CHMOD} 775 '{}' \; ; \
-	    ${FIND} . -type f -exec ${CHMOD} 664 '{}' \;)
+	    ${FIND} . -type d -exec ${CHMOD} 755 '{}' \; ; \
+	    ${FIND} . -type f -exec ${CHMOD} 644 '{}' \;)
 
 .include "../../mk/bsd.pkg.mk"
