@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/04 19:24:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/04 19:24:55 jlam Exp $
 #
 
 DISTNAME=	gnustep-back-0.8.5
@@ -19,7 +19,7 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers
 CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers/gnustep
-LDFLAGS+=		-lossaudio
+LDFLAGS+=		${LIBOSSAUDIO}
 
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../x11/gnustep-gui/buildlink2.mk"
