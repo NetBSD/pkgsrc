@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/08/06 00:32:16 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/20 05:04:03 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/05/19 09:41:06 tg Exp $
 
-DISTNAME=	sketch-0.6.1
+DISTNAME=	sketch-0.6.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.online.de/home/sketch/
 
@@ -11,13 +11,18 @@ HOMEPAGE=	http://www.online.de/home/sketch/
 DEPENDS+=	py-imaging-1.0b1:../../graphics/py-imaging
 DEPENDS+=	py-Tk-1.5.2:../../x11/py-Tk
 
+USE_X11=	YES
+
 SKETCHDIR=	${PREFIX}/share/sketch
 SKETCHDOCDIR=	${PREFIX}/share/doc/sketch
 SKETCHDOCS=	BUGS Doc NEWS PROJECTS README TODO
 SKETCHEXDIR=	${PREFIX}/share/examples/sketch
 
+echo:
+	echo ${LIBS}
+
 do-configure:
-	@(cd ${WRKSRC} && \
+	@(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 	    python setup.py configure --imaging-include=${PREFIX}/include/PIL)
 
 do-build:
@@ -26,18 +31,18 @@ do-build:
 do-install:
 	${MKDIR} ${SKETCHDIR}
 .for dir in Filter Pax Plugins Resources Script Sketch
-	(cd ${WRKSRC}; tar -c -f - --exclude-from=${FILESDIR}/excludelist ${dir}) | \
-	    (cd ${SKETCHDIR}/; tar xf -)
+	(cd ${WRKSRC}; ${GTAR} -c -f - --exclude-from=${FILESDIR}/excludelist ${dir}) | \
+	    (cd ${SKETCHDIR}/; ${GTAR} xf -)
 .endfor
 	(cd ${WRKSRC}; ${INSTALL_SCRIPT} finishinst.py sk2ps.py sketch.py ${SKETCHDIR})
 	${MKDIR} ${SKETCHDOCDIR}
-	(cd ${WRKSRC}; tar cf - ${SKETCHDOCS}) | (cd ${SKETCHDOCDIR}; tar xf -)
+	(cd ${WRKSRC}; ${GTAR} cf - ${SKETCHDOCS}) | (cd ${SKETCHDOCDIR}; ${GTAR} xf -)
 	${MKDIR} ${SKETCHEXDIR}
-	(cd ${WRKSRC}/Examples; tar cf - .) | (cd ${SKETCHEXDIR}; tar xf -)
+	(cd ${WRKSRC}/Examples; ${GTAR} cf - .) | (cd ${SKETCHEXDIR}; ${GTAR} xf -)
 	(cd ${SKETCHDIR}; python finishinst.py)
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sketch.in > ${PREFIX}/bin/sketch
-	chmod +x ${PREFIX}/bin/sketch
+	${CHMOD} +x ${PREFIX}/bin/sketch
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sk2ps.in > ${PREFIX}/bin/sk2ps
-	chmod +x ${PREFIX}/bin/sk2ps
+	${CHMOD} +x ${PREFIX}/bin/sk2ps
 
 .include "../../mk/bsd.pkg.mk"
