@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/02/15 22:27:49 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/04/24 19:47:44 jlam Exp $
 bin/info
 bin/infokey
 bin/install-info
@@ -12,23 +12,6 @@ man/man1/texi2dvi.1
 man/man1/texindex.1
 man/man5/info.5
 man/man5/texinfo.5
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/texinfo.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/texinfo.mo
 share/texinfo/texinfo.dtd
 share/texinfo/texinfo.xsl
 @dirrm share/texinfo
