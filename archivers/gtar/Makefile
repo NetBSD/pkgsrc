@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/17 09:37:22 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/18 16:06:37 agc Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -12,8 +12,6 @@ USE_GTEXINFO=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --program-prefix=g
-
-MAN1=		gtar.1
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 ${PREFIX}/man/man1/
