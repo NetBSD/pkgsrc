@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/11/13 21:11:19 seb Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/05 16:29:15 he Exp $
 
---- t/test.t.orig	2000-11-02 20:26:16.000000000 +0000
+--- t/test.t.orig	Tue Feb 16 15:24:51 1999
 +++ t/test.t
-@@ -1,44 +1,28 @@
+@@ -1,45 +1,26 @@
 -#! /usr/bin/env perl
 -##
 -## vi:ts=4
@@ -16,51 +16,52 @@ $NetBSD: patch-aa,v 1.1 2004/11/13 21:11:19 seb Exp $
  my $SourceString;
  my $TargetString;
  my $TargetOutString;
+-my $InputFile;
 -my $OutputFile;
--my $InputFile = "";
 -
--if ($ARGV[0]) { $InputFile=$ARGV[0]; }
--else { $InputFile='t/test.t'; }
-+my $InputFile;
- 
+-if ($ARGV[0] ne '') { $InputFile=$ARGV[0]; }
+-else { $InputFile='test.t'; }
+-
 -$OutputFile=">".$InputFile.".dek";
-+if (-d 't') {
-+	$InputFile='t/test.t';
-+} else {
-+	$InputFile='test.t';
-+}
- 
+-
 -if (-e $InputFile) {
 -    open(INPUT, $InputFile);
 -    while(<INPUT>) {
-+open(INPUT, $InputFile);
-+while(<INPUT>) {
- 	$SourceString.=$_;
+-	$SourceString.=$_;
 -    }
 -    print "\n\nDie Datei wurde eingelesen.\n";
 -    print "Die OrginalDatei hat die Groesse: ".length($SourceString)."\n\n";
 -
 -    $TargetString=Compress::Bzip2::compress($SourceString);
--
+ 
 -    print "Bzip-Com: ".length($TargetString)."\n";
 -
 -    $TargetOutString=Compress::Bzip2::decompress($TargetString);
-+}
-+ok(length($SourceString), 'test file');
- 
+-
+-
 -    print "Bzip-Dec: ".length($TargetOutString)."\n";
-+$TargetString=Compress::Bzip2::compress($SourceString);
-+ok($TargetString, 'compression');
-+#    print "Bzip-Com: ".length($TargetString)."\n";
- 
+-
 -    open(OUTPUT, $OutputFile);
 -    print OUTPUT $TargetOutString;
-+$TargetOutString=Compress::Bzip2::decompress($TargetString);
-+ok($TargetOutString, 'decompression');
++my $inputFile;
  
--}
++if (-d 't') {
++    $InputFile='t/test.t';
++} else {
++    $InputFile='test.t';
+ }
 -else {
 -    print "Datei ".$InputFile." konnte nicht geoeffnet werden.";
--}
++
++open(INPUT, $InputFile);
++while(<INPUT>) {
++    $SourceString.=$_;
+ }
 -#Ende
-+ok(length($TargetOutString) eq length($SourceString), 'compression/decompression');
++ok(length($SourceString), 'test file');
++$TargetString=Compress::Bzip2::compress($SourceString);
++ok($TargetString, 'compression');
++#    print "Bzip-Com ".length($TargetString)."\n";
++$TargetOutString=Compress::Bzip2::decompress($TargetString);
++ok($TargetOutString, 'decompression');
++ok(length($TargetOutString) eq length($SourceString), 'compress/decompress');
