@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5836 2004/05/06 11:19:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.5837 2004/05/06 13:25:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kanjidic2 to 2004.1 [wiz 2004-05-06]
 	Updated p5-Tk to 804.027 [markd 2004-05-06]
 	Added libgda-postgres-1.0.4 [jmmv 2004-05-06]
+	Added darts-0.2 [taca 2004-05-06]
