@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/23 17:18:12 kim Exp $
 
---- configure.in.orig	Sat Sep 25 20:13:57 1999
-+++ configure.in	Sat Sep 25 20:46:27 1999
+--- configure.in.orig	Sun Sep 24 21:29:23 2000
++++ configure.in	Sun Dec 23 12:09:28 2001
+@@ -112,7 +112,7 @@
+ if test "$ac_cv_header_libintl_h" = yes; then
+   if test "$ac_cv_lib_c_gettext" = no; then
+     if test "$ac_cv_lib_intl_gettext" = yes; then
+-      XTRALIBS_MGR = "$XTRALIBS_MGR -lintl"
++      XTRALIBS_MGR="$XTRALIBS_MGR -lintl"
+     else
+       echo "Have libintl.h but no usable gettext!" 1>&2
+       exit 1
 @@ -144,15 +144,18 @@
  	[ AC_DEFINE(PNS_MODE)
  	  PNS_MODE = yes ])
