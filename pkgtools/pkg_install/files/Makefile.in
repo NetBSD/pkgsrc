@@ -1,39 +1,15 @@
-# $NetBSD: Makefile.in,v 1.1.1.1 2002/12/20 18:13:52 schmonz Exp $
-# Original from FreeBSD, no rcs id.
+# $NetBSD: Makefile.in,v 1.2 2003/09/01 16:27:09 jlam Exp $
 
-all: libdir adddir admindir createdir deletedir infodir
+SUBDIRS=	lib add admin create delete info view
 
-libdir:
-	cd lib && ${MAKE}
-adddir:
-	cd add && ${MAKE}
-admindir:
-	cd admin && ${MAKE}
-createdir:
-	cd create && ${MAKE}
-deletedir:
-	cd delete && ${MAKE}
-infodir:
-	cd info && ${MAKE}
+.PHONY: all install clean distclean
 
-install: all
-	@MKDIR@ -p @prefix@/sbin
-	cd add && ${MAKE} install
-	cd admin && ${MAKE} install
-	cd create && ${MAKE} install
-	cd delete && ${MAKE} install
-	cd info && ${MAKE} install
-
-clean:
-	cd lib && ${MAKE} clean
-	cd add && ${MAKE} clean
-	cd admin && ${MAKE} clean
-	cd create && ${MAKE} clean
-	cd delete && ${MAKE} clean
-	cd info && ${MAKE} clean
+all install clean:
+	@for dir in $(SUBDIRS); do \
+		( cd $$dir && $(MAKE) $@ ); \
+	done
 
 distclean: clean
-	rm -f config.log config.status config.cache
+	rm -f config.log config.status config.lineno
 	rm -f Makefile */Makefile
-	rm -f lib/lib.h lib/config.h
-	
+	rm -f lib/config.h

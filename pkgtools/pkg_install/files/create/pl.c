@@ -1,13 +1,17 @@
-/*	$NetBSD: pl.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
+/*	$NetBSD: pl.c,v 1.3 2003/09/01 16:27:12 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
-#endif
+__RCSID("$NetBSD: pl.c,v 1.3 2003/09/01 16:27:12 jlam Exp $");
 #endif
 #endif
 
@@ -33,16 +37,10 @@ __RCSID("$NetBSD: pl.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
 
 #include "lib.h"
 #include "create.h"
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
-#ifdef HAVE_MD5GLOBAL_H
-#include <md5global.h>
-#endif
-
-#ifdef HAVE_MD5_H
+#if HAVE_MD5_H
 #include <md5.h>
 #endif
 
@@ -161,7 +159,10 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 			if (update_pkgdb) {
 				char   *s, t[FILENAME_MAX];
 
-				(void) snprintf(t, sizeof(t), "%s/%s", cwd, p->name);
+				(void) snprintf(t, sizeof(t), "%s%s%s",
+					cwd,
+					(strcmp(cwd, "/") == 0) ? "" : "/",
+					p->name);
 
 				s = pkgdb_retrieve(t);
 #ifdef PKGDB_DEBUG
@@ -184,7 +185,10 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 			} else {
 				/* after @cwd */
 				/* prepend DESTDIR if set?  - HF */
-				(void) snprintf(name, sizeof(name), "%s/%s", cwd, p->name);
+				(void) snprintf(name, sizeof(name), "%s%s%s",
+					cwd,
+					(strcmp(cwd, "/") == 0) ? "" : "/",
+					p->name);
 			}
 			if (lstat(name, &st) < 0) {
 				warnx("can't stat `%s'", name);
@@ -207,7 +211,8 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 				warnx("Warning - block special device `%s' in PLIST", name);
 				break;
 			default:
-				(void) strcpy(buf, CHECKSUM_HEADER);
+				(void) strlcpy(buf, CHECKSUM_HEADER,
+				    sizeof(buf));
 				if (MD5File(name, &buf[ChecksumHeaderLen]) != (char *) NULL) {
 					tmp = new_plist_entry();
 					tmp->name = strdup(buf);

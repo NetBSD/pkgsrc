@@ -1,13 +1,17 @@
-/*	$NetBSD: main.c,v 1.2 2003/01/14 15:18:32 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.3 2003/09/01 16:27:11 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.2 2003/01/14 15:18:32 jschauma Exp $");
-#endif
+__RCSID("$NetBSD: main.c,v 1.3 2003/09/01 16:27:11 jlam Exp $");
 #endif
 #endif
 
@@ -32,33 +36,25 @@ __RCSID("$NetBSD: main.c,v 1.2 2003/01/14 15:18:32 jschauma Exp $");
  *
  */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
-#ifdef HAVE_SYS_PARAM_H
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
-
-#ifdef HAVE_SYS_TIME_H
-#include <sys/time.h>
-#endif
-
-#ifdef HAVE_SYS_RESOURCE_H
+#if HAVE_SYS_RESOURCE_H
 #include <sys/resource.h>
 #endif
-
 #include "lib.h"
 #include "add.h"
 #include "verify.h"
 
-static char Options[] = "IMRSVfhnp:s:t:uv";
+static char Options[] = "IK:LMRSVW:fhnp:s:t:uvw:";
 
 char   *Prefix = NULL;
+char   *View = NULL;
+char   *Viewbase = NULL;
+Boolean NoView = FALSE;
 Boolean NoInstall = FALSE;
 Boolean NoRecord = FALSE;
 
@@ -69,14 +65,15 @@ char   *PkgName = NULL;
 char   *Directory = NULL;
 char    FirstPen[FILENAME_MAX];
 add_mode_t AddMode = NORMAL;
-int	upgrade = 0;
+Boolean	Replace = FALSE;
 
 static void
 usage(void)
 {
-	(void) fprintf(stderr, "%s\n%s\n",
-	    "usage: pkg_add [-hVvInfRMSu] [-t template] [-p prefix]",
-	    "               [-s verification-type] pkg-name [pkg-name ...]");
+	(void) fprintf(stderr, "%s\n%s\n%s\n",
+	    "usage: pkg_add [-fhILMnRSuVv] [-p prefix] [-s verification-type]",
+	    "               [-t template] [-W viewbase] [-w view]",
+	    "               pkg-name [pkg-name ...]");
 	exit(1);
 }
 
@@ -89,27 +86,30 @@ main(int argc, char **argv)
 	int rc;
 
 	setprogname(argv[0]);
-
 	while ((ch = getopt(argc, argv, Options)) != -1) {
 		switch (ch) {
-		case 'v':
-			Verbose = TRUE;
-			break;
-
-		case 'p':
-			Prefix = optarg;
+		case 'f':
+			Force = TRUE;
 			break;
 
 		case 'I':
 			NoInstall = TRUE;
 			break;
 
-		case 'R':
-			NoRecord = TRUE;
+		case 'K':
+			_pkgdb_setPKGDB_DIR(optarg);
 			break;
 
-		case 'f':
-			Force = TRUE;
+		case 'L':
+			NoView = TRUE;
+			break;
+
+		case 'M':
+			AddMode = MASTER;
+			break;
+
+		case 'R':
+			NoRecord = TRUE;
 			break;
 
 		case 'n':
@@ -117,29 +117,42 @@ main(int argc, char **argv)
 			Verbose = TRUE;
 			break;
 
-		case 's':
-			set_verification(optarg);
-			break;
-
-		case 't':
-			strcpy(FirstPen, optarg);
+		case 'p':
+			Prefix = optarg;
 			break;
 
 		case 'S':
 			AddMode = SLAVE;
 			break;
 
-		case 'M':
-			AddMode = MASTER;
+		case 's':
+			set_verification(optarg);
+			break;
+
+		case 't':
+			strlcpy(FirstPen, optarg, sizeof(FirstPen));
+			break;
+
+		case 'u':
+			Replace = 1;
 			break;
 
 		case 'V':
 			show_version();
 			/* NOTREACHED */
 
-		case 'u':
-			upgrade = 1;
+		case 'v':
+			Verbose = TRUE;
 			break;
+
+		case 'W':
+			Viewbase = optarg;
+			break;
+
+		case 'w':
+			View = optarg;
+			break;
+
 		case 'h':
 		case '?':
 		default:
