@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/16 14:05:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/21 19:44:28 wiz Exp $
 lib/win32/CLRVIDDC.DLL
 lib/win32/CtWbJpg.DLL
 lib/win32/LCodcCMP.dll
+lib/win32/QuickTimeEssentials.qtx
+lib/win32/QuickTime.qts
+lib/win32/QuickTimeInternetExtras.qtx
 lib/win32/acelpdec.ax
 lib/win32/alf2cd.acm
 lib/win32/asusasv2.dll
@@ -49,6 +52,7 @@ lib/win32/nsrt2432.acm
 lib/win32/pclepim1.dll
 lib/win32/qdv.dll
 lib/win32/qpeg32.dll
+lib/win32/qtmlClient.dll
 lib/win32/rt32dcmp.dll
 lib/win32/sp5x_32.dll
 lib/win32/tm20dec.ax
