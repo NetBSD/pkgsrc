@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/27 08:49:14 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/27 11:31:23 rh Exp $
 #
 
 DISTNAME=		libIDL-0.7.4
@@ -13,6 +13,7 @@ COMMENT=		CORBA Interface Definition Language parser
 
 USE_LIBTOOL=		YES
 USE_BUILDLINK_ONLY=	YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../converters/libiconv/buildlink.mk"
