@@ -1,43 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/07/12 20:09:35 jlam Exp $
 
---- Makedefs.in.orig	Fri Oct 22 13:37:34 1999
-+++ Makedefs.in	Sun Nov 28 21:09:21 1999
-@@ -65,11 +65,11 @@
+--- Makedefs.in.orig	Fri Jul  7 15:13:52 2000
++++ Makedefs.in	Wed Jul 12 00:46:06 2000
+@@ -48,11 +48,11 @@
+ # Installation programs...
  #
  
- ARFLAGS	=	crvs
--CFLAGS	=	@CFLAGS@ $(OPTIM) -I.. $(OPTIONS)
-+CFLAGS	=	@CPPFLAGS@ @CFLAGS@ $(OPTIM) -I.. $(OPTIONS)
- DSOLIBS	=	@DSOLIBS@
- IMGLIBS	=	@IMGLIBS@ -lm
- LDFLAGS	=	@LDFLAGS@ $(OPTIM)
--LIBS	=	-L../cups -lcups $(NETLIBS) @LIBS@
-+LIBS	=	../cups/libcups.la $(NETLIBS) @LIBS@
- NETLIBS	=	@NETLIBS@
- OPTIM	=	@OPTIM@
- OPTIONS	=
-@@ -111,6 +111,9 @@
+-INSTALL_BIN	=	$(LIBTOOL) $(CP)
+-INSTALL_DATA	=	$(CP)
+-INSTALL_LIB	=	$(LIBTOOL) $(CP)
+-INSTALL_MAN	=	$(CP)
+-INSTALL_SCRIPT	=	$(CP)
++INSTALL_BIN	=	$(LIBTOOL) $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA	=	$(BSD_INSTALL_DATA)
++INSTALL_LIB	=	$(LIBTOOL) $(BSD_INSTALL_DATA)
++INSTALL_MAN	=	$(BSD_INSTALL_MAN)
++INSTALL_SCRIPT	=	$(BSD_INSTALL_SCRIPT)
+ INSTALL_SYSV	=	@INSTALL_SYSV@
  
- BINDIR		=	@bindir@
- DATADIR		=	@CUPS_DATADIR@
-+DOCDIR		=	@CUPS_DOCDIR@
-+CONFDIR		=	@CUPS_CONFDIR@
-+EXECDIR		=	@CUPS_EXECDIR@
- INCLUDEDIR	=	$(includedir)
- LIBDIR		=	$(libdir)
- LOCALEDIR	= 	@CUPS_LOCALEDIR@
-@@ -123,10 +126,13 @@
  #
- 
- .SILENT:
--.SUFFIXES:	.a .c .gz .h .o .z .1 .5 .8
-+.SUFFIXES:	.a .c .gz .h .lo .o .z .1 .5 .8
- .c.o:
- 	echo Compiling $<...
- 	$(CC) $(CFLAGS) -c $<
-+.c.lo:
-+	echo Compiling $<...
-+	$(LIBTOOL) $(CC) $(CFLAGS) -c $<
- .1.z .5.z .8.z .1.gz .5.gz .8.gz:
- 	echo Formatting $<...
- 	$(NROFF) -man $< >t
