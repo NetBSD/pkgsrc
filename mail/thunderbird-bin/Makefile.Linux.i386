@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.Linux.i386,v 1.3 2004/01/04 05:01:02 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.4 2004/02/10 11:36:48 grant Exp $
 
-DISTNAME=	thunderbird-${MOZ_VER}-i686-pc-linux-gtk2-gnu
+MOZ_VER=	0.5
+DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-pc-linux-gtk2-gnu
 EXTRACT_SUFX=	.tar.bz2
 
 MOZ_PLATFORM=	linux
