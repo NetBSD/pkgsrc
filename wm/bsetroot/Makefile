@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/20 18:13:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/05 19:58:43 jschauma Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -23,6 +23,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/util/bsetroot ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/bsetbg.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bsetroot.1 ${PREFIX}/man/man1
+	( cd ${WRKSRC}/nls && ${MAKE} install )
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
