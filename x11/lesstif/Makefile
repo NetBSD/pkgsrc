@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.41 1999/09/04 23:23:22 tron Exp $
+# $NetBSD: Makefile,v 1.42 1999/11/03 04:18:46 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
-DISTNAME=	lesstif-0.88.9
-CATEGORIES=	x11
-MASTER_SITES=	ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
-		http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
-		ftp://ftp.lesstif.org/pub/hungry/lesstif/srcdist/
+DISTNAME=		lesstif-0.89.0
+CATEGORIES=		x11
+MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
+			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
+			ftp://ftp.kddlabs.co.jp/X11/lesstif/srcdist/ \
+			ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
+			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
+			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.lesstif.org/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.lesstif.org/
 
-GNU_CONFIGURE=  yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-USE_X11BASE=	yes
+USE_LIBTOOL=		yes
+USE_X11BASE=		yes
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-x --enable-production
-CONFIGURE_ARGS+=	--enable-default-20 --disable-debug
-CONFIGURE_ENV=		CCFLAGS="${CFLAGS}"
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-build-12	# needed for www/Mosaic
+CONFIGURE_ARGS+=	--enable-build-20 --enable-default-20 \
+			--enable-production --disable-debug
 
 .include "../../mk/bsd.pkg.mk"
