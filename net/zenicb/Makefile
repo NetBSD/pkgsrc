@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/18 22:46:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/10/03 20:21:48 martin Exp $
 #
 
 DISTNAME=		zenicb-19981202
@@ -13,9 +13,9 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_XEMACS)
 EMACS=			xemacs
-DEPENDS+=		xemacs-*:../../editors/xemacs
+DEPENDS+=		xemacs-[1-9]*:../../editors/xemacs
 MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
-ELISPDIR=		lib/xemacs/lisp
+ELISPDIR=		lib/xemacs/xemacs-packages/lisp
 .else
 EMACS=			emacs
 DEPENDS+=		emacs-*:../../editors/emacs
@@ -34,6 +34,9 @@ pre-configure:
 do-build:
 
 do-install:
+.if defined(USE_XEMACS)
+	@${MKDIR} ${PREFIX}/${ELISPDIR}
+.endif
 	@for file in ${WRKSRC}/src/*.el; do \
 		j="${INSTALL_DATA} $$file ${PREFIX}/${ELISPDIR}/"; \
 		${ECHO} $$j; $$j; \
