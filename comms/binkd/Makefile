@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/06/04 16:55:11 drochner Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/05 15:46:27 tv Exp $
 #
 
 DISTNAME=		binkd-0.9.2
@@ -23,6 +23,6 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binkd ${PREFIX}/sbin/
 	${INSTALL_DATA} ${WRKSRC}/binkd.8 ${PREFIX}/man/man8/
-	${INSTALL_DATA} ${WRKSRC}/binkd.cfg ${PREFIX}/etc/
+	${INSTALL_DATA} ${WRKSRC}/binkd.cfg ${PREFIX}/etc/binkd.cfg.dist
 
 .include "../../mk/bsd.pkg.mk"
