@@ -1,0 +1,35 @@
+--- src/osdep/unix/Makefile.orig	Sun Jul 19 10:54:07 1998
++++ src/osdep/unix/Makefile	Sun Jul 19 10:55:28 1998
+@@ -88,7 +88,7 @@
+ 
+ # Normally no need to change any of these
+ 
+-ARCHIVE=c-client.a
++ARCHIVE=libimapuw.la
+ BINARIES=mail.o misc.o newsrc.o smanager.o osdep.o utf8.o siglocal.o \
+  dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
+  rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
+@@ -341,10 +341,11 @@
+ 
+ neb:	# NetBSD
+ 	$(BUILD) OS=bsi \
++	 CC="$(CC)" \
+ 	 SPOOLDIR=/var \
+ 	 ACTIVEFILE=/var/db/news/active \
+ 	 RSHPATH=/usr/bin/rsh \
+-	 BASECFLAGS="-g -O -pipe -DNFSKLUDGE" \
++	 BASECFLAGS="-O -pipe -DNFSKLUDGE" \
+ 	 BASELDFLAGS="-lcrypt"
+ 
+ nxt:	# NEXTSTEP
+@@ -561,8 +562,8 @@
+ 
+ $(ARCHIVE): $(BINARIES)
+ 	$(RM) $(ARCHIVE) || true
+-	@cat ARCHIVE
+-	@$(SH) ARCHIVE
++	$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib \
++		-version-info 0:0
+ 
+ # Cleanup
+ 

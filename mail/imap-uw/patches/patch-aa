@@ -1,0 +1,11 @@
+--- Makefile.orig	Sun Jul 19 10:52:40 1998
++++ Makefile	Sun Jul 19 10:53:08 1998
+@@ -260,7 +260,7 @@
+ OSTYPE:
+ 	@echo Building c-client for $(OS)...
+ 	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS='$(BUILDOPTIONS)' \
+-	 EXTRASPECIALS="$(EXTRASPECIALS)"
++	 EXTRASPECIALS="$(EXTRASPECIALS)" PREFIX=$(PREFIX) CC="$(CC)"
+ 	echo $(OS) > OSTYPE
+ 	$(TOUCH) rebuild
+ 
