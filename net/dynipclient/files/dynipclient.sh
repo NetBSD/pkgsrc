@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dynipclient.sh,v 1.2 2002/09/23 14:52:14 grant Exp $
+# $NetBSD: dynipclient.sh,v 1.3 2003/07/30 12:01:26 jmmv Exp $
 #
 # PROVIDE: dynipclient
 # REQUIRE: NETWORK
@@ -11,7 +11,7 @@ name="dynipclient"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="/etc/dynip.cfg"
+required_files="@PKG_SYSCONFDIR@/dynip.cfg"
 
 load_rc_config $name
 run_rc_command "$1"
