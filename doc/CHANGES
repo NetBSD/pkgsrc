@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8388 2004/12/21 10:06:15 tron Exp $
+$NetBSD: CHANGES,v 1.8389 2004/12/21 10:49:12 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6450,3 +6450,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lyx-qt to 1.3.5 [martti 2004-12-21]
 	Updated lyx-xforms to 1.3.5 [martti 2004-12-21]
 	Updated mozilla-bin to 1.7.5 [tron 2004-12-21]
+	Added py-basicproperty-0.6.3a [darcy 2004-12-21]
+	Added py-table-0.8.3a [darcy 2004-12-21]
