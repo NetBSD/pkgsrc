@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2004/04/24 18:24:56 tv Exp $
+# $NetBSD: Makefile,v 1.53 2004/04/27 20:38:48 tv Exp $
 
 DISTNAME=	tiff-v3.6.1
 PKGNAME=	tiff-3.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -30,6 +30,7 @@ USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
+MAKE_ENV+=	PKGDIRMODE=${PKGDIRMODE}
 
 .include "../../mk/bsd.prefs.mk"
 

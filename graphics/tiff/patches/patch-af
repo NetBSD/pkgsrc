@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.7 2004/01/03 18:33:24 reed Exp $
+$NetBSD: patch-af,v 1.8 2004/04/27 20:38:48 tv Exp $
 
---- tools/Makefile.in.orig	Fri Nov 21 19:35:56 2003
+--- tools/Makefile.in.orig	Thu Nov 27 10:08:12 2003
 +++ tools/Makefile.in
 @@ -48,10 +48,10 @@ OPTIMIZER=@OPTIMIZER@
  IPATH	= -I. -I${SRCDIR} -I${LIBDIR}
@@ -15,13 +15,15 @@ $NetBSD: patch-af,v 1.7 2004/01/03 18:33:24 reed Exp $
  LIBPORT	= @LIBPORT@
  MACHLIBS= @MACHDEPLIBS@
  LIBS	= ${LIBTIFF} ${LIBJPEG} ${LIBGZ} ${LIBPORT} ${MACHLIBS}
-@@ -114,9 +114,8 @@ all:	${TARGETS}
+@@ -115,10 +115,9 @@ all:	${TARGETS}
+ 	    true; \
  	fi
  install: all
- 	${INSTALL} -idb tiff.sw.tools -m 755 				\
+-	${INSTALL} -idb tiff.sw.tools -m 755 				\
 -		-dir ${DESTDIR}@DIR_BIN@
 -	${INSTALL} -idb tiff.sw.tools -m 755 				\
 -		-F ${DESTDIR}@DIR_BIN@ -O ${TARGETS}
++	${INSTALL} -idb tiff.sw.tools -m ${PKGDIRMODE}			\
 +		-dir @DIR_BIN@
 +	${LIBTOOL} ${BSD_INSTALL_PROGRAM} ${TARGETS} @DIR_BIN@
  	@if [ "@LIBIMAGE@" = yes ]; then 				\
