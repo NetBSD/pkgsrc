@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:13:19 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/05 00:28:50 snj Exp $
 #
 
 DISTNAME=		expatobjc-1.0
@@ -10,12 +10,12 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://expatobjc.sourceforge.net/
 COMMENT=		Objective-C Wrapper for Expat
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		objc_works=yes
 
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
