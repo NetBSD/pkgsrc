@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.530 2002/11/15 15:31:31 lukem Exp $
+$NetBSD: CHANGES,v 1.531 2002/11/15 17:14:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3631,3 +3631,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-ZMySQLDA-2.0.8 [drochner 2002-11-15]
 	Updated autoconf to 2.56 [wiz 2002-11-15]
 	Updated flac-xmms to 1.0.4 [lukem 2002-11-15]
+	Updated glib2 to 2.0.7 [wiz 2002-11-15]
+	Updated gtk2 to 2.0.8 [wiz 2002-11-15]
