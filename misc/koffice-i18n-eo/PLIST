@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 12:43:03 markd Exp $
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/csvfilter.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/desktop_koffice.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/example.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/graphite.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kchart.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kformula.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kivio.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/koffice.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kontour.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/koshell.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kpresenter.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/krita.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kscan_plugin.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kspread.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kspreadcalc_calc.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kugar.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/kword.mo
