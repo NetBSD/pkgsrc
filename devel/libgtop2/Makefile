@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/11 20:50:52 abs Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/23 11:27:51 seb Exp $
 
 DISTNAME=		libgtop-2.0.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -38,6 +38,9 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgtop-2.0.pc.in
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
+INFO_FILES=		libgtop2.info
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.
@@ -52,5 +55,4 @@ CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
