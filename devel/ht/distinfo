@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/06/08 22:10:04 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2004/08/30 14:44:02 jmmv Exp $
 
-SHA1 (ht-0.7.5.tar.bz2) = 9fef242c37dea48d6afdfaae3edc7687b8822afe
-Size (ht-0.7.5.tar.bz2) = 649346 bytes
-SHA1 (patch-aa) = 7832f4247c0288bdf4a993bbe89a3f6862b05e39
+SHA1 (ht-0.8.0.tar.bz2) = 86bd53b2c37c1e637ea2f1e1eaa89affda018767
+Size (ht-0.8.0.tar.bz2) = 731401 bytes
