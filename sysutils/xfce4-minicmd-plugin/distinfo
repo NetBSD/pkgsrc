@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/12/08 08:54:26 martti Exp $
+$NetBSD: distinfo,v 1.5 2005/01/17 13:23:03 martti Exp $
 
-SHA1 (xfce4-minicmd-plugin-0.2.0.tar.gz) = 402aa2abe714171d6d4470d2c9a59fb20d5fdef6
-Size (xfce4-minicmd-plugin-0.2.0.tar.gz) = 183658 bytes
+SHA1 (xfce4-minicmd-plugin-0.3.0.tar.gz) = 007fa990a8de316aef75ec140916746812846073
+Size (xfce4-minicmd-plugin-0.3.0.tar.gz) = 329376 bytes
