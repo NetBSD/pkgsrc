@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6252 2004/06/20 21:46:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6253 2004/06/20 22:31:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2985,3 +2985,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdm to 2.6.0.3 [jmmv 2004-06-20]
 	Updated cdrecord to 2.00.3nb1 [martin 2004-06-20]
 	Updated gd to 2.0.25nb1 [xtraeme 2004-06-20]
+	Added p5-Class-XPath-1.4 [schmonz 2004-06-20]
+	Added p5-XML-RSS-Parser-2.15 [schmonz 2004-06-20]
+	Added p5-XML-RAI-0.51 [schmonz 2004-06-20]
