@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.287 2003/02/23 10:45:39 wiz Exp $
+# $NetBSD: Packages.txt,v 1.288 2003/03/25 16:24:57 salo Exp $
 ###########################################################################
 
 			==========================
@@ -2508,16 +2508,12 @@ You have to separate between binary and "normal" (source) packages here:
 
  * packages:
    First, check that your package is complete, compiles and runs well; see
-   section 9 and the rest of this document. Next, generate a gzipped
-   tar-file of all the files needed for the package, preferably with all
-   files in a single directory. Place this tar-file to a place where the
-   package maintainers can fetch it using FTP or HTTP (WWW). Finally,
-   send-pr with category "pkg", a synopsis which includes the package name
-   and version number, a short description of your package
-   (contents of the COMMENT variable are OK) and the URL of your tar-file.
-
-   You will be notified if your send-pr has been addressed so you can remove
-   the tar-file. 
+   section 9 and the rest of this document. Next, generate an uuencoded
+   gzipped tar(1) archive, preferably with all files in a single directory.
+   Finally, send-pr(1) with category "pkg", a synopsis which includes the
+   package name and version number, a short description of your package
+   (contents of the COMMENT variable or DESCR file are OK) and attach the
+   archive to your PR.
 
    If you want to submit several packages, please send a separate PR for
    each one, it's easier for us to track things that way.
