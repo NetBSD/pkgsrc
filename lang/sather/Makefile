@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/12 03:21:08 snj Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		3
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/directory/devel/prog/sather.html
 COMMENT=		Compiler for the Sather object oriented programming language
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
 
@@ -22,7 +22,7 @@ INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
 REPLACE_PERL=		Browser/Web/ps2gif
 
 SUBST_CLASSES+=		sather-configure
-SUBST_STAGE.sather-configure=	configure
+SUBST_STAGE.sather-configure=	post-buildlink
 SUBST_MESSAGE.sather-configure=	"Configuring sources"
 SUBST_FILES.sather-configure=			\
 	Boot/sacomp.code/Makefile		\
@@ -89,7 +89,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.el ${PREFIX}/share/emacs/site-lisp
 
-.include "../../devel/boehm-gc/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
