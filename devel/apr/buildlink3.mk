@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/11/17 23:03:08 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/11/22 23:43:25 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -28,7 +28,7 @@ PKG_OPTIONS.apr?=	${PKG_DEFAULT_OPTIONS}
 .  include "../../databases/db4/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS.apr:Mopenldap)
+.if !empty(PKG_OPTIONS.apr:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
 .endif
 
