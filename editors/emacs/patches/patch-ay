@@ -1,0 +1,14 @@
+$NetBSD: patch-ay,v 1.1 1999/01/31 17:29:33 frueauf Exp $
+
+--- src/m/pmax.h-orig	Sun Sep  7 07:23:09 1997
++++ src/m/pmax.h	Sat Jan 30 21:20:40 1999
+@@ -51,7 +51,9 @@
+ #endif
+ 
+ /* Override what mips.h says about this.  */
++#if !defined (__NetBSD__)
+ #undef LINKER
++#endif
+ 
+ #ifdef ultrix
+ /* Ultrix 4.2 (perhaps also 4.1) implements O_NONBLOCK

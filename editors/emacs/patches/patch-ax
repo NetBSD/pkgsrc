@@ -1,0 +1,16 @@
+$NetBSD: patch-ax,v 1.1 1999/01/31 17:29:33 frueauf Exp $
+
+--- src/m/mips.h-orig	Mon Jun 23 03:49:57 1997
++++ src/m/mips.h	Sat Jan 30 14:28:48 1999
+@@ -149,8 +149,10 @@
+ #define LD_SWITCH_MACHINE -D 800000
+ #define LIBS_DEBUG
+ 
++#if defined (__NetBSD__) || defined (__OpenBSD__)
++#else  /* bsd with elf */
+ #define LINKER /bsd43/bin/ld
+-  
++#endif /* bsd with elf */
+ #else /* not BSD_SYSTEM */
+ 
+ #if defined(__GNUC__) && defined(_ABIN32)

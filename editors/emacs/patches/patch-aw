@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 1999/01/31 17:29:33 frueauf Exp $
+
+--- src/emacs.c-orig	Tue Jul 21 03:39:52 1998
++++ src/emacs.c	Sat Jan 30 14:29:44 1999
+@@ -1004,7 +1004,7 @@
+     }
+ 
+   no_loadup
+-    = !argmatch (argv, argc, "-nl", "--no-loadup", 6, NULL, &skip_args);
++    = argmatch (argv, argc, "-nl", "--no-loadup", 6, NULL, &skip_args);
+ 
+ 
+ #ifdef HAVE_X_WINDOWS
