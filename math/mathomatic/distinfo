@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2005/01/08 07:09:50 minskim Exp $
+$NetBSD: distinfo,v 1.28 2005/01/14 14:52:44 minskim Exp $
 
-SHA1 (mathomatic-11.6c.tgz) = 2366c0075dfcdf452108c43ca79512234f14519e
-Size (mathomatic-11.6c.tgz) = 129303 bytes
+SHA1 (mathomatic-11.6d.tgz) = fe58f8eb0ff7cdadff2a8a4aa6b7c7fba330ce2e
+Size (mathomatic-11.6d.tgz) = 129028 bytes
 SHA1 (patch-aa) = 74c3123ab56a9605cf70163eb67c5d50f24b0d2b
