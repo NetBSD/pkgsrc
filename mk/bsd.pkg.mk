@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.695 2001/03/23 16:02:23 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.696 2001/03/23 17:11:18 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -1842,7 +1842,15 @@ do-shlib-handling:
 			${AWK} ' 					\
 				BEGIN { linkc = 1 }			\
 				/^@/ { lines[NR] = $$0; next }		\
+				function libtool_release(lib) {		\
+					if (gsub("-[^-]+\.so\.", "\.so\.", lib)) { \
+						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
+							rels[NR] = lib; \
+						}			\
+ 					}				\
+				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+					libtool_release($$0);		\
 					lines[NR] = $$0;		\
 					sub("\.[0-9]+$$", "");		\
 					links[linkc++] = $$0;		\
@@ -1853,6 +1861,7 @@ do-shlib-handling:
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+					libtool_release($$0);		\
 					lines[NR] = $$0;		\
 					sub("\.[0-9]+$$", "");		\
 					links[linkc++] = $$0;		\
@@ -1867,8 +1876,11 @@ do-shlib-handling:
 							if (lines[j] == links[i]) \
 								lines[j] = "@comment " lines[j]; \
 					if (${SHLIB_PLIST_MODE}) 	\
-						for (i = 1 ; i <= NR ; i++) \
+						for (i = 1 ; i <= NR ; i++) { \
 							print lines[i]; \
+							if (rels[i] != "") \
+								print rels[i]; \
+						}			\
 				}					\
 			' <${PLIST} >${PLIST}.tmp ;			\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
