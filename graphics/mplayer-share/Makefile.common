@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2002/11/13 15:25:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2002/11/14 01:06:24 wiz Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre10
 #PKGREVISION=		1
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 #CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--disable-mpdvdkit
-CONFIGURE_ARGS+=	--enable-runtime-cpudetection
 CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ARGS+=	--disable-arts
 
@@ -50,6 +49,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
+CONFIGURE_ARGS+=	--enable-runtime-cpudetection
 .if ${MPLAYER_USE_REALMEDIA} == "YES"
 CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8/Codecs"
 .endif
