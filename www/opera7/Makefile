@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/08/12 16:49:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.24 2004/08/12 22:57:00 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -30,8 +30,8 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20040716
-OPERA_PKG_VERSION=	7.53
+OPERA_VER_DATE=		20040803
+OPERA_PKG_VERSION=	7.54
 
 .if (${OPSYS} == NetBSD)
 DEPENDS+=	suse_freetype2>=7.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
