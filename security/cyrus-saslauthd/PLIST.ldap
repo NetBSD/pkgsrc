@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST.ldap,v 1.1 2004/01/09 20:40:05 jlam Exp $
-share/examples/cyrus-saslauthd/LDAP_SASLAUTHD
-@dirrm share/examples/cyrus-saslauthd
+@comment $NetBSD: PLIST.ldap,v 1.2 2004/01/13 08:13:42 jlam Exp $
+share/doc/cyrus-saslauthd/LDAP_SASLAUTHD
+@dirrm share/doc/cyrus-saslauthd
