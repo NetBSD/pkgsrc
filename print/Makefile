@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/08/14 14:11:40 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/08/22 20:29:29 rh Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -17,6 +17,7 @@
 #    SUBDIR += dvips2ascii
 #    SUBDIR += dviselect
     SUBDIR += enscript
+    SUBDIR += ggv
 #    SUBDIR += ghostscript
 #    SUBDIR += ghostscript3
 #    SUBDIR += ghostscript4
