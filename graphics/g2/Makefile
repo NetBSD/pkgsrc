@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2002/10/27 23:57:17 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/29 22:02:09 jtb Exp $
 
-DISTNAME=		g2-0.40
-PKGREVISION=		1
+DISTNAME=		g2-0.49a
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://g2.sourceforge.net/pub/g2/
 
@@ -13,9 +12,9 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/G2/.packlist
-PERL5_CONFIGURE=	NO
+PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/g2_perl
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/g2_perl
 
@@ -26,8 +25,9 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} doc/g2_ref.txt COPYING README	\
 		${PREFIX}/share/doc/g2
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/g2
-	cd ${WRKSRC}/demo && ${INSTALL_DATA} demo_f.f g2_test.c penguin.c \
-		simple_PS.c simple_X11.c ${PREFIX}/share/examples/g2
+	cd ${WRKSRC}/demo && ${INSTALL_DATA} *.c *.f *.inc  \
+		${PREFIX}/share/examples/g2
 
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
