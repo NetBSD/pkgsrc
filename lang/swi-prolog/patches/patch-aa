@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/29 16:01:17 jtb Exp $
 
---- src/Makefile.in.orig	Thu Feb 15 08:05:34 2001
+--- src/Makefile.in.orig	Mon Apr  9 16:03:48 2001
 +++ src/Makefile.in
-@@ -70,6 +70,7 @@
+@@ -71,6 +71,7 @@
  CMFLAGS=@CMFLAGS@
  CFLAGS=	$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS)
  LDFLAGS=@LDFLAGS@
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
  
  PLFOREIGN=@PLFOREIGN@
  
-@@ -132,7 +133,7 @@
+@@ -133,7 +134,7 @@
  	swipl swiplbin
  
  .c.o:
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
  
  system:		$(PL)
  startup:	$(STARTUPPATH)
-@@ -222,7 +223,7 @@
+@@ -223,7 +224,7 @@
  		ar x `$(CC) -print-libgcc-file-name` $@
  
  plld:		$(srcdir)/plld.c
