@@ -1,0 +1,43 @@
+$NetBSD: patch-ad,v 1.7 2001/06/01 15:17:23 groo Exp $
+
+--- tdb/tdb.c.orig	Thu May 31 23:27:21 2001
++++ tdb/tdb.c	Thu May 31 23:29:55 2001
+@@ -439,20 +439,24 @@
+            the database up to a multiple of TDB_PAGE_SIZE */
+ 	size = TDB_ALIGN(tdb->map_size + size*10, TDB_PAGE_SIZE) - tdb->map_size;
+ 
++	if (!(tdb->flags & TDB_INTERNAL) && tdb->map_ptr)
++		tdb->map_ptr = tdb_munmap(tdb->map_ptr, tdb->map_size);
++
+ 	/* expand the file itself */
+         if (!(tdb->flags & TDB_INTERNAL)) {
+-		lseek(tdb->fd, tdb->map_size + size - 1, SEEK_SET);
++               if (lseek(tdb->fd, tdb->map_size + size - 1, SEEK_SET)!=tdb->map_size + size - 1)
++                       goto fail;
+ 		if (write(tdb->fd, &b, 1) != 1) goto fail;
+         }
+ 
+-	if (!(tdb->flags & TDB_INTERNAL) && tdb->map_ptr)
+-		tdb->map_ptr = tdb_munmap(tdb->map_ptr, tdb->map_size);
+-
+ 	tdb->map_size += size;
+ 
+ 	if (tdb->flags & TDB_INTERNAL)
+ 		tdb->map_ptr = realloc(tdb->map_ptr, tdb->map_size);
+ 
++       if (!(tdb->flags & TDB_NOMMAP))
++               tdb->map_ptr = tdb_mmap(tdb->map_size, 0, tdb->fd);
++
+ 	/* form a new freelist record */
+ 	memset(&rec,'\0',sizeof(rec));
+ 	rec.rec_len = size - sizeof(rec);
+@@ -460,9 +464,6 @@
+ 	/* link it into the free list */
+ 	offset = tdb->map_size - size;
+ 	if (tdb_free(tdb, offset, &rec) == -1) goto fail;
+-
+-	if (!(tdb->flags & TDB_NOMMAP))
+-		tdb->map_ptr = tdb_mmap(tdb->map_size, 0, tdb->fd);
+ 
+ 	tdb_unlock(tdb, -1, F_WRLCK);
+ 	return 0;
