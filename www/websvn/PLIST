@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 19:36:56 xtraeme Exp $
+${HTTPD_ROOT}/websvn/cache/tmp
+${HTTPD_ROOT}/websvn/changes.txt
+${HTTPD_ROOT}/websvn/diff.php
+${HTTPD_ROOT}/websvn/filedetails.php
+${HTTPD_ROOT}/websvn/form.php
+${HTTPD_ROOT}/websvn/include/command.inc
+${HTTPD_ROOT}/websvn/include/configclass.inc
+${HTTPD_ROOT}/websvn/include/distconfig.inc
+${HTTPD_ROOT}/websvn/include/setup.inc
+${HTTPD_ROOT}/websvn/include/svnlook.inc
+${HTTPD_ROOT}/websvn/include/template.inc
+${HTTPD_ROOT}/websvn/include/utils.inc
+${HTTPD_ROOT}/websvn/include/version.inc
+${HTTPD_ROOT}/websvn/index.php
+${HTTPD_ROOT}/websvn/install.txt
+${HTTPD_ROOT}/websvn/languages/english.inc
+${HTTPD_ROOT}/websvn/languages/german.inc
+${HTTPD_ROOT}/websvn/licence.txt
+${HTTPD_ROOT}/websvn/listing.php
+${HTTPD_ROOT}/websvn/log.php
+${HTTPD_ROOT}/websvn/templates.txt
+${HTTPD_ROOT}/websvn/templates/BlueGrey/diff.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/directory.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/file.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/file.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/filec.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/fileh.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/files.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/folder.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/footer.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/header.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/index.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/log.tmpl
+${HTTPD_ROOT}/websvn/templates/BlueGrey/png.js
+${HTTPD_ROOT}/websvn/templates/BlueGrey/repo.png
+${HTTPD_ROOT}/websvn/templates/BlueGrey/styles.css
+${HTTPD_ROOT}/websvn/templates/BlueGrey/subversion.png
+${HTTPD_ROOT}/websvn/templates/Standard/diff.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/directory.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/file.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/footer.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/header.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/index.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/log.tmpl
+${HTTPD_ROOT}/websvn/templates/Standard/styles.css
+${HTTPD_ROOT}/websvn/wsvn.php
+@dirrm ${HTTPD_ROOT}/websvn/templates/Standard
+@dirrm ${HTTPD_ROOT}/websvn/templates/BlueGrey
+@dirrm ${HTTPD_ROOT}/websvn/templates
+@dirrm ${HTTPD_ROOT}/websvn/temp
+@dirrm ${HTTPD_ROOT}/websvn/languages
+@dirrm ${HTTPD_ROOT}/websvn/include
+@dirrm ${HTTPD_ROOT}/websvn/cache
+@dirrm ${HTTPD_ROOT}/websvn
