@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:39:20 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/05 15:12:45 adam Exp $
 #
 
-DISTNAME=		rocksndiamonds-2.1.1
-PKGREVISION=		1
+DISTNAME=		rocksndiamonds-3.0.0
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
@@ -13,6 +12,8 @@ COMMENT=		Game like Boulderdash, Emerald Mine, or Sokoban with lots of levels
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
 USE_X11=		YES
+ALL_TARGET=		x11
+PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 PLIST_SUBST+=		SCORE_PATH=${SCORE_PATH}
 PLIST_SUBST+=		ROCK_INSTALL_DIR="${INSTALL} -d -o games -g games -m 775"
@@ -49,5 +50,17 @@ do-install:
 	    ${CHMOD} 775 ${SCORE_PATH}/scores/$${directory}; \
 	  done
 	${CHOWN} -R games:games ${SCORE_PATH}
+	# auto-generated PLIST
+	${RM} -f ${WRKDIR}/PLIST
+.for levdir in Boulderdash Classic_Games Contributions_1995-2000 \
+	Contributions_2001 Contributions_2002 Contributions_2003 Examples \
+	Tutorials
+	cd ${PREFIX} && \
+	${FIND} share/rocksndiamonds/levels/${levdir} -type f >>${WRKDIR}/PLIST
+.endfor
+.for directory in graphics music sounds
+	cd ${PREFIX} && \
+	${FIND} share/rocksndiamonds/${directory} -type f >>${WRKDIR}/PLIST
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
