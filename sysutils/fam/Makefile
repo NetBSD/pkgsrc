@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/12 10:25:47 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 19:23:19 jlam Exp $
 #
 
 DISTNAME=		fam-2.6.7

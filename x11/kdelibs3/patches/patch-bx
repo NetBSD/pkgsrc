@@ -1,4 +1,4 @@
-$NetBSD: patch-bx,v 1.1 2002/06/27 07:10:15 skrll Exp $
+$NetBSD: patch-bx,v 1.2 2002/08/25 19:23:55 jlam Exp $
 
 --- khtml/Makefile.in.orig	Wed Jun 26 08:21:40 2002
 +++ khtml/Makefile.in

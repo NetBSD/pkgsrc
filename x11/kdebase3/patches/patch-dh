@@ -1,4 +1,4 @@
-$NetBSD: patch-dh,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+$NetBSD: patch-dh,v 1.2 2002/08/25 19:23:45 jlam Exp $
 
 --- kwin/Makefile.in.orig	Mon May 13 23:57:54 2002
 +++ kwin/Makefile.in

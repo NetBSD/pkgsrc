@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2002/07/18 02:19:37 rh Exp $
+$NetBSD: patch-ab,v 1.5 2002/08/25 19:22:15 jlam Exp $
 
 --- gconf.pc.in.orig	Sat Mar 24 08:52:30 2001
 +++ gconf.pc.in

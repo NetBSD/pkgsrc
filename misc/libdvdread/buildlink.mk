@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/05/27 15:08:15 veego Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/08/25 19:23:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libdvdread.
 #

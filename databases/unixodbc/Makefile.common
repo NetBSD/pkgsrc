@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/08/01 06:40:52 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/08/25 19:22:13 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases

@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2002/06/10 09:47:28 sakamoto Exp $
+$NetBSD: patch-ae,v 1.3 2002/08/25 19:22:56 jlam Exp $
 
 PATCH_SITES+=	http://apps.v6.linux.or.jp/pub/Linux/IPv6-2/canna/
 PATCHFILES+=	Canna35b2-v6-20000602.diff.gz

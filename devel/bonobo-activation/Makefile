@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/07/12 15:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/25 19:22:23 jlam Exp $
 #
 
 DISTNAME=		bonobo-activation-1.0.2

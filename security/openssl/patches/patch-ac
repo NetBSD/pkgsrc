@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2002/08/19 18:34:56 fredb Exp $
+$NetBSD: patch-ac,v 1.8 2002/08/25 19:23:18 jlam Exp $
 
 --- Configure.orig	Thu Aug  8 16:12:40 2002
 +++ Configure

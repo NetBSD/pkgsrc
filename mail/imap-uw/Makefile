@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/08/15 00:32:58 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2002/08/25 19:23:06 jlam Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/05/25 12:47:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2002/08/25 19:21:48 jlam Exp $
 #
 
 VERS=		3.92

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/25 11:31:29 rh Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/25 19:22:23 jlam Exp $
 
 DISTNAME=		bonobo-conf-0.14
 PKGREVISION=		2

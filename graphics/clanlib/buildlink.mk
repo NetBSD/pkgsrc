@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2002/08/01 06:40:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2002/08/25 19:22:47 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ClanLib.
 #

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/01 23:19:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/25 19:22:51 jlam Exp $
 include/libexif/exif-byte-order.h
 include/libexif/exif-content.h
 include/libexif/exif-data.h

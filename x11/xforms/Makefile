@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/07/26 15:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2002/08/25 19:24:01 jlam Exp $
 #
 
 DISTNAME=	xforms-0.9999

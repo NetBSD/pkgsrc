@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/15 18:23:40 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:22:04 jlam Exp $
 bin/db3_archive
 bin/db3_checkpoint
 bin/db3_deadlock

@@ -1,4 +1,4 @@
-$NetBSD: patch-ec,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+$NetBSD: patch-ec,v 1.2 2002/08/25 19:23:47 jlam Exp $
 
 --- kwin/clients/riscos/Makefile.am.orig	Tue Feb 19 16:56:15 2002
 +++ kwin/clients/riscos/Makefile.am
