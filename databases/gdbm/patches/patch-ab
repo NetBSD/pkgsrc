@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.6 2001/01/18 18:05:53 wiz Exp $
-
---- Makefile.in.orig	Tue May 18 23:16:06 1999
-+++ Makefile.in
+--- Makefile.in.orig	Tue May 18 20:16:06 1999
++++ Makefile.in	Thu Aug 16 14:27:07 2001
 @@ -27,11 +27,11 @@
  LIBS = @LIBS@ -lc
  
@@ -16,3 +14,12 @@ $NetBSD: patch-ab,v 1.6 2001/01/18 18:05:53 wiz Exp $
  exec_prefix = $(prefix)
  binprefix = $(exec_prefix)
  manprefix = $(prefix)
+@@ -121,7 +121,7 @@
+ 
+ install: libgdbm.la gdbm.h gdbm.info
+ 	$(srcdir)/mkinstalldirs $(libdir) $(includedir) $(man3dir) $(infodir)
+-	$(LIBTOOL) install -c libgdbm.la $(libdir)/libgdbm.la
++	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(libdir)/libgdbm.la
+ 	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h $(includedir)/gdbm.h
+ 	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.3 \
+ 		$(man3dir)/gdbm.3
