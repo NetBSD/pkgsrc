@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2004/02/26 16:25:53 cube Exp $
 
---- src/defaults.c.orig	Thu Feb 14 20:28:35 2002
+--- src/defaults.c.orig	2003-05-27 08:49:05.000000000 +0200
 +++ src/defaults.c
-@@ -258,7 +258,7 @@
+@@ -267,7 +267,7 @@ char* default_settings=
  "style.cpp.12=$(style.default.unclosedstring)\n"
  "style.cpp.13=fore:#007F00,back:#E0FFE0,eolfilled\n"
  "braces.cpp.style=10\n"
