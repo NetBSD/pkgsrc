@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.10 2004/12/03 13:19:09 grant Exp $	*/
+/*	$NetBSD: unvis.c,v 1.11 2004/12/04 23:31:40 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.10 2004/12/03 13:19:09 grant Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.11 2004/12/04 23:31:40 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -89,14 +89,14 @@ unvis(cp, c, astate, flag)
 	int c;
 	int *astate, flag;
 {
-	return __unvis13(cp, (int)c, astate, flag);
+	return __nbcompat_unvis13(cp, (int)c, astate, flag);
 }
 
 /*
  * unvis - decode characters previously encoded by vis
  */
 int
-__unvis13(cp, c, astate, flag)
+__nbcompat_unvis13(cp, c, astate, flag)
 	char *cp;
 	int c;
 	int *astate, flag;
@@ -297,7 +297,7 @@ strunvisx(dst, src, flag)
 
 	while ((c = *src++) != '\0') {
 	again:
-		switch (__unvis13(dst, c, &state, flag)) {
+		switch (__nbcompat_unvis13(dst, c, &state, flag)) {
 		case UNVIS_VALID:
 			dst++;
 			break;
@@ -311,7 +311,7 @@ strunvisx(dst, src, flag)
 			return (-1);
 		}
 	}
-	if (__unvis13(dst, c, &state, UNVIS_END) == UNVIS_VALID)
+	if (__nbcompat_unvis13(dst, c, &state, UNVIS_END) == UNVIS_VALID)
 		dst++;
 	*dst = '\0';
 	return (dst - start);
