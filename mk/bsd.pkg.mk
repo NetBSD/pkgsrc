@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.256 1999/04/19 20:04:18 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.257 1999/04/20 11:07:34 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -74,7 +74,7 @@ DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO
 .elif (${OPSYS} == "SunOS")
-DEF_UMASK?=		0022
+DEF_UMASK?=		022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO
 .elif (${OPSYS} == "OpenBSD")
