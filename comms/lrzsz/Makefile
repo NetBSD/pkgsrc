@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/01/21 13:05:28 tv Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:29 obrien Exp
 
 DISTNAME=	lrzsz-0.12.20
@@ -18,7 +18,8 @@ CONFIGURE_ARGS+=	--with-catgets
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin")
+.ifdef (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix")
+.  include "../../devel/gettext-lib/buildlink3.mk"
 LOCALE_SUFFIX=	mo
 .else
 LOCALE_SUFFIX=	cat
