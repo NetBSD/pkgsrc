@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1348 2004/02/07 00:52:58 snj Exp $
+$NetBSD: TODO,v 1.1349 2004/02/07 05:02:25 minskim Exp $
 
 Suggested new packages
 ======================
@@ -157,7 +157,6 @@ Suggested package updates
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o dnetc-2.9004-482 [pkg/22390]
-	o dvipdfmx-0.0.0.20031116 [pkg/23961]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
