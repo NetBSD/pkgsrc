@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2004/05/29 02:14:27 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/06/21 15:55:55 drochner Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -36,6 +36,8 @@ lib/libxine.so
 lib/libxine.so.9
 lib/libxine.so.9.1
 lib/pkgconfig/libxine.pc
+lib/xine/plugins/1.0.0/post/xineplug_post_audio_filter_upmix.a
+lib/xine/plugins/1.0.0/post/xineplug_post_audio_filter_upmix.so
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.a
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.so
 lib/xine/plugins/1.0.0/post/xineplug_post_mosaico.a
@@ -185,7 +187,6 @@ lib/xine/plugins/1.0.0/xineplug_vo_out_xshm.so
 man/man1/xine-config.1
 share/aclocal/xine.m4
 share/doc/xine/README
-share/doc/xine/README.config_en
 share/doc/xine/README.dvb
 share/doc/xine/README.dxr3
 share/doc/xine/README.freebsd
@@ -200,6 +201,7 @@ share/doc/xine/hackersguide/architecture.png
 share/doc/xine/hackersguide/hackersguide.html
 share/doc/xine/hackersguide/library.png
 share/doc/xine/hackersguide/overlays.png
+share/doc/xine/hackersguide/post_frame.png
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxine1.mo
