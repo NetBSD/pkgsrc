@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/08 14:39:40 wiz Exp $
 
 .if !defined(LIBVORBIS_BUILDLINK2_MK)
 LIBVORBIS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libvorbis
-BUILDLINK_DEPENDS.libvorbis?=	libvorbis>=1.0.0.8
+BUILDLINK_DEPENDS.libvorbis?=	libvorbis>=1.0.1
 BUILDLINK_PKGSRCDIR.libvorbis?=	../../audio/libvorbis
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libvorbis=libvorbis
