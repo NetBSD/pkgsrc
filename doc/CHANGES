@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1856 2003/04/06 14:41:08 wiz Exp $
+$NetBSD: CHANGES,v 1.1857 2003/04/06 18:29:17 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1476,3 +1476,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added whisker-2.1 [hubertf 2003-04-06]
 	Added dbh-1.0.14 [hubertf 2003-04-06]
 	Added chktex-1.6.1 [wiz 2003-04-06]
+	Updated nxtvepg to 2.5.0 [magick 2003-04-06]
