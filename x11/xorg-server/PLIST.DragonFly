@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2005/01/25 17:49:57 xtraeme Exp $
+${X11ROOT_PREFIX}/etc/rc.d/xprint
+${X11ROOT_PREFIX}/bin/kbd_mode
+${X11ROOT_PREFIX}/lib/modules/freebsd/libdrm.a
+${X11ROOT_PREFIX}/lib/modules/extensions/libdri.a
+${X11ROOT_PREFIX}/${MAN_DIR}/kbd_mode.${MAN_SUFFIX}
+@dirrm ${X11ROOT_PREFIX}/lib/modules/freebsd
+@dirrm ${X11ROOT_PREFIX}/etc/rc.d
