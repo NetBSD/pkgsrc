@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5578 2004/04/14 21:27:40 tron Exp $
+$NetBSD: CHANGES,v 1.5579 2004/04/15 08:38:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1953,3 +1953,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated milter-greylist to 1.2 [manu 2004-04-14]
 	Updated xchat2 to 2.0.8nb2 [xtraeme 2004-04-14]
 	Updated xchat to 1.8.11nb7 [tron 2004-04-14]
+	Updated gimp to 2.0.1 [adam 2004-04-15]
