@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.4 2004/01/03 20:23:51 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.5 2004/01/06 18:10:06 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -104,7 +104,7 @@ EOF
 			done
 			@CAT@ >> $sedfile << EOF
 s|$fromlib\([ 	"':;]\)|$tolibs\1|g
-s|$fromlib|$tolibs|g
+s|$fromlib$|$tolibs|g
 s|$fromlib/|$tolibs/|g
 EOF
 			;;
