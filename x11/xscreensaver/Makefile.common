@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.72 2004/02/26 17:31:40 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.73 2004/03/17 19:36:59 wiz Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -44,6 +44,7 @@ PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
 
 .if ${OPSYS} == "FreeBSD"
 PLIST_SUBST+=		AVAILABLE="@comment "
+CONFIGURE_ARGS+=	--without-kerberos
 .else
 PLIST_SUBST+=		AVAILABLE=
 .endif
