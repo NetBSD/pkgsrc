@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2001/03/04 09:06:15 tron Exp $
+# $NetBSD: Makefile,v 1.35 2001/04/10 07:26:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
 DISTNAME=	xv-3.10a
-PKGNAME=	${DISTNAME}pl1
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=     graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/ \
 		ftp://ftp.kuis.kyoto-u.ac.jp/X11/contrib/clients/xv/ \
