@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/29 16:23:33 pooka Exp $
+# $NetBSD: Makefile,v 1.5 1999/12/29 17:15:17 pooka Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.azzit.de/xbill/
+HOMEPAGE=		http://www.xbill.org/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
