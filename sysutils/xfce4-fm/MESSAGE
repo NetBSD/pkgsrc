@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/09/26 10:32:34 martti Exp $
+
+You will need to install the samba package (pkgsrc/net/samba)
+before attempting to browse any Windows shares in your network
+with ${PKGNAME}.
+===========================================================================
