@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:13:48 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/01 14:56:31 taca Exp $
 # $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -6,7 +6,7 @@ PKGNAME=	ap-${RUBY_PKGNAMEPREFIX}${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	http://www.modruby.net/archive/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
