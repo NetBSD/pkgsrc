@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9028 2005/02/04 21:52:09 adrianp Exp $
+$NetBSD: CHANGES,v 1.9029 2005/02/04 21:58:21 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -744,3 +744,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ocaml to 3.08.2 [adrianp 2005-02-04]
 	Updated gtk2 to 2.6.2 [jmmv 2005-02-04]
 	Updated advi to 1.6.0 [adrianp 2005-02-04]
+	Updated bibtex2html to 1.7.4 [adrianp 2005-02-04]
