@@ -205,6 +205,8 @@ lib$(LIB).a:	$(OBJS)
 	$(AR) cru $@ $?
 	$(RANLIB) $@
 
+# These three files should be compiled without any optimization.
+
 d1mach.o:
 	$(FC) -c $<
 
