@@ -1,8 +1,39 @@
-$NetBSD: patch-ba,v 1.1 2003/10/05 14:26:00 grant Exp $
+$NetBSD: patch-ba,v 1.2 2004/06/09 20:47:20 christos Exp $
 
---- hints/netbsd.sh.orig	Tue Jul  1 23:49:58 2003
-+++ hints/netbsd.sh	Wed Jul  2 11:49:17 2003
-@@ -133,23 +133,6 @@
+--- hints/netbsd.sh.orig	2003-08-07 12:57:56.000000000 -0400
++++ hints/netbsd.sh	2004-06-06 18:45:19.000000000 -0400
+@@ -78,6 +78,30 @@
+ 	d_setreuid="$undef"
+ 	;;
+ esac
++case "$osvers" in
++0.9*|1.*|2.*)
++	d_getprotoent_r="$undef"
++	d_getprotobyname_r="$undef"
++	d_getprotobynumber_r="$undef"
++	d_setprotoent_r="$undef"
++	d_endprotoent_r="$undef"
++	d_getservent_r="$undef"
++	d_getservbyname_r="$undef"
++	d_getservbyport_r="$undef"
++	d_setservent_r="$undef"
++	d_endservent_r="$undef"
++	d_getprotoent_r_proto="$undef"
++	d_getprotobyname_r_proto="$undef"
++	d_getprotobynumber_r_proto="$undef"
++	d_setprotoent_r_proto="$undef"
++	d_endprotoent_r_proto="$undef"
++	d_getservent_r_proto="$undef"
++	d_getservbyname_r_proto="$undef"
++	d_getservbyport_r_proto="$undef"
++	d_setservent_r_proto="$undef"
++	d_endservent_r_proto="$undef"
++	;;
++esac
+ 
+ # These are obsolete in any netbsd.
+ d_setrgid="$undef"
+@@ -133,23 +157,6 @@
  esac 
  EOCBU
  
