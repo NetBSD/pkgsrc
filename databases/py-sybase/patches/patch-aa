@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1 2004/10/05 19:49:28 tsarna Exp $
+
+Treat more informational messages as non-fatal, and add an
+extension to allow an application to capture them.
+
+--- Sybase.py.orig	2003-04-27 06:54:35.000000000 -0400
++++ Sybase.py	2004-10-05 15:01:02.000000000 -0400
+@@ -129,6 +129,8 @@
+ def Binary(str):
+     return str
+ 
++_output_hooks = {}
++
+ def _fmt_server(msg):
+     parts = []
+     for label, name in (('Msg', 'msgnumber'),
+@@ -157,8 +159,17 @@
+     raise DatabaseError(_fmt_client(msg))
+ 
+ def _servermsg_cb(ctx, conn, msg):
+-    if msg.msgnumber not in (5701, 5703):
+-        raise DatabaseError(_fmt_server(msg))
++    mn = msg.msgnumber
++    if mn in (0, 5701, 5703, 5704) or ((mn >= 6200) and (mn < 6300)):
++        # Non-errors:
++        #    0      PRINT
++        # 5701      Changed db context
++        # 5703      Changed language
++        # 5704      Changed character set (Sybase)
++        # 6200-6299 SHOWPLAN output (Sybase)
++        _output_hooks.get(conn, lambda c,m: None)(conn, msg)
++    else:
++        raise DatabaseError(_fmt_server(msg.text))
+ 
+ def _row_bind(cmd, count = 1):
+     '''Bind buffers for count rows of column data.
+@@ -838,6 +849,16 @@
+         finally:
+             self._unlock()
+ 
++    def set_output_hook(self, hook):
++        if hook is None:
++            if _output_hooks.has_key(self._conn):
++                del _output_hooks[self._conn]
++        else:
++            _output_hooks[self._conn] = hook
++
++    def get_output_hook(self, hook):
++        return _output_hooks.get(self._conn)
++        
+     def __del__(self):
+         try:
+             self.close()
