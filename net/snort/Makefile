@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/15 21:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/02 12:06:15 agc Exp $
 #
 
 DISTNAME=	snort-1.5
@@ -15,8 +15,17 @@ HOMEPAGE=	http://www.clark.net/~roesch/security.html
 
 GNU_CONFIGURE=	YES
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS=	libpcap-0.4:../../net/libpcap
+ROOTGROUP=	root
+.endif
+
+ROOTGROUP?=	wheel
+
 post-install:
-	${INSTALL_DATA_DIR} -m 700 -o root -g wheel /var/log/snort
+	${INSTALL_DATA_DIR} -m 700 -o root -g ${ROOTGROUP} /var/log/snort
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort
 .for f in backdoor-lib misc-lib overflow-lib scan-lib snort-lib web-lib
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/snort
