@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/15 12:37:57 drochner Exp $
+
+--- configure.orig	Tue Dec  5 17:05:56 2000
++++ configure	Wed Dec 13 14:23:33 2000
+@@ -3547,12 +3547,7 @@
+ 	  	  if test -f $PY_PREFIX/include/python$PY_VERSION/Python.h; then
+ 		  PY_LIBS="python$PY_VERSION"
+ 		  PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
+-                  array_loc=`find $PY_PREFIX/include/python$PY_VERSION/ -name arrayobject.h -printf %h`
+-                  if test -z $array_loc; then
+-                    if test -n $PYTHONPATH; then
+-                     array_loc=$PYTHONPATH
+-                    fi
+-                  fi
++                  array_loc=$PY_PREFIX/include/python$PY_VERSION/Numeric
+                   echo arrayobject.h location: $array_loc
+                   PY_CFLAGS="-I$PY_PREFIX/include/python$PY_VERSION"
+                   if test -n $array_loc; then
