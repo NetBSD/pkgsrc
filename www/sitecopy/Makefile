@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 21:52:20 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/30 18:55:48 kristerw Exp $
 
 DISTNAME=		sitecopy-0.11.4
 CATEGORIES=		www
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-included-neon
-CONFIGURE_ARGS+=	--enable-libxml
+CONFIGURE_ARGS+=	--with-libxml1
 
 LIBS+=			${LIBGETOPT}
 
