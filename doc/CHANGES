@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1480 2003/02/25 02:17:42 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1481 2003/02/25 07:08:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -827,3 +827,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libxslt to 1.0.26 [jmmv 2003-02-24]
 	Updated g-wrap to 1.3.4 [jschauma 2003-02-24]
 	Updated xemacs to 21.4.12 [uebayasi 2003-02-25]
+	Updated pysol to 4.81 [wiz 2003-02-25]
