@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/19 03:56:25 jlam Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
@@ -22,9 +22,9 @@ FHOME=		${PREFIX}/share/festival
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
-	${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	${FIND} ${WRKSRC} -type d -print0 | ${XARGS} -0 ${CHMOD} 755
 	${RM} -f ${WRKSRC}/lib/voices/spanish/abc_diphone/group/hvslpcOGI16k.group
-	${FIND} ${WRKSRC} -type d -name CVS | xargs ${RM} -fr
+	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -fr
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 09:07:06 agc Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/19 03:56:36 jlam Exp $
 #
 
 DISTNAME=		fort77-1.14a
@@ -27,7 +27,7 @@ ALL_TARGET=		test
 USE_PERL5=		YES
 
 post-patch:
-	for f in `${FIND} ${WRKDIR} -type f -print|xargs ${GREP} -l '/usr'`; \
+	for f in `${FIND} ${WRKDIR} -type f -print | ${XARGS} ${GREP} -l '/usr'`; \
 	do \
 	  ${SED} -e 's:/usr:'${PREFIX}':g' <$$f >$$f.pdone && \
 	  ${MV} $$f.pdone $$f; \

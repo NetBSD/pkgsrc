@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/20 11:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/05/19 03:56:31 jlam Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
@@ -23,7 +23,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ ${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	@ ${FIND} ${WRKSRC} -type d -print0 | ${XARGS} -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${MHOME}
