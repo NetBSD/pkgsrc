@@ -1,0 +1,26 @@
+--- Makefile.inc.orig	Tue Jul 29 02:58:19 1997
++++ Makefile.inc	Mon Feb 16 21:05:32 1998
+@@ -2,10 +2,10 @@
+ 
+ # Edit MOSMLHOME, CPP and STRIP to suit your installation
+ 
+-MOSMLHOME=${HOME}/mosml
++MOSMLHOME=${PREFIX}
+ 
+ # For Linux and other well-behaved systems, use:
+-CPP=/lib/cpp -P -traditional -Dunix -Umsdos
++CPP=/usr/bin/cpp -P -traditional
+ STRIP=strip
+ 
+ # For HP-UX, use instead:
+@@ -23,8 +23,8 @@
+ # LIBDIR contains bytecode files (such as mosmlcmp and library units)
+ 
+ BINDIR=${MOSMLHOME}/bin
+-LIBDIR=${MOSMLHOME}/lib
+-TOOLDIR=${MOSMLHOME}/tools
++LIBDIR=${MOSMLHOME}/lib/moscow_ml
++TOOLDIR=${MOSMLHOME}/libexec/moscow_ml
+ 
+ CAMLRT=../runtime
+ 

@@ -1,0 +1,11 @@
+--- runtime/Makefile.orig	Tue Jul 29 02:51:01 1997
++++ runtime/Makefile	Mon Feb 16 23:59:45 1998
+@@ -36,7 +36,7 @@
+ 	rm -f primitives prims.c opnames.h jumptbl.h
+ 
+ install:
+-	cp camlrunm $(BINDIR)
++	${BSD_INSTALL_PROGRAM} camlrunm $(BINDIR)
+ 
+ primitives : $(PRIMS)
+ 	sed -n -e '/\/\* ML \*\//s/.* \([a-zA-Z0-9_][a-zA-Z0-9_]*\) *(.*/\1/p' \

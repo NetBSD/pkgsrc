@@ -1,0 +1,25 @@
+--- mosmllib/Makefile.orig	Thu Jul 17 17:33:44 1997
++++ mosmllib/Makefile	Tue Feb 17 00:07:02 1998
+@@ -27,14 +27,14 @@
+ 	rm -f Vector.sml Word.sml Word8Array.sml Word8Vector.sml
+ 
+ install:
+-	cp README $(LIBDIR)
+-	cp *.ui $(LIBDIR)
+-	cp *.uo $(LIBDIR)
+-	cp *.sig $(LIBDIR)
+-	cp General.fke $(LIBDIR)/General.sig
+-	cp Meta.fke $(LIBDIR)/Meta.sig
+-	cp OS.fke $(LIBDIR)/OS.sig
+-	cp helpsigs.val $(LIBDIR)
++	${BSD_INSTALL_DATA} README $(LIBDIR)
++	${BSD_INSTALL_DATA} *.ui $(LIBDIR)
++	${BSD_INSTALL_DATA} *.uo $(LIBDIR)
++	${BSD_INSTALL_DATA} *.sig $(LIBDIR)
++	${BSD_INSTALL_DATA} General.fke $(LIBDIR)/General.sig
++	${BSD_INSTALL_DATA} Meta.fke $(LIBDIR)/Meta.sig
++	${BSD_INSTALL_DATA} OS.fke $(LIBDIR)/OS.sig
++	${BSD_INSTALL_DATA} helpsigs.val $(LIBDIR)
+ 
+ depend: Array.sml FileSys.sml Help.sml Int.sml Mosml.sml OS.sml Path.sml \
+     Strbase.sml Vector.sml Word.sml Word8Array.sml Word8Vector.sml

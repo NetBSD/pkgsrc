@@ -1,0 +1,13 @@
+--- lex/Makefile.orig	Wed Oct 23 10:42:57 1996
++++ lex/Makefile	Tue Feb 17 00:24:04 1998
+@@ -34,8 +34,8 @@
+ 	rm -f Makefile.bak
+ 
+ install:
+-	cat $(LIBDIR)/header mosmllex > $(BINDIR)/mosmllex
+-	chmod a+x $(BINDIR)/mosmllex
++	cat $(LIBDIR)/header mosmllex > mosmllex.bin
++	${BSD_INSTALL_SCRIPT} mosmllex.bin $(BINDIR)/mosmllex
+ 
+ Grammar.sml Grammar.sig: Grammar.grm
+ 	$(MOSMLYACC) Grammar.grm
