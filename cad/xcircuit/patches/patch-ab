@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/02 13:59:55 dmcmahill Exp $
+
+use the 'standard' netbsd config rather than overriding CC.
+
+--- Xw/Imakefile.orig	Thu Aug  3 16:10:52 2000
++++ Xw/Imakefile	Thu Nov  2 08:32:51 2000
+@@ -1,4 +1,4 @@
+ # Compile flags
+-CC = cc
++#CC = cc
+ # If you wish to compile with gcc:
+ #CC = gcc
