@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2004/11/26 15:32:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2004/12/22 03:57:15 reed Exp $
 
 DISTNAME=	tiff-v3.6.1
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/old/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/tiff/old/
