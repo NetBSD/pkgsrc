@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/04/28 16:24:32 tron Exp $
+# $NetBSD: Makefile,v 1.71 2003/04/28 16:27:40 tron Exp $
 
 DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
@@ -39,7 +39,7 @@ pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
 
 pre-install:
-	${RM} -rf ${STAGEDIR}
+	${RM} -fr ${STAGEDIR}
 
 post-install:
 	cd ${STAGEDIR} && 				\
