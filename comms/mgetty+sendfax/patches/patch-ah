@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.3 2004/04/26 19:59:15 tron Exp $
+
+--- getdisk.c.orig	2001-01-28 14:29:43.000000000 +0100
++++ getdisk.c	2004-04-26 21:56:58.000000000 +0200
+@@ -94,6 +94,11 @@
+ # define USTAT
+ #endif
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#undef	BSDSTATFS
++#define	SVR4
++#endif
++
+ #if defined(SVR4)
+ # define SVR3
+ #endif
