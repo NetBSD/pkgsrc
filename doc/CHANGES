@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6137 2004/06/05 10:29:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.6138 2004/06/05 11:16:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2789,3 +2789,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-stable to 1.4nb5 [taya 2004-06-05]
 	Added gtk2-engines-industrial-20030725 [jmmv 2004-06-05]
 	Updated gtk2-engines-bluecurve to 1.0nb1 [jmmv 2004-06-05]
+	Updated mkvtoolnix to 0.9.0 [salo 2004-06-05]
+	Updated mmg to 0.9.0 [salo 2004-06-05]
