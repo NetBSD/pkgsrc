@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2849 2005/01/06 11:11:38 adam Exp $
+$NetBSD: TODO,v 1.2850 2005/01/06 11:56:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -229,10 +229,6 @@ Suggested new packages
 	Blackdown JDK/JRE 1.4
 	http://www.blackdown.org/java-linux/java2-status/jdk1.4-status.html
 	1.4 version of Blackdown's Java for Linux
-
-	ntop3
-	http://sourceforge.net/project/showfiles.php?group_id=17233&release_id=99153
-	Major version 3 of ntop
 
 	ices-mp3-v2
 	http://www.icecast.org/ices.php
