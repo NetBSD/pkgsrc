@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:08:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/22 12:11:01 xtraeme Exp $
 bin/hsml
 lib/screws/BasicExec.so
+lib/screws/CleanLog.so
 lib/screws/Hello.so
 lib/screws/HsmlExec.so
 lib/screws/LoadBalancing.so
 lib/screws/Mime.so
+lib/screws/MyReq.so
 lib/screws/noupdir.so
 lib/screws/unicode.so
 libexec/screws/README
 libexec/screws/c/Makefile
 libexec/screws/c/index.html
 libexec/screws/c/linksys.c
+libexec/screws/htdocs/env.hsml
 libexec/screws/htdocs/index.html
 libexec/screws/htdocs/index2.html
 libexec/screws/htdocs/logo.png
@@ -24,6 +27,8 @@ libexec/screws/perl/defpages/404.html
 libexec/screws/perl/error.pl
 libexec/screws/perl/get.pl
 libexec/screws/perl/htdocs/.hidden
+libexec/screws/perl/htdocs/dmesg.x
+libexec/screws/perl/htdocs/env.hsml
 libexec/screws/perl/htdocs/example.c
 libexec/screws/perl/htdocs/example.dir/OtherDir/nullfile
 libexec/screws/perl/htdocs/example.dir/onefile
@@ -42,7 +47,9 @@ libexec/screws/perl/htdocs/hsml2.pl.html
 libexec/screws/perl/htdocs/index.html
 libexec/screws/perl/htdocs/logo-old.png
 libexec/screws/perl/htdocs/logo.png
+libexec/screws/perl/htdocs/pop.hsml
 libexec/screws/perl/htdocs/post.hsml
+libexec/screws/perl/htdocs/redirect.hsml
 libexec/screws/perl/http1.pl
 libexec/screws/perl/listdir.pl
 libexec/screws/perl/main.pl
@@ -52,6 +59,8 @@ libexec/screws/perl/mime.types
 libexec/screws/sh/basic.sh
 libexec/screws/sh/basic.sh.old
 libexec/screws/sh/index.html
+man/man1/screwsctl.1
+man/man5/screws.conf.5
 man/man8/screwsd.8
 sbin/screwsctl
 sbin/screwsd
@@ -70,6 +79,7 @@ share/doc/screws/tcpwin
 share/doc/screws/verbose
 share/doc/screws/virtual-hosts
 share/doc/screws/wrt54g.txt
+share/examples/screws/default.conf
 share/examples/screws/screws.conf
 share/screws/hsml-inc/include.pl.html
 share/screws/mime.types
