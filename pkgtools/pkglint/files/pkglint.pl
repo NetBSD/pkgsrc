@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.20 1999/12/29 01:51:17 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.21 2000/01/02 03:40:21 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -274,7 +274,7 @@ sub checkdescr {
 	}
 	if ($tmp =~ /[\033\200-\377]/) {
 		&perror("WARN: pkg/DESCR includes iso-8859-1, or ".
-			"other local characters.  $file should be".
+			"other local characters.  $file should be ".
 			"plain ascii file.");
 	}
 	close(IN);
