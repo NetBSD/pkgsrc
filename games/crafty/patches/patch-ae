@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/15 02:06:27 jlam Exp $
+
+--- tbdecode.h.orig	Mon Aug 14 00:00:30 2000
++++ tbdecode.h
+@@ -76,7 +76,7 @@
+ #define dprintf(x)   ((void) 0)
+ #endif
+ 
+-extern "C" int cbEGTBCompBytes = 0;
++extern "C" { int cbEGTBCompBytes = 0; }
+ 
+ /* --------------------- Constants, types, etc. ----------------------- */
+ /*                       ----------------------                         */
