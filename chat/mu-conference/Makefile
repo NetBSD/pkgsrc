@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/14 19:38:19 minskim Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -48,7 +48,7 @@ pre-build:
 
 post-build:
 	${CP} ${WRKSRC}/src/main.c ${WRKSRC}/src/jcomp.mk ${SUBWRKSRC}
-	cd ${SUBWRKSRC} ; ${GMAKE} -f jcomp.mk
+	cd ${SUBWRKSRC} ; ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
 
 do-install:
 	${INSTALL_PROGRAM} ${SUBWRKSRC}/mu-conference ${PREFIX}/bin
