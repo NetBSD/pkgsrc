@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/07/15 20:39:15 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/07/20 08:25:42 agc Exp $
 #
 
 DISTNAME=	xsidplay-1_3_9
@@ -21,7 +21,7 @@ USE_GMAKE=	yes
 EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS+= --with-sidplay-includes=${LOCALBASE}/include \
 		--with-sidplay-library=${LOCALBASE}/lib \
-		--with-qt-dir=${QT1DIR}/qt1/lib
+		--with-qt-dir=${QT1DIR}/qt1
 
 LDFLAGS+=	-Wl,-R${QT1DIR}/qt1/lib
 CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
