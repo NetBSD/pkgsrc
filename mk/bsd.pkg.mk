@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.481 2000/06/19 01:24:16 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.482 2000/06/23 23:41:43 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2238,19 +2238,23 @@ package-depends:
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
 	cd ${.CURDIR};							\
-	if cd $$dir 2>/dev/null; then					\
-		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
-			${ECHO} "$$pkg";				\
-		else							\
-			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
-		fi;							\
-		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
-		else 							\
-			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
-		fi ; 							\
+	if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then			\
+		${ECHO} "$$pkg";					\
 	else								\
-		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+		if cd $$dir 2>/dev/null; then				\
+			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+		else 							\
+			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+		fi;							\
+	fi;								\
+	if ${PACKAGE_DEPENDS_QUICK} ; then 			\
+		${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
+	else 							\
+		if cd $$dir 2>/dev/null; then				\
+			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+		else 							\
+			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+		fi;							\
 	fi
 .endfor
 .for dep in ${RUN_DEPENDS}
@@ -2723,7 +2727,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.481 2000/06/19 01:24:16 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.482 2000/06/23 23:41:43 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
