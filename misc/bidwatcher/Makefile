@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/22 21:59:55 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/25 22:46:28 tron Exp $
 
 DISTNAME=	bidwatcher-1.3.3
 CATEGORIES=	misc
@@ -8,17 +8,12 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://sourceforge.net/projects/bidwatcher/
 COMMENT=        eBay snipe tool
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+AUTOMAKE_OVERRIDE=	NO
 
 DOCDIR=		${PREFIX}/share/doc/bidwatcher
 HTMLDIR=	${PREFIX}/share/doc/html/bidwatcher
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == SunOS)
-MAKE_ENV+=	CC="${CC}" CXX="${CXX}"
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
