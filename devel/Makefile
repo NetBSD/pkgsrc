@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2001/07/01 16:56:05 taca Exp $
+# $NetBSD: Makefile,v 1.228 2001/07/09 09:37:45 zuntum Exp $
 #
 
 COMMENT=	Development utilities
@@ -170,6 +170,7 @@ SUBDIR+=	p5-TimeDate
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	palmos-includes
+SUBDIR+=	pardiff
 SUBDIR+=	patch
 SUBDIR+=	pccts
 SUBDIR+=	pcre
