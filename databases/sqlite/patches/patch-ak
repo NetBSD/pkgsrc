@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2003/12/29 20:03:31 cjep Exp $
+$NetBSD: patch-ak,v 1.2 2003/12/30 14:41:09 cjep Exp $
 
 --- ../sqlite/src/insert.c.orig	2003-06-04 17:24:39.000000000 +0100
 +++ ../sqlite/src/insert.c
