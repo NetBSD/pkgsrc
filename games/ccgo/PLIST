@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+bin/ccgo
+man/man6/ccgo.6
+share/gnome/apps/Games/ccgo.desktop
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/ccgo.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/ccgo.mo
+share/pixmaps/ccgo.png
+share/pixmaps/ccgo/banner.png
+share/pixmaps/ccgo/black_stone.png
+share/pixmaps/ccgo/board.png
+share/pixmaps/ccgo/gamelist_icon.png
+share/pixmaps/ccgo/igs_icon.png
+share/pixmaps/ccgo/main_icon.png
+share/pixmaps/ccgo/matching_icon.png
+share/pixmaps/ccgo/matchlist_icon.png
+share/pixmaps/ccgo/observing_icon.png
+share/pixmaps/ccgo/playerlist_icon.png
+share/pixmaps/ccgo/playing_icon.png
+share/pixmaps/ccgo/teaching_icon.png
+share/pixmaps/ccgo/white_stone.png
+@dirrm share/pixmaps/ccgo
