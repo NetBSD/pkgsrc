@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1195 2003/12/14 16:46:55 jmmv Exp $
+$NetBSD: TODO,v 1.1196 2003/12/14 17:15:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -198,7 +198,6 @@ Suggested package updates
 	o gtk-gnutella-0.93
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
-	o guile-1.6.4
 	o hatari-0.45
 	o host-20031203
 	o hp2xx-3.4.4
