@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2001/01/29 10:25:08 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/03/15 18:28:43 wiz Exp $
+include/ansidecl.h
+include/bfd.h
 lib/ldscripts/armnbsd.x
 lib/ldscripts/armnbsd.xbn
 lib/ldscripts/armnbsd.xn
@@ -89,6 +91,16 @@ lib/ldscripts/m68knbsd.xbn
 lib/ldscripts/m68knbsd.xn
 lib/ldscripts/m68knbsd.xr
 lib/ldscripts/m68knbsd.xu
+lib/ldscripts/shlunx.x
+lib/ldscripts/shlunx.xbn
+lib/ldscripts/shlunx.xn
+lib/ldscripts/shlunx.xr
+lib/ldscripts/shlunx.xu
+lib/ldscripts/shunx.x
+lib/ldscripts/shunx.xbn
+lib/ldscripts/shunx.xn
+lib/ldscripts/shunx.xr
+lib/ldscripts/shunx.xu
 lib/ldscripts/sparcnbsd.x
 lib/ldscripts/sparcnbsd.xbn
 lib/ldscripts/sparcnbsd.xn
@@ -104,17 +116,13 @@ lib/ldscripts/sun4.xbn
 lib/ldscripts/sun4.xn
 lib/ldscripts/sun4.xr
 lib/ldscripts/sun4.xu
-@unexec rmdir %D/lib/ldscripts 2>/dev/null || true
-include/ansidecl.h
-include/bfd.h
 lib/libbfd-2.9.1.so
 lib/libbfd.a
 lib/libbfd.la
+lib/libiberty.a
 lib/libopcodes-2.9.1.so
 lib/libopcodes.a
 lib/libopcodes.la
-lib/libiberty.a
-@unexec rm -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || true
 libexec/binutils/addr2line
 libexec/binutils/ar
 libexec/binutils/cross-env
@@ -132,3 +140,5 @@ libexec/binutils/windres
 @dirrm libexec/binutils
 @exec ln -s %D/libexec/binutils/cross-env ${LOCALBASE}/bin/cross-env
 @unexec rm ${LOCALBASE}/bin/cross-env
+@unexec rm -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || true
+@unexec rmdir %D/lib/ldscripts 2>/dev/null || true
