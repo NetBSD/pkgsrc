@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/27 20:29:52 cube Exp $
 etc/rc.d/thttpd
-libexec/cgi-bin/redirect
 libexec/cgi-bin/phf
+libexec/cgi-bin/redirect
 libexec/cgi-bin/ssi
 man/man1/makeweb.1
 man/man1/thtpasswd.1
