@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1412 2004/02/23 17:26:24 minskim Exp $
+$NetBSD: TODO,v 1.1413 2004/02/23 17:41:23 minskim Exp $
 
 Suggested new packages
 ======================
@@ -169,7 +169,6 @@ Suggested package updates
 	o efax-gtk-2.2.5
 	o elk-3.99.6
 	o elm-me-2.4pl111
-	o enchant-1.1.2
 	o ethereal-0.10.1
 	o evolution-1.5.2
 	o exim-4.24
