@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1 2004/04/14 15:26:41 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.2 2004/04/14 19:30:22 jmmv Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -17,9 +17,9 @@ ver:=			${dir:C/^.*-//}
 _USE_GNOME1_DIRS:=	${ver}
 .  elif ${pkg} == "gnome2" && ${_USE_GNOME2_DIRS} < ${ver}
 _USE_GNOME2_DIRS:=	${ver}
-.  elif ${pkg} == "xdg" && ${_USE_XDG_DIRS} < ${ver}
+.  elif ${pkg} == "xdg" && ${_USE_XDG_DIRS} < ${ver} && !defined(USE_X11BASE)
 _USE_XDG_DIRS:=		${ver}
-.  elif ${pkg} == "xdg-x11" && ${_USE_XDG_DIRS_DIRS} < ${ver}
+.  elif ${pkg} == "xdg" && ${_USE_XDG_X11_DIRS} < ${ver} && defined(USE_X11BASE)
 _USE_XDG_X11_DIRS:=	${ver}
 .  endif
 
