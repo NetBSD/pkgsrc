@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/04/16 21:55:18 tron Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/02 15:52:57 tron Exp $
 #
 
 DISTNAME=	gnome-core-1.0.5
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	esound-0.2.8:../../audio/esound
-DEPENDS+=	gnome-libs-1.0.8:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-1.0.9:../../x11/gnome-libs
 # "libgtop" packages is broken at the moment.
 #DEPENDS+=	libgtop-1.0.1:../../devel/libgtop
 
