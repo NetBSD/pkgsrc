@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.7 2002/03/25 04:47:48 rh Exp $
+
+--- panel/gnome-panel-screenshot.c.orig	Fri Oct 26 19:13:49 2001
++++ panel/gnome-panel-screenshot.c
+@@ -49,11 +49,9 @@
+ #include <X11/Xmu/WinUtil.h>
+ #include <libart_lgpl/art_rgb_affine.h>
+ 
+-#ifdef HAVE_PAPER_WIDTH
+ #include <stdio.h>
+ #include <locale.h>
+ #include <langinfo.h>
+-#endif
+ 
+ /* How far down the window tree will we search when looking for top-level
+  * windows? Some window managers doubly-reparent the client, so account
