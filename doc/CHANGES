@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2764 2003/07/12 22:37:03 wiz Exp $
+$NetBSD: CHANGES,v 1.2765 2003/07/13 00:43:26 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2786,3 +2786,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vtun to 2.6 [taca 2003-07-12]
 	Add gqmpeg-skins-20030712 [hubertf 2003-07-12]
 	Updated vorbis-tools to 1.0.0.8nb3 [wiz 2003-07-12]
+	Updated cgoban-java to 2.5.0 [rh 2003-07-13]
