@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 18:26:28 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.19 2004/03/31 09:02:04 snj Exp $
 
 DISTNAME=		gtkglext-0.7.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,12 +12,13 @@ COMMENT=		OpenGL extension to GTK
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
-USE_PERL5=		build
 USE_GNU_TOOLS+=		make
-USE_X11=		YES
 USE_LIBTOOL=		YES
+USE_PERL5=		build
+USE_X11=		YES
 
-PKGCONFIG_OVERRIDE=	gtkglext.pc.in
+PKGCONFIG_OVERRIDE=	gdkglext.pc.in
+PKGCONFIG_OVERRIDE+=	gtkglext.pc.in
 LIBS+=			-lm
 
 CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/doc/html
