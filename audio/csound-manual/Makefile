@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/11 22:00:12 ben Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/12 17:45:04 ben Exp $
 #
 
 DISTNAME=		manual-html-4.23
@@ -14,6 +14,7 @@ COMMENT=		Csound Reference Manual
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}
+DIST_SUBDIR=		${PKGNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/csound
