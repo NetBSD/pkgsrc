@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:52 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/24 19:45:31 jlam Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
@@ -13,11 +13,11 @@ COMMENT= 	HTML editor suitable for experienced web developers
 
 BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK_ONLY=	YES
 
+USE_PERL5=		build
 USE_GMAKE=              YES
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/21 12:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/24 19:45:23 jlam Exp $
 #
 
 DISTNAME=	nasm-0.98.08
@@ -9,10 +9,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nasm.2y.net/
 COMMENT=	General-purpose x86 assembler (development version)
 
-BUILD_DEPENDS+=	perl>=5.0:../../lang/perl5
-
 INSTALL_TARGET=	install_everything
 USE_GMAKE=	yes
+USE_PERL5=	build
 INFO_FILES=	nasm.info
 TEXINFO_OVERRIDE=	YES
 TEXINFO_PATTERNS+=	Makefile
