@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/03/06 07:25:10 jmc Exp $
+
+--- ./gal/e-table/e-table-group.c.orig	Thu Mar  6 03:29:39 2003
++++ ./gal/e-table/e-table-group.c	Thu Mar  6 03:29:54 2003
+@@ -135,7 +135,7 @@
+ 	gtk_object_ref (GTK_OBJECT(etg->header));
+ 	etg->model = model;
+ 	gtk_object_ref (GTK_OBJECT(etg->model));
+-	gnome_canvas_item_construct (GNOME_CANVAS_ITEM (etg), parent, 0, NULL);
++	gnome_canvas_item_construct (GNOME_CANVAS_ITEM (etg), parent, 0, *(va_list *)NULL);
+ }
+ 
+ /**
