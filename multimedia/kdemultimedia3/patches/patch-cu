@@ -1,16 +1,7 @@
-$NetBSD: patch-cu,v 1.3 2004/10/10 19:50:23 mycroft Exp $
+$NetBSD: patch-cu,v 1.4 2004/10/14 11:10:00 markd Exp $
 
 --- kioslave/audiocd/audiocd.cpp.orig	2004-08-05 19:25:33.000000000 +0000
 +++ kioslave/audiocd/audiocd.cpp	2004-10-10 19:38:46.000000000 +0000
-@@ -1047,7 +1047,7 @@
- 
- 	long currentSector(firstSector);
- 
--	unsigned long processed = encoder->readInit(CD_FRAMESIZE_RAW * (lastSector - firstSector));
-+	unsigned long processed = encoder->readInit(CD_FRAMESIZE_RAW * (lastSector - firstSector + 1));
- 	// TODO test for errors (processed<0)?
- 	processedSize(processed);
- 	bool ok = true;
 @@ -1092,7 +1092,7 @@
  		 * 2) Only increase in size unless the decrease is %5 of last estimate.
  		 * This prevents continues small changes which is just annoying.
