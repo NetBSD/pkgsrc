@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/10/02 18:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2002/10/21 13:27:24 wiz Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		2
@@ -10,27 +10,20 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
 COMMENT=	Experimental HTML 3 browser, supports math and style sheets
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		libwww>=5.3.2nb1:../../www/libwww
-DEPENDS+=		png>=1.2.1:../../graphics/png
-
-AUTOCONF_REQD?=		2.13
 BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
-USE_LIBINTL=		YES
 USE_X11=		YES
-USE_XPM=		YES
 
 # Comment out the following to build in the debugging symbols.
 CONFIGURE_ARGS+=	--without-debug
 
 CONFIGURE_ARGS+=	--with-arenarc-dir=${LOCALBASE}/etc
 CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${WRKDIR}
-CONFIGURE_ARGS+=	--with-libwww-include=${LOCALBASE}/include/w3c-libwww
-CONFIGURE_ARGS+=	--with-libwww-libdir=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-libwww-include=${BUILDLINK_PREFIX.libwww}/include/w3c-libwww
+CONFIGURE_ARGS+=	--with-libwww-libdir=${BUILDLINK_PREFIX.libwww}/lib
 
-CPPFLAGS+=		-I${LOCALBASE}/include -I${X11BASE}/include
 MAKEFILE=		makefile
 
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
@@ -42,7 +35,6 @@ pre-configure:
 	    ${LN} -sf $$c ${WRKSRC}/config.h; \
  	  fi; \
 	done
-	cd ${WRKSRC} && ${AUTOCONF}
 
 do-install:
 	${INSTALL_PROGRAM} \
@@ -71,5 +63,9 @@ EXTRACT_ELEMENTS=	${GLOBAL_EXCLUDE_ARG}
 EXTRACT_ELEMENTS+=	${EXCLUDE_ARG} Arena-*/Auxiliary/${DONT_EXTRACT_SUBDIR}
 .endfor
 
-.include "../../mk/autoconf.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../www/libwww/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
