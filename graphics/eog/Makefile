@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/08 19:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/12 00:16:43 snj Exp $
 
 DISTNAME=		eog-0.6
 PKGREVISION=		7
@@ -14,16 +14,16 @@ DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/GConf/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../devel/bonobo/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/gnome-print/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
