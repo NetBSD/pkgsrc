@@ -1,0 +1,25 @@
+$NetBSD: patch-bg,v 1.1 1999/02/10 19:18:01 bad Exp $
+
+--- scripts/pgcc.sh.orig	Fri Sep  1 00:43:39 1995
++++ scripts/pgcc.sh	Wed Feb 10 18:51:34 1999
+@@ -7,6 +7,7 @@
+ include_dir='-I$pthreads_root/include'
+ lib_dir='-L$pthreads_root/lib'
+ libs='-lpthread -lm -lgcc -lpthread'
++ldrun='-Wl,-R$pthreads_root/lib'
+ 
+ # Might be a good idea to also provide a way to override pthreads_root
+ # so that we can use this script in the build tree, before installation.
+@@ -23,10 +24,10 @@
+ for arg in "$@" ; do
+     case $arg in
+ 	-nostdinc)	include_dir= ;;
+-	-nostdlib | -c)	libs= ;;
++	-nostdlib | -c)	libs= ldrun= ;;
+     esac
+ done
+ 
+ # Include the -L option in any case, just in case the user provided the
+ # names of some libraries we've built threaded versions of.
+-eval exec COMPILER '"$@"' $include_dir $lib_dir $libs
++eval exec COMPILER '"$@"' $include_dir $lib_dir $ldrun $libs
