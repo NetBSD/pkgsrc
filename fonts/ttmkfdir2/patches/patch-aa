@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/03 11:31:02 recht Exp $
 
 --- Makefile.orig	2002-11-07 06:28:44.000000000 +0100
 +++ Makefile
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
 -DEBUG=-ggdb
 -CXX=g++
 -CXXFLAGS=-Wall -pedantic $(FREETYPE_INCL) $(DEBUG)
-+FREETYPE_INCL=`freetype-config --cflags`
-+FREETYPE_LIB=`freetype-config --libs`
++FREETYPE_INCL=`$(FREETYPE_CONFIG) --cflags`
++FREETYPE_LIB=`$(FREETYPE_CONFIG) --libs`
  
 -LDFLAGS=$(FREETYPE_LIB) $(DEBUG)
 +CXXFLAGS+=$(FREETYPE_INCL)
