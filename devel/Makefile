@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2005/02/19 12:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.610 2005/02/19 17:18:44 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -431,6 +431,7 @@ SUBDIR+=	p5-SortVersions
 SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
+SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Term-ReadLine
