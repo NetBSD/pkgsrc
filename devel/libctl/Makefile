@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2000/12/10 05:44:32 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/21 04:49:44 jtb Exp $
 
-DISTNAME=	libctl-1.2
+DISTNAME=	libctl-1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://superjdj.mit.edu/libctl/
 
@@ -8,14 +8,14 @@ MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 
 DEPENDS+=	guile-[0-9]*:../../lang/guile
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 pre-configure:
-	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf 2>/dev/null)
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libctl
