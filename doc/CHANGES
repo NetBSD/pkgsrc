@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9713 2005/04/01 13:52:50 abs Exp $
+$NetBSD: CHANGES,v 1.9714 2005/04/01 18:38:38 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1853,4 +1853,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xplanet to 1.1.2 [adam 2005-04-01]
 	Renamed jakarta-tomcat to jakarta-tomcat55 [abs 2005-04-01]
 	Added jakarta-tomcat-5.5.7 [abs 2005-04-01]
-
+	Added teem-1.8.0 [jschauma 2005-04-01]
