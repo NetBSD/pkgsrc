@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2129 2003/05/02 23:38:57 jtb Exp $
+$NetBSD: CHANGES,v 1.2130 2003/05/03 05:48:22 dan Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1836,3 +1836,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added yabasic-2.722 [jtb 2003-05-02]
 	Updated xemacs-current to 21.5.12 [magick 2003-05-03]
 	Added oo2c-2.0.8 [jtb 2003-05-03]
+	Added dvd+rw-tools-5.5.4.3.4 [dan 2003-05-03]
+
