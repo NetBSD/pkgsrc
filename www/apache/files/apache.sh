@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.13 2001/05/14 21:27:25 jlam Exp $
+# $NetBSD: apache.sh,v 1.14 2001/11/26 07:34:06 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -14,10 +14,10 @@ rcvar=$name
 command="@PREFIX@/sbin/apachectl"
 
 apache_start=start
-if [ -f @APACHE_SYSCONFDIR@/apache_start.conf ]
+if [ -f @PKG_SYSCONFDIR@/apache_start.conf ]
 then
 	# This file can reset apache_start to "startssl"
-	. @APACHE_SYSCONFDIR@/apache_start.conf
+	. @PKG_SYSCONFDIR@/apache_start.conf
 fi
 
 # set defaults
