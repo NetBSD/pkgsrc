@@ -1,0 +1,9 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+
+In order to enable mod_perl in your Apache installation, you need to refer
+to $PREFIX/share/doc/mod_perl/httpd.conf.add ($PREFIX is typically
+/usr/pkg), which must be added to your httpd.conf.  The directives in that
+file load and set up the Perl shared library and mod_perl module.
+
+=============================================================================
