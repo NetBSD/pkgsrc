@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1998/12/18 23:52:22 tron Exp $
+$NetBSD: patch-ab,v 1.4 1999/01/15 22:57:13 tron Exp $
 
---- Makefile.in.orig	Fri Dec 11 07:15:56 1998
-+++ Makefile.in	Tue Dec 15 21:03:08 1998
+--- Makefile.in.orig	Mon Jan  4 10:47:12 1999
++++ Makefile.in	Fri Jan 15 23:37:42 1999
 @@ -50,7 +50,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -11,34 +11,35 @@ $NetBSD: patch-ab,v 1.3 1998/12/18 23:52:22 tron Exp $
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
-@@ -89,8 +89,6 @@
+@@ -91,8 +91,6 @@
  # alpha `automake' supports this better
- #SUBDIRS = . gmodule docs
+ #SUBDIRS = . gmodule gthread docs tests
  
 -configincludedir = $(pkglibdir)/include
 -
  bin_SCRIPTS=glib-config
  BUILT_SOURCES=glib-config
  
-@@ -135,15 +133,13 @@
- 		gutils.c
+@@ -139,16 +137,13 @@
+ 	gutils.c
  
  include_HEADERS = \
--		glib.h
+-	glib.h
 -
 -configinclude_DATA = \
-+		glib.h \
- 		glibconfig.h
++	glib.h \
+ 	glibconfig.h
  
  BUILT_SOURCES = stamp-gc-h #note: not glibconfig.h
  
  libglib_la_LDFLAGS = \
--	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE)
+-	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+-	-release $(LT_RELEASE)
 +	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
  
  noinst_PROGRAMS = testglib testgdate testgdateparser
  testglib_LDADD = libglib.la
-@@ -188,7 +184,7 @@
+@@ -194,7 +189,7 @@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
  LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
@@ -47,7 +48,7 @@ $NetBSD: patch-ab,v 1.3 1998/12/18 23:52:22 tron Exp $
  
  HEADERS =  $(include_HEADERS)
  
-@@ -353,25 +349,6 @@
+@@ -359,25 +354,6 @@
  	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
  	done
  
@@ -73,7 +74,7 @@ $NetBSD: patch-ab,v 1.3 1998/12/18 23:52:22 tron Exp $
  install-m4dataDATA: $(m4data_DATA)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(m4datadir)
-@@ -534,7 +511,7 @@
+@@ -540,7 +516,7 @@
  
  install-exec-am: install-libLTLIBRARIES install-binSCRIPTS
  
@@ -82,7 +83,7 @@ $NetBSD: patch-ab,v 1.3 1998/12/18 23:52:22 tron Exp $
  
  uninstall-am: uninstall-libLTLIBRARIES uninstall-binSCRIPTS uninstall-configincludeDATA uninstall-m4dataDATA uninstall-includeHEADERS
  
-@@ -612,7 +589,6 @@
+@@ -618,7 +594,6 @@
  maintainer-clean-libtool mostlyclean-noinstPROGRAMS \
  distclean-noinstPROGRAMS clean-noinstPROGRAMS \
  maintainer-clean-noinstPROGRAMS uninstall-binSCRIPTS install-binSCRIPTS \
