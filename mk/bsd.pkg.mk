@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.783 2001/07/09 17:10:25 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.784 2001/07/10 11:51:57 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2252,7 +2252,19 @@ check: uptodate-pkgtools
 
 # Run pkglint:
 lint:
-	${_PKG_SILENT}${_PKG_DEBUG}pkglint
+	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
+
+# Create a binary package from an install package using "pkg_tarup"
+tarup:
+	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX}; \
+	PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX:S/.//} \
+	  PKGREPOSITORY=${PACKAGES}/All \
+	  ${LOCALBASE}/bin/pkg_tarup ${PKGNAME}; \
+	for CATEGORY in ${CATEGORIES}; do \
+	  cd ${PACKAGES}/$$CATEGORY; \
+	  ${RM} -f ${PKGNAME}${PKG_SUFX}; \
+	  ${LN} -s ../All/${PKGNAME}${PKG_SUFX}; \
+	done
 
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
