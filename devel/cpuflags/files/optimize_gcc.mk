@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.18 2005/01/29 14:58:40 abs Exp $
+# $Id: optimize_gcc.mk,v 1.19 2005/02/18 17:20:38 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -33,7 +33,7 @@ PKG_EXCLUDE_OMIT_FRAME_POINTER+=firefox firefox-gtk2 galeon galeon-devel
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=lua lua4 mozilla mozilla-gtk2
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=thunderbird thunderbird-gtk2
 PKG_EXCLUDE_INLINE_FUNCTIONS+=qemu userppp
-PKG_EXCLUDE_INLINE_FUNCTIONS+=firefox firefox-gtk2 # v1.0, NetBSD i386/2.0
+PKG_EXCLUDE_FAST_MATH+=firefox firefox-gtk2 # v1.0, NetBSD i386/2.0
 .if !defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3 koffice
 .endif
@@ -44,6 +44,10 @@ COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
 
 .if !empty(PKG_EXCLUDE_INLINE_FUNCTIONS:M${PKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-finline-functions//}
+.endif
+
+.if !empty(PKG_EXCLUDE_FAST_MATH:M${PKGBASE})
+COPT_FLAGS:=    ${COPT_FLAGS:S/-ffast-math//}
 .endif
 
 CFLAGS+=${COPT_FLAGS}
