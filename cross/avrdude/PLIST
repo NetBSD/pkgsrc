@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/17 19:09:23 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/07 14:00:35 seb Exp $
 bin/avrdude
 etc/avrdude.conf
 man/man1/avrdude.1
@@ -45,8 +45,6 @@ share/doc/avrdude/avrdude-html/avrdude_8.html
 share/doc/avrdude/avrdude-html/avrdude_9.html
 share/doc/avrdude/avrdude-html/avrdude_toc.html
 share/doc/avrdude/avrdude.ps
-@unexec install-info --delete %D/info/avrdude.info %D/info/dir
 info/avrdude.info
-@exec install-info %D/info/avrdude.info %D/info/dir
 @dirrm share/doc/avrdude/avrdude-html
 @dirrm share/doc/avrdude
