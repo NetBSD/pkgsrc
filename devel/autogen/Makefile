@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/05 05:01:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/25 22:28:10 seb Exp $
 
 DISTNAME=	autogen-5.5.3
 PKGREVISION=	2
@@ -14,6 +14,9 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
+INFO_FILES=		autogen.info
 
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"

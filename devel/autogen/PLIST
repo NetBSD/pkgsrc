@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/19 18:50:51 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/25 22:28:10 seb Exp $
 bin/autogen
 bin/autoopts-config
 bin/columns
 bin/getdefs
 bin/xml2ag
 include/options.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/autogen.info
 info/autogen.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/autogen.info
 lib/libguileopts.a
 lib/libguileopts.la
 lib/libguileopts.so
