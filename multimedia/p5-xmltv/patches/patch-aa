@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/20 18:56:28 adrianp Exp $
+
+--- Makefile.PL.orig	2004-09-27 22:10:51.000000000 +0100
++++ Makefile.PL	2004-10-20 19:42:34.000000000 +0100
+@@ -473,7 +473,7 @@
+ 		      "\n");
+     }
+     print STDERR "\n";
+-    if (not ask(0, 'Do you want to proceed with this configuration?', 1)) {
++    if (1 == 0) {
+ 	# Need to set {install} for each component by prompting.
+ 	foreach my $info (@opt_components) {
+ 	    my $missing = $info->{missing};
