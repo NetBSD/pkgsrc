@@ -1,0 +1,6 @@
+a package for making it easy to abstract the "SpamFriend" and
+"SpamHater" features in sendmail, as well as those for whitelisting
+certain hosts/addresses/etc.. Especially useful for making sure that
+addresses you whitelisted as "always accept for" in /etc/mail/access
+also get whitelisted in Milter-based applications as well (be they
+senders or recipients) 
