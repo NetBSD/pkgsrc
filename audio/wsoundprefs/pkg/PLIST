@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/06 17:39:40 tron Exp $
+GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
+GNUstep/Apps/WSoundPrefs.app/WSoundPrefs.tiff
+GNUstep/Apps/WSoundPrefs.app/WSoundPrefs.xpm
+GNUstep/Apps/WSoundPrefs.app/tiff/events.tiff
+GNUstep/Apps/WSoundPrefs.app/tiff/paths.tiff
+GNUstep/Apps/WSoundPrefs.app/tiff/loadset.tiff
+GNUstep/Apps/WSoundPrefs.app/tiff/saveset.tiff
+GNUstep/Apps/WSoundPrefs.app/xpm/events.xpm
+GNUstep/Apps/WSoundPrefs.app/xpm/paths.xpm
+GNUstep/Apps/WSoundPrefs.app/xpm/loadset.xpm
+GNUstep/Apps/WSoundPrefs.app/xpm/saveset.xpm
+@dirrm GNUstep/Apps/WSoundPrefs.app/tiff
+@dirrm GNUstep/Apps/WSoundPrefs.app/xpm
+@dirrm GNUstep/Apps/WSoundPrefs.app
