@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/27 15:27:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2002/01/03 13:06:50 wiz Exp $
 
 SHA1 (ularn.tar.gz) = abc5bbecca65968e9ddaf2a8d07ac5141009459d
 Size (ularn.tar.gz) = 142790 bytes
-SHA1 (patch-aa) = 83e99ee4fa571b7d4a937f95a26990297f7dc22c
+SHA1 (patch-aa) = 729fbce5942d1a8867ffcdb79a1bbfd516535106
 SHA1 (patch-ab) = a45fec8456da7b2b1985dc2332ede80082b2dab4
 SHA1 (patch-ac) = 859fb4ae3782658d2f2cf29d11da67a901499e61
 SHA1 (patch-ad) = ecf9b099ac8df2b86a9c45c0cf76c7caf194f64b
