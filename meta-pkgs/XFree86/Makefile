@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/28 22:06:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/14 21:16:42 jmmv Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 meta-package
 
 DEPENDS=	imake>=4.4.0:../../x11/imake
-DEPENDS+=	XFree86-dirs>=1.0:../../misc/XFree86-dirs
 DEPENDS+=	XFree86-libs>=4.4.0:../../x11/XFree86-libs
 DEPENDS+=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
 DEPENDS+=	XFree86-server>=4.4.0:../../x11/XFree86-server
@@ -31,6 +30,7 @@ NO_CHECKSUM=		# defined
 NO_MTREE=		# defined
 NO_XFREE86_TARGETS=	# defined
 NO_CONFIGURE=		# defined
+USE_DIRS+=		XFree86-1.0
 
 do-install:
 	# empty
