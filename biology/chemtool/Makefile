@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/28 23:59:18 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/30 11:58:46 zuntum Exp $
 
 DISTNAME=	chemtool-1.3
 CATEGORIES=	biology
@@ -8,9 +8,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.uni-ulm.de/~s_tvolk/chemtool.html
 COMMENT=	Program for drawing organic molecules
 
-DEPENDS+=	gtk+>=1.0.0:../../x11/gtk
-
+USE_BUILDLINK_ONLY=	YES
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_ENV+=	GTK_CONFIG="${BUILDLINK_CONFIG_WRAPPER.gtk}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/chemtool
@@ -19,4 +19,5 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} README TODO 			\
 		${PREFIX}/share/doc/chemtool/
 
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
