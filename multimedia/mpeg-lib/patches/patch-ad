@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-ad,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- gdith.c.orig	Sat Jul 24 00:04:42 1999
 +++ gdith.c	Mon Sep 15 22:49:55 2003

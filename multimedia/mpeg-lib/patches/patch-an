@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-an,v 1.1 2004/06/26 18:27:23 grant Exp $
 
---- hybrid.c.orig	Fri Jul 23 23:50:51 1999
-+++ hybrid.c	Mon Sep 15 22:50:01 2003
+--- mb_ordered.c.orig	Fri Jul 23 23:53:08 1999
++++ mb_ordered.c	Mon Sep 15 22:50:11 2003
 @@ -21,9 +21,9 @@
  /* This file contains C code to implement an ordered dither. */
  
