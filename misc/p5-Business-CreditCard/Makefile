@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 17:01:22 martti Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
+# $NetBSD: Makefile,v 1.16 2003/09/18 18:51:37 wiz Exp $
 #
 
-DISTNAME=		Business-CreditCard-0.1
+DISTNAME=		Business-CreditCard-0.27
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5buc
 CATEGORIES=		misc perl5
