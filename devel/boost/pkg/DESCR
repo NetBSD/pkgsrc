@@ -1,17 +1,3 @@
-A repository of free C++ libraries designed to work well with and
-to extend the ISO Standard C++ Library, including:
-
-	call_traits	defines types for passing parameters
-	compose		functional composition adapters for the STL
-	compressed_pair	Empty member optimization
-	functional	enhancements to function object adapters in standard
-	integer		headers for dealing with integral types
-	random		a complete system for random number generation
-	min_rand	a random number generator class (deprecated)
-	operators	Templates for arithmetic classes and iterators
-	pri_queue	set of different priority queue implementations
-	rational	a rational number class
-	smart_ptr	four smart pointer classes
-	timer		event timer, progress timer, progress display classes
-	type_traits	Template describe the fundamental properties of a type
-	utility		noncopyable plus next() and prior() template functions
+The Boost web site provides free, peer-reviewed, C++ libraries. The
+emphasis is on portable libraries which work well with the ISO C++
+Standard Library.
