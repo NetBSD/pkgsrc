@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/05 23:06:47 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/20 21:33:11 tron Exp $
 
 DISTNAME=	gnome-python-1.0.50
 CATEGORIES=	x11 gnome
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-python/}
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/gnome/
 
+DEPENDS+=	gtkglarea-*:../../x11/gtkglarea
 DEPENDS+=	libglade-*:../../devel/libglade
 DEPENDS+=	python-*:../../lang/python
 
