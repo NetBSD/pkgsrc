@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/29 12:03:30 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/25 03:28:10 minskim Exp $
 
 DISTNAME=	Params-Validate-0.72
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,9 @@ COMMENT=	Validate method/function parameters
 
 DEPENDS+=	p5-Attribute-Handlers>=0.76:../../devel/p5-Attribute-Handlers
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Params/Validate/.packlist
 
 .include "../../lang/perl5/module.mk"
