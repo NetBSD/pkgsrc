@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2005/02/09 20:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2005/03/02 21:50:46 wiz Exp $
 
 DISTNAME=		gnucash-1.8.11
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -48,7 +49,7 @@ INFO_FILES=		gnucash-design.info
 .include "../../devel/gal/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../print/gnome-print/buildlink3.mk"
-.include "../../devel/g-wrap1/buildlink3.mk"
+.include "../../devel/g-wrap/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
