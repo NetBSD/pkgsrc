@@ -1,13 +1,37 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/15 03:22:33 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/10 01:31:26 jtb Exp $
 
---- configure.orig	Wed Sep  8 09:27:05 1999
-+++ configure	Tue Sep 14 19:31:05 1999
-@@ -710,7 +710,7 @@
+--- Makefile.orig
++++ Makefile
+@@ -1,13 +1,11 @@
+-CC=gcc
+-CFLAGS=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++CC?=gcc
++CFLAGS+=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
+ LIBS=`pkg-config --libs gtk+-2.0`
  
- PACKAGE=gperiodic
+-.c.o:
+-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
++all:	gperiodic
  
--VERSION=1.2.5
-+VERSION=1.2.6
+ gperiodic: gperiodic.o
+ 	$(CC) $(CFLAGS) -o gperiodic gperiodic.o $(LIBS)
+-	strip gperiodic
  
- if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
-   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
+ gpdata.o: gpdata.c gperiodic.h
+ 
+@@ -17,10 +15,11 @@
+ 	rm *.o gperiodic
+ 
+ install:
+-	make -C po/ install enable_nls=1
+-	cp gperiodic /usr/local/bin
+-	cp gperiodic.desktop /usr/share/applications
+-	cp gperiodic.png /usr/share/pixmaps
++	cd po && $(MAKE) install enable_nls=1
++	$(BSD_INSTALL_PROGRAM) gperiodic $(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/gnome/apps/Applications
++	$(BSD_INSTALL_DATA) gperiodic.desktop $(PREFIX)/share/gnome/apps/Applications
++	$(BSD_INSTALL_DATA) gperiodic.png $(PREFIX)/share/pixmaps
+ 
+ uninstall:
+ 	rm /usr/local/bin/gperiodic
