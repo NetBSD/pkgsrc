@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/04/01 13:36:56 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/04/03 14:26:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 # Use disable-shared, so that libtool works with the generated Makefile
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--disable-shared
+SH=			${PREFIX}/bash
 
 test:
 	cd ${WRKSRC} && ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
