@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5245 2004/03/12 22:16:43 heinz Exp $
+$NetBSD: CHANGES,v 1.5246 2004/03/12 22:17:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated awstats to 6.0 [recht 2004-03-12]
 	Updated p5-DBI to 1.41 [heinz 2004-03-12]
 	Updated postgresql_autodoc to 1.21 [recht 2004-03-12]
+	Updated tcl-fbsql to 1.05nb1 [minskim 2004-03-12]
