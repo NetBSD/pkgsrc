@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/02/05 03:30:49 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/02 11:55:26 wiz Exp $
 #
 
 .include "../libflash/Makefile.common"
 
 PKGNAME=	moz-flash-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 
 MAINTAINER=	joda@netbsd.org
 COMMENT=	Mozilla open source Flash(tm) plugin

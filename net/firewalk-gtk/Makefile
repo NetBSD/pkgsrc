@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:01 wiz Exp $
 
 DISTNAME=	firewalk-1.0
+PKGREVISION=	1
 PKGNAME=	firewalk-gtk-1.0
 WRKSRC=         ${WRKDIR}/${DISTNAME:C/f/F/}
 CATEGORIES=	net security

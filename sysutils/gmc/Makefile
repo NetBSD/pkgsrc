@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2002/12/24 06:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2003/05/02 11:56:22 wiz Exp $
 
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES+=		gnome
 
 COMMENT=		GNOME version of Midnight Commander, a free Norton Commander Clone

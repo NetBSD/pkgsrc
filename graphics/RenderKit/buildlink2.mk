@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/29 06:14:50 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:55:09 wiz Exp $
 #
 # This Makefile fragment is included by packages that use RenderKit.
 #
@@ -9,7 +9,7 @@
 RENDERKIT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			RenderKit
-BUILDLINK_DEPENDS.RenderKit?=		RenderKit>=0.3.1r2
+BUILDLINK_DEPENDS.RenderKit?=		RenderKit>=0.3.1r2nb1
 BUILDLINK_PKGSRCDIR.RenderKit?=		../../graphics/RenderKit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.RenderKit=RenderKit

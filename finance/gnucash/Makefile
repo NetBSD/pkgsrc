@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2003/02/27 04:08:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.39 2003/05/02 11:54:52 wiz Exp $
 
 DISTNAME=		gnucash-1.8.1
+PKGREVISION=	1
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -11,7 +12,6 @@ COMMENT=		Personal double-entry accounting program
 
 DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 
-BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.3.4:../../devel/g-wrap
 BUILDLINK_DEPENDS.guile14=	guile14>=1.4:../../lang/guile14
 BUILDLINK_DEPENDS.guile14+=	guile14<1.5.0:../../lang/guile14
 BUILD_DEPENDS+=			bison>=1.28:../../devel/bison

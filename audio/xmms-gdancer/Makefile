@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/09/21 02:00:14 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:53:51 wiz Exp $
 #
 
 DISTNAME=	gdancer-0.4.3
+PKGREVISION=	1
 PKGNAME=	xmms-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://figz.com/gdancer/files/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2002/11/09 13:43:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/05/02 11:57:09 wiz Exp $
 #
 
 DISTNAME=		gtoolkit-0.9.5
+PKGREVISION=	1
 CATEGORIES?=		x11
 MASTER_SITES?=		ftp://ftp.inf.uos.de/pub/elmar/gtk/objc-gtoolkit/
 

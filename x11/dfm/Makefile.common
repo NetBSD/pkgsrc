@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2003/04/27 12:51:03 cjep Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/05/02 11:56:57 wiz Exp $
 #
 
 DISTNAME=	dfm-0.99.9
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/dfm
 MASTER_SITES=	http://www.kaisersite.de/dfm/
 

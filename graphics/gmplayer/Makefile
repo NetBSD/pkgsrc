@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2003/04/21 18:07:32 tron Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/02 11:55:18 wiz Exp $
 #
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
+PKGREVISION=	1
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
 		${MASTER_SITE_LOCAL:=mplayer}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/08/27 19:01:41 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:55:58 wiz Exp $
 #
 
 DISTNAME=	SDL_net-1.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 

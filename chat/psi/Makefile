@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/03/30 08:04:50 jmc Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:54:06 wiz Exp $
 
 DISTNAME=	psi-0.8.7
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://belnet.dl.sourceforge.net/sourceforge/psi/
 EXTRACT_SUFX=	.tar.bz2

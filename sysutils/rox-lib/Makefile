@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:27 wiz Exp $
 #
 
 DISTNAME=	ROX-Lib-0.1.4
+PKGREVISION=	1
 PKGNAME=	rox-lib-0.1.4
 WRKSRC=		${WRKDIR}/ROX-Lib
 CATEGORIES=	sysutils

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/02/15 13:30:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/02 11:54:35 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.2.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,6 @@ COMMENT=	Core GNOME2 library (non-graphical)
 DEPENDS=	docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.22
 BUILDLINK_DEPENDS.esound=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES

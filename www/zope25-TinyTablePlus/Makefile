@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/01 17:58:27 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:53 wiz Exp $
 #
 
 DISTNAME=	TinyTablePlus-0.9
+PKGREVISION=	1
 PKGNAME=	zope25-TinyTablePlus-0.9
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/hathawsh/TinyTablePlus/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:51:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/02 11:56:33 wiz Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
+PKGREVISION=	1
 PKGNAME=	asclock-gtk-2.1.10
 WRKSRC=		${WRKDIR}/asclock-gtk
 CATEGORIES=	x11 time

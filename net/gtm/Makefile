@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2002/12/24 06:10:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/02 11:56:05 wiz Exp $
 #
 
 DISTNAME=	gtm-0.4.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 

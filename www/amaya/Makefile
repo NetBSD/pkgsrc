@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/03/22 06:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/05/02 11:56:38 wiz Exp $
 #
 
 DISTNAME=	amaya-src-7.2
+PKGREVISION=	1
 PKGNAME=	amaya-7.2
 WRKSRC=		${WRKDIR}/Amaya/work
 CATEGORIES=	www

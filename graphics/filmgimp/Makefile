@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/29 06:17:22 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:14 wiz Exp $
 
 DISTNAME=	filmgimp-0.15
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filmgimp/}
 

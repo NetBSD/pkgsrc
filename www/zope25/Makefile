@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/04/17 19:06:13 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 11:56:47 wiz Exp $
 #
 
 DISTNAME=	Zope-2.6.1-src
+PKGREVISION=	1
 PKGNAME=	zope-2.6.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Products/Zope/2.6.1/

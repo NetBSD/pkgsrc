@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/01 11:47:22 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:54:38 wiz Exp $
 
 .if !defined(LIBSIGCXX10_BUILDLINK2_MK)
 LIBSIGCXX10_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libsigcxx10
-BUILDLINK_DEPENDS.libsigcxx10?=	libsigc++10>=1.0.4
+BUILDLINK_DEPENDS.libsigcxx10?=	libsigc++10>=1.0.4nb1
 BUILDLINK_PKGSRCDIR.libsigcxx10?=	../../devel/libsigc++10
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libsigcxx10=libsigc++10

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/28 02:19:03 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:56:20 wiz Exp $
 #
 # This Makefile fragment is included by packages that use GWLib.
 #
@@ -9,7 +9,7 @@
 GWLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GWLib
-BUILDLINK_DEPENDS.GWLib?=		GWLib>=0.4
+BUILDLINK_DEPENDS.GWLib?=		GWLib>=0.4nb1
 BUILDLINK_PKGSRCDIR.GWLib?=		../../sysutils/GWLib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GWLib=GWLib

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/27 19:48:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 11:53:55 wiz Exp $
 
 DISTNAME=	yamt-0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yamt/}
 

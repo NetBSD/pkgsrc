@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2003/03/29 12:41:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2003/05/02 11:55:11 wiz Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/avifile-0.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/01/27 19:42:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/02 11:54:12 wiz Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://gtranscript.linuxbox.com/ \
 		ftp://ftp.matrix.com.br/pub/linuxberg/files/gnome/office/ \

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2002/09/20 04:48:23 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/02 11:53:43 wiz Exp $
 
 DISTNAME=	kdemultimedia-2.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 COMMENT=	KDE audio tools
 

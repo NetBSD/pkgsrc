@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/10/27 06:47:44 rh Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/02 11:53:49 wiz Exp $
 #
 
 DISTNAME=		xmms-crossfade-0.2.9
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/ \
 			ftp://ftp.falsehope.com/pub/xmms-crossfade/

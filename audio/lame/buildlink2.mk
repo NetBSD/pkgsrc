@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/08/28 06:39:19 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:53:43 wiz Exp $
 
 .if !defined(LAME_BUILDLINK2_MK)
 LAME_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		lame
-BUILDLINK_DEPENDS.lame?=	lame>=3.89
+BUILDLINK_DEPENDS.lame?=	lame>=3.93.1nb1
 BUILDLINK_PKGSRCDIR.lame?=	../../audio/lame
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.lame=lame

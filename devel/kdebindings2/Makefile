@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/09/20 11:30:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/02 11:54:32 wiz Exp $
 
 DISTNAME=	kdebindings-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 COMMENT=	Additional language bindings for KDE integrated X11 desktop
 

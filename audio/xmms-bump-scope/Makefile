@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:53:48 wiz Exp $
 #
 
 DISTNAME=	bump_scope-0.0.3
+PKGREVISION=	1
 PKGNAME=	xmms-bump-scope-0.0.3
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://staff.xmms.org/zinx/xmms/

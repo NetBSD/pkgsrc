@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2003/04/20 14:26:01 rh Exp $
+# $NetBSD: Makefile,v 1.34 2003/05/02 11:57:02 wiz Exp $
 
 DISTNAME=		gnome-python-1.4.4
 PKGNAME=		${PYPKGPREFIX}-gnome-1.4.4
-#PKGREVISION=		3
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-python/1.4/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/02/13 19:04:47 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:55:13 wiz Exp $
 
 DISTNAME=	dvdview-1.2.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/data/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2003/04/27 22:28:29 salo Exp $
+# $NetBSD: Makefile,v 1.25 2003/05/02 11:54:06 wiz Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -25,8 +25,6 @@ USE_GNU_ICONV=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
 			${WRKSRC}/lib/silcmath/mpi/libtool
-
-BUILDLINK_DEPENDS.iconv=	libiconv>=1.7
 
 PKG_SYSCONFSUBDIR?=	silc
 
