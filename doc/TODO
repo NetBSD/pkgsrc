@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1770 2004/05/24 06:07:50 xtraeme Exp $
+$NetBSD: TODO,v 1.1771 2004/05/24 06:24:56 snj Exp $
 
 Suggested new packages
 ======================
@@ -173,7 +173,6 @@ Suggested package updates
 	o bittorrent-3.4.2
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
-	o bogofilter-0.17.5
 	o boost-1.31.0
 	o boson-0.10
 	o capc-calc-2.11.9.3
