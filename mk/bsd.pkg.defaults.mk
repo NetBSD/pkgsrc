@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.134 2003/03/09 19:22:31 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.135 2003/03/22 07:11:54 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1780,7 +1780,8 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_SUNSITE=	ftp://www.planetmirror.com.au/pub/sunsite/
 #MASTER_SITE_SUSE=	ftp://www.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
 #MASTER_SITE_TEX_CTAN=	ftp://www.planetmirror.com.au/pub/tex-archive/
-#MASTER_SITE_SOURCEFORGE=ftp://www.planetmirror.com.au/pub/sourceforge/
+#MASTER_SITE_SOURCEFORGE=http://flow.dl.sourceforge.net/sourceforge/ \
+#			ftp://www.planetmirror.com.au/pub/sourceforge/
 #MASTER_SITE_XCONTRIB=	ftp://www.planetmirror.com.au/pub/X11/contrib/
 #MASTER_SITE_XEMACS=	ftp://ftp.au.xemacs.org/pub/xemacs/
 #MASTER_SITE_BACKUP=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
