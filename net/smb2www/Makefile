@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:31 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/21 17:25:13 jlam Exp $
 #
 
 DISTNAME=	smb2www-980804
@@ -11,8 +11,7 @@ HOMEPAGE=	http://www.samba.org/samba/smb2www/
 COMMENT=	Gateway to Windows networking
 
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=	samba-[0-9]*:../../net/samba
-DEPENDS+=	perl-[0-9]*:../../lang/perl5
+DEPENDS+=	samba<2.2.0:../../net/samba
 DEPENDS+=	apache{,6}-[0-9]*:../../www/apache
 
 WRKSRC=		${WRKDIR}
