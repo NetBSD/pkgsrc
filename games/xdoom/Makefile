@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/06 16:40:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/06 16:44:53 hubertf Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 post-extract:
 	(cd ${WRKDIR}; tar xzf linuxdoom-1.10.src.tgz)
 	(cd ${WRKDIR}; tar xzf sndserv.tgz)
-	ln -s /usr/include/soundcard.h ${WRKDIR}/sndserv/linux
 
 post-patch:
 	@${MV} ${WRKSRC}/${DISTNAME}/i_sound.c foo
