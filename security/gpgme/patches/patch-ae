@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2004/10/23 15:00:48 shannonjr Exp $
+
+--- gpgme/engine-gpgsm.c.orig	2004-04-19 08:12:02.000000000 -0600
++++ gpgme/engine-gpgsm.c
+@@ -448,7 +448,8 @@ gpgsm_new (void **engine, const char *lc
+ 
+   if (isatty (1))
+     {
+-      if (ttyname_r (1, dft_ttyname, sizeof (dft_ttyname)))
++      /* ttyname_r() return numeric status */
++      if (err = ttyname_r (1, dft_ttyname, sizeof (dft_ttyname)))
+ 	{
+ 	  err = gpg_error_from_errno (errno);
+ 	  goto leave;
