@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/07 22:43:08 minskim Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		3
@@ -12,7 +12,7 @@ CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
 BUILD_DEFS+=		USE_INET6
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 #USE_LIBTOOL=		YES
@@ -82,12 +82,12 @@ OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
-# separated list of dependencies or buildlink2.mk files needed to build
+# separated list of dependencies or buildlink3.mk files needed to build
 # ap_mod, and _AP_CFG_ARGS.ap_mod is a whitespace separated list of
 # configure script options for ap_mod.
 #
-_AP_DEPENDS.ssl=	../../security/openssl/buildlink2.mk
-_AP_DEPENDS.deflate=	../../devel/zlib/buildlink2.mk
+_AP_DEPENDS.ssl=	../../security/openssl/buildlink3.mk
+_AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
 
 _AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 _AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
@@ -150,8 +150,8 @@ post-install:
 
 .include "Makefile.common"
 
-.include "../../devel/apr/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
