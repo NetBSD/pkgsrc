@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/01 20:34:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/07 22:45:44 jmmv Exp $
 #
 
 DISTNAME=	loudmouth-0.15.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.15/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,18 +20,8 @@ PKGCONFIG_OVERRIDE+=    loudmouth-1.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-debug
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=	LOUDMOUTH_USE_SSL
-
-.if defined(LOUDMOUTH_USE_SSL) && !empty(LOUDMOUTH_USE_SSL:M[Yy][Ee][Ss])
-BUILDLINK_DEPENDS.gnutls=	gnutls>=1.0.0
-.include "../../security/gnutls/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--with-ssl=no
-.endif
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
