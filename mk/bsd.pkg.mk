@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.699 2001/03/26 17:08:19 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.700 2001/03/26 21:36:02 manu Exp $
 #
 # This file is in the public domain.
 #
@@ -60,6 +60,8 @@ BUILD_DEFS+=		PKG_JVM JAVA_HOME
 .if !defined(PKG_JVM)
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386} != ""
 PKG_JVM?=		jdk
+.elif ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
+PKG_JVM?=		blackdown-jdk13
 .else
 PKG_JVM?=		kaffe
 .endif
@@ -71,6 +73,9 @@ JAVA_HOME?=		${JDK_HOME}
 .else
 JAVA_HOME?=		${LOCALBASE}/java
 .endif
+.elif ${PKG_JVM} == "blackdown-jdk13"
+DEPENDS+=		blackdown-jdk-*:../../lang/blackdown-jdk13
+JAVA_HOME?=		${PREFIX}/java
 .elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
