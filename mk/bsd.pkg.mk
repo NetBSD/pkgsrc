@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.892 2002/01/05 22:46:18 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.893 2002/01/06 00:52:24 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -19,11 +19,6 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
-
-##### Pass information about desired toolchain to package build.
-.if defined(USETOOLS)
-MAKE_ENV+=	USETOOLS="${USETOOLS}"
-.endif
 
 ##### Build crypto packages by default.
 MKCRYPTO?=		yes
