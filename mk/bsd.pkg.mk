@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.234 1999/03/30 00:47:01 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.235 1999/03/30 09:46:27 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -266,10 +266,10 @@ PATCH_ARGS+=	-C
 PATCH_DIST_ARGS+=	-C
 .endif
 
-# Turn off pax on NetBSD for just now.  pax is not bug-compatible with
-# GNU tar yet, and some of the archives contain dross after the end of
-# archive.  tar ignores this, pax thinks it's valid, and asks for the
-# second volume of the archive.
+# If the archive has a .bz2 suffix, use bzip2 to extract information
+# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
+# and append 2 tar blocks of zero bytes on the end, in case the archive
+# was written with a buggy version of GNU tar.
 
 EXTRACT_SUFX?=		.tar.gz
 .if (${EXTRACT_SUFX} == ".tar.bz2")
@@ -279,12 +279,17 @@ BZCAT=			/usr/bin/bzcat
 BZCAT=			${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 .endif # !exists bzcat
-EXTRACT_CMD?=		${BZCAT}
+EXTRACT_CMD?=		${EXTRACT_SUBSHELL_OPEN} ${BZCAT}
 EXTRACT_BEFORE_ARGS?=	<
-EXTRACT_AFTER_ARGS?=	| /usr/bin/tar -xf -
 .else # suffix != .tar.bz2
-EXTRACT_CMD?=		${GTAR}
-EXTRACT_BEFORE_ARGS?=	-xzf
+EXTRACT_CMD?=		${EXTRACT_SUBSHELL_OPEN} ${GZCAT}
+EXTRACT_BEFORE_ARGS?=	<
+.if defined(EXTRACT_USING_PAX)
+EXTRACT_SUBSHELL_OPEN=	(
+EXTRACT_AFTER_ARGS?=	; dd if=/dev/zero bs=10k count=2 ) | ${PAX} -r
+.else
+EXTRACT_AFTER_ARGS?=	| /usr/bin/tar -xf -
+.endif # !pax
 .endif # suffix != .tar.bz2
 
 # Figure out where the local mtree file is
@@ -488,7 +493,7 @@ FILE?=		/usr/bin/file
 GREP?=		/usr/bin/grep
 GTAR?=		${LOCALBASE}/bin/gtar
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/gzcat
+GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 ID?=		/usr/xpg4/bin/id
@@ -497,6 +502,7 @@ LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 MKDIR?=		/usr/bin/mkdir -p
 MV?=		/usr/bin/mv
+PAX?=		/bin/pax
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
@@ -530,6 +536,7 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MV?=		/bin/mv
+PAX?=		/bin/pax
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -630,7 +637,7 @@ PKGNAME?=		${DISTNAME}
 #     should be backed out if this is bumped beyond 19990302.  - HF
 PKGTOOLS_REQD=		19990119
 
-# Version of pkgtools which supported pkg_delete -O
+# Version of pkgtools which support pkg_delete -O
 PKGTOOLS_PKGDB_VERSION=	19990302
 
 # Check that we're using up-to-date pkg_* tools with this file.
