@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2004/08/31 02:37:57 danw Exp $
+# $NetBSD: Makefile.common,v 1.45 2004/10/25 13:02:15 sekiya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -129,6 +129,10 @@ SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX:Q}
 SCRIPTS_ENV+=	SUNOSLIB=${SUNOSLIB}
 
 PTHREAD_OPTS+=	native optional
+
+.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
+GCC_REQD+=	3.4
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc*)
