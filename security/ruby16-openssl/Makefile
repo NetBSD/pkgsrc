@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/01/28 14:08:02 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/28 14:19:35 taca Exp $
 
 DISTNAME=		ossl-0.1.4a
 PKGNAME=		${RUBY_PKGPREFIX}-openssl-0.1.4a
+PKGREVISION=		1
 CATEGORIES=		security ruby
 MASTER_SITES=		http://freesoftware.fsf.org/download/rubypki/
 
