@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.56 2002/12/07 02:39:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.57 2002/12/12 01:50:47 hubertf Exp $
 
 # Note to package maintainers:
+#
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
 # edit PKGTOOLS_VERSION in lib/version.h to `date +%Y%m%d`, do
 # "tar pzvcf pkg_install-`date +%Y%m%d`.tar.gz pkg_install" and upload
 # that file to ${MASTER_SITE_LOCAL}.
-# Also, modify PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk
-# to the new value.
+#
+# XXX Modify PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk to the new
+# value ONLY(!) if there is a critical change in the pkg_* tools that
+# bsd.pkg.mk and friends rely on.
+
 DISTNAME=		pkg_install-20021123
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
