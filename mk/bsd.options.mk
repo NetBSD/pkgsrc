@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.15 2005/01/15 08:59:28 adrianp Exp $
+# $NetBSD: bsd.options.mk,v 1.16 2005/01/24 18:04:24 tv Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -192,13 +192,10 @@ show-options:
 	@${ECHO} "default: ${_PKG_OPTIONS_DEFAULT}"
 	@${ECHO} "enabled: ${_PKG_OPTIONS_ENABLED}"
 
-.PHONY: pre-install-depends supported-options-message
-pre-install-depends: supported-options-message
-.if !defined(PKG_SUPPORTED_OPTIONS)
-supported-options-message: # do nothing
-.else
-supported-options-message: ${WRKDIR}/.som_done
-${WRKDIR}/.som_done: ${WRKDIR}
+.if defined(PKG_SUPPORTED_OPTIONS)
+.PHONY: supported-options-message
+pre-extract: supported-options-message
+supported-options-message:
 .  if !empty(PKG_SUPPORTED_OPTIONS)
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
@@ -226,6 +223,5 @@ ${WRKDIR}/.som_done: ${WRKDIR}
 .    undef _var_
 	@${ECHO} ""
 	@${ECHO} "=========================================================================="
-	@${TOUCH} ${.TARGET}
 .  endif
 .endif
