@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:00 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:27:24 martti Exp $
 #
 
 DISTNAME=	GutenMark-words-20030107
@@ -9,7 +9,7 @@ DISTFILES=	${WORDLISTS} GutenMark.cfg
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.sandroid.org/GutenMark/
-COMMENT=	word lists for GutenMark
+COMMENT=	Word lists for GutenMark
 
 WORDLISTS=	special.words.gz english.names.gz US.places.gz \
 		french.names.gz english.words.gz french.words.gz \
