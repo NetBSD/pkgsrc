@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/02 06:14:48 kim Exp $
+bin/kall
+bin/rem
+bin/rem2ps
+bin/remind
+bin/tkremind
+man/man1/kall.1
+man/man1/rem.1
+man/man1/rem2ps.1
+man/man1/remind.1
+man/man1/tkremind.1

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/02 06:14:48 kim Exp $
+
+--- src/custom.h.orig	Sun Mar  1 16:04:27 1998
++++ src/custom.h	Tue Mar  2 00:48:16 1999
+@@ -228,7 +228,7 @@
+ #define PUBLIC
+ #define PRIVATE static
+ 
+-#ifdef UNIX
++#if defined(UNIX) && !defined(__NetBSD__)
+ #define _POSIX_SOURCE
+ #define _SVID_SOURCE
+ #endif
