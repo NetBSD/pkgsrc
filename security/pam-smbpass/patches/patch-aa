@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/29 22:35:59 jlam Exp $
+
+--- Makefile.in.orig	Sat Oct 13 17:09:06 2001
++++ Makefile.in
+@@ -619,7 +619,7 @@
+ 
+ bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ)
+ 	@echo Linking shared library $@
+-	$(LD) @LDSHFLAGS@ -symbolic -o $@ $(PAM_SMBPASS_OBJ) -lpam $(LIBS) -lc
++	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(LIBS) -lc
+ 
+ nsswitch/libnss_wins.so: $(NSS_OBJ)
+ 	@echo "Linking $@"
