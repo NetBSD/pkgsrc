@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/14 14:42:19 wiz Exp $
+
+SHA1 (ted-2.8.src.tar.gz) = 265c96ce91247c17edc880e46e89883d19abb5f8
+Size (ted-2.8.src.tar.gz) = 2054547 bytes
+SHA1 (patch-aa) = 2134018eafbbbc361674d475d7774eba6e208b7c
+SHA1 (patch-ab) = 20135a2db628c78ea5e99a8f544b0d67b218b1eb
