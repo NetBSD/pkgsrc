@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.225 2002/10/11 06:17:06 martti Exp $
+$NetBSD: CHANGES,v 1.226 2002/10/11 09:27:08 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3177,3 +3177,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dict-client to 1.8.0 [uebayasi 2002-10-11]
 	Updated xpmroot to 2.4.12 [martti 2002-10-11]
 	Updated fvwm2 to 2.4.12 [martti 2002-10-11]
+	Updated scrollkeeper to 0.2nb2 [rh 2002-10-11]
