@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.9 2003/02/21 22:05:02 mycroft Exp $
+$NetBSD: patch-ac,v 1.10 2003/09/30 21:01:08 mycroft Exp $
 
---- configure.orig	2003-02-19 06:47:45.000000000 +0000
-+++ configure	2003-02-21 21:44:23.000000000 +0000
-@@ -11061,7 +11061,7 @@
+--- configure.orig	2003-09-07 23:59:59.000000000 +0000
++++ configure	2003-09-30 20:53:14.000000000 +0000
+@@ -11629,7 +11629,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lkrb4  $LIBS"
++LIBS="-lkrb -lcrypto -lroken -lcom_err  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -11709,7 +11709,7 @@
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -11,7 +20,7 @@ $NetBSD: patch-ac,v 1.9 2003/02/21 22:05:02 mycroft Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -13050,19 +13050,7 @@
+@@ -13711,19 +13711,7 @@
    fi
  
  
