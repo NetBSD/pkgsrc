@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1999/02/05 16:33:34 frueauf Exp $
+$NetBSD: md5,v 1.5 2000/01/11 12:35:07 hubertf Exp $
 
-MD5 (jdk1.1.6.tgz) = 307572580a22a5f8d302dd56e34b1c7f
+MD5 (jdk1.1.8-rc1.tgz) = 117e27c001acb7a474261fb5fa7dced2

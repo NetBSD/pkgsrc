@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2000/01/09 01:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/11 12:35:07 hubertf Exp $
 #
 
-VERSION=1.1.6
-DISTNAME=       jdk${VERSION}
+VERSION=1.1.8
+DISTNAME=       jdk${VERSION}-rc1
 PKGNAME=	jdk-${VERSION}
 CATEGORIES=     lang
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
@@ -26,7 +26,6 @@ RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
 NO_CDROM=	${RESTRICTED}
 
 do-install:
-	${RM} ${WRKSRC}/README.NetBSD.orig
 	${MKDIR} ${JDK_HOME}
 	cd ${WRKSRC} ; ${GTAR} pcf - . | ( cd ${JDK_HOME} ; ${GTAR} pvxf - )
 	${SED} \
