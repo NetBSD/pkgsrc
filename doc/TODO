@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.277 2003/02/19 11:00:25 wiz Exp $
+$NetBSD: TODO,v 1.278 2003/02/19 16:12:38 skrll Exp $
 
 Suggested new packages
 ======================
@@ -222,7 +222,7 @@ Suggested package updates
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
 	o povray-3.5
-	o pth-2.0
+	o pth-2.0 [skrll]
 	o pureftpd-0.13a [pkg/19233]
 	o pureftpd-0.14
 	o py-mysqldb-0.9.2 [pkg/19056]
