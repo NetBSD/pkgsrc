@@ -3,8 +3,8 @@
 # Date Created:		04 Aug 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $NetBSD: Makefile,v 1.2 1998/03/02 00:05:15 tron Exp $
-# $Id: Makefile,v 1.2 1998/03/02 00:05:15 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/02 00:06:45 tron Exp $
+# $FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
 #
 
 DISTNAME=       uudeview-0.5.13
