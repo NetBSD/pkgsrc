@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.3 2004/02/02 10:03:46 jlam Exp $
+# $NetBSD: ccache.mk,v 1.4 2004/02/02 10:55:26 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -44,14 +44,14 @@ _CCACHE_DIR=	${WRKDIR}/.ccache
 PATH:=		${_CCACHE_DIR}/bin:${PATH}
 
 _CCACHE_LINKS=	# empty
-.if !empty(_LANGUAGES.ccache:Mc)
+.  if !empty(_LANGUAGES.ccache:Mc)
 CC:=	${_CCACHE_DIR}/bin/${CC:T}
 _CCACHE_LINKS+=	CC
-.endif
-.if !empty(_LANGUAGES.ccache:Mc++)
+.  endif
+.  if !empty(_LANGUAGES.ccache:Mc++)
 CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
 _CCACHE_LINKS+=	CXX
-.endif
+.  endif
 
 .  for _target_ in ${_CCACHE_LINKS}
 override-tools: ${${_target_}}
