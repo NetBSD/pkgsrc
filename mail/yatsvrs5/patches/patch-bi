@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/update.c.orig	Mon Jul  9 11:56:40 2001
++++ yatd/update.c
+@@ -301,7 +301,7 @@
+       GOTO LBL_CONTINUE;
+     LogDEBUG("#%.256s %.80s",
+ 	     pFldr->szName, ctime(&(statBuf.st_mtime)));
+-    LogDEBUG("%.256s %u %d %d %d\n",
++    LogDEBUG("%.256s %ld %d %d %d\n",
+ 	     pFldr->szName, statBuf.st_mtime,
+ 	     pFldr->nMailAvail, pFldr->nMailUnseen, pFldr->nMailDel);
+     fprintf(fp, "%.256s %lu %d %u %d\n",

@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- yatconfd/yc_admin.c.orig	Wed Jul  4 15:26:49 2001
++++ yatconfd/yc_admin.c
+@@ -8,6 +8,7 @@
+   FILE * fp;
+   struct yc_admin *pEntry;
+   unsigned len;
++  mode_t mode;
+ 
+   LogDEBUG("SaveAdminData()");
+   strcpy(szFilename, SysData.szSysDir);
+@@ -23,7 +24,9 @@
+ 
+   strcpy(szTempname, szFilename);
+   strcat(szTempname, TMPFILE_SUFFIX);
++  mode = umask(077);
+   fp = fopen(szTempname, "w");
++  (void)umask(mode);
+   if (fp == NULL) {
+     ErrSetData(errno, ERRFLG_SYSERR, "%s", SysData.argv[1]);
+     if (!ShortDiskXferCheck())

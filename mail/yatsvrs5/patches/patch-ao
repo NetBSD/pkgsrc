@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- yatconfd/yc_grplst.c.orig	Fri Jun  8 17:56:12 2001
++++ yatconfd/yc_grplst.c
+@@ -12,7 +12,7 @@
+   char *p, *p2;
+   int i;
+ 
+-  LogDEBUG("SetMembers(%x\t%.256s)", pEntry, pszData);
++  LogDEBUG("SetMembers(%p\t%.256s)", pEntry, pszData);
+   if ((p = strdup(pszData)) == NULL) {
+     ErrSetData(ENOMEM, ERRFLG_SYSERR, NULL);
+     WARNING(ENOMEM, ERRFLG_SYSERR, NULL);
+@@ -47,7 +47,7 @@
+     pEntry->member[i] = NULL;
+     break;
+   }
+-  LogDEBUG("End of SetMembers(%x\t%.256s)", pEntry, pszData);
++  LogDEBUG("End of SetMembers(%p\t%.256s)", pEntry, pszData);
+   return pEntry->buffer;
+ }
+ 
+@@ -56,7 +56,7 @@
+   struct yc_admin *pEntry;
+   static struct yc_admin **ppEntry, *pLast;
+ 
+-  LogDEBUG("AddEntry(%x, %.1000s)", ppEntry1st, pszData);
++  LogDEBUG("AddEntry(%p, %.1000s)", ppEntry1st, pszData);
+   if (ppEntry1st != NULL) {
+     ppEntry = ppEntry1st;
+ 
