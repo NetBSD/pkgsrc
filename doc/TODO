@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.157 2003/01/09 12:42:13 rh Exp $
+$NetBSD: TODO,v 1.158 2003/01/09 14:01:04 rh Exp $
 
 Suggested new packages
 ======================
@@ -106,7 +106,6 @@ Suggested package updates
 	o elinks-0.4.0
 	o elm-me-2.4pl100
 	o evilwm-0.99.11 [pkg/19257]
-	o evolution-1.2.1
 	o exim-4.12
 	o fltk-1.1.1
 	o fox-1.0.28
