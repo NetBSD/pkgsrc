@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 12:08:43 uebayasi Exp $
 #
 
-PKGNAME=	w3m-img-${W3M_BASE_VERS}
-PKGREVISION=	3
+PKGNAME=	w3m-img-${W3M_VERS}
 COMMENT=	Multilingualized version of a pager/text-based browser w3m with inline image support
 
 CONFLICTS+=	w3m-[0-9]*
 
-# enable image support
-W3M_USE_IMAGE=	YES
-
+DISTINFO_FILE=	${.CURDIR}/../../www/w3m/distinfo
+PATCHDIR=	${.CURDIR}/../../www/w3m/patches
 PLIST_SRC=	${.CURDIR}/../../www/w3m/PLIST
+
+# Enable image support.
+_W3M_USE_IMAGE=	YES
 
 .include "../../www/w3m/Makefile.common"
