@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.916 2002/01/27 20:01:56 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.917 2002/01/28 19:00:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -69,19 +69,19 @@ PKG_JVM?=		kaffe
 .    endif
 .  endif
 .  if ${PKG_JVM} == "jdk"
-DEPENDS+=		jdk-*:../../lang/jdk
+DEPENDS+=		jdk-[0-9]*:../../lang/jdk
 .    if defined(JDK_HOME)
 JAVA_HOME?=		${JDK_HOME}
 .    else
 JAVA_HOME?=		${LOCALBASE}/java
 .    endif
 .  elif ${PKG_JVM} == "sun-jdk"
-BUILD_DEPENDS+=		sun-jdk-*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre-*:../../lang/sun-jre13
+BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
 
 JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "blackdown-jdk13"
-DEPENDS+=		blackdown-jdk-*:../../lang/blackdown-jdk13
+DEPENDS+=		blackdown-jdk-[0-9]*:../../lang/blackdown-jdk13
 JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
@@ -300,7 +300,7 @@ BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
 .if defined(BUILD_USES_GETTEXT_M4)
-BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-*}:../../devel/gettext-m4
+BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
@@ -1434,10 +1434,10 @@ BZCAT=			${LOCALBASE}/bin/bzcat
 .  endif
 .endif
 .if !empty(EXTRACT_ONLY:M*.zip)
-BUILD_DEPENDS+=		unzip-*:../../archivers/unzip
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha)
-BUILD_DEPENDS+=		lha-*:../../archivers/lha  
+BUILD_DEPENDS+=		lha-[0-9]*:../../archivers/lha  
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
