@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/11/27 09:21:20 jdolecek Exp $
+$NetBSD: distinfo,v 1.3 2004/11/27 13:23:47 jdolecek Exp $
 
-SHA1 (Net_URL-1.0.12.tgz) = 654236aee08fecc9c309fd027c94f2de09239372
-Size (Net_URL-1.0.12.tgz) = 4975 bytes
+SHA1 (pear/Net_URL-1.0.14.tgz) = 769e19ded2ef8ea974a0f66f0a254f2056a31379
+Size (pear/Net_URL-1.0.14.tgz) = 5173 bytes
