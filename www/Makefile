@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2002/10/19 15:43:01 taya Exp $
+# $NetBSD: Makefile,v 1.221 2002/10/19 17:06:51 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -144,7 +144,6 @@ SUBDIR+=	php3
 SUBDIR+=	php4
 SUBDIR+=	php4-apc
 SUBDIR+=	php4-curl
-SUBDIR+=	phoenix
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-curl
 SUBDIR+=	py-pcgi
