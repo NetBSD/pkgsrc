@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9130 2005/02/13 21:21:52 heinz Exp $
+$NetBSD: CHANGES,v 1.9131 2005/02/13 22:55:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated namazu to 2.0.14nb1 [taca 2005-02-13]
 	Updated tor to 0.0.9.4 [jschauma 2005-02-13]
 	Updated spamassassin to 3.0.2nb1 [heinz 2005-02-13]
+	Updated gedit to 2.8.3 [jmmv 2005-02-13]
