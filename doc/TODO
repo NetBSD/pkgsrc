@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1146 2003/12/08 19:21:51 wiz Exp $
+$NetBSD: TODO,v 1.1147 2003/12/08 19:29:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snort-2.0.5
 	o sodipodi-0.33
-	o speex-1.0.3
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]

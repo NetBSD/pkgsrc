@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4023 2003/12/08 19:21:51 wiz Exp $
+$NetBSD: CHANGES,v 1.4024 2003/12/08 19:29:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mencoder to 1.0rc2 [wiz 2003-12-08]
 	Updated mplayer to 1.0rc2 [wiz 2003-12-08]
 	Updated mplayer-share to 1.0rc2 [wiz 2003-12-08]
+	Updated speex to 1.0.3 [wiz 2003-12-08]
