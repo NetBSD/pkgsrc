@@ -1,12 +1,30 @@
-$NetBSD: patch-ag,v 1.1 2001/04/05 14:06:57 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- config/imake/imake.c.orig	Sun Oct 29 15:34:13 2000
-+++ config/imake/imake.c	Sun Oct 29 15:38:27 2000
-@@ -148,6 +148,7 @@
- #if defined(__FreeBSD__) || defined(__NetBSD__)
- /* This needs to be before _POSIX_SOURCE gets defined */
- # include <sys/param.h>
-+# include <sys/time.h>
- # include <sys/types.h>
- # include <sys/sysctl.h>
- #endif
+--- config/cf/host.def.orig	Sat Sep  8 01:35:59 2001
++++ config/cf/host.def
+@@ -1,17 +1,19 @@
+ #ifdef BeforeVendorCF
+ 
+-#define TopLevelProject         Motif
+-#define ProjectRoot             /usr/X11R6
+-#define X11ProjectRoot          /usr/X11R6
++#define TopLevelProject         OpenMotif
++#undef ProjectRoot
++#define ProjectRoot             $(PREFIX)
++#undef X11ProjectRoot
++#define X11ProjectRoot          $(X11BASE)
+ #define VirtualBindingsPath     $(LIBDIR)/bindings
+ #define ImportX11               YES
+ #define USE_BYACC               YES
+ #define NoMessageCatalog        YES
+ #define ForceNormalLib          YES
+ #define HasVarDirectory         NO
+-#define DebugLibXm              YES
+-#define DebugLibMrm             YES
+-#define DebugLibUil             YES
++#define DebugLibXm              NO
++#define DebugLibMrm             NO
++#define DebugLibUil             NO
+ #define LexLib                  -lfl
+ 
+ #endif /* BeforeVendorCF */

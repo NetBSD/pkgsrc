@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:11:02 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/09/08 20:03:45 jlam Exp $
 bin/DNDDemo
 bin/UTMXmText
 bin/aicon
@@ -18,7 +18,6 @@ bin/getsubres
 bin/helloint
 bin/hellomotif
 bin/i18ninput
-bin/makedepend
 bin/motifshell
 bin/mwm
 bin/notebook
@@ -46,7 +45,6 @@ include/Mrm/MrmAppl.h
 include/Mrm/MrmDecls.h
 include/Mrm/MrmPublic.h
 include/Mrm/MrmosI.h
-@dirrm include/Mrm
 include/X11/bitmaps/xm_error
 include/X11/bitmaps/xm_hour16
 include/X11/bitmaps/xm_hour16m
@@ -232,14 +230,12 @@ include/Xm/XmStrDefs.h
 include/Xm/Xmfuncs.h
 include/Xm/XmosP.h
 include/Xm/XpmP.h
-@dirrm include/Xm
 include/uil/Uil.h
 include/uil/UilDBDef.h
 include/uil/UilDef.h
 include/uil/UilSymDef.h
 include/uil/UilSymGl.h
 include/uil/XmAppl.uil
-@dirrm include/uil
 lib/X11/app-defaults/Fileview
 lib/X11/app-defaults/Mwm
 lib/X11/app-defaults/XmdAirport
@@ -278,12 +274,8 @@ lib/X11/bindings/sun
 lib/X11/bindings/sun_at
 lib/X11/bindings/tek
 lib/X11/bindings/xmbind.alias
-@dirrm lib/X11/bindings
-lib/X11/config/Motif.rules
-lib/X11/config/Motif.rules.openmotif
-lib/X11/config/Motif.tmpl
-lib/X11/config/Motif.tmpl.openmotif
-lib/X11/config/host.def
+lib/X11/config/OpenMotif.rules
+lib/X11/config/OpenMotif.tmpl
 lib/X11/help/aicon.help
 lib/X11/help/draw.help
 lib/X11/help/filemanager.help
@@ -293,7 +285,6 @@ lib/X11/help/i18ninput.help
 lib/X11/help/sampler2_0.help
 lib/X11/help/todo.help
 lib/X11/help/xmanimate.help
-@dirrm lib/X11/help
 lib/X11/motifshell/help
 lib/X11/motifshell/membership
 lib/X11/motifshell/motif
@@ -301,7 +292,6 @@ lib/X11/motifshell/motifshell.c
 lib/X11/motifshell/principles
 lib/X11/motifshell/research
 lib/X11/motifshell/welcome
-@dirrm lib/X11/motifshell
 lib/X11/system.mwmrc
 lib/X11/uid/C/uid/l_strings.uid
 lib/X11/uid/English.uid
@@ -321,19 +311,6 @@ lib/X11/uid/plane.uid
 lib/X11/uid/superman.uid
 lib/X11/uid/swedish/uid/l_strings.uid
 lib/X11/uid/xmanimate.uid
-@dirrm lib/X11/uid/C/uid
-@dirrm lib/X11/uid/C
-@dirrm lib/X11/uid/english/uid
-@dirrm lib/X11/uid/english
-@dirrm lib/X11/uid/french/uid
-@dirrm lib/X11/uid/french
-@dirrm lib/X11/uid/hebrew/uid
-@dirrm lib/X11/uid/hebrew
-@dirrm lib/X11/uid/japanese/uid
-@dirrm lib/X11/uid/japanese
-@dirrm lib/X11/uid/swedish/uid
-@dirrm lib/X11/uid/swedish
-@dirrm lib/X11/uid
 lib/libMrm.a
 lib/libMrm.so
 lib/libMrm.so.2
@@ -352,7 +329,6 @@ man/man1/xmbind.1
 man/man3/ApplicationShell.3
 man/man3/Composite.3
 man/man3/Constraint.3
-man/man3/Core.3
 man/man3/MrmCloseHierarchy.3
 man/man3/MrmFetchBitmapLiteral.3
 man/man3/MrmFetchColorLiteral.3
@@ -368,10 +344,8 @@ man/man3/MrmOpenHierarchyPerDisplay.3
 man/man3/MrmRegisterClass.3
 man/man3/MrmRegisterNames.3
 man/man3/MrmRegisterNamesInHierarchy.3
-man/man3/Object.3
 man/man3/OverrideShell.3
 man/man3/RectObj.3
-man/man3/Shell.3
 man/man3/TopLevelShell.3
 man/man3/TransientShell.3
 man/man3/Uil.3
@@ -379,6 +353,9 @@ man/man3/UilDumpSymbolTable.3
 man/man3/VendorShell.3
 man/man3/VirtualBindings.3
 man/man3/WMShell.3
+man/man3/XCore.3
+man/man3/XObject.3
+man/man3/XShell.3
 man/man3/XmActivateProtocol.3
 man/man3/XmActivateWMProtocol.3
 man/man3/XmAddProtocolCallback.3
@@ -902,3 +879,22 @@ man/man5/Traits.5
 man/man5/UIL.5
 man/man5/WML.5
 man/man5/mwmrc.5
+@dirrm lib/X11/uid/swedish/uid
+@dirrm lib/X11/uid/swedish
+@dirrm lib/X11/uid/japanese/uid
+@dirrm lib/X11/uid/japanese
+@dirrm lib/X11/uid/hebrew/uid
+@dirrm lib/X11/uid/hebrew
+@dirrm lib/X11/uid/french/uid
+@dirrm lib/X11/uid/french
+@dirrm lib/X11/uid/english/uid
+@dirrm lib/X11/uid/english
+@dirrm lib/X11/uid/C/uid
+@dirrm lib/X11/uid/C
+@dirrm lib/X11/uid
+@dirrm lib/X11/motifshell
+@dirrm lib/X11/help
+@dirrm lib/X11/bindings
+@dirrm include/uil
+@dirrm include/Xm
+@dirrm include/Mrm
