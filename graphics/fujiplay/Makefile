@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/27 22:20:00 hubertf Exp $
 #
 
 DISTNAME=	fujiplay
@@ -13,6 +13,14 @@ COMMENT=	Download pictures from some Fujifilm digital cameras
 
 DIST_SUBDIR=	fujiplay-1.33
 WRKSRC=		${WRKDIR}
+
+post-patch:
+	cd ${WRKSRC} ; ${MV} fujiplay.c fujiplay.c.orig2 ; \
+	${SED} \
+		-e '791,794s/^/"/g' \
+		-e '791,793s/$$/\\n"/' \
+		-e '790,790s/".*$$//' \
+		<fujiplay.c.orig2 >fujiplay.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fujiplay	${PREFIX}/bin
