@@ -1,0 +1,11 @@
+$NetBSD: patch-ba,v 1.1 2004/10/08 00:28:18 reinoud Exp $
+
+--- libgnome/gnome-program.c.orig	2004-08-25 01:39:18.000000000 +0200
++++ libgnome/gnome-program.c
+@@ -1929,5 +1929,5 @@ gnome_program_init_paramv (GType type,
+                            guint nparams, GParameter *params)
+ {
+     return gnome_program_init_common (type, app_id, app_version, module_info,
+-				      argc, argv, NULL, 0, nparams, params);
++				      argc, argv, NULL, NULL, nparams, params);
+ }
