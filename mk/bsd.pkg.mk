@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.343 1999/09/24 17:13:31 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.344 1999/09/24 22:20:30 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1360,14 +1360,14 @@ root-install:
 				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
 				cnt=`${EGREP} -c -x "$$so0" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${SED} -e "s|^$$so3$$|&!$$so0|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${AWK} "{sub(\"^$$so3$$\",\"$$so3\n$$so0\"); print}" ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so0"; \
 					${RM} -f ${PREFIX}/$$so0; 	\
 					${LN} -s $$so2 ${PREFIX}/$$so0; \
 				fi;					\
 				cnt=`${EGREP} -c -x "$$so1" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${SED} -e "s|^$$so3$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${AWK} "{sub(\"^$$so3$$\",\"$$so3\n$$so1\"); print}" ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so1"; \
 					${RM} -f ${PREFIX}/$$so1; 	\
 					${LN} -s $$so2 ${PREFIX}/$$so1; \
