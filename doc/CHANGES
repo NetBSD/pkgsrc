@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.891 2002/12/24 00:14:00 wiz Exp $
+$NetBSD: CHANGES,v 1.892 2002/12/24 00:21:16 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libexif to 0.5.7 [wiz 2002-12-24]
 	Updated bidwatcher to 1.3.7 [tron 2002-12-24]
 	Updated freetype2 to 2.1.3 [wiz 2002-12-24]
+	Added gp-fplsa-1.0 [cjep 2002-12-24]
