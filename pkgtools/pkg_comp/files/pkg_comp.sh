@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.4 2002/12/24 16:28:34 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.5 2003/01/08 17:57:42 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -249,11 +249,19 @@ pkg_makeroot()
     if [ -d $DESTDIR ]; then
         err "DESTDIR $DESTDIR already exists"
     fi
+
+    allsets="$SETS $SETS_X11"
+
+    for s in $allsets; do
+        if [ ! -f $DISTRIBDIR/binary/sets/$s ]; then
+            err "$DISTRIBDIR/binary/sets/$s does not exist"
+        fi
+    done
+
     mkdir -p $DESTDIR
     cd $DESTDIR
 
     printf "Unpacking sets:"
-    allsets="$SETS $SETS_X11"
     for s in $allsets; do
         printf " $s"
         tar xzpf $DISTRIBDIR/binary/sets/$s
@@ -328,10 +336,13 @@ makeroot_mkconf()
     echo "LOCALBASE=$LOCALBASE" >> $file
     echo "PKG_SYSCONFBASE=$PKG_SYSCONFBASE" >> $file
 
-    if [ ! -f "$EXTRAMK" ]; then
-        err "Cannot find $EXTRAMK"
+    if [ -n "$EXTRAMK" ]; then
+        if [ ! -f "$EXTRAMK" ]; then
+            err "Cannot find $EXTRAMK"
+        else
+            cat $EXTRAMK >> $file
+        fi
     fi
-    cat $EXTRAMK >> $file
 }
 
 makeroot_xpkgwedge()
