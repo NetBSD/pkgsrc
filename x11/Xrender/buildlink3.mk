@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2003/09/13 23:21:22 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2003/09/14 01:47:52 jlam Exp $
 
 .if !defined(XRENDER_BUILDLINK3_MK)
 XRENDER_BUILDLINK3_MK=	# defined
@@ -65,6 +65,8 @@ BUILDLINK_DEPENDS.Xrender=	Xrender>=0.7
 BUILDLINK_DEPENDS+=		Xrender
 .  endif
 BUILDLINK_PACKAGES+=		Xrender
+.else
+BUILDLINK_PREFIX.Xrender=	${X11BASE}
 .endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
