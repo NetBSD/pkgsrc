@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/03 15:13:37 adam Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 CATEGORIES=	games x11
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 
-DEPENDS+=	rocksndiamonds>=1.4.0:../../games/rocksndiamonds
+DEPENDS+=	rocksndiamonds-[,sdl]>=1.4.0:../../games/rocksndiamonds
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
@@ -20,7 +20,7 @@ NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
-SCORE_PATH=	/var/games/rocksndiamonds
+SCORE_PATH=	${VARBASE}/games/rocksndiamonds
 
 do-install:
 .for directory in dx_abd dx_achim_haertel \
