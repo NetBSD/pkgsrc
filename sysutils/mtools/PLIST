@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/11 16:05:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/10 01:27:26 seb Exp $
 ${NOFLOPPYD}bin/floppyd
 ${NOFLOPPYD}bin/floppyd_installtest
 bin/lz
@@ -31,7 +31,6 @@ bin/mxtar
 bin/mzip
 bin/tgz
 bin/uz
-info/mtools.info
 ${NOFLOPPYD}man/man1/floppyd.1
 ${NOFLOPPYD}man/man1/floppyd_installtest.1
 man/man1/mattrib.1

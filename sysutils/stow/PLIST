@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/05 20:38:13 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/10 01:30:35 seb Exp $
 bin/stow
-info/stow.info
 man/man8/stow.8
