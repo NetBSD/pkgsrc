@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:50 jlam Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -30,7 +30,7 @@ USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/config
-LIBTOOL_OVERRIDE=	${WRKSRC}/config/klibtool
+LIBTOOL_OVERRIDE=	klibtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf.local \
 		--without-texinfo \

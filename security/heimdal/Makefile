@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/15 12:48:00 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:52 jlam Exp $
 
 DISTNAME=		heimdal-0.6
 CATEGORIES=		security
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 HEIMDAL_STATEDIR?=	/var/heimdal
 

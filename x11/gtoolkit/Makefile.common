@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=		gtoolkit-0.9.5
@@ -14,5 +14,4 @@ USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-gnustep
