@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/01/09 18:22:12 mycroft Exp $
+$NetBSD: distinfo,v 1.3 2003/01/16 11:11:52 grant Exp $
 
 SHA1 (ntop-2.1.54.tgz) = 3543d37293ca136b12cd72d57c5f86dd403e1e85
 Size (ntop-2.1.54.tgz) = 2337890 bytes
-SHA1 (patch-aa) = 27e1922ba1e517dc31219a5d4302dcffe038a101
