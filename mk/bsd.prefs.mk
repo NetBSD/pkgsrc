@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.80 2002/10/12 17:17:22 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.81 2002/10/12 20:25:49 bouyer Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -71,6 +71,7 @@ LOWER_OPSYS?=		netbsd
 SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "sun4"
 MACHINE_ARCH=		sparc
+SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "i86pc"
 MACHINE_ARCH=		i386
 .  elif ${MACHINE_ARCH} == "unknown"
