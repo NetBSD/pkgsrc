@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2001/05/27 07:57:40 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/08/05 17:04:21 sakamoto Exp $
 bin/reswrap
+bin/calculator
+bin/PathFinder
+bin/textedit
 include/fox/FX4Splitter.h
 include/fox/FXAccelTable.h
 include/fox/FXApp.h
@@ -107,6 +110,7 @@ include/fox/FXPopup.h
 include/fox/FXPrintDialog.h
 include/fox/FXProfiler.h
 include/fox/FXProgressBar.h
+include/fox/FXProgressDialog.h
 include/fox/FXQuat.h
 include/fox/FXRadioButton.h
 include/fox/FXRange.h
@@ -133,6 +137,8 @@ include/fox/FXStatusline.h
 include/fox/FXStream.h
 include/fox/FXString.h
 include/fox/FXSwitcher.h
+include/fox/FXTIFIcon.h
+include/fox/FXTIFImage.h
 include/fox/FXTab.h
 include/fox/FXTable.h
 include/fox/FXText.h
@@ -161,9 +167,9 @@ include/fox/fxkeys.h
 include/fox/fxregex.h
 include/fox/fxver.h
 include/fox/xincs.h
+lib/libFOX-0.99.so.174.0
+lib/libFOX-0.99.so.174
 lib/libFOX-0.99.so
-lib/libFOX-0.99.so.172
-lib/libFOX-0.99.so.172.0
 lib/libFOX.a
 lib/libFOX.la
 lib/libFOX.so
