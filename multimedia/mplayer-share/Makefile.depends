@@ -1,0 +1,43 @@
+# $NetBSD: Makefile.depends,v 1.1.1.1 2004/01/26 12:06:40 jmmv Exp $
+#
+
+DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../multimedia/mplayer-share
+
+GCC_REQD=	2.95.3
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+.  include "../../audio/cdparanoia/buildlink2.mk"
+.endif
+
+.if ${OPSYS} == "NetBSD"
+.  include "../../devel/binutils/buildlink2.mk"
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+DEPENDS+=	win32-codecs>=011227:../../multimedia/win32-codecs
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "alpha"
+DEPENDS+=	realplayer-codecs>=8nb2:../../multimedia/realplayer-codecs
+.endif
+
+USE_X11=	YES
+
+.for drv pkg in ${MPLAYER_DRIVERS}
+.  if empty(MPLAYER_DISABLE_DRIVERS:M${drv})
+.    include "../../${pkg}/buildlink2.mk"
+.  endif
+.endfor
+
+.include "../../audio/libmad/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xvidcore/buildlink2.mk"
+.include "../../misc/libdvdread/buildlink2.mk"
+
+.if defined(USE_OSS)
+.  include "../../mk/ossaudio.buildlink2.mk"
+.endif
