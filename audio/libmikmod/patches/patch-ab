@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2000/04/02 16:07:05 pooka Exp $
 
---- docs/mikmod.texi.orig	Sun Oct  3 18:47:56 1999
-+++ docs/mikmod.texi	Sun Oct  3 18:48:33 1999
+--- docs/mikmod.texi.orig	Tue Feb 15 00:10:21 2000
++++ docs/mikmod.texi	Sun Apr  2 14:47:50 2000
 @@ -78,12 +78,14 @@
  @direntry
  * MikMod: (mikmod).            MikMod Sound Library.
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
  @menu
  * Introduction::          What is MikMod ?
  * Tutorial::              Your first steps with MikMod.
-@@ -3077,15 +3079,11 @@
+@@ -3117,15 +3119,11 @@
  @end menu
  @end ifnottex
  
