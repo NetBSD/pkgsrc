@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/03/10 07:41:16 martti Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/03/10 11:53:37 xtraeme Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.4/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.0.4/src/
@@ -7,9 +7,10 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
 XFCE4_VERSION=		4.0.4
+PKGREVISION=		1
 
-USE_BUILDLINK2=		# defined
-USE_X11BASE=		# defined
+USE_BUILDLINK3=		# defined
+USE_X11=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
@@ -23,5 +24,5 @@ MESSAGE_SRC?=		${.CURDIR}/../../fonts/fontconfig/MESSAGE
 
 PKG_CONFIG_PATH=	${BUILDLINK_DIR}/lib/pkgconfig
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
