@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 23:32:34 grant Exp $
+lib/httpd/mod_bandwidth.so
