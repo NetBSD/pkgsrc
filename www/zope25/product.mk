@@ -1,4 +1,4 @@
-# $NetBSD: product.mk,v 1.4 2003/04/23 14:33:18 drochner Exp $
+# $NetBSD: product.mk,v 1.5 2003/04/23 16:25:16 drochner Exp $
 
 DIST_SUBDIR=	zope
 BUILDLINK_DEPENDS.zope?=	zope-2.*
@@ -12,7 +12,7 @@ PYTHON_VERSIONS_ACCEPTED=	21pth
 
 ZOPEDIR=	${BUILDLINK_PREFIX.zope}/lib/zope
 PRODNAMES?=	${PKGNAME:C/^zope25-(.*)-.*/\1/}
-ZOPE_COPYPRODUCT?= zope-std-copyproduct-long
+ZOPE_COPYPRODUCT?= zope-std-copyproduct-short
 
 PRODSUBDIR=	lib/python/Products/${PRODNAME}
 
