@@ -5,14 +5,14 @@ compiler while taking advantage of the goodies included in this package.
 
 This package consists of five Eiffel libraries:
 
-       Gobo Eiffel Kernel Library 
-       Gobo Eiffel Structure Library 
-       Gobo Eiffel Lexical Library 
-       Gobo Eiffel Parse Library 
-       Gobo Eiffel Utility Library 
+       Gobo Eiffel Kernel Library
+       Gobo Eiffel Structure Library
+       Gobo Eiffel Lexical Library
+       Gobo Eiffel Parse Library
+       Gobo Eiffel Utility Library
 
 and three utilities:
 
-       Gobo Eiffel Lex (gelex) 
-       Gobo Eiffel Yacc (geyacc) 
-       Gobo Eiffel Preprocessor (gepp) 
+       Gobo Eiffel Lex (gelex)
+       Gobo Eiffel Yacc (geyacc)
+       Gobo Eiffel Preprocessor (gepp)

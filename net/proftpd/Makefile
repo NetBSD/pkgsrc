@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/22 10:15:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/06 17:42:15 jmmv Exp $
 
 DISTNAME=	proftpd-1.2.8
 PKGREVISION=	1
@@ -27,12 +27,12 @@ CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
 ## MODULES:=	${MODULES}:mod_ldap
 ## DEPENDS+=	openldap-[0-9]*:../../databases/openldap
 ## .endif
-## 
+##
 ## .if defined(PROFTPD_USE_MYSQL) && ${PROFTPD_USE_MYSQL} == "YES"
 ## MODULES:=	${MODULES}:mod_sql:mod_sql_mysql
 ## DEPENDS+=	mysql-client-[0-9]*:../../databases/mysql-client
 ## .endif
-## 
+##
 ## .if defined(PROFTPD_USE_POSTGRES) && ${PROFTPD_USE_POSTGRES} == "YES"
 ## MODULES:=	${MODULES}:mod_sql:mod_sql_postgres
 ## DEPENDS+=	postgresql-client-[0-9]*:../../databases/postgresql-client

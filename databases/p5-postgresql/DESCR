@@ -9,7 +9,7 @@ as possible.
 C-style like interface and a new one, using a more Perl-ish like
 style.  The old style has the benefit, that existing Libpq
 applications can easily be ported to perl. The new style uses class
-packages and might be more familiar for C++- programmers. 
+packages and might be more familiar for C++- programmers.
 
   You may distribute this module under the terms of either the GNU
 General Public License or the Artistic License, as specified in the

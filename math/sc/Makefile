@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:44 jmmv Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1998/08/10 00:20:29 steve Exp 
+# $NetBSD: Makefile,v 1.7 2003/05/06 17:41:54 jmmv Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1998/08/10 00:20:29 steve Exp
 
 DISTNAME=               sc-6.21
 WRKSRC=			${WRKDIR}

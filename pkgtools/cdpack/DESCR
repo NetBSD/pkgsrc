@@ -7,5 +7,5 @@ arranges the packages so any package on CD number `n' will
 have all of its dependencies on CD numbers 1 through `n'.
 The "no inter-CD depends" algorithm will place certain
 packages on more than one CD to ensure that each CD is self
-contained (all package dependencies are satisfied within 
+contained (all package dependencies are satisfied within
 the single CD).

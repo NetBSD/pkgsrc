@@ -9,4 +9,4 @@ produces a report detailing the performance at each stage.
 
 A summary is produced which shows the relative contributions to the
 total system performance of each block.  This allows easy
-identification of what limits system performance. 
+identification of what limits system performance.

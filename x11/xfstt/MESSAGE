@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/02/22 13:33:31 salo Exp $
+$NetBSD: MESSAGE,v 1.2 2003/05/06 17:43:13 jmmv Exp $
 
 To use xfstt, you will need to perform the following steps:
 
@@ -22,7 +22,7 @@ To use xfstt, you will need to perform the following steps:
 4. Tell your X11 server about the new font service
 
 	xset fp+ unix/:7101
-   
+  
    or add the new fontpath directly to the X11 config file, e.g. Section
    "Files", in XFree86 configuration file
 

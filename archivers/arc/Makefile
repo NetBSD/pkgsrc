@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:00 jmmv Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp 
+# $NetBSD: Makefile,v 1.14 2003/05/06 17:40:19 jmmv Exp $
+# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp
 #
 
 DISTNAME=       arc521e.pl8

@@ -8,6 +8,6 @@ It incorporates a multiple precision arithmetic packages based on the work
 of Professor Richard Brent, who has also kindly given me permission to make
 it available.
 
-There is a single graphics driver for Gtk2 included with this release, but 
-the code is written in a portable abstracted way, so it should not be very 
+There is a single graphics driver for Gtk2 included with this release, but
+the code is written in a portable abstracted way, so it should not be very
 difficult to add others over time.

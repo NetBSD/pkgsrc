@@ -3,7 +3,7 @@ the use of C as a scripting language.  This can be quite useful
 ****SOMETIMES****, allowing access to system calls and library functions
 from the command line.  For example, there are occasions when I want
 to see the struct stat for a directory entry, and want to be able to
-access st_mtime values, without having to parse output from "ls -l". 
+access st_mtime values, without having to parse output from "ls -l".
 A simple:
 
 int main(int argc, char **argv)

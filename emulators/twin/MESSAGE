@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/03/08 03:15:49 jmc Exp $
+$NetBSD: MESSAGE,v 1.4 2003/05/06 17:41:11 jmmv Exp $
 
 TWIN gotchas:
 	* Only tested on NetBSD i386 and requires USER_LDT kernel option
 
-	* Platforms other than NetBSD i386 can only run 16 bit binaries and 
+	* Platforms other than NetBSD i386 can only run 16 bit binaries and
 	  this hasn't been extensively tested.
 
 	* Some w32 functions are implemented but not prototyped in the

@@ -1,5 +1,5 @@
-Host is a very powerful DNS query and testing command-line tool. Major 
-differences with the ancient version of the program with the same name 
+Host is a very powerful DNS query and testing command-line tool. Major
+differences with the ancient version of the program with the same name
 that's included in the BIND-4 and BIND-8 distributions:
 
  - Major overhaul of the entire code including rigid error checking,

@@ -2,10 +2,10 @@ Graphviz is a set of graph drawing tools from AT&T Research and Lucent Bell
 Laboratories.
 
 It includes:
-- dot: makes hierarchical layouts of directed graphs 
-- neato: makes "spring" model layouts of undirected graphs 
+- dot: makes hierarchical layouts of directed graphs
+- neato: makes "spring" model layouts of undirected graphs
 - lefty: a programmable graphics editor
-- dotty: a customizable interface written in LEFTY 
+- dotty: a customizable interface written in LEFTY
 - tcldot: a customizable graphical interface written in TCL
-- libgraph: the base library for graph tools 
+- libgraph: the base library for graph tools
 - various associated utilities
