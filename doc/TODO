@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.869 2003/09/16 18:57:14 jmmv Exp $
+$NetBSD: TODO,v 1.870 2003/09/16 19:19:31 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -108,7 +108,6 @@ Suggested package updates
 	o elm-me-2.4pl107
 	o ethereal-0.9.15
 	o ettercap-0.6.b
-	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4.4
 	o festival-1.4.3
 	o filerunner-2.5.1 [pkg/22412]
