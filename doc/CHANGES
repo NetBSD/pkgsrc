@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9755 2005/04/04 20:36:46 tron Exp $
+$NetBSD: CHANGES,v 1.9756 2005/04/04 21:46:02 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1214,8 +1214,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated unace to 1.2.2nb1 [wiz 2005-03-01]
 	Updated cvs to 1.11.19 [wiz 2005-03-01]
 	Updated wu-ftpd to 2.6.2nb3 [wiz 2005-03-01]
-        Updated xorg to 6.8.2 [xtraeme 2005-03-01]
-        Updated ivtools to 1.2.2 [markd 2005-03-01]
+	Updated xorg to 6.8.2 [xtraeme 2005-03-01]
+	Updated ivtools to 1.2.2 [markd 2005-03-01]
 	Updated p5-Regexp-Common to 2.119 [wiz 2005-03-01]
 	Updated fontconfig to 2.3.0 [wiz 2005-03-01]
 	Updated mksunbootcd to 1.0 [dmcmahill 2005-03-01]
@@ -1365,8 +1365,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ja-mh6 to 3.05nb1 [wiz 2005-03-15]
 	Updated mysql4-client to 4.1.10a [xtraeme 2005-03-15]
 	Updated mysql4-server to 4.1.10a [xtraeme 2005-03-15]
-        Updated mysql-client to 4.0.24 [xtraeme 2005-03-15]
-        Updated mysql-server to 4.0.24 [xtraeme 2005-03-15]
+	Updated mysql-client to 4.0.24 [xtraeme 2005-03-15]
+	Updated mysql-server to 4.0.24 [xtraeme 2005-03-15]
 	Updated gmp to 4.1.4nb1 [wiz 2005-03-15]
 	Updated gxmame to 0.35beta1 [xtraeme 2005-03-15]
 	Updated arla to 0.38 [wennmach 2005-03-15]
@@ -1819,15 +1819,15 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mdf2iso-0.2.2 [xtraeme 2005-03-29]
 	Updated tor to 0.0.9.6 [jschauma 2005-03-29]
 	Updated cygwin_lib to 1.5.13.1 [tv 2005-03-29]
-        Added gxemul-20050329 [xtraeme 2005-03-30]
-        Removed mips64emul [xtraeme 2005-03-30]
+	Added gxemul-20050329 [xtraeme 2005-03-30]
+	Removed mips64emul [xtraeme 2005-03-30]
 	Updated libkver to 0.6 [seb 2005-03-30]
 	Updated xine-lib to 1.0nb1 [tron 2005-03-30]
 	Updated gnucash to 1.8.11nb2 [wiz 2005-03-30]
 	Updated sudo to 1.6.8pl7 [cube 2005-03-30]
 	Updated net-snmp to 5.2.1 [adam 2005-03-30]
 	Updated efax-gtk to 2.2.15 [adam 2005-03-30]
-        Updated mklivecd to 0.11 [xtraeme 2005-03-30]
+	Updated mklivecd to 0.11 [xtraeme 2005-03-30]
 	Added openttd-0.3.6 [wiz 2005-03-30]
 	Updated glpk to 4.8nb1 [adam 2005-03-30]
 	Added ruby-xmlscan-0.2.3 [minskim 2005-03-30]
