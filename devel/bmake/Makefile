@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2001/06/17 22:02:20 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/18 21:41:06 sjg Exp $
 #
 
-DISTNAME=       bmake-3.1.10
+DISTNAME=       bmake-3.1.12
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/incoming/sjg/
 
 MAINTAINER=	sjg@netbsd.org
-HOMEPAGE=	http://www.quick.com.au/help/sjg/bmake.html
-COMMENT=	NetBSD version of 'make' utility
+HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
+COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
-DEPENDS+=	mk-files-1.2.2:../../devel/mk-files
+DEPENDS+=	mk-files>=1.2.5:../../devel/mk-files
 
 WRKSRC=		${WRKDIR}/bmake
 
+makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	  						\
-	--with-default-sys-path=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
+CONFIGURE_ARGS+= --with-default-sys-path=${makesyspath}
 
 do-build:
-	cd ${WRKSRC}; make -f makefile.boot bootstrap; ./bmake -f Makefile; ./bmake -f Makefile bmake.1
+	cd ${WRKSRC} && MAKESYSPATH=${makesyspath} make -f makefile.boot bootstrap
 
 do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/bmake ${PREFIX}/bin
