@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 20:43:41 jmmv Exp $
+bin/logcheck.sh
 bin/logtail
-etc/logcheck.hacking.sample
-etc/logcheck.ignore.sample
-etc/logcheck.sh
-etc/logcheck.violations.ignore.sample
-etc/logcheck.violations.sample
+share/examples/logcheck/logcheck.hacking
+share/examples/logcheck/logcheck.ignore
+share/examples/logcheck/logcheck.violations
+share/examples/logcheck/logcheck.violations.ignore
+@dirrm share/examples/logcheck
