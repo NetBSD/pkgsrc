@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.2 2004/09/22 17:56:31 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.3 2004/09/23 03:59:01 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -49,6 +49,7 @@ reorderlibs="@_WRAP_REORDERLIBS@"
 shell_lib="@_WRAP_SHELL_LIB@"
 scan="@_WRAP_SCAN@"
 transform="@_WRAP_TRANSFORM@"
+transform_sed="@_WRAP_TRANSFORM_SED@"
 wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
 skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
 debug="${WRAPPER_DEBUG-no}"
