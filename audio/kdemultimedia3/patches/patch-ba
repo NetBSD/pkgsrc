@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.2 2002/06/25 06:34:34 skrll Exp $
+$NetBSD: patch-ba,v 1.3 2002/10/03 11:21:29 markd Exp $
 
 --- noatun/library/Makefile.am.orig	Wed May  8 19:29:25 2002
 +++ noatun/library/Makefile.am
@@ -14,7 +14,7 @@ $NetBSD: patch-ba,v 1.2 2002/06/25 06:34:34 skrll Exp $
  	playlist.cpp pref.cpp \
  	player.cpp playlistsaver.cpp app.cpp \
  	pluginloader.cpp plugin.cpp \
-@@ -22,11 +22,11 @@
+@@ -22,14 +22,14 @@
  
  include_HEADERS  = cmodule.h plugin_deps.h equalizerview.h effectview.h mimetypetree.h ksaver.h
  
@@ -27,4 +27,8 @@ $NetBSD: patch-ba,v 1.2 2002/06/25 06:34:34 skrll Exp $
 +libnoatun_core_la_LIBADD      = $(top_builddir)/arts/gui/common/libartsgui.la	\
  	$(top_builddir)/arts/gui/kde/libartsgui_kde.la			\
  	$(top_builddir)/arts/modules/libartsmodules.la			\
- 	-lkio -lqtmcop -lkmedia2_idl -lnoatunarts			\
+-	-lkio -lqtmcop -lkmedia2_idl -lnoatunarts			\
++	-lkio -lqtmcop -lkmedia2_idl $(top_builddir)/noatun/library/noatunarts/libnoatunarts.la			\
+ 	-lartsflow -lsoundserver_idl -lartskde $(LIBDL)
+ 
+ libnoatuncontrols_la_SOURCES = controls.cpp scrollinglabel.cpp
