@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/11/17 23:06:21 tron Exp $
+$NetBSD: md5,v 1.4 2000/03/26 08:29:25 jlam Exp $
 
-MD5 (gnuchess-4.0.pl80.tar.gz) = 833110654ec086b4ace45e037612033e
+MD5 (chess-5.00.tar.gz) = 8bf7cd9250aa96c4e37e9770733d8fe3
