@@ -1,0 +1,22 @@
+$NetBSD: patch-bd,v 1.1 2003/02/27 04:08:25 jschauma Exp $
+
+--- src/calculation/Makefile.in.orig	Mon Feb  3 01:50:54 2003
++++ src/calculation/Makefile.in	Thu Feb  6 20:56:30 2003
+@@ -233,7 +233,7 @@
+ pkglib_LTLIBRARIES = libgncmod-calculation.la
+ 
+ libgncmod_calculation_la_LDFLAGS = -module
+-libgncmod_calculation_la_LIBADD = ${GLIB_LIBS} 
++libgncmod_calculation_la_LIBADD = ${GLIB_LIBS} ${GUILE_LIBS}
+ 
+ libgncmod_calculation_la_SOURCES = \
+   expression_parser.c \
+@@ -259,7 +259,7 @@
+   numeric_ops.h
+ 
+ 
+-AM_CFLAGS = -I${top_srcdir}/src/gnc-module ${GLIB_CFLAGS}
++AM_CFLAGS = -I${top_srcdir}/src/gnc-module ${GLIB_CFLAGS} ${GUILE_INCS}
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../config.h
+ CONFIG_CLEAN_FILES = 

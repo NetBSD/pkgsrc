@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2003/02/27 04:08:25 jschauma Exp $
+
+--- src/quotes/Makefile.in.orig 2003-02-10 07:48:24.000000000 +0000
++++ src/quotes/Makefile.in      2003-02-25 03:59:27.000000000 +0000
+@@ -230,7 +230,7 @@
+
+ gncsharedir = ${GNC_SHAREDIR}
+
+-bin_SCRIPTS = gnc-prices update-finance-quote
++bin_SCRIPTS = gnc-prices
+ gncshare_SCRIPTS = finance-quote-helper finance-quote-check
+
+ EXTRA_DIST = \

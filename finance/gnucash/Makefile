@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2003/02/23 13:03:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2003/02/27 04:08:24 jschauma Exp $
 
-DISTNAME=		gnucash-1.6.8
-PKGREVISION=		3
+DISTNAME=		gnucash-1.8.1
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -10,8 +9,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
-BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.2.1:../../devel/g-wrap
-BUILDLINK_DEPENDS.g-wrap+=	g-wrap<1.3.0:../../devel/g-wrap
+DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
+
+BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.3.4:../../devel/g-wrap
 BUILDLINK_DEPENDS.guile14=	guile14>=1.4:../../lang/guile14
 BUILDLINK_DEPENDS.guile14+=	guile14<1.5.0:../../lang/guile14
 BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
@@ -44,15 +44,40 @@ post-buildlink:
 	fi
 .endif
 
+GNUCASH_GUILE_MAKEFILE_IN_FILES= \
+	src/app-file/Makefile.in src/app-utils/Makefile.in \
+	src/business/business-core/Makefile.in \
+	src/business/business-gnome/Makefile.in \
+	src/business/dialog-tax-table/Makefile.in \
+	src/core-utils/Makefile.in \
+	src/engine/Makefile.in \
+	src/gnc-module/Makefile.in \
+	src/gnc-module/test/mod-bar/Makefile.in \
+	src/gnc-module/test/mod-baz/Makefile.in \
+	src/gnc-module/test/mod-foo/Makefile.in \
+	src/gnome-search/Makefile.in \
+	src/gnome-utils/Makefile.in \
+	src/gnome/Makefile.in \
+	src/import-export/binary-import/Makefile.in \
+	src/register/register-core/Makefile.in \
+	src/report/report-gnome/Makefile.in
+
+post-patch:
+	cd ${WRKSRC};							\
+	for f in ${GNUCASH_GUILE_MAKEFILE_IN_FILES}; do			\
+		${MV} $$f $$f.orig;					\
+		${SED} -e 's|gnome guile|gnome $${GUILE}|g' $$f.orig > $$f;	\
+	done
+
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gal/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/g-wrap/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../devel/swig/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../math/guppi/buildlink2.mk"
