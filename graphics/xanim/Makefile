@@ -3,7 +3,7 @@
 # Date created:         Sat Nov 5 11:43:03 PST 1994
 # Whom:                 piero
 #
-# $NetBSD: Makefile,v 1.4 1998/02/12 13:13:50 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/12 13:35:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/09 22:27:11 max Exp
 #
 
@@ -30,6 +30,9 @@ EXTRA_FILES=    xa2.0_cvid_sparcCOFF.o.Z \
 		xa2.0_iv32_sparcCOFF.o.Z \
 		xa1.0_cyuv_sparcAOUT.o.Z
 .endif
+# we can't mirror/distribute iv32 or cyuv object modules
+MIRROR_DISTFILE=	no
+
 USE_IMAKE=	yes
 CAT1=		xanim.0
 
