@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/27 10:07:01 rh Exp $
 bin/flac
 bin/metaflac
 include/FLAC/all.h
@@ -7,14 +7,15 @@ include/FLAC/file_decoder.h
 include/FLAC/format.h
 include/FLAC/ordinals.h
 include/FLAC/seek_table.h
+include/FLAC/seekable_stream_decoder.h
 include/FLAC/stream_decoder.h
 include/FLAC/stream_encoder.h
 include/FLAC/utility.h
 lib/libFLAC.a
 lib/libFLAC.la
 lib/libFLAC.so
-lib/libFLAC.so.1
-lib/libFLAC.so.1.0
+lib/libFLAC.so.2
+lib/libFLAC.so.2.1
 man/man1/flac.1
 share/doc/flac/images/1x1.gif
 share/doc/flac/images/cafebug.gif
