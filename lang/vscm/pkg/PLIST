@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/12 20:21:59 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/11 01:43:03 jtb Exp $
 bin/vscm
 lib/vscm/vscm-boot
 @dirrm lib/vscm
-share/examples/vscm/DESCRIPTION
-share/examples/vscm/INSTALL
-share/examples/vscm/README
-@dirrm share/examples/vscm
+share/doc/vscm/DESCRIPTION
+share/doc/vscm/INSTALL
+share/doc/vscm/README
+@dirrm share/doc/vscm
