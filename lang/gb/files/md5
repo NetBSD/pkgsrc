@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/10/17 17:18:27 rh Exp $
+$NetBSD: md5,v 1.2 2000/11/25 14:16:37 rh Exp $
 
-MD5 (gb-0.0.12.tar.gz) = 4999b445fc20fbb593ba1e27d374ce66
+MD5 (gb-0.0.15.tar.gz) = 3e59330868d23b5ee4e12cb9a81f9a7c
