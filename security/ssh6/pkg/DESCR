@@ -1,8 +1,9 @@
-SSH (Secure Shell) is a program to log into another computer over a
-network, to execute commands in a remote machine, and to move files
-from one machine to another.  It provides strong authentication and
-secure communications over insecure channels.  It is intended as a
-replacement for rlogin, rsh, rcp, and rdist.
+The IPv6 version of SSH (Secure Shell) is a program to log into
+another computer over a network, to execute commands in a remote
+machine, and to move files from one machine to another.  It provides
+strong authentication and secure communications over insecure
+channels.  It is intended as a replacement for rlogin, rsh, rcp, and
+rdist.
 
 FEATURES
 
