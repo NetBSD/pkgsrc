@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/28 13:55:21 adam Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/29 15:27:01 adam Exp $
 
 DISTNAME=	kadu-0.3.8
 CATEGORIES=	chat
@@ -16,6 +16,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-existing-libgadu=${BUILDLINK_PREFIX.ekg}
 LIBS+=			${LIBOSSAUDIO}
 WRKSRC=			${WRKDIR}/kadu
+
+# pure hack
+post-configure:
+	cd ${WRKSRC}; ${TOUCH} Makefile
 
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
