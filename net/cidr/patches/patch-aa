@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/13 20:11:46 nra Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/03 10:57:54 grant Exp $
 
---- Makefile.orig	Sat Jun 17 14:26:22 2000
+--- Makefile.orig	2001-07-03 17:23:23.000000000 +1000
 +++ Makefile
 @@ -1,10 +1,22 @@
  # Makefile for cidr
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/13 20:11:46 nra Exp $
 +
  cidr: $(OBJS)
 -	gcc -Wall -o cidr cidr.c
-+	$(CC) $(CFLAGS) -o cidr $(OBJS)
++	$(CC) $(CFLAGS) -o cidr $(OBJS) $(LIBS)
  
  clean:
  	rm $(OBJS) cidr
