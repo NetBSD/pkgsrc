@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:15 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/23 16:03:55 salo Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -10,12 +10,15 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Port of OpenBSD s/key implementation
 
-ONLY_FOR_PLATFORM=	Darwin-*-* SunOS-*-*	# in NetBSD base system
+NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* # in base system
 
 USE_PERL5=		build
+USE_BUIDLINK2=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../lang/perl5/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.mk"
