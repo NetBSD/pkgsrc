@@ -1,4 +1,5 @@
-/*	$NetBSD: strtoll.c,v 1.3 2003/09/06 23:03:06 grant Exp $	*/
+/*	$NetBSD: strtoll.c,v 1.4 2003/12/19 22:40:04 grant Exp $	*/
+/*	from NetBSD: strtoll.c,v 1.6 2003/10/27 00:12:42 lukem Exp 	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -32,16 +33,18 @@
 #include "nbcompat.h"
 
 /*
- * Convert a string to a quad integer.
+ * Convert a string to a long long integer.
  *
  * Ignores `locale' stuff.  Assumes that the upper and lower case
  * alphabets and digits are each contiguous.
  */
-long long
+/* LONGLONG */
+long long int
 strtoll(const char *nptr, char **endptr, int base)
 {
 	const char *s;
-	long long acc, cutoff;
+	/* LONGLONG */
+	long long int acc, cutoff;
 	int c;
 	int neg, any, cutlim;
 
@@ -85,7 +88,7 @@ strtoll(const char *nptr, char **endptr, int base)
 	 * followed by a legal input character, is too big.  One that
 	 * is equal to this value may be valid or not; the limit
 	 * between valid and invalid numbers is then based on the last
-	 * digit.  For instance, if the range for quads is
+	 * digit.  For instance, if the range for long longs is
 	 * [-9223372036854775808..9223372036854775807] and the input base
 	 * is 10, cutoff will be set to 922337203685477580 and cutlim to
 	 * either 7 (neg==0) or 8 (neg==1), meaning that if we have
@@ -96,7 +99,7 @@ strtoll(const char *nptr, char **endptr, int base)
 	 * Set any if any `digits' consumed; make it negative to indicate
 	 * overflow.
 	 */
-	cutoff = neg ? QUAD_MIN : QUAD_MAX;
+	cutoff = neg ? LLONG_MIN : LLONG_MAX;
 	cutlim = (int)(cutoff % base);
 	cutoff /= base;
 	if (neg) {
@@ -120,7 +123,7 @@ strtoll(const char *nptr, char **endptr, int base)
 		if (neg) {
 			if (acc < cutoff || (acc == cutoff && c > cutlim)) {
 				any = -1;
-				acc = QUAD_MIN;
+				acc = LLONG_MIN;
 				errno = ERANGE;
 			} else {
 				any = 1;
@@ -130,7 +133,7 @@ strtoll(const char *nptr, char **endptr, int base)
 		} else {
 			if (acc > cutoff || (acc == cutoff && c > cutlim)) {
 				any = -1;
-				acc = QUAD_MAX;
+				acc = LLONG_MAX;
 				errno = ERANGE;
 			} else {
 				any = 1;
