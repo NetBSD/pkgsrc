@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 22:51:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/22 20:42:33 jmmv Exp $
 
 DISTNAME=	gtk2-extras-2.2.4
 CATEGORIES=	meta-pkgs x11 gnome
@@ -15,11 +15,11 @@ DEPENDS+=	librsvg2-gtk2>=2.5.0:../../graphics/librsvg2-gtk2
 DEPENDS+=	swfdec-gtk2>=0.2.1:../../graphics/swfdec-gtk2
 
 USE_X11=	yes
-USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_BUILDLINK=	yes
 
 do-install:	# empty
 

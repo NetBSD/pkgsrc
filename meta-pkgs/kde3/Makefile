@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/09 14:04:16 seb Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/22 20:42:33 jmmv Exp $
 
 DISTNAME=	kde-3.2.0
 PKGREVISION=	3
@@ -25,10 +25,10 @@ DEPENDS+=	kdeutils-3.2.0:../../misc/kdeutils3
 DEPENDS+=	quanta-3.2.0:../../www/quanta3
 
 EXTRACT_ONLY=	# empty
-USE_BUILDLINK2=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_BUILDLINK=	yes
 
 do-install:	# empty
 
