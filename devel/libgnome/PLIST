@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/02/23 18:45:58 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/03/22 15:57:06 jmmv Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -43,6 +43,7 @@ share/doc/libgnome/libgnome-libgnometypebuiltins.html
 share/doc/libgnome/libgnome.devhelp
 share/doc/libgnome/libgnome.html
 share/doc/libgnome/right.png
+share/doc/libgnome/style.css
 share/doc/libgnome/up.png
 share/examples/libgnome/sound/events/gnome-2.soundlist
 share/examples/libgnome/sound/events/gtk-events-2.soundlist
@@ -124,6 +125,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
