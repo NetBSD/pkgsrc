@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1998/08/30 17:39:21 garbled Exp $
---- Makefile.orig	Tue Jul 12 12:35:06 1988
-+++ Makefile	Sat Aug 29 07:57:23 1998
+$NetBSD: patch-aa,v 1.2 2001/01/11 01:56:13 wiz Exp $
+
+--- Makefile.orig	Tue Jul 12 21:35:06 1988
++++ Makefile
 @@ -14,33 +14,33 @@
  #	For Microsoft C under DOS, you need a real make, not MSC make,
  #	to run this Makefile.  The public domain "ndmake" will suffice.
@@ -40,12 +41,12 @@ $NetBSD: patch-aa,v 1.1 1998/08/30 17:39:21 garbled Exp $
 -OPTIMIZE=	-Ox -G2			# Optimization Level (MSC, 80286)
 -OPTIMIZE=	-O			# Optimization Level (generic UNIX)
 +#OPTIMIZE=	-Ox -G2			# Optimization Level (MSC, 80286)
-+OPTIMIZE=	-O2			# Optimization Level (generic UNIX)
++#OPTIMIZE=	-O2			# Optimization Level (generic UNIX)
  
  LFLAGS=					#Loader Flags
  
 -CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL)
-+CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) $(ENUMS) $(STRUCTASSIGN) $(CFL)
++CFLAGS+=	$(OPTIMIZE) $(TIME_FUNC) $(ENUMS) $(STRUCTASSIGN) $(CFL)
  
  #
  #		You shouldn't need to touch the rest
