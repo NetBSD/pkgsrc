@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/01 11:49:43 tron Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/27 13:50:09 bouyer Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--without-glut
 .include "../../mk/bsd.prefs.mk"
 
 # Check if we got Mesa distributed with XFree86 4.x.
-.if (${OPSYS} != SunOS) && exists(${X11BASE}/include/GL/glx.h)
+.if exists(${X11BASE}/include/GL/glx.h)
 _IS_BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_MESA=	0
