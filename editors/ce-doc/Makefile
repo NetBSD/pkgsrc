@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/28 17:24:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/08 07:46:15 schmonz Exp $
 #
 
 .include "../ce/Makefile.common"
@@ -16,8 +16,7 @@ INSTALLATION_DIRS=	bin share/doc/ce
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
-SUBST_FILES.paths=	teach-ce
-SUBST_SED.paths=	-e 's|@LN@|${LN}|g' -e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.paths+=	-e 's|@LOCALBASE@|${LOCALBASE}|g'
+SUBST_FILES.paths=	teach-ce.in
+SUBST_SED.paths=	-e 's|@LN@|${LN}|g'
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/04/08 19:59:08 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/08 07:46:15 schmonz Exp $
 
---- configure.orig	Wed Nov  5 16:13:27 1997
-+++ configure
-@@ -2508,6 +2508,7 @@
- s%@CPP@%$CPP%g
- s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
- s%@INSTALL_DATA@%$INSTALL_DATA%g
-+s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
- s%@SET_MAKE@%$SET_MAKE%g
- s%@TERMCAP_LIB@%$TERMCAP_LIB%g
- s%@incdir@%$incdir%g
+--- teach-ce.in.orig	1999-03-30 12:56:24.000000000 -0500
++++ teach-ce.in
+@@ -1,4 +1,4 @@
+-#! /bin/bash
++#! /bin/sh
+ #
+ # @configure_input@
+ #
+@@ -34,7 +34,7 @@ esac
+ 
+ export PATH
+ 
+-LN="ln -s"
++LN="@LN@ -s"
+ 
+ TUTORIAL=@libdir@/ce/TUTORIAL
+ CE="@bindir@/ce"
