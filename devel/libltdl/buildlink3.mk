@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/10/14 19:03:45 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/14 19:31:57 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBLTDL_BUILDLINK3_MK:=	${LIBLTDL_BUILDLINK3_MK}+
@@ -8,7 +8,7 @@ LIBLTDL_BUILDLINK3_MK:=	${LIBLTDL_BUILDLINK3_MK}+
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 _SKIP_LIBLTDL=		yes
 .  endif
-.else
+.endif
 
 .if !defined(_SKIP_LIBLTDL)
 .if !empty(BUILDLINK_DEPTH:M+)
