@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/04 18:06:32 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/04 11:04:58 toshii Exp $
 # FreeBSD Id: ports/textproc/textutils/Makefile,v 1.7 1999/09/18 17:46:30 steve Exp
 
 DISTNAME=	textutils-2.0
@@ -17,9 +17,12 @@ USE_GMAKE=	yes
 post-install:
 	install-info ${PREFIX}/info/textutils.info ${PREFIX}/info/dir
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	LOCALEBASE=lib
 .else
 PLIST_SUBST+=	LOCALEBASE=share
 .endif
+
+.include "../../mk/bsd.pkg.mk"
