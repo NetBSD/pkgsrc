@@ -1,0 +1,6 @@
+In order to use makeweb:
+
+   chgrp <group> makeweb
+   chmod 2755 makeweb
+
+The suggested group is "www".
