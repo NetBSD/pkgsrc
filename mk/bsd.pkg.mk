@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.714 2001/04/08 14:14:11 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.715 2001/04/09 02:54:22 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -232,7 +232,7 @@ MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 SSLBASE=	/usr
 SSLCERTS=	/etc/openssl/certs
 .else
-DEPENDS+=	openssl>=0.9.5a:../../security/openssl
+DEPENDS+=	openssl-0.9.[56]*:../../security/openssl
 SSLBASE=	${LOCALBASE}
 SSLCERTS=	${SSLBASE}/certs
 .endif
