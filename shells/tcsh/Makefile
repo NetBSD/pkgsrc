@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/08/17 16:11:27 agc Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/30 18:00:52 abs Exp $
 #
 
 DISTNAME=	tcsh-6.09
@@ -20,6 +20,10 @@ NLSDIR=		share/nls
 PLIST_SRC=	${WRKDIR}/PLIST-src
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(TCSH_STATIC)
+LDFLAGS+=	-static
+.endif
 
 .if ${OPSYS} == "SunOS"
 OS_VERSION!=	echo ${OS_VERSION} | sed -e 's|5\.|2.|'
