@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/25 13:39:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/25 09:00:33 snj Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.1
@@ -11,7 +11,7 @@ MAINTAINER=	tv@pobox.com
 HOMEPAGE=	http://cmeerw.org/ifcico/
 COMMENT=	FidoNet transport program using FTS protocols via dial or TCP
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 PKG_SYSCONFSUBDIR=	ifcico-cm
 MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
