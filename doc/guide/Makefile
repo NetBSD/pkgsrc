@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/09 17:37:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/20 13:24:00 hubertf Exp $
 #
 
 DISTNAME=		htdocs-share-20041021
@@ -26,7 +26,7 @@ DOCDIR=			${PREFIX}/share/doc/pkgsrc
 HTDOCSDIR?=		/usr/cvs/htdocs
 
 BUILD_DEFS+=		OUTPUTS
-OUTPUTS?=		lint html html-split ascii # pdf
+OUTPUTS?=		lint html html-split ascii pdf
 
 # the html is needed to build the ascii version.
 .if !empty(OUTPUTS:Mascii)
