@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/13 05:23:00 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/30 16:17:45 jmc Exp $
 
 DISTNAME=       atitvout-0.4
 WRKSRC=		${WRKDIR}/atitvout
@@ -16,7 +16,7 @@ USE_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=	lrmi>=0.8:../../emulators/lrmi
+DEPENDS+=	lrmi>=0.8nb1:../../emulators/lrmi
 
 MAKEFILE=	Makefile.bsd
 
