@@ -1,0 +1,76 @@
+--- makefile.orig	Fri Nov 21 23:56:59 1997
++++ makefile	Sat Jul 25 06:50:05 1998
+@@ -11,10 +11,11 @@
+ 
+-
+ CC=gcc
+-POSTPROCESS=strip
+-
+-XLIB=-lX11
+-# XLIB=-L/usr/openwin/lib -lX11
+-# XLIB=-L/usr/X11/lib -lX11
+ 
++INSTALLROOT=$(PREFIX)
++GFX=$(PREFIX)/share/gemdropx/gfx
++SOUNDS=$(PREFIX)/share/gemdropx/sounds
++
++XLIB= $(RPATH) -L$(PREFIX)/lib -lX11 -lm -lcompat
++XINC= -I$(PREFIX)/include
++CFLAGS= $(XINC) -DSOUNDS=\"$(SOUNDS)\" -DGFX=\"$(GFX)\"
+ 
+@@ -29,11 +30,15 @@
+ 
++install: gemdropx
++	/usr/bin/install -c -s -o bin -g games -m 2755 gemdropx $(INSTALLROOT)/bin
++	mkdir -p $(GFX)
++	/usr/bin/install -o bin -g bin -m 0644 gfx/* $(GFX)
++	mkdir -p $(SOUNDS)
++	/usr/bin/install -o bin -g bin -m 0644 sounds/* $(SOUNDS)
++	/usr/bin/install -o bin -g bin -m 0644 README $(INSTALLROOT)/share/gemdropx
+ 
+-gemdropx:	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
+-		color.o visual.o sleepfor.o
+-	$(CC)	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
+-		color.o visual.o sleepfor.o \
+-		$(XLIB) -lm -o gemdropx
+-	$(POSTPROCESS) gemdropx
+-	chmod 755 gemdropx
++OBJS=	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
++	color.o visual.o sleepfor.o
+ 
++gemdropx: $(OBJS)
++	$(CC) $(CFLAGS) -o $@ $(OBJS) $(XLIB)
+ 
+@@ -41,30 +46,10 @@
+ 		color.h visual.h sleepfor.h
+-	$(CC)	gemdropx.c -c
+-
+-
+ connect.o:	connect.c connect.h
+-	$(CC)	connect.c -c
+-
+ randnum.o:	randnum.c randnum.h
+-	$(CC)	randnum.c -c
+-
+ window.o:	window.c window.h
+-	$(CC)	window.c -c
+-
+ hints.o:	hints.c hints.h
+-	$(CC)	hints.c -c
+-
+-text.o:	text.c text.h
+-	$(CC)	text.c -c
+-
+-gc.o:	gc.c gc.h
+-	$(CC)	gc.c -c
+-
++text.o:		text.c text.h
++gc.o:		gc.c gc.h
+ color.o:	color.c color.h
+-	$(CC)	color.c -c
+-
+ visual.o:	visual.c visual.h
+-	$(CC)	visual.c -c
+-
+ sleepfor.o:	sleepfor.c sleepfor.h
+-	$(CC)	sleepfor.c -c

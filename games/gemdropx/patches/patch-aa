@@ -1,0 +1,12 @@
+--- gemdropx.c.orig	Sat Jul 25 06:09:10 1998
++++ gemdropx.c	Sat Jul 25 06:11:50 1998
+@@ -157,3 +157,3 @@
+     {
+-       sprintf(cmd, "/bin/cat sounds/%s.au > /dev/audio &", aufile);
++       sprintf(cmd, "/bin/cat " SOUNDS "/%s.au > /dev/audio &", aufile);
+   
+@@ -312,3 +312,3 @@
+     {
+-      sprintf(file, "gfx/%s.xbm", object_filenames[i]);
++      sprintf(file, GFX "/%s.xbm", object_filenames[i]);
+       
