@@ -1,0 +1,278 @@
+$NetBSD: patch-aq,v 1.1 2001/11/17 06:36:15 itohy Exp $
+
+--- snd/sndheader.c.orig	Sun Jul 29 10:17:54 2001
++++ snd/sndheader.c	Fri Nov 16 22:39:47 2001
+@@ -52,6 +52,23 @@
+ 
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/types.h>
++typedef int16_t		int16;
++typedef int32_t		int32;
++typedef u_int32_t	uint32;
++#else
++# if defined(__alpha) || defined(__alpha__)
++typedef short		int16;
++typedef int		int32;
++typedef unsigned int	uint32;
++# else
++typedef short		int16;
++typedef long		int32;
++typedef unsigned long	uint32;
++# endif
++#endif
++
+ #ifndef min
+ #define min(a, b) ((a) < (b) ? (a) : (b))
+ #endif
+@@ -71,16 +88,23 @@
+ #define htonl(x) (x)
+ #endif
+ 
++const union {
++	char c[12];
++	int32 i[3];
++} sndmagic = {
++	 ".sndFORMRIFF"
++};
++
+ /* AIFF file Marker declaration */
+ typedef struct {
+-    short id;
+-    long position;
++    int16 id;
++    int32 position;
+ } marker_node, *marker_type;
+ 
+ /*  instrument definitions */
+ typedef short marker_id;
+ typedef struct {
+-    short   play_mode;
++    int16   play_mode;
+     marker_id  begin_loop;
+     marker_id  end_loop;
+ } aiff_loop_node, *aiff_loop_type;
+@@ -138,21 +162,21 @@
+ 
+ long readlong(int file, long *read_in)
+ {
+-    long l = 0;
+-    readitem(file, &l, long);
++    int32 l = 0;
++    readitem(file, &l, int32);
+     return ntohl(l);
+ }
+ 
+ 
+ short readshort(int file, long *read_in)
+ { 
+-    short s = 0;
+-    readitem(file, &s, short);
++    int16 s = 0;
++    readitem(file, &s, int16);
+     return ntohs(s);
+ }
+ 
+ 
+-long revlong(long l)
++int32 revlong(int32 l)
+ {
+     return (((l >> 0) & 0xFF) << 24) |
+ 	(((l >> 8) & 0xFF) << 16) |
+@@ -161,19 +185,19 @@
+ }
+ 
+ 
+-long readrevlong(int file, long *read_in)
++int32 readrevlong(int file, long *read_in)
+ {
+     return revlong(readlong(file, read_in));
+ }
+ 
+ 
+-short revshort(short s)
++int16 revshort(int16 s)
+ {
+     return ((s & 0xFF) << 8) | ((s >> 8) & 0xFF);
+ }
+ 
+ 
+-short readrevshort(int file, long *read_in)
++int16 readrevshort(int file, long *read_in)
+ {
+     return revshort(readshort(file, read_in));
+ }
+@@ -200,25 +224,25 @@
+ #define writeitem(F,L,T) snd_file_write(F, (char *) L, sizeof(T));
+ 
+ 
+-void writelong(int file, long l)
++void writelong(int file, int32 l)
+ {
+     l = htonl(l);
+-    writeitem(file, &l, long);
++    writeitem(file, &l, int32);
+ }
+ 
+-void writeshort(int file, short s)
++void writeshort(int file, int16 s)
+ {
+     s = htons(s);
+-    writeitem(file, &s, short);
++    writeitem(file, &s, int16);
+ }
+ 
+-void writerevlong(int file, long l)
++void writerevlong(int file, int32 l)
+ {
+     writelong(file, revlong(l));
+ }
+ 
+ 
+-void writerevshort(int file, short s)
++void writerevshort(int file, int16 s)
+ {
+     writeshort(file, revshort(s));
+ }
+@@ -375,13 +399,14 @@
+ }
+ 
+ 
+-#define AIFF_SND_MAGIC (*((long *) "FORM"))
+-#define WAVE_SND_MAGIC (*((long *) "RIFF"))
++#define AIFF_SND_MAGIC (sndmagic.i[1])
++#define WAVE_SND_MAGIC (sndmagic.i[2])
+ 
+ long snd_read_header(snd_type snd, long *flags)
+ {
+     long read_in = 0;
+-    long magic, bytemode, len;
++    int32 magic, bytemode;
++    long len;
+     short type=IRCAM_SND_COMMENT, size=0, encoding;
+     unsigned char buf[SIZEOF_IRCAM_HEADER];
+     
+@@ -472,7 +497,7 @@
+ 	snd->u.file.current_offset = snd->u.file.byte_offset;
+ 	
+     } else if (magic == NEXT_SND_MAGIC) {
+-	long hdr_size, trash, rate;
++	int32 hdr_size, trash, rate;
+ 	snd->u.file.header = SND_HEAD_NEXT;
+ 	hdr_size = readlong(snd->u.file.file, &read_in);	/* dataLocation */
+ 	trash = readlong(snd->u.file.file, &read_in); 	/* dataSize */
+@@ -550,20 +575,20 @@
+ 	}
+ 	snd->u.file.byte_offset = read_in;
+     } else if (magic == AIFF_SND_MAGIC) {
+-	unsigned long totalsize;
++	uint32 totalsize;
+ 	unsigned long ssnd_start = 0;
+ 	char buf[4];
+-	long blocksize;
+-	long offset;
++	int32 blocksize;
++	int32 offset;
+ 	long chunksize;
+-	long ssnd_chunksize;
++	int32 ssnd_chunksize;
+ 	inst_node inst;
+ 	short nmarkers;
+ 	marker_type markers = NULL;
+ 	int inst_read = FALSE;
+ 	
+ 	snd->u.file.header = SND_HEAD_AIFF;
+-	totalsize = (unsigned long) readlong(snd->u.file.file, &read_in);
++	totalsize = (uint32) readlong(snd->u.file.file, &read_in);
+ 	if (snd_file_read(snd->u.file.file, buf, 4) != 4 || strncmp(buf, "AIFF", 4) != 0) {
+ 	    return fail(snd, 
+ 			"AIFF 'FORM' chunk does not specify 'AIFF' as type\n");
+@@ -587,13 +612,13 @@
+ #endif
+ 	    if (strncmp(buf, "COMM", 4) == 0) {
+ 		/* COMM chunk */
+-		long chunksize;
+-		long frames;
++		int32 chunksize;
++		int32 frames;
+ 		chunksize = readlong(snd->u.file.file, &read_in);
+ 		if (chunksize != 18) {
+ 		    return fail(snd, "AIFF COMM chunk has bad size\n");
+ 		}
+-		snd->format.channels = (long) readshort(snd->u.file.file, &read_in);
++		snd->format.channels = (int32) readshort(snd->u.file.file, &read_in);
+ 		frames = readlong(snd->u.file.file, &read_in);
+ 		snd->format.bits = readshort(snd->u.file.file, &read_in);
+ 		snd->format.mode = SND_MODE_PCM;
+@@ -615,7 +640,7 @@
+ 		snd_file_lseek(snd->u.file.file, chunksize - 8, SND_SEEK_CUR);
+ 		read_in += chunksize - 8;
+ 	    } else if (strncmp(buf, "MARK", 4) == 0) {
+-		long chunksize = readlong(snd->u.file.file, &read_in);
++		int32 chunksize = readlong(snd->u.file.file, &read_in);
+ 		int i;
+ 		
+ 		nmarkers = readshort(snd->u.file.file, &read_in);
+@@ -658,7 +683,7 @@
+ 		snd->u.file.high_velocity = inst.high_velocity;
+ 		inst_read = TRUE;
+ 	    } else {
+-		long chunksize = readlong(snd->u.file.file, &read_in);
++		int32 chunksize = readlong(snd->u.file.file, &read_in);
+ 		if (chunksize & 1) chunksize ++;  /* round up to even number */
+ 		read_in += chunksize;
+ 		/* skip the chunk */
+@@ -707,7 +732,7 @@
+ 	snd->u.file.current_offset = snd->u.file.byte_offset;
+ 	snd->u.file.end_offset = snd->u.file.byte_offset + ssnd_chunksize - 8;
+     } else if (magic == WAVE_SND_MAGIC) {
+-	long size;
++	int32 size;
+ 	char buf[4];
+ 	short format;
+ 	
+@@ -721,7 +746,7 @@
+ 	
+ 	/* Skip to the next "fmt " or end of file */
+ 	while (1) {
+-	    long siz;
++	    int32 siz;
+ 	    if (snd_file_read(snd->u.file.file, buf, 4) != 4) {
+ 		return fail(snd, "WAVE file missing fmt spec");
+ 	    }
+@@ -893,7 +918,7 @@
+ 	    encoding = NEXT_SND_FORMAT_LINEAR_32;
+     }
+     writelong(snd->u.file.file, encoding);
+-    writelong(snd->u.file.file, (long) (snd->format.srate + 0.5));
++    writelong(snd->u.file.file, (int32) (snd->format.srate + 0.5));
+     writelong(snd->u.file.file, snd->format.channels);
+ }
+ 
+@@ -985,13 +1010,13 @@
+ 		break;
+ 	}
+ 	writerevshort(snd->u.file.file, (short) snd->format.channels); /* Number of channels */
+-	writerevlong(snd->u.file.file, (long) (snd->format.srate + 0.5)); /* Samples per second */
+-	writerevlong(snd->u.file.file,  (((long) snd->format.srate) * bytes_per_frame)); /* Bytes per second*/
++	writerevlong(snd->u.file.file, (int32) (snd->format.srate + 0.5)); /* Samples per second */
++	writerevlong(snd->u.file.file,  (((int32) snd->format.srate) * bytes_per_frame)); /* Bytes per second*/
+ 	writerevshort(snd->u.file.file, (short) bytes_per_frame); /* Block alignment */
+ 	writerevshort(snd->u.file.file, (short) snd->format.bits); /* Bits per sample */
+ 	writerevshort(snd->u.file.file, (short) 0); /* Size of needed extra data */
+ 	snd_file_write(snd->u.file.file, "data", 4);
+-	writerevlong(snd->u.file.file, (long) (nframes * bytes_per_frame));
++	writerevlong(snd->u.file.file, (int32) (nframes * bytes_per_frame));
+ 	snd->u.file.byte_offset = 46;
+ 	break;
+       default:
+@@ -1003,7 +1028,7 @@
+ 
+ void write_sndheader_finish(snd_type snd)
+ {
+-    long n;
++    int32 n;
+     switch (snd->u.file.header) {
+       case SND_HEAD_NONE:
+ 	break;
