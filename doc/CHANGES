@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3105 2003/08/26 10:22:33 itojun Exp $
+$NetBSD: CHANGES,v 1.3106 2003/08/26 13:02:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnupg to 1.2.3 [itojun 2003-08-25]
 	Updated xmule to 1.4.3 [jmmv 2003-08-26]
 	Added utilisp-1.13 [itojun 2003-08-26]
+	Updated unzip to 5.50nb2 [tron 2003-08-26]
