@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/04/30 23:01:58 manu Exp $
+$NetBSD: distinfo,v 1.4 2001/05/09 21:24:01 wiz Exp $
 
 SHA1 (linuxppc_lib/glibc-2.1.3-15f.ppc.rpm) = 8a73a18041c6b1f41556dc974752dab55f2e125c
 Size (linuxppc_lib/glibc-2.1.3-15f.ppc.rpm) = 9503167 bytes
@@ -30,4 +30,4 @@ SHA1 (linuxppc_lib/readline-2.2.1-7a.ppc.rpm) = 29458422f6991affc2d88c5eba9c0f7f
 Size (linuxppc_lib/readline-2.2.1-7a.ppc.rpm) = 145051 bytes
 SHA1 (linuxppc_lib/openmotif-2.1.30-3_MLI_jdk.tar.gz) = b9af158b947829d0bbe2831842ff4f4b4a7313a0
 Size (linuxppc_lib/openmotif-2.1.30-3_MLI_jdk.tar.gz) = 2631074 bytes
-MD5 (patch-aa) = 9a053c202c6fed843490faeadabe42ed
+SHA1 (patch-aa) = 04840c534103f659fce4c00b5a6d63f79e03bf08
