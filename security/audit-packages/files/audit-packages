@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.16 2004/01/01 23:35:28 agc Exp $
+# $NetBSD: audit-packages,v 1.17 2004/06/06 08:28:54 agc Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -34,6 +34,11 @@
 #
 
 : ${PKGVULNDIR=@PKGVULNDIR@}
+
+if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
+	echo "Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
+	. @PKG_SYSCONFDIR@/audit-packages.conf
+fi
 
 vuls=${PKGVULNDIR}/pkg-vulnerabilities 
 
