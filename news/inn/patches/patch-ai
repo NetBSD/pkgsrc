@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.3 2003/07/29 16:27:27 wiz Exp $
+$NetBSD: patch-ai,v 1.4 2004/06/02 11:43:55 tron Exp $
 
---- include/dbz.h.orig	2002-12-23 00:00:38.000000000 +0100
-+++ include/dbz.h
-@@ -42,7 +42,7 @@ typedef struct {
-     BOOL             nonblock;
+--- include/dbz.h.orig	2004-01-07 23:47:19.000000000 +0100
++++ include/dbz.h	2004-06-02 13:02:04.000000000 +0200
+@@ -38,7 +38,7 @@
+     bool             nonblock;
  } dbzoptions;
  
 -#ifdef __GNUC__
