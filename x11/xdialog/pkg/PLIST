@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/10 04:13:03 jlam Exp $
+bin/Xdialog
