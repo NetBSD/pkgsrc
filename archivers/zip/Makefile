@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27.2.2 2002/06/21 23:04:55 jlam Exp $
+# $NetBSD: Makefile,v 1.27.2.3 2002/08/21 22:42:04 jlam Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -18,7 +18,14 @@ BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 EXTRACT_ONLY=	zip23.tar.gz
 MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}" LFLAGS1="${_STRIPFLAG_CC}"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+ALL_TARGET=	generic_gcc
+.else
 ALL_TARGET=	generic
+.endif
 
 USE_BUILDLINK2=	# defined
 

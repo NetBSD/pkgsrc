@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.4.2 2002/08/21 22:42:02 jlam Exp $
+
+--- src/slide.c.orig	Wed Oct  4 14:57:38 2000
++++ src/slide.c	Fri Jul 19 03:11:39 2002
+@@ -13,6 +13,9 @@
+ 
+ #include "lha.h"
+ 
++#if defined(__STDC__) || defined(NEWSOS)
++#include <stdlib.h>
++#endif
+ 
+ #ifdef DEBUG
+ FILE *fout = NULL;
