@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2005/02/09 11:35:50 markd Exp $
+# $NetBSD: Makefile,v 1.73.2.1 2005/03/26 10:53:35 snj Exp $
 
-DISTNAME=	gnupg-1.4.0
+DISTNAME=	gnupg-1.4.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/ \
@@ -16,9 +16,10 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 
+BUILD_USES_MSGFMT=	yes
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	yes
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
@@ -59,6 +60,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
