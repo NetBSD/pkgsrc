@@ -1,17 +1,14 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/08/19 09:29:26 agc Exp $
+$NetBSD: patch-ac,v 1.2 1998/10/04 18:03:19 tron Exp $
 
---- glib-config.in.orig	Thu Jun 11 07:21:14 1998
-+++ glib-config.in	Thu Aug 13 17:46:26 1998
-@@ -42,10 +42,10 @@
-       if test @includedir@ != /usr/include ; then
-         includes=-I@includedir@
-       fi
--      echo -I@libdir@/glib/include $includes
-+      echo $includes
-       ;;
-     --libs)
--      echo -L@libdir@ -lglib-@LT_RELEASE@
-+      echo -L@libdir@ -lglib11
-       ;;
-     *)
-       echo "${usage}" 1>&2
+--- gmodule/Makefile.in.orig	Tue Sep 22 05:27:51 1998
++++ gmodule/Makefile.in	Sun Oct  4 19:47:31 1998
+@@ -101,8 +101,7 @@
+ libgmodule_la_SOURCES = gmodule.c
+ libgmodule_la_LDFLAGS = \
+ 	@G_MODULE_LDFLAGS@ \
+-	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+-	-release $(LT_RELEASE)
++	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ libgmodule_la_LIBADD = @G_MODULE_LIBS@ # $(libglib)
+ # we should really depend on $(libglib) for libgmodule.la, but libtool has a
