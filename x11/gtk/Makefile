@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/02/17 17:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2001/02/26 21:42:57 tron Exp $
 
 DISTNAME=		gtk+-1.2.8
 CATEGORIES=		x11
@@ -29,6 +29,7 @@ INFO_FILES=		gdk.info gtk.info
 
 CPPFLAGS=		-I${LOCALBASE}/include			   # libintl.h
 LDFLAGS=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib  # -lintl
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 # The following ensures that `gtk-config --libs' includes the correct linker
