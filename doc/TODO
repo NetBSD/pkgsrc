@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.449 2003/04/07 07:19:56 wiz Exp $
+$NetBSD: TODO,v 1.450 2003/04/07 09:34:22 seb Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,6 @@ Suggested package updates
 	o eclipse-2.1
 	o elm-me-2.4pl101
 	o emacs-21.3
-	o exctags-5.5
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
