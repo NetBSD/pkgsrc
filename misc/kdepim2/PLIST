@@ -1,9 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:21:01 jlam Exp $
+bin/abbrowser_conduit
 bin/alarmd
+bin/conduitExpense
+bin/conduitKNotes
 bin/ical2vcal
 bin/kandy
 bin/kandy_client
 bin/korganizer
+bin/kpilot
+bin/kpilotDaemon
+bin/null_conduit
+bin/pilotListener
+bin/popmail_conduit
+bin/todoconduit
+bin/vcalconduit
 include/kgantt/KGantt.h
 include/kgantt/KGanttBarConfig.h
 include/kgantt/KGanttItem.h
@@ -146,6 +156,8 @@ share/doc/kde/HTML/en/kpilot/toolbar_backup.png
 share/doc/kde/HTML/en/kpilot/toolbar_hotsync.png
 share/kde/applnk/Applications/korganizer.desktop
 share/kde/applnk/Utilities/kandy.desktop
+share/kde/applnk/Utilities/kpilot.desktop
+share/kde/applnk/Utilities/kpilotdaemon.desktop
 share/kde/apps/kandy/default.kandy
 share/kde/apps/kandy/kandymobileui.rc
 share/kde/apps/kandy/kandyui.rc
@@ -261,16 +273,37 @@ share/kde/apps/korganizer/sounds/lightmag.wav
 share/kde/apps/korganizer/sounds/onscreen.wav
 share/kde/apps/korganizer/sounds/spinout.wav
 share/kde/apps/korganizer/tips
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/backup.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/fastsync.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/hotsync.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/restore.png
+share/kde/apps/kpilot/kpilotui.rc
 share/kde/config/korganizerrc
 share/kde/icons/hicolor/16x16/apps/kandy.png
 share/kde/icons/hicolor/16x16/apps/korganizer.png
+share/kde/icons/hicolor/16x16/apps/kpilot.png
+share/kde/icons/locolor/16x16/apps/kpilot.xpm
 share/kde/icons/hicolor/32x32/apps/kandy.png
 share/kde/icons/hicolor/32x32/apps/korganizer.png
+share/kde/icons/hicolor/32x32/apps/kpilot.png
 share/kde/icons/hicolor/48x48/apps/korganizer.png
+share/kde/services/abbrowser_conduit.desktop
+share/kde/services/expense-conduit.desktop
+share/kde/services/knotes-conduit.desktop
+share/kde/services/null-conduit.desktop
+share/kde/services/popmail-conduit.desktop
+share/kde/services/todo-conduit.desktop
+share/kde/services/vcal-conduit.desktop
+share/kde/servicetypes/kpilotconduit.desktop
 @comment dirrm share/kde/icons/hicolor/48x48/apps
 @comment dirrm share/kde/icons/hicolor/32x32/apps
 @comment dirrm share/kde/icons/hicolor/16x16/apps
 @comment dirrm share/kde/config
+@dirrm share/kde/apps/kpilot/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kpilot/icons/hicolor/16x16
+@dirrm share/kde/apps/kpilot/icons/hicolor
+@dirrm share/kde/apps/kpilot/icons
+@dirrm share/kde/apps/kpilot
 @dirrm share/kde/apps/korganizer/sounds
 @dirrm share/kde/apps/korganizer/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/korganizer/icons/hicolor/32x32
