@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2005/01/25 20:07:25 bouyer Exp $
+$NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
 
 --- src/host.c.orig	Sun Oct 26 02:38:25 2003
 +++ src/host.c	Sun Jan 23 21:23:28 2005
@@ -165,7 +165,7 @@ $NetBSD: patch-ac,v 1.7 2005/01/25 20:07:25 bouyer Exp $
    struct address_list *al = NULL;
 -  uint32_t addr_ipv4;
    ip_address addr;
-+  u_int32_t addr4;
++  uint32_t addr4;
  
    /* First, try to check whether the address is already a numeric
       address.  */
