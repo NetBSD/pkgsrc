@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:10:35 martti Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/12 03:39:41 jschauma Exp $
 #
 
 DISTNAME=	echoping-4.1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.internatif.org/pub/unix/echoping/
 
