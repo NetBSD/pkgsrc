@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/14 22:53:59 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/20 16:40:55 jmmv Exp $
 bin/glade-2
 share/applications/glade-2.desktop
 share/glade-2/gtk/autogen.sh
@@ -19,7 +19,6 @@ share/gnome/help/glade-2/C/figures/window-palette-add.png
 share/gnome/help/glade-2/C/figures/window-palette-basic.png
 share/gnome/help/glade-2/C/figures/window-palette-gnome.png
 share/gnome/help/glade-2/C/glade-faq.xml
-share/gnome/help/glade-2/C/glade-turbo-start.xml
 share/gnome/help/glade-2/C/glade-user-guide.xml
 share/gnome/help/glade-2/C/legal.xml
 share/gnome/help/glade-2/ro/glade-faq.xml
@@ -32,11 +31,13 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/glade-2.0.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/glade-2.0.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/glade-2.0.mo
@@ -64,17 +65,20 @@ ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/glade-2.0.mo
 share/omf/glade-2/glade-faq-C.omf
 share/omf/glade-2/glade-faq-ro.omf
-share/omf/glade-2/glade-turbo-start-C.omf
 share/omf/glade-2/glade-user-guide-C.omf
 share/pixmaps/glade-2.png
 share/pixmaps/glade-2/glade_logo.png
 @dirrm share/pixmaps/glade-2
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/glade-2
+@comment in scrollkeeper: @dirrm share/omf
 @exec ${MKDIR} %D/share/gnome/help/glade-2/ro/figures
 @dirrm share/gnome/help/glade-2/ro/figures
 @dirrm share/gnome/help/glade-2/ro
 @dirrm share/gnome/help/glade-2/C/figures
 @dirrm share/gnome/help/glade-2/C
 @dirrm share/gnome/help/glade-2
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/glade-2/gtk
 @dirrm share/glade-2
+@comment in xdg-dirs: @dirrm share/applications
