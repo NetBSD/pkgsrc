@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/11/09 01:58:29 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2002/11/09 02:18:09 itojun Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://sleepy.vwh.net/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 
-PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
+PATCH_SITES=	ftp://lkbreth.foretune.co.jp/pub/tools/nvi-m17n/
 PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
 
 MAINTAINER=	itojun@itojun.org
