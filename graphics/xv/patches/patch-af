@@ -1,0 +1,13 @@
+--- xv.h	1997/11/20 12:25:30	1.1
++++ xv.h	1997/11/20 12:25:47
+@@ -107,9 +107,7 @@
+ #endif
+ 
+ 
+-#if defined(__FreeBSD__)
+-#  include <sys/param.h>
+-#endif
++#include <sys/param.h>
+ 
+ 
+ /* include files */
