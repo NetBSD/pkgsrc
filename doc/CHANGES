@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1236 2003/01/26 13:13:59 martti Exp $
+$NetBSD: CHANGES,v 1.1237 2003/01/26 14:36:47 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -416,3 +416,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ethereal to 0.9.9 [grant 2003-01-26]
 	Updated xpmroot to 2.4.15 [martti 2003-01-26]
 	Updated fvwm2 to 2.4.15 [martti 2003-01-26]
+	Updated silc-server to 0.9.12 [salo 2003-01-26]
