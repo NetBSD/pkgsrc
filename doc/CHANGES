@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9472 2005/03/10 09:57:21 tron Exp $
+$NetBSD: CHANGES,v 1.9473 2005/03/10 16:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1344,3 +1344,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed giflib [adam 2005-03-08]
 	Updated bluefish to 1.0nb1 [jmmv 2005-03-08]
 	Updated ethereal to 0.10.9nb1 [tron 2005-03-10]
+	Updated xpm to 3.4knb3 [wiz 2005-03-10]
+	Updated openmotif to 2.1.30nb4 [wiz 2005-03-10]
+	Updated lesstif to 0.94.0nb1 [wiz 2005-03-10]
