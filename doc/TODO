@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2103 2004/09/08 10:38:46 wiz Exp $
+$NetBSD: TODO,v 1.2104 2004/09/08 15:06:52 cjep Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
-	o nail-11.6
+	o nail-11.6 [cjep - after freeze]
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
