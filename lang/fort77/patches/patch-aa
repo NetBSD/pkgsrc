@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/14 15:48:29 frueauf Exp $
+
+--- fort77.orig	Sun Sep 27 17:05:10 1998
++++ fort77	Sun Sep 27 17:07:36 1998
+@@ -12,6 +12,8 @@
+ $debug = 0;
+ $debugcmd = "";
+ 
++push(@includes, "-I/usr/include");
++
+ # Loop over all options; pull all options from @ARGV and put all
+ # arguments into @argv.	 This is needed because, apparently, UNIX
+ # compilers acceppt options anywhere on the command line.

@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/01/14 15:48:29 frueauf Exp $
+
+--- Makefile.orig	Sun Sep 27 17:32:07 1998
++++ Makefile	Sun Sep 27 17:32:47 1998
+@@ -6,9 +6,9 @@
+ test:
+ 	(cd tests; ./test.pl -v)
+ 
+-install: test
+-	install -m 755 fort77 $(BINDIR)
+-	install -m 644 fort77.1 $(MANDIR)
++install:
++	install -c -m 755 fort77 $(BINDIR)
++	install -c -m 644 fort77.1 $(MANDIR)
+ 
+ clean:
+ 	rm -f *.bak *.o core */*.bak */*.o */core
