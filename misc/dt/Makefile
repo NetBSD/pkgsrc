@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/28 15:01:55 fredb Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -11,7 +11,7 @@ MAINTAINER=	fredb@netbsd.org
 COMMENT=	Virtual consoles for NetBSD/mac68k (and macppc?)
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-ONLY_FOR_PLATFORM=	NetBSD-*-mac68k # NetBSD-*-macppc
+ONLY_FOR_PLATFORM=	NetBSD-*-m68k
 
 ALL_TARGET=	depend all
 CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
