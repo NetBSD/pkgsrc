@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7644 2004/11/01 21:44:21 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7645 2004/11/01 21:52:33 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pear-Net_URL-1.0.10 [jdolecek 2004-11-01]
 	Added pear-Net_Socket-1.0.1 [jdolecek 2004-11-01]
 	Added pear-HTTP_Request-1.2 [jdolecek 2004-11-01]
+	Added pear-SOAP-0.7.5 [jdolecek 2004-11-01]
