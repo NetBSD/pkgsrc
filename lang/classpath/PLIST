@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/07 21:31:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/10 22:02:10 wiz Exp $
 lib/awt/font.properties
-lib/classpath/libgtkpeer.a
-lib/classpath/libgtkpeer.la
-lib/classpath/libgtkpeer.so
-lib/classpath/libgtkpeer.so.0
-lib/classpath/libgtkpeer.so.0.0
 lib/classpath/libjavaio.a
 lib/classpath/libjavaio.la
 lib/classpath/libjavaio.so
