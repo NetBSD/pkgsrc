@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/02 23:40:05 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/16 20:43:27 recht Exp $
 bin/roundup-admin
 bin/roundup-mailgw
 bin/roundup-server
@@ -184,22 +184,15 @@ man/man1/roundup-mailgw.1
 man/man1/roundup-server.1
 share/doc/roundup/CHANGES.txt
 share/doc/roundup/COPYING.txt
-share/doc/roundup/FAQ.html
 share/doc/roundup/FAQ.txt
 share/doc/roundup/README.txt
 share/doc/roundup/ZPL.txt
-share/doc/roundup/announcement.html
 share/doc/roundup/announcement.txt
-share/doc/roundup/customizing.html
 share/doc/roundup/customizing.txt
 share/doc/roundup/default.css
-share/doc/roundup/design.html
 share/doc/roundup/design.txt
-share/doc/roundup/developers.html
 share/doc/roundup/developers.txt
-share/doc/roundup/features.html
 share/doc/roundup/features.txt
-share/doc/roundup/glossary.html
 share/doc/roundup/glossary.txt
 share/doc/roundup/images/edit.png
 share/doc/roundup/images/hyperdb.png
@@ -208,21 +201,15 @@ share/doc/roundup/images/logo-codesourcery-medium.png
 share/doc/roundup/images/logo-software-carpentry-standard.png
 share/doc/roundup/images/roundup-1.png
 share/doc/roundup/images/roundup.png
-share/doc/roundup/implementation.html
 share/doc/roundup/implementation.txt
-share/doc/roundup/index.html
 share/doc/roundup/index.txt
-share/doc/roundup/installation.html
 share/doc/roundup/installation.txt
-share/doc/roundup/maintenance.html
 share/doc/roundup/maintenance.txt
 share/doc/roundup/mysql.txt
 share/doc/roundup/original_overview.html
 share/doc/roundup/overview.txt
 share/doc/roundup/spec.html
-share/doc/roundup/upgrading.html
 share/doc/roundup/upgrading.txt
-share/doc/roundup/user_guide.html
 share/doc/roundup/user_guide.txt
 share/roundup/cgi-bin/roundup.cgi
 share/roundup/templates/classic/TEMPLATE-INFO.txt
