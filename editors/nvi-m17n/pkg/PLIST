@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/08/02 05:11:56 sakamoto Exp $
 bin/nvi
 bin/nex
 bin/nview
