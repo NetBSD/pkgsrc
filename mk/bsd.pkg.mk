@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.162 1998/09/15 17:28:34 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.163 1998/09/16 08:46:58 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -838,6 +838,11 @@ do-extract:
 .ifndef NO_WRKDIR
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
+.ifdef WRKOBJDIR
+	@if ${LN} -fs ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
+		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
+	fi
+.endif # WRKOBJDIR
 .endif
 	@for file in ${EXTRACT_ONLY}; do \
 		if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
@@ -1320,9 +1325,9 @@ clean: pre-clean
 .endif
 	@${ECHO_MSG} "===>  Cleaning for ${PKGNAME}"
 .if !defined(NO_WRKDIR)
-.if  defined(WRKOBJDIR)
+.ifdef WRKOBJDIR
 	@${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}
-	@${RM} -f ${WRKDIR}
+	@${RM} -f ${WRKDIR_BASENAME}
 .else
 	@if [ -d ${WRKDIR} ]; then \
 		if [ -w ${WRKDIR} ]; then \
