@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/09/27 05:37:36 sakamoto Exp $
+
+--- main.c.orig	Tue Sep 21 09:25:17 1999
++++ main.c	Tue Sep 21 09:26:44 1999
+@@ -115,6 +115,9 @@
+ #ifdef MENU
+   initMenu();
+ #endif
++#ifdef MOUSE
++  use_mouse = T;
++#endif
+ 
+   if (HTTP_proxy == NULL &&
+       ((p = getenv("HTTP_PROXY")) ||
