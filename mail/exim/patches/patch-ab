@@ -1,96 +1,140 @@
-$NetBSD: patch-ab,v 1.4 2001/06/11 12:15:46 ad Exp $
+$NetBSD: patch-ab,v 1.5 2002/06/19 16:02:27 ad Exp $
 
---- Local/Makefile.netbsd.orig	Mon Jun 11 13:11:04 2001
-+++ Local/Makefile.netbsd	Mon Jun 11 13:11:40 2001
-@@ -78,7 +78,7 @@
- # CHGRP_COMMAND=/usr/bin/chgrp
- # MV_COMMAND=/bin/mv
- # RM_COMMAND=/bin/rm
--# PERL_COMMAND=/usr/bin/perl
-+PERL_COMMAND=@PREFIX@/bin/perl
- 
- 
- # The following macro can be used to change the command for building a library
-@@ -92,8 +92,8 @@
- # appropriate code is included in the binary. You then need to set up the
- # runtime configuration to make use of the mechanism(s) selected.
- 
--# AUTH_CRAM_MD5=yes
--# AUTH_PLAINTEXT=yes
-+AUTH_CRAM_MD5=yes
-+AUTH_PLAINTEXT=yes
- 
- 
- # The binary directory: This variable defines where the exim binary will be
-@@ -103,7 +103,7 @@
- # installed in this directory. There is no default for this variable built into
- # the source files; it must be set in one of the local configuration files.
+--- Local/Makefile.netbsd.orig	Thu Jun 13 12:43:22 2002
++++ Local/Makefile.netbsd	Thu Jun 13 12:43:52 2002
+@@ -98,7 +98,9 @@
+ # /usr/local/sbin. The installation script will try to create this directory,
+ # and any superior directories, if they do not exist.
  
 -BIN_DIRECTORY=/usr/exim/bin
++HAVE_IPV6=YES
++
 +BIN_DIRECTORY=@PREFIX@/sbin
  
  
- # The default distribution of Exim contains only the plain text form of the
-@@ -121,7 +121,7 @@
- # files. Both the name of the command and the suffix that it adds to files
- # need to be defined here. See also the EXICYCLOG_MAX configuration.
- 
--COMPRESS_COMMAND=/opt/gnu/bin/gzip
-+COMPRESS_COMMAND=/usr/bin/gzip
- COMPRESS_SUFFIX=gz
- 
- 
-@@ -137,7 +137,7 @@
- # location of all other runtime files and directories can be changed in the
- # runtime configuration file.
+ #------------------------------------------------------------------------------
+@@ -113,7 +115,7 @@
+ # directories if they don't exist. It will also install a default run time
+ # configuration if this file does not exist.
  
 -CONFIGURE_FILE=/usr/exim/configure
 +CONFIGURE_FILE=@PREFIX@/etc/exim/configure
  
  
- # In some installations there may be multiple machines sharing file systems,
-@@ -241,7 +241,7 @@
- # are defaulted in the OS/Makefile-Default file, and can be overridden
- # in local OS-specific make files.
+ #------------------------------------------------------------------------------
+@@ -126,7 +128,7 @@
+ # owner of a local mailbox.) Specifying these values as root is very strongly
+ # discouraged. These values are compiled into the binary.
+ 
+-EXIM_USER=
++EXIM_USER=mail
+ 
+ # If the setting of EXIM_USER is numeric (e.g. EXIM_USER=42), there must
+ # also be a setting of EXIM_GROUP. If, on the other hand, you use a name
+@@ -207,7 +209,7 @@
+ # This one is special-purpose, and commonly not required, so it is not
+ # included by default.
+ 
+-# TRANSPORT_LMTP=yes
++TRANSPORT_LMTP=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -216,9 +218,9 @@
+ # MBX, is included only when requested. If you do not know what this is about,
+ # leave these settings commented out.
+ 
+-# SUPPORT_MAILDIR=yes
+-# SUPPORT_MAILSTORE=yes
+-# SUPPORT_MBX=yes
++SUPPORT_MAILDIR=yes
++SUPPORT_MAILSTORE=yes
++SUPPORT_MBX=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -281,7 +283,7 @@
+ # files are defaulted in the OS/Makefile-Default file, but can be overridden in
+ # local OS-specific make files.
  
 -EXIM_MONITOR=eximon.bin
 +# EXIM_MONITOR=eximon.bin
  
  
- # Compiling in support for embedded Perl: If you want to be able to
-@@ -284,7 +284,7 @@
- # "panic", or "reject" to form the final file name. For example, some
- # installations may want something like this:
+ 
+@@ -302,9 +304,9 @@
+ # included in the Exim binary. You will then need to set up the run time
+ # configuration to make use of the mechanism(s) selected.
+ 
+-# AUTH_CRAM_MD5=yes
+-# AUTH_PLAINTEXT=yes
+-# AUTH_SPA=yes
++AUTH_CRAM_MD5=yes
++AUTH_PLAINTEXT=yes
++AUTH_SPA=yes
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -315,8 +317,8 @@
+ # with TLS support. If you don't know what this is all about, leave these
+ # settings commented out.
+ 
+-# SUPPORT_TLS=yes
+-# TLS_LIBS=-lssl -lcrypto
++SUPPORT_TLS=yes
++TLS_LIBS=-lssl -lcrypto
+ 
+ # If you are running Exim as a server, note that just building it with TLS
+ # support is not all you need to do. You also need to set up a suitable
+@@ -371,7 +373,7 @@
+ # %s. This will be replaced by one of the strings "main", "panic", or "reject"
+ # to form the final file names. Some installations may want something like this:
  
 -# LOG_FILE_PATH=/var/log/exim_%slog
 +LOG_FILE_PATH=/var/log/exim/%slog
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -409,7 +409,7 @@
- # the file name, allowing sites that run two separate daemons to distinguish
- # them. Some installations may want something like this
+@@ -467,14 +469,14 @@
+ # this setting. See the manual section entitled "Use of tcpwrappers" in the
+ # chapter on building and installing Exim.
  
--# PID_FILE_PATH=/var/lock/exim%s.pid
-+PID_FILE_PATH=/var/run/exim%s.pid
+-# USE_TCP_WRAPPERS=yes
++USE_TCP_WRAPPERS=yes
+ 
+ # You may well also have to specify a local "include" file and an additional
+ # library for TCP wrappers, so you probably need something like this:
+ 
+ #  USE_TCP_WRAPPERS=yes
+ #  CFLAGS=-O -I/usr/local/include
+-#  EXTRALIBS_EXIM=-L/usr/local/lib -lwrap
++EXTRALIBS_EXIM=-lwrap
+ 
+ # but of course there may need to be other things in CFLAGS and EXTRALIBS_EXIM
+ # as well.
+@@ -511,11 +513,11 @@
+ # haven't got Perl, Exim will still build and run; you just won't be able to
+ # use those utilities.
+ 
+-# CHOWN_COMMAND=/usr/bin/chown
+-# CHGRP_COMMAND=/usr/bin/chgrp
+-# MV_COMMAND=/bin/mv
+-# RM_COMMAND=/bin/rm
+-# PERL_COMMAND=/usr/bin/perl
++CHOWN_COMMAND=/usr/sbin/chown
++CHGRP_COMMAND=/usr/bin/chgrp
++MV_COMMAND=/bin/mv
++RM_COMMAND=/bin/rm
++PERL_COMMAND=@PREFIX@/bin/perl
+ 
+ 
+ #------------------------------------------------------------------------------
+@@ -695,7 +697,7 @@
+ # (process id) to a file so that it can easily be identified. The path of the
+ # file can be specified here. Some installations may want something like this:
+ 
+-# PID_FILE_PATH=/var/lock/exim.pid
++PID_FILE_PATH=/var/run/exim.pid
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
- # (see SPOOL_DIRECTORY below) with the name "exim-daemon.pid" for the standard
-@@ -458,7 +458,7 @@
- # uid and gid.
- 
- # Many installations will want something like this:
--# SPOOL_DIRECTORY=/var/spool/exim
-+SPOOL_DIRECTORY=/var/spool/exim
- 
- # Others may prefer to keep all Exim things under one directory:
- # SPOOL_DIRECTORY=/usr/exim/spool
-@@ -565,7 +565,7 @@
- # This one is special-purpose, and commonly not required, so do not include
- # it by default.
- 
--# TRANSPORT_LMTP=yes
-+TRANSPORT_LMTP=yes
- 
- 
- # TCP wrappers: If you want to use tcpwrappers from within Exim, uncomment
+ # using the name "exim-daemon.pid".

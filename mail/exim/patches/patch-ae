@@ -1,15 +1,13 @@
-$NetBSD: patch-ae,v 1.1 1999/09/18 20:23:10 ad Exp $
+$NetBSD: patch-ae,v 1.2 2002/06/19 16:02:27 ad Exp $
 
---- src/configure.default.orig	Fri Sep 17 21:19:39 1999
-+++ src/configure.default	Fri Sep 17 21:19:55 1999
-@@ -252,8 +252,8 @@
- 
- system_aliases:
-   driver = aliasfile
--  file = /etc/aliases
--  search_type = lsearch
-+  file = /etc/aliases.db
-+  search_type = dbm
+--- src/configure.default.orig	Thu Jun 13 11:37:52 2002
++++ src/configure.default	Thu Jun 13 11:38:06 2002
+@@ -367,7 +367,7 @@
+   driver = redirect
+   allow_fail
+   allow_defer
+-  data = ${lookup{$local_part}lsearch{/etc/aliases}}
++  data = ${lookup{$local_part}dbm{/etc/mail/aliases}}
  # user = exim
    file_transport = address_file
    pipe_transport = address_pipe
