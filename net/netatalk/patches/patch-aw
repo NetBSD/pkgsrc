@@ -1,0 +1,11 @@
+$NetBSD: patch-aw,v 1.1 1999/01/01 22:08:26 garbled Exp $
+--- etc/papd/session.c.orig	Fri Jan  1 15:05:42 1999
++++ etc/papd/session.c	Fri Jan  1 15:06:01 1999
+@@ -3,6 +3,7 @@
+  * All Rights Reserved.  See COPYRIGHT.
+  */
+ 
++#include <string.h>
+ #include <sys/types.h>
+ #include <sys/syslog.h>
+ #include <sys/time.h>
