@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/09/19 13:02:15 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2004/09/19 13:02:55 wiz Exp $
 
 .if defined(MSMTP_USE_GNUTLS) && !empty(MSMTP_USE_GNUTLS:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	gnutls
@@ -43,7 +43,7 @@ PKG_DEFAULT_OPTIONS+=	inet6 ssl
 ### GNUsasl support.
 ###
 .if !empty(PKG_OPTIONS:Mgsasl)
-.include "../../security/gsasl/buildlink3.mk"                 
+.include "../../security/gsasl/buildlink3.mk"
 .endif
 
 ###
