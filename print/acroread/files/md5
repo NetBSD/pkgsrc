@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.2 1999/06/16 11:08:31 sakamoto Exp $
+$NetBSD: md5,v 1.3 1999/08/02 10:57:54 agc Exp $
 
 MD5 (linux-ar-40.tar.gz) = 018f4aee79e049095a7b16ed1e7ec925
+MD5 (sunsparc-arws-40.tar.gz) = 73e8ac1478f7ab1a3961d524808b6182
