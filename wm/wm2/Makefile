@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 21:51:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/10 16:13:28 gavan Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -13,6 +13,7 @@ ALL_TARGET=	depend wm2
 
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
+USE_GCC_SHLIB=	YES
 MAKE_ENV+=	CCC="${BUILDLINK_CXX}"
 
 do-install:
