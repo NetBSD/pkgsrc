@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2001/12/20 09:22:04 tron Exp $
+$NetBSD: distinfo,v 1.7 2004/09/30 20:38:28 kristerw Exp $
 
 SHA1 (xview3.2p1-X11R6.tar.gz) = 1cd04231b893c3e6c70b56791d527b498e21a27a
 Size (xview3.2p1-X11R6.tar.gz) = 3436814 bytes
@@ -78,13 +78,13 @@ SHA1 (patch-cu) = ce19d2151f259e0cb5358a0c4350b391da94cbd9
 SHA1 (patch-cv) = 56fffeff6ca82ca661ee5ef72deb1d328777fb3e
 SHA1 (patch-cw) = ec330b271c23788786ce32941f26d40277d09536
 SHA1 (patch-cx) = 55fb26597f0b6737e157af19ed3752e84d5f71f3
-SHA1 (patch-cy) = a29cbfbe902cf6c0dcb7074a873d54319db7f427
+SHA1 (patch-cy) = 2700e41897de42850073f235040088305e065a07
 SHA1 (patch-cz) = c54892c234cf60032b236515d0fd20c1a02a99fb
 SHA1 (patch-da) = 58f289767fd9a6f6a334e0e5a770564b780a1212
 SHA1 (patch-db) = 94c13bd10197c4b209a46da3e8008685db22adb6
 SHA1 (patch-dc) = 40274cd5581f626914bef70df477469773557e3d
 SHA1 (patch-dd) = baf2201c61088de823bb42f49427b3f53c3c4123
-SHA1 (patch-de) = 801cdb453f45a27132ad5d1d3dff158e26435b0d
+SHA1 (patch-de) = a06bd0224b4c0de068486851753646e268c27673
 SHA1 (patch-df) = c2af3e6d2f74942ad1dd3d97c0462f7f3ffff793
 SHA1 (patch-dg) = 1c757673e8d21f90363997f853492c7d98192098
 SHA1 (patch-dh) = b0b7c1d3b99991c64e4d70a27f601993baa1f91b
