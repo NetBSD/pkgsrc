@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.202 2004/01/11 16:42:04 kim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.203 2004/01/11 17:03:47 kim Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -909,6 +909,20 @@ ICECAST_CHROOTDIR?=	  /var/chroot/icecast
 # will be allowed to work.
 # Possible: Any valid directory
 # Default: /var/chroot/icecast
+
+#ICECAST_CHUNKLEN=512
+# If you want a larger backlog for each client, which will allow for
+# worse network congestion or other network errors before kicking the
+# client, increase the ICECAST_CHUNKLEN value.
+# Default: 64
+
+#ICECAST_SOURCE_BUFFSIZE=8192
+# SOURCE_BUFFSIZE sets how many bytes will be read from the source
+# before trying to send this chunk to the clients. If your server will
+# take on a lot of listeners, or stream very high bitrate mpeg data,
+# like video mpeg streams, and if you system supports it, you should
+# increase this value to 65535 or something similar.
+# Default: 8192
 
 IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Used in imap-uw to set the default format used by c-client programs for
