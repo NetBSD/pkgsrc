@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.33 1998/08/23 11:25:54 garbled Exp $
+# $NetBSD: Makefile,v 1.34 1998/08/27 13:23:38 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
+    SUBDIR += abuse
 #    SUBDIR += acm
 #    SUBDIR += agm
 #    SUBDIR += an
-#    SUBDIR += angband
+    SUBDIR += angband-tty
+    SUBDIR += angband-x11
     SUBDIR += battalion
     SUBDIR += battleball
 #    SUBDIR += block
@@ -37,8 +39,10 @@
     SUBDIR += lincity
     SUBDIR += maelstrom
     SUBDIR += mirrormagic
-#    SUBDIR += nethack
-#    SUBDIR += nethack-qt
+    SUBDIR += nethack-lib
+    SUBDIR += nethack-tty
+    SUBDIR += nethack-qt
+    SUBDIR += nethack-x11
 #    SUBDIR += netris
 #    SUBDIR += oneko
 #    SUBDIR += oonsoo
