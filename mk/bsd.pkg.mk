@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.269 1999/05/21 19:29:02 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.270 1999/05/22 15:47:23 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -84,14 +84,6 @@ DEF_UMASK?=		022
 DEF_UMASK?=		0022
 .endif
 
-.if exists(${.CURDIR}/Makefile.${MACHINE_ARCH}-${OPSYS})
-.include "${.CURDIR}/Makefile.${MACHINE_ARCH}-${OPSYS}"
-.elif exists(${.CURDIR}/Makefile.${OPSYS})
-.include "${.CURDIR}/Makefile.${OPSYS}"
-.elif exists(${.CURDIR}/Makefile.${MACHINE_ARCH})
-.include "${.CURDIR}/Makefile.${MACHINE_ARCH}"
-.endif
-
 .if (${OPSYS} == "NetBSD")
 LOCALBASE?=		${DESTDIR}/usr/pkg
 .else
@@ -106,45 +98,10 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 PACKAGES?=		${PKGSRCDIR}/packages
 TEMPLATES?=		${PKGSRCDIR}/templates
 
-.if exists(${.CURDIR}/patches.${MACHINE_ARCH}-${OPSYS})
-PATCHDIR?=		${.CURDIR}/patches.${MACHINE_ARCH}-${OPSYS}
-.elif exists(${.CURDIR}/patches.${OPSYS})
-PATCHDIR?=		${.CURDIR}/patches.${OPSYS}
-.elif exists(${.CURDIR}/patches.${MACHINE_ARCH})
-PATCHDIR?=		${.CURDIR}/patches.${MACHINE_ARCH}
-.else
 PATCHDIR?=		${.CURDIR}/patches
-.endif
-
-.if exists(${.CURDIR}/scripts.${MACHINE_ARCH}-${OPSYS})
-SCRIPTDIR?=		${.CURDIR}/scripts.${MACHINE_ARCH}-${OPSYS}
-.elif exists(${.CURDIR}/scripts.${OPSYS})
-SCRIPTDIR?=		${.CURDIR}/scripts.${OPSYS}
-.elif exists(${.CURDIR}/scripts.${MACHINE_ARCH})
-SCRIPTDIR?=		${.CURDIR}/scripts.${MACHINE_ARCH}
-.else
 SCRIPTDIR?=		${.CURDIR}/scripts
-.endif
-
-.if exists(${.CURDIR}/files.${MACHINE_ARCH}-${OPSYS})
-FILESDIR?=		${.CURDIR}/files.${MACHINE_ARCH}-${OPSYS}
-.elif exists(${.CURDIR}/files.${OPSYS})
-FILESDIR?=		${.CURDIR}/files.${OPSYS}
-.elif exists(${.CURDIR}/files.${MACHINE_ARCH})
-FILESDIR?=		${.CURDIR}/files.${MACHINE_ARCH}
-.else
 FILESDIR?=		${.CURDIR}/files
-.endif
-
-.if exists(${.CURDIR}/pkg.${MACHINE_ARCH}-${OPSYS})
-PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}-${OPSYS}
-.elif exists(${.CURDIR}/pkg.${OPSYS})
-PKGDIR?=		${.CURDIR}/pkg.${OPSYS}
-.elif exists(${.CURDIR}/pkg.${MACHINE_ARCH})
-PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}
-.else
 PKGDIR?=		${.CURDIR}/pkg
-.endif
 
 # USE_LOCALBASE_FOR_X11 is not currently supported.
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
@@ -611,11 +568,6 @@ PATCH_SITES?=
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/
-
-# If the user has this set, go to the FreeBSD repository for everything.
-.if defined(MASTER_SITE_FREEBSD)
-MASTER_SITE_OVERRIDE=  ${MASTER_SITE_BACKUP}
-.endif
 
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?= \
