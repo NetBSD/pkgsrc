@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:56:56 grant Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2004/01/01 22:56:24 agc Exp $
 #
 
-DISTNAME=		xfstt-1.4
+DISTNAME=		xfstt-1.6
 CATEGORIES=		x11 net fonts
 MASTER_SITES=		http://download.berlios.de/xfstt/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://developer.berlios.de/projects/xfstt
+HOMEPAGE=		http://developer.berlios.de/projects/xfstt/
 COMMENT=		TrueType font server for X11
 
 USE_PKGINSTALL=		YES
