@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2001/12/26 08:11:46 lukem Exp $
+# $NetBSD: Makefile,v 1.169 2002/01/10 13:21:53 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -115,13 +115,6 @@ SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libwww
 SUBDIR+=	php-FastTemplate
 SUBDIR+=	php3
-SUBDIR+=	php3-gd
-SUBDIR+=	php3-ldap
-SUBDIR+=	php3-mysql
-SUBDIR+=	php3-pcre
-SUBDIR+=	php3-pdflib
-SUBDIR+=	php3-pgsql
-SUBDIR+=	php3-snmp
 SUBDIR+=	php4
 SUBDIR+=	php4-apc
 SUBDIR+=	py-pcgi
