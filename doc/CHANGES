@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2586 2003/06/25 15:34:00 tsarna Exp $
+$NetBSD: CHANGES,v 1.2587 2003/06/25 16:41:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postgresql to 7.3.3 [cjs 2003-06-25]
 	Updated vic to 2.8nb1 [uebayasi 2003-06-25]
 	Updated icdprog to 0.3nb1 [tsarna 2003-06-25]
+	Updated ja-jsclasses to 030624 [wiz 2003-06-25]
