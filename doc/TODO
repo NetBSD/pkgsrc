@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.338 2003/03/05 10:04:31 wiz Exp $
+$NetBSD: TODO,v 1.339 2003/03/05 10:14:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -252,7 +252,6 @@ Suggested package updates
 	o ted-2.12
 	o texmacs-1.0.1.7
 	o tightvnc-1.2.8
-	o tnef-1.2.0
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.10
 	o tuxpaint-stamps-2003.02.22
