@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4293 2003/12/30 17:36:48 cjep Exp $
+$NetBSD: CHANGES,v 1.4294 2003/12/30 18:02:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5483,3 +5483,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Devel-Profile-1.03 [grant 2003-12-30]
 	Update bsdgrep-devel to 20031230 [cjep 2003-12-30]
 	Added bsdiff-4.1 [cjep 2003-12-30]
+	Added gnome-speech-0.2.8 [xtraeme 2003-12-30]
+	Added gnome-mag-0.10.4 [xtraeme 2003-12-30]
+	Added gnopernicus-0.7.1 [xtraeme 2003-12-30]
