@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2000/11/03 14:49:29 agc Exp $
+# $NetBSD: Makefile,v 1.107 2000/11/07 05:10:40 rh Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += cocoon
     SUBDIR += communicator
     SUBDIR += galway
+    SUBDIR += glibwww
     SUBDIR += grail
     SUBDIR += gtkhtml
     SUBDIR += htdig
