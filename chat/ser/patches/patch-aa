@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/23 22:08:03 itojun Exp $
+
+--- Makefile.defs-	2003-08-24 06:32:08.000000000 +0900
++++ Makefile.defs	2003-08-24 06:32:33.000000000 +0900
+@@ -16,14 +16,13 @@
+ 			-e s/armv4l/arm/)
+ 
+  # install location
+-PREFIX = /usr/local
+ prefix = $(PREFIX)
+ # install path is $(basedir) $(prefix) 
+ # example:
+ #  creating a bin. archive in /tmp, which unpacks in /usr/local
+ #  basedir=/tmp
+ #  prefix=/usr/local
+-basedir = 
++basedir = 
+ # install prefixes for various stuff
+ cfg-prefix = $(basedir)$(prefix)
+ bin-prefix = $(basedir)$(prefix)
+@@ -33,7 +32,7 @@
+ ut-prefix = $(basedir)$(prefix)
+ 
+ # dirs
+-cfg-dir = etc/ser/
++cfg-dir = ser/
+ bin-dir = sbin/
+ modules-dir = lib/ser/modules/
+ ifeq ($(OS), linux)
+@@ -45,7 +44,7 @@
+ endif
+ ut-prefix = bin/
+ # target dirs for various stuff
+-cfg-target = $(prefix)/$(cfg-dir)
++cfg-target = $(PKG_SYSCONFDIR)/$(cfg-dir)
+ modules-target = $(prefix)/$(modules-dir)
+ 
+ 
+@@ -520,7 +519,7 @@
+ ifeq ($(OS), netbsd)
+ 	DEFS+=-DHAVE_SOCKADDR_SA_LEN
+ 	YACC=yacc
+-	LIBS= -lfl  -lc_r
++	LIBS= -lfl  -lpthread
+ endif
+ 
+ ifneq (,$(findstring CYGWIN, $(OS)))
