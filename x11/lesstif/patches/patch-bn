@@ -1,16 +1,16 @@
-$NetBSD: patch-bn,v 1.2 2001/06/30 19:08:28 jlam Exp $
+$NetBSD: patch-bn,v 1.3 2002/12/05 19:10:48 drochner Exp $
 
---- scripts/autoconf/Makefile.am.orig	Sun Sep 12 07:13:53 1999
-+++ scripts/autoconf/Makefile.am
-@@ -5,10 +5,6 @@
+--- scripts/autoconf/Makefile.in.orig	Thu Dec  5 18:17:46 2002
++++ scripts/autoconf/Makefile.in	Thu Dec  5 18:20:59 2002
+@@ -140,9 +140,9 @@
  
- EXTRA_DIST=	ac_find_motif.m4
+ EXTRA_DIST = ac_find_motif.m4
  
 -aclocaldir = @ACLOCALDIR@
--
--if Aclocal
 +aclocaldir = ${prefix}/share/aclocal
  
- aclocal_DATA = ac_find_motif.m4
--
--endif
+-@Aclocal_TRUE@aclocal_DATA = ac_find_motif.m4
++aclocal_DATA = ac_find_motif.m4
+ subdir = scripts/autoconf
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/include/LTconfig.h
