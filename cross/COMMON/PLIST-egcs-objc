@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST-egcs-objc,v 1.1 1999/01/06 01:14:20 tv Exp $
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/cc1obj

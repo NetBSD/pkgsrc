@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST-egcs-cxx,v 1.1 1999/01/06 01:14:20 tv Exp $
+${TARGET_ARCH}/bin/c++
+${TARGET_ARCH}/bin/c++filt
+${TARGET_ARCH}/bin/g++
+bin/${TARGET_ARCH}-c++
+bin/${TARGET_ARCH}-c++filt
+bin/${TARGET_ARCH}-g++
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/cc1plus
