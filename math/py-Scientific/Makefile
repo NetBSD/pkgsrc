@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/01/16 20:32:42 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/17 12:02:25 drochner Exp $
 
 DISTNAME=	ScientificPython-2.2
-PKGNAME=	py-Scientific-2.2
+PKGNAME=	${PYPKGPREFIX}-Scientific-2.2
 CATEGORIES=	math
 MASTER_SITES=	http://starship.python.net/crew/hinsen/ \
 		http://dirac.cnrs-orleans.fr/programs/
@@ -9,6 +9,8 @@ MASTER_SITES=	http://starship.python.net/crew/hinsen/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://starship.python.net/crew/hinsen/scientific.html
 COMMENT=	Python modules for scientific computing
+
+CONFLICTS+=	py-Scientific-*
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
 DEPENDS+=	mpich>=1.2.1:../../parallel/mpi-ch
@@ -22,6 +24,7 @@ PYBINMODULE=	yes
 NETCDFPREFIX_DEFAULT=${LOCALBASE}
 MPICHPREFIX_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=	NETCDFPREFIX=netcdf MPICHPREFIX=mpich
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 do-configure:
 	${SED} -e "s|@NETCDFPREFIX@|${NETCDFPREFIX}|g"			\
@@ -35,16 +38,8 @@ post-build:
 	cd ${WRKSRC}/Src/MPI && ${PYTHONBIN} compile.py
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-Scientific
-	cd ${WRKSRC} && ${INSTALL_DATA} README COPYRIGHT 		\
-		Doc/PDF/manual.pdf ${PREFIX}/share/doc/py-Scientific/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/py-Scientific
-	${INSTALL_DATA} ${WRKSRC}/Doc/HTML/* 				\
-	${PREFIX}/share/doc/html/py-Scientific/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py-Scientific
-	${INSTALL_DATA} ${WRKSRC}/Examples/* 				\
-	${PREFIX}/share/examples/py-Scientific/
+	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython \
+		${PREFIX}/bin/mpipython${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.buildlink.mk"
 .include "../../math/py-Numeric/buildlink.mk"
