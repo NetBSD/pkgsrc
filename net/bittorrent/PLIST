@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/20 17:29:51 veego Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/02 15:49:36 wiz Exp $
 bin/btcompletedir.py
 bin/btcompletedirgui.py
 bin/btdownloadcurses.py
@@ -91,4 +91,6 @@ ${PYSITELIB}/BitTorrent/track.pyo
 ${PYSITELIB}/BitTorrent/zurllib.py
 ${PYSITELIB}/BitTorrent/zurllib.pyc
 ${PYSITELIB}/BitTorrent/zurllib.pyo
+share/doc/bittorrent/README.txt
+@dirrm share/doc/bittorrent
 @dirrm ${PYSITELIB}/BitTorrent
