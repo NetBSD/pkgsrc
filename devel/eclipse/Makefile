@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/19 16:09:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/17 18:51:57 jschauma Exp $
 #
 
 DISTNAME=	${PKGNAME}
-PKGNAME=	eclipse-2.0.2
+PKGNAME=	eclipse-2.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/jschauma/
 
@@ -20,8 +20,8 @@ MAKE_ENV+=	ANT_HOME=${PREFIX}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-DISTNAME=	eclipse-sourceBuild-srcIncluded-2.0.2
-MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.0.2-200211071448/
+DISTNAME=	eclipse-sourceBuild-srcIncluded-2.1
+MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1-200303272130/
 EXTRACT_SUFX=	.zip
 
 PAXDIR=		${WRKDIR}
@@ -39,6 +39,9 @@ do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/eclipse > 	\
 			${WRKDIR}/.eclipse
 	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${PREFIX}/bin/eclipse
+
+# NB:  PKG_DEVELOPER=YES will fail:
+# this package provides binaries that we can not relink, so no point in checking
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
