@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 1999/07/01 02:35:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.52 1999/07/01 08:28:33 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -22,6 +22,7 @@
     SUBDIR += crossfire
 #    SUBDIR += dontspace
 #    SUBDIR += doom
+    SUBDIR += dopewars
 #    SUBDIR += empire
     SUBDIR += finalbattle
 #    SUBDIR += flying
