@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/03/02 12:10:47 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2003/07/28 15:51:25 adam Exp $
 
---- files/Makefile.orig	2002-10-30 15:08:03.000000000 +0100
-+++ files/Makefile
-@@ -12,10 +12,10 @@ endif
+--- files/Makefile.orig	2003-05-11 16:59:12.000000000 +0200
++++ files/Makefile	2003-07-28 16:42:53.000000000 +0200
+@@ -14,10 +14,10 @@
  all:	./etc/prayer.cf ./init.d/prayer
  
  ./etc/prayer.cf: ./etc/prayer.cf.SRC
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.2 2003/03/02 12:10:47 jmmv Exp $
  
  
  ifeq ($(strip $(SSL_ENABLE)), true)
-@@ -50,24 +50,24 @@ distclean:
+@@ -53,24 +53,24 @@
  install-cert:
  	if [ -f certs/prayer.pem ]; then \
  	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) \
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.2 2003/03/02 12:10:47 jmmv Exp $
  
  install:
  	PREFIX=$(BROOT)$(PREFIX) VAR_PREFIX=$(BROOT)$(VAR_PREFIX) \
-@@ -78,11 +78,7 @@ install:
+@@ -81,11 +81,7 @@
  	PUBLIC_EXEC=$(PUBLIC_FILE) PRIVATE_EXEC=$(PRIVATE_EXEC) \
  	BIN_DIR=$(BIN_DIR) INSTALL=$(INSTALL) \
  	./install.sh
