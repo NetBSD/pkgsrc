@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.80 2004/10/21 06:30:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.81 2004/10/29 07:42:38 xtraeme Exp $
 #
 .include "Makefile.common"
 
-PKGNAME=		abiword-${ABIWORD_DIST_VERSION}
-
-COMMENT=		Open Source cross-platform word processor
+PKGNAME=	abiword-${ABIWORD_DIST_VERSION}
+PKGREVISION=	1
+COMMENT=	Open Source cross-platform word processor
 
 # GTK1 version and previous name of the GTK2 version
-CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
+CONFLICTS=	abiword-personal-[0-9]* abiword2-[0-9]*
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/abi
+WRKSRC=		${WRKDIR}/${DISTNAME}/abi
 
-REPLACE_PERL=		user/wp/scripts/abw2html.pl
+REPLACE_PERL=	user/wp/scripts/abw2html.pl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.abiword
 PKG_SUPPORTED_OPTIONS=	gucharmap
