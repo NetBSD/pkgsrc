@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:08:40 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/16 23:58:35 ben Exp $
 
-DISTNAME=	phylip
-PKGNAME=	phylip-3.573c
+DISTNAME=	phylip-3.61
 CATEGORIES=	biology
-MASTER_SITES=	ftp://evolution.genetics.washington.edu/pub/phylip/ \
-		ftp://ftp.bioss.sari.ac.uk/pub/phylogeny/phylip/
-EXTRACT_SUFX=	.tar.Z
+MASTER_SITES=	ftp://evolution.genetics.washington.edu/pub/phylip/
 
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://evolution.genetics.washington.edu/phylip.html
@@ -15,25 +12,36 @@ RESTRICTED=		"No commercial distribution without a royalty agreement with the au
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
+
+MAKE_FLAGS+=	CC=${CC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phylip
-.for DOC in main.doc	\
-		contchar.doc discrete.doc distance.doc draw.doc sequence.doc
-	${INSTALL_DATA} ${WRKSRC}/${DOC} ${PREFIX}/share/doc/phylip
-.endfor
 .for PROGRAM in clique consense contml contrast dnacomp dnadist		\
 		dnainvar dnaml dnamlk dnamove dnapars dnapenny		\
-		dolmove dollop dolpenny drawgram drawtree factor	\
-		fitch gendist kitsch mix move neighbor penny		\
-		protdist protpars restml retree seqboot
+		dolmove dollop dolpenny factor fitch gendist kitsch	\
+		mix move neighbor pars penny proml promlk protdist	\
+		protpars restdist restml retree seqboot treedist	\
+		drawgram drawtree
 	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${PROGRAM}.doc ${PREFIX}/share/doc/phylip
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/misc/phylip
+	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/phylip
 .for FONT in font1 font2 font3 font4 font5 font6
-	${INSTALL_DATA} ${WRKSRC}/${FONT} ${PREFIX}/share/misc/phylip
+	${INSTALL_DATA} ${WRKSRC}/${FONT} ${PREFIX}/share/fonts/phylip
+.endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/phylip
+.for HTML in clique.html consense.html contchar.html contml.html		\
+		contrast.html discrete.html distance.html dnacomp.html	\
+		dnadist.html dnainvar.html dnaml.html dnamlk.html	\
+		dnamove.html dnapars.html dnapenny.html dollop.html	\
+		dolmove.html dolpenny.html draw.html drawgram.html	\
+		drawtree.html factor.html fitch.html gendist.html	\
+		kitsch.html main.html mix.html move.html neighbor.html	\
+		pars.html penny.html phylip.gif phylip.html proml.html	\
+		promlk.html protdist.html protpars.html restdist.html	\
+		restml.html retree.html seqboot.html sequence.html	\
+		treedist.html
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/${HTML} ${PREFIX}/share/doc/html/phylip
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
