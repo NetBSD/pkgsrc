@@ -1,34 +1,34 @@
-# $NetBSD: Makefile,v 1.4 1997/10/29 01:49:16 augustss Exp $
+# $NetBSD: Makefile,v 1.5 1997/10/30 00:31:47 augustss Exp $
 #
 
     SUBDIR += amp
-    #SUBDIR += cam
+    SUBDIR += cam
     SUBDIR += cddbd
-    #SUBDIR += gmod
+    #SUBDIR += gmod		# GUS specific
     SUBDIR += gsm
     SUBDIR += maplay
     SUBDIR += mikmod
-    #SUBDIR += mpegaudio
+    #SUBDIR += mpegaudio	# obsolete
     SUBDIR += mpg123
-    #SUBDIR += mxv
+    #SUBDIR += mxv		# needs Interviews
     #SUBDIR += nas
     #SUBDIR += nspmod
-    #SUBDIR += playmidi
+    #SUBDIR += playmidi		# needs sequencer
     #SUBDIR += radio
-    #SUBDIR += rosegarden
+    #SUBDIR += rosegarden	# needs sequencer
     #SUBDIR += rplay
     #SUBDIR += rsynth
-    #SUBDIR += s3mod
+    #SUBDIR += s3mod		# needs sequencer
     SUBDIR += sox
     #SUBDIR += splay
     SUBDIR += timidity
-    #SUBDIR += tosha
-    #SUBDIR += tracker
+    #SUBDIR += tosha		# needs libscsi
+    SUBDIR += tracker
     #SUBDIR += workman
     #SUBDIR += xcd
     #SUBDIR += xcdplayer
     SUBDIR += xmcd
-    #SUBDIR += xmix
+    SUBDIR += xmix
     SUBDIR += xmmix
 
 .include <bsd.port.subdir.mk>
