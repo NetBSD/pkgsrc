@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.200 2004/01/07 21:45:18 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.201 2004/01/08 19:48:05 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -903,6 +903,12 @@ GOLEM_WITH_SOUND?=	NO
 # "--enable-ne-scan=0x300" to let the boot loader search for an NE 2000 ISA
 # card at I/O offset 0x300.
 # Default: not defined
+
+ICECAST_CHROOTDIR?=	  /var/chroot/icecast
+# Used in icecast2 to specify the chroot directory in which icecast
+# will be allowed to work.
+# Possible: Any valid directory
+# Default: /var/chroot/icecast
 
 IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Used in imap-uw to set the default format used by c-client programs for
