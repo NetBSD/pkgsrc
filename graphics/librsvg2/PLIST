@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/22 12:43:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/01 18:37:09 jmmv Exp $
 bin/rsvg
 include/librsvg-2/librsvg/librsvg-features.h
 include/librsvg-2/librsvg/rsvg-gz.h
@@ -6,24 +6,11 @@ include/librsvg-2/librsvg/rsvg.h
 lib/librsvg-2.a
 lib/librsvg-2.la
 lib/librsvg-2.so
-lib/librsvg-2.so.7
-lib/librsvg-2.so.7.0
+lib/librsvg-2.so.8
+lib/librsvg-2.so.8.3
 lib/pkgconfig/librsvg-2.0.pc
 man/man1/rsvg.1
-share/doc/html/librsvg2/home.png
-share/doc/html/librsvg2/i967.html
-share/doc/html/librsvg2/index.html
-share/doc/html/librsvg2/index.sgml
-share/doc/html/librsvg2/left.png
-share/doc/html/librsvg2/r22.html
-share/doc/html/librsvg2/r373.html
-share/doc/html/librsvg2/r407.html
-share/doc/html/librsvg2/right.png
-share/doc/html/librsvg2/rsvg-convenience-functions.html
-share/doc/html/librsvg2/rsvg-core-api.html
-share/doc/html/librsvg2/rsvg-creating-a-svgz-reader.html
-share/doc/html/librsvg2/rsvg.html
-share/doc/html/librsvg2/up.png
+@exec ${MKDIR} %D/share/doc/html/librsvg2
 @dirrm share/doc/html/librsvg2
 @dirrm include/librsvg-2/librsvg
 @dirrm include/librsvg-2
