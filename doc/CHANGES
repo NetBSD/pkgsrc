@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9253 2005/02/21 22:12:21 adam Exp $
+$NetBSD: CHANGES,v 1.9254 2005/02/21 23:02:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1015,3 +1015,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed courier-authmysql [jlam 2005-02-21]
 	Removed courier-authpgsql [jlam 2005-02-21]
 	Updated cyrus-saslauthd to 2.1.20 [adam 2005-02-21]
+	Updated roundup to 0.8.1 [recht 2005-02-21]
