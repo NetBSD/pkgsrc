@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:38 seb Exp $
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/JavaSim.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/arrays.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/assignment.html
@@ -1030,20 +1030,20 @@ share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/utah.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/whiteball.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/yellowball.gif
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/SYNTAX
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
-@exec ${MKDIR} -p %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/EXAMPLES
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/CONTRIB/GNU_STDLIB

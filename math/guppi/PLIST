@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/05/23 19:12:17 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/06/26 10:29:48 seb Exp $
 bin/guppi-gnumeric
 include/gnome-1.0/libguppi/gnan.h
 include/gnome-1.0/libguppi/guppi-2d.h
@@ -331,4 +331,4 @@ share/pixmaps/guppi/surface.xpm
 @dirrm lib/guppi
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libguppi.m4 ${LOCALBASE}/share/aclocal/libguppi.m4
 @unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/libguppi.m4
-@exec ${MKDIR} -p %D/share/gnome/help/guppi/C/images
+@exec ${MKDIR} %D/share/gnome/help/guppi/C/images

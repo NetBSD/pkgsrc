@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:52 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:50 seb Exp $
 @JB_USER@/config/footer.html
-@exec if [ ! -d %D/@JB_DATADIR@ ]; then ${MKDIR} -p %D/@JB_DATADIR@; fi
+@exec if [ ! -d %D/@JB_DATADIR@ ]; then ${MKDIR} %D/@JB_DATADIR@; fi
 @exec if [ ! -f %D/@JB_DATADIR@/footer.html ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/footer.html; fi
 @JB_USER@/config/guest.prefs
 @exec if [ ! -f %D/@JB_DATADIR@/guest.prefs ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/guest.prefs; fi
@@ -13,14 +13,14 @@
 @JB_USER@/config/users
 @exec if [ ! -f %D/@JB_DATADIR@/users ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/users; fi
 @JB_USER@/config/jitterbug.config
-@exec if [ ! -d %D/etc/jitterbug/@JB_PACKAGE@ ]; then ${MKDIR} -p %D/etc/jitterbug/@JB_PACKAGE@; fi
+@exec if [ ! -d %D/etc/jitterbug/@JB_PACKAGE@ ]; then ${MKDIR} %D/etc/jitterbug/@JB_PACKAGE@; fi
 @exec if [ ! -f %D/etc/jitterbug/@JB_PACKAGE@ ]; then /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@; fi
 etc/jitterbug/@JB_PACKAGE@
 @exec if [ ! -f %D/etc/jitterbug/@JB_PACKAGE@.private ]; then /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@.private; fi
 etc/jitterbug/@JB_PACKAGE@.private
 etc/jitterbug/httpd.conf.add
 @dirrm etc/jitterbug
-@exec if [ ! -d %D/@JB_USER@/etc ]; then ${MKDIR} -p %D/@JB_USER@/etc; fi
+@exec if [ ! -d %D/@JB_USER@/etc ]; then ${MKDIR} %D/@JB_USER@/etc; fi
 @exec [ -f %D/@JB_USER@/etc/jitterbug.auth ] || /bin/echo "@JB_USER@:*************" > %D/@JB_USER@/etc/jitterbug.auth
 @JB_USER@/bin/new_message
 @JB_USER@/bin/jitterbug

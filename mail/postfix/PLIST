@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/06 15:07:54 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:48 seb Exp $
 bin/mailq
 bin/newaliases
 etc/mailer.conf.postfix
@@ -124,7 +124,7 @@ share/postfix/sample-smtp.cf
 share/postfix/sample-smtpd.cf
 share/postfix/sample-transport.cf
 share/postfix/sample-virtual.cf
-@exec ${MKDIR} -p /etc/postfix
+@exec ${MKDIR} /etc/postfix
 @exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
 @exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
 @exec if [ ! -d /var/spool/postfix ]; then ${MKDIR} /var/spool/postfix; ${CHMOD} 755 /var/spool/postfix ; fi

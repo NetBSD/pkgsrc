@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/02 09:10:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:46 seb Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -136,7 +136,7 @@ ${RUBY_LIBDIR}/uri/ldap.rb
 ${RUBY_LIBDIR}/uri/mailto.rb
 @dirrm ${RUBY_LIBDIR}/uri
 ${RUBY_LIBDIR}/weakref.rb
-@exec ${MKDIR} -p %D/${RUBY_SITEARCHLIBDIR}
+@exec ${MKDIR} %D/${RUBY_SITEARCHLIBDIR}
 @unexec ${RMDIR} %D/${RUBY_SITEARCHLIBDIR} 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${RUBY_SITELIBDIR} 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/ruby/site_ruby 2>/dev/null || ${TRUE}

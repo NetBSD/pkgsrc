@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/15 01:48:06 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:40 seb Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
@@ -9,7 +9,7 @@ bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
-@exec ${MKDIR} -p %D/lib/xemacs
+@exec ${MKDIR} %D/lib/xemacs
 lib/${DISTNAME}/etc/BETA
 lib/${DISTNAME}/etc/CHARSETS
 lib/${DISTNAME}/etc/CODING-STANDARDS
@@ -966,5 +966,5 @@ man/man1/xemacs-etags.1
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}
 @dirrm lib/${DISTNAME}
 @dirrm lib/xemacs
-@exec ${MKDIR} -p /var/tmp/xemacs.lock && ${CHMOD} 1777 /var/tmp/xemacs.lock
+@exec ${MKDIR} /var/tmp/xemacs.lock && ${CHMOD} 1777 /var/tmp/xemacs.lock
 @unexec ${RM} -rf /var/tmp/xemacs.lock

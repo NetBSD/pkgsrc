@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/05/10 13:18:45 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:58 seb Exp $
 bin/nessus
 bin/nessus-mkrand
 include/nessus/config.h
@@ -21,10 +21,10 @@ sbin/nessus-mkcert
 sbin/nessus-mkcert-client
 sbin/nessus-rmuser
 sbin/nessusd
-@exec ${MKDIR} -p %D/lib/nessus/reports
+@exec ${MKDIR} %D/lib/nessus/reports
 @unexec ${RMDIR} %D/lib/nessus/reports 2>/dev/null || true
 @unexec ${RMDIR} %D/lib/nessus 2>/dev/null || true
-@exec ${MKDIR} -p %D/etc/nessus
+@exec ${MKDIR} %D/etc/nessus
 @unexec ${RMDIR} %D/etc/nessus 2>/dev/null || true
-@exec ${MKDIR} -p /var/nessus
+@exec ${MKDIR} /var/nessus
 @unexec ${RMDIR} /var/nessus 2>/dev/null || true
