@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 1999/08/24 12:24:30 hwr Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/21 06:46:11 sakamoto Exp $
 #
 
-DISTNAME=	global-3.42
+DISTNAME=	global-3.55
 CATEGORIES=	devel
-MASTER_SITES=   http://wafu.netgate.net/tama/unix/
+MASTER_SITES=   http://www.tamacom.com/unix/
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.tamacom.com/global/
 
-PERL5=		yes
+USE_PERL5=	yes
 
-LDFLAGS+=	-L../lib
+LDFLAGS+=	-L../libutil
 MAKE_ENV+=      LIBDIR="${PREFIX}/lib"
 MAKE_ENV+=      MANDIR="${PREFIX}/man"
 MAKE_ENV+=      LINTLIBDIR="${PREFIX}/libdata/lint"
