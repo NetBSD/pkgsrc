@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/10/07 19:01:24 wennmach Exp $
+# $NetBSD: Makefile,v 1.28 2002/11/15 00:06:20 jlam Exp $
 
 DISTNAME=		arla-0.35.9
 PKGREVISION=		2
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--with-roken=/usr
 CONFIGURE_ARGS+=	--with-roken-include=/usr/include/krb5
 .else
 .  include "../../security/kth-krb4/buildlink2.mk"
-USE_BUILDLINK_ONLY=	# defined
 CONFIGURE_ARGS+=	--with-krb4-lib=${BUILDLINK_PREFIX.kth-krb4}
 CONFIGURE_ARGS+=	--with-krb4-include=${BUILDLINK_PREFIX.kth-krb4}/include
 CONFIGURE_ARGS+=	--with-roken=${BUILDLINK_PREFIX.kth-krb4}
