@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/09 04:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/25 18:02:08 jmmv Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -15,6 +15,6 @@ do-install:
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
 		xineplug_ao_out_arts.la ${PREFIX}/lib/xine/plugins/1.0.0
 
-.include "../../audio/arts/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../audio/arts/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
