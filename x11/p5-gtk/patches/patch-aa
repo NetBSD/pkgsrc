@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2001/10/03 18:12:32 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/07 18:17:04 seb Exp $
 
---- Makefile.PL.orig	Sat May 26 12:08:38 2001
-+++ Makefile.PL
+--- ../Gtk/Makefile.PL.orig	Sat May 26 12:08:38 2001
++++ ../Gtk/Makefile.PL
 @@ -160,11 +160,11 @@
  	'dist' => { COMPRESS=>"gzip", SUFFIX=>"gz" },
  	'OPTIMIZE' => '-O2 -g',
