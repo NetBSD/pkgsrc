@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.19 2003/09/11 10:57:20 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.20 2003/09/11 11:27:38 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -542,6 +542,7 @@ int gid_from_group(const char *, gid_t *);
 	} while (0)
 #endif
 
+/* not all systems define all of these in sys/stat.h */
 #if !defined(S_ISLNK)
 # define S_ISLNK(m)	((m & S_IFMT) == S_IFLNK)
 #endif
@@ -552,6 +553,15 @@ int gid_from_group(const char *, gid_t *);
 
 #if !defined(ALLPERMS)
 # define ALLPERMS (S_ISUID|S_ISGID|S_ISTXT|S_IRWXU|S_IRWXG|S_IRWXO)
+#endif
+
+/* not all systems define all of these in limits.h */
+#ifndef GID_MAX
+# define GID_MAX	2147483647U  /* max value for a gid_t (2^31-2) */
+#endif
+
+#ifndef UID_MAX
+# define UID_MAX	2147483647U  /* max value for a uid_t (2^31-2) */
 #endif
 
 #endif /* _NBCOMPAT_H */
