@@ -1,0 +1,12 @@
+	phoon - display current moon phase on ASCII terminal
+		     Distribution of 01apr95
+		  Previous distribution 07jun88
+
+phoon - program to display the PHase of the mOON.  Unlike other
+such programs, which just tell you how long since first quarter
+or something like that, phoon *shows* you the phase with a little
+picture.  I've put an example at the end of this file.  I first
+wrote this program in Pascal / TOPS-20 at CMU in 1979; I translated
+it to Ratfor / Software Tools in 1981; and now it's in C / Unix.
+
+    Jef Poskanzer  jef@acme.com  http://www.acme.com/jef/
