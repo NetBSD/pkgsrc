@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2004/02/01 10:48:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.69 2004/02/02 23:55:00 xtraeme Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -41,6 +41,12 @@ FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
 PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=		AVAILABLE="@comment "
+.else
+PLIST_SUBST+=		AVAILABLE=
+.endif
 
 .ifndef (PERL_VERSION)
 PERL_VERSION!=		if [ -x ${PERL5} ]; then ${PERL5} -e 'print $$]'; else ${ECHO} "5.006"; fi
