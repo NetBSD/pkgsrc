@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+--- make/lib.mak.orig	Fri May 19 03:26:31 2000
++++ make/lib.mak	Thu Aug 24 21:21:28 2000
+@@ -49,29 +49,33 @@
+ BUILD_NUMBER	:= 0
+ endif
+ 
++ifndef PROG
++CC             := ${LIBTOOL} --mode=compile /usr/pkg/pthreads/bin/pgcc
++CPLUS          := ${LIBTOOL} --mode=compile /usr/pkg/pthreads/bin/pg++
++INSTALL        := ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA}
++endif
++
+ LIBNAME_MAJ		= $(LIB_BASENAME).$(MAJOR_VERSION)
+ LIBNAME_MIN		= $(LIBNAME_MAJ).$(MINOR_VERSION)
+ LIBNAME_PAT		= $(LIBNAME_MIN).$(BUILD_NUMBER)$(BUILD_TYPE)
+ 
+-$(LIBDIR)/$(LIB_BASENAME): $(LIBDIR)/$(LIBNAME_PAT)
+-	@rm -f $(LIBDIR)/$(LIB_BASENAME)
+-	ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIB_BASENAME)
+-	@rm -f $(LIBDIR)/$(LIBNAME_MAJ)
+-	ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MAJ)
+-	@rm -f $(LIBDIR)/$(LIBNAME_MIN)
+-	ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MIN)
++# $(LIBDIR)/$(LIB_BASENAME): $(LIBDIR)/$(LIBNAME_PAT)
++	# @rm -f $(LIBDIR)/$(LIB_BASENAME)
++	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIB_BASENAME)
++	# @rm -f $(LIBDIR)/$(LIBNAME_MAJ)
++	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MAJ)
++	# @rm -f $(LIBDIR)/$(LIBNAME_MIN)
++	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MIN)
+ 
+-$(LIBDIR)/$(LIBNAME_PAT): $(OBJS)
++$(LIBDIR)/${LIB_BASENAME}: $(OBJS)
+ 	@if [ ! -d $(LIBDIR) ] ; then mkdir $(LIBDIR) ; fi
+-	gcc -shared -Wl,-soname,$(LIB_BASENAME).1 -o $(LIBDIR)/$(LIBNAME_PAT) $(OBJS)
++	${LIBTOOL} --mode=link g++ -o ${LIBDIR}/${LIB_BASENAME:.so=.la} ${OBJS:.o=.lo} \
++		-rpath ${PREFIX}/lib -version-info ${MAJOR_VERSION}:${MINOR_VERSION}
+ 
+ CLEAN_FILES += $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIB_BASENAME) $(LIBDIR)/$(LIBNAME_MAJ) $(LIBDIR)/$(LIBNAME_MIN)
+ 
+-install: $(LIBDIR)/$(LIBNAME_PAT)
+-	$(INSTALL) $(LIBDIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_PAT)
+-	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIB_BASENAME)
+-	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MAJ)
+-	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MIN)
++install: $(LIBDIR)/$(LIB_BASENAME)
++	$(INSTALL) $(LIBDIR)/$(LIB_BASENAME) $(INSTALLLIB_DIR)
+ 
+ else
+ 
+@@ -81,7 +85,7 @@
+ 	$(AR) rc $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
+ 	$(RANLIB) $(LIBDIR)/$(LIB_BASENAME)
+ else
+-	$(AR) rcs $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
++	# $(AR) rcs $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
+ endif
+ 
+ CLEAN_FILES += $(LIBDIR)/$(LIB_BASENAME)
