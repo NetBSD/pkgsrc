@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2004/08/15 18:59:40 recht Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/24 21:00:29 recht Exp $
 #
 
 DISTNAME=	tla-1.2.1
+PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://release.gnuarch.org/tla-1.2/1.2.1/	\
-		ftp://gnuarch.org/tla-1.2/1.2.1/	\
+MASTER_SITES=	${MASTER_SITE_GNU:=gnu-arch/}		\
 		http://regexps.srparish.net/src/tla/	\
 		http://arch.quackerhead.com/~lord/releases/tla/
-#${MASTER_SITE_GNU:=gnu-arch/}		\
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://regexps.srparish.net/www/
@@ -32,6 +30,8 @@ CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 HTMLDIR=	${PREFIX}/share/doc/html/arch
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
