@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2002/12/23 02:06:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2002/12/24 05:48:28 wiz Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -55,6 +55,9 @@ _NEED_FREETYPE2!= \
 BUILDLINK_PACKAGES+=			freetype2
 EVAL_PREFIX+=	BUILDLINK_PREFIX.freetype2=freetype2
 BUILDLINK_PREFIX.freetype2_DEFAULT=	${LOCALBASE}
+# If we depend on the package, depend on the latest version
+# with a library major bump.
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.3
 .else
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 USE_X11=			# defined
