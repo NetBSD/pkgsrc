@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/05 08:11:07 recht Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/09 22:45:04 recht Exp $
 #
 
 DISTNAME=	pygopherd_2.0.9
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	http://gopher.quux.org:70/devel/gopher/Downloads/pygopherd/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gopher.quux.org:70/devel/gopher/pygopherd/
 COMMENT=	Gopher server
 
@@ -17,7 +17,7 @@ PY_PATCHPLIST=	yes
 
 PKG_SYSCONFSUBDIR=	pygopherd
 EXAMPLEDIR=	${PREFIX}/share/examples/pygopherd
-RUNTIMEDIR=	/var/gopher
+RUNTIMEDIR=	${VARBASE}/gopher
 
 GOPHER_USER=	gopher
 GOPHER_GROUP=	gopher
