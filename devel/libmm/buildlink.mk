@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/23 14:40:36 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/01 00:53:20 mycroft Exp $
 #
 # This Makefile fragment is included by packages that use libmm.
 #
@@ -17,7 +17,7 @@ LIBMM_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libmm?=	libmm>=1.1.3
+BUILDLINK_DEPENDS.libmm?=	libmm>=1.2.1
 DEPENDS+=	${BUILDLINK_DEPENDS.libmm}:../../devel/libmm
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libmm=libmm
