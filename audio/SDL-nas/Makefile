@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/09/03 19:24:44 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/15 09:13:47 markd Exp $
 #
 
 .include "../../devel/SDL/Makefile.common"
@@ -20,6 +20,6 @@ do-install:
 
 BUILDLINK_DEPENDS.SDL=	SDL>=1.2.5nb6
 
-.include "../../audio/nas/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../audio/nas/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
