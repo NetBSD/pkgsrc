@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/26 04:00:51 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/27 07:31:12 rh Exp $
 
---- src/decoder.c.orig	Sat May 25 21:06:58 2002
-+++ src/decoder.c	Sat May 25 21:07:05 2002
-@@ -205,6 +205,9 @@
+--- src/decoder.c.orig	Fri May 10 00:53:45 2002
++++ src/decoder.c
+@@ -205,6 +205,9 @@ decode (void *arg)
    /* main loop */
    do
      {
-+#ifdef __NetBSD__
-+	  pthread_yield_np();
++#ifdef _PTH_PTHREAD_H_
++	  sched_yield();
 +#endif
        if (info->stop)
          break;
