@@ -1,7 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2005/03/02 16:18:47 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/11 22:18:27 rillig Exp $
 
---- UnAlz.cpp.orig	2004-11-27 10:28:17.000000000 -0600
-+++ UnAlz.cpp
+This patch assumes that on NetBSD, every <iconv.h> has the non-const
+prototype argument for the second parameter of iconv(). This is true for
+all but some release candidates of NetBSD-2.0, because either the
+package converters/libiconv is used or there's a current <iconv.h>.
+
+--- UnAlz.cpp.orig	Sat Nov 27 17:28:17 2004
++++ UnAlz.cpp	Fri Mar 11 22:48:31 2005
 @@ -18,6 +18,10 @@
  #	include <errno.h>		// iconv.h 때문에 필요 
  #endif
@@ -22,13 +27,12 @@ $NetBSD: patch-ab,v 1.1 2005/03/02 16:18:47 minskim Exp $
  #	include <sys/endian.h>	
  	inline UINT16	unalz_le16toh(UINT16 a){return le16toh(a);}
  	inline UINT32	unalz_le32toh(UINT32 a){return le32toh(a);}
-@@ -376,7 +380,8 @@ BOOL CUnAlz::ReadLocalFileheader()
+@@ -376,7 +380,7 @@ BOOL CUnAlz::ReadLocalFileheader()
  	size_t size;
  	char inbuf[ICONV_BUF_SIZE];
  	char outbuf[ICONV_BUF_SIZE];
 -#if defined(__FreeBSD__) || defined(__CYGWIN__)
-+#if defined(__FreeBSD__) || defined(__CYGWIN__) || \
-+  (defined(__NetBSD__) && __NetBSD_Version__ >= 200000000)
++#if defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__)
  	const char *inptr = inbuf;
  #else
  	char *inptr = inbuf;
