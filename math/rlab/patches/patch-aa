@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/31 12:42:14 jtb Exp $
 
 --- configure.in.orig	Fri Dec 17 16:01:06 1999
 +++ configure.in
@@ -64,9 +64,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
  AC_ARG_WITH(plplot, [   --with-plplot           use Plplot],
  [
    if test -n "$PLOT_PROG" ; then
-@@ -573,10 +583,10 @@
+@@ -572,11 +582,12 @@
+     exit 1;
    fi
  
++  AC_DEFINE(HAVE_RLAB_PLPLOT)
    PLOT_PROG="plplot"
 -  PLIB_DIR=-L$withval
 +  PLIB_DIR=-L$withval/lib
@@ -78,7 +80,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
  ])
  
  dnl ------------------------------------------------------------------
-@@ -648,14 +658,17 @@
+@@ -648,14 +659,13 @@
  dnl then setup for GC. The default action (nothing is specified) is to
  dnl configure for GC.
  
@@ -92,10 +94,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
 -                                 IGC="-I./gc"]])
 +AC_ARG_WITH(GC,
 +            [  --with-GC            use the Garbage-Collector],
-+            [if test "$withval" = "yes" ; then
-+		echo "ERROR! must specify Garbage-Collector installation directory."
-+		exit 1;
-+	     fi
 +             AC_DEFINE(HAVE_GC)
 +	     LIBGC="-L$withval/lib -lgc"
 +             IGC="-I$withval/include -I./gc"
@@ -104,7 +102,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
  dnl ------------------------------------------------------------------
  
  AC_TRY_LINK([#include <stdio.h>],
-@@ -738,6 +751,7 @@
+@@ -738,6 +748,7 @@
  AC_SUBST(PAGER)
  AC_SUBST(CFLAGS)
  AC_SUBST(FFLAGS)
