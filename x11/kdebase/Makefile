@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2003/09/28 09:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.94 2003/11/30 22:58:40 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
