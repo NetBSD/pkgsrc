@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:26:29 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/30 16:03:18 xtraeme Exp $
 #
 
-DISTNAME=	xchat-2.0.3
-PKGREVISION=	2
+DISTNAME=	xchat-2.0.4
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://www.xchat.org/files/source/2.0/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=		http://www.xchat.org/files/source/2.0/patches/
-PATCHFILES=		xc203-fix-cps.diff xc203-fixtint.diff
-PATCH_DIST_STRIP=	-p1
-
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
@@ -27,6 +22,7 @@ USE_X11=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+CONFIGURE_ARGS+=	--enable-textfe
 CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
