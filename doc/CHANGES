@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9523 2005/03/20 16:56:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.9524 2005/03/20 17:28:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1424,3 +1424,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fprot-workstation-bin to 4.5.4 [ben 2005-03-20]
 	Updated pkg_install to 20050318 [hubertf 2005-03-20]
 	Removed apotheke [jmmv 2005-03-20]
+	Updated screws to 0.54nb3 [jmmv 2005-03-20]
