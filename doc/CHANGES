@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4476 2004/01/16 10:34:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4477 2004/01/16 13:28:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -301,3 +301,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pnet to 0.6.2nb1 [xtraeme 2004-01-16]
 	Updated distcc to 2.12.1 [xtraeme 2004-01-16]
 	Updated libmpeg2 to 0.4.0 [xtraeme 2004-01-16]
+	Updated mserv to 0.35nb6 [abs 2004-01-16]
+
