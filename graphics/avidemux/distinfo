@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/02 15:51:41 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2003/12/18 03:43:30 xtraeme Exp $
 
-SHA1 (avidemux-2.0.10.tar.gz) = 3adcba00ba9893b9e54fa9da2567810b32013467
-Size (avidemux-2.0.10.tar.gz) = 2014961 bytes
-SHA1 (patch-aa) = 3040be8c6de81c33364a7e5d9c2b8927a271c2b8
-SHA1 (patch-ab) = 366c2e16d14330a7f07afe1681180163e3e8c0a4
-SHA1 (patch-ac) = ae737b39e7976d5f2f66452c6b11d439ad3ea0cf
-SHA1 (patch-ad) = 10a0dfec88c9710cd1e315097c4186d7cc4e9f22
-SHA1 (patch-ae) = 82c5098778474772a3c463294ac74b65bf65d854
-SHA1 (patch-af) = e1b54073ea2e05afceeccdb3e2963b850734a155
-SHA1 (patch-ag) = db6bfd5afd6de6e7290c42431a91b9cdfd965b32
-SHA1 (patch-ah) = 94c28c72afd64f8a909a5826e37bdd49167f70c2
+SHA1 (avidemux-2.0.18.tar.gz) = ce3b6de5bdcade98ea564ec496de4eb370cd5740
+Size (avidemux-2.0.18.tar.gz) = 2518712 bytes
+SHA1 (patch-aa) = 441462c537aa8a2205b6c1d9ab160afc34b5c967
