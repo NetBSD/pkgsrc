@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/25 17:40:25 wennmach Exp $
 
-Do not install libacl.a. Conflicts with libacl.a from kth-krb4.
+Do not install libacl.a, which conflicts with libacl.a from kth-krb4.
 
 --- lib/acl/Makefile.in.orig	Mon May 29 21:52:48 2000
 +++ lib/acl/Makefile.in		Mon May 29 21:53:22 2000
