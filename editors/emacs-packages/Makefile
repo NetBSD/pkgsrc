@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/05 12:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/15 21:48:55 dmcmahill Exp $
 
 DISTNAME=	emacs-packages-0.1
 CATEGORIES=	meta-pkgs editors
@@ -36,6 +36,7 @@ DEPENDS+=	jde-[0-9]*:../../editors/jde
 DEPENDS+=	liece-[0-9]*:../../chat/liece
 DEPENDS+=	lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	mailcrypt-[0-9]*:../../mail/mailcrypt
+DEPENDS+=	matlab-mode-*:../../editors/matlab-mode
 #DEPENDS+=	mew-[0-9]*:../../mail/mew
 DEPENDS+=	mew-[0-9]*:../../mail/mew3
 DEPENDS+=	Mule-UCS-[0-9]*:../../editors/mule-ucs
