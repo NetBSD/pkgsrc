@@ -1,3 +1,5 @@
+$NetBSD: patch-am,v 1.2 2000/02/05 15:58:30 wiz Exp $
+
 Index: list.h
 ===================================================================
 RCS file: /home/siren/src/tvtwm/list.h,v

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 2000/02/05 15:58:29 wiz Exp $
+
 Index: add_window.c
 ===================================================================
 RCS file: /home/siren/src/tvtwm/add_window.c,v
