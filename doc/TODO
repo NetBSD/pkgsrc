@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.323 2003/02/27 07:55:16 wiz Exp $
+$NetBSD: TODO,v 1.324 2003/02/27 13:28:44 seb Exp $
 
 Suggested new packages
 ======================
@@ -98,8 +98,6 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0 [pkg/20504]
 	o ctwm-3.6
-	o cyrus-imapd21-2.1.12
-	o cyrus-sasl2-2.1.12
 	o db4-4.1.25 [pkg/20289]
 	o dillo-0.7.0
 	o distcc-1.2
