@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/17 09:37:23 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/22 11:05:03 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/16 08:22:35 max Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --program-prefix=g
-INFO_FILES=	m4
+INFO_FILES=	m4.info
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/gm4
