@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/28 17:00:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/30 12:31:29 wiz Exp $
 bin/bt-t-make.py
 bin/btcompletedir.py
 bin/btcopyannounce.py
@@ -11,7 +11,6 @@ bin/btreannounce.py
 bin/btrename.py
 bin/btsethttpseeds.py
 bin/btshowmetainfo.py
-bin/bttest.py
 bin/bttrack.py
 ${PYSITELIB}/BitTornado/BT1/Choker.py
 ${PYSITELIB}/BitTornado/BT1/Choker.pyc
