@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/24 13:20:33 abs Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -26,7 +26,7 @@ INTERACTIVE_STAGE=	build
 
 PKG_LANG?=		english
 VERS_MAJ=		7
-VERS_MIN=		01
+VERS_MIN=		02
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape/${VERS_MAJ}.${VERS_MIN}/${PKG_LANG}
 
