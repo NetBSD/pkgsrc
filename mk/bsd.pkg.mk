@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.996 2002/06/23 03:15:28 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.997 2002/06/28 09:05:20 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -997,6 +997,7 @@ PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 
 CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+BUILD_DEFS+=		PKG_SYSCONFDIR
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
