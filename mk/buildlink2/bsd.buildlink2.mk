@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.2 2002/06/24 16:32:37 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.3 2002/06/28 06:26:57 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -371,6 +371,7 @@ _BLNK_WRAP_LOGIC=			${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_POST_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.post-cache-trans
 _BLNK_WRAP_CACHE_TRANSFORM=		${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_LOGIC_TRANSFORM=		${BUILDLINK_DIR}/bin/.logic-trans
+_BLNK_WRAP_LOG=				${BUILDLINK_DIR}/.wrapper.log
 _BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
@@ -480,6 +481,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 			-e "s|@TOUCH@|${TOUCH:Q}|g"			\
 			-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"	\
 			-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g" \
+			-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"	\
 			-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g" \
@@ -568,3 +570,11 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+_BLNK_CHECK_PATTERNS+=	-e "-I${LOCALBASE}/" -e "-L${LOCALBASE}/"
+_BLNK_CHECK_PATTERNS+=	-e "-I${X11BASE}/" -e "-L${X11BASE}/"
+
+buildlink-check:
+	@if [ -f ${_BLNK_WRAP_LOG} ]; then				\
+		${EGREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE} \
+	fi
