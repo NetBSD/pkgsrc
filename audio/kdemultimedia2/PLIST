@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/05 22:39:01 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:34 seb Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -946,27 +946,27 @@ share/kde/servicetypes/audiomidi.desktop
 @dirrm share/kde/apps/noatun/eq.preset
 @dirrm share/kde/apps/noatun
 @dirrm share/kde/apps/kscd/pics
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/soundtrack
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/soundtrack
 @dirrm share/kde/apps/kscd/cddb/soundtrack
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/rock
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/rock
 @dirrm share/kde/apps/kscd/cddb/rock
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/reggae
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/reggae
 @dirrm share/kde/apps/kscd/cddb/reggae
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/newage
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/newage
 @dirrm share/kde/apps/kscd/cddb/newage
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/misc
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/misc
 @dirrm share/kde/apps/kscd/cddb/misc
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/jazz
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/jazz
 @dirrm share/kde/apps/kscd/cddb/jazz
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/folk
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/folk
 @dirrm share/kde/apps/kscd/cddb/folk
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/data
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/data
 @dirrm share/kde/apps/kscd/cddb/data
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/country
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/country
 @dirrm share/kde/apps/kscd/cddb/country
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/classical
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/classical
 @dirrm share/kde/apps/kscd/cddb/classical
-@exec ${MKDIR} -p %D/share/kde/apps/kscd/cddb/blues
+@exec ${MKDIR} %D/share/kde/apps/kscd/cddb/blues
 @dirrm share/kde/apps/kscd/cddb/blues
 @dirrm share/kde/apps/kscd/cddb
 @dirrm share/kde/apps/kscd

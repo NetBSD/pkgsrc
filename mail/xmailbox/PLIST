@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:49 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:48 seb Exp $
 bin/xmailbox
 lib/X11/app-defaults/XMailbox
 share/xmailbox/0xmail1.xpm
@@ -10,5 +10,5 @@ share/xmailbox/5xmail1.xpm
 share/xmailbox/xmail1.xpm
 share/xmailbox/xnomail1.xpm
 man/cat1/xmailbox.0
-@exec ${MKDIR} -p %D/share/xmailbox
+@exec ${MKDIR} %D/share/xmailbox
 @unexec ${RM} -rf %D/share/xmailbox

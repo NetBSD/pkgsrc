@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/05 22:39:03 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:42 seb Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -676,65 +676,65 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/cards/backs
 @dirrm share/pixmaps/cards
 @dirrm share/omf/gnome-games
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/ru/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/ru/stylesheet-images
 @dirrm share/gnome/help/same-gnome/ru/stylesheet-images
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/ru/figures
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/ru/figures
 @dirrm share/gnome/help/same-gnome/ru/figures
 @dirrm share/gnome/help/same-gnome/ru
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/es/stylesheet-images
 @dirrm share/gnome/help/same-gnome/es/stylesheet-images
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/es/figures
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/es/figures
 @dirrm share/gnome/help/same-gnome/es/figures
 @dirrm share/gnome/help/same-gnome/es
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/C/stylesheet-images
 @dirrm share/gnome/help/same-gnome/C/stylesheet-images
-@exec ${MKDIR} -p %D/share/gnome/help/same-gnome/C/figures
+@exec ${MKDIR} %D/share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C
 @dirrm share/gnome/help/same-gnome
-@exec ${MKDIR} -p %D/share/gnome/help/mahjongg/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mahjongg/it/stylesheet-images
 @dirrm share/gnome/help/mahjongg/it/stylesheet-images
 @dirrm share/gnome/help/mahjongg/it/figures
 @dirrm share/gnome/help/mahjongg/it
-@exec ${MKDIR} -p %D/share/gnome/help/mahjongg/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mahjongg/C/stylesheet-images
 @dirrm share/gnome/help/mahjongg/C/stylesheet-images
 @dirrm share/gnome/help/mahjongg/C/figures
 @dirrm share/gnome/help/mahjongg/C
 @dirrm share/gnome/help/mahjongg
-@exec ${MKDIR} -p %D/share/gnome/help/iagno/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/iagno/it/stylesheet-images
 @dirrm share/gnome/help/iagno/it/stylesheet-images
 @dirrm share/gnome/help/iagno/it/figures
 @dirrm share/gnome/help/iagno/it
-@exec ${MKDIR} -p %D/share/gnome/help/iagno/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/iagno/C/stylesheet-images
 @dirrm share/gnome/help/iagno/C/stylesheet-images
 @dirrm share/gnome/help/iagno/C/figures
 @dirrm share/gnome/help/iagno/C
 @dirrm share/gnome/help/iagno
 @dirrm share/gnome/help/gtali/da
-@exec ${MKDIR} -p %D/share/gnome/help/gtali/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gtali/C/stylesheet-images
 @dirrm share/gnome/help/gtali/C/stylesheet-images
 @dirrm share/gnome/help/gtali/C/figures
 @dirrm share/gnome/help/gtali/C
 @dirrm share/gnome/help/gtali
-@exec ${MKDIR} -p %D/share/gnome/help/gnotravex/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnotravex/es/stylesheet-images
 @dirrm share/gnome/help/gnotravex/es/stylesheet-images
 @dirrm share/gnome/help/gnotravex/es/figures
 @dirrm share/gnome/help/gnotravex/es
-@exec ${MKDIR} -p %D/share/gnome/help/gnotravex/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnotravex/C/stylesheet-images
 @dirrm share/gnome/help/gnotravex/C/stylesheet-images
 @dirrm share/gnome/help/gnotravex/C/figures
 @dirrm share/gnome/help/gnotravex/C
 @dirrm share/gnome/help/gnotravex
-@exec ${MKDIR} -p %D/share/gnome/help/gnome-stones/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnome-stones/it/stylesheet-images
 @dirrm share/gnome/help/gnome-stones/it/stylesheet-images
 @dirrm share/gnome/help/gnome-stones/it/figures
 @dirrm share/gnome/help/gnome-stones/it
-@exec ${MKDIR} -p %D/share/gnome/help/gnome-stones/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnome-stones/C/stylesheet-images
 @dirrm share/gnome/help/gnome-stones/C/stylesheet-images
 @dirrm share/gnome/help/gnome-stones/C/figures
 @dirrm share/gnome/help/gnome-stones/C
 @dirrm share/gnome/help/gnome-stones
-@exec ${MKDIR} -p %D/share/gnome/help/gnome-mines/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnome-mines/C/stylesheet-images
 @dirrm share/gnome/help/gnome-mines/C/stylesheet-images
 @dirrm share/gnome/help/gnome-mines/C/figures
 @dirrm share/gnome/help/gnome-mines/C
@@ -742,34 +742,34 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/gnome/help/gnobots2/it
 @dirrm share/gnome/help/gnobots2/es
 @dirrm share/gnome/help/gnobots2/da
-@exec ${MKDIR} -p %D/share/gnome/help/gnobots2/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnobots2/C/stylesheet-images
 @dirrm share/gnome/help/gnobots2/C/stylesheet-images
 @dirrm share/gnome/help/gnobots2/C/figures
 @dirrm share/gnome/help/gnobots2/C
 @dirrm share/gnome/help/gnobots2
-@exec ${MKDIR} -p %D/share/gnome/help/gnibbles/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnibbles/C/stylesheet-images
 @dirrm share/gnome/help/gnibbles/C/stylesheet-images
 @dirrm share/gnome/help/gnibbles/C/figures
 @dirrm share/gnome/help/gnibbles/C
 @dirrm share/gnome/help/gnibbles
-@exec ${MKDIR} -p %D/share/gnome/help/gataxx/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gataxx/it/stylesheet-images
 @dirrm share/gnome/help/gataxx/it/stylesheet-images
 @dirrm share/gnome/help/gataxx/it/figures
 @dirrm share/gnome/help/gataxx/it
-@exec ${MKDIR} -p %D/share/gnome/help/gataxx/es/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gataxx/es/stylesheet-images
 @dirrm share/gnome/help/gataxx/es/stylesheet-images
 @dirrm share/gnome/help/gataxx/es/figures
 @dirrm share/gnome/help/gataxx/es
-@exec ${MKDIR} -p %D/share/gnome/help/gataxx/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gataxx/C/stylesheet-images
 @dirrm share/gnome/help/gataxx/C/stylesheet-images
 @dirrm share/gnome/help/gataxx/C/figures
 @dirrm share/gnome/help/gataxx/C
 @dirrm share/gnome/help/gataxx
-@exec ${MKDIR} -p %D/share/gnome/help/aisleriot/it/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/aisleriot/it/stylesheet-images
 @dirrm share/gnome/help/aisleriot/it/stylesheet-images
 @dirrm share/gnome/help/aisleriot/it/figures
 @dirrm share/gnome/help/aisleriot/it
-@exec ${MKDIR} -p %D/share/gnome/help/aisleriot/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/aisleriot/C/stylesheet-images
 @dirrm share/gnome/help/aisleriot/C/stylesheet-images
 @dirrm share/gnome/help/aisleriot/C/figures
 @dirrm share/gnome/help/aisleriot/C

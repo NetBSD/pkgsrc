@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/28 19:15:20 magick Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:41 seb Exp $
 bin/xemacs-b2m
 bin/xemacs-ctags
 bin/ellcc
@@ -1514,10 +1514,10 @@ man/man1/xemacs.1
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}
 @dirrm lib/${EMACSVER}/info
 @dirrm lib/${EMACSVER}
-@exec mkdir -p /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
+@exec ${MKDIR} /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
 @unexec rm -rf /var/tmp/xemacs.lock
-@exec mkdir -p lib/xemacs/site-lisp
-@exec mkdir -p lib/xemacs/site-modules
+@exec ${MKDIR} %D/lib/xemacs/site-lisp
+@exec ${MKDIR} %D/lib/xemacs/site-modules
 @dirrm lib/xemacs/site-lisp
 @dirrm lib/xemacs/site-modules
 @dirrm lib/xemacs

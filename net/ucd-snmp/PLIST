@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/04/09 09:53:54 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:52 seb Exp $
 bin/encode_keychange
 bin/mib2c
 bin/snmpbulkget
@@ -220,7 +220,7 @@ share/snmp/snmpconf/snmptrapd.conf/traphandle
 @dirrm share/snmp/mibs
 @dirrm share/snmp
 @dirrm share/examples/ucd-snmp
-@exec ${MKDIR} -p %D/lib/snmp/dlmod
+@exec ${MKDIR} %D/lib/snmp/dlmod
 @dirrm lib/snmp/dlmod
 @dirrm lib/snmp
 @dirrm include/ucd-snmp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/04/06 19:43:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/06/26 10:29:53 seb Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -18,7 +18,7 @@ etc/nntpcache/spam.filter
 etc/nntpcache/http/index.html
 etc/nntpcache/http/moose.gif
 etc/nntpcache/http/nntpcache.jpg
-@exec ${MKDIR} -p %D/etc/nntpcache/http/innreport/pics
+@exec ${MKDIR} %D/etc/nntpcache/http/innreport/pics
 @exec ${CHOWN} -R news:news %D/etc/nntpcache
 @exec ${CHMOD} 700 %D/etc/nntpcache
 @unexec ${RMDIR} -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || true
@@ -34,7 +34,7 @@ libexec/nntpcache.gdb
 man/man8/newshound.8
 man/man8/nntpcached.8
 @unexec ${RMDIR} etc/nntpcache 2>/dev/null || true
-@exec ${MKDIR} -p /var/spool/nntpcache
+@exec ${MKDIR} /var/spool/nntpcache
 @exec cp %D/etc/nntpcache/VERSION /var/spool/nntpcache/VERSION
 @exec ${CHOWN} -R news:news /var/spool/nntpcache
 @exec ${CHMOD} 700 /var/spool/nntpcache

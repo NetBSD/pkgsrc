@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/03/20 12:36:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/06/26 10:29:37 seb Exp $
 bin/gconf-config
 bin/gconf-config-1
 bin/gconf-sanity-check-1
@@ -72,9 +72,9 @@ share/locale/zh_CN/LC_MESSAGES/GConf.mo
 @dirrm include/gconf/1
 @dirrm include/gconf
 @dirrm etc/gconf/schemas
-@exec ${MKDIR} -p %D/etc/gconf/gconf.xml.mandatory
+@exec ${MKDIR} %D/etc/gconf/gconf.xml.mandatory
 @dirrm etc/gconf/gconf.xml.mandatory
-@exec ${MKDIR} -p %D/etc/gconf/gconf.xml.defaults
+@exec ${MKDIR} %D/etc/gconf/gconf.xml.defaults
 @dirrm etc/gconf/gconf.xml.defaults
 @dirrm etc/gconf/1
 @dirrm etc/gconf
