@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4637 2004/01/28 15:56:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4638 2004/01/28 22:46:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -499,8 +499,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 0.37.0 [epg 2004-01-26]
 	Updated gaim to 0.75nb1 [recht 2004-01-27]
 	Updated apache2 to 2.0.48nb3 [grant 2004-01-27]
-	Added unison 2.9.20 as net/unison-devel [jlam 2004-01-27]
-	Added devilspie 0.3.1 [snj 2004-01-27]
+	Added unison-2.9.20 as net/unison-devel [jlam 2004-01-27]
+	Added devilspie-0.3.1 [snj 2004-01-27]
 	Updated tmda to 1.0 [kim 2004-01-28]
 	Updated libdvdplay to 1.0.1nb1 [grant 2004-01-28]
 	Updated yaz to 2.0nb1 [grant 2004-01-28]
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.78.1nb1 [xtraeme 2004-01-28]
 	Updated minivmac to 0.1.7nb1 [xtraeme 2004-01-28]
 	Updated xvile to 9.3nb1 [xtraeme 2004-01-28]
+	Added wmctrl-1.05 [snj 2004-01-28]
