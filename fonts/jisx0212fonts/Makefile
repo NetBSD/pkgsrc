@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2000/04/09 15:22:32 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/27 14:28:17 agc Exp $
 # Based on FreeBSD Id: Makefile,v 1.6 1999/02/12 17:23:40 motoyuki Exp
 #
 
 DISTNAME=	jisx0212fonts-0.0
-CATEGORIES=	x11 japanese
+CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ginkaku.kudpc.kyoto-u.ac.jp/fonts/ \
 		ftp://ftp.jp.netbsd.org/pub/NetBSD-jp/tut-jp/fonts/ \
 		http://www.freebsd.org/~itojun/distfiles/
