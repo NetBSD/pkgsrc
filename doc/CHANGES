@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8045 2004/11/27 01:23:14 minskim Exp $
+$NetBSD: CHANGES,v 1.8046 2004/11/27 01:27:26 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5481,3 +5481,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated galeon to 1.3.18 [abs 2004-11-27]
 	Updated liferea to 0.6.3 [minskim 2004-11-27]
 	Updated moss to 0.1.13 [minskim 2004-11-27]
+	Updated dtcp to 20040611 [hamajima 2004-11-27]
