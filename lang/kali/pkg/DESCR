@@ -1,0 +1,22 @@
+Kali Scheme is a distributed implementation of Scheme that permits
+efficient transmission of higher-order objects such as closures
+and continuations. The integration of distributed communication
+facilities within a higher-order programming language engenders a
+number of new abstractions and paradigms for distributed computing.
+Among these are user-specified load-balancing and migration policies
+for threads, incrementally-linked distributed computations, and
+parameterized client-server applications. Kali Scheme supports
+concurrency and communication using first-class procedures and
+continuations. It integrates procedures and continuations into a
+message-based distributed framework that allows any Scheme object
+(including code vectors) to be sent and received in a message. Some
+of the applications and implementation techniques we have looked
+at using Kali Scheme include:
+
+	User-level load balancing and migration. 
+	Incremental distributed linking of code objects. 
+	Parameterized client-server applications. 
+	Long-lived parallel computations. 
+	Distributed data mining. 
+	Executable content in messages over wide-area networks
+	(e.g. the World-Wide Web) 
