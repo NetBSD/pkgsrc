@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/20 16:46:27 tron Exp $
+
+--- ../ulib/Makefile.in.orig	Mon Sep 25 15:30:05 2000
++++ ../ulib/Makefile.in	Fri Apr 20 17:01:44 2001
+@@ -44,10 +44,10 @@
+ SHELL = /bin/bash
+ PROFILEFLAGS =
+ DEBUGFLAGS = -g
+-CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
+-OPTIMIZE = -O99
+-INCLUDES = -I/usr/include/g++ -I$(ULIBROOT) -I. # -I$(QTROOT)/include
+-LNPATH   = -L/usr/X11R6/lib # -L$(QTROOT)/lib
++#CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
++#OPTIMIZE = -O99
++INCLUDES = -I$(X11BASE)/include -I$(ULIBROOT) -I. # -I$(QTROOT)/include
++LNPATH   = -L$(X11BASE)/lib # -L$(QTROOT)/lib
+ CPPFLAGS = $(INCLUDES)
+ LNFLAGS  = $(LNPATH) $(PROFILEFLAGS) $(DEBUGFLAGS)
+ DEFS = # -DNDEBUG # -DLINUX_VCD # -DUSE_MMX
