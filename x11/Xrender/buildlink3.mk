@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2004/02/19 19:12:26 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2004/02/29 00:22:43 recht Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ _IS_BUILTIN.Xrender!=							\
 	fi
 BUILDLINK_IS_BUILTIN.Xrender= ${_IS_BUILTIN.Xrender}
 .    if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[nN][oO]) && \
-        !empty(_IS_BUILTIN.Xrender:M[yY][eE][sS])
+	!empty(_IS_BUILTIN.Xrender:M[yY][eE][sS])
 #
 # Create an appropriate package name for the built-in Xrender distributed
 # with the system.  This package name can be used to check against
