@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2005/01/13 12:57:38 drochner Exp $
+# $NetBSD: Makefile,v 1.533 2005/01/20 18:03:21 cube Exp $
 #
 
 COMMENT=	Networking tools
@@ -193,6 +193,7 @@ SUBDIR+=	nbtscan
 SUBDIR+=	ncftp2
 SUBDIR+=	ncftp3
 SUBDIR+=	neat
+SUBDIR+=	netbsd-tap
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	netatalk
