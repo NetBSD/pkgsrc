@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:29:50 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/08/01 17:26:57 wiz Exp $
 #
 
 DISTNAME=	cervisia-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	kde devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cervisia/} \
 		ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://cervisia.sourceforge.net/
 COMMENT=	Graphical frontend for the CVS client
 
-DEPENDS+=	kde-1.1.2nb2:../../x11/kde
+DEPENDS+=	kde-1.1.2nb3:../../x11/kde
 DEPENDS+=	cvs>=1.10:../../devel/cvs
 
 USE_X11BASE=		yes	# To get this near KDE
