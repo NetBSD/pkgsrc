@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 09:07:12 agc Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/22 06:38:08 jlam Exp $
 
 DISTNAME=	hugs98-Feb2000
 PKGNAME=	hugs98-200002
@@ -11,18 +11,20 @@ COMMENT=	Nottingham and Yale Haskell interpreter and programming environment
 
 DEPENDS+=	readline-*:../../devel/readline
 
-WRKSRC=		${WRKDIR}/hugs98/src
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-readline
+WRKSRC=			${WRKDIR}/hugs98/src/unix
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-readline
+ALL_TARGET=		default
 
-ALL_TARGET=	default
-MAKE_ENV=	INSTALL="${INSTALL}" INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
+do-build:
+	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
-do-configure:
-	cd ${WRKSRC}; (cd unix; ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+do-install:
+	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/../docs/hugs.1 ${PREFIX}/man/man1/hugs.1
+	${INSTALL_MAN} ${WRKSRC}/../../docs/hugs.1 ${PREFIX}/man/man1/hugs.1
 
 .include "../../mk/bsd.pkg.mk"
