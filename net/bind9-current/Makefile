@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/15 19:25:50 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/15 21:58:10 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -14,12 +14,7 @@ BUILD_DEFS+=	USE_INET6
 
 # we cannot disable pthreads at this moment, it looks to be a a bug in
 # BIND9 configure.in
-.if 1	# defined(USE_UNPROVEN_PTHREADS) && ${USE_UNPROVEN_PTHREADS} == "YES"
 DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
-CONFIGURE_ARGS+=--enable-threads
-.else
-CONFIGURE_ARGS+=--disable-threads
-.endif
 
 # Sync these with devel/unproven-pthreads:
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
