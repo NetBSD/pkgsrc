@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/30 19:15:59 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/30 19:21:43 jwise Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tkcvs-6.0/ \
 		http://ftp0.sunet.se/pub/lang/tcl/sorted/apps/tkcvs-6.0/
 
-MAINTAINER=	shanee@augusta.de
+MAINTAINER=	packages@netbsd.org
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 
