@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2084 2003/04/29 22:50:06 jtb Exp $
+$NetBSD: CHANGES,v 1.2085 2003/04/29 22:57:58 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated euler to 1.60.6 [jtb 2003-04-29]
 	Updated yorick to 1.5.12 [jtb 2003-04-29]
 	Updated fftw to 3.0 [jtb 2003-04-29]
+	Updated yplot to 1.1.0nb2 [jtb 2003-04-29]
