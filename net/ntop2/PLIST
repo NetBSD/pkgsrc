@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/09 18:22:12 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/23 13:23:36 adam Exp $
 bin/ntop
+etc/ntop/ntop-cert.pem
+etc/ntop/p2c.opt.table
+etc/ntop/etter.passive.os.fp
+etc/ntop/oui.txt
+etc/ntop/specialMAC.txt
 lib/libicmpPlugin-${PKGVERSION}.so
 lib/libicmpPlugin.a
 lib/libicmpPlugin.so
@@ -59,17 +64,19 @@ share/ntop/html/bg_line.gif
 share/ntop/html/black.gif
 share/ntop/html/bottom_corner.gif
 share/ntop/html/bulb.gif
+share/ntop/html/bug.png
 share/ntop/html/card.gif
 share/ntop/html/child.gif
 share/ntop/html/clear.gif
 share/ntop/html/collapsed.gif
-share/ntop/html/copyright.gif
+share/ntop/html/copyright.png
 share/ntop/html/corner.gif
 share/ntop/html/deleteURL.gif
 share/ntop/html/deleteUser.gif
 share/ntop/html/dns.gif
 share/ntop/html/download.gif
 share/ntop/html/dump.html
+share/ntop/html/dumpxml.html
 share/ntop/html/error.gif
 share/ntop/html/expanded.gif
 share/ntop/html/favicon.ico
@@ -77,6 +84,7 @@ share/ntop/html/fback.gif
 share/ntop/html/fforward.gif
 share/ntop/html/forward.gif
 share/ntop/html/functions.js
+share/ntop/html/help.png
 share/ntop/html/gauge.jpg
 share/ntop/html/graph.gif
 share/ntop/html/gray_bg.gif
@@ -90,12 +98,8 @@ share/ntop/html/index_top.html
 share/ntop/html/index_top_w3c.html
 share/ntop/html/index_w3c.html
 share/ntop/html/info.gif
-share/ntop/html/j_DataRcvd.html
-share/ntop/html/j_DataSent.html
-share/ntop/html/j_Stats.html
-share/ntop/html/j_home.html
-share/ntop/html/j_index_top.html
 share/ntop/html/mail.gif
+share/ntop/html/lock.png
 share/ntop/html/major.gif
 share/ntop/html/marchio_unipi_pant541_144.gif
 share/ntop/html/menubar.png
@@ -104,8 +108,10 @@ share/ntop/html/menuline.png
 share/ntop/html/minor.gif
 share/ntop/html/modifyUser.gif
 share/ntop/html/multihomed.gif
+share/ntop/html/nboxLogo.gif
 share/ntop/html/ntop.gif
 share/ntop/html/ntop.html
+share/ntop/html/ntopdump.dtd
 share/ntop/html/ntophelp.html
 share/ntop/html/p2p.gif
 share/ntop/html/pie-error.png
@@ -179,6 +185,7 @@ share/ntop/html/statsicons/flags/eg.gif
 share/ntop/html/statsicons/flags/eh.gif
 share/ntop/html/statsicons/flags/es.gif
 share/ntop/html/statsicons/flags/et.gif
+share/ntop/html/statsicons/flags/eu.gif
 share/ntop/html/statsicons/flags/fi.gif
 share/ntop/html/statsicons/flags/fj.gif
 share/ntop/html/statsicons/flags/fk.gif
@@ -251,12 +258,16 @@ share/ntop/html/statsicons/flags/mc.gif
 share/ntop/html/statsicons/flags/md.gif
 share/ntop/html/statsicons/flags/mil.gif
 share/ntop/html/statsicons/flags/mk.gif
+share/ntop/html/statsicons/flags/ml.gif
+share/ntop/html/statsicons/flags/mn.gif
+share/ntop/html/statsicons/flags/mo.gif
 share/ntop/html/statsicons/flags/mq.gif
 share/ntop/html/statsicons/flags/mr.gif
 share/ntop/html/statsicons/flags/mt.gif
 share/ntop/html/statsicons/flags/mu.gif
 share/ntop/html/statsicons/flags/mx.gif
 share/ntop/html/statsicons/flags/my.gif
+share/ntop/html/statsicons/flags/mz.gif
 share/ntop/html/statsicons/flags/na.gif
 share/ntop/html/statsicons/flags/ne.gif
 share/ntop/html/statsicons/flags/net.gif
@@ -272,10 +283,12 @@ share/ntop/html/statsicons/flags/org.gif
 share/ntop/html/statsicons/flags/pa.gif
 share/ntop/html/statsicons/flags/pe.gif
 share/ntop/html/statsicons/flags/pf.gif
+share/ntop/html/statsicons/flags/pg.gif
 share/ntop/html/statsicons/flags/ph.gif
 share/ntop/html/statsicons/flags/pk.gif
 share/ntop/html/statsicons/flags/pl.gif
 share/ntop/html/statsicons/flags/pr.gif
+share/ntop/html/statsicons/flags/ps.gif
 share/ntop/html/statsicons/flags/pt.gif
 share/ntop/html/statsicons/flags/py.gif
 share/ntop/html/statsicons/flags/qa.gif
@@ -284,11 +297,15 @@ share/ntop/html/statsicons/flags/ru.gif
 share/ntop/html/statsicons/flags/rw.gif
 share/ntop/html/statsicons/flags/sa.gif
 share/ntop/html/statsicons/flags/sb.gif
+share/ntop/html/statsicons/flags/sd.gif
 share/ntop/html/statsicons/flags/se.gif
 share/ntop/html/statsicons/flags/sg.gif
 share/ntop/html/statsicons/flags/si.gif
 share/ntop/html/statsicons/flags/sk.gif
+share/ntop/html/statsicons/flags/sm.gif
+share/ntop/html/statsicons/flags/sn.gif
 share/ntop/html/statsicons/flags/su.gif
+share/ntop/html/statsicons/flags/sv.gif
 share/ntop/html/statsicons/flags/sy.gif
 share/ntop/html/statsicons/flags/sz.gif
 share/ntop/html/statsicons/flags/tc.gif
@@ -296,6 +313,7 @@ share/ntop/html/statsicons/flags/td.gif
 share/ntop/html/statsicons/flags/tf.gif
 share/ntop/html/statsicons/flags/tg.gif
 share/ntop/html/statsicons/flags/th.gif
+share/ntop/html/statsicons/flags/tj.gif
 share/ntop/html/statsicons/flags/tk.gif
 share/ntop/html/statsicons/flags/tm.gif
 share/ntop/html/statsicons/flags/tn.gif
@@ -355,3 +373,4 @@ share/ntop/html/white_bg.gif
 @dirrm lib/plugins
 @dirrm lib/ntop/plugins
 @dirrm lib/ntop
+@dirrm etc/ntop
