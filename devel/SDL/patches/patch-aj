@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2001/05/05 13:47:13 rh Exp $
+$NetBSD: patch-aj,v 1.6 2001/07/03 06:17:33 rh Exp $
 
---- configure.in.orig	Tue Mar 27 05:39:19 2001
+--- configure.in.orig	Mon Jun 18 17:21:38 2001
 +++ configure.in
-@@ -389,7 +389,7 @@
+@@ -410,7 +410,7 @@
                    NASMFLAGS="-f win32"
                    ;;
                *)
@@ -11,7 +11,16 @@ $NetBSD: patch-aj,v 1.5 2001/05/05 13:47:13 rh Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -1199,7 +1199,11 @@
+@@ -890,7 +890,7 @@
+             ;;
+         *-*-netbsd*)
+             pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
+-            pthread_lib="-L/usr/pkg/lib -lpthread -lsem"
++            pthread_lib="-L/usr/pkg/lib -lpthread"
+             ;;
+         *-*-openbsd*)
+             pthread_cflags="-D_REENTRANT"
+@@ -1577,7 +1577,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
@@ -24,31 +33,14 @@ $NetBSD: patch-aj,v 1.5 2001/05/05 13:47:13 rh Exp $
              COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
              COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -1209,7 +1213,7 @@
-             COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
-         fi
-         # NetBSD does not define "unix"
--        CFLAGS="$CFLAGS -Dunix"
-+        CFLAGS="$CFLAGS -Dunix -D_POSIX_THREAD_SYSCALL_SOFT=1"
-         ;;
-     *-*-openbsd*)
-         ARCH=openbsd
-@@ -1769,6 +1773,7 @@
- AM_CONDITIONAL(TARGET_IRIX, test $ARCH = irix)
- AM_CONDITIONAL(TARGET_BSDI, test $ARCH = bsdi)
- AM_CONDITIONAL(TARGET_FREEBSD, test $ARCH = freebsd)
-+AM_CONDITIONAL(TARGET_NETBSD, test $ARCH = netbsd)
- AM_CONDITIONAL(TARGET_OPENBSD, test $ARCH = openbsd)
- AM_CONDITIONAL(TARGET_AIX, test $ARCH = aix)
- AM_CONDITIONAL(TARGET_WIN32, test $ARCH = win32)
-@@ -1788,6 +1793,10 @@
+@@ -1956,6 +1960,10 @@
  
  if test $ARCH = solaris; then
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
 +fi
 +
 +if test $ARCH = netbsd; then
-+  SDL_RLD_FLAGS="-Wl,-R\${exec_prefix}/lib -Wl,-R\${X11BASE}/lib"
++  SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib -Wl,-rpath,${X11BASE}/lib"
  fi
  
- dnl Output the video drivers we use
+ if test $ARCH = openbsd; then
