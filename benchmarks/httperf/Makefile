@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/19 18:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 07:19:25 grant Exp $
 #
 
 DISTNAME=	httperf-0.6
@@ -11,7 +11,7 @@ COMMENT=	Popular web server benchmarking program
 
 LICENSE=	no-commercial-use
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/22 07:15:00 grant Exp $
 #
 
 DISTNAME=		flac-1.1.0
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 
