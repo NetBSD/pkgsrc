@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/01 20:25:03 tron Exp $
+
+--- Makefile.orig	Thu Jun 17 03:19:02 1999
++++ Makefile	Wed Sep  1 21:54:51 1999
+@@ -70,7 +70,7 @@
+ # (Also, see DEBUG_TO_SYSLOG in setup.h.)
+ #
+ #CFLAGS = -O2
+-CFLAGS = -g -DDEBUG
++#CFLAGS = -g -DDEBUG
+ 
+ #
+ # You can create either a dynamic or a static binary (default: dynamic).
+@@ -81,8 +81,8 @@
+ # List of libraries to link our executable with.  Look above for
+ # a section for your OS if you need to adjust this.
+ #
+-LIBS = $(LOCAL_LIBS) -lc
+-#LIBS = $(LOCAL_LIBS)
++#LIBS = $(LOCAL_LIBS) -lc
++LIBS = $(LOCAL_LIBS)
+ 
+ 
+ # Only used to create a preformatted manpage, if you want it
