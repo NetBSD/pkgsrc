@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/07/13 17:51:50 dillo Exp $
+$NetBSD: patch-aa,v 1.4 2004/01/08 15:24:42 adam Exp $
 
---- sound.c.orig	Sun Feb  9 22:24:12 2003
+--- sound.c.orig	2003-02-24 09:33:10.000000000 +0000
 +++ sound.c
-@@ -21,7 +21,7 @@
+@@ -44,7 +44,7 @@
  
  #define DEFDSPRATE 22050
  
