@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.10 2000/05/29 19:44:28 dmcmahill Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.11 2000/08/17 16:16:02 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -40,9 +40,9 @@ is parsed for
 .It Fl R
 Report any binary packages in any subdirs of PKGSRCDIR/packages,
 for whom the source Makefile lists
-.Em RESTRICTED
+.Em NO_BIN_ON_FTP
 or
-.Em LICENCE .
+.Em RESTRICTED .
 This is intended to help those making binary packages available for ftp.
 .It Fl d
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
