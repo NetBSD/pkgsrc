@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/07/25 04:46:10 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/25 04:47:15 grant Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		1
@@ -81,7 +81,7 @@ DOCDIR=			${PREFIX}/share/doc/cfs
 RCD_SCRIPTS=		cfsd
 
 post-extract:
-	${RM} -f ${WRKSRC}/esm.1
+	@${RM} -f ${WRKSRC}/esm.1
 
 post-patch:
 	@cd ${WRKSRC}; for file in *; do				\
