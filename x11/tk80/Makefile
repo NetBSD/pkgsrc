@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/13 02:31:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:37:09 hubertf Exp $
 # New ports collection makefile for:	tk8.0
 # Version required:	tk8.0
 # Date created:		19 August 1997
@@ -18,8 +18,8 @@ LIB_DEPENDS=	tcl80\\.1\\.:${PORTSDIR}/lang/tcl80
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-shared
-CONFIGURE_ENV=  PORTSDIR=${PORTSDIR}
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ENV+=  PORTSDIR=${PORTSDIR}
 
 OPSYS!=         uname -s
 .if (${OPSYS} == "NetBSD")
