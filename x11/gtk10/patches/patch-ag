@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 1999/02/19 14:22:47 rh Exp $
+$NetBSD: patch-ag,v 1.2 1999/05/27 15:10:54 kleink Exp $
 
 --- gtk-config.in.orig	Mon Apr  6 06:31:14 1998
 +++ gtk-config.in	Tue Feb 16 15:28:19 1999
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 1999/02/19 14:22:47 rh Exp $
        ;;
      --libs)
 -      echo -L@libdir@ @x_ldflags@ -lgtk -lgdk -lglib @x_libs@ -lm
-+      echo -L@libdir@ @x_ldflags@ -lgtk10 -lgdk10 -lglib10 @x_libs@ -lm
++      echo -L@libdir@ -Wl,-R@libdir@ @x_ldflags@ -lgtk10 -lgdk10 -lglib10 @x_libs@ -lm
        ;;
      *)
        echo "${usage}" 1>&2
