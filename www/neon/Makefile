@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/07 22:30:33 minskim Exp $
 
 DISTNAME=		neon-0.24.4
 CATEGORIES=		www
@@ -8,7 +8,9 @@ MAINTAINER=		epg@pretzelnet.org
 HOMEPAGE=		http://www.webdav.org/neon/
 COMMENT=		HTTP and WebDAV client library
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		# defined
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	neon.pc.in
 
@@ -19,8 +21,8 @@ CONFIGURE_ARGS+=	--enable-shared
 
 TEST_TARGET=		check
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
