@@ -1,10 +1,15 @@
-$NetBSD: patch-ah,v 1.4 2000/11/09 03:35:34 hubertf Exp $
+$NetBSD: patch-ah,v 1.5 2001/02/08 19:11:37 jlam Exp $
 
---- src/osdep/unix/env_unix.c.orig	Wed Oct 25 01:40:48 2000
+--- src/osdep/unix/env_unix.c.orig	Thu Dec 21 01:12:13 2000
 +++ src/osdep/unix/env_unix.c
-@@ -1211,7 +1211,7 @@
+@@ -1273,8 +1273,12 @@
+   DRIVER *d;
    FILE *f = fopen (file,"r");
  				/* no file or ill-advised usage */
++  /*
++   * pkgsrc: don't require the "I accept the risk for..." outdated string at
++   * the top of /etc/c-client.cf.
++   */
    if (!(f && (s = fgets (tmp,MAILTMPLEN,f)) && (t = strchr (s,'\n')) &&
 -	(flag ||
 +	(1 ||

@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.3 2000/12/17 18:25:44 jlam Exp $
+$NetBSD: patch-aj,v 1.4 2001/02/08 19:11:38 jlam Exp $
 
---- src/osdep/unix/Makefile.ssl.orig	Sat Oct 28 15:09:55 2000
+--- src/osdep/unix/Makefile.ssl.orig	Thu Feb  1 17:30:24 2001
 +++ src/osdep/unix/Makefile.ssl
 @@ -20,8 +20,8 @@
  
@@ -8,7 +8,7 @@ $NetBSD: patch-aj,v 1.3 2000/12/17 18:25:44 jlam Exp $
  
 -SSLDIR=/usr/local/ssl
 -SSLCERTS=$(SSLDIR)/certs
-+SSLDIR=${SSLBASE}
++#SSLDIR=/usr/local/ssl
 +#SSLCERTS=$(SSLDIR)/certs
  SSLINCLUDE=$(SSLDIR)/include
  SSLLIB=$(SSLDIR)/lib
