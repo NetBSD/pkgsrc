@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/16 14:10:14 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/27 18:20:11 tron Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --enable-hc-boot --libdir=${PREFIX}/lib/ghc
-CONFIGURE_ENV+=	HASKELL_OBJ_FMT=`cat ${WRKDIR}/obj_fmt`
+CONFIGURE_ENV+=	HASKELL_OBJ_FMT=${OBJECT_FMT}
 WRKSRC=		${WRKDIR}/fptools
 
 # a number of non-i386 platforms, including solaris/sparc, osf/alpha
@@ -32,12 +32,6 @@ ONLY_FOR_PLATFORM= NetBSD-*-i386
 # won't try to create them.
 #
 pre-configure:
-	(	lnl=${WRKDIR}/longandlow; \
-		${ECHO} 'int main(){exit(0);}' > $$lnl.c && \
-		${CC} $$lnl.c -o $$lnl && \
-		file $$lnl | ( ${EGREP} '[^a-zA-Z][Ee][Ll][Ff][^a-zA-Z]' && \
-		${ECHO} ELF || ${ECHO} a.out ) \
-	) > ${WRKDIR}/obj_fmt
 	${SED} < ${WRKSRC}/ghc/driver/ghc.lprl \
 	       > ${WRKSRC}/ghc/driver/ghc.lprl.hacked \
 		'/push(@SysLibrary, "-l$LibGmp")/s%^%push(@SysLibrary, "-L'${PREFIX}/lib'");%' && \
