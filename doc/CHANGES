@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6549 2004/07/14 08:03:16 jdolecek Exp $
+$NetBSD: CHANGES,v 1.6550 2004/07/14 08:35:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jabberd2 to 2.0s3 [xtraeme 2004-07-14]
 	Added nrg2iso-0.2 [xtraeme 2004-07-14]
 	Updated php4 to 4.3.8 [jdolecek 2004-07-14]
+	Updated apache2 to 2.0.50 [adrianp 2004-07-14]
