@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:25 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/05/16 13:32:07 hubertf Exp $
 
---- xlock/XLock.ad.orig	Wed Oct  1 05:55:32 1997
-+++ xlock/XLock.ad	Mon Oct 13 09:08:42 1997
-@@ -47,9 +47,9 @@
+--- xlock/XLock.ad.orig	Tue May 16 14:28:57 2000
++++ xlock/XLock.ad	Tue May 16 14:29:12 2000
+@@ -53,9 +53,9 @@
  XLock.both3d: Magenta
  
  ! For marquee & nose modes
 -!XLock.program: fortune -o
 -XLock.program: fortune -s
 -!XLock.program: fortune
-+!XLock.program: /usr/games/fortune -o
-+XLock.program: /usr/games/fortune -s
-+!XLock.program: /usr/games/fortune
- !XLock.program: finger
- !XLock.messagesfile: fortune.dat
- !XLock.messagefile: /etc/hosts
++!XLock.program:  /usr/games/fortune -o
++XLock.program:  /usr/games/fortune -s
++!XLock.program:  /usr/games/fortune
+ !XLock.program: /usr/games/fortune -o
+ !XLock.program: /usr/games/fortune -s
+ !XLock.program: /usr/games/fortune
