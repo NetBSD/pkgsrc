@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.175 2003/07/11 22:57:08 zuntum Exp $
+# $NetBSD: Makefile,v 1.176 2003/07/13 22:27:41 wiz Exp $
 #
 
 COMMENT=	Games
 
 SUBDIR+=	0verkill
+SUBDIR+=	KoboDeluxe
 SUBDIR+=	abuse
 SUBDIR+=	adom
 SUBDIR+=	amor
 SUBDIR+=	an
 SUBDIR+=	angband-tty
 SUBDIR+=	angband-x11
+SUBDIR+=	asc
 SUBDIR+=	backgammon
 SUBDIR+=	baduki
 SUBDIR+=	battalion
