@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7191 2004/09/21 02:24:32 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7192 2004/09/21 07:43:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4298,3 +4298,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated physfs to 1.0.0 [wiz 2004-09-21]
 	Updated fastcap to 2.0.19920918 [dmcmahill 2004-09-21]
 	Updated verilog-current to 20040915 [dmcmahill 2004-09-21]
+	Updated bidwatcher to 1.3.16 [tron 2004-09-21]
