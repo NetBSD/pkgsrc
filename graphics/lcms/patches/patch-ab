@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/07 08:22:52 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2002/03/15 03:58:45 markd Exp $
 
 --- source/cmsmtrx.c	Thu May 18 18:08:13 2000
 +++ source/cmsmtrx.c	Mon Oct 30 09:53:39 2000
@@ -9,9 +9,5 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/07 08:22:52 skrll Exp $
 @@ -250,3 +251,3 @@
  #ifdef USE_INT64
 -       __int64 l = (__int64) a * b + 0x8000i64;
-+       u_int64_t l = (u_int64_t) a * b + (u_int64_t)0x8000;
++       uint64_t l = (uint64_t) a * b + (uint64_t)0x8000;
         return (Fixed32) (l >> 16);
-@@ -711,2 +712,2 @@
-        VEC3scaleAndCut(&r -> v[2], &v -> v[2], d);
--}
-+}
