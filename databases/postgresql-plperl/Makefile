@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/04/04 07:41:03 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/22 22:00:51 jlam Exp $
 
 PKGNAME=		postgresql-plperl-${BASE_VERS}
 COMMENT=		PL/Perl procedural language for the PostgreSQL backend
 
 DEPENDS+=		postgresql-server>=${BASE_VERS}:../../databases/postgresql-server
-DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
+DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
 
 LIBPERL5_REQD=		${PERL5_REQD}
 USE_BUILDLINK_ONLY=	YES

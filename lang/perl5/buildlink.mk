@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/12/11 06:08:58 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/07/22 22:00:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -10,7 +10,11 @@
 
 .include "../../mk/bsd.buildlink.mk"
 
+.if ${OPSYS} == "Darwin"
+PERL5_REQD?=			5.8.0
+.else
 PERL5_REQD?=			5.0
+.endif
 BUILDLINK_DEPENDS.perl?=	perl>=${PERL5_REQD}
 
 BUILDLINK_PREFIX.perl?=	${LOCALBASE}

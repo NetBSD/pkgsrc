@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/13 17:36:58 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2002/07/22 22:00:52 jlam Exp $
 
 DISTNAME=		gnucash-1.6.6
 PKGREVISION=		1
@@ -14,7 +14,7 @@ COMMENT=		Personal double-entry accounting program
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		g-wrap>=1.1.10:../../devel/g-wrap
 DEPENDS+=		guppi>=0.40.0nb1:../../math/guppi
-DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
+DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
 DEPENDS+=		popt>=1.5:../../devel/popt
 DEPENDS+=		swig-1.1p5:../../devel/swig
 DEPENDS+=		glib>=0.99.7:../../devel/glib
