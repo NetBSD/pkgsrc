@@ -1,0 +1,67 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:57 zuntum Exp $
+bin/clisp
+lib/clisp/clisp-link
+lib/clisp/full/lisp.run
+lib/clisp/full/lispinit.mem
+lib/clisp/full/libavcall.a
+lib/clisp/full/libcallback.a
+lib/clisp/full/libiconv.a
+lib/clisp/full/libintl.a
+lib/clisp/full/libnoreadline.a
+lib/clisp/full/libreadline.a
+lib/clisp/full/libsigsegv.a
+lib/clisp/full/lisp.a
+lib/clisp/full/makevars
+lib/clisp/full/modules.h
+lib/clisp/full/modules.o
+lib/clisp/data/UnicodeData.txt
+lib/clisp/linkkit/modules.d
+lib/clisp/linkkit/modules.c
+lib/clisp/linkkit/clisp.h
+lib/clisp/base/libavcall.a
+lib/clisp/base/libcallback.a
+lib/clisp/base/libiconv.a
+lib/clisp/base/libintl.a
+lib/clisp/base/libnoreadline.a
+lib/clisp/base/libreadline.a
+lib/clisp/base/libsigsegv.a
+lib/clisp/base/lisp.a
+lib/clisp/base/lisp.run
+lib/clisp/base/lispinit.mem
+lib/clisp/base/makevars
+lib/clisp/base/modules.h
+lib/clisp/base/modules.o
+@dirrm lib/clisp/full
+@dirrm lib/clisp/linkkit
+@dirrm lib/clisp/data
+@dirrm lib/clisp/base
+@dirrm lib/clisp
+man/man1/clisp.1
+man/man3/clreadline.3
+share/doc/clisp/clisp.html
+share/doc/clisp/clreadline.html
+share/doc/clisp/ANNOUNCE
+share/doc/clisp/README.es
+share/doc/clisp/README.de
+share/doc/clisp/README
+share/doc/clisp/NEWS
+share/doc/clisp/SUMMARY
+share/doc/clisp/GNU-GPL
+share/doc/clisp/COPYRIGHT
+share/doc/clisp/MAGIC.add
+share/doc/clisp/clisp.1
+share/doc/clisp/readline.dvi
+share/doc/clisp/clreadline.dvi
+share/doc/clisp/clreadline.3
+share/doc/clisp/clisp.gif
+share/doc/clisp/impnotes.html
+share/doc/clisp/editors.txt
+share/doc/clisp/CLOS-guide.txt
+share/doc/clisp/LISP-tutorial.txt
+share/doc/clisp/clisp.dvi
+@dirrm share/doc/clisp
+share/locale/en/LC_MESSAGES/clisp.mo
+share/locale/de/LC_MESSAGES/clisp.mo
+share/locale/fr/LC_MESSAGES/clisp.mo
+share/locale/es/LC_MESSAGES/clisp.mo
+share/locale/nl/LC_MESSAGES/clisp.mo

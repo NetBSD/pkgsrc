@@ -1,0 +1,11 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:24:30 zuntum Exp $
+
+Note: Perl no longer installs manual pages for Perl library functions,
+such as "open" or "Data::Dumper", into section 3 of the system manual
+("man3").
+
+Use the "perldoc" program instead to obtain documentation for Perl
+library functions.
+
+======================================================================
