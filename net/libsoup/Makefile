@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/05 22:54:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/11 03:06:30 xtraeme Exp $
 #
 
 DISTNAME=		libsoup-1.99.26
@@ -10,7 +10,7 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		HTTP library implementation in C
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -19,8 +19,8 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/soup-2.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
