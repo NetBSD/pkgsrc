@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.359 2003/03/10 11:12:27 wiz Exp $
+$NetBSD: TODO,v 1.360 2003/03/10 23:03:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -96,7 +96,7 @@ Suggested package updates
 	o coreutils-4.5.7 (was fileutils/sh-utils/textutils)
 	o crafty-19.1
 	o crossfire-1.5.0 [pkg/20504]
-	o ctwm-3.6
+	o ctwm-3.6 [pkg/20648]
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.0
 	o dillo-0.7.0
@@ -226,7 +226,6 @@ Suggested package updates
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
-	o sodipodi-0.31
 	o spamassassin-2.50 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
