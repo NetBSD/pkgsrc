@@ -1,0 +1,45 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/08/25 19:40:16 gson Exp $
+
+--- md.h.orig	Tue Jan 15 22:20:40 2002
++++ md.h
+@@ -245,6 +245,40 @@
+   (void) gettimeofday(&tv, NULL); \
+   return (tv.tv_sec * 1000000LL + tv.tv_usec)
+ 
++#elif defined (NETBSD)
++
++#define MD_STACK_GROWS_DOWN
++#define MD_USE_BSD_ANON_MMAP
++#define MD_ACCEPT_NB_INHERITED
++#define MD_ALWAYS_UNSERIALIZED_ACCEPT
++#define MD_HAVE_SOCKLEN_T
++
++#define MD_SETJMP(env) _setjmp(env)
++#define MD_LONGJMP(env, val) _longjmp(env, val)
++
++#if __sparc__
++#define MD_INIT_CONTEXT(_thread, _sp, _main) \
++  ST_BEGIN_MACRO                             \
++  (void) MD_SETJMP((_thread)->context);      \
++  (_thread)->context[0] = (long) (_sp);      \
++  (_thread)->context[1] = (long) (_main) - 8; \
++  ST_END_MACRO
++#elif __i386__
++#define MD_INIT_CONTEXT(_thread, _sp, _main) \
++  ST_BEGIN_MACRO                             \
++  (void) MD_SETJMP((_thread)->context);      \
++  (_thread)->context[0] = (long) _main;      \
++  (_thread)->context[2] = (long) (_sp);      \
++  ST_END_MACRO
++#else
++#error Unsupported architecture
++#endif
++
++#define MD_GET_UTIME()            \
++  struct timeval tv;              \
++  (void) gettimeofday(&tv, NULL); \
++  return (tv.tv_sec * 1000000LL + tv.tv_usec)
++
+ #elif defined (OPENBSD)
+ 
+ #define MD_STACK_GROWS_DOWN
