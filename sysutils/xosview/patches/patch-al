@@ -1,18 +1,12 @@
-$NetBSD: patch-al,v 1.1 2003/09/30 23:03:59 christos Exp $
+$NetBSD: patch-al,v 1.2 2003/10/01 00:33:54 christos Exp $
 
 --- fieldmeter.cc.orig	1999-02-16 09:08:35.000000000 -0500
-+++ fieldmeter.cc	2003-09-30 18:42:06.000000000 -0400
-@@ -6,6 +6,7 @@
- //
- // $Id: patch-al,v 1.1 2003/09/30 23:03:59 christos Exp $
++++ fieldmeter.cc	2003-09-30 20:28:39.000000000 -0400
+@@ -8,2 +8,3 @@
  //
 +#include <iostream>
  #include <fstream.h>
- #include <stdlib.h>
- #include "snprintf.h"
-@@ -294,14 +295,14 @@
- bool FieldMeter::checkX(int x, int width) const {
-   if ((x < x_) || (x + width < x_)
+@@ -296,10 +297,10 @@
        || (x > x_ + width_) || (x + width > x_ + width_)){
 -    cerr << "FieldMeter::checkX() : bad horiz values for meter : "
 -         << name() << endl;
@@ -28,5 +22,3 @@ $NetBSD: patch-al,v 1.1 2003/09/30 23:03:59 christos Exp $
 +      std::cerr <<"fields_[" <<i <<"] = " <<fields_[i] <<",";
 +    std::cerr <<std::endl;
  
-     return false;
-   }

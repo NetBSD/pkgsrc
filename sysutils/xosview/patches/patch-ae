@@ -1,20 +1,14 @@
-$NetBSD: patch-ae,v 1.8 2003/09/30 23:03:59 christos Exp $
+$NetBSD: patch-ae,v 1.9 2003/10/01 00:33:54 christos Exp $
 
 --- bsd/cpumeter.cc.orig	1999-02-16 09:09:22.000000000 -0500
-+++ bsd/cpumeter.cc	2003-09-30 18:34:41.000000000 -0400
-@@ -15,6 +15,9 @@
- // $Id: patch-ae,v 1.8 2003/09/30 23:03:59 christos Exp $
- //
++++ bsd/cpumeter.cc	2003-09-30 20:27:45.000000000 -0400
+@@ -17,2 +17,5 @@
  #include <sys/dkstat.h>         //  For CPUSTATES #define.  BCG
 +#if defined(XOSVIEW_NETBSD) && !defined(CPUSTATES)
 +#include <sys/sched.h>
 +#endif
  #include <stdlib.h>		//  For use of atoi  BCG
- #include "general.h"
- #include "cpumeter.h"
-@@ -109,13 +112,13 @@
-     static int firstTime = 1;
-     if (firstTime) {
+@@ -111,9 +114,9 @@
        fprintf(stderr,
 -"  Warning:  the CPU tick counters are not changing.  This could
 -be due to running a kernel besides /netbsd (or the equivalent for FreeBSD).
@@ -31,5 +25,3 @@ $NetBSD: patch-ae,v 1.8 2003/09/30 23:03:59 christos Exp $
 +" (or in lieu of -- it ought to get fixed faster if you contact me"
 +" directly).  Thanks!\n");
        firstTime = 0;
-     }
-   }
