@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6468 2004/07/06 14:41:45 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6469 2004/07/06 14:54:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3276,3 +3276,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.8 [xtraeme 2004-07-06]
 	Added elmo-1.2.0 [xtraeme 2004-07-06]
 	Added gzrecover-0.2 [xtraeme 2004-07-06]
+	Added libhydrogen-0.8.0 [xtraeme 2004-07-06]
+	Added hydrogen-0.8.0 [xtraeme 2004-07-06]
