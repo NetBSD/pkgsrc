@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/12/24 00:17:25 cjep Exp $
+$NetBSD: distinfo,v 1.2 2004/05/23 23:28:29 danw Exp $
 
 SHA1 (fplsa.zoo) = 05133200b31dc6294cb2e085b3ad478d4b5b87c5
 Size (fplsa.zoo) = 206427 bytes
+SHA1 (patch-aa) = cc93cf7a25adcf1ea9d58ae87200519538f96e26
