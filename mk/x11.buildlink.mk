@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.7 2001/10/07 20:19:00 veego Exp $
+# $NetBSD: x11.buildlink.mk,v 1.8 2001/10/09 18:18:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -26,18 +26,18 @@ BUILDLINK_X11_DIR?=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 
-.if !defined(BUILDLINK_X11_CPPFLAGS) || !defined(BUILDLINK_X11_LDFLAGS)
-BUILDLINK_X11_CPPFLAGS=	-I${BUILDLINK_X11_DIR}/include
-BUILDLINK_X11_LDFLAGS=	-L${BUILDLINK_X11_DIR}/lib -Wl,-R${X11BASE}/lib
+.if !defined(_BUILDLINK_X11_CPPFLAGS) || !defined(_BUILDLINK_X11_LDFLAGS)
+_BUILDLINK_X11_CPPFLAGS=	-I${BUILDLINK_X11_DIR}/include
+_BUILDLINK_X11_LDFLAGS=		-L${BUILDLINK_X11_DIR}/lib -Wl,-R${X11BASE}/lib
 
 # We just append to these values, as there's no need for the BUILDLINK_X11
 # flags to be listed in the beginning; these are just the X11R6 headers and
 # libraries and they're often specified last.
 #
-CFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
-CXXFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
-CPPFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
-LDFLAGS+=		${BUILDLINK_X11_LDFLAGS}
+CFLAGS+=		${_BUILDLINK_X11_CPPFLAGS}
+CXXFLAGS+=		${_BUILDLINK_X11_CPPFLAGS}
+CPPFLAGS+=		${_BUILDLINK_X11_CPPFLAGS}
+LDFLAGS+=		${_BUILDLINK_X11_LDFLAGS}
 .endif
 
 # Tell packages that use GNU configure where to find the X11R6 headers and
