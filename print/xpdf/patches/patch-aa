@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2002/09/19 01:45:43 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/03 10:50:09 adam Exp $
 
---- Makefile.in.orig	Mon May 20 23:40:09 2002
+--- Makefile.in.orig	2004-01-22 01:26:44.000000000 +0000
 +++ Makefile.in
 @@ -13,6 +13,7 @@ DESTDIR =
  prefix = @prefix@
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2002/09/19 01:45:43 jlam Exp $
  
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -79,12 +80,12 @@ install: dummy
+@@ -95,12 +96,12 @@ install: dummy
  	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
  	-mkdir -p $(DESTDIR)@mandir@/man5
  	$(INSTALL_DATA) $(srcdir)/doc/xpdfrc.5 $(DESTDIR)@mandir@/man5/xpdfrc.5
