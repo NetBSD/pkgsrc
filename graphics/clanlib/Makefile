@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/08/25 19:22:46 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/09/21 12:49:55 jlam Exp $
 
 DISTNAME=		ClanLib-0.4.4
 PKGREVISION=		2
@@ -9,11 +9,13 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 COMMENT=		The ClanLib Game SDK
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-asm386
@@ -34,14 +36,12 @@ MAKE_ENV+=		X11BASE="${X11BASE}"
 post-patch:
 	${CHMOD} +x ${WRKSRC}/configure
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../graphics/hermes/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 
-.include "../../graphics/hermes/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if ${OPSYS} == "NetBSD"
