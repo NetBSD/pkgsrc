@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8649 2005/01/07 13:29:12 adam Exp $
+$NetBSD: CHANGES,v 1.8650 2005/01/07 15:54:14 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_install to 20050106 [agc 2005-01-07]
 	Updated gwenview to 1.1.7a [markd 2005-01-07]
 	Updated netpbm to 10.18.18 [adam 2005-01-07]
+	Updated xmms-meta-timidity to 0.2 [ben 2005-01-07]
