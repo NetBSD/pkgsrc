@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9320 2005/02/26 16:28:02 wiz Exp $
+$NetBSD: CHANGES,v 1.9321 2005/02/26 16:40:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ppower-0.1.5 [dsainty 2005-02-26]
 	Updated emacs to 21.4a [wiz 2005-02-26]
 	Updated leim to 21.4 [wiz 2005-02-26]
+	Updated fontconfig to 2.2.99 [wiz 2005-02-26]
