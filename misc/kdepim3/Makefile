@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/11/28 18:35:48 kleink Exp $
+# $NetBSD: Makefile,v 1.36 2004/12/06 13:12:04 gavan Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 PKGREVISION=	2
@@ -10,6 +10,7 @@ COMMENT=	Personal Information Management tools for the KDE desktop
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PERL=		run
+USE_GNU_TOOLS+=		awk yacc
 
 BUILDLINK_DEPENDS.gpgme+=     gpgme>=0.4.5
 
