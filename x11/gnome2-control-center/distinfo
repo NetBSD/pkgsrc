@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2004/11/19 17:32:20 sketch Exp $
+$NetBSD: distinfo,v 1.16 2005/02/22 22:00:58 jmmv Exp $
 
-SHA1 (control-center-2.8.1.tar.bz2) = e78d007de3788b5697d9177e9d3a2efe12084c44
-Size (control-center-2.8.1.tar.bz2) = 2547071 bytes
+SHA1 (control-center-2.8.2.tar.bz2) = 13dbc0761bba792b563fa800a44b977e793a8508
+Size (control-center-2.8.2.tar.bz2) = 2806342 bytes
 SHA1 (patch-aa) = 826bd6ef91135a61a86450ff150662156c833ae8
 SHA1 (patch-ab) = 15d24efe8e39d948b5663e641f47ea41b815e17d
 SHA1 (patch-ac) = e2df2c5ffc0841f409985eafbafb96c5c9a5551a
