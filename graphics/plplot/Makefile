@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/02 05:40:26 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/08 09:54:30 jtb Exp $
 
-DISTNAME=	plplot4p99j
-PKGNAME=	plplot-4.99
+DISTNAME=	plplot-5.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.uniovi.es/pub6/graphics/plotting/ \
-		ftp://dino.ph.utexas.edu/plplot/distrib/alpha/ \
-		ftp://ftp.u-aizu.ac.jp/pub/misc/tools/plot/plplot/distrib/alpha/ \
-		ftp://ftp.che.utexas.edu/pub/graphics/
+MASTER_SITES=	ftp://plplot.sourceforge.net/pub/plplot/
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://www.plplot.org/

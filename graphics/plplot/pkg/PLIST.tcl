@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST.tcl,v 1.1.1.1 2000/12/02 05:40:30 jtb Exp $
+@comment $NetBSD: PLIST.tcl,v 1.2 2000/12/08 09:54:31 jtb Exp $
 bin/plm2gif
 bin/plpr
 bin/plrender
 bin/pltcl
 bin/pltek
 include/plplot/pdf.h
+include/plplot/plConfig.h
+include/plplot/pldebug.h
 include/plplot/plevent.h
 include/plplot/plplot.h
 include/plplot/plplotP.h
@@ -15,11 +17,14 @@ include/plplot/plxwd.h
 include/plplot/tclMatrix.h
 lib/plplot/cglobe.map
 lib/plplot/globe.map
+lib/plplot/libMatrix.a
+lib/plplot/libPLcxx.a
 lib/plplot/libplplotdb.a
 lib/plplot/plstnd5.fnt
 lib/plplot/plxtnd5.fnt
 lib/plplot/usa.map
 lib/plplot/usaglobe.map
+libdata/plplot/tcl/tclIndex
 share/doc/plplot/CHANGES
 share/doc/plplot/COPYING.LIB
 share/doc/plplot/Copyright
@@ -30,6 +35,8 @@ share/doc/plplot/README.local
 share/doc/plplot/ToDo
 share/doc/plplot/mklinks
 share/examples/plplot/Makefile
+share/examples/plplot/c++/Makefile
+share/examples/plplot/c++/x01cc.cc
 share/examples/plplot/c/Makefile
 share/examples/plplot/c/plcdemos.h
 share/examples/plplot/c/tutor.c
@@ -67,29 +74,11 @@ share/examples/plplot/f77/x11f.f
 share/examples/plplot/f77/x12f.f
 share/examples/plplot/f77/x13f.f
 share/examples/plplot/f77/x16f.f
-share/examples/plplot/python/tutorpy
-share/examples/plplot/python/x01py
-share/examples/plplot/python/x02py
-share/examples/plplot/python/x03py
-share/examples/plplot/python/x04py
-share/examples/plplot/python/x05py
-share/examples/plplot/python/x06py
-share/examples/plplot/python/x07py
-share/examples/plplot/python/x08py
-share/examples/plplot/python/x09py
-share/examples/plplot/python/x10py
-share/examples/plplot/python/x11py
-share/examples/plplot/python/x12py
-share/examples/plplot/python/x13py
-share/examples/plplot/python/x14py
-share/examples/plplot/python/x15py
-share/examples/plplot/python/x16py
-share/examples/plplot/python/x17py
-share/examples/plplot/python/x18py
-share/examples/plplot/python/x19py
 share/examples/plplot/tcl/plgrid.tcl
 share/examples/plplot/tcl/plot.dat
 share/examples/plplot/tcl/plot.tcl
+share/examples/plplot/tcl/r.dat
+share/examples/plplot/tcl/stats.log
 share/examples/plplot/tcl/tcldemos.tcl
 share/examples/plplot/tcl/x01.tcl
 share/examples/plplot/tcl/x02.tcl
@@ -107,36 +96,13 @@ share/examples/plplot/tcl/x13.tcl
 share/examples/plplot/tcl/x14.tcl
 share/examples/plplot/tcl/x15.tcl
 share/examples/plplot/tcl/x16.tcl
-share/examples/plplot/tk/Makefile
-share/examples/plplot/tk/tk01
-share/examples/plplot/tk/tk02
-share/examples/plplot/tk/tk03
-share/examples/plplot/tk/tk04
-share/examples/plplot/tk/tkdemos.tcl
-share/examples/plplot/tk/x01.tcl
-share/examples/plplot/tk/x02.tcl
-share/examples/plplot/tk/x03.tcl
-share/examples/plplot/tk/x04.tcl
-share/examples/plplot/tk/x05.tcl
-share/examples/plplot/tk/x06.tcl
-share/examples/plplot/tk/x07.tcl
-share/examples/plplot/tk/x08.tcl
-share/examples/plplot/tk/x09.tcl
-share/examples/plplot/tk/x10.tcl
-share/examples/plplot/tk/x11.tcl
-share/examples/plplot/tk/x12.tcl
-share/examples/plplot/tk/x13.tcl
-share/examples/plplot/tk/x14.tcl
-share/examples/plplot/tk/x15.tcl
-share/examples/plplot/tk/x16.tcl
-share/examples/plplot/tk/xtk01.c
-share/examples/plplot/tk/xtk02.c
-share/examples/plplot/tk/xtk04.c
-@dirrm share/examples/plplot/tk
+share/examples/plplot/tcl/x17.tcl
+share/examples/plplot/tcl/x18.tcl
 @dirrm share/examples/plplot/tcl
-@dirrm share/examples/plplot/python
 @dirrm share/examples/plplot/f77
+@dirrm share/examples/plplot/c++
 @dirrm share/examples/plplot/c
 @dirrm share/examples/plplot
 @dirrm share/doc/plplot
 @dirrm lib/plplot
+@dirrm include/plplot
