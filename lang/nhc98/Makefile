@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/01/24 13:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/19 23:14:35 kristerw Exp $
 
-DISTNAME=		nhc98src-1.14a
-PKGNAME=		nhc98-1.14a
+DISTNAME=		nhc98src-1.16
+PKGNAME=		nhc98-1.16
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/
 
@@ -35,5 +35,4 @@ post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* | ${XARGS} ${RM} -rf
 
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
