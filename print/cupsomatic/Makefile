@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2000/12/12 11:14:49 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/21 15:02:26 jlam Exp $
 
-DISTNAME=	all-com-ppds
-PKGNAME=	cupsomatic-20001211
+DISTNAME=	cupsomatic
+PKGNAME=	cupsomatic-1.3
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/
+EXTRACT_SUFX=	# empty
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.linuxprinting.org/cups-doc.html
+
+CONFLICTS+=	cupsomatic-200012??
 
 DIST_SUBDIR=	${PKGNAME}
 
@@ -14,13 +17,12 @@ DEPENDS+=	cups>=1.1.1:../../print/cups
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	mpage-[0-9]*:../../print/mpage
 
-WRKSRC=		${WRKDIR}/cupsomatic-ppd
-
 USE_PERL5=	# defined
+NO_WRKSUBDIR=	# defined
 NO_CONFIGURE=	# defined
+EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/cupsomatic
 
 FILTERDIR=	${PREFIX}/libexec/cups/filter
-MODELDIR=	${PREFIX}/share/cups/model
 
 post-extract:
 	cd ${WRKSRC}; ${MV} cupsomatic cupsomatic.in
@@ -32,10 +34,5 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cupsomatic ${FILTERDIR}
-	cd ${WRKSRC}/ppd; for dir in *; do \
-		( cd $${dir}; for file in *.ppd; do \
-			${INSTALL_DATA} $${file} ${MODELDIR}/$${dir}-$${file}; \
-		  done ); \
-	done
 
 .include "../../mk/bsd.pkg.mk"
