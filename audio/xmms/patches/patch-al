@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.5 2002/03/21 18:52:32 drochner Exp $
+$NetBSD: patch-al,v 1.6 2003/04/15 05:48:19 grant Exp $
 
 --- xmms/Makefile.in.orig	Mon Mar  4 22:58:25 2002
 +++ xmms/Makefile.in	Thu Mar 21 13:01:51 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-al,v 1.5 2002/03/21 18:52:32 drochner Exp $
  bin_PROGRAMS = xmms
  
 -xmms_LDFLAGS = -export-dynamic
-+xmms_LDFLAGS = -export-dynamic -Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
++xmms_LDFLAGS = -export-dynamic $(WHOLE_ARCHIVE_FLAG) -Wl,-lgcc $(NO_WHOLE_ARCHIVE_FLAG)
  xmms_LDADD =  @GTK_LIBS@ @PTHREAD_LIBS@ @SM_LIBS@ @VM_LIBS@ \
  @POSIX_LIBS@ $(top_builddir)/libxmms/libxmms.la @INTLLIBS@
  
