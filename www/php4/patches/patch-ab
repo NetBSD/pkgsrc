@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2001/03/13 21:34:03 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/05/01 17:56:46 jlam Exp $
 
 --- configure.orig	Thu Jan 11 13:39:29 2001
 +++ configure
@@ -10,6 +10,32 @@ $NetBSD: patch-ab,v 1.5 2001/03/13 21:34:03 jlam Exp $
  #include <sys/socket.h>
  #include <netinet/in.h>
  int main() {
+@@ -23088,12 +23089,7 @@
+ 
+   LIBS=$old_LIBS
+   LDFLAGS="$old_LDFLAGS"
+-  if test "$ac_cv_lib_mcrypt_init_mcrypt" = "yes"; then
+-	cat >> confdefs.h <<\EOF
+-#define HAVE_LIBMCRYPT22 1
+-EOF
+-
+-  elif test "$ac_cv_lib_mcrypt_mcrypt_module_open" = "yes"; then
++  if test "$ac_cv_lib_mcrypt_mcrypt_module_open" = "yes"; then
+     
+  case "ltdl" in
+  c|c_r|pthread*) ;;
+@@ -23110,6 +23106,11 @@
+ #define HAVE_LIBMCRYPT24 1
+ EOF
+ 
++  elif test "$ac_cv_lib_mcrypt_init_mcrypt" = "yes"; then
++	cat >> confdefs.h <<\EOF
++#define HAVE_LIBMCRYPT22 1
++EOF
++
+   else
+     { echo "configure: error: Sorry" 1>&2; exit 1; }
+   fi
 @@ -40176,6 +40177,7 @@
  fi
  
