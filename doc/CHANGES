@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4404 2004/01/09 17:18:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4405 2004/01/09 19:15:19 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -129,3 +129,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gd to 2.0.20 [adam 2004-01-09]
 	Removed bonobo-activation [xtraeme 2004-01-09]
 	Added darkice-0.13.2 [xtraeme 2004-01-09]
+	Added jgrasp-1.6.4 [jschauma 2004-01-09]
