@@ -1,0 +1,11 @@
+--- instapkg.tcl.orig	Wed Aug 30 16:47:41 2000
++++ instapkg.tcl	Wed Aug 30 16:50:16 2000
+@@ -22,7 +22,7 @@
+     exit 1
+ }
+ 
+-if {[catch {package require stooop 3.7} message]} {
++if {[catch {package require stooop} message]} {
+     puts stderr "stooop package must be installed first: $message"
+     exit 1
+ }
