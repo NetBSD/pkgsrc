@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2003/12/04 14:48:17 agc Exp $
+# $NetBSD: Makefile,v 1.63 2004/01/09 20:43:02 jlam Exp $
 #
 
 DISTNAME=		openldap-2.1.22
@@ -14,7 +14,9 @@ COMMENT=		Lightweight directory access protocol server and client package
 
 CONFLICTS+=		ldapsdk-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -39,18 +41,16 @@ CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--enable-ldbm
 CONFIGURE_ARGS+=	--enable-crypt
 
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.db4}/include/db4
-
 BUILD_DEFS+=		USE_SASL USE_SASL2
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_SASL2) && (${USE_SASL2} == "YES")
-.include "../../security/cyrus-sasl2/buildlink2.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .elif defined(USE_SASL) && (${USE_SASL} == "YES")
-.include "../../security/cyrus-sasl/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
@@ -102,10 +102,10 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${f}.default;		\
 	done
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 CONFIGURE_ARGS+=	--with-threads
