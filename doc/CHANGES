@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2069 2003/04/28 16:25:04 tron Exp $
+$NetBSD: CHANGES,v 1.2070 2003/04/28 20:51:55 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1768,3 +1768,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mimedefang to 2.33 [markd 2003-04-28]
 	Updated gtkglext to 0.7.1 [jmmv 2003-04-28]
 	Updated netpbm to 10.11.8 [tron 2003-04-28]
+	Updated nmap to 3.27 [salo 2003-04-28]
+	Updated nmapfe to 0.95nb4 [salo 2003-04-28]
