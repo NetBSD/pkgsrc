@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8224 2004/12/03 12:59:11 agc Exp $
+$NetBSD: CHANGES,v 1.8225 2004/12/03 13:03:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated napshare to 1.3 [wiz 2004-12-03]
 	Updated gtkspell to 2.0.8 [adam 2004-12-03]
 	Updated gaim to 1.1.0 [adam 2004-12-03]
+	Updated nosefart to 2.3 [wiz 2004-12-03]
