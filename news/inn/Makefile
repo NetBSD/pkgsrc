@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2004/05/23 14:40:00 tron Exp $
+# $NetBSD: Makefile,v 1.57 2004/06/02 11:43:55 tron Exp $
 
-DISTNAME=		inn-${INN_VERSION}
-PKGREVISION=		1
+DISTNAME=		inn-2.4.1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -13,7 +12,6 @@ COMMENT=		The public release of InterNet News (INN)
 
 CONFLICTS+=		nntpclnt-[0-9]*
 
-INN_VERSION=		2.3.5
 .include "Makefile.common"
 BUILD_DEFS+=		INN_DATA_DIR INN_USER INN_GROUP
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
@@ -25,7 +23,9 @@ GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
 CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--enable-uucp-rnews 				\
 			--mandir=${PREFIX}/man 				\
-			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp	\
+			--with-perl					\
+			--with-openssl=${SSLBASE}			\
+			--with-tmp-dir=${INN_DATA_DIR}/tmp		\
 			--with-db-dir=${INN_DATA_DIR}/db 		\
 			--with-etc-dir=${INN_DATA_DIR}/etc 		\
 			--with-log-dir=${INN_DATA_DIR}/log 		\
@@ -69,17 +69,7 @@ RCD_SCRIPTS=		innd
 
 .include "../../mk/bsd.prefs.mk"
 
-# IPv6 support
-#
-# The IPv6 patch is somewhat broken unfortunately. It uses APIs which often
-# are not available under operating systems without IPv4 support. We therefore
-# apply it only if we really want IPv6 support.
-
 .if defined(USE_INET6) && ${USE_INET6} == YES
-PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
-PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
-PATCH_DIST_STRIP=	-p1
-
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
@@ -115,10 +105,10 @@ post-install:
 	${RM} -f ${PREFIX}/bin/inews
 	${LN} -s ../inn/bin/inews ${PREFIX}/bin/inews
 	${INSTALL_DATA_DIR} ${PREFIX}/include/inn
-	${INSTALL_DATA} ${WRKSRC}/include/config.h ${PREFIX}/include/inn
-	${INSTALL_DATA} ${WRKSRC}/include/dbz.h ${PREFIX}/include/inn
-	${INSTALL_DATA} ${WRKSRC}/include/libinn.h ${PREFIX}/include/inn
-	${INSTALL_DATA} ${WRKSRC}/include/storage.h ${PREFIX}/include/inn
+	cd ${PREFIX}/include/inn;					\
+	for FILE in config.h dbz.h libinn.h storage.h; do		\
+	  ${LN} -s ${INN_PREFIX}/include/$$FILE $$FILE;			\
+	done
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	for FILE in `ls -1 ${WRKSRC}/samples/* |			\
 		     ${EGREP} -v '(Makefile|.*\.(in|orig)$$)'`; do	\
@@ -126,4 +116,5 @@ post-install:
 	done
 
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
