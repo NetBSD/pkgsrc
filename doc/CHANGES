@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9544 2005/03/22 09:25:17 adam Exp $
+$NetBSD: CHANGES,v 1.9545 2005/03/22 09:48:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cpuflags to 0.83 [abs 2005-03-22]
 	Updated nail to 11.22 [cjep 2005-03-22]
 	Updated octave-current to 2.1.67 [adam 2005-03-22]
+	Updated gaim to 1.2.0 [jmmv 2005-03-22]
