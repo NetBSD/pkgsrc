@@ -1,4 +1,4 @@
-# $NetBSD: ghostscript.mk,v 1.3 2002/09/13 06:54:17 jlam Exp $
+# $NetBSD: ghostscript.mk,v 1.4 2002/09/13 20:23:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that require a run-time
 # dependency on a ghostscript Postscript interpreter.
@@ -24,14 +24,16 @@ _GS_PKGSRCDIR?=	../../print/ghostscript-gnu
 
 _VALID_GS=	# empty
 
-# ghostscript-gnu{,-nox11} satisfies ${GHOSTSCRIPT_REQD}<=7.05
+# ghostscript-gnu{,-x11,-nox11} satisfies ${GHOSTSCRIPT_REQD}<=7.05
 #
 .for _gs_pattern_ in [0-6].* 7.0 7.0nb* 7.0[0-5]
 .  if !empty(GHOSTSCRIPT_REQD:M${_gs_pattern_})
 .    if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 _VALID_GS+=	ghostscript-gnu>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-gnu-x11>=${GHOSTSCRIPT_REQD}
 .    else
 _VALID_GS+=	ghostscript-gnu>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-gnu-x11>=${GHOSTSCRIPT_REQD}
 _VALID_GS+=	ghostscript-gnu-no11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
@@ -51,7 +53,7 @@ _VALID_GS+=	ghostscript-no11>=${GHOSTSCRIPT_REQD}
 .endfor
 
 .if !defined(GHOSTSCRIPT_DEPENDS) && !empty(_VALID_GS)
-_GS_DEPENDS!=	${ECHO} "${_VALID_GS}" | ${SED} -e "s:^ *::" -e "s: :,:g"
+_GS_DEPENDS!=	${ECHO} '${_VALID_GS}' | ${SED} -e "s:^ *::" -e "s: :,:g"
 .  if !empty(_GS_DEPENDS:M*,*)
 GHOSTSCRIPT_DEPENDS=	{${_GS_DEPENDS}}:${_GS_PKGSRCDIR}
 .  else
