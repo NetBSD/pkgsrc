@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2003/08/18 16:03:01 taca Exp $
+$NetBSD: distinfo,v 1.36 2003/08/18 17:00:24 taca Exp $
 
 SHA1 (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 37ceb0a65e9ac644e52ba29cd8bd0c296dca64cb
 Size (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 1028081 bytes
@@ -60,8 +60,8 @@ SHA1 (squid-2.5.3/squid-2.5.STABLE3-round_robin_max_size.patch) = 89aa269b95f791
 Size (squid-2.5.3/squid-2.5.STABLE3-round_robin_max_size.patch) = 688 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-syscalls.disk-counters.patch) = ccafdad340b1813d1ec90349030314949e5f37ae
 Size (squid-2.5.3/squid-2.5.STABLE3-syscalls.disk-counters.patch) = 2478 bytes
-SHA1 (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = 18e6bee6ee607bcb7def026503f3d34260fbafaf
-Size (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = 1260 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = d776c2c20c590d1f9007bf7eaa53fa58ce010365
+Size (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = 26803 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-blank-username-log.patch) = 8b0b2f62b78bdd6751b4d364be5f50f8774a573f
 Size (squid-2.5.3/squid-2.5.STABLE3-blank-username-log.patch) = 394 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-coss-improvements-2.patch) = c2b3a2d7abe19f688afb7b97703a52780b51fb70
