@@ -1,18 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2003/02/13 00:29:53 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.2 2003/04/15 12:19:19 wiz Exp $
 
---- examples/echoserver-unix.c.orig	Thu Sep 26 13:58:59 2002
-+++ examples/echoserver-unix.c	Wed Feb 12 10:04:48 2003
-@@ -234,5 +234,5 @@
+--- examples/echoserver-unix.c.orig	Mon Feb  3 20:01:56 2003
++++ examples/echoserver-unix.c
+@@ -228,7 +228,7 @@ async_client_iofunc(GIOChannel *iochanne
+   /* Check for data to be read (or if the socket was closed) */
    if (c & G_IO_IN) {
      GIOError e;
 -    guint bytes_read;
 +    gsize bytes_read;
  
      /* Read the data into our buffer */
-@@ -265,5 +265,5 @@
+     e = g_io_channel_read(iochannel,
+@@ -259,7 +259,7 @@ async_client_iofunc(GIOChannel *iochanne
+   }
    if (c & G_IO_OUT) {
      GIOError e;
 -    guint bytes_written;
 +    gsize bytes_written;
      /* Write the data out */
      e = g_io_channel_write(iochannel, cs->buffer, cs->n,
+ 			   &bytes_written);
