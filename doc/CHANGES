@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3638 2003/10/05 02:03:12 kei Exp $
+$NetBSD: CHANGES,v 1.3639 2003/10/05 04:29:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4073,3 +4073,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gpsutils-0.4.0 [jschauma 2003-10-04]
 	Updated pkgchk to 1.44 [agc 2003-10-04]
 	Updated ja-vfxdvik to 22.40v.j1.14nb2 [kei 2003-10-05]
+	Updated yatsvrs to 5.00.6nb1 [taca 2003-10-05]
