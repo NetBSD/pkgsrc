@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.845 2002/12/19 20:07:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.846 2002/12/19 20:34:00 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nessus-plugins to 1.2.7 [frueauf 2002-12-19]
 	Updated libnasl to 1.2.7 [frueauf 2002-12-19]
 	Added wampager-0.9.1 [jmmv 2002-12-19]
+	Updated openslp to 1.0.10 [jlam 2002-12-19]
