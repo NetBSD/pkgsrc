@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/10/02 20:14:23 tron Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/08 20:27:16 minskim Exp $
 
 DISTNAME=	ical-2.2.1
 CATEGORIES=	time
@@ -22,5 +22,5 @@ post-configure:
 	         ${WRKDIR}/${DISTNAME}/startup.tcl \
 	         ${WRKDIR}/${DISTNAME}/time/Makefile
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
