@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2000/07/25 14:42:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.27 2000/10/23 19:45:24 jlam Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -18,6 +18,7 @@ include/Xm/BaseClassP.h
 include/Xm/BulletinB.h
 include/Xm/BulletinBP.h
 include/Xm/CSText.h
+include/Xm/CSTextP.h
 include/Xm/CacheP.h
 include/Xm/CareVisualT.h
 include/Xm/CascadeB.h
@@ -155,10 +156,12 @@ include/Xm/XmAll.h
 include/Xm/XmP.h
 include/Xm/XmStrDefs.h
 include/Xm/XmosP.h
+include/Xm/Xpm.h
+include/Xm/XpmP.h
 lib/X11/app-defaults/Mwm
-lib/X11/lesstif/Imake.tmpl
-lib/X11/lesstif/Motif.rules
-lib/X11/lesstif/Motif.tmpl
+lib/X11/config/LessTif.def
+lib/X11/config/LessTif.rules
+lib/X11/config/LessTif.tmpl
 lib/X11/mwm/README
 lib/X11/mwm/alt.map
 lib/X11/mwm/system.mwmrc
@@ -231,69 +234,71 @@ man/man3/XmVendorShell.3
 man/man3/XmWorld.3
 man/man5/mwmrc.5
 share/aclocal/ac_find_motif.m4
-share/doc/lesstif/release-notes.html
+share/doc/html/lesstif/Advocacy.html
+share/doc/html/lesstif/All.html
+share/doc/html/lesstif/COPYING.LIB.html
+share/doc/html/lesstif/Clipboard.txt
+share/doc/html/lesstif/DragAndDrop.txt
+share/doc/html/lesstif/FAQ.html
+share/doc/html/lesstif/Form.txt
+share/doc/html/lesstif/GeoUtils.txt
+share/doc/html/lesstif/Geometry.html
+share/doc/html/lesstif/INSTALL.html
+share/doc/html/lesstif/SyntheticResources.txt
+share/doc/html/lesstif/UIL.txt
+share/doc/html/lesstif/Xbae.html
+share/doc/html/lesstif/Xlt.html
+share/doc/html/lesstif/XmStrings.txt
+share/doc/html/lesstif/apps.html
+share/doc/html/lesstif/bugs.html
+share/doc/html/lesstif/cdrom.html
+share/doc/html/lesstif/core.html
+share/doc/html/lesstif/current.html
+share/doc/html/lesstif/cvs.html
+share/doc/html/lesstif/download.html
+share/doc/html/lesstif/feedback.html
+share/doc/html/lesstif/help.html
+share/doc/html/lesstif/images/hungry.png
+share/doc/html/lesstif/images/lesstif-realsmall.png
+share/doc/html/lesstif/images/lesstif-small.png
+share/doc/html/lesstif/images/lesstif.jpg
+share/doc/html/lesstif/images/lesstif.png
+share/doc/html/lesstif/images/ltsunlogo.jpg
+share/doc/html/lesstif/images/ltsunlogo.png
+share/doc/html/lesstif/images/vh32.jpg
+share/doc/html/lesstif/images/vh32.png
+share/doc/html/lesstif/images/vh40.jpg
+share/doc/html/lesstif/images/vh40.png
+share/doc/html/lesstif/index.html
+share/doc/html/lesstif/known.html
+share/doc/html/lesstif/links.html
+share/doc/html/lesstif/lists.html
+share/doc/html/lesstif/mirrors.html
+share/doc/html/lesstif/platforms.html
+share/doc/html/lesstif/release-notes.html
+share/doc/html/lesstif/release-policy.html
+share/doc/html/lesstif/test_policy.html
+share/doc/html/lesstif/test_summary.html
+share/doc/html/lesstif/testers.html
+share/doc/html/lesstif/thread.html
+share/doc/html/lesstif/versions.html
+share/doc/html/lesstif/web_button.html
 share/doc/lesstif/AUTHORS
-share/doc/lesstif/Advocacy.html
-share/doc/lesstif/All.html
 share/doc/lesstif/BUG-REPORTING
 share/doc/lesstif/COPYING
 share/doc/lesstif/COPYING.LIB
-share/doc/lesstif/COPYING.LIB.html
 share/doc/lesstif/CREDITS
-share/doc/lesstif/Clipboard.txt
-share/doc/lesstif/DragAndDrop.txt
 share/doc/lesstif/FAQ
-share/doc/lesstif/FAQ.html
-share/doc/lesstif/Form.txt
-share/doc/lesstif/GeoUtils.txt
-share/doc/lesstif/Geometry.html
-share/doc/lesstif/INSTALL.html
 share/doc/lesstif/Install
 share/doc/lesstif/KNOWN_BUGS
 share/doc/lesstif/NEWS
 share/doc/lesstif/README
 share/doc/lesstif/RELEASE-POLICY
-share/doc/lesstif/SyntheticResources.txt
 share/doc/lesstif/TODO
-share/doc/lesstif/UIL.txt
-share/doc/lesstif/Xbae.html
-share/doc/lesstif/Xlt.html
-share/doc/lesstif/XmStrings.txt
-share/doc/lesstif/apps.html
-share/doc/lesstif/bugs.html
-share/doc/lesstif/cdrom.html
-share/doc/lesstif/core.html
-share/doc/lesstif/current.html
-share/doc/lesstif/cvs.html
-share/doc/lesstif/download.html
-share/doc/lesstif/help.html
-share/doc/lesstif/images/hungry.png
-share/doc/lesstif/images/lesstif-realsmall.png
-share/doc/lesstif/images/lesstif-small.png
-share/doc/lesstif/images/lesstif.jpg
-share/doc/lesstif/images/lesstif.png
-share/doc/lesstif/images/ltsunlogo.jpg
-share/doc/lesstif/images/ltsunlogo.png
-share/doc/lesstif/index.html
-share/doc/lesstif/known.html
-share/doc/lesstif/links.html
-share/doc/lesstif/lists.html
-share/doc/lesstif/mirrors.html
-share/doc/lesstif/platforms.html
 share/doc/lesstif/release-notes.txt
-share/doc/lesstif/release-policy.html
-share/doc/lesstif/test_policy.html
-share/doc/lesstif/test_summary.html
-share/doc/lesstif/testers.html
-share/doc/lesstif/thread.html
-share/doc/lesstif/versions.html
-share/doc/lesstif/web_button.html
-@dirrm share/doc/lesstif/images
 @dirrm share/doc/lesstif
+@dirrm share/doc/html/lesstif/images
+@dirrm share/doc/html/lesstif
 @dirrm lib/X11/mwm
-@dirrm lib/X11/lesstif
 @dirrm include/Xm
 @dirrm include/Mrm
-@exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/ac_find_motif.m4 ${LOCALBASE}/share/aclocal/ac_find_motif.m4
-@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/ac_find_motif.m4
-@unexec rmdir %D/share/aclocal 2>/dev/null || true

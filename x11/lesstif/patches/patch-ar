@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.5 2000/07/25 14:42:10 jlam Exp $
+$NetBSD: patch-ar,v 1.6 2000/10/23 19:45:18 jlam Exp $
 
 --- lib/Xm/Makefile.am.orig	Thu Jun 22 15:37:11 2000
-+++ lib/Xm/Makefile.am	Tue Jul 25 08:18:13 2000
++++ lib/Xm/Makefile.am
 @@ -54,22 +54,3 @@
  	Xmos.c alloca.c misc.c $(XDND_SRCS)
  
