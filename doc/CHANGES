@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8979 2005/01/30 12:45:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.8980 2005/01/30 21:57:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -669,3 +669,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated python23-nth to 2.3.4nb1 [jmmv 2005-01-30]
 	Updated python24 to 2.4nb3 [jmmv 2005-01-30]
 	Removed python [jmmv 2005-01-30]
+	Updated mixminion to 0.0.7.1nb1 [wiz 2005-01-30]
