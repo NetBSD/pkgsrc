@@ -1,0 +1,12 @@
+--- port.h.orig	Sun Aug 23 21:09:15 1998
++++ port.h	Sun Aug 23 21:09:42 1998
+@@ -28,6 +28,9 @@
+ #elif defined(FREEBSD)
+ #include <machine/cpufunc.h>
+ #include <stdio.h>
++#elif defined(NETBSD)
++#include <sys/types.h>
++#include <machine/pio.h>
+ #elif defined(BSDI)
+ #include <machine/inline.h>
+ #elif defined(LYNX)
