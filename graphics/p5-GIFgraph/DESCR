@@ -1,0 +1,2 @@
+GIFgraph is a perl5 module to create charts using the GD::Graph
+module.
