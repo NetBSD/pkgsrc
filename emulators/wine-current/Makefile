@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/29 01:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/15 18:46:27 jlam Exp $
 
 DISTNAME=		Wine-990328
 PKGNAME=		wine-990328
@@ -10,7 +10,7 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
+DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/07/06 08:06:29 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/15 18:46:32 jlam Exp $
 
 DISTNAME=		ntop-1.0
 CATEGORIES=		net
@@ -8,8 +8,8 @@ EXTRACT_SUFX=		.src.tar.gz
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www-serra.unipi.it/~ntop/
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 
 HAS_CONFIGURE=		yes
 GNU_CONFIGURE=		yes
@@ -19,6 +19,6 @@ LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 pre-configure:
-	( cd ${WRKSRC}; autoconf )
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"

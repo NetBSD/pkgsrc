@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/04 16:50:10 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/15 18:46:32 jlam Exp $
 #
 # New ports collection makefile for:   mtr
 # Version required:    0.41
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.bitwizard.nl/mtr/
 
 # not needed in current as of some time before 1999/12/1, but 
 # needed for 1.4.x, so just use ncurses..
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 #.if defined(USE_GTK)
 #USE_XLIB=	yes

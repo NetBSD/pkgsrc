@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/10/19 00:28:39 rvb Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/15 18:46:31 jlam Exp $
 #
 
 DISTNAME=		coda-5.3.2
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
 DEPENDS+=		gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=		readline-4.0:../../devel/readline
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
+DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-ns32k
 
