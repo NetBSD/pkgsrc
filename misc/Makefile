@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2003/07/08 08:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2003/07/12 12:22:35 jtb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -119,6 +119,7 @@ SUBDIR+=	php4-calendar
 SUBDIR+=	php4-mbstring
 SUBDIR+=	pinfo
 SUBDIR+=	proj
+SUBDIR+=	proj-doc
 SUBDIR+=	pty-redir
 SUBDIR+=	qterm
 SUBDIR+=	reed
