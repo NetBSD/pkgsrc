@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.9 2001/12/24 14:10:54 abs Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/06 03:35:39 jmc Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -39,5 +39,5 @@ post-install:
 	(cd ${WRKDIR}/doc/html/; tar Bpcf - .) | (cd ${PREFIX}/share/doc/bind8; tar Bpxf -)
 	${INSTALL_SCRIPT} ${WRKDIR}/named.sh ${PREFIX}/etc/rc.d/named
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/bsd.pkg.mk"
