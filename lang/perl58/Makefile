@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/02/27 04:32:33 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/14 19:37:43 jlam Exp $
 
 .include "Makefile.common"
 
@@ -80,12 +80,13 @@ LOCINCPATH=		${LOCALBASE}/include
 # flags to the link command in the right way.
 #
 .if ${OBJECT_FMT} == "a.out"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-R/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${RPATH_FLAG}/g}
 .elif ${OBJECT_FMT} == "ELF"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-Wl,-R/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-Wl,${RPATH_FLAG}/g}
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
+FIX_RPATH+=		LOCLIBRPATHFLAGS
 
 .if defined(LIBSWANTED.${OPSYS})
 CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/03/13 12:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2003/03/14 19:37:40 jlam Exp $
 #
 
 DISTNAME=	kdegraphics-1.1.2
@@ -26,6 +26,9 @@ CONFIGURE_ARGS=	"--datadir=${KDEBASEDIR}/share/kde" \
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=  KDEDIR=${KDEBASEDIR} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../mk/bsd.pkg.mk"
