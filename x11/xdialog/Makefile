@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:56:54 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/19 05:11:58 snj Exp $
 #
 
 DISTNAME=		Xdialog-2.1.1
@@ -15,7 +15,7 @@ COMMENT=		X11 drop-in replacement for the curses dialog program
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
@@ -35,6 +35,6 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/samples/$${f} ${EGDIR};	\
 	done
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/19 05:26:33 snj Exp $
 
 DISTNAME=	xcursorgen-4.3.0
 CATEGORIES=	x11
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Create an X cursor file from a collection of PNG images
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -19,7 +19,7 @@ USE_IMAKE=	YES
 PKG_SKIP_REASON="This package requires XFree86 4.3.0 or newer."
 .endif
 
-.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 MAKE_ENV+=       LOCAL_LDFLAGS="-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.png_DEFAULT}/lib"
 
