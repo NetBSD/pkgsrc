@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/13 16:04:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/11 13:44:30 wiz Exp $
 bin/speexdec
 bin/speexenc
-bin/testenc
-bin/testenc_wb
 include/speex.h
 include/speex_bits.h
 include/speex_callbacks.h
 include/speex_header.h
+include/speex_stereo.h
 lib/libspeex-0.99.so
 lib/libspeex.a
 lib/libspeex.la
