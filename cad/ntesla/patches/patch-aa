@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/17 09:31:28 frueauf Exp $
+
+--- Makefile.orig	Sun Jan 17 01:00:50 1999
++++ Makefile	Sun Jan 17 01:01:23 1999
+@@ -23,7 +23,9 @@
+ # line, or use gcc.
+ #CC=acc
+-CFLAGS=-Wall
++CFLAGS=-Wall -O2 -Dunix
+ 
+ OBJ = main.o solonoid.o wiretab.o interp.o spiral.o trans.o cap.o misc.o
++
++all: ntesla
+ 
+ ntesla: $(OBJ)
