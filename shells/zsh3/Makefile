@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:24 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/05 13:44:09 seb Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -13,8 +13,9 @@ HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
 GNU_CONFIGURE=	yes
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	zsh.info
-TEXINFO_OVERRIDE=	YES
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 
@@ -26,5 +27,4 @@ LDFLAGS+=	-static
 
 PKG_SHELL=	${PREFIX}/bin/zsh
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
