@@ -68,10 +68,10 @@ echo "Checking for restricted, out of date, and vulnerable packages:"
 # -p  =  report old versions of packages
 # -R  =  report restricted packages
 # -V  =  report vulnerable packages
-lintpkgsrc -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
+lintpkgsrc -K packages -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
 
 echo "Checking for OSVERSION_SPECIFIC pkgs:"
-lintpkgsrc -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
+lintpkgsrc -K packages -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
 
 
 RSFLAGS="-vap --progress $RSYNC_OPTS"
