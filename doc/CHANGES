@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1890 2003/04/10 13:35:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.1891 2003/04/10 17:11:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1537,3 +1537,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed sh-utils [wiz 2003-04-10]
 	Removed textutils [wiz 2003-04-10]
 	Added smpeg-xmms-0.3.5 [jmmv 2003-04-10]
+	Added tcpflow-0.20 [wiz 2003-04-10]
