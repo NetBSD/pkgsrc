@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/04/10 10:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/23 02:22:24 jmc Exp $
 
 DISTNAME=	ogle-0.9.1
 CATEGORIES=	graphics
@@ -9,8 +9,9 @@ HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
