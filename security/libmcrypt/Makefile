@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/06/20 21:35:05 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/09 19:16:20 jlam Exp $
 
-DISTNAME=	libmcrypt-2.4.7
+DISTNAME=	libmcrypt-2.4.17
 CATEGORIES=	security devel
-MASTER_SITES=	http://mcrypt.hellug.gr/lib/
+MASTER_SITES=	ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt/ \
+		ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt/old/ \
+		http://mcrypt.hellug.gr/lib/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://mcrypt.hellug.gr/
@@ -10,8 +12,10 @@ COMMENT=	crypto algorithms library
 
 USE_BUILDLINK_ONLY=	yes
 USE_LIBTOOL=		yes
-#USE_LTDL=		yes
 GNU_CONFIGURE=		yes
+
+post-extract:
+	${RM} -rf ${WRKSRC}/libltdl
 
 .include "../../devel/libtool/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
