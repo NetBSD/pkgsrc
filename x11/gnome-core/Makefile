@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2004/04/14 16:15:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.100 2004/04/26 04:55:28 snj Exp $
 #
 
 .include "Makefile.common"
@@ -35,17 +35,17 @@ post-install:
 .  endfor
 .endfor
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
-.include "../../graphics/gnome-pixmaps/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
+.include "../../graphics/gnome-pixmaps/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml/buildlink2.mk"
-.include "../../www/libghttp/buildlink2.mk"
-.include "../../x11/gnome1-session/buildlink2.mk"
-.include "../../x11/gnome1-panel/buildlink2.mk"
+.include "../../www/gtkhtml/buildlink3.mk"
+.include "../../www/libghttp/buildlink3.mk"
+.include "../../x11/gnome1-session/buildlink3.mk"
+.include "../../x11/gnome1-panel/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/04/14 19:30:23 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/04/26 04:55:28 snj Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -11,7 +11,7 @@ HOMEPAGE?=		http://www.gnome.org/
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/26 05:08:21 snj Exp $
 
 DISTNAME=	gnotepad+-1.3.3
 PKGNAME=	${DISTNAME:S/+//}
@@ -12,7 +12,7 @@ COMMENT=	Easy-to-use, yet feature-rich, simple HTML/text editor for X11
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
