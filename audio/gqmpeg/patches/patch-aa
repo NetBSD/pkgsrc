@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.7 1999/12/26 00:00:28 wiz Exp $
---- Makefile.orig	Mon Jul 12 02:31:07 1999
-+++ Makefile	Mon Jul 12 02:31:40 1999
-@@ -1,6 +1,4 @@
+$NetBSD: patch-aa,v 1.8 2000/07/06 00:46:11 hubertf Exp $
+
+--- Makefile.in.orig	Thu Jul  6 00:25:15 2000
++++ Makefile.in	Thu Jul  6 00:25:22 2000
+@@ -96,7 +96,7 @@
+ l = @l@
+ localedir = @localedir@
  
--PREFIX=/usr/local
--
- GTK_INCLUDE = `gtk-config --cflags`
- GTK_LIB = `gtk-config --libs`
- IMLIB_INCLUDE = `imlib-config --cflags-gdk`
+-SUBDIRS = src plugin intl po
++SUBDIRS = src plugin po
+ DIST_SUBDIRS = src plugin intl po
+ 
+ man_MANS = gqmpeg.1
