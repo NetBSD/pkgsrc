@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+bin/moss
+${PYSITELIB}/moss/__init__.py
+${PYSITELIB}/moss/__init__.pyc
+${PYSITELIB}/moss/__init__.pyo
+${PYSITELIB}/moss/fileinfo.py
+${PYSITELIB}/moss/fileinfo.pyc
+${PYSITELIB}/moss/fileinfo.pyo
+${PYSITELIB}/moss/htmltmpl.py
+${PYSITELIB}/moss/htmltmpl.pyc
+${PYSITELIB}/moss/htmltmpl.pyo
+${PYSITELIB}/moss/live.py
+${PYSITELIB}/moss/live.pyc
+${PYSITELIB}/moss/live.pyo
+${PYSITELIB}/moss/moss.py
+${PYSITELIB}/moss/moss.pyc
+${PYSITELIB}/moss/moss.pyo
+${PYSITELIB}/moss/template.py
+${PYSITELIB}/moss/template.pyc
+${PYSITELIB}/moss/template.pyo
+${PYSITELIB}/moss/web.py
+${PYSITELIB}/moss/web.pyc
+${PYSITELIB}/moss/web.pyo
+share/moss/images/back.gif
+share/moss/images/dir.gif
+share/moss/images/file.gif
+share/moss/images/play.gif
+share/moss/images/root.gif
+share/moss/moss.conf.sample
+share/moss/templates/default.tmpl
+@dirrm share/moss/templates
+@dirrm share/moss/images
+@dirrm share/moss
+@dirrm ${PYSITELIB}/moss
