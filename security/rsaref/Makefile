@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:47 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/05/29 19:57:27 tv Exp $
 #
 
 DISTNAME=		rsaref20
 PKGNAME=		rsaref-2.0
 WRKSRC=			${WRKDIR}/source
 CATEGORIES=		security
-RSA_SITE=		ftp://ftp.rsa.com/rsaref/
 MASTER_SITES=		${RSA_SITE}
 EXTRACT_SUFX=		.tar.Z
 
@@ -14,6 +13,9 @@ MAINTAINER=		packages@NetBSD.ORG
 RESTRICTED=		"Cryptographic source usable only within the USA"
 MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes
+
+RSA_SITE=		ftp://ftp.rsa.com/rsaref/
+PLIST_SRC=		${WRKSRC}/.PLIST
 
 # XXX time-dependent directory; can't give a sensible response
 fetch-list:
@@ -35,15 +37,14 @@ pre-configure:
 	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/md5.h ${WRKSRC}
 	@${LN} -s . ${WRKSRC}/rsaref
 
-do-install:
+post-install:
 	${MKDIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} des.h global.h md2.h md5.h rsa.h rsaref.h \
 			${PREFIX}/include/rsaref
-	cd ${WRKSRC} && \
-		${INSTALL_DATA} librsaref.a librsaref.so.2.0 ${PREFIX}/lib
-	${LN} -sf librsaref.so.2.0 ${PREFIX}/lib/librsaref.so.2
-	${LN} -sf librsaref.so.2.0 ${PREFIX}/lib/librsaref.so
+	@(${CAT} ${PKGDIR}/PLIST.pre; cd ${PREFIX}; \
+		/bin/ls 2>/dev/null -1d lib/librsaref*.a lib/librsaref.so*) \
+		>${PLIST_SRC}
 	${LDCONFIG} || ${TRUE}
 	cd ${WRKDIR}/doc && \
 		${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref
