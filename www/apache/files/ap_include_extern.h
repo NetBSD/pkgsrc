@@ -1,4 +1,4 @@
-/* $NetBSD: ap_include_extern.h,v 1.2 1998/12/03 22:26:53 tv Exp $ */
+/* $NetBSD: ap_include_extern.h,v 1.3 1998/12/04 17:23:19 tv Exp $ */
 /* ====================================================================
  * Copyright (c) 1998 The Apache Group.  All rights reserved.
  *
@@ -67,7 +67,8 @@
  * mod_include source code.
  */
 
-typedef int (*ap_include_extern_func)(FILE *, request_rec *, const char *);
+typedef int (*ap_include_extern_func)(FILE *fp, request_rec *r,
+				      const char *error, const char *timefmt);
 
 /* The const char * argument is the command word used to find this hook. */
 API_EXPORT(int) ap_include_register_extern(const char *, ap_include_extern_func);
