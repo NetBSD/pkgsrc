@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/02 14:49:31 wulf Exp $
+
+SHA1 (dvdbackup-0.1.1.tar.gz) = 11bbbd0182f80bff1974b86bb989e9a2ab89f717
+Size (dvdbackup-0.1.1.tar.gz) = 24806 bytes
+SHA1 (patch-aa) = a01d7325c4bd142aa213fe4a52e54a1b3903c838
