@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/03 15:49:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/19 19:51:22 wiz Exp $
 
 DISTNAME=	apr_20020725223645
 PKGNAME=	apr-0.20020725223645
@@ -10,10 +10,11 @@ MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Run-time, a system portability layer
 
-DEPENDS=	autoconf>=2.50:../../devel/autoconf-devel
-DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool
+BUILD_DEPENDS=	autoconf>=2.50:../../devel/autoconf-devel
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/build/ldconfig
 WRKSRC=		${WRKDIR}
 
 pre-configure:
