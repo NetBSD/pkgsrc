@@ -1,4 +1,4 @@
-# $NetBSD: xfree.freetype2,v 1.4 2003/10/13 15:55:11 veego Exp $
+# $NetBSD: xfree.freetype2,v 1.5 2003/12/19 19:19:15 veego Exp $
 #
 include/freetype2/freetype/cache/ftccache.h
 include/freetype2/freetype/cache/ftccmap.h
@@ -74,6 +74,7 @@ include/freetype2/freetype/ttnameid.h
 include/freetype2/freetype/tttables.h
 include/freetype2/freetype/tttags.h
 include/freetype2/ft2build.h
+include/ft2build.h
 lib/libfreetype.a
 lib/libfreetype.so
 lib/libfreetype.so.8
