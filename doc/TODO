@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3319 2005/03/28 14:53:47 minskim Exp $
+$NetBSD: TODO,v 1.3320 2005/03/29 12:29:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,6 +314,7 @@ Suggested package updates
 	o baci-20040415
 	o bacula-1.36.1
 	o balsa-1.4.4
+	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
@@ -321,6 +322,7 @@ Suggested package updates
 	o bind-9.3.1
 	o bioperl-1.5.0
 	o bitlbee-0.92
+	o blackbox-0.70
 	o blitz++-0.8
 	o bmake-20050322
 	o boaconstructor-0.3.1
@@ -403,6 +405,7 @@ Suggested package updates
 	o dmalloc-5.4.2
 	o dmidecode-2.6
 	o dnstracer-1.8
+	o doxygen-1.4.2
 	o dpkg-1.13.3
 	o dropbear-0.45
 	o dvdrip-0.52.3
@@ -953,7 +956,7 @@ Suggested package updates
 	o resize_image-0.7
 	o riece-1.0.8
 	o rio500-0.8.1
-	o ripmime-1.4.0.3
+	o ripmime-1.4.0.4
 	o rman-3.2
 	o robodoc-4.99.6
 	o root-4.03.03
