@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/11/15 15:46:33 taca Exp $
+
+--- setquota.8.orig	Fri Apr 25 19:55:55 1997
++++ setquota.8
+@@ -37,7 +37,7 @@
+ .\"
+ .Dd March 6, 1997
+ .Dt SETQUOTA 8
+-.Os FreeBSD 2.2
++.Os
+ .Sh NAME
+ .Nm setquota
+ .Nd set disk quotas for  users or groups
