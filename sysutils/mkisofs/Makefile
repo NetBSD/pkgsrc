@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/07 23:55:25 tron Exp $
 #
 
 DISTNAME=       mkisofs-1.11.3
@@ -12,5 +12,10 @@ NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	World
+
+post-patch:
+	@cd ${WRKSRC}; \
+	${GREP} -v ^# mkisofs.8 >mkisofs.$$$$; \
+	${MV} mkisofs.$$$$ mkisofs.8
 
 .include "../../mk/bsd.pkg.mk"
