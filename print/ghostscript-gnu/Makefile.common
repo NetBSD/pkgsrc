@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/09/12 20:07:27 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/09/17 19:41:01 grant Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -42,6 +42,10 @@ PLIST_SRC=		${.CURDIR}/../../print/ghostscript-gnu/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD=		3.0
+.endif
+
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
 .endif
@@ -81,7 +85,3 @@ post-install:
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=	# defined
-.endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/09/12 20:07:17 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/09/17 19:40:26 grant Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC2=	# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 .include "../../mk/bsd.pkg.mk"
