@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2003/09/18 11:16:41 markd Exp $
+# $NetBSD: Makefile,v 1.310 2003/09/19 13:38:08 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -104,8 +104,8 @@ SUBDIR+=	kde3-i18n-pt
 SUBDIR+=	kde3-i18n-pt_BR
 SUBDIR+=	kde3-i18n-ro
 SUBDIR+=	kde3-i18n-ru
-SUBDIR+=	kde3-i18n-sk
 SUBDIR+=	kde3-i18n-se
+SUBDIR+=	kde3-i18n-sk
 SUBDIR+=	kde3-i18n-sl
 SUBDIR+=	kde3-i18n-sr
 SUBDIR+=	kde3-i18n-ss
