@@ -1,23 +1,36 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/22 08:57:21 jlam Exp $
 #
 
-DISTNAME=	gaim-0.11.0pre11
-CATEGORIES=	x11 chat
-MASTER_SITES=	ftp://ftp.marko.net/pub/gaim/
+DISTNAME=	gaim-0.44
+CATEGORIES=	chat x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
+		ftp://ftp.marko.net/pub/gaim/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.marko.net/gaim/
-COMMENT=	gtk-based client for AOL's Instant Messenger chat system
+HOMEPAGE=	http://gaim.sourceforge.net/
+COMMENT=	GTK+-based client for AOL's Instant Messenger chat system
 
-DEPENDS+=	gtk+>=1.2.3:../../x11/gtk
-DEPENDS+=	esound>=0.2.7:../../audio/esound
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+USE_X11BASE=		YES
 
-USE_GMAKE=	YES
-USE_LIBINTL=	YES
-USE_X11BASE=	YES
-GNU_CONFIGURE=	YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-# for pthread.h
-CPPFLAGS+=	-I${LOCALBASE}/include
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-artsc
+CONFIGURE_ARGS+=	--disable-gnome
+CONFIGURE_ARGS+=	--disable-nas
+CONFIGURE_ARGS+=	--disable-panel
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-screensaver
 
+CONFIGURE_ARGS+=	--enable-esd
+CONFIGURE_ARGS+=	--enable-pixbuf
+
+CONFIGURE_ENV+=		pixbufcfg="${GDK_PIXBUF_CONFIG}"
+
+.include "../../audio/esound/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
