@@ -1,0 +1,10 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2000/12/06 06:33:40 jlam Exp $
+
+If you are upgrading from a version of sudo prior to 1.6, then please read
+
+	@PREFIX@/share/doc/sudo/UPGRADE
+
+on how to modify your sudoers file appropriately.
+
+=============================================================================
