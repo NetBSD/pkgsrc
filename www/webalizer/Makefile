@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 1999/03/30 22:41:41 mjl Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/09 20:19:11 mjl Exp $
 #
 
-DISTNAME=	webalizer-1.22-01-src
-PKGNAME=	webalizer-1.22.01
+DISTNAME=	webalizer-1.22-03-src
+PKGNAME=	webalizer-1.22.03
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/
+MASTER_SITES=	\
+	ftp://ftp.mrunix.net/pub/webalizer/ \
+	ftp://samhain.unix.cslab.tuwien.ac.at/pub/webalizer/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mjl@emsi.priv.at
@@ -12,7 +14,7 @@ HOMEPAGE=	http://www.mrunix.net/webalizer/
 
 DEPENDS=	gd-1.3:../../graphics/gd
 
-WRKSRC	= ${WRKDIR}/webalizer-1.22-01
+WRKSRC	= ${WRKDIR}/webalizer-1.22-03
 
 post-patch:
 	@for f in webalizer.c webalizer.1; do \
