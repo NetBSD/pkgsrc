@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/01/22 06:27:04 mellon Exp $
+
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/XmHTML.cf XmHTML-1.1.5-hacked/XmHTML.cf
+*** XmHTML-1.1.5/XmHTML.cf	Thu Jan 21 14:41:49 1999
+--- XmHTML-1.1.5-hacked/XmHTML.cf	Thu Jan 21 14:38:50 1999
+***************
+*** 12,19 ****
+  XCOMM Root of XmHTML Source Tree
+  XCOMM ----------------------------------------------------------------------
+- XCOMM If BUILDINCTOP is not or incorrectly set on your system, you can
+- XCOMM override it here.
+- XCOMM BUILDINCTOP=<path to root of the XmHTML source tree>
+- XCOMM BUILDINCTOP=/home/newt/src/XmHTML/XmHTML
+  
+  XCOMM ----------------------------------------------------------------------
+--- 12,15 ----
+***************
+*** 21,28 ****
+  XCOMM ----------------------------------------------------------------------
+  XCOMM This specifies where the XmHTML and http library will be installed
+! #define XmHTMLLibDir $(USRLIBDIR)
+  
+  XCOMM This specifies where the XmHTML and http header files will be installed
+! #define XmHTMLIncDir $(INCROOT)/XmHTML
+  
+  XCOMM ----------------------------------------------------------------------
+--- 17,24 ----
+  XCOMM ----------------------------------------------------------------------
+  XCOMM This specifies where the XmHTML and http library will be installed
+! #define XmHTMLLibDir ${PREFIX}/lib
+  
+  XCOMM This specifies where the XmHTML and http header files will be installed
+! #define XmHTMLIncDir ${PREFIX}/include/XmHTML
+  
+  XCOMM ----------------------------------------------------------------------

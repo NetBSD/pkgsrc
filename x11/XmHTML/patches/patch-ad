@@ -1,0 +1,117 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/01/22 06:27:04 mellon Exp $
+
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/XmHTML.cf XmHTML-1.1.5-hacked/XmHTML.cf
+*** XmHTML-1.1.5/XmHTML.cf	Thu Jan 21 20:10:21 1999
+--- XmHTML-1.1.5-hacked/XmHTML.cf	Thu Jan 21 19:47:39 1999
+***************
+*** 9,12 ****
+--- 9,26 ----
+  XCOMM See the file LICENSE for the full copyright statement.
+  
++ XCOMM We don't want Library.tmpl to install libraries.
++ 
++ #if !defined (LibInstall)
++ # define LibInstall NO
++ # define XmHTMLLibInstall YES
++ #else
++ # if LibInstall
++ #  define LibInstall	NO
++ #  define XmHTMLLibInstall YES 
++ # else
++ #  define XmHTMLLibInstall NO
++ # endif
++ #endif
++ 
+  XCOMM ----------------------------------------------------------------------
+  XCOMM Root of XmHTML Source Tree
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/http/Imakefile XmHTML-1.1.5-hacked/http/Imakefile
+*** XmHTML-1.1.5/http/Imakefile	Thu Jan 21 20:10:21 1999
+--- XmHTML-1.1.5-hacked/http/Imakefile	Thu Jan 21 20:05:41 1999
+***************
+*** 163,172 ****
+  lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOHTTPLIBREV)
+  	$(RM) $@
+! 	ln -s $@$(SOHTTPLIBREV) $@
+  #endif /* SGIArchitecture */
+  
+  clean::
+  	$(RM) lib$(LIBNAME).so 
+  #endif /* DoSharedLib */
+  
+  #endif /* ProjectX < 6 */
+--- 163,192 ----
+  lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOHTTPLIBREV)
+  	$(RM) $@
+! 	ln -s lib$(LIBNAME).so.$(SOHTTPLIBREV) $@
+  #endif /* SGIArchitecture */
+  
+  clean::
+  	$(RM) lib$(LIBNAME).so 
++ 
++ #if defined (XmHTMLLibInstall) && XmHTMLLibInstall
++ InstallSharedLibrary($(LIBNAME),$(SOHTTPLIBREV),$(HTTPLIBDIR))
++ # if HasSharedData
++ InstallSharedLibraryData($(LIBNAME),$(SOHTTPLIBREV),$(HTTPLIBDIR))
++ # endif
++ #endif
++ 
+  #endif /* DoSharedLib */
++ 
++ #if defined (XmHTMLLibInstall) && XmHTMLLibInstall
++ InstallLibrary($(LIBNAME),$(HTTPLIBDIR))
++ # if !defined (DoSharedLib)
++ #  if DoProfileLib  
++ InstallLibrary($(LIBNAME)_p,$(HTTPLIBDIR))
++ #  endif  
++ #  if DoDebugLib  
++ InstallLibrary($(LIBNAME)_d,$(HTTPLIBDIR))
++ #  endif   
++ # endif   
++ #endif   
+  
+  #endif /* ProjectX < 6 */
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/src/Imakefile XmHTML-1.1.5-hacked/src/Imakefile
+*** XmHTML-1.1.5/src/Imakefile	Thu Jan 21 20:10:21 1999
+--- XmHTML-1.1.5-hacked/src/Imakefile	Thu Jan 21 20:07:05 1999
+***************
+*** 297,306 ****
+  lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOXMHTMLLIBREV)
+  	$(RM) $@
+! 	ln -s $@$(SOXMHTMLLIBREV) $@
+  #endif /* SGIArchitecture */
+  
+  clean::
+  	$(RM) lib$(LIBNAME).so 
+  #endif /* DoSharedLib */
+  
+  #endif /* ProjectX < 6 */
+--- 297,325 ----
+  lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOXMHTMLLIBREV)
+  	$(RM) $@
+! 	ln -s lib$(LIBNAME).so.$(SOXMHTMLLIBREV) $@
+  #endif /* SGIArchitecture */
+  
++ #if defined (XmHTMLLibInstall) && XmHTMLLibInstall
++ InstallSharedLibrary($(LIBNAME),$(SOXMHTMLLIBREV),$(XMHTMLLIBDIR))
++ # if HasSharedData
++ InstallSharedLibraryData($(LIBNAME),$(SOXMHTMLLIBREV),$(XHMTHMLLIBDIR))
++ # endif
++ #endif
++ 
+  clean::
+  	$(RM) lib$(LIBNAME).so 
+  #endif /* DoSharedLib */
++ 
++ #if defined (XmHTMLLibInstall) && XmHTMLLibInstall
++ InstallLibrary($(LIBNAME),$(XMHTMLLIBDIR))
++ # if !defined (DoSharedLib)
++ #  if DoProfileLib
++ InstallLibrary($(LIBNAME)_p,$(XMHTMLLIBDIR))
++ #  endif
++ #  if DoDebugLib
++ InstallLibrary($(LIBNAME)_d,$(XMHTMLLIBDIR))
++ #  endif
++ # endif
++ #endif
+  
+  #endif /* ProjectX < 6 */

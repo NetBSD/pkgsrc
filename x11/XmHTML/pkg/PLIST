@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/22 06:27:04 mellon Exp $
+include/XmHTML/XmHTML.h
+include/XmHTML/XmHTMLP.h
+include/XmHTML/XmHTMLI.h
+include/XmHTML/HTML.h
+include/XmHTML/Balloon.h
+include/XmHTML/BalloonP.h
+include/XmHTML/HTMLStrings.h
+include/XmHTML/HTTP.h
+include/XmHTML/HTTPP.h
+include/XmHTML/HTMLWarnings.h
+include/XmHTML/XmHTMLfuncs.h
+include/XmHTML/LZWStream.h
+include/XmHTML/XCC.h
+include/XmHTML/miniparse.h
+include/XmHTML/stack.h
+include/XmHTML/icons.h
+@dirrm include/XmHTML
+lib/libXmHTML.so.1.1.5
+lib/libhttp.so.0.1.1
+lib/libXmHTML.a
+lib/libhttp.a
