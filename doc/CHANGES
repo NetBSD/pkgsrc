@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4163 2003/12/17 19:20:38 jdolecek Exp $
+$NetBSD: CHANGES,v 1.4164 2003/12/17 19:25:08 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5213,4 +5213,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added cdrtools-ossdvd-2.01.1.18 [wiz 2003-12-17]
 	Updated squid to 2.5.4nb5 [taca 2003-12-17]
 	Added pear-Date-1.3 [jdolecek 2003-12-17]
-	Added HTML_Common-1.2.1 [jdolecek 2003-12-17]
+	Added pear-HTML_Common-1.2.1 [jdolecek 2003-12-17]
+	Added pear-HTML_Select-1.2 [jdolecek 2003-12-17]
