@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2001/01/30 02:01:44 jtb Exp $
+$NetBSD: md5,v 1.2 2001/03/30 22:23:07 jtb Exp $
 
-MD5 (ScientificPython-2.0.1.tar.gz) = 380248f3167afa1667db44cfe8b3fd3d
+SHA1 (ScientificPython-2.2.tar.gz) = f1fcf1ef1a54a1fd84b1e5df569dac13a1648225
