@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5529 2004/04/11 06:57:35 rh Exp $
+$NetBSD: CHANGES,v 1.5530 2004/04/11 11:36:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gworkspace to 0.6.3 [rh 2004-04-11]
 	Updated gnustep to 1.9.1 [rh 2004-04-11]
 	Updated pkg_install to 20040411 [rh 2004-04-11]
+	Added anacron-2.3 [jmmv 2004-04-11]
