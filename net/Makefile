@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 1999/06/28 01:34:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.73 1999/07/05 20:34:21 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -115,6 +115,7 @@
     SUBDIR += wu-ftpd
     SUBDIR += wu-ftpd-vr
     SUBDIR += xarchie
+    SUBDIR += xchat
 #    SUBDIR += xipmsg
     SUBDIR += xtraceroute
 #    SUBDIR += yale-tftpd
