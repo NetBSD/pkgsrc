@@ -1,0 +1,6 @@
+"SLIB" is a portable library for the programming language "Scheme".  It       |
+provides a platform independent framework for using "packages" of             |
+Scheme procedures and syntax.  As distributed, SLIB contains useful
+packages for all Scheme implementations.  Its catalog can be                  |
+transparently extended to accomodate packages specific to a site,             |
+implementation, user, or directory.                                           |
