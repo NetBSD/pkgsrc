@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/24 05:46:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/12 20:22:44 jlam Exp $
 include/sgi-stl/algo.h
 include/sgi-stl/algobase.h
 include/sgi-stl/algorithm
@@ -6,6 +6,8 @@ include/sgi-stl/alloc.h
 include/sgi-stl/bitset
 include/sgi-stl/bvector.h
 include/sgi-stl/char_traits.h
+include/sgi-stl/concept_checks.h
+include/sgi-stl/container_concepts.h
 include/sgi-stl/defalloc.h
 include/sgi-stl/deque
 include/sgi-stl/deque.h
@@ -35,6 +37,7 @@ include/sgi-stl/queue
 include/sgi-stl/rope
 include/sgi-stl/rope.h
 include/sgi-stl/ropeimpl.h
+include/sgi-stl/sequence_concepts.h
 include/sgi-stl/set
 include/sgi-stl/set.h
 include/sgi-stl/slist
@@ -48,6 +51,7 @@ include/sgi-stl/stl_alloc.h
 include/sgi-stl/stl_bvector.h
 include/sgi-stl/stl_config.h
 include/sgi-stl/stl_construct.h
+include/sgi-stl/stl_ctraits_fns.h
 include/sgi-stl/stl_deque.h
 include/sgi-stl/stl_exception.h
 include/sgi-stl/stl_function.h
