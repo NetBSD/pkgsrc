@@ -1,0 +1,258 @@
+$NetBSD: patch-am,v 1.6 2001/11/04 21:25:48 darcy Exp $
+
+--- src/interfaces/python/pgmodule.c.orig	Thu Aug 16 14:36:44 2001
++++ src/interfaces/python/pgmodule.c
+@@ -27,25 +27,16 @@
+  */
+ 
+ #include <Python.h>
+-#include <postgres.h>
+-#include <libpq-fe.h>
+-#include <libpq/libpq-fs.h>
++#include "postgres.h"
++#include "libpq-fe.h"
++#include "libpq/libpq-fs.h"
++#include "catalog/pg_type.h"
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-/* really bad stuff here - I'm so naughty */
+-/* If you need to you can run mkdefines to get */
+-/* current defines but it should not have changed */
+-#define INT2OID		21
+-#define INT4OID		23
+-#define OIDOID		26
+-#define FLOAT4OID	700
+-#define FLOAT8OID	701
+-#define CASHOID		790
+-
+ static PyObject *PGError;
+-static const char *PyPgVersion = "3.1";
++static const char *PyPgVersion = "3.2";
+ 
+ /* taken from fileobject.c */
+ #define BUF(v) PyString_AS_STRING((PyStringObject *)(v))
+@@ -103,14 +94,16 @@
+ 
+ static PyObject *pg_default_host;		/* default database host */
+ static PyObject *pg_default_base;		/* default database name */
+-static PyObject *pg_default_opt;/* default connection options */
+-static PyObject *pg_default_tty;/* default debug tty */
++static PyObject *pg_default_opt;	/* default connection options */
++static PyObject *pg_default_tty;	/* default debug tty */
+ static PyObject *pg_default_port;		/* default connection port */
+ static PyObject *pg_default_user;		/* default username */
+ static PyObject *pg_default_passwd;		/* default password */
+-
+ #endif	 /* DEFAULT_VARS */
+ 
++DL_EXPORT(void) init_pg(void);
++int		   *get_type_array(PGresult *result, int nfields);
++
+ /* --------------------------------------------------------------------- */
+ /* OBJECTS DECLARATION */
+ 
+@@ -242,7 +235,6 @@
+ 
+ 	return 1;
+ }
+-
+ #endif	 /* LARGE_OBJECTS */
+ 
+ /* checks source object validity */
+@@ -292,12 +284,14 @@
+ 		{
+ 			case INT2OID:
+ 			case INT4OID:
++			case INT8OID:
+ 			case OIDOID:
+ 				typ[j] = 1;
+ 				break;
+ 
+ 			case FLOAT4OID:
+ 			case FLOAT8OID:
++			case NUMERICOID:
+ 				typ[j] = 2;
+ 				break;
+ 
+@@ -484,7 +478,6 @@
+ pgsource_oidstatus(pgsourceobject * self, PyObject * args)
+ {
+ 	long		oid;
+-	const char *status;
+ 
+ 	/* checks validity */
+ 	if (!check_source_obj(self, CHECK_RESULT))
+@@ -566,6 +559,7 @@
+ 		}
+ 
+ 		PyList_Append(reslist, rowtuple);
++		Py_DECREF(rowtuple);
+ 		self->current_row++;
+ 	}
+ 
+@@ -947,11 +941,7 @@
+ 
+ /* query type definition */
+ staticforward PyTypeObject PgSourceType = {
+-#ifndef MS_WIN32
+-	PyObject_HEAD_INIT(&PyType_Type)
+-#else
+ 	PyObject_HEAD_INIT(NULL)
+-#endif
+ 
+ 	0,							/* ob_size */
+ 	"pgsourceobject",			/* tp_name */
+@@ -1460,7 +1450,6 @@
+ 	0,							/* tp_as_mapping */
+ 	0,							/* tp_hash */
+ };
+-
+ #endif	 /* LARGE_OBJECTS */
+ 
+ 
+@@ -1803,12 +1792,14 @@
+ 		{
+ 			case INT2OID:
+ 			case INT4OID:
++			case INT8OID:
+ 			case OIDOID:
+ 				typ[j] = 1;
+ 				break;
+ 
+ 			case FLOAT4OID:
+ 			case FLOAT8OID:
++			case NUMERICOID:
+ 				typ[j] = 2;
+ 				break;
+ 
+@@ -1853,21 +1844,33 @@
+ 						val = PyFloat_FromDouble(strtod(s, NULL));
+ 						break;
+ 
+-					case 3:		/* get rid of the '$' and commas */
+-						if (*s == '$')	/* there's talk of getting rid of
+-										 * it */
++					case 3:
++						{
++							int			mult = 1;
++
++							if (*s == '$')		/* there's talk of getting
++												 * rid of it */
+ 							s++;
+ 
+-						if ((s[0] == '-' || s[0] == '(') && s[1] == '$')
+-							*(++s) = '-';
++							if (*s == '-' || *s == '(')
++							{
++								s++;
++								mult = -1;
++							}
++
++							/* get rid of the '$' and commas */
++							if (*s == '$')		/* Just in case we exposed
++												 * one */
++								s++;
+ 
+ 						for (k = 0; *s; s++)
+ 							if (*s != ',')
+ 								cashbuf[k++] = *s;
+ 
+ 						cashbuf[k] = 0;
+-						val = PyFloat_FromDouble(strtod(cashbuf, NULL));
++							val = PyFloat_FromDouble(strtod(cashbuf, NULL) * mult);
+ 						break;
++						}
+ 
+ 					default:
+ 						val = PyString_FromString(s);
+@@ -1938,12 +1941,14 @@
+ 		{
+ 			case INT2OID:
+ 			case INT4OID:
++			case INT8OID:
+ 			case OIDOID:
+ 				typ[j] = 1;
+ 				break;
+ 
+ 			case FLOAT4OID:
+ 			case FLOAT8OID:
++			case NUMERICOID:
+ 				typ[j] = 2;
+ 				break;
+ 
+@@ -1988,21 +1993,33 @@
+ 						val = PyFloat_FromDouble(strtod(s, NULL));
+ 						break;
+ 
+-					case 3:		/* get rid of the '$' and commas */
+-						if (*s == '$')	/* there's talk of getting rid of
+-										 * it */
++					case 3:
++						{
++							int			mult = 1;
++
++							if (*s == '$')		/* there's talk of getting
++												 * rid of it */
+ 							s++;
+ 
+-						if ((s[0] == '-' || s[0] == '(') && s[1] == '$')
+-							*(++s) = '-';
++							if (*s == '-' || *s == '(')
++							{
++								s++;
++								mult = -1;
++							}
++
++							/* get rid of the '$' and commas */
++							if (*s == '$')		/* Just in case we exposed
++												 * one */
++								s++;
+ 
+ 						for (k = 0; *s; s++)
+ 							if (*s != ',')
+ 								cashbuf[k++] = *s;
+ 
+ 						cashbuf[k] = 0;
+-						val = PyFloat_FromDouble(strtod(cashbuf, NULL));
++							val = PyFloat_FromDouble(strtod(cashbuf, NULL) * mult);
+ 						break;
++						}
+ 
+ 					default:
+ 						val = PyString_FromString(s);
+@@ -2318,7 +2335,6 @@
+ 	Py_INCREF(Py_None);
+ 	return Py_None;
+ }
+-
+ #endif	 /* DIRECT_ACCESS */
+ 
+ 
+@@ -2622,7 +2638,6 @@
+ static PyObject *
+ pg_getattr(pgobject * self, char *name)
+ {
+-
+ 	/*
+ 	 * Although we could check individually, there are only a few
+ 	 * attributes that don't require a live connection and unless someone
+@@ -3104,7 +3119,6 @@
+ 
+ 	return old;
+ }
+-
+ #endif	 /* DEFAULT_VARS */
+ 
+ /* List of functions defined in the module */
+@@ -3141,7 +3155,8 @@
+ 			   *v;
+ 
+ 	/* Initialize here because some WIN platforms get confused otherwise */
+-	PglargeType.ob_type = PgType.ob_type = PgQueryType.ob_type = &PyType_Type;
++	PglargeType.ob_type = PgType.ob_type = PgQueryType.ob_type =
++		PgSourceType.ob_type = &PyType_Type;
+ 
+ 	/* Create the module and add the functions */
+ 	mod = Py_InitModule4("_pg", pg_methods, pg__doc__, NULL, PYTHON_API_VERSION);
