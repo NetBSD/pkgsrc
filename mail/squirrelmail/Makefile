@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2002/01/02 11:57:01 tron Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/07 11:49:45 jlam Exp $
 
-DISTNAME=	squirrelmail-1.0.6
+DISTNAME=	squirrelmail-1.2.2
 CATEGORIES=	mail www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/} \
-		http://nerf-herder.net/squirrel/ \
-		ftp://nerf-herder.net/pub/squirrel/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	PHP4 webmail package
 
-DEPENDS+=	php-4.0.[6-9]*:../../www/php4
-DEPENDS+=	php-session-4.0.[6-9]*:../../devel/php4-session
+CONFLICTS=	sq-attachment-handlers-[0-9]*
+CONFLICTS+=	sq-squirrelspell-[0-9]*
 
-USE_PERL5=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+DEPENDS+=	php>=4.0.6:../../www/php4
+DEPENDS+=	php-gettext>=4.0.6:../../devel/php4-gettext
+DEPENDS+=	php-session>=4.0.6:../../devel/php4-session
+
+REPLACE_PERL=	config/conf.pl config/ri_once.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,31 +26,36 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
 DATADIR=		/var/spool/squirrelmail
+ATTACHMENTS_DIR=	${DATADIR}/attachments
+USER_PREFS_DIR=		${DATADIR}/data
+
 MESSAGE_SUBST+=		SMDIR=${SMDIR}
 FILES_SUBST+=		SMDIR=${SMDIR}
 
 CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
 CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref
 CONF_FILES+=	${EGDIR}/squirrelmail.conf ${PKG_SYSCONFDIR}/squirrelmail.conf
+
 OWN_DIRS=		${DATADIR}
 OWN_DIRS+=		${SMDIR} ${SMDIR}/config
-OWN_DIRS_PERMS=		${DATADIR}/attachments root nobody 730
-OWN_DIRS_PERMS+=	${DATADIR}/data nobody nobody 755
-
-post-extract:
-	cd ${WRKSRC};							\
-	${MV} config/conf.pl config/conf.pl.orig;			\
-	${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
-		config/conf.pl.orig > config/conf.pl;			\
-	${CHMOD} +x config/conf.pl
-	${FIND} ${WRKSRC} -name ".cvsignore" -exec ${RM} -f {} \;
+OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} nobody 730
+OWN_DIRS_PERMS+=	${USER_PREFS_DIR} nobody nobody 755
 
 post-patch:
-	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
+	cd ${WRKSRC};							\
+	for file in config/config_default.php; do			\
+		${SED}	-e "s|@ATTACHMENTS_DIR@|${ATTACHMENTS_DIR}|g"	\
+			-e "s|@USER_PREFS_DIR@|${USER_PREFS_DIR}|g"	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done;								\
+	${FIND} . \( -name "*.orig" -o -name ".cvsignore" \) -print	\
+		| ${XARGS} ${RM} -f
+
+do-build:	# nothing
 
 pre-install:
-	${SED}	${FILES_SUBST_SED}					\
-		${FILESDIR}/squirrelmail.conf.dist			\
+	@${SED}	${FILES_SUBST_SED} ${FILESDIR}/squirrelmail.conf.dist	\
 		> ${WRKDIR}/squirrelmail.conf.dist
 
 do-install:
@@ -61,5 +66,6 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${CHMOD} -R a-w ${SMDIR}
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
