@@ -1,19 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/06 21:37:29 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/23 11:43:33 agc Exp $
 
 --- misc/magic.h.orig	Fri Sep 21 11:15:45 2001
 +++ misc/magic.h	Wed Mar 13 12:37:46 2002
-@@ -147,69 +147,11 @@
+@@ -99,7 +99,7 @@
+ 	: FALSE)
+ #else
+ #define	ASSERT(p, where)	(FALSE)
+-#endif	PARANOID
++#endif	/* PARANOID */
+ 
+ 
+ /* ------------------------ Malloc/free ------------------------------- */
+@@ -146,71 +146,13 @@
+  *
   */
  
 -#ifdef        i386
 -#define       IS_LITTLE_ENDIAN        /* Intel x86 processors. */
-+#include <sys/endian.h>
-+#if BYTE_ORDER==BIG_ENDIAN
-+#define IS_BIG_ENDIAN
-+#else
-+#define IS_LITTLE_ENDIAN
- #endif
- 
+-#endif
+-
 -#ifdef	linux
 -#define	IS_LITTLE_ENDIAN	/* Intel x86 processors running Linux >=.99p7. */
 -#endif
@@ -65,8 +70,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/06 21:37:29 dmcmahill Exp $
 -
 -#ifdef	ALPHA
 -#define	IS_LITTLE_ENDIAN	/* Digital Alpha AXP */
--#endif
--
++#include <sys/endian.h>
++#if BYTE_ORDER==BIG_ENDIAN
++#define IS_BIG_ENDIAN
++#else
++#define IS_LITTLE_ENDIAN
+ #endif
+ 
 -/* Well, how'd we do? */
 -
 -#if	!defined(IS_BIG_ENDIAN) && !defined(IS_LITTLE_ENDIAN)
@@ -77,3 +87,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/06 21:37:29 dmcmahill Exp $
 -#endif
  
      /* ------- Configuration:  Handle Missing Routines/Definitions ------- */
+ 
