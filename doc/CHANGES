@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8351 2004/12/17 18:39:39 salo Exp $
+$NetBSD: CHANGES,v 1.8352 2004/12/17 18:55:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated php4 to 4.3.10 [tron 2004-12-17]
 	Updated php5 to 5.0.3 [jdolecek 2004-12-17]
 	Updated ethereal to 0.10.8 [salo 2004-12-17]
+	Updated groff to 1.19.1nb2 [wiz 2004-12-17]
