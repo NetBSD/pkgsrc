@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:01:28 seb Exp $
-#
+# $NetBSD: Makefile,v 1.2 2002/06/10 10:17:12 sakamoto Exp $
 
-PKGNAME=	ja-FreeWnn-server-1.10
+DISTNAME=	ja-FreeWnn-server-1.10
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
-DEPENDS+=	ja-FreeWnn-lib-1.10:../../inputmethod/ja-freewnn-lib
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 COMMENT=	Japanese/Chinese/Korean input method (Japanese server)
 
-WNNDIR=		Wnn
-WNN_TARGET=	SERVER
-WNN_LANG=	ja_JP
+DEPENDS+=	ja-FreeWnn-server-bin>=1.10nb1:../ja-freewnn-server-bin
+DEPENDS+=	ja-FreeWnn-dict>=1.10nb1:../ja-freewnn-dict
 
-FILESDIR=	${.CURDIR}/../../inputmethod/ja-freewnn-lib/files
-PATCHDIR=	${.CURDIR}/../../inputmethod/ja-freewnn-lib/patches
+EXTRACT_ONLY=	# empty
+NO_BUILD=	YES
+NO_CHECKSUM=	YES
 
-.include "../../inputmethod/ja-freewnn-lib/Makefile.common"
+do-install:	# empty
+
+.include "../../mk/bsd.pkg.mk"
