@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/15 09:21:43 shell Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/23 23:30:25 jlam Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -10,6 +10,8 @@ COMMENT=	English-Chinese dictionary
 
 DIST_SUBDIR=	${PKGNAME}
 
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 MAKEFILE=	makefile
 
 post-patch:
@@ -19,6 +21,5 @@ post-patch:
 	${ECHO} 'hz16ft.pcf.gz hz16ft' >> ${WRKSRC}/hzfont/fonts.dir
 	${ECHO} 'yb10x20.pcf.gz yb10x20' >> ${WRKSRC}/hzfont/fonts.dir
 
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
