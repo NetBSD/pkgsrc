@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 12:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/07 22:57:31 fredb Exp $
 #
 
 DISTNAME=	popt-1.7
@@ -6,7 +6,6 @@ PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
-		http://gd.tuwien.ac.at/z7/utils/rpm.org/dist/rpm-4.1.x/	\
 		ftp://ftp.iks-jena.de/pub/software/unix/misc/		\
 		ftp://sunsite.cnlab-switch.ch/mirror/rpm/dist/rpm-4.1.x/
 
