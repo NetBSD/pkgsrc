@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/24 08:08:57 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/24 09:32:34 salo Exp $
 #
 # This Makefile fragment is included by packages that use lib3ds.
 #
@@ -9,7 +9,7 @@
 LIB3DS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			lib3ds
-BUILDLINK_DEPENDS.lib3ds?=		lib3ds>=1.2.0
+BUILDLINK_DEPENDS.lib3ds?=		lib3ds>=1.2.0nb2
 BUILDLINK_PKGSRCDIR.lib3ds?=		../../graphics/lib3ds
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.lib3ds=lib3ds
