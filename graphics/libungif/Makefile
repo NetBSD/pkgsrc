@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2004/02/15 13:34:59 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.30 2004/07/13 08:01:31 adam Exp $
 
-DISTNAME=	libungif-4.1.0b1
-PKGNAME=	libungif-4.1.0.1
+DISTNAME=	libungif-4.1.3
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.ayamura.org/pub/graphics/ \
-		ftp://prtr-13.ucsc.edu/pub/libungif/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
+HOMEPAGE=	http://libungif.sourceforge.net/
 COMMENT=	Tools and library routines for working with GIF images
 
 CONFLICTS=	giflib-[0-9]*
@@ -33,7 +31,7 @@ post-patch:
 
 post-install:
 	cd ${PREFIX}; \
-	for f in libungif.a libungif.so libungif.so.5 libungif.so.5.0; do \
+	for f in libungif.a libungif.so libungif.so.5 libungif.so.5.3; do \
 		g=`echo $$f | ${SED} "s,libungif,libgif,"`; \
 		${LN} -sf $$f ${PREFIX}/lib/$$g; \
 	done
