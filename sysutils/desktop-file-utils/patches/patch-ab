@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/21 17:03:54 jmmv Exp $
+
+--- Makefile.in.orig	2004-07-22 08:52:29.000000000 +0200
++++ Makefile.in
+@@ -143,7 +143,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = src test misc
++SUBDIRS = src test
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
