@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/11/18 23:02:00 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/13 06:56:18 martti Exp $
 
 DISTNAME=	proftpd-1.2.10
 CATEGORIES=	net
@@ -28,8 +28,8 @@ RCD_SCRIPTS=	proftpd
 CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
 		${PKG_SYSCONFDIR}/proftpd.conf
 
-PKG_SUPPORTED_OPTIONS = PAM wrap quota
-PKG_OPTIONS_VAR       = PROFTPD_OPTIONS
+PKG_SUPPORTED_OPTIONS = PAM wrap quota pgsql
+PKG_OPTIONS_VAR       = PKG_OPTIONS.proftpd
 
 # This (or something like this must be in mk/bsd.options.mk) to allow 
 # to see the supported options
