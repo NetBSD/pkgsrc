@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 1999/01/04 21:09:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/12 18:32:38 tron Exp $
 bin/mutt
 etc/Muttrc
 etc/mime.types
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
+share/locale/cs/LC_MESSAGES/mutt.mo
 share/locale/de/LC_MESSAGES/mutt.mo
-share/locale/fr/LC_MESSAGES/mutt.mo
 share/locale/es/LC_MESSAGES/mutt.mo
+share/locale/fr/LC_MESSAGES/mutt.mo
+share/locale/it/LC_MESSAGES/mutt.mo
+share/locale/nl/LC_MESSAGES/mutt.mo
 share/locale/pl/LC_MESSAGES/mutt.mo
 share/locale/ru/LC_MESSAGES/mutt.mo
-share/locale/it/LC_MESSAGES/mutt.mo
 share/locale/uk/LC_MESSAGES/mutt.mo
 share/doc/mutt/applying-patches.txt
 share/doc/mutt/devel-notes.txt
@@ -22,6 +24,7 @@ share/doc/mutt/NEWS
 share/doc/mutt/TODO
 share/doc/mutt/manual.txt
 share/doc/mutt/PGP-Notes.txt
+share/doc/mutt/README.SECURITY
 share/mutt/charsets/ansi-x3-110-1983
 share/mutt/charsets/ansi-x3-4-1968
 share/mutt/charsets/asmo-449
