@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
+$NetBSD: patch-ab,v 1.10 2004/01/10 14:23:52 recht Exp $
 
---- Makefile.in.orig	2003-01-05 12:54:59.000000000 +0100
-+++ Makefile.in
-@@ -21,13 +21,13 @@ include ./src/make.env
+--- Makefile.in.orig	2003-09-21 13:31:27.000000000 +0200
++++ Makefile.in	2004-01-10 10:30:56.000000000 +0100
+@@ -21,13 +21,13 @@
  .SUFFIXES: .o .c .cpp .cxx .rsrc .r
  
  .c.o:
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  
  .rsrc.r:
  	$(DEREZ) $^ Carbon.r -useDF > $@
-@@ -42,10 +42,6 @@ VP2 = @top_srcdir@/src/common
+@@ -42,10 +42,6 @@
  VP3 = @top_srcdir@/src/generic
  VP4 = @top_srcdir@/src/unix
  VP5 = @top_srcdir@/src/html
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  VPA = @top_srcdir@/src/regex
  VP10 = @top_srcdir@/src/iodbc
  VP11 = @top_srcdir@/src/msw/ole
-@@ -53,7 +49,7 @@ VP11 = @top_srcdir@/src/msw/ole
+@@ -53,7 +49,7 @@
  # the comment at the end of the next line is needed because otherwise autoconf
  # would remove this line completely - it contains a built-in hack to remove
  # any VPATH assignment not containing ':'
@@ -39,16 +39,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  
  prefix = @prefix@
  exec_prefix = @exec_prefix@
-@@ -64,7 +60,7 @@ libdir = @libdir@
- mandir = @mandir@
- includedir = @includedir@
- 
--localedir = $(datadir)/locale
-+localedir = /usr/orinoco/share/locale
- 
- top_builddir = .
- build_libdir = $(top_builddir)/lib
-@@ -72,7 +68,8 @@ build_libdir = $(top_builddir)/lib
+@@ -72,7 +68,8 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -58,7 +49,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  
  build_alias = @build_alias@
  build_triplet = @build@
-@@ -94,10 +91,6 @@ GENDIR   = $(WXDIR)/src/generic
+@@ -94,10 +91,6 @@
  COMMDIR  = $(WXDIR)/src/common
  HTMLDIR  = $(WXDIR)/src/html
  UNIXDIR  = $(WXDIR)/src/unix
@@ -69,7 +60,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  REGEXDIR = $(WXDIR)/src/regex
  GTKDIR   = $(WXDIR)/src/gtk
  X11DIR   = $(WXDIR)/src/x11
-@@ -161,124 +154,6 @@ REGEXOBJS = \
+@@ -161,124 +154,6 @@
  		regerror.o \
  		regfree.o
  
@@ -194,39 +185,40 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  IODBCOBJS = \
  		catalog.o \
  		connect.o \
-@@ -302,52 +177,33 @@ IODBCOBJS = \
+@@ -302,52 +177,27 @@
  SONAME_FLAGS = @SONAME_FLAGS@
  SONAME_FLAGS_GL = @SONAME_FLAGS_GL@
  
 -all: @WX_ALL@
-+all: $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la
++all: $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la $(build_libdir)/lib@WX_LIBRARY_GL@.la
  
 -$(build_libdir)/@WX_LIBRARY_NAME_STATIC@: $(OBJECTS)
 -	@$(INSTALL) -d $(build_libdir)
 -	@$(RM) $@
 -	$(AR) $(AROPTIONS) $@ $(OBJECTS)
 -	$(RANLIB) $@
+-
+-$(build_libdir)/@WX_LIBRARY_NAME_STATIC_GL@: glcanvas.o
+-	@$(INSTALL) -d $(build_libdir)
+-	@$(RM) $@
+-	$(AR) $(AROPTIONS) $@ glcanvas.o
+-	$(RANLIB) $@
+-
+-$(build_libdir)/@WX_LIBRARY_NAME_SHARED@: $(OBJECTS)
+-	@$(INSTALL) -d $(build_libdir)
+-	$(SHARED_LD) $@ $(SONAME_FLAGS) $(OBJECTS) $(EXTRALIBS)
 +$(build_libdir)/lib@WX_LIBRARY_BASENAME@.la: $(OBJECTS)
 +	@$(INSTALL_DATA_DIR) $(build_libdir)
 +	${LIBTOOL} --mode=link cc -o $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la ${OBJECTS:.o=.lo} ${EXTRALIBS} -rpath ${PREFIX}/lib -version-info 0:1
  
- $(build_libdir)/@WX_LIBRARY_NAME_STATIC_GL@: glcanvas.o
--	@$(INSTALL) -d $(build_libdir)
-+	@$(INSTALL_DATA_DIR) $(build_libdir)
- 	@$(RM) $@
- 	$(AR) $(AROPTIONS) $@ glcanvas.o
- 	$(RANLIB) $@
- 
--$(build_libdir)/@WX_LIBRARY_NAME_SHARED@: $(OBJECTS)
--	@$(INSTALL) -d $(build_libdir)
--	$(SHARED_LD) $@ $(SONAME_FLAGS) $(OBJECTS) $(EXTRALIBS)
--
  # NB: we used to have "-L$(build_libdir) @WXCONFIG_LIBS@" in the SHARED_LD line
  #     but this seems to result in problems with libwx_gtk being linked in twice
- $(build_libdir)/@WX_LIBRARY_NAME_SHARED_GL@: glcanvas.o $(build_libdir)/@WX_LIBRARY_NAME_SHARED@
+-$(build_libdir)/@WX_LIBRARY_NAME_SHARED_GL@: glcanvas.o $(build_libdir)/@WX_LIBRARY_NAME_SHARED@
 -	@$(INSTALL) -d $(build_libdir)
+-	$(SHARED_LD) $@ $(SONAME_FLAGS_GL) glcanvas.o $(EXTRALIBS) $(LDFLAGS_GL) $(OPENGLLIBS)
++$(build_libdir)/lib@WX_LIBRARY_GL@.la: glcanvas.o $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la
 +	@$(INSTALL_DATA_DIR) $(build_libdir)
- 	$(SHARED_LD) $@ $(SONAME_FLAGS_GL) glcanvas.o $(EXTRALIBS) $(OPENGLLIBS)
++	${LIBTOOL} --mode=link cc -o $(build_libdir)/lib@WX_LIBRARY_GL@.la glcanvas.lo ${EXTRALIBS} $(LDFLAGS_GL) $(OPENGLLIBS) -rpath ${PREFIX}/lib -version-info 0:1
  
  $(build_libdir)/@WX_RESOURCES_MACOSX_DATA@: $(MACRESOURCES)
 -	@$(INSTALL) -d $(build_libdir)
@@ -255,7 +247,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  
  parser.c: $(COMMDIR)/parser.y lexer.c
  	$(YACC) $(COMMDIR)/parser.y
-@@ -369,13 +225,6 @@ lexer.c: $(COMMDIR)/lexer.l
+@@ -369,13 +219,6 @@
  
  @IF_GNU_MAKE@-include $(OBJECTS:.o=.d)
  
@@ -269,7 +261,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  CREATE_INSTALLED_LINKS_GL: preinstall_gl
  	$(RM) $(libdir)/@WX_LIBRARY_LINK1_GL@
  	$(RM) $(libdir)/@WX_LIBRARY_LINK2_GL@
-@@ -385,10 +234,10 @@ CREATE_INSTALLED_LINKS_GL: preinstall_gl
+@@ -385,10 +228,10 @@
  
  afminstall: preinstall
  	@if test ! -d $(datadir); then $(INSTALL) -d $(datadir); fi
@@ -284,7 +276,7 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  	$(INSTALL_DATA) $(top_srcdir)/misc/afm/*.afm $(datadir)/wx/$(VER_MAJMIN)/afm
  	$(INSTALL_DATA) $(top_srcdir)/misc/gs_afm/*.afm $(datadir)/wx/$(VER_MAJMIN)/gs_afm
  
-@@ -410,51 +259,51 @@ win32install: preinstall
+@@ -410,51 +253,51 @@
  
  # this is the real install target: copies the library, wx-config and the
  # headers to the installation directory
@@ -358,12 +350,22 @@ $NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
  	  $(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo; \
  	  echo "$(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo"; \
  	done
-@@ -474,7 +323,7 @@ preinstall_gl: $(build_libdir)/@WX_TARGE
- 	@if test ! -d $(libdir); then $(INSTALL) -d $(libdir); fi
- 	@INSTALL_LIBRARY@ $(build_libdir)/@WX_TARGET_LIBRARY_GL@ $(libdir)/@WX_TARGET_LIBRARY_GL@
+@@ -467,14 +310,14 @@
+ 	$(INSTALL_PROGRAM) $(build_libdir)/@WX_RESOURCES_MACOSX_ASCII@ $(libdir)/@WX_RESOURCES_MACOSX_ASCII@
+ 	$(INSTALL_PROGRAM) $(build_libdir)/@WX_RESOURCES_MACOSX_DATA@ $(libdir)/@WX_RESOURCES_MACOSX_DATA@
+ 
+-preinstall_gl: $(build_libdir)/@WX_TARGET_LIBRARY_GL@
++preinstall_gl: $(build_libdir)/lib@WX_LIBRARY_GL@.la
+ 	@echo " "
+ 	@echo " Installing wxWindows OpenGl add-on..."
+ 	@echo " "
+-	@if test ! -d $(libdir); then $(INSTALL) -d $(libdir); fi
+-	@INSTALL_LIBRARY@ $(build_libdir)/@WX_TARGET_LIBRARY_GL@ $(libdir)/@WX_TARGET_LIBRARY_GL@
++	@if test ! -d $(libdir); then $(INSTALL_DATA_DIR) $(libdir); fi
++	${LIBTOOL} --mode=install ${INSTALL_DATA} $(build_libdir)/lib@WX_LIBRARY_GL@.la $(libdir)
  
 -install: @AFMINSTALL@ @WX_ALL_INSTALLED@ m4datainstall @WIN32INSTALL@
-+install: @AFMINSTALL@ m4datainstall @WIN32INSTALL@
++install: @AFMINSTALL@ preinstall_gl m4datainstall @WIN32INSTALL@
  	@echo " "
  	@echo " The installation of wxWindows is finished.  On certain"
  	@echo " platforms (e.g. Linux) you'll now have to run ldconfig"
