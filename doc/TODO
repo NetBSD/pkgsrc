@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3335 2005/03/30 12:12:45 adam Exp $
+$NetBSD: TODO,v 1.3336 2005/03/30 13:26:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,6 +404,7 @@ Suggested package updates
 	o doxygen-1.4.2
 	o dpkg-1.13.3
 	o dropbear-0.45
+	o dspam-3.4.2
 	o dvdrip-0.52.3
 	o dvipdfmx-20050201
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
@@ -1157,9 +1158,9 @@ Suggested package updates
 	o xlog-1.1
 	o xm7-303
 	o xmahjongg-3.7
-	o xmame-0.94
+	o xmame-0.95
 	o xmcd-3.3.0
-	o xmess-0.94
+	o xmess-0.95
 	o xmlsec1-1.2.7
 	o xmlstarlet-1.0.1
 	o xmms-crossfade-0.3.7
