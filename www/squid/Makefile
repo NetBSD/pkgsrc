@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2005/01/16 15:46:25 taca Exp $
+# $NetBSD: Makefile,v 1.126 2005/01/19 00:19:27 kim Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
@@ -65,6 +65,7 @@ RCD_SCRIPTS=	squid
 
 SQUID_USER?=	squid
 SQUID_GROUP?=	squid
+BUILD_DEFS+=	SQUID_USER SQUID_GROUP
 
 PKG_GROUPS=	${SQUID_GROUP}
 PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}::Squid\\ Web-Cache\\ pseudo-user
