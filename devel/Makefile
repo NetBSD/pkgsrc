@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2002/10/16 04:47:23 rh Exp $
+# $NetBSD: Makefile,v 1.338 2002/10/16 08:59:34 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -45,6 +45,7 @@ SUBDIR+=	cfitsio
 SUBDIR+=	check
 SUBDIR+=	chkpt
 SUBDIR+=	cmdline
+SUBDIR+=	coconut
 SUBDIR+=	cook
 SUBDIR+=	cpuflags
 SUBDIR+=	cscope
