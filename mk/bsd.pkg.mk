@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.814 2001/09/24 11:02:49 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.815 2001/09/25 20:26:37 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1539,6 +1539,7 @@ real-su-package: ${PLIST} ${DESCR}
 		${MAKE} ${MAKEFLAGS} delete-package;		\
 		exit 1;						\
 	fi
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PACKAGE_COOKIE}
 .  if defined(NO_BIN_ON_CDROM)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_CDROM:Q}
