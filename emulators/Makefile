@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/03/31 06:38:29 garbled Exp $
+# $NetBSD: Makefile,v 1.18 1999/04/15 16:38:56 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -6,6 +6,7 @@
    SUBDIR += bochs
 #    SUBDIR += bsvc
    SUBDIR += compat12
+   SUBDIR += compat13
 #    SUBDIR += cpmemu
 #    SUBDIR += cpmtools
    SUBDIR += doscmd
