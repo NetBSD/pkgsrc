@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/10/02 21:23:17 dillo Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/21 15:44:13 wiz Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -18,10 +18,11 @@ COMMENT=	Program for statistical analysis of sampled data
 
 BUILD_USES_MSGFMT=	yes
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
-USE_LIBINTL=	yes
 CPPFLAGS+=	-Dunix=1
 MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
