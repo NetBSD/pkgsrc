@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/08 05:22:36 mjl Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/08 06:44:41 schmonz Exp $
 
 DISTNAME=		daapd-0.2.3d
 PKGREVISION=		2
@@ -12,16 +12,14 @@ COMMENT=		Server for DAA protocol (iTunes)
 
 USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		yes
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
 
 RCD_SCRIPTS=		daapd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-# PKG_SYSCONFSUBDIR=	${PKGBASE}
-
-CONF_FILES=    ${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
+CONF_FILES=    		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
