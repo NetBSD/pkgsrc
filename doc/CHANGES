@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7073 2004/09/01 20:24:30 darcy Exp $
+$NetBSD: CHANGES,v 1.7074 2004/09/01 23:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated djbdns to 1.05nb5 [schmonz 2004-09-01]
 	Added djbdns-run-20040901 [schmonz 2004-09-01]
 	Updated py-gd to 1.3nb5 [darcy 2004-09-01]
+	Updated vice-1.15nb1 [wiz 2004-09-01]
