@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 20:50:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/07/02 14:03:50 wiz Exp $
 
-SHA1 (x10_heyu.tgz) = a35ab200e4039b373795986609c3d1fe866c27c8
-Size (x10_heyu.tgz) = 67832 bytes
-SHA1 (patch-aa) = 0f56432dbbbf84a4d59f987330d1922e82edc811
-SHA1 (patch-ab) = 1700d36fb281543df2e53c305f9390137d133409
-SHA1 (patch-ac) = fc325b009515f700b42b8f55c9712599667b9699
-SHA1 (patch-ad) = 749fbc64ad6566c5d268f3d511122ab94f36b53e
+SHA1 (x10_heyu-1.33/x10_heyu.tgz) = 73e588ca76c6402a911452bb68717c8c0ba8dbe7
+Size (x10_heyu-1.33/x10_heyu.tgz) = 75670 bytes
+SHA1 (patch-aa) = a0430f7d74c2e87017b8146447d913365ae45f0a
+SHA1 (patch-ab) = 42e9cb8480b1526124dd286b37a1eb7eb819eb4c
+SHA1 (patch-ac) = 502fc98e81fdda9f5269ab3b2d1a6338f3745b9c
+SHA1 (patch-ad) = 2efc8ff608a5d5761e0a0e96244510756e0ad27a
+SHA1 (patch-ae) = d1c8aba7aadc28347c8fa180e8c3cf2d15aea5b6
+SHA1 (patch-af) = f35f99727d31764d8c3445193f4b0469dc6308df
+SHA1 (patch-ag) = 053a71f18936ee326cc826bffcacf254a1d6cf76

@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2002/07/02 14:03:54 wiz Exp $
+
+--- install.sh.orig	Sat Jan 27 22:55:57 2001
++++ install.sh
+@@ -28,7 +28,7 @@
+     while : ; do
+ 	echo "Where would you like the sample X10 configuration installed?"
+ 	echo "The default is $HOME/.x10config"
+-	read WHERE
++	WHERE=${PREFIX}/share/examples/heyu/x10config
+ 	if [ "$WHERE" = "" ]  ; then
+ 	    FOUND=$HOME/.x10config
+ 	    break
+@@ -56,7 +56,7 @@
+ 		    ;;
+ 	    esac
+ 	    echo "To which port is the CM11 attached?"
+-	    read WHERE
++	    WHERE=/dev/tty01
+ 	    if [ "$WHERE" != "" ]  ; then
+ 		if [ -e $WHERE ] ; then
+ 		    TTY=$WHERE

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/07/15 06:50:36 rh Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/02 14:03:51 wiz Exp $
 
---- heyu.1.orig	Thu Jul  6 23:01:16 2000
-+++ heyu.1	Thu Jul  6 23:01:27 2000
+--- heyu.1.orig	Sun May 28 20:26:25 2000
++++ heyu.1
 @@ -242,7 +242,7 @@
  .br
   .x10sched.conf - CM11A schedule information for timers and macros.
