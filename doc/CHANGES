@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1250 2003/01/27 19:44:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.1251 2003/01/27 21:28:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -436,7 +436,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated everybuddy to 0.2.0nb2 [jmmv 2003-01-27]
 	Updated everybuddy-gnome to 0.2.0nb4 [jmmv 2003-01-27]
 	Updated gabber to 0.8.7nb5 [jmmv 2003-01-27]
-	Updated gnome-icu to 0.96nb5 [jmmv 2003-01-27]
+	Updated gnomeicu to 0.96nb5 [jmmv 2003-01-27]
 	Updated xchat to 1.8.11nb1 [jmmv 2003-01-27]
 	Updated xchat-gnome to 1.8.11nb1 [jmmv 2003-01-27]
 	Updated gaim to 0.59.8nb2 [jmmv 2003-01-27]
