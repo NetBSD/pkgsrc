@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2004/02/24 22:31:41 cube Exp $
+# $NetBSD: Makefile,v 1.220 2004/02/26 04:02:48 xtraeme Exp $
 
 COMMENT=	System utilities
 
@@ -97,6 +97,7 @@ SUBDIR+=	medusa
 SUBDIR+=	memconf
 SUBDIR+=	memtest86
 SUBDIR+=	mgm
+SUBDIR+=	mklivecd
 SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	mtools
