@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1858 2004/06/23 22:30:41 adrianp Exp $
+$NetBSD: TODO,v 1.1859 2004/06/24 09:18:28 cjep Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ Suggested package updates
 	o vfu-4.03
 	o vnc-4.0 [http://www.realvnc.com/download.html]
 	o vttest-20030301
-	o w3m-0.5.1 [pkg/25995]
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wine-20040615
