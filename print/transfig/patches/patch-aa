@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/01/19 17:22:11 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 2000/06/22 08:11:35 itohy Exp $
 
---- fig2dev/Imakefile.orig	Wed Jul  1 01:52:50 1998
-+++ fig2dev/Imakefile	Tue Jan 19 18:07:15 1999
-@@ -31,7 +31,7 @@
+--- fig2dev/Imakefile.orig	Fri Jan 14 12:59:04 2000
++++ fig2dev/Imakefile	Thu Jun 22 00:01:06 2000
+@@ -27,7 +27,7 @@
  XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
  XCOMM and installed xfig.  This will be made automatic in the future.
  
@@ -11,34 +11,64 @@ $NetBSD: patch-aa,v 1.4 1999/01/19 17:22:11 frueauf Exp $
  
  XCOMM If your system has the strerror() function (doesn't have sys_errlist) then
  XCOMM comment out NEED_STRERROR with an XCOMM comment.
-@@ -57,7 +57,7 @@
- XCOMM You need version 3.4c of the XPM package.
+@@ -54,11 +54,11 @@
+ XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
  XCOMM
  
 -XCOMM #define USEXPM
 +#define USEXPM
  
- XCOMM For Linux machines or any machines that have a separate library for
- XCOMM the database management routines, uncomment the following line.
-@@ -136,7 +136,7 @@
  #ifdef USEXPM
- DUSEXPM = -DUSE_XPM
  XPMLIBDIR = $(USRLIBDIR)
--XPMINC = -I$(INCDIR)
+-XPMINC = -I/usr/include/X11
 +XPMINC = -I$(INCDIR)/X11
- XPMLIBS = -L$(XPMLIBDIR) -lXpm -lX11
- XPMRGB = XPMRGB=$(LIBDIR)/rgb
- XPMDBM = $(USE_NDBM)
-@@ -153,9 +153,9 @@
+ #endif
+ 
+ XCOMM For Linux machines or any machines that have a separate library for
+@@ -87,8 +87,8 @@
+ 
+ #ifdef USEJPEG
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIBDIR = /usr/local/lib
+-JPEGINCDIR = /usr/include/X11
++JPEGLIBDIR = $(LOCALBASE)/lib
++JPEGINCDIR = $(LOCALBASE)/include
+ #else
+ JPEGLIBDIR = ../jpeg
+ JPEGINCDIR = $(JPEGLIBDIR)
+@@ -127,12 +127,12 @@
+ 
+ XCOMM Uncomment the next line if you want use Japanese (i18n) on xfig.
+ 
+-XCOMM #define I18N
++#define I18N
+ 
+ #ifdef I18N
+ I18N_DEFS = -DI18N 
+-FIG2DEV_LIBDIR = /usr/local/lib/fig2dev
+-I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR='\"/usr/local/lib/fig2dev\"'
++FIG2DEV_LIBDIR = $(PROJECTROOT)/lib/fig2dev
++I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR='\"$(FIG2DEV_LIBDIR)\"'
+ 
+ install::
+ 	[ -d $(FIG2DEV_LIBDIR) ] || mkdir $(FIG2DEV_LIBDIR)
+@@ -177,8 +177,8 @@
  DUSEJPEG = -DUSE_JPEG
  
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
--JPEGINCDIR = /usr/include/X11
 -JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
 +JPEGLIBDIR = $(LOCALBASE)/lib
-+JPEGINCDIR = $(LOCALBASE)/include
 +JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
  #else
  XCOMM this is relative to this directory (transfig/fig2dev)
  JPEGLIBDIR = ../../jpeg-6a
+@@ -189,7 +189,7 @@
+ 
+ #endif /* USEJPEG */
+ 
+-IMAKE_DEFINES = $(DUSEJPEG) $(DUSEXPM)
++IMAKE_DEFINES = $(DUSEJPEG) $(DJPEGINC) $(DUSEXPM)
+ 
+ DEVDEFINES = $(DUSEJPEG) $(DUSEXPM) $(XPMINC) $(DDNFSS) $(DDA4) \
+ 		$(DDLATEX2E_GRAPHICS) $(DDEPSFIG) $(DDIBMGEC) $(DDDVIPS) $(I18N_DEV_DEFS)
