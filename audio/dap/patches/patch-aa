@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/04 12:56:30 scw Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/22 09:19:57 scw Exp $
 
 --- main/Makefile.netbsd.orig	Thu Nov 11 01:17:08 1999
 +++ main/Makefile.netbsd	Fri Dec  3 21:31:57 1999
 @@ -12,7 +12,7 @@
  INCDIR  = -I. -I.. -I$(SOUND) -I$(SPKIT) -I$(FORMS) -I$(TOOLTIP) -I$(X11DIR)/include -I$(X11DIR)/include/X11
- LIBDIR  = -L$(SPKIT)/spkit -L$(FORMS) -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
+-LIBDIR  = -L$(SPKIT)/spkit -L$(FORMS) -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
++LIBDIR  = -Wl,-R$(X11DIR)/lib -L$(SPKIT)/spkit -L$(FORMS) -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
  CCFLAGS = $(INCDIR) $(DEBUG) $(OPTIM) -DLINUX -DBIGENDIAN -DUSINGGCC -Wall
 -DEBUG   = -g3
 +DEBUG   = #-g3
