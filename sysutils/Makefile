@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2003/01/17 14:04:18 toshii Exp $
+# $NetBSD: Makefile,v 1.182 2003/02/16 00:26:20 salo Exp $
 
 COMMENT=	System utilities
 
@@ -142,6 +142,7 @@ SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	whowatch
 SUBDIR+=	wmcpuload
+SUBDIR+=	wtail
 SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
