@@ -1,19 +1,13 @@
-$NetBSD: patch-az,v 1.2 2000/08/15 14:48:24 abs Exp $
+$NetBSD: patch-az,v 1.3 2001/05/21 18:42:21 abs Exp $
 
---- man/man8/psf.8.orig	Tue May 20 18:35:43 1997
-+++ man/man8/psf.8
-@@ -93,10 +93,10 @@
-     :sd=/usr/spool/lpd/laser:\\
-     :lp=/usr/spool/lpd/laser/null:\\
-     :lf=/var/adm/lpd-errs:pw#80:hl:\\
--    :of=:LIBDIR:/filters/ofpap:\\
--    :if=:LIBDIR:/filters/ifpaprev:\\
--    :tf=:LIBDIR:/filters/tfpaprev:\\
--    :df=:LIBDIR:/filters/dfpaprev:
-+    :of=:LIBEXECDIR:/psffilters/ofpap:\\
-+    :if=:LIBEXECDIR:/psffilters/ifpaprev:\\
-+    :tf=:LIBEXECDIR:/psffilters/tfpaprev:\\
-+    :df=:LIBEXECDIR:/psffilters/dfpaprev:
- .fi
- .RE
- .sp
+--- man/man3/Makefile.orig	Tue May 20 18:35:43 1997
++++ man/man3/Makefile
+@@ -18,6 +18,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		< $$i > ${MANDIR}/man3/$$i; \
+ 	done
+ 
