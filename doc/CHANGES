@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4533 2004/01/21 16:27:54 cube Exp $
+$NetBSD: CHANGES,v 1.4534 2004/01/21 21:09:20 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -376,3 +376,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postfix to 2.0.17 [martti 2004-01-21]
 	Updated gcc3 to 3.3nb6 [abs 2004-01-21]
 	Updated gq to 1.0beta1 [cube 2004-01-21]
+	Added xnodecor-0.1 [kristerw 2004-01-21]
