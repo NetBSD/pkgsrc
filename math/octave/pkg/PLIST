@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/08/13 14:06:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/04/28 08:59:37 wennmach Exp $
 bin/octave
 bin/octave-bug
 bin/mkoctfile
@@ -31,7 +31,6 @@ include/${PKGNAME}/base-min.h
 include/${PKGNAME}/byte-swap.h
 include/${PKGNAME}/cmd-hist.h
 include/${PKGNAME}/data-conv.h
-include/${PKGNAME}/dbleBessel.h
 include/${PKGNAME}/dir-ops.h
 include/${PKGNAME}/file-ops.h
 include/${PKGNAME}/getopt.h
@@ -236,247 +235,421 @@ lib/${PKGNAME}/liboctave.a
 lib/${PKGNAME}/liboctinterp.a
 @exec ln -s ${PKGNAME} %D/lib/octave
 @unexec rm -f %D/lib/octave
-libexec/octave/2.0.13/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-info
-libexec/octave/2.0.13/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-octave-help
-@exec mkdir -p %D/libexec/octave/2.0.13/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-info
+libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-octave-help
+@exec mkdir -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @exec mkdir -p %D/libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @exec mkdir -p %D/libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 libexec/octave/ls-R
 man/man1/octave.1
-share/octave/2.0.13/doc/Octave-FAQ.ps
-share/octave/2.0.13/doc/octave.ps
-share/octave/2.0.13/doc/liboctave.ps
-share/octave/2.0.13/doc/refcard-letter.ps
-share/octave/2.0.13/doc/refcard-legal.ps
-share/octave/2.0.13/doc/refcard-a4.ps
-share/octave/2.0.13/m/audio/lin2mu.m
-share/octave/2.0.13/m/audio/loadaudio.m
-share/octave/2.0.13/m/audio/mu2lin.m
-share/octave/2.0.13/m/audio/playaudio.m
-share/octave/2.0.13/m/audio/record.m
-share/octave/2.0.13/m/audio/saveaudio.m
-share/octave/2.0.13/m/audio/setaudio.m
-share/octave/2.0.13/m/control/abcddim.m
-share/octave/2.0.13/m/control/are.m
-share/octave/2.0.13/m/control/c2d.m
-share/octave/2.0.13/m/control/dare.m
-share/octave/2.0.13/m/control/dgram.m
-share/octave/2.0.13/m/control/dlqe.m
-share/octave/2.0.13/m/control/dlqr.m
-share/octave/2.0.13/m/control/dlyap.m
-share/octave/2.0.13/m/control/is_controllable.m
-share/octave/2.0.13/m/control/is_observable.m
-share/octave/2.0.13/m/control/lqe.m
-share/octave/2.0.13/m/control/lqr.m
-share/octave/2.0.13/m/control/lyap.m
-share/octave/2.0.13/m/control/tzero.m
-share/octave/2.0.13/m/elfun/acot.m
-share/octave/2.0.13/m/elfun/acoth.m
-share/octave/2.0.13/m/elfun/acsc.m
-share/octave/2.0.13/m/elfun/acsch.m
-share/octave/2.0.13/m/elfun/asec.m
-share/octave/2.0.13/m/elfun/asech.m
-share/octave/2.0.13/m/elfun/cot.m
-share/octave/2.0.13/m/elfun/coth.m
-share/octave/2.0.13/m/elfun/csc.m
-share/octave/2.0.13/m/elfun/csch.m
-share/octave/2.0.13/m/elfun/gcd.m
-share/octave/2.0.13/m/elfun/lcm.m
-share/octave/2.0.13/m/elfun/sec.m
-share/octave/2.0.13/m/elfun/sech.m
-share/octave/2.0.13/m/general/columns.m
-share/octave/2.0.13/m/general/common_size.m
-share/octave/2.0.13/m/general/diff.m
-share/octave/2.0.13/m/general/fliplr.m
-share/octave/2.0.13/m/general/flipud.m
-share/octave/2.0.13/m/general/int2str.m
-share/octave/2.0.13/m/general/is_matrix.m
-share/octave/2.0.13/m/general/is_scalar.m
-share/octave/2.0.13/m/general/is_square.m
-share/octave/2.0.13/m/general/is_symmetric.m
-share/octave/2.0.13/m/general/is_vector.m
-share/octave/2.0.13/m/general/isempty.m
-share/octave/2.0.13/m/general/length.m
-share/octave/2.0.13/m/general/linspace.m
-share/octave/2.0.13/m/general/logspace.m
-share/octave/2.0.13/m/general/nargchk.m
-share/octave/2.0.13/m/general/nextpow2.m
-share/octave/2.0.13/m/general/num2str.m
-share/octave/2.0.13/m/general/perror.m
-share/octave/2.0.13/m/general/postpad.m
-share/octave/2.0.13/m/general/prepad.m
-share/octave/2.0.13/m/general/randperm.m
-share/octave/2.0.13/m/general/rem.m
-share/octave/2.0.13/m/general/reshape.m
-share/octave/2.0.13/m/general/rot90.m
-share/octave/2.0.13/m/general/rows.m
-share/octave/2.0.13/m/general/shift.m
-share/octave/2.0.13/m/general/strerror.m
-share/octave/2.0.13/m/general/tril.m
-share/octave/2.0.13/m/general/triu.m
-share/octave/2.0.13/m/image/colormap.m
-share/octave/2.0.13/m/image/gray.m
-share/octave/2.0.13/m/image/gray2ind.m
-share/octave/2.0.13/m/image/image.m
-share/octave/2.0.13/m/image/imagesc.m
-share/octave/2.0.13/m/image/imshow.m
-share/octave/2.0.13/m/image/ind2gray.m
-share/octave/2.0.13/m/image/ind2rgb.m
-share/octave/2.0.13/m/image/loadimage.m
-share/octave/2.0.13/m/image/ntsc2rgb.m
-share/octave/2.0.13/m/image/ocean.m
-share/octave/2.0.13/m/image/rgb2ind.m
-share/octave/2.0.13/m/image/rgb2ntsc.m
-share/octave/2.0.13/m/image/saveimage.m
-share/octave/2.0.13/m/io/printf.m
-share/octave/2.0.13/m/io/puts.m
-share/octave/2.0.13/m/linear-algebra/commutation_matrix.m
-share/octave/2.0.13/m/linear-algebra/cond.m
-share/octave/2.0.13/m/linear-algebra/cross.m
-share/octave/2.0.13/m/linear-algebra/dot.m
-share/octave/2.0.13/m/linear-algebra/duplication_matrix.m
-share/octave/2.0.13/m/linear-algebra/kron.m
-share/octave/2.0.13/m/linear-algebra/norm.m
-share/octave/2.0.13/m/linear-algebra/null.m
-share/octave/2.0.13/m/linear-algebra/orth.m
-share/octave/2.0.13/m/linear-algebra/pinv.m
-share/octave/2.0.13/m/linear-algebra/qzhess.m
-share/octave/2.0.13/m/linear-algebra/rank.m
-share/octave/2.0.13/m/linear-algebra/trace.m
-share/octave/2.0.13/m/linear-algebra/vec.m
-share/octave/2.0.13/m/linear-algebra/vech.m
-share/octave/2.0.13/m/miscellaneous/bincoeff.m
-share/octave/2.0.13/m/miscellaneous/bug_report.m
-share/octave/2.0.13/m/miscellaneous/comma.m
-share/octave/2.0.13/m/miscellaneous/cputime.m
-share/octave/2.0.13/m/miscellaneous/dump_prefs.m
-share/octave/2.0.13/m/miscellaneous/etime.m
-share/octave/2.0.13/m/miscellaneous/flops.m
-share/octave/2.0.13/m/miscellaneous/is_leap_year.m
-share/octave/2.0.13/m/miscellaneous/list_primes.m
-share/octave/2.0.13/m/miscellaneous/menu.m
-share/octave/2.0.13/m/miscellaneous/paren.m
-share/octave/2.0.13/m/miscellaneous/path.m
-share/octave/2.0.13/m/miscellaneous/popen2.m
-share/octave/2.0.13/m/miscellaneous/semicolon.m
-share/octave/2.0.13/m/miscellaneous/texas_lotto.m
-share/octave/2.0.13/m/miscellaneous/tic.m
-share/octave/2.0.13/m/miscellaneous/toc.m
-share/octave/2.0.13/m/miscellaneous/version.m
-share/octave/2.0.13/m/miscellaneous/xor.m
-share/octave/2.0.13/m/plot/__plr1__.m
-share/octave/2.0.13/m/plot/__plr2__.m
-share/octave/2.0.13/m/plot/__plr__.m
-share/octave/2.0.13/m/plot/__plt1__.m
-share/octave/2.0.13/m/plot/__plt2__.m
-share/octave/2.0.13/m/plot/__plt2mm__.m
-share/octave/2.0.13/m/plot/__plt2mv__.m
-share/octave/2.0.13/m/plot/__plt2ss__.m
-share/octave/2.0.13/m/plot/__plt2vm__.m
-share/octave/2.0.13/m/plot/__plt2vv__.m
-share/octave/2.0.13/m/plot/__plt__.m
-share/octave/2.0.13/m/plot/__pltopt1__.m
-share/octave/2.0.13/m/plot/__pltopt__.m
-share/octave/2.0.13/m/plot/axis.m
-share/octave/2.0.13/m/plot/bar.m
-share/octave/2.0.13/m/plot/bottom_title.m
-share/octave/2.0.13/m/plot/contour.m
-share/octave/2.0.13/m/plot/figure.m
-share/octave/2.0.13/m/plot/grid.m
-share/octave/2.0.13/m/plot/hist.m
-share/octave/2.0.13/m/plot/loglog.m
-share/octave/2.0.13/m/plot/mesh.m
-share/octave/2.0.13/m/plot/meshdom.m
-share/octave/2.0.13/m/plot/mplot.m
-share/octave/2.0.13/m/plot/meshgrid.m
-share/octave/2.0.13/m/plot/multiplot.m
-share/octave/2.0.13/m/plot/oneplot.m
-share/octave/2.0.13/m/plot/plot.m
-share/octave/2.0.13/m/plot/plot_border.m
-share/octave/2.0.13/m/plot/polar.m
-share/octave/2.0.13/m/plot/semilogx.m
-share/octave/2.0.13/m/plot/semilogy.m
-share/octave/2.0.13/m/plot/shg.m
-share/octave/2.0.13/m/plot/sombrero.m
-share/octave/2.0.13/m/plot/stairs.m
-share/octave/2.0.13/m/plot/subplot.m
-share/octave/2.0.13/m/plot/subwindow.m
-share/octave/2.0.13/m/plot/title.m
-share/octave/2.0.13/m/plot/top_title.m
-share/octave/2.0.13/m/plot/xlabel.m
-share/octave/2.0.13/m/plot/ylabel.m
-share/octave/2.0.13/m/plot/zlabel.m
-share/octave/2.0.13/m/polynomial/compan.m
-share/octave/2.0.13/m/polynomial/conv.m
-share/octave/2.0.13/m/polynomial/deconv.m
-share/octave/2.0.13/m/polynomial/poly.m
-share/octave/2.0.13/m/polynomial/polyder.m
-share/octave/2.0.13/m/polynomial/polyderiv.m
-share/octave/2.0.13/m/polynomial/polyfit.m
-share/octave/2.0.13/m/polynomial/polyinteg.m
-share/octave/2.0.13/m/polynomial/polyreduce.m
-share/octave/2.0.13/m/polynomial/polyval.m
-share/octave/2.0.13/m/polynomial/polyvalm.m
-share/octave/2.0.13/m/polynomial/residue.m
-share/octave/2.0.13/m/polynomial/roots.m
-share/octave/2.0.13/m/set/complement.m
-share/octave/2.0.13/m/set/create_set.m
-share/octave/2.0.13/m/set/intersection.m
-share/octave/2.0.13/m/set/union.m
-share/octave/2.0.13/m/signal/detrend.m
-share/octave/2.0.13/m/signal/fftconv.m
-share/octave/2.0.13/m/signal/fftfilt.m
-share/octave/2.0.13/m/signal/fftshift.m
-share/octave/2.0.13/m/signal/freqz.m
-share/octave/2.0.13/m/signal/sinc.m
-share/octave/2.0.13/m/specfun/bessel.m
-share/octave/2.0.13/m/specfun/beta.m
-share/octave/2.0.13/m/specfun/betai.m
-share/octave/2.0.13/m/specfun/erfinv.m
-share/octave/2.0.13/m/specfun/gammai.m
-share/octave/2.0.13/m/specfun/log2.m
-share/octave/2.0.13/m/specfun/pow2.m
-share/octave/2.0.13/m/special-matrix/hankel.m
-share/octave/2.0.13/m/special-matrix/hilb.m
-share/octave/2.0.13/m/special-matrix/invhilb.m
-share/octave/2.0.13/m/special-matrix/sylvester_matrix.m
-share/octave/2.0.13/m/special-matrix/toeplitz.m
-share/octave/2.0.13/m/special-matrix/vander.m
-share/octave/2.0.13/m/startup/octaverc
-share/octave/2.0.13/m/statistics/corrcoef.m
-share/octave/2.0.13/m/statistics/cov.m
-share/octave/2.0.13/m/statistics/gls.m
-share/octave/2.0.13/m/statistics/kurtosis.m
-share/octave/2.0.13/m/statistics/mahalanobis.m
-share/octave/2.0.13/m/statistics/mean.m
-share/octave/2.0.13/m/statistics/median.m
-share/octave/2.0.13/m/statistics/ols.m
-share/octave/2.0.13/m/statistics/skewness.m
-share/octave/2.0.13/m/statistics/std.m
-share/octave/2.0.13/m/strings/bin2dec.m
-share/octave/2.0.13/m/strings/blanks.m
-share/octave/2.0.13/m/strings/deblank.m
-share/octave/2.0.13/m/strings/dec2bin.m
-share/octave/2.0.13/m/strings/dec2hex.m
-share/octave/2.0.13/m/strings/findstr.m
-share/octave/2.0.13/m/strings/hex2dec.m
-share/octave/2.0.13/m/strings/index.m
-share/octave/2.0.13/m/strings/isletter.m
-share/octave/2.0.13/m/strings/lower.m
-share/octave/2.0.13/m/strings/rindex.m
-share/octave/2.0.13/m/strings/split.m
-share/octave/2.0.13/m/strings/str2mat.m
-share/octave/2.0.13/m/strings/str2num.m
-share/octave/2.0.13/m/strings/strcat.m
-share/octave/2.0.13/m/strings/strcmp.m
-share/octave/2.0.13/m/strings/strrep.m
-share/octave/2.0.13/m/strings/substr.m
-share/octave/2.0.13/m/strings/upper.m
-share/octave/2.0.13/m/time/asctime.m
-share/octave/2.0.13/m/time/clock.m
-share/octave/2.0.13/m/time/ctime.m
-share/octave/2.0.13/m/time/date.m
-share/octave/2.0.13/imagelib/default.img
+share/octave/2.0.16/doc/Octave-FAQ.ps
+share/octave/2.0.16/doc/octave.ps
+share/octave/2.0.16/doc/liboctave.ps
+share/octave/2.0.16/doc/refcard-letter.ps
+share/octave/2.0.16/doc/refcard-legal.ps
+share/octave/2.0.16/doc/refcard-a4.ps
+share/octave/2.0.16/m/audio/lin2mu.m
+share/octave/2.0.16/m/audio/loadaudio.m
+share/octave/2.0.16/m/audio/mu2lin.m
+share/octave/2.0.16/m/audio/playaudio.m
+share/octave/2.0.16/m/audio/record.m
+share/octave/2.0.16/m/audio/saveaudio.m
+share/octave/2.0.16/m/audio/setaudio.m
+share/octave/2.0.16/m/control/abcddim.m
+share/octave/2.0.16/m/control/are.m
+share/octave/2.0.16/m/control/c2d.m
+share/octave/2.0.16/m/control/dare.m
+share/octave/2.0.16/m/control/dgram.m
+share/octave/2.0.16/m/control/dlqe.m
+share/octave/2.0.16/m/control/dlqr.m
+share/octave/2.0.16/m/control/dlyap.m
+share/octave/2.0.16/m/control/is_controllable.m
+share/octave/2.0.16/m/control/is_observable.m
+share/octave/2.0.16/m/control/lqe.m
+share/octave/2.0.16/m/control/lqr.m
+share/octave/2.0.16/m/control/lyap.m
+share/octave/2.0.16/m/control/tzero.m
+share/octave/2.0.16/m/elfun/acot.m
+share/octave/2.0.16/m/elfun/acoth.m
+share/octave/2.0.16/m/elfun/acsc.m
+share/octave/2.0.16/m/elfun/acsch.m
+share/octave/2.0.16/m/elfun/asec.m
+share/octave/2.0.16/m/elfun/asech.m
+share/octave/2.0.16/m/elfun/cot.m
+share/octave/2.0.16/m/elfun/coth.m
+share/octave/2.0.16/m/elfun/csc.m
+share/octave/2.0.16/m/elfun/csch.m
+share/octave/2.0.16/m/elfun/gcd.m
+share/octave/2.0.16/m/elfun/lcm.m
+share/octave/2.0.16/m/elfun/sec.m
+share/octave/2.0.16/m/elfun/sech.m
+share/octave/2.0.16/m/finance/fv.m
+share/octave/2.0.16/m/finance/fvl.m
+share/octave/2.0.16/m/finance/irr.m
+share/octave/2.0.16/m/finance/nper.m
+share/octave/2.0.16/m/finance/npv.m
+share/octave/2.0.16/m/finance/pmt.m
+share/octave/2.0.16/m/finance/pv.m
+share/octave/2.0.16/m/finance/pvl.m
+share/octave/2.0.16/m/finance/rate.m
+share/octave/2.0.16/m/finance/vol.m
+share/octave/2.0.16/m/general/columns.m
+share/octave/2.0.16/m/general/common_size.m
+share/octave/2.0.16/m/general/diff.m
+share/octave/2.0.16/m/general/fliplr.m
+share/octave/2.0.16/m/general/flipud.m
+share/octave/2.0.16/m/general/int2str.m
+share/octave/2.0.16/m/general/is_matrix.m
+share/octave/2.0.16/m/general/is_scalar.m
+share/octave/2.0.16/m/general/is_square.m
+share/octave/2.0.16/m/general/is_symmetric.m
+share/octave/2.0.16/m/general/is_vector.m
+share/octave/2.0.16/m/general/isempty.m
+share/octave/2.0.16/m/general/length.m
+share/octave/2.0.16/m/general/logspace.m
+share/octave/2.0.16/m/general/nargchk.m
+share/octave/2.0.16/m/general/nextpow2.m
+share/octave/2.0.16/m/general/num2str.m
+share/octave/2.0.16/m/general/perror.m
+share/octave/2.0.16/m/general/postpad.m
+share/octave/2.0.16/m/general/prepad.m
+share/octave/2.0.16/m/general/randperm.m
+share/octave/2.0.16/m/general/rem.m
+share/octave/2.0.16/m/general/reshape.m
+share/octave/2.0.16/m/general/rot90.m
+share/octave/2.0.16/m/general/rows.m
+share/octave/2.0.16/m/general/shift.m
+share/octave/2.0.16/m/general/strerror.m
+share/octave/2.0.16/m/general/tril.m
+share/octave/2.0.16/m/general/triu.m
+share/octave/2.0.16/m/image/colormap.m
+share/octave/2.0.16/m/image/gray.m
+share/octave/2.0.16/m/image/gray2ind.m
+share/octave/2.0.16/m/image/image.m
+share/octave/2.0.16/m/image/imagesc.m
+share/octave/2.0.16/m/image/imshow.m
+share/octave/2.0.16/m/image/ind2gray.m
+share/octave/2.0.16/m/image/ind2rgb.m
+share/octave/2.0.16/m/image/loadimage.m
+share/octave/2.0.16/m/image/ntsc2rgb.m
+share/octave/2.0.16/m/image/ocean.m
+share/octave/2.0.16/m/image/rgb2ind.m
+share/octave/2.0.16/m/image/rgb2ntsc.m
+share/octave/2.0.16/m/image/saveimage.m
+share/octave/2.0.16/m/io/printf.m
+share/octave/2.0.16/m/io/puts.m
+share/octave/2.0.16/m/linear-algebra/commutation_matrix.m
+share/octave/2.0.16/m/linear-algebra/cond.m
+share/octave/2.0.16/m/linear-algebra/cross.m
+share/octave/2.0.16/m/linear-algebra/dmult.m
+share/octave/2.0.16/m/linear-algebra/dot.m
+share/octave/2.0.16/m/linear-algebra/duplication_matrix.m
+share/octave/2.0.16/m/linear-algebra/kron.m
+share/octave/2.0.16/m/linear-algebra/norm.m
+share/octave/2.0.16/m/linear-algebra/null.m
+share/octave/2.0.16/m/linear-algebra/orth.m
+share/octave/2.0.16/m/linear-algebra/qzhess.m
+share/octave/2.0.16/m/linear-algebra/rank.m
+share/octave/2.0.16/m/linear-algebra/trace.m
+share/octave/2.0.16/m/linear-algebra/vec.m
+share/octave/2.0.16/m/linear-algebra/vech.m
+share/octave/2.0.16/m/miscellaneous/bincoeff.m
+share/octave/2.0.16/m/miscellaneous/bug_report.m
+share/octave/2.0.16/m/miscellaneous/comma.m
+share/octave/2.0.16/m/miscellaneous/cputime.m
+share/octave/2.0.16/m/miscellaneous/dump_prefs.m
+share/octave/2.0.16/m/miscellaneous/etime.m
+share/octave/2.0.16/m/miscellaneous/flops.m
+share/octave/2.0.16/m/miscellaneous/is_leap_year.m
+share/octave/2.0.16/m/miscellaneous/list_primes.m
+share/octave/2.0.16/m/miscellaneous/menu.m
+share/octave/2.0.16/m/miscellaneous/pack.m
+share/octave/2.0.16/m/miscellaneous/paren.m
+share/octave/2.0.16/m/miscellaneous/path.m
+share/octave/2.0.16/m/miscellaneous/popen2.m
+share/octave/2.0.16/m/miscellaneous/semicolon.m
+share/octave/2.0.16/m/miscellaneous/texas_lotto.m
+share/octave/2.0.16/m/miscellaneous/tic.m
+share/octave/2.0.16/m/miscellaneous/toc.m
+share/octave/2.0.16/m/miscellaneous/version.m
+share/octave/2.0.16/m/miscellaneous/xor.m
+share/octave/2.0.16/m/plot/__axis_label__.m
+share/octave/2.0.16/m/plot/__plr1__.m
+share/octave/2.0.16/m/plot/__plr2__.m
+share/octave/2.0.16/m/plot/__plr__.m
+share/octave/2.0.16/m/plot/__plt1__.m
+share/octave/2.0.16/m/plot/__plt2__.m
+share/octave/2.0.16/m/plot/__plt2mm__.m
+share/octave/2.0.16/m/plot/__plt2mv__.m
+share/octave/2.0.16/m/plot/__plt2ss__.m
+share/octave/2.0.16/m/plot/__plt2vm__.m
+share/octave/2.0.16/m/plot/__plt2vv__.m
+share/octave/2.0.16/m/plot/__plt__.m
+share/octave/2.0.16/m/plot/__pltopt1__.m
+share/octave/2.0.16/m/plot/__pltopt__.m
+share/octave/2.0.16/m/plot/axis.m
+share/octave/2.0.16/m/plot/bar.m
+share/octave/2.0.16/m/plot/bottom_title.m
+share/octave/2.0.16/m/plot/contour.m
+share/octave/2.0.16/m/plot/figure.m
+share/octave/2.0.16/m/plot/grid.m
+share/octave/2.0.16/m/plot/hist.m
+share/octave/2.0.16/m/plot/loglog.m
+share/octave/2.0.16/m/plot/mesh.m
+share/octave/2.0.16/m/plot/meshdom.m
+share/octave/2.0.16/m/plot/mplot.m
+share/octave/2.0.16/m/plot/meshgrid.m
+share/octave/2.0.16/m/plot/multiplot.m
+share/octave/2.0.16/m/plot/oneplot.m
+share/octave/2.0.16/m/plot/plot.m
+share/octave/2.0.16/m/plot/plot_border.m
+share/octave/2.0.16/m/plot/polar.m
+share/octave/2.0.16/m/plot/semilogx.m
+share/octave/2.0.16/m/plot/semilogy.m
+share/octave/2.0.16/m/plot/shg.m
+share/octave/2.0.16/m/plot/sombrero.m
+share/octave/2.0.16/m/plot/stairs.m
+share/octave/2.0.16/m/plot/subplot.m
+share/octave/2.0.16/m/plot/subwindow.m
+share/octave/2.0.16/m/plot/title.m
+share/octave/2.0.16/m/plot/top_title.m
+share/octave/2.0.16/m/plot/xlabel.m
+share/octave/2.0.16/m/plot/ylabel.m
+share/octave/2.0.16/m/plot/zlabel.m
+share/octave/2.0.16/m/polynomial/compan.m
+share/octave/2.0.16/m/polynomial/conv.m
+share/octave/2.0.16/m/polynomial/deconv.m
+share/octave/2.0.16/m/polynomial/poly.m
+share/octave/2.0.16/m/polynomial/polyder.m
+share/octave/2.0.16/m/polynomial/polyderiv.m
+share/octave/2.0.16/m/polynomial/polyfit.m
+share/octave/2.0.16/m/polynomial/polyinteg.m
+share/octave/2.0.16/m/polynomial/polyreduce.m
+share/octave/2.0.16/m/polynomial/polyval.m
+share/octave/2.0.16/m/polynomial/polyvalm.m
+share/octave/2.0.16/m/polynomial/residue.m
+share/octave/2.0.16/m/polynomial/roots.m
+share/octave/2.0.16/m/set/complement.m
+share/octave/2.0.16/m/set/create_set.m
+share/octave/2.0.16/m/set/intersection.m
+share/octave/2.0.16/m/set/union.m
+share/octave/2.0.16/m/signal/arch_fit.m
+share/octave/2.0.16/m/signal/arch_rnd.m
+share/octave/2.0.16/m/signal/arch_test.m
+share/octave/2.0.16/m/signal/arma_rnd.m
+share/octave/2.0.16/m/signal/autocor.m
+share/octave/2.0.16/m/signal/autocov.m
+share/octave/2.0.16/m/signal/autoreg_matrix.m
+share/octave/2.0.16/m/signal/bartlett.m
+share/octave/2.0.16/m/signal/blackman.m
+share/octave/2.0.16/m/signal/detrend.m
+share/octave/2.0.16/m/signal/diffpara.m
+share/octave/2.0.16/m/signal/durbinlevinson.m
+share/octave/2.0.16/m/signal/fftconv.m
+share/octave/2.0.16/m/signal/fftfilt.m
+share/octave/2.0.16/m/signal/fftshift.m
+share/octave/2.0.16/m/signal/fractdiff.m
+share/octave/2.0.16/m/signal/freqz.m
+share/octave/2.0.16/m/signal/hamming.m
+share/octave/2.0.16/m/signal/hanning.m
+share/octave/2.0.16/m/signal/hurst.m
+share/octave/2.0.16/m/signal/periodogram.m
+share/octave/2.0.16/m/signal/rectangle_lw.m
+share/octave/2.0.16/m/signal/rectangle_sw.m
+share/octave/2.0.16/m/signal/sinc.m
+share/octave/2.0.16/m/signal/sinetone.m
+share/octave/2.0.16/m/signal/sinewave.m
+share/octave/2.0.16/m/signal/spectral_adf.m
+share/octave/2.0.16/m/signal/spectral_xdf.m
+share/octave/2.0.16/m/signal/spencer.m
+share/octave/2.0.16/m/signal/stft.m
+share/octave/2.0.16/m/signal/synthesis.m
+share/octave/2.0.16/m/signal/triangle_lw.m
+share/octave/2.0.16/m/signal/triangle_sw.m
+share/octave/2.0.16/m/signal/yulewalker.m
+share/octave/2.0.16/m/specfun/bessel.m
+share/octave/2.0.16/m/specfun/beta.m
+share/octave/2.0.16/m/specfun/betai.m
+share/octave/2.0.16/m/specfun/erfinv.m
+share/octave/2.0.16/m/specfun/gammai.m
+share/octave/2.0.16/m/specfun/log2.m
+share/octave/2.0.16/m/specfun/pow2.m
+share/octave/2.0.16/m/special-matrix/hankel.m
+share/octave/2.0.16/m/special-matrix/hilb.m
+share/octave/2.0.16/m/special-matrix/invhilb.m
+share/octave/2.0.16/m/special-matrix/sylvester_matrix.m
+share/octave/2.0.16/m/special-matrix/toeplitz.m
+share/octave/2.0.16/m/special-matrix/vander.m
+share/octave/2.0.16/m/startup/octaverc
+share/octave/2.0.16/m/statistics/base/center.m
+share/octave/2.0.16/m/statistics/base/cloglog.m
+share/octave/2.0.16/m/statistics/base/cor.m
+share/octave/2.0.16/m/statistics/base/corrcoef.m
+share/octave/2.0.16/m/statistics/base/cov.m
+share/octave/2.0.16/m/statistics/base/cut.m
+share/octave/2.0.16/m/statistics/base/gls.m
+share/octave/2.0.16/m/statistics/base/iqr.m
+share/octave/2.0.16/m/statistics/base/kendall.m
+share/octave/2.0.16/m/statistics/base/kurtosis.m
+share/octave/2.0.16/m/statistics/base/logit.m
+share/octave/2.0.16/m/statistics/base/mahalanobis.m
+share/octave/2.0.16/m/statistics/base/mean.m
+share/octave/2.0.16/m/statistics/base/meansq.m
+share/octave/2.0.16/m/statistics/base/median.m
+share/octave/2.0.16/m/statistics/base/moment.m
+share/octave/2.0.16/m/statistics/base/ols.m
+share/octave/2.0.16/m/statistics/base/ppplot.m
+share/octave/2.0.16/m/statistics/base/probit.m
+share/octave/2.0.16/m/statistics/base/qqplot.m
+share/octave/2.0.16/m/statistics/base/range.m
+share/octave/2.0.16/m/statistics/base/ranks.m
+share/octave/2.0.16/m/statistics/base/run_count.m
+share/octave/2.0.16/m/statistics/base/skewness.m
+share/octave/2.0.16/m/statistics/base/spearman.m
+share/octave/2.0.16/m/statistics/base/statistics.m
+share/octave/2.0.16/m/statistics/base/std.m
+share/octave/2.0.16/m/statistics/base/studentize.m
+share/octave/2.0.16/m/statistics/base/table.m
+share/octave/2.0.16/m/statistics/base/values.m
+share/octave/2.0.16/m/statistics/base/var.m
+share/octave/2.0.16/m/statistics/distributions/beta_cdf.m
+share/octave/2.0.16/m/statistics/distributions/beta_inv.m
+share/octave/2.0.16/m/statistics/distributions/beta_pdf.m
+share/octave/2.0.16/m/statistics/distributions/beta_rnd.m
+share/octave/2.0.16/m/statistics/distributions/binomial_cdf.m
+share/octave/2.0.16/m/statistics/distributions/binomial_inv.m
+share/octave/2.0.16/m/statistics/distributions/binomial_pdf.m
+share/octave/2.0.16/m/statistics/distributions/binomial_rnd.m
+share/octave/2.0.16/m/statistics/distributions/cauchy_cdf.m
+share/octave/2.0.16/m/statistics/distributions/cauchy_inv.m
+share/octave/2.0.16/m/statistics/distributions/cauchy_pdf.m
+share/octave/2.0.16/m/statistics/distributions/cauchy_rnd.m
+share/octave/2.0.16/m/statistics/distributions/chisquare_cdf.m
+share/octave/2.0.16/m/statistics/distributions/chisquare_inv.m
+share/octave/2.0.16/m/statistics/distributions/chisquare_pdf.m
+share/octave/2.0.16/m/statistics/distributions/chisquare_rnd.m
+share/octave/2.0.16/m/statistics/distributions/discrete_cdf.m
+share/octave/2.0.16/m/statistics/distributions/discrete_inv.m
+share/octave/2.0.16/m/statistics/distributions/discrete_pdf.m
+share/octave/2.0.16/m/statistics/distributions/discrete_rnd.m
+share/octave/2.0.16/m/statistics/distributions/empirical_cdf.m
+share/octave/2.0.16/m/statistics/distributions/empirical_inv.m
+share/octave/2.0.16/m/statistics/distributions/empirical_pdf.m
+share/octave/2.0.16/m/statistics/distributions/empirical_rnd.m
+share/octave/2.0.16/m/statistics/distributions/exponential_cdf.m
+share/octave/2.0.16/m/statistics/distributions/exponential_inv.m
+share/octave/2.0.16/m/statistics/distributions/exponential_pdf.m
+share/octave/2.0.16/m/statistics/distributions/exponential_rnd.m
+share/octave/2.0.16/m/statistics/distributions/f_cdf.m
+share/octave/2.0.16/m/statistics/distributions/f_inv.m
+share/octave/2.0.16/m/statistics/distributions/f_pdf.m
+share/octave/2.0.16/m/statistics/distributions/f_rnd.m
+share/octave/2.0.16/m/statistics/distributions/gamma_cdf.m
+share/octave/2.0.16/m/statistics/distributions/gamma_inv.m
+share/octave/2.0.16/m/statistics/distributions/gamma_pdf.m
+share/octave/2.0.16/m/statistics/distributions/gamma_rnd.m
+share/octave/2.0.16/m/statistics/distributions/geometric_cdf.m
+share/octave/2.0.16/m/statistics/distributions/geometric_inv.m
+share/octave/2.0.16/m/statistics/distributions/geometric_pdf.m
+share/octave/2.0.16/m/statistics/distributions/geometric_rnd.m
+share/octave/2.0.16/m/statistics/distributions/hypergeometric_cdf.m
+share/octave/2.0.16/m/statistics/distributions/hypergeometric_inv.m
+share/octave/2.0.16/m/statistics/distributions/laplace_cdf.m
+share/octave/2.0.16/m/statistics/distributions/hypergeometric_pdf.m
+share/octave/2.0.16/m/statistics/distributions/hypergeometric_rnd.m
+share/octave/2.0.16/m/statistics/distributions/kolmogorov_smirnov_cdf.m
+share/octave/2.0.16/m/statistics/distributions/laplace_inv.m
+share/octave/2.0.16/m/statistics/distributions/laplace_pdf.m
+share/octave/2.0.16/m/statistics/distributions/laplace_rnd.m
+share/octave/2.0.16/m/statistics/distributions/logistic_cdf.m
+share/octave/2.0.16/m/statistics/distributions/logistic_inv.m
+share/octave/2.0.16/m/statistics/distributions/logistic_pdf.m
+share/octave/2.0.16/m/statistics/distributions/logistic_rnd.m
+share/octave/2.0.16/m/statistics/distributions/lognormal_cdf.m
+share/octave/2.0.16/m/statistics/distributions/lognormal_inv.m
+share/octave/2.0.16/m/statistics/distributions/lognormal_pdf.m
+share/octave/2.0.16/m/statistics/distributions/lognormal_rnd.m
+share/octave/2.0.16/m/statistics/distributions/normal_cdf.m
+share/octave/2.0.16/m/statistics/distributions/normal_inv.m
+share/octave/2.0.16/m/statistics/distributions/normal_pdf.m
+share/octave/2.0.16/m/statistics/distributions/normal_rnd.m
+share/octave/2.0.16/m/statistics/distributions/pascal_cdf.m
+share/octave/2.0.16/m/statistics/distributions/pascal_inv.m
+share/octave/2.0.16/m/statistics/distributions/pascal_pdf.m
+share/octave/2.0.16/m/statistics/distributions/pascal_rnd.m
+share/octave/2.0.16/m/statistics/distributions/poisson_cdf.m
+share/octave/2.0.16/m/statistics/distributions/poisson_inv.m
+share/octave/2.0.16/m/statistics/distributions/poisson_pdf.m
+share/octave/2.0.16/m/statistics/distributions/poisson_rnd.m
+share/octave/2.0.16/m/statistics/distributions/stdnormal_cdf.m
+share/octave/2.0.16/m/statistics/distributions/stdnormal_inv.m
+share/octave/2.0.16/m/statistics/distributions/stdnormal_pdf.m
+share/octave/2.0.16/m/statistics/distributions/stdnormal_rnd.m
+share/octave/2.0.16/m/statistics/distributions/t_cdf.m
+share/octave/2.0.16/m/statistics/distributions/t_inv.m
+share/octave/2.0.16/m/statistics/distributions/t_pdf.m
+share/octave/2.0.16/m/statistics/distributions/t_rnd.m
+share/octave/2.0.16/m/statistics/distributions/uniform_cdf.m
+share/octave/2.0.16/m/statistics/distributions/uniform_inv.m
+share/octave/2.0.16/m/statistics/distributions/uniform_pdf.m
+share/octave/2.0.16/m/statistics/distributions/uniform_rnd.m
+share/octave/2.0.16/m/statistics/distributions/weibull_cdf.m
+share/octave/2.0.16/m/statistics/distributions/weibull_inv.m
+share/octave/2.0.16/m/statistics/distributions/weibull_pdf.m
+share/octave/2.0.16/m/statistics/distributions/weibull_rnd.m
+share/octave/2.0.16/m/statistics/distributions/wiener_rnd.m
+share/octave/2.0.16/m/statistics/models/logistic_regression.m
+share/octave/2.0.16/m/statistics/models/logistic_regression_derivatives.m
+share/octave/2.0.16/m/statistics/models/logistic_regression_likelihood.m
+share/octave/2.0.16/m/statistics/tests/anova.m
+share/octave/2.0.16/m/statistics/tests/bartlett_test.m
+share/octave/2.0.16/m/statistics/tests/chisquare_test_homogeneity.m
+share/octave/2.0.16/m/statistics/tests/chisquare_test_independence.m
+share/octave/2.0.16/m/statistics/tests/cor_test.m
+share/octave/2.0.16/m/statistics/tests/f_test_regression.m
+share/octave/2.0.16/m/statistics/tests/hotelling_test.m
+share/octave/2.0.16/m/statistics/tests/hotelling_test_2.m
+share/octave/2.0.16/m/statistics/tests/kolmogorov_smirnov_test.m
+share/octave/2.0.16/m/statistics/tests/kolmogorov_smirnov_test_2.m
+share/octave/2.0.16/m/statistics/tests/kruskal_wallis_test.m
+share/octave/2.0.16/m/statistics/tests/manova.m
+share/octave/2.0.16/m/statistics/tests/mcnemar_test.m
+share/octave/2.0.16/m/statistics/tests/prop_test_2.m
+share/octave/2.0.16/m/statistics/tests/run_test.m
+share/octave/2.0.16/m/statistics/tests/sign_test.m
+share/octave/2.0.16/m/statistics/tests/t_test.m
+share/octave/2.0.16/m/statistics/tests/t_test_2.m
+share/octave/2.0.16/m/statistics/tests/t_test_regression.m
+share/octave/2.0.16/m/statistics/tests/u_test.m
+share/octave/2.0.16/m/statistics/tests/var_test.m
+share/octave/2.0.16/m/statistics/tests/welch_test.m
+share/octave/2.0.16/m/statistics/tests/wilcoxon_test.m
+share/octave/2.0.16/m/statistics/tests/z_test.m
+share/octave/2.0.16/m/statistics/tests/z_test_2.m
+share/octave/2.0.16/m/strings/bin2dec.m
+share/octave/2.0.16/m/strings/blanks.m
+share/octave/2.0.16/m/strings/deblank.m
+share/octave/2.0.16/m/strings/dec2bin.m
+share/octave/2.0.16/m/strings/dec2hex.m
+share/octave/2.0.16/m/strings/findstr.m
+share/octave/2.0.16/m/strings/hex2dec.m
+share/octave/2.0.16/m/strings/index.m
+share/octave/2.0.16/m/strings/isletter.m
+share/octave/2.0.16/m/strings/lower.m
+share/octave/2.0.16/m/strings/rindex.m
+share/octave/2.0.16/m/strings/split.m
+share/octave/2.0.16/m/strings/str2mat.m
+share/octave/2.0.16/m/strings/str2num.m
+share/octave/2.0.16/m/strings/strcat.m
+share/octave/2.0.16/m/strings/strcmp.m
+share/octave/2.0.16/m/strings/strrep.m
+share/octave/2.0.16/m/strings/substr.m
+share/octave/2.0.16/m/strings/upper.m
+share/octave/2.0.16/m/time/asctime.m
+share/octave/2.0.16/m/time/clock.m
+share/octave/2.0.16/m/time/ctime.m
+share/octave/2.0.16/m/time/date.m
+share/octave/2.0.16/imagelib/default.img
 share/octave/site/m/startup/octaverc
 share/octave/ls-R
 @dirrm include/${PKGNAME}
@@ -486,34 +659,39 @@ share/octave/ls-R
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site
-@dirrm libexec/octave/2.0.13/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/2.0.13/exec
-@dirrm libexec/octave/2.0.13/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/2.0.13/oct
-@dirrm libexec/octave/2.0.13
+@dirrm libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/2.0.16/exec
+@dirrm libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/2.0.16/oct
+@dirrm libexec/octave/2.0.16
 @dirrm libexec/octave
-@dirrm share/octave/2.0.13/doc
-@dirrm share/octave/2.0.13/imagelib
-@dirrm share/octave/2.0.13/m/audio
-@dirrm share/octave/2.0.13/m/control
-@dirrm share/octave/2.0.13/m/elfun
-@dirrm share/octave/2.0.13/m/general
-@dirrm share/octave/2.0.13/m/image
-@dirrm share/octave/2.0.13/m/io
-@dirrm share/octave/2.0.13/m/linear-algebra
-@dirrm share/octave/2.0.13/m/miscellaneous
-@dirrm share/octave/2.0.13/m/plot
-@dirrm share/octave/2.0.13/m/polynomial
-@dirrm share/octave/2.0.13/m/set
-@dirrm share/octave/2.0.13/m/signal
-@dirrm share/octave/2.0.13/m/specfun
-@dirrm share/octave/2.0.13/m/special-matrix
-@dirrm share/octave/2.0.13/m/startup
-@dirrm share/octave/2.0.13/m/statistics
-@dirrm share/octave/2.0.13/m/strings
-@dirrm share/octave/2.0.13/m/time
-@dirrm share/octave/2.0.13/m
-@dirrm share/octave/2.0.13
+@dirrm share/octave/2.0.16/doc
+@dirrm share/octave/2.0.16/imagelib
+@dirrm share/octave/2.0.16/m/audio
+@dirrm share/octave/2.0.16/m/control
+@dirrm share/octave/2.0.16/m/elfun
+@dirrm share/octave/2.0.16/m/finance
+@dirrm share/octave/2.0.16/m/general
+@dirrm share/octave/2.0.16/m/image
+@dirrm share/octave/2.0.16/m/io
+@dirrm share/octave/2.0.16/m/linear-algebra
+@dirrm share/octave/2.0.16/m/miscellaneous
+@dirrm share/octave/2.0.16/m/plot
+@dirrm share/octave/2.0.16/m/polynomial
+@dirrm share/octave/2.0.16/m/set
+@dirrm share/octave/2.0.16/m/signal
+@dirrm share/octave/2.0.16/m/specfun
+@dirrm share/octave/2.0.16/m/special-matrix
+@dirrm share/octave/2.0.16/m/startup
+@dirrm share/octave/2.0.16/m/statistics/base
+@dirrm share/octave/2.0.16/m/statistics/distributions
+@dirrm share/octave/2.0.16/m/statistics/models
+@dirrm share/octave/2.0.16/m/statistics/tests
+@dirrm share/octave/2.0.16/m/statistics
+@dirrm share/octave/2.0.16/m/strings
+@dirrm share/octave/2.0.16/m/time
+@dirrm share/octave/2.0.16/m
+@dirrm share/octave/2.0.16
 @dirrm share/octave/site/m/startup
 @dirrm share/octave/site/m
 @dirrm share/octave/site
