@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2004/07/05 09:10:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.67 2004/07/05 22:02:58 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.6.0.3
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +28,7 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 MAKE_ENV+=		CHMOD=${CHMOD} CHOWN=${CHOWN}
@@ -37,8 +38,8 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/Init
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PreSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/modules
-OWN_DIRS+=		/var/gdm
-OWN_DIRS+=		/var/log/gdm
+OWN_DIRS+=		${VARBASE}/gdm
+OWN_DIRS+=		${VARBASE}/log/gdm
 
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/dm/Sessions/default.desktop \
@@ -58,6 +59,8 @@ SUPPORT_FILES+=		${EGDIR}/gdm/$f \
 .endfor
 RCD_SCRIPTS=		gdm
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=		desktop
 SUBST_MESSAGE.desktop=	"Configuring GDM settings."
 SUBST_STAGE.desktop=	pre-configure
@@ -65,10 +68,13 @@ SUBST_FILES.desktop=	config/default.desktop.in
 SUBST_FILES.desktop+=	config/gnome.desktop.in
 SUBST_FILES.desktop+=	config/gdm.conf.in
 SUBST_SED.desktop=	-e 's/^_//g'
-SUBST_SED.desktop+=	-e 's|@GDMOWN@|${GDMOWN}|g'
-SUBST_SED.desktop+=	-e 's|@GDMGRP@|${GDMGRP}|g'
-
-.include "../../mk/bsd.prefs.mk"
+SUBST_SED.desktop+=	-e 's|^User=gdm$$|User=${GDMOWN}|g'
+SUBST_SED.desktop+=	-e 's|^Group=gdm$$|Group=${GDMGRP}|g'
+SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=@EXPANDED_PIXMAPDIR@/Daemon.png|g'
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r now|g'
+SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
+.endif
 
 BUILD_DEFS+=		USE_INET6
 
