@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/07/19 12:37:41 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2004/03/03 11:28:11 adam Exp $
 
---- lib/Makefile.in.orig	Mon Jan 15 17:34:40 2001
+--- lib/Makefile.in.orig	2002-06-25 02:15:30.000000000 +0000
 +++ lib/Makefile.in
-@@ -161,17 +161,10 @@
+@@ -162,17 +162,10 @@ clean: dummy
  install: dummy
  	$(MKINSTALLDIRS) $(libdir)
  	$(MKINSTALLDIRS) $(includedir)
