@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: Makefile,v 1.35 2004/10/14 17:04:08 jmmv Exp $
 
-DISTNAME=	dia-0.93
-PKGREVISION=	2
+DISTNAME=	dia-0.94
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.93/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.94/}
 
 MAINTAINER=	jmcneill@invisible.yi.org
-HOMEPAGE=	http://www.lysator.liu.se/~alla/dia/
+HOMEPAGE=	http://www.gnome.org/projects/dia/
 COMMENT=	Program for creating diagrams of all kinds
 
 USE_BUILDLINK3=		YES
