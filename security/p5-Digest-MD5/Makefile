@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/12/10 22:08:59 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/05 22:16:25 jlam Exp $
 #
 
 DISTNAME=	Digest-MD5-2.33
@@ -15,7 +15,9 @@ DEPENDS+=	p5-Digest>=1.00:../p5-Digest
 
 CONFLICTS+=	p5-MD5-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/MD5/.packlist
 
 .include "../../lang/perl5/module.mk"
