@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/26 16:14:42 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/26 19:33:02 grant Exp $
 #
 
 DISTNAME=	win32codecs-20040626
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tar.bz2
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	qt6dlls-20040626.tar.bz2
 DISTFILES+=	qtextras-20040626.tar.bz2
-DISTFILES+=	rp9win32codecs-20040626.tar.bz2
+DISTFILES+=	rp9codecs-win32-20040626.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
@@ -35,6 +35,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/qt6dlls-20040626/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/qtextras/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/rp9win32codecs/*.dll ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/rp9codecs-win32-20040626/*.dll ${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
