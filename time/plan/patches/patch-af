@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2004/06/10 22:42:43 jschauma Exp $
+
+--- netplan.c.orig	2004-06-11 18:18:30.000000000 -0400
++++ netplan.c	2004-06-11 18:18:43.000000000 -0400
+@@ -4,6 +4,7 @@
+ 
+ typedef void *Widget;	/* dummy for prototype declarations in config.h */
+ 
++#include <errno.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
