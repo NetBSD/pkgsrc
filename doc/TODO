@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1951 2004/07/20 11:54:28 adam Exp $
+$NetBSD: TODO,v 1.1952 2004/07/20 13:20:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -228,7 +228,6 @@ Suggested package updates
 	o fox-1.2.7
 	o freetds-0.62.3
 	o fsviewer-0.2.5
-	o fuse-0.7.0
 	o gauche-0.8
 	o gcvs-1.0
 	o gdb-6.1 [pkgsrc-wip]
