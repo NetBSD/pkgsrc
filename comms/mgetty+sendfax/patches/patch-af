@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2003/09/25 20:27:12 fredb Exp $
+$NetBSD: patch-af,v 1.6 2005/03/07 11:29:28 wiz Exp $
 
---- logfile.c.orig	2002-11-25 07:08:26.000000000 -0600
+--- logfile.c.orig	2003-01-14 22:30:20.000000000 +0100
 +++ logfile.c
-@@ -56,9 +56,11 @@ extern int atexit _PROTO(( void (*)(void
+@@ -58,9 +58,11 @@ extern int atexit _PROTO(( void (*)(void
  /* Most systems have these variables but do not declare them. On many
     of those systems that _do_ declare them, it won't hurt */
  
