@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/10/28 17:00:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/30 12:31:29 wiz Exp $
 #
 
-DISTNAME=		BitTornado-0.3.7
+DISTNAME=		BitTornado-0.3.8
 CATEGORIES=		net
-MASTER_SITES=		http://e.scarywater.net/bt/download/
+MASTER_SITES=		http://www.bittornado.com/download/
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://bittornado.com/
