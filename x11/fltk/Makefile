@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 17:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/17 08:32:13 abs Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fltk.org/
-COMMENT=	The Fast Light Tool Kit
+COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 USE_X11BASE=	# defined
 USE_MESA=	# defined
