@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/03/02 04:18:20 itojun Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/03/05 20:32:11 wiz Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -44,7 +44,7 @@ share/postfix/relocated
 share/postfix/sample-aliases.cf
 share/postfix/sample-auth.cf
 share/postfix/sample-canonical.cf
-share/postfix/sample-compatibility.cf  
+share/postfix/sample-compatibility.cf
 share/postfix/sample-debug.cf
 share/postfix/sample-filter.cf
 share/postfix/sample-flush.cf
