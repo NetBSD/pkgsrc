@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/10/30 17:09:09 sakamoto Exp $
+# $NetBSD: Makefile,v 1.32 2000/01/09 01:29:06 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -66,6 +66,6 @@ post-install:
 	    ${INSTALL_DATA} ${WRKSRC}/`basename $$f` ${PREFIX}/${DOCDIR}; \
 	done
 	@${INSTALL_DATA} ${FILESDIR}/mhn.defaults ${PREFIX}/etc/nmh
-	@PKG_PREFIX='${PREFIX}' sh -f ${PKGDIR}/INSTALL
+	@PKG_PREFIX='${PREFIX}' ${SH} -f ${PKGDIR}/INSTALL
 
 .include "../../mk/bsd.pkg.mk"
