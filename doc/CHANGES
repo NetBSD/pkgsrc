@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4371 2004/01/06 15:44:09 hubertf Exp $
+$NetBSD: CHANGES,v 1.4372 2004/01/06 15:45:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -75,3 +75,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-SOAP-Lite-0.55 [grant 2004-01-06]
 	Delete kochi-cid [uebayasi 2004-01-06]
 	Updated xlockmore to 5.11.1 [hubertf 2004-01-06]
+	Added chmlib-0.31 [wiz 2004-01-06]
+	Added xchm-0.8 [wiz 2004-01-06]
