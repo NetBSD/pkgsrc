@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2004/10/12 11:08:03 markd Exp $
+
+--- configure.orig	2004-03-26 13:47:42.000000000 +1200
++++ configure
+@@ -24088,7 +24088,7 @@ else
+   use_ssl=yes
+ fi;
+ 
+-if test "$use_ssl" == "yes"; then
++if test "$use_ssl" = "yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define USE_SSL
+@@ -24105,7 +24105,7 @@ else
+   use_ssl=yes
+ fi;
+ 
+-if test "$use_ssl" == "yes"; then
++if test "$use_ssl" = "yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define USE_SSL
