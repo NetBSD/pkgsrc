@@ -1,0 +1,17 @@
+# New ports collection makefile for:    rtty
+# Version required:     3.2
+# Date created:         24 Aug 1996
+# Whom:                 jkh
+#
+# Author:		Paul Vixie / Internet Software Consortium
+#
+# FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
+#
+
+DISTNAME=       rtty-3.2
+CATEGORIES=	sysutils
+MASTER_SITES=   ftp://ftp.vix.com/pub/vixie/
+
+NO_WRKSUBDIR=   yes     
+
+.include <bsd.port.mk>
