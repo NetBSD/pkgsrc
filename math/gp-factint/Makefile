@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/12/23 02:02:08 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/05 14:09:03 cjep Exp $
 #
 
 DISTNAME=	factint-1.3
 PKGNAME=	gp-factint-1.3
+SVR4_PKGNAME=	gpfin
 CATEGORIES=	math
 MASTER_SITES=	http://www.cip.mathematik.uni-stuttgart.de/~kohlsn/factint/
 EXTRACT_SUFX=	.zoo
