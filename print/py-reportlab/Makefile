@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 17:16:28 martti Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/26 15:00:58 drochner Exp $
 #
 
-DISTNAME=	ReportLab_1_16
-PKGNAME=	${PYPKGPREFIX}-reportlab-1.16
+DISTNAME=	ReportLab_1_18
+PKGNAME=	${PYPKGPREFIX}-reportlab-1.18
 WRKSRC=		${WRKDIR}/reportlab/lib
 CATEGORIES=	print
 MASTER_SITES=   ftp://ftp.reportlab.com/
@@ -20,5 +20,6 @@ post-install:
 	cd ${WRKDIR} && ${PAX} -rw -pp reportlab ${PREFIX}/${PYSITELIB}
 	${RM} -rf ${PREFIX}/${PYSITELIB}/reportlab/lib/build
 
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
