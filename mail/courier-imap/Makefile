@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/22 03:13:07 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/22 03:29:50 jlam Exp $
 
 DISTNAME=	courier-imap-2.2.1
 COMMENT=	IMAP server for access to Maildir-style mailboxes
@@ -16,7 +16,7 @@ USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/../courier-auth/INSTALL
 
-.include "../../mail/courier-auth/Makefile.common"
+.include "../courier-auth/Makefile.common"
 
 CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
 
