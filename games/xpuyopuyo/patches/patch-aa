@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/15 21:57:42 jlam Exp $
+
+--- Makefile.in.orig	Mon Jan  3 16:21:03 2000
++++ Makefile.in	Sat Jan 15 16:23:39 2000
+@@ -506,7 +506,8 @@
+ mostlyclean distclean maintainer-clean
+ 
+ 
+-@GNOME_TRUE@install-data-local:
++install-data-local:
++	:
+ @GNOME_TRUE@	$(SHELL) ./mkinstalldirs $(GNOME_DESKTOP)
+ @GNOME_TRUE@	$(SHELL) ./mkinstalldirs $(GNOME_PIXMAPS)
+ @GNOME_TRUE@	$(INSTALL_DATA) xpuyopuyo.desktop $(GNOME_DESKTOP)/xpuyopuyo.desktop
