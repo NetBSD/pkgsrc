@@ -1,3 +1,4 @@
+$NetBSD: patch-at,v 1.2 2003/04/21 20:31:54 cjep Exp $
 --- lib/Xm/Imakefile.orig	Mon Dec 30 08:53:49 2002
 +++ lib/Xm/Imakefile	Mon Dec 30 08:54:45 2002
 @@ -78,7 +78,7 @@
