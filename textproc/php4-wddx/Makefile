@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2002/10/09 19:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/31 19:56:00 jdolecek Exp $
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for WDDX support
 
-DEPENDS+=		php-session>=${PHP_BASE_VERS}:../../devel/php4-session
-DEPENDS+=		php-xml>=${PHP_BASE_VERS}:../../textproc/php4-xml
-
 USE_BUILDLINK2=		YES
+DISTINFO_FILE=		${PKGDIR}/distinfo
 
 .include "../../www/php4/Makefile.module"
 

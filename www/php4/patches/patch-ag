@@ -1,20 +1,18 @@
-$NetBSD: patch-ag,v 1.4 2002/10/14 06:21:20 martti Exp $
-
---- php.ini-dist.orig	Sat Aug 24 00:57:06 2002
-+++ php.ini-dist	Sat Oct 12 09:29:27 2002
-@@ -367,8 +367,9 @@
+--- php.ini-dist.orig	2003-07-10 00:38:36.000000000 +0200
++++ php.ini-dist	2003-08-30 21:59:51.000000000 +0200
+@@ -424,8 +424,9 @@
  ; if nonempty.
  user_dir =
  
 -; Directory in which the loadable extensions (modules) reside.
--extension_dir = ./
-+; Directory in which the loadable extensions (modules) reside.  If not
+-extension_dir = "./"
++; Directory in which the loadable extensions (modules) reside. If not
 +; defined, then use the extension directory specified at compile-time.
-+;extension_dir = ./
++; extension_dir = "./"
  
  ; Whether or not to enable the dl() function.  The dl() function does NOT work
  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
-@@ -396,7 +397,7 @@
+@@ -476,7 +477,7 @@
  
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
