@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/07/14 08:31:12 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/07/16 23:21:50 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -23,7 +23,10 @@ BUILDLINK_FILES.apr+=	lib/*.exp
 
 .if !empty(APR_USE_DB4:M[yY][eE][sS])
 .  include "../../databases/db4/buildlink3.mk"
+.elif !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
+.  include "../../databases/openldap/buildlink3.mk"
 .endif
+
 .include "../../textproc/expat/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
