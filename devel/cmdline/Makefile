@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/12 16:58:57 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:20 wiz Exp $
 
 DISTNAME=	CmdLine
 PKGNAME=	cmdline-${PKG_VERS}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.enteract.com/~bradapp/ftp/src/libs/C++/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.enteract.com/~bradapp/ftp/src/libs/C++/CmdLine.html
+COMMENT=	C++ library for parsing command arguments
 
 DIST_SUBDIR=	cmdline-${DIST_VERS}
 

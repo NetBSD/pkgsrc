@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/09 16:17:16 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:33 wiz Exp $
 #
 
 VERSION=	2.5q
@@ -8,6 +8,7 @@ MASTER_SITES=	http://lclint.cs.virginia.edu/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
+COMMENT=	Statically check C programs
 
 WRKSRC=		${WRKDIR}/lclint-${VERSION}/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/21 22:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:55 wiz Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+COMMENT=		Perl header files
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph

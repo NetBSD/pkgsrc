@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/24 19:47:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:38:55 wiz Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -7,6 +7,7 @@ MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
+COMMENT=	Patch files using diff output
 
 NO_PATCH=	yes
 GNU_CONFIGURE=	yes

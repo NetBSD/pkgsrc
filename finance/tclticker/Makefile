@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:46:35 wiz Exp $
 #
 
 DISTNAME=	tclticker-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	finance tk80
 MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tclticker/1.1/
 
 MAINTAINER=	packages@netbsd.org
-#HOMEPAGE=	
+COMMENT=	Stock-quote ticker tape application
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 

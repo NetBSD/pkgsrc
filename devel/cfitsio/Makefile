@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/27 02:11:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:20 wiz Exp $
 
 DISTNAME=	cfitsio2037
 PKGNAME=	cfitsio-2.0.37
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://legacy.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
+COMMENT=	FITS (flexible image transport system) file input and output
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

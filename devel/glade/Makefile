@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/13 11:47:00 tron Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/16 14:38:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=   http://glade.pn.org/ \
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://glade.pn.org/
+COMMENT=	User interface builder for GTK+
 
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 

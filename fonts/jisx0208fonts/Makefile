@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/01 21:55:07 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 14:46:06 wiz Exp $
 #
 
 DISTNAME=	jisx0208fonts-20010112
@@ -9,6 +9,7 @@ DISTFILES=	${ELISA10X8} ${ELISA8X8} ${KANAME12} ${KAPPA20} ${NAGA10} \
 		${K12X10} ${SHINONOME12}
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+COMMENT=	X11 fonts for JIS X0208 standard
 
 # not USE_GMAKE
 BUILD_DEPENDS+=	gmake:../../devel/gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/06 12:41:37 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/02/16 14:38:39 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=  	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 
 MAINTAINER=    	packages@netbsd.org
 HOMEPAGE=	http://www.s-lang.org/
+COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 GNU_CONFIGURE= 	yes
 USE_LIBTOOL=	yes

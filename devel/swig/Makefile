@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/14 20:44:55 mellon Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:39:04 wiz Exp $
 #
 
 DISTNAME=       swig1.1p5
@@ -8,6 +8,7 @@ MASTER_SITES=   ftp://ftp.swig.org/pub/
 
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://www.swig.org/
+COMMENT=	Simplified Wrapper and Interface Generator
 
 GNU_CONFIGURE=	yes
 
