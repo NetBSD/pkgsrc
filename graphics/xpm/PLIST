@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/14 23:34:40 fredb Exp $
 bin/cxpm
 bin/sxpm
 lib/libXpm.a
@@ -6,5 +6,5 @@ lib/libXpm.so
 lib/libXpm.so.4
 lib/libXpm.so.4.11
 include/X11/xpm.h
-man/cat1/cxpm.0.gz
-man/cat1/sxpm.0.gz
+man/cat1/cxpm.0
+man/cat1/sxpm.0
