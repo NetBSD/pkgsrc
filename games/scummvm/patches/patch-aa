@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2003/08/04 19:57:16 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/09/10 11:02:18 adam Exp $
 
---- Makefile.orig	Wed Jul 16 22:36:38 2003
+--- Makefile.orig	2003-07-16 22:36:38.000000000 +0200
 +++ Makefile
 @@ -2,3 +2,3 @@
  
@@ -12,3 +12,10 @@ $NetBSD: patch-aa,v 1.7 2003/08/04 19:57:16 wiz Exp $
 -CXXFLAGS:= -g -O
 +CXXFLAGS+=${CFLAGS}
  DEFINES :=
+@@ -55,4 +55,4 @@ LIBS    += -lmad
+ # Uncomment this to activate the Ogg Vorbis lib for compressed sound files
+-# DEFINES += -DUSE_VORBIS
+-# LIBS    += -lvorbisfile -lvorbis
++DEFINES += -DUSE_VORBIS
++LIBS    += -lvorbisfile -lvorbis
+ 
