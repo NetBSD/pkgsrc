@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/05/02 11:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/15 23:02:05 dmcmahill Exp $
 #
 
 DISTNAME=	boolean
 PKGNAME=	boolean-${REL}
-PKGREVISION=	2
-WRKSRC=		${WRKDIR}/boolean/${REL}/linux
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://www.xs4all.nl/~kholwerd/download/boolzip/
 EXTRACT_SUFX=	.zip
@@ -13,37 +11,36 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.xs4all.nl/~kholwerd/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
-DEPENDS+=	wxGTK>=2.4.0nb1:../../x11/wxGTK
-
 DIST_SUBDIR=	${PKGNAME_NOREV}
-REL=		6.2
+REL=		6.4
 
-# This package cannot be built with g++ 2.95.3.
-ONLY_FOR_PLATFORM=	NetBSD-1.[45]*-*
+USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
 
-MAKEFILE=	makefile.gui
-PLIST_SUBST=	REL=${REL}
-
+# the zip archive messes up the case of these files which breaks
+# cmake.
 post-patch:
-	${MV} ${WRKSRC}/../../toolmanager ${WRKSRC}/../../toolmanager.in
-	${SED} "s;@prefix@;${PREFIX};g" < ${WRKSRC}/../../toolmanager.in \
-	  > ${WRKSRC}/../../toolmanager
+	for f in `${FIND} ${WRKSRC} -name cmakelists.txt -print`; do \
+		d=`${DIRNAME} $$f` ; \
+		n="$$d/CMakeLists.txt" ; \
+		${ECHO} "$$f -> $$n" ; \
+		${MV} $$f $$n ; done
+	${MV} -f ${WRKSRC}/bin/boolean ${WRKSRC}/bin/boolean.bak
+	${SED} 's;@prefix@;${PREFIX};g' ${WRKSRC}/bin/boolean.bak > \
+		${WRKSRC}/bin/boolean
+
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/cmake
 
 do-install:
-	${INSTALL_DATA_DIR}  ${PREFIX}/libexec/boolean/${REL}/${LOWER_OPSYS}/bin
-	${INSTALL_DATA_DIR}  ${PREFIX}/libexec/boolean/${REL}/all_arch.all_os/bin/
-	cd ${WRKSRC}/.. && \
-		tar cf - default gdsuser | tar -xvf - -C ${PREFIX}/libexec/boolean/${REL}
-	${CHOWN} -R ${BINOWN}.${BINGRP} ${PREFIX}/libexec/boolean/${REL}
-	${INSTALL_SCRIPT} ${WRKSRC}/../../toolmanager ${PREFIX}/libexec/boolean/toolmanager
-	${INSTALL_SCRIPT} ${WRKSRC}/../release_settings.sh ${PREFIX}/libexec/boolean/${REL}/release_settings.sh
-	${INSTALL_SCRIPT} ${WRKSRC}/../all_arch.all_os/bin/*  ${PREFIX}/libexec/boolean/${REL}/all_arch.all_os/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/boolean_exe  ${PREFIX}/libexec/boolean/${REL}/${LOWER_OPSYS}/bin/
-	cd ${PREFIX}/bin ; \
-	for f in  boolean booleanc booleanterm booleantest boolean_man ; \
-	do \
-		${LN} -f -s ../libexec/boolean/toolmanager $$f ;\
-	done
-	cd ${PREFIX}/libexec/boolean/ && ${LN} -f -s ${REL} default
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/boolean
+	cd ${WRKSRC}/apps/edit && \
+		tar cf - default gdsuser | tar -xvf - -C ${PREFIX}/share/boolean
+	cd ${WRKSRC}/docs && \
+		tar cf - html | tar -xvf - -C ${PREFIX}/share/boolean
+	${CHOWN} -R ${BINOWN}.${BINGRP} ${PREFIX}/share/boolean
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/boolean  ${PREFIX}/bin/boolean
+	${INSTALL_PROGRAM} ${WRKSRC}/apps/edit/edit  ${PREFIX}/bin/edit
 
+.include "../../x11/wxGTK/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
