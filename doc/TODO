@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.860 2003/09/14 15:55:46 wiz Exp $
+$NetBSD: TODO,v 1.861 2003/09/14 21:30:00 bouyer Exp $
 
 Suggested new packages
 ======================
@@ -146,13 +146,11 @@ Suggested package updates
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.40
-	o horde-2.2.4rc2 [pkg/22629]
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
 	o hping-2.0.0.2 [pkg/22320]
 	o icepref-2.2
-	o imp-3.2.2 [pkg/22656]
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
