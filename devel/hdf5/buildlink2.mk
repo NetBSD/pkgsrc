@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/04/29 23:05:22 jtb Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/08/05 06:21:54 jtb Exp $
 
 .if !defined(HDF5_BUILDLINK2_MK)
 HDF5_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		hdf5
-BUILDLINK_DEPENDS.hdf5?=	hdf5>=1.4.5
+BUILDLINK_DEPENDS.hdf5?=	hdf5>=1.6.0
 BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.hdf5=hdf5
@@ -20,6 +20,7 @@ BUILDLINK_FILES.hdf5+=	include/H5FDfamily.h
 BUILDLINK_FILES.hdf5+=	include/H5FDgass.h
 BUILDLINK_FILES.hdf5+=	include/H5FDlog.h
 BUILDLINK_FILES.hdf5+=	include/H5FDmpio.h
+BUILDLINK_FILES.hdf5+=	include/H5FDmpiposix.h
 BUILDLINK_FILES.hdf5+=	include/H5FDmulti.h
 BUILDLINK_FILES.hdf5+=	include/H5FDpublic.h
 BUILDLINK_FILES.hdf5+=	include/H5FDsec2.h
@@ -41,6 +42,7 @@ BUILDLINK_FILES.hdf5+=	include/H5Zpublic.h
 BUILDLINK_FILES.hdf5+=	include/H5api_adpt.h
 BUILDLINK_FILES.hdf5+=	include/H5pubconf.h
 BUILDLINK_FILES.hdf5+=	include/H5public.h
+BUILDLINK_FILES.hdf5+=	include/hdf5.h
 BUILDLINK_FILES.hdf5+=	lib/libhdf5.*
 
 BUILDLINK_TARGETS+=	hdf5-buildlink
