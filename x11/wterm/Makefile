@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/10/05 13:33:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2001/10/05 21:49:30 tron Exp $
 
 DISTNAME=	wterm-6.2.9
 CATEGORIES=	x11
@@ -11,6 +10,7 @@ HOMEPAGE=	http://largo.windowmaker.org/files.php\#wterm
 COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 
 GNU_CONFIGURE=		YES
+USE_X11BASE=		YES
 # some /usr/X11R6/lib references sneak in
 # USE_BUILDLINK_ONLY=	YES
 
