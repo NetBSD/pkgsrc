@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2001/07/23 13:14:44 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2002/03/01 10:46:53 markd Exp $
 
---- acinclude.m4.orig	Sun Jun 17 12:42:16 2001
+--- acinclude.m4.orig   Thu Aug 23 21:15:12 2001
 +++ acinclude.m4
-@@ -456,6 +456,9 @@
+@@ -467,6 +467,9 @@
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
