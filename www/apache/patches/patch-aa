@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2001/01/14 05:58:01 jlam Exp $
+$NetBSD: patch-aa,v 1.14 2001/02/02 16:39:57 jlam Exp $
 
---- Makefile.tmpl.orig	Sun Jan 14 00:43:01 2001
-+++ Makefile.tmpl	Sun Jan 14 00:48:35 2001
-@@ -382,34 +382,6 @@
+--- Makefile.tmpl.orig	Fri Feb  2 00:42:14 2001
++++ Makefile.tmpl
+@@ -385,34 +385,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.13 2001/01/14 05:58:01 jlam Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -535,15 +507,16 @@
+@@ -538,15 +510,16 @@
  		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
  	fi
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.13 2001/01/14 05:58:01 jlam Exp $
  		done; \
  	fi
  	@echo "Copying tree $(TOP)/icons/ -> $(root)$(iconsdir)/"; \
-@@ -557,7 +530,7 @@
+@@ -560,7 +533,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"
