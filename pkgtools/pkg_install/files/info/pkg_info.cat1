@@ -7,6 +7,7 @@ SSYYNNOOPPSSIISS
      ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
               [--ll _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
      ppkkgg__iinnffoo [--aa _f_l_a_g_s]
+     ppkkgg__iinnffoo [--QQ _v_a_r_i_a_b_l_e] _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__iinnffoo command is used to dump out information for packages, which
@@ -23,8 +24,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --aa      Show information for all currently installed packages.
 
-     --BB      Show some of the important definitions used when building the
-             binary package (the "Build information") for each package.
+     --BB      Show some of the important definitions used when building the bi-
+             nary package (the "Build information") for each package.
 
      --bb      Show the NetBSD RCS Id strings from the files used in the con-
              struction of the binary package (the "Build version") for each
@@ -39,8 +40,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --ee _p_k_g_-_n_a_m_e
              This option allows you to test for the existence of a given pack-
-             age.  If the package identified by _p_k_g_-_n_a_m_e is currently
-             installed, return code is 0, otherwise 1.  The names of any pack-
+             age.  If the package identified by _p_k_g_-_n_a_m_e is currently in-
+             stalled, return code is 0, otherwise 1.  The names of any pack-
              age(s) found installed are printed to stdout unless turned off
              using the --qq option.  _p_k_g_-_n_a_m_e can contain wildcards, see the
              _P_A_C_K_A_G_E _W_I_L_D_C_A_R_D_S section below.
@@ -69,11 +70,11 @@ DDEESSCCRRIIPPTTIIOONN
              generated.
 
      --ll _s_t_r  Prefix each information category header (see --qq) shown with _s_t_r.
-             This is primarily of use to front-end programs that want to
-             request a lot of different information fields at once for a pack-
+             This is primarily of use to front-end programs that want to re-
+             quest a lot of different information fields at once for a pack-
              age, but don't necessary want the output intermingled in such a
-             way that they can't organize it.  This lets you add a special
-             token to the start of each field.
+             way that they can't organize it.  This lets you add a special to-
+             ken to the start of each field.
 
      --mm      Show the mtree file (if any) for each package.
 
@@ -103,14 +104,14 @@ DDEESSCCRRIIPPTTIIOONN
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      Package info is either extracted from package files named on the command
-     line, or from already installed package information in
-     _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>.
+     line, or from already installed package information in _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-
+     _n_a_m_e_>.
 
      A filename can be given instead of a (installed) package name to query
      information on the package this file belongs to.  This filename is then
      resolved to a package name using the Package Database.  For this transla-
-     tion to take place, the --FF flag must be given.  The filename must be
-     absolute, compare the output of pkg_info --aaFF.
+     tion to take place, the --FF flag must be given.  The filename must be ab-
+     solute, compare the output of pkg_info --aaFF.
 
 PPAACCKKAAGGEE WWIILLDDCCAARRDDSS
      In the places where a package name/version is expected, e.g. for the --ee
@@ -123,9 +124,9 @@ PPAACCKKAAGGEE WWIILLDDCCAARRDDSS
      matched in a relational manner using the _>_=, _<_=, _>, and _< operators.  For
      example, _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_' will match versions 1.3 and later of the
      _n_a_m_e package.  The collating sequence of the various package version num-
-     bers is unusual, but strives to be consistent.  The magic string
-     ``alpha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta version.  The
-     magic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and sorts before a release
+     bers is unusual, but strives to be consistent.  The magic string ``al-
+     pha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta version.  The mag-
+     ic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and sorts before a release
      candidate.  The magic string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and
      sorts before a release.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort before
      _n_a_m_e_-_1_._3 and after _n_a_m_e_-_1_._2_._9 Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before
@@ -142,21 +143,21 @@ EENNVVIIRROONNMMEENNTT
 
      PKG_PATH   This can be used to specify a semicolon-separated list of
                 paths and URLs to search for package files.  If PKG_PATH is
-                used, the suffix _._t_g_z is automatically appended to the
-                _p_k_g_-_n_a_m_e, whereas searching in the current directory uses
-                _p_k_g_-_n_a_m_e literally.
+                used, the suffix _._t_g_z is automatically appended to the _p_k_g_-
+                _n_a_m_e, whereas searching in the current directory uses _p_k_g_-_n_a_m_e
+                literally.
 
      PKG_TMPDIR, TMPDIR
                 These are tried in turn (if set) as candidate directories in
                 which to create a ``staging area'' for any files extracted by
                 ppkkgg__iinnffoo from package files.  If neither PKG_TMPDIR nor TMPDIR
                 yields a suitable scratch directory, _/_v_a_r_/_t_m_p, _/_t_m_p, and
-                _/_u_s_r_/_t_m_p are tried in turn.  Note that _/_u_s_r_/_t_m_p may be cre-
-                ated, if it doesn't already exist.
+                _/_u_s_r_/_t_m_p are tried in turn.  Note that _/_u_s_r_/_t_m_p may be creat-
+                ed, if it doesn't already exist.
 
-                Since ppkkgg__iinnffoo requires very little information to be
-                extracted from any package files examined, it is unlikely that
-                these environment variables would ever need to be used to work
+                Since ppkkgg__iinnffoo requires very little information to be extract-
+                ed from any package files examined, it is unlikely that these
+                environment variables would ever need to be used to work
                 around limited available space in the default locations.
 
 SSEEEE AALLSSOO
