@@ -1,19 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/07 15:15:12 bouyer Exp $
-
---- cgi.tcl.in.orig	Tue Jul  6 17:58:42 1999
-+++ cgi.tcl.in	Tue Jul  6 18:00:17 1999
-@@ -2006,8 +2006,8 @@
+--- cgi.tcl.in.orig	Wed Aug 30 11:07:29 2000
++++ cgi.tcl.in	Wed Aug 30 11:08:26 2000
+@@ -2040,7 +2040,7 @@
  
      flush $_cgi(mailfid)
  
 -    if {[file executable /usr/lib/sendmail]} {
--	exec /usr/lib/sendmail -t -odb < $_cgi(mailfile)
 +    if {[file executable /usr/sbin/sendmail]} {
-+	exec /usr/sbin/sendmail -t -odb < $_cgi(mailfile)
+ 	exec /usr/lib/sendmail -t -odb < $_cgi(mailfile)
  	# Explanation:
  	# -t   means: pick up recipient from body
- 	# -odb means: deliver in background
-@@ -2022,6 +2022,9 @@
+@@ -2056,6 +2056,9 @@
  	set s [socket $_cgi(mail_relay) 25]
  	gets $s answer
  	if {[lindex $answer 0] != 220} {error $answer} 
