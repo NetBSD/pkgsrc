@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/11 17:55:56 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/13 12:33:01 skrll Exp $
 #
 
 PKGNAME=	qt2-docs-${QTVERSION}
@@ -29,16 +29,16 @@ do-install:
 	 done)
 	${INSTALL_DATA_DIR} ${QTPREFIX}/doc/html
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${QTPREFIX}/doc/html
-	cd ${WRKSRC}/doc/html;  \
-	DOCDIRS="`find . -type d -print | sort`"; \
+	cd ${WRKSRC};  \
+	DOCDIRS="`find doc/html -type d -print | sort`"; \
 	(for d in $${DOCDIRS}; do \
-	    ${ECHO} installing ${QTPREFIX}/doc/html/$${d}; \
-	    ${INSTALL_DATA_DIR} ${QTPREFIX}/doc/html/$${d}; \
+	    ${ECHO} installing ${QTPREFIX}/$${d}; \
+	    ${INSTALL_DATA_DIR} ${QTPREFIX}/$${d}; \
 	done) ; \
-	DOCFILES="`find . -type f -print | sort`"; \
+	DOCFILES="`find doc/html -type f -print | sort`"; \
 	(for f in $${DOCFILES}; do \
-	    ${ECHO} installing ${QTPREFIX}/doc/html/$${f}; \
-	    ${INSTALL_DATA} $${f} ${QTPREFIX}/doc/html/$${f}; \
+	    ${ECHO} installing ${QTPREFIX}/$${f}; \
+	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
 .include "../../mk/bsd.pkg.mk"
