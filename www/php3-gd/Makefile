@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/29 21:12:39 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/29 21:16:20 tron Exp $
 #
 
 PKGNAME=	php-gd-${PHP_VERSION}
@@ -11,7 +11,7 @@ BUILDING_EXTENSION_MODULE=yes
 
 do-build:
 	cd ${WRKSRC}/functions && \
-		${COMPILE.c} -I.. -I. -I${LOCALBASE}/include/gd -fPIC -DPIC -DCOMPILE_DL gd.c && \
+		${COMPILE.c} -I.. -I. -I${LOCALBASE}/include -fPIC -DPIC -DCOMPILE_DL gd.c && \
 		ld -Bshareable -o gd.so gd.o -L${LOCALBASE}/lib -R${LOCALBASE}/lib -lgd
 
 do-install:
