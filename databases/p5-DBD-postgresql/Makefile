@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/05/24 10:35:54 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/27 10:37:00 jlam Exp $
 #
 
 DISTNAME=	DBD-Pg-0.93
@@ -12,15 +12,16 @@ HOMEPAGE=	http://www.postgresql.org/
 DEPENDS+=	postgresql>=6.5.3:../../databases/postgresql
 DEPENDS+=	p5-DBI>=1.08:../../databases/p5-DBI
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/Pg/.packlist
 
-PGUSER?=                pgsql
-PGPREFIX=               ${PREFIX}/${PGUSER}
+PGUSER?=	pgsql
+PGPREFIX=	${PREFIX}/${PGUSER}
 
-CONFIGURE_ENV+=		POSTGRES_INCLUDE=${PREFIX}/include/pgsql
-CONFIGURE_ENV+=		POSTGRES_LIB=${PREFIX}/lib
+MAKE_ENV+=	POSTGRES_INCLUDE=${PREFIX}/include/pgsql
+MAKE_ENV+=	POSTGRES_LIB=${PREFIX}/lib
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${LOCALBASE}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
