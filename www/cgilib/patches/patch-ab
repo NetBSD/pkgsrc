@@ -1,0 +1,53 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
+--- Makefile.orig	Fri Aug 20 23:14:07 1999
++++ Makefile	Sat Nov  6 16:35:49 1999
+@@ -14,30 +14,37 @@
+ #   along with this program; if not, write to the Free Software
+ #   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
+ 
+-CFLAGS = -I. -Wall -O2 -g
++CFLAGS = -I. -Wall -O2
+ LDFLAGS = -L.
+ LIBS = -lcgi
+ 
+ OBJS = cgi.o cookies.o
+ 
++all:: libcgi.a cgitest jumpto htmlman
++
+ libcgi.a: $(OBJS)
+-	ar rc $@ $^
++	ar ruv $@ $(OBJS)
+ 
+ cgitest: cgitest.o libcgi.a
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ cgitest.o $(LIBS)
+ 
+ jumpto: jumpto.o libcgi.a
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ jumpto.o $(LIBS)
+ 
+-all: libcgi.a cgitest jumpto
++htmlman:
++	for f in *.[35]; do \
++	  nroff -mandoc $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
++	done
+ 
+-install: cgitest
+-	install -m 755 cgitest /usr/lib/cgi-bin
++install: all
++	install -c -m 755 cgitest ${PREFIX}/libexec/cgi-bin
++	install -c -m 755 jumpto ${PREFIX}/libexec/cgi-bin
++	install -c -m 444 libcgi.a ${PREFIX}/lib
++	install -c -m 444 cgi.h ${PREFIX}/include
++	install -d ${PREFIX}/share/doc/cgilib
++	for i in *.html; do \
++          install -c -m 444 $$i ${PREFIX}/share/doc/cgilib ; \
++        done
+ 
+ clean:
+ 	rm -f cgitest cgitest.o jumpto jumpto.o libcgi.a $(OBJS) *.[35].html
+-
+-htmlman:
+-	for f in *.[35]; do \
+-	  man -l $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
+-	done
