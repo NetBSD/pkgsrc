@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.232 2004/04/21 17:08:06 tv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.233 2004/04/21 21:09:32 cube Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1644,11 +1644,6 @@ PILRC_USE_GTK?=	YES
 # Possible: YES, NO
 # Default: YES
 
-#PINE_USE_LDAP=
-# Compile code into pine to use a LDAP server for an address book. 
-# Possible: undefined, YES
-# Default: undefined (support not compiled in)
-
 #PINFO_USE_NATIVE_CURSES=
 # Used in pinfo to use NetBSD native curses, rather than ncurses.
 # Only works on NetBSD-1.5 and newer.
@@ -1701,11 +1696,6 @@ PKG_LANG?=english
 # Possible: YES, not defined
 # Default: not defined
 
-#POSTFIX_USE_LDAP=YES
-# Add support for LDAP.
-# Possible: YES, not defined
-# Default: not defined
-
 #POSTFIX_USE_MYSQL=YES
 # Add support for MySQL maps.
 # Possible: YES, not defined
@@ -1746,11 +1736,6 @@ PURE_FTPD_USE_VIRTUAL_CHROOT?=	NO
 # to follow symlinks outside a chroot jail).
 # Possible: YES, NO
 # Default: NO
-
-#SAMBA_USE_LDAP=YES
-# Add support for LDAP.
-# Possible: YES, not defined
-# Default: not defined
 
 #SASL_USE_GSSAPI=YES
 # Add support for GSSAPI.
@@ -1993,7 +1978,8 @@ USE_MMX?=	NO
 # Default: NO
 
 USE_OPENLDAP?=	NO
-# Enable openldap support.  Used in gnupg, dovecot.
+# Enable openldap support.  Used in xemacs, gnupg, dovecot, postfix, samba,
+# sendmail, sylpheed, pine and others.
 # Possible: YES, or NO.
 # Default: NO
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/31 06:49:41 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/21 21:09:33 cube Exp $
 
 DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -27,7 +27,7 @@ PLIST_SRC=		${PKGDIR}/PLIST
 
 ALL_TARGET=		all saslcache testsaslauthd
 
-BUILD_DEFS+=		USE_PAM USE_LDAP SASL_USE_GSSAPI
+BUILD_DEFS+=		USE_PAM USE_OPENLDAP SASL_USE_GSSAPI
 
 SASLSOCKETDIR?=		/var/run/saslauthd
 BUILD_DEFS+=		SASLSOCKETDIR
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-saslauthd="${SASLSOCKETDIR}"
 CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .endif
 
-.if defined(USE_LDAP)
+.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 .  include "../../databases/openldap/buildlink3.mk"
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 .  include "../../security/openssl/buildlink3.mk"
@@ -81,7 +81,7 @@ post-install:
 	for f in saslcache testsaslauthd; do				\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${PREFIX}/bin/$$f;	\
 	done
-.if defined(USE_LDAP)
+.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cyrus-saslauthd
 	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD \
 		${PREFIX}/share/doc/cyrus-saslauthd

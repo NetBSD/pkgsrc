@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/21 21:09:33 cube Exp $
 
 .include "Makefile.common"
 PKGREVISION=		7
@@ -32,9 +32,9 @@ BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
-.if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
+.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == "YES"
 .include "../../databases/openldap/buildlink3.mk"
-BUILD_DEFS+=		SAMBA_USE_LDAP
+BUILD_DEFS+=		USE_OPENLDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
 .else
