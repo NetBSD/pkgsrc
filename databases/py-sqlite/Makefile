@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/31 06:07:06 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/22 09:16:01 recht Exp $
 
 DISTNAME=	pysqlite-0.5.0
 PKGNAME=	${PYPKGPREFIX}-sqlite-0.5.0
-CATEGORIES=	databases
+CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysqlite/}
 
 MAINTAINER=	tsarna@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/04/27 03:09:58 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/22 09:16:01 recht Exp $
 #
 
 DISTNAME=		PQueue-0.2
 PKGNAME=		${PYPKGPREFIX}-pqueue-0.2
-CATEGORIES=		devel
+CATEGORIES=		devel python
 MASTER_SITES=	http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 EXTRACT_SUFX=		.tar.bz2
 
