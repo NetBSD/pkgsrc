@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2481 2004/11/26 11:39:52 adam Exp $
+$NetBSD: TODO,v 1.2482 2004/11/26 13:39:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -678,7 +678,6 @@ Suggested package updates
 	o leafnode-1.10.7
 	o leafpad-0.7.7
 	o libast-0.6
-	o libcdaudio-0.99.12
 	o libcdio-0.71
 	o libcomprex-0.3.3
 	o libdnet-1.8
