@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2412 2003/06/03 17:05:29 jschauma Exp $
+$NetBSD: CHANGES,v 1.2413 2003/06/03 18:47:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added icewm-imlib-1.2.7 [jmmv 2003-06-03]
 	Renamed jakarta-ant to apache-ant [jschauma 2003-06-03]
 	Updated apache-ant to 1.5.3.1 [jschauma 2003-06-03]
+	Updated libgnomeui to 2.2.1 [jmmv 2003-06-03]
