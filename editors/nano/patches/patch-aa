@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/06/20 04:00:38 jlam Exp $
+
+--- Makefile.in.orig	Sat May 12 21:11:55 2001
++++ Makefile.in
+@@ -102,7 +102,7 @@
+ SUBDIRS = po intl
+ 
+ localedir = $(datadir)/locale
+-INCLUDES = -Iintl -DLOCALEDIR=\"$(localedir)\" -I@includedir@
++INCLUDES = -Iintl -DLOCALEDIR=\"$(localedir)\"
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
