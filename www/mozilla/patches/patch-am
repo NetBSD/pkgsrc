@@ -1,8 +1,7 @@
-$NetBSD: patch-am,v 1.8 2002/12/04 15:20:29 taya Exp $
+$NetBSD: patch-am,v 1.9 2003/01/19 20:22:22 tron Exp $
 
-diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
---- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	Tue Sep 24 23:21:06 2002
-+++ ./nsprpub/pr/src/pthreads/ptio.c	Wed Nov 13 14:21:27 2002
+--- nsprpub/pr/src/pthreads/ptio.c.orig	Sun Jan 19 18:55:37 2003
++++ nsprpub/pr/src/pthreads/ptio.c	Sun Jan 19 18:57:31 2003
 @@ -192,7 +192,7 @@
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
      || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
@@ -12,3 +11,19 @@ diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthread
  #define _PRSockOptVal_t void *
  #else
  #error "Cannot determine architecture"
+@@ -3426,6 +3426,15 @@
+     if (osfd == -1) pt_MapError(_PR_MD_MAP_SOCKET_ERROR, errno);
+     else
+     {
++#if defined(__NetBSD__) && defined(_PR_INET6) && defined(IPV6_V6ONLY)
++	if(domain == PR_AF_INET6) {
++		int	opt = 0;
++		if (setsockopt(osfd, IPPROTO_IPV6, IPV6_V6ONLY, &opt, sizeof(opt))){
++			close(osfd);
++			return NULL;
++            	}
++	}
++#endif
+         fd = pt_SetMethods(osfd, ftype, PR_FALSE, PR_FALSE);
+         if (fd == NULL) close(osfd);
+     }
