@@ -1,0 +1,11 @@
+--- kshisen/Makefile.in.orig	Sun Apr 12 00:45:53 1998
++++ kshisen/Makefile.in	Sun Apr 12 00:46:06 1998
+@@ -80,8 +80,6 @@
+ install: all
+ 	$(INSTALL_DIR) $(BINDIR)
+ 	$(INSTALL) $(TARGET) $(BINDIR)
+-	$(INSTALL_DIR) $(BINDIR)
+-	$(INSTALL) $(TARGET) $(BINDIR)
+ 	$(INSTALL_DIR) $(KDELNKDIR)
+ 	$(INSTALL_DATA) kshisen.kdelnk $(KDELNKDIR)
+ 	$(INSTALL_DIR) $(PICDIR)
