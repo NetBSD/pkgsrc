@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/07 15:10:18 fredb Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
+bin/xscreensaver-getimage
+bin/xscreensaver-getimage-file
+bin/xscreensaver-getimage-video
 bin/xscreensaver-gl-helper
 bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
@@ -19,6 +22,7 @@ libexec/xscreensaver/bubbles
 libexec/xscreensaver/bumps
 libexec/xscreensaver/cage
 libexec/xscreensaver/ccurve
+libexec/xscreensaver/circuit
 libexec/xscreensaver/compass
 libexec/xscreensaver/coral
 libexec/xscreensaver/critical
@@ -114,6 +118,7 @@ libexec/xscreensaver/swirl
 libexec/xscreensaver/t3d
 libexec/xscreensaver/triangle
 libexec/xscreensaver/truchet
+libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
 libexec/xscreensaver/wander
@@ -174,6 +179,7 @@ man/man1/munch.1
 man/man1/nerverot.1
 man/man1/noseguy.1
 man/man1/pedal.1
+man/man1/penetrate.1
 man/man1/penrose.1
 man/man1/petri.1
 man/man1/phosphor.1
@@ -206,6 +212,12 @@ man/man1/xflame.1
 man/man1/xjack.1
 man/man1/xlyap.1
 man/man1/xmatrix.1
+man/man1/xscreensaver.1
+man/man1/xscreensaver-demo.1
+man/man1/xscreensaver-command.1
+man/man1/xscreensaver-getimage.1
+man/man1/xscreensaver-getimage-file.1
+man/man1/xscreensaver-getimage-video.1
 man/man1/xscreensaver-gl-helper.1
 man/man1/xsublim.1
 man/man1/xteevee.1
