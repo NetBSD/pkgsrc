@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/23 01:05:34 kristerw Exp $
 
 DISTNAME=		VisualBoyAdvance-src-1.6a
 PKGNAME=		vba-1.6.0.1
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-c-core
 CONFIGURE_ARGS+=	--without-mmx
+USE_LANGUAGES=		c c++
 
 GCC_REQD+=		3.0.0
 
