@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/05/16 18:11:35 magick Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/06/04 16:37:25 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -609,6 +609,7 @@ lib/${EMACSVER}/etc/recycle2.xpm
 lib/${EMACSVER}/etc/refcard.ps.gz
 lib/${EMACSVER}/etc/refcard.tex
 lib/${EMACSVER}/etc/sample.Xdefaults
+lib/${EMACSVER}/etc/sample.Xresources
 lib/${EMACSVER}/etc/sample.init.el
 lib/${EMACSVER}/etc/sink.xbm
 lib/${EMACSVER}/etc/sparcworks/SW.Editor.xpm
