@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2004/04/24 23:07:53 tv Exp $
+$NetBSD: patch-ac,v 1.5 2004/09/27 16:12:04 wiz Exp $
 
---- src/system.h.orig	Sat Apr 24 19:05:49 2004
+--- src/system.h.orig	2004-05-11 10:11:49.000000000 +0200
 +++ src/system.h
-@@ -309,6 +309,9 @@ extern int errno;
+@@ -282,6 +282,9 @@ extern int errno;
  
  #if MAJOR_IN_MKDEV
  # include <sys/mkdev.h>

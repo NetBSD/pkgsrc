@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2004/05/18 11:58:04 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/09/27 16:12:04 wiz Exp $
 #
 
-DISTNAME=       tar-1.13.25
-PKGNAME=	gtar-info-1.13.25
+DISTNAME=       tar-1.14
+PKGNAME=	gtar-info-1.14
 SVR4_PKGNAME=	gtari
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://alpha.gnu.org/gnu/tar/ \
-		ftp://ftp.sunsite.org.uk/Mirrors/alpha.gnu.org/gnu/tar/ \
-		ftp://ftp.funet.fi/pub/mirrors/alpha.gnu.org/gnu/tar/
+MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
@@ -17,7 +15,7 @@ INFO_FILES=	tar.info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
+NO_BUILDLINK=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/05 18:38:43 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/27 16:12:04 wiz Exp $
 bin/${GTAR_PROGRAM_PREFIX}tar
 ${GTAR_LINK}bin/gtar
 man/man1/${GTAR_PROGRAM_PREFIX}tar.1
@@ -7,17 +7,26 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tar.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/tar.mo

@@ -1,10 +1,9 @@
-$NetBSD: patch-ag,v 1.1 2002/11/20 16:57:55 bouyer Exp $
-This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.rpm
+$NetBSD: patch-ag,v 1.2 2004/09/27 16:12:04 wiz Exp $
 
---- src/extract.c.orig	Sun Nov 17 18:35:32 2002
-+++ src/extract.c	Sun Nov 17 18:35:09 2002
-@@ -180,7 +180,11 @@
-       mode = current_stat_info->st_mode ^ invert_permissions;
+--- src/extract.c.orig	2004-04-05 09:23:51.000000000 +0200
++++ src/extract.c
+@@ -182,7 +182,11 @@ set_mode (char const *file_name,
+       mode = cur_info->st_mode ^ invert_permissions;
      }
  
 +#if (defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
@@ -15,7 +14,7 @@ This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.
      chmod_error_details (file_name, mode);
  }
  
-@@ -216,7 +220,12 @@
+@@ -222,7 +226,12 @@ set_stat (char const *file_name,
  {
    struct utimbuf utimbuf;
  
@@ -28,7 +27,7 @@ This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.
      {
        /* We do the utime before the chmod because some versions of utime are
  	 broken and trash the modes of the file.  */
-@@ -229,6 +238,7 @@
+@@ -235,6 +244,7 @@ set_stat (char const *file_name,
  
  	  /* FIXME: incremental_option should set ctime too, but how?  */
  
@@ -36,7 +35,7 @@ This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.
  	  if (incremental_option)
  	    utimbuf.actime = stat_info->st_atime;
  	  else
-@@ -237,6 +247,16 @@
+@@ -243,6 +253,16 @@ set_stat (char const *file_name,
  	  utimbuf.modtime = stat_info->st_mtime;
  
  	  if (utime (file_name, &utimbuf) < 0)
@@ -53,24 +52,3 @@ This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.
  	    utime_error (file_name);
  	  else
  	    {
-@@ -1019,10 +1039,19 @@
-       {
- 	struct stat st1, st2;
- 	int e;
-+	size_t skiplinkcrud;
-+
-+	if (absolute_names_option)
-+	  skiplinkcrud = 0;
-+	else {
-+	  skiplinkcrud = FILESYSTEM_PREFIX_LEN (current_link_name);
-+	  while (ISSLASH (current_link_name[skiplinkcrud]))
-+	    skiplinkcrud++;
-+	}
- 
- 	/* MSDOS does not implement links.  However, djgpp's link() actually
- 	   copies the file.  */
--	status = link (current_link_name, CURRENT_FILE_NAME);
-+	status = link (current_link_name + skiplinkcrud, CURRENT_FILE_NAME);
- 
- 	if (status == 0)
- 	  {
