@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/06/22 18:34:09 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/19 19:51:04 he Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -29,12 +29,19 @@ INSTALL_TARGET=		install
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[56].*)
 CONFIGURE_ARGS+=	--enable-threads
+.else
+CONFIGURE_ARGS+=	--disable-threads
+.endif
+.endif
 
 # Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
-
-.include "../../mk/bsd.prefs.mk"
 
 # NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
 # tickled by the Tcl code that manifests in code generation problems.
@@ -43,7 +50,11 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 .endif
 
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[56].*)
 .include "../../mk/pthread.buildlink3.mk"
+.endif
+.endif
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
