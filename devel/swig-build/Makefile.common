@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/07 23:20:35 minskim Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/11/22 21:13:21 wiz Exp $
 
 DISTNAME=       swig-${SWIG_VERSION}
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/SWIG-${SWIG_VERSION}
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-USE_GCC_SHLIB=		YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--without-guile
