@@ -1,11 +1,14 @@
-$NetBSD: patch-ai,v 1.3 1998/08/23 06:08:50 garbled Exp $
---- src/ftpd.c.orig	Mon Jul 13 03:00:10 1998
-+++ src/ftpd.c	Mon Jul 13 02:58:45 1998
-@@ -2847,4 +2847,5 @@
+$NetBSD: patch-ai,v 1.4 1999/02/13 09:05:02 rh Exp $
+
+--- src/ftpd.c.orig	Mon Jul  6 11:14:25 1998
++++ src/ftpd.c	Sat Feb 13 00:50:35 1999
+@@ -2930,7 +2930,9 @@
+ 	*p = '\0';
+ 
        /* send a line...(note that this overrides dolreplies!) */
--      vreply(USE_REPLY_LONG | USE_REPLY_NOTFMT, n, ptr, 0);
--
 +      VA_START(fmt);
-+      vreply(USE_REPLY_LONG | USE_REPLY_NOTFMT, n, ptr, ap);
+       vreply(USE_REPLY_LONG | USE_REPLY_NOTFMT, n, ptr, ap);
 +      VA_END; /* *NEVER* send a 0 as an ap, some machines use a *struct* for a va_list! */
+ 
        if (p)
+ 	ptr = p + 1; /* set to the next line... (\0 is handled in the while) */
