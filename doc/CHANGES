@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2467 2003/06/09 10:07:00 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2468 2003/06/09 12:33:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2389,3 +2389,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mrtg to 2.9.29 [martti 2003-06-09]
 	Updated elisp-manual to 21.8 [uebayasi 2003-06-09]
 	Updated ja-vfxdvik to 22.40vnb1 [uebayasi 2003-06-09]
+	Updated qt2-libs to 2.3.1nb4 [tron 2003-06-09]
