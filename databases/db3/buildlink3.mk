@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/03/31 05:34:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/05/13 20:23:21 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB3_BUILDLINK3_MK:=	${DB3_BUILDLINK3_MK}+
@@ -22,5 +22,7 @@ USE_DB185?=			yes
 BUILDLINK_TRANSFORM+=		l:db:db3
 .  endif
 .endif	# DB3_BUILDLINK3_MK
+
+.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
