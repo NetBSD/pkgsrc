@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/13 21:54:22 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/17 16:14:23 wiz Exp $
 
 DISTNAME=	openpam-20040210
 CATEGORIES=	security
@@ -12,6 +12,7 @@ CONFLICTS+=	PAM-[0-9]*
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+USE_PERL5=		build
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-pam-su
