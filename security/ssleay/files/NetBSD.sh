@@ -1,7 +1,8 @@
 #!/bin/sh
+# $NetBSD: NetBSD.sh,v 1.3 1998/09/17 12:34:29 frueauf Exp $
 
-perl util/perlpath.pl /usr/pkg/bin
-perl util/ssldir.pl /usr/pkg
+@@@PREFIX@@@/bin/perl util/perlpath.pl @@@PREFIX@@@/bin
+@@@PREFIX@@@/bin/perl util/ssldir.pl @@@PREFIX@@@
 
 case "$1" in
     i386)
@@ -17,4 +18,4 @@ case "$1" in
 	echo "Not supported on this architecture, sorry."
 	;;
 esac
-perl Configure $conf
+@@@PREFIX@@@/bin/perl Configure $conf
