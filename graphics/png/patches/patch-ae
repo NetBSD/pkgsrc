@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2004/08/06 09:25:18 drochner Exp $
+$NetBSD: patch-ae,v 1.4 2004/12/05 11:17:12 wiz Exp $
 
---- pngconf.h.orig	2004-08-04 13:34:47.000000000 +0200
+--- pngconf.h.orig	2004-12-03 01:14:24.000000000 +0100
 +++ pngconf.h
-@@ -260,8 +260,8 @@
+@@ -304,8 +304,8 @@
       /* If you encounter a compiler error here, see the explanation
        * near the end of INSTALL.
        */
