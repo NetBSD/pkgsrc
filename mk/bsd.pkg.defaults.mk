@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.173 2003/08/08 09:58:16 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.174 2003/08/08 11:13:17 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -768,6 +768,26 @@ FLOW_TOOLS_USE_MYSQL?=	NO
 # into a MySQL database.
 # Possible: YES, NO
 # Default: NO
+
+#FLUXBOX_USE_XINERAMA?=	NO
+# Compile flukebox with xinerama extensions
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_KDE?=	NO
+# Compile flukebox with KDE support
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_GNOME?=	NO
+# Compile flukebox with GNOME support
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_XFT?=	YES
+# Compile flukebox with Xft support
+# Possible: YES, NO
+# Default: YES
 
 FOX_USE_XUNICODE?=	YES
 # Used in fox to build in support for Unicode by XUnicode. See
