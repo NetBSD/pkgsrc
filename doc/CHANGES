@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5483 2004/04/08 13:03:09 ben Exp $
+$NetBSD: CHANGES,v 1.5484 2004/04/08 13:42:55 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1844,3 +1844,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated uudeview to 0.5.20 [fredb 2004-04-08]
 	Updated xdeview to 0.5.20 [fredb 2004-04-08]
 	Updated memtest86 to 3.1a [ben 2004-04-08]
+	Added gmime-2.1.3 [recht 2004-04-08]
