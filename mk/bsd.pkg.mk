@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1356 2004/01/25 02:37:49 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1357 2004/01/25 07:47:00 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -1374,15 +1374,13 @@ PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
 PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
-.  if defined(USE_X11) && !empty(USE_PKGSRC_XFREE86:M[Yy][Ee][Ss])
-DEPENDS+=   XFree86-libs>=4.3.0:../../x11/XFree86-libs
-.  endif
-.  if defined(USE_X11) && !exists(${X11BASE}) && !empty(USE_PKGSRC_XFREE86:M[Yy][Ee][Ss])
-    @${MKDIR} ${X11BASE}
-    @${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
-    @${CHMOD} ${PKGDIRMODE} ${X11BASE}
-DEPENDS+=   XFree86-libs>=4.3.0:../../x11/XFree86-libs
-.  elif defined(USE_X11) && !exists(${X11BASE})
+.  if defined(USE_X11) && !exists(${X11BASE}) && \
+	!empty(USE_PKGSRC_XFREE86:M[Yy][Ee][Ss])
+	@${MKDIR} ${X11BASE}
+	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
+	@${CHMOD} ${PKGDIRMODE} ${X11BASE}
+.  elif defined(USE_X11) && !exists(${X11BASE}) && \
+	!empty(USE_PKGSRC_XFREE86:M[Nn][Oo])
 PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if defined(BROKEN)
