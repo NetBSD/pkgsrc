@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1528 2003/03/03 12:04:18 wiz Exp $
+$NetBSD: CHANGES,v 1.1529 2003/03/03 20:22:24 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -897,3 +897,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated graphviz to 1.9 [seb 2003-03-03]
 	Updated links to 2.1.0.9 [wiz 2003-03-03]
 	Updated links-gui to 2.1.0.9 [wiz 2003-03-03]
+	Updated ripe-whois to 3.1.1v6 [seb 2003-03-03]
