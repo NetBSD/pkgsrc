@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/12/29 20:51:23 garbled Exp $
-@exec if [ -d %d/pthreads ]; then /usr/bin/true; else mkdir -p %D/pthreads; fi
+@comment $NetBSD: PLIST,v 1.10 1999/02/01 01:39:27 hubertf Exp $
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
