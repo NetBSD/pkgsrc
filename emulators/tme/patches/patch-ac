@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/01/23 08:21:59 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2004/12/05 07:32:17 skrll Exp $
 
---- libtme/module.c.orig	Sat Aug 23 14:48:30 2003
+--- libtme/module.c.orig	2003-08-23 14:48:30.000000000 +0100
 +++ libtme/module.c
 @@ -107,7 +107,7 @@ _tme_modules_find(const char *top_name,
    FILE *modules_index;
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/01/23 08:21:59 skrll Exp $
  
      /* get the next search path environment variable value: */
      search_path = NULL;
+@@ -230,7 +230,7 @@ tme_module_open(const char *module_fake_
+   for (p1 = module_raw_name;
+        (c = *p1) != '\0';
+        p1++) {
+-    if (!isalnum(c)) {
++    if (!isalnum((unsigned char)c)) {
+       *p1 = '_';
+       if (c == '/'
+ 	  && first_slash == NULL) {
