@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2003/06/23 13:56:15 agc Exp $
+# $NetBSD: Makefile,v 1.195 2003/06/24 00:33:33 hubertf Exp $
 
 COMMENT=	System utilities
 
@@ -120,6 +120,7 @@ SUBDIR+=	screentest
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
 SUBDIR+=	setquota
+SUBDIR+=	shmux
 SUBDIR+=	skill
 SUBDIR+=	socket
 SUBDIR+=	sshsh
