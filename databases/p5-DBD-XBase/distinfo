@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 22:27:12 salo Exp $
+$NetBSD: distinfo,v 1.2 2004/01/01 15:37:54 salo Exp $
 
-SHA1 (DBD-XBase-0.232.tar.gz) = 68b6ea1115e0ec3a07ecae7862ac22ae4f13b6b9
-Size (DBD-XBase-0.232.tar.gz) = 108799 bytes
+SHA1 (DBD-XBase-0.241.tar.gz) = 4098ee28cacadaaf047d93fa7c161a93f4875a8e
+Size (DBD-XBase-0.241.tar.gz) = 111824 bytes
