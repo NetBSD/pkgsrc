@@ -1,26 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2001/04/05 14:06:57 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- config/cf/Motif.rules.orig	Sun Oct 29 15:34:02 2000
-+++ config/cf/Motif.rules	Sun Oct 29 15:34:14 2000
-@@ -50,9 +50,10 @@
- # define MotifIsTopLevelProject	NO
+--- config/cf/bsdLib.rules.orig	Sat Sep  8 03:07:54 2001
++++ config/cf/bsdLib.rules
+@@ -153,7 +153,7 @@
+ #define ShLibIncludeFile <bsdLib.tmpl>
  #endif
- 
--/* Include the X11 project rules file. */
-+#ifndef X11IsTopLevelProject
-+/* If we have not included X11.rules yet, do it now. */
- #include <X11.rules>
--
-+#endif
- 
- /* Use the in-tree Motif by default. */
- #ifndef UseInstalledMotif
-@@ -698,7 +699,7 @@
- #define Real_MessageCatalogRule(prefix)					@@\
- prefix.cat Concat(prefix,MsgCatI.h):					@@\
- 	$(RM) Concat(prefix,MsgCatI.h) prefix.cat $(MLOCSRC)/C/msg/prefix.msg	@@\
--	$(MKCATTOOL) Concat(prefix,MsgCatI.h) prefix.msg > $(MLOCSRC)/C/msg/prefix.msg	@@\
-+	$(MKCATTOOL) Concat(prefix,MsgCatI.h) prefix.msg | sed '/^[ 	]*$$/d' > $(MLOCSRC)/C/msg/prefix.msg	@@\
- 	$(GENCAT) prefix.cat $(MLOCSRC)/C/msg/prefix.msg		@@\
- 									@@\
- includes:: prefix.cat Concat(prefix,MsgCatI.h)				@@\
+ #ifndef SharedLibraryLoadFlags
+-#define SharedLibraryLoadFlags -shared -Wl,-rpath,$(USRLIBDIR)
++#define SharedLibraryLoadFlags -shared -Wl,-rpath,$(USRLIBDIRPATH)
+ #endif
+ #ifndef PositionIndependentCFlags
+ #define PositionIndependentCFlags -fPIC

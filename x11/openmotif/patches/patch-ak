@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2001/04/05 14:06:58 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2001/09/08 20:03:45 jlam Exp $
 
---- lib/Xm/TextF.c.orig	Sun Oct 29 15:43:15 2000
-+++ lib/Xm/TextF.c	Sun Oct 29 15:45:35 2000
-@@ -84,7 +84,7 @@
- #include <Xm/PrintSP.h>         /* for XmIsPrintShell */
+--- config/util/Imakefile.orig	Fri Apr 28 11:04:07 2000
++++ config/util/Imakefile
+@@ -22,6 +22,8 @@
+          LDPRELIB =
+         LDPRELIBS =
  
++#include <NoInstall.rules>
++
+ all:: $(PROGRAMS)
  
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined (__NetBSD__)
- /*
-  * Modification by Integrated Computer Solutions, Inc.  May 2000
-  *
+ includes:: ProgramTargetName(makestrs)

@@ -1,26 +1,35 @@
-$NetBSD: patch-af,v 1.1 2001/04/05 14:06:57 wiz Exp $
+$NetBSD: patch-af,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- config/imake/Imakefile.orig	Sun Oct 29 15:29:28 2000
-+++ config/imake/Imakefile	Sun Oct 29 15:31:43 2000
-@@ -5,6 +5,21 @@
- XCOMM
- XCOMM $XFree86: xc/config/imake/Imakefile,v 3.6.2.1 1997/06/11 12:08:33 dawes Exp $
+--- config/cf/bsdLib.tmpl.orig	Sat Sep  8 03:07:54 2001
++++ config/cf/bsdLib.tmpl
+@@ -59,18 +59,18 @@
+ #endif
  
-+XCOMM
-+XCOMM
-+XCOMM
-+
-+#ifdef NetBSDArchitecture
-+#undef InstallProgram
-+#define InstallProgram(file,dest) /* as nothing */
-+#undef InstallNamedProg
-+#define InstallNamedProg(srcname,dstname,dest) /* as nothing */
-+#undef InstallManPage
-+#define InstallManPage(file,dest) /* as nothing */
-+#undef InstallManPageLong
-+#define InstallManPageLong(srcname,dest,dstname) /* as nothing */
-+#endif
-+
- XCOMM Some compilers generate fatal errors if an -L directory does
- XCOMM not exist.  Since BUILDLIBDIR may not exist yet suppress its use.
-          LDPRELIB =
+ #define SharedX11Reqs	SharedThreadReqs
+-#define SharedOldXReqs	$(LDPRELIB) $(XLIBONLY)
+-#define SharedXtReqs	$(LDPRELIB) $(XLIBONLY) $(SMLIB) $(ICELIB) SharedThreadReqs
+-#define SharedXawReqs	$(LDPRELIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
+-#define SharedXmuReqs	$(LDPRELIB) $(XTOOLLIB) $(XLIB)
+-#define SharedXextReqs	$(LDPRELIB) $(XLIBONLY)
+-#define SharedXiReqs	$(LDPRELIB) $(XLIB)
+-#define SharedPexReqs	$(LDPRELIB) $(XLIBONLY) MathLibrary
+-#define SharedXtstReqs	$(LDPRELIB) $(XLIB)
+-#define SharedXieReqs	$(LDPRELIB) $(XLIBONLY)
+-#define SharedSMReqs	$(LDPRELIB) $(ICELIB)
+-#define SharedFrescoReqs	$(LDPRELIB) $(XLIBONLY) FrescoSysLibs
+-#define SharedXtfReqs	$(LDPRELIB) $(FRESCOLIB) $(XTOOLLIB) $(XLIB) FrescoSysLibs
++#define SharedOldXReqs	$(LDPRELIBS) $(XLIBONLY)
++#define SharedXtReqs	$(LDPRELIBS) $(XLIBONLY) $(SMLIB) $(ICELIB) SharedThreadReqs
++#define SharedXawReqs	$(LDPRELIBS) $(XMULIB) $(XTOOLLIB) $(XLIB)
++#define SharedXmuReqs	$(LDPRELIBS) $(XTOOLLIB) $(XLIB)
++#define SharedXextReqs	$(LDPRELIBS) $(XLIBONLY)
++#define SharedXiReqs	$(LDPRELIBS) $(XLIB)
++#define SharedPexReqs	$(LDPRELIBS) $(XLIBONLY) MathLibrary
++#define SharedXtstReqs	$(LDPRELIBS) $(XLIB)
++#define SharedXieReqs	$(LDPRELIBS) $(XLIBONLY)
++#define SharedSMReqs	$(LDPRELIBS) $(ICELIB)
++#define SharedFrescoReqs	$(LDPRELIBS) $(XLIBONLY) FrescoSysLibs
++#define SharedXtfReqs	$(LDPRELIBS) $(FRESCOLIB) $(XTOOLLIB) $(XLIB) FrescoSysLibs
+ 
+ #define SharedXReqs	$(XTOOLLIB) $(XPLIB) $(XLIB)
+ #define SharedXmReqs	$(LDPRELIBS) SharedXReqs

@@ -1,17 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2001/04/05 14:06:57 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- bindings/Imakefile.orig	Wed May  3 11:12:34 2000
-+++ bindings/Imakefile	Sun Oct 29 14:23:39 2000
-@@ -37,10 +37,10 @@
- XCOMM HISTORY
- XCOMM 
- XCOMM   $TOG: Imakefile /main/8 1997/07/02 17:51:43 samborn $
--INSTALLFLAGS = $(INSTINCFLAGS)
+--- bitmaps/Imakefile.orig	Fri Sep  7 22:06:54 2001
++++ bitmaps/Imakefile
+@@ -56,4 +56,4 @@
  
- FILES = \
- 	xmbind.alias \
-+	CDE \
- 	acorn \
- 	apollo \
- 	dec \
+ all::
  
+-InstallMultipleFlags($(HEADERS),$(XPROJECTROOT)/include/X11/bitmaps/,$(INSTINCFLAGS))
++InstallMultipleFlags($(HEADERS),$(INCDIR)/X11/bitmaps,$(INSTINCFLAGS))

@@ -1,21 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2001/04/05 14:06:57 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- config/util/Imakefile.orig	Sun Oct 29 14:31:06 2000
-+++ config/util/Imakefile	Sun Oct 29 14:31:30 2000
-@@ -1,4 +1,16 @@
- XCOMM $XConsortium: Imakefile /main/16 1996/11/13 14:43:28 lehors $
+--- config/imake/Imakefile.orig	Sat Sep  8 00:39:51 2001
++++ config/imake/Imakefile
+@@ -17,6 +17,8 @@
+ CPP_DEFINES = -DCPP_PROGRAM="\"$(CPP_PROGRAM)\""
+ DEFINES = $(SIGNAL_DEFINES) $(BOOTSTRAPCFLAGS) $(CPP_DEFINES)
+ 
++#include <NoInstall.rules>
 +
-+#ifdef NetBSDArchitecture
-+#undef InstallProgram
-+#define InstallProgram(file,dest) /* as nothing */
-+#undef InstallNamedProg
-+#define InstallNamedProg(srcname,dstname,dest) /* as nothing */
-+#undef InstallManPage
-+#define InstallManPage(file,dest) /* as nothing */
-+#undef InstallManPageLong
-+#define InstallManPageLong(srcname,dest,dstname) /* as nothing */
-+#endif
-+
- #if UseCCMakeDepend
- MDEP_PROG = makedepend
+ #if defined(MacIIArchitecture) || defined(SequentArchitecture) || defined(i386ScoArchitecture)
+ XBSDLIB = /**/
  #endif

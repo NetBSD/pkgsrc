@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/09/08 20:03:45 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CP="@CP@"
+ECHO="@ECHO@"
+GREP="@GREP@"
+MV="@MV@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
+
+X11BASE=@X11BASE@
+MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
+MOTIF_TMPL=${PKG_PREFIX}/lib/X11/config/Motif.tmpl
+X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${ECHO} -n "Updating ${X11_HOSTDEF}..."
+	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
+	( ${GREP} -v OpenMotif ${X11_HOSTDEF}.bak || ${TRUE} ) \
+		> ${X11_HOSTDEF}
+	${ECHO} "done."
+
+	${RM} -f ${MOTIF_RULES} ${MOTIF_TMPL}
+	if [ ${PKG_PREFIX} = ${X11BASE} ]
+	then
+		${MV} -f ${MOTIF_RULES}.openmotif.bak ${MOTIF_RULES}
+		${MV} -f ${MOTIF_TMPL}.openmotif.bak ${MOTIF_TMPL}
+	fi
+	
+	${RMDIR} -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || ${TRUE}
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

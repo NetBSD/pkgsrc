@@ -1,15 +1,12 @@
-$NetBSD: patch-ai,v 1.1 2001/04/05 14:06:58 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2001/09/08 20:03:45 jlam Exp $
 
---- lib/Mrm/Imakefile.orig	Sun Oct 29 14:21:24 2000
-+++ lib/Mrm/Imakefile	Sun Oct 29 14:21:51 2000
-@@ -36,8 +36,10 @@
- 
- #define DoNormalLib	NormalLibMrm
- #define DoSharedLib	SharedLibMrm
-+#if 0
- #define DoDebugLib	DebugLibMrm
- #define DoProfileLib	ProfileLibMrm
-+#endif
- #define LibName		Mrm
- #define SoRev		SOMRMREV
- #define HasSharedData	NO
+--- config/imake/imake.c.orig	Sun Oct 29 15:34:13 2000
++++ config/imake/imake.c	Sun Oct 29 15:38:27 2000
+@@ -148,6 +148,7 @@
+ #if defined(__FreeBSD__) || defined(__NetBSD__)
+ /* This needs to be before _POSIX_SOURCE gets defined */
+ # include <sys/param.h>
++# include <sys/time.h>
+ # include <sys/types.h>
+ # include <sys/sysctl.h>
+ #endif
