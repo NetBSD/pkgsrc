@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/04/13 16:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/08/04 06:58:23 jlam Exp $
 #
 
 V=		2.05
@@ -13,16 +13,29 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
 
-GNU_CONFIGURE=	yes
-USE_GTEXINFO=	yes
-USE_LIBINTL=	yes
-MAKE_ENV+=	INSTALL_SCRIPT='${INSTALL_SCRIPT}'
+USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=		yes
+USE_GTEXINFO=		yes
+MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(BASH_STATIC) && ${BASH_STATIC} == YES
 CONFIGURE_ARGS+=	--enable-static-link
 .endif
+
+# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
+# defeats buildlink.
+#
+post-patch:
+	cd ${WRKSRC};							\
+	files="Makefile.in";						\
+	for file in $${files}; do					\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED} -e "s|[  ]*-I\$$(includedir)||"			\
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
 
 post-install:
 	${CP} /etc/shells /etc/shells.bak
@@ -41,4 +54,5 @@ post-install:
 		${PREFIX}/share/doc/html/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
