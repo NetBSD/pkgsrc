@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 14:08:29 wiz Exp $
+$NetBSD: distinfo,v 1.10 2005/03/14 20:41:19 tv Exp $
 
 SHA1 (cgilib-0.5.tar.gz) = 3ba65e9fac43b875427a126ebbaaa6155e9692df
 RMD160 (cgilib-0.5.tar.gz) = 0188fc57aee277e772e32328b96aa836557c0c63
 Size (cgilib-0.5.tar.gz) = 13991 bytes
 SHA1 (patch-aa) = 9b92cde49f84a22d53044b230b05798dc90085ef
-SHA1 (patch-ab) = ee15b5f4afd45725e58209f7a0560cfefd22d5a6
+SHA1 (patch-ab) = dcbf7b2a1253edfae1632c926d9388e79039a6ca
 SHA1 (patch-ac) = 3366b330d49ef8d61f26b06097c1e4e271f90728
 SHA1 (patch-ad) = 94b9179073afd4494258ac72fed2d275415fb67d
