@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2004/01/22 08:36:03 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/12 00:10:31 hubertf Exp $
 
-DISTNAME=		bochs-2.0.2
+DISTNAME=		bochs-2.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -20,8 +20,37 @@ USE_GCC_SHLIB=		yes
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
 CONFIGURE_ARGS+=	--enable-sb16=dummy
+.if !defined(BOCHS_TINY)
+CONFIGURE_ARGS+=	--enable-new-pit
+CONFIGURE_ARGS+=	--enable-pci
+CONFIGURE_ARGS+=	--enable-cpu-level=6
+CONFIGURE_ARGS+=	--enable-apic
+CONFIGURE_ARGS+=	--enable-usb
+CONFIGURE_ARGS+=	--enable-4meg-pages
+CONFIGURE_ARGS+=	--enable-pae
+CONFIGURE_ARGS+=	--enable-guest2host-tlb
+CONFIGURE_ARGS+=	--enable-repeat-speedups
+CONFIGURE_ARGS+=	--enable-icache
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:M*-*-i386)
+CONFIGURE_ARGS+=	--enable-fast-function-calls
+.endif
+CONFIGURE_ARGS+=	--enable-global-pages
+CONFIGURE_ARGS+=	--enable-host-specific-asms
+CONFIGURE_ARGS+=	--enable-all-optimizations
+CONFIGURE_ARGS+=	--enable-vbe
+CONFIGURE_ARGS+=	--enable-fpu
+CONFIGURE_ARGS+=	--enable-mmx
+CONFIGURE_ARGS+=	--enable-3dnow
+CONFIGURE_ARGS+=	--enable-sse=2
+CONFIGURE_ARGS+=	--enable-daz
+CONFIGURE_ARGS+=	--enable-sep
+.endif # !BOCHS_TINY
 CONFIGURE_ENV+=		CXXFLAGS="-I${X11BASE}/include ${CXXFLAGS}"
 USE_X11=		yes
+MANCOMPRESSED=		yes
+MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q} \
+			GUNZIP_CMD=${GUNZIP_CMD:Q}
 
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
 BOCHS_BIOSDIR=		${BOCHS_MAINDIR}/bios
@@ -32,33 +61,8 @@ MESSAGE_SUBST+=		BOCHS_MAINDIR=${BOCHS_MAINDIR} \
 			BOCHS_DOCDIR=${BOCHS_DOCDIR}
 
 post-configure:
+	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
 	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' \
-		< ${WRKSRC}/.bochsrc > ${WRKSRC}/bochsrc
-
-do-install:
-	${INSTALL_DATA_DIR} ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-2-processors ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-4-processors ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-8-processors ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-latest ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.40 ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-LICENSE ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-latest ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-README ${BOCHS_BIOSDIR}
-	${INSTALL_DATA_DIR} ${BOCHS_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs-html/*.gif ${BOCHS_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs-html/*.html ${BOCHS_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs-html/*.txt ${BOCHS_DOCDIR}
-	${INSTALL_DATA_DIR} ${BOCHS_FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/font/hercules.bdf ${BOCHS_FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/font/vga.bdf ${BOCHS_FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/font/vga.pcf ${BOCHS_FONTDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/bochs ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bximage ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/bochsrc ${PREFIX}/share/bochs
-	${INSTALL_MAN} ${WRKSRC}/doc/man/*.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/*.5 ${PREFIX}/man/man5
-	${X11BASE}/bin/mkfontdir ${PREFIX}/share/bochs/xfonts
+		< ${WRKSRC}/.bochsrc.BAK > ${WRKSRC}/.bochsrc
 
 .include "../../mk/bsd.pkg.mk"
