@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2000/01/17 16:17:58 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2000/02/05 06:03:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -8,11 +8,11 @@ MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
 			ftp://ftp.cert.dfn.de/pub/tools/net/ssh/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
 LICENSE=		no-commercial-use
@@ -48,7 +48,7 @@ CFLAGS+=		-I${LOCALBASE}/include
 .if defined(USE_SECUREID) && ${USE_SECUREID} == YES
 CONFIGURE_ARGS+=	--with-secureid
 .endif
-  
+
 # If rsh is elsewhere to /usr/bin/rsh
 .if defined(SSH_RSHPATH)
 CONFIGURE_ARGS+=       --with-rsh=${SSH_RSHPATH}
