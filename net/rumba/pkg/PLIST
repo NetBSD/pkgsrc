@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/04/26 15:26:01 tron Exp $
 sbin/rumba
 sbin/unrumba
 man/man8/smbmount.8.gz
