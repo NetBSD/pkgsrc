@@ -1,11 +1,14 @@
---- /dev/null	Tue Oct  7 23:33:35 1997
-+++ Makefile	Tue Oct  7 23:42:51 1997
-@@ -0,0 +1,8 @@
-+PROG=	choparp
-+MAN8=	choparp.8
+$NetBSD: patch-ab,v 1.2 1999/09/12 18:54:27 dbj Exp $
+
+--- /dev/null	Sun Sep 12 12:02:39 1999
++++ Makefile	Sun Sep 12 14:14:00 1999
+@@ -0,0 +1,9 @@
++#	$NetBSD: patch-ab,v 1.2 1999/09/12 18:54:27 dbj Exp $
 +
-+DESTDIR=${PREFIX}
-+BINDIR=	/sbin
-+MANDIR=	/man/man
++PROG=	choparp
++MAN=	choparp.8
++
++BINDIR=	${PREFIX}/sbin
++MANDIR=	${PREFIX}/man
 +
 +.include <bsd.prog.mk>
