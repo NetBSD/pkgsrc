@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/30 09:44:53 abs Exp $
+
+SHA1 (validate) = c53ca1a208cfa3f7e401587a3279d870b2c881a4
+Size (validate) = 14520 bytes
+SHA1 (sgml-lib.tar.gz) = 57bc51940b873b66af5c585e1c5d314512bd55eb
+Size (sgml-lib.tar.gz) = 159465 bytes
+SHA1 (patch-aa) = 0a8f9094930f16df61cba9622c9a4d97ef7f57f3
