@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/05 03:35:23 kim Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/05 05:10:31 kim Exp $
 #
 # NOTE:	Versions 1.27 and 1.28 cause apache to dump core,
 #	so this packages has been left at version 1.25
@@ -14,6 +14,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://perl.apache.org/
 COMMENT=		Module that embeds a Perl interpreter into Apache
+
+CONFLICTS=		ap2-perl-[0-9]*
 
 DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
