@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.46 2004/01/25 11:08:51 xtraeme Exp $
+$NetBSD: distinfo,v 1.47 2004/01/26 12:01:01 tron Exp $
 
 SHA1 (mplayer-1.0rc3/MPlayer-1.0pre3.tar.bz2) = d3341f05518f6b331396c431f81b736b89402432
 Size (mplayer-1.0rc3/MPlayer-1.0pre3.tar.bz2) = 4714725 bytes
-SHA1 (mplayer-1.0rc3/default-1.7.tar.bz2) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-Size (mplayer-1.0rc3/default-1.7.tar.bz2) = 0 bytes
+SHA1 (mplayer-1.0rc3/default-1.7.tar.bz2) = 6912c3e58b4c76fad97fdb72945b27815069f7e3
+Size (mplayer-1.0rc3/default-1.7.tar.bz2) = 173439 bytes
 SHA1 (mplayer-1.0rc3/AlienMind-1.1.tar.bz2) = 93c1ec4a0b26c456730101bf45c7fdcf4cf96dd9
 Size (mplayer-1.0rc3/AlienMind-1.1.tar.bz2) = 131362 bytes
 SHA1 (mplayer-1.0rc3/BlueHeart-1.4.tar.bz2) = b8298e7862eb61fd1d9e57091a2df397b649508d
