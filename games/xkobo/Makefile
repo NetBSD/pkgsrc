@@ -3,7 +3,8 @@
 # Date created:         18 Jul 1995
 # Whom:                 jkh
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/30 03:41:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/30 03:45:04 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.10 1997/11/12 09:57:17 tg Exp
 #
 
 DISTNAME=       xkobo-1.11
@@ -13,6 +14,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}  \
 MASTER_SITE_SUBDIR=	games
 
 USE_IMAKE=	yes
-ALL_TARGET=	xkobo
+ALL_TARGET+=	xkobo all
+
+CAT1=		xkobo.0
 
 .include <bsd.port.mk>
