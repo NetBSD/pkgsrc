@@ -1,0 +1,83 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/17 15:57:05 jmmv Exp $
+
+--- configure.orig	2003-01-25 23:04:57.000000000 +0000
++++ configure
+@@ -3121,8 +3121,67 @@ LIBS=$ac_check_lib_save_LIBS
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
+ echo "${ECHO_T}$ac_cv_lib_dl_dlopen" >&6
++
++if test $ac_cv_lib_dl_dlopen != yes; then
++        echo "$as_me:$LINENO: checking for dlopen in -lc" >&5
++echo $ECHO_N "checking for dlopen in -lc... $ECHO_C" >&6
++if test "${ac_cv_lib_c_dlopen+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++#include "confdefs.h"
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char dlopen ();
++#ifdef F77_DUMMY_MAIN
++#  ifdef __cplusplus
++     extern "C"
++#  endif
++   int F77_DUMMY_MAIN() { return 1; }
++#endif
++int
++main ()
++{
++dlopen ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_c_dlopen=yes
++else
++  echo "$as_me: failed program was:" >&5
++cat conftest.$ac_ext >&5
++ac_cv_lib_c_dlopen=no
++fi
++rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_c_dlopen" >&5
++echo "${ECHO_T}$ac_cv_lib_c_dlopen" >&6
++fi
+ if test $ac_cv_lib_dl_dlopen = yes; then
+   LIBS="$LIBS -ldl"
++elif test $ac_cv_lib_c_dlopen = yes; then
++  :
+ else
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -5694,9 +5753,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test $MAKEINFO = yes; then
+-	MAKEINFO='makeinfo'
+-else
++if test $MAKEINFO = no; then
+ 	# for silly people without texinfo
+ 	MAKEINFO='@echo'
+ fi
