@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4346 2004/01/04 18:01:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4347 2004/01/04 18:08:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated librsvg2 to 2.5.0nb3 [jmmv 2004-01-04]
 	Updated xchat2 to 2.0.7 [xtraeme 2003-01-04]
 	Updated libcroco to 0.4.0 [xtraeme 2003-01-04]
+	Updated p5-HTML-FillInForm to 1.03 [xtraeme 2003-01-04]
