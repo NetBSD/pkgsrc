@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/09/01 16:54:46 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/01 17:00:24 reed Exp $
 #
 
 DISTNAME=       mmv_1.01b.orig
@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_DEBIAN:=pool/main/m/mmv/}
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       # none
-COMMENT=	mmv is a program to move multiple files using wildcard patterns
+COMMENT=	Move, copy, append or link multiple files using wildcard patterns
 
 WRKSRC=		${WRKDIR}/mmv-1.01b.orig
 ALL_TARGET=	mmv
