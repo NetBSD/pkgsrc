@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9284 2005/02/24 09:56:38 adam Exp $
+$NetBSD: CHANGES,v 1.9285 2005/02/24 11:20:51 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glut to 6.2.1nb2 [veego 2005-02-24]
 	Updated abiword to 2.2.4 [adam 2005-02-24]
 	Updated abiword-plugins to 2.2.4 [adam 2005-02-24]
+	Added pmccabe-2.2 [agc 2005-02-24]
