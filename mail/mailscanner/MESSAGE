@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/09/25 00:33:19 grant Exp $
+
+See ${PREFIX}/share/doc/MailScanner/README and the MailScanner(8) and
+MailScanner.conf(5) man pages for further instructions.
+
+You will need to edit at least the following config file before MailScanner
+will work correctly:
+
+	${PKG_SYSCONFDIR}/MailScanner.conf
+
+===========================================================================
