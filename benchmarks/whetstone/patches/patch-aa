@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1 1998/08/30 17:51:17 garbled Exp $
+--- whetstone.c.orig	Sun Aug 30 10:03:47 1998
++++ whetstone.c	Sun Aug 30 10:06:00 1998
+@@ -59,6 +59,12 @@
+ 
+ /* the following is optional depending on the timing function used */
+ #include <time.h>
++#ifdef CLOCKS_PER_SEC
++#define mytime() clock()
++#else
++#define mytime() time(0)
++#define CLOCKS_PER_SEC 1
++#endif
+ 
+ /* map the FORTRAN math functions, etc. to the C versions */
+ #define DSIN	sin
+@@ -120,7 +126,7 @@
+ C	Start benchmark timing at this point.
+ C
+ */
+-	startsec = time(0);
++	startsec = mytime();
+ 
+ /*
+ C
+@@ -355,7 +361,7 @@
+ C      Stop benchmark timing at this point.
+ C
+ */
+-	finisec = time(0);
++	finisec = mytime();
+ 
+ /*
+ C----------------------------------------------------------------
+@@ -367,15 +373,16 @@
+ C--------------------------------------------------------------------
+ */
+ 	printf("\n");
+-	if (finisec-startsec <= 0) {
++	if (finisec-startsec <= 100) {
+ 		printf("Insufficient duration- Increase the LOOP count\n");
+ 		return(1);
+ 	}
+ 
+-	printf("Loops: %ld, Iterations: %d, Duration: %ld sec.\n",
+-			LOOP, II, finisec-startsec);
++	printf("Loops: %ld, Iterations: %d, Duration: %f sec.\n",
++			LOOP, II,
++			(float)(finisec-startsec)/(float)CLOCKS_PER_SEC);
+ 
+-	KIPS = (100.0*LOOP*II)/(float)(finisec-startsec);
++	KIPS = (100.0*LOOP*II*CLOCKS_PER_SEC)/(float)(finisec-startsec);
+ 	if (KIPS >= 1000.0)
+ 		printf("C Converted Double Precision Whetstones: %.1f MIPS\n", KIPS/1000.0);
+ 	else

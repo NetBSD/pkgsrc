@@ -1,0 +1,11 @@
+Converted by Rich Painter, Painter Engineering, Inc. based on the
+www.netlib.org benchmark/whetstoned version obtained 16 March 1998.
+
+A novel approach was used here to keep the look and feel of the
+FORTRAN version.  Altering the FORTRAN-based array indices,
+starting at element 1, to start at element 0 for C, would require
+numerous changes, including decrementing the variable indices by 1.
+Instead, the array E1[] was declared 1 element larger in C.  This
+allows the FORTRAN index range to function without any literal or
+variable indices changes.  The array element E1[0] is simply never
+used and does not alter the benchmark results.
