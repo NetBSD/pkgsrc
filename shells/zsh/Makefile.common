@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/01/25 13:13:55 tv Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/03/04 03:59:32 jschauma Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -60,12 +60,17 @@ PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .    else
 PLIST_SRC=	# empty
 .    endif
-PLIST_SRC+=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
+.    if ${OPSYS} != "IRIX"
+PLIST_SRC+=	${PKGDIR}/PLIST.shlibs 
+.    endif
+PLIST_SRC+=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .  endif
 .endif
 
 .if ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=--without-tcsetpgrp
+.elif ${OPSYS} == "IRIX"
+CONFIGURE_ARGS+=--with-tcsetpgrp
 .endif
 
 .undef MANZ
