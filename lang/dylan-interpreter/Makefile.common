@@ -1,0 +1,42 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/01/15 20:08:43 agc Exp $
+#
+
+DISTNAME=		gwydion-dylan-2.3.6
+CATEGORIES=		lang
+MASTER_SITES=		ftp://berlin.ccc.de/pub/gd/src/	\
+			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/ \
+			ftp://ftp.infodrom.north.de/pub/unix/language/dylan/gwydion/src/ \
+			ftp://folk.federated.com/pub/gd/src/ \
+			ftp://cymru.basistech.com/pub/mirrors/gd/src/ \
+			ftp://ftp.ntua.gr/pub/lang/gwydion/src/ \
+			ftp://ftp.kddlabs.co.jp/lang/dylan/gwydion/src/ \
+			ftp://gd.tuwien.ac.at/languages/gwydiondylan/src/
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.gwydiondylan.org/
+COMMENT=		functional language
+
+USE_GMAKE=		yes
+MAKEFILE=		GNUmakefile
+ALL_TARGET=		default
+
+# other architecture changes will be gratefully received
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+USE_PERL5=		yes
+
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+post-patch:
+	cd ${WRKSRC};							\
+	for f in tools/melange/netbsd-portability.dylan; do		\
+		${MV} $$f $$f.in &&					\
+		${SED} -e 's|@prefix@|${PREFIX}|g' $$f.in > $$f;	\
+	done
+
+post-configure:
+	cd ${WRKSRC}; ./autogen.sh --prefix=${PREFIX} ${AUTOGEN_TARGET}
+
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
