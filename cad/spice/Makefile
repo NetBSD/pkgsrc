@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/18 11:07:04 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/20 09:22:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -18,9 +18,6 @@ MAINTAINER=	packages@netbsd.org
 
 USE_X11=	yes
 NO_WRKSUBDIR=	yes
-MAN1=		sconvert.1 nutmeg.1 spice.1
-MAN3=		mfb.3
-MAN5=		mfbcap.5
 
 do-configure:
 	${RM} -f ${WRKSRC}/makefile
