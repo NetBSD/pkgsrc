@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/25 09:37:44 xtraeme Exp $
 #
 
-DISTNAME=		bitlbee-0.90a
-PKGREVISION=	1
+DISTNAME=		bitlbee-0.91
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--config=${STATEDIR}
 CONFIGURE_ARGS+=	--flood=1
+CONFIGURE_ARGS+=	--ssl=openssl
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
@@ -29,17 +29,17 @@ CONF_FILES+=		${EGDIR}/bitlbee.conf ${PKG_SYSCONFDIR}/bitlbee.conf
 EGDIR=			${PREFIX}/share/examples/bitlbee
 DATADIR=		${PREFIX}/share/bitlbee
 DOCDIR=			${PREFIX}/share/doc/bitlbee
-STATEDIR=		/var/db/bitlbee
+STATEDIR=		${VARBASE}/db/bitlbee
 
 OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
 
-PKG_USERS=		bitlbee:nobody::Bitlbee\\ user:/var/db/bitlbee
+PKG_USERS=		bitlbee:nobody::Bitlbee\\ user:${VARBASE}/db/bitlbee
 
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR} ${DOCDIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/help.txt ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/help.txt ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/man/man8
 .for f in AUTHORS FAQ README TODO
@@ -49,5 +49,5 @@ do-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
