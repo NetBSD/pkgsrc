@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/05/24 08:08:57 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/24 09:32:34 salo Exp $
 #
 
 DISTNAME=	lib3ds-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lib3ds/}
 
