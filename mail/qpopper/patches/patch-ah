@@ -1,23 +1,66 @@
-$NetBSD: patch-ah,v 1.5 1999/07/24 00:24:46 tron Exp $
+$NetBSD: patch-ah,v 1.6 1999/09/15 21:30:59 tron Exp $
 
---- sockunion.h.orig	Sat Jul 24 02:22:28 1999
-+++ sockunion.h	Sat Jul 24 02:23:31 1999
-@@ -0,0 +1,18 @@
-+#ifndef INET_ADDRSTR
-+#define INET_ADDRSTRLEN			16
+--- popper.h.orig	Fri Jul 10 01:44:08 1998
++++ popper.h	Wed Sep 15 23:28:17 1999
+@@ -31,14 +31,26 @@
+ 
+ #ifdef		HAVE_SYS_PARAM_H
+ #include <sys/param.h>
+-# if (defined(BSD) && (BSD >= 199103))
++# if (defined(BSD) && (BSD >= 199103)) && 0 /* shouldn't be necessary anymore */
+ #  define	HAVE_UNISTD_H
+ #  define	HAVE_VPRINTF
+ #  define	BIND43
+ # endif
+ #endif
+ 
+-#ifdef BSDI
++#ifdef	HAVE_STDLIB_H
++# include <stdlib.h>
 +#endif
 +
-+union sockunion {
-+	struct sockinet {
-+		u_char si_len;
-+		u_char si_family;
-+		u_short si_port;
-+	} su_si;
-+	struct sockaddr_in  su_sin;
-+#ifdef INET6
-+	struct sockaddr_in6 su_sin6;
++#ifdef	HAVE_STRING_H
++# include <string.h>
 +#endif
-+};
-+#define su_len	su_si.si_len
-+#define su_family	su_si.si_family
-+#define su_port	su_si.si_port
++
++#ifdef	HAVE_TIME_H
++# include <time.h>
++#endif
++
++#if defined (BSDI) || defined (__NetBSD__)
+ #define BSD44_DBM
+ #endif
+ 
+@@ -67,12 +79,12 @@
+ #define MAXPARMLEN      10
+ #define ALLOC_MSGS  20
+ 
+-#ifndef OSF1
+-# define POP_FACILITY    LOG_LOCAL0
+-#else
++#if defined(OSF1) || defined(__NetBSD__)
+ # define POP_FACILITY    LOG_MAIL
++#else
++# define POP_FACILITY    LOG_LOCAL0
+ #endif
+-#define POP_PRIORITY    LOG_NOTICE
++#define POP_PRIORITY    LOG_INFO
+ #define POP_DEBUG       LOG_DEBUG
+ #define POP_LOGOPTS     LOG_PID
+ 
+@@ -292,13 +304,13 @@
+ #ifdef KERBEROS
+ 
+ #ifndef KERBEROS_SERVICE
+-# define KERBEROS_SERVICE	"rcmd"
++# define KERBEROS_SERVICE	"pop"
+ #endif
+ 
+ #ifdef SOLARIS2
+ # include <kerberos/krb.h>
+ #else
+-# ifdef BSDI
++# if defined (BSDI) || defined (__NetBSD__)
+ #  include <kerberosIV/des.h>
+ #  include <kerberosIV/krb.h>
+ # else
