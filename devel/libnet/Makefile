@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/25 05:35:44 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/25 05:40:44 minskim Exp $
 #
 
 DISTNAME=	libnet-1.0.1b
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include" \
 		LIBNET_CONFIG_LIBS="${LDFLAGS}"
 
-INSTALLATION_DIRS=	bin share/examples
+INSTALLATION_DIRS=	bin lib share/examples
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
