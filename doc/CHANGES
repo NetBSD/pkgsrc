@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8675 2005/01/09 17:31:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.8676 2005/01/09 22:55:04 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -198,3 +198,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated doclifter to 2.0nb1 [recht 2005-01-09]
 	Updated glib2 to 2.6.1 [jmmv 2005-01-09]
 	Updated gtk2 to 2.6.1 [jmmv 2005-01-09]
+	Updated gtar-base to 1.15.1 [recht 2004-01-09]
+	Updated gtar-info to 1.15.1 [recht 2004-01-09]
+	Updated gtar to 1.15.1 [recht 2004-01-09]
