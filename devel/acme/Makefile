@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:13:27 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/25 12:11:39 dillo Exp $
 #
 
 DISTNAME=	acme085_linux
 PKGNAME=	acme-0.85
 CATEGORIES=	devel
-MASTER_SITES=	http://www.esw-heim.tu-clausthal.de/~marco/cpf/current/
+MASTER_SITES=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/current/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LIBDIST}
 
 MAINTAINER=	dillo@NetBSD.org
-HOMEPAGE=	http://home.pages.de/~mac_bacon/cpf/acme.html
+HOMEPAGE=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/acme.html
 COMMENT=	Cross assembler for 6502, 65c02, and 65816
 
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
