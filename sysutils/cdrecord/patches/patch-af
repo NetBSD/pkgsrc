@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2000/05/22 02:00:57 hubertf Exp $
+
+--- RULES/mk-gmake.id.orig	Thu Mar  9 22:36:18 2000
++++ RULES/mk-gmake.id	Thu Mar  9 22:36:52 2000
+@@ -41,7 +41,7 @@
+ _ARCHCMD=	(arch || /usr/ucb/arch || true)	2> /dev/null
+ 
+ XP_ARCH:=	$(shell $(_MACHCMD) | tr '[A-Z]' '[a-z]' | tr ', /\\()"' ',//////' | tr ',/' ',-')
+-XK_ARCH:=	$(shell uname -m    | tr '[A-Z]' '[a-z]' | tr ', /\\()"' ',//////' | tr ',/' ',-')
++XK_ARCH:=	$(shell uname -p    | tr '[A-Z]' '[a-z]' | tr ', /\\()"' ',//////' | tr ',/' ',-')
+ XM_ARCH:=	$(shell $(_ARCHCMD) | tr '[A-Z]' '[a-z]' | tr ', /\\()"' ',//////' | tr ',/' ',-')
+ 
+ P_ARCH=		$(XP_ARCH)
