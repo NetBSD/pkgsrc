@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.180 1998/10/19 12:50:51 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.181 1998/10/20 16:01:03 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -389,6 +389,9 @@ __PKG_CREATE_C__!=	${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; ech
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
 .endif
+.ifdef PKG_RELATIVE_SYMLINKS
+PKG_ARGS+=		-l
+.endif
 .ifdef INSTALL_FILE
 PKG_ARGS+=		-i ${INSTALL_FILE}
 .endif
@@ -713,6 +716,11 @@ package:
 	@${IGNORECMD}
 .endif # IGNORE
 .endif # !NO_IGNORE
+
+# Add these defs to the ones dumped into +BUILD_DEFS
+BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
+BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS _PKGTOOLS_VER LICENSE
+BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
 
 .if !defined(__ARCH_OK)
 .MAIN:	all
@@ -1966,6 +1974,16 @@ fake-pkg: ${PLIST} ${DESCR}
 			fi;						\
 		done;							\
 	fi
+.for def in ${BUILD_DEFS}
+	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
+.endfor
+	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
+.ifdef USE_PERL5
+	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
+.endif
+.ifdef USE_GMAKE
+	@${ECHO} "GMAKE=	`${LOCALBASE}/bin/gmake --version | ${GREP} version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
+.endif
 .endif
 
 # Depend is generally meaningless for arbitrary ports, but if someone wants
