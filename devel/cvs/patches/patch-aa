@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/11/24 21:31:22 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2003/01/15 22:49:37 wiz Exp $
 
---- Makefile.in.orig	Wed Apr 17 21:47:32 2002
+--- Makefile.in.orig	Sat Dec 28 19:04:33 2002
 +++ Makefile.in
-@@ -96,7 +96,7 @@
+@@ -102,7 +102,7 @@ install_sh = @install_sh@
  
  # Unix source subdirs, where we'll want to run lint and etags:
  # This is a legacy variable from b4 Automake
@@ -11,10 +11,10 @@ $NetBSD: patch-aa,v 1.5 2002/11/24 21:31:22 hubertf Exp $
  # All other subdirs:
  SUBDIRS = $(USOURCE_SUBDIRS) man doc contrib tools \
  	windows-NT os2 emx vms
-@@ -124,7 +124,7 @@
+@@ -130,7 +130,7 @@ subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = config.h $(top_builddir)/src/options.h
+ CONFIG_HEADER = config.h
 -CONFIG_CLEAN_FILES = cvs.spec emx/Makefile os2/Makefile zlib/Makefile
 +CONFIG_CLEAN_FILES = cvs.spec emx/Makefile os2/Makefile
  DIST_SOURCES =
