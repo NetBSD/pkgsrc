@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5733 2004/04/25 06:03:51 minskim Exp $
+$NetBSD: CHANGES,v 1.5734 2004/04/25 13:22:36 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1006,6 +1006,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-accessibility to 2.4.2nb1 [jmmv 2004-02-23]
 	Updated libxml2 to 2.6.7 [xtraeme 2004-02-23]
 	Updated aspell to 0.50.5 [snj 2004-02-23]
+	Updated mozilla to 1.6nb1 [wiz 2004-02-23]
 	Added xdx-1.1 [wulf 2004-02-24]
 	Updated sqwebmail to 3.6.2 [snj 2004-02-24]
 	Added p5-Getopt-Simple-1.46 [minskim 2004-02-24]
@@ -2225,6 +2226,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added screws-0.52 [xtraeme 2004-04-23]
 	Updated nsd to 2.0.2 [itojun 2004-04-23]
 	Updated pkglint to 3.73 [reed 2004-04-23]
+	Updated mozilla to 1.6nb2 [taya 2004-04-24]
 	Updated gmngview to 1.0.7 [wiz 2004-04-24]
 	Updated xkbd to 0.8.5nb1 [snj 2004-04-24]
 	Updated qmail to 1.03nb6 [schmonz 2004-04-24]
