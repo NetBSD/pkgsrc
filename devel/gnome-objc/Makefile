@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/31 11:14:29 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/24 18:31:34 wiz Exp $
 #
 
 DISTNAME=	gnome-objc-1.0.40
@@ -9,15 +9,15 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Objective C API for gnome and gtk
 
-DEPENDS+=	gnome-libs>=1.2.3:../../x11/gnome-libs
-DEPENDS+=	pth>=1.3.7:../../devel/pth
-
 GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
 USE_LIBTOOL=	YES
+USE_PTHREAD=	native pth
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ENV+=	OBJC="${CC}"
 
+.include "../../x11/gnome-libs/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
