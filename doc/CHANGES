@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4344 2004/01/04 17:24:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.4345 2004/01/04 17:27:27 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-libxslt-1.1.2 [recht 2004-01-04]
 	Updated pfaedit to 20040102 [junyoung 2004-01-04]
 	Updated librsvg2 to 2.5.0nb3 [jmmv 2004-01-04]
+	Updated xchat2 to 2.0.7 [xtraeme 2003-01-04]
