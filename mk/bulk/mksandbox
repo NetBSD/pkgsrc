@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.1 2002/08/07 12:03:00 agc Exp $
+# $NetBSD: mksandbox,v 1.2 2002/08/07 12:14:12 agc Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -37,7 +37,7 @@
 # Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir
 # 
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
-# build, using null mounts).
+# build), using null mounts.
 
 pkgsrc=/usr/pkgsrc
 src=/usr/src
