@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7309 2004/10/01 13:18:58 adam Exp $
+$NetBSD: CHANGES,v 1.7310 2004/10/01 13:36:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4508,3 +4508,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gal20-1.99.11 [rh 2004-10-01]
 	Updated netpbm to 10.18.15 [adam 2004-10-01]
 	Updated flac to 1.1.1 [adam 2004-10-01]
+	Updated tcl to 8.4.7 [adam 2004-10-01]
+	Updated tk to 8.4.7 [adam 2004-10-01]
