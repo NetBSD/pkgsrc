@@ -1,14 +1,16 @@
-$NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
+$NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
 
---- cxx/nctst.cpp.orig	1999-09-17 18:21:23.000000000 +0100
+--- cxx/nctst.cpp.orig	2004-08-15 18:04:30.000000000 +0000
 +++ cxx/nctst.cpp
-@@ -1,4 +1,4 @@
--#include <iostream.h>
+@@ -1,6 +1,6 @@
+ #include <iostream>
+ using namespace std;
+-
 +#include <iostream>
  #include <string.h>
  #include "netcdfcpp.h"
  
-@@ -8,7 +8,7 @@ void gen(const char* path)		// Generate 
+@@ -22,7 +22,7 @@ void gen(const char* path, int version)	
  
      // Check if the file was opened successfully
      if (! nc.is_valid()) {
@@ -17,7 +19,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
  	return;
      }
  
-@@ -124,12 +124,12 @@ void DumpableNcFile::dumpdims( void )
+@@ -138,12 +138,12 @@ void DumpableNcFile::dumpdims( void )
  
      for (int n=0; n < num_dims(); n++) {
  	NcDim* dim = get_dim(n);
@@ -33,7 +35,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
      }
  }
  
-@@ -137,10 +137,10 @@ void dumpatts(NcVar& var)
+@@ -151,10 +151,10 @@ void dumpatts(NcVar& var)
  {
      NcToken vname = var.name();
      NcAtt* ap;
@@ -47,7 +49,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
  	delete ap;
  	delete vals;
      }
-@@ -153,20 +153,20 @@ void DumpableNcFile::dumpvars( void )
+@@ -167,20 +167,20 @@ void DumpableNcFile::dumpvars( void )
        {"","byte","char","short","long","float","double"};
      NcVar* vp;
  
@@ -75,7 +77,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
  	// now dump each of this variable's attributes
  	dumpatts(*vp);
      }
-@@ -175,10 +175,10 @@ void DumpableNcFile::dumpvars( void )
+@@ -189,10 +189,10 @@ void DumpableNcFile::dumpvars( void )
  void DumpableNcFile::dumpgatts( void )
  {
      NcAtt* ap;
@@ -89,7 +91,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
  	delete vals;
  	delete ap;
      }
-@@ -187,10 +187,10 @@ void DumpableNcFile::dumpgatts( void )
+@@ -201,10 +201,10 @@ void DumpableNcFile::dumpgatts( void )
  void DumpableNcFile::dumpdata( )
  {
      NcVar* vp;
@@ -103,7 +105,7 @@ $NetBSD: patch-an,v 1.1 2004/01/11 15:58:45 cjep Exp $
  	delete vals;
      }
  }
-@@ -199,25 +199,25 @@ void dump(const char* path)
+@@ -213,25 +213,25 @@ void dump(const char* path)
  {
      DumpableNcFile nc(path);	// default is open in read-only mode
  

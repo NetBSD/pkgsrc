@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+$NetBSD: patch-ae,v 1.2 2005/02/25 09:52:47 adam Exp $
 
---- fortran/Makefile.orig	Sun Sep 27 19:52:28 1998
-+++ fortran/Makefile	Sun Sep 27 19:56:28 1998
-@@ -68,7 +68,7 @@
+--- fortran/Makefile.orig	2004-12-18 18:08:01.000000000 +0000
++++ fortran/Makefile
+@@ -69,7 +69,7 @@ PACKING_LIST	= \
  #
  
  
