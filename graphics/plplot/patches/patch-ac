@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2000/12/08 09:54:30 jtb Exp $
 
---- drivers/tk.c.orig	Sat Oct 21 14:27:37 2000
-+++ drivers/tk.c
-@@ -1881,7 +1881,7 @@
+--- utils/pltek.c.orig
++++ utils/pltek.c
+@@ -110,7 +110,7 @@
+ 	oldpage = ipage;
+ 	printf("Page %d/%d> ", ipage, npage);
  
- /* Create the main window without mapping it */
+-	gets(ibuf);
++	fgets(ibuf, sizeof(ibuf), stdin);
+ 	c = ibuf[0];
  
--    *w = Tk_CreateMainWindow(interp, display, basename, classname);
-+    *w = TkCreateMainWindow(interp, display, basename, classname);
- 
-     if (*w == NULL) {
- 	fprintf(stderr, "%s\n", (interp)->result);
+ /* User input a page number or a return */
