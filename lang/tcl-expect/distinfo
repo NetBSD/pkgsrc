@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/05/16 13:27:55 dillo Exp $
 
 SHA1 (expect-5.32.1/expect.tar.gz) = db5f4b501fc1065b6a44c72f2afb8c4e399745ba
 Size (expect-5.32.1/expect.tar.gz) = 494245 bytes
 SHA1 (patch-aa) = a67976c3d81ae6f933e4e943bc59018961b9f9cd
 SHA1 (patch-ab) = 642e714e58bfe72b332cb89559e1f55df9b6052f
+SHA1 (patch-ac) = 9b1cf55607cf52f94b2499f7a654a04c93f71739
