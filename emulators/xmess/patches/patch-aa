@@ -1,5 +1,5 @@
---- makefile.unix.orig	Fri Jun  5 15:49:04 1998
-+++ makefile.unix	Tue Jul 21 14:23:01 1998
+--- makefile.unix.orig	Fri Jun  5 09:49:04 1998
++++ makefile.unix	Thu Jul 23 05:35:49 1998
 @@ -13,7 +13,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -31,6 +31,15 @@
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
+@@ -106,7 +110,7 @@
+ # *** If you haven't  the MIT-Shared Memory X Extensions, comment the following:
+ # ( Test if available by mean of xdpyinfo command )
+ # Comment it if compiling for svgalib
+-# MSHM	= -DUSE_MITSHM
++MSHM	= -DUSE_MITSHM
+ 
+ # *** Does your system support gettimeofday() function? If do, we encourage you
+ # to enable this feature . Else .... comment it :-(
 @@ -125,8 +129,8 @@
  # X11INC		= -I/usr/include/X11
  # X11LIB		= -L/usr/lib/X11
