@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8674 2005/01/09 13:22:11 recht Exp $
+$NetBSD: CHANGES,v 1.8675 2005/01/09 17:31:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -196,3 +196,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed digikamplugins [seb 2005-01-09]
 	Updated stunnel to 4.07nb1 [schmonz 2005-01-09]
 	Updated doclifter to 2.0nb1 [recht 2005-01-09]
+	Updated glib2 to 2.6.1 [jmmv 2005-01-09]
+	Updated gtk2 to 2.6.1 [jmmv 2005-01-09]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2869 2005/01/09 13:36:32 wiz Exp $
+$NetBSD: TODO,v 1.2870 2005/01/09 17:31:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,6 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o glib2-2.6.1
 	o gliv-1.9.1
 	o gnet1-1.1.9
 	o gnetman-20041117
@@ -553,7 +552,6 @@ Suggested package updates
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
-	o gtk2-2.6.1
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o gtranslator-1.0.2
