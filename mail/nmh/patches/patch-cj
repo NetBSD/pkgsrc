@@ -1,0 +1,31 @@
+$NetBSD: patch-cj,v 1.1 2004/01/06 09:18:21 cjep Exp $
+
+Add manual links for folders and flists (PR#23466).
+
+--- man/Makefile.in.orig	2000-01-27 20:14:58.000000000 +0000
++++ man/Makefile.in	2004-01-02 20:38:09.000000000 +0000
+@@ -78,6 +78,9 @@
+        fmtdump.$(manext8) install-mh.$(manext8) mh-mts.$(manext8) \
+        post.$(manext8)
+ 
++LINK1 = flist.$(manext1) flists.$(manext1)	\
++	folder.$(manext1) folders.$(manext1)
++
+ # source for man pages
+ DIST_MAN = ali.man anno.man ap.man burst.man comp.man conflict.man \
+            dist.man dp.man flist.man fmtdump.man folder.man forw.man \
+@@ -138,6 +141,14 @@
+ 	for file in $(MAN1); do \
+ 	  $(INSTALL_DATA) $$file $(mandir)/man$(manext1) ; \
+ 	done
++	set $(LINK1);	\
++	while test $$# -ge 2; do \
++		name=$$1; shift; \
++		link=$$1; shift; \
++		ln -sf $(mandir)/man$(manext1)/$${name} \
++			$(mandir)/man$(manext1)/$${link};\
++	done
++
+ 
+ # install the man pages in man5
+ install-man5:
