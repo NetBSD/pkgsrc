@@ -1,60 +1,60 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/14 08:05:33 tron Exp $
 bin/gnumeric
-lib/gnumeric/0.71-bonobo/plugins/applix/applix.a
-lib/gnumeric/0.71-bonobo/plugins/applix/applix.la
-lib/gnumeric/0.71-bonobo/plugins/applix/applix.so
-lib/gnumeric/0.71-bonobo/plugins/applix/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/derivatives/derivatives.a
-lib/gnumeric/0.71-bonobo/plugins/derivatives/derivatives.la
-lib/gnumeric/0.71-bonobo/plugins/derivatives/derivatives.so
-lib/gnumeric/0.71-bonobo/plugins/derivatives/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/dif/dif.a
-lib/gnumeric/0.71-bonobo/plugins/dif/dif.la
-lib/gnumeric/0.71-bonobo/plugins/dif/dif.so
-lib/gnumeric/0.71-bonobo/plugins/dif/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/excel/excel.a
-lib/gnumeric/0.71-bonobo/plugins/excel/excel.la
-lib/gnumeric/0.71-bonobo/plugins/excel/excel.so
-lib/gnumeric/0.71-bonobo/plugins/excel/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/gb/gnum_gb.a
-lib/gnumeric/0.71-bonobo/plugins/gb/gnum_gb.la
-lib/gnumeric/0.71-bonobo/plugins/html/html.a
-lib/gnumeric/0.71-bonobo/plugins/html/html.la
-lib/gnumeric/0.71-bonobo/plugins/html/html.so
-lib/gnumeric/0.71-bonobo/plugins/html/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/lotus/lotus.a
-lib/gnumeric/0.71-bonobo/plugins/lotus/lotus.la
-lib/gnumeric/0.71-bonobo/plugins/lotus/lotus.so
-lib/gnumeric/0.71-bonobo/plugins/lotus/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/mps/mps.a
-lib/gnumeric/0.71-bonobo/plugins/mps/mps.la
-lib/gnumeric/0.71-bonobo/plugins/mps/mps.so
-lib/gnumeric/0.71-bonobo/plugins/mps/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/numtheory/numtheory.a
-lib/gnumeric/0.71-bonobo/plugins/numtheory/numtheory.la
-lib/gnumeric/0.71-bonobo/plugins/numtheory/numtheory.so
-lib/gnumeric/0.71-bonobo/plugins/numtheory/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/oleo/oleo.a
-lib/gnumeric/0.71-bonobo/plugins/oleo/oleo.la
-lib/gnumeric/0.71-bonobo/plugins/oleo/oleo.so
-lib/gnumeric/0.71-bonobo/plugins/oleo/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/plan_perfect/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/sc/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/sc/sc.a
-lib/gnumeric/0.71-bonobo/plugins/sc/sc.la
-lib/gnumeric/0.71-bonobo/plugins/sc/sc.so
-lib/gnumeric/0.71-bonobo/plugins/sylk/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/sylk/sylk.a
-lib/gnumeric/0.71-bonobo/plugins/sylk/sylk.la
-lib/gnumeric/0.71-bonobo/plugins/sylk/sylk.so
-lib/gnumeric/0.71-bonobo/plugins/xbase/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/xbase/xbase.a
-lib/gnumeric/0.71-bonobo/plugins/xbase/xbase.la
-lib/gnumeric/0.71-bonobo/plugins/xbase/xbase.so
-lib/gnumeric/0.71-bonobo/plugins/xml_sax/plugin.xml
-lib/gnumeric/0.71-bonobo/plugins/xml_sax/xml_sax.a
-lib/gnumeric/0.71-bonobo/plugins/xml_sax/xml_sax.la
-lib/gnumeric/0.71-bonobo/plugins/xml_sax/xml_sax.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/applix/applix.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/applix/applix.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/applix/applix.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/applix/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/derivatives/derivatives.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/derivatives/derivatives.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/derivatives/derivatives.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/derivatives/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/dif/dif.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/dif/dif.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/dif/dif.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/dif/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/excel/excel.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/excel/excel.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/excel/excel.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/excel/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/gb/gnum_gb.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/gb/gnum_gb.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/html/html.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/html/html.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/html/html.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/html/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/lotus/lotus.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/lotus/lotus.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/lotus/lotus.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/lotus/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/mps/mps.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/mps/mps.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/mps/mps.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/mps/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/numtheory/numtheory.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/numtheory/numtheory.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/numtheory/numtheory.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/numtheory/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/oleo/oleo.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/oleo/oleo.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/oleo/oleo.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/oleo/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/plan_perfect/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sc/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sc/sc.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sc/sc.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sc/sc.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sylk/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sylk/sylk.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sylk/sylk.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sylk/sylk.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xbase/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xbase/xbase.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xbase/xbase.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xbase/xbase.so
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xml_sax/plugin.xml
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xml_sax/xml_sax.a
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xml_sax/xml_sax.la
+lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xml_sax/xml_sax.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
 share/gnome/help/gnumeric/C/analysis-tools.html
@@ -565,84 +565,84 @@ share/gnome/help/gnumeric/C/t-test.html
 share/gnome/help/gnumeric/C/toolbar-buttons.html
 share/gnome/help/gnumeric/C/topic.dat
 share/gnome/help/gnumeric/C/tutorials.html
-share/gnumeric/0.71-bonobo/autoformat-templates/3D/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/3D/autoformat.3D.button.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/3D/autoformat.3D.list.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Classical/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/Classical/autoformat.Classical.cool.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Classical/autoformat.Classical.simple.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Classical/autoformat.Classical.trendy.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/autoformat.Colourful.banana.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/autoformat.Colourful.black.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/autoformat.Colourful.blue.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/autoformat.Colourful.orange.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Colourful/autoformat.Colourful.vanilla.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/autoformat.Financial.basic.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/autoformat.Financial.desert.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/autoformat.Financial.ice.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/autoformat.Financial.modern.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/Financial/autoformat.Financial.purple.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/General/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/General/autoformat.General.advanced.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/General/autoformat.General.basic.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/General/autoformat.General.empty.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/General/autoformat.General.table.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/List/.category
-share/gnumeric/0.71-bonobo/autoformat-templates/List/autoformat.List.basic.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/List/autoformat.List.green.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/List/autoformat.List.lila.xml
-share/gnumeric/0.71-bonobo/autoformat-templates/List/autoformat.List.simple.xml
-share/gnumeric/0.71-bonobo/glade/advanced-filter.glade
-share/gnumeric/0.71-bonobo/glade/analysis-tools.glade
-share/gnumeric/0.71-bonobo/glade/autocorrect-exceptions.glade
-share/gnumeric/0.71-bonobo/glade/autocorrect.glade
-share/gnumeric/0.71-bonobo/glade/autoformat.glade
-share/gnumeric/0.71-bonobo/glade/autosave-prompt.glade
-share/gnumeric/0.71-bonobo/glade/autosave.glade
-share/gnumeric/0.71-bonobo/glade/cell-format.glade
-share/gnumeric/0.71-bonobo/glade/cell-sort.glade
-share/gnumeric/0.71-bonobo/glade/col-width.glade
-share/gnumeric/0.71-bonobo/glade/colrow.glade
-share/gnumeric/0.71-bonobo/glade/consolidate.glade
-share/gnumeric/0.71-bonobo/glade/correlation.glade
-share/gnumeric/0.71-bonobo/glade/covariance.glade
-share/gnumeric/0.71-bonobo/glade/delete-cells.glade
-share/gnumeric/0.71-bonobo/glade/descriptive-stats.glade
-share/gnumeric/0.71-bonobo/glade/dialog-stf-export.glade
-share/gnumeric/0.71-bonobo/glade/dialog-stf.glade
-share/gnumeric/0.71-bonobo/glade/dialog-zoom.glade
-share/gnumeric/0.71-bonobo/glade/font-sel.glade
-share/gnumeric/0.71-bonobo/glade/formula-guru.glade
-share/gnumeric/0.71-bonobo/glade/function-select.glade
-share/gnumeric/0.71-bonobo/glade/graph-guru.glade
-share/gnumeric/0.71-bonobo/glade/hf-config.glade
-share/gnumeric/0.71-bonobo/glade/insert-cells.glade
-share/gnumeric/0.71-bonobo/glade/mean-tests.glade
-share/gnumeric/0.71-bonobo/glade/names.glade
-share/gnumeric/0.71-bonobo/glade/plugin-manager.glade
-share/gnumeric/0.71-bonobo/glade/print.glade
-share/gnumeric/0.71-bonobo/glade/rank.glade
-share/gnumeric/0.71-bonobo/glade/row-height.glade
-share/gnumeric/0.71-bonobo/glade/sampling.glade
-share/gnumeric/0.71-bonobo/glade/search-replace.glade
-share/gnumeric/0.71-bonobo/glade/search.glade
-share/gnumeric/0.71-bonobo/glade/sheet-order.glade
-share/gnumeric/0.71-bonobo/glade/sheet-rename.glade
-share/gnumeric/0.71-bonobo/glade/solver-options.glade
-share/gnumeric/0.71-bonobo/glade/solver.glade
-share/gnumeric/0.71-bonobo/glade/summary.glade
-share/gnumeric/0.71-bonobo/glade/validate.glade
-share/gnumeric/0.71-bonobo/glade/variance-tests.glade
-share/gnumeric/0.71-bonobo/glade/workbook-attr.glade
-share/gnumeric/0.71-bonobo/gnome/ui/GNOME_Gnumeric.xml
-share/gnumeric/0.71-bonobo/idl/GNOME_Gnumeric.idl
-share/gnumeric/0.71-bonobo/idl/GNOME_Gnumeric_Graph.idl
-share/gnumeric/0.71-bonobo/templates/invoice.gnumeric
-share/gnumeric/0.71-bonobo/templates/loan.gnumeric
-share/gnumeric/0.71-bonobo/templates/mileage.gnumeric
-share/gnumeric/0.71-bonobo/templates/purchase_order.gnumeric
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/3D/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/3D/autoformat.3D.button.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/3D/autoformat.3D.list.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Classical/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Classical/autoformat.Classical.cool.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Classical/autoformat.Classical.simple.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Classical/autoformat.Classical.trendy.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/autoformat.Colourful.banana.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/autoformat.Colourful.black.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/autoformat.Colourful.blue.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/autoformat.Colourful.orange.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful/autoformat.Colourful.vanilla.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/autoformat.Financial.basic.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/autoformat.Financial.desert.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/autoformat.Financial.ice.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/autoformat.Financial.modern.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial/autoformat.Financial.purple.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General/autoformat.General.advanced.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General/autoformat.General.basic.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General/autoformat.General.empty.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General/autoformat.General.table.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List/.category
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List/autoformat.List.basic.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List/autoformat.List.green.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List/autoformat.List.lila.xml
+share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List/autoformat.List.simple.xml
+share/gnumeric/${PKG_VERSION}-bonobo/glade/advanced-filter.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/analysis-tools.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/autocorrect-exceptions.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/autocorrect.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/autoformat.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/autosave-prompt.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/autosave.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/cell-format.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/cell-sort.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/col-width.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/colrow.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/consolidate.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/correlation.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/covariance.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/delete-cells.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/descriptive-stats.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/dialog-stf-export.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/dialog-stf.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/dialog-zoom.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/font-sel.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/formula-guru.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/function-select.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/graph-guru.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/hf-config.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/insert-cells.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/mean-tests.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/names.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/plugin-manager.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/print.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/rank.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/row-height.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/sampling.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/search-replace.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/search.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/sheet-order.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/sheet-rename.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/solver-options.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/solver.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/summary.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/validate.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/variance-tests.glade
+share/gnumeric/${PKG_VERSION}-bonobo/glade/workbook-attr.glade
+share/gnumeric/${PKG_VERSION}-bonobo/gnome/ui/GNOME_Gnumeric.xml
+share/gnumeric/${PKG_VERSION}-bonobo/idl/GNOME_Gnumeric.idl
+share/gnumeric/${PKG_VERSION}-bonobo/idl/GNOME_Gnumeric_Graph.idl
+share/gnumeric/${PKG_VERSION}-bonobo/templates/invoice.gnumeric
+share/gnumeric/${PKG_VERSION}-bonobo/templates/loan.gnumeric
+share/gnumeric/${PKG_VERSION}-bonobo/templates/mileage.gnumeric
+share/gnumeric/${PKG_VERSION}-bonobo/templates/purchase_order.gnumeric
 share/locale/ca/LC_MESSAGES/gnumeric.mo
 share/locale/cs/LC_MESSAGES/gnumeric.mo
 share/locale/da/LC_MESSAGES/gnumeric.mo
@@ -742,39 +742,39 @@ share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
-@dirrm share/gnumeric/0.71-bonobo/templates
-@dirrm share/gnumeric/0.71-bonobo/idl
-@dirrm share/gnumeric/0.71-bonobo/gnome/ui
-@dirrm share/gnumeric/0.71-bonobo/gnome
-@dirrm share/gnumeric/0.71-bonobo/glade
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/List
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/General
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/Financial
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/Colourful
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/Classical
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates/3D
-@dirrm share/gnumeric/0.71-bonobo/autoformat-templates
-@dirrm share/gnumeric/0.71-bonobo
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/templates
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/idl
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/gnome/ui
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/gnome
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/glade
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/List
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/General
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Financial
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Colourful
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/Classical
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates/3D
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo/autoformat-templates
+@dirrm share/gnumeric/${PKG_VERSION}-bonobo
 @dirrm share/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
-@dirrm lib/gnumeric/0.71-bonobo/plugins/xml_sax
-@dirrm lib/gnumeric/0.71-bonobo/plugins/xbase
-@dirrm lib/gnumeric/0.71-bonobo/plugins/sylk
-@dirrm lib/gnumeric/0.71-bonobo/plugins/sc
-@dirrm lib/gnumeric/0.71-bonobo/plugins/plan_perfect
-@dirrm lib/gnumeric/0.71-bonobo/plugins/oleo
-@dirrm lib/gnumeric/0.71-bonobo/plugins/numtheory
-@dirrm lib/gnumeric/0.71-bonobo/plugins/mps
-@dirrm lib/gnumeric/0.71-bonobo/plugins/lotus
-@dirrm lib/gnumeric/0.71-bonobo/plugins/html
-@dirrm lib/gnumeric/0.71-bonobo/plugins/gb
-@dirrm lib/gnumeric/0.71-bonobo/plugins/excel
-@dirrm lib/gnumeric/0.71-bonobo/plugins/dif
-@dirrm lib/gnumeric/0.71-bonobo/plugins/derivatives
-@dirrm lib/gnumeric/0.71-bonobo/plugins/applix
-@dirrm lib/gnumeric/0.71-bonobo/plugins
-@dirrm lib/gnumeric/0.71-bonobo
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xml_sax
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/xbase
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sylk
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/sc
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/plan_perfect
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/oleo
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/numtheory
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/mps
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/lotus
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/html
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/gb
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/excel
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/dif
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/derivatives
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins/applix
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo/plugins
+@dirrm lib/gnumeric/${PKG_VERSION}-bonobo
 @dirrm lib/gnumeric
 @unexec rmdir %D/share/mc/templates >/dev/null 2>&1 || true
