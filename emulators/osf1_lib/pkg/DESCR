@@ -1,0 +1,9 @@
+DEC Tru64/OSF1 compatibility package based upon the Tru64/OSF1
+shared libraries provided by Compaq to support running Netscape on
+Linux/Alpha.
+
+This package supports running Tru64/OSF1 binaries that do not make use
+of MACH system calls.
+
+Note that this is not a complete set of Tru64/OSF1 shared libraries, 
+but rather the minimal set required to run netscape.
