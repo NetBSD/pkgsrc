@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1737 2003/03/22 10:16:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.1738 2003/03/22 10:31:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1254,3 +1254,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libicq2000-0.3.2 [salo 2003-03-22]
 	Updated amaya to 7.2 [wiz 2003-03-22]
 	Updated proftpd to 1.2.8nb1 [jmmv 2003-03-22]
+	Updated docbook to 4.2nb3 [jmmv 2003-03-22]
