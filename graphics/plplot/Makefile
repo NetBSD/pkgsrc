@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2004/05/09 00:45:45 snj Exp $
 
 DISTNAME=		plplot-5.2.1
 CATEGORIES=		graphics
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://plplot.sourceforge.net/
 COMMENT=		Scientific plotting package
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+=		m4 make
 USE_FORTRAN=		# defined
@@ -56,13 +56,13 @@ post-patch:
 post-install:
 	cd ${PREFIX}/bin && ${LN} -fs libtool plplot_libtool
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
