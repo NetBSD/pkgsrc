@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2531 2003/06/18 13:31:23 epg Exp $
+$NetBSD: CHANGES,v 1.2532 2003/06/18 14:48:58 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated subversion to 0.24.1 [epg 2003-06-18]
 	Updated subversion-base to 0.24.1 [epg 2003-06-18]
 	Updated subversion-python to 0.24.1 [epg 2003-06-18]
+	Updated xpdf to 2.02pl1 [simonb 2003-06-18]
