@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.29 2000/04/05 23:34:43 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.30 2000/06/02 06:20:41 rh Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -687,6 +687,11 @@ sub checkmakefile {
 	print "OK: checking for NO_CHECKSUM.\n" if ($verbose);
 	if ($whole =~ /\nNO_CHECKSUM/) {
 		$seen_NO_CHECKSUM=1;
+	}
+	print "OK: checking USE_PKGLIBTOOL.\n" if ($verbose);
+	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
+		&perror("WARN: use of USE_PKGLIBTOOL discouraged, ".
+			"use USE_LIBTOOL instead.");
 	}
 
 	#
