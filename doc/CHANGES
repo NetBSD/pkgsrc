@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7371 2004/10/07 15:27:20 wiz Exp $
+$NetBSD: CHANGES,v 1.7372 2004/10/07 16:17:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4567,7 +4567,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gal2 to 2.2.2 [jmmv 2004-10-06]
 	Updated moss to 0.1.9 [minskim 2004-10-06]
 	Updated pkg_tarup to 1.6.3 [erh 2004-10-06]
-	Updated rhythmbox to 0.8.7 [hira 2004-10-06]
-	Updated tuxpaint to 0.9.14 [wiz 2004-10-06]
-	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-06]
-	Added tuxpaint-config to 0.0.5 [wiz 2004-10-06]
+	Updated rhythmbox to 0.8.7 [hira 2004-10-07]
+	Updated tuxpaint to 0.9.14 [wiz 2004-10-07]
+	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-07]
+	Added tuxpaint-config to 0.0.5 [wiz 2004-10-07]
+	Updated epiphany to 1.4.3 [jmmv 2004-10-07]
