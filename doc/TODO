@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1035 2003/11/17 09:37:41 recht Exp $
+$NetBSD: TODO,v 1.1036 2003/11/17 09:38:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -206,7 +206,7 @@ Suggested package updates
 	o gdb-6.0
 	o gdm-2.4.4.4
 	o generator-0.35
-	o gentoo-0.11.40
+	o gentoo-0.11.41
 	o gettext-0.12.1
 	o gforth-0.6.2
 	o gftp-2.0.16
@@ -247,6 +247,7 @@ Suggested package updates
 	o inn-2.4.0
 	o iozone-3.203
 	o isync-0.9.1 [pkg/22189]
+	o ivtools-1.1.1
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
@@ -321,9 +322,11 @@ Suggested package updates
 	o p5-CGI-Application-3.1
 	o p5-HTML-Mason-1.24 [epg]
 	o p5-Net-DNS-0.41 [heinz]
+	o p5-Text-DelimMatch-1.06a [pkg/23463]
 	o p5-razor-agents-2.36 [heinz]
 	o pdmenu-1.2.81
 	o php-4.3.4
+	o popa3d-0.6.4
 	o postfix-2.0.16
 	o proftpd-1.2.9
 	o pureftpd-1.0.16c
