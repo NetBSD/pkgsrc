@@ -4,12 +4,12 @@
 # Date created:         25 March 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.2 1998/03/26 23:06:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/28 19:48:28 cjs Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
 CATEGORIES=	news
-MASTER_SITES=	${MASTER_SITES_LOCAL}
+MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
 MAINTAINER=	tv@netbsd.org
 
