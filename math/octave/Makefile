@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.32 2003/06/02 01:18:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/02 20:58:34 jtb Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
-DISTNAME=	octave-2.0.16
-PKGREVISION=	1
+DISTNAME=	octave-2.0.17
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
@@ -19,6 +19,7 @@ DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 CONFLICTS+=	octave-2.1.*
 
+USE_BUILDLINK2=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
@@ -35,16 +36,16 @@ post-extract:
 	${FIND} ${WRKSRC}/doc -type f -name \*.info\* | ${XARGS} ${RM} -f
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/2.0.16/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/2.0.17/doc
 .for file in ${LIBOCTAVE_INFO}
 	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${file} ${PREFIX}/info
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/interpreter/octave.ps ${PREFIX}/share/octave/2.0.16/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/liboctave.ps ${PREFIX}/share/octave/2.0.16/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-letter.ps ${PREFIX}/share/octave/2.0.16/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-legal.ps ${PREFIX}/share/octave/2.0.16/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-a4.ps ${PREFIX}/share/octave/2.0.16/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.16/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/interpreter/octave.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/liboctave.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-letter.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-legal.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-a4.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.17/doc
 
 .include "../../mk/bsd.prefs.mk"
 
