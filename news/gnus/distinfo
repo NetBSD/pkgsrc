@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/09/27 06:37:12 perry Exp $
+$NetBSD: distinfo,v 1.2 2002/01/10 14:19:15 wiz Exp $
 
 SHA1 (gnus-5.8.8.tar.gz) = b3ec7a7892cd67e65a22eadbbfa9bd43fd4e5317
 Size (gnus-5.8.8.tar.gz) = 1159902 bytes
-SHA1 (patch-aa) = f81dd257b30e5f87329645750cf8d9e69a8b1f58
