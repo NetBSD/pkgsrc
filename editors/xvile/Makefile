@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/03/22 11:48:39 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/12 15:17:09 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
 GNU_CONFIGURE=		# defined
@@ -48,8 +48,8 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
 	done
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
