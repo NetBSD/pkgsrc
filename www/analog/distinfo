@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2002/02/20 16:44:27 tron Exp $
+$NetBSD: distinfo,v 1.11 2002/03/20 14:16:01 tron Exp $
 
-SHA1 (analog-5.21.tar.gz) = 92ee811dfa94741d220c6e489af8c2b56b087c08
-Size (analog-5.21.tar.gz) = 872020 bytes
+SHA1 (analog-5.22.tar.gz) = 10d8ff187398243778fad0929e2a53f863ecf275
+Size (analog-5.22.tar.gz) = 876264 bytes
 SHA1 (patch-aa) = cc7879420cf9233db58908958f5380636d256656
 SHA1 (patch-ab) = f11c9d3f5dec5b9cd04de0d114752c58484a648a
