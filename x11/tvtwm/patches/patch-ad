@@ -1,0 +1,25 @@
+Index: LocPixmap.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/LocPixmap.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- LocPixmap.c	1999/08/08 05:46:53	1.1.1.1
++++ LocPixmap.c	1999/08/08 05:56:47	1.2
+@@ -34,7 +34,6 @@
+  *
+  *                                         Chris P. Ross
+  */
+-
+ #ifdef XPM
+ 
+ #include "twm.h"
+@@ -223,7 +222,7 @@
+ 
+ 	switch (i) {
+ 	  case 1:
+-	    if (!(name[0] == '/' || (name[0] == '.') && name[1] == '/')) 
++	    if (!(name[0] == '/' || ((name[0] == '.') && name[1] == '/'))) 
+ 	      continue;
+ 	    fn = (char *) name;
+ 	    try_plain_name = False;

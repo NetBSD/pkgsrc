@@ -1,0 +1,36 @@
+Index: list.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/list.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- list.h	1999/08/08 05:46:52	1.1.1.1
++++ list.h	1999/08/08 05:56:52	1.2
+@@ -63,14 +63,19 @@
+ 				 LTYPE_RES_CLASS | LTYPE_REGEXP)
+ #define LTYPE_EXACT_NAME	(LTYPE_NAME | LTYPE_STRING)
+ 
+-extern void AddToList();
+-extern char* LookInList();
+-extern char* LookInNameList();
+-extern int 	GetColorFromList();
+-extern void	FreeList();
+-
+-extern name_list *next_entry();
+-extern char *contents_of_entry();
++/* function prototypes */
++char *
++MultiLookInList(name_list *list_head, char *name, XClassHint *class,
++		name_list **continuation);
++void
++AddToList(name_list **list_head, char *name, short type, char *ptr);
++void FreeList(name_list **list);
++char *LookInList(name_list *list_head, char *name, XClassHint *class);
++char *LookInNameList(name_list *list_head, char *name);
++int GetColorFromList(name_list *list_head, char *name, XClassHint *class,
++		     Pixel *ptr);
++name_list *next_entry(name_list *list);
++char *contents_of_entry(name_list *list);
+ 
+ #endif /* _LIST_ */
+ 
