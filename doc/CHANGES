@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5458 2004/04/06 09:19:47 adam Exp $
+$NetBSD: CHANGES,v 1.5459 2004/04/06 09:24:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1796,3 +1796,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated metamail to 2.7nb5 [xtraeme 2004-04-06]
 	Updated glib2 to 2.4.0nb1 [jmmv 2004-04-06]
 	Updated mng to 1.0.7 [adam 2004-04-06]
+	Updated libgtop2 to 2.5.2nb1 [xtraeme 2004-04-06]
