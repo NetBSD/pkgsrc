@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/12/04 10:43:10 veego Exp $
+# $NetBSD: Makefile,v 1.21 2003/12/11 20:18:58 veego Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -12,7 +12,7 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 .include "${.CURDIR}/Makefile.common"
 
 # list it into IPv6-ready packages
-BUILD_DEFS+=		USE_INET6 IRSSI_USE_SSL
+BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
