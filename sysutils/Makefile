@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2005/02/12 00:35:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.287 2005/03/07 16:01:47 bouyer Exp $
 
 COMMENT=	System utilities
 
@@ -220,6 +220,7 @@ SUBDIR+=	xcdroast
 SUBDIR+=	xdu
 SUBDIR+=	xen12
 SUBDIR+=	xentools12
+SUBDIR+=	xentools20
 SUBDIR+=	xenvstat
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-cpugraph-plugin
