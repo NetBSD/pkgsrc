@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.12 1999/12/22 21:04:18 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.13 1999/12/22 21:37:58 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -27,7 +27,7 @@ my(	$pkgsrcdir,		# Base of pkgsrc tree
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('DP:Rdhilmopr', \%opt) || $opt{'h'} ||
+if (! &getopts('DK:P:Rdhilmopr', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
 	    defined($opt{'r'}) || defined($opt{'D'}) || defined($opt{'R'}) ))
@@ -79,9 +79,15 @@ if ($opt{'D'})
     #
     if ($opt{'p'} || $opt{'R'})
 	{
+	my($binpkgdir);
+
 	if (!%pkgver2dir)
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
-	find(\&check_prebuilt_packages, "$pkgsrcdir/packages");
+	if ($opt{'K'})
+	    { $binpkgdir = $opt{'K'}; }
+	else
+	    { $binpkgdir = "$pkgsrcdir/packages"; }
+	find(\&check_prebuilt_packages, $binpkgdir);
 	if ($opt{'r'})
 	    {
 	    &verbose("Unlinking 'old' prebuiltpackages\n");
@@ -702,10 +708,10 @@ opts:
   -r	     : Remove any 'bad' distfiles (Without -m, -o, or -p, implies all).
 
   -P path    : Set PKGSRCDIR
+  -K path    : Set basedir for prebuild packages (default PKGSRCDIR/packages)
   -D [paths] : Parse Makefiles and output contents (For debugging)
 
 If pkgsrc is not in /usr/pkgsrc, set PKGSRCDIR in /etc/mk.conf
-Prebuilt packages are assumed to be an any subdir of PKGSRCDIR/packages/
 ";
     exit;
     }
