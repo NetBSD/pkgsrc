@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/07/03 23:30:09 tron Exp $
+# $NetBSD: Makefile,v 1.22 1998/07/04 05:11:13 mycroft Exp $
 #
 
 DISTNAME=	ImageMagick-4.0.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-0.96:../../graphics/png
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 
