@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2001/02/05 09:01:01 tron Exp $
+# $NetBSD: Makefile,v 1.47 2001/02/07 03:23:08 fredb Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 USE_LIBINTL=		YES
