@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2916 2003/07/29 11:19:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.2917 2003/07/29 11:44:42 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3050,3 +3050,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fluxbox to 0.9.4 [hubertf 2003-07-28]
 	Updated nsd to 1.2.2 [itojun 2003-07-28]
 	Updated stunnel to 4.04nb1 [jmmv 2003-07-29]
+	Updated phoenix-bin to 0.6.1 [grant 2003-07-29]
