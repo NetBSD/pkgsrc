@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/28 09:46:33 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/17 09:44:53 agc Exp $
 #
 
-DISTNAME=		lukemftp-1.0
+DISTNAME=		lukemftp-1.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/lukemftp/
 
