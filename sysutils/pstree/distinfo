@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/05/30 08:45:36 mjl Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:40:56 agc Exp $
 
 SHA1 (pstree-2.19.tar.gz) = b6a7d5d7d33cbab64eae01a7ad84f920f833ea8b
+RMD160 (pstree-2.19.tar.gz) = 0f8afaa8a310dc70f474cad0b2a266b32a35e23c
 Size (pstree-2.19.tar.gz) = 8120 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2003/11/11 13:00:24 wennmach Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 13:40:50 agc Exp $
 
 SHA1 (aperture-2.0nb5/apNetBSD.shar) = 66022d35f41df667bbc9ad86a8f2ded292e1098b
+RMD160 (aperture-2.0nb5/apNetBSD.shar) = 74739d4d0a5d21d5098c3fab000ad4d622137895
 Size (aperture-2.0nb5/apNetBSD.shar) = 66731 bytes
 SHA1 (patch-aa) = 544d71b6524b7aaeb5deb985372599f1962af4fe
 SHA1 (patch-ab) = fc3f65e9b9bc94880dc18e2091d7daccd3d480ad

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.17 2005/02/21 10:10:04 adam Exp $
+$NetBSD: distinfo,v 1.18 2005/02/24 13:10:08 agc Exp $
 
 SHA1 (nessus-plugins-GPL-2.2.3.tar.gz) = ff38197b90d64d6758f9d03990b047dd3046c76e
+RMD160 (nessus-plugins-GPL-2.2.3.tar.gz) = 6316875b265d8eabe8595ae726bdc3870e842507
 Size (nessus-plugins-GPL-2.2.3.tar.gz) = 1464733 bytes

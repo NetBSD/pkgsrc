@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/04 21:50:25 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:41 agc Exp $
 
 SHA1 (advi-1.6.0.tgz) = 8c033df906f3e208471506f64ffa0b175c1c5ee8
+RMD160 (advi-1.6.0.tgz) = 55bc5f2742964f29bc694997c3dd9573f8c71964
 Size (advi-1.6.0.tgz) = 11436152 bytes
