@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2004/05/23 23:28:29 danw Exp $
 
 Index: icons.c
 ===================================================================
@@ -12,7 +12,7 @@ diff -u -r1.1.1.1 -r1.2
   **********************************************************************/
  
  #include <stdio.h>
-+#include <malloc.h>
++#include <stdlib.h>
  #include "twm.h"
  #include "screen.h"
  #include "icons.h"

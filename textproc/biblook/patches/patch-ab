@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/31 10:54:21 agc Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/23 23:28:29 danw Exp $
 
---- biblook.h.orig	Tue Mar 31 01:31:04 1998
+--- biblook.h.orig	Mon Mar 30 18:31:04 1998
 +++ biblook.h
-@@ -206,7 +206,7 @@
+@@ -73,9 +73,6 @@ extern uint16 ntohs (uint16 netshort);
+ 					/* around broken g++ libc.h */
+ #else
+ #include <unistd.h>
+-#if HAVE_MALLOC_H
+-#include <malloc.h>
+-#endif /* HAVE_MALLOC_H */
+ #endif /* __NeXT__ */
+ 
+ #if (__STDC__ || __cplusplus || c_plusplus)
+@@ -206,7 +203,7 @@ u_short	ntohs(u_short netshort);
  #define MAJOR_VERSION 	2	/* program version     */
  #define MINOR_VERSION 	9
  
