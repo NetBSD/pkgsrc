@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2000/03/21 22:40:53 tron Exp $
+# $NetBSD: Makefile,v 1.34 2000/05/30 19:16:27 drochner Exp $
 #
 
-DISTNAME=	imlib-1.9.8
+DISTNAME=	imlib-1.9.8.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.enlightenment.org/pub/e/enlightenment/libs/ \
-		${MASTER_SITE_GNOME:=sources/imlib/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/imlib/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
