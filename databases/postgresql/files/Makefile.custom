@@ -1,30 +1,15 @@
-# GNU Makefile to libtoolize PostgreSQL build.
+# $NetBSD: Makefile.custom,v 1.5 2001/05/14 14:52:37 jlam Exp $
 #
 # This file is included by Makefile.global, which is included by every
 # sub-Makefile in the build tree.  Makefiles for shared libraries include
 # Makefile.global then Makefile.shlib.
-#
-# $NetBSD: Makefile.custom,v 1.4 2000/05/20 19:32:19 jlam Exp $
-
-# Where the database templates are stored
-#
-TEMPLATEDIR=	$(POSTGRESDIR)/share/postgresql
-
-# installation directory for documentation
-PGDOCS=		$(POSTGRESDIR)/share/doc/html/postgresql
-
-# Where the header files necessary to build frontend programs get installed.
-HEADERDIR=	$(POSTGRESDIR)/include/pgsql
-
-# Where the ODBC installation-wide configuration file gets installed.
-ODBCINST=	etc
 
 ifdef INSTALLED_LIBPQ
-LIBPQDIR:=	$(HEADERDIR)
-LIBPQ:=		-L$(LIBDIR) -lpq
+libpq_srcdir = $(includedir)
+libpq = -L$(libdir) -lpq
 endif
 
 ifdef INSTALLED_LIBPGTCL
-LIBPGTCLDIR:=	$(HEADERDIR)
-LIBPGTCL:=	-L$(LIBDIR) -lpgtcl
+libpgtcl_srcdir = $(includedir)
+libpgtcl = -L$(libdir) -lpgtcl
 endif

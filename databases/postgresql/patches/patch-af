@@ -1,25 +1,13 @@
-$NetBSD: patch-af,v 1.12 2000/09/03 09:51:19 wiz Exp $
---- pl/tcl/Makefile.orig	Mon May 22 22:12:44 2000
-+++ pl/tcl/Makefile	Fri Sep  1 09:41:04 2000
-@@ -56,10 +56,11 @@
- endif
+$NetBSD: patch-af,v 1.13 2001/05/14 14:52:38 jlam Exp $
+
+--- src/interfaces/ecpg/lib/Makefile.orig	Fri Feb 23 13:12:20 2001
++++ src/interfaces/ecpg/lib/Makefile
+@@ -14,7 +14,7 @@
  
- %$(TCL_SHLIB_SUFFIX):	%.o
--	$(TCL_SHLIB_LD) -o $@ $< $(TCL_LIB_SPEC) $(SHLIB_EXTRA_LIBS)
-+	$(TCL_SHLIB_LD) -o $@ $< -R${PREFIX}/lib -L${PREFIX}/lib -ltcl83 -lm
+ NAME= ecpg
+ SO_MAJOR_VERSION= 3
+-SO_MINOR_VERSION= 2.0
++SO_MINOR_VERSION= 2
  
+ override CPPFLAGS := -I$(top_srcdir)/src/interfaces/ecpg/include -I$(libpq_srcdir) $(CPPFLAGS)
  
- CC = $(TCL_CC)
-+LD = $(TCL_LD)
- 
- # Since we are using Tcl's choice of C compiler, which might not be the
- # same one selected for Postgres, do NOT use CFLAGS from Makefile.global.
-@@ -70,7 +71,7 @@
- 
- CFLAGS+= $(TCL_SHLIB_CFLAGS) $(TCL_DEFS)
- 
--CFLAGS+= -I$(SRCDIR)/include -I$(SRCDIR)/backend $(PGSQL_INCLUDES)
-+CFLAGS+= -I$(SRCDIR)/include -I$(SRCDIR)/backend -I$(LIBPQDIR) $(PGSQL_INCLUDES)
-         
- #
- # Uncomment the following to enable the unknown command lookup

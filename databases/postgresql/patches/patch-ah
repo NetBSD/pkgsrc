@@ -1,20 +1,46 @@
-$NetBSD: patch-ah,v 1.7 2000/07/14 04:44:53 jlam Exp $
+$NetBSD: patch-ah,v 1.8 2001/05/14 14:52:38 jlam Exp $
 
---- backend/main/main.c.orig	Wed Jan 26 00:56:30 2000
-+++ backend/main/main.c	Wed Jul 12 02:34:38 2000
-@@ -14,13 +14,14 @@
-  */
- #include <unistd.h>
+--- src/interfaces/python/GNUmakefile.orig	Sun Apr  1 15:17:33 2001
++++ src/interfaces/python/GNUmakefile
+@@ -12,9 +12,22 @@
+ top_builddir = ../../..
+ include $(top_builddir)/src/Makefile.global
  
--#if defined(__alpha__) && !defined(linux)
-+#if defined(__alpha__) && !defined(linux) && !defined(__NetBSD__)
- #include <sys/sysinfo.h>
- #include "machine/hal_sysinfo.h"
- #define ASSEMBLER
- #include <sys/proc.h>
- #undef ASSEMBLER
- #endif
-+#include <sys/param.h>
+-all: Makefile pgmodule.c libpq-all
++PY_SCRIPTS = pg.py pgdb.py
++ifeq ($(with_python_compile), yes)
++PY_COMPILED_SCRIPTS = $(PY_SCRIPTS:%.py=%.pyc) $(PY_SCRIPTS:%.py=%.pyo)
++else
++PY_COMPILED_SCRIPTS =
++endif
++
++all: Makefile pgmodule.c libpq-all $(PY_COMPILED_SCRIPTS)
+ 	$(MAKE) -f Makefile
  
- #include "postgres.h"
- #ifdef USE_LOCALE
++%.pyc: %.py
++	$(PYTHON) -c "import py_compile; py_compile.compile(\"$<\")"
++
++%.pyo: %.py
++	$(PYTHON) -O -c "import py_compile; py_compile.compile(\"$<\")"
++
+ .PHONY: libpq-all
+ libpq-all:
+ 	$(MAKE) -C $(libpq_builddir) all
+@@ -28,13 +41,16 @@
+ Setup.in: Setup.in.raw
+ 	sed -e 's,@libpq_srcdir@,$(libpq_srcdir),g' \
+ 	    -e 's,@libpq_builddir@,$(libpq_builddir),g' \
++	    -e 's,@libpq@,$(libpq),g' \
+ 	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(LIBS)%g' \
+ 	    -e 's%@INCLUDES@%$(filter -I%, $(CPPFLAGS))%g' \
+ 	    $< > $@
+ 
+ install: all
+ 	@echo "Installing Python module"
+-	@if ( $(INSTALL_DATA) pg.py $(python_moduledir) && \
++	@if ( ( for i in $(PY_SCRIPTS) $(PY_COMPILED_SCRIPTS); do \
++		$(INSTALL_DATA) $$i $(python_moduledir); \
++	    done ) && \
+ 	    $(MAKE) -f Makefile install ); then : ; else \
+ 		echo "*****" ;\
+ 		echo "* Skipping the installation of the Python interface module for lack"; \

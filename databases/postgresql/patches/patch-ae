@@ -1,30 +1,40 @@
-$NetBSD: patch-ae,v 1.12 2000/05/20 19:34:20 jlam Exp $
+$NetBSD: patch-ae,v 1.13 2001/05/14 14:52:38 jlam Exp $
 
---- interfaces/odbc/psqlodbc.c.orig	Mon Dec 28 20:49:57 1998
-+++ interfaces/odbc/psqlodbc.c	Sat May 20 00:14:18 2000
-@@ -33,8 +33,14 @@
+--- src/bin/pgtclsh/Makefile.orig	Fri Feb 23 13:12:17 2001
++++ src/bin/pgtclsh/Makefile
+@@ -22,19 +22,17 @@
+ -include Makefile.tkdefs
+ endif
  
- GLOBAL_VALUES globals;
+-libpgtcl_srcdir = $(top_srcdir)/src/interfaces/libpgtcl
+-libpgtcl_builddir = $(top_builddir)/src/interfaces/libpgtcl
+-libpgtcl = -L$(libpgtcl_builddir) -lpgtcl
+-
+ override CPPFLAGS := -I$(libpgtcl_srcdir) $(CPPFLAGS) $(TK_XINCLUDES)
  
--BOOL _init(void);
--BOOL _fini(void);
-+#ifdef linux
-+#  define STATIC
-+#else
-+#  define STATIC	static
-+#endif
+ 
+ # If we are here then Tcl is available
+ PROGRAMS = pgtclsh
++INSTALL_TARGET = install-tcl
+ 
+ # Add Tk targets if Tk is available
+ ifeq ($(with_tk), yes)
+ PROGRAMS += pgtksh
++INSTALL_TARGET += install-tk
+ endif
+ 
+ all: submake $(PROGRAMS)
+@@ -49,8 +47,12 @@
+ submake:
+ 	$(MAKE) -C $(libpgtcl_builddir) all
+ 
+-install: all installdirs
++install: $(INSTALL_TARGET)
 +
-+STATIC BOOL _init(void);
-+STATIC BOOL _fini(void);
- RETCODE SQL_API SQLDummyOrdinal(void);
- 
- #ifdef WIN32
-@@ -98,7 +104,7 @@
- #endif
- 
- /* These two functions do shared library initialziation on UNIX, well at least
-- * on Linux. I don't know about other systems.
-+ * on Linux and some of the BSDs. I don't know about other systems.
-  */
- BOOL
- _init(void)
++install-tcl: installdirs pgtclsh
+ 	$(INSTALL_PROGRAM) pgtclsh $(DESTDIR)$(bindir)/pgtclsh
++
++install-tk: installdirs pgtksh
+ ifeq ($(with_tk), yes)
+ 	$(INSTALL_PROGRAM) pgtksh $(DESTDIR)$(bindir)/pgtksh
+ endif

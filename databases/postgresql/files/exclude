@@ -1,4 +1,0 @@
-# $NetBSD: exclude,v 1.1 2000/05/20 19:32:20 jlam Exp $
-#
-man1/pgaccess.1
-man1/pgadmin.1
