@@ -1,0 +1,53 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/18 09:08:10 itohy Exp $
+
+--- kbanner.c.orig	Fri Oct 15 17:43:31 1993
++++ kbanner.c	Thu May 18 00:28:39 2000
+@@ -3,7 +3,7 @@
+ #include <stdio.h>
+ 
+ extern char *malloc();
+-extern unsigned short
++extern const unsigned short
+          font21[],font22[],font23[],font24[],font25[],font26[],font27[],
+ font28[],
+ font30[],font31[],font32[],font33[],font34[],font35[],font36[],font37[],
+@@ -16,7 +16,7 @@
+ font68[],font69[],font6a[],font6b[],font6c[],font6d[],font6e[],font6f[],
+ font70[],font71[],font72[],font73[],font74[];
+ 
+-unsigned short *font[]={
++const unsigned short *const font[]={
+        font21,font22,font23,font24,font25,font26,font27,
+ font28,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL,
+ font30,font31,font32,font33,font34,font35,font36,font37,
+@@ -31,7 +31,7 @@
+   NULL,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL
+ };
+ 
+-int table[]={
++const int table[]={
+ 	 0x212a,0x2149,0x2174,0x2170,0x2173,0x2175,0x2147,
+   0x214a,0x214b,0x2176,0x215c,0x2124,0x215d,0x2125,0x213f,
+   0x2330,0x2331,0x2332,0x2333,0x2334,0x2335,0x2336,0x2337,
+@@ -55,10 +55,10 @@
+ };
+ 
+ int landscape,small,column,col,mime,encoding,bufindex,buflength;
+-unsigned short **image;
++const unsigned short **image;
+ int buf[16];
+ 
+-int b_encoding[]={
++const int b_encoding[]={
+   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,62,-1,-1,-1,63,
+@@ -121,7 +121,7 @@
+   }
+   if(landscape)
+     column=1;
+-  if((image=(unsigned short**)malloc(sizeof(unsigned short*)*column))==NULL){
++  if((image=(const unsigned short**)malloc(sizeof(unsigned short*)*column))==NULL){
+     fprintf(stderr,"%s: Not enough memory\n",com);
+     exit(1);
+   }
