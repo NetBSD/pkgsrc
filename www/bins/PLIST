@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/24 11:24:55 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/09/25 00:09:32 dmcmahill Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
@@ -35,10 +35,41 @@ share/examples/bins/templates.default/path.html
 share/examples/bins/templates.default/subalbum.html
 share/examples/bins/templates.default/thumbnail.html
 share/examples/bins/templates.default/tree.html
+share/examples/bins/templates.joi/details.html
+share/examples/bins/templates.joi/footer.html
+share/examples/bins/templates.joi/image.html
+share/examples/bins/templates.joi/imagelist.html
+share/examples/bins/templates.joi/navbar.html
+share/examples/bins/templates.joi/path.html
+share/examples/bins/templates.joi/subalbum.html
+share/examples/bins/templates.joi/subjectpath.html
+share/examples/bins/templates.joi/thumbnail.html
+share/examples/bins/templates.joi/tree.html
+share/examples/bins/templates.joi/static/albumtree.png
+share/examples/bins/templates.joi/static/back.png
+share/examples/bins/templates.joi/static/contact.png
+share/examples/bins/templates.joi/static/exit.png
+share/examples/bins/templates.joi/static/imagelist.png
+share/examples/bins/templates.joi/static/info.png
+share/examples/bins/templates.joi/static/large.png
+share/examples/bins/templates.joi/static/largeActive.png
+share/examples/bins/templates.joi/static/medium.png
+share/examples/bins/templates.joi/static/mediumActive.png
+share/examples/bins/templates.joi/static/meshman.css
+share/examples/bins/templates.joi/static/next.png
+share/examples/bins/templates.joi/static/prev.png
+share/examples/bins/templates.joi/static/preview.js
+share/examples/bins/templates.joi/static/small.png
+share/examples/bins/templates.joi/static/smallActive.png
+share/examples/bins/templates.joi/static/subalbum.png
+share/examples/bins/templates.joi/static/thumbnails.png
+share/examples/bins/templates.joi/static/up.png
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
 @dirrm share/doc/html/bins
 @dirrm share/examples/bins/templates.default
+@dirrm share/examples/bins/templates.joi/static
+@dirrm share/examples/bins/templates.joi
 @dirrm share/examples/bins
