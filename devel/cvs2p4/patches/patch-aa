@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/01 05:02:07 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/27 02:02:19 schmonz Exp $
 
---- test/config.orig	Mon May  6 18:54:48 2002
+--- test/config.orig	Tue Sep  3 13:42:07 2002
 +++ test/config
 @@ -6,22 +6,22 @@
  
@@ -27,5 +27,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/09/01 05:02:07 schmonz Exp $
 -$P4ROOT = "p4root";
 +$P4ROOT = "@P4ROOT@";
  
- # Perforce user name to use during the conversion.
- # This code defaults it to the user name of the user running
+ # The depot pathname for copied/linked RCS archive files. (The path
+ # used will be $P4ROOT/$DEPOT/$CVS_MODULE/<filepath>).
