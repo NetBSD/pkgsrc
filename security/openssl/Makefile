@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/09/05 17:34:05 wennmach Exp $
+# $NetBSD: Makefile,v 1.21 2000/09/09 19:40:22 fredb Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -11,10 +11,9 @@ HOMEPAGE=		http://www.openssl.org/
 
 CONFLICTS=		SSLeay-* ssleay-* kth-krb4-*
 
-USE_PERL5=		# defined
-
-RESTRICTED=		"Crypto; export-controlled"
-NO_SRC_ON_FTP=	${RESTRICTED}
+CRYPTO=			YES
+USE_PERL5=		YES
+USE_RSAREF2=		NO
 
 # matches what's in `Configure' (except sparc64)
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
@@ -44,17 +43,6 @@ IGNORE=			${PKGNAME} requires shared object support
 DEPENDS=		rsaref-2.0p3:../../security/rsaref
 CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
-.endif
-
-fetch-depends:
-.if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
-	@${ECHO}
-	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  People with no RSA
-	@${ECHO} license MUST set this variable to YES.  Users outside
-	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
-	@${ECHO} choose -- NO is faster.
-	@${FALSE}
 .endif
 
 pre-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/09 08:31:14 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/09/09 19:40:17 fredb Exp $
 #
 
 DISTNAME=		rp7_linux20_libc6_i386_cs1
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.real.com/products/player/
 
 DEPENDS+=		suse_x11>=6.1:../../emulators/suse_x11
 
-RESTRICTED=		"Export-controlled, redistribution not permitted"
+RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -21,6 +21,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
+CRYPTO=			yes
 IS_INTERACTIVE=		yes
 NO_CONFIGURE=		yes
 RP_INSTALLER=		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/18 22:46:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2000/09/09 19:40:21 fredb Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -11,13 +11,9 @@ HOMEPAGE=	http://www.gnupg.org/
 
 DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 
-USE_GMAKE=	yes
-
+CRYPTO=		yes
 GNU_CONFIGURE=	yes
-
-RESTRICTED=	"Cryptographic software"
-NO_SRC_ON_FTP=	${RESTRICTED}
-MIRROR_DISTFILE=no
+USE_GMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

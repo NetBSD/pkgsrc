@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/09 19:40:14 fredb Exp $
 
 DISTNAME=       hpack79${USE_RSAREF2:S/YES/u/:C/[^u]*//g}src
 PKGNAME=        hpack-0.79
@@ -7,10 +7,7 @@ MASTER_SITES=   ftp://src.doc.ic.ac.uk/packages/hpack/
 
 MAINTAINER=     packages@netbsd.org
 
-RESTRICTED=	crypto
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-
+CRYPTO=		yes
 NO_WRKSUBDIR=	yes
 PATCHDIR=	${WRKDIR}/.patches
 

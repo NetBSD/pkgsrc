@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/09 19:40:24 fredb Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -19,9 +19,7 @@ HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
 CONFLICTS=		openssh-[0-9]* ssh-[0-9]*
 
-RESTRICTED=		"Crypto; export-controlled"
-NO_SRC_ON_FTP=	${RESTRICTED}
-LICENSE=		no-commercial-use
+CRYPTO=			YES
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 CFLAGS=			-O2
