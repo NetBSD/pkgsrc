@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/10 12:38:27 wulf Exp $
+
+--- man/Makefile.in.orig	Tue May  9 23:30:06 2000
++++ man/Makefile.in	Tue May  9 23:34:04 2000
+@@ -42,7 +42,7 @@
+ SRCS = bluefish.1
+ OBJS = bluefish.1.gz
+ 
+-all: bluefish
++all:
+ bluefish:
+ 	gzip -c $(SRCS) > $(OBJS)
+ 
+@@ -56,4 +56,4 @@
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(mandir)
+-	$(INSTALL) -m 644 ./$(OBJS) $(mandir)/$(OBJS)
++	$(INSTALL) -m 644 ./$(SRCS) $(mandir)/$(SRCS)
