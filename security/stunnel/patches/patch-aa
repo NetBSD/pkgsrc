@@ -1,32 +1,34 @@
-$NetBSD: patch-aa,v 1.5 2000/06/17 21:52:18 tron Exp $
+$NetBSD: patch-aa,v 1.6 2000/12/19 07:03:22 jlam Exp $
 
---- Makefile.in.orig	Tue Feb 22 13:08:16 2000
-+++ Makefile.in	Sat Jun 17 23:46:38 2000
-@@ -7,9 +7,9 @@
+--- Makefile.in.orig	Sat Oct 21 10:02:03 2000
++++ Makefile.in
+@@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
  man8dir=@mandir@/man8
--piddir=@localstatedir@/stunnel
+-piddir=@localstatedir@/stunnel/
 +piddir=/var/run
  ssldir=@ssldir@
--certdir=$(ssldir)/certs
-+certdir=@prefix@/certs
+ PEM_DIR=@PEM_DIR@
  @SET_MAKE@
- VERSION=stunnel-@VERSION@
- RANDOM_OPT=@RANDOM_OPT@
-@@ -18,7 +18,7 @@
- CFLAGS=@CFLAGS@ @DEFS@ -Dcertdir=\"$(certdir)\" -Dlibdir=\"$(libdir)\" -Dpiddir=\"$(piddir)\"
+@@ -20,11 +20,11 @@
+ CFLAGS=@CFLAGS@ @DEFS@ -Dlibdir=\"$(libdir)\" -DPIDDIR=\"$(piddir)\"
  LIBS=@LIBS@
  OBJS=stunnel.o ssl.o protocol.o sthreads.o pty.o log.o
--DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8 $(certdir)/stunnel.pem
+-DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8  $(PEM_DIR)/stunnel.pem
 +DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
  
  # standard external rules
  
-@@ -50,7 +50,6 @@
+-all: stunnel stunnel.so stunnel.pem
++all: stunnel stunnel.so
+ 
+ install: all installdirs $(DESTFILES)
+ 
+@@ -52,7 +52,6 @@
  
  installdirs: mkinstalldirs
- 	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(certdir) $(piddir)
+ 	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(PEM_DIR) $(piddir)
 -	chmod a=rwx,+t $(piddir)
  
  # non-standard external rules
