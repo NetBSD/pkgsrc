@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.1 1998/10/28 05:34:31 garbled Exp $
+--- languages/english/english.3.orig	Tue Oct 27 22:26:48 1998
++++ languages/english/english.3	Tue Oct 27 22:27:35 1998
+@@ -5202,6 +5202,7 @@
+ dirndl
+ disaccredit
+ disafforest
++disappear
+ disbranch
+ disbud
+ discalced
+@@ -5236,7 +5237,6 @@
+ dispersoid
+ displayable
+ disproven
+-dissappear
+ disseminule
+ dissentious
+ dissepiment
