@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.11 2000/11/15 18:50:29 tron Exp $
+
+--- imap.c.orig	Fri Nov 10 23:34:27 2000
++++ imap.c	Wed Nov 15 19:43:51 2000
+@@ -827,13 +827,11 @@
+     strcat (buf1, "\r\n");
+     SockWrite (sock, buf1, strlen (buf1));
+ 
+-    if ((result = gen_recv (sock, buf1, sizeof (buf1))))
+-	return result;
+-
+-    if (strstr (buf1, "OK")) {
+-        return PS_SUCCESS;
++    result = imap_ok (sock, NULL);
++    if (result == PS_SUCCESS) {
++        return result;
+     } else {
+-	return PS_AUTHFAIL;
++        return PS_AUTHFAIL;
+     }
+ }
+ 
