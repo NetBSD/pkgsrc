@@ -1,13 +1,18 @@
-$NetBSD: patch-ab,v 1.8 2003/12/10 18:34:01 agc Exp $
+$NetBSD: patch-ab,v 1.9 2004/07/20 17:37:23 abs Exp $
 
---- configure	2003/12/10 18:13:09	1.1
-+++ configure	2003/12/10 18:13:20
-@@ -12449,6 +12449,8 @@
+--- configure.orig	2004-07-03 18:07:57.000000000 +0100
++++ configure
+@@ -22732,11 +22732,11 @@ fi;
+ echo "$as_me:$LINENO: result: $MOZILLA_VERSION$autodetect" >&5
+ echo "${ECHO_T}$MOZILLA_VERSION$autodetect" >&6
+ 
+-if test $MOZILLA_VERSION == "trunk"; then
++if test $MOZILLA_VERSION = "trunk"; then
+ 	MOZILLA_VERSION=99.0 # use a high number
  fi
  
+-version=$(echo $MOZILLA_VERSION | sed -e 's/\([0-9]\+\|[a-z]\+\)/\1 /g' -e 's/\.//g')
++version=$(echo $MOZILLA_VERSION | sed -e 's/\([0-9]*\)/\1 /g' -e 's/\.//g')
  
-+CC="$CXX"
-+
- LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtkembedmoz $_mozilla_xpcom_libs $_mozilla_gtk_super_win_libs"
- echo "$as_me:$LINENO: checking for gtk_moz_embed_get_type in -lgtkembedmoz" >&5
- echo $ECHO_N "checking for gtk_moz_embed_get_type in -lgtkembedmoz... $ECHO_C" >&6
+ set -- $version;
+ 
