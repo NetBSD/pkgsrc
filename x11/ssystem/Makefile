@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:19:03 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/06/28 10:28:58 agc Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -22,12 +22,12 @@ DOC_FILES=	LICENSE README
 
 do-install:
 	cd ${WRKSRC} && \
-	    ${INSTALL_PROGRAM} ssystem ${X11BASE}/bin; \
-	    ${INSTALL_DATA_DIR} ${X11BASE}/share/ssystem; \
-	    ${INSTALL_DATA_DIR} ${X11BASE}/share/doc/ssystem; \
-	    ${INSTALL_DATA_DIR} ${X11BASE}/share/ssystem/hires; \
-	    ${INSTALL_DATA} ${DATA_FILES} ${X11BASE}/share/ssystem; \
-	    ${INSTALL_DATA} ${DOC_FILES} ${X11BASE}/share/doc/ssystem; \
-	    ${INSTALL_DATA} hires/README ${X11BASE}/share/ssystem/hires
+	    ${INSTALL_PROGRAM} ssystem ${X11PREFIX}/bin; \
+	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/ssystem; \
+	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/ssystem; \
+	    ${INSTALL_DATA_DIR} ${X11PREFIX}/share/ssystem/hires; \
+	    ${INSTALL_DATA} ${DATA_FILES} ${X11PREFIX}/share/ssystem; \
+	    ${INSTALL_DATA} ${DOC_FILES} ${X11PREFIX}/share/doc/ssystem; \
+	    ${INSTALL_DATA} hires/README ${X11PREFIX}/share/ssystem/hires
 
 .include "../../mk/bsd.pkg.mk"
