@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/05 23:07:51 rh Exp $
+
+--- Makefile.orig	Mon Dec 13 07:26:48 1999
++++ Makefile	Wed Jan  5 18:10:25 2000
+@@ -1,11 +1,12 @@
+-CC = gcc
+ PROG = gnapster
+ CLEAN = *.o *~
+ OBJECTS = gnapster.o callbacks.o ui.o napster.o network.o
+-INSTALL = install -c
+-DIR = /usr/local/bin
+-CFLAGS = -g `gnome-config --cflags gnome` -g -Wall
+-LIBS = -g `gnome-config --libs gnome gnomeui gtk`
++INSTALL=	${BSD_INSTALL_PROGRAM}
++DIR=		${PREFIX}/bin
++GCFLAGS!=	gnome-config --cflags gnome
++GCLIBS!=	gnome-config --libs gnome gnomeui gtk
++CFLAGS+=	${GCFLAGS} # -g `gnome-config --cflags gnome` -g -Wall
++LIBS+=		${GCLIBS} # -g `gnome-config --libs gnome gnomeui gtk`
+ 
+ all:	$(PROG)
+ 
