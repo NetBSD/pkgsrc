@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:40 agc Exp $
 
-MD5 (geg-1.0.1.tar.gz) = 8b12df4e6257641183883883df45d718
+SHA1 (geg-1.0.1.tar.gz) = b126d6623050acdf825a26526b64e21fe1facc25
+Size (geg-1.0.1.tar.gz) = 67509 bytes

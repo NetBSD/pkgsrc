@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:44 agc Exp $
 
-MD5 (rlab-2.1.05.tar.gz) = 1ca3469c4d054ca2a30b5d1da76ef7e2
+SHA1 (rlab-2.1.05.tar.gz) = 5b465b45ac1225c89f8375fc0945c485c0b1fa4b
+Size (rlab-2.1.05.tar.gz) = 2767728 bytes
 SHA1 (patch-aa) = d9225f401879e9eee9b11856c9cdef0dbf9a469e
 SHA1 (patch-ab) = e1270ade1b430b67f8264eba76ef9bd220db7d9f
 SHA1 (patch-ac) = 44004dd04c217494dc556fe678c087b4a5a15cc2

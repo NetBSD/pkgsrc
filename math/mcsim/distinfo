@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:41 agc Exp $
 
-MD5 (mcsim-4.2.0.tar.gz) = 57ca9e1f7e372d927baaf19c03e927fe
+SHA1 (mcsim-4.2.0.tar.gz) = 2ad29254cf40bb4ddadfc915e23e5d0eec90e2af
+Size (mcsim-4.2.0.tar.gz) = 521646 bytes
 SHA1 (patch-aa) = 993abbc45444214bf626eb2d41939860ae365e6c
 SHA1 (patch-ab) = 4d4d73af09fc96373c2255ff4a6a47bc3e556f27
 SHA1 (patch-ac) = a43fc2826a5b818579a536f5155b799001d180f8

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:45 agc Exp $
 
-MD5 (superlu_2.0.tar.gz) = 7caefbcce0db31c55d64e41039318eca
+SHA1 (superlu_2.0.tar.gz) = 546a09b6e90e5041a18849108faa16641b7c780b
+Size (superlu_2.0.tar.gz) = 1063542 bytes
 SHA1 (patch-aa) = bd4520f474a6bcac6e5420aa4cb7a501bb2cd8d5

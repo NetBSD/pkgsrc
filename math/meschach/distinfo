@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:13 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:41 agc Exp $
 
-MD5 (mesch12b.tar.gz) = 723c03eb7c167e11bf5c3f3ac67c46a0
+SHA1 (mesch12b.tar.gz) = a4e052d9512786284faa890bf57b9ae5aaa96a84
+Size (mesch12b.tar.gz) = 220668 bytes
 SHA1 (patch-aa) = 8a9687ce01e2dd0960604267af6a9f87eb4e306b
 SHA1 (patch-ab) = 5bf405c19105c6d18e2c1318d36ca114b14cd852
 SHA1 (patch-ac) = 1b5f0ed7398b324933fa7bff2b0327fd90fdd05f

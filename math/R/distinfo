@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:37 agc Exp $
 
-MD5 (R-1.1.1.tgz) = 17d500eafe2531ed7e15e6ac27ef074f
+SHA1 (R-1.1.1.tgz) = c1d66c22c6b4e0ebb7bb5f1dcf52b33a997b7e6b
+Size (R-1.1.1.tgz) = 3046615 bytes
 SHA1 (patch-aa) = 2613aab78c571b15a33003587a377c5e363063d3

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:42 agc Exp $
 
-MD5 (ntl-5.0c.tar.gz) = c6bffdaf1a5f56d41daadb4c123b573e
+SHA1 (ntl-5.0c.tar.gz) = 20603a3aeff1e3e3452d2537375896bc501c2504
+Size (ntl-5.0c.tar.gz) = 643341 bytes
 SHA1 (patch-aa) = 2ff062c9ebd80d274ab222e4a88ad433b2db1c00
 SHA1 (patch-ab) = 726bb373a3dc31c33763282c5cc7c07110a33f23
