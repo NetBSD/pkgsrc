@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2000/09/11 15:36:26 jwise Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/11 18:11:43 jwise Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
 CATEGORIES=	devel x11
 MASTER_SITES=	# none
-EXTRACT_SUFX=	.tar.Z
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
@@ -48,13 +48,13 @@ do-fetch:
 	${LOCALBASE}/bin/urlget -p http://www.javasoft.com/Download3 \
 		referer=http://www.javasoft.com/products/jfc/download.html \
 		protocol="FTP Download" \
-		download-name=swing1_1_1.tar.Z \
+		download-name=swing1_1_1.zip \
 		config-file=swing111.config \
-		platform=compressed \
+		platform=zip \
 		domain-checked= \
 		> ${TEMPFILE} ; \
 	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
-		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'` ; \
+		${SED} -e 's|.*\(ftp://.*.zip\).*|\1|'` ; \
 	fi
 
 do-install:
