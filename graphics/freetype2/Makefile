@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2002/12/24 00:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/21 22:25:50 dillo Exp $
 #
 
 DISTNAME=	freetype-2.1.3
 PKGNAME=	freetype2-2.1.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}			\
 		ftp://ftp.freetype.org/freetype/freetype2/		\
@@ -21,6 +22,7 @@ USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
+CONFIGURE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/builds/unix/libtool
