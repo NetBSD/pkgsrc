@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.40 2001/09/27 23:18:25 jlam Exp $
+## $NetBSD: Makefile,v 1.41 2001/10/05 22:10:21 tron Exp $
 
 DISTNAME=		gnome-utils-1.4.0.2
 CATEGORIES=		misc x11 gnome
@@ -37,4 +37,5 @@ CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
 CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
+.include "../../devel/libglade/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
