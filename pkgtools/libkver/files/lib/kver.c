@@ -1,4 +1,4 @@
-/*	$NetBSD: kver.c,v 1.4 2003/12/13 17:45:59 seb Exp $	*/
+/*	$NetBSD: kver.c,v 1.5 2004/07/06 09:45:38 cube Exp $	*/
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -157,15 +157,11 @@ sysctl(int *name, u_int namelen, void *oldp, size_t * oldlenp, const void *newp,
 	if (newp != (void *) NULL)
 		goto real;
 
-	if (namelen != 2) {
-		errno = EINVAL;
-		return (-1);
-	}
 	if (KVER_NOT_INITIALIZED)
 		kver_initialize();
 
-	if (KVER_BADLY_INITIALIZED)
-		return -1;
+	if (KVER_BADLY_INITIALIZED || namelen != 2)
+		goto real;
 
 	if (name[0] == CTL_KERN) {
 		size_t len;
@@ -201,7 +197,7 @@ uname(struct utsname * n)
 		kver_initialize();
 
 	if (KVER_BADLY_INITIALIZED)
-		return -1;
+		return _uname(n);
 
 	(void) strncpy(n->sysname, real_utsname.sysname, _SYS_NMLN);
 	(void) strncpy(n->nodename, real_utsname.nodename, _SYS_NMLN);
