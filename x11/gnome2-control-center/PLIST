@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/15 02:55:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/15 18:37:50 jmmv Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -233,7 +233,7 @@ share/pixmaps/window-capplet.png
 @comment in gnome2-dirs: @dirrm share/gnome
 @dirrm share/control-center-2.0/pixmaps
 @dirrm share/control-center-2.0/interfaces
-@dirrm share/control-center-2.0/icons
+@comment in gnome2-dirs: @dirrm share/control-center-2.0/icons
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in gnome2-dirs: @dirrm share/control-center-2.0
 @comment in gnome2-dirs: @dirrm share/applications
