@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4067 2003/12/13 11:20:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4068 2003/12/13 11:50:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3360,3 +3360,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated iozone to 3.211 [wiz 2003-12-13]
 	Updated sylpheed to 0.9.8 [xtraeme 2003-12-13]
 	Updated streamtuner to 0.10.2 [xtraeme 2003-12-13]
+	Updated gftp to 2.0.16 [xtraeme 2003-12-13]
