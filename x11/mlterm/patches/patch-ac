@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/31 14:34:39 agc Exp $
 
 --- tool/mlconfig/Makefile.in	2001/12/21 11:22:17	1.1
 +++ tool/mlconfig/Makefile.in	2001/12/21 11:23:22
@@ -10,8 +10,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
 +	-I../../src -I${X11BASE}/include -I${LOCALBASE}/include \
  	-DSYSCONFDIR=\"$(SYSCONFDIR)\"
  LIBS = `$(GTK_CONFIG) --libs` $(LIBS_LOCAL) $(LKIK) \
--	-L/usr/X11R6/lib -L/usr/local/lib
-+	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+-	-L/usr/X11R6/lib -L/usr/local/lib -R/usr/X11R6/lib -R/usr/local/lib
++	-L${X11BASE}/lib -L${LOCALBASE}/lib -R${X11BASE}/lib -R${LOCALBASE}/lib
  
  LIBTOOL_LINK = $(LIBTOOL) --mode=link $(CC)
  LIBTOOL_INSTALL = $(LIBTOOL) --mode=install $(INSTALL)
