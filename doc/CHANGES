@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2006 2003/04/22 09:48:51 salo Exp $
+$NetBSD: CHANGES,v 1.2007 2003/04/22 10:19:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1693,3 +1693,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.51 [wiz 2003-04-22]
 	Updated cyberbit-ttf to 2.0nb2 [salo 2003-04-22]
 	Updated cyberbase-ttf to 2.0nb2 [salo 2003-04-22]
+	Updated pkglint to 3.52 [wiz 2003-04-22]
