@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/15 18:47:04 itojun Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/16 21:55:14 itojun Exp $
 
 DISTNAME=	nsd-2.0.0
 CATEGORIES=	net
@@ -13,7 +13,29 @@ BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--enable-bind8-stats
+CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
+.if !defined(USE_INET6)
+CONFIGURE_ARGS+=--disable-ipv6
+.endif
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=--with-pidfile=/var/run/nsd.pid
+CONFIGURE_ARGS+=--with-user=named
+CONFIGURE_ARGS+=--with-namedxfer=/usr/libexec/named-xfer
+.endif
 
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/nsd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/nsd/contrib
+.for FILE in README RELNOTES DIFFERENCES LICENSE NSD-DATABASE TODO
+	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/share/nsd
+.endfor
+.for FILE in README build-nsdzones.pl build-nsdzones.pl.README example-plugin.c
+	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/share/nsd/contrib
+.endfor
+
+.include "../../security/tcp_wrappers/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
