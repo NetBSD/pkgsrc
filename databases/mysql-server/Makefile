@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2001/11/01 00:17:42 zuntum Exp $
+# $NetBSD: Makefile,v 1.26 2001/11/02 02:59:28 jlam Exp $
 #
 
-.include "../../databases/mysql-client/Makefile.common"
+.include "../mysql-client/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -9,10 +9,15 @@ COMMENT=		MySQL, a free SQL database (server)
 
 DEPENDS+=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
 
+USE_BUILDLINK_ONLY=	YES
+
 # hardwire use of included mit-pthreads on NetBSD
 .if (${OPSYS} == "NetBSD")
 CONFIGURE_ARGS+=	--with-mit-threads
 .endif
+
+CONFIGURE_ARGS+=	--with-libwrap
+CONFIGURE_ARGS+=	--without-berkeley-db
 
 # platforms on which included mit-pthreads is usable
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
@@ -40,4 +45,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/safe_mysqld.1 ${PREFIX}/man/man1
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../security/tcp_wrappers/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

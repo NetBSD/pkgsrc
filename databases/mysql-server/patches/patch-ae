@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2001/10/08 17:24:17 veego Exp $
+$NetBSD: patch-ae,v 1.8 2001/11/02 02:59:28 jlam Exp $
 
 --- configure.in-orig	Wed Oct  3 18:08:31 2001
 +++ configure.in	Sun Oct  7 19:56:24 2001
@@ -10,16 +10,3 @@ $NetBSD: patch-ae,v 1.7 2001/10/08 17:24:17 veego Exp $
  AC_SUBST(bench_dirs)
  
  # Don't build readline, i have it already
-@@ -1727,7 +1726,11 @@
-   # This requires readline to be in a standard place. Mosty for linux
-   # there readline may be a shared library.
-   readline_dir=""
--  readline_link="-lreadline"
-+  if test -z "$readline_lib"
-+  then
-+    readline_lib="readline"
-+  fi
-+  readline_link="-l$readline_lib"
- fi
- AC_SUBST(readline_dir)
- AC_SUBST(readline_link)
