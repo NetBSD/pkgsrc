@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/02/18 07:07:43 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2005/02/18 07:17:13 xtraeme Exp $
 
 To configure blur6ex, the following steps should be completed:
 
@@ -11,6 +11,14 @@ Modify "PASSWORD" with your desired password.
 
 Modify ${PKG_SYSCONFDIR.blur6exdb}/db.php and
 ${PKG_SYSCONFDIR.blur6ex}/index.php.
+
+Before accessing you should create an user for the admin group:
+
+$ mysql
+mysql> use blur6ex;
+mysql> insert into 
+  -> permissionGroups (username,pGroup) values ('YOUR-NAME', 'admin' );
+mysql> quit
 
 Now you can access to it with the following url:
 
