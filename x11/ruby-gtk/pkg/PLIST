@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2000/04/18 10:54:46 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/07/08 16:12:38 sakamoto Exp $
 lib/ruby/${RUBY_VERSION}/gtkcompat.rb
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/gtk.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/gtk.so
 share/doc/ruby-gtk/.happy
 share/doc/ruby-gtk/BUGS
 share/doc/ruby-gtk/MEMO-Imlib
