@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/23 00:01:43 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/23 09:16:19 salo Exp $
 #
 
 DISTNAME=		aspell-0.50.3
@@ -19,8 +19,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # halfdelay()
-INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.*-* \
-			NetBSD-1.6[A-L]-*
+INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6[-_.]* NetBSD-1.6[A-L]-*
 
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
