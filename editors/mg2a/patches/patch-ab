@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./sys/bsd/ttyio.c.orig	Sun Jul  3 10:51:02 1988
++++ ./sys/bsd/ttyio.c	Thu Mar 30 08:35:33 2000
+@@ -35,13 +35,17 @@
+ ttopen() {
+ 	register char *tv_stype;
+ 	char *getenv(), *tgetstr(), tcbuf[1024], err_str[72];
+-	char *sprintf();
++/*	int sprintf();  refling was here */
+ 
+ /* do this the REAL way */
+ 	if ((tv_stype = getenv("TERM")) == NULL)
+ 	{
+-		puts("Environment variable TERM not defined!");
+-		exit(1);
++//		refling --- took out the exit, added default
++		puts("Environment variable TERM not defined, trying vt102");
++//		exit(1);
++		sleep(1);
++		putenv("TERM=vt102");
++		tv_stype = getenv("TERM");
+ 	}
+ 
+ 	if((tgetent(tcbuf, tv_stype)) != 1)
+@@ -229,9 +233,11 @@
+ panic(s) char *s; {
+ 	(void) fputs("panic: ", stderr);
+ 	(void) fputs(s, stderr);
+-	(void) fputc('\n', stderr);
++//	(void) fputc('\n', stderr); refling
++	(void) fputc(13, stderr);  // refling
+ 	(void) fflush(stderr);
+-	abort();		/* To leave a core image. */
++//	abort();		/* To leave a core image. */ refling
++	exit(1);               // refling
+ }
+ #ifndef NO_DPROMPT
+ #include <sys/time.h>

@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./sys/bsd/spawn.c.orig	Sun Jul  3 10:51:00 1988
++++ ./sys/bsd/spawn.c	Thu Mar 30 08:35:32 2000
+@@ -38,7 +38,9 @@
+  */
+ /*ARGSUSED*/
+ spawncli(f, n) {
+-	register int	pid, wpid, (*oqsig)(), (*oisig)(), omask;
++/*	register int	pid, wpid, (*oqsig)(), (*oisig)(), omask;  refling was here */
++	register int	pid, wpid, omask;
++	register void	(*oqsig)(), (*oisig)();
+ 	union wait	status;
+ 
+ 	if (shellp == NULL) {
+@@ -83,7 +85,8 @@
+ 			execl(shellp, "sh", "-i", NULL);
+ 			_exit(0);		/* Should do better!	*/
+ 		}
+-		while ((wpid=wait(&status))>=0 && wpid!=pid)
++/*		while ((wpid=wait(&status))>=0 && wpid!=pid)   refling was here */
++		while ((wpid=wait((int *)&status))>=0 && wpid!=pid)
+ 			;
+ 		(void) signal(SIGQUIT, oqsig);
+ 		(void) signal(SIGINT,  oisig);

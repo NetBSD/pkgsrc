@@ -1,0 +1,56 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./mg.rc.orig	Thu Mar 30 08:35:35 2000
++++ ./mg.rc	Thu Mar 30 08:35:35 2000
+@@ -0,0 +1,51 @@
++; Small key definition file for VT100 terminals using the termcap
++; driver. This only works if XKEYS is defined during compilation.
++;
++(global-set-key "\e[A" 'previous-line)		; VT100 small keypad up arrow
++(global-set-key "\e[B" 'next-line)		; VT100 small keypad down arrow
++(global-set-key "\e[C" 'forward-char)		; VT100 small keypad right arrow
++(global-set-key "\e[D" 'backward-char)		; VT100 small keypad left arrow
++(global-set-key "\^H" 'delete-backward-char)
++;
++(global-set-key "\eOA" 'previous-line)		; MS TELNET small keypad up arrow
++(global-set-key "\eOB" 'next-line)		; MS TELNET small keypad down arrow
++(global-set-key "\eOC" 'forward-char)		; MS TELNET small keypad right arrow
++(global-set-key "\eOD" 'backward-char)		; MS TELNET small keypad left arrow
++;
++; The following pairs are for the PC running EM4010 and the VT220 respectively
++; They affect only the far right application keypad:
++;
++(global-set-key "\e\eA" 'previous-line)		; PC keypad up arrow
++(global-set-key "\eOx" 'previous-line)		; VT keypad 8
++(global-set-key "\e\eB" 'next-line)		; PC keypad down arrow
++(global-set-key "\eOr" 'next-line)		; VT keypad 2
++(global-set-key "\e\eC" 'forward-char)		; PC keypad right arrow
++(global-set-key "\eOv" 'forward-char)		; VT keypad 6
++(global-set-key "\e\eD" 'backward-char)		; PC keypad left arrow
++(global-set-key "\eOt" 'backward-char)		; VT keypad 4
++(global-set-key "\e\017n" 'delete-char)		; PC keypad del
++(global-set-key "\e\On" 'delete-char)		; VT keypad .
++(global-set-key "\e\017s" 'scroll-up)	 	; PC keypad PgUp
++(global-set-key "\eOs" 'scroll-up) 		; VT keypad 9
++(global-set-key "\e\017y" 'scroll-down)   	; PC keypad PgUp
++(global-set-key "\e\Oy" 'scroll-down)   	; VT keypad 3
++(global-set-key "\e\017w" 'beginning-of-line)	; PC keypad Home
++(global-set-key "\eOw" 'beginning-of-line)	; VT keypad 7
++(global-set-key "\e\017q" 'end-of-line)		; PC keypad End
++(global-set-key "\e\Oq" 'end-of-line)		; VT keypad 1
++(global-set-key "\e\017M" 'fill-paragraph)	; PC keypad +
++(global-set-key "\eOM" 'fill-paragraph)		; VT keypad Enter
++(global-set-key "\eOn" 'fill-paragraph)		; cute keypad enter
++(global-set-key "\e\017u" 'query-replace)	; PC keypad 5
++(global-set-key "\e\Ou" 'query-replace)		; VT keypad 5
++
++(global-set-key "\eOP" 'start-kbd-macro)	; PC F1 key
++(global-set-key "\eOQ" 'end-kbd-macro)		; PC F2 key
++(global-set-key "\eOS" 'call-last-kbd-macro)	; PC F4 key
++;
++; For the SUN type 2 keyboard under NetBSD:
++;
++(global-set-key "\e[215z" 'previous-line)	; keypad up arrow
++(global-set-key "\e[221z" 'next-line)		; keypad down arrow
++(global-set-key "\e[219z" 'forward-char)	; keypad right arrow
++(global-set-key "\e[217z" 'backward-char)	; keypad left arrow
