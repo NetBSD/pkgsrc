@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/10 01:13:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/01 15:02:15 rh Exp $
 bin/ggv
 etc/CORBA/servers/application-ps.gnorba
 share/locale/de/LC_MESSAGES/ggv.mo
@@ -14,14 +14,23 @@ share/locale/fi/LC_MESSAGES/ggv.mo
 share/locale/ko/LC_MESSAGES/ggv.mo
 share/locale/pt_BR/LC_MESSAGES/ggv.mo
 share/locale/ja/LC_MESSAGES/ggv.mo
-share/gnome/help/ggv/C/index.html
+share/locale/ca/LC_MESSAGES/ggv.mo
+share/locale/cs/LC_MESSAGES/ggv.mo
+share/locale/da/LC_MESSAGES/ggv.mo
+share/locale/el/LC_MESSAGES/ggv.mo
+share/locale/ga/LC_MESSAGES/ggv.mo
+share/locale/it/LC_MESSAGES/ggv.mo
+share/locale/nl/LC_MESSAGES/ggv.mo
+share/locale/sl/LC_MESSAGES/ggv.mo
+share/locale/uk/LC_MESSAGES/ggv.mo
+share/locale/gl/LC_MESSAGES/ggv.mo
+share/locale/lt/LC_MESSAGES/ggv.mo
+share/locale/tr/LC_MESSAGES/ggv.mo
+share/pixmaps/gnome-ghostview.png
+share/pixmaps/ggv-splash.png
+share/gnome/help/ggv/it/topic.dat
 share/gnome/help/ggv/C/topic.dat
-share/gnome/help/ggv/C/intro.html
-share/gnome/help/ggv/C/ln21.html
-share/gnome/help/ggv/C/mainwin.html
-share/gnome/help/ggv/C/prefs.html
-share/gnome/help/ggv/C/probs.html
-share/gnome/help/ggv/C/docbook.css
 share/gnome/apps/Graphics/ggv.desktop
 @dirrm share/gnome/help/ggv/C
+@dirrm share/gnome/help/ggv/it
 @dirrm share/gnome/help/ggv
