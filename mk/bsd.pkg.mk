@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.281 1999/06/04 17:05:26 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.282 1999/06/14 01:56:52 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1081,7 +1081,7 @@ root-install:
 		exit 1;							\
 	fi
 .endif	# CONFLICTS
-	${_PKG_SILENT}${_PKG_DEBUG}found="`${PKG_INFO} -e \"${PKGNAME:C/-[^-]*$/-*/}\" || ${TRUE}`"; \
+	${_PKG_SILENT}${_PKG_DEBUG}found="`${PKG_INFO} -e \"${PKGNAME:C/-[^-]*$/-[0-9]*/}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "===>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "      If so, you may wish to \`\`pkg_delete $$found'' and install"; \
