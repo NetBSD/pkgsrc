@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/03 20:51:33 jtb Exp $
+bin/gif2h5
+bin/h52gif
+bin/h5cc
 bin/h5debug
 bin/h5dump
 bin/h5import
@@ -10,7 +13,6 @@ include/H5Bpublic.h
 include/H5Dpublic.h
 include/H5Epublic.h
 include/H5FDcore.h
-include/H5FDdpss.h
 include/H5FDfamily.h
 include/H5FDgass.h
 include/H5FDlog.h
@@ -37,8 +39,6 @@ include/H5api_adpt.h
 include/H5pubconf.h
 include/H5public.h
 include/hdf5.h
-lib/libh5tools.a
-lib/libh5tools.la
 lib/libhdf5.a
 lib/libhdf5.la
 lib/libhdf5.settings
@@ -46,7 +46,7 @@ lib/libhdf5.so
 lib/libhdf5.so.0
 lib/libhdf5.so.0.0
 share/doc/hdf5/COPYING
-share/doc/hdf5/README
+share/doc/hdf5/HISTORY.txt
 share/doc/hdf5/RELEASE.txt
 share/doc/html/hdf5/ADGuide.html
 share/doc/html/hdf5/ADGuide/Changes.html
@@ -312,6 +312,7 @@ share/doc/html/hdf5/Tutor/examples/rwdsetexample.f90
 share/doc/html/hdf5/Tutor/examples/selectele.f90
 share/doc/html/hdf5/Tutor/extend.html
 share/doc/html/hdf5/Tutor/fileorg.html
+share/doc/html/hdf5/Tutor/footer-ncsalogo.gif
 share/doc/html/hdf5/Tutor/glossary.html
 share/doc/html/hdf5/Tutor/img001.gif
 share/doc/html/hdf5/Tutor/img002.gif
@@ -377,16 +378,15 @@ share/doc/html/hdf5/pipe3.gif
 share/doc/html/hdf5/pipe4.gif
 share/doc/html/hdf5/pipe5.gif
 share/doc/html/hdf5/version.gif
-@dirrm share/doc/hdf5
-@dirrm share/doc/html/hdf5/ADGuide
-@dirrm share/doc/html/hdf5/Graphics
-@dirrm share/doc/html/hdf5/Intro
-@dirrm share/doc/html/hdf5/PSandPDF
-@dirrm share/doc/html/hdf5/TechNotes
-@dirrm share/doc/html/hdf5/Tutor/examples/java
-@dirrm share/doc/html/hdf5/Tutor/Graphics
-@dirrm share/doc/html/hdf5/Tutor/examples
-@dirrm share/doc/html/hdf5/cpplus
 @dirrm share/doc/html/hdf5/fortran
+@dirrm share/doc/html/hdf5/cpplus
+@dirrm share/doc/html/hdf5/Tutor/examples/java
+@dirrm share/doc/html/hdf5/Tutor/examples
+@dirrm share/doc/html/hdf5/Tutor/Graphics
 @dirrm share/doc/html/hdf5/Tutor
+@dirrm share/doc/html/hdf5/TechNotes
+@dirrm share/doc/html/hdf5/PSandPDF
+@dirrm share/doc/html/hdf5/Intro
+@dirrm share/doc/html/hdf5/Graphics
+@dirrm share/doc/html/hdf5/ADGuide
 @dirrm share/doc/html/hdf5
