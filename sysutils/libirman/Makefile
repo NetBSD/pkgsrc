@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/06/14 20:38:40 abs Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/20 09:06:48 abs Exp $
 #
 
 DISTNAME=	libirman-0.4.1b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.evation.com/libirman/
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.evation.com/libirman/libirman.html
 COMMENT=	Programming library for Irman - infrared control
 
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/irman.conf ${PKG_SYSCONFDIR}/irman.conf
