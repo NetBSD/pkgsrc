@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/11/16 21:27:42 tron Exp $
+$NetBSD: patch-aa,v 1.6 1999/11/23 13:20:10 agc Exp $
 
---- Makefile.orig	Tue Nov 16 19:50:24 1999
-+++ Makefile	Tue Nov 16 19:53:03 1999
+--- Makefile.orig	Sun Nov 14 14:17:21 1999
++++ Makefile	Tue Nov 23 13:05:31 1999
 @@ -2,10 +2,14 @@
  # Please read docs/Readme.html, or http://www.statslab.cam.ac.uk/~sret1/analog/
  CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
@@ -19,7 +19,18 @@ $NetBSD: patch-aa,v 1.5 1999/11/16 21:27:42 tron Exp $
  #                    ... -DEBCDIC -DNEED_STRCMP -DNEED_MEMMOVE ...
  #                    ... -DNEED_STRTOUL -DNEED_DIFFTIME -DNEED_FLOATINGPOINT_H
  #                    Solaris 2 (SunOS 5) might need DEFS = -DNEED_STRCMP
-@@ -25,10 +29,10 @@
+@@ -20,15 +24,21 @@
+ #                    OS/2 with EMX requires LIBS = -lsocket; so does BS2000/OSD
+ #                    SVR4 requires LIBS = -lsocket -lnsl
+ 
++OPSYS!= uname -s
++
++.if ${OPSYS} == "SunOS"
++LIBS+= -lsocket -lnsl
++.endif
++
+ PROGRAM = analog
+ OBJS = alias.o analog.o cache.o dates.o globals.o hash.o init.o init2.o \
  	input.o macinput.o macstuff.o output.o output2.o process.o settings.o \
  	sort.o tree.o utils.o win32.o
  HEADERS = anlghead.h anlghea2.h anlghea3.h anlghea4.h macdir.h
