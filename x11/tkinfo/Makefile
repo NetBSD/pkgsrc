@@ -3,7 +3,8 @@
 # Date created:         16 Jan 1995
 # Whom:                 thomas@ghpc8.ihf.rwth-aachen.de
 #
-# $Id: Makefile,v 1.2 1997/10/27 01:30:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:19:55 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
 DISTNAME=	tkinfo-1.5
@@ -14,6 +15,7 @@ MASTER_SITES=	http://www.math.ucsb.edu/~boldt/tkinfo/ \
 MAINTAINER=	tg@freebsd.org
 
 RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
+
 NO_BUILD=	yes
 
 do-install:
@@ -21,6 +23,6 @@ do-install:
 
 post-patch:
 	( cd ${WRKSRC} ; ${SED} 's|@PREFIX@|'${PREFIX}'|g' \
-		<tkinfo >tkinfo.BAK ; mv tkinfo.BAK tkinfo )
+		<tkinfo >tkinfo.BAK ; ${MV} tkinfo.BAK tkinfo )
 
 .include <bsd.port.mk>
