@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1787 2004/05/28 01:49:27 lukem Exp $
+$NetBSD: TODO,v 1.1788 2004/05/28 15:00:18 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -199,6 +199,7 @@ Suggested package updates
 	o dnetc-2.9004-482 [pkg/22390]
 	o docbook-4.3
 	o docbook-simple-1.1b2
+	o dovecot-0.99.10.5
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
 	o dylan-compiler-2.3.11
