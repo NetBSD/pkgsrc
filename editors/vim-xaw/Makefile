@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/11/02 03:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/08 13:23:54 wiz Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -12,9 +12,6 @@ USE_XAW=		yes
 USE_CURSES=		yes
 
 CONFIGURE_ARGS+=	--enable-gui=athena
-CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
-LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
@@ -33,8 +30,10 @@ post-install:
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=	--with-tlib=ncurses
+CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
+LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 .else
-CPPFLAGS=
 CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
 
