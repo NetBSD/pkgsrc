@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2982 2005/02/01 17:39:56 wiz Exp $
+$NetBSD: TODO,v 1.2983 2005/02/01 18:27:48 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -302,7 +302,6 @@ Suggested package updates
 	o argtable-2.3
 	o arla-0.36.2
 	o arnold-20040104
-	o arping-2.04
 	o arpwatch-2.1a13
 	o asapm-2.13
 	o aspell-faroese-0.2.20
