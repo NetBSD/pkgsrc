@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/23 21:15:20 tv Exp $
 #
 
 DISTNAME=		openssl-0.9.2b
@@ -32,7 +32,7 @@ IGNORE=			requires shared object support
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-DEPENDS=		rsaref-2.0:../../security/rsaref
+DEPENDS=		rsaref-2.0p1:../../security/rsaref
 CONFIGURE_ARGS+=	-DRSAref -L${PREFIX}/lib -lrsaref ${LDFLAGS}
 .endif
 
