@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/20 22:58:52 wiz Exp $
+
+--- vpnc.c.orig	2004-05-13 19:24:34.000000000 +0200
++++ vpnc.c
+@@ -2298,8 +2298,8 @@ int main(int argc, char **argv)
+     else
+       read_config_file (argv[i], config, 0);
+ 
+-  read_config_file ("/etc/vpnc/default.conf", config, 1);
+-  read_config_file ("/etc/vpnc.conf", config, 1);
++  read_config_file (PKG_SYSCONFDIR "/vpnc/default.conf", config, 1);
++  read_config_file (PKG_SYSCONFDIR "/vpnc.conf", config, 1);
+ 
+   if (!print_config)
+     for (i = 0; config_names[i].name != NULL; i++)
