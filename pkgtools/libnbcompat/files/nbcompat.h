@@ -94,9 +94,17 @@ struct {								\
 #define	LIST_INIT(head) do {						\
 	(head)->lh_first = NULL;					\
 } while (/*CONSTCOND*/0)
+#endif
 
+#if ! LIST_EMPTY
 #define	LIST_EMPTY(head)		((head)->lh_first == NULL)
+#endif
+
+#if ! LIST_FIRST
 #define	LIST_FIRST(head)		((head)->lh_first)
+#endif
+
+#if ! LIST_NEXT
 #define	LIST_NEXT(elm, field)		((elm)->field.le_next)
 #endif
 
