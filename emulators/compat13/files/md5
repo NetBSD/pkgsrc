@@ -1,0 +1,9 @@
+$NetBSD: md5,v 1.1.1.1 1999/04/15 16:36:15 tv Exp $
+
+MD5 (compat13-alpha.tar.gz) = 23b714b7322be77f8c10dcc8e650aaa6
+MD5 (compat13-arm32.tar.gz) = 4e1ff9e826a6e05dc9fe7f9140301d69
+MD5 (compat13-i386.tar.gz) = 50268aedf2b9f7c34ee8f65d657d2761
+MD5 (compat13-m68k.tar.gz) = 97364f4ba54a163a53452a17d375253a
+MD5 (compat13-mipsel.tar.gz) = 9c3ecf4bbd7379d3c0063d8bbc02e787
+MD5 (compat13-ns32k.tar.gz) = a1fd9df53df4a7f25fe196ce87957193
+MD5 (compat13-sparc.tar.gz) = 1b6d0e4be3b36e59976bd8d1b4aaf656
