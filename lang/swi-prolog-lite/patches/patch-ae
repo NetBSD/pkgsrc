@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+
+--- packages/xpce/pl/src/Makefile.orig	2003-10-10 12:24:18.000000000 +0200
++++ packages/xpce/pl/src/Makefile
+@@ -33,7 +33,7 @@ BINDIR=		../../$(builddir)
+ OBJDIR=		../../$(builddir)/pl
+ CONFIG=		../../$(builddir)/config.h
+ 
+-CPLIFLAGS=	-I$(PLINCL) -I../../$(builddir) -I../../src
++CPLIFLAGS=	-I$(PLINCL) -I../../$(builddir) -I../../src -I${X11BASE}/include
+ PL=     	pl
+ PLLD=		plld -pl $(PL)
+ ITFOBJ= 	$(addprefix $(OBJDIR)/, interface.o link.o pcecall.o)
+@@ -114,14 +114,14 @@ $(XPCESO):	$(SOITF) $(libXPCE) $(SOEXTR)
+ 		fi
+ 
+ sopce$(XPCESO):
+-		LD_RUN_PATH="$(libdir):$$LD_RUN_PATH"; \
++		LD_RUN_PATH="$(libdir):${X11BASE}/lib:$$LD_RUN_PATH"; \
+ 		export LD_RUN_PATH; \
+ 		$(PLLD) -shared $(SOITF) -L$(XLIB) -L$(LIBDIR) -lXPCE -o $(XPCESO);
+ axpce$(XPCESO):
+-		LD_RUN_PATH="$(libdir):$$LD_RUN_PATH"; \
++		LD_RUN_PATH="$(libdir):${X11BASE}/lib:$$LD_RUN_PATH"; \
+ 		export LD_RUN_PATH; \
+ 		$(PLLD) -shared $(SOITF) $(SOEXTR) -L$(LIBDIR) \
+-		-lXPCE $(GCCLIB) -L$(XLIB) $(XLIBS) $(NETLIBS) -o $(XPCESO);
++		-lXPCE $(GCCLIB) -L$(XLIB) -Wl,-R${XLIB} -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib $(XLIBS) $(NETLIBS) -o $(XPCESO);
+ 
+ ################################################################$
+ # QLF generation
