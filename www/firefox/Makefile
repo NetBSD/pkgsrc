@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/03/10 12:57:01 taya Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/24 01:21:17 taya Exp $
 
 MOZILLA=	firefox
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	0.8
-PKGREVISION=	1
+PKGREVISION=	2
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=	${MOZILLA}-source-${MOZ_VER}
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
