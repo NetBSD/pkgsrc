@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2003/03/18 22:59:52 jschauma Exp $
+
+--- configure.orig	Sat Mar 15 09:59:28 2003
++++ configure	Sat Mar 15 10:03:25 2003
+@@ -7283,7 +7283,7 @@
+             SSL_INCLUDES=
+     else
+             SSL_INCLUDES=-I$ssl_root/include
+-                  LDFLAGS="-L$ssl_root/lib -R$ssl_root/lib $wget_save_LDFLAGS"
++                  LDFLAGS="-L$ssl_root/lib ${RPATH_FLAG}$ssl_root/lib $wget_save_LDFLAGS"
+     fi
+ 
+     echo "$ac_t"""Looking for SSL libraries in $ssl_root"" 1>&6
