@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/04 02:56:17 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/04 03:18:40 rh Exp $
 
 DISTNAME=		libgtop-2.0.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -30,7 +30,7 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 
 USE_PERL5=		build
 USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
