@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.11 2001/12/09 10:55:44 jmc Exp $
+
+--- pstoraster/genarch.c.orig	Wed Mar  8 23:14:26 2000
++++ pstoraster/genarch.c	Sun Dec  9 10:51:28 2001
+@@ -154,7 +154,16 @@
+     /* Some machines can't handle a variable shift by */
+     /* the full width of a long. */
+     fprintf(f, "#define arch_can_shift_full_long %d\n",
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if (MACHINE_ARCH = "powerpc") && (__NetBSD_Version__ <= 105000200)
++	    (um1 >> (lwidth / 2)) >> (lwidth / 2) == 0);
++#else
+ 	    um1 >> lwidth == 0);
++#endif
++#else
++	    um1 >> lwidth == 0);
++#endif
+ 
+ /* ---------------- Done. ---------------- */
+ 
