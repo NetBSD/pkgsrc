@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/02/07 01:22:35 snj Exp $
+
+To make use of the MIDI capabilities in this package, you must install
+either pkgsrc/audio/eawpatches or pkgsrc/audio/guspatches.
+
+===========================================================================
