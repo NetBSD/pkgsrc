@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.45 1999/02/25 15:58:26 bouyer Exp $
+# $NetBSD: mk.conf.example,v 1.46 1999/02/27 17:24:17 sakamoto Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -348,3 +348,17 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #MASTER_SITE_SUNSITE=	ftp://ftp.sunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
 #MASTER_SITE_BACKUP=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 #MASTER_SITE_LOCAL=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+
+# Japan
+#
+#MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/%SUBDIR%/
+#MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/%SUBDIR%/
+#MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/%SUBDIR%/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/%SUBDIR%/
+#MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/%SUBDIR%/
+#MASTER_SITE_BACKUP=	\
+#	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
+#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
+#MASTER_SITE_LOCAL=	\
+#	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
+#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
