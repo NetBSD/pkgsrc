@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2026 2003/04/24 14:14:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.2027 2003/04/24 14:27:22 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -974,8 +974,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lftp to 2.6.5 [wiz 2003-03-06]
 	Added cvsync-0.14.0 [martin 2003-03-06]
 	Updated bind8 to 8.3.4nb1 [is 2003-03-06]
-	Updated cvsync-0.14.0nb1 [grant 2003-03-06]
-	Updated cvsync-0.14.1 [gehenna 2003-03-06]
+	Updated cvsync to 0.14.0nb1 [grant 2003-03-06]
+	Updated cvsync to 0.14.1 [gehenna 2003-03-06]
 	Updated p5-Text-Iconv to 1.2 [wiz 2003-03-06]
 	Updated rsync to 2.5.6 [salo 2003-03-06]
 	Updated pkgdepgraph to 2.0 [atatat 2003-03-06]
