@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/22 00:13:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/11 20:50:51 abs Exp $
 
 DISTNAME=	cdb-0.75
 CATEGORIES=	databases
@@ -11,10 +11,9 @@ COMMENT=	creates and reads constant databases
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
-.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm")
-.if (${CFLAGS:M-O2} == "-O2")
-CFLAGS:=	${CFLAGS:S/-O2/-O0/}
-.endif
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 pre-build:
