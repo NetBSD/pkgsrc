@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/18 00:03:38 wiz Exp $
 
 --- sys/NetBSD/audio.c.orig	Sun May 23 10:29:13 1999
 +++ sys/NetBSD/audio.c	Sun May 23 10:55:39 1999
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
 +#define	HAS_SOUND_CODE		/* サウンド関係のコードは有効！ */
 +
 +/* RCS ID */
-+rcsId(audioId, "$Id: patch-ab,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $")
++rcsId(audioId, "Id: audio.c,v 1.5 1994/05/31 06:28:21 masa-k Rel ")
 +
 +static int	S_AuFileHeader();
 +static void	S_PlayInterval();
