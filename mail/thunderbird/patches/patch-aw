@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
+--- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	2003-04-19 05:14:09.000000000 +0900
++++ ./widget/src/gtksuperwin/Makefile.in	2004-01-16 23:17:41.000000000 +0900
+@@ -25,6 +25,7 @@
+ MODULE		= widget
+ LIBRARY_NAME	= gtksuperwin
+ EXPORT_LIBRARY = 1
++MKSHLIB		= $(MKCSHLIB)
+ 
+ 
+ CSRCS           = \

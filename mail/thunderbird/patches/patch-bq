@@ -1,0 +1,14 @@
+$NetBSD: patch-bq,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h ./xpcom/io/nsLocalFileUnix.h
+--- ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h	2003-07-19 07:14:16.000000000 +0900
++++ ./xpcom/io/nsLocalFileUnix.h	2004-01-16 23:18:06.000000000 +0900
+@@ -57,7 +57,7 @@
+ #endif
+ 
+ // so we can statfs on freebsd
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+     #define HAVE_SYS_STATFS_H
+     #define STATFS statfs
+     #include <sys/param.h>
