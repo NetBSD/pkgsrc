@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/11/29 14:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/29 15:14:48 wiz Exp $
 #
 
 DISTNAME=		inkscape-0.39
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,16 +24,17 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
-.include "../../x11/gtkmm/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/gtkspell/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
