@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/03/09 19:04:54 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/03/13 07:01:03 tron Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
@@ -61,6 +61,13 @@ BUILDLINK_PREFIX.glu_DEFAULT=	${LOCALBASE}
 BUILDLINK_PREFIX.glu=		${X11BASE}
 .endif
 
+.if ${_NEED_GLU} == "NO"
+_BLNK_GLU_LDFLAGS=	-L${BUILDLINK_PREFIX.glu}/lib -lGLU
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	\
+	-e "s|${BUILDLINK_PREFIX.glu}/lib/libGLU.la|${_BLNK_GLU_LDFLAGS}|g" \
+	-e "s|${LOCALBASE}/lib/libGLU.la|${_BLNK_GLU_LDFLAGS}|g"
+.endif
+
 BUILDLINK_FILES.glu=	include/GL/glu.h
 BUILDLINK_FILES.glu+=	include/GL/glu_mangle.h
 BUILDLINK_FILES.glu+=	lib/libGLU.*
@@ -70,7 +77,14 @@ USE_X11=		# defined
 .include "../../graphics/MesaLib/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	glu-buildlink
+BUILDLINK_TARGETS+=	glu-libGLU-la
 
 glu-buildlink: _BUILDLINK_USE
+
+glu-libGLU-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libGLU.la";			\
+	libpattern="${BUILDLINK_PREFIX.glu}/lib/libGLU.*";		\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# GLU_BUILDLINK2_MK
