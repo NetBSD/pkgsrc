@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/06/16 19:50:57 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2001/06/19 04:22:08 jlam Exp $
 
 DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
@@ -21,6 +21,8 @@ MAKEFILE=	GNUmakefile
 .if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == arm32)
 CFLAGS=
 .endif
+
+USE_BUILDLINK_ONLY=	yes
 
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
