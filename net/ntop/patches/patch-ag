@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 1999/07/06 08:06:30 jlam Exp $
+
+--- Makefile.in.orig	Tue Oct  6 11:27:31 1998
++++ Makefile.in	Fri Jul  2 14:19:28 1999
+@@ -42,7 +42,8 @@
+ DEFS = @DEFS@
+ 
+ # Standard CFLAGS
+-CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
++CPPFLAGS = @CPPFLAGS@
++CFLAGS = $(CCOPT) $(CPPFLAGS) $(DEFS) $(INCLS)
+ 
+ # Standard LDFLAGS
+ LDFLAGS = @LDFLAGS@
