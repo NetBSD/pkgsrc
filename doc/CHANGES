@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4467 2004/01/15 11:48:37 markd Exp $
+$NetBSD: CHANGES,v 1.4468 2004/01/15 19:13:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -291,3 +291,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kde3-i18n-zh_CN to 3.1.5 [markd 2004-01-15]
 	Updated kde3-i18n-zh_TW to 3.1.5 [markd 2004-01-15]
 	Updated kde3-i18n-zu to 3.1.5 [markd 2004-01-15]
+	Added connect-1.69 [tron 2004-01-15]
