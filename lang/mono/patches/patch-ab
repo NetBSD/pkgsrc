@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.10 2005/04/05 06:45:47 recht Exp $
+
+--- mono/dis/dis-cil.c.orig	Wed Mar 30 23:26:14 2005
++++ mono/dis/dis-cil.c
+@@ -19,6 +19,7 @@
+ #include "dis-cil.h"
+ #include "mono/metadata/opcodes.h"
+ 
++#ifndef HAVE_ISINF
+ #ifdef HAVE_IEEEFP_H
+ #include <ieeefp.h>
+ int isinf (double);
+@@ -37,7 +38,6 @@ isinf (double num)
+ 	return 0;
+ }
+ #else
+-#ifndef HAVE_ISINF
+ #error "Don't know how to implement isinf for this platform."
+ #endif
+ #endif
