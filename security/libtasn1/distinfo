@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/05 23:16:20 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/03/01 15:12:10 jmmv Exp $
 
-SHA1 (libtasn1-0.2.6.tar.gz) = b8050b3d5be78c010115a26103e0b0fd358f5adf
-Size (libtasn1-0.2.6.tar.gz) = 357235 bytes
+SHA1 (libtasn1-0.2.7.tar.gz) = d956cbf01288285a5a03f0c4e1671b1c48ea0f35
+Size (libtasn1-0.2.7.tar.gz) = 529912 bytes
