@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/07/28 11:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/28 11:55:08 wiz Exp $
 #
 
-DISTNAME=	xpdf-chinese-simplified-2004-jan-16
-PKGNAME=	xpdf-chinese-simplified-20040116
+DISTNAME=	xpdf-chinese-simplified-2004-jul-27
+PKGNAME=	xpdf-chinese-simplified-20040727
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
