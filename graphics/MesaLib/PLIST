@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/03/24 18:03:33 jschauma Exp $
-etc/mesa.conf
+@comment $NetBSD: PLIST,v 1.8 2003/04/17 22:15:45 jmmv Exp $
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
@@ -20,4 +19,6 @@ lib/libOSMesa.la
 lib/libOSMesa.so
 lib/libOSMesa.so.4
 lib/libOSMesa.so.4.500
+share/examples/MesaLib/mesa.conf
+@dirrm share/examples/MesaLib
 @unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
