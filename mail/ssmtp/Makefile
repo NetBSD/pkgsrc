@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/19 20:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/19 22:01:46 jlam Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -18,6 +18,8 @@ HOMEPAGE=	http://packages.debian.org/testing/mail/ssmtp.html
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-ssl --enable-inet6
@@ -45,11 +47,15 @@ post-patch:
 		${RM} -f $$f.orig ;					\
 	done
 
+post-build:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
+		> ${WRKDIR}/mailer.conf
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/ssmtp.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/revaliases ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 
 .include "../../security/openssl/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
