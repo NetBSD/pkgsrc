@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/20 22:19:43 jlam Exp $
+$NetBSD: distinfo,v 1.2 2002/09/20 09:51:44 jlam Exp $
 
-SHA1 (libyahoo-0.18.2.tar.gz) = 0ca4ed90e5e95aba999d32874fa5c765d2b9053e
-Size (libyahoo-0.18.2.tar.gz) = 74389 bytes
+SHA1 (libyahoo-0.18.4.tar.gz) = 02e8916b1c25c13bcbc3ebac5e512e6a4ea876e1
+Size (libyahoo-0.18.4.tar.gz) = 187776 bytes
