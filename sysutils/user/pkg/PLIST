@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/16 16:28:31 agc Exp $
+sbin/user
+sbin/useradd
+sbin/userdel
+sbin/usermod
+sbin/group
+sbin/groupadd
+sbin/groupdel
+sbin/groupmod
+man/cat8/user.0
+man/cat8/useradd.0
+man/cat8/userdel.0
+man/cat8/usermod.0
+man/cat8/group.0
+man/cat8/groupadd.0
+man/cat8/groupdel.0
+man/cat8/groupmod.0
+man/man8/user.8
+man/man8/useradd.8
+man/man8/userdel.8
+man/man8/usermod.8
+man/man8/group.8
+man/man8/groupadd.8
+man/man8/groupdel.8
+man/man8/groupmod.8
+share/examples/usermgmt/.cshrc
+share/examples/usermgmt/.login
+share/examples/usermgmt/.profile
+@dirrm share/examples/usermgmt
