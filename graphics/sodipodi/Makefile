@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2003/01/30 17:57:45 salo Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/10 23:02:18 wiz Exp $
 #
 
-DISTNAME=	sodipodi-0.28
+DISTNAME=	sodipodi-0.31
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
 MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://www.gnome.org/gnome-office/sodipodi.shtml
 COMMENT=	Open source vector graphics drawing program using SVG as native format
+
+DEPENDS+=	gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -16,17 +18,9 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 
-PTHREAD_OPTS+=		require
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/gal/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../net/ORBit/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
+.include "../../print/libgnomeprintui/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
