@@ -1,0 +1,18 @@
+$NetBSD: patch-ap,v 1.1 1999/01/11 01:11:22 abs Exp $
+
+--- kcontrol/info.orig/memory.h	Mon Nov 17 11:05:18 1997
++++ kcontrol/info/memory.h	Sun Jan 10 16:28:19 1999
+@@ -26,7 +26,11 @@
+ 
+ private:
+ 
++#ifdef __NetBSD__
++  QLabel *freeMem, *totalMem, *activeMem, *inactiveMem, *swapMem, *freeSwapMem;
++#else
+   QLabel *freeMem, *totalMem, *sharedMem, *bufferMem, *swapMem, *freeSwapMem;
++#endif
+   QTimer *timer;
+   
+ public slots:
+diff -N -u kdebase-1.0/kcontrol/info.orig/memory_netbsd.cpp kdebase-1.0/kcontrol/info/memory_netbsd.cpp
+
