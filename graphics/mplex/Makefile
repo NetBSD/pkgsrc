@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/19 08:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/07 13:04:00 gavan Exp $
 
 DISTNAME=	mjpegtools-1.6.0
 PKGNAME=	mplex-1.6.0
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+USE_GCC_SHLIB=	yes
 
 do-build:
 	cd ${WRKSRC}/utils && ${GMAKE}
