@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.12 2000/08/02 17:18:46 wiz Exp $
+$NetBSD: md5,v 1.13 2000/08/21 16:37:02 veego Exp $
 
-MD5 (rsync-2.4.4.tar.gz) = fb2653d816c87b1d7804651e65cc927d
-MD5 (rsync-244-v6-20000802.diff.gz) = 9d1b04212290fe65b64eec688468b02c
+MD5 (rsync-2.4.5.tar.gz) = d8397f98cce56a090e9b3893ca451d62
+MD5 (rsync-245-v6-20000820b.diff.gz) = d17603e11997a440451602d3d511199c
