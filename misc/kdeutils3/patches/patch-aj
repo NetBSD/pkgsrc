@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
+$NetBSD: patch-aj,v 1.2 2003/01/17 03:34:04 markd Exp $
 
---- klaptopdaemon/Makefile.am.orig	Tue Feb 26 20:54:52 2002
+--- klaptopdaemon/Makefile.am.orig	Fri Mar  8 14:19:15 2002
 +++ klaptopdaemon/Makefile.am
 @@ -1,15 +1,19 @@
 -lib_LTLIBRARIES = klaptopdaemon.la
@@ -27,7 +27,15 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  
  kcm_laptop_la_SOURCES = battery.cpp  main.cpp  pcmcia.cpp  power.cpp  warning.cpp portable.cpp
  
-@@ -25,6 +29,3 @@
+@@ -18,13 +22,10 @@
+ 
+ INCLUDES= $(all_includes)
+ 
+-LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
++LDFLAGS = $(all_libraries) $(KDE_RPATH) $(EXPORT_SYMBOLS_LDFLAGS)
+ 
+ kcm_laptop_la_METASOURCES = AUTO
+ 
  messages:
  	$(XGETTEXT) $(klaptopdaemon_la_SOURCES) -o $(podir)/klaptopdaemon.pot
  	$(XGETTEXT) $(kcm_laptop_la_SOURCES) -o $(podir)/kcmlaptop.pot
