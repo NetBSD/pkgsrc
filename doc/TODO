@@ -346,6 +346,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o slib-3a1
 	o smarteiffel-1.1 [replacing smalleiffel]
+	o smokeping-1.29 [pkg/25549]
 	o snd-7.4
 	o snes9x-1.42
 	o snownews-1.5.2
