@@ -1,0 +1,7 @@
+Xfstt is an X11 Font Server for TrueType fonts.
+
+TT fonts are generally regarded to be the best scalable
+fonts for low resolution devices like displays.
+
+Examples where good scalable fonts improve the visual
+quality considerably are netscape(tm), gimp and java(tm).
