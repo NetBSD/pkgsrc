@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/02/10 14:39:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/28 22:23:27 jmmv Exp $
 #
 
-DISTNAME=	gnome-common-2.4.0
+DISTNAME=	gnome-common-2.8.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/2.8/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
