@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.6 2005/01/13 20:11:55 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.7 2005/01/13 20:20:35 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -80,34 +80,6 @@ USE_DIRS?=		# empty
 .  include "../../mk/dirs.mk"
 .endif
 
-### USE_FORTRAN
-
-.if defined(USE_FORTRAN)
-.  if !exists(/usr/bin/f77)
-PKG_FC?=		f2c-f77
-.  endif
-# it is anticipated that once /usr/bin/f77 is more stable that the following
-# default will be changed to f77.  However, in the case where there is no
-# /usr/bin/f77, the default will remain as f2c-f77.
-.for __tmp__ in 1.[5-9]* [2-9].*
-.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-*} != ""
-PKG_FC?=		f77
-.  endif    # MACHINE_PLATFORM
-.endfor     # __tmp__
-PKG_FC?=	f2c-f77
-.  if  (${PKG_FC} == "f2c-f77")
-# this is a DEPENDS not BUILD_DEPENDS because of the
-# shared Fortran libs
-.    if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.      include "../../lang/f2c/buildlink3.mk"
-.    else
-DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
-.    endif
-.  endif
-FC=             ${PKG_FC}
-F77=            ${PKG_FC}
-.endif
-
 ### USE_LIBTOOL, PKG_[SH]LIBTOOL
 
 #
@@ -124,7 +96,7 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-.  if defined(USE_FORTRAN)
+.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran)
 LIBTOOL_REQD?=		1.5.10nb7
 .  endif
 LIBTOOL_REQD?=		1.5.10nb1
