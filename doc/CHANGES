@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9178 2005/02/18 13:48:38 wiz Exp $
+$NetBSD: CHANGES,v 1.9179 2005/02/18 13:57:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-libwww to 5.803 [wiz 2005-02-18]
 	Updated p5-Storable to 2.13 [wiz 2005-02-18]
 	Updated bins to 1.1.27 [wiz 2005-02-18]
+	Updated p5-libxml to 0.08 [wiz 2005-02-18]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3035 2005/02/18 13:48:38 wiz Exp $
+$NetBSD: TODO,v 1.3036 2005/02/18 13:57:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -853,7 +853,6 @@ Suggested package updates
 	o p5-gtk2-1.073
 	o p5-ispman-1.1.1
 	o p5-libapreq-1.3
-	o p5-libxml-0.08
 	o p5-perl-ldap-0.3202
 	o p5-razor-agents-2.67
 	o p5-sybperl-2.17
