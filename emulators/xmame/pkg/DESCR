@@ -1,9 +1,14 @@
-X-MAME is the X11 port of the MAME arcade game emulator.
+Xmame is the X11 port of the MAME arcade game emulator.
+
+MAME is a virtual machine emulator; it includes emulators for the CPUs,
+sound and video chips used in game consoles, as well as special purpose
+PALs and detailed information about the memory layout of each machine.
 
 MAME is a virtual machine emulator; it includes emulators for numerous
 CPUs, sound and video chips used in arcade games, as well as special
 purpose decoding PALs and detailed information about the memory layout of
 each game.
 
-To play games in X-MAME you must have a copy of the original ROMs from
-the arcade games.
+MAME now also includes MESS, an emulator for various game consoles.
+
+To play games in Xmame you must have a copy of the original game ROMs.
