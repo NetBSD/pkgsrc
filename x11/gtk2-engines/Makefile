@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/03 18:49:57 reed Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=		gtk-engines-2.2.0
@@ -13,13 +13,13 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme engines for GTK+ version 2
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gtk-engines-2.pc.in
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
