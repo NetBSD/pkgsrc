@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/04/21 02:15:37 explorer Exp $
+# $NetBSD: Makefile,v 1.14 2000/05/10 12:28:37 veego Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -18,26 +18,30 @@ MIRROR_DISTFILE=	no
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
-			NetBSD-*-sparc NetBSD-*-vax
+			NetBSD-*-sparc NetBSD-*-vax \
+			SunOS-*
 
 CONFIGURE_ARGS=		-fPIC -DPIC --openssldir=${PREFIX} --prefix=${PREFIX} \
 			${LDFLAGS}
 #CONFIGURE_ENV=		PREFIX=${PREFIX}
-MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
-
-# Note, this list gets bigger if using the RSAref library
-PLIST_SRC=		pkg/PLIST
-
-.if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
-IGNORE=			requires shared object support
-.endif
 
 .include "../../mk/bsd.prefs.mk"
+
+PATCHDIR=		${WRKDIR}/.patches
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
+.endif
+
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+
+.if ${OPSYS} == "NetBSD" && !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
+IGNORE=			requires shared object support
+.endif
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 DEPENDS=		rsaref-2.0p3:../../security/rsaref
 CONFIGURE_ARGS+=	rsaref
-PLIST_SRC+=		pkg/PLIST.rsaref
+PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
 fetch-depends:
@@ -49,6 +53,15 @@ fetch-depends:
 	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
 	@${ECHO} choose -- NO is faster.
 	@${FALSE}
+.endif
+
+pre-patch:
+	${MKDIR} ${WRKDIR}/.patches
+	@${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
+.if ${OPSYS} == "NetBSD"
+	for FILE in ${.CURDIR}/patches/patch.netbsd-*; do \
+		@${CP} $$FILE ${PATCHDIR}/patches-$${FILE##-}; \
+	done
 .endif
 
 # The Perl stuff doesn't work yet (nor did it work properly in SSLeay...)
@@ -81,9 +94,10 @@ do-install:
 		${INSTALL_SCRIPT} ${WRKDIR}/der_chop ${PREFIX}/bin/
 	cd ${WRKSRC}/apps && ${INSTALL_SCRIPT} CA.sh CA.pl ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
-	cd ${WRKSRC} && \
-		${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/; \
-		${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib/
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib/
+.if ${OPSYS} == "NetBSD"
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/
+.endif
 .if exists(/usr/bin/ranlib)
 	/usr/bin/ranlib ${PREFIX}/lib/libcrypto.a
 	/usr/bin/ranlib ${PREFIX}/lib/libssl.a
@@ -119,10 +133,15 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/doc/$$file \
 			${PREFIX}/share/doc/openssl/; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/certs ${PREFIX}/private
+	${INSTALL_DATA_DIR} ${PREFIX}/certs
+	${INSTALL_DATA_DIR} ${PREFIX}/private
 	@if [ ! -f ${PREFIX}/etc/openssl.cnf ]; then \
 		${CP} -p ${PREFIX}/etc/openssl.cnf.example ${PREFIX}/etc/openssl.cnf; \
 	fi
+
+post-install:
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} \
+		${PLIST_RSAREF} > ${PLIST_SRC}
 
 .include  "../../mk/bsd.pkg.mk"
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2000/04/22 05:07:03 fredb Exp $
+$NetBSD: patch.netbsd-ad,v 1.1 2000/05/10 12:28:43 veego Exp $
 
 --- Makefile.org.orig	Thu Mar 16 13:46:20 2000
 +++ Makefile.org	Fri Apr 21 23:43:06 2000

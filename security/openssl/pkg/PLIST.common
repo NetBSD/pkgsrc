@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/04/24 13:54:41 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2000/05/10 12:28:45 veego Exp $
 bin/CA.pl
 bin/CA.sh
 bin/asn1parse
@@ -137,9 +137,7 @@ include/openssl/x509.h
 include/openssl/x509_vfy.h
 include/openssl/x509v3.h
 lib/libcrypto.a
-lib/libcrypto.so.1.0
 lib/libssl.a
-lib/libssl.so.1.0
 share/doc/openssl/README
 share/doc/openssl/apps/CA.pl.pod
 share/doc/openssl/apps/crl.pod
