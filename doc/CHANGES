@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8153 2004/11/29 17:26:30 taca Exp $
+$NetBSD: CHANGES,v 1.8154 2004/11/29 17:39:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5642,3 +5642,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated classpath to 0.12 [wiz 2004-11-29]
 	Updated classpath-gui to 0.12 [wiz 2004-11-29]
 	Updated AiCA to 0.81 [wiz 2004-11-29]
+	Updated xchat2 to 2.4.1 [minskim 2004-11-29]
