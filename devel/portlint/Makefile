@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/04/25 13:23:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/05 14:39:39 frueauf Exp $
 #
 
 DISTNAME=		portlint-1.64
@@ -16,6 +16,8 @@ EXTRACT_AFTER_ARGS=	|sh
 
 NO_WRKSUBDIR=		yes
 NO_CONFIGURE=		yes
+
+MAKE_ENV=		PORTSDIR=${.CURDIR}/../..
 
 MAN1=			portlint.1
 
