@@ -1,0 +1,22 @@
+$NetBSD: patch-et,v 1.1 2002/06/25 22:14:14 skrll Exp $
+
+--- libkonq/Makefile.in.orig	Tue Jun 25 19:31:42 2002
++++ libkonq/Makefile.in
+@@ -738,7 +738,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=konq_settings.cc konqpopupmenuplugin.desktop konq_xmlguiclient.cc kbookmarkexporter.cc konq_iconviewwidget.cc konq_historymgr.cc konq_undo.cc DESIGN konq_operations.cc konq_bgnddlg.cc kfileivi.cc SERVICEMENUS konq_faviconmgr.cc konq_dirpart.cc konq_events.cc directory_bookmarkbar.desktop konq_historycomm.cc konq_propsview.cc PLUGINS konq_drag.cc konq_sound.cc konq_pixmapprovider.cc 
++KDE_DIST=DESIGN konq_sound.la.closure konq_settings.cc konq_operations.cc konq_drag.cc libkonq.la.closure konq_historycomm_skel.cc konq_sound.cc konq_faviconmgr.kidl konqpopupmenuplugin.desktop konq_xmlguiclient.cc kbookmarkexporter.cc konq_dirpart.cc konq_events.cc konq_bgnddlg.cc konq_faviconmgr_skel.cc directory_bookmarkbar.desktop kfileivi.cc konq_undo.kidl SERVICEMENUS konq_historycomm.cc konq_historycomm.kidl konq_iconviewwidget.cc konq_pixmapprovider.cc konq_historymgr.cc konq_propsview.cc konq_undo_skel.cc konq_faviconmgr.cc konq_undo.cc PLUGINS 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -836,7 +836,7 @@
+ 
+ #>- install-exec-am: install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
