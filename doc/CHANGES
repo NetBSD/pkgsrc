@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8199 2004/12/01 13:14:09 adam Exp $
+$NetBSD: CHANGES,v 1.8200 2004/12/01 14:00:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5696,3 +5696,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ispell-base to 3.2.06 [markd 2004-12-01]
 	Updated ispell-british to 3.2.06 [markd 2004-12-01]
 	Updated openh323 to 1.15.2 [adam 2004-12-01]
+	Updated openal to 20040816 [adam 2004-12-01]
