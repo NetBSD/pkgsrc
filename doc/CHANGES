@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.498 2002/11/10 12:44:15 grant Exp $
+$NetBSD: CHANGES,v 1.499 2002/11/10 19:38:38 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pvm to 3.4.4 [is 2002-11-09]
 	Updated aperture to 2.0nb4 [tron 2002-11-10]
 	Added mozilla-linux-1.2rc1 [grant 2002-11-10]
+	Updated fluxbox to 0.1.12 [jmcneill 2002-11-10]
