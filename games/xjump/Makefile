@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 00:01:17 snj Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/23 04:52:57 snj Exp $
 
 DISTNAME=		xjump_2.7.5.orig
 PKGNAME=		xjump-2.7.5
@@ -19,4 +19,5 @@ USE_X11=		YES
 do-install:
 	${INSTALL} -g games -m 2755 ${WRKSRC}/xjump ${PREFIX}/bin/xjump
 
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
