@@ -1,7 +1,7 @@
 TeXfamily 1.2.1 is a correction of previous release 1.2 of TeX package with
 Japanese and other language, based on teTeX 1.0.7.
 
-NetBSD verion of this package contains several programs:
+NetBSD version of this package contains several programs:
 
 1. Programs included with original TeXfamily
   - NTT JTeX 1.9.1 (Japanese TeX)
