@@ -1,8 +1,86 @@
-$NetBSD: patch-aa,v 1.2 1999/04/04 23:34:45 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/09/06 18:03:43 bad Exp $
 
---- configure.orig	Sat Jul 18 10:34:33 1998
-+++ configure	Sat Jul 18 10:35:03 1998
-@@ -4204,6 +4204,7 @@
+--- configure.orig	Sat Nov 21 18:12:59 1998
++++ configure	Fri Sep  3 19:47:23 1999
+@@ -3635,7 +3635,7 @@
+     if test -x $DUMP; then
+         echo $ac_n "checking whether $DUMP supports -E for estimates""... $ac_c" 1>&6
+ echo "configure:3638: checking whether $DUMP supports -E for estimates" >&5
+-if eval "test \"`echo '$''{'amanda_cv_dump_estimate'+set}'`\" = set"; then
++if eval "test \"`echo '$''{'amanda_cv_dump_estimate_e'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   
+@@ -3648,26 +3648,61 @@
+ 		        | $EGREP -v "Dumping\|Date of" >conftest.d'; { (eval echo configure:3649: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
+ 		    cat conftest.d >&5
+ 		    if { ac_try='diff conftest.d-E conftest.d 1>&2'; { (eval echo configure:3651: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }; then
+-		        amanda_cv_dump_estimate=yes
++		        amanda_cv_dump_estimate_e=yes
+ 		    else
+-		        amanda_cv_dump_estimate=no
++		        amanda_cv_dump_estimate_e=no
+ 		    fi
+ 		    rm -f conftest.d conftest.d-E conftest.d-noE
+ 	          ;;
+-	        *) amanda_cv_dump_estimate=no
++	        *) amanda_cv_dump_estimate_e=no
+ 	          ;;
+ 	        esac
+ 	    
+ fi
+ 
+-echo "$ac_t""$amanda_cv_dump_estimate" 1>&6
++echo "$ac_t""$amanda_cv_dump_estimate_e" 1>&6
++        echo $ac_n "checking whether $DUMP supports -S for estimates""... $ac_c" 1>&6
++echo "configure:3638: checking whether $DUMP supports -S for estimates" >&5
++if eval "test \"`echo '$''{'amanda_cv_dump_estimate_s'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  
++	        case "$DUMP" in
++	        *dump)
++		    { ac_try='$DUMP 9Sf /dev/null /dev/null/invalid/fs
++		        >conftest.d-S 2>&1'; { (eval echo configure:3646: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
++		    cat conftest.d-S >&5
++		    { ac_try='$DUMP 9f /dev/null /dev/null/invalid/fs 2>&1
++		        | $EGREP -v "Dumping\|Date of" >conftest.d'; { (eval echo configure:3649: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
++		    cat conftest.d >&5
++		    if { ac_try='diff conftest.d-S conftest.d 1>&2'; { (eval echo configure:3651: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }; then
++		        amanda_cv_dump_estimate_s=yes
++		    else
++		        amanda_cv_dump_estimate_s=no
++		    fi
++		    rm -f conftest.d conftest.d-S conftest.d-noS
++	          ;;
++	        *) amanda_cv_dump_estimate_s=no
++	          ;;
++	        esac
++	    
++fi
++
++echo "$ac_t""$amanda_cv_dump_estimate_s" 1>&6
+     else
+ 	echo "configure: warning: *** $DUMP is not executable, cannot run -E test" 1>&2
+-	amanda_cv_dump_estimate=no
++	amanda_cv_dump_estimate_e=no
++	amanda_cv_dump_estimate_s=no
+     fi
+-    if test "$amanda_cv_dump_estimate" = yes; then
++    if test "$amanda_cv_dump_estimate_e" = yes; then
+ 	cat >> confdefs.h <<\EOF
+-#define HAVE_DUMP_ESTIMATE 1
++#define HAVE_DUMP_ESTIMATE "E"
++EOF
++
++    fi
++    if test "$amanda_cv_dump_estimate_s" = yes; then
++	cat >> confdefs.h <<\EOF
++#define HAVE_DUMP_ESTIMATE "S"
+ EOF
+ 
+     fi
+@@ -4457,6 +4492,7 @@
    echo "$ac_t""no" 1>&6
  fi
  
@@ -10,11 +88,11 @@ $NetBSD: patch-aa,v 1.2 1999/04/04 23:34:45 tron Exp $
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -4249,6 +4250,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+@@ -4502,6 +4538,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- # Extract the first word of "gcc", so it can be a program name with args.
- set dummy gcc; ac_word=$2
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
