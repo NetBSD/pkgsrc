@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8981 2005/01/30 23:18:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.8982 2005/01/30 23:49:58 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jre15 to 5.0.1nb2 [jmmv 2005-01-30]
 	Updated win32-jdk to 0.1nb1 [jmmv 2005-01-30]
 	Removed java-wrapper [jmmv 2005-01-30]
+	Updated powermanga to 0.79 [salo 2005-01-30]
