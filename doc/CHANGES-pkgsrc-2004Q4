@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.96 2005/03/01 20:58:59 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.97 2005/03/02 22:16:52 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -203,3 +203,5 @@ Pullup ticket 324 - requested by Thomas Klausner
 security fix for wu-ftpd
 Pullup ticket 321 - requested by Lubomir Sedlacik
 distfile update for unzip
+Pullup ticket 326 - requested by Matthias Scheler
+security fix for gftp
