@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 1999/04/15 20:39:47 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/06/22 08:11:34 itohy Exp $
 #
 
-DISTNAME=		transfig.3.2.1
-PKGNAME=		transfig-3.2.1
-WRKSRC=			${WRKDIR}/transfig.3.2.1
+DISTNAME=		transfig.3.2.3
+PKGNAME=		transfig-3.2.3
+WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		graphics print
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/transfig/}
 
