@@ -1,31 +1,46 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/15 20:35:57 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/11 07:58:48 abs Exp $
 
---- system.mk.orig	Sat Jul  1 07:37:50 2000
-+++ system.mk	Thu Apr  5 09:25:26 2001
-@@ -7,7 +7,7 @@
- ## Installation directory prefix
- ##
+--- Makefile.orig	Sat Jul  1 16:48:50 2000
++++ Makefile
+@@ -12,7 +12,7 @@
+ INCLUDES += -I./libtu/include $(X11_INCLUDES)
+ DEFINES += -DPREFIX=\"$(PREFIX)\"
+ CFLAGS += $(XOPEN_SOURCE)
+-TO_REALCLEAN += pwm.1x
++TO_REALCLEAN += pwm.1
  
--PREFIX=/usr/local
-+#PREFIX=/usr/local
+ OBJS=	main.o draw.o font.o frame.o event.o clientwin.o thing.o \
+ 	property.o pointer.o key.o moveres.o cursor.o function.o \
+@@ -23,7 +23,7 @@
+ BINDIR=$(PREFIX)/bin
+ ETCDIR=$(PREFIX)/etc
+ MANDIR=$(PREFIX)/man/man1
+-DOCDIR=$(PREFIX)/doc
++DOCDIR=$(PREFIX)/share/doc
  
- #EXTRA_INCLUDES = -I$(PREFIX)/include
- #EXTRA_LIBS = -L$(PREFIX)/lib
-@@ -17,7 +17,7 @@
- ## X libraries, includes and options
- ##
+ TARGETS=pwm
  
--X11_PREFIX=/usr/X11R6
-+X11_PREFIX=${X11BASE}
+@@ -33,11 +33,11 @@
  
- # SunOS/Solaris
- #X11_PREFIX=/usr/openwin
-@@ -58,7 +58,7 @@
- 	-Wparentheses -pedantic-errors
+ ######################################
  
- CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
--LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
-+LDFLAGS+=$(LIBS)
+-pwm: $(OBJS) pwm.1x
++pwm: $(OBJS) pwm.1
+ 	$(CC) $(OBJS) $(LDFLAGS) -o $@
  
+-pwm.1x: pwm.1x.in
+-	sed 's#PREFIX#$(PREFIX)#g' pwm.1x.in > pwm.1x
++pwm.1: pwm.1x.in
++	sed 's#PREFIX#$(PREFIX)#g' pwm.1x.in > pwm.1
  
- ##
+ _install:
+ 	$(INSTALL) -d $(BINDIR)
+@@ -45,7 +45,7 @@
+ 	$(STRIP) $(BINDIR)/pwm
+ 
+ 	$(INSTALL) -d $(MANDIR)
+-	$(INSTALL) -m $(DATA_MODE) pwm.1x $(MANDIR)
++	$(INSTALL) -m $(DATA_MODE) pwm.1 $(MANDIR)
+ 
+ 	$(INSTALL) -d $(DOCDIR)
+ 	$(INSTALL) -d $(DOCDIR)/pwm
