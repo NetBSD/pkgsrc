@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/21 06:28:57 snj Exp $
 #
 
 DISTNAME=	bump_scope-0.0.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://staff.xmms.org/zinx/xmms/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://staff.xmms.org/zinx/xmms/
-COMMENT=	Moving light embossing occiliscope
+COMMENT=	Moving light embossing oscilloscope
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
