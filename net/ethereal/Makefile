@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2002/09/30 11:50:25 martti Exp $
+# $NetBSD: Makefile,v 1.67 2002/12/09 17:09:00 drochner Exp $
 
 DISTNAME=		ethereal-0.9.7
 CATEGORIES=		net
@@ -14,7 +14,7 @@ USE_X11=		YES
 USE_PERL5=		build
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk}
