@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/08/20 15:16:41 tsarna Exp $
+# $NetBSD: Makefile,v 1.7 1998/08/26 14:17:15 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www-cad.eecs.berkeley.edu/Software/software.html
+HOMEPAGE=	http://infopad.eecs.berkeley.edu/~icdesign/SPICE/
 
 # documentation in ftp://ic.eecs.berkeley.edu/pub/Spice3/um.3f3.ps
 
