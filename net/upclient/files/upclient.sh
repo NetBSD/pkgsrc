@@ -2,6 +2,6 @@
 
 if [ -x @PREFIX@/bin/upclient ]
 then
-	@PREFIX@/bin/upclient
+	su -m nobody -c @PREFIX@/bin/upclient
 	echo -n ' upclient'
 fi
