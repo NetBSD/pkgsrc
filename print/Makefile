@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/12/29 02:47:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/08 23:33:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -41,7 +41,7 @@
 #    SUBDIR += tex
 #    SUBDIR += texinfo
 #    SUBDIR += tr2latex
-#    SUBDIR += transfig
+    SUBDIR += transfig
 #    SUBDIR += virtualpaper
 #    SUBDIR += xdvi
 #    SUBDIR += xmbibtex
