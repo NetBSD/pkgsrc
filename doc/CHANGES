@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6773 2004/08/03 08:44:47 schmonz Exp $
+$NetBSD: CHANGES,v 1.6774 2004/08/03 09:00:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3700,3 +3700,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ups-nut to 2.0.0nb1 [martti 2004-08-03]
 	Updated xosview to 1.8.2 [cube 2004-08-03]
 	Updated getmail to 4.0.4 [schmonz 2004-08-03]
+	Updated qmail-run to 20040803 [schmonz 2004-08-03]
