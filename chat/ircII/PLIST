@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/10 13:38:29 mrg Exp $
 bin/irc
-bin/irc-20010612
+bin/irc-20011210
 bin/ircbug
 bin/ircflush
 bin/ircio
@@ -277,6 +277,7 @@ share/irc/help/on/public_msg@.GZ@
 share/irc/help/on/public_notice@.GZ@
 share/irc/help/on/public_other@.GZ@
 share/irc/help/on/raw_irc@.GZ@
+share/irc/help/on/raw_send@.GZ@
 share/irc/help/on/send_action@.GZ@
 share/irc/help/on/send_dcc_chat@.GZ@
 share/irc/help/on/send_msg@.GZ@
