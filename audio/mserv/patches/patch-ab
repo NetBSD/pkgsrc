@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/02/12 14:22:15 martin Exp $
+$NetBSD: patch-ab,v 1.2 2002/02/12 14:49:46 martin Exp $
 
 --- Makefile.orig	Sat Jul 15 20:29:10 2000
 +++ Makefile	Tue Feb 12 15:13:35 2002
@@ -7,13 +7,13 @@ $NetBSD: patch-ab,v 1.1 2002/02/12 14:22:15 martin Exp $
  
  default:
 -	(cd mserv; ./configure)
-+	(cd mserv; ./configure --prefix=${PREFIX})
++	(cd mserv; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
  	(cd mserv; make DEFS=${DEFS})
 -	(cd mservcli; ./configure)
-+	(cd mservcli; ./configure --prefix=${PREFIX})
++	(cd mservcli; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
  	(cd mservcli; make DEFS=${DEFS})
 -	(cd mservutils; ./configure)
-+	(cd mservutils; ./configure --prefix=${PREFIX})
++	(cd mservutils; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
  	(cd mservutils; make DEFS=${DEFS})
  
  install:
