@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/10/19 10:54:57 rh Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/21 16:07:47 wiz Exp $
 
 DISTNAME=		gtop-1.0.13
 PKGREVISION=		1
@@ -9,19 +9,19 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 
-BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
-DEPENDS+=		libgtop>=1.0.12nb2:../../devel/libgtop
+BUILD_USES_MSGFMT=	YES
 
 OSVERSION_SPECIFIC=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-USE_LIBINTL=		YES
 
 GNU_CONFIGURE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
-CFLAGS+=		-I${LOCALBASE}/include
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libgtop/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
