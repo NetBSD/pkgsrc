@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:57:43 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/26 01:22:16 dmcmahill Exp $
 
 SHA1 (OOo_1.1.4_LinuxIntel_install.tar.gz) = 769eada389dee1829a327ab791ec80d48da10422
 RMD160 (OOo_1.1.4_LinuxIntel_install.tar.gz) = 6188beaa49d0998e011b24344333076b6f27e40a
 Size (OOo_1.1.4_LinuxIntel_install.tar.gz) = 80144225 bytes
+SHA1 (OOo_1.1.4_SolarisIntel_install.tar.gz) = d0aea193beca995a6687deea3e14405667a5e1b2
+RMD160 (OOo_1.1.4_SolarisIntel_install.tar.gz) = a92c3ac523de7e89c7ebcc909226764ac2f1d8fe
+Size (OOo_1.1.4_SolarisIntel_install.tar.gz) = 82084451 bytes
+SHA1 (OOo_1.1.4_SolarisSparc_install.tar.gz) = b4b5d309fa97a96e6c1623bebe202647adad4383
+RMD160 (OOo_1.1.4_SolarisSparc_install.tar.gz) = ffa52c76bc1ea01639baf1192bbe7c0fbf86acf8
+Size (OOo_1.1.4_SolarisSparc_install.tar.gz) = 90876883 bytes
 SHA1 (openoffice-linux-112-services.rdb.bz2) = c2a538eff450a50221baa212226807d0efd6b12e
 RMD160 (openoffice-linux-112-services.rdb.bz2) = 857b4ab16e9af2f58264953fdfde2e4bd1972d7b
 Size (openoffice-linux-112-services.rdb.bz2) = 61919 bytes
