@@ -1,6 +1,6 @@
-#!@PREFIX@/bin/perl
+#!@PERL5@
 #
-# $NetBSD: patchdiff.pl,v 1.5 2002/08/14 16:30:07 seb Exp $
+# $NetBSD: patchdiff.pl,v 1.6 2004/01/10 05:40:40 jlam Exp $
 #
 # patchdiff: compares a set of patches patch-aa, patch-ab, ... in
 #   $WRKDIR/.newpatches in the with another set in patches.
