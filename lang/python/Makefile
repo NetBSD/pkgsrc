@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/09/28 19:40:14 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1998/12/16 22:44:07 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -23,14 +23,12 @@ PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
 
-NOT_FOR_ARCHS=	alpha # sigh
-
 WRKSRC=		${WRKDIR}/Python-1.5.1
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	'OPT=${CFLAGS}'
 
 # Handle the module setup file:
-#   - disable some modules on 64 bit platforms
+#   - disable a few broken modules on 64 bit platforms (nothing important)
 #   - handle machines with no dynamic loader
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
