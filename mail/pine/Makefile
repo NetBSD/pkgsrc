@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2002/06/21 14:16:48 abs Exp $
+# $NetBSD: Makefile,v 1.61 2002/07/18 14:18:48 abs Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -34,11 +34,11 @@ pre-patch:
 	${RM} -fr ${WRKSRC}/imap
 
 do-configure:
-	${CP} -f ${WRKSRC}/pine/osdep/os-${BUILDNAME}.h ${WRKSRC}/pine/osdep/os-${BUILDNAME}.h.orig
+	${CP} -f ${WRKSRC}/pine/osdep/os-${BUILDFILE}.h ${WRKSRC}/pine/osdep/os-${BUILDFILE}.h.orig
 	${SED} \
 		-e 's@/usr/local/lib/@${PREFIX}/etc/@' \
 		-e 's@DEFAULT_DEBUG.*2@DEFAULT_DEBUG 0@' \
-		<${WRKSRC}/pine/osdep/os-${BUILDNAME}.h.orig >${WRKSRC}/pine/osdep/os-${BUILDNAME}.h
+		<${WRKSRC}/pine/osdep/os-${BUILDFILE}.h.orig >${WRKSRC}/pine/osdep/os-${BUILDFILE}.h
 	@${RM} -rf ${WRKSRC}/pico
 	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
 
@@ -77,8 +77,11 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
 BUILDNAME= gs5
+BUILDFILE= gs5
 .elif ${OPSYS} == "Linux"
-BUILDNAME= lrh  
+BUILDNAME= lrh
+BUILDFILE= lnx
 .else
 BUILDNAME= neb
+BUILDFILE= neb
 .endif
