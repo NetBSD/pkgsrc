@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:54 jtb Exp $
-#
-#  XXX  Otter doesn't respect CFLAGS because -O2 optimization causes
-#	the program to malfunction (-O is fine).
+# $NetBSD: Makefile,v 1.5 2001/04/25 23:35:30 jtb Exp $
 
 DISTNAME=	otter-3.0.6
 CATEGORIES=	math
@@ -19,22 +16,18 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/otter ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/otter
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/otter
-	@(cd ${WRKDIR}/${PKGNAME};					\
-	for r in Announce Changelog Copying README*;			\
-	do								\
-	${INSTALL_DATA} $$r ${PREFIX}/share/doc/otter;			\
-	done;								\
-	for d in auto fringe ivy kalman misc program split wos;		\
-	do								\
+	cd ${WRKDIR}/${PKGNAME} && ${INSTALL_DATA} Announce Changelog 	\
+		Copying README* ${PREFIX}/share/doc/otter
+	for d in auto fringe ivy kalman misc program split wos;	do	\
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/otter/$$d;		\
-	${INSTALL_DATA} examples/$$d/* ${PREFIX}/share/examples/otter/$$d;\
-	done;								\
-	for p in Run_all objects summary;				\
-	do								\
-	${INSTALL_SCRIPT} examples/$$p ${PREFIX}/share/examples/otter/$$p;\
-	done;								\
-	${INSTALL_DATA} examples/README ${PREFIX}/share/examples/otter;	\
+	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/examples/$$d/*		\
+		${PREFIX}/share/examples/otter/$$d;			\
+	done
+	cd ${WRKDIR}/${PKGNAME}/examples && ${INSTALL_SCRIPT} Run_all 	\
+		objects	summary ${PREFIX}/share/examples/otter
+	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/examples/README 		\
+		${PREFIX}/share/examples/otter
 	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/document/* 		\
-	${PREFIX}/share/doc/otter)
+		${PREFIX}/share/doc/otter
 
 .include "../../mk/bsd.pkg.mk"
