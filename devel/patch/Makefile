@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/12/04 09:14:41 seb Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/24 19:47:28 seb Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -9,7 +9,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
 
-NO_PATCH=	yes
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,10 +22,12 @@ PROGRAM_PREFIX=
 
 PLIST_SUBST+=		PROGRAM_PREFIX=${PROGRAM_PREFIX}
 
-post-extract:
+do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
-	${SED}  -e '/#include <pch.h>/a\' -e '#include <sys/param.h>'	\
-		-e 's/^#if HAVE_SETMODE/#if defined(HAVE_SETMODE) \&\& (!(defined(BSD) \&\& BSD >= 199306))/' \
+	${AWK} '/#include <pch.h>/{print $$0 "\n#include <sys/param.h>";next;}\
+		/^#if HAVE_SETMODE/					\
+		{gsub(/^#if HAVE_SETMODE/,"#if defined(HAVE_SETMODE) \\&\\& (!(defined(BSD) \\&\\& BSD >= 199306))");print $$0; next; }			\
+		{print $$0;}'						\
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
 
