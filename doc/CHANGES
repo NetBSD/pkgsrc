@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1302 2003/02/02 17:32:19 tron Exp $
+$NetBSD: CHANGES,v 1.1303 2003/02/02 19:40:41 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dvdbackup-0.1.1 [wulf 2003-02-02]
 	Added libgcrypt-1.1.11 [tron 2003-02-02]
 	Updated wmbiff to 0.4.13nb1 [tron 2003-02-02]
+	Updated spamassassin to 2.44 [heinz 2003-02-02]
