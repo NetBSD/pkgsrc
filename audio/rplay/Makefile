@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/22 11:05:02 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.sdsu.edu/pub/rplay/
 
 MAINTAINER=	rmallory@csusb.edu
 
-LIB_DEPENDS=    gsm.1.0:${PORTSDIR}/audio/gsm
+DEPENDS+=	gsm-1.0.10:../../audio/gsm
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= "--prefix=${PREFIX}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/22 14:22:48 agc Exp $
 #
 
 DISTNAME=		transfig.3.2
@@ -10,8 +10,8 @@ MASTER_SITE_SUBDIR=	applications/drawing_tools/transfig
 
 MAINTAINER=		root@garbled.futureone.com
 
-LIB_DEPENDS=		jpeg.7.:${PORTSDIR}/graphics/jpeg \
-			Xpm.4.:${PORTSDIR}/graphics/xpm
+DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		jpeg-6a:../../graphics/jpeg
 
 USE_IMAKE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:27 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/22 14:22:43 agc Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
 
 MAN1=	fax2ps.1 fax2tiff.1 gif2tiff.1 pal2rgb.1 ppm2tiff.1 ras2tiff.1 \
 	rgb2ycbcr.1 sgi2tiff.1 thumbnail.1 tiff2bw.1 tiff2ps.1 tiffcmp.1 \

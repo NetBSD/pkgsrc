@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 MAINTAINER=	packages@netbsd.org
 
 MAKE_ENV+=	USE_TCL=true
-LIB_DEPENDS+=	tcl80.1.:${PORTSDIR}/lang/tcl80 \
-		tk80.1.:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 
 NO_PACKAGE=	"Requires pgsql uid"
 WRKSRC=		${WRKDIR}/${DISTNAME}/src

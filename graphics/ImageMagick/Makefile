@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/04/15 22:21:17 tron Exp $
+# $NetBSD: Makefile,v 1.18 1998/04/22 14:22:41 agc Exp $
 #
 
 DISTNAME=	ImageMagick-4.0.5
@@ -7,10 +7,10 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
-		mpeg.1.2:${PORTSDIR}/graphics/mpeg-lib \
-		png.0.:${PORTSDIR}/graphics/png \
-		tiff.3.4:${PORTSDIR}/graphics/tiff
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	png-0.96:../../graphics/png
+DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 
 USE_IMAKE=	yes
 XMKMF=		${MAKE_ENV} xmkmf -a

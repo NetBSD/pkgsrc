@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:56 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/22 14:22:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
@@ -10,9 +10,9 @@ MASTER_SITES=		http://isolation.ml.org/oxygen/wm/bin/ \
 
 MAINTAINER=		handy@physics.montana.edu
 
-LIB_DEPENDS=		Xpm.4.:${PORTSDIR}/graphics/xpm \
-			png.0.:${PORTSDIR}/graphics/png \
-			jpeg.7.:${PORTSDIR}/graphics/jpeg
+DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		jpeg-6a:../../graphics/jpeg
+DEPENDS+=		png-0.96:../../graphics/png
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes

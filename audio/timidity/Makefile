@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/15 10:38:11 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/22 14:22:40 agc Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -10,10 +10,10 @@ DISTFILES=      ${TIINS} ${DISTNAME}.tar.gz
 
 MAINTAINER=     mycroft@NetBSD.ORG
 
-BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip \
-		wish8.0:${PORTSDIR}/x11/tk80
+BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip
 RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
-LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
+DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 NO_CDROM=       "Uses copyrighted patches"
 

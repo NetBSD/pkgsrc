@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/22 14:22:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	Tk
 MAINTAINER=		packages@netbsd.org
 
 BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/HTML/Parse.pm:${PORTSDIR}/www/p5-libwww
-LIB_DEPENDS=		tk80.1.:${PORTSDIR}/x11/tk80
+DEPENDS+=		tk-8.0p2:../../x11/tk80
 
 USE_PERL5=		YES
 

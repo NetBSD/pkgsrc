@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:28 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/22 14:22:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -15,8 +15,8 @@ PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
-		tiff.3.4:${PORTSDIR}/graphics/tiff
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
 
 USE_IMAKE=	yes
 
