@@ -1,1 +1,1 @@
-Build a kernel config file from dmesg output.
+Build a NetBSD kernel config file from dmesg output.
