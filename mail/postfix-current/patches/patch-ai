@@ -1,7 +1,16 @@
-$NetBSD: patch-ai,v 1.4 2004/04/14 12:55:20 minskim Exp $
+$NetBSD: patch-ai,v 1.5 2004/04/20 17:50:40 taca Exp $
 
---- makedefs.orig	2004-01-16 18:27:11.000000000 -0600
+--- makedefs.orig	2004-04-18 20:26:56.000000000 +0900
 +++ makedefs
+@@ -97,7 +97,7 @@ case "$SYSTEM.$RELEASE" in
+ 		;;
+   OpenBSD.3*)	SYSTYPE=OPENBSD3
+ 		;;
+-   NetBSD.1*)	SYSTYPE=NETBSD1
++   NetBSD.*)	SYSTYPE=NETBSD1
+ 		;;
+    BSD/OS.2*)	SYSTYPE=BSDI2
+ 		;;
 @@ -178,22 +178,6 @@ case "$SYSTEM.$RELEASE" in
  		SYSLIBS="-ldb"
  		;;
