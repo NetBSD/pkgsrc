@@ -1,0 +1,179 @@
+Received: (qmail 12134 invoked from network); 22 May 1999 21:21:46 -0000
+Received: from c460058-a.frmt1.sfba.home.com (HELO capsicum.wsrcc.com) (24.1.65.208)
+  by redmail.netbsd.org with SMTP; 22 May 1999 21:21:46 -0000
+Received: (from wolfgang@localhost)
+	by capsicum.wsrcc.com (8.9.3/8.9.3) id OAA12827;
+	Sat, 22 May 1999 14:21:43 -0700 (PDT)
+Message-Id: <199905222121.OAA12827@capsicum.wsrcc.com>
+Date: Sat, 22 May 1999 14:21:43 -0700 (PDT)
+From: Wolfgang Rupprecht <wolfgang@wsrcc.com>
+Reply-To: wolfgang@wsrcc.com
+To: gnats-bugs@gnats.netbsd.org
+Subject: xearth loses on a 24bit depth frame buffer
+X-Send-Pr-Version: 3.95
+
+>Number:         7626
+>Category:       pkg
+>Synopsis:       xearth loses on a 24bit depth frame buffer
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    pkg-manager (NetBSD software packages system bug manager)
+>State:          open
+>Class:          sw-bug
+>Submitter-Id:   net
+>Arrival-Date:   Sat May 22 14:35:01 1999
+>Last-Modified:  
+>Originator:     Wolfgang Rupprecht
+>Organization:
+W S Rupprecht Computer Consulting, Fremont CA
+>Release:        current 5/12/99
+>Environment:
+	
+System: NetBSD capsicum.wsrcc.com 1.4 NetBSD 1.4 (WSRCC) #0: Wed May 12 11:24:36 PDT 1999 root@capsicum.wsrcc.com:/v/src/netbsd/NetBSD-current/usr/src/sys/arch/i386/compile/WSRCC i386
+
+
+>Description:
+	xearth loses on a 24-bit depth visual
+>How-To-Repeat:
+	xearth &
+>Fix:
+
+--- x11.c.orig	Tue Nov 11 09:14:40 1997
++++ x11.c	Tue Nov 11 09:23:59 1997
+@@ -62,6 +62,9 @@
+ #define MONO_32  (5)
+ #define COLOR_32 (6)
+ 
++#define MONO_24  (7)
++#define COLOR_24 (9)
++
+ #define LABEL_LEFT_FLUSH (1<<0)
+ #define LABEL_TOP_FLUSH  (1<<1)
+ 
+@@ -76,6 +79,7 @@
+ static void         pack_mono_1 _P((u16or32 *, u_char *));
+ static void         pack_8 _P((u16or32 *, Pixel *, u_char *));
+ static void         pack_16 _P((u16or32 *, Pixel *, u_char *));
++static void         pack_24 _P((u16or32 *, Pixel *, u_char *));
+ static void         pack_32 _P((u16or32 *, Pixel *, u_char *));
+ static void         x11_row _P((u_char *));
+ static void         x11_cleanup _P((void));
+@@ -358,6 +362,11 @@
+ 
+   case 24:
+     /* try to pack ximage data 32 bits/pixel */
++    x_type = mono ? MONO_24 : COLOR_24;
++    break;
++
++  case 32:
++    /* try to pack ximage data 32 bits/pixel */
+     x_type = mono ? MONO_32 : COLOR_32;
+     break;
+ 
+@@ -376,6 +385,7 @@
+   case MONO_1:
+   case MONO_8:
+   case MONO_16:
++  case MONO_24:
+   case MONO_32:
+     mono_dither_setup();
+     pels = (Pixel *) malloc((unsigned) sizeof(Pixel) * 2);
+@@ -386,6 +396,7 @@
+ 
+   case COLOR_8:
+   case COLOR_16:
++  case COLOR_24:
+   case COLOR_32:
+     if (XAllocNamedColor(dsply, cmap, "red", &xc, &junk) != 0)
+       hlight = xc.pixel;
+@@ -689,6 +700,14 @@
+     bits_per_pixel = 16;
+     break;
+ 
++    /* added this. -wsr */
++  case MONO_24:
++  case COLOR_24:
++    dith_size      = wdth;
++    xbuf_size      = dith_size * 3;
++    bits_per_pixel = 24;
++    break;
++
+   case MONO_32:
+   case COLOR_32:
+     dith_size      = wdth;
+@@ -817,6 +836,43 @@
+ }
+ 
+ 
++/* pack pixels into ximage format (assuming bits_per_pixel == 24)
++ */
++static void pack_24(src, map, dst)
++     u16or32 *src;
++     Pixel   *map;
++     u_char  *dst;
++{
++  int      i, i_lim;
++  unsigned val;
++
++  i_lim = wdth;
++
++  if (xim->byte_order == MSBFirst)
++  {
++    for (i=0; i<i_lim; i++)
++    {
++      val    = map[src[i]];
++      dst[0] = (val >> 16) & 0xff;
++      dst[1] = (val >> 8) & 0xff;
++      dst[2] = val & 0xff;
++      dst   += 3;
++    }
++  }
++  else /* (xim->byte_order == LSBFirst) */
++  {
++    for (i=0; i<i_lim; i++)
++    {
++      val    = map[src[i]];
++      dst[0] = val & 0xff;
++      dst[1] = (val >> 8) & 0xff;
++      dst[2] = (val >> 16) & 0xff;
++      dst   += 3;
++    }
++  }
++}
++
++
+ /* pack pixels into ximage format (assuming bits_per_pixel == 32)
+  */
+ static void pack_32(src, map, dst)
+@@ -876,6 +932,11 @@
+     pack_16(dith, pels, xbuf);
+     break;
+ 
++  case MONO_24:
++    mono_dither_row(row, dith);
++    pack_24(dith, pels, xbuf);
++    break;
++
+   case MONO_32:
+     mono_dither_row(row, dith);
+     pack_32(dith, pels, xbuf);
+@@ -889,6 +950,11 @@
+   case COLOR_16:
+     dither_row(row, dith);
+     pack_16(dith, pels, xbuf);
++    break;
++
++  case COLOR_24:
++    dither_row(row, dith);
++    pack_24(dith, pels, xbuf);
+     break;
+ 
+   case COLOR_32:
+
+
+
+# eof
+>Audit-Trail:
+>Unformatted:
+
