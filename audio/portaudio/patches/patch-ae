@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/04/20 17:52:49 ben Exp $
+
+--- pa_tests/patest_wire.c.orig	Sat Nov 22 17:27:23 2003
++++ pa_tests/patest_wire.c	Sat Nov 22 17:27:54 2003
+@@ -74,9 +74,9 @@
+     SAMPLE *out = (SAMPLE*)outputBuffer;
+     SAMPLE *in = (SAMPLE*)inputBuffer;
+     unsigned int i;
+-    (void) outTime;
+     int samplesPerFrame;
+     int numSamples;
++    (void) outTime;
+     
+     samplesPerFrame = (int) userData;
+     numSamples =  framesPerBuffer * samplesPerFrame;
