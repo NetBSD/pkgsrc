@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.5 2003/05/24 19:26:26 jschauma Exp $
+
+--- gcc/f/Make-lang.in.orig	Sat May 24 14:56:08 2003
++++ gcc/f/Make-lang.in	Sat May 24 14:58:41 2003
+@@ -355,9 +355,9 @@
+ 	  chmod a-x $(infodir)/g77.info*; \
+ 	else true; fi
+ 	@if [ -f $(libsubdir)/lang-f77 -a -f $(srcdir)/f/g77.info ] ; then \
+-	  if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+-	    echo " install-info --info-dir=$(infodir) $(infodir)/g77.info"; \
+-	    install-info --info-dir=$(infodir) $(infodir)/g77.info || : ; \
++	  if $(SHELL) -c '${INSTALL_INFO} --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	    echo " ${INSTALL_INFO} --info-dir=$(infodir) $(infodir)/g77.info"; \
++	    ${INSTALL_INFO} --info-dir=$(infodir) $(infodir)/g77.info || : ; \
+ 	  else : ; fi; \
+ 	else : ; fi
+ 	rm -f $(libsubdir)/lang-f77
+@@ -390,9 +390,9 @@
+ 	  *) rm -f $(libsubdir)/lang-f77;; \
+ 	esac
+ 	@if [ -f $(libsubdir)/lang-f77 ] ; then \
+-	  if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+-	    echo " install-info --delete --info-dir=$(infodir) $(infodir)/g77.info"; \
+-	    install-info --delete --info-dir=$(infodir) $(infodir)/g77.info || : ; \
++	  if $(SHELL) -c '${INSTALL_INFO} --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	    echo " ${INSTALL_INFO} --delete --info-dir=$(infodir) $(infodir)/g77.info"; \
++	    ${INSTALL_INFO} --delete --info-dir=$(infodir) $(infodir)/g77.info || : ; \
+ 	  else : ; fi; \
+ 	else : ; fi
+ 	-if [ -f $(libsubdir)/lang-f77 ]; then \

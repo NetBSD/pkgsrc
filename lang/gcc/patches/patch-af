@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.6 2003/05/24 19:26:25 jschauma Exp $
+
+--- gcc/Makefile.in.orig	Sat May 24 14:56:02 2003
++++ gcc/Makefile.in	Sat May 24 14:57:47 2003
+@@ -2559,10 +2559,10 @@
+ 	for f in cpp.info* gcc.info*; do \
+ 	    $(INSTALL_DATA) $$f $(infodir)/$$f; \
+ 	done
+-	-if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
++	-if $(SHELL) -c '${INSTALL_INFO} --version' >/dev/null 2>&1; then \
+ 	  if [ -f $(infodir)/dir ] ; then \
+ 	    for f in cpp.info gcc.info; do \
+-		install-info --dir-file=$(infodir)/dir $(infodir)/$$f; \
++		${INSTALL_INFO} --dir-file=$(infodir)/dir $(infodir)/$$f; \
+ 	    done; \
+ 	  else true; fi; \
+ 	else true; fi;
