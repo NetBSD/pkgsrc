@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2001/06/24 05:52:03 taca Exp $
+# $NetBSD: Makefile,v 1.80 2001/06/28 17:02:02 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -20,6 +20,7 @@ SUBDIR+=	fortify
 SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	gnupg
+SUBDIR+=	gpa
 SUBDIR+=	isakmpd
 SUBDIR+=	john
 SUBDIR+=	kth-krb4
