@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2001/09/27 07:44:33 jlam Exp $
+# $NetBSD: Makefile,v 1.91 2001/10/01 15:25:40 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -47,9 +47,15 @@ SUBDIR+=	p0f
 SUBDIR+=	p5-Crypt-Blowfish
 SUBDIR+=	p5-Crypt-CBC
 SUBDIR+=	p5-Crypt-DES
-SUBDIR+=	p5-Crypt-Twofish
-SUBDIR+=	p5-Crypt-Rijndael
+SUBDIR+=	p5-Crypt-DES_EDE3
+SUBDIR+=	p5-Crypt-DSA
+SUBDIR+=	p5-Crypt-OpenPGP
+SUBDIR+=	p5-Crypt-Primes
 SUBDIR+=	p5-Crypt-RIPEMD160
+SUBDIR+=	p5-Crypt-RSA
+SUBDIR+=	p5-Crypt-Random
+SUBDIR+=	p5-Crypt-Rijndael
+SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Digest-MD2
 SUBDIR+=	p5-Digest-MD4
 SUBDIR+=	p5-Digest-MD5
@@ -58,6 +64,7 @@ SUBDIR+=	p5-IO-Socket-SSL
 SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-SHA
 SUBDIR+=	p5-SSLeay
+SUBDIR+=	p5-Tie-EncryptedHash
 SUBDIR+=	pakemon
 SUBDIR+=	pam-ldap
 SUBDIR+=	pgp2
