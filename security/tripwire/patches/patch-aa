@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/04/09 10:46:56 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/05/31 04:10:32 ross Exp $
 
 Miscellaneous Makefile settings.
 
@@ -33,7 +33,7 @@ Miscellaneous Makefile settings.
  #CFLAGS = -systype bsd43	# MIPS RISC/OS 4.5x
  #CFLAGS = -O -ansi		# gnu CC
 -#CFLAGS = -O -ansi -W -Wreturn-type -Wswitch -Wshadow # gnu CC w/all warnings
-+CFLAGS = -O -ansi -W -Wreturn-type -Wswitch -Wshadow # gnu CC w/all warnings
++CFLAGS = -O -ansi -W -Wreturn-type -Wswitch -Wshadow -DTW_TYPE32='int'
  #CFLAGS = -OG			# Pyramid OSx
  #CFLAGS = -O -Kold		# Pyramid DC/OSx (SVR4)
  #CFLAGS = -DTW_TYPE32='int'	# DEC OSF/1 Alpha (or any other architecture
