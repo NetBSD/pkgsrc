@@ -1,4 +1,4 @@
-# $NetBSD: xfree.mk,v 1.8 2004/03/10 18:35:32 jlam Exp $
+# $NetBSD: xfree.mk,v 1.9 2004/03/11 00:47:01 jlam Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
@@ -22,7 +22,8 @@ FILES_LIST=	${FILESDIR}/xfree
 CHECK_BUILTIN.${_module_}=	yes
 .  if exists(${BUILDLINK_PKGSRCDIR.${_module_}}/builtin.mk)
 .    include "${BUILDLINK_PKGSRCDIR.${_module_}}/builtin.mk"
-.    if !empty(IS_BUILTIN.${_module_}:M[yY][eE][sS])
+.    if !empty(IS_BUILTIN.${_module_}:M[yY][eE][sS]) && \
+        exists(${FILESDIR}/xfree.${_module_})
 FILES_LIST+=	${FILESDIR}/xfree.${_module_}
 .    endif
 .  endif
