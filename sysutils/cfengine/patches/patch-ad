@@ -1,20 +1,44 @@
-$NetBSD: patch-ad,v 1.4 2000/10/02 16:43:45 abs Exp $
+$NetBSD: patch-ad,v 1.5 2001/06/04 16:18:21 abs Exp $
 
---- src/image.c.orig	Tue Sep 14 09:28:09 1999
-+++ src/image.c
-@@ -193,9 +193,12 @@
-    DeleteItemList(namecache);
-    }
-  
--DeleteCompressedArray(ip->inode_cache);
--
--ip->inode_cache = NULL;
-+	/* Only flush when exiting initial call to RecursiveImage() */
-+if (strcmp(from,ip->path) == 0)
-+   {
-+   DeleteCompressedArray(ip->inode_cache);
-+   ip->inode_cache = NULL;
-+   }
+--- contrib/vicf.in.orig	Mon Jun  4 16:46:23 2001
++++ contrib/vicf.in
+@@ -4,7 +4,7 @@
+ exec_prefix=@exec_prefix@
+ sbindir=@sbindir@
+ EDITOR="${EDITOR-vi}"
+-CFINPUTS="${CFINPUTS-"@pkgdata@"}
++CFINPUTS="${CFINPUTS-"@pkgdata@"}"
+ export EDITOR CFINPUTS
+ NOPARSE="cf.preconf|cfd.conf"
  
- cfclosedir(dirh);
- }
+@@ -20,7 +20,7 @@
+ 	echo "File not found: ${file}"
+ 	echo "Only these files are eligible for editing:"
+ 	\ls $CFINPUTS
+-	/usr/ucb/echo -n "Create new file? (Y/n) "
++	echo -n "Create new file? (Y/n) "
+ 	read answer
+ 	if [ "$answer" = "n" ]
+ 	then
+@@ -32,10 +32,10 @@
+     if [ -f ${CFINPUTS}/.${file}.lock -a "$force" = "n" ]
+     then
+ 	i=30
+-	/usr/ucb/echo -n "File ${file} is busy -- waiting up to $i seconds..."
++	echo -n "File ${file} is busy -- waiting up to $i seconds..."
+ 	while [ -f ${CFINPUTS}/.${file}.lock ]
+ 	do
+-		/usr/ucb/echo -n .
++		echo -n .
+ 		i=`expr $i - 1`
+ 		if [ $i = 0 ]
+ 		then
+@@ -62,7 +62,7 @@
+ 	then
+ 		echo PARSE ERROR IN NEW INPUT-FILE:
+ 		cat /tmp/cfparse.$$
+-		/usr/ucb/echo -n "Re-edit file? (Y/n) "
++		echo -n "Re-edit file? (Y/n) "
+ 		read answer
+ 		if [ "$answer" = "n" ]
+ 		then
