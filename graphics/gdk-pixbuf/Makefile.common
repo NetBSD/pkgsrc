@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2000/11/29 17:24:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/12/08 17:32:16 wiz Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.9.0
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
+DEPENDS+=		gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=		png>=1.0.8:../../graphics/png
 DEPENDS+=		tiff>=3.5.5:../../graphics/tiff
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
