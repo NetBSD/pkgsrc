@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/08/25 21:52:10 jlam Exp $
+$NetBSD: distinfo,v 1.4 2003/01/26 21:51:13 salo Exp $
 
-SHA1 (elinks-0.3.0.tar.bz2) = c531d7922b1fb51fb8eeda960ff1e41c656db03e
-Size (elinks-0.3.0.tar.bz2) = 446820 bytes
+SHA1 (elinks-0.4.2.tar.bz2) = a29b760d8e2abcc848940acd7ce27870be64113e
+Size (elinks-0.4.2.tar.bz2) = 760309 bytes
