@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.179 2002/10/06 03:41:25 jlam Exp $
+$NetBSD: CHANGES,v 1.180 2002/10/06 04:15:37 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3127,3 +3127,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-Net-DNS to 0.29 [heinz 2002-10-06]
 	Added p5-Digest-Nilsimsa-0.06 [heinz 2002-10-06]
 	Updated koffice3 to 1.1.1nb1 [jlam 2002-10-06]
+	Updated p5-razor-agents to 2.14 [heinz 2002-10-06]
