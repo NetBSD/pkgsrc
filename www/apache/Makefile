@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/12/22 19:41:52 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2001/01/13 15:25:04 tv Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -8,7 +8,7 @@
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.14
-PKGNAME=		apache-1.3.14.1
+PKGNAME=		apache-1.3.14nb1
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
