@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.14 1998/05/15 12:14:24 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.15 1998/05/29 02:34:36 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -118,7 +118,7 @@ README=	../templates/README.category
 
 HTMLIFY=	sed -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
 
-README.html:
+README.html: .PRECIOUS
 	@echo "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}"
 	@> $@.tmp
 .for entry in ${SUBDIR}
