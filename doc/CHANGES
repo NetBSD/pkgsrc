@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8000 2004/11/25 20:03:46 minskim Exp $
+$NetBSD: CHANGES,v 1.8001 2004/11/25 20:05:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5431,7 +5431,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gthumb to 2.6.1 [minskim 2004-11-25]
 	Updated gnetcat to 0.7.1 [snj 2004-11-25]
 	Updated gifsicle to 1.41 [snj 2004-11-25]
-	Updated Cg-compiler-1.3beta2 [minskim 2004-11-25]
+	Updated Cg-compiler to 1.3beta2 [minskim 2004-11-25]
 	Updated easyedit to 1.4.6 [snj 2004-11-25]
 	Updated py-pexpect to 0.999 [minskim 2004-11-25]
 	Updated feh to 1.2.9 [snj 2004-11-25]
