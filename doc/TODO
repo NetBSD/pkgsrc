@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2652 2004/12/05 08:14:17 jmmv Exp $
+$NetBSD: TODO,v 1.2653 2004/12/05 08:29:22 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -555,7 +555,6 @@ Suggested package updates
 	o hercules-3.01
 	o hevea-1.07
 	o hitchhiker-0.7
-	o hnb-1.9.17
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.1.4
 	o httperf-0.8
