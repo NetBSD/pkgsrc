@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.19 2001/12/01 12:40:52 hubertf Exp $
+# $NetBSD: build,v 1.20 2001/12/17 02:32:23 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -137,25 +137,10 @@ do
 	cd ${USR_PKGSRC}/$pkgdir && make bulk-install
 done
 
-# Figure out optimal build order.
+# Create the bulk cache files
 cd ${USR_PKGSRC}
 if [ "$1" != "restart" ]; then
-	echo "Building dependency tree (this may take a while)..."
-	sh mk/bulk/printdepends $BROKENFILE > $DEPENDSTREEFILE
-
-	echo "Sorting build order..."
-	tsort $DEPENDSTREEFILE > $ORDERFILE
-
-	echo "Generating up and down dependency files..."
-	./mk/bulk/tflat -u $DEPENDSTREEFILE > $SUPPORTSFILE
-	./mk/bulk/tflat -d $DEPENDSTREEFILE > $DEPENDSFILE
-
-	echo "Generating package name <=> package directory cross reference file (this may take a while)..."
-	sh mk/bulk/printindex $BROKENFILE > $INDEXFILE
-	if [ $? != 0 ]; then
-		echo "ERROR while creating $INDEXFILE"
-		exit 1
-	fi
+	cd ${USR_PKGSRC} && make bulk-cache
 fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
