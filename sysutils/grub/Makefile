@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/04/26 15:42:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2004/05/02 17:00:14 xtraeme Exp $
 #
 
 DISTNAME=	grub-0.94
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 
@@ -25,6 +26,7 @@ BUILD_DEFS+=		GRUB_NETWORK_CARDS
 BUILD_DEFS+=		GRUB_PRESET_COMMAND
 BUILD_DEFS+=		GRUB_SCAN_ARGS
 BUILD_DEFS+=		GRUB_ISO9660
+BUILD_DEFS+=		GRUB_UFS2
 
 .if defined(GRUB_NETWORK_CARDS)
 CONFIGURE_ARGS+=	--enable-diskless
@@ -57,19 +59,36 @@ CONFIGURE_ARGS+=	${GRUB_SCAN_ARGS}
 .if defined(GRUB_ISO9660)
 CONFIGURE_ARGS+=	--enable-iso9660
 PATCHFILES+=		grub-0.94-iso9660.diff
-PATCH_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/xtraeme/	
+SITES_grub-0.94-iso9660.diff=ftp://ftp.netbsd.org/pub/NetBSD/misc/xtraeme/
 
 PLIST_SUBST+=		ISO9660=
-
-pre-configure:
-	cd ${WRKSRC};                                           \
-	${ACLOCAL};                                             \
-	${AUTOHEADER};                                          \
-	${AUTOMAKE} -a --foreign -i;                            \
-	${AUTOCONF}
-.include "../../mk/automake.mk"
 .else
 PLIST_SUBST+=		ISO9660="@comment "
+.endif
+
+# UFS2 support for GRUB
+.if defined(GRUB_UFS2)
+CONFIGURE_ARGS+=	--enable-ufs2
+PATCHFILES+=		patch-ufs2
+SITES_patch-ufs2=http://sources.freebsd.org/HEAD/ports/sysutils/grub/files/
+
+PLIST_SUBST+=		UFS2=
+.else
+PLIST_SUBST+=		UFS2="@comment "
+.endif
+
+.if defined(GRUB_ISO9660) || defined(GRUB_UFS2)
+pre-configure:
+	cd ${WRKSRC};						\
+	${ACLOCAL};						\
+	${AUTOHEADER};						\
+	${AUTOMAKE} -a --foreign -i;				\
+	${AUTOCONF}
+.include "../../mk/automake.mk"
+.endif
+
+.if defined(GRUB_ISO9660) && defined(GRUB_UFS2)
+PKG_FAIL_REASON+=	"Please use GRUB_ISO9660 or GRUB_UFS2, but not both."
 .endif
 
 .include "../../devel/binutils/buildlink3.mk"
