@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2001/06/07 10:29:59 abs Exp $
+# $NetBSD: Makefile,v 1.216 2001/06/09 10:44:23 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -43,6 +43,7 @@ SUBDIR+=	doc++
 SUBDIR+=	eXdbm
 SUBDIR+=	eel
 SUBDIR+=	electricfence
+SUBDIR+=	elib
 SUBDIR+=	ffcall
 SUBDIR+=	flex
 SUBDIR+=	flim
@@ -126,8 +127,8 @@ SUBDIR+=	nqc
 SUBDIR+=	oaf
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AtExit
-SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-BSD-Resource
+SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Dumper
@@ -144,9 +145,9 @@ SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-FileKGlob
-SUBDIR+=	p5-IO-stringy
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tty
+SUBDIR+=	p5-IO-stringy
 SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Make
@@ -189,6 +190,7 @@ SUBDIR+=	rpc2
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sdcc
+SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfio
 SUBDIR+=	sgi-stl
