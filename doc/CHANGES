@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1733 2003/03/22 05:53:12 salo Exp $
+$NetBSD: CHANGES,v 1.1734 2003/03/22 06:06:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1250,3 +1250,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed-claws to 0.8.11nb1 [salo 2003-03-22]
 	Updated amp to 0.7.6nb1 [dillo 2003-03-22]
 	Updated molden to 3.8 [salo 2003-03-22]
+	Updated cscope to 15.3nb1 [wiz 2003-03-22]
