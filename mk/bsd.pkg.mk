@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.300 1999/07/21 12:16:27 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.301 1999/07/23 21:35:20 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1277,7 +1277,7 @@ root-install:
 		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
 		case "$$shlib_type" in					\
 		"ELF")							\
-			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
+			${ECHO_MSG} "===>   [Automatic ELF shared object handling]";\
 			for so3 in $$sos; do				\
 				so2=`${BASENAME} $$so3`; \
 				so1=`${ECHO} $$so3 | ${SED} -e 's|\.[0-9]*$$||'`; \
@@ -1302,7 +1302,7 @@ root-install:
 			done;						\
 			;;						\
 		"a.out")						\
-			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
+			${ECHO_MSG} "===>   [Automatic a.out shared object handling]";\
 			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
 			if [ $$cnt -eq 0 ]; then			\
 				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
