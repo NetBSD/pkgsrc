@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8156 2004/11/29 17:55:08 abs Exp $
+$NetBSD: CHANGES,v 1.8157 2004/11/29 18:36:18 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5645,4 +5645,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xchat2 to 2.4.1 [minskim 2004-11-29]
 	Updated epiphany to 2.4.6 [jmmv 2004-11-29]
 	Updated jabberd2 to 2.0s4nb1 [abs 2004-11-29]
+	Updated rconfig to 0.41 [abs 2004-11-29]
 
