@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/13 09:27:06 manu Exp $
+
+SHA1 (hobbit-4.0beta4.tar.gz) = a08d9f9f66a4682010b52b37044ed56e8bbcdee9
+Size (hobbit-4.0beta4.tar.gz) = 877211 bytes
+SHA1 (patch-aa) = e6b4ec53db64820dbb412c51ca1c982cb5682488
+SHA1 (patch-ab) = 56c15c5a0ae06ba11a57db4afa54b581cdae6be1
+SHA1 (patch-ac) = 45978593d7842e57bcc208a82f78e817322152ff
+SHA1 (patch-ad) = e14f9b6c0f45ac8ef86f2ee1019a21c1fa976a0f
+SHA1 (patch-af) = ac26bffb8f079d8352c76b6aef71103f2cd2e720
+SHA1 (patch-ag) = 4451bb8bf64bb241f8fc4f689b9bf6a975981137
+SHA1 (patch-ah) = e2df4e6cfafdb701473137f735572b89ab8a56fa
+SHA1 (patch-ai) = b0af1ab453e7f6170362a676f04eab2b07284e22

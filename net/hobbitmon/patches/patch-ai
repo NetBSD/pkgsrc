@@ -1,0 +1,11 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/01/13 09:27:06 manu Exp $
+--- docs/Makefile.orig	2005-01-13 00:10:08.000000000 +0100
++++ docs/Makefile	2005-01-13 00:10:52.000000000 +0100
+@@ -1,6 +1,6 @@
+ all:
+-	@/bin/true
++	@/usr/bin/true
+ 
+ clean:
+ 	rm -f *~ manpages/index.html* manpages/man1/* manpages/man5/* manpages/man7/* manpages/man8/*
+ 
