@@ -1,0 +1,4 @@
+  ImageViewer is a small application which display images.  ImageViewer is
+based on the GNUstep API.  In the future catalogue creation and other
+goodies may be added, right now it is what it is: an image viewer
+application.
