@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2796 2003/07/15 21:54:16 wennmach Exp $
+$NetBSD: CHANGES,v 1.2797 2003/07/16 01:39:23 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2826,3 +2826,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xlockmore to 5.09 [hubertf 2003-07-15]
 	Updated dctc to 0.85.4 [wiz 2003-07-15]
 	Added avr-binutils-2.13.2.1 [wennmach 2003-07-15]
+	Updated pkgdiff to 0.112 [grant 2003-07-16]
