@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/21 03:39:42 rh Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/05 14:29:42 wiz Exp $
 #
 
 DISTNAME=	antiword-0.33
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.winfield.demon.nl/linux/
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.winfield.demon.nl/index.html
 COMMENT=	free converter MS Word to text and Postscript converter
+
+CONFLICTS=	siag-[0-9]*
 
 post-patch:
 	cd ${WRKSRC} ; \
