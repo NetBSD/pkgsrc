@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/24 10:53:27 dillo Exp $
+
+--- unix/main.c.orig	Sun Nov  4 21:15:22 2001
++++ unix/main.c
+@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
+ 		char LocalDirectory[1024];
+ 		char ProgramDirectory[1024]="";
+ 		
+-		getcwd(ProgramDirectory, 1024);
++		strcpy(ProgramDirectory, SHAREDIR);
+ 
+ sprintf(LocalDirectory,"%s/roms/amsdose/",ProgramDirectory);
+ 	
+@@ -94,8 +94,6 @@ LocalDirectory);	
+ 
+ 	if (CPCEmulation_Initialise())
+ 	  {
+-		chdir(ProgramDirectory);
+-
+ 		CPC_SetCPCType(CPC_TYPE_CPC6128);
+ 
+ 		if (argc!=0)
