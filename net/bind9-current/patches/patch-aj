@@ -1,0 +1,10 @@
+$NetBSD: patch-aj,v 1.1 2001/02/04 11:15:43 itojun Exp $
+
+--- bin/named/Makefile.in-	Sun Feb  4 19:02:24 2001
++++ bin/named/Makefile.in	Sun Feb  4 19:02:32 2001
+@@ -103,4 +103,4 @@
+ install:: named lwresd installdirs
+ 	${LIBTOOL} ${INSTALL_PROGRAM} named ${DESTDIR}${sbindir}
+ 	(cd ${DESTDIR}${sbindir}; rm -f lwresd; @LN@ named lwresd)
+-	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man8; done
++	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man8; done
