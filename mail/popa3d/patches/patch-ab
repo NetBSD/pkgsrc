@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/02 01:32:28 wiz Exp $
+
+--- Makefile.orig	Tue Feb  1 04:56:46 2000
++++ Makefile	Sun Apr  2 00:29:25 2000
+@@ -1,9 +1,11 @@
+-CC = gcc
+-LD = gcc
+-RM = rm -f
+-CFLAGS = -c -Wall -O2 -fomit-frame-pointer
+-LDFLAGS = -s
++CC ?= gcc
++LD = ${CC}
++RM ?= rm -f
++CFLAGS += -c -Wall -O2 -fomit-frame-pointer
++LDFLAGS += -s -lcrypt
+ #LDFLAGS = -s -lcrypt
++
++all: popa3d
+ 
+ PROJ = popa3d
+ OBJS = md5/md5.o \
