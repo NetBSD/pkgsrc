@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/24 23:18:38 snj Exp $
+# $NetBSD: Makefile,v 1.27 2004/06/02 15:43:09 minskim Exp $
 #
 
 DISTNAME=		gnuplot-3.7.3
@@ -14,6 +14,8 @@ HOMEPAGE=		http://sourceforge.net/projects/gnuplot/
 COMMENT=		Gnuplot is a nice plotting utility
 
 CONFLICTS+=             gnuplot-nox11-[0-9]*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
