@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/30 21:55:31 mjl Exp $
+$NetBSD: distinfo,v 1.2 2002/04/17 11:03:26 shell Exp $
 
-SHA1 (XML-Checker-0.10.tar.gz) = 08c8238cd44dcb02bb18e5db578cc810fc9a7e70
-Size (XML-Checker-0.10.tar.gz) = 31571 bytes
+SHA1 (XML-Checker-0.11.tar.gz) = 7e49781f870c7a6773e047cf7caf37472a3ff296
+Size (XML-Checker-0.11.tar.gz) = 33762 bytes
