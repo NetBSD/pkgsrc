@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1624 2003/03/12 00:51:27 mjl Exp $
+$NetBSD: CHANGES,v 1.1625 2003/03/12 03:23:39 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1062,3 +1062,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mimedefang to 2.30 [markd 2003-03-11]
 	Added biznet-iso8859-2-1.0 [salo 2003-03-11]
 	Added tex-ocrb-1.0 [mjl 2003-03-12]
+	Added aewm++-1.0.22 [jschauma 2003-03-12]
