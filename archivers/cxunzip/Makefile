@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/05/10 17:04:41 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/27 14:56:19 tv Exp $
 
 DISTNAME=	cxunzip-0.98
 PKGREVISION=	1
@@ -15,7 +15,6 @@ USE_BUILDLINK3=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
-#USE_LIBTOOL=	yes
 
 .include "../../x11/gnome-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
