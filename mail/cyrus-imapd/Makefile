@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2001/09/18 21:56:29 skrll Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/25 19:35:57 skrll Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		IMAP server
 
