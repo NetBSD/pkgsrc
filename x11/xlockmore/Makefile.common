@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/12/31 03:06:37 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/01/06 07:17:13 jlam Exp $
 #
 # This Makefile.common is included by:
 #
@@ -23,7 +23,9 @@ DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -49,7 +51,7 @@ CONFIGURE_ARGS+=        --without-gtk
 
 .if ${OPSYS} == "NetBSD"
 .  if defined(USE_OSS)
-.    include "../../audio/oss/buildlink2.mk"
+.    include "../../audio/oss/buildlink3.mk"
 BUILDLINK_DEPENDS.oss=	oss-[0-9]*
 XLOCK_AUDIOPLAY?=	${BUILDLINK_PREFIX.oss}/bin/ossplay
 .  else
