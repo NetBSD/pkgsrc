@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/30 15:04:58 taca Exp $
 #
 
-DISTNAME=	ruby-termios-module-0.0.4
+DISTNAME=	termios
+PKGNAME=	${RUBY_PKGNAMEPREFIX}termios-0.0.4
 CATEGORIES=	comms
-MASTER_SITES=	ftp://arika.org/pub/Tools/Ruby/
+MASTER_SITES=	ftp://ftp.ruby-lang.org/pub/ruby/contrib/
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://arika.org/ruby/termios.html
-COMMENT=	termios module for Ruby
+COMMENT=	Ruby extention to termios library
 
-DEPENDS+=	ruby-1.4.*:../../lang/ruby
-
-RUBY_VERSION=	1.4
-PLIST_SUBST=	RUBY_VERSION=${RUBY_VERSION}
-
-do-configure:
-	(cd ${WRKSRC}; ruby extconf.rb)
+DIST_SUBDIR=	ruby
+USE_RUBY_EXTCONF= yes
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/termios
-	${INSTALL_DATA} ${WRKSRC}/test[0-3].rb \
-		${PREFIX}/share/examples/ruby/termios
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/termios
+	${INSTALL_DATA} ${WRKSRC}/test/test[0-3].rb ${RUBY_EXAMPLESDIR}/termios
 
+.include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
