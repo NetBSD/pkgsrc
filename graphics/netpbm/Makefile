@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/03/21 08:30:48 tron Exp $
+# $NetBSD: Makefile,v 1.69 2003/04/11 18:56:44 salo Exp $
 
 DISTNAME=	netpbm-10.11.6
 PKGREVISION=	1
@@ -57,8 +57,7 @@ post-install:
 	  ${TEST} -d "${PREFIX}/$${DIR}" ||		\
 	    ${ECHO} "@dirrm $${DIR}";			\
 	done >>${PLIST_SRC} &&				\
-	${GTAR} cf - * | ${GTAR} xpCf ${PREFIX} - &&	\
-	${RM} -fr ${STAGEDIR}
+	${GTAR} cf - * | ${GTAR} xpCf ${PREFIX} -
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
