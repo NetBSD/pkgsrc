@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2003/08/30 21:10:12 jtb Exp $
+$NetBSD: patch-aa,v 1.11 2004/06/11 13:22:36 grant Exp $
 
---- Makefile.in.orig	2003-08-19 19:24:28.000000000 +0100
-+++ Makefile.in	2003-08-19 19:24:43.000000000 +0100
-@@ -5,7 +5,7 @@
+--- Makefile.in.orig	2003-05-11 23:02:15.000000000 +1000
++++ Makefile.in
+@@ -5,7 +5,7 @@ localedir=@localedir@
  mandir=@mandir@
  kdedir=@kdemimedir@
  gnomedir=@gnomemimedir@
@@ -11,3 +11,13 @@ $NetBSD: patch-aa,v 1.10 2003/08/30 21:10:12 jtb Exp $
  
  CC=@CC@
  CP=/bin/cp
+@@ -33,7 +33,8 @@ lint: ${SRCS}
+ 	splint -weak -initallelements +posixlib `gtk-config --cflags` -I. ${SRCS} >splint.log
+ 
+ install: chemtool src-cht/cht
+-	${INSTALL} -d ${DESTDIR}${prefix}/bin ${DESTDIR}${mandir}/man1
++	${INSTALL} -d ${DESTDIR}${prefix}/bin
++	${INSTALL} -d ${DESTDIR}${mandir}/man1
+ 	${INSTALL} chemtool src-cht/cht ${DESTDIR}${prefix}/bin
+ 	$(INSTALL) chemtool.1 ${DESTDIR}${mandir}/man1
+ 	$(INSTALL) cht.1 ${DESTDIR}${mandir}/man1
