@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/09/09 19:51:44 wiz Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/01/04 20:37:31 hubertf Exp $
 #
 
 case "$2" in
@@ -10,7 +10,7 @@ case "$2" in
 
 If you won't be using sendfile any longer, do the following:
 
- o remove the `saft' lines from /etc/services and /etc/inetd.conf;
+ o remove the "saft" lines from /etc/services and /etc/inetd.conf;
    restart inetd.
  o remove the check_sendfile lines from /etc/profile and /etc/csh.login
  o remove the directory /var/spool/sendfile and its contents
