@@ -1,0 +1,41 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+
+--- src/FSViewer.c.orig	Sat Oct  9 20:45:22 1999
++++ src/FSViewer.c
+@@ -127,8 +127,8 @@
+     }
+ 
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask | NSClosableWindowMask);
+-    attributes.window_level = NSFloatingWindowLevel;
++    attributes.window_style = (WMTitledWindowMask | WMClosableWindowMask);
++    attributes.window_level = WMFloatingWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
+@@ -153,10 +153,10 @@
+     }
+ 
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask | 
+-			       NSClosableWindowMask |
+-			       NSMiniaturizableWindowMask);
+-    attributes.window_level = NSNormalWindowLevel;
++    attributes.window_style = (WMTitledWindowMask | 
++			       WMClosableWindowMask |
++			       WMMiniaturizableWindowMask);
++    attributes.window_level = WMNormalWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
+@@ -182,8 +182,8 @@
+     // This is horrible: there must be a better way?
+     XStoreName(fsViewer->dpy, window, " ");
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask);
+-    attributes.window_level = NSFloatingWindowLevel;
++    attributes.window_style = (WMTitledWindowMask);
++    attributes.window_level = WMFloatingWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
