@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.7 2002/07/28 05:49:29 schmonz Exp $
+$NetBSD: patch-af,v 1.8 2002/12/14 10:34:44 tron Exp $
 
---- pine/makefile.osx.orig	Wed Oct 24 15:42:24 2001
-+++ pine/makefile.osx
-@@ -50,7 +50,9 @@ OPTIMIZE=    # -O
+--- pine/makefile.osx.orig	Fri Sep 20 20:22:23 2002
++++ pine/makefile.osx	Sat Dec 14 11:18:00 2002
+@@ -50,7 +50,9 @@
  PROFILE=     # -pg
- DEBUG=       -g -DDEBUG
+ DEBUG=       -g -DDEBUG -DDEBUGJOURNAL
  
 -CCLIENTDIR=  ../c-client
 +CCLIENTDIR=  ${PREFIX}
@@ -13,11 +13,11 @@ $NetBSD: patch-af,v 1.7 2002/07/28 05:49:29 schmonz Exp $
  PICODIR=     ../pico
  
  # Only need to uncomment next two lines if you run make from this directory
-@@ -61,15 +63,14 @@ PICODIR=     ../pico
+@@ -61,15 +63,14 @@
  LDAPOFILES=   addrbook.o adrbkcmd.o args.o bldaddr.o init.o \
  	      mailview.o other.o pine.o strings.o takeaddr.o
  
--STDLIBS=
+-STDLIBS=     -lncurses
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
 -LIBS=        $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 -             `cat $(CCLIENTDIR)/LDFLAGS`
@@ -33,7 +33,7 @@ $NetBSD: patch-af,v 1.7 2002/07/28 05:49:29 schmonz Exp $
  
  OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
  	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
-@@ -81,20 +82,20 @@ HFILES=	headers.h os.h pine.h context.h 
+@@ -81,20 +82,20 @@
  	$(PICODIR)/headers.h $(PICODIR)/estruct.h \
  	$(PICODIR)/edef.h $(PICODIR)/efunc.h \
  	$(PICODIR)/pico.h $(PICODIR)/os.h \
@@ -59,7 +59,7 @@ $NetBSD: patch-af,v 1.7 2002/07/28 05:49:29 schmonz Exp $
  	$(CC) $(LDFLAGS) $(CFLAGS) -o rpdump rpdump.o $(LIBS)
  
  pine-use:	pine-use.c
-@@ -114,8 +115,8 @@ os.c:	osdep/os-osx.c
+@@ -114,8 +115,8 @@
  
  $(OFILES):						$(HFILES)
  addrbook.o adrbkcmd.o adrbklib.o bldaddr.o takeaddr.o:	adrbklib.h

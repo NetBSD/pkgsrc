@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2002/12/14 04:34:49 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
-#
+# $NetBSD: Makefile,v 1.66 2002/12/14 10:34:43 tron Exp $
 
-DISTNAME=       pine4.44
-PKGNAME=        pine-4.44
+DISTNAME=       pine4.51
+PKGNAME=        pine-4.51
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
@@ -18,7 +17,7 @@ BUILD_DEFS+=	PINE_USE_LDAP
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK2=	YES
 
 .if defined(PINE_USE_LDAP) && (${PINE_USE_LDAP} == "YES")
 .  include "../../databases/openldap/buildlink2.mk"
