@@ -9,3 +9,6 @@ versions of the files had been saved as filename.orig.
 
 patchdiff compares a previously existing set of patches with another
 one created by mkpatches, and outputs any changes.
+
+pkgvi makes backup copies if a file is changed, so pkgdiff can be run
+on it later, generating a patch for the changes made.
