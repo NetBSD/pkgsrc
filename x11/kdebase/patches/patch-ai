@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 1998/09/18 09:59:52 tron Exp $
+
+--- kpanel/Makefile.in.orig	Fri Jul 10 20:35:38 1998
++++ kpanel/Makefile.in	Fri Sep 18 00:55:24 1998
+@@ -152,7 +152,11 @@
+ INCLUDES	= $(all_includes)
+ DISTCLEANFILES 	= $(BUILT_SOURCES)
+ 
++.if (${MACHINE_ARCH} == m68k)
++CXXFLAGS =
++.else
+ CXXFLAGS = @NOOPT_CXXFLAGS@
++.endif
+ 
+ bin_PROGRAMS = kpanel
+ kpanel_LDADD =	$(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET) $(KDE_RPATH)
