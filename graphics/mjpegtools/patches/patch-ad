@@ -1,12 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2003/08/02 05:23:00 mrg Exp $
-
---- mplex/stillsstream.cc.orig	2002-04-18 14:32:02.000000000 +1000
-+++ mplex/stillsstream.cc	2003-06-29 00:05:37.000000000 +1000
-@@ -22,6 +22,7 @@
- 
- 
- #include <format_codes.h>
-+#include <assert.h>
- 
- #include "stillsstream.hh"
- #include "interact.hh"
