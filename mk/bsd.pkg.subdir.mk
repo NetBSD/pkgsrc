@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.50 2003/01/05 13:37:16 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.51 2003/01/15 20:55:39 jlam Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -212,7 +212,7 @@ fetch-list:
 	@${ECHO} '#!/bin/sh'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
-	@${ECHO} '# `make fetch-list'"'"' in directory "'"`pwd`"'"'
+	@${ECHO} '# `make fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
 .if defined(PKGSRCTOP) && !defined(SPECIFIC_PKGS)
