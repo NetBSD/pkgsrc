@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2001/09/09 03:37:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/02/08 12:31:03 wiz Exp $
 #
 
 DISTNAME=	icewm-1.0.4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.sourceforge.net/icewm/ \
 		ftp://ftp.fu-berlin.de/unix/X11/window-managers/icewm/
 EXTRACT_SUFX=	.src.tar.gz
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://icewm.sourceforge.net/
 
 GNU_CONFIGURE=	# defined
