@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.321 2002/10/20 20:11:41 heinz Exp $
+$NetBSD: CHANGES,v 1.322 2002/10/20 22:49:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3340,6 +3340,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-Test-Harness to 2.26 [shell 2002-10-20]
 	Updated p5-Test-Simple to 0.47 [shell 2002-10-20]
 	Updated spamassassin to 2.43 [heinz 2002-10-20]
-	Updated tightvnc to 1.2.6 [lukem 2002-10-21]
-	Updated cups to 1.1.16 [jlam 2002-10-21]
-	Updated samba to 2.2.6nb1 [jlam 2002-10-21]
+	Updated tightvnc to 1.2.6 [lukem 2002-10-20]
+	Updated cups to 1.1.16 [jlam 2002-10-20]
+	Updated samba to 2.2.6nb1 [jlam 2002-10-20]
