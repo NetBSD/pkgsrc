@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1040 2003/01/07 06:20:20 rh Exp $
+$NetBSD: CHANGES,v 1.1041 2003/01/07 06:31:22 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xrick to 021212 [wiz 2003-01-06]
 	Updated patch to 2.5.4nb1 [grant 2003-01-06]
 	Updated transfig to 3.2.4 [rh 2003-01-07]
+	Updated xfig to 3.2.4 [rh 2003-01-07]
