@@ -4,7 +4,7 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.7 1998/02/12 00:26:27 tv Exp $
+# $NetBSD: Makefile,v 1.8 1998/03/07 21:24:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -49,8 +49,7 @@ do-install:
 	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/lib/pine.conf.fixed
 
 post-install:
-	install -d -o ${SHAREOWN} -g ${SHAREGRP} -m 755 \
-		${PREFIX}/share/doc/pine
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pine
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} doc/tech-notes.txt ${PREFIX}/share/doc/pine
 
