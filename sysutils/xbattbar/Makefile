@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/14 22:20:25 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/14 22:21:58 itojun Exp $
 
 DISTNAME=	xbattbar_1.4
 PKGNAME=	xbattbar-1.4
-CATEGORIES=	x11
+CATEGORIES=	sysutils x11
 MASTER_SITES=	http://infonet.aist-nara.ac.jp/member/suguru/
 
 MAINTAINER=	packages@netbsd.org
