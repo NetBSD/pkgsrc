@@ -1,0 +1,166 @@
+$NetBSD: patch-ac,v 1.3 2002/01/02 22:19:40 jlam Exp $
+
+--- authlib/authldaplib.c.orig	Wed Nov 28 22:52:51 2001
++++ authlib/authldaplib.c
+@@ -26,6 +26,17 @@
+  */
+ 
+ /*
++ * Modified 28/11/2001 Iustin Pop <iusty@intensit.de>
++ * There was a bug regarding the LDAP_TLS option: if both LDAP_TLS
++ * and was LDAP_AUTHBIND were enabled, the ldap_start_tls function
++ * was called only for the first connection, resulting in the fact
++ * that the bind for checking the password was done without TLS,
++ * sending the password in clear text over the network. Detected 
++ * when using OpenLDAP with "security ssf=128" (which disalows any 
++ * clear-text communication).
++*/
++
++/*
+    Modified 01/21/2000 James Golovich <james@wwnet.net>
+ 
+ 1. If LDAP_AUTHBIND is set in the config file, then the ldap server will
+@@ -467,6 +478,53 @@
+ 	return (rc);
+ }
+ 
++/* This function takes a ldap connection and 
++ * tries to enable TLS on it.
++*/
++static int enable_tls_on(LDAP *conn) {
++#if HAVE_LDAP_TLS
++	int version;
++	int ldrc;
++
++	if (ldaperror(ldrc=ldap_get_option (conn,
++				    LDAP_OPT_PROTOCOL_VERSION,
++				    &version))
++	    != LDAP_SUCCESS)
++	{
++		const char *s=ldap_err2string(ldrc);
++
++#if	HAVE_SYSLOG_H
++		syslog(LOG_DAEMON|LOG_CRIT,
++		       "ldap_get_option failed: %s", s);
++#endif
++		return (-1);
++	}
++
++	if (version < LDAP_VERSION3)
++	{
++		version = LDAP_VERSION3;
++		(void)ldap_set_option (conn,
++				       LDAP_OPT_PROTOCOL_VERSION,
++				       &version);
++	}
++
++	if (ldaperror(ldrc=ldap_start_tls_s(conn, NULL, NULL))
++	    != LDAP_SUCCESS)
++	{
++		const char *s=ldap_err2string(ldrc);
++
++#if	HAVE_SYSLOG_H
++		syslog(LOG_DAEMON|LOG_CRIT,
++		       "ldap_start_tls_s failed: %s", s);
++#endif
++		return (-1);
++	}
++	return 0;
++#else
++	return (-1);
++#endif
++}
++
+ static LDAP *ldapconnect()
+ {
+ LDAP	*p;
+@@ -518,47 +576,11 @@
+ 	}
+ 
+ #if HAVE_LDAP_TLS
+-	if (my_ldap.tls)
++	if (my_ldap.tls && enable_tls_on(my_ldap_fp))
+ 	{
+-		int version;
+-
+-		if (ldaperror(ldrc=ldap_get_option (my_ldap_fp,
+-						    LDAP_OPT_PROTOCOL_VERSION,
+-						    &version))
+-		    != LDAP_SUCCESS)
+-		{
+-			const char *s=ldap_err2string(ldrc);
+-
+-#if	HAVE_SYSLOG_H
+-			syslog(LOG_DAEMON|LOG_CRIT,
+-			       "ldap_get_option failed: %s", s);
+-#endif
+-			authldapclose();
+-			ldapconnfailure();
+-			return (-1);
+-		}
+-
+-		if (version < LDAP_VERSION3)
+-		{
+-			version = LDAP_VERSION3;
+-			(void)ldap_set_option (my_ldap_fp,
+-					       LDAP_OPT_PROTOCOL_VERSION,
+-					       &version);
+-		}
+-
+-		if (ldaperror(ldrc=ldap_start_tls_s(my_ldap_fp, NULL, NULL))
+-		    != LDAP_SUCCESS)
+-		{
+-			const char *s=ldap_err2string(ldrc);
+-
+-#if	HAVE_SYSLOG_H
+-			syslog(LOG_DAEMON|LOG_CRIT,
+-			       "ldap_start_tls_s failed: %s", s);
+-#endif
+-			authldapclose();
+-			ldapconnfailure();
+-			return (-1);
+-		}
++		authldapclose();
++		ldapconnfailure();
++		return (-1);
+ 	}
+ #endif
+ 
+@@ -828,17 +850,28 @@
+ 				rc=1;
+ 			else
+ 			{
+-				switch (ldap_simple_bind_s(bindp, dn, (char *)pass))
+-				{
+-				case LDAP_SUCCESS:
+-					break;
+-				case LDAP_INVALID_CREDENTIALS:
+-					rc = -1;
+-					break;
+-				default:
++#if HAVE_LDAP_TLS
++				if(my_ldap.tls && enable_tls_on(bindp)) {
++#if HAVE_SYSLOG_H
++					syslog(LOG_DAEMON|LOG_CRIT, "authlib: LDAP_TLS enabled but I'm unable to start tls, check your config\n");
++#endif
+ 					rc = 1;
+-					break;
++				} else {
++#endif
++					switch (ldap_simple_bind_s(bindp, dn, (char *)pass))
++					{
++					case LDAP_SUCCESS:
++						break;
++					case LDAP_INVALID_CREDENTIALS:
++						rc = -1;
++						break;
++					default:
++						rc = 1;
++						break;
++					}
++#if HAVE_LDAP_TLS
+ 				}
++#endif
+ 				ldap_unbind(bindp);
+ 			}
+ 			if (rc == 0 && newpass)

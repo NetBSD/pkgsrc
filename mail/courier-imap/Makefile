@@ -1,69 +1,47 @@
-# $NetBSD: Makefile,v 1.6 2001/08/16 06:56:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/02 22:19:38 jlam Exp $
 
-DISTNAME=	courier-imap-1.3.8.2
-CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
-
-MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://www.inter7.com/courierimap/
+PKGNAME=	courier-imap-${BASE_VERS}
+PKGREVISION?=	# empty
 COMMENT=	IMAP server for access to Maildir-style mailboxes
 
-DEPENDS+=	courier-maildirmake-[0-9]*:../../mail/courier-maildirmake
+DEPENDS+=	courier-maildirmake>=0.3:../../mail/courier-maildirmake
 
-USE_BUILDLINK_ONLY=	# defined
-USE_GMAKE=		# defined
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	yes
+USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
-
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
-CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/courier
-CONFIGURE_ARGS+=	--sysconfdir=/etc/courier
-CONFIGURE_ARGS+=	--enable-unicode
-CONFIGURE_ARGS+=	--with-db=db
-CONFIGURE_ARGS+=	--with-userdb=/etc/userdb
-CONFIGURE_ARGS+=	--disable-root-check
-CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
 
 INSTALL_TARGET=		install-strip
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../scratch/courier-imap/Makefile.common"
 
-#.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink.mk"
-#.endif
+GEN_FILES=	authdaemonrc imapd imapd-ssl pop3d pop3d-ssl
+SSLCNF_FILES=	imapd.cnf pop3d.cnf
+CONF_FILES=	${EGDIR}/quotawarnmsg.example ${PKG_SYSCONFDIR}/quotawarnmsg
+RCD_SCRIPTS=	courierimap courierimaps courierpop courierpops
+OWN_DIRS_PERMS=	/var/authdaemon ${ROOT_USER} ${ROOT_GROUP} 700
 
-CONFIGURE_ARGS+=	--without-authpam
-CONFIGURE_ARGS+=	--without-authldap
-CONFIGURE_ARGS+=	--without-authmysql
+CONF_FILES_PERMS=	# empty
+.for FILE in ${GEN_FILES}
+CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
+.for FILE in ${SSLCNF_FILES}
+CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
 
-.if ${OPSYS} == "SunOS"
-.include "../../databases/db/buildlink.mk"
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
-.endif
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+FILES_SUBST+=		SSLCERTS=${SSLCERTS}
+FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-FILES_SUBST=		SSLCERTS=${SSLCERTS}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-post-extract:
+pre-configure:
 	cd ${WRKSRC}; for file in					\
 		imap/imapd.dist.in imap/imapd-ssl.dist.in		\
 		imap/pop3d.dist.in imap/pop3d-ssl.dist.in		\
+		imap/imapd.cnf.in imap/pop3d.cnf.in			\
 		imap/mkimapdcert.in imap/mkpop3dcert.in;		\
 	do								\
-		${MV} -f $${file} $${file}.fixme;			\
 		${SED}	-e "s|^IMAPDSTART=.*|IMAPDSTART=YES|g"		\
 			-e "s|^IMAPDSSLSTART=.*|IMAPDSSLSTART=YES|g"	\
 			-e "s|^POP3DSTART=.*|POP3DSTART=YES|g"		\
@@ -72,35 +50,33 @@ post-extract:
 			-e "s|@datadir@/imapd.rand|@sysconfdir@/imapd.rand|g" \
 			-e "s|@datadir@/pop3d.pem|${SSLCERTS}/pop3d.pem|g" \
 			-e "s|@datadir@/pop3d.rand|@sysconfdir@/pop3d.rand|g" \
-			$${file}.fixme > $${file};			\
-		if [ -x $${file}.fixme ]; then				\
-			${CHMOD} +x $${file};				\
-		fi;							\
-		${RM} $${file}.fixme;					\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
 	done
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	for file in							\
-		courierimap.sh courierimaps.sh				\
-		courierpop.sh courierpops.sh;				\
-	do								\
-		src=${FILESDIR}/$${file};				\
-		dest=${PREFIX}/etc/rc.d/$${file%.sh};			\
-		${INSTALL_SCRIPT} $${src} $${dest};			\
+	@for file in ${RCD_SCRIPTS}; do					\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${file}.sh	\
+			> ${WRKDIR}/$${file}.sh;			\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${file}.sh			\
+			${PREFIX}/etc/rc.d/$${file};			\
 	done
+	${INSTALL_DATA_DIR} ${EGDIR} ${DOCDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/courier
+	${INSTALL_DATA} ${WRKSRC}/imap/BUGS				\
+		${DOCDIR}/BUGS.imap
 	${INSTALL_DATA} ${WRKSRC}/imap/README				\
-		${PREFIX}/share/doc/courier/README.imap
+		${DOCDIR}/README.imap
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirquota.txt	\
-		${PREFIX}/share/doc/courier/README.maildirquota
+		${DOCDIR}/README.maildirquota
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.txt	\
-		${PREFIX}/share/doc/courier/README.sharedfolders
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+		${DOCDIR}/README.sharedfolders
+	for file in authdaemonrc.dist; do				\
+		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${file} ${EGDIR};	\
+		${RM} -f ${PKG_SYSCONFDIR}/$${file};			\
+	done
+	cd ${WRKSRC}; ${INSTALL_DATA} imap/imapd.pam imap/pop3d.pam ${EGDIR}
 
 .include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
