@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/16 13:35:34 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/22 19:08:09 hubertf Exp $
 #
 
 DISTNAME=		vf90_per
@@ -21,6 +21,7 @@ MANDIR=			${PREFIX}/man/cat1
 DOCDIR=			${PREFIX}/share/doc/vast_f90
 
 LICENSE=		fee-based-commercial-use
+NO_CDROM=		"Redistribution not permitted."
 
 EXTRACT_CMD=		${MKDIR} ${DISTNAME}; tar xf ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} -C ${DISTNAME}
 UNCOMPRESS=		/usr/bin/uncompress
