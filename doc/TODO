@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1101 2003/12/03 02:20:44 xtraeme Exp $
+$NetBSD: TODO,v 1.1102 2003/12/03 02:28:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -254,7 +254,6 @@ Suggested package updates
 	o icepref-2.2
 	o icu-2.6.1 [recht]
 	o inn-2.4.0
-	o intltool-0.27.2 [pkg/23618]
 	o iozone-3.203
 	o irssi-0.8.8 [pkg/23560]
 	o ispell-slovak-0.2.1 [salo]
