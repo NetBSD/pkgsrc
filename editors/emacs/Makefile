@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2000/03/01 05:07:40 minoura Exp $
+# $NetBSD: Makefile,v 1.35 2000/03/10 15:45:33 minoura Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
-DISTNAME=	emacs-20.5a
+DISTNAME=	emacs-20.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -20,7 +20,6 @@ MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message widget reftex forms
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-WRKSRC=		${WRKDIR}/emacs-20.5
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
