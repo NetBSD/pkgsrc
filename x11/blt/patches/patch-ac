@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/03/12 01:43:56 hubertf Exp $
+--- man/Makefile.in.orig	Tue Feb  8 14:40:26 2000
++++ man/Makefile.in	Fri Mar 10 13:12:23 2000
+@@ -10,7 +10,7 @@
+ 
+ instdirs	= $(mandir) $(sectiondir)
+ 
+-MANPAGES	 = BLT.n barchart.n beep.n bgexec.n bitmap.n \
++MANPAGES	 = BLT.n barchart.n beep.n bgexec.n bltbitmap.n \
+ 		   bltdebug.n busy.n cutbuffer.n dragdrop.n eps.n \
+ 		   graph.n hierbox.n hiertable.n htext.n spline.n \
+ 		   stripchart.n table.n tabset.n tile.n vector.n \
+@@ -55,3 +55,5 @@
+ distclean: clean
+ 	$(RM) $(srcdir)/*.bak $(srcdir)/*\~ $(srcdir)/"#"* Makefile
+ 
++bltbitmap.man: bitmap.man
++	cp bitmap.man bltbitmap.man
