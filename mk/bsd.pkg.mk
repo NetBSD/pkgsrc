@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.20 2005/02/11 15:36:39 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.21 2005/02/11 16:51:54 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -196,7 +196,7 @@ PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} u
 PKG_FAIL_REASON+=''
 PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .  endif
-.endif # NO_PKGTOOLS_REQD_CHECK
+.endif # !NO_PKGTOOLS_REQD_CHECK
 
 .if defined(ALL_TARGET)
 PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
