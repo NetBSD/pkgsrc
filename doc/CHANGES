@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7058 2004/08/31 16:06:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.7059 2004/08/31 18:13:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4130,3 +4130,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bmp-esound to 0.9.7rc2 [jmmv 2004-08-31]
 	Updated vice to 1.15 [dillo 2004-08-31]
 	Updated epiphany to 1.2.8 [jmmv 2004-08-31]
+	Updated glade2 to 2.6.0nb1 [jmmv 2004-08-31]
