@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/09 07:14:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/10/11 21:15:49 abs Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
 tomcat/RUNNING.txt
 tomcat/bin/LauncherBootstrap.class
 tomcat/bin/bootstrap.jar
+tomcat/bin/catalina.50.sh
 tomcat/bin/catalina.sh
 tomcat/bin/catalina.xml
 tomcat/bin/commons-daemon.jar
@@ -23,11 +24,12 @@ tomcat/bin/tomcat5.exe
 tomcat/bin/tomcat5w.exe
 tomcat/bin/tool-wrapper-using-launcher.sh
 tomcat/bin/tool-wrapper.sh
+tomcat/bin/version.sh
 tomcat/common/endorsed/xercesImpl.jar
 tomcat/common/endorsed/xml-apis.jar
-tomcat/common/lib/ant.jar
 tomcat/common/lib/ant-launcher.jar
-tomcat/common/lib/commons-collections-2.1.1.jar
+tomcat/common/lib/ant.jar
+tomcat/common/lib/commons-collections-3.1.jar
 tomcat/common/lib/commons-dbcp-1.2.1.jar
 tomcat/common/lib/commons-el.jar
 tomcat/common/lib/commons-pool-1.2.jar
@@ -272,6 +274,7 @@ tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tag/web/panel_tag.cla
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tag/web/xhtmlbasic_tag.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/choose_jsp.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$1.class
+tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$10.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$2.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$3.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$4.class
@@ -280,7 +283,6 @@ tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$7.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$8.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$9.class
-tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp$10.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/foreach_jsp.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin/if_jsp.class
 tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/xml/xml_jsp.class
@@ -545,7 +547,6 @@ tomcat/webapps/tomcat-docs/architecture/startup/serverStartup.txt
 tomcat/webapps/tomcat-docs/balancer-howto.html
 tomcat/webapps/tomcat-docs/build.xml
 tomcat/webapps/tomcat-docs/building.html
-tomcat/webapps/tomcat-docs/catalina/d
 tomcat/webapps/tomcat-docs/catalina/docs/api/allclasses-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/allclasses-noframe.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/constant-values.html
@@ -578,6 +579,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/BaseJ
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/IISConfig.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/NSConfig.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-frame.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/package-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/package-summary.html

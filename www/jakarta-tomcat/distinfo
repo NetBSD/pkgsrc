@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2004/07/22 21:30:30 erh Exp $
+$NetBSD: distinfo,v 1.11 2004/10/11 21:15:49 abs Exp $
 
-SHA1 (jakarta-tomcat-5.0.27.tar.gz) = 5f3981ecdd67e2b9774e643b336ad98ebc1bd4e3
-Size (jakarta-tomcat-5.0.27.tar.gz) = 10298374 bytes
+SHA1 (jakarta-tomcat-5.0.28.tar.gz) = 00dc6526db0a8a75c2f4944b7253ea230b31ab70
+Size (jakarta-tomcat-5.0.28.tar.gz) = 10718313 bytes
