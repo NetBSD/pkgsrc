@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1699 2004/05/03 18:26:46 jmmv Exp $
+$NetBSD: TODO,v 1.1700 2004/05/03 19:56:52 reed Exp $
 
 Suggested new packages
 ======================
@@ -9,6 +9,10 @@ Suggested new packages
 	figfonts
 	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
+
+	pfaedit -> fontforge rename
+	http://pfaedit.sourceforge.net/
+	Update any pfaedit packages and dependencies to fontforge.
 
 	gd-noX11
 	Version of gd for systems without X11.
