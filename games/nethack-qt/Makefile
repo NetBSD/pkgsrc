@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/24 21:17:34 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/26 18:38:28 garbled Exp $
 #
 
 DISTNAME=		qnethack-3.2.2.1.0.1.src
@@ -18,6 +18,7 @@ DEPENDS+=		qt-1.42:../../x11/qt
 
 WRKSRC=			${WRKDIR}/nethack-3.2.2
 
+USE_X11=		yes
 USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	sys/unix/setup.sh
