@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.6 2002/10/14 06:21:18 martti Exp $
+# $NetBSD: Makefile.php,v 1.7 2003/01/08 01:52:43 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -6,8 +6,6 @@ DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-mysql
@@ -43,8 +41,3 @@ CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
-
-post-configure: create-shlibtool
-
-create-shlibtool:
-	cd ${WRKSRC}; ${RM} -f shlibtool; ${LN} -sf libtool shlibtool
