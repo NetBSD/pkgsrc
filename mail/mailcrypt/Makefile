@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/08/09 11:08:54 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/11 15:57:42 seb Exp $
 # FreeBSD Id: ports/mail/mailcrypt/Makefile,v 1.7 2000/05/14 05:21:52 billf Exp
 
-DISTNAME=	mailcrypt-3.5.6
+DISTNAME=	mailcrypt-3.5.8
 CATEGORIES=	mail security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailcrypt/}
 
@@ -15,7 +15,6 @@ EMACS_VERSIONS_ACCEPTED=       emacs21 emacs21nox emacs20
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
 
-USE_MAKEINFO=	YES
 INFO_FILES=	mailcrypt.info
 
 .include "../../mk/emacs.mk"

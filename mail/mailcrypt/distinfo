@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/07/31 16:07:02 seb Exp $
+$NetBSD: distinfo,v 1.4 2003/08/11 15:57:42 seb Exp $
 
-SHA1 (mailcrypt-3.5.6.tar.gz) = ac53c42c5e1b7f2200582204217f321a46b5f436
-Size (mailcrypt-3.5.6.tar.gz) = 158813 bytes
-SHA1 (patch-aa) = 07f5da8d69707bab3a0c0f9b4e820a6131c3b270
-SHA1 (patch-ab) = 3d0dfd17ddef6b33c0364e391bdc25fb3e309712
+SHA1 (mailcrypt-3.5.8.tar.gz) = 5c107c74150113bdb9ddd76dccf1ad62eec3c296
+Size (mailcrypt-3.5.8.tar.gz) = 213415 bytes
+SHA1 (patch-aa) = 6b44ca1ad6c13df2a85602c360f07fd741a2a3bd
