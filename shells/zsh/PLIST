@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/03/28 10:30:13 recht Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/03/30 16:09:56 minskim Exp $
 bin/zsh
 bin/${PKGNAME}
 man/man1/zsh.1
@@ -13,6 +13,7 @@ man/man1/zshmisc.1
 man/man1/zshmodules.1
 man/man1/zshoptions.1
 man/man1/zshparam.1
+man/man1/zshtcpsys.1
 man/man1/zshzftpsys.1
 man/man1/zshzle.1
 share/doc/zsh/BUGS
