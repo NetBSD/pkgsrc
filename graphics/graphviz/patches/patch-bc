@@ -1,17 +1,17 @@
-$NetBSD: patch-bc,v 1.3 2002/04/19 18:42:35 seb Exp $
+$NetBSD: patch-bc,v 1.4 2002/08/28 13:49:41 seb Exp $
 
---- tkspline/demo/Makefile.in.orig	Fri Apr 19 14:31:38 2002
+--- tkspline/demo/Makefile.in.orig	Mon Aug  5 05:11:35 2002
 +++ tkspline/demo/Makefile.in
-@@ -183,7 +183,7 @@
+@@ -185,7 +185,7 @@ Z_LIBS = @Z_LIBS@
  
  AUTOMAKE_OPTIONS = 1.4
  
--demodir = $(libdir)/@PACKAGE@/demo
+-demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
  demo_SCRIPTS = spline
  demo_DATA = spline.README
  EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA)
-@@ -199,7 +199,7 @@
+@@ -201,7 +201,7 @@ DIST_COMMON =  Makefile.am Makefile.in
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
