@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/27 16:00:09 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}bsearch-${VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://namazu.org/~satoru/ruby-bsearch/
 
@@ -10,9 +10,7 @@ HOMEPAGE=	http://namazu.org/~satoru/ruby-bsearch/
 COMMENT=	Binary search library for Ruby
 
 VERSION=	1.5
-DIST_SUBDIR=	ruby
-USE_RUBY_RD=	# defined
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 TEST_DIRS=	${WRKSRC}/tests
 TEST_TARGET=	check
 
@@ -31,6 +29,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/bsearch
 .endfor
 
-.include "../../textproc/ruby-rdtool/Makefile.common"
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
