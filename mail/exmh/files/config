@@ -1,4 +1,4 @@
-# $NetBSD: config,v 1.4 1998/08/07 11:09:33 agc Exp $
+# $NetBSD: config,v 1.5 2000/03/06 10:23:24 wulf Exp $
 
 set wish !!WISH!!
 set exmh(version) {version !!VERSION!! !!DATE!!}
@@ -17,7 +17,9 @@ set faces(set,unknown) {domains unknown}
 set faces(set,news) {news}
 set faces(defaultDomain) !!DOMAIN!!
 set faces(suffix) {xpm gif xbm}
-set pgp(path) !!PGP!!
+set pgp(pgp,path) !!PGP!!
+set pgp(pgp5,path) !!PGP5!!
+set pgp(gpg,path) !!GPG!!
 set glimpse(path) !!GLIMPSE!!
 set sound(cmd) !!PLAY!!
 set exmh(library) !!PREFIX!!/lib/exmh-!!VERSION!!
