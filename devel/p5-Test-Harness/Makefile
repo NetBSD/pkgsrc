@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/01 16:04:38 kim Exp $
+# $NetBSD: Makefile,v 1.20 2004/09/24 20:55:33 kristerw Exp $
 
 DISTNAME=		Test-Harness-2.40
 PKGNAME=		p5-${DISTNAME}
@@ -17,6 +17,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Harness/.packlist
+
+BUILDLINK_PKGSRCDIR.perl=	../../lang/perl5
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
