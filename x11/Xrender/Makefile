@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/22 21:55:57 recht Exp $
+# $NetBSD: Makefile,v 1.9 2003/10/03 20:11:41 xtraeme Exp $
 
 DISTNAME=	xrender-0.8.3
 PKGNAME=	Xrender-0.8.3
@@ -17,6 +17,14 @@ USE_X11=		YES
 #LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	${WRKSRC}/xrender.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+PLIST_SUBST+=		LIBXRENDER="@comment "
+.else
+PLIST_SUBST+=		LIBXRENDER=""
+.endif
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../x11/render/buildlink2.mk"
