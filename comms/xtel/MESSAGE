@@ -1,8 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:27 heinz Exp $
+
 Make sure there is a symbolic link from your modem device to /dev/modem.
 You may also have to adjust $X11BASE}/lib/X11/xtel/xtel.lignes for your
 modem.
 You also have to add:
-xtel    1313/tcp
+ xtel    1313/tcp
 to /etc/services and
-xtel            stream  tcp     nowait  root    $X11BASE}/bin/xteld    xteld
+ xtel            stream  tcp     nowait  root    $X11BASE}/bin/xteld  xteld
 to /etc/inetd.conf
+
+===========================================================================
+

@@ -1,2 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:29 heinz Exp $
+
 It is recommended that you create a nonprivileged account to run
 the DGD driver.
+
+===========================================================================

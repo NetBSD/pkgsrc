@@ -1,7 +1,13 @@
-** To activate nidentd, you need to add the following lines to your
-** /etc/inetd.conf file:
-** 
-** ident stream tcp nowait  root   ${PREFIX}/libexec/nidentd nidentd -m
-** ident stream tcp6 nowait nobody ${PREFIX}/libexec/nidentd nidentd -6
-** 
-** After that, restart/HUP inetd: kill -HUP `cat /var/run/inetd.conf`
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:29 heinz Exp $
+
+To activate nidentd, you need to add the following lines to your
+/etc/inetd.conf file:
+
+ ident stream tcp nowait  root   ${PREFIX}/libexec/nidentd nidentd -m
+ ident stream tcp6 nowait nobody ${PREFIX}/libexec/nidentd nidentd -6
+
+After that, restart/HUP inetd: kill -HUP `cat /var/run/inetd.conf`
+
+===========================================================================
+

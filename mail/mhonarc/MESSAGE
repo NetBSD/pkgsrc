@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2002/07/15 22:57:28 heinz Exp $
+
 If you are upgrading from mhonarc 2.4.9 or earlier, please note
 the following changes
 
@@ -7,3 +10,5 @@ the following changes
   is not backward compatible with the previous API.
 
 * The default value of DEFRCNAME is now ".mhonarc.mrc"
+
+===========================================================================
