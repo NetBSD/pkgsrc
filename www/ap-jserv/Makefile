@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/16 01:43:25 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/16 17:10:30 jwise Exp $
 
 DISTNAME=	ApacheJServ-1.1
 PKGNAME=	ap-jserv-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://java.apache.org/jserv/dist/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://java.apache.org/
 
-DEPENDS+=	apache-1.3.*:../../www/apache
+DEPENDS+=	apache-1.3.9:../../www/apache
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
 # For "apxs":
@@ -23,7 +23,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${JAVA_HOME} \
 	--with-JSDK=${JSDK_HOME}/lib/jsdk.jar --with-logdir=/var/log/httpd \
-	--with-servlets=${LOCALBASE}/share/httpd/servlets
+	--with-servlets=${LOCALBASE}/share/httpd/servlets -enable-EAPI
 
 .include "../../mk/bsd.pkg.mk"
 JSDK_HOME=	${JAVA_HOME}/jsdk
