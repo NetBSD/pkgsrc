@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2000/12/04 23:50:08 jtb Exp $
+# $NetBSD: Makefile,v 1.83 2000/12/06 15:13:29 abs Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -6,6 +6,7 @@
     SUBDIR += RScheme
     SUBDIR += awka
     SUBDIR += baci
+    SUBDIR += brandybasic
     SUBDIR += bwbasic
     SUBDIR += caml-light
     SUBDIR += camlp4
