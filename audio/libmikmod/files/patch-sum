@@ -1,6 +1,6 @@
-$NetBSD: patch-sum,v 1.5 2001/03/31 02:41:07 mycroft Exp $
+$NetBSD: patch-sum,v 1.6 2001/03/31 02:50:07 mycroft Exp $
 
 SHA1 (patch-aa) = bfff6a9a77238e159e039bfa7d3f590bce8c9c9c
 SHA1 (patch-ab) = afda9a7d29e70e42c037163ac5b2d2742c77daab
 SHA1 (patch-ac) = c95d59a291570643c0b62c728ed3753fe9edb472
-SHA1 (patch-ad) = 479d35d123c3cb49e505a1d293da395f1fafd7c8
+SHA1 (patch-ad) = 61c2ef96b696ec75cd2f71d101e62734dcb9be56
