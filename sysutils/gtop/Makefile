@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2001/04/02 18:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/24 18:33:29 rh Exp $
 
-DISTNAME=		gtop-1.0.9
+DISTNAME=		gtop-1.0.13
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
 
 MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
-DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
+DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
+DEPENDS+=		libgtop>=1.0.12:../../devel/libgtop
 
 OSVERSION_SPECIFIC=	YES
 USE_GMAKE=		YES
@@ -21,25 +20,7 @@ USE_LIBINTL=		YES
 
 GNU_CONFIGURE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
+CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
 CFLAGS+=		-I${LOCALBASE}/include
-
-AUTOGEN_ENV=		NOCONFIGURE=1
-AUTOGEN_ENV+=		srcdir=${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${AUTOGEN_ENV} ${SH} macros/autogen.sh
-
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
 
 .include "../../mk/bsd.pkg.mk"
