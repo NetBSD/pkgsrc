@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.79 2002/09/24 21:54:51 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.80 2002/10/12 17:17:22 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -67,34 +67,37 @@ MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 LOWER_OPSYS?=		netbsd
 
 .elif ${OPSYS} == "SunOS"
-. if ${MACHINE_ARCH} == "unknown"
-.  if !defined(LOWER_ARCH)
+.  if ${MACHINE_ARCH} == "sparc"
+SPARC_TARGET_ARCH?=	sparcv7
+.  elif ${MACHINE_ARCH} == "sun4"
+MACHINE_ARCH=		sparc
+.  elif ${MACHINE_ARCH} == "i86pc"
+MACHINE_ARCH=		i386
+.  elif ${MACHINE_ARCH} == "unknown"
+.    if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -p
-.  endif	# !defined(LOWER_ARCH)
+.    endif	# !defined(LOWER_ARCH)
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
-. endif
+.  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
-. if (${MACHINE_ARCH} == sparc)
-SPARC_TARGET_ARCH?=	sparcv7
-. endif
 # We need to set this early to get "USE_MESA" and "USE_XPM" working.
 X11BASE?=               ${DESTDIR}/usr/openwin
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
-. if ${MACHINE_ARCH} == "unknown"
-.  if !defined(LOWER_ARCH)
+.  if ${MACHINE_ARCH} == "unknown"
+.    if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
-.  endif # !defined(LOWER_ARCH)
+.    endif # !defined(LOWER_ARCH)
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
-.  if ${LOWER_ARCH} == "i386"
+.    if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
-.  else
+.    else
 LOWER_VENDOR?=		unknown
+.    endif
 .  endif
-. endif
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
