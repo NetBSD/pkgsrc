@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2000/07/28 06:28:02 tron Exp $
+# $NetBSD: Makefile,v 1.136 2000/07/30 20:09:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -119,6 +119,7 @@
     SUBDIR += vtun
     SUBDIR += wakeup
     SUBDIR += wget
+    SUBDIR += wmnet
     SUBDIR += wmpload
     SUBDIR += wu-ftpd
     SUBDIR += xarchie
