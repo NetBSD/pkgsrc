@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/05/05 17:12:35 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/05/05 17:15:01 grant Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -28,9 +28,9 @@ post-extract:
 # This ugliness is because config.make is parsed by both make(1) and
 # subst.pl, which does only simplistic substitution.
 do-configure:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},' \
-		${WRKSRC}/config.make >${WRKSRC}/config.make.new
-	${MV} -f ${WRKSRC}/config.make.new ${WRKSRC}/config.make
+	@${MV} -f ${WRKSRC}/config.make ${WRKSRC}/config.make.orig
+	@${SED} ${FILES_SUBST_SED} \
+		${WRKSRC}/config.make.orig > ${WRKSRC}/config.make
 
 pre-build:
 	${RM} -f ${WRKSRC}/doc/fidogate.info*
