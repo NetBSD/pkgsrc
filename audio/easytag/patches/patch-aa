@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/06/16 14:52:44 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/16 19:51:51 jlam Exp $
 
 --- Makefile.orig	Thu Oct 26 15:18:35 2000
 +++ Makefile	Fri Jun 15 02:04:42 2001
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.4 2001/06/16 14:52:44 jlam Exp $
 -GLIBS	= `gtk-config --libs`
 -GFLAGS	= `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
 -OPT	= -g -Wall -O2
-+GLIBS = ${LDFLAGS} `gtk-config --libs` -lintl
-+GFLAGS	= ${CFLAGS} `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
++GLIBS = ${LDFLAGS} `${GTK_CONFIG} --libs` -lintl
++GFLAGS	= ${CFLAGS} `${GTK_CONFIG} --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
 +OPT   = -Wall
  #ID3_LIB = -lid3
 -MAKE	= make
