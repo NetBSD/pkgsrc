@@ -1,28 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2002/04/25 15:21:53 yyamano Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/23 08:42:35 schmonz Exp $
 #
 
-DISTNAME=		ezmlm-0.53
-CATEGORIES=		mail
-MASTER_SITES=		http://cr.yp.to/software/
+.include "../../mail/ezmlm/Makefile.common"
 
-MAINTAINER=		zuntum@netbsd.org
-HOMEPAGE=		http://cr.yp.to/ezmlm.html
-COMMENT=		easy-to-use, high-speed mailing list manager for qmail
+DISTNAME=	${EZMLM_VERS}
 
-DEPENDS+=		qmail>=1.03:../../mail/qmail
+MAINTAINER=	zuntum@netbsd.org
+HOMEPAGE=	http://cr.yp.to/ezmlm.html
+COMMENT=	easy-to-use, high-speed mailing list manager for qmail
 
-ALL_TARGET=		it man
-INSTALL_TARGET=		setup
-
-RESTRICTED=		"unsure of djb's license"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-
-post-patch:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
-	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
-	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
+CONFLICTS=	ezmlm-idx-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
