@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 2005/03/16 15:32:12 rillig Exp $
+
+Needed for g++-2.95.3.
+
+--- src/interfaces/editmacro.ui.h.orig	Sun Jul  4 17:50:45 2004
++++ src/interfaces/editmacro.ui.h	Wed Mar 16 02:37:57 2005
+@@ -7,9 +7,10 @@
+ ** place of a destructor.
+ *****************************************************************************/
+ 
+-
+ #include "macros.h"
+ #include <vector>
++#include <pkgsrc_fixes.h>
++
+ using namespace std;
+ void EditMacro::init( Macros *k)
+ {
+@@ -44,8 +45,8 @@ void EditMacro::accept()
+ {
+ int AktPosition, NewPosition;
+ AktPosition=SelectMacro->currentItem()-1;
+-AllMacros->MacroText.at(AktPosition)=Definition->text();
+-AllMacros->Accelerator.at(AktPosition)=Accelerator->text();
++at_replacement(AllMacros->MacroText, AktPosition)=Definition->text();
++at_replacement(AllMacros->Accelerator, AktPosition)=Accelerator->text();
+ /** Position Change to be done later
+ NewPosition=Position->value();
+ if (AktPosition != NewPosition )
