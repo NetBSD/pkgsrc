@@ -1,0 +1,92 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/27 18:33:39 wiz Exp $
+
+--- ./configure.orig	Thu Dec 16 16:22:34 1999
++++ ./configure	Sun Feb 27 15:44:21 2000
+@@ -3606,76 +3606,28 @@
+ echo "configure:3607: checking for PNG support ..." >&5
+         failed=0;
+         passed=0;
+-        ac_safe=`echo "png.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for png.h""... $ac_c" 1>&6
+-echo "configure:3612: checking for png.h" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 3617 "configure"
+-#include "confdefs.h"
+-#include <png.h>
+-EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:3622: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+-if test -z "$ac_err"; then
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=yes"
+-else
+-  echo "$ac_err" >&5
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=no"
+-fi
+-rm -f conftest*
+-fi
+-if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  passed=`expr $passed + 1`
+-else
+-  echo "$ac_t""no" 1>&6
+-failed=`expr $failed + 1`
+-fi
+ 
+-        ac_safe=`echo "pngconf.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for pngconf.h""... $ac_c" 1>&6
+-echo "configure:3646: checking for pngconf.h" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 3651 "configure"
++        cat > conftest.$ac_ext <<EOF
++#line 3612 "configure"
+ #include "confdefs.h"
++#include <png.h>
+ #include <pngconf.h>
++int main() {
++
++; return 0; }
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:3656: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+-if test -z "$ac_err"; then
++if { (eval echo configure:3620: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+   rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=yes"
++  passed=`expr $passed + 1`
+ else
+-  echo "$ac_err" >&5
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=no"
++  failed=`expr $failed + 1`
+ fi
+-rm -f conftest*
+-fi
+-if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  passed=`expr $passed + 1`
+-else
+-  echo "$ac_t""no" 1>&6
+-failed=`expr $failed + 1`
+-fi
+-
++rm -f conftest*;
+         echo $ac_n "checking for png_info_init in -lpng""... $ac_c" 1>&6
+-echo "configure:3679: checking for png_info_init in -lpng" >&5
++echo "configure:3631: checking for png_info_init in -lpng" >&5
+ ac_lib_var=`echo png'_'png_info_init | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
