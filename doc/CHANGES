@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9361 2005/02/28 15:30:03 minskim Exp $
+$NetBSD: CHANGES,v 1.9362 2005/02/28 16:05:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1202,3 +1202,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated flac to 1.1.2 [wiz 2005-02-28]
 	Updated bibtex2html to 1.75 [minskim 2005-02-28]
 	Updated nam to 1.11 [minskim 2005-02-28]
+	Updated ike-scan to 1.7.1 [adam 2005-02-28]
