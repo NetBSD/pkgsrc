@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/10/01 03:07:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/20 11:46:49 drochner Exp $
 #
 
-DISTNAME=	expat-1.95.2
+DISTNAME=	expat-1.95.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 
@@ -11,7 +11,7 @@ COMMENT=	XML parser library written in C
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/conftools/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		YES
 USE_BUILDLINK_ONLY=	YES
 
