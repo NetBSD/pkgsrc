@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:18:37 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/17 07:54:05 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -1985,7 +1985,6 @@ share/kde/config/kdm/Xreset
 share/kde/config/kdm/Xsetup
 share/kde/config/kdm/Xstartup
 share/kde/config/kdm/kdmrc
-share/kde/config/kdm/kdmsts
 share/kde/config/klipperrc
 share/kde/config/konqsidebartng.rc
 share/kde/config/konsolerc
@@ -2892,6 +2891,7 @@ share/kde/wallpapers/triplegears.jpg
 @comment dirrm share/kde/icons/hicolor/16x16/apps
 @comment dirrm share/kde/icons/hicolor/16x16/actions
 @comment dirrm share/kde/icons
+@unexec ${RM} -f %D/share/kde/config/kdm/kdmsts 2>/dev/null || true
 @dirrm share/kde/config/kdm
 @comment dirrm share/kde/config
 @dirrm share/kde/apps/naughtyapplet/pics
@@ -3050,6 +3050,8 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kappfinder/apps/Games
 @dirrm share/kde/apps/kappfinder/apps/Editors
 @dirrm share/kde/apps/kappfinder/apps/Development
+@dirrm share/kde/apps/kappfinder/apps
+@dirrm share/kde/apps/kappfinder
 @dirrm share/kde/apps/kaddressbook/pics
 @dirrm share/kde/apps/kaddressbook
 @dirrm share/kde/apps/drkonqi/presets
