@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: jabberd.sh,v 1.1.1.1 2003/12/23 10:16:20 xtraeme Exp $
+# $NetBSD: jabberd.sh,v 1.2 2004/02/21 05:38:29 xtraeme Exp $
 #
 
 # PROVIDE: jabberd
