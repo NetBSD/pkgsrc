@@ -3,12 +3,12 @@
 # Date created:		19 August 1997
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.9 1998/02/02 08:59:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/14 01:06:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
-DISTNAME=	tk8.0
-PKGNAME=	tk-8.0
+DISTNAME=	tk8.0p2
+PKGNAME=	tk-8.0p2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/
 
@@ -16,7 +16,7 @@ MAINTAINER=	jkh@Freebsd.ORG
 
 LIB_DEPENDS=	tcl80.1.:${PORTSDIR}/lang/tcl80
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/unix
+WRKSRC=		${WRKDIR}/tk8.0/unix
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ENV+=  PORTSDIR=${PORTSDIR}
