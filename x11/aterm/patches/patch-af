@@ -1,0 +1,43 @@
+$NetBSD: patch-af,v 1.1 2004/06/02 20:07:59 recht Exp $
+
+--- src/screen.c.orig	2001-09-06 18:38:07.000000000 +0200
++++ src/screen.c	2004-05-30 12:43:05.000000000 +0200
+@@ -3313,14 +3313,6 @@
+ 
+ /* ------------------------------------------------------------------------- */
+ /*
+- * On some systems, the Atom typedef is 64 bits wide.  We need to have a type
+- * that is exactly 32 bits wide, because a format of 64 is not allowed by
+- * the X11 protocol.
+- */
+-typedef CARD32  Atom32;
+-
+-/* ------------------------------------------------------------------------- */
+-/*
+  * Respond to a request for our current selection
+  * EXT: SelectionRequest
+  */
+@@ -3329,7 +3321,7 @@
+ selection_send(XSelectionRequestEvent * rq)
+ {
+     XEvent          ev;
+-    Atom32          target_list[2];
++    Atom            target_list[2];
+     static Atom     xa_targets = None;
+ 
+     if (xa_targets == None)
+@@ -3344,10 +3336,10 @@
+     ev.xselection.time = rq->time;
+ 
+     if (rq->target == xa_targets) {
+-	target_list[0] = (Atom32) xa_targets;
+-	target_list[1] = (Atom32) XA_STRING;
+-	XChangeProperty(Xdisplay, rq->requestor, rq->property, rq->target,
+-			(8 * sizeof(target_list[0])), PropModeReplace,
++	target_list[0] = xa_targets;
++	target_list[1] = XA_STRING;
++	XChangeProperty(Xdisplay, rq->requestor, rq->property, XA_ATOM,
++			32, PropModeReplace,
+ 			(unsigned char *)target_list,
+ 			(sizeof(target_list) / sizeof(target_list[0])));
+ 	ev.xselection.property = rq->property;
