@@ -1,30 +1,29 @@
-$NetBSD: patch-ak,v 1.5 2003/03/03 11:35:00 seb Exp $
+$NetBSD: patch-ak,v 1.6 2004/04/17 16:56:10 seb Exp $
 
---- tcldgl/demo/Makefile.in.orig	2003-03-02 20:12:23.000000000 +0000
-+++ tcldgl/demo/Makefile.in
-@@ -206,7 +206,7 @@ install_sh = @install_sh@
+--- tcldot/demo/Makefile.in.orig	2004-03-02 00:20:40.000000000 +0000
++++ tcldot/demo/Makefile.in
+@@ -104,7 +104,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
+ SORT = @SORT@
+ STRIP = @STRIP@
+ TCLINT_INCLUDES = @TCLINT_INCLUDES@
+-TCLSH = @TCLSH@
+ TCLSH_EXEC_PREFIX = @TCLSH_EXEC_PREFIX@
+ TCL_BUILD_LIB_SPEC = @TCL_BUILD_LIB_SPEC@
+ TCL_BUILD_STUB_LIB_PATH = @TCL_BUILD_STUB_LIB_PATH@
+@@ -181,7 +180,6 @@ TK_XINCLUDES = @TK_XINCLUDES@
+ TK_XLIBSW = @TK_XLIBSW@
+ TOP_DIR = @TOP_DIR@
+ VERSION = @VERSION@
+-WISH = @WISH@
+ XAW_INCLUDES = @XAW_INCLUDES@
+ XAW_LIBS = @XAW_LIBS@
+ XPM_INCLUDES = @XPM_INCLUDES@
+@@ -199,7 +197,7 @@ install_sh = @install_sh@
  
  AUTOMAKE_OPTIONS = 1.4
  
 -demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
- demo_SCRIPTS = dge
- demo_DATA = dge.README dge.example1.dot  dge.example2.dot
- EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA) CVS/*
-@@ -216,6 +216,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES =
- SCRIPTS = $(demo_SCRIPTS)
- 
-+depcomp =
- DIST_SOURCES =
- DATA = $(demo_DATA)
- 
-@@ -234,7 +235,7 @@ distclean-libtool:
- 	-rm -f libtool
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --gnu  tcldgl/demo/Makefile
-+	  $(AUTOMAKE) --foreign  --ignore-deps tcldgl/demo/Makefile
- Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
- 	cd $(top_builddir) && \
- 	  CONFIG_HEADERS= CONFIG_LINKS= \
+ @WITH_TCL_TRUE@demo_SCRIPTS = doted gcat
+ @WITH_TCL_TRUE@demo_DATA = doted.README gcat.README
+ EXTRA_DIST = doted gcat doted.README gcat.README
