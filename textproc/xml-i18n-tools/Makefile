@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/12 02:09:15 minskim Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 PKGREVISION=	1
@@ -11,7 +11,9 @@ COMMENT=	XML internationalisation tools
 
 CONFLICTS=	intltool<=0.25
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
@@ -23,5 +25,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
