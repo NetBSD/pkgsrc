@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ns-open,v 1.6 2001/12/22 14:43:20 abs Exp $
+# $NetBSD: ns-open,v 1.7 2002/03/11 10:18:25 abs Exp $
 #
 # Simple script to open a URL in Netscape, starting a new process if necessary
 # If a netscape process is not running it will look for a valid netscape
@@ -94,12 +94,12 @@ if [ -z "$NETSCAPE_BIN" ];then
 fi
 case $1 in
     -*)
-	$NETSCAPE_BIN $@
+	$NETSCAPE_BIN "$@"
 	;;
     *)
 	# Since using ns-remote will return, we start netscape in the
 	# background to give consistent behaviour.
-	$NETSCAPE_BIN $@ &
+	$NETSCAPE_BIN "$@" &
 	;;
 esac
 exit 0
