@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:57 agc Exp $
+
+MD5 (freezetag-0.9.2.tar.gz) = d84cd138700ee0afae5c3f4ee70646e0
+SHA1 (patch-aa) = f4498192417d81a2560ca0bbf4b526f2557502fe
+SHA1 (patch-ab) = 562f8497071ffcfd3af8a3f77e04d5df21efaee2
+SHA1 (patch-ac) = 91275693b6fd366cd4600534460c3682b99154ed
+SHA1 (patch-ad) = 703538ca267ce2a90c94bc211d845de48568199f
+SHA1 (patch-ae) = b193138d6fe4818ea21148236c5918898a090346

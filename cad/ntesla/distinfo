@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:30:21 agc Exp $
+
+MD5 (ntesla-1.7.tar.gz) = 1593dafdb42905f369464816af128456
+SHA1 (patch-aa) = 1e5afe8fdfce28d86cb98359936fa376747e5fbb
+SHA1 (patch-ab) = d4668bf6b3b7bc25f87b0b5b021a79c3375d0d87

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:03 agc Exp $
+
+MD5 (puzzle-402.tar.gz) = 635ae0594a06a379add882c90d0c616d
+SHA1 (patch-aa) = 2537c3ad4b2ac01bce41a0aa97910993a0d2fe6b
+SHA1 (patch-ab) = 613175c3f83827bd2164735aaddcb4786eea0e91
+SHA1 (patch-ac) = f74911a9661b4ccc97427e5eccc6b4be86bc9439

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:35 agc Exp $
+
+MD5 (whetstone.c) = d8eb2cd7104bb5a12d614ac6d3f1f9fb
+SHA1 (patch-aa) = d963b9c4c77558f264da085055cbb1a9ed36ac08
