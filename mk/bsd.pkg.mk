@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.798 2001/08/20 14:41:48 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.799 2001/08/22 17:34:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -100,8 +100,7 @@ SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
-# Set XMKMF_CMD properly for all combinations of whether xpkgwedge and
-# buildlink-x11 are installed.
+# Set XMKMF_CMD properly if xpkgwedge is installed.
 #
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
@@ -114,17 +113,7 @@ X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
 .else
 X11PREFIX=		${X11BASE}
-.  if exists(${X11PREFIX}/lib/X11/config/buildlinkX11.def)
-XMKMF_CMD?=		${X11PREFIX}/bin/buildlink-xmkmf
-.  else
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
-.  endif
-.endif
-.if defined(USE_BUILDLINK_ONLY)
-XMKMF_FLAGS+=		-DBuildLink
-.  if defined(USE_BUILDLINK_X11)
-XMKMF_FLAGS+=		-DBuildLinkX11
-.  endif
 .endif
 
 .if defined(USE_MOTIF12)
@@ -151,15 +140,6 @@ MOTIFBASE?=		${X11PREFIX}
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
-.  endif
-.  if defined(USE_BUILDLINK_ONLY)
-BUILD_DEPENDS+=		buildlink-x11>=0.7:../../pkgtools/buildlink-x11
-BUILDLINK_DIR?=		${WRKDIR}/.buildlink
-MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
-MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
-MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
-MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
-MAKE_ENV+=		PKGSRC_LDFLAGS="${LDFLAGS}"
 .  endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
@@ -351,7 +331,7 @@ LDFLAGS+=		-L${MOTIFBASE}/lib
 .    endif
 .  endif
 LDFLAGS+=		-Wl,-R${X11BASE}/lib
-.  if !defined(USE_BUILDLINK_X11)
+.  if !defined(X11_BUILDLINK_MK)
 LDFLAGS+=		-L${X11BASE}/lib
 .  endif
 .endif
@@ -974,9 +954,7 @@ CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
 .  if ${X11PREFIX} == ${LOCALBASE}
-.    if defined(USE_BUILDLINK_X11)
-CONFIGURE_ARGS+=        --x-libraries=${BUILDLINK_DIR}/lib --x-includes=${BUILDLINK_DIR}/include
-.    else
+.    if !defined(X11_BUILDLINK_MK)
 CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
 .    endif
 .  endif
