@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/18 23:29:36 xtraeme Exp $
 
 DISTNAME=	libdvdplay-1.0.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Simple API library designed for DVD navigation
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
-.include "../../multimedia/libdvdread/buildlink2.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
