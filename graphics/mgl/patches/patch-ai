@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 2000/12/15 04:12:20 wiz Exp $
+
+--- mgterm/mdate.c.orig	Thu Aug 31 14:06:47 2000
++++ mgterm/mdate.c
+@@ -633,9 +633,10 @@
+ #include <sys/swap.h>
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+-#include <vm/vm_param.h>
+-#ifdef UVM
++#if __NetBSD_Version__ > 105009900
+ #include <uvm/uvm_extern.h>
++#else
++#include <vm/vm_param.h>
+ #endif
+ #include <errno.h>
+ 

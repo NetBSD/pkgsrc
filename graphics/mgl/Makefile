@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2000/11/09 12:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/15 04:12:20 wiz Exp $
 
 DISTNAME=       mgl2-alpha-019
 PKGNAME=        mgl-0.1.9a
 CATEGORIES=     graphics
 MASTER_SITES=   http://at.sakura.ne.jp/~suz/arc/
+
+PATCH_SITES=	http://at.sakura.ne.jp/~suz/arc/
+PATCHFILES=	mgl2-alpha-019-for-netbsd15.patch.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.netbsd.org/Ports/hpcmips/mgl2.html
@@ -33,7 +37,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-mipsel
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-build:
+post-configure:
 .if ${MACHINE_ARCH} == "mipsel"
 	@${MV} -f ${WRKSRC}/conf/config.mk-hpcmips ${WRKSRC}/conf/config.mk.tmp
 .else
