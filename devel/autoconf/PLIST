@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:07 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/03 19:30:58 wiz Exp $
 bin/autoconf
 bin/autoheader
+bin/autom4te
 bin/autoreconf
 bin/autoscan
 bin/autoupdate
@@ -11,19 +12,54 @@ info/autoconf.info
 info/standards.info
 @exec ${INSTALL_INFO} %D/info/autoconf.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
-share/autoconf/acconfig.h
-share/autoconf/acfunctions
-share/autoconf/acgeneral.m4
-share/autoconf/acheaders
-share/autoconf/acidentifiers
-share/autoconf/acmakevars
-share/autoconf/acoldnames.m4
-share/autoconf/acprograms
-share/autoconf/acspecific.m4
-share/autoconf/autoconf.m4
-share/autoconf/autoconf.m4f
-share/autoconf/autoheader.m4
-share/autoconf/autoheader.m4f
-share/autoconf/config.guess
-share/autoconf/config.sub
-@dirrm share/autoconf
+man/man1/autoconf.1
+man/man1/autoheader.1
+man/man1/autom4te.1
+man/man1/autoreconf.1
+man/man1/autoscan.1
+man/man1/autoupdate.1
+man/man1/config.guess.1
+man/man1/config.sub.1
+man/man1/ifnames.1
+share/autoconf/Autom4te/General.pm
+share/autoconf/Autom4te/Struct.pm
+share/autoconf/Autom4te/XFile.pm
+share/autoconf/INSTALL
+share/autoconf/autoconf/autoconf.m4
+share/autoconf/autoconf/autoconf.m4f
+share/autoconf/autoconf/autoheader.m4
+share/autoconf/autoconf/autotest.m4
+share/autoconf/autoconf/autoupdate.m4
+share/autoconf/autoconf/c.m4
+share/autoconf/autoconf/fortran.m4
+share/autoconf/autoconf/functions.m4
+share/autoconf/autoconf/general.m4
+share/autoconf/autoconf/headers.m4
+share/autoconf/autoconf/lang.m4
+share/autoconf/autoconf/libs.m4
+share/autoconf/autoconf/oldnames.m4
+share/autoconf/autoconf/programs.m4
+share/autoconf/autoconf/specific.m4
+share/autoconf/autoconf/status.m4
+share/autoconf/autoconf/types.m4
+share/autoconf/autom4te.cfg
+share/autoconf/autoscan/functions
+share/autoconf/autoscan/headers
+share/autoconf/autoscan/identifiers
+share/autoconf/autoscan/libraries
+share/autoconf/autoscan/makevars
+share/autoconf/autoscan/programs
+share/autoconf/autotest/autotest.m4
+share/autoconf/autotest/autotest.m4f
+share/autoconf/autotest/general.m4
+share/autoconf/m4sugar/m4sh.m4
+share/autoconf/m4sugar/m4sh.m4f
+share/autoconf/m4sugar/m4sugar.m4
+share/autoconf/m4sugar/m4sugar.m4f
+share/autoconf/m4sugar/version.m4
+@dirrm share/autoconf/m4sugar
+@dirrm share/autoconf/autotest
+@dirrm share/autoconf/autoscan
+@dirrm share/autoconf/autoconf
+@dirrm share/autoconf/Autom4te
+@unexec ${RMDIR} %D/share/autoconf 2>&1 || ${TRUE}
