@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/17 09:20:25 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/17 09:22:47 grant Exp $
 
 DISTNAME=		xmill-0-7
 PKGNAME=		xmill-0.7
@@ -12,7 +12,7 @@ COMMENT=		Specialized compressor for XML
 
 BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
 
-EXTRACT_CMD=		unzip -aq ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aq ${DOWNLOADED_DISTFILE}
 
 MAKEFILE=		makefile
 
