@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/08/08 22:43:41 grant Exp $
-
-SHA1 (MozillaFirebird-0.6.1-i686-pc-linux-gnu.tar.gz) = 9977d940f2de38a94e09c4c4a094dd64e3fee904
-Size (MozillaFirebird-0.6.1-i686-pc-linux-gnu.tar.gz) = 9686069 bytes
-SHA1 (MozillaFirebird-0.6.1-sparc-sun-solaris2.7.tar.gz) = d7b03b57eacad4e77eb77ef7a7f146921b888438
-Size (MozillaFirebird-0.6.1-sparc-sun-solaris2.7.tar.gz) = 12969968 bytes

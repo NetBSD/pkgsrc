@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.1 2003/09/27 14:13:08 grant Exp $
+
+WRKSRC=			${WRKDIR}
+CATEGORIES=		www print
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+PLATFORM=		intellinux
+
+NO_CHECKSUM=		YES
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
+
+PLIST_SRC=		../../www/MozillaFirebird-bin-acroread/PLIST
+PLIST_SUBST+=		ACROREAD=${ACROREAD}
+PLIST_SUBST+=		PLATFORM=${PLATFORM}
+NS_PLUGINS_DIR=         ${PREFIX}/lib/MozillaFirebird-linux/plugins
+
+do-install:
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
+	${LN} -s ${PREFIX}/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so \
+		${NS_PLUGINS_DIR}/nppdf.so
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/24 10:36:04 jmmv Exp $
-@exec ${LN} -s %D/lib/netscape/plugins/rpnp.so %D/lib/MozillaFirebird-linux/plugins/rpnp.so
-lib/MozillaFirebird-linux/plugins/rpnp.so
