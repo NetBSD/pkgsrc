@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3425 2003/09/17 15:04:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.3426 2003/09/17 15:17:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3748,3 +3748,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bind9 to 9.2.2p1 [itojun 2003-09-17]
 	Updated catdoc 0.91.4nb1 [jmmv 2003-09-17]
 	Added catdoc-tk-0.91.4 [jmmv 2003-09-17]
+	Updated xbindkeys to 1.5.5nb1 [jmmv 2003-09-17]
+	Added xbindkeys-tk-1.5.5 [jmmv 2003-09-17]
