@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.1 2000/04/27 14:44:24 mycroft Exp $
+
+--- timidity.c.orig	Tue May 21 15:16:20 1996
++++ timidity.c	Thu Apr 27 10:35:59 2000
+@@ -204,7 +204,8 @@
+ {
+   if (i<low || i > high)
+     {
+-      fprintf(stderr, "%s must be between %ld and %ld\n", name, low, high);
++      fprintf(stderr, "%s must be between %ld and %ld\n", name, (long) low,
++	      (long) high);
+       return -1;
+     }
+   else *param=i;

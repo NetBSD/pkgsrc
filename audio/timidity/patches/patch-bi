@@ -1,0 +1,16 @@
+$NetBSD: patch-bi,v 1.1 2000/04/27 14:44:24 mycroft Exp $
+
+--- wave_a.c.orig	Mon May 20 09:10:15 1996
++++ wave_a.c	Thu Apr 27 10:37:13 2000
+@@ -26,10 +26,10 @@
+ #ifdef __WIN32__
+ #include <stdlib.h>
+ #include <io.h>
+-#include <string.h>
+ #else
+ #include <unistd.h>
+ #endif
++#include <string.h>
+ #include <fcntl.h>
+ #include <errno.h>
+ 
