@@ -1,0 +1,40 @@
+$NetBSD: patch-ap,v 1.1 2005/03/30 15:26:43 cube Exp $
+
+--- src/client.c.orig	2005-03-19 17:00:16.000000000 +0100
++++ src/client.c
+@@ -127,7 +127,7 @@ client_cpu_line_from_server(gchar *line)
+ 	gint	n;
+ 	guint64	user, nice, sys, idle;
+ 
+-	sscanf(line, "%d %llu %llu %llu %llu", &n, &user, &nice, &sys, &idle);
++	sscanf(line, "%d %" PRIu64 " %" PRIu64 " %" PRIu64 " %" PRIu64, &n, &user, &nice, &sys, &idle);
+ 	for (list = cpu_list; list; list = list->next)
+ 		{
+ 		cpu = (Cpu *) list->data;
+@@ -371,7 +371,7 @@ client_net_line_from_server(gchar *line)
+ 	gchar		name[32];
+ 	guint64		rx, tx;
+ 
+-	sscanf(line, "%31s %llu %llu", name, &rx, &tx);
++	sscanf(line, "%31s %" PRIu64 " %" PRIu64, name, &rx, &tx);
+ 	for (list = net_list; list; list = list->next)
+ 		{
+ 		net = (NetData *) list->data;
+@@ -615,7 +615,7 @@ struct
+ static void
+ client_mem_line_from_server(gchar *line)
+ 	{
+-	sscanf(line, "%llu %llu %llu %llu %llu %llu",
++	sscanf(line, "%" PRIu64 "%" PRIu64 " %" PRIu64 " %" PRIu64 " %" PRIu64 " %" PRIu64,
+ 			&mem.total, &mem.used, &mem.free,
+ 			&mem.shared, &mem.buffers, &mem.cached);
+ 	}
+@@ -623,7 +623,7 @@ client_mem_line_from_server(gchar *line)
+ static void
+ client_swap_line_from_server(gchar *line)
+ 	{
+-	sscanf(line, "%llu %llu %lu %lu",
++	sscanf(line, "%" PRIu64 " %" PRIu64 " %lu %lu",
+ 			&mem.swap_total, &mem.swap_used,
+ 			&mem.swap_in, &mem.swap_out);
+ 	}
