@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2000/09/06 16:09:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/15 02:33:13 jlam Exp $
 #
 
-DISTNAME=	lavaps-1.10
+DISTNAME=	lavaps-1.15
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
@@ -10,10 +10,11 @@ HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 
-USE_X11=	YES
-GNU_CONFIGURE=	YES
+USE_X11=	# defined
+GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS=	--with-additional-includes='-I${LOCALBASE}/include' \
 		--with-additional-libs='-L${LOCALBASE}/lib' \
-		--with-tcl-ver=8.3.2 --with-tk-ver=8.3.2
+		--with-tcl-ver=8.3.2 --with-tk-ver=8.3.2 \
+		--with-tcltk-lib-suffix-type=nodot
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2000/02/05 06:54:30 wiz Exp $
---- process_scan_freebsd.cc.orig	Tue Nov  2 16:27:39 1999
-+++ process_scan_freebsd.cc	Tue Nov  2 16:53:24 1999
-@@ -112,7 +112,7 @@
+$NetBSD: patch-aa,v 1.3 2000/10/15 02:33:15 jlam Exp $
+
+--- process_scan_freebsd.cc.orig	Tue Jun  6 16:25:25 2000
++++ process_scan_freebsd.cc	Wed Sep  6 05:16:59 2000
+@@ -39,6 +39,7 @@
+ #include <sys/user.h>
+ #include <fcntl.h>
+ #include <kvm.h>
++#include <unistd.h>
+ }
+ 
+ #include "process_scan.hh"
+@@ -116,7 +117,7 @@
  	ENTRY_TRACE(__FILE__,__LINE__);
  	static int pages_per_kb = 0;
  	if (!pages_per_kb)
@@ -10,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2000/02/05 06:54:30 wiz Exp $
  	return pages * pages_per_kb;
  }
  
-@@ -246,6 +246,16 @@
+@@ -250,6 +251,16 @@
  	// xxx: skip p_iticks
  
  	int size, resident;
@@ -18,7 +27,7 @@ $NetBSD: patch-aa,v 1.2 2000/02/05 06:54:30 wiz Exp $
 +#ifdef __NetBSD__
 +#  ifndef UPAGES
 +#    ifdef USPACE
-+#      define UPAGES	( USPACE / sysconf(_SC_PAGESIZE) )
++#      define UPAGES   ( USPACE / sysconf(_SC_PAGESIZE) )
 +#    else /* !USPACE */
 +#      error No UPAGES, no USPACE, no fun!
 +#    endif /* USPACE */
