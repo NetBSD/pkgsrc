@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/20 16:11:22 rh Exp $
+
+--- configure.orig	Fri Aug  6 21:50:19 1999
++++ configure	Fri Aug 20 17:13:11 1999
+@@ -1396,7 +1396,7 @@
+ GNOME_CFLAGS=`$gnomepath gnomeui --cflags 2>/dev/null`
+ GNOME_LIBS=`$gnomepath gnomeui --libs 2>/dev/null`
+ CFLAGS="$CFLAGS $GNOME_CFLAGS"
+-LIBS="$LIBS $GNOME_LIBS -lpq -lcrypt"
++LIBS="$LIBS $GNOME_LIBS -L${LOCALBASE}/pgsql/lib -Wl,-R${LOCALBASE}/pgsql/lib -lpq -lcrypt"
+ 
+ 
+ trap '' 1 2 15
+@@ -1673,6 +1673,12 @@
+ chmod +x $CONFIG_STATUS
+ rm -fr confdefs* $ac_clean_files
+ test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} $CONFIG_STATUS || exit 1
++
++
++for i in src/*.c src/*.h ; do
++  mv $i $i.orig
++  sed "s:<pgsql/:<:g" <$i.orig >$i
++done
+ 
+ 
+ echo configure complete, now type \'make\'

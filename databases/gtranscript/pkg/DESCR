@@ -1,0 +1,11 @@
+  GNOME Transcript is a SQL Database Client (Currently PostgreSQL), designed
+to provide a friendly and powerfull environment for the database user.  Its
+currently in it's early stages and a lot (and I mean a LOT) of planed
+features are missing but it's usable.
+
+  Features:
+
+    * Design the tables you want, and the way the info displayed 
+
+    * Add, Update, View, and Delete from the table using the struct you
+      designed 
