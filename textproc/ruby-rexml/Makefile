@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/05 15:21:06 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/30 04:51:10 taca Exp $
 #
 
 DISTNAME=	rexml_${VERSION}
@@ -20,7 +20,7 @@ RUBY_ICONV_DIR=	../../converters/ruby${RUBY_VER}-iconv
 RUBY_ICONV_DIR=	../../converters/ruby-iconv
 .endif
 
-DEPENDS+= ${RUBY_PKGPREFIX}-iconv,${RUBY_PKGPREFIX}-uconv}:${RUBY_ICONV_DIR}
+DEPENDS+= {${RUBY_PKGPREFIX}-iconv-[0-9]*,${RUBY_PKGPREFIX}-uconv-[0-9]*}:${RUBY_ICONV_DIR}
 
 VERSION=		3.1.2
 USE_RUBY_INSTALL=	yes
