@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/05 12:50:52 rh Exp $
+# $NetBSD: Makefile,v 1.14 2000/09/20 05:14:10 jlam Exp $
 #
 
 DISTNAME=	hylafax-4.1beta2
@@ -44,6 +44,6 @@ post-build:
 	    <${FILESDIR}/hylafax.sh >${WRKDIR}/hylafax.sh; \
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/hylafax.sh ${PREFIX}/etc/rc.d/hylafax.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/hylafax.sh ${PREFIX}/etc/rc.d/hylafax
 
 .include "../../mk/bsd.pkg.mk"

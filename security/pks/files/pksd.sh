@@ -1,7 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pksd.sh,v 1.1.1.1 2000/07/27 16:10:24 jlam Exp $
+# $NetBSD: pksd.sh,v 1.2 2000/09/20 05:14:12 jlam Exp $
 #
+# PROVIDE: pksd
+# REQUIRE: DAEMON
 
 name="pksd"
 command=${1:-start}
