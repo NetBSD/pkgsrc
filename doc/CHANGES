@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8686 2005/01/10 21:00:43 schmonz Exp $
+$NetBSD: CHANGES,v 1.8687 2005/01/10 21:56:27 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -214,3 +214,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added pgpenvelope-2.10.2nb1 [tv 2005-01-10]
 	Removed sendmail811 [adrianp 2005-01-10]
 	Updated getmail to 4.3.0 [schmonz 2005-01-10]
+	Updated dillo to 0.8.3nb2 [adrianp 2005-01-10]
