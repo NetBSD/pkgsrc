@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.14 2002/11/28 13:30:52 wiz Exp $
+$NetBSD: TODO,v 1.15 2002/11/28 13:35:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o snes9x-1.39a
 	o sodipodi-0.28
 	o speex-1.0beta2
-	o splint-3.0.1.6 (replacing lclint) [bjoern]
 	o squeak-3.2 [fredb|pkg/17950]
 	o srp-1.7.5 [jlam]
 	o star-1.4.2
