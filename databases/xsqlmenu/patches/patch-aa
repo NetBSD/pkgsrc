@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/27 02:18:07 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2002/04/17 04:45:13 fredb Exp $
 
---- Makefile.orig	Mon Aug 28 05:57:00 2000
+--- Makefile.orig	Sun Aug 27 22:57:00 2000
 +++ Makefile
-@@ -8,13 +8,13 @@
+@@ -8,36 +8,43 @@
  all: xsqlmenu
  
  #XFORMSBASE = /opt/lib
@@ -18,7 +18,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/27 02:18:07 hubertf Exp $
  endif
  
  ifeq (${DB},msql)
-@@ -26,18 +26,21 @@
+ CFLAGS  = -O -Wall -I$(MSQLBASE)/include
+ LDFLAGS = -L $(MSQLBASE)/lib -lmsql -L$(XFORMSBASE) -lforms -lXpm \
++	  -L$(LOCALBASE)/lib -ljpeg \
+           -L/usr/X11R6/lib -lX11 -lm
+ LDSTATICFLAGS= -L $(MSQLBASE)/lib -lmsql $(XFORMSBASE)/libforms.a \
++	  $(LOCALBASE)/lib/libjpeg.a \
+           $(XFORMSBASE)/libXpm.a -L/usr/X11R6/lib -lX11 -lm
  .msql:
  	touch .msql
  	rm -f .mysql
@@ -34,8 +40,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/27 02:18:07 hubertf Exp $
 +	  -I${X11BASE}/include \
 +	  -I${LOCALBASE}/include
 +LDFLAGS = -L$(MYSQLPREFIX)/lib/mysql -Wl,-R$(MYSQLPREFIX)/lib/mysql -lmysqlclient -L$(XFORMSBASE) -Wl,-R$(XFORMSBASE) -lforms \
++	  -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -ljpeg \
 +	-lXpm -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lm
  LDSTATICFLAGS= -L $(MYSQLPREFIX)/lib/mysql -lmysqlclient $(XFORMSBASE)/libforms.a \
++	  $(LOCALBASE)/lib/libjpeg.a \
            $(XFORMSBASE)/libXpm.a -L/usr/X11R6/lib -lX11 -lm
  .mysql:
  	touch .mysql
