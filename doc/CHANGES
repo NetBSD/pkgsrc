@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4851 2004/02/15 23:55:07 wiz Exp $
+$NetBSD: CHANGES,v 1.4852 2004/02/16 00:05:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ex to 20040103 [itojun 2004-02-15]
 	Updated pcb-current to 20040215 [dmcmahill 2004-02-15]
 	Updated snownews to 1.4.4 [wiz 2004-02-15]
+	Updated gucharmap to 1.2.0nb5 [jmmv 2004-02-16]
