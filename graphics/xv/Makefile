@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:03 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1999/01/04 23:29:46 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -18,6 +18,7 @@ HOMEPAGE=	http://www-vis.lbl.gov/software/xv.html
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
 
 USE_IMAKE=	yes
 
@@ -27,6 +28,11 @@ LICENSE=	shareware
 
 pre-patch:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
+
+post-patch:
+	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
+	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' < ${WRKSRC}/config.h.bak \
+		> ${WRKSRC}/config.h
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xv
