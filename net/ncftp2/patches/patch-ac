@@ -1,0 +1,11 @@
+--- configure.orig	Mon Oct 28 08:26:46 1996
++++ configure	Sun Feb 22 21:23:03 1998
+@@ -1075,7 +1075,7 @@
+ echo "checking for extra include and lib directories..." 1>&6
+ b1=`cd .. ; pwd`
+ b2=`cd ../.. ; pwd`
+-exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr/ccs"
++exdirs="$HOME $j $b1 $b2 $prefix /usr/ccs"
+ 
+ subexdirs="-"
+ if test "$subexdirs" = "" ; then
