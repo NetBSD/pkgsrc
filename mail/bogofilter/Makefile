@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/01/17 15:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/03/17 14:25:48 wiz Exp $
 
 DISTNAME=	bogofilter-0.92.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bogofilter/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,4 +26,5 @@ REPLACE_PERL=		src/bogoupgrade
 BUILDLINK_TRANSFORM+=	l:db:db4
 
 .include "../../databases/db4/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
