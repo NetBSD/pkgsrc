@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:13 wiz Exp $
 
 SHA1 (dante-1.1.9.tar.gz) = 688065e1be67ae58203a9fd3c8e62955aa1a9d5d
+Size (dante-1.1.9.tar.gz) = 468506 bytes
 SHA1 (patch-aa) = a1b1243f2b4a254dfda5ce1dc1886b45bae2e397

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:33 wiz Exp $
 
-MD5 (snort-1.7.tar.gz) = 0eae2f987f663a2fbf236e38d1f8e960
+SHA1 (snort-1.7.tar.gz) = e2bbc55a55d53ab0dae4428ff94c0aaab7610a5f
+Size (snort-1.7.tar.gz) = 653702 bytes

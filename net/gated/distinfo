@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:15 wiz Exp $
 
-MD5 (gated-3-5-11.tar.gz) = 6b192df3bdbda6d4f2222c93ac725e75
+SHA1 (gated-3-5-11.tar.gz) = a6abdc59beb881dee06c9433b690fa6eab99fe07
+Size (gated-3-5-11.tar.gz) = 1565263 bytes
 SHA1 (patch-aa) = bd025a19b4a8bff4ed080a4b30524adfd48a7de6
 SHA1 (patch-ab) = 55043a19003b28c3a23d8281733341786a0e1936
 SHA1 (patch-ad) = 0338ffe0160d72daf45c1fb641cae7baee82e13e

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:11 wiz Exp $
 
-MD5 (cia-20000716.tar.bz2) = 27ef4eb31165a98577c3a2e7ec2d3e6d
+SHA1 (cia-20000716.tar.bz2) = aba966ef972c384a5798533a388ea3bf6596d643
+Size (cia-20000716.tar.bz2) = 7312 bytes

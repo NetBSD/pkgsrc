@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:39 wiz Exp $
 
-MD5 (vnc-3.3.3r2_unixsrc.tgz) = 6fc83e1b6153d3252649953267713f17
+SHA1 (vnc-3.3.3r2_unixsrc.tgz) = 98e9d2e2c2d0f4f9cb9cafee22d21a868189b176
+Size (vnc-3.3.3r2_unixsrc.tgz) = 2072772 bytes
 SHA1 (patch-aa) = ae04511d6993b4d765bff4f88ecb5294ceb706eb

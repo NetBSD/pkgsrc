@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:15 wiz Exp $
 
-MD5 (gnapfetch-0.3.tar.gz) = 594c48df0ebe1f17bd59e904e56ec793
+SHA1 (gnapfetch-0.3.tar.gz) = 892a991ea6b9ee7d6a2fe90f1c4bad2614813765
+Size (gnapfetch-0.3.tar.gz) = 2466 bytes

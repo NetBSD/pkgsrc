@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:24 wiz Exp $
 
-MD5 (nc110.tgz) = 402632f2fe01c169ff19a0ad6e9d608c
+SHA1 (nc110.tgz) = f8ec3a39796b141b6654d39b7957b863c7f79a95
+Size (nc110.tgz) = 75267 bytes
 SHA1 (patch-aa) = c1891404c8d520fe2c3f75b21ff3780ef08100a5
 SHA1 (patch-ab) = c967191d29c4be6bdcc37cf32455337ca1d28be3
