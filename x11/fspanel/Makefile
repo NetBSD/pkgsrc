@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/12 21:54:42 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/31 16:47:48 minskim Exp $
 #
 
 DISTNAME=	fspanel-0.8beta1
@@ -10,11 +10,15 @@ MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.chatjunkies.org/fspanel/
 COMMENT=	F***ing Small Panel
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 HAS_CONFIGURE=	YES
 
 CFLAGS+=	-DHAVE_XPM -DXFT
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fspanel ${PREFIX}/bin/
