@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.893 2002/01/06 00:52:24 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.894 2002/01/06 02:03:40 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -19,6 +19,11 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
+
+##### Pass information about desired toolchain to package build.
+.if defined(USETOOLS)
+MAKE_ENV+=	USETOOLS="${USETOOLS}"
+.endif
 
 ##### Build crypto packages by default.
 MKCRYPTO?=		yes
@@ -1642,39 +1647,36 @@ do-ltconfig-override:
 #
 AUTOMAKE_OVERRIDE?=	YES
 .if defined(AUTOMAKE_OVERRIDE) && (${AUTOMAKE_OVERRIDE} == "YES")
-AUTOMAKE_PATTERNS+=     configure.in
 AUTOMAKE_PATTERNS+=     aclocal.m4 
-AUTOMAKE_PATTERNS+=     stamp-h.in stamp-h[0-9].in config.h.in
+AUTOMAKE_PATTERNS+=     configure.in
 AUTOMAKE_PATTERNS+=     Makefile.in
+AUTOMAKE_PATTERNS+=     stamp-h.in stamp-h\[0-9\].in
+AUTOMAKE_PATTERNS+=     config.h.in
 AUTOMAKE_PATTERNS+=     ${CONFIGURE_SCRIPT:T}
-_AUTOMAKE_PATTERNS_FIND=	\
-	\( ${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 _CONFIGURE_PREREQ+=	automake-pre-override
 automake-pre-override:
 .  if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC};							\
-	${FIND} . ${_AUTOMAKE_PATTERNS_FIND} -print |			\
-		${XARGS} ${TOUCH} ${TOUCH_ARGS}
-.  else
-	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
+	(for _PATTERN in ${AUTOMAKE_PATTERNS}; do			\
+	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
+	 done) | 							\
+	${XARGS} ${TOUCH} ${TOUCH_ARGS}
 .  endif
 
 AUTOMAKE_POST_PATTERNS+=     config.status
-AUTOMAKE_POST_PATTERNS+=     Makefile stamp-h stamp-h[0-9]
+AUTOMAKE_POST_PATTERNS+=     Makefile
+AUTOMAKE_POST_PATTERNS+=     stamp-h stamp-h[0-9]
 AUTOMAKE_POST_PATTERNS+=     config.h
-_AUTOMAKE_POST_PATTERNS_FIND=	\
-	\( ${AUTOMAKE_POST_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 _CONFIGURE_POSTREQ+=	automake-post-override
 automake-post-override:
 .  if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC};							\
-	${FIND} . ${_AUTOMAKE_POST_PATTERNS_FIND} -print |		\
-		${XARGS} ${TOUCH} ${TOUCH_ARGS}
-.  else
+	(for _PATTERN in ${AUTOMAKE_POST_PATTERNS}; do			\
+	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
+	 done) | 							\
+	${XARGS} ${TOUCH} ${TOUCH_ARGS}
 .  endif
 .endif	# AUTOMAKE_OVERRIDE
 
