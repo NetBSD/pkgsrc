@@ -1,0 +1,238 @@
+$NetBSD: patch-cn,v 1.1.1.1 2002/05/31 13:19:18 skrll Exp $
+
+--- konqueror/keditbookmarks/Makefile.in.orig	Mon May 13 23:57:51 2002
++++ konqueror/keditbookmarks/Makefile.in
+@@ -291,21 +291,26 @@
+ 
+ METASOURCES = AUTO
+ 
+-lib_LTLIBRARIES = keditbookmarks.la
++lib_LTLIBRARIES = libkeditbookmarks_main.la keditbookmarks.la
+ 
+-#>- keditbookmarks_la_SOURCES = main.cpp toplevel.cpp toplevel.skel commands.cpp
++#>- libkeditbookmarks_main_la_SOURCES = main.cpp toplevel.cpp toplevel.skel commands.cpp
+ #>+ 1
+-keditbookmarks_la_SOURCES=main.cpp toplevel.cpp  commands.cpp toplevel_skel.cpp
++libkeditbookmarks_main_la_SOURCES=main.cpp toplevel.cpp  commands.cpp toplevel_skel.cpp
++
++keditbookmarks_la_SOURCES = keditbookmarks_main.cpp
+ kbookmarklistener_DIR = $(top_srcdir)/libkonq
+ 
+-keditbookmarks_la_LIBADD = $(top_builddir)/libkonq/libkonq.la
++libkeditbookmarks_main_la_LIBADD = $(top_builddir)/libkonq/libkonq.la
++libkeditbookmarks_main_la_LDFLAGS = $(all_libraries)
++#>- libkeditbookmarks_main_la_METASOURCES = AUTO
++
++keditbookmarks_la_LIBADD = libkeditbookmarks_main.la
+ keditbookmarks_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-#>- keditbookmarks_la_METASOURCES = AUTO
+ 
+ bin_PROGRAMS = keditbookmarks
+ 
+-keditbookmarks_SOURCES = dummy.cpp
+-keditbookmarks_LDADD = keditbookmarks.la
++keditbookmarks_SOURCES = keditbookmarks_main.cpp
++keditbookmarks_LDADD = libkeditbookmarks_main.la
+ keditbookmarks_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ rcdir = $(kde_datadir)/keditbookmarks
+@@ -320,23 +325,30 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-keditbookmarks_la_DEPENDENCIES = $(top_builddir)/libkonq/libkonq.la
+-am_keditbookmarks_la_OBJECTS = main.lo toplevel.lo commands.lo
++keditbookmarks_la_DEPENDENCIES = libkeditbookmarks_main.la
++am_keditbookmarks_la_OBJECTS = keditbookmarks_main.lo
+ #>- keditbookmarks_la_OBJECTS = $(am_keditbookmarks_la_OBJECTS)
++#>+ 1
++keditbookmarks_la_OBJECTS = keditbookmarks_main.lo
++libkeditbookmarks_main_la_DEPENDENCIES = \
++	$(top_builddir)/libkonq/libkonq.la
++am_libkeditbookmarks_main_la_OBJECTS = main.lo toplevel.lo commands.lo
++#>- libkeditbookmarks_main_la_OBJECTS = \
++#>- $(am_libkeditbookmarks_main_la_OBJECTS)
+ #>+ 5
+-keditbookmarks_la_final_OBJECTS = keditbookmarks_la.all_cpp.lo 
+-keditbookmarks_la_nofinal_OBJECTS = main.lo toplevel.lo commands.lo toplevel_skel.lo \
+-	keditbookmarks_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@keditbookmarks_la_OBJECTS = $(keditbookmarks_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@keditbookmarks_la_OBJECTS = $(keditbookmarks_la_final_OBJECTS)
++libkeditbookmarks_main_la_final_OBJECTS = libkeditbookmarks_main_la.all_cpp.lo 
++libkeditbookmarks_main_la_nofinal_OBJECTS = main.lo toplevel.lo commands.lo toplevel_skel.lo \
++	libkeditbookmarks_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkeditbookmarks_main_la_OBJECTS = $(libkeditbookmarks_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkeditbookmarks_main_la_OBJECTS = $(libkeditbookmarks_main_la_final_OBJECTS)
+ bin_PROGRAMS = keditbookmarks$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_keditbookmarks_OBJECTS = dummy.$(OBJEXT)
++am_keditbookmarks_OBJECTS = keditbookmarks_main.$(OBJEXT)
+ #>- keditbookmarks_OBJECTS = $(am_keditbookmarks_OBJECTS)
+ #>+ 1
+-keditbookmarks_OBJECTS = dummy.$(OBJEXT)
+-keditbookmarks_DEPENDENCIES = keditbookmarks.la
++keditbookmarks_OBJECTS = keditbookmarks_main.$(OBJEXT)
++keditbookmarks_DEPENDENCIES = libkeditbookmarks_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -344,8 +356,10 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/commands.Plo $(DEPDIR)/dummy.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/toplevel.Plo
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/commands.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/keditbookmarks_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/keditbookmarks_main.Po $(DEPDIR)/main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/toplevel.Plo
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -365,11 +379,12 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(keditbookmarks_la_SOURCES) $(keditbookmarks_SOURCES)
++DIST_SOURCES = $(keditbookmarks_la_SOURCES) \
++	$(libkeditbookmarks_main_la_SOURCES) $(keditbookmarks_SOURCES)
+ DATA = $(data_DATA) $(rc_DATA)
+ 
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(keditbookmarks_la_SOURCES) $(keditbookmarks_SOURCES)
++SOURCES = $(keditbookmarks_la_SOURCES) $(libkeditbookmarks_main_la_SOURCES) $(keditbookmarks_SOURCES)
+ 
+ #>- all: all-am
+ #>+ 1
+@@ -418,6 +433,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ keditbookmarks.la: $(keditbookmarks_la_OBJECTS) $(keditbookmarks_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(keditbookmarks_la_LDFLAGS) $(keditbookmarks_la_OBJECTS) $(keditbookmarks_la_LIBADD) $(LIBS)
++libkeditbookmarks_main.la: $(libkeditbookmarks_main_la_OBJECTS) $(libkeditbookmarks_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkeditbookmarks_main_la_LDFLAGS) $(libkeditbookmarks_main_la_OBJECTS) $(libkeditbookmarks_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -453,7 +470,8 @@
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/commands.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/keditbookmarks_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/keditbookmarks_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/toplevel.Plo@am__quote@
+ 
+@@ -548,7 +566,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kinsertionsort.h hi32-app-keditbookmarks.png commands.h toplevel.h hi16-app-keditbookmarks.png keditbookmarks.desktop keditbookmarksui.rc 
++KDE_DIST=commands.h kinsertionsort.h keditbookmarks.desktop hi16-app-keditbookmarks.png hi32-app-keditbookmarks.png toplevel.h keditbookmarksui.rc 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -668,9 +686,6 @@
+ 	uninstall-binPROGRAMS uninstall-dataDATA uninstall-info-am \
+ 	uninstall-libLTLIBRARIES uninstall-rcDATA
+ 
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -720,28 +735,28 @@
+ 
+ 
+ #>+ 12
+-keditbookmarks_la_meta_unload.cpp:  commands.moc toplevel.moc
+-	@echo 'creating keditbookmarks_la_meta_unload.cpp'
+-	@-rm -f keditbookmarks_la_meta_unload.cpp
++libkeditbookmarks_main_la_meta_unload.cpp:  commands.moc toplevel.moc
++	@echo 'creating libkeditbookmarks_main_la_meta_unload.cpp'
++	@-rm -f libkeditbookmarks_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_keditbookmarks_la[] = {' > keditbookmarks_la_meta_unload.cpp ;\
+-		cat  commands.moc toplevel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> keditbookmarks_la_meta_unload.cpp ;\
+-		echo '0};' >> keditbookmarks_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> keditbookmarks_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(keditbookmarks_la)' >> keditbookmarks_la_meta_unload.cpp ;\
+-	else echo > keditbookmarks_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkeditbookmarks_main_la[] = {' > libkeditbookmarks_main_la_meta_unload.cpp ;\
++		cat  commands.moc toplevel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkeditbookmarks_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkeditbookmarks_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkeditbookmarks_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkeditbookmarks_main_la)' >> libkeditbookmarks_main_la_meta_unload.cpp ;\
++	else echo > libkeditbookmarks_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  keditbookmarks_la_meta_unload.cpp
++	-rm -f  libkeditbookmarks_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-keditbookmarks_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/commands.cpp toplevel_skel.cpp keditbookmarks_la_meta_unload.cpp   commands.moc toplevel.moc 
++keditbookmarks_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/keditbookmarks_main.cpp  
+ 	@echo 'creating keditbookmarks_la.all_cpp.cpp ...'; \
+ 	rm -f keditbookmarks_la.all_cpp.files keditbookmarks_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> keditbookmarks_la.all_cpp.final; \
+-	for file in main.cpp toplevel.cpp commands.cpp toplevel_skel.cpp keditbookmarks_la_meta_unload.cpp ; do \
++	for file in keditbookmarks_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> keditbookmarks_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> keditbookmarks_la.all_cpp.final; \
+ 	done; \
+@@ -749,11 +764,23 @@
+ 	rm -f keditbookmarks_la.all_cpp.final keditbookmarks_la.all_cpp.files
+ 
+ #>+ 11
+-keditbookmarks.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkeditbookmarks_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/commands.cpp toplevel_skel.cpp libkeditbookmarks_main_la_meta_unload.cpp   commands.moc toplevel.moc 
++	@echo 'creating libkeditbookmarks_main_la.all_cpp.cpp ...'; \
++	rm -f libkeditbookmarks_main_la.all_cpp.files libkeditbookmarks_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkeditbookmarks_main_la.all_cpp.final; \
++	for file in main.cpp toplevel.cpp commands.cpp toplevel_skel.cpp libkeditbookmarks_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkeditbookmarks_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkeditbookmarks_main_la.all_cpp.final; \
++	done; \
++	cat libkeditbookmarks_main_la.all_cpp.final libkeditbookmarks_main_la.all_cpp.files  > libkeditbookmarks_main_la.all_cpp.cpp; \
++	rm -f libkeditbookmarks_main_la.all_cpp.final libkeditbookmarks_main_la.all_cpp.files
++
++#>+ 11
++keditbookmarks.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/keditbookmarks_main.cpp  
+ 	@echo 'creating keditbookmarks.all_cpp.cpp ...'; \
+ 	rm -f keditbookmarks.all_cpp.files keditbookmarks.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> keditbookmarks.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in keditbookmarks_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> keditbookmarks.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> keditbookmarks.all_cpp.final; \
+ 	done; \
+@@ -762,20 +789,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f keditbookmarks_la.all_cpp.cpp keditbookmarks.all_cpp.cpp
++	-rm -f keditbookmarks_la.all_cpp.cpp libkeditbookmarks_main_la.all_cpp.cpp keditbookmarks.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) keditbookmarks_la_OBJECTS="$(keditbookmarks_la_final_OBJECTS)" all-am
++	$(MAKE) libkeditbookmarks_main_la_OBJECTS="$(libkeditbookmarks_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) keditbookmarks_la_OBJECTS="$(keditbookmarks_la_final_OBJECTS)" install-am
++	$(MAKE) libkeditbookmarks_main_la_OBJECTS="$(libkeditbookmarks_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) keditbookmarks_la_OBJECTS="$(keditbookmarks_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkeditbookmarks_main_la_OBJECTS="$(libkeditbookmarks_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) keditbookmarks_la_OBJECTS="$(keditbookmarks_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkeditbookmarks_main_la_OBJECTS="$(libkeditbookmarks_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

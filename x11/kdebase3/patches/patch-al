@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2002/05/31 13:18:42 skrll Exp $
+
+--- kcontrol/ebrowsing/Makefile.am.orig	Tue Feb 19 13:43:23 2002
++++ kcontrol/ebrowsing/Makefile.am
+@@ -10,7 +10,7 @@
+ 
+ kcm_kurifilt_la_SOURCES = filteropts.cpp main.cpp
+ 
+-kcm_kurifilt_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined
++kcm_kurifilt_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined ${KDE_RPATH}
+ kcm_kurifilt_la_LIBADD = $(LIB_KSYCOCA)
+ # Don't link this lib to the plugins. They are dlopened and linking to them
+ # results in crashes when closing kcmshell.

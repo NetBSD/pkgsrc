@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1.1.1 2002/05/31 13:18:42 skrll Exp $
+
+--- kcontrol/ebrowsing/Makefile.in.orig	Mon May 13 23:57:37 2002
++++ kcontrol/ebrowsing/Makefile.in
+@@ -298,7 +298,7 @@
+ 
+ kcm_kurifilt_la_SOURCES = filteropts.cpp main.cpp
+ 
+-kcm_kurifilt_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
++kcm_kurifilt_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined ${KDE_RPATH}
+ kcm_kurifilt_la_LIBADD = $(LIB_KSYCOCA)
+ 
+ data_DATA = ebrowsing.desktop
+@@ -549,7 +549,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=ebrowsing.desktop main.h filteropts.h 
++KDE_DIST=main.h ebrowsing.desktop filteropts.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
