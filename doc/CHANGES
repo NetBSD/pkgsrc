@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8775 2005/01/16 21:16:34 adrianp Exp $
+$NetBSD: CHANGES,v 1.8776 2005/01/16 21:44:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -339,3 +339,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added rubber-0.99.8 [cube 2005-01-16]
 	Updated nmh to 1.0.4nb6 [jmmv 2005-01-16]
 	Added horde-3.0.2 [adrianp 2004-01-16]
+	Added imp-4.0.1 [adrianp 2004-01-16]
