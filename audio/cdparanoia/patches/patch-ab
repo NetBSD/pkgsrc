@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/29 09:47:02 skrll Exp $
 
---- Makefile.in.orig	Tue Dec 14 17:42:14 1999
-+++ Makefile.in	Mon Jan 17 23:32:22 2000
-@@ -8,7 +8,7 @@
+--- Makefile.in.orig	Tue Dec 14 08:42:14 1999
++++ Makefile.in
+@@ -3,12 +3,12 @@
+ # DO NOT EDIT BELOW! ##########################################################
+ # (unless, of course, you know what you are doing :) ##########################
+ 
+-VERSION=9.7
++VERSION=97
+ VPATH=@srcdir@
  srcdir=@srcdir@
  
  @SET_MAKE@
@@ -11,14 +17,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  OPT=@OPT@ $(FLAGS)
  DEBUG=@DEBUG@ $(FLAGS)
  CC=@CC@
-@@ -27,29 +27,27 @@
+@@ -27,29 +27,29 @@
  
  OFILES = main.o report.o header.o buffering_write.o
  
 -export STATIC 
--export VERSION
-+STLIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a -lm
-+STLIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
+ export VERSION
  
 -ifeq ($(STATIC),TRUE)
 -	LIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a \
@@ -28,24 +32,27 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
 -	LIBS = -lcdda_interface -lcdda_paranoia -lm
 -	LIBDEP = interface/libcdda_interface.so paranoia/libcdda_paranoia.so
 -endif
-+SHLIBS = -lcdda_interface -lcdda_paranoia -lm
-+SHLIBDEP = interface/libcdda_interface.so paranoia/libcdda_paranoia.so
++STLIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a -lm
++STLIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
  
++SHLIBDEP = interface/libcdda_interface.la paranoia/libcdda_paranoia.la
++SHLIBS = $(SHLIBDEP) -lm
  
 -all: 	
++
 +all:
  	cd interface && $(MAKE) all
  	cd paranoia && $(MAKE) all
 -	$(MAKE) cdparanoia CFLAGS="$(OPT)" 
 -	strip cdparanoia
 +	$(MAKE) cdparanoia CFLAGS="$(OPT)" LIBS="$(SHLIBS)" LIBDEP="$(SHLIBDEP)"
- 
--debug:  
++
 +static:
 +	cd interface && $(MAKE) lib
 +	cd paranoia && $(MAKE) lib
 +	$(MAKE) cdparanoia CFLAGS="$(OPT)" LIBS="$(STLIBS)" LIBDEP="$(STLIBDEP)"
-+
+ 
+-debug:  
 +debug:
  	cd interface && $(MAKE) debug
  	cd paranoia && $(MAKE) debug
@@ -54,3 +61,34 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  
  test:	
  	cd interface && $(MAKE) all
+@@ -64,26 +64,15 @@
+ 	cd paranoia && $(MAKE) slib
+ 
+ install:
+-	$(INSTALL) -p -m 0755 $(srcdir)/cdparanoia $(BINDIR)
++	$(LIBTOOL) --mode=install $(INSTALL) -p -m 0755 $(srcdir)/cdparanoia $(BINDIR)
+ 	$(INSTALL) -p -m 0644 $(srcdir)/cdparanoia.1 $(MANDIR)/man1
+ 	$(INSTALL) -p -m 0644 $(srcdir)/paranoia/cdda_paranoia.h $(INCLUDEDIR)
+-	$(INSTALL) -p -m 0644 $(srcdir)/paranoia/libcdda_paranoia.so.0.$(VERSION) $(LIBDIR)
+-	$(INSTALL) -p -m 0644 $(srcdir)/paranoia/libcdda_paranoia.a $(LIBDIR)
++	$(LIBTOOL) --mode=install $(INSTALL) -p -m 0644 $(srcdir)/paranoia/libcdda_paranoia.la $(LIBDIR)
+ 	$(INSTALL) -p -m 0644 $(srcdir)/interface/cdda_interface.h $(INCLUDEDIR)
+-	$(INSTALL) -p -m 0644 $(srcdir)/interface/libcdda_interface.so.0.$(VERSION) $(LIBDIR)
+-	$(INSTALL) -p -m 0644 $(srcdir)/interface/libcdda_interface.a $(LIBDIR)
+-	ln -fs libcdda_interface.so.0.$(VERSION) \
+-		$(LIBDIR)/libcdda_interface.so.0
+-	ln -fs libcdda_interface.so.0.$(VERSION) \
+-		$(LIBDIR)/libcdda_interface.so
+-	ln -fs libcdda_paranoia.so.0.$(VERSION) \
+-		$(LIBDIR)/libcdda_paranoia.so.0
+-	ln -fs libcdda_paranoia.so.0.$(VERSION) \
+-		$(LIBDIR)/libcdda_paranoia.so
++	$(LIBTOOL) --mode=install $(INSTALL) -p -m 0644 $(srcdir)/interface/libcdda_interface.la $(LIBDIR)
+ 
+ cdparanoia:	$(OFILES) $(LIBDEP)
+-		$(LD) $(CFLAGS) $(LDFLAGS) $(OFILES) \
+-		-L$(PWD)/paranoia -L$(PWD)/interface \
++		$(LIBTOOL) --mode=link $(LD) $(CFLAGS) $(LDFLAGS) $(OFILES) \
+ 		-o cdparanoia $(LIBS)
+ 
+ .c.o:
