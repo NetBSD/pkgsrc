@@ -1,32 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/28 22:34:08 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/09 00:32:16 jtb Exp $
 
---- configure.orig	Tue Dec  5 14:17:43 2000
+--- configure.orig	Thu Mar  8 22:20:34 2001
 +++ configure
-@@ -591,15 +591,15 @@
- else
- 	echo "$ac_t""System type is ${system}." 1>&6
- fi
--echo 'Installation prefix (/usr/local/lib/tela) ?'
--read ans
--if test ".$ans" = "."; then ans=/usr/local/lib/tela; fi
--INSTALLATION_PREFIX=$ans
--
--echo "Architecture-dependent installation prefix ($INSTALLATION_PREFIX) ?"
--read ans
--if test ".$ans" = "."; then ans=$INSTALLATION_PREFIX; fi
--ARCHDEP_INSTALLATION_PREFIX=$ans
-+#echo 'Installation prefix (/usr/local/lib/tela) ?'
-+#read ans
-+#if test ".$ans" = "."; then ans=/usr/local/lib/tela; fi
-+#INSTALLATION_PREFIX=$ans
-+
-+#echo "Architecture-dependent installation prefix ($INSTALLATION_PREFIX) ?"
-+#read ans
-+#if test ".$ans" = "."; then ans=$INSTALLATION_PREFIX; fi
-+#ARCHDEP_INSTALLATION_PREFIX=$ans
- 
- if test ".$system" = ".AIX"; then
- 	CC=xlC
 @@ -2091,7 +2091,7 @@
  
    # It would also be nice to do this for all -L options, not just this one.
