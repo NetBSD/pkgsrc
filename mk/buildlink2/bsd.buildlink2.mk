@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.28 2002/09/23 01:11:39 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.29 2002/09/23 22:32:07 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -813,6 +813,7 @@ ${_BLNK_WRAP_SPECIFIC_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
 ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@WRKSRC@|${WRKSRC}|g"				\
 		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
 		-e "s|@CAT@|${CAT:Q}|g"					\
 		-e "s|@CP@|${CP:Q}|g"					\
