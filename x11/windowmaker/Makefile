@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/10/06 23:26:56 jlam Exp $
+# $NetBSD: Makefile,v 1.37 1999/10/08 21:12:53 jlam Exp $
 
 DISTNAME=		WindowMaker-0.61.1
 PKGNAME=		windowmaker-0.61.1
@@ -16,7 +16,7 @@ DEPENDS+=		libproplist-0.9.*:../../devel/libproplist
 DEPENDS+=		giflib-*:../../graphics/giflib
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
-DEPENDS+=		tiff-3.4:../../graphics/tiff
+DEPENDS+=		tiff-*:../../graphics/tiff
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_LIBTOOL=		yes

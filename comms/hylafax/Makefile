@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/30 08:16:49 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/08 21:12:47 jlam Exp $
 #
 
 DISTNAME=	hylafax-4.1beta2
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.hylafax.org/hylafax/source/BETA/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.hylafax.org/
 
-DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	mawk-1.2.2:../../lang/mawk
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
