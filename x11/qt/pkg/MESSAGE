@@ -1,0 +1,15 @@
+$NetBSD: MESSAGE,v 1.1 2000/04/15 00:59:28 dmcmahill Exp $
+
+You should be able to select this version of Qt when compiling
+programs which use it by doing the following:
+
+*  Use the following "configure" arguments:
+      "--with-qt-includes=${X11BASE}/include/qt2/"
+      "--with-qt-libraries=${X11BASE}/lib/qt2/"
+
+*  Put ${X11BASE}/bin/qt2 in your PATH and/or set the environment
+   variable MOC to ${X11BASE}/bin/qt2/moc
+
+To access Qt-2 man pages add ${X11BASE}/man/qt2 to your MANPATH
+environment variable.  Note that the Qt-2 man pages are installed
+here to avoid conflicts with the Qt-1 man pages.
