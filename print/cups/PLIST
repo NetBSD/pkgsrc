@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/10/25 10:49:03 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/12/19 22:24:51 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/disable
@@ -211,51 +211,51 @@ share/cups/fonts/Courier-Bold
 share/cups/fonts/Courier-BoldOblique
 share/cups/fonts/Courier-Oblique
 share/cups/fonts/Symbol
-share/cups/fr/templates/add-class.tmpl 
-share/cups/fr/templates/add-printer.tmpl
-share/cups/fr/templates/admin-op.tmpl
-share/cups/fr/templates/admin.tmpl
-share/cups/fr/templates/choose-device.tmpl
-share/cups/fr/templates/choose-make.tmpl
-share/cups/fr/templates/choose-members.tmpl
-share/cups/fr/templates/choose-model.tmpl
-share/cups/fr/templates/choose-serial.tmpl
-share/cups/fr/templates/choose-uri.tmpl
-share/cups/fr/templates/class-added.tmpl
-share/cups/fr/templates/class-confirm.tmpl
-share/cups/fr/templates/class-deleted.tmpl
-share/cups/fr/templates/class-modified.tmpl
-share/cups/fr/templates/classes.tmpl
-share/cups/fr/templates/config-printer.tmpl
-share/cups/fr/templates/config-printer2.tmpl
-share/cups/fr/templates/error.tmpl
-share/cups/fr/templates/header.tmpl
-share/cups/fr/templates/job-cancel.tmpl
-share/cups/fr/templates/job-hold.tmpl
-share/cups/fr/templates/job-op.tmpl
-share/cups/fr/templates/job-release.tmpl
-share/cups/fr/templates/job-restart.tmpl
-share/cups/fr/templates/jobs.tmpl
-share/cups/fr/templates/modify-class.tmpl
-share/cups/fr/templates/modify-printer.tmpl
-share/cups/fr/templates/option-boolean.tmpl
-share/cups/fr/templates/option-header.tmpl
-share/cups/fr/templates/option-pickmany.tmpl
-share/cups/fr/templates/option-pickone.tmpl
-share/cups/fr/templates/option-trailer.tmpl
-share/cups/fr/templates/printer-accept.tmpl
-share/cups/fr/templates/printer-added.tmpl
-share/cups/fr/templates/printer-configured.tmpl
-share/cups/fr/templates/printer-confirm.tmpl
-share/cups/fr/templates/printer-deleted.tmpl
-share/cups/fr/templates/printer-modified.tmpl
-share/cups/fr/templates/printer-purge.tmpl
-share/cups/fr/templates/printer-reject.tmpl
-share/cups/fr/templates/printer-start.tmpl
-share/cups/fr/templates/printer-stop.tmpl
-share/cups/fr/templates/printers.tmpl
-share/cups/fr/templates/test-page.tmpl
-share/cups/fr/templates/trailer.tmpl
+share/cups/templates/fr/add-class.tmpl 
+share/cups/templates/fr/add-printer.tmpl
+share/cups/templates/fr/admin-op.tmpl
+share/cups/templates/fr/admin.tmpl
+share/cups/templates/fr/choose-device.tmpl
+share/cups/templates/fr/choose-make.tmpl
+share/cups/templates/fr/choose-members.tmpl
+share/cups/templates/fr/choose-model.tmpl
+share/cups/templates/fr/choose-serial.tmpl
+share/cups/templates/fr/choose-uri.tmpl
+share/cups/templates/fr/class-added.tmpl
+share/cups/templates/fr/class-confirm.tmpl
+share/cups/templates/fr/class-deleted.tmpl
+share/cups/templates/fr/class-modified.tmpl
+share/cups/templates/fr/classes.tmpl
+share/cups/templates/fr/config-printer.tmpl
+share/cups/templates/fr/config-printer2.tmpl
+share/cups/templates/fr/error.tmpl
+share/cups/templates/fr/header.tmpl
+share/cups/templates/fr/job-cancel.tmpl
+share/cups/templates/fr/job-hold.tmpl
+share/cups/templates/fr/job-op.tmpl
+share/cups/templates/fr/job-release.tmpl
+share/cups/templates/fr/job-restart.tmpl
+share/cups/templates/fr/jobs.tmpl
+share/cups/templates/fr/modify-class.tmpl
+share/cups/templates/fr/modify-printer.tmpl
+share/cups/templates/fr/option-boolean.tmpl
+share/cups/templates/fr/option-header.tmpl
+share/cups/templates/fr/option-pickmany.tmpl
+share/cups/templates/fr/option-pickone.tmpl
+share/cups/templates/fr/option-trailer.tmpl
+share/cups/templates/fr/printer-accept.tmpl
+share/cups/templates/fr/printer-added.tmpl
+share/cups/templates/fr/printer-configured.tmpl
+share/cups/templates/fr/printer-confirm.tmpl
+share/cups/templates/fr/printer-deleted.tmpl
+share/cups/templates/fr/printer-modified.tmpl
+share/cups/templates/fr/printer-purge.tmpl
+share/cups/templates/fr/printer-reject.tmpl
+share/cups/templates/fr/printer-start.tmpl
+share/cups/templates/fr/printer-stop.tmpl
+share/cups/templates/fr/printers.tmpl
+share/cups/templates/fr/test-page.tmpl
+share/cups/templates/fr/trailer.tmpl
 share/cups/model/deskjet.ppd
 share/cups/model/deskjet2.ppd
 share/cups/model/dymo.ppd
@@ -456,10 +456,9 @@ share/cups/charsets/windows-874
 @dirrm share/doc/html/cups/fr
 @dirrm share/doc/html/cups
 @dirrm share/doc/cups
+@dirrm share/cups/templates/fr
 @dirrm share/cups/templates
 @dirrm share/cups/model
-@dirrm share/cups/fr/templates
-@dirrm share/cups/fr
 @dirrm share/cups/fonts
 @dirrm share/cups/data
 @dirrm share/cups/charsets
