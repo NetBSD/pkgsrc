@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.151 2003/05/24 17:32:02 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.152 2003/05/28 15:53:12 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -529,6 +529,36 @@ ATERM_USE_GREEK?= NO
 # Used in bitchx to determine whether to include support for GTK,
 # for a GUI client.
 # Possible: not defined, YES
+# Default: not defined
+
+#BLENDER_INSTALL_DOC=   YES
+# Used in blender to determine if the extensive html documentation should be
+# installed or not.
+# Possible: YES, not defined
+# Default: not defined
+
+#BLENDER_USE_OGG=       YES
+# Used in blender to determine if support for the ogg audio format should be
+# compiled in or not.
+# Possible: YES, not defined
+# Default: not defined
+
+#BLENDER_USE_VORBIS=    YES
+# Used in blender to determine if support for the vorbis audio format should
+# be compiled in or not.
+# Possible: YES, not defined
+# Default: not defined
+
+#BLENDER_USE_OPENAL=    YES
+# Used in blender to determine if support for the openal audio format should
+# be compiled in or not.
+# Possible: YES, not defined
+# Default: not defined
+
+#BLENDER_USE_EXPPYTHON= YES
+# Used in blender to determine if experimental python support should be
+# compiled in or not.
+# Possible: YES, not defined
 # Default: not defined
 
 #BULK_PREREQ=
