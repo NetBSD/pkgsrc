@@ -1,7 +1,7 @@
-$NetBSD: patch-bc,v 1.4 1999/11/30 03:53:30 itohy Exp $
+$NetBSD: patch-bc,v 1.5 2000/02/16 00:24:41 itohy Exp $
 
---- misc.c.nov6	Mon Nov 29 11:11:55 1999
-+++ misc.c	Tue Nov 30 09:07:18 1999
+--- misc.c.orig	Sun Dec 19 01:07:01 1999
++++ misc.c	Wed Feb 16 07:49:26 2000
 @@ -44,7 +44,7 @@
   URL *Url=(URL*)malloc(sizeof(URL));
   char *copyurl,*mallocurl=malloc(strlen(url)+2);
@@ -11,7 +11,7 @@ $NetBSD: patch-bc,v 1.4 1999/11/30 03:53:30 itohy Exp $
  
   copyurl=mallocurl;
   strcpy(copyurl,url);
-@@ -172,12 +172,17 @@
+@@ -175,12 +175,17 @@
      strcpy(Url->host,copyurl);
     }
  
