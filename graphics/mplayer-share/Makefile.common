@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2003/01/20 07:10:41 fredb Exp $
+# $NetBSD: Makefile.common,v 1.23 2003/02/07 18:33:07 fredb Exp $
 
 MPLAYER_DIST_VERSION=	0.90rc3
 #PKGREVISION=		0
@@ -22,8 +22,9 @@ HOMEPAGE?=		http://www.mplayerhq.hu/
 PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-*
 
-# no source on the ftp server because of the css source code in it
-NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CD=		"a dependency is restricted"
+NO_BIN_ON_FTP=		"a dependency is restricted"
+NO_SRC_ON_FTP=		"prohibited by USAs DMCA"
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
