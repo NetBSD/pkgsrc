@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.16 2005/01/24 19:10:21 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.17 2005/01/24 19:24:37 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -24,12 +24,6 @@
 _PKG_PHASES_ALL=	fetch checksum ${_PKG_PHASES_WRKDIR}
 _PKG_PHASES_WRKDIR=	depends extract patch tools wrapper \
 			configure build test install package
-
-# PATH is recalculated below, so save its original incarnation here.
-.if !defined(_PATH_ORIG)
-_PATH_ORIG:=		${PATH}
-MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
-.endif
 
 ############################################################################
 # Transform package Makefile variables and set defaults
@@ -1585,12 +1579,14 @@ ${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
 .  endfor
 .endif
 
-PREPEND_PATH?=		# empty
-.if !empty(PREPEND_PATH)
+.if !defined(_PATH_ORIG)
+_PATH_ORIG:=		${PATH}
+MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
+
 # This is very Special.  Because PREPEND_PATH is set with += in reverse order,
 # the awk expression reverses the order again (since bootstrap bmake doesn't
 # yet support the :[-1..1] construct).
-_PATH_CMD=		${ECHO} `${ECHO} ${PREPEND_PATH:Q} | ${AWK} '{for (i=NF;i>0;i--) print $$i}'`:${_PATH_ORIG} | ${TR} ' ' :
+_PATH_CMD=		${ECHO} `${ECHO} ${PREPEND_PATH:Q} | ${AWK} '{ORS=":";for (i=NF;i>0;i--) print $$i}'`${_PATH_ORIG}
 PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 .endif
 
