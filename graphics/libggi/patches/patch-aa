@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2000/04/16 16:54:55 mycroft Exp $
+
+--- configure.in.orig	Fri May 14 14:59:24 1999
++++ configure.in	Sun Apr 16 11:34:01 2000
+@@ -371,6 +365,7 @@
+ fi
+ 
+ if test "x$build_dga_target" != "xno"; then
++  CPPFLAGS="$CPPFLAGS -I/usr/X11R6/include"
+   AC_CHECK_HEADER(X11/extensions/xf86dga.h,[
+   internal_xf86dga="yes"
+   AM_CONDITIONAL(INTERNAL_XF86DGA, test "x$internal_xf86dga" = "xyes")
