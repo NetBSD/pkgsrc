@@ -1,0 +1,70 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:41:48 jmmv Exp $
+bin/ximian-connector-setup-2.2
+lib/bonobo/servers/GNOME_Evolution_Exchange_Storage_2.2.server
+lib/evolution-data-server-1.2/camel-providers/libcamelexchange.la
+lib/evolution-data-server-1.2/camel-providers/libcamelexchange.urls
+libexec/evolution/2.2/evolution-exchange-storage
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/ximian-connector-2.2.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/ximian-connector-2.2.mo
+share/ximian-connector/2.2/etspec/e-storage-set-view.etspec
+share/ximian-connector/2.2/glade/e-folder-creation-dialog.glade
+share/ximian-connector/2.2/glade/e-foreign-folder-dialog.glade
+share/ximian-connector/2.2/glade/exchange-autoconfig-wizard.glade
+share/ximian-connector/2.2/glade/exchange-change-password.glade
+share/ximian-connector/2.2/glade/exchange-delegates.glade
+share/ximian-connector/2.2/glade/exchange-folder-tree.glade
+share/ximian-connector/2.2/glade/exchange-oof.glade
+share/ximian-connector/2.2/glade/exchange-passwd-expiry.glade
+share/ximian-connector/2.2/glade/exchange-permissions-dialog.glade
+share/ximian-connector/2.2/images/connector-mini.png
+share/ximian-connector/2.2/images/connector.png
+share/ximian-connector/2.2/images/exchange-delegates-48.png
+share/ximian-connector/2.2/images/exchange-oof-48.png
+share/ximian-connector/2.2/ui/ximian-connector.xml
+@dirrm share/ximian-connector/2.2/ui
+@dirrm share/ximian-connector/2.2/images
+@dirrm share/ximian-connector/2.2/glade
+@dirrm share/ximian-connector/2.2/etspec
+@dirrm share/ximian-connector/2.2
+@dirrm share/ximian-connector
+@exec ${MKDIR} %D/share/doc/ximian-connector/ximian-connector
+@dirrm share/doc/ximian-connector/ximian-connector
+@dirrm share/doc/ximian-connector
+@comment in evolution: @dirrm libexec/evolution/2.2
+@comment in evolution-data-server: @dirrm lib/evolution-data-server-1.2/camel-providers
+@comment in libbonobo: @dirrm lib/bonobo/servers
