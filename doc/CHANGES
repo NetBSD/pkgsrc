@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3954 2003/12/04 05:27:08 grant Exp $
+$NetBSD: CHANGES,v 1.3955 2003/12/04 08:30:30 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4825,3 +4825,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libstree-0.3.0 [gson 2003-12-04]
 	Added thunderbird-bin-0.3 [grant 2003-12-04]
 	Added thunderbird-bin-nightly [grant 2003-12-04]
+	Added chef-19920415 [agc 2003-12-04]
