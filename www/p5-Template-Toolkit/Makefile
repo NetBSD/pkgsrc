@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/10/28 10:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/12 06:57:05 erh Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.14
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5tto
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
@@ -18,7 +19,14 @@ DEPENDS+=	p5-DBI>=1.18:../../databases/p5-DBI
 DEPENDS+=	p5-GD>=1.32:../../graphics/p5-GD
 DEPENDS+=	p5-GDGraph>=1.33:../../graphics/p5-GDGraph
 DEPENDS+=	p5-GDGraph3d>=0.55:../../graphics/p5-GDGraph3d
-DEPENDS+=	p5-libxml-enno>=1.04:../../textproc/p5-libxml-enno
+
+DEPENDS+=	p5-XML-DOM>=1.43:../../textproc/p5-XML-DOM
+DEPENDS+=	p5-XML-XQL>=0.68:../../textproc/p5-XML-XQL
+DEPENDS+=	p5-XML-Checker>=0.13:../../textproc/p5-XML-Checker
+DEPENDS+=	p5-XML-RegExp>=0.03:../../textproc/p5-XML-RegExp
+DEPENDS+=	p5-XML-Filter-Reindent>=0.03:../../textproc/p5-XML-Filter-Reindent
+DEPENDS+=	p5-XML-UM>=0.01:../../textproc/p5-XML-UM
+
 DEPENDS+=	p5-Pod-POM-[0-9]*:../../textproc/p5-Pod-POM
 DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
 DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
