@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2000/01/06 01:25:26 wiz Exp $
+$NetBSD: patch-af,v 1.4 2000/04/01 00:05:29 wiz Exp $
 
---- html/index.html.orig	Tue Dec 21 22:09:04 1999
-+++ html/index.html	Thu Jan  6 02:20:45 2000
-@@ -76,7 +76,6 @@
+--- html/index.html.orig	Mon Mar 27 19:05:55 2000
++++ html/index.html	Fri Mar 31 23:27:39 2000
+@@ -78,7 +78,6 @@
  <LI><A HREF="bugs.html">Bugs and the TIFF mailing list</A>
  <LI><A HREF="images.html">Test images</A>
  <LI><A HREF="misc.html">Acknowledgements and copyright issues</A>

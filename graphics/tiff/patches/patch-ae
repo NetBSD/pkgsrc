@@ -1,18 +1,17 @@
-$NetBSD: patch-ae,v 1.3 2000/01/06 01:25:25 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2000/04/01 00:05:29 wiz Exp $
 
---- html/Makefile.in.orig	Tue Jul 27 23:50:27 1999
-+++ html/Makefile.in	Thu Jan  6 01:32:51 2000
-@@ -73,6 +73,9 @@
- 	v3.4beta034.html	\
- 	v3.4beta035.html	\
- 	v3.4beta036.html	\
-+	v3.5.1.html		\
-+	v3.5.2.html		\
-+	v3.5.3.html		\
+--- html/Makefile.in.orig	Mon Mar 27 19:05:55 2000
++++ html/Makefile.in	Fri Mar 31 23:47:24 2000
+@@ -76,8 +76,6 @@
+ 	v3.5.1.html		\
+ 	v3.5.2.html		\
+ 	v3.5.3.html		\
+-	v3.5.4.html		\
+-	v3.5.5.html		\
  	${NULL}
  IMAGES=\
  	images/back.gif		\
-@@ -80,6 +83,8 @@
+@@ -85,6 +83,8 @@
  	images/cat.gif		\
  	images/cover.jpg	\
  	images/cramps.gif	\
