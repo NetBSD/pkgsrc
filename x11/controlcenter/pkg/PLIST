@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/01 05:43:47 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/05/02 15:15:50 rh Exp $
+etc/CORBA/servers/gnomecc.gnorba
+include/capplet-widget.h
 lib/libcapplet.so.0.0
 lib/libcapplet.la
 lib/libcapplet.a
@@ -48,6 +50,7 @@ share/control-center/.data/Qix.desktop
 share/control-center/.data/qix.png
 share/control-center/.data/Deco.desktop
 share/control-center/.data/deco.png
+share/control-center/.data/3d.desktop
 share/control-center/.data/Ant.desktop
 share/control-center/.data/ant.png
 share/control-center/.data/Attraction.desktop
@@ -64,18 +67,16 @@ share/control-center/.data/Bubbles.desktop
 share/control-center/.data/bubbles.png
 share/control-center/.data/Coral.desktop
 share/control-center/.data/coral.png
-share/control-center/.data/Crystal.desktop
-share/control-center/.data/ifs.png
-share/control-center/.data/crystal.png
+share/control-center/.data/drift.png
 share/control-center/.data/Cynosure.desktop
 share/control-center/.data/cynosure.png
 share/control-center/.data/Decayscreen.desktop
+share/control-center/.data/Demon.desktop
 share/control-center/.data/decayscreen.png
 share/control-center/.data/Discrete.desktop
 share/control-center/.data/discrete.png
 share/control-center/.data/Distort.desktop
 share/control-center/.data/Drift.desktop
-share/control-center/.data/drift.png
 share/control-center/.data/Epicycle.desktop
 share/control-center/.data/epicycle.png
 share/control-center/.data/Fadeplot.desktop
@@ -102,6 +103,7 @@ share/control-center/.data/hopalong.png
 share/control-center/.data/Hypercube.desktop
 share/control-center/.data/hypercube.png
 share/control-center/.data/Ifs.desktop
+share/control-center/.data/ifs.png
 share/control-center/.data/Imsmap.desktop
 share/control-center/.data/Interference.desktop
 share/control-center/.data/Jigsaw.desktop
@@ -118,7 +120,9 @@ share/control-center/.data/Lisa.desktop
 share/control-center/.data/lisa.png
 share/control-center/.data/Lissie.desktop
 share/control-center/.data/Lmorph.desktop
+share/control-center/.data/Loop.desktop
 share/control-center/.data/Maze.desktop
+share/control-center/.data/maze.png
 share/control-center/.data/Moire.desktop
 share/control-center/.data/Moire2.desktop
 share/control-center/.data/Mountain.desktop
@@ -134,6 +138,7 @@ share/control-center/.data/Rotor.desktop
 share/control-center/.data/Sierpinski.desktop
 share/control-center/.data/Slidescreen.desktop
 share/control-center/.data/Slip.desktop
+share/control-center/.data/Sonar.desktop
 share/control-center/.data/Sphere.desktop
 share/control-center/.data/Spiral.desktop
 share/control-center/.data/Starfish.desktop
@@ -151,22 +156,6 @@ share/control-center/url-properties.desktop
 share/control-center/gnome-edit-properties.desktop
 share/control-center/session-properties.desktop
 share/control-center/mime-type.desktop
-include/capplet-widget.h
-etc/CORBA/servers/gnomecc.gnorba
-bin/gnomecc
-bin/mouse-properties-capplet
-bin/screensaver-properties-capplet
-bin/background-properties-capplet
-bin/theme-selector-capplet
-bin/sound-properties
-bin/bell-properties-capplet
-bin/ui-properties
-bin/url-properties
-bin/gnome-edit-properties-capplet
-bin/session-properties-capplet
-bin/wm-properties-capplet
-bin/keyboard-properties
-bin/mime-type-capplet
 @dirrm share/gnome/apps/Settings/Desktop
 @dirrm share/gnome/apps/Settings/Multimedia
 @dirrm share/gnome/apps/Settings/UIOptions
