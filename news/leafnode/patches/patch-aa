@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/05/05 15:25:40 cjep Exp $
+$NetBSD: patch-aa,v 1.5 2005/01/11 04:34:08 kim Exp $
 
---- Makefile.in.orig	2004-04-03 17:57:05.000000000 +0100
-+++ Makefile.in
-@@ -822,14 +822,14 @@ uninstall-man8:
+--- Makefile.in.orig	2004-11-20 08:52:32.000000000 -0500
++++ Makefile.in	2005-01-10 22:41:49.000000000 -0500
+@@ -791,14 +791,14 @@
  	  rm -f "$(DESTDIR)$(man8dir)/$$inst"; \
  	done
  install-sysconfDATA: $(sysconf_DATA)
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2004/05/05 15:25:40 cjep Exp $
 -	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
 -	@list='$(sysconf_DATA)'; for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  f=$(am__strip_dir) \
 -	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
 -	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
 -	done
@@ -18,14 +18,14 @@ $NetBSD: patch-aa,v 1.4 2004/05/05 15:25:40 cjep Exp $
 +#	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
 +#	@list='$(sysconf_DATA)'; for p in $$list; do \
 +#	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-+#	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++#	  f=$(am__strip_dir) \
 +#	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
 +#	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
 +#	done
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
-@@ -1355,18 +1355,18 @@ rpm:
+@@ -1327,17 +1327,17 @@
  	rpm -ba leafnode.spec
  
  install-data-hook: amiroot
@@ -40,7 +40,6 @@ $NetBSD: patch-aa,v 1.4 2004/05/05 15:25:40 cjep Exp $
 -	if ./amiroot ; then \
 -          chown @NEWS_USER@:@NEWS_GROUP@ "$${d}" ; \
 -	  chmod 2775 "$${d}" ; fi
--
 +#	set -e ; for i in . leaf.node failed.postings interesting.groups \
 +#		out.going message.id temp.files ; do \
 +#        mkdir -p $(DESTDIR)$(SPOOLDIR)/$$i ; \
@@ -52,7 +51,6 @@ $NetBSD: patch-aa,v 1.4 2004/05/05 15:25:40 cjep Exp $
 +#	if ./amiroot ; then \
 +#          chown @NEWS_USER@:@NEWS_GROUP@ "$${d}" ; \
 +#	  chmod 2775 "$${d}" ; fi
-+#
+ 
  uninstall-local:
  	rm -rf $(DESTDIR)$(SPOOLDIR) $(DESTDIR)@LOCKFILE@
- 
