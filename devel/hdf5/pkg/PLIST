@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/30 00:26:20 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/12 05:47:25 tron Exp $
 bin/h5debug
 bin/h5dump
 bin/h5import
@@ -37,6 +37,11 @@ include/H5api_adpt.h
 include/H5pubconf.h
 include/H5public.h
 include/hdf5.h
+lib/libh5tools.a
+lib/libh5tools.la
+lib/libh5tools.so
+lib/libh5tools.so.0
+lib/libh5tools.so.0.0
 lib/libhdf5.a
 lib/libhdf5.la
 lib/libhdf5.settings
