@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/04 14:45:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/29 21:59:01 heas Exp $
 info/zebra.info
-man/man1/vtysh.1
 man/man8/bgpd.8
 man/man8/ospfd.8
 man/man8/ripd.8
@@ -14,8 +13,4 @@ share/examples/zebra/bgpd.conf.sample2
 share/examples/zebra/ospfd.conf.sample
 share/examples/zebra/ripd.conf.sample
 share/examples/zebra/zebra.conf.sample
-info/zebra.info-1
-info/zebra.info-2
-info/zebra.info-3
-info/zebra.info-4
 @dirrm share/examples/zebra
