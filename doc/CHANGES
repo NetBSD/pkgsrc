@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8918 2005/01/25 16:09:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8919 2005/01/25 16:33:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -593,3 +593,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated evolution to 2.0.3nb1 [drochner 2005-01-25]
 	Added p5-Class-factory-Util-1.6 [cube 2005-01-25]
 	Updated xevil to 2.02 [xtraeme 2005-01-25]
+	Updated pkg_alternatives to 1.1 [jmmv 2005-01-25]
