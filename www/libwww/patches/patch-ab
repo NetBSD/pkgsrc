@@ -1,7 +1,22 @@
-$NetBSD: patch-ab,v 1.7 2000/10/15 12:56:25 fredb Exp $
+$NetBSD: patch-ab,v 1.8 2000/12/27 02:34:12 fredb Exp $
 
---- configure.in.orig	Fri Aug  4 05:21:20 2000
-+++ configure.in	Fri Aug  4 13:56:59 2000
+--- configure.in.orig	Thu Dec 14 05:49:06 2000
++++ configure.in	Tue Dec 26 20:02:08 2000
+@@ -90,10 +90,10 @@
+ if test -n "$have_tn3270" ; then
+   AC_DEFINE_UNQUOTED(TN3270_PROGRAM, "$have_tn3270")
+ fi
+-AC_CHECK_PROGS(have_perl, perl)
+-if test ! -n "$have_perl" ; then
+-   AC_MSG_ERROR("Perl needs to be installed in order to compile libwww")
+-fi
++dnlAC_CHECK_PROGS(have_perl, perl)
++dnlif test ! -n "$have_perl" ; then
++dnl   AC_MSG_ERROR("Perl needs to be installed in order to compile libwww")
++dnlfi
+ 
+ AC_PATH_PROG(RM, rm, rm)
+ AC_PATH_PROG(AR, ar, ar)
 @@ -307,7 +307,10 @@
      AC_MSG_RESULT(yes)
      AC_DEFINE(HT_POSIX_REGEX)
@@ -34,8 +49,89 @@ $NetBSD: patch-ab,v 1.7 2000/10/15 12:56:25 fredb Exp $
    sslinc="-I/usr/local/ssl/include"
  elif test -d '/usr/local/openssl/include'; then
    sslinc="-I/usr/local/openssl/include"
---- configure.orig	Fri Aug  4 08:28:00 2000
-+++ configure	Mon Oct  9 14:10:23 2000
+--- configure.orig	Wed Dec 20 05:00:17 2000
++++ configure	Tue Dec 26 20:04:54 2000
+@@ -2405,43 +2405,43 @@
+ EOF
+ 
+ fi
+-for ac_prog in perl
+-do
+-# Extract the first word of "$ac_prog", so it can be a program name with args.
+-set dummy $ac_prog; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2414: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_have_perl'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$have_perl"; then
+-  ac_cv_prog_have_perl="$have_perl" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_have_perl="$ac_prog"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-fi
+-fi
+-have_perl="$ac_cv_prog_have_perl"
+-if test -n "$have_perl"; then
+-  echo "$ac_t""$have_perl" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-test -n "$have_perl" && break
+-done
+-
+-if test ! -n "$have_perl" ; then
+-   { echo "configure: error: "Perl needs to be installed in order to compile libwww"" 1>&2; exit 1; }
+-fi
++#for ac_prog in perl
++#do
++## Extract the first word of "$ac_prog", so it can be a program name with args.
++#set dummy $ac_prog; ac_word=$2
++#echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
++#echo "configure:2414: checking for $ac_word" >&5
++#if eval "test \"`echo '$''{'ac_cv_prog_have_perl'+set}'`\" = set"; then
++#  echo $ac_n "(cached) $ac_c" 1>&6
++#else
++#  if test -n "$have_perl"; then
++#  ac_cv_prog_have_perl="$have_perl" # Let the user override the test.
++#else
++#  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
++#  ac_dummy="$PATH"
++#  for ac_dir in $ac_dummy; do
++#    test -z "$ac_dir" && ac_dir=.
++#    if test -f $ac_dir/$ac_word; then
++#      ac_cv_prog_have_perl="$ac_prog"
++#      break
++#    fi
++#  done
++#  IFS="$ac_save_ifs"
++#fi
++#fi
++#have_perl="$ac_cv_prog_have_perl"
++#if test -n "$have_perl"; then
++#  echo "$ac_t""$have_perl" 1>&6
++#else
++#  echo "$ac_t""no" 1>&6
++#fi
++#
++#test -n "$have_perl" && break
++#done
++#
++#if test ! -n "$have_perl" ; then
++#   { echo "configure: error: "Perl needs to be installed in order to compile libwww"" 1>&2; exit 1; }
++#fi
+ 
+ # Extract the first word of "rm", so it can be a program name with args.
+ set dummy rm; ac_word=$2
 @@ -6790,8 +6790,22 @@
  EOF
  
@@ -90,3 +186,12 @@ $NetBSD: patch-ab,v 1.7 2000/10/15 12:56:25 fredb Exp $
    sslinc="-I/usr/local/ssl/include"
  elif test -d '/usr/local/openssl/include'; then
    sslinc="-I/usr/local/openssl/include"
+@@ -8195,7 +8215,7 @@
+ s%@have_telnet@%$have_telnet%g
+ s%@have_rlogin@%$have_rlogin%g
+ s%@have_tn3270@%$have_tn3270%g
+-s%@have_perl@%$have_perl%g
++s%@have_perl@%perl%g
+ s%@RM@%$RM%g
+ s%@AR@%$AR%g
+ s%@MKDIR@%$MKDIR%g
