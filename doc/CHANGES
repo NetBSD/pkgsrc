@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2377 2003/05/31 15:06:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.2378 2003/05/31 16:11:59 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated skkinput to 2.06.3 [uebayasi 2003-05-31]
 	Added gnus-5.10.2 [uebayasi 2003-05-31]
 	Updated fbdesk to 1.1.4 [jmmv 2003-05-31]
+	Updated simh to 2.10.4nb1 [thorpej 2003-05-31]
