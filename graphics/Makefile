@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2004/01/26 13:00:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.279 2004/01/26 13:06:14 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -249,8 +249,6 @@ SUBDIR+=	xfce4-artwork
 SUBDIR+=	xfce4-iconbox
 SUBDIR+=	xfig
 SUBDIR+=	xgraph
-SUBDIR+=	xine-lib
-SUBDIR+=	xine-ui
 SUBDIR+=	xli
 SUBDIR+=	xpaint
 SUBDIR+=	xplot
