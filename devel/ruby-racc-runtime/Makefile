@@ -1,12 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 23:27:53 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/30 17:15:33 taca Exp $
 # FreeBSD: ports/devel/ruby-racc-runtime/Makefile,v 1.2 2000/10/08 10:19:28 asami Exp
+DISTNAME=	${RACC_DISTFILE}
+PKGNAME?=	${RACC_NAME}-runtime-${RACC_VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	${RACC_SITES}
 
-PKGNAME=	${RUBY_PKGNAMEPREFIX}racc-runtime-${RACC_VERSION}
-
+MAINTAINER=	taca@netbsd.org
+HOMEPAGE=	${RACC_HOMEPAGE}
 COMMENT=	Runtime libraries for Racc.
 
-MASTERDIR=	${.CURDIR}/../ruby-racc
-RUNTIME=	yes
-DISTINFO_FILE=	${MASTERDIR}/distinfo
+CONFIGURE_ARGS+=--with=raccrt
 
-.include "${MASTERDIR}/Makefile"
+pre-install:
+	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/racc
+	${INSTALL_DATA_DIR} ${RUBY_SITEARCHLIBDIR}/racc
+
+.include "../ruby-racc/Makefile.common"
