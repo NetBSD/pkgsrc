@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2000/07/16 20:18:18 rh Exp $
+# $NetBSD: Makefile,v 1.83 2000/07/16 20:25:21 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -56,6 +56,7 @@
     SUBDIR += opendis
     SUBDIR += openptc
     SUBDIR += p5-GD
+    SUBDIR += p5-GDGraph
     SUBDIR += p5-GDTextUtil
     SUBDIR += p5-Image-Size
     SUBDIR += p5-PerlMagick
