@@ -1,94 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/15 14:47:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/03 15:14:17 adam Exp $
 bin/rocksndiamonds
 man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds/sounds/snd_classic
 @dirrm share/rocksndiamonds/sounds
 @dirrm share/rocksndiamonds/music/mus_classic
 @dirrm share/rocksndiamonds/music
+@dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_niko_boehm/tapes
+@dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_niko_boehm
 @dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial
 @dirrm share/rocksndiamonds/levels/Tutorials
-@dirrm share/rocksndiamonds/levels/Examples/example_artwork/sounds
-@dirrm share/rocksndiamonds/levels/Examples/example_artwork/music
-@dirrm share/rocksndiamonds/levels/Examples/example_artwork/graphics
-@dirrm share/rocksndiamonds/levels/Examples/example_artwork
-@dirrm share/rocksndiamonds/levels/Examples/example_andreas_buschbeck/graphics
-@dirrm share/rocksndiamonds/levels/Examples/example_andreas_buschbeck
-@dirrm share/rocksndiamonds/levels/Examples
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sebastian_simon/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sebastian_simon
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sam_bateman/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sam_bateman
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_richard_valvona
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_randy_johannessen/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_randy_johannessen
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_rafael_gatti
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_paul_e_collins_iii/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_paul_e_collins_iii
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_krystian_abramowicz/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_krystian_abramowicz
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_jorge_jordan
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_gavin_davidson/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_gavin_davidson
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg/sounds
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_efraim_yawitz
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/sounds
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/music
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_audrius_saikunas
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/sounds
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck
-@dirrm share/rocksndiamonds/levels/Contributions_2003
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_yamyam_palace/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_yamyam_palace
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_sylvan_hancock
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_ruediger_schaefer
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_jerome_kunegis
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_gerrit_holl
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_equinox_tetrachloride_ii/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_equinox_tetrachloride_ii
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_equinox_tetrachloride/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_equinox_tetrachloride
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_david_hutchinson/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_david_hutchinson
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_conor_mancone/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_conor_mancone
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_alan_bond/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_alan_bond/graphics
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_alan_bond
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_abby_king/tapes
-@dirrm share/rocksndiamonds/levels/Contributions_2002/rnd_abby_king
-@dirrm share/rocksndiamonds/levels/Contributions_2002
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_paul_sutton
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_helge_hafting
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_glenn_alexander
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_emilio_hemken
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_dominik_seichter
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_ben_braithwaite_3
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_ben_braithwaite_2
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_barak_shacked
-@dirrm share/rocksndiamonds/levels/Contributions_2001/rnd_arno_luppold
-@dirrm share/rocksndiamonds/levels/Contributions_2001
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_warwick_allison
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_visa_hastrup
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_tobias_authmann
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_stephan_beyer
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_pavel_machek
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_martin_herrmann
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_kjell_kristiansson
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_kimball_robinson
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_jan_hubicka
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_holger_schemel
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_gerhard_haeusler
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_charles_briscoe-smith
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000/rnd_ben_braithwaite
-@dirrm share/rocksndiamonds/levels/Contributions_1995-2000
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_supaplex/music
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_supaplex
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_sokoban/tapes
@@ -96,10 +16,6 @@ man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_emerald_mine
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_boulderdash
 @dirrm share/rocksndiamonds/levels/Classic_Games
-@dirrm share/rocksndiamonds/levels/Boulderdash/bd_xbd
-@dirrm share/rocksndiamonds/levels/Boulderdash/bd_boulderdash_2
-@dirrm share/rocksndiamonds/levels/Boulderdash/bd_boulderdash_16
-@dirrm share/rocksndiamonds/levels/Boulderdash
 @dirrm share/rocksndiamonds/levels
 @dirrm share/rocksndiamonds/graphics/gfx_classic
 @dirrm share/rocksndiamonds/graphics/gfx_animal_kingdom
@@ -107,56 +23,8 @@ man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/bd_boulderdash_16
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/bd_boulderdash_2
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/bd_xbd
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/classic_boulderdash
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/classic_emerald_mine
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/classic_sokoban
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/classic_supaplex
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_ben_braithwaite
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_charles_briscoe-smith
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_gerhard_haeusler
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_holger_schemel
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_jan_hubicka
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_kimball_robinson
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_kjell_kristiansson
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_martin_herrmann
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_pavel_machek
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_stephan_beyer
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_tobias_authmann
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_visa_hastrup
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_warwick_allison
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_arno_luppold
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_barak_shacked
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_ben_braithwaite_2
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_ben_braithwaite_3
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_dominik_seichter
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_emilio_hemken
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_glenn_alexander
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_helge_hafting
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_paul_sutton
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_abby_king
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_alan_bond
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_conor_mancone
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_david_hutchinson
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_equinox_tetrachloride
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_equinox_tetrachloride_ii
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_gerrit_holl
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_jerome_kunegis
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_ruediger_schaefer
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_sylvan_hancock
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_yamyam_palace
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_andreas_buschbeck
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_edward_leuf
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_emanuel_schmieg
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_gavin_davidson
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_jorge_jordan
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_rafael_gatti
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_randy_johannessen
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_richard_valvona
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_sam_bateman
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/example_andreas_buschbeck
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/example_artwork
-@exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}/scores/rnd_tutorial
 @unexec echo Delete ${SCORE_PATH}/ if you do not need your hiscores anymore.
