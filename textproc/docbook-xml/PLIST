@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:44 tron Exp $
-share/xml/catalog
+@comment $NetBSD: PLIST,v 1.4 2003/01/10 19:29:29 jmmv Exp $
+@exec ${LOCALBASE}/bin/xmlcatmgr add CATALOG %D/share/xml/docbook/catalog
+@unexec ${LOCALBASE}/bin/xmlcatmgr remove %D/share/xml/docbook/catalog
 share/xml/docbook/README
 share/xml/docbook/calstblx.dtd
 share/xml/docbook/catalog
@@ -31,4 +32,3 @@ share/xml/docbook/ent/iso-tech.ent
 share/xml/docbook/soextblx.dtd
 @dirrm share/xml/docbook/ent
 @dirrm share/xml/docbook
-@unexec ${RMDIR} %D/share/xml 2>/dev/null || ${TRUE}
