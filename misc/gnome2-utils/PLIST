@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/16 02:38:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/17 00:21:01 xtraeme Exp $
 bin/gnome-dictionary
 bin/gnome-search-tool
 bin/gnome-system-log
@@ -11,6 +11,7 @@ share/applications/gnome-dictionary.desktop
 share/applications/gnome-search-tool.desktop
 share/applications/gnome-system-log.desktop
 share/gconf/schemas/gdict.schemas
+share/gconf/schemas/gnome-search-tool.schemas
 share/gconf/schemas/logview.schemas
 share/gnome-2.0/ui/GNOME_GDictApplet.xml
 share/gnome-system-log/gnome-system-log-actions.db
