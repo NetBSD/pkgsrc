@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1867 2004/06/25 17:13:52 adrianp Exp $
+$NetBSD: TODO,v 1.1868 2004/06/26 19:19:11 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ Suggested package updates
 	o pygtk-0.6.11
 	o pysol-4.82
 	o ratpoison-1.3.0
-	o rdiff-backup-0.12.7
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.23
