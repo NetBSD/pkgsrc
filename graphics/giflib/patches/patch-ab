@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
---- util/Makefile.orig	Thu Jun 26 10:22:30 1997
-+++ util/Makefile	Mon Sep 14 12:53:28 1998
-@@ -22,12 +22,13 @@
+--- util/Makefile.orig	Thu Jun 26 13:22:30 1997
++++ util/Makefile	Mon Sep 14 20:26:57 1998
+@@ -22,12 +22,12 @@
  # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
  
  # Declare the include files and libraries for the GIF utils:
@@ -11,7 +10,6 @@ $NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
 +CFLAGS+= -I../lib
 +GIF_LIB = ../lib/libgif.la
 +GIF_INC_DEPEND = ../lib/libgif.la ../lib/gif_lib.h ../lib/getarg.h
-+LDFLAGS = -s
  
  # Where to copy executables to:
 -DEST = /usr/bin
@@ -19,7 +17,7 @@ $NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
  
  # These are the flags for gcc, in BSD4.3 or Sun O.S. 4.0.3
  #
-@@ -81,12 +82,12 @@
+@@ -81,14 +81,14 @@
  
  # Linux using XFree86
  #
@@ -27,16 +25,18 @@ $NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
 +#CC = gcc
  #CFLAGS = $(INC) -fno-builtin -O -s -W -Wreturn-type -Wcomment
 -CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
+-XLIBS = -lX11
 +#CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
- XLIBS = -lX11
--X_INC_DIR = /usr/X11/include
--X_LIB_DIR = /usr/X11/lib
-+X_INC_DIR = ${X11BASE}/include
-+X_LIB_DIR = ${X11BASE}/lib
++#XLIBS = -lX11
+ X_INC_DIR = /usr/X11/include
+ X_LIB_DIR = /usr/X11/lib
  
- BINARIES = gif2epsn gif2ps gif2rgb gif2x11 gifasm gifbg \
+-BINARIES = gif2epsn gif2ps gif2rgb gif2x11 gifasm gifbg \
++BINARIES = gif2epsn gif2ps gif2rgb gifasm gifbg \
  	gifclip gifclrmp gifcomb giffix gifflip gifhisto \
-@@ -105,7 +106,8 @@
+ 	gifinter gifinto gifovly gifpos gifrotat gifrsize giftext \
+ 	gifwedge raw2gif rgb2gif text2gif gifspnge giffiltr \
+@@ -105,7 +105,8 @@
  iris: $(IRIS)
  
  install-all:
@@ -46,7 +46,7 @@ $NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
  
  install-rle:
  	cp $(RLE) $(DEST)
-@@ -114,7 +116,7 @@
+@@ -114,7 +115,7 @@
  	cp $(IRIS) $(DEST)
  
  .c:
@@ -55,12 +55,3 @@ $NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
  
  uninstall-utils:
  	(cd $(DEST); rm -f $(BINARIES) $(RLE) $(IRIS) $(SCRIPTS))
-@@ -123,7 +125,7 @@
- 	$(CC) gif2iris.c $(CFLAGS) $(LDFLAGS) -lgl_s -o gif2iris
- 
- gif2x11: gif2x11.c
--	$(CC) gif2x11.c $(CFLAGS) -I$(X_INC_DIR) -L$(X_LIB_DIR) $(LDFLAGS) $(GIF_LIB) $(XLIBS) -o gif2x11
-+	${LIBTOOL} --mode=link $(CC) gif2x11.c $(CFLAGS) -I$(X_INC_DIR) -L$(X_LIB_DIR) $(LDFLAGS) $(GIF_LIB) $(XLIBS) -o gif2x11
- 
- 
- clean:
