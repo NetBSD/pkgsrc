@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/14 23:40:17 xtraeme Exp $
 #
 
-DISTNAME=		gnome-utils-2.2.1
-PKGREVISION=		5
+DISTNAME=		gnome-utils-2.4.1
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -22,8 +21,6 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS+=	gdict.schemas
 
