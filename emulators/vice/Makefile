@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 1998/09/06 23:47:26 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/12 17:46:23 garbled Exp $
 
 DISTNAME=		vice-0.15.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.tu-chemnitz.de/~fachat/vice/
-DISTFILES=		vice-0.15.0-roms.tar.gz ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tu-chemnitz.de/~fachat/vice/
@@ -18,9 +17,13 @@ USE_X11=		yes
 INFO_FILES=		vice.info
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/data/C64/* ${PREFIX}/share/vice/C64
-	${INSTALL_DATA} ${WRKDIR}/data/C128/* ${PREFIX}/share/vice/C128
-	${INSTALL_DATA} ${WRKDIR}/data/VIC20/* ${PREFIX}/share/vice/VIC20
-	${INSTALL_DATA} ${WRKDIR}/data/PET/* ${PREFIX}/share/vice/PET
+	for ii in C64 C128 VIC20; do \
+		for xx in basic chargen dos1541 kernal; do \
+			${INSTALL_DATA} ${WRKSRC}/data/$$ii/$$xx ${PREFIX}/share/vice/$$ii; \
+		done; \
+	done
+	for ii in chargen edit2.b edit4.b40 edit4.b80 pet2001 pet3032 pet4032; do \
+		${INSTALL_DATA} ${WRKSRC}/data/PET/$ii ${PREFIX}/share/vice/PET; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
