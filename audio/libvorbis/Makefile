@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/09/12 17:55:53 recht Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/25 01:27:35 grant Exp $
 
 DISTNAME=	libvorbis-1.0
 PKGNAME=	libvorbis-1.0.0.8
@@ -17,5 +17,4 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 .include "../../audio/libogg/buildlink2.mk"
-.include "../../mk/compiler.mk"
 .include "../../mk/bsd.pkg.mk"
