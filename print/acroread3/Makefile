@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/08 16:35:07 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/20 02:17:43 hubertf Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -13,6 +13,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+LICENSE=		adobe-acrobat-license
 
 NO_BUILD=	YES
 
@@ -66,7 +67,7 @@ pre-install:
 
 do-install:
 	@${MKDIR} ${PREFIX}/Acrobat3
-	@ReadInstallDir=${PREFIX}/Acrobat3 ${WRKSRC}/INSTALL
+	@${ECHO} accept | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat3 ${WRKSRC}/INSTALL
 
 post-install:
 	@cd ${PREFIX}/Acrobat3/bin && \
