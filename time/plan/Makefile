@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/03 20:35:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/20 00:59:17 hubertf Exp $
 #
 
 DISTNAME=	plan-1.8.4
@@ -16,12 +16,12 @@ ALL_TARGET=		netbsd
 CFLAGS+=	-I${X11BASE}/include
 
 pre-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/libexec/plan ${X11PREFIX}/share/plan \
-		${X11PREFIX}/share/plan/holiday
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/plan ${PREFIX}/share/plan \
+		${PREFIX}/share/plan/holiday
 	${RM} -f ${WRKDIR}/${DISTNAME}/holiday/holiday_*.orig
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${X11PREFIX}/share/plan/holiday
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${PREFIX}/share/plan/holiday
 	for f in HISTORY README; do					\
-		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${X11PREFIX}/share/plan; \
+		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${PREFIX}/share/plan; \
 	done
 
 .include "../../x11/lesstif/buildlink.mk"
