@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.210 1999/02/11 14:42:08 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.211 1999/02/11 14:44:00 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -147,7 +147,7 @@ DEPENDS+=		perl-5.00404:${PKGSRCDIR}/lang/perl5
 .if defined(INFO_FILES)
 USE_GTEXINFO=		yes
 .endif
-.if defined(USE_GTEXINFO)
+.if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
 DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
 .endif
 .if defined(USE_MOTIF)
