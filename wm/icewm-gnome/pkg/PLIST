@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/03 21:56:56 tron Exp $
 bin/icewm
 bin/icewmhint
 bin/icewmbg
@@ -72,6 +72,7 @@ lib/X11/icewm/mailbox/nomail.xpm
 lib/X11/icewm/mailbox/unreadmail.xpm
 lib/X11/icewm/menu
 lib/X11/icewm/preferences
+lib/X11/icewm/taskbar/bsd-daemon.xpm
 lib/X11/icewm/taskbar/debian.xpm
 lib/X11/icewm/taskbar/linux.xpm
 lib/X11/icewm/taskbar/linux1.xpm
