@@ -1,0 +1,462 @@
+$NetBSD: patch-ac,v 1.1 2001/11/21 22:42:04 tron Exp $
+
+--- helpers.cpp.orig	Thu Jul  5 01:54:48 2001
++++ helpers.cpp	Wed Nov 21 23:34:17 2001
+@@ -5,6 +5,7 @@
+ // Tom McNair  (tmcnair@cyberhighway.net)
+ // Wayne Schlitt (wayne@midwestcs.com)
+ // Ben Byer (bushing@users.sourceforge.net)
++// Kevin Dwyer (kevin@pheared.net)
+ // 
+ // use of this code is restricted to the terms
+ // of the GNU GPL, which should have been included in this
+@@ -39,7 +40,7 @@
+ 
+ char *CheckPrice="0123456789.$,";      // Characters allowed in a price   
+ 
+-char *SearchOps[]={ "Starts at",      // 1:  +1
++char *SearchOps[2][14]={{ "Starts at",      // 1:  +1
+ 		    "Currently",           // 2:  +1
+ 		    "First bid",           // 3:  +1
+ 		    "Quantity",            // 4:  +1
+@@ -51,8 +52,21 @@
+ 		    "Seller (Rating)",     // 10: +1
+ 		    "High bid",            // 11: +1
+ 		    "Bid increment",       // 12: +1
+-		    "High bids",           // 13: +1
+-		    "*"};
++		    "see winning bidders",           // 13: +1
++		    "*"},
++		     /* eBay Motors */
++		     { "Currently",
++		       "Time left ",
++		       "Seller (rating) ",
++		       "High bid ",
++		       "# of bids ",
++		       "Location ",
++		       "Started ",
++		       "ends ",
++		       "Starts at",
++		       "*"
++		     }
++		     };
+ 
+ float calculateBidIncrement(float currentBid,  char *currency)
+ {
+@@ -279,7 +293,10 @@
+ 			break;
+ 		}
+ 	}
+-	if ( !foundEndOfForm ) return ERROR;
++	if ( !foundEndOfForm ) {
++	  printf("ProcessBid: Could not find end of form.");
++	  return ERROR;
++	}
+ 	while ( streamBuff ) {
+ 		streamBuff.getline(lineBuff, 1024, '\n');
+ 		printf("%s\n",lineBuff);
+@@ -291,6 +308,8 @@
+ 		else if ( strstr(lineBuff, "Cannot proceed") != NULL ) return PB_AUCTIONOVER;
+ 		else if ( strstr(lineBuff, "or password invalid") != NULL ) return PB_BADUSER;
+ 	}
++	printf("Bid failed - unable to parse eBay's response. \n");
++	printf("%s",Buff);
+ 	return ERROR;
+ }
+ /*
+@@ -448,13 +467,15 @@
+ //////////////////////////////////////////////////////////////////////////////
+ // ReturnBidVarNum
+ //////////////////////////////////////////////////////////////////////////////
+-int ReturnBidVarNum(char *LineData)
++int ReturnBidVarNum(char *LineData, int auc_type)
+ {
+   int idx=0;
+ 
+-  for(idx=0;SearchOps[idx][0]!='*';++idx) 
+-    if (strcmp(LineData,SearchOps[idx])==0) return (idx+1);
+-  
++  for(idx=0;SearchOps[auc_type][idx][0]!='*';++idx) 
++    if (strcmp(LineData,SearchOps[auc_type][idx])==0) {
++      return (idx+1);
++    }
++
+   return 0;
+ 
+ }
+@@ -664,6 +685,7 @@
+ {
+    int idx=0;
+    int cnt;
++   int auc_type=TYPE_EBAY;
+    char LineData[1025];
+    char * scratch;
+    char newName[76];
+@@ -681,6 +703,8 @@
+    memset( HighBidder, 0, sizeof( HighBidder ) );
+    reserveMet = 'x';
+    
++   CurrentBid = 0;  // Not resetting this breaks the logic of updating the bid
++
+    /*
+     * Parse the description out of the buffer first. This is
+     * most easily done at the buffer-level and not as we try
+@@ -711,11 +735,34 @@
+    
+   while(strstr(LineData,"eBay")==NULL && streamBuff)
+      streamBuff.getline(LineData, 1024, '\n');
+-   if ( strstr(LineData,"eBay item") == NULL )
+-       return FALSE;
++
++  if ( strstr(LineData,"eBay item") == NULL )
++    if (strstr(LineData,"eBay Motors item") == NULL)
++      return FALSE;
++
++  if (strstr(LineData,"eBay Motors item") != NULL) auc_type = TYPE_EBAYMOTORSCAR;
++
+    while(strstr(LineData,") -")==NULL && streamBuff)
+      streamBuff.getline(LineData, 1024, '\n');
+ 
++   
++   if (auc_type == TYPE_EBAYMOTORSCAR) {
++     scratch = strstr(Buff, "First bid");
++     if (scratch != NULL) {
++       // This is totally crazy and will break as soon as they muck with
++       // the html but it works for now to distinguish a Car auction from
++       // a part or accessory.  Anyone want to offer a better suggestion?
++
++       //Should move us ahead to a $.  This check is here to make sure
++       //we aren't looking at something the seller said in his desc etc.
++       scratch +=10;
++
++       if (scratch[0] == '$') auc_type = TYPE_EBAYMOTORS;
++     }
++   }
++   
++   //printf("Auction Type=%i\n", auc_type);
++
+    while (streamBuff) 
+    {
+       streamBuff.getline(LineData, 1024, '\n');
+@@ -724,107 +771,203 @@
+       // some reason some of the data is missing or out of
+       // order we can still salvage what we can..
+     
++      // This new case style I came up with is a bit redundant, but
++      // it may allow for bidwatcher to grow into more types.  Like
++      // Checking yahoo or something.  See also SearchOps. -kdwyer
++
+       if (LineData[0]!=0) 
+       {
+-         switch (ReturnBidVarNum(LineData)) 
+-         {
+-	 case 1: 
+-	 case 2: // current price
+-	   if (CurrentBid==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     if ( strstr(LineData,"reserve not") != NULL )
+-	       reserveMet = 'n';
+-	     else if ( strstr(LineData,"reserve met") != NULL )
+-	       reserveMet = 'y';
++	//if (ReturnBidVarNum(LineData, auc_type) != 0)
++	//printf("DEBUG:%i\n", ReturnBidVarNum(LineData, auc_type));
++	switch (auc_type) {
++	case TYPE_EBAY:
++	  switch (ReturnBidVarNum(LineData, auc_type)) 
++	    {
++	    case 1: 
++	    case 2: // current price
++	      if (CurrentBid==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		if ( strstr(LineData,"reserve not") != NULL )
++		  reserveMet = 'n';
++		else if ( strstr(LineData,"reserve met") != NULL )
++		  reserveMet = 'y';
+ 	     
+-	     parseprice(LineData,this,FALSE);
+-	     /*	     CheckBadChars(LineData,CheckPrice);
+-		     strncpy(CurrentBid,LineData,14); */
+-	   }
+-	   break;
+-	 case 3:  // first bid
+-	   if (FirstBid==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     parseprice(LineData,this,TRUE);
+-	     /*	     CheckBadChars(LineData,CheckPrice);
+-		     strncpy(FirstBid,LineData,14); */
+-	   }
+-	   break;
+-	 case 4: // quantity
+-	   if (Quantity==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     CheckBadChars(LineData,"0123456789");
+-	     //	     strncpy(Quantity,LineData,14);
+-	     Quantity=atoi(LineData);
+-	   }
+-	   break;
+-	 case 5: // bid count
+-	  if (BidCount==0) {
+-	    char bc[80];
+-	    streamBuff.getline(LineData, 1024, '\n');
+-	    for(cnt=0;(((LineData[cnt]!=' ') && 
+-			(LineData[cnt]!=0)) && (cnt<14));++cnt)
+-	      bc[cnt]=LineData[cnt];
+-	    bc[cnt]=0;
+-	    BidCount=atoi(bc);
+-	  }
+-	  break;
+-	 case 6: // time left
+-	   if (TimeLeft[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(TimeLeft,LineData,50);
+-	   }
+-	   break;
+-	 case 7: // location
+-	   if (Location[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(Location,LineData,100);
+-	   }
+-	   break;
+-	 case 8: // time started
+-	   if (Started[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(Started,LineData,50);
+-	     translate_date( Started );
+-	   }
+-	   break;
+-	 case 9: // time ending
+-	   if (Ends[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(Ends,LineData,50);
+-	     translate_date( Ends );
+-	   }
+-	   break;
+-	 case 10: // seller id
+-	   if (Seller[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(Seller,LineData,75);
+-	   }
+-	   break;
+-	 case 11: // high bidder id
+-	   if (HighBidder[0]==0) {
+-	     streamBuff.getline(LineData, 1024, '\n');
+-	     strncpy(HighBidder,LineData,76);
+-	     HighBidder[75] = '\0';
+-	   }
+-	   break;
+-	   
+-	   //case 12: idx=GetLineOfData(idx,1024,LineData,Buff);
+-	   //         CheckBadChars(LineData,CheckPrice);
+-	   //         strncpy(BidInc,LineData,14);
+-	   //         break;
+-	   
+-	 case 13: // dutch auction
+-	   streamBuff.getline(LineData, 1024, '\n');
+-	   CheckBadChars(LineData,CheckPrice);
+-	   strcpy(HighBidder, "Dutch Auction");
+-	   break;
++		parseprice(LineData,this,FALSE);
++		/*	     CheckBadChars(LineData,CheckPrice);
++			     strncpy(CurrentBid,LineData,14); */
++	      }
++	      break;
++	    case 3:  // first bid
++	      if (FirstBid==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		parseprice(LineData,this,TRUE);
++		/*	     CheckBadChars(LineData,CheckPrice);
++			     strncpy(FirstBid,LineData,14); */
++	      }
++	      break;
++	    case 4: // quantity
++	      if (Quantity==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		CheckBadChars(LineData,"0123456789");
++		//	     strncpy(Quantity,LineData,14);
++		Quantity=atoi(LineData);
++	      }
++	      break;
++	    case 5: // bid count
++	      if (BidCount==0) {
++		char bc[80];
++		streamBuff.getline(LineData, 1024, '\n');
++		for(cnt=0;(((LineData[cnt]!=' ') && 
++			    (LineData[cnt]!=0)) && (cnt<14));++cnt)
++		  bc[cnt]=LineData[cnt];
++		bc[cnt]=0;
++		BidCount=atoi(bc);
++	      }
++	      break;
++	    case 6: // time left
++	      if (TimeLeft[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(TimeLeft,LineData,50);
++	      }
++	      break;
++	    case 7: // location
++	      if (Location[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Location,LineData,100);
++	      }
++	      break;
++	    case 8: // time started
++	      if (Started[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Started,LineData,50);
++		translate_date( Started );
++	      }
++	      break;
++	    case 9: // time ending
++	      if (Ends[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Ends,LineData,50);
++		translate_date( Ends );
++	      }
++	      break;
++	    case 10: // seller id
++	      if (Seller[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Seller,LineData,75);
++	      }
++	      break;
++	    case 11: // high bidder id
++	      if (HighBidder[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(HighBidder,LineData,76);
++		HighBidder[75] = '\0';
++	      }
++	      break;
+ 	   
+-	 default:;
+-      }
+-    }
+-  }
++	      //case 12: idx=GetLineOfData(idx,1024,LineData,Buff);
++	      //         CheckBadChars(LineData,CheckPrice);
++	      //         strncpy(BidInc,LineData,14);
++	      //         break;
++	      
++	    case 13: // dutch auction
++	      streamBuff.getline(LineData, 1024, '\n');
++	      //CheckBadChars(LineData,CheckPrice);  // no longer relevant
++	      strcpy(HighBidder, "Dutch Auction");
++	      break;
++	      
++	    default:;
++	    }
++	  break;
++	  /* End case 0 of auc_type */
+ 
++	case TYPE_EBAYMOTORSCAR:
++	  //printf("LD:%s:%i\n", LineData, strlen(LineData));
++	  switch(ReturnBidVarNum(LineData,auc_type)) {
++	  case 1:  // Current Bid
++	    if (CurrentBid==0) {
++	      streamBuff.getline(LineData, 1024, '\n');
++	      if ( strstr(LineData,"reserve not") != NULL )
++		reserveMet = 'n';
++	      else if ( strstr(LineData,"reserve met") != NULL )
++		reserveMet = 'y';
++	      
++	      parseprice(LineData,this,FALSE);
++	    
++	    }
++	    break;
++	    
++	  case 2: //Time left
++	      if (TimeLeft[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(TimeLeft,LineData,50);
++	      }
++	    break;
++	  case 3: //Seller
++	      if (Seller[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Seller,LineData,75);
++	      }
++	    break;
++	  case 4: //High bid
++	      if (HighBidder[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(HighBidder,LineData,76);
++		HighBidder[75] = '\0';
++	      }
++	    break;
++	  case 5: //Number of bids
++	      if (BidCount==0) {
++		char bc[80];
++		streamBuff.getline(LineData, 1024, '\n');
++		for(cnt=0;(((LineData[cnt]!=' ') && 
++			    (LineData[cnt]!=0)) && (cnt<14));++cnt)
++		  bc[cnt]=LineData[cnt];
++		bc[cnt]=0;
++		BidCount=atoi(bc);
++	      }
++	      break;
++	  case 6: //Location
++	      if (Location[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Location,LineData,100);
++	      }
++	    break;
++	  case 7: //Started
++	      if (Started[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Started,LineData,50);
++		translate_date( Started );
++	      }
++	    break;
++	  case 8: //Ends
++	      if (Ends[0]==0) {
++		streamBuff.getline(LineData, 1024, '\n');
++		strncpy(Ends,LineData,50);
++		translate_date( Ends );
++	      }
++	    break;
++	  case 9: //Starts at  --same as current bid isn't it?
++	    if (CurrentBid==0) {
++	      streamBuff.getline(LineData, 1024, '\n');
++	      if ( strstr(LineData,"reserve not") != NULL )
++		reserveMet = 'n';
++	      else if ( strstr(LineData,"reserve met") != NULL )
++		reserveMet = 'y';
++	      
++	      parseprice(LineData,this,FALSE);
++	    
++	    }
++	    break;
++	    
++	  default:;
++	    break;
++	    /* End case 1 of auc_type */
++	  }
++	default:;
++	  /* End of switch(auc_type) */
++	}
++      }
++   }
+    //  if ( CurrentBid == 0 ) strcpy(CurrentBid, "Error");
+ 
+   // now calculate the ending time in seconds and save it
+@@ -834,8 +977,11 @@
+   // and assign them to .SellerRate and .BidderRate
+ 
+    strcpy ( newName, Seller);
++
+    scratch = strtok(newName, " ");
++
+    if ( !scratch ) return FALSE;
++
+    strcpy( Seller, scratch);
+    scratch = strtok(0,")");
+    if ( scratch )
+@@ -853,7 +999,9 @@
+    {
+       strcpy( newName, HighBidder);
+       scratch = strtok(newName, " ");
++
+       if ( !scratch ) return FALSE;
++
+       strcpy(HighBidder, scratch);
+       scratch = strtok(0,")");
+       if ( scratch )
