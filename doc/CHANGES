@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7240 2004/09/25 00:09:13 grant Exp $
+$NetBSD: CHANGES,v 1.7241 2004/09/25 00:09:43 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added grig-0.2.2 [wulf 2004-09-24]
 	Added tlf-0.9.20 [wulf 2004-09-24]
 	Added vanessa_logger-0.0.7 [grant 2004-09-25]
+	Added vanessa_socket-0.0.7 [grant 2004-09-25]
