@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8610 2005/01/05 08:06:47 martti Exp $
+$NetBSD: CHANGES,v 1.8611 2005/01/05 09:16:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -102,3 +102,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.2.4 [xtraeme 2005-01-05]
 	Updated subversion to 1.1.2 [epg 2005-01-05]
 	Updated db4 to 4.3.27 [martti 2005-01-05]
+	Updated tcl to 8.4.9 [adam 2005-01-05]
+	Updated tk to 8.4.9 [adam 2005-01-05]
