@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/19 17:05:28 dmcmahill Exp $
+bin/ipaledit
+bin/ipalrev
+include/ipal.h
+include/jedec.h
+lib/libipal.a
+lib/libjedec.a
+share/ipal/pal22v10.pa
+@dirrm share/ipal
