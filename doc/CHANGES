@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.964 2003/01/01 13:32:42 lukem Exp $
+$NetBSD: CHANGES,v 1.965 2003/01/01 19:25:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -6,3 +6,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ap-iasp-2.1.1 [jlam 2003-01-01]
 	Updated bison to 1.875 [cjep 2003-01-01]
 	Updated ups-nut to 1.2.1nb1 [lukem 2003-01-01]
+	Updated tuxpaint to 2002.10.26nb2 [jmmv 2003-01-01]
