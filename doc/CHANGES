@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4235 2003/12/23 17:26:51 recht Exp $
+$NetBSD: CHANGES,v 1.4236 2003/12/23 17:52:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5318,3 +5318,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wwwoffle to 2.7fnb2 [fredb 2003-12-23]
 	Updated python23 to 2.3.3 [recht 2003-12-23]
 	Updated python23-pth to 2.3.3 [recht 2003-12-23]
+	Updated qt3-tools to 3.2.3nb1 [xtraeme 2003-12-23]
