@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/08/27 08:52:57 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/12 10:01:12 itojun Exp $
 #
 
-DISTNAME=	chicken-1.12
+DISTNAME=	chicken-1.17
 CATEGORIES=	lang
 MASTER_SITES=	http://www.call-with-current-continuation.org/
 
