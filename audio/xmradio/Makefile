@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/22 17:38:57 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/09/08 19:55:41 jlam Exp $
 
 DISTNAME=	xmradio-1.0
 CATEGORIES=	audio
@@ -20,5 +20,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xmradio
 
 .include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
