@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6323 2004/06/26 13:32:57 grant Exp $
+$NetBSD: CHANGES,v 1.6324 2004/06/26 14:29:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3074,3 +3074,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gedit to 2.6.2 [jmmv 2004-06-26]
 	Updated gnome2-games to 2.6.2 [jmmv 2004-06-26]
 	Updated pax to 20040626 [grant 2004-06-26]
+	Added mu-conference-0.6.0 [abs 2004-06-26]
+
