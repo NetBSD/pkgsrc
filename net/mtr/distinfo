@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2001/10/26 22:05:31 jlam Exp $
+$NetBSD: distinfo,v 1.5 2001/11/04 14:09:31 wiz Exp $
 
 SHA1 (mtr-0.42.tar.gz) = 7bcb6c317911139355cabe5b21e1c7efc5cb5694
 Size (mtr-0.42.tar.gz) = 84767 bytes
 SHA1 (patch-aa) = c098f19f68220fa6c37d3e43edc2d6c49cba8118
-SHA1 (patch-ab) = 9ba3ea130f737864e673e60ce656b96556d3c1cc
+SHA1 (patch-ab) = 6bb67583986d71e0986e65d61e96b3c41b40d4b4
 SHA1 (patch-ac) = 6f7d40fc957ba61f4e5a4a29993aa963d627906d
 SHA1 (patch-ad) = a019773eddeb53fb45afa8de2b1a6b03b436e803
 SHA1 (patch-ae) = 66a05d1edb1f300c6573a480d4c4357a94c29f6f
