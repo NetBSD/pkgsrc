@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/22 17:07:35 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/16 10:53:28 frueauf Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -26,6 +26,9 @@ lib/ethereal/plugins/${PKGVERSION}/gryphon.so
 lib/ethereal/plugins/${PKGVERSION}/mgcp.a
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
+lib/ethereal/plugins/${PKGVERSION}/pcli.a
+lib/ethereal/plugins/${PKGVERSION}/pcli.la
+lib/ethereal/plugins/${PKGVERSION}/pcli.so
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/idl2eth.1
