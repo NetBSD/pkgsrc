@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.1 2004/07/30 20:59:08 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.2 2004/08/04 09:36:16 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -162,3 +162,33 @@ PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported build option."
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
 BUILD_DEFS+=		PKG_OPTIONS
+
+.PHONY: pre-extract supported-options-message
+pre-extract: supported-options-message
+.if !defined(PKG_SUPPORTED_OPTIONS)
+supported-options-message: # do nothing
+.else
+supported-options-message: ${WRKDIR}/.som_done
+${WRKDIR}/.som_done: ${WRKDIR}
+.  if !empty(PKG_SUPPORTED_OPTIONS)
+	@${ECHO} "=========================================================================="
+	@${ECHO} "The supported build options for this package are:"
+	@${ECHO} ""
+	@${ECHO} "	${PKG_SUPPORTED_OPTIONS}"
+	@${ECHO} ""
+	@${ECHO} "You can select which build options to use by setting the following"
+	@${ECHO} "variables.  Their curent value is shown:"
+	@${ECHO} ""
+.    for _var_ in ${PKG_OPTIONS_VAR}
+.      if !defined(${_var_})
+	@${ECHO} "	${_var_} (not defined)"
+.      else
+	@${ECHO} "	${_var_} = ${${_var_}}"
+.      endif
+.    endfor
+.    undef _var_
+	@${ECHO} ""
+	@${ECHO} "=========================================================================="
+	@${TOUCH} ${.TARGET}
+.  endif
+.endif
