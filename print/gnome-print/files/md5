@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/10/10 15:30:28 rh Exp $
+$NetBSD: md5,v 1.4 2000/01/26 11:57:13 rh Exp $
 
-MD5 (gnome-print-0.9.tar.gz) = 3d1e68cd55ae15b4eac7630dcc5f53ec
+MD5 (gnome-print-0.10.tar.gz) = fc72d00cbdc2de70ca38b254ac6a6dca
