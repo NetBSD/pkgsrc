@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2001/12/01 12:30:31 martti Exp $
+# $NetBSD: Makefile,v 1.50 2001/12/03 04:47:41 kent Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -25,16 +25,33 @@ PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
 BUILD_DEFS+=	POSTFIX_USE_INET6
 .endif
 
+POSTFIX_USE_PCRE=YES
+POSTFIX_USE_SASL_AUTH=YES
+.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
+	|| defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+CCARGS=		-I${LOCALBASE}/include
+AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
+.endif
+
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 DEPENDS+=	pcre>=2.08:../../devel/pcre
-CCARGS+=	-DHAS_PCRE -I${LOCALBASE}/include
-AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpcre
-MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
+CCARGS+=	-DHAS_PCRE
+AUXLIBS+=	-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 .endif
 
-PLIST_SRC=	${PKGDIR}/PLIST
+.if defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+DEPENDS+=	cyrus-sasl:../../security/cyrus-sasl
+CCARGS+=	-DUSE_SASL_AUTH
+AUXLIBS+=	-lsasl
+PLIST_SRC+=	${WRKDIR}/PLIST.sasl
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+BUILD_DEFS+=	POSTFIX_USE_SASL_AUTH
+.endif
 
+PLIST_SRC+=	${PKGDIR}/PLIST
 ALL_TARGET=	#empty
 
 pre-configure:
@@ -64,6 +81,11 @@ pre-install:
 	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	-${RM} -f ${WRKSRC}/conf/*.orig
+.if defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+	echo "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
+	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
+	echo lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
