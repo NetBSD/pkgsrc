@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:58:34 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/04 09:56:26 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/01/03 10:14:21 obrien Exp
 #
 
-DISTNAME=	rsync-1.6.9
+DISTNAME=	rsync-2.0.18
 CATEGORIES=	net
 MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
 		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/pub/unix/network/rsync/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     mycroft@netbsd.org
+
+CONFLICTS=	rsync-1.6.9
 
 GNU_CONFIGURE=	yes
 
