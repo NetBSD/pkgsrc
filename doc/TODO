@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1644 2004/04/19 15:53:55 minskim Exp $
+$NetBSD: TODO,v 1.1645 2004/04/19 21:13:12 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -232,6 +232,7 @@ Suggested package updates
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o kde-3.2.2
 	o larswm-7.3.2
 	o lavaps-2.4
 	o leafnode-1.9.52
@@ -335,6 +336,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stella-1.3
+	o subversion-1.0.2
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcpreplay-2.0.3
