@@ -1,0 +1,118 @@
+$NetBSD: patch-ac,v 1.1 1998/08/26 21:18:58 frueauf Exp $
+
+*** eps.c.orig	Thu Feb 19 13:51:02 1998
+--- eps.c	Thu Feb 19 13:47:35 1998
+***************
+*** 671,674 ****
+--- 671,675 ----
+     int boundingbox_found=FALSE, preview_found=FALSE, found;
+     int boundingbox_atend=FALSE, tiff_preview_ok=FALSE;
++    int boundingbox_image_w=0, boundingbox_image_h=0;
+     FILE *fp=NULL;
+     struct stat stat_buf;
+***************
+*** 762,765 ****
+--- 763,768 ----
+           if (sscanf(&(line[14]), "%f %f %f %f", &llx, &lly, &urx, &ury) == 4) {
+              boundingbox_found = TRUE;
++             boundingbox_image_w = abs(round(urx-llx));
++             boundingbox_image_h = abs(round(ury-lly));
+           } else if (!boundingbox_found) {
+              c_ptr = FindChar((int)'(', &(line[14]));
+***************
+*** 790,793 ****
+--- 793,822 ----
+              return BitmapFileInvalid;
+           }
++          if (boundingbox_found) {
++             /*
++              * If the width and height information in the boundingbox and
++              *     the preview bitmap are differ only by one, we consider
++              *     this a round-off error and adjust the boundingbox so
++              *     that they become identical!
++              */
++             int diff=0;
++ 
++             diff = image_w - boundingbox_image_w;
++             if (diff == 1 || diff == (-1)) {
++                if (urx >= llx) {
++                   urx += (float)diff;
++                } else {
++                   urx -= (float)diff;
++                }
++             }
++             diff = image_h - boundingbox_image_h;
++             if (diff == 1 || diff == (-1)) {
++                if (ury >= lly) {
++                   ury += (float)diff;
++                } else {
++                   ury -= (float)diff;
++                }
++             }
++          }
+           preview_found = TRUE;
+           if (!ReadPreviewBitmap(fp, image_w, image_h, bps, &bitmap, &image)) {
+*** exec.c.orig	Thu Feb 19 13:51:02 1998
+--- exec.c	Thu Feb 19 13:26:16 1998
+***************
+*** 1344,1349 ****
+        rc = FALSE;
+     } else {
+!       unlink(file_name);
+!       ReplaceAttrFirstValue(attr_owner_obj, attr_ptr, file_name);
+     }
+     return rc;
+--- 1344,1368 ----
+        rc = FALSE;
+     } else {
+!       char *psz=UtilStrRChr(file_name, '/');
+!       int changed=FALSE;
+! 
+!       if (psz != NULL) {
+!          for (psz++; *psz != '\0'; psz++) {
+!             if ((*psz >= '0' && *psz <= '9') || (*psz >= 'a' && *psz <= 'z') ||
+!                   (*psz >= 'A' && *psz <= 'Z')) {
+!             } else {
+!                *psz = 'Q';
+!                changed = TRUE;
+!             }
+!          }
+!       }
+!       if (changed && mktemp(file_name) == NULL) {
+!          MsgBox ("Fail to mktemp().  Command execution aborted.",
+!                TOOL_NAME, INFO_MB);
+!          rc = FALSE;
+!       } else {
+!          unlink(file_name);
+!          ReplaceAttrFirstValue(attr_owner_obj, attr_ptr, file_name);
+!       }
+     }
+     return rc;
+*** xbitmap.c.orig	Thu Feb 19 13:51:02 1998
+--- xbitmap.c	Thu Feb 19 12:56:15 1998
+***************
+*** 3932,3935 ****
+--- 3932,3939 ----
+  
+           memset(&ctm, 0, sizeof(struct XfrmMtrxRec));
++          (*ObjPtr)->orig_obbox.ltx = ltx;
++          (*ObjPtr)->orig_obbox.lty = lty;
++          (*ObjPtr)->orig_obbox.rbx = rbx;
++          (*ObjPtr)->orig_obbox.rby = rby;
+           fval = ((float)(rbx-ltx))/((float)image_w)*((float)1000.0);
+           ctm.m[CTM_SX] = round(fval);
+*** http.c.orig	Tue Dec  2 15:23:15 1997
+--- http.c	Tue Dec  2 15:24:12 1997
+***************
+*** 962,966 ****
+     }
+     if (content_type != NULL) free(content_type);
+!    if (text_type) {
+        int buf_len=strlen(line_ptr);
+        char *return_buf;
+--- 962,966 ----
+     }
+     if (content_type != NULL) free(content_type);
+!    if (text_type || content_length == (-1)) {
+        int buf_len=strlen(line_ptr);
+        char *return_buf;
