@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:55:15 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/05 16:34:59 jmmv Exp $
 #
 
 DISTNAME=	pwm-20030528
@@ -8,7 +8,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/dl/
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.students.tut.fi/~tuomov/pwm/
+HOMEPAGE=	http://modeemi.fi/~tuomov/pwm/
 COMMENT=	Window manager that frames multiple client windows in a single frame
 
 USE_BUILDLINK2=		YES
