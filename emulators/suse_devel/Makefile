@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2000/12/17 13:05:42 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/12/17 13:18:38 tron Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=d1/}
+MASTER_SITES=		${MASTER_SITE_SUSE:=d1/} \
+			${MASTER_SITE_SUSE:=d2/}
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
@@ -16,7 +17,7 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		bin86.rpm binutils.rpm gcc.rpm gpp.rpm \
+RPMFILES=		bin86.rpm binutils.rpm g77.rpm gcc.rpm gpp.rpm \
 			libc.rpm linclude.rpm make.rpm
 
 .include "../suse_linux/Makefile.common"

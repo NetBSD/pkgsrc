@@ -1,7 +1,8 @@
-$NetBSD: md5,v 1.3 2000/12/17 13:05:43 tron Exp $
+$NetBSD: md5,v 1.4 2000/12/17 13:18:39 tron Exp $
 
 MD5 (suse64/bin86.rpm) = b585742bd72fd886eeaabb70f2a89364
 MD5 (suse64/binutils.rpm) = fac958ab296d528845b98259202a6363
+MD5 (suse64/g77.rpm) = 7173af2df58fa4534df915ba4199c699
 MD5 (suse64/gcc.rpm) = 015f08f07841fd49cc729b6a4aaaa59d
 MD5 (suse64/gpp.rpm) = a02ff710df1f85f0d940833244a1999f
 MD5 (suse64/libc.rpm) = d8ea17a27571b72c7cbc6aaf31b5f5c1
