@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.15 2001/02/16 13:06:20 wiz Exp $
+# $NetBSD: url2pkg,v 1.16 2001/02/18 05:21:07 hubertf Exp $
 #
 # url2pkg
 # (c) 1999 Hubert Feyrer
@@ -23,7 +23,7 @@ if [ "$PKGMAINTAINER" != "" ]; then
 elif [ "$REPLYTO" != "" ]; then
 	email_maintainer="$REPLYTO"
 else
-	email_maintainer="<INSERT_YOUR_MAIL_ADDRESS_HERE>"
+	email_maintainer="INSERT_YOUR_MAIL_ADDRESS_HERE"
 fi
 
 if [ ! -f ../../mk/bsd.pkg.mk ]; then
@@ -74,7 +74,7 @@ if [ ! -f w*/.extract_done ]; then
 	echo ""
 	echo "MAINTAINER=	$email_maintainer"
 	echo "HOMEPAGE=	"
-	echo "COMMENT=	<SHORT_DESCRIPTION_OF_THE_PACKAGE>"
+	echo "COMMENT=	SHORT_DESCRIPTION_OF_THE_PACKAGE"
 	echo ""
 	echo '.include "../../mk/bsd.pkg.mk"'
 	) >Makefile
