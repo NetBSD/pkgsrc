@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2002/05/03 21:15:28 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/31 02:48:30 jschauma Exp $
 
-DISTNAME=		etach-1.2.6
+DISTNAME=		etach-1.2.9
 CATEGORIES=		mail
 MASTER_SITES=		http://rulnick.com/etach/download/
 

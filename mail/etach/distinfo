@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/05/03 21:15:28 jtb Exp $
+$NetBSD: distinfo,v 1.4 2003/05/31 02:48:30 jschauma Exp $
 
-SHA1 (etach-1.2.6.tar.gz) = 3a4efe1c03146f795b3a85fa82075730c1a70861
-Size (etach-1.2.6.tar.gz) = 33086 bytes
+SHA1 (etach-1.2.9.tar.gz) = 3a2ec2df9fa9fb49baf5be9c212d228df1dcd8d0
+Size (etach-1.2.9.tar.gz) = 35334 bytes
