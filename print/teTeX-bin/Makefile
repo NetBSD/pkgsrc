@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/02/09 20:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/03/06 22:16:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 MAINTAINER=	hubertf@netbsd.org
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
-DEPENDS+=	teTeX-share-1.0:../teTeX-share
+DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww-5.2.8:../../www/libwww
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
