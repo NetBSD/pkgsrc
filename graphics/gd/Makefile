@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:35 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/14 06:36:50 kei Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -41,5 +41,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include/freetype			# freetype.h
 CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
 CPPFLAGS+=	-I${XPMDIR}/include -I${XPMDIR}/include/X11	# xpm.h
 CPPFLAGS+=	-I${X11BASE}/include
+
+post-patch:
+	cd ${WRKSRC}; \
+	${MV} bdftogd bdftogd.orig; \
+	${SED} -e 's_@PREFIX@_${PREFIX}_' bdftogd.orig > bdftogd
 
 .include "../../mk/bsd.pkg.mk"
