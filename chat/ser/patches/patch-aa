@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/23 22:08:03 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/28 04:13:10 jmc Exp $
 
---- Makefile.defs-	2003-08-24 06:32:08.000000000 +0900
-+++ Makefile.defs	2003-08-24 06:32:33.000000000 +0900
-@@ -16,14 +16,13 @@
+--- Makefile.defs.orig	Tue Nov 12 17:21:28 2002
++++ Makefile.defs	Wed Aug 27 22:41:18 2003
+@@ -16,7 +16,6 @@
  			-e s/armv4l/arm/)
  
   # install location
@@ -10,14 +10,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/23 22:08:03 itojun Exp $
  prefix = $(PREFIX)
  # install path is $(basedir) $(prefix) 
  # example:
- #  creating a bin. archive in /tmp, which unpacks in /usr/local
- #  basedir=/tmp
- #  prefix=/usr/local
--basedir = 
-+basedir = 
- # install prefixes for various stuff
- cfg-prefix = $(basedir)$(prefix)
- bin-prefix = $(basedir)$(prefix)
 @@ -33,7 +32,7 @@
  ut-prefix = $(basedir)$(prefix)
  
@@ -36,7 +28,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/23 22:08:03 itojun Exp $
  modules-target = $(prefix)/$(modules-dir)
  
  
-@@ -520,7 +519,7 @@
+@@ -446,6 +445,7 @@
+ endif
+ 
+ endif #mode=release
++LDFLAGS+= -L${BUILDLINK_PREFIX.pthread}/lib -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pthread}/lib
+ 
+ 
+ #*FLAGS used for compiling the modules
+@@ -473,8 +473,10 @@
+ 	DEFS+=-DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN
+ endif
+ ifneq ($(OS), openbsd)
++ifneq ($(OS), netbsd)
+ 	DEFS+=-DHAVE_SCHED_YIELD
+ endif
++endif
+ 
+ 
+ #os specific stuff
+@@ -520,7 +522,7 @@
  ifeq ($(OS), netbsd)
  	DEFS+=-DHAVE_SOCKADDR_SA_LEN
  	YACC=yacc
