@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1998/12/28 09:35:42 tron Exp $
+
+--- include/mconfig.h.orig	Fri Oct  9 15:31:45 1998
++++ include/mconfig.h	Mon Dec 28 10:33:08 1998
+@@ -35,9 +35,7 @@
+ extern "C" {
+ #endif
+ 
+-#if defined(unix) || defined(__unix) || defined(__unix__)
+-#	define	IS_UNIX
+-#endif
++#define	IS_UNIX
+ 
+ #ifdef	__MSDOS__
+ #	define	IS_MSDOS
