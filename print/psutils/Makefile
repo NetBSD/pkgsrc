@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/17 20:17:18 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -18,6 +18,7 @@ MAN1=		psbook.1 psselect.1 pstops.1 epsffit.1 psnup.1 psresize.1 \
 		extractres.1 includeres.1 fixscribeps.1 psmerge.1
 
 PAPERSIZE?=	A4
+USE_PERL5=	YES
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
