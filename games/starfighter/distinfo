@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/15 05:36:43 xtraeme Exp $
+
+SHA1 (starfighter-1.1-1.tar.gz) = e9b2d463247ee216f399cdff99ccbf4cd7f821e7
+Size (starfighter-1.1-1.tar.gz) = 2523399 bytes
+SHA1 (starfighter-1.0-1.music.zip) = 318134a62ca69294837841a8421b481928acc05d
+Size (starfighter-1.0-1.music.zip) = 1372826 bytes
+SHA1 (patch-aa) = 1f8b07f0e3bda42d71369aa7d3bae17d267a187c
