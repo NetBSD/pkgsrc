@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/31 13:15:22 frueauf Exp $
+bin/glade
+share/doc/glade/README
+share/doc/glade/TODO
+share/doc/glade/developer.txt
+share/doc/glade/file_format.txt
+share/doc/glade/generic.txt
+share/doc/glade/manual.txt
+share/doc/glade/portability.txt
+share/doc/glade/notes.txt
+share/doc/glade/source_code.txt
+share/locale/de/LC_MESSAGES/glade.mo
+share/locale/es/LC_MESSAGES/glade.mo
+share/locale/fr/LC_MESSAGES/glade.mo
+share/locale/pt_BR/LC_MESSAGES/glade.mo
+@dirrm share/doc/glade
