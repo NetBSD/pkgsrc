@@ -1,37 +1,37 @@
-$NetBSD: patch-an,v 1.4 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-an,v 1.5 2003/06/06 08:58:43 jtb Exp $
 
---- ipl/Makefile.orig	Sat Mar 16 00:23:29 2002
+--- ipl/Makefile.orig
 +++ ipl/Makefile
-@@ -5,9 +5,9 @@
+@@ -8,9 +8,9 @@
  
- Ilib:	../bin/libcfunc.so
- ../bin/libcfunc.so:  ../bin/icont
+ Ilib:	cfuncs/libcfunc.so
+ cfuncs/libcfunc.so:  ../bin/icont
 -	cp incl/*.icn gincl/*.icn cfuncs/icall.h ../lib
 -	cd procs;  LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib
 -	cd gprocs; LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib
 +	cp incl/*.icn gincl/*.icn cfuncs/icall.h ../lib/icon
 +	cd procs;  LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib/icon
 +	cd gprocs; LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib/icon
- 	if grep LoadFunc ../src/h/define.h >/dev/null; then $(MAKE) Cfuncs; fi
+ 	if grep '^ *# *define LoadFunc' ../src/h/define.h >/dev/null; \
+ 	   then $(MAKE) Cfunctions; fi
  
+@@ -19,12 +19,12 @@
  
-@@ -15,12 +15,12 @@ Ilib:	../bin/libcfunc.so
- 
- Cfuncs:
+ Cfunctions:
  	cd cfuncs; LPATH= $(MAKE) ICONT=../../bin/icont
--	mv cfuncs/*.u? ../lib
--	mv cfuncs/libcfunc.so ../bin
-+	mv cfuncs/*.u? ../lib/icon
-+	mv cfuncs/libcfunc.so ../lib/icon
+-	cp cfuncs/*.u? ../lib
+-	cp cfuncs/libcfunc.so ../bin
++	cp cfuncs/*.u? ../lib/icon
++	cp cfuncs/libcfunc.so ../lib/icon
  
  
- #  Make selected program binaries (platform-dependent icode) for ../bin,
--#  given that ../lib is ready
-+#  given that ../lib/icon is ready
+ #  Make selected graphics program binaries (platform-dependent icode)
+-#  for ../bin, given that ../lib is ready
++#  for ../bin, given that ../lib/icon is ready
  
- Ibin:	../bin/ipatch
- ../bin/ipatch:  ../bin/icont
-@@ -28,18 +28,18 @@ Ibin:	../bin/ipatch
+ Ibin:	gpacks/vib/vib
+ gpacks/vib/vib:  ../bin/icont
+@@ -32,18 +32,18 @@
  
  
  #  Make a full set of program binaries (not usually done) in ./iexe,
@@ -53,12 +53,12 @@ $NetBSD: patch-an,v 1.4 2003/03/24 12:12:10 jtb Exp $
  
  
  #  Check for stray files
-@@ -63,7 +63,7 @@ ZipFiles:  Ilib
+@@ -67,7 +67,7 @@
  	zip -qrX9 gipl.zip gdocs gincl gprocs gprogs gpacks gdata  -x '*/CVS/*'
  	zip -qrX9 mipl.zip mincl mprocs mprogs                     -x '*/CVS/*'
  	mkdir ilib
 -	cp ../lib/*.* ilib
-+	cp ../lib/icon*.* ilib
++	cp ../lib/icon/*.* ilib
  	zip -qrX9 ilib.zip ilib
  	rm -rf ilib
  
