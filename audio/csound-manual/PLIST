@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/23 01:56:28 wiz Exp $
 share/doc/csound/manual.pdf
 share/doc/csound/manual.txt
 share/doc/csound/manual1.pdf
@@ -323,6 +323,8 @@ share/doc/html/csound/zak/zir.htm
 share/doc/html/csound/zak/ziw.htm
 share/doc/html/csound/zak/zkmod.htm
 share/examples/csound/hellorcb.aif
+share/examples/csound/rt-midi-input.orc
+share/examples/csound/rt-midi-input.sco
 share/examples/csound/toot01.orc
 share/examples/csound/toot01.sco
 share/examples/csound/toot02.orc

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/03/12 22:31:04 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/23 01:56:28 wiz Exp $
 #
 
 DISTNAME=		csound-manual-4.10
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.csounds.com/manual/current/
 EXTRACT_SUFX=		.zip
@@ -15,7 +16,7 @@ DISTFILES=		ascii.zip \
 			spplmtxt.zip \
 			toots.zip
 
-MAINTAINER=		collver@softhome.net
+MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.csound.org
 COMMENT=		Manuals and examples for Csound
 
@@ -43,6 +44,8 @@ do-install:
 		${PREFIX}/share/doc/html/csound
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/csound
 	cd ${WRKSRC} && ${INSTALL_DATA} hellorcb.aif toot* \
+		${PREFIX}/share/examples/csound
+	cd ${FILESDIR} && ${INSTALL_DATA} rt-midi-input.* \
 		${PREFIX}/share/examples/csound
 
 .include "../../mk/bsd.pkg.mk"
