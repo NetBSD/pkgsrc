@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:14:43 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/11/05 09:44:33 adam Exp $
 
-DISTNAME=		dopewars-1.5.9
-PKGREVISION=		5
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dopewars/}
+DISTNAME=	dopewars-1.5.10
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dopewars/}
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://dopewars.sourceforge.net/
-COMMENT=		Make a fortune dealing drugs on the streets of New York
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://dopewars.sourceforge.net/
+COMMENT=	Make a fortune dealing drugs on the streets of New York
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
