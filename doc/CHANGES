@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.445 2002/11/02 11:34:32 rh Exp $
+$NetBSD: CHANGES,v 1.446 2002/11/02 14:08:49 junyoung Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3510,3 +3510,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cpuflags to 0.37 [abs 2002-11-02]
 	Added gcalctool-4.1.0 [rh 2002-11-02]
 	Added gconf-editor-0.3.1 [rh 2002-11-02]
+	Updated hanterm to 3.1.6nb1 [junyoung 2002-11-02]
+
