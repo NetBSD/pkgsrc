@@ -1,3 +1,4 @@
+$NetBSD: patch-af,v 1.2 1999/12/26 00:26:17 wiz Exp $
 --- po/Makefile.in.in.orig	Tue Oct  5 21:27:59 1999
 +++ po/Makefile.in.in	Sun Nov  7 22:38:50 1999
 @@ -19,7 +19,7 @@
