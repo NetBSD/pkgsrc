@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.29 2002/08/28 11:06:18 seb Exp $
+# $NetBSD: defs.Linux.mk,v 1.30 2002/09/04 14:47:33 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -62,6 +62,7 @@ XARGS?=		/usr/bin/xargs -r
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
+EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type

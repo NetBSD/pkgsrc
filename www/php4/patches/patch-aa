@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/10/16 04:54:24 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2002/09/04 14:47:40 agc Exp $
 
 --- Makefile.in.orig	Sat Apr 21 21:09:12 2001
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2001/10/16 04:54:24 jlam Exp $
  PROGRAM_SOURCES      = stub.c
  PROGRAM_LDADD        = libphp4.la $(EXT_PROGRAM_LDADD)
 -PROGRAM_LDFLAGS      = -export-dynamic	
-+PROGRAM_LDFLAGS      = -static -export-dynamic $(LINK_LIBGCC_LDFLAGS)
++PROGRAM_LDFLAGS      = -static ${EXPORT_SYMBOLS_LDFLAGS} $(LINK_LIBGCC_LDFLAGS)
  PROGRAM_DEPENDENCIES = $(PROGRAM_LDADD)
  
  targets = $(LTLIBRARY_NAME) $(PHP_PROGRAM)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/01 05:48:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/04 14:47:35 agc Exp $
 
 DISTNAME=	kdemultimedia-2.2.2
 PKGREVISION=	1
@@ -15,11 +15,8 @@ PTHREAD_OPTS+=		require
 
 CONFIGURE_ENV+=		ac_cv_path_kde_artsplug_compiles="${ARTSCCONFIG}"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-LIBS=			-Wl,--export-dynamic
-.endif
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../x11/kde2/buildlink.mk"
 .include "../../x11/kdebase2/buildlink.mk"

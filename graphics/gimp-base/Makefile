@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/17 02:40:57 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/04 14:47:36 agc Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
@@ -33,7 +33,9 @@ CONFIGURE_ENV+=		MPEG="mpeg"
 CONFIGURE_ENV+=		LIBMPEG="-lmpeg_lib"
 CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
 
-LDFLAGS+=		-Wl,--export-dynamic
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
 MAKE_ENV+=		X11BASE=${X11BASE}
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}

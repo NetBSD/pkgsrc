@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.3 2002/07/24 19:45:31 jlam Exp $
+# $NetBSD: Makefile.module,v 1.4 2002/09/04 14:47:41 agc Exp $
 
 .include "../../www/php3/Makefile.common"
 
@@ -24,8 +24,8 @@ LD_SHAREABLE_FLAG=	-G
 LD_SHAREABLE_FLAG=	-Bshareable
 .endif
 
-# Ensure we export symbols in the linked shared objects.
-LDFLAGS+=		-Wl,--export-dynamic
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 MOD_CPPFLAGS+=		-I${WRKSRC} -I${MODULESDIR} -fPIC -DPIC -DCOMPILE_DL
 MOD_LDFLAGS+=		${LDFLAGS:S/-Wl,//g}
