@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.4 2003/12/17 03:03:26 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.5 2003/12/17 21:43:29 grant Exp $
 #
 
 .if defined(MOZILLA_USE_LINUX)
@@ -20,7 +20,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
 
 PLATFORM=	netbsd
 
-DEPENDS+=	ORBit>=0.5.15nb5:../../net/ORBit
 DEPENDS+=	gtk+>=1.2.10nb5:../../x11/gtk
 
 .  if !exists(/usr/lib/libstdc++.so.4)
