@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/29 05:37:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Imake and other utilities from XFree86
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-
-CONFLICTS=	xorg-imake-[0-9]*
 
 USE_BUILDLINK3=		yes
 USE_DIRS+=		XFree86-1.0
