@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/06/01 11:23:46 rh Exp $
+# $NetBSD: Makefile,v 1.47 2000/07/10 15:08:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -22,7 +22,7 @@ USE_PKGLIBTOOL=	yes
 LIBTOOL_FLAGS=	--cplusplus --install-la
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${PREFIX}/qt1"
+		"--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/01 11:23:47 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/10 15:08:21 agc Exp $
 
 DISTNAME=	QwSpriteField1.6
 PKGNAME=	qwspritefield-1.6
@@ -18,15 +18,16 @@ WRKSRC=		${WRKDIR}/QwSpriteField
 
 QW_INCLUDES=	Pix.h QwCluster.h QwPublicList.h QwSpriteField.h
 
-PATH=		${X11BASE}/qt1/bin:$$PATH
+PATH=		`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/bin:$$PATH
 
-MAKE_ENV+=	"QTDIR=${X11BASE}/qt1"
+MAKE_ENV+=	"QTDIR=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1"
 
 do-install:
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libQwSpriteField.la \
 	  ${PREFIX}/lib
-.for FILE in ${QW_INCLUDES}
-	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/qt1/include
-.endfor
+	@qt1dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`;		\
+	for file in ${QW_INCLUDES}; do					\
+		${INSTALL_DATA} ${WRKSRC}/${FILE} $$qt1dir/qt1/include;	\
+	done
 
 .include "../../mk/bsd.pkg.mk"

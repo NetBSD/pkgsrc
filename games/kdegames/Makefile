@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/03/28 00:12:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.37 2000/07/10 15:08:17 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -18,7 +18,7 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${X11BASE}/qt1" 
+		"--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1" 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
