@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/21 16:56:44 martti Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/22 14:03:23 wiz Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
@@ -39,7 +39,7 @@ REPLACE_PERL=	scripts/addxface scripts/deepen scripts/facesaddr \
 		scripts/mkfacesindex scripts/newscheck.faces \
 		scripts/newsfrom.faces scripts/rotary.faces
 
-do-configure: replace-perl
+do-configure:
 	${LN} -sf Makefile.dist ${WRKSRC}/${MAKEFILE}
 	cd ${WRKSRC};							\
 	files="								\
