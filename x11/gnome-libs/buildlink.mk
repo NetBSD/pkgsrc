@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.16 2002/03/26 05:39:34 rh Exp $
+# $NetBSD: buildlink.mk,v 1.17 2002/07/14 01:19:15 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -39,13 +39,22 @@ BUILDLINK_FILES.gnome-libs+=	lib/libgnorba.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgnorbagtk.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgtkxmhtml.*
 BUILDLINK_FILES.gnome-libs+=	lib/libzvt.*
+BUILDLINK_FILES.gnome-libs+=	share/idl/GnomeObject.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/Table.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/desktop-editor.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/desktop-textviewer.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/gnome-factory.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/gnome-unknown.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/name-service.idl
 
 REPLACE_BUILDLINK_SED+=	\
 	-e "s|-I${BUILDLINK_DIR}/\(lib/gnome-libs/\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g" \
-	-e "s|-I${BUILDLINK_DIR}/\(include/gnome-1.0\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g"
+	-e "s|-I${BUILDLINK_DIR}/\(include/gnome-1.0\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g" \
+	-e "s|-I${BUILDLINK_DIR}/\(share/idl\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
 	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(lib/gnome-libs/\)|-I${BUILDLINK_DIR}/\1|g" \
-	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(include/gnome-1.0\)|-I${BUILDLINK_DIR}/\1|g"
+	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(include/gnome-1.0\)|-I${BUILDLINK_DIR}/\1|g" \
+	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(share/idl\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2002/03/13 17:37:56 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/07/14 01:21:18 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-core.
 #
@@ -29,6 +29,9 @@ BUILDLINK_FILES.gnome-core+=	lib/libfish_applet.*
 BUILDLINK_FILES.gnome-core+=	lib/libgen_util_applet.*
 BUILDLINK_FILES.gnome-core+=	lib/libpanel_applet.*
 BUILDLINK_FILES.gnome-core+=	lib/libpanel_status.*
+BUILDLINK_FILES.gnome-core+=	share/idl/Terminal.idl
+BUILDLINK_FILES.gnome-core+=	share/idl/gnome-panel.idl
+BUILDLINK_FILES.gnome-core+=	share/idl/help-browser.idl
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include "../../www/libghttp/buildlink.mk"
