@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/02/18 12:58:45 frueauf Exp $
+@comment $NetBSD: PLIST.common,v 1.1 1999/08/13 20:40:55 abs Exp $
 @unexec install-info --delete --info-dir=%D/info %D/info/info-stnd.info
 @unexec install-info --delete --info-dir=%D/info %D/info/info.info
 @unexec install-info --delete --info-dir=%D/info %D/info/texinfo
@@ -25,5 +25,3 @@ info/texinfo-9
 @exec install-info --info-dir=%D/info %D/info/info-stnd.info
 @exec install-info --info-dir=%D/info %D/info/info.info
 @exec install-info --info-dir=%D/info %D/info/texinfo
-share/locale/de/LC_MESSAGES/texinfo.cat
-share/locale/fr/LC_MESSAGES/texinfo.cat
