@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/06/16 14:18:56 pooka Exp $
+
+--- winframe.c.orig	Sat Jan  8 00:38:12 2000
++++ winframe.c	Sat Jan  8 00:38:49 2000
+@@ -84,6 +84,7 @@
+ static void setIMStatusText();
+ #endif
+ static void updateResizePositions();
++static int headerHeight();
+ 
+ /***************************************************************************
+ * sizing and decoration positioning functions

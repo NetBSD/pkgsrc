@@ -1,0 +1,30 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/06/16 14:18:57 pooka Exp $
+
+--- usermenu.c.orig	Thu Mar  2 22:41:31 2000
++++ usermenu.c	Tue Jun  6 19:24:12 2000
+@@ -884,7 +884,7 @@
+ 		home = ".";
+  
+ 	if ((owHome = getenv("OPENWINHOME")) == NULL)
+-		owHome = "/usr/openwin";
++		owHome = X11BASE;
+  
+ 	menuSearchPath = (char **)MemAlloc(NUM_SEARCH_PATH*sizeof(char *));
+  
+@@ -899,16 +899,6 @@
+ 	/* $HOME/.<menufile> */
+ 	sprintf(buf, "%s/.%%s", home);
+ 	menuSearchPath[i++] = MemNewString(buf);
+-
+-#ifdef OW_I18N_L3
+-	/* $OPENWINHOME/share/locale/<locale>/olwm/<menufile> */
+-	sprintf(buf, "%s/share/locale/%%2$s/olwm/%%1$s", owHome);
+-	menuSearchPath[i++] = MemNewString(buf);
+-
+-	/* $OPENWINHOME/lib/<menufile>.<locale> */
+-	sprintf(buf, "%s/lib/%%1$s.%%2$s", owHome);
+-	menuSearchPath[i++] = MemNewString(buf);
+-#endif
+ 
+ 	/* $OPENWINHOME/lib/<menufile> */
+ 	sprintf(buf, "%s/lib/%%s", owHome);
