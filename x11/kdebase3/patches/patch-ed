@@ -1,8 +1,8 @@
-$NetBSD: patch-ed,v 1.5 2003/07/30 13:35:00 markd Exp $
+$NetBSD: patch-ed,v 1.6 2004/01/15 10:15:14 markd Exp $
 
---- kwin/clients/riscos/Makefile.in.orig	2003-07-15 22:03:50.000000000 +1200
+--- kwin/clients/riscos/Makefile.in.orig	2004-01-02 14:06:04.000000000 +1300
 +++ kwin/clients/riscos/Makefile.in
-@@ -436,7 +436,7 @@ StickyButton.cpp \
+@@ -437,7 +437,7 @@ StickyButton.cpp \
  HelpButton.cpp \
  Static.cpp
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ed,v 1.5 2003/07/30 13:35:00 markd Exp $
  kwin_riscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -462,7 +462,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -464,7 +464,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,131 +20,118 @@ $NetBSD: patch-ed,v 1.5 2003/07/30 13:35:00 markd Exp $
  am_kwin_riscos_la_OBJECTS = Button.lo CloseButton.lo IconifyButton.lo \
  	LowerButton.lo Manager.lo MaximiseButton.lo StickyButton.lo \
  	HelpButton.lo Static.lo
-@@ -711,7 +711,7 @@ distclean-tags:
+@@ -713,7 +713,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=riscos.desktop Palette.h 
+-KDE_DIST=Palette.h riscos.desktop 
 +KDE_DIST=riscos.desktop Palette.h Makefile.in.rej 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -861,11 +861,11 @@ kwin_riscos.la.closure: $(kwin_riscos_la
+@@ -862,18 +862,18 @@ kwin_riscos.la.closure: $(kwin_riscos_la
  
  
  #>+ 3
--LowerButton.moc: $(srcdir)/LowerButton.h
--	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
-+Button.moc: $(srcdir)/Button.h
-+	$(MOC) $(srcdir)/Button.h -o Button.moc
+-StickyButton.moc: $(srcdir)/StickyButton.h
+-	$(MOC) $(srcdir)/StickyButton.h -o StickyButton.moc
+-
+-#>+ 1
+-mocs: StickyButton.moc
+-#>+ 3
+ Button.moc: $(srcdir)/Button.h
+ 	$(MOC) $(srcdir)/Button.h -o Button.moc
  
  #>+ 1
--mocs: LowerButton.moc
-+mocs: Button.moc
+ mocs: Button.moc
  #>+ 3
- StickyButton.moc: $(srcdir)/StickyButton.h
- 	$(MOC) $(srcdir)/StickyButton.h -o StickyButton.moc
-@@ -873,44 +873,44 @@ StickyButton.moc: $(srcdir)/StickyButton
++StickyButton.moc: $(srcdir)/StickyButton.h
++	$(MOC) $(srcdir)/StickyButton.h -o StickyButton.moc
++
++#>+ 1
++mocs: StickyButton.moc
++#>+ 3
+ LowerButton.moc: $(srcdir)/LowerButton.h
+ 	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
+ 
+@@ -886,18 +886,6 @@ IconifyButton.moc: $(srcdir)/IconifyButt
  #>+ 1
- mocs: StickyButton.moc
+ mocs: IconifyButton.moc
  #>+ 3
 -MaximiseButton.moc: $(srcdir)/MaximiseButton.h
 -	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
-+LowerButton.moc: $(srcdir)/LowerButton.h
-+	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
- 
- #>+ 1
+-
+-#>+ 1
 -mocs: MaximiseButton.moc
-+mocs: LowerButton.moc
- #>+ 3
--HelpButton.moc: $(srcdir)/HelpButton.h
--	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
-+IconifyButton.moc: $(srcdir)/IconifyButton.h
-+	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
- 
- #>+ 1
--mocs: HelpButton.moc
-+mocs: IconifyButton.moc
- #>+ 3
--Button.moc: $(srcdir)/Button.h
--	$(MOC) $(srcdir)/Button.h -o Button.moc
-+Manager.moc: $(srcdir)/Manager.h
-+	$(MOC) $(srcdir)/Manager.h -o Manager.moc
- 
- #>+ 1
--mocs: Button.moc
-+mocs: Manager.moc
- #>+ 3
+-#>+ 3
 -CloseButton.moc: $(srcdir)/CloseButton.h
 -	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
-+HelpButton.moc: $(srcdir)/HelpButton.h
-+	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
- 
- #>+ 1
+-
+-#>+ 1
 -mocs: CloseButton.moc
-+mocs: HelpButton.moc
+-#>+ 3
+ Manager.moc: $(srcdir)/Manager.h
+ 	$(MOC) $(srcdir)/Manager.h -o Manager.moc
+ 
+@@ -910,8 +898,20 @@ HelpButton.moc: $(srcdir)/HelpButton.h
+ #>+ 1
+ mocs: HelpButton.moc
  #>+ 3
--Manager.moc: $(srcdir)/Manager.h
--	$(MOC) $(srcdir)/Manager.h -o Manager.moc
 +CloseButton.moc: $(srcdir)/CloseButton.h
 +	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
- 
- #>+ 1
--mocs: Manager.moc
++
++#>+ 1
 +mocs: CloseButton.moc
- #>+ 3
--IconifyButton.moc: $(srcdir)/IconifyButton.h
--	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
++#>+ 3
 +MaximiseButton.moc: $(srcdir)/MaximiseButton.h
 +	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
- 
- #>+ 1
--mocs: IconifyButton.moc
++
++#>+ 1
 +mocs: MaximiseButton.moc
- #>+ 3
++#>+ 3
  clean-metasources:
--	-rm -f  LowerButton.moc StickyButton.moc MaximiseButton.moc HelpButton.moc Button.moc CloseButton.moc Manager.moc IconifyButton.moc
+-	-rm -f  StickyButton.moc Button.moc LowerButton.moc IconifyButton.moc MaximiseButton.moc CloseButton.moc Manager.moc HelpButton.moc
 +	-rm -f  Button.moc StickyButton.moc LowerButton.moc IconifyButton.moc Manager.moc HelpButton.moc CloseButton.moc MaximiseButton.moc
  
  #>+ 3
  clean-closures:
-@@ -927,7 +927,7 @@ force-reedit:
+@@ -928,7 +928,7 @@ force-reedit:
  
  
  #>+ 11
--kwin_riscos_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/Button.cpp $(srcdir)/CloseButton.cpp $(srcdir)/IconifyButton.cpp $(srcdir)/LowerButton.cpp $(srcdir)/Manager.cpp $(srcdir)/MaximiseButton.cpp $(srcdir)/StickyButton.cpp $(srcdir)/HelpButton.cpp $(srcdir)/Static.cpp  StickyButton.moc Manager.moc IconifyButton.moc LowerButton.moc MaximiseButton.moc HelpButton.moc Button.moc CloseButton.moc
+-kwin_riscos_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/Button.cpp $(srcdir)/CloseButton.cpp $(srcdir)/IconifyButton.cpp $(srcdir)/LowerButton.cpp $(srcdir)/Manager.cpp $(srcdir)/MaximiseButton.cpp $(srcdir)/StickyButton.cpp $(srcdir)/HelpButton.cpp $(srcdir)/Static.cpp  StickyButton.moc IconifyButton.moc MaximiseButton.moc Manager.moc CloseButton.moc Button.moc LowerButton.moc HelpButton.moc
 +kwin_riscos_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/Button.cpp $(srcdir)/CloseButton.cpp $(srcdir)/IconifyButton.cpp $(srcdir)/LowerButton.cpp $(srcdir)/Manager.cpp $(srcdir)/MaximiseButton.cpp $(srcdir)/StickyButton.cpp $(srcdir)/HelpButton.cpp $(srcdir)/Static.cpp  LowerButton.moc StickyButton.moc Button.moc Manager.moc IconifyButton.moc HelpButton.moc CloseButton.moc MaximiseButton.moc
  	@echo 'creating kwin_riscos_la.all_cpp.cpp ...'; \
  	rm -f kwin_riscos_la.all_cpp.files kwin_riscos_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kwin_riscos_la.all_cpp.final; \
-@@ -963,19 +963,19 @@ kde-rpo-clean:
+@@ -964,19 +964,19 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 17
--Manager.lo: Manager.moc 
+-HelpButton.o: HelpButton.moc 
 -LowerButton.lo: LowerButton.moc 
--IconifyButton.lo: IconifyButton.moc 
--IconifyButton.o: IconifyButton.moc 
--CloseButton.o: CloseButton.moc 
--Manager.o: Manager.moc 
- HelpButton.lo: HelpButton.moc 
--Button.lo: Button.moc 
--MaximiseButton.lo: MaximiseButton.moc 
--LowerButton.o: LowerButton.moc 
+-StickyButton.o: StickyButton.moc 
++HelpButton.lo: HelpButton.moc 
  StickyButton.lo: StickyButton.moc 
--MaximiseButton.o: MaximiseButton.moc 
--Button.o: Button.moc 
- StickyButton.o: StickyButton.moc 
-+Button.o: Button.moc 
+-LowerButton.o: LowerButton.moc 
++StickyButton.o: StickyButton.moc 
+ Button.o: Button.moc 
 +LowerButton.lo: LowerButton.moc 
 +Button.lo: Button.moc 
 +MaximiseButton.o: MaximiseButton.moc 
-+IconifyButton.lo: IconifyButton.moc 
+ IconifyButton.lo: IconifyButton.moc 
+-CloseButton.o: CloseButton.moc 
 +MaximiseButton.lo: MaximiseButton.moc 
- HelpButton.o: HelpButton.moc 
++HelpButton.o: HelpButton.moc 
 +Manager.o: Manager.moc 
 +LowerButton.o: LowerButton.moc 
- CloseButton.lo: CloseButton.moc 
-+IconifyButton.o: IconifyButton.moc 
-+Manager.lo: Manager.moc 
++CloseButton.lo: CloseButton.moc 
+ IconifyButton.o: IconifyButton.moc 
+-MaximiseButton.o: MaximiseButton.moc 
+ Manager.lo: Manager.moc 
+-CloseButton.lo: CloseButton.moc 
+-Button.lo: Button.moc 
+-HelpButton.lo: HelpButton.moc 
+-Manager.o: Manager.moc 
+-MaximiseButton.lo: MaximiseButton.moc 
 +CloseButton.o: CloseButton.moc 
