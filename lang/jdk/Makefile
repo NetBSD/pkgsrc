@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/01/13 20:13:38 jwise Exp $
+# $NetBSD: Makefile,v 1.14 2000/01/15 02:08:04 jwise Exp $
 #
 
 VERSION=1.1.8
@@ -34,10 +34,10 @@ do-install:
 		-e 's|@JDK_HOME@|${JDK_HOME}|g' \
 		<${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
-.include "../../mk/bsd.pkg.mk"
-
 show-shlib-type:
 	echo a.out
+
+.include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk 
 PREFIX:=	${JDK_HOME}
