@@ -1,0 +1,8 @@
+$NetBSD: patch-ac,v 1.5 2005/01/06 10:38:16 adam Exp $
+
+--- configure.orig	2005-01-06 10:56:09.000000000 +0000
++++ configure
+@@ -1,2 +1,2 @@
+-#! /bin/bash
++#!/bin/sh
+ #

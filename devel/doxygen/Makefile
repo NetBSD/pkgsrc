@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/11/09 14:31:51 adam Exp $
+# $NetBSD: Makefile,v 1.27 2005/01/06 10:38:16 adam Exp $
 
-DISTNAME=	doxygen-1.3.9.1.src
-PKGNAME=	doxygen-1.3.9.1
+DISTNAME=	doxygen-1.4.0.src
+PKGNAME=	doxygen-1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
@@ -12,12 +12,12 @@ COMMENT=	Documentation system for C++, Java, IDL and C
 DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_PERL5=		yes
-USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS=		--make ${GMAKE}
+CONFIGURE_ARGS+=	--make ${GMAKE}
 CONFIGURE_ARGS+=	--perl ${PERL5}
 CONFIGURE_ARGS+=	--install ${INSTALL}
 CONFIGURE_ARGS+=	--dot ${PREFIX}/bin/dot
