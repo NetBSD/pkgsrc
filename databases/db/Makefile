@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:28:01 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/04 04:14:05 grant Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	1
@@ -19,6 +19,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--enable-compat185
+
+USE_GNU_TOOLS=		awk
 
 post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/html/db
