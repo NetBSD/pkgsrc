@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:41:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/31 17:57:18 jschauma Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
-PKGREVISION=		3
+PKGREVISION=		4
 WRKSRC=			${WRKDIR}/install
 CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/stable/1.0.2/	\
@@ -22,6 +22,9 @@ ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 TEMP?=			${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
+
+PKG_JVM?=	sun-jdk
+PLIST_SUBST+=	JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 
 DISPLAY?=       # empty, if unset
 checkforx:
@@ -64,6 +67,7 @@ do-install:
 	${CHMOD} +x ${PREFIX}/bin/soffice
 	${PATCH} ${PATCH_ARGS} ${PREFIX}/OpenOffice.org1.0.2/program/soffice \
 		< ${FILESDIR}/soffice.test.patch
+	${LN} -s ${PKG_JAVA_HOME} ${PKG_JAVA_HOME}/jre
 
 # everything specific to your OS/Arch goes into it's own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
@@ -74,4 +78,5 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
