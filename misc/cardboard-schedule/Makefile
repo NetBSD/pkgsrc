@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/28 22:11:56 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/26 18:21:10 jwise Exp $
 #
 
 DISTNAME=	cs113ins
@@ -13,6 +13,7 @@ HOMEPAGE=	http://cardboard.nu/download.shtml
 USE_JAVA=	yes
 USE_X11BASE=	yes
 DEPENDS+=	unzip-*:../../archivers/unzip
+DEPENDS+=	swing-*:../../x11/swing
 
 NO_CDROM=	"License prohibits redistribution on CDROM"
 
@@ -23,7 +24,6 @@ CSFILES=	cs/images/Logo2.gif \
 		cs/images/Logo.gif \
 		stage/cs.jar \
 		stage/readme.txt \
-		stage/swing.jar \
 		stage/jhbasic.jar \
 		stage/license.txt \
 		stage/CsHelp.jar
@@ -33,7 +33,8 @@ post-extract:
 
 post-build:
 		${SED} -e s,@PREFIX@,${PREFIX},g < ${FILESDIR}/csched.sh > ${WRKDIR}/csched.tmp
-		${SED} -e s,@JAVA_HOME@,${JAVA_HOME},g < ${WRKDIR}/csched.tmp > ${WRKDIR}/csched
+		${SED} -e s,@LOCALBASE@,${LOCALBASE},g < ${WRKDIR}/csched.tmp > ${WRKDIR}/csched.tmp2
+		${SED} -e s,@JAVA_HOME@,${JAVA_HOME},g < ${WRKDIR}/csched.tmp2 > ${WRKDIR}/csched
 		${SED} -e s,@PREFIX@,${PREFIX},g < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 do-install:
