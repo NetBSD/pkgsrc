@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1 1999/01/04 13:05:01 frueauf Exp $
+
+--- include/utils/memutils.h.orig	Mon Sep  7 07:35:48 1998
++++ include/utils/memutils.h	Tue Dec 29 00:50:38 1998
+@@ -58,13 +58,17 @@
+ #define SHORTALIGN(LEN)\
+ 		(((long)(LEN) + (sizeof (short) - 1)) & ~(sizeof (short) - 1))
+ 
++#if defined(m68k)
++#define INTALIGN(LEN)	 SHORTALIGN(LEN)
++#else
+ #define INTALIGN(LEN)\
+ 		(((long)(LEN) + (sizeof (int) - 1)) & ~(sizeof (int) -1))
++#endif
+ 
+ /*
+  *		LONGALIGN(LEN)	- length (or address) aligned for longs
+  */
+-#if defined(sun) && ! defined(sparc)
++#if (defined(sun) && ! defined(sparc)) || defined(m68k)
+ #define LONGALIGN(LEN)	SHORTALIGN(LEN)
+ #elif defined (__alpha)
+ 
+@@ -81,7 +85,10 @@
+ 		(((long)(LEN) + (sizeof (long) - 1)) & ~(sizeof (long) -1))
+ #endif
+ 
+-#if ! defined(sco)
++#if defined(m68k)
++#define DOUBLEALIGN(LEN) SHORTALIGN(LEN)
++#define MAXALIGN(LEN)	 SHORTALIGN(LEN)
++#elif ! defined(sco)
+ #define DOUBLEALIGN(LEN)\
+ 		(((long)(LEN) + (sizeof (double) - 1)) & ~(sizeof (double) -1))
+ 

@@ -1,13 +1,30 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:19 agc Exp $
+$NetBSD: patch-ab,v 1.5 1999/01/04 13:05:01 frueauf Exp $
 
---- bin/initdb/initdb.orig	Mon Apr  6 02:05:52 1998
-+++ bin/initdb/initdb	Wed Jun 10 13:13:18 1998
-@@ -286,7 +286,7 @@
- #----------------------------------------------------------------------------
+--- backend/storage/buffer/s_lock.c.orig	Fri Sep 18 19:18:39 1998
++++ backend/storage/buffer/s_lock.c	Tue Dec 29 00:50:38 1998
+@@ -117,6 +117,25 @@
  
- if [ $template_only -eq 0 ]; then
--    echo "Creating global classes in $PG_DATA/base"
-+    echo "Creating global classes in $PGDATA/base"
-     echo "Running: postgres $BACKENDARGS template1"
+ #endif	 /* PPC */
  
-     cat $GLOBAL \
++#if defined(__m68k__)
++static void
++tas_dummy()	/* really means: extern int tas(slock_t **lock); */
++{
++	__asm__("		\n\
++.global		_tas		\n\
++_tas:				\n\
++	movel   sp@(0x4),a0	\n\
++	tas a0@			\n\
++	beq _success		\n\
++	moveq   #-128,d0	\n\
++	rts			\n\
++_success:			\n\
++	moveq   #0,d0		\n\
++	rts			\n\
++	");
++}
++
++#endif	 /* __m68k__ */
+ 
+ 
+ #else							/* defined(__GNUC__) */
