@@ -1,0 +1,36 @@
+.\"	$NetBSD: mkpatches.1,v 1.1.1.1 2000/06/28 01:42:43 wiz Exp $
+.\"
+.\" Copyright (c) 2000 by Thomas Klausner <wiz@netbsd.org>
+.\" All Rights Reserved.  Absolutely no warranty.
+.\"
+.Dd June 25, 2000
+.Dt mkpatches
+.Os
+.Sh NAME
+.Nm mkpatches
+.Nd create patch files appropriate for pkgsrc
+.Sh SYNOPSIS
+.Nm
+.Op Fl d Ar output-directory
+.Sh DESCRIPTION
+.Nm
+is a perl script that simplifies creating patches from a changed work
+tree if for each changed file the original was kept with an added
+extension '.orig'.
+
+.Nm
+must be called from the package's main directory, that is
+$PKGSRC/category/program. It then proceeds to find all files that
+match the pattern '*.orig'. Each of these is then compared to the
+changed file of the same name (with no '.orig' extension) using
+.Xr pkgdiff 1 .
+
+The resulting patches are saved in the directory $WRKDIR/.newpatches
+or the directory specified after
+.Fl d ,
+and can be easily compared to the currently existing set using
+.Xr patchdiff 1 .
+.Pp
+.Sh SEE ALSO
+.Xr patchdiff 1 ,
+.Xr pkgdiff 1
