@@ -1,8 +1,7 @@
-$NetBSD: patch-ai,v 1.5 1999/12/12 19:06:37 jdolecek Exp $
+$NetBSD: patch-ai,v 1.6 2001/09/10 08:23:19 skrll Exp $
 
-Pulled into KDE2	jdolecek 1999/12/12
---- ./kdm/kdm-config.h	Tue Mar  9 17:49:34 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/kdm-config.h	Fri Nov 12 05:10:31 1999
+--- kdm/kdm-config.h.orig	Tue Mar  9 16:49:34 1999
++++ kdm/kdm-config.h
 @@ -95,3 +95,8 @@
  #ifdef __cplusplus
  }
