@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3288 2003/09/09 07:48:31 itojun Exp $
+$NetBSD: CHANGES,v 1.3289 2003/09/09 11:56:42 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-ORBit to 2.0.0 [recht 2003-09-08]
 	Updated py-gtk2 to 2.0.0 [recht 2003-09-08]
 	Updated mkfontscale to 20020524nb2 [itojun 2003-09-09]
+	Updated wxGTK to 2.4.1nb1 [recht 2003-09-09]
