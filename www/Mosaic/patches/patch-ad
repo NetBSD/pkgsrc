@@ -5,7 +5,7 @@
        offset (confirm_exit), XtRString, "True" },
    /* THIS USED TO BE mailCommand BUT IS NOW sendmailCommand. */
 -#ifdef __bsdi__
-+#if defined(__bsdi__) || defined(__FreeBSD__)
++#if defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__)
    { "sendmailCommand", "SendmailCommand", XtRString, sizeof (char *),
        offset (sendmail_command), XtRString, "/usr/sbin/sendmail -t" },
  #else

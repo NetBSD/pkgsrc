@@ -1,2 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/07/12 04:05:51 tv Exp $
 bin/Mosaic
+bin/mosaic
 lib/X11/app-defaults/Mosaic
