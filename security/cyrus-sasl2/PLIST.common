@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2002/12/23 16:28:44 cjep Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2003/02/27 13:18:06 seb Exp $
 etc/rc.d/saslauthd
 include/sasl/hmac-md5.h
 include/sasl/md5.h
@@ -11,7 +11,7 @@ lib/libsasl2.a
 lib/libsasl2.la
 lib/libsasl2.so
 lib/libsasl2.so.2
-lib/libsasl2.so.2.10
+lib/libsasl2.so.2.12
 man/cat8/saslauthd.8
 man/man3/sasl.3
 man/man3/sasl_authorize_t.3
@@ -94,6 +94,7 @@ share/doc/html/cyrus-sasl/rfc3174.txt
 share/doc/html/cyrus-sasl/sysadmin.html
 share/doc/html/cyrus-sasl/testing.txt
 share/doc/html/cyrus-sasl/upgrading.html
+share/doc/html/cyrus-sasl/windows.html
 @dirrm share/doc/html/cyrus-sasl
 @dirrm include/sasl
 @unexec ${RM} -rf ${SASLSOCKETDIR}

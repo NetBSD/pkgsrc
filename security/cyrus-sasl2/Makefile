@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2003/01/28 22:04:04 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/27 13:18:06 seb Exp $
 
-DISTNAME=		cyrus-sasl-2.1.10
+DISTNAME=		cyrus-sasl-2.1.12
 SVR4_PKGNAME=		csasl
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -65,7 +65,6 @@ CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST.plugins
-PLIST_SRC+=		${PKGDIR}/PLIST.post
 
 .if defined(USE_PAM)
 .  include "../../security/PAM/buildlink2.mk"
