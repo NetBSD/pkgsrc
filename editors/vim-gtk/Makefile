@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/28 09:43:09 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/23 00:05:17 tron Exp $
 
 DISTNAME=		vim-5.4
 PKGNAME=		vim-gtk-5.4
@@ -15,7 +15,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.vim.org/
 
 DEPENDS+=		ncurses-4.2:../../devel/ncurses
-DEPENDS+=		gtk+-1.2.4:../../x11/gtk
+DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
 CONFLICTS=		vim-*
 
