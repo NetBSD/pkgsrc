@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/07 07:26:01 tron Exp $
+
+--- src/Makefile.in.orig	Thu Apr  1 23:30:43 1999
++++ src/Makefile.in	Sat Jun  5 14:26:58 1999
+@@ -23,7 +23,7 @@
+        help.o main.o pager.o winlist.o wharf.o xpm.o
+ 
+ ascp:	$(OBJS)
+-	$(CC) $^ -o $@ $(LDFLAGS) $(LIBS)
++	$(CC) $> -o $@ $(LDFLAGS) $(LIBS)
+ 
+ ##################################################################################
+ 
