@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-aa,v 1.5 2004/02/09 07:54:58 minskim Exp $
 
---- configure.orig	Thu Jan 16 01:45:58 2003
+--- configure.orig	2004-01-23 22:34:33.000000000 -0600
 +++ configure
-@@ -1128,6 +1128,7 @@
+@@ -1130,6 +1130,7 @@ echo "$ac_t""$configuration" 1>&6
  machine='' opsys=''
  
  case "$canonical" in
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1200,9 +1201,10 @@
+@@ -1202,9 +1203,10 @@ case "$canonical" in
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
      esac
    ;;
  
-@@ -3110,7 +3112,7 @@
+@@ -3134,7 +3136,7 @@ echo "configure:3132: checking "for runt
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
-@@ -13830,6 +13832,41 @@
+@@ -14057,6 +14059,41 @@ else   for feature in ncurses gpm; do
      eval "with_${feature}=no"
    done
  fi 
@@ -73,7 +73,7 @@ $NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
  test "$with_x11" = "yes" -o "$with_tty" = "yes" -o "$need_event_unixoid" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
     echo "    xemacs will be linked with \"event-unixoid.o\""
   fi
-@@ -16087,6 +16124,7 @@
+@@ -16477,6 +16514,7 @@ s%@libs_xauth@%$libs_xauth%g
  s%@dnd_objs@%$dnd_objs%g
  s%@lwlib_objs@%$lwlib_objs%g
  s%@ALLOCA@%$ALLOCA%g
