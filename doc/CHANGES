@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7031 2004/08/29 15:34:34 schmonz Exp $
+$NetBSD: CHANGES,v 1.7032 2004/08/29 16:34:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4096,3 +4096,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated python22 to 2.2.3nb2 [recht 2004-08-29]
 	Updated python22-pth to 2.2.3nb3 [recht 2004-08-29]
 	Added qgreylist-0.2 [schmonz 2004-08-29]
+	Updated posh to 0.3.9 [recht 2004-08-29]
+	Updated wwwoffle to 2.8c [recht 2004-08-29]
+	Added rzip-2.0 [recht 2004-08-29]
+	Added phpldapadmin-0.9.4b [recht 2004-08-29]
