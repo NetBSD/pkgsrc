@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1 2001/05/05 17:24:13 dmcmahill Exp $
+
+--- solaris/hinst.orig	Fri Dec 15 12:06:19 2000
++++ solaris/hinst	Sat May  5 12:55:03 2001
+@@ -95,5 +95,5 @@
+ 
+ #  The command to undo the archive on this platform.
+-EXTRACT_ARCHIVE="cpio -icmud"
++EXTRACT_ARCHIVE="cpio -imud"
+ 
+ # The thing that goes between the owner and group to set both by chown.
+@@ -115,5 +115,5 @@
+ # The hosts file name
+ CAT_CMD=cat
+-MORE_CMD=more
++MORE_CMD="echo please read"
+ CAT_HOST_ARG=/etc/hosts
+ 
+@@ -887,5 +887,5 @@
+ 		read dummy
+ 
+-		/bin/false
++		/usr/bin/false
+ 		return 
+ 	fi
+@@ -893,5 +893,5 @@
+ 	$ECHO_CMD $calcspace4
+ 
+-	/bin/true
++	/usr/bin/true
+ 	return
+ }
+@@ -1928,5 +1928,5 @@
+ 		:
+ 	else
+-		/bin/false
++		/usr/bin/false
+ 		return 
+ 	fi

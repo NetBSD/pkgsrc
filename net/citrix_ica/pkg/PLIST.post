@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/20 19:06:12 wiz Exp $
+@comment $NetBSD: PLIST.post,v 1.1 2001/05/05 17:24:14 dmcmahill Exp $
 bin/wfcmgr
 bin/wfica
 lib/ICAClient/Npica
@@ -208,20 +208,9 @@ lib/ICAClient/keyboard/sparcus3.kbd
 lib/ICAClient/keyboard/sparcus4.kbd
 lib/ICAClient/keyboard/sparcus5.kbd
 lib/ICAClient/keyboard/trimodal.kbd
-lib/ICAClient/pkginf/Ver.core.linuxx86
-lib/ICAClient/pkginf/F.core.linuxx86
 lib/ICAClient/util/XCapture
 lib/ICAClient/util/XCapture.ad
 lib/ICAClient/util/echo_cmd
 lib/ICAClient/util/hinst
 lib/ICAClient/util/icalicense.sh
 lib/ICAClient/util/xcapture
-@dirrm lib/ICAClient/.config
-@dirrm lib/ICAClient/config
-@dirrm lib/ICAClient/cache
-@dirrm lib/ICAClient/help
-@dirrm lib/ICAClient/icons
-@dirrm lib/ICAClient/keyboard
-@dirrm lib/ICAClient/pkginf
-@dirrm lib/ICAClient/util
-@dirrm lib/ICAClient
