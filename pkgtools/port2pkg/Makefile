@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 1999/11/24 10:36:53 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/26 16:18:58 sakamoto Exp $
 #
 
-DISTNAME=	port2pkg-1.2
+DISTNAME=	port2pkg-1.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	sakamoto@netbsd.org
 
-DEPENDS+=	pkglint-*:../../pkgtools/pkglint
+RUN_DEPENDS+=	pkglint:../../pkgtools/pkglint
 
 USE_PERL5=	YES
 
@@ -28,9 +28,11 @@ NROFF=		nroff
 
 do-build:
 	${NROFF} -mandoc ${FILESDIR}/port2pkg.1 >${WRKSRC}/port2pkg.0
+	${SED} -e 's|$${GTAR}|${GTAR}|g' ${FILESDIR}/port2pkg.pl \
+		> ${WRKSRC}/port2pkg
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/port2pkg.pl ${PREFIX}/bin/port2pkg
+	${INSTALL_SCRIPT} ${WRKSRC}/port2pkg ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/port2pkg.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${FILESDIR}/port2pkg.1 ${PREFIX}/man/man1
 
