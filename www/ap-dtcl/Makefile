@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/08/28 09:14:51 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/30 00:22:18 jwise Exp $
 
-DISTNAME=	libapache-mod-dtcl_0.6.4-1
-PKGNAME=	ap-dtcl-0.6.4
+DISTNAME=	libapache-mod-dtcl_0.8.1-1
+PKGNAME=	ap-dtcl-0.8.1
 WRKSRC=		${WRKDIR}/mod_dtcl
 CATEGORIES=	www
 MASTER_SITES=	http://master.debian.org/~davidw/mod_dtcl/
@@ -10,12 +10,12 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://comanche.com.dtu.dk/dave/
 
 DEPENDS+=	apache-1.3.*:../../www/apache
-DEPENDS+=	tcl-*:../../lang/tcl80
+DEPENDS+=	tcl-8.3.2:../../lang/tcl
 # For "apxs":
 BUILD_DEPENDS=	${PERL5}:../../lang/perl5
 
-INCLUDES=	-I${PREFIX}/include/tcl8.0
-LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ltcl80 -lm
+INCLUDES=	-I${PREFIX}/include/
+LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ltcl83 -lm
 
 do-build:
 	cd ${WRKSRC} && ${PREFIX}/sbin/apxs ${INCLUDES} ${LIBS} -c mod_dtcl.c
@@ -27,8 +27,10 @@ do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_dtcl.so
 	-${MKDIR} ${PREFIX}/share/doc/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/*.html ${PREFIX}/share/doc/mod_dtcl
+	${INSTALL_DATA} ${WRKSRC}/*.gif ${PREFIX}/share/doc/mod_dtcl
 	-${MKDIR} ${PREFIX}/share/examples/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/*.ttml ${PREFIX}/share/examples/mod_dtcl
+	${INSTALL_DATA} ${WRKSRC}/contrib/*.ttml ${PREFIX}/share/examples/mod_dtcl
 	-${MKDIR} ${PREFIX}/libexec/mod_dtcl
 	${INSTALL_DATA} ${WRKSRC}/*.tcl ${PREFIX}/libexec/mod_dtcl
 	${INSTALL_PROGRAM} ${WRKSRC}/testdtcl ${PREFIX}/bin
