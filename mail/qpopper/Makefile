@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:10 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/09/08 22:15:21 tron Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -29,8 +29,6 @@ do-install:
 	 ${INSTALL} -o ${MANOWN} -c -g ${MANGRP} -m ${MANMODE} popper.8 \
 					${LOCALBASE}/man/man8/qpopper.8; \
 	 ${INSTALL} -o ${MANOWN} -c -g ${MANGRP} -m ${MANMODE} popauth.8 \
-					${LOCALBASE}/man/man8/qpopauth.8; \
-	 ${INSTALL} -o ${MANOWN} -c -g ${MANGRP} -m ${MANMODE} popper.0 \
-					${LOCALBASE}/man/cat8/qpopper.0 )
+					${LOCALBASE}/man/man8/qpopauth.8 )
 
 .include "../../mk/bsd.pkg.mk"
