@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.22 2004/02/12 20:20:35 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.23 2004/02/12 20:29:34 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -310,7 +310,7 @@ EOF
 @CAT@ > $reorderlibs << EOF
 \$echo "==> Reordering libraries: \$libs" >> \$wrapperlog
 prevlibs=
-while \$test "\$libs" != "\$prevlibs" -a -n "\$libs"; do
+while \$test "\$libs" != "\$prevlibs"; do
 	_libs=
 	for l in \$libs; do
 		case \$l in
