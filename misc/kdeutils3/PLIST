@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/12/10 06:14:59 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -423,26 +423,27 @@ share/kde/services/kwallet_config.desktop
 share/kde/services/kwalletmanager_show.desktop
 share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/servicetypes/kmilo
+@comment in kde: @dirrm share/kde/servicetypes
 @dirrm share/kde/services/kmilo
-@comment dirrm share/kde/services/kded
-@comment dirrm share/kde/services
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/22x22/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/devices
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/config.kcfg
-@comment dirrm share/kde/config
-@comment dirrm share/kde/autostart
+@comment in kde: @dirrm share/kde/services/kded
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/devices
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
+@comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/remotes
-@dirrm share/kde/apps/profiles
+@comment in kde: @dirrm share/kde/apps/profiles
 @dirrm share/kde/apps/kwalletmanager/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/kwalletmanager/icons/crystalsvg/22x22
 @dirrm share/kde/apps/kwalletmanager/icons/crystalsvg
@@ -460,17 +461,19 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kregexpeditor/predefined
 @dirrm share/kde/apps/kregexpeditor/pics
 @dirrm share/kde/apps/kregexpeditor
-@comment dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqueror
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32/actions
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/22x22
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/16x16
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg
 @dirrm share/kde/apps/kjots/pics
 @dirrm share/kde/apps/kjots
-@dirrm share/kde/apps/kicker/extensions
-@dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/kicker/extensions
+@comment in kde: @dirrm share/kde/apps/kicker/applets
 @dirrm share/kde/apps/khexedit/pics
 @dirrm share/kde/apps/khexedit
 @dirrm share/kde/apps/kgpg/pics
@@ -482,10 +485,9 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kgpg/icons
 @dirrm share/kde/apps/kgpg
 @dirrm share/kde/apps/kedit
-@dirrm share/kde/apps/kdm/pics/users
 @dirrm share/kde/apps/kdf/pics
 @dirrm share/kde/apps/kdf
-@comment dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/irkick/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/irkick/icons/hicolor/32x32
@@ -501,13 +503,13 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/ark/icons/crystalsvg
 @dirrm share/kde/apps/ark/icons
 @dirrm share/kde/apps/ark
-@comment dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/en/kwallet
 @dirrm share/doc/kde/HTML/en/ktimer
 @dirrm share/doc/kde/HTML/en/ksim
 @dirrm share/doc/kde/HTML/en/kjots
 @dirrm share/doc/kde/HTML/en/kinfocenter/blockdevices
-@dirrm share/doc/kde/HTML/en/kinfocenter
+@comment in kde: @dirrm share/doc/kde/HTML/en/kinfocenter
 @dirrm share/doc/kde/HTML/en/khexedit
 @dirrm share/doc/kde/HTML/en/kgpg
 @dirrm share/doc/kde/HTML/en/kfloppy
@@ -517,14 +519,14 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/doc/kde/HTML/en/kcontrol/laptop
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmlowbatwarn
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmlowbatcrit
-@comment dirrm share/doc/kde/HTML/en/kcontrol
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kcmlirc
 @dirrm share/doc/kde/HTML/en/kcharselect
 @dirrm share/doc/kde/HTML/en/kcalc
 @dirrm share/doc/kde/HTML/en/irkick
 @dirrm share/doc/kde/HTML/en/ark
 @dirrm share/doc/kde/HTML/en/KRegExpEditor
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
 @dirrm include/ksim
