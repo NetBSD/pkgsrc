@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/05/03 14:57:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2002/05/28 15:07:05 yyamano Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -14,7 +14,7 @@ REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.common"
 
-.if defined(STRIPFLAG) && !empty(STRIPFLAG:M-s)
+.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=         install-strip
 .endif
 
