@@ -1,0 +1,48 @@
+$NetBSD: patch-ar,v 1.1 2003/11/18 21:09:18 markd Exp $
+
+--- src/ComUnidraw/unifunc.c.orig	2003-10-23 07:14:06.000000000 +1300
++++ src/ComUnidraw/unifunc.c
+@@ -56,7 +56,7 @@
+ #include <ComTerp/comvalue.h>
+ #include <Attribute/attrlist.h>
+ #include <stdio.h>
+-#include <strstream.h>
++#include <strstream>
+ #include <unistd.h>
+ #if __GNUC__>=3
+ #include <fstream.h>
+@@ -494,7 +494,7 @@ void ExportFunc::execute() {
+ #endif
+     ostream* out;
+     if (string.is_true()||str.is_true())
+-      out = new strstream();
++      out = new std::strstream();
+     else
+ #if __GNUC__<3      
+       out = new ostream(&fbuf);
+@@ -557,7 +557,7 @@ void ExportFunc::execute() {
+     
+     if (string.is_true()||str.is_true()) {
+       *out << '\0'; out->flush();
+-      ComValue retval(((strstream*)out)->str());
++      ComValue retval(((std::strstream*)out)->str());
+       push_stack(retval);
+     }
+     delete out;
+@@ -652,14 +652,14 @@ void UnidrawPauseFunc::execute() {
+ 	tv->insert_string((char*)msgstrv.string_ptr(), strlen(msgstrv.string_ptr()));
+ 	tv->insert_char('\n');
+       }
+-      ostrstream sbuf_s;
++      std::ostrstream sbuf_s;
+       sbuf_s << "pause(" << comterpserv()->npause() << "): enter command or press C/R to continue\n";
+       sbuf_s.put('\0');
+       tv->insert_string(sbuf_s.str(), strlen(sbuf_s.str()));
+       comterpserv()->push_servstate();
+       unidraw->Run();
+       comterpserv()->pop_servstate();
+-      ostrstream sbuf_e;
++      std::ostrstream sbuf_e;
+       sbuf_e << "end of pause(" << comterpserv()->npause()+1 << ")\n";
+       sbuf_e.put('\0');
+       tv->insert_string(sbuf_e.str(), strlen(sbuf_e.str()));

@@ -1,0 +1,40 @@
+$NetBSD: patch-ao,v 1.1 2003/11/18 21:09:18 markd Exp $
+
+--- src/OverlayUnidraw/ovipcmds.c.orig	2003-10-23 07:16:21.000000000 +1300
++++ src/OverlayUnidraw/ovipcmds.c
+@@ -76,7 +76,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <iostream.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ 
+ RasterTerp::RasterTerp(Editor* ed) : _editor(ed) {
+@@ -639,7 +639,7 @@ OverlayRaster* ScaleGrayCmd::Process(Ove
+        "Enter min and max for linear scaling of gray values",
+        "0.0 1.0");
+     if (newminmax) {
+-      istrstream in(newminmax);
++      std::istrstream in(newminmax);
+       float fmin, fmax;
+       in >> fmin >> fmax;
+       if (in.good()) {
+@@ -731,7 +731,7 @@ OverlayRaster* PseudocolorCmd::Process(O
+     char* newminmax = StrEditDialog::post
+       (GetEditor()->GetWindow(), message, range);
+     if (newminmax) {
+-      istrstream in(newminmax);
++      std::istrstream in(newminmax);
+       float fmin, fmax;
+       in >> fmin >> fmax;
+       if (in.good()) {
+@@ -815,7 +815,7 @@ OverlayRaster* LogScaleCmd::Process(Over
+        "Enter min and max for logarithmic scaling of gray values",
+        "0.0 1.0");
+     if (newminmax) {
+-      istrstream in(newminmax);
++      std::istrstream in(newminmax);
+       float fmin, fmax;
+       in >> fmin >> fmax;
+       if (in.good()) {

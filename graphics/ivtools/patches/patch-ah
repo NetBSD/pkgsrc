@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2003/11/18 21:09:18 markd Exp $
+
+--- src/IV-X11/xdrag.c.orig	2003-10-23 07:15:47.000000000 +1300
++++ src/IV-X11/xdrag.c
+@@ -41,7 +41,7 @@
+ #include <OS/math.h>
+ #include <OS/types.h>
+ #include <string.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ // how is this done portably? it is used to generate a name unique to
+ // this process.
+@@ -129,7 +129,7 @@ static void setDragProperty(
+     Atom property = None;
+     if (length != 0) {
+ 	char buffer[256];
+-	ostrstream name(buffer, 256);
++	std::ostrstream name(buffer, 256);
+ 	name << dragName << "_" << Host::name() << "_" << getpid() << "_"  <<
+ 	    dropUid++ << '\0';
+ 	property = XInternAtom(display, name.str(), False);
