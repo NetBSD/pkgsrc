@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/13 12:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/28 17:18:01 kristerw Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -45,9 +45,10 @@ MAKE_ENV+=	FILEFORMAT=elf
 MAKE_ENV+=	ZSNESFX=1
 MAKE_ENV+=	ZSNESC4=1
 MAKE_ENV+=	ASMCPU=1
-.if defined(USE_MMX) && ${USE_MMX} == "YES"
+.if ${USE_MMX} != "NO"
 MAKE_ENV+=	ASMKREED=1
 .endif
+BUILD_DEFS+=	USE_MMX
 .endif
 .endif
 
