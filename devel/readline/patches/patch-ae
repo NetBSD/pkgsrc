@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.10 2004/08/20 17:32:50 tv Exp $
+$NetBSD: patch-ae,v 1.11 2004/11/14 06:16:49 jlam Exp $
 
---- Makefile.in.orig	Thu Jan 24 16:15:24 2002
+--- Makefile.in.orig	2004-04-22 16:44:37.000000000 -0400
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -9,16 +9,18 @@ $NetBSD: patch-ae,v 1.10 2004/08/20 17:32:50 tv Exp $
 +SHLIB_MAJOR = @SHLIB_MAJOR@
 +SHLIB_MINOR = @SHLIB_MINOR@
 +
- srcdir = @srcdir@
- VPATH = .:@srcdir@
- top_srcdir = @top_srcdir@
-@@ -80,11 +83,12 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
+ PACKAGE = @PACKAGE_NAME@
+ VERSION = @PACKAGE_VERSION@
  
- .c.o:
+@@ -92,9 +95,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
  	${RM} $@
--	$(CC) -c $(CCFLAGS) $<
-+	$(LIBTOOL) --mode=compile $(CC) -c $(CCFLAGS) $<
+ 	$(CC) -c $(CCFLAGS) $<
  
++.SUFFIXES: .lo
++.c.lo:
++	${RM} $@
++	$(LIBTOOL) --mode=compile $(CC) -c $(CCFLAGS) $<
++
  # The name of the main library target.
  LIBRARY_NAME = libreadline.a
  STATIC_LIBS = libreadline.a libhistory.a
@@ -26,56 +28,57 @@ $NetBSD: patch-ae,v 1.10 2004/08/20 17:32:50 tv Exp $
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -133,6 +137,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
+@@ -143,6 +152,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
  
  all: $(TARGETS)
  
-+all-la: $(LIBTOOL_LIBS)
++all-libtool: $(LIBTOOL_LIBS)
 +
  everything: all examples
  
  static: $(STATIC_LIBS)
-@@ -142,6 +148,12 @@ libreadline.a: $(OBJECTS)
+@@ -152,17 +163,31 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
-+libreadline.la: $(OBJECTS)
-+	${LIBTOOL} --mode=uninstall ${RM} $@
-+	${LIBTOOL} --mode=link ${CC} -o $@ ${OBJECTS:.o=.lo}		\
-+		-rpath $(libdir)					\
-+		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
++libreadline.la: $(OBJECTS:.o=.lo)
++	$(LIBTOOL) --mode=clean $(RM) $@
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJECTS:.o=.lo) \
++		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR)
 +
  libhistory.a: $(HISTOBJ) xmalloc.o
  	$(RM) $@
  	$(AR) $(ARFLAGS) $@ $(HISTOBJ) xmalloc.o
-@@ -151,13 +163,27 @@ libhistory.a: $(HISTOBJ) xmalloc.o
+ 	-test -n "$(RANLIB)" && $(RANLIB) $@
+ 
++libhistory.la: $(HISTOBJ:.o=.lo) xmalloc.lo
++	$(LIBTOOL) --mode=clean $(RM) $@
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo \
++		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR)
++
+ # Since tilde.c is shared between readline and bash, make sure we compile
  # it with the right flags when it's built as part of readline
  tilde.o:	tilde.c
  	rm -f $@
--	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
+ 	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
+ 
++tilde.lo:	tilde.c
++	$(LIBTOOL) --mode=clean rm -f $@
 +	$(LIBTOOL) --mode=compile $(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
- 
--readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
--	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
-+libhistory.la: $(HISTOBJ) xmalloc.o
-+	${LIBTOOL} --mode=uninstall $(RM) $@
-+	${LIBTOOL} --mode=link ${CC} -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo	\
-+		-rpath $(libdir)					\
-+		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
 +
-+readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./$(LIBRARY_NAME)
-+	${LIBTOOL} $(CC) $(CCFLAGS) $(LDFLAGS) -o $@ ./examples/rl.c ./$(LIBRARY_NAME) ${TERMCAP_LIB}
+ readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
+ 	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
- lint:	force
- 	$(MAKE) $(MFLAGS) CCFLAGS='$(GCC_LINT_CFLAGS)' static
+@@ -241,6 +266,12 @@ install-shared: installdirs install-head
+ uninstall-shared: maybe-uninstall-headers
+ 	-( cd shlib; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
+ 
++install-libtool: installdirs $(LIBTOOL_LIBS) install-headers install-doc
++	-$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(libdir)/libreadline.la
++	$(LIBTOOL) --mode=install $(INSTALL) libreadline.la $(DESTDIR)$(libdir)
++	-$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(libdir)/libhistory.la
++	$(LIBTOOL) --mode=install $(INSTALL) libhistory.la $(DESTDIR)$(libdir)
 +
-+install-la: installdirs $(LIBTOOL_LIBS) install-headers
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libreadline.la $(libdir)
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libhistory.la $(libdir)
-+	-( if test -d doc ; then \
-+		cd doc && \
-+		${MAKE} ${MFLAGS} infodir=$(infodir) install; \
-+ 	  fi )
- 
- Makefile makefile: config.status $(srcdir)/Makefile.in
- 	CONFIG_FILES=Makefile CONFIG_HEADERS= $(SHELL) ./config.status
+ install-doc:	installdirs
+ 	-( if test -d doc ; then \
+ 		cd doc && \
