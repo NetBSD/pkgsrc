@@ -1,15 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/26 10:03:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/12 21:50:29 seb Exp $
 bin/recode
 include/recode.h
 include/recodext.h
-info/recode.info
-info/recode.info-1
-info/recode.info-2
-info/recode.info-3
-info/recode.info-4
-info/recode.info-5
-info/recode.info-6
-info/recode.info-7
 lib/librecode.a
 lib/librecode.la
 lib/librecode.so
