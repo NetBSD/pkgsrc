@@ -3,7 +3,7 @@
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.9 1998/02/22 17:05:12 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/23 11:43:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -41,23 +41,6 @@ GS_FONTS_OTHER=	ghostscript-fonts-other-4.40.tar.gz
 
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
 HP850_DRV=	hp850.zip
-
-# Include local make config file here.  It is essential to have this
-# precede any override targets (those that override defaults in
-# <bsd.port.mk> that test variables that may be set here.  Note that
-# this inclusion is otherwise redundant, since <bsd.port.mk> includes
-# <bsd.own.mk>, which includes it.
-
-OPSYS!=		uname -s
-.if (${OPSYS} == "FreeBSD")
-.if exists(/etc/make.conf)
-.include "/etc/make.conf"
-.endif
-.else
-.if exists(/etc/mk.conf)
-.include "/etc/mk.conf"
-.endif
-.endif
 
 post-extract:
 	${TOUCH} ${WRKSRC}/adler32.c
