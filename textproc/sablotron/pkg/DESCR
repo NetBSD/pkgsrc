@@ -1,0 +1,4 @@
+Sablotron is an XSL processor fully implemented in C++. As an XML parser
+it uses the excellent Expat parser, whose source is included.
+
+Original creator of Sablotron is Ginger Alliance Ltd, Czech Republic.
