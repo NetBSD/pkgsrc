@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/11/10 12:22:36 grant Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/05 05:51:19 grant Exp $
 #
 
 DISTNAME=		phoenix-0.4-i686-pc-linux-gnu
@@ -14,8 +14,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/phoenix
 NO_CONFIGURE=		# defined
-
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
 do-build:
 
