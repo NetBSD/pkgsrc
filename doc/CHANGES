@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3311 2003/09/10 14:36:02 cjep Exp $
+$NetBSD: CHANGES,v 1.3312 2003/09/10 16:02:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3608,3 +3608,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated screen to 4.0.0 [adam 2003-09-10]
 	Updated kdbg to 1.2.9 [markd 2003-09-10]
 	Added p5-RADIUS-1.0 [cjep 2003-09-10]
+	Updated ruby-rdtool to 0.6.14 [taca 2003-09-10]
+	Updated ruby-rd-mode to 0.6.14 [taca 2003-09-10]
