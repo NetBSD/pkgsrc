@@ -1,0 +1,11 @@
+--- config.Unix.orig	Sun Nov 30 00:39:51 1997
++++ config.Unix	Sun Nov 30 00:44:34 1997
+@@ -110,7 +110,7 @@
+ XCOMM --------------------------------------------------------------------
+ XCOMM --- Use extra code for setenv() and getenv() ?
+ XCOMM --------------------------------------------------------------------
+-#if !defined(LinuxArchitecture) && !defined(FreeBSDArchitecture)
++#if !defined(LinuxArchitecture) && !defined(FreeBSDArchitecture) && !defined(NetBSDArchitecture) && !defined(OpenBSDArchitecture)
+ #   define USE_SETENV_CODE
+ #endif
+ 
