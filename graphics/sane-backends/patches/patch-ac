@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/21 19:53:27 veego Exp $
+
+--- tools/Makefile.in.orig	Sun Mar  5 14:45:19 2000
++++ tools/Makefile.in	Mon Jul  3 17:13:09 2000
+@@ -65,7 +65,7 @@
+ all:	$(DESTINATIONS)
+ 
+ install: sane-config
+-	$(INSTALL_PROGRAM) sane-config $(bindir)/sane-config
++	${BSD_INSTALL_SCRIPT} sane-config ${bindir}/sane-config
+ 
+ sane-config: sane-config.in $(top_builddir)/config.status 
+ 	cd $(top_builddir) \
