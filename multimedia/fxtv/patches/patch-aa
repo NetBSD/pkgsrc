@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/28 15:26:09 tron Exp $
 
---- Makefile.orig	Mon Feb 12 23:08:59 2001
-+++ Makefile
+--- Makefile.orig	2001-02-12 23:08:59.000000000 +0100
++++ Makefile	2004-09-28 17:22:05.000000000 +0200
 @@ -4,13 +4,10 @@
  
  HAVE_XFREE86 = YES
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
  LOCALBASE    ?= /usr/local
  DEBUG        = NO
  OS           = $(shell uname -s)
-@@ -24,15 +21,6 @@ override LIBDIRS           = $(X11BASE)/
+@@ -24,15 +21,6 @@
  override SHELL             = /bin/sh
  
  #
@@ -34,7 +34,19 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
  # OpenBSD stuff
  #
  ifeq ($(OS),OpenBSD)
-@@ -72,6 +60,15 @@ endif
+@@ -51,9 +39,9 @@
+   override RPATH_FLAG      = -R
+ endif
+ 
+-override LD_INC            = $(foreach dir,$(LIBDIRS),-Wl,-L,$(dir))
++override LD_INC            = $(foreach dir,$(LIBDIRS),-Wl,-L$(dir))
+ ifneq ($(RPATH_FLAG),)
+-  override LD_INC         += $(foreach dir,$(LIBDIRS),-Wl,$(RPATH_FLAG),$(dir))
++  override LD_INC         += $(foreach dir,$(LIBDIRS),-Wl,$(RPATH_FLAG)$(dir))
+ endif
+ 
+ #
+@@ -72,6 +60,15 @@
  
  override CFLAGS           += $(C_WARN_FLAG) -DX11BASE=\"$(X11BASEINST)\"
  
@@ -50,7 +62,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
  ifeq ($(OS), linux)
  override CFLAGS            = $(CFLAGS) -DOLD_TUNER_IFACE
  endif
-@@ -81,7 +78,7 @@ endif
+@@ -81,7 +78,7 @@
  #
  override LDFLAGS           = $(LD_INC) 
  override VIDEOLIB_LIB      = $(VIDEOLIB_DIR)/libvideo.a
