@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/22 01:38:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 17:23:54 he Exp $
 
-SHA1 (DBI-Shell-11.9.tar.gz) = 983f0d798a232218d8fa6ae8c6a6ce22db3bf260
-Size (DBI-Shell-11.9.tar.gz) = 48285 bytes
+SHA1 (DBI-Shell-11.93.tar.gz) = ce89a271715af767691c4c3db68779e847c6036b
+Size (DBI-Shell-11.93.tar.gz) = 48893 bytes
