@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.82 2000/02/10 22:39:34 abs Exp $
+# $NetBSD: Packages.txt,v 1.83 2000/03/10 17:57:11 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -407,13 +407,10 @@ will compile and run perfectly on NetBSD. The files are applied
 successively in alphabetic order (as returned by a shell "patches/patch-*"
 glob expansion), so patch-aa is applied before patch-ab etc.
 
-The patch-?? files should be in diff -bu format. This is because (not only)
-the FreeBSD ports tsar finds this format easier to read than context diffs,
-and so you have more chance of getting your NetBSD package accepted as part
-of the FreeBSD ports system if you format your diffs in a unified fashion.
-
-Furthermore, do not put changes for more than one file into a single
-patch-file, as this will make future modifications more difficult.
+The patch-?? files should be in diff -bu format, and apply without a fuzz
+to avoid problems. Furthermore, do not put changes for more than one file
+into a single patch-file, as this will make future modifications more
+difficult.
 
 One important thing to mention is to pay attention that no RCS IDs get
 stored in the patch files, as these will cause problems when later checked
@@ -1453,11 +1450,11 @@ Furthermore, a mail to the package's author seems appropriate making sure
 the distfile was really updated on purpose, and that no trojan horse or so
 crept in.
 
- 9.16 What does "Don't know how to make /usr/share/tmap/tmac.andoc" mean?
+ 9.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
  ========================================================================
 
 When compiling the pkgsrc/pkgtools/pkg_install package, you get the error
-from make that it doesn't know how to make /usr/share/tmap/tmac.andoc? This
+from make that it doesn't know how to make /usr/share/tmac/tmac.andoc? This
 indicates that you don't have installed the "text" set on your machine
 (nroff, ...). Please do that.
 
