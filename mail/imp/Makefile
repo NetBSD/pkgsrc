@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2001/07/13 07:09:17 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/29 14:25:05 bouyer Exp $
 
-DISTNAME=	imp-2.2.5
+DISTNAME=	imp-2.2.6
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -8,7 +8,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 
-DEPENDS+=	horde-1.2.5:../../www/horde
+DEPENDS+=	horde-1.2.6:../../www/horde
 DEPENDS+=	php-imap>3.0.17:../../www/php4-imap
 
 NO_CONFIGURE=	# defined
@@ -41,10 +41,12 @@ FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:
-	cd ${WRKSRC}/config;						\
+	cd ${WRKSRC};						\
 	for file in							\
-		MOTD.html header.txt html.php3 imp_module_config.php3	\
-		lang.php3 mailbox.php3 menu.txt prefs.php3 trailer.txt;	\
+		config/MOTD.html config/header.txt config/html.php3  \
+		config/imp_module_config.php3	config/lang.php3  \
+		config/mailbox.php3 config/menu.txt config/trailer.txt  \
+		prefs.php3 ;	\
 	do								\
 		${MV} $${file} $${file}.dist;				\
 	done
