@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:26 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/26 11:00:13 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
 DISTNAME=       zsh-3.0.5
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
-		ftp://ftp.sterling.com/zsh/ \
+		ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
 		ftp://ftp.rge.com/pub/zsh/ \
+		ftp://sunsite.auc.dk/pub/unix/shells/zsh/ \
 		ftp://ftp.cenatls.cena.dgac.fr/pub/shells/zsh/ \
-		ftp://mrrl.lut.ac.uk/zsh/ \
-		ftp://ftp.fu-berlin.de/pub/unix/shells/zsh/ \
-		ftp://ftp.ips.oz.au/pub/packages/zsh/ \
-		ftp://ftp.uit.no/pub/unix/shells/zsh/
+		ftp://ftp.net.lut.ac.uk/zsh/ \
+		ftp://ftp.uit.no/pub/unix/shells/zsh/ \
+		ftp://ftp.zsh.org/zsh/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.peak.org/zsh/
+HOMEPAGE=	http://sunsite.auc.dk/zsh/
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info
