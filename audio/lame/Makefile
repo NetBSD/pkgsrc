@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1999/08/10 11:16:58 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/27 14:17:22 agc Exp $
 #
 
 DISTNAME=	lame-3.13
 CATEGORIES=	audio
 MASTER_SITES=	http://hive.me.gu.edu.au/not_lame/
-DISTFILES=	dist10.tar.gz.a dist10.tar.gz.b
-PATCHFILES=	lame3.13.patch.gz
-PATCH_SITES=	${MASTER_SITES}
+DISTFILES=	dist10.tar.gz.a dist10.tar.gz.b lame3.13.patch.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://hive.me.gu.edu.au/not_lame/
@@ -23,6 +21,8 @@ LICENSE=	fee-based-commercial-use
 post-extract:
 	${CAT} ${_DISTDIR}/dist* | ( cd ${WRKDIR} ; ${GTAR} plzxf - )
 	${MV} ${WRKDIR}/dist10/lsf/encoder ${WRKSRC}
+	cd ${WRKDIR}; ${GTAR} xvzf ${_DISTDIR}/lame3.13.patch.tgz
+	cd ${WRKSRC}; ${PATCH} -p1 < ${WRKDIR}/lame3.13.patch
 	# ${RM} -fr ${WRKDIR}/dist10
 
 do-install:
