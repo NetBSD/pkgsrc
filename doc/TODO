@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3028 2005/02/17 22:16:15 xtraeme Exp $
+$NetBSD: TODO,v 1.3029 2005/02/18 12:48:25 martti Exp $
 
 Suggested new packages
 ======================
@@ -1013,7 +1013,6 @@ Suggested package updates
 	o sjeng-11.2
 	o skampi-4.1
 	o skkinput-2.06.4
-	o skype-1.0
 	o slib-3a1
 	o sma-1.4
 	o smalleiffel-0.90
