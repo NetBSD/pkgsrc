@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9649 2005/03/27 16:01:00 bouyer Exp $
+$NetBSD: CHANGES,v 1.9650 2005/03/27 17:02:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1780,3 +1780,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libpixman to 0.1.4 [recht 2005-03-27]
 	Updated cairo to 0.4.0 [recht 2005-03-27]
 	Updated xentools20 to 2.0.3nb2 [bouyer 2005-03-27]
+	Updated SDL to 1.2.8nb1 [wiz 2005-03-27]
