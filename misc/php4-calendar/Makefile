@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/02/28 06:18:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/05 07:33:16 martti Exp $
 
 MODNAME=		calendar
 CATEGORIES+=		misc
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for calendar conversion support
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2= 	YES
 
 .include "../../www/php4/Makefile.module"
 
