@@ -1,8 +1,36 @@
-$NetBSD: patch-af,v 1.12 2003/10/05 17:55:34 martti Exp $
+$NetBSD: patch-af,v 1.13 2004/10/28 01:08:15 xtraeme Exp $
 
---- configure.orig	Thu Aug 28 13:24:42 2003
-+++ configure	Thu Aug 28 13:25:36 2003
-@@ -19952,7 +19952,6 @@
+--- configure.orig	Tue Feb 10 20:16:56 2004
++++ configure	Sun Mar  7 20:20:28 2004
+@@ -32023,27 +32023,11 @@
+ 
+ echo "$as_me:$LINENO: checking for ORBit" >&5
+ echo $ECHO_N "checking for ORBit... $ECHO_C" >&6
+-orbit_config_path=`which orbit-config`
+-if test -n "$orbit_config_path" -a $? = 0
+-then
+-  orbit_exec_prefix=`orbit-config --exec-prefix`
+-  orbit_includes=`orbit-config --cflags server`
+-  orbit_libs=`orbit-config --libs server`
+-  orbit_idl="$orbit_exec_prefix/bin/orbit-idl"
+-  echo "$as_me:$LINENO: result: found!" >&5
+-echo "${ECHO_T}found!" >&6
+-  cat >>confdefs.h <<\_ACEOF
+-#define HAVE_ORBIT 1
+-_ACEOF
+-
+-else
+   orbit_exec_prefix=
+   orbit_includes=
+   orbit_libs=
+   orbit_idl=
+   echo "$as_me:$LINENO: result: not found" >&5
+-echo "${ECHO_T}not found" >&6
+-fi
+ 
+ 
+ 
+@@ -32277,7 +32261,6 @@
  else
    bench_dirs=""
  fi

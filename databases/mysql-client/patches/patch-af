@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.8 2003/10/05 17:55:13 martti Exp $
+$NetBSD: patch-af,v 1.9 2004/10/28 01:08:15 xtraeme Exp $
 
---- configure.orig	Fri Jun  6 14:39:41 2003
-+++ configure	Wed Jul  9 17:15:10 2003
-@@ -19952,7 +19952,6 @@
+--- configure.orig	Tue Feb 10 20:16:56 2004
++++ configure	Sun Mar  7 19:58:04 2004
+@@ -32277,7 +32277,6 @@
  else
    bench_dirs=""
  fi

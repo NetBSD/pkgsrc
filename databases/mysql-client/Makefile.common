@@ -1,16 +1,15 @@
-# $NetBSD: Makefile.common,v 1.25 2004/08/27 06:29:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.26 2004/10/28 01:08:15 xtraeme Exp $
 
-DISTNAME=		mysql-3.23.58
+DISTNAME=		mysql-4.0.21
 CATEGORIES=		databases
-MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-3.23/ \
-			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-3.23/ \
-			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.23/
+MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.0/ \
+			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.0/ \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-4.0/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 
 EXTRACT_USING_PAX=	# defined
-USE_GCC_SHLIB=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,9 +27,8 @@ MYSQL_DATADIR?=		${VARBASE}/mysql
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
-USE_BUILDLINK3=		# defined
-GNU_CONFIGURE=		# defined
-USE_GNU_TOOLS+=		make
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
@@ -42,12 +40,21 @@ CONFIGURE_ARGS+=	--without-readline
 # This forces mysql.info _not_ to be rebuilt.
 CONFIGURE_ARGS+=	--without-docs
 
+# Speed up production one-time builds; see "./configure --help" for
+# more information on using or disabling this option.
+CONFIGURE_ARGS+=	--disable-dependency-tracking
+
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
+CONFIGURE_ARGS+=        --with-openssl
+CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 CPPFLAGS+=		-Dunix
 
@@ -58,6 +65,8 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+USE_LANGUAGES=		c c++
+USE_GNU_TOOLS+=		make
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
@@ -70,11 +79,12 @@ post-extract:
 			$${dir}/Makefile.in.orig > $${dir}/Makefile.in;	\
 	done
 	cd ${WRKSRC}/scripts;						\
-	for file in mysql_install_db.sh safe_mysqld.sh; do		\
+	for file in mysql_install_db.sh mysqld_safe.sh; do		\
 		${MV} $${file} $${file}.orig;				\
 		${SED} -e "s,chown,${CHOWN},g"				\
 			$${file}.orig > $${file};			\
 		${RM} $${file}.orig;					\
 	done
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
