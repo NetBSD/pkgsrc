@@ -1,0 +1,13 @@
+--- configure.in-dist	Wed Jun  4 19:39:43 1997
++++ configure.in	Sat Jun 21 10:13:11 1997
+@@ -424,8 +424,8 @@
+           [test -z "$CONFIG_HEADERS" || echo > stamp-h])
+ 
+ eval "nmhbin=${bindir}"; eval "nmhbin2=${nmhbin}"
+-eval "nmhetc=${etcdir}"; eval "nmhetc2=${nmhetc}"
+-eval "nmhlib=${libdir}"; eval "nmhlib2=${nmhlib}"
++eval "nmhetc=${sysconfdir}"; eval "nmhetc2=${nmhetc}"
++eval "nmhlib=${libexecdir}"; eval "nmhlib2=${nmhlib}"
+ eval "nmhman=${mandir}"
+ 
+ echo "
