@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.1 2004/02/01 00:31:00 jlam Exp $
+# $NetBSD: distcc.mk,v 1.2 2004/02/01 01:33:06 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -30,8 +30,8 @@ _DISTCCBASE?=		${LOCALBASE}
 _DISTCC_DIR=	${WRKDIR}/.distcc
 PATH:=		${_DISTCC_DIR}/bin:${PATH}
 
-CC=		${_DISTCC_DIR}/bin/cc
-CXX=		${_DISTCC_DIR}/bin/c++
+CC:=		${_DISTCC_DIR}/bin/${CC:T}
+CXX:=		${_DISTCC_DIR}/bin/${CXX:T}
 
 .  for _target_ in CC CXX
 override-tools: ${${_target_}}
