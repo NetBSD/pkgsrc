@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1642 2003/03/15 08:28:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.1643 2003/03/15 08:30:42 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1125,4 +1125,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.14.5 [gehenna 2003-03-14]
 	Updated pkgdepgraph to 2.2 [atatat 2003-03-14]
 	Updated lopster to 1.2.0 [hubertf 2003-03-15]
+	Updated teTeX2 to 2.0.2 [kei 2003-03-15]
+	Updated teTeX2-bin to 2.0.2 [kei 2003-03-15]
+	Updated teTeX2-share to 2.0.2 [kei 2003-03-15]
+	Updated teTeX2-sharesrc to 2.0.2 [kei 2003-03-15]
+	Updated dvipdfmx to 0.0.0.20021230nb1 [kei 2003-03-15]
 	Updated mono to 0.23 [jmmv 2003-03-15]
