@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/05/24 18:57:40 tron Exp $
+# $NetBSD: Makefile,v 1.20 1998/05/26 19:43:49 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -72,6 +72,11 @@ CONFIGURE_ARGS+=	--without-idea
 .if defined(USE_SOCKS) && ${USE_SOCKS} == YES
 CONFIGURE_ARGS+= 	--with-socks="-L${PREFIX}/lib -lsocks5"
 CFLAGS+=	 	-I${PREFIX}/include
+.endif
+
+# Don't install "ssh" setuid
+.if defined(SSH_NO_SUID) && ${SSH_NO_SUID} == YES
+CONFIGURE_ARGS+=	--disable-suid-ssh
 .endif
 
 # Make libwrap also compare against forwards (off by default)
