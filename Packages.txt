@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.12 1998/01/29 13:47:35 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.13 1998/01/30 13:11:42 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -949,12 +949,12 @@ The file contents in this section must be used without the "> " prefix.
  11.1.1 Makefile
  ===============
 
-> # <$>NetBSD<$>
 > # New ports collection makefile for:    bison
 > # Version required:     1.25
 > # Date created:         1 October 1997
 > # Whom:                 agc@netbsd.org
 > #
+> # <$>NetBSD<$>
 > #
 >  
 > DISTNAME=       bison-1.25
