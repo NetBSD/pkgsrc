@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2004/02/10 12:55:20 grant Exp $
+# $NetBSD: Makefile,v 1.297 2004/02/10 12:58:19 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -7,7 +7,6 @@ SUBDIR+=	Mosaic
 SUBDIR+=	MozillaFirebird
 SUBDIR+=	MozillaFirebird-bin
 SUBDIR+=	MozillaFirebird-bin-nightly
-SUBDIR+=	MozillaFirebird-bin-realplayer
 SUBDIR+=	MozillaFirebird-gtk2-bin-nightly
 SUBDIR+=	adzap
 SUBDIR+=	amaya
@@ -80,6 +79,7 @@ SUBDIR+=	firefox-bin-acroread3
 SUBDIR+=	firefox-bin-acroread5
 SUBDIR+=	firefox-bin-flash
 SUBDIR+=	firefox-bin-java
+SUBDIR+=	firefox-bin-realplayer
 SUBDIR+=	firefox-gtk2-bin
 SUBDIR+=	galeon
 SUBDIR+=	galway
