@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/04 07:58:50 garbled Exp $
+--- src/Makefile.in.orig	Fri Jul 17 19:39:18 1998
++++ src/Makefile.in	Tue Nov  3 23:26:09 1998
+@@ -45,7 +45,7 @@
+ AUTOMAKE = @AUTOMAKE@
+ AUTOHEADER = @AUTOHEADER@
+ 
+-INSTALL = @INSTALL@
++INSTALL = install -c
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
