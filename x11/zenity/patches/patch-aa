@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 23:40:39 xtraeme Exp $
+
+--- src/main.c.orig	2003-10-12 04:51:37.000000000 +0200
++++ src/main.c	2003-10-12 04:51:48.000000000 +0200
+@@ -24,6 +24,7 @@
+ #include "config.h"
+ #include "zenity.h"
+ #include <stdlib.h>
++#include <locale.h> 
+ #include <popt.h>
+ #include <langinfo.h>
+ 
