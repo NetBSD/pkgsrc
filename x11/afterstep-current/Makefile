@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 1999/11/12 08:13:55 fredb Exp $
+# $NetBSD: Makefile,v 1.13 1999/11/14 18:27:17 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.142
-PKGNAME=		afterstep-1.7.155
+PKGNAME=		afterstep-1.7.157
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
@@ -29,7 +29,9 @@ PATCHFILES=	1.7.142-01-sasha-png_jpg_warnings.patch.gz \
 		1.7.142-10-allanon-avoidcover.patch.gz \
 		1.7.142-11-sasha-icons_shade_gamma.patch.gz \
 		1.7.142-12-allanon-window_position_and_shaping.patch.gz \
-		1.7.142-13-sasha-titlebuttons_mapping.patch.gz
+		1.7.142-13-sasha-titlebuttons_mapping.patch.gz \
+		1.7.142-14-allanon-randomplacement_and_texturedhandle_and_shaped_windows.patch.gz \
+		1.7.142-15-allanon-disappearing_windows.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
@@ -42,6 +44,7 @@ DEPENDS+=		rplay-3.2.0b6:../../audio/rplay
 DEPENDS+=		xli-1.16:../../graphics/xli
 DEPENDS+=		xp-1.2b10:../../x11/xp
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+BUILD_DEPENDS+=		autoconf-1.13:../../devel/autoconf
 
 DIST_SUBDIR=		AfterStep
 GNU_CONFIGURE=		yes
@@ -59,18 +62,17 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
 post-build:
-	${SED} 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
+	${SED} 's|@PREFIX@|${PREFIX}|g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-configure:
-	@(cd ${WRKSRC} ; ${GMAKE} config)
+	cd ${WRKSRC}; ${GMAKE} config
 	${MAKE} do-configure
 
 post-patch:
-	cd ${WRKSRC} ; \
-	for i in `find . -name "*.man" -print` autoconf/Makefile.common.in ; do \
-	  ${MV} $$i $$i.orig ; \
-	  ${SED} -e 's@/usr/local/@${PREFIX}/@g' -e 's@1x@1@g' \
-	    < $$i.orig > $$i ; \
+	cd ${WRKSRC}; \
+	for i in `find . -name "*.man" -print` autoconf/Makefile.common.in; do \
+	  ${MV} $$i $$i.orig; \
+	  ${SED} -e 's|/usr/local/|${PREFIX}/|g' -e 's|1x|1|g' < $$i.orig > $$i; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
