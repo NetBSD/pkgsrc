@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.11 2004/03/30 09:04:05 adam Exp $
+
+--- Makefile.orig	2004-03-05 10:53:44.000000000 +0000
++++ Makefile
+@@ -2,3 +2,3 @@
+ 
+-CXX     := c++
++#CXX     := c++
+ AR      := ar cru
+@@ -34,4 +34,3 @@ include config.mak
+ 
+-CXXFLAGS:= -Wall $(CXXFLAGS)
+-CXXFLAGS+= -O -Wuninitialized
++CXXFLAGS+= -Wall -Wuninitialized
+ CXXFLAGS+= -Wno-long-long -Wno-multichar -Wno-unknown-pragmas
