@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/09/28 09:13:56 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/03 00:54:18 heinz Exp $
 #
 
 DISTNAME=	cscope-15.4
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-flex
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		flex-*:../../devel/flex
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
 LEX=			${LOCALBASE}/bin/flex
 .endif
 
