@@ -1,0 +1,19 @@
+This is a snapshot-preview of the new GTK-based X-CD-Roast. 
+There are still some features missing, please see this version only 
+as a test. But it is already a more than complete replacement of
+the old version 0.96ex.
+
+Some features: (marked with "*" if already implemented and working)
+
+- Portable (*)
+- Multi langual (*)
+- CDDB-support (*)
+- Graphical setup (*)
+- Graphical wav-player (*)
+- Tooltip help (*)
+- Copies Data (*), Audio (*), Mixed-Mode (*), Multisession, CD-Extra
+- Creates Data (*), Audio (*), Mixed-Mode (*), Multisession, CD-Extra
+- Bootable CD support (*)
+- Copy (*)/Master (*) on the fly.
+- Administration mode for usage in computer pools. (*)
+- MP3 encoding/decoding.
