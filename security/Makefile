@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2001/05/07 00:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2001/05/21 09:47:33 jun Exp $
 #
 
 COMMENT=	Security tools
@@ -56,6 +56,7 @@ SUBDIR+=	portsentry
 SUBDIR+=	priv
 SUBDIR+=	py-amkCrypto
 SUBDIR+=	racoon
+SUBDIR+=	rats
 SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
