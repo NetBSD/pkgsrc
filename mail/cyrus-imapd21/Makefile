@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2003/09/13 20:09:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/13 23:03:17 jlam Exp $
 
-DISTNAME=		cyrus-imapd-2.1.14
+DISTNAME=		cyrus-imapd-2.1.15
 SVR4_PKGNAME=		cimap
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -23,7 +23,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .if defined(CYRUS_USE_INET6) && ${CYRUS_USE_INET6} == "YES"
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		${DISTNAME}-ipv6-20030703.diff.gz
+PATCHFILES=		${DISTNAME}-ipv6-20030819.diff.gz
 .endif
 
 # CYRUS_USER		username of the Cyrus administrator
