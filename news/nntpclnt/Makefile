@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/04 19:44:02 jtb Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -9,6 +9,11 @@ MAINTAINER=	tv@netbsd.org
 COMMENT=	NNTP client library and inews client posting program
 
 CONFLICTS+=	inn-*
+
+LICENSE=	nntpclnt-license
+RESTRICTED=	"Do not sell, rent, trade, market, or use for monetary profit"
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
 
 ALL_TARGET=	inews
 
