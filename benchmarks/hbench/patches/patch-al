@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2001/09/22 15:25:33 jdolecek Exp $
+$NetBSD: patch-al,v 1.2 2001/09/22 20:47:15 jdolecek Exp $
 
---- bw_pipe.c.orig	Fri Sep 21 18:39:15 2001
-+++ bw_pipe.c	Fri Sep 21 18:39:48 2001
+--- src/bw_pipe.c.orig	Fri Sep 21 18:39:15 2001
++++ src/bw_pipe.c	Fri Sep 21 18:39:48 2001
 @@ -147,6 +147,8 @@ do_pipexfer(num_iter, t)
  	/* Spawn off a writer, then time the read */
  	switch (fork()) {
