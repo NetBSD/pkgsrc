@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 1998/08/22 20:15:09 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/06 14:56:55 tron Exp $
 
 DISTNAME=	newmkdep-1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://colwyn.owl.de/~tron/
+MASTER_SITES=	http://www.sighardstrasse.de/~tron/
 
 MAINTAINER=	tron@netbsd.org
 
