@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/07 13:49:06 wiz Exp $
+bin/kdrill
+lib/X11/app-defaults/KDrill
+man/cat1/kdrill.0
+share/kdrill/hira.edic.gz
+share/kdrill/hiraplus.edic.gz
+share/kdrill/kata.edic.gz
+share/kdrill/kataplus.edic.gz
+share/kdrill/fullkatahira.edic.gz
+@unexec rmdir %D/share/kdrill 2>/dev/null || true
