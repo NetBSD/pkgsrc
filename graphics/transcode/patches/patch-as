@@ -1,28 +1,55 @@
-$NetBSD: patch-as,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+$NetBSD: patch-as,v 1.2 2004/03/28 20:09:07 mycroft Exp $
 
---- libvo/cpu_accel.c.orig	2003-03-09 06:13:27.000000000 +1100
-+++ libvo/cpu_accel.c	2003-06-21 03:24:18.000000000 +1000
-@@ -33,9 +33,12 @@ static uint32_t arch_accel (void)
-     uint32_t caps;
+--- src/decoder.c.orig	2003-12-20 11:49:22.000000000 +0000
++++ src/decoder.c	2004-03-28 09:16:35.000000000 +0000
+@@ -119,16 +119,12 @@
+   }
  
- #define cpuid(op,eax,ebx,ecx,edx)	\
--    asm ("cpuid"			\
-+    asm ("pushl %%ebx\n"		\
-+	 "cpuid\n"			\
-+	 "movl %%ebx, %1\n"		\
-+	 "popl %%ebx\n" 		\
- 	 : "=a" (eax),			\
--	   "=b" (ebx),			\
-+	   "=r" (ebx),			\
- 	   "=c" (ecx),			\
- 	   "=d" (edx)			\
- 	 : "a" (op)			\
-@@ -50,7 +53,7 @@ static uint32_t arch_accel (void)
- 	 "pushfl\n\t"
- 	 "popl %0"
-          : "=a" (eax),
--	   "=b" (ebx)
-+	   "=r" (ebx)
- 	 :
- 	 : "cc");
+   //wait for threads to terminate
+-#ifdef BROKEN_PTHREADS // Used to be MacOSX specific; kernel 2.6 as well?
+   pthread_cond_signal(&vframe_list_full_cv);
+-#endif
+   cc1=pthread_join(vthread, &status);
+   
+   if(verbose & TC_DEBUG) fprintf(stderr, "(%s) video thread exit (ret_code=%d) (status_code=%d)\n", __FILE__, cc1, (int) status);
+   
+-#ifdef BROKEN_PTHREADS // Used to be MacOSX specific; kernel 2.6 as well?
+   pthread_cond_signal(&aframe_list_full_cv);
+-#endif
+   cc2=pthread_join(athread, &status);
+   
+   if(verbose & TC_DEBUG) fprintf(stderr, "(%s) audio thread exit (ret_code=%d) (status_code=%d)\n", __FILE__, cc2, (int) status);
+@@ -467,6 +463,7 @@
+     pthread_testcancel();
  
+     //check buffer fill level
++    pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);
+     pthread_mutex_lock(&vframe_list_lock);
+     
+     while(vframe_fill_level(TC_BUFFER_FULL)) {
+@@ -481,7 +478,9 @@
+ 	  pthread_exit( (int *) 11);
+ 	}
+     }
++
+     pthread_mutex_unlock(&vframe_list_lock);
++    pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
+     
+     // get a frame buffer or wait
+     while((ptr = vframe_register(i))==NULL) {
+@@ -655,6 +654,7 @@
+     pthread_testcancel();
+     
+     //check buffer fill level
++    pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);
+     pthread_mutex_lock(&aframe_list_lock);
+     
+     while(aframe_fill_level(TC_BUFFER_FULL)) {
+@@ -671,6 +671,7 @@
+     }
+     
+     pthread_mutex_unlock(&aframe_list_lock);
++    pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
+     
+     // get a frame buffer or wait
+     while((ptr = aframe_register(i))==NULL) {

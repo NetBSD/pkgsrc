@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+$NetBSD: patch-ao,v 1.2 2004/03/28 20:09:07 mycroft Exp $
 
---- avilib/Makefile.am.orig	Wed Feb 20 10:11:17 2002
-+++ avilib/Makefile.am
+--- avilib/Makefile.am	2004-03-26 19:14:20.000000000 +0000
++++ avilib/Makefile.am	2004-03-26 19:14:30.000000000 +0000
 @@ -3,12 +3,12 @@
  AUTOMAKE_OPTIONS = 1.3 foreign
  DEFAULT_INCLUDES = -I$(top_srcdir) -I$(srcdir) -I$(top_builddir) -I.
@@ -11,9 +11,9 @@ $NetBSD: patch-ao,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
  
  INCLUDES = -I./
  
- CFLAGS=-O3 -funroll-loops -ffast-math -DLINUX -Wall @CFLAGS@
+ CFLAGS=-funroll-loops -ffast-math -DLINUX -Wall @CFLAGS@
 -libavi_a_SOURCES = avilib.c avidump.c avimisc.c
 +libavi_la_SOURCES = avilib.c avidump.c avimisc.c
  
- EXTRA_DIST = avilib.h README.avilib
+ EXTRA_DIST = avilib.h README.avilib os.h
  
