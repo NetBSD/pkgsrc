@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.6 2002/11/07 00:22:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/01/29 11:13:30 jlam Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://java.sun.com/
+DOWNLOAD=	http://java.sun.com/j2se/1.4.1/download.html
 
-FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
 
 LICENSE=	jdk13-license
@@ -18,17 +18,15 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
-JVM_HOME=	${LOCALBASE}/java/sun-1.4.0
+JVM_HOME=	${LOCALBASE}/java/sun-1.4
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-USE_BUILDLINK2=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
-NO_MTREE=	# defined, since we change PREFIX
+USE_BUILDLINK2=	yes
+NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386
@@ -38,6 +36,8 @@ post-fetch:
 	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
 		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
 	fi
+
+do-build:	# nothing
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
