@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.4 2005/03/27 10:25:51 recht Exp $
+$NetBSD: patch-af,v 1.5 2005/04/04 07:22:34 recht Exp $
 
---- mono/metadata/Makefile.in.orig	Fri Mar 18 16:08:49 2005
-+++ mono/metadata/Makefile.in
-@@ -476,7 +476,7 @@ pedump_SOURCES = \
- 
- pedump_LDADD = libmonoruntime.la ../io-layer/libwapi.la ../utils/libmonoutils.la \
- 	$(PLATFORM_LIB)			\
--	$(LIBGC_LIBS) $(GLIB_LIBS) $(GMODULE_LIBS) -lm
-+	$(LIBGC_LIBS) $(GLIB_LIBS) $(GMODULE_LIBS) $(ICU_LIBS) -lm
- 
- monodiet_SOURCES = monodiet.c
- monodiet_LDADD = \
+--- mono/metadata/Makefile.in.orig	Sun Apr  3 20:00:19 2005
++++ mono/metadata/Makefile.in	Sun Apr  3 20:01:57 2005
+@@ -68,7 +68,7 @@
+ am_libmonoruntime_static_la_OBJECTS = $(am__objects_1)
+ libmonoruntime_static_la_OBJECTS =  \
+ 	$(am_libmonoruntime_static_la_OBJECTS)
+-libmonoruntime_la_LIBADD =
++libmonoruntime_la_LIBADD = $(ICU_LIBS)
+ am_libmonoruntime_la_OBJECTS = reflection.lo object.lo icall.lo \
+ 	decimal.lo boehm-gc.lo null-gc.lo gc.lo marshal.lo monitor.lo \
+ 	threads.lo threadpool.lo file-io.lo socket-io.lo exception.lo \
