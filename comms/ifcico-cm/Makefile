@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/21 15:45:20 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/23 16:32:08 hubertf Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cosy.sbg.ac.at/~cmeer/files/
 
 MAINTAINER=	tv@netbsd.org	# aka "Todd Vierling" @ 1:396/1.5
 HOMEPAGE=	http://www.cosy.sbg.ac.at/~cmeer/ifcico/
-
-NO_CDROM=	"extremely limited usefulness to the general public"
 
 post-build:
 	cd ${WRKSRC}/contrib/iftelnetd && ${MAKE} iftelnetd
