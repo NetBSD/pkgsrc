@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/28 22:34:05 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/01 01:48:26 jtb Exp $
 
 DISTNAME=	tela-1.30
 CATEGORIES=	math
@@ -29,8 +29,8 @@ CONFIGURE_ENV+=	"INSTALLATION_PREFIX=${PREFIX}/share/tela"
 CONFIGURE_ENV+=	"ARCHDEP_INSTALLATION_PREFIX=${PREFIX}/lib/tela"
 
 pre-configure:
-	@for f in ${WRKSRC}/telakka.in ${WRKSRC}/t/demo.t	\
-	${WRKSRC}/t/docview.t ${WRKSRC}/t/std.t; do		\
+	@for f in ${WRKSRC}/t/demo.t ${WRKSRC}/t/docview.t	\
+	${WRKSRC}/t/std.t; do					\
 		${SED} -e 's:@PREFIX@:'${PREFIX}':g'		\
 		< $$f > $$f.tmp && ${MV} -f $$f.tmp $$f;	\
 	done

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/01 01:48:26 jtb Exp $
 
 --- Makefile.orig	Tue Dec  5 07:43:56 2000
 +++ Makefile
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
  
  what help :
  	@echo 'make                - same as make tela';\
-@@ -541,20 +541,20 @@
+@@ -541,20 +541,22 @@
  	if [ ! -d ct ]; then mkdir ct; chmod 755 ct; fi;\
  	if [ ! -d include ]; then mkdir include; chmod 755 include; fi;\
  	if [ ! -d include/templ ]; then mkdir include/templ; chmod 755 include/templ; fi
@@ -28,13 +28,18 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
 -	$(INSTALL_PROGRAM) tela $(INSTALL_BINDIR)
 +	$(INSTALL_PROGRAM) ctpp ${PREFIX}/bin
 +	$(INSTALL_PROGRAM) tela ${PREFIX}/bin
++	sed -e 's@^CTTP="$BINDIR@CTTP="${PREFIX}/bin@g'	\
++		<telakka > telakka.1
  	sed -e 's@^BINDIR=.*$$@BINDIR=$(INSTALL_BINDIR)@' \
  		-e 's@^INCLUDEDIR=.*$$@INCLUDEDIR=$(INSTALL_LIBDIR)/include@' \
- 		<telakka >telakka.1;\
- 	chmod +x telakka.1
+-		<telakka >telakka.1;\
+-	chmod +x telakka.1
 -	$(INSTALL_PROGRAM) telakka.1 $(INSTALL_BINDIR)/telakka;\
-+	$(BSD_INSTALL_SCRIPT) telakka.1 ${PREFIX}/bin/telakka;\
- 	rm telakka.1
+-	rm telakka.1
++		<telakka.1 >telakka.2;\
++	chmod +x telakka.2
++	$(BSD_INSTALL_SCRIPT) telakka.2 ${PREFIX}/bin/telakka;\
++	rm telakka.1 telakka.2
  	cd $(srcdir); for i in *.ct local/*.ct; do $(INSTALL_DATA) $$i $(INSTALL_LIBDIR)/ct; done
  	cd $(srcdir)/opt; for i in *.ct; do $(INSTALL_DATA) $$i $(INSTALL_LIBDIR)/ct; done
  	cd $(srcdir)/t; for i in *.t *.hdf; do $(INSTALL_DATA) $$i $(INSTALL_LIBDIR)/t; done
