@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/22 03:35:21 sakamoto Exp $
+
+--- ./configure.orig	Tue Jul 20 04:24:13 1999
++++ ./configure	Thu Jul 22 10:21:45 1999
+@@ -1348,6 +1348,7 @@
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL="$LIBTOOL"
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
+@@ -1392,4 +1393,5 @@
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not

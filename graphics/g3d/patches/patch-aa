@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/22 03:35:21 sakamoto Exp $
+
+--- ./g3d/Makefile.in.orig	Sat Jul 17 05:29:18 1999
++++ ./g3d/Makefile.in	Thu Jul 22 10:24:50 1999
+@@ -100,5 +100,5 @@
+ l = @l@
+ 
+-CFLAGS = @CFLAGS@ -Wall $(GTK_CFLAGS) -DPIXMAP_DIR=\"/usr/local/share/pixmaps/g3d/\"
++CFLAGS = @CFLAGS@ -Wall $(GTK_CFLAGS) -DPIXMAP_DIR=\"$(prefix)/share/pixmaps/g3d/\"
+ 
+ bin_PROGRAMS = g3d
+@@ -107,5 +107,5 @@
+ 
+ 
+-g3d_LDADD = -lb3d $(GL_LIBS) $(GTK_LIBS) -lgtkgl
++g3d_LDADD = ../b3d/src/libb3d.la $(GL_LIBS) $(GTK_LIBS) -lgtkgl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+@@ -370,6 +370,6 @@
+ 
+ install-data-local:
+-	-mkdir /usr/local/share/pixmaps/g3d/
+-	cp $(top_srcdir)/pixmaps/*.xpm /usr/local/share/pixmaps/g3d/
++	$(mkinstalldirs) $(prefix)/share/pixmaps/g3d/
++	cp $(top_srcdir)/pixmaps/*.xpm $(prefix)/share/pixmaps/g3d/
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
