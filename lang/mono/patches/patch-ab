@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.6 2004/07/03 23:02:50 recht Exp $
+
+--- runtime/net_1_1/Makefile.in.orig	2004-06-29 18:09:20.000000000 +0200
++++ runtime/net_1_1/Makefile.in	2004-07-03 23:38:39.000000000 +0200
+@@ -361,17 +361,17 @@
+ install-data-local:
+ 	@if test -n '$(gac_assemblies)'; then \
+ 	  for i in ''$(gac_assemblies); do \
+-	    echo "MONO_PATH=$(srcdir) $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR)" ; \
++	    echo "MONO_PATH=$(srcdir) $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /root $(GAC_ROOT_DIR)" ; \
+ 	    MONO_PATH=$(srcdir) \
+-	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR) || exit 1 ; \
++	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /root $(GAC_ROOT_DIR) || exit 1 ; \
+ 	  done; fi
+ 
+ uninstall-local:
+ 	@if test -n '$(gac_assemblies_list)'; then \
+ 	  for i in ''$(gac_assemblies_list); do \
+-	    echo "MONO_PATH=$(srcdir) $(mono_runtime) $(gacutil) /u $$i /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR)" ; \
++	    echo "MONO_PATH=$(srcdir) $(mono_runtime) $(gacutil) /u $$i /root $(GAC_ROOT_DIR)" ; \
+ 	    MONO_PATH=$(srcdir) \
+-	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /u $$i /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR) || true ; \
++	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /u $$i /root $(GAC_ROOT_DIR) || true ; \
+ 	  done; fi
+ 
+ copy_dlls:
