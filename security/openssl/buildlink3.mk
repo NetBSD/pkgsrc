@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/07 02:21:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/21 10:03:41 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -148,6 +148,8 @@ BUILD_DEFS+=	SSLBASE
 SSLCERTS=	${PKG_SYSCONFDIR.openssl}/certs
 .  elif ${OPSYS} == "NetBSD"
 SSLCERTS=	/etc/openssl/certs
+.  elif !empty(BUILDLINK_USE_BUILTIN.openssl:M[yY][eE][sS])
+SSLCERTS=	/etc/ssl/certs		# likely place where certs live
 .  else
 SSLCERTS=	${PKG_SYSCONFBASEDIR}/openssl/certs
 .  endif
