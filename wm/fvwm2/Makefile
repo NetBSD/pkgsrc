@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/19 17:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/19 19:09:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
 CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
-CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/bitmaps:${X11BASE}/include/pixmaps
+CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2/pixmaps
