@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2004/10/05 15:37:45 adam Exp $
+# $NetBSD: Makefile,v 1.38 2004/12/14 19:53:49 xtraeme Exp $
 
 .include "Makefile.common"
 
 #PKGNAME=	sylpheed-claws-${SYLPHEED_VERSION}
+PKGREVISION=	1
 
 MAINTAINER=	chris@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -29,13 +30,6 @@ PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=		USE_INET6 USE_OPENLDAP
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .if empty(FACES_IS_INSTALLED)
@@ -44,13 +38,30 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .  include "../../mail/faces/buildlink3.mk"
 .endif
 
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-CONFIGURE_ARGS+=	--enable-ldap
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-
 EGDIR=		${PREFIX}/share/examples/sylpheed
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sylpheed-claws
+PKG_SUPPORTED_OPTIONS=	jpilot ldap inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mjpilot)
+CONFIGURE_ARGS+=	--enable-jpilot
+.  include "../../comms/pilot-link-libs/buildlink3.mk"
+.  include "../../comms/jpilot/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mldap)
+CONFIGURE_ARGS+=	--enable-ldap
+.  include "../../databases/openldap/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -62,5 +73,6 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
