@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 12:00:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/04 19:37:52 xtraeme Exp $
 bin/imlib2-config
 include/Imlib2.h
 lib/libImlib2.a
 lib/libImlib2.la
 lib/libImlib2.so
-lib/libImlib2.so.1
-lib/libImlib2.so.1.4
+lib/libImlib2.so.2
+lib/libImlib2.so.2.0
 lib/loaders/filter/bump_map.a
 lib/loaders/filter/bump_map.la
 lib/loaders/filter/bump_map.so
@@ -24,6 +24,9 @@ lib/loaders/image/bmp.so
 lib/loaders/image/gif.a
 lib/loaders/image/gif.la
 lib/loaders/image/gif.so
+lib/loaders/image/gzbz2.a
+lib/loaders/image/gzbz2.la
+lib/loaders/image/gzbz2.so
 lib/loaders/image/jpeg.a
 lib/loaders/image/jpeg.la
 lib/loaders/image/jpeg.so
@@ -42,6 +45,7 @@ lib/loaders/image/tiff.so
 lib/loaders/image/xpm.a
 lib/loaders/image/xpm.la
 lib/loaders/image/xpm.so
+lib/pkgconfig/imlib2.pc
 @dirrm lib/loaders/image
 @dirrm lib/loaders/filter
 @dirrm lib/loaders
