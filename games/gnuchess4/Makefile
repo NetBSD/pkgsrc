@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/27 10:25:01 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/28 06:34:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/chess/chess.html
+
+CONFLICTS=		gnuchess-4.*
 
 MIRROR_DISTFILE=	no
 
