@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/17 12:56:13 martti Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/26 13:26:16 martti Exp $
 
 .include "Makefile.common"
 
@@ -9,9 +9,10 @@ COMMENT=	XFce4
 
 NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
 NO_MTREE=	# defined
+WRKSRC=		${WRKDIR}
 
+do-build:	# empty
 do-install:	# empty
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"
