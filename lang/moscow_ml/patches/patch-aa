@@ -1,21 +1,49 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:20 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- Makefile.inc.orig	Tue Jul 29 02:58:19 1997
-+++ Makefile.inc	Mon Feb 16 21:05:32 1998
-@@ -2,10 +2,10 @@
+--- Makefile.inc.orig	Mon Apr 20 11:52:39 1998
++++ Makefile.inc	Thu Dec  3 04:05:44 1998
+@@ -2,20 +2,34 @@
  
- # Edit MOSMLHOME, CPP and STRIP to suit your installation
+ # Where to install stuff
  
 -MOSMLHOME=${HOME}/mosml
 +MOSMLHOME=${PREFIX}
++
++# Various utility programs
++INSTALL_PROGRAM=cp
++INSTALL_SCRIPT=cp
++INSTALL_DATA=cp
++PERL=${LOCALBASE}/bin/perl
  
- # For Linux and other well-behaved systems, use:
+ # To compile the runtime system camlrunm with support for
+ # dynamically loadable libraries (DDLs), uncomment these:
+ 
+-# ADDPRIMS=dynlib.c
+-# ADDOBJS=dynlib.o
++ADDPRIMS=dynlib.c
++ADDOBJS=dynlib.o
+ # ADDLIBS=-ldl
+ # ADDCFLAGS=-rdynamic
+ 
++# For NetBSD, use:
++CPP=/usr/bin/cpp -P -traditional -Dunix -Umsdos
++STRIP=/usr/bin/strip
++ADDCFLAGS=-fPIC
++INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
++INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT}
++INSTALL_DATA=${BSD_INSTALL_DATA}
++
+ # For Linux, use:
 -CPP=/lib/cpp -P -traditional -Dunix -Umsdos
-+CPP=/usr/bin/cpp -P -traditional
- STRIP=strip
+-STRIP=strip
+-DYNLD=ld -shared 
++#CPP=/lib/cpp -P -traditional -Dunix -Umsdos
++#STRIP=strip
++#DYNLD=ld -shared 
  
- # For HP-UX, use instead:
-@@ -23,8 +23,8 @@
+ # For Solaris 2 (not SunOS 4), use instead:
+ # CPP=/usr/ccs/lib/cpp -P -Dunix -Umsdos
+@@ -41,8 +55,8 @@
  # LIBDIR contains bytecode files (such as mosmlcmp and library units)
  
  BINDIR=${MOSMLHOME}/bin

@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 11:09:21 agc Exp $
+$NetBSD: patch-af,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- mosmlyac/Makefile.orig	Mon Oct 16 10:36:52 1995
-+++ mosmlyac/Makefile	Tue Feb 17 00:07:43 1998
+--- mosmlyac/Makefile.orig	Mon Oct 16 09:36:52 1995
++++ mosmlyac/Makefile	Thu Dec  3 03:03:04 1998
 @@ -18,7 +18,7 @@
  	rm -f mosmlyac
  
  install:
 -	cp mosmlyac $(BINDIR)/mosmlyac
-+	${BSD_INSTALL_PROGRAM} mosmlyac $(BINDIR)/mosmlyac
++	${INSTALL_PROGRAM} mosmlyac $(BINDIR)/mosmlyac
  
  depend:
  
