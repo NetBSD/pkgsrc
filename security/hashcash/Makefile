@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/08/01 18:35:30 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/29 01:56:16 tv Exp $
 #
 
-DISTNAME=		hashcash-0.32
+DISTNAME=		hashcash-1.13
 CATEGORIES=		security
 MASTER_SITES=		http://www.hashcash.org/source/
 EXTRACT_SUFX=		.tgz
@@ -10,9 +10,9 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://www.hashcash.org/
 COMMENT=		Hash collision based postage stamp
 
-MAKE_FLAGS=		COPT="${CFLAGS} -Dunix"
-
 USE_BUILDLINK3=		yes
+
+CFLAGS+=		-Dunix
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hashcash ${PREFIX}/bin/

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/11/29 01:56:16 tv Exp $
+
+--- Makefile.orig	2004-11-28 20:52:15.000000000 -0500
++++ Makefile
+@@ -23,7 +23,7 @@ COPT_MINGW = -O3 -funroll-loops -march=i
+ COPT_G3_OSX = -O3 -funroll-loops -fno-inline -mcpu=750 -faltivec
+ COPT_PPC_LINUX = -O3 -funroll-loops -fno-inline -mcpu=604e -maltivec \
+ 	-mabi=altivec
+-CFLAGS = -DREGEXP_POSIX
++CFLAGS += -DREGEXP_POSIX
+ EXES = hashcash$(EXE) sha1$(EXE) sha1test$(EXE)
+ INSTALL = install
+ POD2MAN = pod2man
