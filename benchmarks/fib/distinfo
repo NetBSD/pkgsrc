@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:26:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:13:24 agc Exp $
 
-MD5 (fib.c) = 586c1d6068485b84d5b355af77bb61f7
+SHA1 (fib.c) = d5eec6bc68c9cbe5e013ab62bcb7b2b5be55eb17
+Size (fib.c) = 11045 bytes

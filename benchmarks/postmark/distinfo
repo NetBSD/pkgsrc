@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:26:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:13:28 agc Exp $
 
-MD5 (postmark-1_13.c) = d6a208f56b140669da4cc11ef8501cdc
+SHA1 (postmark-1_13.c) = 1da74a45f96dabe6c6abd979a4a0a5ecdb942464
+Size (postmark-1_13.c) = 41143 bytes

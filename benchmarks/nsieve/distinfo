@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:26:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:13:27 agc Exp $
 
-MD5 (nsieve.c) = 6fdcc587905d7ab364b03115b5268d2e
+SHA1 (nsieve.c) = 003ec02c832fc2e53810d85451f178d194b80d93
+Size (nsieve.c) = 22452 bytes

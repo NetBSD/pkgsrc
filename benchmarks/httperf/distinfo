@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:26:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:13:26 agc Exp $
 
-MD5 (httperf-0.6.tar.gz) = d67ee49eb06e14d0bf8dbf5bce954c5b
+SHA1 (httperf-0.6.tar.gz) = 6e0bcc21e2a94061b231c50182528a17ba22f14f
+Size (httperf-0.6.tar.gz) = 85351 bytes
