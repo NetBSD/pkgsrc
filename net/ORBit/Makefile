@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2004/03/11 20:14:59 reed Exp $
+# $NetBSD: Makefile,v 1.105 2004/04/23 00:51:34 minskim Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit/0.${ORBIT_MAJOR}/}
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		High-performance CORBA ORB with support for the C language
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 
