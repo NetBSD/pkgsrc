@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/25 08:00:24 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/08 14:32:00 wiz Exp $
 
 DISTNAME=	cyrus-sasl-1.5.24
 PKGNAME=	${DISTNAME}nb1
@@ -17,8 +17,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 .if !exists(/usr/include/openssl/rc4.h)
 DEPENDS+=	openssl-0.9.*:../../security/openssl
 CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include"
-.else
-CONFIGURE_ENV+=	CPPFLAGS="-I/usr/include/openssl"
 .endif
 
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/sasl
@@ -31,7 +29,7 @@ DEPENDS+=		PAM-*:../../security/PAM
 CONFIGURE_ARGS+=	--with-pwcheck
 .endif
 .if defined(KERBEROS) && (${KERBEROS} == 4)
-CONFIGURE_ARGS+=	--enable-krb4
+CONFIGURE_ARGS+=	--enable-krb4=${PREFIX}
 DEPENDS+=		kth-krb4-*:../../security/kth-krb4
 .else
 CONFIGURE_ARGS+=	--disable-krb4
