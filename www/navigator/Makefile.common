@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2002/06/02 09:07:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.49 2002/06/30 19:07:18 dmcmahill Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -71,7 +71,7 @@ VENDOR_NAME=	Linux 2.2
 DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 .endif
 #
-.elif (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "sparc64")
+.elif (((${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "sparc64")) && defined(NS_USE_SUNOS))
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
@@ -84,6 +84,16 @@ DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${DISTUNAME}
 VENDOR_NAME=	SunOS 4.1.3
 MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
+#
+.elif (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "sparc64") 
+PLIST_ARCH=	solaris-sparc
+.if !exists(/emul/svr4/usr/lib/ld.so)
+IGNORE=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+.endif
+DISTUNAME=      sparc-sun-solaris2.5.1
+DIST_DIR_NAME=  supported/sunos551
+WRKNAME=        sparc-sun-solaris2.5.1
+VENDOR_NAME=    Solaris 2.5.1
 #
 .elif (${MACHINE_ARCH} == "powerpc")
 .if (${BINNAME} == "navigator")
