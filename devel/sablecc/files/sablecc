@@ -15,4 +15,4 @@ else
   fi
 fi
 
-${JAVACMD} -jar ${SABLECC_HOME}/lib/java/sablecc.jar
+${JAVACMD} -jar ${SABLECC_HOME}/lib/java/sablecc.jar "$@"
