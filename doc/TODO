@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1337 2004/01/26 03:34:31 rh Exp $
+$NetBSD: TODO,v 1.1338 2004/01/26 12:11:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -197,7 +197,6 @@ Suggested package updates
 	o gsasl-0.0.14
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
-	o gtk-gnutella-0.93
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
 	o guile-pg-0.16 [pkg/24039]
