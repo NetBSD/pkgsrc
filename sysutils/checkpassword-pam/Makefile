@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/20 22:05:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/14 05:15:40 jlam Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
@@ -17,5 +17,5 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin man/man8
 
-.include "../../security/PAM/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
