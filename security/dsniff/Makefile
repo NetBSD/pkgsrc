@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/01/28 23:35:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.23 2005/02/05 16:11:48 adrianp Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
@@ -14,7 +14,7 @@ USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
-BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
+BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libnet/buildlink3.mk"

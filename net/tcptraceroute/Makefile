@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/28 23:35:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/05 16:11:47 adrianp Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
@@ -12,7 +12,7 @@ COMMENT=		Traceroute implementation using TCP packets
 
 USE_BUILDLINK3=		YES
 
-BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
+BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
 
 BUILD_TARGET=		tcptraceroute
 
