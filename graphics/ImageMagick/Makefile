@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2003/01/03 23:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2003/01/24 20:13:42 hubertf Exp $
 
 DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
 PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
@@ -35,8 +35,8 @@ NOT_FOR_PLATFORM=	NetBSD-*-sparc64
 
 .include "../../mk/bsd.prefs.mk"
 
-# Avoid compiler bug on "arm32"
-.if (${MACHINE_ARCH} == arm32)
+# Avoid compiler bug on "arm32" and "mipsel" (cobalt?)
+.if (${MACHINE_ARCH} == arm32) || (${MACHINE_ARCH} == mipsel)
 CFLAGS=			-O
 .endif
 
