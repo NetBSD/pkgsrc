@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/04 00:37:28 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/15 20:57:51 wiz Exp $
 
 DISTNAME=		cilk-5.3.1
 CATEGORIES=		lang parallel
@@ -10,8 +10,9 @@ HOMEPAGE=		http://supertech.lcs.mit.edu/cilk/
 COMMENT=		multithreaded parallel programming language based on ANSI C
 
 GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
 USE_BUILDLINK_ONLY= 	# defined
+USE_GMAKE=		# defined
+USE_PTHREAD=		native pth
 
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
 
@@ -27,6 +28,6 @@ post-install:
 		${PREFIX}/share/examples/cilk
 	${INSTALL_DATA} ${WRKSRC}/FAQ/cilk-faq.info ${PREFIX}/info
 
-.include "../../devel/pth/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
