@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2004/04/01 18:21:20 jmmv Exp $
+$NetBSD: patch-aa,v 1.10 2004/09/21 16:45:47 jmmv Exp $
 
---- libgnomevfs/xdgmime.c.orig	2004-01-20 22:44:22.000000000 +0100
+--- libgnomevfs/xdgmime.c.orig	2004-07-24 16:39:43.000000000 +0200
 +++ libgnomevfs/xdgmime.c
-@@ -97,7 +97,7 @@ xdg_mime_init (void)
+@@ -189,7 +189,7 @@ xdg_run_command_on_dirs (XdgDirectoryFun
  
-       xdg_data_dirs = getenv ("XDG_DATA_DIRS");
-       if (xdg_data_dirs == NULL)
--	xdg_data_dirs = "/usr/local/share/:/usr/share/";
-+	xdg_data_dirs = PREFIX "/share/:/usr/local/share/:/usr/share/";
+   xdg_data_dirs = getenv ("XDG_DATA_DIRS");
+   if (xdg_data_dirs == NULL)
+-    xdg_data_dirs = "/usr/local/share/:/usr/share/";
++    xdg_data_dirs = PREFIX "/share/:/usr/local/share/:/usr/share/";
  
-       ptr = xdg_data_dirs;
+   ptr = xdg_data_dirs;
  
