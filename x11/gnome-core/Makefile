@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1998/11/01 23:28:33 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/03 00:49:12 tron Exp $
 #
 
-DISTNAME=	gnome-core-0.30
+DISTNAME=	gnome-core-0.99.0
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 		ftp://ftp.gnome.org/pub/GNOME/sources/ \
@@ -10,8 +10,10 @@ MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	gnome-libs-0.30.1:../../x11/gnome-libs
-DEPENDS+=	libgtop-0.26.0:../../devel/libgtop
+DEPENDS+=	gnome-libs-0.99.0:../../x11/gnome-libs
+DEPENDS+=	libgtop-0.99.0:../../devel/libgtop
+
+CONFLICTS=	gnome-core-*
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
