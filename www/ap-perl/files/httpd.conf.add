@@ -1,16 +1,16 @@
-# $NetBSD: httpd.conf.add,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+# $NetBSD: httpd.conf.add,v 1.2 1998/12/04 17:25:13 tv Exp $
 #
 # The following should be added to the DSO (Dynamic Shared Object) portion
-# of your httpd.conf file.  Uncomment the appropriate libperl.so line, and
-# add to httpd.conf.  Starting the server should yield "mod_perl" in the
-# version string logged to error_log.
+# of your httpd.conf file.  Starting the server should yield "mod_perl" in
+# the version string logged to error_log.
+#
+# DO NOT "restart" the server when enabling or disabling mod_perl - "stop"
+# the server, and then "start" it manually.  mod_perl can cause httpd to
+# spin if httpd adds or removes mod_perl after server startup.
 #
 
-LoadFile !libm.so
-# for a.out systems:
-#LoadFile /usr/pkg/lib/perl5/alpha-netbsd/5.00404/CORE/libperl.so.4.4
-# for ELF systems:
-#LoadFile /usr/pkg/lib/perl5/alpha-netbsd/5.00404/CORE/libperl.so
+LoadFile !libm.so.0
+LoadFile /usr/pkg/lib/perl5/@@MACHINE_ARCH@@-netbsd/5.00404/CORE/libperl.so@@PERL_EXT@@
 LoadModule perl_module lib/httpd/mod_perl.so
 AddModule mod_perl.c
 

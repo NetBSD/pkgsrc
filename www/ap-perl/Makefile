@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/04 17:25:13 tv Exp $
 #
 
 DISTNAME=       	mod_perl-1.16
@@ -11,7 +11,8 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://perl.apache.org/
 
 DEPENDS=		libperl-5.00404:../../lang/libperl \
-			apache-1.3.3.1:../../www/apache
+			apache-1.3.3.2:../../www/apache
+USE_PERL5=		yes
 
 post-extract:
 	@${LN} -sf ../../../Apache/typemap ${WRKSRC}/src/modules/perl/
@@ -32,13 +33,20 @@ post-build:
 		Apache.c Constants.c perlxsi.c && \
 	PERLLIBDIR=`${PREFIX}/bin/perl -MConfig -e 'print $$Config{archlibexp}'` && \
 	${PREFIX}/sbin/apxs -c -o mod_perl.so -I$$PERLLIBDIR/CORE -DMOD_PERL \
-		Apache.c Constants.c [mop]*.c $$PERLLIBDIR/DynaLoader_pic.o
+		-DPERL_TRACE Apache.c Constants.c [mop]*.c $$PERLLIBDIR/DynaLoader_pic.o
 
 post-install:
 	@cd ${WRKSRC}/src/modules/perl && ${PREFIX}/sbin/apxs -i mod_perl.so
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_perl
-	${INSTALL_DATA} ${FILESDIR}/httpd.conf.add ${PREFIX}/share/doc/mod_perl/
+.if exists(/usr/libexec/ld.elf_so)
+	${SED}	-e 's,@@MACHINE_ARCH@@,${MACHINE_ARCH},' \
+		-e 's,@@PERL_EXT@@,,' ${FILESDIR}/httpd.conf.add >${WRKSRC}/httpd.conf.add
+.else
+	${SED}	-e 's,@@MACHINE_ARCH@@,${MACHINE_ARCH},' \
+		-e 's,@@PERL_EXT@@,.4.4,' ${FILESDIR}/httpd.conf.add >${WRKSRC}/httpd.conf.add
+.endif
+	${INSTALL_DATA} ${WRKSRC}/httpd.conf.add ${PREFIX}/etc/httpd/httpd.conf.modperl
 
 .include "../../mk/bsd.pkg.mk"
