@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/12 02:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:06:55 wiz Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://wm.current.nu/files.php\#wterm
+COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 
 DEPENDS+=	windowmaker-*:../../wm/windowmaker
 

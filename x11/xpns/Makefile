@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/13 15:31:07 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:07:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pgiffuni@fps.biblos.unal.edu.co
 HOMEPAGE=	http://www.informatik.uni-stuttgart.de/ipvr/bv/pns/pns.html
+COMMENT=	Petri-Net Simulator for Xwindows
 
 USE_X11BASE=	yes
 NO_WRKSUBDIR=	yes

@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2000/12/22 17:26:18 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2001/02/17 17:06:35 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
+
+COMMENT=		API compatible clone of the OSF/Motif toolkit
 
 CONFIGURE_ARGS+=	--disable-build-12
 CONFIGURE_ARGS+=	--enable-build-20

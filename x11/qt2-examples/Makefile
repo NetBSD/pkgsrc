@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/02/06 09:26:15 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:42 wiz Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
+
+COMMENT=	QT2 Tutorial, example code and HTML documentation
 
 .include "../qt2-libs/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/22 09:22:34 skrll Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:06:43 wiz Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://qtarch.sourceforge.net/
+COMMENT=	Graphical dialog editor for the Qt widget set
 
 DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
 DEPENDS+=	png-*:../../graphics/png

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/11/08 15:09:37 abs Exp $
+# $NetBSD: Makefile,v 1.56 2001/02/17 17:06:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=       http://www.kde.org/
+COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png

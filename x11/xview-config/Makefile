@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/23 18:02:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 17:07:29 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.9 1998/05/04 03:34:50 steve Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		jlam@netbsd.org
+COMMENT=		OpenLook Toolkit config files
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

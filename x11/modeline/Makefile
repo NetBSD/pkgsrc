@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/28 20:50:08 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:36 wiz Exp $
 
 DISTNAME=		modeline_vfr.c
 PKGNAME=		modeline-20001121
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		# empty
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.dkfz-heidelberg.de/spec/linux/modeline/
+COMMENT=		calculates XF86 Modelines to configure your monitor for X11R6
 
 WRKSRC=			${WRKDIR}/modeline
 

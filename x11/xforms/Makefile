@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/09/28 20:34:05 fredb Exp $
+# $NetBSD: Makefile,v 1.35 2001/02/17 17:07:08 wiz Exp $
 #
 
 DISTNAME=       bxform-088
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://world.std.com/~xforms/
+COMMENT=	Graphical user interface toolkit for X Window System
 
 LICENSE=	fee-based-commercial-use
 

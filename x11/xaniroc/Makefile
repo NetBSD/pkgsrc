@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/28 00:55:53 simonb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:58 wiz Exp $
 #
 # New ports collection makefile for:   xaniroc
 # Version required:    0.3
@@ -16,6 +16,7 @@ MASTER_SITES=	ftp://ftp.freebird.org/unixware/freebird/x11/utils/ \
 EXTRACT_SUFX=	.src.tar.Z
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	animate your root-cursor
 
 USE_IMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/28 09:14:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:06:51 wiz Exp $
 #
 
 DISTNAME=		type1inst-0.6.1
@@ -6,6 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=X11/xutils/}
 
 MAINTAINER=		groo@netbsd.org
+COMMENT=		Automatically generate fonts.scale/fonts.dir for Type1 fonts
 
 USE_PERL5=		yes
 USE_X11BASE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/12 18:09:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:56 wiz Exp $
 #
 
 DISTNAME=		wxGTK-2.2.3
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/source/
 
 MAINTAINER=		tsarna@netbsd.org
 HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/
+COMMENT=		GTK-based implementation of the wxWindows GUI library
 
 DEPENDS+=		gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=		jpeg-6b:../../graphics/jpeg

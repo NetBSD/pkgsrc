@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/12 20:38:38 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:39 wiz Exp $
 #
 
 DISTNAME=	wxPython-2.2.2
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://wxpython.org/
+COMMENT=	wxPython: Python bindings for wxWindows
 
 DEPENDS+=       python>=2.0:../../lang/python
 DEPENDS+=       wxGTK>=2.2.2:../../x11/wxGTK

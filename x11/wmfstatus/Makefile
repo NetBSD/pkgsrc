@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:36 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:54 wiz Exp $
 
 DISTNAME=	wmfstatus-0.3
 CATEGORIES=	x11
@@ -6,6 +6,7 @@ MASTER_SITES=	http://www.finik.net/files/
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.finik.net/software.html
+COMMENT=	general purpose 8x5 LCD screen for WindowMaker
 
 USE_X11=	YES
 USE_XPM=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:24 wiz Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.handhelds.org/projects/xscribble.html
+COMMENT=	Handwriting recognition (like graffiti)
 
 USE_IMAKE=	YES
 NO_INSTALL_MANPAGES=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/17 15:26:31 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:07:30 wiz Exp $
 #
 
 DISTNAME=	xworld-2.0
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://gutemine.geo.uni-koeln.de/pub/xworld/ \
 		ftp://ftp.Uni-Koeln.DE/misc/
 
 MAINTAINER=	wennmach@geo.Uni-Koeln.DE
-#HOMEPAGE=
+COMMENT=	The earth as seen from the direction of the sun
 
 HAS_CONFIGURE=	yes
 

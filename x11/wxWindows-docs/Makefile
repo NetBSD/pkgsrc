@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/13 17:49:39 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:56 wiz Exp $
 
 DISTNAME=		wxHTML22
 PKGNAME=		wxWindows-docs-2.2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/docs.html
+COMMENT=		HTML documentation for wxWindows
 
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined

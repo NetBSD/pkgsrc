@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/24 18:45:00 he Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:49 wiz Exp $
 
 DISTNAME=	tk8.3.2
 PKGNAME=	tk-8.3.2
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.tcltk.com/
+COMMENT=	Graphical toolkit for TCL
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 

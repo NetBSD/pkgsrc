@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/18 22:51:42 itohy Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:36 wiz Exp $
 
 DISTNAME=		oneko-1.1b
 PKGNAME=		oneko-1.2
@@ -10,6 +10,7 @@ PATCH_SITES=		http://hp.vector.co.jp/authors/VA004959/oneko/
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		johnam@mail.kemper.org
+COMMENT=		Like xneko except on the desktop and with other animals
 
 USE_IMAKE=		yes
 WRKSRC=			${WRKDIR}/oneko

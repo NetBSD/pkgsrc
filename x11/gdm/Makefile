@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/11/19 19:42:59 rh Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 17:06:22 wiz Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -9,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/06 03:17:01 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 17:06:23 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-1.2.2
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-applets/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
+COMMENT=		Applets for GNOME
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake

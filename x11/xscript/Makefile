@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/23 07:32:55 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:07:25 wiz Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.Z
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
+COMMENT=	X Window system script recording and playback
 
 USE_X11BASE=	YES
 USE_IMAKE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/30 11:55:01 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:06:58 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/10/15 20:23:40 max Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=     volf@oasis.IAEhv.nl
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Peaks/7814/
+COMMENT=	3270 Terminal emulator
 
 WRKSRC=		${WRKDIR}/x3270-3.2
 USE_IMAKE=	yes
