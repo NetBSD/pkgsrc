@@ -1,5 +1,14 @@
 --- Makefile.orig	Thu Sep 10 16:59:31 1992
-+++ Makefile	Wed Aug 14 16:57:57 1996
++++ Makefile	Tue Feb 24 01:36:50 1998
+@@ -8,7 +8,7 @@
+ ### socket.1 in /usr/local/man/man1/socket.1
+ ### Make sure the target directories exist before doing a "make install".
+ 
+-INSTALLBASE = /usr/local
++INSTALLBASE = ${PREFIX}
+ INSTALLBINPATH = $(INSTALLBASE)/bin
+ INSTALLBINMODE = 755
+ INSTALLMANPATH = $(INSTALLBASE)/man
 @@ -43,7 +43,8 @@
  ### CDC 4680 EP/IX: (I know it *has* setsid(2), but not with bsd43)
  # SWITCHES = -systype bsd43 -DNOSETSID
