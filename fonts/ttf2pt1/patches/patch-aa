@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
 
---- Makefile.orig	Mon Oct 15 04:32:29 2001
+--- Makefile.orig	Sun Oct 14 19:32:29 2001
 +++ Makefile
 @@ -20,7 +20,7 @@
  #
@@ -11,25 +11,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
  
  # For GNU C
  #
-@@ -54,7 +54,7 @@
+@@ -54,7 +54,7 @@ LIBS_SYS= -lm
  # This WON'T BUILD with FT2-beta8, use the FreeType release 2.0.
  # http://download.sourceforge.net/freetype/freetype-2.0.tar.gz
  
 -CFLAGS_FT= 
-+CFLAGS_FT= -DUSE_FREETYPE `${FREETYPE_CONFIG} --cflags`
++CFLAGS_FT= -DUSE_FREETYPE `freetype-config --cflags`
  
  # To enable use of the FreeType-2 library
  # (if the include and lib directory do not match your installation,
-@@ -65,7 +65,7 @@
+@@ -65,7 +65,7 @@ CFLAGS_FT= 
  # 
  # The FreeType-2 library flags (disabled by default)
  
 -LIBS_FT=
-+LIBS_FT= `${FREETYPE_CONFIG} --libs` -Wl,-R`${FREETYPE_CONFIG} --prefix`/lib
++LIBS_FT= `freetype-config --libs`
  
  # To enable use of the FreeType-2 library
  # (if the include and lib directory do not match your installation,
-@@ -84,20 +84,20 @@
+@@ -84,20 +84,20 @@ CFLAGS_PREF=
  #CFLAGS_PREF= -DPREFER_FREETYPE
  
  # Uncomment the second line to not compile t1asm into ttf2pt1
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
  # for scripts, maps/encodings etc.
  SHAREDIR = $(INSTDIR)/share/ttf2pt1
  MANDIR = $(INSTDIR)/man
-@@ -118,12 +118,12 @@
+@@ -118,12 +118,12 @@ DOCS=CHANGES README FONTS FONTS.hpux enc
  	app/X11/README app/netscape/README
  
  SUBDIRS = app encodings maps scripts other
@@ -70,7 +70,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
  
  docs: $(DOCS)
  
-@@ -202,31 +202,21 @@
+@@ -175,7 +175,7 @@ runt1asm.o: runt1asm.c global.h
+ 	$(CC) $(CFLAGS) $(CFLAGS_EXTT1ASM) -c runt1asm.c
+ 
+ ttf2pt1:	ttf2pt1.o pt1.o runt1asm.o ttf.o ft.o bdf.o bitmap.o
+-	$(CC) $(CFLAGS) -o ttf2pt1 ttf2pt1.o pt1.o runt1asm.o ttf.o ft.o bdf.o bitmap.o $(LIBS)
++	$(CC) $(LDFLAGS) -o ttf2pt1 ttf2pt1.o pt1.o runt1asm.o ttf.o ft.o bdf.o bitmap.o $(LIBS)
+ 
+ CHANGES: CHANGES.html
+ 	scripts/unhtml <CHANGES.html >CHANGES
+@@ -202,31 +202,21 @@ FONTS.hpux: FONTS.hpux.html
  	scripts/unhtml <FONTS.hpux.html >FONTS.hpux
  
  install: all
