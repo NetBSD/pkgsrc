@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: fetch-message,v 1.3 2002/10/07 21:44:20 wiz Exp $
+$NetBSD: fetch-message,v 1.4 2002/10/11 20:50:43 jschauma Exp $
 
     If you would like to install a localized version of Netscape 7, you
     can specify the PKG_LANG environment variable to be one of:
@@ -7,12 +7,5 @@ $NetBSD: fetch-message,v 1.3 2002/10/07 21:44:20 wiz Exp $
     english (default), french, german, japanese
 
     Note that this needs to be done *before* you fetch the distfile!
-
-    Furthermore, if you would like to perform a "complete" install rather
-    than the default "recommended" install, you can set the variable
-    NS_INST to "complete".
-
-    Please note that if you set these variables, you also need to set them 
-    as root before running 'make install'!
 
 ===========================================================================
