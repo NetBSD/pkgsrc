@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/01/05 22:44:42 magick Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/06 18:27:42 magick Exp $
 
-DISTNAME=	nxtvepg-2.4.2
-PKGREVISION=	1
+DISTNAME=	nxtvepg-2.5.0
+
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nxtvepg/}
 
@@ -18,6 +18,7 @@ USE_X11=	yes
 USE_X11BASE=	yes
 USE_BUILDLINK2= yes
 pre-configure:
+	${CP} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/
 	cd ${WRKSRC};							\
 	${MV} -f pod2help.pl pod2help.pl.orig;				\
 	${SED} -e "s|@PERL5@|${PERL5}|g" pod2help.pl.orig > pod2help.pl; \
