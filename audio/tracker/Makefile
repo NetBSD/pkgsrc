@@ -1,9 +1,4 @@
-# New ports collection makefile for:    tracker
-# Version required:     5.3
-# Date created:         2 Oct 1994
-# Whom:                 swallace
-#
-# $NetBSD: Makefile,v 1.6 1998/03/01 03:27:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -37,4 +32,4 @@ post-install:
 	-${MKDIR} ${PREFIX}/share/doc/tracker
 	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,4 @@
-# Makefile for:		amp
-# Version required:	0.7.6
-#
-# $NetBSD: Makefile,v 1.4 1998/03/20 06:02:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:09 agc Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -19,4 +16,4 @@ do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/amp ${PREFIX}/bin
 	@ ${INSTALL_MAN} ${WRKSRC}/amp.1 ${PREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

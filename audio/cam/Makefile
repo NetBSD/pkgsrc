@@ -1,9 +1,4 @@
-# New ports collection makefile for:	cam
-# Version required:	1.02
-# Date created:		Tue Nov 12 15:54:21 CST 1996
-# Whom:			erich@FreeBSD.org
-#
-# $NetBSD: Makefile,v 1.3 1998/01/19 00:50:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:09 agc Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -19,4 +14,4 @@ BUILD_DEPENDS=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
 
 MAN1=		cam.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

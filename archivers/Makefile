@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/03/19 14:10:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
@@ -24,4 +24,4 @@
 #    SUBDIR += zip.with_encryption
     SUBDIR += zoo
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

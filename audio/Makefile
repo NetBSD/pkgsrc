@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/02/22 23:29:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1998/04/15 10:38:09 agc Exp $
 #
 
     SUBDIR += amp
@@ -23,4 +23,4 @@
     SUBDIR += xmmix
     SUBDIR += xwave
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"
