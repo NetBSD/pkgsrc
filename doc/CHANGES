@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7848 2004/11/14 06:16:51 jlam Exp $
+$NetBSD: CHANGES,v 1.7849 2004/11/14 09:16:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Archive-Zip to 1.14 [seb 2004-11-13]
 	Updated kphone to 4.0.5 [tron 2004-11-13]
 	Updated readline to 5.0 [jlam 2004-11-14]
+	Updated rhythmbox to 0.8.8 [jmmv 2004-11-14]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2363 2004/11/14 06:17:18 jlam Exp $
+$NetBSD: TODO,v 1.2364 2004/11/14 09:15:28 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ Suggested package updates
 	o ratpoison-1.3.0
 	o realplayer-10.0
 	o rep-gtk-0.17
-	o rhythmbox-0.8.8
 	o rio500-0.8.1
 	o rioutil-1.4.6.1
 	o ripmime-1.4.0.1
