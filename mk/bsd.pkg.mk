@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.258 1999/04/20 20:28:11 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.259 1999/04/22 15:50:42 sakamoto Exp $
 #
 # This file is in the public domain.
 #
@@ -601,6 +601,10 @@ MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
 	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
+
+# Empty declaration to avoid "variable MASTER_SITES recursive" error
+MASTER_SITES?=
+PATCH_SITES?=
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
