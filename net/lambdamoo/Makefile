@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:18 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/30 19:49:25 jlam Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
@@ -24,7 +24,8 @@ PKG_GROUPS=		${LAMBDAMOO_GROUP}
 PKG_USERS=		${LAMBDAMOO_USER}:${LAMBDAMOO_GROUP}
 _PKG_USER_HOME=		${LAMBDAMOO_HOME}
 _PKG_USER_SHELL=	${SH}
-DEINSTALL_EXTRA_TMPL=   ${WRKDIR}/DEINSTALL.out
+
+FILES_SUBST+=		LAMBDAMOO_HOME=${LAMBDAMOO_HOME}
 
 ALL_TARGET=
 GNU_CONFIGURE=		yes
@@ -33,8 +34,6 @@ pre-build:
 	${MV} ${WRKSRC}/restart.sh ${WRKSRC}/restart.sh.in
 	${SED} <${WRKSRC}/restart.sh.in >${WRKSRC}/restart.sh	\
 		"s|__PREFIX__|${PREFIX}|g"
-	${SED} <${PKGDIR}/DEINSTALL >${DEINSTALL_EXTRA_TMPL}	\
-		"s|__LAMBDAMOO_HOME__|${LAMBDAMOO_HOME}|g"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/moo ${PREFIX}/sbin
