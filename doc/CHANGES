@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5678 2004/04/20 14:26:48 uebayasi Exp $
+$NetBSD: CHANGES,v 1.5679 2004/04/20 14:36:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libnbcompat to 20040420 [grant 2004-04-20]
 	Updated w3m to 0.5nb1 [uebayasi 2004-04-20]
 	Updated w3m-img to 0.5nb1 [uebayasi 2004-04-20]
+	Updated gnopernicus to 0.8.4 [jmmv 2004-04-20]
