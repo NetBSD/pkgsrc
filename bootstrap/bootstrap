@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.17 2004/05/05 14:39:45 tv Exp $
+# $NetBSD: bootstrap,v 1.18 2004/05/11 02:07:19 schmonz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -40,7 +40,6 @@ BOOTSTRAP_VERSION=20040214
 # set defaults for system locations
 prefix=/usr/pkg
 pkgdbdir=/var/db/pkg
-pkgsrcdir=/usr/pkgsrc
 sysconfdir=${prefix}/etc
 
 ignorecasecheck=no
@@ -49,12 +48,12 @@ ignoreusercheck=no
 # where the building takes place
 wrkdir=work # default: relative to pkgsrc/bootstrap
 bootstrapdir=`pwd`
+pkgsrcdir=`dirname $bootstrapdir`
 
 usage="Usage: $0 "'
     [ --workdir=<workdir> ]
     [ --prefix=<prefix> ]
     [ --pkgdbdir=<pkgdbdir> ]
-    [ --pkgsrcdir=<pkgsrcdir> ]
     [ --sysconfdir=<sysconfdir> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
@@ -369,7 +368,6 @@ while [ $# -gt 0 ]; do
 	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'`
 			sysconfdir=${prefix}/etc ;;
 	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
-	--pkgsrcdir=*)	pkgsrcdir=`echo $1 | $sedprog -e 's|--pkgsrcdir=||'` ;;
 	--sysconfdir=*)	sysconfdir=`echo $1 | $sedprog -e 's|--sysconfdir=||'`;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
