@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/26 19:32:31 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/09/24 15:31:22 tron Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -6,11 +6,11 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
 MAINTAINER=	tron@netbsd.org
 
-DEPENDS+=	a2ps-*:../../print/a2ps			\
-		ghostscript-*:../../print/ghostscript5	\
+DEPENDS+=	a2ps-*:../a2ps			\
+		ghostscript-*:../ghostscript5	\
 		netpbm-*:../../graphics/netpbm		\
-		teTeX-bin-*:../../print/teTeX		\
-		papersize-*:../../print/papersize
+		teTeX-bin-*:../teTeX-bin	\
+		papersize-*:../papersize
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
