@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/04/23 21:20:33 kim Exp $
+
+--- cvsweb.cgi.orig	Thu Jul 27 13:42:28 2000
++++ cvsweb.cgi	Mon Apr 23 17:15:24 2001
+@@ -2051,7 +2051,7 @@
+ 	print "</SELECT>\n";
+ 	$diffrev = $revdisplayorder[0];
+ 	$diffrev = $input{"r2"} if (defined($input{"r2"}));
+-	print "<INPUT TYPE=\"TEXT\" SIZE=\"$inputTextSize\" NAME=\"tr2\" VALUE=\"$diffrev\" onChange='docuement.diff_select.r2.selectedIndex=0'>\n";
++	print "<INPUT TYPE=\"TEXT\" SIZE=\"$inputTextSize\" NAME=\"tr2\" VALUE=\"$diffrev\" onChange='document.diff_select.r2.selectedIndex=0'>\n";
+         print "<BR>Type of Diff should be a&nbsp;";
+ 	printDiffSelect();
+ 	print "<INPUT TYPE=SUBMIT VALUE=\"  Get Diffs  \">\n";
