@@ -1,0 +1,50 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/11 22:06:45 damon Exp $
+bin/etherape
+etc/etherape/services
+lib/locale/es/LC_MESSAGES/etherape.mo
+lib/locale/fr/LC_MESSAGES/etherape.mo
+lib/locale/nl/LC_MESSAGES/etherape.mo
+man/man1/etherape.1
+share/etherape/glade/etherape.glade
+share/etherape/glade/etherape.png
+share/etherape/glade/pause.xpm
+share/etherape/glade/play.xpm
+share/etherape/glade/stop.xpm
+share/gnome/apps/Applications/etherape.desktop
+share/gnome/help/etherape/C/authors.html
+share/gnome/help/etherape/C/bugs.html
+share/gnome/help/etherape/C/docbook.css
+share/gnome/help/etherape/C/index.html
+share/gnome/help/etherape/C/license.html
+share/gnome/help/etherape/C/ln7.html
+share/gnome/help/etherape/C/prefs.html
+share/gnome/help/etherape/C/stylesheet-images/caution.gif
+share/gnome/help/etherape/C/stylesheet-images/home.gif
+share/gnome/help/etherape/C/stylesheet-images/important.gif
+share/gnome/help/etherape/C/stylesheet-images/next.gif
+share/gnome/help/etherape/C/stylesheet-images/note.gif
+share/gnome/help/etherape/C/stylesheet-images/prev.gif
+share/gnome/help/etherape/C/stylesheet-images/tip.gif
+share/gnome/help/etherape/C/stylesheet-images/toc-blank.gif
+share/gnome/help/etherape/C/stylesheet-images/toc-minus.gif
+share/gnome/help/etherape/C/stylesheet-images/toc-plus.gif
+share/gnome/help/etherape/C/stylesheet-images/up.gif
+share/gnome/help/etherape/C/stylesheet-images/warning.gif
+share/gnome/help/etherape/C/topic.dat
+share/gnome/help/etherape/C/usage.html
+share/pixmaps/etherape.png
+@dirrm share/gnome/help/etherape/C/stylesheet-images
+@dirrm share/gnome/help/etherape/C
+@dirrm share/gnome/help/etherape
+@dirrm share/gnome/help
+@dirrm share/gnome/apps/Applications
+@dirrm share/etherape/glade
+@dirrm share/etherape
+@dirrm lib/locale/nl/LC_MESSAGES
+@dirrm lib/locale/nl
+@dirrm lib/locale/fr/LC_MESSAGES
+@dirrm lib/locale/fr
+@dirrm lib/locale/es/LC_MESSAGES
+@dirrm lib/locale/es
+@dirrm lib/locale
+@dirrm etc/etherape
