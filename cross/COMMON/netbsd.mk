@@ -1,4 +1,4 @@
-#	$NetBSD: netbsd.mk,v 1.1 1998/08/12 02:42:29 tv Exp $
+#	$NetBSD: netbsd.mk,v 1.2 1998/08/12 18:58:09 tv Exp $
 
 # Definitions for building a cross-compile environment for a NetBSD target.
 
@@ -10,6 +10,6 @@
 
 #.include "../../mk/bsd.prefs.mk"
 #.if defined(USE_EGCS_FOR_NATIVE) || (${MACHINE_ARCH} != ${TARGET_ARCH})
-.include "../files/cross.mk"
+.include "../COMMON/cross.mk"
 #.else
 #.endif
