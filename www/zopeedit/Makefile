@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:47 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/04 09:38:41 drochner Exp $
 #
 
 DISTNAME=	zopeedit-0.7-src
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
 COMMENT=	Helper client application for Zope's ExternalEditor
 
 USE_BUILDLINK2=	YES
-PYTHON_VERSIONS_ACCEPTED= 22
+PYTHON_VERSIONS_ACCEPTED= 22 22pth 23 23pth
 PYDISTUTILSPKG=	yes
 
 post-install:
