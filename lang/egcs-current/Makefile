@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/06/15 19:06:24 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/06/22 12:44:29 agc Exp $
 #
 
 DISTNAME=	egcs-19980608
@@ -14,7 +14,6 @@ USE_GMAKE=	yes
 MAKE_ENV+=	BISON=true
 PLIST_SRC=	${WRKSRC}/.PLIST
 
-MAN1=		cccp.1 g++.1 g77.1 gcc.1
 INFO_FILES=	cpp.info g77.info gcc.info
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:36 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 12:52:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/10/26 23:56:58 fenner Exp
 #
 
@@ -14,7 +14,5 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PREFIX}/etc
 
 MANCOMPRESSED=	yes
-MAN1=		logsurfer.1
-MAN4=		logsurfer.conf.4
 
 .include "../../mk/bsd.pkg.mk"

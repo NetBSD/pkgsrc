@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:28 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=		packages@netbsd.org
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
 ALL_TARGET=
-MAN1=			splitvt.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/splitvt ${PREFIX}/bin

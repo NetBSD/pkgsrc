@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/05/04 23:42:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 12:47:35 agc Exp $
 #
 
 DISTNAME=	rat-3.0.24
@@ -12,7 +12,6 @@ DEPENDS+=	tk-8.0p2:../../x11/tk80
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=no
 USE_GMAKE=	yes
-MAN1=		rat.1
 
 do-build:
 	cd ${WRKSRC} && PREFIX=${PREFIX} MAKE=${MAKE_PROGRAM} ./Build rat

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=		packages@netbsd.org
 WRKSRC=			${WRKDIR}/cal-3.5/source
 MAKEFILE=		makefile.unx
 ALL_TARGET=		cal
-MAN1=			cal.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cal ${PREFIX}/bin/cal

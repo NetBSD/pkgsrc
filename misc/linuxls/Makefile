@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:35 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/30 04:43:34 asami Exp
 #
 
@@ -15,6 +15,5 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	bmc@WillsCreek.COM
 
 GNU_CONFIGURE=	yes
-MAN1=		linuxls.1 dircolors.1
 
 .include "../../mk/bsd.pkg.mk"
