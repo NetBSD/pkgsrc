@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/05/31 19:09:46 salo Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/27 04:10:51 salo Exp $
 #
 
-DISTNAME=	libebml-0.7.0
+DISTNAME=	libebml-0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libebml/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sourceforge.net/projects/ebml/
