@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.6 2003/01/29 19:35:41 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.7 2003/01/29 20:52:01 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -178,33 +178,39 @@ _PKG_JVM=	${_PKG_JVM_FIRSTACCEPTED}
 
 BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
+BUILDLINK_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
+BUILDLINK_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
 BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
+BUILDLINK_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
 BUILDLINK_DEPENDS.kaffe?=		kaffe-[0-9]*
 BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
+
+_JRE.jdk=		jdk
+_JRE.sun-jdk13=		sun-jre13
+_JRE.sun-jdk14=		sun-jre14
+_JRE.blackdown-jdk13=	blackdown-jre13
+_JRE.kaffe=		kaffe
+_JRE.wonka=		wonka
 
 _JAVA_BASE_CLASSES=	classes.zip
 
 .if ${_PKG_JVM} == "jdk"
 _JDK_PKGSRCDIR=		../../lang/jdk
-_JRE_PKGSRCDIR=		../../lang/jdk
-_JRE_DEPENDENCY=	jdk-[0-9]*:${_JRE_PKGSRCDIR}
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
 .elif ${_PKG_JVM} == "sun-jdk13"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk13
 _JRE_PKGSRCDIR=		../../lang/sun-jre13
-_JRE_DEPENDENCY=	sun-jre13-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 .elif ${_PKG_JVM} == "sun-jdk14"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk14
 _JRE_PKGSRCDIR=		../../lang/sun-jre14
-_JRE_DEPENDENCY=	sun-jre14-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4
 UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "blackdown-jdk13"
 _JDK_PKGSRCDIR=		../../lang/blackdown-jdk13
 _JRE_PKGSRCDIR=		../../lang/blackdown-jre13
-_JRE_DEPENDENCY=	blackdown-jre13-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/blackdown-1.3.1
 . if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 MAKE_ENV+=		THREADS_FLAG="green"
@@ -213,18 +219,17 @@ SCRIPTS_ENV+=		THREADS_FLAG="green"
 . endif
 .elif ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
-_JRE_PKGSRCDIR=		../../lang/kaffe
-_JRE_DEPENDENCY=	kaffe-[0-9]*:${_JRE_PKGSRCDIR}
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
 .elif ${_PKG_JVM} == "wonka"
 _JDK_PKGSRCDIR=		../../lang/wonka
-_JRE_PKGSRCDIR=		../../lang/wonka
-_JRE_DEPENDENCY=	wonka-[0-9]*:${_JRE_PKGSRCDIR}
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/wonka
 _JAVA_BASE_CLASSES=	wre.jar
 SCRIPTS_ENV+=		JAVAC="jikes"
 .endif
 _JDK_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_JVM}}:${_JDK_PKGSRCDIR}
+_JRE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_JRE.${_PKG_JVM}}}:${_JRE_PKGSRCDIR}
 
 EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 
