@@ -1,0 +1,193 @@
+# $NetBSD: libtool-fix-la,v 1.18.4.2 2003/01/24 12:09:17 jlam Exp $
+#
+# For *.la files, in the "relink_command" line, we make the following
+# replacements:
+#
+#       "libfoo.la" -> "-L./.libs libfoo.la"
+#	"dirpath/libfoo.la" -> "-Ldirpath/.libs libfoo.la"
+#
+# This allows the libraries to be found within ${WRKSRC} during relinking.
+# We rely on the proper rpath settings to be set by libtool.
+#
+# For the *.lai files, in the "dependency_libs" line, we remove redundant
+# -Ldir and -llib options.
+
+labase=`@BASENAME@ $lafile .la`
+ladir=`@DIRNAME@ $lafile`
+latimestamp=${ladir}/.${labase}.la.timestamp
+laifile=${ladir}/.libs/${labase}.lai
+if $test -f $lafile; then
+	. ${ladir}/${labase}.la
+
+	deps=
+	for i in ${dependency_libs}; do
+		case "$i" in
+		-L*)
+			case "$deps" in
+			*"$i "*) ;;
+			*"$i") ;;
+			*) deps="${deps} $i" ;;
+			esac
+			;;
+		*.la)
+			fixla=0
+			ltlibsdir=`@DIRNAME@ $i`/.libs
+			case "$ltlibsdir" in
+			/*)
+				# fix if an absolute path in ${WRKSRC}
+				case "$ltlibsdir" in
+				@WRKSRC@/*)	fixla=1 ;;
+				esac
+				;;
+			*)
+				# fix all relative paths
+				fixla=1
+				;;
+			esac
+			if $test $fixla -gt 0; then
+				case "$deps" in
+				*"-L$ltlibsdir "*) ;;
+				*"-L$ltlibsdir") ;;
+				*) deps="$deps -L$ltlibsdir" ;;
+				esac
+			fi
+			deps="${deps} $i"
+			;;
+		*)
+			deps="${deps} $i"
+			;;
+		esac
+	done
+
+	relink=
+	for i in ${relink_command}; do
+		case "$i" in
+		-I*|-D*)
+			;;
+		-L*)
+			case "$relink" in
+			*"$i "*) ;;
+			*"$i") ;;
+			*) relink="${relink} $i" ;;
+			esac
+			;;
+		$lafile)
+			relink="${relink} $i"
+			;;
+		*.la)
+			fixla=0
+			ltlibsdir=`@DIRNAME@ $i`/.libs
+			case "$ltlibsdir" in
+			/*)
+				# fix if an absolute path in ${WRKSRC}
+				case "$ltlibsdir" in
+				@WRKSRC@/*)	fixla=1 ;;
+				esac
+				;;
+			*)
+				# fix all relative paths
+				fixla=1
+				;;
+			esac
+			if $test $fixla -gt 0; then
+				case "$relink" in
+				*"-L$ltlibsdir "*) ;;
+				*"-L$ltlibsdir") ;;
+				*) relink="$relink -L$ltlibsdir" ;;
+				esac
+			fi
+			relink="${relink} $i"
+			;;
+		*)
+			relink="${relink} $i"
+			;;
+		esac
+	done
+	if $test -z "$deps" && $test -z "$relink" || \
+	   @EGREP@ "^#.*modified by buildlink2" $lafile >/dev/null 2>&1; then
+		:
+	else
+		@MV@ -f $lafile ${lafile}.blsav
+		if $test -n "$deps"; then
+			(
+			$cat ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
+			$echo "dependency_libs='$deps'"
+			$cat ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
+			) > ${lafile}.tmp
+		else
+			$cat ${lafile}.blsav > ${lafile}.tmp
+		fi
+		if $test -n "$relink"; then
+			(
+			$cat ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
+			$echo "relink_command='$relink'"
+			$cat ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
+			) > $lafile
+		else
+			$cat ${lafile}.tmp > $lafile
+		fi
+		$echo >> $lafile
+		$echo "# This file has been modified by buildlink2." >> $lafile
+		@RM@ ${lafile}.tmp
+		$echo "==> Fixed $lafile" >> $wrapperlog
+	fi
+	if $test -z "$laifile" || $test ! -f "$laifile" || \
+	   @EGREP@ "^#.*modified by buildlink2" $laifile >/dev/null 2>&1; then
+		:
+	else
+		@SED@	@_BLNK_WRAP_LT_UNTRANSFORM_SED@ \
+			@_BLNK_UNTRANSFORM_SED@ \
+			$laifile > ${laifile}.tmp
+		. ${laifile}.tmp
+		L=; l=; lexist=; prev=
+		for i in ${dependency_libs}; do
+			case "$i" in
+			$prev)
+				;;
+			-L*)
+				case "$i" in
+				-L${BUILDLINK_DIR}|-L${BUILDLINK_X11_DIR})
+					;;
+				-L@WRKSRC@/*)
+					;;
+				*)
+					case "$L" in
+					*"$i "*) ;;
+					*"$i") ;;
+					*) L="$L $i" ;;
+					esac
+					;;
+				esac
+				;;
+			-l*)
+				lexist=1
+				l="$l $i"
+				;;
+			*)
+				l="$l $i"
+				;;
+			esac
+			prev="$i"
+		done
+		if $test -z "$lexist"; then
+			L=
+		fi
+		deps="$L$l"
+		@MV@ -f $laifile ${laifile}.blsav
+		(
+			$cat ${laifile}.tmp | @SED@ -e '/^dependency_libs=/,$d'
+			$echo "dependency_libs='$deps'"
+			$cat ${laifile}.tmp | @SED@ -e '1,/^dependency_libs=/d'
+			$echo
+			$echo "# This file has been modified by buildlink2."
+		) > ${laifile}
+		@RM@ -f ${laifile}.tmp
+		$echo "==> Fixed $laifile" >> $wrapperlog
+		if $test "$libdir" != "${BUILDLINK_DIR}/.tmp/inst" && \
+		   @EGREP@ "${BUILDLINK_X11_DIR}|${BUILDLINK_DIR}" $laifile >/dev/null 2>&1; then
+			$echo "==> [buildlink2] Error: buildlink2 leakage into $laifile" >> $wrapperlog
+			$echo "==> [buildlink2] Error: buildlink2 leakage into $laifile" 1>&2
+			wrapper_result=1
+		fi
+	fi
+fi
