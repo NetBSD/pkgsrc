@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:52:10 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/13 00:45:24 wiz Exp $
 
 .if !defined(LIBGNOMECANVAS_BUILDLINK2_MK)
 LIBGNOMECANVAS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgnomecanvas
-BUILDLINK_DEPENDS.libgnomecanvas?=	libgnomecanvas>=2.2.1nb1
+BUILDLINK_DEPENDS.libgnomecanvas?=	libgnomecanvas>=2.2.1nb2
 BUILDLINK_PKGSRCDIR.libgnomecanvas?=	../../graphics/libgnomecanvas
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomecanvas=libgnomecanvas

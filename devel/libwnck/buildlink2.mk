@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:51:21 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/12/13 00:45:22 wiz Exp $
 
 .if !defined(LIBWNCK_BUILDLINK2_MK)
 LIBWNCK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libwnck
-BUILDLINK_DEPENDS.libwnck?=	libwnck>=2.2.1nb3
+BUILDLINK_DEPENDS.libwnck?=	libwnck>=2.2.1nb4
 BUILDLINK_PKGSRCDIR.libwnck?=	../../devel/libwnck
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libwnck=libwnck
