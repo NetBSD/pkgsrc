@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.7 1998/08/23 01:32:19 hubertf Exp $ -->
+<!-- $NetBSD: README.top,v 1.8 1999/08/22 01:30:16 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -18,7 +18,9 @@ The packages collection is divided into categories of packages.
 %%DESCR%%
 </p>
 
-<p>Here are the one-line descriptions for each of the categories:
+<p>Here are the one-line descriptions for each of the categories,
+a <a href="README-all.html">complete list of all packages</a> is also
+available:
 </p>
 
 <hr noshade>
