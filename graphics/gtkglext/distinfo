@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/01/14 05:35:53 rh Exp $
+$NetBSD: distinfo,v 1.4 2003/04/28 14:05:37 jmmv Exp $
 
-SHA1 (gtkglext-0.6.1.tar.bz2) = 0aaaa5c817bd9eabbdbf140129af4a626f29df73
-Size (gtkglext-0.6.1.tar.bz2) = 513119 bytes
+SHA1 (gtkglext-0.7.1.tar.bz2) = e1986732d0f8072148cff95a9db72425ff558a21
+Size (gtkglext-0.7.1.tar.bz2) = 530781 bytes
