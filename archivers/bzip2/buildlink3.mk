@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 09:34:23 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/05 11:05:44 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -60,4 +60,4 @@ BUILDLINK_DEPENDS+=	bzip2
 .  endif
 .endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
