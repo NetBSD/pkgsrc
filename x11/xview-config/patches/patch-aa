@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/09/13 20:21:54 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2000/10/23 18:02:56 jlam Exp $
 
 --- Imakefile.orig	Tue Jun 29 01:13:19 1993
 +++ Imakefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2000/09/13 20:21:54 jlam Exp $
  CFFILES = $(XVFILES) $(HEADERS)
  
 -InstallMultipleDestFlags(install,$(CFFILES),$(CONFIGDIR),$(INSTDATFLAGS))
-+InstallMultipleDestFlags(install,$(CFFILES),$(XVCONFIGDIR),$(INSTDATFLAGS))
++InstallMultipleDestFlags(install,$(CFFILES),$(PREFIX)/lib/X11/config,$(INSTDATFLAGS))
  
  depend::
  
