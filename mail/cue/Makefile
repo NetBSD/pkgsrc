@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/24 23:02:35 snj Exp $
 
 DISTNAME=	cue-snap-20040301
 PKGNAME=	cue-20040301
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	mh-e like mail user agent
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if defined(CUE_USE_CANNA) && !empty(CUE_USE_CANNA:M[Yy][Ee][Ss])
-.include "../../inputmethod/canna-lib/buildlink2.mk"
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_PREFIX.canna}
 .else
 CONFIGURE_ARGS+=	--without-canna
@@ -41,5 +41,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cue.hlp  ${PREFIX}/share/doc/cue
 	${INSTALL_DATA} ${WRKSRC}/cue.html ${PREFIX}/share/doc/cue
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
