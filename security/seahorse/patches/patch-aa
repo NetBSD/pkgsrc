@@ -1,17 +1,39 @@
-$NetBSD: patch-aa,v 1.5 2004/10/20 20:45:55 jmmv Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/07 13:19:24 jmmv Exp $
 
---- agent/seahorse-agent.c.orig	2004-10-15 00:12:08.000000000 +0200
-+++ agent/seahorse-agent.c
-@@ -264,8 +264,12 @@ main (int argc, char *argv[])
-     secmem_init (65536);
+--- libseahorse/seahorse-util.c.orig	2004-10-14 11:40:11.000000000 -0600
++++ libseahorse/seahorse-util.c
+@@ -226,11 +226,12 @@ seahorse_util_write_data_to_file (const 
+ 	gchar *buffer;
+ 	gint nread;
+    
+-    /* 
+-     * TODO: gpgme_data_seek doesn't work for us right now
+-     * probably because of different off_t sizes 
+-     */
+-    gpgme_data_rewind (data);
++    /* Reset the read pointer in data */
++    if (gpgme_data_seek (data, 0, SEEK_SET) == -1)
++    {
++        gpg_err_code_t e = gpg_err_code_from_errno (errno);
++        return GPG_E (e);                
++    }
+ 	
+     file = seahorse_vfs_data_create (path, TRUE, &err);
+     if(file != NULL)
+@@ -270,11 +271,11 @@ seahorse_util_write_data_to_text (gpgme_
+         guint nread = 0;
+ 	GString *string;
  
-     /* We need to drop privileges completely for security */
-+#ifdef _GNU_SOURCE
-     if (setresuid (getuid (), getuid (), getuid ()) == -1 ||
-         setresgid (getgid (), getgid (), getgid ()) == -1)
-+#else
-+    if (setuid (getuid ()) == -1 || setgid (getgid ()) == -1)
-+#endif
-         err (1, _("couldn't drop privileges properly"));
+-    /* 
+-     * TODO: gpgme_data_seek doesn't work for us right now
+-     * probably because of different off_t sizes 
+-     */
+-    gpgme_data_rewind (data);
++        /* Reset the read pointer in data */
++        if (gpgme_data_seek (data, 0, SEEK_SET) == -1)
++        {
++            return NULL;                
++        }
  
-     gtk_init (&argc, &argv);
+ 	string = g_string_new ("");
+ 	buffer = g_new (gchar, size);

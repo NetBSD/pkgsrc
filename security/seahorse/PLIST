@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/20 20:45:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/07 13:19:24 jmmv Exp $
 bin/seahorse
 bin/seahorse-agent
 bin/seahorse-pgp-preferences
 lib/bonobo/libseahorse-pgp-file-listener.la
 lib/bonobo/servers/Seahorse_PGP_File_Listener.server
+lib/libseahorse-internal.la
 share/applications/seahorse.desktop
 share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop
 share/gconf/schemas/seahorse.schemas
