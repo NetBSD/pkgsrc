@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.430 2003/03/30 13:41:49 markd Exp $
+$NetBSD: TODO,v 1.431 2003/03/31 13:11:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -28,7 +28,7 @@ Suggested new packages
 	http://jgloss.sourceforge.net/
 
 	lmule
-	An e2k client, based no emule, using the wxGTK toolkit.
+	An e2k client, based on emule, using the wxGTK toolkit.
 	http://lmule.sourceforge.net/
 
 	loserjabber
@@ -75,6 +75,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o Mesa-5.0.1
 	o Xbae-4.50.0
 	o abcde-2.1.0 [pkg/20633]
 	o abcde-2.1.1
@@ -91,6 +92,7 @@ Suggested package updates
 	o canna-3.6p3 [pkg/20208]
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o clisp-2.30
+	o conserver-7.2.6 [pkg/20966]
 	o courier-0.42.0
 	o courier-imap-1.7.0
 	o coreutils-4.5.7 (was fileutils/sh-utils/textutils)
@@ -98,10 +100,10 @@ Suggested package updates
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
 	o db4-4.1.25 [pkg/20289]
-	o dctc-0.85.0
+	o dctc-0.85.1
 	o dia-0.91 [pkg/20750]
 	o disc-cover-1.5.0
-	o distcc-1.2.2
+	o distcc-2.0.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl101
@@ -190,7 +192,7 @@ Suggested package updates
 	o netscape-7.02
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
-	o nut-7.20
+	o nut-7.22
 	o nxtvepg-2.5.0
 	o ogle-0.9.1
 	o openh323-1.11.2
