@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/06/01 10:24:42 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/28 12:31:42 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use GeoIP.
 #
@@ -9,7 +9,7 @@
 GEOIP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GeoIP
-BUILDLINK_DEPENDS.GeoIP?=		GeoIP>=1.1.9
+BUILDLINK_DEPENDS.GeoIP?=		GeoIP>=1.3.1
 BUILDLINK_PKGSRCDIR.GeoIP?=		../../net/GeoIP
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GeoIP=GeoIP
