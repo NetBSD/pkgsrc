@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.2 2003/07/17 22:55:37 grant Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/08/23 15:26:26 jschauma Exp $
 #
 # This file is included by the following packages:
 #	www/ap-iasp, www/iasp
 
 DISTNAME=	iASP2.1.01
-CATEGORIES=	www
+CATEGORIES=	www java
 MASTER_SITES=	http://www.stryon.com/iasp/211/
 
 IASP_VERSION=	2.1.1

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:56 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/23 15:23:00 jschauma Exp $
 #
 
 DISTNAME=	xp
 PKGNAME=	XP-0.5
-CATEGORIES=	textproc www
+CATEGORIES=	textproc www java
 MASTER_SITES=	ftp://ftp.jclark.com/pub/xml/
 EXTRACT_SUFX=	.zip
 
