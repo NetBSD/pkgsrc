@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8417 2004/12/23 20:50:24 rh Exp $
+$NetBSD: CHANGES,v 1.8418 2004/12/24 00:44:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6483,3 +6483,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rss2html to 0.7.1 [wiz 2004-12-23]
 	Updated speedtouch to 1.3.1 [skrll 2004-12-23]
 	Updated skype to 0.93.0.3 [rh 2004-12-24]
+	Removed pan-gnome [wiz 2004-12-24]
