@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/05/09 20:19:44 snj Exp $
+# $NetBSD: Makefile,v 1.39 2004/05/25 01:30:22 danw Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		2
@@ -28,13 +28,13 @@ CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 XMKMF=			${XMKMF_CMD} ${XMKMF_FLAGS}
 
 post-configure:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ctlwords.h
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} grammar.c
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} scanner.c
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} tokdefs.h
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} Makefiles
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} includes
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ctlwords.h
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} grammar.c
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} scanner.c
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} tokdefs.h
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} Makefiles
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} includes
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} depend
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgp
