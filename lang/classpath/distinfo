@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/11/29 15:17:00 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 09:03:06 agc Exp $
 
 SHA1 (classpath-0.12.tar.gz) = bf2729671a913f37ebe85bcb06455147684cebe2
+RMD160 (classpath-0.12.tar.gz) = cf58b798cb39c76e6109aa304e854e47779cc257
 Size (classpath-0.12.tar.gz) = 4129732 bytes
