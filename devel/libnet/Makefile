@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/01/20 21:17:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/25 17:52:32 adrianp Exp $
 #
 
 DISTNAME=	libnet-1.0.1b
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/
 
