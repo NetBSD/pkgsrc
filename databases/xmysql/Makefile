@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:13:24 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/29 05:59:24 jdolecek Exp $
 #
 
 DISTNAME=	xmysql-1.10
@@ -18,7 +18,7 @@ MAKE_ENV+=	X11PREFIX=${X11PREFIX}
 
 ALL_TARGET=	xmysql
 
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
