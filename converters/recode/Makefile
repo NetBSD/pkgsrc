@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/11/30 13:39:45 salo Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/26 10:03:35 seb Exp $
 #
 
 DISTNAME=		recode-3.6
@@ -15,8 +15,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=     	recode.info
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
