@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7404 2004/10/11 16:53:26 abs Exp $
+$NetBSD: CHANGES,v 1.7405 2004/10/11 17:49:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4614,4 +4614,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added win32-jdk-0.1 [tv 2004-10-11]
 	Added ccze-0.2.1 [minskim 2004-10-11]
 	Added whoson-2.03 [abs 2004-10-11]
-
+	Added dbus-0.22 [jmmv 2004-10-11]
+	Added dbus-glib-0.22 [jmmv 2004-10-11]
