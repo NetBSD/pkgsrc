@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/05 07:21:56 wiz Exp $
+
+SHA1 (dvipng-0.5.tar.gz) = 1e86ecfe3625a77694b3a8af3f15b249f33b38bb
+Size (dvipng-0.5.tar.gz) = 107122 bytes
+SHA1 (patch-aa) = 6442856f6a91b5e7afeb7a731bbf9dd391e0e3ee

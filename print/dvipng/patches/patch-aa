@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/05 07:21:56 wiz Exp $
+
+--- Makefile.in.orig	Tue Aug  5 08:58:36 2003
++++ Makefile.in
+@@ -70,10 +70,10 @@ README: readme.texi
+ 
+ install-docs:
+ 	-$(MKINSTALLDIRS) $(infodir)
+-	for x in preview-latex.info* ; do \
++	for x in dvipng.info* ; do \
+ 		$(INSTALL_DATA) $$x $(infodir) ; \
+ 	done
+-	-$(INSTALL_INFO) --info-dir=$(infodir) preview-latex.info
++	-$(INSTALL_INFO) --info-dir=$(infodir) dvipng.info
+ 
+ 
+ ####################################### The test
