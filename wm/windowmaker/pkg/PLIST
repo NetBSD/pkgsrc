@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/07/14 18:21:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/08/18 18:13:28 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -118,6 +118,16 @@ man/man1/wmsetbg.1
 man/man1/wsetfont.1
 man/man1/wxcopy.1
 man/man1/wxpaste.1
+man/sk/man1/geticonset.1
+man/sk/man1/getstyle.1
+man/sk/man1/seticons.1
+man/sk/man1/setstyle.1
+man/sk/man1/wdwrite.1
+man/sk/man1/wmaker.1
+man/sk/man1/wmsetbg.1
+man/sk/man1/wsetfont.1
+man/sk/man1/wxcopy.1
+man/sk/man1/wxpaste.1
 share/WINGs/Images.tiff
 share/WINGs/Images.xpm
 share/WINGs/defaultIcon.tiff
@@ -273,6 +283,7 @@ share/WindowMaker/plmenu.fi
 share/WindowMaker/plmenu.fr
 share/WindowMaker/plmenu.hr
 share/WindowMaker/plmenu.it
+share/WindowMaker/plmenu.ja
 share/WindowMaker/plmenu.ko
 share/WindowMaker/plmenu.pl
 share/WindowMaker/plmenu.ro
@@ -320,6 +331,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/WindowMaker.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/WINGs.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/WindowMaker.mo
@@ -327,7 +339,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/WPrefs.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/WindowMaker.mo
 @dirrm share/doc/WindowMaker
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker/Styles

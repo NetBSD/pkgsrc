@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/07/23 18:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/18 18:13:27 tron Exp $
 
-DISTNAME=		WindowMaker-0.65.0
-PKGNAME=		windowmaker-0.65.0
+DISTNAME=		WindowMaker-0.65.1
+PKGNAME=		windowmaker-0.65.1
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/pub/mirrors/WindowMaker/beta/srcs/
@@ -51,8 +51,9 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 post-extract:
 	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
 		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
-		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker
-	for manfile in ${WRKSRC}/doc/*.1x; \
+		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker \
+		 ${WRKSRC}/po/zh_TW.Big5.po
+	for manfile in ${WRKSRC}/doc/*.1x ${WRKSRC}/doc/*/*.1x; \
 	do \
 		${MV} $${manfile} `${ECHO} $${manfile} | ${SED} "s/1x$$/1/"`; \
 	done;
