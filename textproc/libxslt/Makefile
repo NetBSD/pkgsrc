@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2003/12/04 19:33:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.31 2003/12/26 21:56:14 jmmv Exp $
 
-DISTNAME=	libxslt-1.1.0
+DISTNAME=	libxslt-1.1.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.1/}
@@ -13,8 +13,10 @@ COMMENT=	XSLT parser library from the GNOME project
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
+USE_PERL5=		build
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxslt.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/libexslt.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}

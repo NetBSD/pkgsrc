@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.9 2003/12/04 19:33:47 xtraeme Exp $
+$NetBSD: patch-aa,v 1.10 2003/12/26 21:56:15 jmmv Exp $
 
---- doc/Makefile.in.orig	2003-12-04 18:57:11.000000000 +0100
-+++ doc/Makefile.in	2003-12-04 18:58:19.000000000 +0100
-@@ -76,7 +76,7 @@
- ECHO = @ECHO@
- EXTRA_LIBS = @EXTRA_LIBS@
+--- doc/Makefile.in.orig	2003-12-24 08:15:27.000000000 -0600
++++ doc/Makefile.in
+@@ -86,7 +86,7 @@ F77 = @F77@
+ GCJ = @GCJ@
+ GCJFLAGS = @GCJFLAGS@
  
 -HTML_DIR = $(datadir)/doc
 +HTML_DIR = $(datadir)/doc/html
  INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
  LDFLAGS = @LDFLAGS@
  LIBEXSLT_MAJOR_VERSION = @LIBEXSLT_MAJOR_VERSION@
-@@ -139,7 +139,7 @@
- 
+@@ -141,7 +141,7 @@ install_sh = @install_sh@
+ pythondir = @pythondir@
  
  # The name of the module.
 -DOC_MODULE = libxslt-$(VERSION)
@@ -20,20 +20,12 @@ $NetBSD: patch-aa,v 1.9 2003/12/04 19:33:47 xtraeme Exp $
  
  # The top-level SGML file.
  DOC_MAIN_XML_FILE = libxslt.xml
-@@ -150,7 +150,7 @@
+@@ -152,7 +152,7 @@ DOC_SOURCE_DIR = ..
  # A file in win32 depends upon two of the doc files
  WIN32_DIR = $(top_srcdir)/win32
  
 -TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
 +TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
  PAGES = API.html bugs.html contribs.html docs.html downloads.html \
-        help.html index.html intro.html news.html xsltproc2.html FAQ.html
+          help.html index.html intro.html news.html xsltproc2.html FAQ.html
  
-@@ -424,7 +424,6 @@
- 	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)/html
- 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
- 	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
--	-(cd $(DESTDIR); gtkdoc-fixxref --module=libxslt --html-dir=$(HTML_DIR))
- 
- dist-hook:
- 	(cd $(srcdir) ; tar cvf - *.1 *.html site.xsl news.xsl xsa.xsl *.gif html/*.html html/*.png tutorial/libxslt*) | (cd $(distdir); tar xf -)
