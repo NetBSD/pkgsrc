@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/09/10 16:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2002/10/03 01:59:07 wiz Exp $
 
 DISTNAME=		gnome-games-1.4.0.4
 PKGREVISION=		2
@@ -13,13 +13,13 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME games collection
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 BUILD_USES_MSGFMT=	YES
 
 CONFLICTS=		xbill-[0-9]*
 
+AUTOMAKE_REQD=		1.4
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
@@ -35,9 +35,6 @@ USE_CONFIG_WRAPPER=	YES
 INSTALL_FILE=		${WRKDIR}/INSTALL
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
-AUTOGEN_ENV=		NOCONFIGURE=1
-AUTOGEN_ENV+=		srcdir=${WRKSRC}
-
 post-patch:
 	cd ${WRKSRC} &&							\
 	${CP} gnect/src/connect4.c gnect/src/connect4.c.broken &&	\
@@ -45,7 +42,11 @@ post-patch:
 		< gnect/src/connect4.c.broken > gnect/src/connect4.c
 
 pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${AUTOGEN_ENV} ${SH} macros/autogen.sh
+	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize --force --copy
+	cd ${WRKSRC} && ${ACLOCAL} -I macros
+	cd ${WRKSRC} && ${AUTOHEADER}
+	cd ${WRKSRC} && ${AUTOMAKE} --add-missing --gnu
+	cd ${WRKSRC} && ${AUTOCONF}
 
 post-build:
 	${SED} -e 's#@@INSTALL@@#${INSTALL}#' \
@@ -67,4 +68,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../x11/gnome-core/buildlink.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
