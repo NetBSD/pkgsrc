@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2076 2004/08/26 00:01:36 wiz Exp $
+$NetBSD: TODO,v 1.2077 2004/08/26 13:13:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -180,6 +180,7 @@ Suggested package updates
 	o asc-1.15.0
 	o atari800-1.3.3
 	o auctex-11.52
+	o audacity-1.2.2
 	o avidemux-2.0.28
 	o balsa-1.4.4
 	o balsa2-2.2.3
@@ -446,7 +447,9 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
 	o xinvest-2.6.9
+	o xmame-0.86.1
 	o xmcd-3.3.0
+	o xmess-0.86.1
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.5
 	o xmms-iris-0.12
