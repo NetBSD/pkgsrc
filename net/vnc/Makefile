@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1998/06/09 16:41:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -9,9 +10,9 @@ DISTFILES=		vnc-3.3.1_unixsrc.tgz \
 			vnc-3.3.1_doc.tgz
 IGNOREFILES=		${DISTFILES}
 
-MAINTAINER=	 	msmith@FreeBSD.ORG
+MAINTAINER=	 	packages@netbsd.org
 
-USE_PERL5=		YES
+USE_PERL5=		yes
 
 EXTRACT_ONLY=		vnc-3.3.1_unixsrc.tgz
 
@@ -19,10 +20,10 @@ EXTRACT_ONLY=		vnc-3.3.1_unixsrc.tgz
 # but the DES parts came from the USA in the first place.
 RESTRICTED=		Contains cryptographic software
 
-NO_WRKSUBDIR=		YES
+NO_WRKSUBDIR=		yes
 
-USE_IMAKE=		YES
-NO_INSTALL_MANPAGES=	YES
+USE_IMAKE=		yes
+NO_INSTALL_MANPAGES=	yes
 
 ALL_TARGET=    		world
 
