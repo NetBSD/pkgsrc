@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/15 23:58:47 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/16 00:19:45 tron Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 
 GCC_VERSION=		${PKGNAME:C/.*-//}
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
 			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
 SRCDIR=			${WRKDIR}/${PKGNAME}
@@ -38,8 +39,12 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 
 post-build:
-	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${FILESDIR}/gcc.mk >${WRKDIR}/gcc.mk
+	for FILE in ${FILESDIR}/gcc.mk ${PKGDIR}/MESSAGE; do \
+	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
+		 -e 's#@@PKGNAME@@#${PKGNAME}#g' \
+		 -e 's#@@PREFIX@@#${PREFIX}#g' \
+	   <$$FILE >${WRKDIR}/$${FILE##*/}; \
+	done
 
 post-install:
 	${RM} -f ${PREFIX}/${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
