@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1559 2003/03/05 12:02:15 wiz Exp $
+$NetBSD: CHANGES,v 1.1560 2003/03/05 12:11:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -949,3 +949,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated htmllint to 20030225 [wiz 2003-03-05]
 	Updated tnef to 1.2.0 [wiz 2003-03-05]
 	Updated leim to 20.7nb2 [wiz 2003-03-05]
+	Updated libbonoboui to 2.2.0.1 [jmmv 2003-03-05]
