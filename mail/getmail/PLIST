@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/22 03:39:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/29 11:55:27 xtraeme Exp $
 bin/getmail
 libexec/getmail/ConfParser.py
 libexec/getmail/getmail.py
 libexec/getmail/getmail_classes.py
 libexec/getmail/getmail_constants.py
 libexec/getmail/getmail_defaults.py
-libexec/getmail/getmail_utilities.py
 libexec/getmail/getmail_maildir
 libexec/getmail/getmail_mbox
 libexec/getmail/getmail_mbox.py
+libexec/getmail/getmail_utilities.py
 libexec/getmail/timeoutsocket.py
 man/man1/getmail.1
 share/doc/getmail/BUGS
