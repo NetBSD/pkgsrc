@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2004/08/02 00:57:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.37 2004/08/02 01:59:23 kristerw Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
 # gets built at cross-pkg build time (it's target specific).
 
 DISTNAME=		binutils-2.15
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		cross-binutils-2.15.0.0
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
@@ -67,6 +67,7 @@ do-install:
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${BINDIR}/ld
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${PREFIX}/lib
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${PREFIX}/lib
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${PREFIX}/lib
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${PREFIX}/include
