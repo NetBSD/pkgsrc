@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5402 2004/04/01 05:20:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5403 2004/04/01 05:31:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated racoon to 20040401a [itojun 2004-04-01]
 	Added user_darwin-20040331 [danw 2004-04-01]
 	Added thy-0.8.10 [xtraeme 2004-04-01]
+	Added xmlindent-0.2.16 [xtraeme 2004-04-01]
