@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/01/23 16:05:13 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/20 17:56:16 wiz Exp $
 #
 
-DISTNAME=	icewm-1.0.1
+DISTNAME=	icewm-1.0.2
 CATEGORIES=	x11
 MASTER_SITES=	http://download.sourceforge.net/icewm/ \
 		ftp://ftp.fu-berlin.de/unix/X11/window-managers/icewm/
