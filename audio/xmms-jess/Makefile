@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/28 21:19:19 wiz Exp $
 #
 
 DISTNAME=	JESS-2.9.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://arquier.free.fr/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://arquier.free.fr/
-COMMENT=	XMMS plugin with Blur, image distorsion, etc.
+COMMENT=	XMMS plugin with Blur, image distortion, and others
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
