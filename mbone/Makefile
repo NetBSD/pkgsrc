@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2002/07/26 12:18:05 manu Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/24 13:52:07 wiz Exp $
 #
 
 COMMENT=	Multi-cast backBone applications
 
 SUBDIR+=	common-mml
 SUBDIR+=	imm
+SUBDIR+=	mdp
 SUBDIR+=	nte
 SUBDIR+=	rat
 SUBDIR+=	sdr
 SUBDIR+=	vat
 SUBDIR+=	vic
-SUBDIR+=	mdp
 
 .include "../mk/bsd.pkg.subdir.mk"
