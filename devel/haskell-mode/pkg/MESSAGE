@@ -13,7 +13,4 @@ default.el) file to autoload Haskell mode for Emacs.
 (autoload 'literate-haskell-mode "haskell-mode"
   "Major mode for editing literate Haskell scripts." t)
 
-This is taken from the haskell-mode.el file (in the 'site-lisp/haskell-mode/'
-directory) which you should consult for details of further customizations.
-
 =============================================================================
