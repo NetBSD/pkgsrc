@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.26 2002/06/02 00:40:19 schmonz Exp $
+# $NetBSD: defs.Linux.mk,v 1.27 2002/06/21 17:28:44 abs Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -31,7 +31,7 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
-MTREE?=		${ZOULARISBASE}/bin/mtree
+MTREE?=		${ZOULARISBASE}/sbin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		${ZOULARISBASE}/bin/pax
@@ -66,12 +66,12 @@ GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 USERADD?=		/usr/sbin/useradd
-ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
+ZOULARISBASE?=		/usr/pkg
 
 _DO_LIBINTL_CHECKS=	no	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
@@ -79,7 +79,7 @@ _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_PATCH_BACKUP_ARG= 	-V simple -z	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
