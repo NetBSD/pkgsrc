@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.305 1999/07/27 15:01:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.306 1999/07/28 10:07:55 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2125,23 +2125,22 @@ README.html: .PRECIOUS
 	@${MAKE} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
-		-e '/%%PKG%%/r$@.tmp3'					\
+		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
 		${SED_LICENSE_EXPR}					\
 		${SED_HOMEPAGE_EXPR}					\
-		-e '/%%COMMENT%%/r${PKGDIR}/COMMENT'			\
+		-e '/%%COMMENT%%/r ${PKGDIR}/COMMENT'			\
 		-e '/%%COMMENT%%/d'					\
-		-e '/%%BUILD_DEPENDS%%/r$@.tmp1'			\
+		-e '/%%BUILD_DEPENDS%%/r $@.tmp1'			\
 		-e '/%%BUILD_DEPENDS%%/d'				\
-		-e '/%%RUN_DEPENDS%%/r$@.tmp2'				\
+		-e '/%%RUN_DEPENDS%%/r $@.tmp2'				\
 		-e '/%%RUN_DEPENDS%%/d'					\
-		-e '/%%BIN_PKGS%%/r$@.tmp4'				\
+		-e '/%%BIN_PKGS%%/r $@.tmp4'				\
 		-e '/%%BIN_PKGS%%/d'					\
 		${README_NAME} >> $@.tmp
-	@if ! cmp -s $@.tmp $@; then					\
-		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"; \
-		${MV} -f $@.tmp $@;					\
-	fi
+	@cmp -s $@.tmp $@ || 						\
+		(${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"; \
+		${MV} -f $@.tmp $@)
 	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
 
 .if !target(show-pkgtools-version)
