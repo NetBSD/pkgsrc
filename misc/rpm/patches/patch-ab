@@ -1,10 +1,27 @@
---- lib/header.c.orig	Thu Jan 16 17:20:50 1997
-+++ lib/header.c	Thu Jan 23 17:18:34 1997
-@@ -9,7 +9,6 @@
+--- lib/rpmrc.c	1997/10/13 14:28:44	1.1
++++ lib/rpmrc.c	1997/10/13 14:31:38
+@@ -5,6 +5,12 @@
+ # include <alloca.h>
+ #endif
  
- #include <stdlib.h>
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++#include <sys/time.h>
++#endif
++
  #include <ctype.h>
--#include <malloc.h>
- #include <string.h>
- #include <unistd.h>
- #include <netinet/in.h>
+ #include <errno.h>
+ #include <fcntl.h>
+--- po/Makefile.in	1997/10/13 14:37:47	1.1
++++ po/Makefile.in	1997/10/13 14:39:08
+@@ -58,8 +58,7 @@
+ install:
+ 	for n in $(CATALOGS); do \
+ 	    l=`basename $$n .mo`; \
+-	    $(INSTALL) -m 755 -d $(installprefix)/$(RPMNLSDIR)/$$l; \
+-	    $(INSTALL) -m 755 -d $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES; \
++	    mkdir -p $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES; \
+ 	    $(INSTALL) -m 644 $$n $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES/rpm.mo; \
+ 	done
+ 
