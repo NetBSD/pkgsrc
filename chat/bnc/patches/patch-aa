@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/06 18:39:51 wiz Exp $
+
+--- Makefile.in.orig	Wed Mar 15 09:57:57 2000
++++ Makefile.in
+@@ -1,12 +1,10 @@
+ OBJS = bnc.o conf.o server.o cmds.o mtype.o
+ LIBS = @LIBS@
+-OPTS = -O3
+ COPT = -DVERSION='"v2.8.2"' -Wall
+ OOPT =
+ STRIP = strip
+-CC = gcc
+ 
+-ALL: bnc mkpasswd
++all: bnc mkpasswd
+ 	@echo "*** Done compiling required files"
+ 	@echo "Please read the README file included"
+ 
