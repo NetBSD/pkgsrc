@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/09/27 14:13:08 grant Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2004/01/09 22:22:58 agc Exp $
 
 DISTNAME=		install_flash_player_6_${DISTUNAME}
 PKGNAME=		MozillaFirebird-bin-flash-${FLASH_VERS:S/r/./}
@@ -18,8 +18,6 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
 FLASH_VERS=		6.0r79
-DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_6_${DISTUNAME}
