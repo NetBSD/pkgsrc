@@ -1,18 +1,45 @@
-$NetBSD: patch-av,v 1.1.1.1 1999/05/06 23:37:00 tv Exp $
+$NetBSD: patch-av,v 1.2 1999/12/13 20:36:26 bad Exp $
 
---- mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S.orig	Mon Mar  2 19:44:34 1998
-+++ mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S	Mon Oct 19 00:10:09 1998
-@@ -1,6 +1,13 @@
- #include <machine/asm.h>
- #include <sys/syscall.h>
- 
-+#ifdef SYS___sigsuspend14
-+#define SYS_sigsuspend SYS___sigsuspend14
-+#endif
-+#ifdef SYS___sigprocmask14
-+#define SYS_sigprocmask SYS___sigprocmask14
-+#endif
-+
+--- mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S.orig	Mon Jun  7 12:34:23 1999
++++ mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S	Sun Aug 22 00:59:11 1999
+@@ -11,25 +11,25 @@
  #ifdef __STDC__
  
  #define	SYSCALL(x)					\
+-	.globl _machdep_sys_##x;		\
+-									\
+-_machdep_sys_##x:;					\
+-									\
+-	movl $(SYS_##x), %eax;			\
+-	int $0x80;						\
+-	jb	1b;							\
++	.globl _C_LABEL(machdep_sys_##x);		\
++							\
++_C_LABEL(machdep_sys_##x):;				\
++							\
++	movl $(SYS_##x), %eax;				\
++	int $0x80;					\
++	jb	1b;					\
+ 	ret;							
+ 
+ #else
+ 
+-#define	SYSCALL(x)					\
+-	.globl _machdep_sys_/**/x;		\
+-									\
+-_machdep_sys_/**/x:;				\
+-									\
+-	movl $(SYS_/**/x), %eax;		\
+-	int $0x80;						\
+-	jb	1b;							\
++#define	_SYSCALL(x)					\
++	.globl _C_LABEL(machdep_sys_/**/x);		\
++							\
++_C_LABEL(machdep_sys_/**/x):;				\
++							\
++	movl $(SYS_/**/x), %eax;			\
++	int $0x80;					\
++	jb	1b;					\
+ 	ret;							
+ 
+ #endif
