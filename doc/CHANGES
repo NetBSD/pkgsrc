@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6524 2004/07/10 12:38:04 grant Exp $
+$NetBSD: CHANGES,v 1.6525 2004/07/10 17:05:05 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3336,3 +3336,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.87 [snj 2004-07-10]
 	Updated gtk2 to 2.4.4 [jmmv 2004-07-10]
 	Updated docsis to 0.9.1 [grant 2004-07-10]
+	Added gkrellm(est-20040710 [cube 2004-07-10]
