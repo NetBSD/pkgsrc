@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/01/01 08:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/02 19:26:01 jlam Exp $
 
-DISTNAME=	courier-maildirmake-0.2
+DISTNAME=	courier-maildirmake-0.3
 CATEGORIES=	mail
 MASTER_SITES=	# empty
 DISTFILES=	# empty
