@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1117 2003/12/03 17:21:01 epg Exp $
+$NetBSD: TODO,v 1.1118 2003/12/03 17:45:03 sketch Exp $
 
 Suggested new packages
 ======================
@@ -190,7 +190,6 @@ Suggested package updates
 	o enlightenment-0.16.6
 	o epic4-1.1.15
 	o ettercap-0.6.b
-	o evilwm-0.99.17 [sketch]
 	o evolution-1.4.4
 	o exim-4.24
 	o festival-1.4.3
