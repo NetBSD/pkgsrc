@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/06 15:20:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/06 15:45:59 xtraeme Exp $
 #
 
 DISTNAME=	pkg_select-20050403
@@ -10,7 +10,7 @@ COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-*
+ONLY_FOR_PLATFORM=      NetBSD-*-* FreeBSD-*-* Darwin-*-* DragonFly-*-*
 
 WRKSRC=		${WRKDIR}/pkg_select
 NO_CONFIGURE=	yes
