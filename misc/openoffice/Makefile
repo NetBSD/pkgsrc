@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/07/06 16:28:52 recht Exp $
+# $NetBSD: Makefile,v 1.53 2004/07/07 09:49:50 abs Exp $
 
 DISTNAME=		openoffice-1.1.1
 PKGREVISION=		1
@@ -10,7 +10,7 @@ DISTFILES+=		ooo_addons_111p1.tar.bz2
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
 SITES_ooo_addons_111p1.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
