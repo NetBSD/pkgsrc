@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1973 2003/04/19 03:06:33 rh Exp $
+$NetBSD: CHANGES,v 1.1974 2003/04/19 03:53:17 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated scmxx to 0.6.3.7 [wiz 2003-04-18]
 	Updated ocaml to 3.06nb1 [jschauma 2003-04-18]
 	Updated pkglint to 3.50 [rh 2003-04-19]
+	Updated canuum to 1.0nb2 [uebayasi 2003-04-19]
