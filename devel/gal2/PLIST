@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/06 17:50:02 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/02 18:14:29 recht Exp $
 include/gal-2.0/gal/a11y/e-table/gal-a11y-e-cell-registry.h
 include/gal-2.0/gal/a11y/e-table/gal-a11y-e-cell-text.h
 include/gal-2.0/gal/a11y/e-table/gal-a11y-e-cell.h
@@ -135,21 +135,21 @@ include/gal-2.0/gal/widgets/e-selection-model-array.h
 include/gal-2.0/gal/widgets/e-selection-model-simple.h
 include/gal-2.0/gal/widgets/e-selection-model.h
 include/gal-2.0/gal/widgets/e-unicode.h
-include/gal-2.0/gal/widgets/gtk-combo-box.h
-include/gal-2.0/gal/widgets/gtk-combo-stack.h
-include/gal-2.0/gal/widgets/gtk-combo-text.h
+include/gal-2.0/gal/widgets/gal-combo-box.h
+include/gal-2.0/gal/widgets/gal-combo-stack.h
+include/gal-2.0/gal/widgets/gal-combo-text.h
 include/gal-2.0/gal/widgets/widget-color-combo.h
 include/gal-2.0/gal/widgets/widget-pixmap-combo.h
 lib/libgal-2.0.a
 lib/libgal-2.0.la
 lib/libgal-2.0.so
-lib/libgal-2.0.so.5
-lib/libgal-2.0.so.5.1
+lib/libgal-2.0.so.6
+lib/libgal-2.0.so.6.0
 lib/libgal-a11y-2.0.a
 lib/libgal-a11y-2.0.la
 lib/libgal-a11y-2.0.so
-lib/libgal-a11y-2.0.so.5
-lib/libgal-a11y-2.0.so.5.1
+lib/libgal-a11y-2.0.so.6
+lib/libgal-a11y-2.0.so.6.0
 lib/pkgconfig/gal-2.0.pc
 share/doc/html/gal-api.html
 share/doc/html/gal-api.sgml
