@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/01 05:44:59 garbled Exp $
+share/control-center/Workspace/Enlightenment.desktop
+bin/e-conf
+@dirrm share/control-center/Workspace
