@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2001/02/16 11:33:24 abs Exp $
+@comment $NetBSD: PLIST,v 1.25 2001/03/03 17:01:43 tron Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -323,6 +323,7 @@ share/gimp/1.2/brushes/callig3.gbr
 share/gimp/1.2/brushes/callig4.gbr
 share/gimp/1.2/brushes/cloth.gbr
 share/gimp/1.2/brushes/confetti.gbr
+share/gimp/1.2/brushes/confetti.gih
 share/gimp/1.2/brushes/dunes.gbr
 share/gimp/1.2/brushes/flower.gbr
 share/gimp/1.2/brushes/flower_large.gbr
@@ -656,6 +657,7 @@ share/gimp/1.2/gradients/Wood_1
 share/gimp/1.2/gradients/Wood_2
 share/gimp/1.2/gradients/Yellow_Contrast
 share/gimp/1.2/gradients/Yellow_Orange
+share/gimp/1.2/help/C/bug_submission.html
 share/gimp/1.2/help/C/channels/channel_to_selection.html
 share/gimp/1.2/help/C/channels/channels.html
 share/gimp/1.2/help/C/channels/delete_channel.html
@@ -768,6 +770,7 @@ share/gimp/1.2/help/C/filters/gz.html
 share/gimp/1.2/help/C/filters/hrz.html
 share/gimp/1.2/help/C/filters/index.html
 share/gimp/1.2/help/C/filters/jpeg.html
+share/gimp/1.2/help/C/filters/mblur.html
 share/gimp/1.2/help/C/filters/miff.html
 share/gimp/1.2/help/C/filters/oilify.html
 share/gimp/1.2/help/C/filters/pat.html
