@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2002/06/23 03:38:21 jlam Exp $
+
+--- Makefile.in.orig	Sun Dec 16 10:40:25 2001
++++ Makefile.in
+@@ -369,12 +369,7 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DEFDIR) $(ETC)
+-	if [ -f $(ETC)/freetds.conf ]; \
+-	then :; \
+-	else \
+-		$(INSTALL_DATA) freetds.conf $(ETC)/freetds.conf; \
+-	fi
++	$(mkinstalldirs) $(DEFDIR)
+ 
+ test:
+ 	@echo "The 'make test' option has been replaced with 'make check'";

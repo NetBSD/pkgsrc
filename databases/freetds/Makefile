@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/03/14 23:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/06/23 03:38:21 jlam Exp $
 
 DISTNAME=	freetds-0.53
 CATEGORIES=	databases
@@ -12,14 +12,20 @@ COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 
-HAS_CONFIGURE=		yes
-CONFIGURE_ARGS=		--prefix=${PREFIX}/freetds
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/freetds
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-tdsver=7.0
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-#post-install:
-#	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db
+EGDIR=		${PREFIX}/share/examples/freetds
+CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
 
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/freetds.conf ${EGDIR}
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
