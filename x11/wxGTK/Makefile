@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/01/03 20:43:52 augustss Exp $
+# $NetBSD: Makefile,v 1.37 2005/02/12 22:43:44 dmcmahill Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -30,8 +30,11 @@ DOCDIR=			${PREFIX}/share/doc/wx/gtk
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
+# This is needed for gtk1 and gtk2 on some platforms and
+# it doesn't hurt on those which don't need it
 CONFIGURE_ARGS+=	--with-gtk
+
+.if !empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
 PLIST_SUBST+=		GTKVER=
 .include "../../x11/gtk/buildlink3.mk"
 .else
@@ -47,6 +50,7 @@ post-install:
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
