@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2004/08/27 00:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.252 2004/09/05 18:40:08 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -173,6 +173,8 @@ SUBDIR+=	p5-Audio-Wav
 SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
+SUBDIR+=	p5-MusicBrainz-Client
+SUBDIR+=	p5-MusicBrainz-Queries
 SUBDIR+=	portaudio
 SUBDIR+=	py-ao
 SUBDIR+=	py-cddb
@@ -209,8 +211,8 @@ SUBDIR+=	tracker
 SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
 SUBDIR+=	trm
-SUBDIR+=	tunesbrowser
 SUBDIR+=	tunepimp
+SUBDIR+=	tunesbrowser
 SUBDIR+=	ubs
 SUBDIR+=	vorbis-tools
 SUBDIR+=	wavesurfer
