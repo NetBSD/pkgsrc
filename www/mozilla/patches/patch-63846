@@ -1,0 +1,13 @@
+$NetBSD: patch-63846,v 1.1 2001/02/07 23:48:17 mycroft Exp $
+
+--- layout/html/forms/src/nsImageControlFrame.cpp.orig	Wed Feb  7 23:45:45 2001
++++ layout/html/forms/src/nsImageControlFrame.cpp	Wed Feb  7 23:45:05 2001
+@@ -447,7 +447,7 @@
+     nsIContent *formContent = nsnull;
+     mFormFrame->GetContent(&formContent);
+ 
+-    nsEventStatus status;
++    nsEventStatus status = nsEventStatus_eIgnore;
+     nsEvent event;
+     event.eventStructType = NS_EVENT;
+     event.message = NS_FORM_SUBMIT;
