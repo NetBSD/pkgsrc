@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/08/27 06:29:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/11/25 16:12:54 taca Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		YES
 
 USE_MAKEINFO=		YES
 INFO_FILES=		zsh.info
+TEXINFO_REQD=		4.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
