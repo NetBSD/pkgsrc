@@ -1,5 +1,6 @@
-$NetBSD: md5,v 1.1.1.1 1999/04/04 19:32:33 proff Exp $
+$NetBSD: md5,v 1.2 1999/10/11 14:13:49 proff Exp $
 
-MD5 (festival-1.3.1.tar.gz) = 87a2842c112dd6f950721c18986ef112
-MD5 (speech_tools-1.1.1.tar.gz) = 8364260dfe91b65eb7f85aeca0a22d84
-MD5 (OGIresLPC-1.4.tar.gz) = 17621bb20cff4e32c27233e822a255d6
+MD5 (festival-1.4.0.tar.gz) = 49d1b69fd1ed7063af25e639f7ae458b
+MD5 (speech_tools-1.2.0.tar.gz) = 088d22b93fca042d4499f35f04afc28d
+MD5 (OGIresLPC-2.0.3.tar.gz) = 99c7127350e20a8b1f719c5b1596d0ff
+MD5 (OGIfestpatch-1.4.0.tar.gz) = 8ba29d27b1e9da565a51a43431155ce2
