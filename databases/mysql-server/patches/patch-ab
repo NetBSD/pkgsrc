@@ -1,34 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2002/04/11 13:45:24 fredb Exp $
+$NetBSD: patch-ab,v 1.7 2003/10/05 17:55:34 martti Exp $
 
---- mit-pthreads/machdep/engine-m68000-netbsd.c.orig	Thu Feb 14 11:30:25 2002
-+++ mit-pthreads/machdep/engine-m68000-netbsd.c
-@@ -66,14 +66,14 @@
- }
+--- support-files/Makefile.in.orig	Sun Feb 16 09:26:07 2003
++++ support-files/Makefile.in	Sun Feb 16 09:28:32 2003
+@@ -363,7 +363,7 @@
  
- /* ==========================================================================
-- * machdep_save_state()
-+ * machdep_save_float_state()
-  */
- void machdep_save_float_state(struct pthread * pthread)
- {
-     char * fdata = pthread->machdep_data.machdep_fstate;
+ info-am:
  
--    __asm__ ( "fmovem fp0-fp7,%0"::"m" (*fdata) );
--    __asm__ ( "fmovem fpcr/fpsr/fpi,%0"::"m" (fdata[80]) );
-+    __asm__ ( "fmovem %%fp0-%%fp7,%0"::"m" (*fdata) );
-+    __asm__ ( "fmovem %%fpcr/%%fpsr/%%fpi,%0"::"m" (fdata[80]) );
- }
+-install-data-am: install-pkgdataDATA install-pkgdataSCRIPTS
++install-data-am: install-pkgdataSCRIPTS
  
- /* ==========================================================================
-@@ -83,9 +83,8 @@
- {
-     char * fdata = pthread_run->machdep_data.machdep_fstate;
+ install-exec-am:
  
--    __asm__ ( "fmovem %0,fp0-fp7"::"m" (*fdata) );
--    __asm__ ( "fmovem %0,fpcr/fpsr/fpi"::"m" (fdata[80]) );
--
-+    __asm__ ( "fmovem %0,%%fp0-%%fp7"::"m" (*fdata) );
-+    __asm__ ( "fmovem %0,%%fpcr/%%fpsr/%%fpi"::"m" (fdata[80]) );
- }
- 
- /* ==========================================================================
