@@ -1,0 +1,82 @@
+$NetBSD: patch-av,v 1.1 1999/08/18 21:58:58 thorpej Exp $
+
+--- configure.in.orig	Tue Jun  2 10:29:56 1998
++++ configure.in	Wed Aug 18 14:14:36 1999
+@@ -168,6 +168,9 @@
+   AC_DEFINE(HAVE_CONNECT)
+ fi])
+ 
++includeopt=
++AC_SUBST(includeopt)
++
+ dnl
+ dnl set $(KRB4) from --with-krb4=value -- WITH_KRB4
+ dnl
+@@ -175,16 +178,19 @@
+ dnl libkrb in the system libraries, so --with-krb4=value needs to
+ dnl override the system -lkrb.
+ dnl
+-KRB4=/usr/kerberos
++KRB4=
+ define(WITH_KRB4,[
+ AC_ARG_WITH([krb4],
+   [  --with-krb4=value       set default \$(KRB4) from value],
+-  [KRB4=$withval],
++  [if test X"$withval" != X"no"; then KRB4=$withval; fi],
+ )dnl
+-echo "default place for krb4 is $KRB4"
++if test X"$KRB4" != X""; then
++   echo "default place for krb4 is $KRB4"
++fi
+ AC_SUBST(KRB4)])dnl
+ WITH_KRB4
+ 
++if test X"$KRB4" != X""; then
+ krb_h=
+ AC_MSG_CHECKING([for krb.h])
+ if test "$cross_compiling" != yes && test -r $KRB4/include/krb.h; then
+@@ -213,8 +219,6 @@
+ fi
+ AC_MSG_RESULT($krb_h)
+ 
+-includeopt=
+-AC_SUBST(includeopt)
+ if test -n "$krb_h"; then
+   krb_lib=
+   if test "$cross_compiling" != yes && test -r $KRB4/lib/libkrb.a; then
+@@ -246,20 +250,24 @@
+   fi
+ fi
+ AC_CHECK_FUNCS(krb_get_err_text)
++fi	# KRB4 empty
+ 
+ dnl
+ dnl Use --with-gssapi=DIR to enable GSSAPI support.
+ dnl
+-GSSAPI=/usr/cygnus/kerbnet
++GSSAPI=
+ define(WITH_GSSAPI,[
+ AC_ARG_WITH([gssapi],
+   [  --with-gssapi=value     GSSAPI directory],
+-  [GSSAPI=$withval],
++  [if test X"$withval" != X"no"; then GSSAPI=$withval; fi],
+ )dnl
+-echo "default place for GSSAPI is $GSSAPI"
++if test X"$GSSAPI" != X""; then
++   echo "default place for GSSAPI is $GSSAPI"
++fi
+ AC_SUBST(GSSAPI)])dnl
+ WITH_GSSAPI
+ 
++if test X"$GSSAPI" != X""; then
+ hold_cppflags=$CPPFLAGS
+ CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
+ AC_CHECK_HEADERS(gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h)
+@@ -286,6 +294,7 @@
+   # there, an_to_ln.o refers to things defined only in -lgen.
+   AC_CHECK_LIB(gen, compile)
+ fi
++fi	# GSSAPI empty
+ 
+ dnl
+ dnl Use --with-encryption to turn on encryption support
