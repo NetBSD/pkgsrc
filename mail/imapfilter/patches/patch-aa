@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2002/12/01 15:38:34 seb Exp $
+$NetBSD: patch-aa,v 1.4 2003/08/23 20:52:58 seb Exp $
 
---- Makefile.orig	Sat Nov  9 14:36:30 2002
+--- Makefile.orig	2003-08-08 12:55:55.000000000 +0000
 +++ Makefile
-@@ -1,9 +1,6 @@
+@@ -1,10 +1,6 @@
 -CC = cc
 -CFLAGS = -O
+-LDFLAGS =
 -
 -DESTDIR = /usr/local
 -BINDIR = /usr/local/bin
@@ -15,19 +16,17 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 15:38:34 seb Exp $
  
  MAN_BIN = imapfilter.1
  MAN_RC = imapfilterrc.5
-@@ -14,20 +11,19 @@ OBJ = data.o file.o imap.o imapfilter.o 
+@@ -19,7 +15,7 @@ LIBS =  -lssl -lcrypto
+ all: imapfilter
  
- LIBS =  -lssl -lcrypto
- 
-+all: imapfilter
-+
  imapfilter: $(OBJ)
--	$(CC) $(LIBS) $(CFLAGS) -o $(BIN) $(OBJ)
+-	$(CC) $(LIBS) $(LDFLAGS) -o $(BIN) $(OBJ)
 +	$(CC) $(LDFLAGS) $(LIBS) $(CFLAGS) -o $(BIN) $(OBJ)
  
- data.o file.o imap.o imapfilter.o lock.o log.o response.o request.o \
- 	memory.o passwd.o socket.o tty.o: imapfilter.h config.h
- data.o imapfilter.o imap.o file.o passwd.o request.o socket.o: data.h
+ account.o action.o auth.o buffer.o cert.o destroy.o file.o filter.o imap.o \
+ 	imapfilter.o lock.o log.o match.o memory.o parse.o passwd.o \
+@@ -32,12 +28,12 @@ cert.o file.o lock.o parse.o: pathnames.
+ imapfilter.o: version.h
  
  install: imapfilter
 -	if test ! -d $(BINDIR); then mkdir -p $(BINDIR); fi
@@ -36,9 +35,12 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 15:38:34 seb Exp $
 -	cp -f $(MAN_BIN) $(MANDIR)/man1 && chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
 -	if test ! -d $(MANDIR)/man5; then mkdir -p $(MANDIR)/man5; fi
 -	cp -f $(MAN_RC) $(MANDIR)/man5 && chmod 0644 $(MANDIR)/man5/$(MAN_RC)
++	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
 +	$(BSD_INSTALL_MAN) $(MAN_BIN) $(MANDIR)/man1
++	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man5
 +	$(BSD_INSTALL_MAN) $(MAN_RC) $(MANDIR)/man5
  
- uninstall:
+ deinstall:
  	rm -f $(BINDIR)/$(BIN) $(MANDIR)/man1/$(MAN_BIN) $(MANDIR)/man5/$(MAN_RC)
