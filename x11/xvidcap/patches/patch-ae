@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/01/10 21:12:28 reed Exp $
+
+--- src/Makefile.in.orig	2004-02-14 12:06:20.000000000 -0800
++++ src/Makefile.in
+@@ -195,7 +195,7 @@ xvidcap_LDADD = ../Xw/libXw.a  $(am__app
+ @WITHGTK2_TRUE@gvidcap_LDFLAGS = $(AM_LDFLAGS) `pkg-config --libs gtk+-2.0`
+ @WITHGTK2_TRUE@@WITHGT_TRUE@gvidcap_LDADD = ../gt/libgt.a
+ 
+-man1_MANS = ../man/xvidcap.man ../man/gvidcap.man
++man1_MANS = ../man/xvidcap.man
+ 
+ EXTRA_DIST = mkresfile.sh
+ subdir = src
