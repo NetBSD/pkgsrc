@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/20 23:30:50 seb Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/24 13:36:19 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Curses/Curses.html
 COMMENT=	perl5 module for terminal screen handling and optimization
 
-USE_NCURSES=	# needs libpanel.so
+USE_NCURSES=	# needs libpanel
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Curses/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/10/02 18:54:34 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/24 13:36:19 wiz Exp $
 #
 
 DISTNAME=		latestCDK
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.vexus.ca/CDK.html
 COMMENT=		Curses Development Kit
 
 USE_BUILDLINK2=		yes
-USE_NCURSES=		yes
+USE_NCURSES=		# uses ncurses internals
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 AUTOCONF_REQD=		2.13
