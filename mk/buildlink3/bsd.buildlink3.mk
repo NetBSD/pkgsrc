@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.165 2004/11/30 14:50:37 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.166 2005/02/15 03:18:50 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1003,6 +1003,12 @@ _BLNK_LIBTOOL_FIX_LA=		${WRAPPER_TMPDIR}/libtool-fix-la
 
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=	${SUBST_SED.unwrap}
+
+# The libtool wrapper should do all of the same transformations as the
+# compiler wrapper since the primary mode of operation of the wrapper
+# assumes it's being in either compiler or link mode.
+#
+_WRAP_ARG_PP.LIBTOOL=		${_WRAP_ARG_PP.CC}
 
 _WRAP_BUILDCMD.LIBTOOL=		${WRAPPER_TMPDIR}/buildcmd-libtool
 _WRAP_CACHE.LIBTOOL=		${WRAPPER_TMPDIR}/cache-libtool
