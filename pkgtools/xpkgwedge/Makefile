@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/03/29 12:42:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2003/06/12 15:34:38 jschauma Exp $
 
 DISTNAME=	xpkgwedge-1.7
 WRKSRC=		${WRKDIR}
@@ -34,6 +34,7 @@ FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		LN=${LN:Q}
+FILES_SUBST+=		MAKE=${MAKE:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
