@@ -1,0 +1,7 @@
+doscmd, an MS-DOS emulator (NetBSD/i386 only)
+
+Doscmd simulates an MS-DOS environment for running DOS software. Rather
+than provide a software emulation of the 8086 CPU, it uses the
+NetBSD/i386 system call i386_vm86() call using the VM86 mode of i386 and
+later CPUs, so it runs much more quickly, at the cost of not running on
+other architectures. 

@@ -1,0 +1,11 @@
+--- doscmd_loader.c.orig	Fri Jul 17 23:38:10 1998
++++ doscmd_loader.c	Fri Jul 17 23:38:28 1998
+@@ -38,7 +38,7 @@
+  */
+ static const char filler[4096] = { 0, };
+ 
+-#define _PATH_DOS_KERNEL_DIR	"/usr/libexec/"
++#define _PATH_DOS_KERNEL_DIR	"%PREFIX%/libexec/"
+ #define _PATH_DOS_KERNEL	"doscmd.kernel"
+ 
+ int
