@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/14 08:03:59 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/29 12:20:21 xtraeme Exp $
 bin/csunit
 bin/ilinstall
 bin/jsrun
@@ -7,6 +7,7 @@ lib/cscc/lib/1.2.3400.0/Accessibility.dll
 lib/cscc/lib/1.2.3400.0/DotGNU.Images.dll
 lib/cscc/lib/1.2.3400.0/DotGNU.SSL.dll
 lib/cscc/lib/1.2.3400.0/DotGNU.Terminal.dll
+lib/cscc/lib/1.2.3400.0/DotGNU.XmlRpc.dll
 lib/cscc/lib/1.2.3400.0/I18N.CJK.dll
 lib/cscc/lib/1.2.3400.0/I18N.MidEast.dll
 lib/cscc/lib/1.2.3400.0/I18N.Other.dll
@@ -63,6 +64,7 @@ lib/cscc/lib/Accessibility.dll
 lib/cscc/lib/DotGNU.Images.dll
 lib/cscc/lib/DotGNU.SSL.dll
 lib/cscc/lib/DotGNU.Terminal.dll
+lib/cscc/lib/DotGNU.XmlRpc.dll
 lib/cscc/lib/I18N.CJK.dll
 lib/cscc/lib/I18N.MidEast.dll
 lib/cscc/lib/I18N.Other.dll
