@@ -1,51 +1,52 @@
-$NetBSD: patch-aa,v 1.6 2002/09/14 02:59:26 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 2002/12/04 17:31:56 salo Exp $
 
---- Makefile.in.orig	Tue Sep 10 21:32:01 2002
-+++ Makefile.in	Thu Sep 12 23:20:46 2002
-@@ -530,11 +530,9 @@
- 	-rm -rf $(distdir)
+--- Makefile.in.orig	Fri Nov 29 08:58:19 2002
++++ Makefile.in	Wed Dec  4 17:40:13 2002
+@@ -710,14 +710,12 @@
+ 	-mkdir -p $(mandir)/man1
  
- install-dirs:
--	-mkdir -p $(etcdir)
- 	-mkdir -p $(modulesdir)
--	-mkdir -p $(helpdir)
- 	-mkdir -p $(docdir)
+ install-dirs-server: install-dirs
 -	-mkdir -p $(logsdir)
-+	-mkdir -p $(examplesdir)
+ 	-mkdir -p $(mandir)/man5
+ 	-mkdir -p $(mandir)/man8
  
- generate-server-key:
- 	-@if test '!' -f $(etcdir)/silcd.pub ; then \
-@@ -547,8 +545,8 @@
  doc-install:
- 	$(INSTALL_DATA) $(srcdir)/doc/CodingStyle $(docdir)/
- 	$(INSTALL_DATA) $(srcdir)/doc/FAQ $(docdir)/
--	$(INSTALL_DATA) $(srcdir)/doc/example_* $(docdir)/
--	$(INSTALL_DATA) $(srcdir)/doc/*.txt $(docdir)/
-+	$(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf $(examplesdir)/silcd.conf.default
-+	$(INSTALL_DATA) $(srcdir)/doc/silcalgs.conf $(examplesdir)/silcalgs.conf.default
- 	$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)/
- 	$(INSTALL_DATA) $(srcdir)/CHANGES $(docdir)/
- 	$(INSTALL_DATA) $(srcdir)/CREDITS $(docdir)/
-@@ -562,10 +560,9 @@
- 	-$(INSTALL_DATA) $(srcdir)/lib/doc/*.gif $(docdir)/toolkit
+ 	-$(INSTALL_DATA) $(srcdir)/doc/CodingStyle $(docdir)/
+ 	-$(INSTALL_DATA) $(srcdir)/doc/FAQ $(docdir)/
+-	-$(INSTALL_DATA) $(srcdir)/doc/*.txt $(docdir)/
+ 	-$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)/
+ 	-$(INSTALL_DATA) $(srcdir)/CHANGES $(docdir)/
+ 	-$(INSTALL_DATA) $(srcdir)/CREDITS $(docdir)/
+@@ -732,7 +730,6 @@
+ 	fi
+ 
+ doc-install-server: doc-install
+-	-$(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf $(docdir)/
+ 	-@if test -f $(srcdir)/doc/silcd.8 ; then \
+ 	 $(INSTALL_DATA) $(srcdir)/doc/silcd.8 $(mandir)/man8; \
+ 	fi
+@@ -767,9 +764,12 @@
+ 	-cp -R $(srcdir)/tutorial $(prefix)
  
  examples-install:
 -	-mkdir -p $(docdir)/examples/
--	$(INSTALL_DATA) $(srcdir)/doc/examples/README $(docdir)/examples/
--	$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(docdir)/examples/
--	$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(docdir)/examples/
-+	$(INSTALL_DATA) $(srcdir)/doc/examples/README $(examplesdir)
-+	$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(examplesdir)
-+	$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(examplesdir)
+-	-$(INSTALL_DATA) $(srcdir)/doc/examples/README $(docdir)/examples/
+-	-$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(docdir)/examples/
++	-mkdir -p $(examplesdir)
++	-$(INSTALL_DATA) $(srcdir)/doc/examples/README $(examplesdir)
++	-$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(examplesdir)
++	-$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(examplesdir)
++	-$(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf $(examplesdir)/silcd.conf.default
++	-$(INSTALL_DATA) $(srcdir)/doc/silcalgs.conf $(examplesdir)/silcalgs.conf.default
  
- etc-install:
- 	-@if test '!' -f $(etcdir)/silcd.conf ; then \
-@@ -582,7 +579,7 @@
+ generate-server-key:
+ 	-@if test '!' -f $(etcdir)/silcd.pub ; then \
+@@ -778,7 +778,7 @@
  
- @SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs sim-install doc-install etc-install
- @SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_TRUE@install-data-hook: install-dirs generate-server-key sim-install doc-install toolkit-install examples-install etc-install
--@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs generate-server-key sim-install doc-install examples-install etc-install
-+@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs sim-install doc-install examples-install
+ @SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs-client sim-install doc-install-client etc-install-client
+ @SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_TRUE@install-data-hook: install-dirs-client install-dirs-server sim-install doc-install-client doc-install-server toolkit-install examples-install etc-install-client etc-install-server generate-server-key
+-@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs-server sim-install doc-install-server examples-install etc-install-server generate-server-key
++@SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs-server sim-install doc-install-server examples-install
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
