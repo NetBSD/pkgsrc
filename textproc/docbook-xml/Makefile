@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/09 12:23:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/19 21:51:31 minskim Exp $
 #
 
 DISTNAME=	docbook-xml-4.2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.oasis-open.org/docbook
 COMMENT=	XML DTD designed for computer documentation
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 
 INSTDIR=	${DESTDIR}${PREFIX}/share/xml
