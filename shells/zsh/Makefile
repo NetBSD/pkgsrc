@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.39 2003/03/14 19:37:55 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2003/06/20 05:59:02 uebayasi Exp $
 
-DISTNAME=       zsh-4.0.6
+DISTNAME=       zsh-4.0.7
 CATEGORIES=	shells
-MASTER_SITES=   ftp://ftp.rge.com/pub/shells/zsh/ \
-		ftp://sunsite.auc.dk/pub/unix/shells/zsh/ \
-		ftp://ftp.uit.no/pub/unix/shells/zsh/ \
-		ftp://ftp.net.lut.ac.uk/zsh/ \
+MASTER_SITES=   ftp://sunsite.dk/pub/unix/shells/zsh/ \
+		ftp://ftp.fu-berlin.de/pub/unix/shells/zsh/ \
+		ftp://ftp.lysator.liu.se/pub/unix/zsh/ \
+		ftp://ftp.funet.fi/pub/unix/shells/zsh/ \
+		http://www.math.technion.ac.il/pub/zsh/ \
 		ftp://ftp.zsh.org/zsh/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	uebayasi@netbsd.org
+MAINTAINER=	gcw@zsh.org
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
@@ -42,6 +43,13 @@ post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
 	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ FEATURES NEWS	\
 		${PREFIX}/share/doc/zsh
+
+test:
+	@if [ `${ID} -u` != 0 ]; then					\
+		${ECHO_MSG} "You must be root to run this target.";	\
+	else								\
+		(cd ${WRKSRC}; ${MAKE} check)				\
+	fi
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
