@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST-egcs-f77-runtime,v 1.1 1999/01/06 01:14:20 tv Exp $
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/g2c.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/libg2c.a

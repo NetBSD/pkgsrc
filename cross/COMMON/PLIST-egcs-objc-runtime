@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST-egcs-objc-runtime,v 1.1 1999/01/06 01:14:20 tv Exp $
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/NXConstStr.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/Object.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/Protocol.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/encoding.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/hash.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/objc-api.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/objc-list.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/objc.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/sarray.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/thr.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc/typedstream.h
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc
