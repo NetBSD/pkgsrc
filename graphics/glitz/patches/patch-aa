@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/27 12:11:44 adam Exp $
+
+--- src/Makefile.in.orig	2004-04-27 13:58:44.000000000 +0000
++++ src/Makefile.in
+@@ -207,7 +207,7 @@ libglitz_la_LIBADD = -lm
+ 
+ @GLITZ_BUILD_GLX_BACKEND_TRUE@libglitz_glx_la_LDFLAGS = -version-info @VERSION_INFO@ -no-undefined
+ @GLITZ_BUILD_GLX_BACKEND_TRUE@libglitz_glx_la_CFLAGS = $(GLX_CFLAGS)
+-@GLITZ_BUILD_GLX_BACKEND_TRUE@libglitz_glx_la_LIBADD = -lglitz $(GLX_LIBS)
++@GLITZ_BUILD_GLX_BACKEND_TRUE@libglitz_glx_la_LIBADD = libglitz.la $(GLX_LIBS)
+ 
+ @GLITZ_BUILD_AGL_BACKEND_TRUE@libglitz_agl_la_SOURCES = \
+ @GLITZ_BUILD_AGL_BACKEND_TRUE@	glitz.h \
+@@ -224,7 +224,7 @@ libglitz_la_LIBADD = -lm
+ 
+ @GLITZ_BUILD_AGL_BACKEND_TRUE@libglitz_agl_la_LDFLAGS = -version-info @VERSION_INFO@
+ @GLITZ_BUILD_AGL_BACKEND_TRUE@libglitz_agl_la_CFLAGS = $(AGL_CFLAGS)
+-@GLITZ_BUILD_AGL_BACKEND_TRUE@libglitz_agl_la_LIBADD = -lglitz $(AGL_LIBS)
++@GLITZ_BUILD_AGL_BACKEND_TRUE@libglitz_agl_la_LIBADD = libglitz.la $(AGL_LIBS)
+ subdir = src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
