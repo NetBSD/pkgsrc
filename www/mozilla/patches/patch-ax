@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.1 2001/07/13 16:14:23 taya Exp $
+$NetBSD: patch-ax,v 1.2 2001/08/04 07:05:19 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/src/nsSocketTransport.cpp
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Tue Jun 19 06:26:16 2001
-+++ ./netwerk/base/src/nsSocketTransport.cpp	Tue Jul 10 01:14:42 2001
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Wed Jul 25 16:53:13 2001
++++ ./netwerk/base/src/nsSocketTransport.cpp	Sat Aug  4 10:38:21 2001
 @@ -170,8 +170,12 @@
      //
      // Set up Internet defaults...
@@ -30,7 +30,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
  }
  
  
-@@ -603,14 +614,20 @@
+@@ -604,14 +615,20 @@
      //
      // The hostname has not been resolved yet...
      //
@@ -49,9 +49,9 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          mNetAddress.ipv6.port = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
 +#endif
  
-         NS_WITH_SERVICE(nsIDNSService,
-                         pDNSService,
-@@ -637,7 +654,11 @@
+         nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
+         if (NS_FAILED(rv)) return rv;
+@@ -635,7 +652,11 @@
              //
              // The DNS lookup has finished...  It has either failed or succeeded.
              //
@@ -63,7 +63,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
                  mDNSRequest = 0;
                  rv = mStatus;
              } 
-@@ -798,7 +819,12 @@
+@@ -795,7 +816,12 @@
          //    This is only done the first time doConnection(...) is called.
          //
          if (NS_SUCCEEDED(rv)) {
@@ -76,7 +76,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
              if (PR_SUCCESS != status) {
                  PRErrorCode code = PR_GetError();
                  //
-@@ -823,6 +849,9 @@
+@@ -820,6 +846,9 @@
                  //
                  else {
                      // Connection refused...
@@ -86,7 +86,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
                      LOG(("nsSocketTransport: Connection Refused [%s:%d %x].  PRErrorCode = %x\n",
                          mHostName, mPort, this, code));
                      rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -836,11 +865,17 @@
+@@ -833,11 +862,17 @@
      //
      else if (aSelectFlags) {
          if (PR_POLL_EXCEPT & aSelectFlags) {
@@ -104,7 +104,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
              LOG(("nsSocketTransport: Connection Refused via PR_POLL_HUP. [%s:%d %x].\n", 
                  mHostName, mPort, this));
              rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -883,7 +918,11 @@
+@@ -880,7 +915,11 @@
      //
      // The hostname has not been resolved yet...
      //
@@ -113,10 +113,10 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
 +#else
 +    if (mNetAddressList == NULL) {
 +#endif
-         NS_WITH_SERVICE(nsIDNSService,
-                         pDNSService,
-                         kDNSService,
-@@ -905,6 +944,7 @@
+         nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
+         if (NS_FAILED(rv)) return rv;
+ 
+@@ -899,6 +938,7 @@
              return NS_ERROR_FAILURE;
          }
  
@@ -124,7 +124,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          if (addr.raw.family == PR_AF_INET)
              PR_ConvertIPv4AddrToIPv6(addr.inet.ip, &mNetAddress.ipv6.ip);
          else
-@@ -915,6 +955,21 @@
+@@ -909,6 +949,21 @@
  
          LOG(("address { family=%hu, port=%hu }\n",
              mNetAddress.ipv6.family, PR_ntohs(mNetAddress.ipv6.port)));
@@ -146,7 +146,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      }
  
      //
-@@ -1346,6 +1401,7 @@
+@@ -1340,6 +1395,7 @@
      return NS_OK;
  }
  
@@ -154,7 +154,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
  NS_IMETHODIMP
  nsSocketTransport::OnFound(nsISupports *aContext, 
                             const char* aHostName,
-@@ -1382,6 +1438,51 @@
+@@ -1376,6 +1432,51 @@
  
      return rv;
  }
@@ -206,7 +206,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
  
  NS_IMETHODIMP
  nsSocketTransport::OnStopLookup(nsISupports *aContext,
-@@ -1401,7 +1502,11 @@
+@@ -1395,7 +1496,11 @@
      // If the lookup failed, set the status...
      if (NS_FAILED(aStatus))
          mStatus = aStatus;
@@ -218,7 +218,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          mStatus = NS_ERROR_ABORT;
  
      // Start processing the transport again - if necessary...
-@@ -1728,7 +1833,11 @@
+@@ -1722,7 +1827,11 @@
      *_retval = (char*)nsMemory::Alloc(aLen);
      if (!*_retval) return NS_ERROR_FAILURE;
  
