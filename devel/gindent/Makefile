@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.4 1997/11/13 14:37:37 hubertf Exp $
 # New ports collection makefile for:   indent
 # Version required:    1.9.1
 # Date created:        28 August 1997
 # Whom:                Kapil Chowksey <kchowksey@hss.hns.com>
 #
+# $NetBSD: Makefile,v 1.5 1998/01/24 04:01:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/29 09:20:00 obrien Exp
 #
-        
+
 DISTNAME=	indent-1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 
+MAINTAINER=	kchowksey@hss.hns.com
+
+.if (${OPSYS} == "NetBSD")
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+.endif
+
 GNU_CONFIGURE=	yes
 
-MAINTAINER=	kchowksey@hss.hns.com
-        
 MAN1=		indent.1
 
 MAKEFILE=	makefile
 
 OPSYS!= 	uname -s
-
-.if (${OPSYS} == "NetBSD")
-BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-.endif
 
 # agc - force makeinfo to create a new info file with the Dir info.
 pre-install:
@@ -37,7 +37,7 @@ post-install:
 	  if [ -f /usr/share/info/dir ]; then \
 	    ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
 	  else \
-	    touch ${PREFIX}/info/dir ; \
+	    ${TOUCH} ${PREFIX}/info/dir ; \
 	  fi ; \
 	fi
 	@install-info ${PREFIX}/info/indent.info ${PREFIX}/info/dir
