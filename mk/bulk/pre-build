@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.8 2000/12/30 14:53:28 dmcmahill Exp $
+# $NetBSD: pre-build,v 1.9 2000/12/31 17:38:32 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -17,14 +17,16 @@ fi
 
 PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
 
+# extract the name of the files used for the build log and broken build log.
+# these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
+BROKENF=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
-        echo "Error:  BROKENF must be set to the name of the .broken.files"
-        echo "        This should have happened in the top level build script"
+	echo "Had problems determining the name of the .broken.files"
 	exit 1
 fi
+BLDLOG=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
-        echo "Error:  BLDLOG must be set to the name of the .make.files"
-        echo "        This should have happened in the top level build script"
+	echo "Had problems determining the name of the .make.files"
 	exit 1
 fi
 
