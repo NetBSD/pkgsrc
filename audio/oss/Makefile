@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/04 13:32:02 cjep Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/10 20:20:53 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -19,8 +19,8 @@ OSVERSION_SPECIFIC=	yes
 DISTNAME=		oss397c-netbsd-v1.5
 OSS_VERSION=		3.9.7c
 .elif !empty(MACHINE_PLATFORM:MNetBSD-1.6*-i386)
-DISTNAME=		oss397f-netbsd-v1.6
-OSS_VERSION=		3.9.7f
+DISTNAME=		oss397g-netbsd-v1.6
+OSS_VERSION=		3.9.7g
 .endif
 
 RESTRICTED=		"No re-distribution."
@@ -72,6 +72,10 @@ do-build:
 			${FILESDIR}/wrapper.sh > ${WRKDIR}/$${file}.sh;	\
 	done
 
+# Run the install script in a chroot environment.  The install script tries
+# to install into /usr/lib, so we let it install into the chroot'ed /usr/lib
+# and then copy the "installed" files to where to really want them.
+#
 chroot:
 	${PAX} -rw `${CAT} ${FILESDIR}/chroot` ${WRKSRC}
 	${CHROOT} -u ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC} ./install.sh
