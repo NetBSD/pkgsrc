@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.3 1998/01/22 10:26:38 agc Exp $
-#
 # Packages collection makefile for:	sdr
 # Version required:			2.3a1
 # Date created:				18 November 1997
 # By:	      Ignatios Souvatzis <is@netbsd.org>
+#
+# $NetBSD: Makefile,v 1.4 1998/01/24 20:45:03 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 # Based on:
 # New ports collection makefile for:	sdr
 # Version required:			2.3a1
 # Date created:				5 September 1996
 # Whom:	      Bill Fenner <fenner@FreeBSD.ORG>
-#
-#   Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 
 DISTNAME=	sdr.V2.3a1
