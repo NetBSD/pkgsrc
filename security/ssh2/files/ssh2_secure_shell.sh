@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ssh2_secure_shell.sh,v 1.1.1.1 2002/08/06 00:48:14 seb Exp $
+# $NetBSD: ssh2_secure_shell.sh,v 1.2 2002/09/20 02:02:00 grant Exp $
 #
 # PROVIDE: ssh2_secure_shell
 # REQUIRE: DAEMON LOGIN
