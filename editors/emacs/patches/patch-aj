@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.3 2000/03/01 05:07:41 minoura Exp $
+$NetBSD: patch-aj,v 1.4 2000/03/09 16:00:10 minoura Exp $
 
 From lha@stacken.kth.se Mon Feb 28 03:43:18 2000
 Date: Sun, 27 Feb 2000 16:26:07 +0100
@@ -20,8 +20,8 @@ Thanks,
 Love
 
 
---- src/process.c.orig	Thu Jul  8 00:36:24 1999
-+++ src/process.c	Sun Feb 27 16:03:33 2000
+--- src/process.c.orig	Thu Jul  8 07:36:24 1999
++++ src/process.c	Fri Mar 10 00:42:11 2000
 @@ -1,7 +1,18 @@
 +/*
 + * Locally hacked process.c to add ipv6 support. -wsr
@@ -99,7 +99,7 @@ Love
  
    /* Slow down polling to every ten seconds.
       Some kernels have a bug which causes retrying connect to fail
-@@ -1846,6 +1882,84 @@
+@@ -1846,6 +1882,86 @@
  #endif
  
  #ifndef TERM
@@ -177,6 +177,8 @@ Love
 +				    Fcons (host, Fcons (name, Qnil)));
 +	     }
 +	 }
++       else
++	break;
 +  } /* address loop */
 +  freeaddrinfo(res);
 +#else /* HAVE_GETADDRINFO */
@@ -184,7 +186,7 @@ Love
    while (1)
      {
  #ifdef TRY_AGAIN
-@@ -1936,6 +2050,7 @@
+@@ -1936,6 +2052,7 @@
        report_file_error ("connection failed",
  			 Fcons (host, Fcons (name, Qnil)));
      }
