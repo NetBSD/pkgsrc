@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3047 2005/02/18 18:27:13 wiz Exp $
+$NetBSD: TODO,v 1.3048 2005/02/18 19:41:11 reed Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o fidogate-4.4.10
-	o file-4.13
 	o findutils-4.2.15
 	o firefox-bin-1.0
 	o flim-1.14.7
