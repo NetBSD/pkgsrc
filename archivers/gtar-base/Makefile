@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2004/03/11 18:03:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/05 18:38:43 reed Exp $
 #
 
 DISTNAME=       tar-1.13.25
 PKGNAME=	gtar-base-1.13.25
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/tar/ \
@@ -22,14 +22,25 @@ GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.if defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} != ""
+GTAR_PROGRAM_PREFIX?=	${GNU_PROGRAM_PREFIX}
+.else
+GTAR_PROGRAM_PREFIX?=	g
 .endif
-CONFIGURE_ARGS+=	--with-catgets
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+.if ${GTAR_PROGRAM_PREFIX} == ""
+# pax installs a "tar" also
+CONFLICTS+=		pax-[0-9]*
+.else
+CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX}
+.endif
+
+CONFIGURE_ARGS+=	--with-catgets
+PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+BUILD_DEFS+=		GTAR_PROGRAM_PREFIX
+
+.if ${GTAR_PROGRAM_PREFIX} != "g"
 PLIST_SUBST+=           GTAR_LINK=""
 .else
 PLIST_SUBST+=           GTAR_LINK="@comment "
@@ -40,9 +51,9 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
-		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}tar.1
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GNU_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
+		${PREFIX}/man/man1/${GTAR_PROGRAM_PREFIX}tar.1
+.if ${GTAR_PROGRAM_PREFIX} != "g"
+	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
 .endif
 
 .include "../../mk/bsd.pkg.mk"
