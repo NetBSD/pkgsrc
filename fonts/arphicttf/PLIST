@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:48:56 zuntum Exp $
+lib/X11/fonts/arphicttf/bkai00mp.ttf
+lib/X11/fonts/arphicttf/bsmi00lp.ttf
+lib/X11/fonts/arphicttf/encodings.dir
+lib/X11/fonts/arphicttf/fonts.alias
+lib/X11/fonts/arphicttf/fonts.dir
+lib/X11/fonts/arphicttf/fonts.scale
+lib/X11/fonts/arphicttf/gbsn00lp.ttf
+lib/X11/fonts/arphicttf/gkai00mp.ttf
+@dirrm lib/X11/fonts/arphicttf

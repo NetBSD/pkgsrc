@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:49:06 zuntum Exp $
+lib/X11/fonts/local/hgm10.pcf.gz
+lib/X11/fonts/local/hgm12.pcf.gz
+lib/X11/fonts/local/hgm14.pcf.gz
+lib/X11/fonts/local/hgm16.pcf.gz
+lib/X11/fonts/local/hgm18.pcf.gz
+lib/X11/fonts/local/hgm20.pcf.gz
+lib/X11/fonts/local/hmm10.pcf.gz
+lib/X11/fonts/local/hmm12.pcf.gz
+lib/X11/fonts/local/hmm14.pcf.gz
+lib/X11/fonts/local/hmm16.pcf.gz
+lib/X11/fonts/local/hmm18.pcf.gz
+lib/X11/fonts/local/hmm20.pcf.gz
+@exec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local

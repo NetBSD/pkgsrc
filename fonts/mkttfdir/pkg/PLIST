@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/29 18:15:30 wiz Exp $
-bin/mkttfdir
-bin/ttfinfo
