@@ -1,68 +1,16 @@
-$NetBSD: patch-ac,v 1.4 2000/10/13 17:55:36 kim Exp $
+$NetBSD: patch-ac,v 1.5 2002/02/13 16:41:41 tron Exp $
 
---- agent/Makefile.in.orig	Fri Feb  4 16:15:08 2000
-+++ agent/Makefile.in	Fri Oct 13 12:55:01 2000
-@@ -5,15 +5,17 @@
- TARG		= snmpd
- LIBTARG		= libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION) \
- 	libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--USELIBS		= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--LOCAL_LIBS	= -L../snmplib -L.
--LIBS		= $(CC_RUNTIME_ARG) -lsnmp @WRAPLIBS@ @LIBS@
--AGENT_LIBS	= $(CC_RUNTIME_ARG) -lucdagent -lucdmibs -lsnmp @WRAPLIBS@ @LIBS@
-+#USELIBS		= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
-+USELIBS= libucdagent.la libucdmibs.la ../snmplib/libsnmp.la
-+#LOCAL_LIBS	= -L../snmplib -L.
-+#LIBS		= $(CC_RUNTIME_ARG) -lsnmp @WRAPLIBS@ @LIBS@
-+LIBS=	 ${USELIBS} @WRAPLIBS@ @LIBS@
-+AGENT_LIBS	= $(CC_RUNTIME_ARG) $(LIBS)
- CPPFLAGS	= -I.. -I$(srcdir)/.. -I$(srcdir)/../snmplib \
- 		  -I$(srcdir) -I. -I$(srcdir)/mibgroup -Imibgroup @CPPFLAGS@
- 
--CC		= @CC@ $(CPPFLAGS) $(SHLIB_CFLAGS)
--SPCC		= @CC@ $(CPPFLAGS)
-+CC		= $(LIBTOOL) @CC@ $(CPPFLAGS) $(SHLIB_CFLAGS)
-+SPCC		= $(LIBTOOL) @CC@ $(CPPFLAGS)
- 
- MIBOBJS		= @mibgroup_list_o@ mib_modules.o
- 
-@@ -49,13 +51,19 @@
- 	${SPCC} $(CFLAGS) -o $@ ${AGENTOBJS} $(LOCAL_LIBS) ${LDFLAGS} ${AGENT_LIBS}  
- 
- 
--libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${LIBAGENTOBJS} libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--	$(SHLIB_LD_CMD) libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${LIBAGENTOBJS}  $(SHLIB_LD_LIBS)
--	$(RANLIB) libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--
--libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${MIBOBJS}
--	$(SHLIB_LD_CMD) libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${MIBOBJS}  $(SHLIB_LD_LIBS)
--	$(RANLIB) libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
-+libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION): ${LIBAGENTOBJS}
-+	$(CC) -o $@ $(LIBAGENTOBJS:.o=.lo) -version-info 0:0 -rpath $(PREFIX)/lib
-+
-+#libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${LIBAGENTOBJS} libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
-+#	$(SHLIB_LD_CMD) libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${LIBAGENTOBJS}  $(SHLIB_LD_LIBS)
-+#	$(RANLIB) libucdagent.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
-+
-+libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION): ${MIBOBJS}
-+	$(CC) -o $@ $(MIBOBJS:.o=.lo) -version-info 0:0 -rpath $(PREFIX)/lib
-+
-+#libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${MIBOBJS}
-+#	$(SHLIB_LD_CMD) libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${MIBOBJS}  $(SHLIB_LD_LIBS)
-+#	$(RANLIB) libucdmibs.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
- 
- clean:
- 	rm -f *.o ${TARG} ${LIBTARG}
-@@ -64,9 +72,9 @@
- 
- 
- install:  installdirs
--	@$(INSTALL) $(TARG) $(sbindir) ; echo "install:  installed $(TARG) in $(sbindir) "
--	@for i in $(INSTALLHEADERS) ; do $(INSTALL) $(srcdir)/$$i $(includedir) ; echo "install:  installed $$i in $(includedir)" ; done
--	@for i in $(LIBTARG) ; do $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
-+	@$(LIBTOOL) $(INSTALL) $(TARG) $(sbindir) ; echo "install:  installed $(TARG) in $(sbindir) "
-+	@for i in $(INSTALLHEADERS) ; do $(LIBTOOL) $(INSTALL) $(srcdir)/$$i $(includedir) ; echo "install:  installed $$i in $(includedir)" ; done
-+	@for i in $(LIBTARG) ; do $(LIBTOOL) $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
- 	$(SHLIB_LDCONFIG_CMD)
- #	cd dlmods ; $(MAKE) install; cd ..
- 
+--- apps/snmpnetstat/if.c.orig	Fri Nov 16 11:54:02 2001
++++ apps/snmpnetstat/if.c	Wed Feb 13 17:29:05 2002
+@@ -279,6 +279,11 @@
+ 		    case IFINDEX:
+ 			ifindex = *var->val.integer;
+ 			for (cur_if = if_table; cur_if->ifindex != ifindex && cur_if->ifindex != 0; cur_if++) ;
++			if (cur_if >= (if_table + cfg_nnets))
++			{
++				fprintf (stderr, "Inconsistent reponse from server. Aborting\n");
++				exit (0);
++			}
+ 			cur_if->ifindex = ifindex;
+ 			break;
+ 		    case OUTQLEN:

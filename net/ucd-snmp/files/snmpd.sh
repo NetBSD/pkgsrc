@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: snmpd.sh,v 1.3 2001/01/26 02:02:35 hubertf Exp $
+# $NetBSD: snmpd.sh,v 1.4 2002/02/13 16:41:41 tron Exp $
 
 # PID file:
 PF=/var/run/snmpd.pid

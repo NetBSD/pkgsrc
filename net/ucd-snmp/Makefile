@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2001/09/24 15:02:53 tron Exp $
+# $NetBSD: Makefile,v 1.38 2002/02/13 16:41:40 tron Exp $
 
-DISTNAME=	ucd-snmp-4.1.2
+DISTNAME=	ucd-snmp-4.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ucd-snmp.ucdavis.edu/ \
@@ -8,20 +9,31 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://net-snmp.sourceforge.net/
+HOMEPAGE=	http://www.net-snmp.org/
 COMMENT=	Extensible SNMP implementation
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
 
+USE_BUILDLINK_ONLY=	
+
 .include "../../mk/bsd.prefs.mk"
 
+.if (${OPSYS} == NetBSD && \
+	${LOWER_ARCH} == i386 && \
+	${OS_VERSION:M1.5.[12]*} != "")
+BROKEN=		Please update your sys/disklabel.h from the netbsd-1-5 branch
+.endif
+
 USE_LIBTOOL=	yes
-USE_SSL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+#CPPFLAGS+=	-I${BUILDLINK_DIR}/include
+#LDFLAGS+=	-L${BUILDLINK_DIR}/lib
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-defaults --with-libwrap --with-logfile="/var/log/snmpd"
+CONFIGURE_ARGS+=--with-defaults --with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers} --with-logfile="/var/log/snmpd"
 CONFIGURE_ARGS+=--with-mib-modules="smux host"
 # NOTE: if you do not allow dummy values some tools such as
 # scotty/tkined may ignore results when they shouldn't.
@@ -46,7 +58,14 @@ post-extract:
 	@${LN} ${WRKSRC}/s/netbsd.h ${WRKSRC}/s/netbsdelf.h
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
+.if ${OPSYS} == SunOS
+# Adapt for the fact that the default I've seen of ac_max_sed_cmds=90
+#will not work w/ built-in sed on Solaris.
+	(cd ${WRKSRC} && ${SED} \
+		's/ac_max_sed_cmds=[0-9][0-9]*/ac_max_sed_cmds=10/' \
+		configure > tmp && cp tmp configure && rm tmp)
+.endif
 
 post-build:
 	${SED} 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/snmpd.sh > ${WRKDIR}/snmpd
@@ -62,5 +81,8 @@ post-install:
 .if (${OPSYS} == "NetBSD")
 CFLAGS+=	-Dnetbsd1
 .endif
+
+.include "../../security/openssl/buildlink.mk"	# USE_SSL=	yes
+.include "../../security/tcp_wrappers/buildlink.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,20 +1,16 @@
-$NetBSD: patch-ag,v 1.3 2000/10/13 17:55:36 kim Exp $
+$NetBSD: patch-ag,v 1.4 2002/02/13 16:41:42 tron Exp $
 
---- agent/mibgroup/mibII/ip.c.orig	Fri Feb  4 02:56:31 2000
-+++ agent/mibgroup/mibII/ip.c	Wed Oct 11 19:03:22 2000
-@@ -767,3 +767,7 @@
+--- agent/mibgroup/mibII/ipAddr.c.orig	Tue Jan 30 16:00:58 2001
++++ agent/mibgroup/mibII/ipAddr.c	Tue Jan 30 16:07:06 2001
+@@ -243,7 +243,11 @@
+ #if defined(linux) || defined(sunV3)
+ 	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifnet.ifu_broadaddr)->sin_addr.s_addr) & 1;
  #else
 +#ifdef netbsd1
-+	    long_return = lowin_ifaddr.ia_subnetmask;
-+#else
- 	    long_return = ntohl(lowin_ifaddr.ia_subnetmask);
-+#endif
- 	    return(u_char *) &long_return;
-@@ -776,3 +780,7 @@
- #else
-+#ifdef netbsd1
-+	    long_return = (((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
++	    long_return = ((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr & 1;
 +#else
  	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
 +#endif
  #endif
+ 	    return(u_char *) &long_return;	   
+ 	case IPADREASMMAX:
