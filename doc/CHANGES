@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5796 2004/05/02 20:11:42 bouyer Exp $
+$NetBSD: CHANGES,v 1.5797 2004/05/02 21:48:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2322,3 +2322,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glib2 to 2.4.1 [jmmv 2004-05-02]
 	Updated gtk2 to 2.4.1 [jmmv 2004-05-02]
 	Updated gpsim to 0.21.2nb1 [bouyer 2004-05-02]
+	Updated openmortal to 0.7 [xtraeme 2004-05-02]
