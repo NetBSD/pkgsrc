@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 11:38:04 ad Exp $
-etc/exim/configure.example
-etc/exim/mailer.conf.exim
+@comment $NetBSD: PLIST,v 1.5 2003/08/02 17:00:08 jmmv Exp $
 etc/rc.d/exim
 sbin/exicyclog
 sbin/exigrep
@@ -17,4 +15,7 @@ sbin/eximstats
 sbin/exinext
 sbin/exiqsumm
 sbin/exiwhat
-@dirrm etc/exim
+share/examples/exim/aliases
+share/examples/exim/configure
+share/examples/exim/mailer.conf
+@dirrm share/examples/exim
