@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.397 2003/08/13 07:27:46 itojun Exp $
+# $NetBSD: Makefile,v 1.398 2003/08/23 13:31:14 hubertf Exp $
 #
 
 COMMENT=	Networking tools
 
-SUBDIR+=	6to4
 SUBDIR+=	6tunnel
 SUBDIR+=	GeoIP
 SUBDIR+=	IglooFTP
@@ -95,6 +94,7 @@ SUBDIR+=	gtk_wicontrol
 SUBDIR+=	gtksamba
 SUBDIR+=	gtm
 SUBDIR+=	hesiod
+SUBDIR+=	hf6to4
 SUBDIR+=	host
 SUBDIR+=	hping
 SUBDIR+=	httptunnel
