@@ -1,0 +1,8 @@
+--- mixer.h.orig	Thu Jul 30 03:57:30 1998
++++ mixer.h	Thu Jul 30 03:59:31 1998
+@@ -40,2 +40,5 @@
+ #endif /* linux */
++#ifdef __NetBSD__
++#include <soundcard.h>
++#endif
+ };
