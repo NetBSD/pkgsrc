@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.7 1999/08/23 12:27:13 mrg Exp $
+$NetBSD: patch-ac,v 1.8 1999/11/29 11:45:14 frueauf Exp $
 
---- Makefile.in.orig	Mon Aug 23 19:42:28 1999
-+++ Makefile.in	Mon Aug 23 20:19:10 1999
+--- Makefile.in.orig	Mon Aug 23 13:46:48 1999
++++ Makefile.in	Mon Nov 29 01:33:06 1999
 @@ -176,8 +176,8 @@
  CP = cp
  MV = mv
@@ -27,3 +27,12 @@ $NetBSD: patch-ac,v 1.7 1999/08/23 12:27:13 mrg Exp $
  
  installscript: installdirs
  	(								\
+@@ -318,7 +316,7 @@
+ 
+ CAST_SRC = @CAST_SRC@
+ 
+-INCLUDES = -I. -I$(incdir)
++INCLUDES = -I. -I$(incdir) -I${prefix}/include
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -c $<
