@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2004/11/04 20:57:06 shannonjr Exp $
+
+--- src/http.c.orig	2004-04-02 11:05:19.000000000 -0700
++++ src/http.c
+@@ -456,8 +456,7 @@ send_request (http_t hd)
+   server = *hd->uri->host ? hd->uri->host : "localhost";
+   port = hd->uri->port ? hd->uri->port : 80;
+ 
+-  if ((hd->flags & HTTP_FLAG_TRY_PROXY)
+-      && (http_proxy = getenv (HTTP_PROXY_ENV)))
++  if (http_proxy = getenv (HTTP_PROXY_ENV))
+     {
+       parsed_uri_t uri;
+ 
