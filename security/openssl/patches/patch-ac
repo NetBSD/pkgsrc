@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.21 2004/12/27 02:31:07 jlam Exp $
+$NetBSD: patch-ac,v 1.22 2004/12/27 06:14:40 jlam Exp $
 
---- Configure.orig	2004-10-01 07:34:28.000000000 -0400
+--- Configure.orig	Fri Oct  1 07:34:28 2004
 +++ Configure
 @@ -400,9 +400,23 @@ my %table=(
  "linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:SIXTY_FOUR_BIT_LONG RC4_CHUNK RC4_CHAR:asm/ia64.o:::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
@@ -40,6 +40,17 @@ $NetBSD: patch-ac,v 1.21 2004/12/27 02:31:07 jlam Exp $
  			elsif (/^-[^-]/ or /^\+/)
  				{
  				$flags.=$_." ";
+@@ -1167,8 +1185,8 @@ if ($fips)
+ 	}
+ $des_obj=$des_enc	unless (!$fips && $des_obj =~ /\.o$/);
+ my $fips_des_obj='asm/fips-dx86-elf.o';
+-$fips_des_obj=$fips_des_enc unless $processor eq '386';
+-my $fips_sha1_obj='asm/sx86-elf.o' if $processor eq '386';
++$fips_des_obj=$fips_des_enc unless ($fips && $processor eq '386');
++my $fips_sha1_obj='asm/sx86-elf.o' if ($fips && $processor eq '386');
+ $bf_obj=$bf_enc		unless ($bf_obj =~ /\.o$/);
+ $cast_obj=$cast_enc	unless ($cast_obj =~ /\.o$/);
+ $rc4_obj=$rc4_enc	unless ($rc4_obj =~ /\.o$/);
 @@ -1297,7 +1315,7 @@ while (<IN>)
  	elsif ($shared_extension ne "" && $shared_extension =~ /^\.s([ol])\.[^\.]*\.[^\.]*$/)
  		{
