@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:33:39 agc Exp $
+
+MD5 (fidogate-4.4.2.tar.gz) = 055ff66f68455ff746d4974d7d072036
+SHA1 (patch-aa) = 169ef1122c1d2050249c1cc79106f335b714ef8a
+SHA1 (patch-ab) = c453ad1e3955259f01cd0692cf5568d2f3fafacb
+SHA1 (patch-ac) = b93a8656afea504e00692d4a235f117dfb67df68
+SHA1 (patch-ad) = 2562aca505a403e9cd5e493fcf84f9c7b15e764f
+SHA1 (patch-ae) = e2cf8add74b051111626230257c01793c1c20ca9
+SHA1 (patch-af) = 0e357aa5f324ab3b1ff507c8ceeba476ce36b908
+SHA1 (patch-ag) = 0d7babf2526a4b235bdd20ae1aead7ee4d734dd6
+SHA1 (patch-ah) = d75936b400f87c87033b07a5481a004ea21d6ddd
+SHA1 (patch-ai) = 072a854f2db4ce1be46107dc49c211f28172c3d7
+SHA1 (patch-aj) = 0f68f94aa285a4d1ae38cfd2d62b10f96ad325a6
+SHA1 (patch-ak) = 787c66a5af3220c234c8a9d89606e697eca4cf47
+SHA1 (patch-al) = 7fe4d59f45bb865dcfbeef3a1f2d7c4023185eca
+SHA1 (patch-am) = 6c9735b35ddca75df5e0446ee4a46a62ff69fef3
+SHA1 (patch-an) = ec8d8faf329f40e06f865aa790e36f1b6cd81fbb
+SHA1 (patch-ao) = e23fc61440465d1792fbcc51aeeb1077393c87e9
+SHA1 (patch-ap) = 052d155e698fb36b87e4a28a4b1f75f701b7c956
+SHA1 (patch-aq) = 23e551d1bf36e031a629d9d9e817d135886191ab

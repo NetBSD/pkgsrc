@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:36:32 agc Exp $
+
+MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
+MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
+MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 8c4d952d999ead62f6604948c65c2454
+SHA1 (patch-aa) = 1f1626fa45e904971b87725d7f8ca650d8220cba
+SHA1 (patch-ab) = 8091aaf43bfe0a167e1696bc68c0453d51867ff9
+SHA1 (patch-ac) = 050731c930f36db5afb961353b073b41783c5972
+SHA1 (patch-ad) = 52b7a7f0cdbca1a6e93cf5e65a49f4d08dee4bfe
