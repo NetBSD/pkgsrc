@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:10 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/05 23:35:58 jlam Exp $
 #
 
 DISTNAME=	cracklib,2.7
@@ -11,8 +11,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.users.dircon.co.uk/~crypto/
 COMMENT=	Password checking library
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
-USE_BUILDLINK2=	YES
+
+INSTALLATION_DIRS=	bin include/cracklib lib libdata
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/cracklib
