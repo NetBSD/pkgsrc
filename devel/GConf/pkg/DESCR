@@ -1,9 +1,13 @@
-  GConf is a configuration database system, functionally similar to the
-Windows registry but lots better. :-)  It's being written for the GNOME
-desktop.
+GConf is a configuration database system, functionally similar to the
+Windows registry but lots better. :-) It's being written for the GNOME
+desktop but does not require GNOME; configure should notice if GNOME
+is not installed and compile the basic GConf library anyway.
 
-  GCONF IS SO INCREDIBLY ALPHA. AS IN, THERE ARE MORE UNTESTED CODE PATHS
-THAN TESTED ONES.  However, it "theoretically" works and I'm interested in
-people trying it out and looking for bugs.
+  GConf does require glib, ORBit, libxml, and the popt option parsing
+library.  XML will be optional in the future if someone writes another
+storage backend.
 
-  Havoc Pennington <hp@redhat.com>
+  There's an introductory article at
+http://developer.gnome.org/feature/current/index.html, written a while ago
+but mostly still valid.   Also, there's a mailing list
+gconf-list@gnome.org, see http://mail.gnome.org/mailman/listinfo/gconf-list
