@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.3 2000/09/17 21:55:09 hubertf Exp $
+# $NetBSD: build,v 1.4 2000/09/29 04:28:50 hubertf Exp $
 #
 # Do builk build
 #
@@ -9,17 +9,7 @@
 echo Bulk build started: `date`
 echo ""
 
-if [ "$http_proxy" != "" ]; then
-	echo "Using HTTP proxy $http_proxy"
-	export http_proxy
-fi
-if [ "$ftp_proxy" != "" ]; then
-	echo "Using FTP proxy $ftp_proxy"
-	export ftp_proxy
-fi
-echo ""
-
-# Pull in ADMIN:
+# Pull in ADMIN etc.:
 if [ -f "$BULK_BUILD_CONF" ]; then
     . $BULK_BUILD_CONF
 else
@@ -31,6 +21,16 @@ else
 		exit 1
 	fi
 fi
+
+if [ "$http_proxy" != "" ]; then
+	echo "Using HTTP proxy $http_proxy"
+	export http_proxy
+fi
+if [ "$ftp_proxy" != "" ]; then
+	echo "Using FTP proxy $ftp_proxy"
+	export ftp_proxy
+fi
+echo ""
 
 unset DISPLAY		# allow sane failure for gimp, xlispstat
 
@@ -44,11 +44,11 @@ fi
 
 # Figure out optimal build order, and build
 if [ "$1" != "restart" ]; then
-	sh mk/bulk/printdepends | tee .l
+	sh mk/bulk/printdepends | tsort | tee .l
 fi
 nice -n 20 make \
 		SPECIFIC_PKGS=1 \
-		GROUP_SPECIFIC_PKGS="`tsort .l | tr '\012' ' '`" \
+		GROUP_SPECIFIC_PKGS="`cat .l | tr '\012' ' '`" \
 		bulk-package | sed 's/^/'`uname -p`'> /g'
 rm .l
 
