@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.12 2003/12/12 10:20:53 adam Exp $
+$NetBSD: patch-aa,v 1.13 2004/01/22 17:34:48 recht Exp $
 
---- makefiles/Makefile.netbsd.orig	Sat Aug 18 01:02:55 2001
-+++ makefiles/Makefile.netbsd	Wed Oct 31 00:18:05 2001
-@@ -7,8 +7,8 @@
- # To evaluate an alternative layout for the Replace/Find dialog, add
- # -DREPLACE_SCOPE to the CFLAGS. See the README file for more information.
+--- makefiles/Makefile.netbsd.orig	2003-09-28 17:03:10.000000000 +0200
++++ makefiles/Makefile.netbsd	2004-01-22 18:18:44.000000000 +0100
+@@ -10,9 +10,9 @@
+ # To test if the Motif library exports the runtime version
+ # add -DHAVE__XMVERSIONSTRING to CFLAGS
  #
 -CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
 +CFLAGS+=-DUSE_DIRENT -DUSE_LPR_PRINT_CMD
@@ -13,3 +13,4 @@ $NetBSD: patch-aa,v 1.12 2003/12/12 10:20:53 adam Exp $
 +LIBS= ${LDFLAGS} ${MOTIFLIB} -lm -lXpm -lXext -lXt -lSM -lICE -lX11
  
  include Makefile.common
+ 
