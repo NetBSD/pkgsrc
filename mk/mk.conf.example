@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.2 1998/03/30 08:18:49 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.3 1998/05/07 17:24:39 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -37,6 +37,11 @@ MANZ=		1		# gzip manual pages at installation time
 				# Default: not defined
 
 # Definitions used in the packages collection
+#AMANDA_USER=	backup		# Used in the amanda package to specify the login
+				# user and group responsible for backups
+				# Possible: any user name
+				# Default: backup
+
 #DOMAIN_NAME=			# Used in the knews package to set the domain name
 				# Possible: almost anything really, usually a FQDN.
 				# Default: none
@@ -111,6 +116,11 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #PATCH_DEBUG=			# Used in exmh package to denote debugging
 				# Possible: defined, not defined
 				# Default: not defined
+
+#PGUSER=pgsql			# Used in postgresql package as the username
+				# (and group name) of the database admin
+				# Possible: any user name
+				# Default: pgsql
 
 #RCS_LOCALID=			# Used in cvs-current package for an RCS Id
 				# which is expanded.
