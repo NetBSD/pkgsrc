@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2002/07/24 19:45:32 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2002/08/05 10:45:32 tron Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=	2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			http://www.ameth.org/gimp/pub/gtk/v1.2/ \
 			${MASTER_SITE_GNOME:=stable/sources/gtk/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
