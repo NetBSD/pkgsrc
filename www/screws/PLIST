@@ -1,0 +1,91 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/23 16:09:21 xtraeme Exp $
+bin/hsml
+etc/rc.d/screws
+lib/screws/BasicExec.so
+lib/screws/Hello.so
+lib/screws/HsmlExec.so
+lib/screws/LoadBalancing.so
+lib/screws/Mime.so
+lib/screws/noupdir.so
+lib/screws/unicode.so
+libexec/screws/README
+libexec/screws/c/Makefile
+libexec/screws/c/index.html
+libexec/screws/c/linksys.c
+libexec/screws/htdocs/index.html
+libexec/screws/htdocs/index2.html
+libexec/screws/htdocs/logo.png
+libexec/screws/obsd-qos.x
+libexec/screws/perl.pl
+libexec/screws/perl/check.pl
+libexec/screws/perl/config.pl
+libexec/screws/perl/defpages/400.html
+libexec/screws/perl/defpages/403.html
+libexec/screws/perl/defpages/404.html
+libexec/screws/perl/error.pl
+libexec/screws/perl/get.pl
+libexec/screws/perl/htdocs/.hidden
+libexec/screws/perl/htdocs/example.c
+libexec/screws/perl/htdocs/example.dir/OtherDir/nullfile
+libexec/screws/perl/htdocs/example.dir/onefile
+libexec/screws/perl/htdocs/example.dir/otherfile
+libexec/screws/perl/htdocs/example.hsml
+libexec/screws/perl/htdocs/example.php
+libexec/screws/perl/htdocs/example.pl.html
+libexec/screws/perl/htdocs/example.x
+libexec/screws/perl/htdocs/example.xslt/enlix.xml
+libexec/screws/perl/htdocs/example.xslt/index.xml
+libexec/screws/perl/htdocs/example.xslt/logos.xml
+libexec/screws/perl/htdocs/example.xslt/secciones-noticias.xml
+libexec/screws/perl/htdocs/example.xslt/xtraeme.xsl
+libexec/screws/perl/htdocs/hsml2.lua.html
+libexec/screws/perl/htdocs/hsml2.pl.html
+libexec/screws/perl/htdocs/index.html
+libexec/screws/perl/htdocs/logo-old.png
+libexec/screws/perl/htdocs/logo.png
+libexec/screws/perl/htdocs/post.hsml
+libexec/screws/perl/http1.pl
+libexec/screws/perl/listdir.pl
+libexec/screws/perl/main.pl
+libexec/screws/perl/method.pl
+libexec/screws/perl/mime.pl
+libexec/screws/perl/mime.types
+libexec/screws/sh/basic.sh
+libexec/screws/sh/basic.sh.old
+libexec/screws/sh/index.html
+man/man8/screwsd.8
+sbin/screwsctl
+sbin/screwsd
+share/doc/screws/CA.pl
+share/doc/screws/cert-key-pem.example
+share/doc/screws/configuration
+share/doc/screws/env-vars
+share/doc/screws/hacking
+share/doc/screws/io
+share/doc/screws/logs
+share/doc/screws/modules
+share/doc/screws/screws.png
+share/doc/screws/security
+share/doc/screws/ssl
+share/doc/screws/tcpwin
+share/doc/screws/verbose
+share/doc/screws/virtual-hosts
+share/doc/screws/wrt54g.txt
+share/examples/screws/screws.conf
+share/screws/hsml-inc/include.pl.html
+share/screws/mime.types
+@dirrm share/screws/hsml-inc
+@dirrm share/screws
+@dirrm share/examples/screws
+@dirrm share/doc/screws
+@dirrm libexec/screws/sh
+@dirrm libexec/screws/perl/htdocs/example.xslt
+@dirrm libexec/screws/perl/htdocs/example.dir/OtherDir
+@dirrm libexec/screws/perl/htdocs/example.dir
+@dirrm libexec/screws/perl/htdocs
+@dirrm libexec/screws/perl/defpages
+@dirrm libexec/screws/perl
+@dirrm libexec/screws/htdocs
+@dirrm libexec/screws/c
+@dirrm libexec/screws
+@dirrm lib/screws
