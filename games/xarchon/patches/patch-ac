@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/10/14 23:32:17 hubertf Exp $
+
+--- data/Makefile.in.orig	Wed Oct 13 05:52:14 1999
++++ data/Makefile.in	Wed Oct 13 05:55:43 1999
+@@ -220,7 +220,7 @@
+ 	   done; \
+ 	   THEME_LINKS=`find $$theme -type l`; \
+ 	   for p in $$THEME_LINKS; do \
+-	      q=`find $$p -printf %l`; \
++	      q=`ls -l $$p | sed 's/^.* //'`; \
+ 	      echo " ln -sf $$q $(DESTDIR)$(pkgdatadir)/$$p"; \
+ 	      ln -sf $$q $(DESTDIR)$(pkgdatadir)/$$p; \
+ 	   done; \
