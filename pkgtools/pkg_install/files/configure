@@ -3966,7 +3966,8 @@ done
 
 
 
-for ac_header in sys/ioctl.h sys/resource.h sys/wait.h
+
+for ac_header in sys/ioctl.h sys/resource.h sys/utsname.h sys/wait.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
