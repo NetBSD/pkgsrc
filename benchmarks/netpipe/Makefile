@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/28 16:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/02 13:28:12 wiz Exp $
 
 DISTNAME=	NetPIPE_2.4
 PKGNAME=	netpipe-2.4
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
 COMMENT=	TCP/PVM/MPI testing and performance measuring tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+WRKSRC=		${WRKDIR}/netpipe-2.4
 
 .include "../../mk/bsd.prefs.mk"
 
