@@ -1,8 +1,0 @@
-$NetBSD: patch-ay,v 1.1 2003/12/30 14:41:09 cjep Exp $
-
---- ../sqlite/src/where.c.orig	2003-07-16 01:54:31.000000000 +0100
-+++ ../sqlite/src/where.c
-@@ -16,2 +16,3 @@
- */
-+#include "os.h"
- #include "sqliteInt.h"
