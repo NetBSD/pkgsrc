@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.86 2005/02/22 22:13:51 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.87 2005/02/25 00:56:01 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -181,3 +181,7 @@ Pullup ticket 303 - requested by Lubomir Sedlacik
 security fix for hylafax
 Pullup ticket 304 - requested by Lubomir Sedlacik
 security fix for mailman
+Pullup ticket 307 - requested by Matthias Drochner
+security fix for emacs
+Pullup ticket 308 - requested by Matthias Drochner
+security fix for xview-lib
