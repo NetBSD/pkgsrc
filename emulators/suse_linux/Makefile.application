@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.application,v 1.4 2002/04/09 01:29:25 dmcmahill Exp $
+# $NetBSD: Makefile.application,v 1.5 2002/11/25 11:01:16 schmonz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == i386)
+.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == powerpc)
 LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n emul.linux.kern.osrelease 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
 
 .if (${LINUX_KERNEL_OSRELEASE} == 2.0.38)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/10/14 14:35:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/25 11:01:17 schmonz Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for X11 binaries
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/04/04 09:47:12 tron Exp $
+# $NetBSD: Makefile,v 1.13 2002/11/25 11:01:18 schmonz Exp $
 
 DISTNAME=		xforms
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for xforms binaries
 
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../suse_x11
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
