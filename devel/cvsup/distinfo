@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/09/13 10:58:51 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2002/09/05 23:52:41 hubertf Exp $
 
-SHA1 (cvsup-bin-nogui-16.1d.tgz) = 385d70f276cff55cb0bef5859c79a9e1210bd6ad
-Size (cvsup-bin-nogui-16.1d.tgz) = 1292680 bytes
+SHA1 (cvsup-i386-1.6/cvsup-static-16.1.f.tgz) = 2d66c9259cb8369c4521d4c1e556046a3d9f8e67
+Size (cvsup-i386-1.6/cvsup-static-16.1.f.tgz) = 1252032 bytes
