@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/01 13:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/04/26 19:15:38 garbled Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
+USE_X11=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+= --with-tcl-config=${PREFIX}/lib/tcl8.0 \
 		--with-tk-config=${PREFIX}/lib/tk8.0
