@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-ai,v 1.1 2000/08/25 21:49:29 tron Exp $
 
---- configure.orig	Fri Oct  8 16:50:42 1999
-+++ configure	Fri Aug 25 23:17:26 2000
-@@ -1075,7 +1075,7 @@
+--- s51.src/configure.orig	Thu Jul 29 20:17:03 1999
++++ s51.src/configure	Fri Aug 25 23:17:26 2000
+@@ -812,7 +812,7 @@
  # ./install, which can be erroneously created by make from ./install.sh.
  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
- echo "configure:1078: checking for a BSD compatible install" >&5
+ echo "configure:815: checking for a BSD compatible install" >&5
 -if test -z "$INSTALL"; then
-+if true; then
++if true ; then
  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else

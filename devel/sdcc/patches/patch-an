@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2000/08/25 21:49:29 tron Exp $
+
+--- sdcc51lib/Makefile.in.orig	Fri Aug 25 23:17:26 2000
++++ sdcc51lib/Makefile.in	Fri Aug 25 23:17:26 2000
+@@ -30,7 +30,7 @@
+ infodir         = @infodir@
+ srcdir          = @srcdir@
+ 
+-CPPFLAGS        = -I$(INCDIR) 
++CPPFLAGS        = -I$(INCDIR)  -Dunix
+ CFLAGS		= 
+ 
+ OBJECTS		= _atoi.rel _atol.rel _autobaud.rel _bp.rel _char2fs.rel \

@@ -1,21 +1,20 @@
-*** sdcdb/Makefile.in.orig	Mon Nov 29 19:38:51 1999
---- sdcdb/Makefile.in	Mon Nov 29 19:39:26 1999
-***************
-*** 53,60 ****
-  # ---------------------------------------------------
-  install: all installdirs
-  	$(INSTALL) -s $(TARGET) $(bindir)/sdcdb
-! 	cp $(PRJDIR)/sdcdb/sdcdb.el $(bindir)/sdcdb.el
-! 	cp $(PRJDIR)/sdcdb/sdcdbsrc.el $(bindir)/sdcdbsrc.el
-  
-  
-  # Deleting all the installed files
---- 53,60 ----
-  # ---------------------------------------------------
-  install: all installdirs
-  	$(INSTALL) -s $(TARGET) $(bindir)/sdcdb
-! 	$(INSTALL) -c $(PRJDIR)/sdcdb/sdcdb.el $(bindir)/sdcdb.el
-! 	$(INSTALL) -c $(PRJDIR)/sdcdb/sdcdbsrc.el $(bindir)/sdcdbsrc.el
-  
-  
-  # Deleting all the installed files
+$NetBSD: patch-ag,v 1.2 2000/08/25 21:49:29 tron Exp $
+
+--- gc/mach_dep.c.orig	Mon Oct 11 17:04:00 1999
++++ gc/mach_dep.c	Fri Aug 25 23:17:26 2000
+@@ -197,6 +197,7 @@
+ 	&& !defined(SCO) && !defined(SCO_ELF) \
+  	&& !(defined(LINUX)       && defined(__ELF__)) \
+ 	&& !(defined(__FreeBSD__) && defined(__ELF__)) \
++	&& !(defined(__NetBSD__) && defined(__ELF__)) \
+ 	&& !defined(DOS4GW)
+ 	/* I386 code, generic code does not appear to work */
+ 	/* It does appear to work under OS2, and asms dont */
+@@ -212,6 +213,7 @@
+ 
+ #	if ( defined(I386) && defined(LINUX) && defined(__ELF__) ) \
+ 	|| ( defined(I386) && defined(__FreeBSD__) && defined(__ELF__) )
++	|| ( defined(I386) && defined(__NetBSD__) && defined(__ELF__) )
+ 
+ 	/* This is modified for Linux with ELF (Note: _ELF_ only) */
+ 	/* This section handles FreeBSD with ELF. */
