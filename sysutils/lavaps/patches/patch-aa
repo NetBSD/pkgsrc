@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2000/02/05 06:54:30 wiz Exp $
 --- process_scan_freebsd.cc.orig	Tue Nov  2 16:27:39 1999
 +++ process_scan_freebsd.cc	Tue Nov  2 16:53:24 1999
 @@ -112,7 +112,7 @@
