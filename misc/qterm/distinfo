@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:19 agc Exp $
 
-MD5 (qterm-ac-1.0.tar.gz) = 6e4a052b8a31af8f0ca191baab5f1e99
+SHA1 (qterm-ac-1.0.tar.gz) = 2603f57265f62b144418ff4a283fc3454f9dcb4c
+Size (qterm-ac-1.0.tar.gz) = 42415 bytes

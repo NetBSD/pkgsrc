@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:21 agc Exp $
 
-MD5 (vera-1.6.tar.gz) = 3ad7fe02032f3ba0d69a60b5a66dbe4d
+SHA1 (vera-1.6.tar.gz) = 71b2a6ca86c711ce4f63d01868779a61687b1733
+Size (vera-1.6.tar.gz) = 143010 bytes
 SHA1 (patch-aa) = 9f2263e979d537977dcdec2b0a4a49209ca02832

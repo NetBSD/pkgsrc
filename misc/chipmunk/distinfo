@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:08 agc Exp $
 
-MD5 (chipmunk-1.4.tar.gz) = 25cc9fc70ec62d6da4a1f28ebbab2188
+SHA1 (chipmunk-1.4.tar.gz) = a59c58427a27118497d39778ab7ca6daa371e868
+Size (chipmunk-1.4.tar.gz) = 62181 bytes
 SHA1 (patch-aa) = 6d3b0735d7974a07c51627faee81295869eacae1
 SHA1 (patch-ab) = 8d960276ef682f7e138f77ffac5bcf65bc04e7b3
 SHA1 (patch-ac) = ca12c4b5672269dbde2cb118d26e0840f5d72a9b

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:46 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:11 agc Exp $
 
-MD5 (figlet22.tar.gz) = 59fc72d8ed84902526ca1ea69f27ddec
+SHA1 (figlet22.tar.gz) = 8e8a91e4f827551eed128bb53172e63b18eba303
+Size (figlet22.tar.gz) = 165091 bytes
 SHA1 (patch-aa) = f8cb3c42a8c2f1b7a7e94a7e3177ac628784efbb
