@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/14 00:24:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/14 14:48:23 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.4.0
@@ -52,13 +52,18 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
