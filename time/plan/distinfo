@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/06/10 22:42:42 jschauma Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 19:14:55 wiz Exp $
 
 SHA1 (plan-1.8.4.tar.gz) = 0b4c5f2d078d3ad48f734c89a316258a56a5749a
+RMD160 (plan-1.8.4.tar.gz) = 90c4ffa67be680b110ae5564f208d0a1edfbc9f8
 Size (plan-1.8.4.tar.gz) = 422458 bytes
 SHA1 (patch-aa) = 6159fa85cfe7ad8416e03e33ddb0cf3754cde6b9
 SHA1 (patch-ab) = 6670c398271e5ee6d32194c0b69850f381b5cc5c
