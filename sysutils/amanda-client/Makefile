@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/09/04 01:08:53 bad Exp $
+# $NetBSD: Makefile,v 1.11 1999/09/06 19:30:19 bad Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -18,26 +18,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../sysutils/amanda-common/Makefile.common"
 
-.if ${OPSYS} == "NetBSD"
-AMANDA_GROUP=		operator
-.elif ${OPSYS} == "SunOS"
-AMANDA_GROUP=		sysadmin
-.endif
-
-AMANDA_USER?=		backup
-AMANDA_VAR?=		/var/amanda
-
-CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
-			--with-group=${AMANDA_GROUP} \
-			--with-owner=root \
-			--with-mmap --with-amandahosts \
-			--with-includes=${PREFIX}/include \
-			--with-libraries=${PREFIX}/lib \
-			--localstatedir=${AMANDA_VAR} \
-			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
-			--with-dump-honor-nodump \
-			--without-server --without-restore
+CONFIGURE_ARGS+=	--without-server --without-restore
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
