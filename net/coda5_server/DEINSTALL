@@ -1,72 +1,14 @@
 #! /bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:55:03 zuntum Exp $
-
-PKGNAME=$1
-STAGE=$2
-
-CAT="@CAT@"
-LN="@LN@"
-RM="@RM@"
-RMDIR="@RMDIR@"
-TRUE="@TRUE@"
-
-CONFDIR=${PKG_PREFIX}/etc/coda
+# $NetBSD: DEINSTALL,v 1.2 2002/06/20 19:28:35 jlam Exp $
 
 case ${STAGE} in
-DEINSTALL)
-	;;
-
 POST-DEINSTALL)
-	# If coda-server is installed, then point these links to the
-	# venus-* versions of these scripts.
-	#
-	for script in coda-setup-ports codaconfedit; do
-		${RM} -f ${PKG_PREFIX}/sbin/${script}
-		if [ -f ${PKG_PREFIX}/sbin/venus-${script} ]
-		then
-			${LN} -sf venus-${script} ${PKG_PREFIX}/sbin/${script}
+	for file in au coda-setup-ports codaconfedit; do
+		${RM} -f ${PKG_PREFIX}/sbin/${file}
+		if [ -f ${PKG_PREFIX}/sbin/venus-${file} ]; then
+			${LN} -sf venus-${file} ${PKG_PREFIX}/sbin/${file}
 		fi
 	done
-
-	${RMDIR} ${CONFDIR} 2>/dev/null || ${TRUE}
-
-	existing_dirs=''
-	for dir in ${CONFDIR}
-	do
-		if [ -d ${dir} ]
-		then
-			existing_dirs="${existing_dirs} ${dir}"
-		fi
-	done
-
-	if [ -n "${existing_dirs}" ]
-	then
-		${CAT} << EOF
-===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove:
-EOF
-		if [ -n "${existing_dirs}" ]
-		then
-			${CAT} << EOF
-
-  * the following directories:
-
-EOF
-			for dir in ${existing_dirs}
-			do
-				echo "	${dir}"
-			done
-		fi
-		${CAT} << EOF
-===========================================================================
-EOF
-	fi
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
-exit 0
