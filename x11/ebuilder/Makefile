@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/28 18:14:01 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/10 16:03:49 agc Exp $
 #
 
 DISTNAME=	ebuilder-0.56c
@@ -13,7 +13,7 @@ DEPENDS+=	qt2-*:../../x11/qt
 DEPENDS+=	png-*:../../graphics/png
 
 USE_X11=	yes
-MAKE_ENV=	QTDIR=${X11BASE}/qt2
+MAKE_ENV=	QTDIR=`${PKG_INFO} -qp qt2 | ${AWK} '{print $$2}'`/qt2
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/ebuilder ${PREFIX}/bin
