@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8125 2004/11/29 01:01:54 tv Exp $
+$NetBSD: CHANGES,v 1.8126 2004/11/29 01:43:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ruby-clearsilver-0.9.13 [epg 2004-11-29]
 	Updated clearsilver to 0.9.13 [epg 2004-11-29]
 	Updated binkd to 0.9.8 [tv 2004-11-29]
+	Updated abook to 0.5.3 [minskim 2004-11-29]
