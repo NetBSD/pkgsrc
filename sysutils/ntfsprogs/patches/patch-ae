@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+$NetBSD: patch-ae,v 1.2 2005/03/15 20:24:30 rillig Exp $
 
---- libntfs/device.c.orig	Sat Sep  4 06:16:32 2004
-+++ libntfs/device.c
-@@ -52,6 +52,10 @@
+--- libntfs/device.c.orig	Sat Sep  4 12:16:32 2004
++++ libntfs/device.c	Sat Mar 12 10:14:34 2005
+@@ -37,6 +37,8 @@
+ #	include <linux/hdreg.h>
+ #endif
+ 
++#include "compat.h"
++
+ #include "types.h"
+ #include "mst.h"
+ #include "debug.h"
+@@ -52,6 +54,10 @@
  #define HDIO_GETGEO	0x0301	/* Get device geometry. */
  #endif
  
@@ -13,7 +22,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
  /**
   * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
   * name:	name of the device (must be present)
-@@ -498,6 +502,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
+@@ -498,6 +504,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
  					(unsigned long)this_floppy.size,
  					(unsigned long)this_floppy.size);
  			return (s64)this_floppy.size * 512 / block_size;

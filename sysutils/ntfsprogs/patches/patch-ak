@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2005/03/15 20:24:30 rillig Exp $
+
+Needed for ENOTSUP on NetBSD-1.6.2.
+
+--- libntfs/win32_io.c.orig	Sat Sep  4 12:16:32 2004
++++ libntfs/win32_io.c	Sat Mar 12 10:15:23 2005
+@@ -32,6 +32,8 @@
+ #include <errno.h>
+ #include <fcntl.h>
+ 
++#include "compat.h"
++
+ /*
+  * Cannot use "../include/types.h" since it conflicts with "wintypes.h".
+  * define our own...
