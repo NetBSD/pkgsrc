@@ -1,0 +1,159 @@
+$NetBSD: README,v 1.1.2.1 2003/08/31 10:07:55 jlam Exp $
+
+ 0 Package Views
+ ===============
+
+Package views is a pkgsrc technology that supports building and
+installing multiple versions of the same software such that they
+co-exist on a single system.  Individual packages are installed into
+their own directory tree and their files are symlinked into "views".
+Users can choose amongst different software collections provided by
+different views by appropriately setting shell environment variables,
+e.g., PATH, MANPATH, etc.
+
+Package views is similar in spirit to the Encap Package Management
+System (http://www.encap.org/) and to the Carnegie Mellon University
+Depot software management system.
+
+
+ 0.1 A short history of package views
+ ====================================
+
+Package views was proposed as a solution to the problem of not being
+able to install multiple versions of the same software simultaneously
+via pkgsrc.  Alistair Crooks presented a paper on package views at
+EuroBSDCon in November 2002 that described the work he did on the
+"pkgviews" branch of pkgsrc where he implemented his ideas.  The paper
+is highly-recommended reading for a more complete understanding of
+package views principles and is available at:
+
+	http://www.NetBSD.org/Documentation/software/pkgviews.pdf
+
+Unfortunately, Alistair ran out of time to devote to integrating his
+work into the main pkgsrc branch.  The code he developed languished on
+the "pkgviews" branch for over a year, and in the meantime much code
+was added to pkgsrc that increased the complexity and the capabilities
+of pkgsrc, including buildlink2, which conflicted with Alistair's
+implementation of package views.  In July 2003, Johnny Lam attempted
+to integrate the functionality on the pkgviews branch into modern
+pkgsrc.  As part of the integration, a new buildlink3 framework was
+created so that the the ability to isolate builds from differences in
+the environment wouldn't be lost.
+
+
+ 0.2 Package views terminology
+ =============================
+
+The terminology for packages in the package views world is as
+follows:  a "pkgviews" package is a package that has been converted to
+build and install using package views.  An "overwrite" package is one
+that hasn't.  A "depoted" package describes a pkgviews package
+installed into /usr/pkg/packages in its "depot" directory.  A package
+"instance" in a view describes a depoted package symlinked into a
+view.
+
+
+ 0.3 What's been done
+ ====================
+
+The pkg_install tools have been enhanced to handle both binary depoted
+packages and binary "overwrite" packages.  The pkgsrc internals have
+been modified to allow building and installing depoted packages and to
+automatically add a depoted package in the the default view.
+"Overwrite" packages shouldn't be affected by the changes, and can be
+freely mixed with pkgviews packages.
+
+Packages that have been converted to use "pkgviews" should add the
+following line to their Makefiles:
+
+	PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+PKG_INSTALLATION_TYPES can also just be one value or the other to
+explicitly note that the package only supports that one type of
+installation style.  Users may add the following line to /etc/mk.conf:
+
+	PKG_INSTALLATION_PREFS=	pkgviews overwrite
+
+to note that they prefer building using pkgviews if the package
+supports it, otherwise to build using the "overwrite" installation
+style.  However, users should not change PKG_INSTALLATION_PREFS from
+the default value unless they're sure that they want to start
+migrating their package system over to using pkgviews.  The default,
+"overwrite pkgviews", will cause all packages to build using the
+"overwrite" installation style.
+
+Some highlight of pkgviews packages include:
+
+	* fully dynamic PLISTs
+	* multiple version of the same package can co-exist
+
+
+ 0.4 buildlink3 pkgsrc build framework
+ =====================================
+
+A new buildlink3 framework that takes advantage of depoted packages
+has been added to pkgsrc as part of the package views changes.
+Buildlink3 uses wrapper scripts much like buildlink2.  However, when
+building pkgviews packages, it doesn't symlink files into
+${BUILDLINK_DIR} since it can safely refer to only a specific
+package's files by passing the appropriate -I<dir> and -L<dir> flags
+to the compiler, where <dir> points to a location in the package's
+depot directory.  When building "overwrite" packages, buildlink3 will
+act and feel very much like buildlink2 but with more advanced wrapper
+scripts, and there are provisions for allowing an "overwrite" package
+to build against the viewed instance of a depoted package.  The
+implementation currently allows "overwrite" to depend on either
+"overwrite" or pkgviews packages, but pkgviews packages are restricted
+to only being able to depend on other pkgviews packages.
+
+Packages that have been converted to use buildlink3 should add the
+following line to their Makefiles:
+
+	USE_BUILDLINK3=	YES
+
+A package must be converted to use the buildlink3 framework before it
+can support the pkgviews installation style.
+
+
+ 0.5 Package conversion issues
+ =============================
+
+The conversion process for a package to use buildlink3 and pkgviews
+essentially consists of changing USE_BUILDLINK2 to USE_BUILDLINK3,
+including buildlink3.mk files instead of buildlink2.mk files, and
+adding the PKG_INSTALLATION_TYPES line to the package Makefile.  It's
+extremely easy and painless.
+
+Since the idea is that the user can choose to install a package using
+either installation style, the package Makefiles have to explicitly
+support this.  This means that "hard" packages just got harder to
+maintain, but easy packages stay about the same.  In this case, "hard"
+packages are the ones that have module packages, e.g. PHP4, perl5,
+Apache, Cyrus-SASL, etc.  A package of this type must support finding
+shared modules or configuration files in directories shared with all
+of its module packages, thus requiring some hard-coding of paths
+across different packages.
+
+
+ 0.6 Future Work
+ ===============
+
+There may be some way around the problem of pkgviews packages not
+being able to depend on "overwrite" packages.  That's the only thing
+standing in the way between allowing an arbitrary package to be built
+using either installation style and working seamlessly with any other
+package.  The problem has to do with proper handling of metadata in
+the +REQUIRED_BY and +CONTENTS files that are split in two separate
+places.  One possible route to a solution is that for each overwrite
+package, we can symlink /usr/pkg/packages/<pkg> -> /var/db/pkg/<pkg>.
+This allows depoted packages to record themselves directly in the
++REQUIRED_BY files of "overwrite" packages.  If a user happens to run
+
+	pkg_delete -K /usr/pkg/packages <overwrite_pkg>
+
+then it still uses the correct +CONTENTS, +INSTALL, and +DEINSTALL
+scripts, so the package will still remove itself properly from
+/usr/pkg.  However, there are some remaining issues with properly
+removing both the /var/db/pkg/<pkg> directory and the
+/usr/pkg/packages/<pkg> symlink, so the deletion won't be completely
+clean until this issue can be resolved.
