@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2003/10/19 19:58:24 kristerw Exp $
+--- tryulong32.c.orig	Sun Oct 19 21:38:12 2003
++++ tryulong32.c	Sun Oct 19 21:40:37 2003
+@@ -1,5 +1,8 @@
+ void main()
+ {
++#ifdef __arm__
++ _exit(0);
++#else
+  unsigned long u;
+  u = 1;
+  u += u; u += u; u += u; u += u; u += u; u += u; u += u; u += u;
+@@ -8,4 +11,5 @@
+  u += u; u += u; u += u; u += u; u += u; u += u; u += u; u += u;
+  if (!u) _exit(0);
+  _exit(1);
++#endif
+ }
