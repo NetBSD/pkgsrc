@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/10/20 23:33:42 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2002/12/19 22:24:51 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,7 +6,7 @@
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-BASE_VERS=		1.1.16
+BASE_VERS=		1.1.17
 DIST_VERS=		${BASE_VERS}
 VERS=			${DIST_VERS:S/-/./g}
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
@@ -33,8 +33,11 @@ UNLIMIT_RESOURCES=	datasize memorysize
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
+CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
+CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR}
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
+CONFIGURE_ARGS+=	--with-bsdmanext
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${PKGLIBTOOL}"
 CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
@@ -93,6 +96,9 @@ OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0700
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 
+pre-configure:
+	cd ${WRKSRC} && ${AUTOCONF}
+
 pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 
@@ -122,5 +128,6 @@ post-install:
 .include "../../net/openslp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,29 @@
+$NetBSD: patch-ao,v 1.4 2002/12/19 22:24:55 jlam Exp $
+
+--- config-scripts/cups-manpages.m4.orig	Wed Jan  2 13:50:43 2002
++++ config-scripts/cups-manpages.m4
+@@ -22,6 +22,8 @@ dnl       EMail: cups-info@cups.org
+ dnl         WWW: http://www.cups.org
+ dnl
+ 
++AC_ARG_WITH(bsdmanext, [  --with-bsdmanext        use BSD manpage extensions],bsdmanext="yes",bsdmanext="no")
++
+ dnl Fix "mandir" variable...
+ if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
+ 	case "$uname" in
+@@ -91,6 +93,15 @@ case "$uname" in
+ 		MAN8DIR=8
+ 		;;
+ esac
++
++if test x$bsdmanext = xyes; then
++	CAT1EXT=0
++	CAT3EXT=0
++	CAT5EXT=0
++	CAT8EXT=0
++	MAN8EXT=8
++	MAN8DIR=8
++fi
+ 
+ AC_SUBST(CAT1EXT)
+ AC_SUBST(CAT3EXT)
