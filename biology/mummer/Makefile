@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/04/11 04:07:05 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/05 15:24:54 cube Exp $
 #
 
-DISTNAME=		MUMmer3.04
-PKGNAME=		mummer-3.04
+DISTNAME=		MUMmer3.15
+PKGNAME=		mummer-3.15
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/MUMmer/
 
@@ -37,7 +37,7 @@ do-install:
 		${PREFIX}/share/doc/html/mummer
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mummer
-.for DOC in maxmat3man.pdf maxmat3man.tex maxmat3src.pdf nucmer.README    \
+.for DOC in maxmat3man.tex maxmat3src.pdf nucmer.README    \
 	optionman.sty promer.README run-mummer1.README run-mummer3.README \
 	skaff.sty
 	${INSTALL_DATA} ${WRKSRC}/docs/${DOC} ${PREFIX}/share/doc/mummer

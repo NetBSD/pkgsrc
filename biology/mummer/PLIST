@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/05 15:24:54 cube Exp $
 bin/annotate
 bin/combineMUMs
 bin/gaps
@@ -23,7 +23,6 @@ share/doc/html/mummer/nuc_proex.gif
 share/doc/html/mummer/nucex.gif
 share/doc/html/mummer/osi.gif
 share/doc/html/mummer/pro_proex.gif
-share/doc/mummer/maxmat3man.pdf
 share/doc/mummer/maxmat3man.tex
 share/doc/mummer/maxmat3src.pdf
 share/doc/mummer/nucmer.README
