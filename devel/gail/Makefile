@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/23 21:50:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/11 03:04:28 xtraeme Exp $
 #
 
 DISTNAME=	gail-1.4.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://developer.gnome.org/projects/gap/
 COMMENT=	GNOME Accessibility Implementation Library
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_LIBTOOL=		yes
@@ -23,9 +23,9 @@ PKGCONFIG_OVERRIDE=	gail.pc.in
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-.include "../../devel/atk/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/atk/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
