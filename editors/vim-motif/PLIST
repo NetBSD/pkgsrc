@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 18:54:37 martti Exp $
+bin/gview
+bin/gvim
+bin/rgview
+bin/rgvim
+bin/rview
+bin/rvim
+bin/vim
+man/man1/gview.1
+man/man1/gvim.1
+man/man1/rgview.1
+man/man1/rgvim.1
