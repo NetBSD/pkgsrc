@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:21:26 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/05 10:20:27 xtraeme Exp $
 #
 
 DISTNAME=	lzop-1.01
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.oberhumer.com/opensource/lzop/download/
+MASTER_SITES=	http://www.lzop.org/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzop/
