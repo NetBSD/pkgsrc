@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/22 18:11:56 adrianp Exp $
+bin/tinyca
+share/tinyca/CA.pm
+share/tinyca/CERT.pm
+share/tinyca/GUI.pm
+share/tinyca/GUI/CALLBACK.pm
+share/tinyca/GUI/HELPERS.pm
+share/tinyca/GUI/TCONFIG.pm
+share/tinyca/GUI/WORDS.pm
+share/tinyca/GUI/X509_browser.pm
+share/tinyca/GUI/X509_infobox.pm
+share/tinyca/GUI/pod2htmd.x~~
+share/tinyca/GUI/pod2htmi.x~~
+share/tinyca/HELPERS.pm
+share/tinyca/KEY.pm
+share/tinyca/OpenSSL.pm
+share/tinyca/REQ.pm
+share/tinyca/TCONFIG.pm
+share/tinyca/templates/openssl.cnf
+@dirrm share/tinyca/templates
+@dirrm share/tinyca/GUI
+@dirrm share/tinyca
