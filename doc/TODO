@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1204 2003/12/14 22:55:08 xtraeme Exp $
+$NetBSD: TODO,v 1.1205 2003/12/14 23:02:56 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
-	o yelp-2.4.1 [xtraeme]
 	o ysm-2.9.0
 	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
