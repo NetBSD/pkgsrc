@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1195 2003/01/22 12:53:58 simonb Exp $
+$NetBSD: CHANGES,v 1.1196 2003/01/22 13:54:23 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla-stable to 1.0.2nb2 [lukem 2003-01-22]
 	Updated phoenix to 0.5nb4 [lukem 2003-01-22]
 	Updated adzap to 20030120 [simonb 2003-01-22]
+	Added libdvdcss-1.2.4 [agc 2003-01-22]
