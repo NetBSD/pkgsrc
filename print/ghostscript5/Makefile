@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1998/11/29 16:34:27 frueauf Exp $
+# $NetBSD: Makefile,v 1.31 1999/01/04 21:44:47 frueauf Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -24,7 +24,7 @@ WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
 MAKE_ENV+=	MAKEOBJDIR=.
-MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}"
+MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}" XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
 
 GS_SOURCES=	ghostscript-5.50.tar.gz
 GS_SOURCES+=	ghostscript-5.50gnu.tar.gz
