@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+
+--- src/support/apxs.pl.orig	Fri Dec  4 11:34:17 1998
++++ src/support/apxs.pl	Fri Dec  4 11:36:26 1998
+@@ -383,8 +383,7 @@
+         }
+         my $t = $f;
+         $t =~ s|^.+/([^/]+)$|$1|;
+-        push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
+-        push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
++        push(@cmds, "install -c -m 555 -o root -g wheel $f $CFG_LIBEXECDIR/$t");
+ 
+         #   determine module symbolname and filename
+         my $filename = '';

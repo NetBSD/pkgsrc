@@ -1,0 +1,7 @@
+The latest version of the most popular web server on the 'net.
+This compile includes proxy server support, as well as the ability
+to add modules that add many other features.
+
+You'll have to edit the configuration files in /usr/pkg/http/conf
+before you start it. The default root directory for documents is
+/usr/pkg/http/htdocs. You can start the server with `apachectl start'.
