@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.291 1999/07/02 18:04:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.292 1999/07/03 16:38:59 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1894,7 +1894,7 @@ binpkg-list:
 		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ; \
 		do 							\
 			if [ -f "$$pkg" ] ; then			\
-				${ECHO} "<TR><TD> ${MACHINE_ARCH}: <TD><a href=\"${PKG_URL}/$pkg\"> <TD>(${OPSYS} ${OS_VERSION}) </a>)"; \
+				${ECHO} "<TR><TD> ${MACHINE_ARCH}: <TD><a href=\"${PKG_URL}/$$pkg\"> <TD>(${OPSYS} ${OS_VERSION}) </a>)"; \
 			fi ;						\
 		done ; 							\
 		;;							\
@@ -1902,15 +1902,15 @@ binpkg-list:
 		cd ${PACKAGES}/../..;					\
 		for i in [1-9].*/*; do (				\
 			d=$$i/${PKGREPOSITORYSUBDIR} ; 			\
-			if [ -d "$d ]; then 				\
-				cd "$d" ; 				\
+			if [ -d "$$d" ]; then 				\
+				cd "$$d" ; 				\
 				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ;	\
 				do 					\
 					if [ -f "$$j" ] ; then		\
 						${ECHO} $$i/$$j; 	\
 					fi ;				\
-				done ) ; 				\
-			fi ; 						\
+				done ; 				\
+			fi ) ; 						\
 		done | ${AWK} -F/ '					\
 			{						\
 				release = $$1;				\
