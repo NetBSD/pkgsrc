@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/24 14:11:10 grant Exp $
 
 DISTNAME=		gnome-pim-1.4.6
 PKGREVISION=		5
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 BUILD_USES_MSGFMT=	YES

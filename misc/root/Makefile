@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/24 14:11:10 grant Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 ALL_TARGET=		netbsd
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
