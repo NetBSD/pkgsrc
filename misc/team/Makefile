@@ -3,7 +3,7 @@
 # Date created:		1 July 1995
 # Whom:			joerg
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:55:00 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/10/11 21:55:00 hubertf Exp
 #
 
 DISTNAME=	team-3.1
