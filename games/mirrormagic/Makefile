@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2000/08/23 23:14:24 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/04 10:23:58 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-1.3
 CATEGORIES=		games x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/} \
+			http://www.artsoft.org/mirrormagic/
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.artsoft.org/mirrormagic/
 
 USE_X11BASE=		YES
 USE_XPM=		YES
