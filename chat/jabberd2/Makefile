@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/01/20 15:08:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/15 20:46:20 rillig Exp $
 #
 
 DISTNAME=		jabberd-2.0s6
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
@@ -24,7 +25,7 @@ SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	configure
 SUBST_MESSAGE.path=	"Fixing configure script."
 SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"			\
-			-e "s,\$sysconfdir/jabberd,\$sysconfdir,g"
+			-e "s,\$$sysconfdir/jabberd,\$$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-mysql
