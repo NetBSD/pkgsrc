@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/01/20 07:10:41 fredb Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/02/18 11:16:33 mrg Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/Chinese/bugreports.html
 share/mplayer/DOCS/Chinese/cd-dvd.html
@@ -8,7 +8,7 @@ share/mplayer/DOCS/Chinese/documentation.html
 share/mplayer/DOCS/Chinese/encoding.html
 share/mplayer/DOCS/Chinese/faq.html
 share/mplayer/DOCS/Chinese/formats.html
-share/mplayer/DOCS/Chinese/skin-zh.html
+share/mplayer/DOCS/Chinese/skin.html
 share/mplayer/DOCS/Chinese/sound.html
 share/mplayer/DOCS/Chinese/users_against_developers.html
 share/mplayer/DOCS/Chinese/video.html
@@ -22,7 +22,7 @@ share/mplayer/DOCS/French/exemple.conf
 share/mplayer/DOCS/French/faq.html
 share/mplayer/DOCS/French/formats.html
 share/mplayer/DOCS/French/mplayer.1
-share/mplayer/DOCS/French/skin-fr.html
+share/mplayer/DOCS/French/skin.html
 share/mplayer/DOCS/French/sound.html
 share/mplayer/DOCS/French/users_against_developers.html
 share/mplayer/DOCS/French/video.html
@@ -47,7 +47,7 @@ share/mplayer/DOCS/Hungarian/example.conf
 share/mplayer/DOCS/Hungarian/faq.html
 share/mplayer/DOCS/Hungarian/formats.html
 share/mplayer/DOCS/Hungarian/mplayer.1
-share/mplayer/DOCS/Hungarian/skin-hu.html
+share/mplayer/DOCS/Hungarian/skin.html
 share/mplayer/DOCS/Hungarian/sound.html
 share/mplayer/DOCS/Hungarian/video.html
 share/mplayer/DOCS/Italian/bugreports.html
@@ -58,7 +58,7 @@ share/mplayer/DOCS/Italian/documentation.html
 share/mplayer/DOCS/Italian/encoding.html
 share/mplayer/DOCS/Italian/faq.html
 share/mplayer/DOCS/Italian/formats.html
-share/mplayer/DOCS/Italian/skin-it.html
+share/mplayer/DOCS/Italian/skin.html
 share/mplayer/DOCS/Italian/sound.html
 share/mplayer/DOCS/Italian/users_against_developers.html
 share/mplayer/DOCS/Italian/video.html
@@ -74,7 +74,7 @@ share/mplayer/DOCS/Polish/faq.html
 share/mplayer/DOCS/Polish/formats.html
 share/mplayer/DOCS/Polish/gcc-2.96-3.0.html
 share/mplayer/DOCS/Polish/mplayer.1
-share/mplayer/DOCS/Polish/skin-pl.html
+share/mplayer/DOCS/Polish/skin.html
 share/mplayer/DOCS/Polish/sound.html
 share/mplayer/DOCS/Polish/users_against_developers.html
 share/mplayer/DOCS/Polish/video.html
@@ -88,7 +88,7 @@ share/mplayer/DOCS/encoding.html
 share/mplayer/DOCS/faq.html
 share/mplayer/DOCS/formats.html
 share/mplayer/DOCS/mplayer.1
-share/mplayer/DOCS/skin-en.html
+share/mplayer/DOCS/skin.html
 share/mplayer/DOCS/sound.html
 share/mplayer/DOCS/tech/MAINTAINERS
 share/mplayer/DOCS/tech/TODO

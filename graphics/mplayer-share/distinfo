@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2003/01/20 07:10:41 fredb Exp $
+$NetBSD: distinfo,v 1.19 2003/02/18 11:16:34 mrg Exp $
 
-SHA1 (mplayer/MPlayer-0.90rc3.tar.bz2) = f42c9aefd230a20872711c1836d710c11e9389ef
-Size (mplayer/MPlayer-0.90rc3.tar.bz2) = 3285759 bytes
+SHA1 (mplayer/MPlayer-0.90rc4.tar.bz2) = d9372956b3bdcc20df5b8a0bcc93a49ceb826d28
+Size (mplayer/MPlayer-0.90rc4.tar.bz2) = 3390207 bytes
 SHA1 (mplayer/font-arial-iso-8859-1.tar.bz2) = cec0cad6145382dd15c801f9c6e9cda1ab71b1ed
 Size (mplayer/font-arial-iso-8859-1.tar.bz2) = 234810 bytes
 SHA1 (mplayer/font-arial-iso-8859-2.tar.bz2) = 12c05c32f64818378a32699bea0f5d3aa1551afa
