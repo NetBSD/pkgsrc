@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9625 2005/03/25 13:15:13 adrianp Exp $
+$NetBSD: CHANGES,v 1.9626 2005/03/25 13:23:57 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sylpheed-devel-1.9.6 [chris 2005-03-25]
 	Updated horde to 3.0.3nb1 [adrianp 2005-03-25]
 	Updated imp to 4.0.1nb1 [adrianp 2005-03-25]
+	Added turba-2.0.2 [adrianp 2005-03-25]
