@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:40 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/19 04:40:51 snj Exp $
 
 DISTNAME=	weex-2.6.1
 CATEGORIES=	www
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.enjoy.ne.jp/~gm/program/weex/index.html
 COMMENT=	Non-interactive ftp client
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 
 WEEX_DOCS=	AUTHORS BUGS BUGS.ja COPYING COPYING.ja \
