@@ -3,7 +3,7 @@
 # Date Created:				30 January 1998
 # Whom:					root@garbled.futureone.com
 #
-# $NetBSD: Makefile,v 1.1 1998/02/08 23:00:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/09 10:12:56 hubertf Exp $
 #
 
 DISTNAME=		xfig.3.2
@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	applications/drawing_tools/xfig
 
 MAINTAINER=		root@garbled.futureone.com
 
-FETCH_DEPENDS=		fig2dev:${PORTSDIR}/graphics/transfig
+FETCH_DEPENDS=		fig2dev:${PORTSDIR}/print/transfig
 LIB_DEPENDS=		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 			Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 			Xaw3d\\.6\\.:${PORTSDIR}/x11/Xaw3d
