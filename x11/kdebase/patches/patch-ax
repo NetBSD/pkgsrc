@@ -1,47 +1,19 @@
-$NetBSD: patch-ax,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+$NetBSD: patch-ax,v 1.2 1999/11/12 04:50:01 hubertf Exp $
 
-diff -u kfm/kbind.cpp.orig kfm/kbind.cpp
---- kfm/kbind.cpp.orig	Tue Oct  5 22:10:13 1999
-+++ kfm/kbind.cpp	Tue Oct  5 23:16:57 1999
-@@ -644,11 +644,12 @@
- 			    _pixlist.append( emptyPixmap );
- 			}
- 		    }			
--
-+#ifndef __NetBSD__
- 		    // Add default mount binding
- 		    QString s( i18n( "Mount" ) );
- 		    _list.append( s.data() );   
- 		    _pixlist.append( emptyPixmap );
-+#endif
- 		}
- 		else
- 		{
-@@ -1948,7 +1949,7 @@
- 		KIOJob * job = new KIOJob();
- 		// job->unmount( point.data() );
- 		// Patch ( unmount the device )
--		job->unmount( dev.data() );
-+		job->unmount( dev.data(), point.data() );
- 		delete config;
- 		return TRUE;
- 	    }
-@@ -2001,12 +2002,17 @@
- 		else
- 		{
- 		    QString readonly = config->readEntry( "ReadOnly" );
-+		    QString fstype = config->readEntry( "FSType" );
- 		    bool ro = FALSE;
- 		    if ( !readonly.isNull() )
- 			if ( readonly == '1' )
- 			    ro = true;
--		    
-+
-+#ifdef __NetBSD__		    
-+		    (void) new KFMAutoMount( ro, fstype, dev, point );
-+#else
- 		    (void) new KFMAutoMount( ro, 0L, dev, 0L );
-+#endif
+--- ./po/kcminfo.pot	Tue Mar 30 01:21:33 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/po/kcminfo.pot	Fri Nov 12 05:10:32 1999
+@@ -200,6 +200,13 @@
+ msgid "Buffer memory"
+ msgstr ""
  
- 		    delete config;
- 		    return TRUE;
++#: memory.cpp: NetBSD-specific memory types
++msgid "Active memory"
++msgstr ""
++
++msgid "Inactive memory"
++msgstr ""
++
+ #: memory.cpp:49
+ msgid "Swap memory"
+ msgstr ""
+

@@ -1,18 +1,13 @@
-$NetBSD: patch-aq,v 1.3 1999/07/15 08:46:25 tron Exp $
+$NetBSD: patch-aq,v 1.4 1999/11/12 04:50:00 hubertf Exp $
 
---- po/kcminfo.pot.orig	Sat Jan 30 00:45:46 1999
-+++ po/kcminfo.pot	Sat Jan 30 00:53:47 1999
-@@ -200,6 +200,13 @@
- msgid "Buffer memory"
- msgstr ""
- 
-+#: memory.cpp: NetBSD-specific memory types
-+msgid "Active memory"
-+msgstr ""
-+
-+msgid "Inactive memory"
-+msgstr ""
-+
- #: memory.cpp:49
- msgid "Swap memory"
- msgstr ""
+--- ./kfm/kiojob.h	Mon Dec 21 23:21:00 1998
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kiojob.h	Fri Nov 12 05:10:34 1999
+@@ -58,7 +58,7 @@
+      * give values for every parameter.
+      */
+     void mount( bool _ro, const char *_fstype, const char* _dev, const char *_point );
+-    void unmount( const char *_point );
++    void unmount( const char *_dev, const char *_point );
+     /**
+      * Gets a directory listing.
+      * Connect to 'newDirEntry' to get the directory entries. You must expect that the

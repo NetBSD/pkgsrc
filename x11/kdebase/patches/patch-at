@@ -1,25 +1,30 @@
-$NetBSD: patch-at,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+$NetBSD: patch-at,v 1.2 1999/11/12 04:50:00 hubertf Exp $
 
---- kfm/kioslave/main.cpp.orig	Thu Apr  8 00:56:48 1999
-+++ kfm/kioslave/main.cpp	Tue Oct  5 23:26:24 1999
-@@ -319,7 +319,7 @@
-     return;
- }
+--- ./kvt/command.c	Mon Aug 30 22:09:45 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kvt/command.c	Fri Nov 12 05:10:31 1999
+@@ -191,8 +191,6 @@
+ extern int console;
  
--void KIOSlave::unmount( const char *_point )
-+void KIOSlave::unmount( const char *_dev )
- {
-     char buffer[ 1024 ];
-     int t = (int)time( 0L );
-@@ -352,8 +352,10 @@
-  	err = QString( "Volume Management is not running." );
+ KeySym SecureKeysym = XK_s;
+-KeySym BigFontKeysym = XK_greater;
+-KeySym SmallFontKeysym = XK_less;
+ KeySym PageUpKeysym = XK_Prior;
+ KeySym PageDownKeysym = XK_Next;
+ #ifdef GREEK_KBD
+@@ -756,16 +754,6 @@
+       count = 0;
      }
- #else
--    sprintf( buffer, "umount %s 2>"_PATH_TMP"mnt%i", _point, t );
-+    sprintf( buffer, "umount %s 2>"_PATH_TMP"mnt%i", _dev, t );
-     retvalue = system( buffer );
-+    sprintf( buffer, "eject %s", _dev);
-+    system( buffer );
-     
-     // test logfile here to remove it if it exists
-     // (if there is a warning, it can exist even if revalue==0)
+ 
+-  else if((keysym == BigFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(BIGGER); */
+-      count = 0;
+-    }
+-  else if((keysym==SmallFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(SMALLER); */
+-      count = 0;
+-    }
+   else
+ 
+   if((keysym == PageUpKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
