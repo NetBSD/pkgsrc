@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/06/08 12:23:59 cjep Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/01/16 18:05:49 erh Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -77,7 +77,6 @@ CONFIGURE_ARGS+=	--disable-oss
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
