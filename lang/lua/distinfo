@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/06/19 14:47:22 jtb Exp $
+
+SHA1 (lua-4.0.tar.gz) = 8d432c73ef6e98b81d252114be1a83182cc9607a
+Size (lua-4.0.tar.gz) = 157102 bytes
+SHA1 (patch-aa) = d925fcf677c2fed99ebf56805f1fa121ad9133e4
+SHA1 (patch-ab) = 89c41b48f075254b27d68f3a25fdc64719d5f8b9
