@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2004/01/24 13:58:23 grant Exp $
+# $NetBSD: Makefile,v 1.79 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=		gnumeric-1.0.13
@@ -19,14 +19,12 @@ USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
+USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
 LIBS+=      		-lunicode
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/gal/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/22 08:02:16 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:36 jlam Exp $
 
 DISTNAME=		sqlite-2.8.5
 CATEGORIES=		databases
@@ -13,7 +13,6 @@ WRKSRC=			${WRKDIR}/sqlite-build
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../sqlite/configure

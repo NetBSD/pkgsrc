@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/11 01:46:30 abs Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:32 jlam Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -14,7 +14,6 @@ USE_GCC_SHLIB=		# defined
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CPPFLAGS+=-DID3_NEED_WCHAR_TEMPLATE
 

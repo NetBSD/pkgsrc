@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 00:59:26 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:43 jlam Exp $
 
 DISTNAME=	libmng-1.0.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}

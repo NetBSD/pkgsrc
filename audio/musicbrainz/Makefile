@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/09 00:07:36 chris Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:33 jlam Exp $
 
 DISTNAME=	libmusicbrainz-2.0.2
 PKGNAME=	${DISTNAME:S/lib//}
@@ -15,7 +15,6 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libmusicbrainz.pc.in
 
 CONFIGURE_ARGS+=	--enable-cpp-headers

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/03 12:31:34 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:42 jlam Exp $
 #
 
 DISTNAME=	libgdiplus-0.1
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgdiplus.pc.in
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/14 00:54:44 grant Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=	gdbm-1.8.3
@@ -12,7 +12,6 @@ COMMENT=	The GNU database manager
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 INFO_FILES=		gdbm.info
 
 .include "../../mk/bsd.pkg.mk"

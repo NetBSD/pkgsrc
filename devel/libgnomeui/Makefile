@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/13 12:59:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=	libgnomeui-2.4.0.1
@@ -20,12 +20,11 @@ USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_X11=		yes
+USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 13:55:30 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:44 jlam Exp $
 
 DISTNAME=		evolution-1.2.4
 PKGREVISION=		6
@@ -34,7 +34,6 @@ GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libical/libtool
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 YACC=			${PREFIX}/bin/bison -y

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/12/07 01:21:03 epg Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/02/14 17:21:39 jlam Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -19,7 +19,6 @@ PATCHDIR=		${.CURDIR}/../../devel/subversion/patches
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}

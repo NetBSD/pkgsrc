@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/03 12:30:11 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=	mono-0.30
@@ -23,14 +23,11 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
+USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gc=included
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libgc/libtool
 
 PKGCONFIG_OVERRIDE=	mint.pc.in
 PKGCONFIG_OVERRIDE=	mono.pc.in

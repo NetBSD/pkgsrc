@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/10 17:54:14 gavan Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	taglib-1.0
@@ -14,7 +14,6 @@ USE_LANGUAGES=		c c++
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-build:
 	${CP} ${FILESDIR}/id3lib_strings.h ${WRKSRC}/taglib/toolkit/.

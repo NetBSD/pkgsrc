@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -21,8 +21,7 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
-			${WRKSRC}/lib/silcmath/mpi/libtool
+SHLIBTOOL_OVERRIDE=	libtool */libtool */*/*/libtool
 
 PKG_SYSCONFSUBDIR?=	silc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile.common,v 1.35 2004/02/14 17:21:41 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-${VER}.0
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		path_rgb_txt="${X11BASE}/lib/X11/rgb.txt"

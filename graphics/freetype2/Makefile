@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/07 10:46:10 seb Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:41 jlam Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -20,13 +20,12 @@ COMMENT=	Font rendering engine and library API
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/builds/unix/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"

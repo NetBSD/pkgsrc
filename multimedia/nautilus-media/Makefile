@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 00:24:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=	nautilus-media-0.3.3.1
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_BUILDLINK2=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

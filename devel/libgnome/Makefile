@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/13 11:53:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=	libgnome-2.4.0
@@ -23,7 +23,6 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 
 CONFIGURE_ARGS= 	--enable-gtk-doc=no

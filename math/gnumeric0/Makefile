@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/24 13:58:23 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=		gnumeric-0.75
@@ -17,14 +17,12 @@ USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
+USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
 LIBS+=      		-lunicode
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
 	for i in ${WRKSRC}/plugins/*/Makefile.in ; do			\

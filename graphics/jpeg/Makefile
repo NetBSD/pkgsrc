@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:42 jlam Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -18,8 +18,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-static

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.91 2004/02/14 17:21:46 jlam Exp $
 #
 
 DISTNAME=		ethereal-0.10.0a
@@ -23,7 +23,7 @@ USE_X11=		YES
 USE_PERL5=		build
 
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gtk2

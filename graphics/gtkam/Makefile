@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:42 jlam Exp $
 #
 
 DISTNAME=	gtkam-0.1.10
@@ -13,7 +13,6 @@ COMMENT=	Digital camera access graphical client (GTK2)
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

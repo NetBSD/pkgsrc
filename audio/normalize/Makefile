@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:23:04 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	normalize-0.7.6
@@ -13,7 +13,6 @@ COMMENT=	Wave (.wav) file volume normalizer
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 #CONFIGURE_ARGS+=	--with-audiofile

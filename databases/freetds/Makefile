@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/22 08:02:15 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/14 17:21:35 jlam Exp $
 
 DISTNAME=	freetds-0.61.2
 CATEGORIES=	databases
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.freetds.org/
 COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 
 USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 
@@ -17,9 +18,6 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/freetds
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-tdsver=7.0
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.55 2004/02/14 17:21:37 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -18,7 +18,6 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 

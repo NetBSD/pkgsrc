@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/02/14 11:31:50 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2004/02/14 17:21:36 jlam Exp $
 
 DISTNAME=		openldap-2.1.25
 SVR4_PKGNAME=		oldap
@@ -18,7 +18,6 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PTHREAD_OPTS+=		require
 
 TEST_TARGET=		test

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/26 21:41:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	JESS-2.9.1
@@ -13,7 +13,6 @@ COMMENT=	XMMS plugin with Blur, image distortion, and others
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 .include "../../audio/xmms/buildlink2.mk"

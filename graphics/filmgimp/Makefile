@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:42 reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:41 jlam Exp $
 
 DISTNAME=	filmgimp-0.15
 PKGREVISION=	3
@@ -12,7 +12,6 @@ COMMENT=	Motion picture editing tool
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/08/04 17:26:59 jtb Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:37 jlam Exp $
 
 DISTNAME=		hdf5-1.6.0
 CATEGORIES=		devel
@@ -13,7 +13,6 @@ COMMENT=		Hierarchical Data Format (new generation)
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 TEST_TARGET=		check
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/11 05:28:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		libgnomedb-1.0.0
@@ -21,7 +21,6 @@ USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomedb.pc.in
 
 CONFIGURE_ARGS=		--enable-gtk-doc=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/24 08:42:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=	dirdiff-1.6
@@ -11,7 +11,6 @@ COMMENT=	Displays differences between directories
 
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

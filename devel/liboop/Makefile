@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/27 08:14:50 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=		liboop-0.9
@@ -13,7 +13,6 @@ COMMENT=		Event loop management library
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../devel/glib/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/17 03:23:45 simonb Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	libmad-0.15.0b
@@ -16,7 +16,6 @@ CONFLICTS=	mad<0.15
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 post-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\

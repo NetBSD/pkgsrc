@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/11 05:15:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=		gedit-2.4.1
@@ -21,7 +21,6 @@ USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS=		gedit.schemas
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2004/01/22 08:02:16 grant Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/02/14 17:21:36 jlam Exp $
 
 DISTNAME=		mysql-3.23.58
 CATEGORIES=		databases
@@ -60,7 +60,6 @@ CXXFLAGS+=		-DHAVE_CURSES_H
 
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/25 10:20:15 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=	lwp-1.10
@@ -19,6 +19,5 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc* \
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

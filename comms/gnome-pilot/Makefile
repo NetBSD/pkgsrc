@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		gnome-pilot-0.1.71
@@ -24,7 +24,6 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBINTL=		YES
 USE_LIBTOOL=		YES
 USE_PERL5=		build
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE}
 

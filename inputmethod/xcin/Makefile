@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:18:53 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:43 jlam Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib

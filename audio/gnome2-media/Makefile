@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:32 jlam Exp $
 
 DISTNAME=		gnome-media-2.4.1.1
 PKGREVISION=		4
@@ -19,7 +19,6 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
