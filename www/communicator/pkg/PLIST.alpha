@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.alpha,v 1.1 1999/06/14 21:43:35 cgd Exp $
-lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sparc,v 1.5 1999/06/14 21:40:25 cgd Exp $
+@comment $NetBSD: PLIST.netbsd-sparc,v 1.1 1999/08/13 21:24:13 abs Exp $
 bin/communicator-${NS_VERS}_nis
 bin/netscape_nis
 lib/netscape/communicator-${NS_VERS}/netscape_nis

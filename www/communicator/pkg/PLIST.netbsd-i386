@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i386,v 1.2 1999/06/14 21:40:25 cgd Exp $
+@comment $NetBSD: PLIST.netbsd-i386,v 1.1 1999/08/13 21:24:13 abs Exp $
 lib/netscape/communicator-${NS_VERS}/libjsd.so
 lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
 lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so

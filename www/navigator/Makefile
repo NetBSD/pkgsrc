@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/07/12 00:06:58 jlam Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/13 21:24:11 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -8,7 +8,12 @@ NS_VERS=	4.61
 NS_VERS_SHORT=	461
 NS_ENCRYPTION?=	export
 #
-.if (${MACHINE_ARCH} == "alpha")
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
+DISTUNAME=	sparc-sun-solaris2.5.1
+DIST_DIR_NAME=	supported/sunos551
+WRKNAME=	sparc-sun-solaris2.5.1
+.elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
 .endif
@@ -17,7 +22,7 @@ DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
 .elif (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE=	requires Linux glibc2 libraries - see compat_linux(8).
+IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
 .endif
 DISTUNAME=	x86-unknown-linuxglibc2.0
 DIST_DIR_NAME=	supported/linux20_glibc2
@@ -84,9 +89,10 @@ do-install:
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${PKGNAME}
+	${RM} -f ${PREFIX}/bin/${BINNAME}
 	${LN} -sf ${PKGNAME} ${PREFIX}/bin/${BINNAME}
 
-.if (${MACHINE_ARCH} == "sparc")
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
 	# Bizarre magic to handle the NIS and DNS versions. Make DNS default.
 	@${SED} -e 's#MOZILLA_HOME/netscape#MOZILLA_HOME/netscape_nis#g' \
 	    <${WRKDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}_nis.sh
@@ -96,8 +102,8 @@ do-install:
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
 .endif
 
-	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.${MACHINE_ARCH} \
-	    >>${PLIST_SRC}
+	${SED} -e ${NS_PLIST_SED} \
+		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} >>${PLIST_SRC}
 
 	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
