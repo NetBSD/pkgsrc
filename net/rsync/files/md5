@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.9 1999/07/08 17:29:25 itojun Exp $
+$NetBSD: md5,v 1.10 1999/07/22 16:02:52 itojun Exp $
 
 MD5 (rsync-2.3.1.tar.gz) = 907a0ae01417d54e53cb84b069ba1620
-MD5 (rsync-231-v6-19990520.diff.gz) = 406b61c600677de35bef0e47ddc1df8f
+MD5 (rsync-231-v6-19990723.diff.gz) = 0b7e7e108bc747549384eab1feee254a
