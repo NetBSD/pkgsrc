@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2001/03/29 15:32:28 drochner Exp $
+# $NetBSD: Makefile,v 1.92 2001/04/16 22:25:09 zuntum Exp $
 #
 
 COMMENT=	Audio tools
@@ -93,6 +93,7 @@ SUBDIR+=	realplayer
 SUBDIR+=	rio
 SUBDIR+=	rio500
 SUBDIR+=	rplay
+SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	snd
 SUBDIR+=	sox
