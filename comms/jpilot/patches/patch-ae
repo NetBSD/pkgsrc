@@ -1,18 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2002/09/21 07:14:04 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2002/11/30 13:36:14 salo Exp $
 
---- configure.orig	Tue Feb  6 11:31:18 2001
-+++ configure
-@@ -3633,6 +3633,9 @@ fi
- 	< $srcdir/po/POTFILES.in > po/POTFILES
-   
- 
-+# Use PKGLOCALEDIR to determine location of installed locale files.
-+DATADIRNAME="${PKGLOCALEDIR}"
-+
- if test "x$MSGFMT" = "xno"; then
-    if test "x$GMSGFMT" = "xno"; then
-       echo "$ac_t""I can't find gettext" 1>&6
-@@ -3831,6 +3834,25 @@ fi
+--- configure.orig	Tue Feb  6 20:31:18 2001
++++ configure	Sat Nov 30 13:49:01 2002
+@@ -3831,6 +3831,25 @@
  rm -f conftest*
     LIBS="$save_LIBS"
  
@@ -38,7 +28,7 @@ $NetBSD: patch-ae,v 1.2 2002/09/21 07:14:04 jlam Exp $
     if test "x$have_dlopen" = "xyes"; then
        cat >> confdefs.h <<\EOF
  #define ENABLE_PLUGINS 1
-@@ -3866,7 +3888,7 @@ fi
+@@ -3866,7 +3885,7 @@
  # Check whether --with-gtk-prefix or --without-gtk-prefix was given.
  if test "${with_gtk_prefix+set}" = set; then
    withval="$with_gtk_prefix"
