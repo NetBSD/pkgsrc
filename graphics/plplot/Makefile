@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/01/12 15:32:00 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/01/22 15:57:29 minskim Exp $
 
 DISTNAME=		plplot-5.2.1
 PKGREVISION=		3
@@ -49,6 +49,15 @@ CONFIGURE_ARGS+=	--without-pthreads
 CONFIGURE_ARGS+=	--without-qhull
 CONFIGURE_ARGS+=	--without-csa
 
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
+.include "../../mk/autoconf.mk"
+
 post-patch:
 	${MV} -f ${WRKSRC}/src/plctrl.c ${WRKSRC}/src/plctrl.c.dist
 	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/src/plctrl.c.dist \
@@ -57,13 +66,4 @@ post-patch:
 post-install:
 	cd ${PREFIX}/bin && ${LN} -fs libtool plplot_libtool
 
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
-.include "../../lang/tcl83/buildlink3.mk"
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
