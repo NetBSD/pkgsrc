@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.509 2004/06/26 18:00:21 grant Exp $
+# $NetBSD: Makefile,v 1.510 2004/06/30 07:01:34 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -326,6 +326,7 @@ SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Config
+SUBDIR+=	p5-Log-Dispatch-DBI
 SUBDIR+=	p5-Log-Dispatch-FileRotate
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
