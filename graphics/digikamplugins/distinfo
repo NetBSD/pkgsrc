@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/26 00:12:13 seb Exp $
+
+SHA1 (digikamplugins-0.6.2.tar.bz2) = acc24050e29199fc443a1ffd12b5971d317cc3f3
+Size (digikamplugins-0.6.2.tar.bz2) = 1002118 bytes
+SHA1 (patch-aa) = c6f979e7ed66c162434d04d75dd61cd9c587bd18
+SHA1 (patch-ab) = 694592de36635afaad016d99085bfcba54015af4

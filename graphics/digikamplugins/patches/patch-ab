@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/26 00:12:13 seb Exp $
+
+--- cdarchiving/Makefile.in.orig	2004-06-18 10:55:30.000000000 +0000
++++ cdarchiving/Makefile.in
+@@ -744,7 +744,7 @@ info-am:
+ #>- 	install-kde_moduleLTLIBRARIES install-kde_servicesDATA \
+ #>- 	install-pluginsDATA
+ #>+ 3
+-install-data-am:   install-digikamimagebrokenpicDATA \
++install-data-am: \
+  install-kde_servicesDATA \
+ 	install-pluginsDATA
+ 
