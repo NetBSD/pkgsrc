@@ -1,7 +1,7 @@
-/*	$NetBSD: main.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
 
 /*-
- * Copyright (c) 1996-2002 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -109,7 +109,7 @@ __COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\n\
 #if 0
 static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -143,6 +143,8 @@ main(int argc, char *argv[])
 	setlocale(LC_ALL, "");
 #endif
 	setprogname(argv[0]);
+
+	sigint_raised = 0;
 
 	ftpport = "ftp";
 	httpport = "http";
@@ -498,17 +500,22 @@ main(int argc, char *argv[])
 	if (argc > 0) {
 		if (isupload) {
 			rval = auto_put(argc, argv, upload_path);
+ sigint_or_rval_exit:
+			if (sigint_raised) {
+				(void)xsignal(SIGINT, SIG_DFL);
+				raise(SIGINT);
+			}
 			exit(rval);
 		} else if (strchr(argv[0], ':') != NULL
 			    && ! isipv6addr(argv[0])) {
 			rval = auto_fetch(argc, argv);
 			if (rval >= 0)		/* -1 == connected and cd-ed */
-				exit(rval);
+				goto sigint_or_rval_exit;
 		} else {
 			char *xargv[4], *user, *host;
 
-			if (sigsetjmp(toplevel, 1))
-				exit(0);
+			if ((rval = sigsetjmp(toplevel, 1)))
+				goto sigint_or_rval_exit;
 			(void)xsignal(SIGINT, intr);
 			(void)xsignal(SIGPIPE, lostpeer);
 			user = NULL;
