@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2098 2003/04/30 19:11:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.2099 2003/04/30 19:44:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1802,3 +1802,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgdepgraph to 2.5 [atatat 2003-04-30]
 	Updated sweep to 0.8.2 [jmmv 2003-04-30]
 	Updated wsoundserver 0.4.0nb2 [jmmv 2003-04-30]
+	Updated eggdrop to 1.6.13nb1 [jmmv 2003-04-30]
