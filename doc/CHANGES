@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4426 2004/01/11 19:07:45 jschauma Exp $
+$NetBSD: CHANGES,v 1.4427 2004/01/11 20:55:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -178,3 +178,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.1 [jlam 2004-01-11]
 	Updated leafnode to 1.9.49 [cjep 2004-01-11]
 	Updated py-m2crypto to 0.12 [jschauma 2004-01-11]
+	Updated gaim to 0.75 [jmmv 2004-01-11]
