@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/05/16 05:55:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/22 15:22:20 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -17,6 +17,7 @@ USE_GMAKE=		# defined
 ALL_TARGET=		cadaver
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURA_ARGS+=	--with-include-neon
 CONFIGURE_ARGS+=	--enable-libxml
 CONFIGURE_ARGS+=	--enable-netrc
 
