@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.2 2002/04/14 10:57:10 rh Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2002/09/24 12:30:25 wiz Exp $
 
 Before using the netsaint-base package for the first time, you need to
 run the ${PREFIX}/etc/netsaint/netsaint-setup.sh script (as root) and
@@ -24,3 +25,5 @@ release of this software package under the "NetSaint" name.
 - Ethan Galstad 
     netsaint@netsaint.org
     egalstad@sourceforge.net
+
+===========================================================================

@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:11:23 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:53 wiz Exp $
 
 Please note that this package is provided for those programs
 which will not work with newer versions of Qt.  To allow this
@@ -15,4 +15,4 @@ programs which use it by ensuring that
 
 3) you may also have to put ${PREFIX}/qt1/bin in your PATH
 
-======================================================================
+===========================================================================

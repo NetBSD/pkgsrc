@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/05/31 13:01:36 seb Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:55 wiz Exp $
 
 Copyright (c) 1993 The Regents of the University of California.
 All rights reserved.
@@ -10,4 +10,4 @@ the University of California, Lawrence Berkeley Laboratory.
 --
 Refer to the documentations at `${X11BASE}/share/doc/xjman/'.
 
-======================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:17:12 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:48 wiz Exp $
 
 To install Apache-JSSI for use with Apache Server's mod_jserv (from the
 ap-jserv package), add the following line to your httpd.conf:
@@ -13,4 +13,4 @@ and the following line to your zone.properties:
 To use Apache-JSSI with others servlet engines, see the appropriate
 documentation.
 
-=============================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:17:34 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:50 wiz Exp $
 
 To install an OpenACS server, run the ${PREFIX}/bin/install-openacs
 script, giving it a database user (must already exist), database name
@@ -7,4 +7,4 @@ script, giving it a database user (must already exist), database name
 
 # psql -c "create user acsuser createdb" template1
 # ${PREFIX}/bin/install-openacs -u acsuser -d acsdb /web/openacs
-=============================================================================
+===========================================================================

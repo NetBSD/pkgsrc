@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:58:23 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:30 wiz Exp $
 
 You must set the environment variable PVM_ROOT to ${PREFIX}/pvm3 in your
 startup files (.cshrc, .profile) on all machines in the cluster.  In 
@@ -11,4 +11,4 @@ hostname ep=${PREFIX}/bin
 This allows you to point different architecture types to various sets of
 shared or local binaries.  See pvmd(1) for more information.
 
-======================================================================
+===========================================================================

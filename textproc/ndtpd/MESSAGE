@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/03/15 07:19:58 uebayasi Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:39 wiz Exp $
 
     You need to add a port entry to run NDTP.  The default port is 2010 and
     the entry in /etc/services will look like
@@ -7,4 +7,4 @@ $NetBSD: MESSAGE,v 1.1.1.1 2002/03/15 07:19:58 uebayasi Exp $
 	ndtp		2010/tcp
 
     Please read (well written) Info manuals for more details.
-=============================================================================
+===========================================================================

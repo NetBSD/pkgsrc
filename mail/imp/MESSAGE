@@ -1,5 +1,5 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/03/01 20:46:06 bouyer Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.5 2002/09/24 12:30:11 wiz Exp $
 
 Please refer to the file:
 
@@ -24,4 +24,4 @@ If you are updating from IMP 2.2.x, use the script
 	${PREFIX}/share/horde/imp/scripts/imp2horde.pl
 to convert the IMP 2.2.x user preference database to the new format.
 
-==========================================================================
+===========================================================================

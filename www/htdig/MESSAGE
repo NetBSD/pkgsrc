@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:16:55 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:48 wiz Exp $
 
 A sample ht://Dig config file has been installed to
 ${PREFIX}/etc/htdig/htdig.conf, unless that file existed already.
@@ -12,4 +12,4 @@ For an example of how to set up ht://Dig and integrate it with your web site,
 you may wish to examine the scripts installed into
 /var/wwwoffle/html/htdig/scripts by the www/wwwoffle package.
 
-======================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:12:10 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:15 wiz Exp $
 
 To use calc add the following lines to your .emacs.el file.
 
@@ -19,4 +19,4 @@ To use calc add the following lines to your .emacs.el file.
 
 You could also put this in the site initialization file 'default.el'.
 
-============================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.4 2002/07/28 01:54:37 schmonz Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.5 2002/09/24 12:30:13 wiz Exp $
 
   To be able to view manpages either add "${QMAILDIR}/man/" to the
   _default line in /etc/man.conf or specify this directory in
@@ -7,4 +7,4 @@ $NetBSD: MESSAGE,v 1.4 2002/07/28 01:54:37 schmonz Exp $
 
   To start qmail at startup set qmail=YES in /etc/rc.conf.
 
-======================================================================
+===========================================================================
