@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/23 13:39:26 jmmv Exp $
 bin/audiocompose
 bin/audiosend
 bin/extcompose
@@ -30,7 +30,6 @@ lib/metamail/fonts/heb8x13.pcf
 lib/metamail/fonts/heb8x13B.pcf
 lib/metamail/fonts/fonts.dir
 lib/metamail/fonts/fonts.alias
-etc/mailcap
 man/man1/audiocompose.1.gz
 man/man1/audiosend.1.gz
 man/man1/extcompose.1.gz
@@ -51,5 +50,7 @@ man/man1/showpartial.1.gz
 man/man1/showpicture.1.gz
 man/man1/splitmail.1.gz
 man/man4/mailcap.4.gz
+share/examples/metamail/mailcap
+@dirrm share/examples/metamail
 @dirrm lib/metamail/fonts
 @dirrm lib/metamail
