@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.17 2004/12/29 15:57:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.18 2004/12/30 12:22:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -39,3 +39,5 @@ Pullup ticket 191 - requested by Julio M. Merino Vidal
 security fix for gpdf
 Pullup ticket 192 - requested by Adrian Portelli
 security fix for tcpflow
+Pullup ticket 193 - requested by Matthias Scheler
+security fix for opera7
