@@ -1,0 +1,74 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
+
+--- mc68k/memory.c.orig	Wed Feb  3 14:11:09 1999
++++ mc68k/memory.c	Fri Feb  5 01:28:39 1999
+@@ -377,6 +377,7 @@
+   int i;
+   char *rombuf;
+   char *resetv;
++  void *tmpmemory;
+   int f;
+   struct stat st;
+   
+@@ -405,12 +406,24 @@
+     rom_size = pow_of_2;
+   }
+   
+-  rommemory = (UWORD*)mmap(0, rom_size, PROT_READ|PROT_WRITE, 
+-			   MAP_FILE|MAP_PRIVATE, f, 0);
+-  if (rommemory == (UWORD *)-1) {
++  /* mmap'ing a larger region than the underlying object does not work.
++   * Instead, mmap the actual object and copy into a power-of-two sized
++   * buffer.
++   */
++  tmpmemory = mmap(0, st.st_size, PROT_READ|PROT_WRITE, 
++		   MAP_FILE|MAP_PRIVATE, f, 0);
++  if (tmpmemory == (void *)-1) {
+     return PILOTCPU_ERROR_LOADING_ROM;
+   }
+-  
++
++  /* We want the end of the buffer to be zero-filled */
++  rommemory = (UWORD *) calloc(1, rom_size);
++  if (rommemory == 0) {
++    return PILOTCPU_ERROR_LOADING_ROM;
++  }
++  memcpy(rommemory, tmpmemory, st.st_size);
++  munmap(tmpmemory, st.st_size);
++
+   if (!nocheck) {
+   /* Check if the reset vector looks plausible */
+     resetv = (char *)rommemory +
+@@ -430,23 +443,15 @@
+ 	offset = resetv - find_entrypoint((char *)rommemory);
+       }
+ 
+-      /* Did we find it? If not, lets go with the original. */
+-      if ((char *)offset != resetv) {
+-	/* It may not always be page aligned... */
+-	pageoffset = ((offset-1) & ~(getpagesize() - 1)) + getpagesize();
+-
+-	if ((st.st_size + offset) > rom_size)
+-          rom_size <<= 1;
+-
+-	rommemory = (UWORD *)mmap((void*)(rommemory + pageoffset),
+-                                  rom_size - pageoffset,
+-				  PROT_READ | PROT_WRITE,
+-				  MAP_FILE | MAP_PRIVATE | MAP_FIXED, f, 0);
+-	if (rommemory == (UWORD *)-1)
+-	  return PILOTCPU_ERROR_LOADING_ROM;
+-
+-	memcpy(((char *)rommemory) - offset, rommemory, 256);
+-	((char *)rommemory) -= offset;
++      if (offset != 0) {
++	if ((st.st_size + offset) > rom_size) {
++	  rom_size <<= 1;
++	  rommemory = realloc(rommemory, rom_size);
++	  if (rommemory == 0)
++	    return PILOTCPU_ERROR_LOADING_ROM;
++	}
++	
++	memmove((char *)rommemory + offset, rommemory, st.st_size);
+       }
+     }
+   }
