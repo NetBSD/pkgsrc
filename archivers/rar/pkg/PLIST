@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/05/22 21:36:00 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/12/23 23:39:59 wiz Exp $
 bin/rar
 share/rar/dos.sfx
 share/rar/default.sfx
@@ -6,7 +6,7 @@ share/rar/rarfiles.lst
 share/doc/rar/License.Txt
 share/doc/rar/Internet.Txt
 share/doc/rar/Rar.Txt
-share/doc/rar/Rar_FAQ.Txt
+share/doc/rar/Rar_FAQ.txt
 share/doc/rar/TechNote.Txt
 @dirrm share/rar
 @dirrm share/doc/rar
