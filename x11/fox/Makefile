@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:29 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/07 16:36:47 tv Exp $
 #
 
 DISTNAME=	fox-1.0.43
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.fox-toolkit.org/ftp/
 
@@ -14,6 +14,7 @@ USE_BUILDLINK3=	yes
 USE_X11=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-opengl=mesa
 CONFIGURE_ARGS+=	--with-x
