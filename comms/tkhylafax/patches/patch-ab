@@ -1,14 +1,13 @@
---- tkhylafax.orig	Tue Dec 31 02:49:43 1996
-+++ tkhylafax	Sun Jun  8 12:34:58 1997
-@@ -1,6 +1,6 @@
- #!/bin/sh
- #\
--exec wish "$0" ${1+"$@"}
-+exec wish4.2 "$0" ${1+"$@"}
+$NetBSD: patch-ab,v 1.2 1999/08/11 06:21:29 rh Exp $
+--- tkhylafax.unpatched.orig	Mon Jan  5 00:11:02 1998
++++ tkhylafax.unpatched	Tue Dec 29 18:29:51 1998
+@@ -290,12 +290,12 @@
+ }
  
  #
- # 
-@@ -291,7 +291,7 @@
+-# Preview fax cover sheet via ghostview.
++# Preview fax cover sheet via gv.
+ #
  
  proc previewCover { args } {
  
