@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8871 2005/01/22 17:35:40 tron Exp $
+$NetBSD: CHANGES,v 1.8872 2005/01/22 17:52:02 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dirdiff to 1.6nb2 [minskim 2005-01-22]
 	Updated tct to 1.09nb1 [ben 2005-01-22]
 	Removed mtv [tron 2005-01-22]
+	Added p5-Gdk-Imlib-0.7009 [adrianp 2005-01-22]
