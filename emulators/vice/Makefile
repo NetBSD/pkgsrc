@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2003/08/09 10:49:07 seb Exp $
+# $NetBSD: Makefile,v 1.36 2003/09/28 10:41:21 kristerw Exp $
 #
 
-DISTNAME=		vice-1.12
-PKGREVISION=		1
+DISTNAME=		vice-1.13
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/firmware/computers/c64/ \
 			ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
@@ -73,12 +72,6 @@ post-install:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
-#.include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-# This is the emulator's recommended setting.  We place it last so that it
-# overrides other CFLAGS settings.
-#
-CFLAGS+=		-O5 -finline-functions
