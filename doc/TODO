@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.337 2003/03/05 09:53:06 wiz Exp $
+$NetBSD: TODO,v 1.338 2003/03/05 10:04:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -139,7 +139,6 @@ Suggested package updates
 	o gtetrinet-0.6.2
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
-	o htmllint-20030225 [pkg/20538]
 	o icepref-2.2
 	o icewm-1.2.5
 	o icu-2.4 [heinz]
@@ -207,7 +206,6 @@ Suggested package updates
 	o php4-4.3.1
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
-	o popa3d-0.6.1
 	o povray-3.5
 	o pth-2.0 [skrll]
 	o pureftpd-0.13a [pkg/19233]
