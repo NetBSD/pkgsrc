@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/24 14:51:30 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/09/28 13:17:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tkcvs-6.0/ \
 MAINTAINER=	shanee@augusta.de
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80
-DEPENDS+=	cvs-*:../../devel/cvs
 
 NO_BUILD=	yes
 
