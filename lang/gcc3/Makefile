@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/06/10 23:46:39 fredb Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/11 18:20:23 fredb Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -48,7 +48,6 @@ USE_BINUTILS!=		${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
 .if ${USE_BINUTILS} == YES
 DEPENDS=		binutils>=2.13.2.1:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
-CONFIGURE_ARGS+=	--with-ld=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/ld
 #.  include "../../devel/binutils/buildlink2.mk"
 .endif
 
