@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/12/14 22:30:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/31 17:00:50 jlam Exp $
 
-DISTNAME=	openslp-1.0.6
+DISTNAME=	openslp-1.0.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 
@@ -20,22 +20,30 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
-CONF_FILES=		${EGDIR}/slp.conf ${PKG_SYSCONFDIR}/slp.conf
-CONF_FILES+=		${EGDIR}/slp.reg ${PKG_SYSCONFDIR}/slp.reg
-CONF_FILES+=		${EGDIR}/slp.spi ${PKG_SYSCONFDIR}/slp.spi
+CONFS=			slp.conf slp.reg slp.spi
+CONF_FILES=		# empty
+.for FILE in ${CONFS}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
 RCD_SCRIPTS=		slpd
 
 post-extract:
 	${FIND} ${WRKSRC} -name "CVS" -print | ${XARGS} ${RM} -rf
 
 pre-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/slpd.sh > ${WRKDIR}/slpd.sh
+	@for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
+	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/slpd.sh ${PREFIX}/etc/rc.d/slpd
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
+	done
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${HTMLDIR}
-	cd ${WRKSRC}/etc; for file in slp.conf slp.reg slp.spi; do	\
-		${INSTALL_DATA} $${file} ${EGDIR};			\
+	cd ${WRKSRC}/etc; for file in ${CONFS}; do			\
+		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
 	cd ${WRKSRC}/doc; ${CP} -r rfc/* ${DOCDIR}
 	cd ${WRKSRC}/doc; ${CP} -r html/* ${HTMLDIR}
