@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/08/24 11:24:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/31 04:34:21 dmcmahill Exp $
 #
 
-DISTNAME=	bins-1.1.14
+DISTNAME=	bins-1.1.15
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
