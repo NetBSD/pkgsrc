@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/28 20:05:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/26 22:05:14 wiz Exp $
 #
 
 DISTNAME=	openbox-2.2.3
@@ -14,6 +14,8 @@ DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
+
+CPPFLAGS+=	-DHAVE_STRFTIME=1
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"
