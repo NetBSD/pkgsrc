@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.397 2003/03/22 01:34:53 wiz Exp $
+$NetBSD: TODO,v 1.398 2003/03/22 01:46:37 salo Exp $
 
 Suggested new packages
 ======================
@@ -245,7 +245,6 @@ Suggested package updates
 	o subversion-0.19.1 [pkg/20725]
 	o sweep-0.8.1
 	o swig-1.3.17
-	o sylpheed-claws-0.8.11 [pkg/20679]
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
 	o tcpdump-3.7.2
