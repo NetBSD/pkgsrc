@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2000/09/09 19:40:25 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2000/10/18 03:55:47 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.4dev.7
-PKGNAME=		lynx-2.8.4dev.7
+DISTNAME=		lynx2.8.4dev.10
+PKGNAME=		lynx-2.8.4dev.10
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/ \
 			http://lynx.isc.org/po/ \
 			http://www.iro.umontreal.ca/contrib/po/teams/PO/
-EXTRACT_SUFX=		.tar.bz2		# This is redundant, but it pulls in
-DISTFILES+=		lynx2.8.4dev.7.tar.bz2	# the dependence on bzip2, if needed.
+EXTRACT_SUFX=		.tar.bz2
+DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		lynx-2.8.3.rel1.cs.po
 DISTFILES+=		lynx-2.8.4.da.po
 DISTFILES+=		lynx-2.8.3.rel1.de.po
