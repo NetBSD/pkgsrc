@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/18 01:16:50 jun Exp $
 
-DISTNAME=	ng-1.4
+DISTNAME=	ng-1.4.3
 CATEGORIES=     editors japanese
 MASTER_SITES=   http://ha3.seikyou.ne.jp/home/amura/archives/ng/
 
@@ -23,10 +23,6 @@ ALL_TARGET=	ng
 MAKEFLAGS+=	USE_CANNA=${USE_CANNA}
 
 post-patch:
-.if ${USE_CANNA} != "YES"
-	@(cd ${WRKSRC}; ${MV} config.h config.h.orig )
-	@(cd ${WRKSRC};	${SED} -e "s/#define CANNA/#undef CANNA/" config.h.orig > config.h )
-.endif
 	@(cd ${WRKSRC}; ${LN} -s sys/bsd/Makefile . )
 
 do-install:

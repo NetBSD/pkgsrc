@@ -1,24 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2000/12/15 20:02:02 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2001/03/18 01:16:51 jun Exp $
 
---- sys/bsd/Makefile.orig	Tue Jun 27 10:48:02 2000
-+++ sys/bsd/Makefile	Thu Sep  7 06:02:02 2000
-@@ -8,14 +8,17 @@
- # Modified for Ng 1.0	by Shigeki Yoshida (shige@csk.CO.JP)	1990.01.29
- 
+--- sys/bsd/Makefile.orig	Sun Oct  1 00:59:42 2000
++++ sys/bsd/Makefile	Thu Feb 15 18:28:30 2001
+@@ -13,12 +13,15 @@
  SYS	= bsd
--LIBS	= -L/usr/pkg/lib -lcanna -ltermcap
-+LIBS	= -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltermcap
+ 
+ # Canna configurations (ex. for NetBSD)
+-#CANNADEF = -DCANNA
+-#CANNALIB = -L/usr/pkg/lib -lcanna
+-#CANNAINC = -I/usr/pkg/include
 +.if ${USE_CANNA} == "YES"
-+LIBS	+=	-lcanna
++CANNADEF = -DCANNA
++CANNALIB = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lcanna
++CANNAINC = -I${PREFIX}/include
++.else
+ CANNADEF =
+ CANNALIB =
+ CANNAINC =
 +.endif
+ 
  # CDEFS gets defines, and gets passed to lint. CFLAGS gets flags, and doesn't
  # get passed to lint.
- #
- # Now, compile time options are defined in a "config.h".
- #
- CDEFS	= 
--CFLAGS	= -O2 -I/usr/pkg/include $(CDEFS)
-+CFLAGS	= -O2 -I${PREFIX}/include $(CDEFS)
- 
- # If your machine don't have an alloca(), please define ALLOCA.
- #ALLOCA	= alloca.o
