@@ -1,4 +1,18 @@
-# $NetBSD: libtool-post-logic,v 1.1.2.1 2003/08/14 13:16:52 jlam Exp $
+# $NetBSD: libtool-post-logic,v 1.1.2.2 2003/08/16 07:46:33 jlam Exp $
+#
+# Workaround software authors that don't follow the libtool
+# documentation and link against uninstalled libtool archives with:
+#
+#	-L../package/source/dir -lfoo
+#
+# instead of the correct (according to the libtool documentation)
+#
+#	../package/source/dir/libfoo.la
+#
+# We convert the former into the latter by remembering all "local"
+# directories that are mentioned in -L* arguments to to libtool
+# wrapper, and checking to see if <dir>/libfoo.la exists when we see
+# "-lfoo" on the libtool command line.
 
 case $arg in
 -L.|-L./*|-L..*|-L[!/]*|-L${WRKSRC}*)
