@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2001/08/19 16:26:08 martin Exp $
+$NetBSD: patch-aa,v 1.10 2001/10/31 10:00:24 martti Exp $
 
---- Makefile.in.orig	Sun Aug 12 21:52:10 2001
-+++ Makefile.in	Thu Aug 16 09:02:37 2001
+--- Makefile.in.orig	Tue Oct 30 22:38:38 2001
++++ Makefile.in	Wed Oct 31 09:02:39 2001
 @@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.9 2001/08/19 16:26:08 martin Exp $
  ssldir=@ssldir@
  PEM_DIR=@PEM_DIR@
  @SET_MAKE@
-@@ -20,7 +20,7 @@
- CFLAGS=@CFLAGS@ @DEFS@ -Dlibdir=\"$(libdir)\" -DPIDDIR=\"$(piddir)\"
+@@ -21,7 +21,7 @@
  LIBS=@LIBS@
- OBJS=stunnel.o ssl.o client.o protocol.o sthreads.o pty.o log.o options.o
+ HEADERS=common.h prototypes.h client.h
+ OBJS=client.o stunnel.o ssl.o protocol.o sthreads.o pty.o log.o options.o
 -DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8  $(PEM_DIR)/stunnel.pem
 +DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
  
  WINGCC=i386-mingw32msvc-gcc 
- WINCFLAGS=-O2 -Wall -DUSE_WIN32 -DHAVE_OPENSSL -DVERSION=\"@VERSION@\" -I../openssl-0.9.6/outinc
-@@ -29,7 +29,7 @@
+ WINCFLAGS=-O2 -Wall -DUSE_WIN32=1 -DHAVE_OPENSSL=1 -DFD_SETSIZE=4096 -DVERSION=\"@VERSION@\" -I../openssl-0.9.6/outinc
+@@ -30,7 +30,7 @@
  
  # standard external rules
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.9 2001/08/19 16:26:08 martin Exp $
  
  install: all installdirs $(DESTFILES)
  
-@@ -57,7 +57,6 @@
+@@ -59,7 +59,6 @@
  
  installdirs: mkinstalldirs
  	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(PEM_DIR) $(piddir)
