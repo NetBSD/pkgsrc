@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/05 22:12:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/01/25 16:29:49 jmmv Exp $
 bin/gconftool-2
 etc/gconf/2/path
 include/gconf/2/gconf/gconf-changeset.h
@@ -19,7 +19,6 @@ lib/libgconf-2.so
 lib/libgconf-2.so.5
 lib/libgconf-2.so.5.0
 lib/pkgconfig/gconf-2.0.pc
-libexec/gconf-sanity-check-2
 libexec/gconfd-2
 share/aclocal/gconf-2.m4
 share/doc/html/gconf/c120.html
