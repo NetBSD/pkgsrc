@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/28 17:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/26 12:07:26 wiz Exp $
 #
 
 .include "../../net/bittornado/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT+=	(wxGTK GUI)
 
 CONFLICTS=	bittorrent-gui-[0-9]*
 
-DEPENDS+=	bittornado>=0.3.7:../../net/bittornado
+DEPENDS+=	BitTornado>=0.3.7:../../net/bittornado
 
 NO_BUILD=	# defined
 
