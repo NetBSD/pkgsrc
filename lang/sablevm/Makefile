@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/15 12:03:53 tv Exp $
 #
 
 DISTNAME=	sablevm-1.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablevm/} \
 		http://devel.sablevm.org/download/1.1.3/
@@ -38,7 +38,7 @@ BUILDLINK_TRANSFORM+=	l:rt:semaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/pthread.buildlink3.mk"
