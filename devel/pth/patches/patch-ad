@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1 2001/05/14 20:21:20 skrll Exp $
+
+--- pth_syscall.c.orig	Sat Mar 24 14:50:03 2001
++++ pth_syscall.c
+@@ -85,11 +85,13 @@
+ #if cpp
+ #if defined(SYS_sigprocmask)
+ #define PTH_SC_sigprocmask(a1,a2,a3) ((int)syscall(SYS_sigprocmask,(a1),(a2),(a3)))
++#elif defined(SYS___sigprocmask14)
++#define PTH_SC_sigprocmask(a1,a2,a3) ((int)syscall(SYS___sigprocmask14,(a1),(a2),(a3)))
+ #else
+ #define PTH_SC_sigprocmask sigprocmask
+ #endif
+ #endif /* cpp */
+-#if PTH_SYSCALL_HARD && defined(SYS_sigprocmask)
++#if PTH_SYSCALL_HARD && (defined(SYS_sigprocmask) || defined(SYS___sigprocmask14))
+ int sigprocmask(int how, const sigset_t *set, sigset_t *oset)
+ {
+     pth_implicit_init();
+@@ -119,6 +121,22 @@
+ {
+     pth_implicit_init();
+     return pth_waitpid(wpid, status, options);
++}
++#endif
++
++/* Pth hard wrapper for syscall wait4(2) */
++#if cpp
++#if defined(SYS_wait4)
++#define PTH_SC_wait4(a1,a2,a3,a4) ((int)syscall(SYS_wait4,(a1),(a2),(a3),(a4)))
++#else
++#define PTH_SC_wait4 wait4
++#endif
++#endif /* cpp */
++#if PTH_SYSCALL_HARD && defined(SYS_wait4)
++pid_t wait4(pid_t wpid, int *status, int options, struct rusage *rusage)
++{
++    pth_implicit_init();
++    return pth_wait4(wpid, status, options, rusage);
+ }
+ #endif
+ 
