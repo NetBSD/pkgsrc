@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/02/13 08:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2004/02/26 14:04:20 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -20,7 +20,7 @@ PATCHFILES=		lynx2.8.4rel.1a.patch lynx2.8.4rel.1b.patch \
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fredb@NetBSD.org
-HOMEPAGE=		http://lynx.browser.org/
+HOMEPAGE=		http://lynx.isc.org/
 COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
