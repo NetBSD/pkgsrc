@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2332 2004/11/08 19:36:33 jmmv Exp $
+$NetBSD: TODO,v 1.2333 2004/11/09 00:19:55 ben Exp $
 
 Suggested new packages
 ======================
@@ -519,6 +519,7 @@ Suggested package updates
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
 	o sawfish-1.3
+	o scheme48-1.1
 	o scm-5d9
 	o scmxx-0.7.4
 	o scribus-1.2
