@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/04/28 14:34:12 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/11 10:39:09 drochner Exp $
 #
 
-DISTNAME=	sg-0.6.3
-PKGNAME=	scigraphica-0.6.3
+DISTNAME=	sg-0.7.0
+PKGNAME=	scigraphica-0.7.0
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
@@ -14,14 +14,16 @@ DEPENDS+=	gtk+-*:../../x11/gtk
 DEPENDS+=	gtk+extra>=0.99.14:../../x11/gtk+extra
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	libxml-*:../../textproc/libxml
-DEPENDS+=	python-*:../../lang/python
 DEPENDS+=	py-Numeric-*:../../math/py-Numeric
 DEPENDS+=	readline>=4.0:../../devel/readline
 
 USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=	--without-gnome
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_PYTHON=	yes
+PY_PATCHPLIST=	yes
 
 .include "../../mk/bsd.pkg.mk"
