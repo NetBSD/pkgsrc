@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+
+--- ../../toolmanager.orig	Wed Sep 29 15:28:28 1999
++++ ../../toolmanager	Thu Aug 31 22:53:40 2000
+@@ -41,5 +41,5 @@
+ # directory where the application is installed (and exit if getloc goes wrong).
+ # boolean_loc=`getloc BOOLEAN`
+-  boolean_loc=/usr/tools/boolean
++  boolean_loc=@prefix@/libexec/boolean
+  [ $? != 0 ] && echo Bad getloc. Exiting ... && exit
+ 

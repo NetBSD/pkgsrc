@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+
+note, the boolean sources seem to have "BIGINDIAN" backwards
+hence the backwards looking test.
+
+--- ../src/gdssourc/gdsio.cpp.orig	Tue Apr 18 11:13:08 2000
++++ ../src/gdssourc/gdsio.cpp	Thu Aug 31 18:10:44 2000
+@@ -7,4 +7,16 @@
+ */
+ 
++#if defined(__NetBSD__)
++#include <sys/types.h>
++#include <machine/endian.h>
++#if (BYTE_ORDER == LITTLE_ENDIAN)
++#define BIGINDIAN
++#else
++#ifdef BIGINDIAN
++#undef BIGINDIAN
++#endif /* BIGINDIAN */
++#endif /* BYTE_ORDER == BIG_ENDIAN */
++#endif /* __NetBSD__ */
++
+ #ifdef __GNUG__
+ #pragma implementation
