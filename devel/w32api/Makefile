@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/09 12:21:58 kent Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/24 00:12:21 kristerw Exp $
 
 DISTNAME=	w32api-2.5-src
 PKGNAME=	w32api-2.5
@@ -35,6 +35,7 @@ do-build:
 	${_PKG_SILENT}cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
+	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/include
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${CROSSBASE}/i386-netbsdpe/include
 	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/include/GL
 	${INSTALL_DATA} ${WRKSRC}/include/GL/*.h ${CROSSBASE}/i386-netbsdpe/include/GL
