@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/25 15:58:19 drochner Exp $
+$NetBSD: distinfo,v 1.2 2004/01/11 19:06:47 jschauma Exp $
 
-SHA1 (m2crypto-0.11.zip) = cb100879e7ea639fc33d1a93cbbb2da08668ed68
-Size (m2crypto-0.11.zip) = 404629 bytes
+SHA1 (m2crypto-0.12.zip) = 33755f36d3d43d4c89281fcc57571eb99e275a3d
+Size (m2crypto-0.12.zip) = 397229 bytes
