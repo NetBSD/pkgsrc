@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8842 2005/01/20 22:01:02 adrianp Exp $
+$NetBSD: CHANGES,v 1.8843 2005/01/20 22:50:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Devel-SmallProf to 1.15 [bad 2005-01-20]
 	Updated gnome-vfs2 to 2.8.3nb2 [recht 2005-01-20]
 	Updated tcpreplay to 2.3.2 [adrianp 2005-01-20]
+	Added packit-1.0 [adrianp 2005-01-20]
