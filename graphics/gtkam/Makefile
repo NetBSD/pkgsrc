@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/24 21:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/20 23:47:49 salo Exp $
 #
 
 DISTNAME=	gtkam-0.1.10
@@ -15,6 +15,9 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
+
+CONFIGURE_ARGS+=	--without-bonobo
+CONFIGURE_ARGS+=	--without-bonobo-activation
 
 .include "../../devel/libgphoto2/buildlink2.mk"
 .include "../../graphics/libexif-gtk/buildlink2.mk"
