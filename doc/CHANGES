@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4219 2003/12/22 07:08:30 uebayasi Exp $
+$NetBSD: CHANGES,v 1.4220 2003/12/22 08:14:26 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated createbuildlink to 2.9 [uebayasi 2003-12-22]
 	Updated xli to 1.17.0 [fredb 2003-12-22]
 	Updated xemacs to 21.4.14 [uebayasi 2003-12-22]
+	Updated xemacs-packages to 1.13 [uebayasi 2003-12-22]
