@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/04/16 11:00:31 jlam Exp $
+# $NetBSD: Makefile,v 1.27 1999/04/17 04:12:46 jlam Exp $
 
 DISTNAME=		WindowMaker-0.52.0
 PKGNAME=		windowmaker-0.52.0
@@ -21,8 +21,7 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 			--with-incs-from="-I${LOCALBASE}/include \
-				-I${LOCALBASE}/include/giflib" \
-			--enable-modelock
+				-I${LOCALBASE}/include/giflib"
 LDFLAGS+=		-L${LOCALBASE}/lib	# for libintl.a
 CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			INSTALL_DATA="${INSTALL_DATA}" \
@@ -52,6 +51,7 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 #
 .if defined(LINGUAS)
 DEPENDS+=		gettext-0.10.35:../../devel/gettext
+CONFIGURE_ARGS+=	--enable-modelock
 CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
 
 # Enable multi-byte character support for languages that need it.
