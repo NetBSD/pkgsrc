@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/07/12 19:30:50 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/21 21:05:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.sprynet.com/~cbagwell/sox.html
 COMMENT=	SOund eXchange - universal sound sample translator
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fast-ulaw \
 			--enable-fast-alaw \
