@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2303 2003/05/24 09:41:03 salo Exp $
+$NetBSD: CHANGES,v 1.2304 2003/05/24 09:52:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2116,3 +2116,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zenicb to 19981202nb1 [uebayasi 2003-05-24]
 	Updated p5-XML-Simple to 2.07 [mjl 2003-05-24]
 	Updated lib3ds to 1.2.0nb2 [salo 2003-05-24]
+	Updated lmule to 1.2.1nb1 [jmmv 2003-05-24]
