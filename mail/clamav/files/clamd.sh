@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: clamd.sh,v 1.1 2004/02/02 00:00:48 recht Exp $
+# $NetBSD: clamd.sh,v 1.2 2004/03/30 00:32:29 xtraeme Exp $
 #
 # clamd does anti-virus checking.
 #
@@ -33,6 +33,7 @@ stop_postcmd="clamd_postcmd"
 
 clamd_precmd()
 {
+    @RM@ -f ${socket}
     @TOUCH@ ${pidfile}
     @CHOWN@ ${clamd_user} ${pidfile}
 }
