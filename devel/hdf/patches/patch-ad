@@ -1,30 +1,17 @@
-$NetBSD: patch-ad,v 1.3 2001/03/19 13:37:29 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.4 2001/03/25 01:09:50 jtb Exp $
 
---- /dev/null	Fri Mar  9 22:24:17 2001
+--- /dev/null	Sun Mar 25 00:37:46 2001
 +++ hdf/src/Makefile
-@@ -0,0 +1,56 @@
+@@ -0,0 +1,43 @@
 +LIB= df
-+
-+SHLIB_MAJOR= 0
-+SHLIB_MINOR= 0
 +
 +LIBDIR= ${PREFIX}/lib
 +
-+JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
-+JPEGINC= -I${JPEGBASE}/include
-+ZLIB= -lz
-+F2CLIB= -L${F2CBASE}/lib -lf2c
-+F2CINC= -I${F2CBASE}/include
-+
-+CPPFLAGS+= -Dunix -DMEM_LIST ${JPEGINC} ${F2CINC}
-+
-+.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "sparc64")
-+CPPFLAGS+= -DBIG_LONGS
-+.endif
-+
-+LDADD+= ${JPEGLIB} ${ZLIB} ${F2CLIB} -lm
++CPPFLAGS+= -Dunix -DMEM_LIST
++CPPFLAGS+= -I${JPEGBASE}/include
 +
 +NOLINT= 1
++MKPIC= no
 +MKPICINSTALL= no
 +MKPROFILE= no
 +
@@ -40,8 +27,8 @@ $NetBSD: patch-ad,v 1.3 2001/03/19 13:37:29 dmcmahill Exp $
 +	hfile.c hfiledd.c hfilef.c hkit.c linklist.c mcache.c		\
 +	mfan.c mfanf.c mfgr.c mfgrf.c mstdio.c tbbt.c vattr.c vattrf.c	\
 +	vconv.c vg.c vgf.c vgp.c vhi.c vio.c vparse.c vrw.c vsfld.c	\
-+	df24ff.c dfanff.c dfff.c dfpff.c dfr8ff.c dfsdff.c dfufp2if.c	\
-+	hfileff.c mfgrff.c vattrff.c vgff.c
++	df24ff.f dfanff.f dfff.f dfpff.f dfr8ff.f dfsdff.f dfufp2if.f	\
++	hfileff.f mfgrff.f vattrff.f vgff.f
 +
 +INCLUDES= atom.h bitvect.h cdeflate.h cnbit.h cnone.h crle.h cskphuff.h	\
 +	df.h dfan.h dfconvrt.h dffunc.inc dfgr.h dfi.h dfivms.h	dfrig.h	\
