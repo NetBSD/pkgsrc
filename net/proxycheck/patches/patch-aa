@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/17 11:50:40 zuntum Exp $
+
+--- Makefile.orig	Wed Jan 29 10:58:02 2003
++++ Makefile	Wed Jan 29 11:00:01 2003
+@@ -1,12 +1,5 @@
+-CC = cc
+-CFLAGS = -O
+ DEFS = -D_GNU_SOURCE
+ LD = $(CC)
+-LDFLAGS =
+-
+-# For Solaris, we need -lsocket -lnsl and -lresolv for inet_aton
+-SOCKLIBS = `[ -f /usr/lib/libsocket.so ] && echo -lresolv -lsocket -lnsl || :`
+-
+ USE_CFLAGS = $(CFLAGS) $(DEFS)
+ 
+ SRCS = proxycheck.c pxy.c event.c memmem.c
