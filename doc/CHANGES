@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7704 2004/11/05 11:54:25 adam Exp $
+$NetBSD: CHANGES,v 1.7705 2004/11/05 13:35:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5081,3 +5081,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated net-snmp to 5.1.2nb2 [seb 2004-11-05]
 	Removed p5-SNMP [seb 2004-11-05]
 	Updated windowmaker to 0.91.0 [adam 2004-11-05]
+	Updated sane-frontends to 1.0.13 [adam 2004-11-05]
