@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/23 11:17:38 mrg Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/23 11:49:42 wiz Exp $
 
 DISTNAME=	transcode-0.6.6
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	http://freshmeat.net/redir/transcode/15968/url_tgz/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://freshmeat.net/projects/transcode/
-COMMENT=	transcode is a text console video-stream processing tool
+COMMENT=	command line video-stream processing tool
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
