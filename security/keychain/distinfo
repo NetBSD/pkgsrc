@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/01/03 14:29:53 martti Exp $
+$NetBSD: distinfo,v 1.5 2002/04/10 17:52:08 schmonz Exp $
 
-SHA1 (keychain-1.8.tar.bz2) = 49c834fa3357507cfbf014356b4ad3163f0ed5e4
-Size (keychain-1.8.tar.bz2) = 7327 bytes
-SHA1 (patch-aa) = d2a73c493cf53ee67279e8211e37daeb023306c5
+SHA1 (keychain-1.9.tar.bz2) = d5d85fa8f7ab573ff99114ddad1927d6db1f4636
+Size (keychain-1.9.tar.bz2) = 8616 bytes
+SHA1 (patch-aa) = 455a2a109b8d7030e6e62f89e977a77e9f7d7c54
