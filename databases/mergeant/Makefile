@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/21 11:58:55 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/22 10:32:50 jmmv Exp $
 #
 
 DISTNAME=		mergeant-0.10.0
 CATEGORIES=		database gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-db/0.10.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.10/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome-db.org/
