@@ -1,19 +1,41 @@
-@comment $NetBSD: PLIST,v 1.12 2004/11/19 13:01:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/03/20 13:32:00 jmmv Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
 include/gst.h
 include/gstpub.h
 include/sigsegv.h
+lib/libgst.a
 lib/libgst.la
+lib/smalltalk/blox-tk-${PKGVERSION}.so
+lib/smalltalk/blox-tk.a
 lib/smalltalk/blox-tk.la
+lib/smalltalk/blox-tk.so
+lib/smalltalk/gdbm-${PKGVERSION}.so
+lib/smalltalk/gdbm.a
 lib/smalltalk/gdbm.la
+lib/smalltalk/gdbm.so
+lib/smalltalk/gst-gtk-${PKGVERSION}.so
+lib/smalltalk/gst-gtk.a
 lib/smalltalk/gst-gtk.la
+lib/smalltalk/gst-gtk.so
+lib/smalltalk/i18n-${PKGVERSION}.so
+lib/smalltalk/i18n.a
 lib/smalltalk/i18n.la
+lib/smalltalk/i18n.so
 lib/smalltalk/libc.la
+lib/smalltalk/md5-${PKGVERSION}.so
+lib/smalltalk/md5.a
 lib/smalltalk/md5.la
+lib/smalltalk/md5.so
+lib/smalltalk/regex-${PKGVERSION}.so
+lib/smalltalk/regex.a
 lib/smalltalk/regex.la
+lib/smalltalk/regex.so
+lib/smalltalk/tcp-${PKGVERSION}.so
+lib/smalltalk/tcp.a
 lib/smalltalk/tcp.la
+lib/smalltalk/tcp.so
 man/man1/gst.1
 share/aclocal/gst.m4
 share/aclocal/snprintfv.m4
@@ -387,7 +409,5 @@ share/smalltalk/xml/XSL.st
 @dirrm share/smalltalk/blox-tk
 @dirrm share/smalltalk
 @dirrm lib/smalltalk
-@dirrm include/snprintfv
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/include/snprintfv
+@dirrm include/snprintfv
