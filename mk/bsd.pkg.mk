@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.850 2001/11/16 20:35:19 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.851 2001/11/19 16:01:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -62,6 +62,12 @@ FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}/pkg
 .else
 PKGDIR?=		${.CURDIR}
+.endif
+
+.if defined(CONFDIR.${PKGBASE})
+CONFDIR=		${CONFDIR.${PKGBASE}}
+.else
+CONFDIR?=		${PREFIX}/etc
 .endif
 
 .if defined(USE_JAVA)
