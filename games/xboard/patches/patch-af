@@ -1,12 +1,13 @@
-$NetBSD: patch-af,v 1.1 2000/09/15 15:53:17 jlam Exp $
+$NetBSD: patch-af,v 1.2 2000/10/15 02:14:21 jlam Exp $
 
---- xgamelist.c.orig	Sun Aug 15 21:36:55 1999
+--- xgamelist.c.orig	Sun Sep 17 20:32:55 2000
 +++ xgamelist.c
-@@ -51,6 +51,20 @@
+@@ -51,6 +51,21 @@
  #include <X11/Intrinsic.h>
  #include <X11/StringDefs.h>
  #include <X11/Shell.h>
-+#ifdef USE_XAW3D
++#include <X11/cursorfont.h>
++#if USE_XAW3D
 +#include <X11/Xaw3d/Dialog.h>
 +#include <X11/Xaw3d/Form.h>
 +#include <X11/Xaw3d/List.h>
@@ -23,7 +24,7 @@ $NetBSD: patch-af,v 1.1 2000/09/15 15:53:17 jlam Exp $
  #include <X11/Xaw/Dialog.h>
  #include <X11/Xaw/Form.h>
  #include <X11/Xaw/List.h>
-@@ -60,10 +74,11 @@
+@@ -60,10 +75,10 @@
  #include <X11/Xaw/SmeLine.h>
  #include <X11/Xaw/Box.h>
  #include <X11/Xaw/MenuButton.h>
@@ -32,7 +33,6 @@ $NetBSD: patch-af,v 1.1 2000/09/15 15:53:17 jlam Exp $
  #include <X11/Xaw/AsciiText.h>
  #include <X11/Xaw/Viewport.h>
 +#endif
-+#include <X11/cursorfont.h>
  
  #include "common.h"
  #include "frontend.h"

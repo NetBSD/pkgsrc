@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2000/09/15 15:53:16 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/10/15 02:14:20 jlam Exp $
 
---- Makefile.in.orig	Sun Aug 15 21:36:44 1999
+--- Makefile.in.orig	Sun Sep 17 20:32:46 2000
 +++ Makefile.in
-@@ -21,7 +21,7 @@
+@@ -20,7 +20,7 @@
+ infodir = $(prefix)/info
  
  CC = @CC@
- CFLAGS = @CFLAGS@ -DINFODIR=\"$(infodir)\"
--ALL_CFLAGS = -I. -I$(srcdir) @X_CFLAGS@ @CONF_CFLAGS@ $(CFLAGS)
-+ALL_CFLAGS = -I. -I$(srcdir) @CPPFLAGS@ @X_CFLAGS@ @CONF_CFLAGS@ $(CFLAGS)
+-CFLAGS = @CFLAGS@ -DINFODIR=\"$(infodir)\"
++CFLAGS = @CFLAGS@ @CPPFLAGS@ -DINFODIR=\"$(infodir)\"
+ ALL_CFLAGS = -I. -I$(srcdir) @X_CFLAGS@ @CONF_CFLAGS@ $(CFLAGS)
  DEFINES = @DEFS@
  INSTALL = @INSTALL@
- INSTALL_DATA = @INSTALL_DATA@
 @@ -31,7 +31,7 @@
  LEX = @LEX@
  LEXFLAGS = 
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2000/09/15 15:53:16 jlam Exp $
  	@X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@ @LIBS@ -lm
  NROFF = @NROFF@
  NROFFFLAGS = @NROFFFLAGS@
-@@ -62,10 +62,10 @@
+@@ -63,13 +63,13 @@
  
  install: installdirs xboard zic2xpm cmail pxboard xboard.man cmail.man \
  		zic2xpm.man
@@ -28,10 +28,16 @@ $NetBSD: patch-aa,v 1.3 2000/09/15 15:53:16 jlam Exp $
 -	$(INSTALL_PROGRAM) -s zic2xpm $(bindir)/zic2xpm
 -	$(INSTALL_PROGRAM) cmail $(bindir)/cmail
 -	$(INSTALL_PROGRAM) $(srcdir)/pxboard $(bindir)/pxboard
+-	$(INSTALL_DATA) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
+-	$(INSTALL_DATA) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
+-	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
 +	$(INSTALL_PROGRAM) xboard $(bindir)/xboard
 +	$(INSTALL_PROGRAM) zic2xpm $(bindir)/zic2xpm
 +	$(BSD_INSTALL_SCRIPT) cmail $(bindir)/cmail
 +	$(BSD_INSTALL_SCRIPT) $(srcdir)/pxboard $(bindir)/pxboard
- 	$(INSTALL_DATA) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
- 	$(INSTALL_DATA) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
- 	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
++	$(BSD_INSTALL_MAN) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
++	$(BSD_INSTALL_MAN) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
++	$(BSD_INSTALL_MAN) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
+ 	$(INSTALL_DATA) xboard.info $(infodir)/xboard.info
+ 	-PATH=$$PATH:/sbin:/usr/sbin install-info \
+ 		$(infodir)/xboard.info $(infodir)/dir
