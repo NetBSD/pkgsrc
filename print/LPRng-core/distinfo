@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/05/21 13:44:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2004/11/28 16:03:23 martti Exp $
 
-SHA1 (LPRng-3.8.27.tgz) = 2a6fdf97d86baf381f9cc241724e40e2e44c096c
-Size (LPRng-3.8.27.tgz) = 10574042 bytes
+SHA1 (LPRng-3.8.28.tgz) = f4373004adb1439819600701bb98517137daf1fc
+Size (LPRng-3.8.28.tgz) = 10212500 bytes
 SHA1 (patch-ac) = 820629869ca4452886b5860de11a449a7b4603e9
