@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/03/22 16:48:13 abs Exp $
+# $NetBSD: Makefile,v 1.52 2004/04/24 18:24:56 tv Exp $
 
 DISTNAME=	tiff-v3.6.1
 PKGNAME=	tiff-3.6.1
@@ -57,16 +57,13 @@ CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
 
 INSTALLATION_DIRS=	share/doc/html
 
+# reference correct relative man page when using .so;
+# libtoolize build of TIFF tools
 post-patch:
-	# reference correct relative man page when using .so
-	#
 	${MV} ${WRKSRC}/man/Makefile.in ${WRKSRC}/man/Makefile.in.in
 	${SED}	-e "s,\$${MANDIR}\(.*\)\.\([0-9]\).,${PREFIX}/man/man\2/\1.\2,g" \
 		-e "s,\$${MANDIR}\(.*\)\.\([0-9]\),${PREFIX}/man/man\2/\1.\2,g" \
 		${WRKSRC}/man/Makefile.in.in  > ${WRKSRC}/man/Makefile.in
-
-	# libtoolize build of TIFF tools
-	#
 	${MV} ${WRKSRC}/tools/Makefile.in ${WRKSRC}/tools/Makefile.in.in
 	${SED}	-e "s,\(\$${CC} -o\),\$${LIBTOOL} \1,g" \
 		${WRKSRC}/tools/Makefile.in.in  > ${WRKSRC}/tools/Makefile.in
