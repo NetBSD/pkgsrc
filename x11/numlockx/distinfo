@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/29 20:58:35 wiz Exp $
+
+SHA1 (numlockx-1.0.tar.gz) = e25870fd30c22503e2abfd4d387a2a2d0359ce3e
+Size (numlockx-1.0.tar.gz) = 34936 bytes
+SHA1 (patch-aa) = cf7a7402a7745f19dd87c124e3fcc7c5d77fc47b
