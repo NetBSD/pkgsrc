@@ -1,8 +1,32 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
+$NetBSD: patch-aj,v 1.2 2004/08/15 12:13:53 dillo Exp $
 
 --- src/gens/emulator/g_main.c.orig	2004-05-18 22:34:00.000000000 +0200
 +++ src/gens/emulator/g_main.c
-@@ -394,6 +394,13 @@ update_SDL_events ()
+@@ -55,6 +55,23 @@ int Intro_Style = 2;
+ int SegaCD_Accurate = 0;
+ int Kaillera_Client_Running = 0;
+ 
++int NbRerecord=0;
++char MovieFileName[1024];
++int MoviePlaying=0;
++int FrameCount=0;
++unsigned MovieLastFrame=0;
++
++FILE *MovieFile;
++
++struct type_MovieFrame
++{
++       char P1;
++       char P2;
++       char PX;
++};
++
++struct type_MovieFrame *MovieData = NULL;
++
+ static int Gens_Running = 0;
+ 
+ void
+@@ -394,6 +411,13 @@ update_SDL_events ()
  
  	      break;
  
@@ -16,7 +40,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
  	    case SDLK_v:
  	      if (KMOD_CTRL & mod)
  		{
-@@ -429,14 +436,14 @@ update_SDL_events ()
+@@ -429,14 +453,14 @@ update_SDL_events ()
  	case SDL_JOYAXISMOTION:
  	  if (event.jaxis.axis < 2)
  	    {
@@ -33,3 +57,87 @@ $NetBSD: patch-aj,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
  		{
  		  joystate[0x100 * event.jaxis.which +
  			   ((event.jaxis.axis == 0) ? 0x4 : 0x2)] = 1;
+@@ -850,3 +874,83 @@ Build_Language_String (void)
+ 
+   return (0);
+ }
++
++void PlayMovie()
++{
++	if(MoviePlaying) {
++		StopMovie();
++		return;
++	}
++	if(Change_File_L_MV(MovieFileName, State_Dir)==0)
++		return;
++	if (Genesis_Started)
++	{
++		Reset_Genesis();
++	}
++	else if (_32X_Started)
++	{
++		Reset_32X();
++	}
++	FrameCount=0;
++	if(LoadMovieFromFile(MovieFile,MovieFileName)==0)
++		return;
++	MESSAGE_NUM_L("Playing movie from start: %d rerecords","Playing movie from start: %d rerecords",NbRerecord,1500);
++	MoviePlaying=1;
++}
++
++int LoadMovieFromFile(FILE *MovieFile,char* FileName)
++{
++	MovieFile=fopen(FileName,"r+b");
++	if(MovieFile==NULL)
++	{
++		MESSAGE_L("Error loading movie:disk error","Error loading movie:disk error", 2000);
++		return 0;
++	}
++
++	fseek(MovieFile,0,SEEK_END);
++	MovieLastFrame=(ftell(MovieFile)-64)/3;
++	
++	MovieData = malloc(sizeof(struct type_MovieFrame)*MovieLastFrame);
++	if(!MovieData)
++	{
++		MESSAGE_L("Memory error allocating movie", "Memory error allocating movie", 2000);
++		return 0;
++	}
++	fseek(MovieFile,64,SEEK_SET);
++
++	if(fread(MovieData, sizeof(*MovieData), MovieLastFrame, MovieFile) < MovieLastFrame)
++	{
++		MESSAGE_L("Error loading movie:file read","Error loading movie:file read", 2000);
++		return 0;
++	}
++
++	fseek(MovieFile,16,SEEK_SET);
++	fread((char*)&NbRerecord,sizeof(NbRerecord),1,MovieFile);
++
++	fclose(MovieFile);
++	MovieFile=NULL;
++
++	return 1;
++}
++void ReadInMovie(unsigned  frame, char *p1, char *p2, char *px)
++{
++	if(frame>MovieLastFrame)
++	{
++		MESSAGE_NUM_L("Overflow error reading frame : %d","Overflow error reading frame : %d",frame,2000);
++		return;
++	}
++	*p1=MovieData[frame].P1;
++	*p2=MovieData[frame].P2;
++	*px=MovieData[frame].PX;
++}
++
++void
++StopMovie(void)
++{
++  if (!MoviePlaying)
++    return;
++
++  MoviePlaying = 0;
++  free(MovieData);
++  MovieData = NULL;
++}

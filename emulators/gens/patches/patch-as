@@ -1,0 +1,52 @@
+$NetBSD: patch-as,v 1.1 2004/08/15 12:13:53 dillo Exp $
+
+--- src/gens/util/save.c.orig	2004-05-18 22:33:59.000000000 +0200
++++ src/gens/util/save.c
+@@ -101,8 +101,8 @@ Change_File_L (char *Dest, char *Dir)
+ 
+   if (filename)
+     {
+-      g_free (filename);
+       strcpy (Dest, filename);
++      g_free (filename);
+       return 1;
+     }
+   return 0;
+@@ -130,8 +130,37 @@ Change_File_L_CD (char *Dest, char *Dir)
+ 
+   if (filename)
+     {
++      strcpy (Dest, filename);
+       g_free (filename);
++      return 1;
++    }
++  return 0;
++}
++
++int
++Change_File_L_MV (char *Dest, char *Dir)
++{
++
++  gchar *filename = NULL;
++  GtkWidget *widget;
++  gint res;
++  widget =
++    create_file_chooser_dialog ("Load gens movie file",
++				GTK_FILE_CHOOSER_ACTION_OPEN);
++  addGmvFilter (widget);
++//      fileselection_set_dir (fd.filesel, Rom_Dir);
++  /* addStateFilter (widget); */
++  res = gtk_dialog_run (GTK_DIALOG (widget));
++  if (res == GTK_RESPONSE_OK)
++    {
++      filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (widget));
++    }
++  gtk_widget_destroy (widget);
++
++  if (filename)
++    {
+       strcpy (Dest, filename);
++      g_free (filename);
+       return 1;
+     }
+   return 0;
