@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2003/02/17 12:32:04 kei Exp $
+$NetBSD: distinfo,v 1.13 2003/02/17 14:36:46 kei Exp $
 
 SHA1 (gc6.1.tar.gz) = 043d51316ebb7f0ac919e4a72c456f269e604d2f
 Size (gc6.1.tar.gz) = 673024 bytes
 SHA1 (patch-aa) = 5fa6985255d8e3078e53f2be7dcc0666264230fc
 SHA1 (patch-ab) = a50c81392d8ca7ffd8451f0ab471ce2bf258c660
 SHA1 (patch-ac) = 38b22813cf2861dcbc9739d70f9fefe69acf3210
-SHA1 (patch-ad) = 4b0f6817a9edfed7b733c9a5d34b8ff14f7c3031
+SHA1 (patch-ad) = 07595d38bc574bfabf93197bd0e574f0cf305092
