@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.12 2004/09/09 22:26:17 wiz Exp $
+$NetBSD: patch-am,v 1.13 2005/03/01 15:36:48 wiz Exp $
 
---- src/cvs.h.orig	2004-06-09 16:34:54.000000000 +0200
+--- src/cvs.h.orig	2005-01-31 23:19:01.000000000 +0100
 +++ src/cvs.h
-@@ -372,6 +372,7 @@ extern int really_quiet, quiet;
+@@ -380,6 +380,7 @@ extern int really_quiet, quiet;
  extern int use_editor;
  extern int cvswrite;
  extern mode_t cvsumask;
@@ -10,7 +10,7 @@ $NetBSD: patch-am,v 1.12 2004/09/09 22:26:17 wiz Exp $
  
  
  
-@@ -390,6 +391,7 @@ extern int safe_location PROTO ((char *)
+@@ -398,6 +399,7 @@ extern int safe_location PROTO ((char *)
  
  extern int trace;		/* Show all commands */
  extern int noexec;		/* Don't modify disk anywhere */
