@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3049 2005/02/18 22:15:32 jlam Exp $
+$NetBSD: TODO,v 1.3050 2005/02/19 00:15:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -491,7 +491,6 @@ Suggested package updates
 	o gnome-pilot-2.0.12
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
-	o gnutls-1.2.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
