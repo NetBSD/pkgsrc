@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1670 2004/04/25 21:40:29 recht Exp $
+$NetBSD: TODO,v 1.1671 2004/04/26 07:11:46 fredb Exp $
 
 Suggested new packages
 ======================
@@ -328,8 +328,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.2
 	o source-highlight-1.9
-	o squeak-3.2 [fredb|pkg/17950]
-	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stella-1.3
