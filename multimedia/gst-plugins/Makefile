@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2005/01/13 12:56:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/12 09:09:34 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT+=		base plugins
 
+USE_PERL5=		run
 USE_X11=		yes
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-gconf.pc.in
@@ -24,6 +25,9 @@ CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-xvideo/--enable-xvideo/}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/gst-plugins
 
 GCONF2_SCHEMAS=		gstreamer-0.8.schemas
+
+REPLACE_PERL+=		tools/gst-launch-ext-m.m
+REPLACE_PERL+=		tools/gst-visualise-m.m
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
