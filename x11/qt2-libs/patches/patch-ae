@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2000/12/09 17:21:50 skrll Exp $
+$NetBSD: patch-ae,v 1.4 2000/12/11 23:02:37 skrll Exp $
 
 --- src/Makefile.in.orig	Wed Nov  8 17:06:56 2000
 +++ src/Makefile.in
@@ -40,4 +40,13 @@ $NetBSD: patch-ae,v 1.3 2000/12/09 17:21:50 skrll Exp $
 +	@cd `dirname $@` && $(CXX) -c $(CXXFLAGS) `basename $<`
  
  ####### Build rules
+ 
+@@ -390,7 +378,7 @@
+ all: $(DESTDIR)$(SYSCONF_LINK_TARGET)
+ 
+ $(DESTDIR)$(SYSCONF_LINK_TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) $(SUBLIBS)
+-	$(SYSCONF_LINK_LIB)
++	$(SYSCONF_LINK_LIB) $(SYSCONF_RPATH_X11) $(SYSCONF_RPATH_OPENGL)
+ 
+ moc: $(SRCMOC)
  

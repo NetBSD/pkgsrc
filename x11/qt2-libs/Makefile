@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2000/12/09 17:21:49 skrll Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/11 23:02:36 skrll Exp $
 #
-USE_MESA=	yes
+#USE_MESA=	yes
 
 .include "../qt2-libs/Makefile.common"
 
