@@ -1,0 +1,7 @@
+    This version of xclock is a Motif-based variant of the MIT xclock 
+program,  with an alarm feature, and a new "cat" mode, in addition to
+the analog and digital modes.
+The cat image was based on the famous "Kit-Cat" (R)
+plastic wall clock, and was designed by Deanna Hohn of DEC Advanced Technology
+Development.  The Motif interface, eyes, tails, and the general state
+of the program now are a product of Philip Schneider of DEC.

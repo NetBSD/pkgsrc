@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/08 20:02:02 drochner Exp $
+--- xclock.c.orig	Sat Sep  4 19:09:20 1999
++++ xclock.c	Sat Sep  4 19:09:40 1999
+@@ -351,7 +351,7 @@
+ 
+ 	{ "mode", "Mode", XtRString, sizeof(char *),
+ 	    XtOffset(ApplicationDataPtr, modeString),
+-	    XtRImmediate, (XtPointer)"analog"},
++	    XtRImmediate, (XtPointer)"cat"},
+ 
+ 	{ "help", "Help", XtRBoolean, sizeof(Boolean),
+ 	    XtOffset(ApplicationDataPtr, help),
+@@ -403,7 +403,7 @@
+     /*
+      *  Open up the system
+      */
+-    topLevel = XtAppInitialize(&appContext, "XClock",
++    topLevel = XtAppInitialize(&appContext, "Catclock",
+ 			       (XrmOptionDescList)(&options[0]),
+ 			       XtNumber(options),
+ 			       (unsigned int *)&argc, argv, NULL,
