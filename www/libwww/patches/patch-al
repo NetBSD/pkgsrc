@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2002/11/19 20:54:12 reinoud Exp $
+$NetBSD: patch-al,v 1.2 2002/11/20 02:25:14 reinoud Exp $
 
 --- Library/User/Makefile.am.orig	Thu Jun  6 16:59:37 2002
 +++ Library/User/Makefile.am
-@@ -19,13 +19,19 @@ SUFFIXES = .html
+@@ -19,13 +19,20 @@ SUFFIXES = .html
  DEPENDENCIES = \
  	../src/libwww.la
  
@@ -22,11 +22,12 @@ $NetBSD: patch-al,v 1.1 2002/11/19 20:54:12 reinoud Exp $
 +#		> Extrnals.html)
 +
 +Extrnals.html :
-+	echo Missing perl script > Extnals.html
++	echo Missing perl script to produce Extrnals.html > Extnals.html
  
  export: Extrnals.html
 -	-rm $(srcdir)/Extrnals.html;
 -	(cd $(srcdir) && \
 -	perl ../../config/makeindx.pl ../src/ ../src/WWW*.html \
 -		> Extrnals.html)
++	echo Missing perl script to produce Extrnals.html > Extnals.html
 +
