@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 1998/10/24 06:36:22 garbled Exp $
+--- dsh/seq.c	1998/10/20 07:28:44	1.4
++++ dsh/seq.c	1998/10/20 09:29:32	1.5
+@@ -227,7 +227,7 @@
+ 	char buf[256];
+ 	FILE *sd;
+ 
+-	p = NULL;
++	p = buf;
+ 	i = 0;
+ 
+ 	seqfile = getenv("SEQ_FILE");
+@@ -239,8 +239,7 @@
+ 	if (sd == NULL)
+ 		sd = fopen(seqfile, "w");
+ 	else {
+-		fscanf(sd, "%s", buf);
+-		p = strdup(buf);
++		fscanf(sd, "%s", p);
+ 		seqnumber = atoi(p);
+ 		fclose(sd);
+ 		sd = fopen(seqfile, "w");
