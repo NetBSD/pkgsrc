@@ -229,6 +229,10 @@ extern int	h_errno;
 int	fclose(FILE *);
 #endif
 
+#if ! HAVE_ISBLANK
+int     isblank(int);
+#endif
+
 #if ! HAVE_GETPASS_D
 char	*getpass(const char *);
 #endif
