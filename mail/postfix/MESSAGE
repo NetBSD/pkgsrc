@@ -1,11 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/07/19 02:33:31 jlam Exp $
+$NetBSD: MESSAGE,v 1.7 2004/07/19 03:25:11 jlam Exp $
 
-To activate postfix:
+Please run the following command to update main.cf and master.cf with
+the latest Postfix services and configuration directives:
 
-- Check the configuration files in ${PKG_SYSCONFDIR}
-   (see ${EXAMPLEDIR})
-- Modify /etc/mailer.conf (see ${EXAMPLEDIR}/mailer.conf)
-- Set postfix=YES in /etc/rc.conf
+	${PREFIX}/sbin/postfix set-permissions upgrade-configuration
+
+If you are upgrading from a previous Postfix installation, you may want
+to back up any existing configuration files before running the above
+command.
+
+Postfix may be activated by executing:
+
+	${PREFIX}/sbin/postfix start
 
 ===========================================================================
