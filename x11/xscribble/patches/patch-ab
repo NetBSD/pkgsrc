@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/01 19:35:09 itojun Exp $
+$NetBSD: patch-ab,v 1.2 2001/06/01 11:26:44 agc Exp $
 
---- Imakefile-	Thu Nov  2 04:26:45 2000
-+++ Imakefile	Thu Nov  2 04:26:52 2000
-@@ -19 +19,2 @@
+--- Imakefile.orig	Mon Jun 12 23:20:11 2000
++++ Imakefile	Fri Jun  1 12:19:53 2001
+@@ -9,7 +9,7 @@
+            SRCS = xscribble.c Scribble.c
+            OBJS = xscribble.o Scribble.o
+         HEADERS = ScribbleP.h Scribble.h
+-        DEFINES = XkbClientDefines
++        DEFINES = XkbClientDefines -Dunix=1
+        INCLUDES = -Ilirec -Irecman
+ 
+ MakeSubdirs($(SUBDIRS))
+@@ -17,3 +17,4 @@
+ 
+ ComplexProgramTarget(xscribble)
  
 +xscribble.man::
