@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/09/13 15:14:40 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/13 20:10:45 fredb Exp $
 #
 
 DISTNAME=	irrd-1.5-beta-Sept-24-1999
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/irrd-1.5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --without-gdbm --with-db1
-CONFIGURE_ARGS+= --disable-thread --disable-wall
+CONFIGURE_ARGS+= --disable-thread
 CONFIGURE_ENV+=	YACC=bison
 
 pre-configure:
@@ -24,17 +24,17 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef IRRD_USE_PGP
-.if ${IRRD_USE_PGP} == 5
+.if defined(IRRD_USE_PGP) && ${IRRD_USE_PGP} == 5
 DEPENDS+=	pgp-5.*:../../security/pgp5
-.elif ${IRRD_USE_PGP} == 2
+.elif defined(IRRD_USE_PGP) && ${IRRD_USE_PGP} == 2
 DEPENDS+=	pgp-2.*:../../security/pgp2
-#.else
+.else
 CONFIGURE_ARGS+= --without-pgp
 .endif
-.endif
 
-.ifndef USE_INET6
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
