@@ -1,0 +1,270 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- configure.orig	Fri Jun 30 03:53:32 2000
++++ configure	Fri Jun 30 12:48:43 2000
+@@ -12,6 +12,14 @@
+ ac_default_prefix=/usr/local
+ # Any additions from configure.in:
+ ac_help="$ac_help
++  --with-install-dir=DIR specify INSTALL_DIR"
++ac_help="$ac_help
++  --with-doc-dir=DIR     specify DOC_DIR"
++ac_help="$ac_help
++  --with-example-dir=DIR specify EXAMPLES_DIR"
++ac_help="$ac_help
++  --with-html-dir=DIR    specify HTML_DIR"
++ac_help="$ac_help
+   --with-msvc            use MS VC++"
+ ac_help="$ac_help
+   --with-c-flags[=FLAGS] specify C flags"
+@@ -629,6 +637,34 @@
+ 
+ 
+ 
++# Check whether --with-install-dir or --without-install-dir was given.
++if test "${with_install_dir+set}" = set; then
++  withval="$with_install_dir"
++  WITH_INSTALL_DIR="$withval"
++fi
++
++
++# Check whether --with-doc-dir or --without-doc-dir was given.
++if test "${with_doc_dir+set}" = set; then
++  withval="$with_doc_dir"
++  WITH_DOC_DIR="$withval"
++fi
++
++
++# Check whether --with-example-dir or --without-example-dir was given.
++if test "${with_example_dir+set}" = set; then
++  withval="$with_example_dir"
++  WITH_EXAMPLE_DIR="$withval"
++fi
++
++
++# Check whether --with-html-dir or --without-html-dir was given.
++if test "${with_html_dir+set}" = set; then
++  withval="$with_html_dir"
++  WITH_HTML_DIR="$withval"
++fi
++
++
+ # Check whether --with-msvc or --without-msvc was given.
+ if test "${with_msvc+set}" = set; then
+   withval="$with_msvc"
+@@ -1498,6 +1534,130 @@
+ 
+ 
+ 
++echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
++echo "configure:1463: checking how to run the C preprocessor" >&5
++# On Suns, sometimes $CPP names a directory.
++if test -n "$CPP" && test -d "$CPP"; then
++  CPP=
++fi
++if test -z "$CPP"; then
++if eval "test \"`echo '$''{'ac_cv_prog_CPP'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++    # This must be in double quotes, not single quotes, because CPP may get
++  # substituted into the Makefile and "${CC-cc}" will confuse make.
++  CPP="${CC-cc} -E"
++  # On the NeXT, cc -E runs the code through the compiler's parser,
++  # not just through cpp.
++  cat > conftest.$ac_ext <<EOF
++#line 1478 "configure"
++#include "confdefs.h"
++#include <assert.h>
++Syntax Error
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:1484: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  :
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  CPP="${CC-cc} -E -traditional-cpp"
++  cat > conftest.$ac_ext <<EOF
++#line 1495 "configure"
++#include "confdefs.h"
++#include <assert.h>
++Syntax Error
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:1501: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  :
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  CPP="${CC-cc} -nologo -E"
++  cat > conftest.$ac_ext <<EOF
++#line 1512 "configure"
++#include "confdefs.h"
++#include <assert.h>
++Syntax Error
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:1518: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  :
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  CPP=/lib/cpp
++fi
++rm -f conftest*
++fi
++rm -f conftest*
++fi
++rm -f conftest*
++  ac_cv_prog_CPP="$CPP"
++fi
++  CPP="$ac_cv_prog_CPP"
++else
++  ac_cv_prog_CPP="$CPP"
++fi
++echo "$ac_t""$CPP" 1>&6
++
++for ac_hdr in sys/ioctl_compat.h termios.h termio.h
++do
++ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
++echo "configure:1546: checking for $ac_hdr" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 1551 "configure"
++#include "confdefs.h"
++#include <$ac_hdr>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:1556: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
++  cat >> confdefs.h <<EOF
++#define $ac_tr_hdr 1
++EOF
++ 
++else
++  echo "$ac_t""no" 1>&6
++fi
++done
++
++
++
++
++
+ echo $ac_n "checking for inline""... $ac_c" 1>&6
+ echo "configure:1503: checking for inline" >&5
+ if eval "test \"\${ac_cv_c_inline+set}\" = set"; then
+@@ -1917,7 +2077,11 @@
+ 
+ case "$prefix" in
+         in-place)
+-	   INSTALL_DIR=$ROOT_DIR
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$ROOT_DIR
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC=
+            MAKE_INSTALL_EXAMPLES=
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_IN_PLACE)'
+@@ -1928,19 +2092,46 @@
+ 
+ 	none|NONE)
+ 	   PREFIX=/usr/local
+-           INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC='$(INSTALL_DOC)'
+            MAKE_INSTALL_EXAMPLES='$(INSTALL_EXAMPLES)'
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_ALL)';;
+ 
+ 	*) PREFIX=$prefix
+-           INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC='$(INSTALL_DOC)'
+            MAKE_INSTALL_EXAMPLES='$(INSTALL_EXAMPLES)'
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_ALL)';;
+ esac
+ 
+-echo "--> directory for the installation: $INSTALL_DIR"
++if test -z "$WITH_DOC_DIR" ; then
++     DOC_DIR=$INSTALL_DIR/doc
++else
++     DOC_DIR=$WITH_DOC_DIR
++fi
++if test -z "$WITH_EXAMPLE_DIR" ; then
++     EXAMPLE_DIR=$INSTALL_DIR
++else
++     EXAMPLE_DIR=$WITH_EXAMPLE_DIR
++fi
++if test -z "$WITH_HTML_DIR" ; then
++     HTML_DIR=$INSTALL_DIR/doc/Html
++else
++     HTML_DIR=$WITH_HTML_DIR
++fi
++
++echo "--> directory for the installation:       $INSTALL_DIR"
++echo "--> directory for the documentation:      $DOC_DIR"
++echo "--> directory for the HTML documentation: $HTML_DIR"
++echo "--> directory for the examples:           $EXAMPLE_DIR"
+ 
+ case "$WITH_LINKS" in
+ 	''|no)
+@@ -1961,9 +2152,9 @@
+ 
+ if test "$LINKS_DIR" = ""
+ then
+-           echo "--> directory for link to binaries: none (no links)"
++           echo "--> directory for link to binaries:       none (no links)"
+ else
+-           echo "--> directory for link to binaries: $LINKS_DIR"
++           echo "--> directory for link to binaries:       $LINKS_DIR"
+ fi
+ 
+ if test "$USE_GUI_CONSOLE" = yes -a \( "$USE_LINEDIT" = no -o "$WIN32" = no \)
+@@ -2206,6 +2397,9 @@
+ s%@ROOT_DIR@%$ROOT_DIR%g
+ s%@INSTALL_DIRNAME@%$INSTALL_DIRNAME%g
+ s%@INSTALL_DIR@%$INSTALL_DIR%g
++s%@DOC_DIR@%$DOC_DIR%g
++s%@EXAMPLE_DIR@%$EXAMPLE_DIR%g
++s%@HTML_DIR@%$HTML_DIR%g
+ s%@LINKS_DIR@%$LINKS_DIR%g
+ s%@MAKE_LE_DIRS@%$MAKE_LE_DIRS%g
+ s%@MAKE_W32GC_DIRS@%$MAKE_W32GC_DIRS%g

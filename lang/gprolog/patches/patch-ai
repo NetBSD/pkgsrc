@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- BipsFD/Makefile.in.orig	Sat Jun 10 03:32:52 2000
++++ BipsFD/Makefile.in	Fri Jun 30 12:48:43 2000
+@@ -35,7 +35,7 @@
+ 
+ $(LIBNAME): $(OBJLIB)
+ 	rm -f $(LIBNAME) 
+-	$(AR_RC)$(LIBNAME) $(OBJLIB)
++	$(AR_RC) $(LIBNAME) $(OBJLIB)
+ 	$(RANLIB) $(LIBNAME)
+ 
+ 

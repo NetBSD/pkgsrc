@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- Linedit/char_io.c.orig	Mon May 22 12:42:04 2000
++++ Linedit/char_io.c	Fri Jun 30 12:48:41 2000
+@@ -27,7 +27,6 @@
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
+-#include <termio.h>
+ 
+ #elif defined(_WIN32)
+ 

@@ -1,0 +1,116 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- configure.in.orig	Wed Jun 28 03:23:30 2000
++++ configure.in	Fri Jun 30 12:48:43 2000
+@@ -73,6 +73,9 @@
+ AC_SUBST(ROOT_DIR)
+ AC_SUBST(INSTALL_DIRNAME)
+ AC_SUBST(INSTALL_DIR)
++AC_SUBST(DOC_DIR)
++AC_SUBST(EXAMPLE_DIR)
++AC_SUBST(HTML_DIR)
+ AC_SUBST(LINKS_DIR)
+ AC_SUBST(MAKE_LE_DIRS)
+ AC_SUBST(MAKE_W32GC_DIRS)
+@@ -104,6 +107,18 @@
+ dnl *******************
+ 
+ 
++AC_ARG_WITH(install-dir,[  --with-install-dir=DIR specify INSTALL_DIR],
++		[WITH_INSTALL_DIR="$withval"])
++
++AC_ARG_WITH(doc-dir,[  --with-doc-dir=DIR     specify DOC_DIR],
++		[WITH_DOC_DIR="$withval"])
++
++AC_ARG_WITH(example-dir,[  --with-example-dir=DIR specify EXAMPLES_DIR],
++		[WITH_EXAMPLE_DIR="$withval"])
++
++AC_ARG_WITH(html-dir,[  --with-html-dir=DIR    specify HTML_DIR],
++		[WITH_HTML_DIR="$withval"])
++
+ AC_ARG_WITH(msvc,[  --with-msvc            use MS VC++],
+ 		[WITH_MSVC="$withval"],
+ 		[WITH_MSVC=no])
+@@ -252,6 +267,7 @@
+ fi
+ 
+ AC_CHECK_SIZEOF(long)
++AC_CHECK_HEADERS(sys/ioctl_compat.h termios.h termio.h)
+ 
+ 
+ 
+@@ -385,7 +401,11 @@
+ 
+ case "$prefix" in
+         in-place)
+-	   INSTALL_DIR=$ROOT_DIR
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$ROOT_DIR
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC=
+            MAKE_INSTALL_EXAMPLES=
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_IN_PLACE)'
+@@ -396,19 +416,46 @@
+ 
+ 	none|NONE)
+ 	   PREFIX=/usr/local
+-           INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC='$(INSTALL_DOC)'
+            MAKE_INSTALL_EXAMPLES='$(INSTALL_EXAMPLES)'
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_ALL)';;
+ 
+ 	*) PREFIX=$prefix
+-           INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           if test -z "$WITH_INSTALL_DIR" ; then
++                INSTALL_DIR=$PREFIX/$INSTALL_DIRNAME
++           else
++                INSTALL_DIR=$WITH_INSTALL_DIR
++           fi
+            MAKE_INSTALL_DOC='$(INSTALL_DOC)'
+            MAKE_INSTALL_EXAMPLES='$(INSTALL_EXAMPLES)'
+            MAKE_UNINSTALL_PKG='$(UNINSTALL_ALL)';;
+ esac
+ 
+-echo "--> directory for the installation: $INSTALL_DIR"
++if test -z "$WITH_DOC_DIR" ; then
++     DOC_DIR=$INSTALL_DIR/doc
++else
++     DOC_DIR=$WITH_DOC_DIR
++fi
++if test -z "$WITH_EXAMPLE_DIR" ; then
++     EXAMPLE_DIR=$INSTALL_DIR
++else
++     EXAMPLE_DIR=$WITH_EXAMPLE_DIR
++fi
++if test -z "$WITH_HTML_DIR" ; then
++     HTML_DIR=$INSTALL_DIR/doc/Html
++else
++     HTML_DIR=$WITH_HTML_DIR
++fi
++
++echo "--> directory for the installation:       $INSTALL_DIR"
++echo "--> directory for the documentation:      $DOC_DIR"
++echo "--> directory for the HTML documentation: $HTML_DIR"
++echo "--> directory for the examples:           $EXAMPLE_DIR"
+ 
+ case "$WITH_LINKS" in
+ 	''|no)
+@@ -429,9 +476,9 @@
+ 
+ if test "$LINKS_DIR" = ""
+ then
+-           echo "--> directory for link to binaries: none (no links)"
++           echo "--> directory for link to binaries:       none (no links)"
+ else
+-           echo "--> directory for link to binaries: $LINKS_DIR"
++           echo "--> directory for link to binaries:       $LINKS_DIR"
+ fi
+ 
+ if test "$USE_GUI_CONSOLE" = yes -a \( "$USE_LINEDIT" = no -o "$WIN32" = no \)

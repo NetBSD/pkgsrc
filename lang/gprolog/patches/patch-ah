@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- BipsPl/Makefile.in.orig	Wed Jun 28 03:34:10 2000
++++ BipsPl/Makefile.in	Fri Jun 30 12:48:42 2000
+@@ -72,7 +72,7 @@
+ 
+ 
+ .SUFFIXES:
+-.SUFFIXES: @OBJ_SUFFIX@ .wam .pl $(SUFFIXES)
++.SUFFIXES: @OBJ_SUFFIX@ .c .wam .pl $(SUFFIXES)
+ 
+ 
+ .pl.wam:
+@@ -86,7 +86,7 @@
+ $(LIBNAME): $(OBJLIB) no_sockets.wam sockets.wam \
+                       no_le_interf.wam le_interf.wam
+ 	rm -f $(LIBNAME) 
+-	$(AR_RC)$(LIBNAME) $(OBJLIB)
++	$(AR_RC) $(LIBNAME) $(OBJLIB)
+ 	$(RANLIB) $(LIBNAME)
+ 
+ 
