@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/05/09 21:13:19 tron Exp $
+# $NetBSD: Makefile,v 1.38 1999/05/14 23:25:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -66,7 +66,7 @@
 #    SUBDIR += webstone
 #    SUBDIR += wml
 #    SUBDIR += wn
-#    SUBDIR += wwwcount
+    SUBDIR += wwwcount
     SUBDIR += wwwoffle
 #    SUBDIR += wwwstat
     SUBDIR += zope
