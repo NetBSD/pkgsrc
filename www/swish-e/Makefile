@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/13 15:36:50 zuntum Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-efiles.1.3.2
@@ -11,7 +11,6 @@ HOMEPAGE= 	http://sunsite.berkeley.edu/SWISH-E/
 COMMENT= 	Simple web indexing for humans - enhanced
 
 WRKSRC=		${WRKDIR}/src
-USE_GMAKE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/swish-e ${PREFIX}/bin
