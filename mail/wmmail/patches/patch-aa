@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/06/27 10:51:49 tron Exp $
+$NetBSD: patch-aa,v 1.4 2000/10/15 21:54:55 tron Exp $
 
---- Makefile.in.orig	Wed Mar 31 05:34:59 1999
-+++ Makefile.in	Sun Jun 27 12:42:49 1999
+--- src/Makefile.in.orig	Wed Mar 31 05:34:59 1999
++++ src/Makefile.in	Sun Jun 27 12:42:49 1999
 @@ -90,13 +90,13 @@
  DEFS = @DEFS@ -I. -I$(srcdir) 
  CPPFLAGS = @CPPFLAGS@
