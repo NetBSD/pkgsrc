@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:16:42 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/17 07:56:01 skrll Exp $
 bin/artsmessage
 bin/checkXML
 bin/dcop
@@ -3443,10 +3443,11 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm share/kde/apps/kate
 @dirrm share/kde/apps/LICENSES
 @dirrm share/kde/apps
-@dirrm share/kde
 @dirrm share/doc/kde/HTML/en/kspell
 @dirrm share/doc/kde/HTML/en/common
 @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML
+@dirrm share/doc/kde
 @dirrm share/autostart
 @dirrm lib/kde3/plugins/styles
 @dirrm lib/kde3/plugins/designer
@@ -3462,4 +3463,4 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm include/kate
 @dirrm include/kabc
 @dirrm include/dom
-@dirrm include/arts
+@comment dirrm include/arts
