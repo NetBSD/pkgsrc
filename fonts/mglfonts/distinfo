@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:24:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/04/01 01:10:25 minskim Exp $
 
 SHA1 (fontkit-nobdf.tar.gz) = b61c5b0cecb5ae6f77741d358dace1f58c37d570
 Size (fontkit-nobdf.tar.gz) = 629152 bytes
-SHA1 (patch-aa) = 8ceafe8ddf66603464ac02e0f83ad64c678134a0
+SHA1 (patch-aa) = 2710c175859fa084697dd5d6db9b396ea6913eb6
