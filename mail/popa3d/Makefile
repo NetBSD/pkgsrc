@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2002/09/24 11:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2002/11/07 03:48:00 dillo Exp $
 #
 
 DISTNAME=	popa3d-0.5.9
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
@@ -19,6 +20,8 @@ PKG_USERS=	${POPA3D_USER}:${POPA3D_GROUP}
 
 USE_BUILDLINK2=	YES
 
+RCD_SCRIPTS=	popa3d
+
 FILES_SUBST+=	POPA3D_USER=${POPA3D_USER}
 FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP}
 
@@ -29,12 +32,13 @@ post-patch:
 		${MV} params.h.new params.h
 
 do-install:
-	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/libexec
+	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin
 	${INSTALL_DATA} -m 644 ${WRKSRC}/popa3d.8 ${PREFIX}/man/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
 
+.include "../../security/tcp_wrappers/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
