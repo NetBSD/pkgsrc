@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/02/24 03:29:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/27 23:39:13 taca Exp $
 #
 
-DISTNAME=		ipadic-2.4.2
+DISTNAME=		ipadic-2.4.3
 CATEGORIES=		japanese
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 
