@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:18:24 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/29 05:59:24 jdolecek Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -30,7 +30,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/mod_auth_mysql
 
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

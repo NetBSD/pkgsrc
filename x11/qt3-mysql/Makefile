@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/28 10:32:23 gavan Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/29 05:59:24 jdolecek Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -26,5 +26,5 @@ do-install:
 		${SQLDRVDIR}
 
 .include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
