@@ -1,33 +1,36 @@
-$NetBSD: patch-ac,v 1.2 2002/11/26 22:02:45 cjep Exp $
-diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Apr 10 12:37:34 2002
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Sep 11 23:47:39 2002
-@@ -149,6 +149,14 @@
+$NetBSD: patch-ac,v 1.2.4.1 2003/12/05 19:15:10 agc Exp $
+
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-01-28 06:52:51.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-03-14 16:58:41.000000000 +0900
+@@ -129,7 +129,7 @@
+ # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
- ifneq (,$(filter amiga atari hp300 mac68k mvme68k next68k sun3 sun3x x68k,$(OS_TEST)))
-+ifneq (,$(findstring elf,$(TARGET_OS)))
-+# ELF format
-+SYMBOLPREFIX=\"\"
-+else 
-+# aout format
-+SYMBOLPREFIX=\"_\"
-+endif
-+CXXFLAGS        += -DSYMBOLPREFIX=$(SYMBOLPREFIX)
+-ifneq (,$(filter arm% sa110,$(OS_TEST)))
++ifneq (,$(filter arm%,$(TARGET_CPU)))
+ CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
+ endif
+ endif
+@@ -163,7 +163,7 @@
+ # NetBSD/m68k
+ #
+ ifeq ($(OS_ARCH),NetBSD)
+-ifneq (,$(filter amiga atari hp300 mac68k mvme68k next68k sun3 sun3x x68k,$(OS_TEST)))
++ifneq (,$(filter m68k,$(TARGET_CPU)))
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -253,6 +261,13 @@
- ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
+@@ -287,6 +287,13 @@
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
-+endif
+ endif
 +#   
 +# NetBSD/SPARC64
 +#   
 +ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
 +CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
 +ASFILES                := xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
- endif
++endif
  #
  # Solaris/SPARC
+ #
