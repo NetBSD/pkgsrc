@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+
+--- dhid.h.orig	Tue Jun 22 20:01:43 1999
++++ dhid.h	Mon Jul 19 06:24:53 1999
+@@ -64,7 +64,7 @@
+ #define	POLL_INTERVAL	60
+ 
+ #define	DHID_CONF	"/etc/dhid.conf"
+-#define	DHID_PID	"/etc/dhid.pid"
++#define	DHID_PID	"/var/run/dhid.pid"
+ 
+ #define	DEF_ISPORT	58800
+ #define	DEF_MXPORT	58801
