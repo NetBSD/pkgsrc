@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.42 2001/06/14 16:04:06 skrll Exp $
+# $NetBSD: bsd.prefs.mk,v 1.43 2001/06/16 08:45:41 veego Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -134,6 +134,7 @@ USE_INET6?=		NO
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
+# XFree86 starting with 4.1.0 contains now a libGLU, so also check for it.
 .if (defined(CHECK_MESA) || defined(USE_MESA))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/GL/glx.h)
@@ -141,12 +142,23 @@ __BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl 
 .else
 __BUILTIN_MESA=		0
 .endif
+.if exists(${X11BASE}/include/GL/glu.h)
+__BUILTIN_GLU!=		egrep -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
+.else
+__BUILTIN_GLU=		0
+.endif
 .if ${__BUILTIN_MESA} == "0"
 HAVE_BUILTIN_MESA=	NO
 .else
 HAVE_BUILTIN_MESA=	YES
 .endif
+.if ${__BUILTIN_GLU} == "0"
+HAVE_BUILTIN_GLU=	NO
+.else
+HAVE_BUILTIN_GLU=	YES
+.endif
 .undef __BUILTIN_MESA
+.undef __BUILTIN_GLU
 .endif	# CHECK_MESA
 
 # Check if we got FreeType2 distributed with XFree86 4.x or if we need to
