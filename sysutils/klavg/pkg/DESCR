@@ -1,0 +1,10 @@
+This is a small KDE applet showing load everage graph on the
+panel. You could customise colours, refresh rate.  It also allows to
+execute some command on click.
+
+After start it puts itself in the docking area on the panel. If
+session support is enabled, it will restart itself next time user logs
+in.
+
+Pressing righ mouse button shows menu.  Pressing left mouse button
+executes configured command.
