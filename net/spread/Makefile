@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 21:24:09 recht Exp $
 #
 
 DISTNAME=	spread-src-3.17.1
@@ -13,7 +13,7 @@ COMMENT=	Group communication system providing a number of messaging services
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_PERL5=	build
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/spread
@@ -52,5 +52,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.txt ${DOCSDIR}/LICENSE
 	${INSTALL_DATA} ${WRKSRC}/Short_Buffer_Handling.txt ${DOCSDIR}/Short_Buffer_Handling.txt
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
