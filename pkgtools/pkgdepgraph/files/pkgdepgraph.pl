@@ -3,7 +3,7 @@
 # Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.9 2004/06/05 06:17:37 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.10 2004/07/28 01:42:43 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
@@ -115,6 +115,9 @@ if (@ARGV || ! -t) {
 	    $recolor-- if (/^\}/);
 	    $recolor -= ($recolor == 0);
 	}
+	elsif (m:^([^/\s]+)\t([^/\s]+/[^/\s]+)\t(\d+[^/\s]*)$:) {
+	    $where{"$1-$3"} = $2;
+	}
 	elsif (/^Version mismatch: '(\S+)' (\S+) vs (\S+)/) {
 	    $color{"$1-$2"} = "red";
 	    $need{"$1-$2"} = "$1-$3";
@@ -142,12 +145,12 @@ $pkgcnt = @pkgs;
 ## where are they needed
 ##
 foreach $pkg (@pkgs) {
-    $where{$pkg} = $pkg;
+    $where{$pkg} ||= $pkg;
     open(R, "<$pkg_dbdir/$pkg/+BUILD_INFO") ||
 	die("$pkg: +BUILD_INFO: $!\n");
     while (<R>) {
 	if (/^PKGPATH\s*=\s*(\S+)/) {
-	    $where{$pkg} = $1;
+	    $where{$pkg} = $1 if ($where{$pkg} eq $pkg);
 	    last;
 	}
     }
@@ -159,6 +162,15 @@ foreach $pkg (@pkgs) {
 	$dep{$pkg}->{$req} = 1;
     }
     close(R);
+}
+
+##
+## reset %where based on "better" information, if we have it
+##
+foreach $pkg (@pkgs) {
+    if ($need{$pkg} && $where{$need{$pkg}}) {
+	$where{$pkg} = $where{$need{$pkg}};
+    }
 }
 
 ##
