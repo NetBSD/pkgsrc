@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2003/02/25 02:22:28 jschauma Exp $
-# FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
-#
+# $NetBSD: Makefile,v 1.24 2003/02/25 14:16:54 tron Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	audio
 MASTER_SITES=	http://radscan.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/ \
