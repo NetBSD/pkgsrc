@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2003/08/03 05:50:04 sjg Exp $
+$NetBSD: distinfo,v 1.12 2003/09/28 21:08:59 sjg Exp $
 
-SHA1 (bmake-20030731.tar.gz) = 43f6298a31ee3da3b56c7f3869cce9cac5c6714d
-Size (bmake-20030723.tar.gz) = 329419 bytes
+SHA1 (bmake-20030928.tar.gz) = 2442227fd4f4633c5ad706ff004001aadd98248e
+Size (bmake-20030928.tar.gz) = 336189 bytes

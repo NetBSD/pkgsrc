@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/08/03 05:50:04 sjg Exp $
+$NetBSD: distinfo,v 1.7 2003/09/28 21:08:59 sjg Exp $
 
-SHA1 (mk-20030731.tar.gz) = 43925520802e398f2bd8dbae549691f6bdc09467
-Size (mk-20030723.tar.gz) = 24056 bytes
+SHA1 (mk-20030928.tar.gz) = 9599e5ebae4eaf850b6a9f081310da7e73a5c9cf
+Size (mk-20030928.tar.gz) = 24879 bytes
