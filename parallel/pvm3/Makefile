@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/25 14:29:10 is Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/10 15:02:14 dmcmahill Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -9,7 +9,9 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
 
+.if !exists(/usr/bin/ssh)                 
 DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
+.endif
 
 USE_FORTRAN=		yes
 USE_X11=		yes
