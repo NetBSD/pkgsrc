@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:47:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/25 12:59:09 wiz Exp $
 #
 
 DISTNAME=		mod_python-2.7.6
@@ -11,10 +11,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.modpython.org/
 COMMENT=		Python interpretter embedded into Apache
 
-DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
-
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON_BIN=${PYTHONBIN}
 MAKE_ENV+=		PYTHONBIN=${PYTHONBIN}
@@ -33,5 +32,5 @@ post-install:
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC} )
 
 .include "../../lang/python/extension.mk"
-.include "../../www/apache/buildlink.mk"
+.include "../../www/apache/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.9 2002/03/20 15:09:40 taca Exp $
-# $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/25 12:58:27 wiz Exp $
+#
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap-${RUBY_PKGNAMEPREFIX}${VERSION}
@@ -10,19 +10,17 @@ MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
-DEPENDS+=	${BUILDLINK_DEPENDS.apache}:../../www/apache
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}eruby>=0.9:../../textproc/ruby-eruby
-
+USE_BUILDLINK2=	YES
 DIST_SUBDIR=	ruby
-USE_RUBY=	yes
+USE_RUBY=	YES
 RUBY_REQD=	1.6
 VERSION=	0.9.7
 
 HAS_CONFIGURE=  yes
 CONFIGURE_SCRIPT= ./configure.rb
 CONFIGURE_ARGS=	--with-apxs="${APXS}" \
-		--with-eruby-includes="${LOCALBASE}/include" \
-		--with-eruby-libraries="${LOCALBASE}/lib"
+		--with-eruby-includes="${BUILDLINK_PREFIX.ruby-eruby}/include" \
+		--with-eruby-libraries="${BUILDLINK_PREFIX.ruby-eruby}/lib"
 INSTALL_TARGET=	site-install
 
 CONF_FILES=	${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
@@ -45,7 +43,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mod_ruby
 .endfor
 
-.include "../../www/apache/buildlink.mk"
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby-base/buildlink2.mk"
+.include "../../textproc/ruby-eruby/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
