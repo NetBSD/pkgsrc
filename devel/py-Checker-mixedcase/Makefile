@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 16:27:53 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/10 02:25:03 shell Exp $
 
-DISTNAME=	pychecker-0.8.8
-PKGNAME=	${PYPKGPREFIX}-checker-0.8.8
+DISTNAME=	pychecker-0.8.10
+PKGNAME=	${PYPKGPREFIX}-checker-0.8.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pychecker/}
 
-MAINTAINER=	shell@shellhung.org
+MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://pychecker.sourceforge.net/
 COMMENT=	python code checker
 
