@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/07/08 08:06:59 agc Exp $
+# $NetBSD: Makefile,v 1.28 1999/10/01 15:12:23 drochner Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -27,6 +27,11 @@ CXX=		${LOCALBASE}/egcs/bin/g++
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static
+
+.if defined(USE_GIF)
+pre-build:
+	cd ${WRKSRC} && ${PATCH} <${FILESDIR}/enablegif.patch
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${PREFIX}/bin/
