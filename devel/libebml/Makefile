@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2004/02/04 03:02:51 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/07 11:47:46 salo Exp $
 #
 
-DISTNAME=	libebml-0.6.3
+DISTNAME=	libebml-0.6.5
 CATEGORIES=	devel
-MASTER_SITES=	http://matroska.free.fr/downloads/libebml/
+MASTER_SITES=	http://dl.matroska.org/downloads/libebml/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://matroska.sourceforge.net/
-COMMENT=	Libraries for the EBML (Extensible Binary Meta Language) format
+HOMEPAGE=	http://www.sourceforge.net/projects/ebml/
+COMMENT=	Extensible Binary Meta Language support library
 
-BUILD_DIRS=		${WRKSRC}/make/linux
-USE_BUILDLINK2=		YES
-USE_GNU_TOOLS+=		make
+USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	make
+
+NO_CONFIGURE=	yes
+MAKEFLAGS+=	prefix="${PREFIX}"
+BUILD_DIRS=	${WRKDIR}/${DISTNAME}/make/linux
 
 .include "../../mk/bsd.pkg.mk"
