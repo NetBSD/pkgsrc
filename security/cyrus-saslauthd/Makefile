@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/21 21:09:33 cube Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/06 22:38:33 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -29,7 +29,7 @@ ALL_TARGET=		all saslcache testsaslauthd
 
 BUILD_DEFS+=		USE_PAM USE_OPENLDAP SASL_USE_GSSAPI
 
-SASLSOCKETDIR?=		/var/run/saslauthd
+SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 BUILD_DEFS+=		SASLSOCKETDIR
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-saslauthd="${SASLSOCKETDIR}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/07/06 04:20:59 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/07/06 22:38:32 jlam Exp $
 
 .include "Makefile.common"
 
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 # Support using the Courier authdaemon (mail/courier-auth*) for
 # plaintext password authentication.
 #
-AUTHDAEMONVAR?=		/var/authdaemon
+AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
 BUILD_DEFS+=		AUTHDAEMONVAR
 
