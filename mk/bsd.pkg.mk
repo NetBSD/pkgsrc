@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1177 2003/04/30 04:05:48 atatat Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1178 2003/05/04 01:20:13 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -2901,7 +2901,7 @@ CLEAR_DIRLIST?=	NO
 update:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
 		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
-.  if ${REINSTALL} != "NO"
+.  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
 .  endif
@@ -2911,10 +2911,12 @@ CLEAR_DIRLIST?=	YES
 
 update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
+.  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
 		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL	\
 		|| (${RM} ${DDIR} && ${FALSE});				\
 	fi
+.  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES	\
@@ -2923,8 +2925,9 @@ update:
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" && \
-			if [ "${RESUMEUPDATE}" = "NO" -o 		\
-			     "${REINSTALL}" != "NO" ] ; then		\
+			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
+			     "${REINSTALL}" != "NO" ")" -a		\
+			     "${UPDATE_TARGET}" != "replace" ] ; then	\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
 			fi &&						\
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
