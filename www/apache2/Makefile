@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/04/03 08:27:08 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/22 09:44:42 wiz Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
@@ -56,9 +56,10 @@ APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/apache/htdocs
 APACHE_SUEXEC_PATH=     /bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 			--with-suexec-bin=${PREFIX}/sbin/suexec		\
-			--with-suexec-caller=${APACHE_SUEXEC_USER}	\
+			--with-suexec-caller=${APACHE_USER}		\
 			--with-suexec-safepath='${APACHE_SUEXEC_PATH}'	\
-			--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT}
+			--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT}	\
+			--with-suexec-logfile=/var/log/httpd/suexec.log
 APACHE_MODULES+=	suexec
 CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=		APACHE_SUEXEC APACHE_SUEXEC_CONFIGURE_ARGS
