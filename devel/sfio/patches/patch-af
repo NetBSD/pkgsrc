@@ -1,0 +1,50 @@
+$NetBSD: patch-af,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+NetBSD Makefile for sfio.
+
+--- /dev/null	Mon Nov  2 17:57:38 1998
++++ src/lib/sfio/sfio.mk	Mon Nov  2 17:46:11 1998
+@@ -0,0 +1,43 @@
++# sfio Makefile for NetBSD make
++
++LIB=	sfio
++
++SHLIB_MAJOR=	1
++SHLIB_MINOR=	0
++
++CPPFLAGS+=	-I${.CURDIR}
++
++SRCS=	sfexit.c sfclose.c sfclrlock.c sfcvt.c sfdlen.c sfexcept.c sfextern.c \
++	sffilbuf.c sfflsbuf.c sfprints.c sfgetd.c sfgetl.c sfgetr.c sfgetu.c \
++	sfllen.c sfmode.c sfmove.c sfnew.c sfnputc.c sfopen.c \
++	sfpool.c sfpopen.c sfprintf.c sfputd.c sfputl.c sfputr.c sfputu.c \
++	sfpkrd.c sfread.c sfscanf.c sfseek.c sfset.c sfsetbuf.c sfdisc.c \
++	sfstack.c sfstrtod.c sfsync.c sftable.c sftell.c sftmp.c \
++	sfungetc.c sfvprintf.c sfvscanf.c sfwrite.c sfnotify.c sfsetfd.c \
++	sfrd.c sfwr.c sfsk.c sfsize.c sfpurge.c sfpoll.c sfreserve.c \
++	sfswap.c sfraise.c
++
++BINDIR=	../../../bin
++
++NOLINT=	1
++
++ast_common.h : features/common
++	${BINDIR}/iffe - run features/common > ast_common.h
++sfstdgen : sfstdio.c
++	$(CC) -I. $(*) -o sfstdgen
++sfstdhdr.h :
++	Stdio_b/sfstdhdr.sh $(CC)
++sfstdio.h :	sfstdgen
++	$(*) > $(<)
++	rm sfstdgen sfstdhdr.h 
++
++sfexit.c: ast_common.h FEATURE/sfio
++
++FEATURE/sfio: features/sfio
++	$(BINDIR)/iffe set cc $(CC) : run features/sfio
++
++.include "${.CURDIR}/Sfio_f/Makefile.inc"
++.include "${.CURDIR}/Stdio_s/Makefile.inc"
++.include "${.CURDIR}/Sfio_dc/Makefile.inc"
++
++.include <bsd.lib.mk>

@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/11/02 21:18:14 agc Exp $
 lib/libsfio.a
+lib/libsfio_p.a
+lib/libsfio_pic.a
+lib/libsfio.so.1.0
 lib/libstdio.a
+lib/libstdio_p.a
+lib/libstdio_pic.a
+lib/libstdio.so.1.0
 include/sfio/ast_common.h
 include/sfio/sfio.h
 include/sfio/sfio_t.h
