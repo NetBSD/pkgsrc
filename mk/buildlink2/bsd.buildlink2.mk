@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.88 2003/07/02 21:19:09 seb Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.89 2003/07/09 16:07:22 salo Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -371,9 +371,12 @@ _BLNK_TRANSFORM+=	S:-I/usr/include:
 _BLNK_TRANSFORM+=	S:-L/usr/lib:
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH != "yes"
+# Transform -Wl,-R* and *-rpath* if Sun compilers are used.
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
 _BLNK_TRANSFORM+=	no-rpath
+.elif defined(USE_SUNPRO)
+_BLNK_TRANSFORM+=	sanitize-rpath
 .endif
 _BLNK_TRANSFORM+=	${_BLNK_UNPROTECT}
 
@@ -957,6 +960,8 @@ ${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink2/gen-transform.sh
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@_BLNK_TRANSFORM_SEDFILE@|${_BLNK_TRANSFORM_SEDFILE:Q}|g" \
 		-e "s|@_BLNK_UNTRANSFORM_SEDFILE@|${_BLNK_UNTRANSFORM_SEDFILE:Q}|g" \
+		-e "s|@_COMPILER_LD_FLAG@|${_COMPILER_LD_FLAG:Q}|g"	\
+		-e "s|@_OPSYS_RPATH_NAME@|${_OPSYS_RPATH_NAME:Q}|g"	\
 		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL:Q}|g"		\
 		-e "s|@CAT@|${CAT:Q}|g"					\
 		${.ALLSRC} > ${.TARGET}.tmp
