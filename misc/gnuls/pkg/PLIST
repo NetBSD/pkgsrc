@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:01:52 agc Exp $
-bin/linuxls
-bin/dircolors
-bin/dir
-bin/vdir
-man/man1/linuxls.1.gz
-man/man1/dircolors.1.gz
