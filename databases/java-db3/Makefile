@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/13 09:32:49 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/26 20:52:10 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -42,5 +42,5 @@ INSTALL_TARGET=		install_java
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 
 .include "../../databases/db3/buildlink2.mk"
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
