@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.51 2001/07/10 11:13:31 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.52 2001/07/10 15:07:35 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -58,6 +58,9 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 . endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
+.if (${MACHINE_ARCH} == sparc)
+SPARC_TARGET_ARCH?=	sparcv7
+.endif
 
 # We need to set this early to get "USE_MESA" and "USE_XPM" working.
 X11BASE?=               ${DESTDIR}/usr/openwin
