@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.2.2 2005/02/03 23:10:06 salo Exp $
+
+--- lib/DBI/ProxyServer.pm.orig	2003-05-14 07:10:55.000000000 -0400
++++ lib/DBI/ProxyServer.pm	2005-01-29 13:24:49.000000000 -0500
+@@ -33,12 +33,6 @@
+ package DBI::ProxyServer;
+ 
+ 
+-my $haveFileSpec = eval { require File::Spec };
+-my $tmpDir = $haveFileSpec ? File::Spec->tmpdir() :
+-    ($ENV{'TMP'} || $ENV{'TEMP'} || '/tmp');
+-my $defaultPidFile = $haveFileSpec ?
+-    File::Spec->catdir($tmpDir, "dbiproxy.pid") : "/tmp/dbiproxy.pid";
+-
+ 
+ ############################################################################
+ #
+@@ -109,7 +103,8 @@
+     } else {
+ 	$o->{'mode'} = 'single';
+     }
+-    $o->{'pidfile'}    = $defaultPidFile;
++    # No pidfile by default, configuration must provide one if needed
++    $o->{'pidfile'}    = 'none';
+     $o->{'user'}       = undef;
+ };
+ 
+@@ -520,7 +515,7 @@
+ =item I<pidfile> (B<--pidfile=file>)
+ 
+ (UNIX only) If this option is present, a PID file will be created at the
+-given location.
++given location. Default is do not create a pidfile.
+ 
+ =item I<user> (B<--user=uid>)
+ 

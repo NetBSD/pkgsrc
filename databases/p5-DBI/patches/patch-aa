@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/02/03 23:10:06 salo Exp $
+
+--- dbiproxy.PL.orig	2004-02-02 08:04:42.000000000 -0500
++++ dbiproxy.PL	2005-01-29 13:24:49.000000000 -0500
+@@ -146,7 +146,7 @@
+ =item B<--pidfile=file>
+ 
+ (UNIX only) If this option is present, a PID file will be created at the
+-given location.
++given location. Default is do not create a pidfile.
+ 
+ =item B<--user=uid>
+ 
