@@ -1,25 +1,13 @@
-$NetBSD: patch-ab,v 1.3 1999/12/06 21:09:12 abs Exp $
+$NetBSD: patch-ab,v 1.4 2000/07/13 11:09:18 abs Exp $
 
---- Makefile.mid.orig	Tue Nov  9 05:38:58 1999
-+++ Makefile.mid	Tue Nov 23 23:20:21 1999
-@@ -68,7 +68,7 @@
- 	-[ -d $(DATADIR) ] || mkdir $(DATADIR)
- 	-[ -d $(ETCDIR) ] ||  mkdir $(ETCDIR)
- 	-[ -d $(PIDDIR) ] ||  mkdir $(PIDDIR)
--	-[ -d $(ETCDIR)/samples ] || mkdir $(ETCDIR)/samples
-+	-[ -d $(EXAMPLESDIR) ] || mkdir -p $(EXAMPLESDIR)
- 	-[ -d $(BINDIR) ] ||  mkdir $(BINDIR)
- 	-[ -d $(MSGSDIR) ] || mkdir $(MSGSDIR)
- 	-[ -d $(HELPDIR) ] || mkdir $(HELPDIR)
-@@ -85,9 +85,9 @@
- 	  ( echo "" ; echo "MAKING IN $$i" ; echo "----------" ; cd $$i ; \
- 		make $(MFLAGS) install ; ) ;\
- 	done
--	@echo "Installing sample config files under $(ETCDIR)/samples/..."
-+	@echo "Installing sample config files under $(EXAMPLESDIR)/..."
- 	@-for i in */*-confg; do \
--		$(INSTALL) -m 444 -c  $$i $(ETCDIR)/samples/ ;\
-+		$(INSTALL) -m 444 -c  $$i $(EXAMPLESDIR)/ ;\
- 	done
- 	@echo "" ; echo "           NOW su AND DO A make root "
+--- netconsole/fill_window.c.orig	Thu Jul 13 11:15:34 2000
++++ netconsole/fill_window.c	Thu Jul 13 11:15:51 2000
+@@ -38,7 +38,7 @@
  
+ #include	"netconsole.h"
+ 
+-#define WFULL(w)  	(w->_cury == (w->_maxy - 1)) ? 1:0
++#define WFULL(w)        (getcury(w) == (getmaxy(w) - 1)) ? 1:0
+ 
+ fill_window(win, dirp, dir, pcurfd, dpy_func)
+      WINDOW *win;			/* Window to be filled		*/
