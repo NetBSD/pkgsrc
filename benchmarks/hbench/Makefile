@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/17 14:49:12 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/23 16:56:00 agc Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -36,11 +36,18 @@ post-configure:
 		scripts/interactive-setup scripts/maindriver		\
 		Results/Makefile; do					\
 		${MV} $$f $$f.in;					\
-		${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' $$f.in > $$f;	\
+		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f.in > $$f;	\
 	done
 	@/bin/chmod 0755 ${WRKSRC}/scripts/*
 
 do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
+
+benchmark:
+	@cd ${WRKSRC};							\
+	${SED} -e 's|@pwd@|'`/bin/pwd`'|g' 				\
+		-e 's|@hostname@|'`/bin/hostname -s`'|g'		\
+		${FILESDIR}/setup.answers | ${MAKE} setup;		\
+	${MAKE} run
 
 .include "../../mk/bsd.pkg.mk"
