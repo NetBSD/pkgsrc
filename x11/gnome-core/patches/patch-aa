@@ -1,14 +1,16 @@
-$NetBSD: patch-aa,v 1.8 2000/06/21 00:47:45 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2000/10/18 00:06:27 jlam Exp $
 
---- configure.orig	Tue May 23 01:35:01 2000
-+++ configure	Tue Jun 20 20:06:14 2000
-@@ -6586,6 +6586,9 @@
- s%@CATALOGS@%$CATALOGS%g
- s%@CATOBJEXT@%$CATOBJEXT%g
- s%@DATADIRNAME@%$DATADIRNAME%g
-+s%@ESD_CFLAGS@%$ESD_CFLAGS%g
-+s%@ESD_CONFIG@%$ESD_CONFIG%g
-+s%@ESD_LIBS@%$ESD_LIBS%g
- s%@GMOFILES@%$GMOFILES%g
- s%@INSTOBJEXT@%$INSTOBJEXT%g
- s%@INTLDEPS@%$INTLDEPS%g
+--- configure.orig	Tue Sep 26 11:51:54 2000
++++ configure
+@@ -5244,6 +5244,11 @@
+    sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
+   
++# NetBSD: set DATADIRNAME to "share"
++DATADIRNAME="share"
++INTLDEPS=
++INTLLIBS="-lintl"
++
+ # AM_GNOME_GETTEXT above substs $DATADIRNAME
+ # this is the directory where the *.{mo,gmo} files are installed
+ gnomelocaledir='${prefix}/share/locale'
