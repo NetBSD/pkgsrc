@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/19 14:44:07 agc Exp $
+
+SHA1 (mirrordir-0.10.49.tar.gz) = 71fe3178d59fbfd0f76b11626ae50d3a3fbbb691
+Size (mirrordir-0.10.49.tar.gz) = 459867 bytes
+SHA1 (patch-aa) = 92f875f5e9d22abc8304b602675d5d1775b9471f
+SHA1 (patch-ab) = 790c3a80bc45f04f43c8fed59631f56505d82e59
