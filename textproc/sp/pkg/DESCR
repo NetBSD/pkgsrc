@@ -1,0 +1,22 @@
+  A free, object-oriented toolkit for SGML parsing and entity management  
+  
+  * Provides access to all information about SGML document
+      + Access to DTD and SGML declaration as well as document instance
+      + Access to markup as well as abstract document
+      + Sufficient to recreate character-for-character identical copy
+        of any SGML document
+  * Supports almost all optional SGML features
+      + Arbitrary concrete syntaxes
+      + SHORTTAG, OMITTAG, RANK, SUBDOC
+      + LINK (SIMPLE, IMPLICIT and EXPLICIT)
+      + Only DATATAG and CONCUR not supported
+  * Sophisticated entity manager
+      + Supports ISO/IEC 10744 Formal System Identifiers
+      + Supports SGML Open catalogs  
+      + Supports WWW
+      + Can be used independently of parser
+  * Supports multi-byte character sets
+      + Parser can use 16-bit characters internally
+      + 16-bit characters can be used in tag names and other markup
+      + Supports ISO/IEC 10646 (Unicode) using both UCS-2 and UTF-8
+      + Supports Japanese character sets (Shift-JIS, EUC)
