@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3600 2003/10/01 01:42:09 grant Exp $
+$NetBSD: CHANGES,v 1.3601 2003/10/01 05:58:19 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4035,3 +4035,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ImageMagick to 5.5.7.11 [mycroft 2003-09-30]
 	Updated p5-PerlMagick to 5.5.7.11 [mycroft 2003-09-30]
 	Added rinetd 0.62 [grant 2003-10-01]
+	Added exif 0.6 [itojun 2003-10-01]
