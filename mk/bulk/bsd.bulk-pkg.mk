@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.34 2001/12/17 02:32:23 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.35 2002/01/12 02:25:59 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -57,49 +57,51 @@ USE_BULK_CACHE?=	no
 # to build this package
 PRECLEAN?=      yes
 
-.ifdef OBJMACHINE
+# If OBJHOSTNAME is set, use first component of hostname in cache and log files
+# If OBJMACHINE is set, use ${MACHINE_ARCH} in the cache and log files
+.if defined(OBJHOSTNAME)
+.  if !defined(_HOSTNAME)
+_HOSTNAME!= ${UNAME} -n
+.  endif
+BULK_ID?=       .${_HOSTNAME:C|\..*||}
+.elif defined(OBJMACHINE)
+BULK_ID?=       .${MACHINE_ARCH}
+.else
+BULK_ID?=      
+.endif
+
 # This file exists to mark a package as broken
-BROKENFILE?=	.broken.${MACHINE}
+BROKENFILE?=	.broken${BULK_ID}
 
 # This file is where the log of the build goes
-BUILDLOG?=	.make.${MACHINE}
+BUILDLOG?=	.make${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the format:
 # foo/bar devel/libfoo
 # meaning 'foo/bar' is requied to build 'devel/libfoo'
 # this is in the format needed by tsort(1)
-DEPENDSTREEFILE?=	${_PKGSRCDIR}/.dependstree.${MACHINE}
+DEPENDSTREEFILE?=	${_PKGSRCDIR}/.dependstree${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the format:
 # foo/bar depends on: devel/libfoo devel/libbar devel/baz .....
 # ie, to build foo/bar we need devel/libfoo devel/libbar devel/baz ... installed
-DEPENDSFILE?=	${_PKGSRCDIR}/.depends.${MACHINE}
+DEPENDSFILE?=	${_PKGSRCDIR}/.depends${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the format:
 # devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
 # ie, to build foo/bar we need  devel/libfoo to be installed.
 #     to build graphics/gtkfoo we need devel/libfoo to be installed
-SUPPORTSFILE?=	${_PKGSRCDIR}/.supports.${MACHINE}
+SUPPORTSFILE?=	${_PKGSRCDIR}/.supports${BULK_ID}
 
 # This is a top level file which cross-references each package name and pkg directory
 # in the format:
 # devel/libfoo libfoo-1.3
-INDEXFILE?=	${_PKGSRCDIR}/.index.${MACHINE}
+INDEXFILE?=	${_PKGSRCDIR}/.index${BULK_ID}
 
 # file containing a list of all the packages in the correct order for a bulk build.
 # the correct order is one where packages that are required by others are built
 # before the packages which require them.
-ORDERFILE?=	${_PKGSRCDIR}/.order.${MACHINE}
-
-.else
-BROKENFILE?=		.broken
-BUILDLOG?=		.make
-DEPENDSTREEFILE?=	${_PKGSRCDIR}/.dependstree
-DEPENDSFILE?=		${_PKGSRCDIR}/.depends
-SUPPORTSFILE?=		${_PKGSRCDIR}/.supports
-INDEXFILE?=		${_PKGSRCDIR}/.index
-ORDERFILE?=		${_PKGSRCDIR}/.order
-.endif
+ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
 
 # a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
@@ -111,7 +113,7 @@ BULK_PREREQ+=		pkgtools/digest
 # extracting the depends tree because some packages like
 # xpkgwedge only become DEPENDS if it is installed
 bulk-cache:
-	${ECHO_MSG} "Installing BULK_PREREQ packages"
+	@${ECHO_MSG} "BULK> Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ}
 	cd ${_PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
 .endfor
