@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/08 20:22:00 cjones Exp $
+${LISPDIR}/eieio.el
+${LISPDIR}/eieio.elc
+${LISPDIR}/eieio-comp.el
+${LISPDIR}/eieio-comp.elc
+${LISPDIR}/eieio-opt.el
+${LISPDIR}/eieio-opt.elc
+${LISPDIR}/eieio-custom.el
+${LISPDIR}/eieio-custom.elc
+${LISPDIR}/eieio-doc.el
+${LISPDIR}/eieio-doc.elc
+${LISPDIR}/eieio-base.el
+${LISPDIR}/eieio-base.elc
+${LISPDIR}/compare-strings.el
+${LISPDIR}/compare-strings.elc
+info/eieio.info
+@unexec rmdir %D/${LISPDIR} 2>/dev/null || true
