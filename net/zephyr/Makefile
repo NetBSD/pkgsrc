@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/08/18 09:28:02 agc Exp $
+# $NetBSD: Makefile,v 1.17 1999/09/14 02:32:26 kim Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -8,14 +8,14 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/dist/
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://web.mit.edu/olh/Zephyr/index.html
 
-BUILD_DEFS+=	USE_KERBEROS4
-
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_KERBEROS4)
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=	yes
 CONFIGURE_ARGS+="--with-krb4"
 CONFIGURE_ENV+=	CPPFLAGS=-I/usr/include/kerberosIV
-RESTRICTED=	uses Kerberos encryption code
+.else
+CONFIGURE_ARGS+="--without-krb4"
 .endif
 
 USE_X11=	yes

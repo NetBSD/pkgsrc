@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/08/20 14:05:15 enami Exp $
+# $NetBSD: Makefile,v 1.29 1999/09/14 02:32:24 kim Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -35,14 +35,16 @@ CONFIGURE_ARGS+= --with-editor=${NMH_EDITOR}
 CONFIGURE_ARGS+= --with-pager=${NMH_PAGER}
 .endif
 
-.if defined(USE_KERBEROS4)
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-krb4=yes
-RESTRICTED=	uses Kerberos encryption code
+.else
+CONFIGURE_ARGS+=--with-krb4=no
 .endif
 
 DOCDIR=		share/doc/nmh
 
-BUILD_DEFS+=	USE_KERBEROS4 NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
+BUILD_DEFS+=	NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
 
 # Since we patch the autoconf files as well as their outputs, avoid attempt
 # to regenerate header input files with 'autoheader' by Makefile.
