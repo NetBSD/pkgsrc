@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1239 2003/01/26 21:52:15 salo Exp $
+$NetBSD: CHANGES,v 1.1240 2003/01/26 22:50:29 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -419,3 +419,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-server to 0.9.12 [salo 2003-01-26]
 	Added libdnet-1.5 [seb 2003-01-26]
 	Updated elinks to 0.4.2 [salo 2003-01-26]
+	Updated links to 2.1.0.7nb1 [salo 2003-01-26]
+	Updated links-gui to 2.1.0.7nb2 [salo 2003-01-26]
