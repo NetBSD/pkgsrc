@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2003/07/21 16:43:16 martti Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/25 16:08:09 salo Exp $
+#
 
-DISTNAME=		boost_1_28_0
-PKGNAME=		${DISTNAME:C/_/-/:C/_/./g}
+DISTNAME=		boost-1.30.2
 CATEGORIES=		devel
-MASTER_SITES=		http://boost.sourceforge.net/release/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boost/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
