@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/26 21:50:24 bouyer Exp $
 bin/gpsim
+include/eXdbm/eXdbm.h
+include/eXdbm/eXdbmErrors.h
+include/eXdbm/eXdbmTypes.h
 include/gpsim/12bit-instructions.h
 include/gpsim/12bit-processors.h
 include/gpsim/14bit-instructions.h
@@ -10,22 +13,30 @@ include/gpsim/16bit-instructions.h
 include/gpsim/16bit-processors.h
 include/gpsim/16bit-registers.h
 include/gpsim/16bit-tmrs.h
+include/gpsim/attribute.h
 include/gpsim/breakpoints.h
 include/gpsim/cod.h
+include/gpsim/eeprom.h
+include/gpsim/registers.h
 include/gpsim/gpsim_classes.h
 include/gpsim/gpsim_def.h
 include/gpsim/gpsim_interface.h
 include/gpsim/gpsim_time.h
 include/gpsim/fopen-path.h
+include/gpsim/icd.h
+include/gpsim/intcon.h
 include/gpsim/interface.h
 include/gpsim/ioports.h
+include/gpsim/lxt_write.h
 include/gpsim/modules.h
 include/gpsim/p12x.h
 include/gpsim/p16x5x.h
+include/gpsim/p16f62x.h
 include/gpsim/p16x6x.h
 include/gpsim/p16x7x.h
 include/gpsim/p16x8x.h
 include/gpsim/p16f87x.h
+include/gpsim/p17c75x.h
 include/gpsim/p18x.h
 include/gpsim/packages.h
 include/gpsim/pic-instructions.h
@@ -33,6 +44,9 @@ include/gpsim/pic-packages.h
 include/gpsim/pic-processor.h
 include/gpsim/pic-registers.h
 include/gpsim/picdis.h
+include/gpsim/pie.h
+include/gpsim/pir.h
+include/gpsim/processor.h
 include/gpsim/stimuli.h
 include/gpsim/stimulus_orb.h
 include/gpsim/symbol.h
@@ -42,6 +56,13 @@ include/gpsim/trace.h
 include/gpsim/trace_orb.h
 include/gpsim/uart.h
 include/gpsim/xref.h
+lib/libgpsim_eXdbm.a
+lib/libgpsim_eXdbm.la
+lib/libgpsim_eXdbm.so
+lib/libgpsim_eXdbm.so.0
+lib/libgpsim_eXdbm.so.0.0
+lib/libgpsimgui.so.0
+lib/libgpsimgui.so.0.0
 lib/libgpsim.a
 lib/libgpsim.la
 lib/libgpsim.so
@@ -52,9 +73,13 @@ lib/libgpsimcli.la
 lib/libgpsimcli.so
 lib/libgpsimcli.so.0
 lib/libgpsimcli.so.0.0
-lib/libgui.a
-lib/libgui.la
-lib/libgui.so
-lib/libgui.so.0
-lib/libgui.so.0.0
+lib/libgpsim_modules.a
+lib/libgpsim_modules.la
+lib/libgpsimgui.a
+lib/libgpsimgui.la
+lib/libgpsimgui.so
+lib/libgpsim_modules.so
+lib/libgpsim_modules.so.0
+lib/libgpsim_modules.so.0.0
+@dirrm include/eXdbm
 @dirrm include/gpsim
