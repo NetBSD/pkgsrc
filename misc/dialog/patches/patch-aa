@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2001/06/19 15:53:11 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2003/10/08 03:01:32 danw Exp $
 
 --- Makefile.orig	Thu Jan  9 01:19:34 1997
-+++ Makefile
-@@ -17,20 +17,20 @@
++++ Makefile	Tue Oct  7 22:51:21 2003
+@@ -17,21 +17,19 @@
  # can be disabled to make dialog a bit smaller (could be done for more things)
  HAVE_GUAGE=true
  
@@ -25,12 +25,12 @@ $NetBSD: patch-aa,v 1.8 2001/06/19 15:53:11 jlam Exp $
  
 -CFLAGS = $(OPTIM) -DLOCALE -DVERSION=\"0.6z\"
 -LDFLAGS = -L .
+-LDLIBS = -ldialog
 +CFLAGS += $(OPTIM) -DLOCALE -DVERSION=\"0.6z\"
-+LDFLAGS += -L .
- LDLIBS = -ldialog
  
  OBJS = checklist.o inputbox.o menubox.o msgbox.o \
-@@ -42,7 +42,7 @@
+ 	 textbox.o util.o yesno.o
+@@ -42,7 +40,7 @@
  OBJS+=mouse.o
  endif
  ifeq ($(HAVE_NCURSES), true)
@@ -39,25 +39,33 @@ $NetBSD: patch-aa,v 1.8 2001/06/19 15:53:11 jlam Exp $
  LDLIBS+=-lncurses
  endif
  ifeq ($(HAVE_RC_FILE), true)
-@@ -59,7 +59,7 @@
- all: libdialog.a dialog
+@@ -56,12 +54,9 @@
  
- libdialog.a: $(OBJS)
+ SRCS = $(OBJS:.o=.c)
+ 
+-all: libdialog.a dialog
++all: dialog
+ 
+-libdialog.a: $(OBJS)
 -	ar rcs libdialog.a $(OBJS)
-+	ar rc libdialog.a $(OBJS)
+-
+-dialog: dialog.o
++dialog: dialog.o $(OBJS)
  
- dialog: dialog.o
+ clean:
+ 	rm -f core *.o *~ dialog .depend libdialog.a dialog.1 dialog.in
+@@ -69,8 +64,8 @@
  
-@@ -70,7 +70,7 @@
  include .depend
  
- install: dialog libdialog.a
+-install: dialog libdialog.a
 -	install -s dialog $(BINDIR)
++install: dialog 
 +	${BSD_INSTALL_PROGRAM} dialog $(BINDIR)
  	cp dialog.man dialog.1
  ifeq ($(HAVE_RC_FILE),false)
  	mv dialog.1 dialog.in
-@@ -82,7 +82,7 @@
+@@ -82,7 +77,7 @@
  endif
  	mv dialog.1 dialog.in
  	sed -e "/COMMENTSTART/,/COMMENTEND/d" dialog.in >dialog.1
