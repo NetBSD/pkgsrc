@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6007 2004/05/22 17:27:15 cl Exp $
+$NetBSD: CHANGES,v 1.6008 2004/05/22 20:23:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2621,3 +2621,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs to 1.11.16 [wiz 2004-05-22]
 	Updated hylafax to 4.1.8nb2 [wiz 2004-05-22]
 	Added xen12-040418 [cl 2004-05-22]
+	Updated sun-jre13 to 1.0.11 [jmmv 2004-05-22]
+	Updated sun-jdk13 to 1.0.11 [jmmv 2004-05-22]
