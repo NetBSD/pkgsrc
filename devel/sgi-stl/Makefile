@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/24 05:46:52 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/12 20:22:42 jlam Exp $
 
 DISTNAME=		stl
-PKGNAME=		sgi-stl-3.2
+PKGNAME=		sgi-stl-3.3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.sgi.com/Technology/STL/
 
