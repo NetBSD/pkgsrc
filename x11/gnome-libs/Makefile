@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2004/11/10 14:49:36 sketch Exp $
+# $NetBSD: Makefile,v 1.107 2004/11/17 15:43:00 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -48,7 +48,7 @@ SUBST_SED.varbase=	-e 's,@VARBASE@,${VARBASE},g'
 .include "../../mk/bdb.buildlink3.mk"
 
 CONFIGURE_ENV.db-${BDB_TYPE}?=	ac_cv_func_dbopen=no
-CONFIGURE_ENV.db-native=	# empty
+CONFIGURE_ENV.db-db1=		# empty
 
 post-extract:
 .for file in gnome-app-helper-convenience-macros.htm			\
