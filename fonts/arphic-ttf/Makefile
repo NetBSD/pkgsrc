@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/01/25 20:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/13 22:27:52 ben Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
 PKGREVISION=	2
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
+MASTER_SITES=	ftp://freebsd.sinica.edu.tw/pub/keith/zh-arphicttf/
 DISTFILES=	${FONT_FILES} ${MISC_FILES}
 
 MAINTAINER=	rxg@ms25.url.com.tw
