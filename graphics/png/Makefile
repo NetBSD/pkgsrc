@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/03/29 17:11:46 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2004/03/30 15:52:09 minskim Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -33,7 +33,7 @@ MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 PLIST_SUBST+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
 PLIST_SUBST+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 
-INSTALLATION_DIRS=	include lib man/man3 man/man5
+INSTALLATION_DIRS=	include lib/pkgconfig man/man3 man/man5
 
 PKGCONFIG_OVERRIDE=	scripts/libpng12.pc.in
 
