@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2003/07/24 20:59:04 jwise Exp $
+# $NetBSD: Makefile,v 1.108 2004/02/21 06:30:05 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -41,7 +41,7 @@ MAKE_FLAGS+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 CONFIGURE_ARGS+=	--with-libwrap
 .endif
 
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
 DEPENDS+=		zlib-[0-9]*:../../devel/zlib
 CONFIGURE_ENV+=		X_CFLAGS="-I${LOCALBASE}/include"
 .endif
