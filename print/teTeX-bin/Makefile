@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/03/13 17:37:39 fredb Exp $
+# $NetBSD: Makefile,v 1.36 2002/09/21 01:48:03 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -16,49 +16,56 @@ COMMENT=	TeX distribution for UNIX compatible systems - executables
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
-DEPENDS+=	libwww>=5.3.2nb1:../../www/libwww
-DEPENDS+=	png>=1.2.1:../../graphics/png
 
 CONFLICTS+=	omega-[0-9]*
 
-ALL_TARGET=	all
-INSTALL_TARGET=	install strip
-DIST_SUBDIR=	teTeX
-USE_GMAKE=	yes
-USE_X11=	yes
-CFLAGS+=	-Dunix
-GNU_CONFIGURE=	yes
-INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
-CONFIGURE_ARGS+=--without-texinfo \
-		--without-dialog \
-		--disable-multiplatform \
-		--enable-ipc \
-		--with-epsfwin \
-		--with-hp2627win \
-		--with-mftalkwin \
-		--with-x11 \
-		--with-libwww-config=${LOCALBASE}/bin/libwww-config \
-		--with-system-pnglib \
-		--with-pnglib-libdir=${LOCALBASE}/lib \
-		--with-pnglib-include=${LOCALBASE}/include \
-		--with-system-zlib
+DIST_SUBDIR=		teTeX
+ALL_TARGET=		all
+INSTALL_TARGET=		install strip
+
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+USE_X11=		yes
+CFLAGS+=		-Dunix
+
+INFO_FILES=		latex.info dvips.info web2c.info kpathsea.info
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-texinfo
+CONFIGURE_ARGS+=	--without-dialog
+CONFIGURE_ARGS+=	--disable-multiplatform
+CONFIGURE_ARGS+=	--enable-ipc
+CONFIGURE_ARGS+=	--with-epsfwin
+CONFIGURE_ARGS+=	--with-hp2627win
+CONFIGURE_ARGS+=	--with-mftalkwin
+CONFIGURE_ARGS+=	--with-x11
+CONFIGURE_ARGS+=	--with-libwww-config=${LOCALBASE}/bin/libwww-config
+CONFIGURE_ARGS+=	--with-system-pnglib
+CONFIGURE_ARGS+=	--with-pnglib-include=${BUILDLINK_PREFIX.png}/include
+CONFIGURE_ARGS+=	--with-pnglib-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+
 .include "../../mk/bsd.prefs.mk"
+
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
-CONFIGURE_ARGS+=--enable-a4
+CONFIGURE_ARGS+=	--enable-a4
 .endif
 
 .if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=--enable-auto-core \
-		--with-zlib-libdir=/usr/lib \
-		--with-zlib-include=/usr/include
-.else
-CONFIGURE_ARGS+= --with-zlib-libdir=${LOCALBASE}/lib \
-		--with-zlib-include=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--enable-auto-core
 .endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}"
+
+TEXFONTSDIR=		/var/spool/texfonts
+OWN_DIRS=		${TEXFONTSDIR}
+OWN_DIRS_PERMS=		${TEXFONTSDIR}/pk ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	${TEXFONTSDIR}/source ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 
 post-install:
 	@${RM} ${PREFIX}/share/texmf/web2c/*.log
@@ -69,5 +76,9 @@ post-install:
 	texconfig font vardir /var/spool/texfonts
 	texconfig font options appendonlydir varfonts
 
+.include "../../graphics/png/buildlink2.mk"
+.include "../../www/libwww/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
