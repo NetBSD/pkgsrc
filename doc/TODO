@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.547 2003/05/12 10:46:52 cjep Exp $
+$NetBSD: TODO,v 1.548 2003/05/12 16:01:29 salo Exp $
 
 Suggested new packages
 ======================
@@ -17,6 +17,7 @@ Suggested new packages
 	jabberd
 	Messaging server.
 	http://www.jabberstudio.org/projects/jabberd2/releases/
+	[pkgsrc-wip]
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
@@ -246,7 +247,6 @@ Suggested package updates
 	o tcpreplay-1.4.0
 	o texmacs-1.0.1.13
 	o tightvnc-1.2.8
-	o tinyproxy-1.5.3 [pkg/21512]
 	o tkman-2.2
 	o ttf2pt1-3.4.3
 	o vfu-4.00
