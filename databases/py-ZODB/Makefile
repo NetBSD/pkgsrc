@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/24 15:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/25 20:42:17 minskim Exp $
 #
 
 DISTNAME=		ZODB3-3.2
@@ -10,7 +10,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://zope.org/Products/ZODB3.2/3.2/
 COMMENT=		Standalone distro of Zope Object Database
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
