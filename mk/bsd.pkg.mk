@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1239 2003/08/16 08:50:17 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1240 2003/08/22 13:32:40 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2670,20 +2670,22 @@ check-shlibs:
 		shlibs="";						\
 	fi;								\
 	if [ X${LDD} = X ]; then					\
-		ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;		\
+		ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;\
 	else								\
 		ldd="${LDD}";						\
 	fi;								\
-	for i in $${bins} $${shlibs}; do				\
-		err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
-		if [ "${PKG_VERBOSE}" != "" ]; then			\
-			${ECHO} "$$ldd $$i";				\
-		fi;							\
-		if [ "$$err" != "" ]; then				\
-			${ECHO} "$$i: $$err";				\
-			error=1;					\
-		fi;							\
-	done;								\
+	if [ -x "$$ldd" ]; then						\
+		for i in $${bins} $${shlibs}; do			\
+			err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
+			if [ "${PKG_VERBOSE}" != "" ]; then		\
+				${ECHO} "$$ldd $$i";			\
+			fi;						\
+			if [ "$$err" != "" ]; then			\
+				${ECHO} "$$i: $$err";			\
+				error=1;				\
+			fi;						\
+		done;							\
+	fi;								\
 	if [ "$$error" = 1 ]; then					\
 		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
 		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!"; \
@@ -4327,7 +4329,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			${ECHO} "PROVIDES=$$i" >> ${BUILD_INFO_FILE};	\
 		done;							\
 		case "${LDD}" in					\
-		"")	ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;;	\
+		"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;; \
 		*)	ldd="${LDD}";					\
 		esac;							\
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
