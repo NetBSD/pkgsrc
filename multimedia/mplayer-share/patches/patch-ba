@@ -1,0 +1,19 @@
+$NetBSD: patch-ba,v 1.1 2004/07/02 17:07:21 drochner Exp $
+
+--- Gui/interface.c.orig	2004-03-25 22:49:47.000000000 +0100
++++ Gui/interface.c
+@@ -54,8 +54,12 @@ char * gstrcat( char ** dest,char * src 
+  if ( *dest )
+   {
+    tmp=malloc( strlen( *dest ) + strlen( src ) + 1 );
+-   strcpy( tmp,*dest ); strcat( tmp,src ); free( *dest ); 
+-  }
++   
++   if ( tmp ) /* TODO: advanced error handling */
++    {
++     strcpy( tmp,*dest ); strcat( tmp,src ); free( *dest ); 
++    }
++   }
+   else
+    { tmp=malloc( strlen( src ) + 1 ); strcpy( tmp,src ); }
+  *dest=tmp;
