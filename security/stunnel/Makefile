@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/17 21:20:58 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/17 21:21:49 tron Exp $
 #
 
 DISTNAME=	stunnel-3.8
@@ -9,7 +9,7 @@ MAINTAINER=	martin@NetBSD.ORG
 HOMEPAGE=	http://mike.daewoo.com.pl/computer/stunnel
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=	pth>=1.3.5:../pth
+DEPENDS+=	pth>=1.3.5:../../devel/pth
 
 GNU_CONFIGURE=	YES
 USE_SSL=	YES
