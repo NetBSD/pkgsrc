@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2003/07/21 17:45:20 taca Exp $
+# $NetBSD: Makefile,v 1.263 2003/07/24 20:15:20 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -46,6 +46,7 @@ SUBDIR+=	arena
 SUBDIR+=	asWedit
 SUBDIR+=	asp2php
 SUBDIR+=	bins
+SUBDIR+=	bkedit
 SUBDIR+=	bluefish
 SUBDIR+=	bozohttpd
 SUBDIR+=	cadaver
