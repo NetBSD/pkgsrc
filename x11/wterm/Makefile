@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/21 07:53:49 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/19 22:55:48 dante Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -16,5 +16,7 @@ USE_X11=	YES
 GNU_CONFIGURE=	YES
 
 CFLAGS+=	-I${PREFIX}/include
+
+CONFIGURE_ARGS+= --enable-utmp --enable-wtmp --enable-xpm-background --enable-menubar --enable-graphics --enable-next-scroll --enable-half-shadow
 
 .include "../../mk/bsd.pkg.mk"
