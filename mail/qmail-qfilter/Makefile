@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/21 22:53:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/22 13:46:32 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-1.5
@@ -10,7 +10,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/qmail-qfilter/
 COMMENT=		qmail-queue multi-filter front end
 
-DEPENDS+=		netqmail>=1.05:../../mail/netqmail
+DEPENDS+=		qmail>=1.05nb9:../../mail/qmail
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
