@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/09/27 21:19:58 rh Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/16 08:50:48 rh Exp $
 #
 
-DISTNAME=	createbuildlink-2.1
+DISTNAME=	createbuildlink-2.2
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
