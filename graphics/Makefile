@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2003/04/19 07:56:20 rh Exp $
+# $NetBSD: Makefile,v 1.240 2003/04/19 08:09:18 salo Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -140,6 +140,7 @@ SUBDIR+=	mgl
 SUBDIR+=	mng
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
+SUBDIR+=	moz-mplayer
 SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpeg_encode
