@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/03/01 23:06:15 snj Exp $
+$NetBSD: distinfo,v 1.18 2004/04/06 13:26:43 adam Exp $
 
-SHA1 (gqview-1.4.1.tar.gz) = 50c432dc247c14369f9ade63cd8ce9bad112282a
-Size (gqview-1.4.1.tar.gz) = 1213656 bytes
+SHA1 (gqview-1.4.2.tar.gz) = 85ca48f82c831564ff7bf2cd3ae08eea0f161040
+Size (gqview-1.4.2.tar.gz) = 1214299 bytes
