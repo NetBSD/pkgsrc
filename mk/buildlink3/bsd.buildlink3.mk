@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.44 2004/01/10 10:52:09 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.45 2004/01/10 22:22:50 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -294,6 +294,29 @@ BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .    endfor
 .  endif
 .endfor
+
+# _BLNK_BUILTIN_DIRS lists directories in /usr that shouldn't be stripped
+# from the command line by the wrapper scripts, e.g. /usr/include/krb5.
+#
+.for _pkg_ in ${_BLNK_PACKAGES}
+.  if ${BUILDLINK_PREFIX.${_pkg_}} == "/usr"
+.    if !empty(BUILDLINK_INCDIRS.${_pkg_}:Ninclude)
+.      for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:Ninclude:S/^/\/usr\//}
+.        if exists(${_dir_})
+_BLNK_BUILTIN_DIRS+=	${_dir_}
+.        endif
+.      endfor
+.    endif
+.    if !empty(BUILDLINK_LIBDIRS.${_pkg_}:Nlib)
+.      for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:Nlib:S/^/\/usr\//}
+.        if exists(${_dir_})
+_BLNK_BUILTIN_DIRS+=	${_dir_}
+.        endif
+.      endfor
+.    endif
+.  endif
+.endfor
+
 #
 # Add the default view library directories to the runtime library search
 # path so that wildcard dependencies on library packages can always be
@@ -624,6 +647,7 @@ _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_ALLOWED_RPATHDIRS}
+_BLNK_MANGLE_DIRS+=	${_BLNK_BUILTIN_DIRS}
 
 # We only want these for the untransform case, so don't add these
 # directories to _BLNK_{,UN}PROTECT_DIRS below.
@@ -648,6 +672,7 @@ _BLNK_UNPROTECT=	# empty
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
+_BLNK_PROTECT_DIRS+=	${_BLNK_BUILTIN_DIRS}
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 .  for _pkg_ in ${_BLNK_PACKAGES}
 .    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
@@ -656,6 +681,7 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 .    endif
 .  endfor
 .endif
+_BLNK_UNPROTECT_DIRS+=	${_BLNK_BUILTIN_DIRS}
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
