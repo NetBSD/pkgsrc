@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 21:22:09 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/10/06 21:40:17 jmc Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -87,5 +87,6 @@ PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
 					*2.7.*) ${ECHO} gcc27;;\
 					*2.8.*) ${ECHO} gcc28;;\
 					*2.95.*) ${ECHO} gcc295;;\
+					*3.3.*) ${ECHO} gcc295;;\
 					*egcs*) ${ECHO} egcs;;\
 					esac
