@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/23 22:58:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/03/31 11:41:20 wiz Exp $
 bin/bomberclone
 share/bomberclone/gfx/font0.png
 share/bomberclone/gfx/font1.png
@@ -63,6 +63,7 @@ share/bomberclone/music/cinderella_clown.mod
 share/bomberclone/music/mario_is_a_weenie.xm
 share/bomberclone/music/slice_me_nice.xm
 share/bomberclone/music/zb-tnt.xm
+share/bomberclone/pixmaps/bomberclone.png
 share/bomberclone/player/dead0.png
 share/bomberclone/player/player0.png
 share/bomberclone/player/player1.png
@@ -173,6 +174,7 @@ share/doc/bomberclone/TODO
 @dirrm share/bomberclone/tileset/cemetery
 @dirrm share/bomberclone/tileset
 @dirrm share/bomberclone/player
+@dirrm share/bomberclone/pixmaps
 @dirrm share/bomberclone/music
 @dirrm share/bomberclone/maps
 @dirrm share/bomberclone/gfx
