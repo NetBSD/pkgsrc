@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.237 2003/02/01 16:10:23 jmmv Exp $
+$NetBSD: TODO,v 1.238 2003/02/01 18:04:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -95,23 +95,25 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.4.0
 	o ctwm-3.6
-	o curl-7.10.3
+	o curl-7.10.3 [pkg/20142]
+	o cyrus-sasl2-2.1.11
 	o dante-1.1.13
 	o db4-4.1.25
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
-	o fetchmail-6.2.1
+	o fetchmail-6.2.1 [pkg/20143,pkg/20144]
 	o file-roller-2.2.0
 	o flac-1.1.0
 	o fltk-1.1.1
 	o foomatic-2.9.1 [jlam]
-	o fox-1.0.30
+	o fox-1.0.31
 	o freeciv-1.14.0
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4
 	o gauche-0.6.6 [kei]
+	o gcombust-0.1.54
 	o gcvs-1.0b4
 	o gd-2.0.4
 	o gdb-5.3
@@ -137,6 +139,7 @@ Suggested package updates
 	o gtetrinet-0.5.2
 	o gtk---2.2.0
 	o gtk2-pan-0.13.3.90
+	o guile-1.6.2
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
@@ -156,6 +159,7 @@ Suggested package updates
 	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
 	o jpilot-syncmal-0.71.2
+	o jwhois-3.2.1
 	o kde-3.1 [skrll]
 	o kdevelop-2.1.5
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
@@ -206,6 +210,7 @@ Suggested package updates
 	o pnm2ppa-1.12
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
+	o pureftpd-0.14
 	o pv-0.4.5 [pkg/19884]
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
@@ -223,6 +228,7 @@ Suggested package updates
 	o scribus-0.8
 	o scsh-0.6.3
 	o scrollkeeper-0.3.11
+	o seahorse-0.6.1
 	o sendfile-20010424
 	o sendmail-8.12.7
 	o siag-3.5.5
@@ -230,7 +236,7 @@ Suggested package updates
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
-	o source-highlight-1.6.2
+	o source-highlight-1.6.3
 	o speex-1.0rc2
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
