@@ -1,8 +1,8 @@
 Index: configure
-*** configure.orig	Fri Aug 22 10:28:43 1997
---- configure	Thu Dec 18 12:52:15 1997
+*** configure.orig	Tue Jan 20 05:24:14 1998
+--- configure	Sat Jan 24 19:04:05 1998
 ***************
-*** 1757,1768 ****
+*** 1759,1770 ****
   
   export CFLAGS CC
   
@@ -14,10 +14,43 @@ Index: configure
 - 
   
   echo $ac_n "checking that the compiler works""... $ac_c" 1>&6
-  echo "configure:1769: checking that the compiler works" >&5
---- 1757,1762 ----
+  echo "configure:1771: checking that the compiler works" >&5
+--- 1759,1764 ----
 ***************
-*** 6931,6937 ****
+*** 6853,6867 ****
+     case "$enableval" in
+    no)
+         echo "$ac_t""no" 1>&6
+!        SSHINSTALLMODE=0711
+         ;;
+    *)   echo "$ac_t""yes" 1>&6
+!        SSHINSTALLMODE=04711
+         ;;
+    esac 
+  else
+    echo "$ac_t""yes" 1>&6
+!   SSHINSTALLMODE=04711
+  
+  fi
+  
+--- 6847,6861 ----
+     case "$enableval" in
+    no)
+         echo "$ac_t""no" 1>&6
+!        SSHINSTALLMODE=0511
+         ;;
+    *)   echo "$ac_t""yes" 1>&6
+!        SSHINSTALLMODE=04511
+         ;;
+    esac 
+  else
+    echo "$ac_t""yes" 1>&6
+!   SSHINSTALLMODE=04511
+  
+  fi
+  
+***************
+*** 7013,7019 ****
   ac_given_srcdir=$srcdir
   ac_given_INSTALL="$INSTALL"
   
@@ -25,7 +58,7 @@ Index: configure
   EOF
   cat >> $CONFIG_STATUS <<EOF
   
---- 6925,6931 ----
+--- 7007,7013 ----
   ac_given_srcdir=$srcdir
   ac_given_INSTALL="$INSTALL"
   
@@ -34,7 +67,7 @@ Index: configure
   cat >> $CONFIG_STATUS <<EOF
   
 ***************
-*** 7036,7042 ****
+*** 7118,7124 ****
   
   cat >> $CONFIG_STATUS <<EOF
   
@@ -42,7 +75,7 @@ Index: configure
   EOF
   cat >> $CONFIG_STATUS <<\EOF
   for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
---- 7030,7036 ----
+--- 7112,7118 ----
   
   cat >> $CONFIG_STATUS <<EOF
   
