@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.130 2000/12/17 23:32:39 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.131 2000/12/30 11:24:31 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -760,67 +760,14 @@ to when dealing with the PLIST file (or files, see below!).
    information on this target.
 
 
- 5.2 MD/MI vs. general PLIST
- ===========================
-
-Sometimes the packaging list in pkg/PLIST differs between platforms, e.g.
-if one of them supports shared libs and the other does not. To address
-this, a hook has been introduced into the NetBSD packages system to provide
-a PLIST file defined on conditions set freely in the package's Makefile.
-
-
- 5.2.1 $PLIST_SRC
+ 5.2 $PLIST_SRC
  ================
 
 To use one or more files as source for the PLIST used in generating the
 binary package, set the variable PLIST_SRC to the names of that file(s).
-The files are later concatenated using cat(1), and order of things is an
-important issue, see below.
+The files are later concatenated using cat(1), and order of things is
+important.
 
-
- 5.2.2 PLIST-mi, PLIST-md.shared, PLIST-md.static
- ================================================
-
-If PLIST_SRC is not set (the usual case), and if there is no pkg/PLIST, the
-packages system looks for pkg/PLIST-mi, and pkg/PLIST-md.shared or
-pkg/PLIST-md.static to handle differences due to the platform being able to
-handle shared libs or not. PLIST-mi contains machine independent files,
-PLIST-md.* contain machine dependent files, which may differ between
-architectures that don't support dynamic libs/shared loading. Currently,
-this is only used in the perl-packages, and as perl5 on alpha doesn't
-support dynamic loading of extensions like perl/Tk yet, PLIST.mi-static is
-also used on the alpha (besides pmax and powerpc). Alpha will hopefully be
-removed soon when perl's fixed for dynamic loading.
-
-(This handling of MI/MD PLIST files is implemented by setting PLIST_SRC to
-either "PLIST-mi PLIST-md.static" or "PLIST-mi PLIST-md.shared", see
-/usr/pkgsrc/mk/bsd.pkg.mk).
-
-
- 5.2.3 Order in the PLIST* file(s)
- =================================
-
-There is one gotcha regarding the ordering of @dirrm statements: any MI
-@dirrm directives that follow any MD @dirrm's *must* go into the PLIST.md-*
-files, as the files PLIST-mi and PLIST.md-{shared/static} are concatenated
-in exactly this order. If the MI directory would be listed in PLIST-mi, it
-would be removed before the MD directory, which wouldn't work.
-
-E.g. if you have the following dirs:
-        foo/mi
-        foo/mi/md
-
-then PLIST-mi contains:
-        <nothing>
-
-and PLIST-md.* contain:
-        @dirrm foo/mi/md
-        @dirrm foo/mi
-
-This will lead to some @dirrm statements being duplicated, but it's the
-only way to ensure everything is properly removed. The same care must be
-taken when PLIST_SRC is set to some package-specific settings.
-  
 
  5.3 Perl5 modules
  =================
