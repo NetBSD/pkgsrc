@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/11 18:11:43 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/16 17:21:35 hubertf Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -36,11 +36,12 @@ ROOT_GROUP?=	wheel
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
 
+BUILD_DEPENDS+=        ${LOCALBASE}/bin/urlget:../../www/urlget
 pre-fetch:
-	@if [ ! -x ${LOCALBASE}/bin/urlget ];\
+	if [ ! -x ${LOCALBASE}/bin/urlget ]; \
 	then \
 		${ECHO} '==> Installing urlget to fetch swing' ; \
-		(cd ../../www/urlget && make install) ; \
+		${MAKE} ${MAKEFLAGS} install-build-depends ; \
 	fi
 
 do-fetch:
