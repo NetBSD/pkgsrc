@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/09/18 21:15:09 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/09/19 09:04:08 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -63,7 +63,6 @@ pre-install:
 		${FALSE};						\
 		;;							\
 	esac
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
 
 do-install:
 .for DIR in ${DIRS_TO_BUILD}
@@ -74,7 +73,6 @@ do-install:
 post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
-	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"

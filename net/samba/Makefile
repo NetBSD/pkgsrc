@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2002/09/18 21:15:15 jlam Exp $
+# $NetBSD: Makefile,v 1.89 2002/09/19 09:04:17 jlam Exp $
 
 .include "Makefile.common"
 
@@ -65,12 +65,6 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 
-pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
@@ -85,10 +79,6 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd		\
 		${EXAMPLESDIR}/misc
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
