@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2988 2005/02/04 14:36:34 wiz Exp $
+$NetBSD: TODO,v 1.2989 2005/02/04 21:41:06 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -720,7 +720,6 @@ Suggested package updates
 	o nut-10.15
 	o nxtvepg-2.7.4
 	o obexftp-0.10.6
-	o ocaml-3.08
 	o odbc-postgresql-7.4.6
 	o offlineimap-4.0.8
 	o ogre-0.12.3
