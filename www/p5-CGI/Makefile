@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/05/15 13:22:03 heinz Exp $
+# $NetBSD: Makefile,v 1.29 2004/07/17 20:17:12 kim Exp $
 #
 
 VERS=			3.05
@@ -14,7 +14,7 @@ COMMENT=		Perl5 module for writing forms-based CGI programs
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.
-BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl>=5.6.1nb2}
+BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl{,-thread}>=5.6.1nb2}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
