@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2001/05/05 19:51:16 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/10/11 09:26:03 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
-DISTNAME=	exmh-2.1.1
+DISTNAME=	exmh-2.5
 CATEGORIES=	mail tk80
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/exmh/
 
@@ -31,7 +31,7 @@ TCLSH=		tclsh
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} TCLSH=${TCLSH} \
-		WISH=${PREFIX}/bin/${WISH} WRKSRC=${WRKSRC} \
+		WISH=${PREFIX}/../tk-8.3.2nb1/bin/${WISH} WRKSRC=${WRKSRC} \
 		FILESDIR=${FILESDIR} ${SH} ${SCRIPTDIR}/build
 
 do-install:
