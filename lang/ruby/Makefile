@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/17 02:16:44 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/24 14:14:28 tron Exp $
 #
 
 DISTNAME=	ruby-1.4.0
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.netlab.co.jp/ruby/index.html
 
-DEPENDS=	bison-1.27:../../devel/bison
+BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 
 GNU_CONFIGURE=	yes
 
