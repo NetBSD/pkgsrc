@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/13 17:51:32 tv Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -26,7 +26,7 @@ CFLAGS+=		-Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 INSTALLATION_DIRS=	bin include lib man/man1
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_SCRIPT} ${WRKSRC}/libbz2.la ${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libbz2.la ${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bzip2 ${PREFIX}/bin
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bunzip2
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bzcat
