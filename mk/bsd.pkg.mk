@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1336 2004/01/06 09:27:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1337 2004/01/06 09:30:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4827,8 +4827,6 @@ MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
 # generate ${PLIST} from ${_PLIST_SRC} by:
-# - adding files and appropriate rmdir statements for perl5 modules if
-#   PERL5_PACKLIST is defined
 # - substituting for PLIST_SUBST entries
 # - fixing list of man-pages according to MANZ, MANINSTALL.
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
