@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/12/19 15:43:31 skrll Exp $
+$NetBSD: patch-ae,v 1.2 2004/08/12 11:52:39 adam Exp $
 
---- src/kernel/qinputcontext_x11.cpp.orig	2003-10-10 10:47:35.000000000 +0900
-+++ src/kernel/qinputcontext_x11.cpp	2003-12-15 23:15:04.000000000 +0900
-@@ -255,9 +255,8 @@
+--- src/kernel/qinputcontext_x11.cpp.orig	2004-08-05 14:42:10.000000000 +0000
++++ src/kernel/qinputcontext_x11.cpp
+@@ -265,9 +265,8 @@ extern "C" {
  		qDebug( "compose emptied" );
  #endif // QT_XIM_DEBUG
  
