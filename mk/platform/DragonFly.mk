@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.7 2005/01/12 21:11:41 recht Exp $
+# $NetBSD: DragonFly.mk,v 1.8 2005/01/25 18:15:58 tv Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -158,9 +158,7 @@ PKG_HAVE_KQUEUE=	# defined
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-.endif
+_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
