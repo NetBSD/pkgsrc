@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/15 07:19:50 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/15 07:48:48 toshii Exp $
 
 DISTNAME=	mlterm-2.6.1
 CATEGORIES=	x11
@@ -20,7 +20,7 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/autoconf/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/kiklib/autoconf/libtool
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-imlib
+CONFIGURE_ARGS+=	--with-imagelib=imlib
 CONFIGURE_ARGS+=	--enable-anti-alias
 
 post-patch:
