@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4382 2004/01/07 19:12:57 ben Exp $
+$NetBSD: CHANGES,v 1.4383 2004/01/07 22:05:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mpg321 to 0.2.10nb3 [tron 2004-01-07]
 	Deleted fp-netbsd-ws [ben 2004-01-07]
 	Added fprot-workstation-bin-4.3.1 [ben 2004-01-07]
+	Updated wxGTK to 2.4.1nb3 [jmmv 2004-01-07]
