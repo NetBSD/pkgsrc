@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:40 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:26 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rpc2.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.rpc2?=	rpc2>=1.10
 DEPENDS+=			${BUILDLINK_DEPENDS.rpc2}:../../devel/rpc2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.rpc2=rpc2
+BUILDLINK_PREFIX.rpc2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rpc2=	include/rpc2/*
 BUILDLINK_FILES.rpc2+=	lib/libfail.*
 BUILDLINK_FILES.rpc2+=	lib/librpc2.*

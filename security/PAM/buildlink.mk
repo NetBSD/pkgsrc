@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/07/20 01:54:50 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/07/27 13:33:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpam.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.pam?=	PAM>=0.72
 DEPENDS+=		${BUILDLINK_DEPENDS.pam}:../../security/PAM
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.pam=PAM
+BUILDLINK_PREFIX.pam_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.pam=	include/security/*
 BUILDLINK_FILES.pam+=	lib/libpam.*
 BUILDLINK_FILES.pam+=	lib/libpamc.*

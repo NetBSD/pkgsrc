@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/07/27 13:33:38 jlam Exp $
 #
 # This Makefile fragment is included by packages that use qt2-libs.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.qt2-libs?=	qt2-libs>=2.2.4
 DEPENDS+=	${BUILDLINK_DEPENDS.qt2-libs}:../../x11/qt2-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt2-libs=qt2-libs
+BUILDLINK_PREFIX.qt2-libs_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.qt2-libs=	qt2/bin/moc
 BUILDLINK_FILES.qt2-libs+=	qt2/include/*.h
 BUILDLINK_FILES.qt2-libs+=	qt2/lib/libqt.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.1
 DEPENDS+=	${BUILDLINK_DEPENDS.ORBit}:../../net/ORBit
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.ORBit=ORBit
+BUILDLINK_PREFIX.ORBit_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ORBit=	include/IIOP/*
 BUILDLINK_FILES.ORBit+=	include/ORBitservices/*
 BUILDLINK_FILES.ORBit+=	include/ORBitutil/*

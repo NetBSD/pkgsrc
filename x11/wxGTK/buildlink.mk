@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/20 01:54:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/27 13:33:39 jlam Exp $
 #
 # This Makefile fragment is included by packages that use wxGTK.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.wxGTK?=	wxGTK>=2.2.2
 DEPENDS+=			${BUILDLINK_DEPENDS.wxGTK}:../../x11/wxGTK
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.wxGTK=wxGTK
+BUILDLINK_PREFIX.wxGTK_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.wxGTK=		include/wx/*
 BUILDLINK_FILES.wxGTK+=		include/wx/*/*
 BUILDLINK_FILES.wxGTK+=		lib/wx/include/wx/gtk/*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmikmod.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libmikmod?=	libmikmod>=3.1.9
 DEPENDS+=	${BUILDLINK_DEPENDS.libmikmod}:../../audio/libmikmod
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libmikmod=libmikmod
+BUILDLINK_PREFIX.libmikmod_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libmikmod=	include/mikmod.h
 BUILDLINK_FILES.libmikmod+=	lib/libmikmod.*
 

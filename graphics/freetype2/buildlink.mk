@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/07/20 01:54:43 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/07/27 13:33:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -37,6 +37,7 @@ _NEED_FREETYPE2=	NO
 .if ${_NEED_FREETYPE2} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.freetype2}:../../graphics/freetype2
 EVAL_PREFIX+=	BUILDLINK_PREFIX.freetype2=freetype2
+BUILDLINK_PREFIX.freetype2_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .endif

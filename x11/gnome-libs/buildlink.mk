@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/07/27 13:33:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.gnome-libs?=	gnome-libs>=1.0.53
 DEPENDS+=	${BUILDLINK_DEPENDS.gnome-libs}:../../x11/gnome-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-libs=gnome-libs
+BUILDLINK_PREFIX.gnome-libs_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gnome-libs=	include/gnome.h
 BUILDLINK_FILES.gnome-libs+=	include/gtk-xmhtml/*
 BUILDLINK_FILES.gnome-libs+=	include/libart_lgpl/*

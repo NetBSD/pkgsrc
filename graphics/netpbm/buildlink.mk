@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:46 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use netpbm.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.7
 DEPENDS+=	${BUILDLINK_DEPENDS.netpbm}:../../graphics/netpbm
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.netpbm=netpbm
+BUILDLINK_PREFIX.netpbm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.netpbm=		include/pbm.h
 BUILDLINK_FILES.netpbm+=	include/pbmplus.h
 BUILDLINK_FILES.netpbm+=	include/pgm.h

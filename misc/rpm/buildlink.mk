@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:48 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rpm.
 #
@@ -22,6 +22,7 @@ BUILDLINK_DEPENDS.rpm?=	rpm>=2.4.3
 BUILD_DEPENDS+=		${BUILDLINK_DEPENDS.rpm}:../../misc/rpm
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.rpm=rpm
+BUILDLINK_PREFIX.rpm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rpm=	include/rpm/*
 BUILDLINK_FILES.rpm+=	lib/librpm.a
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:45 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lcms.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.lcms?=	lcms>=1.06
 DEPENDS+=	${BUILDLINK_DEPENDS.lcms}:../../graphics/lcms
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.lcms=lcms
+BUILDLINK_PREFIX.lcms_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.lcms=	include/lcms/*
 BUILDLINK_FILES.lcms+=	lib/liblcms.*
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:45 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libjpeg.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.jpeg?=	jpeg-6b
 DEPENDS+=	${BUILDLINK_DEPENDS.jpeg}:../../graphics/jpeg
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.jpeg=jpeg
+BUILDLINK_PREFIX.jpeg_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.jpeg=	include/jconfig.h
 BUILDLINK_FILES.jpeg+=	include/jpeglib.h
 BUILDLINK_FILES.jpeg+=	include/jmorecfg.h

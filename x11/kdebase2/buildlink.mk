@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/20 01:54:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/27 13:33:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use kdebase2.
 #
@@ -23,6 +23,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.kdebase2}:../../x11/kdebase2
 .include "../../mk/bsd.prefs.mk"
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.kdebase2=kdebase
+BUILDLINK_PREFIX.kdebase2_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.kdebase2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdebase2/pkg/PLIST
 
 .include "../../x11/kdelibs2/buildlink.mk"

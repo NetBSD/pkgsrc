@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:18 jlam Exp $
 #
 # This Makefile fragment is included by packages that use liblzo.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.liblzo?=	liblzo>=1.06
 DEPENDS+=	${BUILDLINK_DEPENDS.liblzo}:../../archivers/liblzo
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.liblzo=liblzo
+BUILDLINK_PREFIX.liblzo_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.liblzo=		include/lzo1.h
 BUILDLINK_FILES.liblzo+=	include/lzo16bit.h
 BUILDLINK_FILES.liblzo+=	include/lzo1a.h

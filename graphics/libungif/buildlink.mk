@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:45 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libungif.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libungif?=	libungif>=4.1.0
 DEPENDS+=	${BUILDLINK_DEPENDS.libungif}:../../graphics/libungif
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libungif=libungif
+BUILDLINK_PREFIX.libungif_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libungif=	include/gif_lib.h
 BUILDLINK_FILES.libungif+=	lib/libgif.*
 BUILDLINK_FILES.libungif+=	lib/libungif.*
