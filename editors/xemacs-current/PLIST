@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/04 16:12:01 magick Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/11/25 18:09:06 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -67,8 +67,9 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device-impl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/devslots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dragdrop.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dumper.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/elhash.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dump-data.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dumper.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/emodules.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/event-gtk.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/events.h
@@ -169,6 +170,9 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nh4000.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns16000.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns32000.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/number-gmp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/number-mp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/number.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion105.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/paragon.h
@@ -408,8 +412,9 @@ lib/${EMACSVER}/etc/COPYING.LIB
 lib/${EMACSVER}/etc/ChangeLog
 lib/${EMACSVER}/etc/DEBUG
 lib/${EMACSVER}/etc/DISTRIB
-lib/${EMACSVER}/etc/Emacs.ad
 lib/${EMACSVER}/etc/FTP
+lib/${EMACSVER}/etc/ETAGS.EBNF
+lib/${EMACSVER}/etc/Emacs.ad
 lib/${EMACSVER}/etc/GNU
 lib/${EMACSVER}/etc/HELLO
 lib/${EMACSVER}/etc/InstallGuide
@@ -511,6 +516,7 @@ lib/${EMACSVER}/etc/eos/eos-stop.xbm
 lib/${EMACSVER}/etc/eos/eos-type.xbm
 lib/${EMACSVER}/etc/eos/eos-up.xbm
 lib/${EMACSVER}/etc/etags.1
+lib/${EMACSVER}/etc/gtkrc
 lib/${EMACSVER}/etc/gnu.xbm
 lib/${EMACSVER}/etc/gnu.xpm
 lib/${EMACSVER}/etc/gnuattach.1
@@ -892,6 +898,7 @@ lib/${EMACSVER}/info/lispref.info-6
 lib/${EMACSVER}/info/lispref.info-7
 lib/${EMACSVER}/info/lispref.info-8
 lib/${EMACSVER}/info/lispref.info-9
+lib/${EMACSVER}/info/lispref.info-10
 lib/${EMACSVER}/info/new-users-guide.info
 lib/${EMACSVER}/info/standards.info
 lib/${EMACSVER}/info/term.info
