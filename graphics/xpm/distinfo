@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: distinfo,v 1.10.4.1 2005/03/11 06:38:33 snj Exp $
 
 SHA1 (xpm-3.4k.tar.gz) = a8eac19e5772bf7b3b177353686c1401fbf334bd
 Size (xpm-3.4k.tar.gz) = 148887 bytes
@@ -12,4 +12,4 @@ SHA1 (patch-ag) = 68435561f8fe7753c4bb8ce71ee6e53faf1e83d6
 SHA1 (patch-ah) = 075229583814bbdd0a3d7ac8dcb6ad0507d182ff
 SHA1 (patch-ai) = 79472013037a1866739b96e97d740378086cc46f
 SHA1 (patch-aj) = 98048e40c338f69915e233aa11df0f95deff75a4
-SHA1 (patch-ak) = b84999d5e981bbe6edd6fc76310681c16263e8b5
+SHA1 (patch-ak) = a949e05f82d5ed9ce48348bcedf4811cff119a03
