@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/12 07:11:43 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/10 22:41:30 minskim Exp $
 
 DISTNAME=	ccache-2.3
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://ccache.samba.org/ftp/ccache/
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
