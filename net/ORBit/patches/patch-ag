@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2000/10/17 23:48:01 jlam Exp $
+$NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
 
---- src/IIOP/connection.c.orig	Fri Feb 18 08:55:30 2000
+--- src/IIOP/connection.c.orig	Sun May 13 09:07:46 2001
 +++ src/IIOP/connection.c
 @@ -1,4 +1,7 @@
  #include "config.h"
 +#include <sys/types.h>
 +#include <sys/param.h>
 +#include <stdio.h>
- #ifndef _XOPEN_SOURCE_EXTENDED
+ #if defined (__hpux) && ! defined (_XOPEN_SOURCE_EXTENDED)
  #   define _XOPEN_SOURCE_EXTENDED 1
  #   define WE_DEFINED_XOPEN_SOURCE_EXTENDED 1
 @@ -13,7 +16,6 @@
