@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/14 17:13:28 salo Exp $
 
---- configure.orig	2004-05-06 19:54:38.000000000 +0200
-+++ configure	2004-05-08 17:57:06.000000000 +0200
-@@ -3998,7 +3998,7 @@
+--- configure.orig	2004-10-08 00:20:08.000000000 +0200
++++ configure	2004-10-14 17:40:18.000000000 +0200
+@@ -5461,7 +5461,7 @@
    if test "$ogg_found" = "no"; then
      { { echo "$as_me:$LINENO: error: Could not find the Ogg library" >&5
  echo "$as_me: error: Could not find the Ogg library" >&2;}
 -   { (exit 1); exit 1; }; }
 +   { (true); true; }; }
    fi
-   # On IRIX 5.3, sys/types and inttypes.h are conflicting.
  
-@@ -4225,7 +4225,7 @@
+ for ac_header in ogg/ogg.h
+@@ -5617,7 +5617,7 @@
    if test "$ogg_found" = "no"; then
      { { echo "$as_me:$LINENO: error: Could not find the Ogg header files" >&5
  echo "$as_me: error: Could not find the Ogg header files" >&2;}
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
    fi
  
  
-@@ -4305,7 +4305,7 @@
+@@ -5697,7 +5697,7 @@
    if test "$vorbis_found" = "no"; then
      { { echo "$as_me:$LINENO: error: Could not find the Vorbis library" >&5
  echo "$as_me: error: Could not find the Vorbis library" >&2;}
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
    fi
  
  for ac_header in vorbis/codec.h
-@@ -4461,7 +4461,7 @@
+@@ -5853,7 +5853,7 @@
    if test "$vorbis_found" = "no"; then
      { { echo "$as_me:$LINENO: error: Could not find the Vorbis header files" >&5
  echo "$as_me: error: Could not find the Vorbis header files" >&2;}
