@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9396 2005/03/02 21:10:50 kim Exp $
+$NetBSD: CHANGES,v 1.9397 2005/03/02 21:44:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1239,3 +1239,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gftp to 2.0.18 [tron 2005-03-02]
 	Updated gftp-gtk1 to 2.0.18 [tron 2005-03-02]
 	Updated mailman to 2.1.5 [kim 2005-03-02]
+	Updated cyrus-imapd to 2.2.12 [wiz 2005-03-02]
+	Removed cyrus-imapd22 [wiz 2005-03-02]
