@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:52:08 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/12/03 01:32:08 reed Exp $
 
 .if !defined(IMLIB2_BUILDLINK2_MK)
 IMLIB2_BUILDLINK2_MK=	# defined
@@ -9,7 +9,8 @@ BUILDLINK_PKGSRCDIR.imlib2?=	../../graphics/imlib2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.imlib2=imlib2
 BUILDLINK_PREFIX.imlib2_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.imlib2=		include/Imlib2.h
+BUILDLINK_FILES.imlib2=		bin/imlib2-config
+BUILDLINK_FILES.imlib2+=	include/Imlib2.h
 BUILDLINK_FILES.imlib2+=	lib/libImlib2.*
 BUILDLINK_FILES.imlib2+=	lib/loaders/image/*
 
