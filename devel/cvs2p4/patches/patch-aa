@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/01 05:02:07 schmonz Exp $
+
+--- test/config.orig	Mon May  6 18:54:48 2002
++++ test/config
+@@ -6,22 +6,22 @@
+ 
+ # p4 command location (If other than "/usr/local/bin/p4")
+ #
+-$P4		= "/usr/local/bin/p4";
++$P4		= "@PREFIX@/bin/p4";
+ 
+ # p4 command location (If other than "/usr/local/bin/p4d")
+ #
+-$P4D		= "/usr/local/bin/p4d";
++$P4D		= "@PREFIX@/sbin/p4d";
+ 
+ # Perforce server we're using.
+ #
+-$P4PORT = "localhost:1680";
++$P4PORT = "@P4PORT@";
+ 
+ # Perforce server's P4ROOT
+ #
+ # (Typically, you'll use an absolute path, but it can also be relative
+ # to where you execute the conversion commands from.)
+ #
+-$P4ROOT = "p4root";
++$P4ROOT = "@P4ROOT@";
+ 
+ # Perforce user name to use during the conversion.
+ # This code defaults it to the user name of the user running
