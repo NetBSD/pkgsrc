@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5472 2004/04/07 11:58:35 salo Exp $
+$NetBSD: CHANGES,v 1.5473 2004/04/07 12:02:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1828,3 +1828,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgtop2 to 2.6.0 [jmmv 2004-04-07]
 	Updated ggv2 to 2.6.0.1 [jmmv 2004-04-07]
 	Updated libebml to 0.6.5 [salo 2004-04-07]
+	Updated htmllint to 20040406 [wiz 2004-04-07]
