@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2003/03/19 11:55:11 drochner Exp $
+$NetBSD: distinfo,v 1.3 2003/08/11 22:08:33 recht Exp $
 
 SHA1 (pygoogle-0.5.2.zip) = c152a68759ad97f39e8cab6c71c0e1e2fb9f1103
 Size (pygoogle-0.5.2.zip) = 35828 bytes
-SHA1 (patch-aa) = 4eca6bc0b72c13cbf23ef94c0d4a2370abc200a7
-SHA1 (patch-ab) = 11cfc3b6c97e52f2be0381a5cb6d12b42a0cd503
-SHA1 (patch-ac) = 92bef26c677fd140626c66ae1c5fc569ffed5d26
-SHA1 (patch-ad) = b063c2229f0e8b288e974ae0f669fe6901351ef3
+SHA1 (patch-aa) = f3f874f4bf8b6f7da16f99bfec6da4575188b72c
+SHA1 (patch-ab) = 1c9074efff6444cfd05597534fb57308b07e746e
+SHA1 (patch-ac) = 0938d8035a2371870c31e0eff0104ad3d38f4b62
+SHA1 (patch-ad) = a95eab548482244e31e5199e8e8991ac828275d9
