@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/19 11:31:29 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/21 15:41:29 taca Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGNAME=	ja-${DISTNAME}
@@ -36,7 +36,7 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
-DATADIR=		/var/spool/squirrelmail
+DATADIR=		${VARBASE}/spool/squirrelmail
 ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
 
