@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2000/08/30 08:23:15 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/30 21:04:51 jwise Exp $
 
-DISTNAME=	tkpiechart-5.3
+DISTNAME=	tkpiechart-5.4
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.multimania.com/jfontain/
+MASTER_SITES=	http://jfontain.free.fr/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.mygale.org/~jfontain/
+HOMEPAGE=	http://jfontain.free.fr/
 
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 DEPENDS+=	stooop>=3.7:../../devel/stooop
 
 NO_CONFIGURE=	yes
@@ -23,7 +23,7 @@ post-patch:
 	${CHMOD} a+x ${WRKSRC}/instapkg.tcl
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/tkpiechart
-	cd ${WRKSRC}; ./instapkg.tcl ${PREFIX}/lib/tkpiechart
+	${MKDIR} ${PREFIX}/lib/tcl/tkpiechart
+	cd ${WRKSRC}; ./instapkg.tcl ${PREFIX}/lib/tcl/tkpiechart
 
 .include "../../mk/bsd.pkg.mk"

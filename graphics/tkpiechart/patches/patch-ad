@@ -1,0 +1,11 @@
+--- demo.tcl.orig	Wed Aug 30 16:47:32 2000
++++ demo.tcl	Wed Aug 30 16:50:00 2000
+@@ -619,7 +619,7 @@
+ }
+ }
+ namespace import stooop::*
+-if {[catch {package require switched 1.4}]} {
++if {[catch {package require switched}]} {
+ set rcsId {$Id: patch-ad,v 1.1 2000/08/30 21:04:54 jwise Exp $}
+ 
+ package provide switched [lindex {$Revision: 1.1 $} 1]
