@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/04/13 15:31:06 agc Exp $
+# $NetBSD: Makefile,v 1.14 1999/04/26 19:15:39 garbled Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+="--with-krb4"
 CONFIGURE_ENV+=CPPFLAGS=-I/usr/include/kerberosIV
 .endif
 
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 ZEPHYR_RCDIR=	${PREFIX}/etc/rc.d
