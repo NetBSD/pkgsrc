@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2004/10/20 22:59:40 manu Exp $
+# $NetBSD: Makefile,v 1.502 2004/10/28 17:01:21 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -28,6 +28,8 @@ SUBDIR+=	bind4
 SUBDIR+=	bind8
 SUBDIR+=	bind9
 SUBDIR+=	bing
+SUBDIR+=	bittornado
+SUBDIR+=	bittornado-gui
 SUBDIR+=	bittorrent
 SUBDIR+=	bittorrent-gui
 SUBDIR+=	boinc3-coreclient
