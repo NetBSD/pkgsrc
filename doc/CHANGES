@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7311 2004/10/01 19:22:26 wiz Exp $
+$NetBSD: CHANGES,v 1.7312 2004/10/01 23:05:22 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4511,3 +4511,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl to 8.4.7 [adam 2004-10-01]
 	Updated tk to 8.4.7 [adam 2004-10-01]
 	Added firefox-gtk2-bin-java-1.1nb1 [wiz 2004-10-01]
+	Moved tnt-1.2.2 to tnt-mmtl-1.2.2 [dmcmahill 2004-10-01]
