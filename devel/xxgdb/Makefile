@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/15 20:39:41 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/06/04 15:09:05 agc Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -9,6 +9,12 @@ MAINTAINER=	rh@trapdoor.vip.at
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xxgdb ${PREFIX}/bin
