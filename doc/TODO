@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1325 2004/01/22 11:21:41 salo Exp $
+$NetBSD: TODO,v 1.1326 2004/01/22 11:35:23 markd Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ Suggested package updates
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
 	o wistumbler2-2.00pre4 [xtraeme]
-	o wv2-0.2
 	o wwwoffle-2.8a
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
