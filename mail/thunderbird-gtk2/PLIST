@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/14 23:35:34 taya Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/03/25 14:43:46 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -786,8 +786,11 @@ include/${MOZILLA}/docshell/nsIDocShell.h
 include/${MOZILLA}/docshell/nsIDocShellHistory.h
 include/${MOZILLA}/docshell/nsIDocShellLoadInfo.h
 include/${MOZILLA}/docshell/nsIDocShellTreeItem.h
+include/${MOZILLA}/docshell/nsIDocShellTreeItemTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeNode.h
+include/${MOZILLA}/docshell/nsIDocShellTreeNodeTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeOwner.h
+include/${MOZILLA}/docshell/nsIDocShellTreeOwnerTmp.h
 include/${MOZILLA}/docshell/nsIEditorDocShell.h
 include/${MOZILLA}/docshell/nsIGlobalHistory.h
 include/${MOZILLA}/docshell/nsIGlobalHistory2.h
@@ -2596,6 +2599,12 @@ include/${MOZILLA}/zlib/zlib.h
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/navigator/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
+@unexec ${RM} %D/lib/${MOZILLA}/components.ini
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/Extensions.rdf
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/installed-extensions-processed.txt
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+@dirrm lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
+@dirrm lib/${MOZILLA}/extensions
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator/content
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/messenger/content
@@ -2638,6 +2647,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/chrome/icons/default
 @dirrm lib/${MOZILLA}/chrome/icons
 @dirrm lib/${MOZILLA}/chrome
+@dirrm lib/${MOZILLA}
 @dirrm include/${MOZILLA}/zlib
 @dirrm include/${MOZILLA}/xultmpl
 @dirrm include/${MOZILLA}/xuldoc
