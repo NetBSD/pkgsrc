@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2224 2004/10/18 09:19:43 seb Exp $
+$NetBSD: TODO,v 1.2225 2004/10/18 13:25:47 cube Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.4
 	o source-highlight-1.11
-	o sox-12.17.5
 	o sqlite-3.0.7
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
