@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1672 2003/03/17 18:07:09 bouyer Exp $
+$NetBSD: CHANGES,v 1.1673 2003/03/17 18:31:29 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1174,3 +1174,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xlockmore to 5.07 [hubertf 2003-03-17]
 	Updated horde to 2.2.1 [bouyer 2003-03-17]
 	Updated imp to 3.2.1 [bouyer 2003-03-17]
+	Updated sun-jre14 to 1.0.2 [jschauma 2003-03-17]
+	Updated sun-jdk14 to 1.0.2 [jschauma 2003-03-17]
