@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 1998/12/31 13:20:52 tv Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/24 21:17:34 tron Exp $
 #
 
 DISTNAME=		qnethack-3.2.2.1.0.1.src
 PKGNAME=		nethack-qt-3.2.2
 CATEGORIES=		games x11
-DISTFILES=		qnethack-3.2.2.1.0.1.src.tar.gz \
-			nethack-3.2.2.tar.gz
 MASTER_SITES=		ftp://ftp.troll.no/contrib/ \
 			http://pinky.wtower.com/nethack/sources/
+DISTFILES=		qnethack-3.2.2.1.0.1.src.tar.gz \
+			nethack-3.2.2.tar.gz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://trolls.troll.no/warwick/nethack/
