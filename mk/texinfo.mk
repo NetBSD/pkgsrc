@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.9 2003/02/13 18:51:55 abs Exp $
+# $NetBSD: texinfo.mk,v 1.10 2003/05/06 23:43:53 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -74,7 +74,7 @@ TEXINFO_SUBST_SED+=	-e 's!^MAKEINFO[ 	]*=[ 	]*makeinfo[ 	]*\(.*\)$$!MAKEINFO = $
 TEXINFO_SUBST_SED+=	-e 's!^INSTALL_INFO[ 	]*=[ 	]*install-info[ 	]*\(.*\)$$!INSTALL_INFO = ${INSTALL_INFO} \1!'
 # replace bare makeinfo and install-info commands in Makefile target rules
 TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	]\)makeinfo\([ 	]\)!\1\2${MAKEINFO}\3!g"
-TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	']\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
+TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
 _CONFIGURE_PREREQ+=	texinfo-override
 texinfo-override:
