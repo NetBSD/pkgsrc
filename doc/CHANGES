@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3158 2003/08/30 21:35:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3159 2003/08/30 21:56:34 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3408,3 +3408,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_comp to 1.9 [jmmv 2003-08-30]
 	Added ksi-3.4.1 [jtb 2003-08-30]
 	Added tsclient 0.120 [xtraeme 2003-08-30]
+	Updated gsl to 1.4 [jtb 2003-08-30]
