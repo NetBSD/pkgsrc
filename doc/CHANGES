@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4348 2004/01/04 18:27:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4349 2004/01/04 18:43:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -48,3 +48,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libcroco to 0.4.0 [xtraeme 2003-01-04]
 	Updated p5-HTML-FillInForm to 1.03 [xtraeme 2003-01-04]
 	Updated libcdaudio to 0.99.9 [xtraeme 2003-01-04]
+	Added quake3server-1.32b [xtraeme 2003-01-04]
+	Added quake3server-ra3-1.65 [xtraeme 2003-01-04]
