@@ -1,6 +1,6 @@
-$NetBSD: patch-ay,v 1.2 2001/01/27 10:36:54 jtb Exp $
+$NetBSD: patch-ay,v 1.3 2001/03/25 23:33:48 jtb Exp $
 
---- src/xgrid/makefile.in.orig	Wed Oct 18 03:01:29 2000
+--- src/xgrid/makefile.in.orig
 +++ src/xgrid/makefile.in
 @@ -19,14 +19,14 @@
  #	Location of GMT and CDF header files
@@ -19,24 +19,32 @@ $NetBSD: patch-ay,v 1.2 2001/01/27 10:36:54 jtb Exp $
  
  uninstall:
  		\rm -f $(bindir)/xgridedit$(EXE)
-@@ -35,15 +35,16 @@
+@@ -35,15 +35,17 @@
  		\rm -f makefile config.cache config.log config.status
  
  clean:
 -		rm -f *.o xgridedit$(EXE)
-+		rm -f *.o *.lo .libs xgridedit$(EXE)
++		rm -fr *.o *.lo .libs xgridedit$(EXE)
  
  xgridedit:	$(OBJS) $(EDITOBJS) xgridedit.o
 -		$(CC) $(CFLAGS) xgridedit.o -o xgridedit $(OBJS) \
 -			$(EDITOBJS) $(CDF) $(XLIBS) $(LIBS) $(LDFLAGS)
-+		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) xgridedit.lo -o	    \
-+		xgridedit $(OBJS:.o=.lo) $(EDITOBJS:.o=.lo) $(CDF) $(XLIBS) \
-+		$(LIBS) $(LDFLAGS)
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o xgridedit   \
++		xgridedit.lo $(OBJS:.o=.lo) $(EDITOBJS:.o=.lo) $(CDF) \
++		$(XLIBS) $(LIBS) $(LDFLAGS)
  
  xgridedit.o:	xGridEdit.c xgrid_utility.h xgrid_controls.h \
  			xgrid_messages.h xgrid_view.h xgrid_textInput.h
 -		$(CC) $(CFLAGS) -c xGridEdit.c -o xgridedit.o
-+		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c xGridEdit.c -o xgridedit.lo
++		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c xGridEdit.c \
++		-o xgridedit.lo
  
  xgrid_utility.o:	xgrid_utility.h
  
+@@ -69,3 +71,6 @@
+ 
+ xgrid_view.o:		xgrid_utility.h xgrid_Xutility.h xgrid_GMTgrid.h \
+ 			xgrid_view.h
++
++.c.o:
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
