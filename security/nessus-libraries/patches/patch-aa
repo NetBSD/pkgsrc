@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/30 11:14:32 frueauf Exp $
+
+--- libpeks/us_export_wizard.c.orig	Sat Jul 22 01:22:08 2000
++++ libpeks/us_export_wizard.c	Fri Jul 21 20:10:36 2000
+@@ -25,6 +25,7 @@
+ 
+ #include "common-stuff.h"
+ 
++#include <stdlib.h>
+ #ifndef HAVE_RAND
+ #define  rand()  random ()
+ #define srand() srandom ()
