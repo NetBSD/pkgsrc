@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 19:23:14 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/10/27 09:08:41 rh Exp $
 
-SHA1 (linc-0.5.0.tar.bz2) = c404b77735bc6e1f7b4f835e5e03931ca2c8765b
-Size (linc-0.5.0.tar.bz2) = 177900 bytes
+SHA1 (linc-0.7.0.tar.bz2) = 0e5670a952bf7ca74f27a8c82148391868f8d500
+Size (linc-0.7.0.tar.bz2) = 181681 bytes
 SHA1 (patch-aa) = 1643b8decf11568a2aaaf8cbe8c0e0989a897196
 SHA1 (patch-ab) = c39278f85cd48413523252a6a12e7c042386dfce
