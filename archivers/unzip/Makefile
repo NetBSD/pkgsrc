@@ -3,7 +3,7 @@
 # Date created:         17 October 1994
 # Whom:                 jmz
 #
-# $NetBSD: Makefile,v 1.4 1998/01/15 14:11:18 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/07 21:24:05 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -27,7 +27,7 @@ do-install:
 		${INSTALL_SCRIPT} zipgrep ${PREFIX}/bin
 	cd ${WRKSRC}/unix && \
 		${INSTALL_MAN} ${MAN1} ${PREFIX}/man/man1
-	install -d -m 555 -o ${SHAREOWN} -g ${SHAREGRP} ${PREFIX}/share/doc/unzip
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/unzip
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} README WHERE COPYING ${PREFIX}/share/doc/unzip
 
