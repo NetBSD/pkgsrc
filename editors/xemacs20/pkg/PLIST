@@ -1,24 +1,24 @@
-@comment $NetBSD: PLIST,v 1.9 1998/02/14 22:21:01 frueauf Exp $
-bin/b2m
-bin/ctags
-bin/etags
+@comment $NetBSD: PLIST,v 1.10 1998/02/23 08:38:56 tron Exp $
+bin/xemacs-b2m
+bin/xemacs-ctags
+bin/xemacs-etags
 bin/install-sid
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/pstogif
-bin/rcs-checkin
+bin/xemacs-rcs-checkin
 bin/xemacs-send-pr
 bin/xemacs-20.3
 @exec ln -s %D/%F %B/xemacs
 @unexec rm %B/xemacs
-man/man1/ctags.1.gz
-man/man1/etags.1.gz
-man/man1/gnuattach.1.gz
-man/man1/gnuclient.1.gz
-man/man1/gnudoit.1.gz
-man/man1/gnuserv.1.gz
-man/man1/xemacs.1.gz
+man/man1/xemacs-ctags.1
+man/man1/xemacs-etags.1
+man/man1/gnuattach.1
+man/man1/gnuclient.1
+man/man1/gnudoit.1
+man/man1/gnuserv.1
+man/man1/xemacs.1
 @exec mkdir -p %D/lib/xemacs/lock ; chmod 1777 %D/lib/xemacs/lock
 @exec mkdir -p %D/lib/xemacs/site-lisp ; chmod 755 %D/lib/xemacs/site-lisp
 @unexec rm -rf %D/lib/xemacs
