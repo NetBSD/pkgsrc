@@ -1,7 +1,7 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/25 08:57:29 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/26 22:22:19 zuntum Exp $
 
-  To be able to view manpages either add \"/var/qmail/man/\" to the
+  To be able to view manpages either add "/var/qmail/man/" to the
   _default line in /etc/man.conf or specify this directory in
   MANPATH variable in your environment.
 
