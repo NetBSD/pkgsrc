@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/09 03:21:07 schmonz Exp $
+lib/dbmail/libauthdbmail.la
+lib/dbmail/lib${SQLDB}dbmail.la
+lib/dbmail/libsortdbmail.la
+lib/libdbmail.la
+man/man1/dbmail-smtp.1
+man/man8/dbmail-imapd.8
+man/man8/dbmail-lmtpd.8
+man/man8/dbmail-pop3d.8
+man/man8/dbmail-users.8
+man/man8/dbmail-util.8
+sbin/dbmail-imapd
+sbin/dbmail-lmtpd
+sbin/dbmail-pop3d
+sbin/dbmail-smtp
+sbin/dbmail-users
+sbin/dbmail-util
+@dirrm lib/dbmail
