@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 1998/09/09 00:17:24 tv Exp $
+$NetBSD: patch-af,v 1.7 1998/09/13 19:12:05 kim Exp $
 
 --- config_f.h.orig	Fri Apr 26 21:17:30 1996
 +++ config_f.h	Wed Sep  9 00:18:23 1998
@@ -15,12 +15,3 @@ $NetBSD: patch-af,v 1.6 1998/09/09 00:17:24 tv Exp $
  
  /*
   * LOGINFIRST   Source ~/.login before ~/.cshrc
-@@ -104,7 +108,7 @@
-  *		on the name of the tty, and environment.
-  *		Does not make sense in the modern window systems!
-  */
--#define AUTOLOGOUT
-+#undef AUTOLOGOUT
- 
- /*
-  * SUSPENDED	Newer shells say 'Suspended' instead of 'Stopped'.
