@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 21:19:18 xtraeme Exp $
+share/xml/docbook-simple/catalog
+share/xml/docbook-simple/sdbcent.mod
+share/xml/docbook-simple/sdbhier.mod
+share/xml/docbook-simple/sdbpool.mod
+share/xml/docbook-simple/sdocbook-custom.dtd
+share/xml/docbook-simple/sdocbook.css
+share/xml/docbook-simple/sdocbook.dtd
+share/xml/docbook-simple/sdocbookref-custom.dtd
+share/xml/docbook-simple/sdocbookref.dtd
+share/xml/docbook-simple/sinclist.mod
+@dirrm share/xml/docbook-simple
