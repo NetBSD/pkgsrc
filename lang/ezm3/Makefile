@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/06 20:09:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/10 19:12:51 cjep Exp $
 
 DISTNAME=	ezm3-1.1
 CATEGORIES=	lang
@@ -21,7 +21,7 @@ PLIST_SUBST+=		WORDSIZE=${WORDSIZE}
 # XXX process will fail.
 
 .include "../../mk/bsd.prefs.mk"
-CFLAGS:=			
+CFLAGS:=
 EZM3ROOT=		${PREFIX}/ezm3
 
 ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386
