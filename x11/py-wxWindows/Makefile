@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/13 13:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 22:56:41 grant Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.0.7
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWindows
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:40 grant Exp $
 #
 
 DISTNAME=	libgtkhtml-2.2.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgtkhtml/2.2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering GTK2 widget
 

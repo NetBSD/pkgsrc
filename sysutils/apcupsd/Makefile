@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:53:27 grant Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
-MAINTAINER=		bouyer@netbsd.org
+MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.sibbald.com/apcupsd/
 COMMENT=		UPS power management for APCC Products
 

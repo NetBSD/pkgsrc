@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:51 grant Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.12
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
 			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.3/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://scrollkeeper.sourceforge.net/
 COMMENT=		Open Document Cataloging Project
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:17:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:11 grant Exp $
 #
 
 DISTNAME=	pycrypto-1.9a4
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-amkCrypto-1.9a4
 CATEGORIES=	security
 MASTER_SITES=	http://www.amk.ca/files/python/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.amk.ca/python/code/crypto.html
 COMMENT=	cryptographic and hash functions for Python
 

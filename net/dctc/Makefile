@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/15 19:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 22:51:04 grant Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/ \
 		http://brainz.servebeer.com/dctc/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	Direct Connect clone (Direct Connect Text Client)
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/04/11 12:41:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:05 grant Exp $
 #
 
 DISTNAME=	dhisd-5.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.dhis.org
 COMMENT=	DynDNS server
 

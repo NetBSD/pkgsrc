@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/06/02 01:17:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.60 2003/07/17 22:53:19 grant Exp $
 #
 
 DISTNAME=		sudo-1.6.7p5
@@ -11,7 +11,7 @@ MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.tux.org/pub/security/sudo/ \
 			http://www.courtesan.com/sudo/dist/beta/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.courtesan.com/sudo/
 COMMENT=		Allow others to run commands as root
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:17:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:14 grant Exp $
 #
 
 DISTNAME=	ip6_int
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.bieringer.de/linux/IPv6/tools/
 EXTRACT_SUFX=	#
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Convert an IPv4/IPv6 address to an in-addr.arpa/ip6.int PTR value
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}

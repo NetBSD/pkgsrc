@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:27 grant Exp $
 
 DISTNAME=	gkrellm-gnome
 PKGNAME=	gnome-gkrellm-0.1
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	gnome sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/Plugins/
 
-MAINTAINER=	damon@netbsd.org
+MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://web.wt.net/~billw/gkrellm/Plugins.html
 COMMENT=	gkrellm gnome plugin
 

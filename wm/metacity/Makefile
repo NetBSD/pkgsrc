@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:55:14 grant Exp $
 #
 
 DISTNAME=	metacity-2.4.34
@@ -7,7 +7,7 @@ CATEGORIES=	wm x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.4/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity
 COMMENT=	GNOME-compliant window manager
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:46 grant Exp $
 #
 
 DISTNAME=	xmltools-1.3.7
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.logilab.org/ftp/pub/xmltools/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.logilab.org/xmltools/
 COMMENT=	High level tools to help using XML in python
 

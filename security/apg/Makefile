@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/06/10 06:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:51 grant Exp $
 #
 
 DISTNAME=	apg-2.1.0
 CATEGORIES=	security
 MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.adel.nursat.kz/apg/
 COMMENT=	Tool set for random password generation
 

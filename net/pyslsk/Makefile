@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/13 13:52:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:51:44 grant Exp $
 #
 
 DISTNAME=	pyslsk-1.2.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net audio x11
 MASTER_SITES=	http://www.sensi.org/~ak/pyslsk/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.sensi.org/~ak/pyslsk/
 COMMENT=	Python based Soulseek client
 

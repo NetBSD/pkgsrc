@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2003/06/23 16:38:41 jmc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:56:00 grant Exp $
 
 DISTNAME=	privoxy-user-3.0.2
 CATEGORIES=	www
 MASTER_SITES=   # empty
 DISTFILES=      # empty
 
-MAINTAINER=	jmc@netbsd.org
+MAINTAINER=	jmc@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Pre-req package for privoxy to setup user needed for build/use
 

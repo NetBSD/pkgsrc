@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 08:46:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:43 grant Exp $
 #
 
 DISTNAME=	XML-Xerces-1.7.0-3
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME:C/-([0-9]*)$/.\1/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml.apache.org/dist/xerces-p/stable/archives/
 
-MAINTAINER=	manu@netbsd.org
+MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xerces-p/
 COMMENT=	Validating XML parser API for Perl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/05 16:12:11 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:29 grant Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-xcdroast-0.98a13.2.00.3
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
 
-MAINTAINER=	lukem@netbsd.org
+MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
 COMMENT=	cdrecord bits for xcdroast
 

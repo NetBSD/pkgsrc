@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/04/29 01:36:08 rh Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:52:13 grant Exp $
 #
 
 DISTNAME=	createbuildlink-2.6
@@ -7,7 +7,7 @@ CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 COMMENT=	Shell script to help creating a buildlink2.mk file
 
 EXTRACT_ONLY=	# empty

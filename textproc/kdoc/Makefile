@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/12/23 16:33:21 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:28 grant Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
 		ftp://ftp.uk.kde.org/pub/kde/stable/3.0/src/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/3.0/src/
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 COMMENT=	C++ and IDL Class Documentation Tool
 
 .include "../../x11/kde3/Makefile.kde3"

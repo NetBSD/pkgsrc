@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/06/02 01:17:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 22:53:09 grant Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pgpi.com/
 COMMENT=	Public-Key encryption and digital signature utility
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2003/06/06 19:33:12 drochner Exp $
+# $NetBSD: Makefile,v 1.77 2003/07/17 22:55:28 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -13,7 +13,7 @@ APACHE_VERSION=		1.3.27
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
-			http://www.netbsd.org/images/logos/
+			http://www.NetBSD.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
 
@@ -22,7 +22,7 @@ PATCHFILES+=		${IPV6_PATCH}
 IPV6_PATCH=		apache-1.3.26-ipv6.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server with IPv6 support
 

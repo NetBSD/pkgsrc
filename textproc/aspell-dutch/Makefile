@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:02 grant Exp $
 #
 
 DISTNAME=	aspell-nl-0.50-2
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/nl/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Dutch language support for aspell
 

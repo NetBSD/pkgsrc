@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/23 16:25:59 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:21 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.astart.com/pub/LPRng/LPRng/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.lprng.com/
 COMMENT=		Enhanced Printer Spooler
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:43 grant Exp $
 #
 
 DISTNAME=	mksunbootcd-19990513
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	dmcmahill@netbsd.org
-HOMEPAGE=	http://www.netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
+HOMEPAGE=	http://www.NetBSD.org
 COMMENT=	combines filesystems for Sun computers to make bootable CD-ROM images
 
 do-install:

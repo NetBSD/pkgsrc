@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:17:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:06 grant Exp $
 #
 
 DISTNAME=		SHA-1.2
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5sha
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=SHA/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		perl5 interface to the SHA1 algorithm
 
 USE_BUILDLINK2=		YES

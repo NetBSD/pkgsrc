@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:50 grant Exp $
 #
 
 DISTNAME=	screentest-1.0
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils x11
 MASTER_SITES=	ftp://ftp.linux.cz/pub/linux/people/jan_kasprzak/screentest/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fi.muni.cz/~kas/screentest/
 COMMENT=	CRT screen testing utility using GTK+
 

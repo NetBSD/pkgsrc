@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/21 13:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:00 grant Exp $
 #
 
 DISTNAME=	gnya
@@ -8,7 +8,7 @@ CATEGORIES=	time x11
 MASTER_SITES=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/
 EXTRACT_SUFX=	.shar
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/h.html
 COMMENT=	Accessory with Bezier curve
 

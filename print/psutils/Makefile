@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:17:27 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 22:52:37 grant Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}/psutils
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.go.dlr.de:8081/pdinfo_dv/psutils.html
 COMMENT=	Utilities for manipulating PostScript documents
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:31 grant Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=        ja-${DISTNAME}
@@ -10,7 +10,7 @@ PATCH_SITES=	http://www.nn.iij4u.or.jp/%7Etutimura/hirata/distfiles/
 PATCHFILES=     dvipdfm-0.13.2c-jpatch-p1d.diff.gz
 PATCH_DIST_STRIP= -p1
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	DVI to PDF translator with Japanese patch
 

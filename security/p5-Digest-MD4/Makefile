@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:08 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:06 grant Exp $
 #
 
 DISTNAME=		Digest-MD4-1.1
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5md4
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for MD4 hash algorithm
 

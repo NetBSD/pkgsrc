@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/04/10 01:28:32 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:56:46 grant Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 		ftp://ftp.informatik.uni-hamburg.de/pub/soft/lang/tcl/tcl8_3/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.tcltk.com/
 COMMENT=	Graphical toolkit for TCL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/31 17:51:01 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:52:16 grant Exp $
 
 DISTNAME=	pkg_tarup-1.4
 WRKSRC=		${WRKDIR}
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Generates binary package(s) from installed pkg(s)
 
 EXTRACT_ONLY=	# empty

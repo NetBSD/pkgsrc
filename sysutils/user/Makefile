@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:42:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:53:57 grant Exp $
 #
 
 # Note to package maintainers:
@@ -10,8 +10,8 @@ WRKSRC=			${WRKDIR}/user
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		agc@netbsd.org
-HOMEPAGE=		http://www.netbsd.org/
+MAINTAINER=		agc@NetBSD.org
+HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Solaris-compatible {user,group}{add,del,mod} commands
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* # already in Solaris base system

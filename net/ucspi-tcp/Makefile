@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/11 20:50:57 abs Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:51:58 grant Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -9,7 +9,7 @@ MASTER_SITES=	http://cr.yp.to/ucspi-tcp/				\
 DISTFILES=	${DISTNAME}.tar.gz					\
 		${DISTNAME}-man-20010502.tar.gz
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/ucspi-tcp.html
 COMMENT=	Command-line tools for building TCP client-server applications
 
