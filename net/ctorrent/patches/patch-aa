@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/06/25 17:20:47 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/22 15:45:18 adam Exp $
 
---- configure.orig	2004-02-01 07:15:43.000000000 +0100
+--- configure.orig	2004-09-08 23:10:51.000000000 +0000
 +++ configure
-@@ -2888,13 +2888,13 @@ _ACEOF
+@@ -3216,13 +3216,13 @@ _ACEOF
  
  else
  
@@ -18,8 +18,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/06/25 17:20:47 wiz Exp $
 +LIBS="-lcrypto  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
- #include "confdefs.h"
-@@ -2948,7 +2948,7 @@ if test $ac_cv_lib_crypt_SHA1_Init = yes
+ /* confdefs.h.  */
+@@ -3275,7 +3275,7 @@ if test $ac_cv_lib_crypt_SHA1_Init = yes
  #define HAVE_LIBCRYPT 1
  _ACEOF
  
