@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1145 2003/12/08 19:08:13 wiz Exp $
+$NetBSD: TODO,v 1.1146 2003/12/08 19:21:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-mplayer-1.0
 	o moz-bin-plugger-1.4.0
-	o mplayer-1.0pre2
 	o mrproject-0.9.1
 	o mtools-3.9.9
 	o multi-gnome-terminal-1.6.2
