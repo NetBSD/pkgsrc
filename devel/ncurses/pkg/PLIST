@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2001/03/12 15:51:51 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2001/04/30 14:47:04 jlam Exp $
 bin/captoinfo
 bin/infocmp
 bin/infotocap
@@ -25,13 +25,11 @@ lib/libform.la
 lib/libform.so
 lib/libform.so.5
 lib/libform.so.5.2
-lib/libform_pic.a
 lib/libmenu.a
 lib/libmenu.la
 lib/libmenu.so
 lib/libmenu.so.5
 lib/libmenu.so.5.2
-lib/libmenu_pic.a
 lib/libncurses++.a
 lib/libncurses++.la
 lib/libncurses++.so
@@ -42,13 +40,11 @@ lib/libncurses.la
 lib/libncurses.so
 lib/libncurses.so.5
 lib/libncurses.so.5.2
-lib/libncurses_pic.a
 lib/libpanel.a
 lib/libpanel.la
 lib/libpanel.so
 lib/libpanel.so.5
 lib/libpanel.so.5.2
-lib/libpanel_pic.a
 man/man1/captoinfo.1
 man/man1/infocmp.1
 man/man1/infotocap.1
