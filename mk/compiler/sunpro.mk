@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.21 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.22 2004/09/21 15:01:41 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -37,6 +37,9 @@ _LINKER_RPATH_FLAG=	-R
 
 # SunPro passes rpath directives to the linker using "-R".
 _COMPILER_RPATH_FLAG=	-R
+
+# SunPro compiler must be passed certain flags to compile/link 64-bit code.
+_COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
 
 .if exists(${SUNWSPROBASE}/bin/cc)
 CC_VERSION_STRING!=	${SUNWSPROBASE}/bin/cc -V 2>&1 || ${TRUE}

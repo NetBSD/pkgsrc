@@ -1,0 +1,115 @@
+# $NetBSD: transform-sunpro-cc,v 1.1 2004/09/21 15:01:41 jlam Exp $
+#
+# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+case $arg in
+######################################################################
+# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically convert
+# those GCC -O<n> values to -xO<n>.
+######################################################################
+-O[12345])
+	arg="-xO${arg#-O}"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Silently ignore all other -O* options, except for "-O", which SunPro
+# interprets as asking for the default optimization level.
+######################################################################
+-O?*)
+	arg=
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Directories for the runtime library search path are passed via simply
+# "-R<dir>", not "-Wl,-R<dir>".
+######################################################################
+-Wl,-R*)
+	arg="${arg#-Wl,}"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# SunPro compilers don't even understand any -W* arguments, so just
+# silently ignore them all.
+######################################################################
+-W*)
+	arg=
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Solaris' linker uses -Bstatic to create static objects.
+######################################################################
+-static)
+	arg="-Bstatic"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Solaris' linker uses -G to create shared objects.
+######################################################################
+--export-dynamic|-shared)
+	arg="-G"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# SunPro uses -Kpic to create position independent code.
+######################################################################
+-f[Pp][Ii][Cc])
+	arg="-Kpic"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# SunPro doesn't understand -pthread, and only -lpthread is needed on
+# Solaris.
+######################################################################
+-pthread)
+	arg="-lpthread"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Ignore some flags that are unnecessary for SunPro.
+######################################################################
+-ansi|-fno-gnu-keywords|-fstrict-prototypes|-pedantic)
+	arg=
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+esac

@@ -1,23 +1,69 @@
-# $NetBSD: libtool-fix-la,v 1.4 2004/03/30 17:25:19 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.5 2004/09/21 15:01:40 jlam Exp $
 #
+# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
 #
 #       "libfoo.la" -> "-L./.libs libfoo.la"
 #	"dirpath/libfoo.la" -> "-Ldirpath/.libs libfoo.la"
 #
-# This allows the libraries to be found within ${WRKSRC} during relinking.
-# We rely on the proper rpath settings to be set by libtool.
+# This allows the libraries to be found within ${WRKSRC} during
+# relinking.  We rely on the proper rpath settings to be set by libtool.
 #
-# For the *.lai files, in the "dependency_libs" line, we remove redundant
-# -Ldir and -llib options.  We also make sure that we don't ever reference
-# other .la files, only referring to other libraries via the usual
-# "-L/path -llib" and making sure that /path is always somewhere under the
-# default view.  This makes wildcard dependencies work for "overwrite"
-# packages by letting libtool find libraries in the default view.
+# For the *.lai files, in the "dependency_libs" line, we remove
+# redundant -Ldir and -llib options.  We also make sure that we don't
+# ever reference other .la files, only referring to other libraries
+# via the usual "-L/path -llib" and making sure that /path is always
+# somewhere under the default view.  This makes wildcard dependencies
+# work for "overwrite" packages by letting libtool find libraries in
+# the default view.
 
-labase=`@BASENAME@ $lafile .la`
-ladir=`@DIRNAME@ $lafile`
+BUILDLINK_DIR="@BUILDLINK_DIR@"
+DEPOTBASE="@DEPOTBASE@"
+LOCALBASE="@LOCALBASE@"
+WRKSRC="@WRKSRC@"
+
+basename="@BASENAME@"
+dirname="@DIRNAME@"
+egrep="@EGREP@"
+mv="@MV@"
+rm="@RM@"
+
+labase=`$basename $lafile .la`
+ladir=`$dirname $lafile`
 latimestamp=${ladir}/.${labase}.la.timestamp
 laifile=${ladir}/.libs/${labase}.lai
 if $test -f $lafile; then
@@ -25,33 +71,38 @@ if $test -f $lafile; then
 
 	deps=
 	for i in ${dependency_libs}; do
-		case "$i" in
+		case $i in
+		####################################################
+		# Skip all -R* options... rpath info shouldn't go into
+		# the dependency_libs line.
+		####################################################
 		-R*)
-		# Skip all -R* options... rpath info shouldn't go into the
-		# dependency_libs line.
 			;;
+		####################################################
 		# Catch -L<dir> and remove redundant ones.
+		####################################################
 		-L*)
-			case "$deps" in
+			case $deps in
 			*"$i "*) ;;
 			*"$i") ;;
-			*) deps="${deps} $i" ;;
+			*) deps="$deps $i" ;;
 			esac
 			;;
-		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs libfoo.la"
-		# if it's an uninstalled libtool archive.  This allows
-		# proper relinking by libtool during the install stage
-		# by allowing it to find the uninstalled shared library
-		# in the .libs directory.
-		#
+		####################################################
+		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs
+		# libfoo.la" if it's an uninstalled libtool archive.
+		# This allows proper relinking by libtool during the
+		# install stage by allowing it to find the uninstalled
+		# shared library in the .libs directory.
+		####################################################
 		*.la)
 			fixla=0
-			ltlibsdir=`@DIRNAME@ $i`/.libs
-			case "$ltlibsdir" in
+			ltlibsdir=`$dirname $i`/.libs
+			case $ltlibsdir in
 			/*)
 				# fix if an absolute path in ${WRKSRC}
-				case "$ltlibsdir" in
-				@WRKSRC@/*)	fixla=1 ;;
+				case $ltlibsdir in
+				${WRKSRC}/*)	fixla=1 ;;
 				esac
 				;;
 			*)
@@ -60,53 +111,61 @@ if $test -f $lafile; then
 				;;
 			esac
 			if $test $fixla -gt 0; then
-				case "$deps" in
+				case $deps in
 				*"-L$ltlibsdir "*) ;;
 				*"-L$ltlibsdir") ;;
 				*) deps="$deps -L$ltlibsdir" ;;
 				esac
 			fi
-			deps="${deps} $i"
+			deps="$deps $i"
 			;;
-		# Everything else Just Belongs in the dependency_libs line.
+		####################################################
+		# Everything else Just Belongs in the dependency_libs
+		# line.
+		####################################################
 		*)
-			deps="${deps} $i"
+			deps="$deps $i"
 			;;
 		esac
 	done
 
 	relink=
 	for i in ${relink_command}; do
-		case "$i" in
+		case $i in
+		####################################################
 		# -I* and -D* are useless for linking.
+		####################################################
 		-I*|-D*)
 			;;
+		####################################################
 		# Catch -L<dir> and remove redundant ones.
+		####################################################
 		-L*)
-			case "$relink" in
+			case $relink in
 			*"$i "*) ;;
 			*"$i") ;;
-			*) relink="${relink} $i" ;;
+			*) relink="$relink $i" ;;
 			esac
 			;;
 		# This is the .la file we're relinking... don't touch it!
 		$lafile)
-			relink="${relink} $i"
+			relink="$relink $i"
 			;;
-		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs libfoo.la"
-		# if it's an uninstalled libtool archive.  This allows
-		# proper relinking by libtool during the install stage
-		# by allowing it to find the uninstalled shared library
-		# in the .libs directory.
-		#
+		####################################################
+		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs
+		# libfoo.la" if it's an uninstalled libtool archive.
+		# This allows proper relinking by libtool during the
+		# install stage by allowing it to find the uninstalled
+		# shared library in the .libs directory.
+		####################################################
 		*.la)
 			fixla=0
-			ltlibsdir=`@DIRNAME@ $i`/.libs
-			case "$ltlibsdir" in
+			ltlibsdir=`$dirname $i`/.libs
+			case $ltlibsdir in
 			/*)
 				# fix if an absolute path in ${WRKSRC}
-				case "$ltlibsdir" in
-				@WRKSRC@/*)	fixla=1 ;;
+				case $ltlibsdir in
+				${WRKSRC}/*)	fixla=1 ;;
 				esac
 				;;
 			*)
@@ -115,39 +174,42 @@ if $test -f $lafile; then
 				;;
 			esac
 			if $test $fixla -gt 0; then
-				case "$relink" in
+				case $relink in
 				*"-L$ltlibsdir "*) ;;
 				*"-L$ltlibsdir") ;;
 				*) relink="$relink -L$ltlibsdir" ;;
 				esac
 			fi
-			relink="${relink} $i"
+			relink="$relink $i"
 			;;
-		# Everything else Just Belongs in the relink_command line.
+		####################################################
+		# Everything else Just Belongs in the relink_command
+		# line.
+		####################################################
 		*)
-			relink="${relink} $i"
+			relink="$relink $i"
 			;;
 		esac
 	done
-	#
-	# Save the orignal .la file produced by libtool as
-	# .la.blsav, and create the new one with a signature.
-	#
-	@MV@ -f $lafile ${lafile}.blsav
+	##############################################################
+	# Save the orignal .la file produced by libtool as .la.blsav,
+	# and create the new one with a signature.
+	##############################################################
+	$mv -f $lafile ${lafile}.blsav
 	if $test -n "$deps"; then
 		(
-		$cat ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
+		$cat ${lafile}.blsav | $sed -e '/^dependency_libs=/,$d'
 		$echo "dependency_libs='$deps'"
-		$cat ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
+		$cat ${lafile}.blsav | $sed -e '1,/^dependency_libs=/d'
 		) > ${lafile}.tmp
 	else
 		$cat ${lafile}.blsav > ${lafile}.tmp
 	fi
 	if $test -n "$relink"; then
 		(
-		$cat ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
+		$cat ${lafile}.tmp | $sed -e '/^relink_command=/,$d'
 		$echo "relink_command='$relink'"
-		$cat ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
+		$cat ${lafile}.tmp | $sed -e '1,/^relink_command=/d'
 		) > $lafile
 	else
 		$cat ${lafile}.tmp > $lafile
@@ -157,116 +219,132 @@ if $test -f $lafile; then
 	$echo "buildlibdir='"`cd .; $pwd`"'" >> $lafile
 	$echo >> $lafile
 	$echo "# This file has been modified by buildlink3." >> $lafile
-	@RM@ ${lafile}.tmp
-	$echo "==> Fixed $lafile" >> $wrapperlog
-	#
-	# Fix up any .lai files (libtool archives that will be installed).
-	#
+	$rm ${lafile}.tmp
+	msg_log $wrapperlog "==> Fixed $lafile"
+	##############################################################
+	# Fix up any .lai files (libtool archives that will be
+	# installed).
+	##############################################################
 	if $test -z "$laifile" || $test ! -f "$laifile" || \
-	   @EGREP@ "^#.*modified by buildlink3" $laifile >/dev/null 2>&1; then
+	   $egrep "^#.*modified by buildlink3" $laifile >/dev/null 2>&1; then
 		:
 	else
-		@SED@ @_BLNK_WRAP_LT_UNTRANSFORM_SED@ \
+		$sed @_BLNK_WRAP_LT_UNTRANSFORM_SED@ \
 			$laifile > ${laifile}.tmp
 		. ${laifile}.tmp
-		L=; l=; lexist=; prev=
-		for i in ${dependency_libs}; do
-			case "$i" in
-			#
-			# Don't allowed repeated arguments, so "-lm -lm"
-			# becomes just "-lm".
-			#
-			$prev)
-				;;
-			# Skip all -R* options... rpath info shouldn't go
-			# into the dependency_libs line.
-			#
-			-R*)
-				;;
-			# Skip directories that should never appear in
-			# the -L<dir> flags.  Also modify directories in
-			# ${DEPOTBASE} to point to somewhere in the
-			# default view ${LOCALBASE}, since we want "overwrite"
-			# packages to think the libraries really do just
-			# exist through the default view.
-			#
-			-L*)
-				case "$i" in
-				-L${BUILDLINK_DIR}/*)
+		deps_ok=no
+		deps="${dependency_libs}"
+		while $test "$deps_ok" = "no"; do
+			deps_ok=yes
+			L=; l=; lexist=; prev=
+			for i in $deps; do
+				case $i in
+				######################################
+				# Don't allowed repeated arguments, so
+				# "-lm -lm" becomes just "-lm".
+				######################################
+				$prev)
 					;;
-				-L@WRKSRC@|-L@WRKSRC@/*)
+				######################################
+				# Skip all -R* options... rpath info
+				# shouldn't go into the dependency_libs
+				# line.
+				######################################
+				-R*)
 					;;
-				-L@DEPOTBASE@/*)
-					i=`$echo "X$i" | $Xsed -e "s,-L@DEPOTBASE@/[^/]*/,-L@LOCALBASE@/,"`
-					case "$L" in
-					*"$i "*) ;;
-					*"$i") ;;
-					*) L="$L $i" ;;
+				######################################
+				# Skip directories that should never
+				# appear in the -L<dir> flags.  Also
+				# modify directories in ${DEPOTBASE} to
+				# point to somewhere in the default view
+				# ${LOCALBASE}, since we want "overwrite"
+				# packages to think the libraries really
+				# do just exist through the default view.
+				######################################
+				-L*)
+					case $i in
+					-L${BUILDLINK_DIR}/*)
+						;;
+					-L${WRKSRC}|-L${WRKSRC}/*)
+						;;
+					-L${DEPOTBASE}/*)
+						i=`$echo "$i" | $sed -e "s,-L${DEPOTBASE}/[^/]*/,-L${LOCALBASE}/,"`
+						case $L in
+						*"$i "*) ;;
+						*"$i") ;;
+						*) L="$L $i" ;;
+						esac
+						;;
+					*)
+						case $L in
+						*"$i "*) ;;
+						*"$i") ;;
+						*) L="$L $i" ;;
+						esac
+						;;
 					esac
 					;;
+				######################################
+				# Libraries really do exist, so we want
+				# to keep any -L<dir> flags we've seen
+				# in the generated dependency_libs line.
+				######################################
+				-l*)
+					lexist=1
+					l="$l $i"
+					;;
+				######################################
+				# Libtool archives should be changed from
+				# "/path/libfoo.la" to "-L/path -lfoo",
+				# where /path is appropriately modified
+				# so that the depot directory is changed
+				# to the views directory.  This allows
+				# the .la files to be used by either
+				# "overwrite" or "pkgviews" packages and
+				# works correctly with wildcard
+				# dependencies.
+				######################################
+				*.la)
+					dirbase=`$dirname $i`
+					dir=`$echo "X$dirbase" | $Xsed -e "s,^${DEPOTBASE}/[^/]*/,${LOCALBASE}/,"`
+					case $L in
+					*"-L$dir "*) ;;
+					*"-L$dir") ;;
+					*) L="$L -L$dir" ;;
+					esac
+					libbase=`$basename $i .la`
+					lib="${libbase#lib}"
+					lexist=1
+					l="$l -l$lib"
+					deps_ok=no
+					;;
+				######################################
+				# Everything else Just Belongs.
+				######################################
 				*)
-					case "$L" in
-					*"$i "*) ;;
-					*"$i") ;;
-					*) L="$L $i" ;;
-					esac
+					l="$l $i"
 					;;
 				esac
-				;;
-			# Libraries really do exist, so we want to keep
-			# any -L<dir> flags we've seen in the generated
-			# dependency_libs line.
-			#
-			-l*)
-				lexist=1
-				l="$l $i"
-				;;
-			# Libtool archives should be changed from
-			# "/path/libfoo.la" to "-L/path -lfoo", where /path
-			# is appropriately modified so that the depot
-			# directory is changed to the views directory.  This
-			# allows the .la files to be used by either "overwrite"
-			# or "pkgviews" packages and works correctly with
-			# wildcard dependencies.
-			#
-			*.la)
-				dirbase=`@DIRNAME@ $i`
-				dir=`$echo "X$dirbase" | $Xsed -e "s,^@DEPOTBASE@/[^/]*/,@LOCALBASE@/,"`
-				case "$L" in
-				*"-L$dir "*) ;;
-				*"-L$dir") ;;
-				*) L="$L -L$dir" ;;
-				esac
-				libbase=`@BASENAME@ $i .la`
-				lib=`$echo "X$libbase" | $Xsed -e "s/^lib//"`
-				lexist=1
-				l="$l -l$lib"
-				;;
-			# Everything else Just Belongs.
-			*)
-				l="$l $i"
-				;;
-			esac
-			prev="$i"
+				prev="$i"
+			done
+			if $test -z "$lexist"; then
+				L=
+			fi
+			deps="$L$l"
+			deps=`$echo "X$deps" | $Xsed -e "s/^[ 	]*//"`
 		done
-		if $test -z "$lexist"; then
-			L=
-		fi
-		deps="$L$l"
-		deps=`$echo "X$deps" | $Xsed -e "s/^[ 	]*//"`
-		@MV@ -f $laifile ${laifile}.blsav
+		$mv -f $laifile ${laifile}.blsav
 		(
-			$cat ${laifile}.tmp | @SED@ -e '/^dependency_libs=/,$d'
+			$cat ${laifile}.tmp | $sed -e '/^dependency_libs=/,$d'
 			$echo "dependency_libs='$deps'"
-			$cat ${laifile}.tmp | @SED@ -e '1,/^dependency_libs=/d'
+			$cat ${laifile}.tmp | $sed -e '1,/^dependency_libs=/d'
 			$echo
 			$echo "# This file has been modified by buildlink3."
 		) > ${laifile}
-		@RM@ -f ${laifile}.tmp
-		$echo "==> Fixed $laifile" >> $wrapperlog
-		if $test "$libdir" != "${BUILDLINK_DIR}/.tmp/inst" && \
-		   @EGREP@ "${BUILDLINK_DIR}" $laifile >/dev/null 2>&1; then
-			$echo "==> [buildlink3] Error: buildlink3 leakage into $laifile" >> $wrapperlog
+		$rm -f ${laifile}.tmp
+		msg_log $wrapperlog "==> Fixed $laifile"
+		if $egrep "${BUILDLINK_DIR}" $laifile >/dev/null 2>&1; then
+			msg_log $wrapperlog "==> [buildlink3] Error: buildlink3 leakage into $laifile"
 			$echo "==> [buildlink3] Error: buildlink3 leakage into $laifile" 1>&2
 			wrapper_result=1
 		fi
