@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/02/18 15:14:41 seb Exp $
-# FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/22 11:35:39 wiz Exp $
+#
 
 DISTNAME=	findutils-4.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=findutils/}
 
