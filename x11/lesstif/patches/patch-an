@@ -1,17 +1,17 @@
-$NetBSD: patch-an,v 1.6 2000/04/27 13:14:54 tron Exp $
+$NetBSD: patch-an,v 1.7 2000/05/25 15:25:44 drochner Exp $
 
---- lib/Mrm-2.0/Makefile.in.orig	Sun Apr 16 02:38:50 2000
-+++ lib/Mrm-2.0/Makefile.in	Mon Apr 17 15:23:23 2000
-@@ -143,7 +143,7 @@
+--- lib/Mrm-2.0/Makefile.in.orig	Mon May 15 02:47:10 2000
++++ lib/Mrm-2.0/Makefile.in	Thu May 18 20:32:06 2000
+@@ -160,7 +160,7 @@
+ @Version_2_0_TRUE@		-DLESSTIFHOME=\"@prefix@\"
  
- @Version_2_0_TRUE@INCLUDES = -I$(top_srcdir)/include/Motif-2.0 		-I$(top_builddir)/include/Motif-2.0 		-I$(top_srcdir)/include/Motif-1.2 		-I$(top_builddir)/include/Motif-1.2 		-I$(top_srcdir)/include 		-I$(top_builddir)/include 		${X_CFLAGS} 		-DX_LIB_PATH=\"@x_libraries@\" 		-DLESSTIFHOME=\"@prefix@\"
+ @Version_2_0_TRUE@libdir = \
+-@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@$(prefix)/lib
  
--@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@libdir = $(prefix)/lib
- 
- @Version_2_0_TRUE@lib_LTLIBRARIES = libMrm.la
- 
-@@ -313,7 +313,6 @@
+ @Version_2_0_TRUE@lib_LTLIBRARIES = \
+ @Version_2_0_TRUE@libMrm.la
+@@ -338,7 +338,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)
