@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/21 08:39:54 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/27 03:45:08 jlam Exp $
 
 DISTNAME=		nbsed-20040821
 CATEGORIES=		textproc pkgtools
@@ -9,12 +9,20 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
 
-NO_CHECKSUM=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK3=		yes
+NO_CHECKSUM=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--program-transform-name="s,sed,nbsed,"
 
-post-extract:
-	${MKDIR} ${WRKSRC}
-	cd ${FILESDIR} && ${PAX} -rwpe . ${WRKSRC}
+.include "../../mk/bsd.prefs.mk"
 
-.include "../../pkgtools/libnbcompat/inplace.mk"
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
+.  include "../../pkgtools/libnbcompat/inplace.mk"
+.else
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
+
+do-extract:
+	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+
 .include "../../mk/bsd.pkg.mk"
