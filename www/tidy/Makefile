@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2002/03/07 13:33:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/08 11:55:43 wiz Exp $
 #
 
-DISTNAME=	tidy_src_020301
-PKGNAME=	tidy-20020301
+DISTNAME=	tidy_src_020307
+PKGNAME=	tidy-20020307
 WRKSRC=		${WRKDIR}/tidy
 CATEGORIES=	www
 MASTER_SITES=	http://tidy.sourceforge.net/src/ \
-		http://tidy.sourceforge.net/docs/
+		http://tidy.sourceforge.net/docs/ \
+		http://tidy.sourceforge.net/src/old/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
