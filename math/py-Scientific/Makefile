@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/16 19:45:26 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/16 20:32:42 drochner Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	py-Scientific-2.2
@@ -12,6 +12,9 @@ COMMENT=	Python modules for scientific computing
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
 DEPENDS+=	mpich>=1.2.1:../../parallel/mpi-ch
+BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb1
+BUILDLINK_DEPENDS.python21=	python21>=2.1.1nb1
+PYTHON_VERSIONS_ACCEPTED=	20 21 # doesn't compile for 22
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
