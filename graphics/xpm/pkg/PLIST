@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:00:20 agc Exp $
 bin/sxpm
 lib/libXpm.a
 lib/libXpm.so.4.10

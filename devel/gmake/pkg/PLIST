@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:59:12 agc Exp $
 bin/gmake
 man/man1/gmake.1.gz
 @unexec install-info --delete %D/info/make.info %D/info/dir

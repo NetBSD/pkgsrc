@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:01:27 agc Exp $
 bin/dotfile
 bin/dotfile-2.0
 man/man1/dotfile.1.gz

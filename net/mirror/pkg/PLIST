@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:03:42 agc Exp $
 bin/mirror
 bin/do_unlinks
 bin/pkgs_to_mmin
