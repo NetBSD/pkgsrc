@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4030 2003/12/09 04:56:22 grant Exp $
+$NetBSD: CHANGES,v 1.4031 2003/12/09 06:55:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated covered to 0.2.2 [dmcmahill 2003-12-08]
 	Updated dovecot to 0.99.10.4 [xtraeme 2003-12-09]
 	Added p5-Net-CIDR-0.09 [grant 2003-12-09]
+	Updated linc to 1.0.3 [xtraeme 2003-12-09]
