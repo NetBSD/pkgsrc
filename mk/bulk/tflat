@@ -1,4 +1,4 @@
-# $NetBSD: tflat,v 1.13 2004/04/09 18:43:14 jschauma Exp $
+# $NetBSD: tflat,v 1.14 2005/03/24 16:47:35 tv Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -99,7 +99,7 @@ BEGIN {
 	}
 
 	for (x in alldepends){
-		print x depstr alldepends[x] | "sort";
+		print x depstr alldepends[x] | "${SORT-sort}";
 	}
 
 	printf("\n");

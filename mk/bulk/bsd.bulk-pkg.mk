@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.76 2005/03/17 22:49:15 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.77 2005/03/24 16:47:34 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -191,8 +191,8 @@ bulk-cache:
 	@${ECHO_MSG} "BULK> Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${SETENV} SORT=${SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${SETENV} SORT=${SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 
 # remove the bulk cache files
 clean-bulk-cache:
