@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.50 2005/01/27 13:47:43 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.51 2005/01/29 00:31:40 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -109,3 +109,5 @@ Pullup ticket 249 - requested by Todd Vierling
 security fix for bind9
 Pullup ticket 248 - requested by Min Sik Kim
 distfile fix for awstats
+Pullup ticket 251 - Requested by Johnny C. Lam
+compatibility fix for dlopen.builtin.mk
