@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2001/10/21 10:02:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/01/28 16:55:53 wiz Exp $
 #
 
-DISTNAME=	tkcvs-7.0.2
+DISTNAME=	tkcvs-7_03
+PKGNAME=	tkcvs-7.0.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.twobarleycorns.net/ \
 		${MASTER_SITE_SOURCEFORGE:=tkcvs/}
@@ -12,9 +13,6 @@ COMMENT=	Tcl/Tk frontends to CVS and diff
 
 USE_BUILDLINK_ONLY=	YES
 NO_BUILD=		YES
-
-post-extract:
-	${MV} ${WRKSRC}/tkcvs/tkcvs.n ${WRKSRC}/tkcvs/tkcvs.1
 
 do-install:
 	(cd ${WRKSRC} && ./doinstall.tcl ${PREFIX})
