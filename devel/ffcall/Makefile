@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/08 14:05:21 wiz Exp $
 
 DISTNAME=	ffcall-1.10
 PKGREVISION=	1
@@ -14,9 +14,11 @@ COMMENT=	Foreign function call libraries
 # the file ${WRKSRC}/avcall/avcall-${MACHINE_ARCH}.c needs to
 # be added for additional port support.
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-convex *-*-hppa *-*-i386 \
-			*-*-ia64 *-*-m68k *-*-m88k *-*-mips *-*-mips64 \
-			*-*-mipsn32 *-*-rs6000 *-*-powerpc *-*-s390 \
-			*-*-sparc *-*-sparc64 *-*-x86_64
+			*-*-ia64 *-*-m68k *-*-m88k *-*-mips *-*-mipsel \
+			*-*-mipseb *-*-mips64 *-*-mipsn32 \
+			*-*-powerpc *-*-rs6000 \
+			*-*-s390 *-*-sparc *-*-sparc64 \
+			*-*-x86_64
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
