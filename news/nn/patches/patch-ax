@@ -1,7 +1,7 @@
-$NetBSD: patch-ax,v 1.1 1999/07/26 21:19:33 tron Exp $
+$NetBSD: patch-ax,v 1.2 1999/07/26 21:49:50 tron Exp $
 
 --- nntp.c.orig	Thu Nov 25 10:39:37 1993
-+++ nntp.c	Mon Jul 26 23:11:38 1999
++++ nntp.c	Mon Jul 26 23:20:32 1999
 @@ -85,7 +85,9 @@
  import int silent, no_update;
  
@@ -12,6 +12,15 @@ $NetBSD: patch-ax,v 1.1 1999/07/26 21:19:33 tron Exp $
  extern void nn_exitmsg();
  extern void sys_error();
  extern int sys_warning();
+@@ -759,7 +761,7 @@
+     strncpy(host, (gethostbyname(host))->h_name, sizeof host);
+ 
+     server_real_name = (gethostbyname(nntp_server))->h_name;
+-    use_nntp = (strcmp(host, server_real_name) != 0);
++    use_nntp = 1;
+ 
+     if (use_nntp) {
+ 	freeobj(news_active);
 @@ -1098,7 +1100,7 @@
  
       case OK_BODY:

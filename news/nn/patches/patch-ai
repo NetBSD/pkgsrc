@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 1999/07/26 21:19:27 tron Exp $
+$NetBSD: patch-ai,v 1.2 1999/07/26 21:49:50 tron Exp $
 
 --- config.h.orig	Fri Feb 18 03:15:47 1994
-+++ config.h	Mon Jul 26 23:11:39 1999
++++ config.h	Mon Jul 26 23:21:24 1999
 @@ -32,7 +32,7 @@
  #define NOV
  
  /* Optional */
 -#define NOV_DIRECTORY "/usr/spool/news"
-+#define NOV_DIRECTORY "/var/news/spool/over.view"
++#define NOV_DIRECTORY "/var/news/spool/overview"
  
  /*********************** NETWORK DEPENDENT DEFINITIONS **********************
   *
@@ -97,8 +97,8 @@ $NetBSD: patch-ai,v 1.1 1999/07/26 21:19:27 tron Exp $
  
 -#define NEWS_DIRECTORY		"/usr/spool/news"
 -#define NEWS_LIB_DIRECTORY	"/usr/lib/news"
-+#define NEWS_DIRECTORY		"/var/news/spool"
-+#define NEWS_LIB_DIRECTORY	"/var/news/etc"
++#define NEWS_DIRECTORY		"/var/news/spool/articles"
++#define NEWS_LIB_DIRECTORY	"/var/news/db"
  
 -/* #define INEWS_PATH		"/usr/lib/news/inews"	*/
 +#define INEWS_PATH		BIN_DIRECTORY "/inews"
