@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/10 23:58:40 seb Exp $
 #
 
 DISTNAME=	graphviz-1.8.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.research.att.com/sw/tools/graphviz/dist/
 EXTRACT_SUFX=	.tgz
@@ -19,6 +20,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_DIR}/lib/tclConfig.sh
 CONFIGURE_ENV+=		TKCONFIG=${BUILDLINK_DIR}/lib/tkConfig.sh
+CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
 
 CONFIGURE_ARGS+=	--with-extraincludedir=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-extralibdir=${BUILDLINK_DIR}/lib

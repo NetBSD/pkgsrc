@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ac,v 1.2 2002/03/10 23:58:41 seb Exp $
 
 --- configure.orig	Fri Mar  1 22:34:05 2002
 +++ configure
@@ -73,7 +73,19 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
  do
  # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
-@@ -6079,12 +6028,11 @@
+@@ -5893,7 +5842,10 @@
+ PATHSEPARATOR=";"
+ else
+ # This sucks!  Whatever happened to standards for file system layout?
+-DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/openwin/lib/X11/fonts/TrueType"
++DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype"
++if test x"$X11PREFIX" != x"$X11BASE" ; then
++DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype"
++fi
+ PATHSEPARATOR=":"
+ fi
+ fi
+@@ -6079,12 +6031,11 @@
  
  # Some systems don't have Tcl.  Don't build
  # the Tcl products if we don't have the library.
@@ -87,7 +99,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
      TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
  else
      echo "configure: warning: Unable to find tclConfig.sh. The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built" 1>&2
-@@ -6156,12 +6104,11 @@
+@@ -6156,12 +6107,11 @@
  
  # Some systems have Tcl, but not TK.  Don't build
  # the Tk products if we don't have the library.
@@ -101,7 +113,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
      TK_PKGINDEX="tkspline/pkgIndex.tcl"
  else
      echo "configure: warning: Unable to find tkConfig.sh. The package "tkspline" will not be built" 1>&2
-@@ -8710,36 +8657,12 @@
+@@ -8710,36 +8660,12 @@
  
  # -----------------------------------
  # tclInt.h
