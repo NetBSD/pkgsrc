@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/02/09 17:44:51 abs Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/12 12:40:58 jmmv Exp $
 
 --- Makefile.orig	Sat Oct 31 03:58:47 1998
 +++ Makefile	Wed Feb  9 16:06:35 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/02/09 17:44:51 abs Exp $
  O      = o
  RM     = rm -f
 -MORE_CFLAGS = -g
-+MORE_CFLAGS = -O2
++MORE_CFLAGS ?= -O2
  
  # use this for Solaris 2.x
  #LDFLAGS = -lnsl -lsocket 
