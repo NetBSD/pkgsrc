@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2002/09/01 13:50:09 tron Exp $
+
+--- po/Makefile.in.in.orig	Tue May 21 21:01:08 2002
++++ po/Makefile.in.in	Sun Sep  1 15:46:30 2002
+@@ -23,7 +23,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+-localedir = $(datadir)/locale
++localedir = @prefix@/$(PKGLOCALEDIR)/locale
+ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
