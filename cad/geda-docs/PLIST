@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/11 03:16:22 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/03/24 02:05:11 dmcmahill Exp $
 share/doc/geda-doc/attributes/WARNINGS
 share/doc/geda-doc/attributes/attributes.css
 share/doc/geda-doc/attributes/attributes.dvi
@@ -122,6 +122,7 @@ share/doc/geda-doc/fileformats/node19.html
 share/doc/geda-doc/fileformats/node2.html
 share/doc/geda-doc/fileformats/node20.html
 share/doc/geda-doc/fileformats/node21.html
+share/doc/geda-doc/fileformats/node22.html
 share/doc/geda-doc/fileformats/node3.html
 share/doc/geda-doc/fileformats/node4.html
 share/doc/geda-doc/fileformats/node5.html
@@ -150,6 +151,11 @@ share/doc/geda-doc/gnetlist/node10.html
 share/doc/geda-doc/gnetlist/node11.html
 share/doc/geda-doc/gnetlist/node12.html
 share/doc/geda-doc/gnetlist/node13.html
+share/doc/geda-doc/gnetlist/node14.html
+share/doc/geda-doc/gnetlist/node15.html
+share/doc/geda-doc/gnetlist/node16.html
+share/doc/geda-doc/gnetlist/node17.html
+share/doc/geda-doc/gnetlist/node18.html
 share/doc/geda-doc/gnetlist/node2.html
 share/doc/geda-doc/gnetlist/node3.html
 share/doc/geda-doc/gnetlist/node4.html

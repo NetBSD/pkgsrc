@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/11 03:16:23 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/24 02:05:11 dmcmahill Exp $
 share/examples/geda/AUTHORS
 share/examples/geda/COPYING
 share/examples/geda/ChangeLog
@@ -56,7 +56,6 @@ share/examples/geda/config.log
 share/examples/geda/config.status
 share/examples/geda/configure
 share/examples/geda/configure.ac
-share/examples/geda/configure.lineno
 share/examples/geda/gTAG/7414-1.sym
 share/examples/geda/gTAG/ChangeLog
 share/examples/geda/gTAG/Makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/11 03:16:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/24 02:05:11 dmcmahill Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -17,11 +17,12 @@ USE_GNU_TOOLS+=	make
 
 pre-install:
 	${RM} -f ${WRKSRC}/config.status.overridden
+	${RM} -f ${WRKSRC}/configure.lineno
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geda
-	cd ${WRKSRC} && tar -cf - * | \
-		(cd ${PREFIX}/share/examples/geda && tar -xf -)
+	cd ${WRKSRC} && ${TAR} -cf - * | \
+		(cd ${PREFIX}/share/examples/geda && ${TAR} -xf -)
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/examples/geda
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/examples/geda
 
