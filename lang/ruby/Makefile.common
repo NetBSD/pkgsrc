@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/11/29 03:31:53 taca Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/01/21 06:13:36 tv Exp $
 #
 # Ruby base distribution common definition
 
@@ -39,7 +39,7 @@ DIST_SUBDIR?=		${RUBY_DIST_SUBDIR}
 RUBY_SHLIBMAJOR?=	${_RUBY_VER_MAJOR}
 RUBY_SHLIBVER?=		${RUBY_VERSION}
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
 RUBY_SHLIBMAJOR=	${RUBY_VER}
 RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
 .elif ${OPSYS} == "FreeBSD"
