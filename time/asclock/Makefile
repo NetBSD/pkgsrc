@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/07/16 00:46:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/16 10:41:18 jlam Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	NeXTstep-like clock and calendar
+
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 USE_BUILDLINK_ONLY=	YES
 USE_IMAKE=		YES
