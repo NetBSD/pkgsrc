@@ -1,0 +1,40 @@
+$NetBSD: patch-cj,v 1.1 2002/06/25 06:34:42 skrll Exp $
+
+--- noatun/modules/winskin/Makefile.in.orig	Sun Jun  9 12:49:22 2002
++++ noatun/modules/winskin/Makefile.in
+@@ -345,7 +345,7 @@
+ 	-module -avoid-version -no-undefined 
+ 
+ 
+-noatun_winskin_la_LIBADD = $(top_builddir)/noatun/library/libnoatun.la \
++noatun_winskin_la_LIBADD = $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(WINSKINVIS_LIB) 
+ 
+ 
+@@ -357,7 +357,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_winskin_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/modules/winskin/vis/libwinskinvis.la
+ am_noatun_winskin_la_OBJECTS = fileInfo.lo guiSpectrumAnalyser.lo \
+ 	plugin.lo waBalanceSlider.lo waButton.lo waClutterbar.lo \
+@@ -645,7 +645,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=waClutterbar.h waDigit.h winSkinVis.h waLabel.h waWidget.h fileInfo.h waSkins.h waSkinModel.h skinMap.h waSkinMapping.h waIndicator.h guiSpectrumAnalyser.h winSkinConfig.h waBalanceSlider.h waStatus.h waSlider.h winskin.plugin waShadeMapping.h waMain.h waInfo.h waRegion.h waJumpSlider.h waVolumeSlider.h waSkin.h waColor.h waTitleBar.h waButton.h 
++KDE_DIST=winSkinConfig.h waClutterbar.h waBalanceSlider.h waDigit.h waStatus.h winSkinVis.h waLabel.h waSlider.h fileInfo.h waWidget.h winskin.plugin waShadeMapping.h waSkins.h waMain.h waInfo.h waRegion.h waSkinModel.h waSkinMapping.h skinMap.h waJumpSlider.h waIndicator.h waSkin.h waVolumeSlider.h waColor.h waTitleBar.h waButton.h guiSpectrumAnalyser.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -907,7 +907,7 @@
+ 	-rm -f  noatun_winskin_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_winskin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fileInfo.cpp $(srcdir)/guiSpectrumAnalyser.cpp $(srcdir)/plugin.cpp $(srcdir)/waBalanceSlider.cpp $(srcdir)/waButton.cpp $(srcdir)/waClutterbar.cpp $(srcdir)/waColor.cpp $(srcdir)/waDigit.cpp $(srcdir)/waInfo.cpp $(srcdir)/waIndicator.cpp $(srcdir)/waJumpSlider.cpp $(srcdir)/waLabel.cpp $(srcdir)/waMain.cpp $(srcdir)/waRegion.cpp $(srcdir)/waSkin.cpp $(srcdir)/waSkinModel.cpp $(srcdir)/waSlider.cpp $(srcdir)/waStatus.cpp $(srcdir)/waTitleBar.cpp $(srcdir)/waVolumeSlider.cpp $(srcdir)/waWidget.cpp $(srcdir)/winSkinConfig.cpp $(srcdir)/winSkinVis.cpp noatun_winskin_la_meta_unload.cpp  waClutterbar.moc.cpp waVolumeSlider.moc guiSpectrumAnalyser.moc winSkinConfig.moc waButton.moc waInfo.moc waStatus.moc waTitleBar.moc waSkin.moc waDigit.moc waWidget.moc waSlider.moc waJumpSlider.moc waMain.moc waLabel.moc winSkinVis.moc waIndicator.moc waBalanceSlider.moc waSkinModel.moc 
++noatun_winskin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fileInfo.cpp $(srcdir)/guiSpectrumAnalyser.cpp $(srcdir)/plugin.cpp $(srcdir)/waBalanceSlider.cpp $(srcdir)/waButton.cpp $(srcdir)/waClutterbar.cpp $(srcdir)/waColor.cpp $(srcdir)/waDigit.cpp $(srcdir)/waInfo.cpp $(srcdir)/waIndicator.cpp $(srcdir)/waJumpSlider.cpp $(srcdir)/waLabel.cpp $(srcdir)/waMain.cpp $(srcdir)/waRegion.cpp $(srcdir)/waSkin.cpp $(srcdir)/waSkinModel.cpp $(srcdir)/waSlider.cpp $(srcdir)/waStatus.cpp $(srcdir)/waTitleBar.cpp $(srcdir)/waVolumeSlider.cpp $(srcdir)/waWidget.cpp $(srcdir)/winSkinConfig.cpp $(srcdir)/winSkinVis.cpp $(srcdir)/noatun_winskin_la_meta_unload.cpp  waClutterbar.moc.cpp waVolumeSlider.moc guiSpectrumAnalyser.moc winSkinConfig.moc waButton.moc waInfo.moc waStatus.moc waTitleBar.moc waSkin.moc waDigit.moc waWidget.moc waSlider.moc waJumpSlider.moc waMain.moc waLabel.moc winSkinVis.moc waIndicator.moc waBalanceSlider.moc waSkinModel.moc 
+ 	@echo 'creating noatun_winskin_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_winskin_la.all_cpp.files noatun_winskin_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_winskin_la.all_cpp.final; \

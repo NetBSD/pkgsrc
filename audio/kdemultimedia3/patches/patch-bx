@@ -1,0 +1,31 @@
+$NetBSD: patch-bx,v 1.1 2002/06/25 06:34:39 skrll Exp $
+
+--- noatun/modules/monoscope/Makefile.in.orig	Sun Jun  9 12:29:39 2002
++++ noatun/modules/monoscope/Makefile.in
+@@ -296,7 +296,7 @@
+ 
+ #prefs.cpp
+ noatun_monoscope_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_monoscope_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la -lm
++noatun_monoscope_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la -lm
+ 
+ #>- noatun_monoscope_la_METASOURCES = AUTO
+ 
+@@ -311,7 +311,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_monoscope_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_monoscope_la_OBJECTS = monoscope.lo
+ #>- noatun_monoscope_la_OBJECTS = $(am_noatun_monoscope_la_OBJECTS)
+ #>+ 5
+@@ -657,7 +657,7 @@
+ 	-rm -f  noatun_monoscope_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_monoscope_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/monoscope.cpp noatun_monoscope_la_meta_unload.cpp   monoscope.moc 
++noatun_monoscope_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/monoscope.cpp $(srcdir)/noatun_monoscope_la_meta_unload.cpp   monoscope.moc 
+ 	@echo 'creating noatun_monoscope_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_monoscope_la.all_cpp.files noatun_monoscope_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_monoscope_la.all_cpp.final; \

@@ -1,0 +1,13 @@
+$NetBSD: patch-bu,v 1.1 2002/06/25 06:34:38 skrll Exp $
+
+--- noatun/modules/metatag/Makefile.am.orig	Wed May  8 19:29:29 2002
++++ noatun/modules/metatag/Makefile.am
+@@ -4,7 +4,7 @@
+ noatun_metatag_la_SOURCES = metatag.cpp edit.cpp
+ 
+ noatun_metatag_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
+ 
+ noatun_metatag_la_METASOURCES = AUTO

@@ -1,0 +1,31 @@
+$NetBSD: patch-bj,v 1.1 2002/06/25 06:34:35 skrll Exp $
+
+--- noatun/modules/htmlexport/Makefile.in.orig	Sun Jun  9 12:12:25 2002
++++ noatun/modules/htmlexport/Makefile.in
+@@ -296,7 +296,7 @@
+ noinst_HEADERS = htmlexport.h
+ 
+ noatun_htmlexport_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_htmlexport_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_htmlexport_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -310,7 +310,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_htmlexport_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_htmlexport_la_OBJECTS = htmlexport.lo
+ #>- noatun_htmlexport_la_OBJECTS = $(am_noatun_htmlexport_la_OBJECTS)
+ #>+ 5
+@@ -656,7 +656,7 @@
+ 	-rm -f  noatun_htmlexport_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_htmlexport_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/htmlexport.cpp noatun_htmlexport_la_meta_unload.cpp   htmlexport.moc 
++noatun_htmlexport_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/htmlexport.cpp $(srcdir)/noatun_htmlexport_la_meta_unload.cpp   htmlexport.moc 
+ 	@echo 'creating noatun_htmlexport_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_htmlexport_la.all_cpp.files noatun_htmlexport_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_htmlexport_la.all_cpp.final; \

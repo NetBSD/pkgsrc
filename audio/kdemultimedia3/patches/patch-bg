@@ -1,0 +1,40 @@
+$NetBSD: patch-bg,v 1.1 2002/06/25 06:34:35 skrll Exp $
+
+--- noatun/modules/dcopiface/Makefile.in.orig	Sun Jun  9 10:26:47 2002
++++ noatun/modules/dcopiface/Makefile.in
+@@ -297,7 +297,7 @@
+ noatun_dcopiface_la_SOURCES=dcopiface.cpp  dcopiface_skel.cpp
+ 
+ noatun_dcopiface_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_dcopiface_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la
++noatun_dcopiface_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la
+ 
+ #>- noatun_dcopiface_la_METASOURCES = AUTO
+ 
+@@ -311,7 +311,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_dcopiface_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_dcopiface_la_OBJECTS = dcopiface.lo
+ #>- noatun_dcopiface_la_OBJECTS = $(am_noatun_dcopiface_la_OBJECTS)
+ #>+ 4
+@@ -487,7 +487,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=dcopiface.plugin 
++KDE_DIST=dcopiface.kidl dcopiface.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -642,7 +642,7 @@
+ 
+ 
+ #>+ 11
+-noatun_dcopiface_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopiface.cpp dcopiface_skel.cpp  
++noatun_dcopiface_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopiface.cpp $(srcdir)/dcopiface_skel.cpp  
+ 	@echo 'creating noatun_dcopiface_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_dcopiface_la.all_cpp.files noatun_dcopiface_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_dcopiface_la.all_cpp.final; \

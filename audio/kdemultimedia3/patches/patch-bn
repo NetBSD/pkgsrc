@@ -1,0 +1,40 @@
+$NetBSD: patch-bn,v 1.1 2002/06/25 06:34:36 skrll Exp $
+
+--- noatun/modules/kaiman/Makefile.in.orig	Sun Jun  9 12:21:18 2002
++++ noatun/modules/kaiman/Makefile.in
+@@ -301,7 +301,7 @@
+ 
+ 
+ noatun_kaiman_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -321,7 +321,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_kaiman_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_kaiman_la_OBJECTS = noatunui.lo style.lo userinterface.lo \
+ 	pref.lo
+ #>- noatun_kaiman_la_OBJECTS = $(am_noatun_kaiman_la_OBJECTS)
+@@ -570,7 +570,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kaimanui.rc kaiman.plugin SKIN-SPECS 
++KDE_DIST=kaimanui.rc SKIN-SPECS kaiman.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -768,7 +768,7 @@
+ 	-rm -f  noatun_kaiman_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp noatun_kaiman_la_meta_unload.cpp   style.moc pref.moc userinterface.moc 
++noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp $(srcdir)/noatun_kaiman_la_meta_unload.cpp   style.moc pref.moc userinterface.moc 
+ 	@echo 'creating noatun_kaiman_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_kaiman_la.all_cpp.files noatun_kaiman_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_kaiman_la.all_cpp.final; \

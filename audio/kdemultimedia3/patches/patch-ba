@@ -1,15 +1,30 @@
-$NetBSD: patch-ba,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
+$NetBSD: patch-ba,v 1.2 2002/06/25 06:34:34 skrll Exp $
 
---- noatun/main.cpp.orig	Wed May  8 19:29:25 2002
-+++ noatun/main.cpp
-@@ -24,7 +24,9 @@
- 	{ 0, 0, 0}
- };
+--- noatun/library/Makefile.am.orig	Wed May  8 19:29:25 2002
++++ noatun/library/Makefile.am
+@@ -9,9 +9,9 @@
  
--int main(int argc, char **argv)
-+extern "C" int kdemain(int, char **);
-+
-+int kdemain(int argc, char **argv)
- {
- 	KAboutData aboutData("noatun", I18N_NOOP("Noatun"),
- 	                     version, description, KAboutData::License_BSD,
+ SUBDIRS=noatunarts noatun . noatuntags
+ 
+-lib_LTLIBRARIES = libnoatun.la libnoatuncontrols.la
++lib_LTLIBRARIES = libnoatun_core.la libnoatuncontrols.la
+ 
+-libnoatun_la_SOURCES = pluginmodule.cpp cmodule.cpp downloader.cpp engine.cpp \
++libnoatun_core_la_SOURCES = pluginmodule.cpp cmodule.cpp downloader.cpp engine.cpp \
+ 	playlist.cpp pref.cpp \
+ 	player.cpp playlistsaver.cpp app.cpp \
+ 	pluginloader.cpp plugin.cpp \
+@@ -22,11 +22,11 @@
+ 
+ include_HEADERS  = cmodule.h plugin_deps.h equalizerview.h effectview.h mimetypetree.h ksaver.h
+ 
+-libnoatun_la_LDFLAGS     = -L$(top_builddir)/noatun/library/noatunarts \
++libnoatun_core_la_LDFLAGS     = -L$(top_builddir)/noatun/library/noatunarts \
+ $(KDE_RPATH) $(all_libraries) -L$(top_builddir)/arts/gui/common \
+ -L$(top_builddir)/arts/gui/kde
+ 	
+-libnoatun_la_LIBADD      = $(top_builddir)/arts/gui/common/libartsgui.la	\
++libnoatun_core_la_LIBADD      = $(top_builddir)/arts/gui/common/libartsgui.la	\
+ 	$(top_builddir)/arts/gui/kde/libartsgui_kde.la			\
+ 	$(top_builddir)/arts/modules/libartsmodules.la			\
+ 	-lkio -lqtmcop -lkmedia2_idl -lnoatunarts			\

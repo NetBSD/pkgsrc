@@ -1,0 +1,40 @@
+$NetBSD: patch-cf,v 1.1 2002/06/25 06:34:41 skrll Exp $
+
+--- noatun/modules/systray/Makefile.in.orig	Sun Jun  9 12:37:35 2002
++++ noatun/modules/systray/Makefile.in
+@@ -295,7 +295,7 @@
+ noatun_systray_la_SOURCES = systray.cpp noatunui.cpp kitsystemtray.cpp cmodule.cpp
+ 
+ noatun_systray_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_systray_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_systray_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -314,7 +314,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_systray_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_systray_la_OBJECTS = systray.lo noatunui.lo kitsystemtray.lo \
+ 	cmodule.lo
+ #>- noatun_systray_la_OBJECTS = $(am_noatun_systray_la_OBJECTS)
+@@ -498,7 +498,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=systray.plugin hi16-action-noatuntraypause.png systrayui.rc hi16-action-noatuntray.png hi16-action-noatuntraystop.png hi16-action-noatuntrayplay.png 
++KDE_DIST=hi16-action-noatuntrayplay.png systray.plugin hi16-action-noatuntray.png hi16-action-noatuntraypause.png hi16-action-noatuntraystop.png systrayui.rc 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -694,7 +694,7 @@
+ 	-rm -f  noatun_systray_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_systray_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/systray.cpp $(srcdir)/noatunui.cpp $(srcdir)/kitsystemtray.cpp $(srcdir)/cmodule.cpp noatun_systray_la_meta_unload.cpp   cmodule.moc systray.moc kitsystemtray.moc 
++noatun_systray_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/systray.cpp $(srcdir)/noatunui.cpp $(srcdir)/kitsystemtray.cpp $(srcdir)/cmodule.cpp $(srcdir)/noatun_systray_la_meta_unload.cpp   cmodule.moc systray.moc kitsystemtray.moc 
+ 	@echo 'creating noatun_systray_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_systray_la.all_cpp.files noatun_systray_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_systray_la.all_cpp.final; \

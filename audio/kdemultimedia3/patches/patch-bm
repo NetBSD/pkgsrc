@@ -1,0 +1,13 @@
+$NetBSD: patch-bm,v 1.1 2002/06/25 06:34:36 skrll Exp $
+
+--- noatun/modules/kaiman/Makefile.am.orig	Wed May  8 19:29:29 2002
++++ noatun/modules/kaiman/Makefile.am
+@@ -9,7 +9,7 @@
+ 	pref.cpp
+ 
+ noatun_kaiman_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+                         -lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ noatun_kaiman_la_METASOURCES = AUTO

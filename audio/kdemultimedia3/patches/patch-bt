@@ -1,0 +1,31 @@
+$NetBSD: patch-bt,v 1.1 2002/06/25 06:34:38 skrll Exp $
+
+--- noatun/modules/marquis/Makefile.in.orig	Sun Jun  9 12:27:48 2002
++++ noatun/modules/marquis/Makefile.in
+@@ -295,7 +295,7 @@
+ noatun_marquis_la_SOURCES = marquis.cpp plugin.cpp
+ 
+ noatun_marquis_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_marquis_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_marquis_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -311,7 +311,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_marquis_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_marquis_la_OBJECTS = marquis.lo plugin.lo
+ #>- noatun_marquis_la_OBJECTS = $(am_noatun_marquis_la_OBJECTS)
+ #>+ 5
+@@ -658,7 +658,7 @@
+ 	-rm -f  noatun_marquis_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_marquis_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/marquis.cpp $(srcdir)/plugin.cpp noatun_marquis_la_meta_unload.cpp   marquis.moc 
++noatun_marquis_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/marquis.cpp $(srcdir)/plugin.cpp $(srcdir)/noatun_marquis_la_meta_unload.cpp   marquis.moc 
+ 	@echo 'creating noatun_marquis_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_marquis_la.all_cpp.files noatun_marquis_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_marquis_la.all_cpp.final; \

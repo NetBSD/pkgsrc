@@ -1,4 +1,4 @@
-$NetBSD: patch-az,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
+$NetBSD: patch-az,v 1.2 2002/06/25 06:34:33 skrll Exp $
 
 --- noatun/Makefile.in.orig	Tue May 14 01:53:28 2002
 +++ noatun/Makefile.in
@@ -14,7 +14,7 @@ $NetBSD: patch-az,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
 -noatun_la_SOURCES=main.cpp joinhandler.cpp  joinhandler_skel.cpp
 +libnoatun_main_la_SOURCES=main.cpp joinhandler.cpp  joinhandler_skel.cpp
 +libnoatun_main_la_LDFLAGS = $(KDE_RPATH) $(all_libraries)
-+libnoatun_main_la_LIBADD = -lqtmcop -lkmedia2_idl -lsoundserver_idl $(top_builddir)/noatun/library/libnoatun.la
++libnoatun_main_la_LIBADD = -lqtmcop -lkmedia2_idl -lsoundserver_idl $(top_builddir)/noatun/library/libnoatun_core.la
 +
 +noatun_la_SOURCES = noatun_main.cpp
  noatun_la_LDFLAGS = $(KDE_RPATH) $(all_libraries) -module -avoid-version
@@ -46,7 +46,7 @@ $NetBSD: patch-az,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
 -am_noatun_la_OBJECTS = main.lo joinhandler.lo
 -#>- noatun_la_OBJECTS = $(am_noatun_la_OBJECTS)
 +libnoatun_main_la_DEPENDENCIES = \
-+	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
 +am_libnoatun_main_la_OBJECTS = main.lo joinhandler.lo
 +#>- libnoatun_main_la_OBJECTS = $(am_libnoatun_main_la_OBJECTS)
  #>+ 4
@@ -156,7 +156,7 @@ $NetBSD: patch-az,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=avideoframe.cc hi22-app-noatun.png hi48-app-noatun.png noatun.desktop hi32-app-noatun.png preset.dance CHANGES preset.jazz FILES preset.metal hi16-app-noatun.png preset.trance joinhandler.h noatun.upd configure.in.in avideoframe.h preset.zero artsvideo.idl 
-+KDE_DIST=preset.trance artsvideo.idl joinhandler.h CHANGES avideoframe.cc noatun.upd configure.in.in preset.jazz hi22-app-noatun.png noatun hi48-app-noatun.png noatun.desktop FILES avideoframe.h preset.metal joinhandler.kidl hi16-app-noatun.png noatun20update preset.zero hi32-app-noatun.png preset.dance dummy.cpp 
++KDE_DIST=preset.trance artsvideo.idl joinhandler.h CHANGES avideoframe.cc noatun.upd configure.in.in preset.jazz hi22-app-noatun.png noatun hi48-app-noatun.png noatun.desktop FILES avideoframe.h preset.metal joinhandler.kidl hi16-app-noatun.png noatun20update preset.zero hi32-app-noatun.png preset.dance 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
@@ -205,7 +205,7 @@ $NetBSD: patch-az,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
 +#>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
  #>+ 1
 -install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS
-+install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
++install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
  
  install-info: install-info-recursive
  
