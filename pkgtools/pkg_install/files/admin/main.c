@@ -1,9 +1,9 @@
-/*	$NetBSD: main.c,v 1.4 2003/01/07 16:43:56 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.5 2003/01/14 15:18:33 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.4 2003/01/07 16:43:56 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.5 2003/01/14 15:18:33 jschauma Exp $");
 #endif
 #endif
 
@@ -616,14 +616,14 @@ usage(void)
 	    " rebuild                     - rebuild pkgdb from +CONTENTS files\n"
 	    " check [pkg ...]             - check md5 checksum of installed files\n"
 #ifdef PKGDB_DEBUG
-	    " add key value               - add key & value\n"
+	    " add key value               - add key and value\n"
 	    " delete key                  - delete reference to key\n"
 #endif
 	    " lsall /path/to/pkgpattern   - list all pkgs matching the pattern\n"
 	    " lsbest /path/to/pkgpattern  - list pkgs matching the pattern best\n"
 	    " dump                        - dump database\n"
-	    " pmatch pattern pkg          - returns true if pkg matches pattern, false else\n");
-	exit(1);
+	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n");
+	exit(EXIT_FAILURE);
 }
 
 void
