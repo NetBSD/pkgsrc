@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 1999/12/10 00:07:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.70 2000/01/02 15:05:22 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -23,6 +23,7 @@
 #    SUBDIR += fxtv
     SUBDIR += g3d
     SUBDIR += gd
+    SUBDIR += gdk-pixbuf
 #    SUBDIR += geomview
     SUBDIR += get_ds7
 #    SUBDIR += gfont
