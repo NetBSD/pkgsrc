@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/03 20:00:34 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/05 08:57:18 cjs Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://home.netcom.com/pub/users/tgagne/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://home.netcom.com/~tgagne/
+HOMEPAGE=	http://isectd.sourceforge.net/
 COMMENT=	open source middleware daemon
 
 DEPENDS+=	libwww-5.*:../../www/libwww
