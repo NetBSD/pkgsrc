@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2001/05/14 14:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2001/05/14 14:48:27 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -71,19 +71,6 @@ SUBDIR+=	t1lib
 SUBDIR+=	t1utils
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-xml
-SUBDIR+=	ted
-SUBDIR+=	ted-cs
-SUBDIR+=	ted-da
-SUBDIR+=	ted-de
-SUBDIR+=	ted-en-gb
-SUBDIR+=	ted-en-us
-SUBDIR+=	ted-es
-SUBDIR+=	ted-fr
-SUBDIR+=	ted-it
-SUBDIR+=	ted-nl
-SUBDIR+=	ted-no
-SUBDIR+=	ted-pt
-SUBDIR+=	ted-sv
 SUBDIR+=	texi2html
 SUBDIR+=	textutils
 SUBDIR+=	troffcvt
