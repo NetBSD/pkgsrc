@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/25 18:17:50 snj Exp $
 
 PKGNAME=		unixodbc-DataManager-${ODBC_BASE_VERS}
 PKGREVISION=		2
 COMMENT=		GUI tool for unixODBC data source management
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 
 .include "../../databases/unixodbc/Makefile.common"
@@ -38,7 +38,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/DataManager/DataManager ${PREFIX}/bin
 
-.include "../../databases/unixodbc/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../databases/unixodbc/buildlink3.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
