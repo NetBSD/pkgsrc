@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/14 11:27:03 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/21 14:50:25 wiz Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -11,6 +11,7 @@ COMMENT=        graphical C/C++ source code browsing tool, and call graph viewer
 
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 
+USE_BUILDLINK2=	# defined
 NO_BUILD=	# defined
 
 post-patch:
@@ -24,5 +25,5 @@ do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/share/cbrowser; \
 	done
 
-.include "../../x11/tk/buildlink.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
