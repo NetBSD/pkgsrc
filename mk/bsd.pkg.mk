@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1289 2003/09/24 12:22:03 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1290 2003/09/25 02:25:12 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -394,7 +394,9 @@ DISTINFO_FILE?=		${.CURDIR}/distinfo
 FIX_RPATH+=		LIBS
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
+.  if empty(_USE_RPATH:M[nN][oO])
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
+.  endif
 X11_LDFLAGS+=		-L${X11BASE}/lib
 .endif
 .if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
