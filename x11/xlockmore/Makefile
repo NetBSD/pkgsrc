@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/10/22 05:56:14 rh Exp $
+# $NetBSD: Makefile,v 1.38 2000/11/30 01:16:16 jwise Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -18,6 +18,10 @@ CHECK_MESA=	YES
 USE_MESA=	YES
 .endif
 
+.if !exists(${X11BASE}/lib/libXdpms.a)
+XLOCK_NO_DPMS=	YES
+.endif
+
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 .if defined(XLOCK_LIGHT)
@@ -32,6 +36,10 @@ CONFIGURE_ARGS+= --without-motif --without-sx \
 		--without-nas --without-gtk
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+= --enable-def_play='/usr/bin/audioplay ${PREFIX}/lib/X11/xlockmore/'
+.endif
+
+.if defined(XLOCK_NO_DPMS)
+CONFIGURE_ARGS+= --without-dpms
 .endif
 
 post-patch:
