@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 11:12:21 markd Exp $
+bin/kssh
+share/doc/kde/HTML/en/kssh/common
+share/doc/kde/HTML/en/kssh/index.cache.bz2
+share/doc/kde/HTML/en/kssh/index.docbook
+share/kde/applnk/Internet/kssh.desktop
+share/kde/apps/konsole/kssh.desktop
+share/kde/icons/hicolor/16x16/apps/kssh.png
+share/kde/icons/hicolor/22x22/apps/kssh.png
+share/kde/icons/hicolor/48x48/apps/kssh.png
+share/kde/icons/locolor/16x16/apps/kssh.png
+share/kde/icons/locolor/32x32/apps/kssh.png
+@dirrm share/doc/kde/HTML/en/kssh
