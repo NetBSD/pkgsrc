@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.14 2002/07/21 03:07:10 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.15 2002/07/21 03:25:40 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -358,7 +358,7 @@ BUILDLINK_SHELL?=	/bin/bash
 .  else
 BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash2
 BUILDLINK_SHELL?=	${LOCALBASE}/bin/bash
-.  fi
+.  endif
 .else
 BUILDLINK_SHELL?=	${SH}
 .endif
