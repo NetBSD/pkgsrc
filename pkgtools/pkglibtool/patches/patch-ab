@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.1 1998/10/02 14:46:09 tv Exp $
-
---- ltmain.sh.orig	Tue Jul 21 16:59:33 1998
-+++ ltmain.sh	Tue Jul 21 17:02:42 1998
+--- ltmain.sh.orig	Sun Oct 18 11:59:06 1998
++++ ltmain.sh	Sun Oct 18 11:58:57 1998
 @@ -144,6 +144,8 @@
      prev=execute_dlfiles
      ;;
@@ -11,7 +9,18 @@ $NetBSD: patch-ab,v 1.1 1998/10/02 14:46:09 tv Exp $
    -*)
      $echo "$modename: unrecognized option \`$arg'" 1>&2
      $echo "$help" 1>&2
-@@ -1841,10 +1843,12 @@
+@@ -1655,6 +1657,10 @@
+       -g) prev="-g" ;;
+       -m) prev="-m" ;;
+       -o) prev="-o" ;;
++# Next three options added by Julio Sanchez to support INN installs
++      -b) prev="-b" ;;
++      -O) prev="-O" ;;
++      -G) prev="-G" ;;
+       -s)
+         stripme=" -s"
+         continue
+@@ -1841,10 +1847,12 @@
            IFS="$save_ifs"
          fi
  
@@ -24,7 +33,7 @@ $NetBSD: patch-ab,v 1.1 1998/10/02 14:46:09 tv Exp $
  
          # Maybe install the static library, too.
          test -n "$old_library" && staticlibs="$staticlibs $dir/$old_library"
-@@ -1912,6 +1916,7 @@
+@@ -1912,6 +1920,7 @@
              exit 1
            fi
  
@@ -32,7 +41,7 @@ $NetBSD: patch-ab,v 1.1 1998/10/02 14:46:09 tv Exp $
            finalize=yes
            for lib in $link_against_libtool_libs; do
              # Check to see that each library is installed.
-@@ -1932,6 +1937,7 @@
+@@ -1932,6 +1941,7 @@
                finalize=no
              fi
            done
