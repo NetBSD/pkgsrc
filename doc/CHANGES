@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5711 2004/04/22 09:07:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.5712 2004/04/22 09:22:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2214,3 +2214,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.0c [minskim 2004-04-21]
 	Updated cdrtools-ossdvd to 2.01a24 [wiz 2004-04-21]
 	Updated rhythmbox to 0.8.1 [jmmv 2004-04-22]
+	Updated ocaml to 3.06nb6 [tron 2004-04-22]
+	Updated lablgtk to 1.2.6nb1 [tron 2004-04-22]
