@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/05/10 13:41:11 wiz Exp $
+
+--- ffmpeg.c.orig	2001-08-13 16:24:19.000000000 -0500
++++ ffmpeg.c
+@@ -31,11 +31,22 @@
+ #include <sys/time.h>
+ #include <sys/resource.h>
+ #include <ctype.h>
++#include <limits.h>
+ #endif
+ 
+ #include "avformat.h"
+ 
++#ifdef INT64_MAX
++#define MAXINT64 INT64_MAX
++#else
++#ifdef INT64_C
+ #define MAXINT64 INT64_C(0x7fffffffffffffff)
++#else
++#ifdef QUAD_MAX
++#define MAXINT64 QUAD_MAX
++#endif
++#endif
++#endif
+ 
+ typedef struct {
+     const char *name;
