@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/07 08:22:52 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/22 16:38:38 jlam Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
 DISTNAME=	lcms-1.06
@@ -10,6 +10,7 @@ MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	"Light Color Management System -- a color management library"
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
