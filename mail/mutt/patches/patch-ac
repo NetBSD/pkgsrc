@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.6 2004/02/20 14:02:04 wiz Exp $
 --- curs_main.c.orig	Wed Jan 16 21:44:25 2002
 +++ curs_main.c	Mon Feb  2 08:17:26 2004
 @@ -989,6 +989,11 @@
