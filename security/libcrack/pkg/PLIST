@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/21 11:17:08 rh Exp $
 bin/libcrack_mkdict
 bin/libcrack_packer
 bin/libcrack_testlib
 bin/libcrack_testnum
 bin/libcrack_teststr
 bin/libcrack_unpacker
+include/cracklib/crack.h
 include/cracklib/packer.h
 lib/libcrack.a
 lib/libcrack.la
