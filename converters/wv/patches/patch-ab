@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/27 22:09:18 wiz Exp $
+
+--- ./Makefile.in.orig	Thu Dec 16 16:52:20 1999
++++ ./Makefile.in	Sun Feb 27 20:05:06 2000
+@@ -76,7 +76,7 @@
+ 
+ VPATH = @srcdir@
+ 
+-CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ -I$(srcdir)/oledecod/  @TTF_CFLAGS@ @WMF_CFLAGS@ -DTTFDIR=\"$(libdir)/wv/ttf\" -DXMLCONFIG=\"$(libdir)/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(libdir)/wv/wvHtml.xml\" 
++CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ -I$(srcdir)/oledecod/  @TTF_CFLAGS@ @WMF_CFLAGS@ -DTTFDIR=\"$(libdir)/wv/ttf\" -DXMLCONFIG=\"$(prefix)/share/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(prefix)/share/wv/wvHtml.xml\" 
+ 
+ MKINSTALLDIRS = $(srcdir)/mkinstalldirs
+ 
+@@ -293,10 +293,11 @@
+ 	$(mandir) \
+ 	$(mandir)/man1 \
+ 	$(libdir) \
+-	$(libdir)/wv\
+-	$(libdir)/wv/wingdingfont \
+-	$(libdir)/wv/patterns \
+-	$(libdir)/wv/ttf \
++	$(prefix)/share/wv\
++	$(prefix)/share/wv/wingdingfont \
++	$(prefix)/share/wv/patterns \
++	$(prefix)/share/wv/ttf \
++	$(prefix)/share/wv \
+ 	$(includedir)
+ 	
+ 
+@@ -313,13 +314,16 @@
+ 	$(INSTALL_DATA) $(srcdir)/wvHtml.1 $(mandir)/man1/
+ 	$(INSTALL_DATA) wv.h $(includedir)/wv.h
+ 	$(INSTALL_DATA) $(srcdir)/libwv.a $(libdir)/libwv.a
+-	$(INSTALL_DATA) $(srcdir)/wvHtml.xml $(libdir)/wv/wvHtml.xml
+-	$(INSTALL_DATA) $(srcdir)/wvConfig.xml $(libdir)/wv/wvConfig.xml
++	$(INSTALL_DATA) $(srcdir)/lyx.xml $(prefix)/share/wv/lyx.xml
++	$(INSTALL_DATA) $(srcdir)/wvHtml.xml $(prefix)/share/wv/wvHtml.xml
++	$(INSTALL_DATA) $(srcdir)/wvConfig.xml $(prefix)/share/wv/wvConfig.xml
++	$(INSTALL_DATA) $(srcdir)/wvLaTeX.xml $(prefix)/share/wv/wvLaTeX.xml
++	$(INSTALL_DATA) $(srcdir)/wvOnline.xml $(prefix)/share/wv/wvOnline.xml
+ 	for filename in wingdingfont/*.gif; do \
+-		$(INSTALL_DATA) $$filename $(libdir)/wv/wingdingfont; \
++		$(INSTALL_DATA) $$filename $(prefix)/share/wv/wingdingfont; \
+ 	done
+ 	for filename in patterns/*.gif patterns/*.jpg; do \
+-		$(INSTALL_DATA) $$filename $(libdir)/wv/patterns; \
++		$(INSTALL_DATA) $$filename $(prefix)/share/wv/patterns; \
+ 	done
+ 
+ 

@@ -1,0 +1,5 @@
+wv is a collection of programs that understand the Microsoft Word 6,
+7, and 8 binary file formats (Office 95/97/2000), display information
+about them and can convert them to HTML or LaTeX.
+
+It also supports reading encrypted Word documents.
