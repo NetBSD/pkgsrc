@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2001/08/11 18:32:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/09/24 20:45:25 tron Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
@@ -102,6 +102,7 @@ include/gal/e-table/e-table-subset.h
 include/gal/e-table/e-table-subset-variable.h
 include/gal/e-table/e-tree-model.h
 include/gal/e-table/e-table-tooltip.h
+include/gal/e-table/e-table-without.h
 include/gal/e-text/e-completion-match.h
 include/gal/menus/gal-define-views-dialog.h
 include/gal/menus/gal-define-views-model.h
@@ -125,19 +126,20 @@ include/gal/widgets/e-categories-master-list-dialog-model.h
 include/gal/widgets/e-categories-master-list-dialog.h
 include/gal/widgets/e-categories-master-list.h
 include/gal/widgets/e-reflow-model.h
-lib/libgal.so.9.0
-lib/libgal.so.9
+lib/libgal.so.12.0
+lib/libgal.so.12
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
 lib/galConf.sh
-share/etable/0.10/glade/e-table-config.glade
-share/etable/0.10/glade/e-table-field-chooser.glade
-share/etable/0.10/glade/e-table-group.glade
-share/gal/0.10/glade/e-categories-master-list-dialog.glade
-share/gal/0.10/glade/gal-categories.glade
-share/gal/0.10/glade/gal-define-views.glade
-share/gal/0.10/glade/gal-view-new-dialog.glade
+share/etable/${PKGVERSION}/glade/e-table-config.glade
+share/etable/${PKGVERSION}/glade/e-table-field-chooser.glade
+share/etable/${PKGVERSION}/glade/e-table-group.glade
+share/etable/${PKGVERSION}/glade/e-table-config-no-group.glade
+share/gal/${PKGVERSION}/glade/e-categories-master-list-dialog.glade
+share/gal/${PKGVERSION}/glade/gal-categories.glade
+share/gal/${PKGVERSION}/glade/gal-define-views.glade
+share/gal/${PKGVERSION}/glade/gal-view-new-dialog.glade
 share/gal/html/gal-api.sgml
 share/gal/html/gal.hierarchy
 share/gal/html/gal.signals
@@ -188,17 +190,17 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gal.mo
 @exec mkdir -p -m 0755 %D/share/gal/html/gal
 @dirrm share/pixmaps/gal/categories
 @dirrm share/pixmaps/gal
 @dirrm share/gal/html/gal
 @dirrm share/gal/html
-@dirrm share/gal/0.10/glade
-@dirrm share/gal/0.10
+@dirrm share/gal/${PKGVERSION}/glade
+@dirrm share/gal/${PKGVERSION}
 @dirrm share/gal
-@dirrm share/etable/0.10/glade
-@dirrm share/etable/0.10
+@dirrm share/etable/${PKGVERSION}/glade
+@dirrm share/etable/${PKGVERSION}
 @dirrm share/etable
 @dirrm include/gal/widgets
 @dirrm include/gal/util
