@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/09/07 03:48:03 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:51:44 agc Exp $
 
 SHA1 (psutils-p17.tar.gz) = 6f1ecb5846cffb644826a02bd9153fe5d6387a9b
+RMD160 (psutils-p17.tar.gz) = 1494f37e7ae809f0e446d52d4b3a21cd48690cc0
 Size (psutils-p17.tar.gz) = 62039 bytes
 SHA1 (patch-aa) = 90961e898a113c4d4fa64e8d44d40469c76f156d
 SHA1 (patch-ab) = 818a4169aaa9765c9629bb2a01eb5fa887b90f7f

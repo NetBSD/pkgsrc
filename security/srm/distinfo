@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/01 09:43:07 cube Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:13 agc Exp $
 
 SHA1 (srm-1.2.8.tar.gz) = 8b7aafc95b3ef67e2c737030567222bf50082188
+RMD160 (srm-1.2.8.tar.gz) = d1ce5fe2ec13e45c5620e6a71c1f2dfcb49ab1bc
 Size (srm-1.2.8.tar.gz) = 88067 bytes

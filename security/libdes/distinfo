@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/01/19 09:04:02 salo Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:10:07 agc Exp $
 
 SHA1 (libdes-4.04b.tar.gz) = ef16e13fd3399be145ce391325c11292babc7cf1
+RMD160 (libdes-4.04b.tar.gz) = 2e9a7f35b3710cc1c549ad1e6f4296467ee51a45
 Size (libdes-4.04b.tar.gz) = 142195 bytes
 SHA1 (patch-aa) = b2c3f5b66d0fc3535e1f3e0d6732a85dfe7fefdb
 SHA1 (patch-ab) = e5ec4626277b60f103594261f91d7dab2c9938ff

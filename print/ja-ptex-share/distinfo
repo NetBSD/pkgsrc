@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/15 20:02:49 kei Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:51:43 agc Exp $
 
 SHA1 (teTeX/ptex-texmf-2.1.tar.gz) = 15668bf657db7b1447004aeb548977e29d0a28a9
+RMD160 (teTeX/ptex-texmf-2.1.tar.gz) = eddb0959f94671e4a09e9710cfe5090d90fd96b1
 Size (teTeX/ptex-texmf-2.1.tar.gz) = 1864219 bytes
 SHA1 (teTeX/jis.tar.gz) = f71de759a8c518603c6ab612da57f46c3a5b9149
+RMD160 (teTeX/jis.tar.gz) = 2ec9b3736c107349e3d3f60adcb2afba4e4861e8
 Size (teTeX/jis.tar.gz) = 347201 bytes
 SHA1 (teTeX/nmin-ngoth.tar.gz) = 3bf7bdcf492b115d333e79d3914ba23a6b84e7f4
+RMD160 (teTeX/nmin-ngoth.tar.gz) = fb54571585a3d720c342814ee91451cd6cceefdf
 Size (teTeX/nmin-ngoth.tar.gz) = 524406 bytes
 SHA1 (teTeX/standard.tar.gz) = 2654b20b5125a0eea2c22ca4cdc4cbcd459434ca
+RMD160 (teTeX/standard.tar.gz) = cf8873dcf3495fa7426226d282331a2ad84b2691
 Size (teTeX/standard.tar.gz) = 1043476 bytes
 SHA1 (teTeX/morisawa.tar.gz) = 7014f652092b52138588ad1e27d639eb400a9c55
+RMD160 (teTeX/morisawa.tar.gz) = 776084b6c78cf9e81035e1a1d9d91283c57b9c11
 Size (teTeX/morisawa.tar.gz) = 653674 bytes
