@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2004/09/14 17:18:05 jlam Exp $
+# $NetBSD: Makefile,v 1.129.2.1 2004/11/18 22:25:13 salo Exp $
 
-DISTNAME=		samba-3.0.7
+DISTNAME=		samba-3.0.8
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
@@ -35,7 +36,7 @@ SAMBA_LOCKDIR?=		${SAMBA_VARDIR}/db/samba
 SAMBA_LOGDIR?=		${SAMBA_VARDIR}/log
 SAMBA_PIDDIR?=		${SAMBA_VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
-SAMBA_VARDIR?=		/var
+SAMBA_VARDIR?=		${VARBASE}
 
 FILES_SUBST=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
@@ -144,6 +145,9 @@ post-install:
 	cd ${WRKSRC}/pam_smbpass/samples; for file in [a-z]*; do	\
 		${INSTALL_DATA} $${file} ${EGDIR}/pam_smbpass/$${file};	\
 	done
+.endif
+.if !empty(PKG_OPTIONS:Mcups)
+	cd ${PREFIX}/libexec/cups/backend && ${LN} -s ../../../bin/smbspool smb
 .endif
 
 .include "../../mk/bsd.pkg.mk"
