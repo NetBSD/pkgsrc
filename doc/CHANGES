@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2325 2003/05/25 19:58:36 seb Exp $
+$NetBSD: CHANGES,v 1.2326 2003/05/25 23:45:34 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2160,3 +2160,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated suse_libpng to 7.3nb1 [taca 2003-05-25]
 	Updated gcc3 to 3.3 [grant 2003-05-25]
 	Updated scli to 0.2.12nb1 [seb 2003-05-25]
+	Updated sylpheed to 0.9.0 [chris 2003-05-26]
