@@ -1,21 +1,18 @@
-# New ports collection makefile for:	libaudiofile
-# Version required:			0.1.5
-# Date created:				22 Dec 1998
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.ORG>
-#
-# Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
+# $NetBSD: Makefile,v 1.2 1999/03/06 21:31:41 tron Exp $
+# FreeBSD Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
 #
 
-DISTNAME=	libaudiofile-0.1.5
+DISTNAME=	audiofile-0.1.6
+PKGNAME=	libaudiofile-0.1.6
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	libaudiofile
+MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
+		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
 
-MAINTAINER=	vanilla@FreeBSD.ORG
+MAINTAINER=	tron@netbsd.org
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+CONFIGURE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-post-install:
-	@${SETENV} OBJFORMAT=${PORTOBJFORMAT} ${LDCONFIG} -m ${PREFIX}/lib
-
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>
