@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/02/12 02:35:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -74,29 +74,31 @@ BUILDLINK_IS_BUILTIN.heimdal!=		\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.heimdal=${BUILDLINK_IS_BUILTIN.heimdal}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.heimdal=	YES
-.else
-BUILDLINK_USE_BUILTIN.heimdal=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.heimdal=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.heimdal=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mheimdal) && \
-    !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.heimdal=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mheimdal)
-BUILDLINK_USE_BUILTIN.heimdal=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.heimdal:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.heimdal=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.heimdal)
+.  if !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.heimdal=	YES
+.  else
+BUILDLINK_USE_BUILTIN.heimdal=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.heimdal=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.heimdal=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mheimdal) && \
+      !empty(BUILDLINK_IS_BUILTIN.heimdal:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.heimdal=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mheimdal)
+BUILDLINK_USE_BUILTIN.heimdal=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.heimdal:M[nN][oO])

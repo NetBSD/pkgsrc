@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2004/02/17 13:44:34 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -92,29 +92,31 @@ BUILDLINK_IS_BUILTIN.Xrender!=		\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xrender=${BUILDLINK_IS_BUILTIN.Xrender}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xrender=	YES
-.else
-BUILDLINK_USE_BUILTIN.Xrender=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xrender=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xrender=	NO
-.endif
-.if !empty(PREFER_NATIVE:MXrender) && \
-    !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xrender=	YES
-.endif
-.if !empty(PREFER_PKGSRC:MXrender)
-BUILDLINK_USE_BUILTIN.Xrender=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.Xrender=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.Xrender)
+.  if !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	YES
+.  else
+BUILDLINK_USE_BUILTIN.Xrender=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:MXrender) && \
+      !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:MXrender)
+BUILDLINK_USE_BUILTIN.Xrender=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.Xrender:M[nN][oO])
