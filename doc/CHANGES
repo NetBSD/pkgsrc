@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6187 2004/06/07 23:41:01 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.6188 2004/06/08 14:54:13 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2848,3 +2848,5 @@ Changes to the packages collection and infrastructure in 2004:
 	bsd.pkg.mk: started freeze for pkgsrc-2004Q2 branch [agc 2004-06-07]
 	Updated jakarta-tomcat to 5.0.24nb1 [xtraeme 2004-06-07]
 	Updated fontconfig to 2.2.95 [dmcmahill 2004-06-07]
+	Updated sun-jre13 to 1.0.12 [jschauma 2004-06-08]
+	Updated sun-jdk13 to 1.0.12 [jschauma 2004-06-08]
