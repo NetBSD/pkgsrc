@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/03 23:02:24 xtraeme Exp $
 #
 
-DISTNAME=		bitlbee-0.84
-PKGREVISION=		2
+DISTNAME=		bitlbee-0.90
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -20,6 +19,7 @@ CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--config=${STATEDIR}
+CONFIGURE_ARGS+=	--flood=1
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
