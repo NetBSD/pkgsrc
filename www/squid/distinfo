@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2004/01/20 06:49:21 taca Exp $
+$NetBSD: distinfo,v 1.48 2004/02/12 14:45:00 taca Exp $
 
 SHA1 (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 470a2697625cf6edb83ad6fe59af2e147f557e24
 Size (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 1036704 bytes
@@ -70,8 +70,18 @@ SHA1 (squid-2.5.4/squid-2.5.STABLE4-ldap_tls.patch) = 3d20ba0a993cb9fcc3c2193207
 Size (squid-2.5.4/squid-2.5.STABLE4-ldap_tls.patch) = 1853 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-ldap_group_bufsize.patch) = 7f9415c2068a0df5560c853696823816781ce950
 Size (squid-2.5.4/squid-2.5.STABLE4-ldap_group_bufsize.patch) = 762 bytes
-SHA1 (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = 22107d8cfa63eea6bbb18ccc3cd03954a839503d
-Size (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = 11032 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = db70ba21cf79b7a28e89658f70e068a2d5215f80
+Size (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = 12322 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-empty_proxy_auth.patch) = 7c915ff182178f6315831999290d80282f409290
+Size (squid-2.5.4/squid-2.5.STABLE4-empty_proxy_auth.patch) = 2719 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ftp_telnet.patch) = 985d113918bd59bb32bbf2924fae4dd1267e5d64
+Size (squid-2.5.4/squid-2.5.STABLE4-ftp_telnet.patch) = 3844 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ntlm_auth_popups.patch) = d55620fbd667c14098d5dec0a2c1fd1f7ce79686
+Size (squid-2.5.4/squid-2.5.STABLE4-ntlm_auth_popups.patch) = 63653 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ldap_group-S.patch) = f290046043732b92014b3957806dab32675d448b
+Size (squid-2.5.4/squid-2.5.STABLE4-ldap_group-S.patch) = 993 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ipcache_purge.patch) = fe724fd85cd3de56a1d80d097d3847ab9572f360
+Size (squid-2.5.4/squid-2.5.STABLE4-ipcache_purge.patch) = 1022 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
