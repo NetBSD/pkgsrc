@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2003/12/18 09:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2003/12/18 09:59:55 wiz Exp $
 #
 
 COMMENT=	Window managers (for X)
@@ -43,7 +43,7 @@ SUBDIR+=	novawm
 SUBDIR+=	obconf
 SUBDIR+=	olvwm
 SUBDIR+=	openbox
-SUBDIR+=	openbox3
+SUBDIR+=	openbox2
 SUBDIR+=	oroborus
 SUBDIR+=	pekwm
 SUBDIR+=	piewm
