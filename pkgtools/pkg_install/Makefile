@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/04/17 14:44:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2001/04/19 01:50:06 hubertf Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -29,7 +29,7 @@ MANCOMPRESSED_IF_MANZ=	yes
 LOCALBASE=		/usr
 PKG_DBDIR?=		/var/db/pkg
 
-.if ! exists(/usr/share/tmac/tmac.andoc)
+.if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
 IGNORE+=		"You need to have the 'text' set installed to build this package!"
 .endif
 
