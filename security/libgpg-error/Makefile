@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:18:09 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/15 18:21:56 minskim Exp $
 #
 
-DISTNAME=	libgpg-error-0.6
-PKGREVISION=	2
+DISTNAME=	libgpg-error-1.0
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.gnupg.org/GnuPG/alpha/libgpg-error/
+MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
@@ -16,6 +15,10 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
+#USE_GNU_TOOLS+=		awk
+
+MAKE_ENV+=		LC_CTYPE="C"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
