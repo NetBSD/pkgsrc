@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/04/06 09:24:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/07 11:39:48 jmmv Exp $
 
-DISTNAME=		libgtop-2.5.2
+DISTNAME=		libgtop-2.6.0
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		1
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.5/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -28,7 +27,7 @@ USE_MSGFMT_PLURALS=	YES
 	(${MACHINE_ARCH} != x86_64)
 PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
 PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
-PKG_FAIL_REASON+=	"and update patches/patch-al appropriately."
+PKG_FAIL_REASON+=	"and update ${WRKSRC}/sysdeps/freebsd/prockernel.c appropriately."
 PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
 .  endif
 .endif
