@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/06/26 17:48:56 grant Exp $
+# $NetBSD: Makefile,v 1.52 2004/06/26 18:00:21 grant Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -39,6 +39,7 @@ SUBDIR+=	libdvdread
 SUBDIR+=	libflash
 SUBDIR+=	libmatroska
 SUBDIR+=	libmpeg2
+SUBDIR+=	libmpeg3
 SUBDIR+=	libogg
 SUBDIR+=	libtheora
 SUBDIR+=	lsdvd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.508 2004/06/26 09:16:10 grant Exp $
+# $NetBSD: Makefile,v 1.509 2004/06/26 18:00:21 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -209,7 +209,6 @@ SUBDIR+=	libidn
 SUBDIR+=	libjit
 SUBDIR+=	libmemmgr
 SUBDIR+=	libmm
-SUBDIR+=	libmpeg3
 SUBDIR+=	libnet
 SUBDIR+=	libntlm
 SUBDIR+=	libole2
