@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.140 1998/08/07 10:04:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.141 1998/08/07 12:30:29 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1386,6 +1386,10 @@ fetch-list-one-pkg:
 makesum: fetch
 	@${MKDIR} ${FILESDIR}
 	@if [ -f ${MD5_FILE} ]; then ${RM} -f ${MD5_FILE}; fi
+	@${ECHO} -n "$$" > ${MD5_FILE};			\
+		${ECHO} -n "NetBSD" >> ${MD5_FILE}; 	\
+		${ECHO} "$$" >> ${MD5_FILE};		\
+		${ECHO} "" >> ${MD5_FILE}
 	@(cd ${DISTDIR}; \
 	 for file in ${_CKSUMFILES}; do \
 		${MD5} $$file >> ${MD5_FILE}; \
