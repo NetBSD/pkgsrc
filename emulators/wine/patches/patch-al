@@ -1,0 +1,72 @@
+--- configure.in.orig	Sun Jun 14 16:46:00 1998
++++ configure.in	Thu Jun 18 21:57:10 1998
+@@ -73,6 +73,8 @@
+ 
+ dnl Check for -li386 for NetBSD and OpenBSD
+ AC_CHECK_LIB(i386,i386_set_ldt)
++dnl Check for -lossaudio for NetBSD
++AC_CHECK_LIB(ossaudio,main)
+ dnl Check for -lw for Solaris
+ AC_CHECK_LIB(w,iswalnum)
+ dnl Check for XFree86 DGA extension
+@@ -96,7 +98,13 @@
+ #if !defined(SNDCTL_DSP_STEREO)
+ #error No open sound system
+ #endif
+-],ac_cv_c_opensoundsystem="yes",ac_cv_c_opensoundsystem="no"))
++],ac_cv_c_opensoundsystem="yes",
++	AC_TRY_COMPILE([#include <soundcard.h>],[
++/* check for one of the Open Sound System specific SNDCTL_ defines */
++#if !defined(SNDCTL_DSP_STEREO)
++#error No open sound system
++#endif
++],ac_cv_c_opensoundsystem="yes",ac_cv_c_opensoundsystem="no")))
+ 
+ if test "$ac_cv_c_opensoundsystem" = "yes"
+ then
+@@ -178,23 +186,40 @@
+ dnl **** Check for working dll ****
+ 
+ DLLFLAGS=""
++LDSHARE=""
+ if test "$LIB_TARGET" = "libwine.so.1.0"
+ then
+-  AC_CACHE_CHECK("whether we can build a dll",
+-                 ac_cv_c_dll,
++  AC_CACHE_CHECK("whether we can build a Linux dll",
++                 ac_cv_c_dll_linux,
+   [saved_cflags=$CFLAGS
+   CFLAGS="$CFLAGS -fPIC -shared -Wl,-soname,conftest.so.1.0"
+-  AC_TRY_LINK(,[return 1],ac_cv_c_dll="yes",ac_cv_c_dll="no")
++  AC_TRY_LINK(,[return 1],ac_cv_c_dll_linux="yes",ac_cv_c_dll_linux="no")
++  CFLAGS=$saved_cflags
++  ])
++  if test "$ac_cv_c_dll_linux" = "yes"
++  then
++    DLLFLAGS="-fPIC"
++    LDSHARE="$$(CC) -shared -Wl,-soname,libwine.so"
++  fi
++  AC_CACHE_CHECK("whether we can build a NetBSD dll",
++                 ac_cv_c_dll_netbsd,
++  [saved_cflags=$CFLAGS
++  CFLAGS="$CFLAGS -fPIC -Bshareable -Bforcearchive"
++  AC_TRY_LINK(,[return 1],ac_cv_c_dll_netbsd="yes",ac_cv_c_dll_netbsd="no")
+   CFLAGS=$saved_cflags
+   ])
+-  if test "$ac_cv_c_dll" = "yes"
++  if test "$ac_cv_c_dll_netbsd" = "yes"
+   then
+     DLLFLAGS="-fPIC"
+-  else
++    LDSHARE="ld -Bshareable -Bforcearchive"
++  fi
++  if test "$ac_cv_c_dll_linux" = "no" -a "$ac_cv_c_dll_netbsd" = "no"
++  then
+     LIB_TARGET="libwine.a"
+   fi
+ fi
+ AC_SUBST(DLLFLAGS)
++AC_SUBST(LDSHARE)
+ 
+ dnl **** Check for reentrant X libraries ****
+ dnl
