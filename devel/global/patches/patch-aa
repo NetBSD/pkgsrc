@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 1999/01/09 04:17:00 abs Exp $
+
+--- htags/htags.pl.orig	Fri Jan  8 19:51:30 1999
++++ htags/htags.pl	Fri Jan  8 19:52:45 1999
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ #
+ # Copyright (c) 1996, 1997, 1998 Shigio Yamaguchi. All rights reserved.
+ #
