@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.9 1999/03/05 11:32:22 tron Exp $
+$NetBSD: patch-ac,v 1.10 1999/08/28 09:36:33 rh Exp $
 
---- gtk/Makefile.in.orig	Thu Feb 25 21:15:36 1999
-+++ gtk/Makefile.in	Wed Mar  3 23:37:29 1999
-@@ -152,7 +152,7 @@
- gdk_headers =  	../gdk/gdktypes.h 	../gdk/gdkrgb.h
+--- gtk/Makefile.in.orig	Tue Aug 24 00:08:04 1999
++++ gtk/Makefile.in	Fri Aug 27 20:53:31 1999
+@@ -136,7 +136,7 @@
  
- 
--libgtk_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)		-release $(LT_RELEASE) 						@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm
-+libgtk_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 						@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm
+ # libtool stuff: set version and export symbols for resolving
+ libgtkincludedir = $(includedir)/gtk
+-libgtk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)		-release $(LT_RELEASE) 						-export-dynamic							@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm							@STRIP_END@
++libgtk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)	-export-dynamic							@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm							@STRIP_END@
  
  #	$(top_builddir)/gdk/libgdk.la
  

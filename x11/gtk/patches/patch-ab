@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.10 1999/03/05 11:32:22 tron Exp $
+$NetBSD: patch-ab,v 1.11 1999/08/28 09:36:33 rh Exp $
 
---- gdk/Makefile.in.orig	Thu Feb 25 21:15:33 1999
-+++ gdk/Makefile.in	Wed Mar  3 23:33:09 1999
-@@ -139,7 +139,7 @@
- LDADDS =  	@x_ldflags@		@x_libs@		@GLIB_LIBS@		-lm
+--- gdk/Makefile.in.orig	Tue Aug 24 00:08:02 1999
++++ gdk/Makefile.in	Fri Aug 27 20:51:55 1999
+@@ -136,7 +136,7 @@
+ 
+ # libtool stuff: set version and export symbols for resolving
+ libgdkincludedir = $(includedir)/gdk
+-libgdk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-release $(LT_RELEASE) 	-export-dynamic 	@GLIB_DEPLIBS@		@x_ldflags@		@x_libs@		-lm		@STRIP_END@
++libgdk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-export-dynamic 	@GLIB_DEPLIBS@		@x_ldflags@		@x_libs@		-lm		@STRIP_END@
  
  
--libgdk_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE)          @GLIB_DEPLIBS@	         @x_ldflags@	         @x_libs@	         -lm
-+libgdk_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)          @GLIB_DEPLIBS@	         @x_ldflags@	         @x_libs@	         -lm
- 
- 
- EXTRA_PROGRAMS = gxid
+ #
