@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2001/04/17 16:03:20 skrll Exp $
+$NetBSD: patch-ap,v 1.2 2001/04/19 06:47:00 skrll Exp $
 
 --- kscd/libwm/include/wm_config.h.orig	Mon Jan 22 12:14:45 2001
 +++ kscd/libwm/include/wm_config.h
-@@ -128,9 +128,26 @@
+@@ -128,11 +128,31 @@
   ***  ******  **  **  ******  ******  **  ******  **  *  **********
   ***  ******  **  **      **      **     ****    ***    ***********
   ******************************************************************/
@@ -10,9 +10,9 @@ $NetBSD: patch-ap,v 1.1 2001/04/17 16:03:20 skrll Exp $
 +#if defined(__FreeBSD__) || defined(__FreeBSD)
  
  #define DEFAULT_CD_DEVICE	"/dev/rmatcd0c"
+ 
 +
-+
-+#endif /* freebsd */
+ #endif /* freebsd */
 +
 +/******************************************************************
 + * NetBSD
@@ -23,10 +23,15 @@ $NetBSD: patch-ap,v 1.1 2001/04/17 16:03:20 skrll Exp $
 + ***  **    **  ********  ****  **  ******  **  *  ****************
 + ***  ***   **      ****  ****     ****    ***    *****************
 + ******************************************************************/
-+*******************************/
 +#if defined(__NetBSD__) || defined(__NetBSD)
 +
++#if defined(__i386__)
 +#define DEFAULT_CD_DEVICE	"/dev/rcd0d"
++#else
++#define DEFAULT_CD_DEVICE	"/dev/rcd0c"
++#endif
++
++#endif /* netbsd */
  
- #endif /* freebsd */
- 
+ /******************************************************************
+  * HP-UX
