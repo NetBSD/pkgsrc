@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.427 2002/10/31 14:07:02 toshii Exp $
+$NetBSD: CHANGES,v 1.428 2002/10/31 17:44:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3471,3 +3471,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated grepmail to 4.80 [seb 2002-10-31]
 	Updated standalone-tcsh to 6.12.00nb1 [wiz 2002-10-31]
 	Updated monafonts to 2.21 [toshii 2002-10-31]
+	Updated opera6 to 6.10 [tron 2002-10-31]
