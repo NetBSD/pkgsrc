@@ -1,0 +1,26 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/01/02 02:51:40 cube Exp $
+
+DISTNAME=		ppp-${PPPD_VERSION}
+PKGNAME=		${DISTNAME:S/ppp/&d/}
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.samba.org/pub/ppp/
+
+MAINTAINER=		cube@NetBSD.org
+HOMEPAGE=		http://ppp.samba.org/
+COMMENT=		PPP Daemon
+
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+HAS_CONFIGURE=		yes
+USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		yes
+
+ONLY_FOR_PLATFORM+=	NetBSD-*-* Linux-*-*
+
+PKG_SYSCONFSUBDIR=	ppp
+CONFIGURE_ENV+=		PREFIX=${PREFIX} PKGSYSCONFDIR=${PKG_SYSCONFDIR}
+
+PPPD_VERSION=	2.4.3
+PLIST_SUBST+=	PPPD_VERSION=${PPPD_VERSION}
+
+.include "../../mk/bsd.pkg.mk"
