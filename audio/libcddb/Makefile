@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/22 16:08:47 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/11 04:23:07 minskim Exp $
 #
 
 DISTNAME=	libcddb-0.9.4
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcddb/}
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://libcddb.sourceforge.net/
 COMMENT=	Library to access data on a CDDB server
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
