@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.21 2003/12/08 15:28:54 grant Exp $
+# $NetBSD: Makefile.in,v 1.22 2003/12/10 07:21:20 grant Exp $
 #
 
 srcdir=		@srcdir@
@@ -24,7 +24,8 @@ INCS=		nbcompat.h nbcompat/err.h nbcompat/fts.h nbcompat/getopt.h \
 		nbcompat/nbtypes.h nbcompat/poll.h nbcompat/rmd160.h \
 		nbcompat/sha1.h nbcompat/statfs.h nbcompat/vis.h
 
-OBJS=		@LIBOBJS@
+# always use our local glob() implementation.
+OBJS=		glob.o @LIBOBJS@
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
@@ -36,12 +37,8 @@ all: nbcompat/nbtypes.h nbcompat/nbconfig.h $(LIB)
 .c.o: nbcompat/nbtypes.h
 	$(COMPILE) $(DEFS) -c $<
 
-# Add dummy.o not to become totally empty, which some ld's don't like.
-$(LIB): $(OBJS) dummy.o
-	@set -x; case "$(OBJS)" in		\
-		*.*)	$(AR) cr $@ $(OBJS);;	\
-		*)	$(AR) cr $@ dummy.o;;	\
-		esac
+$(LIB): $(OBJS)
+	$(AR) cr $@ $(OBJS)
 	$(RANLIB) $@
 
 nbcompat/nbconfig.h: nbcompat/config.h

@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.32 2003/12/08 14:52:02 grant Exp $
+dnl $NetBSD: configure.ac,v 1.33 2003/12/10 07:21:20 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -33,7 +33,7 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 
 AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
-	errno.h fcntl.h fts.h glob.h inttypes.h libutil.h limits.h \
+	errno.h fcntl.h fts.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
 	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
@@ -117,7 +117,7 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
+AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv inet_ntop \
 	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
 	poll setprogname snprintf strdup strerror strlcat strlcpy \
 	strmode strptime strsep strtoll timegm usleep])
@@ -215,22 +215,6 @@ if test $pkg_use_nbcompat_statfs = yes; then
 	])
 	AC_LIBOBJ(statfs)
 fi
-
-pkg_use_nbcompat_glob=yes
-AC_MSG_TRY_COMPILE([if GLOB_NOMATCH and GLOB_ABORTED are defined in glob.h],
-	pkg_cv_GLOB_NOMATCH_ABORTED,
-	[ #include <glob.h> ],
-	[ int f = GLOB_NOMATCH + GLOB_ABORTED ],
-	[ pkg_use_nbcompat_glob=no ])
-
-if test $pkg_use_nbcompat_glob = yes; then
-	AC_DEFINE(HAVE_NBCOMPAT_GLOB, 1)
-	AH_TEMPLATE([HAVE_NBCOMPAT_GLOB], [
-		Define to 1 if the `glob' function is built into the library.
-	])
-	AC_LIBOBJ(glob)
-fi
-
 
 if test $ac_cv_type_long_long = yes -a $ac_cv_sizeof_off_t -ge 8; then
 
