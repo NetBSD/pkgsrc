@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/02/17 15:28:03 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/29 04:54:09 cjep Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -34,6 +34,7 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_PERL5=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
