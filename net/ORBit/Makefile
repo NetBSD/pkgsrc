@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/27 22:04:16 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/05/02 14:11:40 tron Exp $
 #
 
 DISTNAME=	ORBit-0.4.3
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	glib-1.2.1:../../devel/glib
+DEPENDS+=	glib-1.2.2:../../devel/glib
 DEPENDS+=	gindent-1.9.1:../../devel/gindent
 
 GNU_CONFIGURE=	yes
