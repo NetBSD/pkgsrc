@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6710 2004/07/28 10:41:14 rh Exp $
+$NetBSD: CHANGES,v 1.6711 2004/07/28 10:46:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkgdepgraph to 2.7 [atatat 2004-07-28]
 	Updated TeXmacs to 1.0.3.11 [recht 2004-07-28]
 	Updated bpalogin to 2.0.2 [rh 2004-07-28]
+	Updated TeXmacs to 1.0.4 [recht 2004-07-28]
