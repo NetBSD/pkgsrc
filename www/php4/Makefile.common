@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2001/04/30 03:25:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2001/05/01 17:28:41 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.4pl1
@@ -17,6 +17,7 @@ HOMEPAGE=		http://www.php.net/
 # Put this dependency here to compile in dbm support for all PHP4 modules.
 DEPENDS+=               gdbm>=1.7.3:../../databases/gdbm
 
+DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 FILESDIR=		${.CURDIR}/../../www/php4/files
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
