@@ -1,0 +1,120 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+
+--- gnome-cd/bsd-cdrom.c.orig	2003-01-11 06:23:03.000000000 -0600
++++ gnome-cd/bsd-cdrom.c
+@@ -20,7 +20,7 @@
+ #endif
+ #include <errno.h>
+ 
+-#include "freebsd-cdrom.h"
++#include "bsd-cdrom.h"
+ 
+ #define CD_FRAMES	75
+ 
+@@ -166,7 +166,12 @@ freebsd_cdrom_update_cd (GnomeCDRom *cdr
+ {
+ 	FreeBSDCDRom *lcd = FREEBSD_CDROM (cdrom);
+ 	FreeBSDCDRomPrivate *priv;
++#ifdef __FreeBSD__
+ 	struct ioc_read_toc_single_entry tocentry;
++#else
++	struct ioc_read_toc_entry tocentries;
++	struct cd_toc_entry tocentry;
++#endif
+ 	int i, j;
+ 	GError *error;
+ 
+@@ -190,29 +195,53 @@ freebsd_cdrom_update_cd (GnomeCDRom *cdr
+ 
+ 	freebsd_cdrom_invalidate (lcd);
+ 	priv->track_info = g_malloc ((priv->number_tracks + 1) * sizeof (FreeBSDCDRomTrackInfo));
++#ifdef __FreeBSD__
+ 	for (i = 0, j = priv->track0; i < priv->number_tracks; i++, j++) {
+ 		tocentry.track = j;
+ 		tocentry.address_format = CD_MSF_FORMAT;
++#else
++	tocentries.data_len = sizeof(tocentry);
++	tocentries.data = &tocentry;
++	for (i = 0, j = priv->track0; i < priv->number_tracks; i++, j++) {
++		tocentries.starting_track = j;
++		tocentries.address_format = CD_MSF_FORMAT;
++#endif
+ 
+-		if (ioctl (cdrom->fd, CDIOREADTOCENTRY, &tocentry) < 0) {
++		if (ioctl (cdrom->fd, CDIOREADTOCENTRYS, &tocentries) < 0) {
+ 			g_warning ("IOCtl failed");
+ 			continue;
+ 		}
+ 
+ 		priv->track_info[i].track = j;
++#ifdef __FreeBSD__
+ 		priv->track_info[i].audio_track = tocentry.entry.control == 0 ? 1 : 0;
+ 		ASSIGN_MSF (priv->track_info[i].address, tocentry.entry.addr.msf);
++#else
++		priv->track_info[i].audio_track = tocentry.control == 0 ? 1 : 0;
++		ASSIGN_MSF (priv->track_info[i].address, tocentry.addr.msf);
++#endif
+ 	}
+ 
++#ifdef __FreeBSD__
+ 	/* On FreeBSD, the leadout track is the track LAST_TRACK + 1. */
+ 	tocentry.track = priv->number_tracks + 1;
+ 	tocentry.address_format = CD_MSF_FORMAT;
+ 	if (ioctl (cdrom->fd, CDIOREADTOCENTRY, &tocentry) < 0) {
++#else
++	/* On NetBSD, the leadout track is the track 0xAA. */
++	tocentries.starting_track = 0xAA;
++	tocentries.address_format = CD_MSF_FORMAT;
++	if (ioctl (cdrom->fd, CDIOREADTOCENTRYS, &tocentries) < 0) {
++#endif
+ 		g_warning ("Error getting leadout");
+ 		freebsd_cdrom_invalidate (lcd);
+ 		return;
+ 	}
++#ifdef __FreeBSD__
+ 	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.entry.addr.msf);
++#else
++	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.addr.msf);
++#endif
+ 	calculate_track_lengths (lcd);
+ 
+ 	freebsd_cdrom_close (lcd);
+@@ -232,11 +261,18 @@ freebsd_cdrom_eject (GnomeCDRom *cdrom,
+ 		return FALSE;
+ 	}
+ 
++#ifdef __FreeBSD__
+ 	if (gnome_cdrom_get_status (cdrom, &status, error) == FALSE) {
+ 		freebsd_cdrom_close (lcd);
+ 		g_free (status);
+ 		return FALSE;
+ 	}
++#else
++	status = g_new0 (GnomeCDRomStatus, 1);
++	status->volume = 0;
++	status->cd = GNOME_CDROM_STATUS_OK;
++	ioctl(cdrom->fd, CDIOCALLOW);
++#endif
+ 
+ 	if (status->cd != GNOME_CDROM_STATUS_TRAY_OPEN) {
+ 		if (ioctl (cdrom->fd, CDIOCEJECT, 0) < 0) {
+@@ -862,7 +898,19 @@ freebsd_cdrom_get_status (GnomeCDRom *cd
+ 		return FALSE;
+ 	}
+ #endif
++#ifdef __FreeBSD__
+ 	/* FIXME: Figure out how to do this on FreeBSD */
++#else
++	if (ioctl (cdrom->fd, CDIOREADTOCHEADER, priv->tochdr) < 0) {
++		realstatus->cd = GNOME_CDROM_STATUS_NO_DISC;
++		realstatus->audio = GNOME_CDROM_AUDIO_NOTHING;
++		realstatus->track = -1;
++
++		freebsd_cdrom_close (lcd);
++		return TRUE;
++	}
++	subchnl.track = 0;
++#endif
+ 	realstatus->cd = GNOME_CDROM_STATUS_OK;
+ 
+ 	subchnl.address_format = CD_MSF_FORMAT;
