@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.5 2001/08/02 13:28:47 jlam Exp $
+$NetBSD: patch-ap,v 1.6 2001/08/06 15:00:31 tron Exp $
 
---- Makefile.in.orig	Thu Nov 26 11:03:29 1998
-+++ Makefile.in
+--- Makefile.in.orig	Thu Nov 26 17:03:29 1998
++++ Makefile.in	Mon Aug  6 16:54:52 2001
 @@ -11,7 +11,7 @@
  EXTRA_CFLAGS  = @EXTRA_CFLAGS@
  INCLUDE_DIRS  = -I. @INCLUDE_DIRS@
@@ -28,7 +28,7 @@ $NetBSD: patch-ap,v 1.5 2001/08/02 13:28:47 jlam Exp $
  
  
  # Library/cleanup targets: 
-@@ -60,8 +60,9 @@
+@@ -60,16 +60,18 @@
  shlib:          $(SHLIB)
  
  $(LIBRARY):	$(LIBOBJ)
@@ -40,9 +40,11 @@ $NetBSD: patch-ap,v 1.5 2001/08/02 13:28:47 jlam Exp $
  
  $(SHLIB):	$(LIBOBJ)
  		$(CC) -shared -o $(SHLIB) $(LIBOBJ)
-@@ -69,7 +70,7 @@
+ 
  install:	$(LIBRARY)
- 		$(INSTALL) -d $(INSTALL_INCLUDE) $(INSTALL_LIBRARY)
+-		$(INSTALL) -d $(INSTALL_INCLUDE) $(INSTALL_LIBRARY)
++		$(INSTALL) -d $(INSTALL_INCLUDE)
++		$(INSTALL) -d $(INSTALL_LIBRARY)
  		$(INSTALL) -m 0644 $(HEADER) $(INSTALL_INCLUDE)/$(HEADER)
 -		$(INSTALL) -m 0644 $(LIBRARY) $(INSTALL_LIBRARY)/$(LIBRARY)
 +		${LIBTOOL} $(INSTALL) -m 0644 $(LIBRARY) $(INSTALL_LIBRARY)/$(LIBRARY)
