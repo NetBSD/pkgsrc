@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2004/04/22 20:16:58 dillo Exp $
+$NetBSD: patch-ab,v 1.3 2004/04/27 17:16:28 tv Exp $
 
---- gnu/configure.in.orig	Sat Apr 17 13:28:06 2004
+--- gnu/configure.in.orig	Sat Apr 17 07:28:06 2004
 +++ gnu/configure.in
 @@ -12,7 +12,7 @@ dnl Installation script (let it be, temp
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
@@ -11,7 +11,15 @@ $NetBSD: patch-ab,v 1.2 2004/04/22 20:16:58 dillo Exp $
  
  dnl Checks for the canonical system name
  AC_CANONICAL_HOST
-@@ -115,7 +115,7 @@ dnl Initial setup
+@@ -36,6 +36,7 @@ AC_FUNC_SETVBUF_REVERSED
+ AC_TYPE_SIGNAL
+ AC_FUNC_VPRINTF
+ AC_CHECK_FUNCS([getcwd min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
++AC_SEARCH_LIBS([dlsym], [dl])
+ 
+ dnl Platform-specific tuning
+ PROG_EXT=
+@@ -115,7 +116,7 @@ dnl Initial setup
  
  test -z "$CONFIG_SHELL" && CONFIG_SHELL=/bin/sh
  AC_SUBST(CONFIG_SHELL)
