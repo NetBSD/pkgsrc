@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2002/06/03 09:55:57 sakamoto Exp $
+# $NetBSD: Makefile,v 1.291 2002/06/08 17:34:09 cjep Exp $
 #
 
 COMMENT=	Development utilities
@@ -222,6 +222,7 @@ SUBDIR+=	pango
 SUBDIR+=	pardiff
 SUBDIR+=	patch
 SUBDIR+=	pccts
+SUBDIR+=	pcl-cvs
 SUBDIR+=	pcre
 SUBDIR+=	pedisassem
 SUBDIR+=	php3-pcre
