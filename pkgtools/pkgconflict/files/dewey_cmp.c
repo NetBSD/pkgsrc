@@ -1,4 +1,4 @@
-/* $NetBSD: dewey_cmp.c,v 1.1.1.1 2001/04/02 18:04:04 wennmach Exp $ */
+/* $NetBSD: dewey_cmp.c,v 1.2 2001/04/10 14:20:16 wennmach Exp $ */
 
 /*
  * Implement the comparision of a package name with a dewey pattern
@@ -6,14 +6,14 @@
  *
  * Author: Lex Wennmacher,
  * almost entirely based on the dewey routines written by: Hubert Feyrer
- * (taken from: basesrc/usr.sbin/pkg_install/lib/str.c, version 1.28
+ * (taken from: basesrc/usr.sbin/pkg_install/lib/str.c, version 1.28)
  */
 
 #include <sys/cdefs.h>
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: dewey_cmp.c,v 1.1.1.1 2001/04/02 18:04:04 wennmach Exp $");
+__RCSID("$NetBSD: dewey_cmp.c,v 1.2 2001/04/10 14:20:16 wennmach Exp $");
 #endif
 
 /*
@@ -256,17 +256,36 @@ pmatch(const char *pattern, const char *pkg)
 
 /* pkg_cmp is used to implement the ~~~ operator in PostgreSQL */
 #include <postgres.h>
+#include <utils/builtins.h>
 
 bool
-pkg_cmp(text *pkg, text *pattern)
+pkg_cmp(text *vpkg, text *vpattern)
 {
+	char *pkg;
+	char *pattern;
+	int len;
 
-/* Make sure that the strings are \0 terminated */
-	pkg->vl_dat[pkg->vl_len] = '\0';
-	pattern->vl_dat[pattern->vl_len] = '\0';
+/* Should never happen, but catch it anyway */
+	if (vpkg == NULL || vpattern == NULL)
+		return false;   
 
-	if (pmatch((const char *)&(pattern->vl_dat),
-                   (const char *)&(pkg->vl_dat)) == 1)
+/*
+ * Convert vpkg, vpattern from PostgreSQL built-in type "text"
+ * to type "char *".
+ * We wildly use "palloc" to allocate memory and never free it;
+ * this ist done automatically by PostgreSQL after each transaction.
+ */
+        len = VARSIZE(vpkg) - VARHDRSZ;
+        pkg = (char *)palloc(len + 1);
+        memmove(pkg, VARDATA(vpkg), len);
+        pkg[len] = '\0';  
+
+        len = VARSIZE(vpattern) - VARHDRSZ;
+        pattern = (char *)palloc(len + 1);
+        memmove(pattern, VARDATA(vpattern), len);
+        pattern[len] = '\0';  
+
+	if (pmatch((const char *)pattern, (const char *)pkg) == 1)
 		return true;
 
 	return false;
