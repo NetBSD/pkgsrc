@@ -1,0 +1,13 @@
+$NetBSD: patch-dh,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../man/man1/mred.1.orig	Sat May 20 17:30:14 2000
++++ ../../man/man1/mred.1	Sat May 20 17:30:54 2000
+@@ -269,7 +269,7 @@
+ "MrEd") are checked. Links are followed as in the 
+ first case.
+ .IP
+-The "/usr/local/lib/plt/collects" directory is 
++The "XXXPREFIXXXX/lib/plt/collects" directory is 
+ tried.
+ .PP
+ Please consult your local administrator to determine whether

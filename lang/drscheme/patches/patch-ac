@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../bin/archsys.orig	Thu May 20 16:44:32 1999
++++ ../../bin/archsys	Sat Jan  8 19:43:12 2000
+@@ -62,6 +62,9 @@
+   OpenBSD)
+     SYS=i386${SEP}openbsd
+     ;;
++  NetBSD)
++    SYS=netbsd
++    ;;
+   IRIX*)
+     SYS=mips${SEP}irix
+     ;;

@@ -1,0 +1,38 @@
+$NetBSD: patch-bc,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- gc/dyn_load.c.orig	Thu Oct 21 22:06:14 1999
++++ gc/dyn_load.c	Mon Jan  3 09:10:01 2000
+@@ -48,7 +48,8 @@
+ #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
+     !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \
+     !defined(HP_PA) && !(defined(LINUX) && defined(__ELF__)) && \
+-    !defined(RS6000) && !defined(SCO_ELF)
++    !defined(RS6000) && !defined(SCO_ELF) && \
++    !defined(NETBSD) && defined(__ELF__)
+  --> We only know how to find data segments of dynamic libraries for the
+  --> above.  Additional SVR4 variants might not be too
+  --> hard to add.
+@@ -260,14 +261,22 @@
+ # endif /* !USE_PROC ... */
+ # endif /* SUNOS */
+ 
+-#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF)
++#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF) || \
++    (defined(NETBSD) && defined(__ELF__))
+ 
+ /* Dynamic loading code for Linux running ELF. Somewhat tested on
+  * Linux/x86, untested but hopefully should work on Linux/Alpha. 
+  * This code was derived from the Solaris/ELF support. Thanks to
+  * whatever kind soul wrote that.  - Patrick Bridges */
+ 
++#ifdef NETBSD
++#include <sys/exec_elf.h>
++#define DT_DEBUG 21
++#define PT_LOAD  1
++#define PF_W     0x2
++#else
+ #include <elf.h>
++#endif
+ #include <link.h>
+ 
+ /* Newer versions of Linux/Alpha and Linux/x86 define this macro.  We
