@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/30 03:20:51 minoura Exp $
+--- lib/dxguid.c.orig	Mon May 15 01:20:35 2000
++++ lib/dxguid.c	Mon Nov 20 05:57:28 2000
+@@ -25,6 +25,7 @@
+ #if defined(__LCC__) || defined(__GNUC__)
+ #define INITGUID 1
+ #include <windows.h>
++#undef _BSD_WCHAR_T_
+ #include <objbase.h>
+ #else
+ #include <basetyps.h>
