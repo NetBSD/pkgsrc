@@ -1,12 +1,20 @@
-$NetBSD: patch-ab,v 1.3 2004/03/24 11:56:00 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2004/07/14 21:06:57 ben Exp $
 
 --- Makefile.in.orig	Wed Mar  4 22:49:12 1998
 +++ Makefile.in
-@@ -41,7 +41,6 @@ install: 
- 	@INSTALL@ -m 444 catalogs/* $(datadir)/XaoS/catalogs
- 	@INSTALL@ -m 444 doc/README doc/README.bugs doc/compilers.txt doc/ANNOUNCE doc/PROBLEMS doc/tutorial.txt $(datadir)/XaoS/doc
- 	@INSTALL@ -m 444 doc/xaos.6 $(mandir)/man6
+@@ -35,6 +35,7 @@ install: 
+ 	@INSTALL@ -d $(DESTDIR)$(datadir)/XaoS/doc
+ 	@INSTALL@ -d $(DESTDIR)$(datadir)/XaoS/help
+ 	@INSTALL@ -d $(DESTDIR)$(bindir)
++	@INSTALL@ -d $(DESTDIR)$(infodir)
+ 	@INSTALL@ -d $(DESTDIR)$(mandir)/man6
+ 	@INSTALL@ -s bin/xaos $(DESTDIR)$(bindir)
+ 	@INSTALL@ -m 444 tutorial/*.x[ah]f $(DESTDIR)$(datadir)/XaoS/tutorial
+@@ -43,7 +44,6 @@ install: 
+ 	@INSTALL@ -m 444 help/xaos.hlp $(DESTDIR)$(datadir)/XaoS/help
+ 	@INSTALL@ -m 444 doc/README doc/README.bugs doc/compilers.txt doc/AUTHORS doc/PROBLEMS $(DESTDIR)$(datadir)/XaoS/doc
+ 	@INSTALL@ -m 444 doc/xaos.6 $(DESTDIR)$(mandir)/man6
 -	@STICKY@
- 	@INSTALL@ -m 444 doc/xaos.info $(infodir)
+ 	@INSTALL@ -m 444 doc/xaos.info $(DESTDIR)$(infodir)
  	#install-info doc/xaos.info 
- 
+ 	if [ "@USE_NLS@" = "yes" ]; then $(MAKE) -C src/i18n/ install; fi
