@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/13 03:33:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/23 00:51:09 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -20,9 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 
 # ezmlm-idx is a modification of the ezmlm source.
-RESTRICTED=		"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
+DJB_RESTRICTED=		YES
 
 USE_PKGINSTALL=		YES
 
@@ -55,4 +53,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ezmlmglrc ${EGDIR}/ezmlmglrc
 	${INSTALL_DATA} ${WRKSRC}/ezmlmsubrc ${EGDIR}/ezmlmsubrc
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
