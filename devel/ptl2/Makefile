@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1999/05/02 12:04:11 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/06 20:07:21 tv Exp $
 
 DISTNAME=	PTL2-current-990325
-PKGNAME=	ptl2-current-990325
+PKGNAME=	ptl2-990325
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/PTL2-current-990325/
 
@@ -9,6 +9,8 @@ MAINTAINER=	msaitoh@netbsd.org
 HOMEPAGE=	http://www.media.osaka-cu.ac.jp/~k-abe/PTL/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
+
+CONFLICTS=	ptl-current-*
 
 USE_GMAKE=	YES
 
