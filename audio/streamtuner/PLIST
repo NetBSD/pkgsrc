@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/25 09:05:27 xtraeme Exp $
 bin/streamtuner
 include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
@@ -15,23 +15,43 @@ include/streamtuner/st-sgml-ref-api.h
 include/streamtuner/st-state-api.h
 include/streamtuner/st-stream-api.h
 include/streamtuner/st-transfer-api.h
+include/streamtuner/st-util-api.h
 include/streamtuner/st-version-api.h
 include/streamtuner/streamtuner.h
 lib/pkgconfig/streamtuner.pc
+lib/streamtuner/plugins/live365.la
+lib/streamtuner/plugins/local.la
+lib/streamtuner/plugins/python.la
 lib/streamtuner/plugins/shoutcast.la
+lib/streamtuner/plugins/xiph.la
 share/applications/streamtuner.desktop
 share/doc/streamtuner/C/documentation-license.xml
 share/doc/streamtuner/C/figures/main-window.png
-share/doc/streamtuner/C/figures/search-category.png
-share/doc/streamtuner/C/figures/search-dialog.png
 share/doc/streamtuner/C/software-license.xml
 share/doc/streamtuner/C/streamtuner.xml
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/streamtuner.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/streamtuner.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/streamtuner.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/streamtuner.mo
 share/omf/streamtuner/streamtuner-C.omf
 share/pixmaps/streamtuner.png
+share/streamtuner/python/icons/basic.ch.png
+share/streamtuner/python/icons/google-stations.png
+share/streamtuner/python/icons/punkcast.com.png
+share/streamtuner/python/scripts/basic.ch.py
+share/streamtuner/python/scripts/google-stations.py
+share/streamtuner/python/scripts/punkcast.com.py
+@dirrm share/streamtuner/python/scripts
+@dirrm share/streamtuner/python/icons
+@dirrm share/streamtuner/python
+@dirrm share/streamtuner
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/streamtuner
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/doc/streamtuner/C/figures
+@dirrm share/doc/streamtuner/C
+@dirrm share/doc/streamtuner
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/streamtuner/plugins
 @dirrm lib/streamtuner
 @dirrm include/streamtuner
