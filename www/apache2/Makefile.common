@@ -1,3 +1,5 @@
+# $NetBSD: Makefile.common,v 1.14 2005/02/10 13:29:10 salo Exp $
+
 DISTNAME=		httpd-${APACHE_VERSION}
 # When updating this version be sure to update the checksum and remove
 # any PKGREVISION for devel/apr also.
