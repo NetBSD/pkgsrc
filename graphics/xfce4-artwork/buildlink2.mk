@@ -1,8 +1,8 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/09/26 10:27:37 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:57:16 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-artwork.
 #
-# This file was created automatically using createbuildlink 2.6.
+# This file was created automatically using createbuildlink 2.7.
 #
 
 .if !defined(XFCE4_ARTWORK_BUILDLINK2_MK)
@@ -17,7 +17,6 @@ BUILDLINK_PREFIX.xfce4-artwork_DEFAULT=	${X11PREFIX}
 
 .include "../../x11/xfce4-desktop/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	xfce4-artwork-buildlink
 
