@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2000/11/02 10:31:39 jdolecek Exp $
+
+--- structs.h.orig	Thu Nov  2 09:51:20 2000
++++ structs.h	Thu Nov  2 09:52:03 2000
+@@ -359,6 +359,7 @@ struct _SquidConfig {
+     wordlist *mcast_group_list;
+     wordlist *dns_testname_list;
+     wordlist *dns_nameservers;
++    wordlist *log_mime_hdrs_list;
+     peer *peers;
+     int npeers;
+     struct {

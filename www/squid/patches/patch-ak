@@ -1,0 +1,26 @@
+$NetBSD: patch-ak,v 1.3 2000/11/02 10:31:39 jdolecek Exp $
+
+--- cf.data.pre.orig	Thu Nov  2 09:56:18 2000
++++ cf.data.pre	Thu Nov  2 10:48:58 2000
+@@ -773,6 +773,21 @@ DOC_START
+ log_mime_hdrs off
+ DOC_END
+ 
++NAME: log_mime_hdrs_list
++TYPE: wordlist
++LOC: Config.log_mime_hdrs_list
++DEFAULT: none
++DOC_START
++	The Cache can record both the request and the response MIME
++	headers for each HTTP transaction.  The headers are encoded
++	safely and will appear as two bracketed fields at the end of
++	the access log (for either the native or httpd-emulated log
++	formats). This list specifies which headers should be passed.
++	Note header logging need to be enabled by 'log_mime_hdrs on'
++	first.
++
++log_mime_hdrs_list all
++DOC_END
+ 
+ NAME: useragent_log
+ TYPE: string
