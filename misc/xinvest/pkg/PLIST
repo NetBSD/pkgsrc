@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/26 16:03:00 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/29 21:33:31 tron Exp $
 lib/X11/app-defaults/Xinvest
 bin/Xinvest
