@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2004/06/02 07:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.35 2004/07/18 09:56:47 recht Exp $
 #
 
 .include "Makefile.common"
 
-PKGNAME=	sylpheed-claws-${SYLPHEED_VERSION}
+#PKGNAME=	sylpheed-claws-${SYLPHEED_VERSION}
 
 MAINTAINER=	chris@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -56,7 +56,7 @@ CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/sylpheed*.png ${PREFIX}/share/sylpheed
+	${INSTALL_DATA} ${WRKSRC}/sylpheed*.png ${PREFIX}/share/sylpheed-claws
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/gpgme03/buildlink3.mk"
