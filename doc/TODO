@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.854 2003/09/12 12:06:59 salo Exp $
+$NetBSD: TODO,v 1.855 2003/09/12 13:30:34 grant Exp $
 
 Suggested new packages
 ======================
@@ -202,9 +202,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o neXtaW-0.15.0
-	o net-snmp-5.0.7 [pkg/19939]
-	o net-snmp-5.0.8
-	o net-snmp-5.0.9
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
