@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2004/04/22 09:18:34 tron Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/22 12:44:30 jschauma Exp $
 
 DISTNAME=	ocaml-3.06
 PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/${DISTNAME}/
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
 COMMENT=	The latest implementation of the Caml dialect of ML
 
