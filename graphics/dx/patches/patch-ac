@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+--- bin/dxworker.in.orig	Wed Aug  4 22:03:37 1999
++++ bin/dxworker.in	Mon Sep 27 19:42:26 1999
+@@ -29,6 +29,12 @@
+ 
+     breaksw
+ 
++  case NetBSD:
++    set exarch=netbsd
++    set uiarch=netbsd
++
++    breaksw
++
+   case AIX*:
+     set exarch=ibm6000
+     set uiarch=ibm6000
+@@ -1452,6 +1458,7 @@
+   case alphax:
+   case linux:
+   case freebsd:
++  case netbsd:
+     breaksw
+   
+   default:

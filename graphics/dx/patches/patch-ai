@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+--- src/uipp/prompter/Makefile.in.orig	Mon Sep 27 08:07:32 1999
++++ src/uipp/prompter/Makefile.in	Mon Sep 27 08:07:56 1999
+@@ -74,7 +74,7 @@
+ JAVA_ARCH = @JAVA_ARCH@
+ JBASE = @JBASE@
+ JDKBIN = @JDKBIN@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lcompat
+ MAKEINFO = @MAKEINFO@
+ OBJEXT = @OBJEXT@
+ PACKAGE = @PACKAGE@

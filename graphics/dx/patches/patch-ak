@@ -1,0 +1,11 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/10/01 11:23:16 drochner Exp $
+--- html/Makefile.in.orig	Tue Sep 28 22:21:11 1999
++++ html/Makefile.in	Tue Sep 28 22:22:35 1999
+@@ -218,6 +218,7 @@
+ 	       if test ! -d $(htmldir) ; then \
+ 		   mkdir $(htmldir) ; \
+ 	       fi ; \
++	       cd $(htmldir) ; \
+ 	       tar xf $$f/pages.tar ; \
+ 	       tar xf $$f/images.tar ; \
+ 	       ln -s $(htmldir)/allguide.htm $(htmldir)/index.htm ; \
