@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/01/25 18:57:58 kleink Exp $
+# $NetBSD: Makefile,v 1.21 2003/04/27 14:46:15 cjep Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -14,6 +14,8 @@ COMMENT=		ASCII-to-PostScript filter
 DEPENDS+=		papersize-[0-9]*:../../print/papersize
 
 GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE)
 CONFIGURE_ARGS+=--with-media="${PAPERSIZE}"
