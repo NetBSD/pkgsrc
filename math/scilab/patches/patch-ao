@@ -1,0 +1,28 @@
+$NetBSD: patch-ao,v 1.8 2004/11/29 22:05:08 dmcmahill Exp $
+
+--- ocaml/Makefile.orig	Tue Mar 30 13:30:26 2004
++++ ocaml/Makefile
+@@ -26,7 +26,7 @@ PLATFORM=$(shell uname -s)
+ EXE=modelicac
+ 
+ 
+-.SUFFIXES: .ml .mli .cmo .cmi .cmx .mlp .mpi
++.SUFFIXES: .ml .mli .cmo .cmi .cmx .mlp .mpi .mll .mly
+ 
+ 
+ 
+@@ -60,12 +60,12 @@ EXE=modelicac
+ 	@$(OCAMLOPT) $(OCAMLOPTFLAGS) -c $(<)
+ 
+ 
+-%.ml %.mli: %.mly
++.mly.ml:
+ 	@ocamlyacc $(<)
+ 	@$(RM) -f $(<:.mly=.mli)
+ 
+ 
+-%.ml: %.mll
++.mll.ml:
+ 	@ocamllex $(<)
+ 
+ 
