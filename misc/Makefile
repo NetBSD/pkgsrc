@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2000/12/14 01:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2000/12/17 23:40:54 wiz Exp $
 #
 
     SUBDIR += 9menu
@@ -7,8 +7,6 @@
     SUBDIR += astrolog
     SUBDIR += bottlerocket
     SUBDIR += buffer
-    SUBDIR += cal
-    SUBDIR += cardboard-schedule
     SUBDIR += chipmunk
     SUBDIR += chord
     SUBDIR += cksfv
@@ -28,7 +26,6 @@
     SUBDIR += gnome-utils
     SUBDIR += gperiodic
     SUBDIR += heyu
-    SUBDIR += ical
     SUBDIR += jitterbug
     SUBDIR += jive
     SUBDIR += kdeutils
@@ -45,13 +42,10 @@
     SUBDIR += p5-File-MMagic
     SUBDIR += p5-Locale-Codes
     SUBDIR += p5-Search
-    SUBDIR += plan
     SUBDIR += pty-redir
-    SUBDIR += py-mxDateTime
     SUBDIR += py-readline
     SUBDIR += qterm
     SUBDIR += quicklist
-    SUBDIR += remind
     SUBDIR += root
     SUBDIR += rpm
     SUBDIR += sci
