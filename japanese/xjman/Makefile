@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/11/02 11:50:32 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/04 10:53:23 agc Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.4
@@ -47,6 +47,8 @@ pre-build:
 	  ${ECHO} ".include <bsd.prog.mk>" >> Makefile;		\
 	  )
 .endfor
+
+MKCATPAGES?=	yes
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
