@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.174 2002/10/05 22:13:22 mrg Exp $
+$NetBSD: CHANGES,v 1.175 2002/10/06 02:35:50 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2250,6 +2250,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ORBit2 to 2.4.0nb1 [rh 2002-07-18]
 	Updated sylpheed to 0.8.0 [hubertf 2002-07-18]
 	Added kcfonts-1.05 [wiz 2002-07-18]
+	Updated gnupg to 1.0.7nb1. Fix for broken /dev/random detection
+		[heinz 2002-07-18]
 	Added compface 1.4 [hubertf 2002-07-19]
 	Updated figlet to 2.2.1 [agc 2002-07-19]
 	Updated cpuflags to 0.29 [abs 2002-07-19]
@@ -2676,6 +2678,7 @@ Changes to the packages collection and infrastructure in 2002:
 		adzap.conf as shown [simonb 2002-09-07]
 	Added bbapm 0.0.1 [jschauma 2002-09-07]
 	Updated airportbasestationconfig to 1.5.2nb1 [tron 2002-09-08]
+	Updated p5-Net-DNS to 0.28 [heinz 2002-09-09]
 	Updated R to 1.5.1 [markd 2002-09-09]
 	Added R-grid-0.6 [markd 2002-09-09]
 	Added R-lattice-0.5.3 [markd 2002-09-09]
