@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/11/24 04:40:31 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/11/25 23:09:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -24,9 +24,13 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.perl}
 _CONFIG_PM=		${PERL5_ARCHLIB}/Config.pm
 _BUILDLINK_CONFIG_PM=	${_CONFIG_PM:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
 
+_LDFLAGS_LIBDIRS?=	${LDFLAGS:M-L*:S/^-L//}
+
 _CONFIG_PM_SED=	\
-	-e "s|-I${LOCALBASE}/include|-I${BUILDLINK_DIR}/include|g"	\
-	-e "s|-L${LOCALBASE}/lib|-L${BUILDLINK_DIR}/lib|g"
+	-e "/^libpth=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"		\
+	-e "/^libspath=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"	\
+	-e "s|-I${LOCALBASE}/include|${CPPFLAGS}|g"			\
+	-e "s|-L${LOCALBASE}/lib|${LDFLAGS}|g"
 
 .if exists(${PERL5})
 .  if exists(${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk)
