@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2001/11/29 01:12:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.95 2001/12/05 16:03:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -141,12 +141,6 @@ CFLAGS+=		-DLIBWRAP_FWD
 .if defined(M68060)
 CONFIGURE_ARGS+=	--disable-asm
 CFLAGS+=		-m68060
-.endif
-
-.if ${OPSYS} == "SunOS"
-ROOT_GROUP?=	root
-.else
-ROOT_GROUP?=	wheel
 .endif
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
