@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/11 19:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/15 16:44:51 wiz Exp $
 #
 
 DISTNAME=	netbsd-doc-1.2
@@ -12,8 +12,8 @@ COMMENT=	meta-package including all packages to convert SGML->HTML
 DEPENDS+=	opensp>=1.4:../../textproc/opensp
 DEPENDS+=	jade>=1.2.1nb3:../../textproc/jade
 DEPENDS+=	docbook>=4.0:../../textproc/docbook
-DEPENDS+=	iso8879-1986:../../textproc/iso8879
-DEPENDS+=	iso12083-1993:../../textproc/iso12083
+DEPENDS+=	iso8879>=1986:../../textproc/iso8879
+DEPENDS+=	iso12083>=1993:../../textproc/iso12083
 DEPENDS+=	dsssl-docbook-modular>=1.54:../../textproc/dsssl-docbook-modular
 DEPENDS+=	html>=4.0:../../textproc/html
 
