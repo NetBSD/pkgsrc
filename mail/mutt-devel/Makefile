@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/22 21:34:45 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/11/29 19:46:12 jlam Exp $
 
 DISTNAME=		mutt-1.3.23i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -11,7 +11,6 @@ COMMENT=		text-based MIME mail client with PGP support
 
 USE_BUILDLINK_ONLY=	YES
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 BUILD_USES_MSGFMT=	YES

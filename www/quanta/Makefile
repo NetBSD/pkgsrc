@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/13 21:28:41 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/29 19:46:13 jlam Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
@@ -13,7 +13,6 @@ HOMEPAGE=	http://quanta.sourceforge.net/
 COMMENT= 	HTML editor suitable for experienced web developers
 
 BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb1:../../x11/qt2-designer-kde
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
