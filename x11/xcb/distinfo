@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:50 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/03/08 15:07:10 tron Exp $
 
-SHA1 (xcb-2.3.tar.gz) = 75fc99971f0b002ba3d13fd03082b5b70cfb5715
-Size (xcb-2.3.tar.gz) = 16940 bytes
+SHA1 (xcb-2.3i.tar.gz) = e2ee53093d9413a41d4dd8254f0500bf612bfa80
+Size (xcb-2.3i.tar.gz) = 20734 bytes
