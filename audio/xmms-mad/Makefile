@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/17 03:27:17 simonb Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/18 23:38:53 grant Exp $
 #
 
 DISTNAME=		xmms-mad-0.5.5
@@ -12,11 +12,7 @@ COMMENT=		Input plugin for XMMS that uses libmad
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == NetBSD)
-CPPFLAGS+=              -DHAVE_NANOSLEEP=1
-.endif
+CPPFLAGS.NetBSD+=	-DHAVE_NANOSLEEP=1
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../audio/libid3tag/buildlink2.mk"
