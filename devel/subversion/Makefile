@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/03 02:01:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/03 15:49:23 hubertf Exp $
 
 DISTNAME=	subversion-r2667
 PKGNAME=	subversion-0.2667
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	autoconf>=2.50:../../devel/autoconf-devel
 BUILD_DEPENDS+=	libtool-base>=1.4:../../devel/libtool-base
 DEPENDS=	db4>=4.0.14:../../databases/db4
 DEPENDS+=	neon>=0.21.3:../../www/neon
-DEPENDS+=	apr-devel-[0-9]*:../../devel/apr-devel
+DEPENDS+=	apr-[0-9]*:../../devel/apr-devel
 DEPENDS+=	python22-[0-9]*:../../lang/python22
 
 GNU_CONFIGURE=	yes
