@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9077 2005/02/08 09:41:50 adam Exp $
+$NetBSD: CHANGES,v 1.9078 2005/02/09 05:39:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_install-info to 4.5nb3 [seb 2005-02-07]
 	Updated ezmlm-idx to 0.434 [schmonz 2005-02-08]
 	Updated ploticus to 2.31 [adam 2005-02-08]
+	Added memcached-1.1.11 [xtraeme 2005-02-09]
