@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/10/13 04:42:13 hubertf Exp $
+
+--- src/Makefile.in.orig	Sun Oct 13 05:25:01 2002
++++ src/Makefile.in
+@@ -59,7 +59,7 @@
+ POST_UNINSTALL = :
+ host_alias = @host_alias@
+ host_triplet = @host@
+-CC = @CC@
++CC = @CC@ -DPREFIX=\"@prefix@\"
+ MAKEINFO = @MAKEINFO@
+ PACKAGE = @PACKAGE@
+ RANLIB = @RANLIB@
