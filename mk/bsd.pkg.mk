@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1163 2003/04/10 20:29:08 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1164 2003/04/10 20:32:28 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -747,7 +747,7 @@ MASTER_SITE_GNU+=	\
 
 MASTER_SITE_GNUSTEP+=	\
 	ftp://ftp.gnustep.org/pub/gnustep/ \
-	ftp://ftp.planetmirror.com/pub/gnustep/gnustep/ \
+	http://public.planetmirror.com.au/pub/gnustep/gnustep/ \
 	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
 	ftp://archive.progeny.com/gnustep/ \
 	http://archive.progeny.com/gnustep/ \
@@ -852,6 +852,7 @@ MASTER_SITE_MOZILLA+=	\
 	ftp://sunsite.auc.dk/pub/mozilla/ \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/pub/ \
 	ftp://ftp.sunsite.kth.se/archive/www/ftp.mozilla.org/ \
+	http://public.planetmirror.com.au/pub/mozilla/releases/ \
 	ftp://ftp2.sinica.edu.tw/pub3/www/mozilla/ \
 	ftp://ftp.is.co.za/networking/info-service/www/clients/netscape/mozilla/ \
 	ftp://ftp.rediris.es/mirror/mozilla/ \
@@ -863,6 +864,7 @@ MASTER_SITE_XEMACS+=	\
 	ftp://ftp.jaist.ac.jp/pub/GNU/xemacs/ \
 	ftp://ftp.pasteur.fr/pub/computing/xemacs/ \
 	ftp://ftp.tu-darmstadt.de/pub/editors/xemacs/ \
+	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
 	ftp://mirror.nucba.ac.jp/mirror/xemacs/ \
@@ -886,6 +888,7 @@ MASTER_SITE_APACHE+=	\
 	http://www.tux.org/pub/net/apache/dist/ \
 	http://apache.secsup.org/dist/ \
 	http://ftp.epix.net/apache/ \
+	http://public.planetmirror.com.au/pub/apache/dist/ \
 	ftp://ftp.rge.com/pub/infosystems/apache/ \
 	ftp://ftp.epix.net/pub/apache/ \
 	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
