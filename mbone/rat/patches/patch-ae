@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 1998/09/13 17:06:09 garbled Exp $
+--- Makefile.orig	Thu Mar 19 08:40:07 1998
++++ Makefile	Sun Sep 13 09:29:54 1998
+@@ -9,10 +9,10 @@
+ # -DNDEBUG -DDEBUG -DTEST -DGSM -DDEBUG_MIX -DDEBUG_MEM
+ # -DDEBUG_RTP -DREPEAT
+ 
+-DEFS += -D$(OSTYPE) -D$(OSTYPE)_$(OSMVER) -D$(USER)
++#DEFS += -D$(OSTYPE) -D$(OSTYPE)_$(OSMVER) -D$(USER)
+ CC     = gcc
+ CFLAGS = -Wall -Werror $(INCS) $(DEFS) -g -O -fsigned-char
+-LDFLAGS= 
++#LDFLAGS= 
+ LDLIBS=  $(LDLIBS) -lm
+ RANLIB = ranlib
+ 
+@@ -50,6 +50,7 @@
+          $(OBJDIR)/auddev_hpux_raw.o \
+          $(OBJDIR)/auddev_linux.o \
+          $(OBJDIR)/auddev_freebsd.o \
++         $(OBJDIR)/auddev_netbsd.o \
+          $(OBJDIR)/init_net.o \
+          $(OBJDIR)/init_session.o \
+          $(OBJDIR)/tabmulaw.o \
