@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/12 00:43:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/30 17:57:45 salo Exp $
 bin/sodipodi
 man/man1/sodipodi.1
 share/gnome/apps/Graphics/sodipodi.desktop
@@ -30,6 +30,8 @@ share/oaf/GNOME_Sodipodi.oaf
 share/pixmaps/sodipodi.png
 share/sodipodi/about.svg
 share/sodipodi/add.xpm
+share/sodipodi/add_xml_element_node.xpm
+share/sodipodi/add_xml_text_node.xpm
 share/sodipodi/al_bottom_in.xpm
 share/sodipodi/al_bottom_out.xpm
 share/sodipodi/al_center_hor.xpm
@@ -66,6 +68,8 @@ share/sodipodi/curve.xpm
 share/sodipodi/cusp.xpm
 share/sodipodi/del.xpm
 share/sodipodi/delete.xpm
+share/sodipodi/delete_xml_attribute.xpm
+share/sodipodi/delete_xml_node.xpm
 share/sodipodi/desktop.glade
 share/sodipodi/dimension_hor.xpm
 share/sodipodi/dimension_ver.xpm
@@ -86,6 +90,7 @@ share/sodipodi/draw_zoom.xpm
 share/sodipodi/dt_active.xpm
 share/sodipodi/dt_inactive.xpm
 share/sodipodi/duplicate.xpm
+share/sodipodi/duplicate_xml_node.xpm
 share/sodipodi/edge_down.xpm
 share/sodipodi/edge_up.xpm
 share/sodipodi/edit_copy.xpm
@@ -109,6 +114,7 @@ share/sodipodi/fill_fractal.xpm
 share/sodipodi/fill_gradient.xpm
 share/sodipodi/fill_none.xpm
 share/sodipodi/fill_pattern.xpm
+share/sodipodi/fill_radial.xpm
 share/sodipodi/fill_solid.xpm
 share/sodipodi/flip_hor.xpm
 share/sodipodi/flip_ver.xpm
@@ -174,6 +180,7 @@ share/sodipodi/selection_top.xpm
 share/sodipodi/selection_ungroup.xpm
 share/sodipodi/selection_up.xpm
 share/sodipodi/seperate_tool.xpm
+share/sodipodi/set.xpm
 share/sodipodi/skew.xpm
 share/sodipodi/skew_hor.xpm
 share/sodipodi/skew_ver.xpm
@@ -206,7 +213,7 @@ share/sodipodi/zoom_in.xpm
 share/sodipodi/zoom_out.xpm
 share/sodipodi/zoom_page.xpm
 share/sodipodi/zoom_select.xpm
-@dirrm share/sodipodi
 @unexec ${RMDIR} %D/share/oaf 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/apps/Graphics 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/apps 2> /dev/null || ${TRUE}
+@dirrm share/sodipodi
