@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4008 2003/12/07 13:29:51 wiz Exp $
+$NetBSD: CHANGES,v 1.4009 2003/12/07 13:53:56 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5006,3 +5006,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-SVN-Web to 0.35 [epg 2003-12-07]
 	Added rapidsvn-0.4.0 [epg 2003-12-07]
 	Updated curl to 7.10.8 [wiz 2003-12-07]
+	Updated mrtg to 2.10.11 [martti 2003-12-07]
+	Updated proftpd to 1.2.9 [martti 2003-12-07]
