@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/02/01 02:21:54 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2000/03/16 18:51:07 kim Exp $
 #
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +45,7 @@ pre-install:
 		if [ -f $$X.* ] ;then \
 			${MV} $$X $$X.* ;\
 		elif [ -f "$$X" ] ;then \
-			${MV} $$X $$X.1.1.8 ;\
+			${MV} $$X $$X.${VERSION} ;\
 		fi ;\
 	done
 .endif
