@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.335 2003/03/05 07:12:26 wiz Exp $
+$NetBSD: TODO,v 1.336 2003/03/05 08:46:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -170,7 +170,6 @@ Suggested package updates
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
-	o libmcrypt-2.5.5
 	o librsvg-2.2.2.1
 	o lilypond-1.6.6
 	o lmbench-2.0.4
@@ -178,7 +177,6 @@ Suggested package updates
 	o lynx-current-2.8.5dev9
 	o lyx-1.3.0 [pkg/20417]
 	o maildrop-1.5.2
-	o mcrypt-2.6.3
 	o memtest86-3.0
 	o mgetty-1.1.30
 	o mhonarc-2.5.13 [pkg/19366]
