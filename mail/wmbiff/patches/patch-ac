@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.3 2005/02/19 22:44:25 wiz Exp $
+
+--- wmbiff/tlsComm.c.orig	2004-06-23 23:44:45.000000000 +0200
++++ wmbiff/tlsComm.c
+@@ -407,10 +407,6 @@ tls_check_certificate(struct connection_
+ 							"server's certificate is invalid or not X.509.\n"
+ 							"there may be a problem with the certificate stored in your certfile\n");
+ 		}
+-	} else if (certstat & GNUTLS_CERT_NOT_TRUSTED) {
+-		TDM(DEBUG_INFO, "server's certificate is not trusted.\n");
+-		TDM(DEBUG_INFO,
+-			"to verify that a certificate is trusted, use the certfile option.\n");
+ 	}
+ 
+ 	if (gnutls_x509_crt_init(&cert) < 0) {
