@@ -1,28 +1,28 @@
-$NetBSD: patch-aa,v 1.3 2001/09/14 15:09:39 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
 
---- configure.orig	Sat Jan 13 04:07:23 2001
+--- configure.orig	Thu Jan 16 01:45:58 2003
 +++ configure
-@@ -1021,6 +1021,7 @@
+@@ -1128,6 +1128,7 @@
  machine='' opsys=''
  
  case "$canonical" in
-+  arm-*-*	   ) machine=arm ;;
++  arm-*-*          ) machine=sparc ;;
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1092,9 +1093,10 @@
+@@ -1200,9 +1201,10 @@
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
 -                                            machine=hp9000s300 ;;
-+                      machine=m68k ;;
++                                machine=m68k ;;
        pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
        pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
-+      alpha-*-netbsd* ) machine=alpha ;;
++      alpha-*-netbsd )  machine=alpha ;;
      esac
    ;;
  
-@@ -2717,7 +2719,7 @@
+@@ -3110,7 +3112,7 @@
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -31,11 +31,10 @@ $NetBSD: patch-aa,v 1.3 2001/09/14 15:09:39 wiz Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
-@@ -11398,6 +11400,45 @@
+@@ -13830,6 +13832,41 @@
      eval "with_${feature}=no"
    done
  fi 
-+
 +echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
 +echo "configure:10915: checking for main in -lossaudio" >&5
 +ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
@@ -52,7 +51,8 @@ $NetBSD: patch-aa,v 1.3 2001/09/14 15:09:39 wiz Exp $
 +main()
 +; return 0; }
 +EOF
-+if { (eval echo configure:10931: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:10931: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } &&
++ test -s conftest${ac_exeext}; then
 +  rm -rf conftest*
 +  eval "ac_cv_lib_$ac_lib_var=yes"
 +else
@@ -70,18 +70,14 @@ $NetBSD: patch-aa,v 1.3 2001/09/14 15:09:39 wiz Exp $
 +else
 +  echo "$ac_t""no" 1>&6
 +fi
-+
-+
-+
-+
- test "$with_x11" = "yes" -o "$with_tty" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
+ test "$with_x11" = "yes" -o "$with_tty" = "yes" -o "$need_event_unixoid" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
     echo "    xemacs will be linked with \"event-unixoid.o\""
   fi
-@@ -13120,6 +13161,7 @@
+@@ -16087,6 +16124,7 @@
  s%@dnd_objs@%$dnd_objs%g
  s%@lwlib_objs@%$lwlib_objs%g
  s%@ALLOCA@%$ALLOCA%g
 +s%@LIBOSSAUDIO@%$LIBOSSAUDIO%g
+ s%@have_esd_config@%$have_esd_config%g
  s%@dll_ld@%$dll_ld%g
  s%@dll_cflags@%$dll_cflags%g
- s%@dll_oflags@%$dll_oflags%g

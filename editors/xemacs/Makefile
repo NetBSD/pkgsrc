@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2003/01/19 06:52:54 salo Exp $
+# $NetBSD: Makefile,v 1.56 2003/02/25 02:14:57 uebayasi Exp $
 
-DISTNAME=	xemacs-21.1.14
-PKGREVISION=	4
+DISTNAME=	xemacs-21.4.12
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
-		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-21.1/ \
-		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-21.1/ \
-		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.4/}
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
-MAINTAINER=	magick@netbsd.org
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	XEmacs text editor version 21
 
@@ -35,14 +29,47 @@ PLIST_SUBST+=	ELSUFX='.gz'
 PLIST_SUBST+=	ELSUFX=''
 .endif
 
-.if defined(USE_ATHENA)
- WITH_DIALOGS=  --with-menubars=athena\
-		--with-scrollbars=athena\
-		--with-dialogs=athena\
+# XXX GUI configuration is a mess...
+#
+#.if defined(USE_ATHENA)
+#WITH_DIALOGS= \
+#		--with-menubars=athena \
+#		--with-scrollbars=athena \
+#		--with-dialogs=athena \
+#		--with-widgets=athena \
+#		--with-athena=xaw \
+#		--with-xim=xlib
+#.include "../../mk/xaw.buildlink2.mk"
+#.elif defined(USE_MOTIF)
+#WITH_DIALOGS= \
+#		--with-menubars=motif \
+#		--with-scrollbars=motif \
+#		--with-dialogs=motif \
+#		--with-widgets=motif \
+#		--with-xim=motif
+#.include "../../mk/motif.buildlink2.mk"
+#.elif defined(USE_GTK)
+#WITH_DIALOGS= \
+#		--with-gtk \
+#		--with-menubars=yes \
+#		--with-scrollbars=yes \
+#		--with-dialogs=yes \
+#		--with-widgets=yes \
+#		--with-xim=yes
+#.include "../../x11/gtk/buildlink2.mk"
+#.else
+# XXX Default is "lucid".  Due to the output of `configure --help', Lucid
+#     widgets wrap Athena, so xaw.buildlink2.mk.
+WITH_DIALOGS= \
+		--with-toolbars=yes \
+		--with-menubars=lucid \
+		--with-scrollbars=lucid \
+		--with-dialogs=lucid \
+		--with-widgets=lucid \
+		--with-athena=xaw \
 		--with-xim=xlib
-.else
- WITH_DIALOGS=  --with-dialogs=motif
-.endif
+.include "../../mk/xaw.buildlink2.mk"
+#.endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
 WITH_LDAP=	--with-ldap
@@ -70,9 +97,6 @@ WITH_CANNA=	--without-canna
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.if !defined(USE_ATHENA)
-.include "../../mk/motif.buildlink2.mk"
-.endif
 .include "../../mk/ossaudio.buildlink2.mk"
 
 INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
@@ -82,20 +106,19 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
-CONFIGURE_ARGS+=	--without-ncurses
-CONFIGURE_ARGS+=	--without-msw
-CONFIGURE_ARGS+=	--with-session=yes
+CONFIGURE_ARGS+=	--with-ncurses=no
+CONFIGURE_ARGS+=	--with-msw=no
 CONFIGURE_ARGS+=	${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
 CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
-CONFIGURE_ARGS+=	--lockdir=/var/tmp/xemacs.lock
-CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
-CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
+CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include:${WRKDIR}
+CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--site-runtime-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
 
 post-extract:
-	for FILE in ${EXTRA_FILES}; do					\
-		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$FILE; \
+	@for f in ${EXTRA_FILES}; do \
+		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$f; \
 	done
 
 post-patch:
@@ -104,8 +127,8 @@ post-patch:
 post-install:
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
-	@if [ "X${MANZ}" != X"" ]; then \
-		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
+	@if [ -n "${MANZ}" ]; then \
+		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME};	\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
