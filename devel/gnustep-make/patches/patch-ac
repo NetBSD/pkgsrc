@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/12/05 09:16:33 adam Exp $
+$NetBSD: patch-ac,v 1.3 2004/08/18 13:58:27 adam Exp $
 
---- target.make.orig	2003-09-26 04:30:39.000000000 +0200
+--- target.make.orig	2004-04-20 09:43:51.000000000 +0000
 +++ target.make
-@@ -594,9 +594,9 @@ endif
+@@ -632,9 +632,9 @@ endif
  
  ####################################################
  #
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.2 2003/12/05 09:16:33 adam Exp $
  # This is disabled temporarily, because I don't know exactly how
  # to link shared libs. Everything seems to link correctly now but
  # constructor functions in the shared lib failed to get called
-@@ -628,7 +628,7 @@ endif
+@@ -666,7 +666,7 @@ endif
  #
  # NetBSD ELF
  #
