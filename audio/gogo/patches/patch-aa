@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/13 19:01:53 wiz Exp $
+
+--- Makefile.orig	Fri Apr 28 06:11:32 2000
++++ Makefile	Sun Aug 13 03:56:27 2000
+@@ -81,7 +81,7 @@
+ AS=nasm
+ 
+ #if Borland C++ then add -D__BORLANDC__ to ASFLAGS
+-ASFLAGS=-f elf -D__unix__ $(E3DN)
++#ASFLAGS=-f elf -D__unix__ $(E3DN)
+ #if FreeBSD 2.x then
+ #ASFLAGS = -f aoutb -D__unix__ -DAOUT
+ 

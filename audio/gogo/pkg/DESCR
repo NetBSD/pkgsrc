@@ -1,0 +1,2 @@
+This is gogo, a very fast mp3 encoder based on the lame-encoder.
+Its core parts have been rewritten in x86-assembler.
