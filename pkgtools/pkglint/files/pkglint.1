@@ -1,10 +1,10 @@
-.\"	$NetBSD: pkglint.1,v 1.3 2000/09/04 00:29:52 hubertf Exp $
+.\"	$NetBSD: pkglint.1,v 1.4 2000/09/04 00:48:10 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
-.Dd July 11, 1997
+.Dd September 04, 2000
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -28,7 +28,7 @@ to decrease the labor of the committers.
 .Nm
 uses very simple regular-expression matching for verifying
 files that make up a pkgsrc directory.
-Note that it does NOT implement complete parser for those files.
+Note that it does NOT implement a complete parser for those files.
 Because of this the user may see some extra warnings,
 especially when checking complex
 .Pa Makefile Ns No s .
@@ -41,37 +41,37 @@ Show the summary of command line options, then exit.
 Be verbose.
 Show the progress report for items that are being checked.
 .It Fl N
-New pkg flag.
-Adds several checks specific to newly submitted pkg.
-If you are willing to submit the directory to be checked as a new pkg,
+New package flag.
+Adds several checks specific to newly submitted packages.
+If you are willing to submit the directory to be checked as a new package,
 use this option.
 .It Fl B Ar n
 Set the number of contiguous blank lines allowed in 
 .Pa Makefile
 to
-.Ar n .
+.Ar n
 (by default,
 .Ar n
-is 1)
+is 1.)
 .It dir
 The pkgsrc directory to be checked.
-If omitted, check will be performed over the current directory.
+If omitted, all checks will be performed over the current directory.
 .El
 .Sh DIAGNOSTICS
-Messages will be sent to standard output, not standard error output.
+Messages will be sent to standard output, not standard error.
 .Bl -tag -width WARN: foobaa
 .It FATAL: ...
-This type of error messages suggest that there is some fatal error
+This type of error messages suggests that there is some fatal error
 in the pkgsrc directory.
 For example, if some files need a rewrite, or if
-some inevitable files are missing, this message will show up.
-This kind of errors should be avoided BEFORE submitting
+some necessary files are missing, this message will show up.
+This kind of error should be fixed BEFORE submitting
 a pkgsrc via send-pr to the comitters.
 .\"If a submitter submit it without update, committers will need to rewrite
 .\"on behalf of the submitters, which may result in delay of
 .\"the development of operating system itself.
 .It WARN: ...
-This type of error messages suggest that some files may (or may not)
+This type of error messages suggests that some files may (or may not)
 need some fixes.
 Basically, warnings are produced when
 .Nm
@@ -84,7 +84,7 @@ uses for sanity checks.
 In those cases, the user should evaluate the result manually,
 and obey/ignore the result.
 .It OK: ...
-This type of messages are used in verbose mode
+This type of messages is used in verbose mode
 .Pq Fl v .
 .El
 .Sh FILES
@@ -105,7 +105,7 @@ pkgsrc collection
 Jun-ichiro Itoh <itojun@itojun.org>
 and
 Yoshishige Arai <ryo2@on.rim.or.jp>.
-Many people has contributed patches and comments/suggestions.
+Many people have contributed patches and comments/suggestions.
 .Sh BUGS
 .Nm
 is not a magic wand, as described above.
