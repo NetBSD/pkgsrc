@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2000/06/30 10:04:47 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/05 03:40:27 hubertf Exp $
 
-DISTNAME=		gimp-1.1.18
+DISTNAME=		gimp-1.1.24
 PKGNAME=		${DISTNAME:S/-/-helpbrowser-/}
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/unstable/v1.1.18/ \
-			ftp://ftp.ameth.org/pub/mirrors/ftp.gimp.org/gimp/unstable/v1.1.18/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/unstable/v1.1.18/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/unstable/v1.1.24/ \
+			ftp://ftp.ameth.org/pub/mirrors/ftp.gimp.org/gimp/unstable/v1.1.24/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/unstable/v1.1.24/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tron@netbsd.org
@@ -45,7 +45,7 @@ SRCS=			helpbrowser.c queue.c
 do-build:
 .for SRC in ${SRCS}
 	cd ${WRKSRC}/plug-ins/helpbrowser && \
-	${CC} ${CFLAGS} `${GNOME_CONFIG} --cflags gtkxmhtml gtk glib` \
+	${CC} ${CFLAGS} ${CPPFLAGS} `${GNOME_CONFIG} --cflags gtkxmhtml gtk glib` \
 	  `${GIMP_CONFIG} --cflags` -I../.. -c ${SRC}
 .endfor
 	cd ${WRKSRC}/plug-ins/helpbrowser && \
