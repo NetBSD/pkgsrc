@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 1999/12/30 22:51:28 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/28 00:33:21 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
-DISTNAME=	sudo-1.6.1
+DISTNAME=	sudo-1.6.2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.cs.colorado.edu/pub/sudo/ \
 		ftp://ftp.uu.net/pub/security/sudo/ \
