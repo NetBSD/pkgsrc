@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/08/04 20:37:04 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/04 14:01:16 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -85,6 +85,8 @@ CONFIGURE_ENV+=		kde_sounddir="${KDEDIR}/share/kde/sounds"
 CONFIGURE_ENV+=		kde_templatesdir="${KDEDIR}/share/kde/templates"
 CONFIGURE_ENV+=		kde_toolbardir="${KDEDIR}/share/kde/toolbar"
 CONFIGURE_ENV+=		kde_wallpaperdir="${KDEDIR}/share/kde/wallpapers"
+CONFIGURE_ENV+=		xdg_appsdir="${KDEDIR}/share/applications/kde"
+CONFIGURE_ENV+=		xdg_directorydir="${KDEDIR}/share/desktop-directories"
 
 BUILDLINK_DEPMETHOD.qt3-tools=	build
 
