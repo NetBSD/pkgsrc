@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6989 2004/08/24 20:40:41 recht Exp $
+$NetBSD: CHANGES,v 1.6990 2004/08/24 21:01:53 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-base to 1.6.8.nb5 [taca 2004-08-24]
 	Updated getmail to 4.1.0 [schmonz 2004-08-24]
 	Updated scons to 0.96.1 [recht 2004-08-24]
+	Updated tla to 1.2.1nb1 [recht 2004-08-24]
