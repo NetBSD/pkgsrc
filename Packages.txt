@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.238 2002/03/23 15:33:15 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.239 2002/03/23 22:47:45 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -367,11 +367,13 @@ pkgsrc/mk/bsd.pkg.defaults.mk for details of the default settings.
 You will want to make sure that ACCEPTABLE_LICENSES meet your local
 policy:
 
-    BATCH=                  yes          # required for bulk builds 
     DEPENDS_TARGET?=        bulk-install
     PACKAGES?=              ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-    OBJHOST?=               yes               # use work.`hostname`
     WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+    BSDSRCDIR=              /usr/src
+    BSDXSRCDIR=             /usr/xsrc         # for x11/xervers
+    OBJHOST?=               yes               # use work.`hostname`
+    BATCH=                  yes               # required for bulk builds 
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes
     ACCEPTABLE_LICENSES=    shareware \
@@ -521,13 +523,15 @@ items are present and properly configures:
 
  * kernel (/netbsd)
  * /dev/* (cd /usr/sandbox/dev ; sh MAKEDEV all)
+ * /etc/resolv.conf (for security/snmpd and mail)
  * working(!) mail config (hostname, sendmail.cf)
  * /etc/localtime (for security/snmpd)
- * /etc/resolv.conf (for security/snmpd)
  * /usr/src (system sources, for sysutils/aperture, net/ppp-mppe)
  * create /var/db/pkg (not part of default install)
+ * create /usr/pkg (not part of default install)
  * checkout pkgsrc from cvs, into /usr/sandbox/usr/pkgsrc
  * /usr/pkgsrc/packages & .../distfiles (point outside of sandbox)
+ * /etc/mk.conf, see 3.2.1.1
  * adjust .../mk/bulk/build.conf
 
 !!! Don't forget to install X !!!
