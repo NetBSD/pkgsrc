@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.7 2002/07/18 02:19:27 rh Exp $
+
+--- audiofile.pc.in.orig	Fri Oct 26 14:11:38 2001
++++ audiofile.pc.in
+@@ -7,5 +7,5 @@ Name: audiofile
+ Description: audiofile
+ Requires:
+ Version: @VERSION@
+-Libs: -L${libdir} -laudiofile -lm
++Libs: -L${libdir} -Wl,-R${libdir} -laudiofile -lm
+ Cflags: -I${includedir}

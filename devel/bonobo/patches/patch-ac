@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2002/07/18 02:19:40 rh Exp $
+
+--- libefs/libefs.pc.in.orig	Tue Oct 10 18:02:25 2000
++++ libefs/libefs.pc.in
+@@ -4,6 +4,6 @@ includedir=@prefix@/include
+ Name: libefs
+ Description: Embeded Filesystem Library
+ Version: 1.0.0
+-Libs: -L${libdir} -lefs -lz @CRYPTLIB@
++Libs: -L${libdir} -Wl,-R${libdir} -lefs -lz @CRYPTLIB@
+ Requires: glib
+ Cflags: -I${includedir}

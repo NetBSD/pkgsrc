@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2002/07/18 02:19:36 rh Exp $
+
+--- pangoxft.pc.in.orig	Wed Mar  6 03:20:57 2002
++++ pangoxft.pc.in
+@@ -7,6 +7,6 @@ Name: Pango Xft
+ Description: Xft font support for Pango
+ Version: @VERSION@
+ Requires: pango
+-Libs: -L${libdir} -lpangoxft-@PANGO_API_VERSION@ @PKGCONFIG_XFT_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} -lpangoxft-@PANGO_API_VERSION@ @PKGCONFIG_XFT_LIBS@
+ Cflags: -I${includedir}/pango-1.0 @X_CFLAGS@ @FREETYPE_CFLAGS@
+ 

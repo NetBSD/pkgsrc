@@ -1,0 +1,11 @@
+$NetBSD: patch-aj,v 1.8 2002/07/18 02:19:25 rh Exp $
+
+--- libIDL/libIDL.pc.in.orig	Sat Sep 30 12:09:43 2000
++++ libIDL/libIDL.pc.in
+@@ -8,5 +8,5 @@ Name: libIDL
+ Description: IDL parsing library
+ Version: @VERSION@
+ Requires: glib
+-Libs: -L${libdir} -lIDL
++Libs: -L${libdir} -Wl,-R${libdir} -lIDL
+ Cflags: -I${includedir}

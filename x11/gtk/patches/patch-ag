@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 2002/07/18 02:19:34 rh Exp $
+
+--- gdk.pc.in.orig	Thu Nov 30 11:18:35 2000
++++ gdk.pc.in
+@@ -7,5 +7,5 @@ Name: GDK
+ Description: GIMP Drawing Kit
+ Version: @VERSION@
+ Requires: glib
+-Libs: -L${libdir} @x_ldflags@ -lgdk @INTLLIBS@ @GDK_WLIBS@ @x_libs@ -lm
++Libs: -L${libdir} -Wl,-R${libdir} @x_ldflags@ -lgdk @INTLLIBS@ @GDK_WLIBS@ @x_libs@ -lm
+ Cflags: -I${includedir}/gtk-1.2 @x_cflags@
