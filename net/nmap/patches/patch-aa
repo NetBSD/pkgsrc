@@ -1,28 +1,29 @@
-$NetBSD: patch-aa,v 1.9 2003/03/22 04:07:11 salo Exp $
+$NetBSD: patch-aa,v 1.10 2003/09/20 14:15:28 salo Exp $
 
---- Makefile.in.orig	2003-03-19 01:53:36.000000000 +0100
-+++ Makefile.in	2003-03-22 04:24:12.000000000 +0100
-@@ -15,8 +15,7 @@
+--- Makefile.in.orig	2003-09-15 09:23:32.000000000 +0200
++++ Makefile.in	2003-09-17 02:32:43.000000000 +0200
+@@ -16,9 +16,8 @@
  CC = @CC@
  CXX = @CXX@
  CCOPT = 
 -LIBPCAPDIR = @libpcapdir@
+ LIBPCREDIR = @LIBPCREDIR@
 -INCLS = -I$(LIBPCAPDIR) 
 +INCLS = -I.
  DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAP_PLATFORM=\"$(NMAP_PLATFORM)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
  # For mtrace debugging -- see MTRACE define in main.cc for instructions
  # Should only be enabled during debugging and not in any real release.
-@@ -54,9 +53,6 @@
- 	rm -f $@
- 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+@@ -64,9 +63,6 @@
+ $(LIBPCREDIR)/libpcre.a: $(LIBPCREDIR)/Makefile FORCE
+ 	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
  
--$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile
--	@echo Compiling libpcap; cd $(LIBPCAPDIR); $(MAKE)
+-$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile FORCE
+-	@echo Compiling libpcap; cd $(LIBPCAPDIR) && $(MAKE)
 -
- $(NBASEDIR)/libnbase.a: $(NBASEDIR)/Makefile
+ $(NBASEDIR)/libnbase.a: $(NBASEDIR)/Makefile FORCE
  	@echo Compiling libnbase;
- 	cd $(NBASEDIR); $(MAKE)
-@@ -200,7 +196,7 @@
+ 	cd $(NBASEDIR) && $(MAKE)
+@@ -254,7 +250,7 @@
  	$(MAKEDEPEND) $(INCLS) -s "# DO NOT DELETE" -- $(DEFS) -- $(SRCS)
  
  install-nmap: $(TARGET)

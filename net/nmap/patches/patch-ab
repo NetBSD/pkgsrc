@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2002/08/03 12:23:59 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2003/09/20 14:15:28 salo Exp $
 
---- configure.orig	Sat Jul 20 09:48:46 2002
-+++ configure
-@@ -3450,6 +3450,7 @@
+--- configure.orig	2003-09-13 07:40:51.000000000 +0200
++++ configure	2003-09-20 14:41:26.000000000 +0200
+@@ -5208,6 +5208,7 @@
  extern char pcap_version[];
  int main() {
    int major, minor;
@@ -10,3 +10,11 @@ $NetBSD: patch-ab,v 1.6 2002/08/03 12:23:59 hubertf Exp $
    sscanf(pcap_version,"%d.%d", &major, &minor);
    if (major > 0)
      exit(0);
+@@ -6983,7 +6984,6 @@
+ 
+ 
+ 
+-subdirs="$subdirs $subdirs "
+ 
+ 
+ 
