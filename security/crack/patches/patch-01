@@ -1,0 +1,78 @@
+$NetBSD: patch-01,v 1.1 1999/09/30 15:24:55 bouyer Exp $
+
+--- Crack.orig	Sat Dec 21 02:09:41 1996
++++ Crack	Thu Sep 30 17:18:29 1999
+@@ -336,23 +336,23 @@
+ # Make the binaries
+ ###
+ 
+-echo "Crack: making utilities in $bindir"
+-
+-if [ ! -d $bindir ] # small redundancy, big benefit
+-then
+-	mkdir $bindir || exit 1
+-fi
+-
+-make clean || exit 1
+-
+-make ARGS="\"XDIR=../../$bindir\" \"XCFLAGS=$CFLAGS\" \"XCC=$CC\" \"XLIBS=$LIBS\"" utils || exit 1
+-
+ ###
+ # Make Only ?
+ ###
+ 
+ if [ "x$makeonlyflag" != "x" ]
+ then
++	echo "Crack: making utilities in $bindir"
++
++	if [ ! -d $bindir ] # small redundancy, big benefit
++	then
++		mkdir $bindir || exit 1
++	fi
++
++	make clean || exit 1
++
++	make ARGS="\"XDIR=../../$bindir\" \"XCFLAGS=$CFLAGS\" \"XCC=$CC\" \"XLIBS=$LIBS\"" utils || exit 1
++
+ 	echo "Crack: makeonly done"
+ 	exit 0
+ fi
+@@ -364,25 +364,25 @@
+ dp=run/dict
+ dplf=$dp/.dictmade
+ 
+-if [ ! -f $dplf ]
+-then
+-	test -d $dp && rm -rf $dp
+-
+-	echo "Crack: making dictionary groups, please be patient..."
+-	mkdictgrps $dp || exit 1
+-
+-	echo "Crack: Created new dictionaries..."
+-	date > $dplf
+-else
+-	echo "Crack: The dictionaries seem up to date..."
+-fi
+-
+ ###
+ # Make Dict Only ?
+ ###
+ 
+ if [ "x$makedictflag" != "x" ]
+ then
++	if [ ! -f $dplf ]
++	then
++		test -d $dp && rm -rf $dp
++	
++		echo "Crack: making dictionary groups, please be patient..."
++		mkdictgrps $dp || exit 1
++	
++		echo "Crack: Created new dictionaries..."
++		date > $dplf
++	else
++		echo "Crack: The dictionaries seem up to date..."
++	fi
++
+ 	echo "Crack: makedict done"
+ 	exit 0
+ fi
