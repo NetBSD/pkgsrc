@@ -21,8 +21,8 @@ several components:
 
 You may also want to use:
   * pkgsrc/net/ucspi-tcp, if you're going to use axfrdns or axfr-get
-  * tinydns logfile formatter, installed under ${PREFIX}/bin/tinydns-log.pl
-  * dnscache logfile formatter, installed under ${PREFIX}/bin/dnscache-log.pl
+  * tinydns logfile formatter, installed under ${PREFIX}/bin/tinydns-log
+  * dnscache logfile formatter, installed under ${PREFIX}/bin/dnscache-log
     (formatters are taken from http://tinydns.org, they need perl to run]
   * tai64nlocal (pkgsrc/sysutils/daemontools) -- to convert timestamps printed
     out by these two formatters to human readable form
