@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/01/15 19:58:07 tron Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/19 13:36:11 wiz Exp $
 
 DISTNAME=	connect
-PKGNAME=	${DISTNAME}-1.69
+PKGNAME=	${DISTNAME}-1.83
 CATEGORIES=	net security
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.c
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.imasy.or.jp/~gotoh/ssh/
 COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 
 EXTRACT_ONLY=	# empty
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,8 +25,8 @@ LIBS=
 
 do-build:
 	${MKDIR} ${WRKSRC}
-	${CC} ${DISTDIR}/${DISTFILES} ${CFLAGS} -o ${WRKSRC}/connect ${LIBS}
-	${EGREP} '^ \*(| .*)$$' ${DISTDIR}/${DISTFILES} | \
+	${CC} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${CFLAGS} -o ${WRKSRC}/connect ${LIBS}
+	${EGREP} '^ \*(| .*)$$' ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | \
 	${CUT} -c 4- >${WRKSRC}/README
 
 do-install:
