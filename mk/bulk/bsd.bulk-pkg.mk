@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.41 2002/12/07 02:37:58 schmonz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.42 2003/02/08 23:27:00 kei Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -324,7 +324,7 @@ bulk-package:
 					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
 					pkgerr="-1"; \
-					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && (${MAKE} show-var VARNAME=PKG_FAIL_REASON; ${MAKE} show-var VARNAME=PKG_SKIP_REASON))`; \
 					if [ ! -z "$$pkgignore" -a ! -f ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
 						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
