@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/08 20:49:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/12 06:05:16 xtraeme Exp $
 #
 
 DISTNAME=		icecast-2.0.0
@@ -33,10 +33,8 @@ PKG_USERS=		${ICECAST_USER}:${ICECAST_GROUP}::Icecast2\\ user
 EGDIR=			${PREFIX}/share/examples/icecast
 CONF_FILES=		${EGDIR}/icecast.xml ${PKG_SYSCONFDIR}/icecast.xml
 
-.for D in ${ICECAST_CHROOTDIR} ${ICECAST_LOGDIR}
-OWN_DIRS_PERMS+=	${D} ${ICECAST_USER} ${ICECAST_GROUP} 770
-.endfor
-.undef D
+OWN_DIRS_PERMS=		${ICECAST_CHROOTDIR} ${ICECAST_USER} ${ICECAST_GROUP} 770
+OWN_DIRS_PERMS+=	${ICECAST_LOGDIR} ${ICECAST_USER} ${ICECAST_GROUP} 770
 
 post-extract:
 	@${MV} ${WRKSRC}/conf/icecast.xml.in ${WRKSRC}/conf/icecast.fixme
