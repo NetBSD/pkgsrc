@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/09 10:51:12 seb Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/12 00:23:24 snj Exp $
 
 DISTNAME=	xboard-4.2.6
 CATEGORIES=	games
@@ -8,11 +8,11 @@ MAINTAINER=	simonb@NetBSD.ORG
 HOMEPAGE=	http://www.tim-mann.org/xboard.html
 COMMENT=	Graphical frontend for chess engines and servers
 
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
-GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
+GNU_CONFIGURE=		# defined
+USE_BUILDLINK3=		yes
+USE_X11=		# defined
 
 INFO_FILES=	xboard.info
 
@@ -22,8 +22,8 @@ INFO_FILES=	xboard.info
 CONFIGURE_ARGS+=	--with-Xaw3d
 .endif
 
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
