@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.2 2002/01/03 20:40:44 tron Exp $
+$NetBSD: patch-ba,v 1.3 2002/03/28 10:11:53 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/vax/netbsd.h.orig	Wed Dec 16 22:14:22 1998
-+++ ../gcc-2.95.3/gcc/config/vax/netbsd.h	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/config/vax/netbsd.h.orig 2000/07/26 00:18:55 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/vax/netbsd.h 2002/02/11 00:02:12 1.6
 @@ -1,5 +1,22 @@
 +#include <vax/vax.h>
 +#ifdef NETBSD_ELF
@@ -17,10 +17,10 @@ $NetBSD: patch-ba,v 1.2 2002/01/03 20:40:44 tron Exp $
 +#define CC1_SPEC "\
 +	%{!fno-pic: \
 +		%{!mno-pic: %{!fpic: %{!fPIC:-fPIC}}} \
-+		%{!mindirect: %{!no-mindirect: -mno-indirect}}} \
++		%{!mindirect: %{!mno-indirect:-mno-indirect}}} \
 +	%{mno-pic: -fno-pic -mindirect} \
 +	%{fno-pic: \
-+		%{!mindirect: %{!no-mindirect: -mindirect}}}"
++		%{!mindirect: %{!mno-indirect:-mindirect}}}"
 +
 +#define	CC1PLUS_SPEC CC1_SPEC
  

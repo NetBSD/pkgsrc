@@ -1,7 +1,7 @@
-$NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
+$NetBSD: patch-bs,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/configure.orig	Fri Mar 16 15:13:48 2001
-+++ ../gcc-2.95.3/gcc/configure	Thu Jan  3 20:37:55 2002
+--- ../gcc-2.95.3/gcc/configure.orig 2001/04/23 11:58:06 1.1.1.2
++++ ../gcc-2.95.3/gcc/configure 2002/03/24 18:05:57 1.18
 @@ -1311,7 +1311,7 @@
  fi
  
@@ -11,6 +11,15 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  do
  # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
+@@ -2932,7 +2932,7 @@
+ 	hppa*-*-*)
+ 		cpu_type=pa
+ 		;;
+-	m68000-*-*)
++	m680[01]0-*-*)
+ 		cpu_type=m68k
+ 		;;
+ 	mips*-*-*)
 @@ -2944,6 +2944,9 @@
  	pyramid-*-*)
  		cpu_type=pyr
@@ -65,23 +74,25 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  	alpha*-dec-osf*)
  		if test x$stabs = xyes
  		then
-@@ -3170,11 +3177,11 @@
+@@ -3170,12 +3177,13 @@
  		tm_file=arm/semiaof.h
  		tmake_file=arm/t-semiaof
  		;;
-+	arm*-*-netbsdelf*)
-+		gas=yes gnu_ld=yes
-+		;;
- 	arm*-*-netbsd*)
+-	arm*-*-netbsd*)
 -		tm_file=arm/netbsd.h
--		xm_file="arm/xm-netbsd.h ${xm_file}"
++	arm*-*-netbsdelf*)
+ 		xm_file="arm/xm-netbsd.h ${xm_file}"
 -		tmake_file="t-netbsd arm/t-netbsd"
 -       use_collect2=yes
-+		gas=yes
++		gas=yes gnu_ld=yes
  		;;
++	arm*-*-netbsd*)
++		gas=yes
++		;;
  	arm*-*-linux-gnuaout*)		# ARM GNU/Linux with a.out
  		cpu_type=arm
-@@ -3568,10 +3575,10 @@
+ 		xmake_file=x-linux
+@@ -3568,10 +3576,10 @@
  		tm_file=i386/freebsd.h
  		tmake_file=t-freebsd
  		;;
@@ -95,24 +106,33 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  	i[34567]86-*-openbsd*)
  		# we need collect2 until our bug is fixed...
-@@ -4372,11 +4379,12 @@
+@@ -4371,12 +4379,21 @@
+ 		tmake_file=m68k/t-lynx
  		extra_headers=math-68881.h
  		float_format=m68k
++		;;
++	m68*-*-netbsdelf*)
++                case $machine in
++                  m68010-*) 
++		    target_cpu_default="0"
++                    ;;
++                  *)
++		    target_cpu_default="MASK_68020|MASK_68881|MASK_BITFIELD"
++                    ;;
++                esac
++		float_format=m68k
++		gas=yes gnu_ld=yes
  		;;
 -	m68k*-*-netbsd*)
 -		tm_file=m68k/netbsd.h
 -		tmake_file=t-netbsd
-+	m68*-*-netbsdelf*)
-+		float_format=m68k
-+		gas=yes gnu_ld=yes
-+		;;
 +	m68*-*-netbsd*)
  		float_format=m68k
 -       use_collect2=yes
  		;;
  	m68k*-*-openbsd*)
  		float_format=m68k
-@@ -4691,10 +4699,12 @@
+@@ -4691,10 +4708,12 @@
  			use_collect2=yes
  	      fi
  	      ;;
@@ -129,7 +149,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
         mips*-*-linux*)                         # Linux MIPS, either endian.
  		xmake_file=x-linux
-@@ -5040,11 +5050,6 @@
+@@ -5040,11 +5059,6 @@
  		use_collect2=yes
  		;;
  	ns32k-*-netbsd*)
@@ -141,7 +161,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
          pdp11-*-bsd)
  		tm_file="${tm_file} pdp11/2bsd.h"
-@@ -5069,6 +5074,10 @@
+@@ -5069,6 +5083,10 @@
  	romp-*-openbsd*)
  		# Nothing special
  		;;
@@ -152,7 +172,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  	powerpc-*-openbsd*)
  		tmake_file="${tmake_file} rs6000/t-rs6000 rs6000/t-openbsd"
  		;;
-@@ -5311,6 +5320,13 @@
+@@ -5311,6 +5329,13 @@
  		tm_file=sh/elf.h
  		float_format=sh
  		;;
@@ -166,7 +186,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  	sh-*-rtemself*)
  		tmake_file="sh/t-sh t-rtems"
  		tm_file=sh/rtemself.h
-@@ -5339,10 +5355,12 @@
+@@ -5339,10 +5364,12 @@
  		tmake_file=sparc/t-sparcbare
  		tm_file="sparc/aout.h libgloss.h"
  		;;
@@ -182,7 +202,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  	sparc-*-openbsd*)
  		# we need collect2 until our bug is fixed...
-@@ -5532,6 +5550,11 @@
+@@ -5532,6 +5559,11 @@
  		extra_parts="crtbegin.o crtbeginS.o crtend.o crtendS.o"
  		gnu_ld=yes
  		;;
@@ -194,7 +214,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  # This hasn't been upgraded to GCC 2.
  #	tahoe-harris-*)			# Harris tahoe, using COFF.
  #		tm_file=tahoe/harris.h
-@@ -5579,10 +5602,8 @@
+@@ -5579,10 +5611,8 @@
  		float_format=vax
  		;;
  	vax-*-netbsd*)
@@ -206,7 +226,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  	vax-*-openbsd*)
  		tmake_file="${tmake_file} vax/t-openbsd"
-@@ -5873,6 +5894,12 @@
+@@ -5873,6 +5903,12 @@
    esac
  fi
  
@@ -219,7 +239,18 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  # Handle cpp installation.
  if test x$enable_cpp != xno
  then
-@@ -6062,7 +6089,7 @@
+@@ -5959,8 +5995,8 @@
+ 	/*) realsrcdir=${srcdir};;
+ 	*) realsrcdir=../${srcdir};;
+ 	esac
+-	CC=${CC_FOR_BUILD} ${realsrcdir}/configure \
+-		--target=$target --host=$build --build=$build
++	CC=${CC_FOR_BUILD} LIBS= ${realsrcdir}/configure \
++		--target=$target --host=$build --build=$build || exit 1
+ 
+ 	# We just finished tests for the build machine, so rename
+ 	# the file auto-build.h in the gcc directory.
+@@ -6062,7 +6098,7 @@
  
  
          echo $ac_n "checking for strerror in -lcposix""... $ac_c" 1>&6
@@ -228,7 +259,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_lib_var=`echo cposix'_'strerror | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -6070,7 +6097,7 @@
+@@ -6070,7 +6106,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lcposix  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -237,7 +268,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -6081,7 +6108,7 @@
+@@ -6081,7 +6117,7 @@
  strerror()
  ; return 0; }
  EOF
@@ -246,7 +277,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -6104,12 +6131,12 @@
+@@ -6104,12 +6140,12 @@
    
  
  echo $ac_n "checking for working const""... $ac_c" 1>&6
@@ -261,7 +292,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -6158,7 +6185,7 @@
+@@ -6158,7 +6194,7 @@
  
  ; return 0; }
  EOF
@@ -270,7 +301,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    ac_cv_c_const=yes
  else
-@@ -6179,21 +6206,21 @@
+@@ -6179,21 +6215,21 @@
  fi
  
  echo $ac_n "checking for inline""... $ac_c" 1>&6
@@ -295,7 +326,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    ac_cv_c_inline=$ac_kw; break
  else
-@@ -6219,12 +6246,12 @@
+@@ -6219,12 +6255,12 @@
  esac
  
  echo $ac_n "checking for off_t""... $ac_c" 1>&6
@@ -310,7 +341,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #if STDC_HEADERS
-@@ -6252,12 +6279,12 @@
+@@ -6252,12 +6288,12 @@
  fi
  
  echo $ac_n "checking for size_t""... $ac_c" 1>&6
@@ -325,7 +356,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  #include <sys/types.h>
  #if STDC_HEADERS
-@@ -6287,19 +6314,19 @@
+@@ -6287,19 +6323,19 @@
  # The Ultrix 4.2 mips builtin alloca declared by alloca.h only works
  # for constant arguments.  Useless!
  echo $ac_n "checking for working alloca.h""... $ac_c" 1>&6
@@ -348,7 +379,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    ac_cv_header_alloca_h=yes
  else
-@@ -6320,12 +6347,12 @@
+@@ -6320,12 +6356,12 @@
  fi
  
  echo $ac_n "checking for alloca""... $ac_c" 1>&6
@@ -363,7 +394,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  
  #ifdef __GNUC__
-@@ -6353,7 +6380,7 @@
+@@ -6353,7 +6389,7 @@
  char *p = (char *) alloca(1);
  ; return 0; }
  EOF
@@ -372,7 +403,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    ac_cv_func_alloca_works=yes
  else
-@@ -6385,12 +6412,12 @@
+@@ -6385,12 +6421,12 @@
  
  
  echo $ac_n "checking whether alloca needs Cray hooks""... $ac_c" 1>&6
@@ -387,7 +418,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  #if defined(CRAY) && ! defined(CRAY2)
  webecray
-@@ -6415,12 +6442,12 @@
+@@ -6415,12 +6451,12 @@
  if test $ac_cv_os_cray = yes; then
  for ac_func in _getb67 GETB67 getb67; do
    echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
@@ -402,7 +433,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char $ac_func(); below.  */
-@@ -6443,7 +6470,7 @@
+@@ -6443,7 +6479,7 @@
  
  ; return 0; }
  EOF
@@ -411,7 +442,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_$ac_func=yes"
  else
-@@ -6470,7 +6497,7 @@
+@@ -6470,7 +6506,7 @@
  fi
  
  echo $ac_n "checking stack direction for C alloca""... $ac_c" 1>&6
@@ -420,7 +451,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_c_stack_direction'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -6478,7 +6505,7 @@
+@@ -6478,7 +6514,7 @@
    ac_cv_c_stack_direction=0
  else
    cat > conftest.$ac_ext <<EOF
@@ -429,7 +460,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  find_stack_direction ()
  {
-@@ -6497,7 +6524,7 @@
+@@ -6497,7 +6533,7 @@
    exit (find_stack_direction() < 0);
  }
  EOF
@@ -438,7 +469,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  then
    ac_cv_c_stack_direction=1
  else
-@@ -6522,17 +6549,17 @@
+@@ -6522,17 +6558,17 @@
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
@@ -459,7 +490,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6561,12 +6588,12 @@
+@@ -6561,12 +6597,12 @@
  for ac_func in getpagesize
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
@@ -474,7 +505,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char $ac_func(); below.  */
-@@ -6589,7 +6616,7 @@
+@@ -6589,7 +6625,7 @@
  
  ; return 0; }
  EOF
@@ -483,7 +514,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_$ac_func=yes"
  else
-@@ -6614,7 +6641,7 @@
+@@ -6614,7 +6650,7 @@
  done
  
  echo $ac_n "checking for working mmap""... $ac_c" 1>&6
@@ -492,7 +523,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_func_mmap_fixed_mapped'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -6622,7 +6649,7 @@
+@@ -6622,7 +6658,7 @@
    ac_cv_func_mmap_fixed_mapped=no
  else
    cat > conftest.$ac_ext <<EOF
@@ -501,7 +532,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  
  /* Thanks to Mike Haertel and Jim Avera for this test.
-@@ -6762,7 +6789,7 @@
+@@ -6762,7 +6798,7 @@
  }
  
  EOF
@@ -510,7 +541,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  then
    ac_cv_func_mmap_fixed_mapped=yes
  else
-@@ -6790,17 +6817,17 @@
+@@ -6790,17 +6826,17 @@
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
@@ -531,7 +562,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6830,12 +6857,12 @@
+@@ -6830,12 +6866,12 @@
  strdup __argz_count __argz_stringify __argz_next
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
@@ -546,7 +577,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char $ac_func(); below.  */
-@@ -6858,7 +6885,7 @@
+@@ -6858,7 +6894,7 @@
  
  ; return 0; }
  EOF
@@ -555,7 +586,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_$ac_func=yes"
  else
-@@ -6887,12 +6914,12 @@
+@@ -6887,12 +6923,12 @@
       for ac_func in stpcpy
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
@@ -570,7 +601,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char $ac_func(); below.  */
-@@ -6915,7 +6942,7 @@
+@@ -6915,7 +6951,7 @@
  
  ; return 0; }
  EOF
@@ -579,7 +610,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_$ac_func=yes"
  else
-@@ -6949,19 +6976,19 @@
+@@ -6949,19 +6985,19 @@
  
     if test $ac_cv_header_locale_h = yes; then
      echo $ac_n "checking for LC_MESSAGES""... $ac_c" 1>&6
@@ -602,7 +633,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    am_cv_val_LC_MESSAGES=yes
  else
-@@ -6982,7 +7009,7 @@
+@@ -6982,7 +7018,7 @@
      fi
    fi
     echo $ac_n "checking whether NLS is requested""... $ac_c" 1>&6
@@ -611,7 +642,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
          # Check whether --enable-nls or --disable-nls was given.
  if test "${enable_nls+set}" = set; then
    enableval="$enable_nls"
-@@ -7002,7 +7029,7 @@
+@@ -7002,7 +7038,7 @@
  EOF
  
        echo $ac_n "checking whether included gettext is requested""... $ac_c" 1>&6
@@ -620,7 +651,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
        # Check whether --with-included-gettext or --without-included-gettext was given.
  if test "${with_included_gettext+set}" = set; then
    withval="$with_included_gettext"
-@@ -7021,17 +7048,17 @@
+@@ -7021,17 +7057,17 @@
  
  	ac_safe=`echo "libintl.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for libintl.h""... $ac_c" 1>&6
@@ -641,7 +672,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -7048,19 +7075,19 @@
+@@ -7048,19 +7084,19 @@
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
    echo $ac_n "checking for gettext in libc""... $ac_c" 1>&6
@@ -664,7 +695,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    gt_cv_func_gettext_libc=yes
  else
-@@ -7076,7 +7103,7 @@
+@@ -7076,7 +7112,7 @@
  
  	   if test "$gt_cv_func_gettext_libc" != "yes"; then
  	     echo $ac_n "checking for bindtextdomain in -lintl""... $ac_c" 1>&6
@@ -673,7 +704,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_lib_var=`echo intl'_'bindtextdomain | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -7084,7 +7111,7 @@
+@@ -7084,7 +7120,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lintl  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -682,7 +713,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -7095,7 +7122,7 @@
+@@ -7095,7 +7131,7 @@
  bindtextdomain()
  ; return 0; }
  EOF
@@ -691,7 +722,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -7111,12 +7138,12 @@
+@@ -7111,12 +7147,12 @@
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
    echo $ac_n "checking for gettext in libintl""... $ac_c" 1>&6
@@ -706,7 +737,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_lib_var=`echo intl'_'gettext | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -7124,7 +7151,7 @@
+@@ -7124,7 +7160,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lintl  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -715,7 +746,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -7135,7 +7162,7 @@
+@@ -7135,7 +7171,7 @@
  gettext()
  ; return 0; }
  EOF
@@ -724,7 +755,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -7174,7 +7201,7 @@
+@@ -7174,7 +7210,7 @@
  	      # Extract the first word of "msgfmt", so it can be a program name with args.
  set dummy msgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -733,7 +764,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_MSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7208,12 +7235,12 @@
+@@ -7208,12 +7244,12 @@
  		for ac_func in dcgettext
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
@@ -748,7 +779,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char $ac_func(); below.  */
-@@ -7236,7 +7263,7 @@
+@@ -7236,7 +7272,7 @@
  
  ; return 0; }
  EOF
@@ -757,7 +788,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_$ac_func=yes"
  else
-@@ -7263,7 +7290,7 @@
+@@ -7263,7 +7299,7 @@
  		# Extract the first word of "gmsgfmt", so it can be a program name with args.
  set dummy gmsgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -766,7 +797,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_GMSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7299,7 +7326,7 @@
+@@ -7299,7 +7335,7 @@
  		# Extract the first word of "xgettext", so it can be a program name with args.
  set dummy xgettext; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -775,7 +806,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_XGETTEXT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7331,7 +7358,7 @@
+@@ -7331,7 +7367,7 @@
  fi
  
  		cat > conftest.$ac_ext <<EOF
@@ -784,7 +815,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  
  int main() {
-@@ -7339,7 +7366,7 @@
+@@ -7339,7 +7375,7 @@
  			       return _nl_msg_cat_cntr
  ; return 0; }
  EOF
@@ -793,7 +824,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    CATOBJEXT=.gmo
  		   DATADIRNAME=share
-@@ -7362,7 +7389,7 @@
+@@ -7362,7 +7398,7 @@
  
          if test "$CATOBJEXT" = "NONE"; then
  	  echo $ac_n "checking whether catgets can be used""... $ac_c" 1>&6
@@ -802,7 +833,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  	  # Check whether --with-catgets or --without-catgets was given.
  if test "${with_catgets+set}" = set; then
    withval="$with_catgets"
-@@ -7375,7 +7402,7 @@
+@@ -7375,7 +7411,7 @@
  
  	  if test "$nls_cv_use_catgets" = "yes"; then
  	    	    echo $ac_n "checking for main in -li""... $ac_c" 1>&6
@@ -811,7 +842,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_lib_var=`echo i'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -7383,14 +7410,14 @@
+@@ -7383,14 +7419,14 @@
    ac_save_LIBS="$LIBS"
  LIBS="-li  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -828,7 +859,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -7418,12 +7445,12 @@
+@@ -7418,12 +7454,12 @@
  fi
  
  	    echo $ac_n "checking for catgets""... $ac_c" 1>&6
@@ -843,7 +874,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  #include "confdefs.h"
  /* System header to define __stub macros and hopefully few prototypes,
      which can conflict with char catgets(); below.  */
-@@ -7446,7 +7473,7 @@
+@@ -7446,7 +7482,7 @@
  
  ; return 0; }
  EOF
@@ -852,7 +883,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
    rm -rf conftest*
    eval "ac_cv_func_catgets=yes"
  else
-@@ -7468,7 +7495,7 @@
+@@ -7468,7 +7504,7 @@
  	       # Extract the first word of "gencat", so it can be a program name with args.
  set dummy gencat; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -861,7 +892,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_GENCAT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7504,7 +7531,7 @@
+@@ -7504,7 +7540,7 @@
  		 # Extract the first word of "gmsgfmt", so it can be a program name with args.
  set dummy gmsgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -870,7 +901,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_GMSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7541,7 +7568,7 @@
+@@ -7541,7 +7577,7 @@
  		   # Extract the first word of "msgfmt", so it can be a program name with args.
  set dummy msgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -879,7 +910,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_GMSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7576,7 +7603,7 @@
+@@ -7576,7 +7612,7 @@
  		 # Extract the first word of "xgettext", so it can be a program name with args.
  set dummy xgettext; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -888,7 +919,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_XGETTEXT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7634,7 +7661,7 @@
+@@ -7634,7 +7670,7 @@
          # Extract the first word of "msgfmt", so it can be a program name with args.
  set dummy msgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -897,7 +928,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_MSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7668,7 +7695,7 @@
+@@ -7668,7 +7704,7 @@
          # Extract the first word of "gmsgfmt", so it can be a program name with args.
  set dummy gmsgfmt; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -906,7 +937,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_GMSGFMT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7704,7 +7731,7 @@
+@@ -7704,7 +7740,7 @@
          # Extract the first word of "xgettext", so it can be a program name with args.
  set dummy xgettext; ac_word=$2
  echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
@@ -915,7 +946,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  if eval "test \"`echo '$''{'ac_cv_path_XGETTEXT'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -7797,7 +7824,7 @@
+@@ -7797,7 +7833,7 @@
         LINGUAS=
       else
         echo $ac_n "checking for catalogs to be installed""... $ac_c" 1>&6
@@ -924,7 +955,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
         NEW_LINGUAS=
         for lang in ${LINGUAS=$ALL_LINGUAS}; do
           case "$ALL_LINGUAS" in
-@@ -7825,17 +7852,17 @@
+@@ -7825,17 +7861,17 @@
     if test "$CATOBJEXT" = ".cat"; then
       ac_safe=`echo "linux/version.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for linux/version.h""... $ac_c" 1>&6
@@ -945,7 +976,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -8069,7 +8096,7 @@
+@@ -8069,7 +8105,7 @@
  
  # Figure out what assembler alignment features are present.
  echo $ac_n "checking assembler alignment features""... $ac_c" 1>&6
@@ -954,7 +985,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  gcc_cv_as=
  gcc_cv_as_alignment_features=
  gcc_cv_as_gas_srcdir=`echo $srcdir | sed -e 's,/gcc$,,'`/gas
-@@ -8190,7 +8217,7 @@
+@@ -8190,7 +8226,7 @@
  echo "$ac_t""$gcc_cv_as_alignment_features" 1>&6
  
  echo $ac_n "checking assembler subsection support""... $ac_c" 1>&6
@@ -963,7 +994,7 @@ $NetBSD: patch-bs,v 1.1 2002/01/03 20:40:48 tron Exp $
  gcc_cv_as_subsections=
  if test x$gcc_cv_as != x; then
  	# Check if we have .subsection
-@@ -8230,7 +8257,7 @@
+@@ -8230,7 +8266,7 @@
  echo "$ac_t""$gcc_cv_as_subsections" 1>&6
  
  echo $ac_n "checking assembler instructions""... $ac_c" 1>&6

@@ -1,7 +1,7 @@
-$NetBSD: patch-bn,v 1.1 2002/01/03 20:40:47 tron Exp $
+$NetBSD: patch-bn,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/c-decl.c.orig	Thu Jan 25 15:02:59 2001
-+++ ../gcc-2.95.3/gcc/c-decl.c	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/c-decl.c.orig 2001/04/23 11:57:59 1.1.1.2
++++ ../gcc-2.95.3/gcc/c-decl.c 2001/04/23 12:23:27 1.4
 @@ -811,6 +811,10 @@
      warn_traditional = 0;
    else if (!strcmp (p, "-Wformat"))
