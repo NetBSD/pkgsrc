@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.28 2003/09/13 16:17:41 jschauma Exp $
+dnl $NetBSD: configure.ac,v 1.29 2003/09/14 07:36:15 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030830], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20030914], [grant@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
