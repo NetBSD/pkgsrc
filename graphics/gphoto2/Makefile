@@ -1,34 +1,24 @@
-# $NetBSD: Makefile,v 1.11 2002/12/01 13:49:41 salo Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/24 16:24:07 wiz Exp $
+#
 
-DISTNAME=	gphoto2-2.1.0
-PKGNAME=	gphoto-2.1.0
-PKGREVISION=	1
-CATEGORIES=	graphics
+DISTNAME=	gphoto2-2.1.1
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.gphoto.org/gphoto2/
-COMMENT=	Download and view files from various digital cameras
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphoto2/
+COMMENT=	digital camera access command line client
 
-BUILD_USES_MSGFMT=	# defined
+CONFLICTS=	gphoto-[0-9]*
 
-USE_BUILDLINK2=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_GMAKE=		# defined
-
-USE_LIBTOOL=		# defined
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libgphoto2_port/libtool
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-drivers=all
-CONFIGURE_ARGS+=	--with-doc-dir=${PREFIX}/share/doc/gphoto2
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/gphoto2
-CONFIGURE_ARGS+=	--without-pthread
-CONFIGURE_ARGS+=	--without-pkgconfig
-CONFIGURE_ARGS+=	--without-fig2dev
-CONFIGURE_ARGS+=	--without-xmlto
-CONFIGURE_ARGS+=	--with-aalib
+CONFIGURE_ARGS+=	--with-aalib-prefix=${BUILDLINK_PREFIX.aalib}
 CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
 CONFIGURE_ARGS+=	--with-exif-prefix=${BUILDLINK_PREFIX.libexif}
 CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
@@ -37,16 +27,13 @@ CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 # part of the library check.
 #
 CONFIGURE_ARGS+=	--without-readline
-#USE_GNU_READLINE=	rl_completion_matches
+#USE_GNU_READLINE=	rl_completion_matches, rl_completion_append_character
 #.include "../../devel/readline/buildlink2.mk"
 
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/cdk/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../devel/libusb/buildlink2.mk"
+.include "../../devel/libgphoto2/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
 .include "../../graphics/aalib/buildlink2.mk"
-.include "../../graphics/libexif/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"
