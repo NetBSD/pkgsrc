@@ -1,8 +1,40 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+$NetBSD: patch-af,v 1.2 1999/11/11 10:47:26 tron Exp $
 
 --- daemon/slave.c.orig	Thu Sep 30 00:56:35 1999
-+++ daemon/slave.c	Wed Nov 10 01:18:48 1999
-@@ -423,7 +423,7 @@
++++ daemon/slave.c	Thu Nov 11 11:41:17 1999
+@@ -259,6 +259,7 @@
+     gchar *session, *language, *usrsess, *usrlang;
+     gboolean savesess = FALSE, savelang = FALSE, usrcfgok = FALSE, authok = FALSE;
+     gint i;
++    extern char **environ;
+ 
+     pwent = getpwnam (login);
+     
+@@ -331,11 +332,11 @@
+     setenv ("DISPLAY", d->name, TRUE);
+     setenv ("LOGNAME", login, TRUE);
+     setenv ("USER", login, TRUE);
+-    setenv ("USERNAME", login, TRUE);
+     setenv ("HOME", pwent->pw_dir, TRUE);
+     setenv ("GDMSESSION", session, TRUE);
+     setenv ("SHELL", pwent->pw_shell, TRUE);
+-    putenv ("MAIL");
++    unsetenv ("GROUP");
++    unsetenv ("MAIL");
+ 
+     /* Special PATH for root */
+     if(pwent->pw_uid == 0)
+@@ -385,6 +386,9 @@
+ 	if (setgid (pwent->pw_gid) < 0) 
+ 	    gdm_remanage (_("gdm_slave_session_start: Could not setgid %d. Aborting."), pwent->pw_gid);
+ 	
++	if (setlogin (login) < 0) 
++	    gdm_remanage (_("gdm_slave_session_start: Could not set login name %s. Aborting."), login);
++
+ 	if (initgroups (login, pwent->pw_gid) < 0)
+ 	    gdm_remanage (_("gdm_slave_session_start: initgroups() failed for %s. Aborting."), login);
+ 	
+@@ -423,7 +427,7 @@
  	/* Restore sigmask inherited from init */
  	sigprocmask (SIG_SETMASK, &sysmask, NULL);
  	
