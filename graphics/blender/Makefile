@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/04/04 12:29:48 tron Exp $
+# $NetBSD: Makefile,v 1.12 2002/07/14 22:50:33 rh Exp $
 
 PKGNAME=	blender-2.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://www.blender.nl/pub/
 
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 CHECK_SHLIBS=	NO
 
 # To be updated as other platforms PLIST will be built
-ONLY_FOR_PLATFORM= *-*-powerpc
+ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc
 
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/linux/lib/ld.so.1)

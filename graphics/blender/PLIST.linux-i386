@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST.linux-i386,v 1.1 2002/07/14 22:50:33 rh Exp $
+bin/blender
+lib/blender/README
+lib/blender/blender
+lib/blender/copyright.txt
+lib/blender/plugins/Makefile
+lib/blender/plugins/bmake
+lib/blender/plugins/include/floatpatch.h
+lib/blender/plugins/include/iff.h
+lib/blender/plugins/include/plugin.h
+lib/blender/plugins/include/util.h
+lib/blender/plugins/sequence/Makefile
+lib/blender/plugins/sequence/blur.c
+lib/blender/plugins/sequence/blur.so
+lib/blender/plugins/sequence/scatter.c
+lib/blender/plugins/sequence/scatter.so
+lib/blender/plugins/sequence/showzbuf.c
+lib/blender/plugins/sequence/showzbuf.so
+lib/blender/plugins/texture/Makefile
+lib/blender/plugins/texture/clouds2.c
+lib/blender/plugins/texture/clouds2.so
+lib/blender/plugins/texture/tiles.c
+lib/blender/plugins/texture/tiles.so
+lib/blender/python/ivexport.py
+lib/blender/python/lwo2iv.py
+lib/blender/python/lwoimport.py
+lib/blender/python/mimport.py
+lib/blender/python/objimport.py
+lib/blender/python/povexport.py
+lib/blender/python/ribexport.py
+lib/blender/python/wrlexport.py
+@dirrm lib/blender/python
+@dirrm lib/blender/plugins/texture
+@dirrm lib/blender/plugins/sequence
+@dirrm lib/blender/plugins/include
+@dirrm lib/blender/plugins
+@dirrm lib/blender
