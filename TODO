@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.78 2002/03/18 12:50:23 wiz Exp $
+$NetBSD: TODO,v 1.79 2002/04/21 09:42:42 zuntum Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -40,7 +40,7 @@ packages TODO (Suggested new packages)
 	http://squirm.foote.com.au/
 
 	smsclient
-	send SMS messages to mobile phones and pagers on wide range of providers
+	send SMS messages to mobile phones and pagers on wide range of providers [pkg/16430 is relevant]
 	http://www.styx.demon.co.uk/
 
 	SquirrelMail plugins
