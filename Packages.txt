@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.309 2003/09/22 13:18:31 wiz Exp $
+# $NetBSD: Packages.txt,v 1.310 2003/09/23 01:27:53 yyamano Exp $
 ###########################################################################
 
 			==========================
@@ -2219,7 +2219,7 @@ pkgsrc/security/audit-packages package.  It has two components:
      the NetBSD security officer and the NetBSD packages team, and is
      distributed from the NetBSD ftp server:
 
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
+	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
 
  (2) audit-packages, an easy way to audit the current machine, checking
      each vulnerability which is known. If a vulnerable package is
@@ -2254,8 +2254,9 @@ installation procedure:
 
 Note to package developers: When a vulnerability is found, this should be
 noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
-commit of that file, it should be copied to
-/pub/NetBSD/packages/distfiles/vulnerabilities on ftp.netbsd.org.
+commit of that file, it should be copied to both
+/pub/NetBSD/packages/distfiles/pkg-vulnerabilities and vulnerabilities 
+on ftp.netbsd.org by localsrc/security/advisories/Makefile.
 
 
  10.22 What's the proper way to create an account from a package?
