@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/04/09 14:49:06 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/04/30 15:28:08 tv Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -12,6 +12,7 @@
     SUBDIR += libident
     SUBDIR += nessus
     SUBDIR += nfsbug
+    SUBDIR += openssl
 #    SUBDIR += p5-Authen-Radius
 #    SUBDIR += p5-Crypt-DES
 #    SUBDIR += p5-Crypt-IDEA
@@ -25,11 +26,9 @@
     SUBDIR += rsaref
     SUBDIR += ssh
     SUBDIR += ssh-ip-tunnel
-    SUBDIR += ssleay
     SUBDIR += sudo
 #    SUBDIR += super
 #    SUBDIR += swatch
-#    SUBDIR += tcp_wrapper
     SUBDIR += tripwire
 #    SUBDIR += vscan
 #    SUBDIR += xinetd
