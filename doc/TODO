@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1891 2004/07/03 12:03:11 wiz Exp $
+$NetBSD: TODO,v 1.1892 2004/07/03 13:53:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -512,3 +512,5 @@ Suggested cleanups in pkgsrc
 	o Set USE_LANGUAGES appropriately in packages that use C++, Fortran,
 	  or Objective-C so that the correct type of compiler dependency is
 	  set.
+
+	o Deprecate USE_GCC_SHLIB by using USE_LANGUAGES appropriately.
