@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/12 04:12:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/13 08:13:42 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.17
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -69,9 +69,9 @@ post-build:
 
 .if defined(USE_LDAP)
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cyrus-saslauthd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cyrus-saslauthd
 	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD \
-		${PREFIX}/share/examples/cyrus-saslauthd
+		${PREFIX}/share/doc/cyrus-saslauthd
 .endif
 
 .include "../../mk/bsd.pkg.mk"
