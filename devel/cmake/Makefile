@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2004/02/10 02:44:24 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/02 13:08:09 drochner Exp $
 
-DISTNAME=	cmake-1.6.6
-PKGREVISION=	2
+DISTNAME=	cmake-2.0.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cmake.org/files/
+MASTER_SITES=	http://www.cmake.org/files/v2.0/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
-COMMENT=	cross platform make
+COMMENT=	Cross platform make
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	yes
 USE_NCURSES=	yes
 USE_GNU_TOOLS+=	make
+ALL_TARGET=	default_target
 
 post-patch:
 	for file in ${WRKSRC}/Modules/FindCurses.cmake; do		\
