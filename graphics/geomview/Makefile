@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/05/02 14:49:37 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/02 15:08:52 jtb Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -15,11 +15,8 @@ USE_X11=		yes
 USE_MOTIF=		yes
 USE_MESA=		yes
 
-.if ${HAVE_BUILTIN_MESA} == "NO"
+MESABASE_DEFAULT=	${X11BASE}
 EVAL_PREFIX+=		MESABASE=Mesa
-.else
-MESABASE=		${X11BASE}
-.endif
 
 CONFIGURE_ARGS+=	--without-xforms
 CONFIGURE_ARGS+=	--with-opengl=${MESABASE}
