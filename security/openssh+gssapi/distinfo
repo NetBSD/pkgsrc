@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/09/16 18:15:27 jwise Exp $
+$NetBSD: distinfo,v 1.3 2003/09/17 14:27:03 jwise Exp $
 
 SHA1 (openssh-3.6.1p2.tar.gz) = dafe5b6ee2c8ced12c2ee8961530b4e51c2f0bcf
 Size (openssh-3.6.1p2.tar.gz) = 879629 bytes
@@ -7,4 +7,5 @@ Size (openssh-3.6.1p2-gssapi-20030430.diff) = 121077 bytes
 SHA1 (patch-aa) = 20abe6938aba07ab7b6c7eab5d24a303f0cd2298
 SHA1 (patch-ab) = 1069fe256b7925fcf404781ef14e5c492f52c21e
 SHA1 (patch-ah) = 9913c868bde5d318915b1dee2c05dcf454a0f506
-SHA1 (patch-ai) = 863ddd5f85a8b436912605314cc2f7b8bfde5ec4
+SHA1 (patch-ai) = a564c1c9df9704fa8ed20bd31a5eb36450c72f2b
+SHA1 (patch-aj) = a83eed6c0a5703a2953682b4627be38a87bfb65f
