@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.183 2003/01/13 23:43:17 salo Exp $
+$NetBSD: TODO,v 1.184 2003/01/14 17:08:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -69,6 +69,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o R-1.6.2
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
 	o aim-1.5.277
@@ -92,6 +93,7 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.4.0
 	o ctwm-3.6
+	o curl-7.10.3
 	o cvs-1.11.4
 	o dante-1.1.13
 	o db4-4.1.25
@@ -148,6 +150,7 @@ Suggested package updates
 	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
+	o jpilot-0.99.4
 	o kdevelop-2.1.4
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
@@ -164,7 +167,7 @@ Suggested package updates
 	o libxml-2.5.1 [problems with kde2(?)]
 	o libxslt-1.0.23 [problems with kde2]
 	o lilypond-1.6.6
-	o lmbench-2.0.3
+	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
 	o maildrop-1.5.1
@@ -202,7 +205,7 @@ Suggested package updates
 	o pygtk-0.6.11
 	o qt3-3.1.1
 	o rep-gtk-0.16
-	o rocksndiamonds-2.2.0rc1
+	o rocksndiamonds-2.2.0rc2
 	o rox-1.2.2
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
@@ -212,6 +215,7 @@ Suggested package updates
 	o sablotron-0.97
 	o scmxx-0.6.3.5
 	o scribus-0.8
+	o scsh-0.6.3
 	o scrollkeeper-0.3.11
 	o sendfile-20010424
 	o sendmail-8.12.7
