@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.283 2004/09/22 08:09:44 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.284 2004/09/27 14:44:31 tv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -258,12 +258,6 @@ FETCH_RESUME_ARGS?=	# empty
 # from NetBSD/pkgsrc.
 # Default: -R
 # Possible: depends on your FETCH_CMD value.
-
-LIBTOOLIZE_PLIST?=	yes
-# This determines whether to expand libtool archives in PLISTs into the
-# represented library names.
-# Possible: yes, no
-# Default: no
 
 PKG_INSTALLATION_PREFS?= overwrite pkgviews
 # This is a whitespace-separated list of installation types to try when
