@@ -1,19 +1,25 @@
-$NetBSD: patch-ad,v 1.2 2002/11/26 22:02:45 cjep Exp $
+$NetBSD: patch-ad,v 1.2.4.1 2003/12/05 19:15:10 agc Exp $
+
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Wed Apr 10 12:37:38 2002
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Wed Sep 11 23:47:42 2002
-@@ -132,6 +132,10 @@
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	2001-09-29 05:12:51.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	2003-03-14 16:58:43.000000000 +0900
+@@ -132,6 +132,15 @@
      }
  }
  
 +/*
 + * SYMBOL PREFIX must be "_" for aout symbols and "" for ELF
 + */
++#ifndef __ELF__
++#define	SYMBOLPREFIX	"_"
++#else
++#define	SYMBOLPREFIX
++#endif
 +
  XPTC_PUBLIC_API(nsresult)
  XPTC_InvokeByIndex(nsISupports* that, PRUint32 methodIndex,
                     PRUint32 paramCount, nsXPTCVariant* params)
-@@ -139,30 +143,30 @@
+@@ -139,30 +148,30 @@
      PRUint32 result;
  
   __asm__ __volatile__(

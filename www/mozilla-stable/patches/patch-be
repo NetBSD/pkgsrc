@@ -1,7 +1,8 @@
-$NetBSD: patch-be,v 1.2 2002/11/26 22:02:46 cjep Exp $
+$NetBSD: patch-be,v 1.2.4.1 2003/12/05 19:15:10 agc Exp $
+
 diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c ./nsprpub/pr/src/io/prsocket.c
---- ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c	Wed Apr 10 12:17:03 2002
-+++ ./nsprpub/pr/src/io/prsocket.c	Wed Sep 11 23:47:59 2002
+--- ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c	2002-06-12 05:08:07.000000000 +0900
++++ ./nsprpub/pr/src/io/prsocket.c	2003-03-14 16:59:05.000000000 +0900
 @@ -1299,6 +1299,15 @@
  	if (osfd == -1) {
  		return 0;
