@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/07 11:54:35 wiz Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.NetBSD.org/~ad/
 
-MAINTAINER=		ad@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.awfulhak.org/~brian/
 COMMENT=		User-PPP package as found in FreeBSD and OpenBSD
 
