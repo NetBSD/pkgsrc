@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2003/07/13 13:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2003/07/13 14:34:48 dillo Exp $
 
-DISTNAME=		clisp-2.27
-PKGREVISION=		2
+DISTNAME=		clisp-2.30
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
@@ -15,7 +14,8 @@ NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
+			gt_cv_func_gnugettext2_libintl=yes
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
@@ -26,16 +26,18 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/trampoline_r/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libcharset/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libtool ${WRKSRC}/sigsegv/libtool
 
+USE_GNU_READLINE=	YES
+
 post-patch:
 	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
 	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/trampoline_r
 	${CP} files/vacall-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/vacall_r
 
 do-configure:
-	cd ${WRKSRC}; \
+	cd ${WRKSRC} && \
 	(cd .. ; ${SETENV} ${CONFIGURE_ENV} \
 		${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} \
-			--prefix=${PREFIX}); \
+			--prefix=${PREFIX}) && \
 	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext \
 		--with-dynamic-ffi --fsstnd=netbsd >Makefile
 
@@ -43,5 +45,7 @@ pre-build:
 	cd ${WRKSRC}/avcall && ${MAKE}
 	cd ${WRKSRC}/callback && ${MAKE}
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

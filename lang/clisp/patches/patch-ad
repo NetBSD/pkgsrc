@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2002/03/14 07:44:23 jmc Exp $
+$NetBSD: patch-ad,v 1.5 2003/07/13 14:34:49 dillo Exp $
 
---- ../ffcall/callback/vacall_r/Makefile.in.orig	Tue Jun 12 07:31:01 2001
-+++ ../ffcall/callback/vacall_r/Makefile.in	Thu Mar 14 07:13:43 2002
-@@ -118,11 +118,12 @@
+--- .././ffcall/callback/vacall_r/Makefile.in.orig	Sun Mar 24 19:51:37 2002
++++ .././ffcall/callback/vacall_r/Makefile.in
+@@ -121,11 +121,12 @@ vacall-rs6000.lo : $(srcdir)/vacall-rs60
  	  aix3*) syntax=aix.old;; \
  	  aix*) syntax=aix.new;; \
  	  linux*) syntax=linux;; \
