@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/02 18:13:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/05 22:16:59 recht Exp $
 bin/xmlwf
 include/expat.h
+include/expat_external.h
 lib/libexpat.a
 lib/libexpat.la
 lib/libexpat.so
