@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.7 2002/11/25 05:39:35 schmonz Exp $
+
+--- include/shmbutil.h.orig	Mon May  6 13:58:39 2002
++++ include/shmbutil.h
+@@ -30,11 +30,16 @@
+ /* For platforms which support the ISO C amendement 1 functionality we
+    support user defined character classes.  */
+    /* Solaris 2.5 has a bug: <wchar.h> must be included before <wctype.h>.  */
++#if defined (__NetBSD__)
++#  define HANDLE_MULTIBYTE        0
++#endif
+ #if defined (HAVE_WCTYPE_H) && defined (HAVE_WCHAR_H)
+ #  include <wchar.h>
+ #  include <wctype.h>
+ #  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */
++#   if !defined(HANDLE_MULTIBYTE)
+ #    define HANDLE_MULTIBYTE      1
++#   endif
+ #  endif
+ #endif /* HAVE_WCTYPE_H && HAVE_WCHAR_H */
+ 
