@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/09/24 13:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2002/12/01 05:51:33 dmcmahill Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -58,7 +58,9 @@ PKGSRCTOP=	yes
 # directory.
 .if make(bulk-cache) || make(clean-bulk-cache)
 .include "${.CURDIR}/mk/bulk/bsd.bulk-pkg.mk"
-_PKGSRCDIR?=${.CURDIR}
+# force the setting of _PKGSRCDIR because the way it gets
+# set in bsd.prefs.mk is broken if you're in this top level directory
+_PKGSRCDIR=${.CURDIR}
 .endif
 
 index:
