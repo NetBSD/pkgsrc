@@ -1,0 +1,101 @@
+# $NetBSD: STATUS,v 1.1 2003/04/10 04:02:14 grant Exp $
+
+Below is a list of packages known to build on various non-NetBSD
+platforms.
+
+'supported' means that pkgsrc on this platform is more than just
+experimental and can actually be used to provide a reliable environment
+for the average user.
+
+A 'fully supported' platform supports virtually all packages (if
+available for that platform) and can reliably be used in a production
+environment.
+
+'yowza' finally adds a handful of packages that are known to be very
+complex and may not even be fully functional under NetBSD on platforms
+other than i386.
+
+You are strongly encouraged to add leaf packages which are known to
+build on certain platforms.
+
+Some packages need only minor modifications to build on non-NetBSD
+platforms. Please attempt to fix any packages which are broken, or
+submit PRs if you are unable to.
+
+Please add/correct entries as appropriate.
+
+Legend:
+Y	-	Builds and installs perfectly
+N	-	Fails to configure, build or link
+X	-	Builds successfully but has installation or PLIST problems
+N/A	-	Not applicable (package not available for that platform)
+blank	-	Unknown
+[nnn]	-	associated pkg PR number
+*	-	see footnote
+
+---------------------------------------------------------------------------
+'supported'
+---------------------------------------------------------------------------
+Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
+---------------------------------------------------------------------------
+audio/mpg123                                 Y      Y                  Y
+devel/cvs               Y        Y           Y      Y                  Y
+devel/gettext           Y        Y           Y      Y                  Y
+devel/libtool           Y        Y           Y      Y                  Y
+devel/ncurses                                                           
+editors/vim             Y        Y           Y      Y
+editors/xemacs                                      Y
+editors/emacs                                       Y
+graphics/xfig                                       Y
+graphics/xv             Y                           Y
+lang/perl5              N/A      Y           Y      Y                  Y
+lang/perl58             Y                    Y      Y                  Y
+mail/mutt               Y        Y           Y      Y                  Y
+misc/screen             Y        Y           Y      Y                  Y
+net/wget                Y        Y                  Y
+news/slrn               Y        Y           Y      Y
+print/gv                                            Y
+print/teTeX                                         Y
+print/xpdf                                         *[19860]
+security/openssh                             Y      Y                  Y
+security/openssl        Y                    Y      Y                  Y
+shells/tcsh             N        Y           Y      Y                  Y
+wm/blackbox                                         Y
+www/apache              Y        Y           Y      Y                  Y
+www/links               Y        Y           Y      Y
+www/lynx                Y        Y                  Y                  Y
+---------------------------------------------------------------------------
+notes:
+
+Linux/xpdf: depends on openmotif, see PR
+
+---------------------------------------------------------------------------
+'fully supported'
+---------------------------------------------------------------------------
+Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris 
+---------------------------------------------------------------------------
+audio/xmms
+devel/gdb                                           Y                  N
+editors/abiword
+graphics/mplayer
+lang/gcc                N/A                                            Y
+lang/gcc3               N/A                                            X
+lang/python22                                Y      Y
+lang/ruby                                           Y
+lang/sun-j*                                         Y
+lang/wonka
+math/gnumeric
+misc/openoffice
+www/mozilla
+www/opera
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+'yowza'
+---------------------------------------------------------------------------
+Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
+---------------------------------------------------------------------------
+meta-pkgs/gnome
+misc/koffice3
+x11/kde3
+---------------------------------------------------------------------------
