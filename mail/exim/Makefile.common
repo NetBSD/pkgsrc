@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2004/11/26 10:16:57 grant Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/12/16 04:48:25 grant Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -11,7 +11,7 @@ USE_PKGINSTALL=	yes
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 
 EXIM_VERSION=	4.43
-PKGREVISION=	1
+PKGREVISION=	2
 
 EXTRACT_SUFX=	.tar.bz2
 
@@ -94,4 +94,5 @@ post-install:
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
