@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.44 2005/01/22 13:03:06 magick Exp $
+# $NetBSD: Makefile,v 1.45 2005/01/31 00:10:12 minskim Exp $
 
 DISTNAME=	xemacs-21.5.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.5/}
 
 MAINTAINER=	magick@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	*BETA* XEmacs text editor version 21.5.18
+
+CONFLICTS+=	gnuclient-[0-9]*
 
 USE_BUILDLINK3=	YES
 USE_X11=	YES
