@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/27 02:04:07 snj Exp $
 
 DISTNAME=	gnome-1.4.2.1
 PKGREVISION=	6
@@ -37,7 +37,7 @@ DEPENDS+=	pan>=0.11.4nb2:../../news/pan
 DEPENDS+=	xchat-gnome>=1.8.10nb3:../../chat/xchat-gnome
 
 USE_X11=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
@@ -46,5 +46,5 @@ NO_MTREE=	yes
 
 do-install:	# empty
 
-.include "../../x11/gnome-python/buildlink2.mk"
+.include "../../x11/gnome-python/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
