@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/11 04:38:48 snj Exp $
 
 DISTNAME=	ruby-gsl-0.1.9
 CATEGORIES=	math
@@ -11,7 +11,7 @@ COMMENT=	Wrapper of the GNU Scientific Library (GSL) for Ruby
 DIST_SUBDIR=		ruby
 WRKSRC=			${WRKDIR}/${DISTNAME}/ext
 USE_RUBY_EXTCONF=	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 INSTALL_TARGET=		site-install
 
 DOCS=		README
@@ -37,6 +37,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../samples/*.rb ${RUBY_EXAMPLESDIR}/gsl
 
 .include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink2.mk"
-.include "../../math/gsl/buildlink2.mk"
+.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
