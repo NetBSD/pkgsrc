@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1 2001/12/06 19:09:18 jlam Exp $
+
+--- config/imake/imakemdep.h.orig	Thu Dec  6 10:54:30 2001
++++ config/imake/imakemdep.h
+@@ -265,10 +265,10 @@
+ #ifdef _CRAY
+ #define DEFAULT_CPP "/lib/pcpp"
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__386BSD__) || defined(__OpenBSD__)
+ #define DEFAULT_CPP "/usr/libexec/cpp"
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #define USE_CC_E
+ #endif
+ #if defined(__sgi) && defined(__ANSI_CPP__)
