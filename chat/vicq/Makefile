@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/19 16:04:05 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/19 16:28:32 itojun Exp $
 
 DISTNAME=	vicq-0.4
 CATEGORIES=	chat
@@ -11,13 +11,14 @@ COMMENT=	simple icq client written in perl
 
 WRKSRC=		${WRKDIR}/vicq
 
-USE_PERL5=	YES
 REPLACE_PERL=	${WRKSRC}/vicq
 NO_BUILD=	YES
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/vICQ/.packlist
 
 do-install:
 	(cd ${WRKSRC}; perl ./install.pl --prefix=${PREFIX})
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vicq
 	${INSTALL_DATA} ${WRKSRC}/vicqrc.example ${PREFIX}/share/examples/vicq
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
