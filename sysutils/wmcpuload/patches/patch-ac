@@ -1,0 +1,67 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/03/24 18:04:57 wiz Exp $
+
+--- src/cpu_netbsd.c.orig	Sun Mar 24 18:18:37 2002
++++ src/cpu_netbsd.c
+@@ -0,0 +1,62 @@
++/*
++ * cpu_netbsd - module to get cpu usage, for NetBSD
++ *
++ * Copyright (C) 2001, 2002 Seiichi SATO <ssato@sh.rim.or.jp>
++ *
++ * Licensed under the GPL
++ */
++
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
++#include <stdio.h>
++#include <unistd.h>
++#include <stdlib.h>
++#include <string.h>
++#include "cpu.h"
++
++#include <sys/types.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <sys/sched.h>
++
++void cpu_init(void)
++{
++    /* You don't need initialization under NetBSD */
++    return;
++}
++
++/* Returns the current CPU usage in percent */
++int cpu_get_usage(struct cpu_options *opts)
++{
++    int total, used, result;
++    static int pre_total, pre_used;
++
++    int mib[] = { CTL_KERN, KERN_CP_TIME };
++    u_int64_t cpu_time[CPUSTATES];
++    size_t size = sizeof(cpu_time);
++
++    /* get cpu time*/
++    if (sysctl(mib, 2, &cpu_time, &size, NULL, 0) < 0)
++	return 0;
++
++    /* calc usage */
++    used = cpu_time[CP_USER] + cpu_time[CP_SYS];
++    if (!opts->ignore_nice)
++	used += cpu_time[CP_NICE];
++    total = used + cpu_time[CP_IDLE];
++
++    if (pre_total == 0)
++	result = 0;
++    else if ((total - pre_total) > 0)
++	result = 100 * (double)(used - pre_used) / (double)(total - pre_total);
++    else
++	result = 0;
++
++    /* save used/total for next calculation */
++    pre_used = used;
++    pre_total = total;
++
++    return result;
++}
