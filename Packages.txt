@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.75 1999/12/07 08:58:59 sakamoto Exp $
+# $NetBSD: Packages.txt,v 1.76 2000/01/05 19:40:21 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1318,7 +1318,7 @@ installed.]
 print/ghostscript5 package (it relies on the jpeg sources being
 present in source form during the build):
 
-BUILD_DEPENDS=  ../../graphics/jpeg/${WRKDIR:T}/jpeg-6a:../../graphics/jpeg:extract
+BUILD_DEPENDS+=  ../../graphics/jpeg/${WRKDIR:T}/jpeg-6a:../../graphics/jpeg:extract
 
 (b) If your package needs to use another package to build itself, this
 is specified using the BUILD_DEPENDS definition, but without
@@ -1326,7 +1326,7 @@ specifying the stage ``:extract'' in (a) above.  An example is the
 print/lyx package, which uses the latex binary during its build
 process:
 
-BUILD_DEPENDS=  latex:../../print/teTeX
+BUILD_DEPENDS+=  latex:../../print/teTeX
 
 (c) If your package needs a library with which to link, this is
 specified using the DEPENDS definition.  An example of this is the
@@ -1347,7 +1347,7 @@ is specified using the DEPENDS definition. The print/lyx package needs to
 be able to execute the latex binary from the teTex package when it runs,
 and that is specified:
 
-DEPENDS=        teTex-*:../../print/teTeX 
+DEPENDS+=        teTex-*:../../print/teTeX 
 
 
 
