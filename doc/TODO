@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2438 2004/11/24 14:53:45 minskim Exp $
+$NetBSD: TODO,v 1.2439 2004/11/25 04:02:16 snj Exp $
 
 Suggested new packages
 ======================
@@ -919,6 +919,7 @@ Suggested package updates
 	o pyslsk-1.2.5
 	o pysol-4.82
 	o qiv-2.0
+	o qmail-qfilter 2.0
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-designer-kde-2.3.2
