@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/05 13:01:10 seb Exp $
+$NetBSD: distinfo,v 1.2 2002/08/28 14:07:01 seb Exp $
 
-SHA1 (ripe-whois-3.0.tar.gz) = dc0aacdbff90959add659d20d1151001f1bbe70a
-Size (ripe-whois-3.0.tar.gz) = 21248 bytes
+SHA1 (ripe-whois-3.1.tar.gz) = 9651935183c6fe2fc3b1c3c001368480a6c7decc
+Size (ripe-whois-3.1.tar.gz) = 26342 bytes
 SHA1 (ripe-223.txt) = 962bca7ddcb70863e2925d45f17b120a21bf605c
 Size (ripe-223.txt) = 112854 bytes
 SHA1 (ripe-223.ps) = 9c25f2b92151a05f26844f51695fd40ea57aa7f2
 Size (ripe-223.ps) = 263983 bytes
+SHA1 (patch-aa) = 4b1532bba7eb4b120c601933bdcb40419c493666
