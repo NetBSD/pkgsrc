@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.87 2003/02/18 14:56:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.88 2003/04/20 10:43:51 rh Exp $
 #
 
-DISTNAME=		gnome-core-1.4.2
-PKGREVISION=		3
-CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-core/1.4/}
-EXTRACT_SUFX=		.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Base component of GNU Network Object Management Environment
+PKGREVISION=		4
+
+COMMENT=		Core component of GNU Network Object Management Environment
 
 DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
+DEPENDS+=		gnome-session>=1.4.2:../../x11/gnome1-session
+DEPENDS+=		gnome-panel>=1.4.2:../../x11/gnome1-panel
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
 
@@ -21,19 +19,10 @@ BUILD_USES_MSGFMT=	YES
 BUILDLINK_DEPENDS.gnome-pixmaps=gnome{,2}-pixmaps>=1.4.2
 .endif
 
-USE_BUILDLINK2=		YES
-USE_PKGLOCALEDIR=	YES
-USE_X11BASE=		YES
-USE_GMAKE=		YES
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-LOCALSTATEDIR=		${X11PREFIX}/var/gnome
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
-
-REPLACE_PERL=		help-browser/gnome-convert help-browser/gnome-download
+pre-install:
+.for dir in gsm smproxy panel applets
+	${ECHO} install: >${WRKSRC}/${dir}/Makefile
+.endfor
 
 post-install:
 .for prg in gnome-feedback gnome-terminal # Handled in gnome-dirs: gpl lgpl fdl
@@ -53,5 +42,7 @@ post-install:
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../www/libghttp/buildlink2.mk"
+.include "../../x11/gnome1-session/buildlink2.mk"
+.include "../../x11/gnome1-panel/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
