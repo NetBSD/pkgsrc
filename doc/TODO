@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1340 2004/01/29 14:27:50 recht Exp $
+$NetBSD: TODO,v 1.1341 2004/01/30 14:37:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -252,7 +252,6 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o nethack-3.4.3
 	o newscache-0.99.22p1
-	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3 [pkg/24034]
 	o nut-9.8
