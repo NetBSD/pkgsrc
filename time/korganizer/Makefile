@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/03/14 19:37:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 17:59:02 wiz Exp $
 
 DISTNAME=	korganizer-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	kde time
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
@@ -11,7 +11,7 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Organizer application for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb2:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
