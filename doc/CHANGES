@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8073 2004/11/27 15:13:10 he Exp $
+$NetBSD: CHANGES,v 1.8074 2004/11/27 15:17:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5500,8 +5500,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated phppgadmin to 3.5 [jdolecek 2004-11-27]
 	Updated st to 1.5.1 [gson 2004-11-27]
 	Updated autogen to 5.6.4 [kristerw 2004-11-27]
-	Added p5-Math-FFT 0.25 [gson 2004-11-27]
-	Added pear-Net_SMTP 1.2.6 [jdolecek 2004-11-27]
+	Added p5-Math-FFT-0.25 [gson 2004-11-27]
+	Added pear-Net_SMTP-1.2.6 [jdolecek 2004-11-27]
 	Updated pear-Date to 1.4.3 [jdolecek 2004-11-27]
 	Updated p5-Algorithm-Diff to 1.19.01 [he 2004-11-27]
 	Updated p5-Algorithm-Merge to 0.05 [he 2004-11-27]
@@ -5510,3 +5510,21 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Apache-Filter to 1.022 [he 2004-11-27]
 	Updated p5-Apache-AuthCookie to 3.06 [he 2004-11-27]
 	Updated p5-Apache-Test to 1.16 [he 2004-11-27]
+	Added ruby18-1.8.1 [taca 2004-11-27]
+	Added ruby16-1.6.8 [taca 2004-11-27]
+	Updated ruby-iconv to 1.8.1 [taca 2004-11-27]
+	Added ruby16-iconv-0.5 [taca 2004-11-27]
+	Added ruby-dbm-1.8.1 [taca 2004-11-27]
+	Updated ruby-gdbm to 1.8.1 [taca 2004-11-27]
+	Added ruby-curses-1.8.1 [taca 2004-11-27]
+	Added ruby16-curses-1.6.8 [taca 2004-11-27]
+	Updated ruby-readline to 1.8.1 [taca 2004-11-27]
+	Updated ruby-digest to 1.8.1 [taca 2004-11-27]
+	Updated ruby-openssl to 1.0.0 [taca 2004-11-27]
+	Added ruby-openssl-0.1.4a [taca 2004-11-27]
+	Updated ruby-tcltk to 1.8.1 [taca 2004-11-27]
+	Updated ruby-tk to 1.8.1 [taca 2004-11-27]
+	Added ruby16-tcltk-1.6.8 [taca 2004-11-27]
+	Added ruby16-tk-1.6.8 [taca 2004-11-27]
+	Updated ruby-mode to 1.8.1 [taca 2004-11-27]
+	Updated ruby to 1.8.1 [taca 2004-11-27]
