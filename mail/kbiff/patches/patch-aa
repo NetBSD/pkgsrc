@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2004/03/01 14:04:37 markd Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/12 11:08:03 markd Exp $
 
---- Makefile.in.orig	2003-09-12 02:52:41.000000000 +1200
+--- Makefile.in.orig	2004-03-26 13:47:41.000000000 +1200
 +++ Makefile.in
-@@ -268,7 +268,7 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
+@@ -273,7 +273,7 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
  	cd $(top_srcdir) && \
- 	$(AUTOMAKE) --foreign  ./Makefile
+ 	  $(AUTOMAKE) --foreign  Makefile
  	cd $(top_srcdir) && perl admin/am_edit Makefile.in
 -Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
-+Makefile:  $(srcdir)/Makefile.in  
++Makefile:  $(srcdir)/Makefile.in
  	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
  
  $(top_builddir)/config.status: $(srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
