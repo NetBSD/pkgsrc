@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5502 2004/04/10 08:58:44 minskim Exp $
+$NetBSD: CHANGES,v 1.5503 2004/04/10 09:02:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail to 1.03nb5 [schmonz 2004-04-10]
 	Updated abcde to 2.1.19 [snj 2004-04-10]
 	Updated py-libxml2 to 2.6.8 [minskim 2004-04-10]
+	Updated py-libxslt to 1.1.5 [minskim 2004-04-10]
