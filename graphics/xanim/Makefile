@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/05/31 00:28:05 itohy Exp $
+# $NetBSD: Makefile,v 1.27 2002/09/20 03:13:09 jlam Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -18,7 +18,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xanim.va.pubnix.com/
 COMMENT=	play most popular animation formats and show pictures
 
-EXTRACT_ONLY=   ${DISTNAME}.tar.gz
+EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
 
 RESTRICTED=		Can't mirror/distribute iv32 or cyuv object modules
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -26,6 +26,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 USE_IMAKE=	YES
 
