@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/15 12:15:01 itojun Exp $
+
+SHA1 (xorp-0.3.tar.gz) = ac0099a27b5dc2d70f8b3f4f39a2c3cfc10bb7c9
+Size (xorp-0.3.tar.gz) = 5879824 bytes
+SHA1 (patch-aa) = 901247880b5fd45dc8ce8d2a39b9421dd9937abb
