@@ -1,38 +1,27 @@
-# $NetBSD: Makefile,v 1.4 2001/10/06 23:06:15 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/07 08:29:43 tron Exp $
 
-DISTNAME=	bidwatcher-1.1.6
+DISTNAME=	bidwatcher-1.3.0
+PKGNAME=	bidwatcher-1.2.99.0
 CATEGORIES=	misc
-MASTER_SITES=	http://www.midwestcs.com/bidwatcher/download/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bidwatcher/}
 
-MAINTAINER=	knotwell@ix.netcom.com
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://sourceforge.net/projects/bidwatcher/
 COMMENT=        eBay snipe tool
 
+GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
-MAKE_ENV+=	OPTIONS="-DHAVE_GMTIME"
-MAKE_ENV+=	CXXFLAGS="${CFLAGS} ${CXXFLAGS}"
-
-USE_BUILDLINK_ONLY=	YES
-
-FILES_SUBST=		BUILDLINK_DIR=${BUILDLINK_DIR}
-FILES_SUBST+=		BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 DOCDIR=		${PREFIX}/share/doc/bidwatcher
 HTMLDIR=	${PREFIX}/share/doc/html/bidwatcher
 
-post-patch:
-	cd ${WRKSRC}; for file in Makefile; do				\
-		${SED} ${FILES_SUBST_SED} $${file} >> $${file}.fixed;	\
-		${MV} -f $${file}.fixed $${file};			\
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	for FILE in AUTHORS COPYING INSTALL NEWS README; do \
+	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${DOCDIR}; \
 	done
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/quick_start.html ${HTMLDIR}
 
-do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/bidwatcher ${PREFIX}/bin
-	cd ${WRKSRC}; ${INSTALL_DATA} README INSTALL CHANGES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${HTMLDIR}
-
-.include "../../x11/qt2-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

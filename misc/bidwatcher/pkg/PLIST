@@ -1,23 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/22 05:38:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/07 08:29:44 tron Exp $
 bin/bidwatcher
-share/doc/bidwatcher/CHANGES
+share/doc/bidwatcher/AUTHORS
+share/doc/bidwatcher/COPYING
 share/doc/bidwatcher/INSTALL
+share/doc/bidwatcher/NEWS
 share/doc/bidwatcher/README
-share/doc/html/bidwatcher/about_icon.png
-share/doc/html/bidwatcher/add_icon.png
-share/doc/html/bidwatcher/add_window.png
-share/doc/html/bidwatcher/auction_details.png
-share/doc/html/bidwatcher/bid_log.png
-share/doc/html/bidwatcher/bid_window.png
-share/doc/html/bidwatcher/exit_icon.png
-share/doc/html/bidwatcher/main_window.png
-share/doc/html/bidwatcher/popup_menu.png
-share/doc/html/bidwatcher/preferences.png
-share/doc/html/bidwatcher/prefs_icon.png
 share/doc/html/bidwatcher/quick_start.html
-share/doc/html/bidwatcher/screen_shots.html
-share/doc/html/bidwatcher/stop_icon.png
-share/doc/html/bidwatcher/sync_icon.png
-share/doc/html/bidwatcher/update_icon.png
 @dirrm share/doc/html/bidwatcher
 @dirrm share/doc/bidwatcher
