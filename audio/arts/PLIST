@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/20 10:03:40 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/11 13:33:44 markd Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -8,6 +8,7 @@ bin/artsrec
 bin/artsshell
 bin/artswrapper
 bin/mcopidl
+bin/testdhandle
 include/arts/anyref.h
 include/arts/artsflow.h
 include/arts/artsflow.idl
@@ -36,6 +37,29 @@ include/arts/extensionloader.h
 include/arts/factory.h
 include/arts/fft.h
 include/arts/flowsystem.h
+include/arts/gsl/gslartsthreads.h
+include/arts/gsl/gslcommon.h
+include/arts/gsl/gslconfig.h
+include/arts/gsl/gslconvert.h
+include/arts/gsl/gsldatacache.h
+include/arts/gsl/gsldatahandle-mad.h
+include/arts/gsl/gsldatahandle-vorbis.h
+include/arts/gsl/gsldatahandle.h
+include/arts/gsl/gsldatautils.h
+include/arts/gsl/gsldefs.h
+include/arts/gsl/gslengine.h
+include/arts/gsl/gslfft.h
+include/arts/gsl/gslfilter.h
+include/arts/gsl/gslglib.h
+include/arts/gsl/gslieee754.h
+include/arts/gsl/gslloader.h
+include/arts/gsl/gslmagic.h
+include/arts/gsl/gslmath.h
+include/arts/gsl/gsloscillator.h
+include/arts/gsl/gslosctable.h
+include/arts/gsl/gslsignal.h
+include/arts/gsl/gslwavechunk.h
+include/arts/gsl/gslwaveosc.h
 include/arts/idlfilereg.h
 include/arts/ifacerepo_impl.h
 include/arts/iomanager.h
@@ -90,6 +114,10 @@ lib/libartsflow_idl.la
 lib/libartsflow_idl.so
 lib/libartsflow_idl.so.1
 lib/libartsflow_idl.so.1.0
+lib/libartsgslplayobject.la
+lib/libartsgslplayobject.so
+lib/libartsgslplayobject.so.0
+lib/libartsgslplayobject.so.0.0
 lib/libartswavplayobject.la
 lib/libartswavplayobject.so
 lib/libartswavplayobject.so.0
@@ -118,7 +146,9 @@ lib/libx11globalcomm.la
 lib/libx11globalcomm.so
 lib/libx11globalcomm.so.1
 lib/libx11globalcomm.so.1.0
+lib/mcop/Arts/DataHandlePlay.mcopclass
 lib/mcop/Arts/FileInputStream.mcopclass
+lib/mcop/Arts/GSLPlayObject.mcopclass
 lib/mcop/Arts/Synth_ADD.mcopclass
 lib/mcop/Arts/Synth_AMAN_PLAY.mcopclass
 lib/mcop/Arts/Synth_AMAN_RECORD.mcopclass
@@ -132,6 +162,7 @@ lib/mcop/Arts/Synth_PLAY_WAV.mcopclass
 lib/mcop/Arts/Synth_RECORD.mcopclass
 lib/mcop/Arts/Synth_WAVE_SIN.mcopclass
 lib/mcop/Arts/WavPlayObject.mcopclass
+lib/mcop/Arts/WaveDataHandle.mcopclass
 lib/mcop/Arts/X11GlobalComm.mcopclass
 lib/mcop/artsflow.mcopclass
 lib/mcop/artsflow.mcoptype
@@ -144,4 +175,5 @@ lib/mcop/x11globalcomm.mcoptype
 @dirrm lib/mcop/Arts
 @dirrm lib/mcop
 @dirrm include/artsc
+@dirrm include/arts/gsl
 @dirrm include/arts

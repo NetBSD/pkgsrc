@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
+$NetBSD: patch-aj,v 1.2 2003/03/11 13:33:49 markd Exp $
 
---- kmix/Makefile.am.orig	Wed May  8 19:29:16 2002
+--- kmix/Makefile.am.orig	Sun Oct 27 11:20:17 2002
 +++ kmix/Makefile.am
-@@ -2,7 +2,7 @@
+@@ -2,7 +2,7 @@ SUBDIRS = control pics
  INCLUDES= $(all_includes)
  
  bin_PROGRAMS = kmix kmixctrl
@@ -11,14 +11,14 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  kde_module_LTLIBRARIES = kmix_panelapplet.la
  
  
-@@ -12,22 +12,30 @@
+@@ -12,22 +12,30 @@ noinst_HEADERS = kmix.h kmixdockwidget.h
  
  
  METASOURCES = AUTO
 -kmix_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
 +libkmix_main_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
  	kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp \
- 	volume.cpp kledbutton.cpp mixdevicewidget.cpp
+ 	volume.cpp kledbutton.cpp mixdevicewidget.cpp mixerIface.skel
 -kmix_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
 +libkmix_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
 +libkmix_main_la_LDFLAGS = $(all_libraries)
@@ -33,15 +33,9 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
 +kmix_LDADD = libkmix_main.la
  kmix_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
--kmixctrl_SOURCES = dummy.cpp
--kmixctrl_LDADD = kmixctrl.la
-+kmixctrl_SOURCES = kmixctrl_main.cpp
-+kmixctrl_LDADD = libkmixctrl_main.la
- kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
- 
--kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
+-kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp mixerIface.skel
 -kmixctrl_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
-+libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
++libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp mixerIface.skel
 +libkmixctrl_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
 +libkmixctrl_main_la_LDFLAGS = $(all_libraries)
 +
@@ -49,8 +43,14 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
 +kmixctrl_la_LIBADD = libkmixctrl_main.la
  kmixctrl_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
- kmix_panelapplet_la_METASOURCES=AUTO
-@@ -58,6 +66,3 @@
+-kmixctrl_SOURCES = dummy.cpp
+-kmixctrl_LDADD = kmixctrl.la
++kmixctrl_SOURCES = kmixctrl_main.cpp
++kmixctrl_LDADD = libkmixctrl_main.la
+ kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ kmix_panelapplet_la_SOURCES = kmixapplet.cpp kmixerwidget.cpp channel.cpp \
+@@ -57,6 +65,3 @@ services_DATA = kmixctrl_restore.desktop
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kmix.pot

@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
+$NetBSD: patch-ak,v 1.4 2003/03/11 13:33:50 markd Exp $
 
---- kmix/Makefile.in.orig	Sat Dec 28 14:04:00 2002
+--- kmix/Makefile.in.orig	Fri Jan 17 08:49:40 2003
 +++ kmix/Makefile.in
-@@ -292,7 +292,7 @@ SUBDIRS = control pics
+@@ -328,7 +328,7 @@ SUBDIRS = control pics
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kmix kmixctrl
@@ -11,14 +11,19 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  kde_module_LTLIBRARIES = kmix_panelapplet.la
  
  noinst_HEADERS = kmix.h kmixdockwidget.h kmixprefdlg.h kmixerwidget.h \
-@@ -301,23 +301,31 @@ noinst_HEADERS = kmix.h kmixdockwidget.h
+@@ -337,29 +337,37 @@ noinst_HEADERS = kmix.h kmixdockwidget.h
  
  
- METASOURCES = AUTO
--kmix_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
-+libkmix_main_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
+ #>- METASOURCES = AUTO
+-#>- kmix_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
++#>- libkmix_main_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
+ #>- 	kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp \
+ #>- 	volume.cpp kledbutton.cpp mixdevicewidget.cpp mixerIface.skel
+ #>+ 3
+-kmix_la_SOURCES=main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
++libkmix_main_la_SOURCES=main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
  	kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp \
- 	volume.cpp kledbutton.cpp mixdevicewidget.cpp
+ 	volume.cpp kledbutton.cpp mixdevicewidget.cpp  mixerIface_skel.cpp
  
 -kmix_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
 +libkmix_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
@@ -34,15 +39,12 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +kmix_LDADD = libkmix_main.la
  kmix_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
--kmixctrl_SOURCES = dummy.cpp
--kmixctrl_LDADD = kmixctrl.la
-+kmixctrl_SOURCES = kmixctrl_main.cpp
-+kmixctrl_LDADD = libkmixctrl_main.la
- kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
- 
--kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
+-#>- kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp mixerIface.skel
++#>- libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp mixerIface.skel
+ #>+ 1
+-kmixctrl_la_SOURCES=kmixctrl.cpp channel.cpp mixer.cpp volume.cpp  mixerIface_skel.cpp
 -kmixctrl_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
-+libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
++libkmixctrl_main_la_SOURCES=kmixctrl.cpp channel.cpp mixer.cpp volume.cpp  mixerIface_skel.cpp
 +libkmixctrl_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
 +libkmixctrl_main_la_LDFLAGS = $(all_libraries)
 +
@@ -50,8 +52,14 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +kmixctrl_la_LIBADD = libkmixctrl_main.la
  kmixctrl_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
- #>- kmix_panelapplet_la_METASOURCES = AUTO
-@@ -351,18 +359,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
+-kmixctrl_SOURCES = dummy.cpp
+-kmixctrl_LDADD = kmixctrl.la
++kmixctrl_SOURCES = kmixctrl_main.cpp
++kmixctrl_LDADD = libkmixctrl_main.la
+ kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ #>- kmix_panelapplet_la_SOURCES = kmixapplet.cpp kmixerwidget.cpp channel.cpp \
+@@ -392,18 +400,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -66,7 +74,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 -kmix_la_final_OBJECTS = kmix_la.all_cpp.lo 
 -kmix_la_nofinal_OBJECTS = main.lo kmix.lo kmixdockwidget.lo kmixprefdlg.lo \
 -	kmixerwidget.lo channel.lo mixer.lo ksmallslider.lo volume.lo \
--	kledbutton.lo mixdevicewidget.lo
+-	kledbutton.lo mixdevicewidget.lo mixerIface_skel.lo
 -@KDE_USE_FINAL_FALSE@kmix_la_OBJECTS = $(kmix_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kmix_la_OBJECTS = $(kmix_la_final_OBJECTS)
 +#>+ 1
@@ -74,8 +82,8 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  kmix_panelapplet_la_DEPENDENCIES =
  am_kmix_panelapplet_la_OBJECTS = kmixapplet.lo kmixerwidget.lo \
  	channel.lo mixer.lo ksmallslider.lo volume.lo kledbutton.lo \
-@@ -375,27 +376,46 @@ kmix_panelapplet_la_nofinal_OBJECTS = km
- 	mixdevicewidget.lo colorwidget.lo
+@@ -416,27 +417,46 @@ kmix_panelapplet_la_nofinal_OBJECTS = km
+ 	mixdevicewidget.lo mixerIface_skel.lo colorwidget.lo
  @KDE_USE_FINAL_FALSE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_final_OBJECTS)
 -kmixctrl_la_DEPENDENCIES =
@@ -85,7 +93,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  #>- kmixctrl_la_OBJECTS = $(am_kmixctrl_la_OBJECTS)
 -#>+ 4
 -kmixctrl_la_final_OBJECTS = kmixctrl_la.all_cpp.lo 
--kmixctrl_la_nofinal_OBJECTS = kmixctrl.lo channel.lo mixer.lo volume.lo
+-kmixctrl_la_nofinal_OBJECTS = kmixctrl.lo channel.lo mixer.lo volume.lo mixerIface_skel.lo
 -@KDE_USE_FINAL_FALSE@kmixctrl_la_OBJECTS = $(kmixctrl_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kmixctrl_la_OBJECTS = $(kmixctrl_la_final_OBJECTS)
 +#>+ 1
@@ -99,7 +107,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +libkmix_main_la_final_OBJECTS = libkmix_main_la.all_cpp.lo 
 +libkmix_main_la_nofinal_OBJECTS = main.lo kmix.lo kmixdockwidget.lo \
 +	kmixprefdlg.lo kmixerwidget.lo channel.lo mixer.lo \
-+	ksmallslider.lo volume.lo kledbutton.lo mixdevicewidget.lo
++	ksmallslider.lo volume.lo kledbutton.lo mixdevicewidget.lo mixerIface_skel.lo
 +@KDE_USE_FINAL_FALSE@libkmix_main_la_OBJECTS = $(libkmix_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkmix_main_la_OBJECTS = $(libkmix_main_la_final_OBJECTS)
 +libkmixctrl_main_la_DEPENDENCIES =
@@ -109,7 +117,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +#>+ 5
 +libkmixctrl_main_la_final_OBJECTS = libkmixctrl_main_la.all_cpp.lo 
 +libkmixctrl_main_la_nofinal_OBJECTS = kmixctrl.lo channel.lo mixer.lo \
-+	volume.lo
++	volume.lo mixerIface_skel.lo
 +@KDE_USE_FINAL_FALSE@libkmixctrl_main_la_OBJECTS = $(libkmixctrl_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkmixctrl_main_la_OBJECTS = $(libkmixctrl_main_la_final_OBJECTS)
  bin_PROGRAMS = kmix$(EXEEXT) kmixctrl$(EXEEXT)
@@ -134,52 +142,49 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -403,28 +423,34 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -444,28 +464,37 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/channel.Plo $(DEPDIR)/dummy.Po \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kledbutton.Plo $(DEPDIR)/kmix.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kmixapplet.Plo $(DEPDIR)/kmixctrl.Plo \
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/channel.Plo $(DEPDIR)/kledbutton.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kmix.Plo $(DEPDIR)/kmix_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kmix_main.Po $(DEPDIR)/kmixapplet.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kmixctrl.Plo $(DEPDIR)/kmixctrl_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kmixctrl_main.Po \
- #>- @AMDEP_TRUE@	$(DEPDIR)/kmixdockwidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/kmixerwidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/kmixprefdlg.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/ksmallslider.Plo $(DEPDIR)/main.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/mixdevicewidget.Plo $(DEPDIR)/mixer.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/volume.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/channel.Plo ./$(DEPDIR)/dummy.Po \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/channel.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kledbutton.Plo ./$(DEPDIR)/kmix.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kmix_main.Plo ./$(DEPDIR)/kmix_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kmixapplet.Plo ./$(DEPDIR)/kmixctrl.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kmixdockwidget.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kmixerwidget.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kmixprefdlg.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ksmallslider.Plo ./$(DEPDIR)/main.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/mixdevicewidget.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/mixer.Plo ./$(DEPDIR)/volume.Plo
 -#>+ 19
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/colorwidget.P  $(DEPDIR)/kmix_la.all_cpp.P $(DEPDIR)/kmix_panelapplet_la.all_cpp.P $(DEPDIR)/kmixctrl_la.all_cpp.P  $(DEPDIR)/channel.Plo $(DEPDIR)/dummy.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kledbutton.Plo $(DEPDIR)/kmix.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixapplet.Plo $(DEPDIR)/kmixctrl.Plo \
-+#>+ 23
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/colorwidget.P  $(DEPDIR)/kmix_panelapplet_la.all_cpp.P $(DEPDIR)/libkmix_main_la.all_cpp.P $(DEPDIR)/libkmixctrl_main_la.all_cpp.P  $(DEPDIR)/channel.Plo $(DEPDIR)/kledbutton.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmix.Plo $(DEPDIR)/kmix_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmix_main.Po $(DEPDIR)/kmixapplet.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl.Plo $(DEPDIR)/kmixctrl_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl_main.Po \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixdockwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixerwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmixprefdlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ksmallslider.Plo $(DEPDIR)/main.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/mixdevicewidget.Plo $(DEPDIR)/mixer.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/volume.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/colorwidget.P  $(DEPDIR)/channel.Plo $(DEPDIR)/dummy.Po \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kledbutton.Plo $(DEPDIR)/kmix.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixapplet.Plo $(DEPDIR)/kmixctrl.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/colorwidget.P  $(DEPDIR)/channel.Plo $(DEPDIR)/kledbutton.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmix.Plo $(DEPDIR)/kmix_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmix_main.Po $(DEPDIR)/kmixapplet.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl.Plo $(DEPDIR)/kmixctrl_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl_main.Po \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixdockwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixerwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmixprefdlg.Plo \
-@@ -452,7 +478,9 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/mixerIface_skel.P $(DEPDIR)/colorwidget.P  $(DEPDIR)/kmix_la.all_cpp.P $(DEPDIR)/kmix_panelapplet_la.all_cpp.P $(DEPDIR)/kmixctrl_la.all_cpp.P  ./$(DEPDIR)/channel.Plo ./$(DEPDIR)/dummy.Po \
++#>+ 25
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/mixerIface_skel.P $(DEPDIR)/colorwidget.P  $(DEPDIR)/kmix_panelapplet_la.all_cpp.P $(DEPDIR)/libkmix_main_la.all_cpp.P $(DEPDIR)/libkmixctrl_main_la.all_cpp.P  ./$(DEPDIR)/channel.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kledbutton.Plo ./$(DEPDIR)/kmix.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmix_main.Plo ./$(DEPDIR)/kmix_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixapplet.Plo ./$(DEPDIR)/kmixctrl.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixdockwidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixerwidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixprefdlg.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ksmallslider.Plo ./$(DEPDIR)/main.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/mixdevicewidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/mixer.Plo ./$(DEPDIR)/volume.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/mixerIface_skel.P $(DEPDIR)/colorwidget.P  ./$(DEPDIR)/channel.Plo ./$(DEPDIR)/dummy.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/mixerIface_skel.P $(DEPDIR)/colorwidget.P  ./$(DEPDIR)/channel.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kledbutton.Plo ./$(DEPDIR)/kmix.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmix_main.Plo ./$(DEPDIR)/kmix_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixapplet.Plo ./$(DEPDIR)/kmixctrl.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixctrl_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixdockwidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixerwidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixprefdlg.Plo \
+@@ -493,7 +522,9 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kmix_la_SOURCES) $(kmix_panelapplet_la_SOURCES) \
@@ -190,7 +195,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  DATA = $(apps_DATA) $(lnk_DATA) $(rc_DATA) $(services_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -464,7 +492,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -505,7 +536,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) AUTHORS Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -199,7 +204,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -539,6 +567,10 @@ kmix.la: $(kmix_la_OBJECTS) $(kmix_la_DE
+@@ -587,6 +618,10 @@ kmix.la: $(kmix_la_OBJECTS) $(kmix_la_DE
  	$(CXXLINK) -rpath $(kde_moduledir) $(kmix_panelapplet_la_LDFLAGS) $(kmix_panelapplet_la_OBJECTS) $(kmix_panelapplet_la_LIBADD) $(LIBS)
  kmixctrl.la: $(kmixctrl_la_OBJECTS) $(kmixctrl_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kmixctrl_la_LDFLAGS) $(kmixctrl_la_OBJECTS) $(kmixctrl_la_LIBADD) $(LIBS)
@@ -207,35 +212,35 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +	$(CXXLINK) -rpath $(libdir) $(libkmix_main_la_LDFLAGS) $(libkmix_main_la_OBJECTS) $(libkmix_main_la_LIBADD) $(LIBS)
 +libkmixctrl_main.la: $(libkmixctrl_main_la_OBJECTS) $(libkmixctrl_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkmixctrl_main_la_LDFLAGS) $(libkmixctrl_main_la_OBJECTS) $(libkmixctrl_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -577,11 +609,14 @@ distclean-compile:
+@@ -630,11 +665,14 @@ distclean-compile:
  	-rm -f *.tab.c
  
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/channel.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kledbutton.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixapplet.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixdockwidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixerwidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixprefdlg.Plo@am__quote@
-@@ -776,7 +811,7 @@ distclean-tags:
- 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/channel.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kledbutton.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmix.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmix_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmix_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixapplet.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixctrl.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixctrl_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixctrl_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixdockwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixerwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixprefdlg.Plo@am__quote@
+@@ -845,7 +883,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=mixer_hpux.h mixer_irix.h resource.h kmixui.rc kmix-platforms.cpp colorwidget.ui mixer_sun.h mixer_none.cpp mixer_alsa.h mixer_hpux.cpp kmixapplet.desktop mixer_alsa.cpp mixer_irix.cpp mixer_sun.cpp configure.in.in kmixctrl_restore.desktop mixer_oss.cpp mixer_none.h mixer_oss.h 
-+KDE_DIST=colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h mixer_irix.h mixer_hpux.cpp kmixui.rc kmixctrl_restore.desktop resource.h mixer_oss.cpp mixer_irix.cpp mixer_sun.h mixer_sun.cpp mixer_none.cpp mixer_none.h mixer_oss.h mixer_alsa.cpp kmixapplet.desktop mixer_alsa.h 
+-KDE_DIST=mixer_hpux.h mixer_irix.h resource.h kmixui.rc kledbutton.cpp kmix-platforms.cpp colorwidget.ui mixer_sun.h mixer_none.cpp mixer_alsa.h mixer_hpux.cpp kmixapplet.desktop ksmallslider.cpp mixdevicewidget.cpp mixer_irix.cpp mixer_alsa5.cpp mixer_sun.cpp configure.in.in kmixctrl_restore.desktop mixer_oss.cpp mixer_none.h mixer_alsa9.cpp mixer_oss.h 
++KDE_DIST=mixer_alsa9.cpp colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h mixer_irix.h mixer_hpux.cpp kmixui.rc kmixctrl_restore.desktop resource.h kledbutton.cpp mixer_oss.cpp mixer_irix.cpp mixer_sun.h mixer_alsa5.cpp mixer_sun.cpp ksmallslider.cpp mixer_none.cpp mixer_none.h mixdevicewidget.cpp mixer_oss.h kmixapplet.desktop mixer_alsa.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -930,9 +965,6 @@ $(srcdir)/version.h: VERSION
+@@ -1005,54 +1043,51 @@ $(srcdir)/version.h: VERSION
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kmix.pot
@@ -245,79 +250,91 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -962,44 +994,44 @@ colorwidget.moc: colorwidget.h
- 	$(MOC) colorwidget.h -o colorwidget.moc
  
- #>+ 3
--ksmallslider.moc: $(srcdir)/ksmallslider.h
--	$(MOC) $(srcdir)/ksmallslider.h -o ksmallslider.moc
+-#>+ 5
+-mixerIface.kidl: $(srcdir)/mixerIface.h $(DCOP_DEPENDENCIES)
+-	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; /bin/false )
+-mixerIface_skel.cpp: mixerIface.kidl
+-	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub mixerIface.kidl
++#>+ 3
 +kmixdockwidget.moc: $(srcdir)/kmixdockwidget.h
 +	$(MOC) $(srcdir)/kmixdockwidget.h -o kmixdockwidget.moc
  
  #>+ 3
--kmixapplet.moc: $(srcdir)/kmixapplet.h
--	$(MOC) $(srcdir)/kmixapplet.h -o kmixapplet.moc
+-ksmallslider.moc: $(srcdir)/ksmallslider.h
+-	$(MOC) $(srcdir)/ksmallslider.h -o ksmallslider.moc
 +mixdevicewidget.moc: $(srcdir)/mixdevicewidget.h
 +	$(MOC) $(srcdir)/mixdevicewidget.h -o mixdevicewidget.moc
  
  #>+ 3
--kmix.moc: $(srcdir)/kmix.h
--	$(MOC) $(srcdir)/kmix.h -o kmix.moc
+-kmixapplet.moc: $(srcdir)/kmixapplet.h
+-	$(MOC) $(srcdir)/kmixapplet.h -o kmixapplet.moc
 +ksmallslider.moc: $(srcdir)/ksmallslider.h
 +	$(MOC) $(srcdir)/ksmallslider.h -o ksmallslider.moc
  
  #>+ 3
--mixer.moc: $(srcdir)/mixer.h
--	$(MOC) $(srcdir)/mixer.h -o mixer.moc
+-kmix.moc: $(srcdir)/kmix.h
+-	$(MOC) $(srcdir)/kmix.h -o kmix.moc
 +kmixprefdlg.moc: $(srcdir)/kmixprefdlg.h
 +	$(MOC) $(srcdir)/kmixprefdlg.h -o kmixprefdlg.moc
  
  #>+ 3
--kmixerwidget.moc: $(srcdir)/kmixerwidget.h
--	$(MOC) $(srcdir)/kmixerwidget.h -o kmixerwidget.moc
-+mixer.moc: $(srcdir)/mixer.h
-+	$(MOC) $(srcdir)/mixer.h -o mixer.moc
+ mixer.moc: $(srcdir)/mixer.h
+ 	$(MOC) $(srcdir)/mixer.h -o mixer.moc
  
  #>+ 3
--kledbutton.moc: $(srcdir)/kledbutton.h
--	$(MOC) $(srcdir)/kledbutton.h -o kledbutton.moc
+-kmixerwidget.moc: $(srcdir)/kmixerwidget.h
+-	$(MOC) $(srcdir)/kmixerwidget.h -o kmixerwidget.moc
 +kmix.moc: $(srcdir)/kmix.h
 +	$(MOC) $(srcdir)/kmix.h -o kmix.moc
  
  #>+ 3
--kmixdockwidget.moc: $(srcdir)/kmixdockwidget.h
--	$(MOC) $(srcdir)/kmixdockwidget.h -o kmixdockwidget.moc
+-kledbutton.moc: $(srcdir)/kledbutton.h
+-	$(MOC) $(srcdir)/kledbutton.h -o kledbutton.moc
 +kmixapplet.moc: $(srcdir)/kmixapplet.h
 +	$(MOC) $(srcdir)/kmixapplet.h -o kmixapplet.moc
  
  #>+ 3
--mixdevicewidget.moc: $(srcdir)/mixdevicewidget.h
--	$(MOC) $(srcdir)/mixdevicewidget.h -o mixdevicewidget.moc
+-kmixdockwidget.moc: $(srcdir)/kmixdockwidget.h
+-	$(MOC) $(srcdir)/kmixdockwidget.h -o kmixdockwidget.moc
 +kledbutton.moc: $(srcdir)/kledbutton.h
 +	$(MOC) $(srcdir)/kledbutton.h -o kledbutton.moc
  
  #>+ 3
--kmixprefdlg.moc: $(srcdir)/kmixprefdlg.h
--	$(MOC) $(srcdir)/kmixprefdlg.h -o kmixprefdlg.moc
+-mixdevicewidget.moc: $(srcdir)/mixdevicewidget.h
+-	$(MOC) $(srcdir)/mixdevicewidget.h -o mixdevicewidget.moc
 +kmixerwidget.moc: $(srcdir)/kmixerwidget.h
 +	$(MOC) $(srcdir)/kmixerwidget.h -o kmixerwidget.moc
+ 
+-#>+ 3
+-kmixprefdlg.moc: $(srcdir)/kmixprefdlg.h
+-	$(MOC) $(srcdir)/kmixprefdlg.h -o kmixprefdlg.moc
++#>+ 5
++mixerIface.kidl: $(srcdir)/mixerIface.h $(DCOP_DEPENDENCIES)
++	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; /bin/false )
++mixerIface_skel.cpp: mixerIface.kidl
++	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub mixerIface.kidl
+ 
+ #>+ 8
+ kmix_panelapplet.la.closure: $(kmix_panelapplet_la_OBJECTS) $(kmix_panelapplet_la_DEPENDENCIES)
+@@ -1080,7 +1115,7 @@ colorwidget.moc: colorwidget.h
  
  #>+ 3
  clean-metasources:
 -	-rm -f  ksmallslider.moc kmixapplet.moc kmix.moc mixer.moc kmixerwidget.moc kledbutton.moc kmixdockwidget.moc mixdevicewidget.moc kmixprefdlg.moc
 +	-rm -f  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kmixapplet.moc kledbutton.moc kmixerwidget.moc
  
- #>+ 4
- clean-ui:
-@@ -1021,19 +1053,7 @@ force-reedit:
+ #>+ 6
+ clean-idl:
+@@ -1109,19 +1144,7 @@ force-reedit:
  
  
  #>+ 11
--kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp  kmix.moc kmixdockwidget.moc ksmallslider.moc mixer.moc kmixerwidget.moc kledbutton.moc kmixprefdlg.moc mixdevicewidget.moc
+-kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp mixerIface_skel.cpp  kmix.moc kmixdockwidget.moc ksmallslider.moc mixer.moc kmixerwidget.moc kledbutton.moc mixdevicewidget.moc kmixprefdlg.moc
 -	@echo 'creating kmix_la.all_cpp.cpp ...'; \
 -	rm -f kmix_la.all_cpp.files kmix_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kmix_la.all_cpp.final; \
--	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp ; do \
+-	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp mixerIface_skel.cpp ; do \
 -	  echo "#include \"$$file\"" >> kmix_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmix_la.all_cpp.final; \
 -	done; \
@@ -325,24 +342,24 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 -	rm -f kmix_la.all_cpp.final kmix_la.all_cpp.files
 -
 -#>+ 11
--kmix_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixapplet.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp colorwidget.cpp  kmixapplet.moc ksmallslider.moc colorwidget.moc mixer.moc kmixerwidget.moc kledbutton.moc mixdevicewidget.moc
-+kmix_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixapplet.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp colorwidget.cpp  mixdevicewidget.moc ksmallslider.moc colorwidget.moc mixer.moc kmixapplet.moc kledbutton.moc kmixerwidget.moc
+-kmix_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixapplet.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp mixerIface_skel.cpp colorwidget.cpp  kmixapplet.moc ksmallslider.moc colorwidget.moc mixer.moc kmixerwidget.moc kledbutton.moc mixdevicewidget.moc
++kmix_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixapplet.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp mixerIface_skel.cpp colorwidget.cpp  mixdevicewidget.moc ksmallslider.moc colorwidget.moc mixer.moc kmixapplet.moc kledbutton.moc kmixerwidget.moc
  	@echo 'creating kmix_panelapplet_la.all_cpp.cpp ...'; \
  	rm -f kmix_panelapplet_la.all_cpp.files kmix_panelapplet_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmix_panelapplet_la.all_cpp.final; \
-@@ -1045,33 +1065,45 @@ kmix_panelapplet_la.all_cpp.cpp: $(srcdi
+@@ -1133,33 +1156,45 @@ kmix_panelapplet_la.all_cpp.cpp: $(srcdi
  	rm -f kmix_panelapplet_la.all_cpp.final kmix_panelapplet_la.all_cpp.files
  
  #>+ 11
--kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp  mixer.moc
+-kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp mixerIface_skel.cpp  mixer.moc
 -	@echo 'creating kmixctrl_la.all_cpp.cpp ...'; \
 -	rm -f kmixctrl_la.all_cpp.files kmixctrl_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kmixctrl_la.all_cpp.final; \
-+libkmix_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc
++libkmix_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp mixerIface_skel.cpp  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc
 +	@echo 'creating libkmix_main_la.all_cpp.cpp ...'; \
 +	rm -f libkmix_main_la.all_cpp.files libkmix_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkmix_main_la.all_cpp.final; \
-+	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp ; do \
++	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp mixerIface_skel.cpp ; do \
 +	  echo "#include \"$$file\"" >> libkmix_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkmix_main_la.all_cpp.final; \
 +	done; \
@@ -350,11 +367,11 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
 +	rm -f libkmix_main_la.all_cpp.final libkmix_main_la.all_cpp.files
 +
 +#>+ 11
-+libkmixctrl_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp  mixer.moc
++libkmixctrl_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp mixerIface_skel.cpp  mixer.moc
 +	@echo 'creating libkmixctrl_main_la.all_cpp.cpp ...'; \
 +	rm -f libkmixctrl_main_la.all_cpp.files libkmixctrl_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkmixctrl_main_la.all_cpp.final; \
- 	for file in kmixctrl.cpp channel.cpp mixer.cpp volume.cpp ; do \
+ 	for file in kmixctrl.cpp channel.cpp mixer.cpp volume.cpp mixerIface_skel.cpp ; do \
 -	  echo "#include \"$$file\"" >> kmixctrl_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmixctrl_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkmixctrl_main_la.all_cpp.files; \
@@ -389,7 +406,7 @@ $NetBSD: patch-ak,v 1.3 2003/01/02 09:12:21 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1081,29 +1113,29 @@ kde-rpo-clean:
+@@ -1169,29 +1204,29 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 27

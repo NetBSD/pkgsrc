@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2003/01/02 09:12:21 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
 
---- configure.orig	Sat Dec 21 07:07:59 2002
+--- configure.orig	Fri Jan 17 08:49:45 2003
 +++ configure
-@@ -21913,6 +21913,40 @@ if { (eval echo "$as_me:21904: \"$ac_lin
-   echo "$as_me:21913: \$? = $ac_status" >&5
+@@ -26406,6 +26406,40 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
 +
@@ -43,52 +43,26 @@ $NetBSD: patch-aa,v 1.3 2003/01/02 09:12:21 skrll Exp $
  else
    echo "$as_me: failed program was:" >&5
  cat conftest.$ac_ext >&5
-@@ -22664,7 +22698,7 @@ if test "x$au_enable_default" = xyes; th
-       au_enable_sun=yes
+@@ -28047,7 +28081,7 @@ fi;
+ 
+ if test "x$au_enable_default" = xyes; then
+   case "$target" in
+-    *-*-linux*|*-*-freebsd*|*-*-netbsd|*-*-bsdi2.1|*-*-bsdi3.?|*-*-bsdi4.?)
++    *-*-linux*|*-*-freebsd*|*-*-netbsd*|*-*-bsdi2.1|*-*-bsdi3.?|*-*-bsdi4.?)
+       au_enable_oss=yes
        ;;
-     *-*-netbsd*)
--      au_enable_sun=yes
-+      au_enable_oss=yes
-       ;;
-     *-*-openbsd*)
-       au_enable_sun=yes
-@@ -22685,7 +22719,7 @@ if test "x$au_enable_oss" = xyes; then
- echo "${ECHO_T}yes - <sys/soundcard.h>" >&6
-   else
-     case "$target" in
--      *linux*|*freebsd*|*bsdi*)
-+      *linux*|*freebsd*|*bsdi*|*netbsd*)
- 		echo "$as_me:22689: result: yes" >&5
- echo "${ECHO_T}yes" >&6
- 	;;
-@@ -26223,7 +26257,7 @@ fi
- echo "$as_me:26223: result: $ac_cv_lib_ossaudio_main" >&5
+     *-*-bsdi2.0)
+@@ -32038,7 +32072,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio_main" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
  if test $ac_cv_lib_ossaudio_main = yes; then
 -  LIBOSSAUDIO="-lossaudio"
 +  LIBOSSAUDIO="${LIBOSSAUDIO}"
  fi
  
- echo "$as_me:26229: checking for main in -lasound" >&5
-@@ -26570,6 +26604,7 @@ case "$host" in
-   *-*-*bsdi*) kscd_compile=yes;;
-   *-*-*freebsd*) kscd_compile=yes;;
-   *-*-*openbsd*) kscd_compile=yes;;
-+  *-*-*netbsd*) kscd_compile=yes;;
-   *-*-*bsd*) kscd_compile=no;;
-   *) kscd_compile=yes;;
- esac
-@@ -26633,7 +26668,7 @@ EOF
- fi
- done
  
--for ac_header in sys/soundcard.h machine/soundcard.h linux/soundcard.h
-+for ac_header in soundcard.h sys/soundcard.h machine/soundcard.h linux/soundcard.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- echo "$as_me:26639: checking for $ac_header" >&5
-@@ -26952,8 +26987,23 @@ if { (eval echo "$as_me:26943: \"$ac_com
-   echo "$as_me:26952: \$? = $ac_status" >&5
+@@ -33074,8 +33108,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
 -                x11_dga2=yes
@@ -113,8 +87,8 @@ $NetBSD: patch-aa,v 1.3 2003/01/02 09:12:21 skrll Exp $
  else
    echo "$as_me: failed program was:" >&5
  cat conftest.$ac_ext >&5
-@@ -27001,7 +27051,22 @@ if { (eval echo "$as_me:26992: \"$ac_com
-   echo "$as_me:27001: \$? = $ac_status" >&5
+@@ -33130,7 +33179,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
 +       lib=Xv
@@ -136,8 +110,8 @@ $NetBSD: patch-aa,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -27050,7 +27115,22 @@ if { (eval echo "$as_me:27041: \"$ac_com
-   echo "$as_me:27050: \$? = $ac_status" >&5
+@@ -33186,7 +33250,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
 +       lib=Xxf86vm
@@ -159,28 +133,18 @@ $NetBSD: patch-aa,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -27326,6 +27406,9 @@ esac
- kde_mpeglib_compiles=no
- 
- case "$OS_TYPE" in
-+  NetBSD)
-+    kde_mpeglib_compiles=yes
-+    ;;
-   FreeBSD)
-     kde_mpeglib_compiles=yes
-     ;;
-@@ -27592,10 +27675,10 @@ EOF
+@@ -33785,10 +33864,10 @@ _ACEOF
      ;;
  
    NetBSD)
--    echo "$as_me:27595: result: NetBSD :Unknown hardware. You will have problems!!" >&5
+-    echo "$as_me:$LINENO: result: NetBSD :Unknown hardware. You will have problems!!" >&5
 -echo "${ECHO_T}NetBSD :Unknown hardware. You will have problems!!" >&6
 -    OS_TYPE="BSD"
 -
-+      echo "$as_me:27650: result: using -lpthread" >&5
-+      echo $ECHO_N "using -lpthread... $ECHO_C" >&6
-+      OS_TYPE="BSD"
-+      LIBPTHREAD="-lpthread"
- cat >>confdefs.h <<\EOF
++     echo "$as_me:$LINENO: result: using -lpthread" >&5
++     echo $ECHO_N "using -lpthread... $ECHO_C" >&6
++     OS_TYPE="BSD"
++     LIBPTHREAD="-lpthread"
+ cat >>confdefs.h <<\_ACEOF
  #define OS_BSD 1
- EOF
+ _ACEOF
