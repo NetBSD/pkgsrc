@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/23 17:00:14 simonb Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/01/23 20:22:26 tron Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
-WRKSRC=			${WRKDIR}/umoria
 CATEGORIES=		games
 # The "offical" master site has lost the pub/Games directory.
 #MASTER_SITES=		ftp://ftp.cis.ksu.edu/pub/Games/Moria/source/
@@ -12,6 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		simonb@netbsd.org
 HOMEPAGE=		http://www.math.lsa.umich.edu/~grabiner/moria.html
+
+WRKSRC=			${WRKDIR}/umoria
 
 do-configure:
 	@rm -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
