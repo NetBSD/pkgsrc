@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/06 11:14:14 drochner Exp $
 
---- lrmi.c.orig	2003-05-14 05:18:12.000000000 +0200
-+++ lrmi.c
+--- lrmi.c.orig	Wed May 14 05:18:12 2003
++++ lrmi.c	Mon Oct  6 13:03:05 2003
 @@ -211,12 +211,26 @@ LRMI_free_real(void *m)
  #define DEFAULT_STACK_SIZE 	0x1000
  #define RETURN_TO_32_INT 	255
@@ -29,16 +29,17 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
  #elif defined(__FreeBSD__)
  #define CONTEXT_REGS	context.vm.uc
  #define REG(x)			uc_mcontext.mc_ ## x
-@@ -237,7 +251,7 @@ static struct {
+@@ -237,7 +251,8 @@ static struct {
  #if defined(__NetBSD__) || defined(__FreeBSD__)
  	int success;
  	jmp_buf env;
 -	void *old_sighandler;
 +	struct sigaction old_sighandler;
++	int sh_installed;
  	int vret;
  #endif
  } context = { 0 };
-@@ -808,10 +822,22 @@ run_vm86(void)
+@@ -808,10 +823,22 @@ run_vm86(void)
  #elif defined(__NetBSD__) || defined(__FreeBSD__)
  #if defined(__NetBSD__)
  static void
@@ -62,7 +63,7 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
  
  	switch (VM86_TYPE(code)) {
  		case VM86_INTx:
-@@ -850,7 +876,11 @@ vm86_callback(int sig, int code, struct 
+@@ -850,7 +877,11 @@ vm86_callback(int sig, int code, struct 
  	}
  
  	/* ...and sync our context back to the kernel. */
@@ -74,7 +75,7 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
  }
  #elif defined(__FreeBSD__)
  static void
-@@ -899,21 +929,28 @@ vm86_callback(int sig, int code, struct 
+@@ -899,34 +930,44 @@ vm86_callback(int sig, int code, struct 
  static int
  run_vm86(void)
  {
@@ -82,7 +83,7 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
 +	struct sigaction sa;
 +	int res;
 +
-+	if (context.old_sighandler.sa_sigaction) {
++	if (context.sh_installed) {
  #ifdef LRMI_DEBUG
  		fprintf(stderr, "run_vm86: callback already installed\n");
  #endif
@@ -90,12 +91,14 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
  	}
  
 +	memset(&sa, 0, sizeof(sa));
++#if defined(__NetBSD__) && defined(SA_SIGINFO)
 +	sa.sa_sigaction = vm86_callback;
++	sa.sa_flags = SA_SIGINFO;
++#else
++	sa.sa_handler = (void (*)(int))vm86_callback;
++#endif
  #if defined(__NetBSD__)
 -	context.old_sighandler = signal(SIGURG, (void (*)(int))vm86_callback);
-+#if defined(SA_SIGINFO)
-+	sa.sa_flags = SA_SIGINFO;
-+#endif
 +	res = sigaction(SIGURG, &sa, &context.old_sighandler);
  #elif defined(__FreeBSD__)
 -	context.old_sighandler = signal(SIGBUS, (void (*)(int))vm86_callback);
@@ -108,7 +111,9 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
  #ifdef LRMI_DEBUG
  		fprintf(stderr, "run_vm86: cannot install callback\n");
  #endif
-@@ -922,11 +959,11 @@ run_vm86(void)
+ 		return (0);
+ 	}
++	context.sh_installed = 1;
  
  	if (setjmp(context.env)) {
  #if defined(__NetBSD__)
@@ -119,7 +124,7 @@ $NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
 +		sigaction(SIGBUS, &context.old_sighandler, 0);
  #endif
 -		context.old_sighandler = NULL;
-+		context.old_sighandler.sa_sigaction = NULL;
++		context.sh_installed = 0;
  
  		if (context.success)
  			return (1);
