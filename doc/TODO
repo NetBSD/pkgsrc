@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3283 2005/03/23 22:30:17 wiz Exp $
+$NetBSD: TODO,v 1.3284 2005/03/23 22:38:53 is Exp $
 
 Suggested new packages
 ======================
@@ -603,7 +603,6 @@ Suggested package updates
 	o lilypond-2.4.4
 	o linuxsms-0.77
 	o lmbench-2.0.4
-	o lmclock-1.2
 	o lopster-1.2.2
 	o lout-3.30
 	o lq-sp-1.3.4.11
