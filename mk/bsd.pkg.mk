@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.936 2002/03/01 15:59:16 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.937 2002/03/02 16:09:14 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3145,11 +3145,11 @@ check-depends:
 
 .if !target(build-depends-list)
 build-depends-list:
-.  for dir in ${BUILD_DEPENDS} ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${dir:C/^[^:]*://:C/:.*//};					\
-	${MAKE} ${MAKEFLAGS} package-name build-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
-.  endfor
+	@for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`;	\
+	do								\
+		(cd ../../$$dir &&					\
+		${MAKE} ${MAKEFLAGS} package-name)			\
+	done
 .endif
 
 # If PACKAGES is set to the default (../../pkgsrc/packages), the current
