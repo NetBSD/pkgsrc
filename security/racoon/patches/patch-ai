@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 2003/07/12 10:24:17 itojun Exp $
+
 --- ../libipsec/pfkey_dump.c-	Sat Jul 12 18:56:47 2003
 +++ ../libipsec/pfkey_dump.c	Sat Jul 12 18:57:15 2003
 @@ -352,7 +352,9 @@
