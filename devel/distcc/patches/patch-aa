@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/09/11 07:26:21 martti Exp $
+$NetBSD: patch-aa,v 1.7 2003/10/05 12:03:12 martti Exp $
 
---- src/mon-text.c.orig	2003-09-11 10:22:39.000000000 +0300
-+++ src/mon-text.c	2003-09-11 10:23:25.000000000 +0300
-@@ -105,8 +105,8 @@
+--- src/mon-text.c.orig	Tue Sep 23 07:07:02 2003
++++ src/mon-text.c	Sun Oct  5 14:17:08 2003
+@@ -111,8 +111,8 @@
  
          printf("\n");
  
