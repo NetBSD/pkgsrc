@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/04/28 13:55:22 adam Exp $
+
+--- kadu/Makefile.in.orig	2004-04-28 15:30:08.000000000 +0000
++++ kadu/Makefile.in
+@@ -533,22 +533,13 @@ uninstall-am: uninstall-binPROGRAMS unin
+ install-data-local:
+ 	$(mkinstalldirs) "$(DESTDIR)/$(includedir)/kadu/"
+ 	$(INSTALL_DATA) *.h "$(DESTDIR)/$(includedir)/kadu/"
+-	@if test -w "/usr/share"; then \
+-		$(mkinstalldirs) "$(DESTDIR)/usr/share/applnk/Internet/"; \
+-		echo "[Desktop Entry]" > "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "Type=Application" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "Exec=$(bindir)/kadu" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "Icon=kadu.png" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "MiniIcon=kadu-16.png" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "Terminal=0" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		echo "Name=Kadu" >> "$(DESTDIR)/usr/share/applnk/Internet/kadu.desktop"; \
+-		$(mkinstalldirs) "$(DESTDIR)/usr/share/pixmaps/"; \
+-		$(INSTALL_DATA) hi48-app-kadu.png "$(DESTDIR)/usr/share/pixmaps/kadu-48.png"; \
+-		$(INSTALL_DATA) hi32-app-kadu.png "$(DESTDIR)/usr/share/pixmaps/kadu.png"; \
+-		$(INSTALL_DATA) hi16-app-kadu.png "$(DESTDIR)/usr/share/pixmaps/kadu-16.png"; \
++	@if test -w "$(DESTDIR)/$(datadir)"; then \
++		$(mkinstalldirs) "$(DESTDIR)/$(datadir)/pixmaps/"; \
++		$(INSTALL_DATA) hi48-app-kadu.png "$(DESTDIR)/$(datadir)/pixmaps/kadu-48.png"; \
++		$(INSTALL_DATA) hi32-app-kadu.png "$(DESTDIR)/$(datadir)/pixmaps/kadu.png"; \
++		$(INSTALL_DATA) hi16-app-kadu.png "$(DESTDIR)/$(datadir)/pixmaps/kadu-16.png"; \
+ 		echo ""; \
+-		echo "Icons installed to $(DESTDIR)/usr/share/pixmaps"; \
+-		echo "Link(kadu.desktop) installed to $(DESTDIR)/usr/share/applnk/Internet"; \
++		echo "Icons installed to $(DESTDIR)/$(datadir)/pixmaps"; \
+ 		echo ""; \
+ 	else \
+ 		echo "";\

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/28 13:55:22 adam Exp $
+
+--- libgsm/Makefile.orig	2003-10-15 14:09:01.000000000 +0000
++++ libgsm/Makefile
+@@ -44,7 +44,7 @@ WAV49	= -DWAV49
+ # CCFLAGS 	= -c -O
+ 
+ CC		= gcc -ansi -pedantic
+-CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1
++CCFLAGS 	= -c -DNeedFunctionPrototypes=1
+ 
+ LD 		= $(CC)
+ 
+@@ -129,7 +129,7 @@ INC	= $(ROOT)/inc
+ # DEBUG	= -DNDEBUG
+ ######### Remove -DNDEBUG to enable assertions.
+ 
+-CFLAGS	= $(CCFLAGS) $(SASR) $(DEBUG) $(MULHACK) $(FAST) $(LTP_CUT) \
++CFLAGS	+= $(CCFLAGS) $(SASR) $(DEBUG) $(MULHACK) $(FAST) $(LTP_CUT) \
+ 	$(WAV49) $(CCINC) -I$(INC)
+ ######### It's $(CC) $(CFLAGS)
+ 
