@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.136 2001/01/28 03:17:41 itojun Exp $
+# $NetBSD: Packages.txt,v 1.137 2001/02/02 03:42:42 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -479,15 +479,18 @@ MASTER_SITE_SUBDIR will not work.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-	archivers   databases   ham         net         security
-	audio       devel       japanese    news        shells
-	benchmarks  distfiles   lang        packages    sysutils
-	biology     editors     mail        parallel    templates
-	cad         emulators   math        pkglocate   textproc
-	comms       fonts       mbone       pkgtools    www
-	converters  games       meta-pkgs   plan9       x11
-	cross       graphics    misc        print
-
+        archivers      devel          math           shells
+        audio          editors        mbone          sysutils
+        benchmarks     emulators      meta-pkgs      templates
+        biology        finance        misc           textproc
+        cad            fonts          net            time
+        chat           games          news           wm
+        comms          graphics       parallel       www
+        converters     ham            pkgtools       x11
+        corba          japanese       plan9
+        cross          lang           print
+        databases      mail           security
+  
 See the NetBSD packages(7) manual page for a description of all available
 options and variables.
 
