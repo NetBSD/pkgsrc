@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/04/16 21:27:36 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/29 08:05:08 dillo Exp $
 #
 
-DISTNAME=		${PKGNAME}.src
-PKGNAME=		cdrdao-1.1.7
+DISTNAME=		cdrdao-1.1.8
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
@@ -10,16 +9,18 @@ MAINTAINER=		david@maxwell.net
 HOMEPAGE=		http://cdrdao.sourceforge.net/
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
-CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
 # don't pick up an installed libcdda_paranoia
 LDFLAGS+=		-L../paranoia
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--without-posix-threads
+.endif
 
 #override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
@@ -62,5 +63,6 @@ post-install:
 		${INSTALL_MAN} ${WRKSRC}/contrib/wav2dao/wav2dao.pl \
 			${PREFIX}/share/examples/cdrdao
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/pccts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
