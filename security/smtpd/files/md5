@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 2000/04/21 10:57:33 mjl Exp $
+
+MD5 (smtpd-2.0.tar.gz) = c1b4e15db9bd7f6fd2ef846fd2e22d4b
+MD5 (patch-smtpd-2.0-RBL.gz) = 5c54365520f439db27d5ed428139429c

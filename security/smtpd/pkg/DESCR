@@ -1,0 +1,3 @@
+The smtpd daemon talks the Simple Mail Transfer Protocol (SMTP) with
+other SMTP daemons to receive mail from them, and saves it into a
+spool directory for later processing.
