@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/27 03:20:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/18 10:26:47 jlam Exp $
 
 DISTNAME=	rpm2pkg-1.2
 CATEGORIES=	pkgtools
@@ -9,26 +9,24 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Convert RPM archives to NetBSD packages
 
-BUILD_DEPENDS+=	rpm-*:../../misc/rpm
-
 CONFLICTS+=	suse-base<=6.4
 
 NO_CHECKSUM=	YES
 WRKSRC=		${WRKDIR}
 
-RPMLIB=		${LOCALBASE}/lib/librpm.a
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
+.include "../../misc/rpm/buildlink.mk"
 
-# librpm.a needs libintl.a
-USE_LIBINTL=	YES
-.if exists(/usr/include/libintl.h)
-LIBINTL=	-lintl
-.else
-LIBINTL=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lintl
-.endif
+#USE_LIBINTL=	YES
+RPMLIB=		${BUILDLINK_DIR}/lib/librpm.a
+
+CFLAGS+=	-I${BUILDLINK_DIR}/include/rpm
+LIBS=		${RPMLIB} -lintl -lz
 
 do-build:
-	${CC} ${FILESDIR}/rpm2pkg.c ${CFLAGS} -I${PREFIX}/include/rpm \
-	  ${RPMLIB} -lz ${LIBINTL} -o ${WRKSRC}/rpm2pkg
+	${CC} ${FILESDIR}/rpm2pkg.c ${CFLAGS} ${LDFLAGS} ${LIBS}	\
+		-o ${WRKSRC}/rpm2pkg
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
