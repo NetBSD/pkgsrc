@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2002/05/31 15:02:42 seb Exp $
+# $NetBSD: Makefile,v 1.128 2002/05/31 19:18:37 kei Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -69,6 +69,7 @@ SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lv
 SUBDIR+=	mmv
+SUBDIR+=	molden
 SUBDIR+=	most
 SUBDIR+=	mtail
 SUBDIR+=	nxtvepg
