@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/04 17:36:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/03 14:10:36 darcy Exp $
 ${PYTHON_LIBDIR}/site-packages/_pgmodule.so
 ${PYTHON_LIBDIR}/site-packages/pg.py
 ${PYTHON_LIBDIR}/site-packages/pg.pyc
 ${PYTHON_LIBDIR}/site-packages/pg.pyo
-${PYTHON_LIBDIR}/site-packages/pgsqldb.py
-${PYTHON_LIBDIR}/site-packages/pgsqldb.pyc
-${PYTHON_LIBDIR}/site-packages/pgsqldb.pyo
+${PYTHON_LIBDIR}/site-packages/pgdb.py
+${PYTHON_LIBDIR}/site-packages/pgdb.pyc
+${PYTHON_LIBDIR}/site-packages/pgdb.pyo
 share/doc/py-postgresql/README
 share/doc/py-postgresql/tutorial/advanced.py
 share/doc/py-postgresql/tutorial/basics.py
