@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/11/25 22:17:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.35 2002/12/25 18:30:24 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -21,10 +21,10 @@ USE_BUILDLINK2=	# defined
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx
-.if ${OPSYS:M*BSD} == ""
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
-.else
+.if ${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin"
 MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
+.else
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
 .endif
 
 do-install:
