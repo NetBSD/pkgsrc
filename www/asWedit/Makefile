@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/17 09:39:05 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/18 22:46:51 hubertf Exp $
 #
 
 DISTNAME=		${PKGNAME}-i386.linux
@@ -17,9 +17,13 @@ HOMEPAGE=		http://www.advasoft.com/asWedit.html
 DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-NO_CDROM=		"Redistribution not permitted"
+
 RESTRICTED=		"No re-distribution"
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 NO_BUILD=		yes
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 

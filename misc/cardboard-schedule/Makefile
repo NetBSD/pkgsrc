@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/26 18:21:10 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:42 hubertf Exp $
 #
 
 DISTNAME=	cs113ins
@@ -15,7 +15,9 @@ USE_X11BASE=	yes
 DEPENDS+=	unzip-*:../../archivers/unzip
 DEPENDS+=	swing-*:../../x11/swing
 
-NO_CDROM=	"License prohibits redistribution on CDROM"
+RESTRICTED=	"License prohibits redistribution on CDROM"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_CMD=	(cd ${WRKDIR} && unzip -x ${DOWNLOADED_DISTFILE}) || ${TRUE}
 MESSAGE_FILE=	${WRKDIR}/MESSAGE

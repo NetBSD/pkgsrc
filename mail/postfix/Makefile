@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/07/03 02:46:16 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/18 22:46:38 hubertf Exp $
 
 DISTNAME=	postfix-19991231-pl08
 PKGNAME=	postfix-19991231pl08
@@ -16,7 +16,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 
-MIRROR_DISTFILE= no
 MANCOMPRESSED_IF_MANZ=	yes
 DIST_SUBDIR=	postfix
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/11/26 22:43:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/18 22:46:45 hubertf Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		cjs@netbsd.org
 HOMEPAGE=		http://www.icb.net/
 
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
 
 do-configure:
 	@cd ${WRKSRC}; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/08 15:31:36 wennmach Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:48 hubertf Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 CONFLICTS+=		openssl-*
 
 RESTRICTED=		"Crypto; export-controlled"
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=		yes
 #USE_GTEXINFO=		yes #not currently needed

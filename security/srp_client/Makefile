@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/30 16:30:24 danw Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:50 hubertf Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -19,7 +19,7 @@ HOMEPAGE=		http://srp.stanford.edu/srp/
 DEPENDS+=		gmp>=2.0.2:../../devel/gmp
 
 RESTRICTED=             "Crypto; export-controlled"
-MIRROR_DISTFILE=        no
+NO_SRC_ON_FTP=	${RESTRICTED}
 
 GNU_CONFIGURE=		yes
 

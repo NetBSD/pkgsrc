@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/03/16 18:51:07 kim Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/18 22:46:37 hubertf Exp $
 #
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +35,10 @@ MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
-NO_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 .if ${OBJECT_FMT} == "ELF"
 # This gross hack normalizes the shlib names so that automatic
