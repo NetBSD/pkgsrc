@@ -1,0 +1,2 @@
+This program reads TrueType fonts and creates a suitable fonts.scale file for
+use with the xfsft X font server or XFree86-4.

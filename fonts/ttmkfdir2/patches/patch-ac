@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
+
+--- ttf.h.orig	2002-11-07 06:28:44.000000000 +0100
++++ ttf.h
+@@ -13,6 +13,8 @@
+ #include "util.h"
+ #include "encoding.h"
+ 
++using namespace std;
++
+ namespace ttf {
+ 
+     class Face {
