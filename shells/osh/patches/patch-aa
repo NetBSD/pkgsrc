@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/08/20 20:52:29 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/22 20:57:13 jmmv Exp $
 
 --- makefile.orig	Thu Feb 14 00:11:14 2002
-+++ makefile
-@@ -2,11 +2,10 @@
++++ makefile	Mon Sep 22 20:29:15 2003
+@@ -2,7 +2,6 @@
  
  # CONFIGURATION
  
@@ -10,18 +10,19 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/20 20:52:29 cjep Exp $
  BINDIR     = $(PREFIX)/bin
  MANDIR     = $(PREFIX)/man
  MANSECT    = $(MANDIR)/man1
--INSTALL	   = /usr/ucb/install
-+INSTALL	   = /usr/bin/install
+@@ -29,9 +28,9 @@
+ 	rm -f osh osh.o goto goto.o if if.o core log *~
  
- # CONFIGURATION ENDS
- 
-@@ -32,6 +31,6 @@
- 	$(INSTALL) -c -s osh $(BINDIR)
- 	$(INSTALL) -c -s goto $(BINDIR)
- 	$(INSTALL) -c -s if $(BINDIR)
+ install: all
+-	$(INSTALL) -c -s osh $(BINDIR)
+-	$(INSTALL) -c -s goto $(BINDIR)
+-	$(INSTALL) -c -s if $(BINDIR)
 -	$(INSTALL) -c -m 644 osh.1 $(MANSECT)
 -	$(INSTALL) -c -m 644 goto.1 $(MANSECT)
 -	$(INSTALL) -c -m 644 if.1 $(MANSECT)
-+	$(INSTALL) -c -m 444 osh.1 $(MANSECT)
-+	$(INSTALL) -c -m 444 goto.1 $(MANSECT)
-+	$(INSTALL) -c -m 444 if.1 $(MANSECT)
++	$(BSD_INSTALL_PROGRAM) osh $(BINDIR)/osh
++	$(BSD_INSTALL_PROGRAM) goto $(BINDIR)/goto
++	$(BSD_INSTALL_PROGRAM) if $(BINDIR)/if
++	$(BSD_INSTALL_MAN) osh.1 $(MANSECT)/osh.1
++	$(BSD_INSTALL_MAN) goto.1 $(MANSECT)/goto.1
++	$(BSD_INSTALL_MAN) if.1 $(MANSECT)/if.1
