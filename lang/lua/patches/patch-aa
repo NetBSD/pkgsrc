@@ -1,8 +1,56 @@
-$NetBSD: patch-aa,v 1.4 2004/01/25 10:48:21 cube Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/05 02:31:06 xtraeme Exp $
 
---- objdir/Makefile.orig	2004-01-25 11:30:50.000000000 +0100
-+++ objdir/Makefile
-@@ -0,0 +1,3 @@
-+SUBDIR+= liblua liblualib lua luac bin2c
-+
-+.include <bsd.subdir.mk>
+--- config.orig	Fri Apr 11 14:00:41 2003
++++ config
+@@ -25,7 +25,7 @@ USERCONF=
+ # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
+ # uncomment the next two lines.
+ #
+-#LOADLIB= -DUSE_DLOPEN=1
++LOADLIB= -DUSE_DLOPEN=1
+ #DLLIB= -ldl
+ #
+ # In Linux with gcc, you should also uncomment the next definition for
+@@ -83,7 +83,7 @@ USERCONF=
+ # For partial compatibility with old upvalue behavior in C functions, define
+ # LUA_COMPATUPVALUES. Add these definitions to MYCFLAGS.
+ #
+-# -DLUA_COMPATUPSYNTAX -DLUA_COMPATUPVALUES
++EXTRA_DEFS=-DLUA_COMPATUPSYNTAX -DLUA_COMPATUPVALUES
+ 
+ # ------------------------------------------------------------- Lua interpreter
+ 
+@@ -119,11 +119,11 @@ WARN= -Wall
+ # debug information. If you only want the shared libraries, you may want to
+ # add -fPIC to MYCFLAGS.
+ #
+-MYCFLAGS= -O2
++MYCFLAGS:= $(CFLAGS)
+ #MYCFLAGS= -O3 -fomit-frame-pointer # -fPIC
+ 
+ # Write here any options you may need for your C linker.
+-#MYLDFLAGS=
++MYLDFLAGS= $(LDFLAGS) -Wl,-E
+ 
+ # ------------------------------------------------------------------ librarian
+ 
+@@ -148,7 +148,7 @@ STRIP= strip
+ 
+ # Locations for "make install". You may need to be root do "make install".
+ #
+-INSTALL_ROOT= /usr/local
++INSTALL_ROOT= $(PREFIX)
+ INSTALL_BIN= $(INSTALL_ROOT)/bin
+ INSTALL_INC= $(INSTALL_ROOT)/include
+ INSTALL_LIB= $(INSTALL_ROOT)/lib
+@@ -157,8 +157,8 @@ INSTALL_MAN= $(INSTALL_ROOT)/man/man1
+ # You may prefer to use "install" instead of "cp" if you have it.
+ # If you use "install", you may also want to change the permissions after -m.
+ #
+-INSTALL_EXEC= cp
+-INSTALL_DATA= cp
++INSTALL_EXEC= $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA= $(BSD_INSTALL_DATA)
+ #INSTALL_EXEC= install -m 0755
+ #INSTALL_DATA= install -m 0644
+ 
