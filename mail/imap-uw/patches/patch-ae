@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 1999/11/25 14:32:43 tron Exp $
+$NetBSD: patch-ae,v 1.8 2000/05/19 03:58:57 jlam Exp $
 
---- src/osdep/unix/Makefile.orig	Wed Jan 27 00:17:39 1999
-+++ src/osdep/unix/Makefile	Thu Nov 25 15:08:49 1999
-@@ -95,7 +95,7 @@
+--- src/osdep/unix/Makefile.orig	Tue Nov 16 21:05:48 1999
++++ src/osdep/unix/Makefile	Tue May  2 15:18:30 2000
+@@ -99,7 +99,7 @@
  
  # Normally no need to change any of these
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.7 1999/11/25 14:32:43 tron Exp $
  BINARIES=mail.o misc.o newsrc.o smanager.o osdep.o utf8.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -118,7 +118,7 @@
+@@ -122,7 +122,7 @@
  # Here if no make argument established
  
  missing: osdep.h
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.7 1999/11/25 14:32:43 tron Exp $
  
  osdep.h:
  	@echo You must specify what type of system
-@@ -375,10 +375,11 @@
+@@ -386,10 +386,11 @@
  
  neb:	# NetBSD
  	$(BUILD) `cat EXTRASPECIALS` OS=bsi \
@@ -34,14 +34,12 @@ $NetBSD: patch-ae,v 1.7 1999/11/25 14:32:43 tron Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nxt:	# NEXTSTEP
-@@ -612,8 +613,8 @@
- 
- $(ARCHIVE): $(BINARIES)
- 	sh -c '$(RM) $(ARCHIVE) || true'
--	@cat ARCHIVE
--	@$(SH) ARCHIVE
-+	$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib \
-+		-version-info 3:0
- 
- # Cleanup
- 
+@@ -709,7 +710,7 @@
+ 	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
+ 	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
+ 	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
+-	echo "$(ARRC) $(ARCHIVE) $(BINARIES);$(RANLIB) $(ARCHIVE)" > ARCHIVE
++	echo "$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info 4:0" > ARCHIVE
+ 	./drivers $(EXTRADRIVERS) $(DEFAULTDRIVERS) dummy
+ 	./mkauths $(EXTRAAUTHENTICATORS) $(DEFAULTAUTHENTICATORS)
+ 	$(LN) os_$(OS).h osdep.h
