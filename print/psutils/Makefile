@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/11/09 18:01:48 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/11/10 14:08:16 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -9,17 +9,17 @@ MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
 MAINTAINER=	packages@netbsd.org
 
+DEPENDS+=	papersize-1.0:../../print/papersize
+
 WRKSRC=		${WRKDIR}/psutils
-USE_PERL5=	YES
+USE_PERL5=	yes
 
 CONFLICTS+=	psutils-A4-1.17 psutils-Letter-1.17
-
-DEPENDS+=	papersize-1.0:../../print/papersize
 
 .include "../../mk/bsd.prefs.mk"
 
 PAPERSIZE?=	A4
-MAKE_FLAGS+=	PAPER=`echo ${PAPERSIZE} | tr '[A-Z]' '[a-z]'`
+MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
@@ -46,9 +46,9 @@ post-install:
 	for file in epsffit psbook psnup psresize psselect pstops; do	\
 		strip ${PREFIX}/bin/$$file;				\
 	done
-	low=`echo ${PAPERSIZE} | tr '[A-Z]' '[a-z]'`;			\
+	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`;		\
 	if [ ! -e ${PREFIX}/etc/psutils.cfg ]; then			\
-		echo "PAPERSIZE=$$low" > ${PREFIX}/etc/psutils.cfg;	\
+		${ECHO} "PAPERSIZE=$$low" > ${PREFIX}/etc/psutils.cfg;	\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
