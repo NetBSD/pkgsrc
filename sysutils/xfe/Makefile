@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/08 19:40:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/20 15:35:38 xtraeme Exp $
 #
 
 DISTNAME=	xfe-0.54.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 
@@ -13,7 +13,7 @@ COMMENT=	Fast MS-Explorer like filemanager for X
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -28,7 +28,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/Desktop ${EGDIR}
 
-.include "../../x11/fox/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/fox/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
