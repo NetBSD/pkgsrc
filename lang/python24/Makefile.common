@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/12/05 23:27:28 recht Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/12/19 05:30:14 grant Exp $
 #
 
 DISTNAME=	Python-2.4
@@ -66,9 +66,11 @@ EXTRA_SO_SUBST=
 PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
 PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
-# Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
+# Make sure python modules can link correctly
 INSTALL_UNSTRIPPED=	yes
+# newer Darwin has poll() but not poll.h, so explicitly ignore poll().
+CONFIGURE_ENV+=		ac_cv_func_poll=no
 .endif
 
 .if ${OPSYS} == "IRIX"
@@ -105,5 +107,6 @@ post-extract:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
