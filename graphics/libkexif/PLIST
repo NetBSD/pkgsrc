@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/09 10:33:37 seb Exp $
+include/libkexif/kexifdata.h
+include/libkexif/kexifdialog.h
+include/libkexif/kexifutils.h
+include/libkexif/kexifwidget.h
+lib/libkexif.la
+lib/pkgconfig/libkexif.pc
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/mt/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libkexif.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libkexif.mo
+@dirrm include/libkexif
