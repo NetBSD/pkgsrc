@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/02/15 23:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/09 00:04:23 wiz Exp $
 
-DISTNAME=	snownews-1.4.4
+DISTNAME=	snownews-1.5.1
 CATEGORIES=	www
 MASTER_SITES=	http://home.kcore.de/~kiza/software/snownews/download/
 
@@ -15,22 +15,26 @@ USE_GNU_TOOLS+=		make
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}" GMAKE="${GMAKE}"
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}" MAKE="${GMAKE}"
 MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" LOCALBASE="${LOCALBASE}"
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink2.mk"
 MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${_BLNK_INTL_LDFLAGS}"
 
-post-patch:
-	for FILE in ${WRKSRC}/doc/man/Makefile ${WRKSRC}/doc/man/*/Makefile;do \
-		${MV} $${FILE} $${FILE}.orig; \
-		${SED} -e 's/$$(INSTALL) -m 0644/$$(BSD_INSTALL_MAN)/' $${FILE}.orig > $${FILE}; \
-	done
-	for FILE in ${WRKSRC}/po/Makefile;do \
-		${MV} $${FILE} $${FILE}.orig; \
-		${SED} -e 's/$$(INSTALL) -m 0644/$$(BSD_INSTALL_DATA)/' $${FILE}.orig > $${FILE}; \
-	done
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/snownews ${LOCALBASE}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/opml2snow ${LOCALBASE}/bin
+.for M in de fr it nl
+	${INSTALL_DATA_DIR} ${LOCALBASE}/man/${M}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/${M}/snownews.1 ${LOCALBASE}/man/${M}/man1
+.endfor
+	${INSTALL_MAN} ${WRKSRC}/doc/man/snownews.1 ${LOCALBASE}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/opml2snow.1 ${LOCALBASE}/man/man1
+.for L in de es fr it nl sl zh_TW
+	${INSTALL_DATA_DIR} ${LOCALBASE}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES
+	${INSTALL_DATA} ${WRKSRC}/po/${L}.mo ${LOCALBASE}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES/snownews.mo
+.endfor
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
