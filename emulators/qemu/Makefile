@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/14 01:02:19 dbj Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/19 23:12:59 heinz Exp $
 #
 
 DISTNAME=		qemu-0.6.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://fabrice.bellard.free.fr/qemu/
 COMMENT=		CPU emulator using dynamic translation
 
 CONFLICTS+=		qemu-bin-*
+NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
