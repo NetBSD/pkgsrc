@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.556 2000/08/30 18:49:18 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.557 2000/08/31 02:32:32 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -35,6 +35,7 @@ DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 REINSTALL?=		NO	# reinstall upon update
+CHECK_SHLIBS?=		YES	# run check-shlibs after install
 NOCLEAN?=		NO	# don't clean up after update
 
 LOCALBASE?=		${DESTDIR}/usr/local
@@ -1757,7 +1758,8 @@ root-install:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
-.if defined(PKG_DEVELOPER)
+	echo CHECK_SHLIBS=${CHECK_SHLIBS}
+.if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
 	@${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
 
@@ -1944,7 +1946,7 @@ checkpatch:
 # Special target to re-run install
 
 .if !target(reinstall)
-reinstall:
+reinstall: deinstall
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET} ${MAKE} ${MAKEFLAGS} install
 .endif
