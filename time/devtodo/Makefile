@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/03/28 11:02:43 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/16 08:00:43 zuntum Exp $
 #
 
-DISTNAME=	devtodo-0.1.3
+DISTNAME=	devtodo-0.1.4
 CATEGORIES=	time
 MASTER_SITES=	http://ftp1.sourceforge.net/devtodo/
 
