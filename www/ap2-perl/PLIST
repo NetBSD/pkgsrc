@@ -1,14 +1,22 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/20 20:18:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/09 12:09:59 adam Exp $
 include/httpd/mod_perl.h
 include/httpd/modperl_apache_compat.h
 include/httpd/modperl_apache_includes.h
+include/httpd/modperl_apr_compat.h
+include/httpd/modperl_apr_includes.h
+include/httpd/modperl_apr_perlio.h
 include/httpd/modperl_bucket.h
 include/httpd/modperl_callback.h
 include/httpd/modperl_cgi.h
 include/httpd/modperl_cmd.h
+include/httpd/modperl_common_includes.h
+include/httpd/modperl_common_log.h
+include/httpd/modperl_common_types.h
+include/httpd/modperl_common_util.h
 include/httpd/modperl_config.h
 include/httpd/modperl_const.h
 include/httpd/modperl_constants.h
+include/httpd/modperl_debug.h
 include/httpd/modperl_directives.h
 include/httpd/modperl_env.h
 include/httpd/modperl_error.h
@@ -49,11 +57,13 @@ share/doc/mod_perl/api/APR/Base64.pod
 share/doc/mod_perl/api/APR/Brigade.pod
 share/doc/mod_perl/api/APR/Bucket.pod
 share/doc/mod_perl/api/APR/BucketAlloc.pod
+share/doc/mod_perl/api/APR/BucketType.pod
 share/doc/mod_perl/api/APR/Const.pod
 share/doc/mod_perl/api/APR/Date.pod
 share/doc/mod_perl/api/APR/Error.pod
 share/doc/mod_perl/api/APR/Finfo.pod
-share/doc/mod_perl/api/APR/NetLib.pod
+share/doc/mod_perl/api/APR/IpSubnet.pod
+share/doc/mod_perl/api/APR/OS.pod
 share/doc/mod_perl/api/APR/PerlIO.pod
 share/doc/mod_perl/api/APR/Pool.pod
 share/doc/mod_perl/api/APR/SockAddr.pod
@@ -82,7 +92,7 @@ share/doc/mod_perl/api/Apache/RequestIO.pod
 share/doc/mod_perl/api/Apache/RequestRec.pod
 share/doc/mod_perl/api/Apache/RequestUtil.pod
 share/doc/mod_perl/api/Apache/Response.pod
-share/doc/mod_perl/api/Apache/Server.pod
+share/doc/mod_perl/api/Apache/ServerRec.pod
 share/doc/mod_perl/api/Apache/ServerUtil.pod
 share/doc/mod_perl/api/Apache/Status.pod
 share/doc/mod_perl/api/Apache/SubProcess.pod
