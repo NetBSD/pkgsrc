@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/10/28 11:30:26 markd Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -2185,6 +2185,14 @@ share/kde/apps/koffice/pics/koPortrait.png
 share/kde/apps/koffice/pics/koRulerFirst.png
 share/kde/apps/koffice/pics/koRulerLeft.png
 share/kde/apps/koffice/pics/koffice-logo.png
+share/kde/apps/konqueror/servicemenus/karbon_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kexi_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kformula_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kivio_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kpresenter_konqi.desktop
+share/kde/apps/konqueror/servicemenus/krita_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kspread_konqi.desktop
+share/kde/apps/konqueror/servicemenus/kword_konqi.desktop
 share/kde/apps/koshell/koshellui.rc
 share/kde/apps/kpresenter/autoforms/.autoforms
 share/kde/apps/kpresenter/autoforms/Arrows/.directory
