@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/06 18:55:04 he Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/12 17:36:40 seb Exp $
 
 DISTNAME=	Lingua-EN-Inflect-1.88
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~dconway/Lingua-EN-Inflect-1.88/
+HOMEPAGE=	http://search.cpan.org/dist/Lingua-EN-Inflect/
 COMMENT=	Perl module for inflection of english words and a/an selection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
