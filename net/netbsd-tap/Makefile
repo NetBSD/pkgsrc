@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/02/15 21:23:07 cube Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 21:50:57 cube Exp $
 
-DISTNAME=	netbsd-tap-20050215
+DISTNAME=	netbsd-tap-20050220
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
