@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/11/30 14:56:53 mjl Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/05 16:47:49 jmmv Exp $
 #
 
 DISTNAME=	smtpd-2.0
-PKGREVISION=1
+PKGREVISION=	1
 CATEGORIES=	mail security
 MASTER_SITES=	ftp://ftp.obtuse.com/pub/smtpd/
 
