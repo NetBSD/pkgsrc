@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2415 2004/11/22 14:54:38 adam Exp $
+$NetBSD: TODO,v 1.2416 2004/11/22 15:28:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ Suggested package updates
 	o erlang-r10b
 	o esh-0.8.5
 	o etach-1.4.0
-	o etherape-0.9.1
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o eukleides-1.0.1
 	o exmh-2.7.0
@@ -877,7 +876,6 @@ Suggested package updates
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-0.8.9
-	o pvm-3.4.5
 	o pwgen-2.03
 	o pxe-1.4.2
 	o py-FourSuite-1.0a3
