@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1421 2004/03/13 19:43:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1422 2004/03/13 20:54:16 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -763,8 +763,11 @@ MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
 
+USE_DIGEST?=	yes
+
 .PHONY: uptodate-digest
 uptodate-digest:
+.if !empty(USE_DIGEST:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
 		{ cd ${_PKGSRCDIR}/pkgtools/digest;			\
@@ -775,6 +778,9 @@ uptodate-digest:
 		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};			\
 		${MAKE} ${MAKEFLAGS} clean; } 				\
 	fi
+.else
+	@${DO_NADA}
+.endif
 
 # Latest version of pkgtools required for correct pkgsrc operation.
 .if defined(_OPSYS_PKGTOOLS_REQD)
