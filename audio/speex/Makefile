@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:23:24 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:30:46 martti Exp $
 #
 
 DISTNAME=	speex-1.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.speex.org/download/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.speex.org/
-COMMENT=	open-source, patent-free voice codec
+COMMENT=	Open-source, patent-free voice codec
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES

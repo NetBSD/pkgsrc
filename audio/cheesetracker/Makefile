@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/19 08:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/21 16:30:36 martti Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.reduz.com.ar/cheesetracker/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
-COMMENT=		impulse tracker clone
+COMMENT=		Impulse tracker clone
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes

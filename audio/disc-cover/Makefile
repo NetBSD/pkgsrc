@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:22:04 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:30:37 martti Exp $
 #
 
 DISTNAME=	disc-cover-1.4.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://home.wanadoo.nl/~jano/files/
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://home.wanadoo.nl/~jano/disc-cover.html
-COMMENT=	generation of CD covers
+COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD-0.05:../../audio/p5-Audio-CD
 

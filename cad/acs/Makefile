@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:24:43 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:32:08 martti Exp $
 #
 
 DISTNAME=	acs-0.29
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/tools/acs/index.html
-COMMENT=	general purpose circuit simulator
+COMMENT=	General purpose circuit simulator
 
 USE_GMAKE=	YES
 

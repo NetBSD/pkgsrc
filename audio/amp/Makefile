@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:21:55 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/21 16:30:33 martti Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mycroft@NetBSD.org
-COMMENT=	another mp3 player
+COMMENT=	Another mp3 player
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 

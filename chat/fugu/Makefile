@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:25:41 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:34:30 martti Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://fugu.gale.org/dist/
 
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://fugu.gale.org
-COMMENT=	graphical client for the gale secure instant messaging system
+COMMENT=	Graphical client for the gale secure instant messaging system
 
 PYTHON_VERSIONS_ACCEPTED= 20 21 # no 22 - uses Makefile.pre.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:26:05 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/21 16:34:32 martti Exp $
 #
 
 DISTNAME=	naim-0.11.5.9
@@ -8,7 +8,7 @@ MASTER_SITES=	http://shell.n.ml.org/n/naim/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://site.rpi-acm.org/info/naim/
-COMMENT=	ncurses-based AIM/IRC client
+COMMENT=	Ncurses-based AIM/IRC client
 
 GNU_CONFIGURE=	YES
 

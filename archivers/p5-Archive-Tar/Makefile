@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:21:32 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:24:40 martti Exp $
 
 DISTNAME=		Archive-Tar-1.02
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		archivers perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Archive/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-COMMENT=		perl5 module interface to manipulate tar files
+COMMENT=		Perl5 module interface to manipulate tar files
 
 DEPENDS+=		p5-IO-Zlib-[0-9]*:../../devel/p5-IO-Zlib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:23:15 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:30:44 martti Exp $
 #
 
 DISTNAME=	rioutil-1.3.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rioutil/}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://rioutil.sourceforge.net/
-COMMENT=	program and library to interface with Rio 600, 800, Nike psa[play
+COMMENT=	Program and library to interface with Rio 600, 800, Nike psa[play
 
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/19 08:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:30:38 martti Exp $
 #
 
 DISTNAME=		flac-1.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://flac.sourceforge.net
-COMMENT=		free lossless audio codec
+COMMENT=		Free lossless audio codec
 
 .include "../../mk/bsd.prefs.mk"
 

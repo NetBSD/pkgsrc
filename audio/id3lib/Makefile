@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:22:27 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/21 16:30:39 martti Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3lib/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://id3lib.sourceforge.net/
-COMMENT=	library for manipulating ID3v1 and ID3v2 tags
+COMMENT=	Library for manipulating ID3v1 and ID3v2 tags
 
 USE_GCC_SHLIB=		# defined
 USE_BUILDLINK2=		# defined

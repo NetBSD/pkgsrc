@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:22:59 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:30:42 martti Exp $
 #
 
 DISTNAME=	mserv-0.33
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.mserv.org/download/
 
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://www.mserv.org/
-COMMENT=	local centralised music server environment
+COMMENT=	Local centralised music server environment
 
 DEPENDS+=	mpg123-[0-9]*:../mpg123
 
