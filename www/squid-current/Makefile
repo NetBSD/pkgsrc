@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+# $NetBSD: Makefile,v 1.2 1998/10/11 20:42:41 kim Exp $
 #
 
 DISTNAME=	squid-2.0.RELEASE
@@ -24,7 +24,7 @@ CONFIGURE_ARGS=	--sysconfdir=/etc \
 # Options you might want to enable
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
 CONFIGURE_ARGS+=	--enable-icmp
-CONFIGURE_ARGS+=	--enable-snmp
+#CONFIGURE_ARGS+=	--enable-snmp
 
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
