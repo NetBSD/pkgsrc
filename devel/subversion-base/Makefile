@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/07 01:21:03 epg Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 00:15:53 minskim Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -35,10 +35,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/svnperms* \
 		${SVNEXAMPLES}/hook-scripts
 
-BUILDLINK_DEPENDS.apr?=		apr>=0.9.5
-BUILDLINK_DEPENDS.neon?=	neon>=0.24.1
+BUILDLINK_DEPENDS.apr+=		apr>=0.9.5
+BUILDLINK_DEPENDS.neon+=	neon>=0.24.1
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/apr/buildlink2.mk"
-.include "../../www/neon/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
