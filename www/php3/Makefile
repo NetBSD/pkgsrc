@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/04/12 17:51:57 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2000/04/25 14:22:52 bad Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -11,6 +11,11 @@ MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.php.net/
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	zlib-*:../../devel/zlib
+.endif
+
 
 PHP_VERSION=	3.0.16
 
