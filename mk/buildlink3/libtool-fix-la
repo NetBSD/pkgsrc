@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.3 2004/03/13 03:41:13 uebayasi Exp $
+# $NetBSD: libtool-fix-la,v 1.4 2004/03/30 17:25:19 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -129,37 +129,36 @@ if $test -f $lafile; then
 			;;
 		esac
 	done
-	if $test -z "$deps" && $test -z "$relink" || \
-	   @EGREP@ "^#.*modified by buildlink3" $lafile >/dev/null 2>&1; then
-		:
+	#
+	# Save the orignal .la file produced by libtool as
+	# .la.blsav, and create the new one with a signature.
+	#
+	@MV@ -f $lafile ${lafile}.blsav
+	if $test -n "$deps"; then
+		(
+		$cat ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
+		$echo "dependency_libs='$deps'"
+		$cat ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
+		) > ${lafile}.tmp
 	else
-		# Save the orignal .la file produced by libtool as
-		# .la.blsav, and create the new one with a signature.
-		#
-		@MV@ -f $lafile ${lafile}.blsav
-		if $test -n "$deps"; then
-			(
-			$cat ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
-			$echo "dependency_libs='$deps'"
-			$cat ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
-			) > ${lafile}.tmp
-		else
-			$cat ${lafile}.blsav > ${lafile}.tmp
-		fi
-		if $test -n "$relink"; then
-			(
-			$cat ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
-			$echo "relink_command='$relink'"
-			$cat ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
-			) > $lafile
-		else
-			$cat ${lafile}.tmp > $lafile
-		fi
-		$echo >> $lafile
-		$echo "# This file has been modified by buildlink3." >> $lafile
-		@RM@ ${lafile}.tmp
-		$echo "==> Fixed $lafile" >> $wrapperlog
+		$cat ${lafile}.blsav > ${lafile}.tmp
 	fi
+	if $test -n "$relink"; then
+		(
+		$cat ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
+		$echo "relink_command='$relink'"
+		$cat ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
+		) > $lafile
+	else
+		$cat ${lafile}.tmp > $lafile
+	fi
+	$echo >> $lafile
+	$echo "# Directory that this library was built in:" >> $lafile
+	$echo "buildlibdir='"`cd .; $pwd`"'" >> $lafile
+	$echo >> $lafile
+	$echo "# This file has been modified by buildlink3." >> $lafile
+	@RM@ ${lafile}.tmp
+	$echo "==> Fixed $lafile" >> $wrapperlog
 	#
 	# Fix up any .lai files (libtool archives that will be installed).
 	#

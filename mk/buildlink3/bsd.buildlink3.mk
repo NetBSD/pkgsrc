@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.133 2004/03/29 06:05:10 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.134 2004/03/30 17:25:19 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1377,9 +1377,12 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"			\
 	-e "s|@WRKDIR@|${WRKDIR}|g"					\
 	-e "s|@WRKSRC@|${WRKSRC}|g"					\
+	-e "s|@BASENAME@|${BASENAME:Q}|g"				\
 	-e "s|@CAT@|${CAT:Q}|g"						\
+	-e "s|@DIRNAME@|${DIRNAME:Q}|g"					\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
 	-e "s|@EXPR@|${EXPR:Q}|g"					\
+	-e "s|@PWD_CMD@|${PWD_CMD:Q}|g"					\
 	-e "s|@SED@|${SED:Q}|g"						\
 	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@TOUCH@|${TOUCH:Q}|g"					\

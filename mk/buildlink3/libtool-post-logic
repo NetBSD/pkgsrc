@@ -1,4 +1,6 @@
-# $NetBSD: libtool-post-logic,v 1.3 2003/09/19 22:49:22 jlam Exp $
+# $NetBSD: libtool-post-logic,v 1.4 2004/03/30 17:25:19 jlam Exp $
+
+case $arg in
 #
 # Workaround software authors that don't follow the libtool
 # documentation and link against uninstalled libtool archives with:
@@ -13,8 +15,7 @@
 # directories that are mentioned in -L* arguments to to libtool
 # wrapper, and checking to see if <dir>/libfoo.la exists when we see
 # "-lfoo" on the libtool command line.
-
-case $arg in
+#
 -L.|-L./*|-L..*|-L[!/]*|-L${WRKSRC}*)
 	case $fixlibpath in
 	yes)
@@ -44,6 +45,11 @@ case $arg in
 		for dir in $rellpath; do
 			la="$dir/lib$lib.la"
 			if $test -f "$la"; then
+				ldir=`cd $dir; $pwd`
+				buildlibdir=`. $la; $echo $buildlibdir`
+				if $test "$ldir" != "$buildlibdir"; then
+					la="$buildlibdir/lib$lib.la"
+				fi
 				$echo "*** [buildlink3] Warning: libtool replaced $arg with $la" >> $wrapperlog
 				$echo "*** [buildlink3] Warning: libtool replaced $arg with $la" 1>&2
 				arg="$la"
@@ -53,6 +59,24 @@ case $arg in
 		done
 		;;
 	esac
+	addtoprivatecache=yes
+	;;
+
+# Replace all references to locally-linked libtool archives with the full
+# paths to the archives in $buildlibdir if $buildlibdir differs from the
+# referenced directory.  This makes linking against a symlinked local
+# libtool archive possible.
+#
+./*.la|../*.la|[!/]*.la|${WRKSRC}/*.la)
+	labase=`$basename $arg`
+	ladir=`$dirname $arg`
+	ldir=`cd $ladir; $pwd`
+	buildlibdir=`. $ladir/$labase; $echo $buildlibdir`
+	if $test "$ldir" != "$buildlibdir"; then
+		arg="$buildlibdir/$labase"
+		$echo "*** [buildlink3] Warning: libtool replaced $ladir/$labase with $arg" >> $wrapperlog
+		$echo "*** [buildlink3] Warning: libtool replaced $ladir/$labase with $arg" 1>&2
+	fi
 	addtoprivatecache=yes
 	;;
 esac
