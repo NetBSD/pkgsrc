@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/12 21:24:58 snj Exp $
 #
 
 DISTNAME=	copter-commander-1.8
@@ -18,9 +18,9 @@ MAKE_ENV+=	OPENGLDIR=${BUILDLINK_PREFIX.MesaLib}
 MAKE_ENV+=	TIFFDIR=${BUILDLINK_PREFIX.tiff}
 MAKE_ENV+=	ESDDIR=${BUILDLINK_PREFIX.esound}
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/gtkglarea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
