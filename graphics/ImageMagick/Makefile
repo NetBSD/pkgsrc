@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 1999/04/25 18:46:30 tv Exp $
+# $NetBSD: Makefile,v 1.43 1999/04/25 18:47:49 tv Exp $
 #
 
 DISTNAME=	ImageMagick-4.2.2
@@ -16,6 +16,7 @@ DEPENDS+=	tiff-3.4:../../graphics/tiff
 
 MIRROR_DISTFILE= no
 USE_LIBTOOL=	yes
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
