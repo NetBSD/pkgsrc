@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2002/08/01 01:02:25 mycroft Exp $
+# $NetBSD: Makefile,v 1.58 2002/08/01 01:03:17 mycroft Exp $
 
 DISTNAME=		mod_ssl-2.8.10-1.3.26
 PKGNAME=		ap-ssl-2.8.10
+PKGREVISION=		1
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
