@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2004/02/05 20:14:06 skrll Exp $
+$NetBSD: patch-ac,v 1.10 2004/02/07 09:25:39 seb Exp $
 
 --- ltmain.sh.orig	2004-01-25 12:40:26.000000000 +0000
 +++ ltmain.sh
@@ -123,7 +123,7 @@ $NetBSD: patch-ac,v 1.9 2004/02/05 20:14:06 skrll Exp $
 +    #   - strip any trailing /
 +    tmp=""
 +    while test "$dest" != "$tmp";  do
-+      tmp=$arg
++      tmp=$dest
 +      dest=`$echo "X$dest" | $Xsed -e 's%[^/.][^/.]*/\.\.%%g' -e 's%/\./%/%g' -e 's%//*%/%g' -e 's%/$%%g'`
 +    done
  
