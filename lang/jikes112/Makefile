@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/30 07:29:07 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/31 10:44:21 skrll Exp $
 #
 
 DISTNAME=	jikes-1.12
@@ -10,6 +10,9 @@ HOMEPAGE=	http://www10.software.ibm.com/developerworks/opensource/jikes/
 COMMENT=	Java source to byte-code compiler
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
+
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
