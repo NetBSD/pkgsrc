@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:35 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/11/23 19:48:12 wiz Exp $
 
-SHA1 (Crypt-Blowfish-2.06.tar.gz) = 4b970861ff5046e96ddffde99866f74e183d98b3
-Size (Crypt-Blowfish-2.06.tar.gz) = 16415 bytes
+SHA1 (Crypt-Blowfish-2.09.tar.gz) = 4cb4380e788833c62ea0b8e994883e76a0547dc3
+Size (Crypt-Blowfish-2.09.tar.gz) = 17497 bytes
