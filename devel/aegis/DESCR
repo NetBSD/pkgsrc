@@ -1,0 +1,30 @@
+Aegis is a transaction-based software configuration management
+system. It provides a framework within which a team of developers
+may work on many changes to a program independently, and Aegis
+coordinates integrating these changes back into the master source
+of the program, with as little disruption as possible.
+
+The win in using Aegis is that there are O(n) interactions between
+developers and the baseline.  Contrast this with a master source
+which is being edited directly by the developers - there are O(n!)
+interactions between developers - this makes adding "just one more"
+developer a potential disaster.
+
+Another win is that the project baseline always works.  Always
+having a working baseline means that a version is always available
+for demonstrations, or those "pre-release snapshots" we are always
+forced to provide.
+
+The above advantages are all very well - for management types.
+Why should Joe Average Programmer use Aegis? Recall that RCS provides
+file locking, but only for one file at a time.  Aegis provides the
+file locking, atomically, for the set of files in the change.
+Recall also that RCS locks the file the instant you start editing
+it.  This makes popular files a project bottleneck.  Aegis allows
+concurrent editing, and a resolution mechanism just before the
+change must be integrated, meaning fewer delays for J.A.Programmer.
+
+Aegis also has strong support for geographically distributed
+development.  It supports both push and pull models, and many
+distribution topologies.  Aegis' normal development process is used
+to validate received change sets before committing them.
