@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2003/10/05 09:28:57 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2004/02/07 15:40:21 wiz Exp $
 
---- configure.orig	2003-10-05 11:12:39.000000000 +0200
+--- configure.orig	2004-01-25 01:08:10.000000000 +0100
 +++ configure
-@@ -4197,7 +4197,7 @@ else
+@@ -7539,7 +7539,7 @@ else
    packageprefix=${prefix}
  fi
  

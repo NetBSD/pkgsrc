@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/07 15:40:21 wiz Exp $
 #
 
-DISTNAME=		bomberclone-0.10.1
-PKGREVISION=		1
+DISTNAME=		bomberclone-0.11.1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,4 +18,5 @@ GNU_CONFIGURE=		yes
 
 .include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/SDL_image/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
