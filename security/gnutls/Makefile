@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2004/04/29 10:31:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/22 10:09:53 adam Exp $
 
-DISTNAME=	gnutls-1.0.8
+DISTNAME=	gnutls-1.0.13
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/
+MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
+		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/ \
+		http://www.mirrors.wiretapped.net/security/network-security/gnutls/ \
+		ftp://ftp.mirrors.wiretapped.net/pub/security/network-security/gnutls/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
@@ -10,9 +13,9 @@ COMMENT=	GNU Transport Layer Security library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
 DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
