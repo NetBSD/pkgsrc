@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2002/07/08 00:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2002/07/11 13:29:46 wiz Exp $
 #
 
 COMMENT=	Games
@@ -86,7 +86,8 @@ SUBDIR+=	lbreakout2
 SUBDIR+=	lincity
 SUBDIR+=	lpairs
 SUBDIR+=	ltris
-SUBDIR+=	maelstrom
+SUBDIR+=	maelstrom-sdl
+SUBDIR+=	maelstrom-x11
 SUBDIR+=	marbles
 SUBDIR+=	minami
 SUBDIR+=	mirrormagic
