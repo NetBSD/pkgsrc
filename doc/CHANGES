@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5650 2004/04/19 09:37:18 rh Exp $
+$NetBSD: CHANGES,v 1.5651 2004/04/19 14:11:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated OpenRM to 1.5.2 [garbled 2004-04-19]
 	Updated Gorm to 0.7.5 [rh 2004-04-19]
 	Updated Renaissance to 0.8.0 [rh 2004-04-19]
+	Added libmal-0.40 [markd 2004-04-19]
