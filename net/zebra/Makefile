@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/02/17 18:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2001/03/09 12:55:48 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -32,8 +32,6 @@ USE_GTEXINFO=	yes
 USE_GMAKE=	yes
 
 BUILD_DEFS+=	USE_INET6
-
-.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
 .else
