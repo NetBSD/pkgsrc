@@ -1,11 +1,18 @@
---- build.xml.orig	Tue Jul 17 07:25:27 2001
-+++ build.xml	Sat Aug 11 15:23:28 2001
-@@ -5,11 +5,11 @@
-   <property name="ant.home" value="../jakarta-ant"/>
-   <property name="debug" value="on"/>
+--- build.xml.orig	Fri Oct 26 09:59:03 2001
++++ build.xml	Fri Apr 19 11:25:00 2002
+@@ -2,15 +2,15 @@
+ 
+ 
+   <!-- ==================== Initialization properties ===================== -->
+-  <property name="ant.home" value="../jakarta-ant"/>
+-  <property name="debug" value="on"/>
++  <property name="ant.home" value="${pkgsrc.prefix}"/>
++  <property name="debug" value="off"/>
    <property name="j2ee.home" value="../../j2ee/build/unix"/>
--  <property name="jaxp" value="../jaxp-1.0.1" />
+-  <property name="jaxp" value="../jaxp-1.1/jaxp.jar" />
+-  <property name="parser" value="../jaxp-1.1/crimson.jar" />
 +  <property name="jaxp" value="${pkgsrc.prefix}/lib/java" />
++  <property name="parser" value="${pkgsrc.prefix}/lib/java/crimson.jar" />
    <property name="optimize" value="true" />
 -  <property name="servlet.jar" value="../jakarta-servletapi/lib/servlet.jar"/>
 +  <property name="servlet.jar" value="${pkgsrc.prefix}/lib/java/servlet.jar"/>
@@ -15,7 +22,7 @@
  
  
    <!-- ======================== Copy static files ========================= -->
-@@ -30,14 +30,18 @@
+@@ -31,14 +31,18 @@
  
      <!-- Copy executables and scripts -->
      <copy todir="${tomcat.build}/bin">
@@ -36,84 +43,50 @@
      <copy tofile="${tomcat.build}/conf/build.xml"
              file="build.xml"/>
  
-@@ -50,14 +54,16 @@
+@@ -51,6 +55,7 @@
      <copy tofile="${tomcat.build}/KEYS" file="KEYS"/>
  
      <!-- Copy library JAR files -->
--    <copy tofile="${tomcat.build}/lib/ant.jar"
--            file="${ant.home}/lib/ant.jar"/>
--    <copy tofile="${tomcat.build}/lib/servlet.jar"
--            file="${servlet.jar}"/>
--    <copy tofile="${tomcat.build}/lib/jaxp.jar"
--            file="${jaxp}/jaxp.jar"/>
--    <copy tofile="${tomcat.build}/lib/parser.jar"
--            file="${jaxp}/parser.jar"/>
 +    <!--
-+    	<copy tofile="${tomcat.build}/lib/ant.jar"
-+       	      file="${ant.home}/lib/ant.jar"/>
-+    	<copy tofile="${tomcat.build}/lib/servlet.jar"
-+      	      file="${servlet.jar}"/>
-+    	<copy tofile="${tomcat.build}/lib/jaxp.jar"
-+      	      file="${jaxp}/jaxp.jar"/>
-+    	<copy tofile="${tomcat.build}/lib/parser.jar"
-+       	      file="${jaxp}/parser.jar"/>
+     <copy tofile="${tomcat.build}/lib/ant.jar"
+             file="${ant.home}/lib/ant.jar"/>
+     <copy tofile="${tomcat.build}/lib/servlet.jar"
+@@ -59,6 +64,7 @@
+             file="${jaxp}"/>
+     <copy todir="${tomcat.build}/lib"
+             file="${parser}"/>
 +    -->
  
      <!-- Copy golden files for the tests webapp -->
      <copy todir="${tomcat.build}/lib/test/Golden">
-@@ -66,9 +72,11 @@
+@@ -67,9 +73,11 @@
  
      <!-- Fixups for line endings and executable permissions -->
      <fixcrlf srcdir="${tomcat.build}" includes="**/*.sh" cr="remove"/>
--    <fixcrlf srcdir="${tomcat.build}" includes="**/*.bat" cr="add"/>
--    <chmod perm="+x" file="${tomcat.build}/bin/ant"/>
--    <chmod perm="+x" file="${tomcat.build}/bin/antRun"/>
 +    <!--
-+    	<fixcrlf srcdir="${tomcat.build}" includes="**/*.bat" cr="add"/>
-+    	<chmod perm="+x" file="${tomcat.build}/bin/ant"/>
-+    	<chmod perm="+x" file="${tomcat.build}/bin/antRun"/>
+     <fixcrlf srcdir="${tomcat.build}" includes="**/*.bat" cr="add"/>
+     <chmod perm="+x" file="${tomcat.build}/bin/ant"/>
+     <chmod perm="+x" file="${tomcat.build}/bin/antRun"/>
 +    -->
      <chmod perm="+x" file="${tomcat.build}/bin/jspc.sh"/>
      <chmod perm="+x" file="${tomcat.build}/bin/startup.sh"/>
      <chmod perm="+x" file="${tomcat.build}/bin/shutdown.sh"/>
-@@ -82,8 +90,10 @@
-   <target name="tomcat" depends="prepare">
- 
-     <!-- Determine availability of optional components -->
-+    <!-- no JSSE yet
-     <available property="jsse.present" 
-                classname="com.sun.net.ssl.internal.ssl.Provider" />
-+    -->
-     <available property="jdk12.present"
-                classname="java.security.PrivilegedAction" />
- 
-@@ -95,6 +105,8 @@
+@@ -96,6 +104,8 @@
             deprecation="off" >
             <exclude name="**/Jdk12Interceptor.java" 
                      unless="jdk12.present"/>
-+           <exclude name="**/Jdk12Support.java" 
++           <exclude name="**/Jdk12Support.java"
 +                    unless="jdk12.present"/>
             <exclude name="**/SetSecurityManager.java" 
                      unless="jdk12.present"/>
             <exclude name="**/EmbededTomcat.java" 
-@@ -107,6 +119,8 @@
-                     unless="jdk12.present"/>
-            <exclude name="**/SSLSocketFactory.java"
-                     unless="jsse.present" />
-+           <exclude name="**/EmbededTomcat.java" 
-+                    unless="jsse.present"/>
-     </javac>
- 
-     <!-- Copy the corresponding resource files -->
-@@ -203,8 +217,10 @@
+@@ -204,8 +214,10 @@
      </copy>
  
      <!-- Fixups for executable permissions -->
--    <chmod perm="+x" file="${tomcat.dist}/bin/ant"/>
--    <chmod perm="+x" file="${tomcat.dist}/bin/antRun"/>
 +    <!--
-+    	<chmod perm="+x" file="${tomcat.dist}/bin/ant"/>
-+    	<chmod perm="+x" file="${tomcat.dist}/bin/antRun"/>
+     <chmod perm="+x" file="${tomcat.dist}/bin/ant"/>
+     <chmod perm="+x" file="${tomcat.dist}/bin/antRun"/>
 +    -->
      <chmod perm="+x" file="${tomcat.dist}/bin/jspc.sh"/>
      <chmod perm="+x" file="${tomcat.dist}/bin/startup.sh"/>
