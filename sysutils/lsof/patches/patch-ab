@@ -1,0 +1,15 @@
+--- Configure.orig	Tue Sep 11 14:22:21 2001
++++ Configure	Sun Oct  7 17:02:48 2001
+@@ -1881,6 +1881,12 @@
+ 	    if test $? -eq 0	# {
+ 	    then
+ 	      NETBSD_UVM="Y"
++	    else 
++	      grep -q "v_uobj;" ${LSOF_INCLUDE}/sys/vnode.h
++	      if test $? -eq 0	# {
++	      then
++		NETBSD_UVM="Y"
++	      fi # }
+ 	    fi	# }
+ 	  fi	# }
+ 	fi	# }
