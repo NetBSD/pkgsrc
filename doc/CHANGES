@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9297 2005/02/24 17:34:13 adrianp Exp $
+$NetBSD: CHANGES,v 1.9298 2005/02/24 20:52:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1074,3 +1074,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated szip to 2.0 [adam 2005-02-24]
 	Updated hdf to 4.2r1 [adam 2005-02-24]
 	Updated phpmyadmin to 2.6.1pl1 [adrianp 2005-02-24]
+	Updated phpmyadmin to 2.6.1pl2 [tron 2005-02-24]
