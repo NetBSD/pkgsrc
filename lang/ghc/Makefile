@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/15 06:00:43 proff Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/16 14:10:14 agc Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
@@ -38,7 +38,6 @@ pre-configure:
 		file $$lnl | ( ${EGREP} '[^a-zA-Z][Ee][Ll][Ff][^a-zA-Z]' && \
 		${ECHO} ELF || ${ECHO} a.out ) \
 	) > ${WRKDIR}/obj_fmt
-
 	${SED} < ${WRKSRC}/ghc/driver/ghc.lprl \
 	       > ${WRKSRC}/ghc/driver/ghc.lprl.hacked \
 		'/push(@SysLibrary, "-l$LibGmp")/s%^%push(@SysLibrary, "-L'${PREFIX}/lib'");%' && \
