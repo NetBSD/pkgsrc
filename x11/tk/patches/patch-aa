@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2001/12/23 17:11:30 bjoern Exp $
 
---- Makefile.in.orig	Tue Aug  8 15:19:31 2000
+--- Makefile.in.orig	Sat Oct 20 02:24:40 2001
 +++ Makefile.in
 @@ -76,7 +76,7 @@
  # The directory containing the Tcl sources and headers appropriate
@@ -15,12 +15,12 @@ $NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
--CFLAGS			= @CFLAGS@
-+CFLAGS			+= @CFLAGS@
+-CFLAGS			= @CFLAGS@ @CFLAGS_DEFAULT@
++CFLAGS			+= @CFLAGS@ @CFLAGS_DEFAULT@
  
- # A "-I" switch that can be used when compiling to make all of the
- # X11 include files accessible (the configure script will try to
-@@ -154,8 +154,8 @@
+ # Flags to pass to the linker
+ LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
+@@ -159,8 +159,8 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
  
@@ -31,16 +31,16 @@ $NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
  INSTALL_DATA		= ${INSTALL} -m 644
  
  # The following specifies which Tcl executable to use for make targets
-@@ -203,7 +203,7 @@
- # libraries.  See configure.in for a description of what it means.
+@@ -209,7 +209,7 @@
  # The values of the symbolis normally set by the configure script.
  
+ STLIB_LD		= @STLIB_LD@
 -SHLIB_LD		= @SHLIB_LD@
 +SHLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  
  # Additional search flags needed to find the various shared libraries
-@@ -233,7 +233,8 @@
+@@ -240,7 +240,8 @@
  # either.
  #----------------------------------------------------------------
  
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -371,6 +372,7 @@
+@@ -373,6 +374,7 @@
  	rm -f ${TK_LIB_FILE}
  	@MAKE_LIB@
  	$(RANLIB) ${TK_LIB_FILE}
@@ -58,31 +58,31 @@ $NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
  
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f ${STUB_LIB_FILE}
-@@ -389,7 +391,7 @@
+@@ -391,7 +393,7 @@
  
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
--	$(CC) @LDFLAGS@ $(WISH_OBJS) \
-+	$(LD) @LDFLAGS@ $(WISH_OBJS) \
+-	$(CC) $(LDFLAGS) $(WISH_OBJS) \
++	$(LD) $(LDFLAGS) $(WISH_OBJS) \
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o wish
  
-@@ -400,12 +402,12 @@
+@@ -402,12 +404,12 @@
  	make tcltest
  
  tktest: ${TCL_BIN_DIR}/tcltest $(TKTEST_OBJS) $(TK_LIB_FILE)
--	${CC} @LDFLAGS@ $(TKTEST_OBJS) \
-+	${LD} @LDFLAGS@ $(TKTEST_OBJS) \
+-	${CC} $(LDFLAGS) $(TKTEST_OBJS) \
++	${LD} $(LDFLAGS) $(TKTEST_OBJS) \
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o tktest
  
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
--	${CC} @LDFLAGS@ test.o tkTest.o tkSquare.o \
-+	${LD} @LDFLAGS@ test.o tkTest.o tkSquare.o \
+-	${CC} $(LDFLAGS) test.o tkTest.o tkSquare.o \
++	${LD} $(LDFLAGS) test.o tkTest.o tkSquare.o \
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -456,7 +458,7 @@
+@@ -462,7 +464,7 @@
  	    chmod +x $(UNIX_DIR)/mkLinks; \
  	    fi
  	@echo "Installing $(TK_LIB_FILE) to $(LIB_INSTALL_DIR)/"
