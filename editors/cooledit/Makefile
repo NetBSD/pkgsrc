@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 11:12:51 jlam Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
@@ -9,11 +9,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cooledit.sourceforge.net/
 COMMENT=	full-featured text editor
 
-USE_X11BASE=	yes
-USE_LIBTOOL=	yes
+BUILD_USES_MSGFMT=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11BASE=		# defined
+GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-GNU_CONFIGURE=	yes
-BUILD_USES_MSGFMT=	yes
 
 post-configure:
 	if ! ${GREP} -q mbstate_t /usr/include/machine/ansi.h ; then \
@@ -22,6 +23,5 @@ post-configure:
 			< ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h ; \
 	fi
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
