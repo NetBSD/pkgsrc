@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.350 1999/10/04 17:13:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.351 1999/10/05 15:48:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -75,12 +75,16 @@ SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}/pkg
 
-.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if defined(USE_LOCALBASE_FOR_X11)
-PREFIX=			${LOCALBASE}
-BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
+XPKGBASE=		${LOCALBASE}
 .else
-PREFIX=			${X11BASE}
+XPKGBASE=		${X11BASE}
+.endif
+
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
+PREFIX=			${XPKGBASE}
+.if defined(USE_LOCALBASE_FOR_X11)
+BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
 .endif
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
