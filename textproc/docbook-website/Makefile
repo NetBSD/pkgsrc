@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:12 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/23 17:18:31 jmmv Exp $
 #
 
 DISTNAME=	website-2.3
 PKGNAME=	docbook-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
