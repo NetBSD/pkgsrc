@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.5 2003/09/25 20:27:12 fredb Exp $
+
+--- logfile.c.orig	2002-11-25 07:08:26.000000000 -0600
++++ logfile.c
+@@ -56,9 +56,11 @@ extern int atexit _PROTO(( void (*)(void
+ /* Most systems have these variables but do not declare them. On many
+    of those systems that _do_ declare them, it won't hurt */
+ 
++#if !defined(__NetBSD__)
+ extern int sys_nerr;
+-#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
++# if !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
+ extern char *sys_errlist[];
++# endif
+ #endif
+ 
+ /* Interactive Unix is a little bit braindead - does not have atexit(),
