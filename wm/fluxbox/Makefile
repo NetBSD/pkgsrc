@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/02/27 11:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/24 15:00:40 jmcneill Exp $
 #
 
-DISTNAME=	fluxbox-0.9.10
-PKGREVISION=	1
+DISTNAME=	fluxbox-0.9.12
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,30 +16,13 @@ USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
+USE_GNU_TOOLS=	make
+USE_LIBTOOL=	YES
 
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-xinerama
 
 .include "../../mk/bsd.prefs.mk"
-
-FLUXBOX_USE_KDE?=	NO
-.if !empty(FLUXBOX_USE_KDE:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-kde
-.endif
-
-FLUXBOX_USE_GNOME?=	NO
-.if !empty(FLUXBOX_USE_GNOME:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-gnome
-.else
-CONFIGURE_ARGS+=	--disable-gnome
-.endif
-
-FLUXBOX_USE_XFT?=	YES
-.if !empty(FLUXBOX_USE_XFT:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-xft
-.include "../../fonts/Xft2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-xft
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
