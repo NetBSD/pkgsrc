@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.4 1998/12/01 02:47:19 tv Exp $
-@comment this list changes by some files if gdbm is installed - hubertf
+@comment $NetBSD: PLIST-mi,v 1.5 1998/12/02 02:28:31 tv Exp $
 bin/a2p
 bin/c2ph
 bin/find2perl
@@ -17,13 +16,6 @@ bin/pod2text
 bin/pstruct
 bin/s2p
 bin/splain
-@comment some empty dirs perl creates
-@exec	mkdir -p %D/lib/perl5/IO
-@unexec	rm -fr   %D/lib/perl5/IO
-@exec	mkdir -p %D/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
-@unexec	rm -fr   %D/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
-@exec	mkdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd
-@unexec rmdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd 2>/dev/null || true
 lib/perl5/AnyDBM_File.pm
 lib/perl5/AutoLoader.pm
 lib/perl5/AutoSplit.pm
@@ -178,6 +170,7 @@ lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/scope.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/sv.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/unixish.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/util.h
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/libperl.a
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/Config.pm
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/DB_File.pm
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/DynaLoader.pm
@@ -197,8 +190,6 @@ lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/POSIX.pod
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/SDBM_File.pm
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/Safe.pm
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/Socket.pm
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/DB_File.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/DB_File.so
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/autosplit.ix
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/DynaLoader.a
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/autosplit.ix
@@ -206,16 +197,6 @@ lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/dl_expandspec.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/dl_find_symbol_anywhere.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/dl_findfile.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader/extralibs.ld
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl/Fcntl.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl/Fcntl.so
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/IO/IO.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/IO/IO.so
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/NDBM_File/NDBM_File.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/NDBM_File/NDBM_File.so
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Opcode/Opcode.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Opcode/Opcode.so
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/POSIX.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/POSIX.so
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/abs.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/alarm.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/assert.al
@@ -363,10 +344,6 @@ lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/vprintf.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/vsprintf.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/wait.al
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/waitpid.al
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/SDBM_File/SDBM_File.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/SDBM_File/SDBM_File.so
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Socket/Socket.bs
-@comment MD lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Socket/Socket.so
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/sdbm/extralibs.ld
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/ops.pm
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/overload.pm
@@ -620,6 +597,11 @@ man/man1/pstruct.1
 man/man1/s2p.1
 man/man1/splain.1
 man/man1/xsubpp.1
+@exec	mkdir -p %D/lib/perl5/IO
+@exec	mkdir -p %D/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
+@exec	mkdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd
+@unexec rmdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd 2>/dev/null || true
+@unexec rmdir -p %D/lib/perl5/man/man3 2>/dev/null || true
 @dirrm lib/perl5/Bundle
 @dirrm lib/perl5/CGI
 @dirrm lib/perl5/CPAN
@@ -629,6 +611,7 @@ man/man1/xsubpp.1
 @dirrm lib/perl5/File
 @dirrm lib/perl5/Getopt
 @dirrm lib/perl5/I18N
+@dirrm lib/perl5/IO
 @dirrm lib/perl5/IPC
 @dirrm lib/perl5/Math
 @dirrm lib/perl5/Net
@@ -647,8 +630,7 @@ man/man1/xsubpp.1
 @dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE
 @dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/IO
 @dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DynaLoader
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
 @dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text
 @dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/sdbm
-@dirrm lib/perl5/man/man3
-@dirrm lib/perl5/man
 @dirrm lib/perl5/pod
