@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/03/08 20:27:14 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.25 2004/03/11 21:12:22 tron Exp $
 
 DISTNAME=	ocaml-3.06
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/${DISTNAME}/
 
@@ -59,5 +58,5 @@ PLIST_SUBST+=		NATIVE_THREADS=
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
