@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/24 07:08:20 agc Exp $
+
+SHA1 (dirdiff-1.6.tar.gz) = b06003909ef50d4668660f3db4ba703ac17c4f14
+Size (dirdiff-1.6.tar.gz) = 27965 bytes
+SHA1 (patch-aa) = 5414ea8dfcd7509c1c76b2e7e33f5aca14a62435
