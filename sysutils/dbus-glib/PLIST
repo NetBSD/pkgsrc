@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 17:46:41 jmmv Exp $
+bin/dbus-glib-tool
+bin/dbus-monitor
+lib/libdbus-glib-1.la
+lib/pkgconfig/dbus-glib-1.pc
+man/man1/dbus-monitor.1
