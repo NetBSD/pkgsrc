@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/14 14:52:06 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/23 07:19:12 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -8,6 +8,7 @@ PG_PKG_VERS=		# empty
 COMMENT=		ODBC interface to PostgreSQL
 
 MAINTAINER=		jwise@netbsd.org
+HOMEPAGE=		http://odbc.postgresql.org/
 
 CONFIGURE_ARGS+=	--with-odbc
 CONFIGURE_ARGS+=	--with-odbcinst=/etc
