@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.22 2003/10/06 05:49:24 mycroft Exp $
+# $NetBSD: Makefile.depends,v 1.23 2003/12/08 19:20:49 wiz Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
@@ -29,7 +29,7 @@ USE_X11=	YES
 .  endif
 .endfor
 
-.include "../../audio/faad2/buildlink2.mk"
+#.include "../../audio/faad2/buildlink2.mk"
 .include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
