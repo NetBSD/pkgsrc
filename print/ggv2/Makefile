@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/02/14 19:40:10 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/16 23:36:30 jmmv Exp $
 #
 
 DISTNAME=		ggv-2.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,11 +23,11 @@ USE_X11=		YES
 
 GCONF2_SCHEMAS= 	ggv.schemas
 
-.include "../../textproc/scrollkeeper/omf.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
