@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.7 2003/09/26 14:31:40 fredb Exp $
+
+--- src/wp/ap/xp/ap_Menu_Id_List.h.orig	2002-03-22 12:21:45.000000000 -0600
++++ src/wp/ap/xp/ap_Menu_Id_List.h
+@@ -262,4 +262,8 @@ menuitem(AUTOTEXT_EMAIL_6)
+ /**** Add Menu Items here ****/
+ 
+ 
++#ifdef MENUITEMLAST_IS_SPECIAL
++menuitemlast(_BOGUS2__)				/* must be last */
++#else
+ menuitem(_BOGUS2__)				/* must be last */
++#endif

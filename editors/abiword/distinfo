@@ -1,12 +1,15 @@
-$NetBSD: distinfo,v 1.19 2003/04/17 06:22:23 martti Exp $
+$NetBSD: distinfo,v 1.20 2003/09/26 14:31:40 fredb Exp $
 
 SHA1 (abisuite/abiword-1.0.5.tar.gz) = 29292d858dd361bd4ad10c98c32c5b8b5941110d
 Size (abisuite/abiword-1.0.5.tar.gz) = 18966097 bytes
 SHA1 (patch-ab) = 31f61d0a855db4dd9d3fa2c2ab1bae31fb03c636
+SHA1 (patch-ac) = 4b07508d1183a17b7659c1c67f62d69646bd4565
 SHA1 (patch-ad) = 1b1cdab98c9b58b5395e0a43169fa54cac819b04
 SHA1 (patch-ae) = a8fbe68e56bed6881329632bb12173cb67b8d750
 SHA1 (patch-af) = 9bf0cb3abe338b7021acbf771b34b55bb7edcbae
 SHA1 (patch-ag) = 9a9faa81fc5343c7f33e8148f30fbbb845b21c4c
 SHA1 (patch-ah) = 19e2e5def6d235ff44efc856346a4ae85b2bdbd5
+SHA1 (patch-ai) = 7d25e739042c0ce703a32ddf8e08585fad0aea31
+SHA1 (patch-aj) = 661784a408c0cd399cf04ba9e9845a405ab53575
 SHA1 (patch-ak) = 692401ca4f4d701b5eca3952ef300497d35f6b27
 SHA1 (patch-al) = cfeed65d62c8f580fcb504be68f94c8343cca583
