@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2003/05/07 14:23:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.169 2003/05/29 22:58:16 wiz Exp $
 #
 
 COMMENT=	Games
@@ -34,6 +34,7 @@ SUBDIR+=	crafty-book-large
 SUBDIR+=	crafty-book-medium
 SUBDIR+=	crafty-book-small
 SUBDIR+=	crafty-doc
+SUBDIR+=	crimsonfields
 SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-cli
 SUBDIR+=	crossfire-srv
