@@ -1,10 +1,21 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/04/22 07:53:00 kei Exp $
+$NetBSD: patch-af,v 1.2 2001/05/03 00:45:57 kei Exp $
 
 --- minflag.orig	Fri Mar  9 02:02:47 2001
-+++ minflag	Sat Mar 31 14:26:01 2001
++++ minflag	Thu May  3 09:15:04 2001
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!/usr/pkg/bin/perl
  
  $VERSION="1.0.2";
  $_ = `uname -s`;
+@@ -14,6 +14,10 @@
+ }
+ elsif(/SunOS/){
+   $CFLAGS .= " -DM_HAVE_CURSES_H -DM_HAVE_TERM_H";
++  $LFLAGS .= " -ltermcap";
++}
++elsif(/NetBSD/){
++  $CFLAGS .= " -DM_HAVE_CURSES_H -DM_HAVE_TERMCAP_H";
+   $LFLAGS .= " -ltermcap";
+ }
+ else{
