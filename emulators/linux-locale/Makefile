@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:35:34 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=	locales-2.1-1mdk
 PKGNAME=	linux-locale-2.1.1
@@ -45,7 +45,7 @@ CHECK_SHLIBS=	no
 do-install:
 	@${RM} -f ${CPIOLIST}
 	@(cd ${EMULDIR}; \
-		${FIND} usr/share/locale -name "*" > ${EXCLUDELIST})
+		${FIND} usr/share/locale -name "*" -print > ${EXCLUDELIST})
 .for f in ${DISTFILES}
 	@rpm2cpio ${DISTDIR}/${DIST_SUBDIR}/${f} | \
 		cpio -t -v -f -E ${EXCLUDELIST} >> ${CPIOLIST}

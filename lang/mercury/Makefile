@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -33,8 +33,8 @@ do-build:
 do-install:
 	cd ${WRKSRC}/tmp && ${PAX} -rw . ${PREFIX}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
-	${FIND} ${WRKSRC} -type d -name "CVS" | ${XARGS} ${RM} -fr
-	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -fr
+	${FIND} ${WRKSRC} -type f -name ".cvsignore" -print | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
 .include "../../devel/readline/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/27 00:53:10 heinz Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.5
@@ -54,11 +54,11 @@ MKCATPAGES?=	yes
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${WRKSRC};						\
-	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f |		\
+	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f -print |	\
 		${SED} -e 's|^|${XJMANDIR}/|' | sort >> ${PLIST_SRC})
 .if ${MKCATPAGES} != no
 	@(cd ${WRKSRC};						\
-	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f |		\
+	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f -print |	\
 		${SED} -e 's|^|${XJMANDIR}/|'			\
 		       -e 's|man[135]\(/.*\)\.\([135]\)$$|cat\2\1.0|' | \
 		sort >> ${PLIST_SRC})

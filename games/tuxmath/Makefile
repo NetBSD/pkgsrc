@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/27 00:53:11 heinz Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -17,7 +17,7 @@ USE_GNU_TOOLS+=	make
 NO_CONFIGURE=	# defined
 
 pre-install:
-	${FIND} ${WRKSRC} -name CVS -type d  | ${XARGS} ${RM} -rf
+	${FIND} ${WRKSRC} -name CVS -type d  -print | ${XARGS} ${RM} -rf
 	${RM} -rf ${WRKSRC}/data/images/.xvpics
 	${RM} -rf ${WRKSRC}/data/images/status/.xvpics
 

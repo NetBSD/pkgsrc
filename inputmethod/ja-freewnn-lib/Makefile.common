@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/20 12:18:53 agc Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/27 00:53:10 heinz Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -46,7 +46,7 @@ MAKE_ENV+=	"KWNNDIR=${KWNNDIR}"
 GNU_CONFIGURE=	YES
 
 post-patch:
-	@for file in `${FIND} ${WRKSRC} -name Makefile.in`; do	\
+	@for file in `${FIND} ${WRKSRC} -name Makefile.in -print`; do	\
 		${MV} $$file $$file.orig;			\
 		${SED} -e '/PREFIX = /d'			\
 			-e 's|\(WNNBINDIR = $${PREFIX}/\)\(bin\)|\1s\2|' \
@@ -57,7 +57,7 @@ post-patch:
 			${SEDSCRIPT}				\
 			$$file.orig > $$file;			\
 	done
-	@for file in `${FIND} ${WRKSRC}/Wnn/man -name Makefile.in`; do	\
+	@for file in `${FIND} ${WRKSRC}/Wnn/man -name Makefile.in -print`; do\
 		${MV} $$file $$file.orig2;				\
 		${SED} -e 's|\(MANPATH = .*\)|\1/ja_JP.EUC|'		\
 			$$file.orig2 > $$file;				\
@@ -83,7 +83,7 @@ post-install:
 EVAL_PREFIX+=	WNNSERVERBINDIR=ja-FreeWnn-server-bin
 
 pre-build:
-	@for file in `${FIND} ${WRKSRC}/Wnn/pubdic ${WRKSRC}/Wnn/wnncons -name Makefile`; do	\
+	@for file in `${FIND} ${WRKSRC}/Wnn/pubdic ${WRKSRC}/Wnn/wnncons -name Makefile -print`; do	\
 		${MV} $$file $$file.orig2;				\
 		${SED} -e 's|\(ATOD = \).*|\1${WNNSERVERBINDIR}/sbin/atod|' \
 			-e 's|\(ATOF = \).*|\1${WNNSERVERBINDIR}/sbin/atof|' \
