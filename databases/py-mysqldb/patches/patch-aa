@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1 2002/01/29 14:39:39 drochner Exp $
+
+--- setup.py.orig	Wed Oct 17 05:17:30 2001
++++ setup.py	Tue Jan 29 15:29:27 2002
+@@ -18,53 +18,13 @@
+ 
+ mysqlclient = thread_safe_library and "mysqlclient_r" or "mysqlclient"
+ 
+-if sys.platform in ("linux-i386", "linux2"): # most Linux
+-    include_dirs = ['/usr/include/mysql']
+-    library_dirs = ['/usr/lib/mysql']
+-    libraries = [mysqlclient, "z"]
+-    runtime_library_dirs = []
+-    extra_objects = []
+-elif sys.platform in ("freebsd4", "openbsd2"): 
+-    include_dirs = ['/usr/local/include/mysql']
+-    library_dirs = ['/usr/local/lib/mysql']
+-    libraries = [mysqlclient, "z"]
+-    runtime_library_dirs = []
+-    extra_objects = []
+-elif sys.platform == "sunos5": # Solaris 2.8 
+-    include_dirs = ['/usr/local/mysql/include/mysql'] 
+-    library_dirs = ['/usr/local/mysql/lib/mysql'] 
+-    libraries = [mysqlclient, "z"] 
+-    runtime_library_dirs = ['/usr/local/lib:/usr/openwin/lib:/usr/dt/lib'] 
+-    extra_objects = [] 
+-elif sys.platform == "win32":
+-    include_dirs = [r'c:\mysql\include']
+-    library_dirs = [r'c:\mysql\lib\opt']
+-    libraries = [mysqlclient, 'zlib', 'msvcrt', 'libcmt',
+-                 'wsock32', 'advapi32']
+-    runtime_library_dirs = []
+-    extra_objects = [r'c:\mysql\lib\opt\mysqlclient.lib']
+-elif sys.platform == "darwin1": # Mac OS X
+-    include_dirs = ['/usr/local/mysql/include/mysql']
+-    library_dirs = ['/usr/local/mysql/lib/mysql']
+-    libraries = [mysqlclient, "z"]
+-    runtime_library_dirs = []
+-    extra_objects = []
+-elif os.name == "posix": # most Linux/UNIX platforms
+-    include_dirs = ['/usr/include/mysql']
+-    library_dirs = ['/usr/lib/mysql']
+-    # MySQL-3.23 needs libz
+-    libraries = [mysqlclient, "z"]
+-    # On some platorms, this can be used to find the shared libraries
+-    # at runtime, if they are in a non-standard location. Doesn't
+-    # work for Linux gcc.
+-    ## runtime_library_dirs = library_dirs
+-    runtime_library_dirs = []
+-    # This can be used on Linux to force use of static mysqlclient lib
+-    ## extra_objects = ['/usr/lib/mysql/libmysqlclient.a']
+-    extra_objects = []
+-else:
+-    raise "UnknownPlatform", "sys.platform=%s, os.name=%s" % \
+-          (sys.platform, os.name)
++mysqlprefix = '@MYSQLPREFIX@'
++mysqlrtprefix = '@MYSQLRTPREFIX@'
++include_dirs = [mysqlprefix + '/include/mysql']
++library_dirs = [mysqlprefix + '/lib/mysql']
++libraries = [mysqlclient, "z"]
++runtime_library_dirs = [mysqlrtprefix + '/lib/mysql']
++extra_objects = []
+     
+ long_description = \
+ """Python interface to MySQL-3.23
+@@ -93,7 +53,8 @@
+         author = "Andy Dustman",
+         author_email = "andy@dustman.net",
+         license = "GPL",
+-        platforms = "ALL",
++# "platforms" doesn't work for Python 2.0.x
++#        platforms = "ALL",
+         url = "http://sourceforge.net/projects/mysql-python",
+ 
+         # Description of the modules and packages in the distribution

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:11:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/01/29 14:39:38 drochner Exp $
 
-SHA1 (MySQLdb-0.1.3.tar.gz) = a6823691638be07c10e4eebd7975fd15e60948f4
-Size (MySQLdb-0.1.3.tar.gz) = 43190 bytes
+SHA1 (MySQL-python-0.9.1.tar.gz) = 5bb5d9430d91a31116122861afd66c2fdfdd23b8
+Size (MySQL-python-0.9.1.tar.gz) = 64073 bytes
+SHA1 (patch-aa) = 625a0cb90724bd467375358d0a1f326249e9726b
