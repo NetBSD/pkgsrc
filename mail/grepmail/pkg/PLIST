@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/08 12:01:14 bad Exp $
+bin/grepmail
