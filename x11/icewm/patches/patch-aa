@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2000/03/03 15:55:40 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/03/07 03:35:44 jlam Exp $
 
 --- sysdep.in.orig	Mon Nov  8 06:45:52 1999
-+++ sysdep.in	Fri Mar  3 02:21:51 2000
-@@ -2,5 +2,5 @@
++++ sysdep.in	Mon Mar  6 22:20:48 2000
+@@ -1,6 +1,6 @@
+ CXX = @CXX@
  LD = @CXX_LINK@
- SYS_CFLAGS = @CXXFLAGS@ @DEFS@
+-SYS_CFLAGS = @CXXFLAGS@ @DEFS@
++SYS_CFLAGS = @CXXFLAGS@ @CPPFLAGS@ @DEFS@
  SYS_INCDIRS =
 -SYS_LIBDIRS =
 +SYS_LIBDIRS = @LDFLAGS@
