@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:07:07 agc Exp $
+
+MD5 (openldap-1.2.11.tgz) = ac469c0fe66ece3893e96182f14b7886
+SHA1 (patch-ab) = 74043106a6d933ff627eff5c079f50b9bfc9eef5
+SHA1 (patch-ac) = b0d7dc8d23bd34013cec28cc13b661215a8870d4

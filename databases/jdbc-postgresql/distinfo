@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:07:02 agc Exp $
+
+MD5 (postgresql-7.0.3.tar.gz) = b416c04e6c91967160dfde866293ee6f
+SHA1 (patch-aa) = 84cd2e3ef3b9aa6b65c8cf21891b372cfc473821
