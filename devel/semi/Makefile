@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2004/09/12 02:37:25 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/27 08:48:34 uebayasi Exp $
 
 DISTNAME=	semi-1.14.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
+
+# This fix will be unnecessary for the next release.
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		semi-1.14.6-pgg-gpg.patch
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/SEMI/

@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.7 2004/09/10 17:10:24 uebayasi Exp $
+$NetBSD: distinfo,v 1.8 2004/09/27 08:48:34 uebayasi Exp $
 
 SHA1 (semi-1.14.6.tar.gz) = a7ed1b391abf837d3483243456936f51910f9894
 Size (semi-1.14.6.tar.gz) = 142549 bytes
+SHA1 (semi-1.14.6-pgg-gpg.patch) = 306d0c5e6530d5fda3c0a0c4346a09238044c3f9
+Size (semi-1.14.6-pgg-gpg.patch) = 2357 bytes
 SHA1 (patch-ab) = 3d22b94d7609ff9bdbae20f583185a4b330b34b9
 SHA1 (patch-ac) = c5e7595bafbdc8c85b34d953626d9c4917aad1d6
