@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2003/03/22 20:23:04 kristerw Exp $
+# $NetBSD: Makefile,v 1.149 2003/04/29 23:19:47 jtb Exp $
 #
 
 COMMENT=	Programming languages
@@ -61,6 +61,7 @@ SUBDIR+=	kali
 SUBDIR+=	libperl
 SUBDIR+=	librep
 SUBDIR+=	lua
+SUBDIR+=	lua4
 SUBDIR+=	maude
 SUBDIR+=	mawk
 SUBDIR+=	mercury
