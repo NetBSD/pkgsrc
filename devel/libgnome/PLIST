@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/25 07:58:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/11 10:28:27 jmmv Exp $
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
 include/libgnome-2.0/libgnome/gnome-gconf.h
@@ -25,7 +25,7 @@ lib/libgnome-2.a
 lib/libgnome-2.la
 lib/libgnome-2.so
 lib/libgnome-2.so.200
-lib/libgnome-2.so.200.1
+lib/libgnome-2.so.200.3
 lib/pkgconfig/libgnome-2.0.pc
 libexec/gnome2-db2html
 libexec/gnome2-info2html
@@ -79,6 +79,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnome-2.0.mo
@@ -136,7 +137,6 @@ share/sgml/docbook/gnome-customization-0.1/l10n.xml
 @dirrm share/examples/libgnome
 @dirrm share/doc/html/libgnome
 @comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
-@comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0
 @comment in bonobo-activation: @dirrm lib/bonobo/servers
 @comment in bonobo-activation: @dirrm lib/bonobo/monikers
 @dirrm include/libgnome-2.0/libgnome
