@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/16 14:43:36 rh Exp $
+
+--- Compile/SW/Makefile.PL.orig	Fri Dec 11 08:24:25 1998
++++ Compile/SW/Makefile.PL	Mon Mar  1 11:37:15 1999
+@@ -13,9 +13,9 @@
+ 
+ sub MY::postamble{
+ '
+-$(MYEXTLIB): libs/libsw$(LIB_EXT)
++$(MYEXTLIB):
+ 	DEFINE=\'$(DEFINE)\'; CC=\'$(PERLMAINCC)\'; export DEFINE INC CC; \
+-	cd libs && $(MAKE) libsw.a -e
++	cd libs && $(MAKE) libsw$(LIB_EXT) -e
+ 
+ ';
+ }

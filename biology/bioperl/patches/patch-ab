@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/16 14:43:36 rh Exp $
+
+--- Compile/SW/libs/makefile.orig	Fri Dec 11 16:24:29 1998
++++ Compile/SW/libs/makefile	Sat Apr 10 21:45:14 1999
+@@ -1,5 +1,4 @@
+-
+-
++CFLAGS+=-fPIC
+ 
+ OBJS =	aln.o\
+ 	alnconvert.o\
+@@ -52,7 +51,5 @@
+ 	ar ru libsw.a $(OBJS)
+ 
+ wisefile.o : wisefile.c
+-	$(CC) $(CFLAGS) -DNOERROR wisefile.c
++	${CC} ${CFLAGS} -c -DNOERROR wisefile.c
+ 
+-CFLAGS = -c -O
+-CC     = cc
