@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.6 2004/07/06 22:49:16 wiz Exp $
+# $NetBSD: apache.mk,v 1.6.4.1 2005/01/10 16:15:25 tv Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -13,7 +13,7 @@
 # The available user variables are:
 #
 # PKG_APACHE_DEFAULT is a user-settable variable whose value is the default
-#	apache server to use.  Possible values are apache13, apache2 and apache6.
+#	apache server to use.  Possible values are apache13 and apache2.
 #   If there is already a version of apache installed this will have no
 #   effect.
 #
@@ -36,7 +36,7 @@ APACHE_MK=	# defined
 
 PKG_APACHE_DEFAULT?=	# empty
 
-_PKG_APACHES?=	apache13 apache2 apache6
+_PKG_APACHES?=	apache13 apache2
 
 .if defined(PKG_APACHE_ACCEPTED)
 .  for _ap_ in ${PKG_APACHE_ACCEPTED}
@@ -59,7 +59,6 @@ _PKG_APACHE_DEFAULT?=	apache13
 
 _APACHE_PKGBASE.apache13=	apache-1\*
 _APACHE_PKGBASE.apache2=	apache-2\*
-_APACHE_PKGBASE.apache6=	apache6
 
 # Mark the acceptable apaches and check which apache packages are installed.
 .for _ap_ in ${_PKG_APACHE_ACCEPTED}
@@ -111,15 +110,12 @@ _PKG_APACHE=		"none"
 
 BUILDLINK_DEPENDS.apache13?=	apache-1.3*
 BUILDLINK_DEPENDS.apache2?=	apache-2*
-BUILDLINK_DEPENDS.apache6?=	apache6*
 
 .if ${_PKG_APACHE} == "apache13"
 _APACHE_PKGSRCDIR=	../../www/apache
 .elif ${_PKG_APACHE} == "apache2"
 _APACHE_PKGSRCDIR=	../../www/apache2
 _APACHE_BL_SRCDIR=	${_APACHE_PKGSRCDIR}
-.elif ${_PKG_APACHE} == "apache6"
-_APACHE_PKGSRCDIR=	../../www/apache6
 .endif
 
 _APACHE_BL_SRCDIR?=	../../www/apache

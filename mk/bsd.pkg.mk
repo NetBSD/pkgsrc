@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.9 2004/12/31 20:25:30 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.10 2005/01/10 16:15:25 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -362,6 +362,8 @@ ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
 ALL_ENV+=	CXX=${CXX:Q}
 ALL_ENV+=	CXXFLAGS=${CXXFLAGS:Q}
 ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
+ALL_ENV+=	F77=${F77:Q}
+ALL_ENV+=	FC=${FC:Q}
 ALL_ENV+=	FFLAGS=${FFLAGS:Q}
 ALL_ENV+=	LDFLAGS=${LDFLAGS:Q}
 ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
@@ -1095,8 +1097,6 @@ _REAL_TARGETS.wrapper+=	wrapper-message pre-wrapper do-wrapper post-wrapper
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ENV+=		ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}"
 CONFIGURE_ENV+=		AWK=${AWK:Q}
-CONFIGURE_ENV+=		F77=${FC:Q}
-CONFIGURE_ENV+=		FC=${FC:Q}
 CONFIGURE_ENV+=		INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}"
 CONFIGURE_ENV+=		MAKE=${MAKE_PROGRAM:T:Q}
 CONFIGURE_ENV+=		M4=${M4:Q}

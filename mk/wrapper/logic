@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.6.2.1 2004/12/09 17:15:01 tv Exp $
+# $NetBSD: logic,v 1.6.2.2 2005/01/10 16:15:25 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -216,9 +216,14 @@ while ! queue_is_empty argbuf; do
 				shquote "$arg"; cachearg="$shquoted"
 				case $arg in
 				-*|/*)
-					arg=`$echo "X$arg" | $Xsed $transform_sed`
-					$debug_log $wrapperlog "    (logic) to:   $arg"
-					addtocache=yes
+					case $transform_sed in
+					"")	;;
+					*)	
+						arg=`$echo "X$arg" | $Xsed $transform_sed`
+						$debug_log $wrapperlog "    (logic) to:   $arg"
+						addtocache=yes
+						;;
+					esac
 					;;
 				*)
 					$debug_log $wrapperlog "    (logic) to:   $arg [untransformed]"

@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.32 2004/10/11 22:04:19 reed Exp $
+# $NetBSD: install,v 1.32.2.1 2005/01/10 16:15:25 tv Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -104,6 +104,15 @@ PRE-INSTALL)
 					"${user}"
 			fi
 		done
+	fi
+	if ! msgempty; then
+		${ECHO} "==========================================================================="
+		msgprint
+		${ECHO} ""
+		${ECHO} "==========================================================================="
+	fi
+	if [ ${_pkg_exit} -gt 0 ]; then
+		exit ${_pkg_exit}
 	fi
 
 	# Create package directories at pre-install time.
