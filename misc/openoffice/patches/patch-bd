@@ -1,0 +1,32 @@
+$NetBSD: patch-bd,v 1.1.1.1 2002/02/13 18:09:22 mrauch Exp $
+
+--- ../product/util/makefile.mk.orig	Tue Jan  1 14:10:58 2002
++++ ../product/util/makefile.mk
+@@ -101,6 +101,16 @@
+ STLPORTLIBNAME=libstlport_gcc.so
+ BINDINGDLL=gcc2_uno
+ 
++.ELIF "$(OS)"=="NETBSD"
++###########
++# NETBSD
++###########
++DESTDIRBIN=$(DESTDIR)$/netbsd$/bin
++DESTDIRLIB=$(DESTDIR)$/netbsd$/lib
++DESTDIRDLL=$(DESTDIRLIB)
++STLPORTLIBNAME=libstlport_gcc.so
++BINDINGDLL=gcc2_uno
++
+ .ELIF "$(OS)"=="WNT"
+ ###############
+ # WINDOWS
+@@ -360,8 +370,8 @@
+ 	$(GNUCOPY) -p $(DLLOUT)$/$(@:f) $@
+ 
+ $(DESTDIRDLL)$/%$(MY_VERSION_LINKPOSTFIX) : $(DESTDIRDLL)$/%$(MY_VERSION_DLLPOSTFIX) $(DIRLIST)
+-	+ln -s $(@:f)$(MY_VERSION_LINKTARGETPOSTFIX) $@
+-	+ln -s $(@:f)$(MY_VERSION_LINKTARGETPOSTFIX) $(@:db)
++	+ln -sf $(@:f)$(MY_VERSION_LINKTARGETPOSTFIX) $@
++	+ln -sf $(@:f)$(MY_VERSION_LINKTARGETPOSTFIX) $(@:db)
+ 
+ $(DESTDIRJAR)$/%.jar : $(BINOUT)$/%.jar $(DIRLIST)
+ 	$(GNUCOPY) -p $(BINOUT)$/$(@:f) $@
