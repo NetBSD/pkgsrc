@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/30 10:15:06 zuntum Exp $
 #
 
 DISTNAME=	flwm-0.25
@@ -10,12 +10,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://flwm.sourceforge.net/
 COMMENT=	The Fast, Light Window Manager
 
-DEPENDS+=	fltk-*:../../x11/fltk
-
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=	# defined
 
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	X_LIBS="-lGL"
 CPPFLAGS+=	-I${X11PREFIX}/include
 
+.include "../../x11/fltk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
