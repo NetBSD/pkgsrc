@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/05 14:17:15 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/20 15:24:37 hubertf Exp $
 #
 
 DISTNAME=	jwhois-2.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.coyote.org/jwhois/
 
 USE_GTEXINFO=	yes
 
-HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=/etc
 
