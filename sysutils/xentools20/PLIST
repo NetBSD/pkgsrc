@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/17 23:47:12 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/27 15:58:24 bouyer Exp $
 bin/miniterm
 bin/xencons
 bin/xenperf
 include/xc.h
+lib/libxc.so
+lib/libxc.so.2.0
 lib/libxc.so.2.0.0
 lib/libxutil.a
+lib/libxutil.so
+lib/libxutil.so.2.0
 lib/libxutil.so.2.0.0
 sbin/netfix
 sbin/xend
