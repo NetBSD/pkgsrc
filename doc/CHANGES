@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.607 2002/11/26 11:28:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.608 2002/11/26 12:12:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ORBit to 0.5.15nb2 [jlam 2002-11-26]
 	Updated a2ps to 4.13.0.2nb1 [jmmv 2002-11-26]
 	Updated apsfilter to 7.2.2nb2 [jmmv 2002-11-26]
+	Updated opencm to 0.1.0rc18pl2 [jmmv 2002-11-26]
