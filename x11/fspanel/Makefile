@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/22 03:31:47 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/12 21:54:42 grant Exp $
 #
 
 DISTNAME=	fspanel-0.8beta1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:C/beta/.0./}
 CATEGORIES=	x11
 MASTER_SITES=	http://www.chatjunkies.org/fspanel/
 
-MAINTAINER=	ptiJo <ptiJo@noos.fr>
+MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.chatjunkies.org/fspanel/
 COMMENT=	F***ing Small Panel
 
