@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/16 00:52:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/16 10:41:18 jlam Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	dockable clock and calendar with themes for GTK+
+
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 USE_BUILDLINK_ONLY=	# defined
 USE_CONFIG_WRAPPER=	# defined

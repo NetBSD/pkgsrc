@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/16 00:55:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/16 10:41:18 jlam Exp $
 #
 
 DISTNAME=	asclock-xlib-2.0.11
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	dockable clock and calendar with themes for X11
+
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 USE_BUILDLINK_ONLY=	YES
 USE_IMAKE=		YES
