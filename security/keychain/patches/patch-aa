@@ -1,32 +1,23 @@
-$NetBSD: patch-aa,v 1.5 2002/04/10 17:52:09 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2003/01/18 05:58:59 martti Exp $
 
---- keychain.orig	Mon Mar  4 13:51:58 2002
-+++ keychain
-@@ -6,7 +6,7 @@
- 
- version=1.9
- 
--trap "" INT || { echo "$0: warning: trapping signal 2 instead of INT" 1>&2; trap "" 2; }
-+trap "" 2
- PATH="/sbin:/usr/sbin:${PATH}:/usr/ucb"; export PATH;
- KEYCHAIN_KEYS=""
- 
-@@ -65,6 +65,9 @@
- 	CYAN="\033[36;01m"
+--- keychain.orig	Tue Aug 27 01:23:19 2002
++++ keychain	Fri Jan 17 21:34:08 2003
+@@ -165,6 +165,9 @@
+ elif [ -n "`echo $myuname | grep HP-UX`" ]
+ then
+ 	hpux="yes"
++elif [ -n "`echo $myuname | grep NetBSD`" ]
++then
++	netbsd="yes"
  fi
  
-+# Don't use colors in NetBSD
-+unset BLUE GREEN OFF CYAN
-+
- quiet_mode="no"
- if [ -n "`echo ${@} | grep '\-\-quiet'`" ] || [ -n "`echo $* | grep '\-q'`" ] ;
+ # Query local host for SSH application, presently supporting only
+@@ -178,7 +181,7 @@
+ 
+ # Avoid trapping on signal names with Cygwin.
+ trapint="INT"
+-if [ "$cygwin" = "yes" ]
++if [ "$cygwin" = "yes" -o "$netbsd" = "yes" ]
  then
-@@ -259,7 +262,7 @@
+ 	trapint=2
  fi
- 
- #now that keys are potentially cleared, it's safe to be aborted by ^C
--trap - INT || trap - 2
-+trap - 2
- 
- if [ -n "`echo $* | grep '\-\-noask'`" ]
- then
