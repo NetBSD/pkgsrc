@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/02/11 19:17:30 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/09/02 21:35:51 christos Exp $
 bin/libtool
 bin/libtoolize
 @unexec install-info --delete %D/info/libtool.info %D/info/dir
@@ -12,5 +12,19 @@ share/libtool/config.guess
 share/libtool/config.sub
 share/libtool/ltconfig
 share/libtool/ltmain.sh
+share/libtool/libltdl/COPYING.LIB 
+share/libtool/libltdl/Makefile.am 
+share/libtool/libltdl/Makefile.in 
+share/libtool/libltdl/README 
+share/libtool/libltdl/acconfig.h 
+share/libtool/libltdl/acinclude.m4 
+share/libtool/libltdl/aclocal.m4 
+share/libtool/libltdl/config.h.in 
+share/libtool/libltdl/configure
+share/libtool/libltdl/configure.in 
+share/libtool/libltdl/ltdl.c 
+share/libtool/libltdl/ltdl.h 
+share/libtool/libltdl/stamp-h.in 
+@dirrm share/libtool/libltdl
 @dirrm share/libtool
 @unexec rmdir %D/share/aclocal 2>/dev/null || true

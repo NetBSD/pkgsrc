@@ -1,35 +1,20 @@
-$NetBSD: patch-aa,v 1.6 1998/11/12 16:27:31 agc Exp $
+$NetBSD: patch-aa,v 1.7 1999/09/02 21:35:51 christos Exp $
 
---- ltconfig.orig	Fri Mar 20 03:00:29 1998
-+++ ltconfig	Sun Sep 27 11:47:30 1998
-@@ -808,7 +808,11 @@
+--- configure.orig	Fri Jul  2 12:01:56 1999
++++ configure	Fri Aug 20 18:22:00 1999
+@@ -1853,10 +1853,13 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
+-  case "$ac_given_INSTALL" in
++      if [ -z "$ac_given_INSTALL" ]; then
++	ac_given_INSTALL="$INSTALL"
++      fi
++      case "$ac_given_INSTALL" in
+         [/$]*) INSTALL="$ac_given_INSTALL" ;;
+         *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-        esac
++      esac
  
-   netbsd*)
-     # Tested with NetBSD 1.2 ld
--    archive_cmds='$LD -Bshareable -o $lib$libobjs'
-+    if $CC -E - -dM </dev/null | grep -q __ELF__; then
-+      archive_cmds='$LD -shared -o $lib$libobjs'	# ELF
-+    else
-+      archive_cmds='$LD -Bshareable -o $lib$libobjs'	# a.out
-+    fi
-     hardcode_libdir_flag_spec='-R$libdir'
-     hardcode_direct=yes
-     hardcode_shlibpath_var=no
-@@ -1181,8 +1185,15 @@
- 
- netbsd* | openbsd*)
-   version_type=sunos
--  library_names_spec='${libname}${release}.so.$versuffix'
--  finish_cmds='PATH="$PATH:/sbin" ldconfig -m $libdir'
-+  if $CC -E - -dM </dev/null | grep -q __ELF__; then
-+    library_names_spec='${libname}${release}.so.$versuffix ${libname}${release}.so.$major ${libname}${release}.so'
-+    soname_spec='${libname}${release}.so.$major'
-+    dynamic_linker='NetBSD ld.elf_so'
-+  else
-+    library_names_spec='${libname}${release}.so.$versuffix'
-+    finish_cmds='PATH="$PATH:/sbin" ldconfig -m $libdir'
-+    dynamic_linker='NetBSD/OpenBSD (a.out) ld.so'
-+  fi
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.
