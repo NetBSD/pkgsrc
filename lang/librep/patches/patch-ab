@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/11/11 05:26:54 mycroft Exp $
+
+--- lisp/rep/io/file-handlers/tar.jl.orig	Sun Sep 10 20:03:17 2000
++++ lisp/rep/io/file-handlers/tar.jl	Sat Nov 11 05:24:36 2000
+@@ -63,7 +63,7 @@
+ 
+ ;; Hairy regexp matching tar `--list --verbose' output
+ (defvar tarfh-list-regexp (concat "([a-zA-Z-]+)\\s+(\\w+)/(\\w+)\\s+(\\d+)\\s+"
+-				  "([0-9-]+\\s+[0-9:]+)\\s+([^\n]+)"))
++				  "([A-Za-z]+\\s+[0-9]+\\s+[0-9:]+\\s+[0-9]+)\\s+([^\n]+)"))
+ 
+ ;; Map list file types to symbols
+ (defvar tarfh-list-type-alist '((?- . file) (?d . directory)
