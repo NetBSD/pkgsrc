@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/05/10 01:31:26 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2003/07/30 14:05:27 wiz Exp $
 
---- Makefile.orig
+--- Makefile.orig	Fri Jul 25 09:26:15 2003
 +++ Makefile
-@@ -1,13 +1,11 @@
+@@ -1,24 +1,22 @@
 -CC=gcc
 -CFLAGS=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
 +CC?=gcc
@@ -19,19 +19,19 @@ $NetBSD: patch-aa,v 1.2 2003/05/10 01:31:26 jtb Exp $
  
  gpdata.o: gpdata.c gperiodic.h
  
-@@ -17,10 +15,11 @@
- 	rm *.o gperiodic
+ gperiodic.o: gperiodic.c gperiodic.h table_data.h
  
  install:
 -	make -C po/ install enable_nls=1
 -	cp gperiodic /usr/local/bin
 -	cp gperiodic.desktop /usr/share/applications
 -	cp gperiodic.png /usr/share/pixmaps
-+	cd po && $(MAKE) install enable_nls=1
-+	$(BSD_INSTALL_PROGRAM) gperiodic $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/gnome/apps/Applications
-+	$(BSD_INSTALL_DATA) gperiodic.desktop $(PREFIX)/share/gnome/apps/Applications
-+	$(BSD_INSTALL_DATA) gperiodic.png $(PREFIX)/share/pixmaps
- 
+-	cp gperiodic-crystal.png /usr/share/pixmaps
++	cd po && ${MAKE} install enable_nls=1
++	${BSD_INSTALL_PROGRAM} gperiodic ${PREFIX}/bin
++	${BSD_INSTALL_DATA} gperiodic.desktop ${PREFIX}/share/gnome/apps/Applications
++	${BSD_INSTALL_DATA} gperiodic.png ${PREFIX}/share/pixmaps
++	${BSD_INSTALL_DATA} gperiodic-crystal.png ${PREFIX}/share/pixmaps
+ 	make clean
  uninstall:
  	rm /usr/local/bin/gperiodic
