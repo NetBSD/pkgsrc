@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/13 10:51:32 cjep Exp $
 
 DISTNAME=	xbindkeys_config-0.1.2
-PKGREVISION=	1
 PKGNAME=	xbindkeys-config-0.1.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netchampagne.com/xbindkeys_config/
 
