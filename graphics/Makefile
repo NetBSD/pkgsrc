@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 1999/11/30 00:03:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.68 1999/12/07 20:00:17 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -71,6 +71,7 @@
     SUBDIR += ploticus
     SUBDIR += plotutils
     SUBDIR += png
+    SUBDIR += pngcrush
     SUBDIR += povray
     SUBDIR += py-gd
     SUBDIR += py-imaging
