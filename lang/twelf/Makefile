@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/07 23:33:49 seb Exp $
 #
 
 DISTNAME=	twelf-1-4
 PKGNAME=	twelf-1.4
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/twelf
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
@@ -23,9 +24,13 @@ MAKEFILE=	smlnj/Makefile
 MAKEFLAGS+=	sml=${PREFIX:Q}/bin/sml
 ALL_TARGET=	twelf-server twelf-sml
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		twelf.info
+
 TWELF_LIBDIR=		${PREFIX}/lib/twelf
 TWELF_EMACSDIR=		${EMACS_LISPPREFIX}/twelf
 TWELF_DOCDIR=		${PREFIX}/share/doc/twelf
+TWELF_HTMLDOCDIR=	${PREFIX}/share/doc/html/twelf
 TWELF_EXAMPLEDIR=	${PREFIX}/share/examples/twelf
 
 .include "../../lang/smlnj/Makefile.common"
@@ -40,6 +45,9 @@ post-patch:
 		${WRKSRC}/${f}.orig > ${WRKSRC}/${f}
 .endfor
 
+pre-install:
+	${RM} -f ${WRKSRC}/bin/.mkexec.orig ${WRKSRC}/doc/info/*.orig
+
 do-install:
 	${INSTALL_DATA_DIR} ${TWELF_LIBDIR}
 	cd ${WRKSRC} && ${PAX} -rw -pam bin ${TWELF_LIBDIR}
@@ -50,13 +58,20 @@ do-install:
 	${LN} -sf ${TWELF_EMACSDIR} ${TWELF_LIBDIR}/emacs
 
 	${INSTALL_DATA_DIR} ${TWELF_DOCDIR}
-	cd ${WRKSRC}/doc && ${PAX} -rw -pam * ${TWELF_DOCDIR}
+	cd ${WRKSRC}/doc && 						\
+	for t in dvi pdf ps; do						\
+	   ${INSTALL_DATA} $${t}/twelf.$${t} ${TWELF_DOCDIR};		\
+	done
 	${LN} -sf ${TWELF_DOCDIR} ${TWELF_LIBDIR}/doc
+
+	cd ${WRKSRC}/doc/info && ${PAX} -rw -pam * ${PREFIX}/info
+
+	${INSTALL_DATA_DIR} ${TWELF_HTMLDOCDIR}
+	cd ${WRKSRC}/doc/html && ${PAX} -rw -pam * ${TWELF_HTMLDOCDIR}
 
 	${INSTALL_DATA_DIR} ${TWELF_EXAMPLEDIR}
 	cd ${WRKSRC}/examples && ${PAX} -rw -pam * ${TWELF_EXAMPLEDIR}
 	${LN} -sf ${TWELF_EXAMPLEDIR} ${TWELF_LIBDIR}/examples
 
 .include "../../mk/emacs.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
