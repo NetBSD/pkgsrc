@@ -1,0 +1,44 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/11/09 13:05:35 xtraeme Exp $
+
+--- Makefile.orig	2004-11-09 13:24:28.000000000 +0100
++++ Makefile	2004-11-09 13:25:58.000000000 +0100
+@@ -1,13 +1,13 @@
+ include config-host.mak
+ 
+-CFLAGS=-Wall -O2 -g
++#CFLAGS=-Wall -O2 -g
+ ifdef CONFIG_DARWIN
+ CFLAGS+= -mdynamic-no-pic
+ endif
+ ifdef CONFIG_WIN32
+ CFLAGS+=-fpack-struct 
+ endif
+-LDFLAGS=-g
++#LDFLAGS=-g
+ LIBS=
+ DEFINES+=-D_GNU_SOURCE
+ ifndef CONFIG_WIN32
+@@ -47,17 +47,17 @@
+         done
+ 
+ install: all 
+-	mkdir -p "$(bindir)"
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
+ ifndef CONFIG_WIN32
+ 	install -m 755 -s $(TOOLS) "$(bindir)"
+ endif
+-	mkdir -p "$(datadir)"
+-	install -m 644 pc-bios/bios.bin pc-bios/vgabios.bin \
++	$(BSD_INSTALL_DATA_DIR) $(datadir)
++	$(BSD_INSTALL_DATA) pc-bios/bios.bin pc-bios/vgabios.bin \
+                        pc-bios/vgabios-cirrus.bin \
+                        pc-bios/ppc_rom.bin \
+-                       pc-bios/linux_boot.bin "$(datadir)"
+-	mkdir -p "$(docdir)"
+-	install -m 644 qemu-doc.html  qemu-tech.html "$(docdir)"
++                       pc-bios/linux_boot.bin $(datadir)
++	$(BSD_INSTALL_DATA_DIR) $(docdir)
++	$(BSD_INSTALL_DATA) qemu-doc.html qemu-tech.html $(docdir)
+ ifndef CONFIG_WIN32
+ 	mkdir -p "$(mandir)/man1"
+ 	install qemu.1 qemu-mkcow.1 "$(mandir)/man1"
