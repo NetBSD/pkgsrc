@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2779 2004/12/27 13:30:03 darcy Exp $
+$NetBSD: TODO,v 1.2780 2004/12/27 13:38:52 darcy Exp $
 
 Suggested new packages
 ======================
@@ -944,7 +944,7 @@ Suggested package updates
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.4
 	o py-textile-2.0.10
-	o py-wxWindows-2.5.3.1
+	o py-wxWidgets-2.5.3.1
 	o py-xmltools-1.4.0
 	o py-zconfig-2.1
 	o pygtk-2.4.1
