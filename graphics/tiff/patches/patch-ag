@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.10 2005/01/11 05:29:55 jlam Exp $
+
+--- libtiff/Makefile.in.orig	2004-12-20 14:41:54.000000000 -0500
++++ libtiff/Makefile.in
+@@ -409,6 +409,10 @@ clean-libLTLIBRARIES:
+ libtiff.la: $(libtiff_la_OBJECTS) $(libtiff_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiff_la_OBJECTS) $(libtiff_la_LIBADD) $(LIBS)
+ 
++libtiffcxx_la_OBJECTS: tif_stream.lo
++libtiffcxx.la: $(libtiffcxx_la_OBJECTS) $(libtiff_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiffcxx_la_OBJECTS) libtiff.la $(libtiff_la_LIBADD) $(LIBS)
++
+ clean-noinstPROGRAMS:
+ 	@list='$(noinst_PROGRAMS)'; for p in $$list; do \
+ 	  f=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
