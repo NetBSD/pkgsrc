@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 14:20:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/28 22:06:15 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-docs-${XF_VER}
-PKGREVISION=		1
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_XFREE}
-DISTFILES+=		X430src-1.tgz X430src-6.tgz
+DISTFILES+=		XFree86-4.4.0-src-1.tgz XFree86-4.4.0-src-6.tgz
 
 MAINTAINER=		xfree86@blef.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 Documentation
 
-BUILD_DEPENDS=		imake>=4.3.0:../../x11/imake
+DEPENDS=		imake>=4.4.0:../../x11/imake
 
-USE_BUILDLINK2=		yes
+USE_LANGUAGES=		# empty
+NO_BUILDLINK=		# defined
 NO_XFREE86_TARGETS=	# defined
 WRKSRC=			${WRKDIR}/xc/doc/specs
 
