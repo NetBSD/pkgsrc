@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8970 2005/01/29 10:54:16 minskim Exp $
+$NetBSD: CHANGES,v 1.8971 2005/01/29 12:22:59 scw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -652,3 +652,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.7nb10 [taca 2005-01-28]
 	Updated postgresql-autodoc to 1.24 [mjl 2005-01-29]
 	Updated mathomatic to 11.7 [minskim 2005-01-29]
+	Updated mad123 to 0.8.5 [scw 2005-01-29]
