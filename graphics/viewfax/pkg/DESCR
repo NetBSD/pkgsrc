@@ -1,0 +1,5 @@
+  viewfax can display raw, digifax or tiff files containing g3 (T.4) and/or
+g4 (T.6) coded fax pages.
+
+  To install viewfax you need an ansi C compiler on a machine
+supporting X11.  No toolkit is required, just Xlib.
