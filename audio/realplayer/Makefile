@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/04/10 01:28:13 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/05/24 17:06:50 salo Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -36,6 +36,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
+
+CONFLICTS=		realplayer-codecs<8nb2
 
 CRYPTO=			# defined
 INTERACTIVE_STAGE=	fetch extract
