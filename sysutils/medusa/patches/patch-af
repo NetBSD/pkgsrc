@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
+$NetBSD: patch-af,v 1.2 2002/09/23 23:38:31 jlam Exp $
 
 --- gnome-vfs-module/Makefile.in.orig	Tue Mar 13 02:40:38 2001
 +++ gnome-vfs-module/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
  
  
 -libvfs_search_la_LIBADD =  	-L$(top_builddir)/libmedusa/.libs -lmedusa 	$(VFS_LIBS) 	$(GLIB_LIBS) 	$(NULL)
-+libvfs_search_la_LIBADD =  	-L`cd $(top_builddir)/libmedusa/ ; pwd` -lmedusa 	$(VFS_LIBS) 	$(GLIB_LIBS) 	$(NULL)
++libvfs_search_la_LIBADD =  	$(top_builddir)/libmedusa/libmedusa.la 	$(VFS_LIBS) 	$(GLIB_LIBS) 	$(NULL)
  
  
  libvfs_search_la_LDFLAGS = -export_dynamic -avoid-version
