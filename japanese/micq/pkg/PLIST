@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/30 07:56:04 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/05 19:42:42 wiz Exp $
 bin/micq
 share/doc/micq/README
 share/doc/micq/TODO
 share/doc/micq/WISHLIST
 share/doc/micq/commands.txt
 @dirrm share/doc/micq
-
