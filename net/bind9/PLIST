@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/04/07 16:18:23 manu Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/04/15 20:05:52 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -168,6 +168,11 @@ include/lwres/net.h
 include/lwres/netdb.h
 include/lwres/platform.h
 include/lwres/result.h
+lib/libbind.a
+lib/libbind.la
+lib/libbind.so
+lib/libbind.so.2
+lib/libbind.so.2.0
 lib/libdns.a
 lib/libdns.la
 lib/libdns.so
@@ -335,8 +340,3 @@ include/bind/isc/tree.h
 include/bind/sys/bitypes.h
 @dirrm include/bind/sys
 @dirrm include/bind
-lib/libbind.a
-lib/libbind.la
-lib/libbind.so
-lib/libbind.so.2
-lib/libbind.so.2.0
