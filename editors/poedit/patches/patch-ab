@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2004/04/27 21:58:15 dmcmahill Exp $
+
+--- configure.orig	Sun Jan 25 22:17:58 2004
++++ configure
+@@ -1460,19 +1460,19 @@ test -n "$target_alias" &&
+     NONENONEs,x,x, &&
+   program_prefix=${target_alias}-
+ 
+-if test "$build" != "$host" ; then
+-    CC=$host_alias-gcc
+-    CXX=$host_alias-c++
+-    AR=$host_alias-ar
+-    RANLIB=$host_alias-ranlib
+-    DLLTOOL=$host_alias-dlltool
+-    RESCOMP=$host_alias-windres
+-    LD=$host_alias-ld
+-    NM=$host_alias-nm
+-    STRIP=$host_alias-strip
+-else
++#if test "$build" != "$host" ; then
++#    CC=$host_alias-gcc
++#    CXX=$host_alias-c++
++#    AR=$host_alias-ar
++#    RANLIB=$host_alias-ranlib
++#    DLLTOOL=$host_alias-dlltool
++#    RESCOMP=$host_alias-windres
++#    LD=$host_alias-ld
++#    NM=$host_alias-nm
++#    STRIP=$host_alias-strip
++#else
+     RESCOMP=windres
+-fi
++#fi
+ 
+ am__api_version="1.7"
+ # Find a good install program.  We prefer a C program (faster),
