@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:27 agc Exp $
+
+MD5 (t1lib-1.0.1.tar.gz) = 5e09289172db215810e8c8d2e8867de3
+SHA1 (patch-aa) = 5e898c251b7fc2fe89051f5de34ee0cd94d25f84
+SHA1 (patch-ac) = 25ed9457b321a8889b8ed83504dab4362c9d065b

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:59 agc Exp $
+
+MD5 (wm2-4.tar.gz) = 3b1d6da47a00c06436891669261bd651
+SHA1 (patch-aa) = 12e2fe7b7b74c9b1c666093c156c9b3d96656b29
+SHA1 (patch-ab) = 047f72483a5f7d250742a5d53aa8a48ca123558e

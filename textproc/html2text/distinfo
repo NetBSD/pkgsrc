@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:13 agc Exp $
+
+MD5 (html2text-1.2.2.tar.gz) = 51c5ff1535baebe2354f117ea9cbd089
+SHA1 (patch-aa) = a39a250b955ffa2d645d0ba53300ea5d0da9690a

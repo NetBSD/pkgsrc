@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:18 agc Exp $
+
+MD5 (PyXML-0.6.4.tar.gz) = 2bff3b8b418a2c92204f2dadad6981bb
+SHA1 (patch-aa) = 0655ed76e77acd01db9c3fb6beeeee3d5d4855eb

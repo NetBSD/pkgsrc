@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:50 agc Exp $
+
+MD5 (wmnet-1.06.tar.gz) = 64e74c37c0cb5fd4fb81cfb0f5c4a264
+SHA1 (patch-aa) = be4c53294fbdf234f50900f5051d7a48c70e4481
+SHA1 (patch-ab) = 97418adde93c0299fa5cdfdafc435350cf99e22e
+SHA1 (patch-ac) = 13572af7cadcf576d06ae3593faf232ee84f3eb9
+SHA1 (patch-ad) = b8212251da24d60856f5ff0349a6b6abf732888b
+SHA1 (patch-ae) = bc43be18fc06090bf102ec927ce5c1bd6f9ab953
+SHA1 (patch-af) = eeee640b7a4875cdc2a57bb8121333c7a94925aa

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:50 agc Exp $
+
+MD5 (makeztxt-1.40b-src.tar.gz) = a44b8ea356c01fb17f598f0ea98a195d
+SHA1 (patch-aa) = 33b9234edd019e605f824a26ca12800b3ff82e83
+SHA1 (patch-ab) = 5fc03cd447f694f12bc2a43f52e4df05741bc73c
+SHA1 (patch-ac) = ff2d4710cf86527c342e4ced10274750022b8b29

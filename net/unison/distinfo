@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:28 agc Exp $
+
+MD5 (unison/src.tar.gz) = 045024fa458088611b5f41e18dc8e667
+SHA1 (patch-aa) = 267640f1a4a2d54fddef2a7bfb93d325eff12841

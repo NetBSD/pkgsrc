@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:43 agc Exp $
+
+MD5 (hpwake.c.gz) = 11bc973465792f1a9cc12d078a89eeb9
+SHA1 (patch-aa) = 7e69f75a494133733ef35ab3bef25cf5e683fc22

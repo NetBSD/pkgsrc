@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:46 agc Exp $
+
+MD5 (antiword-0.30.tar.gz) = 888cc02e6ea75f530a7e4bb5b866a07a
+SHA1 (patch-aa) = 63cf523ece4bb83a4fcf45c1ea02d41e7c5a37b4

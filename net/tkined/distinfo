@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:08 agc Exp $
+
+MD5 (scotty-2.1.10.tar.gz) = e885c33ac4ba9cf17ca09886ca4046b1
+SHA1 (patch-aa) = f63015265b7a5a44c73f9ee6c0ad43eee1880769
+SHA1 (patch-ab) = f789d464c73a830453b1ea43bfb8bad93b5c3e7e
+SHA1 (patch-ac) = 5414110cb56026e77dc96316e33ee07d1331b85f
+SHA1 (patch-ad) = 64c2f53c0eb0e32af144ec6c4e2b0f55edc9b60a
+SHA1 (patch-ae) = a8b239135b26b9c8d129ccdb44e62b06721648ca

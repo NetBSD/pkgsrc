@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:58 agc Exp $
+
+MD5 (Convert-ASN1-0.07.tar.gz) = 72a03b66cf1c4468b7cf01b7d76a08d5
+SHA1 (patch-aa) = e7a6af1691da2c17cdac873ae389f6e658ebaa14

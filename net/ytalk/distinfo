@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:06 agc Exp $
+
+MD5 (ytalk-3.1.1.tar.gz) = 8e4d3cb9832b1653ed1b925c3043d9f0
+SHA1 (patch-aa) = 7c5cd9207b19016c471a26fbb66148adf5f24e0a

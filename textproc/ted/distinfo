@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:29 agc Exp $
+
+MD5 (ted-2.8.src.tar.gz) = 63dea345629eda6eb4208e1221f06e9a
+SHA1 (patch-aa) = 2134018eafbbbc361674d475d7774eba6e208b7c
+SHA1 (patch-ab) = 20135a2db628c78ea5e99a8f544b0d67b218b1eb

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:59 agc Exp $
+
+MD5 (xipdump-1.5.4.tgz) = 0b987cdb3b1ef49209a1a85d0bc6851d
+SHA1 (patch-aa) = 4dc89157456a3d223456babcbdca4ac501b6a664
+SHA1 (patch-ab) = 5018ade12779648836a866be510fc42af54162f2
+SHA1 (patch-ac) = 71c25f1fe5bb52667902c5a10f2a56d8809eb560
+SHA1 (patch-ad) = 0c7bd3c0be1bffe19a7823add4c5c2ae3ff29ba3

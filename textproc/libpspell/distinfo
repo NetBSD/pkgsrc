@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:42 agc Exp $
+
+MD5 (pspell-.11.2.tar.gz) = 37585dbcced59d7fefadd2dcb97e87bb
+SHA1 (patch-aa) = b0b7f9f5a86f0b5de6bb6b8fd04a3974d05c5e0c

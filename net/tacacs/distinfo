@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:48 agc Exp $
+
+MD5 (tac_plus.F4.0.4.alpha.tar.Z) = 7acaa4a78c71c514cf67ca5a77e16c27
+SHA1 (patch-aa) = daaf8f737441d17b1339bb1c6b7f865a95f706bc
+SHA1 (patch-ab) = 394c640e01d12f44e40741baa2ddbb60495e5e22
+SHA1 (patch-ac) = 11ea986ede6d2a277747cd9abc3bdcade1bf1e7a

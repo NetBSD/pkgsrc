@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:37 agc Exp $
+
+MD5 (textutils-2.0.tar.gz) = 61e0eeb09be094069182632335f71b1b
+SHA1 (patch-ab) = 73318127866d2026ed70ff7dda60b56e3734ef1f

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:05 agc Exp $
+
+MD5 (Text-BibTeX-0.33.tar.gz) = 5ddc27a7f87e99ba75aabf88ea38ff61
+MD5 (btparse-0.32.tar.gz) = fd4cb0d69284f302b330e48549d1558b
+SHA1 (patch-aa) = 5bbfb870bbbd662e7aad59e50f8b254692c66279
+SHA1 (patch-ab) = 067a3d57c9f39323fcf01b1ba096a8458cb6ad74

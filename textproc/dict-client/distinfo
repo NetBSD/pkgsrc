@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:54 agc Exp $
+
+MD5 (dictd-1.4.9.tar.gz) = 90e69ac4783b8836dbe98f8367b5f391
+MD5 (dict-gazetteer-1.2-pre.tar.gz) = d67cd81e90bc98e738c19693a97ab9e2
+MD5 (dict-misc-1.5-pre.tar.gz) = bd95a1cf95b1abd5c3fdaf181dd50be3
+MD5 (dict-web1913-1.4-pre.tar.gz) = 63a8d25ace68dff135185a8c96dd5f3c
+MD5 (dict-wn-1.5-pre.tar.gz) = 1f6ae6284018044dbd9e3c5fae914f32
+SHA1 (patch-aa) = 53ec142b9151b19e2820d5e1bf5093bb53be0b48
+SHA1 (patch-ab) = 2f7cbc15c62a8925d2e662a756372c935a6680a7
+SHA1 (patch-ac) = c3dcc9878875f28764db118460e2fd5fa9273f2f
+SHA1 (patch-ad) = 75d08ce1778898edcd52b4b94c974aba54f769a7
+SHA1 (patch-ae) = 666be1195f6c11b620f14c9e91be5db377be6022
+SHA1 (patch-af) = 9858bfc0cbed9c32d6b4e15ddc468a584e4916e9
+SHA1 (patch-ag) = 4473d472bddc34c5d5be2d6be6a0cee015717a79
+SHA1 (patch-ah) = 7952316967e8612d340a6a2b73e88d2a9035d6d7
+SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
+SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:52 agc Exp $
+
+MD5 (wmpload-0.9.4.tar.gz) = c506c68d2d1689876fcfc3b662983a6c
+SHA1 (patch-aa) = f1d175381b98658d2515fe2718ad172d0f78489d
+SHA1 (patch-ab) = a24ec17e0ecf3f36d1a590b4b4593022844759f1
