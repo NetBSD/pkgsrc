@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/09/13 14:29:30 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2003/09/13 14:43:30 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
@@ -12,7 +12,10 @@ MAINTAINER=	heinz-sa@NetBSD.org
 HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	Mail filter to identify spam
 
+CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
+
 .include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
@@ -22,27 +25,24 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 .endif
 
 .if defined(SPAMASSASSIN_USE_SSL) && ${SPAMASSASSIN_USE_SSL} == "YES"
+.  include "../../security/openssl/buildlink2.mk"
 DEPENDS+=		p5-IO-Socket-SSL>=0.92:../../security/p5-IO-Socket-SSL
 CONFIGURE_ARGS+=	--enable-ssl
 .else
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
+BUILD_DEFS+=		SPAMASSASSIN_USE_SSL
 
 BUILDLINK_DEPENDS.perl=	perl>=5.6.0
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-
-BUILD_DEFS+=		SPAMASSASSIN_USE_SSL
-
-CONFLICTS=		p5-Mail-SpamAssassin-[1-9]*
-
-GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
 
 PLIST_ADD=		${WRKSRC}/.PLIST_ADD
 PLIST_SRC=		${PKGDIR}/PLIST ${PLIST_ADD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
 
+GNU_CONFIGURE=		YES
 PERL5_CONFIGURE=	NO # need GNU_CONFIGURE "do-configure" target
 MAKE_PARAMS=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 MAKE_PARAMS+=		LOCAL_RULES_DIR="${PKG_SYSCONFDIR}"
@@ -58,7 +58,7 @@ DOCDIRNOPREFIX=		share/doc/spamassassin
 DOCDIR=			${PREFIX}/${DOCDIRNOPREFIX}
 RULESDIR=		${PREFIX}/share/spamassassin
 
-CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf
+CONF_FILES+=		${EGDIR}/local.cf ${PKG_SYSCONFDIR}/local.cf
 CONF_FILES+=		${PREFIX}/share/spamassassin/user_prefs.template \
 			  ${PKG_SYSCONFDIR}/user_prefs.template
 SUPPORT_FILES_PERMS+=	${EGDIR}/netbsd_lists.cf			\
@@ -173,8 +173,6 @@ post-install:
 .if defined(SPAMASSASSIN_USE_SSL) && ${SPAMASSASSIN_USE_SSL} == "YES"
 	@${INSTALL_PROGRAM} ${WRKSRC}/spamd/sslspamc ${PREFIX}/bin/
 	@${ECHO} "bin/sslspamc" >> ${PLIST_ADD}
-
-.include "../../security/openssl/buildlink2.mk"
 .endif
 
 .include "../../lang/perl5/module.mk"
