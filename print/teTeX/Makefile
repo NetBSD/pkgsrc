@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/09/21 01:55:23 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/09/21 01:57:35 jlam Exp $
 #
 
 DISTNAME=	teTeX-1.0.7
@@ -17,11 +17,12 @@ DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 USE_BUILDLINK2=	yes
 USE_X11=        yes
-WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=   # empty
 NO_CHECKSUM=    yes
 NO_PATCH=       yes
 NO_CONFIGURE=   yes
 NO_BUILD=       yes
+
+do-install:	# do nothing
 
 .include "../../mk/bsd.pkg.mk"
