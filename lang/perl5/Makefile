@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/09/05 17:13:40 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/09/06 17:33:50 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -10,7 +10,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		Practical Extraction and Report Language
 
-CONFLICTS=		perl-5.00* \
+CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2] \
 			p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
