@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2003/01/03 20:05:22 lha Exp $
+$NetBSD: patch-ab,v 1.3 2003/01/29 06:45:48 jlam Exp $
 
---- src/psi.pro.orig	Wed Oct 30 11:09:34 2002
-+++ src/psi.pro	Tue Dec 17 13:10:29 2002
-@@ -154,7 +154,7 @@
+--- src/psi.pro.orig	Wed Oct 30 02:09:34 2002
++++ src/psi.pro
+@@ -153,8 +153,7 @@ INCLUDEPATH += kmp
+ 
  # System-specific build settings
  unix:!mac {
- 	INCLUDEPATH  += /usr/include /usr/X11R6/include
+-	INCLUDEPATH  += /usr/include /usr/X11R6/include
 -	LIBS         += -lz -lXss
 +	LIBS         += -lz -lXss -lqt-mt
  	SOURCES      += trayicon_x11.cpp
