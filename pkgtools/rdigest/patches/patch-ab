@@ -1,14 +1,21 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/24 05:21:07 atatat Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/28 20:52:55 agc Exp $
 
---- digest.1.orig	2002-02-16 15:24:32.000000000 -0500
-+++ digest.1
-@@ -31,21 +31,29 @@
- .\" SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--- digest.1.orig	2005-03-28 21:41:50.000000000 +0100
++++ digest.1	2005-03-28 21:45:50.000000000 +0100
+@@ -1,7 +1,7 @@
+ .\" $NetBSD: patch-ab,v 1.2 2005/03/28 20:52:55 agc Exp $
  .\"
  .\"
--.Dd February 28, 2001
+-.\" Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
++.\" Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
+ .\"
+ .\" Redistribution and use in source and binary forms, with or without
+ .\" modification, are permitted provided that the following conditions
+@@ -32,20 +32,28 @@
+ .\"
+ .\"
+ .Dd March 23, 2005
 -.Dt DIGEST 1
-+.Dd July 24, 2003
 +.Dt RDIGEST 1
  .Os
  .Sh NAME
@@ -37,10 +44,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/07/24 05:21:07 atatat Exp $
  The list of possible algorithms is:
  .Bl -tag -width Ds
  .It md5
-@@ -81,11 +89,32 @@ algorithm implementations, which are loc
+@@ -88,12 +96,32 @@
+ algorithm implementations, which are located in the standard
  C library, and was designed to be scalable as new message digest
  algorithms are developed.
- .Pp
 +The checksum for a directory is implemented as the hash over a list of
 +one or two hashes for each of the items in the tree.
 +.Bl -bullet
@@ -60,17 +67,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/07/24 05:21:07 atatat Exp $
 +along with the path make up the data for one hash.
 +There is no second hash for a directory.
 +.El
-+.Pp
+ .Pp
  The
  .Nm
- utility exits 0 on success, and >0 if an error occurs.
+ utility exits 0 on success, and \*[Gt]0 if an error occurs.
  .Sh SEE ALSO
  .Xr cksum 1 ,
 +.Xr digest 1 ,
  .Xr md5 3 ,
  .Xr rmd160 3 ,
  .Xr sha1 3
-@@ -93,9 +122,13 @@ utility exits 0 on success, and >0 if an
+@@ -101,9 +129,13 @@
  The
  .Nm
  utility first appeared in
