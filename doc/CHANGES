@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4570 2004/01/23 14:07:12 martti Exp $
+$NetBSD: CHANGES,v 1.4571 2004/01/23 14:51:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_comp to 1.15 [jmmv 2004-01-23]
 	Updated octave-current to 2.1.53 [adam 2004-01-23]
 	Added xfce4-extras-4.0.3 [martti 2004-01-23]
+	Updated pgpdump to 0.22 [taca 2004-01-23]
