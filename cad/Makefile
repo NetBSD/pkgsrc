@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/12/08 04:22:15 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.44 2002/12/14 02:19:38 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -14,6 +14,7 @@ SUBDIR+=	electric
 SUBDIR+=	fastcap
 SUBDIR+=	fasthenry
 SUBDIR+=	felt
+SUBDIR+=	gdsreader
 SUBDIR+=	geda
 SUBDIR+=	geda-docs
 SUBDIR+=	geda-symbols
