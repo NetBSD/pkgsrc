@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2612 2004/12/01 04:06:50 minskim Exp $
+$NetBSD: TODO,v 1.2613 2004/12/01 04:57:54 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ Suggested package updates
 	o efont-unicode-0.4.2
 	o eggdrop-1.6.17
 	o egtk-0.3.6
-	o electric-7.00
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
