@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.952 2002/12/31 03:28:46 uebayasi Exp $
+$NetBSD: CHANGES,v 1.953 2002/12/31 05:50:42 kei Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated snes9x to 1.39nb2 [kristerw 2002-12-30]
 	Updated xpdf to 2.0.1nb2 [uebayasi 2002-12-31]
 	Updated navi2ch to 1.6.1 [uebayasi 2002-12-31]
+	Added pcf2bdf-1.04 [kei 2002-12-30]
