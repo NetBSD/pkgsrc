@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+$NetBSD: patch-ad,v 1.2 2001/04/22 20:23:02 jtb Exp $
 
---- libcruft/Makefile.in.orig	Fri Apr  7 09:31:53 2000
-+++ libcruft/Makefile.in	Fri Apr  7 14:44:03 2000
-@@ -54,39 +54,14 @@
+--- libcruft/Makefile.in.orig	Sun Apr 22 20:22:10 2001
++++ libcruft/Makefile.in	Sun Apr 22 20:41:53 2001
+@@ -61,39 +61,14 @@
  CRUFT_OBJ1 := $(patsubst %.f, %.o, $(CRUFT_OBJ2))
  CRUFT_OBJ := $(CRUFT_OBJ1) $(MISC_OBJ)
  
@@ -40,11 +40,11 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
 -	rm -f $@
 -	$(AR) $(ARFLAGS) $@ $^
 -	$(RANLIB) $@
-+	${LIBTOOL} --mode=link cc -o libcruft.${LIBEXT} ${CRUFT_OBJ:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
++	${LIBTOOL} --mode=link ${CC} -o libcruft.${LIBEXT} ${CRUFT_OBJ:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
  
  libcruft.$(SHLEXT): libcruft.$(SHLEXT_VER)
  	rm -f $@
-@@ -106,20 +81,7 @@
+@@ -113,20 +88,7 @@
  
  install::
  	$(top_srcdir)/mkinstalldirs $(octlibdir)
