@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 11:05:03 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/21 02:22:17 tv Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=   ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 MAINTAINER=	hubertf@netbsd.org
 
 GNU_CONFIGURE=	yes
-MAN1=		screen.1
 INFO_FILES=	screen.info
 
 post-install:
