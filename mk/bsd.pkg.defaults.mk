@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.27 2001/12/18 20:22:59 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.28 2001/12/21 03:59:15 fredb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -800,10 +800,10 @@ LSOF_MORE_SECURE?=	0
 #		1 (only allow root to view all open files)
 # Default: 0
 
-LYNX_SCREEN_LIB?=	slang
+LYNX_SCREEN_LIB?=	curses
 # Used in lynx and lynx-current to set which screen library to use.
 # Possible: slang, ncurses, curses.
-# Default: slang
+# Default: curses
 
 #M68060=
 # Used mostly by packages (e.g.:  pgp2, ssh) with have fast
