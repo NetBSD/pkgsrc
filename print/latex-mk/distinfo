@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/31 02:05:44 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2003/02/27 02:18:37 dmcmahill Exp $
 
-SHA1 (latex-mk-0.9.1.tar.gz) = dc04f84dcba9807cdd4d12df33e83f315dc41cd8
-Size (latex-mk-0.9.1.tar.gz) = 351111 bytes
+SHA1 (latex-mk-1.0.tar.gz) = c06de8be9c2413cd9bdfad89b209b75698c0b829
+Size (latex-mk-1.0.tar.gz) = 388728 bytes
