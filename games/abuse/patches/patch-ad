@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.1 1998/08/27 12:54:56 garbled Exp $
---- abuse/abuse.in.orig	Sat Jul 25 01:14:24 1998
-+++ abuse/abuse.in	Sat Jul 25 01:15:15 1998
-@@ -29,3 +29,3 @@
+$NetBSD: patch-ad,v 1.2 1998/08/29 12:19:46 garbled Exp $
+--- abuse/abuse.in.orig	Wed Jul  9 00:54:43 1997
++++ abuse/abuse.in	Sat Aug 29 04:26:04 1998
+@@ -27,5 +27,5 @@
+ if [ x$TERM = xlinux ]; then
+   abuse.console ${1:+"$@"}
  else
 -  abuse.x11R6 ${1:+"$@"}
-+  @libdir@/abuse.x11R6 ${1:+"$@"}
++  @exec_prefix@/bin/abuse.x11R6 ${1:+"$@"}
  fi
