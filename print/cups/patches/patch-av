@@ -1,0 +1,25 @@
+$NetBSD: patch-av,v 1.2.10.1 2005/03/04 04:56:26 snj Exp $
+
+--- pdftops/Catalog.cxx.orig	2005-03-01 15:38:37.000000000 +0100
++++ pdftops/Catalog.cxx
+@@ -64,8 +64,8 @@ Catalog::Catalog(XRef *xrefA) {
+   }
+   pagesSize = numPages0 = (int)obj.getNum();
+   obj.free();
+-  if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize ||
+-      pagesSize*sizeof(Ref)/sizeof(Ref) != pagesSize) {
++  if (pagesSize*(int)sizeof(Page *)/sizeof(Page *) != pagesSize ||
++      pagesSize*(int)sizeof(Ref)/sizeof(Ref) != pagesSize) {
+     error(-1, "Invalid 'pagesSize'");
+     ok = gFalse;
+     return;
+@@ -197,7 +197,8 @@ int Catalog::readPageTree(Dict *pagesDic
+       }
+       if (start >= pagesSize) {
+ 	pagesSize += 32;
+-        if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize) {
++        if (pagesSize*(int)sizeof(Page *)/sizeof(Page *) != pagesSize ||
++		pagesSize*(int)sizeof(Ref)/sizeof(Ref) != pagesSize) {
+           error(-1, "Invalid 'pagesSize' parameter.");
+           goto err3;
+         }
