@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 1999/08/29 21:41:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/12/20 11:55:17 rh Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
 include/guile/gh.h
+include/guile-readline/readline.h
 include/libguile.h
 include/libguile/__scm.h
 include/libguile/alist.h
@@ -91,47 +92,47 @@ include/libguile/weaks.h
 info/data-rep.info
 @exec install-info %D/info/data-rep.info %D/info/dir
 lib/libguile.a
-lib/libguile.so.5.0
+lib/libguile.so.6.0
 lib/libguilereadline.a
 lib/libguilereadline.so.0.0
 share/aclocal/guile.m4
 share/aclocal/qthreads.m4
-share/guile/1.3.2/ice-9/and-let*.scm
-share/guile/1.3.2/ice-9/boot-9.scm
-share/guile/1.3.2/ice-9/calling.scm
-share/guile/1.3.2/ice-9/common-list.scm
-share/guile/1.3.2/ice-9/debug.scm
-share/guile/1.3.2/ice-9/emacs.scm
-share/guile/1.3.2/ice-9/expect.scm
-share/guile/1.3.2/ice-9/format.scm
-share/guile/1.3.2/ice-9/getopt-gnu-style.scm
-share/guile/1.3.2/ice-9/getopt-long.scm
-share/guile/1.3.2/ice-9/hcons.scm
-share/guile/1.3.2/ice-9/lineio.scm
-share/guile/1.3.2/ice-9/ls.scm
-share/guile/1.3.2/ice-9/mapping.scm
-share/guile/1.3.2/ice-9/optargs.scm
-share/guile/1.3.2/ice-9/poe.scm
-share/guile/1.3.2/ice-9/popen.scm
-share/guile/1.3.2/ice-9/psyntax.pp
-share/guile/1.3.2/ice-9/psyntax.ss
-share/guile/1.3.2/ice-9/q.scm
-share/guile/1.3.2/ice-9/r4rs.scm
-share/guile/1.3.2/ice-9/readline.scm
-share/guile/1.3.2/ice-9/regex.scm
-share/guile/1.3.2/ice-9/runq.scm
-share/guile/1.3.2/ice-9/session.scm
-share/guile/1.3.2/ice-9/slib.scm
-share/guile/1.3.2/ice-9/streams.scm
-share/guile/1.3.2/ice-9/string-fun.scm
-share/guile/1.3.2/ice-9/syncase.scm
-share/guile/1.3.2/ice-9/tags.scm
-share/guile/1.3.2/ice-9/threads.scm
-share/guile/1.3.2/ice-9/version.scm
-share/guile/readline-activator.scm
-@dirrm share/guile/1.3.2/ice-9
-@dirrm share/guile/1.3.2
+share/guile/1.3.4/ice-9/and-let*.scm
+share/guile/1.3.4/ice-9/boot-9.scm
+share/guile/1.3.4/ice-9/calling.scm
+share/guile/1.3.4/ice-9/common-list.scm
+share/guile/1.3.4/ice-9/debug.scm
+share/guile/1.3.4/ice-9/debugger.scm
+share/guile/1.3.4/ice-9/emacs.scm
+share/guile/1.3.4/ice-9/expect.scm
+share/guile/1.3.4/ice-9/format.scm
+share/guile/1.3.4/ice-9/getopt-gnu-style.scm
+share/guile/1.3.4/ice-9/getopt-long.scm
+share/guile/1.3.4/ice-9/hcons.scm
+share/guile/1.3.4/ice-9/lineio.scm
+share/guile/1.3.4/ice-9/ls.scm
+share/guile/1.3.4/ice-9/mapping.scm
+share/guile/1.3.4/ice-9/optargs.scm
+share/guile/1.3.4/ice-9/poe.scm
+share/guile/1.3.4/ice-9/popen.scm
+share/guile/1.3.4/ice-9/psyntax.pp
+share/guile/1.3.4/ice-9/psyntax.ss
+share/guile/1.3.4/ice-9/q.scm
+share/guile/1.3.4/ice-9/r4rs.scm
+share/guile/1.3.4/ice-9/readline.scm
+share/guile/1.3.4/ice-9/regex.scm
+share/guile/1.3.4/ice-9/runq.scm
+share/guile/1.3.4/ice-9/session.scm
+share/guile/1.3.4/ice-9/slib.scm
+share/guile/1.3.4/ice-9/streams.scm
+share/guile/1.3.4/ice-9/string-fun.scm
+share/guile/1.3.4/ice-9/syncase.scm
+share/guile/1.3.4/ice-9/tags.scm
+share/guile/1.3.4/ice-9/threads.scm
+@dirrm share/guile/1.3.4/ice-9
+@dirrm share/guile/1.3.4
 @dirrm share/guile
 @dirrm include/libguile
 @dirrm include/guile
+@dirrm include/guile-readline
 @unexec rmdir %D/share/aclocal 2>/dev/null || true
