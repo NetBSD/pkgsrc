@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
+bin/simian
+share/examples/simian/ex1
+share/examples/simian/ex10
+share/examples/simian/ex11
+share/examples/simian/ex12
+share/examples/simian/ex2
+share/examples/simian/ex3
+share/examples/simian/ex4
+share/examples/simian/ex5
+share/examples/simian/ex6
+share/examples/simian/ex7
+share/examples/simian/ex8
+share/examples/simian/ex9
+@dirrm share/examples/simian
