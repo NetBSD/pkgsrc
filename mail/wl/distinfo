@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2005/02/24 09:59:30 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/03/06 19:24:55 hira Exp $
 
-SHA1 (wl-2.10.1.tar.gz) = 022c5984ea576d96184d5e3a576ec2a23f015a45
-RMD160 (wl-2.10.1.tar.gz) = deb002a3b22ce20c3a53daaeec62a3384a053942
-Size (wl-2.10.1.tar.gz) = 967205 bytes
+SHA1 (wl-2.12.2.tar.gz) = 0bd82b2f76b36162c6f1e5c2304a8b09e41a7791
+RMD160 (wl-2.12.2.tar.gz) = 6e65bf183686b93d6d4d901e9a239785322f8da4
+Size (wl-2.12.2.tar.gz) = 1091609 bytes
 SHA1 (patch-aa) = ede97cce8b2574737a91941a905e067c940fb50a
-SHA1 (patch-ab) = 6e476198c3a0d5c7b8cb6939e4bbe046f69066c2
 SHA1 (patch-ac) = c30b711db7b73a2d2bd7d6025bc394ecf7c35aad
