@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1653 2003/03/16 01:13:11 kei Exp $
+$NetBSD: CHANGES,v 1.1654 2003/03/16 01:49:47 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1151,3 +1151,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ja-kappa20-0.394 [kei 2003-03-15]
 	Added ja-naga10-1.1 [kei 2003-03-15]
 	Added ja-shinonome-0.9.9 [kei 2003-03-15]
+	Updated jisx0208fonts to 20301316 [kei 2003-03-16]
