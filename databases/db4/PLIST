@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/10 09:54:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/07 00:51:07 epg Exp $
 bin/berkeley_db4_svc
 bin/db4_archive
 bin/db4_checkpoint
@@ -10,31 +10,36 @@ bin/db4_recover
 bin/db4_stat
 bin/db4_upgrade
 bin/db4_verify
-include/db4/cxx_common.h
-include/db4/cxx_except.h
 include/db4/db.h
 include/db4/db_cxx.h
+lib/libdb4-4.2.a
+lib/libdb4-4.2.la
+lib/libdb4-4.2.so
+lib/libdb4-4.2.so.2
+lib/libdb4-4.2.so.2.52
+lib/libdb4-4.so
 lib/libdb4.a
-lib/libdb4.la
 lib/libdb4.so
-lib/libdb4.so.1
-lib/libdb4.so.1.25
+lib/libdb4_cxx-4.2.a
+lib/libdb4_cxx-4.2.la
+lib/libdb4_cxx-4.2.so
+lib/libdb4_cxx-4.so
 lib/libdb4_cxx.a
-lib/libdb4_cxx.la
 lib/libdb4_cxx.so
-share/doc/db4/api_c/c_index.html
+share/doc/db4/api_c/api_index.html
 share/doc/db4/api_c/c_pindex.html
 share/doc/db4/api_c/db_associate.html
 share/doc/db4/api_c/db_class.html
 share/doc/db4/api_c/db_close.html
-share/doc/db4/api_c/db_create.html
 share/doc/db4/api_c/db_cursor.html
 share/doc/db4/api_c/db_del.html
 share/doc/db4/api_c/db_err.html
 share/doc/db4/api_c/db_fd.html
 share/doc/db4/api_c/db_get.html
 share/doc/db4/api_c/db_get_byteswapped.html
+share/doc/db4/api_c/db_get_mpf.html
 share/doc/db4/api_c/db_get_type.html
+share/doc/db4/api_c/db_getenv.html
 share/doc/db4/api_c/db_join.html
 share/doc/db4/api_c/db_key_range.html
 share/doc/db4/api_c/db_list.html
@@ -47,7 +52,6 @@ share/doc/db4/api_c/db_set_append_recno.html
 share/doc/db4/api_c/db_set_bt_compare.html
 share/doc/db4/api_c/db_set_bt_minkey.html
 share/doc/db4/api_c/db_set_bt_prefix.html
-share/doc/db4/api_c/db_set_cache_priority.html
 share/doc/db4/api_c/db_set_cachesize.html
 share/doc/db4/api_c/db_set_dup_compare.html
 share/doc/db4/api_c/db_set_encrypt.html
@@ -85,7 +89,6 @@ share/doc/db4/api_c/dbt_bulk.html
 share/doc/db4/api_c/dbt_class.html
 share/doc/db4/api_c/env_class.html
 share/doc/db4/api_c/env_close.html
-share/doc/db4/api_c/env_create.html
 share/doc/db4/api_c/env_dbremove.html
 share/doc/db4/api_c/env_dbrename.html
 share/doc/db4/api_c/env_err.html
@@ -156,9 +159,12 @@ share/doc/db4/api_c/memp_list.html
 share/doc/db4/api_c/memp_register.html
 share/doc/db4/api_c/memp_set_clear_len.html
 share/doc/db4/api_c/memp_set_fileid.html
+share/doc/db4/api_c/memp_set_flags.html
 share/doc/db4/api_c/memp_set_ftype.html
 share/doc/db4/api_c/memp_set_lsn_offset.html
+share/doc/db4/api_c/memp_set_maxsize.html
 share/doc/db4/api_c/memp_set_pgcookie.html
+share/doc/db4/api_c/memp_set_priority.html
 share/doc/db4/api_c/memp_stat.html
 share/doc/db4/api_c/memp_sync.html
 share/doc/db4/api_c/memp_trickle.html
@@ -202,7 +208,7 @@ share/doc/db4/api_c/txn_prepare.html
 share/doc/db4/api_c/txn_recover.html
 share/doc/db4/api_c/txn_set_timeout.html
 share/doc/db4/api_c/txn_stat.html
-share/doc/db4/api_cxx/c_index.html
+share/doc/db4/api_cxx/api_index.html
 share/doc/db4/api_cxx/cxx_pindex.html
 share/doc/db4/api_cxx/db_associate.html
 share/doc/db4/api_cxx/db_class.html
@@ -213,7 +219,9 @@ share/doc/db4/api_cxx/db_err.html
 share/doc/db4/api_cxx/db_fd.html
 share/doc/db4/api_cxx/db_get.html
 share/doc/db4/api_cxx/db_get_byteswapped.html
+share/doc/db4/api_cxx/db_get_mpf.html
 share/doc/db4/api_cxx/db_get_type.html
+share/doc/db4/api_cxx/db_getenv.html
 share/doc/db4/api_cxx/db_join.html
 share/doc/db4/api_cxx/db_key_range.html
 share/doc/db4/api_cxx/db_list.html
@@ -226,7 +234,6 @@ share/doc/db4/api_cxx/db_set_append_recno.html
 share/doc/db4/api_cxx/db_set_bt_compare.html
 share/doc/db4/api_cxx/db_set_bt_minkey.html
 share/doc/db4/api_cxx/db_set_bt_prefix.html
-share/doc/db4/api_cxx/db_set_cache_priority.html
 share/doc/db4/api_cxx/db_set_cachesize.html
 share/doc/db4/api_cxx/db_set_dup_compare.html
 share/doc/db4/api_cxx/db_set_encrypt.html
@@ -260,7 +267,7 @@ share/doc/db4/api_cxx/dbc_dup.html
 share/doc/db4/api_cxx/dbc_get.html
 share/doc/db4/api_cxx/dbc_list.html
 share/doc/db4/api_cxx/dbc_put.html
-share/doc/db4/api_cxx/dbt_bulk.html
+share/doc/db4/api_cxx/dbt_bulk_class.html
 share/doc/db4/api_cxx/dbt_class.html
 share/doc/db4/api_cxx/deadlock_class.html
 share/doc/db4/api_cxx/env_class.html
@@ -338,9 +345,12 @@ share/doc/db4/api_cxx/memp_list.html
 share/doc/db4/api_cxx/memp_register.html
 share/doc/db4/api_cxx/memp_set_clear_len.html
 share/doc/db4/api_cxx/memp_set_fileid.html
+share/doc/db4/api_cxx/memp_set_flags.html
 share/doc/db4/api_cxx/memp_set_ftype.html
 share/doc/db4/api_cxx/memp_set_lsn_offset.html
+share/doc/db4/api_cxx/memp_set_maxsize.html
 share/doc/db4/api_cxx/memp_set_pgcookie.html
+share/doc/db4/api_cxx/memp_set_priority.html
 share/doc/db4/api_cxx/memp_stat.html
 share/doc/db4/api_cxx/memp_sync.html
 share/doc/db4/api_cxx/memp_trickle.html
@@ -366,155 +376,6 @@ share/doc/db4/api_cxx/txn_prepare.html
 share/doc/db4/api_cxx/txn_recover.html
 share/doc/db4/api_cxx/txn_set_timeout.html
 share/doc/db4/api_cxx/txn_stat.html
-share/doc/db4/api_java/c_index.html
-share/doc/db4/api_java/db_associate.html
-share/doc/db4/api_java/db_class.html
-share/doc/db4/api_java/db_close.html
-share/doc/db4/api_java/db_cursor.html
-share/doc/db4/api_java/db_del.html
-share/doc/db4/api_java/db_err.html
-share/doc/db4/api_java/db_fd.html
-share/doc/db4/api_java/db_get.html
-share/doc/db4/api_java/db_get_byteswapped.html
-share/doc/db4/api_java/db_get_type.html
-share/doc/db4/api_java/db_join.html
-share/doc/db4/api_java/db_key_range.html
-share/doc/db4/api_java/db_list.html
-share/doc/db4/api_java/db_open.html
-share/doc/db4/api_java/db_put.html
-share/doc/db4/api_java/db_remove.html
-share/doc/db4/api_java/db_rename.html
-share/doc/db4/api_java/db_set_append_recno.html
-share/doc/db4/api_java/db_set_bt_compare.html
-share/doc/db4/api_java/db_set_bt_minkey.html
-share/doc/db4/api_java/db_set_bt_prefix.html
-share/doc/db4/api_java/db_set_cache_priority.html
-share/doc/db4/api_java/db_set_cachesize.html
-share/doc/db4/api_java/db_set_dup_compare.html
-share/doc/db4/api_java/db_set_encrypt.html
-share/doc/db4/api_java/db_set_errcall.html
-share/doc/db4/api_java/db_set_error_stream.html
-share/doc/db4/api_java/db_set_errpfx.html
-share/doc/db4/api_java/db_set_feedback.html
-share/doc/db4/api_java/db_set_flags.html
-share/doc/db4/api_java/db_set_h_ffactor.html
-share/doc/db4/api_java/db_set_h_hash.html
-share/doc/db4/api_java/db_set_h_nelem.html
-share/doc/db4/api_java/db_set_lorder.html
-share/doc/db4/api_java/db_set_pagesize.html
-share/doc/db4/api_java/db_set_q_extentsize.html
-share/doc/db4/api_java/db_set_re_delim.html
-share/doc/db4/api_java/db_set_re_len.html
-share/doc/db4/api_java/db_set_re_pad.html
-share/doc/db4/api_java/db_set_re_source.html
-share/doc/db4/api_java/db_stat.html
-share/doc/db4/api_java/db_sync.html
-share/doc/db4/api_java/db_truncate.html
-share/doc/db4/api_java/db_upgrade.html
-share/doc/db4/api_java/db_verify.html
-share/doc/db4/api_java/dbc_class.html
-share/doc/db4/api_java/dbc_close.html
-share/doc/db4/api_java/dbc_count.html
-share/doc/db4/api_java/dbc_del.html
-share/doc/db4/api_java/dbc_dup.html
-share/doc/db4/api_java/dbc_get.html
-share/doc/db4/api_java/dbc_list.html
-share/doc/db4/api_java/dbc_put.html
-share/doc/db4/api_java/dbt_bulk_class.html
-share/doc/db4/api_java/dbt_class.html
-share/doc/db4/api_java/deadlock_class.html
-share/doc/db4/api_java/env_class.html
-share/doc/db4/api_java/env_close.html
-share/doc/db4/api_java/env_dbremove.html
-share/doc/db4/api_java/env_dbrename.html
-share/doc/db4/api_java/env_err.html
-share/doc/db4/api_java/env_list.html
-share/doc/db4/api_java/env_open.html
-share/doc/db4/api_java/env_remove.html
-share/doc/db4/api_java/env_set_app_dispatch.html
-share/doc/db4/api_java/env_set_cachesize.html
-share/doc/db4/api_java/env_set_data_dir.html
-share/doc/db4/api_java/env_set_encrypt.html
-share/doc/db4/api_java/env_set_errcall.html
-share/doc/db4/api_java/env_set_error_stream.html
-share/doc/db4/api_java/env_set_errpfx.html
-share/doc/db4/api_java/env_set_feedback.html
-share/doc/db4/api_java/env_set_flags.html
-share/doc/db4/api_java/env_set_lg_bsize.html
-share/doc/db4/api_java/env_set_lg_dir.html
-share/doc/db4/api_java/env_set_lg_max.html
-share/doc/db4/api_java/env_set_lg_regionmax.html
-share/doc/db4/api_java/env_set_lk_conflicts.html
-share/doc/db4/api_java/env_set_lk_detect.html
-share/doc/db4/api_java/env_set_lk_max_lockers.html
-share/doc/db4/api_java/env_set_lk_max_locks.html
-share/doc/db4/api_java/env_set_lk_max_objects.html
-share/doc/db4/api_java/env_set_mp_mmapsize.html
-share/doc/db4/api_java/env_set_rpc_server.html
-share/doc/db4/api_java/env_set_shm_key.html
-share/doc/db4/api_java/env_set_tas_spins.html
-share/doc/db4/api_java/env_set_timeout.html
-share/doc/db4/api_java/env_set_tmp_dir.html
-share/doc/db4/api_java/env_set_tx_max.html
-share/doc/db4/api_java/env_set_tx_timestamp.html
-share/doc/db4/api_java/env_set_verbose.html
-share/doc/db4/api_java/env_strerror.html
-share/doc/db4/api_java/env_version.html
-share/doc/db4/api_java/except_class.html
-share/doc/db4/api_java/java_pindex.html
-share/doc/db4/api_java/lock_class.html
-share/doc/db4/api_java/lock_detect.html
-share/doc/db4/api_java/lock_get.html
-share/doc/db4/api_java/lock_id.html
-share/doc/db4/api_java/lock_id_free.html
-share/doc/db4/api_java/lock_list.html
-share/doc/db4/api_java/lock_put.html
-share/doc/db4/api_java/lock_stat.html
-share/doc/db4/api_java/lock_vec.html
-share/doc/db4/api_java/lockng_class.html
-share/doc/db4/api_java/log_archive.html
-share/doc/db4/api_java/log_compare.html
-share/doc/db4/api_java/log_cursor.html
-share/doc/db4/api_java/log_file.html
-share/doc/db4/api_java/log_flush.html
-share/doc/db4/api_java/log_list.html
-share/doc/db4/api_java/log_put.html
-share/doc/db4/api_java/log_stat.html
-share/doc/db4/api_java/logc_class.html
-share/doc/db4/api_java/logc_close.html
-share/doc/db4/api_java/logc_get.html
-share/doc/db4/api_java/lsn_class.html
-share/doc/db4/api_java/memp_class.html
-share/doc/db4/api_java/memp_fclose.html
-share/doc/db4/api_java/memp_fopen.html
-share/doc/db4/api_java/memp_fsync.html
-share/doc/db4/api_java/memp_list.html
-share/doc/db4/api_java/memp_register.html
-share/doc/db4/api_java/memp_stat.html
-share/doc/db4/api_java/memp_sync.html
-share/doc/db4/api_java/memp_trickle.html
-share/doc/db4/api_java/mempfile_class.html
-share/doc/db4/api_java/pindex.src
-share/doc/db4/api_java/rep_elect.html
-share/doc/db4/api_java/rep_limit.html
-share/doc/db4/api_java/rep_list.html
-share/doc/db4/api_java/rep_message.html
-share/doc/db4/api_java/rep_start.html
-share/doc/db4/api_java/rep_stat.html
-share/doc/db4/api_java/rep_transport.html
-share/doc/db4/api_java/runrec_class.html
-share/doc/db4/api_java/txn_abort.html
-share/doc/db4/api_java/txn_begin.html
-share/doc/db4/api_java/txn_checkpoint.html
-share/doc/db4/api_java/txn_class.html
-share/doc/db4/api_java/txn_commit.html
-share/doc/db4/api_java/txn_discard.html
-share/doc/db4/api_java/txn_id.html
-share/doc/db4/api_java/txn_list.html
-share/doc/db4/api_java/txn_prepare.html
-share/doc/db4/api_java/txn_recover.html
-share/doc/db4/api_java/txn_set_timeout.html
-share/doc/db4/api_java/txn_stat.html
 share/doc/db4/api_tcl/db_close.html
 share/doc/db4/api_tcl/db_count.html
 share/doc/db4/api_tcl/db_cursor.html
@@ -546,6 +407,7 @@ share/doc/db4/api_tcl/tcl_index.html
 share/doc/db4/api_tcl/tcl_pindex.html
 share/doc/db4/api_tcl/txn.html
 share/doc/db4/api_tcl/txn_abort.html
+share/doc/db4/api_tcl/txn_checkpoint.html
 share/doc/db4/api_tcl/txn_commit.html
 share/doc/db4/api_tcl/version.html
 share/doc/db4/images/api.gif
@@ -555,6 +417,288 @@ share/doc/db4/images/ps.gif
 share/doc/db4/images/ref.gif
 share/doc/db4/images/sleepycat.gif
 share/doc/db4/index.html
+share/doc/db4/java/allclasses-frame.html
+share/doc/db4/java/allclasses-noframe.html
+share/doc/db4/java/com/sleepycat/bdb/CurrentTransaction.html
+share/doc/db4/java/com/sleepycat/bdb/DataCursor.html
+share/doc/db4/java/com/sleepycat/bdb/DataDb.html
+share/doc/db4/java/com/sleepycat/bdb/DataIndex.html
+share/doc/db4/java/com/sleepycat/bdb/DataStore.html
+share/doc/db4/java/com/sleepycat/bdb/DataThang.html
+share/doc/db4/java/com/sleepycat/bdb/DataView.html
+share/doc/db4/java/com/sleepycat/bdb/ForeignKeyIndex.html
+share/doc/db4/java/com/sleepycat/bdb/IntegrityConstraintException.html
+share/doc/db4/java/com/sleepycat/bdb/KeyRangeException.html
+share/doc/db4/java/com/sleepycat/bdb/PrimaryKeyAssigner.html
+share/doc/db4/java/com/sleepycat/bdb/RecordNumberBinding.html
+share/doc/db4/java/com/sleepycat/bdb/RecordNumberFormat.html
+share/doc/db4/java/com/sleepycat/bdb/StoredClassCatalog.html
+share/doc/db4/java/com/sleepycat/bdb/TransactionRunner.html
+share/doc/db4/java/com/sleepycat/bdb/TransactionWorker.html
+share/doc/db4/java/com/sleepycat/bdb/bind/ByteArrayBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/ByteArrayFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/DataBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/DataBuffer.html
+share/doc/db4/java/com/sleepycat/bdb/bind/DataFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/DataType.html
+share/doc/db4/java/com/sleepycat/bdb/bind/EntityBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/KeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/SimpleBuffer.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/ByteArrayBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/ByteArrayFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/DataBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/DataBuffer.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/DataFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/DataType.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/EntityBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/KeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/class-use/SimpleBuffer.html
+share/doc/db4/java/com/sleepycat/bdb/bind/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/bind/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/bind/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/bind/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/ClassCatalog.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialInput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialOutput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialSerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/SerialSerialKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/TupleSerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/TupleSerialKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/TupleSerialMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/TupleSerialMarshalledKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/ClassCatalog.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialInput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialOutput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialSerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/SerialSerialKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/TupleSerialBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/TupleSerialKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/TupleSerialMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use/TupleSerialMarshalledKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/bind/serial/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/MarshalledTupleData.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/MarshalledTupleKeyEntity.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleInput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleInputBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleOutput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleTupleBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleTupleKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleTupleMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/TupleTupleMarshalledKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/MarshalledTupleData.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/MarshalledTupleKeyEntity.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleFormat.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleInput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleInputBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleOutput.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleTupleBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleTupleKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleTupleMarshalledBinding.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use/TupleTupleMarshalledKeyExtractor.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/bind/tuple/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/CurrentTransaction.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataCursor.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataDb.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataIndex.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataStore.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataThang.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/DataView.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/ForeignKeyIndex.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/IntegrityConstraintException.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/KeyRangeException.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/PrimaryKeyAssigner.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/RecordNumberBinding.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/RecordNumberFormat.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/StoredClassCatalog.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/TransactionRunner.html
+share/doc/db4/java/com/sleepycat/bdb/class-use/TransactionWorker.html
+share/doc/db4/java/com/sleepycat/bdb/collection/MapEntry.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredCollection.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredCollections.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredContainer.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredEntrySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredIterator.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredKeySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredList.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredMap.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredSortedEntrySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredSortedKeySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredSortedMap.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredSortedValueSet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/StoredValueSet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/MapEntry.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredCollection.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredCollections.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredContainer.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredEntrySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredIterator.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredKeySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredList.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredMap.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredSortedEntrySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredSortedKeySet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredSortedMap.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredSortedValueSet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/class-use/StoredValueSet.html
+share/doc/db4/java/com/sleepycat/bdb/collection/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/collection/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/collection/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/collection/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/factory/TupleSerialDbFactory.html
+share/doc/db4/java/com/sleepycat/bdb/factory/class-use/TupleSerialDbFactory.html
+share/doc/db4/java/com/sleepycat/bdb/factory/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/factory/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/factory/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/factory/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/package-use.html
+share/doc/db4/java/com/sleepycat/bdb/util/ExceptionUnwrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/ExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/FastInputStream.html
+share/doc/db4/java/com/sleepycat/bdb/util/FastOutputStream.html
+share/doc/db4/java/com/sleepycat/bdb/util/IOExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/RuntimeExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/TimeUnits.html
+share/doc/db4/java/com/sleepycat/bdb/util/UtfOps.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/ExceptionUnwrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/ExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/FastInputStream.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/FastOutputStream.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/IOExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/RuntimeExceptionWrapper.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/TimeUnits.html
+share/doc/db4/java/com/sleepycat/bdb/util/class-use/UtfOps.html
+share/doc/db4/java/com/sleepycat/bdb/util/package-frame.html
+share/doc/db4/java/com/sleepycat/bdb/util/package-summary.html
+share/doc/db4/java/com/sleepycat/bdb/util/package-tree.html
+share/doc/db4/java/com/sleepycat/bdb/util/package-use.html
+share/doc/db4/java/com/sleepycat/db/Db.html
+share/doc/db4/java/com/sleepycat/db/DbAppDispatch.html
+share/doc/db4/java/com/sleepycat/db/DbAppendRecno.html
+share/doc/db4/java/com/sleepycat/db/DbBtreeCompare.html
+share/doc/db4/java/com/sleepycat/db/DbBtreePrefix.html
+share/doc/db4/java/com/sleepycat/db/DbBtreeStat.html
+share/doc/db4/java/com/sleepycat/db/DbClient.html
+share/doc/db4/java/com/sleepycat/db/DbDeadlockException.html
+share/doc/db4/java/com/sleepycat/db/DbDupCompare.html
+share/doc/db4/java/com/sleepycat/db/DbEnv.RepProcessMessage.html
+share/doc/db4/java/com/sleepycat/db/DbEnv.html
+share/doc/db4/java/com/sleepycat/db/DbEnvFeedback.html
+share/doc/db4/java/com/sleepycat/db/DbEnvFeedbackHandler.html
+share/doc/db4/java/com/sleepycat/db/DbErrcall.html
+share/doc/db4/java/com/sleepycat/db/DbErrorHandler.html
+share/doc/db4/java/com/sleepycat/db/DbException.html
+share/doc/db4/java/com/sleepycat/db/DbFeedback.html
+share/doc/db4/java/com/sleepycat/db/DbFeedbackHandler.html
+share/doc/db4/java/com/sleepycat/db/DbHash.html
+share/doc/db4/java/com/sleepycat/db/DbHashStat.html
+share/doc/db4/java/com/sleepycat/db/DbKeyRange.html
+share/doc/db4/java/com/sleepycat/db/DbLock.html
+share/doc/db4/java/com/sleepycat/db/DbLockNotGrantedException.html
+share/doc/db4/java/com/sleepycat/db/DbLockRequest.html
+share/doc/db4/java/com/sleepycat/db/DbLockStat.html
+share/doc/db4/java/com/sleepycat/db/DbLogStat.html
+share/doc/db4/java/com/sleepycat/db/DbLogc.html
+share/doc/db4/java/com/sleepycat/db/DbLsn.html
+share/doc/db4/java/com/sleepycat/db/DbMemoryException.html
+share/doc/db4/java/com/sleepycat/db/DbMpoolFStat.html
+share/doc/db4/java/com/sleepycat/db/DbMpoolFile.html
+share/doc/db4/java/com/sleepycat/db/DbMpoolStat.html
+share/doc/db4/java/com/sleepycat/db/DbMultipleDataIterator.html
+share/doc/db4/java/com/sleepycat/db/DbMultipleKeyDataIterator.html
+share/doc/db4/java/com/sleepycat/db/DbMultipleRecnoDataIterator.html
+share/doc/db4/java/com/sleepycat/db/DbPanicHandler.html
+share/doc/db4/java/com/sleepycat/db/DbPreplist.html
+share/doc/db4/java/com/sleepycat/db/DbQueueStat.html
+share/doc/db4/java/com/sleepycat/db/DbRepStat.html
+share/doc/db4/java/com/sleepycat/db/DbRepTransport.html
+share/doc/db4/java/com/sleepycat/db/DbRunRecoveryException.html
+share/doc/db4/java/com/sleepycat/db/DbSecondaryKeyCreate.html
+share/doc/db4/java/com/sleepycat/db/DbTxn.html
+share/doc/db4/java/com/sleepycat/db/DbTxnStat.Active.html
+share/doc/db4/java/com/sleepycat/db/DbTxnStat.html
+share/doc/db4/java/com/sleepycat/db/Dbc.html
+share/doc/db4/java/com/sleepycat/db/Dbt.html
+share/doc/db4/java/com/sleepycat/db/class-use/Db.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbAppDispatch.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbAppendRecno.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbBtreeCompare.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbBtreePrefix.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbBtreeStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbClient.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbDeadlockException.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbDupCompare.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbEnv.RepProcessMessage.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbEnv.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbEnvFeedback.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbEnvFeedbackHandler.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbErrcall.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbErrorHandler.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbException.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbFeedback.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbFeedbackHandler.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbHash.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbHashStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbKeyRange.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLock.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLockNotGrantedException.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLockRequest.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLockStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLogStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLogc.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbLsn.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMemoryException.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMpoolFStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMpoolFile.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMpoolStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMultipleDataIterator.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMultipleKeyDataIterator.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbMultipleRecnoDataIterator.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbPanicHandler.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbPreplist.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbQueueStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbRepStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbRepTransport.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbRunRecoveryException.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbSecondaryKeyCreate.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbTxn.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbTxnStat.Active.html
+share/doc/db4/java/com/sleepycat/db/class-use/DbTxnStat.html
+share/doc/db4/java/com/sleepycat/db/class-use/Dbc.html
+share/doc/db4/java/com/sleepycat/db/class-use/Dbt.html
+share/doc/db4/java/com/sleepycat/db/package-frame.html
+share/doc/db4/java/com/sleepycat/db/package-summary.html
+share/doc/db4/java/com/sleepycat/db/package-tree.html
+share/doc/db4/java/com/sleepycat/db/package-use.html
+share/doc/db4/java/constant-values.html
+share/doc/db4/java/deprecated-list.html
+share/doc/db4/java/help-doc.html
+share/doc/db4/java/index-all.html
+share/doc/db4/java/index.html
+share/doc/db4/java/overview-frame.html
+share/doc/db4/java/overview-summary.html
+share/doc/db4/java/overview-tree.html
+share/doc/db4/java/package-list
+share/doc/db4/java/packages.html
+share/doc/db4/java/serialized-form.html
+share/doc/db4/java/style.css
 share/doc/db4/ref/am/close.html
 share/doc/db4/ref/am/count.html
 share/doc/db4/ref/am/curclose.html
@@ -617,9 +761,50 @@ share/doc/db4/ref/arch/progmodel.html
 share/doc/db4/ref/arch/script.html
 share/doc/db4/ref/arch/smallpic.gif
 share/doc/db4/ref/arch/utilities.html
+share/doc/db4/ref/bdb/bdb_fig_1.gif
+share/doc/db4/ref/bdb/bind_fig_1.gif
+share/doc/db4/ref/bdb/collection_fig_1.gif
+share/doc/db4/ref/bdb/cs_bdb.html
+share/doc/db4/ref/bdb/cs_bdb_bind.html
+share/doc/db4/ref/bdb/cs_bdb_collection.html
+share/doc/db4/ref/bdb/cs_bdb_serial.html
+share/doc/db4/ref/bdb/faq.html
+share/doc/db4/ref/bdb/overview.html
+share/doc/db4/ref/bdb_basic/catalog.html
+share/doc/db4/ref/bdb_basic/env.html
+share/doc/db4/ref/bdb_basic/except.html
+share/doc/db4/ref/bdb_basic/intro.html
+share/doc/db4/ref/bdb_basic/keyvalue.html
+share/doc/db4/ref/bdb_basic/main.html
+share/doc/db4/ref/bdb_basic/read.html
+share/doc/db4/ref/bdb_basic/stores.html
+share/doc/db4/ref/bdb_basic/transact.html
+share/doc/db4/ref/bdb_basic/views.html
+share/doc/db4/ref/bdb_basic/write.html
+share/doc/db4/ref/bdb_entity/bindings.html
+share/doc/db4/ref/bdb_entity/classes.html
+share/doc/db4/ref/bdb_entity/intro.html
+share/doc/db4/ref/bdb_entity/read.html
+share/doc/db4/ref/bdb_entity/views.html
+share/doc/db4/ref/bdb_index/foreign.html
+share/doc/db4/ref/bdb_index/intro.html
+share/doc/db4/ref/bdb_index/read.html
+share/doc/db4/ref/bdb_index/second.html
+share/doc/db4/ref/bdb_index/views.html
+share/doc/db4/ref/bdb_sentity/binding.html
+share/doc/db4/ref/bdb_sentity/class.html
+share/doc/db4/ref/bdb_sentity/intro.html
+share/doc/db4/ref/bdb_sentity/remove.html
+share/doc/db4/ref/bdb_tuple/extract.html
+share/doc/db4/ref/bdb_tuple/format.html
+share/doc/db4/ref/bdb_tuple/intro.html
+share/doc/db4/ref/bdb_tuple/sorted.html
+share/doc/db4/ref/bdb_tuple/tbinding.html
+share/doc/db4/ref/bdb_tuple/tsbinding.html
+share/doc/db4/ref/bdb_tut/intro.html
+share/doc/db4/ref/bdb_tut/summary.html
 share/doc/db4/ref/build_unix/aix.html
 share/doc/db4/ref/build_unix/conf.html
-share/doc/db4/ref/build_unix/embedix.html
 share/doc/db4/ref/build_unix/flags.html
 share/doc/db4/ref/build_unix/freebsd.html
 share/doc/db4/ref/build_unix/hpux.html
@@ -633,6 +818,7 @@ share/doc/db4/ref/build_unix/osf1.html
 share/doc/db4/ref/build_unix/qnx.html
 share/doc/db4/ref/build_unix/sco.html
 share/doc/db4/ref/build_unix/shlib.html
+share/doc/db4/ref/build_unix/small.html
 share/doc/db4/ref/build_unix/solaris.html
 share/doc/db4/ref/build_unix/sunos.html
 share/doc/db4/ref/build_unix/test.html
@@ -644,6 +830,7 @@ share/doc/db4/ref/build_vxworks/notes.html
 share/doc/db4/ref/build_win/faq.html
 share/doc/db4/ref/build_win/intro.html
 share/doc/db4/ref/build_win/notes.html
+share/doc/db4/ref/build_win/small.html
 share/doc/db4/ref/build_win/test.html
 share/doc/db4/ref/cam/intro.html
 share/doc/db4/ref/debug/common.html
@@ -715,6 +902,7 @@ share/doc/db4/ref/program/errorret.html
 share/doc/db4/ref/program/faq.html
 share/doc/db4/ref/program/mt.html
 share/doc/db4/ref/program/namespace.html
+share/doc/db4/ref/program/ram.html
 share/doc/db4/ref/program/runtime.html
 share/doc/db4/ref/program/scope.html
 share/doc/db4/ref/program/solaris.txt
@@ -744,7 +932,6 @@ share/doc/db4/ref/rpc/client.html
 share/doc/db4/ref/rpc/faq.html
 share/doc/db4/ref/rpc/intro.html
 share/doc/db4/ref/rpc/server.html
-share/doc/db4/ref/sendmail/intro.html
 share/doc/db4/ref/simple_tut/close.html
 share/doc/db4/ref/simple_tut/del.html
 share/doc/db4/ref/simple_tut/errors.html
@@ -762,6 +949,7 @@ share/doc/db4/ref/tcl/program.html
 share/doc/db4/ref/tcl/using.html
 share/doc/db4/ref/test/faq.html
 share/doc/db4/ref/test/run.html
+share/doc/db4/ref/toc.html
 share/doc/db4/ref/transapp/admin.html
 share/doc/db4/ref/transapp/app.html
 share/doc/db4/ref/transapp/archival.html
@@ -899,6 +1087,20 @@ share/doc/db4/ref/upgrade.4.1/log_register.html
 share/doc/db4/ref/upgrade.4.1/log_stat.html
 share/doc/db4/ref/upgrade.4.1/memp_sync.html
 share/doc/db4/ref/upgrade.4.1/toc.html
+share/doc/db4/ref/upgrade.4.2/cksum.html
+share/doc/db4/ref/upgrade.4.2/client.html
+share/doc/db4/ref/upgrade.4.2/del.html
+share/doc/db4/ref/upgrade.4.2/disk.html
+share/doc/db4/ref/upgrade.4.2/intro.html
+share/doc/db4/ref/upgrade.4.2/java.html
+share/doc/db4/ref/upgrade.4.2/lockng.html
+share/doc/db4/ref/upgrade.4.2/nosync.html
+share/doc/db4/ref/upgrade.4.2/priority.html
+share/doc/db4/ref/upgrade.4.2/queue.html
+share/doc/db4/ref/upgrade.4.2/repinit.html
+share/doc/db4/ref/upgrade.4.2/tcl.html
+share/doc/db4/ref/upgrade.4.2/toc.html
+share/doc/db4/ref/upgrade.4.2/verify.html
 share/doc/db4/ref/upgrade/process.html
 share/doc/db4/ref/upgrade/version.html
 share/doc/db4/ref/xa/build.html
@@ -906,7 +1108,6 @@ share/doc/db4/ref/xa/faq.html
 share/doc/db4/ref/xa/intro.html
 share/doc/db4/ref/xa/xa_config.html
 share/doc/db4/ref/xa/xa_intro.html
-share/doc/db4/reftoc.html
 share/doc/db4/sleepycat/contact.html
 share/doc/db4/sleepycat/legal.html
 share/doc/db4/sleepycat/license.html
@@ -925,6 +1126,7 @@ share/doc/db4/utility/index.html
 @dirrm share/doc/db4/utility
 @dirrm share/doc/db4/sleepycat
 @dirrm share/doc/db4/ref/xa
+@dirrm share/doc/db4/ref/upgrade.4.2
 @dirrm share/doc/db4/ref/upgrade.4.1
 @dirrm share/doc/db4/ref/upgrade.4.0
 @dirrm share/doc/db4/ref/upgrade.3.3
@@ -938,7 +1140,6 @@ share/doc/db4/utility/index.html
 @dirrm share/doc/db4/ref/test
 @dirrm share/doc/db4/ref/tcl
 @dirrm share/doc/db4/ref/simple_tut
-@dirrm share/doc/db4/ref/sendmail
 @dirrm share/doc/db4/ref/rpc
 @dirrm share/doc/db4/ref/rep
 @dirrm share/doc/db4/ref/refs
@@ -958,15 +1159,40 @@ share/doc/db4/utility/index.html
 @dirrm share/doc/db4/ref/build_win
 @dirrm share/doc/db4/ref/build_vxworks
 @dirrm share/doc/db4/ref/build_unix
+@dirrm share/doc/db4/ref/bdb_tut
+@dirrm share/doc/db4/ref/bdb_tuple
+@dirrm share/doc/db4/ref/bdb_sentity
+@dirrm share/doc/db4/ref/bdb_index
+@dirrm share/doc/db4/ref/bdb_entity
+@dirrm share/doc/db4/ref/bdb_basic
+@dirrm share/doc/db4/ref/bdb
 @dirrm share/doc/db4/ref/arch
 @dirrm share/doc/db4/ref/apprec
 @dirrm share/doc/db4/ref/am_misc
 @dirrm share/doc/db4/ref/am_conf
 @dirrm share/doc/db4/ref/am
 @dirrm share/doc/db4/ref
+@dirrm share/doc/db4/java/com/sleepycat/db/class-use
+@dirrm share/doc/db4/java/com/sleepycat/db
+@dirrm share/doc/db4/java/com/sleepycat/bdb/util/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/util
+@dirrm share/doc/db4/java/com/sleepycat/bdb/factory/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/factory
+@dirrm share/doc/db4/java/com/sleepycat/bdb/collection/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/collection
+@dirrm share/doc/db4/java/com/sleepycat/bdb/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind/tuple/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind/tuple
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind/serial/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind/serial
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind/class-use
+@dirrm share/doc/db4/java/com/sleepycat/bdb/bind
+@dirrm share/doc/db4/java/com/sleepycat/bdb
+@dirrm share/doc/db4/java/com/sleepycat
+@dirrm share/doc/db4/java/com
+@dirrm share/doc/db4/java
 @dirrm share/doc/db4/images
 @dirrm share/doc/db4/api_tcl
-@dirrm share/doc/db4/api_java
 @dirrm share/doc/db4/api_cxx
 @dirrm share/doc/db4/api_c
 @dirrm share/doc/db4
