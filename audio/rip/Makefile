@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/19 03:13:11 ben Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/22 15:05:18 snj Exp $
 #
 
 DISTNAME=	rip-1.07
@@ -15,12 +15,10 @@ DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 NO_BUILDLINK=	yes
 USE_PERL5=	yes
 NO_BUILD=	# defined
+REPLACE_PERL=	rip
 
 DOCFILES=	BUGS CHANGELOG COPYING FAQ INSTALLING README
 DOCDIR=		${PREFIX}/share/doc/rip
-
-post-patch:
-	${PERL5} -pi -ne "s|#!/usr/bin/perl|#!${PERL5}|" ${WRKSRC}/rip
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rip ${PREFIX}/bin/rip
