@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2002/08/25 21:52:03 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/09/20 16:59:27 abs Exp $
 #
 
 COMMENT=	Netscape communicator - Digital UNIX/Linux/SunOS binary
 
 BINNAME=	communicator
 DIST_SDIR_NAME=	complete_install
-
-USE_BUILDLINK2=	# defined
 
 .include "../navigator/Makefile.common"
