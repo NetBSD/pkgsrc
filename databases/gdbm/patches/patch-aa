@@ -10,3 +10,13 @@
  @c @setchapternewpage odd
  @comment %**end of header (This is for running Texinfo on a region.)
  
+--- Makefile.in	1997/11/20 11:43:20	1.1
++++ Makefile.in	1997/11/20 11:44:10
+@@ -94,6 +94,7 @@
+ 
+ install: libgdbm.a gdbm.h gdbm.info
+ 	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
++	$(RANLIB) $(libdir)/libgdbm.a
+ 	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
+ 	$(INSTALL_DATA) $(srcdir)/gdbm.3 $(man3dir)/gdbm.3
+ 	$(INSTALL_DATA) $(srcdir)/gdbm.info $(infodir)/gdbm.info
