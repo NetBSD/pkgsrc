@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4321 2004/01/02 01:19:13 hubertf Exp $
+$NetBSD: CHANGES,v 1.4322 2004/01/02 03:22:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -18,3 +18,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sylpheed-claws-trayicon-0.9.7 [cube 2004-01-01]
 	Updated audit-packages to 1.28 [agc 2004-01-01]
 	Updated nicotine to 1.0.6 [hubertf 2004-01-02]
+	Added edict-2003.005 [wiz 2004-01-02]
+	Added kanjidic-20030901 [wiz 2004-01-02]
+	Updated xjdic to 2.4 [wiz 2004-01-02]
