@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3469 2003/09/21 16:24:26 kim Exp $
+$NetBSD: CHANGES,v 1.3470 2003/09/21 16:43:28 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3865,3 +3865,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Module-Build-0.20 [kim 2003-09-21]
 	Added p5-Image-Imlib2-0.12 [kim 2003-09-21]
 	Updated p5-Apache-Gallery to 0.7 [kim 2003-09-21]
+	Updated rdiff-backup to 0.12.4 [lukem 2003-09-21]
