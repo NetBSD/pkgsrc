@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/03/17 16:08:59 tron Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/23 10:41:44 tron Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -29,9 +29,12 @@ RPMFILES=		aaa_base-9.1-0.${SUSE_ARCH}.rpm \
 			ncurses-5.4-59.${SUSE_ARCH}.rpm \
 			readline-4.3-306.${SUSE_ARCH}.rpm \
 			zlib-1.2.1-70.${SUSE_ARCH}.rpm
-RPMIGNOREPATH=		./etc/cron.daily ./etc/csh.cshrc ./etc/csh.login \
-			./etc/nsswitch.conf ./etc/pam.d ./etc/profile \
-			./etc/profile.d ./etc/profile.dos ./etc/shells
+RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
+			./etc/cron.daily ./etc/csh.cshrc ./etc/csh.login \
+			./etc/inittab ./etc/hushlogins ./etc/java \
+			./etc/mailcap ./etc/mime.types ./etc/nsswitch.conf \
+			./etc/pam.d ./etc/profile ./etc/profile.dos \
+			./etc/rc.d.README ./etc/rpc ./etc/shells ./etc/ttytype
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 
