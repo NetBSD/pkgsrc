@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:42 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/08 08:11:42 martti Exp $
 bin/startxfce4
 bin/xfce4-about
 bin/xfhelp4
@@ -27,6 +27,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-utils.mo
