@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2003/05/02 11:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2003/05/21 09:24:00 martti Exp $
 
 DISTNAME=	postfix-2.0.9
 PKGREVISION=	2
@@ -31,21 +31,22 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 
 FIX_RPATH+=	AUXLIBS
 
-#.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-#PATCHFILES+=		tls+ipv6-1.13-pf-2.0.7.patch.gz
-#PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/
-#PATCH_DIST_STRIP=	-p1
-#BUILD_DEFS+=		POSTFIX_USE_INET6
-#
-#CCARGS+=		-DHAS_SSL
-#AUXLIBS+=		-L${BUILDLINK_PREFIX.openssl}/lib	\
-#			-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib \
-#			-lssl -lcrypto
-#BUILD_DEFS+=		POSTFIX_USE_TLS
-#
-#PLIST_SRC+=		${PKGDIR}/PLIST.tls
-#MESSAGE_SRC+=		${PKGDIR}/MESSAGE.tls
-#.endif
+.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+.include "../../security/openssl/buildlink2.mk"
+PATCHFILES+=		tls+ipv6-1.14-pf-2.0.9.patch.gz
+PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.14/
+PATCH_DIST_STRIP=	-p1
+BUILD_DEFS+=		POSTFIX_USE_INET6
+
+CCARGS+=		-DHAS_SSL
+AUXLIBS+=		-L${BUILDLINK_PREFIX.openssl}/lib	\
+			-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib \
+			-lssl -lcrypto
+BUILD_DEFS+=		POSTFIX_USE_TLS
+
+PLIST_SRC+=		${PKGDIR}/PLIST.tls
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.tls
+.endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .include "../../devel/pcre/buildlink2.mk"
@@ -75,22 +76,6 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-lmysqlclient -lz -lm
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
-
-#.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
-#.include "../../security/openssl/buildlink2.mk"
-#PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
-#PATCHFILES+=	pfixtls-1.1.11.diff.gz
-#PATCH_DIST_STRIP=	-p1
-#
-#CCARGS+=	-DHAS_SSL
-#AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib	\
-#		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
-#		-lssl -lcrypto
-#BUILD_DEFS+=	POSTFIX_USE_TLS
-#
-#PLIST_SRC+=	${PKGDIR}/PLIST.tls
-#MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-#.endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
 .include "../../security/cyrus-sasl/buildlink2.mk"
