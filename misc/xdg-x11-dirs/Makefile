@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/08 19:29:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/14 15:26:41 jmmv Exp $
 #
 
-DISTNAME=	xdg-x11-dirs-${XDG_DIRS_VERSION}
+DISTNAME=	xdg-x11-dirs-1.1
 CATEGORIES=	misc gnome kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,16 +10,28 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared XDG directories under the X11 tree
 
-USE_X11BASE=		yes
+CONFLICTS=	gnome2-dirs<=1.2
 
+NO_BUILD=	# defined
+NO_BUILDLINK=	# defined
+NO_CONFIGURE=	# defined
+NO_CHECKSUM=	# defined
+NO_EXTRACT=	# defined
+USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
+USE_X11BASE=	yes
+WRKSRC=		${WRKDIR}
+
+.include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11PREFIX} == ${LOCALBASE}
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
-XDG_DIRS_REGISTER=	no
+DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 .else
-XDG_DIRS_REGISTER=	yes
+_SORTED!=	${ECHO} ${XDG_X11_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
 .endif
 
-.include "../../misc/xdg-dirs/Makefile.common"
+do-install:	# nothing
+
 .include "../../mk/bsd.pkg.mk"

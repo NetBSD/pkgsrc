@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/02/15 12:12:32 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/14 15:26:41 jmmv Exp $
 #
 
-DISTNAME=	gnome-dirs-${GNOME_DIRS_VERSION}
+DISTNAME=	gnome-dirs-1.5
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,15 +12,20 @@ COMMENT=	Shared GTK/GNOME (v1 and v2) directories
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
+USE_X11BASE=	yes
 NO_CHECKSUM=	# defined
 NO_EXTRACT=	# defined
 NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
-USE_X11BASE=	YES
+.include "dirs.mk"
+.include "../../mk/bsd.prefs.mk"
 
-GNOME_DIRS=	${GNOME_DIRS_COMMON}
+_SORTED!=	${ECHO} ${GNOME_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
 
-.include "Makefile.common"
+do-install:	# nothing
+
 .include "../../mk/bsd.pkg.mk"

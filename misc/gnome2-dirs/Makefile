@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/03/08 19:30:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/14 15:26:41 jmmv Exp $
 #
 
-DISTNAME=	gnome2-dirs-${GNOME_DIRS_VERSION}
+DISTNAME=	gnome2-dirs-1.5
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,29 +12,26 @@ COMMENT=	Shared GTK/GNOME (v2) directories
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
 NO_EXTRACT=	# defined
 NO_CHECKSUM=	# defined
 NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
+.include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"
-
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 .if ${X11PREFIX} == ${LOCALBASE}
 DEPENDS+=	gnome-dirs>=1.0:../../misc/gnome-dirs
-GNOME_DIRS=
+_SORTED!=	${ECHO} ${GNOME2_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
 .else
-GNOME_DIRS=	${GNOME_DIRS_COMMON}
+_SORTED!=	${ECHO} ${GNOME_DIRS} ${GNOME2_DIRS} | ${TR} -s ' \t' '\n' | \
+		${SORT}
 .endif
 
-GNOME_DIRS+=	share/control-center-2.0
-GNOME_DIRS+=	share/control-center-2.0/capplets
-GNOME_DIRS+=	share/control-center-2.0/icons
-GNOME_DIRS+=	share/gnome-2.0
-GNOME_DIRS+=	share/gnome-2.0/ui
-GNOME_DIRS+=	share/gnome/wm-properties
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
 
-.include "../../misc/gnome-dirs/Makefile.common"
+do-install:	# nothing
+
 .include "../../mk/bsd.pkg.mk"
