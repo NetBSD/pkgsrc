@@ -1,8 +1,16 @@
-$NetBSD: patch-an,v 1.1 1999/11/03 04:18:47 jlam Exp $
-
---- lib/Mrm/Makefile.in.orig	Mon Sep  6 17:13:31 1999
-+++ lib/Mrm/Makefile.in	Tue Nov  2 22:16:37 1999
-@@ -289,7 +289,6 @@
+$NetBSD: patch-an,v 1.2 1999/11/15 21:30:28 drochner Exp $
+--- ./lib/Mrm/Makefile.in.orig	Fri Nov  5 21:14:37 1999
++++ ./lib/Mrm/Makefile.in	Mon Nov 15 19:20:22 1999
+@@ -222,7 +222,7 @@
+ maintainer-clean-compile:
+ 
+ .c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -297,7 +297,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)

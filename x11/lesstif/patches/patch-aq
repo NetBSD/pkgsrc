@@ -1,8 +1,16 @@
-$NetBSD: patch-aq,v 1.1 1999/11/03 04:18:47 jlam Exp $
-
---- lib/Xm/Makefile.in.orig	Mon Sep  6 17:13:31 1999
-+++ lib/Xm/Makefile.in	Tue Nov  2 22:19:27 1999
-@@ -323,7 +323,6 @@
+$NetBSD: patch-aq,v 1.2 1999/11/15 21:30:28 drochner Exp $
+--- ./lib/Xm/Makefile.in.orig	Fri Nov  5 21:14:36 1999
++++ ./lib/Xm/Makefile.in	Mon Nov 15 18:53:46 1999
+@@ -271,7 +271,7 @@
+ maintainer-clean-compile:
+ 
+ .c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -444,7 +444,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)
