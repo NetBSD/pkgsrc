@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2931 2005/01/19 22:00:45 adrianp Exp $
+$NetBSD: TODO,v 1.2932 2005/01/19 23:28:10 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -533,7 +533,6 @@ Suggested package updates
 	o gsed-4.1.2
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
-	o gtk-send-pr-0.4.2
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
