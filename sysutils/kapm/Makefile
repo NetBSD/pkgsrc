@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/07 17:18:03 hubertf Exp $
 #
 
 DISTNAME=	kapm-0.3.1
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://bodnar42.dhs.org/pub/kapm/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://bodnar42.dhs.org/kapm/
+
+DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 
 USE_X11BASE=	YES	# to get things near KDE
 GNU_CONFIGURE=	YES
