@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/24 17:57:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/20 21:37:37 jschauma Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		devel lang
 MASTER_SITES=		ftp://pvs.csl.sri.com/pub/pvs/pvs${VERSION}/ \
 			ftp://ftp.informatik.uni-ulm.de/pub/KI/pvs/pvs${VERSION}/
@@ -15,13 +16,12 @@ MAINTAINER=		jschauma@netbsd.org
 HOMEPAGE=		http://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 
-DEPENDS=		emacs>=19.0:../../editors/emacs
-DEPENDS+=		tk>=8.3:../../x11/tk
 DEPENDS+=		teTeX>=1.0.7:../../print/teTeX
 
 VERSION=		3.0
 WRKSRC=			${WRKDIR}
 NO_BUILD=		# defined
+USE_BUILDLINK2=		yes
 
 LICENSE=        	pvs-license
 # not quite sure about this, but to be on the safe side:
@@ -57,4 +57,7 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,, -rw . ${PREFIX}/pvs
 	${CHMOD} 755 ${PREFIX}/pvs/pvs
 
+.include "../../x11/tk/buildlink2.mk"
+.include "../../mk/emacs.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
