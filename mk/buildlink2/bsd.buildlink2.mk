@@ -1,19 +1,36 @@
-# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.5 2002/06/06 06:34:36 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.1 2002/06/21 21:39:25 jlam Exp $
 #
-# BUILDLINK_*	public variables usable in other Makefiles
-# _BLNK_*	private variables to this Makefile
-
-ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
-
-# Add each of the *-buildlink targets as a prerequisite for the
-# pre-configure target.  This ensures that the symlinks are created
-# before any configure scripts are called.
+# An example package buildlink2.mk file:
 #
-.for _target_ in ${BUILDLINK_TARGETS}
-pre-configure: ${_target_}
-.endfor
+# -------------8<-------------8<-------------8<-------------8<-------------
+# BUILDLINK_PACKAGES+=		foo
+# BUILDLINK_DEPENDS.foo?=	foo>=1.0
+# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo
+#
+# EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo
+# BUILDLINK_PREFIX.foo_DEFAULT=	${LOCALBASE}
+# BUILDLINK_FILES.foo=		include/foo.h
+# BUILDLINK_FILES.foo+=		include/bar.h
+# BUILDLINK_FILES.foo+=		lib/libfoo.*
+#
+# # We need "libbar.*" to look like "libfoo.*".
+# BUILDLINK_TRANSFORM+=		l:bar:foo
+#
+# BUILDLINK_TARGETS+=		foo-buildlink
+#
+# foo-buildlink: _BUILDLINK_USE
+# -------------8<-------------8<-------------8<-------------8<-------------
+#
+# The different variables that may be set in a buildlink2.mk file are
+# described below.
+#
+# The variable name convention used in this Makefile are:
+#
+# BUILDLINK_*	public buildlink-related variables usable in other Makefiles
+# _BLNK_*	private buildlink-related variables to this Makefile
 
-.if defined(USE_BUILDLINK2_ONLY)
+ECHO_BUILDLINK_MSG?=	${TRUE}
+
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
 _BLNK_X11PKG_DIR=	${BUILDLINK_DIR:H}/.buildlink-x11pkg
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
@@ -42,7 +59,125 @@ LDFLAGS:=		${_BLNK_LDFLAGS} ${LDFLAGS}
 #
 PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 
-pre-configure: buildlink-wrappers
+# Add the proper dependency on each package pulled in by buildlink2.mk
+# files.  BUILDLINK_DEPMETHOD.<pkg> is either "full" or "build" to represent
+# either a full dependency or a build dependency on <pkg>.  By default,
+# we use a full dependency.
+#
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
+BUILDLINK_DEPMETHOD.${_pkg_}=	full
+.  endif
+.  if (${BUILDLINK_DEPMETHOD.${_pkg_}} == "full")
+_BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
+.  elif (${BUILDLINK_DEPMETHOD.${_pkg_}} == "build")
+_BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
+.  endif
+.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
+      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
+	${BUILDLINK_DEPENDS.${_pkg_}}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.  endif
+.endfor
+
+# Add each of the *-buildlink targets as a prerequisite for the
+# buildlink target.  This ensures that the symlinks are created
+# before any configure scripts or build commands are called.
+#
+.for _target_ in ${BUILDLINK_TARGETS}
+do-buildlink: ${_target_}
+.endfor
+
+# _LT_ARCHIVE_TRANSFORM creates $${dest} from $${file}, where $${file} is
+# a libtool archive (*.la).  It allows libtool to properly interact with
+# buildlink at link time by linking against the libraries pointed to by
+# symlinks in ${BUILDLINK_DIR}.
+#
+_LT_ARCHIVE_TRANSFORM_SED=						\
+	-e "s|${LOCALBASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"	\
+	-e "s|${X11BASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"
+
+_LT_ARCHIVE_TRANSFORM=							\
+	${SED} ${_LT_ARCHIVE_TRANSFORM_SED} $${file} > $${dest}
+
+# _BUILDLINK_USE is a macro target that symlinks package files into a new
+# hierarchy under ${BUILDLINK_DIR}.
+#
+# The variables required to be defined to use this target are listed
+# below.  <pkgname> refers to the name of the package and should be used
+# consistently.
+#
+# The target that uses this macro target should perform no other actions
+# and be named "<pkgname>-buildlink".
+#
+# BUILDLINK_PREFIX.<pkgname>    installation prefix of the package
+#
+# BUILDLINK_FILES.<pkgname>     files relative to ${BUILDLINK_PREFIX.<pkgname>}
+#                               to be symlinked into ${BUILDLINK_DIR};
+#                               libtool archive files are automatically
+#                               filtered out and not linked
+#
+# BUILDLINK_TARGETS             targets to be invoked during buildlink;
+#                               the targets should be appended to this variable
+#                               using +=
+#
+# The variables that may optionally be defined:
+#
+# BUILDLINK_TRANSFORM.<pkgname> sed arguments used to transform the name of
+#                               the source filename into a destination
+#                               filename
+#
+_BUILDLINK_USE: .USE
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
+	if [ ! -f $${cookie} ]; then					\
+		${ECHO_BUILDLINK_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
+		${MKDIR} ${BUILDLINK_DIR};				\
+		case "${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}" in	\
+		${X11BASE})						\
+			${RM} -f ${_BLNK_X11PKG_DIR} 2>/dev/null;	\
+			${LN} -sf ${BUILDLINK_DIR} ${_BLNK_X11PKG_DIR}; \
+			buildlink_dir="${_BLNK_X11PKG_DIR}";		\
+			;;						\
+		*)							\
+			buildlink_dir="${BUILDLINK_DIR}";		\
+			;;						\
+		esac;							\
+		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
+		for file in $${files}; do				\
+			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"`; \
+			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
+				dest="$${buildlink_dir}/$${rel_file}";	\
+			else						\
+				dest=`${ECHO} $${buildlink_dir}/$${rel_file} | ${SED} ${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}}`; \
+			fi;						\
+			if [ -f $${file} ]; then			\
+				dir=`${DIRNAME} $${dest}`;		\
+				if [ ! -d $${dir} ]; then		\
+					${MKDIR} $${dir};		\
+				fi;					\
+				${RM} -f $${dest};			\
+				case $${file} in			\
+				*.la)					\
+					${_LT_ARCHIVE_TRANSFORM};	\
+					;;				\
+				*)					\
+					${LN} -sf $${file} $${dest};	\
+					;;				\
+				esac;					\
+				if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
+					${ECHO} $${file} >> $${cookie};	\
+				else					\
+					${ECHO} "$${file} -> $${dest}" >> $${cookie}; \
+				fi;					\
+			else						\
+				${ECHO} "$${file}: not found" >> $${cookie}; \
+			fi;						\
+		done;							\
+		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
+	fi
+
+do-buildlink: buildlink-wrappers
 
 # _BLNK_TRANSFORM mini language for translating wrapper arguments into
 #	their buildlink equivalents:
@@ -61,8 +196,10 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 _BLNK_TRANSFORM+=	II:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 _BLNK_TRANSFORM+=	LL:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 .endif
+.if ${LOCALBASE} != "/usr/local"
 _BLNK_TRANSFORM+=	r:-I/usr/local
 _BLNK_TRANSFORM+=	r:-L/usr/local
+.endif
 #
 # Create _BLNK_TRANSFORM_SED.{1,2,3} from _BLNK_TRANSFORM.  We must use
 # separate variables instead of just one because the contents are too long
@@ -121,7 +258,7 @@ _BLNK_UNTRANSFORM_SED.2+= \
 # Transform "LL:/usr/X11R6:/buildlink,/x11-links" into:
 #	-e "s|-L/usr/X11R6 |-L/buildlink -L/x11-links |g"
 #	-e "s|-L/usr/X11R6$|-L/buildlink -L/x11-links|g"
-#	-e "s|-L/usr/X11R6/\([^	 ]*\)|-L/buildlink/\1 -L/x11-links/\1|g"
+#	-e "s|-L/usr/X11R6/\([^  ]*\)|-L/buildlink/\1 -L/x11-links/\1|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:MLL\:*\:*,*}
 _BLNK_TRANSFORM_SED.2+= \
@@ -234,6 +371,7 @@ _BLNK_WRAP_LOGIC=			${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_POST_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.post-cache-trans
 _BLNK_WRAP_CACHE_TRANSFORM=		${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_LOGIC_TRANSFORM=		${BUILDLINK_DIR}/bin/.logic-trans
+_BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
@@ -289,6 +427,9 @@ buildlink-wrappers: ${_BLNK_WRAP_CACHE}
 buildlink-wrappers: ${_BLNK_WRAP_CACHE_TRANSFORM}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC_TRANSFORM}
+.if defined (USE_LIBTOOL)
+buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
+.endif
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 CONFIGURE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
@@ -325,35 +466,25 @@ ${BUILDLINK_${_wrappee_}}:						\
 		done;							\
 		IFS="$$OLDIFS";						\
 		if [ ! -x "$${wrappee}" ]; then				\
-			${ECHO_MSG} "$${wrappee}: No such file";	\
+			${ECHO_BUILDLINK_MSG} "$${wrappee}: No such file";	\
 			exit 1;						\
 		fi;							\
 		;;							\
 	esac;								\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-		${SED}	-e "s|@LOCALBASE@|${LOCALBASE}|g"		\
-			-e "s|@X11BASE@|${X11BASE}|g"			\
-			-e "s|@BASENAME@|${BASENAME:Q}|g"		\
+		${SED}	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
 			-e "s|@CAT@|${CAT:Q}|g"				\
-			-e "s|@CP@|${CP:Q}|g"				\
-			-e "s|@DIRNAME@|${DIRNAME:Q}|g"			\
 			-e "s|@ECHO@|${ECHO:Q}|g"			\
-			-e "s|@LIBTOOL@|${LIBTOOL:Q}|g"			\
-			-e "s|@MV@|${MV:Q}|g"				\
-			-e "s|@RM@|${RM:Q}|g"				\
 			-e "s|@SED@|${SED:Q}|g"				\
-			-e "s|@BUILDLINK_LIBTOOL@|${BUILDLINK_LIBTOOL:Q}|g" \
-			-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
-			-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g" \
-			-e "s|@_BLNK_X11PKG_DIR@|${_BLNK_X11PKG_DIR}|g"	\
-			-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
+			-e "s|@TOUCH@|${TOUCH:Q}|g"			\
+			-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"	\
+			-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g" \
 			-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g" \
 			-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g" \
-			-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"	\
 		> ${.TARGET};						\
 	${CHMOD} +x ${.TARGET}
 
@@ -371,7 +502,12 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 
 ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${.ALLSRC} ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
+		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
+		-e "s|@_BLNK_X11PKG_DIR@|${_BLNK_X11PKG_DIR}|g"		\
+		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -417,4 +553,18 @@ ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
 
-.endif	# USE_BUILDLINK2_ONLY
+${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
+		-e "s|@CAT@|${CAT:Q}|g"					\
+		-e "s|@CP@|${CP:Q}|g"					\
+		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
+		-e "s|@ECHO@|${ECHO:Q}|g"				\
+		-e "s|@MV@|${MV:Q}|g"					\
+		-e "s|@RM@|${RM:Q}|g"					\
+		-e "s|@SED@|${SED:Q}|g"					\
+		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
+		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
+		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
