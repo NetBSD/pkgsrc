@@ -1,6 +1,4 @@
 #!/bin/sh
-MOZILLA_FIVE_HOME=@PREFIX@/lib/mozilla
-#LD_LIBRARY_PATH=@PREFIX@/lib/mozilla
+MOZILLA_FIVE_HOME=@PREFIX@/lib/@MOZILLA@
 export MOZILLA_FIVE_HOME
-#export LD_LIBRARY_PATH
-exec @PREFIX@/lib/mozilla/mozilla-bin "$@"
+exec @PREFIX@/lib/@MOZILLA@/mozilla-bin "$@"
