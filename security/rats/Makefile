@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/21 09:44:10 jun Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/06 06:10:50 jun Exp $
 #
 
-DISTNAME=	rats-0.9
+DISTNAME=	rats-1.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.securesw.com/rats/
 
