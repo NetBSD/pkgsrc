@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/04/21 17:34:41 tron Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/21 22:30:11 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -8,7 +8,7 @@ CONFLICTS=	kopete-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 PTHREAD_OPTS+=		require
 
@@ -24,10 +24,12 @@ CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
 CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .endif
 
-.include "../../converters/uulib/buildlink2.mk"
-.include "../../databases/gdbm/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../x11/kdebase3/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../converters/uulib/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../net/openslp/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
