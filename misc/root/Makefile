@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/21 13:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/04 22:34:59 wiz Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -12,6 +12,7 @@ COMMENT=		OO framework for data analysis and visualisation
 BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 
 USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_GMAKE=		YES
 
 ALL_TARGET=		netbsd
