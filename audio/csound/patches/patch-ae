@@ -1,16 +1,54 @@
-$NetBSD: patch-ae,v 1.2 2001/06/29 18:39:03 wiz Exp $
+$NetBSD: patch-ae,v 1.3 2002/03/23 02:36:47 wiz Exp $
 
---- configure.in.orig	Sun Jun  3 18:14:50 2001
-+++ configure.in	Sun Jun  3 18:20:52 2001
-@@ -364,6 +364,7 @@
- 	CSOUND_CONF_MESSAGE(enable the OSS-RTAUDIO driver...)
- 	RTAUDIO_DRIVER=["LINUXaudio.c \${LINUX_DISTRIB_DIR}/OSSrtaudio.c"]
- 	DEFS=["${DEFS} -DOSSRTAUDIO"]
-+	LIBS=["-lossaudio ${LIBS}"]
+--- configure.in.orig	Sun Sep  9 10:54:48 2001
++++ configure.in
+@@ -32,6 +32,7 @@
+ AC_PROG_CC
+ AC_PROG_CXX
+ AC_CANONICAL_HOST
++AC_C_BIGENDIAN
+ 
+ dnl Below here is the result of running autoscan on the csound sources
+ dnl Process this file with autoconf to produce a configure script.
+@@ -345,19 +346,21 @@
+ dnl   [enable_ALSA_driver="no"])dnl
+ 
+ dnl
+-dnl --enable-rtaudio={oss,alsa,esd}	(default=oss)
++dnl --enable-rtaudio={oss,alsa,esd,netbsd}	(default=oss)
+ dnl
+ dnl The oss module has been provided by Steve Kersten {steve@k-hornz.de}
+ dnl The esd module has been provided by Nicola Bernardini {nicb@axnet.it}
+ dnl The alsa module has been provided by Markus Gruber {gruber@eikon.tum.de}
++dnl The netbsd module has been provided by Ben {collver@linuxfreemail.com}
+ dnl
+ dnl
+ AC_ARG_ENABLE(rtaudio,
+-  [  --enable-rtaudio={oss|alsa|esd} enable real-time audio (default: oss)],
++  [  --enable-rtaudio={oss|alsa|esd|netbsd} enable real-time audio (default: oss)],
+   [case "${enable_rtaudio}" in
+     oss) ;;
+     alsa) ;;
+ 	esd) ;;
++	netbsd) ;;
+     *) AC_MSG_ERROR(bad value ${enable_rtaudio} for the real-time audio option) ;;
+    esac],
+   [enable_rtaudio="oss"])dnl
+@@ -384,6 +387,13 @@
+ 	DEFS=["${DEFS} -DESDRTAUDIO"]
  fi
  
- if test "${enable_rtaudio}" = "alsa"
-@@ -613,8 +614,8 @@
++if test "${enable_rtaudio}" = "netbsd"
++then
++	CSOUND_CONF_MESSAGE(enable the netbsd audio driver...)
++	RTAUDIO_DRIVER=[\${LINUX_DISTRIB_DIR}/rtNetBSD.c]
++	DEFS=["${DEFS} -DNETBSDRTAUDIO"]
++fi
++
+ dnl
+ dnl --enable-OSC-opcodes	(default=no)
+ dnl
+@@ -653,8 +663,8 @@
  dnl
  
  case $host in
@@ -21,18 +59,11 @@ $NetBSD: patch-ae,v 1.2 2001/06/29 18:39:03 wiz Exp $
  		;;
  	*)
  		;;
-@@ -648,10 +649,10 @@
- 	changequote(<<, >>)dnl
- 	csound_version_full=`(cat ${version_file}; echo VERSIONSTRING) | ${CPP} - | ${AWK} '/^" v"/ { gsub(/[" v]/,""); print $0; }'`
- 	changequote([, ])dnl
--	csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1 -`
--	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2 -`
--	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3 -`
--	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4 -`
-+	csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1`
-+	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2`
-+	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3`
-+	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4`
+@@ -736,6 +746,7 @@
+ AC_SUBST(LD)dnl
+ AC_SUBST(CSOUND_INSTALLATION_MODE)dnl
+ AC_SUBST(csound_float)dnl
++AC_SUBST(WORDS_BIGENDIAN)dnl
  
- 	CSOUND_CONF_MESSAGE(almost done configuring for csound version ${csound_version_major}.${csound_version_minor}.${csound_patchlevel}.${csound_betalevel}...)
- else
+ AC_OUTPUT(Make.Variables new-src/version.h)
+ CSOUND_CONF_MESSAGE(configure process terminated; you should now run 'make depend; make')
