@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/01/28 11:51:23 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/25 12:45:00 wiz Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -18,6 +18,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 DIST_SUBDIR=	python
 
+USE_BUILDLINK2=	yes
 WRKSRC=		${WRKDIR}/Python-2.0.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
@@ -29,10 +30,9 @@ MAKE_ENV+=	'OPT=${CFLAGS}'
 CONFIGURE_ENV+=	'OPT=${CFLAGS}'
 SCRIPTS_ENV+=	'OPT=${CFLAGS}'
 
-# If Building on NetBSD 1.5, include SSL support
-.if exists(/usr/include/openssl/ssl.h)
-SSLFLAGS=	-DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
-.endif
+SSLFLAGS=	-DUSE_SSL -I${BUILDLINK_PREFIX.openssl}/include/openssl \
+		-L${BUILDLINK_PREFIX.openssl}/lib \
+		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
 
 # Handle the module setup file:
 #   - disable a few broken modules on 64 bit platforms (nothing important)
@@ -47,7 +47,7 @@ MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
 pre-configure:
 	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
 		-e 's,@MODADD@,${MODADD},g' \
-		-e 's,@SSLFLAGS@,${SSLFLAGS},g' \
+		-e 's+@SSLFLAGS@+${SSLFLAGS}+g' \
 		${FILESDIR}/Setup.in >${WRKSRC}/Modules/Setup.in
 	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
 		-e 's,@MODADD@,${MODADD},g' \
@@ -72,4 +72,5 @@ post-install:
 	${RM} ${PREFIX}/bin/python2.0
 	${INSTALL_PROGRAM} ${WRKSRC}/python ${PREFIX}/bin/python2.0
 
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
