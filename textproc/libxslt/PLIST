@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/07 04:50:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/29 07:40:45 martti Exp $
 bin/xslt-config
 bin/xsltproc
-include/breakpoint/breakpoint.h
 include/libexslt/exslt.h
 include/libexslt/exsltconfig.h
 include/libxslt/attributes.h
@@ -26,17 +25,17 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.0
+lib/libexslt.so.7.2
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.7
+lib/libxslt.so.1.9
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
 lib/libxsltbreakpoint.so.1
-lib/libxsltbreakpoint.so.1.7
+lib/libxsltbreakpoint.so.1.8
 lib/xsltConf.sh
 man/man1/xsltproc.1
 man/man4/libexslt.4
@@ -64,4 +63,3 @@ share/doc/html/libxslt/tutorial/libxslttutorial.xml
 @dirrm share/doc/html/libxslt
 @dirrm include/libxslt
 @dirrm include/libexslt
-@dirrm include/breakpoint
