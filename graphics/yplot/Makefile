@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2003/06/02 01:19:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/10 09:06:47 jtb Exp $
 
-DISTNAME=		yplot-1.1.0
-PKGREVISION=		2
+DISTNAME=		yplot-1.1.2
 CATEGORIES=		graphics math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yplot/}
 
@@ -17,10 +16,10 @@ BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
 BROKEN=			Compiling hangs, needs attention.
 .endif
 
-EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
-CONFIGURE_ENV+=		PLPLOT_PREFIX=${PLPLOT_PREFIX}
+CONFIGURE_ENV+=		PLPLOT_PREFIX=${BUILDLINK_PREFIX.plplot}
 EVAL_PREFIX+=		YORICK_PREFIX=yorick
-CONFIGURE_ENV+=		YORICK_CONTRIB_PREFIX=${YORICK_PREFIX}/lib/yorick/1.5
+CONFIGURE_ENV+=		YORICK_HOME=${YORICK_PREFIX}
+CONFIGURE_ENV+=		YORICK_SITE=${YORICK_PREFIX}/share/yorick
 
 GNU_CONFIGURE=		yes
 MAKEFILE=		Makefile.build
@@ -28,5 +27,6 @@ MAKEFILE=		Makefile.build
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_PATCH_SCRIPTS=	parse_documentation.py
 
+.include "../../graphics/plplot/buildlink2.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
