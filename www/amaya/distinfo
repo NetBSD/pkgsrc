@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.12 2004/06/12 14:23:10 cube Exp $
+$NetBSD: distinfo,v 1.13 2005/01/18 16:35:18 adam Exp $
 
-SHA1 (amaya-src-8.5.tgz) = 58d9cc29328883f788c962f623f9c345828cfee6
-Size (amaya-src-8.5.tgz) = 9713795 bytes
+SHA1 (amaya-fullsrc-9.0.tgz) = 1ad9a0bec8667c42f1c142d3b27c7864e814c25c
+Size (amaya-fullsrc-9.0.tgz) = 22913923 bytes
 SHA1 (patch-aa) = daa3b4ad4e00d6e6ca855bb638cc8ec8d2565791
-SHA1 (patch-ab) = 7a3dbdff2acc18202cd31b7516b1f645a1bc0f68
+SHA1 (patch-ab) = 1b86f6d5a6ab785ec3a700ae7f8db5f9a4e3c997
 SHA1 (patch-ac) = 5d9df3fc894f06c981b26d82f216ff223a821954
-SHA1 (patch-ad) = 19a895425342fa5379ed24953cf0c0ce2eda0760
-SHA1 (patch-ah) = 1f164968815f70c9f8b2dbe0516fcc26c6bce776
+SHA1 (patch-ah) = e256bd54229967d95b25dcc3859882e000914d34

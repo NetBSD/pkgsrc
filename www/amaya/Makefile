@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/10/03 00:18:23 tv Exp $
-#
+# $NetBSD: Makefile,v 1.36 2005/01/18 16:35:18 adam Exp $
 
-DISTNAME=	amaya-src-8.5
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+DISTNAME=	amaya-fullsrc-9.0
+PKGNAME=	${DISTNAME:S/-fullsrc//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -15,16 +13,17 @@ HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 
 EXTRACT_ELEMENTS=	Amaya libwww
+WRKSRC=			${WRKDIR}/Amaya/work
 
-WRKSRC=		${WRKDIR}/Amaya/work
-USE_BUILDLINK3=	YES
-USE_X11=	YES
-USE_GNU_TOOLS+=	make
-GNU_CONFIGURE=	YES
-
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 CFLAGS+=		-Dunix
+# link correctly with pkgsrc zlib
+LIBS+=			-Wl,-R${LOCALBASE}/lib
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -35,7 +34,7 @@ post-patch:
 	files="amaya/Makefile.in";					\
 	for file in $${files}; do					\
 		${MV} $${file} $${file}.fixme;				\
-		${SED}	-e "s|\$$(prefix)/Amaya|\$$(prefix)/lib/Amaya|g" \
+		${SED} -e "s|\$$(prefix)/Amaya|\$$(prefix)/lib/Amaya|g" \
 			$${file}.fixme >  $${file};			\
 	done
 
