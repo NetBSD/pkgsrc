@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/30 22:06:00 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/30 22:07:20 itojun Exp $
 
 DISTNAME=		httpd-2_0_15-alpha
 PKGNAME=		apache-2.0.15
@@ -12,6 +12,9 @@ HOMEPAGE=		http://www.apache.org/
 COMMENT=		HTTP (Web) server
 
 CONFLICTS=		apache-*modssl-* apache-* apache6-*
+
+# autodetect
+BUILD_DEFS+=		USE_INET6
 
 GNU_CONFIGURE=		# defined
 USE_GMAKE=		yes
