@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/22 21:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/08 06:10:05 jlam Exp $
 
 .include "Makefile.common"
 
@@ -27,10 +27,6 @@ CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !(defined(_USE_PERL58) && (${_USE_PERL58} == "YES"))
-ONLY_FOR_PLATFORM=	Darwin-*-*
-.endif
 
 MKPIC?=			yes
 

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1028 2002/08/07 15:12:45 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1029 2002/08/08 06:10:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -227,8 +227,7 @@ _PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
 # value of PERL5_REQD (possible user-supplied) so that it is always at least
 # 5.8.0.
 #
-.if (${OPSYS} == "Darwin") || \
-    (defined(_USE_PERL58) && (${_USE_PERL58} == "YES"))
+.if ${OPSYS} == "Darwin"
 _PERL58_REQD?=		5.8.0
 .  for _pattern_ in ${_PERL58_PATTERNS}
 .    if !empty(PERL5_REQD:M${_pattern_})
