@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1483 2004/08/04 06:22:39 minskim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1484 2004/08/04 15:29:13 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -2260,6 +2260,7 @@ do-configure:
 	    INSTALL_DATA="${INSTALL_DATA}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_GAME="${INSTALL_GAME}" \
+	    INSTALL_GAME_DATA="${INSTALL_GAME_DATA}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIG_SHELL} \
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
