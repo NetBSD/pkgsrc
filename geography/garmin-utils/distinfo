@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/09/08 20:47:54 gson Exp $
+$NetBSD: distinfo,v 1.3 2004/12/08 16:28:50 gson Exp $
 
 SHA1 (garmin-utils-2.1.tar.gz) = 4d145034ec60d88000644ec3ed074a6595e0ce14
 Size (garmin-utils-2.1.tar.gz) = 172468 bytes
 SHA1 (patch-aa) = fadc8e68041d468837bfdd3b57f7773ed32603bc
+SHA1 (patch-ab) = 6cc8d41b36e3565e3ccdc1a53800e7f3e06f0845
