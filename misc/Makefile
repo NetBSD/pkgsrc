@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2001/01/20 02:30:21 jtb Exp $
+# $NetBSD: Makefile,v 1.80 2001/01/24 03:53:31 hubertf Exp $
 #
 
     SUBDIR += 9menu
@@ -11,6 +11,7 @@
     SUBDIR += chord
     SUBDIR += cksfv
     SUBDIR += colorls
+    SUBDIR += colortail
     SUBDIR += cowsay
     SUBDIR += dgpsip
     SUBDIR += dialog
