@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/09 16:00:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/12 16:40:02 drochner Exp $
 lib/zope/lib/python/Products/ZWiki/CHANGES.txt
 lib/zope/lib/python/Products/ZWiki/CMF.py
 lib/zope/lib/python/Products/ZWiki/CMF.pyc
@@ -75,26 +75,12 @@ lib/zope/lib/python/Products/ZWiki/locale/fr.po
 lib/zope/lib/python/Products/ZWiki/locale/ga.po
 lib/zope/lib/python/Products/ZWiki/locale/locale.pot
 lib/zope/lib/python/Products/ZWiki/refresh.txt
-lib/zope/lib/python/Products/ZWiki/skins/default/backlinks.dtml
 lib/zope/lib/python/Products/ZWiki/skins/default/backlinks.pt
-lib/zope/lib/python/Products/ZWiki/skins/default/contentspage.dtml
 lib/zope/lib/python/Products/ZWiki/skins/default/contentspage.pt
-lib/zope/lib/python/Products/ZWiki/skins/default/diffform.dtml
 lib/zope/lib/python/Products/ZWiki/skins/default/diffform.pt
-lib/zope/lib/python/Products/ZWiki/skins/default/editform.dtml
 lib/zope/lib/python/Products/ZWiki/skins/default/editform.pt
-lib/zope/lib/python/Products/ZWiki/skins/default/standard_wiki_footer.dtml
-lib/zope/lib/python/Products/ZWiki/skins/default/standard_wiki_header.dtml
-lib/zope/lib/python/Products/ZWiki/skins/default/subscribeform.dtml
 lib/zope/lib/python/Products/ZWiki/skins/default/subscribeform.pt
-lib/zope/lib/python/Products/ZWiki/skins/default/wikipage.zpt
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/editform.pt
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikifolder_edit.py
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikifolder_edit_form.pt
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikipage_footer.pt
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikipage_header.pt
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikipage_icon.gif
-lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf/wikipage_view.pt
+lib/zope/lib/python/Products/ZWiki/skins/default/wikipage.pt
 lib/zope/lib/python/Products/ZWiki/skins/zwiki_plone/backlinks.pt
 lib/zope/lib/python/Products/ZWiki/skins/zwiki_plone/contentspage.pt
 lib/zope/lib/python/Products/ZWiki/skins/zwiki_plone/diffform.pt
@@ -118,7 +104,6 @@ lib/zope/lib/python/Products/ZWiki/tests/testZWikiWeb.py
 lib/zope/lib/python/Products/ZWiki/version.txt
 @dirrm lib/zope/lib/python/Products/ZWiki/tests
 @dirrm lib/zope/lib/python/Products/ZWiki/skins/zwiki_plone
-@dirrm lib/zope/lib/python/Products/ZWiki/skins/zwiki_cmf
 @dirrm lib/zope/lib/python/Products/ZWiki/skins/default
 @dirrm lib/zope/lib/python/Products/ZWiki/skins
 @dirrm lib/zope/lib/python/Products/ZWiki/locale
