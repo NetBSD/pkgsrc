@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/17 15:45:49 minskim Exp $
 
 PKGNAME=		tcl-postgresql-${BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Tcl interface to PostgreSQL
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../postgresql/Makefile.common"
 
@@ -22,7 +22,7 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|#.*||" ${FILESDIR}/man.tcl`
 
-.include "../postgresql-lib/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../postgresql-lib/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

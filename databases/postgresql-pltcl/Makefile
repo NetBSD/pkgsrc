@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/17 15:45:49 minskim Exp $
 
 PKGNAME=		postgresql-pltcl-${BASE_VERS}
 PKGREVISION=		1
@@ -6,7 +6,7 @@ COMMENT=		PL/Tcl procedural language for the PostgreSQL backend
 
 DEPENDS+=		postgresql-server>=${BASE_VERS}:../../databases/postgresql-server
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../postgresql/Makefile.common"
 
@@ -18,7 +18,7 @@ TCLSH=			${LOCALBASE}/bin/tclsh
 
 BUILD_DIRS=		${WRKSRC}/src/pl/tcl
 
-.include "../postgresql-lib/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../postgresql-lib/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
