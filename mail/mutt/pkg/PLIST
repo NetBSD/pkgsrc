@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2001/02/26 20:19:46 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2001/06/20 07:10:59 jlam Exp $
 bin/mutt
 bin/muttbug
 bin/pgpewrap
 bin/pgpring
-etc/Muttrc
-etc/mime.types
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
 man/man5/muttrc.5
@@ -31,9 +29,11 @@ share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/samples/Mush.rc
+share/doc/mutt/samples/Muttrc
 share/doc/mutt/samples/Pine.rc
 share/doc/mutt/samples/Tin.rc
 share/doc/mutt/samples/gpg.rc
+share/doc/mutt/samples/mime.types
 share/doc/mutt/samples/pgp2.rc
 share/doc/mutt/samples/pgp5.rc
 share/doc/mutt/samples/pgp6.rc
@@ -59,6 +59,7 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
+share/mutt/.directory
 @dirrm share/mutt
 @dirrm share/doc/mutt/samples
 @dirrm share/doc/mutt/html
