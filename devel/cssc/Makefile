@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/29 11:57:59 seb Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 10:25:04 jmc Exp $
 #
 
 DISTNAME=	CSSC-0.13alpha.pl1a
@@ -15,5 +15,7 @@ BUILD_DEPENDS+=		gtexinfo=>4.0:../../devel/gtexinfo
 WRKSRC=	${WRKDIR}/CSSC-0.13alpha.pl1
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-binary
+
+PATH= ${LOCALBASE}/bin:$$PATH
 
 .include "../../mk/bsd.pkg.mk"
