@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/10 00:11:01 mycroft Exp $
 bin/expect
 include/expect.h
 include/expect_comm.h
 include/expect_tcl.h
 include/tcldbg.h
-lib/tcl/expect5.33/pkgIndex.tcl
-lib/libexpect533.a
-lib/libexpect533.la
-lib/libexpect533.so
-lib/libexpect533.so.1
-lib/libexpect533.so.1.0
+lib/tcl/expect5.38/pkgIndex.tcl
+lib/libexpect538.a
+lib/libexpect538.la
+lib/libexpect538.so
+lib/libexpect538.so.1
+lib/libexpect538.so.1.0
 man/man1/expect.1.gz
 man/man3/libexpect.3.gz
 share/examples/tcl/expect/autoexpect
@@ -27,6 +27,8 @@ share/examples/tcl/expect/kibitz.1
 share/examples/tcl/expect/lpunlock
 share/examples/tcl/expect/mkpasswd
 share/examples/tcl/expect/mkpasswd.1
+share/examples/tcl/expect/multixterm
+share/examples/tcl/expect/multixterm.1
 share/examples/tcl/expect/passmass
 share/examples/tcl/expect/passmass.1
 share/examples/tcl/expect/rftp
@@ -42,7 +44,7 @@ share/examples/tcl/expect/weather
 share/examples/tcl/expect/xkibitz
 share/examples/tcl/expect/xkibitz.1
 share/examples/tcl/expect/xpstat
-@dirrm lib/tcl/expect5.33
+@dirrm lib/tcl/expect5.38
 @unexec ${RMDIR} %D/lib/tcl 2>/dev/null || ${TRUE}
 @dirrm share/examples/tcl/expect
 @unexec ${RMDIR} %D/share/examples/tcl 2>/dev/null || ${TRUE}
