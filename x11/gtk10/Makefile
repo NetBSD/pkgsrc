@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/11/24 21:39:08 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/01/03 15:20:52 augustss Exp $
 
 DISTNAME=	gtk+-1.0.6
 CATEGORIES=	x11
@@ -9,8 +9,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.0/ \
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gtk.org/
 
-CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.1 gtk+-1.1.2 gtk+-1.1.3 \
-		glib-1.1.2 glib-1.1.3 glib-1.1.4
+CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.* glib-1.1.*
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
