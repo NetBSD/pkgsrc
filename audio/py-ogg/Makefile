@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/15 01:49:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/12 23:15:01 salo Exp $
 #
 
 DISTNAME=		pyogg-1.3
@@ -18,6 +18,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${PYTHONBIN} config_unix.py
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
-.include "../../audio/libogg/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/29 21:01:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/12 23:22:59 salo Exp $
 #
 
 DISTNAME=		vlc-0.7.1
@@ -69,7 +69,6 @@ PLIST_SUBST+=	DVDCSS="@comment "
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
@@ -82,6 +81,7 @@ PLIST_SUBST+=	DVDCSS="@comment "
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/12/08 14:42:44 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/04/12 23:15:01 salo Exp $
 
 .if !defined(FLAC_BUILDLINK2_MK)
 FLAC_BUILDLINK2_MK=	# defined
@@ -18,7 +18,7 @@ BUILDLINK_FILES.flac+=	lib/libFLAC.*
 BUILDLINK_FILES.flac+=	lib/libOggFLAC++.*
 BUILDLINK_FILES.flac+=	lib/libOggFLAC.*
 
-.include "../../audio/libogg/buildlink2.mk"
+.include "../../multimedia/libogg/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	flac-buildlink
 

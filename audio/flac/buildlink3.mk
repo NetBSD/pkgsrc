@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/04/12 23:15:01 salo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FLAC_BUILDLINK3_MK:=	${FLAC_BUILDLINK3_MK}+
@@ -15,6 +15,6 @@ BUILDLINK_DEPENDS.flac+=	flac>=1.1.0nb1
 BUILDLINK_PKGSRCDIR.flac?=	../../audio/flac
 .endif	# FLAC_BUILDLINK3_MK
 
-.include "../../audio/libogg/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

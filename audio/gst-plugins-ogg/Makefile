@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/06 09:41:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/12 23:15:01 salo Exp $
 #
 
 GST_PLUGINS_NAME=	ogg
@@ -6,5 +6,6 @@ GST_PLUGINS_DIR=	ext/ogg
 
 .include "../../multimedia/gst-plugins/Makefile.common"
 
-.include "../../audio/libogg/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

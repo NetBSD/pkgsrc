@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/15 15:47:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/12 23:15:01 salo Exp $
 #
 
 DISTNAME=		pyvorbis-1.3
@@ -19,7 +19,8 @@ CONFIGURE_SCRIPT=	${PYTHONBIN} config_unix.py
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
 .include "../../audio/py-ogg/buildlink3.mk"
-.include "../../audio/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
