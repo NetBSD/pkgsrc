@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE.module,v 1.1.1.1 2004/10/29 20:31:54 jdolecek Exp $
+
+To enable this module, add the following to ${PKG_SYSCONFDIR}/php.ini:
+
+    extension=${MODNAME}.so
+
+and make sure extension_dir points to the dir where ${MODNAME}.so is.
+
+Then restart your PHP5-enabled HTTP server to load this module.
+===========================================================================
