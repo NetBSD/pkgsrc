@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2004/11/01 21:36:45 jdolecek Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/11/27 12:52:59 jdolecek Exp $
 
 .include "../../lang/php/phpversion.mk"
 
@@ -10,4 +10,4 @@ IS_BUILTIN.pear-netsocket=	no
 
 USE_BUILTIN.pear-netsocket?=	${IS_BUILTIN.pear-netsocket}
 
-BUILDLINK_VARS+=        IS_BUILTIN.openssl
+BUILDLINK_VARS+=        IS_BUILTIN.pear-netsocket
