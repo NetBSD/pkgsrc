@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/21 05:58:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/15 01:21:54 jlam Exp $
 
 DISTNAME=	slib2c8
 PKGNAME=	slib-2c8
@@ -10,25 +10,20 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
-
-WRKSRC=		${WRKDIR}/slib
-EXTRACT_CMD=	${LOCALBASE}/bin/unzip -uLa \
-			${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
-
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
+WRKSRC=		${WRKDIR}/slib
 
-SLIBDIR=	share/slib
-DOCDIR=		share/doc/slib
+SLIBDIR=	${PREFIX}/share/slib
+DOCDIR=		${PREFIX}/share/doc/slib
 
 INFO_FILES=	slib.info
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${SLIBDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} *.scm *.init ${PREFIX}/${SLIBDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${SLIBDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} *.scm *.init ${SLIBDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/slib.info ${PREFIX}/info
 
 .include "../../mk/bsd.pkg.mk"
