@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8315 2004/12/05 23:44:10 recht Exp $
+$NetBSD: CHANGES,v 1.8316 2004/12/06 00:29:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5820,3 +5820,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cue to 20041025nb1 [cube 2004-12-05]
 	Added python24-2.4 [recht 2004-12-05]
 	Added python24-pth-2.4 [recht 2004-12-05]
+	Updated getmail to 4.2.4 [schmonz 2004-12-06]
