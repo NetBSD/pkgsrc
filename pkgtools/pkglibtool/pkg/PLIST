@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 1998/10/02 14:46:10 tv Exp $
+bin/pkglibtool
