@@ -1,60 +1,467 @@
-$NetBSD: patch-aa,v 1.2 2000/02/03 19:33:01 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2000/05/08 17:13:20 drochner Exp $
 
---- pdflib/Makefile.in.orig	Tue Aug  3 14:59:53 1999
-+++ pdflib/Makefile.in	Wed Feb  2 21:31:11 2000
-@@ -8,7 +8,7 @@
- srcdir = @srcdir@
+--- configure.orig	Mon Feb 28 21:14:08 2000
++++ configure	Sat Apr 29 12:59:17 2000
+@@ -1938,451 +1938,6 @@
+ fi
  
- EXE	= @EXE@
--OBJ	= @OBJ@
-+OBJ	= lo
- AR	= @AR@
- CC	= @CC@
- RM      = @RM@
-@@ -30,16 +30,16 @@
- LDSHARED = @LDSHARED@
  
- # Either pdflib.a or pdflib.so, selected by configure script
--PDFLIB		= @PDFLIB@
-+PDFLIB		= libpdf.la
- PDFLIB_STATIC	= @PDFLIB_STATIC@
--PDFLIB_SHARED	= @PDFLIB_SHARED@
-+PDFLIB_SHARED	= libpdf.la
+-# Check for any special flags to pass to ltconfig.
+-libtool_flags="--cache-file=$cache_file"
+-test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+-test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+-test "$enable_fast_install" = no && libtool_flags="$libtool_flags --disable-fast-install"
+-test "$ac_cv_prog_gcc" = yes && libtool_flags="$libtool_flags --with-gcc"
+-test "$ac_cv_prog_gnu_ld" = yes && libtool_flags="$libtool_flags --with-gnu-ld"
+-libtool_flags="$libtool_flags --enable-dlopen"
+-libtool_flags="$libtool_flags --enable-win32-dll"
+-# Check whether --enable-libtool-lock or --disable-libtool-lock was given.
+-if test "${enable_libtool_lock+set}" = set; then
+-  enableval="$enable_libtool_lock"
+-  :
+-fi
+-
+-test "x$enable_libtool_lock" = xno && libtool_flags="$libtool_flags --disable-lock"
+-test x"$silent" = xyes && libtool_flags="$libtool_flags --silent"
+-
+-# Check whether --with-pic or --without-pic was given.
+-if test "${with_pic+set}" = set; then
+-  withval="$with_pic"
+-  pic_mode="$withval"
+-else
+-  pic_mode=default
+-fi
+-
+-test x"$pic_mode" = xyes && libtool_flags="$libtool_flags --prefer-pic"
+-test x"$pic_mode" = xno && libtool_flags="$libtool_flags --prefer-non-pic"
+-
+-# Some flags need to be propagated to the compiler or linker for good
+-# libtool support.
+-case "$lt_target" in
+-*-*-irix6*)
+-  # Find out which ABI we are using.
+-  echo '#line 1976 "configure"' > conftest.$ac_ext
+-  if { (eval echo configure:1977: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-    case "`/usr/bin/file conftest.o`" in
+-    *32-bit*)
+-      LD="${LD-ld} -32"
+-      ;;
+-    *N32*)
+-      LD="${LD-ld} -n32"
+-      ;;
+-    *64-bit*)
+-      LD="${LD-ld} -64"
+-      ;;
+-    esac
+-  fi
+-  rm -rf conftest*
+-  ;;
+-
+-*-*-sco3.2v5*)
+-  # On SCO OpenServer 5, we need -belf to get full-featured binaries.
+-  SAVE_CFLAGS="$CFLAGS"
+-  CFLAGS="$CFLAGS -belf"
+-  echo $ac_n "checking whether the C compiler needs -belf""... $ac_c" 1>&6
+-echo "configure:1998: checking whether the C compiler needs -belf" >&5
+-if eval "test \"`echo '$''{'lt_cv_cc_needs_belf'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 2003 "configure"
+-#include "confdefs.h"
+-
+-int main() {
+-
+-; return 0; }
+-EOF
+-if { (eval echo configure:2010: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  lt_cv_cc_needs_belf=yes
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  lt_cv_cc_needs_belf=no
+-fi
+-rm -f conftest*
+-fi
+-
+-echo "$ac_t""$lt_cv_cc_needs_belf" 1>&6
+-  if test x"$lt_cv_cc_needs_belf" != x"yes"; then
+-    # this is probably gcc 2.8.0, egcs 1.0 or newer; no need for -belf
+-    CFLAGS="$SAVE_CFLAGS"
+-  fi
+-  ;;
+-
+-*-*-cygwin* | *-*-mingw*)
+-  # Extract the first word of "${ac_tool_prefix}dlltool", so it can be a program name with args.
+-set dummy ${ac_tool_prefix}dlltool; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2033: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_DLLTOOL'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$DLLTOOL"; then
+-  ac_cv_prog_DLLTOOL="$DLLTOOL" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_DLLTOOL="${ac_tool_prefix}dlltool"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-fi
+-fi
+-DLLTOOL="$ac_cv_prog_DLLTOOL"
+-if test -n "$DLLTOOL"; then
+-  echo "$ac_t""$DLLTOOL" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-
+-if test -z "$ac_cv_prog_DLLTOOL"; then
+-if test -n "$ac_tool_prefix"; then
+-  # Extract the first word of "dlltool", so it can be a program name with args.
+-set dummy dlltool; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2065: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_DLLTOOL'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$DLLTOOL"; then
+-  ac_cv_prog_DLLTOOL="$DLLTOOL" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_DLLTOOL="dlltool"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-  test -z "$ac_cv_prog_DLLTOOL" && ac_cv_prog_DLLTOOL="false"
+-fi
+-fi
+-DLLTOOL="$ac_cv_prog_DLLTOOL"
+-if test -n "$DLLTOOL"; then
+-  echo "$ac_t""$DLLTOOL" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-else
+-  DLLTOOL="false"
+-fi
+-fi
+-
+-  # Extract the first word of "${ac_tool_prefix}as", so it can be a program name with args.
+-set dummy ${ac_tool_prefix}as; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2100: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_AS'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$AS"; then
+-  ac_cv_prog_AS="$AS" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_AS="${ac_tool_prefix}as"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-fi
+-fi
+-AS="$ac_cv_prog_AS"
+-if test -n "$AS"; then
+-  echo "$ac_t""$AS" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-
+-if test -z "$ac_cv_prog_AS"; then
+-if test -n "$ac_tool_prefix"; then
+-  # Extract the first word of "as", so it can be a program name with args.
+-set dummy as; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2132: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_AS'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$AS"; then
+-  ac_cv_prog_AS="$AS" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_AS="as"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-  test -z "$ac_cv_prog_AS" && ac_cv_prog_AS="false"
+-fi
+-fi
+-AS="$ac_cv_prog_AS"
+-if test -n "$AS"; then
+-  echo "$ac_t""$AS" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-else
+-  AS="false"
+-fi
+-fi
+-
+-  # Extract the first word of "${ac_tool_prefix}objdump", so it can be a program name with args.
+-set dummy ${ac_tool_prefix}objdump; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2167: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_OBJDUMP'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$OBJDUMP"; then
+-  ac_cv_prog_OBJDUMP="$OBJDUMP" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_OBJDUMP="${ac_tool_prefix}objdump"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-fi
+-fi
+-OBJDUMP="$ac_cv_prog_OBJDUMP"
+-if test -n "$OBJDUMP"; then
+-  echo "$ac_t""$OBJDUMP" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-
+-if test -z "$ac_cv_prog_OBJDUMP"; then
+-if test -n "$ac_tool_prefix"; then
+-  # Extract the first word of "objdump", so it can be a program name with args.
+-set dummy objdump; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:2199: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_OBJDUMP'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$OBJDUMP"; then
+-  ac_cv_prog_OBJDUMP="$OBJDUMP" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_OBJDUMP="objdump"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-  test -z "$ac_cv_prog_OBJDUMP" && ac_cv_prog_OBJDUMP="false"
+-fi
+-fi
+-OBJDUMP="$ac_cv_prog_OBJDUMP"
+-if test -n "$OBJDUMP"; then
+-  echo "$ac_t""$OBJDUMP" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-else
+-  OBJDUMP="false"
+-fi
+-fi
+-
+-
+-  # recent cygwin and mingw systems supply a stub DllMain which the user
+-  # can override, but on older systems we have to supply one
+-  echo $ac_n "checking if libtool should supply DllMain function""... $ac_c" 1>&6
+-echo "configure:2235: checking if libtool should supply DllMain function" >&5
+-if eval "test \"`echo '$''{'lt_cv_need_dllmain'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 2240 "configure"
+-#include "confdefs.h"
+-
+-int main() {
+-extern int __attribute__((__stdcall__)) DllMain(void*, int, void*);
+-      DllMain (0, 0, 0);
+-; return 0; }
+-EOF
+-if { (eval echo configure:2248: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  lt_cv_need_dllmain=yes
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  lt_cv_need_dllmain=no
+-fi
+-rm -f conftest*
+-fi
+-
+-echo "$ac_t""$lt_cv_need_dllmain" 1>&6
+-
+-  case "$lt_target/$CC" in
+-  *-*-cygwin*/gcc*-mno-cygwin*|*-*-mingw*)
+-    # old mingw systems require "-dll" to link a DLL, while more recent ones
+-    # require "-mdll"
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="$CFLAGS -mdll"
+-    echo $ac_n "checking how to link DLLs""... $ac_c" 1>&6
+-echo "configure:2269: checking how to link DLLs" >&5
+-if eval "test \"`echo '$''{'lt_cv_cc_dll_switch'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 2274 "configure"
+-#include "confdefs.h"
+-
+-int main() {
+-
+-; return 0; }
+-EOF
+-if { (eval echo configure:2281: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  lt_cv_cc_dll_switch=-mdll
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  lt_cv_cc_dll_switch=-dll
+-fi
+-rm -f conftest*
+-fi
+-
+-echo "$ac_t""$lt_cv_cc_dll_switch" 1>&6
+-    CFLAGS="$SAVE_CFLAGS" ;;
+-  *-*-cygwin*)
+-    # cygwin systems need to pass --dll to the linker, and not link
+-    # crt.o which will require a WinMain@16 definition.
+-    lt_cv_cc_dll_switch="-Wl,--dll -nostartfiles" ;;
+-  esac
+-  ;;
+-  
+-esac
+-
+-
+-# Save cache, so that ltconfig can load it
+-cat > confcache <<\EOF
+-# This file is a shell script that caches the results of configure
+-# tests run on this system so they can be shared between configure
+-# scripts and configure runs.  It is not useful on other systems.
+-# If it contains results you don't want to keep, you may remove or edit it.
+-#
+-# By default, configure uses ./config.cache as the cache file,
+-# creating it if it does not exist already.  You can give configure
+-# the --cache-file=FILE option to use a different cache file; that is
+-# what configure does when it calls configure scripts in
+-# subdirectories, so they share the cache.
+-# Giving --cache-file=/dev/null disables caching, for debugging configure.
+-# config.status only pays attention to the cache file if you give it the
+-# --recheck option to rerun configure.
+-#
+-EOF
+-# The following way of writing the cache mishandles newlines in values,
+-# but we know of no workaround that is simple, portable, and efficient.
+-# So, don't put newlines in cache variables' values.
+-# Ultrix sh set writes to stderr and can't be redirected directly,
+-# and sets the high bit in the cache file unless we assign to the vars.
+-(set) 2>&1 |
+-  case `(ac_space=' '; set | grep ac_space) 2>&1` in
+-  *ac_space=\ *)
+-    # `set' does not quote correctly, so add quotes (double-quote substitution
+-    # turns \\\\ into \\, and sed turns \\ into \).
+-    sed -n \
+-      -e "s/'/'\\\\''/g" \
+-      -e "s/^\\([a-zA-Z0-9_]*_cv_[a-zA-Z0-9_]*\\)=\\(.*\\)/\\1=\${\\1='\\2'}/p"
+-    ;;
+-  *)
+-    # `set' quotes correctly as required by POSIX, so do not add quotes.
+-    sed -n -e 's/^\([a-zA-Z0-9_]*_cv_[a-zA-Z0-9_]*\)=\(.*\)/\1=${\1=\2}/p'
+-    ;;
+-  esac >> confcache
+-if cmp -s $cache_file confcache; then
+-  :
+-else
+-  if test -w $cache_file; then
+-    echo "updating cache $cache_file"
+-    cat confcache > $cache_file
+-  else
+-    echo "not updating unwritable cache $cache_file"
+-  fi
+-fi
+-rm -f confcache
+-
+-
+-# Actually configure libtool.  ac_aux_dir is where install-sh is found.
+-AR="$AR" CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+-FILE="$FILE" LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+-LN_S="$LN_S" NM="$NM" RANLIB="$RANLIB" STRIP="$STRIP" \
+-AS="$AS" DLLTOOL="$DLLTOOL" OBJDUMP="$OBJDUMP" \
+-objext="$OBJEXT" exeext="$EXEEXT" reload_flag="$reload_flag" \
+-deplibs_check_method="$deplibs_check_method" file_magic_cmd="$file_magic_cmd" \
+-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+-$libtool_flags --no-verify --build="$build" $ac_aux_dir/ltmain.sh $lt_target \
+-|| { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
+-# Reload cache, that may have been modified by ltconfig
+-if test -r "$cache_file"; then
+-  echo "loading cache $cache_file"
+-  . $cache_file
+-else
+-  echo "creating cache $cache_file"
+-  > $cache_file
+-fi
+-
+-
+-# This can be used to rebuild libtool when needed
+-LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+-
+-# Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+-
+-# Redirect the config.log output again, so that the ltconfig log is not
+-# clobbered by the next message.
+-exec 5>>./config.log
+-
+-
+-
  
- CFLAGS = -c @DEFS@ @DEFINES@ @CCSHARED@ $(TIFFINC) $(ZLIBINC)
  
--.SUFFIXES: .c
-+.SUFFIXES: .lo
  
--.c.o:
--	$(CC) $(CFLAGS) $(DEFINES) $<
-+.c.lo:
-+	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(DEFINES) $<
+@@ -3897,10 +3452,6 @@
+ BINDINGS_UNINSTALL=""
+ BINDINGS_TEST="pdflib_c_test"
  
- SRC	= \
- 	$(srcdir)/p_afmparse.c	\
-@@ -86,7 +86,8 @@
+-
+-if ${CONFIG_SHELL-/bin/sh} ./libtool --features | grep "disable shared" >/dev/null; then
+-    WITH_SHARED=no
+-fi
  
- $(PDFLIB_SHARED):	$(OBJS)
- 	$(RM) $(PDFLIB_STATIC) $(PDFLIB_SHARED)
--	$(LDSHARED) -o $(PDFLIB_SHARED) $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} -o $(PDFLIB_SHARED) $(OBJS) \
-+		-rpath ${prefix}/lib -version-info 2:1
- 
- clean:
- 	-$(RM) $(OBJS) $(PDFLIB_STATIC) $(PDFLIB_SHARED)
-@@ -96,13 +97,7 @@
- 
- install: $(PDFLIB)
- 	$(INSTALL) pdflib.h $(includedir)
--	$(INSTALL) $(PDFLIB) $(libdir)
--	cd $(libdir);						\
--	if test $(PDFLIB) != $(PDFLIB_STATIC); then		\
--		(ldconfig || true)  >/dev/null 2>&1; 		\
--	else							\
--		$(RANLIB) $(libdir)/$(PDFLIB_STATIC);		\
--        fi
-+	${LIBTOOL} --mode=install $(INSTALL) $(PDFLIB) $(libdir)
- 
- uninstall:
- 	-$(RM) $(includedir)/pdflib.h
+ if test "$WITH_SHARED" = "no" ; then
+     WITH_JAVA=no;
