@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/23 04:20:23 hubertf Exp $
+bin/get_ds7
+lib/perl5/site_perl/ds7_lib.pm
+share/doc/get_ds7/README
+share/doc/get_ds7/README.english
