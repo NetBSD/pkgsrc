@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/13 18:40:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/19 19:47:24 nathanw Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -68,6 +68,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/LPRng
 	${PAX}	-rzf ${DISTDIR}/${LPRNG_DOC} \
 		-s "#^${DISTNAME:S/-/_DOC-/}/#${PREFIX}/share/doc/LPRng/#" \
-		*.gif *.html *.ps *.txt
+		'*.gif' '*.html' '*.ps' '*.txt'
 
 .include "../../mk/bsd.pkg.mk"
