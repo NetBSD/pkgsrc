@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/27 12:52:45 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/28 21:45:27 rh Exp $
 # FreeBSD Id: Makefile,v 1.3 1999/02/23 22:12:30 billf Exp
 #
 
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://bero.x5.net/pub/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.landfield.com/wu-ftpd/
 
-BROKEN=		"superceded by wu-ftpd package"
+IGNORE=		"superceded by wu-ftpd package"
 
 CONFLICTS+=	wu-ftpd-*
 
