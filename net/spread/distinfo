@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+
+SHA1 (spread-src-3.17.0.tar.gz) = 1d9d431583ae8692e07f871ae0f4d8f1cb3e4b41
+Size (spread-src-3.17.0.tar.gz) = 285740 bytes
+SHA1 (patch-aa) = f828aee668893b12a384eed3d762cbbc26093a59
+SHA1 (patch-ba) = 90f2896dc62627772a05c06add99c59a55e91c88
+SHA1 (patch-bb) = efd9b08d775542622ce35265e2b72d655b5ca00f
+SHA1 (patch-bc) = d3b0e7e7841da86a8eae81eab691977c8d128743
+SHA1 (patch-bd) = 68b2958ddbd02814e857de19f958f8311ea546f1
