@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/10 08:21:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/17 03:23:45 simonb Exp $
 include/mad.h
 lib/libmad.a
 lib/libmad.la
 lib/libmad.so
 lib/libmad.so.2
 lib/libmad.so.2.0
+lib/pkgconfig/mad.pc
