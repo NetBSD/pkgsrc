@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1027 2002/08/06 06:11:12 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1028 2002/08/07 15:12:45 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -387,7 +387,7 @@ INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
-INTERACTIVE_COOKIE=	${WRKDIR}/.interactive_stage
+INTERACTIVE_COOKIE=	.interactive_stage
 NULL_COOKIE=		${WRKDIR}/.null
 
 # New message digest defs
