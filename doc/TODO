@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2828 2005/01/04 15:21:59 adam Exp $
+$NetBSD: TODO,v 1.2829 2005/01/04 15:30:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ Suggested package updates
 	o dinotrace-9.2a
 	o dirac-0.5.0
 	o dirdiff-2.0
-	o dirmngr-0.9.0
 	o distcc-2.18.3
 	o dmalloc-5.4.2
 	o dnstop-20040309
@@ -562,6 +561,7 @@ Suggested package updates
 	o gsed-4.1.2
 	o gtar-1.15.1
 	o gtetrinet-0.7.8
+	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
