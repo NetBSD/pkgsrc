@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/07 11:23:15 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/10 01:27:44 hubertf Exp $
 #
 
 .if !defined(MOZILLA_BUILDLINK2_MK)
@@ -70,6 +70,7 @@ BUILDLINK_FILES.mozilla+=	include/mozilla/mailnews/MailNewsTypes2.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mime/*.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mimeemitter/*.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mimetype/*.h
+BUILDLINK_FILES.mozilla+=	include/mozilla/typeaheadfind/*.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mng/*.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mork/*.h
 BUILDLINK_FILES.mozilla+=	include/mozilla/mozldap/*.h
