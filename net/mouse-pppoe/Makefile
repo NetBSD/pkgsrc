@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/27 17:41:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/31 11:14:30 zuntum Exp $
 
 DISTNAME=		pppoe.20000912
 PKGNAME=		mouse-${DISTNAME:S/./-/}nb1
@@ -11,7 +11,7 @@ COMMENT=		derMouse's PPP over Ethernet program
 NO_WRKSUBDIR=		yes
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} -O2 -o pppoe pppoe.c)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o pppoe pppoe.c)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pppoe ${PREFIX}/sbin/mouse-pppoe

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/31 11:14:31 zuntum Exp $
 #
 
 DISTNAME=	procps-2.0.6
@@ -11,7 +11,7 @@ COMMENT=	Terminal version of xload
 
 do-build:
 	cd ${WRKSRC} ; \
-	${CC} ${CFRLAGS} tload.c -o tload
+	${CC} ${CFLAGS} tload.c -o tload
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tload ${PREFIX}/bin
