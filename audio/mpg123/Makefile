@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/02/10 09:32:47 tron Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/07 22:14:09 salo Exp $
 
 PKGNAME=	mpg123-${MPG123_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio
 
 CONFLICTS+=	mpg123-nas-[0-9]*

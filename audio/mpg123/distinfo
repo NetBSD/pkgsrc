@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/03/17 04:49:48 danw Exp $
+$NetBSD: distinfo,v 1.18 2004/09/07 22:14:09 salo Exp $
 
 SHA1 (mpg123/mpg123-0.59r.tar.gz) = c32fe242f4506d218bd19a51a4034da9fdc79493
 Size (mpg123/mpg123-0.59r.tar.gz) = 159028 bytes
@@ -21,3 +21,4 @@ SHA1 (patch-an) = 08917e1825adcfd870bb2c61ae865339da7c45ef
 SHA1 (patch-ao) = 40961a43cc3dbebf71deee1c240907896d297304
 SHA1 (patch-ap) = b35e7f6739a8b4979412793c7b3f2f7f5a9f15a7
 SHA1 (patch-aq) = ea443c1d45d856f360d2ccba3e5e2d058ac65007
+SHA1 (patch-ar) = 6238d6f2ff3f3abf4fd47bc36edcf6696d76fea4
