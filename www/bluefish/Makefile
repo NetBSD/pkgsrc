@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/28 14:40:40 wulf Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/04 17:55:40 wiz Exp $
 #
 
 DISTNAME=	bluefish-0.6
@@ -10,17 +10,16 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://bluefish.openoffice.nl/
 
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
-DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	weblint-*:../../www/weblint
 
 USE_X11BASE=	# defined
 USE_GMAKE=	# defined
+USE_LIBINTL=	# defined
 
 GNU_CONFIGURE=	# defined
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=	-I${LOCALBASE}/include
 
 HTMLDIR=	${PREFIX}/share/doc/html/bluefish
 
