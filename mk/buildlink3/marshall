@@ -1,13 +1,23 @@
-# $NetBSD: marshall,v 1.2 2003/09/02 07:00:00 jlam Exp $
+# $NetBSD: marshall,v 1.3 2003/10/03 19:40:55 jlam Exp $
+#
+case $arg in
 #
 # Merge "-Wl,--rpath -Wl,/path/to/dir" into a single argument
 # "-Wl,--rpath,/path/to/dir" so that we can look it up in the cache.
 #
-case $arg in
 -Wl,-rpath|-Wl,-rpath-link|\
 -Wl,--rpath|-Wl,--rpath-link)
 	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
 	arg="$arg,$nextarg"
 	shift
+	;;
+#
+# Darwin's special GCC uses "-install_name /path/shlib" to indicate
+# the final installed location for the named shared library, and we
+# need to protect the full path from "/path/shlib" -> "-L/path -lshlib"
+# transformation.
+#
+-install_name)
+	skip=1
 	;;
 esac
