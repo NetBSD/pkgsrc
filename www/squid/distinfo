@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.9 2002/02/19 03:57:40 jmc Exp $
+$NetBSD: distinfo,v 1.10 2002/02/22 10:07:38 tron Exp $
 
-SHA1 (squid-2.4.STABLE3-src.tar.gz) = c388825d57998a80f2733a60d42ebe4b0bface49
-Size (squid-2.4.STABLE3-src.tar.gz) = 1081040 bytes
-SHA1 (squid-2.4.STABLE3-SNMP_memory_leaks.patch) = 9e59f05401295c354da96a254e020d74ad2d369f
-Size (squid-2.4.STABLE3-SNMP_memory_leaks.patch) = 10781 bytes
-SHA1 (squid-2.4.STABLE3-ftp_coredump.patch) = d01d4fbd11bd0d2a2380a714e3e608ac8ae25e2b
-Size (squid-2.4.STABLE3-ftp_coredump.patch) = 8732 bytes
-SHA1 (squid-2.4.STABLE3-htcp_off.patch) = 310160da38c5b006d756ec75938effcf0114ccb2
-Size (squid-2.4.STABLE3-htcp_off.patch) = 1014 bytes
+SHA1 (squid-2.4.STABLE4-src.tar.gz) = 417cafe2384e64c454d4e2d3ab129c26efa6b0cc
+Size (squid-2.4.STABLE4-src.tar.gz) = 1080180 bytes
 SHA1 (patch-aa) = d56966fabb9477ec1f4db2b91b1ed1e4be35a952
 SHA1 (patch-ab) = afb0c443c708d03fc7ab39120ae9a3c68d9e9b88
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
