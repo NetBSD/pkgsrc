@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/19 05:49:40 jun Exp $
+--- Makefile	2001/02/16 00:51:42	1.1
++++ Makefile	2001/02/16 00:52:30
+@@ -29,6 +29,8 @@
+ ARC_DIR = $(ARC_DIR_PREFIX)/flim/flim-$(API)
+ SEMI_ARC_DIR = $(ARC_DIR_PREFIX)/semi/semi-1.14-for-flim-$(API)
+ 
++all: elc
++
+ elc:
+ 	$(EMACS) $(FLAGS) -f compile-flim $(PREFIX) $(LISPDIR) \
+ 		$(VERSION_SPECIFIC_LISPDIR)
