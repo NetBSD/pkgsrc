@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/15 20:35:57 agc Exp $
+
+--- Makefile.orig	Sat Jul  1 10:48:50 2000
++++ Makefile	Sun Apr  1 16:23:07 2001
+@@ -12,7 +12,7 @@
+ INCLUDES += -I./libtu/include $(X11_INCLUDES)
+ DEFINES += -DPREFIX=\"$(PREFIX)\"
+ CFLAGS += $(XOPEN_SOURCE)
+-TO_REALCLEAN += pwm.1x
++TO_REALCLEAN += pwm.1
+ 
+ OBJS=	main.o draw.o font.o frame.o event.o clientwin.o thing.o \
+ 	property.o pointer.o key.o moveres.o cursor.o function.o \
+@@ -23,7 +23,7 @@
+ BINDIR=$(PREFIX)/bin
+ ETCDIR=$(PREFIX)/etc
+ MANDIR=$(PREFIX)/man/man1
+-DOCDIR=$(PREFIX)/doc
++DOCDIR=$(PREFIX)/share/doc
+ 
+ TARGETS=pwm
+ 
+@@ -33,11 +33,11 @@
+ 
+ ######################################
+ 
+-pwm: $(OBJS) pwm.1x
++pwm: $(OBJS) pwm.1
+ 	$(CC) $(OBJS) $(LDFLAGS) -o $@
+ 
+-pwm.1x: pwm.1x.in
+-	sed 's#PREFIX#$(PREFIX)#g' pwm.1x.in > pwm.1x
++pwm.1: pwm.1x.in
++	sed 's#PREFIX#$(PREFIX)#g' pwm.1x.in > pwm.1
+ 
+ _install:
+ 	$(INSTALL) -d $(BINDIR)
+@@ -45,7 +45,7 @@
+ 	$(STRIP) $(BINDIR)/pwm
+ 
+ 	$(INSTALL) -d $(MANDIR)
+-	$(INSTALL) -m $(DATA_MODE) pwm.1x $(MANDIR)
++	$(INSTALL) -m $(DATA_MODE) pwm.1 $(MANDIR)
+ 
+ 	$(INSTALL) -d $(DOCDIR)
+ 	$(INSTALL) -d $(DOCDIR)/pwm

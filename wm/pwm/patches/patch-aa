@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/15 20:35:57 agc Exp $
+
+--- system.mk.orig	Sat Jul  1 07:37:50 2000
++++ system.mk	Thu Apr  5 09:25:26 2001
+@@ -7,7 +7,7 @@
+ ## Installation directory prefix
+ ##
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ #EXTRA_INCLUDES = -I$(PREFIX)/include
+ #EXTRA_LIBS = -L$(PREFIX)/lib
+@@ -17,7 +17,7 @@
+ ## X libraries, includes and options
+ ##
+ 
+-X11_PREFIX=/usr/X11R6
++X11_PREFIX=${X11BASE}
+ 
+ # SunOS/Solaris
+ #X11_PREFIX=/usr/openwin
+@@ -58,7 +58,7 @@
+ 	-Wparentheses -pedantic-errors
+ 
+ CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
++LDFLAGS+=$(LIBS)
+ 
+ 
+ ##
