@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2000/10/12 19:07:07 skrll Exp $
+$NetBSD: patch-aa,v 1.15 2000/11/17 05:24:01 mycroft Exp $
 
---- ltconfig.in.orig	Sat May 27 02:58:57 2000
-+++ ltconfig.in
+--- ltconfig.in.orig	Sat May 27 01:58:57 2000
++++ ltconfig.in	Fri Nov 17 05:14:58 2000
 @@ -1194,11 +1194,17 @@
  
    netbsd*)
@@ -46,7 +46,14 @@ $NetBSD: patch-aa,v 1.14 2000/10/12 19:07:07 skrll Exp $
      hardcode_direct=yes
      hardcode_shlibpath_var=no
      ;;
-@@ -2012,6 +2026,9 @@
+@@ -2008,10 +2022,16 @@
+ netbsd*)
+   version_type=sunos
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++    deplibs_check_method='file_magic NetBSD/[a-z0-9]* demand paged shared library'
++    file_magic_cmd=/usr/bin/file
++    file_magic_test_file=`echo /usr/lib/libc.so*`
+     library_names_spec='${libname}${release}.so$versuffix ${libname}.so$versuffix'
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -56,7 +63,7 @@ $NetBSD: patch-aa,v 1.14 2000/10/12 19:07:07 skrll Exp $
      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major ${libname}${release}.so ${libname}.so'
      soname_spec='${libname}${release}.so$major'
      dynamic_linker='NetBSD ld.elf_so'
-@@ -2069,7 +2086,7 @@
+@@ -2069,7 +2089,7 @@
    ;;
  
  solaris*)
