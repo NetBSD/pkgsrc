@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1679 2003/03/18 03:26:46 taya Exp $
+$NetBSD: CHANGES,v 1.1680 2003/03/18 07:22:26 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated win32-codecs to 020909nb2 [wiz 2003-03-17]
 	Updated cvsync to 0.15.0 [gehenna 2003-03-18]
 	Updated galeon to 1.3 [taya 2003-03-18]
+	Updated mozilla-linux to 1.3 [grant 2003-03-18]
