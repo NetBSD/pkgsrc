@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6789 2004/08/04 11:41:37 abs Exp $
+$NetBSD: CHANGES,v 1.6790 2004/08/04 12:19:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3719,4 +3719,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated analog to 5.32nb1 [tron 2004-08-04]
 	Updated libxml2 to 2.6.11nb1 [wiz 2004-08-04]
 	Updated cpuflags to 0.75 [abs 2004-08-04]
-
+	Updated doclifter to 1.12 [wiz 2004-08-04]
