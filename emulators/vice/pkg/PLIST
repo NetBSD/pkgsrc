@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/08/01 22:16:47 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/10/02 20:04:34 jlam Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -7,29 +7,35 @@ bin/x64
 bin/xcbm2
 bin/xpet
 bin/xvic
-include/resid/siddefs.h
+include/resid/envelope.h
+include/resid/extfilt.h
+include/resid/filter.h
+include/resid/pot.h
 include/resid/sid.h
+include/resid/siddefs.h
+include/resid/spline.h
 include/resid/voice.h
 include/resid/wave.h
-include/resid/envelope.h
-include/resid/filter.h
-include/resid/extfilt.h
-include/resid/pot.h
-include/resid/spline.h
-@dirrm include/resid
-@unexec install-info --delete %D/info/vice.info %D/info/dir
+@unexec install-info --delete --info-dir=%D/info %D/info/vice.info
 info/vice.info
+@exec install-info --info-dir=%D/info %D/info/vice.info
 info/vice.info-1
 info/vice.info-2
 info/vice.info-3
 info/vice.info-4
 info/vice.info-5
 info/vice.info-6
-@exec install-info %D/info/vice.info %D/info/dir
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
 share/doc/html/vice/vice_1.html
+share/doc/html/vice/vice_10.html
+share/doc/html/vice/vice_11.html
+share/doc/html/vice/vice_12.html
+share/doc/html/vice/vice_13.html
+share/doc/html/vice/vice_14.html
+share/doc/html/vice/vice_15.html
+share/doc/html/vice/vice_16.html
 share/doc/html/vice/vice_2.html
 share/doc/html/vice/vice_3.html
 share/doc/html/vice/vice_4.html
@@ -38,13 +44,6 @@ share/doc/html/vice/vice_6.html
 share/doc/html/vice/vice_7.html
 share/doc/html/vice/vice_8.html
 share/doc/html/vice/vice_9.html
-share/doc/html/vice/vice_10.html
-share/doc/html/vice/vice_11.html
-share/doc/html/vice/vice_12.html
-share/doc/html/vice/vice_13.html
-share/doc/html/vice/vice_14.html
-share/doc/html/vice/vice_15.html
-share/doc/html/vice/vice_16.html
 share/doc/html/vice/vice_toc.html
 share/doc/vice/64doc.txt
 share/doc/vice/Evaluation
@@ -56,6 +55,9 @@ share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
 share/doc/vice/mon.txt
 share/doc/vice/serial.txt
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vice.mo
 share/vice/C128/basic
 share/vice/C128/basic64
 share/vice/C128/c64s.vpl
@@ -75,7 +77,10 @@ share/vice/C128/position.vkm
 share/vice/C128/vdc_deft.vpl
 share/vice/C128/vice.vpl
 share/vice/C128/z80bios
+share/vice/C64/4064.vrs
+share/vice/C64/64gs.vrs
 share/vice/C64/basic
+share/vice/C64/basic.64gs
 share/vice/C64/c64s.vpl
 share/vice/C64/ccs64.vpl
 share/vice/C64/chargen
@@ -85,18 +90,15 @@ share/vice/C64/default.vrs
 share/vice/C64/frodo.vpl
 share/vice/C64/godot.vpl
 share/vice/C64/kernal
+share/vice/C64/kernal.4064
+share/vice/C64/kernal.64gs
+share/vice/C64/kernal.sx64
 share/vice/C64/os2.vkm
 share/vice/C64/os2_sym.vkm
 share/vice/C64/pc64.vpl
 share/vice/C64/position.vkm
-share/vice/C64/vice.vpl
-share/vice/C64/4064.vrs
-share/vice/C64/64gs.vrs
-share/vice/C64/basic.64gs
-share/vice/C64/kernal.4064
-share/vice/C64/kernal.64gs
-share/vice/C64/kernal.sx64
 share/vice/C64/sx64.vrs
+share/vice/C64/vice.vpl
 share/vice/CBM-II/amber.vpl
 share/vice/CBM-II/basic.128
 share/vice/CBM-II/basic.256
@@ -172,14 +174,15 @@ share/vice/VIC20/os2.vkm
 share/vice/VIC20/position.vkm
 share/vice/fonts/fonts.dir
 share/vice/fonts/vice-cbm.pcf
+@dirrm share/vice/fonts
+@dirrm share/vice/VIC20
+@dirrm share/vice/PRINTER
+@dirrm share/vice/PET
+@dirrm share/vice/DRIVES
+@dirrm share/vice/CBM-II
+@dirrm share/vice/C64
+@dirrm share/vice/C128
+@dirrm share/vice
 @dirrm share/doc/vice
 @dirrm share/doc/html/vice
-@dirrm share/vice/C128
-@dirrm share/vice/C64
-@dirrm share/vice/CBM-II
-@dirrm share/vice/DRIVES
-@dirrm share/vice/PET
-@dirrm share/vice/PRINTER
-@dirrm share/vice/VIC20
-@dirrm share/vice/fonts
-@dirrm share/vice
+@dirrm include/resid
