@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/23 23:51:52 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 13:03:48 dmcmahill Exp $
 #
 # This Makefile fragment is included by packages that use libgeda.
 #
@@ -14,13 +14,13 @@ BUILDLINK_DEPENDS+=	libgeda
 
 .if !empty(LIBGEDA_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libgeda
-BUILDLINK_DEPENDS.libgeda+=		libgeda-20030901{,nb[0-9]*}
+BUILDLINK_DEPENDS.libgeda+=		libgeda-20040111{,nb[0-9]*}
 BUILDLINK_PKGSRCDIR.libgeda?=		../../cad/libgeda
 
 .include "../../devel/libstroke/buildlink3.mk"
 .include "../../graphics/libgdgeda/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-#.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .endif # LIBGEDA_BUILDLINK3_MK
 
