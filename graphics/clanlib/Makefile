@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/12 07:59:39 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/02 03:36:52 wiz Exp $
 
 DISTNAME=		ClanLib-0.2.2
 CATEGORIES=		graphics games devel x11
@@ -38,11 +38,11 @@ post-patch:
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../mk/bsd.pkg.mk"
+
 .if ${OPSYS} == "NetBSD"
-BROKEN_LIBZ!=ar t /usr/lib/libz.a | grep -w example.o || echo "false"
+BROKEN_LIBZ!=${AR} t /usr/lib/libz.a | ${GREP} -w example.o || ${ECHO} "false"
 .if !empty(BROKEN_LIBZ:Mexample.o)
 BROKEN= "Update to NetBSD 1.4.1, or recompile /usr/lib/libz without example.c"
 .endif
 .endif
-
-.include "../../mk/bsd.pkg.mk"
