@@ -1,0 +1,16 @@
+--- /dev/null	Sat Jul  4 02:20:57 1998
++++ usercode/makefile.netbsd	Sat Jul  4 02:29:45 1998
+@@ -0,0 +1,13 @@
++# MikMod User Code Makefile for NetBSD
++
++OBJS = mikmodux.o mlist.o display.o marchive.o
++LIBDIR = ../lib
++INCLUDEDIR = ../include
++
++CFLAGS = -O6 -funroll-loops -ffast-math -finline-functions -fomit-frame-pointer -pipe -I$(INCLUDEDIR) -I$(PREFIX)/include -DSOLARIS -DUSE_ZIP
++
++mikmod: $(OBJS) $(LIBDIR)/libmikmod.a $(LIBDIR)/libmmio.a
++	cc -o mikmod $(OBJS) ../playercode/munitrk.o ../playercode/virtch.o ../playercode/npertab.o -L$(LIBDIR) -L$(PREFIX)/lib -lmikmod -lmmio -lncurses
++
++clean: 
++	rm -f $(OBJS) mikmod
