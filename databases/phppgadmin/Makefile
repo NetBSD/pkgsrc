@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/09 16:26:26 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/31 23:47:32 jdolecek Exp $
 
 DISTNAME=	phpPgAdmin-3.4.1
 PKGREVISION=	# empty
@@ -11,7 +11,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://phppgadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer PostgreSQL over the WWW
 
-DEPENDS+=	php-pgsql>=4.2.0:../../databases/php4-pgsql
+DEPENDS+=	php-pgsql>=4.2.0:../../databases/php-pgsql
 
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
