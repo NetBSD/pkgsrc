@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2001/02/12 04:14:28 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2001/03/13 21:34:03 jlam Exp $
 
 --- configure.orig	Thu Jan 11 13:39:29 2001
 +++ configure
-@@ -40176,6 +40176,7 @@
+@@ -6336,6 +6336,7 @@
+   cat > conftest.$ac_ext <<EOF
+ #line 6338 "configure"
+ #include "confdefs.h"
++#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ int main() {
+@@ -40176,6 +40177,7 @@
  fi
  
  
@@ -10,7 +18,7 @@ $NetBSD: patch-ab,v 1.4 2001/02/12 04:14:28 jlam Exp $
  echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
  echo "configure:40181: checking for pam_start in -lpam" >&5
  ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
-@@ -40220,6 +40221,8 @@
+@@ -40220,6 +40222,8 @@
  else
    echo "$ac_t""no" 1>&6
  fi
@@ -19,7 +27,7 @@ $NetBSD: patch-ab,v 1.4 2001/02/12 04:14:28 jlam Exp $
   
  
  for ac_func in getcwd getwd
-@@ -47325,9 +47328,6 @@
+@@ -47325,9 +47329,6 @@
  
      $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
      SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
