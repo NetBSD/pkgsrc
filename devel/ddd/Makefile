@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/09/11 11:50:18 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/09/12 18:36:10 recht Exp $
 #
 
 DISTNAME=	ddd-3.3.7
@@ -46,7 +46,7 @@ post-install:
 
 .include "../../devel/binutils/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/gcc.buildlink2.mk"
+.include "../../mk/compiler.mk"
 .include "../../mk/motif.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
