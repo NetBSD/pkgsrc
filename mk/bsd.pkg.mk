@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1092 2002/11/26 15:19:50 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1093 2002/12/02 17:07:27 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -356,13 +356,21 @@ M4?=			/usr/bin/m4
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
 .  if ${_USE_RPATH} == "yes"
+.    if ${OPSYS} == "IRIX"
+X11_LDFlAGS+=		-Wl,-rpath -Wl,${X11BASE}/lib
+.    else
 X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
+.    endif
 .  endif
 X11_LDFLAGS+=		-L${X11BASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .endif
 .if ${_USE_RPATH} == "yes"
+.  if ${OPSYS} == "IRIX"
+LDFLAGS+=		-Wl,-rpath -Wl,${LOCALBASE}/lib
+.  else
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+.  endif
 .else
 .  if empty(USE_BUILDLINK2:M[nN][oO])
 LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
@@ -406,8 +414,10 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
+.if ${OPSYS} != "IRIX"
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
 PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
+.endif
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
 EXTRACT_SUFX?=		.tar.gz
@@ -1873,8 +1883,13 @@ do-pkgconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${pkgconfig} ]; then					\
 		${MV} ${pkgconfig} ${pkgconfig}.norpath ;		\
+.         if ${OPSYS} == "IRIX"
+		${SED} -e 's|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-rpath -Wl,\2 -L\2\3|'					\
+			< ${pkgconfig}.norpath > ${pkgconfig} ;		\
+.         else
 		${SED} -e 's|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'						\
 			< ${pkgconfig}.norpath > ${pkgconfig} ;		\
+.         endif
 	fi
 .  endfor
 .endif
