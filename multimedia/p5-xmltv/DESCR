@@ -1,9 +1,10 @@
-XMLTV is a set of utilities to manage your TV viewing. They work with TV 
-listings stored in the XMLTV format, which is based on XML. The idea is to 
-separate out the backend (getting the listings) from the frontend (displaying 
-them for the user), and to implement useful operations like picking out your 
-favourite programmes as filters that read and write XML documents. 
+XMLTV is a set of utilities to manage your TV viewing. They work
+with TV listings stored in the XMLTV format, which is based on XML.
+The idea is to separate out the backend (getting the listings) from
+the frontend (displaying them for the user), and to implement useful
+operations like picking out your favourite programmes as filters
+that read and write XML documents.
 
-At present there are backends grabbing TV listings for Canada, the USA, the UK,
-Germany, Austria, Finland, Spain, Italy, the Netherlands, Hungary, Denmark, 
-Japan, Sweden, France, Norway, and Romania. 
+At present there are backends grabbing TV listings for Canada, the
+USA, the UK, Germany, Austria, Finland, Spain, Italy, the Netherlands,
+Hungary, Denmark, Japan, Sweden, France, Norway, and Romania.
