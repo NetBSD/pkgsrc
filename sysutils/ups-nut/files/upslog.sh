@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upslog.sh,v 1.5 2002/09/20 02:02:01 grant Exp $
+# $NetBSD: upslog.sh,v 1.6 2004/02/15 13:14:25 lukem Exp $
 #
 # PROVIDE: upslog
 # REQUIRE: upsd
@@ -22,7 +22,7 @@ fi
 name="upslog"
 rcvar="${name}"
 command="@PREFIX@/bin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@NUT_STATEDIR@/${name}.pid"
 
 if [ -f /etc/rc.subr ]
 then
