@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 1999/06/03 17:54:34 tron Exp $
+# $NetBSD: Makefile,v 1.93 1999/06/07 07:31:36 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -12,6 +12,7 @@
     SUBDIR += afterstep
     SUBDIR += amiwm
     SUBDIR += asclock
+    SUBDIR += ascp
 #    SUBDIR += auis
 #    SUBDIR += bclock
 #    SUBDIR += blast
