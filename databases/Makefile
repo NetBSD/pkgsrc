@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/10/04 17:37:51 jlam Exp $
+# $NetBSD: Makefile,v 1.23 1999/11/17 17:36:53 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -26,6 +26,7 @@
     SUBDIR += py-mysql
     SUBDIR += py-postgresql
     SUBDIR += sdbm
+    SUBDIR += rrdtool
     SUBDIR += tcl-gdbm
 #    SUBDIR += typhoon
     SUBDIR += xmysql
