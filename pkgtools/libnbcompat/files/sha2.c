@@ -35,10 +35,10 @@
 
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
-#include <nbtypes.h>
+#include "nbcompat/nbtypes.h"
 
 
 #include <stdio.h>

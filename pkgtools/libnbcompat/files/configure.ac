@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([libnbcompat], [20030823], [grant@NetBSD.org])
-AC_CONFIG_HEADER(nbconfig.h)
+AC_CONFIG_HEADER(nbcompat/nbconfig.h)
 AC_ARG_PROGRAM
 
 AC_CANONICAL_HOST
@@ -38,7 +38,20 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	sys/endian.h sys/file.h sys/mkdev.h sys/mount.h sys/ndir.h \
 	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
 	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h sys/vfs.h termcap.h \
-	termios.h time.h tzfile.h unistd.h util.h utmp.h vis.h])
+	termios.h time.h tzfile.h unistd.h util.h utmp.h])
+
+dnl Check that this vis.h has *vis()-related functions because Solaris'
+dnl vis.h doesn't.  Also, only consider the header found if it defines
+dnl all of the functions that we need.
+dnl
+pkg_use_nbcompat_vis=yes
+AC_CHECK_HEADER(vis.h, [
+	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white,
+		[ #include <sys/types.h>
+		  #include <vis.h> ],
+		[ int X = VIS_WHITE ],
+		[ AC_DEFINE(HAVE_VIS_H) ], [ pkg_use_nbcompat_vis=no ])
+])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
@@ -67,7 +80,7 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
 		inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
-		mkdtemp setenv setprogname snprintf strdup strerror \
+		mkdtemp poll setenv setprogname snprintf strdup strerror \
 		strlcat strlcpy strmode strptime strsep strtoll timegm \
 		usleep])
 
@@ -78,7 +91,15 @@ AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 		uid_from_user user_from_uid])
 
-AC_CHECK_FUNCS([strunvis strvis strsvis])
+AC_CHECK_FUNCS([strunvis strvis strsvis],
+	[pkg_use_nbcompat_vis=no],
+	[pkg_use_nbcompat_vis=yes])
+
+if test $pkg_use_nbcompat_vis = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_VIS)
+	AC_LIBOBJ(vis)
+	AC_LIBOBJ(unvis)
+fi
 
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
 AC_CHECK_FUNCS([getopt_long])
@@ -86,19 +107,17 @@ AC_CHECK_FUNCS([getopt_long])
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
 AC_CHECK_FUNC(sl_init, [
-	if test $ac_cv_func_sl_init = yes; then
-		AC_MSG_TRY_COMPILE(if sl_add() returns int,
-			pkg_cv_INT_SL_ADD,
-			[ #include <stringlist.h> ],
-			[ int f = sl_add((StringList *)0, "foo") ],
-			[:] , [AC_LIBOBJ(sl_init)])
-	fi
+	AC_MSG_TRY_COMPILE([if sl_add() returns int],
+		pkg_cv_INT_SL_ADD,
+		[ #include <stringlist.h> ],
+		[ int f = sl_add((StringList *)0, "foo") ],
+		[:] , [AC_LIBOBJ(sl_init)])
 ])
 
 dnl Solaris 2.7 and 2.8 have statfs(2), but it is deprecated, and has a
 dnl different interface from NetBSD's statfs.
 
-pkg_have_nbcompat_statfs=yes
+pkg_use_nbcompat_statfs=yes
 AC_CHECK_FUNC(statfs, [
 	case $host_os in
 	sunos*|solaris*)
@@ -107,12 +126,12 @@ AC_CHECK_FUNC(statfs, [
 		])
 		;;
 	*)
-		pkg_have_nbcompat_statfs=no
+		pkg_use_nbcompat_statfs=no
 		;;
 	esac
 ])
 
-if test $pkg_have_nbcompat_statfs = yes; then
+if test $pkg_use_nbcompat_statfs = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_STATFS, 1)
 	AC_LIBOBJ(statfs)
 fi
@@ -164,14 +183,6 @@ dnl		support because we don't know how to display it.
 
 fi
 
-if test $ac_cv_header_vis_h = yes; then
-	AC_MSG_TRY_COMPILE(for VIS_WHITE in vis.h,
-			    pkg_cv_have_vis_white, [
-	#include <sys/types.h>
-	#include <vis.h> ], [ int X = VIS_WHITE ], [:],
-	ac_cv_header_vis_h=no )
-fi
-
 AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
 #include <stdlib.h>
 #include <unistd.h> ], [ char *X = optarg ], [:], [AC_DEFINE(HAVE_OPTARG_D, 1)])
@@ -181,7 +192,13 @@ AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
 #include <unistd.h> ], [ int X = optind ], [:] [AC_DEFINE(HAVE_OPTIND_D, 1)])
 
 AH_BOTTOM([
+/* Define to 1 if you have the <vis.h> header file. */
+#undef HAVE_VIS_H
+
 /* NBCOMPAT template section follows. */
+
+/* Define to 1 if the `vis' function is built into the library. */
+#undef HAVE_NBCOMPAT_VIS
 
 /* Define to 1 if the `statfs' function is built into the library. */
 #undef HAVE_NBCOMPAT_STATFS

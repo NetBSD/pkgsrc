@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.2 2003/09/01 15:31:19 jlam Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -12,13 +12,13 @@
  */  
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
-#include <nbtypes.h>
+#include "nbcompat/nbtypes.h"
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.2 2003/09/01 15:31:19 jlam Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
 #endif	/* not lint */
 
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: md5hl.c,v 1.2 2003/09/01 15:31:17 jlam Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.3 2003/09/03 13:11:14 jlam Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
@@ -6,11 +6,11 @@
  */
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
 /* #include "namespace.h" */
-#include <nbtypes.h>
+#include "nbcompat/nbtypes.h"
 
 #define	MDALGORITHM	MD5
 
@@ -20,7 +20,7 @@
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-/*	$NetBSD: md5hl.c,v 1.2 2003/09/01 15:31:17 jlam Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.3 2003/09/03 13:11:14 jlam Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------

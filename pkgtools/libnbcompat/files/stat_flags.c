@@ -1,4 +1,4 @@
-/*	$NetBSD: stat_flags.c,v 1.3 2003/09/01 15:31:21 jlam Exp $	*/
+/*	$NetBSD: stat_flags.c,v 1.4 2003/09/03 13:11:15 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -29,9 +29,7 @@
  * SUCH DAMAGE.
  */
 
-#if HAVE_CONFIG_H
-#include "nbconfig.h"
-#endif
+#include "nbcompat.h"
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -41,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)stat_flags.c	8.2 (Berkeley) 7/28/94";
 #else
-__RCSID("$NetBSD: stat_flags.c,v 1.3 2003/09/01 15:31:21 jlam Exp $");
+__RCSID("$NetBSD: stat_flags.c,v 1.4 2003/09/03 13:11:15 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -49,11 +47,19 @@ __RCSID("$NetBSD: stat_flags.c,v 1.3 2003/09/01 15:31:21 jlam Exp $");
 #define HAVE_STRUCT_STAT_ST_FLAGS 1
 #endif
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_TYPES_H
 #include <sys/stat.h>
+#endif
+#if HAVE_FTS_H
 #include <fts.h>
+#endif
 #include <stddef.h>
+#if HAVE_STRING_H
 #include <string.h>
+#endif
 
 #include "stat_flags.h"
 

@@ -1,9 +1,43 @@
+/*	$NetBSD: nbcompat.h,v 1.14 2003/09/03 13:11:14 jlam Exp $	*/
+
+/*-
+ * Copyright (c) 2003 The NetBSD Foundation, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *        This product includes software developed by the NetBSD
+ *        Foundation, Inc. and its contributors.
+ * 4. Neither the name of The NetBSD Foundation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
 #ifndef _NBCOMPAT_H
 #define _NBCOMPAT_H
 
-#include <nbconfig.h>
-
-#include <nbtypes.h>
+#include <nbcompat/nbconfig.h>
+#include <nbcompat/nbtypes.h>
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -32,16 +66,12 @@
 #include <termios.h>
 #include <unistd.h>
 
-#if HAVE_POLL
-# if HAVE_POLL_H
-#  include <poll.h>
-# elif HAVE_SYS_POLL_H
-#  include <sys/poll.h>
-# endif
-#elif HAVE_SELECT
-# define USE_SELECT
+#if HAVE_POLL_H
+# include <poll.h>
+#elif HAVE_SYS_POLL_H
+# include <sys/poll.h>
 #else
-# error "no poll() or select() found"
+# include <nbcompat/poll.h>
 #endif
 
 #if HAVE_DIRENT_H
@@ -62,7 +92,7 @@
 #if HAVE_FTS_H
 # include <fts.h>
 #else
-# include "fts.h"
+# include <nbcompat/fts.h>
 #endif
 
 #if TIME_WITH_SYS_TIME
@@ -165,6 +195,10 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif /* HAVE_SYS_QUEUE_H */
 
+#ifndef TAILQ_HEAD_INITIALIZER
+#define TAILQ_HEAD_INITIALIZER(head)					\
+	{ NULL, &(head).tqh_first }
+#endif
 #ifndef TAILQ_EMPTY
 #define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
 #endif
@@ -187,6 +221,8 @@ struct {								\
 
 #if HAVE_ERR_H
 # include <err.h>
+#else
+# include <nbcompat/err.h>
 #endif
 
 #include <ftpglob.h>
@@ -280,10 +316,16 @@ void	 tputs(const char *, int, int (*)(int));
 # include <libutil.h>
 #endif
 
+#if HAVE_NBCOMPAT_VIS
+# ifdef HAVE_VIS_H
+#  undef HAVE_VIS_H
+# endif
+#endif
+
 #if HAVE_VIS_H
 # include <vis.h>
 #else
-# include "vis.h"
+# include <nbcompat/vis.h>
 #endif
 
 #if !HAVE_D_NAMLEN
@@ -317,10 +359,6 @@ extern int	optind;
 
 #if !HAVE_PCLOSE_D
 int	pclose(FILE *);
-#endif
-
-#if !HAVE_ERR
-#include <err.h>
 #endif
 
 #if !HAVE_FGETLN
@@ -421,6 +459,10 @@ size_t	strlcpy(char *, const char *, size_t);
 
 #if !HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
+#endif
+
+#if HAVE_NBCOMPAT_STATFS
+# include <nbcompat/statfs.h>
 #endif
 
 #if !HAVE_MEMMOVE
