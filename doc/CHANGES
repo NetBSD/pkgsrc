@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6325 2004/06/26 15:48:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.6326 2004/06/26 15:57:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3076,3 +3076,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pax to 20040626 [grant 2004-06-26]
 	Added mu-conference-0.6.0 [abs 2004-06-26]
 	Updated gnome2-control-center to 2.6.1nb1 [jmmv 2004-06-26]
+	Updated dvd+rw-tools to 5.17.4.8.6nb1 [mrg 2004-06-26]
