@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.6 2002/11/24 13:20:45 tron Exp $
+
+--- src/common/inbound.c.orig	Wed Aug  7 12:15:59 2002
++++ src/common/inbound.c
+@@ -243,19 +243,21 @@ channel_action (session *sess, char *tbu
+ 	if (EMIT_SIGNAL (XP_CHANACTION, sess, chan, from, text, NULL, fromme) == 1)
+ 		return;
+ 
+-	if (is_channel (serv, chan) || fromme)
++	if (!fromme)
+ 	{
+-		sess = find_channel (chan, serv);
+-		if (!fromme && sess)
+-			if (fe_is_beep (sess) || prefs.beepchans)
++		if (is_channel (serv, chan))
++		{
++			sess = find_channel (chan, serv);
++			if (sess)
++				if (fe_is_beep (sess) || prefs.beepchans)
++					fe_beep ();
++		} else
++		{
++			/* it's a private action! */
++			sess = find_dialog (serv, from);
++			if (((sess) && fe_is_beep (sess)) || prefs.beepmsg)
+ 				fe_beep ();
+-	}
+-	else
+-	{
+-		/* it's a private action! */
+-		sess = find_dialog (serv, from);
+-		if (((sess) && fe_is_beep (sess)) || prefs.beepmsg)
+-			fe_beep ();
++		}
+ 	}
+ 
+ 	if (!sess && !is_channel (serv, chan) && prefs.autodialog)
