@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.9 2005/01/12 17:27:50 jlam Exp $
+# $NetBSD: xlc.mk,v 1.10 2005/01/12 17:43:04 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -17,21 +17,21 @@ _LANGUAGES.xlc=		# empty
 _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 .endfor
 
-_XLC_DIR=	${WRKDIR}/.xlc
-_XLC_VARS=	# empty
+_XLC_DIR=		${WRKDIR}/.xlc
+_XLC_VARS=		# empty
 .if exists(${XLCBASE}/bin/xlc)
-_XLC_VARS+=	CC
-_XLC_CC=	${_XLC_DIR}/bin/xlc
-_ALIASES.CC=	cc xlc
-CCPATH=		${XLCBASE}/bin/xlc
-PKG_CC:=	${_XLC_CC}
+_XLC_VARS+=		CC
+_XLC_CC=		${_XLC_DIR}/bin/xlc
+_ALIASES.CC=		cc xlc
+CCPATH=			${XLCBASE}/bin/xlc
+PKG_CC:=		${_XLC_CC}
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
-_XLC_VARS+=	CXX
-_XLC_CXX=	${_XLC_DIR}/bin/xlc++
-_ALIASES.CXX=	c++ xlc++
-CXXPATH=	${XLCBASE}/bin/xlc++
-PKG_CXX:=	${_XLC_CXX}
+_XLC_VARS+=		CXX
+_XLC_CXX=		${_XLC_DIR}/bin/xlc++
+_ALIASES.CXX=		c++ xlc++
+CXXPATH=		${XLCBASE}/bin/xlc++
+PKG_CXX:=		${_XLC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
 
@@ -43,14 +43,14 @@ CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		IBM XL C
 .endif
 
+# Most packages assume alloca is available without #pragma alloca, so
+# make it the default.
+CFLAGS+=	-ma
+
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.xlc)
 PREPEND_PATH+=	${_XLC_DIR}/bin
 .endif
-
-# Most packages assume alloca is available without #pragma alloca, so
-# make it the default.
-CFLAGS+=-ma
 
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_XLC_VARS}

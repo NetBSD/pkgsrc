@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.29 2005/01/12 17:30:34 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.30 2005/01/12 17:40:48 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -17,21 +17,21 @@ _LANGUAGES.sunpro=	# empty
 _LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
 .endfor
 
-_SUNPRO_DIR=	${WRKDIR}/.sunpro
-_SUNPRO_VARS=	# empty
+_SUNPRO_DIR=		${WRKDIR}/.sunpro
+_SUNPRO_VARS=		# empty
 .if exists(${SUNWSPROBASE}/bin/cc)
-_SUNPRO_VARS+=	CC
-_SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
-_ALIASES.CC=	cc
-CCPATH=		${SUNWSPROBASE}/bin/cc
-PKG_CC:=	${_SUNPRO_CC}
+_SUNPRO_VARS+=		CC
+_SUNPRO_CC=		${_SUNPRO_DIR}/bin/cc
+_ALIASES.CC=		cc
+CCPATH=			${SUNWSPROBASE}/bin/cc
+PKG_CC:=		${_SUNPRO_CC}
 .endif
 .if exists(${SUNWSPROBASE}/bin/CC)
-_SUNPRO_VARS+=	CXX
-_SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
-_ALIASES.CXX=	CC c++
-CXXPATH=	${SUNWSPROBASE}/bin/CC
-PKG_CXX:=	${_SUNPRO_CXX}
+_SUNPRO_VARS+=		CXX
+_SUNPRO_CXX=		${_SUNPRO_DIR}/bin/CC
+_ALIASES.CXX=		CC c++
+CXXPATH=		${SUNWSPROBASE}/bin/CC
+PKG_CXX:=		${_SUNPRO_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
