@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.537 2000/08/07 10:23:38 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.538 2000/08/12 06:43:21 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2963,7 +2963,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .endfor
 	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}
 .ifdef USE_PERL5
-	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .endif
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
