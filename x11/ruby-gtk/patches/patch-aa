@@ -1,7 +1,8 @@
+$NetBSD: patch-aa,v 1.2 1999/09/17 05:00:22 sakamoto Exp $
+
 --- extconf.rb.orig	Sat Aug  7 02:57:08 1999
-+++ extconf.rb	Wed Aug 25 08:44:11 1999
-@@ -8,22 +8,26 @@
- # detect GTK+ (and Imlib) configurations
++++ extconf.rb	Fri Sep 17 12:54:56 1999
+@@ -9,20 +9,24 @@
  #
  if /mswin32/ !~ PLATFORM
 -  config_cmds = [
@@ -19,6 +20,7 @@
 +    config_cmds.each do |config_cmd|
        version = `#{config_cmd} --version`
        if not version.chomp.empty?
+-	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.split(/(-l.*)/)
 +	if /^imlib/ === File.basename(config_cmd)
 +	  with_imlib = true
 +	  config_libs, config_cflags = "--libs-gdk", "--cflags-gdk"
@@ -26,11 +28,10 @@
 +	  with_imlib = false
 +	  config_libs, config_cflags = "--libs", "--cflags"
 +	end
- 	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.split(/(-l.*)/)
++	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.gsub("-Wl,","").split(/(-l.*)/)
  	$libs = libs.join(' ') + ' ' + $libs
  	$CFLAGS = `#{config_cmd} #{config_cflags}`.chomp
 -	if /^imlib/ === config_cmd
 +	if with_imlib
  	  $CFLAGS = $CFLAGS + " -DHAVE_GDKIMLIB"
  	  STDERR.puts("Imlib support enabled.")
- 	end
