@@ -1,15 +1,17 @@
-$NetBSD: patch-ae,v 1.6 2002/08/25 21:51:44 jlam Exp $
---- ../thotlib/include/ustring.h.orig	Mon Jul  1 02:49:43 2002
-+++ ../thotlib/include/ustring.h	Mon Jul  1 02:55:09 2002
-@@ -5,7 +5,11 @@
- #ifdef _WINDOWS
+$NetBSD: patch-ae,v 1.7 2002/11/19 20:58:04 reinoud Exp $
+
+--- ../thotlib/include/ustring.h.orig	Mon Jun 17 10:10:14 2002
++++ ../thotlib/include/ustring.h
+@@ -6,6 +6,12 @@
  #include <windows.h>
  #endif /* _WINDOWS */
-+
+ 
 +#include "config.h"
 +#ifdef HAVE_WCHAR_H
- #include <wchar.h>
++#include <wchar.h>
 +#endif /* HAVE_WCHAR_H */
- 
++
++
  #ifdef _WINDOWS
  #define strncasecmp _strnicmp
+ #endif /* _WINDOWS */
