@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2002/04/11 15:26:20 abs Exp $
+$NetBSD: patch-aa,v 1.8 2004/05/19 17:42:35 kim Exp $
 
---- Makefile.in.orig	Sun Sep  2 22:16:25 2001
-+++ Makefile.in
-@@ -475,17 +475,10 @@
+--- Makefile.in.orig	2003-03-12 14:14:50.000000000 -0500
++++ Makefile.in	2004-02-21 16:28:51.000000000 -0500
+@@ -476,17 +476,10 @@
  install-strip: install
  
- install: tcsh 
+ install: tcsh$(EXEEXT) 
 -	-mkdir -p ${DESTBIN}
--	-mv -f ${DESTBIN}/tcsh  ${DESTBIN}/tcsh.old
--	cp tcsh ${DESTBIN}/tcsh
--	-strip ${DESTBIN}/tcsh
--	chmod 555 ${DESTBIN}/tcsh
-+	${BSD_INSTALL_PROGRAM} tcsh ${DESTBIN}/tcsh
+-	-mv -f ${DESTBIN}/tcsh$(EXEEXT)  ${DESTBIN}/tcsh.old
+-	cp tcsh$(EXEEXT) ${DESTBIN}/tcsh$(EXEEXT)
+-	-strip ${DESTBIN}/tcsh$(EXEEXT)
+-	chmod 755 ${DESTBIN}/tcsh$(EXEEXT)
++	${BSD_INSTALL_PROGRAM} tcsh${EXEEXT} ${DESTBIN}/tcsh${EXEEXT}
  
  install.man: tcsh.man
 -	-mkdir -p ${DESTMAN}
@@ -20,5 +20,5 @@ $NetBSD: patch-aa,v 1.7 2002/04/11 15:26:20 abs Exp $
 -	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
 +	${BSD_INSTALL_MAN} tcsh.man ${DESTMAN}/tcsh.${MANSECT}
  
- # Amiga Unix
- #install.man: tcsh.man
+ install.cygwin: install install.man
+ 	-mkdir -p ${DESTDIR}${prefix}/doc/tcsh
