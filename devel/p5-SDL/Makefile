@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/06/26 09:16:10 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/09/29 21:24:18 kristerw Exp $
 #
 
 DISTNAME=	SDL_perl-1.19.2
@@ -15,6 +15,8 @@ COMMENT=	Perl module for SDL
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
+
+BUILDLINK_PKGSRCDIR.perl=	../../lang/perl58-thread
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
