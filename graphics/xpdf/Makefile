@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2000/08/21 06:49:13 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/21 09:24:03 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
 DISTNAME=	xpdf-0.91
 CATEGORIES=	graphics print
-MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
+MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
+		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
