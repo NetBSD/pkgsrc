@@ -1,0 +1,8 @@
+Borges is a web application framework that allows linear
+programming of web applications.
+
+Borges runs on Webrick (Apache+DRb will be supported in
+the near future) and features a simple rendering interface.
+
+Those who are interested will likely be greatly helped by
+the Seaside 2.0 docs at  http://beta4.com/seaside2/
