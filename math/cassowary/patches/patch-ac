@@ -1,0 +1,12 @@
+--- c++/ClC.cc.orig	Wed Sep  8 18:38:16 1999
++++ c++/ClC.cc	Wed Sep  8 18:38:36 1999
+@@ -17,7 +17,9 @@
+ #include "Cl.h"
+ #include <strstream.h>
+ #include <stdio.h>
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
+ 
+ #ifdef HAVE_CONFIG_H
+ #include <cassowary/config.h>
