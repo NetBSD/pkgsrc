@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/05/28 01:47:26 lukem Exp $
+
+  cvsweb has now been installed.
+
+  If you are upgrading from a previous version, please follow the
+  `Upgrading from ...' instructions in:
+	${PREFIX}/share/doc/cvsweb/INSTALL
+
+===========================================================================
