@@ -1,16 +1,15 @@
-$NetBSD: patch-ad,v 1.3 2000/12/14 17:04:45 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2000/12/21 14:59:38 jlam Exp $
 
---- doc/sam.shtml.orig	Mon Oct  2 10:48:23 2000
-+++ doc/sam.shtml
-@@ -230,6 +230,11 @@
- <!-- NEED 4in -->
- <H3><A NAME="INSTALLING">Installing the Software</A></H3>
+--- conf/cupsd.conf.in.orig	Wed Dec 20 08:41:12 2000
++++ conf/cupsd.conf.in
+@@ -247,8 +247,8 @@
+ # program is run...
+ #
  
-+<P>Before you install, you'll need to ensure that the CUPS administrator
-+user (lp) and group (sys) already exist on your system.  If not, then please
-+refer to your system documentation for the procedure to add new users and
-+groups.
-+
- <P>Use the "install" target to install the software:
+-#User lp
+-#Group sys
++User @CUPS_USER@
++Group @CUPS_GROUP@
  
- <UL><PRE>
+ #
+ # RIPCache: the amount of memory that each RIP should use to cache

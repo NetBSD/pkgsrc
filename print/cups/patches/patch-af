@@ -1,0 +1,155 @@
+$NetBSD: patch-af,v 1.3 2000/12/21 14:59:38 jlam Exp $
+
+--- configure.in.orig	Wed Dec 20 13:46:14 2000
++++ configure.in
+@@ -117,4 +117,12 @@
+ AC_ARG_WITH(fontpath, [  --with-fontpath     set font path for pstoraster],fontpath="$withval",fontpath="")
+ 
++AC_ARG_WITH(cups-user, [  --with-cups-user=USERID
++                          use USERID as cups userid [default=lp]], CUPS_USER="$withval", CUPS_USER="lp")
++AC_ARG_WITH(cups-group, [  --with-cups-group=GROUPID
++                          use GROUPID as cups group [default=sys]], CUPS_GROUP="$withval", CUPS_GROUP="sys")
++
++AC_SUBST(CUPS_USER)
++AC_SUBST(CUPS_GROUP)
++
+ dnl Checks for programs...
+ AC_PROG_AWK
+@@ -197,8 +205,25 @@
+ 
+ if test "$enable_ssl" = "yes"; then
+-	AC_CHECK_LIB(ssl,SSL_new,
+-		SSLLIBS="-lssl -lcrypto"
+-		AC_DEFINE(HAVE_LIBSSL)
+-	)
++	#
++	# Some ELF systems can't resolve all the symbols in libcrypto
++	# if libcrypto was linked against RSAREF, and fail to link the
++	# test program correctly, even though a correct installation
++	# of OpenSSL exists.  So we test the linking three times in
++	# case the RSAREF libraries are needed.
++	#
++	for libcrypto in \
++		"-lcrypto" \
++		"-lcrypto -lrsaref" \
++		"-lcrypto -lRSAglue -lrsaref"
++	do
++		AC_CHECK_LIB(ssl,SSL_new,
++			[SSLLIBS="-lssl $libcrypto"
++			 AC_DEFINE(HAVE_LIBSSL)],,
++			$libcrypto
++		)
++		if test "x${SSLLIBS}" != "x"; then
++			break
++		fi
++	done
+ fi
+ 
+@@ -250,4 +275,5 @@
+ AC_CHECK_HEADER(stddef.h,AC_DEFINE(HAVE_STDDEF_H))
+ AC_CHECK_HEADER(stdlib.h,AC_DEFINE(HAVE_STDLIB_H))
++AC_CHECK_HEADER(sys/ioctl.h,AC_DEFINE(HAVE_SYS_IOCTL_H))
+ 
+ dnl Checks for string functions.
+@@ -384,10 +410,6 @@
+ 
+ dnl Fix "datadir" variable if it hasn't been specified...
+-if test "$datadir" = "\${prefix}/share"; then
+-	if test "$prefix" = "/"; then
+-		datadir="/usr/share"
+-	else
+-		datadir="$prefix/share"
+-        fi
++if test "$datadir" = "\${prefix}/share" -a "$prefix" = "/"; then
++	datadir="/usr/share"
+ fi
+ 
+@@ -398,19 +420,11 @@
+ 
+ dnl Fix "localstatedir" variable if it hasn't been specified...
+-if test "$localstatedir" = "\${prefix}/var"; then
+-	if test "$prefix" = "/"; then
+-		localstatedir="/var"
+-	else
+-		localstatedir="$prefix/var"
+-	fi
++if test "$localstatedir" = "\${prefix}/var" -a "$prefix" = "/"; then
++	localstatedir="/var"
+ fi
+ 
+ dnl Fix "sysconfdir" variable if it hasn't been specified...
+-if test "$sysconfdir" = "\${prefix}/etc"; then
+-	if test "$prefix" = "/"; then
+-		sysconfdir="/etc"
+-	else
+-		sysconfdir="$prefix/etc"
+-	fi
++if test "$sysconfdir" = "\${prefix}/etc" -a "$prefix" = "/"; then
++	sysconfdir="/etc"
+ fi
+ 
+@@ -422,14 +436,23 @@
+ dnl Fix "mandir" variable...
+ if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
+-	if test "$uname" = "IRIX"; then
+-		mandir="/usr/share/catman"
+-	else
+-		mandir="/usr/man"
+-	fi
++	case "$uname" in
++		FreeBSD* | NetBSD* | OpenBSD*)
++			# *BSD
++			mandir="/usr/share/man"
++			;;
++		IRIX*)
++			# SGI IRIX
++			mandir="/usr/share/catman"
++			;;
++		*)
++			# All others
++			mandir="/usr/man"
++			;;
++	esac
+ fi
+ 
+ dnl Fix "fontpath" variable...
+ if test "x$fontpath" = "x"; then
+-	fontpath="$datadir/cups/fonts"
++	fontpath="$exec_prefix/share/cups/fonts"
+ fi
+ 
+@@ -503,11 +526,11 @@
+ 
+ dnl Setup default locations...
+-CUPS_SERVERROOT='${prefix}/etc/cups'
+-CUPS_LOGDIR='${prefix}/var/log/cups'
+-CUPS_REQUESTS='${prefix}/var/spool/cups'
+-
+-AC_DEFINE_UNQUOTED(CUPS_SERVERROOT, "$prefix/etc/cups")
+-AC_DEFINE_UNQUOTED(CUPS_LOGDIR, "$prefix/var/log/cups")
+-AC_DEFINE_UNQUOTED(CUPS_REQUESTS, "$prefix/var/spool/cups")
++CUPS_SERVERROOT='${sysconfdir}/cups'
++CUPS_LOGDIR='${localstatedir}/log/cups'
++CUPS_REQUESTS='${localstatedir}/spool/cups'
++
++AC_DEFINE_UNQUOTED(CUPS_SERVERROOT, "$sysconfdir/cups")
++AC_DEFINE_UNQUOTED(CUPS_LOGDIR, "$localstatedir/log/cups")
++AC_DEFINE_UNQUOTED(CUPS_REQUESTS, "$localstatedir/spool/cups")
+ 
+ dnl See what directory to put server executables...
+@@ -560,6 +583,6 @@
+ 
+ dnl Set the CUPS_DOCROOT directory...
+-CUPS_DOCROOT='${exec_prefix}/share/doc/cups'
+-AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$exec_prefix/share/doc/cups")
++CUPS_DOCROOT='${exec_prefix}/share/doc/html/cups'
++AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$exec_prefix/share/doc/html/cups")
+ AC_SUBST(CUPS_DOCROOT)
+ 
+@@ -567,5 +590,5 @@
+ AC_DEFINE_UNQUOTED(CUPS_FONTPATH, "$fontpath")
+ 
+-AC_OUTPUT(Makedefs cups.sh)
++AC_OUTPUT(Makedefs cups.sh conf/cupsd.conf)
+ 
+ dnl

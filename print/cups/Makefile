@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2000/12/14 17:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/12/21 14:59:37 jlam Exp $
 #
 
-DISTNAME=		cups-1.1.4-source
+DISTNAME=		cups-1.1.5-source
 PKGNAME=		${DISTNAME:S/-source//}
 VERS=			${PKGNAME:S/cups-//}
 WRKSRC=			${WRKDIR}/${PKGNAME}
@@ -24,10 +24,14 @@ DEPENDS+=		tiff-*:../../graphics/tiff
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--sysconfdir=/etc
+CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
-CONFIGURE_ARGS+=	--enable-rootconfig
 CONFIGURE_ARGS+=	--with-cups-user="${CUPS_USER}"
 CONFIGURE_ARGS+=	--with-cups-group="${CUPS_GROUP}"
+
+USE_SSL=		# defined
+CONFIGURE_ARGS+=	--enable-ssl
 
 CFLAGS+=		-I${LOCALBASE}/include
 
@@ -68,7 +72,19 @@ ADDGROUP=		groupadd
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
-pre-patch:
+DOCDIR=			${PREFIX}/share/doc/cups
+EGDIR=			${PREFIX}/share/examples/cups
+
+# The Okidata PPD files are missing, but on the CUPS mailing list,
+# Michael Sweet says that the following should work.
+#
+post-extract:
+	${SED}	-e "s,EPSON24,OKIDAT24,g" \
+		-e "s,EPSON,OKIDATA,g" \
+		< ${WRKSRC}/ppd/epson24.ppd > ${WRKSRC}/ppd/okidat24.ppd
+	${SED}	-e "s,EPSON9,OKIDATA9,g" \
+		-e "s,EPSON,OKIDATA,g" \
+		< ${WRKSRC}/ppd/epson9.ppd > ${WRKSRC}/ppd/okidata9.ppd
 	cd ${WRKSRC}/conf; ${MV} cupsd.conf cupsd.conf.in
 
 pre-configure:
@@ -105,11 +121,14 @@ pre-install:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/cupsd.sh ${PREFIX}/etc/rc.d/cupsd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cups
-	cd ${WRKSRC}/conf; ${INSTALL_DATA} *.conf mime.* \
-		${PREFIX}/share/examples/cups
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	for file in ENCRYPTION LICENSE README; do \
+		${INSTALL_DATA} ${WRKSRC}/$${file}.txt ${DOCDIR}/$${file}; \
+	done
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/conf; ${INSTALL_DATA} *.conf mime.* ${EGDIR}
 .if defined(USE_PAM)
-	${INSTALL_DATA} ${WRKDIR}/cups.pam ${PREFIX}/share/examples/cups
+	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
