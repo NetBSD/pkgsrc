@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:20 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/25 14:45:05 cjep Exp $
 #
 
 DISTNAME=	aalib-1.4rc4
@@ -19,6 +19,15 @@ USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ARGS+=	--with-x11-driver=no
+
+.if (${MACHINE_ARCH} == arm32)
+ GCC_VERSION!=           gcc --version
+
+. if (${GCC_VERSION:C/-.*$$//} == egcs)
+. include "../../lang/gcc/Makefile.gcc"
+. endif
+
+.endif
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
