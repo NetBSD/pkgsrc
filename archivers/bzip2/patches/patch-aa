@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2002/03/24 14:02:36 mjl Exp $
+$NetBSD: patch-aa,v 1.6 2003/03/18 21:53:30 jschauma Exp $
 
 --- Makefile.orig	Sat Jan 26 00:34:53 2002
 +++ Makefile	Sun Mar 24 14:56:33 2002
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/24 14:02:36 mjl Exp $
 -# Where you want it installed when you do 'make install'
 -PREFIX=/usr
 -
-+CFLAGS+=-Wall -Winline -fomit-frame-pointer -fno-strength-reduce $(BIGFILES)
++CFLAGS+=${BZIP_CFLAGS} $(BIGFILES)
  
  OBJS= blocksort.o  \
        huffman.o    \
