@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 10:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/05/30 10:30:40 drochner Exp $
 #
 
-DISTNAME=	disc-cover-1.2.2
+DISTNAME=	disc-cover-1.3.1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.liacs.nl/~jvhemert/disc-cover/download/unstable/
 
