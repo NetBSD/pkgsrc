@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6947 2004/08/19 14:04:13 schmonz Exp $
+$NetBSD: CHANGES,v 1.6948 2004/08/19 14:16:50 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3913,3 +3913,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cfengine2 to 2.0.10 [ben 2004-08-18]
 	Updated rioutil to 1.4.6 [schmonz 2004-08-19]
 	Updated getmail to 4.0.12 [schmonz 2004-08-19]
+	Added p5-CGI-Session-3.95 [wennmach 2004-08-19]
