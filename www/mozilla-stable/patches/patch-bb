@@ -1,3 +1,4 @@
+$NetBSD: patch-bb,v 1.2 2002/11/26 22:02:46 cjep Exp $
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Wed Apr 10 12:16:43 2002
 +++ ./nsprpub/pr/include/md/_netbsd.h	Wed Sep 11 23:47:54 2002
