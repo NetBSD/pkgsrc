@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/05 16:26:22 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:51:59 agc Exp $
 lib/perl5/man/man3/Apache::ePerl.3
 lib/perl5/site_perl/Apache/ePerl.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ePerl/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ePerl
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/ePerl/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/ePerl
