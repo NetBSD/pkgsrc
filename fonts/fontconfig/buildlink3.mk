@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/02/18 16:35:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/18 16:53:52 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
@@ -100,10 +100,14 @@ BUILDLINK_DEPENDS+=		fontconfig
 
 .if !empty(FONTCONFIG_BUILDLINK3_MK:M+)
 .  if !empty(BUILDLINK_USE_BUILTIN.fontconfig:M[yY][eE][sS])
-BUILDLINK_PREFIX.fontconfig=	${X11BASE}
-BUILDLINK_FILES.fontconfig+=	lib/pkgconfig/fontconfig.pc
+BUILDLINK_PREFIX.fontconfig=		${X11BASE}
+BUILDLINK_FILES.fontconfig+=		lib/pkgconfig/fontconfig.pc
+BUILDLINK_USE_BUILTIN.zlib=		yes
+BUILDLINK_USE_BUILTIN.freetype2=	yes
+BUILDLINK_USE_BUILTIN.expat=		yes
 .  endif
-USE_X11=	yes
+
+USE_X11=			yes
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 
 .  if !empty(BUILDLINK_CHECK_BUILTIN.fontconfig:M[nN][oO])
