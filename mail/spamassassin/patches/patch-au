@@ -1,0 +1,29 @@
+$NetBSD: patch-au,v 1.1 2004/10/12 00:11:10 heinz Exp $
+
+--- t/dnsbl.t.orig	Fri Aug 27 18:37:42 2004
++++ t/dnsbl.t
+@@ -5,14 +5,22 @@ use SATest; sa_t_init("dns");
+ 
+ use constant TEST_ENABLED => (-e 't/do_net' || -e 'do_net');
+ use constant HAS_NET_DNS => eval { require Net::DNS; };
++# Do not run this test on non-Linux unices as root, due to a bug
++# in Sys::Hostname::Long (which Net::DNS uses.)
++# See <http://bugzilla.spamassassin.org/show_bug.cgi?id=3806>
++use constant IS_LINUX   => $^O eq 'linux';
++use constant AM_ROOT    => $< == 0;
++
++use constant DO_RUN     => TEST_ENABLED && HAS_NET_DNS &&
++                                        !(AM_ROOT && !IS_LINUX);
+ 
+ use Test;
+ 
+ BEGIN {
+-  plan tests => ((TEST_ENABLED && HAS_NET_DNS) ? 22 : 0),
++  plan tests => (DO_RUN ? 22 : 0),
+ };
+ 
+-exit unless (TEST_ENABLED && HAS_NET_DNS);
++exit unless (DO_RUN);
+ 
+ # ---------------------------------------------------------------------------
+ # bind configuration currently used to support this test
