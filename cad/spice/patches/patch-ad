@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 1999/10/01 17:05:15 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.3 2005/01/11 22:26:01 dmcmahill Exp $
 
 --- src/include/os_bsd.h.orig	Sat Apr 24 19:09:46 1993
 +++ src/include/os_bsd.h	Thu Sep 30 12:02:51 1999
@@ -31,5 +31,5 @@ $NetBSD: patch-ad,v 1.2 1999/10/01 17:05:15 dmcmahill Exp $
 +#define HAS_STRCHR		/* strchr( ) instead of index( )	*/
 +#define HAS_LIMITS_H		/* limits.h exists			*/
 +#define HAS_INTWAITSTATUS	/* wait(int *status)			*/
-+#define HAS_GNUREADLINE		/* compile in readline support		*/
++/*#define HAS_GNUREADLINE*/		/* compile in readline support		*/
 +#endif
