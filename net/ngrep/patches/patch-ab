@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 1999/07/02 10:26:03 agc Exp $
+
+Use LDFLAGS when linking.
+
+--- Makefile.in	1999/07/02 10:17:46	1.1
++++ Makefile.in	1999/07/02 10:18:04
+@@ -18,7 +18,7 @@
+ MANDEST=@prefix@/man/man8
+ 
+ $(TARGET): $(OBJS) 
+-	$(CC) $(CFLAGS) -s -o $(TARGET) $(OBJS) $(LIBS) 
++	$(CC) $(CFLAGS) ${LDFLAGS} -s -o $(TARGET) $(OBJS) $(LIBS) 
+ 
+ debug: $(OBJS)
+ 	$(CC) $(CFLAGS) -g -o $(TARGET) $(OBJS) $(LIBS) 
