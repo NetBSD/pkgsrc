@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2002/12/13 15:39:00 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/14 15:31:40 tv Exp $
 
---- Makefile.in.orig	Fri Dec 13 10:34:37 2002
-+++ Makefile.in	Fri Dec 13 10:34:52 2002
-@@ -666,7 +666,7 @@
+--- Makefile.in.orig	2000-06-30 16:43:32.000000000 -0400
++++ Makefile.in
+@@ -655,18 +655,11 @@ maintainer-clean-generic clean mostlycle
+ 
+ install-exec-hook:
+ 	$(mkinstalldirs) $(goopsdatadir)
+-	(. ./libgoopscore.la; \
+-	 test -z "$$dlname" \
+-	 || test ! -r $(libdir)/$$dlname \
+-	 || (cd $(goopsdatadir) \
+-	     && rm -f libgoopscore.la $$dlname \
+-	     && $(LN_S) $(libdir)/libgoopscore.la \
+-	     && $(LN_S) $(libdir)/$$dlname))
+ 
  dist-hook: goops.ps
  	cp -p $(top_builddir)/goops.ps $(distdir)
  .c.x:
