@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2004/03/06 11:10:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.299 2004/03/07 08:23:14 hamajima Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -43,7 +43,9 @@ SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
 SUBDIR+=	clanlib
 SUBDIR+=	claraocr
+SUBDIR+=	cnxtview
 SUBDIR+=	compface
+SUBDIR+=	cpia2view
 SUBDIR+=	cqcam
 SUBDIR+=	dcraw
 SUBDIR+=	denemo
