@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/11/26 10:30:01 adam Exp $
+# $NetBSD: Makefile,v 1.43 2004/11/29 14:55:32 adam Exp $
 
 DISTNAME=	tcl8.4.8-src
 PKGNAME=	tcl-8.4.8
@@ -45,21 +45,6 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 .endif
-
-# Modify mkLinks script to remove the short-filename manpage if it was
-# linked to a longer filename.
-post-patch:
-	@cd ${WRKSRC};							\
-	${MV} -f mkLinks mkLinks.tmp;					\
-	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
-	${CAT} mkLinks.tmp						\
-		| ${AWK} '/^  *ln / { print $$3 }'			\
-		| ${SORT} -u						\
-		| ${GREP} -v ".*\.n"					\
-		| ${SED} -e "s,^,${RM} -f ,"				\
-		>> mkLinks;						\
-	${RM} -f mkLinks.tmp;						\
-	${CHMOD} +x mkLinks;
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
