@@ -1,31 +1,13 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 10:40:37 agc Exp $
+$NetBSD: patch-af,v 1.3 1998/12/15 10:34:34 mycroft Exp $
 
---- src/unix/devices.c.orig	Wed Jun 17 05:48:00 1998
-+++ src/unix/devices.c	Sat Jul  4 07:42:07 1998
-@@ -60,7 +60,7 @@
- #elif  I386_JOYSTICK
- void i386_poll_joystick (void);
- /* specific joystick for PC clones */
--#ifdef netbsd_i386
-+#ifdef NETBSD
- #include <machine/joystick.h>
- extern struct joystick joy_data,joy_orig;
- #else
-@@ -658,7 +658,7 @@
- {
- #if ( defined USE_JOYSTICK ) && ( defined  I386_JOYSTICK )
-         int res;
--#ifdef netbsd_i386
-+#ifdef NETBSD
- 	res = read(joy_fd,&joy_data,sizeof(struct joystick) );
- 	if (res == sizeof(struct joystick )) {
- #else
-@@ -666,7 +666,7 @@
- 	if (res == sizeof(struct JS_DATA_TYPE )) {
- #endif
- 	/* get value of buttons */
--#ifdef netbsd_i386
-+#ifdef NETBSD
- 	    joy_b1 = joy_data.b1;
- 	    joy_b2 = joy_data.b2;
- #else
+--- src/unix/devices.c.orig	Sun Dec  6 07:18:42 1998
++++ src/unix/devices.c	Tue Dec 15 04:10:00 1998
+@@ -13,7 +13,7 @@
+ #include "xmame.h"
+ #include "devices.h"
+ 
+-#if defined I386_JOYSTICK && !(defined netbsd_i386)
++#if defined I386_JOYSTICK && !(defined NETBSD)
+ #include <linux/joystick.h>
+ #ifdef JS_VERSION
+ #define I386NEW_JOYSTICK 1

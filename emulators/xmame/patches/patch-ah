@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.1 1998/12/15 10:34:35 mycroft Exp $
+
+--- src/unix/joy_i386.c.orig	Sun Dec  6 07:52:18 1998
++++ src/unix/joy_i386.c	Tue Dec 15 04:11:10 1998
+@@ -4,7 +4,7 @@
+ #include "devices.h"
+ 
+ /* specific joystick for PC clones */
+-#ifdef netbsd_i386
++#ifdef NETBSD
+ #include <machine/joystick.h>
+ static struct joystick joy_data;
+ #else
+@@ -77,7 +77,7 @@
+         for(i=0;i<MAX_JOY;i++)
+         {
+ 	   if (joydata[i].fd < 0) continue;
+-#ifdef netbsd_i386
++#ifdef NETBSD
+ 	   res = read(joydata[i].fd,&joy_data,sizeof(struct joystick) );
+ 	   if (res != sizeof(struct joystick )) continue;
+ #else
+@@ -85,7 +85,7 @@
+ 	   if (res != sizeof(struct JS_DATA_TYPE )) continue;
+ #endif
+ 	   /* get value of buttons */
+-#ifdef netbsd_i386
++#ifdef NETBSD
+ 	   joydata[i].buttons[0] = joy_data.b1;
+ 	   joydata[i].buttons[1] = joy_data.b2;
+ #else
