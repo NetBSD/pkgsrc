@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+$NetBSD: patch-aa,v 1.2 1998/12/21 15:45:21 tv Exp $
 
 --- CONFIG.orig	Fri Jul 10 17:06:34 1998
 +++ CONFIG	Mon Nov 23 09:57:21 1998
@@ -58,9 +58,10 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
 @@ -253,8 +260,8 @@
  SHELL = /bin/sh
  ECHO = echo -e
- CC = gcc -pipe
+-CC = gcc -pipe
 -#YACC = yacc
 -YACC = bison -y
++#CC = gcc -pipe
 +YACC = yacc
 +#YACC = bison -y
  #LEX = lex

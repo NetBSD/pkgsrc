@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- ifcico/emsidat.c.orig	Mon Dec 21 09:44:01 1998
++++ ifcico/emsidat.c	Mon Dec 21 09:45:53 1998
+@@ -110,7 +110,7 @@
+ 	p=xstrcat(p,reldate);
+ 	p=xstrcat(p,"}{TRX#}{[");
+ 	(void)time(&tt);
+-	sprintf(cbuf,"%08lX",mtime2sl(tt));
++	sprintf(cbuf,"%08X",mtime2sl(tt));
+ 	p=xstrcat(p,cbuf);
+ 	p=xstrcat(p,"]}{TZUTC}{[");
+ 	p=xstrcat(p,gmtoffset(tt));
+@@ -130,7 +130,7 @@
+ 	p=xstrcat(p,flags?flags:"");
+ 	p=xstrcat(p,"]}");
+ 
+-	sprintf(cbuf,"%04X",strlen(p+12));
++	sprintf(cbuf,"%04lX",strlen(p+12));
+ 	memcpy(p+8,cbuf,4);
+ 	debug(DBG_HANDSHAKE, "prepared: \"%s\"",p);
+ 	return p;
+@@ -354,7 +354,7 @@
+ 
+ 		p=sel_brace(NULL);
+ 		p=sel_bracket(p);
+-		if (sscanf(p,"%08lx",&tt) == 1)
++		if (sscanf(p,"%08x",&tt) == 1)
+ 		{
+ 			strcpy(ctt,date(sl2mtime(tt)));
+ 			loginf("remote     time: %s",ctt);

@@ -1,0 +1,14 @@
+$NetBSD: patch-at,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- iflib/rdconfig.c.orig	Mon Dec 21 10:15:33 1998
++++ iflib/rdconfig.c	Mon Dec 21 10:16:34 1998
+@@ -404,7 +404,9 @@
+ 			fprintf(stderr,"configtime: %s",ctime(&configtime));
+ 		}
+ 
++#ifndef __NetBSD__
+ 		if (debugfile) freopen(debugfile,"a",stderr);
++#endif
+ 		debug(0,"start %s ver %s of %s, verbose 0x%08lx",
+ 			myname,version,reldate,verbose);
+ 	}
