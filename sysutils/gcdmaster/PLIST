@@ -1,22 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/08 19:40:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/07/06 20:57:45 drochner Exp $
 bin/gcdmaster
-man/man1/xcdrdao.1
-share/pixmaps/gcdmaster/gcdmaster.png
-share/pixmaps/gcdmaster/pixmap_audiocd.png
-share/pixmaps/gcdmaster/pixmap_copycd.png
-share/pixmaps/gcdmaster/pixmap_cursor-tool.xpm
-share/pixmaps/gcdmaster/pixmap_datacd.png
-share/pixmaps/gcdmaster/pixmap_dumpcd.png
-share/pixmaps/gcdmaster/pixmap_help.png
-share/pixmaps/gcdmaster/pixmap_mixedcd.png
-share/pixmaps/gcdmaster/pixmap_open.png
-share/pixmaps/gcdmaster/pixmap_play-pause.xpm
-share/pixmaps/gcdmaster/pixmap_play-start.xpm
-share/pixmaps/gcdmaster/pixmap_play-stop.xpm
-share/pixmaps/gcdmaster/pixmap_zoom-fit.xpm
-share/pixmaps/gcdmaster/pixmap_zoom-in.xpm
-share/pixmaps/gcdmaster/pixmap_zoom-out.xpm
-share/pixmaps/gcdmaster/pixmap_zoom-selection.xpm
-share/pixmaps/gcdmaster/pixmap_zoom-tool.xpm
-share/gnome/apps/Applications/gcdmaster.desktop
-@dirrm share/pixmaps/gcdmaster
+man/man1/gcdmaster.1
+share/applications/gcdmaster.desktop
+share/pixmaps/gcdmaster.png
