@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/08 07:05:38 minoura Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/01/26 09:27:38 minoura Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -23,6 +23,7 @@ lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sha1.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/syslog.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/termios.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/threads.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/vport.so
 lib/gauche/${PKGVERSION}/include/gauche.h
 lib/gauche/${PKGVERSION}/include/gauche/arch.h
 lib/gauche/${PKGVERSION}/include/gauche/builtin-syms.h
@@ -66,6 +67,7 @@ share/gauche/${PKGVERSION}/lib/gauche/cgen.scm
 share/gauche/${PKGVERSION}/lib/gauche/charconv.scm
 share/gauche/${PKGVERSION}/lib/gauche/collection.scm
 share/gauche/${PKGVERSION}/lib/gauche/common-macros.scm
+share/gauche/${PKGVERSION}/lib/gauche/condutil.scm
 share/gauche/${PKGVERSION}/lib/gauche/config.scm
 share/gauche/${PKGVERSION}/lib/gauche/defvalues.scm
 share/gauche/${PKGVERSION}/lib/gauche/fcntl.scm
@@ -119,6 +121,7 @@ share/gauche/${PKGVERSION}/lib/gauche/time.scm
 share/gauche/${PKGVERSION}/lib/gauche/uvector.scm
 share/gauche/${PKGVERSION}/lib/gauche/validator.scm
 share/gauche/${PKGVERSION}/lib/gauche/version.scm
+share/gauche/${PKGVERSION}/lib/gauche/vport.scm
 share/gauche/${PKGVERSION}/lib/gauche/vm/debugger.scm
 share/gauche/${PKGVERSION}/lib/gauche/vm/disasm.scm
 share/gauche/${PKGVERSION}/lib/gauche/with.scm
