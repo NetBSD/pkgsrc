@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/02/13 16:41:40 tron Exp $
+# $NetBSD: Makefile,v 1.39 2002/02/14 09:40:31 tron Exp $
 
 DISTNAME=	ucd-snmp-4.2.3
 PKGREVISION=	1
@@ -19,12 +19,6 @@ BUILD_DEFS+=	USE_INET6
 USE_BUILDLINK_ONLY=	
 
 .include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == NetBSD && \
-	${LOWER_ARCH} == i386 && \
-	${OS_VERSION:M1.5.[12]*} != "")
-BROKEN=		Please update your sys/disklabel.h from the netbsd-1-5 branch
-.endif
 
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -58,6 +52,12 @@ post-extract:
 	@${LN} ${WRKSRC}/s/netbsd.h ${WRKSRC}/s/netbsdelf.h
 
 pre-configure:
+.if (${OPSYS} == NetBSD && \
+	${LOWER_ARCH} == i386 && \
+	${OS_VERSION:M1.5.[123]*} != "")
+	${MKDIR} ${BUILDLINK_DIR}/include/sys
+	${LN} -s ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
+.endif
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
 .if ${OPSYS} == SunOS
 # Adapt for the fact that the default I've seen of ac_max_sed_cmds=90
