@@ -1,0 +1,238 @@
+$NetBSD: patch-ab,v 1.1 2003/08/04 12:06:24 itojun Exp $
+
+--- pgp.c	2003-07-08 18:31:47.000000000 +0900
++++ pgp.c	2003-08-04 20:20:27.000000000 +0900
+@@ -36,9 +36,11 @@
+ #include <unistd.h>
+ 
+ #ifdef OPENSSL
++#include <openssl/bn.h>
+ #include <openssl/rsa.h>
+ #include <openssl/evp.h>
+ #include <openssl/rand.h>
++#include <openssl/opensslv.h>
+ #else /* OPENSSL */
+ #include <rsa.h>
+ #include <evp.h>
+@@ -62,7 +64,7 @@
+ 
+ static struct pgp_pkt * pgp_parsepkt(u_char **pp, u_char *ep);
+ static int pgp_makepkt(struct pgp_pkt *pkt, u_char **bufp, int *lenp);
+-static EVP_CIPHER * pgp_symalg_cipher(int alg);
++static const EVP_CIPHER * pgp_symalg_cipher(int alg);
+ static BIGNUM * pgp_decrypt_mpi(EVP_CIPHER_CTX *ctx, u_char **pp, u_short *sum);
+ static BIGNUM * pgp_parse_mpi(u_char **pp);
+ 
+@@ -697,7 +699,7 @@
+ 	}
+ }
+ 
+-static EVP_CIPHER *
++static const EVP_CIPHER *
+ pgp_symalg_cipher(int alg)
+ {
+ 	switch (alg) {
+@@ -717,7 +719,7 @@
+ 	return NULL;
+ }
+ 
+-static EVP_MD *
++static const EVP_MD *
+ pgp_hashalg_md(int alg)
+ {
+ 	switch (alg) {
+@@ -774,8 +776,8 @@
+ int
+ pgp_decrypt_seckey(struct pgp_pkt *pkt, int (*passwd_callback)(char *buf, int size, struct pgp_pkt *pkt))
+ {
+-	EVP_CIPHER *cipher;
+-	EVP_MD *md;
++	const EVP_CIPHER *cipher;
++	const EVP_MD *md;
+ 	EVP_CIPHER_CTX ctx;
+ 	u_char mdbuf[EVP_MAX_MD_SIZE];
+ 	u_int mdlen;
+@@ -954,7 +956,7 @@
+ 	case PGP_PUB_ELGAMAL_ENC:
+ 	    {
+ 		BIGNUM *yy, *k;
+-		BN_CTX bn_ctx;
++		BN_CTX *bn_ctx;
+ 		DH *dh = ((EVP_PKEY *)seckey->un.pubkey.key)->pkey.dh;
+ 
+ 		yy = pgp_parse_mpi(&p);
+@@ -966,15 +968,15 @@
+ 				BN_free(k);
+ 			return -1;
+ 		}
+-		BN_CTX_init(&bn_ctx);
+-		BN_mod_exp(yy, yy, dh->priv_key, dh->p, &bn_ctx);
+-		BN_mod_inverse(yy, yy, dh->p, &bn_ctx);
+-		BN_mod_mul(k, k, yy, dh->p, &bn_ctx);
++		bn_ctx = BN_CTX_new();
++		BN_mod_exp(yy, yy, dh->priv_key, dh->p, bn_ctx);
++		BN_mod_inverse(yy, yy, dh->p, bn_ctx);
++		BN_mod_mul(k, k, yy, dh->p, bn_ctx);
+ 		len = BN_num_bytes(k);
+ 		if ((buf = malloc(len)) == NULL)
+ 			return -1;
+ 		BN_bn2bin(k, buf);
+-		BN_CTX_free(&bn_ctx);
++		BN_CTX_free(bn_ctx);
+ 		BN_free(k);
+ 		BN_free(yy);
+ 		/* padding */
+@@ -1049,7 +1051,7 @@
+ 	    {
+ 		BIGNUM yy, xx, k, z;
+ 		BIGNUM *m;
+-		BN_CTX bn_ctx;
++		BN_CTX *bn_ctx;
+ 		DH *dh = ((EVP_PKEY *)pubkey->un.pubkey.key)->pkey.dh;
+ 		u_char *buf;
+ 
+@@ -1075,11 +1077,11 @@
+ 
+ 		BN_init(&yy); BN_init(&xx); BN_init(&k); BN_init(&z);
+ 		i = BN_num_bits(dh->p) / 2;	/* XXX */
+-		BN_CTX_init(&bn_ctx);
++		bn_ctx = BN_CTX_new();
+ 		if (BN_rand(&xx, i, 0, 1)
+-		&&  BN_mod_exp(&yy, dh->g, &xx, dh->p, &bn_ctx)
+-		&&  BN_mod_exp(&z, dh->pub_key, &xx, dh->p, &bn_ctx)
+-		&&  BN_mod_mul(&k, m, &z, dh->p, &bn_ctx)
++		&&  BN_mod_exp(&yy, dh->g, &xx, dh->p, bn_ctx)
++		&&  BN_mod_exp(&z, dh->pub_key, &xx, dh->p, bn_ctx)
++		&&  BN_mod_mul(&k, m, &z, dh->p, bn_ctx)
+ 		&&  (buf = malloc(BN_num_bytes(&yy) + BN_num_bytes(&k) + 2)) != NULL) {
+ 			p = buf;
+ 			i = BN_num_bits(&yy);
+@@ -1092,7 +1094,7 @@
+ 			pkt->dlen = p - buf;
+ 			ret = 0;
+ 		}
+-		BN_CTX_free(&bn_ctx);
++		BN_CTX_free(bn_ctx);
+ 		BN_free(&yy); BN_free(&xx); BN_free(&k); BN_free(&z);
+ 		BN_free(m);
+ 		break;
+@@ -1106,7 +1108,7 @@
+ int
+ pgp_generate_seskey(struct pgp_pkt *pkt)
+ {
+-	EVP_CIPHER *cipher;
++	const EVP_CIPHER *cipher;
+ 	int keylen;
+ 	u_char *p;
+ 	int len, i;
+@@ -1133,7 +1135,7 @@
+ int
+ pgp_decrypt_symdat(struct pgp_pkt *pkt, struct pgp_pkt *seskey)
+ {
+-	EVP_CIPHER *cipher;
++	const EVP_CIPHER *cipher;
+ 	EVP_CIPHER_CTX ctx;
+ 	u_char iv[8];
+ 	u_char *p, *decbuf;
+@@ -1175,7 +1177,7 @@
+ int
+ pgp_encrypt_symdat(struct pgp_pkt *pkt, struct pgp_pkt *seskey)
+ {
+-	EVP_CIPHER *cipher;
++	const EVP_CIPHER *cipher;
+ 	EVP_CIPHER_CTX ctx;
+ 	u_char iv[8], rand[16];
+ 	u_char *encbuf;
+@@ -1341,7 +1343,7 @@
+ }
+ 
+ /* XXX: PARSE ASN1! */
+-static EVP_MD *
++static const EVP_MD *
+ pgp_asn1_md(u_char **pp, int len)
+ {
+ 	static const u_char asn1_md2[] = {
+@@ -1392,7 +1394,7 @@
+ 	u_char *buf;
+ 	int ret, len;
+ 	u_char *p;
+-	EVP_MD *md;
++	const EVP_MD *md;
+ 
+ 	if (pubkey->tag != PGP_TAG_PUBLIC_KEY
+ 	||  sign->tag != PGP_TAG_SIGN
+@@ -1440,7 +1442,7 @@
+ 		BIGNUM *r, *s;
+ 		BIGNUM *h;
+ 		BIGNUM w, u1, u2, v;
+-		BN_CTX bn_ctx;
++		BN_CTX *bn_ctx;
+ 
+ 		dsa = ((EVP_PKEY *)pubkey->un.pubkey.key)->pkey.dsa;
+ 		r = pgp_parse_mpi(&p);
+@@ -1449,17 +1451,17 @@
+ 		if (dsa->p == NULL || dsa->q == NULL || dsa->g == NULL ||
+ 		    dsa->pub_key == NULL || r == NULL || s == NULL || h == NULL)
+ 			goto dsa_err;
+-		BN_CTX_init(&bn_ctx);
++		bn_ctx = BN_CTX_new();
+ 		BN_init(&w); BN_init(&u1); BN_init(&u2); BN_init(&v);
+-		if (BN_mod_inverse(&w, s, dsa->q, &bn_ctx)
+-		&&  BN_mod_mul(&u1, h, &w, dsa->q, &bn_ctx)
+-		&&  BN_mod_mul(&u2, r, &w, dsa->q, &bn_ctx)
++		if (BN_mod_inverse(&w, s, dsa->q, bn_ctx)
++		&&  BN_mod_mul(&u1, h, &w, dsa->q, bn_ctx)
++		&&  BN_mod_mul(&u2, r, &w, dsa->q, bn_ctx)
+ 		&&  BN_mod_exp2_mont(&v, dsa->g, &u1, dsa->pub_key, &u2,
+-					dsa->p, &bn_ctx, NULL)
+-		&&  BN_mod(&v, &v, dsa->q, &bn_ctx)
++					dsa->p, bn_ctx, NULL)
++		&&  BN_mod(&v, &v, dsa->q, bn_ctx)
+ 		&&  BN_ucmp(&v, r) == 0)
+ 			ret = 0;
+-		BN_CTX_free(&bn_ctx);
++		BN_CTX_free(bn_ctx);
+ 		BN_free(&w); BN_free(&u1); BN_free(&u2); BN_free(&v);
+   dsa_err:
+ 		if (r) BN_free(r);
+@@ -1532,17 +1534,17 @@
+ 	    {
+ 		DSA *dsa = ((EVP_PKEY *)seckey->un.pubkey.key)->pkey.dsa;
+ 		BIGNUM *kinv, *r, s, h;
+-		BN_CTX bn_ctx;
++		BN_CTX *bn_ctx;
+ 
+-		BN_CTX_init(&bn_ctx);
++		bn_ctx = BN_CTX_new();
+ 		kinv = NULL; r = NULL;
+ 		BN_init(&s); BN_init(&h);
+-		if (DSA_sign_setup(dsa, &bn_ctx, &kinv, &r)
++		if (DSA_sign_setup(dsa, bn_ctx, &kinv, &r)
+ 		&&  BN_bin2bn(sign->un.sign.mdbuf, sign->un.sign.mdlen, &h)
+-		&&  BN_mod_mul(&s, dsa->priv_key, r, dsa->q, &bn_ctx)
++		&&  BN_mod_mul(&s, dsa->priv_key, r, dsa->q, bn_ctx)
+ 		&&  BN_add(&s, &s, &h)
+ 		&&  (BN_cmp(&s, dsa->q) < 0 || BN_sub(&s, &s, dsa->q))
+-		&&  BN_mod_mul(&s, &s, kinv, dsa->q, &bn_ctx)) {
++		&&  BN_mod_mul(&s, &s, kinv, dsa->q, bn_ctx)) {
+ 			len = BN_num_bytes(r) + BN_num_bytes(&s) + 4;
+ 			if ((sbuf = malloc(len)) != NULL) {
+ 				sign->dbuf = sign->pbuf = sbuf;
+@@ -1558,7 +1560,7 @@
+ 			}
+ 		}
+ 		BN_free(kinv); BN_free(r); BN_free(&s); BN_free(&h);
+-		BN_CTX_free(&bn_ctx);
++		BN_CTX_free(bn_ctx);
+ 		break;
+ 	    }
+ 	default:
+@@ -1720,7 +1722,7 @@
+ int
+ pgp_hash_data_init(struct pgp_pkt *sign)
+ {
+-	EVP_MD *md;
++	const EVP_MD *md;
+ 	EVP_MD_CTX *ctx;
+ 
+ 	if ((md = pgp_hashalg_md(sign->un.sign.hashalg)) == NULL)
