@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:49 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/24 09:20:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 MAINTAINER=	cjs@netbsd.org
 
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
-RUN_DEPENDS=	xpmroot:${PORTSDIR}/x11/xpmroot
+RUN_DEPENDS=	xpmroot:../../x11/xpmroot
 
 USE_IMAKE=	yes
 XMKMF=		xmkmf && make Makefiles	# drop -a because we have no `depends' target

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:44 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/24 09:20:35 agc Exp $
 #
 
 DISTNAME=		xfig.3.2
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	applications/drawing_tools/xfig
 
 MAINTAINER=		root@garbled.futureone.com
 
-RUN_DEPENDS=		fig2dev:${PORTSDIR}/print/transfig
+RUN_DEPENDS=		fig2dev:../../print/transfig
 DEPENDS+=		xpm-3.4j:../../graphics/xpm
 DEPENDS+=		jpeg-6a:../../graphics/jpeg
 DEPENDS+=		Xaw3d-1.3:../../x11/Xaw3d

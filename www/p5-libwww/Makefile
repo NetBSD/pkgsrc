@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/24 09:20:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -10,9 +10,9 @@ MASTER_SITE_SUBDIR=	URI
 
 MAINTAINER=		packages@netbsd.org
 
-BUILD_DEPENDS= 	${PREFIX}/lib/perl5/site_perl/MD5.pm:${PORTSDIR}/security/p5-MD5 \
-		${PREFIX}/lib/perl5/site_perl/Net/FTP.pm:${PORTSDIR}/net/p5-Net \
-		${PREFIX}/lib/perl5/site_perl/MIME/Base64.pm:${PORTSDIR}/converters/p5-MIME-Base64
+BUILD_DEPENDS= 	${PREFIX}/lib/perl5/site_perl/MD5.pm:../../security/p5-MD5 \
+		${PREFIX}/lib/perl5/site_perl/Net/FTP.pm:../../net/p5-Net \
+		${PREFIX}/lib/perl5/site_perl/MIME/Base64.pm:../../converters/p5-MIME-Base64
 
 USE_PERL5=	YES
 

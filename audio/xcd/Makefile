@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:40 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/24 09:20:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/10/08 13:10:20 jmz Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.obs-besancon.fr/pub/outgoing/
 
 MAINTAINER=	packages@netbsd.org
 
-RUN_DEPENDS=    wish8.0:${PORTSDIR}/x11/tk80
+RUN_DEPENDS=    wish8.0:../../x11/tk80
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 WRKSRC=		${WRKDIR}/xcd
