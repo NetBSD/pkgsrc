@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.630 2002/11/28 10:57:32 tron Exp $
+$NetBSD: CHANGES,v 1.631 2002/11/28 11:05:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3757,3 +3757,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mrtg to 2.9.26.2nb2 [tron 2002-11-28]
 	Updated a2ps to 4.13.0.2nb2 [tron 2002-11-28]
 	Updated fly to 1.6.5nb2 [tron 2002-11-28]
+	Updated gphoto 0.4.3nb2 [tron 2002-11-28]
