@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1 1999/09/03 17:04:41 kim Exp $
+
+--- configure.orig	Tue Jun  2 11:30:14 1998
++++ configure	Fri Sep  3 12:29:16 1999
+@@ -970,53 +970,6 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-# Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+-
+-# Check for any special flags to pass to ltconfig.
+-libtool_flags=
+-test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+-test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+-test "$silent" = yes && libtool_flags="$libtool_flags --silent"
+-test "$ac_cv_prog_gcc" = yes && libtool_flags="$libtool_flags --with-gcc"
+-test "$ac_cv_prog_gnu_ld" = yes && libtool_flags="$libtool_flags --with-gnu-ld"
+-
+-# Some flags need to be propagated to the compiler or linker for good
+-# libtool support.
+-case "$host" in
+-*-*-irix6*)
+-  # Find out which ABI we are using.
+-  echo '#line 990 "configure"' > conftest.$ac_ext
+-  if { (eval echo configure:991: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-    case "`/usr/bin/file conftest.o`" in
+-    *32-bit*)
+-      LD="${LD-ld} -32"
+-      ;;
+-    *N32*)
+-      LD="${LD-ld} -n32"
+-      ;;
+-    *64-bit*)
+-      LD="${LD-ld} -64"
+-      ;;
+-    esac
+-  fi
+-  rm -rf conftest*
+-  ;;
+-
+-*-*-sco3.2v5*)
+-  # On SCO OpenServer 5, we need -belf to get full-featured binaries.
+-  CFLAGS="$CFLAGS -belf"
+-  ;;
+-esac
+-
+-# Actually configure libtool.  ac_aux_dir is where install-sh is found.
+-CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+-LD="$LD" NM="$NM" RANLIB="$RANLIB" LN_S="$LN_S" \
+-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+-$libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+-|| { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
+-
+ freetype_version='1.1.0'
+ 
+ version_info='2:0:0'
