@@ -1,24 +1,26 @@
-# $NetBSD: Makefile,v 1.9 2003/03/22 00:40:49 salo Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/23 07:54:39 jlam Exp $
 #
 
-DISTNAME=	XML-Xerces-1.3.5
-PKGREVISION=	1
+DISTNAME=	XML-Xerces-1.7.0-3
+PKGNAME=	p5-${DISTNAME:C/-([0-9]*)$/.\1/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://xml.apache.org/dist/xerces-p/
+MASTER_SITES=	http://xml.apache.org/dist/xerces-p/stable/archives/
 
 MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-p/
 COMMENT=	Validating XML parser API for Perl
 
-DEPENDS+=	swig-1.1p5:../../devel/swig
+CONFLICTS+=	XML-Xerces-[0-9]*
 
 USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
 PERL5_REQD=	5.6.0
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Xerces/.packlist
 
-MAKE_ENV+=	XERCES_LIB=${BUILDLINK_PREFIX.xerces-c}/lib
-MAKE_ENV+=	XERCES_INCLUDE=${BUILDLINK_PREFIX.xerces-c}/include
+MAKE_ENV+=	XERCESCROOT="${BUILDLINK_PREFIX.xerces-c}"
+MAKE_ENV+=	ICUROOT="${BUILDLINK_PREFIX.icu}"
 
+# Xerces-C is built unthreaded in pkgsrc (for now).
 BUILDLINK_TRANSFORM+=	s:-lpthread:
 
 .include "../../lang/perl5/module.mk"
