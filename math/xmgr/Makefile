@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/12/03 22:14:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/12 04:14:23 snj Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
@@ -17,7 +17,7 @@ COMMENT=		Powerful XY plotting tool for workstations or X-terminals using X
 
 BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_FORTRAN=		YES
 GNU_CONFIGURE=		YES
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--enable-acegr-home="${PREFIX}"
 ALL_TARGET=		# empty
 INSTALL_TARGET=		install
 
-.include "../../devel/netcdf/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/netcdf/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
