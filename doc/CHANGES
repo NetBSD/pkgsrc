@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6184 2004/06/07 18:09:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6185 2004/06/07 21:18:29 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm-server to 2.2.1nb1 [cube 2004-06-07]
 	Added dmassage-0.6 [xtraeme 2004-06-07]
 	Added slay-1.2 [xtraeme 2004-06-07]
+	bsd.pkg.mk: started freeze for pkgsrc-2004Q2 branch [agc 2004-06-07]
