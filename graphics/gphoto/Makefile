@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:37:08 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/11/28 11:04:14 tron Exp $
 
 DISTNAME=	gphoto-0.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.gphoto.net/dist/
 
@@ -9,12 +9,12 @@ MAINTAINER=	jmcm@cs.cmu.edu
 HOMEPAGE=	http://www.gphoto.org/
 COMMENT=	Download and view files from various digital cameras
 
-DEPENDS+=	imlib>=1.9.11nb1:../../graphics/imlib
-
-USE_X11BASE=		yes
-USE_LIBTOOL=		yes
+USE_BUILDLINK2=		YES
+USE_X11BASE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
 
+.include "../../graphics/imlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
