@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.893 2003/09/22 12:45:21 xtraeme Exp $
+$NetBSD: TODO,v 1.894 2003/09/22 14:13:36 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -155,8 +155,6 @@ Suggested package updates
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
-	o jove-4.16.0.58 [pkg/19924]
-	o jove-4.16.0.61
 	o jpilot-0.99.6
 	o jwhois-3.2.2 [pkg/22741]
 	o kbiff-3.7
