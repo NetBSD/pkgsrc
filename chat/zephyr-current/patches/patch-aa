@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+
+--- lib/Makefile.in.orig	Sat Jan 31 18:55:07 1998
++++ lib/Makefile.in
+@@ -42,7 +42,7 @@ libzephyr.a: ${OBJS}
+ 
+ zephyr_err.c ${BUILDTOP}/h/zephyr/zephyr_err.h: zephyr_err.et
+ 	compile_et ${srcdir}/zephyr_err.et
+-	mv zephyr_err.h ${BUILDTOP}/h/zephyr
++	cp zephyr_err.h ${BUILDTOP}/h/zephyr
+ 
+ .c.o:
+ 	${CC} -c ${ALL_CFLAGS} $<
