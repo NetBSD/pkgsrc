@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/19 22:32:45 rh Exp $
+include/fntLocal.h
+include/js.h
+include/sl.h
+include/sm.h
+include/slPortability.h
+include/slMODPrivate.h
+include/slMODfile.h
+include/pu.h
+include/sg.h
+include/ssg.h
+include/ssgKeyFlier.h
+include/fnt.h
+lib/libsl.a
+lib/libsm.a
+lib/libpu.a
+lib/libsg.a
+lib/libssg.a
+lib/libfnt.a
