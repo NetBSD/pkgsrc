@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/22 21:02:10 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/08 11:59:36 wiz Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -6,16 +6,8 @@ bin/x128
 bin/x64
 bin/xcbm2
 bin/xpet
+bin/xplus4
 bin/xvic
-include/resid/envelope.h
-include/resid/extfilt.h
-include/resid/filter.h
-include/resid/pot.h
-include/resid/sid.h
-include/resid/siddefs.h
-include/resid/spline.h
-include/resid/voice.h
-include/resid/wave.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/vice.info
 info/vice.info
 info/vice.info-1
@@ -197,4 +189,3 @@ share/vice/fonts/vice-cbm.pcf
 @dirrm share/vice
 @dirrm share/doc/vice
 @dirrm share/doc/html/vice
-@dirrm include/resid
