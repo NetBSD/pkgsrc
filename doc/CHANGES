@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7898 2004/11/18 16:16:33 adam Exp $
+$NetBSD: CHANGES,v 1.7899 2004/11/18 16:49:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5326,3 +5326,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated spamprobe to 1.0a [hubertf 2004-11-18]
 	Updated ap2-auth-mysql to 1.11.12nb3 [cube 2004-11-18]
 	Updated povray to 3.6.1 [adam 2004-11-18]
+	Updated tcl-expect to 5.42.1 [adam 2004-11-18]
+	Updated tk-expect to 5.42.1 [adam 2004-11-18]
