@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2274 2003/05/22 03:14:29 markd Exp $
+$NetBSD: CHANGES,v 1.2275 2003/05/22 06:35:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kde3-i18n-zh_CN to 3.1.2 [markd 2003-05-22]
 	Updated kde3-i18n-zh_TW to 3.1.2 [markd 2003-05-22]
 	Updated kde3-i18n-zu to 3.1.2 [markd 2003-05-22]
+	Updated conserver to 7.2.7 [wiz 2003-05-22]
