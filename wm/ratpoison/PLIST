@@ -1,13 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/11 14:23:49 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/19 15:24:31 wiz Exp $
 bin/ratpoison
+bin/rpws
 man/man1/ratpoison.1
 share/doc/ratpoison/AUTHORS
 share/doc/ratpoison/COPYING
 share/doc/ratpoison/ChangeLog
 share/doc/ratpoison/NEWS
 share/doc/ratpoison/README
+share/ratpoison/allwindows.sh
+share/ratpoison/clickframe.pl
 share/ratpoison/genrpbindings
 share/ratpoison/ratpoison.el
+share/ratpoison/rpshowall.sh
+share/ratpoison/rpws
 share/ratpoison/split.sh
 @dirrm share/ratpoison
 @dirrm share/doc/ratpoison
