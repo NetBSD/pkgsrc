@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.50 2004/06/09 20:51:11 cube Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.51 2004/07/06 23:00:10 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -71,6 +71,7 @@ case $hw_machine_arch in
 	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3'		;;
 	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
 	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
+	*VIA\ C3*\ Samuel*)		FLAGS='-march=c3'		;;
 	*AMD\ K6-III*)			FLAGS='-march=k6-3'		;;
 	*AMD\ K6-2*)			FLAGS='-march=k6-2'		;;
 	*AMD\ K6*)			FLAGS='-march=k6'		;;
@@ -228,6 +229,7 @@ if [ -n "$FLAGS" ]; then
 3.1:-mtune=r5000:-cpu=r5000
 3.1:-mtune=r6000:-cpu=r6000
 3.1:-mtune=r8000:-cpu=r8000
+3.3:-march=c3:-march=i586
 EOD
 `
 fi
