@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:31:05 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/08/04 17:26:59 jtb Exp $
 
-DISTNAME=		hdf5-1.4.5-post2
-PKGNAME=		hdf5-1.4.5.2
+DISTNAME=		hdf5-1.6.0
 CATEGORIES=		devel
-MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.4.5/src/ \
-			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.4.5/src/ \
+MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.6.0/src/ \
+			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.0/src/ \
 			http://www.go.dlr.de/fresh/unix/src/misc/
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -15,6 +14,7 @@ GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/misc/h5cc ${PREFIX}/bin
