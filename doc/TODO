@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.712 2003/07/12 15:31:08 itojun Exp $
+$NetBSD: TODO,v 1.713 2003/07/13 08:26:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -199,7 +199,6 @@ Suggested package updates
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
 	o php4-4.3.2
-	o pfaedit-20030506
 	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
