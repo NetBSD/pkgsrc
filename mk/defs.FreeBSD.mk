@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.15 2003/01/15 20:55:39 jlam Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.16 2003/02/21 12:01:00 grant Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -23,8 +23,8 @@ FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/usr/bin/grep
-.if exists(/bin/tar)
-GTAR?=		/bin/tar
+.if exists(${LOCALBASE}/bin/tar)
+GTAR?=		${LOCALBASE}/bin/tar
 .else
 GTAR?=		/usr/bin/tar
 .endif
@@ -38,7 +38,11 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
+.if exists(${LOCALBASE}/sbin/mtree)
+MTREE?=		${LOCALBASE}/sbin/mtree
+.else
 MTREE?=		/usr/sbin/mtree
+.endif
 MV?=		/bin/mv
 NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
