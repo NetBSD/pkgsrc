@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/22 21:59:22 jmmv Exp $
 #
 
 DISTNAME=	OpenSP-1.5
@@ -13,7 +13,7 @@ COMMENT=	SGML parser, successor to "sp"
 
 CONFLICTS+=     sp-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PERL5=		build
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		native
@@ -22,11 +22,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-http \
 			--enable-default-catalog=${PREFIX}/share/sgml/catalog
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink2.mk"
+.  include "../../devel/unproven-pthreads/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
