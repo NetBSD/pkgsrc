@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/23 10:54:36 adam Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/25 22:30:20 jmc Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	${PYPKGPREFIX}-gd-1.3
@@ -12,11 +12,10 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/~richard/gdmodule/
 COMMENT=	Python interface to gd graphics library
 
-DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
-
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
 ALL_TARGET=	default
+USE_BUILDLINK2=	yes
 
 # this pkg uses Makefile.pre.in
 PYTHON_VERSIONS_ACCEPTED=	20 21
@@ -34,5 +33,7 @@ do-configure:
 	${CP} ${PREFIX}/${PYLIB}/config/Makefile.pre.in ${WRKSRC}
 	cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
