@@ -1,11 +1,11 @@
-/*	$NetBSD: pack_dev.h,v 1.1.1.1 2003/03/31 05:02:57 grant Exp $	*/
+/*	$NetBSD: getopt.h,v 1.1 2003/09/05 18:36:07 jlam Exp $	*/
 
 /*-
- * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
+ * Copyright (c) 2000 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Charles M. Hannum.
+ * by Dieter Baron and Thomas Klausner.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,12 +36,43 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef	_PACK_DEV_H
-#define	_PACK_DEV_H
+#ifndef _GETOPT_H_
+#define _GETOPT_H_
 
-typedef	dev_t pack_t(int, u_long []);
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
 
-pack_t	*pack_find(const char *);
-pack_t	 pack_native;
+#if HAVE_UNISTD_H
+#include <unistd.h>
+#endif
 
-#endif	/* _PACK_DEV_H */
+/*
+ * Gnu like getopt_long() and BSD4.4 getsubopt()/optreset extensions
+ */
+#if (!defined(_POSIX_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(__linux__)
+#define no_argument        0
+#define required_argument  1
+#define optional_argument  2
+
+struct option {
+	/* name of long option */
+	const char *name;
+	/*
+	 * one of no_argument, required_argument, and optional_argument:
+	 * whether option takes an argument
+	 */
+	int has_arg;
+	/* if not NULL, set *flag to val when option found */
+	int *flag;
+	/* if flag not NULL, value to set *flag to; else return value */
+	int val;
+};
+
+__BEGIN_DECLS
+int getopt_long (int, char * const *, const char *,
+    const struct option *, int *);
+__END_DECLS
+#endif
+ 
+#endif /* !_GETOPT_H_ */
