@@ -1,19 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/09/06 11:59:39 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/12/02 21:34:08 jmmv Exp $
 
---- configure.in.orig	Fri Aug 30 14:17:59 2002
-+++ configure.in	Fri Aug 30 14:18:36 2002
-@@ -405,12 +405,12 @@
-     CONFIG_CXXOPTIMIZE="-O2"
-     CONFIG_LFLAGS=""
-     CONFIG_LSTATIC="-static"
--    CONFIG_LSHARED="-shared"
-+    CONFIG_LSHARED="-shared ${LDFLAGS}"
-     CONFIG_LPATH="-Wl,-rpath,"
-     CONFIG_LX="$X_LIBS -lXext -lX11"
-     CONFIG_BFLAGS=""
-     CONFIG_BSTATIC="-Wl,-Bstatic"
--    CONFIG_BSHARED="-Wl,-Bdynamic"
-+    CONFIG_BSHARED="-Wl,-Bdynamic ${LDFLAGS}"
-     CONFIG_BPATH="-Wl,-rpath,"
-     CONFIG_BX="$X_LIBS -lXext -lX11"
-     CONFIG_WORD_LENGTH="4"
+--- Makefile.in.orig	Thu Nov 28 00:55:59 2002
++++ Makefile.in
+@@ -89,7 +89,7 @@ INSTALL:
+ 	@echo installed TeXmacs executables in $(DESTDIR)$(tmbin)
+ 	$(MKDIR) $(DESTDIR)$(tmdata)
+ 	$(CP) $(tmdir)/LICENSE $(DESTDIR)$(tmdata)
+-	$(CP) $(tmdir)/doc $(DESTDIR)$(tmdata)
++	$(CP) $(tmdir)/doc $(DESTDIR)$(datadir)/doc/TeXmacs
+ 	$(CP) $(tmdir)/fonts $(DESTDIR)$(tmdata)
+ 	$(CP) $(tmdir)/langs $(DESTDIR)$(tmdata)
+ 	$(CP) $(tmdir)/misc $(DESTDIR)$(tmdata)
