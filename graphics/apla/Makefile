@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/19 08:32:40 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/14 20:32:23 zuntum Exp $
 #
 
 DISTNAME=	apla-1.0.3
@@ -9,6 +9,7 @@ MAINTAINER=	zuntum@netbsd.org,w.wnuk@zodiac.mimuw.edu.pl
 COMMENT=	replacement for aviplay player
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/apla ${PREFIX}/bin
