@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/08/02 21:43:24 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/02 21:45:39 seb Exp $
 
 DISTNAME=	yorick-1.5.12
+WRKSRC=		${WRKDIR}/yorick-1.5
 CATEGORIES=	math
 MASTER_SITES=   ftp://ftp-icf.llnl.gov/pub/Yorick/
 EXTRACT_SUFX=	.tgz
@@ -8,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	refling@comet.lbl.gov
 HOMEPAGE=	ftp://ftp-icf.llnl.gov/pub/Yorick/doc/index.html
 COMMENT=	Numerical algebra system (similar to Matlab)
-
-WRKSRC=		${WRKDIR}/yorick-1.5
 
 USE_BUILDLINK2=	yes
 USE_X11=        yes
