@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2004/04/12 14:41:03 jschauma Exp $
+$NetBSD: distinfo,v 1.15 2004/04/27 20:38:48 tv Exp $
 
 SHA1 (tiff-3.6.1/tiff-v3.6.1.tar.gz) = f7817145d8756152cc341804df6477f37ef93c38
 Size (tiff-3.6.1/tiff-v3.6.1.tar.gz) = 1072165 bytes
@@ -9,8 +9,8 @@ Size (tiff-3.6.1/libtiff-lzw-compression-kit-1.5.tar.gz) = 9646 bytes
 SHA1 (patch-aa) = f7e1947a088c519a87be89b464eebf362962aeab
 SHA1 (patch-ab) = 186b597cb44768570d844d55a4f4358a89974633
 SHA1 (patch-ac) = 754a02bb0561f8944fa1c870ab8dd6c1d6bf0c49
-SHA1 (patch-ad) = 9c8c96d1f57902222541ba9b5f439c94d575d9eb
-SHA1 (patch-ae) = d82547ecce837e667ce8f821e0cf8c8a25af2187
-SHA1 (patch-af) = 51cbd54bff7999af84d6f4d49972f5ee519dd2e0
+SHA1 (patch-ad) = c0939dafb160caae77c78dc1b6c4b103242718e6
+SHA1 (patch-ae) = 8272e39a8a0324b0f8a1e661721b5c9367c0d8e7
+SHA1 (patch-af) = d6c9fd4f10c26e6b2ad8eb5ec51e9205504b62c7
 SHA1 (patch-ag) = 169a504fc9c4180b3b14a7d2f0e2318af9879f17
-SHA1 (patch-ah) = b824c4aaf1f97787afe1937ec471823164d03685
+SHA1 (patch-ah) = 44ecf92862dc20cdb5e4b1dd4cdbf7c765dc95e2

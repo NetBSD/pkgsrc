@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2004/01/03 18:33:25 reed Exp $
+$NetBSD: patch-ah,v 1.2 2004/04/27 20:38:48 tv Exp $
 
---- html/Makefile.in.orig	Wed Oct  2 08:14:34 2002
+--- html/Makefile.in.orig	Wed Oct  2 11:14:34 2002
 +++ html/Makefile.in
 @@ -86,6 +86,8 @@ HTMLFILES=\
  	v3.5.5.html		\
@@ -11,3 +11,12 @@ $NetBSD: patch-ah,v 1.1 2004/01/03 18:33:25 reed Exp $
  	${NULL}
  IMAGES=\
  	images/back.gif		\
+@@ -110,7 +112,7 @@ TARGETS=
+ all:	${TARGETS}
+ 
+ install: all
+-	${INSTALL} -m 755 -dir -idb tiff.man.html ${DESTDIR}${HTML} ${DESTDIR}${HTML}/images
++	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.html ${DESTDIR}${HTML} ${DESTDIR}${HTML}/images
+ 	for i in ${HTMLFILES} ${IMAGES}; do \
+ 	    ${INSTALL} -idb tiff.man.html -m 444 -F ${DESTDIR}${HTML} \
+ 		-src ${SRCDIR}/$$i -O $$i; \
