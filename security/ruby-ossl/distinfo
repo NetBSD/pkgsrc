@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/21 17:04:27 taca Exp $
+
+SHA1 (ruby/ossl-0.1.3.tar.gz) = 1dff416c64f56908f448be76128cf2a1d27f17f2
+Size (ruby/ossl-0.1.3.tar.gz) = 83282 bytes
+SHA1 (patch-aa) = 43fd0b4e97acb1351c9b9cc032c76388fdad7941
