@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2001/10/18 11:39:24 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2003/01/17 13:49:08 jmmv Exp $
 
 --- makefile.orig	Sat Nov  4 02:49:46 2000
 +++ makefile
-@@ -23,6 +23,8 @@
+@@ -23,6 +23,8 @@ LIB_PATHS   = -L$(GD_LIB) 
  # if not installed in standard paths (/lib, /usr/lib), or LD_LIBRARY_PATH
  # LIB_PATHS   = -L$(GD_LIB) -L$(PNG_LIB) -L$(ZLIB_LIB) -L$(JPEG_LIB)
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2001/10/18 11:39:24 wiz Exp $
  # NOTE:
  # libpng, libz, etc. are usually linked in as dynamic libs
  # either use a link line similar to one of these, or set environment LD_LIBRARY_PATH
-@@ -30,62 +32,66 @@
+@@ -30,62 +32,67 @@ LIB_PATHS   = -L$(GD_LIB) 
  # LIB_PATHS = $(LIB_PATHS) -R$(PNG_LIB) -R$(ZLIB_LIB)
  # LIB_PATHS = $(LIB_PATHS) -Xlinker -rpath -Xlinker $(PNG_LIB) -Xlinker -rpath -Xlinker $(ZLIB_LIB)
  
@@ -81,23 +81,23 @@ $NetBSD: patch-ac,v 1.1 2001/10/18 11:39:24 wiz Exp $
  # --- compile the lib ---
  gifencode.o: gifencode.c gifencode.h
 -	$(CC) -I$(GD_INCL) -c gifencode.c
-+	$(CC) $(CFLAGS) -c gifencode.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c gifencode.c
  
  price_conv.o: price_conv.c
 -	$(CC) -c price_conv.c
-+	$(CC) $(CFLAGS) -c price_conv.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c price_conv.c
  
  gdc.o: gdc.c $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc.c
-+	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdc.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(JPEG_DEF) -c gdc.c
  
  gdc_pie.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h $(GDC_INCL)/gdcpie.h gdc_pie.c
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc_pie.c
-+	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdc_pie.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(JPEG_DEF) -c gdc_pie.c
  
  gdchart.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h $(GDC_INCL)/gdchart.h gdchart.c
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdchart.c
-+	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdchart.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(JPEG_DEF) -c gdchart.c
  
  # --- supporting libraries ---
  # should be compile & installed separately
@@ -105,10 +105,11 @@ $NetBSD: patch-ac,v 1.1 2001/10/18 11:39:24 wiz Exp $
  # 	cd $(GD_LIB) ; make -f Makefile libgd.a
 +
 +libgdchart.a: $(LIB_OBJS)
-+	$(AR) rc libgdchart.a $(LIB_OBJS)
-+	@if [ -x $(RANLIB) ] ; then \
-+	  $(RANLIB) libgdchart.a; \
-+	fi;
++#	$(AR) rc libgdchart.a $(LIB_OBJS)
++#	@if [ -x $(RANLIB) ] ; then \
++#	  $(RANLIB) libgdchart.a; \
++#	fi;
++	$(LIBTOOL) --mode=link $(CC) -o libgdchart.la $(LIB_OBJS:.o=.lo) $(LDFLAGS) -ljpeg -version-info 0:10:0 -rpath $(PREFIX)
  
  # --- clean ---
  clean:
