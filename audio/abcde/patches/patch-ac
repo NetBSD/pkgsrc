@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2001/10/03 21:58:28 abs Exp $
+$NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
 
 --- abcde.orig	Wed Aug 15 22:39:29 2001
-+++ abcde
++++ abcde	Fri Oct 12 10:47:00 2001
 @@ -552,7 +552,7 @@
  			fi
  			# List out disc title/author and contents
@@ -47,6 +47,15 @@ $NetBSD: patch-ac,v 1.2 2001/10/03 21:58:28 abs Exp $
  		done
  		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
+@@ -856,7 +856,7 @@
+ PLAYLISTFORMAT='${ARTISTFILE}_-_${ALBUMFILE}.m3u'
+ PLAYLISTDATAPREFIX=''
+ COMMENT=''
+-ID3TAGV=2
++ID3TAGV=1
+ ENCNICE=10
+ READNICE=10
+ VARIOUSARTISTS=n
 @@ -926,17 +926,12 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
