@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9551 2005/03/22 14:06:28 wiz Exp $
+$NetBSD: CHANGES,v 1.9552 2005/03/22 14:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1460,3 +1460,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dbus to 0.23.4 [jmmv 2005-03-22]
 	Updated dbus-glib to 0.23.4 [jmmv 2005-03-22]
 	Updated fontconfig to 2.3.1 [wiz 2005-03-22]
+	Updated p5-Net-DNS to 0.48 [wiz 2005-03-22]
