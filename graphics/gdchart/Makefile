@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/19 09:05:44 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/01/26 17:34:57 tv Exp $
 
 DISTNAME=	gdchart0.11.5dev
 PKGNAME=	gdchart-0.11.5
@@ -13,7 +13,7 @@ COMMENT=	Easy to use, fast C API for creating charts and graphs
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
-TEST_TARGET=	gdc_samp1 gdc_samp2 gdc_pie_samp ft_samp
+#TEST_TARGET=	gdc_samp1 gdc_samp2 gdc_pie_samp ft_samp
 
 post-patch:
 	for fn in ${WRKSRC}/*.[ch]; do					\
