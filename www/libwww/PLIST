@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/26 18:11:20 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/11/19 20:54:11 reinoud Exp $
 bin/libwww-config
 bin/w3c
 bin/webbot
@@ -24,6 +24,7 @@ include/w3c-libwww/HTChannl.h
 include/w3c-libwww/HTChunk.h
 include/w3c-libwww/HTConLen.h
 include/w3c-libwww/HTCookie.h
+include/w3c-libwww/HTDAV.h
 include/w3c-libwww/HTDNS.h
 include/w3c-libwww/HTDemux.h
 include/w3c-libwww/HTDescpt.h
