@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/08 13:01:18 ben Exp $
 #
 
-DISTNAME=		memtest86-2.9
+DISTNAME=		memtest86-3.1a
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest86.com/
 
@@ -11,11 +11,8 @@ COMMENT=		Thorough, stand alone memory test for x86 arch
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-
-post-patch:
-	${CP} ${FILESDIR}/linkage.h ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/mdec
@@ -23,5 +20,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtest
 	${CP} ${WRKSRC}/README ${PREFIX}/share/doc/memtest
 
-.include "../../devel/binutils/buildlink2.mk"
+.include "../../devel/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
