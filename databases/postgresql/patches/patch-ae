@@ -1,18 +1,13 @@
-$NetBSD: patch-ae,v 1.9 1999/09/19 04:24:54 jlam Exp $
+$NetBSD: patch-ae,v 1.10 2000/03/18 17:43:17 jlam Exp $
 
---- ./bin/pg_id/Makefile.orig	Sun Jan 17 01:19:10 1999
-+++ ./bin/pg_id/Makefile	Sat Sep 18 03:17:25 1999
-@@ -26,11 +26,8 @@
+--- bin/pg_encoding/Makefile.orig	Sat Jun  5 06:27:31 1999
++++ bin/pg_encoding/Makefile	Thu Mar 16 17:49:44 2000
+@@ -20,7 +20,7 @@
+ all: pg_encoding
  
- all: pg_id
+ pg_encoding: $(OBJS) $(LIBPQDIR)/libpq.a
+-	$(CC) -o pg_encoding $(OBJS) -L$(LIBPQDIR) -lpq $(LDFLAGS)
++	$(CC) -o pg_encoding $(OBJS) $(LIBPQ) $(LDFLAGS)
  
--pg_id: $(OBJS) $(LIBPQDIR)/libpq.a
--	$(CC) -o pg_id -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
--
--$(LIBPQDIR)/libpq.a:
--	$(MAKE) -C $(LIBPQDIR) libpq.a
-+pg_id: $(OBJS)
-+	$(CC) -o pg_id $(OBJS) $(LIBPQ) $(LDFLAGS)
- 
- install: pg_id
- 	$(INSTALL) $(INSTL_EXE_OPTS) pg_id$(X) $(BINDIR)/pg_id$(X)
+ install: pg_encoding
+ 	$(INSTALL) $(INSTL_EXE_OPTS) pg_encoding$(X) $(BINDIR)/pg_encoding$(X)

@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/03/18 17:43:18 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+USER=@PGUSER@
+GROUP=@PGGROUP@
+PGHOME=@PGHOME@
+USERDIR=@USERDIR@
+
+case ${STAGE} in
+PRE-INSTALL)
+	echo ------------------------------------------------------------
+	echo Dump existing databases, before installing new db version !!
+	echo ------------------------------------------------------------
+
+	# Group... the default's shipped with NetBSD
+	# We need to check that ${GROUP} exists before adding the user.
+	#
+	if ${USERDIR}/group info -e ${GROUP}
+	then
+		echo "Group '${GROUP}' already exists...proceeding."
+	else
+		echo "Creating '${GROUP}' group..."
+		${USERDIR}/group add ${GROUP}
+		echo "Done."
+	fi
+
+	# use finger to be able to use NIS, ...
+	#
+	mkdir -p ${PGHOME}
+	if finger ${USER} 2>&1 | grep >/dev/null "no such user"
+	then
+		echo "Creating '${USER}' user..."
+		${USERDIR}/user add \
+			-c "PostgreSQL database administrator" \
+			-d ${PGHOME} \
+			-g ${GROUP} -s /bin/sh ${USER}
+		echo "Done."
+	else
+		echo "User '${USER}' already exists...proceeding."
+	fi
+	chown -R ${USER}:${GROUP} ${PGHOME}
+	;;
+POST-INSTALL)
+	if [ ! -f ${PGHOME}/.profile ]; then
+		cp ${PGHOME}/.profile.pgsql ${PGHOME}/.profile
+	fi
+	echo ------------------------------------------------------------------
+	echo Initializing PostgreSQL Databases - this may take a few minutes...
+	echo ------------------------------------------------------------------
+        echo "${PKG_PREFIX}/bin/initdb --pglib=${PKG_PREFIX}/share/postgresql --pgdata=${PGHOME}/data" | su -l ${USER}
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2000/03/18 17:43:17 jlam Exp $
+
+--- pl/tcl/Makefile.orig	Sun Dec 13 18:46:49 1998
++++ pl/tcl/Makefile	Thu Mar 16 17:49:45 2000
+@@ -75,7 +75,7 @@
+ 
+ CFLAGS+= $(TCL_DEFS)
+ 
+-LDADD+= -L$(LIBPQDIR) -lpq
++LDADD+= $(LIBPQ)
+         
+ #
+ # DLOBJS is the dynamically-loaded object file.
