@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.609 2003/06/03 13:08:20 jmmv Exp $
+$NetBSD: TODO,v 1.610 2003/06/03 15:38:49 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -64,7 +64,6 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.1
-	o Mixer.app-1.8.0 [pkg/21278]
 	o R-1.7.0
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
