@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.375 1999/12/07 08:55:58 sakamoto Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.376 1999/12/16 03:20:35 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -833,17 +833,24 @@ _ACCEPTABLE=	yes
 .endfor	# _lic
 .endif	# ACCEPTABLE_LICENSES
 .ifndef _ACCEPTABLE
-IGNORE=	"Unacceptable license: ${LICENSE} - set ACCEPTABLE_LICENSES in /etc/mk.conf to include ${LICENSE} to make this package"
+IGNORE=	"Unacceptable license: ${LICENSE}." \
+	"	To build this package, add this line to your /etc/mk.conf:" \
+	"	ACCEPTABLE_LICENSES+=${LICENSE}"
 .endif
 .endif
 
 .if defined(IGNORE)
-.if defined(IGNORE_FAIL)
-IGNORECMD?=	${ECHO} "===>  ${PKGNAME} ${IGNORE}." && ${FALSE}
-.elif defined(IGNORE_SILENT)
+.if defined(IGNORE_SILENT)
 IGNORECMD?=	${DO_NADA}
 .endif
-IGNORECMD?=	${ECHO_MSG} "===>  ${PKGNAME} ${IGNORE}."
+IGNORECMD?=	${ECHO} -n "===>  ${PKGNAME} " ; \
+		for str in ${IGNORE} ; \
+		do \
+			${ECHO} "$$str" ; \
+		done
+.if defined(IGNORE_FAIL)
+IGNORECMD+=	&& ${FALSE}
+.endif
 fetch checksum extract patch configure all build install deinstall package \
 depends check-depends:
 	@${IGNORECMD}
