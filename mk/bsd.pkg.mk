@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.73 1998/04/22 14:22:46 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.74 1998/04/22 17:29:10 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1220,8 +1220,8 @@ do-build:
 do-install:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
 	@for f in ${INFO_FILES}; do		\
-		${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info";	\
-		install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info;			\
+		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
+		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
 	done
 .endif
 
