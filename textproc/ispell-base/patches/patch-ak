@@ -1,20 +1,20 @@
-$NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
+$NetBSD: patch-ak,v 1.4 2005/03/24 17:08:02 tv Exp $
 
---- term.c.orig	Wed Nov  2 19:44:28 1994
+--- term.c.orig	2001-07-25 17:51:46.000000000 -0400
 +++ term.c
-@@ -64,7 +64,10 @@
+@@ -80,7 +80,10 @@ static char Rcs_Id[] =
  #include "ispell.h"
  #include "proto.h"
  #include "msgs.h"
 -#ifdef USG
-+#if defined(__NetBSD__) || defined(linux) || defined(__sgi)
++#if defined(__NetBSD__) || defined(linux) || defined(__sgi) || defined(__INTERIX)
 +#define USE_TERMIOS
 +#include <termios.h>
 +#elif defined(USG)
  #include <termio.h>
  #else
  #include <sgtty.h>
-@@ -135,7 +138,10 @@
+@@ -151,7 +154,10 @@ static int putch (c)
      return putchar (c);
      }
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
  static struct termio	sbuf;
  static struct termio	osbuf;
  #else
-@@ -263,8 +269,31 @@
+@@ -279,8 +285,31 @@ retry:
  
  #endif
  
@@ -59,7 +59,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) sigsetmask (1<<(SIGTSTP-1) | 1<<(SIGTTIN-1) | 1<<(SIGTTOU-1));
  #endif
  #endif
-@@ -290,7 +319,7 @@
+@@ -306,7 +335,7 @@ retry:
  #endif
  #endif
  
@@ -68,7 +68,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TIOCGETP, (char *) &osbuf);
  #ifdef TIOCGLTC
      (void) ioctl (0, TIOCGLTC, (char *) &oltc);
-@@ -343,7 +372,9 @@
+@@ -359,7 +388,9 @@ SIGNAL_TYPE done (signo)
  	{
  	if (te)
  	    tputs (te, 1, putch);
@@ -79,7 +79,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
  	(void) ioctl (0, TCSETAW, (char *) &osbuf);
  #else
  	(void) ioctl (0, TIOCSETP, (char *) &osbuf);
-@@ -359,7 +390,9 @@
+@@ -375,7 +406,9 @@ SIGNAL_TYPE done (signo)
  static SIGNAL_TYPE onstop (signo)
      int		signo;
      {
@@ -90,7 +90,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TCSETAW, (char *) &osbuf);
  #else
      (void) ioctl (0, TIOCSETP, (char *) &osbuf);
-@@ -374,7 +407,9 @@
+@@ -390,7 +423,9 @@ static SIGNAL_TYPE onstop (signo)
      (void) kill (0, signo);
      /* stop here until continued */
      (void) signal (signo, onstop);
@@ -101,7 +101,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TCSETAW, (char *) &sbuf);
  #else
      (void) ioctl (0, TIOCSETP, (char *) &sbuf);
-@@ -434,7 +469,9 @@
+@@ -450,7 +485,9 @@ int shellescape	(buf)
  	}
      argv[i] = NULL;
  
@@ -112,7 +112,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TCSETAW, (char *) &osbuf);
  #else
      (void) ioctl (0, TIOCSETP, (char *) &osbuf);
-@@ -480,7 +517,9 @@
+@@ -496,7 +533,9 @@ int shellescape	(buf)
  	(void) signal (SIGTSTP, onstop);
  #endif
  
@@ -123,7 +123,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TCSETAW, (char *) &sbuf);
  #else
      (void) ioctl (0, TIOCSETP, (char *) &sbuf);
-@@ -513,7 +552,9 @@
+@@ -529,7 +568,9 @@ void shescape (buf)
      int		ch;
  #endif
  
@@ -134,7 +134,7 @@ $NetBSD: patch-ak,v 1.3 2004/12/01 12:18:21 markd Exp $
      (void) ioctl (0, TCSETAW, (char *) &osbuf);
  #else
      (void) ioctl (0, TIOCSETP, (char *) &osbuf);
-@@ -545,7 +586,9 @@
+@@ -561,7 +602,9 @@ void shescape (buf)
  	(void) signal (SIGTSTP, onstop);
  #endif
  
