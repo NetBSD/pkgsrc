@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/01/23 15:38:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46 2001/02/05 09:01:01 tron Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 USE_LIBINTL=		YES
@@ -35,6 +35,6 @@ DEPENDS+=		tcp_wrappers>=7.6:../../security/tcp_wrappers
 .endif
 
 pre-configure:
-	cd ${WRKSRC}/popt && autoconf
+	cd ${WRKSRC}/popt && ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/11/03 01:14:51 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/05 09:00:59 tron Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -19,7 +19,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		jpeg-*:../../graphics/jpeg
 DEPENDS+=		png-*:../../graphics/png
@@ -71,7 +71,7 @@ R_LIBDIR=		${PREFIX}/lib/R
 INSTALL_DIRS=		${R_LIBDIR}
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
 
 # Generate the PLIST dynamically as it changes in each version only in a
 # specific subtree.  This will make maintaining this package a little easier

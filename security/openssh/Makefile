@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/01/29 11:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2001/02/05 09:01:03 tron Exp $
 
 DISTNAME=		openssh-2.3.0p1
 CATEGORIES=		security
@@ -16,7 +16,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.com/
 
 BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 CRYPTO=			yes
 
@@ -81,7 +81,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
 
 post-build:
 	for FILE in \
