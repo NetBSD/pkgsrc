@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2002/04/03 21:16:29 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2002/06/12 20:34:04 jwise Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
 CATEGORIES=	www
-MASTER_SITES=	http://xml.apache.org/dist/cocoon/
+MASTER_SITES=	http://xml.apache.org/dist/cocoon/cocoon1/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://xml.apache.org/cocoon/
