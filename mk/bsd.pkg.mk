@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.576 2000/09/15 16:53:30 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.577 2000/09/19 19:29:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1623,6 +1623,12 @@ root-install:
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	vul="`${MAKE} show-vulnerabilities`";				\
+	if [ "$$vul" != "" ]; then					\
+		${ECHO_MSG} '*** WARNING: Vulnerabilities in this package ***'; \
+		${ECHO_MSG} "$$vul";					\
+	fi
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -2789,6 +2795,14 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
+show-vulnerabilities: ${DISTDIR}/vulnerabilities
+	@${AWK} '/^${PKGBASE}/ { print $$0 }' ${DISTDIR}/vulnerabilities
+
+show-vulnerabilities-html: ${DISTDIR}/vulnerabilities
+	@${AWK} '/^${PKGBASE}/ { gsub("\<", "\\&lt;", $$1);		\
+		 gsub("\>", "\\&gt;", $$1);				\
+		 printf("<STRONG><LI>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", $$1, $$2, $$3, $$3) }' ${DISTDIR}/vulnerabilities
+
 .PHONY: README.html
 README.html: .PRECIOUS
 	@${MAKE} ${MAKEFLAGS} build-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
@@ -2798,11 +2812,19 @@ README.html: .PRECIOUS
 	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}' >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
+	@${MAKE} ${MAKEFLAGS} show-vulnerabilities-html >> $@.tmp5
+	@[ -s $@.tmp5 ] || ${ECHO} "<I>(no vulnerabilities known)</I>" >> $@.tmp5
+	@${LS} -l ${DISTDIR}/vulnerabilities | ${AWK} 'NF > 7 { printf("at %s %s %s\n", $$6, $$7, $$8) }' >> $@.tmp6
+	@[ -s $@.tmp6 ] || ${ECHO} "<TR><TD><I>(no vulnerabilities list available)</I>" >> $@.tmp6
 	@${SED} -e 's|%%PORT%%|${PKGPATH}|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
 		${SED_LICENSE_EXPR}					\
 		${SED_HOMEPAGE_EXPR}					\
+		-e '/%%VULNERABILITIES%%/r $@.tmp5'			\
+		-e '/%%VULNERABILITIES%%/d'				\
+		-e '/%%VULDATE%%/r $@.tmp6'				\
+		-e '/%%VULDATE%%/d'					\
 		-e '/%%COMMENT%%/r ${PKGDIR}/COMMENT'			\
 		-e '/%%COMMENT%%/d'					\
 		-e '/%%BUILD_DEPENDS%%/r $@.tmp1'			\
@@ -2815,7 +2837,7 @@ README.html: .PRECIOUS
 	@cmp -s $@.tmp $@ || 						\
 		(${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
 		${MV} -f $@.tmp $@)
-	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
+	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5 $@.tmp6
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
@@ -2849,7 +2871,7 @@ print-run-depends-list:
 # Stat all the files of one pkg and sum the sizes up. 
 # 
 # XXX This is intended to be run before pkg_create is called, so the
-# existance of ${PLIST} can be assumed as granted.
+# existence of ${PLIST} can be assumed.
 print-pkg-size-this:
 	@${SHCOMMENT} "This pkg's files" ;				\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
@@ -2859,9 +2881,9 @@ print-pkg-size-this:
 		<${PLIST} 						\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
-	| xargs ${LS} -ld							\
-	| ${AWK} 'BEGIN { print("0 "); }					\
-		  { print($$5, " + "); }					\
+	| xargs ${LS} -ld						\
+	| ${AWK} 'BEGIN { print("0 "); }				\
+		  { print($$5, " + "); }				\
 		  END { print("p"); }'					\
 	| ${DC}
 
