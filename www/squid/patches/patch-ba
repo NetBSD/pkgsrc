@@ -1,0 +1,47 @@
+$NetBSD: patch-ba,v 1.1 2001/12/12 17:06:21 taca Exp $
+
+--- src/dnsserver.c.orig	Fri Jan 12 09:51:47 2001
++++ src/dnsserver.c
+@@ -135,6 +135,8 @@
+ #if HAVE_RESOLV_H
+ #include <resolv.h>
+ #endif
++#include <util.h>
++#define HAVE_SETPROCTITLE 1
+ 
+ #include "util.h"
+ #include "snprintf.h"
+@@ -258,8 +260,10 @@
+ {
+     char request[512];
+     char *t = NULL;
+-    int c;
++    int c, count = 0;
++#if HAVE_RES_INIT
+     int opt_s = 0;
++#endif
+     extern char *optarg;
+ 
+     safe_inet_addr("255.255.255.255", &no_addr);
+@@ -333,6 +337,10 @@
+ 	}
+     }
+ 
++#if HAVE_SETPROCTITLE
++    setproctitle("(%d requests)", count);
++#endif
++
+     for (;;) {
+ 	memset(request, '\0', REQ_SZ);
+ 	if (fgets(request, REQ_SZ, stdin) == NULL)
+@@ -345,6 +353,10 @@
+ 	    *t = '\0';		/* strip CR */
+ 	lookup(request);
+ 	fflush(stdout);
++#if HAVE_SETPROCTITLE
++	count++;
++	setproctitle("(%d requests)", count);
++#endif
+     }
+     /* NOTREACHED */
+     return 0;
