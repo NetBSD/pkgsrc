@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2002/08/28 08:38:01 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/22 05:44:37 dillo Exp $
 #
 
 DISTNAME=	amp-0.7.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # was ftp://ftp.rasip.fer.hr/pub/mpeg/
