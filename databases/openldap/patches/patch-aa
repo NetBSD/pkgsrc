@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 2003/09/29 16:56:54 salo Exp $
+
+--- build/top.mk.orig	2003-03-29 16:45:42.000000000 +0100
++++ build/top.mk	2003-09-29 18:17:09.000000000 +0200
+@@ -35,7 +35,7 @@
+ moduledir = @libexecdir@$(ldap_subdir)
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-sysconfdir = @sysconfdir@$(ldap_subdir)
++sysconfdir = @sysconfdir@
+ schemadir = $(sysconfdir)/schema
+ 
+ PLAT = @PLAT@
