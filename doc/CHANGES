@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7775 2004/11/08 19:35:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.7776 2004/11/08 22:11:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5172,3 +5172,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql-server to 4.1.7nb1 [xtraeme 2004-11-08]
 	Added mantis-0.19.1 [adrianp 2004-11-08]
 	Updated gnutls to 1.0.22 [jmmv 2004-11-08]
+	Updated p5-Text-Iconv to 1.4 [jmmv 2004-11-08]
