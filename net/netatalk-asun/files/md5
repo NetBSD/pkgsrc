@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/07/31 17:36:01 abs Exp $
+$NetBSD: md5,v 1.2 2001/04/13 19:18:13 jonb Exp $
 
-MD5 (netatalk-1.4b2+asun2.1.3.tar.gz) = b417c5977f36f4125d0932076df54db5
+SHA1 (netatalk-1.4b2+asun2.1.3.tar.gz) = 2b6d73125515867eb042bd30cb792ed41aea2013
