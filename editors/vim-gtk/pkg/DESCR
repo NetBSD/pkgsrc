@@ -3,3 +3,7 @@ have been added: multi level undo, syntax highlighting, command line history,
 on-line help, filename completion, block operations, etc.
 
 The X11 GUI variant of vim, gvim, now has a nice gtk+ interface.
+
+If you are building the package from source you may want to enable some
+features such as a perl or python interpreter which are not enabled by
+default.
