@@ -1,4 +1,4 @@
-# $NetBSD: horde.conf.dist,v 1.2 2001/02/13 03:54:00 jlam Exp $
+# $NetBSD: horde.conf.dist,v 1.3 2002/02/01 22:41:16 bouyer Exp $
 #
 # Horde configuration file fragment for Apache
 
@@ -11,15 +11,7 @@
     AllowOverride None
     Order allow,deny
     Allow from all
-    <IfModule mod_php3.c>
-	php3_include_path '@PHPLIBDIR@:.'
-	php3_auto_prepend_file @PHPLIBDIR@/prepend.php3
-	php3_magic_quotes_gpc Off
-	php3_track_vars On
-    </IfModule>
     <IfModule mod_php4.c>
-	php_value include_path '@PHPLIBDIR@:.'
-	php_value auto_prepend_file @PHPLIBDIR@/prepend.php3
 	php_flag magic_quotes_gpc Off
 	php_flag track_vars On
     </IfModule>
@@ -29,6 +21,10 @@
 # directories.
 #
 <Directory "@HORDEDIR@/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/docs">
     Order deny,allow
     Deny from all
 </Directory>
@@ -44,11 +40,19 @@
     Order deny,allow
     Deny from all
 </Directory>
+<Directory "@HORDEDIR@/po">
+    Order deny,allow
+    Deny from all
+</Directory>
 <Directory "@HORDEDIR@/scripts">
     Order deny,allow
     Deny from all
 </Directory>
 <Directory "@HORDEDIR@/templates">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/util">
     Order deny,allow
     Deny from all
 </Directory>
