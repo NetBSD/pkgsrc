@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2002/11/15 11:49:08 seb Exp $
+
+--- acap/Makefile.in.orig	Sat May 25 21:57:41 2002
++++ acap/Makefile.in
+@@ -54,7 +54,7 @@ DEFS = @DEFS@
+ CPPFLAGS = @CPPFLAGS@ @SASLFLAGS@ -I. -I.. -I../lib
+ LIBS = @LIBS@
+ 
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ @PERL_CCCDLFLAGS@
+ LDFLAGS = @LDFLAGS@
+ 
+ SHELL = /bin/sh
