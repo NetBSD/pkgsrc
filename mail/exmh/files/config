@@ -3,7 +3,7 @@ set exmh(version) {version !!VERSION!! !!DATE!!}
 set exmh(name) exmh
 set exmh(maintainer) welch@acm.org
 set mh_path !!PREFIX!!/bin
-set exmh(slocal) !!PREFIX!!/lib/mh/slocal
+set exmh(slocal) !!PREFIX!!/libexec/nmh/slocal
 set mime(dir) !!PREFIX!!/bin
 set mailcap_default !!PREFIX!!/etc/mailcap
 set mimetypes_default !!PREFIX!!/lib/exmh-!!VERSION!!/mime.types
