@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2001/05/03 21:06:14 jtb Exp $
+# $NetBSD: Makefile,v 1.18 2001/06/20 12:51:53 jtb Exp $
 
-DISTNAME=		plplot-5.0.3
+DISTNAME=		plplot-5.0.4
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=plplot/}
 
@@ -50,6 +50,11 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-itcl
 CONFIGURE_ARGS+=	--disable-dp
 
+INFO_FILES=		plplotdoc.info
+
+post-extract:
+	@cd ${WRKSRC}/doc; ${GTAR} zxf plplotdoc-info-0.4.1.tar.gz
+
 post-patch:
 	${MV} -f ${WRKSRC}/src/plctrl.c ${WRKSRC}/src/plctrl.c.dist
 	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/src/plctrl.c.dist \
@@ -60,10 +65,12 @@ pre-configure:
 	${CP} ${WRKSRC}/cf/configure ${WRKSRC}
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-info-0.4.1/*		\
+		${PREFIX}/info
 	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-0.4.1.dvi 		\
-	${PREFIX}/share/doc/plplot
+		${PREFIX}/share/doc/plplot
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/plplot
 	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-html-0.4.1/*.html	\
-	${PREFIX}/share/doc/html/plplot
+		${PREFIX}/share/doc/html/plplot
 
 .include "../../mk/bsd.pkg.mk"
