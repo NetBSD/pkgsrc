@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:40 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:12 wiz Exp $
 #
 
 DISTNAME=	www6to4-1.5
@@ -9,7 +9,7 @@ MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	Lightweight http proxy, helps IPv4 only browsers
 
-ALL_TARGET=	# empty
+BUILD_TARGET=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 # always IPv6 ready

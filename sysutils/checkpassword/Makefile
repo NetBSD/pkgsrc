@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/26 19:16:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:09 wiz Exp $
 #
 
 DISTNAME=	checkpassword-0.90
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	it
+BUILD_TARGET=	it
 INSTALL_TARGET=	setup check
 
 INSTALLATION_DIRS=	bin

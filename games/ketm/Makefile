@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:57 wiz Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
 COMMENT=	Old-school 2d-scrolling shooter
 
-ALL_TARGET=	ketm
+BUILD_TARGET=	ketm
 
 USE_BUILDLINK3=	YES
 USE_X11=	YES

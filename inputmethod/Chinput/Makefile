@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:00 wiz Exp $
 
 DISTNAME=	Chinput-3.0
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Chinese input server
 USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 
-ALL_TARGET=	chinput
+BUILD_TARGET=	chinput
 
 post-patch:
 	${SED} -e 's:/usr/dict:'${LOCALBASE}/lib/unicon':g' < \

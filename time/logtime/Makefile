@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/08 23:30:53 kim Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:11 wiz Exp $
 #
 
 DISTNAME=		logtime-1.2
@@ -14,7 +14,7 @@ NO_CONFIGURE=		yes
 
 MAKE_PARAMS+=		PREFIX=${PREFIX}
 
-ALL_TARGET=		all ${MAKE_PARAMS}
+BUILD_TARGET=		all ${MAKE_PARAMS}
 INSTALL_TARGET=		install ${MAKE_PARAMS}
 
 .include "../../mk/bsd.pkg.mk"
