@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/10/21 15:15:02 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/10/27 09:51:32 agc Exp $
 
---- Makefile.in.orig	Tue Jul  6 02:09:00 1999
-+++ Makefile.in	Thu Oct 21 16:07:11 1999
+--- siag/Makefile.in.orig	Tue Jul  6 02:09:00 1999
++++ siag/Makefile.in	Thu Oct 21 16:07:11 1999
 @@ -58,7 +58,7 @@
  PRE_UNINSTALL = :
  POST_UNINSTALL = :
