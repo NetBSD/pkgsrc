@@ -1,23 +1,23 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1580 2005/02/09 16:03:47 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1581 2005/02/11 15:55:13 tv Exp $
 #
 # This file is in the public domain.
 #
 # This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #
-# Please see the NetBSD packages(7) manual page for details on the
-# that variables used in this make file template.
-
+# Please see the pkgsrc/doc/guide manual for details on the
+# variables used in this make file template.
+#
 # Default sequence for "all" is:  fetch checksum extract patch configure build
 #
 # Please read the comments in the targets section below, you
 # should be able to use the pre-* or post-* targets/scripts
 # (which are available for every stage except checksum) or
 # override the do-* targets to do pretty much anything you want.
-#
-# NEVER override the "regular" targets unless you want to open
-# a major can of worms.
 
-##### Include any preferences, if not already included, and common definitions
+############################################################################
+# Include any preferences, if not already included, and common definitions
+############################################################################
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.hacks.mk"
 
@@ -59,7 +59,9 @@ build-defs-message: ${WRKDIR}
 .  endif
 .endif
 
+############################################################################
 # Transform package Makefile variables and set defaults
+############################################################################
 
 CHECK_FILES?=		NO	# run check-files after install
 CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
@@ -100,9 +102,12 @@ PKGNAME_NOREV=		${PKGNAME}
 ##### Others
 
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
+BUILD_DEPENDS?=		# empty
 BUILD_TARGET?=		all
+COMMENT?=		(no description)
 CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
+DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 DIGEST_ALGORITHM?=	SHA1
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
@@ -125,6 +130,33 @@ SVR4_PKGNAME?=		${PKGNAME}
 USE_DIGEST?=		YES
 USE_GNU_TOOLS?=		# empty
 WRKSRC?=		${WRKDIR}/${DISTNAME}
+
+##### Non-overridable constants
+
+# Latest versions of tools required for correct pkgsrc operation.
+DIGEST_REQD=		20010302
+PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20050204}
+
+PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
+DDIR=			${WRKDIR}/.DDIR
+DESCR=			${PKG_DB_TMPDIR}/+DESC
+DLIST=			${WRKDIR}/.DLIST
+PLIST=			${WRKDIR}/.PLIST
+
+# Files to create for versioning and build information
+BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
+BUILD_INFO_FILE=	${PKG_DB_TMPDIR}/+BUILD_INFO
+
+# Files containing size of pkg w/o and w/ all required pkgs
+SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
+SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
+
+# File to denote "no deletion of a package"
+PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
+
+##### Transform USE_* into dependencies
+
+.include "../../mk/bsd.pkg.use.mk"
 
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
@@ -180,49 +212,6 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 
 .if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
-.endif
-
-.if defined(USE_IMAKE)
-USE_X11BASE?=		implied
-PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}
-PLIST_SUBST+=		IMAKE_MAN_DIR=${IMAKE_MAN_DIR}
-PLIST_SUBST+=		IMAKE_LIBMAN_DIR=${IMAKE_LIBMAN_DIR}
-PLIST_SUBST+=		IMAKE_KERNMAN_DIR=${IMAKE_KERNMAN_DIR}
-PLIST_SUBST+=		IMAKE_FILEMAN_DIR=${IMAKE_FILEMAN_DIR}
-PLIST_SUBST+=		IMAKE_MISCMAN_DIR=${IMAKE_MISCMAN_DIR}
-PLIST_SUBST+=		IMAKE_MAN_SUFFIX=${IMAKE_MAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_LIBMAN_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
-.  endif
-.endif
-.if defined(USE_X11BASE)
-USE_X11?=		implied
-.endif
-
-# Set the PREFIX appropriately.
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if defined(INSTALLATION_PREFIX)
-PREFIX=			${INSTALLATION_PREFIX}
-.  elif defined(USE_X11BASE)
-PREFIX=			${X11PREFIX}
-.  elif defined(USE_CROSSBASE)
-PREFIX=			${CROSSBASE}
-NO_MTREE=		yes
-.  else
-PREFIX=			${LOCALBASE}
-.  endif
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PREFIX=			${DEPOTBASE}/${PKGNAME}
-NO_MTREE=		yes
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(INSTALLATION_PREFIX)
-PKG_SKIP_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
 .endif
 
 # If USE_XPKGWEDGE is set, then add a build dependency on xpkgwedge for
@@ -587,12 +576,7 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .endif # defined(PATCHFILES)
 
 # Figure out where the local mtree file is
-.if defined(USE_X11BASE)
-MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.x11.dist
-.else
 MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
-.endif
-
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 # Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
@@ -666,15 +650,6 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .  undef NO_PACKAGE
 .endif
 
-PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
-
-.if !defined(COMMENT)
-COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO_N} "(no description)") 2>/dev/null
-.endif
-
-DESCR=			${PKG_DB_TMPDIR}/+DESC
-PLIST=			${WRKDIR}/.PLIST
-
 .if ${PLIST_TYPE} == "static"
 # Automatic platform dependent PLIST handling
 .  if !defined(PLIST_SRC)
@@ -696,9 +671,6 @@ _PLIST_SRC=		${PLIST_SRC}
 .elif ${PLIST_TYPE} == "dynamic"
 _PLIST_SRC=		# empty, since we're using a dynamic PLIST
 .endif
-
-DLIST=			${WRKDIR}/.DLIST
-DDIR=			${WRKDIR}/.DDIR
 
 
 # Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
@@ -824,9 +796,6 @@ _PKGSRC_BUILD_TARGETS=	build test
 _PKGSRC_BUILD_TARGETS=	build
 .endif
 
-# Latest version of digest(1) required for pkgsrc
-DIGEST_REQD=		20010302
-
 .PHONY: uptodate-digest
 uptodate-digest:
 .if !empty(USE_DIGEST:M[yY][eE][sS])
@@ -848,13 +817,6 @@ uptodate-digest:
 	@${DO_NADA}
 .endif
 
-# Latest version of pkgtools required for correct pkgsrc operation.
-.if defined(_OPSYS_PKGTOOLS_REQD)
-PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
-.else
-PKGTOOLS_REQD=		20050204
-.endif
-
 # Check that we are using up-to-date pkg_* tools with this file.
 .PHONY: uptodate-pkgtools
 uptodate-pkgtools:
@@ -867,17 +829,6 @@ PKG_FAIL_REASON+=''
 PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .		endif
 .	endif
-
-# Files to create for versioning and build information
-BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
-BUILD_INFO_FILE=	${PKG_DB_TMPDIR}/+BUILD_INFO
-
-# Files containing size of pkg w/o and w/ all required pkgs
-SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
-SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
-
-# File to denote "no deletion of a package"
-PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 
 .ifndef PKG_ARGS_COMMON
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
@@ -930,10 +881,6 @@ DO_NADA?=		${TRUE}
 # remove after 2005Q1
 .if defined(ALL_TARGET)
 PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
-.endif
-
-.if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
-INSTALL_TARGET+=	install.man
 .endif
 
 # If this host is behind a filtering firewall, use passive ftp(1)
@@ -1791,7 +1738,7 @@ show-downlevel:
 .PHONY: show-installed-depends
 .if !target(show-installed-depends)
 show-installed-depends:
-.  if defined(DEPENDS)
+.  if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
 		echo "$$i =>" `${PKG_BEST_EXISTS} "$$i"` ;		\
@@ -1802,7 +1749,7 @@ show-installed-depends:
 .PHONY: show-needs-update
 .if !target(show-needs-update)
 show-needs-update:
-.  if defined(DEPENDS)
+.  if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} show-all-depends-dirs`; do			\
 		cd ${PKGSRCDIR}/$$i;					\
@@ -3730,7 +3677,7 @@ pre-clean:
 .PHONY: clean
 .if !target(clean)
 clean: pre-clean
-.  if (${CLEANDEPENDS} != "NO") && (defined(BUILD_DEPENDS) || defined(DEPENDS))
+.  if (${CLEANDEPENDS} != "NO") && (!empty(BUILD_DEPENDS) || !empty(DEPENDS))
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
 .  endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
@@ -3753,7 +3700,7 @@ clean: pre-clean
 .PHONY: clean-depends
 .if !target(clean-depends)
 clean-depends:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
+.  if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`; do 	\
 		cd ${.CURDIR}/../../$$i &&				\
@@ -4170,7 +4117,7 @@ FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
 install-depends: uptodate-pkgtools pre-install-depends
-.  if defined(DEPENDS) || defined(BUILD_DEPENDS)
+.  if !empty(DEPENDS) || !empty(BUILD_DEPENDS)
 .    if defined(NO_DEPENDS)
 	@${DO_NADA}
 .    else	# !DEPENDS
@@ -4447,7 +4394,7 @@ show-vars:
 .PHONY: print-build-depends-list
 .if !target(print-build-depends-list)
 print-build-depends-list:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
+.  if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
 	@${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
 	@${ECHO} '" to build.'
@@ -4457,7 +4404,7 @@ print-build-depends-list:
 .PHONY: print-run-depends-list
 .if !target(print-run-depends-list)
 print-run-depends-list:
-.  if defined(DEPENDS)
+.  if !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
 	@${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
