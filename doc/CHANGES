@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7513 2004/10/21 13:11:13 atatat Exp $
+$NetBSD: CHANGES,v 1.7514 2004/10/21 16:07:26 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fltk to 1.1.5 [adam 2004-10-21]
 	Updated lftp to 3.0.10 [salo 2004-10-21]
 	Updated lsof to 4.73 [atatat 2004-10-21]
+	Added py-pgnotify-0.1 [darcy 2004-10-21]
