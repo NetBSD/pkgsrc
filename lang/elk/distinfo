@@ -1,16 +1,25 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 09:56:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2002/01/09 23:04:54 seb Exp $
 
 SHA1 (elk-3.0.tar.gz) = d62ae8a88e3206a578195611ace50168e6078661
 Size (elk-3.0.tar.gz) = 762484 bytes
-SHA1 (patch-aa) = 733bd15f80e0db6bb33d25c5d2d7cfb077f767bf
-SHA1 (patch-ab) = d706048c9ec5c174dd704c907ffe429e4033f1cd
-SHA1 (patch-ac) = 92f29cde2743da0eed433941ce5be06f027d3a98
-SHA1 (patch-ad) = d0470f748018841b22f577b9c0ee26f8cdd48e30
-SHA1 (patch-ae) = b2723fb52853c7eb636d72e339c43c602765ebf1
-SHA1 (patch-af) = 453ccedccbe78c9ed0c2240a46b8643f8699e760
-SHA1 (patch-ag) = 55aef77eadcc0266fc7d6a239a1a782aa9f4af5d
-SHA1 (patch-ah) = 3690beb3a65a0c9aa3200fa830594beb9e38ab2b
-SHA1 (patch-ai) = 83521d386c02b284c242c38b220ed416558582c0
-SHA1 (patch-aj) = a2281239a01f4f666005c12eb65d10976b80defd
-SHA1 (patch-ak) = 1a641ed3828983b4dbf08c9742d6a91a791a3eff
-SHA1 (patch-al) = f8289efd4f2eab38c4794f2ee7d1c7c3ac3b7fd3
+SHA1 (patch-aa) = 109e70fb6ba64b116c3b472b8586bf9c89c29348
+SHA1 (patch-ab) = 62cac0487bf259aa481fbc23fd34b168475062fe
+SHA1 (patch-ac) = 05c35684e7e2c8c97768bf6f3f07760ba6181a15
+SHA1 (patch-ad) = 421d3a738fa78db6c139331ca0d57987f94266bd
+SHA1 (patch-ae) = d1514bc0391f59adbd2591b361348a2baee118f4
+SHA1 (patch-af) = e3b2da075f099e7f3abff82afc255018c21639dd
+SHA1 (patch-ag) = 3aebf5f386e67c2a87cb549a6c6a7d4f332db1fe
+SHA1 (patch-ah) = 901fbd12b2d103cf1efe965d82c03b6790aa0282
+SHA1 (patch-ai) = 0a3569151de7d78706b5c5112bc260e880c25056
+SHA1 (patch-aj) = fc3294f5198caa7a91aafffaed9ec1b2e55c7696
+SHA1 (patch-ak) = 59fec6f3b2d00c75d3954ccb20237dd179ac0f81
+SHA1 (patch-al) = c17f9c1760bca6928f517bc9d2c64d1eba5b5756
+SHA1 (patch-am) = 1950af890ce6fc3acf2340630199dd8c375f9b0e
+SHA1 (patch-an) = a8eef0e5a1315cd5a0e3a4ce2b7ea80fd4e62db5
+SHA1 (patch-ao) = af0d66514fb2673388658d74246d9e83c174118e
+SHA1 (patch-ap) = 4c76aa4b44b2a3d2e2bcbed3c6d4d639c99e51a4
+SHA1 (patch-aq) = 0d10cc53d0284ce56bb6929579962c7b29afcbe6
+SHA1 (patch-ar) = a145d0b1aba3d201bda60b9c82eff8c642c5919f
+SHA1 (patch-as) = 69b51d90a4e34cd7b1c3a2a290343420ffee51eb
+SHA1 (patch-at) = 133495a41196a4017c232cf7d1de2c8283f36968
+SHA1 (patch-au) = 031585595a93d111f517befc35a4190ff45076c3
