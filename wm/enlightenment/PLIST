@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/08/26 20:22:18 recht Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/01/11 13:41:22 adam Exp $
 bin/edox
 bin/eesh
 bin/enlightenment
@@ -98,15 +98,8 @@ share/enlightenment/misc/e-kde.desktop
 share/enlightenment/misc/enlightenment.desktop
 share/enlightenment/misc/starte16
 share/enlightenment/scripts/e_cache_clean
-share/enlightenment/scripts/e_cache_clean.pl
 share/enlightenment/scripts/e_cache_query
-share/enlightenment/scripts/e_cache_query.pl
-share/enlightenment/scripts/e_gen_gnome_menu
-share/enlightenment/scripts/e_gen_kde_menu
 share/enlightenment/scripts/e_gen_menu
-share/enlightenment/scripts/e_gen_menu.e16_5
-share/enlightenment/scripts/e_gen_menu.pl
-share/enlightenment/scripts/enlightenment.install
 share/enlightenment/themes/winter/ABOUT/MAIN
 share/enlightenment/themes/winter/ABOUT/MAIN.ko
 share/enlightenment/themes/winter/ABOUT/bg.png
@@ -409,6 +402,8 @@ share/enlightenment/themes/winter/ttfonts/LICENSE.Vera
 share/enlightenment/themes/winter/ttfonts/Vera.ttf
 share/enlightenment/themes/winter/ttfonts/VeraBd.ttf
 share/enlightenment/themes/winter/windowmatches.cfg
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/enlightenment.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/enlightenment.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/enlightenment.mo
 ${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/enlightenment.mo

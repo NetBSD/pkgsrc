@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.25 2004/11/15 07:53:33 sketch Exp $
-#
+# $NetBSD: Makefile,v 1.26 2005/01/11 13:41:22 adam Exp $
 
-DISTNAME=		enlightenment-0.16.7.1
-PKGREVISION=		2
-CATEGORIES=		x11 gnome wm
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
+DISTNAME=	enlightenment-0.16.7.2
+CATEGORIES=	x11 gnome wm
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.enlightenment.org/
-COMMENT=		Highly themeable and configurable window manager
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.enlightenment.org/
+COMMENT=	Highly themeable and configurable window manager
 
 USE_BUILDLINK3=		YES
-USE_X11=		YES
+USE_GNU_TOOLS+=		yacc
 USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		yacc
-
 CONFIGURE_ARGS+=	--enable-fsstd
 CONFIGURE_ARGS+=	--enable-xrandr
 CONFIGURE_ARGS+=	--without-included-gettext
