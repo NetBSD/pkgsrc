@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.281 2005/01/17 12:57:12 martti Exp $
+# $NetBSD: Makefile,v 1.282 2005/01/24 10:51:40 agc Exp $
 
 COMMENT=	System utilities
 
@@ -53,6 +53,7 @@ SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdrecord
 SUBDIR+=	e2fsprogs
 SUBDIR+=	easydiskpasswd
+SUBDIR+=	estd
 SUBDIR+=	etcupdate
 SUBDIR+=	extipl
 SUBDIR+=	fakeroot
