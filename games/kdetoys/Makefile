@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/07 17:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/12 22:35:18 dmcmahill Exp $
 
 DISTNAME=	kdetoys-1.1.2
 CATEGORIES=	games kde
@@ -15,11 +15,11 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${PREFIX}" \
-		"--with-qt-includes=${PREFIX}/include/qt"
+		"--with-qt-dir=${X11BASE}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		QTDIR=${X11BASE}/qt1 \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
+		all_libraries="-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
