@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.31 1998/05/25 22:01:57 tron Exp $
+# $NetBSD: Packages.txt,v 1.32 1998/06/03 11:11:27 agc Exp $
 ###########################################################################
 
 			==========================
@@ -309,7 +309,7 @@ package from the FreeBSD ports collection:
    definition, which is used to do this. For example, to install the
    indent.info entry into the info directory file, simply use the
 
-	INFO_FILES=	indent
+	INFO_FILES=	indent.info
 
    definition in the package Makefile. If the package does this insertion
    for you, you should specify USE_GTEXINFO in the package Makefile, to
@@ -941,17 +941,22 @@ See section 4.3 on how to remove RCS IDs from patch files.
  ==============================================
 
 The problem with package-defined variables that can be overridden via
-/etc/mk.conf is that the values of these variables aren't known at the
-beginning of the Makefile, and thus can't be used in .if statements. It's
-OK to use them like any other variable in expansions ("${VAR}"), but not in
-.if-statements, though.
+MAKECONF or /etc/mk.conf is that make(1) expands a variable as it is
+used, but evaluates preprocessor like statements (.if, .ifdef and
+.ifndef) as they are read.  So, to use any variable (which may be set
+in /etc/mk.conf) in one of the .if* statements, the file /etc/mk.conf
+must be included before that .if* statement.
 
-Here's the preferred way to handle things if you want to include variables
-in .if statements:
+Rather than have a number of ad-hoc ways of including /etc/mk.conf,
+should it exist, or MAKECONF, should it exist, include the
+pkgsrc/mk/bsd.prefs.mk file in the package Makefile before any
+preprocessor-like .if, .ifdef, or .ifndef statements:
 
-1. in the pkg Makefile, set all the pre-install etc targets.
-2. in the pkg Makefile, .include "../../mk/bsd.pkg.mk"
-3. Then put all the .if defined(USE_SOCKS), .if defined(USE_IDEA) etc
+	.include "../../mk/bsd.prefs.mk"
+
+	.if defined(USE_MENUS)
+	...
+	.endif
 
 
  9.10 Is there a mailing list for pkg-related discussion?
