@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2002/10/29 16:50:15 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2004/07/06 20:57:45 drochner Exp $
 
---- xdao/Makefile.in.orig	Sun Sep 15 18:34:48 2002
-+++ xdao/Makefile.in	Tue Oct 29 13:00:56 2002
-@@ -58,7 +58,7 @@
-       DeviceList.cc RecordTocSource.cc RecordCDSource.cc \
-       RecordHDTarget.cc AudioCDView.cc TocEditView.cc GenericChild.cc \
-       GenericView.cc CdTextDialog.cc \
--      @sound_if_src@
-+      SoundIF-linux.cc
+--- configure.orig	2004-07-04 21:55:27.000000000 +0200
++++ configure
+@@ -9885,7 +9885,7 @@ case "$host" in
+ 	     sound_if_obj=SoundIF-linux.o
+ 	     ;;
  
- OBJ = $(SRC:%.cc=%.o)
+-  *-solaris*)
++  *-solaris* | *-netbsd*)
+ 	      sound_if_obj=SoundIF-solaris.o
+ 	      ;;
  
