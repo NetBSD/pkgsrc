@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/05/29 23:14:07 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/06 16:42:33 jmc Exp $
 #
 
 DISTNAME=	centericq-4.9.2
@@ -20,7 +20,7 @@ USE_PERL5=		run
 
 REPLACE_PERL=		${WRKSRC}/misc/cicqconf
 
-INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
+INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6 NetBSD-1.6.[1-9]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-T]-*
 
 .include "../../devel/glib/buildlink2.mk"
