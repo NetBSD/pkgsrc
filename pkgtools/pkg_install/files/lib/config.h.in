@@ -159,7 +159,7 @@
 /* Define if you have the md library (-lmd).  */
 #undef HAVE_LIBMD
 
-#ifndef HAVE___ATTRIBUTE__
+#if !defined(HAVE___ATTRIBUTE__) && !defined(__linux__)
 # define __attribute__(x)
 #endif
 

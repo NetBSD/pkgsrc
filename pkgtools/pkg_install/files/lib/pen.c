@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.1.1.1 2002/12/20 18:14:03 schmonz Exp $	*/
+/*	$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.1.1.1 2002/12/20 18:14:03 schmonz Exp $");
+__RCSID("$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -227,8 +227,8 @@ leave_playpen(char *save)
  * We do this autoconf dance here to get around the old interface (it's
  * in libc on 2.7 and 2.8, but not in 2.9)
  */
-#if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS))
-/*	$NetBSD: pen.c,v 1.1.1.1 2002/12/20 18:14:03 schmonz Exp $	*/
+#if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS) && !defined(__linux__))
+/*	$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
