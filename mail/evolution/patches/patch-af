@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2001/08/11 18:39:25 rh Exp $
+$NetBSD: patch-af,v 1.3 2001/12/03 10:08:26 tron Exp $
 
 --- e-util/e-db3-utils.c.orig	Fri Jun  1 03:02:11 2001
 +++ e-util/e-db3-utils.c
@@ -9,9 +9,9 @@ $NetBSD: patch-af,v 1.2 2001/08/11 18:39:25 rh Exp $
 -    DB_VERSION_MINOR != 1 || \
 -    DB_VERSION_PATCH != 17
 -#error Including wrong DB3.  Need libdb 3.1.17.
-+    DB_VERSION_MINOR != 2 || \
-+    DB_VERSION_PATCH != 9
-+#error Including wrong DB3.  Need libdb 3.2.9.
++    DB_VERSION_MINOR != 3 || \
++    DB_VERSION_PATCH != 11
++#error Including wrong DB3.  Need libdb 3.3.11.
  #endif
  
  static char *
