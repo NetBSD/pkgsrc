@@ -1,27 +1,57 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/24 14:38:20 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/15 11:03:42 jmmv Exp $
 bin/seahorse
-man/man1/seahorse.1
-share/gnome/apps/Applications/seahorse.desktop
-share/gnome/help/seahorse/C/seahorse.html
-share/gnome/help/seahorse/C/topic.dat
-share/gnome/help/seahorse/it/seahorse.html
-share/gnome/help/seahorse/it/topic.dat
-share/gnome/help/seahorse/ja/seahorse.html
-share/gnome/help/seahorse/ja/topic.dat
-${PKGLOCALEDIR}/locale/az/LC_MESSAGES/seahorse.mo
+share/applications/seahorse.desktop
+share/gconf/schemas/seahorse.schemas
+share/gnome/help/seahorse/C/figures/export.png
+share/gnome/help/seahorse/C/figures/file-manager.png
+share/gnome/help/seahorse/C/figures/generate.png
+share/gnome/help/seahorse/C/figures/import.png
+share/gnome/help/seahorse/C/figures/key-manager.png
+share/gnome/help/seahorse/C/figures/key-properties.png
+share/gnome/help/seahorse/C/figures/passphrase.png
+share/gnome/help/seahorse/C/figures/preferences.png
+share/gnome/help/seahorse/C/figures/recipients.png
+share/gnome/help/seahorse/C/figures/signature.png
+share/gnome/help/seahorse/C/figures/text-editor.png
+share/gnome/help/seahorse/C/legal.xml
+share/gnome/help/seahorse/C/seahorse.xml
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/seahorse.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/seahorse.mo
-share/pixmaps/seahorse/seahorse.png
-@dirrm share/pixmaps/seahorse
-@dirrm share/gnome/help/seahorse/ja
-@dirrm share/gnome/help/seahorse/it
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/seahorse.mo
+share/omf/seahorse/seahorse-C.omf
+share/pixmaps/seahorse.png
+share/seahorse/glade/seahorse-add-subkey.glade2
+share/seahorse/glade/seahorse-add-uid.glade2
+share/seahorse/glade/seahorse-export.glade2
+share/seahorse/glade/seahorse-file-manager.glade2
+share/seahorse/glade/seahorse-generate.glade2
+share/seahorse/glade/seahorse-import.glade2
+share/seahorse/glade/seahorse-key-manager.glade2
+share/seahorse/glade/seahorse-key-properties.glade2
+share/seahorse/glade/seahorse-preferences.glade2
+share/seahorse/glade/seahorse-recipients.glade2
+share/seahorse/glade/seahorse-revoke.glade2
+share/seahorse/glade/seahorse-signatures.glade2
+share/seahorse/glade/seahorse-text-editor.glade2
+@dirrm share/seahorse/glade
+@dirrm share/seahorse
+@dirrm share/omf/seahorse
+@dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
 @dirrm share/gnome/help/seahorse
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gnome2-dirs: @dirrm share/applications
