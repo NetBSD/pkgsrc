@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.7 2003/07/18 12:21:39 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.8 2003/07/20 15:54:47 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
@@ -46,7 +46,8 @@ _MKCONF_VARS="OBJMACHINE MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
 _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 USE_XPKGWEDGE REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
-                REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR"
+                REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
+                NETBSD_RELEASE"
 
 env_clean()
 {
@@ -356,6 +357,7 @@ pkg_makeroot()
     echo "umask 022" >> $DESTDIR/etc/profile
     echo "ENV=/etc/shrc" >> $DESTDIR/etc/profile
     echo "export PS1=\"pkg_comp:`basename $conffile`# \"" >> $DESTDIR/etc/shrc
+    echo "set -o emacs" >> $DESTDIR/etc/shrc
 
     # Set csh configuration
     echo "umask 022" >> $DESTDIR/etc/csh.login
@@ -374,6 +376,10 @@ pkg_makeroot()
 
     if [ "$USE_AUDIT_PACKAGES" = "yes" ]; then
         pkg_build security/audit-packages
+    fi
+
+    if [ "$NETBSD_RELEASE" != "no" ]; then
+        BUILD_TARGET=install pkg_build pkgtools/libkver
     fi
 
     if [ "$USE_GCC3" = "yes" ]; then
@@ -421,6 +427,10 @@ EOF
         else
             cat $EXTRAMK >> $file
         fi
+    fi
+
+    if [ "$NETBSD_RELEASE" != "no" ]; then
+        echo "KVER_OSRELEASE = $NETBSD_RELEASE" >> $file
     fi
 
     if [ "$USE_AUDIT_PACKAGES" != "yes" ]; then
