@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2004/04/07 15:13:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/06/28 22:11:37 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-compat185
 
 post-install:
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db3
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/html/db3
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
