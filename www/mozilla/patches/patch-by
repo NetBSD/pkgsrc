@@ -1,8 +1,27 @@
-$NetBSD: patch-by,v 1.1 2004/06/21 14:14:01 taya Exp $
+$NetBSD: patch-by,v 1.2 2004/07/05 14:22:42 taya Exp $
 
 diff -ru ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp
 --- ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2004-03-19 10:36:16.000000000 +0900
-+++ ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2004-06-12 01:39:02.000000000 +0900
++++ ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2004-07-04 22:59:19.000000000 +0900
+@@ -155,15 +155,15 @@
+ 
+   static NS_NAMED_LITERAL_STRING(arial, "arial");
+   nsSVGLibartGlyphMetricsFT::sFontAliases.Put(NS_LITERAL_STRING("helvetica"),
+-                                              &arial);
++                                              (nsDependentString *)&arial);
+ 
+   static NS_NAMED_LITERAL_STRING(courier, "courier new");
+   nsSVGLibartGlyphMetricsFT::sFontAliases.Put(NS_LITERAL_STRING("courier"),
+-                                              &courier);
++                                              (nsDependentString *)&courier);
+ 
+   static NS_NAMED_LITERAL_STRING(times, "times new roman");
+   nsSVGLibartGlyphMetricsFT::sFontAliases.Put(NS_LITERAL_STRING("times"),
+-                                              &times);
++                                              (nsDependentString *)&times);
+ }
+ 
+ void NS_FreeSVGLibartGlyphMetricsFTGlobals()
 @@ -440,19 +440,19 @@
      return;
    }
