@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.771 2003/08/06 12:27:47 wiz Exp $
+$NetBSD: TODO,v 1.772 2003/08/08 12:52:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -95,6 +95,7 @@ Suggested package updates
 	o cyrus-imapd21-2.1.14 [pkg/22278]
 	o dante-1.1.14
 	o ddd-3.3.7
+	o dnetc-2.9004-482 [pkg/22390]
 	o doxygen-1.3.3
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
@@ -103,7 +104,7 @@ Suggested package updates
 	o elm-me-2.4pl104
 	o ettercap-0.6.b
 	o evilwm-0.99.15 [pkg/22239]
-	o evolution-1.4
+	o evolution-1.4.4
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.20
 	o festival-1.4.3
@@ -167,7 +168,7 @@ Suggested package updates
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
-	o lilypond-1.6.11
+	o lilypond-1.8.0
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -177,7 +178,7 @@ Suggested package updates
 	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
-	o mhonarc-2.6.6
+	o mhonarc-2.6.7
 	o midnight-commander-4.6.0
 	o minicom-2.1
 	o mozilla-firebird-0.6.1 [was phoenix]
@@ -248,17 +249,19 @@ Suggested package updates
 	o tightvnc-1.2.9
 	o tin-1.6.0
 	o tinyproxy-1.6.0 [pkg/22161]
+	o tinyproxy-1.6.1
 	o tkman-2.2
 	o top-3.5b12.6
 	o ttf2pt1-3.4.3
 	o transcode-0.6.8
 	o vfu-4.03
+	o vile-9.4
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.25
 	o wmbiff-0.4.15
 	o wmweather-2.4.1
-	o wv2-0.1.7
+	o wv2-0.1.8
 	o wwwoffle-2.7h
 	o wxGTK-2.4.1
 	o xalan-c-1.4
@@ -270,6 +273,7 @@ Suggested package updates
 	o xerces-j-2.5.0
 	o xfstt-1.5.1
 	o xine-lib-0.9.21 [pkg/21625]
+	o xine-lib-0.9.22
 	o xine-lib-1.0rc1
 	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
