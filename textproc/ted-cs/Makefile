@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/19 11:22:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/10 19:42:39 dmcmahill Exp $
 
 DISTNAME=	Ted_CZ
-PKGNAME=	ted-cs-2.5
+PKGNAME=	ted-cs-2.6
 WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
+MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
+		ftp://metalab.unc.edu/pub/packages/editors/ted/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 
-DEPENDS+=       ted-2.5:../../textproc/ted
+DEPENDS+=       ted-2.6:../../textproc/ted
 
 USE_X11BASE=	YES
 
