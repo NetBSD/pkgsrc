@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/05/04 21:10:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/08/31 14:18:32 jmmv Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -25,31 +25,6 @@ lib/libgnome-2.so
 lib/libgnome-2.so.600
 lib/libgnome-2.so.600.1
 lib/pkgconfig/libgnome-2.0.pc
-share/doc/html/libgnome/ch01s02.html
-share/doc/html/libgnome/ch01s03.html
-share/doc/html/libgnome/ch01s04.html
-share/doc/html/libgnome/ch01s05.html
-share/doc/html/libgnome/home.png
-share/doc/html/libgnome/index.html
-share/doc/html/libgnome/index.sgml
-share/doc/html/libgnome/left.png
-share/doc/html/libgnome/libgnome-gnome-config.html
-share/doc/html/libgnome/libgnome-gnome-exec.html
-share/doc/html/libgnome/libgnome-gnome-gconf.html
-share/doc/html/libgnome/libgnome-gnome-help.html
-share/doc/html/libgnome/libgnome-gnome-i18n.html
-share/doc/html/libgnome/libgnome-gnome-init.html
-share/doc/html/libgnome/libgnome-gnome-program.html
-share/doc/html/libgnome/libgnome-gnome-score.html
-share/doc/html/libgnome/libgnome-gnome-sound.html
-share/doc/html/libgnome/libgnome-gnome-triggers.html
-share/doc/html/libgnome/libgnome-gnome-url.html
-share/doc/html/libgnome/libgnome-gnome-util.html
-share/doc/html/libgnome/libgnome-libgnometypebuiltins.html
-share/doc/html/libgnome/libgnome.devhelp
-share/doc/html/libgnome/libgnome.html
-share/doc/html/libgnome/right.png
-share/doc/html/libgnome/up.png
 share/examples/libgnome/sound/events/gnome-2.soundlist
 share/examples/libgnome/sound/events/gtk-events-2.soundlist
 share/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas
@@ -135,7 +110,8 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm share/examples/libgnome/sound/events
 @dirrm share/examples/libgnome/sound
 @dirrm share/examples/libgnome
-@dirrm share/doc/html/libgnome
+@exec ${MKDIR} %D/share/doc/libgnome
+@dirrm share/doc/libgnome
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @comment in libbonobo: @dirrm lib/bonobo/monikers
 @dirrm include/libgnome-2.0/libgnome
