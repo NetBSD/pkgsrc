@@ -1,12 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/09/01 15:30:11 kim Exp $
 
-SHA1 (irrd2.0a-Aug22-2000.tar.gz) = 8bf38353ca4ecabf2c3c15a3e19d594b3525af20
-Size (irrd2.0a-Aug22-2000.tar.gz) = 770952 bytes
-SHA1 (patch-aa) = 3b90b04a0e2666c3b84164986cd821770504ddf0
-SHA1 (patch-ab) = 82c07e323a16ddfe8676fddb25421c5aabf19660
-SHA1 (patch-ae) = aec63d911f69a4741baa9255b045fca3ccfe7e50
-SHA1 (patch-af) = 470beee00d9c02c742af46a73fd03e66fb8d775f
-SHA1 (patch-ag) = c88716c1786f527bc0012d6744e4e7b61cca2af1
-SHA1 (patch-ah) = 86ec84cf693825b240c7d5880fb55ff9d038907a
-SHA1 (patch-ai) = e75e2fa3e43bc8abe166eddbccd36493a2087c23
-SHA1 (patch-aj) = 4c4705b8f3e7ca38368eb2ea6a52f912237c1081
+SHA1 (irrd2.1.4.tar.gz) = 78135fa33cc8fe9fbdd0a290299d343e62ac748c
+Size (irrd2.1.4.tar.gz) = 855272 bytes

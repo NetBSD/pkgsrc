@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:27 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/01 15:30:11 kim Exp $
 
-DISTNAME=	irrd2.0a-Aug22-2000
-PKGNAME=	irrd-2.0.0.20000822
+DISTNAME=	irrd2.1.4
+PKGNAME=	irrd-2.1.4
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
-		ftp://ftp.merit.edu/radb/irrd/source/old_releases/
+MASTER_SITES=	http://www.irrd.net/ \
+		ftp://ftp.merit.edu/radb/irrd/ \
+		ftp://ftp.merit.edu/radb/irrd/old_releases/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 COMMENT=	Internet Routing Registry Daemon
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	gdbm-[0-9]*:../../databases/gdbm
-DEPENDS+=	pgp5-[0-9]*:../../security/pgp5
+DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_PERL5=	# defined
@@ -28,9 +26,6 @@ CONFIGURE_ENV+=	YACC=bison
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-g
 
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
-
 IRRD_CACHER=	irrdcacher ripe2rpsl update_source
 
 post-build:
@@ -39,10 +34,11 @@ post-build:
 	for i in ${IRRD_CACHER} ; \
 	do \
 	    ${MV} $$i $$i.bak ; \
-	    ${SED} -e 's%/usr/local/bin/perl%${PERL5}%' < $$i.bak > $$i ; \
+	    ${SED} -e 's%/usr/bin/perl%${PERL5}%' < $$i.bak > $$i ; \
 	done
 
 post-install:
+	@cd ${WRKSRC}/programs/IRRd && ${MAKE} install-man
 	@cd ${WRKSRC}/programs/irrdcacher ; \
 	set -x ; \
 	for i in ${IRRD_CACHER} ; \
