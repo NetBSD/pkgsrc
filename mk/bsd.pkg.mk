@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.387 2000/01/10 19:43:37 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.388 2000/01/11 09:18:03 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -567,12 +567,12 @@ SIZE_ALL_FILE=		${WRKDIR}/SizeAll
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19990909
+.if ${PKGTOOLS_VERSION} > 19991123
 # Size storing options, only available since 19991123 or so
 # I don't want to force people using this.
 # This .if block should be removed next time PKGTOOLS_REQD is bumped.
 PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-.endif 	# ${PKGTOOLS_VERSION) > 19990909
+.endif 	# ${PKGTOOLS_VERSION) > 19991123
 PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
