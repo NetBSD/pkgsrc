@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.depends,v 1.10 2003/01/20 07:10:41 fredb Exp $
+# $NetBSD: Makefile.depends,v 1.11 2003/02/27 17:03:12 grant Exp $
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 .  include "../../devel/binutils/buildlink2.mk"
 .endif
 
