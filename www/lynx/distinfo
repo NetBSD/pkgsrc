@@ -1,27 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:38 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/12/21 03:55:50 fredb Exp $
 
-SHA1 (lynx/lynx2.8.3rel.1.tar.bz2) = 48c06ff7dff29f9ae2d9740751c56e5a417e003c
-Size (lynx/lynx2.8.3rel.1.tar.bz2) = 1631069 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.cs.po) = e48aebf61e381ce138fcffa084a3fa8b8fa7bf5b
-Size (lynx/lynx-2.8.3.rel1.cs.po) = 163689 bytes
-SHA1 (lynx/lynx-2.8.4.da.po) = 7b4fbb8df8ef0052bea46bb506456a981aa1b798
-Size (lynx/lynx-2.8.4.da.po) = 166924 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.de.po) = 5152016b535e15ff50b3887acd73a97ee0fef9f4
-Size (lynx/lynx-2.8.3.rel1.de.po) = 176718 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.ja.po) = 9c16d1885ee2bf212c1cba61fee9376cd161a550
-Size (lynx/lynx-2.8.3.rel1.ja.po) = 149305 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.nl.po) = 75d61f18cc7e0044d7eae8a361cefa545cd6b083
-Size (lynx/lynx-2.8.3.rel1.nl.po) = 170086 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.pt_BR.po) = 661671061886bcbdb33c32f4237494e269225a64
-Size (lynx/lynx-2.8.3.rel1.pt_BR.po) = 166921 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.ru.po) = fd794a18a7c0f781e86e4d50ef2c368ad79164a9
-Size (lynx/lynx-2.8.3.rel1.ru.po) = 167022 bytes
-SHA1 (lynx/lynx-2.8.3.rel1.sl.po) = 2c7d2555acb544b8f87b3525bf6d4900ed4d6cde
-Size (lynx/lynx-2.8.3.rel1.sl.po) = 133986 bytes
-SHA1 (lynx/gz00000.gz) = e816815492accbefdfd33657c95bf60f8b38232c
-Size (lynx/gz00000.gz) = 6893 bytes
-SHA1 (lynx/lynx-283-ssl.patch.gz) = fc6a88fa632c4361874efcaadd729bf8ad5e2e82
-Size (lynx/lynx-283-ssl.patch.gz) = 9877 bytes
-SHA1 (patch-aa) = 0346fa726da603579978e1acdd53d63935051a0d
-SHA1 (patch-ab) = b7bb3ce07d06713bb41e8e5d8d5fe978baad2b38
-SHA1 (patch-ac) = f36930621a9def42de9bef736be1b988fff6e0b0
+SHA1 (lynx2.8.4rel.1.tar.bz2) = 11285022fbe6910fb0a47adc14581ceb0c3bfc98
+Size (lynx2.8.4rel.1.tar.bz2) = 1940531 bytes
+SHA1 (patch-aa) = 123ebe71a00dfdd309d54b96f52ea83002d43cb2
+SHA1 (patch-ae) = ebd644a91ad08060baaf724d44bb03bb2f51a260

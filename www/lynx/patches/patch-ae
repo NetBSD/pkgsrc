@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2001/12/21 03:55:50 fredb Exp $
+
+--- WWW/Library/Implementation/HTParse.c.orig	Wed Oct 25 11:35:28 2000
++++ WWW/Library/Implementation/HTParse.c	Tue Feb  6 15:26:57 2001
+@@ -291,7 +291,11 @@
+ 		char *p2, *h;
+ 		if ((p2 = strchr(result, '@')) != NULL)
+ 		   tail = (p2 + 1);
++#ifdef INET6
++		p2 = strrchr(tail, ':');
++#else
+ 		p2 = strchr(tail, ':');
++#endif
+ 		if (p2 != NULL && !isdigit(UCH(p2[1])))
+ 		    /*
+ 		    **	Colon not followed by a port number.
