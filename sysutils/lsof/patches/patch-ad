@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2003/02/03 01:03:15 atatat Exp $
+
+kqueue support, part 3 of 4
+
+--- dialects/n+obsd/dproto.h.orig	2002-04-19 16:53:35.000000000 -0400
++++ dialects/n+obsd/dproto.h
+@@ -53,3 +53,7 @@ _PROTOTYPE(extern int read_iso_node,(str
+ #endif	/* defined(HAS9660FS) */
+ 
+ _PROTOTYPE(extern void process_socket,(KA_T sa));
++
++#if	defined(HASKQUEUE)
++_PROTOTYPE(extern void process_kqueue,(KA_T q));
++#endif	/* defined(HASKQUEUE) */
