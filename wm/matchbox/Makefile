@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/10 14:12:51 xtraeme Exp $
 #
 
 DISTNAME=	matchbox-0.3.6
@@ -9,12 +9,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://handhelds.org/~mallum/matchbox/
 COMMENT=	Window manager designed for computers with small displays
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
