@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2003/05/23 07:19:44 seb Exp $
+$NetBSD: patch-ag,v 1.3 2004/04/22 15:33:35 seb Exp $
 
---- lib/ftpaths.h.in.orig	2003-04-03 16:26:39.000000000 +0000
+--- lib/ftpaths.h.in.orig	2003-11-11 16:49:14.000000000 +0000
 +++ lib/ftpaths.h.in
-@@ -29,16 +29,16 @@
+@@ -29,17 +29,17 @@
  #ifndef FTPATHS_H
  #define FTPATHS_H
  
@@ -11,11 +11,13 @@ $NetBSD: patch-ag,v 1.2 2003/05/23 07:19:44 seb Exp $
 -#define FT_PATH_CFG_FILTER          "@localstatedir@/cfg/filter.cfg"
 -#define FT_PATH_CFG_STAT            "@localstatedir@/cfg/stat.cfg"
 -#define FT_PATH_CFG_MASK            "@localstatedir@/cfg/mask.cfg"
+-#define FT_PATH_CFG_XLATE           "@localstatedir@/cfg/xlate.cfg"
 +#define FT_PATH_CFG_MAP             "@sysconfdir@/cfg/map.cfg"
 +#define FT_PATH_CFG_TAG             "@sysconfdir@/cfg/tag.cfg"
 +#define FT_PATH_CFG_FILTER          "@sysconfdir@/cfg/filter.cfg"
 +#define FT_PATH_CFG_STAT            "@sysconfdir@/cfg/stat.cfg"
 +#define FT_PATH_CFG_MASK            "@sysconfdir@/cfg/mask.cfg"
++#define FT_PATH_CFG_XLATE           "@sysconfdir@/cfg/xlate.cfg"
  
 -#define FT_PATH_SYM_IP_PROT         "@localstatedir@/sym/ip-prot.sym"
 -#define FT_PATH_SYM_IP_TYPE         "@localstatedir@/sym/ip-type.sym"
