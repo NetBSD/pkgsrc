@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/05/21 22:28:02 jtb Exp $
+# $NetBSD: Makefile,v 1.36 2001/06/27 18:06:45 jlam Exp $
 #
 
 COMMENT=	Communication utilities
@@ -23,6 +23,7 @@ SUBDIR+=	modemd
 SUBDIR+=	p5-Device-SerialPort
 SUBDIR+=	p5-pilot-link
 SUBDIR+=	pilot-link
+SUBDIR+=	pilot-link-libs
 SUBDIR+=	pilotmgr
 SUBDIR+=	plp
 SUBDIR+=	plptools
