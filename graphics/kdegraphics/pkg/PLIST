@@ -1,159 +1,159 @@
-@comment $NetBSD: PLIST,v 1.3 1998/07/14 22:09:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/11/07 10:52:29 tron Exp $
 bin/kdvi
 bin/kfax
 bin/kfract
 bin/kghostview
 bin/kpaint
 bin/kview
-share/doc/HTML/en/kdvi/index.html
-share/doc/HTML/en/kfax/index-1.html
-share/doc/HTML/en/kfax/index-2.html
-share/doc/HTML/en/kfax/index-3.html
-share/doc/HTML/en/kfax/index-4.html
-share/doc/HTML/en/kfax/index-5.html
-share/doc/HTML/en/kfax/index-6.html
-share/doc/HTML/en/kfax/index.html
-share/doc/HTML/en/kfax/logotp3.gif
-share/doc/HTML/en/kfract/index.html
-share/doc/HTML/en/kfract/kfract.gif
-share/doc/HTML/en/kghostview/index.html
-share/doc/HTML/en/kghostview/index-1.html
-share/doc/HTML/en/kghostview/index-2.html
-share/doc/HTML/en/kghostview/index-3.html
-share/doc/HTML/en/kghostview/index-4.html
-share/doc/HTML/en/kghostview/index-5.html
-share/doc/HTML/en/kghostview/index-6.html
-share/doc/HTML/en/kghostview/logotp3.gif
-share/doc/HTML/en/kpaint/kpaint.html
-share/doc/HTML/en/kpaint/index.html
-share/doc/HTML/en/kpaint/Technic.gif
-share/doc/HTML/en/kview/index.html
-share/doc/HTML/en/kview/kview.gif
-share/doc/HTML/en/kview/toolbar1.xpm
-share/doc/HTML/en/kview/toolbar2.xpm
-share/doc/HTML/fi/kdvi/index.html
-share/apps/kdvi/toolbar/forwpage.xpm
-share/apps/kdvi/toolbar/largetext.xpm
-share/apps/kdvi/toolbar/smalltext.xpm
-share/apps/kfax/pics/kfax.tif
-share/apps/kfax/pics/kfaxlogo.xpm
-share/apps/kpaint/toolbar/areaselect.xpm
-share/apps/kpaint/toolbar/roundangle.xpm
-share/apps/kpaint/toolbar/circle.xpm
-share/apps/kpaint/toolbar/line.xpm
-share/apps/kpaint/toolbar/pen.xpm
-share/apps/kpaint/toolbar/spraycan.xpm
-share/apps/kpaint/toolbar/ellipse.xpm
-share/apps/kpaint/toolbar/rectangle.xpm
-share/apps/kpaint/toolbar/editpaste.xpm
-share/apps/kpaint/toolbar/filenew.xpm
-share/apps/kpaint/toolbar/editcopy.xpm
-share/apps/kpaint/toolbar/fileopen.xpm
-share/apps/kpaint/toolbar/editcut.xpm
-share/apps/kpaint/toolbar/filefloppy.xpm
-share/apps/kpaint/toolbar/viewmag+.xpm
-share/apps/kpaint/toolbar/viewmag-.xpm
-share/apps/kview/toolbar/diashow.xpm
-share/apps/kview/toolbar/random.xpm
-share/apps/kview/toolbar/resize.xpm
-share/locale/de/LC_MESSAGES/kpaint.mo
-share/locale/de/LC_MESSAGES/kghostview.mo
-share/locale/de/LC_MESSAGES/kdvi.mo
-share/locale/fr/LC_MESSAGES/kpaint.mo
-share/locale/fr/LC_MESSAGES/kghostview.mo
-share/locale/fr/LC_MESSAGES/kdvi.mo
-share/locale/sv/LC_MESSAGES/kpaint.mo
-share/locale/sv/LC_MESSAGES/kghostview.mo
-share/locale/cs/LC_MESSAGES/kghostview.mo
-share/locale/cs/LC_MESSAGES/kpaint.mo
-share/locale/cs/LC_MESSAGES/kdvi.mo
-share/locale/cs/LC_MESSAGES/kfax.mo
-share/locale/es/LC_MESSAGES/kghostview.mo
-share/locale/es/LC_MESSAGES/kpaint.mo
-share/locale/es/LC_MESSAGES/kdvi.mo
-share/locale/ru/LC_MESSAGES/kpaint.mo
-share/locale/ru/LC_MESSAGES/kghostview.mo
-share/locale/hu/LC_MESSAGES/kpaint.mo
-share/locale/hu/LC_MESSAGES/kdvi.mo
-share/locale/hu/LC_MESSAGES/kghostview.mo
-share/locale/it/LC_MESSAGES/kghostview.mo
-share/locale/it/LC_MESSAGES/kpaint.mo
-share/locale/it/LC_MESSAGES/kdvi.mo
-share/locale/nl/LC_MESSAGES/kpaint.mo
-share/locale/nl/LC_MESSAGES/kghostview.mo
-share/locale/pt/LC_MESSAGES/kpaint.mo
-share/locale/pt/LC_MESSAGES/kghostview.mo
-share/locale/pt/LC_MESSAGES/kdvi.mo
-share/locale/no/LC_MESSAGES/kdvi.mo
-share/locale/no/LC_MESSAGES/kghostview.mo
-share/locale/no/LC_MESSAGES/kpaint.mo
-share/locale/pl/LC_MESSAGES/kpaint.mo
-share/locale/pl/LC_MESSAGES/kghostview.mo
-share/locale/pl/LC_MESSAGES/kdvi.mo
-share/locale/el/LC_MESSAGES/kpaint.mo
-share/locale/el/LC_MESSAGES/kghostview.mo
-share/locale/el/LC_MESSAGES/kdvi.mo
-share/locale/fi/LC_MESSAGES/kpaint.mo
-share/locale/fi/LC_MESSAGES/kghostview.mo
-share/locale/fi/LC_MESSAGES/kdvi.mo
-share/locale/fi/LC_MESSAGES/kfax.mo
-share/locale/hr/LC_MESSAGES/kpaint.mo
-share/locale/hr/LC_MESSAGES/kghostview.mo
-share/locale/hr/LC_MESSAGES/kdvi.mo
-share/locale/sk/LC_MESSAGES/kpaint.mo
-share/locale/sk/LC_MESSAGES/kghostview.mo
-share/locale/sk/LC_MESSAGES/kdvi.mo
-share/locale/de/LC_MESSAGES/kfax.mo
-share/locale/es/LC_MESSAGES/kfax.mo
-share/locale/nl/LC_MESSAGES/kdvi.mo
-share/locale/pt/LC_MESSAGES/kfax.mo
-share/locale/no/LC_MESSAGES/kfax.mo
-share/locale/pl/LC_MESSAGES/kfax.mo
-share/locale/hr/LC_MESSAGES/kfax.mo
-share/locale/sk/LC_MESSAGES/kfax.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/kpaint.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/kghostview.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/kfax.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/kpaint.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/kfax.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/kghostview.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/kdvi.mo
-share/locale/mk/LC_MESSAGES/kghostview.mo
-share/locale/pt_BR/LC_MESSAGES/kpaint.mo
-share/locale/pt_BR/LC_MESSAGES/kghostview.mo
-share/locale/pt_BR/LC_MESSAGES/kdvi.mo
-share/locale/pt_BR/LC_MESSAGES/kfax.mo
-share/icons/mini/kdvi.xpm
-share/icons/mini/kfax.xpm
-share/icons/mini/kfract.xpm
-share/icons/mini/kghostview.xpm
-share/icons/mini/kpaint.xpm
-share/icons/mini/kview.xpm
-share/icons/kdvi.xpm
-share/icons/kfax.xpm
-share/icons/kfract.xpm
-share/icons/kghostview.xpm
-share/icons/kpaint.xpm
-share/icons/kview.xpm
-share/applnk/Graphics/kdvi.kdelnk
-share/applnk/Graphics/KFax.kdelnk
-share/applnk/Graphics/kfract.kdelnk
-share/applnk/Graphics/kghostview.kdelnk
-share/applnk/Graphics/kpaint.kdelnk
-share/applnk/Graphics/kview.kdelnk
-@dirrm share/doc/HTML/fi/kdvi
-@dirrm share/doc/HTML/fi
-@dirrm share/doc/HTML/en/kview
-@dirrm share/doc/HTML/en/kpaint
-@dirrm share/doc/HTML/en/kghostview
-@dirrm share/doc/HTML/en/kfract
-@dirrm share/doc/HTML/en/kfax
-@dirrm share/doc/HTML/en/kdvi
-@dirrm share/apps/kview/toolbar
-@dirrm share/apps/kview
-@dirrm share/apps/kpaint/toolbar
-@dirrm share/apps/kpaint
-@dirrm share/apps/kfax/pics
-@dirrm share/apps/kfax
-@dirrm share/apps/kdvi/toolbar
-@dirrm share/apps/kdvi
+share/doc/kde/HTML/en/kdvi/index.html
+share/doc/kde/HTML/en/kfax/index-1.html
+share/doc/kde/HTML/en/kfax/index-2.html
+share/doc/kde/HTML/en/kfax/index-3.html
+share/doc/kde/HTML/en/kfax/index-4.html
+share/doc/kde/HTML/en/kfax/index-5.html
+share/doc/kde/HTML/en/kfax/index-6.html
+share/doc/kde/HTML/en/kfax/index.html
+share/doc/kde/HTML/en/kfax/logotp3.gif
+share/doc/kde/HTML/en/kfract/index.html
+share/doc/kde/HTML/en/kfract/kfract.gif
+share/doc/kde/HTML/en/kghostview/index.html
+share/doc/kde/HTML/en/kghostview/index-1.html
+share/doc/kde/HTML/en/kghostview/index-2.html
+share/doc/kde/HTML/en/kghostview/index-3.html
+share/doc/kde/HTML/en/kghostview/index-4.html
+share/doc/kde/HTML/en/kghostview/index-5.html
+share/doc/kde/HTML/en/kghostview/index-6.html
+share/doc/kde/HTML/en/kghostview/logotp3.gif
+share/doc/kde/HTML/en/kpaint/kpaint.html
+share/doc/kde/HTML/en/kpaint/index.html
+share/doc/kde/HTML/en/kpaint/Technic.gif
+share/doc/kde/HTML/en/kview/index.html
+share/doc/kde/HTML/en/kview/kview.gif
+share/doc/kde/HTML/en/kview/toolbar1.xpm
+share/doc/kde/HTML/en/kview/toolbar2.xpm
+share/doc/kde/HTML/fi/kdvi/index.html
+share/kde/apps/kdvi/toolbar/forwpage.xpm
+share/kde/apps/kdvi/toolbar/largetext.xpm
+share/kde/apps/kdvi/toolbar/smalltext.xpm
+share/kde/apps/kfax/pics/kfax.tif
+share/kde/apps/kfax/pics/kfaxlogo.xpm
+share/kde/apps/kpaint/toolbar/areaselect.xpm
+share/kde/apps/kpaint/toolbar/roundangle.xpm
+share/kde/apps/kpaint/toolbar/circle.xpm
+share/kde/apps/kpaint/toolbar/line.xpm
+share/kde/apps/kpaint/toolbar/pen.xpm
+share/kde/apps/kpaint/toolbar/spraycan.xpm
+share/kde/apps/kpaint/toolbar/ellipse.xpm
+share/kde/apps/kpaint/toolbar/rectangle.xpm
+share/kde/apps/kpaint/toolbar/editpaste.xpm
+share/kde/apps/kpaint/toolbar/filenew.xpm
+share/kde/apps/kpaint/toolbar/editcopy.xpm
+share/kde/apps/kpaint/toolbar/fileopen.xpm
+share/kde/apps/kpaint/toolbar/editcut.xpm
+share/kde/apps/kpaint/toolbar/filefloppy.xpm
+share/kde/apps/kpaint/toolbar/viewmag+.xpm
+share/kde/apps/kpaint/toolbar/viewmag-.xpm
+share/kde/apps/kview/toolbar/diashow.xpm
+share/kde/apps/kview/toolbar/random.xpm
+share/kde/apps/kview/toolbar/resize.xpm
+share/kde/locale/de/LC_MESSAGES/kpaint.mo
+share/kde/locale/de/LC_MESSAGES/kghostview.mo
+share/kde/locale/de/LC_MESSAGES/kdvi.mo
+share/kde/locale/fr/LC_MESSAGES/kpaint.mo
+share/kde/locale/fr/LC_MESSAGES/kghostview.mo
+share/kde/locale/fr/LC_MESSAGES/kdvi.mo
+share/kde/locale/sv/LC_MESSAGES/kpaint.mo
+share/kde/locale/sv/LC_MESSAGES/kghostview.mo
+share/kde/locale/cs/LC_MESSAGES/kghostview.mo
+share/kde/locale/cs/LC_MESSAGES/kpaint.mo
+share/kde/locale/cs/LC_MESSAGES/kdvi.mo
+share/kde/locale/cs/LC_MESSAGES/kfax.mo
+share/kde/locale/es/LC_MESSAGES/kghostview.mo
+share/kde/locale/es/LC_MESSAGES/kpaint.mo
+share/kde/locale/es/LC_MESSAGES/kdvi.mo
+share/kde/locale/ru/LC_MESSAGES/kpaint.mo
+share/kde/locale/ru/LC_MESSAGES/kghostview.mo
+share/kde/locale/hu/LC_MESSAGES/kpaint.mo
+share/kde/locale/hu/LC_MESSAGES/kdvi.mo
+share/kde/locale/hu/LC_MESSAGES/kghostview.mo
+share/kde/locale/it/LC_MESSAGES/kghostview.mo
+share/kde/locale/it/LC_MESSAGES/kpaint.mo
+share/kde/locale/it/LC_MESSAGES/kdvi.mo
+share/kde/locale/nl/LC_MESSAGES/kpaint.mo
+share/kde/locale/nl/LC_MESSAGES/kghostview.mo
+share/kde/locale/pt/LC_MESSAGES/kpaint.mo
+share/kde/locale/pt/LC_MESSAGES/kghostview.mo
+share/kde/locale/pt/LC_MESSAGES/kdvi.mo
+share/kde/locale/no/LC_MESSAGES/kdvi.mo
+share/kde/locale/no/LC_MESSAGES/kghostview.mo
+share/kde/locale/no/LC_MESSAGES/kpaint.mo
+share/kde/locale/pl/LC_MESSAGES/kpaint.mo
+share/kde/locale/pl/LC_MESSAGES/kghostview.mo
+share/kde/locale/pl/LC_MESSAGES/kdvi.mo
+share/kde/locale/el/LC_MESSAGES/kpaint.mo
+share/kde/locale/el/LC_MESSAGES/kghostview.mo
+share/kde/locale/el/LC_MESSAGES/kdvi.mo
+share/kde/locale/fi/LC_MESSAGES/kpaint.mo
+share/kde/locale/fi/LC_MESSAGES/kghostview.mo
+share/kde/locale/fi/LC_MESSAGES/kdvi.mo
+share/kde/locale/fi/LC_MESSAGES/kfax.mo
+share/kde/locale/hr/LC_MESSAGES/kpaint.mo
+share/kde/locale/hr/LC_MESSAGES/kghostview.mo
+share/kde/locale/hr/LC_MESSAGES/kdvi.mo
+share/kde/locale/sk/LC_MESSAGES/kpaint.mo
+share/kde/locale/sk/LC_MESSAGES/kghostview.mo
+share/kde/locale/sk/LC_MESSAGES/kdvi.mo
+share/kde/locale/de/LC_MESSAGES/kfax.mo
+share/kde/locale/es/LC_MESSAGES/kfax.mo
+share/kde/locale/nl/LC_MESSAGES/kdvi.mo
+share/kde/locale/pt/LC_MESSAGES/kfax.mo
+share/kde/locale/no/LC_MESSAGES/kfax.mo
+share/kde/locale/pl/LC_MESSAGES/kfax.mo
+share/kde/locale/hr/LC_MESSAGES/kfax.mo
+share/kde/locale/sk/LC_MESSAGES/kfax.mo
+share/kde/locale/zh_TW.Big5/LC_MESSAGES/kpaint.mo
+share/kde/locale/zh_TW.Big5/LC_MESSAGES/kghostview.mo
+share/kde/locale/zh_TW.Big5/LC_MESSAGES/kfax.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kpaint.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kfax.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kghostview.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdvi.mo
+share/kde/locale/mk/LC_MESSAGES/kghostview.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kpaint.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kghostview.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kdvi.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kfax.mo
+share/kde/icons/mini/kdvi.xpm
+share/kde/icons/mini/kfax.xpm
+share/kde/icons/mini/kfract.xpm
+share/kde/icons/mini/kghostview.xpm
+share/kde/icons/mini/kpaint.xpm
+share/kde/icons/mini/kview.xpm
+share/kde/icons/kdvi.xpm
+share/kde/icons/kfax.xpm
+share/kde/icons/kfract.xpm
+share/kde/icons/kghostview.xpm
+share/kde/icons/kpaint.xpm
+share/kde/icons/kview.xpm
+share/kde/applnk/Graphics/kdvi.kdelnk
+share/kde/applnk/Graphics/KFax.kdelnk
+share/kde/applnk/Graphics/kfract.kdelnk
+share/kde/applnk/Graphics/kghostview.kdelnk
+share/kde/applnk/Graphics/kpaint.kdelnk
+share/kde/applnk/Graphics/kview.kdelnk
+@dirrm share/doc/kde/HTML/fi/kdvi
+@dirrm share/doc/kde/HTML/fi
+@dirrm share/doc/kde/HTML/en/kview
+@dirrm share/doc/kde/HTML/en/kpaint
+@dirrm share/doc/kde/HTML/en/kghostview
+@dirrm share/doc/kde/HTML/en/kfract
+@dirrm share/doc/kde/HTML/en/kfax
+@dirrm share/doc/kde/HTML/en/kdvi
+@dirrm share/kde/apps/kview/toolbar
+@dirrm share/kde/apps/kview
+@dirrm share/kde/apps/kpaint/toolbar
+@dirrm share/kde/apps/kpaint
+@dirrm share/kde/apps/kfax/pics
+@dirrm share/kde/apps/kfax
+@dirrm share/kde/apps/kdvi/toolbar
+@dirrm share/kde/apps/kdvi

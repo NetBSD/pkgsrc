@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1998/07/21 21:13:46 tv Exp $
+@comment $NetBSD: PLIST,v 1.11 1998/11/07 10:52:30 tron Exp $
 include/kpixmap.h
 include/kled.h
 include/kcontainer.h
@@ -121,127 +121,172 @@ lib/libkfm.so.1.0
 lib/libmediatool.a
 lib/libmediatool.la
 lib/libmediatool.so.1.0
-share/apps/kde/pics/arrow_up.xbm
-share/apps/kde/pics/arrow_down.xbm
-share/apps/kde/pics/arrow_left.xbm
-share/apps/kde/pics/arrow_right.xbm
-share/apps/kde/pics/error.xpm
-share/apps/kde/pics/exclamation.xpm
-share/apps/kde/pics/info.xpm
-share/apps/kde/pics/stopsign.xpm
-share/apps/kde/pics/question.xpm
-share/apps/khtmlw/pics/khtmlw_dnd.xpm
-share/config/charsets
-share/doc/HTML/en/kfiledialog/back.gif
-share/doc/HTML/en/kfiledialog/bottom.gif
-share/doc/HTML/en/kfiledialog/exec.gif
-share/doc/HTML/en/kfiledialog/flag.gif
-share/doc/HTML/en/kfiledialog/forward.gif
-share/doc/HTML/en/kfiledialog/home.gif
-share/doc/HTML/en/kfiledialog/idea.gif
-share/doc/HTML/en/kfiledialog/index.html
-share/doc/HTML/en/kfiledialog/reload.gif
-share/doc/HTML/en/kfiledialog/toolbar-h.gif
-share/doc/HTML/en/kfiledialog/toolbar.gif
-share/doc/HTML/en/kfiledialog/up.gif
-share/doc/HTML/en/kfiledialog/viewmag.gif
-share/doc/HTML/en/kdelibs/kdebug.html
-share/locale/zh_TW.Big5/LC_MESSAGES/kde.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/kde.mo
-share/locale/sl/LC_MESSAGES/kde.mo
-share/locale/en_UK/LC_MESSAGES/kde.mo
-share/locale/mk/LC_MESSAGES/kde.mo
-share/locale/pt_BR/LC_MESSAGES/kde.mo
-share/locale/de/LC_MESSAGES/kde.mo
-share/locale/fr/LC_MESSAGES/kde.mo
-share/locale/sv/LC_MESSAGES/kde.mo
-share/locale/cs/LC_MESSAGES/kde.mo
-share/locale/es/LC_MESSAGES/kde.mo
-share/locale/ru/LC_MESSAGES/kde.mo
-share/locale/hu/LC_MESSAGES/kde.mo
-share/locale/da/LC_MESSAGES/kde.mo
-share/locale/it/LC_MESSAGES/kde.mo
-share/locale/nl/LC_MESSAGES/kde.mo
-share/locale/pt/LC_MESSAGES/kde.mo
-share/locale/no/LC_MESSAGES/kde.mo
-share/locale/pl/LC_MESSAGES/kde.mo
-share/locale/el/LC_MESSAGES/kde.mo
-share/locale/fi/LC_MESSAGES/kde.mo
-share/locale/hr/LC_MESSAGES/kde.mo
-share/locale/ro/LC_MESSAGES/kde.mo
-share/locale/sk/LC_MESSAGES/kde.mo
-share/locale/ca/LC_MESSAGES/kde.mo
-share/locale/de/charset
-share/locale/fr/charset
-share/locale/cs/charset
-share/locale/ru/charset
-share/locale/hu/charset
-share/locale/da/charset
-share/locale/pl/charset
-share/locale/fi/charset
-share/locale/ro/charset
-share/locale/pt/charset
-share/locale/sv/charset
-share/locale/es/charset
-share/locale/sk/charset
-share/toolbar/back.xpm
-share/toolbar/bottom.xpm
-share/toolbar/contents.xpm
-share/toolbar/down.xpm
-share/toolbar/editcopy.xpm
-share/toolbar/editcut.xpm
-share/toolbar/editpaste.xpm
-share/toolbar/exclamation.xpm
-share/toolbar/exit.xpm
-share/toolbar/filefloppy.xpm
-share/toolbar/filemail.xpm
-share/toolbar/filenew.xpm
-share/toolbar/filenew2.xpm
-share/toolbar/fileopen.xpm
-share/toolbar/fileprint.xpm
-share/toolbar/finish.xpm
-share/toolbar/flag.xpm
-share/toolbar/forward.xpm
-share/toolbar/help.xpm
-share/toolbar/home.xpm
-share/toolbar/idea.xpm
-share/toolbar/lock.xpm
-share/toolbar/next.xpm
-share/toolbar/page.xpm
-share/toolbar/paintbucket.xpm
-share/toolbar/prev.xpm
-share/toolbar/reload.xpm
-share/toolbar/send.xpm
-share/toolbar/openbook.xpm
-share/toolbar/tick.xpm
-share/toolbar/rightjust.xpm
-share/toolbar/start.xpm
-share/toolbar/top.xpm
-share/toolbar/up.xpm
-share/toolbar/viewmag+.xpm
-share/toolbar/viewmag-.xpm
-share/toolbar/viewmag.xpm
-share/toolbar/viewzoom.xpm
-share/toolbar/stop.xpm
-share/toolbar/configure.xpm
-@exec /bin/ln -sf en %D/share/doc/HTML/default
-@unexec /bin/rm -f %D/share/doc/HTML/default
-@dirrm share/toolbar
-@dirrm share/locale/zh_TW.Big5/LC_MESSAGES
-@dirrm share/locale/zh_TW.Big5
-@dirrm share/locale/zh_CN.GB2312/LC_MESSAGES
-@dirrm share/locale/zh_CN.GB2312
-@dirrm share/locale/en_UK/LC_MESSAGES
-@dirrm share/locale/en_UK
-@dirrm share/locale/pt_BR/LC_MESSAGES
-@dirrm share/locale/pt_BR
-@dirrm share/doc/HTML/en/kfiledialog
-@dirrm share/doc/HTML/en/kdelibs
-@dirrm share/doc/HTML/en
-@dirrm share/doc/HTML
-@dirrm share/config
-@dirrm share/apps/khtmlw/pics
-@dirrm share/apps/khtmlw
-@dirrm share/apps/kde/pics
-@dirrm share/apps/kde
-@dirrm share/apps
+share/doc/kde/HTML/en/kfiledialog/back.gif
+share/doc/kde/HTML/en/kfiledialog/bottom.gif
+share/doc/kde/HTML/en/kfiledialog/exec.gif
+share/doc/kde/HTML/en/kfiledialog/flag.gif
+share/doc/kde/HTML/en/kfiledialog/forward.gif
+share/doc/kde/HTML/en/kfiledialog/home.gif
+share/doc/kde/HTML/en/kfiledialog/idea.gif
+share/doc/kde/HTML/en/kfiledialog/index.html
+share/doc/kde/HTML/en/kfiledialog/reload.gif
+share/doc/kde/HTML/en/kfiledialog/toolbar-h.gif
+share/doc/kde/HTML/en/kfiledialog/toolbar.gif
+share/doc/kde/HTML/en/kfiledialog/up.gif
+share/doc/kde/HTML/en/kfiledialog/viewmag.gif
+share/doc/kde/HTML/en/kdelibs/kdebug.html
+@exec /bin/ln -sf en %D/share/doc/kde/HTML/default
+@unexec /bin/rm -f %D/share/doc/kde/HTML/default
+share/kde/apps/kde/pics/arrow_up.xbm
+share/kde/apps/kde/pics/arrow_down.xbm
+share/kde/apps/kde/pics/arrow_left.xbm
+share/kde/apps/kde/pics/arrow_right.xbm
+share/kde/apps/kde/pics/error.xpm
+share/kde/apps/kde/pics/exclamation.xpm
+share/kde/apps/kde/pics/info.xpm
+share/kde/apps/kde/pics/stopsign.xpm
+share/kde/apps/kde/pics/question.xpm
+share/kde/apps/khtmlw/pics/khtmlw_dnd.xpm
+share/kde/config/charsets
+share/kde/locale/zh_TW.Big5/LC_MESSAGES/kde.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kde.mo
+share/kde/locale/sl/LC_MESSAGES/kde.mo
+share/kde/locale/en_UK/LC_MESSAGES/kde.mo
+share/kde/locale/mk/LC_MESSAGES/kde.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kde.mo
+share/kde/locale/de/LC_MESSAGES/kde.mo
+share/kde/locale/fr/LC_MESSAGES/kde.mo
+share/kde/locale/sv/LC_MESSAGES/kde.mo
+share/kde/locale/cs/LC_MESSAGES/kde.mo
+share/kde/locale/es/LC_MESSAGES/kde.mo
+share/kde/locale/ru/LC_MESSAGES/kde.mo
+share/kde/locale/hu/LC_MESSAGES/kde.mo
+share/kde/locale/da/LC_MESSAGES/kde.mo
+share/kde/locale/it/LC_MESSAGES/kde.mo
+share/kde/locale/nl/LC_MESSAGES/kde.mo
+share/kde/locale/pt/LC_MESSAGES/kde.mo
+share/kde/locale/no/LC_MESSAGES/kde.mo
+share/kde/locale/pl/LC_MESSAGES/kde.mo
+share/kde/locale/el/LC_MESSAGES/kde.mo
+share/kde/locale/fi/LC_MESSAGES/kde.mo
+share/kde/locale/hr/LC_MESSAGES/kde.mo
+share/kde/locale/ro/LC_MESSAGES/kde.mo
+share/kde/locale/sk/LC_MESSAGES/kde.mo
+share/kde/locale/ca/LC_MESSAGES/kde.mo
+share/kde/locale/de/charset
+share/kde/locale/fr/charset
+share/kde/locale/cs/charset
+share/kde/locale/ru/charset
+share/kde/locale/hu/charset
+share/kde/locale/da/charset
+share/kde/locale/pl/charset
+share/kde/locale/fi/charset
+share/kde/locale/ro/charset
+share/kde/locale/pt/charset
+share/kde/locale/sv/charset
+share/kde/locale/es/charset
+share/kde/locale/sk/charset
+share/kde/toolbar/back.xpm
+share/kde/toolbar/bottom.xpm
+share/kde/toolbar/contents.xpm
+share/kde/toolbar/down.xpm
+share/kde/toolbar/editcopy.xpm
+share/kde/toolbar/editcut.xpm
+share/kde/toolbar/editpaste.xpm
+share/kde/toolbar/exclamation.xpm
+share/kde/toolbar/exit.xpm
+share/kde/toolbar/filefloppy.xpm
+share/kde/toolbar/filemail.xpm
+share/kde/toolbar/filenew.xpm
+share/kde/toolbar/filenew2.xpm
+share/kde/toolbar/fileopen.xpm
+share/kde/toolbar/fileprint.xpm
+share/kde/toolbar/finish.xpm
+share/kde/toolbar/flag.xpm
+share/kde/toolbar/forward.xpm
+share/kde/toolbar/help.xpm
+share/kde/toolbar/home.xpm
+share/kde/toolbar/idea.xpm
+share/kde/toolbar/lock.xpm
+share/kde/toolbar/next.xpm
+share/kde/toolbar/page.xpm
+share/kde/toolbar/paintbucket.xpm
+share/kde/toolbar/prev.xpm
+share/kde/toolbar/reload.xpm
+share/kde/toolbar/send.xpm
+share/kde/toolbar/openbook.xpm
+share/kde/toolbar/tick.xpm
+share/kde/toolbar/rightjust.xpm
+share/kde/toolbar/start.xpm
+share/kde/toolbar/top.xpm
+share/kde/toolbar/up.xpm
+share/kde/toolbar/viewmag+.xpm
+share/kde/toolbar/viewmag-.xpm
+share/kde/toolbar/viewmag.xpm
+share/kde/toolbar/viewzoom.xpm
+share/kde/toolbar/stop.xpm
+share/kde/toolbar/configure.xpm
+@dirrm share/kde/toolbar
+@dirrm share/kde/locale/zh_TW.Big5/LC_MESSAGES
+@dirrm share/kde/locale/zh_TW.Big5
+@dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
+@dirrm share/kde/locale/zh_CN.GB2312
+@dirrm share/kde/locale/sv/LC_MESSAGES
+@dirrm share/kde/locale/sv
+@dirrm share/kde/locale/sl/LC_MESSAGES
+@dirrm share/kde/locale/sl
+@dirrm share/kde/locale/sk/LC_MESSAGES
+@dirrm share/kde/locale/sk
+@dirrm share/kde/locale/ru/LC_MESSAGES
+@dirrm share/kde/locale/ru
+@dirrm share/kde/locale/ro/LC_MESSAGES
+@dirrm share/kde/locale/ro
+@dirrm share/kde/locale/pt_BR/LC_MESSAGES
+@dirrm share/kde/locale/pt_BR
+@dirrm share/kde/locale/pt/LC_MESSAGES
+@dirrm share/kde/locale/pt
+@dirrm share/kde/locale/pl/LC_MESSAGES
+@dirrm share/kde/locale/pl
+@dirrm share/kde/locale/no/LC_MESSAGES
+@dirrm share/kde/locale/no
+@dirrm share/kde/locale/nl/LC_MESSAGES
+@dirrm share/kde/locale/nl
+@dirrm share/kde/locale/mk/LC_MESSAGES
+@dirrm share/kde/locale/mk
+@dirrm share/kde/locale/it/LC_MESSAGES
+@dirrm share/kde/locale/it
+@dirrm share/kde/locale/hu/LC_MESSAGES
+@dirrm share/kde/locale/hu
+@dirrm share/kde/locale/hr/LC_MESSAGES
+@dirrm share/kde/locale/hr
+@dirrm share/kde/locale/fr/LC_MESSAGES
+@dirrm share/kde/locale/fr
+@dirrm share/kde/locale/fi/LC_MESSAGES
+@dirrm share/kde/locale/fi
+@dirrm share/kde/locale/es/LC_MESSAGES
+@dirrm share/kde/locale/es
+@dirrm share/kde/locale/en_UK/LC_MESSAGES
+@dirrm share/kde/locale/en_UK
+@dirrm share/kde/locale/el/LC_MESSAGES
+@dirrm share/kde/locale/el
+@dirrm share/kde/locale/de/LC_MESSAGES
+@dirrm share/kde/locale/de
+@dirrm share/kde/locale/da/LC_MESSAGES
+@dirrm share/kde/locale/da
+@dirrm share/kde/locale/cs/LC_MESSAGES
+@dirrm share/kde/locale/cs
+@dirrm share/kde/locale/ca/LC_MESSAGES
+@dirrm share/kde/locale/ca
+@dirrm share/kde/locale
+@dirrm share/kde/config
+@dirrm share/kde/apps/khtmlw/pics
+@dirrm share/kde/apps/khtmlw
+@dirrm share/kde/apps/kde/pics
+@dirrm share/kde/apps/kde
+@dirrm share/kde/apps
+@dirrm share/kde
+@dirrm share/doc/kde/HTML/en/kfiledialog
+@dirrm share/doc/kde/HTML/en/kdelibs
+@dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML
+@dirrm share/doc/kde
