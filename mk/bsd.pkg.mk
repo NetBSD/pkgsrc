@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1093 2002/12/02 17:07:27 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1094 2002/12/03 16:16:37 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -357,7 +357,7 @@ M4?=			/usr/bin/m4
 X11_LDFLAGS=		# empty
 .  if ${_USE_RPATH} == "yes"
 .    if ${OPSYS} == "IRIX"
-X11_LDFlAGS+=		-Wl,-rpath -Wl,${X11BASE}/lib
+X11_LDFLAGS+=		-Wl,-rpath,${X11BASE}/lib
 .    else
 X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
 .    endif
@@ -367,7 +367,7 @@ LDFLAGS+=		${X11_LDFLAGS}
 .endif
 .if ${_USE_RPATH} == "yes"
 .  if ${OPSYS} == "IRIX"
-LDFLAGS+=		-Wl,-rpath -Wl,${LOCALBASE}/lib
+LDFLAGS+=		-Wl,-rpath,${LOCALBASE}/lib
 .  else
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 .  endif
@@ -592,6 +592,14 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		QMAILDIR=${QMAILDIR}
 
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
+.endif
+
+.if ${OPSYS} == "IRIX"
+PKGCONFIG_OVERRIDE_SED=	\
+		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-rpath,\2 -L\2\3|'
+.else
+PKGCONFIG_OVERRIDE_SED=	\
+		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
 .endif
 
 # Latest version of digest(1) required for pkgsrc
@@ -1883,13 +1891,8 @@ do-pkgconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${pkgconfig} ]; then					\
 		${MV} ${pkgconfig} ${pkgconfig}.norpath ;		\
-.         if ${OPSYS} == "IRIX"
-		${SED} -e 's|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-rpath -Wl,\2 -L\2\3|'					\
+		${SED} ${PKGCONFIG_OVERRIDE_SED}			\
 			< ${pkgconfig}.norpath > ${pkgconfig} ;		\
-.         else
-		${SED} -e 's|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'						\
-			< ${pkgconfig}.norpath > ${pkgconfig} ;		\
-.         endif
 	fi
 .  endfor
 .endif
