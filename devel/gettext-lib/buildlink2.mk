@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/23 01:22:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/18 01:05:45 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -41,6 +41,7 @@ BUILDLINK_FILES.gettext=	include/libintl.h
 BUILDLINK_FILES.gettext+=	lib/libintl.*
 
 BUILDLINK_TARGETS+=		gettext-buildlink
+BUILDLINK_TARGETS+=		gettext-libintl-la
 
 # Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
 # gettext.m4 does not add -lintl where it should, and the resulting
@@ -63,9 +64,16 @@ CONFIGURE_ENV+=		INTLLIBS="${INTLLIBS}"
 
 .if ${_NEED_GNU_GETTEXT} == "NO"
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
+	-e "s|${BUILDLINK_PREFIX.gettext}/lib/libintl.la|-L${BUILDLINK_PREFIX.gettext}/lib -lintl|g" \
 	-e "s|${LOCALBASE}/lib/libintl.la|-L${BUILDLINK_PREFIX.gettext}/lib -lintl|g"
 .endif
 
 gettext-buildlink: _BUILDLINK_USE
+
+gettext-libintl-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libintl.la";			\
+	libpattern="${BUILDLINK_PREFIX.gettext}/lib/libintl.*";		\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# GETTEXT_BUILDLINK2_MK
