@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9311 2005/02/25 21:19:00 adrianp Exp $
+$NetBSD: CHANGES,v 1.9312 2005/02/25 23:47:53 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added exiv2-0.6.1 [drochner 2005-02-25]
 	Updated gliv to 1.9.1 [drochner 2005-02-25]
 	Added p5-Net-LMTP-0.02 [adrianp 2005-02-25]
+	Added writer2latex-0.4b2 [rh 2005-02-26]
