@@ -1,0 +1,20 @@
+$NetBSD: patch-ar,v 1.1 2005/03/10 19:43:25 bouyer Exp $
+--- ../xen/include/public/io/domain_controller.h.orig	2005-03-10 20:16:32.000000000 +0100
++++ ../xen/include/public/io/domain_controller.h	2005-01-12 13:22:28.000000000 +0100
+@@ -81,7 +81,7 @@
+ 
+ /* These are used by both front-end and back-end drivers. */
+ #define blkif_vdev_t   u16
+-#define blkif_pdev_t   u16
++#define blkif_pdev_t   u32
+ #define blkif_sector_t u64
+ 
+ /*
+@@ -183,7 +183,6 @@
+     blkif_sector_t sector_start;   /*  0 */
+     blkif_sector_t sector_length;  /*  8 */
+     blkif_pdev_t   device;         /* 16 */
+-    u16            __pad;          /* 18 */
+ } PACKED blkif_extent_t; /* 20 bytes */
+ 
+ /* Non-specific 'okay' return. */
