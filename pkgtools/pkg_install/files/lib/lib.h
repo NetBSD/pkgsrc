@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.2 2003/09/02 08:28:33 jlam Exp $ */
+/* $NetBSD: lib.h,v 1.3 2003/09/03 14:06:00 jlam Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -140,12 +140,6 @@
 
 #define	PKG_PATTERN_MAX	FILENAME_MAX	/* max length of pattern, including nul */
 #define	PKG_SUFFIX_MAX	10	/* max length of suffix, including nul */
-
-/* This should only happen on 1.3 and 1.3.1, not 1.3.2 and up */
-#ifndef TAILQ_FIRST
-#define TAILQ_FIRST(head)               ((head)->tqh_first)
-#define TAILQ_NEXT(elm, field)          ((elm)->field.tqe_next)
-#endif
 
 enum {
 	ReadWrite,
