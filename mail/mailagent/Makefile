@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/08 00:24:55 itojun Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
-DISTNAME=		mailagent-3.0@68
-PKGNAME=		mailagent-3.0.68
+DISTNAME=		mailagent-3.0.73
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 
