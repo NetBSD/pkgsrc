@@ -1,29 +1,32 @@
-# $NetBSD: Makefile,v 1.18 2001/12/20 19:32:27 tron Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/28 09:24:38 drochner Exp $
 #
 
-DISTNAME=	${PY_DISTNAME}
-PKGNAME=	py-readline-${PY_VERSION}
-WRKSRC=		${PY_WRKSRC}
+PKGNAME=	${PYPKGPREFIX}-readline-0
 CATEGORIES=	misc
-MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 COMMENT=	line editing support for Python
 
-EXTRACT_ELEMENTS=	${PY_MODULES}/readline.c
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/readline.c
 
 USE_GNU_READLINE=	# defined
 
 .include "../../devel/readline/buildlink.mk"
 
-PY_SETUP_SUBST+=	BUILDLINK_CPPFLAGS=${_BUILDLINK_CPPFLAGS}
-PY_SETUP_SUBST+=	BUILDLINK_LDFLAGS=${_BUILDLINK_LDFLAGS}
+PYDISTUTILSPKG=	yes
+PYBINMODULE=	yes
+PY_PATCHPLIST=	yes
+PY_SETUP_SUBST+= RLPREFIX=${BUILDLINK_DIR}
+PY_SETUP_SUBST+= RLRTPREFIX=${BUILDLINK_PREFIX.readline}
 
-do-configure:	python-std-do-configure
+# ignore errors due to missing files (EXTRACT_ELEMENTS!)
+do-patch:
+	(cd ${WRKSRC}; \
+	for f in ${PATCHDIR}/patch-*;do \
+	${PATCH} --batch <$$f || true; \
+	done)
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/readline.so ${PY_LIBDIR}/lib-dynload
-
-.include "../../lang/python/Makefile.inc"
+.include "../../lang/python/srcdist.mk"
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
