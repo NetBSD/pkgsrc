@@ -1,4 +1,4 @@
- $NetBSD: Makefile,v 1.27 1999/06/08 18:07:54 bad Exp $
+ $NetBSD: Makefile,v 1.28 1999/09/07 13:21:37 ad Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -7,7 +7,7 @@
     SUBDIR += cucipop
 #    SUBDIR += cyrus
     SUBDIR += elm
-#    SUBDIR += exim
+    SUBDIR += exim
     SUBDIR += exmh
     SUBDIR += faces
     SUBDIR += fetchmail
