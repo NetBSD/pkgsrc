@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/10/01 14:32:57 rh Exp $
+
+--- library/Makefile.in.orig	Sun Oct  1 16:28:43 2000
++++ library/Makefile.in
+@@ -31,7 +31,7 @@
+ 
+ mkdirs:
+ 	@for i in $(instdirs) ; do \
+-	    if test -d $$i ; then : ; else mkdir $$i ; fi ; \
++	    if test -d $$i ; then : ; else mkdir -p $$i ; fi ; \
+         done
+ 
+ dragdrop: mkdirs
