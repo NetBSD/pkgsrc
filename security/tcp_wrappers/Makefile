@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/07 22:09:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/24 04:23:09 jschauma Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -10,7 +10,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	Monitor and filter incoming requests for network services
 
-ONLY_FOR_PLATFORM=	Darwin-*-* SunOS-*-* Linux-*-*	# in NetBSD base system
+ONLY_FOR_PLATFORM=	IRIX-*-* Darwin-*-* SunOS-*-* Linux-*-*	# in NetBSD base system
 
 USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
@@ -23,6 +23,8 @@ ALL_TARGET=	netbsd
 ALL_TARGET=	sunos5
 .elif ${OPSYS} == "Linux"
 ALL_TARGET=	linux
+.elif ${OPSYS} == "IRIX"
+ALL_TARGET=	${LOWER_OPSYS}
 .else
 ALL_TARGET=	generic		# good luck!
 .endif
