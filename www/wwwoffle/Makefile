@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2000/08/07 08:27:37 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2000/11/20 05:12:38 itojun Exp $
 
-DISTNAME=	wwwoffle-2.5e
+DISTNAME=	wwwoffle-2.6
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
+MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/ \
+		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
+
+PATCHFILES+=	wwwoffle-26-v6-20001120.diff.gz
+PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
@@ -17,23 +22,10 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 BUILD_DEFS+=	USE_INET6
 
-# to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
-
-# IPv6 support
-.if defined(USE_INET6) && ${USE_INET6} == YES
-PATCHDIR=       ${WRKDIR}/.patches
-.endif
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
-.endif
-
-pre-patch:
-.if defined(USE_INET6) && ${USE_INET6} == YES
-	${MKDIR} ${WRKDIR}/.patches
-	${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
-	${CP} ${.CURDIR}/patches.v6/patch-* ${WRKDIR}/.patches
 .endif
 
 post-build:
