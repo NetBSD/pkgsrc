@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/10/15 14:06:56 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/11/07 00:22:54 jlam Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
@@ -35,7 +35,9 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
 
 post-fetch:
-	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
+	fi
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
