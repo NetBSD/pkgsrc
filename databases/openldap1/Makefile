@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/09 12:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/25 12:37:48 grant Exp $
 #
 
 DISTNAME=	openldap-1.2.13
@@ -38,9 +38,6 @@ CONFIGURE_ARGS+=	--enable-wrappers
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
-
-PLIST_SRC=	${PKGDIR}/PLIST.common
-PLIST_SRC+=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
