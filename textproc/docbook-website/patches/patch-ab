@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/01/01 15:26:29 darcy Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/19 00:22:10 wiz Exp $
 
---- website.dtd.orig	2002-09-04 07:21:31.000000000 -0400
-+++ website.dtd
-@@ -1048,12 +1048,8 @@
+--- schema/dtd/website.dtd.orig	2003-06-22 18:56:06.000000000 +0200
++++ schema/dtd/website.dtd
+@@ -1029,12 +1029,8 @@
  	contentwidth	CDATA		#IMPLIED
  	depth		CDATA		#IMPLIED
  	contentdepth	CDATA		#IMPLIED
