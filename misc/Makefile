@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2001/10/19 21:06:42 kei Exp $
+# $NetBSD: Makefile,v 1.109 2001/10/30 13:36:27 damon Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -29,6 +29,8 @@ SUBDIR+=	fep
 SUBDIR+=	figlet
 #SUBDIR+=	freewnn-common	# base package for japanese/freewnn-*
 SUBDIR+=	git
+SUBDIR+=	gkrellm-moon
+SUBDIR+=	gkrellm-weather
 SUBDIR+=	gnome-pim
 SUBDIR+=	gnome-utils
 SUBDIR+=	gone
