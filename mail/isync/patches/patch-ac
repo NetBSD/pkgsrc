@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/12/07 15:12:41 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/27 16:54:06 seb Exp $
 
---- sync.c.orig	Mon Jan 28 19:19:56 2002
-+++ sync.c
-@@ -48,7 +48,7 @@ set_uid (DBM * db, const char *f, unsign
+--- src/sync.c.orig	2003-05-07 00:06:37.000000000 +0000
++++ src/sync.c
+@@ -53,7 +53,7 @@ set_uid (DBM * db, const char *f, unsign
  
      key.dptr = (void *) f;
      s = strchr (f, ':');

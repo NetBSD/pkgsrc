@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/07 15:12:41 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/27 16:54:06 seb Exp $
 bin/isync
 man/man1/isync.1
+share/examples/isync/isyncrc.sample
+@dirrm share/examples/isync
