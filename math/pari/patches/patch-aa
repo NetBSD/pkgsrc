@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/05/19 17:31:05 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2001/11/30 01:18:13 wiz Exp $
 
 --- Configure.orig	Fri Apr 27 13:51:44 2001
 +++ Configure
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/19 17:31:05 jtb Exp $
 -  /usr/libexec\
 -  /usr/openwin/bin\
 -  /usr/local/bin\
-+  $LOCALBASE/lib\
++  $BUILDLINK_DIR/lib\
  "
  # /usr/openwin/bin added for xmkmf
  
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/19 17:31:05 jtb Exp $
 - 	/usr/ccs/lib\
 - 	/usc/ucblib\
 - 	/usr/shlib\
-+        $LOCALBASE/lib\
++        $BUILDLINK_DIR/lib\
   	.\
       ";;
       esac
@@ -104,7 +104,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/19 17:31:05 jtb Exp $
 -      /opt/include\
 -      /opt/local/include\
 -      /opt/gnu/include\
-+      $LOCALBASE/include\
++      $BUILDLINK_DIR/include\
      ";;
      esac
      pth="$readline_add $incpth"
@@ -153,7 +153,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/19 17:31:05 jtb Exp $
 -          /usr/athena/lib\
 -          /usr/local/x11r5/lib\
 -          /usr/lpp/Xamples/lib\
-+          $X11BASE/lib\
++          $BUILDLINK_DIR/lib\
          ";
          pth=`echo $x11pth | s,/lib,/include,g`
          x=`./locate X11/Xos.h '' $pth`
