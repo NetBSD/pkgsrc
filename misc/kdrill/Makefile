@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/08 21:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/24 10:42:12 jlam Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -10,10 +10,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.bolthole.com/kdrill/
 COMMENT=	kanji quiz and japanese dictionary
 
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
-USE_X11BASE=	yes
-
-SCRIPTS_ENV+=	BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kdrill
@@ -25,5 +23,4 @@ post-install:
 		${GZIP_CMD} -9 ${PREFIX}/share/kdrill/$$f; \
 	done
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
