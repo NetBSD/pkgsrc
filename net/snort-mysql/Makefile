@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/31 14:11:42 salo Exp $
-#
+# $NetBSD: Makefile,v 1.9 2004/04/10 03:10:52 snj Exp $
 
 .include "../../net/snort/Makefile.common"
 
@@ -18,6 +17,6 @@ DISTINFO_FILE=	${PKGDIR}/distinfo
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
 
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
