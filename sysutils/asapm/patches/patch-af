@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2004/06/30 14:22:49 kivinen Exp $
+$NetBSD: patch-af,v 1.5 2004/07/26 23:25:19 wiz Exp $
 
 --- apm_read.c.orig	2001-11-23 23:07:19.000000000 +0200
 +++ apm_read.c
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.4 2004/06/30 14:22:49 kivinen Exp $
  
  #include "state.h"
  extern struct apm_state state;
-@@ -136,18 +137,183 @@ void ReadAPMDevice( )		/* FreeBSD versio
+@@ -136,18 +137,185 @@
  	state.time_left = info.ai_batt_time / 60;
  }
  #elif defined(__NetBSD__)||defined(__OpenBSD__)
@@ -84,8 +84,9 @@ $NetBSD: patch-af,v 1.4 2004/06/30 14:22:49 kivinen Exp $
 +			continue;
 +
 +#ifdef HAVE_ENVSYS_SWATTHOUR
-+		if (etds.units == ENVSYS_SWATTHOUR) {
-+			/* Watt hours, this must be battery capacity info. */
++		if (etds.units == ENVSYS_SWATTHOUR ||
++		    etds.units == ENVSYS_SAMPHOUR) {
++			/* Watt or amp hours, this must be battery cap info. */
 +			if (match_end(ebis.desc, " design cap")) {
 +				design += etds.cur.data_s;
 +			} else if (match_end(ebis.desc, " charge")) {
@@ -108,8 +109,9 @@ $NetBSD: patch-af,v 1.4 2004/06/30 14:22:49 kivinen Exp $
 +
 +		}
 +#endif /* HAVE_ENVSYS_INDICATOR */
-+		if (etds.units == ENVSYS_SWATTS) {
-+			/* Watts, this must discharge rate. */
++		if (etds.units == ENVSYS_SWATTS ||
++		    etds.units == ENVSYS_SAMPS) {
++			/* Watts or apms, this must discharge rate. */
 +			if (match_end(ebis.desc, " discharge rate")) {
 +				discharge_rate += etds.cur.data_s;
 +			} else if (match_end(ebis.desc, " charge rate")) {
