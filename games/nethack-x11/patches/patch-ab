@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 1998/08/27 13:15:02 garbled Exp $
+--- src/Makefile.orig	Sat Aug  8 01:56:47 1998
++++ src/Makefile	Sat Aug  8 02:00:19 1998
+@@ -126,4 +126,4 @@
+ 
+-CFLAGS = -O -I../include
+-LFLAGS = 
++CFLAGS = -O -I../include -I$(X11BASE)/include
++LFLAGS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
+ 
+@@ -148,4 +148,4 @@
+ # 
+-WINSRC = $(WINTTYSRC)
+-WINOBJ = $(WINTTYOBJ)
++WINSRC = $(WINX11SRC)
++WINOBJ = $(WINX11OBJ)
+ 
+@@ -169,3 +169,3 @@
+ # If USE_XPM is defined in config.h, you will also need -lXpm here.
+-WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11
++WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11 -lXpm
+ # WINX11LIB = -lXaw -lXmu -lXt -lX11
+@@ -175,3 +175,3 @@
+ #
+-WINLIB = $(WINTTYLIB)
++WINLIB = $(WINX11LIB)
+ 
