@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/20 01:39:30 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 18:36:55 xtraeme Exp $
 
 PKGNAME=	lesstif12-${LESSTIF_VERSION}
 
@@ -8,7 +8,7 @@ CONFLICTS+=	lesstif-0.[0-8]*
 CONFLICTS+=	lesstif-0.90*
 CONFLICTS+=	lesstif-0.91 lesstif-0.91.[0-3]
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 .include "./Makefile.common"
 
