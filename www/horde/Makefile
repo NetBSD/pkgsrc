@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.21.2.2 2003/03/17 17:52:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.21.2.3 2003/10/22 22:58:36 jmc Exp $
 
-DISTNAME=	horde-2.0
+DISTNAME=	horde-2.2.4-RC1
+PKGNAME=	horde-2.2.4rc1
+WRKSRC=		${WRKDIR}/horde-2.2.4
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
-MAINTAINER=	bouyer@netbsd.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
 
@@ -24,7 +26,7 @@ MESSAGE_SUBST+=	HORDEDIR=${HORDEDIR}
 
 PKG_SYSCONFSUBDIR?=	httpd
 
-USE_PKGINSTALL=	yes
+USE_PKGINSTALL=	YES
 CONF_FILES=	${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES+=	${HORDEDIR}/config/horde.php.dist ${HORDEDIR}/config/horde.php
 SUPPORT_FILES+=	${HORDEDIR}/config/html.php.dist ${HORDEDIR}/config/html.php
@@ -32,14 +34,15 @@ SUPPORT_FILES+=	${HORDEDIR}/config/lang.php.dist ${HORDEDIR}/config/lang.php
 SUPPORT_FILES+=	${HORDEDIR}/config/mime_drivers.php.dist ${HORDEDIR}/config/mime_drivers.php
 SUPPORT_FILES+=	${HORDEDIR}/config/mime_mapping.php.dist ${HORDEDIR}/config/mime_mapping.php
 SUPPORT_FILES+=	${HORDEDIR}/config/motd.php.dist ${HORDEDIR}/config/motd.php
+SUPPORT_FILES+=	${HORDEDIR}/config/prefs.php.dist ${HORDEDIR}/config/prefs.php
 SUPPORT_FILES+=	${HORDEDIR}/config/registry.php.dist ${HORDEDIR}/config/registry.php
 
 post-patch:
 	cd ${WRKSRC}/scripts;						\
-	for file in mime_mapping/convert.pl; do		\
-		${MV} -f $${file} $${file}.orig;			\
+	for FILE in mime_mapping/convert.pl; do		\
+		${MV} -f $${FILE} $${FILE}.orig;			\
 		${SED}	-e "s|/usr/bin/perl|${PERL5}|g"			\
-			$${file}.orig > $${file};			\
+			$${FILE}.orig > $${FILE};			\
 	done
 
 do-build:
@@ -56,7 +59,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${HORDEDIR}
 	cd ${WRKDIR}; ${INSTALL_DATA} horde.conf.dist ${EGDIR}/horde.conf
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
-	cd ${WRKSRC}; ${CP} -R admin graphics lib locale po scripts templates util ${HORDEDIR}
+	cd ${WRKSRC}; ${CP} -R graphics lib locale po scripts templates util ${HORDEDIR}
 	${INSTALL_DATA_DIR} ${HORDEDIR}/config
 	cd ${WRKSRC}/config; ${INSTALL_DATA} * ${HORDEDIR}/config
 	cd ${WRKSRC}; ${INSTALL_DATA} *.php ${HORDEDIR}
