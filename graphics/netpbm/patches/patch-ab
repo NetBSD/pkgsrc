@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.11 2002/05/06 11:46:22 tron Exp $
+
+--- GNUmakefile.orig	Sun Mar  3 18:19:06 2002
++++ GNUmakefile	Mon Apr 29 17:21:21 2002
+@@ -139,7 +139,9 @@
+ 	for i in $(SUBDIRS) ; do \
+ 	    $(MAKE) -C $$i -f $(SRCDIR)/$$i/Makefile install.lib ; \
+ 	done
+-	$(SRCDIR)/buildtools/try_ldconfig
++	# this script is badly broken and it's not needed at all.
++	# someone should realize that sh is not bash..
++	# $(SRCDIR)/buildtools/try_ldconfig
+ endif
+ 
+ 
