@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2002/11/06 19:02:55 atatat Exp $
+# $NetBSD: Makefile,v 1.46 2003/03/09 19:10:35 jschauma Exp $
 #
 
 DISTNAME=	SDL-1.2.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -49,7 +49,8 @@ MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
 .endif
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2003/03/04 11:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/09 19:12:37 jschauma Exp $
 
 DISTNAME=		Wine-20030219
 PKGNAME=		${DISTNAME:S/W/w/}
+PKGREVISION=		1
 WRKSRC= 		${WRKDIR}/wine-20030219
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
@@ -46,7 +47,8 @@ post-install:
 	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd;		\
 	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 
