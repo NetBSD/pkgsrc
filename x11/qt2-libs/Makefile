@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/11 22:45:44 snj Exp $
 
 PKGNAME=	qt2-libs-${QTVERSION}
 PKGREVISION=	5
 COMMENT=	C++ X GUI toolkit
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../qt2-libs/Makefile.common"
-
-CONFIGURE_ARGS+=	-I${LOCALBASE}/include -I${X11BASE}/include
-CONFIGURE_ARGS+=	-I${LOCALBASE}/include/freetype2
-CONFIGURE_ARGS+=	-I${X11BASE}/include/freetype2
-CONFIGURE_ARGS+=	-L${LOCALBASE}/lib -L${X11BASE}/lib
 
 CONFIGURE_ENV+=		QTDIR="${WRKSRC}"
 MAKE_ENV+=		QTDIR="${WRKSRC}"
@@ -28,12 +23,12 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/mng/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/mng/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
