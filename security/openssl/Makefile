@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2003/06/27 02:36:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.72 2003/07/02 13:00:46 grant Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -74,7 +74,11 @@ PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 
 .if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC:C|.*/||}
+.  if !empty(CC:M*gcc*)
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
+.  else
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-cc
+.  endif
 .endif
 
 .if ${OPSYS} == "IRIX" && ${ABI} =="64"
