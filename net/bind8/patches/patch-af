@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2002/12/07 21:34:05 cjep Exp $
+$NetBSD: patch-af,v 1.3 2003/03/06 11:43:28 is Exp $
 
 --- port/linux/Makefile.set.orig	Mon Jun 24 00:32:57 2002
 +++ port/linux/Makefile.set
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.2 2002/12/07 21:34:05 cjep Exp $
 +'DESTEXEC=${PREFIX}/libexec'
 +'DESTMAN=${PREFIX}/share/man'
 +'DESTHELP=${PREFIX}/share/doc/bind8'
-+'DESTETC=${PREFIX}/etc'
++'DESTETC=${PKG_SYSCONFDIR}'
  'DESTRUN=/var/run'
  'LEX=flex -8 -I'
  'YACC=yacc -d'
