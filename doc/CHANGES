@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.819 2002/12/18 07:56:26 rh Exp $
+$NetBSD: CHANGES,v 1.820 2002/12/18 09:26:04 salo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3989,3 +3989,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gtk-systrace-20021201 [wiz 2002-12-18]
 	Updated bbappconf to 0.0.2 [jschauma 2002-12-18]
 	Added soup-0.7.10 [rh 2002-12-18]
+	Updated ispell-slovak to 0.1.11 [salo 2002-12-18]
