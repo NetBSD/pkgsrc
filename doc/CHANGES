@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1327 2003/02/06 14:26:43 tron Exp $
+$NetBSD: CHANGES,v 1.1328 2003/02/06 15:32:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -566,4 +566,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-session to 2.0.8nb2 [jmmv 2003-02-05]
 	Updated ViPEC to 3.1.3 [dmcmahill 2003-02-05]
 	Updated lftp to 2.6.4nb1 [seb 2003-02-06]
-	Updated ipv6calc to 0.45 [tron 2003-02-06]
+	Updated ipv6calc to 0.45nb1 [tron 2003-02-06]
