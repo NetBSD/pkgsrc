@@ -1,2 +1,5 @@
 Pico is a simple text editor with limited searching, block cut and paste,
 and spell checking features.
+
+The pico pkg includes libpico, the library used by Pine for its display
+and text editing capabilities. 

@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.3 1998/06/27 03:29:04 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/19 03:37:46 tv Exp $
 #
 
-DISTNAME=	pine3.96
-PKGNAME=	pico-2.9
-WRKSRC=		${WRKDIR}/pine3.96
+DISTNAME=	pine4.00
+PKGNAME=	pico-3.0
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
 MAINTAINER=	root@garbled.net
 
-CONFLICTS=	pine-3.96
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
+CONFLICTS=	pico-2.9
 
 do-build:
-	cd ${WRKSRC} && ./build neb
+	cd ${WRKSRC} && ./build neb CC="${PREFIX}/bin/libtool ${CC}" PREFIX=${PREFIX}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pico ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pilot ${PREFIX}/bin/
+	${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA} \
+		${WRKSRC}/pico/libpico.la ${PREFIX}/lib/
+	${PREFIX}/bin/libtool --mode=install ${INSTALL_PROGRAM} \
+		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${PREFIX}/bin/
 	${INSTALL_MAN}     ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/
 	${INSTALL_MAN}     ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/
 
