@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/11 20:16:12 damon Exp $
+
+--- Makefile.in.orig	Thu Oct 18 22:35:24 2001
++++ Makefile.in
+@@ -298,24 +298,29 @@
+ 	  rm -f $(DESTDIR)$(aclocaldir)/$$p; \
+ 	done
+ 
++#
++# Don't bother to install the guppi.desktop menu item since there is
++# no 'guppi' executable in this release (There is graph support for
++# gnumeric though)
++#
+ install-appDATA: $(app_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(appdir)
+-	@list='$(app_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(appdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(appdir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(appdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(appdir)/$$p; \
+-	  fi; fi; \
+-	done
+-
++#	@$(NORMAL_INSTALL)
++#	$(mkinstalldirs) $(DESTDIR)$(appdir)
++#	@list='$(app_DATA)'; for p in $$list; do \
++#	  if test -f $(srcdir)/$$p; then \
++#	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(appdir)/$$p"; \
++#	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(appdir)/$$p; \
++#	  else if test -f $$p; then \
++#	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(appdir)/$$p"; \
++#	    $(INSTALL_DATA) $$p $(DESTDIR)$(appdir)/$$p; \
++#	  fi; fi; \
++#	done
++#
+ uninstall-appDATA:
+-	@$(NORMAL_UNINSTALL)
+-	list='$(app_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(appdir)/$$p; \
+-	done
++#	@$(NORMAL_UNINSTALL)
++#	list='$(app_DATA)'; for p in $$list; do \
++#	  rm -f $(DESTDIR)$(appdir)/$$p; \
++#	done
+ 
+ install-confexecDATA: $(confexec_DATA)
+ 	@$(NORMAL_INSTALL)
