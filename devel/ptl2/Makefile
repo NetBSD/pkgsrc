@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2000/09/05 09:33:15 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2000/09/24 17:14:37 msaitoh Exp $
 
-DISTNAME=		PTL-2.1.4
-PKGNAME=		ptl-2.1.4
+DISTNAME=		PTL-2.1.5
+PKGNAME=		ptl-2.1.5
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/
 
@@ -25,8 +25,8 @@ post-install:
 	${FIND} PTL -type f >>${PLIST_SRC}; \
 	for LINK in `${FIND} PTL -type l`; do \
 	  set - X `${FILE} $$LINK`; \
-	  echo "@exec ln -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
-	  echo "@unexec rm -f %D/$$LINK" >>${PLIST_SRC}; \
+	  ${ECHO} "@exec {LN} -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
+	  ${ECHO} "@unexec ${RM} -f %D/$$LINK" >>${PLIST_SRC}; \
 	done; \
 	for DIR in `${FIND} PTL -type d | sort -r`; do \
 	  if [ -z "`ls $$DIR`" ]; then \
