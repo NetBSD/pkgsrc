@@ -1,7 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:08 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/24 06:01:05 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
+
+BUILDLINK_DEPENDS.binutils?=		binutils>=2.11.2
+BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
+BUILDLINK_DEPMETHOD.binutils?=		build
 
 _NEED_BINUTILS=          NO
 .if ${OPSYS} == "NetBSD"
@@ -16,11 +20,7 @@ _NEED_BINUTILS=          YES
 .endif
 
 .if ${_NEED_BINUTILS} == "YES"
-BUILDLINK_PACKAGES+=			binutils
-BUILDLINK_DEPENDS.binutils?=		binutils>=2.11.2
-BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
-BUILDLINK_DEPMETHOD.binutils?=		build
-
+BUILDLINK_PACKAGES+=		binutils
 EVAL_PREFIX+=	BUILDLINK_PREFIX.binutils=binutils
 BUILDLINK_PREFIX.binutils_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.binutils+=	include/ansidecl.h
