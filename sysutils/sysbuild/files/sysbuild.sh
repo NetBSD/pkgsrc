@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.8 2002/12/28 14:58:32 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.9 2003/01/01 21:16:52 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -397,7 +397,7 @@ sysbuild_build_x_release() {
         if [ -z "${MOUNT_PRECMD}" ]; then
             mount -t union -o -b $XSRCDIR $BUILDDIR/obj >> $_log 2>&1
         else
-            ${MOUNT_PRECMD} "mount -t union -o -b $XSRCDIR $BUILDDIR/obj" >> $_log 2>&1
+            ${MOUNT_PRECMD} mount -t union -o -b $XSRCDIR $BUILDDIR/obj >> $_log 2>&1
         fi
         if [ $? -ne 0 ]; then
             echo " failed."
@@ -426,7 +426,7 @@ sysbuild_build_x_release() {
     if [ -z "${MOUNT_PRECMD}" ]; then
         umount $BUILDDIR/obj >> $_log 2>&1
     else
-        ${MOUNT_PRECMD} "umount $BUILDDIR/obj" >> $_log 2>&1
+        ${MOUNT_PRECMD} umount $BUILDDIR/obj >> $_log 2>&1
     fi
     if [ $? -ne 0 ]; then
         echo " failed."
