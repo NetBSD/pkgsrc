@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/21 15:36:31 skrll Exp $
 
 --- kcalc/Makefile.in.orig	Wed May  8 21:11:41 2002
 +++ kcalc/Makefile.in
-@@ -228,22 +228,24 @@
+@@ -228,22 +228,25 @@
  x_libraries = @x_libraries@
  
  bin_PROGRAMS = kcalc
@@ -16,6 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
 +libkcalc_main_la_LIBADD = $(LIB_KDEUI) -lm
 +
 +kcalc_la_SOURCES = kcalc_main.cpp
++kcalc_la_LIBADD = libkcalc_main.la
 +kcalc_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  #>- METASOURCES = AUTO
@@ -33,14 +34,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  kcalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  pics_DATA = 
-@@ -261,25 +263,31 @@
+@@ -261,25 +264,31 @@
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
 -kcalc_la_DEPENDENCIES =
 -am_kcalc_la_OBJECTS = kcalc.lo kcalc_core.lo dlabel.lo stats.lo \
 -	optiondialog.lo
-+kcalc_la_LIBADD =
++kcalc_la_DEPENDENCIES = libkcalc_main.la
 +am_kcalc_la_OBJECTS = kcalc_main.lo
  #>- kcalc_la_OBJECTS = $(am_kcalc_la_OBJECTS)
 +#>+ 1
@@ -76,7 +77,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -287,9 +295,10 @@
+@@ -287,9 +296,10 @@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
@@ -90,7 +91,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
  #>+ 2
-@@ -309,14 +318,15 @@
+@@ -309,14 +319,15 @@
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -108,7 +109,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -365,6 +375,8 @@
+@@ -365,6 +376,8 @@
  	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
  kcalc.la: $(kcalc_la_OBJECTS) $(kcalc_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kcalc_la_LDFLAGS) $(kcalc_la_OBJECTS) $(kcalc_la_LIBADD) $(LIBS)
@@ -117,7 +118,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -400,9 +412,10 @@
+@@ -400,9 +413,10 @@
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dlabel.Plo@am__quote@
@@ -129,16 +130,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/optiondialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/stats.Plo@am__quote@
  
-@@ -497,7 +510,7 @@
+@@ -497,7 +511,7 @@
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kcalclogo.xpm optiondialog.h hi32-app-kcalc.png ToDo configure.in.in hi16-app-kcalc.png kcalc.desktop hi48-app-kcalc.png version.h 
-+KDE_DIST=kcalclogo.xpm configure.in.in optiondialog.h hi16-app-kcalc.png kcalc version.h hi32-app-kcalc.png kcalc.desktop hi48-app-kcalc.png dummy.cpp ToDo 
++KDE_DIST=kcalclogo.xpm configure.in.in optiondialog.h hi16-app-kcalc.png kcalc version.h hi32-app-kcalc.png kcalc.desktop hi48-app-kcalc.png ToDo 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -620,9 +633,6 @@
+@@ -620,9 +634,6 @@
  
  messages:
  	$(XGETTEXT) *.cpp -o $(podir)/kcalc.pot
@@ -148,7 +149,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -668,28 +678,28 @@
+@@ -668,28 +679,28 @@
  
  
  #>+ 12
@@ -189,12 +190,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  	  echo "#include \"$$file\"" >> kcalc_la.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcalc_la.all_cpp.final; \
  	done; \
-@@ -697,11 +707,23 @@
+@@ -697,11 +708,23 @@
  	rm -f kcalc_la.all_cpp.final kcalc_la.all_cpp.files
  
  #>+ 11
 -kcalc.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+libkcalc_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcalc.cpp $(srcdir)/kcalc_core.cpp $(srcdir)/dlabel.cpp $(srcdir)/stats.cpp $(srcdir)/optiondialog.cpp libkcalc_main_la_meta_unload.cpp  
++libkcalc_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcalc.cpp $(srcdir)/kcalc_core.cpp $(srcdir)/dlabel.cpp $(srcdir)/stats.cpp $(srcdir)/optiondialog.cpp $(srcdir)/libkcalc_main_la_meta_unload.cpp  
 +	@echo 'creating libkcalc_main_la.all_cpp.cpp ...'; \
 +	rm -f libkcalc_main_la.all_cpp.files libkcalc_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkcalc_main_la.all_cpp.final; \
@@ -215,7 +216,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:42:36 skrll Exp $
  	  echo "#include \"$$file\"" >> kcalc.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcalc.all_cpp.final; \
  	done; \
-@@ -710,20 +732,20 @@
+@@ -710,20 +733,20 @@
  
  #>+ 3
  clean-final:
