@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/06/09 14:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2000/06/14 02:10:58 hubertf Exp $
 
 DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
@@ -46,11 +46,11 @@ PLIST_SUBST+=	LOCALEBASE=share
 .endif
 
 .if ${OPSYS} == "NetBSD"
-OSVER!=		uname -r
+.include "../../mk/bsd.prefs.mk"
 GOOD_CURSES=	1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
 
 .for PATTERN in ${GOOD_CURSES}
-.if ${OSVER:M${PATTERN}} != ""
+.if ${OS_VERSION:M${PATTERN}} != ""
 CURSES_GOOD?=	# defined
 .endif
 .endfor
