@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/09/11 04:10:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/11/12 07:55:02 wiz Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -8,9 +8,9 @@ OPENSSL_BUILDLINK2_MK=	# defined
 # This is the ${PKGNAME} of the version of the OpenSSL package installed
 # by pkgsrc.
 #
-_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6gnb2
+_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6l
 
-BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6g
+BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6l
 BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 
 BUILDLINK_CHECK_BUILTIN.openssl?=	NO
@@ -76,18 +76,6 @@ _OPENSSL_PATCHLEVEL!=							\
 	' ${_OPENSSL_OPENSSLV_H}
 _OPENSSL_VERSION=	${_OPENSSL_MAJOR}${_OPENSSL_MINOR}${_OPENSSL_TEENY}${_OPENSSL_PATCHLEVEL}
 _OPENSSL_PKG=	openssl-${_OPENSSL_VERSION}
-#
-# If the built-in OpenSSL software is 0.9.6[ef], then check whether it
-# contains the fix for the 20020730 security advisory.  If it does, then
-# treat it as the equivalent of openssl-0.9.6g.  This is not strictly
-# true, but is good enough since the main differences between 0.9.6e
-# and 0.9.6g are security fixes that NetBSD has already patched into it's
-# built-in OpenSSL software.
-#
-.    if !empty(_OPENSSL_VERSION:M0\.9\.6[ef]) && \
-	(${_OPENSSL_HAS_20020730_FIX} == "YES")
-_OPENSSL_PKG=	openssl-0.9.6g
-.    endif
 _OPENSSL_DEPENDS=	${BUILDLINK_DEPENDS.openssl}
 _NEED_OPENSSL!=		\
 	if ${PKG_ADMIN} pmatch '${_OPENSSL_DEPENDS}' ${_OPENSSL_PKG}; then \
@@ -116,7 +104,7 @@ PKG_SKIP_REASON=	"Unable to satisfy dependency: ${BUILDLINK_DEPENDS.openssl}"
 .if ${_NEED_OPENSSL} == "YES"
 .  if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
 BUILDLINK_DEPENDS+=	rsaref
-.    include "../../security/rsaref/buildlink3.mk"
+.    include "../../security/rsaref/buildlink2.mk"
 .  endif
 .endif
 
