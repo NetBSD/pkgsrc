@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.idx,v 1.1.1.1 2002/07/23 08:49:46 schmonz Exp $
+@comment $NetBSD: PLIST.idx,v 1.2 2003/03/21 17:31:37 jmmv Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
 bin/ezmlm-check
@@ -16,9 +16,6 @@ bin/ezmlm-request
 bin/ezmlm-split
 bin/ezmlm-store
 bin/ezmlm-tstdig
-bin/ezmlmglrc
-bin/ezmlmrc
-bin/ezmlmsubrc
 man/cat1/ezmlm-accept.0
 man/cat1/ezmlm-archive.0
 man/cat1/ezmlm-check.0
@@ -59,3 +56,8 @@ man/man1/ezmlm-tstdig.1
 man/man5/ezmlmglrc.5
 man/man5/ezmlmrc.5
 man/man5/ezmlmsubrc.5
+share/examples/ezmlm-idx/ezcgirc
+share/examples/ezmlm-idx/ezmlmglrc
+share/examples/ezmlm-idx/ezmlmrc
+share/examples/ezmlm-idx/ezmlmsubrc
+@dirrm share/examples/ezmlm-idx
