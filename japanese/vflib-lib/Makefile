@@ -1,11 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/12 18:28:25 sakamoto Exp $
 
 PKGNAME=		ja-vflib-lib-${VFLIB_VERSION}
-
-# Watanabe vector font files
-MASTER_SITES+=          ftp://ftp.kuis.kyoto-u.ac.jp/TeX/watanabe-jfonts/
-WATANABE_FONTS=		watanabe-vf${EXTRACT_SUFX}
-DISTFILES+=		${WATANABE_FONTS}
 
 CONFIGURE_ARGS+=	--without-x
 
@@ -29,10 +24,5 @@ post-install:
 		${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	cd ${WRKSRC}; ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	${CHMOD} -R a-w ${PREFIX}/share/VFlib/${VFLIB_VERSION}
-
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/watanabe_font
-	cd ${PREFIX}/share/fonts/watanabe_font; \
-		${PAX} -zrf ${_DISTDIR}/${WATANABE_FONTS}
-	${CHMOD} -R a-w ${PREFIX}/share/fonts/watanabe_font
 
 .include "../../japanese/vflib-lib/Makefile.common"
