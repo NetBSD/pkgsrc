@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2002/12/03 09:03:08 jlam Exp $
+$NetBSD: patch-ab,v 1.10 2002/12/03 09:13:39 jlam Exp $
 
 --- server/Imakefile.orig	Tue Jul 23 18:49:33 2002
 +++ server/Imakefile
@@ -11,6 +11,15 @@ $NetBSD: patch-ab,v 1.9 2002/12/03 09:03:08 jlam Exp $
  #endif
  
             CBRT =
+@@ -99,7 +99,7 @@ RCMANDIR = $(MANDIR)
+ #endif
+ 
+ 
+-#if defined(i386SVR4Architecture) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture)
++#if defined(i386SVR4Architecture) || defined(NetBSDArchitecture) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture)
+ # define CanBuildAuServer	YES
+ 
+ # if defined(LinuxArchitecture)
 @@ -224,6 +224,7 @@ clean::
  	$(RM) $(ALL)
  
