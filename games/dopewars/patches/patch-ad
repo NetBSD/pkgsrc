@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2001/01/04 21:50:14 wiz Exp $
+
+--- serverside.c.orig	Sun Jul  9 22:12:53 2000
++++ serverside.c
+@@ -22,6 +22,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/socket.h>
+ #include <sys/stat.h>
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
