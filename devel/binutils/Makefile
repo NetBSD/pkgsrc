@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/01/21 20:53:09 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/03/17 22:49:09 dmcmahill Exp $
 
 DISTNAME=	binutils-2.15
 PKGNAME=	binutils-2.15.0.0
@@ -15,6 +15,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
+REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 
 USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.0
