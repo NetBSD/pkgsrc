@@ -1,11 +1,10 @@
---- configure.orig	Sat Apr 11 14:26:55 1998
-+++ configure	Sat Apr 11 14:29:01 1998
-@@ -645,7 +645,7 @@
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
- 
- 
--test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-+test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
- 
- echo $ac_n "checking whether build environment is sane""... $ac_c" 1>&6
- echo "configure:652: checking whether build environment is sane" >&5
+--- glib/configure.orig	Sat Jun  6 07:40:29 1998
++++ glib/configure	Sat Jun  6 07:39:57 1998
+@@ -574,6 +574,7 @@
+ # ./install, which can be erroneously created by make from ./install.sh.
+ echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+ echo "configure:577: checking for a BSD compatible install" >&5
++INSTALL=""
+ if test -z "$INSTALL"; then
+ if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
