@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.436 2003/04/02 00:19:30 grant Exp $
+$NetBSD: TODO,v 1.437 2003/04/02 00:28:34 grant Exp $
 
 Suggested new packages
 ======================
@@ -78,6 +78,7 @@ Suggested package updates
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o ap-ssl-2.8.14
+	o apache-2.0.45
 	o arch-1.0pre17 [pkg/20776]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
