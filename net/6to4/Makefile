@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/09/09 20:36:37 agc Exp $
+# $NetBSD: Makefile,v 1.8 2001/11/22 03:00:07 hubertf Exp $
 #
 
-DISTNAME=		6to4-1.1nb1
+DISTNAME=		6to4-1.2
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty

@@ -1,4 +1,4 @@
-.\"     $NetBSD: 6to4.8,v 1.3 2001/02/19 02:23:48 hubertf Exp $
+.\"     $NetBSD: 6to4.8,v 1.4 2001/11/22 03:00:07 hubertf Exp $
 .Dd February 18, 2001
 .Dt 6to4 8
 .Os
@@ -154,8 +154,10 @@ addresses.
 .It Sy peer
 Name of the remote 6to4 server that'll take our
 IPv6-in-IPv4 encapsulated packets and route them on
-via IPv6. Several possible values are given in the
-example config file.
+via IPv6. A special value of 
+.Dq 6to4-anycast
+can be used for the anycast service defined in RFC 3068.
+Other possible values are given in the example config file.
 .El
 .Sh EXAMPLE USAGE
 The
@@ -180,7 +182,8 @@ To shut down properly, put this into
 at
 .Pa http://www.feyrer.de/NetBSD/6to4.html ,
 NetBSD IPv6 Documentation at
-.Pa http://www.netbsd.org/Documentation/network/ipv6/ .
+.Pa http://www.netbsd.org/Documentation/network/ipv6/ ,
+RFC 3068.
 .Sh HISTORY
 The
 .Nm
