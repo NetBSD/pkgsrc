@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/11 20:41:27 tron Exp $
+
+--- pppd/Makefile.bsd.orig	Mon Apr 12 08:23:30 1999
++++ pppd/Makefile.bsd	Tue Jul 11 22:14:54 2000
+@@ -2,5 +2,5 @@
+ 
+-BINDIR?= /usr/sbin
++#BINDIR?= /usr/sbin
+ # -D_BITYPES is for FreeBSD, which doesn't define anything to
+ # tell us that u_int32_t gets defined if <sys/types.h> is included.
+ # Remove for older *BSD systems for which this isn't true.
+@@ -9,8 +9,7 @@
+ PROG=	pppd
+ SRCS=	main.c magic.c fsm.c lcp.c ipcp.c upap.c chap.c md5.c ccp.c \
+ 	demand.c auth.c options.c utils.c sys-bsd.c
+-MAN=	pppd.cat8
+-MAN8=	pppd.8
++MAN=	pppd.8
+ BINMODE=4555
+ BINOWN=	root
+ 
