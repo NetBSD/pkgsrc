@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2002/05/02 16:16:51 martti Exp $
+$NetBSD: patch-aa,v 1.9 2003/03/13 07:23:25 itojun Exp $
 
---- configure.orig	Tue Nov  6 01:45:26 2001
-+++ configure	Thu May  2 09:16:00 2002
-@@ -1249,13 +1249,6 @@
+--- configure-	Thu Mar 13 16:16:03 2003
++++ configure	Thu Mar 13 16:16:25 2003
+@@ -3022,13 +3022,6 @@
  
  
  
@@ -15,4 +15,4 @@ $NetBSD: patch-aa,v 1.8 2002/05/02 16:16:51 martti Exp $
 -
  if test "$GCC" = yes
  then
-         echo $ac_n "checking for gcc version 2.7.2.3""... $ac_c" 1>&6
+         echo "$as_me:$LINENO: checking for gcc version 2.7.2.3" >&5
