@@ -1,0 +1,52 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+
+--- configure.in.orig	Wed Feb 20 16:39:39 2002
++++ configure.in
+@@ -13,13 +13,15 @@
+     codepagedir="\$(DATADIR)/samba/codepages"
+     configdir="${sysconfdir}/samba"
+     lockdir="\${VARDIR}/cache/samba"
++    piddir="\$(VARDIR)/run"
+     logfilebase="\${VARDIR}/log/samba"
+     privatedir="\${CONFIGDIR}/private"
+     swatdir="\${DATADIR}/samba/swat",
+     codepagedir="\$(LIBDIR)/codepages"
+     configdir="\$(LIBDIR)"
+     lockdir="\$(VARDIR)/locks"
+-    logfilebase="\$(VARDIR)"
++    piddir="\${VARDIR}/run"
++    logfilebase="\$(VARDIR)/log"
+     privatedir="\${prefix}/private"
+     swatdir="\${prefix}/swat")
+ 
+@@ -56,6 +58,22 @@
+   esac])
+ 
+ #################################################
++# set pid directory location
++AC_ARG_WITH(piddir,
++[  --with-piddir=DIR       Where to put lock files (\${VARDIR}/run)],
++[ case "$withval" in
++  yes|no)
++  #
++  # Just in case anybody calls it without argument
++  #
++    AC_MSG_WARN([--with-piddir called without argument - will use default])
++  ;;
++  * )
++    piddir="$withval"
++    ;;
++  esac])
++
++#################################################
+ # set SWAT directory location
+ AC_ARG_WITH(swatdir,
+ [  --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)],
+@@ -108,6 +126,7 @@
+ AC_SUBST(configdir)
+ AC_SUBST(lockdir)
+ AC_SUBST(logfilebase)
++AC_SUBST(piddir)
+ AC_SUBST(privatedir)
+ AC_SUBST(swatdir)
+ AC_SUBST(bindir)
