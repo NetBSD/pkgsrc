@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/23 14:24:05 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/01/23 14:31:50 tron Exp $
 
 --- WMMail.defaults.orig	Sat Jan 16 05:41:46 1999
-+++ WMMail.defaults	Sat Jan 23 15:02:26 1999
++++ WMMail.defaults	Sat Jan 23 15:30:07 1999
 @@ -6,24 +6,24 @@
    DisplayFont = "-*-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*";
    DisplayLocation = (0, 10);
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/23 14:24:05 tron Exp $
        );
      };
    };
-@@ -32,7 +32,7 @@
+@@ -32,10 +32,10 @@
        Name = "Home";
        Type = mbox;
        UpdateInterval = 15;
@@ -42,4 +42,8 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/23 14:24:05 tron Exp $
 +      ExecuteOnUpdate = "@@LOCALBASE@@/bin/fetchmail";
        Options = {
          CheckTimeStampOnly = No;
-         Path = "/var/spool/mail/bryan";
+-        Path = "/var/spool/mail/bryan";
++        Path = "/var/mail/bryan";
+       };
+     },
+     {
