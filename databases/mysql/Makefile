@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 1999/02/20 22:48:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1999/04/09 15:39:38 bad Exp $
 #
 
-# note: if updated, update shlib version number in patch-aa
-DISTNAME=	mysql-3.21.33b
+DISTNAME=	mysql-3.22.21
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.21/ \
-		ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.21/
+MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.22/ \
+		ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.22/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.tcx.se/
+HOMEPAGE=	http://www.mysql.com/
 
 NO_CDROM=	"Restrictive license."
 
@@ -16,7 +15,9 @@ MYSQL_DATADIR?=	/var/mysql
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--localstatedir=${MYSQL_DATADIR} \
-		--without-perl --without-debug
+		--with-named-z-libs='z' \
+		--without-perl --without-debug --without-bench \
+		--with-low-memory
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
@@ -44,9 +45,13 @@ pre-configure:
 .else
 NO_PACKAGE=	"mysql_install_db needs data dir from distribution."
 
-post-install:
-	(cd ${WRKSRC}; ./scripts/mysql_install_db && mysqladmin shutdown)
+post-install::
+	(cd ${WRKSRC}; ./scripts/mysql_install_db)
 	@${CAT} ${PKGDIR}/PLIST-server >>${PLIST_SRC}
 .endif
+
+post-install::
+	${ECHO} @dirrm lib/mysql >>${PLIST_SRC}
+	${ECHO} @dirrm share/mysql >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
