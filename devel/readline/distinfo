@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/06/30 10:26:45 uebayasi Exp $
+$NetBSD: distinfo,v 1.7 2004/04/26 08:01:20 jlam Exp $
 
 SHA1 (readline-4.3.tar.gz) = 4e226fd5f6f919707f11b9e28d47b5487448895d
 Size (readline-4.3.tar.gz) = 961662 bytes
@@ -12,4 +12,4 @@ SHA1 (readline43-004) = 24bef0b7bda1cafd0475098ed7a01f45a58765e6
 Size (readline43-004) = 3140 bytes
 SHA1 (readline43-005) = a022e113b8ad603d1020e99308de0a917626d1e1
 Size (readline43-005) = 1056 bytes
-SHA1 (patch-ae) = 1198bd554f1ee77397017ab4eee347f1ba50d515
+SHA1 (patch-ae) = af04c7e2646dbc510cfc139c025b47e6769ccd85
