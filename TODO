@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13 2001/05/06 09:41:52 zuntum Exp $
+$NetBSD: TODO,v 1.14 2001/05/06 14:51:50 kei Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -78,3 +78,8 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	o Add a sort check to pkglint for PLISTs.
 
 	o Add a method to provide distfile-specific MASTER_SITES  [PR pkg/7471]
+
+	o Make pkgsrc work under HP-UX. (10.20, I mean)  I (IMHO) finised the
+	  modifying for bsd.pkg.mk and will commit that after freeze.  The
+	  remaining and harder part is to make the cross-environment for HP-UX.
+	  [kei]
