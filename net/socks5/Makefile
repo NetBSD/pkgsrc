@@ -3,7 +3,7 @@
 # Date created:				24 Apr 1996
 # Whom:					pst
 #
-# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/22 07:52:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -29,7 +29,7 @@ RESTRICTED=	"no commercial use"
 
 WRKSRC=		${WRKDIR}/socks5-v1.0r2
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=  LIBS=-lcrypt
+CONFIGURE_ENV+=  LIBS=-lcrypt
 CONFIGURE_ARGS=	--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 		--with-srvconffile=${PREFIX}/etc/socks5.conf \
 		--with-srvpidfile=/var/run/socks5.pid \

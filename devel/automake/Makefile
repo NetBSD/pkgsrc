@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/11/13 14:37:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/22 07:52:01 hubertf Exp $
 # New ports collection makefile for:	automake
 # Version required:	1.2
 # Date created:		15 March 1997
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MAINTAINER=	fujimoto@oscar.elec.waseda.ac.jp
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	PERL=${PREFIX}/bin/perl
+CONFIGURE_ENV+=	PERL=${PREFIX}/bin/perl
 STRIP=		 # none
 
 OPSYS!= 	uname -s
