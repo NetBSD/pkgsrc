@@ -1,0 +1,86 @@
+$NetBSD: patch-ad,v 1.1 2001/08/28 12:13:11 tron Exp $
+
+--- aclocal.m4.orig	Sun Aug 12 12:49:07 2001
++++ aclocal.m4	Tue Aug 28 14:06:56 2001
+@@ -134,53 +134,32 @@
+ dnl AC_SUBST itself to avoid automake putting 
+ dnl XML_I18N_MERGE_OAF_RULE = @XML_I18N_MERGE_OAF_RULE@
+ dnl in all the Makefile.in's
+-XML_I18N_MERGE_OAF_RULE='\%.oaf : \%.oaf.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -o $(top_srcdir)/po $< [$]*.oaf'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_OAF_RULE@%[$]XML_I18N_MERGE_OAF_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_OAF_RULE='\%.oaf : \%.oaf.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -o $(top_srcdir)/po $< [$]*.oaf'
++AC_SUBST(XML_I18N_MERGE_OAF_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_KEYS_RULE='\%.keys : \%.keys.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -k $(top_srcdir)/po $< [$]*.keys'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_KEYS_RULE@%[$]XML_I18N_MERGE_KEYS_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_KEYS_RULE='\%.keys : \%.keys.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -k $(top_srcdir)/po $< [$]*.keys'
++AC_SUBST(XML_I18N_MERGE_KEYS_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_DESKTOP_RULE='\%.desktop : \%.desktop.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.desktop'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_DESKTOP_RULE@%[$]XML_I18N_MERGE_DESKTOP_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_DESKTOP_RULE='\%.desktop : \%.desktop.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.desktop'
++AC_SUBST(XML_I18N_MERGE_DESKTOP_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_DIRECTORY_RULE='\%.directory : \%.directory.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.directory'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_DIRECTORY_RULE@%[$]XML_I18N_MERGE_DIRECTORY_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_DIRECTORY_RULE='\%.directory : \%.directory.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.directory'
++AC_SUBST(XML_I18N_MERGE_DIRECTORY_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_SOUNDLIST_RULE='\%.soundlist : \%.soundlist.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.soundlist'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_SOUNDLIST_RULE@%[$]XML_I18N_MERGE_SOUNDLIST_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_SOUNDLIST_RULE='\%.soundlist : \%.soundlist.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.soundlist'
++AC_SUBST(XML_I18N_MERGE_SOUNDLIST_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_PONG_RULE='\%.pong : \%.pong.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -x $(top_srcdir)/po $< [$]*.pong'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_PONG_RULE@%[$]XML_I18N_MERGE_PONG_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_PONG_RULE='\%.pong : \%.pong.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -x $(top_srcdir)/po $< [$]*.pong'
++AC_SUBST(XML_I18N_MERGE_PONG_RULE)
+ 
+ dnl same deal
+-XML_I18N_MERGE_XML_RULE='\%.xml : \%.xml.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -x $(top_srcdir)/po $< [$]*.xml'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_XML_RULE@%[$]XML_I18N_MERGE_XML_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_XML_RULE='\%.xml : \%.xml.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -x $(top_srcdir)/po $< [$]*.xml'
++AC_SUBST(XML_I18N_MERGE_XML_RULE)
+ 
+ # Always use our own xml-i18n-tools.
+ XML_I18N_EXTRACT='$(top_builddir)/xml-i18n-extract'
+@@ -193,11 +172,8 @@
+ AC_SUBST(XML_I18N_UPDATE)dnl
+ 
+ dnl same deal
+-XML_I18N_MERGE_SOUNDLIST_RULE='\%.soundlist : \%.soundlist.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po\
+-	$(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.soundlist'
+-AC_DIVERT_PUSH(AC_DIVERSION_SED)dnl
+-s%@XML_I18N_MERGE_SOUNDLIST_RULE@%[$]XML_I18N_MERGE_SOUNDLIST_RULE%g
+-AC_DIVERT_POP()dnl
++XML_I18N_MERGE_SOUNDLIST_RULE='\%.soundlist : \%.soundlist.in $(top_builddir)/xml-i18n-merge $(top_srcdir)/po/*.po $(top_builddir)/xml-i18n-merge -d $(top_srcdir)/po $< [$]*.soundlist'
++AC_SUBST(XML_I18N_MERGE_SOUNDLIST_RULE)
+ 
+ AC_PATH_PROG(XML_I18N_TOOLS_PERL, perl)
+ if test -z "$XML_I18N_TOOLS_PERL"; then
