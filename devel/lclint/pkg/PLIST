@@ -1,49 +1,49 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/09 15:24:23 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/09 16:17:16 mjl Exp $
 bin/lclint
-share/lclint/2.5q/lib/CTrait.syms
-share/lclint/2.5q/lib/unix.lcd
-share/lclint/2.5q/lib/unix.h
-share/lclint/2.5q/lib/posixstrict.lcd
-share/lclint/2.5q/lib/posix.lcd
-share/lclint/2.5q/lib/posix.h
-share/lclint/2.5q/lib/lslinit.lsi
-share/lclint/2.5q/lib/lclinit.lci
-share/lclint/2.5q/lib/bool.h
-share/lclint/2.5q/lib/ansistrict.lcd
-share/lclint/2.5q/lib/ansi.lcd
-share/lclint/2.5q/lib/ansi.h
-share/lclint/2.5q/lib/Makefile
-share/lclint/2.5q/lib/CTraitGen.lcl
-share/lclint/2.5q/lib/unixstrict.lcd
-share/lclint/2.5q/imports/assert.lcl
-share/lclint/2.5q/imports/time.lcl
-share/lclint/2.5q/imports/strings.lcs
-share/lclint/2.5q/imports/strings.lcl
-share/lclint/2.5q/imports/string.lcs
-share/lclint/2.5q/imports/string.lcl
-share/lclint/2.5q/imports/stdlib.lcs
-share/lclint/2.5q/imports/stdlib.lcl
-share/lclint/2.5q/imports/stdio.lcs
-share/lclint/2.5q/imports/stdio.lcl
-share/lclint/2.5q/imports/stdarg.lcs
-share/lclint/2.5q/imports/stdarg.lcl
-share/lclint/2.5q/imports/signal.lcs
-share/lclint/2.5q/imports/signal.lcl
-share/lclint/2.5q/imports/setjmp.lcs
-share/lclint/2.5q/imports/setjmp.lcl
-share/lclint/2.5q/imports/math.lcs
-share/lclint/2.5q/imports/math.lcl
-share/lclint/2.5q/imports/locale.lcs
-share/lclint/2.5q/imports/locale.lcl
-share/lclint/2.5q/imports/limits.lcs
-share/lclint/2.5q/imports/limits.lcl
-share/lclint/2.5q/imports/errno.lcs
-share/lclint/2.5q/imports/errno.lcl
-share/lclint/2.5q/imports/ctype.lcs
-share/lclint/2.5q/imports/ctype.lcl
-share/lclint/2.5q/imports/assert.lcs
-share/lclint/2.5q/imports/time.lcs
-@dirrm share/lclint/2.5q/lib
-@dirrm share/lclint/2.5q/imports
-@dirrm share/lclint/2.5q
+share/lclint/${VERSION}/lib/CTrait.syms
+share/lclint/${VERSION}/lib/unix.lcd
+share/lclint/${VERSION}/lib/unix.h
+share/lclint/${VERSION}/lib/posixstrict.lcd
+share/lclint/${VERSION}/lib/posix.lcd
+share/lclint/${VERSION}/lib/posix.h
+share/lclint/${VERSION}/lib/lslinit.lsi
+share/lclint/${VERSION}/lib/lclinit.lci
+share/lclint/${VERSION}/lib/bool.h
+share/lclint/${VERSION}/lib/ansistrict.lcd
+share/lclint/${VERSION}/lib/ansi.lcd
+share/lclint/${VERSION}/lib/ansi.h
+share/lclint/${VERSION}/lib/Makefile
+share/lclint/${VERSION}/lib/CTraitGen.lcl
+share/lclint/${VERSION}/lib/unixstrict.lcd
+share/lclint/${VERSION}/imports/assert.lcl
+share/lclint/${VERSION}/imports/time.lcl
+share/lclint/${VERSION}/imports/strings.lcs
+share/lclint/${VERSION}/imports/strings.lcl
+share/lclint/${VERSION}/imports/string.lcs
+share/lclint/${VERSION}/imports/string.lcl
+share/lclint/${VERSION}/imports/stdlib.lcs
+share/lclint/${VERSION}/imports/stdlib.lcl
+share/lclint/${VERSION}/imports/stdio.lcs
+share/lclint/${VERSION}/imports/stdio.lcl
+share/lclint/${VERSION}/imports/stdarg.lcs
+share/lclint/${VERSION}/imports/stdarg.lcl
+share/lclint/${VERSION}/imports/signal.lcs
+share/lclint/${VERSION}/imports/signal.lcl
+share/lclint/${VERSION}/imports/setjmp.lcs
+share/lclint/${VERSION}/imports/setjmp.lcl
+share/lclint/${VERSION}/imports/math.lcs
+share/lclint/${VERSION}/imports/math.lcl
+share/lclint/${VERSION}/imports/locale.lcs
+share/lclint/${VERSION}/imports/locale.lcl
+share/lclint/${VERSION}/imports/limits.lcs
+share/lclint/${VERSION}/imports/limits.lcl
+share/lclint/${VERSION}/imports/errno.lcs
+share/lclint/${VERSION}/imports/errno.lcl
+share/lclint/${VERSION}/imports/ctype.lcs
+share/lclint/${VERSION}/imports/ctype.lcl
+share/lclint/${VERSION}/imports/assert.lcs
+share/lclint/${VERSION}/imports/time.lcs
+@dirrm share/lclint/${VERSION}/lib
+@dirrm share/lclint/${VERSION}/imports
+@dirrm share/lclint/${VERSION}
 @dirrm share/lclint
