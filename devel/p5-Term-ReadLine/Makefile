@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/31 09:52:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/20 23:35:09 seb Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.12
 PKGNAME=	p5-Term-ReadLine-1.12
@@ -10,13 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Term-ReadLine-Gnu/
 COMMENT=	interface to the GNU Readline Library
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GNU_READLINE=	yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Term/ReadLine/Gnu/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../devel/readline/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

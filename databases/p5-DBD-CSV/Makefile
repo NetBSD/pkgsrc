@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/14 15:55:20 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/20 23:35:11 seb Exp $
 #
 
 DISTNAME=	DBD-CSV-0.2001
@@ -15,11 +15,8 @@ DEPENDS+=               p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=               p5-SQL-Statement>=0.1016:../../databases/p5-SQL-Statement
 DEPENDS+=               p5-Text-CSV_XS>=0.20:../../textproc/p5-Text-CSV_XS
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/CSV/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/18 07:49:38 cjs Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 23:35:09 seb Exp $
 
 DISTNAME=	Log-Dispatch-Config-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -15,11 +15,8 @@ DEPENDS+=	p5-IO-stringy>=2.108:../../devel/p5-IO-stringy
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-Log-Dispatch>=1.79:../../devel/p5-Log-Dispatch
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Log/Dispatch/Config/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
