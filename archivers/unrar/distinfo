@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/10/17 16:28:31 wiz Exp $
+$NetBSD: distinfo,v 1.6 2002/10/17 18:27:13 wiz Exp $
 
-SHA1 (unrar-3.01/unrarsrc.tar.gz) = cd1531a6b0d1cd2dff0575274feba7e916679544
-Size (unrar-3.01/unrarsrc.tar.gz) = 110897 bytes
+SHA1 (unrarsrc-3.1.0.tar.gz) = cd1531a6b0d1cd2dff0575274feba7e916679544
+Size (unrarsrc-3.1.0.tar.gz) = 110897 bytes
