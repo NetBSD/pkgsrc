@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/07/30 23:25:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/09/01 07:56:36 recht Exp $
 
 DISTNAME=	X11R6.7.0-src1
 PKGNAME=	xorg-fontsTruetype-${XORG_VER}
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 
@@ -12,8 +13,6 @@ COMMENT=	X.org Truetype fonts
 BUILD_DEPENDS=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
 BUILD_DEPENDS+=	fontconfig-[0-9]*:../../fonts/fontconfig
 DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
-
-CONFLICTS=	vera-ttf-[0-9]*
 
 XBUILD_DIRS=	fonts/encodings fonts/scaled/TTF
 XINSTALL_DIRS=	fonts/scaled/TTF
