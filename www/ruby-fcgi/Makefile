@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/28 05:45:05 taca Exp $
 
-DISTNAME=		${RUBY_PKGNAMEPREFIX}fcgi-${VER}
-PKGREVISION=	1
+DISTNAME=		ruby-fcgi-${VER}
+PKGNAME=		${RUBY_PKGPREFIX}-fcgi-${VER}
 CATEGORIES=		www devel ruby
 MASTER_SITES=   	http://www.moonwolf.com/ruby/archive/
 
@@ -10,13 +10,11 @@ HOMEPAGE=		http://rwiki.moonwolf.com/rw-cgi.cgi?cmd=view;name=fcgi
 COMMENT=		FastCGI interface for Ruby
 
 USE_BUILDLINK3=		yes
-
-VER=			0.8.4
-CONFIGURE_ARGS=		-- --with-fcgi-dir=${PREFIX}
-USE_RUBY_SETUP=		# defined
+USE_RUBY_SETUP=		yes
 RUBY_SETUP=		install.rb
 RUBY_EXTCONF_SUBDIRS=	ext/fcgi
-
+VER=			0.8.5
+CONFIGURE_ARGS=		-- --with-fcgi-dir=${PREFIX}
 DOCS=			README README.signals
 
 post-install:
@@ -25,7 +23,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/fcgi
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
