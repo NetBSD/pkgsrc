@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/09/12 16:12:01 drochner Exp $
+# $NetBSD: Makefile,v 1.91 2003/10/29 10:40:53 gavan Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 CATEGORIES=		x11 gnome
@@ -14,7 +14,9 @@ BUILD_USES_MSGFMT=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libart_lgpl/libtool
+
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
