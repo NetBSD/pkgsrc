@@ -1,16 +1,27 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.21 2003/08/27 03:38:21 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.22 2003/08/27 11:34:01 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
-# BUILDLINK_DEPENDS+=		foo
+# .if !defined(FOO_BUILDLINK3_MK)
+# FOO_BUILDLINK_MK=	# defined
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+		# push
+#
+# .if !empty(BUILDLINK_DEPTH:M\+)
+# BUILDLINK_DEPENDS+=	foo
+# .endif
+#
 # BUILDLINK_PACKAGES+=		foo
-# BUILDLINK_PKGBASE.foo=	foo-lib
 # BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
+#
+# .include "../../category/baz/buildlink3.mk"
+#
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/\+$//}	# pop
+# .endif # FOO_BUILDLINK_MK
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # The different variables that may be set in a buildlink2.mk file are
@@ -48,6 +59,7 @@ BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 
 .  if !defined(BUILDLINK_X11_DIR)
+.    if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 BUILDLINK_X11_DIR!=							\
 	cd ${_PKG_DBDIR};						\
 	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}" || ${TRUE}`; \
@@ -56,6 +68,9 @@ BUILDLINK_X11_DIR!=							\
 	*)	dir="$$dir/${X11_LINKS_SUBDIR}" ;;			\
 	esac;								\
 	${ECHO} $$dir
+.    elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+BUILDLINK_X11_DIR?=	${LOCALBASE}/${X11_LINKS_SUBDIR}
+.    endif
 .    if empty(BUILDLINK_X11_DIR:Mnot_found)
 MAKEFLAGS+=	BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR}
 .    endif
@@ -89,23 +104,23 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 
 # Generate default values for:
 #
-#	BUILDLINK_PKGBASE.<pkg>
-#	BUILDLINK_PKG_DBDIR.<pkg>
-#	BUILDLINK_PREFIX.<pkg>
-#	BUILDLINK_INCDIRS.<pkg>
-#	BUILDLINK_LIBDIRS.<pkg>
+# BUILDLINK_PKG_DBDIR.<pkg>	contains all of the package metadata
+#				files for <pkg>
 #
-# BUILDLINK_PKGBASE.<pkg> is the package basename (without the version
-# number).  BUILDLINK_PKG_DBDIR.<pkg> contains all of the package metadata
-# files for <pkg>.  BUILDLINK_PREFIX.<pkg> is the directory that contains
-# all of the installed files for <pkg>.  BUILDLINK_INCDIRS.<pkg> and
-# BUILDLINK_LIBDIRS.<pkg> are the subdirectories of BUILDLINK_PREFIX.<pkg>
-# that should be added to the compiler/linker search paths.
+# BUILDLINK_PKGNAME.<pkg>	the name of the package
+#
+# BUILDLINK_PREFIX.<pkg>	contains all of the installed files
+#				for <pkg>
+#
+# BUILDLINK_IS_DEPOT.<pkg>	"yes" or "no" for whether <pkg> is a
+#				depoted package.
+#
+# BUILDLINK_INCDIRS.<pkg>,
+# BUILDLINK_LIBDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
+#				that should be added to the
+#				compiler/linker search paths.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if !defined(BUILDLINK_PKGBASE.${_pkg_})
-BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
-.  endif
 .  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
 BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
 	cd ${_PKG_DBDIR};						\
@@ -118,15 +133,19 @@ BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
 MAKEFLAGS+=	BUILDLINK_PKG_DBDIR.${_pkg_}=${BUILDLINK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
-.  if !defined(BUILDLINK_PREFIX.${_pkg_})
+BUILDLINK_PKGNAME.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}:T}
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}}
+.  elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+BUILDLINK_PREFIX.${_pkg_}?=	${LOCALBASE}
 .  endif
-.  if !defined(BUILDLINK_INCDIRS.${_pkg_})
+.  if exists(${BUILDLINK_PKG_DBDIR.${_pkg_}}/+VIEWS)
+BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
+.  else
+BUILDLINK_IS_DEPOT.${_pkg_}?=	no
+.  endif
 BUILDLINK_INCDIRS.${_pkg_}?=	include
-.  endif
-.  if !defined(BUILDLINK_LIBDIRS.${_pkg_})
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib
-.  endif
 .endfor
 
 # BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS contain the proper -I...
@@ -201,6 +220,7 @@ LDFLAGS+=	${_flag_}
 # compiler/linker won't complain verbosely (on stdout, even!) when
 # those directories are passed as sub-arguments of -I and -L.
 #
+.PHONY: buildlink-directories
 do-buildlink: buildlink-directories
 buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
@@ -212,36 +232,86 @@ buildlink-directories:
 #
 do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 
-# If the package Makefile defines BUILDLINK_FILES.<pkg>, then symlink
-# the named files into ${BUILDLINK_DIR}.
+# The following variables are all optionally defined and control which
+# package files are symlinked into ${BUILDLINK_DIR} and how their names
+# are transformed during the symlinking:
 #
 # BUILDLINK_FILES.<pkg>
 #	shell glob pattern relative to ${BUILDLINK_PREFIX.<pkg>} to be
 #	symlinked into ${BUILDLINK_DIR}, e.g. include/*.h
+#
+# BUILDLINK_FILES_CMD.<pkg>
+#	shell pipeline that outputs to stdout a list of files relative
+#	to ${BUILDLINK_PREFIX.<pkg>}; the shell variable $${pkg_prefix}
+#	may be used and is the subdirectory (ending in /) of
+#	${BUILDLINK_PREFIX.<pkg>} to which the +CONTENTS is relative,
+#	e.g. if `pkg_info -qp kaffe' returns "/usr/pkg/java/kaffe",
+#	then $${pkg_prefix} is "java/kaffe/".  The resulting files are
+#	to be symlinked into ${BUILDLINK_DIR}.  By default for
+#	overwrite packages, BUILDLINK_FILES_CMD.<pkg> outputs the
+#	contents of the include and lib directories in the package
+#	+CONTENTS.
 #
 # BUILDLINK_TRANSFORM.<pkg>
 #	sed arguments used to transform the name of the source filename
 #	into a destination filename, e.g. -e "s|/curses.h|/ncurses.h|g"
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if defined(BUILDLINK_FILES.${_pkg_}) && !empty(BUILDLINK_FILES.${_pkg_})
-BUILDLINK_TARGETS+=	${_pkg_}-buildlink
-${_pkg_}-buildlink:
+_BLNK_COOKIE.${_pkg_}=	${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
+
+BUILDLINK_TARGETS+=		buildlink-${_pkg_}
+_BLNK_TARGETS.${_pkg_}=		buildlink-${_pkg_}-message
+_BLNK_TARGETS.${_pkg_}+=	${_BLNK_COOKIE.${_pkg_}}
+_BLNK_TARGETS.${_pkg_}+=	buildlink-${_pkg_}-cookie
+
+.ORDER: ${_BLNK_TARGETS.${_pkg_}}
+
+.PHONY: buildlink-${_pkg_}
+buildlink-${_pkg_}: ${_BLNK_TARGETS.${_pkg_}}
+
+.PHONY: buildlink-${_pkg_}-message
+buildlink-${_pkg_}-message:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.${_pkg_}_buildlink_done;		\
-	if [ ! -f $$cookie ]; then					\
-		${ECHO_BUILDLINK_MSG} "Linking ${_pkg_} files into ${BUILDLINK_DIR}."; \
-		${MKDIR} ${BUILDLINK_DIR};				\
-		cd ${BUILDLINK_PREFIX.${_pkg_}};				\
-		for rel_file in ${BUILDLINK_FILES.${_pkg_}}; do		\
-			src="${BUILDLINK_PREFIX.${_pkg_}}/$$rel_file";	\
+	${ECHO_BUILDLINK_MSG} "=> Linking ${_pkg_} files into ${BUILDLINK_DIR}."
+
+.PHONY: buildlink-${_pkg_}-cookie
+buildlink-${_pkg_}-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TOUCH} ${TOUCH_FLAGS} ${_BLNK_COOKIE.${_pkg_}}
+
+.if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+BUILDLINK_FILES_CMD.${_pkg_}?=	${TRUE}
+.else
+BUILDLINK_FILES_CMD.${_pkg_}?=						\
+	${PKG_INFO} -f ${BUILDLINK_PKGNAME.${_pkg_}} |			\
+	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
+	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)' |			\
+	${SED} "s,^,$${pkg_prefix},"
+.endif
+
+${_BLNK_COOKIE.${_pkg_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
+	pkg_prefix=`							\
+		${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} |		\
+		${SED}	-e "s,^[^/]*,,"					\
+			-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
+			-e "s,^/,,"					\
+	`/;								\
+	files=`${BUILDLINK_FILES_CMD.${_pkg_}}`;			\
+	files="$files ${BUILDLINK_FILES.${_pkg_}}";			\
+	case "$$files" in						\
+	"")	;;							\
+	*)	for file in $$files; do					\
+			src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";	\
 			if [ ! -f $$src ]; then				\
-				${ECHO} "$${file}: not found" >> $${cookie}; \
+				${ECHO} "$${file}: not found" >> ${.TARGET}; \
 				continue;				\
 			fi;						\
-			msg="$$src";					\
-			dest="${BUILDLINK_DIR}/$$rel_file";		\
-			if [ -n "${BUILDLINK_TRANSFORM.${_pkg_}}" ]; then \
+			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}}" ]; then \
+				dest="${BUILDLINK_DIR}/$$file";		\
+				msg="$$src";				\
+			else						\
 				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_TRANSFORM.${_pkg_}}`; \
 				msg="$$src -> $$dest";			\
 			fi;						\
@@ -250,11 +320,10 @@ ${_pkg_}-buildlink:
 				${MKDIR} $$dir;				\
 			fi;						\
 			${LN} -sf $$src $$dest;				\
-			${ECHO} "$$msg" >> $$cookie;			\
+			${ECHO} "$$msg" >> ${.TARGET};			\
 		done;							\
-		${TOUCH} ${TOUCH_FLAGS} $$cookie;			\
-	fi
-.  endif
+		;;							\
+	esac
 .endfor
 
 # Add each of the targets in BUILDLINK_TARGETS as a prerequisite for the
@@ -297,12 +366,16 @@ _BLNK_ALLOWED_RPATHDIRS=	# empty
 # libraries we use.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
+.  endif
 .endfor
 #
 # Add the depot directory for the package we're building.
 #
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_ALLOWED_RPATHDIRS+=	${PREFIX}
+.endif
 #
 # Always add ${LOCALBASE}/lib to the runtime library search path so that
 # wildcard dependencies work correctly when installing from binary
@@ -347,8 +420,10 @@ _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
 .for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
+.  endif
 .endfor
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
@@ -373,12 +448,26 @@ _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 _BLNK_TRANSFORM+=	p:${_BLNK_MANGLE_SED_PATTERN:Q}
 _BLNK_TRANSFORM+=	p:
 #
-# Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR} but if
-# the package doesn't use X11, then just remove these references altogether.
+# Convert direct paths to static libraries in ${LOCALBASE} or ${X11BASE}
+# into references into ${BUILDLINK_DIR}.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=	static:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
+_BLNK_TRANSFORM+=	static:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
+.endif
+#
+# Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR}.
 #
 .if defined(USE_X11)
 _BLNK_TRANSFORM+=       I:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=       L:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
+.endif
+#
+# Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
+_BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
 # Add any package specified transformations (l:, etc.)
@@ -587,7 +676,7 @@ _BLNK_WRAP_LOGIC.IMAKE=		${_BLNK_WRAP_LOGIC}
 
 # Silently pass the appropriate flags to the compiler/linker commands so
 # that headers and libraries in ${BUILDLINK_DIR}/{include,lib} are found
-# first.
+# before the system headers and libraries.
 #
 _BLNK_CPPFLAGS=			-I${BUILDLINK_DIR}/include
 _BLNK_LDFLAGS=			-L${BUILDLINK_DIR}/lib
@@ -879,7 +968,9 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL].|-[IL]./*|-[IL]..*|-[IL][!/]*
 # headers and libraries for both -[IL]<dir>.
 #
 .  for _pkg_ in ${BUILDLINK_PACKAGES}
+.    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
+.    endif
 .  endfor
 #
 _BLNK_RPATH_FLAGS=	${RPATH_FLAG}
@@ -923,6 +1014,20 @@ ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
 .  endfor
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "-I${LOCALBASE}/*)";					\
+	  ${ECHO} "	arg=\"-I${BUILDLINK_DIR}/\$${arg#-I${LOCALBASE}/}\""; \
+	  ${ECHO} "	cachehit=yes";					\
+	  ${ECHO} "	;;";						\
+	) >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "-L${LOCALBASE}/*)";					\
+	  ${ECHO} "	arg=\"-L${BUILDLINK_DIR}/\$${arg#-L${LOCALBASE}/}\""; \
+	  ${ECHO} "	cachehit=yes";					\
+	  ${ECHO} "	;;";						\
+	) >> ${.TARGET}
+.  endif
 .  if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "-I${X11BASE}/*)";					\
