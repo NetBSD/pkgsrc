@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/01 22:32:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/23 16:31:29 cjep Exp $
 
 DISTNAME=		apcupsd-3.8.5
 CATEGORIES=		sysutils
@@ -45,7 +45,6 @@ CONF_FILES_PERMS+= ${EGDIR}/mainsback ${PKG_SYSCONFDIR}/mainsback ${ROOT_USER} $
 SUPPORT_FILES_PERMS=  ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
 
-
 # we should probably allow the tty to be set in /etc/mk.conf too
 #
 post-build:
@@ -88,7 +87,6 @@ HTMLDOCS= apcaccess.html apcnisd.html apctest.html apcupsd-styles.css \
 	 upgrading_to_3_7_0.html upsbible.html usb.html win32.html \
 	 wininstall1.gif wininstall2.gif wininstall3.gif wininstall4.gif \
 	 wininstall5.gif wininstall6.gif wininstall7.gif
-	
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/apcupsd.master.conf \
@@ -106,7 +104,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manual/${file} \
 		${PREFIX}/share/doc/html/apcupsd
 .endfor
-	
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2002/12/13 01:06:02 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2002/12/23 16:28:44 cjep Exp $
 etc/rc.d/saslauthd
 include/sasl/hmac-md5.h
 include/sasl/md5.h
@@ -68,12 +68,12 @@ share/doc/html/cyrus-sasl/draft-nerenberg-sasl-crammd5-03.txt
 share/doc/html/cyrus-sasl/draft-newman-sasl-c-api-00.txt
 share/doc/html/cyrus-sasl/draft-sasl-login.txt
 share/doc/html/cyrus-sasl/draft-zeilenga-sasl-anon-01.txt
-share/doc/html/cyrus-sasl/draft-zeilenga-sasl-plain-01.txt 
+share/doc/html/cyrus-sasl/draft-zeilenga-sasl-plain-01.txt
 share/doc/html/cyrus-sasl/gssapi.html
 share/doc/html/cyrus-sasl/index.html
 share/doc/html/cyrus-sasl/install.html
 share/doc/html/cyrus-sasl/macosx.html
-share/doc/html/cyrus-sasl/mechanisms.html 
+share/doc/html/cyrus-sasl/mechanisms.html
 share/doc/html/cyrus-sasl/options.html
 share/doc/html/cyrus-sasl/plugprog.html
 share/doc/html/cyrus-sasl/programming.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2002/10/24 17:16:58 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.42 2002/12/23 16:27:12 cjep Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -11,8 +11,8 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 
 CONFLICTS+=		ghostscript{,-nox11}-[0-9]*
-CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]* 
-CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]* 
+CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
+CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 CONFLICTS+=		hpijs-[0-9]*
 
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
@@ -246,7 +246,7 @@ gimpprint-configure:
 	) >> gdevstp-print.h;						\
 	${CP} *.c *.h ${WRKSRC}/src &&					\
 	${CAT} contrib.mak.addon.old >> ${WRKSRC}/src/contrib.mak
- 
+
 do-configure: ${GS_CONF_PREREQ}
 	#
 	# Append build rules for extra drivers to contrib.mak

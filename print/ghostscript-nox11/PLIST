@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/03 21:27:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/23 16:27:39 cjep Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -61,7 +61,7 @@ share/doc/ghostscript/gdevmjc-0.8/MJ700V2C.FAQ
 share/doc/ghostscript/gdevmjc-0.8/README.mjc
 share/doc/ghostscript/gdevmjc-0.8/README.mje
 share/doc/ghostscript/gdevmjc-0.8/README.noz
-share/doc/ghostscript/gdevmjc-0.8/cpem.doc   
+share/doc/ghostscript/gdevmjc-0.8/cpem.doc
 share/doc/ghostscript/gdevprsc.en
 share/doc/ghostscript/gdevprsc.ja
 share/doc/html/ghostscript/Bug-form.htm
