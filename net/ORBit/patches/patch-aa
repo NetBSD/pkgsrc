@@ -1,20 +1,21 @@
-$NetBSD: patch-aa,v 1.5 1999/10/22 23:35:37 tron Exp $
+$NetBSD: patch-aa,v 1.6 2000/05/30 19:13:18 drochner Exp $
 
---- popt/configure.orig	Tue Sep 28 18:11:54 1999
-+++ popt/configure	Sat Oct 23 00:35:01 1999
-@@ -1882,6 +1882,7 @@
- fi
- 
+--- popt/configure.orig	Mon Feb 21 19:17:22 2000
++++ popt/configure	Sat May 27 11:46:55 2000
+@@ -1970,6 +1970,8 @@
+ *) lt_target="$target" ;;
+ esac
  
 +if false; then
++
  # Check for any special flags to pass to ltconfig.
  #
  # the following will cause an existing older ltconfig to fail, so
-@@ -2183,6 +2184,7 @@
+@@ -2133,6 +2135,7 @@
+ # clobbered by the next message.
+ exec 5>>./config.log
  
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
+ # Find a good install program.  We prefer a C program (faster),
+ # so one script is as good as another.  But avoid the broken or
