@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
+$NetBSD: patch-aa,v 1.2 2002/04/09 10:55:01 agc Exp $
 
---- src/Makefile.orig	Thu Aug 24 15:03:47 2000
-+++ src/Makefile	Thu Aug 24 15:21:10 2000
+--- src/Makefile.orig	Fri Jul 14 13:38:56 2000
++++ src/Makefile	Tue Apr  9 11:42:33 2002
 @@ -97,7 +97,7 @@
  PWLIBDIR=$(HOME)/pwlib
  endif
@@ -38,3 +38,57 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
  endif
  
  #### h245
+@@ -413,45 +413,45 @@
+ 
+ $(OH323_OBJDIR)/%.o : $(VIC_DIR)/%.cxx
+ 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ $(OH323_OBJDIR)/%.o : $(VIC_DIR)/%.c
+ 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
+-	$(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --tag=CC $(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ $(DEPDIR)/%.dep : $(VIC_DIR)/%.c
+ 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
+ 	@printf %s $(OH323_OBJDIR)/ > $@
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
++	${LIBTOOL} --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
+ 
+ $(DEPDIR)/%.dep : $(VIC_DIR)/%.cxx
+ 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
+ 	@printf %s $(OH323_OBJDIR)/ > $@
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
++	${LIBTOOL} --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
+ 
+ 
+ # Build rules for the GSM codec
+ 
+ $(OH323_OBJDIR)/%.o : $(GSM_SRCDIR)/%.c
+ 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
+-	$(CC) -ansi -I$(GSM_INCDIR) -DNeedFunctionPrototypes=1 $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --tag=CC $(CC) -ansi -I$(GSM_INCDIR) -DNeedFunctionPrototypes=1 $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ $(DEPDIR)/%.dep : $(GSM_SRCDIR)/%.c
+ 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
+ 	@printf %s $(OH323_OBJDIR)/ > $@
+-	$(CC) -ansi -I$(GSM_INCDIR) -DNeedFunctionPrototypes=1 $(CFLAGS) -M $< >> $@
++	${LIBTOOL} --tag=CC $(CC) -ansi -I$(GSM_INCDIR) -DNeedFunctionPrototypes=1 $(CFLAGS) -M $< >> $@
+ 
+ 
+ # Build rules for the LPC10 codec
+ 
+ $(OH323_OBJDIR)/%.o : $(LPC10_SRCDIR)/%.c
+ 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
+-	$(CC) -I$(LPC10_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --tag=CC $(CC) -I$(LPC10_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ $(DEPDIR)/%.dep : $(LPC10_SRCDIR)/%.c
+ 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
+ 	@printf %s $(OH323_OBJDIR)/ > $@
+-	$(CC) -I$(LPC10_INCDIR) $(CFLAGS) -M $< >> $@
++	${LIBTOOL} --tag=CC $(CC) -I$(LPC10_INCDIR) $(CFLAGS) -M $< >> $@
+ 
+ 
+ # Pass through commands to the subdirectory for test app
