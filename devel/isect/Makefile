@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/08/09 10:44:44 seb Exp $
+# $NetBSD: Makefile,v 1.22 2003/08/30 18:46:17 jlam Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -20,8 +20,6 @@ USE_PKGINSTALL=	YES
 INFO_FILES=	isect.info
 
 RCD_SCRIPTS=	isect
-
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 DOCDIR=		${PREFIX}/share/doc/isect
 EGDIR=		${PREFIX}/share/examples/isect
