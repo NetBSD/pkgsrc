@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/09/24 14:37:28 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2003/09/21 21:33:11 kim Exp $
 
---- configure.orig	Sun Sep 24 16:30:11 2000
-+++ configure
-@@ -2247,7 +2247,7 @@
+--- mimep/mimep/Makefile.in.orig	Tue Oct 15 14:59:05 2002
++++ mimep/mimep/Makefile.in	Sun Sep 21 17:25:22 2003
+@@ -112,7 +112,7 @@
+ 	$(X_CFLAGS)
  
-   # It would also be nice to do this for all -L options, not just this one.
-   if test -n "$x_libraries"; then
--    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -L$x_libraries -Wl,-R$x_libraries"
-     # For Solaris; some versions of Sun CC require a space after -R and
-     # others require no space.  Words are not sufficient . . . .
-     case "`(uname -sr) 2>/dev/null`" in
+ 
+-LDFLAGS = \
++AM_LDFLAGS = \
+ 	$(top_builddir)/mp/header.o \
+ 	$(top_builddir)/mp/input.o \
+ 	$(top_builddir)/mp/print.o

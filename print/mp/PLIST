@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/21 21:33:09 kim Exp $
 bin/cutlines
 bin/digestp
 bin/ertf2latex
@@ -12,6 +12,7 @@ bin/mimep
 bin/mimepps
 bin/mimepurl
 bin/mp
+bin/mptool
 bin/newsp
 bin/proplanp
 bin/text2latex
@@ -22,19 +23,20 @@ man/man1/mimep.1
 man/man1/mimep_fr.1
 man/man1/mimep_fr3.1
 man/man1/mp.1
-share/mp/mp.common.ps
-share/mp/mp.pro.alt.ps
-share/mp/mp.pro.altl.ps
-share/mp/mp.pro.ff.ps
-share/mp/mp.pro.ffp.ps
-share/mp/mp.pro.fp.ps
-share/mp/mp.pro.l.c1.ps
-share/mp/mp.pro.l.old
-share/mp/mp.pro.l.ps
-share/mp/mp.pro.old
-share/mp/mp.pro.pp.ps
-share/mp/mp.pro.ps
-share/mp/mp.pro.tm.ps
-share/mp/mp.pro.tsi.ps
-share/mp/mp.pro.tsp.ps
-@dirrm share/mp
+man/man1/mptool.1
+share/mpdist/mp.common.ps
+share/mpdist/mp.pro.alt.ps
+share/mpdist/mp.pro.altl.ps
+share/mpdist/mp.pro.ff.ps
+share/mpdist/mp.pro.ffp.ps
+share/mpdist/mp.pro.fp.ps
+share/mpdist/mp.pro.l.c1.ps
+share/mpdist/mp.pro.l.old
+share/mpdist/mp.pro.l.ps
+share/mpdist/mp.pro.old
+share/mpdist/mp.pro.pp.ps
+share/mpdist/mp.pro.ps
+share/mpdist/mp.pro.tm.ps
+share/mpdist/mp.pro.tsi.ps
+share/mpdist/mp.pro.tsp.ps
+@dirrm share/mpdist
