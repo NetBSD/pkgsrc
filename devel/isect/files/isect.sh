@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isect.sh,v 1.1.1.1 1999/09/15 18:56:21 jlam Exp $
+# $NetBSD: isect.sh,v 1.2 2003/01/19 12:54:33 grant Exp $
 #
 
 isdexecd=@PREFIX@/sbin/isdexecd
