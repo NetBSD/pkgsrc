@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
+$NetBSD: patch-aa,v 1.7 1998/09/10 10:39:02 agc Exp $
 
---- Makefile.in.orig	Tue Nov 25 11:31:41 1997
-+++ Makefile.in	Mon Feb  9 07:20:03 1998
+--- Makefile.in.orig	Tue Nov 25 16:31:41 1997
++++ Makefile.in	Thu Sep 10 10:37:58 1998
 @@ -55,7 +55,9 @@
  BIN_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/bin
  
@@ -22,44 +22,33 @@ $NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
  INSTALL_PROGRAM =	${INSTALL}
  INSTALL_DATA =		${INSTALL} -m 644
  
-@@ -310,7 +312,7 @@
- 
- SRCS = $(GENERIC_SRCS) $(UNIX_SRCS)
- 
--all: ${TCL_LIB_FILE} tclsh
-+all: ${TCL_LIB_FILE} libtcl80.a tclsh
- 
+@@ -315,9 +317,7 @@
  # The following target is configured by autoconf to generate either
  # a shared library or non-shared library for Tcl.
-@@ -319,6 +321,11 @@
- 	@MAKE_LIB@
- 	$(RANLIB) ${TCL_LIB_FILE}
+ ${TCL_LIB_FILE}: ${OBJS}
+-	rm -f ${TCL_LIB_FILE}
+-	@MAKE_LIB@
+-	$(RANLIB) ${TCL_LIB_FILE}
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
-+libtcl80.a: ${OBJS}
-+	rm -f libtcl80.a
-+	ar cr libtcl80.a ${OBJS}	
-+	$(RANLIB) libtcl80.a
-+
  # Make target which outputs the list of the .o contained in the Tcl lib
  # usefull to build a single big shared library containing Tcl and other
- # extensions.  used for the Tcl Plugin.  -- dl
-@@ -410,7 +417,7 @@
- # some ranlibs write to current directory, and this might not always be
- # possible (e.g. if installing as root).
+@@ -330,7 +330,6 @@
+ # case
+ objs: ${OBJS}
  
--install-binaries: $(TCL_LIB_FILE) tclsh
-+install-binaries: $(TCL_LIB_FILE) libtcl80.a tclsh
- 	@for i in $(LIB_INSTALL_DIR) $(BIN_INSTALL_DIR) ; \
- 	    do \
- 	    if [ ! -d $$i ] ; then \
-@@ -424,18 +431,23 @@
- 	@$(INSTALL_DATA) $(TCL_LIB_FILE) $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
- 	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TCL_LIB_FILE))
- 	@chmod 555 $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
-+	@echo "Installing libtcl80.a"
-+	@$(INSTALL_DATA) libtcl80.a $(LIB_INSTALL_DIR)/libtcl80.a
-+	@(cd $(LIB_INSTALL_DIR); $(RANLIB) libtcl80.a)
-+	@chmod 555 $(LIB_INSTALL_DIR)/libtcl80.a
+-
+ tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
+ 	${CC} @LD_FLAGS@ ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
+ 		@TCL_LD_SEARCH_FLAGS@ -o tclsh
+@@ -421,21 +420,20 @@
+ 		fi; \
+ 	    done;
+ 	@echo "Installing $(TCL_LIB_FILE)"
+-	@$(INSTALL_DATA) $(TCL_LIB_FILE) $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
+-	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TCL_LIB_FILE))
+-	@chmod 555 $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
++	@${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${TCL_LIB_FILE:.a=.la} ${LIB_INSTALL_DIR}
  	@echo "Installing tclsh"
  	@$(INSTALL_PROGRAM) tclsh $(BIN_INSTALL_DIR)/tclsh$(VERSION)
  	@echo "Installing tclConfig.sh"
@@ -80,7 +69,7 @@ $NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
  		chmod 755 $$i; \
  		else true; \
  		fi; \
-@@ -449,8 +461,15 @@
+@@ -449,8 +447,15 @@
  		else true; \
  		fi; \
  	    done;
@@ -98,7 +87,7 @@ $NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex $(UNIX_DIR)/tclAppInit.c $(UNIX_DIR)/ldAix; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -502,6 +521,13 @@
+@@ -502,6 +507,13 @@
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
  	    done;
  	$(UNIX_DIR)/mkLinks $(MANN_INSTALL_DIR)
@@ -112,3 +101,320 @@ $NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
  
  Makefile: $(UNIX_DIR)/Makefile.in
  	$(SHELL) config.status
+@@ -555,239 +567,239 @@
+ # Object files used on all Unix systems:
+ 
+ panic.o: $(GENERIC_DIR)/panic.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/panic.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/panic.c
+ 
+ regexp.o: $(GENERIC_DIR)/regexp.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/regexp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/regexp.c
+ 
+ tclAppInit.o: $(UNIX_DIR)/tclAppInit.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclAppInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclAppInit.c
+ 
+ tclAsync.o: $(GENERIC_DIR)/tclAsync.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclAsync.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclAsync.c
+ 
+ tclBasic.o: $(GENERIC_DIR)/tclBasic.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclBasic.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclBasic.c
+ 
+ tclBinary.o: $(GENERIC_DIR)/tclBinary.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclBinary.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclBinary.c
+ 
+ tclCkalloc.o: $(GENERIC_DIR)/tclCkalloc.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCkalloc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCkalloc.c
+ 
+ tclClock.o: $(GENERIC_DIR)/tclClock.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclClock.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclClock.c
+ 
+ tclCmdAH.o: $(GENERIC_DIR)/tclCmdAH.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdAH.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdAH.c
+ 
+ tclCmdIL.o: $(GENERIC_DIR)/tclCmdIL.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdIL.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdIL.c
+ 
+ tclCmdMZ.o: $(GENERIC_DIR)/tclCmdMZ.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdMZ.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCmdMZ.c
+ 
+ tclDate.o: $(GENERIC_DIR)/tclDate.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclDate.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclDate.c
+ 
+ tclCompExpr.o: $(GENERIC_DIR)/tclCompExpr.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCompExpr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCompExpr.c
+ 
+ tclCompile.o: $(GENERIC_DIR)/tclCompile.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCompile.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclCompile.c
+ 
+ tclEnv.o: $(GENERIC_DIR)/tclEnv.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclEnv.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclEnv.c
+ 
+ tclEvent.o: $(GENERIC_DIR)/tclEvent.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclEvent.c
+ 
+ tclExecute.o: $(GENERIC_DIR)/tclExecute.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclExecute.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclExecute.c
+ 
+ tclFCmd.o: $(GENERIC_DIR)/tclFCmd.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclFCmd.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclFCmd.c
+ 
+ tclFileName.o: $(GENERIC_DIR)/tclFileName.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclFileName.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclFileName.c
+ 
+ tclGet.o: $(GENERIC_DIR)/tclGet.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclGet.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclGet.c
+ 
+ tclHash.o: $(GENERIC_DIR)/tclHash.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclHash.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclHash.c
+ 
+ tclHistory.o: $(GENERIC_DIR)/tclHistory.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclHistory.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclHistory.c
+ 
+ tclIndexObj.o: $(GENERIC_DIR)/tclIndexObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIndexObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIndexObj.c
+ 
+ tclInterp.o: $(GENERIC_DIR)/tclInterp.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclInterp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclInterp.c
+ 
+ tclIO.o: $(GENERIC_DIR)/tclIO.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIO.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIO.c
+ 
+ tclIOCmd.o: $(GENERIC_DIR)/tclIOCmd.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOCmd.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOCmd.c
+ 
+ tclIOSock.o: $(GENERIC_DIR)/tclIOSock.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOSock.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOSock.c
+ 
+ tclIOUtil.o: $(GENERIC_DIR)/tclIOUtil.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclIOUtil.c
+ 
+ tclLink.o: $(GENERIC_DIR)/tclLink.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLink.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLink.c
+ 
+ tclListObj.o: $(GENERIC_DIR)/tclListObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclListObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclListObj.c
+ 
+ tclObj.o: $(GENERIC_DIR)/tclObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclObj.c
+ 
+ tclLoad.o: $(GENERIC_DIR)/tclLoad.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLoad.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLoad.c
+ 
+ tclLoadAix.o: $(UNIX_DIR)/tclLoadAix.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadAix.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadAix.c
+ 
+ tclLoadAout.o: $(UNIX_DIR)/tclLoadAout.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadAout.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadAout.c
+ 
+ tclLoadDl.o: $(UNIX_DIR)/tclLoadDl.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDl.c
+ 
+ tclLoadDl2.o: $(UNIX_DIR)/tclLoadDl2.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDl2.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDl2.c
+ 
+ tclLoadDld.o: $(UNIX_DIR)/tclLoadDld.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDld.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadDld.c
+ 
+ tclLoadNone.o: $(GENERIC_DIR)/tclLoadNone.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLoadNone.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclLoadNone.c
+ 
+ tclLoadOSF.o: $(UNIX_DIR)/tclLoadOSF.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadOSF.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadOSF.c
+ 
+ tclLoadShl.o: $(UNIX_DIR)/tclLoadShl.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadShl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclLoadShl.c
+ 
+ tclMain.o: $(GENERIC_DIR)/tclMain.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclMain.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclMain.c
+ 
+ tclMtherr.o: $(UNIX_DIR)/tclMtherr.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclMtherr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclMtherr.c
+ 
+ tclNamesp.o: $(GENERIC_DIR)/tclNamesp.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclNamesp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclNamesp.c
+ 
+ tclNotify.o: $(GENERIC_DIR)/tclNotify.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclNotify.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclNotify.c
+ 
+ tclParse.o: $(GENERIC_DIR)/tclParse.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclParse.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclParse.c
+ 
+ tclPipe.o: $(GENERIC_DIR)/tclPipe.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPipe.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPipe.c
+ 
+ tclPkg.o: $(GENERIC_DIR)/tclPkg.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPkg.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPkg.c
+ 
+ tclPosixStr.o: $(GENERIC_DIR)/tclPosixStr.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPosixStr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPosixStr.c
+ 
+ tclPreserve.o: $(GENERIC_DIR)/tclPreserve.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPreserve.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclPreserve.c
+ 
+ tclProc.o: $(GENERIC_DIR)/tclProc.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclProc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclProc.c
+ 
+ tclStringObj.o: $(GENERIC_DIR)/tclStringObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclStringObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclStringObj.c
+ 
+ tclUtil.o: $(GENERIC_DIR)/tclUtil.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclUtil.c
+ 
+ tclVar.o: $(GENERIC_DIR)/tclVar.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclVar.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclVar.c
+ 
+ tclTest.o: $(GENERIC_DIR)/tclTest.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTest.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTest.c
+ 
+ tclTestObj.o: $(GENERIC_DIR)/tclTestObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestObj.c
+ 
+ tclTimer.o: $(GENERIC_DIR)/tclTimer.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTimer.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTimer.c
+ 
+ tclUnixChan.o: $(UNIX_DIR)/tclUnixChan.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixChan.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixChan.c
+ 
+ tclUnixEvent.o: $(UNIX_DIR)/tclUnixEvent.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixEvent.c
+ 
+ tclUnixFCmd.o: $(UNIX_DIR)/tclUnixFCmd.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixFCmd.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixFCmd.c
+ 
+ tclUnixFile.o: $(UNIX_DIR)/tclUnixFile.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixFile.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixFile.c
+ 
+ tclUnixNotfy.o: $(UNIX_DIR)/tclUnixNotfy.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixNotfy.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixNotfy.c
+ 
+ tclUnixPipe.o: $(UNIX_DIR)/tclUnixPipe.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixPipe.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixPipe.c
+ 
+ tclUnixSock.o: $(UNIX_DIR)/tclUnixSock.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixSock.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixSock.c
+ 
+ tclUnixTest.o: $(UNIX_DIR)/tclUnixTest.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixTest.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixTest.c
+ 
+ tclUnixTime.o: $(UNIX_DIR)/tclUnixTime.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixTime.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tclUnixTime.c
+ 
+ tclUnixInit.o: $(UNIX_DIR)/tclUnixInit.c tclConfig.sh
+-	$(CC) -c $(CC_SWITCHES) -DTCL_LIBRARY=\"${TCL_LIBRARY}\" \
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) -DTCL_LIBRARY=\"${TCL_LIBRARY}\" \
+ 		-DTCL_PACKAGE_PATH="\"${TCL_PACKAGE_PATH}\"" \
+ 		$(UNIX_DIR)/tclUnixInit.c
+ 
+ # compat binaries
+ 
+ fixstrtod.o: $(COMPAT_DIR)/fixstrtod.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/fixstrtod.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/fixstrtod.c
+ 
+ getcwd.o: $(COMPAT_DIR)/getcwd.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/getcwd.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/getcwd.c
+ 
+ opendir.o: $(COMPAT_DIR)/opendir.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/opendir.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/opendir.c
+ 
+ strncasecmp.o: $(COMPAT_DIR)/strncasecmp.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strncasecmp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strncasecmp.c
+ 
+ strstr.o: $(COMPAT_DIR)/strstr.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strstr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strstr.c
+ 
+ strtod.o: $(COMPAT_DIR)/strtod.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtod.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtod.c
+ 
+ strtol.o: $(COMPAT_DIR)/strtol.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtol.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtol.c
+ 
+ strtoul.o: $(COMPAT_DIR)/strtoul.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtoul.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/strtoul.c
+ 
+ tmpnam.o: $(COMPAT_DIR)/tmpnam.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/tmpnam.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/tmpnam.c
+ 
+ waitpid.o: $(COMPAT_DIR)/waitpid.c
+-	$(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/waitpid.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(COMPAT_DIR)/waitpid.c
+ 
+ .c.o:
+-	$(CC) -c $(CC_SWITCHES) $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $<
+ 
+ #
+ # Target to check for proper usage of UCHAR macro.
