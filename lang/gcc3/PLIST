@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/03 11:58:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/03 15:56:37 drochner Exp $
 @unexec ${INSTALL_INFO} --delete %D/info/cpp.info %D/info/dir
 info/cpp.info
 @exec ${INSTALL_INFO} %D/info/cpp.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/g77.info %D/info/dir
+info/g77.info
+@exec ${INSTALL_INFO} %D/info/g77.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/gcc.info %D/info/dir
 info/gcc.info
 @exec ${INSTALL_INFO} %D/info/gcc.info %D/info/dir
