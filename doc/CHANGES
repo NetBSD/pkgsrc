@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4867 2004/02/16 22:51:47 wiz Exp $
+$NetBSD: CHANGES,v 1.4868 2004/02/16 23:21:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.6.5 [recht 2004-02-16]
 	Updated trafshow to 4.0 [snj 2004-02-16]
 	Updated nsd to 2.0.0nb1 [itojun 2004-02-16]
+	Updated gconf-editor to 2.4.0nb3 [jmmv 2004-02-16]
