@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 14:05:02 abs Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/11 20:50:50 abs Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
@@ -18,7 +18,7 @@ MAKE_ENV+=	DEPTHDEF="${DEPTHDEF}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == arm32)
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 .  include "../../mk/gcc.buildlink2.mk"
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/05/05 16:39:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/11 20:50:56 abs Exp $
 
 DISTNAME=		xfmail-1.4.7
 PKGREVISION=		4
@@ -10,8 +10,9 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
+			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-mipsel	\
+			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 RESTRICTED=		"Selling this software requires permission of the authors."
 NO_SRC_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/04 16:37:25 magick Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/11 20:50:53 abs Exp $
 
 DISTNAME=	xemacs-21.5.14
 CATEGORIES=	editors
@@ -14,7 +14,7 @@ USE_X11=	YES
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b14
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b14
 
-.if (${MACHINE_ARCH} == "arm32")
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 .  include "../../mk/gcc.buildlink2.mk"
 .endif
 

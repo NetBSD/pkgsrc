@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2003/04/28 16:27:40 tron Exp $
+# $NetBSD: Makefile,v 1.72 2003/06/11 20:50:55 abs Exp $
 
 DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
@@ -24,8 +24,9 @@ STAGEDIR=	${WRKDIR}/staging
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == arm32)
-CFLAGS=
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 .if (${OPSYS} == SunOS)

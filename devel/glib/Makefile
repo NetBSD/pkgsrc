@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/05/02 11:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2003/06/11 20:50:51 abs Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -37,9 +37,9 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
 .endif
 
-# XXX egcs is still broken on arm32.
-.if ${MACHINE_ARCH} == "arm32"
-CFLAGS=		-O0
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}

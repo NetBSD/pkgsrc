@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/02 01:18:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/11 20:50:57 abs Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
@@ -14,8 +14,9 @@ MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://sunsite.math.klte.hu/mirrors/xldlas/
 COMMENT=		XForms-based statistics package
 
-ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
+			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-mipsel	\
+			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes

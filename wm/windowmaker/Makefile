@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/04/27 12:41:38 cjep Exp $
+# $NetBSD: Makefile,v 1.35 2003/06/11 20:50:59 abs Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
@@ -93,7 +93,7 @@ post-install:
 
 .include "../../mk/bsd.pkg.mk"
 
-# "egcs" has an optimizer problem on "arm32".
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS:=	-O0
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
