@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2001/10/03 16:40:06 abs Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/22 13:51:06 zuntum Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://cr.yp.to/ucspi-tcp/				\
 		ftp://cr.yp.to/djbdns/					\
-		ftp://ftp.innominate.org/gpa/djb/
+		ftp://ftp.innominate.org/pub/pape/djb/
 DISTFILES=	${DISTNAME}.tar.gz					\
-		${DISTNAME}-man.tar.gz
+		${DISTNAME}-man-20010502.tar.gz
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://cr.yp.to/ucspi-tcp.html
