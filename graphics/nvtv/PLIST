@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 09:16:16 cube Exp $
+etc/rc.d/nvtvd
+bin/nvtv
+bin/nvtvd
+share/doc/nvtv/FAQ
+share/doc/nvtv/README
+share/doc/nvtv/USAGE
+share/doc/nvtv/chips.txt
+share/doc/nvtv/overview.txt
+share/doc/nvtv/timing.txt
+man/man1/nvtv.1
+man/man8/nvtvd.8
+@dirrm share/doc/nvtv
