@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/13 02:37:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:35:52 hubertf Exp $
 # New ports collection makefile for:	tcl8.0
 # Version required:	8.0
 # Date created:		19 August 1997
@@ -16,8 +16,8 @@ MAINTAINER=	jkh@freebsd.org
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-shared
-CONFIGURE_ENV=  PORTSDIR=${PORTSDIR}
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ENV+=  PORTSDIR=${PORTSDIR}
 
 MAN1=		tclsh.1
 MAN3=		AddErrInfo.3 Alloc.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 BackgdErr.3 Backslash.3 BoolObj.3 CallDel.3 CmdCmplt.3 Concat.3 CrtChannel.3 CrtChnlHdlr.3 CrtCloseHdlr.3 CrtCommand.3 CrtFileHdlr.3 CrtInterp.3 CrtMathFnc.3 CrtObjCmd.3 CrtSlave.3 CrtTimerHdlr.3 CrtTrace.3 DString.3 DetachPids.3 DoOneEvent.3 DoWhenIdle.3 DoubleObj.3 Eval.3 EvalObj.3 Exit.3 ExprLong.3 ExprLongObj.3 FindExec.3 GetIndex.3 GetInt.3 GetOpnFl.3 GetStdChan.3 Hash.3 IntObj.3 Interp.3 LinkVar.3 ListObj.3 Notifier.3 ObjSetVar.3 Object.3 ObjectType.3 OpenFileChnl.3 OpenTcp.3 PkgRequire.3 Preserve.3 PrintDbl.3 RecEvalObj.3 RecordEval.3 RegExp.3 SetErrno.3 SetRecLmt.3 SetResult.3 SetVar.3 Sleep.3 SplitList.3 SplitPath.3 StaticPkg.3 StrMatch.3 StringObj.3 Tcl_Main.3 TraceVar.3 Translate.3 UpVar.3 WrongNumArgs.3
