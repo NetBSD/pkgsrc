@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/05 10:06:39 adam Exp $
-share/GNUstep/System/Applications/md5Digest.app/Resources/Info-gnustep.plist
-share/GNUstep/System/Applications/md5Digest.app/Resources/md5Digest.desktop
-share/GNUstep/System/Applications/md5Digest.app/library_paths.openapp
-share/GNUstep/System/Applications/md5Digest.app/md5Digest
-share/GNUstep/System/Applications/md5Digest.app/stamp.make
+@comment $NetBSD: PLIST,v 1.6 2004/04/10 23:44:28 rh Exp $
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/RTFConverter
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/stamp.make
@@ -35,6 +30,7 @@ share/GNUstep/System/Library/Headers/AppKit/DPSOperators.h
 share/GNUstep/System/Library/Headers/AppKit/GMAppKit.h
 share/GNUstep/System/Library/Headers/AppKit/GMArchiver.h
 share/GNUstep/System/Library/Headers/AppKit/GSDisplayServer.h
+share/GNUstep/System/Library/Headers/AppKit/GSDrawFunctions.h
 share/GNUstep/System/Library/Headers/AppKit/GSFontInfo.h
 share/GNUstep/System/Library/Headers/AppKit/GSFusedSilica.h
 share/GNUstep/System/Library/Headers/AppKit/GSHbox.h
@@ -45,11 +41,13 @@ share/GNUstep/System/Library/Headers/AppKit/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/AppKit/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/AppKit/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/AppKit/GSMethodTable.h
+share/GNUstep/System/Library/Headers/AppKit/GSNibCompatibility.h
 share/GNUstep/System/Library/Headers/AppKit/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/AppKit/GSPasteboardServer.h
 share/GNUstep/System/Library/Headers/AppKit/GSServicesManager.h
 share/GNUstep/System/Library/Headers/AppKit/GSTable.h
 share/GNUstep/System/Library/Headers/AppKit/GSTextConverter.h
+share/GNUstep/System/Library/Headers/AppKit/GSTitleView.h
 share/GNUstep/System/Library/Headers/AppKit/GSToolbarView.h
 share/GNUstep/System/Library/Headers/AppKit/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/AppKit/GSTypesetter.h
@@ -177,6 +175,7 @@ share/GNUstep/System/Library/Headers/AppKit/PSOperators.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GMAppKit.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GMArchiver.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSDisplayServer.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSDrawFunctions.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSFontInfo.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSFusedSilica.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSHbox.h
@@ -187,11 +186,13 @@ share/GNUstep/System/Library/Headers/GNUstepGUI/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSMethodTable.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSNibCompatibility.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSPasteboardServer.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSServicesManager.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTable.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTextConverter.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSTitleView.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSToolbarView.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTypesetter.h
@@ -203,6 +204,7 @@ share/GNUstep/System/Library/Headers/GNUstepGUI/IMLoading.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GMAppKit.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GMArchiver.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSDisplayServer.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSDrawFunctions.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSFontInfo.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSFusedSilica.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSHbox.h
@@ -213,11 +215,13 @@ share/GNUstep/System/Library/Headers/gnustep/gui/GSLayoutManager.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSLayoutManager_internal.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSMemoryPanel.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSMethodTable.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSNibCompatibility.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSNibTemplates.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSPasteboardServer.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSServicesManager.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTable.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTextConverter.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSTitleView.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSToolbarView.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTypesetter.h
@@ -242,6 +246,7 @@ share/GNUstep/System/Library/Images/common_ArrowUp.tiff
 share/GNUstep/System/Library/Images/common_CenterTabStop.tiff
 share/GNUstep/System/Library/Images/common_Close.tiff
 share/GNUstep/System/Library/Images/common_CloseBroken.tiff
+share/GNUstep/System/Library/Images/common_CloseBrokenH.tiff
 share/GNUstep/System/Library/Images/common_CloseH.tiff
 share/GNUstep/System/Library/Images/common_ColorSwatch.tiff
 share/GNUstep/System/Library/Images/common_DecimalTabStop.tiff
@@ -252,6 +257,9 @@ share/GNUstep/System/Library/Images/common_Folder.tiff
 share/GNUstep/System/Library/Images/common_Home.tiff
 share/GNUstep/System/Library/Images/common_HomeDirectory.tiff
 share/GNUstep/System/Library/Images/common_LeftTabStop.tiff
+share/GNUstep/System/Library/Images/common_MiniWindowTile.tiff
+share/GNUstep/System/Library/Images/common_Miniaturize.tiff
+share/GNUstep/System/Library/Images/common_MiniaturizeH.tiff
 share/GNUstep/System/Library/Images/common_Mount.tiff
 share/GNUstep/System/Library/Images/common_Nibble.tiff
 share/GNUstep/System/Library/Images/common_Printer.tiff
@@ -284,7 +292,8 @@ share/GNUstep/System/Library/Images/common_TabUnSelectedJunction.tiff
 share/GNUstep/System/Library/Images/common_TabUnSelectedLeft.tiff
 share/GNUstep/System/Library/Images/common_TabUnSelectedRight.tiff
 share/GNUstep/System/Library/Images/common_Tile.tiff
-share/GNUstep/System/Library/Images/common_ToolbarSeperatorItem.tiff
+share/GNUstep/System/Library/Images/common_ToolbarClippedItemsMark.tiff
+share/GNUstep/System/Library/Images/common_ToolbarSeparatorItem.tiff
 share/GNUstep/System/Library/Images/common_ToolbarShowColorsItem.tiff
 share/GNUstep/System/Library/Images/common_ToolbarShowFontsItem.tiff
 share/GNUstep/System/Library/Images/common_ToolbarSpaceItem.tiff
@@ -293,8 +302,6 @@ share/GNUstep/System/Library/Images/common_UnknownApplication.tiff
 share/GNUstep/System/Library/Images/common_UnknownTool.tiff
 share/GNUstep/System/Library/Images/common_Unmount.tiff
 share/GNUstep/System/Library/Images/common_UpAndDownArrowSmall.tiff
-share/GNUstep/System/Library/Images/common_WMClose.tiff
-share/GNUstep/System/Library/Images/common_WMCloseBroken.tiff
 share/GNUstep/System/Library/Images/common_copyCursor.tiff
 share/GNUstep/System/Library/Images/common_linkCursor.tiff
 share/GNUstep/System/Library/Images/common_noCursor.tiff
@@ -316,7 +323,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpe
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so
-share/GNUstep/System/Library/Libraries/libgnustep-gui.so.0.9.0
+share/GNUstep/System/Library/Libraries/libgnustep-gui.so.0.9.2
 share/GNUstep/System/Library/Makefiles/Additional/gui.make
 share/GNUstep/System/Library/PostScript/GSProlog.ps
 share/GNUstep/System/Library/PostScript/PPD/English.lproj/AGFA_AccuSet.ppd
@@ -636,14 +643,10 @@ share/GNUstep/System/Library/PostScript/PPD/Swedish.lproj/Linotronic_300.ppd
 share/GNUstep/System/Library/PostScript/Printers
 share/GNUstep/System/Library/Services/GSspell.service/GSspell
 share/GNUstep/System/Library/Services/GSspell.service/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Services/example.service/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Services/example.service/example
 share/GNUstep/System/Tools/gnustep_sndd
 share/GNUstep/System/Tools/gopen
 share/GNUstep/System/Tools/make_services
 share/GNUstep/System/Tools/set_show_service
-@dirrm share/GNUstep/System/Library/Services/example.service/Resources
-@dirrm share/GNUstep/System/Library/Services/example.service
 @dirrm share/GNUstep/System/Library/Services/GSspell.service/Resources
 @dirrm share/GNUstep/System/Library/Services/GSspell.service
 @dirrm share/GNUstep/System/Library/PostScript/PPD/Swedish.lproj
@@ -653,6 +656,7 @@ share/GNUstep/System/Tools/set_show_service
 @dirrm share/GNUstep/System/Library/PostScript/PPD/French.lproj
 @dirrm share/GNUstep/System/Library/PostScript/PPD/English.lproj
 @dirrm share/GNUstep/System/Library/PostScript/PPD
+@dirrm share/GNUstep/System/Library/PostScript
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpellPanel.gorm
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSPrintPanel.gorm
@@ -677,5 +681,3 @@ share/GNUstep/System/Tools/set_show_service
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters
-@dirrm share/GNUstep/System/Applications/md5Digest.app/Resources
-@dirrm share/GNUstep/System/Applications/md5Digest.app
