@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/20 18:33:29 skrll Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2003/03/10 18:22:05 grant Exp $
 #
 
 DISTNAME=	wonka-src-0.9.4-release
@@ -9,6 +9,9 @@ MASTER_SITES=	http://wonka.acunia.com/
 MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://wonka.acunia.com/download.html
 COMMENT=	BSD-licenced java virtual machine
+
+# This has only been ported to arm and x86 so far.
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-arm32
 
 BUILD_DEPENDS+=	acunia-jam>=1.0nb1:../../devel/acunia-jam
 BUILD_DEPENDS+=	jamjar-[0-9]*:../../archivers/jamjar
