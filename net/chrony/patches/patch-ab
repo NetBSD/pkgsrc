@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/30 11:26:59 hannken Exp $
 
---- chrony.conf.5.orig	Sun Feb 17 23:23:12 2002
+--- chrony.conf.5.orig	2002-11-04 00:32:08.000000000 +0100
 +++ chrony.conf.5
 @@ -3,7 +3,7 @@
  chrony.conf \- chronyd configuration file
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  
  .SH DESCRIPTION
  \fIchrony\fR is a pair of programs for maintaining the accuracy of computer
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,7 @@ boot time.
  
  Assuming that you have found some servers, you need to set up a
  configuration file to run \fIchrony\fR.  The (compiled-in) default location
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  are called `a.b.c' and `d.e.f', your \fBchrony.conf\fR file could contain
  as a minimum
  
-@@ -29,9 +29,9 @@
+@@ -29,9 +29,9 @@ useful configuration file would look som
       server a.b.c
       server d.e.f
       server g.h.i
