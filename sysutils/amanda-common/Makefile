@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/20 20:09:51 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/18 08:28:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--without-server --without-restore --without-client
 
 CPPFLAGS=		
+
+BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 pre-install:
 	case `${GREP} -c '^${AMANDA_USER}:' /etc/passwd || ${TRUE}` in	\

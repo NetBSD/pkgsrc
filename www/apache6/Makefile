@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/23 18:19:29 itojun Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/18 08:29:11 agc Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -65,6 +65,8 @@ CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST
+
+BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
