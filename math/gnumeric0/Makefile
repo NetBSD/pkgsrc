@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/10 16:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/23 20:51:51 jlam Exp $
 #
 
 DISTNAME=		gnumeric-0.75
@@ -10,17 +10,17 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
-USE_BUILDLINK_ONLY=	YES
 
-LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
-LDFLAGS+=      		-lunicode
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
+LIBS+=      		-lunicode
+
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
@@ -31,13 +31,14 @@ pre-configure:
 		${MV} $$i.fixed $$i ;					\
 	done
 
-.include "../../converters/psiconv/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/libglade/buildlink.mk"
-.include "../../devel/libole2/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../textproc/libunicode/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../converters/psiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../devel/libole2/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
+.include "../../devel/gal/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../textproc/libunicode/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
