@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/31 02:38:22 grant Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
@@ -9,7 +9,7 @@ MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.5/
 
 MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.mozilla.org/projects/phoenix/
-COMMENT=		A redesign of the Mozilla browser component (binary pkg)
+COMMENT=		Lightweight gecko-based web browser (nightly binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
@@ -30,11 +30,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-linux
 
 post-install:
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${PHOENIX_LIB} \( -type f -o -type l \) -print		\
+	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${FIND} ${PHOENIX_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
-	${FIND} ${PHOENIX_LIB} -type d -print				\
+	@${FIND} ${PHOENIX_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
