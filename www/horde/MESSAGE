@@ -1,26 +1,25 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/11/26 07:34:07 jlam Exp $
+$NetBSD: MESSAGE,v 1.3 2002/02/01 22:41:15 bouyer Exp $
 
 Please refer to the file:
 
-	${PHPLIBDIR}/README
+	${PREFIX}/share/doc/horde/INSTALL
 
 to setup Horde to access it's database properly.  The short summary is to
 edit:
 
-	${PHPLIBDIR}/local.inc
-	${PHPLIBDIR}/prepend.php3
+	${HORDEDIR}/config/horde.php
 
 to specify the correct backend database, and run the appropriate scripts
 in:
 
-	${HORDEDIR}/scripts/databases
+	${HORDEDIR}/scripts/db
 
 to setup the horde database.  Horde is setup by default to access MySQL.
 It's recommended that you change the password of the 'hordemgr' user used
 to connect to the horde database.  For localhost security, the file
 
-	${PHPLIBDIR}/local.inc
+	${HORDEDIR}/config/horde.php
 
 should be accessible only to the webserver process as it contains the
 horde database password.
