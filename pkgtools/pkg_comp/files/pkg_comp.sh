@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.9 2003/07/20 16:05:04 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.10 2003/08/30 21:11:31 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
@@ -47,7 +47,7 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 USE_XPKGWEDGE REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
-                NETBSD_RELEASE"
+                NETBSD_RELEASE MOUNT_SCRIPT UMOUNT_SCRIPT"
 
 env_clean()
 {
@@ -99,6 +99,9 @@ env_setdefaults()
     : ${REAL_PACKAGES:=/usr/pkgsrc/packages}
     : ${REAL_PACKAGES_OPTS:=-t null -o rw}
     : ${REAL_PKGVULNDIR:=/usr/pkgsrc/distfiles}
+    : ${NETBSD_RELEASE:=no}
+    : ${MOUNT_SCRIPT:=}
+    : ${UMOUNT_SCRIPT:=}
 }
 
 # ----------------------------------------------------------------------
@@ -185,13 +188,19 @@ fsmount()
 
     touch $fsstate
     echo " done."
+
+    if [ -n "$MOUNT_SCRIPT" -a -x "$MOUNT_SCRIPT" ]; then
+        echo "PKG_COMP ==> Executing mount script."
+        $MOUNT_SCRIPT $DESTDIR mount
+    fi
 }
 
 fsumount()
 {
-    printf "PKG_COMP ==> Unmounting chroot filesystems:"
+    msg="PKG_COMP ==> Unmounting chroot filesystems:"
+
     if [ ! -f $fsstate ]; then
-        echo " none mounted."
+        echo "$msg none mounted."
         return
     fi
 
@@ -199,9 +208,16 @@ fsumount()
     if [ $count -gt 1 ]; then
         count=$(($count - 1))
         echo "$count" > $fsstate
-        echo " still in use."
+        echo "$msg still in use."
         return
     fi
+
+    if [ -n "$UMOUNT_SCRIPT" -a -x "$UMOUNT_SCRIPT" ]; then
+        echo "PKG_COMP ==> Executing umount script."
+        $UMOUNT_SCRIPT $DESTDIR umount
+    fi
+
+    printf "$msg"
 
     fsfailed=no
 
