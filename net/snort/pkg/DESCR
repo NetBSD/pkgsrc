@@ -1,0 +1,10 @@
+  Snort is a libpcap-based packet sniffer/logger which can be used
+as a lightweight network intrusion detection system.  It features
+rules based logging and can perform protocol analysis, content
+searching/matching and can be used to detect a variety of attacks
+and probes, such as buffer overflows, stealth port scans, CGI
+attacks, SMB probes, OS fingerprinting attempts, and much more.
+
+  Snort has a real-time alerting capabilty, with alerts being sent
+to syslog or a seperate "alert" file.   As of version 1.1 it can
+also send WinPopup messages via Samba.
