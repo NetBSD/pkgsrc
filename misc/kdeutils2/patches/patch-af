@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2001/03/22 14:02:24 tron Exp $
+
+--- kdf/kwikdisk.h.orig	Mon Jan 22 13:16:47 2001
++++ kdf/kwikdisk.h	Thu Mar 22 14:30:36 2001
+@@ -106,7 +106,7 @@
+     void updateDF( void );
+     void updateDFDone( void );
+     void setUpdateFrequency( int frequency );
+-    void sysCallError(DiskEntry *disk, int errno);
++    void sysCallError(DiskEntry *disk, int err_no);
+ 
+   protected:
+     void mousePressEvent(QMouseEvent *);

@@ -1,0 +1,16 @@
+$netBSD$
+
+--- kdf/kwikdisk.cpp.orig	Mon Jan 22 13:16:47 2001
++++ kdf/kwikdisk.cpp	Thu Mar 22 14:32:51 2001
+@@ -287,9 +287,9 @@
+ }
+ 
+ 
+-void DockWidget::sysCallError( DiskEntry *disk, int errno )
++void DockWidget::sysCallError( DiskEntry *disk, int err_no )
+ { 
+-  if( errno != 0 )
++  if( err_no != 0 )
+   {
+     KMessageBox::sorry( this, disk->lastSysError() );
+   }
