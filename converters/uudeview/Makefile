@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/03/23 17:45:50 yyamano Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/24 03:11:06 fredb Exp $
 #
 
-DISTNAME=       uudeview-0.5.15
+DISTNAME=       uudeview-0.5.17
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
