@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.479 2000/06/10 06:51:31 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.480 2000/06/16 09:18:26 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2677,6 +2677,79 @@ print-pkg-depend-sizes:
 		${PKG_INFO} -qL "$$dp" ;				\
 	done
 .endfor
+
+
+###
+### Automatic PLIST generation
+###  - files & symlinks first
+###  - @exec/@unexec calls are added for info files
+###  - @dirrm statements last
+###  - empty directories are handled properly
+###  - dirs from mtree files are excluded
+###
+### Usage:
+###  - make install
+###  - make print-PLIST | brain >pkg/PLIST
+###
+
+# Common (system) directories not to generate @dirrm statements for
+# Reads MTREE_FILE and extracts a list of sed commands that will
+# sort out which directories NOT to include into the PLIST @dirrm list
+.if make(print-PLIST)
+COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
+			i=0; 					\
+			stack[i]="${PREFIX}" ; 			\
+			cwd=""; 				\
+		} 						\
+		! ( /^\// || /^\#/ || /^$$/ ) { 		\
+			if ( $$1 == ".." ){ 			\
+				i=i-1;				\
+				cwd = stack[i];			\
+			} else if ( $$1 == "." ){ 		\
+			} else {				\
+				stack[i] = cwd ;		\
+				if ( i == 0 ){ 			\
+					cwd = $$1 ; 		\
+				} else {			\
+					cwd = cwd "\\\\/" $$1 ; \
+				} 				\
+				print "-e \"/^" cwd "$$$$/d\"";	\
+				i=i+1 ; 			\
+			} 					\
+		} 						\
+	' <${MTREE_FILE}
+.endif
+
+
+# scan $PREFIX for any files/dirs modified since the package was extracted
+# will emit "@exec mkdir"-statements for empty directories
+# XXX will fail for data files that were copied using tar (e.g. emacs)!
+# XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
+
+.if !target(print-PLIST)
+print-PLIST:
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.480 2000/06/16 09:18:26 hubertf Exp $$'
+	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
+	 | ${SED} s@${PREFIX}/./@@ 				\
+	 | sort							\
+	 | ${AWK} '						\
+		{ 						\
+		  if (/.info$$/) {				\
+		    print "\@unexec install-info --delete --info-dir=%D/info %D/" $$1; \
+		    print $$1;					\
+		    print "\@exec install-info --info-dir=%D/info %D/" $$1; \
+		  } else if (!/^info\/dir$$/) {			\
+		    print $$1;					\
+		  }						\
+		}'
+	@for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d | ${SED} -e s@${PREFIX}/./@@ -e '/^${PREFIX:S/\//\\\//g}\/.$$/d' | sort -r | ${SED} ${COMMON_DIRS}` ; \
+	do \
+		if [ `ls -la ${PREFIX}/$$i | wc -l` = 3 ]; then \
+			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ; \
+		fi ; \
+		${ECHO} @dirrm $$i ; \
+	done
+.endif # target(print-PLIST)
 
 
 # Fake installation of package so that user can pkg_delete it later.
