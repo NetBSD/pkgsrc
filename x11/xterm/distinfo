@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/02/05 06:00:48 minskim Exp $
+$NetBSD: distinfo,v 1.11 2005/02/05 06:22:51 minskim Exp $
 
 SHA1 (xterm-199.tgz) = 2616505a1cb4669e61c5a48235e73b675726de23
 Size (xterm-199.tgz) = 695302 bytes
+SHA1 (patch-aa) = ebbabc6c96c11c928d7defa722d40fbc7e6afc52
