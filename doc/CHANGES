@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4034 2003/12/09 16:08:35 ben Exp $
+$NetBSD: CHANGES,v 1.4035 2003/12/10 02:59:57 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5045,3 +5045,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated disc-cover to 1.5.4 [drochner 2003-12-09]
 	Updated pkgchk to 1.45 [abs 2003-12-09]
 	Updated tripwire to 1.2nb3 [ben 2003-12-09]
+	Updated tnftpd to 20031210 [lukem 2003-12-10]
