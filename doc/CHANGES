@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4541 2004/01/22 10:54:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.4542 2004/01/22 10:58:24 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -384,3 +384,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdm to 2.4.4.7nb1 [jmmv 2004-01-22]
 	Updated portsentry to 1.2 [agc 2004-01-22]
 	Updated gnome to 2.4.1nb1 [jmmv 2004-01-22]
+	Updated mozilla-bin to 1.6 [grant 2004-01-22]
