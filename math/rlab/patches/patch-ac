@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/31 07:30:32 jtb Exp $
+
+Kludge to prevent RlaB linking with an incompatible LAPACK (eg. version 3.0).
+RlaB needs LAPACK 2.0.
+
+--- flibs/lapack/Makefile.in.orig	Tue Dec 29 05:33:28 1998
++++ flibs/lapack/Makefile.in
+@@ -1,4 +1,4 @@
+-LIBRARY = liblapack.a
++LIBRARY = liblapackrlab.a
+ 
+ SHELL = 	@MSHELL@
+ F77 =		@F77@
