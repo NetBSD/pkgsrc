@@ -62,12 +62,14 @@ CXX = @cxx@
 CXXFLAGS = @cxxflags@
 CFLAGS = @cflags@
 PREFIX = @prefix@
+PREFIX_INCLUDE = @prefix_include@
 LDFLAGS = @ldflags@
 LIBS = @libs@
 OSVER = @osver@
 USELIBWWW = @uselibwww@
 MESSAGELOADER = @messageloader@
 TRANSCODER = @transcoder@
+THREADS = @threads@
 
 MODULE = util
 
@@ -78,4 +80,3 @@ CPP_PUBHEADERS = NetBSDDefs.hpp
 CPP_OBJECTS = NetBSDPlatformUtils.$(TO)
 
 include ../../Makefile.util.submodule
-

@@ -81,32 +81,32 @@
 #include    <string.h>
 #include    <strings.h>/* for strcasecmp & strncasecmp */
 #include    <wchar.h>  /* for win_t */
-#include    <util/PlatformUtils.hpp>
-#include    <util/RuntimeException.hpp>
-#include    <util/Janitor.hpp>
-#include    <util/Mutexes.hpp>
-#include    <util/XMLString.hpp>
-#include    <util/XMLUniDefs.hpp>
-#include    <util/XMLUni.hpp>
+#include    <xercesc/util/PlatformUtils.hpp>
+#include    <xercesc/util/RuntimeException.hpp>
+#include    <xercesc/util/Janitor.hpp>
+#include    <xercesc/util/Mutexes.hpp>
+#include    <xercesc/util/XMLString.hpp>
+#include    <xercesc/util/XMLUniDefs.hpp>
+#include    <xercesc/util/XMLUni.hpp>
 
 #if defined(XML_USE_ICU_TRANSCODER)
-    #include <util/Transcoders/ICU/ICUTransService.hpp>
+    #include <xercesc/util/Transcoders/ICU/ICUTransService.hpp>
 #else
     // Use native transcoder. Same as -DXML_USE_NATIVE_TRANSCODER
-    #include <util/Transcoders/Iconv/IconvTransService.hpp>
+    #include <xercesc/util/Transcoders/Iconv/IconvTransService.hpp>
 #endif
 
 
 #if defined(XML_USE_ICU_MESSAGELOADER)
-    #include <util/MsgLoaders/ICU/ICUMsgLoader.hpp>
+    #include <xercesc/util/MsgLoaders/ICU/ICUMsgLoader.hpp>
 #else
     // Same as -DXML_USE_INMEM_MESSAGELOADER
-    #include <util/MsgLoaders/InMemory/InMemMsgLoader.hpp>
+    #include <xercesc/util/MsgLoaders/InMemory/InMemMsgLoader.hpp>
 #endif
 
 
 #if defined (XML_USE_NETACCESSOR_SOCKET)
-    #include <util/NetAccessors/Socket/SocketNetAccessor.hpp>
+    #include <xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp>
 #endif
 
 
