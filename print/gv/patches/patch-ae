@@ -1,0 +1,11 @@
+--- source/Imakefile.orig	Sun Dec 28 09:04:12 1997
++++ source/Imakefile	Sun Dec 28 09:04:18 1997
+@@ -210,7 +210,7 @@
+ InstallProgramWithFlags(program,$(GV_BINDIR),NullParameter)
+ #endif /* InstallProgram */
+ 
+-MANDIR=$(GV_MANDIR)
++XCOMM MANDIR=$(GV_MANDIR)
+ ComplexProgramTarget(gv)
+ InstallNonExec($(GV_SYSTEM_AD),$(GV_LIBDIR))
+ InstallNonExec($(GV_USER_AD),$(GV_LIBDIR))
