@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1998/05/14 13:55:40 agc Exp $
+# $NetBSD: Makefile,v 1.29 1998/05/24 12:36:39 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -46,7 +46,7 @@
     SUBDIR += p5-Net
 #    SUBDIR += p5-Net-DNS
 #    SUBDIR += p5-Net-Whois
-#    SUBDIR += p5-SNMP
+    SUBDIR += p5-SNMP
 #    SUBDIR += pcnfsd
 #    SUBDIR += pmf
 #    SUBDIR += radius
@@ -74,7 +74,7 @@
 #    SUBDIR += traceroute
 #    SUBDIR += trafshow
     SUBDIR+= ttcp
-#    SUBDIR += ucd-snmp
+    SUBDIR += ucd-snmp
 #    SUBDIR += wais
 #    SUBDIR += wide-dhcp
     SUBDIR += wget
