@@ -1,0 +1,8 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/12/20 16:00:12 martti Exp $
+
+--- configure.orig	2003-12-14 21:24:06.000000000 +0000
++++ configure	2003-12-20 11:59:17.000000000 +0000
+@@ -21142,3 +21142,2 @@
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ 
