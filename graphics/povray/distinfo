@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/03/17 21:44:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2003/08/31 23:04:15 gavan Exp $
 
-SHA1 (povray-3.1g/povuni_s.tgz) = 67b46a203b5f1c925bffaa0913fca70aba7bb781
-Size (povray-3.1g/povuni_s.tgz) = 946513 bytes
-SHA1 (povray-3.1g/povuni_d.tgz) = 801fe1c4c529202f6428d157f13ab9d7c58f5e95
-Size (povray-3.1g/povuni_d.tgz) = 913748 bytes
-SHA1 (patch-aa) = a89307c6b7e8b6b42bcd1e6313810c621b5055c3
-SHA1 (patch-ab) = c037d717dcbc16800ae0ec2d6ca6777a6fd394d1
-SHA1 (patch-ac) = 59caec80ec5d094227d16a3d96caf8747a01da81
+SHA1 (povray-3.50c/povuni_s.tgz) = 95b6687cc9e2a23b412be17da731cc7b84e5f7ab
+Size (povray-3.50c/povuni_s.tgz) = 6602380 bytes
+SHA1 (patch-aa) = a7ed2a8effbbc6ad424c3af3c63f9b0eb7e5caf4
+SHA1 (patch-ab) = 75cd81585cf333f7a18c89a39a90f0e3f58bf99e
+SHA1 (patch-ac) = 34be7bbf31d2205b55082ad7d4e6b981c61cd7f0
