@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3107 2005/02/24 11:53:41 wiz Exp $
+$NetBSD: TODO,v 1.3108 2005/02/24 16:00:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,6 +319,7 @@ Suggested package updates
 	o benchfft-3.1
 	o bind-9.3.1
 	o bioperl-1.4
+	o bitlbee-0.92
 	o blender-2.36
 	o blitz++-0.8
 	o boaconstructor-0.3.1
@@ -586,7 +587,7 @@ Suggested package updates
 	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libetpan-0.34b
-	o libextractor-0.4.1
+	o libextractor-0.4.2
 	o libgda-1.2.0
 	o libggi-2.1
 	o libggiwmh-0.2.0
@@ -728,7 +729,7 @@ Suggested package updates
 	o p5-Data-TemporaryBag-0.08
 	o p5-Device-Gsm-1.36
 	o p5-Device-Modem-1.43
-	o p5-Device-SerialPort-1.002
+	o p5-Device-SerialPort-1.2.0
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
@@ -827,7 +828,7 @@ Suggested package updates
 	o pgpdump-0.24
 	o phoon-20030120
 	o photopc-3.05
-	o phpmyadmin-2.6.1
+	o phpmyadmin-2.6.1pl1
 	o phppgadmin-3.5.2
 	o phylip-3.62
 	o piewm-1.03
@@ -935,7 +936,7 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rtcw-1.41.3
-	o ruby-fox-1.2.3
+	o ruby-fox-1.2.4
 	o rudiments-0.27
 	o sablecc-2.18.2
 	o sablevm-1.1.7
@@ -1102,7 +1103,9 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xlog-1.1
 	o xm7-303
+	o xmame-0.92
 	o xmcd-3.3.0
+	o xmess-0.92
 	o xmlsec-1.2.7
 	o xmlstarlet-1.0.0
 	o xmms-crossfade-0.3.7
