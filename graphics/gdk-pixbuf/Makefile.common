@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2001/08/26 10:32:21 skrll Exp $
+# $NetBSD: Makefile.common,v 1.15 2001/09/09 03:37:01 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.10.1
@@ -17,7 +17,6 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK_ONLY=	# defined
 
 M4=			${LOCALBASE}/bin/gm4
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}

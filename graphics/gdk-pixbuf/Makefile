@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2001/08/29 22:41:17 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/09/09 03:37:01 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME}
 COMMENT=	the GNOME image loading library
 
+USE_BUILDLINK_ONLY=	# defined
 REPLACE_BUILDLINK=	gdk_pixbufConf.sh
 REPLACE_BUILDLINK+=	gdk_pixbuf_xlibConf.sh
 
