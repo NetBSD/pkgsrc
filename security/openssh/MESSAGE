@@ -1,12 +1,12 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:17:04 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/12/05 17:03:56 wiz Exp $
 
 If "starter" configuration files were installed (in ${SSH_CONF_DIR})
 when the package was installed, be sure to examine them (and the man pages
 for ssh and sshd) to determine whether you want to make any changes.
 
 Copies of the example configuration files are installed in
-${PREFIX}/share/examples/ssh, so those can still be used for reference
+${PREFIX}/share/examples/openssh, so those can still be used for reference
 after you have made changes to those installed in ${SSH_CONF_DIR}, or if
 you had existing configuration files, which would not be overwritten in
 the installation process.
