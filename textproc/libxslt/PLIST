@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2004/09/22 08:09:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.32 2004/10/25 08:35:09 xtraeme Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -107,9 +107,13 @@ share/doc/html/libxslt/templates.gif
 share/doc/html/libxslt/tutorial/libxslt_tutorial.c
 share/doc/html/libxslt/tutorial/libxslttutorial.html
 share/doc/html/libxslt/tutorial/libxslttutorial.xml
+share/doc/html/libxslt/tutorial2/libxslt_pipes.c
+share/doc/html/libxslt/tutorial2/libxslt_pipes.html
+share/doc/html/libxslt/tutorial2/libxslt_pipes.xml
 share/doc/html/libxslt/xslt.html
 share/doc/html/libxslt/xsltproc.html
 share/doc/html/libxslt/xsltproc2.html
+@dirrm share/doc/html/libxslt/tutorial2
 @dirrm share/doc/html/libxslt/tutorial
 @dirrm share/doc/html/libxslt/html
 @dirrm share/doc/html/libxslt/EXSLT
