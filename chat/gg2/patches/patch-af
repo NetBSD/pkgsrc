@@ -1,0 +1,39 @@
+$NetBSD: patch-af,v 1.1 2005/01/17 20:15:28 kristerw Exp $
+
+--- src/plugins/docklet/dockapp/dockapp_plugin.c.orig	Mon Jan 17 20:54:04 2005
++++ src/plugins/docklet/dockapp/dockapp_plugin.c	Mon Jan 17 20:55:32 2005
+@@ -105,6 +105,8 @@
+ //Przerysowuje elementy dynamiczne pixmapy
+ void draw_pixmap()
+ {
++	int i;
++	GdkFont *font;
+ 
+ 	//tlo ikony
+ 	gdk_gc_set_rgb_fg_color(gc, &clwhite);
+@@ -118,9 +120,6 @@
+ 	if ((icon2_img != NULL) && ((blink_no % 2) == 1))
+ 		gdk_draw_pixbuf(launch_pixmap, gc, icon2_img, 0, 0, icon2.x, icon2.y, icon2.width, icon2.height, GDK_RGB_DITHER_NONE, 0, 0);
+ 
+-	int i;
+-	GdkFont *font;
+-
+ 	//Wyswietl 3 nicki w kolorach zalenych od statusu
+ 	font = gdk_font_load("-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso8859-2");
+ 	gdk_gc_set_rgb_fg_color(gc, &clred);
+@@ -350,6 +349,7 @@
+ //Funkcja startowa pluginu, exportowana,musi byc
+ void start_plugin()
+ {
++	XWMHints wmhints;
+ 	print_debug("%s : start\n", GGadu_PLUGIN_NAME);
+ 
+ 	//Etykietki
+@@ -397,7 +397,6 @@
+ 	redraw();
+ 
+ 	//Windowmaker hints - tu sprowadza okno do ikony
+-	XWMHints wmhints;
+ 	wmhints.initial_state = WithdrawnState;
+ 	wmhints.flags = StateHint;
+ 	XSetWMHints(GDK_DISPLAY(), GDK_WINDOW_XWINDOW(status_dockapp->window), &wmhints);
