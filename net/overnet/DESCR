@@ -1,2 +1,5 @@
-Overnet is an application that allows you to share files with millions
-of other people across the globe.
+Overnet is a File Sharing program. This means that it will give you the
+opportunity to share files you have on your computer with other users on
+the network, and you will in turn be able to download files of them.
+
+This package is not built from sources, but installs a binary version.
