@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6493 2004/07/08 06:22:01 martti Exp $
+$NetBSD: CHANGES,v 1.6494 2004/07/08 10:32:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jam to 2.5 [schmonz 2004-07-07]
 	Updated nmap to 3.55 [salo 2004-07-07]
 	Updated ethereal to 0.10.5 [martti 2004-07-08]
+	Added ucarp-1.0 [xtraeme 2004-07-08]
