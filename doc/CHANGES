@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2977 2003/08/03 15:50:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.2978 2003/08/03 20:44:26 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mk-files to 20030731 [sjg 2003-08-02]
 	Updated audacity to 1.0.0.2nb4 [jmmv 2003-08-03]
 	Added beecrypt-2.1.0 [jmmv 2003-08-03]
+	Updated cdlabelgen to 2.6.1 [jdolecek 2003-08-03]
