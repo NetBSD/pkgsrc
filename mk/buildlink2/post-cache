@@ -1,4 +1,4 @@
-# $NetBSD: post-cache,v 1.1.2.5 2002/06/29 20:17:57 jlam Exp $
+# $NetBSD: post-cache,v 1.1.2.6 2002/06/30 18:17:37 jlam Exp $
 
 *)
 	case $arg in
@@ -40,6 +40,21 @@
 			;;
 		esac
 		arg="$newarg"
+		;;
+	*)
+		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		case $arg in
+		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+			arg="\"$arg\""
+			;;
+		esac
+		case $updatecache in
+		yes)
+			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+			@ECHO@ "$arg) arg=\"$newarg\" ;; #4" >> $cache
+			cacheupdated=yes
+			;;
+		esac
 		;;
 	esac
 	;;
