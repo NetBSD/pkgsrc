@@ -1,0 +1,20 @@
+$NetBSD: patch-aj,v 1.1 2000/03/27 00:59:13 fredb Exp $
+
+--- ssh.1.orig	Fri Mar 17 06:40:17 2000
++++ ssh.1	Sun Mar 26 18:50:05 2000
+@@ -829,6 +829,7 @@
+ .Dq yes
+ or
+ .Dq no .
++.El
+ .Sh ENVIRONMENT
+ .Nm
+ will normally set the following environment variables:
+@@ -1056,6 +1057,7 @@
+ .It Pa libcrypto.so.X.1
+ A version of this library which includes support for the RSA algorithm
+ is required for proper operation.
++.El
+ .Sh AUTHOR
+ OpenSSH
+ is a derivative of the original (free) ssh 1.2.12 release by Tatu Ylonen,

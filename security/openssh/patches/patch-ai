@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2000/03/27 00:59:13 fredb Exp $
+
+--- ssh-keygen.1.orig	Sat Jan 22 02:57:40 2000
++++ ssh-keygen.1	Sun Mar 26 18:45:41 2000
+@@ -124,6 +124,7 @@
+ on all machines
+ where you wish to log in using RSA authentication.  There is no
+ need to keep the contents of this file secret.
++.El
+ .Sh AUTHOR
+ Tatu Ylonen <ylo@cs.hut.fi>
+ .Pp
