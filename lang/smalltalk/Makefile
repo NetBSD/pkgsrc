@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/08/09 10:59:11 seb Exp $
+# $NetBSD: Makefile,v 1.22 2003/08/11 18:27:27 jmc Exp $
 
 DISTNAME=		smalltalk-2.1.4
 CATEGORIES=		lang
@@ -25,13 +25,13 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}/lib
 CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}/lib
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
-CONFIGURE_ARGS+=	--without-libiconv
 CONFIGURE_ARGS+=	--without-glib --without-gtk
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
 TEST_TARGET=		check
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
