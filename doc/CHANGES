@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1000 2003/01/03 21:40:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.1001 2003/01/03 22:23:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -61,5 +61,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pan to 0.13.3 (gtk2-pan) [wiz 2003-01-03]
 	Updated Speex to 0.99.4nb1 [wiz 2003-01-03]
 	Updated capc-calc to 2.11.6 [wiz 2003-01-03]
-	Update nawk to 20021213 [cjep 2003-01-03]
+	Updated nawk to 20021213 [cjep 2003-01-03]
 	Updated libgnomecanvas to 2.0.5 [jmmv 2003-01-03]
+	Updated cal to 3.5nb1 [jmmv 2003-01-03]
