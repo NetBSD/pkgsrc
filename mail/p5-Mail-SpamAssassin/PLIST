@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/03 11:48:35 mjl Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/03 14:02:39 lukem Exp $
 @comment bin/spamassassin
 @comment bin/spamc
 @comment bin/spamd
@@ -16,12 +16,17 @@ share/spamassassin/20_head_tests.cf
 share/spamassassin/20_uri_tests.cf
 share/spamassassin/25_body_tests_es.cf
 share/spamassassin/25_body_tests_pl.cf
+share/spamassassin/25_head_tests_es.cf
 share/spamassassin/25_head_tests_pl.cf
+share/spamassassin/30_text_de.cf
 share/spamassassin/30_text_es.cf
+share/spamassassin/30_text_fr.cf
 share/spamassassin/30_text_pl.cf
 share/spamassassin/40_spam_phrases.cf
 share/spamassassin/50_scores.cf
 share/spamassassin/60_whitelist.cf
+share/spamassassin/languages
+share/spamassassin/triplets.txt
 share/spamassassin/user_prefs.template
 @dirrm share/doc/spamassassin/spamd
 @dirrm share/doc/spamassassin/sql
