@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/26 19:55:01 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/05 17:26:00 tsarna Exp $
 bin/garble
-bin/gpsd
 bin/gpsdrive
 bin/gpsfetchmap
 bin/gpsfetchmap.pl
