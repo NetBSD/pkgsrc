@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.65 2001/11/28 19:58:13 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.66 2001/12/12 12:31:15 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -27,6 +27,9 @@ OPSYS!=			${UNAME} -s
 MAKEFLAGS+=		OPSYS=${OPSYS}
 .ifndef OS_VERSION
 OS_VERSION!=		${UNAME} -r
+.endif
+.ifndef LOWER_OS_VERSION
+LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr A-Z a-z
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
