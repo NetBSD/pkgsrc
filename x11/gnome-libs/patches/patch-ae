@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.5 2000/10/17 23:57:45 jlam Exp $
+$NetBSD: patch-ae,v 1.6 2002/03/24 19:53:45 rh Exp $
 
---- devel-docs/Makefile.in.orig	Thu Oct 12 23:04:00 2000
+--- devel-docs/Makefile.in.orig	Fri Jan 25 09:58:24 2002
 +++ devel-docs/Makefile.in
-@@ -156,7 +156,7 @@
- EXTRA_DIST =  	TODO.sgml				gnome-doc-framework.txt			$(TEXT_FILES)
+@@ -169,7 +169,7 @@
+ 	$(TEXT_FILES)
  
  
 -docdir = $(prefix)/doc

@@ -1,26 +1,26 @@
-$NetBSD: patch-ad,v 1.9 2001/06/16 20:04:51 jlam Exp $
+$NetBSD: patch-ad,v 1.10 2002/03/24 19:53:44 rh Exp $
 
---- libgnome/Makefile.in.orig	Fri Mar 16 14:47:28 2001
-+++ libgnome/Makefile.in	Sat Jun 16 08:58:22 2001
-@@ -154,7 +154,7 @@
+--- libgnome/Makefile.in.orig	Fri Jan 25 09:58:07 2002
++++ libgnome/Makefile.in
+@@ -156,7 +156,7 @@
  
- libgnomeincludedir = $(includedir)/libgnome
- 
--INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	-I$(includedir) $(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 	-DGNOMELIBDIR=\""$(libdir)"\" 	-DGNOMEDATADIR=\""$(datadir)"\" 	-DGNOMEBINDIR=\""$(bindir)"\" 	-DGNOMELOCALSTATEDIR=\""$(localstatedir)"\" 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DGNOMESYSCONFDIR=\""$(sysconfdir)"\" 	-DVERSION=\""$(VERSION)"\" 	-DG_LOG_DOMAIN=\"Gnome\"
-+INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	$(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 	-DGNOMELIBDIR=\""$(libdir)"\" 	-DGNOMEDATADIR=\""$(datadir)"\" 	-DGNOMEBINDIR=\""$(bindir)"\" 	-DGNOMELOCALSTATEDIR=\""$(localstatedir)"\" 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DGNOMESYSCONFDIR=\""$(sysconfdir)"\" 	-DVERSION=\""$(VERSION)"\" 	-DG_LOG_DOMAIN=\"Gnome\"
- 
- 
- libgnome_la_SOURCES =  	gnome-config.c			gnome-dentry.c          	gnome-exec.c			gnome-fileconvert.c		gnome-help.c			gnome-history.c			gnome-i18n.c			gnome-magic.c			gnome-metadata.c		gnome-mime.c			gnome-mime-info.c		gnome-popt.c			gnome-regex.c			gnome-remote.c			gnome-score.c			gnome-sound.c			gnome-triggers.c		gnome-url.c			gnome-util.c			gnome-paper.c			gnomelib-init.c
-@@ -233,7 +233,7 @@
+ INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) \
+ 	-I$(top_srcdir)/intl -I$(top_builddir)/intl \
+-	-I$(includedir) $(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  \
++	$(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  \
+ 	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) \
+ 	-DGNOMELIBDIR=\""$(libdir)"\" \
+ 	-DGNOMEDATADIR=\""$(datadir)"\" \
+@@ -303,7 +303,7 @@
  gnome_gen_mimedb_LDFLAGS = 
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 -LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 +LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) ${LIBGNOME_LTCOMPILE_FLAGS} $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
- HEADERS =  $(libgnomeinclude_HEADERS) $(noinst_HEADERS)
- 
-@@ -322,7 +322,7 @@
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)
+@@ -396,7 +396,7 @@
  maintainer-clean-libtool:
  
  libgnome.la: $(libgnome_la_OBJECTS) $(libgnome_la_DEPENDENCIES)
