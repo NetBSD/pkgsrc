@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/22 13:32:28 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2001/06/16 00:29:30 wiz Exp $
 
 --- system.mk.orig	Mon Mar  5 17:16:01 2001
 +++ system.mk
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/04/22 13:32:28 zuntum Exp $
  ##
  
 -PREFIX=/usr/local
-+PREFIX=$(X11BASE)
++#PREFIX=/usr/local
  
  # No need to modify these usually
  BINDIR=$(PREFIX)/bin
