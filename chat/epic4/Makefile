@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/29 10:48:34 wennmach Exp $
 #
 
 DISTNAME=	epic4-0.10.1
@@ -7,9 +7,9 @@ MASTER_SITES=	ftp://ftp.magenet.com/pub/epic/EPIC4-BETA/		\
 		ftp://ftp.icm.edu.pl/vol/rzm0/irc/EPIC/EPIC4-BETA/	\
 		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-BETA/ \
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-BETA/
+EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 		epic4pre2-help.tar.gz
-EXTRACT_SUFX=	.tar.bz2
 
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
