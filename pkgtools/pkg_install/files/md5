@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/09/11 19:04:48 tron Exp $
+$NetBSD: md5,v 1.3 1998/10/21 09:24:51 agc Exp $
 
-MD5 (pkg_install-19980911.tar.gz) = a335b0bfcc1066c53cba97a3158eb148
+MD5 (pkg_install-19981019.tar.gz) = 860affa84727247e0aa3c7fd0a880f0d
