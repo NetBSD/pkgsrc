@@ -1,0 +1,12 @@
+This is a free reimplementation of Kernighan and Bentley's grap
+language for typesetting graphs, as described in ``Grap-A Language for
+Typesetting Graphs, Tutorial and User Manual,'' by Jon L. Bentley and
+Brian W.  Kernighan, revised May 1991, which is the primary source for
+information on how to use grap.
+
+grap is a pic pre-processor.  It takes commands embedded in a troff
+source file which are surrounded by .G1 and .G2 macros, and rewrites
+them into pic commands to display the graph.
+
+Because grap is a pic preprocessor, and GNU pic will output TeX, it is
+possible to use grap with TeX.
