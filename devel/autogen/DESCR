@@ -13,5 +13,3 @@ program. You need at least:
    2. code to process the flag when it is encountered,
    3. a global state variable or two, and
    4. a line in the usage text.
-
-WWW: http://autogen.sourceforge.net/
