@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 2000/07/07 07:47:25 skrll Exp $
+
 --- configs/netbsd-g++-static.orig	Fri Feb 26 17:02:07 1999
 +++ configs/netbsd-g++-static	Thu Jun 15 12:37:34 2000
 @@ -1,5 +1,6 @@
