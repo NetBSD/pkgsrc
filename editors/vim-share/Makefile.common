@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2002/03/24 19:39:08 martti Exp $
+# $NetBSD: Makefile.common,v 1.28 2002/03/25 08:04:02 martti Exp $
 
 VIM_VERSION=		6.1
 VIM_PATCHLEVEL=		0
@@ -22,6 +22,10 @@ HOMEPAGE=		http://www.vim.org/
 
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/vim61/src
+
+# See "configure --help" extra options. These might affect the installed
+# files (and PLIST might not include all files) so use at your own risk!
+CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 
 PATCH_ARGS=		-d ${WRKDIR}/vim61 --forward --quiet \
 				-E ${PATCH_STRIP}
