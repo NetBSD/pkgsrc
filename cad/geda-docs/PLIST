@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/18 14:25:48 dmcmahill Exp $
 share/doc/gEDA/README
+share/doc/gEDA/README.keymapping
+share/doc/gEDA/attributes.txt
 share/doc/gEDA/fileformats.html
+share/doc/gEDA/hooks_and_scheme.txt
 share/doc/gEDA/keymapping.html
+share/doc/gEDA/keymapping.tex
+share/doc/gEDA/netattrib.txt
 share/doc/gEDA/symbols.html
 @dirrm share/doc/gEDA
