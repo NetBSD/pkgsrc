@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/24 10:23:08 bouyer Exp $
-
-SHA1 (./opera-static-5.0-1.i386.rpm) = dbaf27b7afe43eba996bdbbe970d50bb7d58cf7c
-Size (./opera-static-5.0-1.i386.rpm) = 2801119 bytes
-SHA1 (opera-5.0-b1-20010618.003-static.solaris.sparc.tar.gz) = 24f285bcd40d9d222aa6648b738f92607a0febe0
-Size (opera-5.0-b1-20010618.003-static.solaris.sparc.tar.gz) = 3760625 bytes
