@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.142 2003/01/05 20:17:07 jlam Exp $
+$NetBSD: TODO,v 1.143 2003/01/06 00:07:38 rh Exp $
 
 Suggested new packages
 ======================
@@ -76,7 +76,6 @@ Suggested package updates
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
-	o anjuta-1.0.1
 	o aspell-0.50.3
 	o auctex-11.14
 	o aumix-2.8
