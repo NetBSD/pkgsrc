@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/10 13:03:53 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/15 13:56:33 grant Exp $
 
 DISTNAME=		firefox-bin-java-1.0
 CATEGORIES=		www lang
@@ -6,7 +6,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		kei@NetBSD.org
-COMMENT=		Java Run Time Environment (JRE) 1.3 plugin for phoenix-bin
+COMMENT=		Java Run Time Environment (JRE) 1.3 plugin for firefox-bin
 
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
