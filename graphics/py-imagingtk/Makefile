@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/09/21 23:46:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/24 19:32:22 drochner Exp $
 #
 
-DISTNAME=	Imaging-1.1.2
-PKGNAME=	py20-imagingtk-1.1.2
+DISTNAME=	Imaging-1.1.3
+PKGNAME=	py20-imagingtk-1.1.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
@@ -15,9 +15,11 @@ BUILDLINK_DEPENDS.python20= python20>=2.0.1nb1
 
 DIST_SUBDIR=    python
 ALL_TARGET=     sharedmods
+USE_BUILDLINK2=	yes
 
 do-configure:
 	(cd ${WRKSRC}/libImaging; CC="cc -fPIC" LIBS="${LDFLAGS}" ./configure)
+	${CHMOD} +w ${WRKSRC}/Setup.in ${WRKSRC}/Makefile.pre.in
 	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@X11BASE@,${X11BASE},g' \
 	        ${FILESDIR}/Setup.in >${WRKSRC}/Setup.in
 	${CP} ${LOCALBASE}/${PYLIB}/config/Makefile.pre.in ${WRKSRC}
@@ -26,11 +28,12 @@ do-configure:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/_imagingtk.so \
 		${PREFIX}/lib/python2.0/site-packages/PIL
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py20-imaging
 	(cd ${WRKSRC}/Scripts; \
 	${INSTALL_DATA} enhancer.py painter.py player.py \
 	thresholder.py viewer.py ${PREFIX}/share/examples/py20-imaging )
 
 .include "../../lang/python/extension.mk"
-.include "../../graphics/py-imaging/buildlink.mk"
-.include "../../x11/py-Tk/buildlink.mk"
+.include "../../graphics/py-imaging/buildlink2.mk"
+.include "../../x11/py-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
