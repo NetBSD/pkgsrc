@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
+$NetBSD: patch-aa,v 1.7 2004/07/10 22:18:23 wiz Exp $
 
---- Makefile.orig	Tue Oct 28 00:07:06 1997
+--- Makefile.orig	1997-10-28 00:07:06.000000000 +0100
 +++ Makefile
-@@ -13,9 +13,9 @@
+@@ -13,9 +13,9 @@ PROGRAMS = cqcam xcqcam webcam
  # OS-specific stuff: uncomment all of the lines for your OS of choice
  
  # Linux (people with Alphas probably need to enable -DBROKEN_IO_H)
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
  
  # QNX
  #CFLAGS = -O2 -T1
-@@ -23,10 +23,21 @@
+@@ -23,10 +23,21 @@ DEFS += -DLINUX # -DBROKEN_IO_H
  #DEFS += -DQNX
  
  # FreeBSD
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
  # BSDI 3.0
  #CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
  #LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
-@@ -44,15 +55,14 @@
+@@ -44,15 +55,14 @@ DEFS += -DLINUX # -DBROKEN_IO_H
  # JPEG stuff: do you want JPEG support?  Where is your JPEG library?
  
  LDLIBS += -ljpeg
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
  LIBS_X = -lX11 -lXext $(REMOTE_LIBS)
  ######################################################################
  
-@@ -67,27 +77,27 @@
+@@ -67,34 +77,34 @@ LIBS_X = -lX11 -lXext $(REMOTE_LIBS)
  #   If you're not compiling xcqcam, this section is irrelevant
  
  # xview remote
@@ -97,7 +97,15 @@ $NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
  ######################################################################
  
  ######################################################################
-@@ -132,13 +142,14 @@
+ # Compiler information: where are CC and LD?
+ CC = cc
+ #CC = gcc
+-LD = cc
++LD = c++
+ #LD = gcc
+ ######################################################################
+ 
+@@ -132,13 +142,14 @@ install: bininstall maninstall
  
  bininstall: all
  	@echo -n Installing binaries...
