@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2004/03/08 03:04:36 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/08 06:03:10 minskim Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
 DISTNAME=	gnuchess-5.07
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=chess/}
 
@@ -25,6 +26,12 @@ CONFIGURE_ENV+=		CFLAGS="-O -Winline -Wmissing-prototypes -funroll-loops"
 .else
 CONFIGURE_ENV+=         CFLAGS="-O3 -Winline -Wmissing-prototypes -funroll-loops -fomit-frame-pointer"
 .endif
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	src/book.h
+SUBST_SED.paths=	-e 's,/usr/lib/games/,${LOCALBASE}/lib/,g' \
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
