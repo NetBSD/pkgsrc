@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2793 2004/12/29 01:22:49 wiz Exp $
+$NetBSD: TODO,v 1.2794 2004/12/29 09:23:09 recht Exp $
 
 Suggested new packages
 ======================
@@ -277,7 +277,6 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o adzap-20041124
 	o afterstep-2.00.01
-	o aiksaurus-1.2.1
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o alee-ttf-3.1
