@@ -5,7 +5,7 @@ case "$2" in
 
 =============================================================
 Note that ssh configuration, key, and random-seed files
-(<$SSH_CONF_DIR>/ssh*) are not removed in the deinstallation
+(@SSH_CONF_DIR@/ssh*) are not removed in the deinstallation
 process.  You should remove those by hand, if you no longer
 need them.
 =============================================================
