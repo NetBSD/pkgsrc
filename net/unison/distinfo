@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/09/28 23:54:36 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2002/01/17 13:19:45 dmcmahill Exp $
 
-SHA1 (unison/src.tar.gz) = dd698c280814b26a3679af4a02daf555005baaf6
-Size (unison/src.tar.gz) = 315314 bytes
+SHA1 (unison-2.7.7/src.tar.gz) = dd698c280814b26a3679af4a02daf555005baaf6
+Size (unison-2.7.7/src.tar.gz) = 315314 bytes
 SHA1 (patch-aa) = 882f8703b7b1c797a7cb711d15aed4885dc934fb
