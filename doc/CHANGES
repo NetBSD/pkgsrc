@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4911 2004/02/19 13:24:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.4912 2004/02/19 13:42:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-TTFQuery-0.2.6 [minskim 2004-02-19]
 	Added py-OpenSSL-0.5.1 [minskim 2004-02-19]
 	Updated gpdf to 0.122.1 [jmmv 2004-02-19]
+	Updated metacity to 2.6.5 [jmmv 2004-02-19]
