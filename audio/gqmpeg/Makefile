@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/10/23 13:14:43 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2001/10/24 22:10:44 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.9.0
@@ -27,8 +27,8 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
