@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1999/08/25 11:22:16 fredb Exp $
+
+--- NServer-0.9.1/Article.h.orig	Mon Jul  5 12:07:49 1999
++++ NServer-0.9.1/Article.h	Wed Aug 25 05:58:07 1999
+@@ -2,8 +2,8 @@
+ #define _Article_h_
+ 
+ #include <ctype.h>
+-
+-#include <string>
++#include <stdio.h>
++#include <string.h>
+ 
+ #include "NSError.h"
+ #include "Debug.h"
