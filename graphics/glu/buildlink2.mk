@@ -1,12 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.14 2004/01/20 02:48:33 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.15 2004/01/25 17:26:07 jlam Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
-
 BUILDLINK_PACKAGES+=		glu
-BUILDLINK_DEPENDS.glu?=		glu>=${MESA_VERSION}
+BUILDLINK_DEPENDS.glu?=		glu>=6.0
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 EVAL_PREFIX+=			BUILDLINK_PREFIX.glu=glu
 BUILDLINK_PREFIX.glu_DEFAULT=	${LOCALBASE}
