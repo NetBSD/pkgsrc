@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:23 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/21 22:08:14 tron Exp $
 
-DISTNAME=	vim-5.0
+DISTNAME=	vim-5.1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.oce.nl/pub/vim/unix/ \
 		ftp://uiarchive.uiuc.edu/pub/packages/vim/ \
