@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2004/01/05 11:32:40 jlam Exp $
+# $NetBSD: Makefile,v 1.175 2004/01/10 22:31:51 wiz Exp $
 #
 
 DISTNAME=	pkglint-3.66
@@ -49,6 +49,7 @@ do-build:
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
+		-e 's|@PERL@|${PERL5}|g'		\
 		< ${WRKSRC}/src/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor

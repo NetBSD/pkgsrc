@@ -1,4 +1,4 @@
-#!@PREFIX@/bin/perl
+#!@PERL@
 #
 # pkglint - lint for package directory
 #
@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.93 2003/12/24 09:54:39 jmmv Exp $
+# $NetBSD: pkglint.pl,v 1.94 2004/01/10 22:31:51 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
