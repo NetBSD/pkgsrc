@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/11/19 07:15:14 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2002/11/23 16:15:21 cjep Exp $
 
 --- grep.1.orig	Fri Oct 29 17:02:36 1999
 +++ grep.1
-@@ -35,10 +35,10 @@
+@@ -35,18 +35,18 @@
  .Dt GREP 1
  .Os
  .Sh NAME
@@ -13,9 +13,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/11/19 07:15:14 cjep Exp $
 -.Nm grep
 +.Nm bgrep
  .Op Fl AB Ar num
- .Op Fl CEFGHLPRSVZabchilnoqsvwx
+-.Op Fl CEFGHLPRSVZabchilnoqsvwx
++.Op Fl CEFGHLPRSVZabchilnoqrsvwx
  .Op Fl e Ar pattern
-@@ -46,7 +46,7 @@
+ .Op Fl f Ar file
  .Op Ar
  .Sh DESCRIPTION
  The
@@ -75,7 +76,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/11/19 07:15:14 cjep Exp $
  to behave as
  .Nm zgrep .
  .It Fl a
-@@ -204,7 +204,7 @@
+@@ -185,6 +185,8 @@
+ Always print filename headers with output lines.
+ .It Fl q
+ Suppress normal output.
++.It Fl r
++Read all files under each directory recursively.
+ .It Fl s
+ Silent mode.  Nonexistent and unreadable files are ignored.
+ .It Fl v
+@@ -204,7 +206,7 @@
  If no file arguments are specified, the standard input is used.
  .Pp
  The
@@ -84,7 +94,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/11/19 07:15:14 cjep Exp $
  utility exits with one of the following values:
  .Pp
  .Bl -tag -width flag -compact
-@@ -243,16 +243,16 @@
+@@ -243,16 +245,16 @@
  .Sh EXAMPLES
  To find all occurrences of the word patricia in a file:
  .Pp
