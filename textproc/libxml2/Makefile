@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2003/11/02 07:02:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.39 2003/12/04 19:33:38 xtraeme Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxml-2.0.pc.in
 
-LIBXML_VERSION=		2.5.11
+LIBXML_VERSION=		2.6.2
 PLIST_SUBST+=		LIBXML_VERSION=${LIBXML_VERSION}
 
 GNU_CONFIGURE=		yes

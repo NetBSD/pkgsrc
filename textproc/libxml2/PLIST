@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2003/10/05 10:10:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2003/12/04 19:33:38 xtraeme Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -6,9 +6,12 @@ include/libxml2/libxml/DOCBparser.h
 include/libxml2/libxml/HTMLparser.h
 include/libxml2/libxml/HTMLtree.h
 include/libxml2/libxml/SAX.h
+include/libxml2/libxml/SAX2.h
 include/libxml2/libxml/c14n.h
 include/libxml2/libxml/catalog.h
+include/libxml2/libxml/chvalid.h
 include/libxml2/libxml/debugXML.h
+include/libxml2/libxml/dict.h
 include/libxml2/libxml/encoding.h
 include/libxml2/libxml/entities.h
 include/libxml2/libxml/globals.h
@@ -29,6 +32,7 @@ include/libxml2/libxml/xlink.h
 include/libxml2/libxml/xmlIO.h
 include/libxml2/libxml/xmlautomata.h
 include/libxml2/libxml/xmlerror.h
+include/libxml2/libxml/xmlexports.h
 include/libxml2/libxml/xmlmemory.h
 include/libxml2/libxml/xmlreader.h
 include/libxml2/libxml/xmlregexp.h
@@ -36,14 +40,15 @@ include/libxml2/libxml/xmlschemas.h
 include/libxml2/libxml/xmlschemastypes.h
 include/libxml2/libxml/xmlunicode.h
 include/libxml2/libxml/xmlversion.h
+include/libxml2/libxml/xmlwriter.h
 include/libxml2/libxml/xpath.h
 include/libxml2/libxml/xpathInternals.h
 include/libxml2/libxml/xpointer.h
 lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
-lib/libxml2.so.7
-lib/libxml2.so.7.11
+lib/libxml2.so.8
+lib/libxml2.so.8.2
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -55,45 +60,49 @@ share/doc/html/libxml2/DOM.gif
 share/doc/html/libxml2/FAQ.html
 share/doc/html/libxml2/Libxml2-Logo-180x168.gif
 share/doc/html/libxml2/Libxml2-Logo-90x34.gif
-share/doc/html/libxml2/book1.html
 share/doc/html/libxml2/encoding.html
-share/doc/html/libxml2/index.html
-share/doc/html/libxml2/libxml-DOCBparser.html
-share/doc/html/libxml2/libxml-HTMLparser.html
-share/doc/html/libxml2/libxml-HTMLtree.html
-share/doc/html/libxml2/libxml-SAX.html
-share/doc/html/libxml2/libxml-c14n.html
-share/doc/html/libxml2/libxml-catalog.html
-share/doc/html/libxml2/libxml-debugXML.html
-share/doc/html/libxml2/libxml-encoding.html
-share/doc/html/libxml2/libxml-entities.html
-share/doc/html/libxml2/libxml-globals.html
-share/doc/html/libxml2/libxml-hash.html
-share/doc/html/libxml2/libxml-lib.html
-share/doc/html/libxml2/libxml-nanoftp.html
-share/doc/html/libxml2/libxml-nanohttp.html
-share/doc/html/libxml2/libxml-notes.html
-share/doc/html/libxml2/libxml-parser.html
-share/doc/html/libxml2/libxml-parserInternals.html
-share/doc/html/libxml2/libxml-relaxng.html
-share/doc/html/libxml2/libxml-schemasInternals.html
-share/doc/html/libxml2/libxml-threads.html
-share/doc/html/libxml2/libxml-tree.html
-share/doc/html/libxml2/libxml-uri.html
-share/doc/html/libxml2/libxml-valid.html
-share/doc/html/libxml2/libxml-xinclude.html
-share/doc/html/libxml2/libxml-xmlIO.html
-share/doc/html/libxml2/libxml-xmlautomata.html
-share/doc/html/libxml2/libxml-xmlerror.html
-share/doc/html/libxml2/libxml-xmlmemory.html
-share/doc/html/libxml2/libxml-xmlreader.html
-share/doc/html/libxml2/libxml-xmlregexp.html
-share/doc/html/libxml2/libxml-xmlschemas.html
-share/doc/html/libxml2/libxml-xmlschemastypes.html
-share/doc/html/libxml2/libxml-xmlunicode.html
-share/doc/html/libxml2/libxml-xpath.html
-share/doc/html/libxml2/libxml-xpathInternals.html
-share/doc/html/libxml2/libxml-xpointer.html
+share/doc/html/libxml2/html/book1.html
+share/doc/html/libxml2/html/home.png
+share/doc/html/libxml2/html/index.html
+share/doc/html/libxml2/html/left.png
+share/doc/html/libxml2/html/libxml-DOCBparser.html
+share/doc/html/libxml2/html/libxml-HTMLparser.html
+share/doc/html/libxml2/html/libxml-HTMLtree.html
+share/doc/html/libxml2/html/libxml-SAX.html
+share/doc/html/libxml2/html/libxml-c14n.html
+share/doc/html/libxml2/html/libxml-catalog.html
+share/doc/html/libxml2/html/libxml-debugXML.html
+share/doc/html/libxml2/html/libxml-encoding.html
+share/doc/html/libxml2/html/libxml-entities.html
+share/doc/html/libxml2/html/libxml-globals.html
+share/doc/html/libxml2/html/libxml-hash.html
+share/doc/html/libxml2/html/libxml-lib.html
+share/doc/html/libxml2/html/libxml-nanoftp.html
+share/doc/html/libxml2/html/libxml-nanohttp.html
+share/doc/html/libxml2/html/libxml-notes.html
+share/doc/html/libxml2/html/libxml-parser.html
+share/doc/html/libxml2/html/libxml-parserInternals.html
+share/doc/html/libxml2/html/libxml-relaxng.html
+share/doc/html/libxml2/html/libxml-schemasInternals.html
+share/doc/html/libxml2/html/libxml-threads.html
+share/doc/html/libxml2/html/libxml-tree.html
+share/doc/html/libxml2/html/libxml-uri.html
+share/doc/html/libxml2/html/libxml-valid.html
+share/doc/html/libxml2/html/libxml-xinclude.html
+share/doc/html/libxml2/html/libxml-xmlIO.html
+share/doc/html/libxml2/html/libxml-xmlautomata.html
+share/doc/html/libxml2/html/libxml-xmlerror.html
+share/doc/html/libxml2/html/libxml-xmlmemory.html
+share/doc/html/libxml2/html/libxml-xmlreader.html
+share/doc/html/libxml2/html/libxml-xmlregexp.html
+share/doc/html/libxml2/html/libxml-xmlschemas.html
+share/doc/html/libxml2/html/libxml-xmlschemastypes.html
+share/doc/html/libxml2/html/libxml-xmlunicode.html
+share/doc/html/libxml2/html/libxml-xpath.html
+share/doc/html/libxml2/html/libxml-xpathInternals.html
+share/doc/html/libxml2/html/libxml-xpointer.html
+share/doc/html/libxml2/html/right.png
+share/doc/html/libxml2/html/up.png
 share/doc/html/libxml2/libxml.gif
 share/doc/html/libxml2/redhat.gif
 share/doc/html/libxml2/smallfootonly.gif
@@ -106,6 +115,7 @@ share/doc/html/libxml2/tutorial/ape.html
 share/doc/html/libxml2/tutorial/apf.html
 share/doc/html/libxml2/tutorial/apg.html
 share/doc/html/libxml2/tutorial/aph.html
+share/doc/html/libxml2/tutorial/api.html
 share/doc/html/libxml2/tutorial/ar01s02.html
 share/doc/html/libxml2/tutorial/ar01s03.html
 share/doc/html/libxml2/tutorial/ar01s04.html
@@ -113,6 +123,7 @@ share/doc/html/libxml2/tutorial/ar01s05.html
 share/doc/html/libxml2/tutorial/ar01s06.html
 share/doc/html/libxml2/tutorial/ar01s07.html
 share/doc/html/libxml2/tutorial/ar01s08.html
+share/doc/html/libxml2/tutorial/ar01s09.html
 share/doc/html/libxml2/tutorial/images/blank.png
 share/doc/html/libxml2/tutorial/images/callouts/1.png
 share/doc/html/libxml2/tutorial/images/callouts/10.png
@@ -142,6 +153,7 @@ share/doc/html/libxml2/tutorial/includeaddkeyword.c
 share/doc/html/libxml2/tutorial/includeconvert.c
 share/doc/html/libxml2/tutorial/includegetattribute.c
 share/doc/html/libxml2/tutorial/includekeyword.c
+share/doc/html/libxml2/tutorial/includexpath.c
 share/doc/html/libxml2/tutorial/index.html
 share/doc/html/libxml2/tutorial/ix01.html
 share/doc/html/libxml2/tutorial/xmltutorial.pdf
@@ -152,11 +164,12 @@ share/examples/libxml2/testHTML.c
 share/examples/libxml2/testSAX.c
 share/examples/libxml2/testXPath.c
 share/examples/libxml2/xmllint.c
+@dirrm share/examples/libxml2
 @dirrm share/doc/libxml2
 @dirrm share/doc/html/libxml2/tutorial/images/callouts
 @dirrm share/doc/html/libxml2/tutorial/images
 @dirrm share/doc/html/libxml2/tutorial
+@dirrm share/doc/html/libxml2/html
 @dirrm share/doc/html/libxml2
-@dirrm share/examples/libxml2
 @dirrm include/libxml2/libxml
 @dirrm include/libxml2
