@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/05/06 23:22:28 tv Exp $
+
+--- readline/Makefile.in.orig	Mon May  3 18:47:25 1999
++++ readline/Makefile.in	Mon May  3 18:47:36 1999
+@@ -377,7 +377,7 @@
+ install-data: install-pkgincludeHEADERS
+ 	@$(NORMAL_INSTALL)
+ 
+-install: install-exec install-data all
++install: all
+ 	@:
+ 
+ uninstall: uninstall-pkgincludeHEADERS
