@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1301 2004/01/14 02:28:17 xtraeme Exp $
+$NetBSD: TODO,v 1.1302 2004/01/14 15:06:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o hpijs-1.4.1
 	o icepref-2.3
 	o inn-2.4.1
-	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
