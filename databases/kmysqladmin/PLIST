@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:13:39 jlam Exp $
 bin/kmysqladmin
-share/kde/apps/kmysqladmin/kmysqladminui.rc
-share/kde/applnk/Applications/kmysqladmin.desktop
-share/kde/icons/locolor/32x32/apps/kmysqladmin.png
-share/kde/icons/locolor/16x16/apps/kmysqladmin.png
-share/kde/locale/de/LC_MESSAGES/kmysqladmin.mo
 share/doc/kde/HTML/en/kmysqladmin/index.sgml
 share/doc/kde/HTML/en/kmysqladmin/index.xml
 share/doc/kde/HTML/en/kmysqladmin/index-1.html
@@ -17,5 +12,12 @@ share/doc/kde/HTML/en/kmysqladmin/index-7.html
 share/doc/kde/HTML/en/kmysqladmin/index.html
 share/doc/kde/HTML/en/kmysqladmin/Logo.jpg
 share/doc/kde/HTML/en/kmysqladmin/logotp3.gif
+share/kde/apps/kmysqladmin/kmysqladminui.rc
+share/kde/applnk/Applications/kmysqladmin.desktop
+share/kde/icons/locolor/32x32/apps/kmysqladmin.png
+share/kde/icons/locolor/16x16/apps/kmysqladmin.png
+share/kde/locale/de/LC_MESSAGES/kmysqladmin.mo
+@unexec ${RMDIR} %D/share/kde/locale/de/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/de 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/kmysqladmin
 @dirrm share/doc/kde/HTML/en/kmysqladmin
