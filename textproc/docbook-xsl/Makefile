@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:54:13 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/22 18:34:32 jmmv Exp $
 #
 
-DISTNAME=	docbook-xsl-1.61.2
+DISTNAME=	docbook-xsl-1.61.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
