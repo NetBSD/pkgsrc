@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.66 2004/01/23 21:50:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.67 2004/01/24 13:10:56 xtraeme Exp $
 #
 
 DISTNAME=		abiword-${DIST_VER}
-PKGREVISION=				3
+PKGREVISION=
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/
@@ -28,7 +29,7 @@ USE_GNU_ICONV=		yes # XXX
 
 MAKEFILE=		GNUmakefile
 
-DIST_VER=		2.0.2
+DIST_VER=		2.0.3
 
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-sys-wv
@@ -42,9 +43,8 @@ CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 
 BUILD_DEFS+=			ABIWORD_USES_GUCHARMAP
 
-ABIWORD_USES_GUCHARMAP?=	NO
-
-.if !empty(ABIWORD_USES_GUCHARMAP:M[Yy][Ee][Ss])
+.if defined(ABIWORD_USES_GUCHARMAP) && \
+    !empty(ABIWORD_USES_GUCHARMAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=		--enable-gucharmap
 .include "../../fonts/gucharmap/buildlink2.mk"
 .else
