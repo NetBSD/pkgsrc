@@ -1,0 +1,43 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/08/11 15:54:57 jschauma Exp $
+
+DISTNAME=	# empty
+CATEGORIES=	fonts
+MASTER_SITES=	ftp://ftp-au.netscape.com/pub/communicator/extras/fonts/windows/
+DISTFILES=	${FONT_FILE} ${DOC_FILES}
+
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.bitstream.com
+
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+
+LICENSE=	cyberbit-ttf-license
+RESTRICTED=	"Redistribution not permitted; single user license only."
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=  ${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=  ${RESTRICTED}
+
+DOC_FILES=	License.wri Orders.wri ReadMe.htm Readme.wri
+
+DIST_SUBDIR=	cyberbit-ttf
+
+DESCR_SRC=	${.CURDIR}/../cyberbit-ttf/DESCR
+
+EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
+EXTRACT_ONLY=	${FONT_FILE}
+WRKSRC=		${WRKDIR}
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+USE_X11BASE=	yes
+FONTDIR=	${PREFIX}/lib/X11/fonts/TrueType
+DOCDIR=		${PREFIX}/share/doc/cyberbit-ttf
+
+do-install:
+	${INSTALL_DATA_DIR} ${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	for f in ${DOC_FILES}; do \
+		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
+	done
