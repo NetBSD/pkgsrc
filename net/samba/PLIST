@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2004/09/14 17:18:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.25 2004/11/06 11:07:17 jmmv Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -55,6 +55,7 @@ lib/samba/vfs/recycle.so
 lib/samba/vfs/shadow_copy.so
 ${PAM}lib/security/pam_smbpass.so
 ${PAM}lib/security/pam_winbind.so
+${CUPS}libexec/cups/backend/smb
 man/man1/editreg.1
 man/man1/findsmb.1
 man/man1/log2pcap.1
