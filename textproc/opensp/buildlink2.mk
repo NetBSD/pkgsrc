@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/09/23 06:59:24 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/11/16 14:01:20 agc Exp $
 #
 # This Makefile fragment is included by packages that use opensp.
 #
@@ -16,7 +16,14 @@ BUILDLINK_FILES.opensp+=	include/OpenSP/*.cxx
 BUILDLINK_FILES.opensp+=	include/OpenSP/*.h
 BUILDLINK_FILES.opensp+=	lib/libosp.*
 
+PTHREAD_OPTS+=          native
+
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+.  include "../../devel/unproven-pthreads/buildlink2.mk"
+.endif
 
 BUILDLINK_TARGETS+=	opensp-buildlink
 
