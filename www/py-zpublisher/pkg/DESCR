@@ -1,0 +1,7 @@
+ZPublisher is the Zope ORB.  It provides a simple mechanism for
+publishing a collection of Python objects as World-Wide-Web (Web)
+resources without any plumbing (e.g.  CGI) specific code.  The Zope ORB
+is the central component of the Zope web application platform.  It can
+also be used without the rest of Zope.  ZPublisher applications can be
+published as regular CGIs, using Persistent CGI ("PCGI") (see the
+py-pcgi package), or on the command line with the "bobo" program.

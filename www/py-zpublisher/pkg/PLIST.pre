@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.pre,v 1.1.1.1 2000/07/28 17:51:16 tsarna Exp $
+bin/bobo
