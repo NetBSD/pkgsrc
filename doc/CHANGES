@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3581 2003/09/30 01:25:19 reed Exp $
+$NetBSD: CHANGES,v 1.3582 2003/09/30 01:59:35 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added coalesce-1.5.0.2 [jschauma 2003-09-29]
 	Added fluctuate-1.4 [jschauma 2003-09-29]
 	Updated md-whois to 4.6.7 [reed 2003-09-30]
+	Added genesplicer-20030403 [jschauma 2003-09-29]
