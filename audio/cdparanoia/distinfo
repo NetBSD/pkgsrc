@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:30 agc Exp $
+
+MD5 (cdparanoia-III-alpha9.7.src.tgz) = 0820b2b52b721745f926c913c0a2653f
+SHA1 (patch-aa) = e013ea41a177441efff076bebf55ff3675ca97f3
+SHA1 (patch-ab) = 714ba2c17584ec255de6179391925a994066f60e
+SHA1 (patch-ac) = 895f0fcc76788d592738424e476109c7052526cb
+SHA1 (patch-ad) = 7d8084320e736e5d012e8a8f2e13653a41f03f6d
+SHA1 (patch-ae) = 213d45a11dda42e19d45d4ec1b8d6dcf32cede02
+SHA1 (patch-ba) = 76041a8ff7b24c6aff9d2bdeb483f4a787650a88
+SHA1 (patch-ca) = 21b51b909363b45801700417c5439598d4711a7f
+SHA1 (patch-cb) = aed42b4763b4a19187bbeb0714b8480f331bc5d4
+SHA1 (patch-cc) = 4132884598e845aa9ea0a501dd1635f9030cc104
+SHA1 (patch-cd) = 44b8050dddae449b4e16c5aab9cfcaccb62f9031
+SHA1 (patch-ce) = 83d0f1505bc019b6fb83584ad4f6571fccf3e2a2
+SHA1 (patch-cf) = 25ac909f9ab8095b925094d6c0ea7ad21c088a1e
+SHA1 (patch-cg) = 96c4d1e9032abfe35cc63cfc74a24674e71f15d9

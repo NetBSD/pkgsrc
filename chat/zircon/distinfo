@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:31:53 agc Exp $
+
+MD5 (zircon-1.18.245.tar.gz) = ba5211b1a79770b3649b1dd1342b780d
+SHA1 (patch-aa) = 6ce15b580fbff3e4fad5863eefba6f15880ed890

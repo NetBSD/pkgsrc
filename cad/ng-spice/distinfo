@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:30:20 agc Exp $
+
+MD5 (ng-spice-rework-13.tar.gz) = 5b5f992d857ab171c688603e383137ca
+SHA1 (patch-aa) = af4a43b289754876e5c4e41879cfc1c8111096e3
+SHA1 (patch-ab) = b927feffc851bf4c2010f17491edbcae166fc8a9
+SHA1 (patch-ac) = e4a58c57bb068fdc80240c34fca1a0ca5af5735b
+SHA1 (patch-ad) = 81e592affeddd42b6bb16e34849690e0574e76ce
+SHA1 (patch-ae) = e4431156381ff7135034cc90d69948b17fe0ab8a

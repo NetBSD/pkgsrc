@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:24 agc Exp $
+
+MD5 (Bonnie.tar.Z) = 23f73cd45caabb510b4f2bdc6dfa6ff0
+SHA1 (patch-aa) = a66447e5fc512fe211250240cc6627c7bb4ce4cb
+SHA1 (patch-ab) = e2f2294f9c65dac318afb30cf84145eb280353c6

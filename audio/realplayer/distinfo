@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:27 agc Exp $
+
+MD5 (rp8_linux20_libc6_i386_cs1.bin) = 284c0db02874050b9f1d15dc312e8a28
+SHA1 (patch-aa) = cede957cc13166c30e6ab89476e0190f187f48b6
+SHA1 (patch-ab) = 22e2eb6260bec208e64db89308f0492baa307adf
+SHA1 (patch-ac) = 2a5d80db6c7deb2d68b1470f09a824bc093648e4
+SHA1 (patch-ad) = cfb3c82df2000d320fe74c1dba262c2dfe462a04

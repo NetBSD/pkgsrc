@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:30:13 agc Exp $
+
+MD5 (felt-3.05.src.tar.gz) = 3cadb25d7039604b862a30df55bf49f8
+MD5 (felt-3.05.ps.gz) = 6f8a50b1e4318d2519ce8a235cee16bd
+SHA1 (patch-aa) = c04149bfa4161a3618971961d7b6b1b6d619bb07
