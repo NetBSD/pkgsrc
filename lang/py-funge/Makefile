@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/16 17:11:00 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 20:41:46 recht Exp $
 
 DISTNAME=	pyfunge-0.2-beta1
 PKGNAME=	${PYPKGPREFIX}-funge-0.2beta1
@@ -13,7 +13,7 @@ NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_BUILDLINK3= yes
 
-PYTHON_VERSIONS_ACCEPTED?=      23 23pth
+PYTHON_VERSIONS_ACCEPTED?=      23
 
 WRKSRC?=	${WRKDIR}/PyFunge
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/28 16:26:50 recht Exp $
+# $NetBSD: Makefile,v 1.21 2005/01/23 20:41:46 recht Exp $
 
 DISTNAME=	roundup-0.7.9
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ PY_PATCHPLIST=	yes
 USE_BUILDLINK3=	yes
 USE_LANGUAGES=
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth 21 21pth
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
 PYTHON_PATCH_SCRIPTS=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py roundup/version_check.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/01/18 20:00:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2005/01/23 20:41:48 recht Exp $
 
 DISTNAME=	getmail-4.3.1
 CATEGORIES=	mail
@@ -10,7 +10,7 @@ COMMENT=	Secure, flexible, reliable, easy-to-use fetchmail replacement
 
 USE_BUILDLINK3=	yes
 
-PYTHON_VERSIONS_ACCEPTED?=	24 24pth 23 23pth
+PYTHON_VERSIONS_ACCEPTED?=	24 23
 PYTHON_PATCH_SCRIPTS=		*.py getmailcore/*.py
 PYDISTUTILSPKG=			yes
 

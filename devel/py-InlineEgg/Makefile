@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 23:04:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=		InlineEgg-1.08
@@ -16,7 +16,7 @@ USE_BUILDLINK3=		YES
 PY_PATCHPLIST=		YES
 PYDISTUTILSPKG=		YES
 
-PYTHON_VERSIONS_ACCEPTED=	24 23 22 21 24pth 23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 PYTHON_PATCH_SCRIPTS=		examples/example1.py examples/example2.py \
 				examples/example3.py examples/example4.py \
 				examples/example5.py examples/example6.py \
