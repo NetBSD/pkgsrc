@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: saslauthd.sh,v 1.2 2002/11/23 14:44:54 chris Exp $
+# $NetBSD: saslauthd.sh,v 1.3 2002/11/23 15:07:46 chris Exp $
 #
 # The saslauthd daemon allows cleartext UNIX password authentication via
 # several authentication mechanisms with Cyrus SASL.
@@ -16,7 +16,6 @@ fi
 name="saslauthd"
 rcvar="${name}"
 command="@PREFIX@/sbin/saslauthd"
-command_args="& sleep 2"
 start_precmd="saslauthd_precmd"
 
 # Default to authenticating against local password database.
