@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2000/09/24 15:16:40 hubertf Exp $
+$NetBSD: patch-ac,v 1.4 2000/10/11 16:02:45 wennmach Exp $
 
 --- nfsbug.c.orig	Fri Feb 17 00:57:27 1995
 +++ nfsbug.c
@@ -34,17 +34,6 @@ $NetBSD: patch-ac,v 1.3 2000/09/24 15:16:40 hubertf Exp $
  
  #include "mount.h"
  #include "nfs_prot.h"
-@@ -105,8 +108,10 @@
- /*
-  * File system types, these correspond to entries in fsconf
-  */
-+#ifndef __NetBSD__
- #define MOUNT_UFS       1
- #define MOUNT_NFS       2
-+#endif /* __NetBSD__ */
- #define MOUNT_PC        3
- #define MOUNT_LO        4
- #define MOUNT_TFS       5
 @@ -240,7 +245,7 @@
      } else
  	proto = "TCP/IP";
