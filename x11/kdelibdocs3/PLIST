@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/12/10 06:06:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/02/24 14:13:12 wiz Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -123,7 +123,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/kvideowidget_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/mcopdcopobject_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/mcopdcopobject_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/mcopdcoptools_8h-source.html
-share/doc/kde/HTML/en/kdelibs-apidocs/common
+@comment in kdelibs3: share/doc/kde/HTML/en/kdelibs-apidocs/common
 share/doc/kde/HTML/en/kdelibs-apidocs/dcop/dcop.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html/classDCOPArg-members.html
