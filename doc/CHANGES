@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8319 2004/12/07 21:18:48 markd Exp $
+$NetBSD: CHANGES,v 1.8320 2004/12/08 08:58:31 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5824,3 +5824,5 @@ Changes to the packages collection and infrastructure in 2004:
 	bsd.pkg.mk: started freeze for pkgsrc-2004Q4 branch [agc 2004-12-06]
 	Updated vmware-module3 to 3.2.1.6 [jdolecek 2004-12-07]
 	Updated ispell-romanian to 20031216 [markd 2004-12-07]
+	Downgraded xfce4-minicmd-plugin to 0.2.0nb5 [martti 2004-12-08]
+	Downgraded xfce4-taskbar-plugin to 0.1.0nb1 [martti 2004-12-08]
