@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.6 2003/08/16 19:44:00 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.7 2003/08/16 19:46:27 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -116,8 +116,8 @@ BUILDLINK_CPPFLAGS+=	-I${_dir_}
 .        if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
 BUILDLINK_LDFLAGS+=	-L${_dir_}
 .        endif
-.        if (${_USE_RPATH} == "yes") && !empty(_COMPILER_LD_FLAG) && \
-	  empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
+.        if (${_USE_RPATH} == "yes") && \
+	    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
 BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .        endif
 .      endif
@@ -129,7 +129,7 @@ BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 # path so that wildcard dependencies on library packages can always be
 # fulfilled through the default view.
 #
-.if (${_USE_RPATH} == "yes") && !empty(_COMPILER_LD_FLAG) && \
+.if (${_USE_RPATH} == "yes") && \
     empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib)
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
 .endif
@@ -138,7 +138,7 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
 # the package uses X11.
 #
 .if defined(USE_X11) && \
-    (${_USE_RPATH} == "yes") && !empty(_COMPILER_LD_FLAG) && \
+    (${_USE_RPATH} == "yes") && \
     empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib)
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
 .endif
@@ -851,11 +851,9 @@ _BLNK_RPATH_FLAGS+=	${_COMPILER_LD_FLAG}-rpath-link,
 .  if ${_USE_RPATH} == "yes"
 .    for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
 _BLNK_CACHE_PASSTHRU_GLOB+=	-R${_dir_}|-R${_dir_}/*
-.      if !empty(_COMPILER_LD_FLAG)
-.        for _R_ in ${_BLNK_RPATH_FLAGS}
+.      for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
-.        endfor
-.      endif	# _COMPILER_LD_FLAG
+.      endfor
 .    endfor
 .  endif	# _USE_RPATH
 #
@@ -864,11 +862,9 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
 _BLNK_CACHE_BLOCK_GLOB=		-[IL]/*
 .  if ${_USE_RPATH} == "yes"
 _BLNK_CACHE_BLOCK_GLOB:=	${_BLNK_CACHE_BLOCK_GLOB}|-R/*
-.    if !empty(_COMPILER_LD_FLAG)
-.      for _R_ in ${_BLNK_RPATH_FLAGS}
+.    for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_BLOCK_GLOB:=	${_BLNK_CACHE_BLOCK_GLOB}|${_R_}/*
-.      endfor
-.    endif	# _COMPILER_LD_FLAG
+.    endfor
 .  endif	# _USE_RPATH
 .endif	# _BLNK_SEED_CACHE
 
