@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5785 2004/05/02 02:30:30 heinz Exp $
+$NetBSD: CHANGES,v 1.5786 2004/05/02 04:01:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2310,3 +2310,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-MIME-Base64 to 3.01 [heinz 2004-05-02]
 	Updated p5-Digest to 1.08 [heinz 2004-05-02]
 	Updated p5-Digest-SHA1 to 2.10 [heinz 2004-05-02]
+	Added gmpc-0.10.2 [grant 2004-05-02]
