@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+
+--- src/lib/oogl/util/futil.c.orig	Fri Feb  9 01:08:25 2001
++++ src/lib/oogl/util/futil.c
+@@ -177,7 +177,7 @@
+ #define _cnt __cnt
+ #endif 
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #define _base _bf._base
+ #define _ptr _p
+ #define _cnt _r
