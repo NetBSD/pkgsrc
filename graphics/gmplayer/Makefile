@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/03 18:00:50 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/05/14 22:13:34 veego Exp $
 
 .include "../../graphics/mplayer/Makefile.common"
 
@@ -31,7 +31,9 @@ SKINS +=	default${EXTRACT_SUFX}				\
 		netscape4${EXTRACT_SUFX}			\
 		CubicPlayer${EXTRACT_SUFX}			\
 		AlienMind${EXTRACT_SUFX}			\
-		CornerMP${EXTRACT_SUFX}
+		CornerMP${EXTRACT_SUFX}				\
+		CornerMP-aqua${EXTRACT_SUFX}			\
+		hwswskin${EXTRACT_SUFX}
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
