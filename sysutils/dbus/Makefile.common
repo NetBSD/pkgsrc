@@ -1,0 +1,77 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/10/11 17:45:26 jmmv Exp $
+#
+
+DBUS_VERSION=	0.22
+
+DISTNAME=	dbus-${DBUS_VERSION}
+CATEGORIES=	sysutils
+MASTER_SITES=	http://freedesktop.org/Software/dbus/releases/
+
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.freedesktop.org/Software/dbus
+COMMENT=	Message bus system
+
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/dbus/distinfo
+PATCHDIR=	${.CURDIR}/../../sysutils/dbus/patches
+
+GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
+
+PKGCONFIG_OVERRIDE=	dbus-1.pc
+PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc
+PKGCONFIG_OVERRIDE+=	dbus-sharp.pc
+
+CONFIGURE_ARGS+=	--disable-qt
+CONFIGURE_ARGS+=	--disable-glib
+CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-xml-docs
+CONFIGURE_ARGS+=	--disable-doxygen-docs
+CONFIGURE_ARGS+=	--disable-gcj
+CONFIGURE_ARGS+=	--disable-mono
+CONFIGURE_ARGS+=	--disable-mono-docs
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-selinux
+CONFIGURE_ARGS+=	--enable-checks
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-xml=expat
+CONFIGURE_ARGS+=	--without-x
+
+PKG_SYSCONFSUBDIR=	dbus-1
+
+.if defined(DBUS_INTERFACE)
+DBUS_ARGS?=		${DBUS_INTERFACE}
+DBUS_DIRS?=		${DBUS_INTERFACE}
+
+PKGNAME=		${DISTNAME:S/dbus/dbus-${DBUS_INTERFACE}/}
+COMMENT+=		(${DBUS_INTERFACE} interface)
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	"Fixing paths to installed dbus\' libraries."
+SUBST_SED.paths=	-e 's|$$(top_builddir)/dbus/libdbus-1.la|${BUILDLINK_PREFIX.dbus}/lib/libdbus-1.la|g'
+SUBST_FILES.paths=
+
+BUILD_DIRS=
+INSTALL_DIRS=
+
+.  for f in ${DBUS_ARGS}
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${f}/--enable-${f}/}
+.  endfor
+
+.  for f in ${DBUS_DIRS}
+BUILD_DIRS+=		${WRKSRC}/${f}
+INSTALL_DIRS+=		${WRKSRC}/${f}
+SUBST_FILES.paths+=	${f}/Makefile.in
+.  endfor
+.  undef f
+
+BUILDLINK_DEPENDS.dbus+=	dbus>=${DBUS_VERSION}
+.  include "../../sysutils/dbus/buildlink3.mk"
+.endif
+
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
