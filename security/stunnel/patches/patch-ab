@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2003/07/29 11:18:42 jmmv Exp $
+$NetBSD: patch-ab,v 1.13 2004/02/16 11:48:38 martti Exp $
 
---- configure.orig	2003-01-01 15:26:05.000000000 +0100
-+++ configure
-@@ -7471,6 +7471,7 @@ _ACEOF
+--- configure.orig	2003-12-28 22:55:49.000000000 +0200
++++ configure	2004-02-16 13:41:46.000000000 +0200
+@@ -8025,6 +8025,7 @@
  fi
  
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.12 2003/07/29 11:18:42 jmmv Exp $
  # OSF hack instead of simple AC_CHECK_LIB here
  echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
  echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-@@ -7583,6 +7584,7 @@ _ACEOF
+@@ -8134,6 +8135,7 @@
  
  
  fi
@@ -18,12 +18,12 @@ $NetBSD: patch-ab,v 1.12 2003/07/29 11:18:42 jmmv Exp $
  
  
  
-@@ -9543,7 +9545,7 @@ _ACEOF
+@@ -10124,7 +10126,7 @@
  
  LIBS="$LIBS $wrap_LIB"
  
 -CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir/stunnel\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
 +CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
  
- ac_config_files="$ac_config_files Makefile src/Makefile doc/Makefile tools/Makefile tools/stunnel.conf-sample tools/stunnel.init"
+                                                             ac_config_files="$ac_config_files Makefile src/Makefile doc/Makefile tools/Makefile tools/stunnel.conf-sample tools/stunnel.init"
  
