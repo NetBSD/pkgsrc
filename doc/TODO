@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2580 2004/11/29 14:16:28 he Exp $
+$NetBSD: TODO,v 1.2581 2004/11/29 14:49:04 he Exp $
 
 Suggested new packages
 ======================
@@ -789,7 +789,6 @@ Suggested package updates
 	o p5-Audio-Wav-0.03
 	o p5-Authen-SASL-2.08
 	o p5-Authen-SASL-Cyrus-0.11
-	o p5-BerkeleyDB-0.26
 	o p5-Business-CreditCard-0.28
 	o p5-Business-ISBN-1.78
 	o p5-CDDB-1.15
