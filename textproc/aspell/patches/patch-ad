@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/01/15 01:07:25 wiz Exp $
+
+--- src/Makefile.in.orig	Mon Aug 20 05:45:00 2001
++++ src/Makefile.in
+@@ -88,7 +88,7 @@
+ 
+ bin_PROGRAMS = aspell word-list-compress
+ 
+-INCLUDES = -I../ -I../util -I../lib/inc -I../filter $(CURSES_INCLUDE) -I$(includedir)  
++INCLUDES = -I../ -I../util -I../lib/inc -I../filter $(CURSES_INCLUDE)
+ 
+ aspell_SOURCES = aspell.cc termios.cc text_chain.cc
+ aspell_LDADD = ../lib/libaspell.la $(CURSES_LIB)

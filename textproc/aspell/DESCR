@@ -1,0 +1,8 @@
+Aspell is an Open Source spell checker designed to eventually replace
+Ispell. Its main feature is that it does a much better job of coming up
+with possible suggestions than Ispell does. In fact recent tests shows
+that it even does better than Microsoft Word 97's spell checker in some
+cases. In addition it has both compile time and run time support for other
+non English languages. Aspell is also a library however the recommend way
+to use aspell is through the Pspell library as the actual interface to the
+aspell library is constantly changing.
