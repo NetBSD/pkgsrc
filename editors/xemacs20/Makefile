@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/03/10 08:34:07 tron Exp $
+# $NetBSD: Makefile,v 1.42 1999/03/10 08:42:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -47,7 +47,6 @@ DEPENDS+=	faces-1.6.1:../../mail/faces
 WITH_XFACE=	--with-xface=no
 .endif
 
-CFLAGS+=	-g
 CONFIGURE_ARGS+=${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
 		--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
