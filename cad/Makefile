@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/10/14 02:28:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.42 2002/10/29 00:35:02 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -37,6 +37,7 @@ SUBDIR+=	simian
 SUBDIR+=	simian-docs
 SUBDIR+=	spice
 SUBDIR+=	spiceprm
+SUBDIR+=	tkgate
 SUBDIR+=	verilog
 SUBDIR+=	verilog-current
 SUBDIR+=	verilog-mode
