@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 1998/12/03 17:30:00 tv Exp $
+
+--- ssl/Makefile.ssl.orig	Tue Dec  1 12:11:18 1998
++++ ssl/Makefile.ssl	Tue Dec  1 12:26:31 1998
+@@ -54,8 +54,8 @@
+ all:	lib
+ 
+ lib:	$(LIBOBJ)
+-	$(AR) $(LIB) $(LIBOBJ)
+-	sh $(TOP)/util/ranlib.sh $(LIB)
++	(cd ..; ${CC} -o libssl.la ${LIBOBJ:S/^/ssl\//:S/.o$/.lo/} \
++		-version-info 0:0 -rpath ${PREFIX}/lib)
+ 	@touch lib
+ 
+ files:
