@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2003/10/26 04:56:58 dmcmahill Exp $
+$NetBSD: distinfo,v 1.12 2004/05/29 00:17:45 dmcmahill Exp $
 
-SHA1 (gerbv-0.15.tar.gz) = baae40fc86eb46cb153e7d7ed3ec062a861864d1
-Size (gerbv-0.15.tar.gz) = 1021073 bytes
+SHA1 (gerbv-0.16.tar.gz) = cc6e5c911767e59c86362ca2b559b2ec91880791
+Size (gerbv-0.16.tar.gz) = 1032058 bytes
