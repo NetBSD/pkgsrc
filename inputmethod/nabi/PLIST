@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 03:23:33 junyoung Exp $
+bin/nabi
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nabi.mo
+share/nabi/compose/default
+share/nabi/keyboard/2qwerty
+share/nabi/keyboard/32qwerty
+share/nabi/keyboard/39qwerty
+share/nabi/keyboard/3fqwerty
+share/nabi/nabi.png
+share/nabi/themes/KingSejong/README
+share/nabi/themes/KingSejong/english.png
+share/nabi/themes/KingSejong/hangul.png
+share/nabi/themes/KingSejong/none.png
+share/nabi/themes/MSWindows/english.png
+share/nabi/themes/MSWindows/hangul.png
+share/nabi/themes/MSWindows/none.png
+share/nabi/themes/Mac/README
+share/nabi/themes/Mac/english.png
+share/nabi/themes/Mac/hangul.png
+share/nabi/themes/Mac/none.png
+share/nabi/themes/Onion/README
+share/nabi/themes/Onion/english.png
+share/nabi/themes/Onion/hangul.png
+share/nabi/themes/Onion/none.png
+share/nabi/themes/SimplyRed/english.png
+share/nabi/themes/SimplyRed/hangul.png
+share/nabi/themes/SimplyRed/none.png
+share/nabi/themes/keyboard/README
+share/nabi/themes/keyboard/english.png
+share/nabi/themes/keyboard/hangul.png
+share/nabi/themes/keyboard/none.png
+@dirrm share/nabi/themes/keyboard
+@dirrm share/nabi/themes/SimplyRed
+@dirrm share/nabi/themes/Onion
+@dirrm share/nabi/themes/Mac
+@dirrm share/nabi/themes/MSWindows
+@dirrm share/nabi/themes/KingSejong
+@dirrm share/nabi/themes
+@dirrm share/nabi/keyboard
+@dirrm share/nabi/compose
+@dirrm share/nabi
