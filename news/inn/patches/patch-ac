@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.5 2000/07/03 13:46:43 veego Exp $
+$NetBSD: patch-ac,v 1.6 2000/08/17 14:00:28 wiz Exp $
 
 --- Makefile.global.in	Mon Dec 13 14:18:37 1999
 +++ Makefile.global.in	Mon Jul  3 11:31:41 2000
 @@ -40,7 +40,7 @@
  EXTRA_SRC = @EXTRA_SRC@
  
- OWNER		= -O @NEWSUSER@ -G @NEWSGRP@
+-OWNER		= -O @NEWSUSER@ -G @NEWSGRP@
++OWNER		= -o @NEWSUSER@ -g @NEWSGRP@
 -ROWNER		= -O @NEWSUSER@ -G uucp
-+ROWNER		= -O @NEWSUSER@ -G @NEWSGRP@
++ROWNER		= -o @NEWSUSER@ -g @NEWSGRP@
  NEWSGROUP	= @NEWSGRP@
  
  PATHNEWS = @prefix@
