@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/06 03:55:52 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 12:21:46 salo Exp $
 lib/aspell/slovak
+lib/aspell/slovak-extend
 lib/aspell/slovak.multi
 share/aspell/slovak.dat
 share/aspell/slovak_phonet.dat
@@ -7,9 +8,7 @@ share/doc/aspell-slovak/AUTHORS
 share/doc/aspell-slovak/CHANGELOG
 share/doc/aspell-slovak/Copyright
 share/doc/aspell-slovak/README
-share/doc/aspell-slovak/sample.aspell.conf
+share/examples/aspell-slovak/aspell.conf.default
 share/pspell/sk-slovak-aspell.pwli
+@dirrm share/examples/aspell-slovak
 @dirrm share/doc/aspell-slovak
-@unexec ${RMDIR} %D/share/aspell 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/pspell 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/aspell 2>/dev/null || ${TRUE}
