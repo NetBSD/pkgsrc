@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1999/08/24 14:30:07 mrg Exp $
+$NetBSD: patch-aa,v 1.5 1999/08/28 08:30:08 mrg Exp $
 
 Index: configure.in
 ===================================================================
@@ -8,27 +8,6 @@ retrieving revision 1.115
 diff -p -u -r1.114 -r1.115
 --- configure.in	1999/08/23 12:05:58	1.114
 +++ configure.in	1999/08/24 14:16:02	1.115
-@@ -31,9 +31,9 @@ dnl
- dnl thanks to the screen 3.3 configure.in for giving me examples to
- dnl work from and steal ;)
- dnl
--dnl @(#)$Id: patch-aa,v 1.4 1999/08/24 14:30:07 mrg Exp $
-+dnl @(#)$Id: patch-aa,v 1.4 1999/08/24 14:30:07 mrg Exp $
- 
--AC_REVISION($Revision: 1.4 $)dnl
-+AC_REVISION($Revision: 1.4 $)dnl
- AC_INIT(${srcdir}/source/irc.c)
- AC_CONFIG_HEADER(${objdir}/defs.h:include/defs.h.in)
- 
-@@ -53,7 +53,7 @@ CATEGORIES='build change-request doc pen
- AC_SUBST(CATEGORIES)
- 
- dnl so that the generated configure has an id.
--echo '$Id: patch-aa,v 1.4 1999/08/24 14:30:07 mrg Exp $' > /dev/null
-+echo '$Id: patch-aa,v 1.4 1999/08/24 14:30:07 mrg Exp $' > /dev/null
- 
- dnl
- dnl initial stuff
 @@ -734,7 +734,7 @@ AC_ARG_WITH(cast,
        CAST_SRC=cast.c
        ;;
