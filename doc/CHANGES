@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1100 2003/01/11 23:26:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.1101 2003/01/11 23:57:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bbweather to 0.6 [jschauma 2003-01-11]
 	Updated pgaccess to 0.98.8 [jlam 2003-01-11]
 	Updated dsssl-docbook-modular to 1.57nb1 [jmmv 2003-01-11]
+	Updated jade to 1.2.1nb5 [jmmv 2003-01-11]
