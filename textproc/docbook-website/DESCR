@@ -1,0 +1,4 @@
+Website is an XML DTD for building web sites.
+
+It makes use of the file system directory structure and supports
+standalone pages, multiple ToCs and more.
