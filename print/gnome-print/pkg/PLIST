@@ -1,34 +1,24 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/26 11:57:13 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/03/14 21:36:47 tron Exp $
 bin/gnome-font-install
-include/libgnomeprint/gnome-print.h
-include/libgnomeprint/gnome-printer.h
-include/libgnomeprint/gnome-font.h
-include/libgnomeprint/gnome-printer-dialog.h
-include/libgnomeprint/gnome-printer-profile.h
 include/libgnomeprint/gnome-font-dialog.h
-include/libgnomeprint/gnome-text.h
+include/libgnomeprint/gnome-font.h
+include/libgnomeprint/gnome-print-copies.h
+include/libgnomeprint/gnome-print-dialog.h
 include/libgnomeprint/gnome-print-i18n.h
+include/libgnomeprint/gnome-print-master-preview.h
+include/libgnomeprint/gnome-print-master.h
 include/libgnomeprint/gnome-print-meta.h
+include/libgnomeprint/gnome-print-multipage.h
 include/libgnomeprint/gnome-print-pixbuf.h
 include/libgnomeprint/gnome-print-preview.h
 include/libgnomeprint/gnome-print-rgbp.h
-share/locale/de/LC_MESSAGES/gnome-print.mo
-share/locale/fr/LC_MESSAGES/gnome-print.mo
-share/locale/es/LC_MESSAGES/gnome-print.mo
-share/locale/hu/LC_MESSAGES/gnome-print.mo
-share/locale/no/LC_MESSAGES/gnome-print.mo
-share/locale/pl/LC_MESSAGES/gnome-print.mo
-share/locale/ru/LC_MESSAGES/gnome-print.mo
-share/locale/it/LC_MESSAGES/gnome-print.mo
-share/locale/sv/LC_MESSAGES/gnome-print.mo
-share/locale/da/LC_MESSAGES/gnome-print.mo
-share/locale/el/LC_MESSAGES/gnome-print.mo
-share/locale/et/LC_MESSAGES/gnome-print.mo
-share/locale/nl/LC_MESSAGES/gnome-print.mo
-share/locale/uk/LC_MESSAGES/gnome-print.mo
-share/locale/gl/LC_MESSAGES/gnome-print.mo
-lib/libgnomeprint.so.2.0
+include/libgnomeprint/gnome-print.h
+include/libgnomeprint/gnome-printer-dialog.h
+include/libgnomeprint/gnome-printer-profile.h
+include/libgnomeprint/gnome-printer.h
+include/libgnomeprint/gnome-text.h
 lib/libgnomeprint.a
+lib/libgnomeprint.so.5.0
 lib/printConf.sh
 share/fonts/afms/adobe/pagd8a.afm
 share/fonts/afms/adobe/pagdo8a.afm
@@ -73,9 +63,28 @@ share/fonts/afms/adobe/pzcmi8a.afm
 share/fonts/afms/adobe/pzdr.afm
 share/fonts/fontmap
 share/gnome-print/profiles/Postscript.profile
-@dirrm include/libgnomeprint
+share/locale/da/LC_MESSAGES/gnome-print.mo
+share/locale/de/LC_MESSAGES/gnome-print.mo
+share/locale/el/LC_MESSAGES/gnome-print.mo
+share/locale/es/LC_MESSAGES/gnome-print.mo
+share/locale/et/LC_MESSAGES/gnome-print.mo
+share/locale/fi/LC_MESSAGES/gnome-print.mo
+share/locale/fr/LC_MESSAGES/gnome-print.mo
+share/locale/gl/LC_MESSAGES/gnome-print.mo
+share/locale/hu/LC_MESSAGES/gnome-print.mo
+share/locale/it/LC_MESSAGES/gnome-print.mo
+share/locale/ja/LC_MESSAGES/gnome-print.mo
+share/locale/ko/LC_MESSAGES/gnome-print.mo
+share/locale/nl/LC_MESSAGES/gnome-print.mo
+share/locale/no/LC_MESSAGES/gnome-print.mo
+share/locale/pl/LC_MESSAGES/gnome-print.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-print.mo
+share/locale/ru/LC_MESSAGES/gnome-print.mo
+share/locale/sv/LC_MESSAGES/gnome-print.mo
+share/locale/uk/LC_MESSAGES/gnome-print.mo
+@dirrm share/gnome-print/profiles
+@dirrm share/gnome-print
 @dirrm share/fonts/afms/adobe
 @dirrm share/fonts/afms
 @dirrm share/fonts
-@dirrm share/gnome-print/profiles
-@dirrm share/gnome-print
+@dirrm include/libgnomeprint
