@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/17 15:11:44 agc Exp $
+
+--- Makefile	2003/07/17 14:51:51	1.1
++++ Makefile	2003/07/17 14:52:17
+@@ -2,7 +2,7 @@
+ 
+ CC = gcc
+ CFLAGS = -O2 -Wall 
+-CPPFLAGS = "-DVERSION=\"$(VERSION)\""
++CPPFLAGS = "-DVERSION=\"$(VERSION)\"" -DPREFIX='"${PREFIX}"'
+ 
+ DB_OBJS = fileio.o util.o dbench.o child.o
+ TB_OBJS = sockio.o util.o dbench.o child.o socklib.o

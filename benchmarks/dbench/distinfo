@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/17 15:11:44 agc Exp $
+
+SHA1 (dbench-1.3.tar.gz) = b46f72ac0a81acf7a0f368e20e5d83ee3932a35a
+Size (dbench-1.3.tar.gz) = 266746 bytes
+SHA1 (patch-aa) = 1c34848d3ce3294a1ae228243ff6fcae8a874826
+SHA1 (patch-ab) = 3d0d79e1542368d63534b994cb96fb0602acca24
