@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8878 2005/01/22 21:54:49 adrianp Exp $
+$NetBSD: CHANGES,v 1.8879 2005/01/23 00:24:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ov519view-0.00 [hamajima 2005-01-22]
 	Updated socat to 1.4.1.0 [adrianp 2005-01-22]
 	Updated smokeping to 1.37 [adrianp 2005-01-22]
+	Updated cgoban-java to 2.6.9 [rh 2005-01-23]
