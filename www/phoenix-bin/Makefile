@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/11 13:35:09 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/25 14:14:36 salo Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc
 
 CONFLICTS+=		phoenix-linux-[0-9]*
 
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		YES
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,6 +32,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PHOENIX_LIB}
 	cd ${WRKSRC} && ${PAX} -rw -pm . ${PHOENIX_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-${PLATFORM}
+	@${RM} -f ${PHOENIX_LIB}/plugins/libnullplugin.so
 
 post-install:
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
