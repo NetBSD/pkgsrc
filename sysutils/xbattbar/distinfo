@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2003/11/10 23:53:32 mrg Exp $
+$NetBSD: distinfo,v 1.10 2004/04/20 10:31:13 lukem Exp $
 
 SHA1 (xbattbar_1.4.2.tar.gz) = 14e9aafd62919e4a625d3f84df3b074b9eef8279
 Size (xbattbar_1.4.2.tar.gz) = 14079 bytes
 SHA1 (patch-aa) = 3bd4b688ccaeebe766335245c1a8c5dde52768c2
 SHA1 (patch-ab) = dfaf520dcc10228da4ab4c222210f0ecb4914f4f
+SHA1 (patch-ac) = 507cdf9b4e79dc577d020963142e262d04536527
