@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2004/07/03 23:00:37 recht Exp $
+
+--- src/icimage.c.orig	2004-04-15 23:10:42.000000000 +0200
++++ src/icimage.c
+@@ -248,10 +248,14 @@ pixman_image_destroyClip (pixman_image_t
+     case CT_NONE:
+ 	return;
+     case CT_PIXMAP:
+-	pixman_image_destroy (image->clientClip);
++	if (image->clientClip) {
++	    pixman_image_destroy (image->clientClip);
++        }
+ 	break;
+     default:
+-	pixman_region_destroy (image->clientClip);
++	if (image->clientClip) {
++	    pixman_region_destroy (image->clientClip);
++        }
+ 	break;
+     }
+     image->clientClip = NULL;
+@@ -263,8 +267,12 @@ pixman_image_set_clip_region (pixman_ima
+ 		      pixman_region16_t	*region)
+ {
+     pixman_image_destroyClip (image);
+-    image->clientClip = region;
+-    image->clientClipType = CT_REGION;
++    if (region != NULL) {
++        // image->clientClip = region;
++        pixman_region_copy (image->clientClip, region);
++        image->clientClipType = CT_REGION;
++    }
++
+     image->stateChanges |= CPClipMask;
+     return 0;
+ }
