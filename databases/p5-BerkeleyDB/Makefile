@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/08 16:38:58 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/04 05:44:12 jlam Exp $
 #
 
 DISTNAME=	BerkeleyDB-0.25
@@ -11,16 +11,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/BerkeleyDB/
 COMMENT=	Access Berkeley DB
 
-DEPENDS+=	db3-[0-9]*:../db3
-
-MAKE_ENV+= BERKELEYDB_NAME=-ldb3
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 PERL5_REQD+=		5.6.0
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/BerkeleyDB/.packlist
 
-.include "../db3/buildlink3.mk"
+MAKE_ENV+=	BERKELEYDB_INCLUDE="${BDBBASE}/include"
+MAKE_ENV+=	BERKELEYDB_LIB="${BDBBASE}/lib"
+MAKE_ENV+=	BERKELEYDB_NAME="${BUILDLINK_LIBS.bdb}"
+
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
