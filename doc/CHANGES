@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8161 2004/11/29 21:00:55 wiz Exp $
+$NetBSD: CHANGES,v 1.8162 2004/11/29 21:04:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5650,3 +5650,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gmpc to 0.11.2 [wiz 2004-11-29]
 	Updated p5-Class-Factory to 1.03 [wiz 2004-11-29]
 	Added numlockx-1.0 [wiz 2004-11-29]
+	Updated gtk-send-pr to 0.4.1 [wiz 2004-11-29]
