@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.76 2002/07/30 00:09:23 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.77 2002/07/30 18:42:14 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -410,28 +410,36 @@ AMANDA_VAR?=	/var/amanda
 # Possible: not defined, YES
 # Default: not defined
 
+APACHE_USER?=	www
+# Used in the apache package to specify the user allowed to execute
+# the `suexec' wrapper.  Expected to be the user the httpd server
+# normally runs as.  Also used by packages with CGIs.
+# Possible: any user name
+# Default: www
+
+APACHE_GROUP?=	www
+# Used in the apache package to specify the default group of the user
+# allowed to execute the `suexec' wrapper.  Expected to be the group
+# the httpd server normally runs as.  Also used by packages with CGIs.
+# Possible: any group name
+# Default: www
+
 #APACHE_SUEXEC=	YES
 # Enable support Switch User For Exec.  See
 # http://www.apache.org/docs/suexec.html for more informations.
 # Possible: not defined, YES
 # Default: not defined
 
-APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
-# Specifies the document space in which suexec will be allowed to work.      
-# Possible: Any valid directory                                              
-# Default: ${LOCALBASE}/share/httpd/htdocs                                   
-
-APACHE_SUEXEC_USER?=	www
-# Used in the apache package to specify the user allowed to execute
-# the `suexec' wrapper.
-# Possible: any user name
-# Default: www
-
 #APACHE_SUEXEC_CONFIGURE_ARGS=	--suexec-uidmin=1000
 # Used in the apache package to specify additional suexec options to be
 # passed to the Apache configure script.
 # Possible: any --suexec-* options recognized by the Apache configure script.
 # Default: not defined
+
+APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
+# Specifies the document space in which suexec will be allowed to work.      
+# Possible: Any valid directory                                              
+# Default: ${LOCALBASE}/share/httpd/htdocs                                   
 
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Specifies the location of the cache used by arla. Should be on a local disk.
