@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/07/03 23:04:22 recht Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/27 22:04:45 recht Exp $
 #
 
-DISTNAME=	libgdiplus-1.0
+DISTNAME=	libgdiplus-1.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://mono2.ximian.com/archive/1.0/
+MASTER_SITES=	http://www.go-mono.com/archive/1.0.1/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
