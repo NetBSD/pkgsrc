@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/01/19 19:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/30 15:05:17 wiz Exp $
 #
 
 DISTNAME=	automake-1.8.2
@@ -16,7 +16,7 @@ DEPENDS=	autoconf>=2.58:../../devel/autoconf
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.8
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV=		PERL=${PERL5}
 _STRIPFLAG_INSTALL=	# none
