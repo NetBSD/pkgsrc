@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/28 21:11:35 mycroft Exp $
 bin/aaxine
+bin/fbxine
 bin/xine
 bin/xine-bugreport
 bin/xine-check
@@ -10,7 +11,18 @@ man/man1/xine-check.1
 man/man1/xine-remote.1
 man/man1/xine.1
 share/doc/xine-ui/README.config_en
-share/doc/xine-ui/README.corba
+share/doc/xine-ui/README.cs.0.Introduction
+share/doc/xine-ui/README.cs.10.Remote_control
+share/doc/xine-ui/README.cs.15.MRLs
+share/doc/xine-ui/README.cs.5.xine-ui
+share/doc/xine-ui/README.en.0.Introduction
+share/doc/xine-ui/README.en.10.Remote_control
+share/doc/xine-ui/README.en.15.MRLs
+share/doc/xine-ui/README.en.20.DVD
+share/doc/xine-ui/README.en.25.VideoCD
+share/doc/xine-ui/README.en.30.Advanced
+share/doc/xine-ui/README.en.35.Legal_issues
+share/doc/xine-ui/README.en.5.xine-ui
 share/doc/xine-ui/README_cs
 share/doc/xine-ui/README_de
 share/doc/xine-ui/README_en

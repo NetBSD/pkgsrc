@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/28 21:11:35 mycroft Exp $
 
---- doc/man/Makefile.in.orig	2003-08-07 19:39:57.000000000 +0200
-+++ doc/man/Makefile.in	2003-08-24 12:57:44.000000000 +0200
-@@ -159,7 +159,7 @@
- am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
+--- doc/man/Makefile.in.orig	2003-12-24 14:21:02.000000000 +0000
++++ doc/man/Makefile.in	2004-03-28 21:04:11.000000000 +0000
+@@ -223,7 +223,7 @@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
 -SUBDIRS = fr es en pl de
 +SUBDIRS = en
  subdir = doc/man
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
