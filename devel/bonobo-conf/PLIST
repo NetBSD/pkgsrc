@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/16 01:37:48 rh Exp $
 bin/bonobo-moniker-xmldb
 bin/cedit
 include/bonobo-conf/Bonobo_Config.h
@@ -29,14 +29,17 @@ lib/libbonobo_conf.so.0.0
 share/doc/bonobo-conf/bonobo-conf.pdf
 share/doc/bonobo-conf/bonobo-conf.sgml
 share/idl/Bonobo_Config.idl
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bonobo-conf.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bonobo-conf.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bonobo-conf.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/bonobo-conf.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bonobo-conf.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-conf.mo
 share/oaf/Bonobo_Moniker_config.oaf
 share/oaf/Bonobo_Moniker_gconf.oaf
 share/oaf/Bonobo_Moniker_xmldb.oaf
