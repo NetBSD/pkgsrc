@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/25 13:00:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/25 16:27:37 jmmv Exp $
 #
 
-DISTNAME=	pkg_alternatives-1.0
+DISTNAME=	pkg_alternatives-1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +20,10 @@ WRKSRC=			${WRKDIR}
 
 DATADIR=		${PREFIX}/share/pkg_alternatives
 DBDIR=			${PREFIX}/libdata/pkg_alternatives
+
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+FILES_SUBST+=		PKG_ALTERNATIVES=${PREFIX}/sbin/pkg_alternatives
 
 MAKE_DIRS=		${DBDIR}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}

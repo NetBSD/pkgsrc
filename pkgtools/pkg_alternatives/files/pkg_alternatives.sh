@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.1.1.1 2005/01/25 13:00:46 jmmv Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.2 2005/01/25 16:27:37 jmmv Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -82,6 +82,41 @@ action_auto_wrapper() {
     else
         info "no existing configuration for \`${1}'; nothing to be done"
     fi
+}
+
+# -------------------------------------------------------------------------
+
+# action_destroy_package
+#
+# Destroys the alternatives database and removes all installed wrappers.
+#
+action_destroy_package() {
+    validate_args list ${#} -eq 0
+
+    wrappers=$(cd ${Db_Dir} ; find . -type f)
+
+    for w in ${wrappers}; do
+        wrapper=$(echo ${w} | sed -e 's|^./||')
+        manpage=$(get_manpage ${wrapper})
+        info "removing wrapper \`${wrapper}'"
+	rm -f ${Prefix}/${wrapper}
+        info "removing manual page \`${manpage}'"
+        rm -f ${manpage}
+    done
+
+    info "removing contents of \`@DBDIR@'"
+    rm -rf @DBDIR@/* 2>/dev/null
+    rmdir_p @DBDIR@
+}
+
+# -------------------------------------------------------------------------
+
+# action_destroy_wrapper
+#
+# Unavailable action.
+#
+action_destroy_wrapper() {
+    err "the \`destroy' action cannot be used in wrapper mode"
 }
 
 # -------------------------------------------------------------------------
@@ -598,7 +633,7 @@ main() {
 
     action=${1}; shift
     case ${action} in
-        auto|list|manual|rebuild|register|status|unregister)
+        auto|destroy|list|manual|rebuild|register|status|unregister)
             action_${action}_${what} "${@}"
             ;;
         *)

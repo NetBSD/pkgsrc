@@ -1,0 +1,8 @@
+# $NetBSD: DEINSTALL,v 1.1 2005/01/25 16:27:37 jmmv Exp $
+#
+
+case ${STAGE} in
+	DEINSTALL)
+		@PKG_ALTERNATIVES@ -s destroy
+		;;
+esac
