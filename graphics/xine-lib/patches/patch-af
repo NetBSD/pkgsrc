@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/libw32dll/wine/Makefile.in.orig	Sat Apr  5 10:50:01 2003
++++ src/libw32dll/wine/Makefile.in
+@@ -533,10 +533,10 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ stubs.lo: stubs.s
+-	$(CC) -c $(srcdir)/stubs.s -o stubs.lo
++	${LIBTOOL} --mode=compile ${CC} -c ${srcdir}/stubs.s -o stubs.lo
+ 
+ wrapper.lo: wrapper.S
+-	$(CC) -c $(srcdir)/wrapper.S -o wrapper.lo
++	${LIBTOOL} --mode=compile ${CC} -c ${srcdir}/wrapper.S -o wrapper.lo
+ 
+ debug:
+ 	@$(MAKE) CFLAGS="$(DEBUG_CFLAGS)"

@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/xine-engine/audio_decoder.c.orig	2003-03-08 08:28:32.000000000 +1000
++++ src/xine-engine/audio_decoder.c
+@@ -335,7 +335,9 @@ void *audio_decoder_loop (void *stream_g
+ void audio_decoder_init (xine_stream_t *stream) {
+ 
+   pthread_attr_t       pth_attrs;
++#ifndef _PTH_PTHREAD_H_
+   struct sched_param   pth_params;
++#endif
+   int                  err;
+ 
+   if (stream->audio_out == NULL) {
+@@ -361,10 +363,14 @@ void audio_decoder_init (xine_stream_t *
+   */
+ 
+   pthread_attr_init(&pth_attrs);
++#ifndef _PTH_PTHREAD_H_
+   pthread_attr_getschedparam(&pth_attrs, &pth_params);
+   pth_params.sched_priority = sched_get_priority_min(SCHED_OTHER);
+   pthread_attr_setschedparam(&pth_attrs, &pth_params);
++#endif
++#ifdef PTHREAD_SCOPE_SYSTEM
+   pthread_attr_setscope(&pth_attrs, PTHREAD_SCOPE_SYSTEM);
++#endif
+   
+   if ((err = pthread_create (&stream->audio_thread,
+ 			     &pth_attrs, audio_decoder_loop, stream)) != 0) {
