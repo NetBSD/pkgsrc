@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1 1999/08/11 21:54:22 tron Exp $
+
+--- xfile.hc.orig	Thu Mar 20 09:29:16 1997
++++ xfile.hc	Wed Aug  4 14:42:46 1999
+@@ -12,10 +12,10 @@
+ /*----------------------------------------------------------------------*/
+ 
+ struct conv 
+-   {char b0; 
+-    char b1;
+-    char b2;
+-    char b3;
++   {signed char b0; 
++    signed char b1;
++    signed char b2;
++    signed char b3;
+    };
+ 
+ union conv_data
