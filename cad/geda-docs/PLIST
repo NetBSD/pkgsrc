@@ -1,11 +1,97 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/18 14:25:48 dmcmahill Exp $
-share/doc/gEDA/README
-share/doc/gEDA/README.keymapping
-share/doc/gEDA/attributes.txt
-share/doc/gEDA/fileformats.html
-share/doc/gEDA/hooks_and_scheme.txt
-share/doc/gEDA/keymapping.html
-share/doc/gEDA/keymapping.tex
-share/doc/gEDA/netattrib.txt
-share/doc/gEDA/symbols.html
-@dirrm share/doc/gEDA
+@comment $NetBSD: PLIST,v 1.3 2002/12/13 05:19:45 dmcmahill Exp $
+share/gEDA/documentation/attributes/attributes.css
+share/gEDA/documentation/attributes/attributes.dvi
+share/gEDA/documentation/attributes/attributes.html
+share/gEDA/documentation/attributes/attributes.pdf
+share/gEDA/documentation/attributes/attributes.ps
+share/gEDA/documentation/attributes/contents.png
+share/gEDA/documentation/attributes/index.html
+share/gEDA/documentation/attributes/internals.pl
+share/gEDA/documentation/attributes/labels.pl
+share/gEDA/documentation/attributes/next.png
+share/gEDA/documentation/attributes/next_g.png
+share/gEDA/documentation/attributes/node1.html
+share/gEDA/documentation/attributes/node10.html
+share/gEDA/documentation/attributes/node11.html
+share/gEDA/documentation/attributes/node12.html
+share/gEDA/documentation/attributes/node13.html
+share/gEDA/documentation/attributes/node14.html
+share/gEDA/documentation/attributes/node15.html
+share/gEDA/documentation/attributes/node16.html
+share/gEDA/documentation/attributes/node17.html
+share/gEDA/documentation/attributes/node18.html
+share/gEDA/documentation/attributes/node19.html
+share/gEDA/documentation/attributes/node2.html
+share/gEDA/documentation/attributes/node20.html
+share/gEDA/documentation/attributes/node21.html
+share/gEDA/documentation/attributes/node22.html
+share/gEDA/documentation/attributes/node23.html
+share/gEDA/documentation/attributes/node24.html
+share/gEDA/documentation/attributes/node25.html
+share/gEDA/documentation/attributes/node26.html
+share/gEDA/documentation/attributes/node27.html
+share/gEDA/documentation/attributes/node28.html
+share/gEDA/documentation/attributes/node29.html
+share/gEDA/documentation/attributes/node3.html
+share/gEDA/documentation/attributes/node30.html
+share/gEDA/documentation/attributes/node31.html
+share/gEDA/documentation/attributes/node32.html
+share/gEDA/documentation/attributes/node4.html
+share/gEDA/documentation/attributes/node5.html
+share/gEDA/documentation/attributes/node6.html
+share/gEDA/documentation/attributes/node7.html
+share/gEDA/documentation/attributes/node8.html
+share/gEDA/documentation/attributes/node9.html
+share/gEDA/documentation/attributes/prev.png
+share/gEDA/documentation/attributes/prev_g.png
+share/gEDA/documentation/attributes/up.png
+share/gEDA/documentation/attributes/up_g.png
+share/gEDA/documentation/fileformats/fileformats.html
+share/gEDA/documentation/gedadocs.html
+share/gEDA/documentation/gnetlist/gnetlist.txt
+share/gEDA/documentation/gschem/gschem.txt
+share/gEDA/documentation/hooks/hooks_and_scheme.txt
+share/gEDA/documentation/keymapping/keymapping.html
+share/gEDA/documentation/netattrib/netattrib.txt
+share/gEDA/documentation/symbols/contents.png
+share/gEDA/documentation/symbols/images.aux
+share/gEDA/documentation/symbols/images.log
+share/gEDA/documentation/symbols/images.pl
+share/gEDA/documentation/symbols/images.tex
+share/gEDA/documentation/symbols/img1.png
+share/gEDA/documentation/symbols/img2.png
+share/gEDA/documentation/symbols/index.html
+share/gEDA/documentation/symbols/labels.pl
+share/gEDA/documentation/symbols/next.png
+share/gEDA/documentation/symbols/next_g.png
+share/gEDA/documentation/symbols/node1.html
+share/gEDA/documentation/symbols/node10.html
+share/gEDA/documentation/symbols/node11.html
+share/gEDA/documentation/symbols/node12.html
+share/gEDA/documentation/symbols/node13.html
+share/gEDA/documentation/symbols/node14.html
+share/gEDA/documentation/symbols/node2.html
+share/gEDA/documentation/symbols/node3.html
+share/gEDA/documentation/symbols/node4.html
+share/gEDA/documentation/symbols/node5.html
+share/gEDA/documentation/symbols/node6.html
+share/gEDA/documentation/symbols/node7.html
+share/gEDA/documentation/symbols/node8.html
+share/gEDA/documentation/symbols/node9.html
+share/gEDA/documentation/symbols/prev.png
+share/gEDA/documentation/symbols/prev_g.png
+share/gEDA/documentation/symbols/symbols.css
+share/gEDA/documentation/symbols/symbols.dvi
+share/gEDA/documentation/symbols/symbols.html
+share/gEDA/documentation/symbols/symbols.pdf
+share/gEDA/documentation/symbols/symbols.ps
+share/gEDA/documentation/symbols/up.png
+share/gEDA/documentation/symbols/up_g.png
+@dirrm share/gEDA/documentation/symbols
+@dirrm share/gEDA/documentation/netattrib
+@dirrm share/gEDA/documentation/keymapping
+@dirrm share/gEDA/documentation/hooks
+@dirrm share/gEDA/documentation/gschem
+@dirrm share/gEDA/documentation/gnetlist
+@dirrm share/gEDA/documentation/fileformats
+@dirrm share/gEDA/documentation/attributes

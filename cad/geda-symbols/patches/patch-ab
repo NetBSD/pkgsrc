@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2002/12/13 05:19:47 dmcmahill Exp $
+
+--- documentation/Makefile.in.orig	Sun Nov  3 22:58:59 2002
++++ documentation/Makefile.in
+@@ -316,7 +316,7 @@ uninstall-am: uninstall-datadocDATA unin
+ #
+ %.pic: %.fig
+ 	@echo "Creating pic (using fig2dev)"
+-	@if which fig2dev >/dev/null 2>/dev/null; then           \
++	@if ! which fig2dev >/dev/null 2>/dev/null; then           \
+ 		fig2dev -L pic $*.fig >$*.pic		       ;\
+ 	else                                                    \
+ 		echo "** Did not find fig2dev **"              ;\
+@@ -327,19 +327,19 @@ uninstall-am: uninstall-datadocDATA unin
+ %.ps: %.doc
+ 	@echo "Creating ps (using groff)"
+ 	@rm -rf $*.tmp
+-	@if which groff >/dev/null 2>/dev/null; then              \
++	@if ! which groff >/dev/null 2>/dev/null; then              \
+ 		groff -t -sp -ms $*.doc >$*.tmp		        ;\
+ 	else						         \
+ 		echo "** Did not find groff **"                 ;\
+ 		echo "Some Documentation might not be correct!" ;\
+-		touch $*.ps                                     ;\
++		touch $*.tmp                                     ;\
+ 	fi
+ 	@mv -f $*.tmp $*.ps
+ 
+ %.pdf: %.ps
+ 	@echo "Creating pdf (using ps2pdf)"
+ 	@rm -rf $*.pdf
+-	@if which ps2pdf >/dev/null 2>/dev/null; then             \
++	@if ! which ps2pdf >/dev/null 2>/dev/null; then             \
+ 		ps2pdf $*.ps					;\
+ 	else                                                     \
+ 		echo "** Did not find ps2pdf **"                ;\

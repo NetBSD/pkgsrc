@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:14 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/13 05:19:51 dmcmahill Exp $
 bin/gschem
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gschemdoc.info
 info/gschemdoc.info
@@ -12,6 +12,7 @@ info/gschemdoc.info-14
 info/gschemdoc.info-15
 info/gschemdoc.info-16
 info/gschemdoc.info-17
+info/gschemdoc.info-18
 info/gschemdoc.info-2
 info/gschemdoc.info-3
 info/gschemdoc.info-4
@@ -21,12 +22,35 @@ info/gschemdoc.info-7
 info/gschemdoc.info-8
 info/gschemdoc.info-9
 man/man1/gschem.1
+share/gEDA/bitmap/gschem-bus.xpm
+share/gEDA/bitmap/gschem-comp.xpm
+share/gEDA/bitmap/gschem-copy.xpm
+share/gEDA/bitmap/gschem-delete.xpm
+share/gEDA/bitmap/gschem-edit.xpm
+share/gEDA/bitmap/gschem-mirror.xpm
+share/gEDA/bitmap/gschem-move.xpm
+share/gEDA/bitmap/gschem-net.xpm
+share/gEDA/bitmap/gschem-new.xpm
+share/gEDA/bitmap/gschem-open.xpm
+share/gEDA/bitmap/gschem-redo.xpm
+share/gEDA/bitmap/gschem-rotate.xpm
+share/gEDA/bitmap/gschem-save.xpm
+share/gEDA/bitmap/gschem-select.xpm
+share/gEDA/bitmap/gschem-text.xpm
+share/gEDA/bitmap/gschem-undo.xpm
+share/gEDA/gschem-darkbg
 share/gEDA/gschem-gtkrc
+share/gEDA/gschem-lightbg
 share/gEDA/system-gschemrc
 share/gEDA/scheme/auto-uref.scm
 share/gEDA/scheme/generate_netlist.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/list-keys.scm
 share/gEDA/scheme/print-NB-attribs.scm
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
+@dirrm share/gEDA/bitmap
 @unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}
