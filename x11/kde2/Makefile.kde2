@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.kde2,v 1.1 2001/11/13 21:08:56 jlam Exp $
+#
+# This Makefile fragment is included at the top of package Makefiles for
+# those packages that use the recommended KDE2 configure and build
+# infrastructure.
+
+CATEGORIES+=	kde
+_KDE_VERSION=	2.2.1
+MASTER_SITES?=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/
+EXTRACT_SUFX?=	.tar.bz2
+
+MAINTAINER?=	skrll@netbsd.org
+HOMEPAGE?=	http://www.kde.org/
+
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
