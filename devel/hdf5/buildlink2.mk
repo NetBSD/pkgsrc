@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:30 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/04/29 23:05:22 jtb Exp $
 
 .if !defined(HDF5_BUILDLINK2_MK)
 HDF5_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		hdf5
-BUILDLINK_DEPENDS.hdf5?=	hdf5>=1.4.3
+BUILDLINK_DEPENDS.hdf5?=	hdf5>=1.4.5
 BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.hdf5=hdf5
