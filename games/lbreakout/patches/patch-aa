@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/22 16:58:12 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/15 19:41:45 rh Exp $
 
---- configure.orig	Wed Oct 18 16:16:30 2000
-+++ configure
-@@ -1318,7 +1318,7 @@
+--- configure.orig	Thu Mar 15 10:05:08 2001
++++ configure	Tue Aug 14 20:05:05 2001
+@@ -1319,7 +1319,7 @@
      no_sdl=yes
    else
      SDL_CFLAGS=`$SDL_CONFIG $sdlconf_args --cflags`
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/22 16:58:12 rh Exp $
  
      sdl_major_version=`$SDL_CONFIG $sdl_args --version | \
             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
-@@ -1706,7 +1706,6 @@
+@@ -1708,7 +1708,6 @@
  
  ac_save_LIBS="$LIBS"
  thread_flag=""
 -LIBS="$LIBS -pthread"
  cat > conftest.$ac_ext <<EOF
- #line 1712 "configure"
+ #line 1714 "configure"
  #include "confdefs.h"
-@@ -1718,7 +1717,7 @@
- if { (eval echo configure:1719: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -1720,7 +1719,7 @@
+ if { (eval echo configure:1721: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    echo "$ac_t"""-pthread used..."" 1>&6
 -        thread_flag="-pthread"
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/22 16:58:12 rh Exp $
  else
    echo "configure: failed program was:" >&5
    cat conftest.$ac_ext >&5
-@@ -1784,7 +1783,7 @@
+@@ -1786,7 +1785,7 @@
  
  
  sdir=$datadir/games/lbreakout
