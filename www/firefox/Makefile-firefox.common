@@ -1,0 +1,34 @@
+# $NetBSD: Makefile-firefox.common,v 1.1 2004/08/10 14:28:14 taya Exp $
+
+MOZILLA_BIN=	firefox-bin
+MOZ_VER=	0.9.3
+EXTRACT_SUFX=	.tar.bz2
+
+DISTNAME=	firefox-${MOZ_VER}-source
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
+		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
+		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/ \
+		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/
+
+HOMEPAGE=	http://www.mozilla.org/projects/firefox/
+
+DISTINFO_FILE=	${.CURDIR}/../../www/firefox/distinfo
+PATCHDIR=	${.CURDIR}/../../www/firefox/patches
+
+CONFIGURE_ENV+=	MOZ_PHOENIX=1
+MAKE_ENV+=	MOZ_PHOENIX=1
+
+CONFIGURE_ARGS+=	--disable-mailnews
+CONFIGURE_ARGS+=	--disable-composer
+CONFIGURE_ARGS+=	--enable-extensions=default,-irc
+
+USE_GCC_SHLIB=		yes
+BUILD_MATHML=		# defined
+
+pre-install:
+	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
+							${WRKSRC}/dist/bin
+	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
+		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
+
+.include "../../www/mozilla/Makefile.common"
