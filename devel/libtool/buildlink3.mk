@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 04:19:48 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/11 04:23:35 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use libtool.
 #
@@ -6,17 +6,17 @@
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBTOOL_BUILDLINK3_MK:=	${LIBTOOL_BUILDLINK3_MK}+
+LTDL_BUILDLINK3_MK:=	${LTDL_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libtool
+BUILDLINK_DEPENDS+=	ltdl
 .endif
 
-.if !empty(LIBTOOL_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			libtool
-BUILDLINK_DEPENDS.libtool+=		libtool>=1.5.2
-BUILDLINK_PKGSRCDIR.libtool?=		../../devel/libtool
+.if !empty(LTDL_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=			ltdl
+BUILDLINK_DEPENDS.ltdl+=		libtool-base>=1.5.2
+BUILDLINK_PKGSRCDIR.ltdl?=		../../devel/libtool-base
 
-.endif # LIBTOOL_BUILDLINK3_MK
+.endif # LTDL_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
