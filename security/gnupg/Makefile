@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2003/10/11 07:18:50 grant Exp $
+# $NetBSD: Makefile,v 1.54 2003/11/27 09:50:12 tron Exp $
 
 DISTNAME=	gnupg-1.2.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
@@ -15,8 +16,11 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Privacy Guard, public-Key encryption and digital signatures
 
-BUILD_USES_MSGFMT=	yes
+PATCH_SITES=		http://www.heise.de/security/tools/
+PATCHFILES=		gnupg_patch.diff
+PATCH_DIST_ARGS=	-d ${WRKSRC}/g10 -E ${PATCH_DIST_STRIP}
 
+BUILD_USES_MSGFMT=	yes
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
