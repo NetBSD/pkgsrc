@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/16 00:04:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/16 00:11:32 jmmv Exp $
 #
 
 DISTNAME=	gucharmap-1.2.0
@@ -25,9 +25,13 @@ PKGCONFIG_OVERRIDE+=    gucharmap.pc.in
 
 GTK2_IMMODULES=		yes
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
