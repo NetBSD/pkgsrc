@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.4 2004/12/10 05:59:50 markd Exp $
+# $NetBSD: kde3.mk,v 1.5 2005/03/06 12:41:26 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -46,6 +46,7 @@ KDEDIR?=		${PREFIX}
 QTDIR?=			${PREFIX}/qt3
 
 CONFIGURE_ARGS+=	--datadir="${KDEDIR}/share/kde"
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
 CONFIGURE_ARGS+=	--with-extra-includes="${_KDE3_EXTRA_INCLUDES}"
 CONFIGURE_ARGS+=	--disable-rpath
@@ -60,7 +61,7 @@ LDFLAGS+=		-L${QTDIR}/lib
 _KDE3_EXTRA_INCLUDES?=	${LOCALBASE}/include:${X11BASE}/include
 
 KDE_CONFIG_SITE?=	${KDEDIR}/share/kde/config.site			\
-			${KDEDIR}/etc/config.site
+			${PKG_SYSCONFDIR}/kde/config.site
 
 CONFIGURE_ENV+=		KDEDIR="${KDEDIR}"
 CONFIGURE_ENV+=		CONFIG_SITE="${KDE_CONFIG_SITE}"
