@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/02 06:40:11 sjg Exp $
 #
 
-DISTNAME=	mk-20030930
-PKGNAME=	mk-files-20030930
+DISTNAME=	mk-20040201
+PKGNAME=	mk-files-20040201
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
 
