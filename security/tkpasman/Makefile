@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/08 20:21:58 jmmv Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
 PKGNAME=	${DISTNAME:S/TkPasMan/tkpasman/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.xs4all.nl/~wbsoft/linux/projects/
 
@@ -11,7 +11,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
 COMMENT=	Username and password manager that uses the Tk toolkit
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 CONFIG_SUBST=		PREFIX="${PREFIX}"
 CONFIG_SUBST+=		SHELL="${SH}"
@@ -22,7 +22,7 @@ CONFIG_SUBST_SED=	${CONFIG_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 # SSL support
 .if defined(TKPASMAN_USE_SSL) && ${TKPASMAN_USE_SSL} == "YES"
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CONFIG_SUBST+=		USE_OPENSSL="true"
 CONFIG_SUBST+=		OPENSSL="${BUILDLINK_PREFIX.openssl}/bin/openssl"
 .else
@@ -43,5 +43,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkpasman
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tkpasman
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
