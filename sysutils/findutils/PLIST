@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:41 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/22 11:35:40 wiz Exp $
 bin/gfind
 bin/gxargs
 bin/glocate
@@ -11,11 +11,11 @@ info/find.info
 info/find.info-1
 info/find.info-2
 @exec ${INSTALL_INFO} %D/info/find.info %D/info/dir
-man/cat1/gfind.1
-man/cat1/gxargs.1
-man/cat1/glocate.1
-man/cat1/gupdatedb.1
-man/cat5/glocatedb.5
+man/cat1/gfind.0
+man/cat1/gxargs.0
+man/cat1/glocate.0
+man/cat1/gupdatedb.0
+man/cat5/glocatedb.0
 man/man1/gfind.1
 man/man1/gxargs.1
 man/man1/glocate.1
