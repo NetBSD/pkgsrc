@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4678 2004/02/04 13:35:55 adam Exp $
+$NetBSD: CHANGES,v 1.4679 2004/02/04 17:15:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -566,3 +566,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added jpegoptim-1.2.2 [cube 2004-02-03]
 	Updated xfce4-menueditor to 1.0rc3nb1 [martti 2004-02-04]
 	Updated gd to 2.0.22 [adam 2004-02-04]
+	Updated buildtool to 0.15 [jmmv 2004-02-04]
+	Updated buildtool-doc to 0.15 [jmmv 2004-02-04]
