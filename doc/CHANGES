@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2042 2003/04/25 20:42:50 salo Exp $
+$NetBSD: CHANGES,v 1.2043 2003/04/26 02:42:40 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1736,3 +1736,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnumeric to 1.0.13 [rh 2003-04-25]
 	Updated gaim to 0.62 [jmmv 2003-04-25]
 	Updated mktemp to 1.5 [salo 2003-04-25]
+	Updated p5-Text-Balanced to 1.94 [mjl 2003-04-25]
+	Updated p5-Parse-RecDescent to 1.94 [mjl 2003-04-25]
+	Updated p5-Spreadsheet-WriteExcel to 0.41 [mjl 2003-04-25]
