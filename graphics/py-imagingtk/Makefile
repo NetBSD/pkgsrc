@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/20 16:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/22 18:12:12 drochner Exp $
 #
 
 DISTNAME=	Imaging-1.1.1
-PKGNAME=	py-imagingtk-1.1.1
+PKGNAME=	py20-imagingtk-1.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
@@ -10,8 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	Tk support for the Python Imaging Library (PIL)
 
-DEPENDS+=	py-imaging>=1.1.1:../../graphics/py-imaging
 DEPENDS+=	py-Tk>=2.0:../../x11/py-Tk
+
+PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now until some things are cleaned up
+BUILDLINK_DEPENDS.python20= python20>=2.0.1nb1
 
 DIST_SUBDIR=    python
 ALL_TARGET=     sharedmods
@@ -20,6 +22,7 @@ do-configure:
 	(cd ${WRKSRC}/libImaging; CC="cc -fPIC" LIBS="${LDFLAGS}" ./configure)
 	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@X11BASE@,${X11BASE},g' \
 	        ${FILESDIR}/Setup.in >${WRKSRC}/Setup.in
+	${CP} ${LOCALBASE}/${PYLIB}/config/Makefile.pre.in ${WRKSRC}
 	(cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot)
 
 do-install:
@@ -27,6 +30,8 @@ do-install:
 		${PREFIX}/lib/python2.0/site-packages/PIL
 	(cd ${WRKSRC}/Scripts; \
 	${INSTALL_DATA} enhancer.py painter.py player.py \
-	thresholder.py viewer.py ${PREFIX}/share/examples/py-imaging )
+	thresholder.py viewer.py ${PREFIX}/share/examples/py20-imaging )
 
+.include "../../lang/python/extension.buildlink.mk"
+.include "../../graphics/py-imaging/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
