@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2001/06/16 14:52:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/08/03 17:07:26 wiz Exp $
 bin/easytag
 share/easytag/EasyTAG_logo.xpm
 share/gnome/apps/Multimedia/easytag.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/easytag.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/easytag.mo
