@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/10/19 18:16:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/26 19:38:12 dmcmahill Exp $
 #
 
-DISTNAME=	bins-1.1.17
-PKGREVISION=	2
+DISTNAME=	bins-1.1.18
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,8 +33,8 @@ REPLACE_PERL=	bins bins_edit bins-edit-gui bins_txt2xml
 
 post-patch:
 	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
-	${SED}	-e 's;@pkgsysconfdir@;${PKG_SYSCONFDIR};g' \
-		-e 's;@pkglocaledir@;${PREFIX}/${PKGLOCALEDIR}/locale;g' \
+	${SED}	-e 's;/etc/bins;${PKG_SYSCONFDIR}/bins;g' \
+		-e 's;/usr/local/share/locale;${PREFIX}/${PKGLOCALEDIR}/locale;g' \
 		${WRKSRC}/bins.bak > ${WRKSRC}/bins
 
 do-install:
