@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/12/02 08:52:58 martti Exp $
+# $NetBSD: Makefile,v 1.37 2003/01/19 11:06:11 salo Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
@@ -11,13 +11,11 @@ MAINTAINER=	martti@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/generated/manpages/xpmroot.html
 COMMENT=	Sets the root window to an Xpm pixmap
 
-PKG_VERSION=		2.4.14
-USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
-GNU_CONFIGURE=		YES
+PKG_VERSION=	2.4.14
+USE_BUILDLINK2=	YES
+USE_X11BASE=	YES
+GNU_CONFIGURE=	YES
 
-MAKE_ENV+=	INSTALL_PROGRAM='${INSTALL_PROGRAM}'
-MAKE_ENV+=	INSTALL_MAN='${INSTALL_MAN}'
 MAKE_ENV+=	VERSION=${PKG_VERSION}
 CONFIGURE_ARGS+=	--without-extras --disable-dmalloc --without-gnome
 
@@ -28,8 +26,8 @@ do-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xpmroot)
 
 do-install:
-	${INSTALL_PROGRAM}	${WRKSRC}/utils/xpmroot	${PREFIX}/bin
-	${INSTALL_MAN}		${WRKSRC}/utils/xpmroot.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/utils/xpmroot ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/utils/xpmroot.1 ${PREFIX}/man/man1
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
