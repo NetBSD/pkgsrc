@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/04/07 03:51:54 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/20 16:57:21 itojun Exp $
 
 DISTNAME=	intlfonts-1.2
 CATEGORIES=	x11
@@ -31,7 +31,7 @@ EXTRA_FONTS=	Chinese.BIG	\
 
 MISC_FILES=	README.split
 
-DIST_SUBDIR=	intlfonts
+DIST_SUBDIR=	${PKGNAME}
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
 MESSAGE_FILE=	${WRKSRC}/MESSAGE
 USE_X11BASE=	yes
