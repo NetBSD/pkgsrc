@@ -1,4 +1,4 @@
-CPIO(1)                     NetBSD Reference Manual                    CPIO(1)
+CPIO(1)                 NetBSD General Commands Manual                 CPIO(1)
 
 NNAAMMEE
      ccppiioo - copy file archives in and out
@@ -18,8 +18,8 @@ DDEESSCCRRIIPPTTIIOONN
      The options are as follows:
 
      --oo, ----ccrreeaattee
-             Create an archive.  Reads the list of files to store in the
-             archive from standard input, and writes the archive on standard
+             Create an archive.  Reads the list of files to store in the ar-
+             chive from standard input, and writes the archive on standard
              output.
 
              --aa, ----rreesseett--aacccceessss--ttiimmee
@@ -203,4 +203,4 @@ AAUUTTHHOORRSS
 BBUUGGSS
      The --ss and --SS options are currently not implemented.
 
-NetBSD 1.6                     February 16, 1997                             4
+NetBSD 1.6                     February 16, 1997                    NetBSD 1.6
