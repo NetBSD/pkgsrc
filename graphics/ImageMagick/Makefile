@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2003/09/12 17:55:58 recht Exp $
+# $NetBSD: Makefile,v 1.102 2003/09/17 19:49:24 grant Exp $
 
 .include "Makefile.common"
 
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+GCC_REQD=		2.95.3
+
 PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
 PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
 
@@ -27,10 +29,6 @@ PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
 
 # c++ broken as of 'gcc version 2.95.3 20010315 (release) (NetBSD nb1)'
 NOT_FOR_PLATFORM=	NetBSD-*-sparc64
-
-# NetBSD 1.5's gcc is too old to compile this pkg
-.include "../../mk/compiler.mk"
-GCC_REQD=		2.95.3
 
 # Avoid compiler bug on "mipsel" (cobalt?)
 .if (${MACHINE_ARCH} == mipsel)
