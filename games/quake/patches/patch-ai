@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2000/02/08 14:53:45 wiz Exp $
+$NetBSD: patch-ai,v 1.4 2000/10/05 05:53:36 jlam Exp $
 
 --- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
-+++ WinQuake/Makefile.linuxi386	Tue Feb  8 12:06:10 2000
-@@ -25,29 +25,32 @@
++++ WinQuake/Makefile.linuxi386
+@@ -25,29 +25,31 @@
  endif
  NOARCH=noarch
  
@@ -11,7 +11,6 @@ $NetBSD: patch-ai,v 1.3 2000/02/08 14:53:45 wiz Exp $
  MASTER_DIR=/grog/Projects/QuakeMaster
 -MESA_DIR=/usr/local/src/Mesa-2.6
 +#MESA_DIR=/usr/local/src/Mesa-2.6
-+MESA_DIR=${X11BASE}
  TDFXGL_DIR = /home/zoid/3dfxgl
  
 -BUILD_DEBUG_DIR=debug$(ARCH)$(GLIBC)
@@ -42,11 +41,11 @@ $NetBSD: patch-ai,v 1.3 2000/02/08 14:53:45 wiz Exp $
 +MESAGLLDFLAGS=-L${X11BASE}/lib -L${LOCALBASE}/lib -L$(MESA_DIR)/lib -lMesaGL -lX11 -lXext
  TDFXGLLDFLAGS=-L$(TDFXGL_DIR)/release$(ARCH)$(GLIBC) -l3dfxgl -lglide2x -ldl
 -GLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -lGL -lX11 -lXext -ldl -lXxf86dga -lXxf86vm -lm
-+GLLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-rpath -Wl,"${LOCALBASE}/lib" -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
++GLLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${MESA_DIR}/lib -Wl,-rpath -Wl,${MESA_DIR}/lib -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
  GLCFLAGS=-DGLQUAKE -I$(MESA_DIR)/include -I/usr/include/glide
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<
-@@ -57,19 +60,28 @@
+@@ -57,19 +59,28 @@
  DO_X11_CC=$(CC) $(CFLAGS) $(XCFLAGS) -o $@ -c $<
  DO_X11_DEBUG_CC=$(CC) $(DEBUG_CFLAGS) $(XCFLAGS) -o $@ -c $<
  DO_O_CC=$(CC) -O $(CFLAGS) -o $@ -c $<

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/05 04:44:59 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/05 05:53:35 jlam Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -21,6 +21,9 @@ MAKE_ENV+=	MAINDIR=${WRKSRC}
 
 NO_WRKSUBDIR=	yes
 USE_X11BASE=	yes
+
+EVAL_PREFIX+=	MESA_DIR=Mesa
+MAKE_ENV+=	MESA_DIR=${MESA_DIR}
 
 do-configure:
 	cd ${WRKSRC}/QW && ${LN} -fs Makefile.Linux ${MAKEFILE}
