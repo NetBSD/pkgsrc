@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.all,v 1.1 1999/08/22 01:32:07 hubertf Exp $ -->
+<!-- $NetBSD: README.all,v 1.2 1999/08/23 22:02:27 hubertf Exp $ -->
 <html>
 <head>
 <title>All NetBSD Packages</title>
@@ -18,7 +18,7 @@ Please select an entry for more details.
 
 <hr noshade>
 <table>
-<tr><th>Package <th>Category <th> Package description
+<tr><th align=left>Package <th align=left>Category <th align=left> Package description
 %%PKGS%%
 </table>
 
