@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/11/08 18:42:09 tv Exp $
+@comment $NetBSD: PLIST,v 1.20 2005/01/12 01:50:15 xtraeme Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -19,7 +19,7 @@ lib/liblber.la
 lib/libldap.la
 lib/libldap_r.la
 ${DYNAMIC_MOD}lib/openldap/back_dnssrv.la
-${DYNAMIC_MOD}lib/openldap/back_hdb.la
+${DYNAMIC_MOD}${HDB_MODULE}lib/openldap/back_hdb.la
 ${DYNAMIC_MOD}lib/openldap/back_ldap.la
 ${DYNAMIC_MOD}lib/openldap/back_ldbm.la
 ${DYNAMIC_MOD}lib/openldap/back_meta.la
