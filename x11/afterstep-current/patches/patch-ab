@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+
+--- autoconf/Makefile.common.in.orig	Mon Mar  8 10:47:14 1999
++++ autoconf/Makefile.common.in	Thu May 27 05:28:28 1999
+@@ -13,8 +13,8 @@
+ 
+ install.man:
+ 		@if test -f $(PROG).man; then \
+-		  echo $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1x; \
+-		  $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1x; \
++		  echo $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1; \
++		  $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1; \
+ 		fi
+ 
+ install.script:
+@@ -27,7 +27,7 @@
+ 		$(RMF) $(AFTER_BIN_DIR)/$(PROG)
+ 
+ uninstall.man:
+-		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1x
++		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1
+ 
+ uninstall.script:
+ 		@for i in $(SCRIPTS); do \
