@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2003/04/09 15:01:18 seb Exp $
+# $NetBSD: Makefile,v 1.34 2003/05/28 14:53:51 seb Exp $
 #
 
-DISTNAME=	pkgdiff-0.108
+DISTNAME=	pkgdiff-0.109
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
@@ -25,9 +25,8 @@ MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
-BUILD_DEPENDS+=	groff-[0-9]*:../../textproc/groff
-NROFF=		gnroff
 DIFF?=		gdiff
+MANINSTALL=
 .else
 NROFF=		nroff
 DIFF?=		diff
@@ -44,18 +43,21 @@ do-build:
 		< ${FILESDIR}/pkgdiff			\
 		> ${WRKSRC}/pkgdiff
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
-.for FILE in mkpatches patchdiff pkgdiff pkgvi
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		< ${FILESDIR}/${FILE}.1			\
-		> ${WRKSRC}/${FILE}.1
-	${NROFF} -mandoc ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
-.endfor
+.if !empty(MANINSTALL:Mcatinstall)
+.  for FILE in mkpatches patchdiff pkgdiff pkgvi
+	${NROFF} -mandoc ${FILESDIR}/${FILE}.1 >${WRKSRC}/${FILE}.0
+.  endfor
+.endif
 
 do-install:
 .for FILE in mkpatches patchdiff pkgdiff pkgvi
 	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${PREFIX}/bin
+.   if !empty(MANINSTALL:Mcatinstall)
 	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/man/cat1
-	${INSTALL_MAN} ${WRKSRC}/${FILE}.1 ${PREFIX}/man/man1
+.   endif
+.   if !empty(MANINSTALL:Mmaninstall)
+	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${PREFIX}/man/man1
+.   endif
 .endfor
 
 .include "../../lang/perl5/buildlink2.mk"
