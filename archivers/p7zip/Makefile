@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/27 20:28:53 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/05 14:44:22 minskim Exp $
 #
 
 DISTNAME=		p7zip_0.80
@@ -11,6 +11,8 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://p7zip.sourceforge.net/
 COMMENT=		File archiver with high compression
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 MAKEFILE=		makefile
@@ -19,6 +21,8 @@ USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=		require
 
 GCC_REQD=		3.0
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/7z ${PREFIX}/bin
