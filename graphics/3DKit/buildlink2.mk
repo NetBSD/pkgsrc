@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/26 02:27:40 wiz Exp $
 #
 # This Makefile fragment is included by packages that use 3DKit.
 #
@@ -10,6 +10,7 @@
 
 BUILDLINK_PACKAGES+=			3DKit
 BUILDLINK_DEPENDS.3DKit?=		3DKit>=0.3.1r2nb2
+BUILDLINK_RECOMMENDED.3DKit?=		3DKit>=0.3.1r2nb4
 BUILDLINK_PKGSRCDIR.3DKit?=		../../graphics/3DKit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.3DKit=3DKit

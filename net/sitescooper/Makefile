@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:49 wiz Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
+PKGREVISION=	1
 CATEGORIES=	net comms
 MASTER_SITES=	http://sitescooper.cx/released/
 
