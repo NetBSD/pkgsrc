@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/02 02:58:21 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 03:12:20 tsarna Exp $
 #
 
 DISTNAME=	Zope-2.1.1-src
@@ -31,6 +31,7 @@ post-build:
 do-install:
 	(cd ${WRKSRC}; ${INSTALL_DATA} ExtensionClass.h \
 		${LOCALBASE}/include/python1.5 ; \
+	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR} ; \
 	${INSTALL_SCRIPT} Xaq.py* ComputedAttribute.py* ${PYTHON_LIBDIR} ; \
 	${INSTALL_PROGRAM} *.so ${PYTHON_LIBDIR} ; \
 	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR}/extclass_test ; \
