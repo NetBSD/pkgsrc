@@ -1,9 +1,9 @@
-# New ports collection makefile for:	ncurses
+# New packages collection makefile for:	ncurses
 # Version required:     		1.9.9g
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.11 1998/03/16 08:06:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1998/03/16 11:06:07 frueauf Exp $
 
 DISTNAME=	ncurses-1.9.9g
 CATEGORIES=	devel
@@ -52,10 +52,10 @@ post-patch:
 	( cd ${WRKSRC}/man ; ${RM} -f tput.1 tset.1 clear.1 )
 	( cd ${WRKSRC}/man ; for i in *.1m ; do \
 	  ${SED} -e '/#include/s/curses.h/ncurses.h/' <$$i >`basename $$i .1m`.1 ; \
-	  rm -f $$i ; done )
+	  ${RM} -f $$i ; done )
 	( cd ${WRKSRC}/man ; for i in *.3x ; do \
 	  ${SED} -e '/#include/s/curses.h/ncurses.h/' <$$i >`basename $$i .3x`.3 ; \
-	  rm -f $$i ; done )
+	  ${RM} -f $$i ; done )
 
 post-install:
 	${MV} ${PREFIX}/include/curses.h ${PREFIX}/include/ncurses.h
