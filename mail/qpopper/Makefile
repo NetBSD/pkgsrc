@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/05/04 05:59:04 taca Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/09 19:25:30 jlam Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -15,22 +15,25 @@ MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://www.eudora.com/qpopper/
 COMMENT=		Qualcomm's POP server for Eudora
 
-USE_BUILDLINK_ONLY=	# defined
-
 .include "Makefile.common"
+
+USE_BUILDLINK2=		# defined
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 PKG_USERS?=		${QPOPPER_USER}
 
 pre-build:
-	${SED} 's"/usr/local/lib"${LOCALBASE}/libexec"' \
-		${WRKSRC}/man/popper.8 > ${WRKSRC}/man/popper.8.$$ && \
+	${SED}	-e "s|/usr/local/lib|${PREFIX}/libexec|g"		\
+		${WRKSRC}/man/popper.8 > ${WRKSRC}/man/popper.8.$$ &&	\
 	${MV} -f ${WRKSRC}/man/popper.8.$$ ${WRKSRC}/man/popper.8
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/License.txt ${LOCALBASE}/share/doc/qpopper.License
-	${INSTALL_DATA} ${WRKSRC}/samples/qpopper.config \
-		 ${LOCALBASE}/share/examples
+	${INSTALL_DATA} ${WRKSRC}/License.txt				\
+		${PREFIX}/share/doc/qpopper.License
+	${INSTALL_DATA} ${WRKSRC}/samples/qpopper.config		\
+		 ${PREFIX}/share/examples
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
