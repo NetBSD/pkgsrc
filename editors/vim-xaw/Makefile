@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/25 11:50:40 pooka Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/28 10:33:57 wiz Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -9,6 +9,7 @@ CONFLICTS=		vim-[0-9]* vim-gtk-*
 
 USE_X11=		yes
 USE_XAW=		yes
+USE_CURSES=		yes
 
 CONFIGURE_ARGS+=	--enable-gui=athena
 CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
@@ -17,30 +18,6 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-GOOD_CURSES=    1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
-
-.for PATTERN in ${GOOD_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-CURSES_GOOD?=   #defined
-.endif
-.endfor
-.endif
-
-.if ${OPSYS} == "SunOS"
-CURSES_GOOD?=   #defined
-.endif
-
-.if defined(CURSES_GOOD)
-CPPFLAGS=
-CONFIGURE_ARGS+=        --with-tlib=curses
-.else
-DEPENDS+=               ncurses>=4.2:../../devel/ncurses
-CONFIGURE_ARGS+=        --with-tlib=ncurses
-.endif
 
 post-install:
 	for f in gvim.1 gview.1 rgvim.1 rgview.1; do			\
@@ -58,4 +35,11 @@ post-install:
 MAKE_ENV+=		XAW_LIB=Xaw
 .else
 MAKE_ENV+=		XAW_LIB=Xaw3d
+.endif
+
+.if ${NEED_NCURSES} == "YES"
+CONFIGURE_ARGS+=	--with-tlib=ncurses
+.else
+CPPFLAGS=
+CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
