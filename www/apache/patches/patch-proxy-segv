@@ -1,3 +1,5 @@
+$NetBSD: patch-proxy-segv,v 1.2 1998/12/05 05:00:00 tv Exp $
+
 This patch fixes a segmentation violation in mod_proxy when a
 response is non-cachable.  Problem reported by Doug Bloebaum.
 
