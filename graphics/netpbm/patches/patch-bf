@@ -1,0 +1,13 @@
+--- ./pgm/pgmmerge.c.orig	Fri Jan 28 05:17:38 1994
++++ ./pgm/pgmmerge.c	Sat Aug 12 23:51:14 1995
+@@ -29,6 +29,10 @@
+ 	{
+ 	++argv;
+ 	--argc;
++	if(!*argv)	{
++		fprintf(stderr, "Usage: pgmmerge pgm_program_name [args ...]\n");
++		exit(1);
++		}
+ 	goto again;
+ 	}
+ 
