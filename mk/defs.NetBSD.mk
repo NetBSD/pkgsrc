@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.54 2003/09/23 07:26:23 grant Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.55 2003/10/19 07:38:31 grant Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -182,8 +182,8 @@ SERIAL_DEVICES?=	/dev/null
 .  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-alpha} != ""
 CFLAGS+=	-mieee
 FFLAGS+=	-mieee
-.  endif    # MACHINE_PLATFORM
-.endfor     # __tmp__
+.  endif	# MACHINE_PLATFORM
+.endfor		# __tmp__
 
 # check for kqueue(2) support, added in NetBSD-1.6J
 .if exists(/usr/include/sys/event.h)
