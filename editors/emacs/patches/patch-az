@@ -1,8 +1,14 @@
-$NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
-
 --- src/unexelf.c.orig	Mon May 15 17:14:02 2000
-+++ src/unexelf.c	Sun Jun 18 09:44:41 2000
-@@ -495,9 +495,14 @@
++++ src/unexelf.c	Wed Aug 23 21:25:31 2000
+@@ -479,6 +479,7 @@
+ 
+ # ifndef PT_LOAD
+ #  define PT_LOAD	Elf_pt_load
++#  define SHT_PROGBITS	Elf_sht_progbits
+ #  define SHT_SYMTAB	Elf_sht_symtab
+ #  define SHT_DYNSYM	Elf_sht_dynsym
+ #  define SHT_NULL	Elf_sht_null
+@@ -495,9 +496,14 @@
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr
  #  define pHDRR		HDRR *
@@ -18,7 +24,16 @@ $NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
  #ifdef __OpenBSD__
  # include <sys/exec_elf.h>
  #endif
-@@ -522,6 +527,14 @@
+@@ -512,7 +518,7 @@
+ # else
+ #  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
+ # endif
+-# ifdef _LP64
++# if defined (_LP64) || defined(__alpha__)
+ #  define ELFSIZE 64
+ # else
+ #  define ELFSIZE 32
+@@ -522,6 +528,14 @@
  # define ElfW(type) ElfExpandBitsW (ELFSIZE, type)
  #endif
  
@@ -33,7 +48,7 @@ $NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
  #ifndef ELF_BSS_SECTION_NAME
  #define ELF_BSS_SECTION_NAME ".bss"
  #endif
-@@ -613,12 +626,53 @@
+@@ -613,12 +627,53 @@
        if (noerror)
  	return -1;
        else
@@ -88,7 +103,7 @@ $NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
  /* ****************************************************************
   * unexec
   *
-@@ -1005,22 +1059,11 @@
+@@ -1005,22 +1060,11 @@
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -113,7 +128,7 @@ $NetBSD: patch-az,v 1.9 2000/06/24 17:03:39 minoura Exp $
        if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG
  	  && old_mdebug_index != -1) 
          {
-@@ -1030,20 +1073,17 @@
+@@ -1030,20 +1074,17 @@
  
  	  if (diff)
  	    {
