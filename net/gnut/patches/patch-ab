@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2000/07/16 18:17:31 kim Exp $
+
+--- src/cli_input.c.orig	Fri May  5 20:48:19 2000
++++ src/cli_input.c	Sun Jul 16 12:12:20 2000
+@@ -15,8 +15,13 @@
+ #include <pthread.h>
+ 
+ #ifdef HAVE_READLINE
+-	#include <readline/readline.h>
+-	#include <readline/history.h>
++# ifdef HAVE_LIBEDIT
++#  include <readline.h>
++#  include <history.h>
++# else
++#  include <readline/readline.h>
++#  include <readline/history.h>
++# endif
+ #endif
+ 
+ #ifdef HAVE_REGEX_H
