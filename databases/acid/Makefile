@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/31 23:31:31 jdolecek Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/31 23:47:32 jdolecek Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -12,8 +12,8 @@ COMMENT=	Analysis engine to process a database of security events
 
 DEPENDS+=	adodb>=1.2:../../databases/adodb
 DEPENDS+=	php-jpgraph>=1.8:../../graphics/php-jpgraph
-DEPENDS+=	php-gd>=4.0.4:../../graphics/php4-gd
-DEPENDS+=	php-sockets>=4.0.4:../../net/php4-sockets
+DEPENDS+=	php-gd>=4.0.4:../../graphics/php-gd
+DEPENDS+=	php-sockets>=4.0.4:../../net/php-sockets
 
 NO_BUILD=	yes
 NO_BUILDLINK=	yes
@@ -26,10 +26,10 @@ WRKSRC=		${WRKDIR}/acid
 # make. ie. make install USE_PGSQL=YES
 #
 .if defined(USE_PGSQL) && ${USE_PGSQL} == YES
-DEPENDS+=	php-pgsql>=4.0.4:../../databases/php4-pgsql
+DEPENDS+=	php-pgsql>=4.0.4:../../databases/php-pgsql
 DBTYPE=		postgres
 .else
-DEPENDS+=	php-mysql>=4.0.4:../../databases/php4-mysql
+DEPENDS+=	php-mysql>=4.0.4:../../databases/php-mysql
 DBTYPE=		mysql
 .endif
 

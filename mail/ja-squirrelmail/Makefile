@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/20 14:38:58 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/31 23:47:33 jdolecek Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGNAME=	ja-${DISTNAME}
@@ -15,8 +15,8 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.jp/
 COMMENT=	PHP4 webmail package with Japanese localization
 
-DEPENDS+=	php-gettext>=4.3.3:../../devel/php4-gettext
-DEPENDS+=	php-mbstring>=4.3.3:../../misc/php4-mbstring
+DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
+DEPENDS+=	php-mbstring>=4.3.3:../../misc/php-mbstring
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
 CONFLICTS+=	squirrelmail-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/06/04 14:05:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.42 2004/10/31 23:47:33 jdolecek Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 CATEGORIES=	mail www
@@ -12,7 +12,7 @@ COMMENT=	PHP4 webmail package
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
 
-DEPENDS+=	php-gettext>=4.3.3:../../devel/php4-gettext
+DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 
 USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
