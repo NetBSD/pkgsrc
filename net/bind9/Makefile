@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/22 03:50:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/22 21:54:11 hubertf Exp $
 #
 
 DISTNAME=	bind-9.0.0b1
@@ -7,6 +7,9 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b1/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
+
+# Sync these with devel/unproven-pthreads:
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 
