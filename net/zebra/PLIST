@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:50:20 jlam Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/zebra.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.5 2003/08/04 14:45:26 seb Exp $
 info/zebra.info
-@exec   ${INSTALL_INFO}          %D/info/zebra.info %D/info/dir
 man/man1/vtysh.1
 man/man8/bgpd.8
 man/man8/ospfd.8
