@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/08/28 15:18:55 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/11/15 00:03:37 mycroft Exp $
 bin/sane-config
 bin/scanimage
 bin/xcam
@@ -44,7 +44,6 @@ include/sane/sanei_wire.h
 include/sane/saneopts.h
 lib/libsane.a
 lib/libsane.la
-lib/libsane.so
 lib/libsane.so.1
 lib/libsane.so.1.3
 lib/sane/libsane-abaton.a
