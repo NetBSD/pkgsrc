@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2002/03/15 11:04:30 wiz Exp $
+$NetBSD: patch-aa,v 1.17 2002/03/20 12:42:12 wiz Exp $
 
 --- Makefile.config.in.orig	Thu Mar 14 16:25:54 2002
 +++ Makefile.config.in
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.16 2002/03/15 11:04:30 wiz Exp $
  ifeq ($(NEED_RUNTIME_PATH),Y)
  #If the linker is gcc (e.g. NetBSD):
 -#LDFLAGS += -Wl,--rpath,$(INSTALLLIBS)
-+LDFLAGS += -Wl,--rpath,$(INSTALLLIBS)
++LDFLAGS += -Wl,-R$(INSTALLLIBS)
  #Any other linker:
 -LDFLAGS += -R$(INSTALLLIBS)
 +#LDFLAGS += -R$(INSTALLLIBS)
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.16 2002/03/15 11:04:30 wiz Exp $
  ifeq ($(NEED_RUNTIME_PATH),Y)
  #If the linker is gcc (e.g. NetBSD):
 -#LDSHLIB += -Wl,--rpath,$(INSTALLLIBS)
-+LDSHLIB += -Wl,--rpath,$(INSTALLLIBS)
++LDSHLIB += -Wl,-R$(INSTALLLIBS)
  #Any other linker:
 -LDSHLIB += -R$(INSTALLLIBS)
 +#LDSHLIB += -R$(INSTALLLIBS)
