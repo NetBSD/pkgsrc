@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.149 2004/12/28 02:47:44 reed Exp $
+# $NetBSD: Makefile,v 1.150 2005/01/19 16:24:34 frueauf Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	4
 CATEGORIES=	mail
-MASTER_SITES=	http://catb.org/~esr/fetchmail/ \
+MASTER_SITES=	http://www.catb.org/~esr/fetchmail/ \
 		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
 
 MAINTAINER=	frueauf@NetBSD.org
