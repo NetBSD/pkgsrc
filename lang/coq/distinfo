@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/22 20:21:17 kristerw Exp $
+
+SHA1 (coq-7.4.tar.gz) = 82fe0094cde8a766e3ba0a77c731b4ef2345a41b
+Size (coq-7.4.tar.gz) = 1537547 bytes
+SHA1 (patch-aa) = ce59dda44ac5f81834f9f60a7f87524c90f6cb6e
