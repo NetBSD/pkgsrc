@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.7.8.1 2004/10/18 16:53:54 agc Exp $
+
+--- Makefile.in.orig	2004-09-02 00:04:02.000000000 +0200
++++ Makefile.in
+@@ -18,6 +18,8 @@ includedir = @includedir@
+ 
+ INSTALL	= @INSTALL@
+ LN_S    = @LN_S@
++RM      = rm -f
++PLAY_SUPPORT = @PLAY_SUPPORT@
+ 
+ all: 
+ 	cd src && $(MAKE) $@
+@@ -27,6 +29,9 @@ man: $(srcdir)/sox.1 $(srcdir)/soxexam.1
+ 	nroff -man $(srcdir)/soxexam.1 | col -b > soxexam.txt
+ 	nroff -man $(srcdir)/libst.3 | col -b > libst.txt
+ 
++PLAY_INSTALL_0 =
++PLAY_INSTALL_1 = install-play
++
+ install: $(PLAY_INSTALL_$(PLAY_SUPPORT))
+ 	cd src && $(MAKE) $@
+ 	$(srcdir)/mkinstalldirs $(mandir)/man1
