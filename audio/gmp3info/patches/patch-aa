@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/09/30 09:34:49 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/09/21 00:44:10 jlam Exp $
 
 --- Makefile.orig	Fri Aug 18 17:42:22 2000
 +++ Makefile
@@ -21,21 +21,12 @@ $NetBSD: patch-aa,v 1.2 2001/09/30 09:34:49 wiz Exp $
 -LIBS = -lncurses
 -CC = gcc
 -CFLAGS = -g -O2 -Wall
-+LIBS = -L$(BUILDLINK_DIR)/lib -Wl,-R$(LOCALBASE)/lib -lncurses
++LIBS = -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -lncurses
 +#CC = gcc
 +#CFLAGS = -g -O2 -Wall
  
  all: mp3info gmp3info doc
  
-@@ -55,7 +54,7 @@
- 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
- 
- gmp3info: $(XSRC) $(XOBJ) 
--	$(CC) $(XSRC) $(CFLAGS) -o $@ $(XOBJ) `gtk-config --cflags --libs`
-+	$(CC) $(XSRC) $(CFLAGS) -o $@ $(XOBJ) `${GTK_CONFIG} --cflags --libs`
- 
- mp3info.txt: mp3info.1
- 	groff -t -e -mandoc -Tascii mp3info.1 | col -bx > mp3info.txt
 @@ -69,11 +68,9 @@
  	$(RM) -f mp3info.txt
  
