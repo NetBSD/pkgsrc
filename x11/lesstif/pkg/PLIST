@@ -127,14 +127,16 @@ include/Xm/XmosP.h
 lib/X11/app-defaults/Mwm
 lib/X11/mwm/alt.map
 lib/X11/mwm/system.mwmrc
-lib/config/Imake.tmpl
-lib/config/Motif.rules
-lib/config/Motif.tmpl
+lib/X11/lesstif/Imake.tmpl
+lib/X11/lesstif/Motif.rules
+lib/X11/lesstif/Motif.tmpl
 lib/libMrm.so.0.1
+lib/libUil.so.0.1
 lib/libXm.so.0.1
 lib/libltc.a
-@exec /sbin/ldconfig -m %D/lib
+@exec ldconfig -m %D/lib
+@unexec ldconfig -m %D/lib
 @dirrm lib/X11/mwm
-@dirrm lib/config
+@dirrm lib/X11/lesstif
 @dirrm include/Xm
 @dirrm include/Mrm
