@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2002/11/26 13:48:42 pooka Exp $
+# $NetBSD: Makefile,v 1.124 2002/12/18 03:56:12 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -27,6 +27,7 @@ SUBDIR+=	fsh
 SUBDIR+=	gnupg
 SUBDIR+=	gpa
 SUBDIR+=	gpgme
+SUBDIR+=	gtk-systrace
 SUBDIR+=	hackbot
 SUBDIR+=	isakmpd
 SUBDIR+=	john
@@ -124,6 +125,7 @@ SUBDIR+=	stunnel
 SUBDIR+=	sudo
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
+SUBDIR+=	tkpasman
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	winbind
