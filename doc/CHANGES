@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6370 2004/06/28 14:04:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.6371 2004/06/28 14:09:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3133,3 +3133,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jakarta-tomcat to 5.0.25 [abs 2004-06-28]
 	Updated gnome2-pixmaps to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome-desktop to 2.6.2 [jmmv 2004-06-28]
+	Updated gnome-icon-theme to 1.2.3 [jmmv 2004-06-28]
