@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
+
+--- src/linux/main_linux.c.orig	2003-10-22 18:31:57.000000000 +0200
++++ src/linux/main_linux.c
+@@ -3,6 +3,7 @@
+ UNIX systems */
+ 
+ #include <ctype.h>
++#include <signal.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -234,6 +235,50 @@ static void printsonginfo(int current_fr
+    /*Why not printf directly?  Our termios hijinks for input kills the output*/
+    char *hi = (char *)malloc(255);
+ 
++
++   /*
++    * The new hijinks seem to cause trouble for NetBSD (\r sometimes
++    * doesn't get printed), so I'm adding \r to the beginning of these
++    * strings.  Suggested by Bruce J.A Nourish, implemented by David
++    * Griffith.
++    */
++
++   if (total_frames !=0) {
++	if (limited) {
++		snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d/%d seconds, %d/%d frames\r",
++			nsf->current_song, nsf->num_songs,
++			enabled[0]?'1':'-',      enabled[1]?'2':'-',
++			enabled[2]?'3':'-',      enabled[3]?'4':'-',
++			enabled[4]?'5':'-',      enabled[5]?'6':'-',
++			(int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++			(int)((float)(total_frames  + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++			current_frame,
++			total_frames);
++	} else {
++		snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d/? seconds, %d/? frames\r",
++			nsf->current_song, nsf->num_songs,
++			enabled[0]?'1':'-',      enabled[1]?'2':'-',
++
++                       enabled[2]?'3':'-',      enabled[3]?'4':'-',
++                       enabled[4]?'5':'-',      enabled[5]?'6':'-',
++                       (int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++                       current_frame);
++       }
++   } else {
++       snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d seconds, %d frames\r",
++                       nsf->current_song, nsf->num_songs,
++                       enabled[0]?'1':'-',      enabled[1]?'2':'-',
++                       enabled[2]?'3':'-',      enabled[3]?'4':'-',
++                       enabled[4]?'5':'-',      enabled[5]?'6':'-',
++                       (int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++                       current_frame);
++   }   
++
++/*
++ * This stuff doesn't seem to work.
++ */
++
++/*
+    snprintf(hi, 254, 
+    total_frames != 0 ? 
+    "Playing track %d of %d, channels %c%c%c%c%c%c, %d/%d seconds, %d/%d frames\r":
+@@ -249,7 +294,7 @@ static void printsonginfo(int current_fr
+    current_frame,
+    total_frames
+    );
+-
++*/
+    write(STDOUT_FILENO, (void *)hi, strlen(hi));
+    free(hi);
+ }

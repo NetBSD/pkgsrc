@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
+
+SHA1 (nosefart-1.92i-mls.tar.gz) = bb52a1b2f1a1a95fbdc77cf7fe06f293bd30055f
+Size (nosefart-1.92i-mls.tar.gz) = 1054405 bytes
+SHA1 (patch-aa) = 03e9b1c45d8013637d597c30e120ddb17026d44c
+SHA1 (patch-ab) = da00f888447706a2ab2f42a638fb0a11a719af15
