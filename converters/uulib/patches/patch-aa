@@ -1,39 +1,43 @@
-*** uulib/Makefile.in	Mon Oct 14 16:19:18 1996
---- /devel/ports/new.new.uulib/src/uulib/Makefile.in	Sun Feb  9 23:37:42 1997
-***************
-*** 50,56 ****
-  #
-  
-  .SUFFIXES:
-! .SUFFIXES: .c .o
-  
-  all:		libuu.a
-  
---- 50,56 ----
-  #
-  
-  .SUFFIXES:
-! .SUFFIXES: .c .o .so
-  
-  all:		libuu.a
-  
-***************
-*** 73,80 ****
---- 73,89 ----
-  	ar r $@ $(UULIB_OBJ)
-  	-$(RANLIB) $@
-  
-+ SOBJS=	$(UULIB_OBJ:.o=.so)
-+ libuu.so.1.0:	$(SOBJS)
-+ 	rm -f $(.TARGET)
-+ 	ld -Bshareable -x -o libuu.so.1.0 `lorder $(SOBJS) | tsort -q`
-+ 		
-+ .c.so:
-+ 	$(CC) -fpic -DPIC -c -o $(.TARGET) $(CFLAGS) $(VDEF) $(.IMPSRC)
-+ 
-  .c.o:
-  	$(CC) -c $(CFLAGS) $(VDEF) $<
-+ 
-  
-  uuencode.o:	uuencode.c uudeview.h uuint.h uustring.h fptools.h config.h
-  uulib.o:	uulib.c uudeview.h uuint.h uustring.h fptools.h config.h
+--- Makefile.in.orig	Mon Jul 20 10:54:23 1998
++++ Makefile.in	Mon Jul 20 10:55:55 1998
+@@ -20,7 +20,7 @@
+ #
+ # If you don't have the GNU C compiler installed, set CC=cc here
+ #
+-CC	=	@CC@
++CC	=	$(LIBTOOL) @CC@
+ #
+ # C Compiler Options
+ #
+@@ -52,11 +52,11 @@
+ .SUFFIXES:
+ .SUFFIXES: .c .o
+ 
+-all:		libuu.a
++all:		libuu.la
+ 
+ clean:
+ 	rm -f [Xx]deview gif2gfp
+-	rm -f *.o *.a *.so core *~ TAGS
++	rm -f *.o *.la *.so core *~ TAGS
+ 
+ distclean:	clean
+ 	rm -f config.status config.cache config.log Makefile config.h
+@@ -65,13 +65,13 @@
+ realclean:	distclean
+ 
+ new:		clean
+-	rm -f libuu.a
++	rm -f libuu.la
+ 	$(MAKE) all
+ 
+-libuu.a:	$(UULIB_OBJ)
++libuu.la:	$(UULIB_OBJ)
+ 	rm -f $@
+-	ar r $@ $(UULIB_OBJ)
+-	-$(RANLIB) $@
++	$(CC) -o libuu.la $(UULIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib \
++		-version-info 1:0
+ 
+ .c.o:
+ 	$(CC) -c $(CFLAGS) $(VDEF) $<
