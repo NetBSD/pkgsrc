@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:05 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/30 17:27:31 cjep Exp $
 #
 
 DISTNAME=	dhisd-5.0
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://www.dhis.org
+HOMEPAGE=	http://www.dhis.org/
 COMMENT=	DynDNS server
 
 DEPENDS+=	gmp>=3.0:../../devel/gmp
