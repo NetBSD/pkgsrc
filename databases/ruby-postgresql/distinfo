@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/08 15:24:05 mjl Exp $
+$NetBSD: distinfo,v 1.2 2001/07/31 00:09:44 taca Exp $
 
-SHA1 (ruby-postgres-0.6.4.tar.gz) = 2f96d9f3acf29e3f9b15a6a79f1eba85906a1e51
-Size (ruby-postgres-0.6.4.tar.gz) = 27380 bytes
+SHA1 (ruby/ruby-postgres-0.6.4.tar.gz) = 2f96d9f3acf29e3f9b15a6a79f1eba85906a1e51
+Size (ruby/ruby-postgres-0.6.4.tar.gz) = 27380 bytes

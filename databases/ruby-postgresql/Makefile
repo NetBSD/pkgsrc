@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/22 15:52:10 taca Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/31 00:09:44 taca Exp $
 
 DISTNAME=	ruby-postgres-0.6.4
 PKGNAME=	${RUBY_PKGNAMEPREFIX}postgresql-0.6.4
@@ -11,6 +11,7 @@ COMMENT=	Ruby extension for postgresql
 
 DEPENDS+=	postgresql-lib>=7.1:../../databases/postgresql-lib
 
+DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
 CONFIGURE_ARGS+=--with-pgsql-include-dir=${PREFIX}/include/pgsql \
 		--with-pgsql-lib-dir=${PREFIX}/lib
