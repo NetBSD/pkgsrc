@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/11/16 14:34:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/12/16 07:19:19 minskim Exp $
 
 DISTNAME=	celestia-${CELESTIA_VERS}
 CATEGORIES=	misc x11
@@ -33,6 +33,9 @@ CONFIGURE_ARGS+=	--with-xinerama
 CONFIGURE_ARGS+=	--disable-threading
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
