@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: snmpd.sh,v 1.2 2000/12/16 09:04:41 hubertf Exp $
+# $NetBSD: snmpd.sh,v 1.3 2001/01/26 02:02:35 hubertf Exp $
 
 # PID file:
 PF=/var/run/snmpd.pid
@@ -15,13 +15,15 @@ start)
 	if [ -x @PREFIX@/sbin/snmpd ]
 	then
 	    echo -n ' snmpd'
-	    @PREFIX@/sbin/snmpd -s -P ${PF} -A -l /dev/null ${SNMPD_CFG}
+	    @PREFIX@/sbin/snmpd -s -P ${PF} -A ${SNMPD_CFG}
 	fi
 	;;
 stop)
 	if [ -f ${PF} ]; then
 		kill `cat ${PF}`
 		rm -f ${PF}
+	else
+		echo "$0: snmpd not running or PID not recorded!" 1>&2
 	fi
 	;;
 restart)
