@@ -1,0 +1,23 @@
+--- ./configure-orig	Thu Nov 20 03:13:44 1997
++++ ./configure	Thu Jan 22 13:46:50 1998
+@@ -902,7 +902,7 @@
+     case "$canonical" in
+       i[3-9]86-*-netbsd*) machine=intel386 ;;
+       hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
+-                                            machine=hp9000s300 ;;
++                                            machine=m68k ;;
+       pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
+       pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
+     esac
+--- ./configure.in-orig	Thu Nov 20 03:13:33 1997
++++ ./configure.in	Thu Jan 22 13:58:06 1998
+@@ -1013,8 +1013,7 @@
+     case "$canonical" in
+       i[[3-9]]86-*-netbsd*) machine=intel386 ;;
+       hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
+-                      dnl Yes, this is somewhat bogus.
+-                      machine=hp9000s300 ;;
++                      machine=m68k ;;
+       pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
+       pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
+     esac
