@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.276 2002/10/16 08:51:49 rh Exp $
+$NetBSD: CHANGES,v 1.277 2002/10/16 09:00:10 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3289,3 +3289,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added papaya-0.1.7 [rh 2002-10-16]
 	Updated gnet to 1.1.7 [rh 2002-10-16]
 	Updated createbuildlink to 2.2 [rh 2002-10-16]
+	Added coconut-0.3.0 [rh 2002-10-16]
