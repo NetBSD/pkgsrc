@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/17 11:09:09 zuntum Exp $
 
 DISTNAME=	pptp-linux-1.0.2
 PKGNAME=	pptp-1.0.2
 CATEGORIES=	net
 MASTER_SITES= 	http://www.pdos.lcs.mit.edu/~cananian/Synaptics/release/
-#EXTRACT_SUFX=   .tar.gz
 
 MAINTAINER=	jtk@netbsd.org
 HOMEPAGE=	http://www.pdos.lcs.mit.edu/~cananian/Projects/PPTP/
