@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.6 2002/08/25 18:40:23 jlam Exp $
+$NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
 --- configure.in.orig	Thu Dec 14 11:49:06 2000
 +++ configure.in	Tue Aug 28 17:09:57 2001
 @@ -213,7 +213,12 @@
@@ -91,7 +91,7 @@ $NetBSD: patch-ah,v 1.6 2002/08/25 18:40:23 jlam Exp $
 +      SSLLIBS="$ssllib"
 +    else
 +      SSLINC="-I${withval}/include/openssl -I${withval}/include"
-+      SSLLIBS="-L${withval}/lib -lssl -lcrypto -Wl,-rpath,${withval}/lib"
++      SSLLIBS="-L${withval}/lib -lssl -lcrypto -Wl,-R${withval}/lib"
      fi
 -    LIBS="$LIBS $withval"
 +    SAVED_LIBS="${LIBS}"
