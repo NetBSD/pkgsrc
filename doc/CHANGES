@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8788 2005/01/17 13:22:56 adam Exp $
+$NetBSD: CHANGES,v 1.8789 2005/01/17 13:24:30 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -387,3 +387,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xfce4-icon-theme to 4.2.0 [martti 2005-01-17]
 	Updated xfce4-mixer to 4.2.0 [martti 2005-01-17]
 	Added openexr-1.2.1 [adam 2005-01-17]
+	Updated xfce4-minicmd-plugin-0.3.0 [martti 2005-01-17]
+	Updated xfce4-taskbar-plugin-0.2.2 [martti 2005-01-17]
+	Updated xfce4-wavelan-plugin-0.4.1 [martti 2005-01-17]
