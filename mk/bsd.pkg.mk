@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.913 2002/01/25 07:16:16 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.914 2002/01/27 18:31:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1410,14 +1410,17 @@ _RELEASE_LOCK=								\
 
 # Extract
 
-_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar .zip .lzh .lha
+_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar
+_EXTRACT_SUFFICES+=	.shar.gz .shar.bz2 .shar.Z .shar
+_EXTRACT_SUFFICES+=	.zip
+_EXTRACT_SUFFICES+=	.lzh .lha
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary.  [Note: this is only for
 # the benefit of pre-1.5 NetBSD systems. "gzcat" on newer systems happily
 # decodes bzip2.]  Do likewise for ".zip" and ".lha" distfiles.
 #
-.if !empty(EXTRACT_ONLY:M*.tar.bz2) || !empty(EXTRACT_ONLY:M*.tbz)
+.if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz)
 .  if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
 .  else
@@ -1438,6 +1441,11 @@ DECOMPRESS_CMD.tar.bz2?=	${BZCAT}
 DECOMPRESS_CMD.tbz?=		${DECOMPRESS_CMD.tar.bz2}
 DECOMPRESS_CMD.tar?=		${CAT}
 
+DECOMPRESS_CMD.shar.gz?=	${GZCAT}
+DECOMPRESS_CMD.shar.bz2?=	${BZCAT}
+DECOMPRESS_CMD.shar.Z?=		${GZCAT}
+DECOMPRESS_CMD.shar?=		${CAT}
+
 DECOMPRESS_CMD?=		${GZCAT}
 .for __suffix__ in ${_EXTRACT_SUFFICES}
 .  if !defined(DECOMPRESS_CMD${__suffix__})
@@ -1453,6 +1461,10 @@ DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
 EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq ${DOWNLOADED_DISTFILE}
 EXTRACT_CMD.lzh?=	${LOCALBASE}/bin/lha xq ${DOWNLOADED_DISTFILE}
 EXTRACT_CMD.lha?=	${EXTRACT_CMD.lzh}
+
+.for __suffix__ in .shar.gz .shar.bz2 .shar.Z .shar
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} | ${SH}
+.endfor
 
 # If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
 # and append 2 tar blocks of zero bytes on the end, in case the archive
