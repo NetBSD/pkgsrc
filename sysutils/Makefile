@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2004/08/26 18:26:21 wennmach Exp $
+# $NetBSD: Makefile,v 1.257 2004/08/27 05:55:24 lukem Exp $
 
 COMMENT=	System utilities
 
@@ -87,6 +87,7 @@ SUBDIR+=	gworkspace
 SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
 SUBDIR+=	idesk
+SUBDIR+=	ipw-firmware
 SUBDIR+=	isapnptools
 SUBDIR+=	kdirstat
 SUBDIR+=	koncd
@@ -117,7 +118,7 @@ SUBDIR+=	nrg2iso
 SUBDIR+=	osname
 SUBDIR+=	p5-Sys-Hostname-Long
 SUBDIR+=	p5-Unix-Syslog
-SUBDIR+= 	pciutils
+SUBDIR+=	pciutils
 SUBDIR+=	pcvt-utils
 SUBDIR+=	pear-Log
 SUBDIR+=	pflogsumm
