@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2003/07/16 15:35:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2003/07/22 08:59:36 adam Exp $
 
-SHA1 (gtkmm-2.2.3.tar.gz) = 9d4dff0cb09f9c4987ce7f41ee492608dab11622
-Size (gtkmm-2.2.3.tar.gz) = 5178982 bytes
-SHA1 (patch-aa) = 9ea55b9a47032e81a8450b88ef6ff573c19846dd
-SHA1 (patch-ab) = f6b99e1c927b3fadf8f2b7778e8a12ce95aa2e94
-SHA1 (patch-ac) = f46fb1feb4672d138fc79daff5f9e646ee350946
-SHA1 (patch-ad) = 91ffe54cfa3189613f8089d66299ff97c06d99c1
-SHA1 (patch-ae) = f6a6194d0722d61572d288b92ff7ff433ddd448b
-SHA1 (patch-af) = 43c6e8070ed3b9e43d2512159eafa9681f876bb4
+SHA1 (gtkmm-2.2.5.tar.gz) = eed9a3e16156b64ca976f131ff20192891da16b0
+Size (gtkmm-2.2.5.tar.gz) = 5147568 bytes
+SHA1 (patch-aa) = bfeb348679e7c256478d221fa74ba601a5793aea
+SHA1 (patch-ab) = 1282bb6c5a9251726448cac0eeca1075ac57ec95
+SHA1 (patch-ac) = a61e89e36add076d2423254e865be8b7856793fb
+SHA1 (patch-ad) = f9b72f8dc682b5b36065c44ab41b7dd79c626988
+SHA1 (patch-ae) = b86d710ef31d2b9736185747a47a6f946b8a13ef
+SHA1 (patch-af) = 002920413917b659772b7947477d86dacb05b967

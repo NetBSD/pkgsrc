@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2003/07/16 15:35:26 adam Exp $
+$NetBSD: patch-aa,v 1.3 2003/07/22 08:59:37 adam Exp $
 
---- Makefile.in.orig	2003-07-16 16:42:23.000000000 +0200
-+++ Makefile.in	2003-07-16 16:44:30.000000000 +0200
-@@ -166,7 +166,7 @@
- target_alias = @target_alias@
+--- Makefile.in.orig	2003-07-21 18:53:17.000000000 +0200
++++ Makefile.in	2003-07-22 10:19:30.000000000 +0200
+@@ -115,7 +115,7 @@
+ install_sh = @install_sh@
  ACLOCAL_AMFLAGS = -I scripts
  
 -SUBDIRS = tools glib pango atk gdk gtk examples docs

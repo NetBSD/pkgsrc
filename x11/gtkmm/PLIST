@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/16 15:35:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/22 08:59:36 adam Exp $
 include/gtkmm-2.0/atkmm.h
 include/gtkmm-2.0/atkmm/action.h
 include/gtkmm-2.0/atkmm/component.h
@@ -460,32 +460,32 @@ lib/libatkmm-1.0.a
 lib/libatkmm-1.0.la
 lib/libatkmm-1.0.so
 lib/libatkmm-1.0.so.6
-lib/libatkmm-1.0.so.6.2
+lib/libatkmm-1.0.so.6.4
 lib/libgdkmm-2.0.a
 lib/libgdkmm-2.0.la
 lib/libgdkmm-2.0.so
 lib/libgdkmm-2.0.so.6
-lib/libgdkmm-2.0.so.6.2
+lib/libgdkmm-2.0.so.6.4
 lib/libglibmm-2.0.a
 lib/libglibmm-2.0.la
 lib/libglibmm-2.0.so
 lib/libglibmm-2.0.so.6
-lib/libglibmm-2.0.so.6.2
+lib/libglibmm-2.0.so.6.4
 lib/libgtkmm-2.0.a
 lib/libgtkmm-2.0.la
 lib/libgtkmm-2.0.so
 lib/libgtkmm-2.0.so.6
-lib/libgtkmm-2.0.so.6.2
+lib/libgtkmm-2.0.so.6.4
 lib/libgtkmm_generate_extra_defs-2.0.a
 lib/libgtkmm_generate_extra_defs-2.0.la
 lib/libgtkmm_generate_extra_defs-2.0.so
 lib/libgtkmm_generate_extra_defs-2.0.so.6
-lib/libgtkmm_generate_extra_defs-2.0.so.6.2
+lib/libgtkmm_generate_extra_defs-2.0.so.6.4
 lib/libpangomm-1.0.a
 lib/libpangomm-1.0.la
 lib/libpangomm-1.0.so
 lib/libpangomm-1.0.so.6
-lib/libpangomm-1.0.so.6.2
+lib/libpangomm-1.0.so.6.4
 lib/pkgconfig/atkmm-1.0.pc
 lib/pkgconfig/gdkmm-2.0.pc
 lib/pkgconfig/glibmm-2.0.pc
