@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/12/17 02:32:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46 2001/12/17 02:33:46 dmcmahill Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -117,11 +117,11 @@ README-all.html:
 	@wc -l $@.newsorted | awk '{ print $$1 }'  >$@.npkgs
 	@cat templates/README.all \
 	| ${SED} \
-                -e '/%%NPKGS%%/r$@.npkgs' \
-                -e '/%%NPKGS%%/d' \
-                -e '/%%PKGS%%/r$@.newsorted' \
-                -e '/%%PKGS%%/d' \
-        	> $@ 
+		-e '/%%NPKGS%%/r$@.npkgs' \
+		-e '/%%NPKGS%%/d' \
+		-e '/%%PKGS%%/r$@.newsorted' \
+		-e '/%%PKGS%%/d' \
+		> $@ 
 	@rm -f $@.npkgs
 	@rm -f $@.new
 	@rm -f $@.newsorted
