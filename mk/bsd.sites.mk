@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.2 2004/06/04 15:28:39 xtraeme Exp $
+# $NetBSD: bsd.sites.mk,v 1.3 2004/06/15 13:05:10 grant Exp $
 #
 # Default MASTER_SITES
 
@@ -123,6 +123,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://osdn.dl.sourceforge.net/sourceforge/ \
+	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://telia.dl.sourceforge.net/sourceforge/ \
 	http://twtelecom.dl.sourceforge.net/sourceforge/ \
 	http://umn.dl.sourceforge.net/sourceforge/ \
