@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/30 10:46:56 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/09 23:15:54 dmcmahill Exp $
 
 DISTNAME=		ettercap-0.6.9
 CATEGORIES=		security net
@@ -16,6 +16,7 @@ USE_BUILDLINK2=		yes
 
 USE_NCURSES=		# newpad(), MAX_FORM_COMMAND
 PTHREAD_OPTS+=		require
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 post-build:
 			cd ${WRKSRC}/plugins ; ${MAKE_ENV} ${MAKE} all
