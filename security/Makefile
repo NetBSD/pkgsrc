@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1998/08/07 14:52:58 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1998/09/04 22:11:50 explorer Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
-#    SUBDIR += SSLeay
 #    SUBDIR += cfs
 #    SUBDIR += cops
 #    SUBDIR += crack
@@ -20,6 +19,7 @@
     SUBDIR += py-crypto
     SUBDIR += rsaref
     SUBDIR += ssh
+    SUBDIR += ssleay
     SUBDIR += sudo
 #    SUBDIR += super
 #    SUBDIR += swatch
