@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/25 01:49:04 jmc Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/21 00:49:43 jlam Exp $
 
 DISTNAME=	rosegarden-2.1pl3
 PKGNAME=	rosegarden-2.1.3
@@ -9,16 +9,14 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.all-day-breakfast.com/rosegarden/
 COMMENT=	notation editor & MIDI sequencer
 
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 MAKE_ENV+=	GCC=yes
 USE_X11BASE=	YES
 
-USE_BUILDLINK_ONLY=	YES
-
 post-extract:
 	cd ${WRKSRC} && ${MV} Rosegarden Rosegarden.in
 
-.include "../../lang/tcl/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
