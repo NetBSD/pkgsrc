@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/05/04 22:01:16 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/05/07 15:17:46 tron Exp $
 
 DISTNAME=	gimp-0.99.28
 CATEGORIES=	graphics
@@ -20,6 +20,7 @@ DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
 GIMP_DATA=	gimp-data-extras-0.99a
 
+IS_INTERACTIVE=	yes
 USE_X11=	yes
 USE_GTEXINFO=	yes
 GNU_CONFIGURE=	yes
@@ -36,6 +37,12 @@ post-configure:
 		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} )
 
 PLIST_SRC=	${WRKDIR:T}/.PLIST-src
+
+pre-build:
+	@if [ "$$DISPLAY" = "" ]; then \
+	  echo "${DISTNAME} can only be built under X11."; \
+	  exit 1; \
+	 fi
 
 pre-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
