@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.77 2004/01/22 08:48:49 grant Exp $
 
 DISTNAME=		libgtop-1.0.13
 PKGREVISION=		4
@@ -18,16 +18,16 @@ OSVERSION_SPECIFIC=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
-. if (${MACHINE_ARCH} != alpha) && \
-     (${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
-     (${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
-     (${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
-     (${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64)
+.  if (${MACHINE_ARCH} != alpha) && \
+	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
+	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
+	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
+	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64)
 PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
 PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
 PKG_FAIL_REASON+=	"and update patches/patch-al appropriately."
 PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
-. endif
+.  endif
 .endif
 
 USE_PERL5=		build
