@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.locale,v 1.1 2004/04/24 19:47:44 jlam Exp $
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/texinfo.mo
