@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/02/04 03:58:38 hubertf Exp $
+$NetBSD: md5,v 1.2 2000/09/14 22:51:25 wiz Exp $
 
-MD5 (mouse_pppoe-20000202/mouse_pppoe.tar.gz) = d943561daf6aeacae83a97eedaebb9fb
+MD5 (pppoe.20000912.tar.gz) = c0a3076c6a3e602db43824c04603a62e
