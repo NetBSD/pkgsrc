@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6734 2004/07/30 13:50:46 wiz Exp $
+$NetBSD: CHANGES,v 1.6735 2004/07/30 14:00:39 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3652,3 +3652,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Tree-Simple-1.06 [cube 2004-07-30]
 	Added p5-HTML-Scrubber-0.08 [cube 2004-07-30]
 	Added ltm-0.30 [wiz 2004-07-30]
+	Added p5-Locale-Maketext-Fuzzy-0.02 [cube 2004-07-30]
+	Added p5-Locale-Maketext-Lexicon-0.38 [cube 2004-07-30]
