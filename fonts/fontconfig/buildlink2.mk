@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/03/18 13:56:31 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/03/29 19:00:19 jmc Exp $
 #
 # This Makefile fragment is included by packages that use fontconfig.
 #
@@ -19,6 +19,8 @@ BUILDLINK_FILES.fontconfig+=	include/fontconfig/fcprivate.h
 BUILDLINK_FILES.fontconfig+=	include/fontconfig/fontconfig.h
 BUILDLINK_FILES.fontconfig+=	lib/libfontconfig.*
 BUILDLINK_FILES.fontconfig+=	lib/pkgconfig/fontconfig.pc
+
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.0.9
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 19:00:19 jmc Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -14,7 +14,7 @@ COMMENT=	Library for configuring and customizing font access
 
 # This can use 2.0.5 but things which use it (ala pango) require 2.0.9 so make
 # sure to keep in step
-BUILDLINK_DEPENDS.freetype2?=  freetype2>=2.0.9
+BUILDLINK_DEPENDS.freetype2=  freetype2>=2.0.9
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
