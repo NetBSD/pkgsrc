@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: setpapersize,v 1.4 2000/07/11 10:06:41 agc Exp $
+# $NetBSD: setpapersize,v 1.5 2002/07/05 23:24:20 wiz Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -37,7 +37,7 @@ esac
 lowpaper=`echo $papersize | tr '[A-Z]' '[a-z]'`
 
 if [ $# -eq 0 ]; then
-	pkgs="a2ps ddd enscript magicfilter psutils";
+	pkgs="a2ps ddd enscript ghostscript magicfilter psutils";
 else 
 	pkgs=$@
 fi
@@ -67,6 +67,14 @@ while [ $# -gt 0 ]; do
 			mv $enscriptfile $enscriptfile.old
 			sed -e 's|^DefaultMedia:.*|DefaultMedia: '$papersize'|' $enscriptfile.old > $enscriptfile && rm $enscriptfile.old
 			echo "Set $1 package default paper size to $papersize in $enscriptfile"
+		fi
+		;;
+	ghostscript)
+		ghostscriptfile=`ls @localbase@/share/ghostscript/*/lib/gs_init.ps 2>/dev/null | tail -1`
+		if [ -e $ghostscriptfile ]; then
+			mv $ghostscriptfile $ghostscriptfile.old
+			sed -e '/^% Optionally choose a default paper size other than U.S. letter.$/N' -e 's/^\(% Optionally.*\n\)[%[:space:]]*(.*\() \/PAPERSIZE where.*\)$/\1('$lowpaper'\2/' $ghostscriptfile.old > $ghostscriptfile && rm $ghostscriptfile.old
+			echo "Set $1 package default paper size to $papersize in $ghostscriptfile"
 		fi
 		;;
 	magicfilter)
