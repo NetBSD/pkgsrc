@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/04/18 17:31:32 tron Exp $
+# $NetBSD: Makefile,v 1.24 1998/04/18 20:33:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -79,7 +79,7 @@
 #    SUBDIR += wide-dhcp
     SUBDIR += wget
     SUBDIR += wu-ftpd
-#    SUBDIR += xarchie
+    SUBDIR += xarchie
 #    SUBDIR += xipmsg
 #    SUBDIR += yale-tftpd
 #    SUBDIR += ytalk
