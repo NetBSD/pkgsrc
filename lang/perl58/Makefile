@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/11/12 23:30:07 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2004/11/14 07:48:30 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -186,29 +186,6 @@ CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED}"
 
 .if ${OPSYS} == "IRIX" && ${ABI} == "64"
 CONFIGURE_ARGS+=	-Duse64bitint
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-.  if !empty(CC_VERSION:Mgcc*)
-.    if !defined(_GCC_IS_TOO_OLD)
-_GCC_IS_TOO_OLD!=	\
-	if ${PKG_ADMIN} pmatch 'gcc<3.3' ${CC_VERSION}; then		\
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
-.    endif
-.    if !empty(_GCC_IS_TOO_OLD:M[yY][eE][sS])
-#
-# Fix brokenness when using an older toolchain (gcc<3.3) on sparc64.
-# Passing -g to the configure process triggers -DDEBUGGING, which plays
-# the real trick and circumvents some code-generation bugs, so we add
-# -g to CFLAGS to at least have a really debuggable build.
-#
-CFLAGS+=	-g -msoft-quad-float -O2
-.    endif
-.  endif
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
