@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.6 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-aa,v 1.7 1999/03/04 13:50:49 tron Exp $
 
---- scripts/makefile.std.orig	Tue Jul 14 21:39:10 1998
-+++ scripts/makefile.std	Tue Jul 14 21:49:54 1998
-@@ -8,41 +8,34 @@
+--- scripts/makefile.std.orig	Fri Jul 31 17:15:22 1998
++++ scripts/makefile.std	Thu Mar  4 14:15:31 1999
+@@ -3,7 +3,7 @@
+ # For conditions of distribution and use, see copyright notice in png.h
+ 
+ # where make install puts libpng.a and png.h
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ # Where the zlib library and include files are located
+ #ZLIBLIB=/usr/local/lib
+@@ -11,9 +11,9 @@
  ZLIBLIB=../zlib
  ZLIBINC=../zlib
  
@@ -15,12 +24,7 @@ $NetBSD: patch-aa,v 1.6 1998/08/07 10:40:53 agc Exp $
  
  #RANLIB=echo
  RANLIB=ranlib
- 
- # where make install puts libpng.a and png.h
--prefix=/usr/local
-+prefix=${PREFIX}
- 
- OBJS = png.o pngset.o pngget.o pngrutil.o pngtrans.o pngwutil.o \
+@@ -22,27 +22,20 @@
  	pngread.o pngrio.o pngwio.o pngwrite.o pngrtran.o \
  	pngwtran.o pngmem.o pngerror.o pngpread.o
  
@@ -31,7 +35,7 @@ $NetBSD: patch-aa,v 1.6 1998/08/07 10:40:53 agc Exp $
 -	ar rc $@  $(OBJS)
 -	$(RANLIB) $@
 +libpng.la: $(OBJS)
-+	${LIBTOOL} --mode=link cc -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	${LIBTOOL} --mode=link cc -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:1
  
 -pngtest: pngtest.o libpng.a
 -	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
