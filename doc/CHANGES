@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7535 2004/10/23 13:34:01 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7536 2004/10/23 13:55:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4830,3 +4830,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added librfuncs-1.0 [shannonjr 2004-10-23]
 	Added libassuan-0.6.7 [shannonjr 2004-10-23]
 	Added pinentry-0.7.1 [shannonjr 2004-10-23]
+	Updated gnotime to 2.2.0nb1 [jmmv 2004-10-23]
