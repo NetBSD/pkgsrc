@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/08/10 03:15:29 grant Exp $
+# $NetBSD: Makefile,v 1.48 2003/09/18 04:01:17 simonb Exp $
 #
 
 DISTNAME=		libglade-0.17
@@ -31,6 +31,7 @@ MAKE_ENV+=	DISPLAY=${DISPLAY}
 pre-configure:
 	${RM} ${WRKSRC}/libgladeConf.sh
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
