@@ -1,604 +1,602 @@
-@comment $NetBSD: PLIST,v 1.1 2002/05/14 18:00:56 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/27 22:17:45 jschauma Exp $
+COPYRIGHT
+CHANGES
+LICENSE
+README
+ControlPanel.html
+Welcome.html
+bin/ControlPanel
 bin/java
-jre/CHANGES
-jre/COPYRIGHT
-jre/ControlPanel.html
-jre/LICENSE
-jre/README
-jre/Welcome.html
-jre/bin/ControlPanel
-jre/bin/java
-jre/bin/java_vm
-jre/bin/keytool
-jre/bin/orbd
-jre/bin/policytool
-jre/bin/rmid
-jre/bin/rmiregistry
-jre/bin/servertool
-jre/bin/tnameserv
-jre/javaws-1_0_1_02-linux-int.zip
-jre/lib/${MACHINE_ARCH}/awt_robot
-jre/lib/${MACHINE_ARCH}/client/Xusage.txt
-jre/lib/${MACHINE_ARCH}/client/libjsig.so
-jre/lib/${MACHINE_ARCH}/client/libjvm.so
-jre/lib/${MACHINE_ARCH}/jvm.cfg
-jre/lib/${MACHINE_ARCH}/libJdbcOdbc.so
-jre/lib/${MACHINE_ARCH}/libawt.so
-jre/lib/${MACHINE_ARCH}/libcmm.so
-jre/lib/${MACHINE_ARCH}/libdcpr.so
-jre/lib/${MACHINE_ARCH}/libdt_socket.so
-jre/lib/${MACHINE_ARCH}/libfontmanager.so
-jre/lib/${MACHINE_ARCH}/libhprof.so
-jre/lib/${MACHINE_ARCH}/libioser12.so
-jre/lib/${MACHINE_ARCH}/libjaas_unix.so
-jre/lib/${MACHINE_ARCH}/libjava.so
-jre/lib/${MACHINE_ARCH}/libjavaplugin_jni.so
-jre/lib/${MACHINE_ARCH}/libjawt.so
-jre/lib/${MACHINE_ARCH}/libjcov.so
-jre/lib/${MACHINE_ARCH}/libjdwp.so
-jre/lib/${MACHINE_ARCH}/libjpeg.so
-jre/lib/${MACHINE_ARCH}/libjsig.so
-jre/lib/${MACHINE_ARCH}/libjsound.so
-jre/lib/${MACHINE_ARCH}/libmlib_image.so
-jre/lib/${MACHINE_ARCH}/libnet.so
-jre/lib/${MACHINE_ARCH}/libnio.so
-jre/lib/${MACHINE_ARCH}/librmi.so
-jre/lib/${MACHINE_ARCH}/libverify.so
-jre/lib/${MACHINE_ARCH}/libzip.so
-jre/lib/${MACHINE_ARCH}/native_threads/libhpi.so
-jre/lib/${MACHINE_ARCH}/server/Xusage.txt
-jre/lib/${MACHINE_ARCH}/server/libjsig.so
-jre/lib/${MACHINE_ARCH}/server/libjvm.so
-jre/lib/audio/soundbank.gm
-jre/lib/charsets.jar
-jre/lib/cmm/CIEXYZ.pf
-jre/lib/cmm/GRAY.pf
-jre/lib/cmm/LINEAR_RGB.pf
-jre/lib/cmm/PYCC.pf
-jre/lib/cmm/sRGB.pf
-jre/lib/content-types.properties
-jre/lib/ext/dnsns.jar
-jre/lib/ext/ldapsec.jar
-jre/lib/ext/localedata.jar
-jre/lib/ext/sunjce_provider.jar
-jre/lib/flavormap.properties
-jre/lib/font.properties
-jre/lib/font.properties.Redhat6.1
-jre/lib/font.properties.ja
-jre/lib/font.properties.ja.Redhat6.1
-jre/lib/font.properties.ja.Redhat6.2
-jre/lib/font.properties.ja.Turbo
-jre/lib/font.properties.zh.Turbo
-jre/lib/fonts/LucidaBrightDemiBold.ttf
-jre/lib/fonts/LucidaBrightDemiItalic.ttf
-jre/lib/fonts/LucidaBrightItalic.ttf
-jre/lib/fonts/LucidaBrightRegular.ttf
-jre/lib/fonts/LucidaSansDemiBold.ttf
-jre/lib/fonts/LucidaSansDemiOblique.ttf
-jre/lib/fonts/LucidaSansOblique.ttf
-jre/lib/fonts/LucidaSansRegular.ttf
-jre/lib/fonts/LucidaTypewriterBold.ttf
-jre/lib/fonts/LucidaTypewriterBoldOblique.ttf
-jre/lib/fonts/LucidaTypewriterOblique.ttf
-jre/lib/fonts/LucidaTypewriterRegular.ttf
-jre/lib/fonts/fonts.dir
-jre/lib/images/cursors/cursors.properties
-jre/lib/images/cursors/invalid32x32.gif
-jre/lib/images/cursors/motif_CopyDrop32x32.gif
-jre/lib/images/cursors/motif_CopyNoDrop32x32.gif
-jre/lib/images/cursors/motif_LinkDrop32x32.gif
-jre/lib/images/cursors/motif_LinkNoDrop32x32.gif
-jre/lib/images/cursors/motif_MoveDrop32x32.gif
-jre/lib/images/cursors/motif_MoveNoDrop32x32.gif
-jre/lib/javaplugin.jar
-jre/lib/jce.jar
-jre/lib/jsse.jar
-jre/lib/jvm.hprof.txt
-jre/lib/jvm.jcov.txt
-jre/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-jre/lib/logging.properties
-jre/lib/psfont.properties.ja
-jre/lib/psfontj2d.properties
-jre/lib/rt.jar
-jre/lib/security/US_export_policy.jar
-jre/lib/security/cacerts
-jre/lib/security/java.policy
-jre/lib/security/java.security
-jre/lib/security/local_policy.jar
-jre/lib/sunrsasign.jar
-jre/lib/zi/Africa/Abidjan
-jre/lib/zi/Africa/Accra
-jre/lib/zi/Africa/Addis_Ababa
-jre/lib/zi/Africa/Algiers
-jre/lib/zi/Africa/Asmera
-jre/lib/zi/Africa/Bamako
-jre/lib/zi/Africa/Bangui
-jre/lib/zi/Africa/Banjul
-jre/lib/zi/Africa/Bissau
-jre/lib/zi/Africa/Blantyre
-jre/lib/zi/Africa/Brazzaville
-jre/lib/zi/Africa/Bujumbura
-jre/lib/zi/Africa/Cairo
-jre/lib/zi/Africa/Casablanca
-jre/lib/zi/Africa/Ceuta
-jre/lib/zi/Africa/Conakry
-jre/lib/zi/Africa/Dakar
-jre/lib/zi/Africa/Dar_es_Salaam
-jre/lib/zi/Africa/Djibouti
-jre/lib/zi/Africa/Douala
-jre/lib/zi/Africa/El_Aaiun
-jre/lib/zi/Africa/Freetown
-jre/lib/zi/Africa/Gaborone
-jre/lib/zi/Africa/Harare
-jre/lib/zi/Africa/Johannesburg
-jre/lib/zi/Africa/Kampala
-jre/lib/zi/Africa/Khartoum
-jre/lib/zi/Africa/Kigali
-jre/lib/zi/Africa/Kinshasa
-jre/lib/zi/Africa/Lagos
-jre/lib/zi/Africa/Libreville
-jre/lib/zi/Africa/Lome
-jre/lib/zi/Africa/Luanda
-jre/lib/zi/Africa/Lubumbashi
-jre/lib/zi/Africa/Lusaka
-jre/lib/zi/Africa/Malabo
-jre/lib/zi/Africa/Maputo
-jre/lib/zi/Africa/Maseru
-jre/lib/zi/Africa/Mbabane
-jre/lib/zi/Africa/Mogadishu
-jre/lib/zi/Africa/Monrovia
-jre/lib/zi/Africa/Nairobi
-jre/lib/zi/Africa/Ndjamena
-jre/lib/zi/Africa/Niamey
-jre/lib/zi/Africa/Nouakchott
-jre/lib/zi/Africa/Ouagadougou
-jre/lib/zi/Africa/Porto-Novo
-jre/lib/zi/Africa/Sao_Tome
-jre/lib/zi/Africa/Timbuktu
-jre/lib/zi/Africa/Tripoli
-jre/lib/zi/Africa/Tunis
-jre/lib/zi/Africa/Windhoek
-jre/lib/zi/America/Adak
-jre/lib/zi/America/Anchorage
-jre/lib/zi/America/Anguilla
-jre/lib/zi/America/Antigua
-jre/lib/zi/America/Araguaina
-jre/lib/zi/America/Aruba
-jre/lib/zi/America/Asuncion
-jre/lib/zi/America/Barbados
-jre/lib/zi/America/Belem
-jre/lib/zi/America/Belize
-jre/lib/zi/America/Boa_Vista
-jre/lib/zi/America/Bogota
-jre/lib/zi/America/Boise
-jre/lib/zi/America/Buenos_Aires
-jre/lib/zi/America/Cambridge_Bay
-jre/lib/zi/America/Cancun
-jre/lib/zi/America/Caracas
-jre/lib/zi/America/Catamarca
-jre/lib/zi/America/Cayenne
-jre/lib/zi/America/Cayman
-jre/lib/zi/America/Chicago
-jre/lib/zi/America/Chihuahua
-jre/lib/zi/America/Cordoba
-jre/lib/zi/America/Costa_Rica
-jre/lib/zi/America/Cuiaba
-jre/lib/zi/America/Curacao
-jre/lib/zi/America/Danmarkshavn
-jre/lib/zi/America/Dawson
-jre/lib/zi/America/Dawson_Creek
-jre/lib/zi/America/Denver
-jre/lib/zi/America/Detroit
-jre/lib/zi/America/Dominica
-jre/lib/zi/America/Edmonton
-jre/lib/zi/America/Eirunepe
-jre/lib/zi/America/El_Salvador
-jre/lib/zi/America/Fortaleza
-jre/lib/zi/America/Glace_Bay
-jre/lib/zi/America/Godthab
-jre/lib/zi/America/Goose_Bay
-jre/lib/zi/America/Grand_Turk
-jre/lib/zi/America/Grenada
-jre/lib/zi/America/Guadeloupe
-jre/lib/zi/America/Guatemala
-jre/lib/zi/America/Guayaquil
-jre/lib/zi/America/Guyana
-jre/lib/zi/America/Halifax
-jre/lib/zi/America/Havana
-jre/lib/zi/America/Hermosillo
-jre/lib/zi/America/Indiana/Knox
-jre/lib/zi/America/Indiana/Marengo
-jre/lib/zi/America/Indiana/Vevay
-jre/lib/zi/America/Indianapolis
-jre/lib/zi/America/Inuvik
-jre/lib/zi/America/Iqaluit
-jre/lib/zi/America/Jamaica
-jre/lib/zi/America/Jujuy
-jre/lib/zi/America/Juneau
-jre/lib/zi/America/Kentucky/Monticello
-jre/lib/zi/America/La_Paz
-jre/lib/zi/America/Lima
-jre/lib/zi/America/Los_Angeles
-jre/lib/zi/America/Louisville
-jre/lib/zi/America/Maceio
-jre/lib/zi/America/Managua
-jre/lib/zi/America/Manaus
-jre/lib/zi/America/Martinique
-jre/lib/zi/America/Mazatlan
-jre/lib/zi/America/Mendoza
-jre/lib/zi/America/Menominee
-jre/lib/zi/America/Merida
-jre/lib/zi/America/Mexico_City
-jre/lib/zi/America/Miquelon
-jre/lib/zi/America/Monterrey
-jre/lib/zi/America/Montevideo
-jre/lib/zi/America/Montreal
-jre/lib/zi/America/Montserrat
-jre/lib/zi/America/Nassau
-jre/lib/zi/America/New_York
-jre/lib/zi/America/Nipigon
-jre/lib/zi/America/Nome
-jre/lib/zi/America/Noronha
-jre/lib/zi/America/North_Dakota/Center
-jre/lib/zi/America/Panama
-jre/lib/zi/America/Pangnirtung
-jre/lib/zi/America/Paramaribo
-jre/lib/zi/America/Phoenix
-jre/lib/zi/America/Port-au-Prince
-jre/lib/zi/America/Port_of_Spain
-jre/lib/zi/America/Porto_Velho
-jre/lib/zi/America/Puerto_Rico
-jre/lib/zi/America/Rainy_River
-jre/lib/zi/America/Rankin_Inlet
-jre/lib/zi/America/Recife
-jre/lib/zi/America/Regina
-jre/lib/zi/America/Rio_Branco
-jre/lib/zi/America/Rosario
-jre/lib/zi/America/Santiago
-jre/lib/zi/America/Santo_Domingo
-jre/lib/zi/America/Sao_Paulo
-jre/lib/zi/America/Scoresbysund
-jre/lib/zi/America/St_Johns
-jre/lib/zi/America/St_Kitts
-jre/lib/zi/America/St_Lucia
-jre/lib/zi/America/St_Thomas
-jre/lib/zi/America/St_Vincent
-jre/lib/zi/America/Swift_Current
-jre/lib/zi/America/Tegucigalpa
-jre/lib/zi/America/Thule
-jre/lib/zi/America/Thunder_Bay
-jre/lib/zi/America/Tijuana
-jre/lib/zi/America/Tortola
-jre/lib/zi/America/Vancouver
-jre/lib/zi/America/Whitehorse
-jre/lib/zi/America/Winnipeg
-jre/lib/zi/America/Yakutat
-jre/lib/zi/America/Yellowknife
-jre/lib/zi/Antarctica/Casey
-jre/lib/zi/Antarctica/Davis
-jre/lib/zi/Antarctica/DumontDUrville
-jre/lib/zi/Antarctica/Mawson
-jre/lib/zi/Antarctica/McMurdo
-jre/lib/zi/Antarctica/Palmer
-jre/lib/zi/Antarctica/Syowa
-jre/lib/zi/Antarctica/Vostok
-jre/lib/zi/Asia/Aden
-jre/lib/zi/Asia/Almaty
-jre/lib/zi/Asia/Amman
-jre/lib/zi/Asia/Anadyr
-jre/lib/zi/Asia/Aqtau
-jre/lib/zi/Asia/Aqtobe
-jre/lib/zi/Asia/Ashgabat
-jre/lib/zi/Asia/Baghdad
-jre/lib/zi/Asia/Bahrain
-jre/lib/zi/Asia/Baku
-jre/lib/zi/Asia/Bangkok
-jre/lib/zi/Asia/Beirut
-jre/lib/zi/Asia/Bishkek
-jre/lib/zi/Asia/Brunei
-jre/lib/zi/Asia/Calcutta
-jre/lib/zi/Asia/Choibalsan
-jre/lib/zi/Asia/Chongqing
-jre/lib/zi/Asia/Colombo
-jre/lib/zi/Asia/Damascus
-jre/lib/zi/Asia/Dhaka
-jre/lib/zi/Asia/Dili
-jre/lib/zi/Asia/Dubai
-jre/lib/zi/Asia/Dushanbe
-jre/lib/zi/Asia/Gaza
-jre/lib/zi/Asia/Harbin
-jre/lib/zi/Asia/Hong_Kong
-jre/lib/zi/Asia/Hovd
-jre/lib/zi/Asia/Irkutsk
-jre/lib/zi/Asia/Jakarta
-jre/lib/zi/Asia/Jayapura
-jre/lib/zi/Asia/Jerusalem
-jre/lib/zi/Asia/Kabul
-jre/lib/zi/Asia/Kamchatka
-jre/lib/zi/Asia/Karachi
-jre/lib/zi/Asia/Kashgar
-jre/lib/zi/Asia/Katmandu
-jre/lib/zi/Asia/Krasnoyarsk
-jre/lib/zi/Asia/Kuala_Lumpur
-jre/lib/zi/Asia/Kuching
-jre/lib/zi/Asia/Kuwait
-jre/lib/zi/Asia/Macao
-jre/lib/zi/Asia/Magadan
-jre/lib/zi/Asia/Manila
-jre/lib/zi/Asia/Muscat
-jre/lib/zi/Asia/Nicosia
-jre/lib/zi/Asia/Novosibirsk
-jre/lib/zi/Asia/Omsk
-jre/lib/zi/Asia/Phnom_Penh
-jre/lib/zi/Asia/Pontianak
-jre/lib/zi/Asia/Pyongyang
-jre/lib/zi/Asia/Qatar
-jre/lib/zi/Asia/Rangoon
-jre/lib/zi/Asia/Riyadh
-jre/lib/zi/Asia/Riyadh87
-jre/lib/zi/Asia/Riyadh88
-jre/lib/zi/Asia/Riyadh89
-jre/lib/zi/Asia/Saigon
-jre/lib/zi/Asia/Sakhalin
-jre/lib/zi/Asia/Samarkand
-jre/lib/zi/Asia/Seoul
-jre/lib/zi/Asia/Shanghai
-jre/lib/zi/Asia/Singapore
-jre/lib/zi/Asia/Taipei
-jre/lib/zi/Asia/Tashkent
-jre/lib/zi/Asia/Tbilisi
-jre/lib/zi/Asia/Tehran
-jre/lib/zi/Asia/Thimphu
-jre/lib/zi/Asia/Tokyo
-jre/lib/zi/Asia/Ujung_Pandang
-jre/lib/zi/Asia/Ulaanbaatar
-jre/lib/zi/Asia/Urumqi
-jre/lib/zi/Asia/Vientiane
-jre/lib/zi/Asia/Vladivostok
-jre/lib/zi/Asia/Yakutsk
-jre/lib/zi/Asia/Yekaterinburg
-jre/lib/zi/Asia/Yerevan
-jre/lib/zi/Atlantic/Azores
-jre/lib/zi/Atlantic/Bermuda
-jre/lib/zi/Atlantic/Canary
-jre/lib/zi/Atlantic/Cape_Verde
-jre/lib/zi/Atlantic/Faeroe
-jre/lib/zi/Atlantic/Madeira
-jre/lib/zi/Atlantic/Reykjavik
-jre/lib/zi/Atlantic/South_Georgia
-jre/lib/zi/Atlantic/St_Helena
-jre/lib/zi/Atlantic/Stanley
-jre/lib/zi/Australia/Adelaide
-jre/lib/zi/Australia/Brisbane
-jre/lib/zi/Australia/Broken_Hill
-jre/lib/zi/Australia/Darwin
-jre/lib/zi/Australia/Hobart
-jre/lib/zi/Australia/Lindeman
-jre/lib/zi/Australia/Lord_Howe
-jre/lib/zi/Australia/Melbourne
-jre/lib/zi/Australia/Perth
-jre/lib/zi/Australia/Sydney
-jre/lib/zi/CET
-jre/lib/zi/EET
-jre/lib/zi/Etc/GMT
-jre/lib/zi/Etc/GMT+1
-jre/lib/zi/Etc/GMT+10
-jre/lib/zi/Etc/GMT+11
-jre/lib/zi/Etc/GMT+12
-jre/lib/zi/Etc/GMT+2
-jre/lib/zi/Etc/GMT+3
-jre/lib/zi/Etc/GMT+4
-jre/lib/zi/Etc/GMT+5
-jre/lib/zi/Etc/GMT+6
-jre/lib/zi/Etc/GMT+7
-jre/lib/zi/Etc/GMT+8
-jre/lib/zi/Etc/GMT+9
-jre/lib/zi/Etc/GMT-1
-jre/lib/zi/Etc/GMT-10
-jre/lib/zi/Etc/GMT-11
-jre/lib/zi/Etc/GMT-12
-jre/lib/zi/Etc/GMT-13
-jre/lib/zi/Etc/GMT-14
-jre/lib/zi/Etc/GMT-2
-jre/lib/zi/Etc/GMT-3
-jre/lib/zi/Etc/GMT-4
-jre/lib/zi/Etc/GMT-5
-jre/lib/zi/Etc/GMT-6
-jre/lib/zi/Etc/GMT-7
-jre/lib/zi/Etc/GMT-8
-jre/lib/zi/Etc/GMT-9
-jre/lib/zi/Etc/UCT
-jre/lib/zi/Etc/UTC
-jre/lib/zi/Europe/Amsterdam
-jre/lib/zi/Europe/Andorra
-jre/lib/zi/Europe/Athens
-jre/lib/zi/Europe/Belfast
-jre/lib/zi/Europe/Belgrade
-jre/lib/zi/Europe/Berlin
-jre/lib/zi/Europe/Brussels
-jre/lib/zi/Europe/Bucharest
-jre/lib/zi/Europe/Budapest
-jre/lib/zi/Europe/Chisinau
-jre/lib/zi/Europe/Copenhagen
-jre/lib/zi/Europe/Dublin
-jre/lib/zi/Europe/Gibraltar
-jre/lib/zi/Europe/Helsinki
-jre/lib/zi/Europe/Istanbul
-jre/lib/zi/Europe/Kaliningrad
-jre/lib/zi/Europe/Kiev
-jre/lib/zi/Europe/Lisbon
-jre/lib/zi/Europe/London
-jre/lib/zi/Europe/Luxembourg
-jre/lib/zi/Europe/Madrid
-jre/lib/zi/Europe/Malta
-jre/lib/zi/Europe/Minsk
-jre/lib/zi/Europe/Monaco
-jre/lib/zi/Europe/Moscow
-jre/lib/zi/Europe/Oslo
-jre/lib/zi/Europe/Paris
-jre/lib/zi/Europe/Prague
-jre/lib/zi/Europe/Riga
-jre/lib/zi/Europe/Rome
-jre/lib/zi/Europe/Samara
-jre/lib/zi/Europe/Simferopol
-jre/lib/zi/Europe/Sofia
-jre/lib/zi/Europe/Stockholm
-jre/lib/zi/Europe/Tallinn
-jre/lib/zi/Europe/Tirane
-jre/lib/zi/Europe/Uzhgorod
-jre/lib/zi/Europe/Vaduz
-jre/lib/zi/Europe/Vienna
-jre/lib/zi/Europe/Vilnius
-jre/lib/zi/Europe/Warsaw
-jre/lib/zi/Europe/Zaporozhye
-jre/lib/zi/Europe/Zurich
-jre/lib/zi/GMT
-jre/lib/zi/Indian/Antananarivo
-jre/lib/zi/Indian/Chagos
-jre/lib/zi/Indian/Christmas
-jre/lib/zi/Indian/Cocos
-jre/lib/zi/Indian/Comoro
-jre/lib/zi/Indian/Kerguelen
-jre/lib/zi/Indian/Mahe
-jre/lib/zi/Indian/Maldives
-jre/lib/zi/Indian/Mauritius
-jre/lib/zi/Indian/Mayotte
-jre/lib/zi/Indian/Reunion
-jre/lib/zi/MET
-jre/lib/zi/Pacific/Apia
-jre/lib/zi/Pacific/Auckland
-jre/lib/zi/Pacific/Chatham
-jre/lib/zi/Pacific/Easter
-jre/lib/zi/Pacific/Efate
-jre/lib/zi/Pacific/Enderbury
-jre/lib/zi/Pacific/Fakaofo
-jre/lib/zi/Pacific/Fiji
-jre/lib/zi/Pacific/Funafuti
-jre/lib/zi/Pacific/Galapagos
-jre/lib/zi/Pacific/Gambier
-jre/lib/zi/Pacific/Guadalcanal
-jre/lib/zi/Pacific/Guam
-jre/lib/zi/Pacific/Honolulu
-jre/lib/zi/Pacific/Johnston
-jre/lib/zi/Pacific/Kiritimati
-jre/lib/zi/Pacific/Kosrae
-jre/lib/zi/Pacific/Kwajalein
-jre/lib/zi/Pacific/Majuro
-jre/lib/zi/Pacific/Marquesas
-jre/lib/zi/Pacific/Midway
-jre/lib/zi/Pacific/Nauru
-jre/lib/zi/Pacific/Niue
-jre/lib/zi/Pacific/Norfolk
-jre/lib/zi/Pacific/Noumea
-jre/lib/zi/Pacific/Pago_Pago
-jre/lib/zi/Pacific/Palau
-jre/lib/zi/Pacific/Pitcairn
-jre/lib/zi/Pacific/Ponape
-jre/lib/zi/Pacific/Port_Moresby
-jre/lib/zi/Pacific/Rarotonga
-jre/lib/zi/Pacific/Saipan
-jre/lib/zi/Pacific/Tahiti
-jre/lib/zi/Pacific/Tarawa
-jre/lib/zi/Pacific/Tongatapu
-jre/lib/zi/Pacific/Truk
-jre/lib/zi/Pacific/Wake
-jre/lib/zi/Pacific/Wallis
-jre/lib/zi/Pacific/Yap
-jre/lib/zi/WET
-jre/lib/zi/ZoneInfoMappings
-jre/man/ja
-jre/man/ja_JP.eucJP/man1/java.1
-jre/man/ja_JP.eucJP/man1/keytool.1
-jre/man/ja_JP.eucJP/man1/orbd.1
-jre/man/ja_JP.eucJP/man1/policytool.1
-jre/man/ja_JP.eucJP/man1/rmid.1
-jre/man/ja_JP.eucJP/man1/rmiregistry.1
-jre/man/ja_JP.eucJP/man1/servertool.1
-jre/man/ja_JP.eucJP/man1/tnameserv.1
-jre/man/man1/java.1
-jre/man/man1/keytool.1
-jre/man/man1/orbd.1
-jre/man/man1/policytool.1
-jre/man/man1/rmid.1
-jre/man/man1/rmiregistry.1
-jre/man/man1/servertool.1
-jre/man/man1/tnameserv.1
-jre/plugin/${MACHINE_ARCH}/ns4/javaplugin140.so
-jre/plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji140.so
-jre/plugin/${MACHINE_ARCH}/ns610/libjavaplugin_oji140.so
-@dirrm jre/plugin/${MACHINE_ARCH}/ns610
-@dirrm jre/plugin/${MACHINE_ARCH}/ns600
-@dirrm jre/plugin/${MACHINE_ARCH}/ns4
-@dirrm jre/plugin/${MACHINE_ARCH}
-@dirrm jre/plugin
-@dirrm jre/man/man1
-@dirrm jre/man/ja_JP.eucJP/man1
-@dirrm jre/man/ja_JP.eucJP
-@dirrm jre/man
-@dirrm jre/lib/zi/Pacific
-@dirrm jre/lib/zi/Indian
-@dirrm jre/lib/zi/Europe
-@dirrm jre/lib/zi/Etc
-@dirrm jre/lib/zi/Australia
-@dirrm jre/lib/zi/Atlantic
-@dirrm jre/lib/zi/Asia
-@dirrm jre/lib/zi/Antarctica
-@dirrm jre/lib/zi/America/North_Dakota
-@dirrm jre/lib/zi/America/Kentucky
-@dirrm jre/lib/zi/America/Indiana
-@dirrm jre/lib/zi/America
-@dirrm jre/lib/zi/Africa
-@dirrm jre/lib/zi
-@dirrm jre/lib/security
-@dirrm jre/lib/locale/zh_TW/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5/LC_MESSAGES
-@dirrm jre/lib/locale/zh_TW.BIG5
-@dirrm jre/lib/locale/zh_TW
-@dirrm jre/lib/locale/zh/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK/LC_MESSAGES
-@dirrm jre/lib/locale/zh.GBK
-@dirrm jre/lib/locale/zh
-@dirrm jre/lib/locale/sv/LC_MESSAGES
-@dirrm jre/lib/locale/sv
-@dirrm jre/lib/locale/ko/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8/LC_MESSAGES
-@dirrm jre/lib/locale/ko.UTF-8
-@dirrm jre/lib/locale/ko
-@dirrm jre/lib/locale/ja/LC_MESSAGES
-@dirrm jre/lib/locale/ja
-@dirrm jre/lib/locale/it/LC_MESSAGES
-@dirrm jre/lib/locale/it
-@dirrm jre/lib/locale/fr/LC_MESSAGES
-@dirrm jre/lib/locale/fr
-@dirrm jre/lib/locale/es/LC_MESSAGES
-@dirrm jre/lib/locale/es
-@dirrm jre/lib/locale/de/LC_MESSAGES
-@dirrm jre/lib/locale/de
-@dirrm jre/lib/locale
-@dirrm jre/lib/images/cursors
-@dirrm jre/lib/images
-@dirrm jre/lib/${MACHINE_ARCH}/server
-@dirrm jre/lib/${MACHINE_ARCH}/native_threads
-@dirrm jre/lib/${MACHINE_ARCH}/client
-@dirrm jre/lib/${MACHINE_ARCH}
-@dirrm jre/lib/fonts
-@dirrm jre/lib/ext
-@dirrm jre/lib/cmm
-@dirrm jre/lib/audio
-@exec ${MKDIR} %D/jre/lib/applet
-@dirrm jre/lib/applet
-@dirrm jre/lib
-@dirrm jre/bin
-@dirrm jre
+bin/java_vm
+bin/keytool
+bin/orbd
+bin/policytool
+bin/rmid
+bin/rmiregistry
+bin/servertool
+bin/tnameserv
+javaws-1_0_1_02-linux-int.zip
+lib/${MACHINE_ARCH}/awt_robot
+lib/${MACHINE_ARCH}/client/Xusage.txt
+lib/${MACHINE_ARCH}/client/libjsig.so
+lib/${MACHINE_ARCH}/client/libjvm.so
+lib/${MACHINE_ARCH}/jvm.cfg
+lib/${MACHINE_ARCH}/libJdbcOdbc.so
+lib/${MACHINE_ARCH}/libawt.so
+lib/${MACHINE_ARCH}/libcmm.so
+lib/${MACHINE_ARCH}/libdcpr.so
+lib/${MACHINE_ARCH}/libdt_socket.so
+lib/${MACHINE_ARCH}/libfontmanager.so
+lib/${MACHINE_ARCH}/libhprof.so
+lib/${MACHINE_ARCH}/libioser12.so
+lib/${MACHINE_ARCH}/libjaas_unix.so
+lib/${MACHINE_ARCH}/libjava.so
+lib/${MACHINE_ARCH}/libjavaplugin_jni.so
+lib/${MACHINE_ARCH}/libjawt.so
+lib/${MACHINE_ARCH}/libjcov.so
+lib/${MACHINE_ARCH}/libjdwp.so
+lib/${MACHINE_ARCH}/libjpeg.so
+lib/${MACHINE_ARCH}/libjsig.so
+lib/${MACHINE_ARCH}/libjsound.so
+lib/${MACHINE_ARCH}/libmlib_image.so
+lib/${MACHINE_ARCH}/libnet.so
+lib/${MACHINE_ARCH}/libnio.so
+lib/${MACHINE_ARCH}/librmi.so
+lib/${MACHINE_ARCH}/libverify.so
+lib/${MACHINE_ARCH}/libzip.so
+lib/${MACHINE_ARCH}/native_threads/libhpi.so
+lib/${MACHINE_ARCH}/server/Xusage.txt
+lib/${MACHINE_ARCH}/server/libjsig.so
+lib/${MACHINE_ARCH}/server/libjvm.so
+lib/audio/soundbank.gm
+lib/charsets.jar
+lib/cmm/CIEXYZ.pf
+lib/cmm/GRAY.pf
+lib/cmm/LINEAR_RGB.pf
+lib/cmm/PYCC.pf
+lib/cmm/sRGB.pf
+lib/content-types.properties
+lib/ext/dnsns.jar
+lib/ext/ldapsec.jar
+lib/ext/localedata.jar
+lib/ext/sunjce_provider.jar
+lib/flavormap.properties
+lib/font.properties
+lib/font.properties.Redhat6.1
+lib/font.properties.ja
+lib/font.properties.ja.Redhat6.1
+lib/font.properties.ja.Redhat6.2
+lib/font.properties.ja.Turbo
+lib/font.properties.zh.Turbo
+lib/fonts/LucidaBrightDemiBold.ttf
+lib/fonts/LucidaBrightDemiItalic.ttf
+lib/fonts/LucidaBrightItalic.ttf
+lib/fonts/LucidaBrightRegular.ttf
+lib/fonts/LucidaSansDemiBold.ttf
+lib/fonts/LucidaSansDemiOblique.ttf
+lib/fonts/LucidaSansOblique.ttf
+lib/fonts/LucidaSansRegular.ttf
+lib/fonts/LucidaTypewriterBold.ttf
+lib/fonts/LucidaTypewriterBoldOblique.ttf
+lib/fonts/LucidaTypewriterOblique.ttf
+lib/fonts/LucidaTypewriterRegular.ttf
+lib/fonts/fonts.dir
+lib/images/cursors/cursors.properties
+lib/images/cursors/invalid32x32.gif
+lib/images/cursors/motif_CopyDrop32x32.gif
+lib/images/cursors/motif_CopyNoDrop32x32.gif
+lib/images/cursors/motif_LinkDrop32x32.gif
+lib/images/cursors/motif_LinkNoDrop32x32.gif
+lib/images/cursors/motif_MoveDrop32x32.gif
+lib/images/cursors/motif_MoveNoDrop32x32.gif
+lib/javaplugin.jar
+lib/jce.jar
+lib/jsse.jar
+lib/jvm.hprof.txt
+lib/jvm.jcov.txt
+lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+lib/logging.properties
+lib/psfont.properties.ja
+lib/psfontj2d.properties
+lib/rt.jar
+lib/security/US_export_policy.jar
+lib/security/cacerts
+lib/security/java.policy
+lib/security/java.security
+lib/security/local_policy.jar
+lib/sunrsasign.jar
+lib/zi/Africa/Abidjan
+lib/zi/Africa/Accra
+lib/zi/Africa/Addis_Ababa
+lib/zi/Africa/Algiers
+lib/zi/Africa/Asmera
+lib/zi/Africa/Bamako
+lib/zi/Africa/Bangui
+lib/zi/Africa/Banjul
+lib/zi/Africa/Bissau
+lib/zi/Africa/Blantyre
+lib/zi/Africa/Brazzaville
+lib/zi/Africa/Bujumbura
+lib/zi/Africa/Cairo
+lib/zi/Africa/Casablanca
+lib/zi/Africa/Ceuta
+lib/zi/Africa/Conakry
+lib/zi/Africa/Dakar
+lib/zi/Africa/Dar_es_Salaam
+lib/zi/Africa/Djibouti
+lib/zi/Africa/Douala
+lib/zi/Africa/El_Aaiun
+lib/zi/Africa/Freetown
+lib/zi/Africa/Gaborone
+lib/zi/Africa/Harare
+lib/zi/Africa/Johannesburg
+lib/zi/Africa/Kampala
+lib/zi/Africa/Khartoum
+lib/zi/Africa/Kigali
+lib/zi/Africa/Kinshasa
+lib/zi/Africa/Lagos
+lib/zi/Africa/Libreville
+lib/zi/Africa/Lome
+lib/zi/Africa/Luanda
+lib/zi/Africa/Lubumbashi
+lib/zi/Africa/Lusaka
+lib/zi/Africa/Malabo
+lib/zi/Africa/Maputo
+lib/zi/Africa/Maseru
+lib/zi/Africa/Mbabane
+lib/zi/Africa/Mogadishu
+lib/zi/Africa/Monrovia
+lib/zi/Africa/Nairobi
+lib/zi/Africa/Ndjamena
+lib/zi/Africa/Niamey
+lib/zi/Africa/Nouakchott
+lib/zi/Africa/Ouagadougou
+lib/zi/Africa/Porto-Novo
+lib/zi/Africa/Sao_Tome
+lib/zi/Africa/Timbuktu
+lib/zi/Africa/Tripoli
+lib/zi/Africa/Tunis
+lib/zi/Africa/Windhoek
+lib/zi/America/Adak
+lib/zi/America/Anchorage
+lib/zi/America/Anguilla
+lib/zi/America/Antigua
+lib/zi/America/Araguaina
+lib/zi/America/Aruba
+lib/zi/America/Asuncion
+lib/zi/America/Barbados
+lib/zi/America/Belem
+lib/zi/America/Belize
+lib/zi/America/Boa_Vista
+lib/zi/America/Bogota
+lib/zi/America/Boise
+lib/zi/America/Buenos_Aires
+lib/zi/America/Cambridge_Bay
+lib/zi/America/Cancun
+lib/zi/America/Caracas
+lib/zi/America/Catamarca
+lib/zi/America/Cayenne
+lib/zi/America/Cayman
+lib/zi/America/Chicago
+lib/zi/America/Chihuahua
+lib/zi/America/Cordoba
+lib/zi/America/Costa_Rica
+lib/zi/America/Cuiaba
+lib/zi/America/Curacao
+lib/zi/America/Danmarkshavn
+lib/zi/America/Dawson
+lib/zi/America/Dawson_Creek
+lib/zi/America/Denver
+lib/zi/America/Detroit
+lib/zi/America/Dominica
+lib/zi/America/Edmonton
+lib/zi/America/Eirunepe
+lib/zi/America/El_Salvador
+lib/zi/America/Fortaleza
+lib/zi/America/Glace_Bay
+lib/zi/America/Godthab
+lib/zi/America/Goose_Bay
+lib/zi/America/Grand_Turk
+lib/zi/America/Grenada
+lib/zi/America/Guadeloupe
+lib/zi/America/Guatemala
+lib/zi/America/Guayaquil
+lib/zi/America/Guyana
+lib/zi/America/Halifax
+lib/zi/America/Havana
+lib/zi/America/Hermosillo
+lib/zi/America/Indiana/Knox
+lib/zi/America/Indiana/Marengo
+lib/zi/America/Indiana/Vevay
+lib/zi/America/Indianapolis
+lib/zi/America/Inuvik
+lib/zi/America/Iqaluit
+lib/zi/America/Jamaica
+lib/zi/America/Jujuy
+lib/zi/America/Juneau
+lib/zi/America/Kentucky/Monticello
+lib/zi/America/La_Paz
+lib/zi/America/Lima
+lib/zi/America/Los_Angeles
+lib/zi/America/Louisville
+lib/zi/America/Maceio
+lib/zi/America/Managua
+lib/zi/America/Manaus
+lib/zi/America/Martinique
+lib/zi/America/Mazatlan
+lib/zi/America/Mendoza
+lib/zi/America/Menominee
+lib/zi/America/Merida
+lib/zi/America/Mexico_City
+lib/zi/America/Miquelon
+lib/zi/America/Monterrey
+lib/zi/America/Montevideo
+lib/zi/America/Montreal
+lib/zi/America/Montserrat
+lib/zi/America/Nassau
+lib/zi/America/New_York
+lib/zi/America/Nipigon
+lib/zi/America/Nome
+lib/zi/America/Noronha
+lib/zi/America/North_Dakota/Center
+lib/zi/America/Panama
+lib/zi/America/Pangnirtung
+lib/zi/America/Paramaribo
+lib/zi/America/Phoenix
+lib/zi/America/Port-au-Prince
+lib/zi/America/Port_of_Spain
+lib/zi/America/Porto_Velho
+lib/zi/America/Puerto_Rico
+lib/zi/America/Rainy_River
+lib/zi/America/Rankin_Inlet
+lib/zi/America/Recife
+lib/zi/America/Regina
+lib/zi/America/Rio_Branco
+lib/zi/America/Rosario
+lib/zi/America/Santiago
+lib/zi/America/Santo_Domingo
+lib/zi/America/Sao_Paulo
+lib/zi/America/Scoresbysund
+lib/zi/America/St_Johns
+lib/zi/America/St_Kitts
+lib/zi/America/St_Lucia
+lib/zi/America/St_Thomas
+lib/zi/America/St_Vincent
+lib/zi/America/Swift_Current
+lib/zi/America/Tegucigalpa
+lib/zi/America/Thule
+lib/zi/America/Thunder_Bay
+lib/zi/America/Tijuana
+lib/zi/America/Tortola
+lib/zi/America/Vancouver
+lib/zi/America/Whitehorse
+lib/zi/America/Winnipeg
+lib/zi/America/Yakutat
+lib/zi/America/Yellowknife
+lib/zi/Antarctica/Casey
+lib/zi/Antarctica/Davis
+lib/zi/Antarctica/DumontDUrville
+lib/zi/Antarctica/Mawson
+lib/zi/Antarctica/McMurdo
+lib/zi/Antarctica/Palmer
+lib/zi/Antarctica/Syowa
+lib/zi/Antarctica/Vostok
+lib/zi/Asia/Aden
+lib/zi/Asia/Almaty
+lib/zi/Asia/Amman
+lib/zi/Asia/Anadyr
+lib/zi/Asia/Aqtau
+lib/zi/Asia/Aqtobe
+lib/zi/Asia/Ashgabat
+lib/zi/Asia/Baghdad
+lib/zi/Asia/Bahrain
+lib/zi/Asia/Baku
+lib/zi/Asia/Bangkok
+lib/zi/Asia/Beirut
+lib/zi/Asia/Bishkek
+lib/zi/Asia/Brunei
+lib/zi/Asia/Calcutta
+lib/zi/Asia/Choibalsan
+lib/zi/Asia/Chongqing
+lib/zi/Asia/Colombo
+lib/zi/Asia/Damascus
+lib/zi/Asia/Dhaka
+lib/zi/Asia/Dili
+lib/zi/Asia/Dubai
+lib/zi/Asia/Dushanbe
+lib/zi/Asia/Gaza
+lib/zi/Asia/Harbin
+lib/zi/Asia/Hong_Kong
+lib/zi/Asia/Hovd
+lib/zi/Asia/Irkutsk
+lib/zi/Asia/Jakarta
+lib/zi/Asia/Jayapura
+lib/zi/Asia/Jerusalem
+lib/zi/Asia/Kabul
+lib/zi/Asia/Kamchatka
+lib/zi/Asia/Karachi
+lib/zi/Asia/Kashgar
+lib/zi/Asia/Katmandu
+lib/zi/Asia/Krasnoyarsk
+lib/zi/Asia/Kuala_Lumpur
+lib/zi/Asia/Kuching
+lib/zi/Asia/Kuwait
+lib/zi/Asia/Macao
+lib/zi/Asia/Magadan
+lib/zi/Asia/Manila
+lib/zi/Asia/Muscat
+lib/zi/Asia/Nicosia
+lib/zi/Asia/Novosibirsk
+lib/zi/Asia/Omsk
+lib/zi/Asia/Phnom_Penh
+lib/zi/Asia/Pontianak
+lib/zi/Asia/Pyongyang
+lib/zi/Asia/Qatar
+lib/zi/Asia/Rangoon
+lib/zi/Asia/Riyadh
+lib/zi/Asia/Riyadh87
+lib/zi/Asia/Riyadh88
+lib/zi/Asia/Riyadh89
+lib/zi/Asia/Saigon
+lib/zi/Asia/Sakhalin
+lib/zi/Asia/Samarkand
+lib/zi/Asia/Seoul
+lib/zi/Asia/Shanghai
+lib/zi/Asia/Singapore
+lib/zi/Asia/Taipei
+lib/zi/Asia/Tashkent
+lib/zi/Asia/Tbilisi
+lib/zi/Asia/Tehran
+lib/zi/Asia/Thimphu
+lib/zi/Asia/Tokyo
+lib/zi/Asia/Ujung_Pandang
+lib/zi/Asia/Ulaanbaatar
+lib/zi/Asia/Urumqi
+lib/zi/Asia/Vientiane
+lib/zi/Asia/Vladivostok
+lib/zi/Asia/Yakutsk
+lib/zi/Asia/Yekaterinburg
+lib/zi/Asia/Yerevan
+lib/zi/Atlantic/Azores
+lib/zi/Atlantic/Bermuda
+lib/zi/Atlantic/Canary
+lib/zi/Atlantic/Cape_Verde
+lib/zi/Atlantic/Faeroe
+lib/zi/Atlantic/Madeira
+lib/zi/Atlantic/Reykjavik
+lib/zi/Atlantic/South_Georgia
+lib/zi/Atlantic/St_Helena
+lib/zi/Atlantic/Stanley
+lib/zi/Australia/Adelaide
+lib/zi/Australia/Brisbane
+lib/zi/Australia/Broken_Hill
+lib/zi/Australia/Darwin
+lib/zi/Australia/Hobart
+lib/zi/Australia/Lindeman
+lib/zi/Australia/Lord_Howe
+lib/zi/Australia/Melbourne
+lib/zi/Australia/Perth
+lib/zi/Australia/Sydney
+lib/zi/CET
+lib/zi/EET
+lib/zi/Etc/GMT
+lib/zi/Etc/GMT+1
+lib/zi/Etc/GMT+10
+lib/zi/Etc/GMT+11
+lib/zi/Etc/GMT+12
+lib/zi/Etc/GMT+2
+lib/zi/Etc/GMT+3
+lib/zi/Etc/GMT+4
+lib/zi/Etc/GMT+5
+lib/zi/Etc/GMT+6
+lib/zi/Etc/GMT+7
+lib/zi/Etc/GMT+8
+lib/zi/Etc/GMT+9
+lib/zi/Etc/GMT-1
+lib/zi/Etc/GMT-10
+lib/zi/Etc/GMT-11
+lib/zi/Etc/GMT-12
+lib/zi/Etc/GMT-13
+lib/zi/Etc/GMT-14
+lib/zi/Etc/GMT-2
+lib/zi/Etc/GMT-3
+lib/zi/Etc/GMT-4
+lib/zi/Etc/GMT-5
+lib/zi/Etc/GMT-6
+lib/zi/Etc/GMT-7
+lib/zi/Etc/GMT-8
+lib/zi/Etc/GMT-9
+lib/zi/Etc/UCT
+lib/zi/Etc/UTC
+lib/zi/Europe/Amsterdam
+lib/zi/Europe/Andorra
+lib/zi/Europe/Athens
+lib/zi/Europe/Belfast
+lib/zi/Europe/Belgrade
+lib/zi/Europe/Berlin
+lib/zi/Europe/Brussels
+lib/zi/Europe/Bucharest
+lib/zi/Europe/Budapest
+lib/zi/Europe/Chisinau
+lib/zi/Europe/Copenhagen
+lib/zi/Europe/Dublin
+lib/zi/Europe/Gibraltar
+lib/zi/Europe/Helsinki
+lib/zi/Europe/Istanbul
+lib/zi/Europe/Kaliningrad
+lib/zi/Europe/Kiev
+lib/zi/Europe/Lisbon
+lib/zi/Europe/London
+lib/zi/Europe/Luxembourg
+lib/zi/Europe/Madrid
+lib/zi/Europe/Malta
+lib/zi/Europe/Minsk
+lib/zi/Europe/Monaco
+lib/zi/Europe/Moscow
+lib/zi/Europe/Oslo
+lib/zi/Europe/Paris
+lib/zi/Europe/Prague
+lib/zi/Europe/Riga
+lib/zi/Europe/Rome
+lib/zi/Europe/Samara
+lib/zi/Europe/Simferopol
+lib/zi/Europe/Sofia
+lib/zi/Europe/Stockholm
+lib/zi/Europe/Tallinn
+lib/zi/Europe/Tirane
+lib/zi/Europe/Uzhgorod
+lib/zi/Europe/Vaduz
+lib/zi/Europe/Vienna
+lib/zi/Europe/Vilnius
+lib/zi/Europe/Warsaw
+lib/zi/Europe/Zaporozhye
+lib/zi/Europe/Zurich
+lib/zi/GMT
+lib/zi/Indian/Antananarivo
+lib/zi/Indian/Chagos
+lib/zi/Indian/Christmas
+lib/zi/Indian/Cocos
+lib/zi/Indian/Comoro
+lib/zi/Indian/Kerguelen
+lib/zi/Indian/Mahe
+lib/zi/Indian/Maldives
+lib/zi/Indian/Mauritius
+lib/zi/Indian/Mayotte
+lib/zi/Indian/Reunion
+lib/zi/MET
+lib/zi/Pacific/Apia
+lib/zi/Pacific/Auckland
+lib/zi/Pacific/Chatham
+lib/zi/Pacific/Easter
+lib/zi/Pacific/Efate
+lib/zi/Pacific/Enderbury
+lib/zi/Pacific/Fakaofo
+lib/zi/Pacific/Fiji
+lib/zi/Pacific/Funafuti
+lib/zi/Pacific/Galapagos
+lib/zi/Pacific/Gambier
+lib/zi/Pacific/Guadalcanal
+lib/zi/Pacific/Guam
+lib/zi/Pacific/Honolulu
+lib/zi/Pacific/Johnston
+lib/zi/Pacific/Kiritimati
+lib/zi/Pacific/Kosrae
+lib/zi/Pacific/Kwajalein
+lib/zi/Pacific/Majuro
+lib/zi/Pacific/Marquesas
+lib/zi/Pacific/Midway
+lib/zi/Pacific/Nauru
+lib/zi/Pacific/Niue
+lib/zi/Pacific/Norfolk
+lib/zi/Pacific/Noumea
+lib/zi/Pacific/Pago_Pago
+lib/zi/Pacific/Palau
+lib/zi/Pacific/Pitcairn
+lib/zi/Pacific/Ponape
+lib/zi/Pacific/Port_Moresby
+lib/zi/Pacific/Rarotonga
+lib/zi/Pacific/Saipan
+lib/zi/Pacific/Tahiti
+lib/zi/Pacific/Tarawa
+lib/zi/Pacific/Tongatapu
+lib/zi/Pacific/Truk
+lib/zi/Pacific/Wake
+lib/zi/Pacific/Wallis
+lib/zi/Pacific/Yap
+lib/zi/WET
+lib/zi/ZoneInfoMappings
+man/ja
+man/ja_JP.eucJP/man1/java.1
+man/ja_JP.eucJP/man1/keytool.1
+man/ja_JP.eucJP/man1/orbd.1
+man/ja_JP.eucJP/man1/policytool.1
+man/ja_JP.eucJP/man1/rmid.1
+man/ja_JP.eucJP/man1/rmiregistry.1
+man/ja_JP.eucJP/man1/servertool.1
+man/ja_JP.eucJP/man1/tnameserv.1
+man/man1/java.1
+man/man1/keytool.1
+man/man1/orbd.1
+man/man1/policytool.1
+man/man1/rmid.1
+man/man1/rmiregistry.1
+man/man1/servertool.1
+man/man1/tnameserv.1
+plugin/${MACHINE_ARCH}/ns4/javaplugin140.so
+plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji140.so
+plugin/${MACHINE_ARCH}/ns610/libjavaplugin_oji140.so
+@dirrm plugin/${MACHINE_ARCH}/ns610
+@dirrm plugin/${MACHINE_ARCH}/ns600
+@dirrm plugin/${MACHINE_ARCH}/ns4
+@dirrm plugin/${MACHINE_ARCH}
+@dirrm plugin
+@dirrm lib/zi/Pacific
+@dirrm lib/zi/Indian
+@dirrm lib/zi/Europe
+@dirrm lib/zi/Etc
+@dirrm lib/zi/Australia
+@dirrm lib/zi/Atlantic
+@dirrm lib/zi/Asia
+@dirrm lib/zi/Antarctica
+@dirrm lib/zi/America/North_Dakota
+@dirrm lib/zi/America/Kentucky
+@dirrm lib/zi/America/Indiana
+@dirrm lib/zi/America
+@dirrm lib/zi/Africa
+@dirrm lib/zi
+@dirrm lib/security
+@dirrm lib/locale/zh_TW/LC_MESSAGES
+@dirrm lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm lib/locale/zh_TW.BIG5
+@dirrm lib/locale/zh_TW
+@dirrm lib/locale/zh/LC_MESSAGES
+@dirrm lib/locale/zh.GBK/LC_MESSAGES
+@dirrm lib/locale/zh.GBK
+@dirrm lib/locale/zh
+@dirrm lib/locale/sv/LC_MESSAGES
+@dirrm lib/locale/sv
+@dirrm lib/locale/ko/LC_MESSAGES
+@dirrm lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm lib/locale/ko.UTF-8
+@dirrm lib/locale/ko
+@dirrm lib/locale/ja/LC_MESSAGES
+@dirrm lib/locale/ja
+@dirrm lib/locale/it/LC_MESSAGES
+@dirrm lib/locale/it
+@dirrm lib/locale/fr/LC_MESSAGES
+@dirrm lib/locale/fr
+@dirrm lib/locale/es/LC_MESSAGES
+@dirrm lib/locale/es
+@dirrm lib/locale/de/LC_MESSAGES
+@dirrm lib/locale/de
+@dirrm lib/locale
+@dirrm lib/images/cursors
+@dirrm lib/images
+@dirrm lib/${MACHINE_ARCH}/server
+@dirrm lib/${MACHINE_ARCH}/native_threads
+@dirrm lib/${MACHINE_ARCH}/client
+@dirrm lib/${MACHINE_ARCH}
+@dirrm lib/fonts
+@dirrm lib/ext
+@dirrm lib/cmm
+@dirrm lib/audio
+@exec ${MKDIR} %D/lib/applet
+@dirrm lib/applet
+@dirrm lib
+@dirrm man/man1
+@dirrm man/ja_JP.eucJP/man1
+@dirrm man/ja_JP.eucJP
+@dirrm man
 @dirrm bin
+@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
