@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3801 2003/11/09 20:52:25 agc Exp $
+$NetBSD: CHANGES,v 1.3802 2003/11/10 00:09:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4327,3 +4327,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated python-mode to 4.6nb1 [xtraeme 2003-11-08]
 	Updated Ngraph to 6.3.20 [xtraeme 2003-11-08]
 	Updated oss to 3.9.8b [wiz 2003-11-08]
+	Updated dvd+rw-tools to 5.13.4.7.4 [wiz 2003-11-10]
