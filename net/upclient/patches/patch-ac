@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/04/06 20:10:00 hubertf Exp $
+
+--- upclient.h.orig	Sat Apr  3 12:16:00 1999
++++ upclient.h	Sun Apr  4 06:23:36 1999
+@@ -30,7 +30,8 @@
+ #include <sys/types.h>
+ #include <sys/utsname.h>
+ 
+-#ifdef FREEBSD
++#ifdef xxxBSD
++#include <sys/param.h>
+ #include <sys/sysctl.h>
+ #endif
+ 

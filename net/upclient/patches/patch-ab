@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/06 20:10:00 hubertf Exp $
+
+--- upclient.c.orig	Sat Apr  3 16:25:30 1999
++++ upclient.c	Sun Apr  4 06:23:31 1999
+@@ -193,7 +193,7 @@
+ 	return 1;
+ }
+ 
+-#ifdef FREEBSD
++#ifdef xxxBSD
+ int getUptime (uptime)
+ 	unsigned long *uptime;
+ {
