@@ -1,3 +1,5 @@
+$NetBSD: patch-av,v 1.2 2000/02/05 15:58:30 wiz Exp $
+
 Index: ssetroot.c
 ===================================================================
 RCS file: /home/siren/src/tvtwm/ssetroot.c,v

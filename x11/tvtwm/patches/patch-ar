@@ -1,3 +1,5 @@
+$NetBSD: patch-ar,v 1.2 2000/02/05 15:58:30 wiz Exp $
+
 Index: parse.h
 ===================================================================
 RCS file: /home/siren/src/tvtwm/parse.h,v

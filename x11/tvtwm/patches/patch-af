@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 2000/02/05 15:58:29 wiz Exp $
+
 Index: cursor.c
 ===================================================================
 RCS file: /home/siren/src/tvtwm/cursor.c,v
