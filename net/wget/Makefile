@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2002/11/21 11:05:56 grant Exp $
+# $NetBSD: Makefile,v 1.51 2002/11/30 18:03:20 grant Exp $
 
 DISTNAME=	wget-1.7
 PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
-
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	wget-17-v6-20010716a.diff.gz
-PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
@@ -34,7 +30,10 @@ BUILD_DEFS+=    USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 # IPv6 support
-.if (${OPSYS} != SunOS) && defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && ${USE_INET6} == YES
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		wget-17-v6-20010716a.diff.gz
+PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=        --enable-ipv6
 .else
 CONFIGURE_ARGS+=        --disable-ipv6
