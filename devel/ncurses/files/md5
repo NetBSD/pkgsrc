@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.6 2000/10/12 14:56:44 jlam Exp $
+$NetBSD: md5,v 1.7 2000/10/12 16:27:59 pooka Exp $
 
+MD5 (ncurses-5.1.tar.gz) = 6b379ee0b8ad607acdba9c8039818921
 MD5 (patch-5.1-20001009.sh) = e63c4c6d8de31024558c513864145f9a
