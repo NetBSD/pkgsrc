@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9229 2005/02/20 00:38:59 tron Exp $
+$NetBSD: CHANGES,v 1.9230 2005/02/20 10:19:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -974,3 +974,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libsoup to 1.99.28nb3 [wiz 2005-02-19]
 	Updated dspam to 3.2.7 [xtraeme 2005-02-19]
 	Removed gnubile [tron 2005-02-20]
+	Updated metacity to 2.8.13 [jmmv 2005-02-20]
