@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2578 2004/11/29 14:05:54 he Exp $
+$NetBSD: TODO,v 1.2579 2004/11/29 14:13:40 he Exp $
 
 Suggested new packages
 ======================
@@ -787,7 +787,6 @@ Suggested package updates
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.70_01
 	o p5-AppConfig-1.56
-	o p5-Archive-Tar-1.22
 	o p5-Archive-Zip-1.14
 	o p5-Audio-Wav-0.03
 	o p5-Authen-SASL-2.08
