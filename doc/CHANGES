@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6611 2004/07/19 23:55:49 schmonz Exp $
+$NetBSD: CHANGES,v 1.6612 2004/07/20 01:12:42 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3459,3 +3459,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated imhangul to 0.9.10 [minskim 2004-07-19]
 	Added pkgse-0.1 [xtraeme 2004-07-19]
 	Updated ezmlm-idx to 0.421 [schmonz 2004-07-19]
+	Updated subversion to 1.0.6 [epg 2004-07-20]
