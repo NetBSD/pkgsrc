@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/11 04:22:49 snj Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -16,7 +16,7 @@ CONFLICTS=		vncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_IMAKE=		yes
 
 CONFIGURE_DIRS=		${WRKSRC}/libvncauth
@@ -31,7 +31,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/vncviewer/README			\
 		${PREFIX}/share/doc/vncviewer/README
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
