@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/07 16:49:14 agc Exp $
+
+SHA1 (e16menuedit2-0.0.1.tar.gz) = 5181f7a10e57c6ad9b5bd88abf9e0b51f22db5b5
+RMD160 (e16menuedit2-0.0.1.tar.gz) = 1cfadba3adfe8dcca19d1f8112928e1c79e7acb8
+Size (e16menuedit2-0.0.1.tar.gz) = 349410 bytes
+SHA1 (patch-aa) = af682ed2d0225413fa4a93995864d52f4c701c6c
