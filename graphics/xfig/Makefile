@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.38 2004/04/24 11:15:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2004/05/25 15:23:33 adam Exp $
 
-DISTNAME=		xfig.3.2.4.full
-PKGNAME=		xfig-3.2.4
-PKGREVISION=		1
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://epb.lbl.gov/xfig/
+DISTNAME=	xfig.3.2.4.full
+PKGNAME=	xfig-3.2.4
+PKGREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://www.xfig.org/xfigdist/
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://epb.lbl.gov/BVSmith/xfig/
-COMMENT=		CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.xfig.org/
+COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 
-DEPENDS+=		transfig>=3.2.4:../../print/transfig
+DEPENDS+=	transfig>=3.2.4:../../print/transfig
 
 WRKSRC=			${WRKDIR}/xfig.3.2.4
 USE_BUILDLINK3=		YES
