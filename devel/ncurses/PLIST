@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/31 16:20:01 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/20 08:49:27 reed Exp $
 bin/captoinfo
+bin/clear
 bin/infocmp
 bin/infotocap
+bin/reset
 bin/tack
 bin/tic
 bin/toe
+bin/tput
+bin/tset
 include/cursesapp.h
 include/cursesf.h
 include/cursesm.h
@@ -47,11 +51,15 @@ lib/libpanel.so
 lib/libpanel.so.5
 lib/libpanel.so.5.3
 man/man1/captoinfo.1
+man/man1/clear.1
 man/man1/infocmp.1
 man/man1/infotocap.1
+man/man1/reset.1
 man/man1/tack.1
 man/man1/tic.1
 man/man1/toe.1
+man/man1/tput.1
+man/man1/tset.1
 man/man3/COLOR_PAIR.3
 man/man3/PAIR_NUMBER.3
 man/man3/_nc_tracebits.3
