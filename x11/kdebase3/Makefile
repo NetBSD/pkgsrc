@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2005/03/30 12:17:51 markd Exp $
+# $NetBSD: Makefile,v 1.74 2005/04/06 12:34:23 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -147,6 +147,9 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../databases/openldap/buildlink3.mk"
+.if ${OPSYS} != "SunOS"
+.include "../../devel/libusb/buildlink3.mk"
+.endif
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
