@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/17 12:51:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/18 07:59:09 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfcalendar.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfcalendar.mo
@@ -31,6 +32,7 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfcalendar.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfcalendar.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfcalendar.mo

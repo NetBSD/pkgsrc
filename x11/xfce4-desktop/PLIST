@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/17 12:56:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/03/18 07:59:09 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfdesktop.mo
@@ -44,14 +45,17 @@ bin/xfdesktop
 etc/xdg/xfce4/desktop/menu.xml
 etc/xdg/xfce4/desktop/menu.xml.az
 etc/xdg/xfce4/desktop/menu.xml.ca
+etc/xdg/xfce4/desktop/menu.xml.da
 etc/xdg/xfce4/desktop/menu.xml.de
 etc/xdg/xfce4/desktop/menu.xml.es
 etc/xdg/xfce4/desktop/menu.xml.et
 etc/xdg/xfce4/desktop/menu.xml.eu
 etc/xdg/xfce4/desktop/menu.xml.fa_IR
+etc/xdg/xfce4/desktop/menu.xml.fi
 etc/xdg/xfce4/desktop/menu.xml.fr
 etc/xdg/xfce4/desktop/menu.xml.he
 etc/xdg/xfce4/desktop/menu.xml.hu
+etc/xdg/xfce4/desktop/menu.xml.ja
 etc/xdg/xfce4/desktop/menu.xml.ko
 etc/xdg/xfce4/desktop/menu.xml.ms
 etc/xdg/xfce4/desktop/menu.xml.nl
@@ -66,10 +70,15 @@ etc/xdg/xfce4/desktop/menu.xml.vi
 etc/xdg/xfce4/desktop/menu.xml.zh_CN
 etc/xdg/xfce4/desktop/menu.xml.zh_TW
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml
+etc/xdg/xfce4/desktop/xfce-registered-categories.xml.fi
+etc/xdg/xfce4/desktop/xfce-registered-categories.xml.hu
+etc/xdg/xfce4/desktop/xfce-registered-categories.xml.ja
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml.nl
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml.pt_BR
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml.ro
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml.ru
+etc/xdg/xfce4/desktop/xfce-registered-categories.xml.sk
+etc/xdg/xfce4/desktop/xfce-registered-categories.xml.zh_CN
 etc/xdg/xfce4/desktop/xfce-registered-categories.xml.zh_TW
 lib/xfce4/mcs-plugins/backdrop_settings.la
 lib/xfce4/modules/xfce4_desktop_menu.la
@@ -105,6 +114,6 @@ share/xfce4/doc/C/images/xfdesktop-editor.png
 share/xfce4/doc/C/images/xfdesktop-list.png
 share/xfce4/doc/C/images/xfdesktop-menu-tab.png
 share/xfce4/doc/C/xfdesktop.html
-@dirrm share/xfce4/backdrops
 @dirrm etc/xdg/xfce4/desktop
 @unexec ${RMDIR} %D/etc/xdg/xfce4 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/backdrops 2>/dev/null || ${TRUE}
