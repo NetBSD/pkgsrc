@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.159 2003/07/02 16:07:01 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.160 2003/07/12 14:24:15 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1456,10 +1456,15 @@ PKG_LANG?=english
 # Possible: YES, not defined
 # Default: not defined
 
-#PURE_FTPD_USE_MYSQL=YES
-# Add support for MySQL.
-# Possible: YES, not defined
-# Default: not defined
+PURE_FTPD_USE_MYSQL?=	NO
+# Compile in MySQL support.
+# Possible: YES, NO
+# Default: NO
+
+PURE_FTPD_USE_PGSQL?=	NO
+# Compile in PostgreSQL support.
+# Possible: YES, NO
+# Default: NO
 
 #SAMBA_USE_LDAP=YES
 # Add support for LDAP.
