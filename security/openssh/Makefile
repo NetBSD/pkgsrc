@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.146 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.147 2005/03/07 23:29:49 tv Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -34,10 +34,25 @@ BUILD_DEFS+=		USE_INET6
 
 INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
+.if ${OPSYS} == "Interix"
+
+# normal MESSAGE does not apply, as privsep is not in use
+MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
+BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind /usr/local/lib/bind
+CONFIGURE_ENV+=		ac_cv_func_openpty=no
+CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
+CPPFLAGS+=		-I/usr/local/include/bind
+LDFLAGS+=		-L/usr/local/lib/bind
+LIBS+=			-lbind -ldb -lcrypt
+
+.else # not Interix
+
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}:${OPENSSH_UID}:sshd\\ privsep:${OPENSSH_CHROOT}:${NOLOGIN}
 PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
+
+.endif
 
 SSH_PID_DIR=		${VARBASE}/run	# default directory for PID files
 
@@ -55,18 +70,17 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
+
+.if ${OPSYS} != "Interix"
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
+.endif
 
 # the openssh configure script finds and uses ${LD} if defined and
 # defaults to ${CC} if not. we override LD here, since running the
 # linker directly results in undefined symbols for obvious reasons.
 #
 CONFIGURE_ENV+=		LD=${CC:Q}
-
-.if ${OPSYS} == "Interix"
-CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
-.endif
 
 # Enable S/Key support on NetBSD, Darwin, and Solaris.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
