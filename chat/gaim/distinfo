@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2004/04/24 09:29:53 jmmv Exp $
+$NetBSD: distinfo,v 1.41 2004/05/06 13:44:00 jmmv Exp $
 
 SHA1 (gaim-0.77.tar.bz2) = 56101f1e5da73ad09992f2584fe2cdcff3c47e31
 Size (gaim-0.77.tar.bz2) = 3709914 bytes
-SHA1 (patch-aa) = 4ddae874deff49b2c9fe38643d377dc34eb2b070
+SHA1 (patch-aa) = a32aeaeea27de7cada8db9a8d042c5e7ede60079
 SHA1 (patch-ab) = 669fe9d5e4e35c0a06adf50491e2a54338c060c4
 SHA1 (patch-ac) = aa5e1ae725bba363f7b924d0c61275b0a6dfa7e2
 SHA1 (patch-ad) = 3b6fc88653a5e3f44b8a0a6059ec1a102c874e70
