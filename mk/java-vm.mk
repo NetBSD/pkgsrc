@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.2 2002/12/28 19:53:57 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.3 2002/12/31 14:39:59 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -26,7 +26,7 @@ JAVA_VM_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # By default, assume we need the JDK.
-USE_JAVA?=	# empty
+USE_JAVA?=	yes
 .if !empty(USE_JAVA:M[rR][uU][nN])
 USE_JAVA=	run
 .endif
@@ -34,8 +34,9 @@ USE_JAVA=	run
 PKG_JVM_DEFAULT?=	# empty
 PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
-# This is a list of all of the JVMs that may be used with java.mk.
+# This is a list of all of the JVMs that may be used with java-vm.mk.
 # Note: The wonka configuration is still under development
+#
 _PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
@@ -71,7 +72,7 @@ _ONLY_FOR_PLATFORMS.jdk= \
 _ONLY_FOR_PLATFORMS.blackdown-jdk13= \
 	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
 	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc
-.if ${USE_JAVA} == "run"
+.if !empty(USE_JAVA:M[rR][uU][nN])
 _ONLY_FOR_PLATFORMS.blackdown-jdk13+= \
 	NetBSD-*-arm Linux-*-arm
 .endif
@@ -227,7 +228,7 @@ DEPENDS+=		${_JRE_DEPENDENCY}
 # If we are building Java software, then we need a build-time dependency on
 # the JDK.
 #
-.if ${USE_JAVA} != "run"
+.if empty(USE_JAVA:M[rR][uU][nN])
 .  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .    include "${_JDK_PKGSRCDIR}/buildlink2.mk"
 .  else
