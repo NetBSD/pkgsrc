@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:09:35 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/12 01:01:41 snj Exp $
 #
 
 DISTNAME=	ircu2.10.11.04
@@ -11,7 +11,7 @@ HOMEPAGE=	http://coder-com.undernet.org/
 COMMENT=	Internet Relay Chat server customized for Undernet
 
 WRKSRC=		${WRKDIR}/ircu2.10
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
