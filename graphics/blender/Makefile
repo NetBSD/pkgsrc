@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/08 16:28:02 manu Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/04 12:42:45 agc Exp $
 #
 
 PKGNAME=	blender-2.11.nb2
@@ -22,7 +22,7 @@ ONLY_FOR_PLATFORM= *-*-powerpc
 .if !exists(/emul/linux/lib/ld.so.1)
 IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
 .endif
-DISTNAME=	blender2.11-linux-glibc2.1.3-alpha-static
+DISTNAME=	blender2.11-linux-glibc2.1.3-alpha
 #
 .elif (${MACHINE_ARCH} == "i386")
 DEPENDS+=	suse_linux>=6.4:../../emulators/suse_linux
