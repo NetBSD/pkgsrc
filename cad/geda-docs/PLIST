@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/15 09:23:32 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/10 23:43:33 dmcmahill Exp $
 share/doc/geda-doc/attributes/attributes.css
 share/doc/geda-doc/attributes/attributes.dvi
 share/doc/geda-doc/attributes/attributes.html
@@ -96,7 +96,37 @@ share/doc/geda-doc/gschem/gschem.txt
 share/doc/geda-doc/hooks/hooks_and_scheme.txt
 share/doc/geda-doc/keymapping/keymapping.html
 share/doc/geda-doc/netattrib/netattrib.txt
-share/doc/geda-doc/spice-sdb/spice-sdb-howto.html
+share/doc/geda-doc/pads_backannotate/contents.png
+share/doc/geda-doc/pads_backannotate/images.aux
+share/doc/geda-doc/pads_backannotate/images.log
+share/doc/geda-doc/pads_backannotate/images.pl
+share/doc/geda-doc/pads_backannotate/images.tex
+share/doc/geda-doc/pads_backannotate/img1.png
+share/doc/geda-doc/pads_backannotate/img2.png
+share/doc/geda-doc/pads_backannotate/index.html
+share/doc/geda-doc/pads_backannotate/labels.pl
+share/doc/geda-doc/pads_backannotate/next.png
+share/doc/geda-doc/pads_backannotate/next_g.png
+share/doc/geda-doc/pads_backannotate/node1.html
+share/doc/geda-doc/pads_backannotate/node2.html
+share/doc/geda-doc/pads_backannotate/node3.html
+share/doc/geda-doc/pads_backannotate/node4.html
+share/doc/geda-doc/pads_backannotate/node5.html
+share/doc/geda-doc/pads_backannotate/node6.html
+share/doc/geda-doc/pads_backannotate/node7.html
+share/doc/geda-doc/pads_backannotate/pads_backannotate.css
+share/doc/geda-doc/pads_backannotate/pads_backannotate.dvi
+share/doc/geda-doc/pads_backannotate/pads_backannotate.html
+share/doc/geda-doc/pads_backannotate/pads_backannotate.pdf
+share/doc/geda-doc/pads_backannotate/pads_backannotate.ps
+share/doc/geda-doc/pads_backannotate/prev.png
+share/doc/geda-doc/pads_backannotate/prev_g.png
+share/doc/geda-doc/pads_backannotate/up.png
+share/doc/geda-doc/pads_backannotate/up_g.png
+share/doc/geda-doc/spice-sdb/appendix.html
+share/doc/geda-doc/spice-sdb/intro.html
+share/doc/geda-doc/spice-sdb/netlist.html
+share/doc/geda-doc/spice-sdb/simulation.html
 share/doc/geda-doc/switcap/contents.png
 share/doc/geda-doc/switcap/images.aux
 share/doc/geda-doc/switcap/images.log
@@ -196,6 +226,7 @@ share/doc/geda-doc/symbols/up_g.png
 @dirrm share/doc/geda-doc/symbols
 @dirrm share/doc/geda-doc/switcap
 @dirrm share/doc/geda-doc/spice-sdb
+@dirrm share/doc/geda-doc/pads_backannotate
 @dirrm share/doc/geda-doc/netattrib
 @dirrm share/doc/geda-doc/keymapping
 @dirrm share/doc/geda-doc/hooks
