@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2000/05/05 01:41:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/05/09 11:15:59 agc Exp $
 #
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
 # "tar pzvcf user-`date +%Y%m%d`.tar.gz user" and upload that
 # file to ${MASTER_SITE_LOCAL}.
-DISTNAME=		user-20000505
+DISTNAME=		user-20000509
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
