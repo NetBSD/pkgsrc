@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/20 10:59:21 rh Exp $
 bin/cam
 bin/feh
 bin/gen_cam_menu.sh
@@ -7,19 +7,14 @@ share/doc/feh/ChangeLog
 share/doc/feh/README
 share/doc/feh/TODO
 man/man1/feh.1
-share/feh/fonts/20thcent.ttf
-share/feh/fonts/cinema.ttf
-share/feh/fonts/droid.ttf
-share/feh/fonts/goodtime.ttf
-share/feh/fonts/grunge.ttf
-share/feh/fonts/joystix.ttf
-share/feh/fonts/morpheus.ttf
-share/feh/fonts/notepad.ttf
-share/feh/fonts/soulpapa.ttf
+share/feh/fonts/black.style
+share/feh/fonts/menu.style
+share/feh/fonts/yudit.ttf
 share/feh/images/about.png
 share/feh/images/menubg.png
 share/feh/images/menubg_aluminium.png
 share/feh/images/menubg_aqua.png
+share/feh/images/menubg_black.png
 share/feh/images/menubg_britney.png
 share/feh/images/menubg_brushed.png
 share/feh/images/menubg_chrome.png
