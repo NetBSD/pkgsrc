@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+
+--- prayer/Makefile.orig	Wed Oct 30 11:43:18 2002
++++ prayer/Makefile
+@@ -88,8 +88,8 @@ ifeq ($(strip $(CCLIENT_KERB_ENABLE)), t
+   SESSION_LIBS += $(KERB_LIBS)
+ endif
+ 
+-CFLAGS  = $(BASECFLAGS) $(COMMON_SSL_INCLUDE) $(CCLIENT_INCLUDE)
+-LDFLAGS = $(BASELDFLAGS)
++CFLAGS  += $(BASECFLAGS) $(COMMON_SSL_INCLUDE) $(CCLIENT_INCLUDE)
++LDFLAGS += $(BASELDFLAGS)
+ 
+ SHARED_OBJS = \
+  pool.o list.o assoc.o memblock.o buffer.o string.o config.o user_agent.o \
