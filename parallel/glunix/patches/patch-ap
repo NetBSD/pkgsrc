@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-ap,v 1.2 2000/07/10 23:54:23 wiz Exp $
 
---- progs/Makefile.common.orig	Wed Nov  5 13:43:41 1997
-+++ progs/Makefile.common	Fri Mar 13 02:01:15 1998
+--- progs/Makefile.common.orig	Wed Nov  5 15:43:41 1997
++++ progs/Makefile.common	Wed Jun 21 15:54:25 2000
 @@ -3,50 +3,30 @@
  # There are configuration values that are used in this Makefile and are
  # used to do substitutions in the scripts.
@@ -60,7 +60,7 @@ $NetBSD: patch-ap,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +GLUNIX_DATA_DIR = $(NOW_ROOT)/data
 +INSTALL_DIR = $(NOW_ROOT)
 +HTTP_BASE = $(NOW_ROOT)/man/http
-+MASTER_HOSTNAME = `hostname`
++MASTER_HOSTNAME = $(shell /bin/hostname)
 +GLUNIX_ACCOUNT = 12345 # These don't matter, they're calculated at run-time
 +GLUNIX_GROUP = 12345 # These don't matter, they're calculated at run-time
 +PERL_LIB_DIR = $(GLUNIX_DIR)/lib/perl-lib
