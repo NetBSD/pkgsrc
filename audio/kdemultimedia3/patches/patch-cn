@@ -1,8 +1,8 @@
-$NetBSD: patch-cn,v 1.4 2003/05/22 03:05:42 markd Exp $
+$NetBSD: patch-cn,v 1.5 2004/01/15 10:30:03 markd Exp $
 
---- noatun/modules/artseffects/Makefile.in.orig	Thu May  8 00:05:29 2003
+--- noatun/modules/artseffects/Makefile.in.orig	2003-12-29 11:29:39.000000000 +1300
 +++ noatun/modules/artseffects/Makefile.in
-@@ -383,7 +383,7 @@ libartseffects_la_SOURCES = artseffects.
+@@ -385,7 +385,7 @@ libartseffects_la_SOURCES = artseffects.
  libartseffects_la_LDFLAGS = -L$(top_builddir)/arts/gui/common $(all_libraries) \
                              -module -avoid-version -no-undefined
  
@@ -11,7 +11,7 @@ $NetBSD: patch-cn,v 1.4 2003/05/22 03:05:42 markd Exp $
  
  mcoptypedir = $(libdir)/mcop
  mcoptype_DATA = artseffects.mcoptype artseffects.mcopclass
-@@ -396,7 +396,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -399,7 +399,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -21,12 +21,12 @@ $NetBSD: patch-cn,v 1.4 2003/05/22 03:05:42 markd Exp $
  am_libartseffects_la_OBJECTS = artseffects.lo extrastereo_impl.lo
  #>- libartseffects_la_OBJECTS = $(am_libartseffects_la_OBJECTS)
  #>+ 4
-@@ -635,7 +636,7 @@ distclean-tags:
+@@ -638,7 +639,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=artseffects.mcoptype effect.cpp artseffects.idl artseffects.h VoiceRemoval.mcopclass RawWriter.mcopclass artseffects.mcopclass ExtraStereo.mcopclass ExtraStereoGuiFactory.mcopclass extrastereogui_impl.cc extrastereogui_impl.h 
-+KDE_DIST=effect.cpp ExtraStereo.mcopclass artseffects.idl artseffects.mcoptype artseffects.h ExtraStereoGuiFactory.mcopclass RawWriter.mcopclass artseffects.mcopclass VoiceRemoval.mcopclass extrastereogui_impl.cc extrastereogui_impl.h 
+-KDE_DIST=artseffects.mcoptype extrastereogui_impl.h RawWriter.mcopclass artseffects.mcopclass extrastereogui_impl.cc ExtraStereoGuiFactory.mcopclass effect.cpp VoiceRemoval.mcopclass artseffects.idl artseffects.h ExtraStereo.mcopclass 
++KDE_DIST=effect.cpp ExtraStereo.mcopclass artseffects.idl Makefile.in.rej artseffects.mcoptype artseffects.h ExtraStereoGuiFactory.mcopclass RawWriter.mcopclass artseffects.mcopclass VoiceRemoval.mcopclass extrastereogui_impl.cc extrastereogui_impl.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  

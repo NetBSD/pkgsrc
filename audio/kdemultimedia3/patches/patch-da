@@ -1,8 +1,8 @@
-$NetBSD: patch-bh,v 1.4 2003/05/22 03:05:41 markd Exp $
+$NetBSD: patch-da,v 1.1 2004/01/15 10:30:03 markd Exp $
 
---- noatun/modules/excellent/Makefile.in.orig	Thu May  8 00:05:29 2003
+--- noatun/modules/excellent/Makefile.in.orig	2003-12-29 11:29:39.000000000 +1300
 +++ noatun/modules/excellent/Makefile.in
-@@ -384,7 +384,7 @@ noatun_excellent_la_SOURCES = noatunui.c
+@@ -386,7 +386,7 @@ noatun_excellent_la_SOURCES = noatunui.c
  
  noatun_excellent_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
  noatun_excellent_la_LIBADD = $(LIB_KFILE) \
@@ -11,7 +11,7 @@ $NetBSD: patch-bh,v 1.4 2003/05/22 03:05:41 markd Exp $
  	$(top_builddir)/noatun/library/libnoatuncontrols.la \
  	-lqtmcop -lkmedia2_idl -lsoundserver_idl
  
-@@ -401,7 +401,7 @@ CONFIG_CLEAN_FILES =
+@@ -404,7 +404,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_excellent_la_DEPENDENCIES = \
@@ -20,12 +20,12 @@ $NetBSD: patch-bh,v 1.4 2003/05/22 03:05:41 markd Exp $
  	$(top_builddir)/noatun/library/libnoatuncontrols.la
  am_noatun_excellent_la_OBJECTS = noatunui.lo userinterface.lo
  #>- noatun_excellent_la_OBJECTS = $(am_noatun_excellent_la_OBJECTS)
-@@ -625,7 +625,7 @@ distclean-tags:
+@@ -628,7 +628,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=excellentui.rc excellent.plugin 
-+KDE_DIST=excellent.plugin excellentui.rc 
+-KDE_DIST=excellent.plugin excellentui.rc 
++KDE_DIST=Makefile.in.rej excellent.plugin excellentui.rc 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  

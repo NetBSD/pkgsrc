@@ -1,8 +1,8 @@
-$NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
+$NetBSD: patch-bl,v 1.4 2004/01/15 10:30:03 markd Exp $
 
---- noatun/modules/infrared/Makefile.in.orig	2003-07-15 22:14:00.000000000 +1200
+--- noatun/modules/infrared/Makefile.in.orig	2003-12-29 11:29:39.000000000 +1300
 +++ noatun/modules/infrared/Makefile.in
-@@ -384,7 +384,7 @@ noatun_infrared_la_SOURCES = infrared.cp
+@@ -385,7 +385,7 @@ noatun_infrared_la_SOURCES = infrared.cp
  noinst_HEADERS = infrared.h lirc.h irprefs.h
  
  noatun_infrared_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
                          -lqtmcop -lkmedia2_idl -lsoundserver_idl
  
  
-@@ -398,7 +398,7 @@ CONFIG_CLEAN_FILES =
+@@ -400,7 +400,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_infrared_la_DEPENDENCIES = \
@@ -20,7 +20,7 @@ $NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
  am_noatun_infrared_la_OBJECTS = infrared.lo lirc.lo irprefs.lo
  #>- noatun_infrared_la_OBJECTS = $(am_noatun_infrared_la_OBJECTS)
  #>+ 4
-@@ -622,7 +622,7 @@ distclean-tags:
+@@ -624,7 +624,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
@@ -29,9 +29,9 @@ $NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -772,12 +772,6 @@ noatun_infrared.la.closure: $(noatun_inf
- 
- 
+@@ -779,20 +779,20 @@ irprefs.moc: $(srcdir)/irprefs.h
+ #>+ 1
+ mocs: irprefs.moc
  #>+ 3
 -lirc.moc: $(srcdir)/lirc.h
 -	$(MOC) $(srcdir)/lirc.h -o lirc.moc
@@ -39,10 +39,9 @@ $NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
 -#>+ 1
 -mocs: lirc.moc
 -#>+ 3
- irprefs.moc: $(srcdir)/irprefs.h
- 	$(MOC) $(srcdir)/irprefs.h -o irprefs.moc
+ infrared.moc: $(srcdir)/infrared.h
+ 	$(MOC) $(srcdir)/infrared.h -o infrared.moc
  
-@@ -790,8 +784,14 @@ infrared.moc: $(srcdir)/infrared.h
  #>+ 1
  mocs: infrared.moc
  #>+ 3
@@ -53,30 +52,21 @@ $NetBSD: patch-bl,v 1.3 2003/07/30 14:56:03 markd Exp $
 +mocs: lirc.moc
 +#>+ 3
  clean-metasources:
--	-rm -f  lirc.moc irprefs.moc infrared.moc
+-	-rm -f  irprefs.moc lirc.moc infrared.moc
 +	-rm -f  irprefs.moc infrared.moc lirc.moc
  
  #>+ 3
  clean-closures:
-@@ -808,7 +808,7 @@ force-reedit:
- 
- 
- #>+ 11
--noatun_infrared_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/infrared.cpp $(srcdir)/lirc.cpp $(srcdir)/irprefs.cpp  lirc.moc irprefs.moc infrared.moc
-+noatun_infrared_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/infrared.cpp $(srcdir)/lirc.cpp $(srcdir)/irprefs.cpp  irprefs.moc infrared.moc lirc.moc
- 	@echo 'creating noatun_infrared_la.all_cpp.cpp ...'; \
- 	rm -f noatun_infrared_la.all_cpp.files noatun_infrared_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> noatun_infrared_la.all_cpp.final; \
-@@ -844,9 +844,9 @@ kde-rpo-clean:
+@@ -845,9 +845,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
 +infrared.o: infrared.moc 
-+lirc.o: lirc.moc 
- irprefs.lo: irprefs.moc 
- infrared.lo: infrared.moc 
+ lirc.o: lirc.moc 
 -irprefs.o: irprefs.moc 
--lirc.o: lirc.moc 
--infrared.o: infrared.moc 
+-infrared.lo: infrared.moc 
+ irprefs.lo: irprefs.moc 
++infrared.lo: infrared.moc 
  lirc.lo: lirc.moc 
+-infrared.o: infrared.moc 
 +irprefs.o: irprefs.moc 

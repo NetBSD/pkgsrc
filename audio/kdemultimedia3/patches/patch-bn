@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.5 2003/07/30 14:56:03 markd Exp $
+$NetBSD: patch-bn,v 1.6 2004/01/15 10:30:03 markd Exp $
 
---- noatun/modules/kaiman/Makefile.in.orig	2003-07-15 22:14:00.000000000 +1200
+--- noatun/modules/kaiman/Makefile.in.orig	2003-12-29 11:29:39.000000000 +1300
 +++ noatun/modules/kaiman/Makefile.in
-@@ -388,7 +388,7 @@ noatun_kaiman_la_SOURCES = \
+@@ -389,7 +389,7 @@ noatun_kaiman_la_SOURCES = \
  
  
  noatun_kaiman_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bn,v 1.5 2003/07/30 14:56:03 markd Exp $
                          -lqtmcop -lkmedia2_idl -lsoundserver_idl
  
  
-@@ -408,7 +408,7 @@ CONFIG_CLEAN_FILES =
+@@ -410,7 +410,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_kaiman_la_DEPENDENCIES = \
@@ -20,50 +20,45 @@ $NetBSD: patch-bn,v 1.5 2003/07/30 14:56:03 markd Exp $
  am_noatun_kaiman_la_OBJECTS = noatunui.lo style.lo userinterface.lo \
  	pref.lo
  #>- noatun_kaiman_la_OBJECTS = $(am_noatun_kaiman_la_OBJECTS)
-@@ -706,7 +706,7 @@ distclean-tags:
+@@ -714,7 +714,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kaiman.plugin kaimanui.rc SKIN-SPECS 
+-KDE_DIST=kaimanui.rc SKIN-SPECS kaiman.plugin 
 +KDE_DIST=kaimanui.rc SKIN-SPECS Makefile.in.rej kaiman.plugin 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -878,11 +878,11 @@ noatun_kaiman.la.closure: $(noatun_kaima
+@@ -886,12 +886,6 @@ noatun_kaiman.la.closure: $(noatun_kaima
  
  
  #>+ 3
 -userinterface.moc: $(srcdir)/userinterface.h
 -	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
-+style.moc: $(srcdir)/style.h
-+	$(MOC) $(srcdir)/style.h -o style.moc
- 
- #>+ 1
+-
+-#>+ 1
 -mocs: userinterface.moc
-+mocs: style.moc
- #>+ 3
- pref.moc: $(srcdir)/pref.h
- 	$(MOC) $(srcdir)/pref.h -o pref.moc
-@@ -890,14 +890,14 @@ pref.moc: $(srcdir)/pref.h
+-#>+ 3
+ style.moc: $(srcdir)/style.h
+ 	$(MOC) $(srcdir)/style.h -o style.moc
+ 
+@@ -904,8 +898,14 @@ pref.moc: $(srcdir)/pref.h
  #>+ 1
  mocs: pref.moc
  #>+ 3
--style.moc: $(srcdir)/style.h
--	$(MOC) $(srcdir)/style.h -o style.moc
 +userinterface.moc: $(srcdir)/userinterface.h
 +	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
- 
- #>+ 1
--mocs: style.moc
++
++#>+ 1
 +mocs: userinterface.moc
- #>+ 3
++#>+ 3
  clean-metasources:
--	-rm -f  userinterface.moc pref.moc style.moc
+-	-rm -f  userinterface.moc style.moc pref.moc
 +	-rm -f  style.moc pref.moc userinterface.moc
  
  #>+ 3
  clean-closures:
-@@ -914,7 +914,7 @@ force-reedit:
+@@ -922,7 +922,7 @@ force-reedit:
  
  
  #>+ 11
@@ -72,15 +67,16 @@ $NetBSD: patch-bn,v 1.5 2003/07/30 14:56:03 markd Exp $
  	@echo 'creating noatun_kaiman_la.all_cpp.cpp ...'; \
  	rm -f noatun_kaiman_la.all_cpp.files noatun_kaiman_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_kaiman_la.all_cpp.final; \
-@@ -950,9 +950,9 @@ kde-rpo-clean:
+@@ -958,9 +958,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
+-style.o: style.moc 
++pref.lo: pref.moc 
+ style.lo: style.moc 
 -userinterface.lo: userinterface.moc 
--style.lo: style.moc 
- pref.lo: pref.moc 
-+style.lo: style.moc 
  userinterface.o: userinterface.moc 
- style.o: style.moc 
++style.o: style.moc 
  pref.o: pref.moc 
+-pref.lo: pref.moc 
 +userinterface.lo: userinterface.moc 
