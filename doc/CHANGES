@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1235 2003/01/26 06:58:06 grant Exp $
+$NetBSD: CHANGES,v 1.1236 2003/01/26 13:13:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -414,3 +414,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated adzap to 20030125 [rh 2003-01-26]
 	Added divxplayer-0.2.0 [fredb 2003-01-26]
 	Updated ethereal to 0.9.9 [grant 2003-01-26]
+	Updated xpmroot to 2.4.15 [martti 2003-01-26]
+	Updated fvwm2 to 2.4.15 [martti 2003-01-26]
