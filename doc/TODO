@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1149 2003/12/08 21:45:18 wiz Exp $
+$NetBSD: TODO,v 1.1150 2003/12/08 21:45:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,8 +334,6 @@ Suggested package updates
 	o thunderbird-bin-0.4
 	o tin-1.6.1 [dillo]
 	o tkman-2.2
-	o tla-1.1.0.5 [replacing arch; pkg/23022]
-	o tla-1.1.0.7
 	o top-3.5b12.8
 	o transcode-0.6.11
 	o ttf2pt1-3.4.3
