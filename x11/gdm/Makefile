@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 1999/11/15 00:07:02 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/11/15 08:29:36 tron Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0.53/sources/} \
 		${MASTER_SITE_LOCAL}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
@@ -91,6 +91,7 @@ post-install:
 	  ${INSTALL_DATA} $$SOURCE $$TARGET; \
 	fi
 .endfor
+	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
 

@@ -1,4 +1,5 @@
-$NetBSD: md5,v 1.2 1999/11/15 00:07:02 tron Exp $
+$NetBSD: md5,v 1.3 1999/11/15 08:29:38 tron Exp $
 
 MD5 (gdm-2.0beta4.tar.gz) = 651fd0762fb1a2e70ab2d0379a7d3374
+MD5 (Daemon.README) = d9b6293606deccc7b7d4cfbe80b12291
 MD5 (Daemon.png) = b5240009171ebb04560e00b24adf52f9
