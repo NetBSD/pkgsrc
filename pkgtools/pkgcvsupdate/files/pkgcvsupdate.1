@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgcvsupdate.1,v 1.1.1.1 2001/11/29 14:13:27 seb Exp $
+.\"	$NetBSD: pkgcvsupdate.1,v 1.2 2001/11/30 12:16:08 seb Exp $
 .\"
 .\" Copyright (c) 2001 Stoned Elipot. All rights reserved.
 .\"
@@ -50,6 +50,11 @@ depend on.
 Any arguments of
 .Nm
 are passed down to the CVS's update command.
+.Sh ENVIRONMENT VARIABLES
+.Bl -tag -width CVS_OPTIONS
+.It Ev CVS_OPTIONS
+Specify options to pass to cvs.
+.El
 .Sh SEE ALSO
 .Xr cvs 1 ,
 .Pa ${PKGSRCDIR}/Packages.txt
