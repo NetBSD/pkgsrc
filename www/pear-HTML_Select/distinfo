@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/17 19:22:32 jdolecek Exp $
+$NetBSD: distinfo,v 1.2 2004/04/03 04:46:27 jdolecek Exp $
 
-SHA1 (HTML_Select-1.2.tgz) = 684dca8b53f12ac93fc6bf172ab279b4a1510bb6
-Size (HTML_Select-1.2.tgz) = 3479 bytes
+SHA1 (HTML_Select-1.2.1.tgz) = dd9f963d41067a80e8f5d28a23148165262c5840
+Size (HTML_Select-1.2.1.tgz) = 3480 bytes
