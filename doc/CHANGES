@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.210 2002/10/08 17:08:06 heinz Exp $
+$NetBSD: CHANGES,v 1.211 2002/10/09 05:14:15 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated galeon to 1.2.6 [taya 2002-10-08]
 	Updated pkgchk to 1.34 [abs 2002-10-08]
 	Updated spamassassin to 2.42nb1 [heinz 2002-10-08]
+	Added latex-mk-0.9 [dmcmahill 2002-10-09]
