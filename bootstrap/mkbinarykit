@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.11 2005/01/16 03:02:02 grant Exp $
+# $NetBSD: mkbinarykit,v 1.12 2005/02/18 00:26:07 xtraeme Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -19,8 +19,9 @@ ospro=`uname -p`
 date=`date +%Y%m%d`
 
 prefix=/usr/pkg
+sysconfdir=/etc
 pkgdbdir=/var/db/pkg
-mkfile=/etc/mk.conf
+mkfile=$sysconfdir/mk.conf
 ignorecasecheck=no
 ignoreusercheck=no
 force=no
@@ -32,32 +33,33 @@ sedprog="sed"
 
 case "$opsys" in
 AIX)
-	mkfile=/usr/pkg/etc/mk.conf
-	pkgdbdir=/usr/pkg/pkgdb
+	syscondir=$prefix/etc
+	mkfile=$sysconfdir/mk.conf
+	pkgdbdir=$prefix/pkgdb
 	;;
 DragonFly)
 	# Don't use the ports /var/db/pkg
-	pkgdbdir=/usr/pkg/pkgdb
+	pkgdbdir=$prefix/pkgdb
 	;;
 FreeBSD)
 	# Don't use the ports /var/db/pkg
-	pkgdbdir=/usr/pkg/pkgdb
+	pkgdbdir=$prefix/pkgdb
 	;;
 Interix)
-	mkfile=/etc/mk.conf.example
+	mkfile=$sysconfdir/mk.conf.example
 	# Don't use the interopsystems.com package dir
-	pkgdbdir=/usr/pkg/pkgdb
+	pkgdbdir=$prefix/pkgdb
 	ospro=i386
 	;;
 NetBSD)
 	# Don't overwrite the system's mk.conf
-	mkfile=/etc/mk.conf.example
+	mkfile=$sysconfdir/mk.conf.example
 	;;
 OpenBSD)
 	# Don't overwrite the system's mk.conf
-	mkfile=/etc/mk.conf.example
+	mkfile=$sysconfdir/mk.conf.example
 	# Don't use the ports /var/db/pkg
-	pkgdbdir=/usr/pkg/pkgdb
+	pkgdbdir=$prefix/pkgdb
 	# Use "arch -s" instead of uname -p
 	ospro=`arch -s`
 	;;
@@ -133,6 +135,7 @@ $strip "$prefix/"sbin/*
 
 echo "Making binary kit."
 PATH="$prefix/bin:$PATH"; export PATH # in case tar was built by bootstrap
+[ ! -d $sysconfdir ] && mkdir -p $sysconfdir 
 cp ${wrkdir}/mk.conf.example $mkfile &&						\
 cd / && 								\
 tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"	\
