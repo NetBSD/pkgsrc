@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.14 2000/08/30 21:59:52 martin Exp $
+$NetBSD: patch-aa,v 1.15 2000/10/14 09:24:46 martin Exp $
 
---- config/autoconf.mk.in.orig	Wed Jul 19 21:53:00 2000
-+++ config/autoconf.mk.in	Wed Aug 16 22:16:56 2000
-@@ -236,8 +236,6 @@
+diff -ru /usr/local/src/mozilla/config/autoconf.mk.in ./config/autoconf.mk.in
+--- /usr/local/src/mozilla/config/autoconf.mk.in	Fri Sep 15 09:19:30 2000
++++ ./config/autoconf.mk.in	Fri Oct 13 11:23:07 2000
+@@ -238,8 +238,6 @@
  MKSHLIB_UNFORCE_ALL     = @MKSHLIB_UNFORCE_ALL@
  DSO_LDOPTS              = @DSO_LDOPTS@
  DLL_SUFFIX              = @DLL_SUFFIX@
