@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.27 2004/01/20 12:37:08 grant Exp $
+# $NetBSD: post-build,v 1.28 2004/01/26 21:10:32 heinz Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -54,6 +54,7 @@ chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VAR
 chomp($STARTFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=STARTFILE )`);
 chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=LOCALBASE )`);
 chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=X11BASE )`);
+chomp($FIND=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=FIND )`);
 $dtfile=basename($DEPENDSTREEFILE);
 $depfile=basename($DEPENDSFILE);
 $supfile=basename($SUPPORTSFILE);
@@ -137,7 +138,7 @@ while (<BF>) {
 	$nunpackaged++;
     }
 
-    @idents = `find ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
+    @idents = `${FIND} ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
     $datetime = "";
     $who = "nobody";
     $file = "";
@@ -253,8 +254,8 @@ close(HTML);
 	# Find files since last build:
 	$leftovers_txt = "leftovers-${arch}.txt";
 	$leftovers_html = "leftovers-${arch}.html";
-	system("find ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f >>$leftovers_txt");
-	system("find ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f >>$leftovers_txt");
+	system("${FIND} ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f -print >>$leftovers_txt");
+	system("${FIND} ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f -print >>$leftovers_txt");
 
 	# Strip perl-files:
 	{
