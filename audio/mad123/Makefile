@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/10 12:58:08 salo Exp $
 #
 
 DISTNAME=	mad123-0.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mctavish.co.uk/mad123/
 
@@ -14,11 +14,12 @@ USE_BUILDLINK2=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123
+	${INSTALL_MAN} ${FILESDIR}/mad123.1 ${PREFIX}/man/man1/
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/id3lib/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../www/curl/buildlink2.mk"
 
 .if defined(USE_OSS)
