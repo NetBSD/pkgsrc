@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2002/08/31 03:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 15:09:38 seb Exp $
 #
 
 DISTNAME=	Audio-CD-0.05
@@ -14,9 +14,6 @@ COMMENT=	Audio-CD perl module for use with disc-cover
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Audio/CD/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 .include "../../audio/libcdaudio/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
