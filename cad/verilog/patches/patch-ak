@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- /dev/null	Sun Jan 23 12:36:42 2000
++++ machine.h.in	Sun Jan 23 12:28:40 2000
+@@ -0,0 +1,11 @@
++#ifndef MACHINE_H 
++#define MACHINE_H 
++
++/* Define if leading underscores */
++#undef WLU
++
++/* Define if trailing underscores */
++#undef WTU
++
++#endif /* MACHINE_H */
++
