@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/09/30 10:21:44 tron Exp $
+$NetBSD: md5,v 1.4 2000/03/08 22:12:04 tron Exp $
 
-MD5 (xchat-1.2.1.tar.gz) = 6e3862baf6d73e98d98e6b3fbd3f3325
+MD5 (xchat-1.4.0.tar.bz2) = 6a6913b94049c646d67e2fc6e2fd816d
