@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:59 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/11/05 05:32:19 mycroft Exp $
 
---- /tmp/newsdr/src/sip_common.c	Tue Apr 29 23:48:25 1997
-+++ src/sip_common.c	Wed Jun 17 16:53:24 1998
-@@ -211,7 +211,7 @@
+--- src/sip_common.c.orig	Thu Oct  1 18:53:01 1998
++++ src/sip_common.c	Wed Nov  4 23:44:12 1998
+@@ -256,7 +256,7 @@
  	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, 
  			  NULL, buf, 200);
  	  if (len==-1) perror("res_mkquery");
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 1998/08/07 11:09:59 agc Exp $
  	  if (len==-1) perror("res_send");
  	  ans[0]=htonl(ans[0]);
  	  ans[1]=htonl(ans[1]);
-@@ -283,7 +283,8 @@
+@@ -328,7 +328,8 @@
  		    } else {
  		      /*it's compressed*/
  		        if(*tstr==0) tstr+=2;
