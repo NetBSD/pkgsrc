@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/06/18 14:47:20 simonb Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/19 04:59:54 itojun Exp $
 #
 
 DISTNAME=	xpdf-2.02pl1
+PKGNAME=	xpdf-2.02.1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
