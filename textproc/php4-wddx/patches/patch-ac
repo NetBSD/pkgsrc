@@ -1,24 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/10/16 06:28:06 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/31 23:59:23 jlam Exp $
 
---- wddx.c.orig	Tue May  1 13:01:51 2001
-+++ wddx.c	Fri Oct  5 16:20:05 2001
-@@ -25,3 +25,8 @@
+--- wddx.c.orig	Sat Nov 17 20:23:14 2001
++++ wddx.c
+@@ -20,2 +20,8 @@
+ 
 +#define IS_EXT_MODULE
 +
 +#ifdef HAVE_CONFIG_H
 +#include "config.h"
 +#endif
- 
++
  #include "php.h"
- #include "php_wddx.h"
-@@ -107,6 +112,10 @@
- 	PHP_FE(wddx_deserialize, NULL)
- 	{NULL, NULL, NULL}
- };
+@@ -101,2 +107,6 @@
+ /* }}} */
 +
 +#ifdef COMPILE_DL_WDDX
 +ZEND_GET_MODULE(wddx)
 +#endif /* COMPILE_DL_WDDX */
  
- PHP_MINIT_FUNCTION(wddx);
- PHP_MINFO_FUNCTION(wddx);
