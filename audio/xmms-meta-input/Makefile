@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/12 02:55:49 snj Exp $
 #
 
 DISTNAME=		xmms-meta-input-0.4
@@ -9,7 +9,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.corbac.com/page3.html
 COMMENT=		XMMS plugin wrapper for shell scripts
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmetainput.so ${PREFIX}/lib/xmms/Input
@@ -20,5 +20,5 @@ do-install:
 	cd ${WRKSRC}/Examples && ${INSTALL_SCRIPT} dsp_input esound_link midi \
 		modules mp3 spc vorbis ${PREFIX}/share/examples/xmms-meta-input
 
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
