@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 14:32:11 taca Exp $
+# $NetBSD: Makefile,v 1.1.1.1.4.1 2004/11/19 17:38:15 salo Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGNAME=	ja-${DISTNAME}
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} sm143a-xss.diff
 EXTRACT_SUFX=	.tar.bz2
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
-PATCHFILES=	squirrelmail-1.4.3a-ja-20040603-patch.gz
+PATCHFILES=	squirrelmail-1.4.3a-ja-20041014-patch.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	martti@NetBSD.org
@@ -51,6 +54,7 @@ OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 post-patch:
 	cd ${WRKSRC};							\
+	${PATCH} --forward --quiet -E -p0 < ${DISTDIR}/sm143a-xss.diff;	\
 	for f in config/config_default.php; do				\
 		${SED}	-e "s|@ATTACHMENTS_DIR@|${ATTACHMENTS_DIR}|g"	\
 			-e "s|@USER_PREFS_DIR@|${USER_PREFS_DIR}|g"	\
