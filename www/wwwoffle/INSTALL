@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2002/08/10 17:03:26 fredb Exp $
+# $NetBSD: INSTALL,v 1.3 2002/09/05 15:34:19 fredb Exp $
 
 if [ X"${2}" != XPOST-INSTALL ]
 then
@@ -59,9 +59,9 @@ do
 	sed /PROXY/s/localhost/`hostname`/ ${p}.dist > ${p}
 done
 
-# Now utilize the install utilities to upgrade the configuration file and
+# Now utilize the installed utilities to upgrade the configuration file and
 # convert the cache format. Don't require "perl" just to upgrade the config,
-# as there may not even be an old config file, and worst case, the user will
-# get warnings in "syslog" about deprecated options.
+# as there may not even be an old config file; worst case, the user will get
+# warnings in "syslog" about deprecated options.
 cd ${CONFDIR} && wwwoffle-upgrade-config.pl wwwoffle.conf || true
 wwwoffle-convert-cache /var/wwwoffle
