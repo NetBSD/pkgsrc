@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2704 2004/12/08 08:57:08 martti Exp $
+$NetBSD: TODO,v 1.2705 2004/12/09 17:15:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -490,6 +490,7 @@ Suggested package updates
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
 	o generator-0.35
+	o getmail-4.2.5
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -507,6 +508,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
+	o gnome-2.8.2
 	o gnome-applets-1.4.1
 	o gnome-common-2.8.0
 	o gnome-mag-0.11.9
@@ -524,7 +526,7 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gputils-0.12.4
 	o grace-5.1.17
-	o gramps-1.1.1
+	o gramps-1.0.8
 	o grap-1.32
 	o grepmail-5.30.1
 	o gri-2.12.8
@@ -590,6 +592,7 @@ Suggested package updates
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
+	o kde-3.3.2
 	o kdebindings2-2.2.2
 	o kdrill-6.3.1
 	o kinput2-3.1
@@ -643,7 +646,7 @@ Suggested package updates
 	o lopster-1.2.2
 	o lout-3.30
 	o lpairs-1.0.1
-	o lsh-1.5.5
+	o lsh-2.0
 	o ltris-1.0.7
 	o lv-451
 	o lwp-1.12
@@ -684,6 +687,7 @@ Suggested package updates
 	o mpfr-2.1.0
 	o mpi-ch-1.2.6 [pkg/27273]
 	o mrproject-0.9.1
+	o mrtg-2.11.0
 	o mserv-devel-0.41
 	o msmtp-1.2.4
 	o mtail-1.1.1
@@ -731,7 +735,7 @@ Suggested package updates
 	o oregano-0.21
 	o oroborus-2.0.13.1
 	o osh-041028
-	o oss-3.99.1i
+	o oss-3.99.1i [also available for 2.0]
 	o overnet-1.0.1
 	o p5-Apache-ASP-2.57
 	o p5-Apache-Gallery-0.9.1
@@ -963,7 +967,7 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o raine-0.42.2
+	o raine-0.42.3
 	o randread-0.2
 	o raptor-1.4.2
 	o rasmol-2.7.2.1.1
@@ -1028,6 +1032,7 @@ Suggested package updates
 	o smokeping-1.31
 	o snd-7.8
 	o snes9x-1.42
+	o snownews-1.5.6
 	o speedtouch-1.2beta3
 	o spim-7.0
 	o splint-3.1.1
@@ -1070,6 +1075,9 @@ Suggested package updates
 	o tex-musixtex-112
 	o texi2html-1.70
 	o tfmxplay-1.1.6
+	o thunderbird-1.0
+	o thunderbird-bin-1.0
+	o thunderbird-gtk2-1.0
 	o tiff-3.7.0 [reed]
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
