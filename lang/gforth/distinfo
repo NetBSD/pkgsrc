@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/12/05 00:26:38 uebayasi Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 09:03:07 agc Exp $
 
 SHA1 (gforth-0.6.2.tar.gz) = 926faeac7ccc00e86a74954dc7c693b19f13e616
+RMD160 (gforth-0.6.2.tar.gz) = 692aa412e59954f87a7b44027901248f8939e9ee
 Size (gforth-0.6.2.tar.gz) = 1925536 bytes
 SHA1 (patch-aa) = 50bef56bbb5a6f2fe664d370d35d39d72d0982bf
 SHA1 (patch-ab) = a80fd7553acce1168931171b9c100eb25e2fa19a

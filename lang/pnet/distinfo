@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/05/29 12:20:17 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:03:10 agc Exp $
 
 SHA1 (pnet-0.6.6.tar.gz) = cc0b59074f9a905b31cf5778cfee3476adb2b098
+RMD160 (pnet-0.6.6.tar.gz) = e66d4c878cbd008b13926a96884afe8836f05b55
 Size (pnet-0.6.6.tar.gz) = 3471669 bytes
 SHA1 (patch-aa) = ca5e4c0121ef7ed5fe02c6c0728f23af9bff8ef4

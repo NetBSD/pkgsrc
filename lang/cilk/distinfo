@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/07/11 08:15:09 jtb Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 09:03:06 agc Exp $
 
 SHA1 (cilk-5.3.1.tar.gz) = 2a0d142badc7be57787c4608fc07b98090207994
+RMD160 (cilk-5.3.1.tar.gz) = c9a9335c4f75565e4cc8683b4d520064afa72194
 Size (cilk-5.3.1.tar.gz) = 848755 bytes
 SHA1 (patch-aa) = de31546280810242eb44f1d06ded023d23109092
 SHA1 (patch-ab) = c8bb837869e3dced44aeff03ba36879929e9251f

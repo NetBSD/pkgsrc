@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2004/05/29 14:28:43 kristerw Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 09:03:08 agc Exp $
 
 SHA1 (ghc-6.2.1-src.tar.bz2) = 84343ff06ee5645ee3f8b428635525e5ebdfcc65
+RMD160 (ghc-6.2.1-src.tar.bz2) = 9f041e207379715fcb7ee378743baa42d3be0311
 Size (ghc-6.2.1-src.tar.bz2) = 5367409 bytes
 SHA1 (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 422a0e6865517f7d5e5adbd6c13537391358020b
+RMD160 (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 9701efd3e184e97a4a68667a7551884c9dc9074f
 Size (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 7780890 bytes
 SHA1 (patch-aa) = d93f473b429d5002c83745c1b50d12144351e68b
 SHA1 (patch-ab) = 24aa32529796b13bd7e2c3060a946bd6a79f88b4
