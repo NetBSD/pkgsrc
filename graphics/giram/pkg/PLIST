@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/17 05:18:44 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/09/09 07:55:22 sakamoto Exp $
 bin/giram
 bin/povfront
-libexec/Giram/Box
-libexec/Giram/Rotate
-libexec/Giram/Spheres
-share/doc/Giram/Tutorial
+libexec/giram/plug-ins/Box
+libexec/giram/plug-ins/Rotate
+libexec/giram/plug-ins/Spheres
+share/doc/giram/Tutorial
 share/examples/Giram/Cone.pov
 share/examples/Giram/Disc.pov
+share/examples/Giram/Giram.gsf
 share/examples/Giram/Giram.pov
 share/examples/Giram/IntSphereBox1.pov
 share/examples/Giram/IntSphereBox2.pov
@@ -19,9 +20,7 @@ share/examples/Giram/basicvue.pov
 share/examples/Giram/basicvue2.pov
 share/examples/Giram/basicvue3.pov
 share/examples/Giram/basicvue4.pov
-share/examples/Giram/bla.tga
 share/examples/Giram/box.pov
-share/examples/Giram/colors.inc
 share/examples/Giram/lollipop.pov
 share/examples/Giram/superel1.pov
 share/examples/Giram/superel2.pov
@@ -30,5 +29,6 @@ share/examples/Giram/test.pov
 share/examples/Giram/torus.pov
 share/locale/fr/LC_MESSAGES/Giram.mo
 @dirrm share/examples/Giram
-@dirrm share/doc/Giram
-@dirrm libexec/Giram
+@dirrm share/doc/giram
+@dirrm libexec/giram/plug-ins
+@dirrm libexec/giram
