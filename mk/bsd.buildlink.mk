@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.8 2001/06/18 05:07:40 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.9 2001/06/18 20:16:17 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -100,14 +100,19 @@ _BUILDLINK_USE: .USE
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
 	if [ ! -f $${cookie} ]; then					\
 		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
+		${MKDIR} ${BUILDLINK_DIR};				\
 		for file in ${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}; do \
+			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"` ; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
-				dest=${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/}; \
+				dest=${BUILDLINK_DIR}/$${rel_file};	\
 			else						\
-				dest=`${ECHO} ${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/} | ${SED} ${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}}`; \
+				dest=`${ECHO} ${BUILDLINK_DIR}/$${rel_file} | ${SED} ${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}}`; \
 			fi;						\
 			if [ -f $${file} ]; then			\
-				${MKDIR} $${dest%/*};			\
+				dir=`${DIRNAME} $${dest}`;		\
+				if [ ! -d $${dir} ]; then		\
+					${MKDIR} $${dir};		\
+				fi;					\
 				${RM} -f $${dest};			\
 				${LN} -sf $${file} $${dest};		\
 			fi;						\
