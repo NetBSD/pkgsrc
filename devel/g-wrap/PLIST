@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/21 00:21:56 mjl Exp $
 bin/g-wrap-config
 include/g-wrap-runtime-guile.h
 info/g-wrap.info
+info/g-wrap.info-1
+info/g-wrap.info-2
 lib/libg-wrap-runtime-guile.a
 lib/libg-wrap-runtime-guile.la
 lib/libg-wrap-runtime-guile.so
