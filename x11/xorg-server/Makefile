@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/29 04:52:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/29 05:19:45 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -42,18 +42,6 @@ SUBST_FILES.stubs=	lib/font/stubs/Makefile
 SUBST_SED.stubs=	-e '/$$(INSTALL).*libfntstubs.a/ d'
 SUBST_SED.stubs+=	-e '/$$(RANLIB).*libfntstubs.a/ d'
 SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
-
-.if 0
-SUBST_CLASSES=		mods
-SUBST_STAGE.mods=	post-configure
-SUBST_FILES.mods=	lib/font/Speedo/module/speedomod.c	\
-			lib/font/bitmap/module/bitmapmod.c	\
-			lib/font/Type1/module/type1mod.c	\
-			lib/font/FreeType/module/ftmodule.c	\
-			lib/font/X-TrueType/module/xttmodule.c
-SUBST_SED.mods=		-e "s,XORG_VERSION_CURRENT,NULL,"
-SUBST_MESSAGE.mods=	"Fixing font modules."
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
