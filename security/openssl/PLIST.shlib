@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.freebsd,v 1.2 2003/10/02 02:34:39 jschauma Exp $
+@comment $NetBSD: PLIST.shlib,v 1.1 2004/03/26 08:33:49 jlam Exp $
 lib/libcrypto.so
 lib/libcrypto.so.300
 lib/libcrypto.so.300.1
