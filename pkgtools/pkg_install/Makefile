@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2003/08/31 11:06:02 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2003/08/31 11:11:20 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -47,7 +47,8 @@ post-install:
 		if [ ! -d ${PKG_DBDIR} ]; then				\
 			${INSTALL_DATA_DIR} ${PKG_DBDIR};		\
 		fi;							\
-		${PKG_ADMIN} rebuild;					\
+		${SETENV} PKG_DBDIR=${PKG_DBDIR}			\
+			${PKG_ADMIN_CMD} rebuild;			\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
