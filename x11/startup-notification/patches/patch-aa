@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2003/12/17 14:59:16 sketch Exp $
+
+--- libsn/sn-launcher.c.orig	2003-12-16 16:58:09.089918618 +0000
++++ libsn/sn-launcher.c	2003-12-16 16:58:36.533023772 +0000
+@@ -176,7 +176,7 @@
+   if (context->startup_id != NULL)
+     {
+       fprintf (stderr, "%s called twice for the same SnLaunchContext\n",
+-               __FUNCTION__);
++               __func__);
+       return;
+     }
+ 
+@@ -362,7 +362,7 @@
+ /* FIXME use something pluggable, not fprintf */
+ #define WARN_ALREADY_INITIATED(context) do { if ((context)->startup_id != NULL) {               \
+       fprintf (stderr, "%s called for an SnLauncherContext that has already been initiated\n", \
+-               __FUNCTION__);                                                                  \
++               __func__);                                                                      \
+       return;                                                                                  \
+ } } while (0)
+ 
