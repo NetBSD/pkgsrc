@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/10 09:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/02 12:08:20 jmmv Exp $
 #
 
 DISTNAME=	prayer-1.0.5
@@ -19,6 +19,8 @@ USE_PERL5=	build
 
 MAKE_ENV+=	EGDIR="${EGDIR}"
 MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=	BUILDLINK_PREFIX.db4="${BUILDLINK_PREFIX.db4}"
+MAKE_ENV+=	BUILDLINK_PREFIX.imap-uw="${BUILDLINK_PREFIX.imap-uw}"
 
 PKG_SYSCONFSUBDIR=	prayer
 EGDIR=		${PREFIX}/share/examples/prayer
