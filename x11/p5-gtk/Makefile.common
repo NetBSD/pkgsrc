@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2003/06/23 07:14:48 mrg Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/11/25 12:08:00 salo Exp $
 #
 # common things for p5-gtk based packages
 
-GTKPERL_VERSION=	0.7008
+GTKPERL_VERSION=	0.7009
 DISTNAME=		Gtk-Perl-${GTKPERL_VERSION}
 
 CATEGORIES=		x11 perl5
