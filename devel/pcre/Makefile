@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/09/27 11:04:23 martti Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/30 18:08:01 cjep Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/07/12 22:59:19 steve Exp $
 
 DISTNAME=	pcre-3.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/	\
 		ftp://pcre.sourceforge.net/pub/pcre/
