@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:33:44 agc Exp $
+
+MD5 (jpilot-syncmal_0.60.tar.gz) = 93f550ec5835b17d6eb49063e5e6ff6f
+MD5 (malsync_2.0.5.src.tar.gz) = d6b0aef7b177ca58aee9344377c9aa35
+SHA1 (patch-aa) = 8ae1ca6e229225f1a694d0401ee79906c7c3dfbd

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:33:48 agc Exp $
+
+MD5 (mgetty1.1.22-Aug17.tar.gz) = 64e93292d58ec3741c42b80e43ce691c
+SHA1 (patch-aa) = 249ec3d2425d359a5d89241978ff9ac6122d0eb6
+SHA1 (patch-ab) = c5fbc193735f4afa864f91e261935068c8428276
+SHA1 (patch-ac) = f37ba8521f18957931f5180c8c90f3ec0b6a707f
+SHA1 (patch-ad) = c31a50209e83d9082cd4a026c0d3e1517d96a336
+SHA1 (patch-ae) = bf1dde04e3c3ae0b0683481cf1bd2e590d1dddd8
+SHA1 (patch-af) = 418e87beca4f3a52ae0c6f7e337d119f86766d6c
+SHA1 (patch-ag) = 943aa837a285663ff6cf5ab07c3f908f499c2074
+SHA1 (patch-ah) = 7724a401625d25b00ba88782eeffc3cdc03387c6
