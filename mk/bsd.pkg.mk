@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1220 2003/07/22 13:48:48 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1221 2003/07/23 09:41:26 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3996,8 +3996,24 @@ print-summary-data:
 	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
 	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
 	@${ECHO} license ${PKGPATH} ${LICENSE:Q}
-	@${ECHO} onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}
-	@${ECHO} notfor ${PKGPATH} ${NOT_FOR_OPSYS}
+	@if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
+		${ECHO} "onlyfor ${PKGPATH} any";			\
+	else								\
+		${ECHO} "onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}";		\
+	fi;
+	if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
+		${ECHO} "notfor ${PKGPATH} any";			\
+	else								\
+		${ECHO} "notfor ${PKGPATH} not ${NOT_FOR_OPSYS}";	\
+	fi;
+	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
+	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
+	@if [ -f ${DESCR_SRC} ]; then					\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC}";		\
+	else								\
+		${ECHO}  "descr ${PKGPATH} /dev/null";			\
+	fi
+	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
 
 .if !target(show-license)
