@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/03/31 21:02:53 garbled Exp $
+# $NetBSD: Makefile,v 1.39 1999/04/06 05:59:17 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -81,6 +81,7 @@
     SUBDIR += xpdf
     SUBDIR += xplot
     SUBDIR += xpm
+    SUBDIR += xsane
     SUBDIR += xv
 
 .include "../mk/bsd.pkg.subdir.mk"
