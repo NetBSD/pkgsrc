@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/03/28 23:35:57 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/30 17:23:48 reed Exp $
 #
 # This Makefile fragment is included by packages that use XFree86-libs.
 #
@@ -12,7 +12,7 @@ XFREE86_LIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			XFree86-libs
 BUILDLINK_DEPENDS.XFree86-libs?=	XFree86-libs>=4.4.0
-BUILDLINK_PKGSRCDIR.XFree86-libs?=	../../XFree86/XFree86-libs
+BUILDLINK_PKGSRCDIR.XFree86-libs?=	../../x11/XFree86-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.XFree86-libs=XFree86-libs
 BUILDLINK_PREFIX.XFree86-libs_DEFAULT=	${LOCALBASE}/${X11ROOT_PREFIX}
