@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/09/15 10:51:36 adam Exp $
+# $NetBSD: Makefile,v 1.51 2003/09/23 05:34:35 adam Exp $
 
 DISTNAME=		Wine-20030911
 PKGNAME=		${DISTNAME:S/W/w/}
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 YACC=			${PREFIX}/bin/bison -y
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--without-curses
+CONFIGURE_ARGS+=	--without-curses #--without-opengl
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 
@@ -57,8 +57,9 @@ post-install:
 	${RMDIR} ${PREFIX}/man/man3w
 
 .include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
