@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/11/14 15:46:36 drochner Exp $
+$NetBSD: distinfo,v 1.2 2002/11/27 16:22:59 drochner Exp $
 
-SHA1 (zope/AbracadabraObject-1.4.0.tgz) = b7031d53d00c4fd78cff47e6a02e940d7ef580c6
-Size (zope/AbracadabraObject-1.4.0.tgz) = 16518 bytes
+SHA1 (zope/AbracadabraObject-1.5.0.tar.gz) = 565d53a4fb005954a95a7baf9cc879074723105c
+Size (zope/AbracadabraObject-1.5.0.tar.gz) = 17407 bytes
