@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/11/29 01:12:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/18 10:40:12 tron Exp $
 
 DISTNAME=	wmnet-1.06
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net x11
 MASTER_SITES=	http://www.digitalkaos.net/linux/wmnet/download/
 
