@@ -1,5 +1,5 @@
  #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.3 2002/11/13 15:08:29 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.4 2002/11/14 07:10:05 dmcmahill Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -246,6 +246,12 @@ END {
     close(cmd);
     fflush("/dev/stdout");
 
+    if(SINGLEPKG != "" ) {
+	printf("Only creating README for %s\n",SINGLEPKG);
+	delete topdepends;
+	topdepends[SINGLEPKG]="yes";
+    }
+
     printf("Generating README.html files\n");
     fflush("/dev/stdout");
     pkgcnt=0;
@@ -387,8 +393,12 @@ END {
 	    }
 	}
 	printf("\n");
-    }
+    } # if(do_pkg_readme)
     printf("\n");
+    if(SINGLEPKG != "" ) {
+	close("/dev/stderr");
+	exit 0;
+    }
     printf("Generating category readmes\n");
     templatefile=PKGSRCDIR "/templates/README.category";
     fatal_check_file(templatefile);
