@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1692 2004/05/02 18:40:24 xtraeme Exp $
+$NetBSD: TODO,v 1.1693 2004/05/02 19:53:30 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -163,7 +163,6 @@ Suggested package updates
 	o crimsonfields-0.4.2
 	o crossfire-1.5.0
 	o cscope-15.5
-	o cue-20040329
 	o curl-7.11.2
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
