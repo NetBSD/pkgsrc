@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2000/05/11 16:37:54 hubertf Exp $
+
+--- xlock/resource.c.orig	Fri Apr 14 13:23:03 2000
++++ xlock/resource.c	Fri Apr 14 13:24:27 2000
+@@ -86,7 +86,7 @@
+ 
+ #ifdef USE_MODULES
+ #ifndef DEF_MODULEPATH
+-#define DEF_MODULEPATH "/usr/lib/X11/xlock_modules"
++#define DEF_MODULEPATH "@PREFIX@/lib/X11/xlocklock/modules"
+ #endif
+ #endif
+ 
+@@ -247,7 +247,7 @@
+ #define DEF_INVALIDSOUND	"[]not-programmed.au"
+ #endif /* !USE_VMSPLAY */
+ #ifdef USE_ESOUND
+-#define DEFAULT_SOUND_DIR "/usr/lib/sounds/xlockmore"
++#define DEFAULT_SOUND_DIR "@PREFIX@/lib/X11/xlockmore"
+ #define DEF_LOCKSOUND 	"thank-you.au"
+ #define DEF_INFOSOUND	"identify-please.au"
+ #define DEF_VALIDSOUND	"complete.au"
