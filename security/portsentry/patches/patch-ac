@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/02/07 16:20:19 agc Exp $
+$NetBSD: patch-ac,v 1.2 2003/05/01 21:32:46 jmmv Exp $
 
 --- Makefile	2000/02/07 15:16:12	1.1
 +++ Makefile	2000/02/07 15:17:47
@@ -21,7 +21,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/02/07 16:20:19 agc Exp $
 -INSTALLDIR = /usr/local/psionic
 -CHILDDIR=/portsentry
 +INSTALLDIR = ${PREFIX}
-+CHILDDIR=/etc
++CHILDDIR=/share/examples/portsentry
  
  all:
  		@echo "Usage: make <systype>"
