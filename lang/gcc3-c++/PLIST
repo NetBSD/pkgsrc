@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/11 14:16:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/02 15:40:01 drochner Exp $
 ${GCC_SUBPREFIX}/bin/c++
 ${GCC_SUBPREFIX}/bin/g++
 ${GCC_SUBPREFIX}/bin/${GCC_PLATFORM}-c++
@@ -194,7 +194,7 @@ ${GCC_SUBPREFIX}/lib/libstdc++.a
 ${GCC_SUBPREFIX}/lib/libstdc++.la
 ${GCC_SUBPREFIX}/lib/libstdc++.so
 ${GCC_SUBPREFIX}/lib/libstdc++.so.5
-${GCC_SUBPREFIX}/lib/libstdc++.so.5.5
+${GCC_SUBPREFIX}/lib/libstdc++.so.5.6
 ${GCC_SUBPREFIX}/lib/libsupc++.a
 ${GCC_SUBPREFIX}/lib/libsupc++.la
 ${GCC_SUBPREFIX}/man/man1/g++.1
