@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/12/26 23:42:09 jlam Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 08:45:10 agc Exp $
 
 SHA1 (GD-2.19.tar.gz) = af79930e0c5588ac3a1cdfb731f7650e15356b1f
+RMD160 (GD-2.19.tar.gz) = c0ce832a87ccac9db5743c2862cf897cd2e4da44
 Size (GD-2.19.tar.gz) = 175717 bytes

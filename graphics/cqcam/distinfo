@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/01/22 03:04:31 minskim Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 08:45:04 agc Exp $
 
 SHA1 (cqcam-0.45a.tgz) = 39affec6ad3e81cc837ab583d01207767d4f7273
+RMD160 (cqcam-0.45a.tgz) = 5f0974b0f78c5168e8382d57f1567b63146e47d4
 Size (cqcam-0.45a.tgz) = 40163 bytes
 SHA1 (patch-aa) = dc64d8f880ef5d9807f476ff4840c80bbe8508a2
 SHA1 (patch-ab) = a81c6bc06146065cf6cccd377276a3bc5a3b2686
