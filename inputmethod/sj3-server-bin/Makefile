@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/10 09:16:37 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/12 01:29:18 wiz Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -15,7 +15,10 @@ FILESDIR=	${.CURDIR}/../sj3-lib/files
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
 
+USE_BUILDLINK2=	YES
+
 .include "../../mk/bsd.prefs.mk"
+
 SJ3OWNER?=	daemon
 SJ3GROUP?=	daemon
 MAKE_ENV+=	SJ3OWNER=${SJ3OWNER} SJ3GROUP=${SJ3GROUP} \
@@ -52,5 +55,5 @@ post-install:
 	@${INSTALL_SCRIPT} ${STARTUP_SCRIPT_SRC} ${PREFIX}/${STARTUP_SCRIPT}
 
 .include "../../devel/nbitools/nbitools.mk"
-.include "../sj3-lib/buildlink.mk"
+.include "../../inputmethod/sj3-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
