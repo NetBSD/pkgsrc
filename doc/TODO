@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.940 2003/10/13 12:11:24 grant Exp $
+$NetBSD: TODO,v 1.941 2003/10/13 12:17:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ Suggested package updates
 	o xfstt-1.6
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
-	o xmlcatmgr-1.1 [jmmv]
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xmule-1.6.1
