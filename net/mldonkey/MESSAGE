@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/31 15:57:35 jmmv Exp $
+
+This package provides a wrapper to ease mldonkey's startup. You should use
+it to run mldonkey: ${PREFIX}/bin/mldonkey
+
+Do NOT run this program as root.
+
+===========================================================================
