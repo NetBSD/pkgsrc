@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/03/15 08:26:35 kei Exp $
 
 TEXMF=@PREFIX@/share/texmf
 
@@ -12,7 +12,6 @@ DEINSTALL)
 	;;
 
 POST-DEINSTALL)
-	${MV} $TEXMF/dvipdfm/config.orig $TEXMF/dvipdfm/config
 	@PREFIX@/bin/mktexlsr
 	;;
 

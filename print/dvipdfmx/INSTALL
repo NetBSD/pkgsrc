@@ -1,12 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+# $NetBSD: INSTALL,v 1.2 2003/03/15 08:26:36 kei Exp $
 
 TEXMF=@PREFIX@/share/texmf
 
 case ${STAGE} in
 PRE-INSTALL)
-	${MV} $TEXMF/dvipdfm/config $TEXMF/dvipdfm/config.orig
 	;;
 
 POST-INSTALL)
