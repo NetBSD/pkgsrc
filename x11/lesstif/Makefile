@@ -3,7 +3,7 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.2 1997/11/02 02:47:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/19 09:24:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -23,7 +23,7 @@ CONFIGURE_ENV=	CCFLAGS="-O -pipe"
 
 .if defined(HAVE_MOTIF)
 IS_INTERACTIVE=	yes
-pre-fetch:
+pre-extract:
 	@echo "***********************************************************"
 	@echo "*                      W a r n i n g                      *"
 	@echo "* This port will overwrite your Motif installation.       *"
