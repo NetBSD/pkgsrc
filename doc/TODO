@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.383 2003/03/19 09:02:07 wiz Exp $
+$NetBSD: TODO,v 1.384 2003/03/19 23:16:11 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -184,7 +184,6 @@ Suggested package updates
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.14
 	o netscape-7.02
-	o nhc98-1.16
 	o ns-flash-6.0.79
 	o nut-7.19
 	o ogle-0.9.1
