@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2001/08/17 19:44:06 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/17 22:35:56 zuntum Exp $
 #
 
-DISTNAME=	qmHandle-0.5.1
+DISTNAME=	qmHandle-1.0.0
 CATEGORIES=	mail
-MASTER_SITES=	http://www.io.com/~mick/soft/
+MASTER_SITES=	http://www.italpro.net/mb/soft/
 
 MAINTAINER=	zuntum@netbsd.org
-HOMEPAGE=	http://www.io.com/~mick/soft/qmhandle.html
+HOMEPAGE=	http://www.italpro.net/mb/soft/qmhandle.html
 COMMENT=	tool to view and manage the qmail message queue
 
 RESTRICTED=	"Contact author before reselling"
