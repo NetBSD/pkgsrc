@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/05/04 01:10:03 jtb Exp $
+
+--- src/Makefile.in.orig	Wed Apr 17 02:53:08 2002
++++ src/Makefile.in	Wed Apr 17 02:53:32 2002
+@@ -126,7 +126,7 @@
+ # <<<< This section is deleted in the "binary" distribution.
+ 
+ algae: $(OBJECTS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o algae $(OBJECTS) $(LIBS)
++	$(FC) $(CFLAGS) $(LDFLAGS) -o algae $(OBJECTS) $(LIBS)
+ 
+ Makefile: Makefile.in ../config.status
+ 	cd ..; ./config.status
