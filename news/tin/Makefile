@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/11/29 01:12:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2002/11/06 10:38:33 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
-DISTNAME=	tin-1.4.5
-PKGREVISION=	1
+DISTNAME=	tin-1.4.6
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/current/ \
