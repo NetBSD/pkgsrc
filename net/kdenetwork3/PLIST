@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/01 12:27:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/30 13:58:36 markd Exp $
 bin/dsirc
 bin/kdict
 bin/kget
@@ -760,8 +760,8 @@ share/kde/apps/kppp/Rules/Italy/Infostrada_Libero1055_SpZero.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Loc_Reg_Naz_SpZero.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Locali_Base.rst
 share/kde/apps/kppp/Rules/Italy/Infostrada_Reg_Naz_Base.rst
-share/kde/apps/kppp/Rules/Italy/Tele2_Interurbane.rst
-share/kde/apps/kppp/Rules/Italy/Tele2_Urbane.rst
+share/kde/apps/kppp/Rules/Italy/Tele2_Altri_ISP.rst
+share/kde/apps/kppp/Rules/Italy/Tele2_Internet.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Interurbane_Fino15Km.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Interurbane_Oltre15Km.rst
 share/kde/apps/kppp/Rules/Italy/Telecom_Locali.rst
