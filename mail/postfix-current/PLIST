@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/07/02 08:03:04 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/31 05:53:44 jlam Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -130,13 +130,22 @@ share/doc/postfix/VERP_README
 share/doc/postfix/VIRTUAL_README
 share/doc/postfix/XCLIENT_README
 share/doc/postfix/XFORWARD_README
-share/examples/postfix-2.2/mailer.conf
-share/examples/postfix-2.2/main.cf
-share/examples/postfix-2.2/master.cf
-share/examples/postfix-2.2/post-install
-share/examples/postfix-2.2/postfix-files
-share/examples/postfix-2.2/postfix-script
-@dirrm share/examples/postfix-2.2
+share/examples/postfix/LICENSE
+share/examples/postfix/access
+share/examples/postfix/aliases
+share/examples/postfix/canonical
+share/examples/postfix/header_checks
+share/examples/postfix/mailer.conf
+share/examples/postfix/main.cf
+share/examples/postfix/main.cf.default
+share/examples/postfix/makedefs.out
+share/examples/postfix/master.cf
+share/examples/postfix/post-install
+share/examples/postfix/postfix-files
+share/examples/postfix/postfix-script
+share/examples/postfix/relocated
+share/examples/postfix/transport
+share/examples/postfix/virtual
+@dirrm share/examples/postfix
 @dirrm share/doc/postfix
-@dirrm libexec/postfix-2.2
 @dirrm libexec/postfix

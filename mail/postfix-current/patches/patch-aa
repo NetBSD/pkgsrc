@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2004/07/02 08:03:04 martti Exp $
+$NetBSD: patch-aa,v 1.14 2004/07/31 05:53:44 jlam Exp $
 
---- postfix-install.orig	2004-04-14 11:45:23.000000000 -0400
-+++ postfix-install	2004-05-23 22:32:31.000000000 -0400
-@@ -354,33 +354,13 @@
+--- postfix-install.orig	Wed Apr 14 11:45:23 2004
++++ postfix-install
+@@ -354,26 +354,6 @@ HTML files. Specify \"no\" if you do not
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -h -d config_directory`}
  
@@ -29,15 +29,7 @@ $NetBSD: patch-aa,v 1.13 2004/07/02 08:03:04 martti Exp $
  # In case some systems special-case pathnames beginning with //.
  
  case $install_root in
- /) install_root=
- esac
- 
--CONFIG_DIRECTORY=$install_root$config_directory
-+CONFIG_DIRECTORY=conf
- 
- # If a parameter is not set via the command line or environment,
- # try to use settings from installed configuration files.
-@@ -715,10 +695,3 @@
+@@ -715,10 +695,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
      "sample_directory = $sample_directory" \
      "readme_directory = $readme_directory" \
  || exit 1
