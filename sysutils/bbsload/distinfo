@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
+
+SHA1 (bbsload-0.2.5.tar.gz) = 4c4a023dd8ded57b959167e64877cc86c2709e52
+Size (bbsload-0.2.5.tar.gz) = 79203 bytes
+SHA1 (patch-aa) = 51a725db6d11831f48bf2896304569a584ce41ef
+SHA1 (patch-ab) = 3a14f1b186939e75a74468f481583d49a2a30b4e
