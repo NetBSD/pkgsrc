@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/20 22:44:20 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/09 10:55:06 jlam Exp $
 
 .if !defined(PYTHON22_BUILDLINK2_MK)
 PYTHON22_BUILDLINK2_MK=	# defined
@@ -15,8 +15,10 @@ BUILDLINK_DEPMETHOD.python22?=	${BUILDLINK_DEPMETHOD.python}
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.python22=python22
 BUILDLINK_PREFIX.python22_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.python22!= \
-	${GREP} "^include/" ${.CURDIR}/${BUILDLINK_PKGSRCDIR.python22}/PLIST
+_PY22_PLIST=	${.CURDIR}/${BUILDLINK_PKGSRCDIR.python22}/PLIST.common
+_PY22_PLIST+=	${.CURDIR}/${BUILDLINK_PKGSRCDIR.python22}/PLIST.${LOWER_OPSYS}
+_PY22_PLIST+=	${.CURDIR}/${BUILDLINK_PKGSRCDIR.python22}/PLIST.common_end
+BUILDLINK_FILES.python22!=	${CAT} ${_PY22_PLIST} | ${GREP} "^include/"
 BUILDLINK_FILES.python22+=	lib/python2.2/config/libpython2.2.*
 
 BUILDLINK_TARGETS+=	python22-buildlink
