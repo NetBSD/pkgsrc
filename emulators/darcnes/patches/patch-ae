@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2000/02/14 02:44:39 wiz Exp $
+
+--- ./mtypes.h.orig	Sat Aug  7 18:19:37 1999
++++ ./mtypes.h	Mon Feb 14 02:37:16 2000
+@@ -11,4 +11,6 @@
+ 
++#include "endian.h"
++
+ typedef unsigned char byte;
+ typedef unsigned short word;
+ typedef signed char offset;
