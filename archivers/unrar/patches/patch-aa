@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2003/05/23 09:19:02 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2004/02/27 15:28:20 wiz Exp $
 
---- makefile.unix.orig	2003-01-03 19:14:22.000000000 +0100
-+++ makefile.unix	2003-05-11 14:22:31.000000000 +0200
+--- makefile.unix.orig	Fri Jan 30 14:42:12 2004
++++ makefile.unix
 @@ -6,8 +6,8 @@
  #
  
@@ -13,20 +13,20 @@ $NetBSD: patch-aa,v 1.8 2003/05/23 09:19:02 wiz Exp $
  DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
  
  # Linux using LCC
-@@ -41,6 +41,8 @@
+@@ -51,6 +51,8 @@ DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEF
  COMPILE=$(CXX) $(CXXFLAGS) $(DEFINES)
  LINK=$(CXX)
  
 +WHAT=UNRAR
 +
  UNRAR_OBJ=filestr.o recvol.o rs.o scantree.o
+ LIB_OBJ=dll.o
  
- OBJECTS=rar.o strlist.o strfn.o pathfn.o int64.o savepos.o global.o file.o filefn.o filcreat.o \
-@@ -56,7 +58,6 @@
+@@ -67,7 +69,6 @@ all:	unrar
  clean:
  	@rm -f *.o *.bak *~
  
 -unrar:	WHAT=UNRAR
  unrar:	$(OBJECTS) $(UNRAR_OBJ)
- 	@rm -f makeunrar
+ 	@rm -f unrar
  	$(LINK) -o unrar $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)	
