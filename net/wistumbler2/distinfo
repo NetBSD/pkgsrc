@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2004/10/21 21:25:23 reinoud Exp $
+$NetBSD: distinfo,v 1.5 2004/11/07 19:57:51 itojun Exp $
 
 SHA1 (wistumbler2.00-pre9.tar.gz) = c33709bdc9ff7c7ec6bb23132f2594ec4a143a71
 Size (wistumbler2.00-pre9.tar.gz) = 40641 bytes
 SHA1 (patch-aa) = 26313441ad1686f42d505b5823101b51abe425be
 SHA1 (patch-ab) = 6efc148573cb17d5ca149f1d5bd1265753f2ca58
 SHA1 (patch-ac) = 00e6e6cd043f39265d960ef1c113dd077939813b
+SHA1 (patch-ad) = 2fb6fd5c08a30e13800cff8459b868aac49c9518
