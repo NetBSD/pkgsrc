@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8406 2004/12/22 16:41:24 kim Exp $
+$NetBSD: CHANGES,v 1.8407 2004/12/22 16:49:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6467,10 +6467,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openldap to 2.2.19 [jlam 2004-12-22]
 	Updated 3ddesktop to 0.2.5nb6 [snj 2004-12-22]
 	Updated xine-lib to 1-rc8 [drochner 2004-12-22]
-	Updated gibgsf to 1.11.1 [drochner 2004-12-22]
+	Updated libgsf to 1.11.1 [drochner 2004-12-22]
 	Added gnumeric-1.4.1 [drochner 2004-12-22]
 	Updated rconfig to 0.42 [abs 2004-12-22]
 	Updated cpuflags to 0.79 [abs 2004-12-22]
 	Added p5-IO-Multiplex-1.08 [kim 2004-12-22]
 	Added postgrey-1.17 [kim 2004-12-22]
-
