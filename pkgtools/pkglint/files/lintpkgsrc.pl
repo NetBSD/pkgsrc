@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.84 2003/10/01 11:56:17 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.85 2003/10/06 08:50:40 grant Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -441,7 +441,8 @@ sub get_default_makefile_vars
 
     if ($opt{M})
 	{ $default_vars->{DISTDIR} = $opt{M}; }
-    $default_vars->{DISTDIR} ||= $default_vars->{PKGSRCDIR}.'/distfiles';
+    else
+	{ $default_vars->{DISTDIR} ||= $default_vars->{PKGSRCDIR}.'/distfiles'; }
 
     if ($opt{K})
 	{ $default_vars->{PACKAGES} = $opt{K}; }
