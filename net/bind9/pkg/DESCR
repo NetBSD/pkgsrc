@@ -1,10 +1,14 @@
-   BIND 9.0.0b1 is the first public release of BIND 9 code.  It will
-   be most useful to advanced users working with IPv6 or DNSSEC.
+  BIND version 9 is a major rewrite of nearly all aspects of the
+underlying BIND architecture. This re-architecting of BIND was
+necessitated by the expected demands of:
 
-   BIND 9.0.0b1 is not functionally complete, and is not a release
-   candidate for BIND 9.0.0.  The ISC anticipates a number of additional
-   beta releases between now and May, when BIND 9.0.0 is scheduled to
-   be released.
+  - Domain name system growth, particularly in very large
+    zones such as .COM
+  - Protocol enhancements necessary to securely query and
+    update zones
+  - Protocol enhancements necessary to take advantage of
+    certain architectural features of IP version 6
 
-   The ISC does not recommend using BIND 9.0.0b1 for "production"
-   services.
+  The 9.0.0 release, and this release candidate, is aimed at
+early adopters and those who wish to make use of new 9.0
+features, such as IPv6 and DNSSEC secure resolution support.
