@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 1999/01/16 02:38:43 tron Exp $
+
+--- utils/Makefile.in.orig	Wed Dec 16 04:15:44 1998
++++ utils/Makefile.in	Tue Jan 12 00:29:33 1999
+@@ -94,7 +94,7 @@
+ 
+ imlib_config_SOURCES = imlib_config.c icons.c testimg.c
+ 
+-LDADD = ../gdk_imlib/libgdk_imlib.la $(GTK_LIBS)
++LDADD = ../gdk_imlib/libgdk_imlib.la ../../libpng-1.0.1/libpng101.la $(GTK_LIBS)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -105,7 +105,7 @@
+ LIBS = @LIBS@
+ imlib_config_OBJECTS =  imlib_config.o icons.o testimg.o
+ imlib_config_LDADD = $(LDADD)
+-imlib_config_DEPENDENCIES =  ../gdk_imlib/libgdk_imlib.la
++imlib_config_DEPENDENCIES =  ../gdk_imlib/libgdk_imlib.la ../../libpng-1.0.1/libpng101.la
+ imlib_config_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
