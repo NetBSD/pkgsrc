@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/15 07:34:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/15 17:12:13 xtraeme Exp $
 ${PERL5_SITELIB}/BER.pm
 ${PERL5_SITELIB}/MRTG_lib.pm
 ${PERL5_SITELIB}/SNMP_Session.pm
@@ -7,7 +7,6 @@ ${PERL5_SITELIB}/locales_mrtg.pm
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgindexmaker
-etc/mrtg/mrtg.conf.example
 libexec/envstat2mrtg
 libexec/netstat2mrtg
 libexec/rateup
@@ -94,10 +93,11 @@ share/doc/mrtg/mrtglib.1
 share/doc/mrtg/mrtglib.html
 share/doc/mrtg/mrtglib.pod
 share/doc/mrtg/mrtglib.txt
+share/examples/mrtg/mrtg.conf
 share/mrtg/mrtg-l.png
 share/mrtg/mrtg-m.png
 share/mrtg/mrtg-r.png
 share/mrtg/mrtg-ti.png
-@dirrm etc/mrtg
 @dirrm share/doc/mrtg
+@dirrm share/examples/mrtg
 @dirrm share/mrtg
