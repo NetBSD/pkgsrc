@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/25 14:03:53 seb Exp $
 
 DISTNAME=	HTTPD-User-Manage-1.58
 PKGNAME=	p5-${DISTNAME}
@@ -10,14 +10,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://stein.cshl.org/~lstein/user_manage/
 COMMENT=	Perl script/modules for managing web access control
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/HTTPD-User-Manage/.packlist
 REPLACE_PERL=		user_manage
 
 PKG_SYSCONFSUBDIR?=	httpd
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-patch:
 	cd ${WRKSRC}; for file in user_manage; do			\
@@ -36,5 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/user_manage.html \
 		${PREFIX}/share/doc/user_manage/user_manage.html
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

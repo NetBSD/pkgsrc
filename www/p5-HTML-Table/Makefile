@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/15 12:07:51 martti Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/25 14:28:04 seb Exp $
 
 DISTNAME=		HTML-Table-1.15
 PKGNAME=		p5-${DISTNAME}
@@ -9,11 +9,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 MAINTAINER=		jlam@netbsd.org
 COMMENT=		perl5 module to simplify creating HTML tables
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Table/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
