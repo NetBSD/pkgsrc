@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.1 2003/07/16 09:33:46 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.2 2003/07/24 09:25:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -100,21 +100,6 @@ PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
 .else
 PREFIX=			${LOCALBASE}
-.endif
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-DEPOT_SUBDIR?=		packages
-.  if defined(USE_X11BASE)
-DEPOTBASE=		${X11PREFIX}/${DEPOT_SUBDIR}
-.  else
-DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
-.  endif
-PREFIX=			${DEPOTBASE}/${PKGNAME}
-NO_MTREE=		yes
-PLIST_SRC=		# empty, since we use dynamic PLIST generation
-_PLIST_IGNORE_FILES=	+*		# package metadata files
-_PLIST_IGNORE_FILES+=	info/dir
-_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 
 # We need to make sure the buildlink-x11 package is not installed since it
@@ -294,19 +279,13 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 FIX_RPATH+=		LIBS
+LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=		-L${LOCALBASE}/lib
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
 X11_LDFLAGS+=		-L${X11BASE}/lib
-.endif
-.if !empty(USE_BUILDLINK2:M[nN][oO])
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
-LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
-.    if defined(USE_X11)
 LDFLAGS+=		${X11_LDFLAGS}
-.    endif
-.  endif
 .endif
 FIX_RPATH+=		LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
@@ -347,7 +326,9 @@ MAKE_ENV+=		CPP="${CPP}"
 #	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
 #	              Compiler Collection
 #
-.include "../../mk/gcc.buildlink2.mk"
+.if !defined(USE_MIPSPRO) && !defined(USE_SUNPRO)
+.  include "../../mk/gcc.buildlink2.mk"
+.endif
 
 # export the flags needed to compile and link pthreaded code
 MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
@@ -602,6 +583,7 @@ PKGCONFIG_OVERRIDE_SED=	\
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
 
+.PHONY: uptodate-digest
 uptodate-digest:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
@@ -618,10 +600,11 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030713
+PKGTOOLS_REQD=		20021123
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
+.PHONY: uptodate-pkgtools uptodate-zoularis
 .if defined(ZOULARIS_VERSION)
 uptodate-pkgtools: uptodate-zoularis
 .else
@@ -686,10 +669,6 @@ PKG_ARGS_COMMON+=	-n ${PRESERVE_FILE}
 PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
 PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 .endif # !PKG_ARGS_COMMON
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKG_ARGS_INSTALL+=	-U
-.endif
 
 PKG_SUFX?=		.tgz
 #PKG_SUFX?=		.tbz		# bzip2(1) pkgs
@@ -1295,6 +1274,7 @@ BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
 BUILD_DEFS+=	OSVERSION_SPECIFIC
 .endif # OSVERSION_SPECIFIC
 
+.PHONY: all
 .if !target(all)
 .  if ${PKGSRC_RUN_TEST} == "YES" || ${PKGSRC_RUN_TEST} == "yes"
 all: test
@@ -1341,36 +1321,42 @@ UPDATE_TARGET=	${DEPENDS_TARGET}
 ################################################################
 
 # Disable checksum
+.PHONY: checksum
 .if (defined(NO_CHECKSUM) && !target(checksum)) || exists(${EXTRACT_COOKIE})
 checksum: fetch
 	@${DO_NADA}
 .endif
 
 # Disable buildlink
+.PHONY: buildlink
 .if defined(NO_BUILDLINK) && !target(configure)
 buildlink: patch
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 .endif
 
 # Disable configure
+.PHONY: configure
 .if defined(NO_CONFIGURE) && !target(configure)
 configure: buildlink
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 .endif
 
 # Disable build
+.PHONY: build
 .if defined(NO_BUILD) && !target(build)
 build: configure
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
 .endif
 
 # Disable install
+.PHONY: install
 .if defined(NO_INSTALL) && !target(install)
 install: build
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .endif
 
 # Disable package
+.PHONY: package
 .if defined(NO_PACKAGE) && !target(package)
 package:
 .  if defined(SKIP_SILENT)
@@ -1487,6 +1473,7 @@ SITES_${fetchfile:T:S/=/--/}?= ${PATCH_SITES}
 
 # This code is only called in a batch case, to check for the presence of
 # the distfiles
+.PHONY: batch-check-distfiles
 batch-check-distfiles:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	gotfiles=yes;							\
@@ -1513,6 +1500,7 @@ batch-check-distfiles:
 
 # check for any vulnerabilities in the package
 # Please do not modify the leading "@" here
+.PHONY: check-vulnerable
 check-vulnerable:
 	@if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
 		${SETENV} PKGNAME="${PKGNAME}"				\
@@ -1523,6 +1511,7 @@ check-vulnerable:
 				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/vulnerabilities || ${FALSE}; \
 	fi
 
+.PHONY: do-fetch
 .if !target(do-fetch)
 do-fetch:
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
@@ -1573,6 +1562,7 @@ do-fetch:
 .endif
 
 # show both build and run depends directories (non-recursively)
+.PHONY: show-depends-dirs
 .if !target(show-depends-dirs)
 show-depends-dirs:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1638,16 +1628,19 @@ _RECURSE_DEPENDS_DIRS=							\
 		print							\
 	}
 
+.PHONY: show-all-depends-dirs
 .if make(show-all-depends-dirs)
 show-all-depends-dirs:
 	${_PKG_SILENT}${_PKG_DEBUG}${AWK} '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
+.PHONY: show-all-depends-dirs-excl
 .if make(show-all-depends-dirs-excl)
 show-all-depends-dirs-excl:
 	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
+.PHONY: show-root-dirs
 .if make(show-root-dirs)
 show-root-dirs:
 	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v RootsOnly=1 '${_RECURSE_DEPENDS_DIRS}'
@@ -1655,6 +1648,7 @@ show-root-dirs:
 
 .endif # make(show-{all-depends-dirs{,-excl},root-dirs})
 
+.PHONY: show-distfiles
 .if !target(show-distfiles)
 show-distfiles:
 .  if defined(PKG_FAIL_REASON)
@@ -1668,6 +1662,7 @@ show-distfiles:
 .  endif
 .endif
 
+.PHONY: show-downlevel
 .if !target(show-downlevel)
 show-downlevel:
 .  if defined(PKG_FAIL_REASON)
@@ -1685,6 +1680,7 @@ show-downlevel:
 .  endif
 .endif
 
+.PHONY: show-installed-depends
 .if !target(show-installed-depends)
 show-installed-depends:
 .  if defined(DEPENDS)
@@ -1695,6 +1691,7 @@ show-installed-depends:
 .  endif
 .endif
 
+.PHONY: show-needs-update
 .if !target(show-needs-update)
 show-needs-update:
 .  if defined(DEPENDS)
@@ -1712,6 +1709,7 @@ show-needs-update:
 .  endif
 .endif
 
+.PHONY: show-pkgsrc-dir
 .if !target(show-pkgsrc-dir)
 show-pkgsrc-dir:
 .  if defined(PKG_FAIL_REASON)
@@ -1892,6 +1890,7 @@ _SHELL_EXTRACT+=	esac
 
 EXTRACT_CMD?=		${_SHELL_EXTRACT}
 
+.PHONY: do-extract
 .if !target(do-extract)
 do-extract: ${WRKDIR}
 .  for __file__ in ${EXTRACT_ONLY}
@@ -1913,6 +1912,7 @@ _DFLT_LOCALPATCHFILES=	${LOCALPATCHES}/${PKGPATH}/*
 _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
 .endif
 
+.PHONY: do-patch
 .if !target(do-patch)
 do-patch: uptodate-digest
 .  if defined(PATCHFILES)
@@ -2035,6 +2035,7 @@ _REPLACE_FILES.perl=	${REPLACE_PERL}
 .endif
 
 _CONFIGURE_PREREQ+=	replace-interpreter
+.PHONY: replace-interpreter
 replace-interpreter:
 .if defined(REPLACE_INTERPRETER)
 .  for lang in ${REPLACE_INTERPRETER}
@@ -2056,6 +2057,7 @@ replace-interpreter:
 .endif
 
 _CONFIGURE_PREREQ+=	do-ltconfig-override
+.PHONY: do-ltconfig-override
 do-ltconfig-override:
 .if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
 .  for ltconfig in ${LTCONFIG_OVERRIDE}
@@ -2073,6 +2075,7 @@ do-ltconfig-override:
 
 .if defined(CONFIG_GUESS_OVERRIDE) || defined(CONFIG_SUB_OVERRIDE)
 _CONFIGURE_PREREQ+=	do-config-star-override
+.PHONY: do-config-star-override
 do-config-star-override:
 .  if defined(CONFIG_GUESS_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2092,6 +2095,7 @@ do-config-star-override:
 
 .if defined(PKGCONFIG_OVERRIDE)
 _CONFIGURE_PREREQ+=	do-pkgconfig-override
+.PHONY: do-pkgconfig-override
 do-pkgconfig-override:
 .  for pkgconfig in ${PKGCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2146,6 +2150,7 @@ AUTOMAKE_PATTERNS+=     config.h.in
 AUTOMAKE_PATTERNS+=     ${CONFIGURE_SCRIPT:T}
 
 _CONFIGURE_PREREQ+=	automake-pre-override
+.PHONY: automake-pre-override
 automake-pre-override:
 .    if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2161,6 +2166,7 @@ AUTOMAKE_POST_PATTERNS+=     stamp-h stamp-h[0-9]
 AUTOMAKE_POST_PATTERNS+=     config.h
 
 _CONFIGURE_POSTREQ+=	automake-post-override
+.PHONY: automake-post-override
 automake-post-override:
 .    if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2173,9 +2179,11 @@ automake-post-override:
 .endif		# USE_BUILDLINK != "no"
 
 # By adding this target, it makes sure the the above PREREQ's work.
+.PHONY: pre-configure-override
 pre-configure-override: ${_CONFIGURE_PREREQ}
 	@${DO_NADA}
 
+.PHONY: do-configure
 .if !target(do-configure)
 do-configure: 
 .  if defined(HAS_CONFIGURE)
@@ -2199,6 +2207,7 @@ do-configure:
 .endif
 
 _CONFIGURE_POSTREQ+=	do-libtool-override
+.PHONY: do-libtool-override
 do-libtool-override:
 .if defined(USE_LIBTOOL)
 .  if defined(LIBTOOL_OVERRIDE)
@@ -2223,12 +2232,14 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
+.PHONY: post-configure
 post-configure: ${_CONFIGURE_POSTREQ}
 
 # Build
 
 BUILD_DIRS?=	${WRKSRC}
 
+.PHONY: do-build
 .if !target(do-build)
 do-build:
 .  for DIR in ${BUILD_DIRS}
@@ -2240,6 +2251,7 @@ do-build:
 
 TEST_DIRS?=	${BUILD_DIRS}
 
+.PHONY: do-test
 .if !target(do-test)
 do-test:
 .  if defined(TEST_TARGET)
@@ -2255,6 +2267,7 @@ do-test:
 
 INSTALL_DIRS?=	${BUILD_DIRS}
 
+.PHONY: do-install
 .if !target(do-install)
 do-install:
 .  for DIR in ${INSTALL_DIRS}
@@ -2264,6 +2277,7 @@ do-install:
 
 # Package
 
+.PHONY: real-su-package
 .if !target(real-su-package)
 real-su-package: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2294,6 +2308,7 @@ real-su-package: ${PLIST} ${DESCR}
 
 # Some support rules for real-su-package
 
+.PHONY: package-links
 .if !target(package-links)
 package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
@@ -2310,21 +2325,23 @@ package-links:
 	done;
 .endif
 
+.PHONY: delete-package-links
 .if !target(delete-package-links)
 delete-package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} | ${XARGS} ${RM} -f
 .endif
 
+.PHONY: delete-package
 .if !target(delete-package)
 delete-package:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
+.PHONY: real-su-install
 real-su-install: ${MESSAGE}
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) &&	\
-    ${PKG_INSTALLATION_TYPE} == "overwrite"
+.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .  if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${WRKDIR}/.CONFLICTS
@@ -2356,15 +2373,7 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "***    dependencies, risking various problems."; \
 		exit 1;							\
 	fi
-.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER && overwrite
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${DEPOT_PKG_INFO} -e ${PKGNAME} || ${TRUE}`";		\
-	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed."; \
-		exit 1;							\
-	fi
-.endif
+.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
@@ -2444,10 +2453,8 @@ real-su-install: ${MESSAGE}
 		done;							\
 	fi
 .if ${_DO_SHLIB_CHECKS} == "yes"
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
-.  endif
 .endif
 .ifdef MESSAGE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
@@ -2456,11 +2463,11 @@ real-su-install: ${MESSAGE}
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE} fake-pkg
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	@${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE} check-shlibs
+	@${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
 
 
@@ -2478,6 +2485,7 @@ real-su-install: ${MESSAGE}
 # XXX This target could need some cleanup after it was ripped out of
 #     real-su-install
 #
+.PHONY: do-shlib-handling
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2676,6 +2684,7 @@ do-shlib-handling:
 # Must be run after "make install", so that files are installed, and
 # ${PLIST} exists.
 #
+.PHONY: check-shlibs
 check-shlibs:
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2711,6 +2720,7 @@ check-shlibs:
 
 .if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out, dylib, or none
+.PHONY: show-shlib-type
 show-shlib-type:
 .  if exists(/usr/lib/libc.dylib)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2736,6 +2746,8 @@ show-shlib-type:
 .  endif # libc.dylib
 .endif
 
+.PHONY: acquire-extract-lock acquire-patch-lock acquire-buildlink-lock
+.PHONY: acquire-configure-lock acquire-build-lock
 acquire-extract-lock:
 	${_ACQUIRE_LOCK}
 acquire-patch-lock:
@@ -2747,6 +2759,8 @@ acquire-configure-lock:
 acquire-build-lock:
 	${_ACQUIRE_LOCK}
 
+.PHONY: release-extract-lock release-patch-lock release-buildlink-lock
+.PHONY: release-configure-lock release-build-lock
 release-extract-lock:
 	${_RELEASE_LOCK}
 release-patch-lock:
@@ -2767,35 +2781,43 @@ release-build-lock:
 # call the necessary targets/scripts.
 ################################################################
 
+.PHONY: fetch
 .if !target(fetch)
 fetch:
 	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-fetch
 .endif
 
+.PHONY: extract
 .if !target(extract)
 extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extract-lock
 .endif
 
+.PHONY: patch
 .if !target(patch)
 patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 .endif
 
+.PHONY: buildlink
 .if !target(buildlink)
 buildlink: patch acquire-buildlink-lock ${BUILDLINK_COOKIE} release-buildlink-lock
 .endif
 
+.PHONY: configure
 .if !target(configure)
 configure: buildlink acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
+.PHONY: build
 .if !target(build)
 build: configure acquire-build-lock ${BUILD_COOKIE} release-build-lock
 .endif
 
+.PHONY: test
 .if !target(test)
 test: build ${TEST_COOKIE}
 .endif
 
+.PHONY: install
 .if !target(install)
 .  if ${PKGSRC_RUN_TEST} == "YES" || ${PKGSRC_RUN_TEST} == "yes"
 install: uptodate-pkgtools build test ${INSTALL_COOKIE}
@@ -2804,14 +2826,17 @@ install: uptodate-pkgtools build ${INSTALL_COOKIE}
 .  endif
 .endif
 
+.PHONY: package
 .if !target(package)
 package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 .endif
 
+.PHONY: replace
 .if !target(replace)
 replace: uptodate-pkgtools build real-replace
 .endif
 
+.PHONY: undo-replace
 .if !target(undo-replace)
 undo-replace: uptodate-pkgtools real-undo-replace
 .endif
@@ -2868,6 +2893,8 @@ ${INSTALL_COOKIE}:
 ${PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
 
+.PHONY: extract-message patch-message buildlink-message configure-message
+.PHONY: build-message test-message
 extract-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
 patch-message:
@@ -2881,6 +2908,8 @@ build-message:
 test-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
 
+.PHONY: extract-cookie patch-cookie buildlink-cookie configure-cookie
+.PHONY: build-cookie test-cookie
 extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 patch-cookie:
@@ -2905,6 +2934,9 @@ test-cookie:
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
 # make i.e. without -j n)
+.PHONY: real-fetch real-extract real-patch real-buildlink real-configure
+.PHONY: real-build real-test real-install real-package real-replace
+.PHONY: real-undo-replace
 real-fetch: pre-fetch do-fetch post-fetch
 real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 real-patch: patch-message pre-patch do-patch post-patch patch-cookie
@@ -2940,6 +2972,7 @@ _SU_TARGET=								\
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
 
+.PHONY: do-su-install
 do-su-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
@@ -2957,6 +2990,7 @@ do-su-install:
 	action="install";						\
 	${_SU_TARGET}
 
+.PHONY: do-su-package
 do-su-package:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Packaging ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2964,6 +2998,7 @@ do-su-package:
 	action="package";						\
 	${_SU_TARGET}
 
+.PHONY: do-su-replace
 do-su-replace:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Replacing ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2971,6 +3006,7 @@ do-su-replace:
 	action="replace";						\
 	${_SU_TARGET}
 
+.PHONY: do-su-undo-replace
 do-su-undo-replace:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Undoing Replacement of ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2998,6 +3034,7 @@ post-${name}:
 #
 # Special target to re-run install
 
+.PHONY: reinstall
 .if !target(reinstall)
 reinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
@@ -3008,6 +3045,7 @@ reinstall:
 #
 # Special target to remove installation
 
+.PHONY: deinstall do-su-deinstall
 .if !target(deinstall)
 deinstall: do-su-deinstall
 
@@ -3032,29 +3070,22 @@ real-su-deinstall-flags+=	-r
 real-su-deinstall-flags+=	-v
 .  endif
 
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_DELETE_CMD=	${DEPOT_PKG_DELETE}
-_INFO_CMD=	${DEPOT_PKG_INFO}
-.else
-_DELETE_CMD=	${PKG_DELETE}
-_INFO_CMD=	${PKG_INFO}
-.endif
-
+.PHONY: real-su-deinstall
 real-su-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${_INFO_CMD} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
+	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
 	if [ "$$found" != "" ]; then					\
-		${ECHO} Running ${_DELETE_CMD} ${real-su-deinstall-flags} $$found ; \
-		${_DELETE_CMD} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
+		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
+		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .  if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .    for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${_INFO_CMD} -e \"${pkg}\" || ${TRUE}`";			\
+	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`";			\
 	if [ "$$found" != "" ]; then					\
-		${ECHO} Running ${_DELETE_CMD} $$found;			\
-		${_DELETE_CMD} ${real-su-deinstall-flags} $$found || ${TRUE}; \
+		${ECHO} Running ${PKG_DELETE} $$found;			\
+		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE}; \
 	fi
 .    endfor
 .  endif # DEINSTALLDEPENDS
@@ -3069,6 +3100,7 @@ real-su-deinstall:
 # The 'update' target can be used to update a package and all
 # currently installed packages that depend upon this package.
 
+.PHONY: update
 .if !target(update)
 .if exists(${DDIR})
 RESUMEUPDATE?=	YES
@@ -3118,6 +3150,7 @@ update:
 .endif
 
 
+.PHONY: clean-update
 clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3145,6 +3178,7 @@ clean-update:
 .endif	# !target(update)
 
 
+.PHONY: update-dirlist
 update-dirlist:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
 .ifdef PKGLIST
@@ -3176,22 +3210,27 @@ ${DLIST}: ${WRKDIR}
 	{ ${PKG_INFO} -qR "${PKGWILDCARD}" || ${TRUE}; } > ${DLIST}
 
 # The 'info' target can be used to display information about a package.
+.PHONY: info
 info: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
+.PHONY: check
 check: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
+.PHONY: list
 list: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 # Run pkglint:
+.PHONY: lint
 lint:
 	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint | ${GREP} -v ^OK
 
 # Create a binary package from an install package using "pkg_tarup"
+.PHONY: tarup
 tarup:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
@@ -3223,6 +3262,7 @@ _REPLACE=								\
 	fi
 
 # replace a package in place - not for the faint-hearted
+.PHONY: real-su-replace
 real-su-replace:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
@@ -3240,6 +3280,7 @@ real-su-replace:
 	${_REPLACE}
 
 # undo the replacement of a package - not for the faint-hearted either
+.PHONY: real-su-undo-replace
 real-su-undo-replace:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${WRKDIR}/.replace ]; then				\
@@ -3257,6 +3298,7 @@ real-su-undo-replace:
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
 # re-distributed freely
+.PHONY: mirror-distfiles
 mirror-distfiles:
 .if !defined(NO_SRC_ON_FTP)
 	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes NO_CHECK_DEPENDS=yes
@@ -3265,11 +3307,13 @@ mirror-distfiles:
 
 # Cleaning up
 
+.PHONY: pre-clean
 .if !target(pre-clean)
 pre-clean:
 	@${DO_NADA}
 .endif
 
+.PHONY: clean
 .if !target(clean)
 clean: pre-clean
 .  if (${CLEANDEPENDS} != "NO") && (defined(BUILD_DEPENDS) || defined(DEPENDS))
@@ -3292,6 +3336,7 @@ clean: pre-clean
 .endif
 
 
+.PHONY: clean-depends
 .if !target(clean-depends)
 clean-depends:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
@@ -3318,6 +3363,7 @@ clean-depends:
 # packages list their depends as "../bar" instead of "../../foo/bar"
 # In this case its possible for a dependency to be visited twice.
 
+.PHONY: clean-depends-list
 .if !target(clean-depends-list)
 clean-depends-list:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
@@ -3345,17 +3391,20 @@ clean-depends-list:
 .  endif
 .endif
 
+.PHONY: pre-distclean
 .if !target(pre-distclean)
 pre-distclean:
 	@${DO_NADA}
 .endif
 
 
+.PHONY: cleandir
 .if !target(cleandir)
 cleandir: clean
 .endif
 
 
+.PHONY: distclean
 .if !target(distclean)
 distclean: pre-distclean clean
 	${_PKG_SILENT}${ECHO_MSG} "${_PKGSRC_IN}> Dist cleaning for ${PKGNAME}"
@@ -3371,8 +3420,8 @@ distclean: pre-distclean clean
 .endif
 
 # Prints out a script to fetch all needed files (no checksumming).
-.if !target(fetch-list)
 .PHONY: fetch-list
+.if !target(fetch-list)
 
 fetch-list:
 	@${ECHO} '#!/bin/sh'
@@ -3384,8 +3433,8 @@ fetch-list:
 	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
 .endif # !target(fetch-list)
 
-.if !target(fetch-list-recursive)
 .PHONY: fetch-list-recursive
+.if !target(fetch-list-recursive)
 
 fetch-list-recursive:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3404,8 +3453,8 @@ fetch-list-recursive:
 	done
 .endif # !target(fetch-list-recursive)
 
-.if !target(fetch-list-one-pkg)
 .PHONY: fetch-list-one-pkg
+.if !target(fetch-list-one-pkg)
 
 fetch-list-one-pkg:
 .  if !empty(_ALLFILES)
@@ -3475,6 +3524,7 @@ fetch-list-one-pkg:
 
 # Checksumming utilities
 
+.PHONY: makesum
 .if !target(makesum)
 makesum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3553,6 +3603,7 @@ makedistinfo mdi distinfo: makepatchsum
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} makesum
 .endif
 
+.PHONY: checksum
 .if !target(checksum)
 checksum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3613,6 +3664,7 @@ BINPKG_SITES?= \
 BIN_INSTALL_FLAGS?= 	# -v
 
 # Install binary pkg, without strict uptodate-check first
+.PHONY: bin-install
 bin-install:
 	@found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
@@ -3660,6 +3712,7 @@ PACKAGE_NAME_TYPE?=	name
 # Nobody should want to override this unless PKGNAME is simply bogus.
 HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
 
+.PHONY: package-name
 .if !target(package-name)
 package-name:
 .  if (${PACKAGE_NAME_TYPE} == "html")
@@ -3671,6 +3724,7 @@ package-name:
 .  endif # PACKAGE_NAME_TYPE
 .endif # !target(package-name)
 
+.PHONY: make-readme-html-help
 .if !target(make-readme-html-help)
 make-readme-html-help:
 	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:Q}
@@ -3683,6 +3737,7 @@ PACKAGE_DEPENDS_WITH_PATTERNS?=true
 # (i.e. when calling for pkg_create args, and for fake-pkg)
 # Will probably not work with PACKAGE_DEPENDS_WITH_PATTERNS=false ...
 PACKAGE_DEPENDS_QUICK?=false
+.PHONY: run-depends-list
 .if !target(run-depends-list)
 run-depends-list:
 .  for dep in ${DEPENDS}
@@ -3712,9 +3767,11 @@ run-depends-list:
 
 # Build a package but don't check the package cookie
 
+.PHONY: repackage
 .if !target(repackage)
 repackage: pre-repackage package
 
+.PHONY: pre-repackage
 pre-repackage:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PACKAGE_COOKIE}
 .endif
@@ -3722,6 +3779,7 @@ pre-repackage:
 # Build a package but don't check the cookie for installation, also don't
 # install package cookie
 
+.PHONY: package-noinstall
 .if !target(package-noinstall)
 package-noinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} PACKAGE_NOINSTALL=yes real-package
@@ -3731,6 +3789,7 @@ package-noinstall:
 # Dependency checking
 ################################################################
 
+.PHONY: install-depends
 .if !target(install-depends)
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
@@ -3792,6 +3851,7 @@ install-depends: uptodate-pkgtools
 
 .endif
 
+.PHONY: build-depends-list
 .if !target(build-depends-list)
 build-depends-list:
 	@for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`;	\
@@ -3806,6 +3866,7 @@ build-depends-list:
 # structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
 # The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
 # the target used to generate the README.html file.
+.PHONY: binpkg-list
 .if !target(binpkg-list)
 binpkg-list:
 	@if [ -e ${PACKAGES} ]; then					\
@@ -3867,8 +3928,10 @@ binpkg-list:
 # a large index.  Format is:
 #
 # distribution-name|package-path|installation-prefix|comment| \
-#  description-file|maintainer|categories|build deps|run deps|for arch
+#  description-file|maintainer|categories|build deps|run deps|for arch| \
+#  not for opsys
 #
+.PHONY: describe
 .if !target(describe)
 describe:
 	@${ECHO} -n "${PKGNAME}|${.CURDIR}|";				\
@@ -3903,11 +3966,13 @@ describe:
 	${ECHO} ""
 .endif
 
+.PHONY: readmes
 .if !target(readmes)
 readmes:	readme
 .endif
 
 # This target is used to generate README.html files
+.PHONY: readme
 .if !target(readme)
 FTP_PKG_URL_HOST?=	ftp://ftp.netbsd.org
 FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
@@ -3918,6 +3983,7 @@ readme:
 
 # This target is used to generate README.html files, very like "readme"
 # However, a different target was used for ease of use.
+.PHONY: cdrom-readme
 .if !target(cdrom-readme)
 CDROM_PKG_URL_HOST?=	file://localhost
 CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
@@ -3942,6 +4008,7 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
+.PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
@@ -3990,6 +4057,7 @@ README.html: .PRECIOUS
 		$@.tmp1
 	@${RM} $@.tmp1
 
+.PHONY: show-pkgtools-version
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
 	@${ECHO} ${PKGTOOLS_VERSION}
@@ -3997,15 +4065,18 @@ show-pkgtools-version:
 
 # convenience target, to display make variables from command line
 # i.e. "make show-var VARNAME=var", will print var's value
+.PHONY: show-var
 show-var:
 	@${ECHO} ${${VARNAME}:Q}
 
 # enhanced version of target above, to display multiple variables
+.PHONY: show-vars
 show-vars:
 .for VARNAME in ${VARNAMES}
 	@${ECHO} ${${VARNAME}:Q}
 .endfor
 
+.PHONY: print-build-depends-list
 .if !target(print-build-depends-list)
 print-build-depends-list:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
@@ -4015,6 +4086,7 @@ print-build-depends-list:
 .  endif
 .endif
 
+.PHONY: print-run-depends-list
 .if !target(print-run-depends-list)
 print-run-depends-list:
 .  if defined(DEPENDS)
@@ -4026,6 +4098,7 @@ print-run-depends-list:
 
 # This target is used by the mk/scripts/mkreadme script to generate
 # README.html files
+.PHONY: print-summary-data
 .if !target(print-summary-data)
 print-summary-data:
 	@${ECHO} "depends ${PKGPATH} ${DEPENDS}"
@@ -4037,6 +4110,24 @@ print-summary-data:
 	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
 	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
 	@${ECHO} license ${PKGPATH} ${LICENSE:Q}
+	@if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
+		${ECHO} "onlyfor ${PKGPATH} any";			\
+	else								\
+		${ECHO} "onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}";		\
+	fi;
+	if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
+		${ECHO} "notfor ${PKGPATH} any";			\
+	else								\
+		${ECHO} "notfor ${PKGPATH} not ${NOT_FOR_OPSYS}";	\
+	fi;
+	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
+	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
+	@if [ -f ${DESCR_SRC} ]; then					\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC}";		\
+	else								\
+		${ECHO}  "descr ${PKGPATH} /dev/null";			\
+	fi
+	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
 
 .if !target(show-license)
@@ -4055,6 +4146,7 @@ show-license show-licence:
 #
 # XXX This is intended to be run before pkg_create is called, so the
 # existence of ${PLIST} can be assumed.
+.PHONY: print-pkg-size-this
 print-pkg-size-this:
 	@${SHCOMMENT} "This pkg's files" ;				\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
@@ -4074,6 +4166,7 @@ print-pkg-size-this:
 #
 # XXX This is intended to be run before pkg_create is called, so the
 # dependencies are all installed.
+.PHONY: print-pkg-size-depends
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
 	| ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e			\
@@ -4145,6 +4238,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 # XXX will fail for data files that were copied using tar (e.g. emacs)!
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
+.PHONY: print-PLIST
 .if !target(print-PLIST)
 print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
@@ -4204,21 +4298,12 @@ print-PLIST:
 		${SUBST_PLIST_REPLACEMENT}
 .endif # target(print-PLIST)
 
-# By default, all packages attempt to link into the views.
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-BUILD_VIEWS?=	yes
-.endif
-
-# XXX Only support the standard view.
-PKGVIEWS=	""
 
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in
-# accordance to the @pkgdep directive in the packing lists.
-#
-# If PKG_INSTALLATION_TYPE is "pkgviews", then PKG_DBDIR is set to
-# ${DEPOTBASE}.
+# accordance to the @pkgdep directive in the packing lists
 
+.PHONY: fake-pkg
 .if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -4232,7 +4317,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${_DELETE_CMD} -O ${PKGNAME}
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
@@ -4280,6 +4365,29 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  ifdef USE_GMAKE
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
+.  if ${CHECK_SHLIBS} == "YES"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case "${OBJECT_FMT}" in						\
+	ELF)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.so\.[0-9]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		for i in "" $$libs; do					\
+			${TEST} "$$i" = "" && continue;			\
+			${ECHO} "PROVIDES=$$i" >> ${BUILD_INFO_FILE};	\
+		done;							\
+		case "${LDD}" in					\
+		"")	ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;;	\
+		*)	ldd="${LDD}";					\
+		esac;							\
+		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
+			for req in "" $$requires; do			\
+				${TEST} "$$req" = "" && continue;	\
+				${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};	\
+			done;						\
+		fi;							\
+        	;;							\
+	esac
+.  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -4288,14 +4396,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	doit=yes;							\
-	case ${PKG_INSTALLATION_TYPE} in				\
-	overwrite)	if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
-				doit=no;				\
-			fi ;;						\
-	esac;								\
-	case $$doit in							\
-	yes)								\
+	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
@@ -4336,7 +4437,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${ECHO} "    Please check if this is really intended!" ; \
 				continue ; 				\
 			fi ; 						\
-		done ;							\
+		done ; 							\
 		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
@@ -4352,53 +4453,21 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
 			fi;						\
-		done ;;							\
-	esac
-.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.    if defined(PKGVIEWS) && (${BUILD_VIEWS} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MKDIR} ${LOCALBASE};						\
-	for v in ${PKGVIEWS}; do					\
-		case "$$v" in						\
-		"")	dbdir=${_REAL_PKG_DBDIR}; viewname=standard ;;	\
-		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
-		esac;							\
-		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
-		pkg=`${SETENV} PKG_DBDIR=$$dbdir ${PKG_INFO_CMD} -e ${PKGBASE} || ${TRUE}`; \
-		case "$$pkg" in						\
-		"")	;;						\
-		*)	${ECHO} "*** ${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
-			${ECHO} "*** Not hoisting ${PKGNAME} into $$viewname view"; \
-			continue ;;					\
-		esac;							\
-		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
-		dups=`${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -p ${LOCALBASE} -d ${DEPOTBASE} --view=$$v check ${PKGNAME} || ${TRUE}`; \
-		case "$$dups" in					\
-		"")	;;						\
-		*)	${ECHO} "***********************************************************"; \
-			${ECHO} "**** The following symbolic links will be overwritten *****"; \
-			for f in $$dups; do				\
-				${LS} -l ${LOCALBASE}/$$v/$$f;		\
-			done;						\
-			${ECHO} "***********************************************************"; \
-			;;						\
-		esac;							\
-		${ECHO} "=> Linking package into $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -p ${LOCALBASE} -d ${DEPOTBASE} --view=$$v add ${PKGNAME}; \
-	done
-.    endif	# PKGVIEWS
-.  endif	# pkgviews
+		done;							\
+	fi
 .endif
 
 # Depend is generally meaningless for arbitrary packages, but if someone wants
 # one they can override this.  This is just to catch people who've gotten into
 # the habit of typing `${MAKE} depend all install' as a matter of course.
 #
+.PHONY: depend
 .if !target(depend)
 depend:
 .endif
 
 # Same goes for tags
+.PHONY: tags
 .if !target(tags)
 tags:
 .endif
@@ -4493,6 +4562,7 @@ GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .  endif
 .endif
 
+.PHONY: message
 message: ${MESSAGE}
 .ifdef MESSAGE
 ${MESSAGE}: ${MESSAGE_SRC}
@@ -4512,30 +4582,9 @@ ${MESSAGE}: ${MESSAGE_SRC}
 #	the contents of ${PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PLIST_IGNORE_CMD=							\
-	( while read i; do						\
-		ignore=no;						\
-		for p in ${_PLIST_IGNORE_FILES}; do			\
-	  		case "$$i" in					\
-			$$p)	ignore=yes; break ;;			\
-			esac;						\
-		done;							\
-		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
-	  done )
-_GENERATE_PLIST=							\
-	${FIND} ${PREFIX} \! -type d -print | ${SORT} |			\
-		${SED} -e "s|^${PREFIX}/||" | 				\
-		${_PLIST_IGNORE_CMD};					\
-	${FIND} ${PREFIX} -type d -print | ${SORT} -r |			\
-		${GREP} -v "^${PREFIX}$$" |				\
-		${_PLIST_IGNORE_CMD} |					\
-		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
-		       -e "s,$$, 2>/dev/null || ${TRUE},";
-.else
 _GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
-.endif
 
+.PHONY: plist
 plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -4547,11 +4596,12 @@ ${PLIST}: ${PLIST_SRC}
 			${_MANZ_EXPRESSION}				\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
-		SHLIB_PLIST_MODE=1
+		SHLIB_PLIST_MODE=1 ;					\
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any
 
+.PHONY: descr
 descr: ${DESCR}
 ${DESCR}: ${DESCR_SRC}
 	@${CAT} ${DESCR_SRC} 	 >${DESCR}
