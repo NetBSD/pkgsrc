@@ -1,14 +1,48 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/23 06:51:00 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/23 13:54:46 jmmv Exp $
 bin/gnotime
+include/gnotime/gnc-date.h
+include/gnotime/gnc-engine-util.h
+include/gnotime/gnc-event.h
+include/gnotime/gnc-numeric.h
+include/gnotime/gnc-trace.h
+include/gnotime/guid.h
+include/gnotime/kvp-util.h
+include/gnotime/kvp_frame.h
+include/gnotime/qof.h
+include/gnotime/qofbackend.h
+include/gnotime/qofbook.h
+include/gnotime/qofclass.h
+include/gnotime/qofgobj.h
+include/gnotime/qofid.h
+include/gnotime/qofinstance.h
+include/gnotime/qofobject.h
+include/gnotime/qofquery.h
+include/gnotime/qofquerycore.h
+include/gnotime/qofsession.h
+include/gnotime/qofsql.h
+include/gnotime/sql_parser.h
+lib/libqof.la
+lib/libqofsql.la
+man/man1/gnotime.1
 share/applications/gnotime.desktop
+share/gconf/schemas/gnotime.schemas
+share/gnome/help/gnotime/C/figures/gtt_mainwin.png
+share/gnome/help/gnotime/C/figures/gtt_prefswin.png
+share/gnome/help/gnotime/C/gnotime.xml
+share/gnome/help/gnotime/es/figures/gtt_mainwin.png
+share/gnome/help/gnotime/es/figures/gtt_prefswin.png
+share/gnome/help/gnotime/es/gnotime.xml
+share/gnome/help/gnotime/eu/figures/gtt_mainwin.png
+share/gnome/help/gnotime/eu/figures/gtt_prefswin.png
+share/gnome/help/gnotime/eu/gnotime.xml
 share/gnotime/ghtml/C/basic-daily.ghtml
 share/gnotime/ghtml/C/basic-invoice.ghtml
 share/gnotime/ghtml/C/basic-journal.ghtml
 share/gnotime/ghtml/C/basic-todo.ghtml
 share/gnotime/ghtml/C/daily.ghtml
 share/gnotime/ghtml/C/gnotime-logo.png
-share/gnotime/ghtml/C/gtt.scm
 share/gnotime/ghtml/C/gtt-style.css
+share/gnotime/ghtml/C/gtt.scm
 share/gnotime/ghtml/C/invoice.ghtml
 share/gnotime/ghtml/C/journal.ghtml
 share/gnotime/ghtml/C/noproject.ghtml
@@ -32,15 +66,6 @@ share/gnotime/glade/prefs.glade
 share/gnotime/glade/project_properties.glade
 share/gnotime/glade/task_popup.glade
 share/gnotime/glade/task_properties.glade
-share/gnome/help/gnotime/C/figures/gtt_mainwin.png
-share/gnome/help/gnotime/C/figures/gtt_prefswin.png
-share/gnome/help/gnotime/C/gnotime.xml
-share/gnome/help/gnotime/es/figures/gtt_mainwin.png
-share/gnome/help/gnotime/es/figures/gtt_prefswin.png
-share/gnome/help/gnotime/es/gnotime.xml
-share/gnome/help/gnotime/eu/figures/gtt_mainwin.png
-share/gnome/help/gnotime/eu/figures/gtt_prefswin.png
-share/gnome/help/gnotime/eu/gnotime.xml
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnotime-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnotime-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnotime-2.0.mo
@@ -81,6 +106,15 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnotime-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnotime-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnotime-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
+share/omf/gnotime/gnotime-C.omf
+share/omf/gnotime/gnotime-es.omf
+share/omf/gnotime/gnotime-eu.omf
+@dirrm share/omf/gnotime
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnotime/glade
+@dirrm share/gnotime/ghtml/C
+@dirrm share/gnotime/ghtml
+@dirrm share/gnotime
 @dirrm share/gnome/help/gnotime/eu/figures
 @dirrm share/gnome/help/gnotime/eu
 @dirrm share/gnome/help/gnotime/es/figures
@@ -88,7 +122,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 @dirrm share/gnome/help/gnotime/C/figures
 @dirrm share/gnome/help/gnotime/C
 @dirrm share/gnome/help/gnotime
-@dirrm share/gnotime/glade
-@dirrm share/gnotime/ghtml/C
-@dirrm share/gnotime/ghtml
-@dirrm share/gnotime
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm include/gnotime
