@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/01/12 18:36:11 bouyer Exp $
+# $NetBSD: Makefile,v 1.40 2002/01/13 20:19:19 kleink Exp $
 #
 
 COMMENT=	Communication utilities
@@ -31,6 +31,7 @@ SUBDIR+=	plp
 SUBDIR+=	plptools
 SUBDIR+=	qpage
 SUBDIR+=	ruby-termios
+SUBDIR+=	scmxx
 SUBDIR+=	snooper
 SUBDIR+=	tkhylafax
 SUBDIR+=	xisp
