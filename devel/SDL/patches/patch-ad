@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/audio/SDL_audiomem.c.orig	Thu Mar 16 16:20:37 2000
++++ src/audio/SDL_audiomem.c	Fri Jun 23 03:53:50 2000
+@@ -33,6 +33,7 @@
+ #include <sys/types.h>
+ #include <sys/ipc.h>
+ #include <sys/shm.h>
++#include <stdlib.h>
+ #else
+ #include <stdlib.h>
+ #endif

@@ -1,0 +1,72 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- configure.in.orig	Tue Jun  6 06:36:10 2000
++++ configure.in	Fri Jun 23 03:53:52 2000
+@@ -810,6 +810,51 @@
+             COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
+         fi
+         ;;
++    *-*-netbsd*)
++        ARCH=netbsd
++        CheckESD
++        CheckX11
++        CheckAAlib
++        CheckOpenGL
++        CheckPTHREAD
++        # Set up files for the main() stub
++        COPY_ARCH_SRC(src/main, linux, SDL_main.c)
++        # Set up files for the audio library
++        AUDIO_ARCH=netbsd
++        AUDIO_ARCH_LIB=$AUDIO_ARCH/libaudio_arch.la
++        if test x$enable_audio = xyes; then
++            COPY_ARCH_SRC(src/audio, solaris, SDL_audiodev_c.h)
++            COPY_ARCH_SRC(src/audio, linux, SDL_audiodev.c)
++            COPY_ARCH_SRC(src/audio, linux, SDL_esdaudio.h)
++            COPY_ARCH_SRC(src/audio, linux, SDL_esdaudio.c)
++            COPY_ARCH_SRC(src/audio, solaris, SDL_lowaudio.h)
++            COPY_ARCH_SRC(src/audio, solaris, SDL_sysaudio.c)
++        fi
++        # Set up files for the joystick library
++	# (No joystick support yet)
++        if test x$enable_joystick = xyes; then
++            COPY_ARCH_SRC(src/joystick, dummy, SDL_sysjoystick.c)
++        fi
++        # Set up files for the cdrom library
++        if test x$enable_cdrom = xyes; then
++            COPY_ARCH_SRC(src/cdrom, freebsd, SDL_syscdrom.c)
++        fi
++        # Set up files for the thread library
++        if test x$enable_threads = xyes; then
++            COPY_ARCH_SRC(src/thread, linux, SDL_systhread.c)
++            COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
++            COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
++            COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
++            COPY_ARCH_SRC(src/thread, generic, SDL_syssem.c)
++            COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
++            COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
++            COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
++        fi
++        # Set up files for the timer library
++        if test x$enable_timers = xyes; then
++            COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
++        fi
++        ;;
+     *-*-openbsd*)
+         ARCH=openbsd
+         CheckESD
+@@ -1147,6 +1192,7 @@
+ AM_CONDITIONAL(TARGET_SOLARIS, test $ARCH = solaris)
+ AM_CONDITIONAL(TARGET_IRIX, test $ARCH = irix)
+ AM_CONDITIONAL(TARGET_FREEBSD, test $ARCH = freebsd)
++AM_CONDITIONAL(TARGET_NETBSD, test $ARCH = netbsd)
+ AM_CONDITIONAL(TARGET_OPENBSD, test $ARCH = openbsd)
+ AM_CONDITIONAL(TARGET_AIX, test $ARCH = aix)
+ AM_CONDITIONAL(TARGET_WIN32, test $ARCH = win32)
+@@ -1214,6 +1260,7 @@
+ src/audio/irix/Makefile
+ src/audio/linux/Makefile
+ src/audio/macos/Makefile
++src/audio/netbsd/Makefile
+ src/audio/openbsd/Makefile
+ src/audio/solaris/Makefile
+ src/audio/win32/Makefile

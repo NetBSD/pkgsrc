@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/audio/SDL_audio.c.orig	Wed Apr 12 20:44:19 2000
++++ src/audio/SDL_audio.c	Fri Jun 23 03:53:50 2000
+@@ -45,6 +45,9 @@
+ #ifdef unix
+ 	&AUDIO_bootstrap,
+ #endif
++#ifdef __NetBSD__
++	&AUDIO_bootstrap,
++#endif
+ #ifdef linux
+ 	&DMA_bootstrap,
+ #endif
+@@ -170,7 +173,7 @@
+ 	/* Select the proper audio driver */
+ 	audio = NULL;
+ 	idx = 0;
+-#ifdef unix
++#if defined(unix) || defined (__NetBSD__)
+ 	if ( (driver_name == NULL) && (getenv("ESPEAKER") != NULL) ) {
+ 		/* Ahem, we know that if ESPEAKER is set, user probably wants
+ 		   to use ESD, but don't start it if it's not already running.
