@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2000/08/30 17:44:25 kei Exp $
+# $NetBSD: Makefile,v 1.36 2000/09/03 09:17:00 kei Exp $
 
-DISTNAME=		samba-2.0.7
+DISTNAME=		samba-2.0.7-ja-1.2a
+PKGNAME=		samba-2.0.7.1.2a
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
-			http://us1.samba.org/samba/ftp/ \
-			ftp://us3.samba.org/pub/mirrors/sambaftp/
+MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-2.0.7-ja/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		bouyer@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 
 CONFLICTS+=		samba-2.0.7-ja-*
@@ -41,6 +41,7 @@ MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR} \
 			--with-privatedir=${SAMBA_PRIVATE} \
 			--with-swatdir=${PREFIX}/share/swat \
+			--with-i18n-swat \
 			--with-sambabook=${PREFIX}/share/swat/using_samba
 
 PLIST_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
