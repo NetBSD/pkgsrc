@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6098 2004/06/02 15:09:56 minskim Exp $
+$NetBSD: CHANGES,v 1.6099 2004/06/02 15:12:06 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2754,3 +2754,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lftp to 3.0.5 [adam 2004-06-02]
 	Updated python23 to 2.3.4 [recht 2004-06-02]
 	Updated python23-pth to 2.3.4 [recht 2004-06-02]
+	Updated firefox to 0.8nb3 [taya 2004-06-02]
+	Updated firefox-gtk2 to 0.8nb3 [taya 2004-06-02]
