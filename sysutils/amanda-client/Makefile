@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/12/25 20:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/04/25 20:51:55 veego Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Client part of Amanda, a network backup system
 
-DEPENDS+=		gtar-1.12:../../archivers/gtar
+DEPENDS+=		{gtar,gtar-base}>=1.12:../../archivers/gtar-base
 DEPENDS+=		amanda-common-2.4.2p2:../../sysutils/amanda-common
 
 GNU_CONFIGURE=		yes
