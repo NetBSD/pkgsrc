@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 18:39:35 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/16 21:00:56 jlam Exp $
 
-DISTNAME=	openslp-1.0.7
+DISTNAME=	openslp-1.0.9a
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 
