@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/23 10:54:53 wennmach Exp $
+
+--- configure.orig	Mon Aug  2 02:04:19 1999
++++ configure	Sun Aug  8 14:38:21 1999
+@@ -2194,6 +2194,10 @@
+ kde_save_cflags="$CFLAGS"
+ CC=$CXX
+ CFLAGS="$CXXFLAGS"
++
++# Use NetBSD package system libtool (start)
++if false; then
++
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
+ 
+@@ -2433,6 +2437,9 @@
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
++fi
++# Use NetBSD package system libtool (end)
++
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
+@@ -4452,7 +4459,7 @@
+ 
+ echo $ac_n "checking for KDE libraries installed""... $ac_c" 1>&6
+ echo "configure:4455: checking for KDE libraries installed" >&5
+-ac_link='/bin/sh ./libtool --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
++ac_link='/bin/sh $LIBTOOL --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
+ 
+ if { (eval echo configure:4458: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
+   echo "$ac_t""yes" 1>&6
