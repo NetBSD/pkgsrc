@@ -1,17 +1,8 @@
-$NetBSD: patch-ac,v 1.4 1999/05/02 12:49:43 tron Exp $
+$NetBSD: patch-ac,v 1.5 2003/02/16 06:43:41 taca Exp $
 
---- scripts/RunCache.in.orig	Fri Jan 29 19:19:46 1999
-+++ scripts/RunCache.in	Sun May  2 14:36:10 1999
-@@ -5,7 +5,7 @@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
- logdir=@localstatedir@
--PATH=@bindir@:/bin:/usr/bin
-+PATH=@sbindir@:/bin:/usr/bin
- export PATH
- 
- conf=""
-@@ -16,10 +16,10 @@
+--- scripts/RunCache.in.orig	2003-02-16 14:56:30.000000000 +0900
++++ scripts/RunCache.in	2003-02-16 14:56:31.000000000 +0900
+@@ -16,10 +16,10 @@ fi
  
  failcount=0
  while : ; do
