@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5594 2004/04/15 20:15:19 tron Exp $
+$NetBSD: CHANGES,v 1.5595 2004/04/15 20:27:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1971,3 +1971,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnome-vfs2-cdda-2.6.0 [jmmv 2004-04-15]
 	Added gnome-vfs2-smb-2.6.0 [jmmv 2004-04-15]
 	Updated bind9 to 9.2.3nb4 [tron 2004-04-15]
+	Updated libspf_alt to 0.4.0nb1 [tron 2004-04-15]
