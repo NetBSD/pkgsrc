@@ -1,4 +1,4 @@
-$NetBSD $
+$NetBSD: patch-ah,v 1.2 1998/11/13 00:01:49 frueauf Exp $
 
 --- scripts/RunAccel.in.orig	Tue Jul  9 05:41:15 1996
 +++ scripts/RunAccel.in	Fri Oct 16 17:59:52 1998
