@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2200 2004/10/05 15:38:38 adam Exp $
+$NetBSD: TODO,v 1.2201 2004/10/05 23:22:26 mjl Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,6 @@ Suggested package updates
 	o glpk-4.6
 	o gnome-2.8
 	o gnomeicu-0.99.5
-	o gnucash-1.8.9
 	o gnunet-0.6.4a
 	o gogo-3.11p1
 	o gossip-0.7.7
