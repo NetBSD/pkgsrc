@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/11/26 23:09:29 hubertf Exp $
 
 SHA1 (kapm-0.3.1.tar.gz) = c667582a076ce0185d3f909a243e4ec7ee69ba93
 Size (kapm-0.3.1.tar.gz) = 191413 bytes
-SHA1 (patch-aa) = 8e65e3aac39c9aebf5a92416d9605f2b7d7a14e0
+SHA1 (patch-aa) = 680a2db74e5c24921e7d53c2ac0dc414353f0c7f
 SHA1 (patch-ab) = b78aed68c97fa0c34025b06ae3ab1c5b2f03c0ba
 SHA1 (patch-ac) = fe38363be3b1bef59145f9c3a51acb47c86f47a7
 SHA1 (patch-ad) = cdfd6ada3729e0cbe621dc41e1b2c275aac6d0bf
