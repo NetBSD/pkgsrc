@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/12 22:53:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/02/13 15:13:01 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -88,6 +88,17 @@ CONFIGURE_ARGS+=	--disable-shared
 
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
+
+.if defined(INSTLIBS)
+BUILDLINK_LIBTOOL=	${BUILDLINK_DIR}/bin/libtool
+
+.PHONY: scrub-libtool-archives
+post-build: scrub-libtool-archives
+scrub-libtool-archives:
+.  for lafile in ${INSTLIBS}
+	${BUILDLINK_LIBTOOL} --fix-la ${WRKSRC}/${GCC_PLATFORM}/${lafile}
+.  endfor
+.endif
 
 # Create the directories for the build, patch the ltconfig script to
 # always use "sunos" shared library numbering (for consistent PLISTs
