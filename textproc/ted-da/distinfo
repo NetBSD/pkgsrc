@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:09 skrll Exp $
 
-MD5 (Ted_DK.tar.gz) = 9d8d343d5b65b0b13544d54e23e952e3
+SHA1 (Ted_DK.tar.gz) = 94475e0ea9a667ab3b8e43df666f49149e263975
+Size (Ted_DK.tar.gz) = 1120057 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:03 skrll Exp $
 
 SHA1 (Text-Template-1.31.tar.gz) = 093ea92413c07a670ff9a8355f8b597138379d1a
+Size (Text-Template-1.31.tar.gz) = 30323 bytes

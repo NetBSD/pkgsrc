@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:10 skrll Exp $
 
-MD5 (Ted_E.tar.gz) = b3570082a0d297feddc239d2ce7d0bc9
+SHA1 (Ted_E.tar.gz) = 4ee6e83ba85bbd1ecf4940660acd7dcac4725f57
+Size (Ted_E.tar.gz) = 723057 bytes

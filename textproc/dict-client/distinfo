@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:04:55 skrll Exp $
 
-MD5 (dictd-1.4.9.tar.gz) = 90e69ac4783b8836dbe98f8367b5f391
-MD5 (dict-gazetteer-1.2-pre.tar.gz) = d67cd81e90bc98e738c19693a97ab9e2
-MD5 (dict-misc-1.5-pre.tar.gz) = bd95a1cf95b1abd5c3fdaf181dd50be3
-MD5 (dict-web1913-1.4-pre.tar.gz) = 63a8d25ace68dff135185a8c96dd5f3c
-MD5 (dict-wn-1.5-pre.tar.gz) = 1f6ae6284018044dbd9e3c5fae914f32
+SHA1 (dictd-1.4.9.tar.gz) = 87a268b5725d70073cf02032a9d96f21cb405f5c
+Size (dictd-1.4.9.tar.gz) = 517459 bytes
 SHA1 (patch-aa) = 53ec142b9151b19e2820d5e1bf5093bb53be0b48
 SHA1 (patch-ab) = 2f7cbc15c62a8925d2e662a756372c935a6680a7
 SHA1 (patch-ac) = c3dcc9878875f28764db118460e2fd5fa9273f2f
