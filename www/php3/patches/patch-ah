@@ -1,7 +1,16 @@
-$NetBSD: patch-ah,v 1.4 2000/04/13 11:23:20 tron Exp $
+$NetBSD: patch-ah,v 1.5 2000/04/25 16:53:04 bad Exp $
 
 --- configure.orig	Wed Apr  5 01:32:58 2000
-+++ configure	Wed Apr 12 19:35:13 2000
++++ configure	Tue Apr 25 18:15:31 2000
+@@ -1624,7 +1624,7 @@
+   ;;
+   *)
+   IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH /usr/bin /usr/sbin /usr/etc /etc /usr/ucblib"
++  ac_dummy="$PATH:/usr/bin:/usr/sbin:/usr/etc:/etc:/usr/ucblib"
+   for ac_dir in $ac_dummy; do 
+     test -z "$ac_dir" && ac_dir=.
+     if test -f $ac_dir/$ac_word; then
 @@ -4373,6 +4373,7 @@
  fi
  
