@@ -1,0 +1,13 @@
+$NetBSD: patch-sum,v 1.1.1.1 2000/07/14 10:37:18 rh Exp $
+
+MD5 (patch-common_h) = 149b759ec1cf1508c00dedbbb12d8d82
+MD5 (patch-src_common.c) = 915fa03d2acad8bfba96aaadb353c75e
+MD5 (patch-src_curses.c) = 46edf4445663405553c4d5050703dfab
+MD5 (patch-src_curses.h) = 67cc8cbaa826f66d537c67b4ced0b684
+MD5 (patch-src_dummy.c) = 9cc223fb864a634c588c3b1c2d2399dd
+MD5 (patch-src_gpm-xterm.c) = 03a5ce0e816be00d54cab9c4a3f88167
+MD5 (patch-src_gpm-xterm.h) = eabcb91a3f8183efa0c02c57cbeff996
+MD5 (patch-src_gtk.c) = a9af995d8b31fde31f7f7768fb38b4d8
+MD5 (patch-src_interactive.c) = dc6a64ff8aeb42f1a425dccea01375a7
+MD5 (patch-src_mouse.c) = 7624b99f8861dad4ed30a182728838c4
+MD5 (patch-src_mouse.h) = 028e63aedabcf95a31f3ad1ef548df10
