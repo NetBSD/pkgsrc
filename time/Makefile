@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/18 12:37:04 kei Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/21 06:22:31 kei Exp $
 #
 
     SUBDIR += asclock
@@ -13,6 +13,7 @@
     SUBDIR += gnyaclock
     SUBDIR += ical
     SUBDIR += logtime
+    SUBDIR += pcal
     SUBDIR += plan
     SUBDIR += polclock
     SUBDIR += py-mxDateTime
