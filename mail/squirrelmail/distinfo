@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2005/01/23 07:02:04 martti Exp $
+$NetBSD: distinfo,v 1.23 2005/02/20 01:52:36 minskim Exp $
 
 SHA1 (squirrelmail-1.4.4.tar.bz2) = 52bdb31e826e845464d7d53e0745c50ead9ba6fe
 Size (squirrelmail-1.4.4.tar.bz2) = 468790 bytes
-SHA1 (patch-aa) = b850165c4ed863faca1b8786e43c2cc16abba060
+SHA1 (patch-aa) = 9e66fdf7697379cc66266b7aa0c599db68750284
