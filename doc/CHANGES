@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9124 2005/02/13 12:41:31 grant Exp $
+$NetBSD: CHANGES,v 1.9125 2005/02/13 13:12:14 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -858,4 +858,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated roundup to 0.7.11 [recht 2005-02-12]
 	Added cisco-mibs-20050210 [kim 2005-02-12]
 	Updated pkglint to 4.03 [rillig 2005-02-12]
+	Updated clamav to 0.82 [grant 2005-02-12]
 	Added distmp3-0.1.9 [grant 2005-02-13]
