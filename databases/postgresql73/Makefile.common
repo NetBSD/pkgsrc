@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/08/21 17:27:04 seb Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/10/10 17:27:43 jdolecek Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -82,6 +82,11 @@ post-extract:
 		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch];\
+		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]	\
+			${WRKSRC}/src/backend/port/dynloader/;	\
 	fi
 
 pre-configure:
