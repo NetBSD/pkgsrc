@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2000/01/31 23:00:50 mrg Exp $
+@comment $NetBSD: PLIST,v 1.20 2000/02/09 17:36:27 hubertf Exp $
 bin/irc-4.4M
 bin/ircbug
 bin/irc
@@ -56,6 +56,7 @@ share/irc/script/compl.mods
 share/irc/script/complete
 share/irc/script/cursor
 share/irc/script/dccchan
+share/irc/script/default
 share/irc/script/deutsch
 share/irc/script/disc
 share/irc/script/dmsg
@@ -94,6 +95,7 @@ share/irc/script/nicks
 share/irc/script/nocolour
 share/irc/script/oldping
 share/irc/script/oper
+share/irc/script/otherstatus
 share/irc/script/ping
 share/irc/script/prefix
 share/irc/script/recursion
@@ -105,6 +107,7 @@ share/irc/script/silent
 share/irc/script/smileys
 share/irc/script/tabkey
 share/irc/script/time
+share/irc/script/times
 share/irc/script/traces
 share/irc/script/troy
 share/irc/script/uhnotify
@@ -377,6 +380,7 @@ share/irc/help/set/lastlog_level@.GZ@
 share/irc/help/set/log@.GZ@
 share/irc/help/set/logfile@.GZ@
 share/irc/help/set/mail@.GZ@
+share/irc/help/set/make_notice_msg@.GZ@
 share/irc/help/set/max_recursions@.GZ@
 share/irc/help/set/menu@.GZ@
 share/irc/help/set/minimum_servers@.GZ@
