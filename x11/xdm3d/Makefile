@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1998/08/26 16:50:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/27 14:25:26 garbled Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
-MASTER_SITES=		http://www.futureone.com/~garbled/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.spade.com/linux/XBanner/
