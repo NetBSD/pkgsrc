@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5345 2004/03/29 06:49:12 cube Exp $
+$NetBSD: CHANGES,v 1.5346 2004/03/29 07:56:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1573,3 +1573,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cyrus-saslauthd to 2.1.18 [jlam 2004-03-29]
 	Updated cowsay to 3.03nb1 [snj 2004-03-29]
 	Updated gkrellm to 2.1.28 [cube 2004-03-29]
+	Updated ruby-tcltklib to 1.6.8nb4 [taca 2004-03-29]
