@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/04 18:04:21 jmmv Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.06
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
