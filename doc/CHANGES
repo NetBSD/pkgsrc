@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7022 2004/08/28 07:51:12 schmonz Exp $
+$NetBSD: CHANGES,v 1.7023 2004/08/28 14:51:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgdiplus to 1.0.1 [recht 2004-08-27]
 	Updated trac to 0.7.1 [epg 2004-08-28]
 	Updated rss2email to 2.54 [schmonz 2004-08-28]
+	Updated nabi to 0.14 [minskim 2004-08-28]
