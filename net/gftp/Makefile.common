@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/09/01 21:38:43 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/12/13 11:49:39 xtraeme Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
@@ -19,7 +19,7 @@ PTHREAD_OPTS=		require
 
 CONFIGURE_ARGS+=	--with-readline
 
-VERSION=		2.0.15
+VERSION=		2.0.16
 
 .include "../../mk/bsd.prefs.mk"
 
