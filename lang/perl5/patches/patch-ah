@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1998/11/26 17:43:47 bad Exp $
+
+--- unixish.h.orig	Mon Sep 22 13:46:47 1997
++++ unixish.h	Thu Nov 26 17:18:58 1998
+@@ -81,7 +81,7 @@
+  */
+ /* #define ALTERNATE_SHEBANG "#!" / **/
+ 
+-#if !defined(NSIG) || defined(M_UNIX) || defined(M_XENIX)
++#if !defined(NSIG) || defined(M_UNIX) || defined(M_XENIX)  || defined(__NetBSD__)
+ # include <signal.h>
+ #endif
+ 
