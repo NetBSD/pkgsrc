@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/02 17:34:00 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/05 14:38:45 wiz Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -10,12 +10,14 @@ HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library
 
 BUILD_DEPENDS+=	nasm-*:../../devel/nasm
-HAS_CONFIGURE=	YES
+
+USE_BUILDLINK_ONLY=	yes
+HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 post-configure:
 	${ECHO} "CFLAGS+=-O2" >>${WRKSRC}/global_config
-	${ECHO} "CFLAGS+=-I${LOCALBASE}/include" >>${WRKSRC}/global_config
+	${ECHO} "CFLAGS+=-I${BUILDLINK_DIR}/include" >>${WRKSRC}/global_config
 	${ECHO} "CFLAGS+=-D_FILE_OFFSET_BITS=64" >>${WRKSRC}/global_config
 
 INSTHDRS=	bitstream.h libmpeg3.h mpeg3atrack.h mpeg3css.h \
@@ -44,4 +46,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/index.html \
 		${PREFIX}/share/doc/html/libmpeg3
 
+.include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
