@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/28 00:32:14 heinz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -32,13 +32,9 @@ post-extract:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
 	cd ${PREFIX}/share/doc/urt && (\
-	    ${GTAR} xf ${DISTDIR}/urt-doc.tar; \
-	    cd doc; \
-	    ${FIND} -d . -print | cpio -dump ..; \
-	    cd ..; \
-	    ${RM} -rf doc)
+	    ${PAX} -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar; )
 	cd ${PREFIX}/share/examples/urt && (\
-	    ${GTAR} xf ${DISTDIR}/urt-img.tar; \
+	    ${PAX} -r -p m -f ${DISTDIR}/urt-img.tar; \
 	    ${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} . ; \
 	    ${FIND} . -type d -exec ${CHMOD} 755 '{}' \; ; \
 	    ${FIND} . -type f -exec ${CHMOD} 644 '{}' \;)
