@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/12/03 06:27:11 tron Exp $
+$NetBSD: patch-aa,v 1.8 2001/12/03 07:58:48 tron Exp $
 
 --- configure.orig	Wed Oct  3 00:12:24 2001
 +++ configure	Mon Dec  3 07:22:41 2001
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.7 2001/12/03 06:27:11 tron Exp $
  evolution_db_version_major=3
 -evolution_db_version_minor=1
 -evolution_db_version_patch=17
-+evolution_db_version_minor=2
++evolution_db_version_minor=3
 +evolution_db_version_patch=11
  
  evolution_db_version=${evolution_db_version_major}.${evolution_db_version_minor}.${evolution_db_version_patch}
