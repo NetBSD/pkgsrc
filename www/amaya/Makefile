@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/24 15:23:46 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/27 05:44:22 snj Exp $
 #
 
 DISTNAME=	amaya-src-8.2
@@ -17,7 +17,7 @@ COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 EXTRACT_ELEMENTS=	Amaya libwww
 
 WRKSRC=		${WRKDIR}/Amaya/work
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
@@ -42,8 +42,8 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
 
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/08/09 10:44:43 seb Exp $
+# $NetBSD: Makefile,v 1.35 2004/04/27 04:59:42 snj Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -15,7 +15,7 @@ CONFLICTS=	sh-utils>=2.0nb2
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 
 INFO_FILES=	id-utils.info
@@ -53,5 +53,5 @@ MAKE_ENV+=		BSD_SETENV=${SETENV}
 PLIST_SUBST+=		LISPDIR=${LISPDIR}
 PLIST_SUBST+=		CLISPDIR=${CLISPDIR}
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

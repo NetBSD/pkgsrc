@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/24 22:46:12 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/27 05:44:23 snj Exp $
 
 DISTNAME=		cadaver-0.22.1
 CATEGORIES=		www
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		Command-line WebDAV client
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 ALL_TARGET=		cadaver
 GNU_CONFIGURE=		YES
@@ -21,9 +21,9 @@ CONFIGURE_ARGS+=	--with-ssl=yes
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
 LIBS+=			-ltermcap
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 # DON'T make this package depend on the www/neon package until neon
 # becomes stable; keep it using its internal copy of neon as with
