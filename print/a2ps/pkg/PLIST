@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/06/20 15:53:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/06/21 07:07:44 jlam Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -31,6 +31,7 @@ info/regex.info-3
 @exec install-info %D/info/ogonkify.info %D/info/dir
 @exec install-info %D/info/regex.info %D/info/dir
 lib/liba2ps.a
+lib/liba2ps.la
 lib/liba2ps.so.1.0
 man/man1/a2ps.1.gz
 man/man1/card.1.gz

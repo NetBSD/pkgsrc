@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 1999/03/12 16:29:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/21 07:14:10 jlam Exp $
 include/ident.h
 lib/libident.a
+lib/libident.la
 lib/libident.so.0.22
 man/man3/ident.3
