@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2004/10/08 19:18:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2004/12/24 10:03:27 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -23,6 +23,7 @@ include/glib/glib-2.0/glib/ghook.h
 include/glib/glib-2.0/glib/gi18n-lib.h
 include/glib/glib-2.0/glib/gi18n.h
 include/glib/glib-2.0/glib/giochannel.h
+include/glib/glib-2.0/glib/gkeyfile.h
 include/glib/glib-2.0/glib/glist.h
 include/glib/glib-2.0/glib/gmacros.h
 include/glib/glib-2.0/glib/gmain.h
@@ -30,6 +31,7 @@ include/glib/glib-2.0/glib/gmarkup.h
 include/glib/glib-2.0/glib/gmem.h
 include/glib/glib-2.0/glib/gmessages.h
 include/glib/glib-2.0/glib/gnode.h
+include/glib/glib-2.0/glib/goption.h
 include/glib/glib-2.0/glib/gpattern.h
 include/glib/glib-2.0/glib/gprimes.h
 include/glib/glib-2.0/glib/gprintf.h
@@ -42,6 +44,7 @@ include/glib/glib-2.0/glib/gscanner.h
 include/glib/glib-2.0/glib/gshell.h
 include/glib/glib-2.0/glib/gslist.h
 include/glib/glib-2.0/glib/gspawn.h
+include/glib/glib-2.0/glib/gstdio.h
 include/glib/glib-2.0/glib/gstrfuncs.h
 include/glib/glib-2.0/glib/gstring.h
 include/glib/glib-2.0/glib/gthread.h
@@ -77,6 +80,7 @@ lib/libgobject-2.0.la
 lib/libgthread-2.0.la
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
+lib/pkgconfig/gmodule-no-export-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
 lib/pkgconfig/gthread-2.0.pc
 man/man1/glib-genmarshal.1
@@ -96,6 +100,7 @@ share/doc/glib/glib-Byte-Arrays.html
 share/doc/glib/glib-Byte-Order-Macros.html
 share/doc/glib/glib-Caches.html
 share/doc/glib/glib-Character-Set-Conversion.html
+share/doc/glib/glib-Commandline-option-parser.html
 share/doc/glib/glib-Datasets.html
 share/doc/glib/glib-Date-and-Time-Functions.html
 share/doc/glib/glib-Double-ended-Queues.html
@@ -108,6 +113,7 @@ share/doc/glib/glib-Hash-Tables.html
 share/doc/glib/glib-Hook-Functions.html
 share/doc/glib/glib-I18N.html
 share/doc/glib/glib-IO-Channels.html
+share/doc/glib/glib-Key-value-file-parser.html
 share/doc/glib/glib-Keyed-Data-Lists.html
 share/doc/glib/glib-Lexical-Scanner.html
 share/doc/glib/glib-Limits-of-Basic-Types.html
@@ -138,6 +144,7 @@ share/doc/glib/glib-Timers.html
 share/doc/glib/glib-Trash-Stacks.html
 share/doc/glib/glib-Type-Conversion-Macros.html
 share/doc/glib/glib-Unicode-Manipulation.html
+share/doc/glib/glib-Version-Information.html
 share/doc/glib/glib-Warnings-and-Assertions.html
 share/doc/glib/glib-Windows-Compatability-Functions.html
 share/doc/glib/glib-building.html
@@ -157,6 +164,10 @@ share/doc/glib/home.png
 share/doc/glib/index.html
 share/doc/glib/index.sgml
 share/doc/glib/ix01.html
+share/doc/glib/ix02.html
+share/doc/glib/ix03.html
+share/doc/glib/ix04.html
+share/doc/glib/ix05.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
@@ -184,6 +195,10 @@ share/doc/gobject/home.png
 share/doc/gobject/index.html
 share/doc/gobject/index.sgml
 share/doc/gobject/ix01.html
+share/doc/gobject/ix02.html
+share/doc/gobject/ix03.html
+share/doc/gobject/ix04.html
+share/doc/gobject/ix05.html
 share/doc/gobject/left.png
 share/doc/gobject/pr01.html
 share/doc/gobject/right.png
