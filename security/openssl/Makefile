@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/17 17:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/20 18:04:17 hubertf Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -83,6 +83,7 @@ do-install:
 	pkcs12 pkcs7 pkcs8 rc2 rc2-cbc rc2-cfb rc2-ecb rc2-ofb rc4 rc5 \
 	rc5-cbc rc5-cfb rc5-ecb rc5-ofb req rmd160 rsa s_client s_server \
 	s_time sess_id sha sha1 speed verify version x509; do \
+		${RM} -f $$file ; \
 		${LN} -sf openssl $$file; \
 	done
 	cd ${WRKSRC}/tools && ${INSTALL_SCRIPT} \
