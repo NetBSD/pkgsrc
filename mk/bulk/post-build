@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.5 2000/12/26 19:01:35 dmcmahill Exp $
+# $NetBSD: post-build,v 1.6 2000/12/30 13:05:37 hubertf Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -55,7 +55,7 @@ chdir("$USR_PKGSRC");
 system("tar plcf - $BROKENFILE */*/$BROKENFILE | ( cd ${FTP} ; tar plxf - )");
 
 
-open(HTML,">$REPORT") or die;
+open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
 print HTML <<EOHTML
 <HTML>
 <HEAD>
