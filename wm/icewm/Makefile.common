@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2003/06/23 14:23:15 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.26 2003/07/09 21:14:26 jmmv Exp $
 
-DISTNAME=		icewm-1.2.7
+DISTNAME=		icewm-1.2.9
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
@@ -11,6 +11,7 @@ GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		yes
 USE_X11=		# defined
 USE_GMAKE=		# defined
+USE_GNU_ICONV=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
@@ -39,12 +40,10 @@ INSTALL_TARGET=		install-base install-nls
 
 post-extract:
 	${CP} ${FILES} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
-	${MV} ${WRKSRC}/po/zh_CN.gb2312.po ${WRKSRC}/po/zh_CN.GB2312.po
-	${MV} ${WRKSRC}/po/zh_CN.gb2312.pox ${WRKSRC}/po/zh_CN.GB2312.pox
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
-	for file in BUGS CHANGES COPYING FAQ README README.wm-session TODO; do\
+	for file in BUGS CHANGES COPYING README README.wm-session TODO; do\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${HTMLDIR}
