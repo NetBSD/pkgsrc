@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6375 2004/06/28 14:59:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.6376 2004/06/28 15:02:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3138,3 +3138,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.82 [hubertf 2004-06-28]
 	Updated gnome-panel to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome-session to 2.6.2 [jmmv 2004-06-28]
+	Updated gnome-speech to 0.3.3 [jmmv 2004-06-28]
