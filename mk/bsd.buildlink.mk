@@ -1,12 +1,15 @@
-# $NetBSD: bsd.buildlink.mk,v 1.2 2001/06/11 03:20:48 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.3 2001/06/11 03:33:47 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
-# file does 3 things:
+# file does the following things:
 #
 # (1) Defines a macro target, _BUILDLINK_USE, that symlinks package files
 #     into a new hierarchy under ${BUILDLINK_DIR};
-# (2) Adds -I${BUILDLINK_DIR}/include to CPPFLAGS, CFLAGS, and CXXFLAGS;
-# (3) Adds -L${BUILDLINK_DIR}/lib to LDFLAGS.
+# (2) Defines BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS to be the flags
+#     needed to find the buildlink include files and buildlink libraries,
+#     respectively.
+# (3) Adds ${BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
+# (4) Adds ${BUILDLINK_LDFLAGS} to LDFLAGS.
 #
 # By including buildlink.mk files before package-specific CFLAGS or LDFLAGS
 # are defined, you can ensure that the buildlink directories are ahead of
