@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/06/02 12:07:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/08/21 11:31:00 recht Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -20,6 +20,7 @@ man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
 man/man3/curl_easy_perform.3
+man/man3/curl_easy_reset.3
 man/man3/curl_easy_setopt.3
 man/man3/curl_easy_strerror.3
 man/man3/curl_escape.3
@@ -54,20 +55,24 @@ man/man3/libcurl-easy.3
 man/man3/libcurl-errors.3
 man/man3/libcurl-multi.3
 man/man3/libcurl-share.3
+man/man3/libcurl-tutorial.3
 man/man3/libcurl.3
 share/curl/curl-ca-bundle.crt
 share/doc/curl/FAQ
 share/doc/curl/MANUAL
 share/doc/curl/TheArtOfHttpScripting
-share/doc/curl/libcurl-the-guide
+share/doc/curl/curl-config.pdf
+share/doc/curl/curl.pdf
 share/examples/curl/README
 share/examples/curl/curlgtk.c
 share/examples/curl/curlx.c
 share/examples/curl/fileupload.c
 share/examples/curl/fopen.c
+share/examples/curl/ftp3rdparty.c
 share/examples/curl/ftpget.c
 share/examples/curl/ftpgetresp.c
 share/examples/curl/ftpupload.c
+share/examples/curl/getinfo.c
 share/examples/curl/getinmemory.c
 share/examples/curl/http-post.c
 share/examples/curl/httpput.c
