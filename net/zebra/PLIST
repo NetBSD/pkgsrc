@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/29 21:59:01 heas Exp $
-info/zebra.info
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 16:17:56 seb Exp $
 man/man8/bgpd.8
 man/man8/ospfd.8
 man/man8/ripd.8
