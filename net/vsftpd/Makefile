@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/28 02:47:48 reed Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/02 23:12:52 jlam Exp $
 #
 
 DISTNAME=	vsftpd-1.2.2
@@ -32,9 +32,13 @@ CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	${VARBASE}/chroot
 OWN_DIRS=	${VARBASE}/chroot/vsftpd
 
+INSTALLATION_DIRS=	libexec man/man5 man/man8
+
 # XXX: This package doesn't work on non-IPv6 enabled operating systems.
 #
 BUILD_DEFS+=	USE_INET6
+
+.include "../../security/tcp_wrappers/buildlink3.mk"
 
 post-patch:
 	@cd ${WRKSRC} && \
@@ -51,7 +55,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/vsftpd.conf ${EGDIR}/vsftpd.conf.default
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL README TUNING ${DOCDIR}
-
-.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
