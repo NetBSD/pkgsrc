@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.510 2003/04/29 22:51:14 jtb Exp $
+$NetBSD: TODO,v 1.511 2003/04/29 23:36:26 jtb Exp $
 
 Suggested new packages
 ======================
@@ -161,7 +161,6 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lmule-1.2.0 [pkg/21273]
 	o lout-3.26 [pkg/18687]
-	o lua-5.0
 	o lynx-current-2.8.5dev9
 	o lyx-1.3.1 [pkg/20805]
 	o maildrop-1.5.2
