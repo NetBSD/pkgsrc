@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.70 2002/03/18 05:46:42 fredb Exp $
+# $NetBSD: bsd.prefs.mk,v 1.71 2002/05/30 22:15:40 schmonz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -123,6 +123,11 @@ NEED_OWN_INSTALL_TARGET=no
 # in the odd possible case of someone extracting "pkgsrc" underneath "src".
 USETOOLS=		no
 MAKE_ENV+=		USETOOLS=no
+
+# Set this before <bsd.own.mk> does, since it doesn't know about Darwin
+.if ${OPSYS} == "Darwin"
+OBJECT_FMT?=		Mach-O
+.endif
 
 .include <bsd.own.mk>
 
