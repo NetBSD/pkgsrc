@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2003/01/04 20:39:57 wiz Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2003/02/17 04:34:00 agc Exp $
 
 --- doc/Makefile.in.orig	Fri Oct 11 07:48:37 2002
 +++ doc/Makefile.in
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.2 2003/01/04 20:39:57 wiz Exp $
  %.info.gz: %.info
  	rm -f $@
 -	gzip -9 $<
-+	${GZIP_CMD} -9 $<
++	( unset GZIP ; ${GZIP_CMD} -9 $< )
  
  .dvi.ps:
  	${DVIPS} -t letter $< -o tmp.ps
