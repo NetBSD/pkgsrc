@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2003/09/15 10:51:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2003/09/25 13:25:45 wiz Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -138,6 +138,10 @@ include/wine/windows/imm.h
 include/wine/windows/initguid.h
 include/wine/windows/instance.h
 include/wine/windows/ipexport.h
+include/wine/windows/iphlpapi.h
+include/wine/windows/ipifcons.h
+include/wine/windows/iprtrmib.h
+include/wine/windows/iptypes.h
 include/wine/windows/lm.h
 include/wine/windows/lmaccess.h
 include/wine/windows/lmapibuf.h
@@ -146,10 +150,6 @@ include/wine/windows/lmcons.h
 include/wine/windows/lmerr.h
 include/wine/windows/lmstats.h
 include/wine/windows/lmwksta.h
-include/wine/windows/iphlpapi.h
-include/wine/windows/ipifcons.h
-include/wine/windows/iprtrmib.h
-include/wine/windows/iptypes.h
 include/wine/windows/lzexpand.h
 include/wine/windows/mapi.h
 include/wine/windows/mapicode.h
@@ -318,9 +318,9 @@ lib/wine/dmstyle.dll.so
 lib/wine/dmsynth.dll.so
 lib/wine/dmusic.dll.so
 lib/wine/dmusic32.dll.so
-lib/wine/dpnhpast.dll.so
 lib/wine/dplay.dll.so
 lib/wine/dplayx.dll.so
+lib/wine/dpnhpast.dll.so
 lib/wine/dsound.dll.so
 lib/wine/expand.exe.so
 lib/wine/gdi.exe.so
@@ -365,9 +365,9 @@ lib/wine/libdmstyle.def
 lib/wine/libdmsynth.def
 lib/wine/libdmusic.def
 lib/wine/libdmusic32.def
-lib/wine/libdpnhpast.def
 lib/wine/libdplay.def
 lib/wine/libdplayx.def
+lib/wine/libdpnhpast.def
 lib/wine/libdsound.def
 lib/wine/libgdi32.def
 lib/wine/libglu32.def
