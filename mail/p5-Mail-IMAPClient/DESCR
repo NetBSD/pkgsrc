@@ -2,8 +2,8 @@
 sockets connection to and an IMAP conversation with an IMAP server.
 
   This module was developed on Solaris 2.5.1 and 2.6 against Netscape
-IMAP servers versions 3.6 and 4.1.  However, since it is written inw
-erl and designed for flexibility, it should run on any OS with a
+IMAP servers versions 3.6 and 4.1.  However, since it is written in
+perl and designed for flexibility, it should run on any OS with a
 TCP/IP stack and a version of perl that includes Socket.pm and
 IO::Socket.pm. It also should be able to talk to any IMAP server,
 even those that have, um, proprietary features (assuming that the
