@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6283 2004/06/23 04:42:22 snj Exp $
+$NetBSD: CHANGES,v 1.6284 2004/06/23 08:46:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qpopper to 4.0.5nb4 [xtraeme 2004-06-22]
 	Updated ImageMagick to 6.0.2.7 [xtraeme 2004-06-23]
 	Updated naim to 0.11.7 [snj 2004-06-23]
+	Updated libusb to 0.1.8nb1 [mycroft 2004-06-23]
