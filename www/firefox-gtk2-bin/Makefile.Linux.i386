@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.Linux.i386,v 1.2 2004/09/20 15:48:58 erh Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.3 2005/02/27 03:50:11 grant Exp $
 
-DISTNAME=	${MOZILLA}-${MOZ_DISTVER}-i686-linux-gtk2+xft
+DISTNAME=	${MOZILLA}-${MOZ_DISTVER}
+MOZ_DISTDIR=	releases/${MOZ_DIR}/linux-i686/en-US
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_DISTDIR}/
 
 MOZ_PLATFORM=	linux
