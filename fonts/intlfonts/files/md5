@@ -1,0 +1,12 @@
+$NetBSD: md5,v 1.1.1.1 1999/09/07 22:13:06 tron Exp $
+
+MD5 (intlfonts/Asian.tar.gz) = 53dd5ac8c38026a5207839fc48e1fcf3
+MD5 (intlfonts/Chinese.tar.gz) = 1569edc9ca42373d9cc09283ab3f480d
+MD5 (intlfonts/Ethiopic.tar.gz) = 39497f24920b4a4b6f18ebf64bcab6f3
+MD5 (intlfonts/European.tar.gz) = e177d0120b592f94593569b706634e92
+MD5 (intlfonts/European-BIG.tar.gz) = 5e18e397ddce416b8bcb88dad8f7a806
+MD5 (intlfonts/Japanese.tar.gz) = 654719badd2bd44897c6216dd15acbff
+MD5 (intlfonts/Misc.tar.gz) = a66661b8392f4a0bfe83d40710e1395e
+MD5 (intlfonts/Makefile) = 7429d8c5331175da3273c82a11ddd8ed
+MD5 (intlfonts/README) = f0a6c8d0f767169a63c43f62e6914dae
+MD5 (intlfonts/README-split) = e25de70a9d7bc6ec5877fef36e8109b9
