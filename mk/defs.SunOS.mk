@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.79 2004/02/14 00:11:30 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.80 2004/02/14 03:26:09 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -26,7 +26,7 @@ GREP?=		/usr/xpg4/bin/grep
 .if exists(${LOCALBASE}/bin/gtar)
 GTAR?=		${LOCALBASE}/bin/gtar
 .else
-GTAR?=		${ZOULARISBASE}/bin/tar
+GTAR?=		${LOCALBASE}/bin/tar
 .endif
 .if exists(${LOCALBASE}/bin/gzip)
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
@@ -49,10 +49,7 @@ LS?=		/usr/bin/ls
 M4?=		/usr/ccs/bin/m4
 MAIL_CMD?=	/usr/bin/mailx
 MKDIR?=		/usr/bin/mkdir -p
-.if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
-.endif
-MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/usr/bin/mv
 NICE?=		/usr/xpg4/bin/nice
 .if exists(/usr/bin/gpatch)
@@ -181,16 +178,9 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
-.if !defined(ZOULARISBASE)
-.  if exists(${LOCALBASE}/bsd)
-ZOULARISBASE:=		${LOCALBASE}/bsd
-.  else
-ZOULARISBASE:=		${LOCALBASE}
-.  endif
-.endif
+
 .if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.elif exists(${ZOULARISBASE}/sbin/pkg_info)
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
+.else
+PKG_TOOLS_BIN?=		${LOCALBASE}/bin
 .endif
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
