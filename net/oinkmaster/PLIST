@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 09:36:09 xtraeme Exp $
+bin/oinkmaster
+share/doc/oinkmaster/INSTALL
+share/doc/oinkmaster/LICENSE
+share/doc/oinkmaster/README
+share/examples/oinkmaster/oinkmaster.conf
+@dirrm share/examples/oinkmaster
+@dirrm share/doc/oinkmaster
