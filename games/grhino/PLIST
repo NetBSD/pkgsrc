@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/09 19:29:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/06 12:25:41 wiz Exp $
 bin/grhino
-share/${PKGNAME}/book.bin
-share/${PKGNAME}/corner5x2.bin
-share/${PKGNAME}/diag1.bin
-share/${PKGNAME}/diag2.bin
-share/${PKGNAME}/diag3.bin
-share/${PKGNAME}/diag4.bin
-share/${PKGNAME}/diag5.bin
-share/${PKGNAME}/row1.bin
-share/${PKGNAME}/row2.bin
-share/${PKGNAME}/row3.bin
-share/${PKGNAME}/row4.bin
+share/gnome/help/grhino/C/preferences-0.html
+share/gnome/help/grhino/C/preferences-1.html
+share/gnome/help/grhino/C/topic.dat
+share/${PKGNAME}/book/book.bin
+share/${PKGNAME}/pattern/corner5x2.bin
+share/${PKGNAME}/pattern/diag1.bin
+share/${PKGNAME}/pattern/diag2.bin
+share/${PKGNAME}/pattern/diag3.bin
+share/${PKGNAME}/pattern/diag4.bin
+share/${PKGNAME}/pattern/diag5.bin
+share/${PKGNAME}/pattern/row1.bin
+share/${PKGNAME}/pattern/row2.bin
+share/${PKGNAME}/pattern/row3.bin
+share/${PKGNAME}/pattern/row4.bin
+@dirrm share/${PKGNAME}/pattern
+@dirrm share/${PKGNAME}/book
 @dirrm share/${PKGNAME}
+@dirrm share/gnome/help/grhino/C
+@dirrm share/gnome/help/grhino
