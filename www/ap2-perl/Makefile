@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:27 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/03 15:40:02 epg Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
 
 DISTNAME=		mod_perl-1.99_08
 PKGNAME=		ap2-perl-1.99.8
+PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		http://perl.apache.org/dist/
 
