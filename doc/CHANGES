@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3548 2003/09/27 03:30:43 junyoung Exp $
+$NetBSD: CHANGES,v 1.3549 2003/09/27 08:16:10 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3963,3 +3963,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated simh to 3.0.2 [jmmv 2003-09-26]
 	Updated xplot to 0.90.7.1 [dan 2003-09-27]
 	Added nabi-0.7 [junyoung 2003-09-27]
+	Added liboop-0.9 [grant 2003-09-27]
