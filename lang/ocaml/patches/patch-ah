@@ -1,118 +1,101 @@
-$NetBSD: patch-ah,v 1.3 2003/07/11 07:47:44 jtb Exp $
+$NetBSD: patch-ah,v 1.4 2004/04/22 09:18:36 tron Exp $
 
---- asmcomp/power/emit.mlp.orig
-+++ asmcomp/power/emit.mlp
-@@ -65,7 +65,7 @@
+--- asmrun/power-bsd.S.orig	Thu Apr 22 10:34:28 2004
++++ asmrun/power-bsd.S	Thu Apr 22 10:34:38 2004
+@@ -13,6 +13,35 @@
  
- let emit_symbol =
-   match Config.system with
--    "aix" | "elf" -> (fun s -> Emitaux.emit_symbol '.' s)
-+    "aix" | "elf" | "bsd" -> (fun s -> Emitaux.emit_symbol '.' s)
-   | "rhapsody"    -> (fun s -> emit_char '_'; Emitaux.emit_symbol '$' s)
-   | _ -> assert false
+ /* $Id: patch-ah,v 1.4 2004/04/22 09:18:36 tron Exp $ */
  
-@@ -78,7 +78,7 @@
- let label_prefix =
-   match Config.system with
-     "aix" -> "L.."
--  | "elf" -> ".L"
-+  | "elf" | "bsd" -> ".L"
-   | "rhapsody" -> "L"
-   | _ -> assert false
- 
-@@ -90,21 +90,21 @@
- let data_space =
-   match Config.system with
-     "aix" -> "	.csect  .data[RW]\n"
--  | "elf" -> "	.section \".data\"\n"
-+  | "elf" | "bsd" -> "	.section \".data\"\n"
-   | "rhapsody" -> "	.data\n"
-   | _ -> assert false
- 
- let code_space =
-   match Config.system with
-     "aix" -> "	.csect  .text[PR]\n"
--  | "elf" -> "	.section \".text\"\n"
-+  | "elf" | "bsd" -> "	.section \".text\"\n"
-   | "rhapsody" -> "	.text\n"
-   | _ -> assert false
- 
- let rodata_space =
-   match Config.system with
-     "aix" -> "	.csect  .data[RW]\n" (* ?? *)
--  | "elf" -> "	.section \".rodata\"\n"
-+  | "elf" | "bsd" -> "	.section \".rodata\"\n"
-   | "rhapsody" -> "	.const\n"
-   | _ -> assert false
- 
-@@ -157,7 +157,7 @@
- 
- let emit_upper emit_fun arg =
-   match Config.system with
--    "elf" ->
-+    "elf" | "bsd" ->
-       emit_fun arg; emit_string "@ha"
-   | "rhapsody" ->
-       emit_string "ha16("; emit_fun arg; emit_string ")"
-@@ -165,7 +165,7 @@
- 
- let emit_lower emit_fun arg =
-   match Config.system with
--    "elf" ->
-+    "elf" | "bsd" ->
-       emit_fun arg; emit_string "@l"
-   | "rhapsody" ->
-       emit_string "lo16("; emit_fun arg; emit_string ")"
-@@ -935,6 +935,30 @@
-       emit_instr i None;
-       emit_all i.next
- 
-+(* Emission of the profiling prelude *)
++#if defined(PROFILING)
++#define PROFILE_CAML \
++        stwu 1, -32(1) \
++        mflr 0 \
++        stw 0, 4(1) \
++        stw 2, 8(1) \
++        stw 3, 12(1) \
++        stw 4, 16(1) \
++        stw 5, 20(1) \
++        stw 6, 24(1) \
++        stw 7, 28(1) \
++        bl _mcount \
++        lwz 2, 8(1) \
++        lwz 3, 12(1) \
++        lwz 4, 16(1) \
++        lwz 5, 20(1) \
++        lwz 6, 24(1) \
++        lwz 7, 28(1) \
++        addic 1, 1, 32
 +
-+let emit_profile () =
-+  match Config.system with
-+    "bsd" ->
-+      `	stwu 1, -32(1)\n`;
-+      `	mflr 0\n`;
-+      `	stw 0, 4(1)\n`;
-+      `	stw 2, 8(1)\n`;
-+      `	stw 3, 12(1)\n`;
-+      `	stw 4, 16(1)\n`;
-+      `	stw 5, 20(1)\n`;
-+      `	stw 6, 24(1)\n`;
-+      `	stw 7, 28(1)\n`;
-+      `	bl {emit_symbol "_mcount"}\n`;
-+      `	lwz 2, 8(1)\n`;
-+      `	lwz 3, 12(1)\n`;
-+      `	lwz 4, 16(1)\n`;
-+      `	lwz 5, 20(1)\n`;
-+      `	lwz 6, 24(1)\n`;
-+      `	lwz 7, 28(1)\n`;
-+      `	addic 1, 1, 32\n`;
-+  | _ -> () (*unsupported yet*)
++#define PROFILE_C \
++        mflr 0 \
++        stw 0, 4(1) \
++        bl _mcount
++#else
++#define PROFILE_CAML
++#define PROFILE_C
++#endif
 +
- (* Emission of a function declaration *)
+ #define Addrglobal(reg,glob) \
+         addis   reg, 0, glob@ha; \
+         addi    reg, reg, glob@l
+@@ -30,6 +59,7 @@
+         .globl  caml_call_gc
+         .type   caml_call_gc, @function
+ caml_call_gc:
++        PROFILE_CAML
+     /* Set up stack frame */
+         stwu    1, -0x1A0(1)
+     /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
+@@ -182,6 +212,7 @@
+         .globl  caml_c_call
+         .type   caml_c_call, @function
+ caml_c_call:
++        PROFILE_CAML
+     /* Save return address */
+         mflr    25
+     /* Get ready to call C function (address in 11) */
+@@ -210,6 +241,7 @@
+         .globl  raise_caml_exception
+         .type   raise_caml_exception, @function
+ raise_caml_exception:
++        PROFILE_C
+     /* Reload Caml global registers */
+         Loadglobal(1, caml_exception_pointer, 11)
+         Loadglobal(31, young_ptr, 11)
+@@ -230,6 +262,7 @@
+         .globl  caml_start_program
+         .type   caml_start_program, @function
+ caml_start_program:
++        PROFILE_C
+         Addrglobal(12, caml_program)
  
- let fundecl fundecl =
-@@ -951,10 +975,11 @@
-       `	.csect	{emit_symbol fundecl.fun_name}[DS]\n`;
-       `{emit_symbol fundecl.fun_name}:\n`;
-       `	.long	.{emit_symbol fundecl.fun_name}, TOC[tc0], 0\n`
--  | "elf" ->
-+  | "elf" | "bsd" ->
-       `	.type	{emit_symbol fundecl.fun_name}, @function\n`
-   | _ -> ()
-   end;
-+  if !Clflags.gprofile then emit_profile();
-   emit_string code_space;
-   `	.align	2\n`;
-   `{emit_codesymbol fundecl.fun_name}:\n`;
-@@ -996,7 +1021,7 @@
- 
- let declare_global_data s =
-   `	.globl	{emit_symbol s}\n`;
--  if Config.system = "elf" then
-+  if Config.system = "elf" || Config.system = "bsd" then
-     `	.type	{emit_symbol s}, @object\n`
- 
- let emit_item = function
+ /* Code shared between caml_start_program and callback */
+@@ -380,6 +413,7 @@
+         .globl  callback_exn
+         .type   callback_exn, @function
+ callback_exn:
++        PROFILE_C
+     /* Initial shuffling of arguments */
+         mr      0, 3            /* Closure */
+         mr      3, 4            /* Argument */
+@@ -390,6 +424,7 @@
+         .globl  callback2_exn
+         .type   callback2_exn, @function
+ callback2_exn:
++        PROFILE_C
+         mr      0, 3            /* Closure */
+         mr      3, 4            /* First argument */
+         mr      4, 5            /* Second argument */
+@@ -400,6 +435,7 @@
+         .globl  callback3_exn
+         .type   callback3_exn, @function
+ callback3_exn:
++        PROFILE_C
+         mr      0, 3            /* Closure */
+         mr      3, 4            /* First argument */
+         mr      4, 5            /* Second argument */
+@@ -418,4 +454,3 @@
+         .long   .L105 + 4       /* return address into callback */
+         .short  -1              /* negative size count => use callback link */
+         .short  0               /* no roots here */
+-

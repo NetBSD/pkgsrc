@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/06/18 20:06:01 jschauma Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/22 09:18:36 tron Exp $
 
---- config/gnu/config.sub.orig	Tue May 14 11:14:26 2002
-+++ config/gnu/config.sub
-@@ -289,7 +289,7 @@
- 	      | [cjt]90-* \
- 	      | m88110-* | m680[01234]0-* | m683?2-* | m68360-* | z8k-* | d10v-* \
- 	      | thumb-* | v850-* | d30v-* | tic30-* | tic80-* | c30-* | fr30-* \
--	      | bs2000-* | tic54x-* | c54x-* | x86_64-* | pj-* | pjl-*)
-+	      | bs2000-* | tic54x-* | c54x-* | x86_64-* | pj-* | pjl-* | macppc-*)
- 		;;
- 	# Recognize the various machine names and aliases which stand
- 	# for a CPU type and a company and sometimes even an OS.
+--- asmcomp/i386/emit.mlp.orig	Mon Jul 22 18:37:50 2002
++++ asmcomp/i386/emit.mlp	Thu Apr 22 10:34:38 2004
+@@ -734,7 +734,7 @@
+       `	movl	%esp, %ebp\n`;
+       `	pushl	%ecx\n`;
+       `	pushl	%edx\n`;
+-      `	call	.mcount\n`;
++      `	call	__mcount\n`;
+       `	popl	%edx\n`;
+       `	popl	%ecx\n`;
+       `	popl	%eax\n`

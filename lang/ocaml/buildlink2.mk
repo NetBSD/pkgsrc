@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/16 16:25:10 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/04/22 09:18:35 tron Exp $
 #
 # This Makefile fragment is included by packages that use ocaml.
 
@@ -6,8 +6,9 @@
 OCAML_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			ocaml
-BUILDLINK_DEPENDS.ocaml?=		ocaml>=3.06
+BUILDLINK_DEPENDS.ocaml?=		ocaml>=3.06nb6
 BUILDLINK_PKGSRCDIR.ocaml?=		../../lang/ocaml
+BUILDLINK_DEPMETHOD.ocaml?=		build
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ocaml=ocaml
 BUILDLINK_PREFIX.ocaml_DEFAULT=	${LOCALBASE}

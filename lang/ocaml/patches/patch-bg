@@ -1,0 +1,23 @@
+$NetBSD: patch-bg,v 1.1 2004/04/22 09:18:42 tron Exp $
+
+--- otherlibs/labltk/labltk/Makefile.orig	Fri Apr 26 15:57:39 2002
++++ otherlibs/labltk/labltk/Makefile	Thu Apr 22 10:34:37 2004
+@@ -16,14 +16,12 @@
+ labltkobjsx: $(LABLTKOBJSX)
+ 
+ install: $(LABLTKOBJS)
+-	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(LABLTKOBJS:.cmo=.cmi) $(WIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
+-	chmod 644 $(INSTALLDIR)/*.cmi
++	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(LABLTKOBJS:.cmo=.cmi) $(WIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
+ 
+ installopt: $(LABLTKOBJSX)
+-	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(LABLTKOBJSX) $(INSTALLDIR)
+-	chmod 644 $(INSTALLDIR)/*.cmx
++	@if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(LABLTKOBJSX) $(INSTALLDIR)
+ 
+ clean:
+ 	$(MAKE) -f Makefile.gen clean

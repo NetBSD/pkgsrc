@@ -1,22 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2003/06/29 23:04:19 jtb Exp $
+$NetBSD: patch-ai,v 1.2 2004/04/22 09:18:36 tron Exp $
 
---- asmcomp/power/proc.ml.orig
-+++ asmcomp/power/proc.ml
-@@ -190,7 +190,7 @@
- let loc_external_arguments =
-   match Config.system with
-     "aix" | "rhapsody" -> poweropen_external_conventions 0 7 100 112
--  | "elf" -> calling_conventions 0 7 100 107 outgoing 8
-+  | "elf" | "bsd" -> calling_conventions 0 7 100 107 outgoing 8
-   | _ -> assert false
- 
- let extcall_use_push = false
-@@ -244,7 +244,7 @@
-       Ccomp.command ("as -u -m " ^ proc ^ " -o " ^ outfile ^ " " ^ infile)
-   | "elf" ->
-       Ccomp.command ("as -u -m ppc -o " ^ outfile ^ " " ^ infile)
--  | "rhapsody" ->
-+  | "rhapsody" | "bsd" ->
-       Ccomp.command ("as -o " ^ outfile ^ " " ^ infile)
-   | _ -> assert false
- 
+--- asmrun/i386.S.orig	Fri Jun  7 11:49:36 2002
++++ asmrun/i386.S	Thu Apr 22 10:34:38 2004
+@@ -53,10 +53,10 @@
+ #elif defined(SYS_bsd_elf)
+ #define PROFILE_CAML \
+         pushl %ebp; movl %esp, %ebp; pushl %eax; pushl %ecx; pushl %edx; \
+-        call .mcount; \
++        call __mcount; \
+         popl %edx; popl %ecx; popl %eax; popl %ebp
+ #define PROFILE_C \
+-        pushl %ebp; movl %esp, %ebp; call .mcount; popl %ebp
++        pushl %ebp; movl %esp, %ebp; call __mcount; popl %ebp
+ #endif
+ #else
+ #define PROFILE_CAML

@@ -1,101 +1,18 @@
-$NetBSD: patch-aj,v 1.2 2003/07/11 07:47:44 jtb Exp $
+$NetBSD: patch-aj,v 1.3 2004/04/22 09:18:37 tron Exp $
 
---- asmrun/power-bsd.S.orig
-+++ asmrun/power-bsd.S
-@@ -13,6 +13,35 @@
+--- byterun/Makefile.orig	Thu Apr 18 09:27:36 2002
++++ byterun/Makefile	Thu Apr 22 10:34:37 2004
+@@ -48,10 +48,10 @@
+ 	          prims.o libcamlrund.a $(BYTECCLIBS)
  
- /* $Id: patch-aj,v 1.2 2003/07/11 07:47:44 jtb Exp $ */
- 
-+#if defined(PROFILING)
-+#define PROFILE_CAML \
-+        stwu 1, -32(1) \
-+        mflr 0 \
-+        stw 0, 4(1) \
-+        stw 2, 8(1) \
-+        stw 3, 12(1) \
-+        stw 4, 16(1) \
-+        stw 5, 20(1) \
-+        stw 6, 24(1) \
-+        stw 7, 28(1) \
-+        bl _mcount \
-+        lwz 2, 8(1) \
-+        lwz 3, 12(1) \
-+        lwz 4, 16(1) \
-+        lwz 5, 20(1) \
-+        lwz 6, 24(1) \
-+        lwz 7, 28(1) \
-+        addic 1, 1, 32
-+
-+#define PROFILE_C \
-+        mflr 0 \
-+        stw 0, 4(1) \
-+        bl _mcount
-+#else
-+#define PROFILE_CAML
-+#define PROFILE_C
-+#endif
-+
- #define Addrglobal(reg,glob) \
-         addis   reg, 0, glob@ha; \
-         addi    reg, reg, glob@l
-@@ -30,6 +59,7 @@
-         .globl  caml_call_gc
-         .type   caml_call_gc, @function
- caml_call_gc:
-+        PROFILE_CAML
-     /* Set up stack frame */
-         stwu    1, -0x1A0(1)
-     /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
-@@ -182,6 +212,7 @@
-         .globl  caml_c_call
-         .type   caml_c_call, @function
- caml_c_call:
-+        PROFILE_CAML
-     /* Save return address */
-         mflr    25
-     /* Get ready to call C function (address in 11) */
-@@ -210,6 +241,7 @@
-         .globl  raise_caml_exception
-         .type   raise_caml_exception, @function
- raise_caml_exception:
-+        PROFILE_C
-     /* Reload Caml global registers */
-         Loadglobal(1, caml_exception_pointer, 11)
-         Loadglobal(31, young_ptr, 11)
-@@ -230,6 +262,7 @@
-         .globl  caml_start_program
-         .type   caml_start_program, @function
- caml_start_program:
-+        PROFILE_C
-         Addrglobal(12, caml_program)
- 
- /* Code shared between caml_start_program and callback */
-@@ -380,6 +413,7 @@
-         .globl  callback_exn
-         .type   callback_exn, @function
- callback_exn:
-+        PROFILE_C
-     /* Initial shuffling of arguments */
-         mr      0, 3            /* Closure */
-         mr      3, 4            /* Argument */
-@@ -390,6 +424,7 @@
-         .globl  callback2_exn
-         .type   callback2_exn, @function
- callback2_exn:
-+        PROFILE_C
-         mr      0, 3            /* Closure */
-         mr      3, 4            /* First argument */
-         mr      4, 5            /* Second argument */
-@@ -400,6 +435,7 @@
-         .globl  callback3_exn
-         .type   callback3_exn, @function
- callback3_exn:
-+        PROFILE_C
-         mr      0, 3            /* Closure */
-         mr      3, 4            /* First argument */
-         mr      4, 5            /* Second argument */
-@@ -418,4 +454,3 @@
-         .long   .L105 + 4       /* return address into callback */
-         .short  -1              /* negative size count => use callback link */
-         .short  0               /* no roots here */
--
+ install:
+-	cp ocamlrun$(EXE) $(BINDIR)/ocamlrun$(EXE)
+-	cp libcamlrun.a $(LIBDIR)/libcamlrun.a
++	${BSD_INSTALL_PROGRAM} ocamlrun$(EXE) $(BINDIR)/ocamlrun$(EXE)
++	${BSD_INSTALL_DATA} libcamlrun.a $(LIBDIR)/libcamlrun.a
+ 	cd $(LIBDIR); $(RANLIB) libcamlrun.a
+-	if test -d $(LIBDIR)/caml; then : ; else mkdir $(LIBDIR)/caml; fi
++	if test -d $(LIBDIR)/caml; then : ; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR)/caml; fi
+ 	for i in $(PUBLIC_INCLUDES); do \
+           sed -f ../tools/cleanup-header $$i > $(LIBDIR)/caml/$$i; \
+         done
