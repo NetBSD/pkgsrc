@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8038 2004/11/27 00:26:45 sketch Exp $
+$NetBSD: CHANGES,v 1.8039 2004/11/27 00:30:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5475,3 +5475,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xlockmore-lite to 5.14.1 [hubertf 2004-11-26]
 	Updated wmpload to 0.9.5 [abs 2004-11-27]
 	Updated apachetop to 0.12.5 [sketch 2004-11-27]
+	Updated p5-Getopt-Simple to 1.48 [wiz 2004-11-27]
