@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1 1999/12/29 16:06:13 bad Exp $
+
+--- mit-pthreads/stdio/Makefile.inc.orig	Wed Apr  2 02:00:48 1997
++++ mit-pthreads/stdio/Makefile.inc	Wed Dec 29 01:25:28 1999
+@@ -9,7 +9,7 @@
+ 
+ SRCS+=	clrerr.c fclose.c fdopen.c feof.c ferror.c fflush.c fgetc.c \
+ 	fgetline.c fgetpos.c fgets.c fileno.c findfp.c flags.c fopen.c \
+-	fprintf.c fpurge.c fputc.c fputs.c fread.c freopen.c fscanf.c \
++	fpurge.c fputc.c fputs.c fread.c freopen.c fscanf.c \
+ 	fseek.c fsetpos.c ftell.c funopen.c fvwrite.c fwalk.c fwrite.c \
+ 	getc.c getchar.c gets.c getw.c makebuf.c perror.c putc.c \
+ 	putchar.c puts.c putw.c refill.c remove.c rewind.c rget.c scanf.c \
