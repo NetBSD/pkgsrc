@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.37 2002/03/04 21:10:47 hubertf Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.38 2002/06/29 03:33:34 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -102,6 +102,10 @@ INDEXFILE?=	${_PKGSRCDIR}/.index${BULK_ID}
 # the correct order is one where packages that are required by others are built
 # before the packages which require them.
 ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
+
+# file which is used as a timestamp for when the build started.  This is used eventually
+# for looking for leftover files (files not properly deinstalled)
+STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
 
 # a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.

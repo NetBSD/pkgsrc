@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.20 2002/06/28 08:46:38 agc Exp $
+# $NetBSD: pre-build,v 1.21 2002/06/29 03:33:35 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -28,12 +28,17 @@ PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
 export BROKENF=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
-	echo "Had problems determining the name of the .broken.files"
+	echo "Had problems determining the name of the .broken files"
 	exit 1
 fi
 BLDLOG=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
-	echo "Had problems determining the name of the .make.files"
+	echo "Had problems determining the name of the .make files"
+	exit 1
+fi
+STARTFILE=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=STARTFILE )`;
+if [ "$BLDLOG" = "" ]; then
+	echo "Had problems determining the name of the .start file"
 	exit 1
 fi
 
@@ -94,7 +99,7 @@ rm -fr /var/wwwoffle		# www/wwwoffle
 cd ${USR_PKGSRC}
 rm -f $BROKENF */*/$BROKENF
 rm -f $BLDLOG */*/$BLDLOG
-rm -f .start.${arch}
+rm -f $STARTFILE
 
 
 
@@ -163,4 +168,5 @@ fi
 
 mkdir ${PKG_DBDIR}
 
-touch .start.${arch}
+touch $STARTFILE
+
