@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/05/02 11:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2003/05/12 16:07:16 jmc Exp $
 
 DISTNAME=	kdebase-2.2.2
 PKGREVISION=	2
@@ -28,6 +28,7 @@ LIBS+=			-Wl,--export-dynamic
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
+UNLIMIT_RESOURCES=      datasize
 
 .if ${OPSYS} == "Linux"
 KDE2_NSPLUGINS?=	YES
