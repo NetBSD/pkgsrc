@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2004/01/24 08:13:14 grant Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2005/01/25 13:09:03 tv Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_AE.so
@@ -25,6 +25,8 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_Snd.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_TE.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_Win.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/gestalt.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/icglue.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/macfs.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
