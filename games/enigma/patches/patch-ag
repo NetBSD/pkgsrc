@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+
+--- etc/Makefile.in.orig	Sat Oct 11 17:09:27 2003
++++ etc/Makefile.in
+@@ -328,7 +328,8 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-desktopDATA install-iconDATA install-pixmapDATA
++#install-data-am: install-desktopDATA install-iconDATA install-pixmapDATA
++install-data-am: install-iconDATA install-pixmapDATA
+ 
+ install-exec-am:
+ 

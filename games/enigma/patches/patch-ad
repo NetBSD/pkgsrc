@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+
+--- doc/manual/Makefile.in.orig	Sat Oct 11 19:19:56 2003
++++ doc/manual/Makefile.in
+@@ -146,7 +146,7 @@ HTML = $(wildcard enigma_*.html) \
+ 	index.html
+ 
+ 
+-htmldir = @datadir@/doc/enigma
++htmldir = @datadir@/doc/html/enigma
+ html_DATA = $(HTML)
+ 
+ EXTRA_DIST = enigma.texi $(html_DATA)
