@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/06 10:53:26 rh Exp $
+
+--- toc/src/Makefile.in.orig	Fri Apr  6 10:14:53 2001
++++ toc/src/Makefile.in
+@@ -105,7 +105,7 @@
+ INCLUDES =  	-I$(top_srcdir)/libs 	$(XML_CFLAGS)
+ 
+ 
+-LDADD =  	$(XML_LIBS) 	$(top_builddir)/libs/libscrollkeeper.la
++LDADD =  	$(XML_LIBS) 	-L$(top_builddir)/libs/.libs -Wl,-R`cd $(top_builddir) ; pwd`/libs/.libs -lscrollkeeper
+ 
+ 
+ bin_PROGRAMS = scrollkeeper_toc 
