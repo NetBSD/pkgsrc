@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/07/02 10:55:22 wiz Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -51,7 +51,7 @@ mmessage::
 	@${ECHO} "     membership file directory: ${MAILINGLIST_DIR}"
 	@${ECHO} "     membership file directory: ${MAJORDOMO_LIST_DIR} (for majordomo)"
 	@${ECHO} "     archiving directory: ${ARCHIVE_DIR}"
-	@${ECHO} "     if necessery, override them and perform compilation again."
+	@${ECHO} "     if necessary, override them and perform compilation again."
 	@${ECHO} "     there's no way to override them at runtime."
 
 .include "../../mk/bsd.pkg.mk"
