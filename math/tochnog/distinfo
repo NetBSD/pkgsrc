@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/29 16:17:50 jtb Exp $
 
-MD5 (tochnog-20010210/tn.tar.gz) = 8d48f9c18e9c30b5901f22b4392487de
-MD5 (tochnog-20010210/tnu.ps.gz) = 5af220e1c643ade9ef9aad309ad84ea0
-MD5 (tochnog-20010210/tnp.ps.gz) = d6b795565e655c1aada309709815f4ab
-SHA1 (patch-aa) = e09d2a76fbd09208eb04564ac05e37e89f7599d0
+SHA1 (tochnog-20010429/tn.tar.gz) = a4628df82573b5b9ebf5deeb9f32c6068cff5fed
+Size (tochnog-20010429/tn.tar.gz) = 394723 bytes
+SHA1 (tochnog-20010429/tnu.ps.gz) = 9f41c9cf997f3e4ee60a735dd584bef19be69ef9
+Size (tochnog-20010429/tnu.ps.gz) = 756685 bytes
+SHA1 (tochnog-20010429/tnp.ps.gz) = d12a0840f8cceae67dea8bd18a2405a05f356d9b
+Size (tochnog-20010429/tnp.ps.gz) = 41836 bytes
+SHA1 (patch-aa) = c11e22272c8b64fff0556415ea9f90b9f318718a
 SHA1 (patch-ab) = e90269af74181a3ce4be670b83ac07ff7e1a7c94
