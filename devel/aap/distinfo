@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/18 12:49:31 cjep Exp $
+
+SHA1 (exec-0.104.zip) = 74e26963b8104c6a7754c7807b283b7436e148c6
+Size (exec-0.104.zip) = 568744 bytes
+SHA1 (patch-aa) = 5ff8d3c6e74a147840c84e71b173afe412bbefd7
