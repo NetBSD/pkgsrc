@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/02/04 22:19:09 abs Exp $
 
-DISTNAME=      	rt-2-0-13
+DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.fsck.com/pub/rt/release/
 
