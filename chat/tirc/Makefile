@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:26:20 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/27 17:07:35 grant Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -30,5 +30,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tirc
 	${INSTALL_DATA} ${WRKSRC}/dot.tircrc ${PREFIX}/share/tirc/tircrc
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

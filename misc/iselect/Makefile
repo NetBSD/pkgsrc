@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:49:12 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/27 17:07:37 grant Exp $
 #
 
 DISTNAME=		iselect-1.2.0
@@ -16,5 +16,5 @@ GNU_CONFIGURE=		# defined
 post-configure:
 	touch ${WRKSRC}/config_ac.h.in
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

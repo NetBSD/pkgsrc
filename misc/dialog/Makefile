@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:48:52 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/27 17:07:37 grant Exp $
 
 DISTNAME=       dialog-0.6z
 PKGREVISION=	2
@@ -27,5 +27,5 @@ post-install:
 		${INSTALL_SCRIPT} $${file} ${EGDIR};			\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

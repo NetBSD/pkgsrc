@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/09/19 21:32:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2003/09/27 17:07:35 grant Exp $
 #
 
 DISTNAME=	centericq-4.9.6
@@ -40,7 +40,7 @@ CPPFLAGS+=		-DAUDIO_PLAYER=\"\\\"${SOX_PREFIX}/bin/play\\\"\"
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 

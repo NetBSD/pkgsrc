@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/09 11:16:24 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/27 17:07:38 grant Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -31,5 +31,5 @@ LDFLAGS+=		-L${BUILDLINK_PREFIX.${_p_}}/lib
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

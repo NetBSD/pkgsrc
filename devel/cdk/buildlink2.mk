@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:04 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/09/27 17:07:35 grant Exp $
 
 .if !defined(CDK_BUILDLINK2_MK)
 CDK_BUILDLINK2_MK=     # defined
@@ -25,7 +25,7 @@ BUILDLINK_PREFIX.cdk=		/usr
 BUILDLINK_FILES.cdk=	include/cdk/*.h
 BUILDLINK_FILES.cdk+=	lib/libcdk.*
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 
 BUILDLINK_TARGETS+=	cdk-buildlink
 

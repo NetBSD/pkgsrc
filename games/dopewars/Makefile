@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/18 18:04:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/27 17:07:36 grant Exp $
 
 DISTNAME=		dopewars-1.5.9
 PKGREVISION=		2
@@ -30,5 +30,5 @@ USE_NCURSES=		# KEY_RESIZE
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/09 10:59:12 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/09/27 17:07:36 grant Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -29,7 +29,7 @@ INFO_FILES=		guile.info
 CFLAGS+=		${PTHREAD_CFLAGS}
 
 .include "../../devel/libtool/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
