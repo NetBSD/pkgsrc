@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2002/12/24 06:09:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/08 21:03:15 rh Exp $
 #
 
-DISTNAME=	gtkdiff-1.6.0
-PKGREVISION=	3
+DISTNAME=	gtkdiff-1.8.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	http://www.ainet.or.jp/~inoue/software/gtkdiff/
+MASTER_SITES=	http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.ainet.or.jp/~inoue/software/gtkdiff/index-e.html
+HOMEPAGE=	http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/index-e.html
 COMMENT=	diff front-end program using GNOME
 
 USE_BUILDLINK2=		YES
