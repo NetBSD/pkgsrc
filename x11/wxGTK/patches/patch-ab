@@ -1,0 +1,196 @@
+--- Makefile.in.orig	Sun Jul  9 05:04:14 2000
++++ Makefile.in	Thu Jul 27 21:55:59 2000
+@@ -37,16 +37,12 @@
+ VP4 = @top_srcdir@/src/generic
+ VP5 = @top_srcdir@/src/unix
+ VP6 = @top_srcdir@/src/html
+-VP7 = @top_srcdir@/src/png
+-VP8 = @top_srcdir@/src/jpeg
+-VP9 = @top_srcdir@/src/tiff
+-VP10 = @top_srcdir@/src/zlib
+ VP11 = @top_srcdir@/src/iodbc
+ 
+ # the comment at the end of the next line is needed because otherwise autoconf
+ # would remove this line completely - it contains a built-in hack to remove
+ # any VPATH assignment not containing ':'
+-VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP7)@PATH_IFS@$(VP8)@PATH_IFS@$(VP9)@PATH_IFS@$(VP10)@PATH_IFS@$(VP11) # ':' for autoconf
++VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP11) # ':' for autoconf
+ 
+ top_srcdir = @top_srcdir@
+ prefix = @prefix@
+@@ -75,6 +71,8 @@
+ 
+ top_builddir = .
+ 
++EXTRALIBS=-lz -L@prefix@/lib -R@prefix@/lib -ljpeg -lpng -ltiff
++
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+@@ -110,10 +108,6 @@
+ COMMDIR  = $(WXDIR)/src/common
+ HTMLDIR  = $(WXDIR)/src/html
+ UNIXDIR  = $(WXDIR)/src/unix
+-PNGDIR   = $(WXDIR)/src/png
+-JPEGDIR  = $(WXDIR)/src/jpeg
+-TIFFDIR  = $(WXDIR)/src/tiff
+-ZLIBDIR  = $(WXDIR)/src/zlib
+ GTKDIR   = $(WXDIR)/src/gtk
+ MOTIFDIR = $(WXDIR)/src/motif
+ MSWDIR   = $(WXDIR)/src/msw
+@@ -153,125 +147,6 @@
+ OBJECTS = @ALL_OBJECTS@
+ DEPFILES = @ALL_DEPFILES@
+ 
+-# the object files of sublibraries (we assume that they don't change [often],
+-# so we don't generate these lists with tmake but embed them here)
+-ZLIBOBJS    = \
+-		adler32.o \
+-		compress.o \
+-		crc32.o \
+-		gzio.o \
+-		uncompr.o \
+-		deflate.o \
+-		trees.o \
+-		zutil.o \
+-		inflate.o \
+-		infblock.o \
+-		inftrees.o \
+-		infcodes.o \
+-		infutil.o \
+-		inffast.o
+-
+-PNGOBJS     = \
+-		png.o \
+-		pngread.o \
+-		pngrtran.o \
+-		pngrutil.o \
+-		pngpread.o \
+-		pngtrans.o \
+-		pngwrite.o \
+-		pngwtran.o \
+-		pngwutil.o \
+-		pngerror.o \
+-		pngmem.o \
+-		pngwio.o \
+-		pngrio.o \
+-		pngget.o \
+-		pngset.o
+-
+-
+-JPEGOBJS    = \
+-		jcomapi.o \
+-		jutils.o \
+-		jerror.o \
+-		jmemmgr.o \
+-		jmemnobs.o \
+-		jcapimin.o \
+-		jcapistd.o \
+-		jctrans.o \
+-		jcparam.o \
+-		jdatadst.o \
+-		jcinit.o \
+-		jcmaster.o \
+-		jcmarker.o \
+-		jcmainct.o \
+-		jcprepct.o \
+-		jccoefct.o \
+-		jccolor.o \
+-		jcsample.o \
+-		jchuff.o \
+-		jcphuff.o \
+-		jcdctmgr.o \
+-		jfdctfst.o \
+-		jfdctflt.o \
+-		jfdctint.o \
+-		jdapimin.o \
+-		jdapistd.o \
+-		jdtrans.o \
+-		jdatasrc.o \
+-		jdmaster.o \
+-		jdinput.o \
+-		jdmarker.o \
+-		jdhuff.o \
+-		jdphuff.o \
+-		jdmainct.o \
+-		jdcoefct.o \
+-		jdpostct.o \
+-		jddctmgr.o \
+-		jidctfst.o \
+-		jidctflt.o \
+-		jidctint.o \
+-		jidctred.o \
+-		jdsample.o \
+-		jdcolor.o \
+-		jquant1.o \
+-		jquant2.o \
+-		jdmerge.o
+-
+-TIFFOBJS	= \
+-		tif_aux.o \
+-		tif_close.o \
+-		tif_codec.o \
+-		tif_compress.o \
+-		tif_dir.o \
+-		tif_dirinfo.o \
+-		tif_dirread.o \
+-		tif_dirwrite.o \
+-		tif_dumpmode.o \
+-		tif_error.o \
+-		tif_fax3.o \
+-		tif_fax3sm.o \
+-		tif_getimage.o \
+-		tif_jpeg.o \
+-		tif_flush.o \
+-		tif_lzw.o \
+-		tif_luv.o \
+-		tif_next.o \
+-		tif_open.o \
+-		tif_packbits.o \
+-		tif_pixarlog.o \
+-		tif_predict.o \
+-		tif_print.o \
+-		tif_read.o \
+-		tif_swab.o \
+-		tif_strip.o \
+-		tif_thunder.o \
+-		tif_tile.o \
+-		tif_unix.o \
+-		tif_version.o \
+-		tif_warning.o \
+-		tif_write.o \
+-		tif_zip.o
+-
+ IODBCOBJS = \
+ 		catalog.o \
+ 		connect.o \
+@@ -515,11 +390,6 @@
+ 	cp $(WXDIR)/lib/vms.opt $(DISTDIR)/lib
+ 	cp $(WXDIR)/lib/vms_gtk.opt $(DISTDIR)/lib
+ 	mkdir $(DISTDIR)/src
+-	mkdir $(DISTDIR)/src/zlib
+-	cp $(ZLIBDIR)/*.h $(DISTDIR)/src/zlib
+-	cp $(ZLIBDIR)/*.c $(DISTDIR)/src/zlib
+-	cp $(ZLIBDIR)/README $(DISTDIR)/src/zlib
+-	cp $(ZLIBDIR)/*.mms $(DISTDIR)/src/zlib
+ 
+ # this target is the common part of distribution script for all GUI toolkits,
+ # but is not used when building wxBase distribution
+@@ -550,7 +420,6 @@
+ 	mkdir $(DISTDIR)/src/html/bitmaps
+ 	mkdir $(DISTDIR)/src/$(TOOLKITDIR)
+ 	mkdir $(DISTDIR)/src/png
+-	mkdir $(DISTDIR)/src/jpeg
+ 	mkdir $(DISTDIR)/src/tiff
+ 	mkdir $(DISTDIR)/src/iodbc
+ 	mkdir $(DISTDIR)/src/unix
+@@ -573,9 +442,6 @@
+ 	cp $(PNGDIR)/*.h $(DISTDIR)/src/png
+ 	cp $(PNGDIR)/*.c $(DISTDIR)/src/png
+ 	cp $(PNGDIR)/README $(DISTDIR)/src/png
+-	cp $(JPEGDIR)/*.h $(DISTDIR)/src/jpeg
+-	cp $(JPEGDIR)/*.c $(DISTDIR)/src/jpeg
+-	cp $(JPEGDIR)/README $(DISTDIR)/src/jpeg
+ 	cp $(TIFFDIR)/*.h $(DISTDIR)/src/tiff
+ 	cp $(TIFFDIR)/*.c $(DISTDIR)/src/tiff
+ 	cp $(TIFFDIR)/README $(DISTDIR)/src/tiff
