@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2004/11/08 23:53:20 shannonjr Exp $
+
+--- configure.orig	2004-10-04 02:21:15.000000000 -0600
++++ configure
+@@ -31936,7 +31936,7 @@ fi
+ 
+ 
+ 
+-for ac_header in fcntl.h sys/sysctl.h sys/param.h sys/time.h sys/types.h unistd.h
++for ac_header in fcntl.h sys/sysctl.h sys/param.h sys/time.h sys/types.h unistd.h rfuncs.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
