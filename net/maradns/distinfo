@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/25 14:12:50 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/09/26 10:11:58 xtraeme Exp $
 
-SHA1 (maradns-1.0.17.tar.bz2) = ea5ef5915d8284aa45a09554757bfae895e5e822
-Size (maradns-1.0.17.tar.bz2) = 414083 bytes
+SHA1 (maradns-1.0.18.tar.bz2) = 788b875bed781f11dea8f4d38209e4bd49dc42d8
+Size (maradns-1.0.18.tar.bz2) = 414047 bytes

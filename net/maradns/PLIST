@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 14:12:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/26 10:11:58 xtraeme Exp $
 bin/askmara
 bin/getzone
-etc/mararc
 etc/rc.d/maradns
 man/man1/askmara.1
 man/man1/getzone.1
@@ -165,4 +164,14 @@ share/examples/maradns/example_full_mararc
 share/examples/maradns/example_mararc
 share/examples/maradns/example_recursive_mararc.txt
 @dirrm share/examples/maradns
+@dirrm share/doc/maradns/man
+@dirrm share/doc/maradns/misc/js-manpages
+@dirrm share/doc/maradns/misc/man_macros
+@dirrm share/doc/maradns/misc/rfc
+@dirrm share/doc/maradns/misc/spammers/hiddenonline
+@dirrm share/doc/maradns/misc/spammers
+@dirrm share/doc/maradns/misc
+@dirrm share/doc/maradns/ps
+@dirrm share/doc/maradns/source
+@dirrm share/doc/maradns/tutorial
 @dirrm share/doc/maradns
