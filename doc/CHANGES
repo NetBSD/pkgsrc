@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3624 2003/10/03 09:33:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3625 2003/10/03 09:50:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4058,3 +4058,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-MP3-Tag to 0.40 [explorer 2003-10-02]
 	Updated xchat2 to 2.0.5nb1 [xtraeme 2003-10-03]
 	Updated xpad to 1.12 [xtraeme 2003-10-03]
+	Updated loudmouth to 0.14 [xtraeme 2003-10-03]
