@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/10 05:59:01 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -38,23 +38,7 @@ INSTALLATION_DIRS+=	share/examples/ezmlm-idx
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		EZMLM_IDX_USE_MYSQL EZMLM_IDX_USE_PGSQL
-
-.if !empty(EZMLM_IDX_USE_MYSQL:M[yY][eE][sS])
-.include "../../databases/mysql-client/buildlink3.mk"
-post-configure:
-	${ECHO} -I${BUILDLINK_PREFIX.mysql-client}/include/mysql > ${WRKSRC}/sub_mysql/conf-sqlcc
-	${ECHO} -L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql -lmysqlclient > ${WRKSRC}/sub_mysql/conf-sqlld
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} mysql
-.endif
-
-.if !empty(EZMLM_IDX_USE_PGSQL:M[yY][eE][sS])
-.include "../../mk/pgsql.buildlink3.mk"
-post-configure:
-	${ECHO} -I${PGSQL_PREFIX}/include > ${WRKSRC}/sub_pgsql/conf-sqlcc
-	${ECHO} -L${PGSQL_PREFIX}/lib -Wl,-R${PGSQL_PREFIX}/lib -lpq > ${WRKSRC}/sub_pgsql/conf-sqlld
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} pgsql
-.endif
+.include "options.mk"
 
 post-extract:
 	@${MV} ${WRKSRC}/* ${WRKDIR}/${EZMLM_VERS}
