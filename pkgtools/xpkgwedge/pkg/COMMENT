@@ -1,1 +1,1 @@
-Allows X11 pkgs to be built for installation outside of /usr/X11R6
+allows X11 pkgs to be built and used outside of /usr/X11R6
