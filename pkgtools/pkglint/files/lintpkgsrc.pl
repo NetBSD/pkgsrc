@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.71 2002/09/30 16:08:18 atatat Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.72 2002/11/14 04:01:56 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -838,7 +838,7 @@ sub parse_makefile_vars
 	if (m#^\.include\s+"([^"]+)"#)
 	    {
 	    $_ = $1;
-	    if (! m#/mk/#)
+	    if (! m#/mk/bsd#)
 		{
 		my($incfile) = ($_);
 
