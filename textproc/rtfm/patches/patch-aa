@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/14 14:57:34 zuntum Exp $
 
 --- rtfm.c.orig	Tue Jan 18 06:16:45 2000
 +++ rtfm.c
@@ -12,13 +12,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
 -	"/usr/local/info",
 -	"/usr/info",
 -	"/usr/local/lib/info",
-+	"/usr/pkg/info",
-+	"/usr/pkg/lib/info",
++	"@LOCALBASE@/info",
++	"@LOCALBASE@/lib/info",
  	"/usr/lib/info",
 -	"/usr/local/gnu/info",
 -	"/usr/local/gnu/lib/info",
-+	"/usr/pkg/gnu/info",
-+	"/usr/pkg/gnu/lib/info",
++	"@LOCALBASE@/gnu/info",
++	"@LOCALBASE@/gnu/lib/info",
  	"/usr/gnu/info",
  	"/usr/gnu/lib/info",
  	"/opt/gnu/info",
@@ -26,15 +26,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
  	"/usr/share/lib/info",
 -	"/usr/local/share/info",
 -	"/usr/local/share/lib/info",
-+	"/usr/pkg/share/info",
-+	"/usr/pkg/share/lib/info",
++	"@LOCALBASE@/share/info",
++	"@LOCALBASE@/share/lib/info",
  	"/usr/gnu/lib/emacs/info",
 -	"/usr/local/gnu/lib/emacs/info",
 -	"/usr/local/lib/emacs/info",
 -	"/usr/local/emacs/info",
-+	"/usr/pkg/gnu/lib/emacs/info",
-+	"/usr/pkg/lib/emacs/info",
-+	"/usr/pkg/emacs/info",
++	"@LOCALBASE@/gnu/lib/emacs/info",
++	"@LOCALBASE@/lib/emacs/info",
++	"@LOCALBASE@/emacs/info",
  	".",
  	NULL
  };
