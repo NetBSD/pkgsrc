@@ -1,29 +1,30 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/05 11:19:10 uebayasi Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
 PKGNAME=	skk-12.2.0
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html
 COMMENT=	Japanese input methods for Emacs
 
 CONFLICTS=	ddskk-*
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
+
 .include "../../mk/emacs.mk"
+.include "options.mk"
 
 DEPENDS=	${PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}lookup-*:../../misc/lookup
 EMACS_USE_LEIM=	# defined
-BUILD_DEPENDS+=	Mule-UCS-*:../../editors/mule-ucs
-.else # xemacs
-PKGNAME=	xemacs-skk-12.2.0	# XXX
-BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}Mule-UCS-*:../../editors/mule-ucs
+.else
+BUILD_DEPENDS+= ${PKGNAME_PREFIX}xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
 
 MAKEFLAGS=	EMACS=${EMACS_BIN}
