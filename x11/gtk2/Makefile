@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/21 01:37:52 rh Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/07 15:43:53 wiz Exp $
 #
 
 DISTNAME=		gtk+-2.0.6
@@ -15,8 +15,9 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
+USE_X11=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		yes
 
@@ -24,14 +25,13 @@ GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-.include "../../devel/atk/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/glib2/buildlink.mk"
-.include "../../devel/pango/buildlink.mk"
-.include "../../devel/pkgconfig/buildlink.mk"
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/atk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/pango/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
