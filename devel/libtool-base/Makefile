@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/03/03 22:30:15 garbled Exp $
+# $NetBSD: Makefile,v 1.58 2005/03/05 07:43:05 grant Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -22,8 +22,11 @@ CONFLICTS+=	libtool<=1.3.5nb11
 TEST_TARGET=	check
 
 .if ${OPSYS} == "AIX"
-LDFLAGS+=       -Wl,-brtl
-CONFIGURE_ARGS+=    --disable-libtool-lock
+# always build libraries and executables that use the runtime linker.
+# in addition, disable libtool locking, as the test is broken on AIX,
+# and results in files being locked indefinitely.
+LDFLAGS+=		-Wl,-brtl
+CONFIGURE_ARGS+=	--disable-libtool-lock
 .endif
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
