@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/07/14 19:01:35 fredb Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/10/28 15:54:31 heinz Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -14,8 +14,8 @@ _NEED_BINUTILS=		YES
 .else
 _NEED_BINUTILS=		NO
 #
-# These versions of NetBSD didn't have a toolchain that was capable of
-# replacing binutils.
+# These versions of NetBSD didn't have a toolchain that could be used in
+# place of modern binutils and will need this package
 #
 _INCOMPAT_BINUTILS=	NetBSD-0.*-* NetBSD-1.[01234]*-*
 _INCOMPAT_BINUTILS+=	NetBSD-1.5.*-* NetBSD-1.5[A-X]-*
