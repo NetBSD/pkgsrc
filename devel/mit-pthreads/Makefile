@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/12/28 22:11:47 bad Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/01 01:39:27 hubertf Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -18,6 +18,7 @@ pre-install:
 	-mkdir ${PREFIX}/pthreads
 
 post-install:
+	find ${PREFIX}/pthreads/include -name '*.orig'|xargs rm
 	find ${PREFIX}/pthreads/include -type f -print|xargs chmod 644
 	find ${PREFIX}/pthreads/include -type d -print|xargs chmod 755
 
