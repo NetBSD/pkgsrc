@@ -92,7 +92,7 @@
 -BINDIR=/usr/pgrad/matty/bin/$(cputype)
 +OS= -D_LIBXG_EXTENSION -DSUNOS
 +
-+SAMPATH=../../../sam/${WRKDIR:T}
++SAMPATH=${PKGSRCDIR}/plan9/sam/${WRKDIR:T}
 +
 +BINDIR=.			# where we'll install it
  
