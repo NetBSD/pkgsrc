@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/05/10 15:29:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/18 16:06:37 agc Exp $
 
 DISTNAME=		macutil
 PKGNAME=		macutil-2.0b3
@@ -12,9 +12,6 @@ MAKEFILE=		makefile
 EXTRACT_CMD=		zcat
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
-
-MAN1=		macunpack.1 hexbin.1 macsave.1 macstream.1 binhex.1 tomac.1 \
-		frommac.1 macutil.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/macunpack/macunpack \
