@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 18:02:19 jlam Exp $
+bin/memconfig
+bin/xf86test
+include/memrange.h
+lkm/xf86.o
+lkm/xf86_mod_install
+@unexec rm -f %D/lkm/xf86
+man/cat4/xf86.0
+man/cat8/memconfig.0
+man/man4/xf86.4
+man/man8/memconfig.8
+@dirrm lkm
