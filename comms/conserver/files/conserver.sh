@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: conserver.sh,v 1.3 2002/09/20 02:01:55 grant Exp $
+# $NetBSD: conserver.sh,v 1.4 2004/07/10 22:35:32 salo Exp $
 #
 # PROVIDE: conserver
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
        . /etc/rc.subr
 fi
@@ -18,7 +18,7 @@ pidfile="/var/run/conserver.pid"
 command_args="-d"              # _must_ start as daemon from rc.d;
                                # add more flags through ${${name}_flags}
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
        load_rc_config $name
        run_rc_command "$1"
