@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/07/02 11:37:33 agc Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/23 07:41:19 salo Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS=		-dres \
 			-Dutmp='/var/run/utmp' \
 			-Dprefix='${PREFIX}' -Dmansrc='${PREFIX}/man/man1' \
 			-Dnotifypatches='false'
-MAKE_ENV=		PATH=`dirname ${PERL5}`:${PATH}
+MAKE_ENV=		PATH=`${DIRNAME} ${PERL5}`:${PATH}
 INSTALL_TARGET=		install install.man
 
 pre-extract:
@@ -29,7 +29,7 @@ pre-extract:
 	  ${ECHO} "Please set umask to 022 before running make,"; \
 	  ${ECHO} "or mailagent will not build successfully."; \
 	  ${FALSE}; fi
-	@if [ `id -u` = 0 ]; then \
+	@if [ `${ID} -u` = 0 ]; then \
 	  ${ECHO} "Do not build mailagent as root or it won't pass the sanity tests."; \
 	  ${FALSE}; fi
 
