@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1548 2004/03/29 23:40:52 wiz Exp $
+$NetBSD: TODO,v 1.1549 2004/03/30 00:26:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,7 @@ Suggested package updates
 	o elm-me-2.4pl113
 	o ethereal-0.10.3
 	o evolution-1.5.2
-	o exim-4.24
+	o exim-4.31
 	o festival-1.4.3
 	o ffmpeg-0.4.8
 	o file-4.08
@@ -196,6 +196,7 @@ Suggested package updates
 	o gdb-6.0
 	o generator-0.35
 	o gettext-0.14.1
+	o gftp-2.0.17
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
@@ -203,7 +204,7 @@ Suggested package updates
 	o global-4.6
 	o glpk-4.3
 	o gnome-vfs2-2.4.3
-	o gnomeicu-0.99
+	o gnomeicu-0.99.5
 	o gnumeric-1.2.8
 	o gnustep-1.9.1
 	o gpsim-0.21.0 [bouyer]
@@ -273,6 +274,7 @@ Suggested package updates
 	o napshare-1.2
 	o net-snmp-5.1.1
 	o netatalk-1.6.3 [pkg/21930]
+	o ngrep-1.42
 	o nosefart-1.92j-mls
 	o ns-flash-6.0.79
 	o nsd-2.0.2
@@ -316,8 +318,8 @@ Suggested package updates
 	o scm-5d9
 	o scmxx-0.6.4.1
 	o scribus-1.1.6
-	o scummvm-0.6.0
 	o sendfile-20010424
+	o shorten-3.5.2
 	o siag-3.6.0
 	o skill-4.1.1
 	o skkinput-2.06.4
@@ -338,6 +340,7 @@ Suggested package updates
 	o tcpreplay-2.0.3
 	o tct-1.14
 	o teapop-0.3.8
+	o timidity-2.13.0
 	o tkman-2.2
 	o tmda-1.0.2
 	o top-3.5b12.10
