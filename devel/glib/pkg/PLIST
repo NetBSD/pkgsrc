@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/12/18 23:52:22 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/01/15 22:57:13 tron Exp $
 bin/glib-config
 include/glib/glib.h
 include/glib/glibconfig.h
@@ -8,13 +8,13 @@ info/glib.info
 @exec %D/bin/install-info %D/info/glib.info %D/info/dir
 lib/libglib.a
 lib/libglib.la
-lib/libglib.so.9.0
+lib/libglib.so.12.0
 lib/libgmodule.a
 lib/libgmodule.la
-lib/libgmodule.so.9.0
+lib/libgmodule.so.12.0
 lib/libgthread.a
 lib/libgthread.la
-lib/libgthread.so.9.0
+lib/libgthread.so.12.0
 man/man1/glib-config.1
 share/aclocal/glib.m4
 @dirrm include/glib
