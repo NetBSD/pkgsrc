@@ -3,7 +3,8 @@
 # Date Created:		04 Aug 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $Id: Makefile,v 1.1.1.1 1998/03/01 22:34:11 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/02 00:05:15 tron Exp $
+# $Id: Makefile,v 1.2 1998/03/02 00:05:15 tron Exp $
 #
 
 DISTNAME=       uudeview-0.5.13
@@ -13,19 +14,17 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 
 MAINTAINER=	hoek@FreeBSD.ORG
 
-LIB_DEPENDS=	uu\\.1\\.:${PORTSDIR}/converters/uulib
+LIB_DEPENDS=	uu.1.:${PORTSDIR}/converters/uulib
 
 GNU_CONFIGURE=	Yes
-CONFIGURE_ARGS=	--enable-inews=${PREFIX}/news/lib/inews \
-		--disable-tcl
+CONFIGURE_ARGS=	--enable-inews=inews --disable-tcl
+CONFIGURE_ENV=	LDFLAGS=-s
 
 MAN1=		uudeview.1 uuenview.1
 
 PORTDOCDIR?=	share/doc/uudeview
 
 post-install:
-	@/usr/bin/strip ${PREFIX}/bin/uudeview
-	@/usr/bin/strip ${PREFIX}/bin/uuenview
 .if !defined(NOPORTDOCS)
 	@${ECHO_MSG} "===>  Copying documents to ${PREFIX}/${PORTDOCDIR}"
 	@${MKDIR} ${PREFIX}/${PORTDOCDIR}
