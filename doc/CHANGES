@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.976 2003/01/02 15:52:35 mjl Exp $
+$NetBSD: CHANGES,v 1.977 2003/01/02 17:22:33 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -37,3 +37,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Devel-StackTrace-1.02 [mjl 2002-01-02]
 	Added p5-Test-Inline-0.15 [mjl 2002-01-02]
 	Updated p5-DBIx-SearchBuilder to 0.76 [mjl 2002-01-02]
+	Updated docbook-xsl to 1.58.1nb1 [grant 2002-01-02]
