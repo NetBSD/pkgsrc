@@ -1,10 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/26 15:59:56 garbled Exp $
-#
-# New ports collection makefile for:	hint
-# Version required:	12 June 1998 (no version stamp)
-# Date created:		18 May 1998
-# Whom:			ghelmer
-#
+# $NetBSD: Makefile,v 1.5 1999/02/10 14:59:50 frueauf Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 

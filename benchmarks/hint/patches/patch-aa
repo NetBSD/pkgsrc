@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/02/10 14:59:50 frueauf Exp $
+
 *** /dev/null	Fri Jun 12 13:20:02 1998
 --- hint.1	Fri Jun 12 14:14:15 1998
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/02/10 14:59:50 frueauf Exp $
+
 *** hint.c.ORIG	Sun May 31 15:34:52 1998
 --- hint.c	Mon Jun 15 09:44:53 1998
 ***************
