@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/12 12:59:44 frueauf Exp $
+bin/civclient
+bin/civserver
+lib/X11/app-defaults/Freeciv
+share/freeciv/data/helpdata.txt
+share/freeciv/data/intro.xpm
+share/freeciv/data/radar.xpm
+share/freeciv/data/small.xpm
+share/freeciv/data/tiles.xpm
+share/freeciv/data/treaty.xpm
+share/freeciv/data/units.xpm
+@dirrm share/freeciv/data
+@dirrm share/freeciv
