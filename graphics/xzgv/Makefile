@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/02 01:19:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/03 19:17:16 seb Exp $
 
 DISTNAME=	xzgv-0.7
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://xzgv.browser.org/
 COMMENT=	Image viewer
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	xzgv
 
 USE_BUILDLINK2=		yes
@@ -24,5 +26,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info ; done
 
 .include "../../graphics/imlib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
