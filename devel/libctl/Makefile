@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/07/15 13:00:31 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/17 14:35:32 taca Exp $
 
 DISTNAME=	libctl-1.4.1
 CATEGORIES=	devel
-MASTER_SITES=	http://superjdj.mit.edu/libctl/
+MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
