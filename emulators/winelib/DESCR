@@ -1,0 +1,2 @@
+Library to bind Wine as shared library.
+It is needed to use mono's Windows.Forms APIs.
