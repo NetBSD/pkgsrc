@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/10/28 17:00:27 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/30 12:31:29 wiz Exp $
 
---- setup.py.orig	2004-08-15 23:37:11.000000000 +0200
+--- setup.py.orig	2004-10-06 21:50:32.000000000 +0200
 +++ setup.py
-@@ -18,12 +18,12 @@ setup(
+@@ -18,11 +18,11 @@
      
      packages = ["BitTornado","BitTornado.BT1"],
  
@@ -12,7 +12,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/10/28 17:00:27 wiz Exp $
 -        "btdownloadcurses.py", "btcompletedirgui.py", "btlaunchmanycurses.py", 
 +        "btdownloadcurses.py", "btlaunchmanycurses.py", 
          "btmakemetafile.py", "btreannounce.py", "btrename.py", "btshowmetainfo.py",
-         "bttest.py",
 -        'btmaketorrentgui.py', 'btcopyannounce.py', 'btsethttpseeds.py',
 +        'btcopyannounce.py', 'btsethttpseeds.py',
          'bt-t-make.py',
