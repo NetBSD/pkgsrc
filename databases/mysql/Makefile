@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/12/28 16:17:12 bad Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/04 15:47:35 frueauf Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=--localstatedir=${MYSQL_DATADIR} \
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+LDFLAGS+=	-Wl,-R${LOCALBASE}/lib/mysql
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
