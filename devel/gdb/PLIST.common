@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/23 10:54:15 seb Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2003/10/24 18:49:52 reed Exp $
 bin/gdb
 include/ansidecl.h
 include/bfd.h
