@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/16 00:03:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/16 00:22:04 hubertf Exp $
 #
 
 DISTNAME=	XML-Parser.2.30
@@ -15,9 +15,7 @@ USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Parser/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL \
-		EXPATLIBPATH=${LOCALBASE}/lib \
-		EXPATINCPATH=${LOCALBASE}/include
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
