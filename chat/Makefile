@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/01/31 07:36:19 martti Exp $
+# $NetBSD: Makefile,v 1.32 2002/03/10 11:02:16 hubertf Exp $
 #
 
 COMMENT=	communication programs
@@ -7,6 +7,7 @@ SUBDIR+=	aim
 SUBDIR+=	bitchx
 SUBDIR+=	blackened
 SUBDIR+=	bnc
+SUBDIR+=	centericq
 SUBDIR+=	dircproxy
 SUBDIR+=	epic4
 SUBDIR+=	everybuddy
