@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2003/09/02 09:29:55 frueauf Exp $
+$NetBSD: distinfo,v 1.11 2003/11/08 07:40:17 xtraeme Exp $
 
-SHA1 (nessus-plugins-2.0.7.tar.gz) = 5bb29fa4019099f2d25787eefcad2a5779a287b7
-Size (nessus-plugins-2.0.7.tar.gz) = 1401136 bytes
+SHA1 (nessus-plugins-2.0.9.tar.gz) = ff4344c88ac72a7d97e503018efce338d424e037
+Size (nessus-plugins-2.0.9.tar.gz) = 1491175 bytes
