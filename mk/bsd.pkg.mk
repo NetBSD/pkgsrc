@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.156 1998/09/04 10:08:27 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.157 1998/09/04 10:26:59 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -251,16 +251,20 @@ EXTRACT_SUFX?=		.tar.gz
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
+.if (${OPSYS} == "NetBSD")
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
+MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.x11.dist
+.else
+MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.pkg.dist
+.endif
+.else # not NetBSD
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
-.if (${OPSYS} == "NetBSD")
-MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.pkg.dist
-.else
 MTREE_FILE=	/etc/mtree/BSD.local.dist
 .endif
-.endif
-.endif
+.endif # not NetBSD
+.endif # not MTREE_FILE
 MTREE_CMD?=	/usr/sbin/mtree
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
