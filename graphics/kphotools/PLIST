@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/28 14:09:40 markd Exp $
+bin/kphotools
+share/doc/kde/HTML/en/kphotools/common
+share/doc/kde/HTML/en/kphotools/index.cache.bz2
+share/doc/kde/HTML/en/kphotools/index.docbook
+share/kde/applnk/Utilities/kphotools.desktop
+share/kde/apps/kphotools/kphotoolsui.rc
+share/kde/icons/hicolor/16x16/apps/kphotools.png
+share/kde/icons/hicolor/32x32/apps/kphotools.png
+@dirrm share/kde/apps/kphotools
+@dirrm share/doc/kde/HTML/en/kphotools
