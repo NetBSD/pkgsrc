@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/01/26 10:51:44 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/02 09:39:26 grant Exp $
 #
 
-DISTNAME=       cucipop-1.31
+DISTNAME=	cucipop-1.31
 PKGREVISION=	1
-CATEGORIES=     mail
+CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
