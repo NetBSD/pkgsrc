@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/01/18 13:37:26 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/19 12:49:33 minskim Exp $
 #
 
 DISTNAME=	awstats-6.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 EXTRACT_SUFX=	.tgz
@@ -22,16 +23,41 @@ REPLACE_PERL=	tools/*.pl		\
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/bin
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/cgi-bin
+	${INSTALL_DATA_DIR} ${PREFIX}/awstats/cgi-bin/plugins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/awstats
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/awstats
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${PREFIX}/awstats/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/wwwroot/cgi-bin/*.pl		\
+		${PREFIX}/awstats/cgi-bin
 	${INSTALL_DATA} ${WRKSRC}/wwwroot/cgi-bin/awstats.model.conf	\
 		${PREFIX}/share/examples/awstats/awstats.conf
-	${RM} ${WRKSRC}/wwwroot/cgi-bin/awstats.model.conf
 	${INSTALL_DATA} ${WRKSRC}/wwwroot/cgi-bin/plugins/example/example.pm \
 		${PREFIX}/share/examples/awstats/example.pm
-	${RM} -fr ${WRKSRC}/wwwroot/cgi-bin/plugins/example
-	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm . ${PREFIX}/awstats/
+	${INSTALL_DATA} ${WRKSRC}/wwwroot/cgi-bin/plugins/*.pm		\
+		${PREFIX}/awstats/cgi-bin/plugins
+.for d in lang lib
+	cd ${WRKSRC}/wwwroot/cgi-bin					\
+		&& ${PAX} -rwpppm $d ${PREFIX}/awstats/cgi-bin/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/cgi-bin/$d
+	${FIND} ${PREFIX}/awstats/cgi-bin/$d -type d -print	\
+		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${PREFIX}/awstats/cgi-bin/$d -type f -print	\
+		| ${XARGS} ${CHMOD} ${SHAREMODE}
+.endfor
+.for d in classes css icon js
+	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm $d ${PREFIX}/awstats/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/$d
+	${FIND} ${PREFIX}/awstats/$d -type d -print	\
+		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${PREFIX}/awstats/$d -type f -print	\
+		| ${XARGS} ${CHMOD} ${SHAREMODE}
+.endfor
 	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/html/awstats/
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/html/awstats/
+	${FIND} ${PREFIX}/share/doc/html/awstats/ -type d -print	\
+		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${PREFIX}/share/doc/html/awstats/ -type f -print	\
+		| ${XARGS} ${CHMOD} ${DOCMODE}
 
 .include "../../mk/bsd.pkg.mk"
