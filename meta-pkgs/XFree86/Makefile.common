@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/07/20 22:23:25 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/07/21 21:40:17 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -162,7 +162,7 @@ _XINCLUDE_DIRS=	include ${XBUILD_DIRS} ${XINCLUDE_DIRS}
 #
 # Operating Systems to pass our compiler options (CC, CXX, CPP, CFLAGS).
 #
-SYSTEMS=	FreeBSD NetBSD linux
+SYSTEMS=	FreeBSD NetBSD OpenBSD linux
 
 .if !defined(NO_XFREE86_TARGETS)
 
