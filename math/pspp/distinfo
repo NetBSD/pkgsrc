@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/06/28 08:00:27 agc Exp $
+$NetBSD: distinfo,v 1.5 2002/10/02 21:23:18 dillo Exp $
 
 SHA1 (pspp-0.3.0.tar.gz) = 1d07a7e7ef0677e5934331ed0b80b92c7bba7074
 Size (pspp-0.3.0.tar.gz) = 1122999 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-ag) = 3a565a2becf76af67e1cf6b443ed51e24b4fd0f0
 SHA1 (patch-ah) = 8fd5821c09fcc5ea4f96a198186c99e0d958842d
 SHA1 (patch-ai) = f6886d4cd3779f71353dc0e013f3b37b86fe7474
 SHA1 (patch-aj) = e34a0638b8226efdf33cee4eccd40fc4dcaf6210
+SHA1 (patch-ak) = fc3eee590babb3730c76a8226a4549f32a942280
