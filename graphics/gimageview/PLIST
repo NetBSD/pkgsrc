@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/12 11:29:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/12 01:48:16 simonb Exp $
 bin/gimv
 lib/gimageview/archiver/libgimv_lha_extarc.a
 lib/gimageview/archiver/libgimv_lha_extarc.la
@@ -117,6 +117,7 @@ share/doc/gimageview/html/ja/todo.html
 share/doc/gimageview/text/C/AUTHORS
 share/doc/gimageview/text/C/COPYING
 share/doc/gimageview/text/C/ChangeLog
+share/doc/gimageview/text/C/HACKING
 share/doc/gimageview/text/C/INSTALL
 share/doc/gimageview/text/C/NEWS
 share/doc/gimageview/text/C/README
