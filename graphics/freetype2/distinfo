@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/08 16:36:01 agc Exp $
 
-MD5 (freetype-2.0.1.tar.gz) = 2781732a9150e524d6959f4f297b411a
+SHA1 (freetype-2.0.1.tar.gz) = 23df2882bccab7ff55273aa18553f329bfae6979
+Size (freetype-2.0.1.tar.gz) = 895715 bytes
