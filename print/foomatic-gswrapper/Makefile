@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:44 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/24 22:32:00 jlam Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	${DISTNAME}-1.2
@@ -25,18 +25,16 @@ DIST_SUBDIR=	${PKGNAME}
 
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
-USE_PERL5=	# defined
-WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	# defined
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
+USE_BUILDLINK_ONLY=	YES
+WRKSRC=			${WRKDIR}
+EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
-do-build:
-	${MV} ${WRKSRC}/${DISTNAME} ${WRKSRC}/${DISTNAME}.orig
-	${SED}	-e "s,/usr/bin/perl,${PERL5},g"				\
-		${WRKSRC}/${DISTNAME}.orig > ${WRKSRC}/${DISTNAME}
-	${RM} ${WRKSRC}/${DISTNAME}.orig
+REPLACE_PERL=	${DISTNAME}
+
+do-build:	# nothing
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
