@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/11 17:09:54 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/17 01:56:38 xtraeme Exp $
 
 DISTNAME=	BasiliskII_src_14032003
 PKGNAME=	BasiliskII-1.0.20030314
@@ -16,7 +16,11 @@ GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_X11=	yes
-CONFIGURE_ARGS+=--without-gtk --without-esd --disable-fbdev-dga --without-mon
+
+CONFIGURE_ARGS+=	--without-gtk \
+			--without-esd \
+			--disable-fbdev-dga \
+			--without-mon
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/BasiliskII
