@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2004/01/22 08:49:26 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/06 21:40:19 jmmv Exp $
 
-DISTNAME=		libgtop-2.0.7
+DISTNAME=		libgtop-2.0.8
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.0/}
