@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.2 2003/09/12 13:35:29 salo Exp $
+# $NetBSD: compiler.mk,v 1.3 2003/09/12 15:54:40 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -49,11 +49,11 @@ _GCC_PREFIX=            ${LOCALBASE}/${_GCC_SUBPREFIX}
 # dependency.
 .    if defined(USE_GCC_SHLIB)
 DEPENDS+=		gcc>=${GCC_REQD}:../../lang/gcc
-LDFLAGS+=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 .    else
 BUILD_DEPENDS+=		gcc>=${GCC_REQD}:../../lang/gcc
 .    endif
-.  endif
+.  endif	# buildlink2
+
 PATH:=			${_GCC_PREFIX}bin:${PATH}
 CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
@@ -81,11 +81,11 @@ _GCC_ARCHSUBDIR= \
 # dependency.
 .    if defined(USE_GCC_SHLIB)
 DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
-LDFLAGS+=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 .    else
 BUILD_DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
 .    endif
-.  endif
+.  endif	# buildlink2
+
 PATH:=			${_GCC_PREFIX}bin:${PATH}
 CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
@@ -93,5 +93,12 @@ CXX=			${_GCC_PREFIX}bin/g++
 F77=			${_GCC_PREFIX}bin/g77
 PKG_FC=			${F77}
 .endif	# USE_GCC3
+
+# Ensure that the correct rpath is passed to the linker if we need to
+# link against gcc shared libs.
+.if (defined(USE_GCC2) || defined(USE_GCC3)) && defined(USE_GCC_SHLIB)
+_GCC_LDFLAGS=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
+LDFLAGS+=		${_GCC_LDFLAGS}
+.endif
 
 .endif	# COMPILER_MK

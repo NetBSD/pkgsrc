@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/09/12 15:28:54 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/09/12 15:54:44 grant Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC3.
@@ -19,7 +19,6 @@ BUILDLINK_DEPMETHOD.gcc?=	build
 .endif
 
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
-
 _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
 _GCC_LIBGCCDIR!=						\
   if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
@@ -30,13 +29,8 @@ _GCC_LIBGCCDIR!=						\
 _GCC_ARCHSUBDIR= \
   ${_GCC_LIBGCCDIR:S|^${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}||}
 
-BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
-
 BUILDLINK_PACKAGES+=	gcc
 
-.if defined(USE_GCC_SHLIB)
-LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
-.endif
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 
