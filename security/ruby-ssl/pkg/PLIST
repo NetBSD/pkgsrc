@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 13:43:01 taca Exp $
+${RUBY_SITEARCHLIBDIR}/ssl.so
+${RUBY_SITELIBDIR}/buffering.rb
+${RUBY_SITELIBDIR}/net/https.rb
+${RUBY_SITELIBDIR}/net/telnets.rb
+@dirrm ${RUBY_SITELIBDIR}/net
+${RUBY_SITELIBDIR}/ssl.rb
+${RUBY_EXAMPLESDIR}/ssl/cli.rb
+${RUBY_EXAMPLESDIR}/ssl/sample.crt
+${RUBY_EXAMPLESDIR}/ssl/sample.key
+${RUBY_EXAMPLESDIR}/ssl/svr.rb
+${RUBY_EXAMPLESDIR}/ssl/wget.rb
+${RUBY_EXAMPLESDIR}/ssl/wget2.rb
+@dirrm ${RUBY_EXAMPLESDIR}/ssl

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/01 13:43:01 taca Exp $
+
+--- extconf.rb.orig	Sun Mar 11 18:27:17 2001
++++ extconf.rb
+@@ -3,7 +3,7 @@
+ SSLLIB="ssl"
+ 
+ dir_config("openssl")
+-$CFLAGS += "-I/usr/include/openssl "
++$CFLAGS += " -I/usr/include/openssl "
+ 
+ have_library("crypto", nil)
+ 
