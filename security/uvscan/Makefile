@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/13 06:53:16 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/12/27 14:12:46 jlam Exp $
 
 DISTNAME=		vlnx416e
 PKGNAME=		uvscan-4.16.0
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mcafeeb2b.com/products/virusscan/default.asp
 COMMENT=		evaluation version of a DOS/Windows file virus scanner
 
-DEPENDS+=		suse_compat>=6.1:../../emulators/suse_base
+DEPENDS+=		suse_compat>=6.1:../../emulators/suse_compat
 DEPENDS+=		uvscan-dat>=4171:../../security/uvscan-dat
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
