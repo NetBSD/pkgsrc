@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/09/23 21:01:30 tron Exp $
+# $NetBSD: Makefile,v 1.32 2002/03/22 11:13:41 uebayasi Exp $
 #
 
 DISTNAME=	tcsh-6.11
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.funet.fi/pub/unix/shells/tcsh/
 
 MAINTAINER=	kim@tac.nyc.ny.us
+HOMEPAGE=	http://www.tcsh.org/
 COMMENT=	Extended C-shell with many useful features
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
@@ -23,7 +24,7 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-OS_VERSION!=	echo ${OS_VERSION} | sed -e 's|5\.|2.|'
+OS_VERSION!=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VERSION}
 .endif
 
