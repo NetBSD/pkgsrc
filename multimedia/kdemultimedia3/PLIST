@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/10/13 12:16:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/11/18 10:14:44 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -1134,7 +1134,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/krec/icons/crystalsvg
 @dirrm share/kde/apps/krec/icons
 @dirrm share/kde/apps/krec
-@dirrm share/kde/apps/konqueror/servicemenus
+@comment dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/kmix/pics
 @dirrm share/kde/apps/kmix
 @dirrm share/kde/apps/kmid/maps
