@@ -1,0 +1,87 @@
+$NetBSD: patch-bl,v 1.1 1999/07/29 16:44:43 bad Exp $
+
+--- machdep/engine-m68000-netbsd.h.orig	Tue Nov  8 16:39:15 1994
++++ machdep/engine-m68000-netbsd.h	Wed Jul  7 04:29:09 1999
+@@ -3,6 +3,9 @@
+  *
+  * $Id: patch-bl,v 1.1 1999/07/29 16:44:43 bad Exp $
+  *
++ * m68k work by Andy Finnell <andyf@vei.net> based off work by
++ *  David Leonard and Chris Provenzano.
++ *
+  */
+ 
+ #include <unistd.h>
+@@ -16,14 +19,14 @@
+ #define SEMAPHORE_CLEAR 0
+ #define SEMAPHORE_SET   0x80;
+ 
+-#define SEMAPHORE_TEST_AND_SET(lock)    \
+-({										\
+-volatile long temp = SEMAPHORE_CLEAR;   \
+-										\
+-__asm__ volatile("tas (%2);	bpl 0f; movl #1,%0; 0:" \
+-        :"=r" (temp)                    \
+-        :"0" (temp),"r" (lock));        \
+-temp;                                   \
++#define SEMAPHORE_TEST_AND_SET(lock)            \
++({                                              \
++        volatile long temp = SEMAPHORE_CLEAR;   \
++        __asm__ volatile(                       \
++          "tas %2; bpl 0f; movl #1,%0; 0:"      \
++          :"=r" (temp)                          \
++          :"0" (temp),"m" (*lock));             \
++        temp;                                   \
+ })
+ 
+ #define SEMAPHORE_RESET(lock)           *lock = SEMAPHORE_CLEAR
+@@ -48,6 +51,7 @@
+     void        		*machdep_stack;
+ 	struct itimerval	machdep_timer;
+     jmp_buf     		machdep_state;
++    char			machdep_fstate[92];
+ };
+ 
+ /*
+@@ -56,6 +60,12 @@
+ #define PTHREAD_STACK_MIN	1024
+ 
+ /*
++ * Some fd flag defines that are necessary to distinguish between posix
++ * behavior and bsd4.3 behavior.
++ */
++#define __FD_NONBLOCK 		O_NONBLOCK
++
++/*
+  * Static machdep_pthread initialization values.
+  * For initial thread only.
+  */
+@@ -70,7 +80,27 @@
+ 
+ #if defined(PTHREAD_KERNEL)
+ 
+-int machdep_save_state      __P((void));
++
++#ifndef __machdep_stack_get
++#define __machdep_stack_get(x)      (x)->machdep_stack
++#endif
++#ifndef __machdep_stack_set
++#define __machdep_stack_set(x, y)   (x)->machdep_stack = y
++#endif
++#ifndef __machdep_stack_repl
++#define __machdep_stack_repl(x, y)                          \
++{                                                           \
++    if (stack = __machdep_stack_get(x)) {                   \
++        __machdep_stack_free(stack);                        \
++    }                                                       \
++    __machdep_stack_set(x, y);                              \
++}
++#endif
++
++void *  __machdep_stack_alloc       __P_((size_t));
++void    __machdep_stack_free        __P_((void *));
++    
++int machdep_save_state      __P_((void));
+ 
+ #endif
+ 
