@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/11/15 03:43:46 rh Exp $
+$NetBSD: distinfo,v 1.5 2005/02/09 21:24:50 xtraeme Exp $
 
-SHA1 (libpixman-0.1.2.tar.gz) = 131940aee04f8ed757b834d9dd9584d0ecc76348
-Size (libpixman-0.1.2.tar.gz) = 367637 bytes
+SHA1 (libpixman-0.1.3.tar.gz) = eca26dc881227f983022203aafe8e2d4d0bff8ee
+Size (libpixman-0.1.3.tar.gz) = 371766 bytes
 SHA1 (patch-aa) = 0172ca11ef392df251b84213295b1727e7274366
