@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2357 2003/05/29 21:10:02 seb Exp $
+$NetBSD: CHANGES,v 1.2358 2003/05/29 22:56:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vsftpd to 1.2.0 [salo 2003-05-29]
 	Updated cfengine2 to 2.0.7p3 [seb 2003-05-29]
 	Updated cfengine2-doc to 2.0.7p3 [seb 2003-05-29]
+	Added crimsonfields-0.3.3 [wiz 2003-05-29]
