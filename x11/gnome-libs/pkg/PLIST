@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2000/05/30 19:23:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2000/05/31 21:31:33 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -563,7 +563,8 @@ share/type-convert/type.convert
 @dirrm share/gnome/html/gnorba
 @dirrm share/gnome/html/zvt
 @dirrm share/gnome/html
-@dirrm share/gnome
+@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
+@unexec rmdir %D/share/gnome 2>/dev/null || true
 @unexec rmdir %D/etc/httpd 2>/dev/null || true
 @dirrm share/idl
 @dirrm share/mime-info
