@@ -1,19 +1,20 @@
-@comment $NetBSD: PLIST,v 1.7 2000/06/14 16:33:50 he Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/06/21 00:55:09 jlam Exp $
+bin/bdftogd
+bin/gd2copypal
+bin/gd2topng
+bin/gdparttopng
+bin/gdtopng
 bin/pngtogd
 bin/pngtogd2
-bin/gdtopng
-bin/gd2topng
-bin/gd2copypal
-bin/gdparttopng
 bin/webpng
-bin/bdftogd
 include/gd.h
-include/gdcache.h
 include/gd_io.h
+include/gdcache.h
 include/gdfontg.h
 include/gdfontl.h
 include/gdfontmb.h
 include/gdfonts.h
 include/gdfontt.h
 lib/libgd.a
+lib/libgd.la
 lib/libgd.so.1.9
