@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/24 17:44:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/29 16:41:21 jmmv Exp $
 bin/rhythmbox
 lib/bonobo/librb-nautilus-context-menu.a
 lib/bonobo/librb-nautilus-context-menu.la
@@ -52,6 +52,7 @@ share/idl/Rhythmbox.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/rhythmbox.mo
