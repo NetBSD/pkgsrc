@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2004/12/09 20:26:11 minskim Exp $
+bin/gfloppy
+man/man1/gfloppy.1
+share/applications/gfloppy.desktop
+share/gconf/schemas/gfloppy.schemas
+share/gnome/help/gfloppy/C/figures/main.png
+share/gnome/help/gfloppy/C/gfloppy.xml
+share/gnome/help/gfloppy/C/legal.xml
+share/gnome/help/gfloppy/ja/figures/main.png
+share/gnome/help/gfloppy/ja/gfloppy.xml
+share/gnome/help/gfloppy/ja/legal.xml
+share/omf/gnome-utils/gfloppy-C.omf
+share/omf/gnome-utils/gfloppy-ja.omf
+@dirrm share/gnome/help/gfloppy/ja/figures
+@dirrm share/gnome/help/gfloppy/ja
+@dirrm share/gnome/help/gfloppy/C/figures
+@dirrm share/gnome/help/gfloppy/C
+@dirrm share/gnome/help/gfloppy
