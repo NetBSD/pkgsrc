@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/20 21:46:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/16 12:03:41 xtraeme Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
 bin/wmf2fig
-bin/wmf2gd
 bin/wmf2svg
 bin/wmf2x
 include/libwmf/libwmf/api.h
@@ -16,15 +15,6 @@ include/libwmf/libwmf/font.h
 include/libwmf/libwmf/foreign.h
 include/libwmf/libwmf/fund.h
 include/libwmf/libwmf/gd.h
-include/libwmf/libwmf/gd/gd.h
-include/libwmf/libwmf/gd/gd_clip.h
-include/libwmf/libwmf/gd/gd_io.h
-include/libwmf/libwmf/gd/gdcache.h
-include/libwmf/libwmf/gd/gdfontg.h
-include/libwmf/libwmf/gd/gdfontl.h
-include/libwmf/libwmf/gd/gdfontmb.h
-include/libwmf/libwmf/gd/gdfonts.h
-include/libwmf/libwmf/gd/gdfontt.h
 include/libwmf/libwmf/ipa.h
 include/libwmf/libwmf/macro.h
 include/libwmf/libwmf/svg.h
@@ -316,6 +306,5 @@ share/libwmf/fonts/s050000l.pfb
 @dirrm share/doc/html/libwmf/caolan/pics
 @dirrm share/doc/html/libwmf/caolan
 @dirrm share/doc/html/libwmf
-@dirrm include/libwmf/libwmf/gd
 @dirrm include/libwmf/libwmf
 @dirrm include/libwmf
