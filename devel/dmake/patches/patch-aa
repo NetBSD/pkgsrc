@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 12:46:22 rh Exp $
+
+--- unix/runargv.c.orig	Tue Jul 15 18:02:34 1997
++++ unix/runargv.c
+@@ -24,6 +24,8 @@
+ */
+ 
+ #include <signal.h>
++#include <errno.h>
++#include <sys/param.h>
+ #include "extern.h"
+ #include "sysintf.h"
+ 
+@@ -68,7 +70,9 @@
+ char	*cmd;
+ {
+    extern  int  errno;
++#if (!defined(BSD) || BSD < 199306)
+    extern  char *sys_errlist[];
++#endif
+    int          pid;
+    char         **argv;
+ 
