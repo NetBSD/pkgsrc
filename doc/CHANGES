@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4313 2004/01/01 15:39:03 salo Exp $
+$NetBSD: CHANGES,v 1.4314 2004/01/01 16:23:25 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vsftpd to 1.2.1 [salo 2004-01-01]
 	Updated TeXmacs to 1.0.2.11 [recht 2004-01-01]
 	Updated p5-DBD-XBase to 0.241 [salo 2004-01-01]
+	Updated pclock to 0.13.1nb1 [salo 2004-01-01]
