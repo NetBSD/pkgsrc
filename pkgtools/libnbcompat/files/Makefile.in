@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.2 2003/03/31 05:34:35 grant Exp $
+# $NetBSD: Makefile.in,v 1.3 2003/03/31 08:41:06 grant Exp $
 #
 
 srcdir	= @srcdir@
@@ -34,7 +34,6 @@ all:	${LIB}
 
 ${LIB}: ${OBJS}
 	${AR} cr $@ ${OBJS}
-	${RANLIB} $@
 
 nbtypes.h: bits
 	./bits nbtypes.h
@@ -43,7 +42,8 @@ bits: bits.c
 	${CC} -o bits bits.c
 
 install:
-	${INSTALL} -m 555 libnbcompat.a ${prefix}/lib
+	${INSTALL} -m 555 ${LIB} ${prefix}/lib
+	${RANLIB} ${prefix}/lib/${LIB}
 	${INSTALL} -m 755 -d ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 extern.h ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 ftpglob.h ${prefix}/include/libnbcompat
