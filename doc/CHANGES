@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1549 2003/03/05 05:40:43 hubertf Exp $
+$NetBSD: CHANGES,v 1.1550 2003/03/05 07:06:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -934,6 +934,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated aumix to 2.8 [wiz 2003-03-04]
 	Updated glib to 1.2.10nb4 [salo 2003-03-04]
 	Updated graphviz to 1.9nb1 [salo 2003-03-04]
+	Updated libslang to 1.4.8 [mjl 2003-03-04]
 	Updated xemacs-packages to 1.11 [tron 2003-03-04]
 	Added jumpgate-0.7 [grant 2003-03-05]
 	Updated bind9 to 9.2.2 [hubertf 2003-03-05]
