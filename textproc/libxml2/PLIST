@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2004/04/19 14:24:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.29.2.1 2004/07/15 19:33:08 agc Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -172,6 +172,35 @@ share/doc/html/libxml2/tutorial/ix01.html
 share/doc/html/libxml2/tutorial/xmltutorial.pdf
 share/doc/html/libxml2/w3c.png
 share/doc/html/libxml2/xml.html
+share/doc/html/libxml2/examples.xml
+share/doc/html/libxml2/examples.xsl
+share/doc/html/libxml2/io1.c
+share/doc/html/libxml2/io1.res
+share/doc/html/libxml2/io2.c
+share/doc/html/libxml2/io2.res
+share/doc/html/libxml2/parse1.c
+share/doc/html/libxml2/parse2.c
+share/doc/html/libxml2/parse3.c
+share/doc/html/libxml2/parse4.c
+share/doc/html/libxml2/reader1.c
+share/doc/html/libxml2/reader1.res
+share/doc/html/libxml2/reader2.c
+share/doc/html/libxml2/reader3.c
+share/doc/html/libxml2/reader3.res
+share/doc/html/libxml2/test1.xml
+share/doc/html/libxml2/test2.xml
+share/doc/html/libxml2/test3.xml
+share/doc/html/libxml2/testWriter.c
+share/doc/html/libxml2/tree1.c
+share/doc/html/libxml2/tree1.res
+share/doc/html/libxml2/tree2.c
+share/doc/html/libxml2/tree2.res
+share/doc/html/libxml2/tst.xml
+share/doc/html/libxml2/writer.xml
+share/doc/html/libxml2/xpath1.c
+share/doc/html/libxml2/xpath1.res
+share/doc/html/libxml2/xpath2.c
+share/doc/html/libxml2/xpath2.res
 share/doc/${PKGNAME}/Copyright
 share/examples/libxml2/testHTML.c
 share/examples/libxml2/testSAX.c
