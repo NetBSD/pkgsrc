@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/02/21 12:53:23 mycroft Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/05 15:53:33 seb Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	--enable-static
 TEXINFO_OVERRIDE=	YES
 TEXINFO_PATTERNS+=	Makedefs.in
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	librep.info
+
 PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
 post-install:
@@ -38,5 +42,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
