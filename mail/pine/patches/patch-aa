@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.8 2000/01/04 16:58:50 bouyer Exp $
+
+--- pine/makefile.gs5.old	Thu Aug 27 18:49:57 1998
++++ pine/makefile.gs5	Thu Dec  2 19:03:32 1999
+@@ -47,9 +47,9 @@
+ RM=          rm -f
+ LN=          ln -s
+ MAKE=        make
+-OPTIMIZE=    # -O
++OPTIMIZE=    -O2
+ PROFILE=     # -pg
+-DEBUG=       -g -DDEBUG
++DEBUG=       # -g -DDEBUG
+ 
+ CCLIENTDIR=  ../c-client
+ PICODIR=     ../pico
+@@ -72,9 +72,9 @@
+ # LDCC= $(PICODIR)/cc5.sol
+ 
+ STDLIBS=     -ltermlib
+-LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
+-LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
+-             `cat $(CCLIENTDIR)/LDFLAGS`
++LOCLIBS=     -lpico $(CCLIENTDIR)/c-client.a
++LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
++              `cat $(CCLIENTDIR)/LDFLAGS`
+ 
+ STDCFLAGS=   -DSV4 -DSYSTYPE=\"GSO\" -DMOUSE
+ CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
+@@ -93,13 +93,13 @@
+ 	$(CCLIENTDIR)/mail.h $(CCLIENTDIR)/osdep.h \
+ 	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
+ 
+-pine:  $(OFILES) $(LOCLIBS)
++pine:  $(OFILES)
+ 	echo "char datestamp[]="\"`date`\"";" > date.c
+ 	echo "char hoststamp[]="\"`uname -n`\"";" >> date.c
+ 	$(LDCC) $(LDFLAGS) $(CFLAGS) -o pine $(OFILES) date.c $(LIBS)
+ 
+-abookcpy:	abookcpy.o $(LOCLIBES)
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(LIBS)
++abookcpy:	abookcpy.o
++	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(CCLIENTDIR)/c-client.a 
+ 
+ pine-use:	pine-use.c
+ 	$(CC) -o pine-use pine-use.c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1999/11/22 08:57:24 tron Exp $
+# $NetBSD: Makefile,v 1.33 2000/01/04 16:58:50 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -22,7 +22,7 @@ do-configure:
 	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
 
 do-build:
-	cd ${WRKSRC} && ./build neb PREFIX=${PREFIX}
+	cd ${WRKSRC} && ./build ${BUILDNAME} PREFIX=${PREFIX}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
@@ -45,3 +45,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${PREFIX}/share/doc/pine/
 
 .include "../../mk/bsd.pkg.mk"
+.if ${OPSYS} == "SunOS"
+BUILDNAME= gs5
+.else
+BUILDNAME= neb
+.endif
