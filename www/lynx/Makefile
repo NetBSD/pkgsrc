@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/12/31 19:56:23 fredb Exp $
+# $NetBSD: Makefile,v 1.49 2002/03/26 16:09:08 abs Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -15,6 +15,7 @@ PATCH_SITES=		http://lynx.isc.org/lynx2.8.4/patches/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/lynx2.8.4/patches/ \
 			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/lynx2.8.4/patches/
 PATCHFILES=		lynx2.8.4rel.1a.patch lynx2.8.4rel.1b.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://lynx.browser.org/
