@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9355 2005/02/28 12:44:43 wiz Exp $
+$NetBSD: CHANGES,v 1.9356 2005/02/28 12:54:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1196,3 +1196,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Apache-Session-Wrapper to 0.19 [wiz 2005-02-28]
 	Added IRRToolSet-4.8.2 [spz 2005-02-28]
 	Updated libevent to 1.0b [wiz 2005-02-28]
+	Updated libdnet to 1.10 [wiz 2005-02-28]
