@@ -1,11 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2000/12/19 18:53:52 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2001/03/31 00:00:35 dmcmahill Exp $
 
---- tgt-pal/Makefile.in.orig	Thu Dec 14 18:37:47 2000
-+++ tgt-pal/Makefile.in	Sun Dec 17 07:52:23 2000
-@@ -63,5 +63,5 @@
+--- vvp/vpi_mcd.cc.orig	Wed Mar 21 21:24:05 2001
++++ vvp/vpi_mcd.cc	Fri Mar 30 09:47:26 2001
+@@ -79,4 +79,5 @@
+ 	return NULL;
+ }
++static unsigned int vpi_mcd_open_x(char *name, char *mode);
  
- pal.tgt: $O $(TGTDEPLIBS)
--	$(CC) @shared@ -o $@ $O $(TGTLDFLAGS) -lipal
-+	$(CC) @shared@ -o $@ $O $(TGTLDFLAGS) $(LDFLAGS) -lipal
- 
- clean:
+ unsigned int vpi_mcd_open(char *name)
