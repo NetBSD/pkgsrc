@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6738 2004/07/30 20:53:25 recht Exp $
+$NetBSD: CHANGES,v 1.6739 2004/07/30 22:15:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3657,3 +3657,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-docutils to 0.3.5 [recht 2004-07-30]
 	Updated vice to 1.14nb3 [kristerw 2004-07-30]
 	Updated dvdrip to 0.50.18 [recht 2004-07-30]
+	Updated glib2 to 2.4.5 [jmmv 2004-07-30]
