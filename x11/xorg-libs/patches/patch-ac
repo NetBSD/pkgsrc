@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
+
+--- config/cf/NetBSD.cf.in.orig	2004-03-03 07:53:38.000000000 +0000
++++ config/cf/NetBSD.cf.in	2004-03-03 07:54:59.000000000 +0000
+@@ -143,7 +143,7 @@
+ #define MkdirHierCmd		mkdir -p
+ 
+ #undef CcCmd
+-#define CcCmd 			gcc
++#define CcCmd 			@@PKGSRC_CC@@
+ #ifndef DefaultCCOptions
+ #if defined(UseInstalled)
+ #define DefaultCCOptions 	/**/
+@@ -159,7 +159,7 @@
+ #endif
+ #endif
+ 
+-#define CppCmd			cpp
++#define CppCmd			@@PKGSRC_CPP@@
+ #define StandardCppOptions	-traditional
+ #define StandardCppDefines	/**/
+ #define PreProcessCmd   	CcCmd -E
+@@ -208,13 +208,7 @@
+ #define HasWeakSymbols		UseElfFormat 
+ 
+ #ifdef i386Architecture
+-# ifndef DefaultGcc2i386Opt
+-#  if OSMajorVersion > 1 || (OSMajorVersion == 1 && OSMinorVersion > 2)
+-    /* The GCC strength-reduce bug is fixed for NetBSD 1.3 and later */
+-#   define DefaultGcc2i386Opt -O2 GccAliasingArgs
+-#  endif
+-# endif
+-# define OptimizedCDebugFlags 	DefaultGcc2i386Opt
++# define OptimizedCDebugFlags 	@@PKGSRC_CFLAGS@@
+ # if OSMajorVersion < 1
+ #  define ServerOSDefines	XFree86ServerOSDefines -DXNO_SYSCONF
+ # else
+@@ -224,7 +218,7 @@
+ #  define ServerExtraSysLibs	-li386
+ # endif
+ #else
+-# define OptimizedCDebugFlags 	-O2
++# define OptimizedCDebugFlags 	@@PKGSRC_CFLAGS@@
+ # if defined(SparcArchitecture)
+ #  define ServerOSDefines 	-DDDXOSINIT
+ # elif defined(AlphaArchitecture)
