@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/03/28 14:57:54 drochner Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/05/12 04:32:34 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.92.26
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
 CONFIGURE_ENV+=		LYNX_CMD=${WRKDIR}/nonexecutable
 CONFIGURE_ENV+=		LINKS_CMD=${WRKDIR}/nonexecutable
 
-FILESDIR=		${.CURDIR}/../../x11/lesstif/files
+DISTINFO_FILE=		${.CURDIR}/../../x11/lesstif/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/lesstif/patches
 
 post-extract:
