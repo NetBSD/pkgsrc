@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/01 02:00:14 salo Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/10 02:18:46 snj Exp $
 bin/gtkballs
 man/man6/gtkballs.6
 share/gtkballs/COPYING
@@ -320,8 +320,6 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkballs.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkballs.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtkballs.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtkballs.mo
-@comment user-modified: var/gtkballs-scores
-@unexec ${RMDIR} %D/var 2>/dev/null || ${TRUE}
 @dirrm share/gtkballs/themes/klines
 @dirrm share/gtkballs/themes/Default
 @dirrm share/gtkballs/themes
