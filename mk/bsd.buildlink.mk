@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.60 2002/03/20 14:18:00 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.61 2002/04/25 00:03:32 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -208,6 +208,14 @@ _BUILDLINK_USE: .USE
 #
 .if defined(USE_BUILDLINK_ONLY)
 USE_CONFIG_WRAPPER=	# defined
+.endif
+
+# If we are using the config script wrappers, we prepend their location
+# to the PATH so we don't have to fix so many broken configure scripts
+# and Makefiles that expect to find the *-config scripts in the PATH.
+#
+.if defined(USE_CONFIG_WRAPPER)
+PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 .endif
 
 BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
