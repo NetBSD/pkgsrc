@@ -1,0 +1,6 @@
+Nmap is a utility for port scanning large networks, although it
+works fine for single hosts. It supports many different scanning
+techniques and has a number of performance and reliability features
+such as dynamic delay time calculations, packet timeout and
+retransmission, parallel port scanning, detection of down hosts
+via parallel pings, and flexible target and port specification.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/15 00:08:54 hubertf Exp $
+bin/nmap
+lib/nmap-os-fingerprints
+man/man1/nmap.1
