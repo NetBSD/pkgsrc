@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1897 2003/04/11 09:25:05 rh Exp $
+$NetBSD: CHANGES,v 1.1898 2003/04/11 09:53:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ogmtools-1.0.1 [salo 2003-04-11]
 	Updated xine-lib to 1.0rc10 [rh 2003-04-11]
 	Updated gxine to 0.3.3 [rh 2003-04-11]
+	Updated squid to 2.5.2nb1 [taca 2003-04-11]
