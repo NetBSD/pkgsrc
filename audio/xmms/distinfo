@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2003/10/05 10:56:37 xtraeme Exp $
+$NetBSD: distinfo,v 1.16 2004/04/23 15:28:13 xtraeme Exp $
 
 SHA1 (xmms-1.2.7.tar.gz) = 2f910d88af9bb5e8d54e796653beef969b555c68
 Size (xmms-1.2.7.tar.gz) = 2860908 bytes
-SHA1 (patch-aa) = b1945d9d161cc538e5dda1014571f582be1a951c
+SHA1 (patch-aa) = 06743383b9167082ca7596c12e751aaa1a3f36b6
 SHA1 (patch-ab) = 6f236de07dcd7ce8a2325effe038e42ea4222250
 SHA1 (patch-ac) = 4c3dc43fd83bacfacd376235d3723aeee96570f2
 SHA1 (patch-ad) = 7645b1a2bbb338c9bea8b2015d5763486f77d16a
