@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/08/19 09:19:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.43 2003/11/09 21:26:06 dmcmahill Exp $
 #
 
 DISTNAME=		tgif-4.1.43
@@ -15,9 +15,18 @@ USE_X11=		yes
 
 PTHREAD_OPTS+=		require
 
+# avoid "xmkmf -a" on Solaris which runs makedepend because the
+# openwindows makedepend program can't handle the number of
+# files.  We should probably have a replacement makedepend in
+# pkgsrc.
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+XMKMF=			${XMKMF_CMD}
+.endif
+
 post-patch::
 	@${RM} -f ${WRKSRC}/Tgif.tmpl
-	@${CP} ${WRKSRC}/Tgif.tmpl-netbsd ${WRKSRC}/Tgif.tmpl
+	@${CP} ${WRKSRC}/Tgif.tmpl-${LOWER_OPSYS} ${WRKSRC}/Tgif.tmpl
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
