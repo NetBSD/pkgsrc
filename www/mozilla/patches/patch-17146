@@ -1,0 +1,329 @@
+$NetBSD: patch-17146,v 1.1 2000/11/26 04:08:11 mycroft Exp $
+
+--- layout/base/src/nsHTMLContentSerializer.cpp.orig	Mon Sep 11 20:55:46 2000
++++ layout/base/src/nsHTMLContentSerializer.cpp	Sun Nov 26 01:57:32 2000
+@@ -62,6 +62,7 @@
+   mColPos = 0;
+   mIndent = 0;
+   mInBody = PR_FALSE;
++  mInCDATA = PR_FALSE;
+ }
+ 
+ nsHTMLContentSerializer::~nsHTMLContentSerializer()
+@@ -272,6 +273,12 @@
+     mColPos = 0;
+   }
+     
++  if ((name.get() == nsHTMLAtoms::script) ||
++      (name.get() == nsHTMLAtoms::style) ||
++      (name.get() == nsHTMLAtoms::noscript)) {
++    mInCDATA = PR_TRUE;
++  }
++
+   return NS_OK;
+ }
+   
+@@ -298,7 +305,8 @@
+ 
+   nsCOMPtr<nsIParserService> parserService;
+   GetParserService(getter_AddRefs(parserService));
+-  if (parserService) {
++
++  if (parserService && (name.get() != nsHTMLAtoms::style)) {
+     nsAutoString nameStr(sharedName);
+     PRBool isContainer;
+ 
+@@ -322,6 +330,8 @@
+     mColPos = 0;
+   }
+ 
++  mInCDATA = PR_FALSE;
++
+   return NS_OK;
+ }
+ 
+@@ -422,7 +432,7 @@
+   
+   mColPos += aStr.Length();
+ 
+-  if (aTranslateEntities) {
++  if (aTranslateEntities && !mInCDATA) {
+     nsCOMPtr<nsIEntityConverter> converter;
+ 
+     GetEntityConverter(getter_AddRefs(converter));
+--- layout/base/src/nsHTMLContentSerializer.h.orig	Sun Sep 10 22:22:58 2000
++++ layout/base/src/nsHTMLContentSerializer.h	Sun Nov 26 01:58:13 2000
+@@ -89,6 +89,17 @@
+   PRBool    mBodyOnly;
+   PRInt32   mPreLevel;
+   
++  /*
++   * mInCDATA is set to PR_TRUE while the serializer is serializing
++   * the content of a element whose content is considerd CDATA by the
++   * serializer (such elements are 'script', 'style', 'noscript' and
++   * possibly others) This doesn't have anything to do with if the
++   * element is defined as CDATA in the DTD, it simply means we'll
++   * output the content of the element without doing any entity encoding
++   * what so ever.
++   */
++  PRBool mInCDATA;
++
+   PRInt32   mMaxColumn;
+   
+   nsString  mLineBreak;
+--- layout/html/base/src/nsHTMLAtomList.h.orig	Wed Sep 27 19:23:36 2000
++++ layout/html/base/src/nsHTMLAtomList.h	Sun Nov 26 01:58:46 2000
+@@ -195,6 +195,7 @@
+ HTML_ATOM(name, "name")
+ HTML_ATOM(nohref, "nohref")
+ HTML_ATOM(noresize, "noresize")
++HTML_ATOM(noscript, "noscript")
+ HTML_ATOM(noshade, "noshade")
+ HTML_ATOM(nowrap, "nowrap")
+ HTML_ATOM(object, "object")
+--- layout/html/document/src/nsHTMLContentSink.cpp.orig	Tue Sep 19 22:35:50 2000
++++ layout/html/document/src/nsHTMLContentSink.cpp	Sun Nov 26 02:23:23 2000
+@@ -2995,6 +2995,7 @@
+ 
+ NS_IMETHODIMP
+ HTMLContentSink::OpenNoscript(const nsIParserNode& aNode) {
++  nsresult result=NS_OK;
+ 
+   MOZ_TIMER_DEBUGLOG(("Start: nsHTMLContentSink::OpenNoscript()\n"));
+   MOZ_TIMER_START(mWatch);
+@@ -3002,23 +3003,21 @@
+                   "HTMLContentSink::OpenNoscript", aNode, 
+                   mCurrentContext->mStackPos, this);
+   
+-  nsresult result=mCurrentContext->OpenContainer(aNode);
++  nsCOMPtr<nsIPref> prefs(do_GetService("@mozilla.org/preferences;1", &result));
+   if(NS_SUCCEEDED(result)) {
+-    NS_WITH_SERVICE(nsIPref, prefs, "@mozilla.org/preferences;1", &result);
+-    if(NS_SUCCEEDED(result)) {
+-      PRBool jsEnabled;
+-      result=prefs->GetBoolPref("javascript.enabled", &jsEnabled);
+-      if(NS_SUCCEEDED(result)){
+-        if(!jsEnabled) {
+-          nsIHTMLContent* content=mCurrentContext->mStack[mCurrentContext->mStackPos -1].mContent;
+-          nsCOMPtr<nsIDOMElement> element=do_QueryInterface(content, &result);
+-          if(NS_SUCCEEDED(result)) {
+-            result=element->SetAttribute(NS_ConvertASCIItoUCS2("style"),NS_ConvertASCIItoUCS2("display:inline"));
+-          }
+-        }
+-        else {
++    PRBool jsEnabled;
++    result=prefs->GetBoolPref("javascript.enabled", &jsEnabled);
++    if(NS_SUCCEEDED(result)){
++      // If JS is disabled then we want to lose the noscript element
++      // ,and therefore don't OpenContainer, so that the noscript contents 
++      // get handled as if noscript  wasn't present.
++      if(jsEnabled) {
++
++        result=mCurrentContext->OpenContainer(aNode);
++
++        if(NS_SUCCEEDED(result)) {
+           mInsideNoXXXTag++;        // To indicate that no processing should be done to this content
+-          result=NS_HTMLPARSER_ALTERNATECONTENT; // Inform DTD that the content is not regular, but an alternate content.
++          result=NS_HTMLPARSER_ALTERNATECONTENT; // Inform DTD that the noscript content should be treated as CDATA.
+         }
+       }
+     }
+@@ -3026,6 +3025,7 @@
+ 
+   MOZ_TIMER_DEBUGLOG(("Stop: nsHTMLContentSink::OpenNoscript()\n"));
+   MOZ_TIMER_STOP(mWatch);
++
+   return result;
+ }
+ 
+@@ -3039,6 +3039,9 @@
+  */
+ NS_IMETHODIMP
+ HTMLContentSink::CloseNoscript(const nsIParserNode& aNode) {
++
++  // When JS is diabled this method wouldn't get called because
++  // noscript element will not be present then.
+ 
+   MOZ_TIMER_DEBUGLOG(("Start: nsHTMLContentSink::CloseNoscript()\n"));
+   MOZ_TIMER_START(mWatch);
+--- htmlparser/src/CNavDTD.cpp.orig	Thu Sep 21 04:00:34 2000
++++ htmlparser/src/CNavDTD.cpp	Sun Nov 26 02:07:58 2000
+@@ -658,6 +658,31 @@
+         return result;
+       }
+     }
++    else if(mDTDState==NS_HTMLPARSER_ALTERNATECONTENT) {
++      if(eHTMLTag_noscript!=theTag || theType!=eToken_end) {
++        // attribute source is a part of start token.
++        if(theType!=eToken_attribute) {
++          aToken->AppendSource(mScratch);
++        }
++        IF_FREE(aToken);
++        return result;
++      }
++      else {
++        // If you're here then we have seen a /noscript.
++        // After handling the text token intentionally
++        // fall thro' such that /noscript gets handled.
++        CTextToken theTextToken(mScratch);        
++        result=HandleStartToken(&theTextToken);
++        
++        if(NS_FAILED(result)) {
++          return result;
++        }
++
++        mScratch.Truncate();
++        mScratch.SetCapacity(0);
++      }
++    }
++
+ 
+     /* ---------------------------------------------------------------------------------
+        This section of code is used to "move" misplaced content from one location in 
+@@ -666,7 +691,7 @@
+        deque until we can deal with it.
+        ---------------------------------------------------------------------------------
+      */
+-    if(!execSkipContent && mDTDState!=NS_HTMLPARSER_ALTERNATECONTENT) {
++    if(!execSkipContent) {
+ 
+       switch(theTag) {
+         case eHTMLTag_html:
+@@ -1203,7 +1228,7 @@
+   STOP_TIMER()
+   MOZ_TIMER_DEBUGLOG(("Stop: Parse Time: CNavDTD::WillHandleStartTag(), this=%p\n", this));
+ 
+-  if(mParser && mDTDState!=NS_HTMLPARSER_ALTERNATECONTENT) {
++  if(mParser) {
+ 
+     CObserverService* theService=mParser->GetObserverService();
+     if(theService) {
+@@ -3150,17 +3175,16 @@
+       if(result==NS_HTMLPARSER_ALTERNATECONTENT) {
+         // We're here because the sink has identified that
+         // JS is enabled and therefore noscript content should
+-        // not be treated as a regular content,i.e., make sure
+-        // that head elements are handled correctly and may be
+-        // residual style.
++        // not be treated as regular content
++        ++mHasOpenNoXXX;
++        mScratch.Truncate();
++        mScratch.SetCapacity(0);
++        
++        mBodyContext->Push(aNode,aStyleStack);
++        
+         mDTDState=result;
+-        // Though NS_HTMLPARSER_ALTERNATECONTENT is a succeeded message we don't want to propagate it
+-        // because there are lots of places where we don't check for succeeded result instead
+-        // we check for NS_OK. Also, this message is pertinent to the DTD only 
+         result=NS_OK; 
+       }
+-      mHasOpenNoXXX++;
+-      mBodyContext->Push(aNode,aStyleStack);
+     }
+   }
+   
+@@ -3722,46 +3746,43 @@
+     // within NOSCRIPT and since JS is enanbled we should not process
+     // this content. However, when JS is disabled alternate content
+     // would become regular content.
+-    if(mDTDState!=NS_HTMLPARSER_ALTERNATECONTENT) {
+-      result=OpenHead(aNode);
+-      if(NS_OK==result) {
+-        if(eHTMLTag_title==theTag) {
+-
+-          const nsString& theString=aNode->GetSkippedContent();
+-          PRInt32 theLen=theString.Length();
+-          CBufDescriptor theBD(theString.GetUnicode(), PR_TRUE, theLen+1, theLen);
+-          nsAutoString theString2(theBD);
+-
+-          theString2.CompressWhitespace();
+-
+-          STOP_TIMER()
+-          MOZ_TIMER_DEBUGLOG(("Stop: Parse Time: CNavDTD::AddHeadLeaf(), this=%p\n", this));
+-          mSink->SetTitle(theString2);
+-          MOZ_TIMER_DEBUGLOG(("Start: Parse Time: CNavDTD::AddHeadLeaf(), this=%p\n", this));
+-          START_TIMER()
+-
+-        }
+-        else result=AddLeaf(aNode);
+-        // XXX If the return value tells us to block, go
+-        // ahead and close the tag out anyway, since its
+-        // contents will be consumed.
+-
+-        // Fix for Bug 31392
+-        // Do not leave a head context open no matter what the result is.
+-        if(mHasOpenHead) {
+-          nsresult rv=CloseHead(aNode);
+-          // XXX Only send along a failure. If the close 
+-          // succeeded we still may need to indicate that the
+-          // parser has blocked (i.e. return the result of
+-          // the AddLeaf.
+-          if (rv != NS_OK) {
+-            result = rv;
+-          }
++    result=OpenHead(aNode);
++    if(NS_OK==result) {
++      if(eHTMLTag_title==theTag) {
++
++        const nsString& theString=aNode->GetSkippedContent();
++        PRInt32 theLen=theString.Length();
++        CBufDescriptor theBD(theString.GetUnicode(), PR_TRUE, theLen+1, theLen);
++        nsAutoString theString2(theBD);
++
++        theString2.CompressWhitespace();
++        STOP_TIMER()
++        MOZ_TIMER_DEBUGLOG(("Stop: Parse Time: CNavDTD::AddHeadLeaf(), this=%p\n", this));
++        mSink->SetTitle(theString2);
++        MOZ_TIMER_DEBUGLOG(("Start: Parse Time: CNavDTD::AddHeadLeaf(), this=%p\n", this));
++        START_TIMER()
++
++      }
++      else result=AddLeaf(aNode);
++      // XXX If the return value tells us to block, go
++      // ahead and close the tag out anyway, since its
++      // contents will be consumed.
++
++      // Fix for Bug 31392
++      // Do not leave a head context open no matter what the result is.
++      if(mHasOpenHead) {
++        nsresult rv=CloseHead(aNode);
++        // XXX Only send along a failure. If the close 
++        // succeeded we still may need to indicate that the
++        // parser has blocked (i.e. return the result of
++        // the AddLeaf.
++        if (rv != NS_OK) {
++          result = rv;
+         }
+-      }  
+-    }
+-    else result=AddLeaf(aNode);
++      }
++    }  
+   }
++
+   return result;
+ }
+ 
+--- htmlparser/src/nsElementTable.cpp.orig	Thu Sep 21 02:58:10 2000
++++ htmlparser/src/nsElementTable.cpp	Sun Nov 26 02:08:28 2000
+@@ -310,7 +310,7 @@
+ 	    /*rootnodes,endrootnodes*/          &gRootTags,&gRootTags,	
+       /*autoclose starttags and endtags*/ 0,0,0,0,
+       /*parent,incl,exclgroups*/          kBlock, kNone, kNone,	
+-      /*special props, prop-range*/       0,kNoPropRange,
++      /*special props, prop-range*/       kLegalOpen, kNoPropRange,
+       /*special parents,kids,skip*/       &gInHead,0,eHTMLTag_unknown);
+ 
+     Initialize( 
+--- htmlparser/src/nsHTMLTokenizer.cpp.orig	Thu Sep 21 02:58:10 2000
++++ htmlparser/src/nsHTMLTokenizer.cpp	Sun Nov 26 02:09:05 2000
+@@ -689,7 +689,7 @@
+         
+         //XXX - Find a better soution to record content
+         //Added _plaintext to fix bug 46054.
+-        if((eHTMLTag_textarea==theTag || eHTMLTag_xmp==theTag || eHTMLTag_plaintext==theTag) && !mRecordTrailingContent) {
++        if((eHTMLTag_textarea==theTag || eHTMLTag_xmp==theTag || eHTMLTag_plaintext==theTag || eHTMLTag_noscript==theTag) && !mRecordTrailingContent) {
+           mRecordTrailingContent=PR_TRUE;
+         }
+           
