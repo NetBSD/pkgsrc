@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3444 2003/09/18 18:19:11 wiz Exp $
+$NetBSD: CHANGES,v 1.3445 2003/09/18 18:52:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3833,3 +3833,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Unicode-String-2.06 [xtraeme 2003-09-18]
 	Updated sendmail811 to 8.11.6nb6 [taca 2003-09-18]
 	Updated wdg-validate to 1.1.3 [wiz 2003-09-18]
+	Updated p5-Business-CreditCard to 0.27 [wiz 2003-09-18]
