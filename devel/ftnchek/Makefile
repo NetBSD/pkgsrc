@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/06 18:11:39 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/08 21:00:56 jtb Exp $
 #
 
 DISTNAME=		ftnchek
@@ -19,14 +19,9 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek/html
-	@(cd ${WRKSRC};							\
-	for i in FAQ INSTALL LICENSE README ftnchek.man dcl2inc.man 	\
-	macro-doc.txt; do						\
-	${INSTALL_DATA} $$i ${PREFIX}/share/doc/ftnchek;		\
-	done;								\
-	cd html;							\
-	for j in *.html; do						\
-	${INSTALL_DATA} $$j ${PREFIX}/share/doc/ftnchek/html;		\
-	done;)
+	@for i in FAQ INSTALL LICENSE README ftnchek.man dcl2inc.man \
+	macro-doc.txt; do \
+	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/ftnchek; done
+	${INSTALL_DATA} ${WRKSRC}/html/* ${PREFIX}/share/doc/ftnchek/html
 
 .include "../../mk/bsd.pkg.mk"
