@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 1999/10/22 23:34:23 tron Exp $
+$NetBSD: patch-ac,v 1.6 2004/10/05 12:12:59 minskim Exp $
 
---- gmodule/Makefile.in.orig	Wed Oct 20 19:55:27 1999
-+++ gmodule/Makefile.in	Wed Oct 20 19:55:59 1999
-@@ -109,7 +109,7 @@
+--- gmodule/Makefile.in.orig	Thu Mar 15 09:48:51 2001
++++ gmodule/Makefile.in
+@@ -109,7 +109,7 @@ libglib = $(top_builddir)/libglib.la # -
  lib_LTLIBRARIES = libgmodule.la libgplugin_a.la libgplugin_b.la
  
  libgmodule_la_SOURCES = gmodule.c
@@ -11,3 +11,14 @@ $NetBSD: patch-ac,v 1.5 1999/10/22 23:34:23 tron Exp $
  
  
  libgmodule_la_LIBADD = @G_MODULE_LIBS@ # $(libglib)
+@@ -417,8 +417,8 @@ install-libLTLIBRARIES: libgmodule.la
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	@list='libgmodule.la'; for p in $$list; do \
+ 	 if test -f $$p; then \
+-	  echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p"; \
+-	  $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p; \
++	  echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p"; \
++	  $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p; \
+ 	 else :; fi; \
+ 	done
+ 
