@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:32:14 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 04:08:21 minskim Exp $
 #
 
 DISTNAME=		Data-ShowTable-3.3
@@ -10,7 +10,9 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=		bad@NetBSD.org
 COMMENT=		Perl module to print arrays of data in nicely formatted listings
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Data/ShowTable/.packlist
 
 .include "../../lang/perl5/module.mk"
