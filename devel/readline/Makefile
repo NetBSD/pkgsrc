@@ -3,7 +3,7 @@
 # Date created:        			Fri Mar  6 19:07:28 GMT 1998
 # Whom:                			Alistair Crooks (agc@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.3 1998/03/19 13:02:19 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/28 21:24:40 frueauf Exp $
 #
 
 DISTNAME=	readline-2.1
@@ -19,13 +19,13 @@ GNU_CONFIGURE=	yes
 
 MAN3=		readline.3
 
-SCRIPTS_ENV+=	PLIST_SRC="$(PLIST_SRC)"
+SCRIPTS_ENV+=	PLIST_SRC="${PLIST_SRC}"
 
 do-build:
 	(cd ${WRKSRC}; make LIB=readline)
 	(cd ${WRKSRC}; make LIB=history)
 
 post-install:
-	@/sbin/ldconfig || /usr/bin/true
+	@${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
