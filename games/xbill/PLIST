@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/30 20:29:40 tv Exp $
 bin/xbill
 man/man6/xbill.6
+share/examples/xbill.scores
 share/xbill/pixmaps/about.xpm
 share/xbill/pixmaps/apple.xpm
 share/xbill/pixmaps/billA_0.xpm
