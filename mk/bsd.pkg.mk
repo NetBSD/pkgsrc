@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.265 1999/05/12 05:35:55 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.266 1999/05/17 22:24:15 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2062,7 +2062,7 @@ describe:
 	${ECHO} -n "|";							\
 	case "A${RUN_DEPENDS}B${DEPENDS}C" in				\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`";; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
