@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 23:02:07 kei Exp $
+share/ghostscript/Resource/CIDFont/Kochi-Gothic
+share/ghostscript/Resource/CIDFont/Kochi-Gothic.afm
+share/ghostscript/Resource/CIDFont/Kochi-Mincho
+share/ghostscript/Resource/CIDFont/Kochi-Mincho.afm

@@ -1,0 +1,9 @@
+Kochi CID-keyed font is made from `Kochi Mincho' and `Kochi Gothic' 
+TrueType fonts with the CID/OpenType conversion kit by KANOU Hiroki.
+
+About the CID/OpenType conversion kit (from its WWW page):
+
+This is a trial to convert modification-free TrueType fonts `Kochi
+Mincho' and `Kochi Gothic' designed by Yasuyuki Furukawa to CID-keyed
+fonts and OpenType fonts which can be used on Ghostscript, FreeType or
+other PostScript software/hardware.
