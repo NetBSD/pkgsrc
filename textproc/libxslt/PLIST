@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/05/06 08:10:26 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/22 11:17:33 martti Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -25,12 +25,12 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.8
+lib/libexslt.so.7.10
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.17
+lib/libxslt.so.1.19
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
@@ -103,8 +103,8 @@ share/doc/libxslt-python-${PKGVERSION}/examples/extfunc.py
 share/doc/libxslt-python-${PKGVERSION}/examples/pyxsltproc.py
 share/doc/libxslt-python-${PKGVERSION}/examples/test.xml
 share/doc/libxslt-python-${PKGVERSION}/examples/test.xsl
-@dirrm share/doc/libxslt-python-1.0.17/examples
-@dirrm share/doc/libxslt-python-1.0.17
+@dirrm share/doc/libxslt-python-${PKGVERSION}/examples
+@dirrm share/doc/libxslt-python-${PKGVERSION}
 @dirrm share/doc/html/libxslt/tutorial
 @dirrm share/doc/html/libxslt
 @dirrm include/libxslt
