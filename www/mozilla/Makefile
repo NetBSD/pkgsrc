@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/01/16 16:01:21 taya Exp $
+# $NetBSD: Makefile,v 1.53 2001/01/17 15:04:21 taya Exp $
 
 DISTNAME=	mozilla-source-0.7
 PKGNAME=	mozilla-0.7
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	zip:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
-DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
+DEPENDS+=	ORBit>=0.5.3:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
