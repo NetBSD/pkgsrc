@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/19 15:43:31 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/14 01:51:07 snj Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	-I${QTDIR}/include \
 			-I${BUILDLINK_PREFIX.mysql-client}/include/mysql \
 			-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 BUILD_QT3=		yes
 
 do-build:
@@ -25,6 +25,6 @@ do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/sqldrivers/libqsqlmysql.la \
 		${SQLDRVDIR}
 
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
