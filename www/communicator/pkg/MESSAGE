@@ -1,11 +1,12 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.3 1999/06/14 21:43:34 cgd Exp $
+$NetBSD: MESSAGE,v 1.4 1999/07/07 04:53:55 abs Exp $
 
 alpha:	To run the Digital UNIX version of Netscape, you need COMPAT_OSF1
 	in your kernel, plus a full set of /emul/osf1 libraries.
 
 i386:	To run the Linux version of Netscape, you need COMPAT_LINUX and
-	EXEC_ELF32 in your kernel, plus a full set of /emul/linux libraries.
+	EXEC_ELF32 in your kernel, plus a full set of /emul/linux libraries,
+	as provided by emulators/suse_compat and emulators/suse_x11.
 
 sparc:	To run the SunOS version of Netscape, you need COMPAT_SUNOS in your
 	kernel, plus a full set of /emul/sunos/usr/lib libraries.
