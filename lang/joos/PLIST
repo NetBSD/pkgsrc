@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/05/08 15:42:01 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/04 16:39:41 jschauma Exp $
 joos/A+/Makefile
 joos/A+/code.c
 joos/A+/code.h
@@ -25,6 +25,32 @@ joos/A+/type.c
 joos/A+/type.h
 joos/A+/weed.c
 joos/A+/weed.h
+joos/A-/Makefile
+joos/A-/code.c
+joos/A-/code.h
+joos/A-/defasn.c
+joos/A-/defasn.h
+joos/A-/emit.c
+joos/A-/emit.h
+joos/A-/error.c
+joos/A-/error.h
+joos/A-/joos.l
+joos/A-/joos.y
+joos/A-/main.c
+joos/A-/memory.c
+joos/A-/memory.h
+joos/A-/optimize.c
+joos/A-/optimize.h
+joos/A-/resource.c
+joos/A-/resource.h
+joos/A-/symbol.c
+joos/A-/symbol.h
+joos/A-/tree.c
+joos/A-/tree.h
+joos/A-/type.c
+joos/A-/type.h
+joos/A-/weed.c
+joos/A-/weed.h
 joos/Bin/D-Java
 joos/Bin/README
 joos/Bin/dejava
@@ -35,6 +61,8 @@ joos/Bin/jjava
 joos/Bin/jjavac
 joos/Bin/jjavap
 joos/Bin/jjoosc
+joos/Bin/joos.a+
+joos/Bin/joos.a-
 joos/Bin/joos
 joos/Bin/joosc
 joos/D-Java/Makefile
@@ -371,4 +399,5 @@ joos/Progs/WIGapplets/images/not.gif
 @dirrm joos/D-Java
 @dirrm joos/Bin
 @dirrm joos/A+
+@dirrm joos/A-
 @dirrm joos
