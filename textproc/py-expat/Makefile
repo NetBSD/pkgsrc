@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/10/11 13:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 04:59:40 snj Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-expat-0
@@ -19,7 +19,7 @@ PY_SETUP_SUBST+= EXPATRTPREFIX=${BUILDLINK_PREFIX.expat}
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-USE_BUILDLINK2= yes
+USE_BUILDLINK3= yes
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
@@ -28,7 +28,7 @@ do-patch:
 	${PATCH} --batch <$$f || true; \
 	done)
 
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
 .include "../../mk/bsd.pkg.mk"
