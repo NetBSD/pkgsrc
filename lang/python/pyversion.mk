@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.22 2003/09/30 22:44:52 kristerw Exp $
+# $NetBSD: pyversion.mk,v 1.23 2004/01/25 14:28:52 recht Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -115,6 +115,12 @@ PTHREAD_OPTS=	require
 .    if ${PTHREAD_TYPE} == "pth"
 .        include "../../devel/pth/buildlink2.mk"
 .    endif
+.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink3.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink3.mk"
+.    endif
 .  endif
 .elif ${_PYTHON_VERSION} == "22"
 PYPKGSRCDIR=	../../lang/python22
@@ -134,6 +140,12 @@ PTHREAD_OPTS=	require
 .    if ${PTHREAD_TYPE} == "pth"
 .        include "../../devel/pth/buildlink2.mk"
 .    endif
+.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink3.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink3.mk"
+.    endif
 .  endif
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
@@ -152,6 +164,12 @@ PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink2.mk"
 .    if ${PTHREAD_TYPE} == "pth"
 .        include "../../devel/pth/buildlink2.mk"
+.    endif
+.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink3.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink3.mk"
 .    endif
 .  endif
 .elif ${_PYTHON_VERSION} == "20"
@@ -174,11 +192,16 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 	error: no valid Python version
 .endif
 
-.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
+.if (defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])) || \
+  (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
 .  endif
-.  include "${PYPKGSRCDIR}/buildlink2.mk"
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
+.    include "${PYPKGSRCDIR}/buildlink2.mk"
+.  else
+.    include "${PYPKGSRCDIR}/buildlink3.mk"
+.  endif
 .else
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPENDS+=	${PYDEPENDENCY}
