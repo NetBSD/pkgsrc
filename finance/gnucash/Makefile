@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2004/12/28 23:18:16 reed Exp $
+# $NetBSD: Makefile,v 1.79 2005/01/02 22:28:48 wiz Exp $
 
 DISTNAME=		gnucash-1.8.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -25,6 +25,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
 # code is using char/unsigned char inconsistently
