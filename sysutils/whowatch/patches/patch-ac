@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 2000/08/11 23:47:52 itojun Exp $
+UP/DOWN conflicts with some curses.h
+--- whowatch.c-	Fri Aug 11 22:06:36 2000
++++ whowatch.c	Fri Aug 11 22:07:02 2000
+@@ -22,3 +22,3 @@
+ 
+-enum key {  ENTER=0x100, UP, DOWN, LEFT, RIGHT, DELETE, ESC, CTRL_K, CTRL_I,
++enum key {  ENTER=0x100, K_UP, K_DOWN, LEFT, RIGHT, DELETE, ESC, CTRL_K, CTRL_I,
+ 	   PG_DOWN, PG_UP, HOME, END };
+@@ -346,4 +346,4 @@
+ 			switch(c) {
+-				case 0x41: return UP;
+-				case 0x42: return DOWN;
++				case 0x41: return K_UP;
++				case 0x42: return K_DOWN;
+ 				case 0x34:
+@@ -476,3 +476,3 @@
+ 		break;
+-	case UP:
++	case K_UP:
+ 		cursor_up(windows[state]);
+@@ -480,3 +480,3 @@
+ 		break;
+-	case DOWN:
++	case K_DOWN:
+ 		cursor_down(windows[state]);
