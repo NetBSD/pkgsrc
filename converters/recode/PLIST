@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:51:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/11 13:20:22 kleink Exp $
 bin/recode
 include/recode.h
 include/recodext.h
@@ -9,6 +9,8 @@ info/recode.info-2
 info/recode.info-3
 info/recode.info-4
 info/recode.info-5
+info/recode.info-6
+info/recode.info-7
 @exec install-info %D/info/recode.info %D/info/dir
 lib/librecode.a
 lib/librecode.la
@@ -25,3 +27,6 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/recode.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/recode.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/recode.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/recode.mo
