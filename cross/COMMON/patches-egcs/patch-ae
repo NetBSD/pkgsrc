@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.1 1999/02/14 10:12:03 mrg Exp $
+
+Index: gcc/configure.in
+===================================================================
+RCS file: /cvsroot/src/gnu/dist/gcc/configure.in,v
+retrieving revision 1.10
+retrieving revision 1.11
+diff -c -r1.10 -r1.11
+*** gcc/configure.in	1998/12/16 14:49:45	1.10
+--- gcc/configure.in	1999/01/28 22:01:28	1.11
+***************
+*** 862,867 ****
+--- 862,874 ----
+  		fixincludes=fixinc.wrap
+  		tmake_file=i386/t-freebsd
+  		;;
++ 	i[[34567]]86-*-netbsdelf*)
++ 		tm_file=i386/netbsd-elf.h
++ 		xm_file=i386/xm-netbsd.h
++ 		# On NetBSD, the headers are already okay, except for math.h.
++ 		fixincludes=fixinc.wrap
++ 		tmake_file=t-netbsd
++ 		;;
+  	i[[34567]]86-*-netbsd*)
+  		tm_file=i386/netbsd.h
+  		xm_file=i386/xm-netbsd.h
