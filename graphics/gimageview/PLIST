@@ -1,0 +1,143 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/19 14:39:28 grant Exp $
+bin/gimv
+lib/gimageview/archiver/libarc_lha_ext.a
+lib/gimageview/archiver/libarc_lha_ext.la
+lib/gimageview/archiver/libarc_lha_ext.so
+lib/gimageview/archiver/libarc_rar_ext.a
+lib/gimageview/archiver/libarc_rar_ext.la
+lib/gimageview/archiver/libarc_rar_ext.so
+lib/gimageview/archiver/libarc_tar_ext.a
+lib/gimageview/archiver/libarc_tar_ext.la
+lib/gimageview/archiver/libarc_tar_ext.so
+lib/gimageview/archiver/libarc_zip_ext.a
+lib/gimageview/archiver/libarc_zip_ext.la
+lib/gimageview/archiver/libarc_zip_ext.so
+lib/gimageview/image_saver/libpng_saver.a
+lib/gimageview/image_saver/libpng_saver.la
+lib/gimageview/image_saver/libpng_saver.so
+lib/gimageview/image_saver/libpnm_saver.a
+lib/gimageview/image_saver/libpnm_saver.la
+lib/gimageview/image_saver/libpnm_saver.so
+lib/gimageview/image_saver/libxvpics_saver.a
+lib/gimageview/image_saver/libxvpics_saver.la
+lib/gimageview/image_saver/libxvpics_saver.so
+lib/gimageview/thumbnail/libee_thumb.a
+lib/gimageview/thumbnail/libee_thumb.la
+lib/gimageview/thumbnail/libee_thumb.so
+lib/gimageview/thumbnail/libgimv_thumb.a
+lib/gimageview/thumbnail/libgimv_thumb.la
+lib/gimageview/thumbnail/libgimv_thumb.so
+lib/gimageview/thumbnail/libgqview_thumb.a
+lib/gimageview/thumbnail/libgqview_thumb.la
+lib/gimageview/thumbnail/libgqview_thumb.so
+lib/gimageview/thumbnail/libkonq_old_thumb.a
+lib/gimageview/thumbnail/libkonq_old_thumb.la
+lib/gimageview/thumbnail/libkonq_old_thumb.so
+lib/gimageview/thumbnail/libkonqueror_thumb.a
+lib/gimageview/thumbnail/libkonqueror_thumb.la
+lib/gimageview/thumbnail/libkonqueror_thumb.so
+lib/gimageview/thumbnail/libnautilus-2.0_thumb.a
+lib/gimageview/thumbnail/libnautilus-2.0_thumb.la
+lib/gimageview/thumbnail/libnautilus-2.0_thumb.so
+lib/gimageview/thumbnail/libnautilus_thumb.a
+lib/gimageview/thumbnail/libnautilus_thumb.la
+lib/gimageview/thumbnail/libnautilus_thumb.so
+lib/gimageview/thumbnail/libxvpics_thumb.a
+lib/gimageview/thumbnail/libxvpics_thumb.la
+lib/gimageview/thumbnail/libxvpics_thumb.so
+share/doc/gimageview/html/ja/01.html
+share/doc/gimageview/html/ja/02.html
+share/doc/gimageview/html/ja/03.html
+share/doc/gimageview/html/ja/04.html
+share/doc/gimageview/html/ja/05.html
+share/doc/gimageview/html/ja/06.html
+share/doc/gimageview/html/ja/07.html
+share/doc/gimageview/html/ja/changelog.html
+share/doc/gimageview/html/ja/document.html
+share/doc/gimageview/html/ja/gimageview.css
+share/doc/gimageview/html/ja/gimv_faq.html
+share/doc/gimageview/html/ja/gimv_history.html
+share/doc/gimageview/html/ja/gimv_tips.html
+share/doc/gimageview/html/ja/index.html
+share/doc/gimageview/html/ja/todo.html
+share/doc/gimageview/text/C/AUTHORS
+share/doc/gimageview/text/C/COPYING
+share/doc/gimageview/text/C/ChangeLog
+share/doc/gimageview/text/C/INSTALL
+share/doc/gimageview/text/C/NEWS
+share/doc/gimageview/text/C/TODO
+share/doc/gimageview/text/ja/COPYING.jp
+share/doc/gimageview/text/ja/ChangeLog.jp
+share/doc/gimageview/text/ja/INSTALL.jp
+share/doc/gimageview/text/ja/README.jp
+share/doc/gimageview/text/ja/TODO.jp
+share/doc/gimageview/text/ja/gimageview.txt
+share/gimageview/gtkrc
+share/gimageview/pixmaps/default/alert.xpm
+share/gimageview/pixmaps/default/archive.xpm
+share/gimageview/pixmaps/default/back.xpm
+share/gimageview/pixmaps/default/close.xpm
+share/gimageview/pixmaps/default/dotfile.xpm
+share/gimageview/pixmaps/default/eject.xpm
+share/gimageview/pixmaps/default/ff.xpm
+share/gimageview/pixmaps/default/folder-go.xpm
+share/gimageview/pixmaps/default/folder-link-open.xpm
+share/gimageview/pixmaps/default/folder-link.xpm
+share/gimageview/pixmaps/default/folder-lock.xpm
+share/gimageview/pixmaps/default/folder-open.xpm
+share/gimageview/pixmaps/default/folder-up.xpm
+share/gimageview/pixmaps/default/folder.xpm
+share/gimageview/pixmaps/default/folder48.xpm
+share/gimageview/pixmaps/default/forward.xpm
+share/gimageview/pixmaps/default/fullscreen.xpm
+share/gimageview/pixmaps/default/gimageview.xpm
+share/gimageview/pixmaps/default/gimv_icon.xpm
+share/gimageview/pixmaps/default/home.xpm
+share/gimageview/pixmaps/default/image.xpm
+share/gimageview/pixmaps/default/leftarrow.xpm
+share/gimageview/pixmaps/default/nav_button.xpm
+share/gimageview/pixmaps/default/next_t.xpm
+share/gimageview/pixmaps/default/nfolder.xpm
+share/gimageview/pixmaps/default/no_zoom.xpm
+share/gimageview/pixmaps/default/paper.xpm
+share/gimageview/pixmaps/default/pause.xpm
+share/gimageview/pixmaps/default/play.xpm
+share/gimageview/pixmaps/default/prefs.xpm
+share/gimageview/pixmaps/default/prev_t.xpm
+share/gimageview/pixmaps/default/question.xpm
+share/gimageview/pixmaps/default/refresh.xpm
+share/gimageview/pixmaps/default/resize.xpm
+share/gimageview/pixmaps/default/rightarrow.xpm
+share/gimageview/pixmaps/default/rotate.xpm
+share/gimageview/pixmaps/default/rw.xpm
+share/gimageview/pixmaps/default/search.xpm
+share/gimageview/pixmaps/default/skip.xpm
+share/gimageview/pixmaps/default/small_archive.xpm
+share/gimageview/pixmaps/default/small_close.xpm
+share/gimageview/pixmaps/default/small_home.xpm
+share/gimageview/pixmaps/default/small_refresh.xpm
+share/gimageview/pixmaps/default/small_up.xpm
+share/gimageview/pixmaps/default/stop.xpm
+share/gimageview/pixmaps/default/stop2.xpm
+share/gimageview/pixmaps/default/up.xpm
+share/gimageview/pixmaps/default/zoom.xpm
+share/gimageview/pixmaps/default/zoom_fit.xpm
+share/gimageview/pixmaps/default/zoom_in.xpm
+share/gimageview/pixmaps/default/zoom_out.xpm
+share/gnome/apps/Graphics/gimageview.desktop
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimageview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimageview.mo
+share/pixmaps/gimv.png
+@dirrm share/gimageview/pixmaps/default
+@dirrm share/gimageview/pixmaps
+@dirrm share/gimageview
+@dirrm share/doc/gimageview/text/ja
+@dirrm share/doc/gimageview/text/C
+@dirrm share/doc/gimageview/text
+@dirrm share/doc/gimageview/html/ja
+@dirrm share/doc/gimageview/html
+@dirrm share/doc/gimageview
+@dirrm lib/gimageview/thumbnail
+@dirrm lib/gimageview/image_saver
+@dirrm lib/gimageview/archiver
+@dirrm lib/gimageview
