@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/04/14 16:15:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.48 2004/04/26 05:22:32 snj Exp $
 
 DISTNAME=		gnome-pim-1.4.6
 PKGREVISION=		7
@@ -11,7 +11,7 @@ COMMENT=		Personal Information Manager for GNOME
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
@@ -24,6 +24,6 @@ CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE}
 
-.include "../../comms/gnome-pilot/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../comms/gnome-pilot/buildlink3.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
