@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/06/20 23:47:26 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/11/07 17:21:30 mycroft Exp $
 bin/gimp
 bin/gimptool
 include/gck/gck.h
@@ -12,6 +12,7 @@ include/gck/gckui.h
 include/gck/gckvector.h
 include/libgimp/gimp.h
 include/libgimp/gimpenums.h
+include/libgimp/gimpfeatures.h
 include/libgimp/gimpmenu.h
 include/libgimp/gimpui.h
 @unexec install-info --delete %D/info/pdb.info %D/info/dir
@@ -80,8 +81,6 @@ lib/gimp/1.0/plug-ins/illusion
 lib/gimp/1.0/plug-ins/iwarp
 lib/gimp/1.0/plug-ins/jpeg
 lib/gimp/1.0/plug-ins/laplace
-lib/gimp/1.0/plug-ins/libgpc.a
-lib/gimp/1.0/plug-ins/libmegawidget.a
 lib/gimp/1.0/plug-ins/mail
 lib/gimp/1.0/plug-ins/max_rgb
 lib/gimp/1.0/plug-ins/maze
@@ -148,13 +147,16 @@ lib/libgck.la
 lib/libgck.so.1.0
 lib/libgimp.a
 lib/libgimp.la
-lib/libgimp.so.1.0
+lib/libgimp.so.1.2
 lib/libgimpui.a
 lib/libgimpui.la
-lib/libgimpui.so.1.0
+lib/libgimpui.so.1.2
+lib/libgpc.a
+lib/libmegawidget.a
 man/man1/gimp.1
 man/man1/gimptool.1
 man/man3/gpc.3
+share/aclocal/gimp.m4
 share/gimp/brushes/10x10square.gbr
 share/gimp/brushes/10x10squareBlur.gbr
 share/gimp/brushes/11circle.gbr
