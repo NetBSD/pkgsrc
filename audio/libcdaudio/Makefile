@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/08 14:12:50 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/11 16:27:37 xtraeme Exp $
 #
 
 DISTNAME=	libcdaudio-0.99.10
@@ -9,9 +9,10 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://libcdaudio.sourceforge.net/
 COMMENT=	Multi-platform CD player development library
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libcdaudio.pc.in
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
