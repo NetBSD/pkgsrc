@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2001/07/23 10:03:09 martin Exp $
+$NetBSD: distinfo,v 1.6 2001/08/10 14:41:18 martin Exp $
 
-SHA1 (stunnel-3.16.tar.gz) = 918a5ddf3555c33c67d9c3bbea6fe4ab1ab7859a
-Size (stunnel-3.16.tar.gz) = 121666 bytes
-SHA1 (patch-aa) = 9ef36b68a7689e9130da6b11f21a9ff9e6fcda90
-SHA1 (patch-ab) = 30e7b84b35511ff29f482e01e57a6c8e9634b057
-SHA1 (patch-ac) = 9246c0855f0fa12f79d00f7729c54c9b1703bdb9
+SHA1 (stunnel-3.19.tar.gz) = f08c9c469a4b7978570c0bd9dbb33aabc25602f8
+Size (stunnel-3.19.tar.gz) = 126011 bytes
+SHA1 (patch-aa) = dbdc9c7d9934e9b95e902cd1eb67b8983249655e
+SHA1 (patch-ab) = 41422967d362469b9d1a62341e68bba863ed04d9
+SHA1 (patch-ac) = 36a04efd0641b571db6b413642bfd6cfb00003cd

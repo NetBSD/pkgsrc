@@ -1,43 +1,30 @@
-$NetBSD: patch-ab,v 1.6 2001/07/23 10:03:10 martin Exp $
+$NetBSD: patch-ab,v 1.7 2001/08/10 14:41:19 martin Exp $
 
---- configure.in.orig	Wed Jul 18 08:55:23 2001
-+++ configure.in	Mon Jul 23 11:54:52 2001
-@@ -124,12 +124,7 @@
- AC_CHECK_LIB(dl, dlopen)
+--- configure.in.orig	Fri Aug 10 11:30:46 2001
++++ configure.in	Fri Aug 10 16:33:18 2001
+@@ -125,20 +125,7 @@
  AC_CHECK_LIB(nsl, gethostbyname)
  AC_CHECK_LIB(socket, socket)
--AC_CHECK_LIB(pthread, pthread_create)
+ 
+-# OSF hack instead of simple AC_CHECK_LIB here
+-AC_MSG_CHECKING([for pthread_create in -lpthread])
+-    saved_LIBS="$LIBS"
+-    LIBS="-lpthread $saved_LIBS"
+-    AC_TRY_LINK([#include <pthread.h>],
+-      [pthread_create((void *)0, (void *)0, (void *)0, (void *)0)],
+-      [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBPTHREAD)],
+-      [AC_MSG_RESULT(no); LIBS="$saved_LIBS"])
+-
 -# BSD hack
 -AC_CHECK_LIB(c_r, pthread_create,
 -        [ LIBS="$LIBS -pthread"
 -	AC_DEFINE(HAVE_LIBPTHREAD) ]
 -)
 +# XXX pthread does not work with stunnel on NetBSD
+ 
  AC_CHECK_LIB(util, openpty)
  
- 
-@@ -138,17 +133,19 @@
- AC_ARG_WITH(tcp-wrappers,
- [  --with-tcp-wrappers     Use the libwrap (TCP wrappers) library],
-   [
-+    saved_LIBS="$LIBS"
-     if test "$withval" = "yes"; then
-       AC_MSG_RESULT(yes)
-       AC_MSG_CHECKING([for hosts_access in -lwrap])
-       LIBS="-lwrap $LIBS"
-       AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
-         [hosts_access()],
--        [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP)],
-+        [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP) wrap_LIB="-lwrap"],
- 	[AC_MSG_RESULT(not found); exit 1])
-     else
-       AC_MSG_RESULT(no)
-     fi
-+    LIBS="$saved_LIBS"
-   ],
-   [
-     AC_MSG_RESULT((default))
-@@ -184,7 +181,7 @@
+@@ -195,7 +182,7 @@
  # AC_HEADER_DIRENT
  # AC_HEADER_STDC
  # AC_HEADER_SYS_WAIT
@@ -46,12 +33,3 @@ $NetBSD: patch-ab,v 1.6 2001/07/23 10:03:10 martin Exp $
  
  # dnl Checks for typedefs, structures, and compiler characteristics.
  # AC_C_CONST
-@@ -202,6 +199,8 @@
- AC_CHECK_SIZEOF(unsigned int)
- AC_CHECK_SIZEOF(unsigned long)
- AC_CHECK_SIZEOF(unsigned long long)
-+
-+LIBS="$LIBS $wrap_LIB"
- 
- AC_OUTPUT(Makefile)
- 
