@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/06/18 07:05:32 explorer Exp $
+
+diff -ur dbdimp.h.orig dbdimp.h
+--- dbdimp.h.orig	Thu Apr  4 18:55:51 2002
++++ dbdimp.h	Thu Apr  4 19:08:29 2002
+@@ -22,6 +22,7 @@
+     PGconn    * conn;		/* connection structure */
+     int         init_commit;	/* initialize AutoCommit */
+     int         pg_auto_escape;	/* initialize AutoEscape */
++    int		need_begin;	/* need a begin */
+ };
+ 
+ /* Define sth implementor data structure */
