@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 16:06:18 jmmv Exp $
+lib/xine/plugins/1.0.0/xineplug_ao_out_arts.a
+lib/xine/plugins/1.0.0/xineplug_ao_out_arts.la
+lib/xine/plugins/1.0.0/xineplug_ao_out_arts.so
+@comment in xine-lib: @dirrm lib/xine/plugins/1.0.0
