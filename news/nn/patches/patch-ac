@@ -1,5 +1,5 @@
 --- config.h.orig	Fri Feb 18 03:15:47 1994
-+++ config.h	Fri May 22 01:06:45 1998
++++ config.h	Fri May 22 09:57:57 1998
 @@ -32,7 +32,7 @@
  #define NOV
  
@@ -23,10 +23,19 @@
   */
  
 -#define NNTP_SERVER	"/usr/lib/nntp_server"
-+#define NNTP_SERVER     PREFIX "/etc/nntp_server"
++#define NNTP_SERVER     PREFIX "/etc/nntp/server"
  
  /*
   *	Define NNTP_POST if you want nn to reject attempts to post via
+@@ -104,7 +104,7 @@
+  *	be present, define NNTP_MINI_INEWS_HEADER below.
+  */
+ 
+-#define NNTP_MINI_INEWS_HEADER	/* uses "broken" mini-inews */
++#undef NNTP_MINI_INEWS_HEADER
+ 
+ /*
+  *	Define NNTP_PATH_HOSTNAME to force a specific hostname into the
 @@ -126,7 +126,7 @@
   *	conf/s-template.h as a starting point for writing you own.
   */
@@ -90,7 +99,7 @@
 +#define NEWS_LIB_DIRECTORY	"/var/news/etc"
  
 -/* #define INEWS_PATH		"/usr/lib/news/inews"	*/
-+#define INEWS_PATH		LIB_DIRECTORY "/inews"
++#define INEWS_PATH		BIN_DIRECTORY "/inews"
  
  
  /*
