@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/10/02 06:39:59 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/11/28 12:22:35 martti Exp $
 
-SHA1 (Tk800.022.tar.gz) = 0f80ed26d181cbe46ac274f0f8a5c1a313e9d9dd
-Size (Tk800.022.tar.gz) = 3464312 bytes
+SHA1 (Tk800.023.tar.gz) = 79325851198759fac362725aae76f9ac73cac808
+Size (Tk800.023.tar.gz) = 3478100 bytes
 SHA1 (patch-aa) = ad5b7a96006aa2c09a68c202a2e132b2c796dd8e
 SHA1 (patch-ab) = 9b01440c4035b71620e5a1e835e290f01b210f53
