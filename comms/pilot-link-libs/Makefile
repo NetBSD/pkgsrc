@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:13:16 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/01/25 18:41:20 tv Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
 
 PKGNAME=		pilot-link-libs-${PILOT_LINK_VERS}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		Libraries for talking to the 3Com Pilot PDA
 
 CONFLICTS+=		pilot-link-0.8.* pilot-link-0.9.[0-3]
@@ -19,7 +19,7 @@ BUILD_DIRS+=		${WRKSRC}/libpisock
 BUILD_DIRS+=		${WRKSRC}/libpisock++
 BUILD_DIRS+=		${WRKSRC}/libpisync
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
