@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9342 2005/02/27 22:30:43 veego Exp $
+$NetBSD: CHANGES,v 1.9343 2005/02/27 22:43:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated twin to 3.1.14nb2 [veego 2005-02-27]
 	Updated blackdown to jdk13-1nb5 [veego 2005-02-27]
 	Updated transcode to 0.6.12nb5 [veego 2005-02-27]
+	Updated devilspie to 0.8 [wiz 2005-02-27]
