@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6980 2004/08/23 11:48:12 markd Exp $
+$NetBSD: CHANGES,v 1.6981 2004/08/23 14:50:04 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4028,3 +4028,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail-run to 20040823 [schmonz 2004-08-23]
 	Updated bozohttpd to 20040823 [mrg 2004-08-23]
 	Added kkbswitch-1.4.1 [markd 2004-08-23]
+	Removed guavac [tv 2004-08-23]
