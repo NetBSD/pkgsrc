@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2004/04/14 16:15:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.84 2004/04/27 00:59:36 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.0.13
@@ -14,7 +14,7 @@ COMMENT=		Spreadsheet program from the GNOME project
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
 
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
@@ -27,16 +27,16 @@ CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
 LIBS+=      		-lunicode
 
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/gal/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../devel/libole2/buildlink2.mk"
-.include "../../devel/oaf/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../textproc/libunicode/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../devel/bonobo/buildlink3.mk"
+.include "../../devel/gal/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libole2/buildlink3.mk"
+.include "../../devel/oaf/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
+.include "../../print/gnome-print/buildlink3.mk"
+.include "../../textproc/libunicode/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 
 .include "../../mk/bsd.pkg.mk"
