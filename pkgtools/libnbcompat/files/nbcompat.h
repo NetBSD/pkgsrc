@@ -256,10 +256,7 @@ int	pclose(FILE *);
 #endif
 
 #ifndef HAVE_ERR
-void	err(int, const char *, ...);
-void	errx(int, const char *, ...);
-void	warn(const char *, ...);
-void	warnx(const char *, ...);
+#include "err.h"
 #endif
 
 #ifndef HAVE_FGETLN
