@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2002/12/04 15:20:28 taya Exp $
+$NetBSD: distinfo,v 1.31 2002/12/05 02:59:46 uebayasi Exp $
 
-SHA1 (mozilla-source-1.2.1.tar.bz2) = 30dd637bc23ea83191351b7e8e1d353414c594c2
-Size (mozilla-source-1.2.1.tar.bz2) = 30923315 bytes
+SHA1 (mozilla-source-1.2.1.tar.bz2) = 3af707a14eb11e3f615ad7d2225cc7205faa4d36
+Size (mozilla-source-1.2.1.tar.bz2) = 30919648 bytes
 SHA1 (patch-aa) = 8df6d21c0149e81bba809c7291287c84f6c6a41c
 SHA1 (patch-ab) = d40ba83bad039487492690b26d28715da7dd856e
 SHA1 (patch-ac) = 91d1534e3aa3bbcd3d5e1e10c3d0577fe6ca8282
