@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/05/18 18:08:47 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2002/12/13 05:19:52 dmcmahill Exp $
 
-SHA1 (geda/libgeda-20020414.tar.gz) = b545f581fd04283238416efda29b3a9301a8abc4
-Size (geda/libgeda-20020414.tar.gz) = 838513 bytes
+SHA1 (geda/libgeda-20021103.tar.gz) = 07fd71465e8bfc9002dc43e6a6b2e73fc92b67f4
+Size (geda/libgeda-20021103.tar.gz) = 872726 bytes

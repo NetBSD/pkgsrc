@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/05/18 18:08:43 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2002/12/13 05:19:51 dmcmahill Exp $
 
-SHA1 (geda/geda-gschem-20020414.tar.gz) = 07d740f4af4a1dc49e47d4c6e868b6ea23bd670f
-Size (geda/geda-gschem-20020414.tar.gz) = 1050665 bytes
+SHA1 (geda/geda-gschem-20021103.tar.gz) = ed0506577e4682a0f974b2f504c23aac8a937cc2
+Size (geda/geda-gschem-20021103.tar.gz) = 1349580 bytes
