@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2002/12/26 11:13:56 shell Exp $
+# $NetBSD: Makefile,v 1.224 2003/01/26 00:12:39 fredb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -42,6 +42,7 @@ SUBDIR+=	compface
 SUBDIR+=	cqcam
 SUBDIR+=	denemo
 SUBDIR+=	dia
+SUBDIR+=	divxplayer
 SUBDIR+=	dumpmpeg
 SUBDIR+=	dvdview
 SUBDIR+=	dx
