@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 1999/06/09 11:39:20 sakamoto Exp $
+# $NetBSD: Makefile,v 1.95 1999/06/14 14:49:05 mrg Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -126,6 +126,7 @@
     SUBDIR += xless
 #    SUBDIR += xloadimage
     SUBDIR += xlockmore
+    SUBDIR += xlogout
     SUBDIR += xmascot
     SUBDIR += xmeter
 #    SUBDIR += xmbdfed
