@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1630 2003/03/12 16:44:49 taca Exp $
+$NetBSD: CHANGES,v 1.1631 2003/03/13 07:24:40 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1114,3 +1114,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ethereal to 0.9.11 [salo 2003-03-12]
 	Updated gedit to 2.2.1 [jmmv 2003-03-12]
 	Updated bkpupsd to 2.1.2 [taca 2003-03-12]
+	Updated qpopper to 4.0.5 [itojun 2002-03-13]
