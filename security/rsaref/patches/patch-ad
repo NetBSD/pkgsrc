@@ -1,0 +1,11 @@
+--- ../source/r_random.c.orig	Fri Mar 25 14:01:47 1994
++++ ../source/r_random.c	Tue Jul 14 13:20:11 1998
+@@ -8,7 +8,7 @@
+ #include "global.h"
+ #include "rsaref.h"
+ #include "r_random.h"
+-#include "md5.h"
++#include <rsaref/md5.h>
+ 
+ #define RANDOM_BYTES_NEEDED 256
+ 
