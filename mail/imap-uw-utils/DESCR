@@ -1,13 +1,14 @@
-UW IMAP mailbox utilities:
+This distribution contains two unsupported programs, icat and ifrom,
+which may be of use to some sites.
 
-	chkmail			check for new mail
-	dmail			procmail Mail Delivery Module
-	icat			"cat" a mailbox from an IMAP source
-	ifrom			one line per message summary of IMAP mailbox
-	imapcopy, imapmove	copy or move messages from an IMAP inbox to a
-				local mailbox
-	mbxcopy, mbxmove	copy or move messages to a new mailbox
-	mbxcreat		create a new mailbox
-	mbxcvt			copy or move messages to a new mailbox,
-				converting mailbox format
-	tmail			Mail Delivery Module
+	icat		"cat" a mailbox from an IMAP source
+	ifrom		one line per message summary of IMAP mailbox
+
+There were once other programs in this distribution as well:
+
+The old chkmail, imapcopy, imapxfer, mbxcopy, mbxcreat, and mbxcvt
+programs have been replaced with the mailutil program, which is
+included in the mail/imap-uw package.
+
+The dmail, mlock, and tmail programs are also bundled in the mail/imap-uw
+package.
