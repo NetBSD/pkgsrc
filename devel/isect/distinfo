@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/08/06 15:38:02 jschauma Exp $
 
-SHA1 (isect-1.0.tar.gz) = 442a4bd8cc805722b1cdfa199882d3f2591c88f9
-Size (isect-1.0.tar.gz) = 267384 bytes
-SHA1 (patch-aa) = c272b710ae163e4af27c153bc05e9584bcdfcd4e
-SHA1 (patch-ab) = c3a798a36986eee8474d09e8d7d115b1a5e05c50
-SHA1 (patch-ac) = ecf6747d3bf5aeb22d9db8b80e9899a9ea87aa10
+SHA1 (isect-1.6.2.tar.gz) = 58a7711964560319eafd70398bef849fdc958c33
+Size (isect-1.6.2.tar.gz) = 762227 bytes
+SHA1 (patch-aa) = 2a1c802e43b2f7ba5ea4e25e597eb194a420e0a8
+SHA1 (patch-ab) = 96ce0097afef5bbba6ec2ea02d5ef08ee85229bb
+SHA1 (patch-ac) = 0434aa942fd79618df1b5824e462fa2821a125f3
