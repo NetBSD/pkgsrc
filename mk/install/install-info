@@ -1,0 +1,29 @@
+# $NetBSD
+#
+# Handle registration of Info files; used by texinfo.mk.
+#
+
+INFO_FILES="@INFO_FILES@"
+INSTALL_INFO="@INSTALL_INFO@"
+INFO_DIR="@INFO_DIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	for f in ${INFO_FILES}; do
+		${INSTALL_INFO} --delete --info-dir=${PKG_PREFIX}/${INFO_DIR} \
+		   ${PKG_PREFIX}/${INFO_DIR}/${f} 1>/dev/null 2>&1
+		${INSTALL_INFO} --info-dir=${PKG_PREFIX}/${INFO_DIR} \
+		   ${PKG_PREFIX}/${INFO_DIR}/${f}
+	done
+	;;
+DEINSTALL)
+	for f in ${INFO_FILES}; do
+		${INSTALL_INFO} --delete --info-dir=${PKG_PREFIX}/${INFO_DIR} \
+		   ${PKG_PREFIX}/${INFO_DIR}/${f} 1>/dev/null 2>&1
+	done
+	_nentries="`${GREP} -c '^\*' ${PKG_PREFIX}/${INFO_DIR}/dir 2>/dev/null`"
+	if [ x"${_nentries}" != x -a "${_nentries}" -le 1 ]; then
+		${RM} ${PKG_PREFIX}/${INFO_DIR}/dir
+	fi
+	;;
+esac
