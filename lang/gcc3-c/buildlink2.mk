@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/02/01 14:05:47 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/02/02 12:17:23 jlam Exp $
 
 .if !defined(GCC3C_BUILDLINK2_MK)
 GCC3C_BUILDLINK2_MK=	# defined
@@ -31,7 +31,7 @@ BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*/*
 BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*
 BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/lib*.*
 BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/specs
-BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}/lib/libgcc_s.*
+BUILDLINK_FILES.gcc3c+=	${_GCC_SUBPREFIX}lib/libgcc_s.*
 
 BUILDLINK_TARGETS+=	gcc3c-buildlink
 
