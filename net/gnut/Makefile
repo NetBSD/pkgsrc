@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/12 15:12:40 deberg Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/28 16:49:37 wiz Exp $
 #
 
 DISTNAME=	gnut-0.4.12
@@ -12,11 +12,13 @@ HOMEPAGE=	http://www.mrob.com/gnut/
 #BUILD_DEPENDS+=	automake:../../devel/automake
 #DEPENDS+=	pth>=1.3.6:../../devel/pth
 
-# Sync these with devel/unproven-pthreads:
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
 		CXX=${LOCALBASE}/pthreads/bin/pg++
+
+# Sync these with devel/unproven-pthreads:
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k
 
 GNU_CONFIGURE=	yes
 
