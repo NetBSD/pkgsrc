@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/09/26 05:36:48 markd Exp $
+# $NetBSD: Makefile,v 1.40 2002/10/31 23:30:36 jlam Exp $
 
 DISTNAME=		R-1.5.1
 CATEGORIES=		math
@@ -76,7 +76,6 @@ post-configure:
 	( cd ${WRKSRC};							\
 	  for file in src/scripts/R.sh src/scripts/f77 etc/Makeconf; do	\
 	    ${SED} -e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"		\
-		   -e "s|${BUILDLINK_X11PKG_DIR}/|${X11BASE}/|g"	\
 		   -e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g" $${file} > $${file}.fix; \
 	    ${MV} $${file}.fix $${file};				\
 	  done;								\
