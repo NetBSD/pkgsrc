@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/04/03 12:31:56 martti Exp $
+# $NetBSD: Makefile,v 1.20 2002/04/04 09:42:27 martti Exp $
 #
 
 DISTNAME=		isakmpd-20020403
@@ -33,5 +33,12 @@ post-patch:
 			< ${WRKSRC}/$${i}.orig > ${WRKSRC}/$${i};	\
 	done
 
+pre-install:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/isakmpd.sh > ${WRKDIR}/isakmpd.sh
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/isakmpd.sh ${PREFIX}/etc/rc.d/isakmpd
+
 .include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
