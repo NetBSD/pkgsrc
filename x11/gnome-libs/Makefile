@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/11/21 23:03:21 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/12/13 21:46:52 tron Exp $
 #
 
 DISTNAME=	gnome-libs-0.30.1
@@ -16,7 +16,7 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	imlib-1.7:../../graphics/imlib
+DEPENDS+=	imlib-1.8.1:../../graphics/imlib
 DEPENDS+=	ORBit-0.3.0:../../corba/ORBit
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
