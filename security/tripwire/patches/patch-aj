@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2003/12/09 15:56:56 ben Exp $
+$NetBSD: patch-aj,v 1.2 2003/12/09 19:17:37 ben Exp $
 
 --- include/tripwire.h.orig	1994-07-25 09:04:34.000000000 -0700
 +++ include/tripwire.h
@@ -7,7 +7,7 @@ $NetBSD: patch-aj,v 1.1 2003/12/09 15:56:56 ben Exp $
   */
  
 -# define DB_RECORD_FORMAT "%ld %s %lo %lu %lu %lu %lu %lu %s %s %s %s %s %s %s %s %s %s %s %s %s\n"
-+# define DB_RECORD_FORMAT "%d %s %o %u %u %u %u %jd %s %s %s %s %s %s %s %s %s %s %s %s %s\n"
++# define DB_RECORD_FORMAT "%d %s %o %u %u %u %u %lld %s %s %s %s %s %s %s %s %s %s %s %s %s\n"
  #define DB_RECORD_FIELDS 21
  
  /* system defaults */
