@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/10/13 07:45:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/01/29 11:10:24 jlam Exp $
 CHANGES
 COPYRIGHT
 ControlPanel.html
@@ -51,11 +51,11 @@ lib/cmm/GRAY.pf
 lib/cmm/LINEAR_RGB.pf
 lib/cmm/PYCC.pf
 lib/cmm/sRGB.pf
-lib/content-types.properties
-lib/flavormap.properties
-lib/font.properties
-lib/font.properties.ja
-lib/font.properties.zh
+lib/content-types.properties.default
+lib/flavormap.properties.default
+lib/font.properties.default
+lib/font.properties.ja.default
+lib/font.properties.zh.default
 lib/fonts/LucidaBrightDemiBold.ttf
 lib/fonts/LucidaBrightDemiItalic.ttf
 lib/fonts/LucidaBrightItalic.ttf
@@ -98,7 +98,7 @@ lib/i386/libzip.so
 lib/i386/native_threads/libhpi.so
 lib/i386/server/Xusage.txt
 lib/i386/server/libjvm.so
-lib/images/cursors/cursors.properties
+lib/images/cursors/cursors.properties.default
 lib/images/cursors/invalid32x32.gif
 lib/images/cursors/motif_CopyDrop32x32.gif
 lib/images/cursors/motif_CopyNoDrop32x32.gif
@@ -107,7 +107,7 @@ lib/images/cursors/motif_LinkNoDrop32x32.gif
 lib/images/cursors/motif_MoveDrop32x32.gif
 lib/images/cursors/motif_MoveNoDrop32x32.gif
 lib/javaplugin.jar
-lib/jvm.cfg
+lib/jvm.cfg.default
 lib/jvm.hprof.txt
 lib/jvm.jcov.txt
 lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
@@ -122,20 +122,21 @@ lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-lib/psfont.properties.ja
-lib/psfontj2d.properties
+lib/psfont.properties.ja.default
+lib/psfontj2d.properties.default
 lib/rt.jar
 lib/security/cacerts
 lib/security/java.policy
-lib/security/java.security
+lib/security/java.security.default
 lib/sunrsasign.jar
 lib/tzmappings
-man/ja
 man/ja_JP.eucJP/man1/java.1
 man/ja_JP.eucJP/man1/keytool.1
 man/ja_JP.eucJP/man1/rmid.1
 man/ja_JP.eucJP/man1/rmiregistry.1
 man/ja_JP.eucJP/man1/tnameserv.1
+@exec	${LN} -sf ja_JP.eucJP %D/man/ja
+@unexec ${RM} -f %D/man/ja
 man/man1/java.1
 man/man1/keytool.1
 man/man1/rmid.1
@@ -143,8 +144,6 @@ man/man1/rmiregistry.1
 man/man1/tnameserv.1
 plugin/i386/ns4/javaplugin.so
 plugin/i386/ns600/libjavaplugin_oji.so
-@exec ${MKDIR} %D/jre/lib/applet
-@exec ${MKDIR} %D/jre/lib/ext
 @dirrm plugin/i386/ns600
 @dirrm plugin/i386/ns4
 @dirrm plugin/i386
@@ -153,7 +152,6 @@ plugin/i386/ns600/libjavaplugin_oji.so
 @dirrm man/ja_JP.eucJP/man1
 @dirrm man/ja_JP.eucJP
 @dirrm man
-@dirrm lib/security
 @dirrm lib/locale/zh_TW/LC_MESSAGES
 @dirrm lib/locale/zh_TW.BIG5/LC_MESSAGES
 @dirrm lib/locale/zh_TW.BIG5
@@ -179,8 +177,6 @@ plugin/i386/ns600/libjavaplugin_oji.so
 @dirrm lib/locale/de/LC_MESSAGES
 @dirrm lib/locale/de
 @dirrm lib/locale
-@dirrm lib/images/cursors
-@dirrm lib/images
 @dirrm lib/i386/server
 @dirrm lib/i386/native_threads
 @dirrm lib/i386/green_threads
@@ -192,9 +188,7 @@ plugin/i386/ns600/libjavaplugin_oji.so
 @dirrm lib/cmm
 @dirrm lib/audio
 @dirrm lib/applet
-@dirrm lib
 @dirrm bin/i386/native_threads
 @dirrm bin/i386/green_threads
 @dirrm bin/i386
 @dirrm bin
-@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}

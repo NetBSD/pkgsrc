@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/03/19 16:33:59 tron Exp $
+$NetBSD: distinfo,v 1.6 2003/01/29 11:10:24 jlam Exp $
 
-SHA1 (j2re-1_3_1_02-linux-i386.bin) = fb8bc0a3370c8f779873679d5d108bc640d1e2d0
-Size (j2re-1_3_1_02-linux-i386.bin) = 14877685 bytes
-SHA1 (patch-aa) = 9fb088f7975a39b012aa9c62236af858e5c7d23d
+SHA1 (j2re-1_3_1_07-linux-i586.bin) = 824294203178db005e79a787d1e40cebb3e1519f
+Size (j2re-1_3_1_07-linux-i586.bin) = 15358216 bytes
+SHA1 (patch-aa) = d77d939b5c38ca8c8f9b387632e40441015c47cf
 SHA1 (patch-ab) = 1a1664d2be48d7a4f8fc05876b7aa5f225c65b16

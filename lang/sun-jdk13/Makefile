@@ -1,19 +1,38 @@
-# $NetBSD: Makefile,v 1.16 2002/10/13 07:45:30 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/29 11:10:19 jlam Exp $
 
-# MASTER_SITES is very special, and must end in "=":
-DISTNAME=	j2sdk-1_3_1_02-linux-i386
-PKGNAME=	sun-jdk13-1.0.2
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/jdk1.3.1_02
-MASTER_SITES=	http://java.sun.com/Download4?config-file=j2sdk-1_3_1_02.config&platform=linux-i386&protocol=HTTP+download&download-name=
+DISTNAME=	j2sdk-1_3_1_07-linux-i586
+PKGNAME=	sun-jdk13-1.0.7
+WRKSRC=		${WRKDIR}/jdk1.3.1_07
+MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Development Kit 1.3.1
 
-DEPENDS=	sun-jre13>=1:../../lang/sun-jre13
+DEPENDS=	sun-jre13>=1.0.7:../../lang/sun-jre13
 
-# these are part of the JRE
+# Remove parts that are in common with the JRE.
+#
 post-extract:
-	${RM} -fr ${WRKSRC}/jre
-	${RM} -f ${WRKSRC}/LICENSE ${WRKSRC}/README ${WRKSRC}/bin/.java_wrapper
+	common=`${AWK} '/^#.*/ { next } /^$$/ { next } { print }' ${FILESDIR}/common`; \
+	cd ${WRKSRC}; for i in $$common; do				\
+		if [ -d $$i ]; then					\
+			${RM} -rf $$i;					\
+		else							\
+			${RM} -f $$i;					\
+		fi;							\
+	done
+
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
+	${ECHO} " Java(tm) 2 SDK, Standard Edition must be fetched"; \
+	${ECHO} " into:"; \
+	${ECHO} "	${DISTDIR}"; \
+	${ECHO} " from:"; \
+	${ECHO} "	${DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
 
 .include "../../lang/sun-jre13/Makefile.common"
+
+PREFIX=		${JVM_HOME}
