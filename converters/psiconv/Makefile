@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/09 06:25:31 sakamoto Exp $
+# $NetBSD: Makefile,v 1.12 2001/08/20 04:02:15 jlam Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -9,23 +9,20 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
 
-.if !exists(/usr/include/getopt.h)
-DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
-LIBS=		-lgetopt
-.endif
+USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+GNU_CONFIGURE=		YES
+CPPFLAGS+=		-DIMAGEMAGICK
 
-.include "../../graphics/ImageMagick/buildlink.mk"
-
-USE_X11=	YES
-USE_LIBTOOL=	YES
-LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-GNU_CONFIGURE=	YES
-CPPFLAGS+=	-DIMAGEMAGICK
+DOCDIR=		${PREFIX}/share/doc/psiconv
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/psiconv
-.for file in ascii html html4
-	${INSTALL_DATA} ${WRKSRC}/docs/${file} ${PREFIX}/share/doc/psiconv
-.endfor
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}/docs; for file in ascii html html4; do		\
+		${INSTALL_DATA} $${file} ${DOCDIR};			\
+	done
 
+.include "../../graphics/ImageMagick/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
