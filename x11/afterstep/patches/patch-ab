@@ -1,31 +1,18 @@
-$NetBSD: patch-ab,v 1.1 1998/08/23 07:28:45 garbled Exp $
---- configure.h.orig	Tue Aug 18 13:58:00 1998
-+++ configure.h	Tue Aug 18 14:02:00 1998
-@@ -10,5 +10,5 @@
+$NetBSD: patch-ab,v 1.2 1998/12/28 23:36:44 tron Exp $
+
+--- autoconf/Makefile.common.in.orig	Fri Dec 25 00:35:58 1998
++++ autoconf/Makefile.common.in	Fri Dec 25 00:36:22 1998
+@@ -10,11 +10,11 @@
+ 		$(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)
  
--#define AFTER_BIN_DIR	BINDIR=/usr/X11R6/bin
--#define AFTER_MOD_DIR	"/usr/X11R6/bin/"
--#define AFTER_MAN_DIR	MANDIR=/usr/X11R6/man/man1
-+#define AFTER_BIN_DIR	BINDIR=###x11###/bin
-+#define AFTER_MOD_DIR	"###x11###/bin/"
-+#define AFTER_MAN_DIR	MANDIR=###x11###/man/man1
+ install.man:
+-		@if test -f $(PROG).man; then $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1x; fi
++		@if test -f $(PROG).man; then $(INSTALL_DATA) $(PROG).man $(AFTER_MAN_DIR)/$(PROG).1; fi
  
-@@ -16,5 +16,5 @@
+ uninstall:
+ 		$(RMF) $(AFTER_BIN_DIR)/$(PROG)
+-		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1x
++		$(RMF) $(AFTER_MAN_DIR)/$(PROG).1
  
--#define AFTER_BPMDIR	"/usr/X11R6/include/X11/bitmaps"
--#define AFTER_XPMDIR	"/usr/X11R6/include/X11/pixmaps"
--#define AFTER_SHAREDIR	"/usr/share/afterstep"
-+#define AFTER_BPMDIR	"###x11###/share/bitmaps"
-+#define AFTER_XPMDIR	"###x11###/share/pixmaps"
-+#define AFTER_SHAREDIR	"###x11###/share/afterstep"
- 
-@@ -54,3 +54,3 @@
- 
--#define XIMAGELOADER  "xli -onroot -quiet -colors 20"
-+#define XIMAGELOADER  "xv -rmode 5 -root -quit"
- 
-@@ -176,3 +176,3 @@
- #define XPM
--#define XPMLIBRARY -L/usr/X11R6/lib -lXpm
-+#define XPMLIBRARY -L###x11###/lib -lXpm
- 
+ clean:
+ 		$(RMF) $(PROG) *.o *~ *% *.bak \#* core
