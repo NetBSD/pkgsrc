@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2004/05/08 18:24:00 cl Exp $
+$NetBSD: distinfo,v 1.2 2004/05/08 18:50:09 cl Exp $
 
 SHA1 (xeno-1.2-src-040418.tgz) = d19f627dc40416f369f6728fcd86e4364e1713ee
 Size (xeno-1.2-src-040418.tgz) = 2960238 bytes
@@ -17,3 +17,4 @@ SHA1 (patch-aj) = 3d567c5497b09e1b5980fe75d2bb38a23e39621d
 SHA1 (patch-ak) = d4e0d09f232f9d37ab4ab93fc389b07de4d9a5da
 SHA1 (patch-al) = 3ab650d2608455c603046afe46375ff3fa219703
 SHA1 (patch-am) = 90e31b894191b2a8df23344bc6997fa874f555e9
+SHA1 (patch-an) = 0351b1941ca85c016a8a09bb94ad9c126cb4af91
