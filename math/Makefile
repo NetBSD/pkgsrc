@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2001/07/01 00:07:28 tron Exp $
+# $NetBSD: Makefile,v 1.65 2001/07/01 13:09:52 taca Exp $
 #
 
 COMMENT=	Mathematics
@@ -46,6 +46,8 @@ SUBDIR+=	py-Scientific
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
 SUBDIR+=	rlab
+SUBDIR+=	ruby-bitvector
+SUBDIR+=	ruby-bigfloat
 SUBDIR+=	sc
 SUBDIR+=	scilab
 SUBDIR+=	slatec
