@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/25 01:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/05 07:59:31 simonb Exp $
 #
 
 DISTNAME=	hot-babe-0.1.2
@@ -10,6 +10,7 @@ HOMEPAGE=	http://dindinx.net/hotbabe/
 COMMENT=	System monitor
 
 USE_BUILDLINK2=	yes
+USE_X11=	yes
 
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
