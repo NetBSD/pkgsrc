@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/09/09 01:59:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.27 2000/01/10 01:39:05 wiz Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -7,7 +7,6 @@
 # Also, check PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk
 # (Use "make show-pkgtools-version" to find the correct value
 #  for YYYYMMDD)
-
 DISTNAME=		pkg_install-19990909
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
