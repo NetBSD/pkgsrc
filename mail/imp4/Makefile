@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/03/25 13:13:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/27 12:18:53 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -21,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.0.1
+IMPVER=		4.0.2
 PAXDIRS=	lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
