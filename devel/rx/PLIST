@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:15 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/06/25 11:41:05 seb Exp $
 include/rxposix.h
-@unexec	${INSTALL_INFO} --delete	%D/info/rx.info %D/info/dir
 info/rx.info
-@exec	${INSTALL_INFO}		%D/info/rx.info %D/info/dir
 lib/librx.a
 lib/librx.la
 lib/librx.so
