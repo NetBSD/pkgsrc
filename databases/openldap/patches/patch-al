@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2004/11/19 16:35:26 jlam Exp $
+
+--- build/man.mk.orig	2004-01-01 13:16:25.000000000 -0500
++++ build/man.mk
+@@ -14,6 +14,7 @@
+ # Makefile Template for Manual Pages
+ #
+ 
++installsysconfdir = @sysconfdir@$(ldap_subdir)
+ MANDIR=$(mandir)/man$(MANSECT)
+ TMP_SUFFIX=tmp
+ 
+@@ -21,9 +22,9 @@ all-common:
+ 	PAGES=`cd $(srcdir); echo *.$(MANSECT)`; \
+ 	for page in $$PAGES; do \
+ 		$(SED) -e "s%LDVERSION%$(VERSION)%" \
+-			-e 's%ETCDIR%$(sysconfdir)%' \
++			-e 's%ETCDIR%$(installsysconfdir)%' \
+ 			-e 's%LOCALSTATEDIR%$(localstatedir)%' \
+-			-e 's%SYSCONFDIR%$(sysconfdir)%' \
++			-e 's%SYSCONFDIR%$(installsysconfdir)%' \
+ 			-e 's%DATADIR%$(datadir)%' \
+ 			-e 's%SBINDIR%$(sbindir)%' \
+ 			-e 's%BINDIR%$(bindir)%' \
