@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4836 2004/02/15 07:34:12 martti Exp $
+$NetBSD: CHANGES,v 1.4837 2004/02/15 08:02:47 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xemacs-nox11 to 21.4.15 [minskim 2004-02-15]
 	Updated xemacs-packages to 1.14 [minskim 2004-02-15]
 	Updated mrtg to 2.10.13 [martti 2004-02-15]
+	Updated chicken to 1.33 [itojun 2004-02-15]
