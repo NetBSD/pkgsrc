@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.135 2003/12/11 22:35:50 reed Exp $
+# $NetBSD: bsd.prefs.mk,v 1.136 2003/12/27 13:28:46 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -239,10 +239,16 @@ SHAREMODE?=		${DOCMODE}
 .endif
 
 # if the system is IPv6-ready, compile with IPv6 support turned on.
-.if empty(_OPSYS_HAS_INET6:M[nN][oO]) && !defined(USE_SOCKS)
-USE_INET6?=		YES
+.if defined(USE_INET6)
+.if empty(USE_INET6:M[Yy][Ee][Ss])
+USE_INET6=		NO
 .else
-USE_INET6?=		NO
+USE_INET6=		YES
+.elif empty(_OPSYS_HAS_INET6:M[nN][oO]) && !defined(USE_SOCKS)
+USE_INET6=		YES
+.else
+USE_INET6=		NO
+.endif
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
