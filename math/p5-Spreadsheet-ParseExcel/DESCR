@@ -1,0 +1,7 @@
+This module allows you to get information from Excel file.
+
+This module can handle files of Excel95, 97 and 2000. (and now
+supports Excel4)
+
+The module will work on the majority of Windows, UNIX and Macintosh
+platforms. 
