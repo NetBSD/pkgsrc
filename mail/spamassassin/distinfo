@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/08/26 16:00:52 hubertf Exp $
+$NetBSD: distinfo,v 1.5 2002/09/29 23:44:28 simonb Exp $
 
-SHA1 (Mail-SpamAssassin-2.31.tar.gz) = d43295b0e3e49c60e8f91f7f7645a40db04965f1
-Size (Mail-SpamAssassin-2.31.tar.gz) = 370237 bytes
+SHA1 (Mail-SpamAssassin-2.41.tar.gz) = 197a9625c66bda0e18dac95f2e72a7e8c847c162
+Size (Mail-SpamAssassin-2.41.tar.gz) = 518310 bytes
 SHA1 (patch-aa) = 79a9f8589d6a99979bd2ff5dc56aff7ff9654ac7
