@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.1 2004/01/20 12:04:49 agc Exp $
+# $NetBSD: Makefile-example,v 1.2 2004/01/21 10:33:16 agc Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -13,7 +13,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=make/}
 # Second paragraph - MAINTAINER, HOMEPAGE and COMMENT
 MAINTAINER=		tech-pkg@NetBSD.org	# set this to your email address, tech-pkg@ is the default
 HOMEPAGE=		http://www.gnu.org/software/make/make.html
-COMMENT=		GNU version of 'make' utility	# start with a capital, no articales at start
+COMMENT=		GNU version of 'make' utility	# start with a capital, no articles at start
 
 # Third paragraph - PKG_INSTALLATION_TYPES
 PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
