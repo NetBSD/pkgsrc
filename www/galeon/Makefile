@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/07/16 13:16:05 agc Exp $
+# $NetBSD: Makefile,v 1.34 2002/08/29 20:00:20 drochner Exp $
 
 DISTNAME=	galeon-1.2.5
 CATEGORIES=	www
@@ -11,7 +11,7 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
-DEPENDS+=	mozilla>=1.0:../../www/mozilla
+DEPENDS+=	mozilla-1.1nb1:../../www/mozilla
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 		--disable-applet \
 		--disable-werror \
 		--sysconfdir=${PREFIX}/etc
+# XXX to build against mozilla 1.1
+CONFIGURE_ARGS+= --with-mozilla-snapshot=trunk
 
 .include	"../../x11/gnome-libs/buildlink.mk"
 .include	"../../devel/libglade/buildlink.mk"
