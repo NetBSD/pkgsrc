@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2001/07/01 16:03:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/08/01 23:50:20 mjl Exp $
 bin/gnc-prices
 bin/gnucash
+bin/gnucash-make-guids
 bin/update-finance-quote
 etc/gnucash/config
 info/gnucash-design.info
@@ -19,13 +20,13 @@ share/gnome/apps/Applications/gnucash.desktop
 share/gnome/help/gnucash/C/bofa-mym.html
 share/gnome/help/gnucash/C/dialog-categories.html
 share/gnome/help/gnucash/C/help-search-index.db
+share/gnome/help/gnucash/C/image/asset-barchart.png
+share/gnome/help/gnucash/C/image/asset-piechart.png
 share/gnome/help/gnucash/C/image/appr-asset1.png
 share/gnome/help/gnucash/C/image/appr-asset2.png
-share/gnome/help/gnucash/C/image/appr-income.png
 share/gnome/help/gnucash/C/image/appr-main1.png
 share/gnome/help/gnucash/C/image/appr-main2.png
 share/gnome/help/gnucash/C/image/autosplitledger.png
-share/gnome/help/gnucash/C/image/bal-graph.png
 share/gnome/help/gnucash/C/image/basicledger-transfer.png
 share/gnome/help/gnucash/C/image/basicledger.png
 share/gnome/help/gnucash/C/image/contract.png
@@ -33,12 +34,20 @@ share/gnome/help/gnucash/C/image/depr-asset.png
 share/gnome/help/gnucash/C/image/depr-main.png
 share/gnome/help/gnucash/C/image/editaccount.png
 share/gnome/help/gnucash/C/image/expand.png
+share/gnome/help/gnucash/C/image/financial-calculator.png
 share/gnome/help/gnucash/C/image/foliowin-single.png
 share/gnome/help/gnucash/C/image/foliowin.png
 share/gnome/help/gnucash/C/image/foreign-currency.png
+share/gnome/help/gnucash/C/image/general-ledger.png
+share/gnome/help/gnucash/C/image/income-barchart.png
+share/gnome/help/gnucash/C/image/income-piechart.png
 share/gnome/help/gnucash/C/image/logo-NetBSD-banner.png
 share/gnome/help/gnucash/C/image/logo-debian.png
 share/gnome/help/gnucash/C/image/logo-linux.png
+share/gnome/help/gnucash/C/image/mdi-notebook.png
+share/gnome/help/gnucash/C/image/mdi-onewindow.png
+share/gnome/help/gnucash/C/image/mdi-toplevel.png
+share/gnome/help/gnucash/C/image/menu-and-toolbar.png
 share/gnome/help/gnucash/C/image/new-user-frame1.png
 share/gnome/help/gnucash/C/image/new-user-frame2.png
 share/gnome/help/gnucash/C/image/new-user-frame3.png
@@ -54,12 +63,9 @@ share/gnome/help/gnucash/C/image/prefs-reconcile.png
 share/gnome/help/gnucash/C/image/prefs-register-colors.png
 share/gnome/help/gnucash/C/image/prefs-register.png
 share/gnome/help/gnucash/C/image/prefs-user-info.png
+share/gnome/help/gnucash/C/image/pricedb.png
 share/gnome/help/gnucash/C/image/recninfo.png
 share/gnome/help/gnucash/C/image/recnwin.png
-share/gnome/help/gnucash/C/image/regwin-double.png
-share/gnome/help/gnucash/C/image/regwin-multi.png
-share/gnome/help/gnucash/C/image/regwin-single.png
-share/gnome/help/gnucash/C/image/regwin-single2.png
 share/gnome/help/gnucash/C/image/report-av-baln.png
 share/gnome/help/gnucash/C/image/report-baln.png
 share/gnome/help/gnucash/C/image/report-folio.png
@@ -69,40 +75,38 @@ share/gnome/help/gnucash/C/image/report-tax-options.png
 share/gnome/help/gnucash/C/image/report-tax.png
 share/gnome/help/gnucash/C/image/reportwin.png
 share/gnome/help/gnucash/C/image/tax-info-dialog.png
-share/gnome/help/gnucash/C/image/ticker-a.png
-share/gnome/help/gnucash/C/image/ticker-b.png
 share/gnome/help/gnucash/C/image/transactionjrnl.png
 share/gnome/help/gnucash/C/index.html
 share/gnome/help/gnucash/C/intro.html
 share/gnome/help/gnucash/C/sec002.html
 share/gnome/help/gnucash/C/sec003.html
 share/gnome/help/gnucash/C/topic.dat
-share/gnome/help/gnucash/C/x2348.html
 share/gnome/help/gnucash/C/x2417.html
-share/gnome/help/gnucash/C/x2488.html
-share/gnome/help/gnucash/C/x2615.html
-share/gnome/help/gnucash/C/x2859.html
-share/gnome/help/gnucash/C/x2875.html
-share/gnome/help/gnucash/C/x2932.html
-share/gnome/help/gnucash/C/x3459.html
-share/gnome/help/gnucash/C/x3501.html
-share/gnome/help/gnucash/C/x3505.html
-share/gnome/help/gnucash/C/x3700.html
-share/gnome/help/gnucash/C/x3709.html
-share/gnome/help/gnucash/C/x3715.html
-share/gnome/help/gnucash/C/x3720.html
-share/gnome/help/gnucash/C/x3725.html
-share/gnome/help/gnucash/C/x3816.html
-share/gnome/help/gnucash/C/x3833.html
-share/gnome/help/gnucash/C/x3856.html
-share/gnome/help/gnucash/C/x3861.html
-share/gnome/help/gnucash/C/x3875.html
-share/gnome/help/gnucash/C/x4020.html
-share/gnome/help/gnucash/C/x4394.html
-share/gnome/help/gnucash/C/x899.html
-share/gnome/help/gnucash/C/x906.html
-share/gnome/help/gnucash/C/x915.html
-share/gnome/help/gnucash/C/x923.html
+share/gnome/help/gnucash/C/x2486.html
+share/gnome/help/gnucash/C/x2557.html
+share/gnome/help/gnucash/C/x2684.html
+share/gnome/help/gnucash/C/x2976.html
+share/gnome/help/gnucash/C/x2992.html
+share/gnome/help/gnucash/C/x3049.html
+share/gnome/help/gnucash/C/x3578.html
+share/gnome/help/gnucash/C/x3622.html
+share/gnome/help/gnucash/C/x3626.html
+share/gnome/help/gnucash/C/x3800.html
+share/gnome/help/gnucash/C/x3809.html
+share/gnome/help/gnucash/C/x3815.html
+share/gnome/help/gnucash/C/x3820.html
+share/gnome/help/gnucash/C/x3825.html
+share/gnome/help/gnucash/C/x3916.html
+share/gnome/help/gnucash/C/x3933.html
+share/gnome/help/gnucash/C/x3956.html
+share/gnome/help/gnucash/C/x3961.html
+share/gnome/help/gnucash/C/x3975.html
+share/gnome/help/gnucash/C/x4120.html
+share/gnome/help/gnucash/C/x4498.html
+share/gnome/help/gnucash/C/x946.html
+share/gnome/help/gnucash/C/x953.html
+share/gnome/help/gnucash/C/x962.html
+share/gnome/help/gnucash/C/x970.html
 share/gnome/help/gnucash/C/xacc-about.html
 share/gnome/help/gnucash/C/xacc-account-hierarchy-creator.html
 share/gnome/help/gnucash/C/xacc-accountedit.html
@@ -618,6 +622,20 @@ share/gnucash/doc/gnc.html
 share/gnucash/doc/guile-hackers.txt
 share/gnucash/doc/projects.html
 share/gnucash/finance-quote-helper
+share/gnucash/guile-modules/gnucash/report/account-piecharts.scm
+share/gnucash/guile-modules/gnucash/report/account-summary.scm
+share/gnucash/guile-modules/gnucash/report/average-balance.scm
+share/gnucash/guile-modules/gnucash/report/balance-sheet.scm
+share/gnucash/guile-modules/gnucash/report/category-barchart.scm
+share/gnucash/guile-modules/gnucash/report/hello-world.scm
+share/gnucash/guile-modules/gnucash/report/iframe-url.scm
+share/gnucash/guile-modules/gnucash/report/net-barchart.scm
+share/gnucash/guile-modules/gnucash/report/pnl.scm
+share/gnucash/guile-modules/gnucash/report/portfolio.scm
+share/gnucash/guile-modules/gnucash/report/price-scatter.scm
+share/gnucash/guile-modules/gnucash/report/register.scm
+share/gnucash/guile-modules/gnucash/report/taxtxf.scm
+share/gnucash/guile-modules/gnucash/report/transaction.scm
 share/gnucash/guile-modules/srfi/srfi-1.scm
 share/gnucash/guile-modules/srfi/srfi-11.scm
 share/gnucash/guile-modules/srfi/srfi-19.scm
@@ -739,23 +757,9 @@ share/gnucash/scm/qif-import/simple-obj.scm
 share/gnucash/scm/report-html.scm
 share/gnucash/scm/report-utilities.scm
 share/gnucash/scm/report.scm
-share/gnucash/scm/report/account-piecharts.scm
-share/gnucash/scm/report/account-summary.scm
-share/gnucash/scm/report/average-balance.scm
-share/gnucash/scm/report/balance-sheet.scm
-share/gnucash/scm/report/category-barchart.scm
-share/gnucash/scm/report/hello-world.scm
-share/gnucash/scm/report/iframe-url.scm
-share/gnucash/scm/report/net-barchart.scm
-share/gnucash/scm/report/pnl.scm
-share/gnucash/scm/report/portfolio.scm
-share/gnucash/scm/report/price-scatter.scm
-share/gnucash/scm/report/register.scm
 share/gnucash/scm/report/report-list.scm
 share/gnucash/scm/report/stylesheet-fancy.scm
 share/gnucash/scm/report/stylesheet-plain.scm
-share/gnucash/scm/report/taxtxf.scm
-share/gnucash/scm/report/transaction-report.scm
 share/gnucash/scm/report/txf-export-help.scm
 share/gnucash/scm/report/txf-export.scm
 share/gnucash/scm/report/view-column.scm
@@ -798,6 +802,8 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/html
 @dirrm share/gnucash/guile-modules/www
 @dirrm share/gnucash/guile-modules/srfi
+@dirrm share/gnucash/guile-modules/gnucash/report
+@dirrm share/gnucash/guile-modules/gnucash
 @dirrm share/gnucash/guile-modules
 @dirrm share/gnucash/doc/examples
 @dirrm share/gnucash/doc
