@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/06 19:28:22 ben Exp $
 bin/Ularn
 share/Ularn/Uhelp
 share/Ularn/Umaps
 share/Ularn/Ufortune
-@dirrm share/Ularn
