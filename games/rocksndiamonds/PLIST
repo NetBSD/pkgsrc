@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/09 15:05:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/15 14:47:37 adam Exp $
 bin/rocksndiamonds
 man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds/sounds/snd_classic
@@ -14,12 +14,18 @@ man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds/levels/Examples/example_andreas_buschbeck/graphics
 @dirrm share/rocksndiamonds/levels/Examples/example_andreas_buschbeck
 @dirrm share/rocksndiamonds/levels/Examples
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sebastian_simon/tapes
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sebastian_simon
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sam_bateman/tapes
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_sam_bateman
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_richard_valvona
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_randy_johannessen/tapes
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_randy_johannessen
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_rafael_gatti
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_paul_e_collins_iii/tapes
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_paul_e_collins_iii
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_krystian_abramowicz/tapes
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_krystian_abramowicz
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_jorge_jordan
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_gavin_davidson/tapes
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_gavin_davidson
@@ -27,11 +33,13 @@ man/man1/rocksndiamonds.1
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg/sounds
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg/graphics
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_emanuel_schmieg
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_efraim_yawitz
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/tapes
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/sounds
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/music
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf/graphics
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_edward_leuf
+@dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_audrius_saikunas
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/tapes
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/sounds
 @dirrm share/rocksndiamonds/levels/Contributions_2003/rnd_andreas_buschbeck/graphics
