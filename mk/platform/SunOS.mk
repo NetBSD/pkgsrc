@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.1 2004/10/06 20:51:47 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.2 2004/10/07 02:01:39 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -170,7 +170,7 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 	@echo "ERROR: pkgsrc now requires a more functional sed(1) than Solaris provides."
 	@echo "you can satisfy this requirement by running:"
 	@echo ""
-	@echo "    cd ${_PKGSRCDIR}/textproc/nbsed; ${MAKE} install"
+	@echo "    cd ${PKGSRCDIR}/textproc/nbsed; ${MAKE} install"
 	@echo ""
 	@echo "this will install ${LOCALBASE}/bin/nbsed and eliminate this message."
 	@echo "(nbsed is already installed by recent bootstrap-pkgsrc)."

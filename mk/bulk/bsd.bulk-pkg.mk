@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.62 2004/07/25 08:40:46 grant Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.63 2004/10/07 02:01:39 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -81,41 +81,41 @@ BUILDLOG?=	.make${BULK_ID}
 # foo/bar devel/libfoo
 # meaning 'foo/bar' is requied to build 'devel/libfoo'
 # this is in the format needed by tsort(1)
-DEPENDSTREEFILE?=	${_PKGSRCDIR}/.dependstree${BULK_ID}
+DEPENDSTREEFILE?=	${PKGSRCDIR}/.dependstree${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the
 # format:
 # foo/bar depends on: devel/libfoo devel/libbar devel/baz .....
 # ie, to build foo/bar we need devel/libfoo devel/libbar devel/baz ... installed
-DEPENDSFILE?=	${_PKGSRCDIR}/.depends${BULK_ID}
+DEPENDSFILE?=	${PKGSRCDIR}/.depends${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the
 # format:
 # devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
 # ie, to build foo/bar we need devel/libfoo to be installed.
 #     to build graphics/gtkfoo we need devel/libfoo to be installed
-SUPPORTSFILE?=	${_PKGSRCDIR}/.supports${BULK_ID}
+SUPPORTSFILE?=	${PKGSRCDIR}/.supports${BULK_ID}
 
 # This is a top level file which cross-references each package name and pkg
 # directory in the format:
 # devel/libfoo libfoo-1.3
-INDEXFILE?=	${_PKGSRCDIR}/.index${BULK_ID}
+INDEXFILE?=	${PKGSRCDIR}/.index${BULK_ID}
 
 # File containing a list of all the packages in the correct order for a bulk
 # build.  The correct order is one where packages that are required by others
 # are built before the packages which require them.
-ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
+ORDERFILE?=	${PKGSRCDIR}/.order${BULK_ID}
 
 # File which is used as a timestamp for when the build started.  This is used
 # eventually for looking for leftover files (files not properly deinstalled)
-STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
+STARTFILE?=	${PKGSRCDIR}/.start${BULK_ID}
 
 # File which is used as a database for bulk builds in which SPECIFIC_PKGS is
 # defined.  This database is used to hold all the dependency and index
 # information for the specific packages as well as their dependencies.  In a
 # SPECIFIC_PKGS bulk build, this file is created and then used to create the
 # INDEXFILE and DEPENDSTREEFILE.
-BULK_DBFILE?=	${_PKGSRCDIR}/.bulk_db${BULK_ID}
+BULK_DBFILE?=	${PKGSRCDIR}/.bulk_db${BULK_ID}
 
 # A list of pkgs which we should _never_ delete during a build.  The primary
 # use is for digest and also for xpkgwedge.  Add pkgtools/xpkgwedge in
@@ -132,7 +132,7 @@ _PRESERVE_WRKDIR?=	no
 bulk-cache:
 	@${ECHO_MSG} "BULK> Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ}
-	cd ${_PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
+	cd ${PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
 .endfor
 	${RM} -f ${BULK_DBFILE}
 	${TOUCH} ${BULK_DBFILE}
@@ -140,15 +140,15 @@ bulk-cache:
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
-	cd ${_PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
 	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
 	@${ECHO_MSG} "      (this may take a while)."
-	cd ${_PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
 .else
 	@${ECHO_MSG} "BULK> Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${ECHO_MSG} "      along with their dependencies"
 .for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
-	cd ${_PKGSRCDIR}/${__tmp__} && ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
+	cd ${PKGSRCDIR}/${__tmp__} && ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
 .endfor
 	@${ECHO_MSG} "BULK> Extracting dependency tree file"
 	${AWK} '/^(build_)?depends/ {pkgs[$$2] = 1; cat=$$2; sub(/\/.*/, "", cat); \
@@ -167,8 +167,8 @@ bulk-cache:
 	@${ECHO_MSG} "BULK> Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 
 # remove the bulk cache files
 clean-bulk-cache:
@@ -273,7 +273,7 @@ bulk-package:
 		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-				${DO}       (cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 			done ;\
 		else \
 			${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
@@ -361,25 +361,25 @@ bulk-package:
 					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
 					pkgerr="-1"; \
-					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
-					pkgskip=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
-					if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						 ${ECHO_MSG} "BULK> $$pkgskip" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						if [ -z "`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+					pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+					pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+					if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
+						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 							pkgerr="0"; \
 						else \
 							pkgerr="1"; \
 						fi; \
 					fi; \
 					${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
-						>> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 					${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>" \
-						>> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 					nbrokenby=`expr $$nbrokenby + 1`;\
-					if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${_PKGSRCDIR}/${BROKENFILE} ; then :; else \
-						${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${_PKGSRCDIR}/${BROKENFILE} ;\
+					if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} ; then :; else \
+						${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
 					fi ;\
 				done ;\
 			fi ;\
@@ -387,7 +387,7 @@ bulk-package:
 			if [ -f ${INTERACTIVE_COOKIE} ]; then \
 				nerrors="0"; \
 			fi; \
-			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${_PKGSRCDIR}/${BROKENFILE} \
+			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${PKGSRCDIR}/${BROKENFILE} \
 			) 2>&1 | ${TEE} -a ${BROKENFILE}; \
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
@@ -395,7 +395,7 @@ bulk-package:
 		*)	${ECHO_MSG} "BULK> Cleaning packages and its depends"; \
 		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
 				for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-					${DO}       (cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+					${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 				done;					\
 			else						\
 				${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\

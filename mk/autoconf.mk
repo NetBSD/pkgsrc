@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.4 2004/02/20 09:58:49 jlam Exp $
+# $NetBSD: autoconf.mk,v 1.5 2004/10/07 02:01:38 jlam Exp $
 #
 # makefile fragment for packages that use autoconf
 # AUTOCONF_REQD can be set to the minimum version required.
@@ -51,7 +51,7 @@ do-libtool-m4-override:
 	for file in ${_pattern_:S/libtool.m4$/configure/}; do		\
 		if [ -f "$$file" ]; then				\
 			libtool_m4=`${DIRNAME} $$file`/libtool.m4;	\
-			${LN} -sf ${_PKGSRCDIR}/mk/gnu-config/libtool-1.4.m4 \
+			${LN} -sf ${PKGSRCDIR}/mk/gnu-config/libtool-1.4.m4 \
 				$$libtool_m4;				\
 		fi;							\
 	done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/08/27 21:32:55 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2004/10/07 02:01:37 jlam Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -59,7 +59,7 @@ SUBDIR+=	${USER_ADDITIONAL_PKGS}
 PKGSRCTOP=	yes
 
 
-# If PACKAGES is set to the default (${_PKGSRCDIR}/packages), the current
+# If PACKAGES is set to the default (${PKGSRCDIR}/packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
 # structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
 # The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
@@ -99,9 +99,6 @@ README.html: .PRECIOUS
 # directory.
 .if make(bulk-cache) || make(clean-bulk-cache)
 .include "${.CURDIR}/mk/bulk/bsd.bulk-pkg.mk"
-# force the setting of _PKGSRCDIR because the way it gets
-# set in bsd.prefs.mk is broken if you're in this top level directory
-_PKGSRCDIR=${.CURDIR}
 .endif
 
 .PHONY: ${.CURDIR}/PKGDB
