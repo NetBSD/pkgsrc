@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/05/14 08:03:54 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNET_BUILDLINK3_MK:=	${PNET_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npnet}
 BUILDLINK_PACKAGES+=	pnet
 
 .if !empty(PNET_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pnet+=	pnet>=0.6.2
+BUILDLINK_DEPENDS.pnet+=	pnet>=0.6.4
 BUILDLINK_PKGSRCDIR.pnet?=	../../lang/pnet
 .endif	# PNET_BUILDLINK3_MK
 
