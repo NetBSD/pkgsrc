@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/23 16:20:55 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/08 23:23:49 dmcmahill Exp $
 
 DISTNAME=		hercules-2.11
 PKGNAME=		${DISTNAME}nb1
@@ -14,6 +14,7 @@ DEPENDS+=		hercules-images-*:../../emulators/hercules-images
 
 USE_GMAKE=		yes
 MAKEFILE=		makefile
+MAKE_ENV+=		HOST_ARCH=${MACHINE_ARCH}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hercules
