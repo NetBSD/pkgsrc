@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/19 12:02:04 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/15 10:35:49 grant Exp $
 #
 
 DISTNAME=		tnftp-20030825
@@ -10,6 +10,9 @@ MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
 
 GNU_CONFIGURE=		YES
+
+CONFLICTS+=		kth-krb4-[0-9]*
+CONFLICTS+=		lukemftp-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
