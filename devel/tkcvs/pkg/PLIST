@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/25 15:50:19 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/09/02 16:36:33 wiz Exp $
+bin/cvscheck
 bin/tkcvs
 bin/tkdiff
 share/doc/tkcvs/README.tkcvs
@@ -41,8 +42,8 @@ share/tkcvs/bitmaps/tkcvs32.xbm
 share/tkcvs/bitmaps/tkcvs32_mask.xbm
 share/tkcvs/bitmaps/tree16.xbm
 share/tkcvs/bitmaps/update.xbm
-man/man1/tkcvs.1.gz
-man/man1/tkdiff.1.gz
+man/man1/tkcvs.1
+man/man1/tkdiff.1
 @dirrm share/tkcvs/bitmaps
 @dirrm share/tkcvs
 @dirrm share/doc/tkcvs
