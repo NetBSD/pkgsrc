@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/01 18:38:35 tron Exp $
+
+--- kicq/extra/Makefile.am.orig	Mon Jul 31 23:06:07 2000
++++ kicq/extra/Makefile.am	Mon Jul 31 23:06:20 2000
+@@ -22,10 +22,6 @@
+ 	$(INSTALL_DATA) kicq.xpm $(ICONDIR)
+ 	$(mkinstalldirs) $(MINIDIR)
+ 	$(INSTALL_DATA) mini-kicq.xpm $(MINIDIR)/kicq.xpm
+-	@echo ----------------------------
+-	@echo Trying to Restart KPanel ...
+-	@kwmcom kpanel:restart || echo Failed && echo Sucess
+-	@echo ----------------------------
+ 
+ uninstall-local:
+ 	-rm -f $(APPLNKDIR)/kicq.kdelnk
