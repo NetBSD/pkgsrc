@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/27 16:28:08 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/18 07:17:31 grant Exp $
 #
 
 DISTNAME=		mozilla-i686-pc-linux-gnu-1.3a
@@ -15,6 +15,10 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 WRKSRC=			${WRKDIR}/mozilla
 NO_CONFIGURE=		# defined
 
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+MOZILLA_LIB=		${PREFIX}/lib/mozilla-linux
+
 do-build:
 
 post-build:
@@ -22,9 +26,18 @@ post-build:
 		${WRKDIR}/mozilla.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/mozilla-linux
-	cd ${WRKSRC}; && ${PAX} -rw . ${PREFIX}/lib/mozilla-linux
+	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
+	cd ${WRKSRC}; && ${CP} -r . ${MOZILLA_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-linux
+
+post-install:
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
+		>> ${PLIST_SRC}
+	${FIND} ${MOZILLA_LIB} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
 
