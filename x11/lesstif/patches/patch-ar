@@ -1,13 +1,13 @@
-$NetBSD: patch-ar,v 1.8 2001/06/30 19:08:25 jlam Exp $
+$NetBSD: patch-ar,v 1.9 2002/12/05 19:10:44 drochner Exp $
 
---- doc/www.lesstif.org/images/Makefile.am.orig	Tue May  1 08:37:20 2001
-+++ doc/www.lesstif.org/images/Makefile.am
-@@ -10,7 +10,7 @@
+--- doc/www.lesstif.org/images/Makefile.in.orig	Thu Dec  5 17:59:43 2002
++++ doc/www.lesstif.org/images/Makefile.in	Thu Dec  5 18:00:16 2002
+@@ -145,7 +145,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
--rootdir=	$(prefix)/LessTif/doc/images
-+rootdir=	$(htmldir)/images
- root_DATA=	hungry.png \
+-rootdir = $(prefix)/LessTif/doc/images
++rootdir = $(prefix)/share/doc/html/lesstif/images
+ root_DATA = hungry.png \
  		lesstif-realsmall.png lesstif-small.png lesstif.png \
  		ltsunlogo.png lesstif.jpg ltsunlogo.jpg \
