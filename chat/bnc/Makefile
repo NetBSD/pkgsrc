@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2003/01/31 01:00:50 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/11 13:38:50 grant Exp $
 # FreeBSD Id: ports/irc/bnc/Makefile,v 1.9 2000/05/22 06:38:58 will Exp
 
 DISTNAME=	bnc2.8.6
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/bnc/&-/}
 CATEGORIES=	chat
-MASTER_SITES=	http://www.gotbnc.com/files/	\
+MASTER_SITES=	http://www.gotbnc.com/files/ \
 		ftp://ftp.ircadmin.net/bnc/
 
 MAINTAINER=	zuntum@netbsd.org
-HOMEPAGE=	http://bnc.dragondata.com/
+HOMEPAGE=	http://www.gotbnc.com/
 COMMENT=	Simple IRC relay proxy with support for virtual hosting
 
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
@@ -17,8 +18,8 @@ GNU_CONFIGURE=	YES
 
 post-patch:
 	${MV} ${WRKSRC}/bncsetup ${WRKSRC}/bncsetup.orig
-	${SED}	-e "s|./mkpasswd|${PREFIX}/bin/bncmkpasswd|g"	\
-		-e "s|dialog --|${LOCALBASE}/bin/dialog --|g"	\
+	${SED}	-e "s|./mkpasswd|${PREFIX}/bin/bncmkpasswd|g"		\
+		-e "s|dialog --|${LOCALBASE}/bin/dialog --|g"		\
 		${WRKSRC}/bncsetup.orig > ${WRKSRC}/bncsetup
 
 do-install:
@@ -29,7 +30,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bnc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bnc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bnc
-	${INSTALL_DATA} ${WRKSRC}/example.conf 	\
-		${PREFIX}/share/examples/bnc/bnc.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/example.conf				\
+		${PREFIX}/share/examples/bnc/bnc.conf
 
 .include "../../mk/bsd.pkg.mk"
