@@ -1,0 +1,17 @@
+Gwave is a viewer for spice-like simulator output and other analog data
+
+Gwave can read several file formats.  It attempts to guess file formats
+based on filename, and then tries all file formats until one succedes.
+These file formats are known:
+
+CAzM transient output (*.[BNW])
+HSPICE binary and ascii formats (*.tr0, *.sw0, *.ac0)
+Spice2 and Spice3 "raw" output  (*.raw)
+An ascii format with whitespace-seperated columns and column headings,
+such as that produced by ACS (Al's circuit simulator). (*.acs, *.asc, *.ascii)
+
+The "Export Postscript" and "Export PNM" options on the main File menu
+provide the rudiments of output for inclusion in other
+documentation.  They and simply write out files called gwave_out.ps and
+gwave_out.pnm into the current directory.  In the future, a dialog box
+will allow configuring the print and export output.
