@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/28 22:54:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/07/14 21:21:11 tron Exp $
 bin/kmahjongg
 bin/kmines
 bin/kpat
@@ -24,10 +24,11 @@ share/doc/HTML/en/kmahjongg/index.html
 share/doc/HTML/en/kmahjongg/index-1.html
 share/doc/HTML/en/kmahjongg/index-2.html
 share/doc/HTML/en/kmahjongg/logotp3.gif
-share/doc/HTML/en/kmines/index.html
 share/doc/HTML/en/kpat/index.html
 share/doc/HTML/en/kpoker/index.html
 share/doc/HTML/en/ksame/index.html
+share/doc/HTML/en/ktetris/index-3.html
+share/doc/HTML/en/ktetris/index-4.html
 share/doc/HTML/en/ktetris/index.html
 share/doc/HTML/en/ktetris/index-1.html
 share/doc/HTML/en/ktetris/index-2.html
@@ -40,8 +41,10 @@ share/doc/HTML/en/kabalone/index-3.html
 share/doc/HTML/en/kabalone/index-4.html
 share/doc/HTML/en/kabalone/logotp3.gif
 share/doc/HTML/en/kshisen/index.html
+share/doc/HTML/en/kmines/index.html
 share/doc/HTML/en/kmines/index-1.html
 share/doc/HTML/en/kmines/index-2.html
+share/doc/HTML/en/kmines/index-3.html
 share/doc/HTML/en/kmines/logotp3.gif
 share/doc/HTML/en/kpat/index-1.html
 share/doc/HTML/en/kpat/index-2.html
@@ -77,8 +80,6 @@ share/applnk/Games/ktetris.kdelnk
 share/applnk/Games/ksnake.kdelnk
 share/applnk/Games/kabalone.kdelnk
 share/applnk/Games/kshisen.kdelnk
-share/apps/ksame/pics/stones2000_mask.bmp
-share/apps/ksame/pics/stones2000.bmp
 share/apps/kreversi/pics/background/Dark_Wood.xpm
 share/apps/kreversi/pics/background/Earth.xpm
 share/apps/kreversi/pics/background/Granite.xpm
@@ -218,8 +219,6 @@ share/apps/kpoker/sounds/cardflip.wav
 share/apps/kpoker/sounds/hold.wav
 share/apps/kpoker/sounds/lose.wav
 share/apps/kpoker/sounds/win.wav
-share/apps/ksame/pics/stones.bmp
-share/apps/ksame/pics/stones_mask.bmp
 share/apps/kasteroids/sprites/bg.ppm
 share/apps/kasteroids/sprites/rock1/rock1-0.pbm
 share/apps/kasteroids/sprites/rock1/rock1-0.ppm
@@ -564,6 +563,8 @@ share/apps/kabalone/toolbar/hint.xpm
 share/apps/kabalone/toolbar/undo.xpm
 share/apps/kshisen/pics/kshisen.xpm
 share/apps/kshisen/pics/kshisen_bgnd.xpm
+share/apps/ksame/pics/stones.gif
+share/apps/ksame/pics/stones_mask.gif
 share/icons/mini/kasteroids.xpm
 share/icons/mini/kabalone.xpm
 share/icons/mini/kmines.xpm
@@ -628,15 +629,6 @@ share/locale/ro/LC_MESSAGES/kmines.mo
 share/locale/ro/LC_MESSAGES/kpat.mo
 share/locale/ro/LC_MESSAGES/kreversi.mo
 share/locale/ro/LC_MESSAGES/kpoker.mo
-share/locale/ro/LC_MESSAGES/ktetris.po
-share/locale/zh/LC_MESSAGES/kabalone.mo
-share/locale/zh/LC_MESSAGES/kasteroids.mo
-share/locale/zh/LC_MESSAGES/kmines.mo
-share/locale/zh/LC_MESSAGES/kshisen.mo
-share/locale/zh/LC_MESSAGES/kreversi.mo
-share/locale/zh/LC_MESSAGES/kmahjongg.mo
-share/locale/zh/LC_MESSAGES/ktetris.mo
-share/locale/zh/LC_MESSAGES/kpat.mo
 share/locale/sk/LC_MESSAGES/kreversi.mo
 share/locale/sk/LC_MESSAGES/kpat.mo
 share/locale/sk/LC_MESSAGES/kasteroids.mo
@@ -708,6 +700,57 @@ share/locale/hr/LC_MESSAGES/kpat.mo
 share/locale/hr/LC_MESSAGES/kasteroids.mo
 share/locale/hr/LC_MESSAGES/kabalone.mo
 share/locale/hr/LC_MESSAGES/kpoker.mo
+share/locale/de/LC_MESSAGES/ksame.mo
+share/locale/de/LC_MESSAGES/ktetris.mo
+share/locale/cs/LC_MESSAGES/ksnake.mo
+share/locale/cs/LC_MESSAGES/ksame.mo
+share/locale/hu/LC_MESSAGES/kreversi.mo
+share/locale/hu/LC_MESSAGES/kshisen.mo
+share/locale/pt/LC_MESSAGES/ksame.mo
+share/locale/pt/LC_MESSAGES/ksnake.mo
+share/locale/no/LC_MESSAGES/kmines.mo
+share/locale/no/LC_MESSAGES/ksame.mo
+share/locale/no/LC_MESSAGES/ksnake.mo
+share/locale/el/LC_MESSAGES/kpat.mo
+share/locale/el/LC_MESSAGES/kreversi.mo
+share/locale/el/LC_MESSAGES/kmahjongg.mo
+share/locale/fi/LC_MESSAGES/ksame.mo
+share/locale/fi/LC_MESSAGES/ksnake.mo
+share/locale/ro/LC_MESSAGES/ktetris.mo
+share/locale/sk/LC_MESSAGES/ktetris.mo
+share/locale/sk/LC_MESSAGES/ksame.mo
+share/locale/sk/LC_MESSAGES/ksnake.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kreversi.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kpat.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kasteroids.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kabalone.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kpoker.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kshisen.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kmines.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/kmahjongg.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/ktetris.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kreversi.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kpat.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kasteroids.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kabalone.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kshisen.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kmines.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/ktetris.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kmahjongg.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kpoker.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/ksame.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/ksnake.mo
+share/locale/mk/LC_MESSAGES/kabalone.mo
+share/locale/mk/LC_MESSAGES/kasteroids.mo
+share/locale/pt_BR/LC_MESSAGES/kreversi.mo
+share/locale/pt_BR/LC_MESSAGES/kpat.mo
+share/locale/pt_BR/LC_MESSAGES/kasteroids.mo
+share/locale/pt_BR/LC_MESSAGES/kabalone.mo
+share/locale/pt_BR/LC_MESSAGES/kpoker.mo
+share/locale/pt_BR/LC_MESSAGES/kshisen.mo
+share/locale/pt_BR/LC_MESSAGES/kmines.mo
+share/locale/pt_BR/LC_MESSAGES/kmahjongg.mo
+share/locale/pt_BR/LC_MESSAGES/ktetris.mo
 @dirrm share/doc/HTML/en/ktetris
 @dirrm share/doc/HTML/en/ksnake
 @dirrm share/doc/HTML/en/kshisen
