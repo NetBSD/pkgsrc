@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2001/04/26 19:31:04 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/05 16:49:09 dillo Exp $
 #
 
-DISTNAME=		eagle-4.01e
+DISTNAME=		eagle-4.03e
+PKGNAME=		eagle-4.03
 WRKSRC=			${WRKDIR}/${DISTNAME:C/.$//}
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.01/
+MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.03/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		easy to use printed circuit board editor
 
-DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
+DEPENDS+=		suse_x11>=6.1:../../emulators/suse_x11
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 CHECK_SHLIBS=		NO		# this is Linux software
