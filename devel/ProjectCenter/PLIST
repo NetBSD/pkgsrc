@@ -1,163 +1,143 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/06 06:49:17 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/05 10:33:34 adam Exp $
 share/GNUstep/System/Applications/ProjectCenter.app/ProjectCenter
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ButtonTile.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/FileIcon_.c.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/FileIcon_.h.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/FileIcon_.m.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/FileIcon_rtf.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/Info-gnustep.plist
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter.app.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/PCAppProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/AppController.h
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/AppController.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/GNUmakefile.postamble
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/GNUmakefile.preamble
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources/main.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/PCBaseFileTypes
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/cfile.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/cheader.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/class.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/gsmarkup.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/header.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/nsviewclass.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/nsviewheader.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources/protocol.template
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle/PCBundleProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/PCGormProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/CVS/Entries
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/CVS/Repository
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/CVS/Root
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/data.classes
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/objects.gorm
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/main.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/PCLibProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/Resources/Version
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/PCRenaissanceProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/AppController.h
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/AppController.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/Main.gsmarkup
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/MainMenu-GNUstep.gsmarkup
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/MainMenu-OSX.gsmarkup
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources/main.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/stamp.make
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/PCToolProj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/Resources/Info-project.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/Resources/PC.proj
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/Resources/main.m
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/stamp.make
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter.desktop
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenterInfo.plist
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_add.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_build.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_clean.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_cvs.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_debug.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_dist.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_documentation.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_files.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_find.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_install.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_make.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_prefs.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_profile.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_run.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_settings.tiff
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_rpm.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_add.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_build.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_clean.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_cvs.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_documentation.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_files.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_find.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_prefs.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_run.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_settings.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCentre_uml.tiff
-share/GNUstep/System/Applications/ProjectCenter.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/ProjectCenter
-share/GNUstep/System/Applications/ProjectCenter.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/ProjectCenter_uml.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/Resources/Stop.tiff
+share/GNUstep/System/Applications/ProjectCenter.app/library_paths.openapp
 share/GNUstep/System/Applications/ProjectCenter.app/stamp.make
-share/GNUstep/System/Headers/ProjectCenter/FileCreator.h
-share/GNUstep/System/Headers/ProjectCenter/PCBrowserController.h
-share/GNUstep/System/Headers/ProjectCenter/PCBundleLoader.h
-share/GNUstep/System/Headers/ProjectCenter/PCDataSource.h
-share/GNUstep/System/Headers/ProjectCenter/PCDefines.h
-share/GNUstep/System/Headers/ProjectCenter/PCEditor+UInterface.h
-share/GNUstep/System/Headers/ProjectCenter/PCEditor.h
-share/GNUstep/System/Headers/ProjectCenter/PCEditorController.h
-share/GNUstep/System/Headers/ProjectCenter/PCEditorView+Highlighting.h
-share/GNUstep/System/Headers/ProjectCenter/PCEditorView.h
-share/GNUstep/System/Headers/ProjectCenter/PCFileManager+UInterface.h
-share/GNUstep/System/Headers/ProjectCenter/PCFileManager.h
-share/GNUstep/System/Headers/ProjectCenter/PCHistoryController.h
-share/GNUstep/System/Headers/ProjectCenter/PCMakefileFactory.h
-share/GNUstep/System/Headers/ProjectCenter/PCProject+ComponentHandling.h
-share/GNUstep/System/Headers/ProjectCenter/PCProject+UInterface.h
-share/GNUstep/System/Headers/ProjectCenter/PCProject.h
-share/GNUstep/System/Headers/ProjectCenter/PCProjectBuilder.h
-share/GNUstep/System/Headers/ProjectCenter/PCProjectDebugger.h
-share/GNUstep/System/Headers/ProjectCenter/PCProjectEditor.h
-share/GNUstep/System/Headers/ProjectCenter/PCProjectManager+UInterface.h
-share/GNUstep/System/Headers/ProjectCenter/PCProjectManager.h
-share/GNUstep/System/Headers/ProjectCenter/PCServer.h
-share/GNUstep/System/Headers/ProjectCenter/PCSplitView.h
-share/GNUstep/System/Headers/ProjectCenter/PCTextFinder+UInterface.h
-share/GNUstep/System/Headers/ProjectCenter/PCTextFinder.h
-share/GNUstep/System/Headers/ProjectCenter/PreferenceController.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectBuilder.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectCenter.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectComponent.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectDebugger.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectEditor.h
-share/GNUstep/System/Headers/ProjectCenter/ProjectType.h
-share/GNUstep/System/Headers/ProjectCenter/Server.h
-share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/libProjectCenter.so
-share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/libProjectCenter.so.${PKGVERSION}
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/AppController.h
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/AppController.m
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/Info-project.plist
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources/main.m
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCAppProj
-share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/cfile.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/cheader.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/class.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/gsmarkup.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/header.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/nsviewclass.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/nsviewheader.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources/protocol.template
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCBaseFileTypes
-share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCBundleProj
-share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/Info-project.plist
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/baseInterface.classes
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/baseInterface.gorm
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources/main.m
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCGormProj
-share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/Resources/Version
-share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCLibProj
-share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/AppController.h
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/AppController.m
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/Info-project.plist
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/Main.gsmarkup
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/MainMenu-GNUstep.gsmarkup
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/MainMenu-OSX.gsmarkup
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources/main.m
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCRenaissanceProj
-share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/stamp.make
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/Resources/Info-project.plist
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/Resources/PC.proj
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/Resources/main.m
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/PCToolProj
-share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/stamp.make
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCToolProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCRenaissanceProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCLibProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCGormProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBundleProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCBaseFileTypes.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle/Resources
-@dirrm share/GNUstep/System/Library/ProjectCenter/PCAppProj.bundle
-@dirrm share/GNUstep/System/Library/ProjectCenter
-@dirrm share/GNUstep/System/Headers/ProjectCenter
-@dirrm share/GNUstep/System/Applications/ProjectCenter.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/ProjectCenter.app/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
-@dirrm share/GNUstep/System/Applications/ProjectCenter.app/${GNUSTEP_HOST_CPU}
+share/GNUstep/System/Library/Headers/ProjectCenter/FileCreator.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCBrowserController.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCBundleLoader.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCButton.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCDataSource.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCDefines.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCEditor+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCEditor.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCEditorController.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCEditorView+Highlighting.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCEditorView.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCFileManager+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCFileManager.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCHistoryController.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCMakefileFactory.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProject+ComponentHandling.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProject+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProject.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectBuilder.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectDebugger.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectDebugger+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectEditor.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectManager+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCProjectManager.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCServer.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCSplitView.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCTextFinder+UInterface.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PCTextFinder.h
+share/GNUstep/System/Library/Headers/ProjectCenter/PreferenceController.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectBuilder.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectCenter.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectComponent.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectDebugger.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectEditor.h
+share/GNUstep/System/Library/Headers/ProjectCenter/ProjectType.h
+share/GNUstep/System/Library/Headers/ProjectCenter/Server.h
+share/GNUstep/System/Library/Libraries/libProjectCenter.so
+share/GNUstep/System/Library/Libraries/libProjectCenter.so.0.3.5
+@dirrm share/GNUstep/System/Library/Headers/ProjectCenter
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCToolProj.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCRenaissanceProj.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCLibProj.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm/CVS
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources/BaseInterface.gorm
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCGormProj.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBundleProj.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCBaseFileTypes.bundle
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle/Resources
+@dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/PCAppProj.bundle
 @dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources
 @dirrm share/GNUstep/System/Applications/ProjectCenter.app

@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:29:18 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/05 10:33:34 adam Exp $
 #
 
-DISTNAME=		ProjectCenter-0.3.2
-PKGREVISION=				1
-WRKSRC=			${WRKDIR}/ProjectCenter
-CATEGORIES=		devel gnustep
-MASTER_SITES=		${MASTER_SITE_GNUSTEP:=dev-apps/}
+DISTNAME=	ProjectCenter-0.3.6
+WRKSRC=		${WRKDIR}/ProjectCenter
+CATEGORIES=	devel gnustep
+MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnustep.org/experience/ProjectCenter.html
-COMMENT=		GNUstep Integrated Developement Environment
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.gnustep.org/experience/ProjectCenter.html
+COMMENT=	GNUstep Integrated Developement Environment
 
-USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
-USE_X11=		yes
-NO_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_X11=		YES
+NO_CONFIGURE=		YES
 MAKEFILE=		GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink2.mk"
