@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2001/08/23 17:15:15 abs Exp $
+$NetBSD: patch-ab,v 1.3 2002/02/18 18:40:42 abs Exp $
 
---- fping.c.orig	Thu Aug 23 18:10:14 2001
+--- fping.c.orig	Fri Feb 18 19:29:52 2022
 +++ fping.c
+@@ -153,7 +153,7 @@
+ #include <errno.h>
+ #include <time.h>
+ 
+-#ifdef _POSIX_SOURCE
++#if defined(_POSIX_SOURCE) || defined(__NetBSD__)
+ #include <unistd.h>
+ #endif
+ 
 @@ -185,7 +185,9 @@
  
  extern char *optarg;
@@ -108,6 +117,24 @@ $NetBSD: patch-ab,v 1.2 2001/08/23 17:15:15 abs Exp $
         printf("\n");
      }
      num_alive++;
+@@ -649,7 +655,7 @@
+ 
+   u_long ipaddress = inet_addr(host);
+ 
+-  if ( (ipaddress == -1) &&
++  if ( (ipaddress == INADDR_NONE) &&
+        ( ((host_ent=gethostbyname(host)) == 0) ||
+           ((host_add = (struct in_addr *) *(host_ent->h_addr_list))==0))
+      )  {
+@@ -669,7 +675,7 @@
+   bzero((char*) &p->saddr, sizeof(p->saddr));
+   p->saddr.sin_family      = AF_INET;
+ 
+-  if (ipaddress==-1) p->saddr.sin_addr = *host_add; 
++  if (ipaddress==INADDR_NONE) p->saddr.sin_addr = *host_add; 
+   else p->saddr.sin_addr.s_addr = ipaddress;
+ 
+   if (!rrlist) {
 @@ -756,7 +762,7 @@
  
  temp = 
@@ -117,3 +144,4 @@ $NetBSD: patch-ab,v 1.2 2001/08/23 17:15:15 abs Exp $
  
  return (long) temp;
  
+
