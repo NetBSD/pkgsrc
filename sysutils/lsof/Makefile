@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/04/01 14:07:56 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/04/21 10:38:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -17,13 +17,20 @@ HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
-OPSYS!=			uname -s
-CONFIGURE_ARGS=		-n netbsd
+CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+REAL_GROUP=	-g kmem
+.elif ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=
+.endif
+
 post-extract:
-	@( cd ${WRKDIR} ; \
+	@(cd ${WRKDIR} ; \
 	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${MD5} ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
@@ -34,13 +41,12 @@ post-extract:
 	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
 		${GTAR} -xf ${SRCBALL_NAME}.tar; \
 	else \
-		${PAX} -r < ${SRCBALL_NAME}.tar}; \
-	fi
-	)
+		${PAX} -r < ${SRCBALL_NAME}.tar; \
+	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 
 do-install:
-	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m 2755 -g kmem \
+	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m 2755 ${REAL_GROUP} \
 		${WRKSRC}/lsof ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/lsof.man ${PREFIX}/man/man1/lsof.1
 	@${MKDIR} ${PREFIX}/share/lsof
