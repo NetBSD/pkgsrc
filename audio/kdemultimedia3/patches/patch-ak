@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
+$NetBSD: patch-ak,v 1.2 2002/06/25 19:38:30 skrll Exp $
 
 --- kmix/Makefile.in.orig	Tue May 14 01:53:26 2002
 +++ kmix/Makefile.in
@@ -209,6 +209,15 @@ $NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
+@@ -860,7 +891,7 @@
+ 
+ #>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
++install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
 @@ -914,9 +945,6 @@
  
  messages: rc.cpp
@@ -284,7 +293,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
  
  #>+ 11
 -kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp kmix_la_meta_unload.cpp  
-+kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in kmix_main.cpp  
++kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmix_main.cpp  
  	@echo 'creating kmix_la.all_cpp.cpp ...'; \
  	rm -f kmix_la.all_cpp.files kmix_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmix_la.all_cpp.final; \
@@ -298,7 +307,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
  
  #>+ 11
 -kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp kmixctrl_la_meta_unload.cpp  
-+kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in kmixctrl_main.cpp  
++kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl_main.cpp  
  	@echo 'creating kmixctrl_la.all_cpp.cpp ...'; \
  	rm -f kmixctrl_la.all_cpp.files kmixctrl_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmixctrl_la.all_cpp.final; \
@@ -336,7 +345,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
 +	rm -f libkmixctrl_main_la.all_cpp.final libkmixctrl_main_la.all_cpp.files
 +
 +#>+ 11
-+kmix.all_cpp.cpp: $(srcdir)/Makefile.in kmix_main.cpp  
++kmix.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmix_main.cpp  
  	@echo 'creating kmix.all_cpp.cpp ...'; \
  	rm -f kmix.all_cpp.files kmix.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmix.all_cpp.final; \
@@ -350,7 +359,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
  
  #>+ 11
 -kmixctrl.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+kmixctrl.all_cpp.cpp: $(srcdir)/Makefile.in kmixctrl_main.cpp  
++kmixctrl.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl_main.cpp  
  	@echo 'creating kmixctrl.all_cpp.cpp ...'; \
  	rm -f kmixctrl.all_cpp.files kmixctrl.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmixctrl.all_cpp.final; \
