@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/17 02:57:00 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/23 02:08:53 jlam Exp $
 
 DISTNAME=	xmbdfed-4.4
 CATEGORIES=	graphics x11
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://crl.nmsu.edu/CLR/multiling/General/
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://crl.nmsu.edu/~mleisher/xmbdfed.html
 COMMENT=	Motif-based BDF font editor with lots of features
+
+USE_X11BASE=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xmbdfed ${PREFIX}/bin
