@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/03 19:36:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/23 15:57:55 drochner Exp $
 lib/zope/lib/python/Products/ZWeatherApplet/COPYING
 lib/zope/lib/python/Products/ZWeatherApplet/Locations
 lib/zope/lib/python/Products/ZWeatherApplet/NEWS
@@ -15,7 +15,6 @@ lib/zope/lib/python/Products/ZWeatherApplet/help/IZWeatherApplet.pyc
 lib/zope/lib/python/Products/ZWeatherApplet/help/__init__.py
 lib/zope/lib/python/Products/ZWeatherApplet/help/__init__.pyc
 lib/zope/lib/python/Products/ZWeatherApplet/refresh.txt
-lib/zope/lib/python/Products/ZWeatherApplet/www/ZWeather.gif
 lib/zope/lib/python/Products/ZWeatherApplet/www/cloud.png
 lib/zope/lib/python/Products/ZWeatherApplet/www/fog.png
 lib/zope/lib/python/Products/ZWeatherApplet/www/rain.png
