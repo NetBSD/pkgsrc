@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/04/09 12:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/10 12:17:39 joda Exp $
 # 
 
 DISTNAME=	xpdf-1.00
+PKGREVISION=	1		# because of switch to freetype2
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
@@ -16,9 +17,10 @@ CONFLICTS=	xpdf-crypto-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
+USE_FREETYPE2=		YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--with-freetype-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_DIR}/include/freetype2
 CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_DIR}/include
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
@@ -34,7 +36,7 @@ post-install:
 		${FILESDIR}/xpdf-app-defaults				\
 		> ${X11PREFIX}/lib/X11/app-defaults/Xpdf
 
-.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../textproc/t1lib/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
