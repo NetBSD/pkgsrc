@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/17 17:35:23 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/17 17:50:12 grant Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -11,13 +11,15 @@ MAINTAINER=	grant@netbsd.org
 HOMEPAGE=	http://software.tangent.org/media/
 COMMENT=	apache module for streaming mp3 files
 
-DOC_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_mp3
+USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRCDIR=	${WRKSRC}/src
 APACHE_MODULE_SRC=	common.c directives.c encode.c ice.c id3.c
 APACHE_MODULE_SRC+=	internal_dispatch.c load.c log.c mod_mp3.c
 APACHE_MODULE_SRC+=	ogg.c shout.c utility.c
+
+DOC_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_mp3
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}
