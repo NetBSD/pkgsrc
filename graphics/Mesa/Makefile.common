@@ -1,10 +1,6 @@
-# $NetBSD: Makefile.common,v 1.17 2003/07/17 21:39:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/08/26 01:43:51 jschauma Exp $
 
-# Latest is:		5.0.1
-# Default is:		3.4.2
-MESA_REQD?=		3.4.2
-
-MESA_VERSION=		${MESA_REQD}
+MESA_VERSION=		5.0.1
 DISTNAME?=		MesaLib-${MESA_VERSION}
 CATEGORIES?=		graphics
 MASTER_SITES?= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
@@ -21,9 +17,3 @@ GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-static
 
 .include "../../mk/bsd.prefs.mk"
-
-.if exists(${LOCALBASE}/lib/libGL.so.5) && empty(MESA_REQD:M5.[0-9]*)
-MESA_REQD=                      5.0.1
-.endif
-
-MAKEFLAGS+=                     MESA_REQD="${MESA_REQD}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/07/17 21:39:58 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/08/26 01:43:51 jschauma Exp $
 #
 
 PKGNAME=	Mesa-${MESA_VERSION}
@@ -19,8 +19,6 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 EXTRACT_ONLY=	# empty
-
-MAKEFLAGS+=	MESA_REQD=${MESA_REQD}
 
 do-install:	# empty
 

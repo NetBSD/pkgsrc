@@ -1,14 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/15 23:31:23 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/26 01:43:50 jschauma Exp $
 
 .if !defined(GLUT_BUILDLINK2_MK)
 GLUT_BUILDLINK2_MK=	# defined
 
-MESA_REQD?=			3.4.2
 BUILDLINK_PACKAGES+=		glut
-BUILDLINK_DEPENDS.glut?=	glut>=${MESA_REQD}
+BUILDLINK_DEPENDS.glut?=	glut>=${MESA_VERSION}
 BUILDLINK_PKGSRCDIR.glut?=	../../graphics/glut
-
-MAKEFLAGS+=			MESA_REQD="${MESA_REQD}"
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.glut=glut
 BUILDLINK_PREFIX.glut_DEFAULT=	${LOCALBASE}
