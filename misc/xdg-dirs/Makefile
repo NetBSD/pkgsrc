@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/04 13:21:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/15 18:08:03 jmmv Exp $
 #
 
 DISTNAME=	xdg-dirs-1.0
@@ -13,6 +13,7 @@ COMMENT=	Shared XDG directories
 CONFLICTS=	gnome2-dirs<=1.2
 
 WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# empty
 NO_EXTRACT=	# defined
 NO_CHECKSUM=	# defined
 NO_BUILDLINK=	# defined
