@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/17 11:12:22 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/06 03:34:48 wiz Exp $
 
 DISTNAME=	libmikmod-3.1.7
 CATEGORIES=	audio
@@ -9,7 +9,7 @@ MASTER_SITES=	http://mikmod.darkorb.net/libmikmod/ \
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
 HOMEPAGE=	http://www.multimania.com/miodrag/mikmod/
 
-DEPENDS+=	esound-0.2.15:../../audio/esound
+DEPENDS+=	esound-0.2.*:../../audio/esound
 
 USE_LIBTOOL=
 USE_GMAKE=
