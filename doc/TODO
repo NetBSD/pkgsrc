@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.460 2003/04/11 15:45:34 jmmv Exp $
+$NetBSD: TODO,v 1.461 2003/04/12 04:29:36 rh Exp $
 
 Suggested new packages
 ======================
@@ -111,7 +111,6 @@ Suggested package updates
 	o eclipse-2.1
 	o elm-me-2.4pl101
 	o emacs-21.3
-	o evolution-1.2.4
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
