@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.517 2004/11/19 16:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.518 2004/11/19 16:53:57 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -324,7 +324,6 @@ SUBDIR+=	scli
 SUBDIR+=	sdig
 SUBDIR+=	sdist
 SUBDIR+=	sendfile
-SUBDIR+=	sftp
 SUBDIR+=	sharity-light
 SUBDIR+=	sipcalc
 SUBDIR+=	sitescooper
