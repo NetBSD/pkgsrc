@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:52 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/12/23 20:35:22 jschauma Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -20,6 +20,9 @@ _NEED_ZLIB=		YES
 # Solaris has a broken (for the purposes of pkgsrc) version of zlib.
 #
 _INCOMPAT_ZLIB=		SunOS-*-*
+
+# So does IRIX
+_INCOMPAT_ZLIB+=	IRIX-*-*
 
 #
 # Some NetBSD versions shipped with versions lower than 1.1.3.
