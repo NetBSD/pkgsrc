@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/09 13:36:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:40 markd Exp $
 share/doc/kde/HTML/sk/amor/common
 share/doc/kde/HTML/sk/amor/index.cache.bz2
 share/doc/kde/HTML/sk/amor/index.docbook
@@ -675,22 +675,6 @@ share/kde/locale/sk/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/sk/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/sk/LC_MESSAGES/cvsservice.mo
 share/kde/locale/sk/LC_MESSAGES/dcopservice.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/sk/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/sk/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/sk/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/sk/LC_MESSAGES/display.mo
@@ -852,6 +836,7 @@ share/kde/locale/sk/LC_MESSAGES/kdesktop.mo
 share/kde/locale/sk/LC_MESSAGES/kdessh.mo
 share/kde/locale/sk/LC_MESSAGES/kdesu.mo
 share/kde/locale/sk/LC_MESSAGES/kdesud.mo
+share/kde/locale/sk/LC_MESSAGES/kdevelop.mo
 share/kde/locale/sk/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/sk/LC_MESSAGES/kdf.mo
 share/kde/locale/sk/LC_MESSAGES/kdgantt.mo
@@ -994,6 +979,7 @@ share/kde/locale/sk/LC_MESSAGES/konsole.mo
 share/kde/locale/sk/LC_MESSAGES/konsolekalendar.mo
 share/kde/locale/sk/LC_MESSAGES/kontact.mo
 share/kde/locale/sk/LC_MESSAGES/kooka.mo
+share/kde/locale/sk/LC_MESSAGES/kopete.mo
 share/kde/locale/sk/LC_MESSAGES/korganizer.mo
 share/kde/locale/sk/LC_MESSAGES/korn.mo
 share/kde/locale/sk/LC_MESSAGES/kpackage.mo
@@ -1065,6 +1051,7 @@ share/kde/locale/sk/LC_MESSAGES/ktuberling.mo
 share/kde/locale/sk/LC_MESSAGES/ktux.mo
 share/kde/locale/sk/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/sk/LC_MESSAGES/kuickshow.mo
+share/kde/locale/sk/LC_MESSAGES/kuiviewer.mo
 share/kde/locale/sk/LC_MESSAGES/kuser.mo
 share/kde/locale/sk/LC_MESSAGES/kverbos.mo
 share/kde/locale/sk/LC_MESSAGES/kview.mo
@@ -1296,7 +1283,7 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kamera
 @dirrm share/doc/kde/HTML/sk/kaddressbook
 @dirrm share/doc/kde/HTML/sk/kaboodle
-@dirrm share/doc/kde/HTML/sk/common
+@comment dirrm share/doc/kde/HTML/sk/common
 @dirrm share/doc/kde/HTML/sk/atlantik
 @dirrm share/doc/kde/HTML/sk/amor
 @comment dirrm share/doc/kde/HTML/sk

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:38:40 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -196,6 +196,9 @@ share/doc/kde/HTML/ru/kdeprint/lprng.docbook
 share/doc/kde/HTML/ru/kdeprint/rlpr.docbook
 share/doc/kde/HTML/ru/kdeprint/tech-overview.docbook
 share/doc/kde/HTML/ru/kdeprint/theory.docbook
+share/doc/kde/HTML/ru/kdevelop/common
+share/doc/kde/HTML/ru/kdevelop/index.cache.bz2
+share/doc/kde/HTML/ru/kdevelop/index.docbook
 share/doc/kde/HTML/ru/kdict/common
 share/doc/kde/HTML/ru/kdict/index.cache.bz2
 share/doc/kde/HTML/ru/kdict/index.docbook
@@ -596,24 +599,6 @@ share/kde/locale/ru/LC_MESSAGES/clockapplet.mo
 share/kde/locale/ru/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/ru/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/ru/LC_MESSAGES/cvsservice.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/ru/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/ru/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/ru/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/ru/LC_MESSAGES/display.mo
@@ -770,6 +755,7 @@ share/kde/locale/ru/LC_MESSAGES/kdesktop.mo
 share/kde/locale/ru/LC_MESSAGES/kdessh.mo
 share/kde/locale/ru/LC_MESSAGES/kdesu.mo
 share/kde/locale/ru/LC_MESSAGES/kdesud.mo
+share/kde/locale/ru/LC_MESSAGES/kdevelop.mo
 share/kde/locale/ru/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/ru/LC_MESSAGES/kdf.mo
 share/kde/locale/ru/LC_MESSAGES/kdgantt.mo
@@ -865,6 +851,7 @@ share/kde/locale/ru/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/ru/LC_MESSAGES/kio_smtp.mo
 share/kde/locale/ru/LC_MESSAGES/kioexec.mo
 share/kde/locale/ru/LC_MESSAGES/kit.mo
+share/kde/locale/ru/LC_MESSAGES/kiten.mo
 share/kde/locale/ru/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/ru/LC_MESSAGES/kjots.mo
 share/kde/locale/ru/LC_MESSAGES/kjumpingcube.mo
@@ -920,6 +907,7 @@ share/kde/locale/ru/LC_MESSAGES/kpartapp.mo
 share/kde/locale/ru/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/ru/LC_MESSAGES/kpat.mo
 share/kde/locale/ru/LC_MESSAGES/kpdf.mo
+share/kde/locale/ru/LC_MESSAGES/kpersentage.mo
 share/kde/locale/ru/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/ru/LC_MESSAGES/kpf.mo
 share/kde/locale/ru/LC_MESSAGES/kpilot.mo
@@ -983,6 +971,7 @@ share/kde/locale/ru/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/ru/LC_MESSAGES/kuickshow.mo
 share/kde/locale/ru/LC_MESSAGES/kuiviewer.mo
 share/kde/locale/ru/LC_MESSAGES/kuser.mo
+share/kde/locale/ru/LC_MESSAGES/kverbos.mo
 share/kde/locale/ru/LC_MESSAGES/kview.mo
 share/kde/locale/ru/LC_MESSAGES/kview_scale.mo
 share/kde/locale/ru/LC_MESSAGES/kviewbrowserplugin.mo
@@ -993,6 +982,7 @@ share/kde/locale/ru/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewshell.mo
 share/kde/locale/ru/LC_MESSAGES/kviewtemplateplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewviewer.mo
+share/kde/locale/ru/LC_MESSAGES/kvoctrain.mo
 share/kde/locale/ru/LC_MESSAGES/kwalletmanager.mo
 share/kde/locale/ru/LC_MESSAGES/kweather.mo
 share/kde/locale/ru/LC_MESSAGES/kwifimanager.mo
@@ -1145,6 +1135,7 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kdvi
 @dirrm share/doc/kde/HTML/ru/kdm
 @dirrm share/doc/kde/HTML/ru/kdict
+@dirrm share/doc/kde/HTML/ru/kdevelop
 @dirrm share/doc/kde/HTML/ru/kdeprint
 @dirrm share/doc/kde/HTML/ru/kdebugdialog
 @dirrm share/doc/kde/HTML/ru/kcron
@@ -1172,7 +1163,7 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kandy
 @dirrm share/doc/kde/HTML/ru/kalzium
 @dirrm share/doc/kde/HTML/ru/juk
-@dirrm share/doc/kde/HTML/ru/common
+@comment dirrm share/doc/kde/HTML/ru/common
 @dirrm share/doc/kde/HTML/ru/atlantik
 @dirrm share/doc/kde/HTML/ru/artsbuilder
 @dirrm share/doc/kde/HTML/ru/amor

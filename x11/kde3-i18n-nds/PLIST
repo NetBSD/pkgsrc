@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/09 13:41:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/20 14:38:40 markd Exp $
 share/kde/locale/nds/LC_MESSAGES/appletproxy.mo
 share/kde/locale/nds/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/nds/LC_MESSAGES/clockapplet.mo
 share/kde/locale/nds/LC_MESSAGES/cupsdconf.mo
-share/kde/locale/nds/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/nds/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/nds/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/nds/LC_MESSAGES/desktop_kdelibs.mo
 share/kde/locale/nds/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/nds/LC_MESSAGES/display.mo
 share/kde/locale/nds/LC_MESSAGES/dockbarextension.mo
@@ -93,11 +89,13 @@ share/kde/locale/nds/LC_MESSAGES/kdialog.mo
 share/kde/locale/nds/LC_MESSAGES/kdmchooser.mo
 share/kde/locale/nds/LC_MESSAGES/kdmconfig.mo
 share/kde/locale/nds/LC_MESSAGES/kdmgreet.mo
+share/kde/locale/nds/LC_MESSAGES/kfile_cpp.mo
 share/kde/locale/nds/LC_MESSAGES/kfile_font.mo
 share/kde/locale/nds/LC_MESSAGES/kfileaudiopreview.mo
 share/kde/locale/nds/LC_MESSAGES/kfindpart.mo
 share/kde/locale/nds/LC_MESSAGES/kfmclient.mo
 share/kde/locale/nds/LC_MESSAGES/kfontinst.mo
+share/kde/locale/nds/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/nds/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/nds/LC_MESSAGES/khotkeys.mo
 share/kde/locale/nds/LC_MESSAGES/kicker.mo
@@ -123,6 +121,7 @@ share/kde/locale/nds/LC_MESSAGES/kioexec.mo
 share/kde/locale/nds/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/nds/LC_MESSAGES/klegacyimport.mo
 share/kde/locale/nds/LC_MESSAGES/klipper.mo
+share/kde/locale/nds/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/nds/LC_MESSAGES/kmcop.mo
 share/kde/locale/nds/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/nds/LC_MESSAGES/kmenuedit.mo
@@ -137,9 +136,11 @@ share/kde/locale/nds/LC_MESSAGES/kprinter.mo
 share/kde/locale/nds/LC_MESSAGES/krandr.mo
 share/kde/locale/nds/LC_MESSAGES/krdb.mo
 share/kde/locale/nds/LC_MESSAGES/kreadconfig.mo
+share/kde/locale/nds/LC_MESSAGES/kruler.mo
 share/kde/locale/nds/LC_MESSAGES/krunapplet.mo
 share/kde/locale/nds/LC_MESSAGES/kscreensaver.mo
 share/kde/locale/nds/LC_MESSAGES/ksmserver.mo
+share/kde/locale/nds/LC_MESSAGES/ksnake.mo
 share/kde/locale/nds/LC_MESSAGES/ksplash.mo
 share/kde/locale/nds/LC_MESSAGES/ksplashthemes.mo
 share/kde/locale/nds/LC_MESSAGES/kstars.mo
@@ -149,6 +150,7 @@ share/kde/locale/nds/LC_MESSAGES/ksysguard.mo
 share/kde/locale/nds/LC_MESSAGES/ksystemtrayapplet.mo
 share/kde/locale/nds/LC_MESSAGES/ksystraycmd.mo
 share/kde/locale/nds/LC_MESSAGES/ktaskbarapplet.mo
+share/kde/locale/nds/LC_MESSAGES/kteatime.mo
 share/kde/locale/nds/LC_MESSAGES/ktexteditor_insertfile.mo
 share/kde/locale/nds/LC_MESSAGES/ktexteditor_isearch.mo
 share/kde/locale/nds/LC_MESSAGES/ktexteditor_kdatatool.mo
@@ -177,10 +179,10 @@ share/kde/locale/nds/LC_MESSAGES/passwords.mo
 share/kde/locale/nds/LC_MESSAGES/ppdtranslations.mo
 share/kde/locale/nds/LC_MESSAGES/privacy.mo
 share/kde/locale/nds/LC_MESSAGES/quicklauncher.mo
+share/kde/locale/nds/LC_MESSAGES/spy.mo
 share/kde/locale/nds/LC_MESSAGES/taskbarextension.mo
 share/kde/locale/nds/LC_MESSAGES/timezones.mo
 share/kde/locale/nds/charset
 share/kde/locale/nds/entry.desktop
 @comment dirrm share/kde/locale/nds/LC_MESSAGES
 @comment dirrm share/kde/locale/nds
-@comment dirrm share/kde/locale

@@ -1,17 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/09 13:36:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/20 14:38:39 markd Exp $
 share/kde/locale/mn/30x16.png
 share/kde/locale/mn/60x40.png
 share/kde/locale/mn/LC_MESSAGES/appletproxy.mo
 share/kde/locale/mn/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/mn/LC_MESSAGES/clockapplet.mo
 share/kde/locale/mn/LC_MESSAGES/cupsdconf.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/mn/LC_MESSAGES/desktop_kdenetwork.mo
 share/kde/locale/mn/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/mn/LC_MESSAGES/display.mo
 share/kde/locale/mn/LC_MESSAGES/dockbarextension.mo

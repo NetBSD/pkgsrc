@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/06 02:47:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:38 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -146,6 +146,9 @@ share/doc/kde/HTML/et/kbruch/index.docbook
 share/doc/kde/HTML/et/kbugbuster/common
 share/doc/kde/HTML/et/kbugbuster/index.cache.bz2
 share/doc/kde/HTML/et/kbugbuster/index.docbook
+share/doc/kde/HTML/et/kcachegrind/common
+share/doc/kde/HTML/et/kcachegrind/index.cache.bz2
+share/doc/kde/HTML/et/kcachegrind/index.docbook
 share/doc/kde/HTML/et/kcalc/common
 share/doc/kde/HTML/et/kcalc/index.cache.bz2
 share/doc/kde/HTML/et/kcalc/index.docbook
@@ -1006,24 +1009,6 @@ share/kde/locale/et/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/et/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/et/LC_MESSAGES/cvsservice.mo
 share/kde/locale/et/LC_MESSAGES/dcopservice.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/et/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/et/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/et/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/et/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/et/LC_MESSAGES/display.mo
@@ -1186,6 +1171,7 @@ share/kde/locale/et/LC_MESSAGES/kdesktop.mo
 share/kde/locale/et/LC_MESSAGES/kdessh.mo
 share/kde/locale/et/LC_MESSAGES/kdesu.mo
 share/kde/locale/et/LC_MESSAGES/kdesud.mo
+share/kde/locale/et/LC_MESSAGES/kdevelop.mo
 share/kde/locale/et/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/et/LC_MESSAGES/kdf.mo
 share/kde/locale/et/LC_MESSAGES/kdgantt.mo
@@ -1248,6 +1234,7 @@ share/kde/locale/et/LC_MESSAGES/kghostview.mo
 share/kde/locale/et/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/et/LC_MESSAGES/kgpg.mo
 share/kde/locale/et/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/et/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/et/LC_MESSAGES/khangman.mo
 share/kde/locale/et/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/et/LC_MESSAGES/khexedit.mo
@@ -1303,6 +1290,10 @@ share/kde/locale/et/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/et/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/et/LC_MESSAGES/kmid.mo
 share/kde/locale/et/LC_MESSAGES/kmidi.mo
+share/kde/locale/et/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/et/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/et/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/et/LC_MESSAGES/kmilod.mo
 share/kde/locale/et/LC_MESSAGES/kmines.mo
 share/kde/locale/et/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/et/LC_MESSAGES/kmix.mo
@@ -1320,6 +1311,7 @@ share/kde/locale/et/LC_MESSAGES/knotify.mo
 share/kde/locale/et/LC_MESSAGES/kodo.mo
 share/kde/locale/et/LC_MESSAGES/kolf.mo
 share/kde/locale/et/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/et/LC_MESSAGES/kommander.mo
 share/kde/locale/et/LC_MESSAGES/kompare.mo
 share/kde/locale/et/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/et/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -1689,6 +1681,7 @@ share/kde/locale/et/flag.png
 @dirrm share/doc/kde/HTML/et/kcoloredit
 @dirrm share/doc/kde/HTML/et/kcharselect
 @dirrm share/doc/kde/HTML/et/kcalc
+@dirrm share/doc/kde/HTML/et/kcachegrind
 @dirrm share/doc/kde/HTML/et/kbugbuster
 @dirrm share/doc/kde/HTML/et/kbruch
 @dirrm share/doc/kde/HTML/et/kbounce
@@ -1708,7 +1701,7 @@ share/kde/locale/et/flag.png
 @dirrm share/doc/kde/HTML/et/kaddressbook
 @dirrm share/doc/kde/HTML/et/kaboodle
 @dirrm share/doc/kde/HTML/et/flashkard
-@dirrm share/doc/kde/HTML/et/common
+@comment dirrm share/doc/kde/HTML/et/common
 @dirrm share/doc/kde/HTML/et/cervisia
 @dirrm share/doc/kde/HTML/et/atlantik
 @dirrm share/doc/kde/HTML/et/ark

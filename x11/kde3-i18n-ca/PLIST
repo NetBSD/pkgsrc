@@ -1,269 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/03/09 13:36:49 markd Exp $
-share/doc/kde/HTML/ca/katomic/common
-share/doc/kde/HTML/ca/katomic/index.cache.bz2
-share/doc/kde/HTML/ca/katomic/index.docbook
-share/doc/kde/HTML/ca/kbugbuster/common
-share/doc/kde/HTML/ca/kbugbuster/index.cache.bz2
-share/doc/kde/HTML/ca/kbugbuster/index.docbook
-share/doc/kde/HTML/ca/kcharselect/common
-share/doc/kde/HTML/ca/kcharselect/index.cache.bz2
-share/doc/kde/HTML/ca/kcharselect/index.docbook
-share/doc/kde/HTML/ca/kcontrol/bell/common
-share/doc/kde/HTML/ca/kcontrol/bell/index.cache.bz2
-share/doc/kde/HTML/ca/kcontrol/bell/index.docbook
-share/doc/kde/HTML/ca/kcontrol/kalarmd/common
-share/doc/kde/HTML/ca/kcontrol/kalarmd/index.cache.bz2
-share/doc/kde/HTML/ca/kcontrol/kalarmd/index.docbook
-share/doc/kde/HTML/ca/kcontrol/kcmktalkd/common
-share/doc/kde/HTML/ca/kcontrol/kcmktalkd/index.cache.bz2
-share/doc/kde/HTML/ca/kcontrol/kcmktalkd/index.docbook
-share/doc/kde/HTML/ca/kcontrol/khtml/nsplugin.docbook
-share/doc/kde/HTML/ca/kcontrol/kmixcfg/common
-share/doc/kde/HTML/ca/kcontrol/kmixcfg/index.cache.bz2
-share/doc/kde/HTML/ca/kcontrol/kmixcfg/index.docbook
-share/doc/kde/HTML/ca/kcontrol/lanbrowser/common
-share/doc/kde/HTML/ca/kcontrol/lanbrowser/index.cache.bz2
-share/doc/kde/HTML/ca/kcontrol/lanbrowser/index.docbook
-share/doc/kde/HTML/ca/kdf/common
-share/doc/kde/HTML/ca/kdf/index.cache.bz2
-share/doc/kde/HTML/ca/kdf/index.docbook
-share/doc/kde/HTML/ca/kdf/kdf_config.png
-share/doc/kde/HTML/ca/keduca/common
-share/doc/kde/HTML/ca/keduca/index.cache.bz2
-share/doc/kde/HTML/ca/keduca/index.docbook
-share/doc/kde/HTML/ca/keduca/screenshot.png
-share/doc/kde/HTML/ca/kgpgcertmanager/common
-share/doc/kde/HTML/ca/kgpgcertmanager/index.cache.bz2
-share/doc/kde/HTML/ca/kgpgcertmanager/index.docbook
-share/doc/kde/HTML/ca/khangman/common
-share/doc/kde/HTML/ca/khangman/index.cache.bz2
-share/doc/kde/HTML/ca/khangman/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/background.png
-share/doc/kde/HTML/ca/khelpcenter/bgtable.png
-share/doc/kde/HTML/ca/khelpcenter/common
-share/doc/kde/HTML/ca/khelpcenter/contact.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/about.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/common
-share/doc/kde/HTML/ca/khelpcenter/faq/configkde.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/contrib.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/desktop.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/filemng.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/getkde.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/faq/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/install.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/intro.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/kdeapps.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/misc.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/moreinfo.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/nonkdeapps.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/notrelated.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/panel.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/tips.docbook
-share/doc/kde/HTML/ca/khelpcenter/faq/winmng.docbook
-share/doc/kde/HTML/ca/khelpcenter/glossary/common
-share/doc/kde/HTML/ca/khelpcenter/glossary/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/glossary/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/glossary/kdeprintingglossary.docbook
-share/doc/kde/HTML/ca/khelpcenter/help.docbook
-share/doc/kde/HTML/ca/khelpcenter/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/kdelogo2.png
-share/doc/kde/HTML/ca/khelpcenter/khelpcenter.png
-share/doc/kde/HTML/ca/khelpcenter/konq.css
-share/doc/kde/HTML/ca/khelpcenter/lines.png
-share/doc/kde/HTML/ca/khelpcenter/lines2.png
-share/doc/kde/HTML/ca/khelpcenter/links.docbook
-share/doc/kde/HTML/ca/khelpcenter/pointers.png
-share/doc/kde/HTML/ca/khelpcenter/quickstart/common
-share/doc/kde/HTML/ca/khelpcenter/quickstart/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/quickstart/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/shadow1.png
-share/doc/kde/HTML/ca/khelpcenter/support.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/about-desktop.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/common
-share/doc/kde/HTML/ca/khelpcenter/userguide/first-impressions.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/getting-started.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/history.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/userguide/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/installation.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/intro.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/more-help.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/notices-trademarks.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/shortcuts.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/staff.docbook
-share/doc/kde/HTML/ca/khelpcenter/userguide/ug-faq.docbook
-share/doc/kde/HTML/ca/khelpcenter/visualdict/common
-share/doc/kde/HTML/ca/khelpcenter/visualdict/index.cache.bz2
-share/doc/kde/HTML/ca/khelpcenter/visualdict/index.docbook
-share/doc/kde/HTML/ca/khelpcenter/welcome.docbook
-share/doc/kde/HTML/ca/khelpcenter/whatiskde.docbook
-share/doc/kde/HTML/ca/kinfocenter/blockdevices/common
-share/doc/kde/HTML/ca/kinfocenter/blockdevices/index.cache.bz2
-share/doc/kde/HTML/ca/kinfocenter/blockdevices/index.docbook
-share/doc/kde/HTML/ca/kioslave/audiocd.docbook
-share/doc/kde/HTML/ca/kioslave/bzip.docbook
-share/doc/kde/HTML/ca/kioslave/bzip2.docbook
-share/doc/kde/HTML/ca/kioslave/cgi.docbook
-share/doc/kde/HTML/ca/kioslave/common
-share/doc/kde/HTML/ca/kioslave/data.docbook
-share/doc/kde/HTML/ca/kioslave/file.docbook
-share/doc/kde/HTML/ca/kioslave/finger.docbook
-share/doc/kde/HTML/ca/kioslave/fish.docbook
-share/doc/kde/HTML/ca/kioslave/floppy.docbook
-share/doc/kde/HTML/ca/kioslave/ftp.docbook
-share/doc/kde/HTML/ca/kioslave/gopher.docbook
-share/doc/kde/HTML/ca/kioslave/gzip.docbook
-share/doc/kde/HTML/ca/kioslave/help.docbook
-share/doc/kde/HTML/ca/kioslave/http.docbook
-share/doc/kde/HTML/ca/kioslave/https.docbook
-share/doc/kde/HTML/ca/kioslave/imap.docbook
-share/doc/kde/HTML/ca/kioslave/imaps.docbook
-share/doc/kde/HTML/ca/kioslave/index.cache.bz2
-share/doc/kde/HTML/ca/kioslave/index.docbook
-share/doc/kde/HTML/ca/kioslave/info.docbook
-share/doc/kde/HTML/ca/kioslave/lan.docbook
-share/doc/kde/HTML/ca/kioslave/ldap.docbook
-share/doc/kde/HTML/ca/kioslave/mac.docbook
-share/doc/kde/HTML/ca/kioslave/mailto.docbook
-share/doc/kde/HTML/ca/kioslave/man.docbook
-share/doc/kde/HTML/ca/kioslave/mrml.docbook
-share/doc/kde/HTML/ca/kioslave/news.docbook
-share/doc/kde/HTML/ca/kioslave/nfs.docbook
-share/doc/kde/HTML/ca/kioslave/nntp.docbook
-share/doc/kde/HTML/ca/kioslave/pop3.docbook
-share/doc/kde/HTML/ca/kioslave/pop3s.docbook
-share/doc/kde/HTML/ca/kioslave/print.docbook
-share/doc/kde/HTML/ca/kioslave/rlan.docbook
-share/doc/kde/HTML/ca/kioslave/rlogin.docbook
-share/doc/kde/HTML/ca/kioslave/sftp.docbook
-share/doc/kde/HTML/ca/kioslave/smb.docbook
-share/doc/kde/HTML/ca/kioslave/smtp.docbook
-share/doc/kde/HTML/ca/kioslave/tar.docbook
-share/doc/kde/HTML/ca/kioslave/telnet.docbook
-share/doc/kde/HTML/ca/kioslave/thumbnail.docbook
-share/doc/kde/HTML/ca/kioslave/webdav.docbook
-share/doc/kde/HTML/ca/kioslave/webdavs.docbook
-share/doc/kde/HTML/ca/klickety/common
-share/doc/kde/HTML/ca/klickety/index.cache.bz2
-share/doc/kde/HTML/ca/klickety/index.docbook
-share/doc/kde/HTML/ca/kmail/common
-share/doc/kde/HTML/ca/kmail/configure.docbook
-share/doc/kde/HTML/ca/kmail/credits-and-licenses.docbook
-share/doc/kde/HTML/ca/kmail/faq.docbook
-share/doc/kde/HTML/ca/kmail/getting-started.docbook
-share/doc/kde/HTML/ca/kmail/importing.docbook
-share/doc/kde/HTML/ca/kmail/index.cache.bz2
-share/doc/kde/HTML/ca/kmail/index.docbook
-share/doc/kde/HTML/ca/kmail/intro.docbook
-share/doc/kde/HTML/ca/kmail/menus.docbook
-share/doc/kde/HTML/ca/kmail/using-kmail.docbook
-share/doc/kde/HTML/ca/kmoon/common
-share/doc/kde/HTML/ca/kmoon/index.cache.bz2
-share/doc/kde/HTML/ca/kmoon/index.docbook
-share/doc/kde/HTML/ca/kompare/common
-share/doc/kde/HTML/ca/kompare/index.cache.bz2
-share/doc/kde/HTML/ca/kompare/index.docbook
-share/doc/kde/HTML/ca/kpercentage/answer.png
-share/doc/kde/HTML/ca/kpercentage/commands.docbook
-share/doc/kde/HTML/ca/kpercentage/common
-share/doc/kde/HTML/ca/kpercentage/credits.docbook
-share/doc/kde/HTML/ca/kpercentage/devel.docbook
-share/doc/kde/HTML/ca/kpercentage/edu-logo.png
-share/doc/kde/HTML/ca/kpercentage/faq.docbook
-share/doc/kde/HTML/ca/kpercentage/help.png
-share/doc/kde/HTML/ca/kpercentage/index.cache.bz2
-share/doc/kde/HTML/ca/kpercentage/index.docbook
-share/doc/kde/HTML/ca/kpercentage/install.docbook
-share/doc/kde/HTML/ca/kpercentage/introduction.docbook
-share/doc/kde/HTML/ca/kpercentage/main.png
-share/doc/kde/HTML/ca/kpercentage/using.docbook
-share/doc/kde/HTML/ca/kpercentage/welcome.png
-share/doc/kde/HTML/ca/kpf/common
-share/doc/kde/HTML/ca/kpf/index.cache.bz2
-share/doc/kde/HTML/ca/kpf/index.docbook
-share/doc/kde/HTML/ca/krfb/common
-share/doc/kde/HTML/ca/krfb/index.cache.bz2
-share/doc/kde/HTML/ca/krfb/index.docbook
-share/doc/kde/HTML/ca/ksim/common
-share/doc/kde/HTML/ca/ksim/index.cache.bz2
-share/doc/kde/HTML/ca/ksim/index.docbook
-share/doc/kde/HTML/ca/kspell/common
-share/doc/kde/HTML/ca/kspell/index.cache.bz2
-share/doc/kde/HTML/ca/kspell/index.docbook
-share/doc/kde/HTML/ca/kstars/ai-contents.docbook
-share/doc/kde/HTML/ca/kstars/altvstime.docbook
-share/doc/kde/HTML/ca/kstars/astroinfo.docbook
-share/doc/kde/HTML/ca/kstars/blackbody.docbook
-share/doc/kde/HTML/ca/kstars/calc-apcoords.docbook
-share/doc/kde/HTML/ca/kstars/calc-dayduration.docbook
-share/doc/kde/HTML/ca/kstars/calc-eqgal.docbook
-share/doc/kde/HTML/ca/kstars/calc-geodetic.docbook
-share/doc/kde/HTML/ca/kstars/calc-horizontal.docbook
-share/doc/kde/HTML/ca/kstars/calc-julianday.docbook
-share/doc/kde/HTML/ca/kstars/calc-precess.docbook
-share/doc/kde/HTML/ca/kstars/calc-sidereal.docbook
-share/doc/kde/HTML/ca/kstars/calculator.docbook
-share/doc/kde/HTML/ca/kstars/cequator.docbook
-share/doc/kde/HTML/ca/kstars/colorandtemp.docbook
-share/doc/kde/HTML/ca/kstars/commands.docbook
-share/doc/kde/HTML/ca/kstars/common
-share/doc/kde/HTML/ca/kstars/config.docbook
-share/doc/kde/HTML/ca/kstars/cpoles.docbook
-share/doc/kde/HTML/ca/kstars/credits.docbook
-share/doc/kde/HTML/ca/kstars/csphere.docbook
-share/doc/kde/HTML/ca/kstars/darkmatter.docbook
-share/doc/kde/HTML/ca/kstars/dcop.docbook
-share/doc/kde/HTML/ca/kstars/details.docbook
-share/doc/kde/HTML/ca/kstars/dumpmode.docbook
-share/doc/kde/HTML/ca/kstars/ecliptic.docbook
-share/doc/kde/HTML/ca/kstars/ellipticalgalaxies.docbook
-share/doc/kde/HTML/ca/kstars/equinox.docbook
-share/doc/kde/HTML/ca/kstars/faq.docbook
-share/doc/kde/HTML/ca/kstars/flux.docbook
-share/doc/kde/HTML/ca/kstars/geocoords.docbook
-share/doc/kde/HTML/ca/kstars/greatcircle.docbook
-share/doc/kde/HTML/ca/kstars/horizon.docbook
-share/doc/kde/HTML/ca/kstars/hourangle.docbook
-share/doc/kde/HTML/ca/kstars/index.cache.bz2
-share/doc/kde/HTML/ca/kstars/index.docbook
-share/doc/kde/HTML/ca/kstars/indi.docbook
-share/doc/kde/HTML/ca/kstars/install.docbook
-share/doc/kde/HTML/ca/kstars/jmoons.docbook
-share/doc/kde/HTML/ca/kstars/julianday.docbook
-share/doc/kde/HTML/ca/kstars/leapyear.docbook
-share/doc/kde/HTML/ca/kstars/lightcurves.docbook
-share/doc/kde/HTML/ca/kstars/luminosity.docbook
-share/doc/kde/HTML/ca/kstars/magnitude.docbook
-share/doc/kde/HTML/ca/kstars/meridian.docbook
-share/doc/kde/HTML/ca/kstars/parallax.docbook
-share/doc/kde/HTML/ca/kstars/precession.docbook
-share/doc/kde/HTML/ca/kstars/quicktour.docbook
-share/doc/kde/HTML/ca/kstars/retrograde.docbook
-share/doc/kde/HTML/ca/kstars/scriptbuilder.docbook
-share/doc/kde/HTML/ca/kstars/sidereal.docbook
-share/doc/kde/HTML/ca/kstars/skycoords.docbook
-share/doc/kde/HTML/ca/kstars/solarsys.docbook
-share/doc/kde/HTML/ca/kstars/spiralgalaxies.docbook
-share/doc/kde/HTML/ca/kstars/stars.docbook
-share/doc/kde/HTML/ca/kstars/timezones.docbook
-share/doc/kde/HTML/ca/kstars/tools.docbook
-share/doc/kde/HTML/ca/kstars/utime.docbook
-share/doc/kde/HTML/ca/kstars/wut.docbook
-share/doc/kde/HTML/ca/kstars/zenith.docbook
-share/doc/kde/HTML/ca/ktimer/common
-share/doc/kde/HTML/ca/ktimer/index.cache.bz2
-share/doc/kde/HTML/ca/ktimer/index.docbook
-share/doc/kde/HTML/ca/kwallet/common
-share/doc/kde/HTML/ca/kwallet/index.cache.bz2
-share/doc/kde/HTML/ca/kwallet/index.docbook
-share/doc/kde/HTML/ca/kweather/common
-share/doc/kde/HTML/ca/kweather/index.cache.bz2
-share/doc/kde/HTML/ca/kweather/index.docbook
-share/doc/kde/HTML/ca/kworldclock/common
-share/doc/kde/HTML/ca/kworldclock/index.cache.bz2
-share/doc/kde/HTML/ca/kworldclock/index.docbook
+@comment $NetBSD: PLIST,v 1.9 2004/04/20 14:38:38 markd Exp $
 share/kde/locale/ca/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ca/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/ca/LC_MESSAGES/amor.mo
@@ -285,24 +20,6 @@ share/kde/locale/ca/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/ca/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/ca/LC_MESSAGES/cvsservice.mo
 share/kde/locale/ca/LC_MESSAGES/dcopservice.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/ca/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/ca/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/ca/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/ca/LC_MESSAGES/display.mo
@@ -464,6 +181,7 @@ share/kde/locale/ca/LC_MESSAGES/kdesktop.mo
 share/kde/locale/ca/LC_MESSAGES/kdessh.mo
 share/kde/locale/ca/LC_MESSAGES/kdesu.mo
 share/kde/locale/ca/LC_MESSAGES/kdesud.mo
+share/kde/locale/ca/LC_MESSAGES/kdevelop.mo
 share/kde/locale/ca/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/ca/LC_MESSAGES/kdf.mo
 share/kde/locale/ca/LC_MESSAGES/kdgantt.mo
@@ -526,6 +244,7 @@ share/kde/locale/ca/LC_MESSAGES/kghostview.mo
 share/kde/locale/ca/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/ca/LC_MESSAGES/kgpg.mo
 share/kde/locale/ca/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/ca/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/ca/LC_MESSAGES/khangman.mo
 share/kde/locale/ca/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/ca/LC_MESSAGES/khexedit.mo
@@ -533,6 +252,7 @@ share/kde/locale/ca/LC_MESSAGES/khotkeys.mo
 share/kde/locale/ca/LC_MESSAGES/khtmlsettingsplugin.mo
 share/kde/locale/ca/LC_MESSAGES/kicker.mo
 share/kde/locale/ca/LC_MESSAGES/kiconedit.mo
+share/kde/locale/ca/LC_MESSAGES/kig.mo
 share/kde/locale/ca/LC_MESSAGES/kinetd.mo
 share/kde/locale/ca/LC_MESSAGES/kio.mo
 share/kde/locale/ca/LC_MESSAGES/kio_audiocd.mo
@@ -667,6 +387,7 @@ share/kde/locale/ca/LC_MESSAGES/ktexteditor_kdatatool.mo
 share/kde/locale/ca/LC_MESSAGES/ktimemon.mo
 share/kde/locale/ca/LC_MESSAGES/ktimer.mo
 share/kde/locale/ca/LC_MESSAGES/ktip.mo
+share/kde/locale/ca/LC_MESSAGES/ktnef.mo
 share/kde/locale/ca/LC_MESSAGES/ktouch.mo
 share/kde/locale/ca/LC_MESSAGES/ktron.mo
 share/kde/locale/ca/LC_MESSAGES/ktuberling.mo
@@ -766,41 +487,3 @@ share/kde/locale/ca/entry.desktop
 share/kde/locale/ca/flag.png
 @comment dirrm share/kde/locale/ca/LC_MESSAGES
 @comment dirrm share/kde/locale/ca
-@comment dirrm share/doc/kde/HTML/ca/kworldclock
-@comment dirrm share/doc/kde/HTML/ca/kweather
-@comment dirrm share/doc/kde/HTML/ca/kwallet
-@comment dirrm share/doc/kde/HTML/ca/ktimer
-@comment dirrm share/doc/kde/HTML/ca/kstars
-@comment dirrm share/doc/kde/HTML/ca/kspell
-@comment dirrm share/doc/kde/HTML/ca/ksim
-@comment dirrm share/doc/kde/HTML/ca/krfb
-@comment dirrm share/doc/kde/HTML/ca/kpf
-@comment dirrm share/doc/kde/HTML/ca/kpercentage
-@comment dirrm share/doc/kde/HTML/ca/kompare
-@comment dirrm share/doc/kde/HTML/ca/kmoon
-@comment dirrm share/doc/kde/HTML/ca/kmail
-@comment dirrm share/doc/kde/HTML/ca/klickety
-@comment dirrm share/doc/kde/HTML/ca/kioslave
-@comment dirrm share/doc/kde/HTML/ca/kinfocenter/blockdevices
-@comment dirrm share/doc/kde/HTML/ca/kinfocenter
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter/visualdict
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter/userguide
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter/quickstart
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter/glossary
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter/faq
-@comment dirrm share/doc/kde/HTML/ca/khelpcenter
-@comment dirrm share/doc/kde/HTML/ca/khangman
-@comment dirrm share/doc/kde/HTML/ca/kgpgcertmanager
-@comment dirrm share/doc/kde/HTML/ca/keduca
-@comment dirrm share/doc/kde/HTML/ca/kdf
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/lanbrowser
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/kmixcfg
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/khtml
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/kcmktalkd
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/kalarmd
-@comment dirrm share/doc/kde/HTML/ca/kcontrol/bell
-@comment dirrm share/doc/kde/HTML/ca/kcontrol
-@comment dirrm share/doc/kde/HTML/ca/kcharselect
-@comment dirrm share/doc/kde/HTML/ca/kbugbuster
-@comment dirrm share/doc/kde/HTML/ca/katomic
-@comment dirrm share/doc/kde/HTML/ca
