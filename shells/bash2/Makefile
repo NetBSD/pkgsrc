@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/02/18 15:14:40 seb Exp $
+# $NetBSD: Makefile,v 1.33 2002/08/23 01:28:27 jlam Exp $
 #
 
 V=		2.05
@@ -14,7 +14,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
 
-USE_BUILDLINK_ONLY=	yes
+# bash is needed to bootstrap buildlink2 on Darwin.
+USE_BUILDLINK2=		no
+
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 
@@ -24,17 +26,35 @@ MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 CONFIGURE_ARGS+=	--enable-static-link
 .endif
 
-# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
-# defeats buildlink.
+GETTEXTDIR=		${WRKDIR}/.gettext
+.if exists(/usr/include/libintl.h)
+GETTEXT_PREFIX=		/usr
+.else
+DEPENDS+=		gettext-lib>=0.10.35nb1:../../devel/gettext-lib
+EVAL_PREFIX+=		GETTEXT_PREFIX=gettext-lib
+GETTEXT_PREFIX_DEFAULT=	${LOCALBASE}
+.endif
+
+# Remove -I$(includedir) from the INCLUDES passed to the compiler.  We
+# want the build to be completely self-contained.
 #
 post-patch:
 	cd ${WRKSRC};							\
 	files="Makefile.in";						\
 	for file in $${files}; do					\
-		${MV} -f $${file} $${file}.fixme;			\
 		${SED} -e "s|[  ]*-I\$$(includedir)||"			\
-			$${file}.fixme > $${file};			\
-		${RM} $${file}.fixme;					\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
+# Symlink the correct gettext libraries and headers into a private directory
+# that is placed in the library and header search paths.
+#
+pre-configure:
+	cd ${GETTEXT_PREFIX};						\
+	for file in include/libintl.h lib/libintl.*; do			\
+		${MKDIR} ${GETTEXTDIR}/`${DIRNAME} $${file}`;		\
+		${LN} -sf ${GETTEXT_PREFIX}/$${file} ${GETTEXTDIR}/$${file}; \
 	done
 
 post-install:
@@ -55,6 +75,13 @@ post-install:
 		${PREFIX}/share/doc/html/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
-.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
+
+CPPFLAGS:=	-I${GETTEXTDIR}/include ${CPPFLAGS}
+CFLAGS:=	-I${GETTEXTDIR}/include ${CFLAGS}
+LDFLAGS=	-L${GETTEXTDIR}/lib
+.if ${_USE_RPATH} == "yes"
+LDFLAGS+=	-Wl,-R${GETTEXT_PREFIX}/lib
+.endif
+LIBS+=		${LDFLAGS} -lintl
