@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/02/16 19:43:36 bad Exp $
+
+case $2 in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	/bin/cat << EOF
+===========================================================================
+Copy the following files from ${PKG_PREFIX}/etc/rc.d to /etc/rc.d:
+
+linuxrtc vmmon vmnet vmnetif
+
+and append the content of ${PKG_PREFIX}/etc/rc.conf.d/vmware to /etc/rc.conf:
+
+vmware_prefix=${PKG_PREFIX}
+vmmon=YES
+vmnet=YES
+linuxrtc=NO
+# XXX should cater for multiple interfaces
+vmnetif=YES
+vmnetifname=vmnet1
+vmnetdev=/dev/vmnet1
+vmnetifconfig="inet 172.16.212.1 netmask 0xffffff00"
+vmnetif_use_dhcpd=NO
+
+Then, reboot your system.
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
