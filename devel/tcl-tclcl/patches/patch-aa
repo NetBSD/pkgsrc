@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2004/12/02 17:25:05 seb Exp $
+$NetBSD: patch-aa,v 1.4 2005/02/14 04:40:49 minskim Exp $
 
---- Makefile.in.orig	2004-01-09 22:38:18.000000000 +0000
+--- Makefile.in.orig	2005-01-19 13:21:21.000000000 -0600
 +++ Makefile.in
 @@ -52,6 +52,9 @@ TEST	= test
  RM	= rm -f
@@ -26,22 +26,18 @@ $NetBSD: patch-aa,v 1.3 2004/12/02 17:25:05 seb Exp $
  
  
  GEN_DIR	= gen/
-@@ -105,8 +108,12 @@ TCL_83_LIBRARY_FILES = \
+@@ -108,8 +111,8 @@ TCL_835_LIBRARY_FILES = \
  	$(TCL_BASE_LIBRARY_FILES) \
- 	$(LIBRARY_TCL)/http2.3/http.tcl
+ 	$(LIBRARY_TCL)/http2.4/http.tcl
  TCL_84_LIBRARY_FILES = \
 -        $(TCL_BASE_LIBRARY_FILES) \
--	$(LIBRARY_TCL)/http/http.tcl
-+        $(TCL_BASE_LIBRARY_FILES)
-+.if exists($(LIBRARY_TCL)/http2.5/http.tcl)
-+TCL_84_LIBRARY_FILES+=	$(LIBRARY_TCL)/http2.5/http.tcl
-+.else
-+TCL_84_LIBRARY_FILES+=	$(LIBRARY_TCL)/http2.4/http.tcl
-+.endif
+-	$(LIBRARY_TCL)/http2.4/http.tcl
++	$(TCL_BASE_LIBRARY_FILES) \
++	$(LIBRARY_TCL)/http2.5/http.tcl
  
  TCL_LIBRARY_FILES = \
  	@V_TCL_LIBRARY_FILES@
-@@ -152,13 +159,12 @@ all:	$(TCL2C) $(LIB_TCLCL)
+@@ -155,13 +158,12 @@ all:	$(TCL2C) $(LIB_TCLCL)
  
  $(TCL2C): tcl2c++.o
  	$(RM) $@
@@ -57,7 +53,7 @@ $NetBSD: patch-aa,v 1.3 2004/12/02 17:25:05 seb Exp $
  
  #
  # pass-1 embedded tcl files
-@@ -183,9 +189,12 @@ embedded-console.cc: $(CONSOLE_FILES) $(
+@@ -186,9 +188,12 @@ embedded-console.cc: $(CONSOLE_FILES) $(
  	$(TCL2C) et_console $(CONSOLE_FILES) > embedded-console.cc
  
  install: force
