@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/21 07:51:00 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/02 05:35:17 snj Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.riverbankcomputing.co.uk/pyqt/index.php
 COMMENT=	Python bindings for the Qt toolkit
 
 WRKSRC=			${WRKDIR}/PyQt-3.1
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 
@@ -25,7 +25,7 @@ MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
 
-.include "../../x11/py-qt2-sip/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/py-qt2-sip/buildlink3.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
