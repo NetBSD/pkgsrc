@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7803 2004/11/10 08:23:49 martin Exp $
+$NetBSD: CHANGES,v 1.7804 2004/11/10 10:51:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5205,4 +5205,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xapply-3.4 [epg 2004-11-10]
 	Added open2300 [martin 2004-11-10]
 	Added open2300-mysql [martin 2004-11-10]
+	Updated mimedefang to 2.48 [markd 2004-11-10]
 
