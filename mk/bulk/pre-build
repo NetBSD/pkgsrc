@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.5 2000/12/05 16:33:27 hubertf Exp $
+# $NetBSD: pre-build,v 1.6 2000/12/15 23:08:42 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -78,6 +78,7 @@ rm -fr /usr/X11R6/share/kde
 rm -fr /usr/X11R6/share/netscape
 rm -fr /var/tmp/inst*
 rm -fr /usr/X11R6/lib/libgimp*	# gimp doesn't build with old libs around
+rm -fr /nonexistant		# broken useradd on pop3d
 
 
 # Clean up state files
