@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: cupsd.sh,v 1.5 2001/11/19 16:23:11 jlam Exp $
+# $NetBSD: cupsd.sh,v 1.6 2001/11/21 15:35:09 jlam Exp $
 #
 # Common UNIX Printing System daemon
 #
@@ -15,7 +15,7 @@ fi
 name="cupsd"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
-required_files="/etc/cups/${name}.conf"
+required_files="@CONFDIR@/cups/${name}.conf"
 extra_commands="reload"
 
 if [ ! -d /etc/rc.d ]
