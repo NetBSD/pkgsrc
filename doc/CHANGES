@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6748 2004/08/01 05:18:46 schmonz Exp $
+$NetBSD: CHANGES,v 1.6749 2004/08/01 08:36:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3670,3 +3670,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kphotools to 0.2.1nb1 [markd 2004-07-31]
 	Updated clamav to 0.75.1 [jlam 2004-08-01]
 	Updated dovecot to 0.99.10.9 [schmonz 2004-08-01]
+	Updated getmail to 4.0.2 [schmonz 2004-08-01]
