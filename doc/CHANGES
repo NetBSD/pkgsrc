@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2134 2003/05/03 18:31:19 tron Exp $
+$NetBSD: CHANGES,v 1.2135 2003/05/03 18:52:25 cyber Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1841,3 +1841,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated leafnode to 1.9.38 [cjep 2003-05-03]
 	Updated icewm to 1.2.0nb3 [jmmv 2003-05-03]
 	Updated icewm-gnome to 1.2.0nb3 [jmmv 2003-05-03]
+	Added p5-HTTP-DAV [cyber 2003-05-03]
