@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/20 16:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/07/12 07:55:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -19,6 +19,13 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GNU_READLINE=	# defined
 
 INFO_FILES=		data-rep.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_NCURSES=	# termlib not in libtermcap on Solaris, use the ncurses one
+.include "../../devel/ncurses/buildlink.mk"
+.endif
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../mk/texinfo.mk"
