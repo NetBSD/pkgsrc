@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 1999/07/06 08:04:15 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2000/01/04 17:19:11 bouyer Exp $
 
 --- dialog.h.orig	Fri Jan 23 17:37:12 1998
 +++ dialog.h	Fri Jan 23 18:14:38 1998
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.3 1999/07/06 08:04:15 jlam Exp $
  #ifdef ultrix
  #include <cursesX.h>
  #else
-+#if defined(__NetBSD__)
++#if defined(HAVE_NCURSES)
 +#include <ncurses.h>
 +#else
  #include <curses.h>
