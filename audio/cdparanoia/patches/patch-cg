@@ -1,7 +1,7 @@
-$NetBSD: patch-cg,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-cg,v 1.2 2000/03/13 05:23:29 itohy Exp $
 
 --- interface/scsi_interface.c.orig	Tue Dec 14 13:28:03 1999
-+++ interface/scsi_interface.c	Tue Jan 18 08:33:33 2000
++++ interface/scsi_interface.c	Sat Mar 11 23:11:34 2000
 @@ -32,6 +32,7 @@
  #endif
  
@@ -75,7 +75,7 @@ $NetBSD: patch-cg,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
 +  if (in_size) {
 +    sreq->flags = SCCMD_WRITE;
 +    sreq->databuf = d->sg_buffer + cmd_len;
-+    sreq->datalen = out_size;
++    sreq->datalen = in_size;
 +  }
 +  if (out_size) {
 +    sreq->flags = SCCMD_READ;
