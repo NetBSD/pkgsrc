@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/21 11:56:16 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/27 18:52:18 jlam Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -16,7 +16,8 @@ EXTRACT_CMD=		unzip -aq ${DOWNLOADED_DISTFILE}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 
-BUILDLINK_ONLY=		yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 
 post-patch:
 	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
@@ -36,6 +37,5 @@ pre-install:
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/fe-config ${PREFIX}/bin
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

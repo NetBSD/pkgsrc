@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/11 21:15:47 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/27 19:01:41 jlam Exp $
 #
 
 DISTNAME=	SDL_net-1.2.3
@@ -9,11 +9,11 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_net/
 COMMENT=	small sample cross-platform networking library for SDL
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=            YES
 LTCONFIG_OVERRIDE=      ${WRKSRC}/ltconfig
 
-.include "../../devel/SDL/buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
