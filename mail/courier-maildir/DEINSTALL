@@ -1,6 +1,19 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2004/07/14 20:05:50 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2005/02/18 22:12:50 jlam Exp $
 
-# Additional files that may be created for courier-maildir.
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/autoresponsesquota"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/maildirfilterconfig"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/maildirshared"
+case ${STAGE} in
+DEINSTALL)
+	#
+	# Note some additional files that may be created by the sysadmin
+	# that can probably be removed.
+	#
+	if ${TEST} -x ./+FILES; then
+		for file in						\
+			${PKG_SYSCONFDIR}/autoresponsesquota		\
+			${PKG_SYSCONFDIR}/maildirfilterconfig		\
+			${PKG_SYSCONFDIR}/maildirshared
+		do
+			${ECHO} "# FILE: $file . /dev/null" >> ./+FILES
+		done
+	fi
+	;;
+esac

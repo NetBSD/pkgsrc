@@ -1,20 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/14 20:05:50 jlam Exp $
-bin/deliverquota
+@comment $NetBSD: PLIST,v 1.2 2005/02/18 22:12:50 jlam Exp $
 bin/courier-maildiracl
 bin/courier-maildirkw
 bin/courier-maildirmake
+bin/deliverquota
 man/man1/courier-maildiracl.1
 man/man1/courier-maildirkw.1
 man/man1/courier-maildirmake.1
 man/man5/courier-maildir.5
 man/man7/maildirquota.7
 man/man8/deliverquota.8
-share/courier/sharedindexinstall
-share/courier/sharedindexsplit
-share/courier/sharedindexupdate
-share/doc/courier/README.maildirquota.txt
-share/doc/courier/README.sharedfolders.txt
+sbin/sharedindexinstall
+sbin/sharedindexsplit
+share/doc/courier/README.imapkeywords.html
+share/doc/courier/README.maildirfilter.html
+share/doc/courier/README.maildirquota.html
+share/doc/courier/README.sharedfolders.html
 share/examples/courier/quotawarnmsg
+share/examples/courier/sharedindexupdate
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/courier 2>/dev/null || ${TRUE}
