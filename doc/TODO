@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1332 2004/01/23 22:57:03 recht Exp $
+$NetBSD: TODO,v 1.1333 2004/01/23 23:11:30 recht Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,6 @@ Suggested package updates
 	o ploticus-2.20
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
-	o py-curl-7.10.8
 	o py-dns-1.2.0
 	o py-jpCodecs-1.4.10 [pkg/23715]
 	o py-psycopg-1.1.10
