@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/02 01:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/03 02:12:27 wiz Exp $
 #
 
 DISTNAME=	popa3d-0.4
@@ -21,15 +21,15 @@ GROUP_CMD=	${LOCALBASE}/sbin/group
 
 do-install:
 	@if [ `${GROUP_CMD} info -e popa3d` ]; then \
-		${ECHO} Group \'popa3d\' already exists.; \
-	else \
 		${GROUP_CMD} add popa3d; \
+	else \
+		${ECHO} Group \'popa3d\' already exists.; \
 	fi
 	@if [ `${USER_CMD} info -e popa3d` ]; then \
-		${ECHO} User \'popa3d\' already exists.; \
-	else \
 		${USER_CMD} add -g popa3d -d /nonexistent -s /sbin/nologin \
 			popa3d; \
+	else \
+		${ECHO} User \'popa3d\' already exists.; \
 	fi
 	${INSTALL_PROGRAM} -o popa3d -g popa3d -m 700 ${WRKSRC}/popa3d \
 		${PREFIX}/libexec
