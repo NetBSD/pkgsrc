@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.2 2004/05/06 10:08:38 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/08/17 10:52:13 wiz Exp $
 
-SHA1 (kanjidic2-2004.1/kanjidic2.xml.gz) = 7970825e14e3bd55d8bcda26eced2d514881e406
-Size (kanjidic2-2004.1/kanjidic2.xml.gz) = 1367334 bytes
-SHA1 (kanjidic2-2004.1/kanjidic_doc.html) = 709cc68cb274a1f4d599335da3016b4036711b57
-Size (kanjidic2-2004.1/kanjidic_doc.html) = 57294 bytes
-SHA1 (kanjidic2-2004.1/kanjidic2_ov.html) = de66c88ca2d1df65b0bc8f2c5c91742adb97f7fe
-Size (kanjidic2-2004.1/kanjidic2_ov.html) = 6730 bytes
-SHA1 (kanjidic2-2004.1/kanjidic2_dtd.gz) = be2033cf25b4c8441c284476759a9cfbb5c55f89
-Size (kanjidic2-2004.1/kanjidic2_dtd.gz) = 4121 bytes
-SHA1 (kanjidic2-2004.1/kanjidic2_xsd.gz) = ca2781ba6829cb7bf8dad0c73150ec6a414cbb94
-Size (kanjidic2-2004.1/kanjidic2_xsd.gz) = 620 bytes
+SHA1 (kanjidic2-2004.2/kanjidic2.xml.gz) = 42ef0dff0f1009d4035fb82be6b76a91e8dccc2e
+Size (kanjidic2-2004.2/kanjidic2.xml.gz) = 1476867 bytes
+SHA1 (kanjidic2-2004.2/kanjidic_doc.html) = 709cc68cb274a1f4d599335da3016b4036711b57
+Size (kanjidic2-2004.2/kanjidic_doc.html) = 57294 bytes
+SHA1 (kanjidic2-2004.2/kanjidic2_ov.html) = 08d8ef038b63bedef3a0275887505fdce948b79a
+Size (kanjidic2-2004.2/kanjidic2_ov.html) = 6741 bytes
+SHA1 (kanjidic2-2004.2/kanjidic2_dtd.gz) = b9289acc3e3e5b37f0e23e2d5b3aed9cfc3c3155
+Size (kanjidic2-2004.2/kanjidic2_dtd.gz) = 4206 bytes
+SHA1 (kanjidic2-2004.2/kanjidic2_xsd.gz) = c7fb1aa4474630f07a52953b5411b86c1eb6cfd2
+Size (kanjidic2-2004.2/kanjidic2_xsd.gz) = 631 bytes
