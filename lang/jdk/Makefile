@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/07/01 10:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2004/07/02 13:42:39 wiz Exp $
 #
 
 VERSION=	1.1.8
@@ -75,10 +75,10 @@ post-patch:
 	for X in lib*.so ;do						\
 		if [ "$$X" = "libXm.so" ]; then continue; fi;		\
 		if [ -f $$X.* ] ;then					\
-			${MV} $$X $$X.* ;				\
+			${MV} -f $$X $$X.* ;				\
 			${LN} -s $$X.* $$X; 				\
 		elif [ -f "$$X" ] ;then					\
-			${MV} $$X $$X.${VERSION} ;			\
+			${MV} -f $$X $$X.${VERSION} ;			\
 			${LN} -s $$X.${VERSION} $$X;			\
 		fi ;							\
 	done)
