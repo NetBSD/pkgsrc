@@ -1,11 +1,33 @@
-$NetBSD: distinfo,v 1.21 2004/05/09 00:12:13 jdolecek Exp $
+$NetBSD: distinfo,v 1.22 2004/06/03 18:48:17 mrauch Exp $
 
 SHA1 (OOo_1.1.1p1_source.tar.bz2) = be2c5e799a33b70916528a6454297054db76328e
 Size (OOo_1.1.1p1_source.tar.bz2) = 192388698 bytes
 SHA1 (gpc231.tar.Z) = dd70a665179a9eac23624a4fe9f22104aad9bb1d
 Size (gpc231.tar.Z) = 27917 bytes
-SHA1 (ooo_addons_111.tar.bz2) = 3c3dacb77bb4a06874eb1f5609a18ef6e36a7838
-Size (ooo_addons_111.tar.bz2) = 11765994 bytes
+SHA1 (ooo_addons_111p1.tar.bz2) = 87920f3547cf7170bc99e39c3799c779fa3c625e
+Size (ooo_addons_111p1.tar.bz2) = 11766494 bytes
+SHA1 (helpcontent_01_unix.tgz) = a64d94ba918c72812feff78d1959e6c09504ef34
+Size (helpcontent_01_unix.tgz) = 12038642 bytes
+SHA1 (helpcontent_31_unix.tgz) = 1295c30cb3efd4bfa6bb3b4fd1f9ae66a1543f20
+Size (helpcontent_31_unix.tgz) = 12073861 bytes
+SHA1 (helpcontent_33_unix.tgz) = 55478177743906533e9674211c273e4c727f58c0
+Size (helpcontent_33_unix.tgz) = 12562079 bytes
+SHA1 (helpcontent_34_unix.tgz) = a40805c6a87a6422d3b941dea5d5d07045752948
+Size (helpcontent_34_unix.tgz) = 12542824 bytes
+SHA1 (helpcontent_39_unix.tgz) = bd84e8b18ec5a2bccca5451168c7aa415b301e7a
+Size (helpcontent_39_unix.tgz) = 12471037 bytes
+SHA1 (helpcontent_46_unix.tgz) = a04a054788796efba587f46d6357c0c111322039
+Size (helpcontent_46_unix.tgz) = 12064433 bytes
+SHA1 (helpcontent_49_unix.tgz) = 78141fc9a9641f591c317f47b8c8e0f8de0c90cc
+Size (helpcontent_49_unix.tgz) = 13640088 bytes
+SHA1 (helpcontent_81_unix.tgz) = c338ad6816bd448df394e147c4fe515c414aa833
+Size (helpcontent_81_unix.tgz) = 12893166 bytes
+SHA1 (helpcontent_82_unix.tgz) = 6b4b9fb63e882b01e984e0970aa7335a678d1023
+Size (helpcontent_82_unix.tgz) = 12355209 bytes
+SHA1 (helpcontent_86_unix.tgz) = 504a9e699446c168a0492c4b6f4191f57304712c
+Size (helpcontent_86_unix.tgz) = 12753629 bytes
+SHA1 (helpcontent_88_unix.tgz) = 0fd85af6dc52d0102cfe301bba6f86a16c1e05ac
+Size (helpcontent_88_unix.tgz) = 12939408 bytes
 SHA1 (patch-aa) = 783e0cf32bc942cc6f8d31a0fb74a9d91205e0e7
 SHA1 (patch-ab) = 873131e69215c063edb9e65af0155ca1725ac552
 SHA1 (patch-ac) = 0c5962741c749299379ddbc96474fd2b567232ce
@@ -27,3 +49,5 @@ SHA1 (patch-ar) = f185c705cda716e1b52e5b6ca6d9c5d2a9b341bc
 SHA1 (patch-as) = 71d4d5a1517274ed9aff3e6c2bd89265772c93af
 SHA1 (patch-at) = f38552d47fbbc1013b00a29b5c451607236b2b84
 SHA1 (patch-au) = 662e14be36e28aacf0bb3961c194c69d39cef8a8
+SHA1 (patch-av) = f6f0aa984f7d975c721d616b348a69cff6173ff8
+SHA1 (patch-aw) = 427e47265d441c6c9cb99f0f7872358ec24101ed
