@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/19 02:57:43 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -10,8 +10,6 @@ MASTER_SITES=   http://webglimpse.net/trial/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://webglimpse.net/
 COMMENT=	Text search engine
-
-CONFLICT=	openssl-[0-9]*
 
 LICENSE=	glimpse-license
 RESTRICTED=	"Restrictive copyright (don't sell for profit)"
