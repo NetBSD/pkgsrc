@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2001/03/27 03:20:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/04/06 22:08:09 rh Exp $
 
-DISTNAME=		control-center-1.2.2
+DISTNAME=		control-center-1.4.0.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/control-center/}
 
@@ -8,29 +8,28 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME control-center development library
 
-DEPENDS+=		gnome-libs>=1.2.0:../../x11/gnome-libs
-DEPENDS+=		gdk-pixbuf>=0.7.0:../../graphics/gdk-pixbuf
-BUILD_USES_MSGFMT=	yes
+DEPENDS+=		gnome-libs>=1.2.13:../../x11/gnome-libs
+DEPENDS+=		gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
+DEPENDS+=		gnome-vfs>=1.0:../../sysutils/gnome-vfs
+DEPENDS+=		scrollkeeper-*:../../textproc/scrollkeeper
 
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBINTL=		# defined
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_LIBINTL=		YES
+BUILD_USES_MSGFMT=	YES
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${LOCALBASE}
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
+CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include 		# libintl.h
 
 post-patch:
 	@${ECHO} >>${WRKSRC}/control-center/cappletConf.sh.in ""
-
-post-install:
-	${RMDIR} ${PREFIX}/share/gnome/help/control-center/C/stylesheet-images
 
 .include "../../mk/bsd.pkg.mk"
