@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/30 16:41:05 explorer Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/13 05:54:07 explorer Exp $
 #
 
 #
@@ -6,32 +6,38 @@
 # to match up.  It will define LAME_GUI before including.
 #
 
-.ifndef LAME_GUI
-DISTNAME=	lame-3.31beta
-.else
-DISTNAME=	lame-gui-3.31beta
-.endif
+DISTNAME=	lame-3.33beta
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sulaco.org/mp3/download/beta/
-DISTFILES=	lame3.31beta.tar.gz
+DISTFILES=	lame3.33beta.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.sulaco.org/mp3/
 
 DEPENDS=	ncurses-4.2:../../devel/ncurses
 
-.ifndef LAME_GUI
-CONFLICTS=	lame-gui-*
-.else
+CONFLICTS=	lame-*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(LAME_USE_GTK) && ${LAME_USE_GTK} != NO
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
-CONFLICTS=	lame-[0-9]*
 .endif
 
-WRKSRC=		${WRKDIR}/lame3.31
+WRKSRC=		${WRKDIR}/lame3.33
 USE_GMAKE=	yes
 ALL_TARGET=	lame
 MIRROR_DISTFILE=no
 LICENSE=	fee-based-commercial-use
+
+PATCHDIR=       ${WRKDIR}/.patches
+
+post-extract:
+	@${MKDIR} ${PATCHDIR}
+	@${CP} ${.CURDIR}/patches/patch-* ${PATCHDIR}/
+.if defined(LAME_USE_GTK) && ${LAME_USE_GTK} == NO
+	@${RM} -f ${PATCHDIR}/patch-gtk
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lame ${PREFIX}/bin
