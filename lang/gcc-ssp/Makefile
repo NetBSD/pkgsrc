@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2003/09/01 10:13:10 cjep Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/02 19:22:14 cjep Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
