@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5404 2004/04/01 05:43:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5405 2004/04/01 11:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added thy-0.8.10 [xtraeme 2004-04-01]
 	Added xmlindent-0.2.16 [xtraeme 2004-04-01]
 	Added tinc-1.0.1 [xtraeme 2004-04-01]
+	Updated oss to 3.9.8e [wiz 2004-04-01]
