@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/11/28 02:20:39 jtb Exp $
+# $NetBSD: Makefile,v 1.32 2000/11/30 00:54:16 jtb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -19,6 +19,7 @@
     SUBDIR += libffm
     SUBDIR += mcsim
     SUBDIR += octave
+    SUBDIR += odepack
     SUBDIR += otter
     SUBDIR += pspp
     SUBDIR += py-Numeric
