@@ -1,37 +1,33 @@
-# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:01 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2005/01/14 09:18:56 adam Exp $
 
-DISTNAME=		objc-3.2.5
-CATEGORIES=		lang
-MASTER_SITES=		http://users.pandora.be/stes/
-DISTFILES=		${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
+DISTNAME=	objc-3.2.6
+CATEGORIES=	lang
+MASTER_SITES=	http://users.pandora.be/stes/
+DISTFILES=	${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://users.pandora.be/stes/compiler.html
-COMMENT=		Portable Object Compiler
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://users.pandora.be/stes/compiler.html
+COMMENT=	Portable Object Compiler
 
-DIST_BS=		objc-bootstrap-3.1.33
-WRKSRC_BS=		${WRKDIR}/${DIST_BS}
+DIST_BS=	objc-bootstrap-3.1.33
+WRKSRC_BS=	${WRKDIR}/${DIST_BS}
 
 CONFIGURE_DIRS=		${WRKSRC_BS} ${WRKSRC}
 PREPEND_PATH+=		${WRKSRC_BS}
 BUILD_TARGET=		default
 
-USE_GNU_TOOLS+=		lex
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		lex
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 pre-configure:
-	${ECHO} >> ${WRKSRC_BS}/configure				\
-		'${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}'
-
-post-extract:
-	${RM} -rf `${FIND} ${WRKSRC} -name CVS -type d`
+	${ECHO} >> ${WRKSRC_BS}/configure \
+	'${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}'
 
 post-configure:
 	${LN} -s . ${WRKSRC_BS}/bin
-	${SED} < ${WRKSRC_BS}/objc > ${WRKDIR}/oc.tmp			\
+	${SED} < ${WRKSRC_BS}/objc > ${WRKDIR}/oc.tmp \
 		-e 's|${PREFIX}|${WRKSRC_BS}|g'
 	${MV} ${WRKDIR}/oc.tmp ${WRKSRC_BS}/objc
 	${CHMOD} +x ${WRKSRC_BS}/objc
