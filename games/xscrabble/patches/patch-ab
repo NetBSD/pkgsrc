@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/26 00:22:56 dmcmahill Exp $
+
+--- src/Imakefile.orig	Mon Jul 12 22:39:52 1999
++++ src/Imakefile	Mon Jul 12 22:40:24 1999
+@@ -29,6 +29,6 @@
+         SLIBS = 
+ 
+-     INCLUDES = -I.. -I/home/mchapman/include
+-SYS_LIBRARIES = -lXpm -L../Xc -lXc -L/home/mchapman/lib
++     INCLUDES = -I.. 
++SYS_LIBRARIES = -lXpm -L../Xc -lXc 
+ 
+     CCOPTIONS = 
