@@ -1,0 +1,42 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
+
+--- libmpdemux/tvi_bsdbt848.c.orig	Sat Oct  4 19:29:01 2003
++++ libmpdemux/tvi_bsdbt848.c
+@@ -41,6 +41,7 @@
+ 
+ #ifdef __NetBSD__
+ #include <dev/ic/bt8xx.h>
++#include <sys/audioio.h>
+ #else
+ #include <machine/ioctl_meteor.h>
+ #include <machine/ioctl_bt848.h>
+@@ -785,14 +786,29 @@ return(priv->dspbytesread * 1.0 / priv->
+ static int get_audio_framesize(priv_t *priv)
+ {
+ int bytesavail;
++#ifdef __NetBSD__
++struct audio_info auinf;
++#endif
+ 
+ if(priv->dspready == FALSE) return 0;
+ 
++#ifdef __NetBSD__
++if(ioctl(priv->dspfd, AUDIO_GETINFO, &auinf) < 0)
++    {
++    perror("AUDIO_GETINFO");
++    return(TVI_CONTROL_FALSE);
++    }
++else
++    {
++    bytesavail = auinf.record.seek; /* * priv->dspsamplesize; */
++    }
++#else
+ if(ioctl(priv->dspfd, FIONREAD, &bytesavail) < 0) 
+     {
+     perror("FIONREAD");
+     return(TVI_CONTROL_FALSE);
+     }
++#endif
+ 
+ /* When mencoder wants audio data, it wants data..
+    it won't go do anything else until it gets it :( */
