@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/29 20:08:29 darcy Exp $
 
 DISTNAME=	most-4.9.0
 CATEGORIES=	misc
@@ -9,9 +9,8 @@ MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	http://space.mit.edu/~davis/most.html
 COMMENT=	Pager (like less) which has support for windows and binary files
 
-DEPENDS+=	libslang-[0-9]*:../../devel/libslang
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-x
 
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
