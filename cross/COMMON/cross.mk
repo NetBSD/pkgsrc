@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.4 1999/01/04 22:37:30 tv Exp $
+#	$NetBSD: cross.mk,v 1.5 1999/01/06 01:14:20 tv Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -62,14 +62,14 @@ binutils-build:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} all
 	@cd ${BINUTILS_WRKSRC}/gas && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} as-new
-	${LINK.c} -o ${WRKDIR}/ar \
+	test -x ${WRKDIR}/ar || ${LINK.c} -o ${WRKDIR}/ar \
 		-DPREFIX=\"${PREFIX}\" \
 		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
 		${COMMON_DIR}/buwrapper.c
 	@cd ${WRKDIR} && \
 		${LN} -f ar nm && \
 		${LN} -f ar ranlib
-	${LINK.c} -o ${WRKDIR}/ld \
+	test -x ${WRKDIR}/ld || ${LINK.c} -o ${WRKDIR}/ld \
 		-DPREFIX=\"${PREFIX}\" \
 		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
 		-DLDEMULATION=\"${BINUTILS_LDEMULATION}\" \
@@ -94,19 +94,50 @@ EGCS_DISTDIR=		releases/${EGCS_DISTNAME}
 EGCS_INTVERSION=	egcs-2.91.60
 EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 EGCS_WRKSRC=		${WRKDIR}/${EGCS_DISTNAME}
-# XXX PLIST support for fewer languages not yet complete
-EGCS_LANGUAGES?=	c c++ f77 objc
+EGCS_LANGUAGES=		c # add to these below
 
+.if defined(EGCS_NO_RUNTIME) || defined(EGCS_FAKE_RUNTIME)
+EGCS_NO_CXX_RUNTIME=	yes
+EGCS_NO_F77_RUNTIME=	yes
+EGCS_NO_OBJC_RUNTIME=	yes
+.endif
+
+.if !defined(EGCS_NO_CXX)
+EGCS_LANGUAGES+=	c++
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-cxx
+.if !defined(EGCS_NO_CXX_RUNTIME)
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-cxx-runtime
+.endif
+.endif
+
+.if !defined(EGCS_NO_F77)
+EGCS_LANGUAGES+=	f77
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-f77
+.if !defined(EGCS_NO_F77_RUNTIME)
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-f77-runtime
+.endif
+.endif
+
+.if !defined(EGCS_NO_OBJC)
+EGCS_LANGUAGES+=	objc
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-objc
+.if !defined(EGCS_NO_OBJC_RUNTIME)
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-objc-runtime
+.endif
+.endif
+
+# the main PLIST needs to go last to get the @dirrm's right
+PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs
 CROSS_DISTFILES+=	${EGCS_DISTNAME}.tar.gz ${EGCS_PATCHBUNDLE}
 MASTER_SITES+=		ftp://egcs.cygnus.com/pub/egcs/${EGCS_DISTDIR}/ \
 			${MASTER_SITE_LOCAL}
-PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs
 USE_GMAKE=		yes
 
 CC_FOR_TARGET=		${EGCS_WRKSRC}/gcc/xgcc -B${EGCS_WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
 
-EGCS_MAKE_FLAGS=	CC_FOR_TARGET="${CC_FOR_TARGET}" \
+EGCS_MAKE_FLAGS=	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
+			CC_FOR_TARGET="${CC_FOR_TARGET}" \
 			GCC_FOR_TARGET="${CC_FOR_TARGET}" \
 			CXX_FOR_TARGET="${CXX_FOR_TARGET}" \
 			AS_FOR_TARGET="${AS_FOR_TARGET}" \
@@ -117,10 +148,15 @@ EGCS_MAKE_FLAGS=	CC_FOR_TARGET="${CC_FOR_TARGET}" \
 			LANGUAGES="${EGCS_LANGUAGES}" \
 			INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}"
+EGCS_MAKE=		${SETENV} ${MAKE_ENV} \
+	                ${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS}
 
+.if defined(EGCS_FAKE_RUNTIME)
+SYS_INCLUDE=		${WRKDIR}/include
+.endif
 .if defined(SYS_INCLUDE)
 CFLAGS_FOR_TARGET+=	-idirafter ${SYS_INCLUDE}
-MAKE_FLAGS+=		SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
+EGCS_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
 .endif
 .if defined(SYS_LIB)
 LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
@@ -144,32 +180,53 @@ egcs-configure:
 		INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		./configure --prefix=${PREFIX} \
-		--host=${MACHINE_GNU_ARCH}--netbsd --target=${TARGET_ARCH} \
-		--enable-version-specific-runtime-libs
+		--host=${MACHINE_GNU_ARCH}--netbsd --target=${TARGET_ARCH}
+.if defined(EGCS_FAKE_RUNTIME)
+	@${MKDIR} ${SYS_INCLUDE} ${SYS_INCLUDE}/machine ${SYS_INCLUDE}/sys
+	@cd ${SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
+		sys/time.h stdlib.h unistd.h
+.endif
 
 egcs-build:
 	@${LN} -sf ${AS_FOR_TARGET} ${EGCS_WRKSRC}/gcc/as
 	@${LN} -sf ${LD_FOR_TARGET} ${EGCS_WRKSRC}/gcc/ld
-	@cd ${EGCS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} all
+	@cd ${EGCS_WRKSRC}/gcc && ${EGCS_MAKE} all
+.if !defined(EGCS_NO_CXX) && !defined(EGCS_NO_CXX_RUNTIME)
+	@cd ${EGCS_WRKSRC} && ${EGCS_MAKE} configure-target-libio configure-target-libstdc++ all-target-libio all-target-libstdc++
+.endif
+.if !defined(EGCS_NO_F77) && !defined(EGCS_NO_F77_RUNTIME)
+	@cd ${EGCS_WRKSRC} && ${EGCS_MAKE} configure-target-libf2c all-target-libf2c
+.endif
+.if !defined(EGCS_NO_OBJC) && !defined(EGCS_NO_OBJC_RUNTIME)
+	@cd ${EGCS_WRKSRC}/gcc && ${EGCS_MAKE} objc-runtime
+.endif
 
 egcs-install:
 	@cd ${EGCS_WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} \
 		install-common install-headers install-libgcc install-driver
 	chown -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
-	@cd ${EGCS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} install-target-libf2c
-	@${MKDIR} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/g++/std
-	@cd ${EGCS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} install-target-libstdc++
-	${LN} -f ${TARGET_DIR}/bin/gcc ${TARGET_DIR}/bin/cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
+	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
+.if !defined(EGCS_NO_F77)
+.if !defined(EGCS_NO_F77_RUNTIME)
+	@cd ${EGCS_WRKSRC} && ${EGCS_MAKE} install-target-libf2c
+.endif
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-g77 ${PREFIX}/bin/${TARGET_ARCH}-f77
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-g77 ${PREFIX}/bin/${TARGET_ARCH}-fort77
-	for file in cc c++ c++filt f77 fort77 g++ g77; do \
+	for file in f77 fort77 g77; do \
 		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
 	done
+.endif
+.if !defined(EGCS_NO_CXX)
+.if !defined(EGCS_NO_CXX_RUNTIME)
+	@${MKDIR} ${TARGET_DIR}/include/g++/std
+	@cd ${EGCS_WRKSRC} && ${EGCS_MAKE} install-target-libstdc++
+.endif
+	for file in c++ c++filt g++; do \
+		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
+	done
+.endif
 	@${RMDIR} -p ${PREFIX}/info 2>/dev/null || ${TRUE}
 	@${RMDIR} -p ${PREFIX}/man/man1 2>/dev/null || ${TRUE}
 .endif
@@ -183,7 +240,7 @@ EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
 .endif
 .endif
 
-.if defined(SYS_INCLUDE)
+.if defined(SYS_INCLUDE) && !defined(EGCS_FAKE_RUNTIME)
 pre-install: pre-install-includes
 pre-install-includes:
 	cd ${SYS_INCLUDE} && pax -rw . ${TARGET_DIR}/include
@@ -201,7 +258,9 @@ post-install-plist:
 		-e 's|$${EGCS_INTVERSION}|${EGCS_INTVERSION}|' \
 		${PLIST_PRE} >${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}/bin' >>${PLIST_SRC}
+	@${ECHO} '@exec mkdir -p ${TARGET_ARCH}/include' >>${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}/include' >>${PLIST_SRC}
+	@${ECHO} '@exec mkdir -p ${TARGET_ARCH}/lib' >>${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}/lib' >>${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}' >>${PLIST_SRC}
 
