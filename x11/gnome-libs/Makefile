@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/11/07 04:36:36 rh Exp $
+# $NetBSD: Makefile,v 1.54 2000/11/27 10:51:08 itojun Exp $
 
 DISTNAME=		gnome-libs-1.2.8
 CATEGORIES=		x11 gnome
@@ -11,7 +11,9 @@ DEPENDS+=		ORBit-*:../../net/ORBit
 DEPENDS+=		esound>=0.2.18:../../audio/esound
 DEPENDS+=		gtk+>=1.2.7:../gtk
 DEPENDS+=		imlib-*:../../graphics/imlib
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
+USE_LIBINTL=		YES
 USE_X11BASE=		YES
 USE_XPM=		YES
 USE_GMAKE=		YES
