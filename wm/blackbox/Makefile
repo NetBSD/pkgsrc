@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.11 2003/02/20 16:54:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/17 05:41:10 salo Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
-PKGREVISION=	2
-CATEGORIES=	x11 wm
+PKGREVISION=	3
+CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	small and fast X11R6 window manager
 
-DEPENDS+=	bsetroot>=0.1nb1:../../wm/bsetroot
+DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 
-USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
