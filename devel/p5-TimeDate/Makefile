@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/03 08:47:25 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/28 05:34:23 wiz Exp $
 #
 
-PKGNAME=       	p5-TimeDate-1.08
-DISTNAME!=     	echo ${PKGNAME} | sed -e 's/^p5-//'
+DISTNAME=      	TimeDate-1.08
+PKGNAME=	${DISTNAME:S/^/p5-/}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
