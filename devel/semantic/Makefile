@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/01/12 02:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/25 12:32:41 seb Exp $
 #
 
 DISTNAME=	semantic-1.4.2
@@ -25,6 +25,7 @@ BUILD_ENV+=	EMACS=${EMACS}
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	semantic.info
 OTHER_INFO=	semantic.info-1 semantic.info-2
 
@@ -53,5 +54,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${OTHER_INFO}	\
 			${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
