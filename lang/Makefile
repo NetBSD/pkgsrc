@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2002/06/20 15:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2002/07/25 10:54:33 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -68,6 +68,7 @@ SUBDIR+=	onyx
 SUBDIR+=	p2c
 SUBDIR+=	parrot
 SUBDIR+=	perl5
+SUBDIR+=	perl58
 SUBDIR+=	pforth
 SUBDIR+=	pgcc
 SUBDIR+=	py-extclass
