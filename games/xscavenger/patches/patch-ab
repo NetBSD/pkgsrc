@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/09 00:10:25 minskim Exp $
 
 --- Imakefile.orig	Thu Jan  6 06:47:22 2000
 +++ Imakefile	Sat Jan  8 18:10:48 2000
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
  	../data/victory.raw
  
 -LOCAL_LIBRARIES = $(XLIB)
-+LOCAL_LIBRARIES = $(XLIB) -lossaudio
++LOCAL_LIBRARIES = $(XLIB) ${LIBOSSAUDIO}
  EXTRA_DEFINES = -DLIBNAME=\"$(LIBNAME)\"
  
 -ComplexProgramTarget(scavenger)
