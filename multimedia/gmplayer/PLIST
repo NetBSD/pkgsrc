@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/28 15:54:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/18 18:43:23 wiz Exp $
 bin/gmplayer
 share/mplayer/Skin/AlienMind/README
 share/mplayer/Skin/AlienMind/VERSION
@@ -161,23 +161,39 @@ share/mplayer/Skin/MidnightLove/symbols.fnt
 share/mplayer/Skin/MidnightLove/symbols.png
 share/mplayer/Skin/WindowsMediaPlayer6/README
 share/mplayer/Skin/WindowsMediaPlayer6/VERSION
+share/mplayer/Skin/WindowsMediaPlayer6/bw10sec.png
+share/mplayer/Skin/WindowsMediaPlayer6/bw1min.png
 share/mplayer/Skin/WindowsMediaPlayer6/close.png
+share/mplayer/Skin/WindowsMediaPlayer6/equalizer.png
+share/mplayer/Skin/WindowsMediaPlayer6/favorites.png
+share/mplayer/Skin/WindowsMediaPlayer6/file.png
 share/mplayer/Skin/WindowsMediaPlayer6/font.fnt
 share/mplayer/Skin/WindowsMediaPlayer6/font.png
+share/mplayer/Skin/WindowsMediaPlayer6/fw10sec.png
+share/mplayer/Skin/WindowsMediaPlayer6/fw1min.png
+share/mplayer/Skin/WindowsMediaPlayer6/go.png
+share/mplayer/Skin/WindowsMediaPlayer6/help.png
 share/mplayer/Skin/WindowsMediaPlayer6/main.png
 share/mplayer/Skin/WindowsMediaPlayer6/maximize.png
+share/mplayer/Skin/WindowsMediaPlayer6/media.png
 share/mplayer/Skin/WindowsMediaPlayer6/menu.png
 share/mplayer/Skin/WindowsMediaPlayer6/menus.png
 share/mplayer/Skin/WindowsMediaPlayer6/minimize.png
+share/mplayer/Skin/WindowsMediaPlayer6/music.png
+share/mplayer/Skin/WindowsMediaPlayer6/mute.png
+share/mplayer/Skin/WindowsMediaPlayer6/next.png
 share/mplayer/Skin/WindowsMediaPlayer6/pause.png
 share/mplayer/Skin/WindowsMediaPlayer6/play.png
 share/mplayer/Skin/WindowsMediaPlayer6/pos.png
+share/mplayer/Skin/WindowsMediaPlayer6/prev.png
+share/mplayer/Skin/WindowsMediaPlayer6/radio.png
 share/mplayer/Skin/WindowsMediaPlayer6/skin
 share/mplayer/Skin/WindowsMediaPlayer6/stop.png
 share/mplayer/Skin/WindowsMediaPlayer6/sub.png
 share/mplayer/Skin/WindowsMediaPlayer6/sub.png.win
 share/mplayer/Skin/WindowsMediaPlayer6/symbols.fnt
 share/mplayer/Skin/WindowsMediaPlayer6/symbols.png
+share/mplayer/Skin/WindowsMediaPlayer6/view.png
 share/mplayer/Skin/WindowsMediaPlayer6/vol.png
 share/mplayer/Skin/avifile/README
 share/mplayer/Skin/avifile/VERSION
@@ -275,6 +291,7 @@ share/mplayer/Skin/hayraphon/skin
 share/mplayer/Skin/hayraphon/stop.png
 share/mplayer/Skin/hayraphon/sub.png
 share/mplayer/Skin/hayraphon/vol.png
+share/mplayer/Skin/hwswskin/README
 share/mplayer/Skin/hwswskin/VERSION
 share/mplayer/Skin/hwswskin/button-about.png
 share/mplayer/Skin/hwswskin/button-exit.png
@@ -296,6 +313,7 @@ share/mplayer/Skin/hwswskin/pos.png
 share/mplayer/Skin/hwswskin/skin
 share/mplayer/Skin/hwswskin/sub.png
 share/mplayer/Skin/hwswskin/vol.png
+share/mplayer/Skin/mentalic/README
 share/mplayer/Skin/mentalic/VERSION
 share/mplayer/Skin/mentalic/about.png
 share/mplayer/Skin/mentalic/back.png
@@ -436,6 +454,7 @@ share/mplayer/Skin/proton/stop.png
 share/mplayer/Skin/proton/sub.png
 share/mplayer/Skin/proton/symbols.fnt
 share/mplayer/Skin/proton/symbols.png
+share/mplayer/Skin/slim/README
 share/mplayer/Skin/slim/VERSION
 share/mplayer/Skin/slim/about.png
 share/mplayer/Skin/slim/back.png
@@ -496,12 +515,14 @@ share/mplayer/Skin/xine-lcd/eject.png
 share/mplayer/Skin/xine-lcd/ffwd.png
 share/mplayer/Skin/xine-lcd/font.fnt
 share/mplayer/Skin/xine-lcd/font.png
+share/mplayer/Skin/xine-lcd/fs.png
 share/mplayer/Skin/xine-lcd/fullsc.png
 share/mplayer/Skin/xine-lcd/main-jo.png
 share/mplayer/Skin/xine-lcd/main.png
 share/mplayer/Skin/xine-lcd/menu.png
 share/mplayer/Skin/xine-lcd/menus.png
 share/mplayer/Skin/xine-lcd/minus.png
+share/mplayer/Skin/xine-lcd/mute.png
 share/mplayer/Skin/xine-lcd/next.png
 share/mplayer/Skin/xine-lcd/pause.png
 share/mplayer/Skin/xine-lcd/play.png
@@ -517,6 +538,8 @@ share/mplayer/Skin/xine-lcd/seekbar.png
 share/mplayer/Skin/xine-lcd/skin
 share/mplayer/Skin/xine-lcd/stop.png
 share/mplayer/Skin/xine-lcd/sub.png
+share/mplayer/Skin/xine-lcd/subt.png
+share/mplayer/Skin/xine-lcd/vcd.png
 share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/xine-lcd
 @dirrm share/mplayer/Skin/xanim
