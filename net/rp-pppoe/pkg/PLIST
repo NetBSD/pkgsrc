@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/11 21:20:35 tron Exp $
+man/man5/pppoe.conf.5
+man/man8/adsl-connect.8
+man/man8/adsl-setup.8
+man/man8/adsl-start.8
+man/man8/adsl-status.8
+man/man8/adsl-stop.8
+man/man8/pppoe.8
+sbin/pppoe
+sbin/adsl-connect
+sbin/adsl-setup
+sbin/adsl-start
+sbin/adsl-status
+sbin/adsl-stop
+share/doc/rp-pppoe/CHANGES
+share/doc/rp-pppoe/HOW-TO-CONNECT
+share/doc/rp-pppoe/LICENSE
+share/doc/rp-pppoe/README
+share/doc/rp-pppoe/adsl-state.pl
+share/doc/rp-pppoe/pap-secrets
+share/doc/rp-pppoe/pppoe.conf
+@dirrm share/doc/rp-pppoe
