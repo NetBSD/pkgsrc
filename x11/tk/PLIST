@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/23 17:11:30 bjoern Exp $
 bin/wish
 bin/wish8.3
 include/tk.h
 include/tk/generic/default.h
+include/tk/generic/ks_names.h
 include/tk/generic/tk.h
 include/tk/generic/tk3d.h
 include/tk/generic/tkButton.h
@@ -28,8 +29,8 @@ include/tk/unix/tkUnixDefault.h
 include/tk/unix/tkUnixInt.h
 include/tk/unix/tkUnixPort.h
 include/tkDecls.h
-include/tkInt.h
 include/tkIntXlibDecls.h
+include/tkPlatDecls.h
 lib/libtk83.a
 lib/libtk83.la
 lib/libtk83.so
@@ -213,7 +214,6 @@ man/man3/Tk_Fill3DPolygon.3
 man/man3/Tk_Fill3DRectangle.3
 man/man3/Tk_FindPhoto.3
 man/man3/Tk_FontId.3
-man/man3/Tk_FontMetrics.3
 man/man3/Tk_Free3DBorder.3
 man/man3/Tk_Free3DBorderFromObj.3
 man/man3/Tk_FreeBitmap.3
@@ -255,6 +255,7 @@ man/man3/Tk_GetCursorFromObj.3
 man/man3/Tk_GetDash.3
 man/man3/Tk_GetFont.3
 man/man3/Tk_GetFontFromObj.3
+man/man3/Tk_GetFontMetrics.3
 man/man3/Tk_GetGC.3
 man/man3/Tk_GetHINSTANCE.3
 man/man3/Tk_GetHWND.3
@@ -288,7 +289,6 @@ man/man3/Tk_HandleEvent.3
 man/man3/Tk_Height.3
 man/man3/Tk_IdToWindow.3
 man/man3/Tk_ImageChanged.3
-man/man3/Tk_Init.3
 man/man3/Tk_InitImageArgs.3
 man/man3/Tk_InitOptions.3
 man/man3/Tk_InitStubs.3
@@ -345,6 +345,7 @@ man/man3/Tk_ResizeWindow.3
 man/man3/Tk_RestackWindow.3
 man/man3/Tk_RestoreSavedOptions.3
 man/man3/Tk_RestrictEvents.3
+man/man3/Tk_SafeInit.3
 man/man3/Tk_Screen.3
 man/man3/Tk_ScreenNumber.3
 man/man3/Tk_SetAppName.3
