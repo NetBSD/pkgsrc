@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:04 zuntum Exp $
-share/doc/kde/HTML/en/kdm/Daemon.README
-share/kde/icons/Daemon.png
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:10:45 jlam Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -580,6 +578,9 @@ lib/libklegacyimport_main.la
 lib/libklegacyimport_main.so
 lib/libklegacyimport_main.so.0
 lib/libklegacyimport_main.so.0.0
+lib/libklipper_main.a
+lib/libklipper_main.la
+lib/libklipper_main.so
 lib/libkmenuedit_main.a
 lib/libkmenuedit_main.la
 lib/libkmenuedit_main.so
@@ -921,6 +922,7 @@ share/doc/kde/HTML/en/kdeprint/xpp-fonts.png
 share/doc/kde/HTML/en/kdesu/common
 share/doc/kde/HTML/en/kdesu/index.cache.bz2
 share/doc/kde/HTML/en/kdesu/index.docbook
+share/doc/kde/HTML/en/kdm/Daemon.README
 share/doc/kde/HTML/en/kdm/common
 share/doc/kde/HTML/en/kdm/index.cache.bz2
 share/doc/kde/HTML/en/kdm/index.docbook
@@ -1092,6 +1094,161 @@ share/fonts/console8x16.pcf.gz
 share/fonts/console8x8.pcf.gz
 share/fonts/fonts.dir
 share/fonts/override/fonts.dir
+share/kde/applnk/.directory
+share/kde/applnk/.hidden/konqfilemgr.desktop
+share/kde/applnk/Applications/.directory
+share/kde/applnk/Development/.directory
+share/kde/applnk/Editors/.directory
+share/kde/applnk/Editors/kate.desktop
+share/kde/applnk/Editors/kwrite.desktop
+share/kde/applnk/Editors/xedit.desktop
+share/kde/applnk/Games/.directory
+share/kde/applnk/Games/Arcade/.directory
+share/kde/applnk/Games/Board/.directory
+share/kde/applnk/Games/Card/.directory
+share/kde/applnk/Games/TacticStrategy/.directory
+share/kde/applnk/Graphics/.directory
+share/kde/applnk/Help.desktop
+share/kde/applnk/Home.desktop
+share/kde/applnk/Internet/.directory
+share/kde/applnk/Internet/Terminal/.directory
+share/kde/applnk/Internet/keditbookmarks.desktop
+share/kde/applnk/Internet/konqbrowser.desktop
+share/kde/applnk/Internet/netscape.desktop
+share/kde/applnk/KControl.desktop
+share/kde/applnk/Multimedia/.directory
+share/kde/applnk/Multimedia/realplayer.desktop
+share/kde/applnk/Office/.directory
+share/kde/applnk/Settings/.directory
+share/kde/applnk/Settings/Databases/.directory
+share/kde/applnk/Settings/FileBrowsing/.directory
+share/kde/applnk/Settings/FileBrowsing/filetypes.desktop
+share/kde/applnk/Settings/FileBrowsing/kcmkonq.desktop
+share/kde/applnk/Settings/Help/.directory
+share/kde/applnk/Settings/Information/.directory
+share/kde/applnk/Settings/Information/devices.desktop
+share/kde/applnk/Settings/Information/dma.desktop
+share/kde/applnk/Settings/Information/interrupts.desktop
+share/kde/applnk/Settings/Information/ioports.desktop
+share/kde/applnk/Settings/Information/ioslaveinfo.desktop
+share/kde/applnk/Settings/Information/kcmusb.desktop
+share/kde/applnk/Settings/Information/memory.desktop
+share/kde/applnk/Settings/Information/partitions.desktop
+share/kde/applnk/Settings/Information/pci.desktop
+share/kde/applnk/Settings/Information/processor.desktop
+share/kde/applnk/Settings/Information/scsi.desktop
+share/kde/applnk/Settings/Information/smbstatus.desktop
+share/kde/applnk/Settings/Information/sound.desktop
+share/kde/applnk/Settings/Information/xserver.desktop
+share/kde/applnk/Settings/LookNFeel/.directory
+share/kde/applnk/Settings/LookNFeel/Desktop/background.desktop
+share/kde/applnk/Settings/LookNFeel/Desktop/borders.desktop
+share/kde/applnk/Settings/LookNFeel/Desktop/desktop.desktop
+share/kde/applnk/Settings/LookNFeel/Desktop/virtualdesktops.desktop
+share/kde/applnk/Settings/LookNFeel/Themes/iconthemes.desktop
+share/kde/applnk/Settings/LookNFeel/Themes/style.desktop
+share/kde/applnk/Settings/LookNFeel/Windows/actions.desktop
+share/kde/applnk/Settings/LookNFeel/Windows/kwinmouse.desktop
+share/kde/applnk/Settings/LookNFeel/Windows/mouse.desktop
+share/kde/applnk/Settings/LookNFeel/background.desktop
+share/kde/applnk/Settings/LookNFeel/colors.desktop
+share/kde/applnk/Settings/LookNFeel/desktop.desktop
+share/kde/applnk/Settings/LookNFeel/fonts.desktop
+share/kde/applnk/Settings/LookNFeel/icons.desktop
+share/kde/applnk/Settings/LookNFeel/kcmlaunch.desktop
+share/kde/applnk/Settings/LookNFeel/kcmtaskbar.desktop
+share/kde/applnk/Settings/LookNFeel/keys.desktop
+share/kde/applnk/Settings/LookNFeel/kthememgr.desktop
+share/kde/applnk/Settings/LookNFeel/kwindecoration.desktop
+share/kde/applnk/Settings/LookNFeel/kwinoptions.desktop
+share/kde/applnk/Settings/LookNFeel/panel.desktop
+share/kde/applnk/Settings/LookNFeel/screensaver.desktop
+share/kde/applnk/Settings/LookNFeel/style.desktop
+share/kde/applnk/Settings/LookNFeel/virtualdesktops.desktop
+share/kde/applnk/Settings/Network/.directory
+share/kde/applnk/Settings/Network/email.desktop
+share/kde/applnk/Settings/Network/ioslaveinfo.desktop
+share/kde/applnk/Settings/Network/netpref.desktop
+share/kde/applnk/Settings/Network/smb.desktop
+share/kde/applnk/Settings/Network/socks.desktop
+share/kde/applnk/Settings/Peripherals/.directory
+share/kde/applnk/Settings/Peripherals/keyboard.desktop
+share/kde/applnk/Settings/Peripherals/mouse.desktop
+share/kde/applnk/Settings/Personalization/.directory
+share/kde/applnk/Settings/Personalization/crypto.desktop
+share/kde/applnk/Settings/Personalization/kcmaccess.desktop
+share/kde/applnk/Settings/Personalization/kcmlayout.desktop
+share/kde/applnk/Settings/Personalization/language.desktop
+share/kde/applnk/Settings/Personalization/passwords.desktop
+share/kde/applnk/Settings/Personalization/spellchecking.desktop
+share/kde/applnk/Settings/PowerControl/.directory
+share/kde/applnk/Settings/PowerControl/energy.desktop
+share/kde/applnk/Settings/Sound/.directory
+share/kde/applnk/Settings/Sound/arts.desktop
+share/kde/applnk/Settings/Sound/bell.desktop
+share/kde/applnk/Settings/Sound/kcmnotify.desktop
+share/kde/applnk/Settings/Sound/midi.desktop
+share/kde/applnk/Settings/System/.directory
+share/kde/applnk/Settings/System/clock.desktop
+share/kde/applnk/Settings/System/kcmkonsole.desktop
+share/kde/applnk/Settings/System/kcmsmserver.desktop
+share/kde/applnk/Settings/System/kdm.desktop
+share/kde/applnk/Settings/System/printmgr.desktop
+share/kde/applnk/Settings/WebBrowsing/.directory
+share/kde/applnk/Settings/WebBrowsing/cookies.desktop
+share/kde/applnk/Settings/WebBrowsing/ebrowsing.desktop
+share/kde/applnk/Settings/WebBrowsing/kcmcss.desktop
+share/kde/applnk/Settings/WebBrowsing/konqhtml.desktop
+share/kde/applnk/Settings/WebBrowsing/proxy.desktop
+share/kde/applnk/Settings/WebBrowsing/smb.desktop
+share/kde/applnk/Settings/WebBrowsing/useragent.desktop
+share/kde/applnk/System/.directory
+share/kde/applnk/System/ScreenSavers/.directory
+share/kde/applnk/System/ScreenSavers/KBanner.desktop
+share/kde/applnk/System/ScreenSavers/KBlankscreen.desktop
+share/kde/applnk/System/ScreenSavers/KBlob.desktop
+share/kde/applnk/System/ScreenSavers/KBouboule.desktop
+share/kde/applnk/System/ScreenSavers/KLines.desktop
+share/kde/applnk/System/ScreenSavers/KLorenz.desktop
+share/kde/applnk/System/ScreenSavers/KMatrix.desktop
+share/kde/applnk/System/ScreenSavers/KMorph3D.desktop
+share/kde/applnk/System/ScreenSavers/KPipes.desktop
+share/kde/applnk/System/ScreenSavers/KPolygon.desktop
+share/kde/applnk/System/ScreenSavers/KPyro.desktop
+share/kde/applnk/System/ScreenSavers/KRandom.desktop
+share/kde/applnk/System/ScreenSavers/KRock.desktop
+share/kde/applnk/System/ScreenSavers/KScience.desktop
+share/kde/applnk/System/ScreenSavers/KSlidescreen.desktop
+share/kde/applnk/System/ScreenSavers/KSlideshow.desktop
+share/kde/applnk/System/ScreenSavers/KSpace.desktop
+share/kde/applnk/System/ScreenSavers/KSwarm.desktop
+share/kde/applnk/System/ScreenSavers/KVm.desktop
+share/kde/applnk/System/ScreenSavers/Worm.desktop
+share/kde/applnk/System/ScreenSavers/kpartsaver.desktop
+share/kde/applnk/System/Terminal/.directory
+share/kde/applnk/System/Terminal/vmstat.desktop
+share/kde/applnk/System/kappfinder.desktop
+share/kde/applnk/System/kfmclient.desktop
+share/kde/applnk/System/kfmclient_dir.desktop
+share/kde/applnk/System/kfmclient_html.desktop
+share/kde/applnk/System/klegacyimport.desktop
+share/kde/applnk/System/kmenuedit.desktop
+share/kde/applnk/System/konquerorsu.desktop
+share/kde/applnk/System/konsole.desktop
+share/kde/applnk/System/konsolesu.desktop
+share/kde/applnk/System/kpersonalizer.desktop
+share/kde/applnk/System/ksysguard.desktop
+share/kde/applnk/Toys/.directory
+share/kde/applnk/Toys/ktip.desktop
+share/kde/applnk/Toys/xeyes.desktop
+share/kde/applnk/Utilities/.directory
+share/kde/applnk/Utilities/kaddressbook.desktop
+share/kde/applnk/Utilities/kdeprintfax.desktop
+share/kde/applnk/Utilities/kjobviewer.desktop
+share/kde/applnk/Utilities/klipper.desktop
+share/kde/applnk/Utilities/kpager.desktop
+share/kde/applnk/WordProcessing/.directory
+share/kde/applnk/ksysguard/eventsrc
 share/kde/apps/clockapplet/pics/lcd.png
 share/kde/apps/drkonqi/debuggers/gdbrc
 share/kde/apps/drkonqi/pics/konqi.png
@@ -1106,6 +1263,135 @@ share/kde/apps/kaddressbook/pics/find.xpm
 share/kde/apps/kaddressbook/pics/group.xpm
 share/kde/apps/kaddressbook/pics/page.xpm
 share/kde/apps/kaddressbook/pics/up.xpm
+share/kde/apps/kappfinder/apps/Development/ddd.desktop
+share/kde/apps/kappfinder/apps/Development/designer.desktop
+share/kde/apps/kappfinder/apps/Development/dlgedit.desktop
+share/kde/apps/kappfinder/apps/Development/linguist.desktop
+share/kde/apps/kappfinder/apps/Editors/emacs.desktop
+share/kde/apps/kappfinder/apps/Editors/gvim.desktop
+share/kde/apps/kappfinder/apps/Editors/lemacs.desktop
+share/kde/apps/kappfinder/apps/Editors/nedit.desktop
+share/kde/apps/kappfinder/apps/Editors/xedit.desktop
+share/kde/apps/kappfinder/apps/Editors/xemacs.desktop
+@exec ${MKDIR} %D/share/kde/apps/kappfinder/apps/Games/Arcade
+share/kde/apps/kappfinder/apps/Games/Board/xboard.desktop
+share/kde/apps/kappfinder/apps/Games/Card/PySol.desktop
+share/kde/apps/kappfinder/apps/Games/Clanbomber.desktop
+share/kde/apps/kappfinder/apps/Games/Emulators/qmamecat.desktop
+share/kde/apps/kappfinder/apps/Games/TacticStrategy/freeciv.desktop
+share/kde/apps/kappfinder/apps/Games/defendguin.desktop
+share/kde/apps/kappfinder/apps/Games/penguin-command.desktop
+share/kde/apps/kappfinder/apps/Games/xshipwars.desktop
+share/kde/apps/kappfinder/apps/Graphics/gimp.desktop
+share/kde/apps/kappfinder/apps/Graphics/xfig.desktop
+share/kde/apps/kappfinder/apps/Graphics/xpaint.desktop
+share/kde/apps/kappfinder/apps/Graphics/xv.desktop
+share/kde/apps/kappfinder/apps/Internet/Terminal/lftp.desktop
+share/kde/apps/kappfinder/apps/Internet/Terminal/mutt.desktop
+share/kde/apps/kappfinder/apps/Internet/Terminal/ncftp.desktop
+share/kde/apps/kappfinder/apps/Internet/Terminal/pine.desktop
+share/kde/apps/kappfinder/apps/Internet/arena.desktop
+share/kde/apps/kappfinder/apps/Internet/coolmail.desktop
+share/kde/apps/kappfinder/apps/Internet/ethereal.desktop
+share/kde/apps/kappfinder/apps/Internet/licq.desktop
+share/kde/apps/kappfinder/apps/Internet/mozilla.desktop
+share/kde/apps/kappfinder/apps/Internet/netscape.desktop
+share/kde/apps/kappfinder/apps/Internet/xbiff.desktop
+share/kde/apps/kappfinder/apps/Internet/xchat.desktop
+share/kde/apps/kappfinder/apps/Internet/xfmail.desktop
+share/kde/apps/kappfinder/apps/Internet/xftp.desktop
+share/kde/apps/kappfinder/apps/Multimedia/alevt.desktop
+share/kde/apps/kappfinder/apps/Multimedia/aviplay.desktop
+share/kde/apps/kappfinder/apps/Multimedia/gtv.desktop
+share/kde/apps/kappfinder/apps/Multimedia/mtv.desktop
+share/kde/apps/kappfinder/apps/Multimedia/realplayer.desktop
+share/kde/apps/kappfinder/apps/Multimedia/xawtv.desktop
+share/kde/apps/kappfinder/apps/Multimedia/xmms-enqueue.desktop
+share/kde/apps/kappfinder/apps/Multimedia/xmms.desktop
+share/kde/apps/kappfinder/apps/Office/Applix.desktop
+share/kde/apps/kappfinder/apps/Office/XAcc.desktop
+share/kde/apps/kappfinder/apps/Office/XsLite.desktop
+share/kde/apps/kappfinder/apps/Office/plan.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Ant.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Atlantis.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Attraction.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Bouboule.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Braid.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Bubble3d.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Bubbles.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Cage.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Compass.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Coral.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Crystal.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Cynosure.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Demon.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Drift.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Fadeplot.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Flag.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Flame.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Flow.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Forest.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/GLPlanet.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Galaxy.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Gears.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Goop.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Grav.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Hopalong.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Hypercube.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Ifs.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Imsmap.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Interference.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Julia.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Kaleidescope.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Kumppa.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/LMorph.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Lament.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Laser.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Lightning.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Lissie.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Moenius.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Penrose.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Phosphor.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Pulsar.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Rubik.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Slip.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Sonar.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Sproingies.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Stairs.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Starfish.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Strange.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Superquadrics.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Swirl.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/T3d.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Triangle.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Vines.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/Worm.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/XFlame.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/XJack.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/XMatrix.desktop
+share/kde/apps/kappfinder/apps/System/ScreenSavers/XPipes.desktop
+share/kde/apps/kappfinder/apps/System/Terminal/procinfo.desktop
+share/kde/apps/kappfinder/apps/System/Terminal/vmstat.desktop
+share/kde/apps/kappfinder/apps/System/sam.desktop
+share/kde/apps/kappfinder/apps/System/xosview.desktop
+share/kde/apps/kappfinder/apps/Toys/xeyes.desktop
+share/kde/apps/kappfinder/apps/Toys/xpinguin.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xcalc.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xclipboard.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xclock.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xconsole.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xload.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xmag.desktop
+share/kde/apps/kappfinder/apps/Utilities/XUtilities/xterm.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/WordPerfect.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/WordPerfect2000.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/acroread.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/ghostview.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/gv.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/lyx.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/pybliographic.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/xdvi.desktop
+share/kde/apps/kappfinder/apps/WordProcessing/xpdf.desktop
 share/kde/apps/kate/icons/hicolor/16x16/actions/curfiledir.png
 share/kde/apps/kate/icons/hicolor/16x16/actions/highlighting.png
 share/kde/apps/kate/icons/hicolor/16x16/actions/modified.png
@@ -1677,6 +1963,7 @@ share/kde/config/lissierc
 share/kde/config/penroserc
 share/kde/config/rocksrc
 share/kde/config/sliprc
+share/kde/icons/Daemon.png
 share/kde/icons/hicolor/16x16/actions/view_choose.png
 share/kde/icons/hicolor/16x16/actions/view_detailed.png
 share/kde/icons/hicolor/16x16/actions/view_icon.png
@@ -2376,6 +2663,8 @@ share/kde/templates/linkFloppy.desktop
 share/kde/templates/linkHD.desktop
 share/kde/templates/linkProgram.desktop
 share/kde/templates/linkURL.desktop
+@exec ${MKDIR} %D/share/kde/templates/.source/emptydir
+@exec ${CHMOD} 755 %D/share/kde/templates/.source/emptydir
 share/kde/wallpapers/All-Good-People-1.jpg
 share/kde/wallpapers/Ancient_Glyphs.jpg
 share/kde/wallpapers/Appropriately-Left-Handed-2.jpg
@@ -2406,7 +2695,6 @@ share/kde/wallpapers/simple_wallpaper.jpg
 share/kde/wallpapers/sunday_brunch.jpg
 share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/wallpapers
-@exec /bin/mkdir -p %D/share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source
 @dirrm share/kde/templates
@@ -2488,14 +2776,6 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/locale/l10n/C
 @dirrm share/kde/locale/l10n
 @dirrm share/kde/locale/C
-@dirrm share/kde/locale
-@dirrm share/kde/icons/locolor/32x32/apps
-@dirrm share/kde/icons/locolor/32x32
-@dirrm share/kde/icons/locolor/16x16/apps
-@dirrm share/kde/icons/locolor/16x16
-@dirrm share/kde/icons/locolor
-@dirrm share/kde/icons/hicolor/48x48/apps
-@dirrm share/kde/icons/hicolor/32x32/apps
 @dirrm share/kde/config/kdm
 @dirrm share/kde/apps/naughtyapplet/pics
 @dirrm share/kde/apps/naughtyapplet
@@ -2627,6 +2907,28 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/kate/icons/hicolor
 @dirrm share/kde/apps/kate/icons
 @dirrm share/kde/apps/kate
+@dirrm share/kde/apps/kappfinder/apps/WordProcessing
+@dirrm share/kde/apps/kappfinder/apps/Utilities/XUtilities
+@dirrm share/kde/apps/kappfinder/apps/Utilities
+@dirrm share/kde/apps/kappfinder/apps/Toys
+@dirrm share/kde/apps/kappfinder/apps/System/Terminal
+@dirrm share/kde/apps/kappfinder/apps/System/ScreenSavers
+@dirrm share/kde/apps/kappfinder/apps/System
+@dirrm share/kde/apps/kappfinder/apps/Office
+@dirrm share/kde/apps/kappfinder/apps/Multimedia
+@dirrm share/kde/apps/kappfinder/apps/Internet/Terminal
+@dirrm share/kde/apps/kappfinder/apps/Internet
+@dirrm share/kde/apps/kappfinder/apps/Graphics
+@dirrm share/kde/apps/kappfinder/apps/Games/TacticStrategy
+@dirrm share/kde/apps/kappfinder/apps/Games/Emulators
+@dirrm share/kde/apps/kappfinder/apps/Games/Card
+@dirrm share/kde/apps/kappfinder/apps/Games/Board
+@dirrm share/kde/apps/kappfinder/apps/Games/Arcade
+@dirrm share/kde/apps/kappfinder/apps/Games
+@dirrm share/kde/apps/kappfinder/apps/Editors
+@dirrm share/kde/apps/kappfinder/apps/Development
+@dirrm share/kde/apps/kappfinder/apps
+@dirrm share/kde/apps/kappfinder
 @dirrm share/kde/apps/kaddressbook/pics
 @dirrm share/kde/apps/kaddressbook
 @dirrm share/kde/apps/drkonqi/presets
@@ -2635,6 +2937,44 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/drkonqi
 @dirrm share/kde/apps/clockapplet/pics
 @dirrm share/kde/apps/clockapplet
+@unexec ${RMDIR} %D/share/kde/applnk/ksysguard 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/WordProcessing 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Utilities 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Toys 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/System/Terminal 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/System/ScreenSavers 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/System 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/WebBrowsing 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/System 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Sound 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/PowerControl 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Personalization 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Peripherals 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Network 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/LookNFeel/Windows 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/LookNFeel/Themes 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/LookNFeel/Desktop 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/LookNFeel 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Information 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Help 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/FileBrowsing 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings/Databases 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Settings 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Office 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Multimedia 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Internet/Terminal 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Internet 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Graphics 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Games/TacticStrategy 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Games/Card 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Games/Board 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Games/Arcade 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Games 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Editors 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Development 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Applications 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/.hidden 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/ksysguard
 @dirrm share/doc/kde/HTML/en/kpager

@@ -1,8 +1,0 @@
-/* $NetBSD: Imakefile,v 1.1.1.1 2001/03/14 16:03:09 skrll Exp $ */
-
-hasxdmauth:
-#ifdef HasXdmAuth
-#if HasXdmAuth == YES
-	@echo "#define HASXDMAUTH 1"
-#endif
-#endif

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.nsplugins,v 1.1 2001/11/13 21:10:45 jlam Exp $
+bin/nspluginscan
+bin/nspluginviewer
+lib/libkcm_nsplugin.a
+lib/libkcm_nsplugin.la
+lib/libkcm_nsplugin.so
+lib/libnsplugin.a
+lib/libnsplugin.la
+lib/libnsplugin.so
+lib/libnsplugin.so.1
+lib/libnsplugin.so.1.1
