@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 09:41:20 jmmv Exp $
+lib/gstreamer-0.8/libgstogg.a
+lib/gstreamer-0.8/libgstogg.la
+lib/gstreamer-0.8/libgstogg.so
+@comment in gst-plugins: @dirrm lib/gstreamer-0.8
