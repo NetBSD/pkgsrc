@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:52 wiz Exp $
 #
 
 DISTNAME=	prosper-1.00.4
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prosper/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} PPRblends.sty.gz

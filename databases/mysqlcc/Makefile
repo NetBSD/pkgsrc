@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 16:48:44 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:36 wiz Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQLCC/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQLCC/  \

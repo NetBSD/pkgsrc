@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:45 wiz Exp $
 #
 
 DISTNAME=		drwright-0.17
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/drwright/0.17/}
 EXTRACT_SUFX=		.tar.bz2

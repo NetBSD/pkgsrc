@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2004/03/09 12:04:40 markd Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/26 02:27:46 wiz Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
+PKGREVISION=	1
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs

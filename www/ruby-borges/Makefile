@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:58 wiz Exp $
 
 DISTNAME=	borges-0.2.0
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www ruby
 MASTER_SITES=	http://segment7.net/projects/ruby/borges/
 

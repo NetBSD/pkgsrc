@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/26 02:27:37 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCL_POSTGRESQL_BUILDLINK3_MK:=	${TCL_POSTGRESQL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	tcl-postgresql
 
 .if !empty(TCL_POSTGRESQL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.tcl-postgresql+=	tcl-postgresql>=7.3.1
+BUILDLINK_RECOMMENDED.tcl-postgresql?=	tcl-postgresql>=7.3.4nb3
 BUILDLINK_PKGSRCDIR.tcl-postgresql?=	../../databases/tcl-postgresql
 .endif	# TCL_POSTGRESQL_BUILDLINK3_MK
 

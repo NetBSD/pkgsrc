@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/02/13 18:18:23 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/26 02:27:48 wiz Exp $
 
 .if !defined(LIBSOUP_BUILDLINK2_MK)
 LIBSOUP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libsoup
 BUILDLINK_DEPENDS.libsoup?=		libsoup>=1.99.26
+BUILDLINK_RECOMMENDED.libsoup?=		libsoup>=1.99.26nb1
 BUILDLINK_PKGSRCDIR.libsoup?=		../../net/libsoup
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libsoup=libsoup

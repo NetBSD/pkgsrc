@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2004/03/26 02:27:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/ \

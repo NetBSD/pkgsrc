@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/03/22 20:07:48 epg Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:56 wiz Exp $
 
 DISTNAME=	clearsilver-0.9.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.clearsilver.net/downloads/
 

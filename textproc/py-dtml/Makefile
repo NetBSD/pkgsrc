@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/01/28 23:41:08 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:55 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-dtml-2.2.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz

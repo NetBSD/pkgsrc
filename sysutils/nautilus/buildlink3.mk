@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/18 09:12:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/03/26 02:27:55 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	nautilus
 
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.4.2nb4
+BUILDLINK_RECOMMENDED.nautilus?=	nautilus>=2.4.2nb6
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 .endif	# NAUTILUS_BUILDLINK3_MK
 

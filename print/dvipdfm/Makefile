@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:24:28 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:51 wiz Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
 

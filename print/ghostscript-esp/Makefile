@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/12/19 12:07:43 recht Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:51 wiz Exp $
 
 PKGNAME=	ghostscript-esp-${GS_VERS}
+PKGREVISION=	1
 COMMENT=	ESP/CUPS Postscript interpreter
 
 USE_X11=		# defined

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/08/09 10:36:59 seb Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:36 wiz Exp $
 # FreeBSD Id: ports/devel/avrdude/Makefile,v 1.4 2003/04/19 14:13:25 bsd Exp
 
 DISTNAME=	avrdude-4.1.0
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	http://savannah.nongnu.org/download/avrdude/stable.pkg/4.1.0/
 

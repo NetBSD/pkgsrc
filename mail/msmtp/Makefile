@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:44 wiz Exp $
 #
 
 DISTNAME=		msmtp-0.5.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=msmtp/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/03/22 23:29:12 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:36 wiz Exp $
 #
 
 .include "../../databases/libpqxx/Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		C++ interface to postgresql-lib
 
 NOT_FOR_PLATFORM=	NetBSD-*-pc532

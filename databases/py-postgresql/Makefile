@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/26 02:27:37 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-postgresql-3.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 
 MAINTAINER=	darcy@NetBSD.org

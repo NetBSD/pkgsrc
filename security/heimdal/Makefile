@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:52 wiz Exp $
 
 DISTNAME=		heimdal-0.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/heimdal/src/		\
 			ftp://ftp.pdc.kth.se/pub/heimdal/src/old/	\

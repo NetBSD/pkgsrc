@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/09/18 05:37:15 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/26 02:27:36 wiz Exp $
 
 .if !defined(OPENLDAP_BUILDLINK2_MK)
 OPENLDAP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		openldap
 BUILDLINK_DEPENDS.openldap?=	openldap>=2.1.22
+BUILDLINK_RECOMMENDED.openldap?=	openldap>=2.1.25nb3
 BUILDLINK_PKGSRCDIR.openldap?=	../../databases/openldap
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openldap=openldap

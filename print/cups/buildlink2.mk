@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:51 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/26 02:27:50 wiz Exp $
 
 .if !defined(CUPS_BUILDLINK2_MK)
 CUPS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		cups
 BUILDLINK_DEPENDS.cups?=	cups>=1.1.19nb3
+BUILDLINK_RECOMMENDED.cups?=	cups>=1.1.20nb1
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.cups=cups

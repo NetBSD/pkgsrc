@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 14:57:59 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:50 wiz Exp $
 
 DISTNAME=		advi-1.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/cristal/advi/
 
