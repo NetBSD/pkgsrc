@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.965 2003/10/24 01:46:11 xtraeme Exp $
+$NetBSD: TODO,v 1.966 2003/10/24 02:03:28 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,6 @@ Suggested package updates
 	o python-2.3.1
 	o qt-3.2.2
 	o rep-gtk-0.17
-	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45
