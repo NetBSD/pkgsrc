@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.607 2005/02/09 05:39:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.608 2005/02/09 05:47:29 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -203,11 +203,13 @@ SUBDIR+=	lcc
 SUBDIR+=	ldapsdk
 SUBDIR+=	libargparse
 SUBDIR+=	libast
+SUBDIR+=	libaura
 SUBDIR+=	libbegemot
 SUBDIR+=	libbonobo
 SUBDIR+=	libbonoboui
 SUBDIR+=	libcfg+
 SUBDIR+=	libctl
+SUBDIR+=	libdfui
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
 SUBDIR+=	libelf
@@ -232,6 +234,7 @@ SUBDIR+=	libgsf
 SUBDIR+=	libhfs
 SUBDIR+=	libiberty
 SUBDIR+=	libidn
+SUBDIR+=	libinstaller
 SUBDIR+=	libjit
 SUBDIR+=	libltdl
 SUBDIR+=	libmatchbox
@@ -576,8 +579,8 @@ SUBDIR+=	unidiff
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
-SUBDIR+=	wide
 SUBDIR+=	w32api
+SUBDIR+=	wide
 SUBDIR+=	xdelta
 SUBDIR+=	xxgdb
 SUBDIR+=	yasm
