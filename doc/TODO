@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2971 2005/01/28 13:36:26 wiz Exp $
+$NetBSD: TODO,v 1.2972 2005/01/28 15:02:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -429,7 +429,6 @@ Suggested package updates
 	o eblook-1.6.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel-1.0.2
 	o efax-gtk-2.2.14
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
@@ -630,7 +629,6 @@ Suggested package updates
 	o libnids-1.19
 	o libopendaap-0.2.3
 	o libpqxx-2.4.2
-	o librsvg-1.0.3
 	o libsieve-2.1.16/2.2.8
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
