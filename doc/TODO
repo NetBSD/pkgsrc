@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.200 2003/01/19 06:08:48 salo Exp $
+$NetBSD: TODO,v 1.201 2003/01/19 08:47:27 salo Exp $
 
 Suggested new packages
 ======================
@@ -197,6 +197,7 @@ Suggested package updates
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o plib-1.6.0
+	o pnm2ppa-1.12
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
 	o pv-0.4.5 [pkg/19884]
