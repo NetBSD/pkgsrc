@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3060 2005/02/19 12:41:26 wiz Exp $
+$NetBSD: TODO,v 1.3061 2005/02/19 17:15:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -310,6 +310,7 @@ Suggested package updates
 	o avidemux-2.0.36
 	o avl-2.0.1
 	o avr-libc-1.2.0
+	o baci-20040415
 	o bacula-1.36.1
 	o balsa-1.4.4
 	o bbsload-0.2.8
@@ -502,6 +503,7 @@ Suggested package updates
 	o grace-5.1.18
 	o gramps-1.0.10
 	o grap-1.32
+	o graphviz-2.2 [pkg/28596]
 	o grepmail-5.3030
 	o gri-2.12.8
 	o gsasl-0.2.5
@@ -674,6 +676,7 @@ Suggested package updates
 	o nano-1.3.5 [devel version]
 	o nap-1.5.3
 	o navi2ch-1.7.5
+	o nawk-20041222
 	o ncmpc-0.11.1 [pkg/29057]
 	o ncview-1.92e
 	o nessus-2.2.3
