@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2002/08/01 10:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2002/08/20 14:54:00 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -13,6 +13,7 @@ SUBDIR+=	blackdown-jre13
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
 SUBDIR+=	caml-light
+SUBDIR+=	chicken
 SUBDIR+=	cilk
 SUBDIR+=	cim
 SUBDIR+=	cint
