@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.107 2003/11/21 15:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2003/11/21 15:54:40 jlam Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+DIST_SUBDIR=	postfix
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
 
-DIST_SUBDIR=	postfix
-
-POSTFIX_SPOOL=	/var/spool/postfix
-
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
 
 PKG_SYSCONFSUBDIR=	postfix
+POSTFIX_SPOOL=		/var/spool/postfix
 
 OWN_DIRS=	${POSTFIX_SPOOL}
 
@@ -37,21 +35,21 @@ PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.18/
 PATCH_DIST_STRIP=	-p1
 BUILD_DEFS+=		POSTFIX_USE_INET6
 
-CCARGS+=		-DHAS_SSL
-AUXLIBS+=		-L${BUILDLINK_PREFIX.openssl}/lib	\
-			-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib \
-			-lssl -lcrypto
-BUILD_DEFS+=		POSTFIX_USE_TLS
+CCARGS+=	-DHAS_SSL
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
+		-lssl -lcrypto
+BUILD_DEFS+=	POSTFIX_USE_TLS
 
-PLIST_SRC+=		${PKGDIR}/PLIST.tls
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.tls
+PLIST_SRC+=	${PKGDIR}/PLIST.tls
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .include "../../devel/pcre/buildlink2.mk"
 CCARGS+=	-DHAS_PCRE
-AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib		\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib	\
+AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib		\
 		-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 .else
@@ -61,7 +59,7 @@ CCARGS+=	-DNO_PCRE
 .if defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"
 .include "../../databases/openldap/buildlink2.mk"
 CCARGS+=	-DHAS_LDAP
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib	\
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
 BUILD_DEFS+=	POSTFIX_USE_LDAP
@@ -80,7 +78,7 @@ BUILD_DEFS+=	POSTFIX_USE_MYSQL
 USING_SASL=YES
 .include "../../security/cyrus-sasl2/buildlink2.mk"
 CCARGS+=	-DUSE_SASL2_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
 BUILD_DEFS+=	USE_SASL2
@@ -88,7 +86,7 @@ BUILD_DEFS+=	USE_SASL2
 USING_SASL=YES
 .include "../../security/cyrus-sasl/buildlink2.mk"
 CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl
 BUILD_DEFS+=	USE_SASL
@@ -129,14 +127,14 @@ CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl2/smtpd.conf
 CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl/smtpd.conf
 .endif
 .endif
-CONF_FILES_PERMS=
+CONF_FILES_PERMS=	# empty
 .for confscr in post-install postfix-files postfix-script
 CONF_FILES_PERMS+=	${SHAREDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
 .undef confscr
 
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 
 pre-configure:
 	@for i in ${POSTFIX_CONF_FILES}; do				\
@@ -148,9 +146,9 @@ pre-configure:
 	done
 
 do-configure:
-	(cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles \
-		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}')
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles	\
+		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}'
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
@@ -180,6 +178,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${SHAREDIR}/mailer.conf
 
 do-install:
-	(cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}" ${SH} postfix-install -non-interactive)
+	cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}"	\
+		${SH} postfix-install -non-interactive
 
 .include "../../mk/bsd.pkg.mk"
