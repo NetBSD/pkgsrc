@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/07 14:46:29 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/04/12 09:21:24 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use xosd.
 #
@@ -9,7 +9,7 @@
 XOSD_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xosd
-BUILDLINK_DEPENDS.xosd?=		xosd>=2.1.3
+BUILDLINK_DEPENDS.xosd?=		xosd>=2.2.0
 BUILDLINK_PKGSRCDIR.xosd?=		../../x11/xosd
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xosd=xosd
