@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/17 18:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/06/17 10:31:02 veego Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
+HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/Net/libnetFAQ.html  
 COMMENT=	perl5 modules to access and use network protocols
 
 DEPENDS+= 	p5-Data-Dumper-*:../../devel/p5-Data-Dumper
