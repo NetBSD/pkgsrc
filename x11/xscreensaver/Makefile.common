@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2004/01/24 20:14:56 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.66 2004/01/27 18:56:23 kristerw Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
+USE_PERL5=		build
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
