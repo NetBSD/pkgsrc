@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/01/03 18:49:51 reed Exp $
+# $NetBSD: Makefile,v 1.68 2004/01/06 07:09:25 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -26,8 +26,10 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 UNLIMIT_RESOURCES=	datasize memorysize
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
@@ -53,7 +55,7 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
+.  include "../../security/PAM/buildlink3.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
@@ -128,12 +130,12 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../net/openslp/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../net/openslp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
