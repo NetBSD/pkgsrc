@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2210 2004/10/12 00:13:37 heinz Exp $
+$NetBSD: TODO,v 1.2211 2004/10/12 23:41:07 minskim Exp $
 
 Suggested new packages
 ======================
@@ -288,6 +288,7 @@ Suggested package updates
 	o gtkglext-1.0.6
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
+	o gtkterm2-0.2.3
 	o gtranslator-1.0.1
 	o guile-1.6.5
 	o guile-pg-0.16 [pkg/24039]
