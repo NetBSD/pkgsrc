@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.222 2002/10/10 19:01:13 tron Exp $
+$NetBSD: CHANGES,v 1.223 2002/10/11 00:53:23 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3171,3 +3171,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added bmf-0.84 [mjl 2002-10-10]
 	Updated wine to 20021007nb1 [junyoung 2002-10-10]
 	Updated ptl2 to 2.1.8nb1 [tron 2002-10-10]
+	Updated dict-server to 1.8.0 [uebayasi 2002-10-11]
+	Updated dict-client to 1.8.0 [uebayasi 2002-10-11]
