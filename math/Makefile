@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/26 18:57:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/26 00:53:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -18,7 +18,7 @@
 #    SUBDIR += libranlib
 #    SUBDIR += linpack
 #    SUBDIR += numpy
-#    SUBDIR += octave
+    SUBDIR += octave
 #    SUBDIR += oleo
 #    SUBDIR += p5-MatrixReal
 #    SUBDIR += pari
