@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/09/22 01:32:58 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2005/01/24 20:34:11 tv Exp $
 
---- Makefile.orig	Sat Jul 20 01:35:46 1996
+--- Makefile.orig	1996-07-19 19:35:46.000000000 -0400
 +++ Makefile
-@@ -30,31 +30,35 @@
+@@ -30,31 +30,37 @@
  # uncomment the following two lines if you want to include X11 support
  # (mpeg2decode)
  
@@ -10,6 +10,8 @@ $NetBSD: patch-aa,v 1.7 2002/09/22 01:32:58 jlam Exp $
 -#LIBS = -lX11
 +USE_DISP = -DDISPLAY
 +LIBS = -lX11
++
++OPSYS!= uname -s
  
  # uncomment the following two lines if you want to use shared memory
  # (faster display if server and client run on the same machine)
@@ -17,10 +19,10 @@ $NetBSD: patch-aa,v 1.7 2002/09/22 01:32:58 jlam Exp $
  
 -#USE_SHMEM = -DSH_MEM
 -#LIBS = -lXext -lX11
++.if ${OPSYS} != "Interix"
 +USE_SHMEM = -DSH_MEM
 +LIBS = -lXext -lX11
-+
-+OPSYS!= uname -s
++.endif
 +
 +.if ${OPSYS} == "SunOS"
 +LIBS+= -lsocket -lnsl
