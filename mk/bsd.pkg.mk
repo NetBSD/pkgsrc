@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.126 1998/07/24 01:47:33 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.127 1998/07/24 14:13:46 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1082,20 +1082,20 @@ _PORT_USE: .USE
 		"ELF")							\
 			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
 			for so in $$sos; do				\
-				so1=`${ECHO} $$so | ${SED} -e 's|\.[0-9]*$$||'`;	\
-				so2=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`;	\
-				case `${GREP} -c "^$$so2$$" ${PLIST}` in	\
+				so1=`${ECHO} $$so | ${SED} -e 's|\.[0-9]*$$||'`; \
+				so2=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
+				case `${GREP} -c "^$$so2$$" ${PLIST}` in \
 				0)					\
 					${SED} -e "s|^$$so$$|&!$$so2|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2"; \
 					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2; \
 					;;				\
 				esac;					\
-				case `${GREP} -c "^$$so1$$" ${PLIST}` in	\
+				case `${GREP} -c "^$$so1$$" ${PLIST}` in \
 				0)					\
 					${SED} -e "s|^$$so$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1";	\
-					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1;	\
+					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1; \
 					;;				\
 				esac;					\
 				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
@@ -1105,15 +1105,15 @@ _PORT_USE: .USE
 			;;						\
 		"a.out")						\
 			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
-			case `${GREP} -c '^@exec ${LDCONFIG}$$' ${PLIST}` in	\
+			case `${GREP} -c '^@exec ${LDCONFIG}$$' ${PLIST}` in \
 			0)						\
-				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST};	\
-				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST};	\
+				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
+				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
 				;;					\
 			esac;						\
 			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
 				${ECHO_MSG} "$$sos";			\
-				${ECHO_MSG} "${LDCONFIG}";		\
+				${ECHO_MSG} "Running ${LDCONFIG}";	\
 			fi;						\
 			${LDCONFIG};					\
 			;;						\
@@ -1388,7 +1388,7 @@ checksum: fetch
 		(cd ${DISTDIR}; OK="true"; \
 		  for file in ${_CKSUMFILES}; do \
 			CKSUM=`${MD5} < $$file`; \
-			CKSUM2=`${GREP} "^MD5 ($$file)" ${MD5_FILE} | ${AWK} '{print $$4}'`; \
+			CKSUM2=`${AWK} '/^MD5 \('$$file'\)/{ print $$4 }' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file."; \
 				OK="false"; \
@@ -1404,7 +1404,7 @@ checksum: fetch
 			fi; \
 		  done; \
 		  for file in ${_IGNOREFILES}; do \
-			CKSUM2=`${GREP} "($$file)" ${MD5_FILE} | ${AWK} '{print $$4}'`; \
+			CKSUM2=`${AWK} '/\('$$file'\)/{ print $$4 }' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false"; \
