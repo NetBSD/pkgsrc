@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.h,v 1.2 2003/12/05 15:42:13 erh Exp $	*/
+/*	$NetBSD: getopt.h,v 1.3 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -36,8 +36,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _GETOPT_H_
-#define _GETOPT_H_
+#ifndef _NBCOMPAT_GETOPT_H_
+#define _NBCOMPAT_GETOPT_H_
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -50,7 +50,6 @@
 /*
  * Gnu like getopt_long() and BSD4.4 getsubopt()/optreset extensions
  */
-#if (!defined(_POSIX_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(__linux__) || defined(_AIX)
 #define no_argument        0
 #define required_argument  1
 #define optional_argument  2
@@ -73,6 +72,5 @@ __BEGIN_DECLS
 int getopt_long (int, char * const *, const char *,
     const struct option *, int *);
 __END_DECLS
-#endif
  
-#endif /* !_GETOPT_H_ */
+#endif /* !_NBCOMPAT_GETOPT_H_ */

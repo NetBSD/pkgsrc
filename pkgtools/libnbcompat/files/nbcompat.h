@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.36 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.37 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -32,9 +32,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-#ifndef _NBCOMPAT_H
-#define _NBCOMPAT_H
 
 #include <nbcompat/nbconfig.h>
 #include <nbcompat/nbtypes.h>
@@ -114,6 +111,13 @@
 # include <nbcompat/glob.h>
 #endif
 
+#if HAVE_NBCOMPAT_REGEX
+# if HAVE_REGEX_H
+#  undef HAVE_REGEX_H
+# endif
+# include <nbcompat/regex.h>
+#endif
+
 #if HAVE_SYS_MKDEV_H
 # include <sys/mkdev.h>
 # if !defined(makedev) && defined(mkdev)
@@ -174,15 +178,19 @@ void	 tputs(const char *, int, int (*)(int));
 #endif
 
 #if !HAVE_D_NAMLEN
-# define DIRENT_MISSING_D_NAMLEN
+# ifndef DIRENT_MISSING_D_NAMLEN
+#  define DIRENT_MISSING_D_NAMLEN
+# endif
 #endif
 
 #if !HAVE_ISBLANK
-int     isblank(int);
+int	isblank(int);
 #endif
 
 #if HAVE_GETPASSPHRASE
-# define getpass getpassphrase
+# ifndef getpass
+#  define getpass getpassphrase
+# endif
 #endif
 
 #if !defined(MIN)
@@ -191,5 +199,3 @@ int     isblank(int);
 #if !defined(MAX)
 # define MAX(a, b)	((a) < (b) ? (b) : (a))
 #endif
-
-#endif /* !_NBCOMPAT_H */

@@ -1,4 +1,4 @@
-/* $Id: glob.h,v 1.2 2003/12/19 22:16:14 grant Exp $ */
+/* $Id: glob.h,v 1.3 2004/08/16 17:24:57 jlam Exp $ */
 /* from NetBSD: glob.h,v 1.13 2001/03/16 21:02:42 christos Exp */
 
 /*
@@ -35,8 +35,8 @@
  *	@(#)glob.h	8.1 (Berkeley) 6/2/93
  */
 
-#ifndef _GLOB_H_
-#define	_GLOB_H_
+#ifndef _NBCOMPAT_GLOB_H_
+#define	_NBCOMPAT_GLOB_H_
 
 typedef struct {
 	int gl_pathc;		/* Count of total paths so far. */
@@ -85,4 +85,4 @@ typedef struct {
 int	glob(const char *, int, int (*)(const char *, int), glob_t *);
 void	globfree(glob_t *);
 
-#endif /* !_GLOB_H_ */
+#endif /* !_NBCOMPAT_GLOB_H_ */

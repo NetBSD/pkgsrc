@@ -1,4 +1,4 @@
-/*	$NetBSD: poll.h,v 1.1 2003/09/03 13:35:52 jlam Exp $	*/
+/*	$NetBSD: poll.h,v 1.2 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -36,8 +36,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _POLL_H_
-#define	_POLL_H_
+#ifndef _NBCOMPAT_POLL_H_
+#define	_NBCOMPAT_POLL_H_
 
 typedef unsigned int	nfds_t;
 
@@ -69,4 +69,4 @@ __BEGIN_DECLS
 int	poll (struct pollfd *, nfds_t, int);
 __END_DECLS
 
-#endif /* !_POLL_H_ */
+#endif /* !_NBCOMPAT_POLL_H_ */
