@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/30 09:13:12 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/08 01:09:51 mjl Exp $
 bin/cdlabelgen
 man/cat1/cdlabelgen.0
 share/cdlabelgen/template.ps
@@ -8,4 +8,6 @@ share/cdlabelgen/mp3.eps
 share/cdlabelgen/cdda.eps
 share/cdlabelgen/cd.eps
 share/cdlabelgen/penguin.eps
+share/cdlabelgen/debian-color.eps
+share/cdlabelgen/debian-bw.eps
 @dirrm share/cdlabelgen

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/08/08 01:09:51 mjl Exp $
+
+--- postscript/template.ps.orig	Sun Aug  8 02:38:01 1999
++++ postscript/template.ps	Sun Aug  8 02:38:21 1999
+@@ -533,7 +533,7 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %% And off we go
+ %% Position ourselves in a reasonable place
+-	 .5 in .5 in translate
++	 .5 in 1.5 in translate
+ 
+ 	 first_endcap
+ 	 tray_card
