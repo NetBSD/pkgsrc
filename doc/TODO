@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1541 2004/03/29 02:47:53 perry Exp $
+$NetBSD: TODO,v 1.1542 2004/03/29 06:02:30 snj Exp $
 
 Suggested new packages
 ======================
@@ -167,7 +167,6 @@ Suggested package updates
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
-	o cyrus-sasl2-2.1.18
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o delegate-8.9.1
