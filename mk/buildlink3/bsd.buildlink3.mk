@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.12 2003/08/22 08:09:39 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.13 2003/08/23 01:54:29 jlam Exp $
 
 ECHO_BUILDLINK_MSG=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
@@ -64,12 +64,12 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 # Generate default values for:
 #
 #	BUILDLINK_PKGBASE.<pkg>
-#	BUILDLINK_DEPOT.<pkg>
+#	BUILDLINK_PREFIX.<pkg>
 #	BUILDLINK_INCDIRS.<pkg>
 #	BUILDLINK_LIBDIRS.<pkg>
 #
 # BUILDLINK_PKGBASE.<pkg> is the package basename (without the version
-# number).  BUILDLINK_DEPOT.<pkg> is the depot directory for <pkg>.
+# number).  BUILDLINK_PREFIX.<pkg> is the depot directory for <pkg>.
 # BUILDLINK_INCDIRS.<pkg> and BUILDLINK_LIBDIRS.<pkg> are the
 # sub-directories in the depot directory for <pkg> that should be added
 # to the compiler/linker search paths.
@@ -78,8 +78,8 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 .  if !defined(BUILDLINK_PKGBASE.${_pkg_})
 BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  endif
-.  if !defined(BUILDLINK_DEPOT.${_pkg_})
-BUILDLINK_DEPOT.${_pkg_}!=						\
+.  if !defined(BUILDLINK_PREFIX.${_pkg_})
+BUILDLINK_PREFIX.${_pkg_}!=						\
 	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.${_pkg_}}"; then	\
 		cd ${PKG_DBDIR};					\
 		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}"; \
@@ -105,7 +105,7 @@ BUILDLINK_LDFLAGS=	# empty
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
-.    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_DEPOT.${_pkg_}}\//}
+.    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
 .      if exists(${_dir_})
 .        if empty(BUILDLINK_CPPFLAGS:M-I${_dir_})
 BUILDLINK_CPPFLAGS+=	-I${_dir_}
@@ -114,7 +114,7 @@ BUILDLINK_CPPFLAGS+=	-I${_dir_}
 .    endfor
 .  endif
 .  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
-.    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${BUILDLINK_DEPOT.${_pkg_}}\//}
+.    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
 .      if exists(${_dir_})
 .        if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
 BUILDLINK_LDFLAGS+=	-L${_dir_}
@@ -182,7 +182,7 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 # the named files into ${BUILDLINK_DIR}.
 #
 # BUILDLINK_FILES.<pkg>
-#	shell glob pattern relative to ${BUILDLINK_DEPOT.<pkg>} to be
+#	shell glob pattern relative to ${BUILDLINK_PREFIX.<pkg>} to be
 #	symlinked into ${BUILDLINK_DIR}, e.g. include/*.h
 #
 # BUILDLINK_TRANSFORM.<pkg>
@@ -198,9 +198,9 @@ ${_pkg_}-buildlink:
 	if [ ! -f $$cookie ]; then					\
 		${ECHO_BUILDLINK_MSG} "Linking ${_pkg_} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
-		cd ${BUILDLINK_DEPOT.${_pkg_}};				\
+		cd ${BUILDLINK_PREFIX.${_pkg_}};				\
 		for rel_file in ${BUILDLINK_FILES.${_pkg_}}; do		\
-			src="${BUILDLINK_DEPOT.${_pkg_}}/$$rel_file";	\
+			src="${BUILDLINK_PREFIX.${_pkg_}}/$$rel_file";	\
 			if [ ! -f $$src ]; then				\
 				${ECHO} "$${file}: not found" >> $${cookie}; \
 				continue;				\
@@ -263,7 +263,7 @@ _BLNK_ALLOWED_RPATHDIRS=	# empty
 # libraries we use.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-_BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_DEPOT.${_pkg_}}
+_BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 .endfor
 #
 # Add the depot directory for the package we're building.
@@ -313,8 +313,8 @@ _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-_BLNK_PROTECT_DIRS+=	${BUILDLINK_DEPOT.${_pkg_}}
-_BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DEPOT.${_pkg_}}
+_BLNK_PROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
+_BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 .endfor
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
@@ -845,7 +845,7 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL].|-[IL]./*|-[IL]..*|-[IL][!/]*
 # headers and libraries for both -[IL]<dir>.
 #
 .  for _pkg_ in ${BUILDLINK_PACKAGES}
-_BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_DEPOT.${_pkg_}}/*
+_BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
 .  endfor
 #
 _BLNK_RPATH_FLAGS=	${_COMPILER_LD_FLAG}-R
