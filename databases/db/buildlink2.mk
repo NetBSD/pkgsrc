@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/12/22 10:28:08 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/12/29 00:43:52 seb Exp $
 
 .if !defined(DB_BUILDLINK2_MK)
 DB_BUILDLINK2_MK=	# defined
@@ -15,7 +15,8 @@ BUILDLINK_FILES.db=		include/db.h
 BUILDLINK_FILES.db+=		include/mpool.h
 BUILDLINK_CPPFLAGS.db=		# empty
 _NEED_DB2=			NO
-.  elif exists(/usr/include/db1/db.h)	# Linux
+.  elif exists(/usr/include/db1/db.h)
+# Linux
 BUILDLINK_PREFIX.db=		/usr
 BUILDLINK_FILES.db=		include/db1/*
 BUILDLINK_CPPFLAGS.db=		-I${BUILDLINK_PREFIX.db}/include/db1
