@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 1999/01/15 22:57:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/02/11 19:17:30 tv Exp $
 bin/glib-config
 include/glib/glib.h
 include/glib/glibconfig.h
 include/glib/gmodule.h
-@unexec %D/bin/install-info --delete %D/info/glib.info %D/info/dir
+@unexec install-info --delete %D/info/glib.info %D/info/dir
 info/glib.info
-@exec %D/bin/install-info %D/info/glib.info %D/info/dir
+@exec install-info %D/info/glib.info %D/info/dir
 lib/libglib.a
 lib/libglib.la
 lib/libglib.so.12.0

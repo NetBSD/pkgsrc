@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 1998/09/22 10:48:44 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:31 tv Exp $
 bin/gm4
-@unexec %D/bin/install-info --delete %D/info/m4.info %D/info/dir
+@unexec install-info --delete %D/info/m4.info %D/info/dir
 info/m4.info
-@exec %D/bin/install-info %D/info/m4.info %D/info/dir
+@exec install-info %D/info/m4.info %D/info/dir
 share/examples/gm4/capitalize.m4
 share/examples/gm4/comments.m4
 share/examples/gm4/ddivert.m4

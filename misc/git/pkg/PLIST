@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/03/28 21:38:27 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/02/11 19:17:32 tv Exp $
 bin/git
 bin/gitps
 bin/gitview
@@ -13,12 +13,12 @@ bin/gitregrep
 bin/gitrfgrep
 bin/gitunpack
 bin/gitmkdirs
-@unexec %D/bin/install-info --delete %D/info/git.info %D/info/dir
+@unexec install-info --delete %D/info/git.info %D/info/dir
 info/git.info
 info/git.info-1
 info/git.info-2
 info/git.info-3
-@exec %D/bin/install-info %D/info/git.info %D/info/dir
+@exec install-info %D/info/git.info %D/info/dir
 lib/git/term/.gitrc.aixterm
 lib/git/term/.gitrc.ansi
 lib/git/term/.gitrc.common

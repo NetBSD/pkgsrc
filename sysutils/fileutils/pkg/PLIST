@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/09 20:51:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/02/11 19:17:34 tv Exp $
 bin/gchgrp
 bin/gchown
 bin/gchmod
@@ -20,9 +20,9 @@ bin/grmdir
 bin/gsync
 bin/gtouch
 bin/gdf
-@unexec %D/bin/install-info --delete %D/info/fileutils.info %D/info/dir
+@unexec install-info --delete %D/info/fileutils.info %D/info/dir
 info/fileutils.info
-@exec %D/bin/install-info %D/info/fileutils.info %D/info/dir
+@exec install-info %D/info/fileutils.info %D/info/dir
 man/man1/grmdir.1
 man/man1/gdircolors.1
 man/man1/gln.1

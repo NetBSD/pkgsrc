@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/07/14 15:55:38 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:31 tv Exp $
 include/readline/chardefs.h
 include/readline/history.h
 include/readline/keymaps.h
@@ -10,11 +10,11 @@ lib/libreadline.so.2.2
 lib/libhistory.a
 lib/libhistory_pic.a
 lib/libhistory.so.2.2
-@unexec %D/bin/install-info --delete %D/info/readline.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/history.info %D/info/dir
+@unexec install-info --delete %D/info/readline.info %D/info/dir
+@unexec install-info --delete %D/info/history.info %D/info/dir
 info/readline.info
 info/history.info
-@exec %D/bin/install-info %D/info/readline.info %D/info/dir
-@exec %D/bin/install-info %D/info/history.info %D/info/dir
+@exec install-info %D/info/readline.info %D/info/dir
+@exec install-info %D/info/history.info %D/info/dir
 man/man3/readline.3
 @dirrm include/readline

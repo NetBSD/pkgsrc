@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/12/21 00:36:00 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:35 tv Exp $
 bin/buildhash
 bin/findaffix
 bin/icombine
@@ -8,9 +8,9 @@ bin/munchlist
 bin/sq
 bin/tryaffix
 bin/unsq
-@unexec %D/bin/install-info --delete %D/info/ispell.info %D/info/dir
+@unexec install-info --delete %D/info/ispell.info %D/info/dir
 info/ispell.info
-@exec %D/bin/install-info %D/info/ispell.info %D/info/dir
+@exec install-info %D/info/ispell.info %D/info/dir
 share/emacs/site-lisp/ispell.el
 lib/american.hash
 lib/americanmed+.hash
