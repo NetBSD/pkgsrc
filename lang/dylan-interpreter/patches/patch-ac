@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/15 20:08:43 agc Exp $
+
+--- configure	2002/01/14 11:36:51	1.1
++++ configure	2002/01/14 11:37:48
+@@ -973,6 +973,7 @@
+     sparc*-openbsd*) d2c_build=sparc-openbsd-gcc ;;
+     i*86-*-freebsd2.*) d2c_build=x86-freebsd-aout-gcc ;;
+     i*86-*-freebsd*) d2c_build=x86-freebsd-elf-gcc ;;
++    i*86-*-netbsd*) d2c_build=x86-netbsd-gcc ;;
+     i*86-pc-cygwin*) d2c_build=x86-cygnus-gcc ;;
+     i*86-pc-none) d2c_build=x86-win32-vc ;;
+     i*86-pc-beos) d2c_build=x86-beos-gcc ;;
+@@ -998,6 +999,7 @@
+     sparc*-openbsd*) d2c_host=sparc-openbsd-gcc ;;
+     i*86-*-freebsd2.*) d2c_host=x86-freebsd-aout-gcc ;;
+     i*86-*-freebsd*) d2c_host=x86-freebsd-elf-gcc ;;
++    i*86-*-netbsd*) d2c_host=x86-netbsd-gcc ;;
+     i*86-pc-cygwin*) d2c_host=x86-cygnus-gcc ;;
+     i*86-pc-none) d2c_host=x86-win32-vc ;;
+     i*86-pc-beos) d2c_host=x86-beos-gcc ;;
+@@ -1040,6 +1042,7 @@
+     sparc*-openbsd*) d2c_target=sparc-openbsd-gcc ;;
+     i*86-*-freebsd2.*) d2c_target=x86-freebsd-aout-gcc ;;
+     i*86-*-freebsd*) d2c_target=x86-freebsd-elf-gcc ;;
++    i*86-*-netbsd*) d2c_target=x86-netbsd-gcc ;;
+     i*86-pc-cygwin*) d2c_target=x86-cygnus-gcc ;;
+     i*86-pc-none) d2c_target=x86-win32-vc ;;
+     i*86-pc-beos) d2c_target=x86-beos-gcc ;;
