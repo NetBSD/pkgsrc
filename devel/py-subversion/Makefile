@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/08 00:09:46 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/08 00:15:53 minskim Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
@@ -39,9 +39,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/cvs2svn/rcsparse/*.py \
 		${LOCALBASE}/${PYSITELIB}/rcsparse
 
-.include "../../devel/subversion/buildlink2.mk"
-.include "../../devel/swig-build/buildlink2.mk"
-.include "../../devel/swig-python/buildlink2.mk"
+.include "../../devel/subversion/buildlink3.mk"
+.include "../../devel/swig-build/buildlink3.mk"
+.include "../../devel/swig-python/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
