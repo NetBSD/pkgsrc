@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:14 wiz Exp $
 
 SHA1 (MesaLib-3.4.1.tar.bz2) = d239335f11e5322d98a98aa699afb4fc5b995197
+Size (MesaLib-3.4.1.tar.bz2) = 1379494 bytes
 SHA1 (MesaDemos-3.4.1.tar.bz2) = 2298901e36e887c0979e7d5e08fcb1f63784d97b
+Size (MesaDemos-3.4.1.tar.bz2) = 855311 bytes

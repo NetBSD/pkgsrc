@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:15 wiz Exp $
 
-MD5 (gphoto-0.4.3.tar.gz) = 8b4e70df78870479d2d9a45c8f4db5f4
+SHA1 (gphoto-0.4.3.tar.gz) = f0606444ca0b3c37065b022cbe28ae265704af39
+Size (gphoto-0.4.3.tar.gz) = 709336 bytes

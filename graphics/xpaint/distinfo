@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:30 wiz Exp $
 
 SHA1 (xpaint-2.6.1.tar.gz) = a26d495bdb4190640756dbbfd214307e92422139
+Size (xpaint-2.6.1.tar.gz) = 265036 bytes
 SHA1 (patch-aa) = 1c1c2cb9d4cf99d46f6ab8e4247e226d5371d489
 SHA1 (patch-ab) = a0644e605edd5c1769b5b11a6004c4b512960b46
 SHA1 (patch-ac) = dbdf4d975268f3cc9f9d3e8c4526a61505e4d7e5

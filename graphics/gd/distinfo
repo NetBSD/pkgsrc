@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:13 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:12 wiz Exp $
 
-MD5 (gd-1.8.3.tar.gz) = ad0e7dd1dda2812dbaeaa9706c4be536
+SHA1 (gd-1.8.3.tar.gz) = a0a40813a2a516be35f464a76f7e15af238b45e1
+Size (gd-1.8.3.tar.gz) = 274318 bytes
 SHA1 (patch-aa) = f80e7519bbc30125a63598ee98443664f685ac6c
 SHA1 (patch-ab) = a00035b1d8a2c9f2f705778c7d3d3ccd5f8e9a5e

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:36 wiz Exp $
 
-MD5 (Text-Kakasi-1.04.tar.gz) = 9e42d88e8b78001322933103b1b6250c
+SHA1 (Text-Kakasi-1.04.tar.gz) = a0648751ecccdbf57e2619a5d5b73cf30ae19414
+Size (Text-Kakasi-1.04.tar.gz) = 15877 bytes

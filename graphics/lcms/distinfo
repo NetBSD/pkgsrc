@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:17 wiz Exp $
 
-MD5 (lcms-1.06.tar.gz) = 7e0a3642b42628b1fc40c1702a5e71e0
+SHA1 (lcms-1.06.tar.gz) = 3c9e99eb50598a0346c07fb1cacbf6cc4841001b
+Size (lcms-1.06.tar.gz) = 644116 bytes
 SHA1 (patch-aa) = 52102849563445b39eb8e504e9c6001af84bdbd5
 SHA1 (patch-ab) = a65a875450ef58d392442eeb2e6a22aeeae17146

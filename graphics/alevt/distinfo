@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:22:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:08 wiz Exp $
 
-MD5 (alevt-1.6.0.tar.gz) = 3826d99d14d0a8f70f8d3625b2d06d03
+SHA1 (alevt-1.6.0.tar.gz) = ac7d71e738e77fc485c59221171011673e239bbe
+Size (alevt-1.6.0.tar.gz) = 116646 bytes
 SHA1 (patch-aa) = 86e57806c89cdcf55be6125c0c3af6c136c76022

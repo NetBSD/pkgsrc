@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:02 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:36 wiz Exp $
 
-MD5 (jcode.pl-2.10) = d4f33ca814bef7461cbbd4173b60bfb1
+SHA1 (jcode.pl-2.10) = f945f40ec05eba1018f2518ccee9432dc9c83b4a
+Size (jcode.pl-2.10) = 19900 bytes

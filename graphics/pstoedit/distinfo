@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:25 wiz Exp $
 
-MD5 (pstoedit_3_20.zip) = b9f113d99004f79208a9b7dea53360ea
+SHA1 (pstoedit_3_20.zip) = c8d5ffcdb1e970d05124c73da7ad6243f6db90b8
+Size (pstoedit_3_20.zip) = 444849 bytes
 SHA1 (patch-aa) = 1986e25c2b7fdbac91b4b9a91505e3f459ec3971
 SHA1 (patch-ab) = 3ec29a5fc62d476df1b3156728fbb597a353b0fb
 SHA1 (patch-ac) = 1c69b7942d6bbc5e87a06326c96e8cd9b89db15b

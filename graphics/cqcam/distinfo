@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:22:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:09 wiz Exp $
 
-MD5 (cqcam-0.45a.tgz) = ae0d0d7bdb68a13344089b466d8fd30a
+SHA1 (cqcam-0.45a.tgz) = 39affec6ad3e81cc837ab583d01207767d4f7273
+Size (cqcam-0.45a.tgz) = 40163 bytes
 SHA1 (patch-aa) = f1dadcf9ab08a4bcb7a3ae3fcda40f9f3c4748e0
 SHA1 (patch-ab) = 69138220e26174d66e10310d247f9611b3e13471
 SHA1 (patch-ac) = 868cedbdb0e866013079408d2260eb5084121da7

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:09 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:12 wiz Exp $
 
-MD5 (fxtv-1.03.tgz) = 2497c0eba13b475d2ca5abf362ffa52b
+SHA1 (fxtv-1.03.tgz) = 2ed9f2bee879a931c7f963a4ad7d07ef9cd297f9
+Size (fxtv-1.03.tgz) = 198669 bytes
 SHA1 (patch-aa) = 00463e17d9094d4d8fd7e67ced83d6429dc4a961
 SHA1 (patch-ab) = a62c497255063a88b7d240e902a45c85f59f84b0
 SHA1 (patch-ac) = dd02ab138e3009436c0144ca19d4ada20eeab022

@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:23 wiz Exp $
 
-MD5 (ploticus-1.39/plsrc13.tar.gz) = fccae99644eb6771dd778ae1776236b0
-MD5 (ploticus-1.39/plman13.tar.gz) = 92597a1bbaa1e468c9805c5997217076
+SHA1 (ploticus-1.39/plsrc13.tar.gz) = 9e6c55630a1ec125a92bd6a2c3b9d554ca39dd3a
+Size (ploticus-1.39/plsrc13.tar.gz) = 274912 bytes
+SHA1 (ploticus-1.39/plman13.tar.gz) = d0f93ee8deea2f15e33180541b6b2139c8c0b7a2
+Size (ploticus-1.39/plman13.tar.gz) = 98974 bytes
 SHA1 (patch-aa) = 4bb627cfedaf0d3692c9700533f7551ca0e133ea

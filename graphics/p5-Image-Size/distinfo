@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:22 wiz Exp $
 
-MD5 (Image-Size-2.91.tar.gz) = 27879c401ca934f02eda7b91b51ff7f8
+SHA1 (Image-Size-2.91.tar.gz) = b3967bedbed97339f33561a1ff30ff0d1ff011e7
+Size (Image-Size-2.91.tar.gz) = 65055 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:21 wiz Exp $
 
-MD5 (OpenPTC-x11-1.0.0-2.tar.gz) = 9d7a4dca14167994b4a744112ba07541
+SHA1 (OpenPTC-x11-1.0.0-2.tar.gz) = e28eaed3c7678f269c2a1ef5846dc607033b6489
+Size (OpenPTC-x11-1.0.0-2.tar.gz) = 562050 bytes
 SHA1 (patch-aa) = 6b7ad89297a9fcdce8d08b36859cf14ccc6144f2
 SHA1 (patch-ab) = 55422988cb03c6c83d394a3632b33116ec7ea511

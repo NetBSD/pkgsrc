@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:22:56 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:09 wiz Exp $
 
-MD5 (dia-0.86.tar.gz) = 66c32ceb8d034137be88d4b649e405a2
+SHA1 (dia-0.86.tar.gz) = 1f8e0046b3a8c102d3be4766fcecbdfc51c3f97c
+Size (dia-0.86.tar.gz) = 1385062 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:22:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:08 wiz Exp $
 
-MD5 (camediaplay-20010211.tar.gz) = 2736621e9f3f32e1efdaff04ba42d231
+SHA1 (camediaplay-20010211.tar.gz) = d6809c9d0e1be692a9a1e468ee759cc9ceb5b276
+Size (camediaplay-20010211.tar.gz) = 48193 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:36 wiz Exp $
 
-MD5 (sj3-2.0.1.20.tar.gz) = 36cc23702e2295e4552271b9d481c863
+SHA1 (sj3-2.0.1.20.tar.gz) = b1cae59065ebc9caf5e198143ceb9558c932f259
+Size (sj3-2.0.1.20.tar.gz) = 584065 bytes
 SHA1 (patch-aa) = e2c60ca8709f8b78833ebc4f506b4cc63812a5bd
 SHA1 (patch-ab) = a64f78ccb3db3f4349f191abe47c6daebb2bbadd
 SHA1 (patch-ac) = a2a9c21618e7de1e56d371cb05cf866d549d50a1

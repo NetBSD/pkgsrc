@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:22 wiz Exp $
 
-MD5 (GDGraph3d-0.55.tar.gz) = 209adb88cb6595834cffde6bf2ffb8c6
+SHA1 (GDGraph3d-0.55.tar.gz) = 625ef568e515ac3bc57655a652aecf623d56a63c
+Size (GDGraph3d-0.55.tar.gz) = 14469 bytes

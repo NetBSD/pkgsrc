@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:36 wiz Exp $
 
-MD5 (nkf-1.7.tar.gz) = 153c6917384a7cff635f5eed576dc563
+SHA1 (nkf-1.7.tar.gz) = 2116864c1acc8e6f80d4c59dc63c73eb37c9e80c
+Size (nkf-1.7.tar.gz) = 28222 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:22 wiz Exp $
 
-MD5 (GDTextUtil-0.80.tar.gz) = 3569b86f250ad28bdb771cbc6c83d0aa
+SHA1 (GDTextUtil-0.80.tar.gz) = 5e642eb0a83b1f3eeb858200daa3bc42ac622f43
+Size (GDTextUtil-0.80.tar.gz) = 36855 bytes

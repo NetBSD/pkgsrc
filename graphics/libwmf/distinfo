@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:19 wiz Exp $
 
-MD5 (libwmf-0.1.21.tar.gz) = d9db1ec2a1264245e7808d42bc686b97
+SHA1 (libwmf-0.1.21.tar.gz) = e6d6b3b4cbe3ff34027acd8862967aeced7379ba
+Size (libwmf-0.1.21.tar.gz) = 744895 bytes
 SHA1 (patch-ac) = b5c91f373521a64e09550d169152f025f0fcd3db
 SHA1 (patch-ad) = 156438ad8eac1710f574b49c46b07b6da4aecc4a

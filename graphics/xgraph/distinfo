@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:29 wiz Exp $
 
-MD5 (xgraph-11.3.2-hack.9.tar.gz) = 0198abe14902fa6b5dc3a2bc3105b3c2
+SHA1 (xgraph-11.3.2-hack.9.tar.gz) = 6e695d2008094e8aca54795c7c73ed239d0d5404
+Size (xgraph-11.3.2-hack.9.tar.gz) = 101979 bytes
