@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.15 2003/03/20 17:30:18 fredb Exp $
+
+--- Makedefs.in.orig	Tue Dec 17 12:56:25 2002
++++ Makedefs.in
+@@ -28,8 +28,8 @@
+ 
+ AR	=	@AR@
+ AWK	=	@AWK@
+-CC	=	@LIBTOOL@ @CC@
+-CXX	=	@LIBTOOL@ @CXX@
++CC	=	@LIBTOOL@ --preserve-dup-deps @CC@
++CXX	=	@LIBTOOL@ --preserve-dup-deps @CXX@
+ DSO	=	@DSO@
+ HTMLDOC	=	@HTMLDOC@
+ INSTALL	=	@INSTALL@
