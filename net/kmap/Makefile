@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/15 20:39:23 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/13 12:34:30 wiz Exp $
 #
 
 DISTNAME=	kmap-0.5.6
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.islc.net/~icszepp/kmap/
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
-DEPENDS+=	nmap-2.12:../../net/nmap
+DEPENDS+=	nmap>=2.12:../../net/nmap
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes
