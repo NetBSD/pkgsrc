@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1999/10/16 00:10:08 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/01 18:24:30 mjl Exp $
 #
 
-DISTNAME=		slrn-0.9.5.7
+DISTNAME=		slrn-0.9.6.2
 CATEGORIES=		news
 MASTER_SITES=		ftp://space.mit.edu/pub/davis/slrn/ \
 			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/slrn/
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://space.mit.edu/pub/davis/slrn/ \
 MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://space.mit.edu/%7Edavis/slrn.html
 
-DEPENDS+=		libslang-1.3.9:../../devel/libslang
+DEPENDS+=		libslang-*:../../devel/libslang
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-X

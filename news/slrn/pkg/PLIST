@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/05/18 22:01:36 mjl Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/01/01 18:24:33 mjl Exp $
 bin/slrn
 man/man1/slrn.1
 share/slrn/FAQ
@@ -9,13 +9,11 @@ share/slrn/README.os2
 share/slrn/README.vms
 share/slrn/README.w95
 share/slrn/SCORE_FAQ
-share/slrn/VMS-SLRN.HLP
 share/slrn/help.txt
 share/slrn/pc-keys.txt
 share/slrn/score.sl
 share/slrn/score.txt
 share/slrn/slrn-doc.html
-share/slrn/slrn.1
 share/slrn/slrn.rc
 share/slrn/slrnfuns.txt
 share/slrn/COPYRIGHT
@@ -32,4 +30,5 @@ share/slrn/tin-art.sl
 share/slrn/tin-group.sl
 share/slrn/ttyprint.sl
 share/slrn/xcomment.sl
+@dirrm share/slrn/slrnpull
 @dirrm share/slrn
