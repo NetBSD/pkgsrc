@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+
+SHA1 (FunTimeDancer-0.1.tar.gz) = 6cdd02209c647bfb6786f3ccff27de1194f54311
+Size (FunTimeDancer-0.1.tar.gz) = 26877 bytes
+SHA1 (FunTimeDancer-packs-1.0.tar.gz) = 7392144570646f86e9138f285deaea5b8a9280fa
+Size (FunTimeDancer-packs-1.0.tar.gz) = 462063 bytes
+SHA1 (patch-aa) = c93ebd9093d91e37866640c2851b19e95c218e8b
+SHA1 (patch-ab) = 503d9455434a3a411a873c9759978314c2e3312f
