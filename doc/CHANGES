@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3656 2003/10/06 07:23:59 jlam Exp $
+$NetBSD: CHANGES,v 1.3657 2003/10/06 08:51:50 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4116,3 +4116,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tads-3.0.5 [dillo 2003-10-05]
 	Updated bozohttpd to 20031005 [mrg 2003-10-05]
 	Updated freeze to 2.5nb1 [jlam 2003-10-06]
+	Updated pkglint to 3.64 [grant 2003-10-06]
