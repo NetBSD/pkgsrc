@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.33 1998/06/03 15:06:06 agc Exp $
+# $NetBSD: Packages.txt,v 1.34 1998/06/05 12:21:36 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -1023,6 +1023,28 @@ it runs, and that is specified:
 
 RUN_DEPENDS=    latex:../../print/teTeX \
                 ispell:../../textproc/ispell
+
+ 9.13 Conflicts with other packages
+ ==================================
+
+Your package may conflict with other packages a user might already have
+installed on his system, e.g. if your package installs the same set of
+files like another package in our pkgsrc tree.
+
+In this case you can set CONFLICTS to a space seperated list of packages
+(including version string) your package conflicts with.
+
+For example pkgsrc/devel/cvs and pkgsrc/devel/cvs-current install both
+the same files, thus you set in pkgsrc/devel/cvs/Makefile:
+
+CONFLICTS=      cvs-1.9.26 cvs-1.9.27 cvs-1.9.28
+
+and in pkgsrc/devel/cvs-current/Makefile:
+
+CONFLICTS=      cvs-1.9 cvs-1.9.26 cvs-1.9.27
+
+assuming that cvs is version 1.9 and cvs-current is cvs-1.9.28, and we had
+already cvs-1.9.26 and cvs-1.9.27 in our pkgsrc tree.
 
 
  10 Submitting
