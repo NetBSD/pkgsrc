@@ -1,10 +1,16 @@
 #!/bin/sh
+#
+# $NetBSD: lprng.sh,v 1.2 1999/09/13 18:40:52 jlam Exp $
 
-# Find out if lpd is already running. I guess you could also detect
-# the existence of /var/run/printer.
+# Stop BSD lpd if it is running.
+#
+if [ -f /var/run/lpd.pid ]; then
+	kill `@@CAT@@ /var/run/lpd.pid`
+fi
 
-killall -s lpd > /dev/null 2>&1
-
-if [ $? != 0 ]; then
-	echo -n ' printer';             @@PREFIX@@/sbin/lpd
+# Start LPRng lpd if it exists.
+#
+if [ -x @@PREFIX@@/sbin/lpd ]; then
+	@@ECHO@@ -n ' LPRng';
+	@@PREFIX@@/sbin/lpd
 fi
