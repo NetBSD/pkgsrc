@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/01 00:14:35 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/01/24 05:29:27 hubertf Exp $
 bin/fax2tiff
 bin/fax2ps
 bin/gif2tiff
@@ -18,8 +18,8 @@ bin/tiffmedian
 bin/tiffsplit
 lib/libtiff.a
 lib/libtiff.so.3.4
-@exec /sbin/ldconfig -m %B || true
-@unexec /sbin/ldconfig -m %B || true
+@exec /sbin/ldconfig -m %B || /usr/bin/true
+@unexec /sbin/ldconfig -m %B || /usr/bin/true
 include/tiff.h
 include/tiffio.h
 man/man1/fax2ps.1
