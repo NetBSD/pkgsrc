@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/28 04:13:56 taca Exp $
 # FreeBSD: ports/net/ruby-icmp/Makefile,v 1.2 2000/11/02 19:06:06 knu Exp
 
-DISTNAME=	icmp-0.2.1
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+DISTNAME=	icmp-0.2.2
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net ruby
 MASTER_SITES=	http://www.notwork.org/~gotoyuzo/ruby/src/
 
@@ -10,13 +10,10 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Ruby module for handling ICMP packets
 
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
-
-INSTALL_TARGET=	site-install
-
-REPLACE_RUBY=	sample/ping.rb sample/traceroute.rb
-EXAMPLES=	sample/ping.rb sample/traceroute.rb
+USE_RUBY_INSTALL=	yes
+NO_BUILD=		yes
+REPLACE_RUBY=		sample/ping.rb sample/traceroute.rb
+EXAMPLES=		sample/ping.rb sample/traceroute.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/icmp
@@ -24,5 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_EXAMPLESDIR}/icmp
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
