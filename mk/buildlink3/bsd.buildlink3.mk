@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.4 2003/08/16 11:01:39 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.5 2003/08/16 11:10:08 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -801,6 +801,8 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 		${_BLNK_UNTRANSFORM_SEDFILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
+		-e "s|@DEPOTBASE@|${DEPOTBASE}|g"			\
 		-e "s|@WRKSRC@|${WRKSRC}|g"				\
 		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
 		-e "s|@CP@|${CP:Q}|g"					\
