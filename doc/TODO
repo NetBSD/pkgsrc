@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.268 2003/02/15 11:09:14 wiz Exp $
+$NetBSD: TODO,v 1.269 2003/02/15 12:01:51 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -146,7 +146,6 @@ Suggested package updates
 	o horde-2.2
 	o icewm-1.2.5
 	o icu-2.4 [heinz]
-	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
