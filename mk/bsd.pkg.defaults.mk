@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.99 2002/10/20 19:52:29 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.100 2002/10/20 23:12:50 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1305,6 +1305,12 @@ RASMOL_DEPTH?= 8
 # for, since it only supports one at a time.
 # Possible: 8, 16, 32
 # Default: 8
+
+RPM_DB_PREFIX?=	/var/pkg
+# Used in the rpm package to note the prefix of the path to the RPM
+# databases.  The RPM databases are stored in ${RPM_DB_PREFIX}/lib/rpm.
+# Possible: any valid location, e.g. ${LOCALBASE}
+# Default: /var/pkg
 
 #SDL_USE_NAS=
 # Used in SDL package to enable use of the network audio system
