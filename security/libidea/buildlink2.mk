@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/08/05 17:18:20 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/08/23 21:34:21 wiz Exp $
 
 .if !defined(LIBIDEA_BUILDLINK2_MK)
 LIBIDEA_BUILDLINK2_MK=	# defined
@@ -6,6 +6,7 @@ LIBIDEA_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		libidea
 BUILDLINK_DEPENDS.libidea?=	libidea>=0.8.2
 BUILDLINK_PKGSRCDIR.libidea?=	../../security/libidea
+BUILDLINK_DEPMETHOD.libidea?=	build
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libidea=libidea
 BUILDLINK_PREFIX.libidea_DEFAULT=${LOCALBASE}
