@@ -1,0 +1,1246 @@
+<!-- $NetBSD: features.xml,v 1.1.1.1 2004/10/21 14:27:38 grant Exp $ -->
+
+<chapter id="features"> <?dbhtml filename="features.html"?>
+<title>FAQs &amp; features of the package system</title>
+
+<sect1>
+<title>Packages using GNU autoconf</title>
+
+<para>
+If your package uses GNU autoconf created configure scripts, add the following
+to your package's <filename>Makefile</filename>:
+</para>
+
+<programlisting>GNU_CONFIGURE= yes</programlisting>
+
+<para>
+Note that this appends <quote>--prefix=${PREFIX}</quote> to
+<varname>CONFIGURE_ARGS</varname>, so you don't
+have to do that yourself, but may not be desired.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Other distrib methods than .tar.gz</title>
+
+<para>
+If your package uses a different distribution method from
+<filename>.tar.gz</filename>, take a
+look at the package for <pkg>editors/sam</pkg>, which uses a gzipped shell archive
+(shar), but the quick solution is to set
+<varname>EXTRACT_SUFX</varname> to the name after the
+<varname>DISTNAME</varname> field, and add the following to your
+package's <filename>Makefile</filename>:
+</para>
+
+<programlisting>EXTRACT_SUFX=   .msg.gz
+EXTRACT_CMD=            zcat
+EXTRACT_BEFORE_ARGS=
+EXTRACT_AFTER_ARGS=     |sh</programlisting>
+</sect1>
+
+
+<sect1>
+<title>Packages not creating their own subdirectory</title>
+
+<para>
+Your package doesn't create a subdirectory for itself (like GNU software
+does, for instance), but extracts itself in the current directory: see
+<pkg>editors/sam</pkg> again, but the quick answer is:
+</para>
+
+<programlisting>WRKSRC=		${WRKDIR}</programlisting>
+
+<para>
+Please note that the old:
+</para>
+
+<programlisting>NO_WRKSUBDIR=   yes</programlisting>
+
+<para>
+has been deprecated and should not be used.
+</para>
+</sect1>
+
+<sect1>
+<title>Custom configuration process</title>
+
+<para>
+Your package uses a weird Configure script, eg.
+<pkg>sysutils/top</pkg>. The quick answer is:
+</para>
+
+<programlisting>HAS_CONFIGURE=          yes
+CONFIGURE_SCRIPT=       Configure
+CONFIGURE_ARGS+=        netbsd13</programlisting>
+</sect1>
+
+
+<sect1>
+<title>Packages not building in their DISTNAME directory</title>
+
+<para>
+Your package builds in a different directory from its base
+<varname>DISTNAME</varname> (see <pkg>lang/tcl</pkg> and
+<pkg>x11/tk</pkg>).
+</para>
+
+<programlisting>WRKSRC=         ${WRKDIR}/${DISTNAME}/unix</programlisting>
+</sect1>
+
+
+<sect1>
+<title>How to fetch all distfiles at once</title>
+
+<para>
+You would like to download all the distfiles in a single batch from work or
+university, where you can't run a <command>make fetch</command>. There
+is an archive of distfiles on <ulink
+url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/">ftp.NetBSD.org</ulink>,
+but downloading the entire directory may not be appropriate.
+</para>
+
+<para>
+The answer here is to do a <command>make fetch-list</command> in
+<filename>/usr/pkgsrc</filename>, carry the 
+resulting list to your machine at work/school and use it there If you don't
+have a NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget to
+set <varname>FETCH_CMD</varname> to something that fetches a URL:
+</para>
+
+<para>
+At home:
+</para>
+
+<screen><prompt>%</prompt> <userinput>cd /usr/pkgsrc</userinput>
+<prompt>%</prompt> <userinput>make fetch-list FETCH_CMD=wget DISTDIR=/tmp/distfiles >/tmp/fetch.sh</userinput>
+<prompt>%</prompt> <userinput>scp /tmp/fetch.sh work:/tmp</userinput></screen>
+
+<para>
+At work:
+</para>
+
+<screen><prompt>%</prompt> <userinput>sh /tmp/fetch.sh</userinput></screen>
+
+<para>
+then tar up <filename>/tmp/distfiles</filename> and take it home.
+</para>
+
+<para>
+If you have a machine running NetBSD, and you want to get
+<emphasis>all</emphasis> distfiles
+(even ones that aren't for your machine architecture), you can do so by
+using the above-mentioned <command>make fetch-list</command> approach, or
+fetch the distfiles directly by running:
+</para>
+
+<screen><prompt>%</prompt> <userinput>make mirror-distfiles</userinput></screen>
+
+<para>
+If you even decide to ignore <varname>NO_{SRC,BIN}_ON_{FTP,CDROM}</varname>,
+then you can get everything by running:
+</para>
+
+<screen><prompt>%</prompt> <userinput>make fetch NO_SKIP=yes</userinput></screen>
+</sect1>
+
+
+<sect1>
+<title>How to fetch files from behind a firewall</title>
+
+<para>
+If you are sitting behind a firewall which does not allow direct connections
+to Internet hosts (i.e. non-NAT), you may specify the relevant proxy hosts.
+This is done using an environment variable in the form of a URL
+e.g. in Amdahl, the machine <quote>orpheus.amdahl.com</quote> is one of
+the firewalls, and it uses port 80 as the proxy port number. So the proxy
+environment variables are:
+</para>
+
+<programlisting>ftp_proxy=ftp://orpheus.amdahl.com:80/
+http_proxy=http://orpheus.amdahl.com:80/</programlisting>
+</sect1>
+
+
+<sect1>
+<title>If your patch contains an RCS ID</title>
+
+<para>
+See <xref linkend="components.patches"/> for information on how to
+remove RCS IDs from patch files.
+</para>
+</sect1>
+
+
+<sect1>
+<title>How to pull in variables from /etc/mk.conf</title>
+
+<para>
+The problem with package-defined variables that can be overridden via
+<varname>MAKECONF</varname> or <filename>/etc/mk.conf</filename> is that make(1) expands a variable as it is
+used, but evaluates preprocessor like statements (.if, .ifdef and
+.ifndef) as they are read.  So, to use any variable (which may be set
+in <filename>/etc/mk.conf</filename>) in one of the .if* statements, the file
+<filename>/etc/mk.conf</filename>
+must be included before that .if* statement.
+</para>
+
+<para>
+Rather than have a number of ad-hoc ways of including
+<filename>/etc/mk.conf</filename>,
+should it exist, or <varname>MAKECONF</varname>, should it exist, include the
+<filename>pkgsrc/mk/bsd.prefs.mk</filename> file in the package Makefile before any
+preprocessor-like .if, .ifdef, or .ifndef statements:
+</para>
+
+<programlisting>.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_MENUS)
+  ...
+.endif</programlisting>
+
+<para>
+If you wish to set the CFLAGS variable in /etc/mk.conf please make sure
+to use:
+
+<screen>CFLAGS+=	-your -flags</screen>
+
+Using <varname>CFLAGS=</varname> (ie without the <quote>+</quote>) may
+lead to problems with packages that need to add their own flags.  Also,
+you may want to take a look at the <pkg>devel/cpuflags</pkg> package if
+you're interested in optimization for the current CPU.
+</para>
+</sect1>
+
+<sect1>
+<title>Is there a mailing list for pkg-related discussion?</title>
+
+<para>
+Yes, <email>tech-pkg@NetBSD.org</email> is the list for discussing package
+related issues. To subscribe do:
+</para>
+
+<programlisting>% echo subscribe tech-pkg | mail majordomo@NetBSD.org</programlisting>
+</sect1>
+
+
+<sect1>
+<title>How do I tell <command>make fetch</command> to do passive FTP?</title>
+
+<para>
+This depends on which utility is used to retrieve distfiles. From
+<filename>bsd.pkg.mk</filename>, <varname>FETCH_CMD</varname> is assigned
+the first available command from the following list:
+</para>
+
+<programlisting>/usr/bin/fetch
+${LOCALBASE}/bsd/bin/ftp
+/usr/bin/ftp</programlisting>
+
+<para>
+On a default NetBSD install, this will be
+<filename>/usr/bin/ftp</filename>, which automatically
+tries passive connections first, and falls back to active connections if the
+server refuses to do passive. For the other tools, add the following to your
+<filename>/etc/mk.conf</filename> file:
+<varname>PASSIVE_FETCH=1</varname>.
+</para>
+
+<para>
+Having that option present will prevent
+<filename>/usr/bin/ftp</filename> from falling back to
+active transfers.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Dependencies on other packages</title>
+
+<para>
+Your package may depend on some other package being present - and there are
+various ways of expressing this dependency. NetBSD supports the
+<varname>BUILD_DEPENDS</varname> and <varname>DEPENDS</varname> definitions,
+as well as dependencies via
+<filename>buildlink3.mk</filename> (see <!-- <xref
+linkend="buildlink3"/> -->).
+</para>
+
+<para>
+The basic difference between the two definitions is as follows: The
+<varname>DEPENDS</varname> definition registers that pre-requisite in the binary package,
+whilst the <varname>BUILD_DEPENDS</varname> definition does not.
+</para>
+
+<para>
+This means that if you only need a package present whilst you are building,
+it should be noted as a <varname>BUILD_DEPENDS</varname>.
+</para>
+
+<para>
+The format for a <varname>BUILD_DEPENDS</varname> and a
+<varname>DEPENDS</varname> definition is:
+</para>
+
+<programlisting>&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;</programlisting>
+
+<para>
+Please note that the <quote>pre-req-package-name</quote> may include any of the wildcard
+version numbers recognised by pkg_info(1).
+</para>
+
+<orderedlist>
+
+<listitem>
+<para>
+If your package needs to use another package to build itself, this
+is specified using the <varname>BUILD_DEPENDS</varname> definition.
+</para>
+
+<programlisting>BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf</programlisting>
+</listitem>
+
+<listitem>
+<para>
+If your package needs a library with which to link, this is specified
+using the <varname>DEPENDS</varname> definition.  An example of this is
+the <pkg>print/lyx</pkg>
+package, which uses the xpm library, version 3.4j to build.
+</para>
+
+<programlisting>DEPENDS+=       xpm-3.4j:../../graphics/xpm</programlisting>
+
+<para>
+You can also use wildcards in package dependences:
+</para>
+
+<programlisting>DEPENDS+=	xpm-[0-9]*:../../graphics/xpm</programlisting>
+
+<para>
+Note that such wildcard dependencies are retained when creating binary
+packages.  The dependency is checked when installing the binary
+package and any package which matches the pattern will be used. 
+Wildcard dependencies should be used with care.
+</para>
+
+<para>
+The -[0-9]* should be used instead of -* to avoid potentially
+ambiguous matches such as tk-postgresql matching a tk-*
+<varname>DEPENDS</varname>.
+</para>
+</listitem>
+
+<listitem>
+<para>
+If your package needs some executable to be able to run correctly, this
+is specified using the <varname>DEPENDS</varname> definition. The
+<pkg>print/lyx</pkg> package needs
+to be able to execute the latex binary from the teTeX package when it runs,
+and that is specified:
+</para>
+
+<programlisting>DEPENDS+=        teTeX-[0-9]*:../../print/teTeX</programlisting>
+
+<para>
+The comment about wildcard dependencies from previous paragraph
+applies here, too.
+</para>
+</listitem>
+
+</orderedlist>
+
+<para>
+If your package needs files from another package to build, see the
+first part of the <quote>do-configure</quote> target
+<pkg>print/ghostscript5</pkg> package
+(it relies on the jpeg sources being present in source form during the
+build):
+</para>
+
+<programlisting>if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
+	cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
+fi</programlisting>
+
+<para>
+If you build any other packages that way, please make sure the working
+files are deleted too when this package's working files are cleaned up.
+The easiest way to do so is by adding a pre-clean target:
+</para>
+
+<programlisting>pre-clean:
+	cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean</programlisting>
+
+<para>
+Please also note the <varname>BUILD_USES_MSGFMT</varname> and
+<varname>BUILD_USES_GETTEXT_M4</varname> definitions,
+which are provided as convenience definitions.  The former works out whether
+msgfmt(1) is part of the base system, and, if it isn't, installs the
+<pkg>devel/gettext</pkg> package.  The latter adds a build dependency on either an
+installed version of an older gettext package, or if it isn't, installs the
+<pkg>devel/gettext-m4</pkg> package.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Conflicts with other packages</title>
+
+<para>
+Your package may conflict with other packages a user might already have
+installed on his system, e.g. if your package installs the same set of
+files like another package in our pkgsrc tree.
+</para>
+
+<para>
+In this case you can set <varname>CONFLICTS</varname> to a space separated
+list of packages (including version string) your package conflicts with.
+</para>
+
+<para>
+For example <pkg>x11/Xaw3d</pkg> and
+<pkg>x11/Xaw-Xpm</pkg> install provide the
+same shared library, thus you set in
+<filename>pkgsrc/x11/Xaw3d/Makefile</filename>:
+</para>
+
+<programlisting>CONFLICTS=      Xaw-Xpm-[0-9]*</programlisting>
+
+<para>
+and in <filename>pkgsrc/x11/Xaw-Xpm/Makefile</filename>:
+</para>
+
+<programlisting>CONFLICTS=      Xaw3d-[0-9]*</programlisting>
+
+<para>
+Packages will automatically conflict with other packages with the name prefix
+and a different version string. <quote>Xaw3d-1.5</quote> e.g. will automatically conflict
+with the older version <quote>Xaw3d-1.3</quote>.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Software which has a WWW Home Page</title>
+
+<para>
+The NetBSD packages system now supports a variable called
+<varname>HOMEPAGE</varname>.
+If the software being packaged has a home page, the Makefile should
+include the URL for that page in the <varname>HOMEPAGE</varname> variable.
+The definition of the variable should be placed immediately after the
+<varname>MAINTAINER</varname> variable.
+</para>
+</sect1>
+
+
+<sect1>
+<title>How to handle modified distfiles with the 'old' name</title>
+
+<para>
+Sometimes authors of a software package make some modifications after the
+software was released, and they put up a new distfile without changing the
+package's version number. If a package is already in pkgsrc at that time, 
+the md5 checksum will no longer match. The correct way to work around this
+is to update the package's md5 checksum to match the package on the master
+site (beware, any mirrors may not be up to date yet!), and to remove the 
+old distfile from ftp.NetBSD.org's
+<filename>/pub/NetBSD/packages/distfiles</filename> directory.
+Furthermore, a mail to the package's author seems appropriate making sure
+the distfile was really updated on purpose, and that no trojan horse or so
+crept in.
+</para>
+</sect1>
+
+<sect1>
+<title>What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?</title>
+<para>
+When compiling the <pkg>pkgtools/pkg_install</pkg> package, you get the error
+from make that it doesn't know how to make
+<filename>/usr/share/tmac/tmac.andoc</filename>? This
+indicates that you don't have installed the <quote>text</quote> set on your machine
+(nroff, ...). It is recommended to do that.
+</para>
+
+<para>
+In the case of the <pkg>pkgtools/pkg_install</pkg> package, you can get
+away with setting <varname>NOMAN=YES</varname> either in the environment
+or in <filename>/etc/mk.conf</filename>.
+</para>
+</sect1>
+
+
+<sect1>
+<title>How to handle incrementing versions when fixing an existing
+package</title>
+
+<para>
+When making fixes to an existing package it can be useful to change
+the version number in <varname>PKGNAME</varname>. To avoid conflicting with
+future versions
+by the original author, a <quote>nb1</quote>, <quote>nb2</quote>, ... suffix
+can be used on package
+versions by setting <varname>PKGREVISION=1</varname> (2,. ..). The
+<quote>nb</quote> is treated like a <quote>.</quote> by the pkg tools. e.g.
+</para>
+
+<programlisting>DISTNAME=	foo-17.42
+PKGREVISION=	9</programlisting>
+
+<para>
+will result in a <varname>PKGNAME</varname> of <quote>foo-17.42nb9</quote>.
+</para>
+
+<para>
+When a new release of the package is released, the
+<varname>PKGREVISION</varname> should be
+removed. e.g. on a new minor release of the above package, things should
+be like:
+</para>
+
+<programlisting>DISTNAME=	foo-17.43</programlisting>
+</sect1>
+
+
+<sect1>
+<title>Could not find bsd.own.mk - what's wrong?</title>
+
+<para>
+You didn't install the compiler set, <filename>comp.tgz</filename>, when
+you installed your NetBSD machine. Please get it and install it, by
+extracting it in <filename>/</filename>:
+</para>
+
+<screen><prompt>#</prompt> <userinput>cd /</userinput>
+<prompt>#</prompt> <userinput>tar --unlink -zxvpf .../comp.tgz</userinput></screen>
+
+<para>
+<filename>comp.tgz</filename> is part of every NetBSD release. Get
+the one that corresponds to your release (determine via
+<command>uname -r</command>).
+</para>
+</sect1>
+
+
+<sect1>
+<title>Restricted packages</title>
+
+<para>
+Some licenses restrict how software may be re-distributed.  In order to
+satisfy these restrictions, the package system defines five make variables
+that can be set to note these restrictions:
+</para>
+
+<itemizedlist>
+
+<listitem>
+<para><varname>RESTRICTED</varname></para>
+<para>
+   This variable should be set whenever a restriction exists
+   (regardless of its kind).  Set this variable to a string
+   containing the reason for the restriction.
+</para>
+</listitem>
+
+<listitem> 
+<para><varname>NO_BIN_ON_CDROM</varname></para>
+<para>
+   Binaries may not be placed on CD-ROM.  Set this variable to
+   <varname>${RESTRICTED}</varname> whenever a binary package may not
+   be included on a CD-ROM.
+</para>
+</listitem>
+
+<listitem> 
+<para><varname>NO_BIN_ON_FTP</varname></para>
+<para>
+   Binaries may not be placed on an FTP server.  Set this
+   variable to <varname>${RESTRICTED}</varname> whenever a binary package
+   may not not be made available on the Internet.
+</para>
+</listitem>
+
+<listitem>
+<para><varname>NO_SRC_ON_CDROM</varname></para>
+<para>
+   Distfiles may not be placed on CD-ROM.  Set this variable to
+   <varname>${RESTRICTED}</varname> if re-distribution of the source code
+   or other distfile(s) is not allowed on CD-ROMs.
+</para>
+</listitem>
+
+<listitem> 
+<para><varname>NO_SRC_ON_FTP</varname></para>
+<para>
+   Distfiles may not be placed on FTP.  Set this variable to
+   <varname>${RESTRICTED}</varname> if re-distribution of the source
+   code or other distfile(s) via the Internet is not allowed.
+</para>
+</listitem>
+
+</itemizedlist>
+
+<para>
+Please note that the use of <varname>NO_PACKAGE</varname>,
+<varname>IGNORE</varname>, <varname>NO_CDROM</varname>, or other generic
+make variables to denote restrictions is deprecated, because they
+unconditionally prevent users from generating binary packages!
+</para>
+</sect1>
+
+
+<sect1>
+<title>Packages using (n)curses</title>
+
+<para>
+Some packages need curses functionality that wasn't present in NetBSD's own
+curses prior to 1.4Y.
+</para>
+
+<para>
+If <filename>../../devel/ncurses/buildlink3.mk</filename> is included in
+a package's <filename>Makefile</filename>,
+then a curses library and headers with ncurses functionality are linked
+into <varname>${BUILDLINK_DIR}</varname> at pre-configure time.  If
+ncurses is actually required, then define <varname>USE_NCURSES</varname>
+in the package's <filename>Makefile</filename>:
+<screen>USE_NCURSES=	# redrawwin</screen>
+The comment should indicate which functions are missing.
+
+</para>
+</sect1>
+
+
+<sect1>
+<title>Automated security check</title>
+
+<para>
+Please be aware that there can often be bugs in third-party software,
+and some of these bugs can leave a machine vulnerable to exploitation
+by attackers.  In an effort to lessen the exposure, the NetBSD
+packages team maintains a database of known-exploits to packages which
+have at one time been included in pkgsrc.  The database can be
+downloaded automatically, and a security audit of all packages
+installed on a system can take place.  To do this, install the
+<pkg>security/audit-packages</pkg> package.  It has two components:
+</para>
+
+<orderedlist>
+
+<listitem>
+<para>
+     <quote>download-vulnerability-list</quote>, an easy way to download a list of the
+     security vulnerabilities information. This list is kept up to date by
+     the NetBSD security officer and the NetBSD packages team, and is
+     distributed from the NetBSD ftp server:
+</para>
+<para>
+<ulink
+url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities"/>
+</para>
+</listitem>
+
+<listitem>
+<para>
+     <quote>audit-packages</quote>, an easy way to audit the current machine, checking
+     each vulnerability which is known. If a vulnerable package is
+     installed, it will be shown by output to stdout, including a
+     description of the type of vulnerability, and a URL containing more
+     information.
+</para>
+</listitem>
+
+</orderedlist>
+
+<para>
+Use of the audit-packages package is strongly recommended.
+</para>
+
+<para>
+The following message is displayed as part of the audit-packages
+installation procedure:
+</para>
+
+<screen>
+======================================================================
+You may wish to have the vulnerabilities file downloaded daily so that
+it remains current.  This may be done by adding an appropriate entry
+to the root users crontab(5) entry.  For example the entry
+	
+# download vulnerabilities file
+0 3 * * * ${PREFIX}/sbin/download-vulnerability-list &gt;/dev/null 2&gt;&amp;1
+	
+will update the vulnerability list every day at 3AM.
+	
+In addition, you may wish to run the package audit from the daily
+security script.  This may be accomplished by adding the following
+lines to /etc/security.local
+	
+if [ -x ${PREFIX}/sbin/audit-packages ]; then
+	${PREFIX}/sbin/audit-packages
+fi
+======================================================================
+</screen>
+
+<para>
+Note to package developers: When a vulnerability is found, this should be
+noted in
+<filename>localsrc/security/advisories/pkg-vulnerabilities</filename>, and after the
+commit of that file, it should be copied to both
+<filename>/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</filename>
+and
+<filename>/pub/NetBSD/packages/distfiles/vulnerabilities</filename> on
+ftp.NetBSD.org by
+<filename>localsrc/security/advisories/Makefile</filename>.
+</para>
+</sect1>
+
+
+<sect1>
+<title>What's the proper way to create an account from a package?</title>
+
+<para>
+There are two make variables used to control the creation of package-specific
+groups and users at pre-install time.  The first is
+<varname>PKG_GROUPS</varname>, which is a
+list of group[:groupid] elements, where the groupid is optional.  The second
+is <varname>PKG_USERS</varname>, which is a list of elements of the form:
+</para>
+
+<programlisting>user:group[:[userid][:[description][:[home][:shell]]]]</programlisting>
+
+<para>
+where only the user and group are required, the rest being optional.  A
+simple example is:
+</para>
+
+<programlisting>PKG_GROUPS=	foogroup
+PKG_USERS=	foouser:foogroup</programlisting>
+
+<para>
+A more complex example is that creates two groups and two users is:
+</para>
+
+<programlisting>PKG_GROUPS=	group1 group2:1005
+PKG_USERS=	first:group1::First\\ User			\
+		second:group2::Second\\ User:/home/second:${SH}</programlisting>
+
+<para>
+By default, a new user will have home directory
+<filename>/nonexistent</filename>, and login shell
+<filename>/sbin/nologin</filename> unless they are specified as part of
+the user element.
+</para>
+
+<para>
+The package Makefile must also set
+<varname>USE_PKGINSTALL=YES</varname>. This will cause the users and groups
+to be created at pre-install time, and the admin will be prompted to remove
+them at post-deinstall time.  Automatic creation of the users and groups
+can be toggled on and off by setting the environment variable
+<varname>PKG_CREATE_USERGROUP</varname> prior to package installation.
+</para>
+</sect1>
+
+
+<sect1>
+<title>How to handle compiler bugs</title>
+
+<para>
+Some source files trigger bugs in the compiler, based on combinations
+of compiler version and architecture and almost always relation to
+optimisation being enabled.  Common symptoms are gcc internal errors
+or never finishing compiling a file.
+</para>
+
+<para>
+Typically a workaround involves testing the <varname>MACHINE_ARCH</varname>
+and compiler version, disabling optimisation for that
+file/<varname>MACHINE_ARCH</varname>/compiler
+combination, and documenting it in <filename>doc/HACKS</filename>. See
+<filename>doc/HACKS</filename> for examples.
+</para>
+</sect1>
+
+
+<sect1 id="features.info-files">
+<title>Packages providing info files</title>
+
+<para>
+Some packages install info files or use the <quote>makeinfo</quote>
+or <quote>install-info</quote> commands. Each of the info files:
+<itemizedlist>
+<listitem>is considered to be installed in the directory
+          <filename>${PREFIX}/${INFO_DIR}</filename>,</listitem>
+<listitem>is registered in the Info directory file
+          <filename>${PREFIX}/${INFO_DIR}/dir</filename>,</listitem>
+<listitem>and must be listed as a filename in the
+          <varname>INFO_FILES</varname> variable in the package
+          Makefile.</listitem>
+</itemizedlist>
+</para>
+
+<para>
+<varname>INFO_DIR</varname> defaults to <quote>info</quote> and can be
+overridden in the package Makefile. <filename>INSTALL</filename> and
+<filename>DEINSTALL</filename> scripts will be generated to handle
+registration of the info files in the Info directory file. The
+<quote>install-info</quote> command used for the info files registration is
+either provided by the system, or by a special purpose package
+automatically added as dependency if needed.
+</para>
+
+<para>
+A package which needs the <quote>makeinfo</quote> command at build
+time must define the variable <varname>USE_MAKEINFO</varname> in its
+Makefile. If a minimum version of the <quote>makeinfo</quote> command
+is needed it should be noted with the <varname>TEXINFO_REQD</varname>
+variable in the package <filename>Makefile</filename>. By default, a
+minimum version of 3.12 is required. If the system does not provide a
+<command>makeinfo</command> command or if it does not match the required
+minimum, a build dependency on the <pkg>devel/gtexinfo</pkg> package
+will be added automatically.
+</para>
+
+<para>
+The build and installation process of the software provided by the package
+should not use the <command>install-info</command> command as the
+registration of info files is the task of the package
+<filename>INSTALL</filename> script, and it must use the appropriate
+<command>makeinfo</command> command.
+</para>
+
+<para>
+To achieve this goal the pkgsrc infrastructure creates overriding scripts
+for the <command>install-info</command> and <command>makeinfo</command>
+commands in a directory listed early in <varname>PATH</varname>.
+</para>
+
+<para>
+The script overriding <command>install-info</command> has no effect except
+the logging of a message. The script overriding <command>makeinfo</command>
+logs a message and according to the value of <varname>USE_MAKEINFO</varname>
+and <varname>TEXINFO_REQD</varname> either run the appropriate
+<command>makeinfo</command> command or exit on error.
+</para>
+</sect1>
+
+<sect1>
+<title>Packages whose distfiles aren't available for plain downloading</title>
+
+<para>
+If you need to download from a dynamic URL you can set
+<varname>DYNAMIC_MASTER_SITES</varname>
+and a <command>make fetch</command> will call
+<filename>files/getsite.sh</filename> with the name of each file
+to download as an argument, expecting it to output the URL of the directory
+from which to download it. <pkg>graphics/ns-cult3d</pkg> is an example of this usage.
+</para>
+
+<para>
+If the download can't be automated, because the user must submit personal
+information to apply for a password, or must pay for the source, or whatever,
+you can set <varname>_FETCH_MESSAGE</varname> to a macro which displays
+a message explaining the situation. <varname>_FETCH_MESSAGE</varname> must
+be executable shell commands, not just a message. (Generally, it executes
+<varname>${ECHO}</varname>). As of this writing, the following
+packages use this: <pkg>audio/realplayer</pkg>,
+<pkg>cad/simian</pkg>, <pkg>devel/ipv6socket</pkg>,
+<pkg>emulators/vmware-module</pkg>,
+<pkg>fonts/acroread-jpnfont</pkg>,
+<pkg>sysutils/storage-manager</pkg>,
+<pkg>www/ap-aolserver</pkg>, <pkg>www/openacs</pkg>. Try to be consistent
+with them.
+</para>
+</sect1>
+
+<sect1>
+<title>Configuration files handling and placement</title>
+
+<para>
+The global variable <varname>PKG_SYSCONFBASE</varname> (and some others)
+can be set by the system administrator in <filename>/etc/mk.conf</filename>
+to define the place where
+configuration files get installed. Therefore, packages must be adapted to
+support this feature. Keep in mind that you should only install files that
+are strictly necessary in the configuration directory, files that can
+go to <filename>$PREFIX/share</filename> should go there.
+</para>
+
+<para>
+We will take a look at available variables first
+(<filename>bsd.pkg.mk</filename> contains more
+information). <varname>PKG_SYSCONFDIR</varname> is where the
+configuration files for a package
+may be found (that is, the full path, e.g. <filename>/etc</filename>
+or <filename>/usr/pkg/etc</filename>). This
+value may be customized in various ways:
+</para>
+
+<orderedlist>
+
+<listitem>
+<para>
+    <varname>PKG_SYSCONFBASE</varname> is the main config directory under
+    which all package configuration files are to be found. Users will
+    typically want to set it to <filename>/etc</filename>, or accept the
+    default location of <filename>$PREFIX/etc</filename>.
+</para>
+</listitem>
+
+<listitem>
+<para>
+    <varname>PKG_SYSCONFSUBDIR</varname> is the subdirectory of
+    <varname>PKG_SYSCONFBASE</varname> under which
+    the configuration files for a particular package may be found. Defaults
+    to <varname>${SYSCONFBASE}</varname>.
+</para>
+</listitem>
+
+<listitem>
+<para>
+    <varname>PKG_SYSCONFVAR</varname> is the special suffix used to
+    distinguish any overriding values for a particular package
+    (see next item). It defaults to <varname>${PKGBASE}</varname>, but
+    for a collection of related packages that should all have the same
+    <varname>PKG_SYSCONFDIR</varname> value, it can be set in each of
+    the package Makefiles to a common value.
+</para>
+</listitem>
+
+<listitem>
+<para>
+    <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname> overrides the value of
+    <varname>${PKG_SYSCONFDIR}</varname> for packages with the same value
+    for <varname>PKG_SYSCONFVAR</varname>.
+</para>
+
+<para>
+    As an example, all the various KDE packages may want to set
+    <varname>PKG_SYSCONFVAR</varname> to <quote>kde</quote> so admins can
+    set <varname>PKG_SYSCONFDIR.kde</varname> in
+    <filename>/etc/mk.conf</filename> to define where to install KDE
+    config files.
+</para>
+</listitem>
+
+</orderedlist>
+
+<para>
+Programs' configuration directory should be defined during the configure
+stage. Packages that use GNU autoconf can usually do this by using the
+<quote>--sysconfdir</quote> parameter, but this brings some problems as
+we will see now.
+When you change this pathname in packages, you should not allow them to
+install files in that directory directly. Instead they need to install
+those files under <filename>share/examples/${PKGNAME}</filename> so
+<filename>PLIST</filename> can register them.
+</para>
+
+<para>
+Once you have the required configuration files in place (under the
+<filename>share/examples</filename> directory) the variable
+<varname>CONF_FILES</varname> should be set to copy
+them into <varname>PKG_SYSCONFDIR</varname>. The contents of this variable
+is formed by pairs
+of filenames; the first element of the pair specifies the file inside the
+examples directory (registered by <filename>PLIST</filename>) and the
+second element specifies
+the target file. This is done this way to allow binary packages to place
+files in the right directory using
+<filename>INSTALL</filename>/<filename>DEINSTALL</filename> scripts which are
+created automatically.  The package <filename>Makefile</filename> must also
+set <varname>USE_PKGINSTALL=YES</varname> to use
+these automatically generated scripts.  The automatic copying of config
+files can be toggled by setting the environment variable
+<varname>PKG_CONFIG</varname> prior to package installation.
+</para>
+
+<para>
+Here is an example, taken from mail/mutt/Makefile:
+</para>
+
+<programlisting>EGDIR=		${PREFIX}/share/doc/mutt/samples
+CONF_FILES=	${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
+
+<para>
+As you can see, this package installs configuration files inside
+<varname>EGDIR</varname>, which are registered by
+<filename>PLIST</filename>. After that, the variable
+<varname>CONF_FILES</varname> lists
+the installed file first and then the target file. Users will also get an
+automatic message when files are installed using this method.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Packages providing login shells</title>
+
+<para>
+If the purpose of the package is to provide a login shell, the variable
+<varname>PKG_SHELL</varname> should contain the full pathname of the
+shell executable installed by this package. The package
+<filename>Makefile</filename> must also set
+<varname>USE_PKGINSTALL=YES</varname> to use the automatically generated
+<filename>INSTALL</filename>/<filename>DEINSTALL</filename> scripts.
+</para>
+
+<para>
+An example taken from shells/zsh:
+</para>
+
+<programlisting>USE_PKGINSTALL=	YES
+...
+PKG_SHELL=	${PREFIX}/bin/zsh</programlisting>
+
+<para>
+The shell is registered into <filename>/etc/shells</filename> file automatically in the
+post-install target by the generated <filename>INSTALL</filename> script
+and removed in the deinstall
+target by the <filename>DEINSTALL</filename> script.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Packages providing locale catalogues</title>
+
+<para>
+If the package provides its own locale catalogues, the variable
+<varname>USE_PKGLOCALEDIR</varname> should be defined.  It will ensure
+that the package's <filename>Makefile</filename> template files are fixed
+and point to the correct locale directories
+(which may vary, depending on OS), if necessary.  See <xref
+linkend="plist.misc"/> for details about <varname>PKGLOCALEDIR</varname>.
+This functionality is buildlink3-only.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Using 'sudo' with pkgsrc</title>
+
+<para>
+When installing packages as non-root user and using the just-in-time
+su(1) feature of pkgsrc, it can become annoying to type in the root
+password for each required package installed. To avoid this, the sudo
+package can be used, which does password caching over a limited time.
+To use it, install sudo (either as binary package or from
+<pkg>security/sudo</pkg>) and then put the following
+into your <filename>/etc/mk.conf</filename>:
+</para>
+
+<programlisting>SU_CMD=/usr/pkg/bin/sudo /bin/sh -c</programlisting>
+</sect1>
+
+
+<sect1>
+<title>Packages containing perl scripts</title>
+
+<para>
+If your package contains interpreted perl scripts, set
+<varname>REPLACE_PERL</varname> to ensure that the proper interpreter
+path is set. <varname>REPLACE_PERL</varname> should contain a list of
+scripts, relative to <varname>WRKSRC</varname>, that you want adjusted.
+</para>
+</sect1>
+
+<sect1>
+<title>Packages with hardcoded paths to other interpreters</title>
+
+<para>
+Your package may also contain scripts with hardcoded paths to other
+interpreters besides (or as well as) perl.  To correct the full
+pathname to the script interpreter, you need to set the following
+definitions in your <filename>Makefile</filename> (we shall use
+<command>tclsh</command> in this example):
+
+<programlisting>REPLACE_INTERPRETER+=	tcl
+_REPLACE.tcl.old=	.*/bin/tclsh
+_REPLACE.tcl.new=	${PREFIX}/bin/tclsh
+_REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed,
+			relative to ${WRKSRC}, just as in REPLACE_PERL</programlisting>
+</para>
+</sect1>
+
+<sect1>
+<title>Utilities for package management (pkgtools)</title>
+
+<para>
+The directory pkgtools contains a number of useful utilities.  This section
+attempts only to make the reader aware of the utilities and when they might
+be useful, and not to duplicate the documentation that comes with each
+package.
+</para>
+
+<para>
+Utilities used by pkgsrc (automatically installed when needed):
+<itemizedlist>
+<listitem>x11-links
+  <para>
+    symlinks for use by buildlink
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>
+OS tool augmentation (automatically installed when needed):
+<itemizedlist>
+<listitem>digest
+  <para>
+    calculates SHA1 checksums (and other kinds)
+  </para>
+</listitem>
+<listitem>libnbcompat
+  <para>
+    compat library for pkg tools
+  </para>
+</listitem>
+<listitem>mtree
+  <para>
+    installed on non-BSD systems due to lack of native mtree
+  </para>
+</listitem>
+<listitem>pkg_install
+  <para>
+    up-to-date replacement for /usr/sbin/pkg_install, or for
+    use on operating systems where pkg_install is not present
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>
+Utilities used by pkgsrc (not automatically installed):
+<itemizedlist>
+<listitem>pkg_tarup
+  <para>
+    create a binary package from an already-installed package.
+    used by 'make replace' to save the old package
+  </para>
+</listitem>
+<listitem>xpkgwedge
+  <para>
+    put X11 packages someplace else (see above)
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>
+Utilities for keeping track of installed packages, being up to date, etc:
+<itemizedlist>
+<listitem>pkgchk
+  <para>
+    installs pkg_chk, which reports on packages whose installed
+    versions do not match the latest pkgsrc entries
+  </para>
+</listitem>
+<listitem>pkgdep
+  <para>
+    makes dependency graphs of packages, to aid in choosing a
+    strategy for updating
+  </para>
+</listitem>
+<listitem>pkgdepgraph
+  <para>
+    make graph from above (uses graphviz)
+  </para>
+</listitem>
+<listitem>pkglint
+  <para>
+    This provides two distinct abilities:
+    check a pkgsrc entry for correctness (pkglint)
+    check for and remove out-of-date distfiles and binary
+    packages (lintpkgsrc)
+  </para>
+</listitem>
+<listitem>pkgsurvey
+  <para>
+    report what packages you have installed
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>
+Utilities for people maintaining or creating individual packages:
+<itemizedlist>
+<listitem>pkgdiff
+  <para>
+    automate making and maintaining patches for a package
+  </para>
+</listitem>
+<listitem>rpm2pkg, url2pkg
+  <para>
+    aids in converting to pkgsrc
+  </para>
+</listitem>
+<listitem>gensolpkg
+  <para>
+    convert pkgsrc to a Solaris package
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>
+Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
+<itemizedlist>
+<listitem>pkgconflict
+  <para>
+    find packages that conflict but aren't marked as such
+  </para>
+</listitem>
+<listitem>pkgcomp
+  <para>
+    build packages in a chrooted area
+  </para>
+</listitem>
+<listitem>libkver
+  <para>
+    spoof kernel version for chrooted cross builds
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+
+</sect1>
+
+<sect1>
+<title>How to use pkgsrc as non-root</title>
+<para>
+If you want to use pkgsrc as non-root user, you can set some variables
+to make pkgsrc work under these conditions. Please see 
+<ulink
+url="http://mail-index.netbsd.org/tech-pkg/2003/09/27/0023.html">this
+message</ulink> for more details.
+</para>
+</sect1>
+
+
+<sect1>
+<title>Packages that cannot or should not be built</title>
+
+<para>
+There are several reasons why a package might be instructed to not
+build under certain circumstances. If the package builds and runs
+on most platforms, the exceptions should be noted with
+<varname>NOT_FOR_PLATFORM</varname>. If the package builds and runs on
+a small handful of platforms, set <varname>ONLY_FOR_PLATFORM</varname>
+instead. If the package should be skipped (for example, because it
+provides functionality already provided by the system), set
+<varname>PKG_SKIP_REASON</varname> to a descriptive message. If
+the package should fail because some preconditions are not met,
+set <varname>PKG_FAIL_REASON</varname> to a descriptive message.
+</para>
+
+<para>
+<varname>IGNORE</varname> is deprecated because it didn't provide enough
+information to determine whether the build should fail.
+</para>
+</sect1>
+
+</chapter>
