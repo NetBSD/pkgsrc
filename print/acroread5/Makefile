@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/17 04:44:54 kei Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/04 08:21:57 martti Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.08
@@ -42,6 +42,9 @@ PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 DISTNAME=	sol-508
 PLATFORM=	sparcsolaris
 . endif
+.elif ${OPSYS} == "Linux"
+DISTNAME=	linux-508
+PLATFORM=	intellinux
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	sol-508
 PLATFORM=	sparcsolaris
