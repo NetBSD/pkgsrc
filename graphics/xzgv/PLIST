@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/03 19:17:17 seb Exp $
 bin/xzgv
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/xzgv
 info/xzgv
 info/xzgv-1
 info/xzgv-2
 info/xzgv-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/xzgv
 man/man1/xzgv.1
