@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/13 09:38:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/05 05:06:28 snj Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -32,7 +32,7 @@ CPPFLAGS+=	-DFLTK_1_0_COMPAT
 CONFIGURE_DIRS=	${POSE_BUILD_DIR}
 BUILD_DIRS=	${POSE_BUILD_DIR}
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PERL5=	build
 USE_X11=	YES
 USE_GNU_TOOLS+=	make
@@ -73,9 +73,9 @@ do-install:
 			${INSTALL_DATA} "$$i" ${POSE_SKINS_DIR}; \
 		done
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../x11/fltk/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
