@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.4 2002/07/19 04:09:26 mycroft Exp $
+
+--- timidity/output.c.orig	Wed Jan  9 10:14:35 2002
++++ timidity/output.c	Fri Jul 19 04:01:18 2002
+@@ -25,6 +25,7 @@
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif /* HAVE_CONFIG_H */
++#include <stdlib.h>
+ #ifndef NO_STRING_H
+ #include <string.h>
+ #else
