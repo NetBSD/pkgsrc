@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3157 2005/02/28 22:02:48 adrianp Exp $
+$NetBSD: TODO,v 1.3158 2005/02/28 22:43:47 snj Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,6 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o gputils-0.13.0
-	o gqview-2.0.0 [snj]
 	o grace-5.1.18
 	o grap-1.32
 	o graphviz-2.2 [pkg/28596]
