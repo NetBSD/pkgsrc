@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 13:02:55 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/16 10:17:00 jlam Exp $
 
---- Makefile.orig	Wed May  9 21:54:27 2001
-+++ Makefile	Wed May  9 21:55:28 2001
+--- Makefile.orig	Thu Jun 29 19:59:00 2000
++++ Makefile
 @@ -1,14 +1,14 @@
- CC=gcc
- CFLAGS=-O2 -s
+-CC=gcc
+-CFLAGS=-O2 -s
++#CC=gcc
++CFLAGS+=-O2 -s
  
 -FILES = szddinfo szddexpand SZDD
 +FILES = szddinfo szddexpand
