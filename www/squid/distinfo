@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68.2.1 2005/01/05 11:18:52 salo Exp $
+$NetBSD: distinfo,v 1.68.2.2 2005/01/15 06:39:25 snj Exp $
 
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -24,6 +24,12 @@ SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-empty_acls.patch) = 0f6f4538c34f1
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-empty_acls.patch) = 4432 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABEL7-close_other.patch) = cf73d7bd44567efa65941f2aa186711e3f1f9f8a
 Size (squid-2.5.7-2005010100/squid-2.5.STABEL7-close_other.patch) = 945 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-fakeauth_auth.patch) = 7323e05403f34c2c582cb2b910337a6017686096
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-fakeauth_auth.patch) = 7967 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-gopher_html_parsing.patch) = 5da5a8b3b24eded8552d09b45f329ee927c66b3e
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-gopher_html_parsing.patch) = 714 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_denial_of_service.patch) = e4bec66adbe369eaa91cd6db3a503eb0a6de40e1
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_denial_of_service.patch) = 1928 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.120.2.1 2005/01/05 11:18:52 salo Exp $
+# $NetBSD: Makefile,v 1.120.2.2 2005/01/15 06:39:25 snj Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -20,7 +20,10 @@ PATCHFILES=	squid-2.5.STABLE7-half_closed_POST.patch \
 		squid-2.5.STABLE7-httpd_accel_vport.patch \
 		squid-2.5.STABLE7-cachemgr_vmobjects.patch \
 		squid-2.5.STABLE7-empty_acls.patch \
-		squid-2.5.STABEL7-close_other.patch
+		squid-2.5.STABEL7-close_other.patch \
+		squid-2.5.STABLE7-fakeauth_auth.patch \
+		squid-2.5.STABLE7-gopher_html_parsing.patch \
+		squid-2.5.STABLE7-wccp_denial_of_service.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
