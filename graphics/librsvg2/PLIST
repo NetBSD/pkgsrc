@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/16 10:29:01 rh Exp $
+include/librsvg-2/librsvg/librsvg-features.h
+include/librsvg-2/librsvg/rsvg.h
+lib/librsvg-2.a
+lib/librsvg-2.la
+lib/librsvg-2.so
+lib/librsvg-2.so.2
+lib/librsvg-2.so.2.1
+lib/pkgconfig/librsvg-2.0.pc
+@dirrm include/librsvg-2/librsvg
+@dirrm include/librsvg-2

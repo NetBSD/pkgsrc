@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/16 10:29:01 rh Exp $
+
+--- librsvg-2.0.pc.in.orig	Sat Jan  5 03:49:35 2002
++++ librsvg-2.0.pc.in
+@@ -7,5 +7,5 @@
+ Description: library that renders svg files using libart and pango
+ Version: @VERSION@
+ Requires: glib-2.0 gdk-pixbuf-2.0 libart-2.0 libxml-2.0 pangoft2
+-Libs: -L${libdir} -lrsvg-2
++Libs: -Wl,-R${libdir} -L${libdir} -lrsvg-2
+ Cflags: -I${includedir}/librsvg-2
