@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 14:23:09 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/21 08:14:29 jlam Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 PKGREVISION=		1
@@ -14,7 +14,9 @@ BUILD_DIRS=		${WRKSRC}/src/include
 BUILD_DIRS+=		${WRKSRC}/src/interfaces
 BUILD_DIRS+=		${WRKSRC}/src/pl
 
-.include "../../mk/bsd.prefs.mk"
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 post-buildlink:
 #
@@ -30,8 +32,6 @@ post-install:
 		${MAKE_PROGRAM} install-all-headers
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz             \
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.lib`
-	${RM} -f ${PREFIX}/include/pgsql
-	${LN} -sf postgresql ${PREFIX}/include/pgsql
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
