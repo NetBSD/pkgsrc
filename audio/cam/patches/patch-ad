@@ -1,0 +1,105 @@
+Received: (qmail 20615 invoked from network); 6 Mar 1999 18:24:19 -0000
+Received: from extern.heh.uni-oldenburg.de (HELO Server.HEH.Uni-Oldenburg.DE) (134.106.137.37)
+  by redmail.netbsd.org with SMTP; 6 Mar 1999 18:24:19 -0000
+Received: from WintelKiller.HEH.Uni-Oldenburg.DE (WintelKiller.HEH.Uni-Oldenburg.DE [134.106.148.8])
+	by Server.HEH.Uni-Oldenburg.DE (8.9.3/8.9.3/HEHOL) with ESMTP id TAA01496
+	for <gnats-bugs@gnats.netbsd.org>; Sat, 6 Mar 1999 19:23:21 +0100 (MET)
+Received: by WintelKiller.HEH.Uni-Oldenburg.DE (Postfix, from userid 1000)
+	id 04F2996F; Sat,  6 Mar 1999 19:23:20 +0100 (MET)
+Message-Id: <19990306182320.04F2996F@WintelKiller.HEH.Uni-Oldenburg.DE>
+Date: Sat,  6 Mar 1999 19:23:20 +0100 (MET)
+From: Thilo.Manske@HEH.Uni-Oldenburg.DE
+Reply-To: Thilo.Manske@HEH.Uni-Oldenburg.DE
+To: gnats-bugs@gnats.netbsd.org
+Subject: cam's output looks ugly
+X-Send-Pr-Version: 3.95
+
+>Number:         7093
+>Category:       pkg
+>Synopsis:       package audio/cam's output looks quite ugly on most terminals
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    gnats-admin (GNATS administrator)
+>State:          open
+>Class:          sw-bug
+>Submitter-Id:   net
+>Arrival-Date:   Sat Mar  6 10:35:00 1999
+>Last-Modified:  
+>Originator:     Thilo Manske
+>Organization:
+Dies ist Thilos Unix Signature! Viel Spass damit.
+(Thilos Unix Signature wird unter der BSD-Lizenz vertrieben.)
+>Release:        ~late February (doesn't matter)
+>Environment:
+	
+System: NetBSD WintelKiller 1.3K NetBSD 1.3K (WintelKiller) #91: Wed Mar 3 16:31:10 MET 1999 thilo@WintelKiller:/usr/src/sys/arch/i386/compile/WintelKiller i386
+
+
+>Description:
+	cam uses some "non-standard" characters for printing the
+	sliders etc. that may look good on some linux-boxes but not
+	on NetBSD using wscons or xterm.
+>How-To-Repeat:
+	Start cam and look at the screen. *UGH*
+>Fix:
+	the following patch makes cam use only "standard" chars:
+	(probably not the best choice but better than before)
+
+--- screens.c.orig      Mon Oct 21 20:18:25 1996
++++ screens.c   Sat Mar  6 19:07:20 1999
+@@ -64,17 +64,17 @@
+    mvaddstr(Y+1,X+8,"Left"); 
+    mvaddstr(Y+2,X+8,"Right"); 
+    attrset(COLOR_PAIR(COLOR_SLIDER) | A_ALTCHARSET);
+-   mvaddstr(Y+1,X+14,"ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ"); 
+-   mvaddstr(Y+2,X+14,"ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ"); 
++   mvaddstr(Y+1,X+14,"---------------------"); 
++   mvaddstr(Y+2,X+14,"---------------------"); 
+    attrset(COLOR_PAIR(COLOR_VOL1) | A_ALTCHARSET);
+-   mvaddstr(Y,X+14,"ù ù ù ù");
+-   mvaddstr(Y+3,X+14,"ù ù ù ù");
++   mvaddstr(Y,X+14,". . . .");
++   mvaddstr(Y+3,X+14,". . . .");
+    attrset(COLOR_PAIR(COLOR_VOL2) | A_ALTCHARSET);
+-   mvaddstr(Y,X+22,"ù ù ù ù");
+-   mvaddstr(Y+3,X+22,"ù ù ù ù");
++   mvaddstr(Y,X+22,". : . .");
++   mvaddstr(Y+3,X+22,". : . .");
+    attrset(COLOR_PAIR(COLOR_VOL3) | A_ALTCHARSET);
+-   mvaddstr(Y,X+30,"ù ù ù");
+-   mvaddstr(Y+3,X+30,"ù ù ù");
++   mvaddstr(Y,X+30,". . .");
++   mvaddstr(Y+3,X+30,". . .");
+ }
+ 
+ /*
+@@ -87,21 +87,21 @@
+ {
+    if ((level == 1 ) || ( level == 2 )) { 
+       attrset(A_NORMAL  | A_ALTCHARSET); 
+-      mvaddch(Y,X++,205); 
++      mvaddch(Y,X++,'-'); 
+    } 
+    if ( level != 5) { 
+       #define ACT_HANDLE COLOR_PAIR(COLOR_HANDLE) | A_BOLD | A_ALTCHARSET
+       #define NACT_HANDLE COLOR_PAIR(COLOR_HANDLE) | A_DIM | A_ALTCHARSET    
+       attrset(( active == TRUE  ? ACT_HANDLE : NACT_HANDLE)); 
+-      mvaddch(Y,X++,178); 
++      mvaddch(Y,X++,'*'); 
+    } 
+    if ((level == 3) || (level == 2)) { 
+       attrset(A_NORMAL | A_ALTCHARSET); 
+-      mvaddch(Y,X++,205); 
++      mvaddch(Y,X++,'-'); 
+    } 
+    if ( level  == 5 ) { 
+       attrset(A_NORMAL | A_ALTCHARSET); 
+-      mvaddch(Y,X++,205); 
++      mvaddch(Y,X++,'-'); 
+    }    
+ }
+
+>Audit-Trail:
+>Unformatted:
+
