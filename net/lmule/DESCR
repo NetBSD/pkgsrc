@@ -1,0 +1,12 @@
+Port of the eMule for Windows eDonkey2000, which uses the wxWindows class
+library and runs on several Unix-like systems.
+
+Features:
+* Download/Upload works
+* You can search and add ed2k-links
+* Statistics
+* Shared files tab works
+* Messages tab is now implemented
+* You can manage friends
+* LMule can be minimized to systray 
+* You can set nearly all preferences 

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+
+SHA1 (lmule-1.1.13.tar.gz) = 34de6f170766fd7504d9cfa083135a91a721045b
+Size (lmule-1.1.13.tar.gz) = 1759826 bytes
+SHA1 (patch-aa) = c7ab7025cf510961af79ab6a984c9fa6819479dc
+SHA1 (patch-ab) = c0f6544fd595ddb45312765e7e00556e6116ef43
+SHA1 (patch-ac) = 36519b66c1106bd914f23c20c5235697133beed9
+SHA1 (patch-ad) = 934528991c13e09dbd19f50b69af91783d47c4fb
+SHA1 (patch-ae) = d5ded1eeb75045c9140275c1a9144ecd777a6a56
+SHA1 (patch-af) = 9496549f044d9ea83d8350495b1a008c1032cfc4
+SHA1 (patch-ag) = c935a6cf082baeef0975b7ce475e00136bcba96a
+SHA1 (patch-ah) = 12956dc41956e73d4bda742d2e52f645d307beb9
