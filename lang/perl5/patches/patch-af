@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.5 1998/12/02 15:41:02 tv Exp $
+$NetBSD: patch-af,v 1.6 1998/12/02 21:14:41 tv Exp $
 
 --- hints/netbsd.sh.orig	Thu May  8 11:52:59 1997
-+++ hints/netbsd.sh	Wed Dec  2 10:38:28 1998
++++ hints/netbsd.sh	Wed Dec  2 14:21:34 1998
 @@ -1,12 +1,11 @@
  # hints/netbsd.sh
  #
@@ -57,7 +57,7 @@ $NetBSD: patch-af,v 1.5 1998/12/02 15:41:02 tv Exp $
  	;;
  esac
  
-@@ -47,13 +46,26 @@
+@@ -47,15 +46,18 @@
  # way to make perl call setuid() or setgid().  if they aren't, then
  # ($<, $>) = ($u, $u); will work (same for $(/$)).  this is because
  # you can not change the real userid of a process under 4.4BSD.
@@ -70,19 +70,11 @@ $NetBSD: patch-af,v 1.5 1998/12/02 15:41:02 tv Exp $
  	d_setreuid="$undef"
  	d_setrgid="$undef"
  	d_setruid="$undef"
-+	;;
-+esac
+ 	;;
+ esac
 +
 +# there's no problem with vfork.
 +d_vfork="$define"
-+
-+# in case the user installs a shared libperl, with or without the static lib,
-+# give us a "rpath" for third party binary builds:
-+case "$osvers" in
-+0*|1.[01]*)
-+	;;
-+*)
-+	ccdlflags="-Wl,-R$archlibexp/CORE $ccdlflags"
- 	;;
- esac
  
+ # Avoid telldir prototype conflict in pp_sys.c  (NetBSD uses const DIR *)
+ # Configure should test for this.  Volunteers?
