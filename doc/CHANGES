@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5003 2004/02/26 12:52:34 jmmv Exp $
+$NetBSD: CHANGES,v 1.5004 2004/02/26 15:11:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jisx0212fonts to 0.0nb1 [uebayasi 2004-02-26]
 	Added openobex-1.0.1 [jmmv 2004-02-26]
 	Added obexftp-0.10.3 [jmmv 2004-02-26]
+	Updated dasher to 3.2.4 [jmmv 2004-02-26]
