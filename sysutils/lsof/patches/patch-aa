@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.11 1999/07/07 18:13:56 agc Exp $
+
+On Solaris, don't try to use ranlib...
+
+--- Configure.orig	Tue May 11 07:40:20 1999
++++ Configure	Mon May  3 11:53:20 1999
+@@ -3037,7 +3046,7 @@
+   then
+     echo "AR=	$LSOF_AR" >> ${LSOF_LIB}/$LSOF_LIBMKF
+   fi	# }
+-  if test "X$LSOF_RANLIB" != "X"	# {
++  if test "X$LSOF_TGT" = "Xsolaris" -o "X$LSOF_RANLIB" != "X"	# {
+   then
+     echo "RANLIB=	$LSOF_RANLIB" >> ${LSOF_LIB}/$LSOF_LIBMKF
+   fi	# }
