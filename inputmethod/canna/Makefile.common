@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2003/05/31 07:24:38 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/06/03 00:58:10 uebayasi Exp $
 #
 # Canna common makefile.
 #
 
-DISTNAME=	Canna${CANNA_VERSION:S|.||}
+DISTNAME=	Canna${CANNA_VERSION:S|.||:S|pl|p|}
 PKGNAME=	Canna-${CANNA_MODULE}-${CANNA_VERSION}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://downloads.sourceforge.jp/canna/2181/
@@ -19,10 +19,11 @@ PATCHDIR=	${.CURDIR}/../canna/patches
 # To be done.
 #USE_BUILDLINK2=	# defined
 
-CANNA_VERSION=	3.6p3
+# "Pkgsrc" version.
+CANNA_VERSION=	3.6pl3
 
-CANNA_OWNER?=    daemon
-CANNA_GROUP?=    daemon
+CANNA_OWNER?=	daemon
+CANNA_GROUP?=	daemon
 CANNA_SPOOL=	${DESTDIR}/var/spool/canna
 CANNA_MODE=	0755
 
