@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2004/03/22 06:33:58 minskim Exp $
+$NetBSD: distinfo,v 1.13 2004/04/05 10:00:42 darcy Exp $
 
 SHA1 (Python-2.3.3.tgz) = 034d2e3ed011ea753d4fee7efab16e31029b1e5e
 Size (Python-2.3.3.tgz) = 8491380 bytes
+SHA1 (patch-aa) = 6aa88357ddf479e5844b21f1b16bf1906edaad69
 SHA1 (patch-ab) = 111d7fa8adbb7001bacad36e3bdbe23ae6ce8b9b
 SHA1 (patch-ad) = c8f6ea08e68dae3bd9ad639c38e74cf654c0b41e
 SHA1 (patch-ae) = 544af90b9b7c5eb5cbad0ba0cefa3d9496b5efe3
