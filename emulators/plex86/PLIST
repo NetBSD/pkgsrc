@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:03:55 skrll Exp $
 bin/plex86
 bin/plex86_reset
 lib/X11/fonts/local/vga.pcf.gz
-@exec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
-@unexec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
+@exec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local
 lib/plex86/bios/BIOS-plex86-2000_0802a
 lib/plex86/bios/BIOS-plex86-2000_0817a
 lib/plex86/bios/BIOS-plex86-2000_1228a
