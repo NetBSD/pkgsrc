@@ -1,0 +1,7 @@
+A networked game for X11. Up to ten worms can battle it out over the network,
+to attempt to cage one another in.  Very much like tron.  Excellent graphics,
+works on 8, 16 and 24 bit displays.
+
+To play, click on the "X" to set up your players, and click on the box
+marked <none> to set up your controls, you may then type the key you wish
+to use for left, and right.
