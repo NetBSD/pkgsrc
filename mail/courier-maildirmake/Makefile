@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/24 19:45:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/18 21:15:11 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 PKGREVISION?=	1
@@ -26,8 +26,6 @@ INSTALL_TARGET=		install-strip
 .endif
 
 CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
-
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 pre-configure: configure-init
 
