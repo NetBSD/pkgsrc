@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/20 10:33:31 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/17 00:09:26 taya Exp $
 
 PKGREVISION=	1
 MOZILLA=	mozilla-stable
@@ -16,6 +16,7 @@ COMMENT=	Full featured gecko-based browser (stable branch)
 
 USE_GCC_SHLIB=	yes
 BUILD_SVG=	# defined
+BUILD_MATHML=	# defined
 BUILD_CALENDAR=	# defined
 
 .include	"../../www/mozilla/Makefile.common"
