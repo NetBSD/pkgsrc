@@ -1,17 +1,21 @@
-$NetBSD: patch-ad,v 1.5 2000/12/27 00:24:43 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.6 2001/11/11 07:54:56 jlam Exp $
 
---- cmd.c.orig	Sat Oct 23 06:07:32 1999
-+++ cmd.c	Tue Dec 26 17:16:44 2000
-@@ -27,4 +27,5 @@
+--- cmd.c.orig	Sun Nov 11 02:44:56 2001
++++ cmd.c
+@@ -26,6 +26,7 @@
+ 
  #include <stdio.h>
  #include <stdlib.h>
 +#include <string.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -155,5 +156,5 @@
+ #include "version.h"
+@@ -160,7 +161,7 @@
+ printf("inputstr = %s\n",inputstr);
        if (strncmp (inputstr, "compile", 7) == 0) {
  printf("calling genbook.\n");
 -        genbook ();
 +        genbook (booksrc, bookbin);
        } else if (strcmp (inputstr, "on") == 0) {
  	bookmode = BOOKBEST;
+ 	printf("book now on.\n");
