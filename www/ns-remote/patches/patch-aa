@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/12 15:03:43 abs Exp $
+
+--- remote.c.orig	Mon Jan 10 20:59:24 2000
++++ remote.c	Mon Jan 10 21:41:58 2000
+@@ -118,8 +118,12 @@
+ 				       &version);
+       if (! version)
+ 	continue;
++#ifdef STANDALONE /* Pick most recent version */
++      if (! tenative_version || strcmp((char *) version, tenative_version) > 0 )
++#else
+       if (strcmp ((char *) version, expected_mozilla_version) &&
+ 	  !tenative)
++#endif
+ 	{
+ 	  tenative = w;
+ 	  tenative_version = version;
+@@ -135,22 +139,26 @@
+ 
+   if (result && tenative)
+     {
++#ifndef STANDALONE
+       fprintf (stderr,
+ 	       "%s: warning: both version %s (0x%x) and version\n"
+ 	       "\t%s (0x%x) are running.  Using version %s.\n",
+ 	       progname, tenative_version, (unsigned int) tenative,
+ 	       expected_mozilla_version, (unsigned int) result,
+ 	       expected_mozilla_version);
++#endif
+       XFree (tenative_version);
+       return result;
+     }
+   else if (tenative)
+     {
++#ifndef STANDALONE
+       fprintf (stderr,
+ 	       "%s: warning: expected version %s but found version\n"
+ 	       "\t%s (0x%x) instead.\n",
+ 	       progname, expected_mozilla_version,
+ 	       tenative_version, (unsigned int) tenative);
++#endif
+       XFree (tenative_version);
+       return tenative;
+     }
+@@ -675,6 +683,12 @@
+ 	      exit (-1);
+ 	    }
+ 	}
++    }
++  if (! remote_commands)
++    {
++    fprintf (stderr, "%s: No valid commands given\n", progname);
++    usage ();
++    exit (-1);
+     }
+ 
+   dpy = XOpenDisplay (dpy_string);
