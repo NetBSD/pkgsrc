@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2450 2003/06/07 17:39:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.2451 2003/06/07 17:42:55 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2372,3 +2372,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.46 [abs 2003-06-06]
 	Updated ettercap to 0.6.9nb2 [jmmv 2003-06-07]
 	Updated clamav to 0.54nb2 [jmmv 2003-06-07]
+	Updated plotutils to 2.4.1nb2 [jschauma 2003-06-07]
+	Added plotutils-nox11-2.4.1 [jschauma 2003-06-07]
+	Updated gnuplot to 3.7.3nb1 [jschauma 2003-06-7]
+	Added gnuplot-nox11-3.7.3 [jschauma 2003-06-7]
