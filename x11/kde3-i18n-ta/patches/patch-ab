@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/06/10 13:31:37 markd Exp $
+
+--- messages/kdebase/ktip.po.orig	2004-06-01 05:03:00.000000000 +1200
++++ messages/kdebase/ktip.po
+@@ -354,7 +354,6 @@ msgstr ""
+ "<li>print through external program (generic).</li>\n"
+ "</ul>\n"
+ "<p align=\"right\"><strong>-->&nbsp;</strong></p>\n"
+-" "
+ 
+ #: tips.cpp:172
+ msgid ""
