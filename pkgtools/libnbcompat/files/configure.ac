@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030331], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20030609], [grant@NetBSD.org])
 AC_CONFIG_SRCDIR([bits.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -68,9 +68,10 @@ AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fseeko getenv glob inet_ntop \
-		inet_pton lchflags lchmod lchown lutimes mkstemp setenv \
-		setmode setprogname sl_init snprintf strdup strerror strlcat \
-		strlcpy strptime strsep strtoll timegm usleep])
+		inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
+		setenv setmode setprogname sl_init snprintf strdup strerror \
+		strlcat strlcpy strmode strptime strsep strtoll timegm \
+		usleep])
 
 AC_CHECK_FUNCS([MD5File RMD160File SHA1File])
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
