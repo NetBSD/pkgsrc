@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/22 19:08:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/25 01:30:47 wiz Exp $
 #
 
 DISTNAME=	rpc2-1.5
@@ -12,11 +12,10 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 DEPENDS+=	lwp>=1.1:../../devel/lwp
 DEPENDS+=	readline>=4.0:../../devel/readline
 
-#LICENSE=	GPL
-
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_GMAKE=	YES
+USE_PERL5=	YES
 
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
 
