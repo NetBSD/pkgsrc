@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/26 03:27:30 snj Exp $
+$NetBSD: distinfo,v 1.2 2004/04/28 06:00:11 snj Exp $
 
 SHA1 (swiggle-0.3.2.tar.gz) = ef798b9d35dac021a6bc9a12095109a96e35e2d1
 Size (swiggle-0.3.2.tar.gz) = 13995 bytes
-SHA1 (patch-aa) = 4dc375e7da9733c10f83e0afbe483383da8712f8
