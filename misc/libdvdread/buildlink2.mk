@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:09 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/02/26 10:12:34 wiz Exp $
 
 .if !defined(LIBDVDREAD_BUILDLINK2_MK)
 LIBDVDREAD_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libdvdread
-BUILDLINK_DEPENDS.libdvdread?=		libdvdread>=0.9.3
+BUILDLINK_DEPENDS.libdvdread?=		libdvdread>=0.9.4
 BUILDLINK_PKGSRCDIR.libdvdread?=	../../misc/libdvdread
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libdvdread=libdvdread
