@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8683 2005/01/10 16:58:46 dillo Exp $
+$NetBSD: CHANGES,v 1.8684 2005/01/10 18:25:49 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -210,3 +210,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wxhugo to 3.1.01 [dillo 2005-01-10]
 	Updated cdrecord to 2.00.3nb2 [hamajima 2005-01-10]
 	Updated dvdrecord to 0.1.5nb1 [hamajima 2005-01-10]
+	Added p5-GnuPG-Interface-0.34nb1 [tv 2005-01-10]
+	Added pgpenvelope-2.10.2nb1 [tv 2005-01-10]
