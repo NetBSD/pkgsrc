@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2001/11/15 15:24:39 taca Exp $
+# $NetBSD: Makefile,v 1.68 2001/11/21 16:44:17 jlam Exp $
 
 DISTNAME=		samba-2.2.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -14,8 +14,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-#USE_SSL=		# defined
-
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -29,7 +27,7 @@ USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
-SAMBA_ETCDIR?=		/etc/samba
+SAMBA_ETCDIR?=		${CONFDIR}/samba
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_SHARE?=		${PREFIX}/share
 
@@ -65,9 +63,6 @@ CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--without-smbwrapper
 CONFIGURE_ARGS+=	--without-smbmount
 
-INSTALL_FILE=		${WRKDIR}/INSTALL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
 EXAMPLESDIR=		${PREFIX}/share/examples/samba
@@ -76,20 +71,14 @@ FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
 FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		ECHO=${ECHO:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
 MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
+
+CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
+RCD_SCRIPTS=		samba nmbd smbd
+MAKE_DIRS=		${SAMBA_LOCKDIR}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE}
+
+INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
@@ -97,9 +86,10 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/samba.sh > ${WRKDIR}/samba.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+                        > ${WRKDIR}/$${script};				\
+	done
 
 post-install:
 	# Install Samba documentation.
@@ -115,7 +105,10 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
-	${INSTALL_SCRIPT} ${WRKDIR}/samba.sh ${PREFIX}/etc/rc.d/samba
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
@@ -126,4 +119,5 @@ post-install:
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
