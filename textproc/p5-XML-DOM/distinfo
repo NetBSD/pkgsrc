@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/10 12:47:39 mjl Exp $
+$NetBSD: distinfo,v 1.2 2001/11/28 11:21:06 martti Exp $
 
-SHA1 (XML-DOM-1.31.tar.gz) = a19bba77ff1f4b68e9a136244a3373b207219d07
-Size (XML-DOM-1.31.tar.gz) = 131221 bytes
+SHA1 (XML-DOM-1.35.tar.gz) = 3bd03dd576936f73a289d283795fdb9d25246c11
+Size (XML-DOM-1.35.tar.gz) = 114166 bytes
