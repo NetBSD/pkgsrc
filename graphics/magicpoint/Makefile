@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/07/05 12:16:33 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/09 11:58:18 wiz Exp $
 
 DISTNAME=		magicpoint-1.09a
 PKGREVISION=		1
@@ -11,6 +11,7 @@ COMMENT=		X11 based presentation tool
 
 CONFLICTS=		mgp-[0-9]*
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
 CONFIGURE_ARGS+=	--enable-freetype-charset16
@@ -43,10 +44,10 @@ post-install:
 	${INSTALL_DATA} README* *.jpg *.eps *.mgp *.xbm mgprc-sample \
 		${PREFIX}/share/examples/mgp
 
-.include "../../graphics/freetype-lib/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/mng/buildlink.mk"
-.include "../../graphics/netpbm/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../print/ja-vflib-lib/buildlink.mk"
+.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/mng/buildlink2.mk"
+.include "../../graphics/netpbm/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../print/ja-vflib-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
