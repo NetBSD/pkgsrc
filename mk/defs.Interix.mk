@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.13 2004/04/21 14:55:32 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.14 2004/04/22 03:36:30 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -47,7 +47,7 @@ MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/sbin/mtree
 MV?=		/bin/mv
 NICE?=		/bin/nice
-PATCH?=		/bin/patch
+PATCH?=		${LOCALBASE}/bin/gpatch
 .if exists(${LOCALBASE}/bin/pax)
 PAX?=		${LOCALBASE}/bin/pax
 .else
