@@ -1,27 +1,30 @@
-@comment $NetBSD: PLIST-md.static,v 1.5 2000/01/18 17:11:50 jlam Exp $
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/IO.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/SysV.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/NDBM_File.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/Opcode.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/POSIX.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/SDBM_File.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/Socket.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/attrs.a
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/re.a
+@comment $NetBSD: PLIST-md.static,v 1.6 2000/01/18 22:31:48 tron Exp $
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/DB_File/DB_File.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/DB_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Fcntl/Fcntl.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Fcntl/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/IO/IO.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/IO/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/NDBM_File/NDBM_File.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/NDBM_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Opcode/Opcode.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Opcode/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/POSIX/POSIX.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/POSIX/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/SDBM_File/SDBM_File.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/SDBM_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Socket/Socket.a
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Socket/extralibs.ld
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/DB_File
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Fcntl
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/IO
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/NDBM_File
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Opcode
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/POSIX
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/SDBM_File
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Socket
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/pod
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404
+@dirrm lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/perl5

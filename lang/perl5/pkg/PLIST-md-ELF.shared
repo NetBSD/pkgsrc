@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST-md-ELF.shared,v 1.1 2000/01/18 17:11:50 jlam Exp $
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so
