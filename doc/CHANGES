@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5655 2004/04/19 14:54:17 minskim Exp $
+$NetBSD: CHANGES,v 1.5656 2004/04/19 15:05:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2075,3 +2075,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxml2 to 2.6.9 [jmmv 2004-04-19]
 	Updated gtksourceview to 1.0.1 [jmmv 2004-04-19]
 	Updated grhino to 0.11.0 [minskim 2004-04-19]
+	Updated libcroco to 0.5.1 [jmmv 2004-04-19]
