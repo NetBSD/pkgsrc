@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/22 00:47:08 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/05 02:00:32 garbled Exp $
+share/applets/Amusements/gaim_applet.desktop
+etc/CORBA/servers/gaim_applet.gnorba
+bin/au2h
 bin/gaim
