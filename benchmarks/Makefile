@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/10/21 20:00:59 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1998/10/22 05:28:34 garbled Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/02/16 13:32:59 andreas Exp
 #
 
@@ -6,6 +6,7 @@
     SUBDIR += bonnie
     SUBDIR += bytebench
     SUBDIR += dhrystone
+    SUBDIR += flops
     SUBDIR += hbench
     SUBDIR += iozone
     SUBDIR += linpack
