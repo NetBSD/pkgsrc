@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/11 00:50:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/17 06:01:17 jlam Exp $
 #
 # Don't include this file manually!  It will be included as necessary
 # by bsd.buildlink3.mk.
@@ -20,6 +20,12 @@ BUILDLINK_PACKAGES:=	x11-links ${BUILDLINK_PACKAGES}
 BUILDLINK_DEPENDS.x11-links+=	x11-links>=0.23
 BUILDLINK_PKGSRCDIR.x11-links?=	../../pkgtools/x11-links
 BUILDLINK_DEPMETHOD.x11-links?=	build
+
+# Force all of the headers and libraries to be symlinked into
+# ${BUILDLINK_X11_DIR}, even in the "pkgviews" case.
+#
+BUILDLINK_CONTENTS_FILTER.x11-links=					\
+	${EGREP} '(include.*/|\.h$$|\.pc$$|/lib[^/]*$$)'
 
 # Rename the symlinks so that they appear in ${BUILDLINK_X11_DIR}/include
 # and ${BUILDLINK_X11_DIR}/lib.
