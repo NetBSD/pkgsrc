@@ -1,0 +1,46 @@
+$NetBSD: patch-am,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- ext/nkf/lib/kconv.rb.orig	2004-11-03 16:30:41.000000000 +0900
++++ ext/nkf/lib/kconv.rb
+@@ -74,8 +74,8 @@ module Kconv
+   RegexpEucjp = /\A(?:
+ 		    [\x00-\x7f]                         |
+ 		    \x8e        [\xa1-\xdf]             |
+-		    \x8f        [\xa1-\xdf] [\xa1-\xdf] |
+-		    [\xa1-\xdf] [\xa1-\xdf]
++		    \x8f        [\xa1-\xdf] [\xa1-\xfe] |
++		    [\xa1-\xdf] [\xa1-\xfe]
+ 		   )*\z/nx
+   RegexpUtf8  = /\A(?:
+ 		    [\x00-\x7f]                                     |
+@@ -101,8 +101,9 @@ module Kconv
+     when ::NKF::SJIS
+       opt << 'S'
+     when ::NKF::UTF8
+-    when ::NKF::UTF16
+       opt << 'W'
++    when ::NKF::UTF16
++      opt << 'W16'
+     end
+ 
+     case out_code
+@@ -113,8 +114,9 @@ module Kconv
+     when ::NKF::SJIS
+       opt << 's'
+     when ::NKF::UTF8
+-    when ::NKF::UTF16
+       opt << 'w'
++    when ::NKF::UTF16
++      opt << 'w16'
+     when ::NKF::NOCONV
+       return str
+     end
+@@ -164,7 +166,7 @@ module Kconv
+   module_function :guess
+ 
+   def guess_old(str)
+-    ::NKF::guess_old(str)
++    ::NKF::guess1(str)
+   end
+   module_function :guess_old
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.6 2005/01/16 11:48:56 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.7 2005/01/23 17:33:19 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -8,7 +8,7 @@ _RUBYVERSION_MK=	# defined
 
 # current supported Ruby's version
 RUBY16_VERSION?=	1.6.8
-RUBY18_VERSION?=	1.8.1
+RUBY18_VERSION?=	1.8.2
 
 # default Ruby packages
 RUBY_VER_DEFAULT=	18
