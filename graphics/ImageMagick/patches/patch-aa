@@ -1,24 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2000/03/21 22:18:24 tron Exp $
+$NetBSD: patch-aa,v 1.13 2000/06/21 02:45:17 jlam Exp $
 
---- configure.orig	Fri Feb  4 23:41:28 2000
-+++ configure	Tue Mar 21 22:21:52 2000
-@@ -1673,6 +1673,7 @@
- # Must also pass -no-undefined to libtool in Makefile
- # AC_LIBTOOL_WIN32_DLL
- 
-+if false; then
- # Configure libtool
- # Check whether --enable-shared or --disable-shared was given.
- if test "${enable_shared+set}" = set; then
-@@ -2057,6 +2058,7 @@
- 
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -4303,6 +4305,7 @@
+--- configure.orig	Fri Feb  4 17:41:28 2000
++++ configure	Tue Jun 20 22:29:55 2000
+@@ -4303,6 +4303,7 @@
  # Find Posix threads library
  #
  LIB_THREAD=''
@@ -26,7 +10,7 @@ $NetBSD: patch-aa,v 1.12 2000/03/21 22:18:24 tron Exp $
  echo $ac_n "checking for pthread_attr_init in -lpthread""... $ac_c" 1>&6
  echo "configure:4308: checking for pthread_attr_init in -lpthread" >&5
  ac_lib_var=`echo pthread'_'pthread_attr_init | sed 'y%./+-%__p_%'`
-@@ -4346,6 +4349,7 @@
+@@ -4346,6 +4347,7 @@
     DEF_THREAD="-D_REENTRANT"
  else
    echo "$ac_t""no" 1>&6
