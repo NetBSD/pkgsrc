@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2001/06/19 03:57:09 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/03/24 21:38:25 wiz Exp $
 #
 
-DISTNAME=		audiofile-0.2.1
+DISTNAME=		audiofile-0.2.3
 PKGNAME=		lib${DISTNAME}
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.68k.org/pub/michael/ \
