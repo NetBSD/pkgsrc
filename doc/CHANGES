@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9614 2005/03/24 21:26:45 nathanw Exp $
+$NetBSD: CHANGES,v 1.9615 2005/03/24 22:40:15 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1723,3 +1723,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-HTML-TableExtract to 1.10 [chris 2005-03-24]
 	Added libotr-2.0.1 [nathanw 2005-03-24]
 	Added gaim-otr-2.0.1 [nathanw 2005-03-24]
+	Updated netbsd-tap to 20050324 [cube 2005-03-25]
