@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 1998/08/11 07:59:11 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- simple/haval.c	1998/08/11 07:43:00	1.1
++++ simple/haval.c	1998/08/11 07:43:43
+@@ -31,11 +31,11 @@
+ #include "modsupport.h"
+ 
+        /* Endianness testing and definitions */
+-#define TestEndianness(variable) {int i=1; variable=BIG_ENDIAN;\
+-                                  if (*((char*)&i)==1) variable=LITTLE_ENDIAN;}
++#define TestEndianness(variable) {int i=1; variable=Py_BIG_ENDIAN;\
++                                  if (*((char*)&i)==1) variable=Py_LITTLE_ENDIAN;}
+ 
+-#define LITTLE_ENDIAN 1
+-#define BIG_ENDIAN 0
++#define Py_LITTLE_ENDIAN 1
++#define Py_BIG_ENDIAN 0
+ 
+ 	/* This is where the actual code for the hash function will go */
+ 
