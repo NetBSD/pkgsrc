@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/29 06:56:25 rh Exp $
 
-MD5 (Linux-PAM-0.72.tar.gz) = 6389fdef0da51e459bf54ec93c6b7df4
+SHA1 (Linux-PAM-0.72.tar.gz) = cb6433d02bb85af5d8462afec32d987d525484dc
+Size (Linux-PAM-0.72.tar.gz) = 395073 bytes
 SHA1 (patch-aa) = 0992a39ee27cf9630befed089839af5604d06927
 SHA1 (patch-ab) = cb4c5a214dffbcaacda6a1da500aff3117592400
 SHA1 (patch-ac) = 1c5ca06e502ea8d540e317ca1dd598179648fb4e
