@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/25 04:18:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2001/05/29 16:19:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -11,7 +11,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Server part of Amanda, a network backup system
 
-DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		amanda-common-2.4.2:../../sysutils/amanda-common
 
 USE_X11=		yes
@@ -22,6 +21,15 @@ USE_GMAKE=		yes
 .include "../../sysutils/amanda-common/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-client
+
+# Prevent configure script from finding unnecessary libraries.
+#
+CONFIGURE_ENV+=         ac_cv_lib_intl_main=no
+CONFIGURE_ENV+=         ac_cv_lib_termcap_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
