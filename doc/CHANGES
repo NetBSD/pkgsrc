@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6510 2004/07/09 00:21:25 recht Exp $
+$NetBSD: CHANGES,v 1.6511 2004/07/09 10:48:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3320,3 +3320,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Data-FormValidator-3.59 [erh 2004-07-08]
 	Updated pkglint to 3.86 [hubertf 2004-07-09]
 	Updated boehm-gc to 6.3 [recht 2004-07-09]
+	Updated kadu to 0.3.9 [adam 2004-07-09]
