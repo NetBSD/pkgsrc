@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.12 2003/09/24 12:22:04 grant Exp $
+# $NetBSD: compiler.mk,v 1.13 2003/09/27 17:20:38 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -44,6 +44,14 @@
 
 .if !defined(COMPILER_MK)
 COMPILER_MK=	# defined
+
+# Defaults for SunPro, work around sys.mk setting CC by default to
+# 'gcc'. These can be overriden by the user in /etc/mk.conf or on the
+# command line.
+.if defined(USE_SUNPRO) && defined(CC) && !empty(CC:Mgcc)
+CC=	/opt/SUNWspro/bin/cc
+CXX=	/opt/SUNWspro/bin/CC
+.endif
 
 # Do a dance to determine which version of gcc is being used, if any,
 # and whether it satisfies GCC_REQD.
