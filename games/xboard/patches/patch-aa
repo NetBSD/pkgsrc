@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.6 2002/02/18 15:14:19 seb Exp $
+$NetBSD: patch-aa,v 1.7 2002/09/11 11:13:02 jlam Exp $
 
---- Makefile.in.orig	Tue Feb 20 05:02:22 2001
+--- Makefile.in.orig	Fri Feb  1 23:57:38 2002
 +++ Makefile.in
-@@ -63,16 +63,15 @@
+@@ -18,10 +18,7 @@ bindir = @bindir@
+ mandir = @mandir@
+ man6dir = $(mandir)/man6
+ man6ext = .6
+-# Yuck; the autoconf generated configure script sets an infodir variable
+-# and provides a command-line flag to change it, but the default is 
+-# /usr/info instead of /usr/share/info.
+-infodir = $(prefix)/share/info
++infodir = @infodir@
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@ @CPPFLAGS@ -DINFODIR=\"$(infodir)\"
+@@ -67,16 +64,15 @@ more: all pseudo-source info FAQ html dv
  
  install: installdirs xboard zic2xpm cmail pxboard xboard.man cmail.man \
  		zic2xpm.man
