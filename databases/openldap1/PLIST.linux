@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.linux,v 1.1 2002/09/23 17:34:38 tsarna Exp $
+libexec/slurpd
