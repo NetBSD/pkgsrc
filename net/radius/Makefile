@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/24 22:44:25 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/24 23:19:05 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -20,20 +20,23 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.merit.edu/aaa/
 
 DECOMPRESS_CMD=	${GZCAT} -f
-
 DIST_SUBDIR=	radius
 NO_WRKSUBDIR=	yes
+INSTALL_TARGET=	man-install install util-install config-install
 
-.include "../../mk/bsd.prefs.mk"
+CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
+MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
+		GNUZIP="`${ECHO} ${GZIP_CMD} | ${AWK} '{print $$1}'`" \
+		INSTALL="${INSTALL} -c" RADDB_INSDIR=${EXAMPLE_DIR}
 
-# XXX Kerberos IV support is know to be broken.
-#.ifmake do-build
+# XXX Kerberos IV support is known to be broken.
 #.if exists(/usr/lib/libkrb.a) && \
 #    (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
 #CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
 #RADLIBS=	-lkrb -ldes
 #.endif
-#.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 post-extract:
 .for FILE in ${EXTRA_FILES}
@@ -48,27 +51,4 @@ pre-patch:
 	    ${PATCH} -sp < rad.$${i}.diff ; \
 	done
 
-EXAMPLE_DIR=	${PREFIX}/share/examples/radius
-
-do-install:
-	@cd ${WRKSRC} ; \
-	${MAKE} man-install ; \
-	${MAKE} install ; \
-	${MAKE} util-install ; \
-	${MKDIR} ${EXAMPLE_DIR} ; \
-	${MAKE} config-install RADDB_INSDIR=${EXAMPLE_DIR}
-
 .include "../../mk/bsd.pkg.mk"
-
-.ifmake do-build
-CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
-
-MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey"
-MAKE_ENV+=	LIBS=-lcrypt
-
-MAKE_ENV+=	GNUZIP="`${ECHO} ${GZIP_CMD} | ${AWK} '{print $$1}'`"
-.endif
-
-.ifmake do-install
-MAKE_ENV+=	INSTALL="${INSTALL} -c"
-.endif
