@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/09 23:41:34 jtb Exp $
+bin/ncview
+lib/X11/app-defaults/Ncview
+lib/ncview/3gauss.ncmap
+lib/ncview/3saw.ncmap
+lib/ncview/default.ncmap
+lib/ncview/detail.ncmap
+lib/ncview/hotres.ncmap
+lib/ncview/nc_overlay.earth.lat-lon.p8deg
+lib/ncview/nc_overlay.lat-lon-grid.10x30
+lib/ncview/nc_overlay.lat-lon-grid.20x60
+man/man1/ncview.1
+@dirrm lib/ncview
