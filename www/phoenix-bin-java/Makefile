@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/29 16:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/08 18:18:05 jmc Exp $
 
 DISTNAME=		phoenix-bin-java-1.0
 PKGREVISION=		1
@@ -21,7 +21,11 @@ NO_EXTRACT=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
+NS_PLUGINS_DIR=         ${PREFIX}/lib/MozillaFirebird-linux/plugins
+PLUGIN=		${PREFIX}/java/sun-1.3.1/plugin/i386/ns600/libjavaplugin_oji.so
+
 do-install:
-			${LN} -s ${PREFIX}/java/sun-1.3.1/plugin/i386/ns600/libjavaplugin_oji.so ${PREFIX}/lib/MozillaFirebird-linux/plugins/libjavaplugin_oji.so
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
+	${LN} -s ${PLUGIN} ${NS_PLUGINS_DIR}/libjavaplugin_oji.so
 
 .include "../../mk/bsd.pkg.mk"
