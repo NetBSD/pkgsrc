@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/24 23:44:29 seb Exp $
+$NetBSD: distinfo,v 1.2 2003/05/30 23:51:25 seb Exp $
 
-SHA1 (CSSC-0.13alpha.pl1a.tar.gz) = 694bdf9a29d6b1e5c5178738769420b83e842edf
-Size (CSSC-0.13alpha.pl1a.tar.gz) = 526502 bytes
+SHA1 (CSSC-0.15alpha.pl0.tar.gz) = b20c672c631561e8c39d465a7fddea444964851f
+Size (CSSC-0.15alpha.pl0.tar.gz) = 625766 bytes
+SHA1 (patch-aa) = 300125779be21c9ac62f77c053bfd30aee2d21df
+SHA1 (patch-ab) = 648d6379637b791f6aea917e4d3c6379974f04f5
