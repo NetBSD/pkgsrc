@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.9 2001/02/24 11:06:09 sakamoto Exp $
+# $NetBSD: port2pkg.pl,v 1.10 2002/01/01 17:01:01 wiz Exp $
 #
 
 require 'getopts.pl';
@@ -48,29 +48,23 @@ sub usage_and_exit {
 sub fix_new_ports {
 	my (@allfiles);
 	my ($fn, $dn);
-	if (!opendir(PKGDIR, "$pkgdir/pkg")) {
-		mkdir("$pkgdir/pkg", 0777) ||
-		    warn("can't mkdir $pkgdir/pkg: $!");
-		rename("$pkgdir/pkg-comment", "$pkgdir/pkg/COMMENT") ||
-		    warn("can't copy $pkgdir/pkg-comment to ".
-			 "$pkgdir/pkg/COMMENT");
-		rename("$pkgdir/pkg-descr", "$pkgdir/pkg/DESCR") ||
-		    warn("can't copy $pkgdir/pkg-descr to ".
-			 "$pkgdir/pkg/DESCR");
-		foreach $fn (<$pkgdir/pkg-plist*>) {
-			$dn = $fn;
-			$dn =~ s|.*pkg-plist|PLIST|;
-			rename("$fn", "$pkgdir/pkg/$dn") ||
-			    warn("can't copy $fn to $pkgdir/pkg/$dn");
-		}
+	rename("$pkgdir/pkg-comment", "$pkgdir/COMMENT") ||
+	    warn("can't copy $pkgdir/pkg-comment to $pkgdir/COMMENT");
+	rename("$pkgdir/pkg-descr", "$pkgdir/DESCR") ||
+	    warn("can't copy $pkgdir/pkg-descr to $pkgdir/DESCR");
+	if ( -f "$pkgdir/pkg-message") {
+	    rename("$pkgdir/pkg-message", "$pkgdir/MESSAGE") ||
+	    warn("can't copy $pkgdir/pkg-message to $pkgdir/MESSAGE");
 	}
-	else {
-	    closedir(PKGDIR);
+	foreach $fn (<$pkgdir/pkg-plist*>) {
+	    $dn = $fn;
+	    $dn =~ s|.*pkg-plist|PLIST|;
+	    rename("$fn", "$pkgdir/$dn") ||
+		warn("can't copy $fn to $pkgdir/$dn");
 	}
 	unlink <$pkgdir/files/patch*>;
 	unlink("$pkgdir/distinfo");
 	mkdir("$pkgdir/patches",0777);
-	mkdir("$pkgdir/files",0777);
 }
 
 sub read_Makefile {
@@ -218,20 +212,20 @@ sub conv_Makefile {
 		    /^MASTER_SITE_SUBDIR/ ||
 		    /^EXTRACT_BEFORE_ARGS/ ||
 		    /^EXTRACT_AFTER_ARGS/) {
-			$remove if ($nextline);
+			$remove = 1 if ($nextline);
 		} elsif (/^PORTNAME/) {
 			print PKG "DISTNAME=$namespace$distname\n";
 			print PKG "PKGNAME=$namespace$pkgname\n" if defined($pkgname);
-			$remove if ($nextline);
+			$remove = 1 if ($nextline);
 		} elsif (/^(EXTRACT_CMD\?*=)/) {
 			print PKG "$1\t$extract_cmd\n";
-			$remove if ($nextline);
+			$remove = 1 if ($nextline);
 		} elsif (/^(MAINTAINER\?*=)/) {
 			print PKG "$1\t$maintainer\n";
-			$remove if ($nextline);
+			$remove = 1 if ($nextline);
 
-			open(DESCR, "$pkgdir/pkg/DESCR")
-				|| die "$pkgdir/pkg/DESCR: $!\n";
+			open(DESCR, "$pkgdir/DESCR")
+				|| die "$pkgdir/DESCR: $!\n";
 			while (<DESCR>) {
 				chop;
 				if (/^WWW:[\s]*(.*)/) {
@@ -239,14 +233,14 @@ sub conv_Makefile {
 				}
 			}
 			close(DESCR);
-			open(COMMENT, "$pkgdir/pkg/COMMENT")
-				|| die "$pkgdir/pkg/COMMENT: $!\n";
+			open(COMMENT, "$pkgdir/COMMENT")
+				|| die "$pkgdir/COMMENT: $!\n";
 			while (<COMMENT>) {
 				chomp;
 				print PKG "COMMENT=\t$_\n";
 			}
 			close(COMMENT);
-			unlink("$pkgdir/pkg/COMMENT");
+			unlink("$pkgdir/COMMENT");
 		} elsif ($noportdocs || /^\.if.*NOPORTDOCS/) {
 			if (/^\.if/) {
 				$noportdocs++;
@@ -280,14 +274,14 @@ sub add_manual {
 
 sub conv_PLIST {
 	my ($file, $plist);
-	return 0 if (!opendir(PKGDIR, "$pkgdir/pkg"));
+	return 0 if (!opendir(PKGDIR, "$pkgdir"));
 	while ($plist = readdir(PKGDIR)) {
 		next if (!($plist =~ /^PLIST/));
 
-		open(OLDPLIST, "$pkgdir/pkg/$plist")
-		    || die "$pkgdir/pkg/$plist: $!\n";
-		open(NEWPLIST, ">$pkgdir/pkg/new.$plist")
-			|| die "$pkgdir/pkg/new.$plist: $!\n";
+		open(OLDPLIST, "$pkgdir/$plist")
+		    || die "$pkgdir/$plist: $!\n";
+		open(NEWPLIST, ">$pkgdir/new.$plist")
+			|| die "$pkgdir/new.$plist: $!\n";
 
 		print NEWPLIST "\@comment \$NetBSD\$\n";
 		my ($cat_added, $man_added);
@@ -312,7 +306,7 @@ sub conv_PLIST {
 
 		close(NEWPLIST);
 		close(OLDPLIST);
-		rename("$pkgdir/pkg/new.$plist", "$pkgdir/pkg/$plist");
+		rename("$pkgdir/new.$plist", "$pkgdir/$plist");
 	}
 	closedir(PKGDIR);
 }
@@ -321,8 +315,8 @@ sub add_NetBSD_ID {
 	my ($patch);
 	if (open(MD5, "$portsdir/files/md5")
 	    || open(MD5, "$portsdir/distinfo")) {
-		open(NMD5, ">$pkgdir/files/md5")
-			|| die "$pkgdir/files/md5: $!\n";
+		open(NMD5, ">$pkgdir/distinfo")
+			|| die "$pkgdir/distinfo: $!\n";
 		print NMD5 "\$NetBSD\$\n\n";
 		while (<MD5>) {
 			print NMD5 $_;
