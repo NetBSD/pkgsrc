@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/22 03:47:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/24 23:55:40 snj Exp $
 
 DISTNAME=		rewind-20020420
 PKGREVISION=		4
@@ -15,7 +15,7 @@ CONFLICTS=		wine-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386 \
 			NetBSD-[2-9]*-i386
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 
@@ -33,7 +33,7 @@ LIBS+=			${LDFLAGS}
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_CUPS) && (${USE_CUPS} == YES)
-.  include "../../print/cups/buildlink2.mk"
+.  include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 .endif
 
@@ -46,9 +46,9 @@ post-install:
 	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd;		\
 	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
