@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:59 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/29 17:51:11 drochner Exp $
 
 DISTNAME=	pyDict-0.2.5.1
 CATEGORIES=	textproc
@@ -13,6 +13,7 @@ USE_X11BASE=	yes
 WRKSRC=		${WRKDIR}/dict
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_BUILDLINK2=	yes
 
 PYTHON_PATCH_SCRIPTS=	dict.py
 
@@ -28,5 +29,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dict.py ${PREFIX}/bin/pydict
 
 .include "../../lang/python/application.mk"
-.include "../../x11/pygtk/buildlink.mk"
+.include "../../x11/pygtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
