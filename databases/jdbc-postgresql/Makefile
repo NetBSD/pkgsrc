@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/09/27 23:17:53 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/15 17:13:57 jwise Exp $
 #
 
-DISTNAME=		postgresql-7.1.2
+DISTNAME=		postgresql-7.1.3
 PKGNAME=		jdbc-${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 CATEGORIES=		databases
@@ -28,9 +28,10 @@ CLASSPATH:=		${CLASSPATH}:.
 HELP_FILES=		README Implementation CHANGELOG
 
 pre-build:
-	${ECHO} "VERSION=7.1.2" > ${WRKSRC}/../../../src/Makefile.global
+	${ECHO} "VERSION=7.1.3" > ${WRKSRC}/../../../src/Makefile.global
 	${ECHO} "ANT=${LOCALBASE}/bin/ant" >> ${WRKSRC}/../../../src/Makefile.global
 	${ECHO} "top_srcdir=." >> ${WRKSRC}/../../../src/Makefile.global
+	${ECHO} "DEF_PGPORT=5432" >> ${WRKSRC}/../../../src/Makefile.global
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
@@ -38,7 +39,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/jdbc-postgresql
 	${INSTALL_DATA} ${WRKSRC}/example/*.java ${PREFIX}/share/examples/java/jdbc-postgresql
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jdbc-postgresql
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jdbc-postgresql/api
 .for X in ${HELP_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${X} ${PREFIX}/share/doc/java/jdbc-postgresql
 .endfor
