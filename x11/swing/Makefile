@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/14 14:47:57 agc Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/05 15:00:49 agc Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -25,14 +25,6 @@ WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-ROOT_GROUP?=	root
-.else
-ROOT_GROUP?=	wheel
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -79,7 +71,7 @@ do-install:
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/swing
 	cd ${WRKSRC}/examples && ${PAX} -rwpe . ${PREFIX}/share/examples/java/swing
-	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
 		${PREFIX}/share/examples/java/swing
 
 .include "../../mk/bsd.pkg.mk"
