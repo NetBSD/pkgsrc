@@ -1,0 +1,96 @@
+
+INTRODUCTION:
+
+This is a bare bones utility to enable people who have Palm OS 
+devices to sync to Mobile Application Link (MAL) compliant servers. 
+AvantGo (www.avantgo.com) and Puma Technologies (www.pumatech.com) 
+are the first two companies committing to producing servers which speak 
+this protocol. This utility will allow a user to sync with multiple servers,
+simultaneously or separately. The AvantGo.com service (www.avantgo.com) 
+is the first such server.   
+
+There is currently no way to set server parameters on the desktop; you 
+need to use the MobileLink application on the device. 
+
+MALSync only operates from the command line.  If you want to build it
+into some Unix-based, HotSync-like GUI, more power to you. 
+
+BINARIES:
+
+Executables for MALSync on Linux, Solaris, and FreeBSD are available at
+http://www.tomw.org/malsync
+
+Whether you use the pre-existing binaries or build MALSync yourselves,
+you will need the Palm OS applications.  Get these from
+http://www.avantgo.com/download/unsupported/ and install to your Palm 
+with either HotSync (MS Windows/Mac OS) or pilot-link (unix). 
+The binaries are also included with all the binary distributions of
+malsync from http://www.tomw.org/malsync
+
+COMPILING:
+
+To compile you need the source, which you can  get 
+from http://www.tom.org/malsync. 
+
+You also need the pilot-link distribution, which can be found at
+ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
+Download the latest version. You need libpisock.a. You 
+can either compile the whole thing and the library will be in 
+libsock/.libs or you can just type "make libpisock.a" in 
+the libsock directory (after running configure first).
+
+Now you need to edit the Makefile in the mal/client/unix 
+directory. Change "PILOT_LINK_DIR" to the appropriate 
+directory.
+
+It should all make and be happy. If not, send email to me 
+(tom@tomw.org) or the mal-dev mailing list (see below).
+
+RUNNING:
+
+You need to set two environment variables:
+
+PILOTRATE is the baud rate you want to use 
+
+PILOTPORT is the port your handheld is connected to.
+
+All this stuff is documented in the pilot link distribution.
+
+
+Usage: ./malsync [OPTIONS]
+
+  -p, --proxyaddress   Proxy address.
+  -r, --proxyport      Proxy port.
+  -u, --proxyname      Proxy username.
+  -d, --proxypasswd    Proxy password.
+  -s, --socksproxy     Socks proxy.
+  -o, --socksport      Socks port.
+  -q, --quiet          Be as quiet as this program can.
+  -D, --daemon         Work as a daemon (disconnect from shell).
+
+
+The serial port to connect to may be specified by the PILOTPORT
+environment variable. If not specified it will default to 
+/dev/pilot 
+
+The baud rate to connect with may be specified by the PILOTRATE
+environment variable. If not specified, it will default to 9600.
+Please use caution setting it to higher values, as several types
+of workstations have problems with higher rates.
+
+
+SUPPORT AND BUGS:
+ 
+THIS PRODUCT IS NOT OFFICIALLY SUPPORTED BY AVANTGO.  IT IS 
+PROVIDED AS IS FOR THE BENEFIT OF THE UNIX COMMUNITY.
+
+The pilot-unix mailing list can be investigated by sending 
+email to pilot-unix-requests@lists.best.com with the body 
+message "help".
+
+If you have any bugs or feature requests you can send them
+to tom@tomw.org. Also feel free to fix or add them yourself 
+and send me the diffs!
+
+
+

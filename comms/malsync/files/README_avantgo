@@ -1,0 +1,133 @@
+AVANTGO.COM AND UNIX DESKTOPS 
+=============================
+
+AvantGo.com is a web capture and browsing service for handheld
+devices.  The setup incudes software on both your Palm device and your
+desktop and an account on the AvantGo.com site.  If you have a modem
+(wireless or wired) for your Palm, you technically do not need the
+desktop software, though you'll probably want it anyway.
+
+This readme includes instructions for using a desktop Unix system to
+sync your Palm V, III, IIIx, VII, or PalmPilot Professional
+(collectively, "Palm device") to an AvantGo.com account.
+
+There is currently no method for synchronizing your Windows CE device
+to AvantGo.com through a Unix desktop.
+
+Support: 
+--------
+
+THIS PRODUCT IS NOT OFFICIALLY SUPPORTED BY AVANTGO.  IT IS PROVIDED
+AS IS FOR THE BENEFIT OF THE UNIX COMMUNITY.
+
+For support, please use one of the following:
+
+- The pilot-unix mailing list.  To participate in this list, send a
+message to pilot-unix-request@lists.best.com with the body containing
+(on separate lines) "subscribe" or "help".
+
+- The newsgroups news://comp.sys.palmtops.pilot,
+news://alt.soft-sys.avantgo, or news://de.comp.sys.palmtops.pilot
+(German)
+
+What You'll Need: 
+-----------------
+
+malsync
+
+   This is the actual synchronization executable.
+   Get it from http://www.tomw.org/malsync
+   Available in source or binary forms
+   View the README in the source/binary directory for build
+instructions.
+
+Palm OS .prc files
+
+   Specifically libmal.prc, MobileLink.prc, and avantgo.prc
+   You will need to install these using pilot-xfer or Mac/Win Hotsync
+   Included with malsync, or from
+   http://www.avantgo.com/download/unsupported
+
+pilot-xfer
+
+   Unix utility to install .prc files to Palm OS devices.
+   Included with the pilot-link utility.  V 0.9.3 is known to work.
+   Get it from ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
+   Use 'make pilot-xfer' once uncompressed
+
+
+Instructions: 
+-------------
+
+1) Copy the built executable (malsync) to the chosen directory and
+   change it to an executable permission, e.g.:
+
+    chmod ugo+x ./malsync
+
+2) Determine the correct serial port to which your Palm device is
+connected.
+   Two common options are /dev/ttyS0 and /dev/ttyS1.  Do one of two
+things:
+
+   - set the PILOTPORT environment variable to that device, e.g.
+
+      setenv PILOTPORT /dev/ttyS1
+  
+   - OR, bind the /dev/pilot port to the serial device, e.g.
+
+      ln -s /dev/ttyS1 /dev/pilot (root access required)
+
+3) Determine and set the correct communication speed.  Taking no
+action
+   will result in 9600 baud connection.  An alternative might be:
+
+      setenv PILOTRATE 57600
+
+4) Transfer the .prc's to the Palm device with pilot-xfer:
+
+      pilot-xfer -i MobileLink.prc libmal.prc avantgo.prc
+
+When the sync is finished, click on the Applications button of the
+Palm device.  A successful pilot-xfer will result in AvantGo and
+Mobile Link icons appearing in this list.
+
+5) Now you will need to set up your AvantGo account.
+
+- 
+Go to http://avantgo.com/setup/account_only.html and select the Palm
+Computing link.  - Continue through the install pages until you hit
+the page where you'll enter account information.  - Enter your account
+information and submit the page.  Write down the username and password
+you used here.
+
+Note: The site changes periodically, so the exact URL may be
+different.
+
+5) Tap the Mobile Link icon on the Palm device.  Enter this
+information:
+
+        Server: AvantGo Server
+   Server Addr: sync.avantgo.com
+          Port: 80
+     User Name: <your AvantGo.com username>
+      Password: <your AvantGo.com password>
+       Enabled: Should be checked
+
+6) In the directory in which you've put malsync, enter
+
+      ./malsync (use options if necessary)
+
+This should retrieve the stated channels from AvantGo.com.  A
+successful sync will result in these channels showing on your Palm
+device.
+
+
+
+   
+
+
+
+
+
+
+   
