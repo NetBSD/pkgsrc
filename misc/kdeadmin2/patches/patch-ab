@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/06/13 22:53:22 kristerw Exp $
+
+--- kcron/ktview.cpp.orig	2004-06-13 23:52:35.000000000 +0200
++++ kcron/ktview.cpp	2004-06-13 23:54:10.000000000 +0200
+@@ -19,7 +19,7 @@
+ #ifdef __DECCXX
+ #include <sstream>
+ #else
+-#include <strstream.h>
++#include <strstream>
+ #endif
+ #include <string>
+ 
