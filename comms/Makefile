@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/12/03 23:21:00 frueauf Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/06 07:41:48 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
@@ -14,6 +14,7 @@
     SUBDIR += minicom
     SUBDIR += modemd
     SUBDIR += pilot-link
+    SUBDIR += plp
 #    SUBDIR += qpage
 #    SUBDIR += rzsz
 #    SUBDIR += seyon
