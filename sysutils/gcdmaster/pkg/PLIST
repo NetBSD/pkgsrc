@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/19 13:02:23 drochner Exp $
+bin/gcdmaster
+man/man1/xcdrdao.1
+share/pixmaps/gcdmaster/gcdmaster.png
+share/pixmaps/gcdmaster/pixmap_audiocd.png
+share/pixmaps/gcdmaster/pixmap_copycd.png
+share/pixmaps/gcdmaster/pixmap_datacd.png
+share/pixmaps/gcdmaster/pixmap_dumpcd.png
+share/pixmaps/gcdmaster/pixmap_help.png
+share/pixmaps/gcdmaster/pixmap_mixedcd.png
+share/pixmaps/gcdmaster/pixmap_open.png
+share/gnome/apps/Applications/gcdmaster.desktop
+@dirrm share/pixmaps/gcdmaster
