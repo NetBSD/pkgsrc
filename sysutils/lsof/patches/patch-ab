@@ -1,19 +1,28 @@
-$NetBSD: patch-ab,v 1.14 2002/09/13 15:53:10 tron Exp $
+$NetBSD: patch-ab,v 1.15 2002/09/13 16:55:15 atatat Exp $
 
---- dialects/n+obsd/dlsof.h.orig	Mon Jun 17 03:44:15 2002
-+++ dialects/n+obsd/dlsof.h	Thu Sep 12 21:08:10 2002
-@@ -46,6 +46,10 @@
- #include <string.h>
- #include <unistd.h>
+Make 4.64 build under 1.5 and handle the change to ufs/mfs/mfsnode.h
+that involves struct bufq_state not being exposed to userland any
+more.
+
+--- dialects/n+obsd/dlsof.h.orig	Sun Jun 16 21:44:15 2002
++++ dialects/n+obsd/dlsof.h
+@@ -54,7 +54,15 @@
+ #include <sys/mbuf.h>
  
+ # if	defined(NETBSDV)
++#  if  __NetBSD_Version__>=106060000
 +#define	_KERNEL
-+#include <sys/buf.h>
-+#undef	_KERNEL
-+
- # if	defined(HASGETBOOTFILE)
- #include <util.h>
- # endif	/* defined(HASGETBOOTFILE) */
-@@ -209,9 +213,9 @@
++struct buf;	/* to satisfy a function prototype in buf.h */
++#  endif
++#include <sys/ucred.h>
+ #include <sys/buf.h>
++#  if  __NetBSD_Version__>=106060000
++#undef _KERNEL
++#  endif
+ # endif	/* defined(NETBSDV) */
+ 
+ #define	NFS
+@@ -209,9 +216,9 @@ struct sockproto {
  
  # if	defined(HASNULLFS)
  #define	_KERNEL
