@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3245 2003/09/05 03:58:08 itojun Exp $
+$NetBSD: CHANGES,v 1.3246 2003/09/05 04:40:40 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3538,3 +3538,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bbdb 2.34 [minoura 2003-09-04]
 	Updated mserv to 0.05nb2 [abs 2003-09-04]
 	Updated quagga to 0.96.2 [itojun 2003-09-05]
+	Updated mtree to 20030905 [grant 2003-09-05]

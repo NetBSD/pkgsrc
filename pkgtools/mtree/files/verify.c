@@ -1,4 +1,4 @@
-/*	$NetBSD: verify.c,v 1.1.1.1 2003/03/31 08:51:13 grant Exp $	*/
+/*	$NetBSD: verify.c,v 1.2 2003/09/05 04:38:48 grant Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -12,11 +12,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -33,32 +29,49 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #if defined(__RCSID) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)verify.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: verify.c,v 1.1.1.1 2003/03/31 08:51:13 grant Exp $");
+__RCSID("$NetBSD: verify.c,v 1.2 2003/09/05 04:38:48 grant Exp $");
 #endif
 #endif /* not lint */
 
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
+#endif
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
-
-#if !HAVE_CONFIG_H
-#include <dirent.h>
 #endif
 
+#if !HAVE_CONFIG_H
+#if HAVE_DIRENT_H
+#include <dirent.h>
+#endif
+#endif
+
+#if HAVE_ERRNO_H
 #include <errno.h>
+#endif
+#if HAVE_FNMATCH_H
 #include <fnmatch.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 #include "extern.h"
 

@@ -1,36 +1,39 @@
-#	$NetBSD: Makefile.in,v 1.4 2003/07/31 09:30:28 grant Exp $
+#	$NetBSD: Makefile.in,v 1.5 2003/09/05 04:38:45 grant Exp $
 
-srcdir	= @srcdir@
-prefix	= @prefix@
-VPATH	= @srcdir@
-SHELL	= /bin/sh
+srcdir=		@srcdir@
 
-CC	= @CC@
-CCLD	= $(CC)
-CFLAGS	= -I$(srcdir) -I. -I$(prefix)/include/libnbcompat @INCLUDES@ @CFLAGS@
-CPPFLAGS= @CPPFLAGS@
-DEFS	= @DEFS@
-INSTALL	= @INSTALL@
-LDFLAGS	= @LDFLAGS@ -L$(prefix)/lib
-LIBS	= @LIBS@ -lnbcompat
+prefix=		@prefix@
+exec_prefix=	@exec_prefix@
+sbindir=	@sbindir@
+mandir=		@mandir@
 
-LINK=	$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
-COMPILE=$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
+man8dir=	$(mandir)/man8
+cat8dir=	$(mandir)/cat8
 
-mandir=		$(prefix)/man
-mandirman8=	$(mandir)/man8
-mandircat8=	$(mandir)/cat8
+CC=		@CC@
+CCLD=		$(CC)
+LIBS=		@LIBS@
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
+DEFS=		@DEFS@
+CFLAGS=		@CFLAGS@
+LDFLAGS=	@LDFLAGS@
 
-PROG=	mtree
-OBJS=	compare.o crc.o create.o excludes.o mtree.o verify.o
+INSTALL=	@INSTALL@
+
+PROG=		mtree
+
+SRCS=	compare.c crc.c create.c excludes.c mtree.c verify.c
+OBJS=	$(SRCS:.c=.o)
+
+.PHONY: all clean install
+
+.c.o:
+	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
 
 all: $(PROG)
 
 $(PROG): $(OBJS)
-	$(LINK) $(OBJS) $(LIBS)
-
-.c.o:
-	$(COMPILE) -c $< -o $@
+	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(OBJS) $(PROG)
@@ -40,6 +43,9 @@ distclean: clean
 	rm -f configure.lineno config.log
 
 install:
-	$(INSTALL) $(PROG) $(PREFIX)/sbin
-	$(INSTALL) -m 444 $(PROG).8 $(mandirman8)/$(PROG).8
-	$(INSTALL) -m 444 $(PROG).cat8 $(mandircat8)/$(PROG).0
+	$(INSTALL) -m 755 -d $(sbindir)
+	$(INSTALL) -m 755 -d $(man8dir)
+	$(INSTALL) -m 755 -d $(cat8dir)
+	$(INSTALL) $(PROG) $(sbindir)
+	$(INSTALL) -m 444 $(PROG).8 $(man8dir)/$(PROG).8
+	$(INSTALL) -m 444 $(PROG).cat8 $(cat8dir)/$(PROG).0
