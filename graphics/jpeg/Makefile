@@ -3,7 +3,7 @@
 # Date created:		6 November 1994
 # Whom:			smace
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 05:22:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/02 08:10:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/17 15:12:43 max Exp
 #
 
@@ -20,6 +20,6 @@ INSTALL_TARGET= install install-lib
 MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 .include <bsd.port.mk>

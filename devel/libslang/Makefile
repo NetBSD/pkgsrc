@@ -3,7 +3,7 @@
 # Date created:         11 July 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 04:17:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/02 08:10:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
@@ -21,6 +21,6 @@ WRKSRC=         ${WRKDIR}/slang
 
 post-install:
 	@rm -f ${PREFIX}/lib/libslang.so.99.3[348]
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 .include <bsd.port.mk>

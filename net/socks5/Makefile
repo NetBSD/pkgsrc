@@ -3,7 +3,7 @@
 # Date created:				24 Apr 1996
 # Whom:					pst
 #
-# $NetBSD: Makefile,v 1.6 1998/01/24 21:45:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/02/02 08:11:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -40,6 +40,6 @@ MAN5=		libsocks5.conf.5 socks5.conf.5 socks5.passwd.5
 
 post-install:
 	ln -fs ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 .include <bsd.port.mk>

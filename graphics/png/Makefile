@@ -3,7 +3,7 @@
 # Date created:         5 Dec 1995
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 05:27:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/02 08:10:56 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 #
 
@@ -18,6 +18,6 @@ MAINTAINER=     ache@FreeBSD.org
 MAKEFILE=       makefile
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 .include <bsd.port.mk>
