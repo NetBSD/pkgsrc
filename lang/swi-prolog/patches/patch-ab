@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/11 20:11:13 jtb Exp $
 
---- src/configure.in.orig	Thu Feb 15 12:42:14 2001
-+++ src/configure.in
-@@ -30,7 +30,7 @@
+--- src/configure.orig	Wed Apr 11 16:48:12 2001
++++ src/configure
+@@ -564,7 +564,7 @@
  
  EXTRAOBJ=""
  INSTALLTARGET=dv-install
 -PL=pl
-+dnl PL=pl
++#PL=pl
  RT=""
  PLVERSION=`cat ../VERSION`
  
