@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 2000/01/21 12:37:34 itojun Exp $
+
+MD5 (netperf-2.1pl3.tar.gz) = ca221caf6dc60322386158c2885fcf68
+MD5 (netperf-21pl3-20000111.diff.gz) = 58c87769f3fdc43fbce6a2ecd7254d3a
