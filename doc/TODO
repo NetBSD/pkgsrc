@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.365 2003/03/11 14:30:37 markd Exp $
+$NetBSD: TODO,v 1.366 2003/03/12 07:25:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,11 +99,12 @@ Suggested package updates
 	o ctwm-3.6 [pkg/20648]
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.0
-	o dillo-0.7.1
+	o dillo-0.7.1.2
 	o distcc-1.2.2
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
+	o ethereal-0.9.11
 	o exim-4.12 [pkg/19850]
 	o exmh-2.6.1
 	o fltk-1.1.3
@@ -141,7 +142,7 @@ Suggested package updates
 	o icewm-1.2.7
 	o icu-2.4 [heinz]
 	o imp-3.1 [pkg/19497]
-	o imp-3.2
+	o imp-3.2.1
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4
 	o jakarta-ant-1.5 [pkg/18322]
@@ -155,6 +156,7 @@ Suggested package updates
 	o lbreakout2-2.4.1
 	o lcms-1.0.9
 	o lesstif-0.93.40
+	o libdvdcss-1.2.6
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -180,11 +182,14 @@ Suggested package updates
 	o napshare-1.2
 	o neon-0.23.8
 	o nessus-2.0.0 [pkg/20530]
+	o nessus-2.0.1
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
 	o netscape-7.02
+	o nhc98-1.16
 	o ns-flash-6.0.79
-	o nut-7.17
+	o nut-7.18
+	o ogle-0.9.1
 	o openh323-1.11.2
 	o openldap-2.1.12
 	o openoffice-1.0.2 [skrll]
@@ -254,6 +259,7 @@ Suggested package updates
 	o xmcd-3.2.0
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.9
+	o xplanet-1.0.0
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 
