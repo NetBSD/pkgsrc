@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/01/31 21:18:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/05 16:55:42 fredb Exp $
 bin/bochs
 share/bochs/doc/00README
 share/bochs/doc/3rdparty.license.html
@@ -31,7 +31,6 @@ share/bochs/doc/whatisbochs.html
 share/bochs/doc/win32.html
 share/bochs/bios/BIOS-bochs-990925a
 share/bochs/bios/VGABIOS-elpin-2.20
-@exec %D/bin/mkfontdir %D/share/bochs/xfonts
 share/bochs/xfonts/fonts.dir
 share/bochs/xfonts/hercules.bdf
 share/bochs/xfonts/vga.bdf
