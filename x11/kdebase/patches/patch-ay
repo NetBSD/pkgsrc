@@ -1,0 +1,14 @@
+$NetBSD: patch-ay,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+
+diff -u kfm/kiojob.h.orig kfm/kiojob.h
+--- kfm/kiojob.h.orig	Tue Oct  5 22:33:18 1999
++++ kfm/kiojob.h	Tue Oct  5 22:33:43 1999
+@@ -58,7 +58,7 @@
+      * give values for every parameter.
+      */
+     void mount( bool _ro, const char *_fstype, const char* _dev, const char *_point );
+-    void unmount( const char *_point );
++    void unmount( const char *_dev, const char *_point );
+     /**
+      * Gets a directory listing.
+      * Connect to 'newDirEntry' to get the directory entries. You must expect that the
