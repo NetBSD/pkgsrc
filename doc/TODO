@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.459 2003/04/11 08:18:45 wiz Exp $
+$NetBSD: TODO,v 1.460 2003/04/11 15:45:34 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -120,7 +120,6 @@ Suggested package updates
 	o fox-1.0.34
 	o frozen-bubble-1.0.0
 	o fsviewer-0.2.5
-	o gaim-0.61 [pkgsrc-wip]
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
