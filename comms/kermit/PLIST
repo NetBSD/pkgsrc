@@ -1,2 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/23 22:47:44 jmmv Exp $
 bin/kermit
+share/doc/kermit/ckaaaa.txt
+share/doc/kermit/ckc206.txt
+share/doc/kermit/ckcbwr.txt
+share/doc/kermit/ckccfg.txt
+share/doc/kermit/ckcplm.txt
+share/doc/kermit/ckermit70.txt
+share/doc/kermit/ckermit80.txt
+share/doc/kermit/ckubwr.txt
+share/doc/kermit/ckuins.txt
+share/doc/kermit/ckututor.txt
+@dirrm share/doc/kermit
