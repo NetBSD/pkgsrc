@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/11/26 06:49:56 jlam Exp $
+# $NetBSD: Makefile,v 1.1 2002/07/05 06:58:34 tron Exp $
 #
 
 DISTNAME=      	TimeDate-1.10
