@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/25 16:31:05 ben Exp $
 #
 
-DISTNAME=		gfract-0.21
-PKGREVISION=		4
+DISTNAME=		gfract-0.30
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://www.cs.Helsinki.FI/u/salerma/gfract/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gfract-palettes-0.1.tar.gz
@@ -13,22 +12,19 @@ COMMENT=		Gtk-based fractal program
 
 USE_BUILDLINK3=		yes
 USE_X11=		yes
+USE_GNU_TOOLS+=		make
 ALL_TARGET=		gfract
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+SUBST_CLASSES=		prefix
+SUBST_MESSAGE.prefix=	"Fixing prefix."
+SUBST_STAGE.prefix=	post-extract
+SUBST_FILES.prefix=	main.cpp
+SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
+
 post-extract:
 	${MV} ${WRKDIR}/monk2\'.map ${WRKDIR}/monk2.map
-	files="main.c";							\
-	cd ${WRKSRC}; for file in $${files}; do				\
-		${MV} $${file} $${file}.fixme;				\
-		${SED} -e "s|/usr/local/|${PREFIX}/|g"			\
-			$${file}.fixme > $${file};			\
-		if [ -x $${file}.fixme ]; then				\
-			${CHMOD} +x $${file};				\
-		fi;							\
-		${RM} $${file}.fixme;					\
-	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract
@@ -38,6 +34,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gfract ${PREFIX}/bin/
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
