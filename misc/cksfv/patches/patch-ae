@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/13 22:03:08 wiz Exp $
+
+--- README.orig	Sun Aug 13 23:33:33 2000
++++ README	Sun Aug 13 23:36:07 2000
+@@ -48,6 +48,16 @@
+         ------------------------------------------------------------
+         Everything OK
+         
++    If you do not want to check all files liste in an .sfv file, name the
++    files you want checked on the command line:
++
++	$ cksfv -f new_files.sfv -i COPYING ChangeLog
++	--( Verifying file: new_files.sfv )-------------------------
++	COPYING:        OK
++	ChangeLog:      OK
++	------------------------------------------------------------
++	Everything OK
++
+     Now for creating your own .sfv files.  You can run the following command.
+ 
+         $ cksfv * > mine.sfv

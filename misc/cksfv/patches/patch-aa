@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
+
+--- Makefile.orig	Thu Aug 10 22:06:59 2000
++++ Makefile	Thu Aug 10 22:07:17 2000
+@@ -17,13 +17,13 @@
+ # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+ all:
+-	cd src && gmake
++	cd src && ${MAKE}
+ 
+ install:
+-	cd src && gmake install
++	cd src && ${MAKE} install
+ 
+ dist:
+-	gmake clean
++	${MAKE} clean
+ 	rm -rf ~/cksfv-1.1 && \
+ 	cp -r . ~/cksfv-1.1 && cd ~ && rm -rf cksfv-1.1/CVS \
+ 	&& rm -rf cksfv-1.1/src/CVS && tar cf cksfv-1.1.tar cksfv-1.1 \
+@@ -38,4 +38,4 @@
+ clean:
+ 	rm -f *.o *~ *.core
+ 	rm -f rpm/*.o rpm/*~ rpm/*.core
+-	cd src && gmake clean
++	cd src && ${MAKE} clean

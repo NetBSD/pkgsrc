@@ -1,0 +1,3 @@
+cksfv can create simple file verification (SFV) listings and test
+already created SFV files.  SFV files are used to verify file
+integrity via a 32 bit CRC.
