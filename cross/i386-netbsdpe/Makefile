@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/01 05:59:46 minoura Exp $
 #
 
-DISTVERSION=		1.1.2
+DISTVERSION=		1.1.4
 DISTFILES=		# none
 
 MAINTAINER=		peace-sacrifice@hauN.org
@@ -15,6 +15,12 @@ BINUTILS_GNUTARGET=	pe-i386
 BINUTILS_LDEMULATION=	i386pe
 USE_CROSS_GCC=		yes
 GCC_FAKE_RUNTIME=	yes
+GCC_CXX=		yes
+#GCC_F77=		yes
+#GCC_OBJC=		yes
+#GCC_CXX_RUNTIME=	yes
+#GCC_F77_RUNTIME=	yes
+#GCC_OBJC_RUNTIME=	yes
 
 TARGET_ARCH=		i386-netbsdpe
 GCC_CONFIGURE_ARGS+=	--enable-threads
@@ -29,6 +35,7 @@ CROSS_DISTFILES+=	${GCC_WIN32_PATCHBUNDLE}
 PTHREAD_DISTNAME=	unproven-pthreads-0.17
 PTHREAD_DISTFILE=	${PTHREAD_DISTNAME}.tar.gz
 MASTER_SITES+=		ftp://ftp.flame.org/pub/netbsd/
+CROSS_DISTFILES+=	${PTHREAD_DISTFILE}
 
 pre-patch: gcc-patchbundle
 
@@ -49,12 +56,14 @@ post-patch:
 		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread .
 
 
+CFLAGS_FOR_TARGET+=	-I${WRKDIR}
 post-configure:
 	${CP} ${FILESDIR}/i386_limits.h ${SYS_INCLUDE}/machine/limits.h
 	${CP} ${FILESDIR}/syslimits.h ${SYS_INCLUDE}/sys/
 	${CP} ${FILESDIR}/featuretest.h ${SYS_INCLUDE}/sys/
 	${CP} ${FILESDIR}/limits.h ${SYS_INCLUDE}/
 	${RM} ${WRKDIR}/${GCC_DISTNAME}/texinfo/makeinfo/Makefile
+	$(SED) "s/extern FILE/__declspec(dllimport) FILE/" /usr/include/stdio.h > $(WRKDIR)/stdio.h
 
 #.include "../COMMON/cross.mk"
 .include "files/cross.mk"

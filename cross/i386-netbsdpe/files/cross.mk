@@ -2,6 +2,7 @@
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
 # Shared definitions for building a cross-compile environment.
+# We have to switch to COMMON/cross.mk when it is upgraded for the new gcc.
 
 DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 CATEGORIES+=		cross lang
@@ -101,33 +102,27 @@ GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}
 GCC_LANGUAGES=		c # add to these below
 BUILD_DEPENDS+= ${LOCALBASE}/bin/autoheader:../../devel/autoconf
 
-.if defined(GCC_NO_RUNTIME) || defined(GCC_FAKE_RUNTIME)
-GCC_NO_CXX_RUNTIME=	yes
-GCC_NO_F77_RUNTIME=	yes
-GCC_NO_OBJC_RUNTIME=	yes
-.endif
-
-.if !defined(GCC_NO_CXX)
-CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/g++
+.if defined(GCC_CXX)
+CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/c++
 GCC_LANGUAGES+=		c++
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx
-.if !defined(GCC_NO_CXX_RUNTIME)
+.if defined(GCC_CXX_RUNTIME)
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx-runtime
 .endif
 .endif
 
-.if !defined(GCC_NO_F77)
+.if defined(GCC_F77)
 GCC_LANGUAGES+=		f77
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-f77
-.if !defined(GCC_NO_F77_RUNTIME)
+.if defined(GCC_F77_RUNTIME)
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-f77-runtime
 .endif
 .endif
 
-.if !defined(GCC_NO_OBJC)
+.if defined(GCC_OBJC)
 GCC_LANGUAGES+=		objc
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-objc
-.if !defined(GCC_NO_OBJC_RUNTIME)
+.if defined(GCC_OBJC_RUNTIME)
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-objc-runtime
 .endif
 .endif
@@ -199,13 +194,13 @@ gcc-build:
 	@${LN} -sf ${LD_FOR_TARGET} ${GCC_WRKSRC}/gcc/ld
 	@cd ${GCC_WRKSRC} && make all-libiberty
 	@cd ${GCC_WRKSRC}/gcc && ${GCC_MAKE} all
-.if !defined(GCC_NO_CXX) && !defined(GCC_NO_CXX_RUNTIME)
+.if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
 	@cd ${GCC_WRKSRC} && ${GCC_MAKE} configure-target-libio configure-target-libstdc++ all-target-libio all-target-libstdc++
 .endif
-.if !defined(GCC_NO_F77) && !defined(GCC_NO_F77_RUNTIME)
+.if defined(GCC_F77) && defined(GCC_F77_RUNTIME)
 	@cd ${GCC_WRKSRC} && ${GCC_MAKE} configure-target-libf2c all-target-libf2c
 .endif
-.if !defined(GCC_NO_OBJC) && !defined(GCC_NO_OBJC_RUNTIME)
+.if defined(GCC_OBJC) && defined(GCC_OBJC_RUNTIME)
 	@cd ${GCC_WRKSRC}/gcc && ${GCC_MAKE} objc-runtime
 .endif
 
@@ -217,8 +212,8 @@ gcc-install:
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
 	${RM} ${PREFIX}/bin/${TARGET_ARCH}-gcj # install-driver installs gcj but we need not it
-.if !defined(GCC_NO_F77)
-.if !defined(GCC_NO_F77_RUNTIME)
+.if defined(GCC_F77)
+.if defined(GCC_F77_RUNTIME)
 	@cd ${GCC_WRKSRC} && ${GCC_MAKE} install-target-libf2c
 .endif
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-g77 ${PREFIX}/bin/${TARGET_ARCH}-f77
@@ -227,8 +222,12 @@ gcc-install:
 		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
 	done
 .endif
-.if !defined(GCC_NO_CXX)
-.if !defined(GCC_NO_CXX_RUNTIME)
+.if defined(GCC_CXX)
+	@${MKDIR} ${TARGET_DIR}/include/c++
+	@for file in exception new new.h typeinfo; do \
+		${CP} -p ${GCC_WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
+	done
+.if defined(GCC_CXX_RUNTIME)
 	@${MKDIR} ${TARGET_DIR}/include/g++/std
 	@cd ${GCC_WRKSRC} && ${GCC_MAKE} install-target-libstdc++
 .endif
