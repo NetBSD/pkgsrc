@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.1 2001/05/03 20:56:33 jtb Exp $
+
+--- Makefile.in.orig	Thu May  3 19:25:15 2001
++++ Makefile.in
+@@ -58,42 +58,35 @@
+ INS =  $(BASE_INS) $(PS_INS) $(X11_INS) $(GIF_INS)
+ 
+ .c.o:  
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CC $(CC) $(CFLAGS) -c $< -o $@
+ 
+ 
+-all: libg2.a
++all: libg2.la
+ 	test -d ./include || mkdir ./include
+ 	cp $(INS) ./include/
+ 
+-shared: libg2.so
+-	@echo
++libg2.la: $(OBJ)
++	${LIBTOOL} --tag=CC $(CC) -o $@ $(OBJ:.o=.lo) -Wl,-R${X11BASE}/lib \
++	-L${X11BASE}/lib -lX11 -lm --version-info 0:0 -rpath ${LIBDIR}
+ 
+-libg2.a: $(OBJ)
+-	$(AR) $(ARFLAGS) libg2.a $(OBJ)
+-	ln -s libg2.a libg2.0.40.a
+-
+-libg2.so: $(OBJ)
+-	$(CC) -shared -o libg2.so $(OBJ) -lc -lm
+-
+-install: libg2.a
++install: libg2.la
+ 	test -d $(LIBDIR) || mkdir -p $(LIBDIR)
+ 	test -d $(INCDIR) || mkdir -p $(INCDIR)
+-	$(INSTALL_DATA) libg2.a $(LIBDIR)
++	${LIBTOOL} $(INSTALL_DATA) libg2.la $(LIBDIR)
+ 	for IFILE in $(INS); do \
+ 		$(INSTALL_DATA) $$IFILE  $(INCDIR); \
+ 	done
+ 
+ clean:
+ 	-(cd ./demo ; make clean)
+-	-rm -f $(OBJ)
+-	-rm -f libg2.a config.cache config.log Makefile.bak config.status
++	-rm -f $(OBJ) $(OBJ:.o=.lo)
++	-rm -fr libg2.* .libs config.cache config.log Makefile.bak config.status
+ 	-rm -f ./include/*.h
+ 	-$(FIND) . -name "*~" -exec rm -f {} \;
+ 	-(cd ./g2_perl ; make clean)
+ 	-rm -f ./g2_perl/test.ps ./g2_perl/test.gif
+-	-rm -f ./libg2.0.40.a
+ 
+-demo:	libg2.a
++demo:	libg2.la
+ 	(cd ./demo ; make)
+ 
+ depend:
