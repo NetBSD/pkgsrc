@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 1999/08/05 13:09:28 agc Exp $
 
---- Makefile.orig	Wed Sep  6 19:24:02 1995
-+++ Makefile	Tue Jan 19 15:53:43 1999
-@@ -5,7 +5,7 @@
+--- Makefile.orig	Thu Sep  7 03:24:02 1995
++++ Makefile	Thu Aug  5 13:50:46 1999
+@@ -3,9 +3,11 @@
  
+ SHELL=/bin/sh
+ 
++OPSYS!= uname -s
++
  #SOCKS=-DSOCKS
  # or
 -SOCKS=-Dconnect=Rconnect -Dgetsockname=Rgetsockname -Dlisten=Rlisten -Daccept=Raccept -Drcmd=Rrcmd -Dbind=Rbind -Dselect=Rselect
@@ -11,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
  # If the second definition of SOCKS is used, you MUST also
  # define SHORTENED_RBIND
  
-@@ -19,7 +19,7 @@
+@@ -19,7 +21,7 @@
  # It should be this current directory.
  
  # If your system has getcwd() but no getwd(), uncomment the next line:
@@ -20,7 +24,7 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
  
  #If your system doesn't have waitpid(), uncomment the nextline:
  #NO_WAITPID=-DNO_WAITPID
-@@ -43,16 +43,16 @@
+@@ -43,16 +45,16 @@
  
  # Define RCMD and SUPPORT_RCMD if you want to support Rrcmd, which is required
  # for SOCKSified rlogin, rsh, and rcp.
@@ -41,7 +45,7 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
  # Be careful with the OPTIMIZE flag. SunPro's SC2.0.1, for example, is
  # knwon to produce incorrect code when -O is used.
  
-@@ -73,13 +73,13 @@
+@@ -73,13 +75,13 @@
  #BIND_RESOLVER=-DBIND_RESOLVER
  
  # Directory into which to install the man pages
@@ -58,7 +62,7 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
  
  # SunOS 4.1.x should use
  #CC=cc
-@@ -103,13 +103,13 @@
+@@ -103,13 +105,13 @@
  #GETPASS=getpass.o
  
  # IRIX 5 should use
@@ -79,7 +83,30 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
  
  # Ultrix 4.0 should use
  #CC=cc
-@@ -174,13 +174,13 @@
+@@ -156,13 +158,15 @@
+ #GETPASS=
+ 
+ # SOLARIS should use
+-#CC=cc
+-#RESOLV_LIB=-lresolv -lnsl -lsocket
+-#OTHER_CFLAGS=-DSOLARIS -Dindex=strchr -Drindex=strrchr $(SHORTENED_RBIND) -DUSE_DIRENT $(GETCWD) $(FASCIST) -DCOMPAT $(TRY_PASV)
+-#RANLIB=/bin/true
+-#OS=solaris2.2
+-#INSTALL=install
+-#GETPASS=getpass.o
++.if ${OPSYS} == "SunOS"
++#CC=cc
++RESOLV_LIB=-lresolv -lnsl -lsocket
++OTHER_CFLAGS=-DSOLARIS -Dindex=strchr -Drindex=strrchr $(SHORTENED_RBIND) -DUSE_DIRENT $(GETCWD) $(FASCIST) -DCOMPAT $(TRY_PASV)
++RANLIB=/bin/true
++OS=solaris2.2
++INSTALL=install
++GETPASS=getpass.o
++.endif
+ 
+ # Interactive Systems Unix should use
+ #OTHER_CFLAGS = -DISC -DSVR3 -Dindex=strchr -Drindex=strrchr -D_XOPEN_SOURCE -DGETCWD $(FASCIST) $(SHORTENED_RBIND) -DCOMPAT $(TRY_PASV)
+@@ -174,13 +178,15 @@
  #RESOLV_LIB=-linet -lc_s
  
  # netBSD should use
@@ -90,6 +117,7 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
 -#INSTALL=install
 -#GETPASS=
 -#RESOLV_LIB=
++.if ${OPSYS} == "NetBSD"
 +OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV) -Dunix=1
 +CC=cc
 +RANLIB=ranlib
@@ -97,10 +125,11 @@ $NetBSD: patch-aa,v 1.4 1999/02/10 15:16:46 frueauf Exp $
 +INSTALL=install -c
 +GETPASS=
 +RESOLV_LIB=
++.endif
  
  # FreeBSD should use:
  #CC=cc
-@@ -413,3 +413,11 @@
+@@ -413,3 +419,11 @@
  		( cd $$i ; $(MAKE) clean) done
  
  
