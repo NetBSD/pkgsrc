@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5757 2004/04/27 15:50:43 adam Exp $
+$NetBSD: CHANGES,v 1.5758 2004/04/27 17:08:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2268,3 +2268,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated SDL_ttf to 2.0.6 [adam 2004-04-27]
 	Updated ttf2pt1 to 3.4.4 [adam 2004-04-27]
 	Updated dvipng to 1.0 [adam 2004-04-27]
+	Added glitz-0.1.0 [adam 2004-04-27]
