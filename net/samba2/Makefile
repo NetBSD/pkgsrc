@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/01/14 05:15:39 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/07 11:35:45 jlam Exp $
 
 .include "Makefile.common"
 PKGREVISION=		# empty1
@@ -21,29 +21,7 @@ CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 
 REPLACE_PERL+=		script/findsmb.in
 
-.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink3.mk"
-BUILD_DEFS+=		USE_CUPS
-CONFIGURE_ARGS+=	--enable-cups
-.endif
-
-.if defined(USE_PAM)
-.include "../../mk/pam.buildlink3.mk"
-BUILD_DEFS+=		USE_PAM
-CONFIGURE_ARGS+=	--with-pam
-.endif
-
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == "YES"
-.include "../../databases/openldap/buildlink3.mk"
-BUILD_DEFS+=		USE_OPENLDAP
-CONFIGURE_ARGS+=	--with-ldapsam
-PLIST_SUBST+=		SAMBA_LDAP=""
-.else
-PLIST_SUBST+=		SAMBA_LDAP="@comment "
-MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
-SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
-			${ROOT_USER} ${ROOT_GROUP} 0600
-.endif
+.include "options.mk"
 
 # Microsoft DFS support
 CONFIGURE_ARGS+=	--with-msdfs
@@ -77,6 +55,9 @@ MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
 .endif
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
+
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 # Remove irrelevant files for this package.
 post-extract:
@@ -114,8 +95,5 @@ post-install:
 		${EXAMPLESDIR}/misc
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
-
-.include "../../devel/readline/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

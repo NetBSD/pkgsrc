@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:29 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/07 11:35:47 jlam Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	7
@@ -61,16 +61,23 @@ GDMOWN=		daemon
 GDMGRP=		daemon
 .endif
 
-.if defined(USE_PAM)
-DEPENDS+=	PAM-[0-9]*:../../security/PAM
-.else
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm1
+PKG_SUPPORTED_OPTIONS=	PAM
+.include "../../mk/bsd.options.mk"
 
+.if !empty(PKG_OPTIONS:MPAM)
+.  include "../../mk/pam.buildlink3.mk"
+.else
 SUBST_CLASSES+=		pam
 SUBST_MESSAGE.pam=	"Disabling PAM support."
 SUBST_STAGE.pam=	pre-configure
 SUBST_FILES.pam=	configure
 SUBST_SED.pam=		-e 's:security/pam_appl.h:nopam:g'
 .endif
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 
 post-build:
 	cd ${WRKSRC}/config;						\
@@ -117,9 +124,5 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
 	${INSTALL_SCRIPT} ${WRKDIR}/gdm ${PREFIX}/etc/rc.d/
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../x11/gnome-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
