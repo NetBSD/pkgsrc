@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2001/12/17 19:17:48 wiz Exp $
+
+--- include/lib.h.orig	Thu Jun 22 09:41:29 1995
++++ include/lib.h
+@@ -51,6 +51,7 @@
+ char *strsave(const char *s);
+ int is_prime(unsigned);
+ 
++#include <eucmac.h>
+ #include <stdio.h>
+ 
+ FILE *xtmpfile();
