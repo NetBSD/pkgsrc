@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2003/12/07 13:28:33 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2004/01/23 22:52:29 recht Exp $
 
---- lib/ftp.c.orig	Fri Oct 31 22:36:43 2003
-+++ lib/ftp.c
-@@ -2097,11 +2097,12 @@ CURLcode ftp_perform(struct connectdata 
+--- lib/ftp.c.orig	2004-01-21 17:50:05.000000000 +0100
++++ lib/ftp.c	2004-01-23 23:46:58.000000000 +0100
+@@ -2210,11 +2210,12 @@
  #ifdef HAVE_STRFTIME
      if(data->set.get_filetime && (data->info.filetime>=0) ) {
        struct tm *tm;
