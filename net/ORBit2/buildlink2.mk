@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/10 16:06:46 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/23 19:57:30 jlam Exp $
 
 .if !defined(ORBIT2_BUILDLINK2_MK)
 ORBIT2_BUILDLINK2_MK=	# defined
@@ -17,6 +17,7 @@ BUILDLINK_FILES.orbit2+=	lib/libORBit-2.*
 BUILDLINK_FILES.orbit2+=	lib/libORBitCosNaming-2.*
 BUILDLINK_FILES.orbit2+=	lib/libname-server-2.*
 BUILDLINK_FILES.orbit2+=	lib/orbit-2.0/*
+BUILDLINK_FILES.orbit2+=	share/idl/orbit-2.0/CosNaming.idl
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
