@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/02/17 21:55:17 tron Exp $
+# $NetBSD: Makefile,v 1.27 1999/02/19 21:55:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -15,8 +15,6 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	qt-1.42:../../x11/qt
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-
-CONFLICTS=	kdelibs-*
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
