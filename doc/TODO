@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.225 2003/01/28 14:22:06 martti Exp $
+$NetBSD: TODO,v 1.226 2003/01/28 22:58:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -60,6 +60,10 @@ Suggested new packages
 	  (See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
 
+	tutos
+	the ultimate team organization software
+	http://www.tutos.org
+
 	vmsbackup
 	Read VMS backup tapes. [cjep is looking at this one, but
 			hasn't got anything to test against.]
@@ -79,6 +83,7 @@ Suggested package updates
 	o binutils-2.13.2.1
 	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
+	o bnc-2.8.6 [pkg/20101]
 	o bochs-2.0.2
 	o bonnie++-1.03c
 	o bzflag-1.7g0
@@ -118,6 +123,7 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
 	o gkrellm-2.1.3
+	o glade-0.6.4
 	o glade2-1.1.3 [pkg/19154]
 	o gmp-4.1.2
 	o gnome-applets-2.0.0
