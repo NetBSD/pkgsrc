@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8062 2004/11/27 12:13:22 gson Exp $
+$NetBSD: CHANGES,v 1.8063 2004/11/27 12:16:34 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Set-IntSpan to 1.08 [gson 2004-11-27]
 	Updated phppgadmin to 3.5 [jdolecek 2004-11-27]
 	Updated st to 1.5.1 [gson 2004-11-27]
+	Updated autogen to 5.6.4 [kristerw 2004-11-27]
