@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/25 01:04:46 jmc Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/09 11:54:01 agc Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-gtl=${LOCALBASE}
 
 YACC=			bison -y
+
+UNLIMIT_RESOURCES=	datasize memorysize
 
 .include "../../mk/bsd.prefs.mk"
 
