@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2005/01/14 13:00:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2005/01/17 15:35:41 adam Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -72,6 +72,7 @@ include/wine/windows/accctrl.h
 include/wine/windows/aclapi.h
 include/wine/windows/activscp.h
 include/wine/windows/activscp.idl
+include/wine/windows/advpub.h
 include/wine/windows/amstream.h
 include/wine/windows/amstream.idl
 include/wine/windows/amvideo.h
@@ -92,6 +93,7 @@ include/wine/windows/commctrl.h
 include/wine/windows/commdlg.h
 include/wine/windows/compobj.h
 include/wine/windows/control.h
+include/wine/windows/control.idl
 include/wine/windows/cpl.h
 include/wine/windows/custcntl.h
 include/wine/windows/cvconst.h
@@ -155,9 +157,11 @@ include/wine/windows/evcode.h
 include/wine/windows/excpt.h
 include/wine/windows/exdisp.h
 include/wine/windows/exdisp.idl
+include/wine/windows/exdispid.h
 include/wine/windows/fci.h
 include/wine/windows/fdi.h
 include/wine/windows/guiddef.h
+include/wine/windows/htmlhelp.h
 include/wine/windows/icm.h
 include/wine/windows/icmpapi.h
 include/wine/windows/imagehlp.h
@@ -194,6 +198,7 @@ include/wine/windows/mciavi.h
 include/wine/windows/mcx.h
 include/wine/windows/mediaerr.h
 include/wine/windows/mediaobj.h
+include/wine/windows/mediaobj.idl
 include/wine/windows/minmax.h
 include/wine/windows/mlang.h
 include/wine/windows/mlang.idl
@@ -249,9 +254,11 @@ include/wine/windows/pshpack8.h
 include/wine/windows/pstore.h
 include/wine/windows/pstore.idl
 include/wine/windows/ras.h
+include/wine/windows/reason.h
 include/wine/windows/regstr.h
 include/wine/windows/richedit.h
 include/wine/windows/richole.h
+include/wine/windows/richole.idl
 include/wine/windows/rpc.h
 include/wine/windows/rpcdce.h
 include/wine/windows/rpcdcep.h
@@ -338,6 +345,7 @@ lib/libwine.so.1
 lib/libwine_unicode.so
 lib/libwine_unicode.so.1
 lib/wine/advapi32.dll.so
+lib/wine/advpack.dll.so
 lib/wine/amstream.dll.so
 lib/wine/atl.dll.so
 lib/wine/avicap32.dll.so
@@ -414,6 +422,7 @@ lib/wine/kernel32.dll.so
 lib/wine/keyboard.drv.so
 lib/wine/krnl386.exe.so
 lib/wine/libadvapi32.def
+lib/wine/libadvpack.def
 lib/wine/libamstream.def
 lib/wine/libatl.def
 lib/wine/libavicap32.def
@@ -474,6 +483,7 @@ lib/wine/libmapi32.def
 lib/wine/libmlang.def
 lib/wine/libmpr.def
 lib/wine/libmsacm32.def
+lib/wine/libmscms.def
 lib/wine/libmsdmo.def
 lib/wine/libmshtml.def
 lib/wine/libmsi.def
@@ -562,6 +572,7 @@ lib/wine/msacm.dll.so
 lib/wine/msacm.drv.so
 lib/wine/msacm32.dll.so
 lib/wine/msadp32.acm.so
+lib/wine/mscms.dll.so
 lib/wine/msdmo.dll.so
 lib/wine/msg711.acm.so
 lib/wine/mshtml.dll.so
@@ -731,14 +742,3 @@ share/wine/wine.inf
 @dirrm include/wine/msvcrt/sys
 @dirrm include/wine/msvcrt
 @dirrm include/wine
-include/wine/windows/advpub.h
-include/wine/windows/control.idl
-include/wine/windows/exdispid.h
-include/wine/windows/htmlhelp.h
-include/wine/windows/mediaobj.idl
-include/wine/windows/reason.h
-include/wine/windows/richole.idl
-lib/wine/advpack.dll.so
-lib/wine/libadvpack.def
-lib/wine/libmscms.def
-lib/wine/mscms.dll.so
