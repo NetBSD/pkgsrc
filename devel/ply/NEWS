@@ -1,0 +1,14 @@
+initial import of ply-1.5
+
+The 1.4 version of the package was provided by NONAKA Kimihiro
+in PR 26344 .  (And seems to be based upon the FreeBSD port.)
+
+Cleaned up and updated to 1.5 by me.
+
+PLY is a Python-only implementation of the popular compiler construction
+tools lex and yacc. The implementation borrows ideas from a number of
+previous efforts; most notably John Aycock's SPARK toolkit. However, the
+overall flavor of the implementation is more closely modeled after the C
+version of lex and yacc. The other significant feature of PLY is that it
+provides extensive input validation and error reporting--much more so than
+other Python parsing tools.
