@@ -1,8 +1,8 @@
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.9 1998/04/15 10:45:05 agc Exp $
+#	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
-#	Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.8 1998/02/09 00:47:25 hubertf Exp $
 #
-# The include file <bsd.port.subdir.mk> contains the default targets
+# The include file <bsd.pkg.subdir.mk> contains the default targets
 # for building ports subdirectories. 
 #
 #
