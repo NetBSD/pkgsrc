@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
+$NetBSD: patch-ab,v 1.23 2004/03/08 22:14:19 minskim Exp $
 
---- configure.orig	2004-02-07 21:57:29.000000000 -0600
+--- configure.orig	2004-03-01 17:58:59.000000000 -0600
 +++ configure
-@@ -5558,6 +5558,7 @@ fi
+@@ -5613,6 +5613,7 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -5977,6 +5978,9 @@ fi
+@@ -6038,6 +6039,9 @@ fi
  	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  	    EXTRA_CFLAGS=""
  	    LDFLAGS=""
@@ -18,9 +18,9 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
 +	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
 +	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
- 	IRIX-6.*|IRIX64-6.5*)
+ 	IRIX-6.*)
  	    SHLIB_CFLAGS=""
-@@ -6002,6 +6006,9 @@ fi
+@@ -6063,6 +6067,9 @@ fi
  		esac
  		LDFLAGS="-n32"
  	    fi
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  	    ;;
  	IRIX64-6.*)
  	    SHLIB_CFLAGS=""
-@@ -6026,6 +6033,9 @@ fi
+@@ -6087,6 +6094,9 @@ fi
  	            LDFLAGS="-64"
  	        fi
  	    fi
@@ -40,7 +40,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  	    ;;
  	Linux*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -6107,6 +6117,9 @@ fi
+@@ -6168,6 +6178,9 @@ fi
  EOF
  
  
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -6188,6 +6201,9 @@ fi
+@@ -6249,6 +6262,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*|OpenBSD-*)
@@ -60,7 +60,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -6220,18 +6236,16 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -6281,18 +6297,16 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -73,15 +73,15 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
 -		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
--echo "configure:6233: checking for ELF" >&5
-+echo "configure:6247: checking for ELF" >&5
+-echo "configure:6294: checking for ELF" >&5
++echo "configure:6308: checking for ELF" >&5
  		cat > conftest.$ac_ext <<EOF
--#line 6235 "configure"
-+#line 6249 "configure"
+-#line 6296 "configure"
++#line 6310 "configure"
  #include "confdefs.h"
  
  #ifdef __ELF__
-@@ -6242,11 +6256,20 @@ EOF
+@@ -6303,11 +6317,20 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -104,7 +104,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -6565,6 +6588,9 @@ EOF
+@@ -6626,6 +6649,9 @@ EOF
  		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -114,7 +114,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -6836,8 +6862,8 @@ fi
+@@ -6897,8 +6923,8 @@ fi
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
@@ -125,7 +125,7 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -6854,10 +6880,10 @@ fi
+@@ -6915,10 +6941,10 @@ fi
  
      # Stub lib does not depend on shared/static configuration
      if test "$RANLIB" = "" ; then
@@ -138,3 +138,36 @@ $NetBSD: patch-ab,v 1.22 2004/03/08 19:55:35 minskim Exp $
          INSTALL_STUB_LIB='$(INSTALL_LIBRARY) $(STUB_LIB_FILE) $(LIB_INSTALL_DIR)/$(STUB_LIB_FILE) ; (cd $(LIB_INSTALL_DIR) ; $(RANLIB) $(STUB_LIB_FILE))'
      fi
  
+@@ -7217,7 +7243,7 @@ elif test "$SHARED_BUILD" = "0" || test 
+         TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
+     fi
+     TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+-    TCL_LIB_SPEC="-L${libdir} ${TCL_LIB_FLAG}"
++    TCL_LIB_SPEC="${TCL_LIB_SPEC_RPATH} -L${libdir} ${TCL_LIB_FLAG}"
+ else
+     TCL_BUILD_EXP_FILE="lib.exp"
+     eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
+@@ -7247,13 +7273,19 @@ VERSION=${TCL_VERSION}
+ #--------------------------------------------------------------------
+ 
+ if test "$FRAMEWORK_BUILD" = "1" ; then
+-    TCL_PACKAGE_PATH="${libdir}/Resources/Scripts"
++    TCL_PACKAGE_PATH_ADD="${libdir}/Resources/Scripts"
+ elif test "$prefix" != "$exec_prefix"; then
+-    TCL_PACKAGE_PATH="${libdir} ${prefix}/lib"
++    TCL_PACKAGE_PATH_ADD="${libdir}/tcl ${prefix}/lib"
+ else
+-    TCL_PACKAGE_PATH="${prefix}/lib"
++    TCL_PACKAGE_PATH_ADD="${prefix}/lib/tcl"
+ fi
+-
++for dir in ${TCL_PACKAGE_PATH_ADD}; do
++    if test -z "${TCL_PACKAGE_PATH}"; then
++      TCL_PACKAGE_PATH="$dir"
++    else
++      TCL_PACKAGE_PATH="${TCL_PACKAGE_PATH} $dir"
++    fi
++done
+ #--------------------------------------------------------------------
+ #       The statements below define various symbols relating to Tcl
+ #       stub support.

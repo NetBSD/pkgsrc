@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5160 2004/03/08 21:16:09 seb Exp $
+$NetBSD: CHANGES,v 1.5161 2004/03/08 22:14:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1257,3 +1257,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome to 2.4.2nb3 [jmmv 2004-03-08]
 	Updated gnome-extras to 2.4.2nb3 [jmmv 2004-03-08]
 	Updated pspp to 0.3.0nb3 [seb 2004-03-08]
+	Updated tcl to 8.4.6 [minskim 2004-03-08]
+	Updated tk to 8.4.6 [minskim 2004-03-08]
