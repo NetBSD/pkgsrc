@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2003/02/06 15:33:30 wiz Exp $
+
 If you wish to use the Audio CD playback capability of XMMS, you need
 to configure XMMS in the following manner:
 
@@ -9,3 +12,5 @@ to configure XMMS in the following manner:
    XMMS file selection dialog boxes as the path to select tracks on audio CDs
    (e.g., `/cdrom/').
 6. Select "OK" to save the changes.
+
+===========================================================================
