@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/17 14:48:18 drochner Exp $
+--- setup.orig	Fri Oct 22 16:34:52 1999
++++ setup	Sat Nov  6 18:43:29 1999
+@@ -208,13 +208,13 @@
+ #################################################################
+ # setup GNU readline library .inputrc file
+ #################################################################
+-if test -f $HOME/.inputrc
+-then
+-	echo $HOME'/.inputrc already exists'
+-else
+-	echo 'Default ' $HOME'/.inputrc generated'
+-	echo 'set editing-mode vi' > $HOME/.inputrc
+-fi
++#if test -f $HOME/.inputrc
++#then
++#	echo $HOME'/.inputrc already exists'
++#else
++#	echo 'Default ' $HOME'/.inputrc generated'
++#	echo 'set editing-mode vi' > $HOME/.inputrc
++#fi
+ 
+ ##############################################################################
+ # Display message
