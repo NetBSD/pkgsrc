@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/10/21 07:51:14 minskim Exp $
+$NetBSD: distinfo,v 1.8 2004/12/16 16:25:09 minskim Exp $
 
-SHA1 (xterm-196/xterm.tar.gz) = 7e1493d2578cb8d1d6038108e48aad44f40e2a61
-Size (xterm-196/xterm.tar.gz) = 678177 bytes
+SHA1 (xterm-196.tgz) = 7e1493d2578cb8d1d6038108e48aad44f40e2a61
+Size (xterm-196.tgz) = 678177 bytes
 SHA1 (patch-aa) = f4f624ba6fc9a3f7ac1641a093131f638ea52451
 SHA1 (patch-ab) = 34a4c95c2d90f38639cee856f202bcc86228e71b
 SHA1 (patch-ac) = d215ee65851b4b7b33211fad9b6d821d701a1fa8
