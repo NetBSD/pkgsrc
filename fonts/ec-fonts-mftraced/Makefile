@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/30 04:59:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/30 16:20:31 dmcmahill Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -17,4 +17,5 @@ HAS_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 
+.include "../../fonts/mftrace/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
