@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 1999/01/14 13:56:04 frueauf Exp $
+$NetBSD: patch-ac,v 1.5 1999/11/23 21:12:13 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O for optimization
@@ -6,8 +6,8 @@ Much cleanup of the script.  Added various options such as
 -Wall for gcc warnings
 -Wl,  for additional linker arguments
 
---- fc.orig	Tue May 16 17:37:49 1995
-+++ fc	Tue Jan 12 20:31:32 1999
+--- ./fc.orig	Tue May 16 17:37:49 1995
++++ ./fc	Tue Nov 23 16:08:52 1999
 @@ -1,26 +1,54 @@
  #!/bin/sh
 -PATH=/v/bin:/bin:/usr/bin
@@ -15,9 +15,10 @@ Much cleanup of the script.  Added various options such as
 +#USAGESTART
  # f77-style shell script to compile and load fortran, C, and assembly codes
 -
-+#
- #	usage:	f77 [options] files [-l library]
+-#	usage:	f77 [options] files [-l library]
 -
++#
++#	usage:	f2c-f77 [options] files [-l library]
 +#
  #	Options:
 -
@@ -106,7 +107,13 @@ Much cleanup of the script.  Added various options such as
 +CC=${CC_f2c:-'cc '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
-@@ -58,25 +83,29 @@
+@@ -53,30 +78,34 @@
+ F2C=${F2C:-f2c}
+ F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nx400'}
+-CPP=${CPP:-/lib/cpp}
++CPP=${CPP:-/usr/bin/cpp}
+ rc=0
+ trap "rm -f $s $t; exit \$rc" 0
  OUTF=a.out
  cOPT=1
 -set -- `getopt cCD:gI:N:Oo:Suw6 "$@"`
