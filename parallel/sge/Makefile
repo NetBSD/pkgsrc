@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/27 14:22:18 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/20 22:34:03 kristerw Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -34,6 +34,11 @@ PKG_USERS=		${SGE_USER}:${SGE_GROUP}::Sun\\ Grid\\ Engine\\ Administrator
 EVAL_PREFIX+=	PKGSRC_SSL_PREFIX=openssl
 
 AIMK=	${SETENV} ${MAKE_ENV} tcsh -fb ${WRKSRC}/source/aimk
+
+CONFIG_GUESS_OVERRIDE=	source/3rdparty/qmake/config.guess \
+		source/3rdparty/qtcsh/config.guess
+CONFIG_SUB_OVERRIDE=	source/3rdparty/qmake/config.sub \
+		source/3rdparty/qtcsh/config.sub
 
 .include "../../mk/bsd.prefs.mk"
 
