@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/04/04 09:47:07 tron Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/04/07 13:10:16 tron Exp $
 
 SUSE_VERSION=		7.3
 
@@ -17,6 +17,11 @@ EMULDIR=		${PREFIX}/${EMULSUBDIR}
 
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=1.2:../../pkgtools/rpm2pkg
+
+BUILD_DEFS+=		RPMFILES
+.if defined(RPMIGNOREPATH)
+BUILD_DEFS+=		RPMIGNOREPATH
+.endif
 
 # The SuSE Linux packages have circular dependencies.
 LDD?=			${TRUE}
