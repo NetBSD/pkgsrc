@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/08 04:08:40 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/08 04:09:05 grant Exp $
 
 DISTNAME=		Test-Inline-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=		Inlining your tests next to the code being tested
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Inline/.packlist
 
-DEPENDS+=		p5-Test-Simple>=0.33:../p5-Test-Simple
+DEPENDS+=		p5-Test-Simple>=0.33:../../devel/p5-Test-Simple
 
 .include "../../devel/p5-Test-Harness/depends.mk"
 .include "../../lang/perl5/module.mk"
