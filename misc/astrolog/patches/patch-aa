@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:08 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/09/26 02:20:09 hubertf Exp $
 
 *** makefile.unx.bak	Sun Sep 29 23:27:00 1996
 --- Makefile	Tue Jan 14 01:06:55 1997
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:08 agc Exp $
    charts0.o charts1.o charts2.o charts3.o intrpret.o\
    xdata.o xgeneral.o xdevice.o xcharts0.o xcharts1.o xcharts2.o xscreen.o
   # If you don't have X windows, delete the "-lX11" part from the line below:
-! LIBS = -L${X11BASE}/lib -lX11 -lm
+! LIBS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lX11 -lm
 ! CFLAGS += -I${X11BASE}/include -DDEFAULT_DIR=\"${PREFIX}/lib/astrolog\"
   
   astrolog:: $(OBJ)
