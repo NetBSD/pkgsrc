@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/18 09:57:57 agc Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/15 01:18:39 jlam Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -17,22 +17,22 @@ REPLACE_PERL+=	lazarus/lazarus
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${LOCALBASE}/tct/bin
-	cd ${WRKSRC}/bin &&							\
-	for f in grave-robber mactime; do					\
-		${INSTALL_SCRIPT} $$f ${LOCALBASE}/tct/bin;			\
-	done;									\
-	for f in file icat ils lastcomm major_minor md5 pcat timeout unrm; do	\
+	cd ${WRKSRC}/bin &&						\
+	for f in grave-robber mactime; do				\
+		${INSTALL_SCRIPT} $$f ${LOCALBASE}/tct/bin;		\
+	done;								\
+	for f in file icat ils lastcomm major_minor md5 pcat timeout unrm; do \
 		${INSTALL_PROGRAM} $$f ${LOCALBASE}/tct/bin;		\
 	done
-	cd ${WRKSRC}/extras &&							\
-	for f in bdf ils2mac realpath; do					\
-		${INSTALL_SCRIPT} $$f ${LOCALBASE}/tct/bin;			\
+	cd ${WRKSRC}/extras &&						\
+	for f in bdf ils2mac realpath; do				\
+		${INSTALL_SCRIPT} $$f ${LOCALBASE}/tct/bin;		\
 	done
 	${INSTALL_SCRIPT} ${WRKSRC}/lazarus/lazarus ${LOCALBASE}/tct/bin
 	${INSTALL_PROGRAM_DIR} ${LOCALBASE}/tct/etc
 	cd ${WRKSRC}/etc && ${INSTALL_DATA} magic ${LOCALBASE}/tct/etc
 	${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/tct
-	cd ${WRKSRC}/docs &&							\
+	cd ${WRKSRC}/docs &&						\
 	for f in README design-notes grave-robber.README lazarus.README mac.README; do \
 		${INSTALL_DATA} $$f ${LOCALBASE}/share/doc/tct;		\
 	done
