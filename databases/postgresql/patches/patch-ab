@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
+$NetBSD: patch-ab,v 1.7 1999/09/20 23:38:48 jlam Exp $
 
---- ./Makefile.shlib.orig	Fri Jul 16 18:46:16 1999
-+++ ./Makefile.shlib	Sat Sep 18 17:34:59 1999
+--- ./Makefile.shlib.orig	Fri Jul 30 00:13:44 1999
++++ ./Makefile.shlib	Mon Sep 20 11:00:59 1999
 @@ -50,6 +50,7 @@
  # on a platform where we don't know how to build a shared library.
  shlib := 
@@ -10,16 +10,7 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
  
  # For each platform we support shlibs on, set shlib and install-shlib-dep,
  # and update flags as needed to build a shared lib.  Note we depend on
-@@ -64,7 +65,7 @@
- endif
- 
- ifeq ($(PORTNAME), freebsd)
--  ifdef BSD_SHLIB
-+  ifneq $(BSD_SHLIB),)
-     install-shlib-dep	:= install-shlib
-     ifdef ELF_SYSTEM
-       shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
-@@ -78,7 +79,8 @@
+@@ -65,20 +66,26 @@
  endif
  
  ifeq ($(PORTNAME), bsd)
@@ -28,8 +19,10 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
 +  ifeq ($(LIBTOOL),)
      install-shlib-dep	:= install-shlib
      shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
-     ifdef ELF_SYSTEM
-@@ -87,11 +89,16 @@
+-    ifdef ELF_SYSTEM
++    ifeq ($(ELF_SYSTEM), true)
+       LDFLAGS_SL	:= -x -Bshareable -soname $(shlib)
+     else
        LDFLAGS_SL	:= -x -Bshareable -Bforcearchive
      endif
      CFLAGS		+= $(CFLAGS_SL)
@@ -48,7 +41,19 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
      ifeq ($(DLSUFFIX), .so)
        install-shlib-dep := install-shlib
        shlib			:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
-@@ -183,7 +190,7 @@
+@@ -96,9 +103,9 @@
+ endif
+ 
+ ifeq ($(PORTNAME), freebsd)
+-  ifdef BSD_SHLIB
++  ifneq $(BSD_SHLIB),)
+     install-shlib-dep	:= install-shlib
+-    ifdef ELF_SYSTEM
++    ifeq ($(ELF_SYSTEM), true)
+       shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+       LDFLAGS_SL	:= -x -shared -soname $(shlib)
+     else
+@@ -191,7 +198,7 @@
  
  # Default target definition.  Note shlib is empty if not building a shlib.
  
@@ -57,8 +62,8 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
  
  # Rules to build regular and shared libraries
  
-@@ -197,6 +204,21 @@
- 	$(RANLIB) $@
+@@ -207,6 +214,21 @@
+ 
  endif
  
 +ifneq ($(LIBTOOL),)
@@ -78,8 +83,8 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
 +
  ifneq ($(shlib),)
  ifneq ($(PORTNAME), win)
- 
-@@ -228,8 +250,8 @@
+ ifneq ($(PORTNAME), aix)
+@@ -250,8 +272,8 @@
  
  .PHONY: all install-lib install-shlib
  
@@ -90,7 +95,7 @@ $NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
  
  install-shlib: $(shlib)
  	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/$(shlib)
-@@ -251,4 +273,8 @@
+@@ -273,4 +295,8 @@
  .PHONY: clean-shlib
  
  clean-shlib:
