@@ -1,14 +1,13 @@
---- help-browser/Makefile.in.orig	Tue May 23 11:25:07 2000
-+++ help-browser/Makefile.in	Tue May 30 21:05:46 2000
-@@ -558,8 +558,9 @@
+$NetBSD: patch-ag,v 1.6 2000/06/21 00:47:45 jlam Exp $
+
+--- help-browser/Makefile.in.orig	Tue May 23 05:25:07 2000
++++ help-browser/Makefile.in	Tue Jun 20 20:07:41 2000
+@@ -558,7 +558,7 @@
  help-caller.o gnome-help-browser.o: help-browser.h
  
  install-exec-local:
 -	$(INSTALL_PROGRAM) $(top_srcdir)/help-browser/gnome-download \
--		$(top_srcdir)/help-browser/gnome-convert $(DESTDIR)$(bindir)/
 +	$(INSTALL_SCRIPT) $(top_srcdir)/help-browser/gnome-download \
-+		$(top_srcdir)/help-browser/gnome-convert \
-+		$(DESTDIR)$(bindir)/
+ 		$(top_srcdir)/help-browser/gnome-convert $(DESTDIR)$(bindir)/
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.

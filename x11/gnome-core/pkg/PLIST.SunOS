@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2000/02/15 10:29:36 agc Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2000/06/21 00:47:46 jlam Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -61,10 +61,13 @@ include/applet-widget.h
 include/gnome-panel.h
 lib/appletsConf.sh
 lib/libfish_applet.a
+lib/libfish_applet.la
 lib/libfish_applet.so.0.0
 lib/libgkb_applet.a
+lib/libgkb_applet.la
 lib/libgkb_applet.so.0.0
 lib/libpanel_applet.a
+lib/libpanel_applet.la
 lib/libpanel_applet.so.0.0
 share/applets/Amusements/.directory
 share/applets/Amusements/fifteen_applet.desktop
