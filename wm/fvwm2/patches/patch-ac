@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2003/02/12 00:47:53 atatat Exp $
+
+Re-open /dev/null on the (now) closed stdin file descriptor.  The
+fvwm2 changelog says they did this to make gmplayer realize it was
+not running interactively (ie, its stdin was not a tty), but that
+means that all things get executed with stdin closed.  That's not a
+very good security posture.  Some things can get confused or do
+wrong things if stdin is closed when they start.
+
+--- fvwm/builtins.c.orig	2003-01-16 07:58:58.000000000 -0500
++++ fvwm/builtins.c
+@@ -23,6 +23,7 @@
+ 
+ #include "config.h"
+ 
++#include <fcntl.h>
+ #include <stdio.h>
+ #include <signal.h>
+ #include <errno.h>
+@@ -784,6 +785,7 @@ void CMD_Exec(F_CMD_ARGS)
+   {
+     /* close stdin so the exec'd process knows its not interactive */
+     close(0);
++    open("/dev/null", O_RDWR);
+     if (execl(exec_shell_name, exec_shell_name, "-c", cmd, NULL)==-1)
+     {
+       fvwm_msg(ERR,"exec_function","execl failed (%s)",strerror(errno));
