@@ -1,0 +1,19 @@
+*** makefile.in.orig	Thu Sep  5 10:59:48 1996
+--- makefile.in	Fri Oct 18 18:12:56 1996
+***************
+*** 33,39 ****
+  CC		= @CC@
+  LINK		= $(CC) $(CFLAGS)
+  INSTALL		= @INSTALL@
+! INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+  INSTALL_DATA	= @INSTALL_DATA@
+  
+  CFLAGS		= @CFLAGS@
+--- 33,39 ----
+  CC		= @CC@
+  LINK		= $(CC) $(CFLAGS)
+  INSTALL		= @INSTALL@
+! INSTALL_PROGRAM	= @INSTALL_PROGRAM@ -o bin -g bin
+  INSTALL_DATA	= @INSTALL_DATA@
+  
+  CFLAGS		= @CFLAGS@
