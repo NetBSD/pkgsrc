@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2001/04/13 16:34:40 tron Exp $
+# $NetBSD: Makefile,v 1.218 2001/04/16 20:23:14 zuntum Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -120,6 +120,7 @@ SUBDIR+=	xmove
 SUBDIR+=	xmx
 SUBDIR+=	xneko
 SUBDIR+=	xp
+SUBDIR+=	xpaste
 SUBDIR+=	xpenguins
 SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
