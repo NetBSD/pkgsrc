@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/09/02 20:57:03 explorer Exp $
+emul/freebsd/usr/lib/compat/libgnumalloc.so.2.0
+emul/freebsd/usr/lib/compat/libresolv.so.2.0
+emul/freebsd/usr/lib/compat/liby.so.2.0
+emul/freebsd/usr/lib/libalias.so.2.4
+emul/freebsd/usr/lib/libc.so.3.1
+emul/freebsd/usr/lib/libcrypt.so.2.0
+emul/freebsd/usr/lib/libcalendar.so.2.0
+emul/freebsd/usr/lib/libcom_err.so.2.0
+emul/freebsd/usr/lib/libcurses.so.2.0
+emul/freebsd/usr/lib/libedit.so.2.0
+emul/freebsd/usr/lib/libf2c.so.2.0
+emul/freebsd/usr/lib/libftpio.so.4.0
+emul/freebsd/usr/lib/libipx.so.2.0
+emul/freebsd/usr/lib/libkvm.so.2.0
+emul/freebsd/usr/lib/libmytinfo.so.2.0
+emul/freebsd/usr/lib/libncurses.so.3.1
+emul/freebsd/usr/lib/libopie.so.2.0
+emul/freebsd/usr/lib/libpcap.so.2.2
+emul/freebsd/usr/lib/librpcsvc.so.2.0
+emul/freebsd/usr/lib/libscsi.so.2.0
+emul/freebsd/usr/lib/libskey.so.2.0
+emul/freebsd/usr/lib/libz.so.2.0
+emul/freebsd/usr/lib/libss.so.2.0
+emul/freebsd/usr/lib/libtermcap.so.2.1
+emul/freebsd/usr/lib/libtermlib.so.2.1
+emul/freebsd/usr/lib/libutil.so.2.2
+emul/freebsd/usr/lib/libvgl.so.1.0
+emul/freebsd/usr/lib/libxpg4.so.2.0
+emul/freebsd/usr/lib/libc_r.so.3.0
+emul/freebsd/usr/lib/libscrypt.so.2.0
+emul/freebsd/usr/lib/libtelnet.so.2.0
+emul/freebsd/usr/lib/libm.so.2.0
+emul/freebsd/usr/lib/libdialog.so.3.0
+emul/freebsd/usr/lib/libg++.so.4.0
+emul/freebsd/usr/lib/libgmp.so.3.0
+emul/freebsd/usr/lib/libmp.so.3.0
+emul/freebsd/usr/lib/libgnuregex.so.2.0
+emul/freebsd/usr/lib/libreadline.so.3.0
+emul/freebsd/usr/lib/libstdc++.so.2.0
+emul/freebsd/usr/libexec/ld.so
+emul/freebsd/usr/X11R6/lib/libICE.so.6.3
+emul/freebsd/usr/X11R6/lib/libPEX5.so.6.0
+emul/freebsd/usr/X11R6/lib/libSM.so.6.0
+emul/freebsd/usr/X11R6/lib/libX11.so.6.1
+emul/freebsd/usr/X11R6/lib/libXIE.so.6.0
+emul/freebsd/usr/X11R6/lib/libXaw.so.6.1
+emul/freebsd/usr/X11R6/lib/libXext.so.6.3
+emul/freebsd/usr/X11R6/lib/libXi.so.6.0
+emul/freebsd/usr/X11R6/lib/libXmu.so.6.0
+emul/freebsd/usr/X11R6/lib/libXp.so.6.2
+emul/freebsd/usr/X11R6/lib/libXt.so.6.0
+emul/freebsd/usr/X11R6/lib/libXtst.so.6.1
+emul/freebsd/usr/X11R6/lib/liboldX.so.6.0
+@dirrm emul/freebsd/usr/X11R6/lib
+@dirrm emul/freebsd/usr/X11R6
+@dirrm emul/freebsd/usr/libexec
+@dirrm emul/freebsd/usr/lib/compat
+@dirrm emul/freebsd/usr/lib
+@dirrm emul/freebsd/usr
+@dirrm emul/freebsd
