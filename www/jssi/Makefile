@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/10 01:01:12 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/31 15:44:30 jlam Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -14,7 +14,6 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_JAVA=
 USE_GMAKE=
 NO_CONFIGURE=
 WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
@@ -28,6 +27,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jssi
 	cd ${WRKSRC}/../../docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/jssi
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This must be after bsd.pkg.mk is brought in
