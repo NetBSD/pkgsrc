@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/22 21:11:39 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/10 01:39:04 wiz Exp $
 #
 
 DISTNAME=	ucd-snmp-4.0.1
@@ -7,6 +7,9 @@ CATEGORIES=	net
 MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/
 
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.ece.ucdavis.edu/ucd-snmp/
+
 # This patch is malformed (first Index line is missing, other
 # Index lines are relative to the agent directory), so I've
 # put a fixed copy in ${FILESDIR}.  (kim 1999-09-21)
@@ -14,9 +17,6 @@ MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 #PATCH_SITES=	http://ucd-snmp.ucdavis.edu/patches/
 #PATCHFILES=	012.patch
 #DIST_SUBDIR=	ucd-snmp
-
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.ece.ucdavis.edu/ucd-snmp/
 
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 
