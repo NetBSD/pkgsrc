@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/10/28 19:09:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2005/02/16 23:26:17 seb Exp $
 #
 
 DISTNAME=	file-roller-2.8.3
@@ -26,15 +26,15 @@ GCONF2_SCHEMAS=		file-roller.schemas
 
 EVAL_PREFIX+=		PREFIX.gtar=gtar
 PREFIX.gtar_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_TAR=\"\\\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\\\"\"
+CPPFLAGS+=		-DFILEROLLER_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
 
 EVAL_PREFIX+=		PREFIX.unzip=unzip
 PREFIX.unzip_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_UNZIP=\"\\\"${PREFIX.unzip}/bin/unzip\\\"\"
+CPPFLAGS+=		-DFILEROLLER_UNZIP="\"${PREFIX.unzip}/bin/unzip\""
 
 EVAL_PREFIX+=		PREFIX.zip=zip
 PREFIX.zip_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_ZIP=\"\\\"${PREFIX.zip}/bin/zip\\\"\"
+CPPFLAGS+=		-DFILEROLLER_ZIP="\"${PREFIX.zip}/bin/zip\""
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
