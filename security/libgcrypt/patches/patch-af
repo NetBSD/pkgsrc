@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2005/01/18 13:11:38 tv Exp $
+
+--- src/ath.c.orig	2005-01-18 08:09:03.000000000 -0500
++++ src/ath.c
+@@ -24,11 +24,6 @@
+ 
+ #include <assert.h>
+ #include <unistd.h>
+-#ifdef HAVE_SYS_SELECT_H
+-# include <sys/select.h>
+-#else
+-# include <sys/time.h>
+-#endif
+ #include <sys/types.h>
+ #ifndef _WIN32
+ #include <sys/wait.h>
