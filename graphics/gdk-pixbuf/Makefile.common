@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.37 2004/02/17 02:45:21 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.38 2004/04/25 04:15:43 xtraeme Exp $
 
 DISTNAME=		gdk-pixbuf-${VER}.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
