@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/06 00:28:21 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/03/03 04:00:32 minskim Exp $
 
-SHA1 (opencdk-0.5.3.tar.gz) = 6d6414bce43d1c9817a610e0d5cd8d49ed25cd5d
-Size (opencdk-0.5.3.tar.gz) = 438603 bytes
+SHA1 (opencdk-0.5.4.tar.gz) = ded4449e147bf586c18d32b891b3ff814c788fa0
+Size (opencdk-0.5.4.tar.gz) = 442746 bytes
