@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6944 2004/08/18 21:53:46 schmonz Exp $
+$NetBSD: CHANGES,v 1.6945 2004/08/18 23:12:44 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3910,3 +3910,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated scons to 0.96 [recht 2004-08-18]
 	Added Cg-compiler-1.2.1 [minskim 2004-08-18]
 	Updated getmail to 4.0.11 [schmonz 2004-08-18]
+	Updated cfengine2 to 2.0.10 [ben 2004-08-18]
