@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.23 2003/08/27 12:05:42 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.24 2003/08/27 12:54:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -257,7 +257,7 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 #	into a destination filename, e.g. -e "s|/curses.h|/ncurses.h|g"
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-_BLNK_COOKIE.${_pkg_}=	${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
+_BLNK_COOKIE.${_pkg_}=		${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
 
 BUILDLINK_TARGETS+=		buildlink-${_pkg_}
 _BLNK_TARGETS.${_pkg_}=		buildlink-${_pkg_}-message
@@ -503,6 +503,44 @@ _BLNK_TRANSFORM+=	mangle:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 _BLNK_TRANSFORM_SED+=	-f ${_BLNK_TRANSFORM_SEDFILE}
 _BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 
+# UNBUILDLINK_PATTERNS and UNBUILDLINK_FILES list shell globs and files
+# relative to ${WRKSRC} that need to have reference to ${BUILDLINK_DIR}
+# stripped out of them.
+#
+UNBUILDLINK_PATTERNS?=		# empty
+_UNBUILDLINK_PATTERNS=		${UNBUILDLINK_PATTERNS}
+_UNBUILDLINK_PATTERNS+=		*-config
+_UNBUILDLINK_PATTERNS+=		*Conf.sh
+_UNBUILDLINK_PATTERNS+=		*.pc
+_UNBUILDLINK_PATTERNS_FIND=	\
+	\( ${_UNBUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
+UNBUILDLINK_FILES?=		# empty
+_UNBUILDLINK_FILES=		\
+	${UNBUILDLINK_FILES}	\
+	`${FIND} . ${_UNBUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
+#
+# When "unbuildlinkifying" a file, we must remove references to the
+# buildlink directories and change any -llib to the proper replacement
+# libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
+# options are removed to optimize the resulting file.  Also, prefer the
+# .la files in ${LOCALBASE}/lib over the ones in ${DEPOTBASE}/*/lib when
+# creating new .la files.  This makes "overwrite" packages look and feel
+# more like they would without the pkgviews integration.
+#
+UNBUILDLINK_SED?=		# empty
+_UNBUILDLINK_SED=		${UNBUILDLINK_SED}
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_UNBUILDLINK_SED+=		-e "s|${DEPOTBASE}/[^/]*/|${LOCALBASE}/|g"
+.endif
+_UNBUILDLINK_SED+=		${_BLNK_UNTRANSFORM_SED}
+
+SUBST_CLASSES+=			unbuildlink
+SUBST_STAGE.unbuildlink=	post-build
+SUBST_MESSAGE.unbuildlink=	\
+	"Fixing buildlink references in files-to-be-installed."
+SUBST_FILES.unbuildlink=	${_UNBUILDLINK_FILES}
+SUBST_SED.unbuildlink=		${_UNBUILDLINK_SED}
+
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
 # into references to ${BUILDLINK_DIR} and ${BUILDLINK_X11_DIR}. These
@@ -621,6 +659,9 @@ _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 _BLNK_WRAP_SETENV.SHLIBTOOL=	# empty
 _BLNK_WRAPPER_SH.SHLIBTOOL=	${.CURDIR}/../../mk/buildlink3/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
+
+# We need to "unbuildlinkify" any libtool archives.
+_BLNK_WRAP_LT_UNTRANSFORM_SED=		${_UNBUILDLINK_SED}
 
 .if defined(USE_SUNPRO)
 _BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
@@ -947,7 +988,7 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 		-e "s|@RM@|${RM:Q}|g"					\
 		-e "s|@SED@|${SED:Q}|g"					\
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
-		-e 's|@_BLNK_UNTRANSFORM_SED@|${_BLNK_UNTRANSFORM_SED:Q}|g' \
+		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		${.CURDIR}/../../mk/buildlink3/libtool-fix-la		\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
