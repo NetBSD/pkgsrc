@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/02/15 15:44:15 agc Exp $
+# $NetBSD: Makefile,v 1.15 2000/02/15 16:08:23 agc Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -31,19 +31,13 @@ CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
 
 post-install:
-	${RM} -f ${PREFIX}/man/man1/gvim.1 ${PREFIX}/man/man1/gview.1
-	${RM} -f ${PREFIX}/man/man1/rgvim.1 ${PREFIX}/man/man1/rgview.1
-	${RM} -f ${PREFIX}/bin/gvim ${PREFIX}/bin/gview ${PREFIX}/bin/rgvim
-	${RM} -f ${PREFIX}/bin/rgview ${PREFIX}/bin/rvim ${PREFIX}/bin/rview
-	${LN} -s vim.1 ${PREFIX}/man/man1/gvim.1
-	${LN} -s vim.1 ${PREFIX}/man/man1/gview.1
-	${LN} -s vim.1 ${PREFIX}/man/man1/rgvim.1
-	${LN} -s vim.1 ${PREFIX}/man/man1/rgview.1
-	${LN} -s vim ${PREFIX}/bin/gvim
-	${LN} -s vim ${PREFIX}/bin/gview
-	${LN} -s vim ${PREFIX}/bin/rgvim
-	${LN} -s vim ${PREFIX}/bin/rgview
-	${LN} -s vim ${PREFIX}/bin/rvim
-	${LN} -s vim ${PREFIX}/bin/rview
+	for f in gvim.1 gview.1 rgvim.1 rgview.1; do			\
+		${RM} -f ${PREFIX}/man/man1/$$f;			\
+		${LN} -s vim.1 ${PREFIX}/man/man1/$$f;			\
+	done
+	for f in gvim gview rgvim rgview rvim rview; do			\
+		${RM} -f ${PREFIX}/bin/$$f;				\
+		${LN} -s vim ${PREFIX}/bin/$$f;				\
+	done
 
 .include "../../mk/bsd.pkg.mk"
