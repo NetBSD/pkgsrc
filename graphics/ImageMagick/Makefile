@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/04/24 23:08:59 tv Exp $
+# $NetBSD: Makefile,v 1.41 1999/04/25 10:10:51 tron Exp $
 #
 
 DISTNAME=	ImageMagick-4.2.2
@@ -13,6 +13,11 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
+
+# "cc" on 1.3/1.3.x ELF systems doesn't recognize "-R" option.
+.if !exists(/usr/bin/c89)
+NOT_FOR_ARCHS=	alpha mips powerpc
+.endif
 
 pre-configure:
 .if exists(/usr/lib/libbz2.a)
