@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/05/26 08:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/28 07:25:15 wiz Exp $
 #
 
 DISTNAME=	mldonkey-2.5-0.sources
 PKGNAME=	${DISTNAME:S/-0.sources/.0/}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mldonkey
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.5/official/
@@ -23,7 +24,6 @@ CONFIGURE_ENV+=		WGET=""
 CONFIGURE_ENV+=		ac_cv_prog_WGET="no"
 MAKE_ENV+=		BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ARGS+=	--enable-pthread-lib
-CONFIGURE_ARGS+=	--disable-multinet
 
 pre-build:
 	${SED} ${MLDONKEY_SUBST_SED} ${FILESDIR}/mldonkey.sh > \
