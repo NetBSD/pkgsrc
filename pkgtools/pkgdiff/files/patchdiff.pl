@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# $NetBSD: patchdiff.pl,v 1.2 2000/08/17 03:09:26 wiz Exp $
+# $NetBSD: patchdiff.pl,v 1.3 2001/03/31 20:19:04 skrll Exp $
 #
 # patchdiff: compares a set of patches patch-aa, patch-ab, ... in
 #   $WRKDIR/.newpatches in the with another set in patches.
@@ -11,16 +11,11 @@
 
 use Getopt::Std;
 use Cwd;
+use File::Spec;
 
 my $oldpatchdir, $newpatchdir;
-my $wrkdir;
+my $wrkdir, $thisdir;
 my %orig, %new;
-
-# change to WRKDIR
-
-sub goto_wrkdir {
-    chdir $wrkdir or die ("can't cd to WRKDIR ($wrkdir)");
-}
 
 sub getfilename {
     my $fname=shift;
@@ -47,8 +42,7 @@ sub putinhash {
     while(<handle>) {
 	chomp;
 	$temp=getfilename($_);
-	$$hash{$temp}=$_;
-#	print "put in hash: $temp // $_\n";
+	$$hash{$temp}=File::Spec->abs2rel($_, $thisdir);
      }
      close(handle);
 }
@@ -67,9 +61,9 @@ EOF
 
 %orig=();
 %new=();
-$oldpatchdir=cwd();
-chomp($oldpatchdir);
-$oldpatchdir=$oldpatchdir."/patches";
+$thisdir=cwd();
+chomp($thisdir);
+$oldpatchdir=$thisdir."/patches";
 
 $wrkdir=`make show-var VARNAME=WRKDIR` or 
     die ("can't find WRKDIR -- wrong dir?");
