@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.874 2002/12/22 19:40:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.875 2002/12/22 20:07:00 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gp-lag-2.1 [cjep 2002-12-22]
 	Added xgap-4.16 [cjep 2002-12-22]
 	Updated ytalk to 3.1.1nb1 [jmmv 2002-12-22]
+	Updated lsof to 4.66 [atatat 2002-12-22]
