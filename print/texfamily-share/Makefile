@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/16 08:48:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/18 03:37:04 uebayasi Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	3
@@ -32,26 +32,26 @@ NO_MTREE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
 
 do-install:
-	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/texmf.local
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local
 .for f in ptex-texmf-2.0 texfam-texmf-latex209 texfam-texmf-j1.9 \
     texfam-texmf-j1.9.1 texfam-texmf-m0.8 \
     mulfonts-vf mulfonts-subtfm jis nmin-ngoth standard morisawa
-	@${GTAR} -plzx -C ${LOCALBASE}/share/texmf.local \
+	@${GTAR} -plzx -C ${PREFIX}/share/texmf.local \
 		-f ${DISTDIR}/${DIST_SUBDIR}/${f}${EXTRACT_SUFX} \
 		--exclude=ls-R
 .endfor
-	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/texmf.local/doc/fonts
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local/doc/fonts
 	@${GTAR} Ccf ${WRKDIR}/morisawa/tfm/ptex - . | \
-		${GTAR} Cxf ${LOCALBASE}/share/texmf.local/fonts/tfm/ptex -
+		${GTAR} Cxf ${PREFIX}/share/texmf.local/fonts/tfm/ptex -
 .for font in jis nmin-ngoth standard morisawa
 	@${GTAR} Ccf ${WRKDIR}/${font} - tfm/dvips vf | \
-		${GTAR} Cxf ${LOCALBASE}/share/texmf.local/fonts -
+		${GTAR} Cxf ${PREFIX}/share/texmf.local/fonts -
 	@${INSTALL_DATA} ${WRKDIR}/${font}/README.txt \
-		${LOCALBASE}/share/texmf.local/doc/fonts/README.${font}
+		${PREFIX}/share/texmf.local/doc/fonts/README.${font}
 .endfor
 
 post-install:
-	@cd ${LOCALBASE}; \
+	@cd ${PREFIX}; \
 	 ${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}; \
 	 ${FIND} share/texmf.local -type f|sort >> ${PLIST_SRC}; \
 	 for LINK in `${FIND} share/texmf.local -type l`; do \
