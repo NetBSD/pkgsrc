@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/12/23 20:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2003/02/21 12:40:54 grant Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -29,11 +29,6 @@ PLIST_SUBST+=		GMAKE_LINK=""
 .else
 PLIST_SUBST+=		GMAKE_LINK="@comment "
 .endif
-
-post-extract:
-	${MV} ${WRKSRC}/doc/make.texi ${WRKSRC}/doc/make.texi.orig
-	${SED} '/@dircategory/s|.*|@dircategory Programming \& development tools|' \
-	    < ${WRKSRC}/doc/make.texi.orig > ${WRKSRC}/doc/make.texi
 
 post-install:
 	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
