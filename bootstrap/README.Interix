@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.5 2004/03/27 14:46:59 grant Exp $
+$NetBSD: README.Interix,v 1.6 2004/03/29 02:22:32 tv Exp $
 
 Please read the general README file as well.
 
@@ -12,6 +12,9 @@ with Cygwin.  It is part of the Windows Services for Unix package, available
 for Windows 2000, XP, and 2003.  SFU can be downloaded from:
 
     http://www.microsoft.com/windows/sfu/
+
+Services for Unix 3.5 (current as of this writing) has been tested.  3.0 may
+work, but is not officially supported.
 
 At an absolute minimum, the following packages must be installed from the
 Windows Services for Unix 3.5 distribution in order to use bootstrap-pkgsrc:
@@ -34,20 +37,30 @@ remains as case-insensitive, then "bootstrap" will require the
 
 KNOWN CAVEATS
 
+* The package imanager (either the pkgsrc "su" user, or the user
+  running "pkg_add") must be a member of the local Administrators
+  group.  Such a user must also be used to run the bootstrap.  This is
+  slightly relaxed from the normal pkgsrc requirement of "root".
+
+* The package manager should use a umask of 022.  "make install" will
+  automatically complain if this is not the case.  This ensures that
+  directories written in /var/db/pkg are Administrators-group writeable. 
+
 * It is not necessary, in general, to have a "root" user on the Windows
   system; any member of the local Administrators group will suffice. 
   However, some packages currently assume that the user named "root" is
-  the privileged user (these will eventually be fixed).  To accomodate
+  the privileged user (these will eventually be fixed).  To accommodate
   these, you may create such a user; make sure it is in the local group
   Administrators.
 
 * The popular Interix binary packages from http://www.interopsystems.com/
-  use OpenBSD's pkg_* tools and occupy the /var/db/pkg directory (though
-  the packages install to /usr/local).  If you want to have both kinds of
-  packages installed in the system, supply "--pkgdbdir=DIRECTORY" to
-  "bootstrap" to use an alternative package database directory.
+  use an older version of pkgsrc's pkg_* tools and occupy the /var/db/pkg
+  directory (though the packages install to /usr/local).  If you want to
+  have both kinds of packages installed in the system, supply the option
+  "--pkgdbdir=DIRECTORY" to "bootstrap".
 
 * On Windows under Interix, the "root" user is actually named
   "Administrator".  This may require some modification to pkgsrc to
   introduce a parameterized root user for installation purposes.  
-  (Likewise, the bootstrap script sets the root group to "+Administrators".)
+  (Likewise, the bootstrap script sets the root group to
+  "+Administrators".)
