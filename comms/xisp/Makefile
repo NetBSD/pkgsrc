@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/28 20:34:04 fredb Exp $
 #
 
 DISTNAME=		xisp-2.6p1
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/network/serial/} \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://users.hol.gr/~dbouras/
 
-DEPENDS+=		xforms-0.88:../../x11/xforms
+DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
 
 USE_X11BASE=		YES
 USE_XPM=		YES
