@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/14 14:41:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/19 04:03:05 reed Exp $
 bin/afslog
 bin/compile_et
 bin/kauth
@@ -61,9 +61,6 @@ include/krb5/rtbl.h
 include/krb5/sl.h
 include/krb5/ss/ss.h
 include/krb5/xdbm.h
-info/heimdal.info
-info/heimdal.info-1
-info/heimdal.info-2
 lib/libasn1.la
 lib/libcom_err.la
 lib/libeditline.la
