@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/12 20:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/21 00:21:40 wiz Exp $
 #
 
 DISTNAME=	popa3d-0.4
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.false.com/pub/security/popa3d/
 
 PATCHFILES=	popa3d-0.4-gnu-md5-alignment.diff.gz
+PATCH_SITES=	${MASTER_SITES}
 PATCH_DIST_ARGS=	-d ${WRKDIR} -s
 
 MAINTAINER=	wiz@netbsd.org
