@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2096 2003/04/30 03:40:23 atatat Exp $
+$NetBSD: CHANGES,v 1.2097 2003/04/30 17:16:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1800,3 +1800,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added blitz++-0.6 [jtb 2003-04-30]
 	Updated pkglint to 3.53 [atatat 2003-04-30]
 	Updated pkgdepgraph to 2.5 [atatat 2003-04-30]
+	Updated sweep to 0.8.2 [jmmv 2003-04-30]
