@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.getopt,v 1.1 2001/05/15 19:18:14 jlam Exp $
+# $NetBSD: Makefile.getopt,v 1.2 2001/05/16 04:37:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
@@ -10,6 +10,9 @@
 # package Makefile, optionally define WRKINCDIR, add
 # link-getopt-headers to the prerequisite targets for pre-configure,
 # and add ${WRKINCDIR} to the compiler's header search path.
+#
+# You may need to add LIBS to CONFIGURE_ENV if you the packages uses a GNU
+# configure script.
 
 .if exists(/usr/include/getopt.h)
 GETOPT_H=	/usr/include/getopt.h
@@ -21,7 +24,7 @@ LIBS+=		-lgetopt
 
 WRKINCDIR?=	${WRKDIR}/include
 
-# This target links the getopt header into ${WRKINCDIR}/include, which is
+# This target links the getopt header into ${WRKINCDIR}, which should be
 # searched first by the C preprocessor.
 # 
 link-getopt-headers:
