@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/18 10:24:40 jmmv Exp $
 
 DISTNAME=	mpeg2dec-0.4.0
 PKGNAME=	libmpeg2-0.4.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://libmpeg2.sourceforge.net/files/
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://libmpeg2.sourceforge.net/
-COMMENT=	library for decoding mpeg-2 and mpeg-1 video streams
+COMMENT=	Library for decoding mpeg-2 and mpeg-1 video streams
 
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
