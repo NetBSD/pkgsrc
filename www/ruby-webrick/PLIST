@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/06 15:25:50 taca Exp $
+${RUBY_SITELIBDIR}/webrick/httpservlet/prochandler.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet/filehandler.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet/erbhandler.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet/cgihandler.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet/cgi_runner.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet/abstract.rb
+@dirrm ${RUBY_SITELIBDIR}/webrick/httpservlet
+${RUBY_SITELIBDIR}/webrick/version.rb
+${RUBY_SITELIBDIR}/webrick/utils.rb
+${RUBY_SITELIBDIR}/webrick/server.rb
+${RUBY_SITELIBDIR}/webrick/mime.types
+${RUBY_SITELIBDIR}/webrick/log.rb
+${RUBY_SITELIBDIR}/webrick/httpversion.rb
+${RUBY_SITELIBDIR}/webrick/httputils.rb
+${RUBY_SITELIBDIR}/webrick/httpstatus.rb
+${RUBY_SITELIBDIR}/webrick/httpservlet.rb
+${RUBY_SITELIBDIR}/webrick/httpserver.rb
+${RUBY_SITELIBDIR}/webrick/https.rb
+${RUBY_SITELIBDIR}/webrick/httpresponse.rb
+${RUBY_SITELIBDIR}/webrick/httprequest.rb
+${RUBY_SITELIBDIR}/webrick/httpproxy.rb
+${RUBY_SITELIBDIR}/webrick/httpauth.rb
+${RUBY_SITELIBDIR}/webrick/htmlutils.rb
+${RUBY_SITELIBDIR}/webrick/cookie.rb
+${RUBY_SITELIBDIR}/webrick/config.rb
+${RUBY_SITELIBDIR}/webrick/compat.rb
+@dirrm ${RUBY_SITELIBDIR}/webrick
+${RUBY_SITELIBDIR}/webrick.rb
+${RUBY_DOCDIR}/webrick/webrick.rd
+@dirrm ${RUBY_DOCDIR}/webrick
+${RUBY_EXAMPLESDIR}/webrick/webdic/ndtp.rb
+${RUBY_EXAMPLESDIR}/webrick/webdic/webdic.rb
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/webdic
+${RUBY_EXAMPLESDIR}/webrick/rfc/cache/.keep_me
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/rfc/cache
+${RUBY_EXAMPLESDIR}/webrick/rfc/rfc.rb
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/rfc
+${RUBY_EXAMPLESDIR}/webrick/httpd/conf/sample.crt
+${RUBY_EXAMPLESDIR}/webrick/httpd/conf/sample.key
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/httpd/conf
+${RUBY_EXAMPLESDIR}/webrick/httpd/htdocs/test.cgi
+${RUBY_EXAMPLESDIR}/webrick/httpd/htdocs/test.rhtml
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/httpd/htdocs
+${RUBY_EXAMPLESDIR}/webrick/httpd/htproxy.rb
+${RUBY_EXAMPLESDIR}/webrick/httpd/httpd.rb
+${RUBY_EXAMPLESDIR}/webrick/httpd/httpsd.rb
+@dirrm ${RUBY_EXAMPLESDIR}/webrick/httpd
+@dirrm ${RUBY_EXAMPLESDIR}/webrick
