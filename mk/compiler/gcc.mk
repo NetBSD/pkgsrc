@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.63 2004/05/04 00:11:23 danw Exp $
+# $NetBSD: gcc.mk,v 1.64 2004/05/05 03:05:41 jschauma Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -130,6 +130,13 @@ _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 # 
 .if !empty(_LANGUAGES.gcc:Mobjc)
 CFLAGS+=	-Wno-import
+.endif
+
+# Some platforms (such as IRIX) may support different ABIs.  Set the CFLAGS
+# accordingly.
+
+.if defined(ABI)
+CFLAGS+=	-mabi=${ABI:C/^32$/n&/}
 .endif
 
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
