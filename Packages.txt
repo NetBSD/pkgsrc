@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.41 1998/08/12 02:52:35 tv Exp $
+# $NetBSD: Packages.txt,v 1.42 1998/08/21 16:37:57 tsarna Exp $
 ###########################################################################
 
 			==========================
@@ -288,10 +288,12 @@ the port can complain vigorously.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-  archivers  converters emulators  mail       news       shells     www
-  audio      databases  games      mbone      plan9      sysutils   x11
-  benchmarks devel      graphics   misc       print      templates
-  comms      editors    lang       net        security   textproc
+	archivers   corba      games     meta-pkgs  security
+	audio       cross      graphics  misc       shells
+	benchmarks  databases  lang      net        sysutils
+	cad         devel      mail      news       textproc
+	comms       editors    math      plan9      www
+	converters  emulators  mbone     print      x11
 
 See /usr/pkgsrc/mk/bsd.pkg.mk for a description of all available options
 and variables.
@@ -333,7 +335,9 @@ package from the FreeBSD ports collection:
    package for future updates, or set it to the default MAINTAINER
    packages@netbsd.org, as it is unlikely that the FreeBSD people will
    care about NetBSD packages.
-
+ - If there exists a home page for the software in question, please
+   add the variable HOMEPAGE right after MAINTAINER. The value of this
+   variable should be the URL for the home page.
 
  4.2 files/*
  ===========
@@ -1169,6 +1173,14 @@ CONFLICTS=      cvs-1.9 cvs-1.9.26 cvs-1.9.27
 assuming that cvs is version 1.9 and cvs-current is cvs-1.9.28, and we had
 already cvs-1.9.26 and cvs-1.9.27 in our pkgsrc tree.
 
+ 9.14 Software which has a WWW Home Page
+ =======================================
+
+The NetBSD packages system now supports a variable called HOMEPAGE.
+If the software being packaged has a home page, the Makefile should
+include the URL for that page in the HOMEPAGE variable. The definition
+of the variable should be placed immediately after the MAINTAINER
+variable.
 
  10 Submitting
  =============
@@ -1211,18 +1223,16 @@ The file contents in this section must be used without the "> " prefix.
  ===============
 
 > # <$>NetBSD<$>
-> #
 >  
 > DISTNAME=       bison-1.25
-> CATEGORIES=     lang
+> CATEGORIES=     devel
 > MASTER_SITES=   ${MASTER_SITE_GNU}
 >
-> BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+> MAINTAINER=     thorpej@netbsd.org
+> HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 >  
 > GNU_CONFIGURE=  yes
->
-> post-install:
->                 @install-info ${PREFIX}/info/bison.info ${PREFIX}/info/dir
+> INFO_FILES=     bison.info
 >  
 > .include "../../mk/bsd.pkg.mk"
 
@@ -1239,8 +1249,6 @@ The file contents in this section must be used without the "> " prefix.
 > GNU version of yacc.  Can make re-entrant parsers, and numerous other
 > improvements.  Why you would want this when Berkeley yacc(1) is part
 > of the NetBSD source tree is beyond me.
->  
-> Alistair Crooks (agc@netbsd.org)
 
 
  11.1.4 pkg/PLIST
@@ -1262,15 +1270,15 @@ The file contents in this section must be used without the "> " prefix.
 > share/bison.hairy
 
 
- 11.1.5 Checking a package "portlint"
- ====================================
+ 11.1.5 Checking a package "pkglint"
+ ===================================
 
-The NetBSD package system comes with a tool called "portlint" (located in the
-directory "pkgsrc/devel/portlint") which helps to check the contents of these
+The NetBSD package system comes with a tool called "pkglint" (located in the
+directory "pkgsrc/devel/pkglint") which helps to check the contents of these
 files. After installation it is quite easy to use, just change to the
-directory of the package you which to examine and execute "portlint":
+directory of the package you which to examine and execute "pkglint":
 
-> tron@lyssa:/usr/pkgsrc/devel/bison>portlint
+> tron@lyssa:/usr/pkgsrc/devel/bison>pkglint
 > OK: checking pkg/COMMENT.
 > OK: checking pkg/DESCR.
 > OK: checking Makefile.
@@ -1278,7 +1286,7 @@ directory of the package you which to examine and execute "portlint":
 > OK: checking patches/patch-aa.
 > looks fine.
 
-Depending on the supplied command line arguments (see "man portlint") more
+Depending on the supplied command line arguments (see "man pkglint") more
 intensive checks will be performed. Use e.g. "portlint -a -v" for a very
 detailed and verbose check.
 
