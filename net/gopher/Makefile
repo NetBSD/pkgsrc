@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/21 15:41:55 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/30 10:20:14 wiz Exp $
 #
 
-DISTNAME=	gopher-3.0.2
+DISTNAME=	gopher-3.0.5
 CATEGORIES=	net
 MASTER_SITES=	http://quux.org/give-me-gopher/
 
