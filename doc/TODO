@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2283 2004/10/30 07:13:47 minskim Exp $
+$NetBSD: TODO,v 1.2284 2004/10/30 10:29:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -264,6 +264,7 @@ Suggested package updates
 	o bioperl-1.4
 	o bitchx-1.1
 	o blender-2.34
+	o bogofilter-0.92.8
 	o boson-0.10
 	o capc-calc-2.11.10.1
 	o cdrtools-2.01
@@ -344,6 +345,7 @@ Suggested package updates
 	o gdm-2.6.0.5
 	o generator-0.35
 	o gettext-0.14.1
+	o gg2-2.2.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.26
@@ -359,13 +361,14 @@ Suggested package updates
 	o grace-5.1.17
 	o gtkballs-3.1.4
 	o gtkglext-1.0.6
-	o gtkmm-2.4.5
+	o gtkmm-2.4.6
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkterm2-0.2.3
+	o gtkyahoo-0.18.3
 	o gtranslator-1.0.1
 	o guile-1.6.5
-	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
+	o guile-pg-0.16 [pkg/24039]
 	o hatari-0.50
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
@@ -383,11 +386,16 @@ Suggested package updates
 	o intercal-0.24 [dillo]
 	o iozone-3.222
 	o ipcheck-0.218
+	o ircd-hybrid-7.0.4
+	o iroffer-1.309
 	o ispman-1.1.1
+	o jabberd-1.4.3
+	o jabberd2-2.04
 	o jakarta-tomcat-3.3.1a
 	o jamjar-0.7.1
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o kmess-1.3
 	o kth-kerberos-1.2.2
 	o larswm-7.5.3
 	o latex2rtf-1.9.15
@@ -410,7 +418,7 @@ Suggested package updates
 	o libtiff-3.7.0
 	o libxklavier-1.10 [breaks gnome-2.8]
 	o libxml2-2.6.15
-	o licq-1.2.7
+	o licq-1.3.0
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -422,10 +430,11 @@ Suggested package updates
 	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
+	o mathomatic-11.4d
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mikmod-3.2.1
-	o mimedefang-2.46
+	o mimedefang-2.48
 	o minicom-2.1
 	o mldonkey-2.5.22
 	o mowitz-0.3.0
@@ -511,7 +520,7 @@ Suggested package updates
 	o rioutil-1.4.6.1
 	o ripmime-1.4.0.1
 	o rocksndiamonds-3.1.0 [adam]
-	o rosegarden4 [replacing audio/rosegarden]
+	o rosegarden4-0.9.9 [replacing audio/rosegarden]
 	o rox-1.2.2
 	o rox-session-0.1.24
 	o rrdtool-1.0.49 [pkg/26353]
@@ -536,7 +545,7 @@ Suggested package updates
 	o sml-nj-110.50
 	o snd-7.7
 	o snes9x-1.42
-	o snownews-1.5.4
+	o snownews-1.5.5
 	o spamassassin-3.0.1
 	o spiralsynth-2.0.0
 	o sqlite-3.0.7
@@ -594,8 +603,8 @@ Suggested package updates
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
-	o xinvest-2.6.9
 	o xine-1-rc6a
+	o xinvest-2.6.9
 	o xmame-0.87
 	o xmbmon-2.05
 	o xmcd-3.3.0
@@ -610,7 +619,7 @@ Suggested package updates
 	o xmms-mad-0.5.7
 	o xmms-spectogram-1.2.1
 	o xmmsctrl-1.8
-	o xpad-1.13.1
+	o xpad-2.0
 	o xpaint-2.7.2
 	o xps-4.2
 	o xpuyopuyo-0.9.5
@@ -621,7 +630,7 @@ Suggested package updates
 	o yamt-0.6
 	o yaz-2.0.12
 	o ysm-2.9.6
-	o zenicb 1.31 (needs merge with lots of local changes)
+	o zenicb-1.31 (needs merge with lots of local changes)
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
