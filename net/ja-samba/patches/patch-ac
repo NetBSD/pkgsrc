@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2003/05/27 15:59:09 taca Exp $
+$NetBSD: patch-ac,v 1.5 2003/08/30 01:31:13 taca Exp $
 
---- configure.orig	2003-05-20 12:13:24.000000000 +0900
+--- configure.orig	2003-08-22 17:45:58.000000000 +0900
 +++ configure
-@@ -20408,6 +20408,49 @@ echo "${ECHO_T}no" >&6
+@@ -21463,6 +21463,49 @@ echo "${ECHO_T}no" >&6
  
  fi;
  
@@ -52,10 +52,10 @@ $NetBSD: patch-ac,v 1.4 2003/05/27 15:59:09 taca Exp $
  #################################################
  # check for a NISPLUS password database
  echo "$as_me:$LINENO: checking whether to use NISPLUS SAM database" >&5
-@@ -25919,6 +25962,7 @@ s,@TERMLIBS@,$TERMLIBS,;t t
- s,@TERMLDFLAGS@,$TERMLDFLAGS,;t t
+@@ -26993,6 +27036,7 @@ s,@TERMLDFLAGS@,$TERMLDFLAGS,;t t
  s,@ROFF@,$ROFF,;t t
  s,@DYNEXP@,$DYNEXP,;t t
+ s,@SHDYNEXP@,$SHDYNEXP,;t t
 +s%@PAM_NEEDS_LIBC@%$PAM_NEEDS_LIBC%g
  s,@LDAPLIBS@,$LDAPLIBS,;t t
  s,@QUOTAOBJS@,$QUOTAOBJS,;t t
