@@ -3,7 +3,7 @@
 # Date created:		7 October 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $NetBSD: Makefile,v 1.6 1998/01/24 03:50:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/25 00:40:56 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -13,15 +13,15 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	torstenb@FreeBSD.ORG
 
-RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+OPSYS!= 	uname -s
 .if (${OPSYS} == "NetBSD")
 BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 .endif
+RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	M4=${PREFIX}/bin/gm4
 
-OPSYS!= 	uname -s
 
 post-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
