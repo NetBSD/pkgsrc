@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/04 11:57:51 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 14:38:16 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
 
 MAINTAINER=	packages@netbsd.org
 
+USE_X11=	yes
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
