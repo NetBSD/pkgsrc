@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: build,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+# $NetBSD: build,v 1.2 2000/09/15 22:25:57 hubertf Exp $
 #
 # Do builk build
 #
@@ -7,6 +7,16 @@
 #
 
 echo Bulk build started: `date`
+echo ""
+
+if [ "$http_proxy" != "" ]; then
+	echo "Using HTTP proxy $http_proxy"
+	export http_proxy
+fi
+if [ "$ftp_proxy" != "" ]; then
+	echo "Using FTP proxy $ftp_proxy"
+	export ftp_proxy
+fi
 echo ""
 
 # Pull in ADMIN:
