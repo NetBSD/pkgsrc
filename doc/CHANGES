@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5654 2004/04/19 14:37:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.5655 2004/04/19 14:54:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2074,3 +2074,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany to 1.2.3 [jmmv 2004-04-19]
 	Updated libxml2 to 2.6.9 [jmmv 2004-04-19]
 	Updated gtksourceview to 1.0.1 [jmmv 2004-04-19]
+	Updated grhino to 0.11.0 [minskim 2004-04-19]

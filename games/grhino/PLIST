@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/06 12:25:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/19 14:54:17 minskim Exp $
 bin/grhino
+share/gnome/help/grhino/C/grhino-C.omf
+share/gnome/help/grhino/C/grhino.xml
 share/gnome/help/grhino/C/preferences-0.html
 share/gnome/help/grhino/C/preferences-1.html
+share/gnome/help/grhino/C/preferences-2.html
 share/gnome/help/grhino/C/topic.dat
 share/${PKGNAME}/book/book.bin
 share/${PKGNAME}/pattern/corner5x2.bin
@@ -14,8 +17,21 @@ share/${PKGNAME}/pattern/row1.bin
 share/${PKGNAME}/pattern/row2.bin
 share/${PKGNAME}/pattern/row3.bin
 share/${PKGNAME}/pattern/row4.bin
+share/${PKGNAME}/theme/small/black.xpm
+share/${PKGNAME}/theme/small/bottom.xpm
+share/${PKGNAME}/theme/small/empty.xpm
+share/${PKGNAME}/theme/small/hint_black.xpm
+share/${PKGNAME}/theme/small/hint_white.xpm
+share/${PKGNAME}/theme/small/left.xpm
+share/${PKGNAME}/theme/small/right.xpm
+share/${PKGNAME}/theme/small/top.xpm
+share/${PKGNAME}/theme/small/white.xpm
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/grhino.mo
+@dirrm share/${PKGNAME}/theme/small
+@dirrm share/${PKGNAME}/theme
 @dirrm share/${PKGNAME}/pattern
 @dirrm share/${PKGNAME}/book
 @dirrm share/${PKGNAME}
 @dirrm share/gnome/help/grhino/C
 @dirrm share/gnome/help/grhino
+@comment in gnome-dirs: @dirrm share/gnome/help

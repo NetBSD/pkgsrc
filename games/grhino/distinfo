@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/03/10 18:25:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/04/19 14:54:17 minskim Exp $
 
-SHA1 (grhino-0.9.0.tar.gz) = f1ba17866e3230a4d3f03f5d74ca26949161c1e2
-Size (grhino-0.9.0.tar.gz) = 877180 bytes
+SHA1 (grhino-0.11.0.tar.gz) = fc1845cb340ae99fbca0fc6188eff73b53a5e250
+Size (grhino-0.11.0.tar.gz) = 904794 bytes
