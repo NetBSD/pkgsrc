@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:43:19 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/08/09 10:53:29 seb Exp $
 
 DISTNAME=	xzgv-0.7
 PKGREVISION=	3
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xzgv.browser.org/
 COMMENT=	Image viewer
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	xzgv
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/30 05:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2003/08/09 10:50:09 seb Exp $
 
 DISTNAME=		gnucash-1.8.4
 PKGREVISION=		1
@@ -35,7 +35,6 @@ CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconf
 AM_MAKEFLAGS=		LIBTOOL='${PKGLIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gnucash-design.info
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/17 21:36:20 grant Exp $
+# $NetBSD: Makefile,v 1.35 2003/08/09 10:49:07 seb Exp $
 #
 
 DISTNAME=		vice-1.12
@@ -32,7 +32,6 @@ USE_X11=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		vice.info
 
 # These changes are rather common, so sed instead of patch:

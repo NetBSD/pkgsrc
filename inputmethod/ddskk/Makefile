@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:43:34 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/09 10:55:28 seb Exp $
 #
 
 DISTNAME=	ddskk-20030629
@@ -15,7 +15,6 @@ DEPENDS=	${PKGNAME_PREFIX}apel>=10.2:../../devel/apel
 MAKEFLAGS=	EMACS=${EMACS_BIN}
 ALL_TARGET=	elc
 
-USE_NEW_TEXINFO=YES
 INFO_FILES=	skk.info
 
 do-configure:
