@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.195 2003/12/17 13:48:02 keihan Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.196 2003/12/23 10:21:53 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1112,6 +1112,34 @@ JB_USERID?=509
 # Used by jitterbug package for uid of JB_USER.
 # Possible: any valid uid
 # Default: 509
+
+JABBERD_USER?= jabberd
+# Used in jabberd to specify the user used to run the daemon.
+# Possible: any valid username
+# Default: jabberd
+
+JABBERD_GROUP?=	jabberd
+# Used in jabberd to specify the group userd to run the daemon.
+# Possible: any valid group
+# Default: jabberd
+
+JABBERD_LOGDIR?= /var/log/jabberd
+# Used in jabberd to specify the default directory under which log
+# files are placed.
+# Possible: any directory
+# Default: /var/log/jabberd
+
+JABBERD_SPOOLDIR?= /var/spool/jabberd
+# Used in jabberd to specify the default directory under which server
+# information is stored.
+# Possible: any directory
+# Default: /var/spool/jabberd
+
+JABBERD_PIDDIR?= /var/run/jabberd
+# Used in jabberd to specify the default directory under which pid
+# files are placed.
+# Possible: any directory
+# Default: /var/run/jabberd
 
 JAKARTA_HOME?= ${JAVA_HOME}/jakarta
 # Used by the www/jakarta-tomcat package to choose an install location
