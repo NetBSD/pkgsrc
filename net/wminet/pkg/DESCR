@@ -1,0 +1,11 @@
+Once a second, the network interfaces are queried for the amount of
+data that was exchanged. The data from the selected interface is drawn
+in the graph. As data is sampled, the scale of the graph will change
+and is set to the maximum value seen in the data "window". The value
+of the maximum data rate (in bytes per second) is displayed in the
+lower left corner. A K or M is appended to the data rate for kilobytes
+or megabytes, respectively.
+
+You can cycle through the configured network interfaces by clicking
+the mouse on the interface name. There is also a command line option
+to specify which interface should be displayed first.
