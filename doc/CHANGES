@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1322 2003/02/05 16:56:31 jmmv Exp $
+$NetBSD: CHANGES,v 1.1323 2003/02/05 18:20:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-dirs to 1.1 [jmmv 2003-02-05]
 	Updated gnome1-dirs to 1.1 [jmmv 2003-02-05]
 	Updated gnome2-dirs to 1.1 [jmmv 2003-02-05]
+	Updated buildtool to 0.10 [jmmv 2003-02-05]
