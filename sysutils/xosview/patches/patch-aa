@@ -1,20 +1,30 @@
---- config/Makefile.netbsd.in.orig	Sat Nov 29 21:58:24 1997
-+++ config/Makefile.netbsd.in	Wed Feb 11 00:31:43 1998
-@@ -9,6 +9,17 @@
- 
- CXXFLAGS += -I@top_srcdir@
- 
-+.include <bsd.port.subdir.mk>
-+.if (${ARCH} == "hp300")
-+CXXFLAGS += -D_HP300_CPU_H_
-+.endif
-+.if (${ARCH} == "mac68k")
-+CXXFLAGS += -D_CPU_MACHINE_
-+.endif
-+.if (${ARCH} == "x68k")
-+CXXFLAGS += -D_X68K_CPU_H_
-+.endif
-+
- OBJS = \
- MeterMaker.o \
- cpumeter.o \
+*** netbsd/pagemeter.h.orig	Fri Jul 18 04:37:33 1997
+--- netbsd/pagemeter.h	Fri Mar 13 17:36:28 1998
+***************
+*** 21,25 ****
+--- 21,33 ----
+  
+  #include "fieldmeterdecay.h"
++ #if defined(UVM)
++ #include <sys/param.h>
++ #include <sys/malloc.h>
++ #include <sys/sysctl.h>
++ #include <sys/device.h>
++ #include <uvm/uvm_extern.h>
++ #else
+  #include <sys/vmmeter.h>
++ #endif
+  
+  class PageMeter : public FieldMeterDecay {
+***************
+*** 36,40 ****
+--- 44,52 ----
+    void getpageinfo( void );
+  private:
++ #if defined(UVM)
++   struct uvmexp prev_;
++ #else
+    struct vmmeter prev_;
++ #endif
+  };
+  

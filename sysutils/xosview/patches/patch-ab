@@ -1,0 +1,38 @@
+--- netbsd/pagemeter.cc.orig	Tue Mar  3 18:25:08 1998
++++ netbsd/pagemeter.cc	Sun Mar  1 17:24:30 1998
+@@ -56,9 +56,15 @@
+ 
+ void PageMeter::getpageinfo (void) {
+ //  Begin NetBSD-specific code...
++#if defined(UVM)
++  struct uvmexp  uvm;
++  NetBSDGetPageStats(&uvm);
++#else
+   struct vmmeter vm;
+-
+   NetBSDGetPageStats(&vm);
++#endif
++
++
+ #ifdef XOSVIEW_FREEBSD
+ #warning "FreeBSD hack"
+ /*  I'm not completely sure these are the right statistics, but
+@@ -66,10 +72,17 @@
+   fields_[0] = vm.v_vnodein - prev_.v_vnodein;
+   fields_[1] = vm.v_vnodeout - prev_.v_vnodeout;
+ #else
++#if defined(UVM)
++  fields_[0] = uvm.pgswapin - prev_.pgswapin;
++  fields_[1] = uvm.pgswapout - prev_.pgswapout;
++  prev_ = uvm;
++#else
+   fields_[0] = vm.v_pgpgin - prev_.v_pgpgin;
+   fields_[1] = vm.v_pgpgout - prev_.v_pgpgout;
+-#endif
+   prev_ = vm;
++#endif
++#endif
++ 
+ //  End NetBSD-specific code...
+   if (total_ < fields_[0] + fields_[1])
+     total_ = fields_[0] + fields_[1];
