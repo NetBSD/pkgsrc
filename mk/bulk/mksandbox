@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.7 2002/08/12 16:33:11 agc Exp $
+# $NetBSD: mksandbox,v 1.8 2002/08/15 10:42:19 seb Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -197,6 +197,7 @@ echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
 
 echo "Mounting $packages and $distfiles from $sandbox"
 $mkdirprog $sandbox/$packages $sandbox/$distfiles
+$mkdirprog $packages $distfiles
 $mountprog -t null $packages $sandbox/$packages
 $mountprog -t null $distfiles $sandbox/$distfiles
 echo "$packages $packages rw \\" >> $sandbox_script
