@@ -1,0 +1,55 @@
+diff -u ../../../work/mikmod-2.14-unix/source/Makefile ./Makefile
+--- ../../../work/mikmod-2.14-unix/source/Makefile	Mon Oct 27 22:04:48 1997
++++ ./Makefile	Mon Oct 27 21:31:45 1997
+@@ -42,6 +42,10 @@
+ LIBS=-lncurses -lm $(ULTRALIB)
+ DRIVERS = drv_nos.o drv_raw.o drv_vox.o $(ULTRADRV)
+ 
++# NetBSD needs to find ncurses and the oss audio library
++OSFLAGS += -I${PREFIX}/include
++LIBS= -L${PREFIX}/lib -lncurses -lossaudio -lm
++
+ ############################################################################
+ #
+ # SUN / Solaris definitions (including Solaris/i386)
+diff -u ../../../work/mikmod-2.14-unix/source/drv_vox.c ./drv_vox.c
+--- ../../../work/mikmod-2.14-unix/source/drv_vox.c	Tue Dec 17 01:21:12 1996
++++ ./drv_vox.c	Mon Oct 27 21:52:18 1997
+@@ -35,8 +35,10 @@
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__)
+ #include <machine/soundcard.h>
++#elif defined(__NetBSD__)
++#include <soundcard.h>
+ #else
+ #include <sys/soundcard.h>
+ #endif /* __FreeBSD__ */
+@@ -52,9 +54,15 @@
+ static char* audiobuffer;
+ 
+ 
++#ifdef __NetBSD__
++#define DEV "/dev/audio"
++#else
++#define DEV "/dev/dsp"
++#endif
++
+ static BOOL Vox_IsThere(void)
+ {
+-	return (access("/dev/dsp",W_OK)==0);
++	return (access(DEV,W_OK)==0);
+ }
+ 
+ 
+@@ -64,7 +72,7 @@
+ 	int play_precision,play_stereo,play_rate;
+ 	int fragsize,numfrags;
+ 	
+-	if((sndfd=open("/dev/dsp",O_WRONLY))<0){
++	if((sndfd=open(DEV,O_WRONLY))<0){
+ 		myerr="Cannot open sounddevice";
+ 		return 0;
+ 	}
