@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/23 06:55:05 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/17 12:27:05 rh Exp $
 bin/bonobo-application-ps
 bin/ggv
 share/locale/de/LC_MESSAGES/ggv.mo
@@ -114,3 +114,5 @@ share/omf/ggv/ggv-ja.omf
 @dirrm share/gnome/help/ggv/it/stylesheet-images
 @dirrm share/gnome/help/ggv/it
 @dirrm share/gnome/help/ggv
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
