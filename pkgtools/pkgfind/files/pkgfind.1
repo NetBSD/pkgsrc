@@ -1,4 +1,4 @@
-.\" $NetBSD: pkgfind.1,v 1.3 2004/10/20 23:56:18 wiz Exp $
+.\" $NetBSD: pkgfind.1,v 1.4 2004/10/23 10:48:08 peter Exp $
 .\"
 .\" Copyright (c) 2004 Peter Postma <peter@pointless.nl>
 .\" All rights reserved.
@@ -49,17 +49,18 @@ You may specify a different path by setting
 the environment variable
 .Pa PKGSRCDIR .
 .Pp
-The following options are supported:
-.Bl -tag -width XX
+The following options may be used:
+.Bl -tag -width Ds
 .It Fl C
-Search in COMMENTs.
-.It Fl c
-Make case sensitive searches.
+Search in the
+.Dq COMMENT
+field, instead of looking at package names.
+.It Fl C
+Do case sensitive searches.
 .It Fl q
-Be quiet in output.
-Only shows pkgnames.
+Don't show the comment in the output, only the package name.
 .It Fl x
-Exact word search.
+Do exact word searches.
 .El
 .Sh SEE ALSO
 http://www.pkgsrc.org/
