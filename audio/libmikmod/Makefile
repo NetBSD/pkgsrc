@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/31 03:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/16 23:43:06 jlam Exp $
 
 DISTNAME=		libmikmod-3.1.10
 CATEGORIES=		audio
@@ -18,6 +18,12 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 pre-build:
 	${RM} -f ${WRKSRC}/docs/mikmod.info*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_OSS)
+.  include "../../mk/ossaudio.buildlink2.mk"
+.endif
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../mk/texinfo.mk"
