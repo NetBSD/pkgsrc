@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- ntfsprogs/ntfsresize.c.orig	Sat Sep  4 06:16:32 2004
++++ ntfsprogs/ntfsresize.c
+@@ -483,12 +483,9 @@ static int parse_options(int argc, char 
+ 		}
+ 	}
+ 
+-	stderr = stdout;
+-
+ #ifdef DEBUG
+ 	if (!opt.debug)
+-		if (!(stderr = fopen("/dev/null", "rw")))
+-			perr_exit("Couldn't open /dev/null");
++		ntfs_err_out = NULL;
+ #endif
+ 
+ 	if (ver)
