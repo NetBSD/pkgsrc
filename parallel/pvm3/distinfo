@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 15:22:46 agc Exp $
 
-MD5 (pvm3.4.3.tgz) = 58d732cf31d21bd123f5c4ab04aa8610
+SHA1 (pvm3.4.3.tgz) = 77d2e51f42316c0a04f9bfc2a9bb20676f4fd087
+Size (pvm3.4.3.tgz) = 946076 bytes
 SHA1 (patch-aa) = 91b62b0b9cb541c5d0021ae4e4a1f2047655c34a
 SHA1 (patch-ab) = 4026b11d86eb2ba66ace1774a99f51c56bcc4b34
 SHA1 (patch-ac) = 953733fa2f1e41f2588ae71eae3ce70dc064a7c8
