@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/05 02:42:12 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -51,6 +51,9 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.PAM
 PKG_SUPPORTED_OPTIONS=	libcrack
 .include "../../mk/bsd.options.mk"
 
+###
+### Support using libcrack to protect against weak passwords.
+###
 .if !empty(PKG_OPTIONS:Mlibcrack)
 .  include "../../security/libcrack/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libcrack
