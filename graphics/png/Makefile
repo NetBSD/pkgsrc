@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/05/21 21:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2001/05/28 02:41:54 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -18,6 +18,13 @@ USE_LIBTOOL=	yes
 
 MAKEFILE=	scripts/makefile.std
 MAKE_ENV+=	REALCC="${CC}"
+
+.include "../../devel/zlib/buildlink.mk"
+
+CFLAGS+=	-I${BUILDLINK_INCDIR}
+LDFLAGS+=	-L${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
