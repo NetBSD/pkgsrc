@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/19 12:07:49 abs Exp $
+
+--- mkbeep/Makefile.orig	Tue Oct 17 18:44:43 2000
++++ mkbeep/Makefile
+@@ -3,7 +3,7 @@
+ LDADD+= -lm
+ DPADD+= ${LIBM}
+ CFLAGS+= -I.
+-BINDIR=/usr/local/bin
+-MANDIR=/usr/local/man/cat
++BINDIR=${PREFIX}/bin
++MANDIR=${PREFIX}/man
+ 
+ .include <bsd.prog.mk>
