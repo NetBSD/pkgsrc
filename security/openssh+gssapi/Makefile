@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/01 03:21:02 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/05 15:44:46 jwise Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -98,7 +98,7 @@ CONFIGURE_ARGS+=	--without-skey
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-kerberos4=/usr
-LDFLAGS+=		-lkrb -lcom_err -lroken -ldes
+LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
 .endif
 
 LD=	${CC}
