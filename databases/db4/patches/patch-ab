@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2004/12/27 04:27:50 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2004/12/30 21:51:30 minskim Exp $
 
---- dist/configure.orig	2004-11-08 20:28:06.000000000 -0500
+--- dist/configure.orig	2004-11-08 19:28:06.000000000 -0600
 +++ dist/configure
 @@ -5417,6 +5417,7 @@ db_cv_gxx_except=no;
  if test "$GXX" = "yes"; then
@@ -19,3 +19,12 @@ $NetBSD: patch-ab,v 1.7 2004/12/27 04:27:50 jlam Exp $
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+@@ -30024,7 +30025,7 @@ fi
+ #
+ # If the user specified we use POSIX pthreads mutexes, and we fail to find the
+ # full interface, try and configure for just intra-process support.
+-if test "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
++if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
+ 	LIBS="$LIBS -lpthread"
+ 
+ if test "$cross_compiling" = yes; then
