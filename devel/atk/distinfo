@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2004/04/01 18:13:48 jmmv Exp $
+$NetBSD: distinfo,v 1.16 2004/04/19 16:44:42 jmmv Exp $
 
-SHA1 (atk-1.6.0.tar.bz2) = 4fa50110695fe4457b92cc9f4816ad20f038a1a4
-Size (atk-1.6.0.tar.bz2) = 491876 bytes
+SHA1 (atk-1.6.1.tar.bz2) = 8bb74543931423179e556a5b10f97102e5c51daa
+Size (atk-1.6.1.tar.bz2) = 493415 bytes
