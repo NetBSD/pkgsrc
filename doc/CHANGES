@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5972 2004/05/16 02:08:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5973 2004/05/16 02:21:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2575,3 +2575,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added advancecomp-1.10 [xtraeme 2004-05-16]
 	Added faac-1.24 [xtraeme 2004-05-16]
 	Added dirac-0.2.0 [xtraeme 2004-05-16]
+	Added wmi-7 [xtraeme 2004-05-16]
