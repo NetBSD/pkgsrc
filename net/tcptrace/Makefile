@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/04/25 07:38:44 snj Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/25 00:21:16 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -17,7 +17,7 @@ ALL_TARGET=	tcptrace
 
 DOCFILES=	COPYRIGHT FAQ README README.tput_graphs
 
-LDFLAGS.SunOS+=	-lnsl -lsocket -lm
+LDFLAGS.SunOS+=	-lm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
