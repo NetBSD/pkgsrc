@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 17:20:07 martti Exp $
+# $NetBSD: Makefile,v 1.15 2003/10/10 08:54:26 cube Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
@@ -9,13 +9,11 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 COMMENT=	Password sniffer
 
-DEPENDS+=	libnet-[0-9]*:../../devel/libnet
-# libnids provides static library only, thus it isn't necessary at run-time,
-# only at compile-time.
-#
-BUILD_DEPENDS+=	libnids-1.14:../../net/libnids
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
+.include "../../net/libpcap/buildlink2.mk"
+.include "../../devel/libnet/buildlink2.mk"
+.include "../../net/libnids/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
