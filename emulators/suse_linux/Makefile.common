@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2002/04/07 13:10:16 tron Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/04/18 07:19:01 lukem Exp $
 
 SUSE_VERSION=		7.3
 
-MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/${SUSE_VERSION}/suse/ \
+MASTER_SITE_SUSE?=	ftp://ftp.suse.com/pub/suse/i386/${SUSE_VERSION}/suse/ \
 			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/suse/i386/${SUSE_VERSION}/suse/ \
 
 MASTER_SITE_SUSE_UPD=	${MASTER_SITE_SUSE:S/${SUSE_VERSION}\/suse/update\/${SUSE_VERSION}/}
