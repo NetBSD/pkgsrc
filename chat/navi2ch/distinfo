@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/10/04 02:10:06 toshii Exp $
+$NetBSD: distinfo,v 1.4 2004/06/26 06:59:39 uebayasi Exp $
 
-SHA1 (navi2ch-1.7.1.tar.gz) = 7388ca60f0b522a66d9938cc46b2c8b62b277011
-Size (navi2ch-1.7.1.tar.gz) = 401146 bytes
+SHA1 (navi2ch-1.7.3.tar.gz) = 69ecc57aabe84c2d0fe5f50eed7065f0f58229f4
+Size (navi2ch-1.7.3.tar.gz) = 353575 bytes
