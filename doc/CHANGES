@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.184 2002/10/06 13:05:16 magick Exp $
+$NetBSD: CHANGES,v 1.185 2002/10/06 14:53:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xemacs-packages to 1.9 [magick 2002-10-06]
 	Updated apache6 to 1.3.27 [tron 2002-10-06]
 	Updated nxtvepg to 2.3.0 [magick 2002-10-06]
+	Updated kakasi to 2.3.4nb1 [taca 2002-10-06]
