@@ -1,0 +1,29 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+
+Quick Client Setup:
+
+1. Add to /etc/rc.conf:
+
+sfscd=YES
+
+2. Run: ${PREFIX}/etc/rc.d/sfscd start
+3. cd /sfs/sfs.fs.net:eu4cvv6wcnzscer98yn4qjpjnn9iv6pi 
+4. cat CONGRATULATIONS
+
+Quick Server Setup:
+
+1. Add to /etc/rc.conf:
+
+mountd=YES
+nfs_server=YES
+sfssd=YES
+
+2. Run: /etc/rc.d/nfsd start
+3. Copy  ${PREFIX}/etc/sfs/sfsrwsd_config.sample to 
+   ${PREFIX}/etc/sfs/sfsrwsd_config and modify.
+4. Modify /etc/exports to match your sfsrwsd_config.
+5. Create the root directories in ${SFSDIR}/root.
+6. Run ${PREFIX}/etc/rc.d/sfssd start
+
+===========================================================================
