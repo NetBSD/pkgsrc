@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.9 2004/02/06 03:04:50 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.10 2004/02/06 04:37:02 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	one
@@ -41,8 +41,7 @@ COMPILER_SUNPRO_MK+=	two
 
 # Prepend the path to the compiler to the PATH.
 .    if !empty(_LANGUAGES.sunpro)
-.      if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
-          empty(PREPEND_PATH:M${SUNWSPROBASE}/bin)
+.      if empty(PREPEND_PATH:M${SUNWSPROBASE}/bin)
 PREPEND_PATH+=	${SUNWSPROBASE}/bin
 PATH:=		${SUNWSPROBASE}/bin:${PATH}
 .      endif

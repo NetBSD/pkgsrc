@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.76 2004/02/06 03:04:50 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.77 2004/02/06 04:37:02 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -54,8 +54,7 @@ BUILDLINK_OPSYS?=	${OPSYS}
 # Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
 # first when searching for executables.
 #
-.if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
-    empty(PREPEND_PATH:M${BUILDLINK_DIR}/bin)
+.if empty(PREPEND_PATH:M${BUILDLINK_DIR}/bin)
 PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 .  if defined(_OPSYS_DEFAULT_PATH)
 PATH:=		${BUILDLINK_DIR}/bin:${_OPSYS_DEFAULT_PATH}

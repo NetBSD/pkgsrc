@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.148 2004/02/05 03:39:17 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.149 2004/02/06 04:37:02 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -17,6 +17,22 @@ BSD_PREFS_MK:=	${BSD_PREFS_MK}+
 # Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1
 __PREFIX_SET__:=${PREFIX}
+
+# Expand MAKE to a full path.
+.if !defined(_MAKE)
+_MAKE:=	${MAKE}
+.  for _dir_ in ${PATH:C/\:/ /g}
+.    if empty(_MAKE:M/*)
+.      if exists(${_dir_}/${MAKE})
+_MAKE:=	${_dir_}/${MAKE}
+.      endif
+.    endif
+.  endfor
+.  if !empty(_MAKE:M/*)
+MAKEFLAGS+=	_MAKE="${_MAKE}"
+.  endif
+.endif
+MAKE:=	${_MAKE}
 
 .if exists(/usr/bin/uname)
 UNAME=/usr/bin/uname
