@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/06 15:34:01 wiz Exp $
+include/chm_lib.h
+lib/libchm.a
+lib/libchm.la
+lib/libchm.so
+lib/libchm.so.0
+lib/libchm.so.0.0
