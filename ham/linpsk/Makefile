@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/16 15:32:12 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/16 20:00:52 rillig Exp $
 #
 
 DISTNAME=	linpsk-0.8.0.4
@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 USE_GNU_TOOLS+=	make
 USE_GNUMAKE=	yes
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
