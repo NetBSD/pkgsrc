@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5666 2004/04/19 18:52:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.5667 2004/04/19 21:39:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cgdb-0.4.0 [xtraeme 2004-04-19]
 	Added freeglut-2.2.0 [xtraeme 2004-04-19]
 	Updated gok to 0.10.2 [jmmv 2004-04-19]
+	Updated adzap to 20040408 [kleink 2004-04-19]
