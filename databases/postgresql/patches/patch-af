@@ -1,8 +1,19 @@
-$NetBSD: patch-af,v 1.10 2000/07/14 04:44:13 jlam Exp $
-
 --- pl/tcl/Makefile.orig	Mon May 22 22:12:44 2000
-+++ pl/tcl/Makefile	Mon Jul 10 22:31:20 2000
-@@ -70,7 +70,7 @@
++++ pl/tcl/Makefile	Fri Sep  1 09:41:04 2000
+@@ -56,10 +56,11 @@
+ endif
+ 
+ %$(TCL_SHLIB_SUFFIX):	%.o
+-	$(TCL_SHLIB_LD) -o $@ $< $(TCL_LIB_SPEC) $(SHLIB_EXTRA_LIBS)
++	$(TCL_SHLIB_LD) -o $@ $< -R${PREFIX}/lib -L${PREFIX}/lib -ltcl83 -lm
+ 
+ 
+ CC = $(TCL_CC)
++LD = $(TCL_LD)
+ 
+ # Since we are using Tcl's choice of C compiler, which might not be the
+ # same one selected for Postgres, do NOT use CFLAGS from Makefile.global.
+@@ -70,7 +71,7 @@
  
  CFLAGS+= $(TCL_SHLIB_CFLAGS) $(TCL_DEFS)
  
