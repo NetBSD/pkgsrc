@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/06/26 16:30:57 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2001/07/02 16:48:31 jlam Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -24,16 +24,12 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../mk/bsd.prefs.mk"
+
 # Avoid compiler bug on "arm32"
 .if (${MACHINE_ARCH} == arm32)
 CFLAGS=			-O
 .endif
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../archivers/bzip2/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
 
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.  Users may reenable
@@ -47,4 +43,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
 		${PREFIX}/share/ImageMagick
 
+.include "../../archivers/bzip2/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
