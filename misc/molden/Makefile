@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:01:18 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 19:30:02 snj Exp $
 
 DISTNAME=	molden3.8
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -13,7 +13,7 @@ COMMENT=	Displaying MOLecular DENsity
 MAKEFILE=	makefile
 ALL_TARGET=	molden
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_FORTRAN=		# defined
 
@@ -44,5 +44,5 @@ do-install:
 		done ; \
 	done
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
