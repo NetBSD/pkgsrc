@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/30 00:52:10 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/25 15:58:20 jmmv Exp $
 bin/gda-run
 bin/gda-test
-etc/libgda/config
 include/libgda-report/gda-report-document.h
 include/libgda-report/gda-report-types.h
 include/libgda-report/gda-report.h
@@ -71,6 +70,7 @@ lib/libgdasql.so
 lib/libgdasql.so.0
 lib/libgdasql.so.0.0
 lib/pkgconfig/libgda.pc
+share/examples/libgda/config
 share/gtk-doc/html/libgda/architecture.html
 share/gtk-doc/html/libgda/c680.html
 share/gtk-doc/html/libgda/c685.html
@@ -205,10 +205,10 @@ share/omf/libgda/libgda-C.omf
 @dirrm share/libgda
 @dirrm share/idl/libgda
 @dirrm share/gtk-doc/html/libgda
+@dirrm share/examples/libgda
 @dirrm lib/libgda/providers
 @dirrm lib/libgda
 @exec ${MKDIR} %D/include/libgda/sql
 @dirrm include/libgda/sql
 @dirrm include/libgda-report
 @dirrm include/libgda
-@dirrm etc/libgda
