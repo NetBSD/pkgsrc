@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/06 09:36:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/06 11:10:06 jmmv Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
@@ -29,6 +29,8 @@ include/gstreamer-0.8/gst/tuner/tunerchannel.h
 include/gstreamer-0.8/gst/tuner/tunernorm.h
 include/gstreamer-0.8/gst/video/video.h
 include/gstreamer-0.8/gst/video/videosink.h
+include/gstreamer-0.8/gst/xoverlay/xoverlay.h
+include/gstreamer-0.8/gst/xwindowlistener/xwindowlistener.h
 lib/gstreamer-0.8/libgstac3parse.a
 lib/gstreamer-0.8/libgstac3parse.la
 lib/gstreamer-0.8/libgstac3parse.so
@@ -251,6 +253,15 @@ lib/gstreamer-0.8/libgstwavenc.so
 lib/gstreamer-0.8/libgstwavparse.a
 lib/gstreamer-0.8/libgstwavparse.la
 lib/gstreamer-0.8/libgstwavparse.so
+lib/gstreamer-0.8/libgstximagesink.a
+lib/gstreamer-0.8/libgstximagesink.la
+lib/gstreamer-0.8/libgstximagesink.so
+lib/gstreamer-0.8/libgstxvimagesink.a
+lib/gstreamer-0.8/libgstxvimagesink.la
+lib/gstreamer-0.8/libgstxvimagesink.so
+lib/gstreamer-0.8/libgstxwindowlistener.a
+lib/gstreamer-0.8/libgstxwindowlistener.la
+lib/gstreamer-0.8/libgstxwindowlistener.so
 lib/gstreamer-0.8/libgsty4menc.a
 lib/gstreamer-0.8/libgsty4menc.la
 lib/gstreamer-0.8/libgsty4menc.so
@@ -287,6 +298,8 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gst-plugins-0.8.mo
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in gstreamer: @dirrm lib/gstreamer-0.8
+@dirrm include/gstreamer-0.8/gst/xwindowlistener
+@dirrm include/gstreamer-0.8/gst/xoverlay
 @dirrm include/gstreamer-0.8/gst/video
 @dirrm include/gstreamer-0.8/gst/tuner
 @dirrm include/gstreamer-0.8/gst/tag
