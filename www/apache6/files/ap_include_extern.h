@@ -1,4 +1,4 @@
-/* $NetBSD: ap_include_extern.h,v 1.1.1.1 1999/07/23 17:53:29 itojun Exp $ */
+/* $NetBSD: ap_include_extern.h,v 1.2 2001/02/06 10:58:18 itojun Exp $ */
 /* ====================================================================
  * Copyright (c) 1998 The Apache Group.  All rights reserved.
  *

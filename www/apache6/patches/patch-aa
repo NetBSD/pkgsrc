@@ -1,8 +1,29 @@
-$NetBSD: patch-aa,v 1.3 1999/09/01 07:41:03 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2001/02/06 10:58:18 itojun Exp $
 
---- Makefile.tmpl.orig	Thu Aug 12 23:58:18 1999
-+++ Makefile.tmpl	Wed Sep  1 00:08:27 1999
-@@ -450,12 +450,13 @@
+--- Makefile.tmpl.orig	Tue Jan 16 01:26:17 2001
++++ Makefile.tmpl	Tue Feb  6 19:41:48 2001
+@@ -326,20 +326,7 @@
+ 			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
+ 			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
+ 			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
+-			name=`$(TOP)/$(AUX)/fmn.sh $(TOP)/$(SRC)/$${mod}`; \
+-			echo dummy | awk '{ printf("LoadModule %-18s %s\n", modname, modpath); }' \
+-			modname="$${name}" modpath="$(libexecdir_relative)$${file}" >>$(SRC)/.apaci.install.conf; \
+ 		done; \
+-		echo "" >>$(SRC)/.apaci.install.conf; \
+-		echo "#  Reconstruction of the complete module list from all available modules" >>$(SRC)/.apaci.install.conf; \
+-		echo "#  (static and shared ones) to achieve correct module execution order." >>$(SRC)/.apaci.install.conf; \
+-		echo "#  [WHENEVER YOU CHANGE THE LOADMODULE SECTION ABOVE UPDATE THIS, TOO]" >>$(SRC)/.apaci.install.conf; \
+-		echo "ClearModuleList" >>$(SRC)/.apaci.install.conf; \
+-		egrep "^[ 	]*(Add|Shared)Module" $(SRC)/Configuration.apaci |\
+-		sed	-e 's:SharedModule:AddModule:' \
+-			-e 's:modules/[^/]*/::' \
+-			-e 's:[ 	]lib: mod_:' \
+-			-e 's:\.[soam].*$$:.c:' >>$(SRC)/.apaci.install.conf; \
+ 	fi
+ 	@echo "<=== [programs]"
+ 
+@@ -464,15 +451,16 @@
  		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
  	fi
@@ -15,9 +36,14 @@ $NetBSD: patch-aa,v 1.3 1999/09/01 07:41:03 itojun Exp $
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
 +			-e 's;LD_LIBRARY_PATH=.*;LD_LIBRARY_PATH=/usr/lib:$(prefix)/lib:/usr/local/lib;' \
  			> $(TOP)/$(SRC)/.apaci.install.tmp; \
- 			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
- 			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
-@@ -472,7 +473,7 @@
+-			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
+-			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
++			echo "$(INSTALL_SCRIPT) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
++			$(INSTALL_SCRIPT) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
+ 		done; \
+ 	fi
+ 	@echo "Copying tree $(TOP)/icons/ -> $(root)$(iconsdir)/"; \
+@@ -486,7 +474,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"

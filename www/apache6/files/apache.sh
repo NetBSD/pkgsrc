@@ -1,47 +1,56 @@
 #! /bin/sh
 #
-# $NetBSD: apache.sh,v 1.4 2000/11/14 19:58:05 itojun Exp $
+# $NetBSD: apache.sh,v 1.5 2001/02/06 10:58:18 itojun Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
 
 name="apache"
-command="@PREFIX@/sbin/apachectl"
+ctl_command="@PREFIX@/sbin/apachectl"
+command="@PREFIX@/sbin/httpd"
 pidfile="/var/run/httpd.pid"
 conffile="@PREFIX@/etc/httpd/httpd.conf"
 
 apache_start="start"
 
-if [ -f @PREFIX@/etc/httpd/mod_ssl.conf ]
+if [ -f @PREFIX@/etc/httpd/apache_start.conf ]
 then
 	# This file can reset apache_start to "startssl"
-	. @PREFIX@/etc/httpd/mod_ssl.conf
+	. @PREFIX@/etc/httpd/apache_start.conf
 fi
 
 cmd=${1:-start}
 
-case ${cmd} in
-start)
-	if [ -x ${command} -a -f ${conffile} ]; then
+if [ -x ${ctl_command} -a -x ${command} ]
+then
+	case ${cmd} in
+	start)
 		echo "Starting ${name}."
-		${command} ${apache_start} > /dev/null
-	fi
-	;;
-stop)
-	if [ -x ${command} -a -f ${pidfile} ]; then
-		echo "Stopping ${name}."
-		${command} stop > /dev/null
-	fi
-	;;
-restart)
-	( $0 stop )
-	sleep 5
-	$0 start
-	;;
-*)
-	if [ -x ${command} ]; then
-		${command} ${cmd}
-	fi
-	;;
-esac
+		${ctl_command} ${apache_start} > /dev/null
+		;;
+
+	stop)
+		if [ -a -f ${pidfile} ]
+		then
+			echo "Stopping ${name}."
+			${ctl_command} ${cmd} > /dev/null
+		fi
+		;;
+
+	restart)
+		( $0 stop )
+		sleep 5
+		$0 start
+		;;
+
+	status)
+		${ctl_command} ${cmd}
+		;;
+
+	*)
+		echo 1>&2 "Usage: $0 [restart|start|stop|status]"
+		exit 1
+		;;
+	esac
+fi
 exit 0
