@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.3 2001/10/29 16:34:40 drochner Exp $
+# $NetBSD: extension.buildlink.mk,v 1.4 2001/12/07 19:47:13 jmc Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,7 +70,7 @@ PYPKGPREFIX=	py20
 #
 
 .if defined(PYBINMODULE)
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
+.if ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
 IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 .endif
