@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/06 15:05:54 jlam Exp $
+
+SHA1 (amavisd-new-20040701.tar.gz) = 77c037cb13e629f5f2c038d56a62c1cdae904075
+Size (amavisd-new-20040701.tar.gz) = 451622 bytes
+SHA1 (patch-aa) = 4364b6501c0730b623c48afee6f24b6256c6b84f
