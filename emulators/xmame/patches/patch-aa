@@ -1,5 +1,5 @@
---- makefile.unix.orig	Thu Jan 29 13:21:09 1998
-+++ makefile.unix	Sat Feb 14 21:37:06 1998
+--- makefile.unix.orig	Thu Jan 29 07:21:09 1998
++++ makefile.unix	Mon Mar 16 00:51:58 1998
 @@ -36,18 +36,18 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -35,31 +35,27 @@
    -fstrength-reduce -fomit-frame-pointer -ffast-math -malign-functions=2 \
    -malign-jumps=2 -malign-loops=2
  ### for Linux/X11/PowerPC use following opts
-@@ -92,7 +95,7 @@
+@@ -92,7 +95,9 @@
  ##############################################################################
  
  # *** To disable joystick support comment next line
--JOY		= -DUSE_JOYSTICK
-+#JOY		= -DUSE_JOYSTICK
++ifeq ($(ARCH),i386)
+ JOY		= -DUSE_JOYSTICK
++endif
  
  # *** To disable  mouse support comment next line
  MOUSE		= -DUSE_MOUSE
-@@ -109,12 +112,12 @@
- # use provided program "xlistdev" to now available ones
- # and dont forget to include library in linker definition !!
- #JS	= -DX11_JOYSTICK
--JSNAME = \"Joystick\"
-+#JSNAME = \"Joystick\"
- # JSPOLL  = -DUSE_X11_JOYEVENTS
+@@ -114,7 +119,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
--JS	= -DI386_JOYSTICK
-+#JS	= -DI386_JOYSTICK
++ifeq ($(ARCH),i386)
+ JS	= -DI386_JOYSTICK
++endif
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -156,8 +159,8 @@
+@@ -156,8 +163,8 @@
  # *** where does your X11 source tree resides ?? use aproppiate switch 
  
  # standard location for X11 
@@ -70,7 +66,7 @@
  # standard location for XFree86
  X11INC		= -I/usr/X11R6/include
  X11LIB		= -L/usr/X11R6/lib
-@@ -175,18 +178,18 @@
+@@ -175,18 +182,18 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
@@ -95,7 +91,7 @@
  
  # *** Use this definition as default X Display
  DP = \":0.0\"
-@@ -209,8 +212,8 @@
+@@ -209,8 +216,8 @@
  # timer based audio code and ajust in src/unix/sound.h AUDIO_TIMER_FREQ item
  #
  # DONTUSE_TIMER is mandatory for SVGALIB -else you'll get a compile error-
@@ -106,7 +102,7 @@
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -232,7 +235,7 @@
+@@ -232,7 +239,7 @@
  ######## Alpha/Linux/X11
  # ARCH  = linux_alpha
  ######## ix86/Linux/X11
@@ -115,7 +111,7 @@
  ######## ix86/Linux/SVGALIB
  # ARCH	= svgalib
  ######## ix86/Linux/GGI *New* *New* *New* Please test - no mouse or joy yet
-@@ -321,12 +324,12 @@
+@@ -321,12 +328,12 @@
  #If you want sound add to DEFS.netbsd_i386  "-DUSE_AUDIO" and 
  #set STIM=-DUSE_TIMER above
  #
@@ -132,7 +128,7 @@
  
  # SunOS
  #####################
-@@ -414,7 +417,7 @@
+@@ -414,7 +421,7 @@
  # Perhaps one day original mame sources will use POSIX strcasecmp and M_PI
  # instead MS-DOS counterparts... ( a long and sad history ...)
  CFLAGS	= $(CAPABILITIES) $(SOUND_OPTS) $(DBGFLAGS) $(OPTFLAGS) \
@@ -141,7 +137,7 @@
  
  OBJOSDEP = obj/unix/osdepend.a
  
-@@ -585,13 +588,13 @@
+@@ -585,13 +592,13 @@
  # not sure why, but was in original xmame makefile long time ago...
  VPATH = src src/Z80 src/M6502 src/I86 src/M6809 src/M68000 src/unix src/zipfiles
  
@@ -161,7 +157,7 @@
  
  $(OBJDIRS):
  	-mkdir $@
-@@ -600,36 +603,36 @@
+@@ -600,36 +607,36 @@
  
  objlnk:
  	-rm -fR obj
@@ -207,7 +203,7 @@
  
  sndtest: sndtest.c
  	gcc -o sndtest sndtest.c
-@@ -647,33 +650,33 @@
+@@ -647,33 +654,33 @@
  			src/I86/instr.h
  
  install: install-bin install-man
