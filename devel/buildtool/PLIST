@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/24 10:12:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/08/31 19:29:06 jmmv Exp $
 bin/buildtool
 bin/buildtool-0
+libexec/buildtool-0/bt-012-to-013
 libexec/buildtool-0/bt_config
 libexec/buildtool-0/bt_dist
 libexec/buildtool-0/bt_doc
@@ -8,13 +9,26 @@ libexec/buildtool-0/bt_lint
 libexec/buildtool-0/bt_logic
 libexec/buildtool-0/bt_make
 libexec/buildtool-0/bt_pkgflags
+libexec/buildtool-0/bt_sh
 libexec/buildtool-0/bt_swcgen
 libexec/buildtool-0/bt_wizard
+libexec/buildtool-0/bt_wrap
+libexec/buildtool-0/depconv
+libexec/buildtool-0/oodate
 man/man1/buildtool.1
 share/buildtool-0/bt_config/base.subr
 share/buildtool-0/bt_config/pkgconfig.subr
 share/buildtool-0/bt_config/pthread.subr
 share/buildtool-0/bt_config/x11.subr
+share/buildtool-0/bt_logic/archive.subr
+share/buildtool-0/bt_logic/convert.subr
+share/buildtool-0/bt_logic/depend.subr
+share/buildtool-0/bt_logic/library.subr
+share/buildtool-0/bt_logic/null.subr
+share/buildtool-0/bt_logic/output.subr
+share/buildtool-0/bt_logic/program.subr
+share/buildtool-0/bt_logic/shlib.subr
+share/buildtool-0/bt_logic/texinfo.subr
 share/buildtool-0/bt_swcgen/out_conf.m4
 share/buildtool-0/bt_swcgen/out_script.m4
 share/buildtool-0/mk/bt.clean.mk
@@ -30,17 +44,23 @@ share/buildtool-0/mk/qt.moc.mk
 share/buildtool-0/mk/sys.mk
 share/buildtool-0/templates/README.bt
 share/buildtool-0/templates/bt_config.conf.in
-share/buildtool-0/templates/config
-share/buildtool-0/templates/defs
-share/buildtool-0/templates/docs
 share/buildtool-0/templates/mk_bin
 share/buildtool-0/templates/mk_top
 share/buildtool-0/templates/pkgflags
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/DIFFS.bt_sh
+share/doc/${PKGNAME}/NOTES.bt_logic
+share/doc/${PKGNAME}/PEOPLE
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
+@dirrm share/doc/${PKGNAME}
 @dirrm share/buildtool-0/templates
 @exec ${MKDIR} %D/share/buildtool-0/pkgflags
 @dirrm share/buildtool-0/pkgflags
 @dirrm share/buildtool-0/mk
 @dirrm share/buildtool-0/bt_swcgen
+@dirrm share/buildtool-0/bt_logic
 @dirrm share/buildtool-0/bt_config
 @dirrm share/buildtool-0
 @dirrm libexec/buildtool-0
