@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/05/24 08:53:57 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2001/05/24 16:41:58 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -26,6 +26,7 @@ USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/readline/buildlink.mk"
 
+CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 CFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
@@ -46,22 +47,17 @@ CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
 
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
-CPPFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
-
 .if defined(SAMBA_WITH_CUPS)
+.include "../../print/cups/buildlink.mk"
 CONFIGURE_ARGS+=	--with-cups
-DEPENDS+=		cups>=1.1.1:../../print/cups
-CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 .if defined(USE_PAM)
+.include "../../security/PAM/buildlink.mk"
 CONFIGURE_ARGS+=	--with-pam
-DEPENDS+=		PAM-*:../../security/PAM
-CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 # The following are Linux-only options.
