@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/09/27 17:03:21 grant Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/29 12:58:37 wiz Exp $
 #
 
 DISTNAME=		xfstt_1.3
@@ -16,7 +16,7 @@ MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 
 USE_X11BASE=		YES
 USE_GMAKE=		YES
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 RCD_SCRIPTS=		xfstt
 
