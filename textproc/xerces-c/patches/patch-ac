@@ -1,22 +1,33 @@
-$NetBSD: patch-ac,v 1.2 2003/06/23 07:52:41 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2004/02/11 04:06:05 minskim Exp $
 
---- runConfigure.orig	Thu Mar  7 14:45:22 2002
-+++ runConfigure
-@@ -80,7 +80,7 @@ usage()
-     echo "       where options may be any of the following:"
-     echo "       -p <platform> (accepts 'aix', 'linux', 'freebsd', 'solaris',
-             'hp-10', 'hp-11', 'openserver', 'unixware', 'os400', 'irix',
--            'ptx', 'tru64', 'macosx')"
-+            'ptx', 'tru64', 'macosx', 'netbsd')"
-     echo "       -c <C compiler name> (e.g. gcc, cc, xlc_r, icc)"
-     echo "       -x <C++ compiler name> (e.g. g++, CC, xlC_r, icc, c++)"
-     echo "       -d (specifies that you want to build debug version)"
-@@ -220,7 +220,7 @@ echo "Extra configure options: $configur
- #
+--- framework/StdOutFormatTarget.cpp.orig	2003-05-27 10:04:45.000000000 -0500
++++ framework/StdOutFormatTarget.cpp
+@@ -80,7 +80,7 @@
+  */
  
- case $platform in
--   aix | linux | freebsd | solaris | hp-10 | hp-11 | irix | openserver | unixware | os400 | ptx | tru64 | macosx)
-+   aix | linux | freebsd | solaris | hp-10 | hp-11 | irix | openserver | unixware | os400 | ptx | tru64 | macosx | netbsd)
-        # platform has been recognized
-        ;;
-    *)
+ #include <xercesc/framework/StdOutFormatTarget.hpp>
+-#include <iostream.h>
++#include <iostream>
+ 
+ XERCES_CPP_NAMESPACE_BEGIN
+ 
+@@ -92,7 +92,7 @@ StdOutFormatTarget::~StdOutFormatTarget(
+ 
+ void StdOutFormatTarget::flush()
+ {
+-    cout.flush();
++    std::cout.flush();
+ }
+ 
+ void StdOutFormatTarget::writeChars(const XMLByte* const  toWrite
+@@ -104,8 +104,8 @@ void StdOutFormatTarget::writeChars(cons
+         // Without the cast, it was printing the pointer value in hex.
+         // Quite annoying, considering every other platform printed
+         // the string with the explicit cast to char* below.
+-    cout.write((char *) toWrite, (int) count);
+-    cout.flush();
++    std::cout.write((char *) toWrite, (int) count);
++    std::cout.flush();
+ 
+ }
+ 
