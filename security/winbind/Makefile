@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/10/09 21:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:04:09 jlam Exp $
 
 PKGNAME=		winbind-${SAMBA_DIST_VERS}
 CATEGORIES=		security
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
 .include "../../net/samba/Makefile.common"
 
@@ -38,5 +39,4 @@ do-install:
 .include "../../security/PAM/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

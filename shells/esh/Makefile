@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/11/17 09:02:00 salo Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:11 jlam Exp $
 
 DISTNAME=		esh-0.8
 CATEGORIES=		shells
@@ -10,6 +10,7 @@ COMMENT=		Unix shell with Lisp-like syntax
 WRKSRC=			${WRKDIR}/esh
 INFO_FILES=		esh.info
 
+USE_PKGINSTALL=		yes
 PKG_SHELL=		${PREFIX}/bin/esh
 
 do-install:
@@ -26,5 +27,4 @@ do-install:
 		${PREFIX}/share/doc/esh/
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

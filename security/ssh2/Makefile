@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/12 15:15:51 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:04:08 jlam Exp $
 #
 
 DISTNAME=	ssh-3.2.2
@@ -13,6 +13,7 @@ COMMENT=	Secure Shell client and server for V.2 SSH protocol
 CONFLICTS=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 
@@ -80,5 +81,4 @@ post-install:
 .endfor
 
 .include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

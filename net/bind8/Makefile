@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.17 2002/12/07 21:35:10 cjep Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:48 jlam Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -20,6 +20,8 @@ Y2K=		http://www.isc.org/ISC/y2k.html
 BIND_VERSION=	8.3.4
 DIST_SUBDIR=	bind/${BIND_VERSION}
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
+
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,5 +49,4 @@ post-install:
 	(cd ${WRKDIR}/doc/html/; tar Bpcf - .) | (cd ${PREFIX}/share/doc/bind8; tar Bpxf -)
 	${INSTALL_SCRIPT} ${WRKDIR}/named.sh ${PREFIX}/etc/rc.d/named
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

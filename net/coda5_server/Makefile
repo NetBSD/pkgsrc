@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/09/18 21:15:14 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/28 22:03:50 jlam Exp $
 
 PKGNAME=	coda-server-${DIST_VERS}
 COMMENT=	server programs for a replicated high-performance network file system
@@ -8,6 +8,7 @@ COMMENT=	server programs for a replicated high-performance network file system
 ALL_TARGET=		coda
 INSTALL_TARGET=		server-install
 
+USE_PKGINSTALL=	yes
 CONF_FILES+=	${EGDIR}/server.conf.ex ${PKG_SYSCONFDIR}/server.conf
 
 post-install:
@@ -19,5 +20,4 @@ post-install:
 			${SED}	-e "s|^|usr/|"				\
 				-e "s|vice-au\.8|au.8|"`
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2003/01/27 11:10:27 abs Exp $
+# $NetBSD: Makefile,v 1.120 2003/01/28 22:04:26 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -37,6 +37,7 @@ CONFLICTS=		apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
@@ -207,5 +208,4 @@ post-install:
 .include "../../devel/libmm/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

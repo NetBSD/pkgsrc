@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:34 jlam Exp $
 
 DISTNAME=	mailman-2.0.12
 CATEGORIES=	mail www
@@ -11,6 +11,7 @@ COMMENT=	the GNU Mailing List Manager
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
@@ -146,5 +147,4 @@ do-install:
 	${CHMOD} -R g-w ${EXECDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

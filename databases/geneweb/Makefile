@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/24 04:05:22 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:10 jlam Exp $
 #
 
 DISTNAME=	geneweb-4.09
@@ -11,6 +11,7 @@ COMMENT=	GeneWeb is a comprehensive genealogy database application
 
 DEPENDS+=	ocaml>=3.04:../../lang/ocaml
 
+USE_PKGINSTALL=	yes
 USE_GMAKE=	yes
 
 RCD_SCRIPTS=	geneweb
@@ -65,5 +66,4 @@ do-install:
 		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
 		${CHOWN} -R nobody.${ROOT_GROUP} ${PREFIX}/share/geneweb
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/29 12:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:36 jlam Exp $
 #
 
 DISTNAME=		xfstt_1.3
@@ -14,6 +14,7 @@ COMMENT=		TrueType font server for X11
 CXXFLAGS+=		-fomit-frame-pointer -ffast-math
 MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 
+USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
@@ -41,5 +42,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
 	${ECHO} belongs to xfstt pkg >${PREFIX}/lib/X11/fonts/TrueType/.keepme
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

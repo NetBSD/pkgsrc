@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/11/17 09:02:02 salo Exp $
+# $NetBSD: Makefile,v 1.37 2003/01/28 22:04:13 jlam Exp $
 
 DISTNAME=       zsh-4.0.6
 CATEGORIES=	shells
@@ -14,6 +14,7 @@ HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		zsh.info
 TEXINFO_OVERRIDE=	yes
@@ -43,5 +44,4 @@ post-install:
 		${PREFIX}/share/doc/zsh
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

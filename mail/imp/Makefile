@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/02/01 22:44:27 bouyer Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:33 jlam Exp $
 
 DISTNAME=	imp-3.0
 CATEGORIES=	mail www
@@ -21,6 +21,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR?=	httpd
 
 CONF_FILES=	${EGDIR}/imp.conf ${PKG_SYSCONFDIR}/imp.conf
@@ -66,5 +67,4 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
 	${CHMOD} -R a-w ${IMPDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

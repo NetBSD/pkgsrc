@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/23 13:03:39 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:04:14 jlam Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info
 TEXINFO_OVERRIDE=	YES
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,6 +26,5 @@ LDFLAGS+=	-static
 
 PKG_SHELL=	${PREFIX}/bin/zsh
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

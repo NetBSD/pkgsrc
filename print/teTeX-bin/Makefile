@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/11/19 02:47:19 mrg Exp $
+# $NetBSD: Makefile,v 1.39 2003/01/28 22:04:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -24,6 +24,7 @@ ALL_TARGET=		all
 INSTALL_TARGET=		install strip
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 CFLAGS+=		-Dunix
@@ -80,5 +81,4 @@ post-install:
 .include "../../www/libwww/buildlink2.mk"
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
