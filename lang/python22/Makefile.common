@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/10/03 23:25:39 jschauma Exp $
 #
 
 DISTNAME=	Python-2.2.3
@@ -26,8 +26,10 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.common_end
 LOWER_OPSYS=	sunos
 .endif
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "IRIX"
+.if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}
+.elif ${OPSYS} == "IRIX"
+PLIST_SUBST+=   PY_PLATNAME=${LOWER_OPSYS:C/\..*//}
 .else
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
