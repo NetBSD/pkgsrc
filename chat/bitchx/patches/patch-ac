@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2001/09/30 13:52:58 blymn Exp $
+$NetBSD: patch-ac,v 1.4 2003/01/31 00:17:45 salo Exp $
 
---- source/term.c.orig	Mon Jan  8 16:54:22 2001
-+++ source/term.c
-@@ -819,14 +819,14 @@
- #ifndef WTERM_C
+--- source/term.c.orig	Thu Feb 28 05:22:51 2002
++++ source/term.c	Thu Jan 30 23:27:35 2003
+@@ -824,13 +824,14 @@
  	int	i;
  	int	desired;
--
-+	char    *t2ptr;
+ 
++	char	*t2ptr;
  
  #if !defined(__EMX__) && !defined(WINNT) && !defined(GUI)
  	memset(current_term, 0, sizeof(struct term_struct));
@@ -19,11 +18,13 @@ $NetBSD: patch-ac,v 1.3 2001/09/30 13:52:58 blymn Exp $
  	if (!term && !(term = getenv("TERM")))
  	{
  		fprintf(stderr, "\n");
-@@ -873,11 +873,15 @@
+@@ -877,13 +878,15 @@
  		}
  		else
  		{
--			cval = Tgetstr(tcaps[i], termcap2);
+-			char *tmp = termcap2;
+-
+-			cval = Tgetstr(tcaps[i], tmp);
 +			cval = Tgetstr(tcaps[i], t2ptr);
 +#ifdef HAVE_TERMINFO
  			if (cval == (char *) -1)
