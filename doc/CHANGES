@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3282 2003/09/08 15:29:55 adam Exp $
+$NetBSD: CHANGES,v 1.3283 2003/09/08 17:40:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3577,3 +3577,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added idesk-0.3.5 [jmmv 2003-09-08]
 	Updated gtk2 to 2.2.4 [adam 2003-09-08]
 	Updated libart2 to 2.3.15 [adam 2003-09-08]
+	Updated papersize to 1.0.7 [jmmv 2003-09-08]
