@@ -1,12 +1,49 @@
-$NetBSD: patch-ac,v 1.1 1998/09/06 23:47:29 garbled Exp $
---- Makefile.in.orig	Sun Sep  6 11:36:17 1998
-+++ Makefile.in	Sun Sep  6 11:37:05 1998
-@@ -37,7 +37,7 @@
- DISTDIR =
+$NetBSD: patch-ac,v 1.2 1999/05/18 08:45:49 tv Exp $
+
+--- configure.orig	Sat Apr 24 14:11:32 1999
++++ configure	Tue May 18 01:55:08 1999
+@@ -4841,14 +4841,14 @@
+   if test x"$with_readline" != "xno" ; then
+     READLINE=""
+     unset ac_cv_lib_readline_readline
+-    echo $ac_n "checking for readline in -lreadline""... $ac_c" 1>&6
+-echo "configure:4846: checking for readline in -lreadline" >&5
++    echo $ac_n "checking for readline in -ledit""... $ac_c" 1>&6
++echo "configure:4846: checking for readline in -ledit" >&5
+ ac_lib_var=`echo readline'_'readline | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lreadline  $LIBS"
++LIBS="-ledit -ltermcap $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 4854 "configure"
+ #include "confdefs.h"
+@@ -4876,7 +4876,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-   READLINE="" LIBS="-lreadline $LIBS"
++   READLINE="" LIBS="-ledit -ltermcap $LIBS"
+ else
+   echo "$ac_t""no" 1>&6
+  
+@@ -6295,7 +6295,7 @@
  
- pkgdatadir = $(datadir)/@PACKAGE@
--pkglibdir = $(libdir)/@PACKAGE@
-+pkglibdir = $(datadir)/@PACKAGE@
- pkgincludedir = $(includedir)/@PACKAGE@
+   fi
  
- top_builddir = .
+-
++if false; then
+   echo $ac_n "checking for XpmCreatePixmapFromData in -lXpm""... $ac_c" 1>&6
+ echo "configure:6301: checking for XpmCreatePixmapFromData in -lXpm" >&5
+ ac_lib_var=`echo Xpm'_'XpmCreatePixmapFromData | sed 'y%./+-%__p_%'`
+@@ -6340,7 +6340,7 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+-
++fi
+ 
+   if test x"$MISSING_X_LIBS" != "x"; then
+     echo
