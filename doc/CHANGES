@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8295 2004/12/05 17:41:22 he Exp $
+$NetBSD: CHANGES,v 1.8296 2004/12/05 17:51:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5798,3 +5798,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby18 to 1.8.1nb2 [taca 2004-12-05]
 	Updated p5-DBIx-SearchBuilder to 1.15 [he 2004-12-05]
 	Updated p5-DNS-ZoneParse to 0.95 [he 2004-12-05]
+	Updated p5-Data-FormValidator to 3.63 [he 2004-12-05]
