@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5558 2004/04/12 18:21:59 kim Exp $
+$NetBSD: CHANGES,v 1.5559 2004/04/12 21:06:22 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1932,3 +1932,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postfix-current to 20040312 [taca 2004-04-12]
 	Added p5-ExtUtils-XSBuilder-0.25 [kim 2004-04-12]
 	Added p5-libapreq2-2.2.2 [kim 2004-04-12]
+	Updated smokeping to 1.28 [kim 2004-04-12]
