@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 1999/09/03 19:45:12 drochner Exp $
---- configure.orig	Tue Jul 13 16:21:33 1999
-+++ configure	Mon Aug 16 02:05:20 1999
-@@ -1403,6 +1403,7 @@
+$NetBSD: patch-am,v 1.1 1999/09/03 19:45:12 drochner Exp $
+--- test/configure.orig	Mon Aug 16 01:19:46 1999
++++ test/configure	Mon Aug 16 02:14:10 1999
+@@ -1390,6 +1390,7 @@
  
  
  # Check for any special flags to pass to ltconfig.
@@ -9,20 +9,20 @@ $NetBSD: patch-aa,v 1.7 1999/09/03 19:45:12 drochner Exp $
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
  test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
-@@ -1559,6 +1560,7 @@
+@@ -1546,6 +1547,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
 +fi
  
  
- subdirs="lib/Xlt test"
-@@ -4812,7 +4814,7 @@
+ version=1.2
+@@ -4363,7 +4365,7 @@
  
  lexicographic_readdir=1
  
--CFLAGS="$debug_flag $conversions_flag $verbose_flag $sverbose_flag $production_flag"
-+CFLAGS="${CCFLAGS} $conversions_flag $verbose_flag $sverbose_flag $production_flag"
+-CFLAGS="$debug_flag $conversions_flag $verbose_flag $production_flag"
++CFLAGS="${CCFLAGS} $conversions_flag $verbose_flag $production_flag"
  GPROF_FLAGS="-pg"
  GPROF_CFLAGS=""
  EXTRACFLAGS=""

@@ -1,0 +1,20 @@
+$NetBSD: patch-cb,v 1.1 1999/09/03 19:45:12 drochner Exp $
+--- include/Motif-2.0/Xm/Makefile.in.orig	Tue Aug 17 00:06:46 1999
++++ include/Motif-2.0/Xm/Makefile.in	Tue Aug 17 00:07:17 1999
+@@ -119,7 +119,7 @@
+ # Lets put the headers in a sub directory to avoid
+ # poluting /usr/local with more directories for default installs.
+ #
+-@Version_2_0_TRUE@xmdir = $(prefix)/LessTif/Motif2.0/include/Xm
++@Version_2_0_TRUE@xmdir = $(prefix)/include/Xm
+ 
+ @Version_2_0_TRUE@HEADERS1_2 = 	ArrowB.h ArrowBG.h AtomMgr.h 	BaseClassP.h BulletinB.h BulletinBP.h CacheP.h CascadeB.h 	CascadeBG.h CascadeBGP.h CascadeBP.h Command.h CommandP.h 	CutPaste.h CutPasteP.h DesktopP.h DialogS.h DialogSEP.h 	DialogSP.h Display.h DisplayP.h DragC.h DragCP.h 	DragDrop.h DragIcon.h DragIconP.h DragOverS.h DragOverSP.h 	DrawingA.h DrawnB.h DrawnBP.h 	DropSMgr.h DropSMgrP.h DropTrans.h DropTransP.h ExtObjectP.h 	FileSB.h FileSBP.h Form.h FormP.h Frame.h FrameP.h 	Label.h LabelG.h LabelGP.h LabelP.h 	List.h ListP.h MainW.h MainWP.h 	MenuShell.h MenuUtilP.h MessageB.h MessageBP.h 	MwmUtil.h PanedW.h Protocols.h 	ProtocolsP.h PushB.h PushBG.h PushBGP.h PushBP.h 	RCUtilsP.h RepType.h RowColumn.h RowColumnP.h SashP.h Scale.h 	Screen.h ScreenP.h ScrollBar.h ScrollBarP.h 	ScrolledW.h SelectioB.h SelectioBP.h SeparatoG.h 	SeparatoGP.h Separator.h SeparatorP.h ShellEP.h TearOffBP.h 	TearOffP.h Text.h TextF.h TextFP.h TextFSelP.h TextInP.h 	TextOutP.h TextP.h TextSelP.h TextStrSoP.h ToggleB.h 	ToggleBG.h VaSimpleP.h 	VendorS.h VendorSEP.h VendorSP.h VirtKeys.h VirtKeysP.h 	WorldP.h XmosP.h
+ 
+@@ -248,7 +248,6 @@
+ 
+ install-data-am: install-xmDATA install-xmHEADERS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am
