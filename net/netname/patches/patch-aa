@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/26 22:58:21 kim Exp $
+
+--- Makefile.orig	Mon Sep 23 19:45:25 1996
++++ Makefile	Fri Feb 26 17:53:50 1999
+@@ -9,7 +9,7 @@
+ MV	= mv -f
+ INSTALL	= install
+ 
+-DEST	= /usr/local
++DEST	= $(PREFIX)
+ BINDIR	= $(DEST)/bin
+ MANDIR	= $(DEST)/man/man$(MANEXT)
+ MANEXT	= 1
