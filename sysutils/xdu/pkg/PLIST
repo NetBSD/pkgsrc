@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/20 20:48:07 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/23 16:46:52 dmcmahill Exp $
 bin/xdu
 lib/X11/app-defaults/XDu
+man/cat1/xdu.0
