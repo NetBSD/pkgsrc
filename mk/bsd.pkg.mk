@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.377 1999/12/23 03:12:44 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.378 1999/12/28 03:33:53 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -472,6 +472,7 @@ ECHO?=		/usr/ucb/echo
 EGREP?=		/usr/xpg4/bin/egrep
 FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
+FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
 GTAR?=		${LOCALBASE}/bin/gtar
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
@@ -516,6 +517,7 @@ ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/bin/false
 FILE?=		/usr/bin/file
+FIND?=		/usr/bin/find
 GREP?=		/bin/grep
 GTAR?=		/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
@@ -560,6 +562,7 @@ ECHO?=		/bin/echo
 EGREP?=		/usr/bin/egrep
 FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
+FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
 GTAR?=		/usr/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
