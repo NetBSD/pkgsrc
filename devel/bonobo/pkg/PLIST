@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/11/27 20:02:12 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/12/04 15:40:51 jlam Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
@@ -168,6 +168,6 @@ share/oaf/text-plain.oafinfo
 @dirrm share/gnome/bonobo/docs/audio_ulaw
 @dirrm share/gnome/bonobo/docs
 @dirrm share/gnome/bonobo
-@dirrm lib/pkgconfig
+@unexec rmdir %D/lib/pkgconfig 2>/dev/null || true
 @dirrm lib/bonobo/plugin
 @dirrm lib/bonobo

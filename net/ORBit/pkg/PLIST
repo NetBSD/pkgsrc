@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2000/10/17 23:48:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2000/12/04 15:40:52 jlam Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -95,6 +95,7 @@ lib/pkgconfig/ORBit.pc
 lib/pkgconfig/libIDL.pc
 share/aclocal/ORBit.m4
 share/aclocal/libIDL.m4
+@unexec rmdir %D/lib/pkgconfig 2>/dev/null || true
 @dirrm include/orb
 @dirrm include/libIDL
 @dirrm include/ORBitutil
