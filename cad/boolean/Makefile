@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/15 23:02:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/22 03:00:57 jmc Exp $
 #
 
 DISTNAME=	boolean
@@ -13,6 +13,8 @@ COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 REL=		6.4
+
+BUILD_DEPENDS+=	cmake>=1.6.6:../../devel/cmake
 
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
