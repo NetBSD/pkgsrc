@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.15 2003/09/02 06:59:47 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.16 2003/09/14 16:30:34 danw Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -116,7 +116,9 @@ PTHREAD_OPTS?=	# empty
 #
 .undef PTHREAD_TYPE
 PREFER_NATIVE_PTHREADS?=	YES
-.if exists(/usr/include/pthread.h) && ${PREFER_NATIVE_PTHREADS} == "YES"
+.if ${_OPSYS_PTHREAD_AUTO} == "yes"
+PTHREAD_TYPE=	automatic
+.elif exists(/usr/include/pthread.h) && ${PREFER_NATIVE_PTHREADS} == "YES"
 PTHREAD_TYPE=	native
 .else
 .  if !empty(PTHREAD_OPTS:Mnative)
@@ -196,6 +198,10 @@ BUILDLINK_LDFLAGS.pthread=		-lpthread
 .  else
 PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} is missing."
 .  endif
+
+.elif ${PTHREAD_TYPE} == "automatic"
+BUILDLINK_PREFIX.pthread=	/usr
+
 .endif
 
 # Define user-visible PTHREAD_CFLAGS and PTHREAD_LDFLAGS as compiler
