@@ -1,27 +1,49 @@
-$NetBSD: patch-ab,v 1.1 2000/06/19 14:36:51 rh Exp $
+$NetBSD: patch-ab,v 1.2 2000/10/23 14:57:16 rh Exp $
 
---- src/scanmails/scanmails.in.orig	Tue Jul 20 19:28:52 1999
-+++ src/scanmails/scanmails.in	Mon Jun 19 15:54:23 2000
-@@ -187,7 +187,7 @@
-     fi
- else
-     SENDER="$2"
--    RECEIPIENT="$7"
-+    RECEIPIENT="$4"
+--- src/scanmails/scanmails.in.orig	Sat Sep 16 17:40:38 2000
++++ src/scanmails/scanmails.in
+@@ -352,7 +352,7 @@
+ 	sendmail_flags="${sendmail_flags} -C${origconf}"
+    else
+ 	SENDER="$2"
+-	RECEIPIENT="$7"
++	RECEIPIENT="$4"
+    fi
  fi
  
+@@ -447,6 +447,8 @@
+     cat | ${formail} -f -A "${X_Header_String}" >${tmpdir}/receivedmail
+ else
+     cat >${tmpdir}/receivedmail
++    awk <${tmpdir}/receivedmail >${tmpdir}/header '/^$/ {exit 0;} // {print;}'
++    maildest=`grep '^To:' ${tmpdir}/header | head -1 | cut -d' ' -f 2-`
+ fi
  
-@@ -242,11 +242,11 @@
- receiver=`echo ${RECEIPIENT} | ${sed} -e "s/[\\\`\\\\\$\(\)]//g"`
- sender=`echo ${SENDER} | ${sed} -e "s/[\\\`\\\\\$\(\)]//g"`
+ mkdir ${tmpdir}/unpacked
+@@ -1210,7 +1212,7 @@
  
--if [ "$sender" != "$2" -o "$receiver" != "$7" ] ; then
-+if [ "$sender" != "$2" -o "$receiver" != "$4" ] ; then
-        cat <<EOF | ${mail} -s "AMaViS Intrusion???" ${mailto}
-        
- ############################################################
--   $7 or $2 is not a valid Email address
-+   $4 or $2 is not a valid Email address
-    (changed to $receiver and $sender)!
- ############################################################
+                    V I R U S  A L E R T
  
+-  Our viruschecker found a VIRUS in your email to "${receiver}".
++  Our viruschecker found a VIRUS in your email to "${maildest}".
+            We stopped delivery of this email!
+ 
+     Now it is on you to check your system for viruses           
+@@ -1236,7 +1238,7 @@
+ 
+ ############### send a mail to the addressee ########################
+ 
+-cat <<EOF| ${sendmail_wrapper} ${sendmail_flags}
++cat <<EOF| cat - ${tmpdir}/header | ${sendmail_wrapper} ${sendmail_flags}
+ From: ${mailfrom}
+ To: ${receiver}
+ Subject: VIRUS IN A MAIL FOR YOU FROM ${sender}
+@@ -1250,6 +1252,8 @@
+   Delivery of the email was stopped!
+   
+   Please contact your system administrator for details
++
++  The header of the stopped message was:
+ 
+ EOF
+ fi
