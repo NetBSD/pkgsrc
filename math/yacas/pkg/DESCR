@@ -1,0 +1,21 @@
+Yacas (Yet Another Computer Algebra System) is a small and highly flexible
+computer algebra language. The syntax uses a infix-operator grammar
+parser. The distribution contains a small library of mathematical functions,
+but its real strength is in the language in which you can easily write your
+own symbolic manipulation algorithms. It supports arbitrary precision
+arithmetic.
+
+The current version is 1.0.28 (the first release was 1.0.0). The language is
+very much in a finished state. Any code written for it should be usable in
+future versions. Also, the language should prove very easy to learn.
+
+Yacas is written in very clean c++ code, and is very portable . It can compile
+stand-alone, and is easily embeddable. Yacas contains a native arbitrary
+precision arithmetic module, but can also be used with GMP.
+
+Things implemented include: arbitrary precision, rational numeric, vector,
+complex, and matrix computations (including inverses and determinants and
+solving matrix equations), derivatives, solving, Taylor series, numerical
+solving (Newtons method), and a lot more non-mathematical algorithms. The
+language natively supports variables and user-defined functions. There is
+basic support for polynomials.
