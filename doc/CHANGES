@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6479 2004/07/07 09:31:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6480 2004/07/07 11:29:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3290,3 +3290,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated createbuildlink to 3.5 [wiz 2004-07-06]
 	Updated musicpd to 0.11.2 [simonb 2004-07-07]
 	Updated bitlbee to 0.90a [xtraeme 2004-07-07]
+	Updated xfce4-diskperf-plugin to 1.4.1 [martti 2004-07-07]
+	Updated xfce4-xkb-plugin to 0.3.2 [martti 2004-07-07]
