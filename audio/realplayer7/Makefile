@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/31 02:35:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/08 07:35:02 tron Exp $
 #
 
 DISTNAME=		rp7_linux20_libc6_i386_cs1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.bin
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.real.com/products/player/
 
-DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
+DEPENDS+=		suse_linux>=6.1:../../emulators/suse_x11
 
 RESTRICTED=		"Export-controlled, redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
