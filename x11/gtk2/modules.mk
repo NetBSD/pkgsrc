@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.3 2004/01/26 14:59:46 jmmv Exp $
+# $NetBSD: modules.mk,v 1.4 2004/02/10 02:04:54 xtraeme Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK2 modules.  It takes care of rebuilding the corresponding databases at
@@ -33,7 +33,7 @@ DEINSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/loaders.tmpl
 USE_PKGINSTALL=		YES
 .endif
 
-USE_BUILDLINK2=		YES
-.include "../../x11/gtk2/buildlink2.mk"
+USE_BUILDLINK3=		YES
+.include "../../x11/gtk2/buildlink3.mk"
 
 .endif			# GTK2_MODULES_MK
