@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2003/10/11 07:18:50 grant Exp $
+# $NetBSD: Makefile,v 1.53.2.1 2003/12/08 11:36:12 agc Exp $
 
 DISTNAME=	gnupg-1.2.3
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
@@ -16,7 +17,6 @@ HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Privacy Guard, public-Key encryption and digital signatures
 
 BUILD_USES_MSGFMT=	yes
-
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
