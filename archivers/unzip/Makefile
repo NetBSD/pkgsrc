@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/08/26 13:02:15 tron Exp $
+# $NetBSD: Makefile,v 1.43 2003/09/05 19:00:58 tron Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
@@ -8,7 +8,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/zip/src/ \
-		ftp://ftp.fu-berlin.de/pub/unix/tools/archivers/unzip/
+		ftp://ftp.fu-berlin.de/unix/tools/archivers/unzip/
 
 PATCH_SITES=		http://security.debian.org/pool/updates/main/u/unzip/
 PATCHFILES=		unzip_5.50-1woody2.diff.gz
