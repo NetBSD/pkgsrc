@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/03/31 21:47:11 seb Exp $
 
-SHA1 (Want-0.07.tar.gz) = 0237e6d6ba80acf6909f465b4fffa7648de25189
-RMD160 (Want-0.07.tar.gz) = e7002f7992e778491193175310316426056baa21
-Size (Want-0.07.tar.gz) = 14467 bytes
+SHA1 (Want-0.08.tar.gz) = 6a6dbfe8f099f233e1d7e95aa0c2a7b4a3603b12
+RMD160 (Want-0.08.tar.gz) = 77af8e6d143394d719845198eb91520e20ca4828
+Size (Want-0.08.tar.gz) = 14656 bytes
