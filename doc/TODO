@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1206 2003/12/15 00:28:58 xtraeme Exp $
+$NetBSD: TODO,v 1.1207 2003/12/15 10:34:40 martti Exp $
 
 Suggested new packages
 ======================
@@ -151,7 +151,6 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
-	o ethereal-0.10.0
 	o ettercap-0.6.b
 	o evolution-1.5
 	o exim-4.24
