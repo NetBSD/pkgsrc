@@ -1,0 +1,23 @@
+# GNU Makefile to libtoolize PostgreSQL build.
+#
+# This file is included by Makefile.global, which is included by every
+# sub-Makefile in the build tree.  Makefiles for shared libraries include
+# Makefile.global then Makefile.shlib.
+#
+# $NetBSD: Makefile.custom,v 1.1 1999/09/19 04:24:54 jlam Exp $
+
+CUSTOM_INSTALL=	${LIBTOOL} ${INSTALL}
+CUSTOM_CC=	${LIBTOOL} ${CC}
+CUSTOM_CXX=	${LIBTOOL} ${CXX}
+
+# installation directory for documentation
+PGDOCS=		${POSTGRESDIR}/../share/doc/postgresql
+
+# Rules to build object files from source files.
+# ${LIBTOOL} requires that there not be a -o flag when in compile mode.
+#
+%.o:	%.c
+	${CC} ${CPPFLAGS} ${CFLAGS} -c $<
+
+%.o:	%.cc
+	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $<

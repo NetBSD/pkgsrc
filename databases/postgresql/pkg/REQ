@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: REQ,v 1.2 1999/09/19 04:24:56 jlam Exp $
 
 PGUSER=@PGUSER@
 PGGROUP=@PGGROUP@

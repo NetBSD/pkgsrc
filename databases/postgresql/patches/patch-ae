@@ -1,63 +1,18 @@
-$NetBSD: patch-ae,v 1.8 1999/09/06 07:01:44 sakamoto Exp $
+$NetBSD: patch-ae,v 1.9 1999/09/19 04:24:54 jlam Exp $
 
-diff -rc2 config.sub config.sub
-*** config.sub	Tue Mar 25 02:16:33 1997
---- config.sub	Thu Mar  4 21:46:43 1999
-***************
-*** 150,154 ****
-  	# Recognize the basic CPU types without company name.
-  	# Some are omitted here because they have special meanings below.
-! 	tahoe | i860 | m68k | m68000 | m88k | ns32k | arm \
-  		| arme[lb] | pyramid \
-  		| tron | a29k | 580 | i960 | h8300 | hppa | hppa1.0 | hppa1.1 \
---- 150,154 ----
-  	# Recognize the basic CPU types without company name.
-  	# Some are omitted here because they have special meanings below.
-! 	tahoe | i860 | m68k | m68000 | m88k | ns32k | arm | arm32 \
-  		| arme[lb] | pyramid \
-  		| tron | a29k | 580 | i960 | h8300 | hppa | hppa1.0 | hppa1.1 \
-***************
-*** 178,182 ****
-  	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
-  	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
-! 	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-*)
-  		;;
-  	# Recognize the various machine names and aliases which stand
---- 178,182 ----
-  	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
-  	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
-! 	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-* | arm32-*)
-  		;;
-  	# Recognize the various machine names and aliases which stand
-diff -rc2 configure configure
-*** configure	Sun Dec 13 15:08:20 1998
---- configure	Thu Mar  4 21:52:02 1999
-***************
-*** 741,745 ****
-  rm -f conftest.sh
-  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
-! . conftest.sh
-  rm -f conftest.sh
-  
---- 741,745 ----
-  rm -f conftest.sh
-  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
-! . ./conftest.sh
-  rm -f conftest.sh
-  
-diff -rc2 configure.in configure.in
-*** configure.in	Sun Dec 13 15:08:20 1998
---- configure.in	Thu Mar  4 21:54:10 1999
-***************
-*** 148,152 ****
-  rm -f conftest.sh
-  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
-! . conftest.sh
-  rm -f conftest.sh
-  ]
---- 148,152 ----
-  rm -f conftest.sh
-  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
-! . ./conftest.sh
-  rm -f conftest.sh
-  ]
+--- ./bin/pg_id/Makefile.orig	Sun Jan 17 01:19:10 1999
++++ ./bin/pg_id/Makefile	Sat Sep 18 03:17:25 1999
+@@ -26,11 +26,8 @@
+ 
+ all: pg_id
+ 
+-pg_id: $(OBJS) $(LIBPQDIR)/libpq.a
+-	$(CC) -o pg_id -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
+-
+-$(LIBPQDIR)/libpq.a:
+-	$(MAKE) -C $(LIBPQDIR) libpq.a
++pg_id: $(OBJS)
++	$(CC) -o pg_id $(OBJS) $(LIBPQ) $(LDFLAGS)
+ 
+ install: pg_id
+ 	$(INSTALL) $(INSTL_EXE_OPTS) pg_id$(X) $(BINDIR)/pg_id$(X)
