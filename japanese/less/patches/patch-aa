@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/28 18:12:10 garbled Exp $
+--- Makefile.in.org	Tue Sep  1 10:27:10 1998
++++ Makefile.in	Tue Sep  1 10:27:22 1998
+@@ -22,11 +22,11 @@
+ 
+ # Where the installed binary goes.
+ bindir = ${exec_prefix}/bin
+-binprefix = 
++binprefix = j
+ 
+ mandir = ${prefix}/man/man${manext}
+ manext = 1
+-manprefix = 
++manprefix = j
+ 
+ #### End of system configuration section. ####
+ 
