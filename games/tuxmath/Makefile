@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/07 04:10:16 snj Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.newbreedsoftware.com/tuxmath/
 COMMENT=	Educational math arcade game
 
 WRKSRC=		${WRKDIR}/tuxmath
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 NO_CONFIGURE=	# defined
 
@@ -25,6 +25,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tuxmath
 	${INSTALL_DATA} ${WRKSRC}/docs/README.txt ${PREFIX}/share/doc/tuxmath/
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
