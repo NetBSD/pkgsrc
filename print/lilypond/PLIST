@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/20 13:47:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/04 22:24:21 seb Exp $
 bin/abc2ly
 bin/as2text
 bin/convert-ly
@@ -10,8 +10,6 @@ bin/midi2ly
 bin/mup2ly
 bin/musedata2ly
 bin/pmx2ly
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/lilypond-internals.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/lilypond.info
 info/lilypond-internals.info
 info/lilypond-internals.info-1
 info/lilypond-internals.info-10
@@ -33,8 +31,6 @@ info/lilypond.info-4
 info/lilypond.info-5
 info/lilypond.info-6
 info/lilypond.info-7
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/lilypond.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/lilypond-internals.info
 man/man1/abc2ly.1
 man/man1/as2text.1
 man/man1/convert-ly.1
