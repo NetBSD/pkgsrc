@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/12/04 17:25:13 tv Exp $
+$NetBSD: patch-ab,v 1.3 1998/12/07 16:36:15 tv Exp $
 
 --- src/modules/perl/mod_perl.c.orig	Wed Sep 30 23:13:14 1998
 +++ src/modules/perl/mod_perl.c	Thu Dec  3 17:30:09 1998
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.2 1998/12/04 17:25:13 tv Exp $
 +    SV *sub = Nullsv;
 +    AV *av = newAV();
 +
-+    if (!(ap_allow_options(r) & OPT_INCLUDES)) {
++    if (ap_allow_options(r) & OPT_INCNOEXEC) {
 +        ap_log_rerror(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r,
 +                    "httpd: #perl SSI disallowed by IncludesNoExec in %s",
 +                    r->filename);
