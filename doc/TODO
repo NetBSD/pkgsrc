@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2528 2004/11/27 15:21:06 dmcmahill Exp $
+$NetBSD: TODO,v 1.2529 2004/11/27 16:14:54 salo Exp $
 
 Suggested new packages
 ======================
@@ -495,9 +495,6 @@ Suggested package updates
 	o fhist-1.14
 	o file-4.12
 	o file-roller-2.9.0
-	o fillets-ng-0.6.1
-	o fillets-ng-data-0.6.1
-	o fillets-ng-data-cs-0.6.0
 	o filmgimp-0.16
 	o findutils-4.1.20
 	o firefox-bin-1.0
