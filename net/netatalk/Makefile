@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/05/25 13:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/29 11:16:15 abs Exp $
 
 DISTNAME=	netatalk-1.5.3.1
+PKGREVISION=	1
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -16,6 +17,8 @@ USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
+
+RCD_SCRIPTS=	atalkd afpd papd timelord
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,4 +40,5 @@ pre-install:
 					${PREFIX}/share/examples/netatalk/
 .endfor
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

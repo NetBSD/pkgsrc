@@ -1,15 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/05/25 13:08:39 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2002/08/29 11:16:14 abs Exp $
 
-To have Netatalk start automatically at boot, copy (or link) the following
-files into /etc/rc.d on rc.d-capable systems:
-		${PREFIX}/etc/rc.d/atalkd
-		${PREFIX}/etc/rc.d/afpd
-		${PREFIX}/etc/rc.d/papd
-		${PREFIX}/etc/rc.d/timelord
-
-If you do so, you will need to set the following variables in /etc/rc.conf 
-(replacing "YES" with "NO" for those services you wish to not run):
+To have Netatalk start automatically at boot, you will need to set the
+following variables in /etc/rc.conf (replacing "YES" with "NO" for those
+services you wish to not run):
 		atalkd=YES
 		afpd=YES
 		papd=YES
