@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/17 16:03:50 agc Exp $
-
-SHA1 (wmx-6pre6.tar.gz) = 73cf465dfb2e391fe577e810f16603c203c1effd
-Size (wmx-6pre6.tar.gz) = 86184 bytes
-SHA1 (patch-aa) = 6314e4d3b9b92c169d16b1db339782f8f773995c
-SHA1 (patch-ab) = 2f210b6965248be688a640472fb018d62e5197d0
