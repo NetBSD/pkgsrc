@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 1999/07/24 02:32:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.55 1999/08/17 12:29:31 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -77,6 +77,7 @@
 #    SUBDIR += txtmerge
     SUBDIR += urt
     SUBDIR += vcg
+    SUBDIR += viewfax
 #    SUBDIR += whirlgif
     SUBDIR += xanim
 #    SUBDIR += xaos
