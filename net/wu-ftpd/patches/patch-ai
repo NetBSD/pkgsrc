@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
+$NetBSD: patch-ai,v 1.8 2003/09/23 10:42:11 wiz Exp $
 
---- src/ftpd.c.orig	Mon Jun 26 21:52:06 2000
-+++ src/ftpd.c	Mon Jun 26 21:52:06 2000
+--- src/ftpd.c.orig	Tue Sep 23 12:34:51 2003
++++ src/ftpd.c
 @@ -75,6 +75,7 @@
  #include <grp.h>
  #endif
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
  
  #ifdef HAVE_SYS_SYSLOG_H
  #include <sys/syslog.h>
-@@ -2296,7 +2300,8 @@
+@@ -2370,7 +2374,8 @@ void end_login(void)
      (void) seteuid((uid_t) 0);
      if (logged_in)
  	if (wtmp_logging)
@@ -30,7 +30,7 @@ $NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
      pw = NULL;
  #ifdef AFS_AUTH
      ktc_ForgetAllTokens();
-@@ -2785,7 +2790,8 @@
+@@ -2869,7 +2874,8 @@ void pass(char *passwd)
  #ifdef DEBUG
  	syslog(LOG_DEBUG, "about to call wtmp");
  #endif
@@ -40,7 +40,7 @@ $NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
      }
      logged_in = 1;
  
-@@ -5317,7 +5323,9 @@
+@@ -5459,7 +5465,9 @@ void reply(int n, char *fmt,...)
  		*p = '\0';
  
  	    /* send a line...(note that this overrides dolreplies!) */
@@ -50,7 +50,7 @@ $NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
  
  	    if (p)
  		ptr = p + 1;	/* set to the next line... (\0 is handled in the while) */
-@@ -5941,6 +5949,8 @@
+@@ -6083,6 +6091,8 @@ void dologout(int status)
  	(void) seteuid((uid_t) 0);
  	if (wtmp_logging)
  	    wu_logwtmp(ttyline, pw->pw_name, remotehost, 0);
@@ -59,3 +59,12 @@ $NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
      }
      if (logging)
  	syslog(LOG_INFO, "FTP session closed");
+@@ -7378,7 +7388,7 @@ int SockPrintf(FILE *sockfp, char *forma
+     char buf[32768];
+ 
+     va_start(ap, format);
+-    vsprintf(buf, format, ap);
++    vsnprintf(buf, sizeof(buf), format, ap);
+     va_end(ap);
+     return SockWrite(buf, 1, strlen(buf), sockfp);
+ }
