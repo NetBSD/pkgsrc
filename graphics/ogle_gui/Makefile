@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/22 10:16:16 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/29 07:21:43 jlam Exp $
 
 DISTNAME=	ogle_gui-0.8.5
 PKGREVISION=	1
@@ -22,10 +22,9 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LDFLAGS+=	${BUILDLINK_LDFLAGS.ogle}
 
 .include "../../devel/binutils/buildlink2.mk"
-.include "../../lang/gcc/Makefile.gcc"
-
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../graphics/ogle/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
