@@ -1,4 +1,4 @@
-$Id: Packages.txt,v 1.296 2003/06/23 07:41:45 grant Exp $
+$NetBSD: Packages.txt,v 1.297 2003/06/23 07:48:01 grant Exp $
 
 The pkgsrc documentation now lives on the NetBSD web site.
 
