@@ -1,19 +1,20 @@
-$NetBSD: patch-ab,v 1.1 1999/05/04 00:08:43 tv Exp $
+$NetBSD: patch-ab,v 1.2 1999/09/10 10:41:41 hwr Exp $
 
---- build/lib-shared.mk.orig	Mon May  3 19:21:39 1999
-+++ build/lib-shared.mk	Mon May  3 19:24:56 1999
-@@ -18,9 +18,10 @@
+--- build/lib-shared.mk.orig	Fri Jul 23 17:31:32 1999
++++ build/lib-shared.mk	Fri Sep 10 12:19:58 1999
+@@ -16,9 +16,11 @@
  
  $(LIBRARY):  version.lo
- 	$(LINK) -rpath $(libdir) -o $@ $(OBJS) version.lo
+ 	$(LTLIBLINK) -rpath $(libdir) -o $@ $(OBJS) version.lo
 -	$(RM) ../$@;	\
 -	(d=`$(PWD)` ; $(LN_S) `$(BASENAME) $$d`/$@ ../$@)
 -	$(RM) ../`$(BASENAME) $@ .la`.a;	\
 -	(d=`$(PWD)`; t=`$(BASENAME) $@ .la`.a; $(LN_S) `$(BASENAME) $$d`/.libs/$$t ../$$t)
 +	@$(RM) ../$@
 +	@for ext in a so so.1.0; do \
-+	$(RM) ../`$(BASENAME) $@ .la`.$$ext;	\
++	$(RM) ../`$(BASENAME) $@ .la`.$$ext;    \
 +	(d=`$(PWD)`; t=`$(BASENAME) $@ .la`.$$ext; $(LN_S) `$(BASENAME) $$d`/.libs/$$t ../$$t); \
-+	done
++       done
++
  
  Makefile: $(top_srcdir)/build/lib-shared.mk

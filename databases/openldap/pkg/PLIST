@@ -1,49 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 1999/05/04 00:08:44 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/09/10 10:41:41 hwr Exp $
+bin/ud
 bin/ldapsearch
 bin/ldapmodify
 bin/ldapdelete
 bin/ldapmodrdn
-bin/ldapadd
 bin/ldappasswd
-bin/ud
-etc/openldap/ldap.conf.default
-@exec [ -f %B/ldap.conf ] || cp %D/%F %B/ldap.conf
-etc/openldap/ldapfilter.conf.default
-@exec [ -f %B/ldapfilter.conf ] || cp %D/%F %B/ldapfilter.conf
-etc/openldap/ldaptemplates.conf.default
-@exec [ -f %B/ldaptemplates.conf ] || cp %D/%F %B/ldaptemplates.conf
-etc/openldap/ldapsearchprefs.conf.default
-@exec [ -f %B/ldapsearchprefs.conf ] || cp %D/%F %B/ldapsearchprefs.conf
-etc/openldap/slapd.conf.default
-@exec [ -f %B/slapd.conf ] || cp %D/%F %B/slapd.conf
-etc/openldap/slapd.at.conf.default
-@exec [ -f %B/slapd.at.conf ] || cp %D/%F %B/slapd.at.conf
-etc/openldap/slapd.oc.conf.default
-@exec [ -f %B/slapd.oc.conf ] || cp %D/%F %B/slapd.oc.conf
-include/ldap.h
-include/lber.h
-include/ldap_cdefs.h
-include/disptmpl.h
-include/srchpref.h
-lib/liblber.a
+bin/ldapadd
 lib/liblber.so.1.0
-lib/libldap.a
+lib/liblber.a
 lib/libldap.so.1.0
-libexec/in.xfingerd
-libexec/go500
-libexec/go500gw
-libexec/mail500
-libexec/rp500
-libexec/fax500
-libexec/xrpcomp
-libexec/rcpt500
-libexec/slapd
+lib/libldap.a
+man/man1/ldapadd.1
 man/man1/ldapdelete.1
 man/man1/ldapmodify.1
-man/man1/ldapadd.1
 man/man1/ldapmodrdn.1
-man/man1/ldapsearch.1
 man/man1/ldappasswd.1
+man/man1/ldapsearch.1
 man/man1/ud.1
 man/man3/ldap.3
 man/man3/cldap.3
@@ -203,11 +175,39 @@ man/man8/fax500.8
 man/man8/rcpt500.8
 man/man8/slapd.8
 man/man8/slurpd.8
+@exec [ -f %B/ldap.conf ] || cp %D/%F %B/ldap.conf
+etc/openldap/ldap.conf.default
+@exec [ -f %B/ldapfilter.conf ] || cp %D/%F %B/ldapfilter.conf
+etc/openldap/ldapfilter.conf.default
+@exec [ -f %B/ldaptemplates.conf ] || cp %D/%F %B/ldaptemplates.conf
+etc/openldap/ldaptemplates.conf.default
+@exec [ -f %B/ldapsearchprefs.conf ] || cp %D/%F %B/ldapsearchprefs.conf
+etc/openldap/ldapsearchprefs.conf.default
+@exec [ -f %B/slapd.conf ] || cp %D/%F %B/slapd.conf
+etc/openldap/slapd.conf.default
+@exec [ -f %B/slapd.at.conf ] || cp %D/%F %B/slapd.at.conf
+etc/openldap/slapd.at.conf.default
+@exec [ -f %B/slapd.oc.conf ] || cp %D/%F %B/slapd.oc.conf
+etc/openldap/slapd.oc.conf.default
+include/ldap.h
+include/lber.h
+include/ldap_cdefs.h
+include/disptmpl.h
+include/srchpref.h
+libexec/in.xfingerd
+libexec/go500
+libexec/go500gw
+libexec/mail500
+libexec/rp500
+libexec/fax500
+libexec/xrpcomp
+libexec/rcpt500
+libexec/slapd
 sbin/ldif2ldbm
 sbin/ldif2index
+sbin/ldbmcat
 sbin/ldif2id2entry
 sbin/ldif2id2children
-sbin/ldbmcat
 sbin/ldif
 sbin/centipede
 sbin/ldbmtest
