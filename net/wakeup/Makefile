@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/18 22:28:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/18 23:34:41 tron Exp $
 #
 
 DISTNAME=	hpwake.c.gz
 PKGNAME=	wakeup-1.0
 CATEGORIES=	sysutils net
-MASTER_SITES=	http://141.99.132.33/wol/
+MASTER_SITES=	http://server7.ik.mb.uni-siegen.de/wol/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	hubertf@netbsd.org
