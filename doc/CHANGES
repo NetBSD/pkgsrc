@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9385 2005/03/02 13:21:07 wiz Exp $
+$NetBSD: CHANGES,v 1.9386 2005/03/02 14:11:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xorg-imake to 6.8.2nb1 [hira 2005-03-02]
 	Updated xorg-server to 6.8.2nb1 [hira 2005-03-02]
 	Updated avrdude to 4.1.0nb2 [wiz 2005-03-02]
+	Updated papaya to 0.1.7nb2 [wiz 2005-03-02]
