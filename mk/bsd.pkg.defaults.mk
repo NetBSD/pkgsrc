@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.30 2002/01/01 18:21:27 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.31 2002/01/09 23:13:11 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -487,6 +487,11 @@ DT_LAYOUT?= US
 # Used by dt package to specify the keyboard layout.
 # Possible: US, FI, FR, GER, DV
 # Default: FI
+
+#ELK_USE_X11=
+# Used by elk to determine if X11 module is enabled or not.
+# Possible: defined, not defined
+# Default: not defined
 
 EMACS_USE_POP?= yes
 # Used by emacs package to determine whether pop support is enabled or not.
