@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/20 18:27:59 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/21 10:18:09 skrll Exp $
 #
 
 DISTNAME=	icu-1.6
@@ -28,5 +28,8 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/icu
 	${INSTALL_DATA} ${WRKDIR}/icu/docs/* ${PREFIX}/share/doc/html/icu
+
+test: build
+	cd ${WRKSRC} && ${MAKE_PROGRAM} check
 
 .include "../../mk/bsd.pkg.mk"
