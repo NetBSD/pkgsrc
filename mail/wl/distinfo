@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2001/07/24 08:17:18 taca Exp $
+$NetBSD: distinfo,v 1.7 2002/01/08 11:47:16 jun Exp $
 
-SHA1 (wl-2.6.0.tar.gz) = e2f39ee67e32b99105fffd4f35b1a1d06153c61c
-Size (wl-2.6.0.tar.gz) = 867571 bytes
-SHA1 (patch-aa) = 4f6df55e631d143b127266d71447c5bd561387bc
+SHA1 (wl-2.8.1.tar.gz) = 35b5e29f7e9064276a1b59a312345f6dd66ab818
+Size (wl-2.8.1.tar.gz) = 1040012 bytes
+SHA1 (patch-aa) = ede97cce8b2574737a91941a905e067c940fb50a
 SHA1 (patch-ab) = ecea6164aa1787234a7c9b7e85390116dc68f2e5
 SHA1 (patch-ac) = c30b711db7b73a2d2bd7d6025bc394ecf7c35aad

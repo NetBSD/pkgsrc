@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/07/23 15:39:10 taca Exp $
+$NetBSD: patch-aa,v 1.2 2002/01/08 11:47:17 jun Exp $
 
---- WL-CFG.orig	Wed Jul  4 17:45:51 2001
+--- WL-CFG.orig	Tue Oct 23 20:44:04 2001
 +++ WL-CFG
-@@ -18,13 +18,13 @@
+@@ -9,7 +9,7 @@
  ;		 load-path))
  
  ;; If you want to install utils, uncomment following line.
 -;(setq wl-install-utils t)
 +(setq wl-install-utils t)
  
- ;; Set lauguage for info file ("ja" or "en"). Default is "ja".
- ;; By following setting, English info is installed.
- ;(setq wl-info-lang "en")
- ;; By following setting, both Japanese and English info are installed.
--;(setq wl-info-lang '("ja" "en"))
-+(setq wl-info-lang '("ja" "en"))
- 
- ;; if you want to install wl modules to the subdirectory other than "wl" 
- ;; under LISPDIR, set following variables. 
+ ;; Set language for info file ("ja" or "en", both in default).
+ ;; If you only need manual in English, uncomment following line.

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/11/29 01:12:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/08 11:47:16 jun Exp $
 
-DISTNAME=	wl-2.6.0
-PKGREVISION=	1
+DISTNAME=	wl-2.8.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ring.gr.jp/pub/text/elisp/wl/stable/
 
