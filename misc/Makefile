@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2004/10/29 17:28:28 erh Exp $
+# $NetBSD: Makefile,v 1.215 2004/10/31 21:46:40 jdolecek Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -137,8 +137,8 @@ SUBDIR+=	p5-Msgcat
 SUBDIR+=	p5-Search
 SUBDIR+=	parchive
 SUBDIR+=	pdmenu
-SUBDIR+=	php4-calendar
-SUBDIR+=	php4-mbstring
+SUBDIR+=	php-calendar
+SUBDIR+=	php-mbstring
 SUBDIR+=	pinfo
 SUBDIR+=	proj
 SUBDIR+=	proj-doc
