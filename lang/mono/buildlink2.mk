@@ -1,15 +1,15 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:55:35 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/09 13:03:21 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use mono.
 #
-# This file was created automatically using createbuildlink 2.4.
+# This file was created automatically using createbuildlink 2.6.
 #
 
 .if !defined(MONO_BUILDLINK2_MK)
 MONO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mono
-BUILDLINK_DEPENDS.mono?=		mono>=0.23nb1
+BUILDLINK_DEPENDS.mono?=		mono>=0.24
 BUILDLINK_PKGSRCDIR.mono?=		../../lang/mono
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mono=mono
@@ -39,7 +39,6 @@ BUILDLINK_FILES.mono+=	include/mono/io-layer/uglify.h
 BUILDLINK_FILES.mono+=	include/mono/io-layer/versioninfo.h
 BUILDLINK_FILES.mono+=	include/mono/io-layer/wait.h
 BUILDLINK_FILES.mono+=	include/mono/io-layer/wapi.h
-BUILDLINK_FILES.mono+=	include/mono/jit/debug.h
 BUILDLINK_FILES.mono+=	include/mono/jit/jit.h
 BUILDLINK_FILES.mono+=	include/mono/jit/regset.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/appdomain.h
@@ -56,6 +55,8 @@ BUILDLINK_FILES.mono+=	include/mono/metadata/loader.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/mempool.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/metadata.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/monitor.h
+BUILDLINK_FILES.mono+=	include/mono/metadata/mono-debug-debugger.h
+BUILDLINK_FILES.mono+=	include/mono/metadata/mono-debug.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/mono-endian.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/object.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/opcodes.h
@@ -70,10 +71,14 @@ BUILDLINK_FILES.mono+=	include/mono/metadata/threads-types.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/threads.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/tokentype.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/verify.h
+BUILDLINK_FILES.mono+=	include/mono/mini/mini-ops.h
+BUILDLINK_FILES.mono+=	include/mono/mini/mini.h
+BUILDLINK_FILES.mono+=	include/mono/mini/regalloc.h
 BUILDLINK_FILES.mono+=	include/mono/utils/mono-digest.h
 BUILDLINK_FILES.mono+=	include/mono/utils/mono-hash.h
 BUILDLINK_FILES.mono+=	include/mono/utils/monobitset.h
 BUILDLINK_FILES.mono+=	lib/Accessibility.dll
+BUILDLINK_FILES.mono+=	lib/ByteFX.Data.dll
 BUILDLINK_FILES.mono+=	lib/Cscompmgd.dll
 BUILDLINK_FILES.mono+=	lib/I18N.CJK.dll
 BUILDLINK_FILES.mono+=	lib/I18N.MidEast.dll
@@ -81,6 +86,7 @@ BUILDLINK_FILES.mono+=	lib/I18N.Other.dll
 BUILDLINK_FILES.mono+=	lib/I18N.Rare.dll
 BUILDLINK_FILES.mono+=	lib/I18N.West.dll
 BUILDLINK_FILES.mono+=	lib/I18N.dll
+BUILDLINK_FILES.mono+=	lib/ICSharpCode.SharpZipLib.dll
 BUILDLINK_FILES.mono+=	lib/Microsoft.VisualBasic.dll
 BUILDLINK_FILES.mono+=	lib/Microsoft.VisualC.dll
 BUILDLINK_FILES.mono+=	lib/Mono.CSharp.Debugger.dll
@@ -93,10 +99,15 @@ BUILDLINK_FILES.mono+=	lib/Mono.Data.Tds.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Data.TdsClient.dll
 BUILDLINK_FILES.mono+=	lib/Mono.GetOptions.dll
 BUILDLINK_FILES.mono+=	lib/Mono.PEToolkit.dll
-BUILDLINK_FILES.mono+=	lib/NUnitCore_mono.dll
+BUILDLINK_FILES.mono+=	lib/Mono.Posix.dll
+BUILDLINK_FILES.mono+=	lib/NUnit.Framework.dll
+BUILDLINK_FILES.mono+=	lib/NUnit.Util.dll
+BUILDLINK_FILES.mono+=	lib/Npgsql.dll
+BUILDLINK_FILES.mono+=	lib/PEAPI.dll
 BUILDLINK_FILES.mono+=	lib/System.Configuration.Install.dll
 BUILDLINK_FILES.mono+=	lib/System.Data.OracleClient.dll
 BUILDLINK_FILES.mono+=	lib/System.Data.dll
+BUILDLINK_FILES.mono+=	lib/System.Design.dll
 BUILDLINK_FILES.mono+=	lib/System.Drawing.dll
 BUILDLINK_FILES.mono+=	lib/System.EnterpriseServices.dll
 BUILDLINK_FILES.mono+=	lib/System.Runtime.Remoting.dll
@@ -109,6 +120,7 @@ BUILDLINK_FILES.mono+=	lib/System.Xml.dll
 BUILDLINK_FILES.mono+=	lib/System.dll
 BUILDLINK_FILES.mono+=	lib/corlib.dll
 BUILDLINK_FILES.mono+=	lib/libmono.*
+BUILDLINK_FILES.mono+=	lib/liboldmono.*
 BUILDLINK_FILES.mono+=	lib/pkgconfig/mono.pc
 
 .include "../../devel/boehm-gc/buildlink2.mk"

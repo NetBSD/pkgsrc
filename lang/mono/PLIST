@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/01 13:11:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/09 13:03:21 jmmv Exp $
+bin/cilc
+bin/cilc.exe
+bin/genmdesc
+bin/ilasm
 bin/ilasm.exe
 bin/mbas
 bin/mbas.exe
@@ -10,6 +14,7 @@ bin/monodis
 bin/monograph
 bin/monoresgen.exe
 bin/monosn
+bin/oldmono
 bin/pedump
 bin/secutil.exe
 bin/sqlsharp.exe
@@ -38,7 +43,6 @@ include/mono/io-layer/uglify.h
 include/mono/io-layer/versioninfo.h
 include/mono/io-layer/wait.h
 include/mono/io-layer/wapi.h
-include/mono/jit/debug.h
 include/mono/jit/jit.h
 include/mono/jit/regset.h
 include/mono/metadata/appdomain.h
@@ -55,6 +59,8 @@ include/mono/metadata/loader.h
 include/mono/metadata/mempool.h
 include/mono/metadata/metadata.h
 include/mono/metadata/monitor.h
+include/mono/metadata/mono-debug-debugger.h
+include/mono/metadata/mono-debug.h
 include/mono/metadata/mono-endian.h
 include/mono/metadata/object.h
 include/mono/metadata/opcodes.h
@@ -69,10 +75,14 @@ include/mono/metadata/threads-types.h
 include/mono/metadata/threads.h
 include/mono/metadata/tokentype.h
 include/mono/metadata/verify.h
+include/mono/mini/mini-ops.h
+include/mono/mini/mini.h
+include/mono/mini/regalloc.h
 include/mono/utils/mono-digest.h
 include/mono/utils/mono-hash.h
 include/mono/utils/monobitset.h
 lib/Accessibility.dll
+lib/ByteFX.Data.dll
 lib/Cscompmgd.dll
 lib/I18N.CJK.dll
 lib/I18N.MidEast.dll
@@ -80,6 +90,7 @@ lib/I18N.Other.dll
 lib/I18N.Rare.dll
 lib/I18N.West.dll
 lib/I18N.dll
+lib/ICSharpCode.SharpZipLib.dll
 lib/Microsoft.VisualBasic.dll
 lib/Microsoft.VisualC.dll
 lib/Mono.CSharp.Debugger.dll
@@ -92,10 +103,15 @@ lib/Mono.Data.Tds.dll
 lib/Mono.Data.TdsClient.dll
 lib/Mono.GetOptions.dll
 lib/Mono.PEToolkit.dll
-lib/NUnitCore_mono.dll
+lib/Mono.Posix.dll
+lib/NUnit.Framework.dll
+lib/NUnit.Util.dll
+lib/Npgsql.dll
+lib/PEAPI.dll
 lib/System.Configuration.Install.dll
 lib/System.Data.OracleClient.dll
 lib/System.Data.dll
+lib/System.Design.dll
 lib/System.Drawing.dll
 lib/System.EnterpriseServices.dll
 lib/System.Runtime.Remoting.dll
@@ -112,13 +128,22 @@ lib/libmono.la
 lib/libmono.so
 lib/libmono.so.0
 lib/libmono.so.0.0
+lib/liboldmono.a
+lib/liboldmono.la
+lib/liboldmono.so
+lib/liboldmono.so.0
+lib/liboldmono.so.0.0
 lib/pkgconfig/mono.pc
+man/man1/cert2spc.1
+man/man1/cilc.1
+man/man1/ilasm.1
 man/man1/mcs.1
 man/man1/mint.1
 man/man1/mono.1
 man/man1/monoburg.1
 man/man1/monodis.1
 man/man1/monostyle.1
+man/man1/oldmono.1
 man/man1/sqlsharp.1
 man/man5/mono-config.5
 share/examples/mono/config
@@ -128,6 +153,7 @@ share/mono/cil/cil-opcodes.xml
 @dirrm share/mono
 @dirrm share/examples/mono
 @dirrm include/mono/utils
+@dirrm include/mono/mini
 @dirrm include/mono/metadata
 @dirrm include/mono/jit
 @dirrm include/mono/io-layer
