@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/10/02 14:19:22 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/10/27 19:12:22 agc Exp $
 man/man1/cfs.1
 man/man1/clog.1
 man/man1/cmon.1
@@ -190,3 +190,7 @@ share/doc/coda-doc-4.6.5/ps/rvm_manual.ps
 share/doc/coda-doc-4.6.5/ps/sec.ps
 share/doc/coda-doc-4.6.5/ps/server.ps
 share/doc/coda-doc-4.6.5/ps/venus-ds.ps
+@dirrm share/doc/coda-doc-4.6.5/ps
+@dirrm share/doc/coda-doc-4.6.5/ppt
+@dirrm share/doc/coda-doc-4.6.5/html
+@dirrm share/doc/coda-doc-4.6.5
