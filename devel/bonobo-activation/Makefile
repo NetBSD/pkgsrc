@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/27 09:30:59 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/30 03:09:29 rh Exp $
 #
 
 DISTNAME=		bonobo-activation-2.1.0
@@ -19,6 +19,7 @@ USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
 USE_PERL5=		build
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/bonobo-activation-2.0.pc.in
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"

@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/10/16 07:58:57 rh Exp $
+$NetBSD: distinfo,v 1.5 2002/10/30 03:09:36 rh Exp $
 
 SHA1 (gnet-1.1.7.tar.gz) = 42e68deee3c82c38153ae361edee785399476f5d
 Size (gnet-1.1.7.tar.gz) = 367915 bytes
-SHA1 (patch-aa) = 2a3b2229b69f4276d939bbd3716a17a4ba225cb4
