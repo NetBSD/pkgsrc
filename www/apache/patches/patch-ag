@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2001/02/27 20:04:23 jdolecek Exp $
+$NetBSD: patch-ag,v 1.7 2002/02/01 16:04:39 jlam Exp $
 
---- src/os/unix/os.c.orig	Sat Jan 15 11:01:09 2000
+--- src/os/unix/os.c.orig	Mon Nov 12 12:36:38 2001
 +++ src/os/unix/os.c
-@@ -129,7 +129,12 @@
+@@ -132,7 +132,12 @@
  #elif defined(HAVE_DYLD)
      NSUnLinkModule(handle,FALSE);
  
