@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2000/12/15 03:24:18 garbled Exp $
+$NetBSD: patch-af,v 1.5 2001/12/05 04:56:21 jlam Exp $
 --- Sources/Core/System/Unix/mutex_pthread.cpp.orig	Thu Dec 14 18:45:06 2000
 +++ Sources/Core/System/Unix/mutex_pthread.cpp	Thu Dec 14 18:45:11 2000
 @@ -21,7 +21,11 @@
@@ -8,7 +8,7 @@ $NetBSD: patch-af,v 1.4 2000/12/15 03:24:18 garbled Exp $
 +#ifndef _PTH_PTHREAD_H_
  	int pthread_mutexattr_setkind_np(pthread_mutexattr_t *attr, int kind);
 +#else
-+	pthread_mutexattr_settype(pthread_mutexattr_t *attr, int kind);
++	int pthread_mutexattr_settype(pthread_mutexattr_t *attr, int kind);
 +#endif
  }
  
