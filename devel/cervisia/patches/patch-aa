@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/02/29 19:43:55 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2001/03/05 05:29:46 hubertf Exp $
 
---- configure.orig	Mon Feb 21 22:30:52 2000
-+++ configure	Wed Feb 23 21:49:48 2000
-@@ -5131,43 +5131,43 @@
-     kde_htmldir='\$(prefix)/share/doc/HTML'
+--- configure.orig	Sun Jan 28 19:25:16 2001
++++ configure
+@@ -4970,46 +4970,46 @@
+ if test "$ac_use_path_checking" = "default"; then
+ 
+   if test -z "$kde_htmldir"; then
+-    kde_htmldir='\$(prefix)/share/doc/HTML'
++    kde_htmldir='\$(prefix)/share/doc/kde/HTML'
    fi
    if test -z "$kde_appsdir"; then
 -    kde_appsdir='\$(prefix)/share/applnk'
@@ -26,7 +30,8 @@ $NetBSD: patch-aa,v 1.3 2000/02/29 19:43:55 jlam Exp $
 +    kde_locale='\$(prefix)/share/kde/locale'
    fi
    if test -z "$kde_cgidir"; then
-     kde_cgidir='\$(exec_prefix)/cgi-bin'
+-    kde_cgidir='\$(exec_prefix)/cgi-bin'
++    kde_cgidir='\$(exec_prefix)/kde-cgi-bin'
    fi
    if test -z "$kde_confdir"; then
 -    kde_confdir='\$(prefix)/share/config'

@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.4 2000/11/05 16:52:14 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2001/03/05 05:29:46 hubertf Exp $
 
---- src/toplevel.cpp.orig	Tue Sep 19 17:47:41 2000
+--- src/toplevel.cpp.orig	Mon Jan 29 20:49:35 2001
 +++ src/toplevel.cpp
-@@ -519,14 +519,14 @@
+@@ -533,14 +533,14 @@
                  }
              else
                  {
 -                    QString command = config->readEntry("Editor", "kwrite");
 +                    QString command = config->readEntry("Editor", "kedit");
                      command += " ";
-                     command += filename;
+                     command += quote(filename);
                      command += "&";
                      ::system(command);
                  }

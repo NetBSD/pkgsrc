@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 14:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/05 05:29:45 hubertf Exp $
 #
 
-DISTNAME=	cervisia-0.7.2
+DISTNAME=	cervisia-1.0
 CATEGORIES=	kde devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cervisia/} \
 		ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
@@ -21,6 +21,7 @@ CONFIGURE_ENV+=	"QTDIR=${QT1DIR}/qt1"
 CONFIGURE_ARGS+=--with-qt-includes=${QT1DIR}/qt1/include \
 		--with-qt-libraries=${QT1DIR}/qt1/lib \
 		--with-extra-includes=${LOCALBASE}/include \
-		--with-extra-libs=${LOCALBASE}/lib
+		--with-extra-libs=${LOCALBASE}/lib \
+		--with-kde-version=1
 
 .include "../../mk/bsd.pkg.mk"
