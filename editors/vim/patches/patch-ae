@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 1999/07/18 23:57:01 tron Exp $
+$NetBSD: patch-ae,v 1.2 1999/07/19 00:12:37 tron Exp $
 
---- syntax/sql.vim.orig	Fri Jul  9 11:31:44 1999
-+++ syntax/sql.vim	Tue Jul 13 10:36:01 1999
+--- ../syntax/sql.vim.orig	Fri Jul  9 11:31:44 1999
++++ ../syntax/sql.vim	Tue Jul 13 10:36:01 1999
 @@ -1,7 +1,7 @@
  " Vim syntax file
 -" Language:	SQL (Oracle 7)
