@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/05 13:58:11 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/05 14:09:04 cjep Exp $
 #
 
 DISTNAME=	grpconst
 PKGNAME=	gp-grpconst-2.0
+SVR4_PKGNAME=	gpgct
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
