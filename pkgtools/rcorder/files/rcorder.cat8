@@ -1,0 +1,86 @@
+RCORDER(8)              NetBSD System Manager's Manual              RCORDER(8)
+
+NNAAMMEE
+     rrccoorrddeerr - print a dependency ordering of interdependent files
+
+SSYYNNOOPPSSIISS
+     rrccoorrddeerr [--kk _k_e_e_p] [--ss _s_k_i_p] _f_i_l_e _._._.
+
+DDEESSCCRRIIPPTTIIOONN
+     rrccoorrddeerr is designed to print out a dependency ordering of a set of inter-
+     dependent files.  Typically it is used to find an execution sequence for
+     a set of shell scripts in which certain files must be executed before
+     others.
+
+     Each file passed to rrccoorrddeerr should be annotated with special lines (which
+     look like comments to the shell) which indicate the dependencies the
+     files have upon certain points in the sequence, known as ``conditions'',
+     and which indicate, for each file, which ``conditions'' may be expected
+     to be filled by that file.
+
+     Within each file, a block containing a series of ``REQUIRE'',
+     ``PROVIDE'', ``BEFORE'' and ``KEYWORD'' lines should appear.  The format
+     of the lines is rigid.  Each line must begin with a single ``#'', fol-
+     lowed by a single space, followed by ``PROVIDE:'', ``REQUIRE:'',
+     ``BEFORE:'', or ``KEYWORD:''.  No deviation is permitted.  Each depen-
+     dency line is then followed by a series of conditions, separated by
+     whitespace.  Multiple ``PROVIDE'', ``REQUIRE'', ``BEFORE'' and
+     ``KEYWORD'' lines may appear, but all such lines must appear in a
+     sequence without any intervening lines, as once a line that does not fol-
+     low the format is reached, parsing stops.
+
+     The options are as follows:
+
+     --kk      Add the specified keyword to the ``keep list''.  If any --kk option
+             is given, only those files containing the matching keyword are
+             listed.
+
+     --ss      Add the specified keyword to the ``skip list''.  If any --ss option
+             is given, files containing the matching keyword are not listed.
+
+      An example block follows:
+
+           # REQUIRE: networking syslog
+           # REQUIRE: usr
+           # PROVIDE: dns nscd
+
+     This block states that the file in which it appears depends upon the
+     ``networking'', ``syslog'', and ``usr'' conditions, and provides the
+     ``dns'' and ``nscd'' conditions.
+
+     A file may contain zero ``PROVIDE'' lines, in which case it provides no
+     conditions, and may contain zero ``REQUIRE'' lines, in which case it has
+     no dependencies.  A file containing no ``PROVIDE'', ``REQUIRE'', or
+     ``BEFORE'' lines may be output at an arbitrary position in the dependency
+     ordering.
+
+     There must be at least one file with no dependencies in the set of argu-
+     ments passed to rrccoorrddeerr in order for it to find a starting place in the
+     dependency ordering.
+
+DDIIAAGGNNOOSSTTIICCSS
+     rrccoorrddeerr may print one of the following error messages and exit with a
+     non-zero status if it encounters an error while processing the file list.
+
+     RReeqquuiirreemmeenntt %%ss hhaass nnoo pprroovviiddeerrss,, aabboorrttiinngg..  No file has a ``PROVIDE''
+     line corresponding to a condition present in a ``REQUIRE'' line in
+     another file.
+
+     CCiirrccuullaarr ddeeppeennddeennccyy oonn pprroovviissiioonn %%ss,, aabboorrttiinngg..  A set of files has a cir-
+     cular dependency which was detected while processing the stated condi-
+     tion.
+
+     CCiirrccuullaarr ddeeppeennddeennccyy oonn ffiillee %%ss,, aabboorrttiinngg..  A set of files has a circular
+     dependency which was detected while processing the stated file.
+
+SSEEEE AALLSSOO
+     rc(8)
+
+HHIISSTTOORRYY
+     The rrccoorrddeerr program first appeared in NetBSD 1.5.
+
+AAUUTTHHOORRSS
+     Written by Perry E. Metzger (perry@piermont.com) and Matthew R. Green
+     (mrg@eterna.com.au).
+
+NetBSD 2.0_BETA                 April 23, 2003                 NetBSD 2.0_BETA
