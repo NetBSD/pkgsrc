@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 07:54:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/22 07:57:11 grant Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -8,8 +8,14 @@ CATEGORIES+=	cross lang
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Cross-compiler for NetBSD/PlayStation2 kernel
 
-BZCAT=		/usr/bin/bzcat
 USE_GNU_TOOLS+=	make
+
+.if exists(/usr/bin/bzcat)
+BZCAT=		/usr/bin/bzcat
+.else
+BZCAT=		${LOCALBASE}/bin/bzcat
+BUILD_DEPENDS+=	bzip2>=0.9.0b:../../archivers/bzip2
+.endif
 
 # We don't use CROSSBASE because the binutils are not the same as binutils
 # for other cross compilers.
