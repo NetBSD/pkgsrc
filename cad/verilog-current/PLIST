@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/28 03:07:29 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/05/07 00:11:20 dmcmahill Exp $
 bin/iverilog
+bin/iverilog-vpi
 bin/vvp
 include/ivl_target.h
 include/vpi_priv.h
