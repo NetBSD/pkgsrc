@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/05/02 17:00:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/06/20 20:57:17 xtraeme Exp $
 bin/mbchk
 man/man1/mbchk.1
 man/man8/grub-install.8
@@ -13,7 +13,7 @@ ${NETBOOT}share/doc/grub/README.netboot
 share/grub/${MACHINE_ARCH}-/e2fs_stage1_5
 share/grub/${MACHINE_ARCH}-/fat_stage1_5
 share/grub/${MACHINE_ARCH}-/ffs_stage1_5
-${ISO9660}share/grub/${MACHINE_ARCH}-/iso9660_stage1_5
+share/grub/${MACHINE_ARCH}-/iso9660_stage1_5
 share/grub/${MACHINE_ARCH}-/jfs_stage1_5
 share/grub/${MACHINE_ARCH}-/minix_stage1_5
 ${NETBOOT}share/grub/${MACHINE_ARCH}-/nbgrub
@@ -21,8 +21,8 @@ ${NETBOOT}share/grub/${MACHINE_ARCH}-/pxegrub
 share/grub/${MACHINE_ARCH}-/reiserfs_stage1_5
 share/grub/${MACHINE_ARCH}-/stage1
 share/grub/${MACHINE_ARCH}-/stage2
-${ISO9660}share/grub/${MACHINE_ARCH}-/stage2_eltorito
-${UFS2}share/grub/${MACHINE_ARCH}-/ufs2_stage1_5
+share/grub/${MACHINE_ARCH}-/stage2_eltorito
+share/grub/${MACHINE_ARCH}-/ufs2_stage1_5
 share/grub/${MACHINE_ARCH}-/vstafs_stage1_5
 share/grub/${MACHINE_ARCH}-/xfs_stage1_5
 @dirrm share/grub/${MACHINE_ARCH}-
