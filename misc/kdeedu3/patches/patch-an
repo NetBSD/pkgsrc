@@ -1,0 +1,51 @@
+$NetBSD: patch-an,v 1.1.2.2 2005/02/20 18:45:06 snj Exp $
+
+--- kstars/kstars/indi/indiserver.c.orig	2004-06-25 21:10:04.000000000 +1200
++++ kstars/kstars/indi/indiserver.c	2005-02-19 15:01:32.000000000 +1300
+@@ -288,10 +288,10 @@
+ 	    exit(1);
+ 	}
+ 	
+-	/* bind to given port for any IP address */
++	/* bind to given port for local IP address */
+ 	memset (&serv_socket, 0, sizeof(serv_socket));
+ 	serv_socket.sin_family = AF_INET;
+-	serv_socket.sin_addr.s_addr = htonl (INADDR_ANY);
++	serv_socket.sin_addr.s_addr = htonl (INADDR_LOOPBACK);
+ 	serv_socket.sin_port = htons ((unsigned short)port);
+ 	if (setsockopt(sfd,SOL_SOCKET,SO_REUSEADDR,&reuse,sizeof(reuse)) < 0){
+ 	    fprintf (stderr, "%s: setsockopt: %s", me, strerror(errno));
+@@ -423,7 +423,7 @@
+ 	int i, nr;
+ 
+ 	/* read client */
+-	nr = read (cp->s, buf, sizeof(buf));
++	nr = read (cp->s, buf, sizeof(buf)-1);
+ 	if (nr < 0) {
+ 	    fprintf (stderr, "Client %d: %s\n", cp->s, strerror(errno));
+ 	    closeClient (cli);
+@@ -435,6 +435,7 @@
+ 	    closeClient (cli);
+ 	    return;
+ 	} 
++        buf[ sizeof( buf )-1 ] = '\0';
+ 	if (verbose > 1)
+ 	    fprintf (stderr, "Client %d: rcv from:\n%.*s", cp->s, nr, buf);
+ 
+@@ -464,7 +465,7 @@
+ 	int nr;
+ 
+ 	/* read driver */
+-	nr = read (dp->rfd, buf, sizeof(buf));
++	nr = read (dp->rfd, buf, sizeof(buf)-1);
+ 	if (nr < 0) {
+ 	    fprintf (stderr, "Driver %s: %s\n", dp->name, strerror(errno));
+ 	    restartDvr (i);
+@@ -475,6 +476,7 @@
+ 	    restartDvr (i);
+ 	    return;
+ 	}
++        buf[ sizeof( buf )-1 ]='\0';
+ 	if (verbose > 1)
+ 	    fprintf (stderr, "Driver %s: rcv from:\n%.*s", dp->name, nr, buf);
+ 
