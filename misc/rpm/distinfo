@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2003/10/19 16:05:21 grant Exp $
+$NetBSD: distinfo,v 1.6 2004/02/09 11:56:32 grant Exp $
 
 SHA1 (rpm-2.5.4.tar.gz) = a7fcd67883aec8d5f17483d5efebe7e5f5453462
 Size (rpm-2.5.4.tar.gz) = 727849 bytes
 SHA1 (patch-aa) = 3ee3193cc8e9043017b1f507b606c72acab77ddb
 SHA1 (patch-ab) = 63635f4f7fd96b4e7a40bfbaffd5673b40db3a13
-SHA1 (patch-ac) = 4dc758cefefb6d97f9217c6c43943883820b1af8
+SHA1 (patch-ac) = fb2e20b2342738eae701e4b75ac695eca810db41
 SHA1 (patch-ba) = edf6708fe7ef3b0e899473a13fe709d8c561e14b
 SHA1 (patch-bb) = dc0ea2dd366b793003218858ca3d67bc285a2089
 SHA1 (patch-bc) = 95a27125f8e17a5433bab273958d49ec3e0f3376
