@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 1999/06/28 11:54:50 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/10/04 20:56:59 is Exp $
 #
 
-DISTNAME=	sdr-2.5.8
+DISTNAME=	sdr-2.7
 CATEGORIES=	mbone tk80
-MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/2.5.8/
+MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/2.7/
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
@@ -11,13 +11,26 @@ HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 MIRROR_DISTFILE=	no
-WRKSRC=		${WRKDIR}/sdr
 USE_GMAKE=	yes
 USE_X11BASE=	yes
+
+RESTRICTED=	"Uses encryption"
 
 .if exists(/usr/include/sys/inttypes.h)
 EXTRA_FLAGS+=	-DHAVE_SYS_INTTYPES_H
 MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
 .endif
+
+do-configure:
+	cd ${WRKSRC}/common	; ${SH} ./configure
+	${MKDIR} ${WRKSRC}/sdr/netbsd
+	${CAT} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/netbsd/Makefile
+
+do-build:
+	cd ${WRKSRC}/common	; ${GMAKE}
+	cd ${WRKSRC}/sdr/netbsd	; ${GMAKE}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/sdr/netbsd/sdr ${PREFIX}/bin/sdr
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,13 @@
+--- common/net_udp.c.original	Mon Oct  4 15:10:55 1999
++++ common/net_udp.c	Mon Oct  4 15:12:16 1999
+@@ -341,8 +341,8 @@
+ 		imr.ipv6mr_multiaddr = s->addr6;
+ 		imr.ipv6mr_interface = 0;
+ 
+-		if (SETSOCKOPT(s->fd, IPPROTO_IPV6, IPV6_ADD_MEMBERSHIP, (char *) &imr, sizeof(struct ipv6_mreq)) != 0) {
+-			socket_error("setsockopt IPV6_ADD_MEMBERSHIP");
++		if (SETSOCKOPT(s->fd, IPPROTO_IPV6, IPV6_JOIN_GROUP, (char *) &imr, sizeof(struct ipv6_mreq)) != 0) {
++			socket_error("setsockopt IPV6_JOIN_GROUP");
+ 			abort();
+ 		}
+ 		if (SETSOCKOPT(s->fd, IPPROTO_IPV6, IPV6_MULTICAST_LOOP, (char *) &loop, sizeof(loop)) != 0) {
