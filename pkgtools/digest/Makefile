@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/07 23:03:19 kim Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/10 11:18:09 tron Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -24,7 +24,7 @@ BUILD_DEFS+=	MANINSTALL
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS} -DVERSION=${VERSION}"
 
-do-configure:
+post-extract:
 	@for f in Makefile digest.c digest.1				\
 		md5c.c md5.h md5hl.c					\
 		rmd160.c rmd160.h rmd160hl.c				\
@@ -33,9 +33,12 @@ do-configure:
 		${CP} ${FILESDIR}/$$f ${WRKSRC};			\
 	done
 
+.include "../../mk/bsd.prefs.mk"
+
 pre-install:
 	@${RM} -f ${PLIST_SRC}
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.if (${OPSYS} != SunOS)
 	@for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
@@ -46,5 +49,6 @@ pre-install:
 		;; \
 	  esac; \
 	done
+.endif
 
 .include "../../mk/bsd.pkg.mk"
