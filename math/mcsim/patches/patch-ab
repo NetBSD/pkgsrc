@@ -1,7 +1,29 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/26 23:02:38 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/25 22:14:20 jtb Exp $
 
---- mod/Makefile.orig	Wed Nov 22 22:39:24 2000
+--- mod/Makefile.orig	Thu Mar  6 16:14:37 1997
 +++ mod/Makefile
+@@ -77,16 +77,16 @@
+ #		`realclean' removes other stuff not distributed
+ #
+ 
+-
++all:	mod
+ 
+ #---------- System Calls ----------
+ #
+ #>>>>  Define any system dependent calls here
+ 
+-ECHO = echo
+-COPY = cp
+-DEL = rm
+-MKDIR = mkdir
++ECHO ?= echo
++COPY ?= cp
++DEL ?= rm -f
++MKDIR ?= mkdir
+ ARC  = tar
+ ARCFLAGS = cvf
+ MOD = mod
 @@ -97,8 +97,8 @@
  #
  #>>>>  Define the COMPILER name and LINKER name here only.
@@ -13,12 +35,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/11/26 23:02:38 jtb Exp $
  
  #>>>>  Define PATHS
  #	The include path should be a directory containing header
-@@ -137,13 +137,13 @@
+@@ -137,27 +137,27 @@
  #>>>> To compile with OPTIMIZATION uncomment the following lines
  #
  DEBUG_SYMBOLS = -DNDEBUG
 -C_OPTIM_FLAG = -O
-+C_OPTIM_FLAG = -O2
++C_OPTIM_FLAG =
  L_OPTIM_FLAG =
  
  #
@@ -29,3 +51,20 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/11/26 23:02:38 jtb Exp $
  
  #--------------------
  #****  You shouldn't need to change these lines.  They are dependent
+ #****  only on the above setup.
+ 
+-CFLAGS = $(C_OPTIM_FLAG) $(C_DEBUG_FLAG) $(DEBUG_SYMBOLS) \
++CFLAGS += $(C_OPTIM_FLAG) $(C_DEBUG_FLAG) $(DEBUG_SYMBOLS) \
+ 	-I $(INCPATH) $(WARNINGS) -DMODGEN
+-CLFLAGS = $(L_OPTIM_FLAG) $(L_DEBUG_FLAG)
++CLFLAGS += $(L_OPTIM_FLAG) $(L_DEBUG_FLAG)
+ 
+ 
+ #
+ #>>>> Extra link flags.  Include libraries here
+ #
+-LFLAGS = -lm
++LFLAGS += -lm
+ 
+ 
+ 
