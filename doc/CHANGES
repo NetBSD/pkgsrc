@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1318 2003/02/04 18:06:48 skrll Exp $
+$NetBSD: CHANGES,v 1.1319 2003/02/05 03:58:10 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated qt3-psql to 3.0.7 [skrll 2003-02-04]
 	Updated qt3-mysql to 3.0.7 [skrll 2003-02-04]
 	Updated qt3 to 3.0.7 [skrll 2003-02-04]
+	Updated expat to 1.95.6nb1 [jlam 2003-02-04]
