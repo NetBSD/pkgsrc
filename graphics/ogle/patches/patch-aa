@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/12/23 00:03:57 mycroft Exp $
+
+--- include/debug_print.h.orig	Sat Dec 22 13:02:26 2001
++++ include/debug_print.h	Sat Dec 22 13:02:12 2001
+@@ -26,7 +26,7 @@
+ #define ERROR(str, args...) \
+ fprintf(stderr, "ERROR[%s]: " str, program_name, ## args)
+ 
+-#define WARNING(str, ...) \
++#define WARNING(str, args...) \
+ fprintf(stderr, "WARNING[%s]: " str, program_name, ## args)
+ 
+ #define NOTE(str, args...) \
