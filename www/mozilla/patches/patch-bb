@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.15 2004/01/17 00:04:49 taya Exp $
+$NetBSD: patch-bb,v 1.16 2004/02/22 12:02:55 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	2003-09-12 02:24:53.000000000 +0900
-+++ ./nsprpub/pr/include/md/_netbsd.h	2004-01-16 23:17:47.000000000 +0900
++++ ./nsprpub/pr/include/md/_netbsd.h	2004-02-21 16:47:07.000000000 +0900
 @@ -48,12 +48,20 @@
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)
@@ -24,7 +24,20 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #endif
  
  #if defined(__ELF__)
-@@ -108,7 +116,17 @@
+@@ -86,6 +94,12 @@
+ #define _PR_INET6_PROBE
+ #endif
+ 
++#if __NetBSD_Version__ >= 106370000
++/* NetBSD 1.6ZK */
++#define _PR_HAVE_GETPROTO_R
++#define _PR_HAVE_GETPROTO_R_INT
++#endif
++
+ #define USE_SETJMP
+ 
+ #ifndef _PR_PTHREADS
+@@ -108,7 +122,17 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
  #endif
@@ -43,7 +56,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
  {									\
      sigsetjmp(CONTEXT(_thread), 1);					\
-@@ -150,7 +168,7 @@
+@@ -150,7 +174,7 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[32]
  #endif
