@@ -1,40 +1,39 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/12/03 17:17:10 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/02 16:18:47 minskim Exp $
 
---- makefile.orig	2004-10-22 08:02:04.000000000 -0500
-+++ makefile
-@@ -1,9 +1,6 @@
+--- Makefile.orig	2004-11-27 10:58:24.000000000 -0600
++++ Makefile
+@@ -1,9 +1,10 @@
 -CPP = g++
 -CC  = gcc
--OBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infblock.o zlib/infcodes.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/infutil.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
--LINKOBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infblock.o zlib/infcodes.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/infutil.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
+-OBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infback.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
++#CPP = g++
++#CC  = gcc
 +OBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o
-+LINKOBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o
- BIN  = unalz
--CFLAGS =
+ BIN = unalz
+-LDFLAGS = 
+-CFLAGS = -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
++LDFLAGS += -lz -lbz2
++CFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
++CXXFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_UNALZ_ICONV
  
- all: unalz
+ all:
+ 	@echo ""
+@@ -21,8 +22,7 @@ all:
+ 	@echo ""
  
-@@ -11,19 +8,19 @@ clean:
- 	rm -f $(OBJ) $(BIN)
+ posix: unalz
+-	$(CPP) -c UnAlz.cpp  -c main.cpp -D_UNALZ_ICONV $(CFLAGS) 
+-	$(CPP) $(OBJ) $(LDFLAGS) -liconv -o $(BIN) 
++	$(CXX) $(OBJ) $(LDFLAGS) -liconv -o $(BIN) 
+ 
+ posix-utf8: unalz
+ 	$(CPP) -c UnAlz.cpp -c main.cpp -D_UNALZ_ICONV -D_UNALZ_UTF8 $(CFLAGS)
+@@ -37,6 +37,8 @@ clean:
  
  $(BIN): $(OBJ)
--	$(CPP) $(LINKOBJ) -o "unalz"
-+	$(CXX) $(LINKOBJ) -o "unalz" $(LDFLAGS) -lz -lbz2
  
- main.o: main.cpp
--	$(CPP) -c main.cpp -o main.o
-+	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
++.cpp.o:
++	${CXX} ${CXXFLAGS} -c ${.IMPSRC} -o ${.TARGET}
  
- UnAlz.o: UnAlz.cpp
--	$(CPP) -c UnAlz.cpp -o UnAlz.o
-+	$(CXX) $(CXXFLAGS) -c UnAlz.cpp -o UnAlz.o
- 
- UnAlzBz2decompress.o: UnAlzBz2decompress.c
- 	$(CC) -c UnAlzBz2decompress.c -o UnAlzBz2decompress.o $(CFLAGS)
- 
- UnAlzBzip2.o: UnAlzBzip2.cpp
--	$(CPP) -c UnAlzBzip2.cpp -o UnAlzBzip2.o
-+	$(CXX) $(CXXFLAGS) -c UnAlzBzip2.cpp -o UnAlzBzip2.o
- 
- UnAlzbzlib.o: UnAlzbzlib.c
- 	$(CC) -c UnAlzbzlib.c -o UnAlzbzlib.o $(CFLAGS)
+ zlib/adler32.o: zlib/adler32.c
+ 	$(CC) -c zlib/adler32.c -o zlib/adler32.o $(CFLAGS)
