@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.6 2001/03/09 19:55:58 jlam Exp $
+$NetBSD: md5,v 1.7 2001/03/12 03:43:30 jlam Exp $
 
-SHA1 (crafty-18.4/crafty-18.4.tar.gz) = 8c292b15370cf123a73bba959538a932ce6a6a93
-SHA1 (crafty-18.4/start.pgn) = 09de69c698feda46c1ebafa4fa8e908296c66701
-SHA1 (crafty-18.4/read.me) = 668f6942764d609aa42f119dd99cc28c71704534
-SHA1 (crafty-18.4/crafty.faq) = 7ba5cc19e190fdcf1697e3130c679ce5e50141db
+SHA1 (crafty-18.5/crafty-18.5.tar.gz) = f35047b72baebf78041b5325f48e5de877d12a97
+SHA1 (crafty-18.5/start.pgn) = 09de69c698feda46c1ebafa4fa8e908296c66701
+SHA1 (crafty-18.5/read.me) = 668f6942764d609aa42f119dd99cc28c71704534
+SHA1 (crafty-18.5/crafty.faq) = 7ba5cc19e190fdcf1697e3130c679ce5e50141db
