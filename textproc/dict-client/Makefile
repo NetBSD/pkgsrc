@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/27 02:40:18 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/16 06:00:31 uebayasi Exp $
 
 DISTNAME=       dictd-1.8.0
 PKGNAME=        dict-client-1.8.0
@@ -9,8 +9,6 @@ MASTER_SITES=   ftp://ftp.dict.org/pub/dict/
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol client
-
-DEPENDS=	dict-server>=1.8.0nb1:../../textproc/dict-server
 
 USE_BUILDLINK2=	# defined
 USE_GMAKE=	# defined
