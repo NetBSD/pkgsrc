@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/03/26 07:59:30 enami Exp $
+# $NetBSD: Makefile,v 1.37 2000/03/26 08:09:07 enami Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.6
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=--with-ipv6
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex forms
+
+BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
