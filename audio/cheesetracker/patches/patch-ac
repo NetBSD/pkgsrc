@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/11 13:42:15 skrll Exp $
 
---- configure.in.orig	Wed May  9 08:12:57 2001
-+++ configure.in	Mon Jun 11 07:00:59 2001
-@@ -341,7 +356,7 @@
+--- configure.orig	Fri Jan 11 13:40:12 2002
++++ configure
+@@ -2754,7 +2754,7 @@
+ fi
  
- dnl optimization
  
 -TF_CXXFLAGS="-O3 $TF_CXXFLAGS"
 +TF_GTKMM_LIBS="$TF_GTKMM_LIBS -lpthread -lossaudio"
  
- AC_SUBST(TF_CFLAGS)
- AC_SUBST(TF_CXXFLAGS)
+ 
+ 
