@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/15 06:07:03 uebayasi Exp $
+$NetBSD: distinfo,v 1.2 2003/03/14 01:26:40 uebayasi Exp $
 
 SHA1 (Mule-UCS-0.84.tar.gz) = aa796d3d9cce8b3c444752e8a3fc74ecf3d76979
 Size (Mule-UCS-0.84.tar.gz) = 565222 bytes
+SHA1 (patch-aa) = 12ea72b6549e643c438171cc1ef2107d051e6ca6
