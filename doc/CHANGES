@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7162 2004/09/18 02:47:28 minskim Exp $
+$NetBSD: CHANGES,v 1.7163 2004/09/18 12:34:09 blymn Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed CompuPic [hubertf 2004-09-17]
 	Updated xsidplay to xsidplay-1.6.5.1a [hubertf 2004-09-17]
 	Updated xerces-c to 2.3.0nb1 [minskim 2004-09-18]
+	Updated tvtwm to 11nb2 [blymn 2004-09-18]
