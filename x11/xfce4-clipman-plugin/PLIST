@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 05:18:46 martti Exp $
+lib/xfce4/panel-plugins/libclipman.a
+lib/xfce4/panel-plugins/libclipman.la
+lib/xfce4/panel-plugins/libclipman.so
