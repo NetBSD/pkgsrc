@@ -1,56 +1,63 @@
-$NetBSD: patch-aa,v 1.9 2003/06/26 14:51:00 dillo Exp $
+$NetBSD: patch-aa,v 1.10 2004/04/21 12:08:10 dillo Exp $
 
---- Makefile.in.orig	Mon Mar 10 13:13:19 2003
+--- Makefile.in.orig	Tue Feb 17 17:11:13 2004
 +++ Makefile.in
-@@ -336,12 +336,12 @@ inst-man:
+@@ -338,12 +338,12 @@ inst-man:
  	fi
  
  inst-inc:
--	$(INSTALL_DATA) $(srcdir)/c/scheme48.h $(incdir)	
-+	$(INSTALL_DATA) $(srcdir)/c/scheme48.h $(incdir)/scsh.h
- 	$(INSTALL_DATA) $(srcdir)/c/write-barrier.h $(incdir)
+-	$(INSTALL_DATA) $(srcdir)/c/scheme48.h $(DESTDIR)$(incdir)	
++	$(INSTALL_DATA) $(srcdir)/c/scheme48.h $(DESTDIR)$(incdir)/scsh.h
+ 	$(INSTALL_DATA) $(srcdir)/c/write-barrier.h $(DESTDIR)$(incdir)
  
  install-cig: cig
--	$(INSTALL_PROGRAM) $(srcdir)/$(CIG) $(LIB)/cig
--	$(INSTALL_PROGRAM) $(srcdir)/$(CIG).image $(LIB)/cig
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG) $(LIB)/cig
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG).image $(LIB)/cig
- 	$(INSTALL_DATA) $(srcdir)/$(LIBCIG) $(LIB)/cig
- 	$(INSTALL_DATA) $(srcdir)/cig/libcig.h $(LIB)/cig
+-	$(INSTALL_PROGRAM) $(srcdir)/$(CIG) $(DESTDIR)$(LIB)/cig
+-	$(INSTALL_PROGRAM) $(srcdir)/$(CIG).image $(DESTDIR)$(LIB)/cig
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG) $(DESTDIR)$(LIB)/cig
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG).image $(DESTDIR)$(LIB)/cig
+ 	$(INSTALL_DATA) $(srcdir)/$(LIBCIG) $(DESTDIR)$(LIB)/cig
+ 	$(INSTALL_DATA) $(srcdir)/cig/libcig.h $(DESTDIR)$(LIB)/cig
  
-@@ -353,7 +353,10 @@ inst-misc:
+@@ -355,7 +355,11 @@ inst-misc:
  	done &&								\
  	for f in scheme/rts/*num.scm scheme/rts/jar-defrecord.scm; do	\
- 		$(INSTALL_DATA) $$f $(LIB)/rts || exit 1;		\
+ 		$(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/rts || exit 1;	\
 -	done 
-+	done  &&							\
-+	for f in emacs/*; do						\
-+		$(INSTALL_DATA) $$f $(LIB)/emacs || exit 1;		\
++	done  &&                                                        \
++	for f in emacs/*; do                                            \
++		$(INSTALL_DATA) $$f $(LIB)/emacs || exit 1;             \
 +	done
++
  
  inst-doc:
  	for f in $(srcdir)/doc/*.txt $(srcdir)/doc/*.ps; do \
-@@ -417,8 +420,8 @@ dirs:
+@@ -419,8 +423,8 @@ dirs:
  	}								\
  	done &&								\
  	for dir in								\
 -		rts env big opt misc link srfi scsh doc/scsh-manual			\
 -		doc/s48-manual/html doc/scsh-paper/html cig; do			\
-+		emacs rts env big opt misc link srfi scsh doc/scsh-manual	\
++		emacs rts env big opt misc link srfi scsh doc/scsh-manual			\
 +		doc/s48-manual/html doc/scsh-paper/html; do			\
- 		{ mkdir -p $(LIB)/$$dir && [ -w $(LIB)/$$dir ]; } || {		\
- 			echo "$(LIB)/$$dir not a writable directory" >&2; 	\
+ 		{ mkdir -p $(DESTDIR)$(LIB)/$$dir && [ -w $(DESTDIR)$(LIB)/$$dir ]; } || {	\
+ 			echo "$(DESTDIR)$(LIB)/$$dir not a writable directory" >&2; 	\
  		exit 1;						  		\
-@@ -892,9 +895,9 @@ scsh/stripped-scsh.image: $(VM) $(SCHEME
+@@ -899,9 +903,9 @@ scsh/stripped-scsh.image: $(VM) $(SCHEME
  
  install-scsh: scsh install-scsh-image install-stripped-scsh-image
- 	$(RM) $(bindir)/$(RUNNABLE)
--	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh $(bindir)/$(RUNNABLE)
--	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSHVM) $(libdir)/$(LIBSCSHVM)
--	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/scsh/scsh $(bindir)/$(RUNNABLE)
-+	$(INSTALL_DATA) $(srcdir)/$(LIBSCSHVM) $(libdir)/$(LIBSCSHVM)
-+	$(INSTALL_DATA) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
- 	$(RANLIB) $(libdir)/$(LIBSCSH)
+ 	$(RM) $(DESTDIR)$(bindir)/$(RUNNABLE)
+-	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
+-	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
+-	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/scsh/scsh $(DESTDIR)$(bindir)/$(RUNNABLE)
++	$(INSTALL_DATA) $(srcdir)/$(LIBSCSHVM) $(DESTDIR)$(libdir)/$(LIBSCSHVM)
++	$(INSTALL_DATA) $(srcdir)/$(LIBSCSH) $(DESTDIR)$(libdir)/$(LIBSCSH)
+ 	$(RANLIB) $(DESTDIR)$(libdir)/$(LIBSCSH)
  	for f in $(srcdir)/scsh/*.scm $(srcdir)/scsh/*/*.scm; \
- 	    do $(INSTALL_DATA) $$f $(LIB)/scsh/; done
+ 	    do $(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/scsh/; done
+@@ -939,4 +943,4 @@ scsh/configure.scm: scsh/configure.scm.i
+             -e 's|@scsh_DEFS@|$(DEFS)|g' \
+             -e 's|@scsh_CFLAGS@|$(CFLAGS)|g' \
+             -e 's|@scsh_CPPFLAGS@|$(CPPFLAGS)|g' \
+-            -e 's|@scsh_LDFLAGS@|$(LDFLAGS)|g'  $< > $@
++            -e 's|@scsh_LDFLAGS@|$(LDFLAGS)|g'  scsh/configure.scm.in > $@

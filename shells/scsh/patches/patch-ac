@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2003/06/26 14:51:00 dillo Exp $
+$NetBSD: patch-ac,v 1.5 2004/04/21 12:08:10 dillo Exp $
 
---- configure.orig	Wed Mar  5 18:36:07 2003
+--- configure.orig	Thu Mar 11 16:53:58 2004
 +++ configure
-@@ -3076,6 +3076,7 @@ echo "${ECHO_T}$scsh_cv_elf" >&6
+@@ -3129,6 +3129,7 @@ echo "${ECHO_T}$scsh_cv_elf" >&6
  
    ## NetBSD and FreeBSD ( and maybe 386BSD also)
    *-*-*bsd*|*-*-darwin* )
