@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.4 2004/02/09 18:14:45 jmmv Exp $
+$NetBSD: patch-aj,v 1.5 2004/03/28 22:00:05 minskim Exp $
 
---- fam/Listener.c++.orig	2003-04-15 06:52:40.000000000 +0200
-+++ fam/Listener.c++
+--- src/Listener.c++.orig	2003-01-19 18:37:29.000000000 -0600
++++ src/Listener.c++
 @@ -22,6 +22,8 @@
  
  #include "Listener.h"
@@ -10,8 +10,8 @@ $NetBSD: patch-aj,v 1.4 2004/02/09 18:14:45 jmmv Exp $
 +#include <stdlib.h>
  #include <assert.h>
  #include <fcntl.h>
- #include <stdlib.h>
-@@ -33,6 +35,7 @@
+ #include <sys/types.h>
+@@ -32,6 +34,7 @@
  #include <rpc/clnt.h>
  #include <sys/ioctl.h>
  #include <sys/socket.h>
@@ -19,30 +19,30 @@ $NetBSD: patch-aj,v 1.4 2004/02/09 18:14:45 jmmv Exp $
  #include <sys/stat.h>
  #include <sys/un.h>
  #include <unistd.h>
-@@ -206,7 +209,7 @@ Listener::create_local_client(TCP_Client
-     putenv("TMPDIR=");
+@@ -209,7 +212,7 @@ Listener::create_local_client(TCP_Client
+ #endif
  
      char *tmpfile = tempnam("/tmp", ".fam");
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+-#ifdef HAVE_SOCKADDR_SUN_LEN
++#ifdef HAVE_STRUCT_SOCKADDR_UN_SUN_LEN
      sockaddr_un sun = { sizeof(sockaddr_un), AF_UNIX, "" };
  #else
      sockaddr_un sun = { AF_UNIX, "" };
-@@ -280,7 +283,7 @@ Listener::accept_localclient(int ofd, vo
+@@ -283,7 +286,7 @@ Listener::accept_localclient(int ofd, vo
  
      // Get the new socket.
  
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+-#ifdef HAVE_SOCKADDR_SUN_LEN
++#ifdef HAVE_STRUCT_SOCKADDR_UN_SUN_LEN
      struct sockaddr_un sun = { sizeof(sockaddr_un), AF_UNIX, "" };
  #else
      struct sockaddr_un sun = { AF_UNIX, "" };
-@@ -346,7 +349,7 @@ Listener::accept_localclient(int ofd, vo
+@@ -349,7 +352,7 @@ Listener::accept_localclient(int ofd, vo
  void
  Listener::dirty_ugly_hack()
  {
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+-#ifdef HAVE_SOCKADDR_SUN_LEN
++#ifdef HAVE_STRUCT_SOCKADDR_UN_SUN_LEN
      static sockaddr_un sun = { sizeof (sockaddr_un), AF_UNIX, "/tmp/.fam_socket" };
  #else
      static sockaddr_un sun = { AF_UNIX, "/tmp/.fam_socket" };
