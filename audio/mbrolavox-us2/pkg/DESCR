@@ -1,0 +1,68 @@
+American English male voice for MBROLA.
+
+US2   is a diphone database  for  american english, consisting of 2065
+diphones, male voice.
+
+The following  phoneme  symbols are  assumed in  our diphone  sets. It
+slightly differ  for the SAMPA alphabet since  american english is not
+british english.
+
+SYMBOL  PRONOUNCED LIKE IN
+p     drop proxy 
+p_h   pod (aspirated allophone of p)
+
+t     plot tromp
+t_h   top (aspirated allophone of t)
+4     later (flapped allophone of t)
+
+k     rock  crop
+k_h   cot (aspirated allophone of k)
+
+b     cob box
+d     nod dot
+g     jog gospel
+
+f     prof fox
+s     boss sonic
+S     wash shop
+tS    notch chop
+T     cloth thomp
+
+v     salve volley
+z     was zombie
+Z     garage jacques
+dZ    dodge jog
+D     clothe thy
+
+m     palm mambo
+n     john novel
+N     bong
+l     doll lockwood
+r     star roxanne
+j     yacht
+w     show womble
+h     harm
+r=    her urgent
+
+i     even
+A     arthur
+u     oodles
+I     illness
+E     else
+{     apple
+V     nut
+U     good
+@     about
+EI    able
+AI    island
+OI    oyster
+@U    over
+aU    out
+
+O     all
+Or Allophone of O in front of /r/ like in 'sort'
+
+The diphone matrix is square, no diphone lacking... of course diphone
+like t-N may not sound optimal :-)
+
+-Julian Assange <proff@iq.org>
