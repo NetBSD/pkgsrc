@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5112 2004/03/06 18:58:30 recht Exp $
+$NetBSD: CHANGES,v 1.5113 2004/03/06 23:02:18 pooka Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1176,6 +1176,11 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgeda to 20040111 [dmcmahill 2004-03-05]
 	Updated postfix to 2.0.18nb1 [grant 2004-03-05]
 	Added cln-1.1.6 [adam 2004-03-05]
+	Updated nethack to 3.4.3 [pooka 2004-03-05]
+	Updated nethack-lib to 3.4.3 [pooka 2004-03-05]
+	Updated nethack-tty to 3.4.3 [pooka 2004-03-05]
+	Updated nethack-x11 to 3.4.3 [pooka 2004-03-05]
+	Updated nethack-qt to 3.4.3 [pooka 2004-03-05]
 	Updated createbuildlink to 3.2 [jlam 2004-03-05]
 	Added libmodplug-0.7 [ben 2004-03-05]
 	Added xmms-modplug-2.05 [ben 2004-03-05]
