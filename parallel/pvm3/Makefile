@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/09/27 23:18:35 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/02/07 10:49:07 seb Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -20,6 +20,7 @@ PVM_SSH?=		${LOCALBASE}/bin/ssh
 USE_FORTRAN=		yes
 USE_X11=		yes
 WRKSRC=			${WRKDIR}/pvm3
+PVM_ROOT=		${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
 MAKE_ENV+=		SSH=${PVM_SSH}
