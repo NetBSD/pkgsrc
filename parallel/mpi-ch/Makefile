@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/02 23:47:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/25 14:29:10 is Exp $
 
 DISTNAME=		mpich-1.1.1
 CATEGORIES=		parallel
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/old/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
 
-DEPENDS+=		ssh-1.2.27:../../security/ssh
+DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
 
 WRKSRC=			${WRKDIR}/mpich
 ALL_TARGET=		ALL
