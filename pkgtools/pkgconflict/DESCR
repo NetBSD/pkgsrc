@@ -1,10 +1,10 @@
-$NetBSD: DESCR,v 1.1 2001/10/31 21:31:36 zuntum Exp $
+$NetBSD: DESCR,v 1.2 2002/04/21 08:06:13 zuntum Exp $
 
 pkgconflict is a script that searches for conflicting packages.
 
 In a first step it gathers the package and file names of all known
 packages.  The source for this step is either the contents of
-/var/db/pkg, or a directory where the builk builds savet the
+/var/db/pkg, or a directory where the builk builds saved the
 package databases.
 
 In a second step, it calls a database system, PostgreSQL, to
