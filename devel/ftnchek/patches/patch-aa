@@ -1,29 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2001/03/15 23:48:23 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2001/06/17 14:27:28 jtb Exp $
 
---- configure.orig	Mon Mar  5 18:56:11 2001
+--- configure.orig	Sun Jun 17 03:12:36 2001
 +++ configure
-@@ -2510,6 +2510,8 @@
+@@ -2569,6 +2569,7 @@
      else
-       OS_FLAGS="-O2";
+       OPT="-O2";
      fi;;
-+  netbsd*)
-+    ;;
++  netbsd*) ;;
    next*)
-     OS_FLAGS="-O2";;
+     OPT="-O2";;
  
-@@ -2574,13 +2576,13 @@
+@@ -2635,7 +2636,7 @@
  fi
  
  
--CFLAGS="-DUNIX $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
-+CFLAGS="$CFLAGS -DUNIX $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
+-CFLAGS="-DUNIX \$(OPT) $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
++CFLAGS="$CFLAGS -DUNIX \$(OPT) $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
  echo "$ac_t""Compile command is $CC $CFLAGS" 1>&6
- if test $GCC; then
- echo "$ac_t""If you prefer using cc, setenv CC cc; rm config.cache and re-run" 1>&6
- fi
- 
--LDFLAGS=
-+
- 
- 
- EXE=
+ echo "$ac_t""\$(OPT) is $OPT" 1>&6
+ echo "$ac_t""\$(OPTIONS) is for optional defines, normally blank" 1>&6
