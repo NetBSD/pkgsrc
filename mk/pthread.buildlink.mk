@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink.mk,v 1.11 2002/10/23 17:50:40 jlam Exp $
+# $NetBSD: pthread.buildlink.mk,v 1.12 2002/11/01 06:09:36 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -102,7 +102,7 @@
 #	can actually be used to replace a native pthreads.
 #
 _PKG_PTHREAD?=			pth
-_PKG_PTHREAD_DEPENDS?=		pth>=1.4.1nb2
+_PKG_PTHREAD_DEPENDS?=		pth>=1.4.1nb5
 _PKG_PTHREAD_PKGSRCDIR?=	../../devel/${_PKG_PTHREAD}
 _PKG_PTHREAD_BUILDLINK_MK?=	${_PKG_PTHREAD_PKGSRCDIR}/buildlink.mk
 _PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
