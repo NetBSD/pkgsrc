@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/11/18 08:19:55 martti Exp $
+# $NetBSD: Makefile,v 1.63 2002/11/19 09:35:27 martti Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -166,8 +166,8 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${CHMOD} 0 ${PREFIX}/libexec/cgi-bin/printenv
-	${CHMOD} 0 ${PREFIX}/libexec/cgi-bin/test-cgi
+	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
+	  ${PREFIX}/libexec/cgi-bin/test-cgi
 
 .include "../../textproc/expat/buildlink2.mk"
 
