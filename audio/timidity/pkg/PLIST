@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/02/28 20:27:12 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/03/06 18:06:23 agc Exp $
 bin/timidity
 bin/bag
 bin/wav2pat
@@ -204,5 +204,9 @@ lib/timidity/patch/woodblk1.pat
 lib/timidity/patch/woodblk2.pat
 lib/timidity/patch/woodflut.pat
 lib/timidity/patch/xylophon.pat
+lib/timidity/patch/chris6.cfg
+lib/timidity/patch/default.cfg
+lib/timidity/patch/maplerag.cfg
+lib/timidity/patch/ultramid.ini
 @dirrm lib/timidity/patch
 @dirrm lib/timidity
