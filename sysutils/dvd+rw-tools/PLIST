@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/03 05:42:47 dan Exp $
+bin/growisofs
+bin/dvd+rw-booktype
+bin/dvd+rw-format
+share/doc/dvd+rw-tools/index.html
+@dirrm share/doc/dvd+rw-tools
