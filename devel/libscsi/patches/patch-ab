@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1999/12/01 10:19:55 fredb Exp $
+$NetBSD: patch-ab,v 1.5 2001/12/20 11:24:07 tron Exp $
 
---- Makefile.orig	Wed Feb 18 08:43:00 1998
-+++ Makefile	Sat Sep 18 09:27:26 1999
-@@ -4,7 +4,13 @@
+--- Makefile.orig	Wed Feb 18 15:43:00 1998
++++ Makefile	Thu Dec 20 12:22:50 2001
+@@ -4,7 +4,11 @@
  #CFLAGS+=-DLIBC_SCCS -I${.CURDIR}/../../sys
  SRCS=	scsi.c
  
 -MAN3=	scsi.3
 +NOLINT=	1
-+
-+.include <bsd.man.mk>
 +
 +MANINSTALL= maninstall catinstall 
 +
@@ -17,7 +15,7 @@ $NetBSD: patch-ab,v 1.4 1999/12/01 10:19:55 fredb Exp $
  
  MLINKS+=scsi.3 scsireq_buff_decode.3 scsi.3 scsireq_build.3 \
  	scsi.3 scsireq_decode.3 scsi.3 scsireq_encode.3 \
-@@ -14,8 +20,8 @@
+@@ -14,8 +18,8 @@
  	scsi.3 scsi_debug_output.3
  
  beforeinstall:
