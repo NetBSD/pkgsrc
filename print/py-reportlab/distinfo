@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:44:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:41:53 agc Exp $
 
-MD5 (python/ReportLab_1_01.tgz) = 0c4126432624875bf36fac56faa963e7
+SHA1 (python/ReportLab_1_01.tgz) = ed8e8456018e7ca442c7ad4200fab5c983daa352
+Size (python/ReportLab_1_01.tgz) = 665597 bytes
