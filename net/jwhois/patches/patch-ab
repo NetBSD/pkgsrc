@@ -1,15 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/05 14:17:15 kim Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/12 06:29:15 jlam Exp $
 
---- doc/jwhois.texi.orig	Sun Sep 26 05:42:39 1999
-+++ doc/jwhois.texi	Tue Oct  5 10:04:34 1999
-@@ -4,6 +4,10 @@
- @settitle jwhois, Whois client
- @c %**end of header
- 
-+@direntry
-+* jwhois: (jwhois).	Whois client.
-+@end direntry
+--- configure.in.orig	Tue Jan 25 10:24:22 2000
++++ configure.in	Fri Aug 11 23:49:43 2000
+@@ -60,6 +60,12 @@
+ AC_PROG_INSTALL
+ AC_PROG_CC
+ AM_GNU_GETTEXT
 +
- @c This file has the new style title page commands.
- @c Run `makeinfo' rather than `texinfo-format-buffer'.
++dnl NetBSD: set DATADIRNAME to "share"
++DATADIRNAME="share"
++INTLDEPS=
++INTLLIBS="-lintl"
++
+ AC_PATH_PROG(CHGRP, chgrp, $PATH:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/libexec)
+ AC_PATH_PROG(CHMOD, chmod, $PATH:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/libexec)
  

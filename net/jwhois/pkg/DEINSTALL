@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/08/12 06:29:18 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	CONF=/etc/jwhois.conf
+	DBCACHE=/var/db/jwhois.db
+
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following files:
+
+	${CONF}
+	${DBCACHE}
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
