@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 1999/08/18 09:28:02 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/09/14 02:32:23 kim Exp $
 
-DISTNAME=	cyrus-imapd-v1.5.14
-CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
+DISTNAME=		cyrus-imapd-v1.5.14
+CATEGORIES=		mail
+MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=		kim@tac.nyc.ny.us
 
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=		tcl-8.0.5:../../lang/tcl80
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 # XXX This package is not ready for general use!
 # XXX I've imported it because my work on it has
@@ -24,15 +24,13 @@ CONFIGURE_ARGS+=	--with-statedir=/var/run
 CONFIGURE_ARGS+=	--includedir=${LOCALBASE}/include/tcl8.0
 CONFIGURE_ARGS+=	--enable-netscapehack
 
-BUILD_DEFS+=		USE_KERBEROS4
-
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_KERBEROS4)
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-login=krb
-RESTRICTED=		uses Kerberos encryption code
 .endif
 
 .include "../../mk/bsd.pkg.mk"
 
-PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
+PKGNAME!=		${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
