@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
+$NetBSD: patch-af,v 1.3 2003/03/11 13:22:31 markd Exp $
 
---- kedit/Makefile.in.orig	Mon Dec 30 16:24:30 2002
+--- kedit/Makefile.in.orig	Fri Jan 17 08:58:06 2003
 +++ kedit/Makefile.in
-@@ -236,16 +236,20 @@ x_libraries = @x_libraries@
+@@ -256,16 +256,20 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kedit
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  kedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = kedit.h ktextfiledlg.h\
-@@ -269,22 +273,29 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -289,22 +293,29 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -68,33 +68,29 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -292,16 +303,16 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -313,14 +324,17 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kedit.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/ktextfiledlg.Plo $(DEPDIR)/mail.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/optiondialog.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kedit.Plo $(DEPDIR)/kedit_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kedit_main.Po $(DEPDIR)/ktextfiledlg.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/mail.Plo $(DEPDIR)/optiondialog.Plo
- #>+ 7
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kedit_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kedit.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ktextfiledlg.Plo $(DEPDIR)/mail.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/optiondialog.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/dummy.Po $(DEPDIR)/kedit.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ktextfiledlg.Plo $(DEPDIR)/mail.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/optiondialog.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkedit_main_la.all_cpp.P  $(DEPDIR)/kedit.Plo $(DEPDIR)/kedit_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kedit_main.Po $(DEPDIR)/ktextfiledlg.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/mail.Plo $(DEPDIR)/optiondialog.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/kedit.Plo $(DEPDIR)/kedit_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kedit_main.Po $(DEPDIR)/ktextfiledlg.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/mail.Plo $(DEPDIR)/optiondialog.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kedit.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/kedit.Plo ./$(DEPDIR)/kedit_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kedit_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ktextfiledlg.Plo ./$(DEPDIR)/mail.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/optiondialog.Plo
+-#>+ 7
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kedit_la.all_cpp.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kedit.Plo \
++#>+ 9
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkedit_main_la.all_cpp.P  ./$(DEPDIR)/kedit.Plo ./$(DEPDIR)/kedit_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kedit_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ktextfiledlg.Plo ./$(DEPDIR)/mail.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/optiondialog.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kedit.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/kedit.Plo ./$(DEPDIR)/kedit_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kedit_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ktextfiledlg.Plo ./$(DEPDIR)/mail.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/optiondialog.Plo
  
- #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -322,7 +333,8 @@ CXXLD = $(CXX)
+@@ -343,7 +357,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -104,7 +100,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  DATA = $(apps_DATA) $(rc_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -335,7 +347,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -356,7 +371,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  DIST_COMMON = README $(noinst_HEADERS) ChangeLog Makefile.am \
  	Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -113,28 +109,28 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -384,6 +396,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -403,6 +418,8 @@ clean-libLTLIBRARIES:
+ 	done
  kedit.la: $(kedit_la_OBJECTS) $(kedit_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kedit_la_LDFLAGS) $(kedit_la_OBJECTS) $(kedit_la_LIBADD) $(LIBS)
 +libkedit_main.la: $(libkedit_main_la_OBJECTS) $(libkedit_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkedit_main_la_LDFLAGS) $(libkedit_main_la_OBJECTS) $(libkedit_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -418,8 +432,9 @@ mostlyclean-compile:
+@@ -442,8 +459,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kedit_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ktextfiledlg.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/mail.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/optiondialog.Plo@am__quote@
-@@ -575,7 +590,7 @@ distclean-tags:
- 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kedit.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kedit_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kedit_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ktextfiledlg.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mail.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/optiondialog.Plo@am__quote@
+@@ -613,7 +631,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=optionstate.h keditui.rc KEdit.desktop 
@@ -142,7 +138,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -714,14 +729,15 @@ uninstall-info: uninstall-info-recursive
+@@ -758,14 +776,15 @@ uninstall-info: uninstall-info-recursive
  
  messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/kedit.pot
@@ -161,7 +157,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  mail.moc: $(srcdir)/mail.h
  	$(MOC) $(srcdir)/mail.h -o mail.moc
  
-@@ -734,12 +750,8 @@ kedit.moc: $(srcdir)/kedit.h
+@@ -778,12 +797,8 @@ kedit.moc: $(srcdir)/kedit.h
  	$(MOC) $(srcdir)/kedit.h -o kedit.moc
  
  #>+ 3
@@ -175,7 +171,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  
  #>+ 2
  docs-am:
-@@ -752,33 +764,33 @@ force-reedit:
+@@ -796,33 +811,33 @@ force-reedit:
  
  
  #>+ 11
@@ -222,7 +218,7 @@ $NetBSD: patch-af,v 1.2 2003/01/02 09:12:29 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -789,10 +801,10 @@ kde-rpo-clean:
+@@ -833,10 +848,10 @@ kde-rpo-clean:
  
  #>+ 9
  optiondialog.o: optiondialog.moc 

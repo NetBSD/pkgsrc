@@ -1,32 +1,28 @@
-$NetBSD: patch-ai,v 1.2 2003/02/27 01:03:29 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.3 2003/03/11 13:22:30 markd Exp $
 
---- configure.orig	Sat Dec 21 01:44:21 2002
+--- configure.orig	Fri Jan 17 08:54:05 2003
 +++ configure
-@@ -21496,7 +21496,7 @@ main ()
+@@ -25661,65 +25661,6 @@ _ACEOF
  
-  char buf[20];
-   buf[0]='\0';
--  strlat(buf, "KDE function test", sizeof(buf));
-+  strlcat(buf, "KDE function test", sizeof(buf));
  
-   ;
-   return 0;
-@@ -22108,57 +22108,6 @@ echo "${ECHO_T}$ac_cv_sizeof_unsigned_in
- cat >>confdefs.h <<EOF
- #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
- EOF
--
--  echo "$as_me:22112: checking sizeof(size_t) == sizeof(unsigned int)" >&5
--echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned int)... $ECHO_C" >&6
+ 
+-  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
+-echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
--#line 22115 "configure"
+-#line $LINENO "configure"
 -#include "confdefs.h"
 -
+-#ifdef F77_DUMMY_MAIN
+-#  ifdef __cplusplus
+-     extern "C"
+-#  endif
+-   int F77_DUMMY_MAIN() { return 1; }
+-#endif
 -int
 -main ()
 -{
 -
--    #if SIZEOF_SIZE_T != SIZEOF_UNSIGNED_INT
+-    #if SIZEOF_SIZE_T != SIZEOF_UNSIGNED_LONG
 -       choke me
 -    #endif
 -
@@ -35,37 +31,40 @@ $NetBSD: patch-ai,v 1.2 2003/02/27 01:03:29 dmcmahill Exp $
 -}
 -_ACEOF
 -rm -f conftest.$ac_objext
--if { (eval echo "$as_me:22131: \"$ac_compile\"") >&5
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
 -  (eval $ac_compile) 2>&5
 -  ac_status=$?
--  echo "$as_me:22134: \$? = $ac_status" >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
 -         { ac_try='test -s conftest.$ac_objext'
--  { (eval echo "$as_me:22137: \"$ac_try\"") >&5
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
--  echo "$as_me:22140: \$? = $ac_status" >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
--  echo "$as_me:22142: result: yes" >&5
+-  echo "$as_me:$LINENO: result: yes" >&5
 -echo "${ECHO_T}yes" >&6
 -else
 -  echo "$as_me: failed program was:" >&5
 -cat conftest.$ac_ext >&5
 -
--      echo "$as_me:22148: result: no" >&5
+-      echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
--      { { echo "$as_me:22150: error:
--      Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned int)
+-      { { echo "$as_me:$LINENO: error:
+-       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&5
 -echo "$as_me: error:
--      Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned int)
+-       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&2;}
 -   { (exit 1); exit 1; }; }
 -
 -fi
 -rm -f conftest.$ac_objext conftest.$ac_ext
- 
- for ac_header in fcntl.h sys/sysctl.h sys/param.h sys/time.h sys/types.h unistd.h
- do
+-
+-
+-
+ echo "$as_me:$LINENO: checking for Qt docs" >&5
+ echo $ECHO_N "checking for Qt docs... $ECHO_C" >&6
+ kde_qtdir=
