@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/06 23:51:14 rh Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 08:13:02 jmmv Exp $
 
-SHA1 (gice-0.6.1.tgz) = 4f3a0cc70fadcfc1c28ec27f9097959ba1bf6276
-Size (gice-0.6.1.tgz) = 96781 bytes
+SHA1 (gice-0.6.2.tgz) = 8a503063259710f327ff3d1e879be85a28e173f9
+Size (gice-0.6.2.tgz) = 202420 bytes
