@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/01/12 19:52:37 reed Exp $
+
+--- src/Makefile.in.orig	Sat Feb 14 12:06:20 2004
++++ src/Makefile.in
+@@ -195,14 +195,14 @@ xvidcap_LDADD = ../Xw/libXw.a  $(am__app
+ @WITHGTK2_TRUE@gvidcap_LDFLAGS = $(AM_LDFLAGS) `pkg-config --libs gtk+-2.0`
+ @WITHGTK2_TRUE@@WITHGT_TRUE@gvidcap_LDADD = ../gt/libgt.a
+ 
+-man1_MANS = ../man/xvidcap.man ../man/gvidcap.man
++man1_MANS = ../man/gvidcap.man
+ 
+ EXTRA_DIST = mkresfile.sh
+ subdir = src
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-@WITHGTK2_TRUE@bin_PROGRAMS = xvidcap$(EXEEXT) gvidcap$(EXEEXT)
++@WITHGTK2_TRUE@bin_PROGRAMS =  gvidcap$(EXEEXT)
+ @WITHGTK2_FALSE@bin_PROGRAMS = xvidcap$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+@@ -1801,9 +1801,8 @@ uninstall-man: uninstall-man1
+ 
+ 
+ install-data-hook:
+-	mkdir -p ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
+-	./mkresfile.sh > XVidcap.ad && cp XVidcap.ad ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
+-	cp ../README ../NEWS ../TODO ../INSTALL ../AUTHORS ../ChangeLog ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
++	mkdir -p ${datadir}/doc/${PACKAGE_TARNAME}-gtk2-${PACKAGE_VERSION}
++	cp ../README ../NEWS ../TODO ../INSTALL ../AUTHORS ../ChangeLog ${datadir}/doc/${PACKAGE_TARNAME}-gtk2-${PACKAGE_VERSION}
+ 
+ uninstall-hook:
+ 	rm -rf ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
