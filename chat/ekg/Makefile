@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/18 06:42:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/18 06:44:50 zuntum Exp $
 #
 
 DISTNAME=	ekg-20020317
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dev.null.pl/ekg/
 
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://dev.null.pl/ekg/
-COMMENT=	Experimental Gadu-Gadu Client
+COMMENT=	Experimental Gadu-Gadu Client (polish instant messaging system)
 
 HAS_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
