@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/09/12 14:58:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/10/13 21:48:02 jlam Exp $
 etc/httpd/mod_ssl.conf
 etc/httpd/ssl.crl/Makefile.crl
 etc/httpd/ssl.crl/README.CRL
@@ -21,10 +21,6 @@ etc/httpd/ssl.prm/snakeoil-dsa.prm
 lib/httpd/mod_ssl.so
 sbin/mkcert.sh
 share/doc/mod_ssl/README.mkcert
-share/mod_ssl/cca.sh
-share/mod_ssl/gid-mkcert.sh
-share/mod_ssl/loadcacert.cgi
-share/mod_ssl/sign.sh
 share/httpd/htdocs/manual/mod/mod_ssl/apache_pb.gif
 share/httpd/htdocs/manual/mod/mod_ssl/feather.jpg
 share/httpd/htdocs/manual/mod/mod_ssl/index.html
@@ -74,6 +70,10 @@ share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-preface.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-ref.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-toc.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-tutor.gif
+share/mod_ssl/cca.sh
+share/mod_ssl/gid-mkcert.sh
+share/mod_ssl/loadcacert.cgi
+share/mod_ssl/sign.sh
+@dirrm share/mod_ssl
 @dirrm share/httpd/htdocs/manual/mod/mod_ssl
 @dirrm share/doc/mod_ssl
-@dirrm share/mod_ssl
