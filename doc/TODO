@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1521 2004/03/22 16:00:52 wiz Exp $
+$NetBSD: TODO,v 1.1522 2004/03/22 17:44:30 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -236,7 +236,7 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.50
 	o libcaca-0.9
-	o libcroco-0.5
+	o libcroco-0.5 [jmmv]
 	o libebml-0.6.4
 	o libesmtp-1.0.2
 	o libidn-0.4.2
