@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 1998/12/01 13:50:44 hwr Exp $
+$NetBSD: patch-ab,v 1.6 1998/12/28 22:49:21 marc Exp $
 
 --- ntop.h.orig	Mon Oct  5 12:18:41 1998
 +++ ntop.h	Mon Oct 12 22:44:29 1998
-@@ -87,8 +87,17 @@
+@@ -87,8 +87,20 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
