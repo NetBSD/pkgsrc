@@ -1,16 +1,14 @@
-$NetBSD: patch-ab,v 1.3 1998/10/11 20:27:04 kim Exp $
+$NetBSD: patch-ab,v 1.4 1998/10/13 03:46:07 kim Exp $
 
 --- ntop.h.orig	Mon Oct  5 12:18:41 1998
-+++ ntop.h	Sun Oct 11 15:56:17 1998
-@@ -87,8 +87,19 @@
++++ ntop.h	Mon Oct 12 22:44:29 1998
+@@ -87,8 +87,17 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
-+#ifdef __NetBSD__
-+#include <net/ethertypes.h>
-+#else /* __NetBSD__ */
++#ifdef HAVE_ETHERTYPE_H
  #include <ethertype.h>
-+#endif /* __NetBSD__ */
++#endif
  #include <setjmp.h>
 +
 +#ifndef ETHERTYPE_DN
