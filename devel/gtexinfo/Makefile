@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2004/01/19 15:49:24 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.47 2004/02/11 00:47:20 jlam Exp $
 
 DISTNAME=		texinfo-4.6
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,8 +12,6 @@ HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info file manipulation utilities
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-BUILDLINK_USE_BUILTIN.gettext=	no
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
