@@ -1,15 +1,7 @@
 #! /bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.2 1999/08/17 23:38:17 tron Exp $
 #
-
-if [ "$PREFIX" = "" ]
-then
-        PREFIX=/usr/pkg
-fi
-
-TEXMF=$PREFIX/share/texmf
-
 
 cat <<EOT
 ---------------------------------------------------------------------------
@@ -19,7 +11,7 @@ directory manually if you don't need it any longer:
 
 	rm -fr /var/spool/texfonts
 
-For further information have a look at $TEXMF/doc/tetex/.
+For further information have a look at $PKG_PREFIX/share/texmf/doc/tetex/.
 ---------------------------------------------------------------------------
 
 EOT
