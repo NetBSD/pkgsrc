@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.11 2003/02/09 23:20:28 dmcmahill Exp $
+# $NetBSD: HACKS,v 1.12 2003/03/01 01:37:47 dmcmahill Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -36,6 +36,8 @@ file	devel/guile-gtk//Makefile : 1.10
 	devel/guile-gtk/patches/patch-aa : 1.6
 	x11/qt2-libs/patches/patch-ae : 1.8
 	x11/qt2-libs/patches/patch-ae : 1.18
+	x11/kdelibs3/patches/patch-cd : 1.1
+	x11/kdelibs3/patches/patch-ce : 1.1
 	lang/gcc3/Makefile : 1.5
 	net/bing/Makefile : 1.12
 	net/isic/Makefile : 1.5
