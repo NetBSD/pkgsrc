@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:34:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml2.
 #
@@ -36,7 +36,8 @@ BUILDLINK_CONFIG.libxml2=		${LOCALBASE}/bin/xml2-config
 BUILDLINK_CONFIG_WRAPPER.libxml2=	${BUILDLINK_DIR}/bin/xml2-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=		XML2_CONFIG="${BUILDLINK_CONFIG_WRAPPER.libxml2}"
+XML2_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libxml2}
+CONFIGURE_ENV+=		XML2_CONFIG="${XML2_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.libxml2}
