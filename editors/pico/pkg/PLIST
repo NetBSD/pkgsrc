@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/07 19:48:47 frueauf Exp $
+bin/pico
+lib/libpico.a
+man/man1/pico.1
