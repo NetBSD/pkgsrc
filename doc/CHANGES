@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2143 2003/05/04 21:44:54 seb Exp $
+$NetBSD: CHANGES,v 1.2144 2003/05/04 22:22:13 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1850,3 +1850,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated hugs98 to 200112nb1 [jtb 2003-05-04]
 	Added elf-0.5.3 [salo 2003-05-04]
 	Updated elib to 1.0nb1 [seb 2003-05-04]
+	Updated driftnet to 0.1.6nb2 [salo 2003-05-04]
