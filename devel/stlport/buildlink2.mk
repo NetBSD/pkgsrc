@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/30 23:40:08 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/30 23:41:31 jlam Exp $
 
 .if !defined(STLPORT_BUILDLINK2_MK)
 STLPORT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		stlport
-BUILDLINK_DEPENDS.stlport?=	stlport>=4.0
+BUILDLINK_DEPENDS.stlport?=	stlport>=4.0nb1
 BUILDLINK_PKGSRCDIR.stlport?=	../../devel/stlport
 BUILDLINK_DEPMETHOD.stlport?=	build
 
