@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.25 2003/10/05 14:16:41 grant Exp $
+
 --- Configure.orig	Sun Mar 18 22:03:33 2001
 +++ Configure	Fri Oct  3 20:55:27 2003
 @@ -891,6 +891,8 @@
