@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/11/26 23:37:33 jtb Exp $
+# $NetBSD: Makefile,v 1.30 2000/11/28 00:31:14 jtb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -24,6 +24,7 @@
     SUBDIR += randlib
     SUBDIR += sc
     SUBDIR += scilab
+    SUBDIR += slatec
     SUBDIR += vista
     SUBDIR += xldlas
     SUBDIR += xlispstat
