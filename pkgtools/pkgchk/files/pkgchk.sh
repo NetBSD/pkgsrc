@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.42 2003/06/19 13:37:01 tron Exp $
+# $Id: pkgchk.sh,v 1.43 2003/09/10 19:12:55 jmmv Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -350,7 +350,7 @@ if [ -n "$opt_c" ];then
 
     # Determine list of tags
     #
-    TAGS="`hostname | sed -e 's,\..*,,'`,`uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
+    TAGS="`hostname | sed -e 's,\..*,,'`,`hostname`,`uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
