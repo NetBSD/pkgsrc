@@ -1,9 +1,8 @@
-$NetBSD: patch-a,v 1.3 1998/08/07 11:14:14 agc Exp $
+$NetBSD: patch-a,v 1.4 1999/12/08 14:11:34 rh Exp $
 
-*** src/Makefile	Wed Aug 23 14:12:48 1995
---- src/Makefile	Mon Feb 12 18:51:08 1996
-@@ -1,14 +1,14 @@
- # $Revision: 1.3 $
+--- src/Makefile.orig	Wed Aug 23 14:12:48 1995
++++ src/Makefile	Wed Dec  8 15:10:43 1999
+@@ -2,12 +2,12 @@
  
  ###  You need a C compiler that compiles ANSI C code.
 -CC      = gcc
@@ -20,22 +19,17 @@ $NetBSD: patch-a,v 1.3 1998/08/07 11:14:14 agc Exp $
 +ELKDIR  = ${PREFIX}/lib/elk
  
  ###  Additional libraries.  You may want to insert the output of the
- ###  shell-script $(ELKDIR)/lib/ldflags here.
-@@ -18,7 +18,7 @@
- MAKEDEP = makedepend
+@@ -19,5 +19,5 @@
  
  ###  The directory under which you will install the Scheme files.
 -DIR = /usr/local/lib/unroff
 +DIR = ${PREFIX}/share/unroff
  
  ###  The default output format.
- FORMAT = html
-@@ -30,7 +30,7 @@
- ###  ------------------------------------------------------------------------- 
+@@ -31,5 +31,5 @@
  
  SHELL   = /bin/sh
 -INCLUDE = -I$(ELKDIR)/include
 +INCLUDE = -I${PREFIX}/include/elk
  ELK     = $(ELKDIR)/lib/module.o
  DEFS    = -DDEFAULT_DIR=\"$(DIR)\" -DDEFAULT_FORMAT=\"$(FORMAT)\"
- CTAGS   = ctags -t -w
