@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 12:44:49 jmmv Exp $
-lib/gtk-2.0/2.2.0/engines/libsvg.a
-lib/gtk-2.0/2.2.0/engines/libsvg.la
-lib/gtk-2.0/2.2.0/engines/libsvg.so
-lib/gtk-2.0/2.2.0/loaders/svg_loader.a
-lib/gtk-2.0/2.2.0/loaders/svg_loader.la
-lib/gtk-2.0/2.2.0/loaders/svg_loader.so
-@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0/loaders
-@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0/engines
+@comment $NetBSD: PLIST,v 1.2 2004/04/01 18:37:09 jmmv Exp $
+lib/gtk-2.0/2.4.0/engines/libsvg.a
+lib/gtk-2.0/2.4.0/engines/libsvg.la
+lib/gtk-2.0/2.4.0/engines/libsvg.so
+lib/gtk-2.0/2.4.0/loaders/svg_loader.a
+lib/gtk-2.0/2.4.0/loaders/svg_loader.la
+lib/gtk-2.0/2.4.0/loaders/svg_loader.so
+@comment in gtk2: libdata/gtk-2.0/gdk-pixbuf.loaders
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/loaders
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0
