@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7578 2004/10/27 16:21:04 wiz Exp $
+$NetBSD: CHANGES,v 1.7579 2004/10/27 17:59:58 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4900,3 +4900,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jabberd2 to 2.0s4 [xtraeme 2004-10-27]
 	Updated mtr to 0.65 [wiz 2004-10-27]
 	Updated mtr-gtk to 0.65 [wiz 2004-10-27]
+	Updated p5-xmltv to 0.5.36 [adrianp 2004-10-27]
