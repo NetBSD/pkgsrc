@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.2 2004/02/24 22:00:46 jmmv Exp $
+dnl $NetBSD: configure.ac,v 1.3 2004/02/29 17:49:09 jmmv Exp $
 
 dnl -----------------------------------------------------------------------
 
@@ -107,7 +107,6 @@ AC_FUNC_ALLOCA
 AC_FUNC_CHOWN
 AC_FUNC_CLOSEDIR_VOID
 AC_FUNC_ERROR_AT_LINE
-AC_FUNC_FNMATCH
 AC_FUNC_FORK
 AC_FUNC_FSEEKO
 AC_FUNC_GETGROUPS
