@@ -1,32 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/27 20:39:59 jlam Exp $
 
-DISTNAME=	wmx-5
-PKGNAME=	wmx-5.0
-CATEGORIES=	x11 wm
-MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
-
-MAINTAINER=	kuebart@mathematik.uni-ulm.de
-HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
+PKGNAME=	wmx-${WMX_VERS}
 COMMENT=	another X11 window manager based on wm2
 
-USE_X11BASE=	YES
-USE_XPM=	YES
-EVAL_PREFIX=	XPMDIR=xpm
+USE_BUILDLINK_ONLY=	# defined
 
-MAKE_ENV+=	XPMDIR=${XPMDIR}
-
-do-configure:
-	cd ${WRKSRC}; \
-	  ${MV} Config.h Config.h.dist; \
-	  ${SED} '/SYSTEM_COMMAND_MENU/s|/usr/local/lib/wmx/menu|${PREFIX}/etc/wmx|' \
-	    < Config.h.dist > Config.h; \
-	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} depend
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmx
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmx
-	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/wmx
-
+.include "../../wm/wmx/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
