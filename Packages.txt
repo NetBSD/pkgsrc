@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.312 2003/10/03 15:32:55 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.313 2003/10/04 19:34:46 agc Exp $
 ###########################################################################
 
 			==========================
@@ -692,14 +692,48 @@ if you want to add to it (rather than replace it), as you usually would.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-       archivers  audio      benchmarks   biology       cad    
-       chat       comms      converters   cross         databases
-       devel      editors    emulators    finance       fonts
-       games      graphics   ham          japanese      lang
-       mail       math       mbone        misc          net
-       news       parallel   print        security      shells
-       sysutils   textproc   time         wm            www
-       x11
+	archivers
+	audio
+	benchmarks
+	biology
+	cad
+	chat
+	comms
+	converters
+	cross
+	databases
+	devel
+	editors
+	emulators
+	finance
+	fonts
+	games
+	geography
+	graphics
+	ham
+	inputmethod
+	lang
+	mail
+	math
+	mbone
+	meta-pkgs
+	misc
+	net
+	news
+	packages
+	parallel
+	pkglocate
+	pkgtools
+	print
+	security
+	shells
+	sysutils
+	templates
+	textproc
+	time
+	wm
+	www
+	x11
 
 See the NetBSD packages(7) manual page for a description of all available
 options and variables.
