@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/04 16:27:27 seb Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/06 12:06:32 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -86,7 +86,7 @@ ALL_TARGET=		bootstrap
 # as this is named gcc3, use DISTNAME instead.
 GCC_PREFIX=	${PREFIX}/${DISTNAME}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
+GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/3.3
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
