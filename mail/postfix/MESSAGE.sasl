@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE.sasl,v 1.6 2004/07/19 05:28:07 jlam Exp $
+$NetBSD: MESSAGE.sasl,v 1.7 2005/03/08 18:35:04 bad Exp $
 
-To enable SASL authentication, you may want to edit
+To enable SASL authentication in the SMTP server, you may want to edit
 
 	${SASLLIBDIR}/smtpd.conf
 
@@ -9,6 +9,14 @@ and change the method used to check plaintext passwords.  To use
 security/cyrus-saslauthd, you should change the contents of smtpd.conf to:
 
 	pwcheck_method: saslauthd
+
+You may also want to edit main.cf and set the smtpd_sasl_* variables to
+appropriate values.
+
+To enable SASL authentication in the ${PKGNAME} SMTP client, you may want to
+edit main.cf and set the smtp_sasl_* variables to appropriate values.
+
+The corresponding SASL authentication plugins need to be installed also.
 
 Please consult:
 
