@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2000/08/01 19:13:07 jun Exp $
+*** config.guess.orig	Sat May 27 02:30:02 2000
+--- config.guess	Wed Aug  2 03:14:25 2000
+***************
+*** 78,89 ****
+--- 78,93 ----
+  	# Determine the machine/vendor (is the vendor relevant).
+  	case "${UNAME_MACHINE}" in
+  	    amiga) machine=m68k-cbm ;;
++ 	    arc) machine=mipsel-unknown ;;
+  	    arm32) machine=arm-unknown ;;
+  	    atari*) machine=m68k-atari ;;
++ 	    cobalt) machine=mipsel-unknown ;;
+  	    sun3*) machine=m68k-sun ;;
+  	    mac68k) machine=m68k-apple ;;
+  	    macppc) machine=powerpc-apple ;;
+  	    hp3[0-9][05]) machine=m68k-hp ;;
++ 	    hpcmips) machine=mipsel-unknown ;;
++ 	    pmax) machine=mipsel-unknown ;;
+  	    ibmrt|romp-ibm) machine=romp-ibm ;;
+  	    *) machine=${UNAME_MACHINE}-unknown ;;
+  	esac
