@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7207 2004/09/22 09:48:34 adrianp Exp $
+$NetBSD: CHANGES,v 1.7208 2004/09/22 11:18:07 scw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xorg to 6.8.1 [xtraeme 2004-09-21]
 	Added corkscrew-2.0 [martti 2004-09-22]
 	Updated p0f to 2.0.5 [adrianp 2004-09-22]
+	Updated mad123 to 0.8.3 [scw 2004-09-22]
