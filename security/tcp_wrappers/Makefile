@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/10 09:06:55 grant Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -23,7 +23,9 @@ USE_LIBTOOL=	yes
 ALL_TARGET=	netbsd
 .elif ${OPSYS} == "SunOS"
 ALL_TARGET=	sunos5
-.elif ${OPSYS} == "IRIX" || ${OPSYS} == "Linux"
+.elif ${OPSYS} == "IRIX"
+ALL_TARGET=	${LOWER_OPSYS:C|\..*||}
+.elif ${OPSYS} == "Linux"
 ALL_TARGET=	${LOWER_OPSYS}
 .else
 ALL_TARGET=	generic		# good luck!
