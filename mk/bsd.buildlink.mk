@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.24 2001/07/20 02:00:48 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.25 2001/07/23 11:07:22 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -124,9 +124,13 @@ _BUILDLINK_USE: .USE
 				fi;					\
 				${RM} -f $${dest};			\
 				${LN} -sf $${file} $${dest};		\
+				if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
+					${ECHO} $${file} >> $${cookie};	\
+				else					\
+					${ECHO} "$${file} -> $${dest}" >> $${cookie}; \
+				fi;					\
 			fi;						\
 		done;							\
-		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
 # If a package uses only buildlink.mk files, then automatically set
@@ -155,7 +159,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_POST_SED} \'; \
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
-		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
+		${ECHO} ${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} >> $${cookie}; \
 	fi
 
 # Note: This hack uses some libtool internals to correctly fix the references
@@ -192,9 +196,9 @@ replace-buildlink:
 					${CHMOD} +x $${file};		\
 				fi;					\
 				${RM} -f $${file}.fixme;		\
+				${ECHO} $${file} >> $${cookie};		\
 			done;						\
 		fi;							\
-		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 .endif
 
