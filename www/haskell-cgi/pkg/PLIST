@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/06 22:05:56 jtb Exp $
+share/examples/hugs-cgi/Counter.cgi
+share/examples/hugs-cgi/DownloadPapers.cgi
+share/examples/hugs-cgi/EnvPassed.cgi
+share/examples/hugs-cgi/Greetings.cgi
+share/examples/hugs-cgi/HelloHTML.cgi
+share/examples/hugs-cgi/HelloPlain.cgi
+share/examples/hugs-cgi/README
+share/examples/hugs-cgi/TODO
+share/hugs/lib/CGI.lhs
+@unexec rmdir %D/share/hugs/lib 2>/dev/null || true
+@dirrm share/examples/hugs-cgi
