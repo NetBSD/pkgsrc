@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/12/24 18:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:01 jmmv Exp $
 #
 
 DISTNAME=		bicom101
 PKGNAME=		bicom-1.01
+WRKSRC=			${WRKDIR}
 CATEGORIES=		archivers
 MASTER_SITES=		http://www3.sympatico.ca/mt0000/bicom/
 EXTRACT_SUFX=		.zip
@@ -13,7 +14,6 @@ COMMENT=		data compressor in the PPM family
 
 LICENSE=		no-commercial-use
 USE_BUILDLINK2=		# defined
-WRKSRC=			${WRKDIR}
 
 do-build:
 	for i in bialib bicom; do					\

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.31 2003/03/16 08:02:38 martti Exp $
+# $NetBSD: Makefile.common,v 1.32 2003/03/29 12:40:47 jmmv Exp $
 
 VIM_VERSION=		6.1
 VIM_PATCHLEVEL=		405
 DISTNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
+WRKSRC=			${WRKDIR}/vim61/src
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
@@ -24,7 +25,6 @@ CONFLICTS+=		vim-kde-[0-9]*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/vim61/src
 
 # See "configure --help" extra options. These might affect the installed
 # files (and PLIST might not include all files) so use at your own risk!

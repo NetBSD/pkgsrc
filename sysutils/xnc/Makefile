@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2003/03/22 05:26:53 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:34 jmmv Exp $
 
 DISTNAME=	xnc-4.4.7.src
 PKGNAME=	xnc-4.4.7
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.xnc.dubna.su/src/
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://xnc.dubna.su/
 COMMENT=	File manager for X Window
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_BUILDLINK2=	yes
 USE_X11=	yes

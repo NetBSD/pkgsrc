@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2002/08/28 11:32:52 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:00 jmmv Exp $
 
 DISTNAME=	ns-src-2.1b9a
 PKGNAME=	${DISTNAME:S/b/rc/:S/-src//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.isi.edu/nsnam/ns/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 .include "../../mk/bsd.prefs.mk"
 

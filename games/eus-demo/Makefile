@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/26 04:05:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:02 jmmv Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
+WRKSRC=		${WRKDIR}/${WRKNAME}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/eus/ \
 		ftp://download.linuxlords.com/pub/demos/eus/ \
@@ -35,7 +36,6 @@ BINNAME=	eus-demo
 DIST_SUBDIR=	lokigames
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
-WRKSRC=		${WRKDIR}/${WRKNAME}
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

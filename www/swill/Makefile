@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/18 06:37:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:55 jmmv Exp $
 
 DISTNAME=		swill-0.1
+WRKSRC=			${WRKDIR}/SWILL-0.1
 CATEGORIES=		www devel
 MASTER_SITES=		http://systems.cs.uchicago.edu/swill/
 
@@ -9,7 +10,5 @@ HOMEPAGE=		http://systems.cs.uchicago.edu/swill/
 COMMENT=		The Simple Web Interface Link Library
 
 GNU_CONFIGURE=		yes
-
-WRKSRC=			${WRKDIR}/SWILL-0.1
 
 .include "../../mk/bsd.pkg.mk"

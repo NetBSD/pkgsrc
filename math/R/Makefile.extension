@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.3 2002/12/10 11:58:10 markd Exp $
+# $NetBSD: Makefile.extension,v 1.4 2003/03/29 12:41:38 jmmv Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -10,6 +10,7 @@
 
 DISTNAME?=		${R_PKGNAME}_${R_PKGVER}
 PKGNAME?=		R-${R_PKGNAME}-${R_PKGVER:S/-/./}
+WRKSRC=         	${WRKDIR}/${R_PKGNAME}
 MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/}
 DIST_SUBDIR?=		R
 CATEGORIES+=		math
@@ -17,7 +18,6 @@ CATEGORIES+=		math
 R_DEPENDS?=		R>=1.4.1nb2
 DEPENDS+=               ${R_DEPENDS}:../../math/R
 
-WRKSRC=         	${WRKDIR}/${R_PKGNAME}
 NO_BUILD=		YES
 
 do-install:

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/01/09 13:11:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:40:25 jmmv Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/ \
 		ftp://ftp.cdrom.com/pub/perl/CPAN/src/misc/ \
@@ -10,8 +11,6 @@ MASTER_SITES=	http://www.sleepycat.com/update/snapshot/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 2
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 
 NO_PKGTOOLS_REQD_CHECK=	# defined (needed for pkgtools/pkg_install)
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/02/04 02:54:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:51 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
 DISTNAME=		spim
 PKGNAME=		spim-6.5
+WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.cs.wisc.edu/~larus/SPIM/ \
 			ftp://ftp.cs.wisc.edu/pub/spim/
@@ -12,7 +13,6 @@ MAINTAINER=		deberg@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
 COMMENT=		MIPS R2000 Simulator
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
 DIST_SUBDIR=		${PKGNAME}
 
 HAS_CONFIGURE=		yes

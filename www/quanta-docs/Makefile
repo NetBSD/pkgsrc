@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/09/20 12:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:54 jmmv Exp $
 
 DISTNAME=	quanta-docs-1.0
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quanta/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +23,6 @@ BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
 
 DIST_SUBDIR=	${PKGBASE}
-WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 
 DOCDIR=		${PREFIX}/share/kde/apps/quanta/doc

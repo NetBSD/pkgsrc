@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/10/09 13:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:51 jmmv Exp $
 #
 
 DISTNAME=	${PKGNAME:S|-|_|}
 PKGNAME=	pdmenu-1.2.65
+WRKSRC=		${WRKDIR}/pdmenu
 CATEGORIES=	misc
 MASTER_SITES=	http://kitenet.net/programs/code/pdmenu/
 
@@ -13,7 +14,6 @@ COMMENT=	Simple console menu program
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_PERL5=	YES
-WRKSRC=		${WRKDIR}/pdmenu
 
 REPLACE_PERL=	examples/showdir.pl
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2001/11/29 01:12:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:03 jmmv Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 CATEGORIES=	net
 MASTER_SITES=	http://docs.real.com/docs/proxykit/
 
@@ -18,8 +19,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DOWNLOAD=	http://proforma.real.com/rn/misc/rtspproxy/index.html
-
-WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/09/21 06:31:42 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/29 12:40:14 jmmv Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
+WRKSRC=			${WRKDIR}/FElt-3.05
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/felt/
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
@@ -11,7 +12,6 @@ HOMEPAGE=		http://felt.sourceforge.net/
 COMMENT=		Free system for introductory level finite element analysis
 
 EXTRACT_ONLY=		felt-3.05.src.tar.gz
-WRKSRC=			${WRKDIR}/FElt-3.05
 
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined

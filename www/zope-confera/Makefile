@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:56 jmmv Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
 PKGNAME=	zope-confera-1.2.0
+WRKSRC=		${WRKDIR}/lib
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Download/Prereleases/Confera/
 EXTRACT_SUFX=	.tgz
@@ -14,8 +15,6 @@ COMMENT=	Confera: Threaded discussion groups for Zope
 DEPENDS+=	zope>=2.1.4:../../www/zope
 
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}/lib
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
