@@ -1,17 +1,19 @@
-$NetBSD: patch-ag,v 1.6 1999/11/12 22:07:11 tron Exp $
+$NetBSD: patch-ag,v 1.7 2000/10/15 20:17:46 veego Exp $
 
---- configure.orig	Thu Sep 23 02:06:48 1999
-+++ configure	Fri Nov 12 22:15:48 1999
-@@ -644,11 +644,11 @@
+--- configure.orig	Tue Sep 12 13:20:11 2000
++++ configure	Tue Sep 12 13:17:48 2000
+@@ -676,12 +676,12 @@
  REGEXLIB=''	# -lregex
  LIBREGEX=''	# libregex.a
  
--if test "$libexecdir" = '${exec_prefix}/libexec'; then
+-if test "$libexecdir" = '${exec_prefix}/libexec' &&
+-   test "$localstatedir" = '${prefix}/var'; then
 -	libexecdir='${bindir}'
 -	localstatedir='${prefix}'
 -
 -fi
-+#if test "$libexecdir" = '${exec_prefix}/libexec'; then
++#if test "$libexecdir" = '${exec_prefix}/libexec' &&
++#   test "$localstatedir" = '${prefix}/var'; then
 +#	libexecdir='${bindir}'
 +#	localstatedir='${prefix}'
 +#
@@ -19,7 +21,7 @@ $NetBSD: patch-ag,v 1.6 1999/11/12 22:07:11 tron Exp $
  
  case "$host_os" in
  cygwin32|os2)
-@@ -1204,7 +1204,7 @@
+@@ -1287,7 +1287,7 @@
  #define SQUID_SNMP 1
  EOF
  
