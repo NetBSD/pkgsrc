@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.984 2002/05/29 14:52:14 yyamano Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.985 2002/05/29 21:30:30 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -2354,7 +2354,7 @@ check-shlibs:
 
 
 .if !target(show-shlib-type)
-# Show the shared lib type being built: one of ELF, a.out or none
+# Show the shared lib type being built: one of ELF, a.out, dylib, or none
 show-shlib-type:
 .  if exists(/usr/lib/libc.dylib)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2377,7 +2377,7 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
-.  endif # libc.sylib
+.  endif # libc.dylib
 .endif
 
 acquire-extract-lock:
