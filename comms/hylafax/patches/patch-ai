@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.3 2000/08/30 09:50:45 abs Exp $
+$NetBSD: patch-ai,v 1.4 2000/09/05 14:01:43 rh Exp $
 
---- etc/faxsetup.sh.in.orig	Thu Aug  5 12:11:42 1999
+--- etc/faxsetup.sh.in.orig	Thu Aug  5 13:11:42 1999
 +++ etc/faxsetup.sh.in
 @@ -41,7 +41,9 @@
  # This script interactively prepares and verifies 
@@ -62,7 +62,7 @@ $NetBSD: patch-ai,v 1.3 2000/08/30 09:50:45 abs Exp $
 +	for i in archive docq doneq pollq sendq tmp ; do
 +	    ${MKDIR} -m 0700 ${DIR_SPOOL}/$i
 +	done
-+	for i in bin client cover dev info log recvq status ; do
++	for i in bin client config cover dev etc info log recvq status ; do
 +	    ${MKDIR} -m 0755 ${DIR_SPOOL}/$i
 +	done
 +	for i in `ls ${PREFIX}/share/hylafax/etc_template` ; do
