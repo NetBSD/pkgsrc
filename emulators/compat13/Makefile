@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/05 18:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/13 23:36:40 jlam Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}
@@ -14,18 +14,38 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc
 NOT_FOR_PLATFORM=	NetBSD-1.3*-*
 
-NO_BUILD=
+NO_MTREE=		# defined
+SHLIB_HANDLING=		NO
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
-# This installs in /usr to avoid dynamic linker annoyances
+# This installs in /usr (or /emul/aout/usr) to avoid dynamic linker annoyances
+.if ${MACHINE_ARCH} == "i386" && ${OBJECT_FMT} == "ELF"
+EMULSUBDIR=		emul/aout
+COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
+.else
 LOCALBASE=		/usr
-NO_MTREE=
+COMPAT_LIBDIR=		lib
+.endif
+
+PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR}
+
+do-build:
+	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
+		-e "s,@COMPAT_LIBDIR@,${COMPAT_LIBDIR},g" \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
+		-e "s,@OBJECT_FMT@,${OBJECT_FMT},g" \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/lib/
-.if (${MACHINE_ARCH} == "mipsel")
-	${LN} -sf ld.elf_so /usr/libexec/ld.so
-.endif
+	${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/${COMPAT_LIBDIR}
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
