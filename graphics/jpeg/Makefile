@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/02/18 05:32:16 salo Exp $
+# $NetBSD: Makefile,v 1.21 2003/02/22 12:05:54 skrll Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -13,6 +13,8 @@ COMMENT=		IJG's jpeg compression utilities
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
