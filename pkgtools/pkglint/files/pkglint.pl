@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.17 1999/12/07 21:33:57 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.18 1999/12/28 00:50:18 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -969,21 +969,27 @@ EOF
 	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP)/) {
 		&checkearlier($tmp, @varnames);
 
-		if ($tmp =~ /^PATCH_SITES=/) {
+                $tmp = "\n$tmp";
+
+		if ($tmp =~ /\n(PATCH_SITES)=/) {
 			print "OK: seen PATCH_SITES.\n" if ($verbose);
-			$tmp =~ s/^[^\n]+\n//;
+			$tmp =~ s/$1[^\n]+\n//;
 		}
-		if ($tmp =~ /^PATCH_SITE_SUBDIR=/) {
+		if ($tmp =~ /\n(PATCH_SITE_SUBDIR)=/) {
 			print "OK: seen PATCH_SITES.\n" if ($verbose);
-			$tmp =~ s/^[^\n]+\n//;
+			$tmp =~ s/$1[^\n]+\n//;
 		}
-		if ($tmp =~ /^PATCHFILES=/) {
+		if ($tmp =~ /\n(PATCHFILES)=/) {
 			print "OK: seen PATCHFILES.\n" if ($verbose);
-			$tmp =~ s/^[^\n]+\n//;
+			$tmp =~ s/$1[^\n]+\n//;
 		}
-		if ($tmp =~ /^PATCH_DIST_STRIP=/) {
+		if ($tmp =~ /\n(PATCH_DIST_ARGS)=/) {
+			print "OK: seen PATCH_DIST_ARGS.\n" if ($verbose);
+			$tmp =~ s/$1[^\n]+\n//;
+		}
+		if ($tmp =~ /\n(PATCH_DIST_STRIP)=/) {
 			print "OK: seen PATCH_DIST_STRIP.\n" if ($verbose);
-			$tmp =~ s/^[^\n]+\n//;
+			$tmp =~ s/$1[^\n]+\n//;
 		}
 
 		&checkextra($tmp, 'PATCH_SITES');
