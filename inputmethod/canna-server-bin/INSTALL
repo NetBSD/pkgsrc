@@ -1,7 +1,11 @@
-#!/bin/sh
-if [ "$2" != "POST-INSTALL" ]; then exit 0; fi
-(grep -v ^# /etc/services | grep 'canna.*5680' >/dev/null) ||	\
-	(echo "" >> /etc/services;			\
-	 echo "# canna package" >> /etc/services;	\
-	 echo "canna		5680/tcp" >> /etc/services;	\
-	 )
+# $NetBSD: INSTALL,v 1.2 2003/08/30 20:22:54 jlam Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	(${GREP} -v ^# /etc/services | ${GREP} 'canna.*5680' >/dev/null) || \
+	(${ECHO} "" >> /etc/services;					\
+	 ${ECHO} "# canna package" >> /etc/services;			\
+	 ${ECHO} "canna		5680/tcp" >> /etc/services;		\
+	)
+	;;
+esac

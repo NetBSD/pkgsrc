@@ -1,10 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2002/11/06 00:14:26 wiz Exp $
+# $NetBSD: INSTALL,v 1.3 2003/08/30 20:22:51 jlam Exp $
 
 case $2 in
-PRE-INSTALL)
-	;;
 POST-INSTALL)
 	/bin/cat << EOF
 ===========================================================================
@@ -29,9 +27,4 @@ Then, reboot your system.
 ===========================================================================
 EOF
 	;;
-*)
-	echo "Unexpected argument: $2"
-	exit 1
-	;;
 esac
-exit 0

@@ -1,11 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2002/10/06 04:08:11 taca Exp $
-
-CAT="@CAT@"
-CHMOD="@CHMOD@"
-CP="@CP@"
-MKDIR="@MKDIR@"
+# $NetBSD: INSTALL,v 1.4 2003/08/30 20:23:00 jlam Exp $
 
 CONFDIR="@PKG_SYSCONFDIR@"
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/vtun
@@ -14,9 +9,6 @@ LOCKDIR=/var/lock/vtund
 LOGDIR=/var/log/vtund
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	${MKDIR} ${LOCKDIR}
 	${MKDIR} ${LOGDIR}
@@ -50,10 +42,4 @@ EOF
 ===========================================================================
 EOF
 	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
-	;;
 esac
-exit 0

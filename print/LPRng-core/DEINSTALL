@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 23:27:25 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:23:01 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -57,11 +57,6 @@ EOF
 	${CAT} << EOF
 ===========================================================================
 EOF
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/29 22:08:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/30 20:22:55 jlam Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -23,7 +23,6 @@ BUILD_DEFS+=	USE_INET6
 DIST_SUBDIR=	skk
 
 GNU_CONFIGURE=	YES
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 

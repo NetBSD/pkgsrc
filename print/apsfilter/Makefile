@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:52:23 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/30 20:23:01 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -33,17 +33,12 @@ CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
-FILES_SUBST+=	PREFIX="${PREFIX}"
-
 post-patch:
 	for i in bin/apsfilter.in SETUP.in tools/prtmgmt; do		\
 		${SED} "s,/usr/local,${LOCALBASE},g" ${WRKSRC}/$$i	\
 			> ${WRKSRC}/$$i.done;				\
 		${MV} ${WRKSRC}/$$i.done ${WRKSRC}/$$i;			\
 	done
-
-#	${SED} "s,@LOCALBASE@,${LOCALBASE},g" ${PKGDIR}/DEINSTALL	\
-#		> ${DEINSTALL_FILE}
 
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

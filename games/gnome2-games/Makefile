@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:38:32 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/30 20:22:53 jlam Exp $
 
 DISTNAME=		gnome-games-2.2.1
 PKGREVISION=		4
@@ -43,7 +43,6 @@ CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 .undef conffile
 
 FILES_SUBST+=		INSTALL="${INSTALL}"
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 post-patch:
 	cd ${WRKSRC} &&							\

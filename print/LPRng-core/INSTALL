@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/10/31 23:27:25 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2003/08/30 20:23:01 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,9 +15,6 @@ CONFFILES="lpd.conf lpd.perms"
 NONCONFFILES="printcap"
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	echo "Installing configuration files:"
 	for file in ${CONFFILES} ${NONCONFFILES}
@@ -47,11 +44,6 @@ EOF
 	${CAT} << EOF
 ===========================================================================
 EOF
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

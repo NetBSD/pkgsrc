@@ -1,13 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2002/05/25 12:25:50 markd Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:22:59 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 case ${STAGE} in
-DEINSTALL)
-	;;
 POST-DEINSTALL)
 	ETCDIR=/etc/netatalk
 
@@ -19,10 +17,6 @@ remove the netatalk configuration file directory:
 	${ETCDIR}
 ===========================================================================
 EOF
-	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:46:31 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/30 20:22:57 jlam Exp $
 
 DISTNAME=		mimedefang-2.35
 CATEGORIES=		mail
@@ -32,8 +32,6 @@ PKG_USERS=		${DEFANG_USER}:${DEFANG_GROUP}
 
 EGDIR=			${PREFIX}/share/examples/mimedefang
 SHAREDIR=		${PREFIX}/share/mimedefang
-
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR}
 FILES_SUBST+=		DEFANG_USER=${DEFANG_USER}

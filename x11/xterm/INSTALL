@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2001/12/17 14:47:02 tron Exp $
+# $NetBSD: INSTALL,v 1.3 2003/08/30 20:23:08 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -9,7 +9,7 @@ CONFLICTS="bin/resize bin/xterm lib/app-defaults/XTerm share/man/man1/resize.1 s
 
 case ${STAGE} in
 PRE-INSTALL)
-	cd @PREFIX@
+	cd ${PKG_PREFIX}
 	for FILE in $CONFLICTS
 	do
 		if [ -f $FILE ]
@@ -20,7 +20,7 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
-	cd @PREFIX@/lib/X11/etc
+	cd ${PKG_PREFIX}/lib/X11/etc
 	TERMINFO=@LOCALBASE@/share/lib/terminfo
 	export TERMINFO
 	/usr/5bin/tic xterm.terminfo
@@ -30,7 +30,7 @@ DEINSTALL)
 	;;
 	
 POST-DEINSTALL)
-	cd @PREFIX@
+	cd ${PKG_PREFIX}
 	for FILE in $CONFLICTS
 	do
 		if [ -f ${FILE}.openwin ]
@@ -38,11 +38,6 @@ POST-DEINSTALL)
 			@MV@ ${FILE}.openwin $FILE
 		fi
 	done
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

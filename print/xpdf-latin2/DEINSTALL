@@ -1,24 +1,10 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.2 2003/03/25 14:07:00 salo Exp $
+# $NetBSD: DEINSTALL,v 1.3 2003/08/30 20:23:05 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
-
-XPDFRC=@PKG_SYSCONFDIR@/xpdfrc
+XPDFRC=${PKG_SYSCONFDIR}/xpdfrc
 
 case ${STAGE} in
-DEINSTALL)
-	;;
-
 POST-DEINSTALL)
-	@SED@ -e "/atin2/d" ${XPDFRC} > ${XPDFRC}.tmp
-	@MV@ -f ${XPDFRC}.tmp ${XPDFRC}
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
+	${SED} -e "/atin2/d" ${XPDFRC} > ${XPDFRC}.tmp
+	${MV} -f ${XPDFRC}.tmp ${XPDFRC}
 	;;
 esac
-exit 0
