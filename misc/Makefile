@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2001/05/03 17:33:07 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2001/05/19 18:09:53 jtb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -80,6 +80,7 @@ SUBDIR+=	splitvt
 SUBDIR+=	staroffice
 SUBDIR+=	tds
 SUBDIR+=	team
+SUBDIR+=	ttyrec
 SUBDIR+=	vera
 SUBDIR+=	vfu
 SUBDIR+=	vttest
