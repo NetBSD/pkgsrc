@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/06/24 23:09:55 taya Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/06 13:40:57 taya Exp $
 
 MOZILLA=	thunderbird
 MOZILLA_BIN=	thunderbird-bin
-MOZ_VER=	0.7
+MOZ_VER=	0.7.1
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=	thunderbird-${MOZ_VER}-source
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/ \
