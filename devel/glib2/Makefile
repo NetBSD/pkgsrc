@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/09 23:03:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/25 22:18:30 salo Exp $
 
 DISTNAME=		glib-2.2.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -17,6 +17,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_PERL5=		yes
+USE_GNU_ICONV=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -30,6 +31,7 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-libiconv=gnu
 
 test: build
 	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
