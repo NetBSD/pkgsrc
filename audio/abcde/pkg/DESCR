@@ -1,0 +1,3 @@
+abcde is a frontend command-line utility (actually, a shell script) that
+grabs tracks off a CD, encodes them to ogg or mp3 format, and tags them,
+all in one go.
