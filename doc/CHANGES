@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9722 2005/04/02 17:13:02 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9723 2005/04/02 19:46:14 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1864,4 +1864,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated scanssh to 2.1 [adrianp 2005-04-02]
 	Updated p5-Time to 2003.1126 [adrianp 2005-04-02]
 	Updated snortsnarf to 050314.1 [adrianp 2005-04-02]
-	Added suse91_vmware-9.1 [jdolecek 2005-04-02]
+	Added suse_vmware-9.1 [jdolecek 2005-04-02]
+	Added suse_slang-9.1 [jdolecek 2005-04-02]
