@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/08/17 19:37:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/09/07 10:46:06 wiz Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -14,7 +14,7 @@ lib/libesd.a
 lib/libesd.la
 lib/libesd.so
 lib/libesd.so.2
-lib/libesd.so.2.31
+lib/libesd.so.2.32
 lib/pkgconfig/esound.pc
 man/man1/esd-config.1
 man/man1/esd.1
@@ -29,7 +29,6 @@ man/man1/esdrec.1
 man/man1/esdsample.1
 share/aclocal/esd.m4
 share/doc/html/esound/a346.html
-share/doc/html/esound/book1.html
 share/doc/html/esound/c19.html
 share/doc/html/esound/c250.html
 share/doc/html/esound/c271.html
@@ -37,7 +36,7 @@ share/doc/html/esound/c285.html
 share/doc/html/esound/c290.html
 share/doc/html/esound/c32.html
 share/doc/html/esound/c76.html
-share/doc/html/esound/ln17.html
+share/doc/html/esound/index.html
 share/doc/html/esound/r311.html
 share/doc/html/esound/r313.html
 share/doc/html/esound/stylesheet-images/caution.gif

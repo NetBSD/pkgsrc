@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/04/29 08:40:28 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2003/09/07 10:46:07 wiz Exp $
 
---- Makefile.in.orig	Tue Apr 23 14:24:15 2002
+--- Makefile.in.orig	Wed Sep  3 18:26:10 2003
 +++ Makefile.in
-@@ -166,7 +166,7 @@
+@@ -176,7 +176,7 @@ esd_LDADD = $(WRAP_LIB) $(LDADD)
  m4datadir = $(datadir)/aclocal
  m4data_DATA = esd.m4
  
