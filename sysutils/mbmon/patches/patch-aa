@@ -1,41 +1,18 @@
 --- Makefile.in.orig	2004-07-18 02:15:42.000000000 +0100
 +++ Makefile.in	2004-07-18 02:19:16.000000000 +0100
-@@ -18,20 +18,19 @@
- 
- DEFS=-DHAVE_CONFIG_H -Wall @HOSTDEF@
- 
--LIBDIR=/usr/X11R6/lib
-+LIBDIR=${X11BASE}/lib
- INCDIR=.
--XINCDIR=/usr/X11R6/include
-+XINCDIR=${X11BASE}/include
- XLIB=-lXaw -lXmu
- EXTENSIONLIB=-lXext
- INCLUDES=-I$(INCDIR)
- XINCLUDES=-I$(XINCDIR)
- SPLIBS=@ADDLIBS@
--LIBS=-L$(LIBDIR) -lXaw $(XLIB) -lXt $(EXTENSIONLIB) -lX11 -lm
-+LIBS=-Wl,-R${LIBDIR} -L$(LIBDIR) -lXaw $(XLIB) -lXt $(EXTENSIONLIB) -lX11 -lm
+--- Makefile.in.orig	2004-08-13 09:04:21.000000000 +0200
++++ Makefile.in
+@@ -26,10 +26,10 @@ LIBS=@ADDLIBS@ @LIBS@
+ LIBSX=$(LIBS) @X_LIBS@ -lXt @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@
  
  #CC=/compat/linux/usr/bin/gcc
 -CC=@CC@
 -CFLAGS=-O3 $(INCLUDES) $(DEFS)
--CFLAGSX=-O3 $(XINCLUDES) $(DEFS)
-+CFLAGS+= $(INCLUDES) $(DEFS)
-+CFLAGSX+= $(XINCLUDES) $(DEFS)
- LDFLAGS=-s
++#CC=@CC@
++CFLAGS+=$(INCLUDES) $(DEFS)
+ CFLAGSX=$(CFLAGS) @X_CFLAGS@
+-LDFLAGS=-s
++LDFLAGS+=-s
  
  LINT=lint
-@@ -42,9 +41,9 @@
- 
- INST_DIR=/usr/local/bin
- INST_MANDIR=/usr/local/man/man1
--INST_XDIR=/usr/X11R6/bin
--INST_MANXDIR=/usr/X11R6/man/man1
--INST_XRDIR=/usr/X11R6/lib/X11/app-defaults
-+INST_XDIR=${X11BASE}/bin
-+INST_MANXDIR=${X11BASE}/man/man1
-+INST_XRDIR=${X11BASE}/lib/X11/app-defaults
-  
- .c.o:
- 	$(CC) -c $(CFLAGS) $*.c
+ # LINT=$(CC) -c -Wall -Wshadow -Wpointer-arith
