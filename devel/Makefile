@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2001/02/20 09:05:07 jun Exp $
+# $NetBSD: Makefile,v 1.171 2001/02/20 09:14:14 jun Exp $
 #
 
 COMMENT=	Development utilities
@@ -34,6 +34,7 @@ SUBDIR+=	dmake
 SUBDIR+=	doc++
 SUBDIR+=	electricfence
 SUBDIR+=	ffcall
+SUBDIR+=	flim
 SUBDIR+=	flex
 SUBDIR+=	fortran-utils
 SUBDIR+=	ftnchek
