@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/28 06:04:55 taca Exp $
 # FreeBSD: ports/devel/ruby-textbuf/Makefile,v 1.1 2001/01/19 06:16:46 knu Exp
 
 DISTNAME=	textbuf-0.3.8
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.loveruby.net/archive/
 
@@ -10,8 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.loveruby.net/en/textbuf.html
 COMMENT=	Gapped text buffer extension for Ruby
 
-RUBY_REQD=	1.6
-DIST_SUBDIR=	ruby
+RUBY_VERSION=	${RUBY16_VERSION}
 USE_RUBY_SETUP=	yes
 
 DOCS=		README.en README.ja
@@ -22,5 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/textbuf
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
