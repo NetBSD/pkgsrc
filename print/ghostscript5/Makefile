@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2000/04/09 23:48:50 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2000/04/16 17:25:59 jlam Exp $
 
+PKGNAME=	${DISTNAME}nb1
 MASTER_SITES+=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=	${GS_FONTS_STD} ${GS_FONTS_OTHER} ${PDF_SEC}
 
