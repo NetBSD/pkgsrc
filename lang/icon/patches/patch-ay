@@ -1,0 +1,18 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/xpm.hdr	Wed Oct  1 17:32:26 1997
+@@ -0,0 +1 @@
++DEFINES= -DZPIPE
+--- src/common/save.c	1997/10/02 07:49:07	1.1
++++ src/common/save.c	1997/10/02 08:00:57
+@@ -91,7 +91,11 @@
+     * Construct the header.  The text and data region sizes must be multiples
+     *  of 1024.
+     */
++#ifdef __NetBSD__
++   N_SETMAGIC(hdr, ZMAGIC, MID_I386, EX_DYNAMIC);
++#else
+    hdr.a_magic = ZMAGIC;
++#endif
+    tsize = (int)&etext;
+    hdr.a_text = (tsize + 1024) & ~(1024-1);
+    dsize = sbrk(0) - (int)&environ;

@@ -1,0 +1,7 @@
+--- config/unix/Config/rtt.make.orig	Fri Jun 19 04:54:16 1998
++++ config/unix/Config/rtt.make	Fri Jun 19 04:54:24 1998
+@@ -29,3 +29,3 @@
+ 	cp rtt ../../bin
+-	strip ../../bin/rtt
++#	strip ../../bin/rtt
+ 

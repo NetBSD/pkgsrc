@@ -1,0 +1,5 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/icon_pi.c	Wed Oct  1 17:32:26 1997
+@@ -0,0 +1,2 @@
++#include "paths.h"
++#include "../Generic/icon_pi.h"

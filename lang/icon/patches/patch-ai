@@ -1,0 +1,25 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/define.h	Wed Oct  1 17:32:26 1997
+@@ -0,0 +1,22 @@
++#define Standard
++#define IconGcvt
++#define index strchr
++#define rindex strrchr
++#define GetHost
++#define Hz 100
++#define MaxHdr 13400
++#define MaxStatSize 20480
++
++#define GenericBSD
++#define BSD_4_4_LITE    1	/* This is new, for 4.4Lite specific stuff */
++#define UNIX 1
++#define LoadFunc
++#define ExecImages
++
++#define KeyboardFncs
++#define HaveTioc
++#define USE_OLD_TTY
++#define AllowConst
++#define SysOpt
++#define CComp "gcc"
++#define COpts "-O2"
