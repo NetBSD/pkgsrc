@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.8 2004/02/02 10:03:46 jlam Exp $
+# $NetBSD: gcc.mk,v 1.9 2004/02/02 10:34:00 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -66,22 +66,23 @@ _GCC_STRICTEST_REQD=	${_version_}
 _GCC_REQD=	${_GCC_STRICTEST_REQD}
 
 # Determine whether we require GCC-2.x or GCC-3.x by examining _GCC_REQD.
+_NEED_GCC2?=	no
 .for _pattern_ in ${_GCC2_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-_GCC2_REQD:=	${_GCC_REQD}
+_NEED_GCC2=	yes
 .  endif
 .endfor
+_NEED_GCC3?=	no
 .for _pattern_ in ${_GCC3_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-_GCC3_REQD:=	${_GCC_REQD}
+_NEED_GCC3=	yes
 .  endif
 .endfor
 
-.if defined(_GCC2_REQD)
+.if defined(_NEED_GCC2)
 #
 # We require gcc-2.x in the lang/gcc directory.
 #
-_GCC_REQD:=		${_GCC2_REQD}
 _GCC_PKGBASE=		gcc
 LANGUAGES.gcc=		c c++ fortran objc
 _LANGUAGES.gcc=		# empty
@@ -95,11 +96,10 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .  endif
-.elif defined(_GCC3_REQD)
+.elif defined(_NEED_GCC3)
 #
 # We require gcc-3.x in the lang/gcc3-* directories.
 #
-_GCC_REQD:=		${_GCC3_REQD}
 _GCC_PKGBASE=		gcc3-c
 LANGUAGES.gcc=		c c++ fortran java objc
 _LANGUAGES.gcc=		# empty
