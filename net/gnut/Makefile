@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/28 16:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/30 13:57:46 wiz Exp $
 #
 
 DISTNAME=	gnut-0.4.12
@@ -15,10 +15,6 @@ HOMEPAGE=	http://www.mrob.com/gnut/
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
 		CXX=${LOCALBASE}/pthreads/bin/pg++
-
-# Sync these with devel/unproven-pthreads:
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-m68k
 
 GNU_CONFIGURE=	yes
 
