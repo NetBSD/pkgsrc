@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/09/04 17:38:48 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/11/16 21:50:14 tron Exp $
 
 DISTNAME=	xchat-1.5.7
 CATEGORIES=	net x11 gnome
@@ -15,7 +15,7 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include
+CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include LIBS=-lutil
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/stamp-h.in
