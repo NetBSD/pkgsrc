@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 1999/03/08 16:40:58 tron Exp $
+
+--- applets/jbc/jbc-applet.c.orig	Wed Feb 24 15:30:35 1999
++++ applets/jbc/jbc-applet.c	Mon Mar  8 14:43:44 1999
+@@ -67,7 +67,11 @@
+ do_flicker ()
+ {
+   thetime = time (NULL);
++#if defined(__NetBSD__) && __NetBSD_Version__ < 103010000
++  atime = *localtime (&thetime);
++#else
+   localtime_r (&thetime, &atime);
++#endif
+ 
+   d[0] = atime.tm_hour / 10;
+   d[1] = atime.tm_hour % 10;

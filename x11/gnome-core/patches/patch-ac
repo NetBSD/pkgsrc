@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.4 1999/03/07 21:17:50 tron Exp $
+$NetBSD: patch-ac,v 1.5 1999/03/08 16:40:57 tron Exp $
 
 --- applets/modemlights/modemlights.c.orig	Mon Feb  8 17:20:52 1999
-+++ applets/modemlights/modemlights.c	Sun Mar  7 21:02:05 1999
++++ applets/modemlights/modemlights.c	Mon Mar  8 15:23:45 1999
+@@ -32,7 +32,7 @@
+ #include <errno.h>
+ #include <ctype.h>
+ 
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <net/if_ppp.h>
+ #endif
+ 
 @@ -249,13 +249,13 @@
  	struct 	ppp_stats stats;
  
