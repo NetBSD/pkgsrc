@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/08/13 17:52:31 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/13 18:10:29 itojun Exp $
 
 DISTNAME=	sendmail.8.11.0
 PKGNAME=	sendmail-8.11.0
@@ -59,6 +59,7 @@ post-patch:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	echo '---' >> ${DESCR_SRC}
 	echo -n 'compiled features:' >> ${DESCR_SRC}
+	echo -n ' WIDE' >> ${DESCR_SRC}
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	echo -n ' INET6' >> ${DESCR_SRC}
