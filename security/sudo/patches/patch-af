@@ -1,22 +1,13 @@
-$NetBSD: patch-af,v 1.6 2000/02/27 20:48:18 thorpej Exp $
+$NetBSD: patch-af,v 1.7 2000/06/06 11:07:21 mjl Exp $
 
---- configure.in.orig	Thu Jan 27 12:01:37 2000
-+++ configure.in	Sun Feb 27 12:33:56 2000
-@@ -146,7 +146,7 @@
- 		DEV=""
- 		;;
-     no)		;;
--    *)		echo "Ignoring unknown argument to --with-devel: $with_csops"
-+    *)		echo "Ignoring unknown argument to --with-devel: $with_devel"
- 		;;
- esac])
- 
-@@ -165,6 +165,19 @@
+--- configure.in.orig	Tue Jun  6 12:49:45 2000
++++ configure.in	Tue Jun  6 12:54:34 2000
+@@ -167,6 +167,19 @@
  		;;
  esac])
  
 +AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
-+[case $with_nbsdops in  
++[case $with_nbsdops in
 +    yes)	echo 'Adding NetBSD standard options'
 +		CHECKSIA=false
 +		with_ignore_dot=yes
@@ -31,7 +22,7 @@ $NetBSD: patch-af,v 1.6 2000/02/27 20:48:18 thorpej Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes)	;;
-@@ -1408,7 +1421,9 @@
+@@ -1466,7 +1479,9 @@
  dnl
  if test "$with_kerb5" = "yes"; then
      AC_DEFINE(HAVE_KERB5)
@@ -42,7 +33,7 @@ $NetBSD: patch-af,v 1.6 2000/02/27 20:48:18 thorpej Exp $
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
      elif test -f "/usr/local/kerberos/include/krb5.h"; then
  	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
-@@ -1418,7 +1433,9 @@
+@@ -1476,7 +1491,9 @@
  	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
      fi
  
