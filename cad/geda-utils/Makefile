@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/21 06:35:10 snj Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/23 04:20:50 dmcmahill Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -22,11 +22,10 @@ LEX=			${LEXDIR}/bin/flex
 
 CONFLICTS+=		gEDA<19991011
 
-DIST_SUBDIR=		geda
-PKGVERSION=		20030901
+.include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PERL5=		YES
 
 # let (f)lex rebuild this file.  The distributed one doesn't
@@ -47,5 +46,6 @@ REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/refdes_renum \
 			scripts/sarlacc_sym
 
-.include "../../cad/libgeda/buildlink2.mk"
+.include "../../cad/libgeda/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
