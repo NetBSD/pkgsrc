@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2005/01/21 16:36:41 tv Exp $
+
+--- ext/extmk.rb.in.orig	2005-01-21 11:23:45.000000000 -0500
++++ ext/extmk.rb.in
+@@ -423,9 +423,9 @@ CC = @CC@
+ 
+ CFLAGS   = %s #{CFLAGS} #$CFLAGS
+ CPPFLAGS = -I$(topdir) -I$(hdrdir) %s #$CPPFLAGS
+-DLDFLAGS = #$DLDFLAGS #$LDFLAGS
++DLDFLAGS = %s #$LDFLAGS
+ LDSHARED = @LDSHARED@ #{defflag}
+-", if $static then "" else "@CCDLFLAGS@" end, $defs.join(" ")
++", if $static then "" else "@CCDLFLAGS@" end, $defs.join(" "), $DLDFLAGS
+   mfile.puts "LIBPATH = #{libpath}" if libpath
+ 
+   mfile.puts ".SUFFIXES: .@OBJEXT@" unless "@OBJEXT@" == "o"
