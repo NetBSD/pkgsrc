@@ -1,4 +1,4 @@
-#     $NetBSD: OpenBSD.x11.dist,v 1.20 2003/12/14 16:02:27 jmmv Exp $
+#     $NetBSD: OpenBSD.x11.dist,v 1.21 2003/12/14 22:30:51 jmmv Exp $
 #  	OpenBSD: BSD.x11.dist,v 1.4 2002/06/09 06:15:15 todd Exp 
 #	FreeBSD: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 
@@ -315,6 +315,10 @@
                 ..
             ..
             bg_BG.cp1251
+                LC_MESSAGES
+                ..
+            ..
+            br
                 LC_MESSAGES
                 ..
             ..

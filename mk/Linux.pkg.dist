@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Linux.pkg.dist,v 1.44 2003/12/14 16:02:27 jmmv Exp $
+#	$NetBSD: Linux.pkg.dist,v 1.45 2003/12/14 22:30:51 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -441,6 +441,10 @@
                 ..
             ..
             bn
+                LC_MESSAGES
+                ..
+            ..
+            br
                 LC_MESSAGES
                 ..
             ..
