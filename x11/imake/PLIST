@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/28 22:06:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/21 21:42:51 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/ccmakedep
 ${X11ROOT_PREFIX}/bin/cleanlinks
 ${X11ROOT_PREFIX}/bin/gccmakedep
 ${X11ROOT_PREFIX}/bin/imake
-${X11ROOT_PREFIX}/bin/lndir
+${LNDIR}${X11ROOT_PREFIX}/bin/lndir
 ${X11ROOT_PREFIX}/bin/makedepend
 ${X11ROOT_PREFIX}/bin/makeg
 ${X11ROOT_PREFIX}/bin/makestrs
