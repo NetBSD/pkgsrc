@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.34 2005/03/24 22:44:37 jlam Exp $
+# $NetBSD: pyversion.mk,v 1.35 2005/03/29 15:00:35 xtraeme Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -134,7 +134,7 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 .endif
 .else
 # force an error
-	error: no valid Python version
+PKG_FAIL_REASON+=   "No valid Python version"
 .endif
 
 PTHREAD_OPTS=	require
