@@ -1,4 +1,4 @@
-;; $NetBSD: site-init.el,v 1.1.1.1 2003/04/11 00:34:25 uebayasi Exp $
+;; $NetBSD: site-init.el,v 1.2 2003/04/12 10:16:39 uebayasi Exp $
 
 ;; NetBSD puts info files in /usr/share.
 (setq Info-default-directory-list
