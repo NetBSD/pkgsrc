@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.13 2003/09/27 17:20:38 grant Exp $
+# $NetBSD: compiler.mk,v 1.14 2003/09/28 09:48:00 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -188,6 +188,19 @@ PKG_FC=			${F77}
 .if (defined(USE_GCC2) || defined(USE_GCC3)) && defined(USE_GCC_SHLIB)
 _GCC_LDFLAGS=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 LDFLAGS+=		${_GCC_LDFLAGS}
+.endif
+
+# create a fake libstdc++.la if one exists in /usr/lib.
+.if empty(USE_BUILDLINK2:M[nN][oO])
+.  if defined(_CC_IS_GCC) && exists(/usr/lib/libstdc++.la)
+BUILDLINK_TARGETS+=		libstdc++-buildlink-la
+
+libstdc++-buildlink-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libstdc++.la";			\
+	libpattern="/usr/lib/libstdc++.*";				\
+	${BUILDLINK_FAKE_LA}
+.  endif
 .endif
 
 # CC_VERSION can be tested by package Makefiles to tweak things based
