@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2003/04/06 03:53:23 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/05/09 08:03:08 martti Exp $
 
-DISTNAME=	etcupdate-20030305
+DISTNAME=	etcupdate-20030509
 WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
