@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST-elf,v 1.1.1.1 1998/12/02 02:42:05 tv Exp $
+bin/soperl
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/libperl.so
