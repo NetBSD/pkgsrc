@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/02/05 18:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/07/11 09:31:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 USE_XAW=	yes
 MAKEFILE=	makefile
-CONFIGURE_ARGS+= --with-screen=Xaw --with-xpm --with-perl --with-lib-dir=${X11BASE}/libexec
+CONFIGURE_ARGS+= --with-screen=Xaw --with-xpm --with-perl --with-lib-dir=${X11PREFIX}/libexec
 INSTALL_TARGET=	install install-perl
 
 post-install:
