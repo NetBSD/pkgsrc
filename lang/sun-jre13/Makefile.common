@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/07/28 14:39:04 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/09/03 19:26:41 jschauma Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -62,19 +62,18 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
 .	endif
 
-.if ${OPSYS} == "Darwin"
-.include "../../mk/bsd.pkg.mk"
-.else
-.include "../../emulators/suse_linux/Makefile.application"
-.endif
-
 # These need to be after bsd.pkg.mk 
 
 .if ${OPSYS} == "Linux"
 # No patches on linux
-PATCHDIR=	${WRKDIR}/.patches
-pre-patch:
-	${MKDIR} ${PATCHDIR}
+NO_PATCH= #defined
 .endif
+
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+.include "../../mk/bsd.pkg.mk"
+.elif ${OPSYS} != "Linux"
+.include "../../emulators/suse_linux/Makefile.application"
+.endif
+
 
 PREFIX:=	${JDK_HOME}
