@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2001/01/26 21:12:02 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.14 2001/01/31 04:07:37 hubertf Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
 bin/nslookup
 bin/nsupdate
-etc/rc.d/named
+etc/rc.d/named9
 include/dns/a6.h
 include/dns/acl.h
 include/dns/adb.h
