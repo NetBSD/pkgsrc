@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rsaref.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.rsaref?=	rsaref-2.0p3
 DEPENDS+=	${BUILDLINK_DEPENDS.rsaref}:../../security/rsaref
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.rsaref=rsaref
+BUILDLINK_PREFIX.rsaref_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rsaref=		include/rsaref.h
 BUILDLINK_FILES.rsaref+=	lib/librsaref.*
 

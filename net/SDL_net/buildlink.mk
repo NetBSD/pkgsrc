@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/20 01:54:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/27 13:33:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use SDL_net.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.SDL_net?=	SDL_net>=1.2.0
 DEPENDS+=	${BUILDLINK_DEPENDS.SDL_net}:../../net/SDL_net
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.SDL_net=SDL_net
+BUILDLINK_PREFIX.SDL_net_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.SDL_net=	include/SDL/SDL_net.h
 BUILDLINK_FILES.SDL_net+=	lib/libSDL_net-*
 BUILDLINK_FILES.SDL_net+=	lib/libSDL_net.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:36 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libwww.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libwww?=	libwww>=5.3.2
 DEPENDS+=	${BUILDLINK_DEPENDS.libwww}:../../www/libwww
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libwww=libwww
+BUILDLINK_PREFIX.libwww_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libwww=		include/wwwconf.h
 BUILDLINK_FILES.libwww+=	include/w3c-libwww/*
 BUILDLINK_FILES.libwww+=	lib/libmd5.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gsm.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.gsm?=	gsm>=1.0.10
 DEPENDS+=	${BUILDLINK_DEPENDS.gsm}:../../audio/gsm
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gsm=gsm
+BUILDLINK_PREFIX.gsm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gsm=	include/gsm.h
 BUILDLINK_FILES.gsm+=	include/gsm/*
 BUILDLINK_FILES.gsm+=	lib/libgsm.*
