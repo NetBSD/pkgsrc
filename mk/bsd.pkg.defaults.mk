@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.262 2004/07/20 22:04:44 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.263 2004/07/21 22:32:24 schmonz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1831,10 +1831,28 @@ PVM_SSH?=	${LOCALBASE}/bin/ssh
 # Possible:  Any rsh/ssh program.
 # Default:   /usr/bin/ssh if it exists, otherwise ${LOCALBASE}/bin/ssh
 
-QMAILDIR?=	${VARBASE}/qmail
-# Specify the directory for qmail installation
+QMAILDIR?= /var/qmail
+# The directory for qmail installation. You probably don't need to
+# change this.
 # Possible: any valid location
-# Default: ${VARBASE}/qmail
+# Default: /var/qmail (intentionally not ${VARBASE}/qmail)
+
+QMAIL_AUTOCONFIG?= YES
+# Whether the package should automatically create basic config files.
+# Possible: YES, NO
+# Default: YES
+
+QMAIL_QUEUE_DIR?= ${VARBASE}/spool/qmail
+# The directory for qmail's queue.
+# Possible: any location on an appropriate filesystem, except that it
+# must be outside ${QMAILDIR}.
+# Default: ${VARBASE}/spool/qmail
+
+QMAIL_QUEUE_EXTRA?=
+# An additional recipient that will be added to every qmail delivery.
+# This is used primarily for logging.
+# Possible: empty, any valid local address
+# Default: empty
 
 QPOPPER_FAC?= LOCAL1
 # Used by qpopper package as the default syslog facility.
