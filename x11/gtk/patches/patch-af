@@ -1,13 +1,16 @@
-$NetBSD: patch-af,v 1.1 1999/04/27 21:33:26 tron Exp $
+$NetBSD: patch-af,v 1.2 1999/04/29 11:14:35 tron Exp $
 
 --- gtk-config.in.orig	Tue Feb  2 00:17:38 1999
-+++ gtk-config.in	Tue Apr 27 23:17:01 1999
-@@ -104,7 +104,7 @@
++++ gtk-config.in	Thu Apr 29 12:13:36 1999
+@@ -104,9 +104,9 @@
  
  if test "$echo_libs" = "yes"; then
        my_glib_libs=
 -      libdirs=-L@libdir@
-+      libdirs=-L@libdir@\ -Wl,-R@libdir@
++      libdirs="-L@libdir@ -Wl,-R@libdir@"
        for i in $glib_libs ; do
-         if test $i != -L@libdir@ ; then
+-        if test $i != -L@libdir@ ; then
++        if test $i != -L@libdir@ -a $i != -Wl,-R@libdir@ ; then
            if test -z "$my_glib_libs" ; then
+             my_glib_libs="$i"
+           else
