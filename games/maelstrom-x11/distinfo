@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/11 13:26:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/07/10 23:17:34 wiz Exp $
 
 SHA1 (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 66c81365104bfab9985919f0cba5a6d955727d79
 Size (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 1463130 bytes
@@ -17,3 +17,4 @@ SHA1 (patch-af) = 46b5ab4cfe3e20401fc5feaa9319c093b025ca1d
 SHA1 (patch-ag) = aa7102be99466e81b95258a2a2ff888d7136fda3
 SHA1 (patch-ah) = 03a8dcdc19cbcfb6d13a9de80ef529560bb3ad1a
 SHA1 (patch-ai) = 25e781f5092530b35256e17003d998443d479372
+SHA1 (patch-aj) = 5135031fbbfa06eb11d24859bb1589361b025ba4
