@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2003/09/04 18:32:46 abs Exp $
+$NetBSD: patch-ac,v 1.8 2003/11/11 09:17:53 abs Exp $
 
 --- mserv/mserv.c.orig	Sun Aug  3 15:57:20 2003
 +++ mserv/mserv.c
@@ -118,7 +118,7 @@ $NetBSD: patch-ac,v 1.7 2003/09/04 18:32:46 abs Exp $
 +    }
 +
 +  if (bitrate_ret)
-+    *bitrate_ret = vi->bitrate_nominal;
++    *bitrate_ret = vi->bitrate_nominal/1024;
 +
 +  for (comment = vc->user_comments ; *comment ; ++comment) {
 +    if (strncmp(*comment, "title=", 6) == 0) {
