@@ -1,0 +1,43 @@
+$NetBSD: patch-ar,v 1.1 2001/01/27 08:16:02 jtb Exp $
+
+--- src/segyprogs/makefile.orig	Sat Jan 27 03:25:15 2001
++++ src/segyprogs/makefile
+@@ -8,7 +8,7 @@
+ #------------------------- stop here --------------------------
+ 
+ CFLAGS	= $(CC_OPT) $(WIN32) -I.. -I$(NETCDF)/include -I$(GMT_DEFAULT_PATH)/src
+-ALLLIB	= -L..  -L$(GMT_DEFAULT_PATH)/bin -lgmt -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
++ALLLIB	= ../libgmt.la ../libpsl.la -L$(NETCDF)/lib -lnetcdf $(LIBS)
+ 
+ SEGYPLOT_H	= segy_io.h segy.h segyreel.h
+ SEGYPLOT_C	= pssegyz.c pssegy.c
+@@ -23,7 +23,7 @@
+ 
+ install:		all
+ 			for i in $(SEGYPLOT); do \
+-				$(INSTALL) $$i$(EXE) $(bindir); \
++				$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
+ 			done
+ 
+ uninstall:	
+@@ -32,16 +32,16 @@
+ 			done
+ 
+ clean:
+-			\rm -f *.o
++			\rm -f *.o *.lo
+ 			for i in $(SEGYPLOT); do \
+ 				\rm -f $$i$(EXE); \
+ 			done
+ 
+ spotless:		clean
+-			\rm -f *.a
++			\rm -fr .libs *.la
+ 
+ $(SEGYPLOT):		$(SEGYPLOT_O) segy_io.o
+-			$(CC) $(CFLAGS) segy_io.o $@.o -o $@ $(ALLLIB) $(LDFLAGS)
++			$(LIBTOOL) --mode=link $(CC) $(CFLAGS) segy_io.lo $@.lo -o $@ $(ALLLIB) $(LDFLAGS)
+ 
+ .c.o:
+-			$(CC) -c $(CFLAGS) $<
++			$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
