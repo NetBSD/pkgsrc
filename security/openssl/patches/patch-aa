@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2004/04/25 20:36:11 tv Exp $
+$NetBSD: patch-aa,v 1.15 2004/12/24 22:02:38 jlam Exp $
 
---- config.orig	Thu Nov 14 11:30:29 2002
+--- config.orig	2004-06-28 18:01:05.000000000 -0400
 +++ config
-@@ -139,6 +139,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+@@ -155,6 +155,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "mips4-sgi-irix64"; exit 0
  	;;
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/25 20:36:11 tv Exp $
      Linux:[2-9].*)
  	echo "${MACHINE}-whatever-linux2"; exit 0
  	;;
-@@ -588,8 +592,9 @@ EOF
+@@ -655,8 +659,9 @@ EOF
    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
    *-freebsd[1-2]*) OUT="FreeBSD" ;;
    *86*-*-netbsd) OUT="NetBSD-x86" ;;
@@ -22,6 +22,6 @@ $NetBSD: patch-aa,v 1.14 2004/04/25 20:36:11 tv Exp $
 +  sun3*-*-netbsd) OUT="NetBSD-m68k" ;;
 +  *-*-netbsd) OUT="NetBSD-${MACHINE_ARCH}" ;;
 +  *-*-interix3) OUT="Interix3" ;;
-   *86*-*-openbsd) OUT="OpenBSD-x86" ;;
    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
-   pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
+   *86*-*-openbsd) OUT="OpenBSD-i386" ;;
+   m68k*-*-openbsd) OUT="OpenBSD-m68k" ;;
