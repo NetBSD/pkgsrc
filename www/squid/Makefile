@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/07/14 21:45:50 tron Exp $
+# $NetBSD: Makefile,v 1.15 1999/08/02 12:14:00 agc Exp $
 
 DISTNAME=	squid-2.2.STABLE4-src
 PKGNAME=	squid-2.2s4
@@ -34,6 +34,13 @@ MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	egcs-1.1.2:../../lang/egcs
+MAKE_ENV+=	CPPFLAGS= CFLAGS=
+.endif
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
