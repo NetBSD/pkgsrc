@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/06 16:51:23 tron Exp $
+
+--- kxicq/Makefile.in.orig	Mon Mar 13 12:43:21 2000
++++ kxicq/Makefile.in	Thu Jul  6 18:13:46 2000
+@@ -165,14 +165,14 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-SUBDIRS = ltdl checklistbox kconfigdlg dialogs STabCtl DockWidget 
++SUBDIRS = checklistbox kconfigdlg dialogs STabCtl DockWidget 
+ bin_PROGRAMS = kxicq
+ 
+ kxicq_LDFLAGS = $(all_libraries)
+-kxicq_LDADD =  		$(top_srcdir)/kxicq/DockWidget/libDockWidget.a 		$(top_srcdir)/kxicq/STabCtl/libSTabCtl.a 		$(top_srcdir)/kxicq/dialogs/libdialogs.a 		$(top_srcdir)/kxicq/kconfigdlg/libkconfigdlg.a 		$(top_srcdir)/kxicq/checklistbox/libchecklistbox.a 		$(top_srcdir)/kxicq/ltdl/libltdl.a 		$(LIB_KFILE) 		$(LIB_KHTMLW) 		$(LIB_MEDIATOOL) 		$(LIB_KDEUI) 		$(LIB_KIMGIO) 		$(XPMLIB) 		$(LIBDL)
++kxicq_LDADD =  		$(top_srcdir)/kxicq/DockWidget/libDockWidget.a 		$(top_srcdir)/kxicq/STabCtl/libSTabCtl.a 		$(top_srcdir)/kxicq/dialogs/libdialogs.a 		$(top_srcdir)/kxicq/kconfigdlg/libkconfigdlg.a 		$(top_srcdir)/kxicq/checklistbox/libchecklistbox.a 		$(LOCALBASE)/lib/libltdl.a 		$(LIB_KFILE) 		$(LIB_KHTMLW) 		$(LIB_MEDIATOOL) 		$(LIB_KDEUI) 		$(LIB_KIMGIO) 		$(XPMLIB) 		$(LIBDL)
+ 
+ LDFLAGS =  -export-dynamic
+-INCLUDES = $(all_includes) 		-I$(top_srcdir)/ 		-I$(top_srcdir)/kxicq 		-I$(top_srcdir)/kxicq/ltdl 		-I$(top_srcdir)/kxicq/checklistbox 		-I$(top_srcdir)/kxicq/kconfigdlg 		-I$(top_srcdir)/kxicq/dialogs 		-I$(top_srcdir)/kxicq/STabCtl 		-I$(top_srcdir)/kxicq/DockWidget
++INCLUDES = $(all_includes) 		-I$(top_srcdir)/ 		-I$(top_srcdir)/kxicq 		-I$(LOCALBASE)/include 		-I$(top_srcdir)/kxicq/checklistbox 		-I$(top_srcdir)/kxicq/kconfigdlg 		-I$(top_srcdir)/kxicq/dialogs 		-I$(top_srcdir)/kxicq/STabCtl 		-I$(top_srcdir)/kxicq/DockWidget
+ 
+ DEFS = -I. -I$(srcdir) -I$(top_srcdir)
+ kxicq_METASOURCES =  MotifDNDHandler.moc.cpp kstartuplogo.moc.cpp kxapplication.moc.cpp kxchat.moc.cpp kxchat2.moc.cpp kxchatrequest.moc.cpp kxcontact.moc.cpp kxcontactview.moc.cpp kxcontactviewwidget.moc.cpp kxdocking.moc.cpp kxfile.moc.cpp kxhistoryview.moc.cpp kxincomingview.moc.cpp kxinputdialog.moc.cpp kxmainwindow.moc.cpp kxmessagehistory.moc.cpp kxmledit.moc.cpp kxnickcomplete.moc.cpp kxpopupmenu.moc.cpp kxsend.moc.cpp kxsock.moc.cpp kxtcp.moc.cpp kxudp.moc.cpp kxuseronline.moc.cpp kxutil.moc.cpp kxwidgets.moc.cpp 
+@@ -202,8 +202,7 @@
+ $(top_srcdir)/kxicq/STabCtl/libSTabCtl.a \
+ $(top_srcdir)/kxicq/dialogs/libdialogs.a \
+ $(top_srcdir)/kxicq/kconfigdlg/libkconfigdlg.a \
+-$(top_srcdir)/kxicq/checklistbox/libchecklistbox.a \
+-$(top_srcdir)/kxicq/ltdl/libltdl.a
++$(top_srcdir)/kxicq/checklistbox/libchecklistbox.a
+ CXXFLAGS = @CXXFLAGS@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+@@ -652,8 +651,7 @@
+ 	kxcontactviewlist.h messagecount.h kxdocking.h kxtcp.h
+ kxpacket.o: kxpacket.cpp kxpacket.h kxsock.h
+ kxpluginmanager.o: kxpluginmanager.cpp kxpluginmanager.h kxplugin.h \
+-	kconfigdlg/kconfigdlg.h kconfigdlg/kconfigitem.h ../config.h \
+-	ltdl/ltdl.h
++	kconfigdlg/kconfigdlg.h kconfigdlg/kconfigitem.h ../config.h
+ kxplugin.o: kxplugin.cpp kxplugin.h kconfigdlg/kconfigdlg.h \
+ 	kconfigdlg/kconfigitem.h
+ kxpopupmenu.moc.o: kxpopupmenu.moc.cpp kxpopupmenu.h ../config.h
