@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.20 2003/05/07 20:08:18 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.21 2003/08/04 08:15:47 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -9,7 +9,7 @@ PYTHON_VERSION_DEFAULT?=	22
 .if ${OPSYS} == "Darwin"
 PYTHON_VERSIONS_ACCEPTED=	22	# the only one that builds
 .else
-PYTHON_VERSIONS_ACCEPTED?=	22 22pth 21 21pth 20
+PYTHON_VERSIONS_ACCEPTED?=	22 22pth 23 23pth 21 21pth 20
 .endif
 
 BUILDLINK_DEPENDS.python15?=		python15>=1.5
@@ -18,6 +18,8 @@ BUILDLINK_DEPENDS.python21?=		python21>=2.1
 BUILDLINK_DEPENDS.python21-pth?=	python21-pth>=2.1
 BUILDLINK_DEPENDS.python22?=		python22>=2.2
 BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2
+BUILDLINK_DEPENDS.python23?=		python23>=2.3
+BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -25,6 +27,12 @@ _PYTHON_VERSION_${pv}_OK=	yes
 .endfor
 
 # check what is installed
+.if exists(${LOCALBASE}/bin/python2.3)
+_PYTHON_VERSION_23_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/bin/python2p3)
+_PYTHON_VERSION_23pth_INSTALLED=yes
+.endif
 .if exists(${LOCALBASE}/bin/python2.2)
 _PYTHON_VERSION_22_INSTALLED=	yes
 .endif
@@ -89,7 +97,26 @@ _PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
 #  PYPKGPREFIX: prefix to use in PKGNAME for extensions which can install
 #               to multiple Python versions
 #
-.if ${_PYTHON_VERSION} == "22"
+.if ${_PYTHON_VERSION} == "23"
+PYPKGSRCDIR=	../../lang/python23
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23}:${PYPKGSRCDIR}
+PYPACKAGE=	python23
+PYVERSSUFFIX=	2.3
+PYPKGPREFIX=	py23
+.elif ${_PYTHON_VERSION} == "23pth"
+PYPKGSRCDIR=	../../lang/python23-pth
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23-pth}:${PYPKGSRCDIR}
+PYPACKAGE=	python23-pth
+PYVERSSUFFIX=	2p3
+PYPKGPREFIX=	py23pth
+.  if defined(USE_BUILDLINK2)
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink2.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink2.mk"
+.    endif
+.  endif
+.elif ${_PYTHON_VERSION} == "22"
 PYPKGSRCDIR=	../../lang/python22
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
 PYPACKAGE=	python22
