@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6942 2004/08/18 20:29:35 recht Exp $
+$NetBSD: CHANGES,v 1.6943 2004/08/18 21:14:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3908,3 +3908,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ProjectCenter to 0.4.0 [adam 2004-08-18]
 	Updated nail to 11.3 [cjep 2004-08-18]
 	Updated scons to 0.96 [recht 2004-08-18]
+	Added Cg-compiler-1.2.1 [minskim 2004-08-18]
