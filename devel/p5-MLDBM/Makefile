@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:41 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/28 01:04:12 dmcmahill Exp $
 #
 
 DISTNAME=		MLDBM-2.00
@@ -9,8 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MLDBM/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MLDBM/MLDBM.html
 
-BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/Data/Dumper.pm:../../devel/p5-Data-Dumper
-RUN_DEPENDS:=		${BUILD_DEPENDS}
+DEPENDS+= 		p5-Data-Dumper-*:../../devel/p5-Data-Dumper
 
 USE_PERL5=		YES
 
