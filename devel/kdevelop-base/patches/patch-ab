@@ -1,0 +1,58 @@
+$NetBSD: patch-ab,v 1.1 2001/12/04 20:50:22 skrll Exp $
+
+--- kdevelop/tools/processesend.pl.orig	Wed Nov  7 00:25:10 2001
++++ kdevelop/tools/processesend.pl
+@@ -3,10 +3,10 @@
+ use File::Copy;
+ 
+ $homedirectory = $ENV{KDEHOME};
+-$homedirectory = "$ENV{HOME}/.kde2"    if (!$homedirectory);
++$homedirectory = "$ENV{HOME}/.kde"    if (!$homedirectory);
+ 
+ my $entriesfilename= shift || "entries";
+-my $local_datadir     = shift || ($homedirectory  . "/share/apps/kdevelop");
++my $local_datadir     = shift || ($homedirectory  . "/share/kde/apps/kdevelop");
+ 
+ printflush (STDOUT,"Starting with configuration\n");
+ 
+@@ -32,14 +32,14 @@
+ if ($processes{APPLICATION} eq "customproj") {}
+ else {
+   my $confargs = $processes{CONFIGARG} || "";
+-  #start make -f Makefile.dist
++  #start gmake -f Makefile.dist
+   printflush (STDOUT,"creating configuration files...\n");
+-  printflush (STDOUT,">make -f Makefile.dist\n");
++  printflush (STDOUT,">gmake -f Makefile.dist\n");
+   chdir ($overDirectory);
+-  system ("make -f Makefile.dist");
++  system ("gmake -f Makefile.dist");
+   
+   #start configure
+-  printflush (STDOUT,"make configure...\n");
++  printflush (STDOUT,"gmake configure...\n");
+   printflush (STDOUT,">LDFLAGS=\" \" CFLAGS=\"-O0 -g3 -Wall\" CXXFLAGS=\"-O0 -g3 -Wall\"\n>./configure $confargs\n");
+   chdir ($overDirectory);
+   system ("LDFLAGS=\" \" CFLAGS=\"-O0 -g3 -Wall\" CXXFLAGS=\"-O0 -g3 -Wall\" ./configure " . $confargs);	
+@@ -110,8 +110,8 @@
+     printflush (STDOUT,"creating $nameLittle.pot\n");
+     if ($processes{XGETTEXT} && $processes{XGETTEXT} eq "yes")
+     {
+-      printflush (STDOUT,">make messages\n");
+-      system ("make messages >/dev/null");
++      printflush (STDOUT,">gmake messages\n");
++      system ("gmake messages >/dev/null");
+     }
+     else
+     {
+@@ -126,8 +126,8 @@
+     if ($processes{XGETTEXT} && $processes{XGETTEXT} eq "yes")
+     {
+       chdir ($overDirectory);
+-      printflush (STDOUT,">make -f admin/Makefile.common package-messages\n");
+-      system ("make -f admin/Makefile.common package-messages >/dev/null");
++      printflush (STDOUT,">gmake -f admin/Makefile.common package-messages\n");
++      system ("gmake -f admin/Makefile.common package-messages >/dev/null");
+     }
+     else
+     {

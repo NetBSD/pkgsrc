@@ -1,0 +1,122 @@
+$NetBSD: patch-ad,v 1.1 2001/12/04 20:50:22 skrll Exp $
+
+--- kdevelop/Makefile.in.orig	Tue Dec  4 20:44:25 2001
++++ kdevelop/Makefile.in
+@@ -224,7 +224,7 @@
+ 
+ SUBDIRS = classparser kpp classwizard dbg examples gfxview kwrite pics templates tools vc widgets ctags setup 
+ 
+-EXTRA_DIST = caddclassattributedlg.cpp caddclassattributedlg.h caddclassmethoddlg.cpp caddclassmethoddlg.h caddexistingfiledlg.cpp caddexistingfiledlg.h caddnewtranslationdlg.cpp caddnewtranslationdlg.h cclasstooldlg.cpp cclasstooldlg.h cclasstooltreeview.cpp cclasstooltreeview.h wzconnectdlgimpl.cpp cclasstreehandler.h cclassview.cpp cclassview.h cclonefunctiondlg.cpp cclonefunctiondlg.h ccvaddfolderdlg.cpp ccvaddfolderdlg.h cdocbrowser.cpp cdocbrowser.h cdoctreepropdlg.cpp cdoctreepropdlg.h ceditwidget.cpp ceditwidget.h wzconnectdlgimpl.h cexecuteargdlg.cpp cexecuteargdlg.h cfilepropdlg.cpp cfilepropdlg.h cfinddoctextdlg.cpp cfinddoctextdlg.h cgeneratenewfile.cpp cgeneratenewfile.h cgrouppropertiesdlg.cpp cgrouppropertiesdlg.h ckdevaccel.h ckdevaccel.cpp cclasstreehandler.cpp ckdevelop.h ckdevelop_project.cpp ckdevelop_whatsthis.cpp ckdevsetupdlg.cpp ckdevsetupdlg.h clogfileview.cpp clogfileview.h cmakemanualdlg.cpp cmakemanualdlg.h cmakemanualdlgdata.cpp cnewclassdlg.cpp cnewclassdlg.h cnewfiledlg.cpp cnewfiledlg.h coutputwidget.cpp coutputwidget.h cprjoptionsdlg.h cproject.cpp cproject.h crealfileview.cpp crealfileview.h ctoolsconfigdlg.cpp ctoolsconfigdlg.h ctreehandler.cpp ctreehandler.h ctreeview.cpp ctreeview.h dbgpsdlg.cpp dbgpsdlg.h dbgtoolbar.cpp dbgtoolbar.h debug.h doctreeview.cpp doctreeview.h extractrc grepdialog.cpp grepdialog.h kdevelop-setup.desktop kdevelop.desktop kdeveloprc kdevelopui.rc kdevlistview.cpp kdevlistview.h kstartuplogo.cpp kstartuplogo.h lo16-app-kdevelop.png lo32-app-kdevelop.png lo32-mime-kdevelop_project.png main.cpp resource.h structdef.h ckdevelop_init.cpp wzconnectdlg.ui x-kdevelop-project.desktop ckappwizard.cpp ckappwizard.h cprjoptionsdlg.cpp ckdevelop_noslot.cpp ckdevelop_classview.cpp ckdevelop.cpp hi16-app-kdevelop.png hi48-app-kdevelop.png docviewman.cpp docviewman.h ckonsolewidget.cpp ckonsolewidget.h clibpropdlg.ui clibpropdlgimpl.cpp clibpropdlgimpl.h kdevsession.cpp kdevsession.h ctoolclass.cpp ctoolclass.h 
++EXTRA_DIST = caddclassattributedlg.cpp caddclassattributedlg.h caddclassmethoddlg.cpp caddclassmethoddlg.h caddexistingfiledlg.cpp caddexistingfiledlg.h caddnewtranslationdlg.cpp caddnewtranslationdlg.h cclasstooldlg.cpp cclasstooldlg.h cclasstooltreeview.cpp cclasstooltreeview.h wzconnectdlgimpl.cpp cclasstreehandler.h cclassview.cpp cclassview.h cclonefunctiondlg.cpp cclonefunctiondlg.h ccvaddfolderdlg.cpp ccvaddfolderdlg.h cdocbrowser.cpp cdocbrowser.h cdoctreepropdlg.cpp cdoctreepropdlg.h ceditwidget.cpp ceditwidget.h wzconnectdlgimpl.h cexecuteargdlg.cpp cexecuteargdlg.h cfilepropdlg.cpp cfilepropdlg.h cfinddoctextdlg.cpp cfinddoctextdlg.h cgeneratenewfile.cpp cgeneratenewfile.h cgrouppropertiesdlg.cpp cgrouppropertiesdlg.h ckdevaccel.h ckdevaccel.cpp cclasstreehandler.cpp ckdevelop.h ckdevelop_project.cpp ckdevelop_whatsthis.cpp ckdevsetupdlg.cpp ckdevsetupdlg.h clogfileview.cpp clogfileview.h cmakemanualdlg.cpp cmakemanualdlg.h cmakemanualdlgdata.cpp cnewclassdlg.cpp cnewclassdlg.h cnewfiledlg.cpp cnewfiledlg.h coutputwidget.cpp coutputwidget.h cprjoptionsdlg.h cproject.cpp cproject.h crealfileview.cpp crealfileview.h ctoolsconfigdlg.cpp ctoolsconfigdlg.h ctreehandler.cpp ctreehandler.h ctreeview.cpp ctreeview.h dbgpsdlg.cpp dbgpsdlg.h dbgtoolbar.cpp dbgtoolbar.h debug.h doctreeview.cpp doctreeview.h grepdialog.cpp grepdialog.h kdevelop-setup.desktop kdevelop.desktop kdeveloprc kdevelopui.rc kdevlistview.cpp kdevlistview.h kstartuplogo.cpp kstartuplogo.h lo16-app-kdevelop.png lo32-app-kdevelop.png lo32-mime-kdevelop_project.png main.cpp resource.h structdef.h ckdevelop_init.cpp wzconnectdlg.ui x-kdevelop-project.desktop ckappwizard.cpp ckappwizard.h cprjoptionsdlg.cpp ckdevelop_noslot.cpp ckdevelop_classview.cpp ckdevelop.cpp hi16-app-kdevelop.png hi48-app-kdevelop.png docviewman.cpp docviewman.h ckonsolewidget.cpp ckonsolewidget.h clibpropdlg.ui clibpropdlgimpl.cpp clibpropdlgimpl.h kdevsession.cpp kdevsession.h ctoolclass.cpp ctoolclass.h 
+ 
+ ####### kdevelop will overwrite this part!!! (end)############
+ 
+@@ -249,8 +249,6 @@
+ 
+ mime_DATA = x-kdevelop-project.desktop
+ mimedir = $(kde_mimedir)/application
+-
+-bin_SCRIPTS = extractrc
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -317,8 +315,6 @@
+ 	./kpp/libkdevelopkpp.la ./classparser/libclassparser.a \
+ 	./ctags/libctags.a ./setup/libkdevelopsetup.la \
+ 	./widgets/qextmdi/src/libkdevelopqextmdi.la
+-SCRIPTS =  $(bin_SCRIPTS)
+-
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -337,7 +333,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=hi32-app-kdevelop.png klangcombo.cpp klangcombo.h tips 
++KDE_DIST=hi32-app-kdevelop.png klangcombo.cpp klangcombo.h tips extractrc 
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -435,25 +431,6 @@
+ kdevelop$(EXEEXT): $(kdevelop_OBJECTS) $(kdevelop_DEPENDENCIES)
+ 	@rm -f kdevelop$(EXEEXT)
+ 	$(CXXLINK) $(kdevelop_LDFLAGS) $(kdevelop_OBJECTS) $(kdevelop_LDADD) $(LIBS)
+-
+-install-binSCRIPTS: $(bin_SCRIPTS)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	@list='$(bin_SCRIPTS)'; for p in $$list; do \
+-	if test -f $$p; then \
+-	echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	$(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	else if test -f $(srcdir)/$$p; then \
+-	echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	$(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	else :; fi; fi; \
+-	done
+-
+-uninstall-binSCRIPTS:
+-	@$(NORMAL_UNINSTALL)
+-	list='$(bin_SCRIPTS)'; for p in $$list; do \
+-	rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	done
+ .cpp.o:
+ 	$(CXXCOMPILE) -c $<
+ .cpp.obj:
+@@ -659,7 +636,7 @@
+ check: check-recursive
+ installcheck-am:
+ installcheck: installcheck-recursive
+-install-exec-am: install-binPROGRAMS install-binSCRIPTS
++install-exec-am: install-binPROGRAMS
+ install-exec: install-exec-recursive
+ 
+ #>- install-data-am: install-dataDATA install-mimeDATA install-rcDATA \
+@@ -672,23 +649,21 @@
+ install-am: all-am
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+ install: install-recursive
+-#>- uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
+-#>- uninstall-dataDATA uninstall-mimeDATA uninstall-rcDATA \
+-#>- uninstall-tipDATA
+-#>+ 3
+-uninstall-am: uninstall-kde-icons  uninstall-binPROGRAMS uninstall-binSCRIPTS \
+-	uninstall-dataDATA uninstall-mimeDATA uninstall-rcDATA \
+-	uninstall-tipDATA
++#>- uninstall-am: uninstall-binPROGRAMS uninstall-dataDATA \
++#>- uninstall-mimeDATA uninstall-rcDATA uninstall-tipDATA
++#>+ 2
++uninstall-am: uninstall-kde-icons  uninstall-binPROGRAMS uninstall-dataDATA \
++	uninstall-mimeDATA uninstall-rcDATA uninstall-tipDATA
+ uninstall: uninstall-recursive
+-all-am: Makefile $(PROGRAMS) $(SCRIPTS) $(DATA)
++all-am: Makefile $(PROGRAMS) $(DATA)
+ all-redirect: all-recursive
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	$(mkinstalldirs)  $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) \
+-	$(DESTDIR)$(datadir) $(DESTDIR)$(mimedir) \
+-	$(DESTDIR)$(rcdir) $(DESTDIR)$(tipdir)
++	$(mkinstalldirs)  $(DESTDIR)$(bindir) $(DESTDIR)$(datadir) \
++	$(DESTDIR)$(mimedir) $(DESTDIR)$(rcdir) \
++	$(DESTDIR)$(tipdir)
+ 
+ 
+ mostlyclean-generic:
+@@ -735,10 +710,9 @@
+ 	maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+ 	mostlyclean-compile distclean-compile clean-compile \
+ 	maintainer-clean-compile mostlyclean-libtool distclean-libtool \
+-	clean-libtool maintainer-clean-libtool uninstall-binSCRIPTS \
+-	install-binSCRIPTS uninstall-dataDATA install-dataDATA \
+-	uninstall-mimeDATA install-mimeDATA uninstall-rcDATA install-rcDATA \
+-	uninstall-tipDATA install-tipDATA install-data-recursive \
++	clean-libtool maintainer-clean-libtool uninstall-dataDATA \
++	install-dataDATA uninstall-mimeDATA install-mimeDATA uninstall-rcDATA \
++	install-rcDATA uninstall-tipDATA install-tipDATA install-data-recursive \
+ 	uninstall-data-recursive install-exec-recursive \
+ 	uninstall-exec-recursive installdirs-recursive uninstalldirs-recursive \
+ 	all-recursive check-recursive installcheck-recursive info-recursive \
