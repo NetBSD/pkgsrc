@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/01/26 15:42:04 jmmv Exp $
+
+--- kmidi/TIMIDITY/Makefile.in.orig	2003-09-10 14:32:05.000000000 +1200
++++ kmidi/TIMIDITY/Makefile.in
+@@ -390,7 +390,7 @@ xine_artsplugin_SUBDIR_included_TRUE = @
+ INCLUDES = $(X_INCLUDES) `$(ARTSCCONFIG) --cflags`
+ AM_CFLAGS = -DDEFAULT_PATH=\"$(TIMID_DIR)\" $(EXTRATDEFS) $(EXTRATCFLAGS)
+ AM_LDFLAGS = `$(ARTSCCONFIG) --libs`
+-LDADD = $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lkdefakes -lm
++LDADD = $(LIBOSSAUDIO) $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lkdefakes -lm
+ 
+ # Where to install the patches, config files, and MIDI files.
+ # If you change this, it's a good idea to recompile the binary,
