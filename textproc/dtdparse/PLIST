@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 21:20:38 xtraeme Exp $
+${PERL5_SITELIB}/XML/DTDParse/Catalog.pm
+${PERL5_SITELIB}/XML/DTDParse/ContentModel.pm
+${PERL5_SITELIB}/XML/DTDParse/DTD.pm
+${PERL5_SITELIB}/XML/DTDParse/Tokenizer.pm
+${PERL5_SITELIB}/XML/DTDParse/html.pl
+${PERL5_SITELIB}/XML/DTDParse/plain.pl
+${PERL5_SITELIB}/XML/DTDParse/refentry.pl
+bin/contentmodel
+bin/dtdflatten
+bin/dtdformat
+bin/dtdparse
+bin/dtdstats
+bin/elements
+share/doc/dtdparse/README
+share/doc/dtdparse/WhatsNew
+share/examples/dtdparse/sample.dtd
+share/examples/dtdparse/sample.mod
+share/examples/dtdparse/simple-inline.mod
+share/examples/dtdparse/simple.dtd
+share/xml/dtdparse/catalog
+share/xml/dtdparse/dtd.dtd
+@dirrm share/doc/dtdparse
+@dirrm share/examples/dtdparse
+@dirrm share/xml/dtdparse
+@dirrm lib/perl5/site_perl/5.6.1/XML/DTDParse
