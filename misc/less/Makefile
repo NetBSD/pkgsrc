@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 17:01:16 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/11 09:19:36 snj Exp $
 #
 
 DISTNAME=       less-381
@@ -12,7 +12,7 @@ HOMEPAGE=       http://www.greenwoodsoftware.com/less/
 COMMENT=	Pager similar to more and pg
 
 GNU_CONFIGURE=  	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
