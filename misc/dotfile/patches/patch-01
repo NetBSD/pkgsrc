@@ -1,0 +1,68 @@
+--- Makefile.in.orig	Fri Jan 31 13:10:25 1997
++++ Makefile.in	Thu Apr  3 19:02:57 1997
+@@ -15,7 +15,7 @@
+ bindir = $(exec_prefix)/bin
+ 
+ # Directory in which to install library files.
+-libdir = $(prefix)/lib/dotfile-$(version)
++libdir = $(prefix)/share/dotfile-$(version)
+ # Directory for the manual page
+ mandir = $(prefix)/man/man1
+ 
+@@ -23,7 +23,6 @@
+ SHELL = /bin/sh
+ 
+ ### Tell the user that there is nothing to be compiled.
+-.PHONY: nothing
+ nothing:
+ 	@echo "The Dotfile Generator does not contain any files which has to be compiled!"
+ 	@echo "On the other hand, during installation, all the modules need to be"
+@@ -32,10 +31,8 @@
+ #
+ # install all the files in the corect places.
+ #
+-.PHONY:	install
+ install: copydirs bytecompile
+ 
+-.PHONY: copydirs
+ copydirs:
+ 	$(SHELL) $(srcdir)/mkinstalldirs $(bindir) $(libdir) \
+ 	$(libdir)/Generator $(mandir)
+@@ -49,20 +46,18 @@
+ 	done
+ 	cp dotfile.1 $(mandir)
+ 	-@RM@ $(bindir)/dotfile
+-	-@LN@ -s $(bindir)/dotfile-$(version) $(bindir)/dotfile
++	-@LN@ -s dotfile-$(version) $(bindir)/dotfile
+ 	chmod 755 $(bindir)/dotfile
+ 	chmod 755 $(bindir)/dotfile-$(version)
+ 
+-.PHONY: bytecompile
+ bytecompile: $(MODULES)
+ 
+ #
+ # Targets that requre X (the modules using the fonts widget)
+ #
+-.PHONY fvwm1 fvwm2:
+ fvwm1 fvwm2:
+-	@if wish testwish; then \
+-	@WISH@ $(libdir)/Generator/dotfile.tcl $(libdir)/Generator $(libdir)/$@ bytecompile; \
++	@if $(WISH) testwish; then \
++	$(WISH) $(libdir)/Generator/dotfile.tcl $(libdir)/Generator $(libdir)/$@ bytecompile; \
+ 	else \
+ 	echo "An error should be shown above!"; \
+ 	echo "You need X to bytecompile the $@ module, do this manually after"; \
+@@ -72,13 +67,11 @@
+ #
+ # Targets that may bytecompile without X
+ #
+-.PHONY emacs tcsh rtin bash elm:
+ emacs tcsh rtin bash elm:
+ 	@@TCLSH@ $(libdir)/Generator/dotfile.tcl $(libdir)/Generator $(libdir)/$@ bytecompile
+ 
+ #
+ # Clean
+ #
+-.PHONY:	clean
+ clean :
+ 	@echo Nothing to do
