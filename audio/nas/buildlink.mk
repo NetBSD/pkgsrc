@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:11 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/14 13:40:41 jlam Exp $
 #
 # This Makefile fragment is included by packages that use nas.
 #
@@ -17,7 +17,7 @@ NAS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.nas?=	nas>=1.4
+BUILDLINK_DEPENDS.nas?=	nas>=1.4.2
 DEPENDS+=	${BUILDLINK_DEPENDS.nas}:../../audio/nas
 
 BUILDLINK_PREFIX.nas=	${X11PREFIX}
