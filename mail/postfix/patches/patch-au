@@ -1,9 +1,9 @@
-$NetBSD: patch-au,v 1.2 1999/09/12 00:14:53 simonb Exp $
+$NetBSD: patch-au,v 1.3 2000/04/27 01:05:07 kim Exp $
 
---- postconf/Makefile.orig	Sun May 30 18:49:13 1999
-+++ postconf/Makefile	Sun May 30 18:49:13 1999
+--- postconf/Makefile.orig	Wed Apr 26 20:25:55 2000
++++ postconf/Makefile	Wed Apr 26 20:39:03 2000
 @@ -0,0 +1,28 @@
-+#	$NetBSD: patch-au,v 1.2 1999/09/12 00:14:53 simonb Exp $
++#	$NetBSD: patch-au,v 1.3 2000/04/27 01:05:07 kim Exp $
 +.include "../conf/main.cf"
 +PROG=	postconf
 +BINDIR=${command_directory}
@@ -18,7 +18,7 @@ $NetBSD: patch-au,v 1.2 1999/09/12 00:14:53 simonb Exp $
 +CPPFLAGS+= -I${.OBJDIR}
 +
 +DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1

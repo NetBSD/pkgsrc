@@ -1,9 +1,9 @@
-$NetBSD: patch-bg,v 1.1 1999/05/30 18:18:33 tron Exp $
+$NetBSD: patch-bg,v 1.2 2000/04/27 01:05:09 kim Exp $
 
---- smtp/Makefile.orig	Sun May 30 18:49:14 1999
-+++ smtp/Makefile	Sun May 30 18:49:14 1999
+--- smtp/Makefile.orig	Wed Apr 26 20:25:56 2000
++++ smtp/Makefile	Wed Apr 26 20:40:05 2000
 @@ -0,0 +1,17 @@
-+#	$NetBSD: patch-bg,v 1.1 1999/05/30 18:18:33 tron Exp $
++#	$NetBSD: patch-bg,v 1.2 2000/04/27 01:05:09 kim Exp $
 +.include "../conf/main.cf"
 +PROG=	smtp
 +BINDIR=${daemon_directory}
@@ -14,7 +14,7 @@ $NetBSD: patch-bg,v 1.1 1999/05/30 18:18:33 tron Exp $
 +LIBS	= ../lib/libmaster.a ../lib/libglobal.a ../lib/libdns.a ../lib/libutil.a
 +
 +DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
-+LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1

@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1 1999/05/30 18:18:31 tron Exp $
+$NetBSD: patch-ad,v 1.2 2000/04/27 01:05:07 kim Exp $
 
---- cleanup/Makefile.orig	Sun May 30 18:49:12 1999
-+++ cleanup/Makefile	Sun May 30 18:49:12 1999
+--- cleanup/Makefile.orig	Wed Apr 26 20:25:53 2000
++++ cleanup/Makefile	Wed Apr 26 20:38:21 2000
 @@ -0,0 +1,18 @@
-+#	$NetBSD: patch-ad,v 1.1 1999/05/30 18:18:31 tron Exp $
++#	$NetBSD: patch-ad,v 1.2 2000/04/27 01:05:07 kim Exp $
 +.include "../conf/main.cf"
 +
 +PROG=	cleanup
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.1 1999/05/30 18:18:31 tron Exp $
 +	cleanup_out_recipient.c
 +
 +DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1

@@ -1,16 +1,16 @@
-$NetBSD: patch-av,v 1.3 2000/04/10 00:19:17 bad Exp $
+$NetBSD: patch-av,v 1.4 2000/04/27 01:05:07 kim Exp $
 
---- postdrop/Makefile.orig	Sun May 30 18:49:13 1999
-+++ postdrop/Makefile	Sun May 30 18:49:13 1999
+--- postdrop/Makefile.orig	Wed Apr 26 20:25:55 2000
++++ postdrop/Makefile	Wed Apr 26 20:39:09 2000
 @@ -0,0 +1,20 @@
-+#	$NetBSD: patch-av,v 1.3 2000/04/10 00:19:17 bad Exp $
++#	$NetBSD: patch-av,v 1.4 2000/04/27 01:05:07 kim Exp $
 +.include "../conf/main.cf"
 +
 +PROG=	postdrop
 +BINDIR=	${command_directory}
 +
 +DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1
