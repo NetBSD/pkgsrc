@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/08 02:36:23 snj Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/08 03:22:16 snj Exp $
 
 DISTNAME=		gtkglarea-1.2.2
 PKGREVISION=		4
@@ -12,11 +12,8 @@ COMMENT=		OpenGL/Mesa widget for GTK+ GUI toolkit
 USE_X11BASE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
-CONFIGURE_ARGS+=	--with-GL-prefix="${BUILDLINK_PREFIX.MesaLib}"
 CONFIGURE_ARGS+=	--with-lib-MesaGL
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
