@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.108 2002/11/26 07:20:21 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.109 2002/11/26 10:27:06 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -335,18 +335,21 @@ PATCH_FUZZ_FACTOR?= -F0
 # Possible: any Fortran compiler
 # Default: none
 
+.if ${OPSYS} == "SunOS"
+#IMAKE?=	${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+# Sun ONE Studio (formerly known as WorkShop and Forte) compliers can be used
+# with:
+#IMAKE?=	${X11BASE}/bin/imake
+# Possible: any path and valid flags
+# Default: ${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+.endif
+
 PRE_ROOT_CMD?=	${TRUE}
 # Command to be run by normal user, just before becoming root (see
 # SU_CMD) to install the package.  For example, "chmod -R o+w ${WRKDIR}"
 # would allow others to write and modify files below ${WRKDIR}.
 # Possible: any shell commands
 # Default: none
-
-#SAWFISH_THEMES=
-# Specifies the DISTFILES for wm/sawfish-themes, to allow the user to choose
-# which themes to install
-# Possible: empty, any number of theme-name-[0-9]*.*.tar.gz
-# Default: Set to include about 180 themes available on themes.freshmeat.net
 
 SU_CMD?= ${ROOT_CMD}
 # Command to perform before "make install", if the user does not have
@@ -1326,6 +1329,12 @@ RPM_DB_PREFIX?=	/var/pkg
 # databases.  The RPM databases are stored in ${RPM_DB_PREFIX}/lib/rpm.
 # Possible: any valid location, e.g. ${LOCALBASE}
 # Default: /var/pkg
+
+#SAWFISH_THEMES=
+# Specifies the DISTFILES for wm/sawfish-themes, to allow the user to choose
+# which themes to install
+# Possible: empty, any number of theme-name-[0-9]*.*.tar.gz
+# Default: Set to include about 180 themes available on themes.freshmeat.net
 
 #SDL_USE_NAS=
 # Used in SDL package to enable use of the network audio system
