@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/26 22:43:57 jtb Exp $
+
+--- configure.orig	Wed Nov 17 20:09:38 1999
++++ configure
+@@ -1154,14 +1154,14 @@
+ # Uncomment the configuration options your package needs.
+ 
+     # -O is necessary to get inlining
+-    OPTIMIZE=""
+-    CFLAGS=${CFLAGS:-""}
+-    CXXFLAGS=${CXXFLAGS:-$CFLAGS}
+-    LDFLAGS=${LDFLAGS:-""}
+-    checking_b=yes
++#      OPTIMIZE=""
++#      CFLAGS=${CFLAGS:-""}
++#      CXXFLAGS=${CXXFLAGS:-$CFLAGS}
++#      LDFLAGS=${LDFLAGS:-""}
++    checking_b=no
+     optimise_b=no
+     profile_b=no
+-    debug_b=yes
++    debug_b=no
+ 
+     # Check whether --enable-checking or --disable-checking was given.
+ if test "${enable_checking+set}" = set; then
