@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:54 hubertf Exp $
 # New ports collection makefile for:    top
 # Version required:     3.5beta6
 # Date created:         25 Sep 1994
 # Whom:                 swallace
 #
+# $NetBSD: Makefile,v 1.5 1998/01/24 23:34:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
