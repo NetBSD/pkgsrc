@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/04/10 20:22:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/04/10 20:23:18 jlam Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1051,8 +1051,8 @@ share/pixmaps/vnterm.xpm
 @dirrm share/pixmaps/mailcheck
 @dirrm share/pixmaps/fish
 @dirrm share/omf/gnome-core
-@unexec ${RMDIR} share/mc/templates 2>/dev/null || true
-@unexec ${RMDIR} share/mc 2>/dev/null || true
+@unexec ${RMDIR} share/mc/templates 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} share/mc 2>/dev/null || ${TRUE}
 @dirrm share/gnome/panel
 @dirrm share/gnome/html/panel
 @dirrm share/gnome/hints
@@ -1253,18 +1253,18 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/clock_applet/C/figures
 @dirrm share/gnome/help/clock_applet/C
 @dirrm share/gnome/help/clock_applet
-@unexec ${RMDIR} %D/share/gnome/apps/Utilities 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/System 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Settings/Session 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Settings/Desktop 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Settings 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Multimedia 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Games 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Development 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Utilities 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/System 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Settings/Session 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Settings/Desktop 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Settings 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Multimedia 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Games 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Development 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
 @dirrm share/gnome-terminal/glade
 @dirrm share/gnome-terminal
 @dirrm share/gnome-about
@@ -1276,7 +1276,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/applets/Amusements
 @dirrm share/applets
 @exec ${MKDIR} %D/etc/gnome/panel-config/panel.d/default
-@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default 2>/dev/null || true
-@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d 2>/dev/null || true
-@unexec ${RMDIR} %D/etc/gnome/panel-config 2>/dev/null || true
-@unexec ${RMDIR} %D/etc/gnome 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome/panel-config 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome 2>/dev/null || ${TRUE}
