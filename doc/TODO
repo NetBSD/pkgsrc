@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.295 2003/02/21 12:55:24 mycroft Exp $
+$NetBSD: TODO,v 1.296 2003/02/21 13:14:10 grant Exp $
 
 Suggested new packages
 ======================
@@ -305,6 +305,15 @@ Suggested pkgsrc enhancements
 
 	o Man page handling in PLIST for pkgs which install catman or
 	  man pages depending on OS (typically imake).
+
+Suggested other platform enhancements
+=====================================
+
+	o platform independent bulk build infrastructure
+
+	o Solaris
+	  o add implicit gpatch BUILD_DEPENDS if gpatch is not
+	    available
 
 Suggested cleanups in pkgsrc
 ============================
