@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/08 23:16:00 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/11/15 00:04:08 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 PKGREVISION?=	1
@@ -39,5 +39,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.txt	\
 		${DOCDIR}/README.sharedfolders
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
