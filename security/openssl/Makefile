@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/04/05 14:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2001/04/09 02:36:47 fredb Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -10,10 +10,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
 COMMENT=		Secure Socket Layer and cryptographic library
 
+BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
+
 CONFLICTS=		SSLeay-* ssleay-* base64-*
 
 CRYPTO=			YES
-USE_PERL5=		YES
 
 # supplies IDEA/RC5
 LICENCE=		fee-based-commercial-use
