@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/12/12 22:33:36 jmmv Exp $
+$NetBSD: patch-aa,v 1.6 2004/09/28 15:59:49 wiz Exp $
 
---- Makefile.in.orig	2003-12-10 17:45:44.000000000 +0100
+--- Makefile.in.orig	2004-09-13 16:20:00.000000000 +0200
 +++ Makefile.in
-@@ -77,12 +77,11 @@ NO_RECURSE = @NO_RECURSE@
+@@ -78,12 +78,11 @@ NO_RECURSE = @NO_RECURSE@
  EBCDIC = @EBCDIC@
  
  INSTALL = @INSTALL@
