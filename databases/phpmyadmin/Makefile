@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/12/14 00:07:17 tron Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/14 20:38:46 adrianp Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,16 +18,19 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
 		PMDIR=${PMDIR} EXDIR=${EXDIR}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.6.0-pl2
+DIST_VERSION=	2.6.1-rc1
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
 
+APACHE_USER?=	www
 EXDIR=		${PREFIX}/share/examples/phpmyadmin
 PMCONFFILE=	${PKG_SYSCONFDIR}/config.inc.php
 PMDIR=		${PREFIX}/share/phpmyadmin
 NO_BUILDLINK=	YES
 CONF_FILES=	${EXDIR}/config.inc.php ${PKG_SYSCONFDIR}/config.inc.php
+SPECIAL_PERMS=	${PKG_SYSCONFDIR}/config.inc.php ${APACHE_USER} wheel 0600
+BUILD_DEFS+=	APACHE_USER
 
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR?=	phpmyadmin
@@ -69,6 +71,7 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/Documentation.html ${PMDIR}
 	${INSTALL_DATA} ${WRKSRC}/translators.html ${PMDIR}
+	${INSTALL_DATA}	${WRKSRC}/ChangeLog ${PMDIR}
 
 	for dir in ${INSTALL_DIRS}; do					\
 		for file in "${WRKSRC}/$$dir"/*; do			\
