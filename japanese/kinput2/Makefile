@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/03 04:11:07 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/09/08 09:02:55 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -10,6 +10,8 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
 USE_IMAKE=	YES
 
+PLIST_SRC=	${PKGDIR}/PLIST-common
+
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_CANNA) && ${USE_CANNA} != YES &&	\
     defined(USE_WNN4) && ${USE_WNN4} != YES &&		\
@@ -20,7 +22,7 @@ IGNORE=	"is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are \"NO\""
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
 DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
-KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include/canna \
+KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include \
 		-Dport_CANNALIB="${LDFLAGS} -lcanna16"
 .endif
 
@@ -33,12 +35,14 @@ KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include/canna \
 DEPENDS+=	ja-FreeWnn-lib-1.10:../../japanese/freewnn-lib
 KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${LOCALBASE}/include/wnn \
 		-Dport_WNNLIB="${LDFLAGS} -lwnn -lcrypt"
+PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
 .endif
 
 .if !defined(USE_SJ3) || ${USE_SJ3} == YES
 DEPENDS+=	sj3-lib-2.0.1.20:../../japanese/sj3-lib
 KINPUT2_DEF+=	-DUseSj3 -Dport_SJ3SRC=${LOCALBASE}/include \
 		-Dport_SJ3LIB="${LDFLAGS} -lsj3lib"
+PLIST_SRC+=	${PKGDIR}/PLIST-sj3
 .endif
 
 MAKE_ENV+=	PORT_IMAKE_DEFINES='${KINPUT2_DEF}'
