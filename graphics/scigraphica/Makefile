@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/09/21 15:10:26 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/09/24 15:31:44 jlam Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -18,6 +18,10 @@ USE_GNU_READLINE=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-gnome
+CONFIGURE_ARGS+=	--with-readline-include-path=${BUILDLINK_PREFIX.readline}/include
+CONFIGURE_ARGS+=	--with-readline-path=${BUILDLINK_PREFIX.readline}/lib
+CONFIGURE_ARGS+=	--with-termcap-include-path=${BUILDLINK_PREFIX.readline}/include
+CONFIGURE_ARGS+=	--with-termcap-path=${BUILDLINK_PREFIX.readline}/lib
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN}
 
 USE_LIBTOOL=		YES
