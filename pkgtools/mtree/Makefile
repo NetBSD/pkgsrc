@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/11 02:01:55 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/14 02:33:32 jlam Exp $
 #
 
 DISTNAME=		mtree-20031220
@@ -20,10 +20,17 @@ NO_PKG_REGISTER=        # defined
 NO_PACKAGE=             Deinstallation is not permitted
 PKG_PRESERVE=           # defined
 
+.include "../../mk/bsd.prefs.mk"
+
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
-.include "../../pkgtools/libnbcompat/buildlink3.mk"
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
+.  include "../../pkgtools/libnbcompat/inplace.mk"
+.else
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
