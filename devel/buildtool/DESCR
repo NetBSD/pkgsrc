@@ -1,0 +1,6 @@
+Buildtool is a set of helper tools designed to make easy to
+configure source packages and build them, also making them more
+portable.
+
+Buildtool can be tought as the BSD replacement of GNU automake,
+autoconf and libtool.
