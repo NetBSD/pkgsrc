@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 19:21:39 kei Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/25 14:06:54 salo Exp $
 #
 
 DISTNAME=	xpdf-greek
-PKGNAME=	${DISTNAME}-20020521
+PKGNAME=	${DISTNAME}-20020213
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -10,23 +10,24 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Greek
 
-DEPENDS+=	xpdf>=1.00:../../print/xpdf
+DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_X11BASE=	yes
+USE_X11=	yes
+USE_PKGINSTALL=	yes
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
-	${SED} -e 's:/usr/local:'${X11PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
+	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
 
 do-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/greek
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/greek
 	${INSTALL_DATA} ${WRKSRC}/ISO-8859-7.unicodeMap \
-		${X11PREFIX}/share/xpdf/greek
+		${PREFIX}/share/xpdf/greek
 
 post-install:
 	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${PKG_SYSCONFDIR}/xpdfrc
