@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2005/02/27 11:48:57 markd Exp $
+# $NetBSD: Makefile,v 1.47 2005/03/23 22:26:26 markd Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	4
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
@@ -12,6 +11,8 @@ USE_DIRS+=		xdg-1.1
 
 BUILDLINK_DEPENDS.lcms=	lcms>=1.12
 
+REPLACE_PERL=	kghostview/update-to-xt-names.pl
+
 CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
 
 # Ensure we export symbols in the linked shared object.
@@ -20,10 +21,11 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
