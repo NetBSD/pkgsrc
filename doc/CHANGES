@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9441 2005/03/06 15:23:36 chris Exp $
+$NetBSD: CHANGES,v 1.9442 2005/03/06 15:47:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb1 [taca 2005-03-06]
 	Updated imap-uw-utils to 20050108 [adrianp 2005-03-06]
 	Updated sylpheed to 1.0.3 [chris 2005-03-06]
+	Updated flim to 1.14.7 [minsskim 2005-03-06]
