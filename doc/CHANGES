@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3661 2003/10/07 08:49:52 is Exp $
+$NetBSD: CHANGES,v 1.3662 2003/10/07 18:30:54 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4121,3 +4121,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ns to 2.26nb1 [jlam 2003-10-06]
 	Updated ruby-opengl to 0.32.3 [taca 2003-10-06]
 	Updated mini_sendmail to 1.3.2nb4 [is 2003-10-07]
+	Updated glimmer to 2.12 [jschauma 2003-10-07]
