@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/06/01 11:23:14 rh Exp $
+# $NetBSD: Makefile,v 1.18 2000/06/21 03:37:22 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -14,8 +14,8 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=	gsm-1.0.10:../../audio/gsm
 DEPENDS+=	rx-1.5:../../devel/rx
 
-USE_PKGLIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	# defined
+GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	RPLAY_TARGET=generic	# XXX generic, or oss, or sun?
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
