@@ -1,43 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/kchartEngine_ComputeSize.cc.orig	Thu Aug 31 20:15:42 2000
-+++ kchart/kchartEngine_ComputeSize.cc
-@@ -60,7 +60,7 @@
- 
-   if( params->xaxis && params->hasxlabel )
-         {
--          int biggest     = -MAXINT;
-+          int biggest     = -INT_MAX;
-           unsigned int len = 0;
-           for( int i=0; i<num_points; ++i )
-                 {
-@@ -130,7 +130,7 @@
-     //    params->requested_yinterval = 1.0;
- 
-     /* gotta go through the above loop to catch the 'tweeners :-| */
--    ylbl_interval = params->requested_yinterval != -MAXDOUBLE &&
-+    ylbl_interval = params->requested_yinterval != -DBL_MAX &&
-       params->requested_yinterval > ypoints[jumpout_value-1] ?
-       params->requested_yinterval:
-       ypoints[jumpout_value-1];
-@@ -180,7 +180,7 @@
-           } while( tmp_highest <= highest); // BL.
- 
-     ylabel_wth = longest_ylblen * params->yAxisFontWidth();
--    highest = params->requested_ymax==-MAXDOUBLE? tmp_highest:
-+    highest = params->requested_ymax==-DBL_MAX? tmp_highest:
-       QMAX( params->requested_ymax, highest );
- 
-     if( params->do_vol() ) {
-@@ -381,9 +381,9 @@
-     else if( lowest > 0.0 )// negs should be drawn from 0
-       lowest = 0.0;
- 
--  if( params->requested_ymin != -MAXDOUBLE && params->requested_ymin < lowest )
-+  if( params->requested_ymin != -DBL_MAX && params->requested_ymin < lowest )
-     lowest = params->requested_ymin;
--  if( params->requested_ymax != -MAXDOUBLE && params->requested_ymax > highest )
-+  if( params->requested_ymax != -DBL_MAX && params->requested_ymax > highest )
-     highest = params->requested_ymax;
- 
-   kdDebug(35001) << "done requested_* computation" << endl;
+--- kchart/kdchart/Makefile.in.orig	Thu Aug 23 00:49:07 2001
++++ kchart/kdchart/Makefile.in
+@@ -95,7 +95,7 @@
+ JAVAH = @JAVAH@
+ JVMLIBS = @JVMLIBS@
+ KDECONFIG = @KDECONFIG@
+-KDE_CXXFLAGS = @KDE_CXXFLAGS@
++KDE_CXXFLAGS = @KDE_CXXFLAGS@ $(OPTIMIZATION_BUG_CXXFLAGS)
+ KDE_EXTRA_RPATH = @KDE_EXTRA_RPATH@
+ KDE_INCLUDES = @KDE_INCLUDES@
+ KDE_LDFLAGS = @KDE_LDFLAGS@

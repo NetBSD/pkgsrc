@@ -1,22 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-af,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/kchartEngine_Grids.cc.orig	Thu Aug 31 20:15:42 2000
-+++ kchart/kchartEngine_Grids.cc
-@@ -374,7 +374,7 @@
-         return;
+--- kformula/pics/Makefile.in.orig	Thu Aug 23 00:49:07 2001
++++ kformula/pics/Makefile.in
+@@ -222,7 +222,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
  
-   /* each xlbl + avg due to num_lf_xlbls */
--  int neededspace = ( (params->xlabel_spacing==MAXSHORT?0:params->xlabel_spacing)+params->xAxisFontHeight() +
-+  int neededspace = ( (params->xlabel_spacing==SHRT_MAX?0:params->xlabel_spacing)+params->xAxisFontHeight() +
-                                           (num_lf_xlbls*(params->xAxisFontHeight()-1))/num_points );
-   ASSERT( neededspace );
-   int num_xlbls = /* maximum x lables that'll fit */
-@@ -388,7 +388,7 @@
-   for(int i=0; i<num_points+(params->do_bar()?2:0); ++i ) {
-         if( (i%(1+num_points/num_xlbls) == 0) ||   // labels are regulated
-                 (num_xlbls >= num_points)         ||
--                params->xlabel_spacing == MAXSHORT ) {
-+                params->xlabel_spacing == SHRT_MAX ) {
-           int xi = params->do_bar()? i-1: i;
+-datadir = $(prefix)/share/apps/kformula/pics
++datadir = $(kde_datadir)/kformula/pics
  
-           if( params->grid ) {
+ data_DATA = kformula2-1.png mini-symbols.png enlarge.png     kformula2-2.png mini-frac.png mini-vspace.png frac-vline.png     kformula2-3.png mini-integral.png mini-xy.png kformula1-0.png     kformula3-2.png mini-root.png reduce.png kformula2-0.png     mini-bra.png mini-rootindex.png reduceall.png greek.png enlargeall.png     enlargenext.png par1.xbm par2.xbm par3.xbm index0.png index1.png index2.png     index3.png index.png indexsw.png nextsw.png childrensw.png elementsw.png     split.png matrix.png Ilower.png Ihigher.png upalign.png downalign.png midalign.png     midline.png delimiter.png insrow.png inscol.png remrow.png remcol.png rootindex.png     bold.png italic.png underl.png near.png far.png leftalign.png rightalign.png centralign.png     pixmap.png Slower.png Shigher.png
+ 

@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/enginepie.cc.orig	Fri Oct 13 15:08:28 2000
-+++ kchart/enginepie.cc
-@@ -701,7 +701,7 @@
-                                
- 		if( !params->legend[i].isNull() )
- 		  {
--		    QRect br = QFontMetrics( params->labelFont() ).boundingRect( 0, 0, MAXINT, MAXINT, slice_angle[i][0] <= M_PI ?
-+		    QRect br = QFontMetrics( params->labelFont() ).boundingRect( 0, 0, INT_MAX, INT_MAX, slice_angle[i][0] <= M_PI ?
- 										 Qt::AlignLeft : Qt::AlignRight, params->legend[i] );
- 		    p->setPen( LineColor);
- 		    p->setFont( params->labelFont() );
+--- kchart/kdchart/KDChartData.h.orig	Mon Jun 25 10:44:29 2001
++++ kchart/kdchart/KDChartData.h
+@@ -27,7 +27,7 @@
+ 
+ #include <qstring.h>
+ #include <qdatetime.h>
+-#ifdef unix
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <values.h>
+ #else
+ #include <float.h>

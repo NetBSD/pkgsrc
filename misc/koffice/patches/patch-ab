@@ -1,33 +1,89 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/enginedraw.cc.orig	Sat Aug 26 10:53:37 2000
-+++ kchart/enginedraw.cc
-@@ -73,7 +73,7 @@
- // %d, %d, %d,\nshadow color 0 = %d, %d, %d,\ncolor 1 = %d, %d, %d,\nshadow color 1 = %d, %d, %d", clr[0].red(), clr[0].green(), clr[0].blue(), clrshd[0].red(), clrshd[0].green(), clrshd[0].blue(), clr[1].red(), clr[1].green(), clr[1].blue(), clrshd[1].red(), clrshd[1].green(), clrshd[1].blue() );
+--- filters/kspread/qpro/libqpro/src/formula.cc.orig	Wed Jun 27 04:43:31 2001
++++ filters/kspread/qpro/libqpro/src/formula.cc
+@@ -320,6 +320,84 @@
+ }
  
- #define F(x,i)  (int)( (float)((x)-x1)*slope[i]+(float)y1[i] )
--    float depth_slope  = xdepth==0? MAXFLOAT: (float)ydepth/(float)xdepth;
-+    float depth_slope  = xdepth==0? FLT_MAX: (float)ydepth/(float)xdepth;
-     float *slope = new float[num_sets];
-     int *lnclr = new int[num_sets];
-     int *shclr = new int[num_sets];
-@@ -85,7 +85,7 @@
-     for( i=0; i<num_sets; ++i ) {
-         // lnclr[i] = clr[i];
-         // shclr[i] = clrshd[i];
--        slope[i] = x2==x1? MAXFLOAT: (float)(y2[i]-y1[i])/(float)(x2-x1);
-+        slope[i] = x2==x1? FLT_MAX: (float)(y2[i]-y1[i])/(float)(x2-x1);
-     }
- 
-     for( x=x1+1; x<=x2; ++x ) {
-@@ -146,8 +146,8 @@
- 
-     if( xdepth || ydepth )
-         {
--        float line_slope = x2==x1?    MAXFLOAT: (float)-(y2-y1) / (float)(x2-x1);
--        float depth_slope  = xdepth==0? MAXFLOAT: (float)ydepth/(float)xdepth;
-+        float line_slope = x2==x1?    FLT_MAX: (float)-(y2-y1) / (float)(x2-x1);
-+        float depth_slope  = xdepth==0? FLT_MAX: (float)ydepth/(float)xdepth;
-         y_intercept = (y1 > y0 && y2 < y0) ||                                           // line crosses y0
-                 (y1 < y0 && y2 > y0)?
-                         (int)((1.0/ABS(line_slope))*(float)(ABS(y1-y0)))+x1:0;                                                                          // never
+ void
++QpFormula::binaryOperand(QpFormula& pThis, const char* pOper)
++{
++    pThis.binaryOperandReal(pOper);
++}
++
++void
++QpFormula::floatFunc(QpFormula& pThis, const char* pFunc)
++{
++    pThis.floatFuncReal(pFunc);
++}
++
++void
++QpFormula::absKludge(QpFormula& pThis, const char* pFunc)
++{
++    pThis.absKludgeReal(pFunc);
++}
++
++void
++QpFormula::func0(QpFormula& pThis, const char* pFunc)
++{
++    pThis.func0Real(pFunc);
++}
++
++void
++QpFormula::func1(QpFormula& pThis, const char* pFunc)
++{
++    pThis.func1Real(pFunc);
++}
++
++void
++QpFormula::func2(QpFormula& pThis, const char* pFunc)
++{
++    pThis.func2Real(pFunc);
++}
++
++void
++QpFormula::func3(QpFormula& pThis, const char* pFunc)
++{
++    pThis.func3Real(pFunc);
++}
++
++void
++QpFormula::func4(QpFormula& pThis, const char* pFunc)
++{
++    pThis.func4Real(pFunc);
++}
++
++void
++QpFormula::funcV(QpFormula& pThis, const char* pFunc)
++{
++    pThis.funcVReal(pFunc);
++}
++
++void
++QpFormula::intFunc(QpFormula& pThis, const char* pFunc)
++{
++    pThis.intFuncReal(pFunc);
++}
++
++void
++QpFormula::ref(QpFormula& pThis, const char* pFunc)
++{
++    pThis.refReal(pFunc);
++}
++
++void
++QpFormula::stringFunc(QpFormula& pThis, const char* pFunc)
++{
++    pThis.stringFuncReal(pFunc);
++}
++
++void
++QpFormula::unaryOperand(QpFormula& pThis, const char* pOper)
++{
++    pThis.unaryOperandReal(pOper);
++}
++
++void
+ QpFormula::argSeparator(const char* pArg)
+ {
+    delete [] cArgSeparator;
