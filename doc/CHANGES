@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1173 2003/01/20 09:57:29 salo Exp $
+$NetBSD: CHANGES,v 1.1174 2003/01/20 19:04:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -341,3 +341,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mencoder to 0.90rc3 [fredb 2003-01-20]
 	Updated grepmail to 4.91 [wiz 2003-01-20]
 	Updated aspell-slovak to 0.50.3.1.1 [salo 2003-01-20]
+	Updated p5-Text-CSV-Hash to 0.17 [abs 2003-01-20]
