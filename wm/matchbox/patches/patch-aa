@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/08/01 15:53:46 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/23 23:23:27 jlam Exp $
 
 --- util/Makefile.in.orig	Thu Aug  1 16:22:33 2002
 +++ util/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/01 15:53:46 wiz Exp $
  am_minivol_OBJECTS = minivol.$(OBJEXT) tray.$(OBJEXT)
  minivol_OBJECTS = $(am_minivol_OBJECTS)
 -minivol_LDADD = $(LDADD)
-+minivol_LDADD = $(LDADD) -lossaudio
++minivol_LDADD = $(LDADD) $(LIBOSSAUDIO)
  minivol_DEPENDENCIES =
  minivol_LDFLAGS =
  am_miniwave_OBJECTS = miniwave.$(OBJEXT) tray.$(OBJEXT)

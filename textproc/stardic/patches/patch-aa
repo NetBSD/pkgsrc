@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/15 09:21:43 shell Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/23 23:30:26 jlam Exp $
 
 --- makefile.orig	Sat Jan 29 12:07:34 2000
 +++ makefile
@@ -10,14 +10,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/15 09:21:43 shell Exp $
  
  # for linux
 -LDFLAGS= -L/usr/X11/lib -lXm -lXt -lXext -lX11
-+LDFLAGS+= -L/usr/X11/lib -lXm -lXt -lXext -lX11
++LDFLAGS+= -L${X11BASE}/lib -lXm -lXt -lXext -lX11
  
  # for solaris
  # LDFLAGS= -lXm -lXt -lXext -lX11
  
  # for linux
 -CPPFLAGS= -I/usr/X11/include
-+CPPFLAGS+= -I/usr/X11/include -DTRANSHOME=\"$(TRANSDIR)\"
++CPPFLAGS+= -I${X11BASE}/include -DTRANSHOME=\"$(TRANSDIR)\"
  
  # for solaris
  #CPPFLAGS= -I/usr/dt/include -I/usr/openwin/include

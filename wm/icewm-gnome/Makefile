@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2002/08/22 10:58:40 martti Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/23 23:24:24 jlam Exp $
 
-PKGNAME=		${DISTNAME:S/-/-gnome-/}
-COMMENT=		Small, fast and light-weight window manager (GNOME version)
+PKGNAME=	${DISTNAME:S/-/-gnome-/}
+COMMENT=	Small, fast and light-weight window manager (GNOME version)
 
-CONFLICTS+=		icewm-[0-9]*
+CONFLICTS+=	icewm-[0-9]*
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 .include "../icewm/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-gnome-menus="${GNOME_CONFIG}"
 CONFIGURE_ARGS+=	--with-imlib
 
 pre-configure:
@@ -18,6 +17,5 @@ pre-configure:
 	${SED} 's/XIV(bool, autoDetectGnome,			false)/XIV(bool, autoDetectGnome,			true)/' \
 		< src/default.h.orig > src/default.h
 
-.include "../../x11/gnome-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
