@@ -1,0 +1,81 @@
+bin/lpq
+bin/lprm
+bin/lpr
+bin/lpc
+sbin/lpd
+sbin/lpf
+sbin/lpbanner
+bin/checkpc
+bin/lpraccnt
+sbin/readfilecount
+sbin/removeoneline
+sbin/authenticate_pgp
+sbin/setupauth
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial.ps
+share/doc/LPRng/LPRng_DOC-3.5.6/Makefile
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.02.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Makefile
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.01.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.05.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.06.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.03.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.07.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.04.nrf
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.txt
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial/Tutorial.ps
+share/doc/LPRng/LPRng_DOC-3.5.6/README
+share/doc/LPRng/LPRng_DOC-3.5.6/Macros/using.tmac.usenix
+share/doc/LPRng/LPRng_DOC-3.5.6/Macros/tmac.usenix
+share/doc/LPRng/LPRng_DOC-3.5.6/Macros/Makefile
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro.txt
+share/doc/LPRng/LPRng_DOC-3.5.6/bg.gif
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro.ps
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO.ps
+share/doc/LPRng/LPRng_DOC-3.5.6/Using_stty.txt
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f4
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f5
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f8
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f8a
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f8b
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f8c
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f9
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.nroff
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Makefile
+share/doc/LPRng/LPRng_DOC-3.5.6/Intro/Intro.f2
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-LISA95.ps
+share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial.txt
+share/doc/LPRng/LPRng_DOC-3.5.6/rfc1179.txt
+share/doc/LPRng/LPRng_DOC-3.5.6/LISA97/slides/P01PrintingLISA97.ppt
+share/doc/LPRng/LPRng_DOC-3.5.6/LISA97/slides/P01PrintingLISA97.ps.2up
+share/doc/LPRng/LPRng_DOC-3.5.6/LISA97/README
+share/doc/LPRng/LPRng_DOC-3.5.6/LISA97/COPYRIGHT
+share/doc/LPRng/LPRng_DOC-3.5.6/README.solaris
+share/doc/LPRng/LPRng_DOC-3.5.6/UPDATE
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-1.html
+share/doc/LPRng/LPRng_DOC-3.5.6/star1.gif
+share/doc/LPRng/LPRng_DOC-3.5.6/lprng.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-9.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-8.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-7.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-6.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-5.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-4.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-3.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-2.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-15.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-14.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-13.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-12.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-11.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO-10.html
+share/doc/LPRng/LPRng_DOC-3.5.6/LPRng-HOWTO.dvi
+etc/rc.d/lprng.sh
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6/LISA97/slides
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6/LISA97
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6/Macros
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6/Intro
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6/Tutorial
+@dirrm share/doc/LPRng/LPRng_DOC-3.5.6
+@dirrm share/doc/LPRng
