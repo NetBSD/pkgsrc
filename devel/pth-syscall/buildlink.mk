@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/05/29 08:19:58 skrll Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/07/18 11:22:01 agc Exp $
 #
 # This Makefile fragment is included by packages that use pth-syscall.
 #
@@ -20,8 +20,9 @@ PTH_SYSCALL_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.pth-syscall?=	pth-syscall>=1.4.1
 DEPENDS+=		${BUILDLINK_DEPENDS.pth-syscall}:../../devel/pth-syscall
 
-EVAL_PREFIX+=		BUILDLINK_PREFIX.pth-syscall=pth-syscall
-BUILDLINK_PREFIX.pth-syscall_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		PTH_SYSCALL_PREFIX=pth-syscall
+PTH_SYSCALL_PREFIX_DEFAULT=	${LOCALBASE}
+BUILDLINK_PREFIX.pth-syscall=	${PTH_SYSCALL_PREFIX}/pth-syscall
 BUILDLINK_FILES.pth-syscall=	include/pth.h
 BUILDLINK_FILES.pth-syscall+=	include/pthread.h
 BUILDLINK_FILES.pth-syscall+=	lib/libpth.*
@@ -41,6 +42,8 @@ BUILDLINK_CONFIG.pth-syscall-pthread=		${BUILDLINK_PREFIX.pth-syscall}/bin/pthre
 BUILDLINK_CONFIG_WRAPPER.pth-syscall-pthread=	${BUILDLINK_DIR}/bin/pthread-config
 REPLACE_BUILDLINK_SED+=	\
 	-e "s|${BUILDLINK_CONFIG_WRAPPER.pth-syscall-pthread}|${BUILDLINK_CONFIG.pth-syscall-pthread}|g"
+
+LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.pth-syscall}/lib
 
 .if defined(USE_CONFIG_WRAPPER)
 PTH_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.pth-syscall}
