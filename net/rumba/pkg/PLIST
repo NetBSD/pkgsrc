@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 1998/08/25 15:52:02 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/05/17 22:29:39 tron Exp $
 sbin/rumba
 sbin/unrumba
 man/man8/rumba.8
-share/doc/README.rumba
+share/doc/rumba/README
+@dirrm share/doc/rumba
