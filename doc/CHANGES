@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8836 2005/01/20 18:05:43 cube Exp $
+$NetBSD: CHANGES,v 1.8837 2005/01/20 18:10:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jabberd2 to 2.0s6 [xtraeme 2005-01-20]
 	Added cawf-4.10 [tv 2005-01-20]
 	Added netbsd-tap-20050120 [cube 2004-01-20]
+	Added libnet-1.1.2.1 [adrianp 2005-01-20]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2939 2005/01/20 15:10:35 xtraeme Exp $
+$NetBSD: TODO,v 1.2940 2005/01/20 18:10:05 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -626,7 +626,6 @@ Suggested package updates
 	o libksba-0.9.9
 	o liblive-2004.12.29
 	o libmpeg3-1.5.4
-	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
 	o libopendaap-0.2.3
 	o libpqxx-2.4.2
