@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/24 10:32:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/05 18:31:59 seb Exp $
 bin/chicken
 bin/chicken-config
 bin/chicken-profile
@@ -7,15 +7,6 @@ bin/chicken-static
 bin/csc
 bin/csi
 bin/csi-static
-bin/rcsi
-bin/rcsi-static
-bin/scheme-chicken
-bin/scheme-chicken-hygienic
-bin/scheme-ieee-1178-1990
-bin/scheme-r4rs
-bin/scheme-r5rs
-bin/scheme-srfi-0
-bin/scheme-srfi-7
 include/c_defaults.h
 include/chicken-config.h
 include/chicken.h
@@ -50,6 +41,8 @@ lib/libustuffed-chicken.so
 lib/libustuffed-chicken.so.0
 lib/libustuffed-chicken.so.0.0
 man/man1/chicken-config.1
+man/man1/chicken-profile.1
+man/man1/chicken-setup.1
 man/man1/chicken.1
 man/man1/csc.1
 man/man1/csi.1
@@ -73,7 +66,7 @@ share/doc/chicken/README
 share/doc/chicken/chicken.html
 share/doc/chicken/chicken.pdf
 share/doc/chicken/format.txt
-@exec ${MKDIR} %D/lib/chicken
-@dirrm lib/chicken
 @dirrm share/doc/chicken
 @dirrm share/chicken
+@exec ${MKDIR} %D/lib/chicken
+@dirrm lib/chicken
