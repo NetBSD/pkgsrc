@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/11/03 01:05:06 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	# Rebuild the ls-R database after removing files from the teTeX tree.
+	#
+	mktexlsr
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
