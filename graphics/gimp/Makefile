@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2002/02/05 09:00:00 martti Exp $
+# $NetBSD: Makefile,v 1.77 2002/02/07 07:47:15 martti Exp $
 
 DISTNAME=		gimp-1.2.2
 PKGREVISION=		1
@@ -69,9 +69,6 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/mpeg-lib/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
