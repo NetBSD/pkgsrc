@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2002/02/19 05:30:39 jmc Exp $
 
---- Makefile.orig	Wed Feb 28 21:29:58 2001
-+++ Makefile
+--- Makefile.orig	Wed Feb 28 20:29:58 2001
++++ Makefile	Tue Feb 19 05:18:10 2002
 @@ -1,13 +1,13 @@
 -ZSNESFX=1
 -ZSNESC4=1
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  
  ifdef ZSNESFX
  FXOBJ=i386/fxemu2b.o i386/fxemu2.o i386/fxemu2c.o i386/fxtable.o i386/sfxproc.o i386/zsnes.o
-@@ -33,7 +33,10 @@
+@@ -33,13 +33,19 @@
  C4NO_DEPENDS=zsnes_c4
  endif
  
@@ -33,7 +33,17 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  
  ifdef SPC700ASM
  SOUNDOBJ=spctool/spc700.o spctool/dsp.o spctool.o spctool/soundmod.o spc.o
-@@ -82,8 +85,8 @@
+ SOUNDDEFINES=-DSPCTOOL
+ else
+-SOUNDOBJ=spc700.o soundux.o apu.o i386/spc.o
++SOUNDOBJ=spc700.o soundux.o apu.o
++ifdef USING_I386
++SOUNDOBJ+=i386/spc.o
++endif
+ SOUNDDEFINES=-DSPC700_C
+ endif
+ 
+@@ -82,8 +88,8 @@
  endif
  
  ifdef THREAD_SOUND
@@ -44,7 +54,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  endif
  
  ifdef GLIDE
-@@ -102,9 +105,13 @@
+@@ -102,9 +108,13 @@
  CC = gcc
  NASM = nasm
  
@@ -60,7 +70,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  
  #OPTIMISE=-g -fno-exceptions
  #-DMITSHM 
-@@ -113,7 +120,6 @@
+@@ -113,7 +123,6 @@
  -Ii386 \
  -I. \
  -Iunzip \
@@ -68,7 +78,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  -DZLIB \
  -DVAR_CYCLES \
  -DDEBUGGER \
-@@ -141,9 +147,9 @@
+@@ -141,9 +150,9 @@
  CFLAGS=$(CCFLAGS)
  
  .SUFFIXES: .o .cpp .c .cc .h .m .i .S .asm .obj
@@ -80,7 +90,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  
  #ggisnes9x
  #xf86snes9x
-@@ -165,7 +171,7 @@
+@@ -165,7 +174,7 @@
  	./offsets >i386/offsets.h
  
  snes9x: $(OBJECTS) unix/x11.o $(GLIDEOBJS) $(GUIOBJS)
@@ -89,7 +99,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/17 15:31:25 wiz Exp $
  
  ssnes9x: $(OBJECTS) unix/svga.o $(GLIDEOBJS) 
  	$(CCC) $(INCLUDES) -o $@ $(OBJECTS) $(GLIDEOBJS) unix/svga.o $(LDLIBS) $(GLIDELIBS) -lvga -lvgagl -lz $(EXTRALIBS) -lm
-@@ -195,7 +201,7 @@
+@@ -195,7 +204,7 @@
  	$(CCC) $(INCLUDES) -c -E $(CCFLAGS) $*.S -o $@
  
  .asm.o:
