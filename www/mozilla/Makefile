@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/08/30 22:27:38 tron Exp $
+# $NetBSD: Makefile,v 1.39 2000/09/03 15:14:41 wiz Exp $
 
 DISTNAME=	mozilla-source-M17
 PKGNAME=	mozilla-5.0m17
@@ -41,7 +41,6 @@ SCRIPTS_ENV+=	CHMOD=${CHMOD}
 SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
-
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
