@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2003/10/29 18:05:27 gehenna Exp $
+# $NetBSD: Makefile,v 1.55 2003/11/03 05:49:52 gehenna Exp $
 #
 
-DISTNAME=	cvsync-0.24.10
+DISTNAME=	cvsync-0.24.11
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cvsync.org/pub/cvsync/
 
