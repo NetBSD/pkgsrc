@@ -3,7 +3,7 @@
 # Date created:				29 January 1998
 # Whom:					bsieker@techfak.uni-bielefeld.de
 #
-# $NetBSD: Makefile,v 1.2 1998/02/05 09:45:32 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/12 23:24:51 tron Exp $
 
 DISTNAME=	gtk+-0.99.3
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/  \
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 
 #	see below for shared lib version information
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 GNU_CONFIGURE=  yes
 USE_X11=	yes
