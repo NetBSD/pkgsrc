@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1498 2004/09/15 15:26:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1499 2004/09/21 15:01:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -161,16 +161,6 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-#
-# Set the default BUILDLINK_DIR, BUILDLINK_X11_DIR so that if no
-# buildlink3.mk files are included, then they still point to where headers
-# and libraries for installed packages and X11R6 may be found.
-#
-BUILDLINK_DIR?=		${LOCALBASE}
-BUILDLINK_X11_DIR?=	${X11BASE}
-.endif
-
 .if defined(USE_IMAKE)
 PREPEND_PATH+=		${X11BASE}/bin
 USE_X11BASE?=		implied
@@ -186,9 +176,9 @@ PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
                        IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}    \
 		       IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}    \
                        IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
-. if empty(USE_BUILDLINK3:M[nN][oO])
+.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
 MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
-. endif
+.  endif
 .endif
 .if defined(USE_X11BASE)
 USE_X11?=		implied
@@ -362,7 +352,7 @@ PKG_FC?=	f2c-f77
 .  if  (${PKG_FC} == "f2c-f77")
 # this is a DEPENDS not BUILD_DEPENDS because of the
 # shared Fortran libs
-.    if empty(USE_BUILDLINK3:M[nN][oO])
+.    if !empty(USE_BUILDLINK3:M[yY][eE][sS])
 .      include "../../lang/f2c/buildlink3.mk"
 .    else
 DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
@@ -428,7 +418,7 @@ BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
-BUILDLINK_COOKIE=	${WRKDIR}/.buildlink_done
+WRAPPER_COOKIE=		${WRKDIR}/.wrapper_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 INSTALL_COOKIE=		${WRKDIR}/.install_done
 TEST_COOKIE=		${WRKDIR}/.test_done
@@ -1215,13 +1205,8 @@ USE_LANGUAGES?=		# empty
 
 .include "../../mk/tools.mk"
 
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-NO_BUILDLINK=		# defined
-.endif
-.if !defined(NO_BUILDLINK)
-.  if empty(USE_BUILDLINK3:M[nN][oO])
-.    include "../../mk/buildlink3/bsd.buildlink3.mk"
-.  endif
+.if !defined(NO_WRAPPER)
+.  include "../../mk/wrapper/bsd.wrapper.mk"
 .endif
 
 .if defined(RECOMMENDED)
@@ -1433,17 +1418,17 @@ tools: patch
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
 .endif
 
-# Disable buildlink
-.PHONY: buildlink
-.if defined(NO_BUILDLINK) && !target(buildlink)
-buildlink: tools
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
+# Disable wrapper
+.PHONY: wrapper
+.if defined(NO_WRAPPER) && !target(wrapper)
+wrapper: tools
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
 .endif
 
 # Disable configure
 .PHONY: configure
 .if defined(NO_CONFIGURE) && !target(configure)
-configure: buildlink
+configure: wrapper
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 .endif
 
@@ -2996,7 +2981,7 @@ show-shlib-type:
 .endif
 
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
-.PHONY: acquire-buildlink-lock acquire-configure-lock acquire-build-lock
+.PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
 .PHONY: acquire-install-lock acquire-package-lock
 acquire-extract-lock:
 	${_ACQUIRE_LOCK}
@@ -3004,7 +2989,7 @@ acquire-patch-lock:
 	${_ACQUIRE_LOCK}
 acquire-tools-lock:
 	${_ACQUIRE_LOCK}
-acquire-buildlink-lock:
+acquire-wrapper-lock:
 	${_ACQUIRE_LOCK}
 acquire-configure-lock:
 	${_ACQUIRE_LOCK}
@@ -3016,7 +3001,7 @@ acquire-package-lock:
 	${_ACQUIRE_LOCK}
 
 .PHONY: release-extract-lock release-patch-lock release-tools-lock
-.PHONY: release-buildlink-lock release-configure-lock release-build-lock
+.PHONY: release-wrapper-lock release-configure-lock release-build-lock
 .PHONY: release-install-lock release-package-lock
 release-extract-lock:
 	${_RELEASE_LOCK}
@@ -3024,7 +3009,7 @@ release-patch-lock:
 	${_RELEASE_LOCK}
 release-tools-lock:
 	${_RELEASE_LOCK}
-release-buildlink-lock:
+release-wrapper-lock:
 	${_RELEASE_LOCK}
 release-configure-lock:
 	${_RELEASE_LOCK}
@@ -3065,14 +3050,14 @@ patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 tools: patch acquire-tools-lock ${TOOLS_COOKIE} release-tools-lock
 .endif
 
-.PHONY: buildlink
-.if !target(buildlink)
-buildlink: tools acquire-buildlink-lock ${BUILDLINK_COOKIE} release-buildlink-lock
+.PHONY: wrapper
+.if !target(wrapper)
+wrapper: tools acquire-wrapper-lock ${WRAPPER_COOKIE} release-wrapper-lock
 .endif
 
 .PHONY: configure
 .if !target(configure)
-configure: buildlink acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
+configure: wrapper acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .PHONY: build
@@ -3121,8 +3106,8 @@ ${PATCH_COOKIE}:
 ${TOOLS_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
 
-${BUILDLINK_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-buildlink PKG_PHASE=buildlink
+${WRAPPER_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
 
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
@@ -3160,7 +3145,7 @@ ${INSTALL_COOKIE}:
 ${PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
 
-.PHONY: extract-message patch-message tools-message buildlink-message
+.PHONY: extract-message patch-message tools-message wrapper-message
 .PHONY: configure-message build-message test-message
 extract-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
@@ -3168,8 +3153,8 @@ patch-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
 tools-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Overriding tools for ${PKGNAME}"
-buildlink-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Buildlinking for ${PKGNAME}"
+wrapper-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Creating toolchain wrappers for ${PKGNAME}"
 configure-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 build-message:
@@ -3177,7 +3162,7 @@ build-message:
 test-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
 
-.PHONY: extract-cookie patch-cookie tools-cookie buildlink-cookie
+.PHONY: extract-cookie patch-cookie tools-cookie wrapper-cookie
 .PHONY: configure-cookie build-cookie test-cookie
 extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
@@ -3185,8 +3170,8 @@ patch-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
 tools-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
-buildlink-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
+wrapper-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
 configure-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 build-cookie:
@@ -3198,7 +3183,7 @@ test-cookie:
 .ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 .ORDER: patch-message pre-patch do-patch post-patch patch-cookie
 .ORDER: tools-message pre-tools do-tools post-tools tools-cookie
-.ORDER: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
+.ORDER: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
 .ORDER: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
 .ORDER: build-message pre-build do-build post-build build-cookie
 .ORDER: test-message pre-test do-test post-test test-cookie
@@ -3206,14 +3191,15 @@ test-cookie:
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
 # make i.e. without -j n)
-.PHONY: real-fetch real-extract real-patch real-tools real-buildlink
+.PHONY: real-fetch real-extract real-patch
+.PHONY: real-tools real-wrapper
 .PHONY: real-configure real-build real-test real-install real-package
 .PHONY: real-replace real-undo-replace
 real-fetch: pre-fetch do-fetch post-fetch
 real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 real-patch: patch-message pre-patch do-patch post-patch patch-cookie
 real-tools: tools-message pre-tools do-tools post-tools tools-cookie
-real-buildlink: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
+real-wrapper: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
 real-configure: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
 real-build: build-message pre-build do-build post-build build-cookie
 real-test: test-message pre-test do-test post-test test-cookie
@@ -3289,7 +3275,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch tools buildlink configure build test install-script install package
+.for name in fetch extract patch tools wrapper configure build test install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:

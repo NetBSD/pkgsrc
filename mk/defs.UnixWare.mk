@@ -1,4 +1,4 @@
-# $NetBSD: defs.UnixWare.mk,v 1.7 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: defs.UnixWare.mk,v 1.8 2004/09/21 15:01:40 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -129,7 +129,12 @@ _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
-_USE_RPATH=		no		# add rpath to LDFLAGS
+#
+# The native linker for UnixWare doesn't really support an option to pass
+# rpath directives, but pretend it does anyway since the wrapper scripts
+# will correctly convert it into the the proper LD_RUN_PATH variable.
+#
+_USE_RPATH=		yes		# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is the standard Solaris linker, /usr/ccs/bin/ld. The use of GNU
