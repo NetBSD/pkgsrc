@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/10/18 15:20:25 veego Exp $
+# $NetBSD: Makefile,v 1.23 2001/11/26 06:50:02 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -11,9 +11,8 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://language.perl.com/index.html
 COMMENT=	Perl DynaLoader as a shared object
 
-USE_PERL5=	# defined
-PERL5_REQD=	${PERL5_DIST_VERS}
-
+USE_BUILDLINK_ONLY=	YES
+PERL5_REQD=		${PERL5_DIST_VERS}
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
@@ -41,4 +40,5 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/DynaLoader.o ${PERL5_ARCHLIB}/DynaLoader_pic.o
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/10/18 15:20:47 veego Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/26 06:50:31 jlam Exp $
 #
 
 DISTNAME=       	CGI.pm-2.752
@@ -14,8 +14,9 @@ COMMENT=		perl5 module for writing forms-based CGI programs
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.
-DEPENDS+=               {perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl>=5.6.1nb2}:../../lang/perl5
+BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl>=5.6.1nb2}
 
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/.packlist
 HTMLDIR=		${PREFIX}/share/doc/html/p5-CGI
 
@@ -40,9 +41,5 @@ post-install:
 	${INSTALL_DATA} *.gif *.html *.txt *.xbm ${HTMLDIR}/examples;	\
 	${INSTALL_SCRIPT} *.cgi ${HTMLDIR}/examples
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if !defined(PERL5_SITEARCH)
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`;	\
-			${ECHO} $${installsitearch}
-.endif

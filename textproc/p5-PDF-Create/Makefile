@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:41 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:21 jlam Exp $
 #
 
 DISTNAME=	PDF-Create-0.01
@@ -11,10 +11,11 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=	perl5 module for creating pdf documents
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/PDF/Create/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDF/Create/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
