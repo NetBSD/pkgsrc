@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8297 2004/12/05 18:20:59 he Exp $
+$NetBSD: CHANGES,v 1.8298 2004/12/05 18:26:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-DNS-ZoneParse to 0.95 [he 2004-12-05]
 	Updated p5-Data-FormValidator to 3.63 [he 2004-12-05]
 	Updated p5-HTML-Mason to 1.28 [he 2004-12-05]
+	Updated p5-HTML-FillInForm to 1.04 [he 2004-12-05]
