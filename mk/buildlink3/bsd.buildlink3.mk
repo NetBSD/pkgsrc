@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.157 2004/09/30 16:34:32 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.158 2004/10/04 17:57:08 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -687,14 +687,14 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}=	# empty
 # files into the canonical ${BUILDLINK_DIR} path.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_X11_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_X11_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${BUILDLINK_DIR}\\2,g"
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g"
 #
 # Modify the dependency_libs line by removing -L/usr/lib, which is implied.
 #
@@ -713,6 +713,12 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${X11BASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${LOCALBASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${LOCALBASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g"
+#
+# Unmangle.
+#
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
+	-e "/^dependency_libs=/s,${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}},${BUILDLINK_DIR},g" \
+	-e "/^dependency_libs=/s,${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}},${BUILDLINK_X11_DIR},g"
 #
 # Modify the dependency_libs line by cleaning up any leading and trailing
 # whitespace.
