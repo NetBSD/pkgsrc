@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/07 20:51:53 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/04 13:35:51 markd Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -8,7 +8,6 @@ bin/artsrec
 bin/artsshell
 bin/artswrapper
 bin/mcopidl
-bin/testdhandle
 include/arts/anyref.h
 include/arts/artsflow.h
 include/arts/artsflow.idl
@@ -37,7 +36,7 @@ include/arts/extensionloader.h
 include/arts/factory.h
 include/arts/fft.h
 include/arts/flowsystem.h
-include/arts/gsl/gslartsthreads.h
+include/arts/giomanager.h
 include/arts/gsl/gslcommon.h
 include/arts/gsl/gslconfig.h
 include/arts/gsl/gslconvert.h
@@ -50,7 +49,6 @@ include/arts/gsl/gsldefs.h
 include/arts/gsl/gslengine.h
 include/arts/gsl/gslfft.h
 include/arts/gsl/gslfilter.h
-include/arts/gsl/gslglib.h
 include/arts/gsl/gslieee754.h
 include/arts/gsl/gslloader.h
 include/arts/gsl/gslmagic.h
@@ -60,6 +58,7 @@ include/arts/gsl/gslosctable.h
 include/arts/gsl/gslsignal.h
 include/arts/gsl/gslwavechunk.h
 include/arts/gsl/gslwaveosc.h
+include/arts/gslschedule.h
 include/arts/idlfilereg.h
 include/arts/ifacerepo_impl.h
 include/arts/iomanager.h
@@ -122,6 +121,10 @@ lib/libartswavplayobject.la
 lib/libartswavplayobject.so
 lib/libartswavplayobject.so.0
 lib/libartswavplayobject.so.0.0
+lib/libgmcop.la
+lib/libgmcop.so
+lib/libgmcop.so.1
+lib/libgmcop.so.1.0
 lib/libkmedia2.la
 lib/libkmedia2.so
 lib/libkmedia2.so.1
