@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1230 2003/08/04 21:06:47 jmc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1231 2003/08/07 16:14:05 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2488,7 +2488,7 @@ real-su-install: ${MESSAGE}
 		done;							\
 	fi
 .if ${_DO_SHLIB_CHECKS} == "yes"
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
 .endif
 .ifdef MESSAGE
@@ -2496,6 +2496,16 @@ real-su-install: ${MESSAGE}
 	@${ECHO_MSG} ""
 	@${CAT} ${MESSAGE}
 	@${ECHO_MSG} ""
+.  if !empty(PKGSRC_MESSAGE_RECIPIENTS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
+	${ECHO} "";							\
+	${ECHO} "Please note the following:";				\
+	${ECHO} "";							\
+	${CAT} ${MESSAGE};						\
+	${ECHO} "") |							\
+	mail -s"Package ${PKGNAME} installed" ${PKGSRC_MESSAGE_RECIPIENTS}
+.  endif
 .endif
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
