@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.99 2003/01/12 20:36:58 jschauma Exp $
+# $NetBSD: bsd.prefs.mk,v 1.100 2003/01/12 22:30:08 jschauma Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -29,7 +29,7 @@ MAKEFLAGS+=		OPSYS=${OPSYS}
 OS_VERSION!=		${UNAME} -r
 .endif
 .ifndef LOWER_OS_VERSION
-LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr A-Z a-z
+LOWER_OS_VERSION:=	${OS_VERSION:tl}
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
@@ -88,11 +88,11 @@ LOWER_OPSYS?=		solaris
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
-LOWER_ARCH!=            echo "${LOWER_ARCH}" | sed -e 's/i.86/i386/'
-MACHINE_ARCH!=          echo "${MACHINE_ARCH}" | sed -e 's/i.86/i386/'
+LOWER_ARCH:=            ${LOWER_ARCH:C/i.86/i386/}
+MACHINE_ARCH:=          ${MACHINE_ARCH:C/i.86/i386/}
 .  if ${MACHINE_ARCH} == "unknown"
 .    if !defined(LOWER_ARCH)
-LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
+LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/'
 .    endif # !defined(LOWER_ARCH)
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
@@ -115,7 +115,7 @@ LOWER_OPSYS?=		irix${OS_VERSION:C/\.[0-9]//}
 LOWER_VENDOR?=		sgi
 
 .elif !defined(LOWER_OPSYS)
-LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
+LOWER_OPSYS:=		${OPSYS:tl}
 .endif
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
