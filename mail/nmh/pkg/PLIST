@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/02/11 10:58:01 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/05/08 17:32:46 hubertf Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -126,6 +126,6 @@ man/man8/fmtdump.8.gz
 man/man8/install-mh.8.gz
 man/man8/mh-mts.8.gz
 man/man8/post.8.gz
-@unexec (for ent in %D/etc/nmh/*.old; do mv $ent %D/etc/nmh/`basename $ent .old`; done) || /usr/bin/true
+@unexec (for ent in %D/etc/nmh/*.old; do [ -f $ent ] && mv $ent %D/etc/nmh/`basename $ent .old`; done) || /usr/bin/true
 @unexec rmdir %D/etc/nmh || /usr/bin/true
 @dirrm libexec/nmh
