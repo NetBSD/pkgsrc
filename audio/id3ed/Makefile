@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 13:30:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/22 15:44:32 jlam Exp $
 #
 
 DISTNAME=	id3ed-1.10.2
@@ -9,12 +9,18 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.azstarnet.com/~donut/programs/index.html
 COMMENT=	Edit id3 description tags in mpeg3 files
 
-DEPENDS+=	readline>=4.0:../../devel/readline
-
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 
-CONFIGURE_ENV+=	LIBS="-I${LOCALBASE}/include -L${LOCALBASE}/lib"
+USE_GNU_READLINE=	# uses rl_startup_hook
+
+.include "../../devel/readline/Makefile.readline"
+
+CONFIGURE_ENV+=	LIBS="${LIBS}"
+CFLAGS+=	-I${WRKINCDIR}
+LIBS+=		-L${WRKLIBDIR} ${LDFLAGS}
+
+pre-configure: link-readline-headers link-readline-libs
 
 post-extract:
 	${TOUCH} ${WRKSRC}/install.sh
