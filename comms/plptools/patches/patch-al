@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2004/05/24 16:09:35 kristerw Exp $
+
+--- lib/rfsv32.cc.orig	2004-05-24 17:46:31.000000000 +0200
++++ lib/rfsv32.cc	2004-05-24 17:46:59.000000000 +0200
+@@ -577,7 +577,7 @@
+ 	unsigned char *buff = new unsigned char[RFSV_SENDLEN];
+ 	do {
+ 		if ((len = fread(handle, buff, RFSV_SENDLEN)) > 0)
+-			op.write(buff, len);
++			op.write((char*)buff, len);
+ 		if (cb) {
+ 			if (!cb(len)) {
+ 				len = E_PSI_FILE_CANCEL;
+@@ -609,7 +609,7 @@
+ 	unsigned char *buff = new unsigned char[RFSV_SENDLEN];
+ 	int total = 0;
+ 	while (ip && !ip.eof()) {
+-		ip.read(buff, RFSV_SENDLEN);
++		ip.read((char*)buff, RFSV_SENDLEN);
+ 		bufferStore tmp(buff, ip.gcount());
+ 		int len = tmp.getLen();
+ 		total += len;
