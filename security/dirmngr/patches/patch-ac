@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/11/05 22:12:17 jmmv Exp $
+
+--- doc/dirmngr.info.orig	2004-09-28 14:38:38.000000000 +0200
++++ doc/dirmngr.info
+@@ -3,7 +3,7 @@ dirmngr.texi.
+ 
+ INFO-DIR-SECTION GNU Utilities
+ START-INFO-DIR-ENTRY
+-* dirmngr: (gnupg). X.509 CRL and OCSP server.
++* dirmngr: (dirmngr). X.509 CRL and OCSP server.
+ END-INFO-DIR-ENTRY
+    This file documents the use of dirmngr.
+ 
