@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7441 2004/10/15 03:15:21 reed Exp $
+$NetBSD: CHANGES,v 1.7442 2004/10/15 05:38:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4728,3 +4728,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated verilog to 0.8 [dmcmahill 20040-10-14]
 	Updated evolution14 to 1.4.6nb2 [grant 2004-10-15]
 	Added inkscape-0.39nb1 [reed 2004-10-15]
+	Added starfighter-1.1-1 [xtraeme 2004-10-15]
