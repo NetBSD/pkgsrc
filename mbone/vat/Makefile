@@ -25,7 +25,7 @@ LIB_DEPENDS=	tk80:${PORTSDIR}/x11/tk80 \
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gsm=${GSM_WORK}
+CONFIGURE_ARGS+= ${MACHINE_ARCH}--netbsd --with-gsm=${GSM_WORK}
 INSTALL_TARGET=	install install-man
 MAN1=		vat.1
 
