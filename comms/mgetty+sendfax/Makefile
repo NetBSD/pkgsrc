@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/02/23 16:57:28 jwise Exp $
+# $NetBSD: Makefile,v 1.43 2005/02/23 16:58:43 jwise Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
 COMMENT=	Handle external logins, send and receive faxes
 
