@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/05/15 16:41:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/21 16:58:42 jmmv Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-remove
@@ -59,6 +59,8 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-session-2.0.mo
@@ -76,6 +78,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-session-2.0.mo
