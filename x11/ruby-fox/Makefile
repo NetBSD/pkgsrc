@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/08/29 10:19:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/30 02:55:03 taca Exp $
 
-DISTNAME=	FXRuby-0.99.174
-PKGNAME=	${RUBY_PKGNAMEPREFIX}fox-0.99.174
-PKGREVISION=	3
+DISTNAME=	FXRuby-1.0.25
+PKGNAME=	${RUBY_PKGNAMEPREFIX}fox-1.0.25
 WRKSRC=		${WRKDIST}/ext/fox
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fxruby/}
@@ -12,18 +11,14 @@ HOMEPAGE=	http://fxruby.sourceforge.net/
 COMMENT=	Ruby interface to FOX GUI library
 
 DEPENDS+=	ruby-opengl-[0-9]*:../../graphics/ruby-opengl
-# restore next line on next update, delete the line after
-#BUILDLINK_DEPENDS.fox=${DISTNAME:C/FXRuby/fox/}
-BUILDLINK_DEPENDS.fox=fox-0.99.174nb1
-
 WRKDIST=	${WRKDIR}/${DISTNAME}
 
 USE_BUILDLINK2=	yes
 DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF=#defined
-CONFIGURE_ARGS+=--with-fox-include=${BUILDLINK_PREFIX.fox}/include/fox
-CONFIGURE_ARGS+=--with-opengl-include=${BUILDLINK_PREFIX.Mesa}/include/GL
-CONFIGURE_ARGS+=--with-fox-lib=${BUILDLINK_PREFIX.fox}/lib
+USE_RUBY_EXTCONF= # defined
+CONFIGURE_ARGS+= --with-fox-include=${BUILDLINK_PREFIX.fox}/include/fox
+CONFIGURE_ARGS+= --with-opengl-include=${BUILDLINK_PREFIX.Mesa}/include/GL
+CONFIGURE_ARGS+= --with-fox-lib=${BUILDLINK_PREFIX.fox}/lib
 
 INSTALL_TARGET=	site-install
 
@@ -40,11 +35,15 @@ post-install:
 		${RUBY_EXAMPLESDIR}/fox/textedit
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/fox/tests
 	${INSTALL_DATA} ${WRKDIST}/tests/* ${RUBY_EXAMPLESDIR}/fox/tests
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/fox
-	${INSTALL_DATA} ${WRKDIST}/doc/* ${RUBY_DOCDIR}/fox
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/fox ${RUBY_DOCDIR}/fox/images
+	${INSTALL_DATA} ${WRKDIST}/doc/*.html ${RUBY_DOCDIR}/fox
+	${INSTALL_DATA} ${WRKDIST}/doc/images/* ${RUBY_DOCDIR}/fox/images
 
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../x11/fox/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../lang/ruby-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
