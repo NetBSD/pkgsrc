@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.6 2001/07/09 14:57:17 abs Exp $
+# $Id: pkgchk.sh,v 1.7 2001/07/09 23:15:56 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Order updates based on DEPENDENCIES.
@@ -197,6 +197,10 @@ fi
 #
 for pkgdir in $PKGDIRLIST ; do
 
+    if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
+	echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
+	continue
+    fi
     cd $PKGSRCDIR/$pkgdir
     # Use 'make x' rather than 'make all' to avoid potential licence errors
     pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|make -f - -f Makefile x` || true
