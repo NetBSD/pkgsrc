@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:09:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/12 00:54:40 snj Exp $
 #
 
 DISTNAME=	spiceprm-0.11
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Spice preprocessor for parameterized subcircuits
 
 WRKSRC=			${WRKDIR}/spiceprm
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 NO_BUILD=		YES
 REPLACE_PERL=		spiceprm
 
@@ -20,5 +20,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spiceprm
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLES ${PREFIX}/share/examples/spiceprm
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
