@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4615 2004/01/27 10:59:23 jlam Exp $
+$NetBSD: CHANGES,v 1.4616 2004/01/27 19:55:35 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 0.75nb1 [recht 2004-01-27]
 	Updated apache2 to 2.0.48nb3 [grant 2004-01-27]
 	Added unison 2.9.20 as net/unison-devel [jlam 2004-01-27]
+	Added devilspie 0.3.1 [snj 2004-01-27]
