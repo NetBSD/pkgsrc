@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.201 2001/10/13 05:27:49 abs Exp $
+# $NetBSD: Packages.txt,v 1.202 2001/10/15 11:34:20 agc Exp $
 ###########################################################################
 
 			==========================
@@ -2179,6 +2179,34 @@ Please note all package updates/additions in doc/pkg-CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
 www.netbsd.org and other sites.
+
+
+ 11.3 Updating a Package to a Newer Version
+ ==========================================
+
+Please always put a concise, appropriate and relevant summary of the
+changes between old and new versions into the commit log when updating
+a package. There are various reasons for this:
+
++ a URL is volatile, and can change over time. It may go away completely,
+or its information may be overwritten by newer information.
+
++ having the change information between old and new versions in our CVS
+repository is very useful for people who use either cvs or anoncvs.
+
++ having the change information between old and new versions in our CVS
+repository is very useful for people who read the pkgsrc-changes mailing
+list, so that they can make tactical decisions about when to upgrade
+the package.
+
+Please also recognise that, just because a new version of a package
+has been released, it should not automatically be upgraded in the CVS
+repository.  We prefer to be conservative in the packages that are
+included in pkgsrc - development or beta packages are not really the
+best thing for most places in which pkgsrc is used. Please use your
+judgement about what should go into pkgsrc, and bear in mind that
+stability is to be preferred above new and possibly untested features.
+
 
 
  12 A simple example of a package: bison
