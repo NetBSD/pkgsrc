@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/01/06 07:39:23 skrll Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/03/16 18:16:32 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -73,7 +73,11 @@ CONFIGURE_ENV+=		kde_confdir="${KDEDIR}/share/kde/config"
 CONFIGURE_ENV+=		kde_datadir="${KDEDIR}/share/kde/apps"
 CONFIGURE_ENV+=		kde_htmldir="${KDEDIR}/share/doc/kde/HTML"
 CONFIGURE_ENV+=		kde_icondir="${KDEDIR}/share/kde/icons"
+.if defined(USE_PKGLOCALEDIR) && !empty(USE_PKGLOCALEDIR:M[Yy][Ee][Ss])
+CONFIGURE_ENV+=		kde_locale="${KDEDIR}/${PKGLOCALEDIR}/locale"
+.else
 CONFIGURE_ENV+=		kde_locale="${KDEDIR}/share/kde/locale"
+.endif
 CONFIGURE_ENV+=		kde_mimedir="${KDEDIR}/share/kde/mimelnk"
 CONFIGURE_ENV+=		kde_servicesdir="${KDEDIR}/share/kde/services"
 CONFIGURE_ENV+=		kde_servicetypesdir="${KDEDIR}/share/kde/servicetypes"
