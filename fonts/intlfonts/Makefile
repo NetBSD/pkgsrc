@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 13:47:32 kei Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 13:59:38 kei Exp $
 
 DISTNAME=	intlfonts-1.2.1
 CATEGORIES=	fonts x11
@@ -38,8 +38,6 @@ MISC_FILES=	README.split
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
 USE_X11BASE=	yes
-
-WRKSRC=		${WRKDIR}/intlfonts-1.2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-fontdir=${PREFIX}/lib/X11/fonts/intlfonts \
