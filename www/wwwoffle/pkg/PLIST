@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/01/29 11:34:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/03/12 18:05:25 fredb Exp $
 bin/wwwoffle
 bin/wwwoffle-ls
 bin/wwwoffle-mv
@@ -7,12 +7,15 @@ bin/wwwoffle-rm
 bin/wwwoffle-tools
 bin/wwwoffle-write
 etc/rc.d/wwwoffle
+etc/rc.d/wwwoffled
 etc/wwwoffle/wwwoffle.conf.default
 @exec if [ ! -f %D/etc/wwwoffle/wwwoffle.conf ]; then cp -p %D/etc/wwwoffle/wwwoffle.conf.default %D/etc/wwwoffle/wwwoffle.conf; fi
 libdata/wwwoffle-spool.tar.gz
 man/man1/wwwoffle.1
 man/man5/wwwoffle.conf.5
 man/man8/wwwoffled.8
+sbin/convert-cache
+sbin/wwwoffle-upgrade-config.pl
 sbin/wwwoffled
 share/doc/wwwoffle/CHANGES.CONF
 share/doc/wwwoffle/CONVERT
@@ -32,6 +35,11 @@ share/doc/wwwoffle/README.win32
 @dirrm share/doc/wwwoffle
 @exec ${GTAR} xzCf / %D/libdata/wwwoffle-spool.tar.gz
 @exec cd /var/wwwoffle/html && mv wwwoffle.pac wwwoffle.pac.dist && sed /PROXY/s/localhost/`hostname`/ <wwwoffle.pac.dist >wwwoffle.pac
-@unexec cd /var/wwwoffle && rm -rf html* lasttime outgoing prevtime* temp
-@unexec rmdir /var/wwwoffle/* 2>/dev/null && rmdir /var/wwwoffle ; :
+@exec ${MKDIR} /var/wwwoffle/outgoing
+@exec ${MKDIR} /var/wwwoffle/monitor
+@exec ${MKDIR} /var/wwwoffle/lastime
+@exec ${MKDIR} /var/wwwoffle/prevtime1
+@exec ${PREFIX}/sbin/convert-cache /var/wwwoffle
+@unexec cd /var/wwwoffle && rm -rf html*
+@unexec rmdir /var/wwwoffle/* 2>/dev/null && rmdir /var/wwwoffle 2>/dev/null || true
 @unexec if [ -d /var/wwwoffle ]; then echo "If you won't use the WWWOFFLE package anymore, remove the cache manually by"; echo '	rm -rf /var/wwwoffle'; fi
