@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.7 2002/03/13 17:37:47 fredb Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/03/21 05:39:20 fredb Exp $
 
 DISTNAME=		sawfish-${SF_VERS}
-PKGREVISION=		1
 SF_VERS=		1.0.1
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		http://prdownloads.sourceforge.net/sawmill/
@@ -9,8 +8,8 @@ MASTER_SITES=		http://prdownloads.sourceforge.net/sawmill/
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://sawmill.sourceforge.net/
 
-DEPENDS+=		librep>=0.14:../../lang/librep
-DEPENDS+=		rep-gtk>=0.14:../../x11/rep-gtk
+DEPENDS+=		librep>=0.15.1nb1:../../lang/librep
+DEPENDS+=		rep-gtk>=0.15nb2:../../x11/rep-gtk
 DEPENDS+=		imlib>=1.9.11nb1:../../graphics/imlib
 DEPENDS+=		control-center-[0-9]*:../../x11/controlcenter
 
