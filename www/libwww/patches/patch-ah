@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
---- configure.in.orig	Thu Dec 14 11:49:06 2000
-+++ configure.in	Tue Aug 28 17:09:57 2001
-@@ -213,7 +213,12 @@
+$NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
+--- configure.in.orig	Thu Dec 14 12:49:06 2000
++++ configure.in	Mon Oct 21 22:40:58 2002
+@@ -213,8 +213,13 @@
  		getlogin getpass fcntl readdir sysinfo ioctl chdir tempnam \
  		getsockopt setsockopt \
  		gettimeofday mktime timegm tzset)
@@ -10,11 +10,12 @@ $NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
 +if test "$ac_cv_func_unlink" != yes; then
 +  AC_CHECK_FUNC(remove)
 +fi
-+
-+dnl AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
  
++dnl AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
++
  dnl Checks for configuration arguments
  AC_MSG_CHECKING(whether to support direct WAIS access.)
+ AC_ARG_WITH(wais,
 @@ -307,7 +312,10 @@
      AC_MSG_RESULT(yes)
      AC_DEFINE(HT_POSIX_REGEX)
@@ -27,9 +28,45 @@ $NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
      else
        AC_ADDLIB($withval)
        AC_TRY_LINK([],
-@@ -532,31 +540,9 @@
+@@ -510,53 +518,45 @@
+ [ case "$withval" in
+   no)
+     AC_MSG_RESULT(no)
++    MD5DIR=""
+     WWWMD5=""
+     LWWWMD5=""
+     LIBWWWMD5=""
++    LIBMD5DEP=""
++    LIBMD5INC=""
++    AC_CHECK_LIB(c, MD5Init, [ ], 
++	[ AC_CHECK_LIB(md5, MD5Init, [ LWWWMD5="-lmd5"; LIBWWWMD5="-lmd5"], [ AC_MSG_ERROR(Could not find md5 functions. You need to compile in the md5 library.) ] ) ] )
+     ;;
+   *)
+     AC_MSG_RESULT(yes)
+     AC_DEFINE(HT_MD5)
++    MD5DIR="md5"
+     WWWMD5="libmd5.la"
+     LWWWMD5="-lmd5"
+     LIBWWWMD5='${top_builddir}/modules/md5/libmd5.la'
++    LIBMD5INC='-I${top_srcdir}/modules/md5'
++    LIBMD5DEP="../../modules/md5/libmd5.la"
+     ;;
+   esac ],
+   AC_MSG_RESULT(yes)
+   AC_DEFINE(HT_MD5)
++  MD5DIR="md5"
+   WWWMD5="libmd5.la"
+   LWWWMD5="-lmd5"
+   LIBWWWMD5='${top_builddir}/modules/md5/libmd5.la'
++  LIBMD5INC='-I${top_srcdir}/modules/md5'
++  LIBMD5DEP="../../modules/md5/libmd5.la"
+ )
++AC_SUBST(MD5DIR)
+ AC_SUBST(WWWMD5)
  AC_SUBST(LWWWMD5)
  AC_SUBST(LIBWWWMD5)
++AC_SUBST(LIBMD5INC)
++AC_SUBST(LIBMD5DEP)
  
 -dnl Checks for libwww and OpenSSL:
 -AC_MSG_CHECKING(whether we can find OpenSSL)
@@ -61,7 +98,7 @@ $NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
  LWWWSSL=""
  LIBWWWSSL=""
  WWWSSLEX=""
-@@ -568,14 +554,39 @@
+@@ -568,14 +568,39 @@
      ;;
    *)
      if test "x$withval" = "xyes"; then
@@ -104,7 +141,7 @@ $NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
      AC_MSG_RESULT(yes)
      WWWSSL="libwwwssl.la"
      LWWWSSL="-lwwwssl" 
-@@ -586,6 +597,7 @@
+@@ -586,6 +611,7 @@
  [ AC_MSG_RESULT(no) ])
  AC_SUBST(WWWSSL)
  AC_SUBST(SSLINC)
@@ -112,7 +149,7 @@ $NetBSD: patch-ah,v 1.7 2002/09/23 13:52:16 markd Exp $
  AC_SUBST(LWWWSSL)
  AC_SUBST(LIBWWWSSL)
  AC_SUBST(WWWSSLEX)
-@@ -1006,7 +1018,6 @@
+@@ -1006,7 +1032,6 @@
  Library/Makefile Library/User/Makefile Library/User/Patch/Makefile
  Library/User/Architecture/Makefile Library/User/Using/Makefile Library/User/Guide/Makefile
  Library/User/Style/Makefile Library/User/Platform/Makefile
