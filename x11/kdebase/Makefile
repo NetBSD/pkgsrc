@@ -1,23 +1,26 @@
-# $NetBSD: Makefile,v 1.26 1999/01/30 23:18:56 agc Exp $
+# $NetBSD: Makefile,v 1.27 1999/02/15 21:34:49 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
-DISTNAME=	kdebase-1.0
+DISTNAME=	kdebase-1.1
 CATEGORIES=	x11 kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
-DEPENDS+=	kdelibs-1.0:../../x11/kdelibs
+DEPENDS+=	kdelibs-1.1:../../x11/kdelibs
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=	kdebase-2.1b kdebase-3.1b kdebase-4.1b
+CONFLICTS=	kdebase-*
 
 USE_X11BASE=	yes
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
+CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
