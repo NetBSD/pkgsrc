@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.5 2003/05/22 02:42:42 markd Exp $
+$NetBSD: patch-ba,v 1.6 2004/01/15 09:52:51 markd Exp $
 
---- kinit/Makefile.in.orig	Thu May  8 05:24:09 2003
+--- kinit/Makefile.in.orig	2003-12-29 11:16:58.000000000 +1300
 +++ kinit/Makefile.in
-@@ -431,8 +431,7 @@ klauncher_la_LIBADD = $(LIB_KIO)
+@@ -433,8 +433,7 @@ klauncher_la_LIBADD = $(LIB_KIO)
  klauncher_la_SOURCES = klauncher.cpp klauncher_main.cpp autostart.cpp
  
  klauncher_LDFLAGS = $(all_libraries) $(KDE_RPATH)
@@ -12,7 +12,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:42 markd Exp $
  
  #>- METASOURCES = AUTO
  
-@@ -481,11 +480,12 @@ am_kioslave_OBJECTS = kioslave.$(OBJEXT)
+@@ -484,11 +483,12 @@ am_kioslave_OBJECTS = kioslave.$(OBJEXT)
  #>+ 1
  kioslave_OBJECTS = kioslave.$(OBJEXT)
  kioslave_DEPENDENCIES =
@@ -28,7 +28,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:42 markd Exp $
  am_kshell_OBJECTS = shell.$(OBJEXT)
  #>- kshell_OBJECTS = $(am_kshell_OBJECTS)
  #>+ 1
-@@ -508,28 +508,25 @@ lnusertemp_DEPENDENCIES =
+@@ -511,28 +511,25 @@ lnusertemp_DEPENDENCIES =
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
@@ -70,7 +70,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:42 markd Exp $
  
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -678,13 +675,13 @@ distclean-compile:
+@@ -681,13 +678,13 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/autostart.Plo@am__quote@
@@ -85,16 +85,16 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:42 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/setproctitle.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/shell.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wrapper.Po@am__quote@
-@@ -887,7 +884,7 @@ distclean-tags:
+@@ -896,7 +893,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=README.DCOP LICENSE.setproctitle README.autostart README.wrapper startkde.example 
-+KDE_DIST=startkde.example LICENSE.setproctitle README.wrapper README.autostart README.DCOP 
+-KDE_DIST=startkde.example README.wrapper README.autostart LICENSE.setproctitle README.DCOP 
++KDE_DIST=startkde.example Makefile.in.rej LICENSE.setproctitle README.wrapper README.autostart README.DCOP 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1047,9 +1044,6 @@ uninstall-info: uninstall-info-recursive
+@@ -1056,9 +1053,6 @@ uninstall-info: uninstall-info-recursive
  kwrapper.o: wrapper.c
  
  shell.o: wrapper.c
