@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2001/03/10 11:18:10 tron Exp $
+
+--- Makefile.orig	Sat Mar 10 11:53:55 2001
++++ Makefile	Sat Mar 10 12:13:52 2001
+@@ -28,6 +28,10 @@
+ CPPFLAGS+= -DHAVE_MACHINE_ENDIAN_H_
+ .endif
+ 
++.if (${OPSYS} == SunOS)
++NOMAN=		YES
++.else
+ LDSTATIC?=      -static
++.endif
+ 
+ .include <bsd.prog.mk>
