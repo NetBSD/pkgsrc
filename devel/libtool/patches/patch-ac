@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
+$NetBSD: patch-ac,v 1.12 2004/04/22 14:40:29 tv Exp $
 
---- ltmain.sh.orig	Wed Feb 18 07:53:05 2004
+--- ltmain.sh.orig	Sun Apr 11 01:44:45 2004
 +++ ltmain.sh
-@@ -318,7 +318,7 @@ if test -z "$show_help"; then
-     $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
-     $echo "*** Future versions of Libtool will require -mode=MODE be specified." 1>&2
-     case $nonopt in
--    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc*)
-+    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc* | *CC)
-       mode=link
-       for arg
-       do
-@@ -525,10 +525,26 @@ if test -z "$show_help"; then
-       case $base_compile in
+@@ -192,10 +192,26 @@ func_infer_tag () {
+       case $@ in
        # Blanks in the command may have been stripped by the calling shell,
        # but not from the CC environment variable when configure was run.
--      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "*) ;;
-+      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "*)
+-      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "* | " $CC_quoted"* | "$CC_quoted "* | " `$echo $CC_quoted` "* | "`$echo $CC_quoted` "*) ;;
++      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "* | " $CC_quoted"* | "$CC_quoted "* | " `$echo $CC_quoted` "* | "`$echo $CC_quoted` "*)
 +         tagname=CC
 +         ;;
        # Blanks at the start of $base_compile will cause this to fail
@@ -37,56 +28,28 @@ $NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
 +    fi
 +    if test -n "$available_tags" && test -z "$tagname"; then
  	for z in $available_tags; do
- 	  if grep "^# ### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
+ 	  if grep "^# ### BEGIN LIBTOOL TAG CONFIG: $z$" < "$progpath" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -554,8 +570,6 @@ if test -z "$show_help"; then
+@@ -231,8 +247,6 @@ func_infer_tag () {
  #        else
  #          $echo "$modename: using $tagname tagged configuration"
  	fi
 -	;;
 -      esac
      fi
- 
-     for arg in $later; do
-@@ -912,10 +926,26 @@ EOF
-       case $base_compile in
-       # Blanks in the command may have been stripped by the calling shell,
-       # but not from the CC environment variable when configure was run.
--      "$CC "* | " $CC "* | "`$echo $CC` "* | " `$echo $CC` "*) ;;
-+      "$CC "* | " $CC "* | "`$echo $CC` "* | " `$echo $CC` "*)
-+	tagname=CC
-+	;;
-       # Blanks at the start of $base_compile will cause this to fail
-       # if we don't check for them as well.
-       *)
-+        base_compiler=`$echo $base_compile | awk '{ print $1 }'`
-+        case $base_compiler in
-+        *cc)
-+          tagname=CC
-+          ;;
-+        *++)
-+          tagname=CXX
-+	  eval "`${SED} -n -e '/^# ### BEGIN LIBTOOL TAG CONFIG: '$tagname'$/,/^# ### END LIBTOOL TAG CONFIG: '$tagname'$/p' < $0`"
-+          ;;
-+        esac
-+        ;;
-+      esac
-+    fi
-+    if test -n "$available_tags" && test -z "$tagname"; then
- 	for z in $available_tags; do
- 	  if grep "^# ### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
- 	    # Evaluate the configuration.
-@@ -941,8 +971,6 @@ EOF
- #       else
- #         $echo "$modename: using $tagname tagged configuration"
- 	fi
--	;;
--      esac
-     fi
- 
-     # We need to know -static, to get the right output filenames.
-@@ -1180,6 +1208,13 @@ EOF
- 	    exit 1
+ }
+ # End of Shell function definitions
+@@ -401,7 +415,7 @@ if test -z "$show_help"; then
+     $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
+     $echo "*** Future versions of Libtool will require -mode=MODE be specified." 1>&2
+     case $nonopt in
+-    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc*)
++    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc* | *CC)
+       mode=link
+       for arg
+       do
+@@ -1185,6 +1199,13 @@ EOF
+ 	    exit $EXIT_FAILURE
  	    ;;
  	  esac
 +	  # Canonicalise the pathname
@@ -99,7 +62,7 @@ $NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -2967,8 +3002,8 @@ EOF
+@@ -2983,8 +3004,8 @@ EOF
  	darwin)
  	  # Like Linux, but with the current version available in
  	  # verstring for coding it into the library header
@@ -110,8 +73,8 @@ $NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
  	  # Darwin ld doesn't like 0 for these options...
  	  minor_current=`expr $current + 1`
  	  verstring="-compatibility_version $minor_current -current_version $minor_current.$revision"
-@@ -5365,8 +5400,16 @@ relink_command=\"$relink_command\""
-       exit 1
+@@ -5384,8 +5405,16 @@ relink_command=\"$relink_command\""
+       exit $EXIT_FAILURE
      fi
  
 -    # Strip any trailing slash from the destination.
@@ -129,17 +92,3 @@ $NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
  
      # Check to see that the destination is a directory.
      test -d "$dest" && isdir=yes
-@@ -5673,8 +5716,12 @@ relink_command=\"$relink_command\""
- 	      tmpdir="/tmp"
- 	      test -n "$TMPDIR" && tmpdir="$TMPDIR"
- 	      tmpdir="$tmpdir/libtool-$$"
--	      if $mkdir "$tmpdir" && chmod 700 "$tmpdir"; then :
-+	      save_umask=`umask`
-+	      umask 0077
-+	      if $mkdir "$tmpdir"; then
-+	      	umask $save_umask
- 	      else
-+	      	umask $save_umask
- 		$echo "$modename: error: cannot create temporary directory \`$tmpdir'" 1>&2
- 		continue
- 	      fi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/02/29 10:28:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/22 14:40:29 tv Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -26,7 +26,7 @@ DEPENDS+=	c++rt0>=1.0:../../sysutils/c++rt0
 
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-CONFIGURE_ARGS=		--disable-shared
+5~CONFIGURE_ARGS=		--disable-shared
 BUILD_SHLIBTOOL=	NO
 .  endif
 .else
@@ -56,7 +56,6 @@ CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .endif
 
 BUILD_SHLIBTOOL?=	YES
-BUILDING_SHLIBTOOL?=	NO
 
 .PHONY: fix-libtool
 fix-libtool:
@@ -68,26 +67,18 @@ fix-libtool:
 
 post-build: fix-libtool
 
-.if ${BUILDING_SHLIBTOOL} == "YES"
-CONFIGURE_ARGS+=	--disable-static
-.else
-SHLIBTOOL_WRKDIR=	${WRKDIR}/shlibtool
-SHLIBTOOL_WRKSRC=	${WRKSRC:S/${WRKDIR}/${SHLIBTOOL_WRKDIR}/}
-SHLIBTOOL_MAKEFLAGS=	BUILDING_SHLIBTOOL=YES
-SHLIBTOOL_MAKEFLAGS+=	WRKDIR=${SHLIBTOOL_WRKDIR}
-
-.  if ${BUILD_SHLIBTOOL} == "NO"
+.if ${BUILD_SHLIBTOOL} == "NO"
 PLIST_SUBST+=		SHLIBTOOL="@comment "
-.  else
+.else
 PLIST_SUBST+=		SHLIBTOOL=
 
 post-build:
-	cd ${.CURDIR} && ${MAKE} build ${SHLIBTOOL_MAKEFLAGS}
+	cd ${WRKSRC} && \
+		${SED} -e '/^# Whether or not to build static/{n;s/yes/no/;}' \
+		< libtool > shlibtool
 
 post-install:
-	${INSTALL_SCRIPT} ${SHLIBTOOL_WRKSRC}/libtool			\
-		${PREFIX}/bin/shlibtool
-.  endif
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${PREFIX}/bin/shlibtool
 .endif
 
 .include "../../mk/bsd.pkg.mk"
