@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.807 2001/09/10 09:56:05 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.808 2001/09/10 20:03:17 martin Exp $
 #
 # This file is in the public domain.
 #
@@ -1322,6 +1322,10 @@ show-downlevel:
 	found="`${PKG_INFO} -e \"${PKGBASE}\" || ${TRUE}`";		\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
+		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
+			${ECHO} "stoping after first downlevel pkg found";	\
+			exit 1;						\
+		fi;							\
 	fi
 .  endif
 .endif
@@ -2727,6 +2731,13 @@ install-depends: uptodate-pkgtools
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
 	found=`${PKG_INFO} -e "$$pkg" || ${TRUE}`;			\
+	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
+		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`;	\
+		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then		\
+			${ECHO_MSG} "ignoring old installed package \"$$found\"";	\
+			found="";					\
+		fi;							\
+	fi;								\
 	if [ "$$found" != "" ]; then					\
 		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} '/^OBJECT_FMT/ {print $$2}' | ${HEAD} -1`; \
 		if [ "$$instobjfmt" = "" ]; then			\
