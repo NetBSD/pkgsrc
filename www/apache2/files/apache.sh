@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.1 2002/03/05 23:56:22 jlam Exp $
+# $NetBSD: apache.sh,v 1.2 2002/03/06 20:21:38 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -32,6 +32,8 @@ restart_cmd="apache_doit restart"
 # in order of increasing precedence.  Its possible values are "start"
 # and "startssl", and defaults to "start".
 #
+apache_start=start
+
 apache_doit ()
 {
 	case $1 in
