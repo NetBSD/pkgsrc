@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/14 16:51:36 mjl Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/04/28 00:41:41 jtb Exp $
 bin/squeak
+share/squeak/ReadMe.txt
 share/squeak/Squeak2.7.changes
 share/squeak/Squeak2.7.image
 share/squeak/SqueakV2.sources
