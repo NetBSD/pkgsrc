@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:51 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/10/29 07:07:44 xtraeme Exp $
 
 # Legacy options
 #
@@ -31,7 +31,7 @@ PKG_FAIL_REASON+=       "MySQL and PostgreSQL cannot both be compiled in." \
 ### MySQL support
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../databases/mysql-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 .  if !target(post-configure)
 post-configure:
 	${ECHO} -I${BUILDLINK_PREFIX.mysql-client}/include/mysql > ${WRKSRC}/sub_mysql/conf-sqlcc
