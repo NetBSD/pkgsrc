@@ -1,8 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/25 14:05:34 recht Exp $
-#
-# This Makefile fragment is included by packages that use python23-pth.
-#
-# This file was created automatically using createbuildlink-3.0.
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 14:11:13 recht Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
