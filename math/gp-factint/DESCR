@@ -1,0 +1,8 @@
+This package for GAP 4 provides routines for 
+integer factorization, in particular:
+
+ - Pollard's p-1
+ - Williams' p+1
+ - The Elliptic Curves Method (ECM)
+ - The Continued Fraction Algorithm (CFRAC)
+ - The Multiple Polynomial Quadratic Sieve (MPQS)
