@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/08/14 22:14:41 tron Exp $
+
+--- netbsdlocal.h.orig	Tue Dec 16 14:25:02 1997
++++ netbsdlocal.h	Tue Aug  4 16:25:16 1998
+@@ -9,6 +9,7 @@
+ 
+ #include "sys/fcntl.h"
+ #include "sys/ioctl.h"
++#include "termcap.h"
+ #include "termios.h"
+ 
+ /* End of netbsdlocal.h */

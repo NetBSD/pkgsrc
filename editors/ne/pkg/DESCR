@@ -1,0 +1,12 @@
+NE is a text editor that is designed to run on a wide variety
+of machines, from large servers to personal workstations. Its
+main use is expected to be as an interactive screen editor.
+However, it can also function as a line-by-line editor, and it
+is programmable, so it can be run non-interactively as a text
+manipulation tool.
+
+NE is a re-implementation of a previous editor that was called
+E. It is to a large extent upwards compatible, though there
+are some features of E that are not provided in NE. On the
+other hand, there are some additional features of NE that are
+not part of E.
