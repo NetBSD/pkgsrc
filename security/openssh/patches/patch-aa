@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
+$NetBSD: patch-aa,v 1.17 2001/09/27 05:12:54 itojun Exp $
 
---- configure.orig	Sun Jun 17 07:09:50 2001
-+++ configure	Fri Aug 17 22:06:47 2001
-@@ -1796,7 +1796,7 @@
+--- configure.orig	Wed Sep 26 07:50:31 2001
++++ configure	Thu Sep 27 13:50:35 2001
+@@ -1811,7 +1811,7 @@
  
  	;;
  *-*-netbsd*)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  	;;
  *-*-freebsd*)
  	check_for_libcrypt_later=1
-@@ -1828,7 +1828,7 @@
+@@ -1843,7 +1843,7 @@
  *-*-solaris*)
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
  	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  	cat >> confdefs.h <<\EOF
  #define PAM_SUN_CODEBASE 1
  EOF
-@@ -3160,6 +3160,7 @@
+@@ -3208,6 +3208,7 @@
  
  # Check whether user wants TCP wrappers support
  TCPW_MSG="no" 
@@ -28,8 +28,8 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  # Check whether --with-tcp-wrappers or --without-tcp-wrappers was given.
  if test "${with_tcp_wrappers+set}" = set; then
    withval="$with_tcp_wrappers"
-@@ -3173,6 +3174,8 @@
- #line 3174 "configure"
+@@ -3221,6 +3222,8 @@
+ #line 3222 "configure"
  #include "confdefs.h"
  
 +#include <sys/cdefs.h>
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				
-@@ -3189,6 +3192,7 @@
+@@ -3237,6 +3240,7 @@
  EOF
  
  					TCPW_MSG="yes" 
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  				
  else
    echo "configure: failed program was:" >&5
-@@ -3200,6 +3204,7 @@
+@@ -3248,6 +3252,7 @@
  			
  fi
  rm -f conftest*
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
  		fi
  	
  
-@@ -8881,6 +8886,7 @@
+@@ -9370,6 +9375,7 @@
  s%@TEST_MINUS_S_SH@%$TEST_MINUS_S_SH%g
  s%@LOGIN_PROGRAM_FALLBACK@%$LOGIN_PROGRAM_FALLBACK%g
  s%@LD@%$LD%g

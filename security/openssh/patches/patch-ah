@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
+$NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
 
---- Makefile.in.orig	Fri Apr 27 03:31:08 2001
-+++ Makefile.in	Fri Aug 17 21:43:33 2001
-@@ -8,6 +8,7 @@
+--- Makefile.in.orig	Tue Sep 18 14:06:22 2001
++++ Makefile.in	Thu Sep 27 13:59:36 2001
+@@ -9,6 +9,7 @@
  mandir=@mandir@
  mansubdir=@mansubdir@
  sysconfdir=@sysconfdir@
@@ -10,7 +10,7 @@ $NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
  piddir=@piddir@
  srcdir=@srcdir@
  top_srcdir=@top_srcdir@
-@@ -15,7 +16,7 @@
+@@ -16,7 +17,7 @@
  DESTDIR=
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
@@ -19,7 +19,7 @@ $NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
  SFTP_SERVER=$(libexecdir)/sftp-server
  
  PATHS= -DETCDIR=\"$(sysconfdir)\" \
-@@ -29,6 +30,7 @@
+@@ -30,6 +31,7 @@
  CFLAGS=@CFLAGS@
  CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
  LIBS=@LIBS@
@@ -27,25 +27,25 @@ $NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
  AR=@AR@
  RANLIB=@RANLIB@
  INSTALL=@INSTALL@
-@@ -96,7 +98,7 @@
+@@ -97,7 +99,7 @@
  	$(LD) -o $@ $(SSHOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
  
  sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 -	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
 +	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(WRAP) $(LIBS)
  
- scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o scp-common.o
- 	$(LD) -o $@ scp.o scp-common.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-@@ -164,7 +166,7 @@
- distprep: catman-do
+ scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o
+ 	$(LD) -o $@ scp.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
+@@ -173,7 +175,7 @@
  	autoreconf
+ 	(cd scard ; $(MAKE) -f Makefile.in distprep)
  
--install: $(TARGETS) install-files host-key
-+install: $(TARGETS) install-files
+-install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key
++install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
+ install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  
- install-files:
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
-@@ -173,6 +175,7 @@
+ scard-install:
+@@ -187,6 +189,7 @@
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
@@ -53,7 +53,7 @@ $NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
  	$(INSTALL) -m $(SSH_MODE) -s ssh $(DESTDIR)$(bindir)/ssh
  	$(INSTALL) -m 0755 -s scp $(DESTDIR)$(bindir)/scp
  	$(INSTALL) -m 0755 -s ssh-add $(DESTDIR)$(bindir)/ssh-add
-@@ -199,23 +202,11 @@
+@@ -213,23 +216,11 @@
  	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
  		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
  	fi
@@ -78,9 +78,9 @@ $NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
 -		fi ; \
 +		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
  	fi
- 	if [ ! -f $(DESTDIR)$(sysconfdir)/primes ]; then \
- 		$(INSTALL) -m 644 primes.out $(DESTDIR)$(sysconfdir)/primes; \
-@@ -248,10 +239,10 @@
+ 	if [ ! -f $(DESTDIR)$(sysconfdir)/moduli ]; then \
+ 		if [ -f $(DESTDIR)$(sysconfdir)/primes ]; then \
+@@ -267,10 +258,10 @@
  	./ssh-keygen -t rsa -f $(DESTDIR)$(sysconfdir)/ssh_host_rsa_key -N ""
  
  uninstallall:	uninstall
