@@ -1,0 +1,9 @@
+#!/bin/sh
+# $NetBSD: post-patch,v 1.1 1999/03/01 20:33:01 hwr Exp $
+
+cd ${WRKSRC}
+mv Makefile Makefile.orig
+sed -e "s|@PREFIX@|${LOCALBASE}|" < Makefile.orig > Makefile
+mv pdf.h pdf.h.orig
+sed -e "s|@PREFIX@|${LOCALBASE}|" < pdf.h.orig > pdf.h
+
