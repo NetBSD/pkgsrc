@@ -12,12 +12,15 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.28 2000/03/16 14:22:03 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.29 2000/04/05 23:34:43 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
 # Thorsten Frueauf <frueauf@netbsd.org>
 #
+
+use Getopt::Std;
+
 
 $err = $warn = 0;
 $extrafile = $parenwarn = $committer = $verbose = $newport = 0;
@@ -35,10 +38,9 @@ $manstrict = 0;
 $manchapters = '123456789ln';
 $localbase = "/usr/local";
 
-#select(STDERR);
-while (@ARGV > 0) {
-	$_ = shift;
-	/^-h/ && do {
+getopts('habcNB:v');
+
+if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
 usage: $prog [-abcvN] [-B#] [package_directory]
@@ -50,23 +52,16 @@ usage: $prog [-abcvN] [-B#] [package_directory]
 	-B#	allow # contiguous blank lines (default: $contblank line)
 EOF
 		exit 0;
-	};
-	/^-a/ && do {$extrafile = 1; next;};
-	/^-b/ && do {$parenwarn = 1; next;};
-	/^-c/ && do {$committer = 1; next;};
-	/^-v/ && do {$verbose = 1; next;};
-	/^-N/ && do {$newport = 1; next;};
-	/^-B(\d+)$/ && do { $contblank = $1; next; };
-	@ARGV > 0 && /^-B$/ && do {
-		$contblank = shift;
-		if ($contblank !~ /^\d+$/) {
-			print STDERR "FATAL: -B must come with number.\n";
-			exit 1;
-		}
-		next;
-	};
-	$portdir = $_;
-}
+};
+$extrafile = 1	if $opt_a;
+$parenwarn = 1	if $opt_b;
+$committer = 1	if $opt_c;
+$verbose = 1	if $opt_v;
+$newport = 1	if $opt_N;
+$contblank = $opt_B	if $opt_B;
+
+$portdir = shift || ".";
+
 
 # OS dependent configs
 # os    portsdir        rcsid   mplist  ldcfg   plist-rcsid mancompresss strict localbase
@@ -885,7 +880,7 @@ EOF
 	# check bogus EXTRACT_SUFX.
 	if ($extractsufx ne '') {
 		print "OK: seen EXTRACT_SUFX, checking value.\n" if ($verbose);
-		if ($distfiles ne '') {
+		if ($distfiles ne '' && ($extractsufx eq '.tar.gz')) {
 			&perror("WARN: no need to define EXTRACT_SUFX if ".
 				"DISTFILES is defined.");
 		}
