@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2004/08/13 11:28:50 adam Exp $
+$NetBSD: patch-ae,v 1.4 2005/03/30 12:10:58 adam Exp $
 
---- snmplib/snmpUDPIPv6Domain.c.orig	2004-04-20 19:10:30.000000000 +0000
+--- snmplib/snmpUDPIPv6Domain.c.orig	2004-12-24 14:42:23.000000000 +0000
 +++ snmplib/snmpUDPIPv6Domain.c
-@@ -68,6 +68,10 @@ const struct in6_addr in6addr_any = IN6A
+@@ -67,6 +67,10 @@ const struct in6_addr in6addr_any = IN6A
  #include <dmalloc.h>
  #endif
  

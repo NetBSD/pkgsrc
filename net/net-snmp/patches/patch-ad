@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2004/05/14 13:30:34 adam Exp $
+$NetBSD: patch-ad,v 1.3 2005/03/30 12:10:58 adam Exp $
 
---- agent/mibgroup/ucd_snmp.h.orig	2003-06-09 22:11:51.000000000 +0000
+--- agent/mibgroup/ucd_snmp.h.orig	2004-08-17 09:06:38.000000000 +0000
 +++ agent/mibgroup/ucd_snmp.h
-@@ -40,6 +40,10 @@ config_arch_require(freebsd5, ucd-snmp/v
+@@ -41,6 +41,10 @@ config_arch_require(freebsd5, ucd-snmp/v
  config_arch_require(freebsd5, ucd-snmp/memory_freebsd2)
  config_arch_require(netbsd1, ucd-snmp/vmstat_netbsd1)
  config_arch_require(netbsd1, ucd-snmp/memory_netbsd1)
