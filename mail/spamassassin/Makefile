@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2003/05/22 11:41:02 abs Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/08 01:11:38 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
-PKGREVISION=	# empty
+PKGREVISION=	1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
@@ -22,7 +22,7 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 .endif
 
 .if defined(SPAMASSASSIN_USE_SSL) && ${SPAMASSASSIN_USE_SSL} == "YES"
-DEPENDS+=		p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
+DEPENDS+=		p5-IO-Socket-SSL>=0.92:../../security/p5-IO-Socket-SSL
 CONFIGURE_ARGS+=	--enable-ssl
 .else
 CONFIGURE_ARGS+=	--disable-ssl
