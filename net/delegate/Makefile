@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2001/09/27 09:35:29 tacha Exp $
+# $NetBSD: Makefile,v 1.24 2001/12/11 14:20:10 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
 DISTNAME=	${PKGNAME:S/-//}
-PKGNAME=	delegate-7.5.3
+PKGNAME=	delegate-7.7.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
 		ftp://ftp.nec.co.jp/pub/infosys/WWW/DeleGate/ \
 		ftp://ftp.fujitsu.co.jp/pub/networking/DeleGate/ \
-		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/ \
+		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/ \
 		ftp://ftp.eni.co.jp/pub/mirrors/delegate/ \
 		ftp://ftp.ntua.gr/pub/net/gwtools/DeleGate/ \
 		ftp://ftp.netsw.org/netsw/Network/IP/Firewall/Proxy/delegate/ \
