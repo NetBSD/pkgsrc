@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/08/10 12:11:02 agc Exp $
+$NetBSD: distinfo,v 1.5 2004/11/30 03:41:54 minskim Exp $
 
-SHA1 (molden4.0.tar.Z) = 279a5f88bff1ebe13d246f9678e9200392726b40
-Size (molden4.0.tar.Z) = 3220858 bytes
+SHA1 (molden4.2.tar.Z) = 5377c6670b0ddc8317573a749494bac146d97a8b
+Size (molden4.2.tar.Z) = 3306529 bytes
 SHA1 (patch-aa) = 62168b37335cc74737c2d967234c0e846ab7bfa3
