@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.13 2002/08/29 15:11:14 taya Exp $
+$NetBSD: patch-aw,v 1.14 2002/12/04 15:20:29 taya Exp $
 
 diff -ru ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
 --- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	Sat Oct 27 14:49:19 2001
-+++ ./widget/src/gtksuperwin/Makefile.in	Wed Aug 28 11:22:08 2002
++++ ./widget/src/gtksuperwin/Makefile.in	Wed Nov 13 14:21:31 2002
 @@ -25,6 +25,7 @@
  MODULE		= widget
  LIBRARY_NAME	= gtksuperwin
