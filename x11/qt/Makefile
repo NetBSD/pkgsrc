@@ -3,7 +3,7 @@
 # Date created:		30 Jul 1996
 # Whom:			searle@longacre.demon.co.uk
 #
-# $NetBSD: Makefile,v 1.2 1997/12/03 16:49:02 drochner Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:09:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -100,13 +100,13 @@ post-configure:
 	cd ${WRKSRC} && make netbsd-gcc-shared
 
 do-install:
-	${INSTALL_PROGRAM} $(WRKDIR)/qt-1.31/bin/moc $(QTDIR)/bin
-	${INSTALL_DATA} $(WRKDIR)/qt-1.31/lib/libqt.so.1.31 $(QTDIR)/lib
-	${LDCONFIG} -m $(QTDIR)/lib
-	${MKDIR} $(QTDIR)/include/qt
-	${INSTALL_DATA} $(WRKDIR)/qt-1.31/include/* $(QTDIR)/include/qt
-	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man1/* $(QTDIR)/man/man1
-	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man3/* $(QTDIR)/man/man3
+	${INSTALL_PROGRAM} ${WRKDIR}/qt-1.31/bin/moc ${QTDIR}/bin
+	${INSTALL_DATA} ${WRKDIR}/qt-1.31/lib/libqt.so.1.31 ${QTDIR}/lib
+	${LDCONFIG} -m ${QTDIR}/lib || /usr/bin/true
+	${MKDIR} ${QTDIR}/include/qt
+	${INSTALL_DATA} ${WRKDIR}/qt-1.31/include/* ${QTDIR}/include/qt
+	${INSTALL_MAN} ${WRKDIR}/qt-1.31/man/man1/* ${QTDIR}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/qt-1.31/man/man3/* ${QTDIR}/man/man3
 	${MKDIR} ${QTDIR}/share/doc/qt
 	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README ${QTDIR}/share/doc/qt
 	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README.QT ${QTDIR}/share/doc/qt
