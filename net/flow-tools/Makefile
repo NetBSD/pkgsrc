@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/09 22:37:34 seb Exp $
 
 DISTNAME=	flow-tools-0.67
 CATEGORIES=	net
@@ -15,9 +15,6 @@ USE_PKGINSTALL=	YES
 PKG_SYSCONFSUBDIR=	flow-tools
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-BUILD_DEFS+=	FLOW_TOOLS_USE_MYSQL
-BUILD_DEFS+=	FLOW_TOOLS_USE_POSTGRESQL
-
 EGDIR=		${PREFIX}/share/examples/flow-tools
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/sym
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/cfg
@@ -30,17 +27,27 @@ SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 .endfor
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-# MySQL support
+# legacy options
 .if defined(FLOW_TOOLS_USE_MYSQL) && !empty(FLOW_TOOLS_USE_MYSQL:M[yY][eE][sS])
-.include "../../databases/mysql-client/buildlink3.mk"
+PKG_OPTIONS.flow-tools+=	mysql
+.endif
+.if defined(FLOW_TOOLS_USE_POSTGRESQL) && !empty(FLOW_TOOLS_USE_POSTGRESQL:M[yY][eE][sS])
+PKG_OPTIONS.flow-tools+=	postgresql
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
+PKG_SUPPORTED_OPTIONS=	mysql postgresql
+.include "../../mk/bsd.options.mk"
+
+# MySQL support.
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .endif
 
-# Postgresql support
-.if defined(FLOW_TOOLS_USE_POSTGRESQL) && !empty(FLOW_TOOLS_USE_POSTGRESQL:M[yY][eE][sS])
-.include "../../mk/pgsql.buildlink3.mk"
+# PostgreSQL support.
+.if !empty(PKG_OPTIONS:Mpostgresql)
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
 .endif
 
