@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.235 1999/03/30 09:46:27 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.236 1999/03/31 09:04:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -508,6 +508,7 @@ RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/ksh
+SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
 TEST?=		/usr/bin/test
 TR?=		/usr/bin/tr
@@ -542,6 +543,7 @@ RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
+SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 TEST?=		/bin/test
 TR?=		/usr/bin/tr
@@ -1203,7 +1205,24 @@ _PORT_USE: .USE
 .if make(real-extract)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
 .endif
-.if make(real-install)
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
+		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
+			${SCRIPTDIR}/${.TARGET:S/^real-/pre-/};		\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/do-/}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/post-/}
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/post-/} ]; then	\
+		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
+			${SCRIPTDIR}/${.TARGET:S/^real-/post-/};	\
+	fi
+.if !make(real-fetch)							\
+	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY))		\
+	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
+.endif
+
+root-install:
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
@@ -1232,15 +1251,13 @@ _PORT_USE: .USE
 		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
 		exit 1;							\
 	fi
-.endif
+.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "===>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "      If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "      and install this port again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
-.endif
-.if make(real-install)
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -1256,20 +1273,18 @@ _PORT_USE: .USE
 		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
-.endif
-.endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
+.endif # !NO_MTREE
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} pre-install
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/pre-install ]; then		\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/${.TARGET:S/^real-/pre-/};		\
+			${SCRIPTDIR}/pre-install;		\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/do-/}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/post-/}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/post-/} ]; then	\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} do-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} post-install
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/post-install ]; then	\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/${.TARGET:S/^real-/post-/};	\
+			${SCRIPTDIR}/post-install;	\
 	fi
-.if make(real-install)
 .for f in ${INFO_FILES}
 	${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
@@ -1379,12 +1394,8 @@ _PORT_USE: .USE
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
-.endif
-.if !make(real-fetch)							\
-	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY))		\
-	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.install_done
+
 
 ################################################################
 # Skeleton targets start here
@@ -1448,9 +1459,35 @@ real-configure: _PORT_USE
 	@${ECHO_MSG} "===>  Configuring for ${PKGNAME}"
 real-build: _PORT_USE
 	@${ECHO_MSG} "===>  Building for ${PKGNAME}"
-real-install: _PORT_USE
+real-install: pkg-su-install
 	@${ECHO_MSG} "===>  Installing for ${PKGNAME}"
 real-package: _PORT_USE
+
+# sudo or priv are acceptable substitutes
+SU_CMD?=	${SU} - root -c
+
+pkg-su-install:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ `${ID} -u` = 0 ]; then					\
+		{MAKE} ${.MAKEFLAGS} root-install;			\
+	else								\
+		if [ "X${BATCH}" != X"" ]; then                         \
+			${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
+			${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
+		else                                                    \
+			make=`type ${MAKE} | ${AWK} '{ print $$3 }'`;   \
+			force="";                                       \
+			if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then    \
+				force="FORCE_PKG_REGISTER=1";           \
+			fi;                                             \
+			if [ "X${PRE_ROOT_CMD}" != "X" ]; then		\
+				${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
+				${PRE_ROOT_CMD};                        \
+			fi;                                             \
+			${ECHO_MSG} "Becoming root to install ${PKGNAME}.";\
+			${SU_CMD} "cd ${.CURDIR}; $$make $$force ${.MAKEFLAGS} root-install"; \
+                fi;               					\
+	fi
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
 # in the _PORT_USE macro
