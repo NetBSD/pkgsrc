@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2004/06/05 17:47:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.95 2004/06/26 11:02:12 jmmv Exp $
 #
 
 COMMENT=	Communication programs
@@ -64,6 +64,7 @@ SUBDIR+=	p5-Net-AIM
 SUBDIR+=	p5-Net-AOLIM
 SUBDIR+=	p5-Net-Goofey
 SUBDIR+=	p5-Net-ICQ2000
+SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	pircbot
 SUBDIR+=	psi
 SUBDIR+=	psi-ssl
