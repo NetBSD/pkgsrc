@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.3 2000/12/12 17:29:52 drochner Exp $
+$NetBSD: patch-ac,v 1.4 2002/01/19 11:39:44 drochner Exp $
 
---- tools/astorb2edb.pl.orig	Sat Dec  2 09:35:53 2000
-+++ tools/astorb2edb.pl	Sun Dec 10 17:18:41 2000
+--- tools/astorb2edb.pl.orig	Wed Aug 15 07:35:25 2001
++++ tools/astorb2edb.pl	Mon Jan 14 16:03:05 2002
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!@LOCALBASE@/bin/perl
  # convert  astorb.txt to 2 .edb files.
  # Usage: [-f] <base>
- #   if -f then use ftp to get the script from harvard, else read it from stdin.
+ #   if -f then use ftp to get the script from lowell, else read it from stdin.

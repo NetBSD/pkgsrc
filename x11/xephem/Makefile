@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2001/09/12 02:36:28 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/19 11:39:43 drochner Exp $
 
-DISTNAME=	xephem-3.4
+DISTNAME=	xephem-3.5.2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
@@ -10,21 +10,18 @@ HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
-LIBSRC=		${WRKDIR}/${DISTNAME}/libastro
+LIBSRC1=		${WRKDIR}/${DISTNAME}/libastro
+LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
 USE_PERL5=	yes
 USE_IMAKE=	yes
 
 LICENSE=	no-commercial-use
 
-pre-configure:
-	@(cd ${LIBSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} \
-		${XMKMF})
-
 pre-build:
-	@(cd ${LIBSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		-f ${MAKEFILE} ${ALL_TARGET})
+	(cd ${LIBSRC1}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
+	(cd ${LIBSRC2}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
 
-PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl tle2edb.pl
+PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl
 
 post-install:
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
@@ -32,10 +29,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/tools
 	(cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits \
 	 ${PREFIX}/share/xephem)
-	(cd ${WRKSRC}/tools; ${INSTALL_DATA} README \
-			${PREFIX}/share/xephem/tools; \
-		${INSTALL_SCRIPT} extract.awk jost2edb.awk\
-			${PREFIX}/share/xephem/tools)
 	(cd ${WRKSRC}/tools; for file in ${PERL_SCRIPTS}; do \
 		${SED} 1s,@LOCALBASE@,${LOCALBASE}, $$file \
 			> ${WRKDIR}/$$file; \
