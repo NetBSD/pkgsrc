@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2000/07/07 16:25:04 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.3 2004/05/29 08:05:08 dillo Exp $
 
 have a default scsi device which is likely to be correct (at least
 on single CD systems).
 
---- dao/main.cc.orig	Tue Oct 26 12:13:46 1999
-+++ dao/main.cc	Fri Jul  7 12:20:08 2000
-@@ -157,5 +157,9 @@
+--- dao/main.cc.orig	2004-02-12 02:13:31.000000000 +0100
++++ dao/main.cc
+@@ -111,7 +111,11 @@ static int FIFO_BUFFERS = 32;
+ 
  #else
  
 -static const char *SCSI_DEVICE = "0,0,0";
@@ -16,3 +17,4 @@ on single CD systems).
 +#endif /* __i386__ */
  static int FIFO_BUFFERS = 32;
  
+ #endif
