@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 22:55:30 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/21 12:41:13 martti Exp $
 #
 
-DISTNAME=	bins-1.1.21
-PKGREVISION=	1
+DISTNAME=	bins-1.1.22
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -61,7 +60,7 @@ do-install:
 		${PREFIX}/share/examples/bins/templates.joi/static
 	${INSTALL_DATA} ${WRKSRC}/binsrc \
 		${PREFIX}/share/examples/bins
-	for lang in fr de pl it ru es zh; do \
+	for lang in es de fr it nl pl ru zh; do \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
 	done
