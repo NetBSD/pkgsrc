@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 11:02:55 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/04/05 14:56:06 cube Exp $
 
-SHA1 (lv450.tar.gz) = 6438609aa6a320641201c3e90132676d53bb0456
-RMD160 (lv450.tar.gz) = 3a1bb2816aa043995d60b88ea9bd7c64f97b2549
-Size (lv450.tar.gz) = 604731 bytes
-SHA1 (patch-aa) = 9221506a523a0ada4153f81a18152de01bfac315
+SHA1 (lv451.tar.gz) = 1a70299c27aa317a436976a557853858db4dcb5f
+RMD160 (lv451.tar.gz) = ae0d58b52dbf714f8b371f51ac87490ecba1c994
+Size (lv451.tar.gz) = 605082 bytes
+SHA1 (patch-aa) = e8774485d7dae4b0660e108374b4809f0b61e722

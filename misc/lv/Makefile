@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/05 14:56:06 cube Exp $
 
-DISTNAME=	lv450
-PKGNAME=	lv-4.50
+DISTNAME=	lv451
+PKGNAME=	lv-4.51
 CATEGORIES=	misc
 MASTER_SITES=	http://www.ff.iij4u.or.jp/~nrt/freeware/
 
@@ -12,5 +12,8 @@ COMMENT=	Powerful Multilingual File Viewer
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ../src/configure
+
+MAKE_ENV+=	LN=${LN}
+INSTALLATION_DIRS=	lib/lv
 
 .include "../../mk/bsd.pkg.mk"
