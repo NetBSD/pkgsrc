@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/04/23 15:06:21 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/07/07 22:12:33 bad Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -7,6 +7,7 @@ bin/faxstat
 bin/sendfax
 bin/sendpage
 etc/rc.d/hylafax
+libdata/hylafax/hfaxd.conf
 libdata/hylafax/faxmail.ps
 libdata/hylafax/pagesizes
 libdata/hylafax/typerules
@@ -165,10 +166,14 @@ share/hylafax/config_template/zyxel-1496e
 share/hylafax/config_template/zyxel-1496e-1
 share/hylafax/config_template/zyxel-1496e-2.0
 share/hylafax/config_template/zyxel-2864
+share/hylafax/etc_template/cover.templ
 share/hylafax/etc_template/dialrules
 share/hylafax/etc_template/dialrules.europe
 share/hylafax/etc_template/dialrules.sf-ba
 share/hylafax/etc_template/dpsprinter.ps
+share/hylafax/etc_template/hosts.hfaxd
+share/hylafax/etc_template/lutRS18.pcf
+share/hylafax/etc_template/xferfaxlog
 @dirrm share/hylafax/config_template
 @dirrm share/hylafax/etc_template
 @dirrm share/hylafax
