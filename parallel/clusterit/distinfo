@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:46 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 15:22:45 agc Exp $
 
-MD5 (clusterit-1.3.tar.gz) = 0fc451e5ac837c0e22b14e2f7bace95e
+SHA1 (clusterit-1.3.tar.gz) = 20315e537f3ca667e7ce3a59f3bbf46bd8e95492
+Size (clusterit-1.3.tar.gz) = 38400 bytes
