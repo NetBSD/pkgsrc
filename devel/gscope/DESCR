@@ -1,0 +1,4 @@
+gscope is a software oscilloscope library build using the GTK and
+GNOME toolkits.  Gscope can be used to monitor, display and debug
+various types of "real-time" data.  Additionally, the scope can be
+used for graphing file data that is in a tuple format. 

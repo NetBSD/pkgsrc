@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/06/19 13:00:41 agc Exp $
+
+SHA1 (gscope-0.4.1.tar.gz) = 275260c5130c4546f6911a3135a885a77d4a5707
+Size (gscope-0.4.1.tar.gz) = 278494 bytes
+SHA1 (patch-aa) = a2e04db458ab93751ca8f9aeed3024df4fe7379f
+SHA1 (patch-ab) = 7b4a163422eefb30345ab9739481e74e7c4d73c2
