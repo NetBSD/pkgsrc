@@ -1,23 +1,39 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/08/08 07:23:28 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CP="@CP@"
 GREP="@GREP@"
+LN="@LN@"
+MV="@MV@"
 RM="@RM@"
 
 X11BASE=@X11BASE@
 X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
 HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
+X11_X11_RULES=${X11BASE}/lib/X11/config/X11.rules
+X11_RULES=${PKG_PREFIX}/lib/X11/config/X11.rules
+X11_DIST_RULES=${PKG_PREFIX}/lib/X11/config/X11.dist.rules
+
 case ${STAGE} in
 PRE-INSTALL)
 	;;
 
 POST-INSTALL)
+	${RM} -f ${X11_DIST_RULES}
+	if [ ${PKG_PREFIX} = ${X11BASE} ]
+	then
+		${MV} -f ${X11_X11_RULES} ${X11_X11_RULES}.buildlink.bak
+		${LN} -sf ${X11_X11_RULES}.buildlink.bak ${X11_DIST_RULES}
+	else
+		${LN} -sf ${X11_X11_RULES} ${X11_DIST_RULES}
+	fi
+	${LN} -sf buildlinkX11.rules ${X11_RULES}
+
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
 	then
 		echo -n "Updating ${HOSTDEF}..."
