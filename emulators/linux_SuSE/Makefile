@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/31 00:18:47 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/10/31 00:23:34 tron Exp $
 
 DISTNAME=	SuSE-5.3
 PKGNAME=	linux_SuSE-5.3
@@ -77,6 +77,6 @@ do-install:
 		@${EMULDIR}/sbin/ldconfig -r ${EMULDIR} || ${TRUE}
 
 post-install:
-		${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+		@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
