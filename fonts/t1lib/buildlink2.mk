@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/08/25 22:04:01 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/19 01:26:42 jlam Exp $
 
 .if !defined(T1LIB_BUILDLINK2_MK)
 T1LIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		t1lib
-BUILDLINK_DEPENDS.t1lib?=	t1lib>=1.1.1
+BUILDLINK_DEPENDS.t1lib?=	t1lib>=1.3.1
 BUILDLINK_PKGSRCDIR.t1lib?=	../../fonts/t1lib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.t1lib=t1lib
