@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.5 2001/04/15 01:18:07 itojun Exp $
+$NetBSD: patch-ac,v 1.6 2002/09/23 12:57:00 markd Exp $
 
---- devtools/OS/SunOS.5.7	Tue Jun  6 02:03:29 2000
-+++ devtools/OS/SunOS.5.7	Wed Jul 26 13:07:08 2000
-@@ -6,6 +6,7 @@
- define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
+--- devtools/OS/SunOS.5.7.orig	Fri Mar 22 11:59:26 2002
++++ devtools/OS/SunOS.5.7	Mon Sep 16 15:07:08 2002
+@@ -11,6 +11,7 @@
  define(`confENVDEF', `-DSOLARIS=20700')
+ define(`confSM_OS_HEADER', `sm_os_sunos')
  define(`confLIBS', `-lsocket -lnsl')
 +define(`confLDOPTS', `${LDFLAGS}')
+ define(`confMTCCOPTS', `-D_REENTRANT')
  define(`confMTLDOPTS', `-lpthread')
  define(`confMBINDIR', `/usr/lib')
- define(`confEBINDIR', `/usr/lib')
