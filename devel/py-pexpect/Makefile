@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/25 19:54:46 minskim Exp $
 
-DISTNAME=	pexpect-0.99
+DISTNAME=	pexpect-0.999
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pexpect/}
