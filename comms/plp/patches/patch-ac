@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+
+--- ncp/Makefile.orig	Tue Feb  2 21:16:05 1999
++++ ncp/Makefile	Mon Apr 19 11:58:15 1999
+@@ -3,14 +3,14 @@
+ 
+ OBJ=$(CCSOURCE:%.cc=%.o) $(CSOURCE:%.c=%.o)
+ 
+-../bin/ncp : $(OBJ)
+-	$(LD) $(OBJ) $(LIBS) -o $@
++ncp : $(OBJ)
++	$(LD) $(OBJ) $(LIBS) -o $@
+ 
+ %.o : %.cc
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ %.o : %.c
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ clean :
+-	rm -f ../bin/ncp core $(OBJ) *~
++	rm -f .libs ncp core $(OBJ) *~

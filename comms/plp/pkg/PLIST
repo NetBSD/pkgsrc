@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+bin/ncp
+bin/rfsv
+lib/libplputils.a
+lib/libplputils.so.1.7
+share/doc/plp/README
+@dirrm share/doc/plp
