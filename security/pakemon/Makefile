@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/10/10 08:55:12 cube Exp $
+# $NetBSD: Makefile,v 1.14 2003/10/10 09:18:11 cube Exp $
 
 DISTNAME=	pakemon-0.3.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.sfc.keio.ac.jp/~keiji/ids/pakemon/ \
 		http://www.binarii.com/files/security/ \
