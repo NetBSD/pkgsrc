@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:17:34 drochner Exp $
+${PYSITELIB}/optik/__init__.py
+${PYSITELIB}/optik/__init__.pyc
+${PYSITELIB}/optik/errors.py
+${PYSITELIB}/optik/errors.pyc
+${PYSITELIB}/optik/option.py
+${PYSITELIB}/optik/option.pyc
+${PYSITELIB}/optik/option_parser.py
+${PYSITELIB}/optik/option_parser.pyc
+@dirrm ${PYSITELIB}/optik
