@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/03/13 16:55:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/26 21:19:53 wiz Exp $
 
 DISTNAME=		nhc98src-1.16
 PKGNAME=		nhc98-1.16
@@ -17,7 +17,8 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		YES
 BUILDLINK_SETENV.CC=	CC=gcc
 
-USE_NCURSES=		# KEY_RESIZE
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
