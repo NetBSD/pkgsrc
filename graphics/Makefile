@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2003/02/17 13:14:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.230 2003/04/03 08:28:14 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -17,8 +17,8 @@ SUBDIR+=	MesaDemos
 SUBDIR+=	MesaLib
 SUBDIR+=	Ngraph
 SUBDIR+=	RenderKit
-SUBDIR+=	SDL-image
 SUBDIR+=	SDLKit
+SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	aalib-x11
 SUBDIR+=	alevt
