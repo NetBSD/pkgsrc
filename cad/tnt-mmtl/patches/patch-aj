@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/09/26 01:12:17 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.1 2004/10/01 22:56:11 dmcmahill Exp $
 
 --- gui/gui_help.tcl.orig	Mon Jul 26 13:37:52 2004
 +++ gui/gui_help.tcl
