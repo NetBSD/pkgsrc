@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2000/12/17 13:13:26 tron Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/25 09:16:24 tron Exp $
 
-DISTNAME=		suse_base-${SUSE_VERSION}
+DISTNAME=		suse_base-${SUSE_VERSION}nb1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tls@netbsd.org
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
-
-BUILD_DEPENDS+=		${RPMLIB}:../../misc/rpm
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 suse_base-6.1
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
@@ -21,19 +19,8 @@ RPMFILES=		aaa_dir.rpm shlibs.rpm libz.rpm \
 RPMIGNOREPATH=		tmp usr/tmp var
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
-RPMLIB=			${LOCALBASE}/lib/librpm.a
-
-# librpm.a needs libintl.a
-USE_LIBINTL=		yes
-.if exists(/usr/include/libintl.h)
-LIBINTL=		-lintl
-.else
-LIBINTL=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lintl
-.endif
 
 do-build:
-	${CC} ${FILESDIR}/rpm2pkg.c ${CFLAGS} -I${PREFIX}/include/rpm \
-	  ${RPMLIB} -lz ${LIBINTL} -o ${WRKSRC}/rpm2pkg
 	@for FILE in ${PKGDIR}/PLIST ${SCRIPTDIR}/*.sh; do \
 	  ${SED} -e 's#@@EMULDIR@@#${EMULDIR}#g' \
 	         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
@@ -44,7 +31,6 @@ do-install:
 	for FILE in ${WRKDIR}/*.sh; do \
 	  ${INSTALL_SCRIPT} $$FILE ${PREFIX}/sbin/`basename $$FILE .sh`; \
 	done
-	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
 	${MKDIR} ${EMULDIR}/dev
 	${LN} -fs /dev/sound ${EMULDIR}/dev/dsp
 	${LN} -fs /dev/null ${EMULDIR}/dev/null
