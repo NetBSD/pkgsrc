@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2000/12/29 16:42:55 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/01 20:07:35 schmonz Exp $
 
---- hier.c.orig	Thu Dec 28 16:35:18 2000
-+++ hier.c	Thu Dec 28 16:35:49 2000
-@@ -2,7 +2,7 @@
+--- dnscache-conf.c.orig	2001-02-11 16:11:45.000000000 -0500
++++ dnscache-conf.c
+@@ -89,13 +89,13 @@ int main(int argc,char **argv)
+   if (chdir(auto_home) == -1)
+     strerr_die4sys(111,FATAL,"unable to switch to ",auto_home,": ");
  
- void hier()
- {
--  c("/","etc","dnsroots.global",-1,-1,0644);
-+  c(auto_home,"etc","dnsroots.global",-1,-1,0644);
+-  fdrootservers = open_read("/etc/dnsroots.local");
++  fdrootservers = open_read(PKG_SYSCONFDIR"/dnsroots.local");
+   if (fdrootservers == -1) {
+     if (errno != error_noent)
+-      strerr_die2sys(111,FATAL,"unable to open /etc/dnsroots.local: ");
+-    fdrootservers = open_read("/etc/dnsroots.global");
++      strerr_die4sys(111,FATAL,"unable to open ",auto_home,PKG_SYSCONFDIR"/dnsroots.local: ");
++    fdrootservers = open_read(PKG_SYSCONFDIR"/dnsroots.global");
+     if (fdrootservers == -1)
+-      strerr_die2sys(111,FATAL,"unable to open /etc/dnsroots.global: ");
++      strerr_die4sys(111,FATAL,"unable to open ",auto_home,PKG_SYSCONFDIR"/dnsroots.global: ");
+   }
  
-   h(auto_home,-1,-1,02755);
-   d(auto_home,"bin",-1,-1,02755);
+   init(dir,FATAL);
