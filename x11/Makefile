@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.315 2003/12/03 23:41:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.316 2003/12/04 14:42:36 recht Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -10,6 +10,7 @@ SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xaw3d
 SUBDIR+=	Xbae
 SUBDIR+=	XmHTML
+SUBDIR+=	Xrandr
 SUBDIR+=	Xrender
 SUBDIR+=	acidlaunch
 SUBDIR+=	asnap
@@ -179,6 +180,7 @@ SUBDIR+=	qt3-tools
 SUBDIR+=	qtarch
 SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
+SUBDIR+=	randrext
 SUBDIR+=	render
 SUBDIR+=	rep-gtk
 SUBDIR+=	ruby-fox
