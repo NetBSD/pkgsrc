@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/09 11:47:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/20 12:53:28 markd Exp $
 bin/kmdr-editor
 bin/kmdr-executor
 bin/kxsldbg
@@ -117,7 +117,6 @@ share/kde/applnk/Applications/kmdr-executor.desktop
 share/kde/applnk/Development/kmdr-editor.desktop
 share/kde/applnk/Development/kxsldbg.desktop
 share/kde/applnk/Development/quanta.desktop
-share/kde/applnk/Utilities/kfilereplacepart.desktop
 share/kde/apps/kafkapart/entities
 share/kde/apps/kafkapart/pics/php.png
 share/kde/apps/kfilereplacepart/kfilereplacepartui.rc
