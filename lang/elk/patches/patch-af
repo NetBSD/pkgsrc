@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 1999/08/17 11:18:41 agc Exp $
+$NetBSD: patch-af,v 1.2 2000/02/07 01:58:26 wiz Exp $
 
 --- include/build	1998/03/31 09:49:53	1.1
 +++ include/build	1998/03/31 09:53:47
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.1 1999/08/17 11:18:41 agc Exp $
 -	    echo mkdir $install_dir/include; \\
 -	    mkdir $install_dir/include; \\
 -	fi
-+	-@mkdir -p \${INCDIR} \${PREFIX}/share/elk
++	-@mkdir -p \${INCDIR}
  	@for i in \$(FILES) ;\\
  	do \\
 -	    echo cp \$\$i $install_dir/include; \\
