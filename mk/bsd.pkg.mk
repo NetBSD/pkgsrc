@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1207 2003/07/09 16:07:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1208 2003/07/09 16:18:06 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1983,7 +1983,7 @@ do-patch: uptodate-digest
 #	the do-configure target that are used during the build phase.
 
 .if defined(REPLACE_PERL)
-REPLACE_INTERPRETER=	perl
+REPLACE_INTERPRETER+=	perl
 _REPLACE.perl.old=	.*/bin/perl
 _REPLACE.perl.new=	${PERL5}
 _REPLACE_FILES.perl=	${REPLACE_PERL}
