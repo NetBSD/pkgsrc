@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7088 2004/09/03 12:53:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.7089 2004/09/03 13:07:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_chk to 1.51 [abs 2004-09-02]
 	Updated gnome2-user-docs to 2.6.0.1 [jmmv 2004-09-02]
 	Updated startup-notification to 0.7 [jmmv 2004-09-02]
+	Updated libwnck to 2.6.2.1 [jmmv 2004-09-02]
