@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3078 2005/02/20 14:03:31 dmcmahill Exp $
+$NetBSD: TODO,v 1.3079 2005/02/20 15:02:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -894,10 +894,10 @@ Suggested package updates
 	o py-matplotlib-0.70.1
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.18
-	o py-qt3-base-3.13
+	o py-qt3-base-3.14
 	o py-qt3-modules-3.13
 	o py-qt3-qscintilla-3.13
-	o py-qt3-sip-4.1.1
+	o py-qt3-sip-4.2
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
@@ -998,6 +998,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o staroffice-7p1
+	o stella-1.4.2
 	o stellarium-0.6.1
 	o stlport-4.6.2
 	o strace-4.5.8
