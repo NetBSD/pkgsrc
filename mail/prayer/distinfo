@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+
+SHA1 (prayer-1.0.5.tar.gz) = 56ab33aab2c1960a28bb59f076869b4ebc4c5f4f
+Size (prayer-1.0.5.tar.gz) = 500762 bytes
+SHA1 (patch-aa) = 187f8c69ce9417c4768030bc60d3b5ee8b3b4fed
+SHA1 (patch-ab) = 015dac1b72153c394666e2389339609b3dd9fcb5
+SHA1 (patch-ac) = 5f2cb8083a5b12791a873ca9587cf91c1daa9b4a
+SHA1 (patch-ad) = b7501587b937767304b8bbe2d84f01663e5d74ad

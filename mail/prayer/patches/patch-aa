@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+
+--- Config.orig	Thu Nov  7 08:50:44 2002
++++ Config
+@@ -17,9 +17,9 @@ ACCOUNTD_SSL_ENABLE  = false  # Enable S
+ DIRECT_ENABLE        = false  # Experimental. Leave this switched off... 
+ 
+ # Following depend on the way that you have configured c-client
+-CCLIENT_SSL_ENABLE   = false  # C-client was built with SSL support
++CCLIENT_SSL_ENABLE   = true   # C-client was built with SSL support
+ CCLIENT_PAM_ENABLE   = false  # C-client was built with PAM support
+-CCLIENT_KERB_ENABLE  = false  # C-client was built with Kerberos support
++CCLIENT_KERB_ENABLE  = true   # C-client was built with Kerberos support
+ 
+ ############################################################################
+ # Location of compiler
+@@ -53,9 +53,9 @@ BASE_LIBS    = -lcrypt
+ # which points to ../../imap/c-client. This just reduces the amount of
+ # noise output on each line when building the package.
+ #
+-CCLIENT_DIR=./c-client
+-CCLIENT_INCLUDE=-I $(CCLIENT_DIR)
+-CCLIENT_LIB=./$(CCLIENT_DIR)/c-client.a
++CCLIENT_DIR=/usr/pkg
++CCLIENT_INCLUDE=-I $(CCLIENT_DIR)/include/c-client
++CCLIENT_LIB=$(CCLIENT_DIR)/lib/libc-client.a
+ CCLIENT_SSL_ENABLE  = true
+ 
+ #
+@@ -99,7 +99,7 @@ PAM_LIBS    = -lpam
+ 
+ # Kerberos (required if CCLIENT_KERB_ENABLE set)
+ KERB_INCLUDE = 
+-KERB_LIBS    = -L/usr/kerberos/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
++KERB_LIBS    = -L/usr/lib -lgssapi -lcom_err -lkrb5 -lasn1 -lroken -ldes
+ 
+ # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
+ #
+@@ -121,8 +121,8 @@ DB_INCLUDE=
+ DB_LIBS=-ldb
+ 
+ # Following suitable for FreeBSD with DB 4 package installed
+-#DB_INCLUDE=-I/usr/local/include/db4
+-#DB_LIBS=-L/usr/local/lib -ldb4
++DB_INCLUDE=-I/usr/pkg/include/db4
++DB_LIBS=-L/usr/pkg/lib -ldb4
+ 
+ ############################################################################
+ 
+@@ -143,7 +143,7 @@ RW_GROUP   = prayer
+ # Default configuration and permissions does not allow prayer user to
+ # update prayer configuration file.
+ 
+-PREFIX    = /usr/local/prayer
++# PREFIX    = /usr/local/prayer
+ RO_USER   = root
+ RO_GROUP  = prayer
+ 
