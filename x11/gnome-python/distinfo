@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 05:27:58 tron Exp $
 
 SHA1 (gnome-python-1.4.0.tar.gz) = 402d675941cd59b9541067531583d4af0a456c1f
+Size (gnome-python-1.4.0.tar.gz) = 520383 bytes

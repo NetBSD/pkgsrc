@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:14 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 05:27:59 tron Exp $
 
 SHA1 (lesstif-0.92.26.tar.gz) = e25dddd6fbea3501469449f0df2f6916aeed58d5
+Size (lesstif-0.92.26.tar.gz) = 4038456 bytes
 SHA1 (patch-aa) = b228b0230dbbd00018ea26e22aa045a5fe13be80
 SHA1 (patch-ab) = 3f207332a018bed858b7c77362b69fba18b681fa
 SHA1 (patch-ac) = 834109cc4e49713c5a39586968ce2def35507fb2
