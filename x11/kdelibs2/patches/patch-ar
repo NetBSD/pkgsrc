@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2001/03/14 15:59:44 skrll Exp $
+
+--- kparts/tests/Makefile.in.orig	Thu Feb 22 18:17:40 2001
++++ kparts/tests/Makefile.in
+@@ -239,7 +239,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/kfile -I$(top_srcdir)/kio $(all_includes)
++INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/kfile -I$(top_srcdir)/kio $(all_includes)
+ LDFLAGS = $(all_libraries)
+ LDADD = $(top_builddir)/kparts/libkparts.la $(LIB_KDECORE)
+ 
