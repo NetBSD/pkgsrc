@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 00:18:18 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2002/01/08 09:56:19 tron Exp $
 #
 
 PKGNAME=$1
@@ -15,9 +15,9 @@ POST-DEINSTALL)
 =============================================================================
 If you won't be using ${PKGNAME} any longer, you may want to remove
 any cached CD informations in
-	@PREFIX@/lib/X11/xmcd/cddb
+	${PKG_PREFIX}/lib/X11/xmcd/cddb
 and any drive informations in
-	@PREFIX@/lib/X11/xmcd/config
+	${PKG_PREFIX}/lib/X11/xmcd/config
 e.g. by deleting the corresponding directory. Please note that config
 files will get overwritten on re-install if you don't save them manually.
 =============================================================================
