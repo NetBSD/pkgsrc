@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 1998/09/05 03:21:11 garbled Exp $
+--- configure.orig	Fri Jul 24 06:13:00 1998
++++ configure	Fri Aug 28 12:22:23 1998
+@@ -961,8 +961,8 @@
+ 
+ 
+ 
+-LIBTOOL='$(SHELL) ../libtool'
+-UPLIBTOOL='$(SHELL) ../../libtool'
++LIBTOOL='$(SHELL) $(PREFIX)/bin/libtool'
++UPLIBTOOL='$(SHELL) $(PREFIX)/bin/libtool'
+ EXTOBJ='lo'
+ EXTLIB='la'
+ # Check whether --enable-libtool or --disable-libtool was given.

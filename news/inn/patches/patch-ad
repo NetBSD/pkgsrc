@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 1998/09/05 03:21:11 garbled Exp $
+--- innd/Makefile.orig	Fri Aug 28 12:02:45 1998
++++ innd/Makefile	Fri Aug 28 12:03:29 1998
+@@ -24,10 +24,10 @@
+ install: $D${PATHBIN}/innd $D${PATHBIN}/inndstart
+ 
+ $D${PATHBIN}/innd: innd
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0550 -b .OLD innd $D${PATHBIN}/innd
++	../installit.sh $(OWNER) -m 0550 -b .OLD innd $D${PATHBIN}/innd
+ 
+ $D${PATHBIN}/inndstart: inndstart
+-	-$(LIBTOOL) ../installit.sh -O root -G $(NEWSGROUP) -m 4550 -b .OLD inndstart $D${PATHBIN}/inndstart
++	-../installit.sh -O root -G $(NEWSGROUP) -m 4550 -b .OLD inndstart $D${PATHBIN}/inndstart
+ 	@ME=`(whoami || /usr/ucb/whoami) 2> /dev/null` ;\
+ 	if [ "X$$ME" = Xroot ]; then \
+ 		echo $@ has been installed setuid root. ;\
