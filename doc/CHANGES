@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4895 2004/02/18 01:29:46 minskim Exp $
+$NetBSD: CHANGES,v 1.4896 2004/02/18 02:01:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added imhangul_status_applet-0.2 [minskim 2004-02-18]
 	Updated p5-MLDBM to 2.01 [heinz 2004-02-18]
 	Added liteamp-0.2.4.1 [minskim 2004-02-18]
+	Added aget-0.4 [minskim 2004-02-18]
