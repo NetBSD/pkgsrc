@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2005/01/09 23:03:58 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/01/11 05:29:55 jlam Exp $
 
 DISTNAME=	tiff-3.7.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -41,4 +42,18 @@ CONFIGURE_ARGS+=	--disable-lzw
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+
+# We explicitly build libtiff without C++ support by patching the
+# configure script (patch-af).  We also add a new target into
+# libtiff/Makefile to create a libtiffcxx.la containing the C++
+# functions (patch-ag).
+#
+post-build:
+	cd ${WRKSRC}/libtiff && ${MAKE} libtiffcxx.la
+
+post-install:
+	cd ${WRKSRC}/libtiff && ${INSTALL_DATA} tiffio.hxx ${PREFIX}/include
+	cd ${WRKSRC}/libtiff && ${LIBTOOL} --mode=install		\
+		${INSTALL_LIB} libtiffcxx.la ${PREFIX}/lib
+
 .include "../../mk/bsd.pkg.mk"
