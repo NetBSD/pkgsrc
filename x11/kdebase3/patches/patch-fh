@@ -1,0 +1,13 @@
+$NetBSD: patch-fh,v 1.3 2004/11/01 16:39:06 gavan Exp $
+
+--- kate/app/kategrepdialog.cpp.orig	2004-10-03 08:10:53.000000000 +0100
++++ kate/app/kategrepdialog.cpp
+@@ -48,6 +48,8 @@
+ #include <kcombobox.h>
+ #include <klineedit.h>
+ 
++#undef truncate
++
+ const char *template_desc[] = {
+   "normal",
+   "assignment",

@@ -1,0 +1,13 @@
+$NetBSD: patch-fu,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- konsole/konsole/konsole.cpp.orig	2004-10-03 08:11:17.000000000 +0100
++++ konsole/konsole/konsole.cpp
+@@ -3761,6 +3761,8 @@ void Konsole::slotFindDone()
+   m_finddialog->hide();
+ }
+ 
++#undef open
++
+ void Konsole::slotSaveHistory()
+ {
+   KURL url = KFileDialog::getSaveURL(QString::null, QString::null, 0L, i18n("Save History"));

@@ -1,0 +1,12 @@
+$NetBSD: patch-fz,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- konqueror/sidebar/trees/konq_sidebartree.cpp.orig	2004-10-08 14:57:27.000000000 +0100
++++ konqueror/sidebar/trees/konq_sidebartree.cpp
+@@ -49,6 +49,7 @@
+ #include <stdlib.h>
+ #include <assert.h>
+ 
++#undef truncate
+ 
+ static const int autoOpenTimeout = 750;
+ 

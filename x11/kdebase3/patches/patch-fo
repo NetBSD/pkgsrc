@@ -1,0 +1,13 @@
+$NetBSD: patch-fo,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kioslave/man/kio_man.cpp.orig	2004-08-05 19:57:13.000000000 +0100
++++ kioslave/man/kio_man.cpp
+@@ -46,6 +46,8 @@
+ #include <kfilterbase.h>
+ #include <kfilterdev.h>
+ 
++#undef truncate
++
+ using namespace KIO;
+ 
+ MANProtocol *MANProtocol::_self = 0;
