@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7339 2004/10/04 12:49:06 hira Exp $
+$NetBSD: CHANGES,v 1.7340 2004/10/04 13:24:19 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution-data-server to 1.0.1 [jmmv 2004-10-04]
 	Updated firefox-gtk2-bin to 0.10.1 [wiz 2004-10-04]
 	Updated xorg-clients to 6.8.1nb2 [hira 2004-10-04]
+	Updated cppunit to 1.10.2nb1 [wulf 2004-10-04]
