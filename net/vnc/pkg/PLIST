@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 1999/09/05 10:53:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/02/18 02:35:34 wiz Exp $
 bin/Xvnc
 bin/vncviewer
 bin/vncpasswd
 bin/vncserver
 share/doc/vnc/Xvnc.gif
 share/doc/vnc/ach.jpg
+share/doc/vnc/alicebobcharlie.gif
+share/doc/vnc/alicecharlie.gif
 share/doc/vnc/announcement.html
 share/doc/vnc/attbutton.gif
 share/doc/vnc/attlogo.gif
@@ -64,8 +66,6 @@ share/doc/vnc/mailinglist.html
 share/doc/vnc/newlogosmall2.gif
 share/doc/vnc/ns1.gif
 share/doc/vnc/ns1_small.gif
-share/doc/vnc/oldcontribs.html
-share/doc/vnc/oldfaq.html
 share/doc/vnc/platforms.html
 share/doc/vnc/pmw.jpg
 share/doc/vnc/protocol.html
@@ -82,6 +82,7 @@ share/doc/vnc/sideblank.gif
 share/doc/vnc/sidelogo.gif
 share/doc/vnc/spacer.gif
 share/doc/vnc/sshvnc.html
+share/doc/vnc/sshwin.html
 share/doc/vnc/start.html
 share/doc/vnc/startbutton.gif
 share/doc/vnc/styles.css

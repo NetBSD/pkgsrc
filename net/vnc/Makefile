@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.9 1999/09/04 10:35:59 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/18 02:35:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
-DISTNAME=       	vnc-3.3.3
+DISTNAME=       	vnc-3.3.3r1
+PKGNAME=		vnc-3.3.3.1
 CATEGORIES=		net x11
 MASTER_SITES=   	http://www.uk.research.att.com/vnc/dist/
-DISTFILES=		vnc-3.3.3_unixsrc.tgz \
+DISTFILES=		vnc-3.3.3r1_unixsrc.tgz \
 			vnc-latest_doc.tgz
 
 MAINTAINER=	 	packages@netbsd.org

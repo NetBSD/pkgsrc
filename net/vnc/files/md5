@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 1999/11/23 20:51:13 windsor Exp $
+$NetBSD: md5,v 1.7 2000/02/18 02:35:34 wiz Exp $
 
-MD5 (vnc-3.3.3_unixsrc.tgz) = 511bac2c503f6f870c768edcd25394b0
-MD5 (vnc-latest_doc.tgz) = d000e5b9e65d7ecb8600a0fabf380092
+MD5 (vnc-3.3.3r1_unixsrc.tgz) = 55ec5c073ca63068a68f5d3957cd024e
+MD5 (vnc-latest_doc.tgz) = f76d0080aeb74d9c362ddc09017bd877
