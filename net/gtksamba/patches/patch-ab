@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/02/21 18:54:18 rh Exp $
+
+--- src/conflists.c.orig	Sun Jan 17 04:54:03 1999
++++ src/conflists.c	Sun Feb 21 18:58:59 1999
+@@ -244,10 +244,10 @@
+   if((manpath = g_strdup(getenv("MANPATH")))){
+     i=strlen(manpath);
+     manpath=g_realloc(manpath,(i+40)*sizeof(char *));
+-    strcat(manpath,":/usr/man:/usr/local/man");
++    strcat(manpath,":" PREFIX "/man:/usr/share/man:/usr/X11R6/man:/usr/local/man");
+   }
+   else
+-    manpath=g_strdup("/usr/man:/usr/local/man");
++    manpath=g_strdup(PREFIX "/man:/usr/share/man:/usr/X11R6/man:/usr/local/man");
+ 
+   buff = g_malloc((strlen(manpath)+80)*sizeof(char));
+   manlook = g_malloc((strlen(manpath)+32)*sizeof(char));

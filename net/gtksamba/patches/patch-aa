@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/21 18:54:18 rh Exp $
+
+--- src/prefs.c.orig	Tue Jan 19 04:00:55 1999
++++ src/prefs.c	Tue Feb 16 09:19:08 1999
+@@ -2,8 +2,8 @@
+ #include "gtksamba.h"
+ #include <unistd.h>
+ 
+-#define DEF_SMB_CONF  "/etc/smb.conf"
+-#define DEF_RESTART  "/etc/rc.d/init.d/smb restart"
++#define DEF_SMB_CONF  PREFIX "/etc/smb.conf"
++#define DEF_RESTART  "/bin/kill -HUP `/bin/ps cauxww | /usr/bin/awk 'BEGIN { p1=ARGV[1]; p2=ARGV[2]; ARGC=1 } { if ((p1 == $11) || (p2 == $11)) { print $2 } }' nmbd smbd`"
+ 
+ static GtkWidget *pbox=NULL;
+ static GtkWidget *conf_entry=NULL;
