@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cfsd.sh,v 1.4 2003/07/31 10:05:53 jmmv Exp $
+# $NetBSD: cfsd.sh,v 1.5 2004/08/02 17:09:35 tv Exp $
 #
 # PROVIDE: cfsd
 # REQUIRE: mountd
+# BEFORE: mountall
 #
 # To start cfsd at startup, copy this script to /etc/rc.d and set
 # cfs=YES in /etc/rc.conf.
