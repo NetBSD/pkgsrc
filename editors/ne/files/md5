@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.3 1999/11/22 13:34:52 agc Exp $
+$NetBSD: md5,v 1.4 2000/05/03 12:39:25 rh Exp $
 
-MD5 (ne-1.26/ne.tar.gz) = 8133eeddaf32427413ecd0b320434aa9
+MD5 (ne-1.26/ne.tar.gz) = 8c7a07fbc90be6fc21f0c9257e5bfc5f
 MD5 (ne-1.26/ne.manpage.1) = 4fd6ff55a895e7540a0d7dd4356651d3
 MD5 (ne-1.26/NE.spec.ascii) = 2ec03742d9bd23b82f443b465d7b0aa4
 MD5 (ne-1.26/NE.changes.spec) = 00d1736d897f4944d7df9ee4aa5d0ca3
