@@ -1,9 +1,9 @@
-/*	$NetBSD: ftpio.c,v 1.1.1.1 2002/12/20 18:14:01 schmonz Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.1.1.1 2002/12/20 18:14:01 schmonz Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
 #endif
 #endif
 
@@ -147,12 +147,12 @@ expect(int fd, const char *str, int *ftprc)
 #if EXPECT_DEBUG
     vstr=malloc(2*sizeof(buf));
     if (vstr == NULL)
-	err(1, "expect: malloc() failed");
+	err(EXIT_FAILURE, "expect: malloc() failed");
     strvis(vstr, str, VIS_NL|VIS_SAFE|VIS_CSTYLE);
 #endif /* EXPECT_DEBUG */
 	    
     if (regcomp(&rstr, str, REG_EXTENDED) != 0)
-	err(1, "expect: regcomp() failed");
+	err(EXIT_FAILURE, "expect: regcomp() failed");
 
 #if EXPECT_DEBUG
     if (expect_debug)
@@ -326,14 +326,14 @@ setupCoproc(const char *base)
 	    (void) close(command_pipe[1]);
 	    rc1 = dup2(command_pipe[0], 0);
             if (rc1 == -1) {
-                    err(1, "setupCoproc: dup2 failed (command_pipe[0])");
+                    err(EXIT_FAILURE, "setupCoproc: dup2 failed (command_pipe[0])");
             }
 	    (void) close(command_pipe[0]);
 	    
 	    (void) close(answer_pipe[0]);
 	    rc1 = dup2(answer_pipe[1], 1);
             if (rc1 == -1) {
-                    err(1, "setupCoproc: dup2 failed (answer_pipe[1])");
+                    err(EXIT_FAILURE, "setupCoproc: dup2 failed (answer_pipe[1])");
             }
 	    (void) close(answer_pipe[1]);
 	    
@@ -468,7 +468,7 @@ ftp_start(char *base)
 	fileURLHost(base, newHost, sizeof(newHost));
 	urllen = URLlength(base);
 	if (urllen < 0 || !(newDir = strchr(base + URLlength(base), '/')))
-		errx(1, "ftp_start: bad URL '%s'", base);
+		errx(EXIT_FAILURE, "ftp_start: bad URL '%s'", base);
 	newDir++;
 	if (currentHost
 	    && currentDir
@@ -883,7 +883,7 @@ miscstuff(const char *url)
 static void
 usage(void)
 {
-  errx(1, "Usage: foo [-v] ftp://-pattern");
+  errx(EXIT_FAILURE, "Usage: foo [-v] ftp://-pattern");
 }
 
 

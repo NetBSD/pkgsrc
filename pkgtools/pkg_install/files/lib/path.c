@@ -1,4 +1,4 @@
-/*	$NetBSD: path.c,v 1.1.1.1 2002/12/20 18:14:06 schmonz Exp $	*/
+/*	$NetBSD: path.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
 
 /*-
  * Copyright (c)2002 YAMAMOTO Takashi,
@@ -29,7 +29,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: path.c,v 1.1.1.1 2002/12/20 18:14:06 schmonz Exp $");
+__RCSID("$NetBSD: path.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
 #endif
 #endif
 
@@ -115,7 +115,7 @@ path_new_entry(const char *cp, size_t len)
 
 	new = malloc(sizeof(*new));
 	if (new == NULL)
-		err(1, "path_create");
+		err(EXIT_FAILURE, "path_create");
 
 	if (!IS_FULLPATH(cp) && !IS_URL(cp)) {
 		/* this is a relative path */
@@ -124,18 +124,18 @@ path_new_entry(const char *cp, size_t len)
 		size_t cwdlen;
 
 		if (getcwd(cwd, sizeof(cwd)) == NULL)
-			err(1, "getcwd");
+			err(EXIT_FAILURE, "getcwd");
 		cwdlen = strlen(cwd);
 		total = cwdlen + 1 + len + 1;
 		new->pl_path = malloc(total);
 		if (new->pl_path == NULL)
-			err(1, "path_create");
+			err(EXIT_FAILURE, "path_create");
 		snprintf(new->pl_path, total, "%s/%*.*s", cwd, (int)len, (int)len, cp);
 	}
 	else {
 		new->pl_path = malloc(len + 1);
 		if (new->pl_path == NULL)
-			err(1, "path_create");
+			err(EXIT_FAILURE, "path_create");
 		memcpy(new->pl_path, cp, len);
 		new->pl_path[len] = '\0';
 	}
@@ -185,7 +185,7 @@ path_setenv(const char *envname)
 
 	env = malloc(len);
 	if (env == NULL)
-		err(1, "path_setenv");
+		err(EXIT_FAILURE, "path_setenv");
 
 	env0 = env;
 	envend = env + len;
@@ -195,7 +195,7 @@ path_setenv(const char *envname)
 
 		r = snprintf(env, envend - env, "%s%s", sep, p->pl_path);
 		if (r < 0 || r >= envend - env)
-			err(1, "snprintf");
+			err(EXIT_FAILURE, "snprintf");
 		env += r;
 		sep = ";";
 	}
@@ -203,6 +203,6 @@ path_setenv(const char *envname)
 	if (Verbose)
 		printf("%s = %s\n", envname, env0);
 	if (setenv(envname, env0, 1) != 0)
-		err(1, "setenv");
+		err(EXIT_FAILURE, "setenv");
 	free(env0);
 }
