@@ -1,32 +1,90 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.4 2004/04/27 03:05:09 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.5 2004/07/21 22:35:59 schmonz Exp $
+#
+# Master script for administrators to control qmail services.
+# Usage resembles the qmailctl script from "Life with qmail".
 #
 
-# PROVIDE: mail qmail
-# REQUIRE: LOGIN
+# KEYWORD: nostart
 
-. /etc/rc.subr
-
-name="qmail"
-rcvar=${name}
-required_files="@QMAILDIR@/control/me"
-command="@QMAILDIR@/bin/qmail-send"
-start_precmd="qmail_precmd"
-extra_commands="reload"
-
-if [ -z "$qmail_flags" ]; then
-	qmail_flags="./Mailbox"
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
 fi
 
-qmail_precmd()
+rcd_dir=`@DIRNAME@ $0`
+
+# NOTE: run_rc_command sets $rc_arg
+#
+forward_commands()
 {
-	# qmail-start(8) starts the various qmail processes, then exits.
-	# qmail-send(8) is the process we want to signal later.
-	command="@SETENV@ - PATH=@QMAILDIR@/bin:$PATH qmail-start '$qmail_flags' splogger qmail"
-	command_args="&"
-	rc_flags=""
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
+	for file in $COMMAND_LIST; do
+		$rcd_dir/$file $rc_arg
+	done
 }
 
-load_rc_config $name
-run_rc_command "$1"
+reverse_commands()
+{
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
+	REVCOMMAND_LIST=
+	for file in $COMMAND_LIST; do
+		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
+	done
+	for file in $REVCOMMAND_LIST; do
+		$rcd_dir/$file $rc_arg
+	done
+}
+
+qmailrcd()
+{
+	for service in $@; do
+		$rcd_dir/qmail${service} $rc_arg
+	done
+}
+
+qmail_help()
+{
+	@CAT@ <<HELP
+   stop -- stops mail service (smtp connections refused, nothing goes out)
+  start -- starts mail service (smtp connection accepted, mail can go out)
+  pause -- temporarily stops mail service (connections accepted, nothing leaves)
+   cont -- continues paused mail service
+   stat -- displays status of mail service
+    cdb -- rebuild the tcpserver cdb file for smtp and/or pop3
+restart -- stops and restarts smtp, sends qmail-send a TERM & restarts it
+doqueue -- schedules queued messages for immediate delivery
+ reload -- sends qmail-send HUP, rereading locals and virtualdomains
+  queue -- shows status of queue
+   alrm -- same as doqueue
+  flush -- same as doqueue
+    hup -- same as reload
+HELP
+}
+
+COMMAND_LIST="qmailsend qmailsmtpd qmailpop3d"
+
+name="qmail"
+start_cmd="forward_commands"
+stop_cmd="reverse_commands"
+doqueue_cmd="qmailrcd send"; alrm_cmd=${doqueue_cmd}; flush_cmd=${doqueue_cmd}
+reload_cmd="qmailrcd send"; hup_cmd=${reload_cmd}
+status_cmd="forward_commands"; stat_cmd=${status_cmd}
+pause_cmd="forward_commands"
+cont_cmd="forward_commands"
+cdb_cmd="qmailrcd smtpd pop3d"
+queue_cmd="qmailrcd send"
+help_cmd="qmail_help"
+extra_commands="pause cont stat status cdb doqueue reload queue alrm flush hup help"
+
+if [ -f /etc/rc.subr ]; then
+	run_rc_command "$1"
+else
+	@ECHO@ -n " ${name}"
+	_arg="$1"
+	${start_cmd}
+fi
