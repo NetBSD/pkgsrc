@@ -1,99 +1,88 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:56 zuntum Exp $
-kaffe/bin/appletviewer
-kaffe/bin/install-jar
-kaffe/bin/jar
-kaffe/bin/java
-kaffe/bin/javac
-kaffe/bin/javadoc
-kaffe/bin/javakey
-kaffe/bin/javap
-kaffe/bin/jdb
-kaffe/bin/kaffe
-kaffe/bin/kaffeh
-kaffe/bin/kjc
-kaffe/bin/kopi
-kaffe/bin/native2ascii
-kaffe/bin/rmic
-kaffe/bin/rmiregistry
-kaffe/bin/serialver
-kaffe/include/kaffe/Arrays.h
-kaffe/include/kaffe/errors.h
-kaffe/include/kaffe/java_lang_Object.h
-kaffe/include/kaffe/java_lang_String.h
-kaffe/include/kaffe/java_lang_Thread.h
-kaffe/include/kaffe/java_lang_ThreadGroup.h
-kaffe/include/kaffe/java_lang_Throwable.h
-kaffe/include/kaffe/jmalloc.h
-kaffe/include/kaffe/jni.h
-kaffe/include/kaffe/jni_cpp.h
-kaffe/include/kaffe/jsyscall.h
-kaffe/include/kaffe/jtypes.h
-kaffe/include/kaffe/native.h
-kaffe/lib/kaffe/libawt-1.0.6.so
-kaffe/lib/kaffe/libawt.a
-kaffe/lib/kaffe/libawt.la
-kaffe/lib/kaffe/libawt.so
-kaffe/lib/kaffe/libio-1.0.6.so
-kaffe/lib/kaffe/libio.a
-kaffe/lib/kaffe/libio.la
-kaffe/lib/kaffe/libio.so
-kaffe/lib/kaffe/libmanagement-1.0.6.so
-kaffe/lib/kaffe/libmanagement.a
-kaffe/lib/kaffe/libmanagement.la
-kaffe/lib/kaffe/libmanagement.so
-kaffe/lib/kaffe/libmath-1.0.6.so
-kaffe/lib/kaffe/libmath.a
-kaffe/lib/kaffe/libmath.la
-kaffe/lib/kaffe/libmath.so
-kaffe/lib/kaffe/libmicrosoft-1.0.6.so
-kaffe/lib/kaffe/libmicrosoft.a
-kaffe/lib/kaffe/libmicrosoft.la
-kaffe/lib/kaffe/libmicrosoft.so
-kaffe/lib/kaffe/libnative-1.0.6.so
-kaffe/lib/kaffe/libnative.a
-kaffe/lib/kaffe/libnative.la
-kaffe/lib/kaffe/libnative.so
-kaffe/lib/kaffe/libnet-1.0.6.so
-kaffe/lib/kaffe/libnet.a
-kaffe/lib/kaffe/libnet.la
-kaffe/lib/kaffe/libnet.so
-kaffe/lib/kaffe/libsecurity-1.0.6.so
-kaffe/lib/kaffe/libsecurity.a
-kaffe/lib/kaffe/libsecurity.la
-kaffe/lib/kaffe/libsecurity.so
-kaffe/lib/kaffe/libzip-1.0.6.so
-kaffe/lib/kaffe/libzip.a
-kaffe/lib/kaffe/libzip.la
-kaffe/lib/kaffe/libzip.so
-kaffe/lib/kaffe/security/java.security
-kaffe/lib/libkaffevm-1.0.6.so
-kaffe/lib/libkaffevm.a
-kaffe/lib/libkaffevm.la
-kaffe/lib/libkaffevm.so
-kaffe/lib/libkaffexprof-1.0.6.so
-kaffe/lib/libkaffexprof.a
-kaffe/lib/libkaffexprof.la
-kaffe/lib/libkaffexprof.so
-kaffe/libexec/Kaffe
-kaffe/man/man1/kaffe.1
-kaffe/share/kaffe/Klasses.jar
-kaffe/share/kaffe/comm.jar
-kaffe/share/kaffe/kjc.jar
-kaffe/share/kaffe/microsoft.jar
-kaffe/share/kaffe/pjava.jar
-kaffe/share/kaffe/rmi.jar
-kaffe/share/kaffe/servlet.jar
-kaffe/share/kaffe/tools.jar
-kaffe/share/license.terms
-@dirrm kaffe/share/kaffe
-@dirrm kaffe/share
-@dirrm kaffe/man/man1
-@dirrm kaffe/man
-@dirrm kaffe/libexec
-@dirrm kaffe/lib/kaffe/security
-@dirrm kaffe/lib/kaffe
-@dirrm kaffe/lib
-@dirrm kaffe/include/kaffe
-@dirrm kaffe/include
-@dirrm kaffe/bin
-@dirrm kaffe
+@comment $NetBSD: PLIST,v 1.2 2002/07/27 21:26:21 jschauma Exp $
+java/kaffe/include/jni.h
+java/kaffe/include/kaffe/java_lang_Object.h
+java/kaffe/include/kaffe/java_lang_String.h
+java/kaffe/include/kaffe/java_lang_Thread.h
+java/kaffe/include/kaffe/java_lang_ThreadGroup.h
+java/kaffe/include/kaffe/java_lang_Throwable.h
+java/kaffe/include/kaffe/Arrays.h
+java/kaffe/include/kaffe/errors.h
+java/kaffe/include/kaffe/jmalloc.h
+java/kaffe/include/kaffe/jni_cpp.h
+java/kaffe/include/kaffe/jsyscall.h
+java/kaffe/include/kaffe/jtypes.h
+java/kaffe/include/kaffe/native.h
+java/kaffe/lib/kjc.jar
+java/kaffe/lib/tools.jar
+java/kaffe/jre/lib/i386/libnative-1.0.7.so
+java/kaffe/jre/lib/i386/libnative.so
+java/kaffe/jre/lib/i386/libnative.la
+java/kaffe/jre/lib/i386/libio-1.0.7.so
+java/kaffe/jre/lib/i386/libio.so
+java/kaffe/jre/lib/i386/libio.la
+java/kaffe/jre/lib/i386/libnet-1.0.7.so
+java/kaffe/jre/lib/i386/libnet.so
+java/kaffe/jre/lib/i386/libnet.la
+java/kaffe/jre/lib/i386/libzip-1.0.7.so
+java/kaffe/jre/lib/i386/libzip.so
+java/kaffe/jre/lib/i386/libzip.la
+java/kaffe/jre/lib/i386/libmath-1.0.7.so
+java/kaffe/jre/lib/i386/libmath.so
+java/kaffe/jre/lib/i386/libmath.la
+java/kaffe/jre/lib/i386/libsecurity-1.0.7.so
+java/kaffe/jre/lib/i386/libsecurity.so
+java/kaffe/jre/lib/i386/libsecurity.la
+java/kaffe/jre/lib/i386/libmanagement-1.0.7.so
+java/kaffe/jre/lib/i386/libmanagement.so
+java/kaffe/jre/lib/i386/libmanagement.la
+java/kaffe/jre/lib/i386/libawt-1.0.7.so
+java/kaffe/jre/lib/i386/libawt.so
+java/kaffe/jre/lib/i386/libawt.la
+java/kaffe/jre/lib/i386/libmicrosoft-1.0.7.so
+java/kaffe/jre/lib/i386/libmicrosoft.so
+java/kaffe/jre/lib/i386/libmicrosoft.la
+java/kaffe/jre/lib/i386/libkaffevm-1.0.7.so
+java/kaffe/jre/lib/i386/libkaffevm.so
+java/kaffe/jre/lib/i386/libkaffevm.la
+java/kaffe/jre/lib/security/java.security
+java/kaffe/jre/lib/rt.jar
+java/kaffe/jre/lib/comm.jar
+java/kaffe/jre/lib/pjava.jar
+java/kaffe/jre/lib/servlet.jar
+java/kaffe/jre/lib/microsoft.jar
+java/kaffe/jre/lib/rmi.jar
+java/kaffe/jre/bin/kaffe-bin
+java/kaffe/jre/bin/java
+java/kaffe/jre/bin/kaffe
+java/kaffe/jre/bin/rmiregistry
+java/kaffe/bin/kaffeh
+java/kaffe/bin/appletviewer
+java/kaffe/bin/javac
+java/kaffe/bin/javadoc
+java/kaffe/bin/java
+java/kaffe/bin/kjc
+java/kaffe/bin/kopi
+java/kaffe/bin/jar
+java/kaffe/bin/javakey
+java/kaffe/bin/javap
+java/kaffe/bin/jdb
+java/kaffe/bin/native2ascii
+java/kaffe/bin/rmic
+java/kaffe/bin/serialver
+java/kaffe/bin/install-jar
+java/kaffe/bin/kaffe
+java/kaffe/bin/rmiregistry
+java/kaffe/man/man1/kaffe.1
+java/kaffe/share
+@dirrm java/kaffe/bin
+@dirrm java/kaffe/man/man1
+@dirrm java/kaffe/man
+@dirrm java/kaffe/jre/lib/security
+@dirrm java/kaffe/jre/lib/i386
+@dirrm java/kaffe/jre/lib
+@dirrm java/kaffe/jre/bin
+@dirrm java/kaffe/jre
+@dirrm java/kaffe/lib
+@dirrm java/kaffe/include/kaffe
+@dirrm java/kaffe/include
+@dirrm java/kaffe
