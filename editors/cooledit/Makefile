@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2004/11/08 15:48:20 adam Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/30 15:00:34 adam Exp $
 
-DISTNAME=	cooledit-3.17.11
+DISTNAME=	cooledit-3.17.12
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 
