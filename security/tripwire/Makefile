@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2000/02/05 06:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/09 13:37:47 wiz Exp $
 #
 
 DISTNAME=       tripwire-1.2
 CATEGORIES=	security
-MASTER_SITES=   ftp://coast.cs.purdue.edu/pub/COAST/Tripwire/
+MASTER_SITES=   ftp://coast.cs.purdue.edu/pub/tools/unix/ids/tripwire/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.cs.purdue.edu/coast/coast-library.html
+HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
 
 post-extract:
 	(cd ${WRKDIR}; ${PAX} -r < T1.2.tar)
