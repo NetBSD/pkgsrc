@@ -1,54 +1,62 @@
-$NetBSD: patch-ac,v 1.2 2002/01/26 02:38:32 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.3 2004/12/02 00:06:40 dmcmahill Exp $
 
-reflect patch-ab change to src/Makefile.am
-
---- src/Makefile.in.orig	Thu Jan 24 07:27:13 2002
-+++ src/Makefile.in	Thu Jan 24 10:17:16 2002
-@@ -80,5 +80,5 @@
- SUBDIRS = misc maths frontend spicelib include
+--- src/Makefile.in.orig	Wed Jan 28 00:25:46 2004
++++ src/Makefile.in
+@@ -106,7 +106,7 @@ YACC = @YACC@
+ 
+ SUBDIRS = misc maths frontend spicelib include @XSPICEDIR@ @CIDERDIR@
  
 -bin_PROGRAMS = ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec makeidx
 +bin_PROGRAMS = ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec ngmakeidx
  
- EXTRA_DIST = ngspice.txt ngspice.idx spinit setplot spectrum
-@@ -127,7 +127,7 @@
+ EXTRA_DIST = ngspice.txt ngspice.idx spinit setplot spectrum @CIDERSCRIPTS@
+ 
+@@ -153,7 +153,7 @@ ngmultidec_SOURCES = ngmultidec.c
+ ngmultidec_LDADD =  	maths/sparse/libsparse.a 	misc/libmisc.a 
  
  
 -makeidx_SOURCES = makeidx.c
 +ngmakeidx_SOURCES = makeidx.c
  
--makeidx_LDADD =  	misc/libmisc.a 
-+ngmakeidx_LDADD =  	misc/libmisc.a 
+ INCLUDES = -I$(top_srcdir)/src/include -I$(top_srcdir)/src/spicelib/devices @X_CFLAGS@
  
- 
-@@ -142,5 +142,5 @@
+@@ -165,7 +165,7 @@ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES =  spinit
  bin_PROGRAMS =  ngspice$(EXEEXT) ngnutmeg$(EXEEXT) nghelp$(EXEEXT) \
  ngsconvert$(EXEEXT) ngproc2mod$(EXEEXT) ngmultidec$(EXEEXT) \
 -makeidx$(EXEEXT)
 +ngmakeidx$(EXEEXT)
  PROGRAMS =  $(bin_PROGRAMS)
  
-@@ -204,7 +204,7 @@
+ 
+@@ -233,10 +233,10 @@ ngproc2mod_LDFLAGS = 
+ ngmultidec_OBJECTS =  ngmultidec.$(OBJEXT)
  ngmultidec_DEPENDENCIES =  maths/sparse/libsparse.a misc/libmisc.a
  ngmultidec_LDFLAGS = 
 -makeidx_OBJECTS =  makeidx.$(OBJEXT)
--makeidx_DEPENDENCIES =  misc/libmisc.a
+-makeidx_LDADD = $(LDADD)
+-makeidx_DEPENDENCIES = 
 -makeidx_LDFLAGS = 
 +ngmakeidx_OBJECTS =  makeidx.$(OBJEXT)
-+ngmakeidx_DEPENDENCIES =  misc/libmisc.a
++ngmakeidx_LDADD = $(LDADD)
++ngmakeidx_DEPENDENCIES = 
 +ngmakeidx_LDFLAGS = 
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -221,6 +221,6 @@
- TAR = tar
- GZIP_ENV = --best
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -254,8 +254,8 @@ GZIP_ENV = --best
+ DEP_FILES =  .deps/conf.P .deps/main.P .deps/makeidx.P .deps/nghelp.P \
+ .deps/ngmultidec.P .deps/ngnutmeg.P .deps/ngproc2mod.P \
+ .deps/ngsconvert.P .deps/ngspice.P
 -SOURCES = $(ngspice_SOURCES) $(ngnutmeg_SOURCES) $(nghelp_SOURCES) $(ngsconvert_SOURCES) $(ngproc2mod_SOURCES) $(ngmultidec_SOURCES) $(makeidx_SOURCES)
 -OBJECTS = $(ngspice_OBJECTS) $(ngnutmeg_OBJECTS) $(nghelp_OBJECTS) $(ngsconvert_OBJECTS) $(ngproc2mod_OBJECTS) $(ngmultidec_OBJECTS) $(makeidx_OBJECTS)
 +SOURCES = $(ngspice_SOURCES) $(ngnutmeg_SOURCES) $(nghelp_SOURCES) $(ngsconvert_SOURCES) $(ngproc2mod_SOURCES) $(ngmultidec_SOURCES) $(ngmakeidx_SOURCES)
 +OBJECTS = $(ngspice_OBJECTS) $(ngnutmeg_OBJECTS) $(nghelp_OBJECTS) $(ngsconvert_OBJECTS) $(ngproc2mod_OBJECTS) $(ngmultidec_OBJECTS) $(ngmakeidx_OBJECTS)
  
  all: all-redirect
-@@ -328,7 +328,7 @@
+ .SUFFIXES:
+@@ -357,9 +357,9 @@ ngmultidec$(EXEEXT): $(ngmultidec_OBJECT
+ 	@rm -f ngmultidec$(EXEEXT)
  	$(LINK) $(ngmultidec_LDFLAGS) $(ngmultidec_OBJECTS) $(ngmultidec_LDADD) $(LIBS)
  
 -makeidx$(EXEEXT): $(makeidx_OBJECTS) $(makeidx_DEPENDENCIES)
@@ -59,10 +67,15 @@ reflect patch-ab change to src/Makefile.am
 +	$(LINK) $(ngmakeidx_LDFLAGS) $(ngmakeidx_OBJECTS) $(ngmakeidx_LDADD) $(LIBS)
  
  install-helpdataDATA: $(helpdata_DATA)
-@@ -574,5 +574,5 @@
+ 	@$(NORMAL_INSTALL)
+@@ -644,8 +644,8 @@ winmain.o: winmain.c
+ spice.o: main.c
+ 		$(COMPILE) -DSIMULATOR -o spice.o  -c $(srcdir)/main.c
  
- all:
+-ngspice.idx: makeidx
 -	./makeidx $(srcdir)/ngspice.txt
++ngspice.idx: ngmakeidx
 +	./ngmakeidx $(srcdir)/ngspice.txt
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

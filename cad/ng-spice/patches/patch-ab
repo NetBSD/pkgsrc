@@ -1,17 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2002/01/26 02:38:32 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.3 2004/12/02 00:06:40 dmcmahill Exp $
 
-remove conflict with cad/spice
-
---- src/Makefile.am.orig	Mon Dec 10 15:21:11 2001
-+++ src/Makefile.am	Thu Jan 24 10:17:51 2002
-@@ -3,5 +3,5 @@
- SUBDIRS = misc maths frontend spicelib include
+--- src/Makefile.am.orig	Tue Jan 27 21:57:20 2004
++++ src/Makefile.am
+@@ -2,7 +2,7 @@
+ 
+ SUBDIRS = misc maths frontend spicelib include @XSPICEDIR@ @CIDERDIR@
  
 -bin_PROGRAMS =  ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec makeidx
 +bin_PROGRAMS =  ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec ngmakeidx
  
- EXTRA_DIST = ngspice.txt ngspice.idx spinit setplot spectrum
-@@ -148,9 +148,9 @@
+ EXTRA_DIST = ngspice.txt ngspice.idx spinit setplot spectrum @CIDERSCRIPTS@
+ 
+@@ -166,14 +166,14 @@ ngmultidec_LDADD =  \
+ 	maths/sparse/libsparse.a \
  	misc/libmisc.a 
  
 -## makeidx:
@@ -20,14 +21,12 @@ remove conflict with cad/spice
 -makeidx_SOURCES = makeidx.c
 +ngmakeidx_SOURCES = makeidx.c
  
--makeidx_LDADD =  \
-+ngmakeidx_LDADD =  \
- 	misc/libmisc.a 
+ ## create index for online help:
  
-@@ -158,5 +158,5 @@
- 
- all:
+-ngspice.idx: makeidx
 -	./makeidx $(srcdir)/ngspice.txt
++ngspice.idx: ngmakeidx
 +	./ngmakeidx $(srcdir)/ngspice.txt
  
  
+ ## General Includes and libraries:
