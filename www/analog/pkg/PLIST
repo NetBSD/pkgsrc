@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2000/11/01 14:23:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 2001/01/24 10:02:40 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec test -f %D/etc/analog.cfg || cp -p %F %D/etc/analog.cfg
@@ -53,6 +53,16 @@ lib/analog/images/barh4.gif
 lib/analog/images/barh8.gif
 lib/analog/images/html2.gif
 lib/analog/lang/README.txt
+lib/analog/lang/bradom.tab
+lib/analog/lang/brdom.tab
+lib/analog/lang/brhdom.tab
+lib/analog/lang/cn.lng
+lib/analog/lang/ptadom.tab
+lib/analog/lang/ptdom.tab
+lib/analog/lang/pthdom.tab
+lib/analog/lang/tw.lng
+lib/analog/lang/twdom.tab
+lib/analog/lang/usdom.tab
 lib/analog/lang/am.lng
 lib/analog/lang/amdom.tab
 lib/analog/lang/ba.lng
@@ -62,8 +72,6 @@ lib/analog/lang/brh.lng
 lib/analog/lang/cat.lng
 lib/analog/lang/cata.lng
 lib/analog/lang/cath.lng
-lib/analog/lang/cns.lng
-lib/analog/lang/cnt.lng
 lib/analog/lang/cz.lng
 lib/analog/lang/cz1250.lng
 lib/analog/lang/cza.lng
