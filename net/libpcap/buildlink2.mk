@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/02/12 02:35:07 jlam Exp $
 
 .if !defined(LIBPCAP_BUILDLINK2_MK)
 LIBPCAP_BUILDLINK2_MK=	# defined
@@ -20,8 +20,18 @@ _NEED_LIBPCAP=	NO
 _NEED_LIBPCAP=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mlibpcap)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_LIBPCAP} == "YES"
+_NEED_LIBPCAP=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_LIBPCAP=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mlibpcap) && \
+    ${_BUILTIN_LIBPCAP} == "YES"
+_NEED_LIBPCAP=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mlibpcap)
 _NEED_LIBPCAP=	YES
 .endif
 

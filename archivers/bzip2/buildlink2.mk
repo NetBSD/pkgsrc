@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(BZIP2_BUILDLINK2_MK)
 BZIP2_BUILDLINK2_MK=	# defined
@@ -28,13 +28,28 @@ _BUILTIN_BZIP2=		0
 .endfor
 
 .if ${_BUILTIN_BZIP2} == "0"
-_NEED_BZIP2=		YES
+_NEED_BZIP2=	YES
 .else
-_NEED_BZIP2=		NO
+_NEED_BZIP2=	NO
+.endif
+
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_BZIP2} != 0
+_NEED_BZIP=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_BZIP=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mbzip2) && \
+    ${_BUILTIN_BZIP2} != 0
+_NEED_BZIP=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mbzip2)
+_NEED_BZIP=	YES
 .endif
 
 .if defined(USE_BZIP2)
-_NEED_BZIP2=		YES
+_NEED_BZIP2=	YES
 .endif
 
 .if ${_NEED_BZIP2} == "YES"

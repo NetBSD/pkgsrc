@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(CDK_BUILDLINK2_MK)
 CDK_BUILDLINK2_MK=     # defined
@@ -20,8 +20,18 @@ _NEED_CDK=	NO
 _NEED_CDK=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mcdk)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_CDK} == "YES"
+_NEED_CDK=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_CDK=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mcdk) && \
+    ${_BUILTIN_CDK} == "YES"
+_NEED_CDK=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mcdk)
 _NEED_CDK=	YES
 .endif
 
