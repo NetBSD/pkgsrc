@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/30 17:41:35 sommerfeld Exp $
+share/emacs/site-lisp/zephyr-mode/gnus-url.el
+share/emacs/site-lisp/zephyr-mode/hot-link.el
+share/emacs/site-lisp/zephyr-mode/hot-url.el
+share/emacs/site-lisp/zephyr-mode/mh-e-url.el
+share/emacs/site-lisp/zephyr-mode/mosaic-fetch-url.el
+share/emacs/site-lisp/zephyr-mode/netscape-fetch-url.el
+share/emacs/site-lisp/zephyr-mode/telnet-conn.el
+share/emacs/site-lisp/zephyr-mode/vm-url.el
+share/emacs/site-lisp/zephyr-mode/w3-fetch-url.el
+share/emacs/site-lisp/zephyr-mode/zephyr-remote.el
+share/emacs/site-lisp/zephyr-mode/zephyr-url.el
+share/emacs/site-lisp/zephyr-mode/zephyr.el
+share/emacs/site-lisp/zephyr-mode/zlocate-finger.el
+@dirrm share/emacs/site-lisp/zephyr-mode
+@dirrm share/emacs/site-lisp
