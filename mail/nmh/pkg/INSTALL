@@ -1,21 +1,12 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2000/01/18 15:50:33 agc Exp $
+# $NetBSD: INSTALL,v 1.5 2000/03/02 05:11:45 kim Exp $
 #
 
 case "$2" in
   ""|POST-INSTALL) cat <<EOF
 =============================================================
 
-You will need to copy the files:
-
-	${PKG_PREFIX}/etc/nmh/*.dist
-
-to be 
-
-	${PKG_PREFIX}/etc/nmh/*
-
-(i.e. "delete the .dist" suffix)
 Some files you might need to customize include the following:
 
     ${PKG_PREFIX}/etc/nmh/mhn.defaults
