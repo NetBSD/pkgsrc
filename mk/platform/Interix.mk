@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.13 2004/11/19 13:10:05 tv Exp $
+# $NetBSD: Interix.mk,v 1.13.2.1 2005/01/24 18:40:01 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -19,11 +19,21 @@
 #
 # pkg		start		end		slotsize	#slots
 #
+# <bsd.lib.mk>	0x50000000	0x6fffffff	0x00040000	2048
 # libtool-base	0x50000000	0x6fffffff	0x00040000	2048
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
 # perl58	*
+# python23	*
+# ruby16	0x50000000	0x6fffffff	0x00040000	2048
+#   (main lib)	0x48000000
+# ruby18	0x50000000	0x6fffffff	0x00040000	2048
+#   (main lib)	0x48000000
 # zsh		*
+
+# "catinstall" not yet supported as there's no shipped [gn]roff
+MANINSTALL=	maninstall
+MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
 
 AWK?=		/usr/contrib/bin/gawk
 BASENAME?=	/bin/basename
@@ -107,6 +117,7 @@ _PKG_USER_HOME?=	# empty by default
 _USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
 
 CPP_PRECOMP_FLAGS?=	# unset
+CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
@@ -178,15 +189,11 @@ SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
 
 # poll(2) is broken; try to work around it by making autoconf believe
 # it's missing.  (Packages without autoconf will need explicit fixing.)
-.ifdef GNU_CONFIGURE
-CONFIGURE_ENV+=		ac_cv_header_poll_h=no ac_cv_func_poll=no
-.endif
+CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN=	262144
-.endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
