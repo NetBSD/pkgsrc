@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/11/05 22:31:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/03 20:49:33 snj Exp $
 #
 
 DISTNAME=	gwave-20030804
@@ -9,7 +9,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave/
 COMMENT=	Viewer for spice-like simulator output and other analog data
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 EVAL_PREFIX+=	GRAPHDIR=plotutils
@@ -19,6 +19,6 @@ CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
 post-extract:
 	${RM} ${WRKSRC}/src/init_scheme_string.c
 
-.include "../../devel/guile-gtk/buildlink2.mk"
-.include "../../graphics/plotutils/buildlink2.mk"
+.include "../../devel/guile-gtk/buildlink3.mk"
+.include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
