@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1359 2004/02/09 12:06:42 seb Exp $
+$NetBSD: TODO,v 1.1360 2004/02/09 13:30:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -123,7 +123,7 @@ Suggested package updates
 	o abcde-2.1.14
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
-	o asc-1.13.9
+	o asc-1.14.0
 	o autogen-5.5.6
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
@@ -134,9 +134,10 @@ Suggested package updates
 	o blinkentools-2.5
 	o bochs-2.1
 	o boehm-gc-6.3alpha2
+	o bomberclone-0.11.2
 	o bzflag-1.10.4
 	o centericq-4.9.10
-	o cervisia-2.0
+	o cervisia-2.1
 	o clisp-2.32
 	o clusterit-2.2
 	o conserver-8.0.9
@@ -198,6 +199,7 @@ Suggested package updates
 	o gphoto2-2.1.4
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.14
+	o grepmail-5.23
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.5
@@ -221,6 +223,7 @@ Suggested package updates
 	o libidn-0.3.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
+	o libsndfile-1.0.6
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o lincity-1.12.0 [http://lincity.sourceforge.net/]
@@ -304,7 +307,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stella-1.3
-	o streamtuner-0.11.0
+	o streamtuner-0.11.1
 	o sylpheed-claws-0.9.9
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
@@ -320,6 +323,7 @@ Suggested package updates
 	o tuxpaint-0.9.13
 	o tuxpaint-stamps-2003.12.23
 	o txt2html-2.20 [wennmach]
+	o vba-1.7.1
 	o vfu-4.03
 	o vim-kde-6.2.14 [pkg/23681]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
