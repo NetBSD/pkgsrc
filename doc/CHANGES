@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1204 2003/01/23 17:13:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.1205 2003/01/23 18:25:33 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -380,3 +380,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated buildtool to 0.9 [jmmv 2003-01-23]
 	Updated asm2html to 1.3 [jmmv 2003-01-23]
 	Updated gabber to 0.8.7nb4 [jmmv 2003-01-23]
+	Added tex-musixtex-109 [fredb 2003-01-23]
+	Added tex-bagpipetex-3.01 [fredb 2003-01-23]
+	Added bww2tex-2.00 [fredb 2003-01-23]
