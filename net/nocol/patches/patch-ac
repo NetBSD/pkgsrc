@@ -1,0 +1,10 @@
+--- Makefile.tail	1998/07/23 14:17:28	1.1
++++ Makefile.tail	1998/07/23 14:22:07
+@@ -14,6 +14,7 @@
+ 	@[ -d $(BINDIR) ]  || mkdir $(BINDIR)
+ 	@[ -d $(DATADIR) ] || mkdir $(DATADIR)
+ 	@[ -d $(MSGSDIR) ] || mkdir $(MSGSDIR)
++	@[ -d $(EXAMPLESDIR) ] || mkdir -p $(EXAMPLESDIR)
+ 
+ depend:
+ 	mkdep $(CFLAGS) `echo $(OBJS) | sed 's/\.o[ $]+/\.c/g'`
