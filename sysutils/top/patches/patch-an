@@ -1,9 +1,9 @@
-$NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
+$NetBSD: patch-an,v 1.1 2004/07/12 08:14:44 cube Exp $
 
---- machine/m_netbsd15.c.orig	2004-07-12 09:09:49.000000000 +0200
-+++ machine/m_netbsd15.c
-@@ -0,0 +1,815 @@
-+/*	NetBSD: m_netbsd15.c,v 1.7.2.2 2002/02/09 19:56:24 he Exp 	*/
+--- machine/m_netbsd20.c.orig	2004-07-12 09:03:09.000000000 +0200
++++ machine/m_netbsd20.c
+@@ -0,0 +1,895 @@
++/*	NetBSD: m_netbsd15.c,v 1.22 2004/02/13 11:36:24 wiz Exp 	*/
 +
 +/*
 + * top - a top users display for Unix
@@ -17,12 +17,13 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 + * NetBSD-1.3 port by Luke Mewburn, based on code by Matthew Green.
 + * NetBSD-1.4/UVM port by matthew green.
 + * NetBSD-1.5 port by Simon Burge.
++ * NetBSD-1.6/UBC port by Tomas Svensson.
 + * -
 + * This is the machine-dependent module for NetBSD-1.5 and later
 + * works for:
-+ *	NetBSD-1.4Z
++ *	NetBSD-1.6ZC
 + * and should work for:
-+ *	NetBSD-1.5	(when released)
++ *	NetBSD-2.0	(when released)
 + * -
 + * top does not need to be installed setuid or setgid with this module.
 + *
@@ -34,15 +35,27 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 + *		Steven Wallace <swallace@freebsd.org>
 + *		Wolfram Schneider <wosch@cs.tu-berlin.de>
 + *		Arne Helme <arne@acm.org>
-+ *		Luke Mewburn <lukem@netbsd.org>
++ *		Luke Mewburn <lukem@NetBSD.org>
 + *		matthew green <mrg@eterna.com.au>
-+ *		Simon Burge <simonb@netbsd.org>
++ *		Simon Burge <simonb@NetBSD.org>
++ *		Tomas Svensson <ts@unix1.net>
 + *
 + *
-+ * Id: m_netbsd15.c,v 1.7.2.2 2002/02/09 19:56:24 he Exp 
++ * Id: m_netbsd15.c,v 1.22 2004/02/13 11:36:24 wiz Exp 
 + */
-+
++#include <sys/cdefs.h>
 +#include <sys/param.h>
++
++#if __NetBSD_Version < 105290000
++# include "m_netbsd15.c"
++#elif __NetBSD_Version < 106290000
++# include "m_netbsd16.c"
++#else
++
++#ifndef lint
++__RCSID("NetBSD: m_netbsd15.c,v 1.22 2004/02/13 11:36:24 wiz Exp ");
++#endif
++
 +#include <sys/sysctl.h>
 +#include <sys/sched.h>
 +#include <sys/swap.h>
@@ -76,7 +89,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	int remaining;		/* number of pointers remaining */
 +};
 +
-+/* define what weighted cpu is. */
++/* define what weighted CPU is. */
 +#define weighted_cpu(pct, pp) ((pp)->p_swtime == 0 ? 0.0 : \
 +			 ((pct) / (1.0 - exp((pp)->p_swtime * logcpu))))
 +
@@ -114,11 +127,12 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +static int hz;
 +static int ccpu;
 +
-+/* these are for calculating cpu state percentages */
++/* these are for calculating CPU state percentages */
 +
-+static u_int64_t cp_time[CPUSTATES];
-+static u_int64_t cp_old[CPUSTATES];
-+static u_int64_t cp_diff[CPUSTATES];
++static int ncpu = 0;
++static u_int64_t *cp_time;
++static u_int64_t *cp_old;
++static u_int64_t *cp_diff;
 +
 +/* these are for detailing the process states */
 +
@@ -129,9 +143,9 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	NULL
 +};
 +
-+/* these are for detailing the cpu states */
++/* these are for detailing the CPU states */
 +
-+int cpu_states[CPUSTATES];
++int *cpu_states;
 +char *cpustatenames[] = {
 +	"user", "nice", "system", "interrupt", "idle", NULL
 +};
@@ -140,8 +154,14 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +
 +int memory_stats[7];
 +char *memorynames[] = {
-+	"K Act, ", "K Inact, ", "K Wired, ", "K Free, ",
-+	"K Swp, ", "K Swp free, ",
++	"K Act, ", "K Inact, ", "K Wired, ", "K Exec, ", "K File, ",
++	"K Free, ",
++	NULL
++};
++
++int swap_stats[4];
++char *swapnames[] = {
++	"K Total, ", "K Used, ", "K Free, ",
 +	NULL
 +};
 +
@@ -167,11 +187,11 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +
 +int (*proc_compares[]) __P((struct proc **, struct proc **)) = {
 +	compare_cpu,
-+	compare_prio,
-+	compare_res,
 +	compare_size,
-+	compare_state,
++	compare_res,
 +	compare_time,
++	compare_prio,
++	compare_state,
 +	NULL
 +};
 +
@@ -203,6 +223,37 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +
 +	if ((kd = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, "kvm_open")) == NULL)
 +		return -1;
++
++	mib[0] = CTL_HW;
++	mib[1] = HW_NCPU;
++	size = sizeof(ncpu);
++	if (sysctl(mib, 2, &ncpu, &size, NULL, 0) == -1) {
++		fprintf(stderr, "top: sysctl hw.ncpu failed: %s\n",
++		    strerror(errno));
++		return(-1);
++	}
++	cp_time = malloc(sizeof(cp_time[0]) * CPUSTATES * ncpu);
++	mib[0] = CTL_KERN;
++	mib[1] = KERN_CP_TIME;
++	size = sizeof(cp_time[0]) * CPUSTATES * ncpu;
++	if (sysctl(mib, 2, cp_time, &size, NULL, 0) < 0) {
++		fprintf(stderr, "top: sysctl kern.cp_time failed: %s\n",
++		    strerror(errno));
++		return(-1);
++	}
++	/* Handle old call that returned only aggregate */
++	if (size == sizeof(cp_time[0]) * CPUSTATES)
++		ncpu = 1;
++
++	cpu_states = malloc(sizeof(cpu_states[0]) * CPUSTATES * ncpu);
++	cp_old = malloc(sizeof(cp_old[0]) * CPUSTATES * ncpu);
++	cp_diff = malloc(sizeof(cp_diff[0]) * CPUSTATES * ncpu);
++	if (cpu_states == NULL || cp_time == NULL || cp_old == NULL ||
++	    cp_diff == NULL) {
++		fprintf(stderr, "top: machine_init: %s\n",
++		    strerror(errno));
++		return(-1);
++	}
 +
 +	mib[0] = CTL_KERN;
 +	mib[1] = KERN_CCPU;
@@ -242,9 +293,13 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	pageshift -= LOG1024;
 +
 +	/* fill in the statics information */
++#ifdef notyet
++	statics->ncpu = ncpu;
++#endif
 +	statics->procstate_names = procstatenames;
 +	statics->cpustate_names = cpustatenames;
 +	statics->memory_names = memorynames;
++	statics->swap_names = swapnames;
 +	statics->order_names = ordernames;
 +
 +	/* all done! */
@@ -271,15 +326,15 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +{
 +	size_t ssize;
 +	int mib[2];
-+	struct uvmexp uvmexp;
++	struct uvmexp_sysctl uvmexp;
 +	struct swapent *sep, *seporig;
 +	u_int64_t totalsize, totalinuse;
-+	int size, inuse, ncounted;
++	int size, inuse, ncounted, i;
 +	int rnswap, nswap;
 +
 +	mib[0] = CTL_KERN;
 +	mib[1] = KERN_CP_TIME;
-+	ssize = sizeof(cp_time);
++	ssize = sizeof(cp_time[0]) * CPUSTATES * ncpu;
 +	if (sysctl(mib, 2, cp_time, &ssize, NULL, 0) < 0) {
 +		fprintf(stderr, "top: sysctl kern.cp_time failed: %s\n",
 +		    strerror(errno));
@@ -295,13 +350,17 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	}
 +
 +	/* convert cp_time counts to percentages */
-+	percentages64(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	for (i = 0; i < ncpu; i++) {
++	    int j = i * CPUSTATES;
++	    percentages64(CPUSTATES, cpu_states + j, cp_time + j, cp_old + j,
++		cp_diff + j);
++	}
 +
 +	mib[0] = CTL_VM;
-+	mib[1] = VM_UVMEXP;
++	mib[1] = VM_UVMEXP2;
 +	ssize = sizeof(uvmexp);
 +	if (sysctl(mib, 2, &uvmexp, &ssize, NULL, 0) < 0) {
-+		fprintf(stderr, "top: sysctl vm.uvmexp failed: %s\n",
++		fprintf(stderr, "top: sysctl vm.uvmexp2 failed: %s\n",
 +		    strerror(errno));
 +		quit(23);
 +	}
@@ -310,8 +369,11 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	memory_stats[0] = pagetok(uvmexp.active);
 +	memory_stats[1] = pagetok(uvmexp.inactive);
 +	memory_stats[2] = pagetok(uvmexp.wired);
-+	memory_stats[3] = pagetok(uvmexp.free);
-+	memory_stats[4] = memory_stats[5] = 0;
++	memory_stats[3] = pagetok(uvmexp.execpages);
++	memory_stats[4] = pagetok(uvmexp.filepages);
++	memory_stats[5] = pagetok(uvmexp.free);
++
++	swap_stats[0] = swap_stats[1] = swap_stats[2] = 0;
 +
 +	seporig = NULL;
 +	do {
@@ -337,8 +399,9 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +			totalsize += size;
 +			totalinuse += inuse;
 +		}
-+		memory_stats[4] = dbtob(totalinuse) / 1024;
-+		memory_stats[5] = dbtob(totalsize) / 1024 - memory_stats[4];
++		swap_stats[0] = dbtob(totalsize) / 1024;
++		swap_stats[1] = dbtob(totalinuse) / 1024;
++		swap_stats[2] = dbtob(totalsize) / 1024 - swap_stats[1];
 +		/* Free here, before we malloc again in the next
 +		 * iteration of this loop.
 +		 */
@@ -354,10 +417,12 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +		free(seporig);
 +
 +	memory_stats[6] = -1;
++	swap_stats[3] = -1;
 +
 +	/* set arrays and strings */
 +	si->cpustates = cpu_states;
 +	si->memory = memory_stats;
++	si->swap = swap_stats;
 +	si->last_pid = -1;
 +}
 +
@@ -371,7 +436,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	int i;
 +	int total_procs;
 +	int active_procs;
-+	struct kinfo_proc2 **prefp;
++	struct kinfo_proc2 **prefp, **n;
 +	struct kinfo_proc2 *pp;
 +
 +	/* these are copied out of sel for speed */
@@ -384,12 +449,19 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +
 +
 +	pbase = kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2), &nproc);
-+	if (nproc > onproc)
-+		pref = (struct kinfo_proc2 **) realloc(pref,
-+		    sizeof(struct kinfo_proc2 *) * (onproc = nproc));
-+	if (pref == NULL || pbase == NULL) {
++	if (pbase == NULL) {
 +		(void) fprintf(stderr, "top: Out of memory.\n");
 +		quit(23);
++	}
++	if (nproc > onproc) {
++		n = (struct kinfo_proc2 **) realloc(pref,
++		    sizeof(struct kinfo_proc2 *) * nproc);
++		if (n == NULL) {
++			(void) fprintf(stderr, "top: Out of memory.\n");
++			quit(23);
++		}
++		pref = n;
++		onproc = nproc;
 +	}
 +	/* get a pointer to the states summary array */
 +	si->procstates = process_states;
@@ -416,9 +488,9 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +		if (pp->p_stat != 0 && (show_system || ((pp->p_flag & P_SYSTEM) == 0))) {
 +			total_procs++;
 +			process_states[(unsigned char) pp->p_stat]++;
-+			if (pp->p_stat != SZOMB && pp->p_stat != SDEAD &&
++			if (pp->p_stat != LSZOMB && pp->p_stat != LSDEAD &&
 +			    (show_idle || (pp->p_pctcpu != 0) || 
-+			    (pp->p_stat == SRUN || pp->p_stat == SONPROC)) &&
++			    (pp->p_stat == LSRUN || pp->p_stat == LSONPROC)) &&
 +			    (!show_uid || pp->p_ruid == (uid_t)sel->uid)) {
 +				*prefp++ = pp;
 +				active_procs++;
@@ -457,6 +529,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +#endif
 +	char wmesg[KI_WMESGLEN + 1];
 +	static char fmt[128];		/* static area where result is built */
++	char *pretty = "";
 +
 +	/* find and remember the next proc structure */
 +	hp = (struct handle *)handle;
@@ -464,18 +537,24 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	hp->remaining--;
 +
 +	/* get the process's user struct and set cputime */
-+	if ((pp->p_flag & P_INMEM) == 0) {
++	if ((pp->p_flag & L_INMEM) == 0)
++		pretty = "<>";
++	else if ((pp->p_flag & P_SYSTEM) != 0)
++		pretty = "[]";
++
++	if (pretty[0] != '\0') {
 +		/*
-+		 * Print swapped processes as <pname>
++		 * Print swapped processes as <pname> and
++		 * system processes as [pname]
 +		 */
 +		char *comm = pp->p_comm;
 +#define COMSIZ sizeof(pp->p_comm)
 +		char buf[COMSIZ];
 +		(void) strncpy(buf, comm, COMSIZ);
-+		comm[0] = '<';
++		comm[0] = pretty[0];
 +		(void) strncpy(&comm[1], buf, COMSIZ - 2);
 +		comm[COMSIZ - 2] = '\0';
-+		(void) strncat(comm, ">", COMSIZ - 1);
++		(void) strncat(comm, &pretty[1], COMSIZ - 1);
 +		comm[COMSIZ - 1] = '\0';
 +	}
 +
@@ -486,22 +565,22 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	cputime = pp->p_rtime_sec;	/* This does not count interrupts */
 +#endif
 +
-+	/* calculate the base for cpu percentages */
++	/* calculate the base for CPU percentages */
 +	pct = pctdouble(pp->p_pctcpu);
 +
-+	if (pp->p_stat == SSLEEP) {
++	if (pp->p_stat == LSSLEEP) {
 +		strlcpy(wmesg, pp->p_wmesg, sizeof(wmesg));
 +		statep = wmesg;
 +	} else
 +		statep = state_abbrev[(unsigned)pp->p_stat];
 +
 +#ifdef KI_NOCPU
-+	/* Post-1.5 change: add cpu number if appropriate */
++	/* Post-1.5 change: add CPU number if appropriate */
 +	if (pp->p_cpuid != KI_NOCPU) {
 +		switch (pp->p_stat) {
-+		case SONPROC:
-+		case SRUN:
-+		case SSLEEP:			
++		case LSONPROC:
++		case LSRUN:
++		case LSSLEEP:			
 +			snprintf(state, sizeof(state), "%.6s/%lld", 
 +				 statep, (long long)pp->p_cpuid);
 +			statep = state;
@@ -535,7 +614,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 + * one of these by indexing in to the array proc_compares.
 + *
 + * Possible keys are defined as macros below.  Currently these keys are
-+ * defined:  percent cpu, cpu ticks, process state, resident set size,
++ * defined:  percent CPU, CPU ticks, process state, resident set size,
 + * total virtual memory usage.  The process states are ordered as follows
 + * (from least to most important):  WAIT, zombie, sleep, stop, start, run.
 + * The array declaration below maps a process state index into a number
@@ -586,7 +665,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	5,	/* "onproc"	SONPROC	*/
 +};
 +
-+/* compare_cpu - the comparison function for sorting by cpu percentage */
++/* compare_cpu - the comparison function for sorting by CPU percentage */
 +
 +static int
 +compare_cpu(pp1, pp2)
@@ -716,7 +795,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	return (result);
 +}
 +
-+/* compare_time - the comparison function for sorting by total cpu time */
++/* compare_time - the comparison function for sorting by total CPU time */
 +
 +static int
 +compare_time(pp1, pp2)
@@ -777,7 +856,7 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 + *	"cnt" is size of each array and "diffs" is used for scratch space.
 + *	The array "old" is updated on each call.
 + *	The routine assumes modulo arithmetic.  This function is especially
-+ *	useful on BSD mchines for calculating cpu state percentages.
++ *	useful on BSD mchines for calculating CPU state percentages.
 + */
 +
 +void
@@ -818,3 +897,4 @@ $NetBSD: patch-al,v 1.2 2004/07/12 08:14:44 cube Exp $
 +	for (i = 0; i < cnt; i++)
 +		*out++ = (int)((*diffs++ * 1000 + half_total) / total_change);
 +}
++#endif
