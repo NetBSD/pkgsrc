@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamsmtpd.sh,v 1.3 2004/08/04 06:50:16 jlam Exp $
+# $NetBSD: clamsmtpd.sh,v 1.4 2004/09/21 10:16:05 xtraeme Exp $
 #
 # PROVIDE: clamsmtpd
 # REQUIRE: LOGIN clamd
@@ -26,7 +26,6 @@ name="clamsmtpd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile=/var/run/clamsmtpd.pid
-: ${clamsmtpd_addr="localhost:10026"}
 
 start_precmd="clamsmtpd_prestart"
 start_cmd="clamsmtpd_start"
@@ -39,7 +38,6 @@ if [ -f "${clamav_conffile}" ]; then
 	: ${clamsmtpd_user=`@AWK@ 'BEGIN {r = "@CLAMAV_USER@"};
 			/^#/ {next}; /^User[ 	]/ {r = $2};
 			END {print r}' ${clamav_conffile}`}
-	: ${clamsmtpd_flags="-c ${socket}"}
 else
 	: ${clamsmtpd_user="@CLAMAV_USER@"}
 fi
@@ -53,7 +51,7 @@ clamsmtpd_prestart()
 clamsmtpd_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="${command} ${clamsmtpd_flags} -p ${pidfile} ${clamsmtpd_addr}"
+	doit="${command} ${clamsmtpd_flags} -p ${pidfile}"
 	@SU@ -m ${clamsmtpd_user} -c "$doit"
 }
 
