@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
@@ -17,7 +17,7 @@ DIST_SUBDIR=	iso12083
 
 NO_MTREE=	yes
 NO_BUILD=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 
 INSTDIR=	${PREFIX}/share/sgml/iso12083

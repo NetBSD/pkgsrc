@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/17 07:02:15 garbled Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:15 agc Exp $
 # FreeBSD ID: ports/benchmarks/postmark/Makefile,v 1.2 1999/09/19 05:13:20 obrien Exp
 #
 
@@ -16,7 +16,7 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} postmark.c
 
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -o postmark postmark.c)

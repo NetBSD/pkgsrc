@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/10 00:20:29 steve Exp 
 
 DISTNAME=               sc-6.21
@@ -9,6 +9,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=             eric@fox.phoenix.az.us
 COMMENT=		Curses-based spreadsheet program
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"

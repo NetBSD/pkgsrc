@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/05/05 19:51:16 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/09/09 20:36:35 agc Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -13,7 +13,7 @@ COMMENT=		Multicast Network Text Editor
 DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 CRYPTO=			yes
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 USE_GMAKE=		yes
 # Pass this on to our child
 

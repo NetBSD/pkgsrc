@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:46 agc Exp $
 #
 
 DISTNAME=	psify-19980216
@@ -12,7 +12,7 @@ COMMENT=	Pretty print C, CLU, SCHEME, Java and ARGUS source files
 
 DIST_SUBDIR=	psify
 EXTRACT_ONLY=	#empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
 INSTALL_TARGET=	install prefix=${PREFIX}

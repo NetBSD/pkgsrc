@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:11:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:29 agc Exp $
 
 DISTNAME=		xevil1.5.1e
 PKGNAME=		xevil-1.5.1e
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.xevil.com/
 COMMENT=		violent game of killing, contains profanity
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 MAKE_ENV=		HOSTTYPE="netbsd" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			INSTALL_MAN="${INSTALL_MAN}"

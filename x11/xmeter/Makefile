@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:54 agc Exp $
 
 DISTNAME=	xmeter-1.15
 CATEGORIES=	x11
@@ -8,6 +8,6 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	Displays a number of remote machine load meters
 
 USE_IMAKE=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"

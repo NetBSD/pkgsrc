@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/28 02:37:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:16 agc Exp $
 #
 
 DISTNAME=	simian_man_12_98
@@ -18,7 +18,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

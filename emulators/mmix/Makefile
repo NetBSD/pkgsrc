@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/12 21:52:13 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:22 agc Exp $
 
 DISTNAME=	mmix
 PKGNAME=	mmix-20000918
@@ -11,7 +11,7 @@ COMMENT=	Simulators for Knuth's MMIX RISC architecture
 BUILD_DEPENDS+= cweb-*:../../devel/cweb
 
 DIST_SUBDIR=	${PKGNAME}
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 ALL_TARGET=	all doc
 
