@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/20 08:33:52 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/25 21:21:39 wiz Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -15,7 +15,7 @@ COMMENT=	Complex rogue-like game of exploration with a sense of humor
 USE_BUILDLINK_ONLY=	# defined
 ALL_TARGET=		# empty
 
-# Change references to <curses.h> to <ncurses.h> in the source files.
+# Change references from <curses.h> to <ncurses.h> in the source files.
 post-extract:
 	cd ${WRKSRC}; for file in *.[ch]; do				\
 		${SED} -e "s|<curses\.h>|<ncurses.h>|g"			\
