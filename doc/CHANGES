@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8852 2005/01/21 14:31:02 wiz Exp $
+$NetBSD: CHANGES,v 1.8853 2005/01/21 14:42:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -472,3 +472,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gaim to 1.1.2 [adam 2005-01-21]
 	Updated squid to 2.5.7nb8 [taca 2005-01-21]
 	Updated unarj to 2.65 [wiz 2005-01-21]
+	Updated unarj to 2.65nb1 [wiz 2005-01-21]
