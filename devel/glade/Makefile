@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/09/10 16:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/05 04:53:16 wiz Exp $
 #
 
 DISTNAME=	glade-0.6.2
@@ -13,8 +13,8 @@ COMMENT=	User interface builder for GTK+
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
+USE_BUILDLINK2=	yes
 
-#CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
 CONFIGURE_ENV+=	LOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=--with-bonobo
 CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
@@ -31,5 +31,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/portability.txt ${PREFIX}/share/doc/glade
 	${INSTALL_DATA} ${WRKSRC}/doc/source_code.txt ${PREFIX}/share/doc/glade
 
-.include "../../x11/gnome-core/buildlink.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
