@@ -3,7 +3,7 @@ originally part of the gnome-libs package, but has been split out into
 a separate package for GNOME2.
 
   The GNOME canvas is an engine for structured graphics that offers a rich
-imaging model, high performance rendering, and a powerful, high?level API.
+imaging model, high performance rendering, and a powerful, high-level API.
 It offers a choice of two rendering back-ends, one based on Xlib for
 extremely fast display, and another based on Libart, a sophisticated,
 antialiased, alpha-compositing engine.  Applications have a choice between
