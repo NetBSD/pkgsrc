@@ -1,4 +1,4 @@
-# $NetBSD: defs.AIX.mk,v 1.5 2004/03/11 22:57:22 agc Exp $
+# $NetBSD: defs.AIX.mk,v 1.6 2004/04/07 14:26:51 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -16,6 +16,7 @@ DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
+ECHO_N?=	${ECHO} -n
 .if exists(${LOCALBASE}/bin/egrep)
 EGREP?=		${LOCALBASE}/bin/egrep
 .else
