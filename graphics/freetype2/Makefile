@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: Makefile,v 1.39 2005/02/09 12:13:58 gavan Exp $
 
 DISTNAME=	freetype-2.1.9
 PKGNAME=	freetype2-2.1.9
@@ -24,6 +24,7 @@ USE_GNU_TOOLS+=		grep make
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
+CONFIGURE_ENV+=		ac_cv_path_GREP="${GREP}" ac_cv_path_EGREP="${EGREP}"
 
 PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 
