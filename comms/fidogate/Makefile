@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/22 15:28:56 tv Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/05 19:17:17 wiz Exp $
 #
 
 DISTNAME=	fidogate-4.4.2
@@ -29,7 +29,7 @@ pre-build:
 	${RM} -f ${WRKSRC}/doc/fidogate.info*
 	cd ${WRKSRC}/doc && makeinfo --no-split fidogate.texi && \
 		${TOUCH} fidogate.txt html/fidogate_toc.html
-	${PERL} ${WRKSRC}/subst.pl -t${WRKSRC} ${WRKSRC}/fidogate.conf \
+	${PERL5} ${WRKSRC}/subst.pl -t${WRKSRC} ${WRKSRC}/fidogate.conf \
 		>${WRKSRC}/fidogate.conf.dist
 
 pre-install:
