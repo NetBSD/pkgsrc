@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.8 2004/04/27 13:58:43 tv Exp $
+$NetBSD: README.Interix,v 1.9 2004/04/27 14:03:24 tv Exp $
 
 Please read the general README file as well.
 
@@ -13,6 +13,13 @@ or 2003.  SFU can be downloaded from:
 Services for Unix 3.5, current as of this writing, has been tested.  3.0
 or 3.1 may work, but are not officially supported.  (The main difference
 in 3.0/3.1 is lack of pthreads.)
+
+A prebuilt bootstrap kit and prebuilt binary packages for Interix 3.5 are
+available from the pkgsrc information page:
+
+    http://www.netbsd.org/Documentation/software/packages.html
+
+=====
 
 At an absolute minimum, the following packages must be installed from
 the Windows Services for Unix 3.5 distribution in order to use pkgsrc:
