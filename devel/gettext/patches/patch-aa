@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.7 2000/06/30 17:07:36 danw Exp $
+
+Build shared libintl
+
+--- configure.orig	Fri Jun 23 04:15:24 2000
++++ configure	Fri Jun 23 04:15:36 2000
+@@ -3958,7 +3958,7 @@
+    fi
+    
+ 
+-      l=
++      l=l
+    
+ 
+          test -d po || mkdir po
