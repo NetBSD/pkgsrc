@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2001/07/14 16:41:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2001/07/15 22:19:11 bad Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -116,11 +116,6 @@ LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
 .endif
 
 MAKE_ENV+=		XLDFLAGS="${LDFLAGS}"
-
-# Ghostscript builds in ./obj, which confuses make, so explicitly set
-# MAKEOBJDIR so as not to descend into ./obj.
-#
-MAKE_ENV+=		MAKEOBJDIR="."
 
 # Define whether this platform has floating point hardware:
 #	FPU_TYPE=2 means floating point is faster than fixed point.
