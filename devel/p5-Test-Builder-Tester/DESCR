@@ -1,0 +1,15 @@
+This perl5 module permits helps test testing modules that are built
+with Test::Builder.
+The testing system is designed to be used by performing a three
+step process for each test you wish to test. This process starts
+with using test_out and test_err in advance to declare what the
+testsuite you are testing will output with Test::Builder to stdout
+and stderr.
+You then can run the test(s) from your test suite that call
+Test::Builder. At this point the output of Test::Builder is safely
+captured by Test::Builder::Tester rather than being interpreted as
+real test output.
+The final stage is to call test_test that will simply compare what
+you predeclared to what Test::Builder actually outputted, and report
+the results back with a "ok" or "not ok" (with debugging) to the
+normal output.
