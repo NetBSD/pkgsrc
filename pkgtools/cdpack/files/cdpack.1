@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.4 2001/06/23 04:08:04 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.5 2001/06/24 21:46:34 dmcmahill Exp $
 .\"
 .\" Copyright (c) 2001 Dan McMahill, All rights reserved.
 .\"
@@ -37,8 +37,10 @@
 .Nd produce multi-CD binary package images
 .Sh SYNOPSIS
 .Nm ""
+.Op -l logfile
 .Op -nRvV
-.Op -x extra_directory
+.Op -x common_directory
+.Op -X extras_directory
 .Ar packages_directory
 .Ar cd_image_directory
 .Sh DESCRIPTION
@@ -58,10 +60,13 @@ directory
 .Ar cd_image_directory
 is used as a staging area and the final ISO 9660 images are left in
 that directory.  A file, 
-.Ar .index
-, which lists the contents of each CD will be left in the root 
+.Ar .index ,
+which lists the contents of each CD will be left in the root 
 directory of each CD image.
 .Bl -tag -width "-x directory "
+.It Fl l Ar logfile
+Log the output of mkisofs -v -v to the file
+.Ar logfile .
 .It Fl n
 Do not duplicate packages in order to prevent inter-CD dependencies.
 The default without the
@@ -80,8 +85,8 @@ CD-ROM's.  In this fashion, a package on CD number n
 will have all of its dependencies on CD numbers 1 through n
 .It Fl R
 Generate a file,
-.Ar README.txt
-, which will be placed in the root directory of each CD image.  This
+.Ar README.txt ,
+which will be placed in the root directory of each CD image.  This
 README file contains a small amount of information about the contents
 of the CD set.
 .It Fl v
