@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2001/10/15 22:46:15 skrll Exp $
-#
+# $NetBSD: Makefile,v 1.6 2001/11/13 21:25:54 jlam Exp $
 
 DISTNAME=	kdenetwork-2.2.1
-CATEGORIES=	net kde
-.include "../../x11/kde2/Makefile.part1"
+CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
-DEPENDS=	gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=	uulib>=0.5.13:../../converters/uulib
-DEPENDS+=	ptl>=2.1.7:../../devel/ptl2
-DEPENDS+=	kdebase>=2.2.1:../../x11/kdebase2
+.include "../../x11/kde2/Makefile.kde2"
 
-.include "../../x11/kde2/Makefile.part2"
+BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb1:../../x11/qt2-designer-kde
 
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../converters/uulib/buildlink.mk"
+.include "../../databases/gdbm/buildlink.mk"
+.include "../../devel/ptl2/buildlink.mk"
+.include "../../x11/kde2/buildlink.mk"
+.include "../../x11/kdebase2/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
