@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3527 2003/09/25 18:49:39 wiz Exp $
+$NetBSD: CHANGES,v 1.3528 2003/09/25 21:17:26 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3937,3 +3937,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated boost to 1.30.2 [salo 2003-09-25]
 	Updated ispell-russian to 0.99.5 [wiz 2003-09-25]
 	Updated dmake to 4.1nb1 [wiz 2003-09-25]
+	Added py-SimpleParse 2.0.0 [recht 2003-09-25]
