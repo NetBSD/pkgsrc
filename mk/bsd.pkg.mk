@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1162 2003/04/10 12:40:29 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1163 2003/04/10 20:29:08 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1699,7 +1699,7 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${S
 # was written with a buggy version of GNU tar.
 #
 .if defined(EXTRACT_USING_PAX)
-_DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+_DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .else
 _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
@@ -1707,7 +1707,7 @@ _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT
 .for __suffix__ in ${_EXTRACT_SUFFICES}
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -O -r ${EXTRACT_ELEMENTS}
 .  else
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .    endif
