@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5002 2004/02/26 08:17:52 uebayasi Exp $
+$NetBSD: CHANGES,v 1.5003 2004/02/26 12:52:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1052,3 +1052,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added clearsilver-0.9.7 [epg 2004-02-26]
 	Added trac-0.5.1 [epg 2004-02-26]
 	Updated jisx0212fonts to 0.0nb1 [uebayasi 2004-02-26]
+	Added openobex-1.0.1 [jmmv 2004-02-26]
+	Added obexftp-0.10.3 [jmmv 2004-02-26]
