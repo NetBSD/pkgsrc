@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2000/02/08 14:53:45 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2000/10/05 05:53:36 jlam Exp $
 
 --- QW/Makefile.Linux.orig	Wed Apr 21 20:16:24 1999
-+++ QW/Makefile.Linux	Tue Feb  8 12:16:23 2000
++++ QW/Makefile.Linux
 @@ -27,41 +27,51 @@
  RPMARCH=i386
  endif
@@ -17,7 +17,8 @@ $NetBSD: patch-ae,v 1.4 2000/02/08 14:53:45 wiz Exp $
  CLIENT_DIR=$(MAINDIR)/client
  SERVER_DIR=$(MAINDIR)/server
  
- MESA_DIR=/usr/local/src/Mesa-3.0
+-MESA_DIR=/usr/local/src/Mesa-3.0
++#MESA_DIR=/usr/local/src/Mesa-3.0
  
  CC=gcc
 -BASE_CFLAGS=-Wall -Dstricmp=strcasecmp -I$(CLIENT_DIR) -I$(SERVER_DIR)
@@ -37,7 +38,8 @@ $NetBSD: patch-ae,v 1.4 2000/02/08 14:53:45 wiz Exp $
  	-fomit-frame-pointer -fexpensive-optimizations -malign-loops=2 \
  	-malign-jumps=2 -malign-functions=2
  endif
- GLCFLAGS=-DGLQUAKE -I/usr/local/src/Mesa-3.0/include -I/usr/include/glide
+-GLCFLAGS=-DGLQUAKE -I/usr/local/src/Mesa-3.0/include -I/usr/include/glide
++GLCFLAGS=-DGLQUAKE -I${MESA_DIR}/include -I/usr/include/glide
  
 -LDFLAGS=-lm
 +LDFLAGS=-lm -lossaudio
@@ -46,8 +48,8 @@ $NetBSD: patch-ae,v 1.4 2000/02/08 14:53:45 wiz Exp $
 -GL_SVGA_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
 -GL_X11_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
 +XLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -lX11 -lXext
-+GL_SVGA_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
-+GL_X11_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
++GL_SVGA_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${MESA_DIR}/lib -Wl,-rpath -Wl,${MESA_DIR}/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
++GL_X11_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${MESA_DIR}/lib -Wl,-rpath -Wl,${MESA_DIR}/lib -lm -lGL -lX11 -lXext
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<
 -DO_O_CC=$(CC) -O $(CFLAGS) -o $@ -c $<
