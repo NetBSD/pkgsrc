@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.2 2000/02/23 11:49:57 wiz Exp $
+$NetBSD: patch-ap,v 1.3 2000/04/10 18:36:26 rh Exp $
 
---- ./tooltips/Makefile.netbsd.orig	Mon Nov 15 14:42:42 1999
-+++ ./tooltips/Makefile.netbsd	Wed Feb 23 12:13:42 2000
+--- tooltips/Makefile.netbsd.orig	Thu Feb 24 01:01:26 2000
++++ tooltips/Makefile.netbsd	Mon Apr 10 20:34:10 2000
 @@ -29,17 +29,17 @@
  XFORMS_INCLUDE_DIR = $(HOME)/xforms/FORMS
  
@@ -21,5 +21,5 @@ $NetBSD: patch-ap,v 1.2 2000/02/23 11:49:57 wiz Exp $
 -DEBUG = 
 +DEBUG = -O2
  
- # Define the utilities to use for compilation.
- CC         = gcc
+ # Set the default optimisation
+ OPTIM = -O1
