@@ -1,0 +1,166 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/05 20:19:16 frueauf Exp $
+bin/zircon
+share/doc/zircon/BUGS
+share/doc/zircon/COPYRIGHT
+share/doc/zircon/FAQ
+share/doc/zircon/MANUAL
+share/doc/zircon/MIRRORS
+share/doc/zircon/README.ONS
+share/doc/zircon/README.load
+share/doc/zircon/README.look
+share/doc/zircon/README.prefs
+share/doc/zircon/TODO
+share/zircon/gifs/arc.gif
+share/zircon/gifs/button.gif
+share/zircon/gifs/ii.gif
+share/zircon/gifs/key.gif
+share/zircon/gifs/line.gif
+share/zircon/gifs/lock.gif
+share/zircon/gifs/log.gif
+share/zircon/gifs/noii.gif
+share/zircon/gifs/none.gif
+share/zircon/gifs/nospeak.gif
+share/zircon/gifs/off.gif
+share/zircon/gifs/off1.gif
+share/zircon/gifs/on.gif
+share/zircon/gifs/on1.gif
+share/zircon/gifs/oval.gif
+share/zircon/gifs/polygon.gif
+share/zircon/gifs/rectangle.gif
+share/zircon/gifs/speak.gif
+share/zircon/gifs/text.gif
+share/zircon/gifs/unlock.gif
+share/zircon/gifs/zircon.gif
+share/zircon/gifs/zlogo.gif
+share/zircon/help/Netspaces
+share/zircon/help/Zircon/Bindings
+share/zircon/help/Zircon/CommandLine
+share/zircon/help/Zircon/Environment
+share/zircon/help/Zircon/Ons
+share/zircon/help/Zircon/Windows/Channel
+share/zircon/help/Zircon/Windows/Control
+share/zircon/help/Zircon/Windows/Info
+share/zircon/help/Zircon/Windows/Message
+share/zircon/installed
+share/zircon/lang/bulgar.tcl
+share/zircon/lang/catala.tcl
+share/zircon/lang/deutsch.tcl
+share/zircon/lang/english.tcl
+share/zircon/lang/espanol.tcl
+share/zircon/lang/esperanto.tcl
+share/zircon/lang/francais.tcl
+share/zircon/lang/italiano.tcl
+share/zircon/lang/magyar.tcl
+share/zircon/lang/nihongo.tcl
+share/zircon/lang/norsk.tcl
+share/zircon/lang/suomi.tcl
+share/zircon/lib/Away.tcl
+share/zircon/lib/Button.tcl
+share/zircon/lib/Channel.tcl
+share/zircon/lib/Chat.tcl
+share/zircon/lib/Classes.tcl
+share/zircon/lib/Consts.tcl
+share/zircon/lib/Control.tcl
+share/zircon/lib/DALnet.tcl
+share/zircon/lib/Entry.tcl
+share/zircon/lib/Frame.tcl
+share/zircon/lib/Friend.tcl
+share/zircon/lib/Friends.tcl
+share/zircon/lib/Help.tcl
+share/zircon/lib/IRC.tcl
+share/zircon/lib/Ignore.tcl
+share/zircon/lib/Info.tcl
+share/zircon/lib/Interface.tcl
+share/zircon/lib/List.tcl
+share/zircon/lib/Log.tcl
+share/zircon/lib/Look.tcl
+share/zircon/lib/Mac.tcl
+share/zircon/lib/Message.tcl
+share/zircon/lib/Monitor.tcl
+share/zircon/lib/Net.tcl
+share/zircon/lib/Netspace.tcl
+share/zircon/lib/Notice.tcl
+share/zircon/lib/Notrace.tcl
+share/zircon/lib/Object.tcl
+share/zircon/lib/On.tcl
+share/zircon/lib/Protect.tcl
+share/zircon/lib/Server.tcl
+share/zircon/lib/Service.tcl
+share/zircon/lib/Sound.tcl
+share/zircon/lib/Split.tcl
+share/zircon/lib/Tags.tcl
+share/zircon/lib/Topic.tcl
+share/zircon/lib/Tracing.tcl
+share/zircon/lib/Undernet.tcl
+share/zircon/lib/Unix.tcl
+share/zircon/lib/User.tcl
+share/zircon/lib/Util.tcl
+share/zircon/lib/WBoard.tcl
+share/zircon/lib/Window.tcl
+share/zircon/lib/Windows.tcl
+share/zircon/lib/bindings.tcl
+share/zircon/lib/confChan.tcl
+share/zircon/lib/confInfo.tcl
+share/zircon/lib/confTab.tcl
+share/zircon/lib/config.tcl
+share/zircon/lib/ctcp.tcl
+share/zircon/lib/dbgsrv.tcl
+share/zircon/lib/debug.tcl
+share/zircon/lib/dialog.tcl
+share/zircon/lib/errors.tcl
+share/zircon/lib/frivol.tcl
+share/zircon/lib/initial.tcl
+share/zircon/lib/main.tcl
+share/zircon/lib/misc.tcl
+share/zircon/lib/misc2.tcl
+share/zircon/lib/pkgIndex.tcl
+share/zircon/lib/plugin.tcl
+share/zircon/lib/saverc.tcl
+share/zircon/lib/servers.tcl
+share/zircon/lib/tcl75.tcl
+share/zircon/lib/tcl76.tcl
+share/zircon/lib/tcl80.tcl
+share/zircon/lib/tcl81.tcl
+share/zircon/lib/upgrade.tcl
+share/zircon/lib/userCmds.tcl
+share/zircon/lib/zircon.tcl
+share/zircon/look/standard.tcl
+share/zircon/plugins/Dcc/auto.tcl
+share/zircon/plugins/Dcc/chat.tcl
+share/zircon/plugins/Dcc/dcc.tcl
+share/zircon/plugins/Dcc/dccget.tcl
+share/zircon/plugins/Dcc/dccsend.tcl
+share/zircon/plugins/Dcc/pkgIndex.tcl
+share/zircon/plugins/Dcc/send.tcl
+share/zircon/plugins/MsgOps/setup.tcl
+share/zircon/plugins/NoticeOps/setup.tcl
+share/zircon/plugins/Sed/decrypt.tcl
+share/zircon/plugins/Sed/pkgIndex.tcl
+share/zircon/samples/zircon.ad
+@exec mkdir -p %D/share/zircon/help/Channels
+@exec mkdir -p %D/share/zircon/help/Servers
+@exec mkdir -p %D/share/zircon/help/Services
+@exec mkdir -p %D/share/zircon/help/Users
+@exec mkdir -p %D/share/zircon/scripts
+@exec mkdir -p %D/share/zircon/sounds
+@dirrm share/doc/zircon
+@dirrm share/zircon/help/Zircon/Windows
+@dirrm share/zircon/help/Zircon
+@dirrm share/zircon/help/Channels
+@dirrm share/zircon/help/Servers
+@dirrm share/zircon/help/Services
+@dirrm share/zircon/help/Users
+@dirrm share/zircon/help
+@dirrm share/zircon/gifs
+@dirrm share/zircon/lang
+@dirrm share/zircon/lib
+@dirrm share/zircon/look
+@dirrm share/zircon/plugins/Dcc
+@dirrm share/zircon/plugins/MsgOps
+@dirrm share/zircon/plugins/NoticeOps
+@dirrm share/zircon/plugins/Sed
+@dirrm share/zircon/plugins
+@dirrm share/zircon/samples
+@dirrm share/zircon/scripts
+@dirrm share/zircon/sounds
+@dirrm share/zircon
