@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.26 2005/01/12 22:56:41 jlam Exp $
+# $NetBSD: distcc.mk,v 1.27 2005/01/24 18:20:57 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -69,7 +69,6 @@ _USE_DISTCC=	YES
 .if !empty(_USE_DISTCC:M[yY][eE][sS])
 EVAL_PREFIX+=		_DISTCCBASE=distcc
 _DISTCCBASE_DEFAULT=	${LOCALBASE}
-_DISTCCBASE?=		${LOCALBASE}
 
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_VARS=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.3 2005/01/12 22:56:41 jlam Exp $
+# $NetBSD: f2c.mk,v 1.4 2005/01/24 18:20:57 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,7 +70,6 @@ _USE_F2C=	YES
 .if !empty(_USE_F2C:M[yY][eE][sS])
 EVAL_PREFIX+=		_F2CBASE=f2c
 _F2CBASE_DEFAULT=	${LOCALBASE}
-_F2CBASE?=		${LOCALBASE}
 
 _F2C_DIR=	${WRKDIR}/.f2c
 _F2C_VARS=	# empty

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1568 2005/01/24 09:31:06 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1569 2005/01/24 18:20:57 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -955,24 +955,6 @@ RMAN?=			${X11BASE}/bin/rman
 .  endif
 .endif
 
-.if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*//}_DEFAULT)
-${def:C/=.*//}_DEFAULT=	${X11PREFIX}
-.    endif
-.    if !defined(${def:C/=.*//})
-_depend_${def:C/=.*//} != ${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
-.      if (${_depend_${def:C/=.*//}} == "")
-${def:C/=.*//}=${${def:C/=.*//}_DEFAULT}
-.      else
-_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$2; exit }'
-${def:C/=.*//}=${_dir_${def:C/=.*//}}
-MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
-.      endif
-.    endif
-.  endfor
-.endif
-
 # Set the CLASSPATH for Java packages.  This must come after EVAL_PREFIX
 # is evaluated because PKG_JAVA_HOME is used in a .if.endif conditional,
 # and its value is indirectly set by EVAL_PREFIX.
@@ -1194,6 +1176,18 @@ USE_LANGUAGES?=		# empty
 
 .if !defined(NO_WRAPPER)
 .  include "../../mk/wrapper/bsd.wrapper.mk"
+.endif
+
+# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*$//})
+${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
+MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
+.    endif
+.  endfor
 .endif
 
 .if defined(RECOMMENDED)
