@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/08/05 15:46:27 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/09/23 16:32:06 hubertf Exp $
 #
 
 DISTNAME=		binkd-0.9.2
@@ -14,7 +14,6 @@ BUILD_DEPENDS=		unzip:../../archivers/unzip
 GNU_CONFIGURE=		yes
 EXTRACT_CMD=		unzip -Loq ${DOWNLOADED_DISTFILE}
 
-NO_CDROM=		"extremely limited usefulness to the general public"
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
 
 post-extract:
