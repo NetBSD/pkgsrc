@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/07 06:56:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/23 20:05:47 schmonz Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
 bin/tmda-inject
 bin/tmda-keygen
+bin/tmda-ofmipd
 bin/tmda-pending
 bin/tmda-rfilter
 bin/tmda-sendmail
@@ -21,6 +22,8 @@ ${PYSITELIB}/TMDA/HMAC.py
 ${PYSITELIB}/TMDA/HMAC.pyc
 ${PYSITELIB}/TMDA/MTA.py
 ${PYSITELIB}/TMDA/MTA.pyc
+${PYSITELIB}/TMDA/SMTP.py
+${PYSITELIB}/TMDA/SMTP.pyc
 ${PYSITELIB}/TMDA/Util.py
 ${PYSITELIB}/TMDA/Util.pyc
 ${PYSITELIB}/TMDA/Version.py
@@ -34,15 +37,16 @@ ${HTMLDIR}/config-pre.html
 ${HTMLDIR}/config-server.html
 ${HTMLDIR}/config.html
 ${HTMLDIR}/download.html
-${HTMLDIR}/faq.html
 ${HTMLDIR}/features.html
 ${HTMLDIR}/history.html
+${HTMLDIR}/howtos.html
 ${HTMLDIR}/index.html
 ${HTMLDIR}/install.html
 ${HTMLDIR}/inuse.html
 ${HTMLDIR}/requirements.html
 ${HTMLDIR}/resources.html
 ${HTMLDIR}/results.html
+${HTMLDIR}/tmda-ofmipd.html
 ${HTMLDIR}/trouble.html
 ${DOCDIR}/COPYING
 ${DOCDIR}/CRYPTO
@@ -52,11 +56,9 @@ ${DOCDIR}/README
 ${DOCDIR}/THANKS
 ${DOCDIR}/UPGRADE
 ${CONTRIBDIR}/ChangeLog
-${CONTRIBDIR}/README.RELAY
 ${CONTRIBDIR}/collectaddys
 ${CONTRIBDIR}/printcdb
 ${CONTRIBDIR}/printdbm
-${CONTRIBDIR}/qmail-smtpd_auth.patch
 ${CONTRIBDIR}/sample.tmdarc
 ${CONTRIBDIR}/tmda.spec
 ${SHAREDIR}/bounce.txt
