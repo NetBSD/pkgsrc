@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6775 2004/08/03 12:09:14 recht Exp $
+$NetBSD: CHANGES,v 1.6776 2004/08/03 12:14:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.4 [schmonz 2004-08-03]
 	Updated qmail-run to 20040803 [schmonz 2004-08-03]
 	Updated py-checker to 0.8.14 [recht 2004-08-03]
+	Updated hexedit to 1.2.10 [adam 2004-08-03]
