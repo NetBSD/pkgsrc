@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1 2000/05/02 17:11:49 kim Exp $
+
+--- lib/gcos_name.c.orig	Mon Mar 15 01:32:34 1999
++++ lib/gcos_name.c	Tue May  2 13:03:14 2000
+@@ -26,20 +26,26 @@
+ 
+     static char fullname[SLEN];
+     register char *fncp, *gcoscp, *lncp, *end;
++    int first;
+ 
+ 
+     /* full name is all chars up to first ',' (or whole gcos, if no ',') */
+-    /* replace any & with logname in upper case */
++    /* replace any & with logname capitalized */
+ 
+     for(fncp = fullname, gcoscp= gcos_field, end = fullname + sizeof fullname - 1;
+         (*gcoscp != ',' && *gcoscp != '\0' && fncp < end);
+ 	gcoscp++) {
+ 
+ 	if(*gcoscp == '&') {
+-	    for(lncp = logname; *
+-		  lncp && fncp < end; 
++	    first = 1;
++	    for(lncp = logname;
++		*lncp && fncp < end; 
+ 		fncp++, lncp++)
+-	      *fncp = toupper(*lncp);
++		if (first) {
++		    first = 0;
++		    *fncp = toupper(*lncp);
++		} else
++		    *fncp = *lncp;
+ 	} else {
+ 	    *fncp++ = *gcoscp;
+ 	}
