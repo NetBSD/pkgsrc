@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/19 15:02:22 taya Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/22 10:52:55 lukem Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -137,7 +137,6 @@ lib/${MOZILLA}/libssl3.${SO_SUFFIX}
 lib/${MOZILLA}/libxlibrgb.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
-lib/${MOZILLA}/plugins/libnullplugin.${SO_SUFFIX}
 @comment end DSO
 @comment begin DATA
 lib/${MOZILLA}/TestGtkEmbed
