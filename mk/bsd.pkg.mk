@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.751 2001/06/07 15:40:15 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.752 2001/06/07 16:21:24 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -3396,7 +3396,7 @@ MANZ_NAWK_CMD=
 .ifdef USE_IMAKE
 IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
 	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
-	sect = sprintf(".%sx", substr(sect, n + 4, 1));			\
+	sect = sprintf(".%s", substr(sect, n + 4, 1));			\
 	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
 	if (match($$0, "\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
 	$$0 = sprintf("%s%s", s, ext);					\
