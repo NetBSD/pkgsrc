@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 1999/10/06 06:07:24 jlam Exp $
+
+--- ./panel.c.orig	Sun Aug 29 20:28:35 1999
++++ ./panel.c	Wed Oct  6 01:56:48 1999
+@@ -128,7 +128,7 @@
+ 		return (-2);
+ 
+ 	if (settings->centre == True) {
+-		WMSetWindowUPosition (panel->win,
++		WMSetWindowInitialPosition (panel->win,
+ 			(WidthOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetWidth(panel->win))/2,
+ 			(HeightOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetHeight(panel->win))/2);
+ 
+@@ -136,7 +136,7 @@
+ 			(WidthOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetWidth(panel->win))/2,
+ 			(HeightOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetHeight(panel->win))/2);
+ 		
+-		WMSetWindowUSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
++		WMSetWindowInitialSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
+ 	} else if (settings->nearmouse == True) {
+ 		int x, y, x2, y2;
+ 		unsigned int mask;
+@@ -144,7 +144,7 @@
+ 
+ 		XQueryPointer (settings->dpy, DefaultRootWindow (settings->dpy), &root, &child, &x, &y, &x2, &y2, &mask);
+ 
+-		WMSetWindowUPosition (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
++		WMSetWindowInitialPosition (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
+ 		WMMoveWidget (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
+ 	}
+ 
