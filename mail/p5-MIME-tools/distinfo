@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/05/17 00:44:47 jtb Exp $
+$NetBSD: distinfo,v 1.4 2001/12/10 15:36:57 martti Exp $
 
-SHA1 (MIME-tools-5.410.tar.gz) = c74c8a6015c25ff64e5d81041cacc99adf8208fe
-Size (MIME-tools-5.410.tar.gz) = 467380 bytes
+SHA1 (MIME-tools-5.411a.tar.gz) = e1890944854a31396f596d6d1f24c6d58794da4a
+Size (MIME-tools-5.411a.tar.gz) = 467432 bytes
