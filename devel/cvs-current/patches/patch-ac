@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/Makefile.in.orig	Thu Jun 18 13:21:42 1998
++++ src/Makefile.in	Wed Aug 12 13:32:09 1998
+@@ -86,10 +86,8 @@
+ 	@cd ..; $(MAKE) lint SUBDIRS=src
+ 
+ install: installdirs
+-	@for prog in $(PROGS); do \
+-	  echo Installing $$prog in $(bindir); \
+-	  $(INSTALL) $$prog $(bindir)/$$prog ; \
+-	done
++	$(INSTALL_PROGRAM) cvs $(bindir)/
++	$(BSD_INSTALL_SCRIPT) cvsbug $(bindir)/
+ 
+ installdirs:
+ 	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir)
+@@ -144,10 +142,10 @@
+ 
+ # Linking rules.
+ 
+-$(PROGS): ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a
++$(PROGS): ../lib/libcvs.a ../diff/libdiff.a
+ 
+ cvs: $(OBJECTS)
+-	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
++	$(CC) $(OBJECTS) ../lib/libcvs.a -lz ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
+ 
+ xlint: $(SOURCES)
+ 	files= ; \
+@@ -181,7 +179,7 @@
+ 	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/diff $(DEFS) $(CFLAGS) -c $(srcdir)/rcscmds.c
+ 
+ zlib.o: zlib.c $(top_srcdir)/zlib/zlib.h
+-	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
++	$(CC) $(CPPFLAGS) $(INCLUDES) $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
+ 
+ subdir = src
+ Makefile: ../config.status Makefile.in

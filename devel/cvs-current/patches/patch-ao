@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/lock.c.orig	Wed Mar  4 00:41:50 1998
++++ src/lock.c	Tue Apr 20 10:15:04 1999
+@@ -243,7 +243,7 @@
+     FILE *fp;
+     char *tmp;
+ 
+-    if (noexec)
++    if (nolock)
+ 	return (0);
+ 
+     /* we only do one directory at a time for read locks! */
+@@ -316,7 +316,7 @@
+ {
+     char *wait_repos;
+ 
+-    if (noexec)
++    if (nolock)
+ 	return (0);
+ 
+     /* We only know how to do one list at a time */

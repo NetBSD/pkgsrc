@@ -1,0 +1,26 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+    Set up the master source repository.  See the "Setting up the repository"
+    section of cvs.info for details; the one-line summary is (if you are
+    putting the repository in /src/master):
+    $ cvs -d /src/master init
+
+    Have all users of the CVS system set the CVSROOT environment
+    variable appropriately to reflect the placement of your source
+    repository.  If the above example is used, the following commands
+    can be placed in user's ~/.profile, ~/.bash_profile file; or in the
+    system-wide /etc/profile:
+
+	CVSROOT=/src/master; export CVSROOT
+
+    for sh/bash/ksh users, or place the following commands in the user's
+    ~/.login, or system-wide in the /etc/csh.login file:
+
+	setenv CVSROOT /src/master
+
+    for csh/tcsh users.  If these environment variables are not already set
+    in your current shell, set them now (or source the login script you
+    just edited).
+
+=============================================================================
