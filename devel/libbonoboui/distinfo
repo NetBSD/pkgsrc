@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2004/02/06 20:35:31 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2004/04/01 18:23:21 jmmv Exp $
 
-SHA1 (libbonoboui-2.4.3.tar.bz2) = 0b2184b1548f429e893dd07dade2cc8b08161fc2
-Size (libbonoboui-2.4.3.tar.bz2) = 889106 bytes
+SHA1 (libbonoboui-2.6.0.tar.bz2) = d6b94b814062cb7ab5d40c7a9b071c9df0cc318d
+Size (libbonoboui-2.6.0.tar.bz2) = 917849 bytes
