@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6341 2004/06/26 23:56:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6342 2004/06/27 01:12:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3096,3 +3096,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bmp to 0.9.6.1nb1 [jmmv 2004-06-26]
 	Updated icbirc to 1.7 [adrianp 2006-06-26]
 	Updated icewm to 1.2.14 [xtraeme 2004-06-26]
+	Updated TeXmacs to 1.0.3.9 [recht 2004-06-27]
