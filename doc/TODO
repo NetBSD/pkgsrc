@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1658 2004/04/21 12:09:49 dillo Exp $
+$NetBSD: TODO,v 1.1659 2004/04/21 13:51:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -130,7 +130,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o ImageMagick-6.0.0-2
 	o ImageViewer-0.6.3
 	o LPRng-3.8.26
 	o R-1.9.0
