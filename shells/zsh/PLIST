@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/15 18:30:32 mycroft Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true) >/etc/shells
@@ -370,6 +370,7 @@ share/zsh/${PKGVERSION}/functions/zkbd
 share/zsh/${PKGVERSION}/functions/zmv
 share/zsh/${PKGVERSION}/functions/zrecompile
 share/zsh/${PKGVERSION}/functions/zstyle+
+@exec ${MKDIR} %D/share/zsh/site-functions
 @dirrm share/zsh/site-functions
 @dirrm share/zsh/${PKGVERSION}/functions
 @dirrm share/zsh/${PKGVERSION}
