@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/09/30 09:44:00 cube Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/03 12:31:36 cube Exp $
 
---- getopt/Makefile.in.orig	2003-09-29 13:46:00.000000000 +0200
+--- getopt/Makefile.in.orig	2003-11-29 15:26:17.000000000 +0100
 +++ getopt/Makefile.in
-@@ -0,0 +1,310 @@
+@@ -0,0 +1,316 @@
 +# Makefile.in generated automatically by automake 1.4-p6 from Makefile.am
 +
 +# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
@@ -62,13 +62,19 @@ $NetBSD: patch-aa,v 1.3 2003/09/30 09:44:00 cube Exp $
 +NORMAL_UNINSTALL = :
 +PRE_UNINSTALL = :
 +POST_UNINSTALL = :
++host_alias = @host_alias@
++host_triplet = @host@
 +CC = @CC@
 +CXX = @CXX@
++HAVE_LIB = @HAVE_LIB@
++LIB = @LIB@
 +LIBGETOPT = @LIBGETOPT@
 +LIBMPEGSOUND = @LIBMPEGSOUND@
 +LIBMYSQL = @LIBMYSQL@
 +LIBNMIXER = @LIBNMIXER@
++LIRC_LIBS = @LIRC_LIBS@
 +LN_S = @LN_S@
++LTLIB = @LTLIB@
 +MAKEINFO = @MAKEINFO@
 +MP3B_MODULES = @MP3B_MODULES@
 +NAS_CFLAGS = @NAS_CFLAGS@
@@ -109,7 +115,7 @@ $NetBSD: patch-aa,v 1.3 2003/09/30 09:44:00 cube Exp $
 +
 +DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
 +
-+TAR = gtar
++TAR = tar
 +GZIP_ENV = --best
 +DEP_FILES =  .deps/getopt.P .deps/getopt1.P
 +SOURCES = $(libgetopt_a_SOURCES)
