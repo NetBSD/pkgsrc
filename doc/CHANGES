@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3857 2003/11/26 10:40:37 abs Exp $
+$NetBSD: CHANGES,v 1.3858 2003/11/26 11:20:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4641,5 +4641,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated exim-exiscan to 4.22-12nb1 [abs 2003-11-25]
 	Updated p5-gtk to 0.7009 [salo 2003-11-25]
 	Updated gmodplay to 0.08nb3 [ben 2003-11-25]
-	Updated cxunzip to 0.98  [abs 2003-11-25]
+	Updated cxunzip to 0.98 [abs 2003-11-25]
+	Updated p5-Image-Size to 2.992 [abs 2003-11-25]
 
