@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/16 19:54:56 bad Exp $
+$NetBSD: distinfo,v 1.2 2003/05/01 19:36:32 jdolecek Exp $
 
-SHA1 (VMware-workstation-3.2.0-2230.tar.gz) = db20b3e9874c82fe14892953c1be739f80632a69
-Size (VMware-workstation-3.2.0-2230.tar.gz) = 12575521 bytes
+SHA1 (VMware-workstation-3.2.1-2237.tar.gz) = 029a4ffd00217f95744b168c8faab162ee9417fb
+Size (VMware-workstation-3.2.1-2237.tar.gz) = 12577022 bytes

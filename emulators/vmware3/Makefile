@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/03/26 04:05:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/01 19:36:32 jdolecek Exp $
 
-DISTNAME=	VMware-workstation-3.2.0-2230
-PKGNAME=	vmware-3.2.0
+DISTNAME=	VMware-workstation-3.2.1-2237
+PKGNAME=	vmware-3.2.1
 WRKSRC=		${WRKDIR}/vmware-distrib
 CATEGORIES=	emulators
 MASTER_SITES=   http://www4.vmware.com/software/ \
