@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/11 00:39:05 jlam Exp $
 
 DISTNAME=		autoconf-2.59
 CATEGORIES=		devel
@@ -18,6 +18,7 @@ CONFLICTS=		autoconf-devel-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
 CONFIGURE_ENV+=		AWK="${AWK}"
