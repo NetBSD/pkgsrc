@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/28 06:31:47 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/01 15:38:02 taca Exp $
 # FreeBSD: ports/net/ruby-drb/Makefile,v 1.8 2001/01/18 16:57:25 knu Exp
 
 DISTNAME=	drb-2.0.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	Distributed Ruby
 
 RUBY_VERSION=		${RUBY16_VERSION}
+USE_BUILDLINK3=		yes
 USE_RUBY_INSTALL=	yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/sample
 DOCS=			acl-ref.rd acl-ref.rd.ja acl.rd acl.rd.ja \
@@ -28,6 +29,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/drb
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/drb
 
-.include "../../textproc/ruby-rdtool/rdversion.mk"
 .include "../../lang/ruby/modules.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
