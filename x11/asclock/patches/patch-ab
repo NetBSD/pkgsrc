@@ -1,94 +1,60 @@
-$NetBSD: patch-ab,v 1.2 1999/10/07 17:23:01 jlam Exp $
+$NetBSD: patch-ab,v 1.3 1999/10/28 19:04:57 jlam Exp $
 
---- asclock.man.orig	Wed Sep 16 11:56:00 1998
-+++ asclock.man	Thu Oct  7 03:04:28 1999
-@@ -1,14 +1,17 @@
--.TH asclock 0.99 "23 July 1996" asclock
-+.TH asclock 1.0 "11 April 1998" asclock
- .UC
- .SH NAME
- \fBasclock\fP \- the AfterStep clock
- .SH SYNOPSIS
- .B asclock
--[ -help] [-12 | -24] [-shape] 
--        [-position \fI[+|-]x[+|-]y\fP] 
-+[ -help] [-12 | -24] [-shape]
-         [-exe \fIprogram\fP]
-         [-led \fIcolor\fP]
--        [-noblink] [-iconic]
-+        [-monthxpm \fIxpm\fP] [-clockxpm \fIxpm\fP]
-+        [-weekdayxpm \fIxpm\fP]
-+        [-year]
-+        [-position \fI[+|-]x[+|-]y\fP] 
-+        [-noblink] [-iconic] [-dock]
- .SH DESCRIPTION
- The \fBasclock\fP is a clock written to emulate the date/time application on 
- the NEXTSTEP(tm) operating system.  \fBasclock\fP supports multiple languages, 
-@@ -23,12 +26,17 @@
-         where options include:
-             -12                     12 hour format
-             -24                     24 hour format
-+            -shape                  without groundplate
-             -exe <program>          program to start on click
-             -led <color>            color of the led
-+            -monthxpm <xpm>         month xpm
-+            -clockxpm <xpm>         clock xpm
-+            -weekdayxpm <xpm>       weekday xpm
-+            -year                   show year instead of time
-             -position [+|-]x[+|-]y  position of asclock
--            -shape                  without groundplate
-             -noblink                don't blink
-             -iconic                 start up as icon
-+            -dock                   Window Maker docking
- .fi
- .RE
- .IP "-12 or -24"
-@@ -50,6 +58,22 @@
- .I showrgb
- .P (part of X11).
- .RE
-+.IP "-monthxpm <xpm>"
-+.RS
-+specifies the XPM file for the month pages.
-+.RE
-+.IP "-clockxpm <xpm>"
-+.RS
-+specifies the XPM file for the clock and calendar display.
-+.RE
-+.IP "-weekdayxpm <xpm>"
-+.RS
-+specifies the XPM file for the weekday pages.
-+.RE
-+.IP "-year"
-+.RS
-+shows the current the year in the display instead of the current time.
-+.RE
- .IP "-position [+|-]x[+|-]y "
- .RS
- specifies the starting position of \fBasclock\fP. The [+|-] works like the standard X-Windows x/y geometry option.
-@@ -66,6 +90,10 @@
- .RS
- This gives weird output with AfterStep, so don't bother. It's for mwm and other wm's with no hint functionality.
- .RE
-+.IP "-dock"
-+.RS
-+starts \fBasclock\fP in docking mode.  This option is necessary to dock \fBasclock\fP in the Window Maker dock.  \fBasclock\fP ignores the -iconic option when started in docking mode.
-+.RE
- .SH INVOCATION
- \fBasclock\fP can be called from one of many ways.  The most common invocation
- is the command line:
-@@ -86,6 +114,14 @@
- will cause \fBasclock\fP to use the shape extensions so that it will be a
- button on the \fBWharf (1)\fP button bar under the \fBafterstep (1)\fP 
- window manager.
-+
-+If you run Window Maker then you should use the "-dock" option:
-+.nf
-+
-+	[user@host] ~% asclock -shape -12 -dock &
-+
-+.fi
-+and then drag the icon to the dock.
- .SH BUGS
- we don't have bugs :)
- .SH COPYRIGHTS
+--- asclock.c.orig	Sat Sep 26 17:05:03 1998
++++ asclock.c	Thu Oct 28 13:12:29 1999
+@@ -19,6 +19,7 @@
+ int ONLYSHAPE=0; /* default value is noshape */
+ int ITBLINKS=1;  /* default is blinking */
+ int ICONIFIED=0; /* default is not iconified */
++int ITDOCKS=0;   /* default is not Docking mode */
+ int YEAR=0;      /* default is to show time, not year */
+ /* led positions *************************************************************/
+ int twelve[5]  = {5, 14, 24, 28, 37};
+@@ -85,14 +86,15 @@
+ "    -24                     24 hour format",
+ "    -exe <program>          program to start on click",
+ "    -led <color>            color of the led",
+-"    -monthxpm <xpm>         month xpm",
+ "    -clockxpm <xpm>         clock xpm",
++"    -monthxpm <xpm>         month xpm",
+ "    -weekdayxpm <xpm>       weekday xpm",
++"    -year                   show year instead of time",
+ "    -position [+|-]x[+|-]y  position of asclock",
+ "    -shape                  without groundplate",
+ "    -noblink                don't blink",
+ "    -iconic                 start up as icon",
+-"    -year                   show year instead of time",
++"    -dock                   Window Maker docking",
+ NULL
+ };
+ 
+@@ -173,6 +175,9 @@
+       case 'n':
+         ITBLINKS = 0;
+         continue;
++      case 'd':
++        ITDOCKS = 1;
++        continue;
+       case 'y':
+ 	YEAR = 1;
+ 	continue;
+@@ -256,13 +261,17 @@
+     XShapeCombineMask(dpy, iconwin, ShapeBounding, 0, 0, pixmask, ShapeSet);
+   }
+   
+-  mywmhints.initial_state = (ICONIFIED ? IconicState : NormalState);
++  mywmhints.initial_state = ITDOCKS ? WithdrawnState :
++	(ICONIFIED ? IconicState : NormalState);
+   mywmhints.icon_window = iconwin;
+   mywmhints.icon_x = mysizehints.x;
+   mywmhints.icon_y = mysizehints.y;
+-  mywmhints.flags = StateHint | IconWindowHint | IconPositionHint;
++  mywmhints.window_group = win;
++  mywmhints.flags = StateHint | IconWindowHint | IconPositionHint
++	| WindowGroupHint;
+   XSetWMHints(dpy, win, &mywmhints); 
+ 
++  XSetCommand(dpy, win, argv, argc);
+   XMapWindow(dpy,win);
+ 
+   InsertTime();
