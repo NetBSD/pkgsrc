@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2001/10/04 19:28:42 rh Exp $
+# $NetBSD: Makefile,v 1.37 2001/10/20 18:48:39 rh Exp $
 #
 
-DISTNAME=		gnumeric-0.70
+DISTNAME=		gnumeric-0.71
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -16,17 +16,19 @@ USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
+
 LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
 	for i in ${WRKSRC}/plugins/*/Makefile.in ; do			\
 		${SED} <$$i >$$i.fixed					\
-		  -e 's/^\(COMPILE.*\)$$/\1 $${EXTRA_GNOME_CFLAGS}/' &&	\
+		  -e 's/^\(COMPILE.*\)\\$$/\1 $${EXTRA_GNOME_CFLAGS} \\/' \
+		  -e 's/^\(COMPILE.*[^\\]\)$$/\1 $${EXTRA_GNOME_CFLAGS}/' && \
 		${MV} $$i.fixed $$i ;					\
 	done
 
