@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:11 agc Exp $
 
-MD5 (zip23.tar.gz) = 5206a99541f3b0ab90f1baa167392c4f
-MD5 (zcrypt29.zip) = 0c969ba1661183b041a142945ed2710e
+SHA1 (zip23.tar.gz) = 0600c93218e6acf1be75dd79da4244eabc8e16cf
+Size (zip23.tar.gz) = 723283 bytes
+SHA1 (zcrypt29.zip) = 04223ea88ba3cf5d0f8d6a5fc9c1a4cd8c568f56
+Size (zcrypt29.zip) = 20248 bytes

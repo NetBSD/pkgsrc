@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:10 agc Exp $
 
-MD5 (unrar-2.71.tar.gz) = d3f2ede3e321f80e4b3b98bc1e082812
+SHA1 (unrar-2.71.tar.gz) = f974be1952f52baaa866e7d1f5e2e9da766cf29f
+Size (unrar-2.71.tar.gz) = 30884 bytes
