@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3587 2003/09/30 09:34:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3588 2003/09/30 10:33:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bogofilter to 0.14.5.4 [xtraeme 2003-09-30]
 	Updated xfrisk to 1.2nb1 [xtraeme 2003-09-30]
 	Updated pxe to 1.4 [xtraeme 2003-09-30]
+	Updated icecast to 1.3.12nb1 [xtraeme 2003-09-30]
