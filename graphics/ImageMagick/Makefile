@@ -3,7 +3,7 @@
 # Date created:         11th December 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 05:16:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 20:15:23 hubertf Exp $
 #
 
 DISTNAME=	ImageMagick-3.9.3
@@ -11,6 +11,8 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.wizards.dupont.com/pub/ImageMagick/ \
 		ftp://ftp.ms.mff.cuni.cz/MIRRORS/ftp.wizards.dupont.com/pub/ImageMagick/ \
 		ftp://ftp.oce.nl/pub/Internet/audio+video/ImageMagick/
+
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 		mpeg\\.1\\.2:${PORTSDIR}/graphics/mpeg-lib \
