@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/07/18 15:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/11/17 16:29:07 martin Exp $
 
 DISTNAME=	festival-1.4.1
 WRKSRC=		${WRKDIR}
@@ -35,6 +35,8 @@ MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
 		PKG_PREFIX="${PREFIX}"					\
 		EGCS_CC="${CC}"						\
 		EGCS_CXX="${CXX}"					\
+		GCC295_CC="${CC}"					\
+		GCC295_CXX="${CXX}"					\
 		GCC28_CC="${CC}"					\
 		GCC28_CXX="${CXX}"					\
 		GCC27_CC="${CC}"					\
@@ -81,5 +83,6 @@ do-install:
 PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
                                           *2.7.*) ${ECHO} gcc27;;\
                                           *2.8.*) ${ECHO} gcc28;;\
+					  *2.95.*) ${ECHO} gcc295;;\
                                           *egcs*) ${ECHO} egcs;;\
                                        esac
