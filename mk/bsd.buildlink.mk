@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.53 2002/01/03 20:00:06 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.54 2002/01/06 02:36:40 tron Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -211,7 +211,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${ECHO} ${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} >> $${cookie}; \
 	fi
 
-_CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
+_CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
 
 # _BUILDLINK_SUBST_USE is a make macro that executes code to do general text
 # replacement in files.  The following variables are used:
