@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/29 04:54:56 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/24 09:36:23 jlam Exp $
 
 DISTNAME=		sitecopy-0.10.15
 CATEGORIES=		www
@@ -10,6 +10,7 @@ COMMENT=		utility for synchronizing remote and local web sites
 
 USE_GMAKE=		# defined
 USE_BUILDLINK_ONLY=	# defined
+BUILD_USES_MSGFMT=	# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
