@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/27 21:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/28 17:23:13 wiz Exp $
 #
 
 DISTNAME=	xfrisk-1.2
@@ -17,5 +17,11 @@ USE_X11=	yes
 RESTRICTED=	"Possible trademark infringement"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=      LIBS="-lsocket -lnsl"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
