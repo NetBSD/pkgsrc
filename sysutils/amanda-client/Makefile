@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1999/04/01 14:12:56 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/04 23:34:45 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
 DISTNAME=		amanda-2.4.1p1
 PKGNAME=		amanda-client-2.4.1p1
-CATEGORIES=		misc
+CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
 MAINTAINER=		packages@netbsd.org
