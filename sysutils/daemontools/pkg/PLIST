@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/27 15:44:55 hubertf Exp $
+bin/envdir
+bin/envuidgid
+bin/fghack
+bin/multilog
+bin/setlock
+bin/setuidgid
+bin/softlimit
+bin/supervise
+bin/svc
+bin/svok
+bin/svscan
+bin/svstat
+bin/tai64n
+bin/tai64nlocal
+man/man1/envdir.1
+man/man1/envuidgid.1
+man/man1/setlock.1
+man/man1/setuidgid.1
+man/man1/softlimit.1
+man/man1/tai64n.1
+man/man1/tai64nlocal.1
+man/man8/fghack.8
+man/man8/multilog.8
+man/man8/supervise.8
+man/man8/svc.8
+man/man8/svok.8
+man/man8/svscan.8
+man/man8/svstat.8
+share/examples/daemontools/svscan.sh.sample
+@dirrm share/examples/daemontools
+@exec mkdir ${SERVICEDIR} || true
