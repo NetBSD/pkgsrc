@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2944 2003/07/30 17:57:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.2945 2003/07/30 18:10:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3143,3 +3143,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kile to 1.5.2 [markd 2003-07-30]
 	Updated netatalk-asun to 2.1.3nb6 [jmmv 2003-07-30]
 	Updated upclient to 4.2.1.23nb3 [jmmv 2003-07-30]
+	Updated pxe to 1.2nb1 [jmmv 2003-07-30]
