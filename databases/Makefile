@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/03/25 05:17:03 mjl Exp $
+# $NetBSD: Makefile,v 1.49 2001/03/27 02:18:33 hubertf Exp $
 #
 
 COMMENT=	Databases
@@ -46,6 +46,7 @@ SUBDIR+=	tcl-postgresql
 SUBDIR+=	tk-postgresql
 SUBDIR+=	xmysql
 SUBDIR+=	xmysqladmin
+SUBDIR+=	xsqlmenu
 SUBDIR+=	zope-mysql
 
 .include "../mk/bsd.pkg.subdir.mk"
