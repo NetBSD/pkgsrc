@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl -w
 #
-# $NetBSD: if-psprint.pl,v 1.4 2000/12/05 15:49:37 abs Exp $
+# $NetBSD: if-psprint.pl,v 1.5 2001/06/26 10:41:25 abs Exp $
 # 
 #	Copyright (c) 2000 David Brownlee <abs@netbsd.org>. All rights
 #	reserved. Provided as-is without express or implied warranties.
@@ -111,7 +111,7 @@ my( $user,
 # Parse options (ignore most)
 #
 
-&getopt('w:l:i:n:h:', \%opt);
+&getopts('vw:l:i:n:h:', \%opt);
 $user = $opt{'n'};
 $user ||= $ENV{'USER'};
 $spoolhost = $opt{'h'};
@@ -119,7 +119,7 @@ if (!$spoolhost)
     { chomp($spoolhost = `hostname`); }
 
 if (@ARGV != 1 || $ARGV[0] !~ m#(\w+)(\.(\w+)|)(/smb/.*/.*|)#)
-    { &usage_and_exit; }
+    { usage_and_exit(); }
 $device = $1;
 $model = $3;
 $dest = $4;
@@ -153,6 +153,8 @@ if ($dest)
 if ($spool eq '')
     { $spool = '>&STDOUT'; }
 
+if ($opt{'v'})
+    { print STDERR "$spool\n"; }
 # Spool output
 #
 if (!open(OUTPUT, $spool))
@@ -208,11 +210,15 @@ sub usage_and_exit
     {
     print "Usage: if-psprint [opts] gs_device[.gs_model]/smbdestination
 [opts]
+	-v	  Verbose
 	-w width	
 	-l lines	
 	-i indent	
 	-n user	
 	-h host
+
+if-psprint is intended to be used from within printcap. See manpage for more
+details.
 ";
     exit 1;
     }
