@@ -207,7 +207,13 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 from that of the host, installation is aborted.  This behavior
                 is overridable with the --ff flag.
 
-           7.   If the package contains a _r_e_q_u_i_r_e script (see pkg_create(1)),
+           7.   The package build information from _+_B_U_I_L_D___I_N_F_O is then checked
+                for IGNORE_RECOMMENDED.  If the package was built with depen-
+                dency recommendations ignored, installation will be aborted.
+                This behavior is overridable with the --ff flag and the
+                PKG_IGNORE_RECOMMENDED environment variable.
+
+           8.   If the package contains a _r_e_q_u_i_r_e script (see pkg_create(1)),
                 it is executed with the following arguments:
 
                 _p_k_g_-_n_a_m_e      The name of the package being installed
@@ -220,7 +226,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 If the _r_e_q_u_i_r_e script exits with a non-zero status code, the
                 installation is terminated.
 
-           8.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
+           9.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
                 the following arguments:
 
                 _p_k_g_-_n_a_m_e      The name of the package being installed.
@@ -232,19 +238,19 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 If the _i_n_s_t_a_l_l script exits with a non-zero status code, the
                 installation is terminated.
 
-           9.   If @@ooppttiioonn eexxttrraacctt--iinn--ppllaaccee is not present in the packing
+           10.  If @@ooppttiioonn eexxttrraacctt--iinn--ppllaaccee is not present in the packing
                 list, then it is used as a guide for moving (or copying, as
                 necessary) files from the staging area into their final loca-
                 tions.
 
-           10.  If the package contains an _m_t_r_e_e_f_i_l_e file (see pkg_create(1)),
+           11.  If the package contains an _m_t_r_e_e_f_i_l_e file (see pkg_create(1)),
                 then mtree is invoked as:
                       mmttrreeee --uu --ff _m_t_r_e_e_f_i_l_e --dd --ee --pp _p_r_e_f_i_x
                 where _p_r_e_f_i_x is either the prefix specified with the --pp flag
                 or, if no --pp flag was specified, the name of the first direc-
                 tory named by a @@ccwwdd directive within this package.
 
-           11.  If an _i_n_s_t_a_l_l script exists for the package, it is executed
+           12.  If an _i_n_s_t_a_l_l script exists for the package, it is executed
                 with the following arguments:
 
                 _p_k_g___n_a_m_e      The name of the package being installed.
@@ -253,7 +259,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                               any actions needed after the package has been
                               installed.
 
-           12.  After installation is complete, a copy of the packing list,
+           13.  After installation is complete, a copy of the packing list,
                 _d_e_i_n_s_t_a_l_l script, description, and display files are copied
                 into _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_> for subsequent possible use by
                 pkg_delete(1).  Any package dependencies are recorded in the
@@ -261,12 +267,12 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 an alternate package database directory is specified, then it
                 overrides the _/_v_a_r_/_d_b_/_p_k_g path shown above).
 
-           13.  If the package is a depoted package, then add it to the
+           14.  If the package is a depoted package, then add it to the
                 default view.
 
-           14.  The staging area is deleted and the program terminates.
+           15.  The staging area is deleted and the program terminates.
 
-           15.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
+           16.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
                 that was moved aside before upgrading was started is now moved
                 back into place.
 
