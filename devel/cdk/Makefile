@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/26 05:12:37 snj Exp $
 #
 
 DISTNAME=		latestCDK
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.vexus.ca/CDK.html
 COMMENT=		Curses Development Kit
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_NCURSES=		# uses ncurses internals
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -30,6 +30,6 @@ post-install:
 		${INSTALL_DATA} $${file} ${PREFIX}/share/examples/cdk/; \
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
