@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/02/19 04:29:46 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/10/10 14:33:08 dmcmahill Exp $
 bin/spline
 bin/double
 bin/ode
@@ -7,6 +7,11 @@ bin/tek2plot
 bin/plotfont
 bin/graph
 include/plot.h
+include/plotcompat.h
+man/man1/ode.1
+man/man1/plot.1
+man/man1/spline.1
+man/man1/tek2plot.1
 share/ode/README
 share/ode/atwoods.ode
 share/ode/bead.ode
@@ -43,7 +48,7 @@ share/tek2plot/ocpred.tek
 share/tek2plot/scale.tek
 share/tek2plot/skymap.tek
 share/tek2plot/usmap.tek
-lib/libplot.so.1.6
+lib/libplot.so.3.0
 lib/libplot.a
 @unexec install-info --delete %D/info/plotutils.info %D/info/dir
 info/plotutils.info
