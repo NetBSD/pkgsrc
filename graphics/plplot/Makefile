@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/25 21:08:58 jtb Exp $
 
 DISTNAME=	plplot-5.0.2
 CATEGORIES=	graphics
@@ -10,14 +10,14 @@ COMMENT=	Scientific plotting package
 
 DEPENDS+=	tcl>=8.3.0:../../lang/tcl
 DEPENDS+= 	tk>=8.3.0:../../x11/tk
-DEPENDS+=	m4-[0-9]*:../../devel/m4
+BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=	perl:../../lang/perl5
+BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_FORTRAN=	YES
-USE_X11=	YES
+GNU_CONFIGURE=	#defined
+USE_GMAKE=	#defined
+USE_FORTRAN=	#defined
+USE_X11=	#defined
 
 EVAL_PREFIX+=	TK_PREFIX=tk TCL_PREFIX=tcl
 
