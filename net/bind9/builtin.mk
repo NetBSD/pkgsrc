@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2004/07/17 22:28:43 markd Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/07/18 11:22:13 tron Exp $
 
 .if !defined(IS_BUILTIN.bind)
 IS_BUILTIN.bind=        no
 .  if exists(/usr/sbin/named)
-_BIND_VERSION!=/usr/sbin/named -v | ${SED} -n 's/^BIND //p'
+_BIND_VERSION!=/usr/sbin/named -v | ${HEAD} -1 | ${CUT} -d ' ' -f 2
 .  endif
 .  if defined(_BIND_VERSION) && !empty(_BIND_VERSION)
 IS_BUILTIN.bind=        yes
