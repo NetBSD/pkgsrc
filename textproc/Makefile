@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2002/10/08 05:29:33 cjep Exp $
+# $NetBSD: Makefile,v 1.167 2002/10/14 16:46:15 bouyer Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -29,6 +29,7 @@ SUBDIR+=	expat
 SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	glimpse
+SUBDIR+=	grep
 SUBDIR+=	groff
 SUBDIR+=	gsed
 SUBDIR+=	gtk-doc
