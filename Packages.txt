@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.230 2002/02/13 20:05:02 abs Exp $
+# $NetBSD: Packages.txt,v 1.231 2002/02/13 23:29:37 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -127,11 +127,11 @@ binary package that someone else already prepared for your type of machine.
 
 Precompiled packages are stored on ftp.netbsd.org and its mirrors in the
 directory /pub/NetBSD/packages for anon FTP access. Please pick the right
-subdirectory there as indicated by "sysctl hw.machine_arch". In that
-directory, there is a subdirectory for each category plus a subdirectory
-"All" which includes the actual binaries in .tgz-files. The category
-subdirectories use symbolic links to those files. (This is the same
-directory layout as in /usr/pkgsrc/packages).
+subdirectory there as indicated by "uname -p". In that directory, there
+is a subdirectory for each category plus a subdirectory "All" which includes
+the actual binaries in .tgz-files. The category subdirectories use symbolic
+links to those files. (This is the same directory layout as in
+/usr/pkgsrc/packages).
 
 This same directory layout applies for CDROM distributions, only that the
 directory may be rooted somewhere else, probably somewhere below /cdrom.
@@ -152,8 +152,8 @@ ftp-URL:
 
 	# pkg_add ftp://ftp.netbsd.org/pub/NetBSD/packages/<OS Ver>/<arch>/All/package.tgz
 
-If there is any doubt, the sysctl utility can be used to determine the
-<OS Ver>, and <arch> by running "sysctl kern.osrelease hw.machine_arch".
+If there is any doubt, the uname utility can be used to determine the
+<OS Ver>, and <arch> by running "uname -rp".
 
 Also note that any prerequisite packages needed to run the package in
 question will be installed, too, assuming they are present where you install
@@ -825,9 +825,9 @@ to when dealing with the PLIST file (or files, see below!).
    architecture they were built on into the pathnames where they install
    their file. To handle this case, PLIST will be preprocessed before
    actually used, and the symbol "${MACHINE_ARCH}" will be replaced by
-   what "sysctl -n hw.machine_arch" gives. The same is done if the string
-   ${MACHINE_GNU_ARCH} is embedded in PLIST somewhere - use this on
-   packages that use GNU autoconfigure.
+   what "uname -p" gives. The same is done if the string ${MACHINE_GNU_ARCH}
+   is embedded in PLIST somewhere - use this on packages that use GNU
+   autoconfigure.
 
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
    the output of "uname -m", but that's no longer supported and has been
@@ -2585,8 +2585,8 @@ To create:
  - cd /usr/pkgsrc ; make install ; make package
  - upload /usr/pkgsrc/packages to
    ftp://ftp.netbsd.org/pub/NetBSD/packages/\
-    `uname -r | sed 's@\.\([0-9]*\)[\._].*@\.\1@'`/`sysctl -n hw.machine_arch`
- - if necessary ln -s `sysctl -n hw.machine` `sysctl -n hw.machine_arch`
+    `uname -r | sed 's@\.\([0-9]*\)[\._].*@\.\1@'`/`uname -p`
+ - if necessary ln -s `uname -m` `uname -p`
 
 Disk space needed: unknown.
 
