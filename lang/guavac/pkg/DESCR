@@ -8,4 +8,3 @@ find it useful and possibly enhance its utility in turn.
 Guavac should produce correct bytecode for valid Java input, but you may
 encounter some difficulties in compiling guavac itself, due inadequate
 tools on some platforms.
-
