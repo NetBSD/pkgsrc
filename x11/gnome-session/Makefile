@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2004/11/19 19:59:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2005/01/11 12:36:24 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.8/}
 SITES_gnome-splash-2.8.0.1.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -32,15 +32,10 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
-post-extract:
-	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
-	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.8.0.1.png \
-	    ${WRKSRC}/gnome-session/gnome-splash.png
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash-orig.png \
-	    ${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
+# Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
+# in the environment being set.
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.1
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -54,4 +49,15 @@ post-install:
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
+post-extract:
+	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
+	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
+	${CP} ${DISTDIR}/gnome-splash-2.8.0.1.png \
+	    ${WRKSRC}/gnome-session/gnome-splash.png
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash-orig.png \
+	    ${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
+
 .include "../../mk/bsd.pkg.mk"
