@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2002/09/13 06:59:38 skrll Exp $
+$NetBSD: patch-ab,v 1.6 2002/09/20 08:28:27 jlam Exp $
 
 --- configure.orig	Wed Nov 14 14:39:38 2001
 +++ configure	Mon Nov 26 12:56:30 2001
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.5 2002/09/13 06:59:38 skrll Exp $
 +                ;;
 +        netbsd*)
 +                CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
-+		USE_THREADS="-I${BUILDLINK_DIR}/include"
++		USE_THREADS="-I${PTHREADBASE}/include"
 +                echo "Setting NetBSD pthread compilation options"
                  ;;
          aix*)
