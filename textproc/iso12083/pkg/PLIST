@@ -1,6 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 1999/03/14 16:17:42 rh Exp $
 share/sgml/iso12083/article.dtd
 share/sgml/iso12083/book.dtd
 share/sgml/iso12083/maths.dtd
 share/sgml/iso12083/serial.dtd
 share/sgml/iso12083/catalog
 @dirrm share/sgml/iso12083
+@unexec rmdir %D/share/sgml 2>/dev/null || true
