@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 13:33:37 wiz Exp $
 #
 
 DISTNAME=	corewars-0.9.11
@@ -10,10 +10,8 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://corewars.sourceforge.net/
 COMMENT=	programs on a virtual machine, fighting each other
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
-
 GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
 USE_GMAKE=	YES
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
