@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/01/08 13:09:18 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/07 15:21:20 wiz Exp $
 #
 
-DISTNAME=		libidn-0.5.12
+DISTNAME=		libidn-0.5.13
 CATEGORIES=		devel
 MASTER_SITES=		ftp://alpha.gnu.org/pub/gnu/libidn/ \
 			http://josefsson.org/libidn/releases/
@@ -13,6 +13,7 @@ COMMENT=		Internationalized Domain Names command line tool
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
