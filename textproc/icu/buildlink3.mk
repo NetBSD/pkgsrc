@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/03 10:44:28 recht Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/09 23:56:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICU_BUILDLINK3_MK:=	${ICU_BUILDLINK3_MK}+
@@ -9,10 +8,9 @@ BUILDLINK_DEPENDS+=	icu
 .endif
 
 .if !empty(ICU_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			icu
-BUILDLINK_DEPENDS.icu?=		icu>=2.6.1
-BUILDLINK_PKGSRCDIR.icu?=		../../textproc/icu
-
+BUILDLINK_PACKAGES+=		icu
+BUILDLINK_DEPENDS.icu+=		icu>=2.6.1
+BUILDLINK_PKGSRCDIR.icu?=	../../textproc/icu
 .endif # ICU_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
