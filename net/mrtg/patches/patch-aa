@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.6 1999/11/01 03:37:36 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2000/02/07 16:44:15 tron Exp $
 
---- configure.orig	Thu Aug 26 17:25:08 1999
-+++ configure	Sun Oct 31 00:47:15 1999
-@@ -1053,7 +1053,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lgd -lpng -lz $LIBS"
-+LIBS="-lgd -lpng -lz -lttf -lintl -lXpm -lX11 $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 1059 "configure"
- #include "confdefs.h"
-@@ -1083,7 +1083,7 @@
-   echo "$ac_t""yes" 1>&6
-   
-   CFLAGS="$CFLAGS -DGFORM_GD=gdImagePng"
--  LDFLAGS="$LDFLAGS -lpng -lz"
-+  LDFLAGS="$LDFLAGS -lpng -lz -lttf -lintl -lXpm -lX11"
-   GDFORM_EXT=png
-         
- else
+--- configure.orig	Sun Feb  6 00:56:27 2000
++++ configure	Mon Feb  7 17:38:11 2000
+@@ -986,7 +986,7 @@
+ fi
+ 
+ 
+-LDFLAGS="${LDFLAGS} -lgd"
++LDFLAGS="${LDFLAGS} -lgd -lttf -lintl -lXpm -lX11"
+ 
+ # Check whether --with-z or --without-z was given.
+ if test "${with_z+set}" = set; then
