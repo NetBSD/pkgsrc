@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/07/04 08:43:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2004/09/01 09:43:16 jmmv Exp $
 #
 
-DISTNAME=	xmlcatmgr-2.1
+DISTNAME=	xmlcatmgr-2.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlcatmgr/}
 
@@ -11,18 +11,11 @@ COMMENT=	XML and SGML catalog manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-HAS_CONFIGURE=	YES
+GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=	-p ${PREFIX}
-CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}/xml/catalog
-CONFIGURE_ARGS+=	-C ${PKG_SYSCONFDIR}/sgml/catalog
-CONFIGURE_ENV+=		SED="${SED}"
-CONFIGURE_ENV+=		INSTALL_DATA="${INSTALL_DATA}"
-CONFIGURE_ENV+=		INSTALL_DIR="${INSTALL_DATA_DIR}"
-CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
-CONFIGURE_SCRIPT=	${WRKSRC}/configure.sh
+CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sgml ${PKG_SYSCONFDIR}/xml
 EGDIR=		${PREFIX}/share/examples/xmlcatmgr
@@ -32,25 +25,18 @@ MAKE_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
 SUPPORT_FILES=	${EGDIR}/catalog.share.sgml ${PREFIX}/share/sgml/catalog
 SUPPORT_FILES+=	${EGDIR}/catalog.share.xml ${PREFIX}/share/xml/catalog
 
-BUILD_DIRS=	${WRKSRC}/work
-INSTALL_DIRS=	${WRKSRC}/work
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:MMIPSpro)
-CFLAGS+=	-c99
-.endif
+PRINT_PLIST_AWK+=	/^@dirrm share\/(sgml|xml)$$/ { next; }
 
 post-build:
 	@${ECHO} "Creating SGML catalogs..."
-	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml create
-	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.sgml create
-	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml add \
+	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml create
+	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.sgml create
+	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml add \
 		CATALOG ${PREFIX}/share/sgml/catalog
 	@${ECHO} "Creating XML catalogs..."
-	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml create
-	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.xml create
-	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml add \
+	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml create
+	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.xml create
+	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml add \
 		nextCatalog ${PREFIX}/share/xml/catalog
 
 post-install:

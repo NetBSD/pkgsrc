@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/02 10:29:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/01 09:43:16 jmmv Exp $
 bin/xmlcatmgr
 man/man1/xmlcatmgr.1
-share/doc/xmlcatmgr/CHANGES
+share/doc/xmlcatmgr/AUTHORS
 share/doc/xmlcatmgr/COPYING
-share/doc/xmlcatmgr/PEOPLE
+share/doc/xmlcatmgr/NEWS
 share/doc/xmlcatmgr/README
 share/doc/xmlcatmgr/TODO
 share/examples/xmlcatmgr/catalog.etc.sgml
