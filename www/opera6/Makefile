@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/17 03:37:57 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/01 14:18:37 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -28,10 +28,10 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 OPERA_PKG_VERSION=             6.0
 
 .if (${MACHINE_ARCH} == i386)
-DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
+DEPENDS+=	suse_compat>=6.3:../../emulators/suse_compat
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
 DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
-DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
+DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
 
 OPERA_ARCH=		i386
 OPERA_DIR=		600/beta1
