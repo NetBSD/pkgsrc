@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4785 2004/02/11 04:21:55 minskim Exp $
+$NetBSD: CHANGES,v 1.4786 2004/02/11 07:52:07 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -779,3 +779,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xerces-c to 2.3.0 [minskim 2004-02-11]
 	Updated p5-XML-Xerces to 2.3.0.4 [minskim 2004-02-11]
 	Updated xalan-c to 1.6 [minskim 2004-02-11]
+	Updated libgtkhtml to 2.4.1nb5 [xtraeme 2004-02-11]
