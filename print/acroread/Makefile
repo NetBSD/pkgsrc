@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/29 12:41:04 tron Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/31 02:35:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -25,7 +25,7 @@ DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
 DISTNAME=	linux-ar-405
 PLATFORM=	intellinux
 WRKSRC=		${WRKDIR}/ILINXR.install
-LDD?=		${TRUE}
+CHECK_SHLIBS=	no
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	'${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
