@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/11/26 11:26:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:37 tron Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
@@ -280,7 +280,7 @@ share/doc/apsfilter/README.TeX
 share/doc/apsfilter/apsfilter4.png
 share/doc/apsfilter/handbook.html
 share/doc/apsfilter/paper
-@unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || ${TRUE}
 @dirrm share/apsfilter/bin
 @dirrm share/apsfilter/driver/ijs
 @dirrm share/apsfilter/driver/hpdj
@@ -293,5 +293,5 @@ share/doc/apsfilter/paper
 @dirrm share/apsfilter/driver
 @dirrm share/apsfilter/setup
 @dirrm share/apsfilter/template
-@unexec ${RMDIR} %D/share/apsfilter 2>/dev/null || true
+@unexec ${RMDIR} %D/share/apsfilter 2>/dev/null || ${TRUE}
 @dirrm share/doc/apsfilter
