@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/10/06 10:30:13 pooka Exp $
+
+--- xroach.c.orig	Fri Jun  4 22:47:09 1993
++++ xroach.c	Fri Oct  6 13:27:47 2000
+@@ -115,7 +115,7 @@
+ 	}
+     }
+ 
+-    srand((int)time((long *)NULL));
++    srand((int)time((time_t *)NULL));
+     
+     /*
+        Catch some signals so we can erase any visible roaches.
