@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2005/03/09 03:49:23 garbled Exp $
+$NetBSD: distinfo,v 1.32 2005/03/19 11:56:39 kleink Exp $
 
 SHA1 (perl-5.8.6.tar.bz2) = 5267c5b4900a995a10e4fc56fe10a6852004c29b
 RMD160 (perl-5.8.6.tar.bz2) = 52fdee3caecf67417a9c081b7aae84807235cb27
@@ -6,7 +6,7 @@ Size (perl-5.8.6.tar.bz2) = 9693085 bytes
 SHA1 (patch-aa) = 3c16c599dae752cea4143ca48071118ece5925a4
 SHA1 (patch-ae) = 044ac094cd475a16483552aa6f1bde03bd11f592
 SHA1 (patch-ah) = cb103c14090b2d61720ee9b555b32085c8eeb810
-SHA1 (patch-ba) = 74a01f3a86f263720b9f07d1fdbaadbaecafb012
+SHA1 (patch-ba) = 096835f71a69f29e50bdad47944afa838dba5aec
 SHA1 (patch-bd) = 9f96ba1912f2a8db93db31f7a63c0b49a045318d
 SHA1 (patch-be) = 9f667f33ea24300a5580db84d0978ca53f126f29
 SHA1 (patch-bf) = 9bc5690b41a70617cde89b805184a8d5605d20d1
