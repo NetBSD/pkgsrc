@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2715 2003/07/10 08:59:35 itojun Exp $
+$NetBSD: CHANGES,v 1.2716 2003/07/10 09:16:22 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2713,7 +2713,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm to 1.2.9 [jmmv 2003-07-09]
 	Updated icewm-gnome to 1.2.9 [jmmv 2003-07-09]
 	Updated icewm-imlib to 1.2.9 [jmmv 2003-07-09]
-	Updated xcircuit to 3.1.16 [jtb 2003-07-09]
-	Updated gri to 2.12.5 [jtb 2003-07-09]
-	Updated plplot to 5.2.1 [jtb 2003-07-09]
+	Updated xcircuit to 3.1.16 [jtb 2003-07-10]
+	Updated gri to 2.12.5 [jtb 2003-07-10]
+	Updated plplot to 5.2.1 [jtb 2003-07-10]
 	Updated nsd to 1.2.0 [itojun 2003-07-10]
+	Updated yplot to 1.1.2 [jtb 2003-07-10]
