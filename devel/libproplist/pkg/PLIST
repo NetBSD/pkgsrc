@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/05 20:18:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/04/06 22:36:57 jlam Exp $
 include/proplist.h
 lib/libPropList.a
-lib/libPropList.so.2.0
-share/doc/libPropList/README
-@dirrm share/doc/libPropList
+lib/libPropList.so.2.2
+share/doc/libproplist/README
+@dirrm share/doc/libproplist
