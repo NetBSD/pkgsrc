@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.124 2004/04/12 19:37:03 tv Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.125 2004/04/30 04:22:02 reed Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -101,9 +101,9 @@ _BLNK_X11_DIR=		${LOCALBASE}/X11R6
 .  endif # X11_TYPE=XFree86
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
 _BLNK_LDFLAGS+=		-L${X11BASE}/lib
-.if ${_USE_RPATH} == "yes"
+.  if ${_USE_RPATH} == "yes"
 _BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib
-.endif
+.  endif
 .endif
 
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
