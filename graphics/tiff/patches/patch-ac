@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.8 1999/10/08 21:14:34 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2000/01/06 01:25:25 wiz Exp $
 
---- ./tools/Makefile.in.orig	Thu Aug 19 06:03:27 1999
-+++ ./tools/Makefile.in	Fri Oct  8 02:21:21 1999
+--- ./tools/Makefile.in.orig	Mon Jan  3 17:34:03 2000
++++ ./tools/Makefile.in	Mon Jan  3 17:34:05 2000
 @@ -47,10 +47,10 @@
  IPATH	= -I. -I${SRCDIR} -I${LIBDIR}
  CFLAGS	= @ENVOPTS@ ${COPTS} ${OPTIMIZER} ${IPATH}
@@ -18,8 +18,8 @@ $NetBSD: patch-ac,v 1.8 1999/10/08 21:14:34 jlam Exp $
 @@ -109,7 +109,7 @@
  	fi
  install: all
- 	${INSTALL} -idb tiff.sw.tools -m 755 -dir @DIR_BIN@
--	${INSTALL} -idb tiff.sw.tools -m 755 -F @DIR_BIN@ -O ${TARGETS}
+ 	${INSTALL} -idb nostrip tiff.sw.tools -m 755 -dir @DIR_BIN@
+-	${INSTALL} -idb nostrip tiff.sw.tools -m 755 -F @DIR_BIN@ -O ${TARGETS}
 +	${LIBTOOL} ${BSD_INSTALL_PROGRAM} ${TARGETS} @DIR_BIN@
  	@if [ "@LIBIMAGE@" = yes ]; then \
  	    ${INSTALL} -idb tiff.sw.tools -m 755 -F @DIR_BIN@ -O sgi2tiff; \

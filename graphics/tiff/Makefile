@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.22 1999/10/08 21:14:32 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2000/01/06 01:25:22 wiz Exp $
 
-DISTNAME=	tiff-v3.5.2
-PKGNAME=	tiff-3.5.2
+DISTNAME=	tiff-v3.5.4
+PKGNAME=	tiff-3.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libtiff.org/ \
 		ftp://ftp.onshore.com/pub/libtiff/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+# need DISTFILES above for adding lzw-files to it, if USE_GIF is defined
+# in mk.conf
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
@@ -22,6 +25,15 @@ ZLIBDIR=	${LOCALBASE}/lib
 DEPENDS+=	zlib-*:../../devel/zlib
 .else
 ZLIBDIR=	/usr/lib
+.endif
+
+.if defined(USE_GIF)
+DISTFILES+=	libtiff-lzw-compression-kit.tar.gz
+
+pre-build:
+	cd ${WRKSRC} \
+		&& ${CP} ../libtiff-lzw-compression-kit/tif_dir.c libtiff \
+		&& ${CP} ../libtiff-lzw-compression-kit/tif_lzw.c libtiff
 .endif
 
 CPPFLAGS+=	-Dunix

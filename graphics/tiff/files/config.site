@@ -1,9 +1,10 @@
-# $NetBSD: config.site,v 1.3 1999/10/08 21:14:33 jlam Exp $
+# $NetBSD: config.site,v 1.4 2000/01/06 01:25:24 wiz Exp $
 
 DIR_BIN=${PREFIX}/bin			# destination for applications
 DIR_LIB=${PREFIX}/lib			# destination for library
 DIR_INC=${PREFIX}/include		# destination for include files
 DIR_MAN=${PREFIX}/man			# destination for man pages
+DIR_HTML=${PREFIX}/share/doc/tiff	# destination for html documentation
 DIRS_LIBINC=${LOCALBASE}/include	# dirs to search for ancillary includes
 
 # JPEG support
@@ -23,5 +24,6 @@ DSO=no				# don't use libtiff's shared lib mechanism
 INSTALL=
 LIBGL=no			# don't build SGI -lgl apps
 LIBIMAGE=no			# don't build SGI -limage apps
+HTML=yes			# build HTML documentation
 
 MANSCHEME=bsd-source-cat-strip
