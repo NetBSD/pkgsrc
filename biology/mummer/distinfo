@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
+
+SHA1 (MUMmer3.04.tar.gz) = e0f17d535a857bd9b3059d5d0a951621f89041b2
+Size (MUMmer3.04.tar.gz) = 835629 bytes
+SHA1 (patch-aa) = 39253c79e7239365dfdcee46c410f234a23c6df0
