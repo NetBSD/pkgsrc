@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/28 01:02:16 xtraeme Exp $
+
+--- Makefile.in.orig	Thu Mar 13 20:32:20 2003
++++ Makefile.in	Fri Apr 11 13:57:27 2003
+@@ -195,10 +195,7 @@
+ EXTRA_DIST = INSTALL-SOURCE README \
+ 			COPYING COPYING.LIB
+ 
+-SUBDIRS = . include @docs_dirs@ @readline_dir@ \
+-			@thread_dirs@ @sql_client_dirs@ \
+-			@sql_server_dirs@ scripts tests man \
+-			@bench_dirs@ support-files os2
++SUBDIRS = @thread_dirs@ @sql_server_dirs@ tests @bench_dirs@ support-files
+ 
+ 
+ # Relink after clean
