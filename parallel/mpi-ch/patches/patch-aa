@@ -1,22 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2003/11/26 12:42:12 wennmach Exp $
-
---- configure.orig	Mon Mar 24 16:28:18 2003
-+++ configure	Mon Mar 24 16:29:00 2003
-@@ -9779,14 +9779,9 @@
-     cat > conftest.c <<EOF
- #include "confdefs.h"
- main () {
--  /* Are we little or big endian?  From Harbison&Steele.  */
--  union
--  {
--    long l;
--    char c[sizeof (long)];
--  } u;
--  u.l = 1;
--  exit (u.c[sizeof (long) - 1] == 1);
-+	int     indian = 1;
-+	
-+	exit(1 - *(char *)&indian);
- }
- EOF
-         if test -n "$compile" ; then 
+$NetBSD: patch-aa,v 1.6 2005/03/03 12:01:30 garbled Exp $
+--- mpe/slog2sdk/sbin/install-package.in.orig	2005-03-03 02:45:22.000000000 -0700
++++ mpe/slog2sdk/sbin/install-package.in	2005-03-03 02:46:00.000000000 -0700
+@@ -364,7 +364,7 @@
+     bindir=$prefix/bin
+     sbindir=$prefix/sbin
+     docdir=$prefix/doc
+-    etcdir=$prefix/etc
++    etcdir=$prefix/mpi-ch/etc
+     sharedir=$prefix/share
+     logfilesdir=$prefix/logfiles
+     if [ $appendUninstall = 0 ] ; then
