@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/07/14 09:28:03 rh Exp $
+# $NetBSD: Makefile,v 1.44 2002/07/20 13:56:08 tron Exp $
 #
 
 COMMENT=	communication programs
@@ -33,7 +33,6 @@ SUBDIR+=	ircu
 SUBDIR+=	iroffer
 SUBDIR+=	irssi
 SUBDIR+=	kicq
-SUBDIR+=	kxicq
 SUBDIR+=	kyahoo
 SUBDIR+=	libirc
 SUBDIR+=	libyahoo

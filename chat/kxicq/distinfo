@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:07:18 agc Exp $
-
-SHA1 (kxicq-03132000.tar.gz) = 5c997a34943882cac3677587e499f607f964ab80
-Size (kxicq-03132000.tar.gz) = 767452 bytes
-SHA1 (patch-aa) = 472ad1819d9dd3c67217adaeef628568b19554da
