@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.125 2003/01/20 23:15:34 kristerw Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.126 2003/01/20 23:39:35 kristerw Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -407,13 +407,14 @@ WARN_NO_OBJECT_FMT?=yes
 #
 
 #AMANDA_SMB=
-# Used in the amanda-client package to enable backup with smbclient
+# Used in amanda-client and amanda-dev-client to enable backup with
+# smbclient.
 # Possible: defined, not defined
 # Default: not defined
 
 AMANDA_USER?=	backup
 # Used in the amanda packages to specify the login user and group
-# responsible for backups
+# responsible for backups.
 # Possible: any user name
 # Default: backup
 
@@ -423,79 +424,82 @@ AMANDA_VAR?=	/var/amanda
 # Default: /var/amanda
 
 #APACHE_CUSTOM_CFLAGS=
-# Extra CFLAGS to be passed to the compiler during the Apache build.
+# Used in apache and apache6 to pass extra CFLAGS to the compiler during
+# the build.
 # Possible: any legal compiler flags, e.g. -O6 -DHARD_SERVER_LIMIT=512
 # Default: not defined
 
 #APACHE_PERF_TUNING=	YES
-# Optimize for maximum Apache performance.
+# Used in apache and apache6 to optimize for maximum performance.
 # Possible: not defined, YES
 # Default: not defined
 
 APACHE_USER?=	www
-# Used in the apache package to specify the user allowed to execute
-# the `suexec' wrapper.  Expected to be the user the httpd server
-# normally runs as.  Also used by packages with CGIs.
+# Used in apache, apache2, apache6, isap, and smb2www to specify the user
+# allowed to execute the `suexec' wrapper.  Expected to be the user the
+# httpd server normally runs as.
 # Possible: any user name
 # Default: www
 
 APACHE_GROUP?=	www
-# Used in the apache package to specify the default group of the user
-# allowed to execute the `suexec' wrapper.  Expected to be the group
-# the httpd server normally runs as.  Also used by packages with CGIs.
+# Used in apache, apache2, apache6, squirrelmail, and iasp to specify
+# the default group of the user allowed to execute the `suexec' wrapper.
+# Expected to be the group the httpd server normally runs as.
 # Possible: any group name
 # Default: www
 
 #APACHE_SUEXEC=	YES
-# Enable support Switch User For Exec.  See
-# http://www.apache.org/docs/suexec.html for more informations.
+# Used in apache, apache2, and apache6 to enable Switch User For Exec
+# support.  See http://www.apache.org/docs/suexec.html for more informations.
 # Possible: not defined, YES
 # Default: not defined
 
 #APACHE_SUEXEC_CONFIGURE_ARGS=	--suexec-uidmin=1000
-# Used in the apache package to specify additional suexec options to be
-# passed to the Apache configure script.
+# Used in apache, apache2, and apache6 to specify additional suexec options
+# to be passed to the configure script.
 # Possible: any --suexec-* options recognized by the Apache configure script.
 # Default: not defined
 
 APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
-# Specifies the document space in which suexec will be allowed to work.      
+# Used in apache, apache2, and apache6 to specify the document space in
+# which suexec will be allowed to work.      
 # Possible: Any valid directory                                              
 # Default: ${LOCALBASE}/share/httpd/htdocs                                   
 
 ARLA_CACHE?=	${LOCALBASE}/cache
-# Specifies the location of the cache used by arla. Should be on a local disk.
+# Used in arla to specify the location of the cache used by arla. Should
+# be on a local disk.
 # Default: ${LOCALBASE}/cache
 
 ATERM_USE_KANJI?= NO
-# Enable kanji support in aterm
+# Used in aterm to enable kanji support.
 # Possible: YES or undefined or anything else
 # Default: NO
 
 ATERM_USE_BIG5?= NO
-# Enable chinese support in aterm (?)
+# Used in aterm to enable chinese support. (?)
 # Possible: YES or undefined or anything else
 # Default: NO
 
 ATERM_USE_XTERM_SCROLL?= NO
-# Use xterm scrollbar instead of NeXT-like
+# Used in aterm to use a xterm-like scrollbar instead of a NeXT-like.
 # Possible: YES or undefined or anything else
 # Default: NO
 
 ATERM_USE_GREEK?= NO
-# Enable greek keyboard support
+# Used in aterm to enable greek keyboard support.
 # Possible: YES or undefined or anything else
 # Default: NO
 
 #AVIFILE_USE_QT=	YES
-# Enable support for qt2 in avifile-devel package. These utilities will be built
-# in addition to non-qt version: avi{bench,cat,make,recompress,type}.
+# Used in avifile-devel to enable support for qt2. These utilities will be
+# built in addition to non-qt version: avi{bench,cat,make,recompress,type}.
 # aviplay (qt-based player that uses avifile libraries) will be built too,
 # but it has problems with threads and does not work yet.
 # Default: not defined
 
 #BASH_STATIC=	YES
-# Used in bash2 package to link it statically (for use as a root shell)
+# Used in bash2 to link it statically (for use as a root shell).
 # Possible: not defined, YES
 # Default: not defined
 
@@ -515,25 +519,25 @@ ATERM_USE_GREEK?= NO
 # Default: not defined
 
 CUPS_GROUP?=	sys
-# Used in the cups package to specify the group to run CUPS commands as.
+# Used in cups to specify the group to run CUPS commands as.
 # Possible: any group name
 # Default: sys
 
 CUPS_USER?=	lp
-# Used in the cups package to specify the user to run CUPS commands as
-# and to create temporary files in the /var/spool/cups/tmp directory.
+# Used in cups to specify the user to run CUPS commands as and to create
+# temporary files in the /var/spool/cups/tmp directory.
 # Possible: any user name
 # Default: lp
 
 CYRUS_GROUP?=	mail
-# Used in the cyrus-imapd package to specify the group used for
-# installing setuid programs.
+# Used in cyrus-imapd, cyrus-imapd21, cyrus-sasl, and cyrus-sasl2 to
+# specify the group used for installing setuid programs.
 # Possible: any group name
 # Default: mail
 
 CYRUS_USER?=	cyrus
-# Used in the cyrus-imapd package to specify the userid used for
-# installing setuid programs.
+# Used in cyrus-imapd, cyrus-imapd21, cyrus-sasl, and cyrus-sasl2 to
+# specify the userid used for installing setuid programs.
 # Possible: any user name
 # Default: cyrus
 
