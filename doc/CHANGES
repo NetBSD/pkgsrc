@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8978 2005/01/30 12:35:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.8979 2005/01/30 12:45:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -661,3 +661,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gawk to 3.1.4nb2 [minskim 2005-01-30]
 	Added mtscan-20050129 [agc 2005-01-30]
 	Updated pkg_alternatives to 1.2 [jmmv 2005-01-30]
+	Updated python15 to 1.5.2nb3 [jmmv 2005-01-30]
+	Updated python20 to 2.0.1nb10 [jmmv 2005-01-30]
+	Updated python21 to 2.1.3nb6 [jmmv 2005-01-30]
+	Updated python22 to 2.2.3nb4 [jmmv 2005-01-30]
+	Updated python23 to 2.3.4nb6 [jmmv 2005-01-30]
+	Updated python23-nth to 2.3.4nb1 [jmmv 2005-01-30]
+	Updated python24 to 2.4nb3 [jmmv 2005-01-30]
+	Removed python [jmmv 2005-01-30]
