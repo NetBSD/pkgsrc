@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2001/01/24 12:55:34 tsutsui Exp $
+$NetBSD: patch-ac,v 1.5 2001/01/26 17:33:27 tsutsui Exp $
 
 --- config.guess.orig	Sat May 27 02:30:02 2000
 +++ config.guess	Wed Jan 24 21:27:59 2001
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.4 2001/01/24 12:55:34 tsutsui Exp $
 +	    mips:*)			UNAME_MACHINE_ARCH=mipsel;;
 +	    i386:*|m68k:*|ns32k:*|sparc:*|vax:*)
 +		# The Operating System including object format.
-+		if echo __ELF__ | cc -E - | grep -q __ELF__; then
++		if echo __ELF__ | $CC_FOR_BUILD -E - | grep -q __ELF__; then
 +		    UNAME_OBJFORMAT=
 +		else
 +		    UNAME_OBJFORMAT=elf
