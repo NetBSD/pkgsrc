@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/20 19:28:46 jlam Exp $
 
 .if !defined(_BLNK_LIBNCURSES_FOUND)
 _BLNK_LIBNCURSES_FOUND!=	\
@@ -106,10 +106,12 @@ BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .  endif
 BUILDLINK_FILES.ncurses+=	include/curses.h
+BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
+.endif
 
-BUILDLINK_TARGETS+=	buildlink-ncurses-curses-h
-BUILDLINK_TARGETS+=	buildlink-ncurses-extra-includes
+BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
 
+.if !target(buildlink-ncurses-extra-includes)
 .PHONY: buildlink-ncurses-extra-includes
 buildlink-ncurses-extra-includes:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -120,7 +122,9 @@ buildlink-ncurses-extra-includes:
 			${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_DIR}/$$f;	\
 		fi;							\
 	done
+.endif
 
+.if !target(buildlink-ncurses-curses-h)
 .PHONY: buildlink-ncurses-curses-h
 buildlink-ncurses-curses-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
