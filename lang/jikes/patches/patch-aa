@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2000/10/16 20:38:21 tv Exp $
+
+--- configure.orig	Mon Oct 16 15:55:59 2000
++++ configure	Mon Oct 16 15:57:17 2000
+@@ -2549,6 +2549,7 @@
+ extern "C" void exit (int);
+ #endif
+ $ac_includes_default
++#include <wchar.h>
+ int
+ main ()
+ {
