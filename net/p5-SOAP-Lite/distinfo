@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/05/16 23:17:33 grant Exp $
 
-SHA1 (SOAP-Lite-0.55.tar.gz) = 34e502f58f66fac9daee2a7e6c8ec0b79b51e5ba
-Size (SOAP-Lite-0.55.tar.gz) = 167076 bytes
-SHA1 (patch-aa) = dc355501fbccdc14a9a82d1a037105f20d6f6126
+SHA1 (SOAP-Lite-0.60a.tar.gz) = 4b2f76ecb7f8b76bcaa86bd78dbf658d6db6f59a
+Size (SOAP-Lite-0.60a.tar.gz) = 170390 bytes
+SHA1 (patch-aa) = 5952133c40cd01eaeac2757781c0422d88b7dc55
