@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1998/07/04 09:19:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/31 20:32:21 frueauf Exp $
 #
 
 DISTNAME=		transfig.3.2.1
 PKGNAME=		transfig-3.2.1
 WRKSRC=			${WRKDIR}/transfig.3.2.1
-CATEGORIES=		graphics
+CATEGORIES=		graphics print
 MASTER_SITES=		${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	applications/drawing_tools/transfig
 
