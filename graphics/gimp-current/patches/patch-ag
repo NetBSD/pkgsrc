@@ -1,4 +1,4 @@
-$NetBDS$
+$NetBSD: patch-ag,v 1.3 2000/01/02 03:39:13 wiz Exp $
 
 --- plug-ins/common/Makefile.in.orig	Thu Nov 25 21:32:25 1999
 +++ plug-ins/common/Makefile.in	Tue Nov 30 15:27:38 1999
