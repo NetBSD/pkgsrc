@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 10:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/15 08:11:14 wiz Exp $
 #
 
 DISTNAME=	kanjidic2
-PKGNAME=	kanjidic2-2004.2
+PKGNAME=	kanjidic2-2004.2.1
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
