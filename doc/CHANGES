@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1314 2003/02/04 02:43:29 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.1315 2003/02/04 02:55:07 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated php4 to 4.2.3nb1 [jlam 2003-02-03]
 	Updated verilog-current to 20030202 [dmcmahill 2003-02-03]
 	Updated covered-current to 20021214 [dmcmahill 2003-02-03]
+	Updated spim to 6.5 [dmcmahill 2003-02-03]
