@@ -1,0 +1,12 @@
+--- src/shell/tomcat.sh.orig	Wed May 31 15:43:29 2000
++++ src/shell/tomcat.sh	Wed May 31 15:43:58 2000
+@@ -107,7 +107,8 @@
+ fi
+ 
+ if [ "$oldCP" != "" ]; then
+-    CLASSPATH=${CLASSPATH}:${oldCP}
++#    CLASSPATH=${CLASSPATH}:${oldCP}
++    CLASSPATH=${oldCP}:${CLASSPATH}
+ fi
+ 
+ export CLASSPATH
