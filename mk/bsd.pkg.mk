@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.314 1999/08/16 15:37:40 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.315 1999/08/18 10:02:01 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2195,11 +2195,16 @@ fake-pkg: ${PLIST} ${DESCR}
 			files="$$files $$f";				\
 		fi;							\
 	done;								\
+	if [ -f ${PATCH_SUM_FILE} ]; then				\
+		for f in `${AWK} '$$1 == "MD5" { gsub("[()]", "", $$2); print $$2 }' < ${PATCH_SUM_FILE}`; do \
+			files="$$files ${PATCHDIR}/$$f";		\
+		done;							\
+	fi;								\
 	if [ -d ${PATCHDIR} ]; then					\
 		for f in ${PATCHDIR}/patch-*; do			\
 			case $$f in					\
 			*.orig|*.rej|*~) ;;				\
-			*)						\
+			${PATCHDIR}/patch-local-*)			\
 				files="$$files $$f" ;;			\
 			esac;						\
 		done;							\
