@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.6 2005/03/20 05:05:59 reed Exp $
+
+--- src/core/network.c.orig	Wed Mar 16 20:01:11 2005
++++ src/core/network.c	Wed Mar 16 20:03:31 2005
+@@ -607,7 +607,11 @@
+ int net_hosterror_notfound(int error)
+ {
+ #ifdef HAVE_IPV6
++#ifdef EAI_NODATA
+ 	return error != 1 && (error == EAI_NONAME || error == EAI_NODATA);
++#else
++	return error != 1 && (error == EAI_NONAME);
++#endif
+ #else
+ 	return error == HOST_NOT_FOUND || error == NO_ADDRESS;
+ #endif
