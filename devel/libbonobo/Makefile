@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/12 16:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/10 14:10:46 wiz Exp $
 
 DISTNAME=		libbonobo-2.0.0
 CATEGORIES=		devel gnome
@@ -10,10 +10,11 @@ HOMEPAGE=		http://developer.gnome.org/
 COMMENT=		GNOME2 Object activation framework library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/bonobo-activation/buildlink.mk"
+.include "../../devel/bonobo-activation/buildlink2.mk"
+.include "../../devel/ptl2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
