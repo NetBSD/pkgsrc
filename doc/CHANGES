@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7821 2004/11/11 18:06:59 sketch Exp $
+$NetBSD: CHANGES,v 1.7822 2004/11/11 18:10:55 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5226,3 +5226,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-PAR-Dist-0.07 [seb 2004-11-11]
 	Added p5-Digest-SHA-5.27 [seb 2004-11-11]
 	Updated x11-links to 0.24 [sketch 2004-11-11]
+	Updated p5-Data-Hierarchy to 0.21 [epg 2004-11-11]
+	Updated p5-SVN-Mirror to 0.50 [epg 2004-11-11]
+	Updated p5-SVN-Simple to 0.26 [epg 2004-11-11]
+	Updated svk to 0.26 [epg 2004-11-11]
