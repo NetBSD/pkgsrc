@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1925 2003/04/13 11:45:36 cjep Exp $
+$NetBSD: CHANGES,v 1.1926 2003/04/13 13:03:11 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated semi to 1.14.5nb1 [uebayasi 2003-04-13]
 	Added file-4.02 [cjep 2003-04-13]
 	Updated pen to 0.10.1 [cjep 2003-04-13]
+	Added p5-Net-Server-0.84 [cjep 2003-04-13]
