@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/08/18 08:46:53 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/09/06 08:08:17 sakamoto Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -18,7 +18,6 @@ NO_PACKAGE=		requires compiled in uid/gid
 ALL_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
-PLIST_SRC=		${WRKDIR}/PLIST.tmp
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 REQ_FILE=		${WRKDIR}/REQ
 MAKEFILE=		Makefile.netbsd
@@ -27,6 +26,9 @@ MAJORDOMO_TMPDIR?=	/var/tmp
 MAJORDOMO_HOMEDIR?=	/home
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
+
+PLIST_SUBST=		HOME=${MAJORDOMO_HOMEDIR}	\
+			MAJORDOMO_USER=${MAJORDOMO_USER}
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
@@ -104,10 +106,6 @@ do-configure:
 		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
 
 pre-install:
-	@${SED}  \
-		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
-		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
-		< ${PKGDIR}/PLIST > ${PLIST_SRC}
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
