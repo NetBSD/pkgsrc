@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/02 20:07:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/29 19:45:30 jlam Exp $
 #
 
 DISTNAME=	t1lib-1.0.1
@@ -10,10 +10,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1lib.html
 COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 
-GNU_CONFIGURE=	# defined
-USE_GMAKE=	# defined
-USE_LIBTOOL=	# defined
-USE_X11BASE=	# defined
+USE_BUILDLINK_ONLY=	# defined
+GNU_CONFIGURE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+USE_X11BASE=		# defined
 
 WRKSRC=		${WRKDIR}/T1-1.0.1
 ALL_TARGET=	without_doc
