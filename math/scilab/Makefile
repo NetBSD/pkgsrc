@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2001/02/17 18:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/04/08 16:25:27 dmcmahill Exp $
 #
-# IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
-DISTNAME=	scilab-2.5-src
-PKGNAME=	scilab-2.5
+DISTNAME=	scilab-2.6.src
+PKGNAME=	scilab-2.6
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
@@ -15,36 +14,56 @@ COMMENT=	High-level scientific math programming environment with graphics
 DEPENDS+=	xless-*:../../x11/xless
 DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
 
-RESTRICTED=		"no paid distribution of SCILAB"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
+# needs full floating point math.  Once the FPC code for alpha is integrated
+# this line can be changed to only exclude older versions of the operating
+# system.
+NOT_FOR_PLATFORM=	*-*-alpha
 
-USE_FORTRAN=	yes
-USE_LIBTOOL=    yes
-USE_X11BASE=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
+USE_FORTRAN=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+USE_X11BASE=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-xless --with-xaw
 #override HOME to avoid picking up a bad ${HOME}/.scilab during the build
-MAKE_ENV+=	HOME=${WRKSRC}
+MAKE_ENV+=	HOME=${WRKSRC} PVM_ROOT=${PVM_ROOT}
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 PVM_ROOT?=	${LOCALBASE}/pvm3
 CONFIGURE_ENV+=	PVM_ROOT=${PVM_ROOT}
 CONFIGURE_ENV+=	X11BASE=${X11BASE}
 
-pre-fetch:
-	@if [ ${MACHINE_ARCH} = "alpha" ]; then \
-	${ECHO} "Although Scilab will build and run on the alpha, it sometimes" ; \
-	${ECHO} "experiences floating point exceptions.  This problem is being" ; \
-	${ECHO} "worked on and will be fixed as soon as possible.  However, the" ; \
-	${ECHO} "program is still usable for many things." ; \
-	fi
+# remove some stuff which is broken in the distfile.  The config's
+# are links to ../config (ie circular).
+post-extract:
+	${RM} ${WRKSRC}/config.cache
+	${RM} ${WRKSRC}/examples/callsci/callsciJava/config/config
+	${RM} ${WRKSRC}/examples/callsci/callsciFortran/config/config
+	${RM} ${WRKSRC}/examples/callsci/callsciC/config/config
+	${RM} ${WRKSRC}/examples/callsci/callsciC++/config/config
 
-post-patch:
-	@if [ ${MACHINE_ARCH} != "alpha" ]; then \
-		${RM} ${WRKSRC}/scilab.star ; \
-		${CP} ${WRKSRC}/scilab.star.orig ${WRKSRC}/scilab.star ; \
-	fi
+# clean up any possible leftovers from 'make test' so that our PLIST
+# will still be right
+pre-install:
+	cd ${WRKSRC}/tests && ${MAKE_PROGRAM} distclean
+	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
+
+post-install:
+	${INSTALL_DATA} ${PREFIX}/${PKGNAME}/X11_defaults/Xscilab \
+		${X11BASE}/lib/X11/app-defaults
+	${INSTALL_DATA} ${PREFIX}/${PKGNAME}/X11_defaults/Metanet-color \
+		${X11BASE}/lib/X11/app-defaults
+	${LN} -sf ${X11BASE}/bin/xless ${PREFIX}/${PKGNAME}/bin/xless
+
+# the "SCI=0 && unset SCI" is done because some of the tests really will
+# fail if SCI is set to anything.
+test: build
+	SCI=0 && unset SCI && cd ${WRKSRC}/tests && \
+		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
+		 tee ${WRKDIR}/tests.log
+	SCI=0 && unset SCI && cd ${WRKSRC}/examples && \
+		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
+		tee ${WRKDIR}/examples.log
 
 .include "../../mk/bsd.pkg.mk"
