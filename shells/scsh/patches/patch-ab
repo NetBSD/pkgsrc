@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:13:55 agc Exp $
+
 *** env/command.scm.original    Tue Nov 26 15:59:38 1996
 --- env/command.scm     Tue Nov 26 15:59:46 1996
 ***************

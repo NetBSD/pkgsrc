@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:45 agc Exp $
+
 *** mirror.pl.orig	Sat Mar 16 15:46:09 1996
 --- mirror.pl	Sat Mar 16 15:51:49 1996
 ***************

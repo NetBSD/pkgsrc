@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.3 1998/08/07 11:09:32 agc Exp $
+
 *** nls/Makefile.old	Thu Mar 10 20:21:47 1994
 --- nls/Makefile	Fri Jul 28 06:55:04 1995
 ***************

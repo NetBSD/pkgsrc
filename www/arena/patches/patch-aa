@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 11:14:22 agc Exp $
+
 --- Arena/Source/spawn.c.orig	Tue Jul 14 19:15:17 1998
 +++ Arena/Source/spawn.c	Tue Jul 14 19:15:28 1998
 @@ -8,7 +8,6 @@

@@ -1,3 +1,5 @@
+$NetBSD: MESSAGE,v 1.2 1998/08/07 11:14:03 agc Exp $
+
 ---------------------------------------------------------------------------
   You may want to adjust /dev/scgx to point to your system's
   CD-R device (default: /dev/cd0d).

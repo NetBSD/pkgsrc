@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:41 agc Exp $
+
 --- icb/protos.h-orig	Fri Feb 24 22:20:25 1995
 +++ icb/protos.h	Wed Apr 15 12:07:50 1998
 @@ -64,7 +64,7 @@

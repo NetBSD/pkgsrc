@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:13 agc Exp $
+
 --- configs/netbsd-g++-static.orig	Sun Jul 19 14:18:04 1998
 +++ configs/netbsd-g++-static	Sun Jul 19 16:51:29 1998
 @@ -2,9 +2,9 @@

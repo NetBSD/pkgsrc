@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:11:31 agc Exp $
+
 --- kpse-2.6/kpathsea/Makefile.in,orig	Tue Dec 10 09:13:33 1996
 +++ kpse-2.6/kpathsea/Makefile.in	Tue Dec 10 09:20:37 1996
 @@ -138,10 +138,10 @@

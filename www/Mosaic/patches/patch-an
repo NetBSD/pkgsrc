@@ -1,3 +1,5 @@
+$NetBSD: patch-an,v 1.2 1998/08/07 11:14:21 agc Exp $
+
 --- libhtmlw/Makefile.in.orig	Sat Jul 11 23:07:57 1998
 +++ libhtmlw/Makefile.in	Sat Jul 11 23:19:38 1998
 @@ -6,6 +6,7 @@

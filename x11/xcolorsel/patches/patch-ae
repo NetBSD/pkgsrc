@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:18:22 agc Exp $
+
 --- RgbSrc.h.orig	Sun Nov 13 23:14:35 1994
 +++ RgbSrc.h	Wed Jul 15 09:58:37 1998
 @@ -84,7 +84,7 @@

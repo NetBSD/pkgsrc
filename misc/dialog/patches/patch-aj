@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1998/08/07 11:10:15 agc Exp $
+
 --- yesno.c.orig	Fri Jan 23 17:37:13 1998
 +++ yesno.c	Fri Jan 23 18:17:16 1998
 @@ -26,8 +26,18 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 11:09:04 agc Exp $
+
 --- src/runtime/rmisc.r	1997/10/02 09:28:35	1.1
 +++ src/runtime/rmisc.r	1997/10/02 09:30:08
 @@ -123,14 +123,15 @@

@@ -1,3 +1,5 @@
+$NetBSD: MESSAGE,v 1.2 1998/08/07 11:14:26 agc Exp $
+
 To add this to your Apache server, you will need to add the following
 lines to the appropriate place in your httpd.conf file:
 

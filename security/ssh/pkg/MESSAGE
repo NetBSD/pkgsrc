@@ -1,4 +1,6 @@
 ==========================================================================
+$NetBSD: MESSAGE,v 1.2 1998/08/07 11:13:51 agc Exp $
+
 If "starter" configuration files were installed (in @SSH_CONF_DIR@)
 when the package was installed, be sure to examine them (and the man pages
 for ssh and sshd) to determine whether you want to make any changes.

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:14 agc Exp $
+
 --- guage.c.orig	Fri Jan 23 17:37:12 1998
 +++ guage.c	Fri Jan 23 17:37:12 1998
 @@ -38,6 +38,11 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:11:06 agc Exp $
+
 *** FWF/Dir/Imakefile.orig	Sat Sep 24 04:28:46 1994
 --- FWF/Dir/Imakefile	Sat Sep 24 04:29:05 1994
 ***************

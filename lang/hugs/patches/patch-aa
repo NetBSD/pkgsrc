@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:03 agc Exp $
+
 --- MkInstal.in.orig	Thu Oct  2 18:21:41 1997
 +++ MkInstal.in	Fri Apr  3 23:45:39 1998
 @@ -10,9 +10,6 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 11:10:16 agc Exp $
+
 --- samples/infobox.orig	Thu Jan  9 01:45:24 1997
 +++ samples/infobox	Fri Jan 23 18:34:07 1998
 @@ -1,5 +1,5 @@

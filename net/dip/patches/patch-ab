@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:38 agc Exp $
+
 --- tty.c.orig	Sat Jul  1 01:41:05 1995
 +++ tty.c	Sat Sep  9 08:37:14 1995
 @@ -140,9 +140,10 @@

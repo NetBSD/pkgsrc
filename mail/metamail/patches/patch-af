@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:09:41 agc Exp $
+
 *** mailto.c.orig	Wed Feb  9 23:30:26 1994
 --- metamail/mailto.c	Mon Nov 20 01:21:37 1995
 ***************

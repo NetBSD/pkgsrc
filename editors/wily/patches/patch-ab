@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:20 agc Exp $
+
 --- wily/Makefile.in.orig	Fri Jun 20 11:58:06 1997
 +++ wily/Makefile.in	Tue Aug  4 21:54:46 1998
 @@ -23,7 +23,7 @@

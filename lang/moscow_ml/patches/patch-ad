@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:20 agc Exp $
+
 --- lex/Makefile.orig	Wed Oct 23 10:42:57 1996
 +++ lex/Makefile	Tue Feb 17 00:24:04 1998
 @@ -34,8 +34,8 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:18:04 agc Exp $
+
 *** sample.fvwmrc/system.fvwm95rc.orig	Wed Dec 11 23:24:54 1996
 --- sample.fvwmrc/system.fvwm95rc	Sun Jun 15 04:08:00 1997
 ***************

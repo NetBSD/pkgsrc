@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:35 agc Exp $
+
 *** archie.h.orig	Fri Oct 21 00:25:42 1994
 --- archie.h	Fri Oct 21 00:26:59 1994
 ***************

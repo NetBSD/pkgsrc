@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.3 1998/08/07 11:13:52 agc Exp $
+
 --- visudo.man.orig	Tue Jan 13 05:55:43 1998
 +++ visudo.man	Wed Jul  1 20:11:52 1998
 @@ -223,8 +223,8 @@

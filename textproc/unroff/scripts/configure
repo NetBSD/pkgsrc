@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.3 1998/08/07 11:14:15 agc Exp $
+#
 
 # write a small makefile to ${WRKSRC}
 

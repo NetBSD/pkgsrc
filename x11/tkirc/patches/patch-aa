@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:19 agc Exp $
+
 --- tkirc.BAK	Sun Nov  9 21:05:06 1997
 +++ tkirc	Sun Nov  9 21:05:14 1997
 @@ -1,6 +1,6 @@

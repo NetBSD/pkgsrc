@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:07 agc Exp $
+
 --- comm.h.orig	Tue Sep 19 15:02:20 1995
 +++ comm.h	Sat Jul 18 22:40:04 1998
 @@ -6,6 +6,10 @@

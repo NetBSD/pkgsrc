@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:10:01 agc Exp $
+
 --- /tmp/src/sdr.tcl	Tue Jan 20 22:04:15 1998
 +++ src/sdr.tcl	Wed Jun 17 16:05:59 1998
 @@ -2,6 +2,7 @@

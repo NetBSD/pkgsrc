@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:10:01 agc Exp $
+
 --- /tmp/newsdr/src/tcl_nocrypt_modules.h	Fri Jun 13 22:01:40 1997
 +++ src/tcl_nocrypt_modules.h	Wed Jun 17 17:05:04 1998
 @@ -12,7 +12,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
+
 --- /dev/null	Thu Feb 19 12:11:00 1998
 +++ machine/m_netbsd13.c	Thu Feb 19 12:11:22 1998
 @@ -0,0 +1,872 @@
@@ -29,7 +31,7 @@
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.4 1998/02/20 06:55:27 hubertf Exp $
++ * $Id: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
 + */
 +
 +#include <sys/types.h>

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 11:10:54 agc Exp $
+
 --- includes.h.orig	Sat Jun 13 03:44:19 1998
 +++ includes.h	Wed Jun 17 15:03:22 1998
 @@ -198,7 +198,7 @@

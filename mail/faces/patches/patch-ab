@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:35 agc Exp $
+
 *** compface/Makefile.orig	Thu Oct 24 11:28:06 1991
 --- compface/Makefile	Sat May 17 23:23:52 1997
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:14:17 agc Exp $
+
 *** libnut/system.c.bak	Sat Oct 14 09:32:53 1995
 --- libnut/system.c	Tue Dec  5 06:37:44 1995
 ***************

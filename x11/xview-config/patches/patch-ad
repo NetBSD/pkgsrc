@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:18:33 agc Exp $
+
 diff -rc ../old/xview3.2p1-X11R6/config/XView.rules XView.rules
 *** ../old/xview3.2p1-X11R6/config/XView.rules	Tue Jun 29 01:13:20 1993
 --- XView.rules	Sun Nov 20 13:38:59 1994

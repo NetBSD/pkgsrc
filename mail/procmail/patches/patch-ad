@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:51 agc Exp $
+
 *** src/recommend.c.bak	Wed Apr  2 07:15:45 1997
 --- src/recommend.c	Tue Jun 17 21:48:49 1997
 ***************

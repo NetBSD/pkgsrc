@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:27 agc Exp $
+
 *** unsigned.c.orig	Fri Dec 12 20:16:26 1997
 --- unsigned.c	Fri Dec 12 20:16:52 1997
 ***************

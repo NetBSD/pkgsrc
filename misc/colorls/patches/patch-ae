@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
+
 --- print.c.orig	Sun Dec 22 00:40:58 1996
 +++ print.c	Thu May 21 15:42:08 1998
 @@ -64,6 +64,26 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.4 1998/08/07 11:09:53 agc Exp $
+
 *** popauth.c	Wed Nov 19 13:20:38 1997
 --- popauth.c	Thu Feb 12 18:24:55 1998
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:14:18 agc Exp $
+
 *** src/readJPEG.c.bak	Thu Jun 27 02:57:16 1996
 --- src/readJPEG.c	Sat Aug  3 14:04:36 1996
 ***************

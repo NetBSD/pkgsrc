@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:03 agc Exp $
+
 *** cdrecord/scsi-bsd.c.orig	Wed Nov 12 23:41:37 1997
 --- cdrecord/scsi-bsd.c	Wed Nov 12 23:46:55 1997
 ***************

@@ -1,3 +1,5 @@
+/* $NetBSD: s-netbsd.h,v 1.2 1998/08/07 11:11:10 agc Exp $ */
+
 /*
  *      This version is for FreeBSD 2.1
  *      Done by "Andrey A. Chernov" <ache@astral.msk.su>

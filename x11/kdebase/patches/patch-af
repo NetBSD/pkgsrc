@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.5 1998/08/07 11:18:07 agc Exp $
+
 --- kvt/resources.c.orig	Thu Dec 11 16:31:47 1997
 +++ kvt/resources.c	Wed Mar 25 11:07:12 1998
 @@ -27,8 +27,6 @@

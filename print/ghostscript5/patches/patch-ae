@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:11:23 agc Exp $
+
 --- devs.mak.org	Sun May 18 19:17:33 1997
 +++ devs.mak	Sun May 18 19:19:06 1997
 @@ -676,8 +676,13 @@

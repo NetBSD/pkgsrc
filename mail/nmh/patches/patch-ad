@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:44 agc Exp $
+
 # Do this patch after acconfig.h to avoid having autoconf regenerate the
 # config.h.in file in case end user has autoconf...
 diff -ur config.h.in-dist config.h.in

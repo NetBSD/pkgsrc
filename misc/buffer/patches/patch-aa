@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1998/08/07 11:10:09 agc Exp $
+
 --- buffer.c.orig	Wed Jul 14 17:59:17 1993
 +++ buffer.c	Wed Mar  4 16:32:52 1998
 @@ -384,6 +384,7 @@

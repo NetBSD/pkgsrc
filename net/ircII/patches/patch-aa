@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:42 agc Exp $
+
 --- include/config.h-orig	Wed Mar 26 04:15:57 1997
 +++ include/config.h	Sun Jan  4 21:32:13 1998
 @@ -50,11 +50,11 @@

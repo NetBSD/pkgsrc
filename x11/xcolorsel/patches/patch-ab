@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:21 agc Exp $
+
 --- RgbText.c.orig	Tue Dec 13 23:13:27 1994
 +++ RgbText.c	Wed Jul 15 10:01:15 1998
 @@ -83,7 +83,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:57 agc Exp $
+
 *** src/qfdes/qfDES-memory.c~	Wed Sep  4 09:16:14 1996
 --- src/qfdes/qfDES-memory.c	Thu Mar  5 18:07:36 1998
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:05 agc Exp $
+
 --- glib/Makefile.in.orig	Tue Jun  2 07:39:16 1998
 +++ glib/Makefile.in	Wed Jul 15 23:08:25 1998
 @@ -74,7 +74,7 @@

@@ -1,1 +1,3 @@
+$NetBSD: MESSAGE,v 1.2 1998/08/07 11:14:31 agc Exp $
+
 Please add "${PREFIX}/etc/rc.d/wwwoffle.sh" to "/etc/rc.local".

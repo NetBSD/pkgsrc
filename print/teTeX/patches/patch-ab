@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:29 agc Exp $
+
 --- kpse-2.6/make/paths.make,orig	Fri Dec  6 08:24:08 1996
 +++ kpse-2.6/make/paths.make	Fri Dec  6 08:24:27 1996
 @@ -43,7 +43,7 @@

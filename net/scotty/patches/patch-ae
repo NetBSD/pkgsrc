@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:55 agc Exp $
+
 --- ../tnm/ntping/ntping.c	Thu Sep 19 10:59:13 1996
 +++ ../tnm/ntping/ntping.c	Thu Mar  6 17:32:03 1997
 @@ -749,7 +749,15 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:03 agc Exp $
+
 *** modules/FvwmAudio/Makefile.in.orig	Tue Sep 10 22:25:33 1996
 --- modules/FvwmAudio/Makefile.in	Fri Jun 13 21:41:10 1997
 ***************

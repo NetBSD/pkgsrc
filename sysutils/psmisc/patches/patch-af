@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:14:08 agc Exp $
+
 --- pstree.1.orig	Sun Apr  7 15:57:44 1996
 +++ pstree.1	Sun Jul 19 23:51:52 1998
 @@ -78,4 +78,7 @@

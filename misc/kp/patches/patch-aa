@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:22 agc Exp $
+
 --- kp.in.BAK	Fri Oct 24 00:15:10 1997
 +++ kp.in	Fri Oct 24 00:15:18 1997
 @@ -1,4 +1,4 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:42 agc Exp $
+
 --- install.cfg.old	Fri Jun  5 15:38:22 1998
 +++ install.cfg	Fri Jun  5 15:42:30 1998
 @@ -9,10 +9,10 @@

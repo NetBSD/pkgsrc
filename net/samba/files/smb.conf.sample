@@ -1,3 +1,4 @@
+; $NetBSD: smb.conf.sample,v 1.2 1998/08/07 11:10:53 agc Exp $
 ; Configuration file for smbd.
 ; ============================================================================
 ; For the format of this file and comprehensive descriptions of all the

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1998/08/07 11:18:06 agc Exp $
+
 --- kdm/resource.c.orig	Fri Mar 27 01:10:33 1998
 +++ kdm/resource.c	Fri Jun 26 00:26:15 1998
 @@ -72,31 +72,31 @@
