@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.9 2005/01/28 13:51:24 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.10 2005/03/06 16:42:30 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -91,6 +91,10 @@ RUBY_SUFFIX?=		${RUBY_VER}
 #
 RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
+# RUBY_BASE is base of ruby package's name
+#
+RUBY_BASE=		ruby${RUBY_VER}-base
+
 # RUBY_PKGPREFIX is prefix part for ruby based packages.
 #
 RUBY_PKGPREFIX?=	${RUBY_NAME}
@@ -128,6 +132,33 @@ RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 .endif
 
 #
+# Ruby shared library version handling.
+#
+RUBY_SHLIBMAJOR?=	${_RUBY_VER_MAJOR}
+RUBY_SHLIBVER?=		${RUBY_VERSION}
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
+RUBY_SHLIBMAJOR=	${RUBY_VER}
+RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
+.elif ${OPSYS} == "FreeBSD"
+RUBY_SHLIBMAJOR=	# unused
+RUBY_SHLIBVER=		${_RUBY_VERS_TEENY}
+.elif ${OPSYS} == "OpenBSD"
+RUBY_SHLIBMAJOR=	# unused
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VERS_TEENY}
+.elif ${OPSYS} == "IRIX"
+RUBY_SHLIBMAJOR=	# unused
+.elif ${OPSYS} == "Linux"
+RUBY_SHLIBMAJOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+.endif
+
+.if empty(RUBY_SHLIBMAJOR)
+RUBY_NOSHLIBMAJOR=	"@comment "
+.else
+RUBY_NOSHLIBMAJOR=
+.endif
+
+#
 # RUBY_DLEXT is suffix of extention library.
 #
 .if ${OPSYS} == "Darwin"
@@ -135,6 +166,11 @@ RUBY_DLEXT=	bundle
 .else
 RUBY_DLEXT=	so
 .endif
+
+#
+# source directory
+#
+RUBY_SRCDIR?=	${_PKGSRC_TOPDIR}/lang/${RUBY_BASE}
 
 #
 # common PATH
@@ -154,8 +190,9 @@ RUBY_DIST_SUBDIR?=	ruby
 #
 # MAKE_ENV
 #
-MAKEFLAGS+=		RUBY_VER=${RUBY_VER}
-
+MAKEFLAGS+=		RUBY_VER="${RUBY_VER}" \
+			RUBY_VERSION="${RUBY_VERSION}" \
+			X11BASE="${X11BASE}"
 #
 # PLIST
 #
@@ -168,8 +205,10 @@ PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
 			RUBY_DLEXT="${RUBY_DLEXT}"
 
 PLIST_SUBST+=		RUBY_VER="${RUBY_VER}" \
+			RUBY_VERSION="${RUBY_VERSION}" \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
 MESSAGE_SUBST+=		RUBY_VER="${RUBY_VER}" \
+			RUBY_VERSION="${RUBY_VERSION}" \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
 
 .endif # _RUBY_MK
