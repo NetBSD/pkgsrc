@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.5 2004/02/02 10:03:46 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.6 2004/02/02 10:53:08 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -65,6 +65,17 @@
 .if !defined(BSD_COMPILER_MK)
 BSD_COMPILER_MK=	defined
 
+# XXX Add this gross and completely inaccurate hack.  Packages that
+# XXX set USE_GCC_SHLIB should be adjusted to set USE_LANGUAGES
+# XXX correctly (most likely by saying it needs either "c++" or
+# XXX "c c++").  This is here for now so that ~85 packages won't
+# XXX suddenly break.
+#
+.if defined(USE_GCC_SHLIB)
+USE_LANGUAGES?=	c c++
+.endif
+
+# By default, assume that the package requires a C compiler.
 USE_LANGUAGES?=	c
 
 # Support some deprecated variables for a while.  They'll be removed
