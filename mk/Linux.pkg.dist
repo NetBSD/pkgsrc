@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Linux.pkg.dist,v 1.21 2002/12/23 21:41:52 wiz Exp $
+#	$NetBSD: Linux.pkg.dist,v 1.22 2003/01/02 22:42:55 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -17,6 +17,8 @@
     info
     ..
     lib
+        pkgconfig
+        ..
     ..
     libdata
 	    tcl
