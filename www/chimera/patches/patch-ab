@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/19 14:23:00 fredb Exp $
+$NetBSD: patch-ab,v 1.2 2000/10/26 11:17:35 abs Exp $
 
---- common/uproc.c.orig	Sun Mar 28 20:27:05 1999
-+++ common/uproc.c	Wed Oct 18 18:48:19 2000
+--- common/uproc.c.orig	Mon Mar 29 03:27:05 1999
++++ common/uproc.c
 @@ -38,7 +38,9 @@
  #if defined(WNOHANG) && !defined(SYSV) && !defined(SVR4)
    int pid;

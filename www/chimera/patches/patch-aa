@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/19 14:23:00 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2000/10/26 11:17:35 abs Exp $
 
---- Common.tmpl.dist.orig	Sun May 30 16:43:52 1999
-+++ Common.tmpl.dist	Mon Mar 20 22:28:13 2000
+--- Common.tmpl.dist.orig	Sun May 30 22:43:52 1999
++++ Common.tmpl.dist
 @@ -9,12 +9,12 @@
   * CHIMERA_LIBDIR  - configuration files.  someday.
   * CHIMERA_MANDIR  - directory to hold the outdated man page.
