@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 1999/05/10 11:26:11 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/04 14:41:14 frueauf Exp $
 #
 
-DISTNAME=	sidplay-1_36_34
-PKGNAME=	sidplay-1.36.34
-WRKSRC=		${WRKDIR}/sidplay-1.36.34
+DISTNAME=	sidplay-1_36_35
+PKGNAME=	sidplay-1.36.35
+WRKSRC=		${WRKDIR}/sidplay-1.36.35
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	pooka@iki.fi
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 
 GNU_CONFIGURE=	yes
