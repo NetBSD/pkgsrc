@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.1 2002/09/13 10:36:20 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.2 2002/09/14 02:19:29 uebayasi Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -110,25 +110,23 @@ FOR.xemacs215=		"@comment "
 FOR.xemacs211=		"@comment "
 .if ${_EMACS_VERSION} == "emacs21"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs21
-EMACS_PKGPREFIX=	""
 FOR.emacs21=		""
 .if defined(EMACS_USE_LEIM)
 DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim21
 .endif
 .elif ${_EMACS_VERSION} == "emacs20"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs20}:../../editors/emacs
-EMACS_PKGPREFIX=	""
 FOR.emacs20=		""
 .if defined(EMACS_USE_LEIM)
 DEPENDS+=		${BUILDLINK_DEPENDS.leim20}:../../editors/leim20
 .endif
 .elif ${_EMACS_VERSION} == "xemacs215"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs215}:../../editors/xemacs-current
-EMACS_PKGPREFIX=	"xemacs-"
+PKGNAME=		xemacs-${DISTNAME}
 FOR.xemacs215=		""
 .elif ${_EMACS_VERSION} == "xemacs211"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs211}:../../editors/xemacs
-EMACS_PKGPREFIX=	"xemacs-"
+PKGNAME=		xemacs-${DISTNAME}
 FOR.xemacs211=		""
 .else
 IGNORE+=	"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
