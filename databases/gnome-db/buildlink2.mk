@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/10/30 06:44:59 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:09:47 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome-db.
 #
@@ -9,7 +9,7 @@
 GNOME_DB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-db
-BUILDLINK_DEPENDS.gnome-db?=		gnome-db>=0.8.192
+BUILDLINK_DEPENDS.gnome-db?=		gnome-db>=0.8.192nb1
 BUILDLINK_PKGSRCDIR.gnome-db?=		../../databases/gnome-db
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-db=gnome-db

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/12/11 20:12:45 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:10:01 wiz Exp $
 #
 # This Makefile fragment is included by packages that use fontconfig.
 #
@@ -9,7 +9,7 @@
 FONTCONFIG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			fontconfig
-BUILDLINK_DEPENDS.fontconfig?=		fontconfig>=2.1
+BUILDLINK_DEPENDS.fontconfig?=		fontconfig>=2.1nb1
 BUILDLINK_PKGSRCDIR.fontconfig?=		../../fonts/fontconfig
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.fontconfig=fontconfig

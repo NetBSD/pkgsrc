@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/26 18:08:54 bouyer Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/12/24 06:09:52 wiz Exp $
 
 .if !defined(GAL_BUILDLINK2_MK)
 GAL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gal
-BUILDLINK_DEPENDS.gal?=		gal>=0.19.3nb1
+BUILDLINK_DEPENDS.gal?=		gal>=0.19.3nb2
 BUILDLINK_PKGSRCDIR.gal?=	../../devel/gal
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gal=gal

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2002/12/01 13:49:39 salo Exp $
+# $NetBSD: Makefile,v 1.28 2002/12/24 06:10:04 wiz Exp $
 
 DISTNAME=		ee-0.3.12
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ee/0.3/}
 
