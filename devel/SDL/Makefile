@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2004/06/22 09:10:12 dillo Exp $
+# $NetBSD: Makefile,v 1.57 2004/07/26 20:42:27 dillo Exp $
 #
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKGREVISION=2
+PKGREVISION=3
 
 .include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"
