@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 15:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/22 20:16:58 dillo Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
-DISTNAME=	arj-3.10b
+DISTNAME=	arj-3.10.20
 CATEGORIES=	archivers
 MASTER_SITES=	http://testcase.newmail.ru/files/
 
@@ -22,9 +22,6 @@ pre-configure:
 			> ${WRKSRC}/environ.c
 	${RM} -f ${WRKSRC}/environ.c.1
 	cd ${WRKSRC}/gnu; ${AUTOCONF}
-
-pre-build:
-	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} -f ${MAKEFILE} ${MAKE_FLAGS} ${MAKE_ARGS} prepare)
 
 post-install:
 	${INSTALL_DATA_DIR} ${ARJ_DOCSDIR}
