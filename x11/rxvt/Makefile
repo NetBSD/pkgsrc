@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.11 1999/08/25 00:59:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1999/12/23 14:46:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
 DISTNAME=		rxvt-2.6.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/ \
-			${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/} \
-			ftp://ftp.nuclecu.unam.mx/linux/local/rxvt/  \
-			ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin.X11/
+			ftp://mason.primenet.com.au/pub/rxvt/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		gcw@rxvt.org
