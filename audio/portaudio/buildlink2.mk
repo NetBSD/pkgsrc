@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/04/22 16:31:20 ben Exp $
 
 .if !defined(PORTAUDIO_BUILDLINK2_MK)
 PORTAUDIO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		portaudio
 BUILDLINK_DEPENDS.portaudio?=	portaudio>=18.1
-BUILDLINK_PKGSRCDIR.portaudio?=	../../wip/portaudio
+BUILDLINK_PKGSRCDIR.portaudio?=	../../audio/portaudio
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.portaudio=portaudio
 BUILDLINK_PREFIX.portaudio_DEFAULT=	${LOCALBASE}
