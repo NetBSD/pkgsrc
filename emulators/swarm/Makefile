@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/07 02:32:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/07 23:35:56 wiz Exp $
 
 DISTNAME=	swarm-0.26
 CATEGORIES=	emulators
@@ -8,7 +8,6 @@ MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.dcs.gla.ac.uk/~michael/phd/swarm.html
 
 WRKSRC=		${WRKDIR}/swarm/src
-ONLY_FOR_PLATFORM=	SunOS-*-*
 
 do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/swarm ${PREFIX}/bin
