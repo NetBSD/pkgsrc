@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1 2004/04/02 03:34:54 snj Exp $
+
+--- Makefile.orig	2003-06-14 10:38:45.000000000 -0700
++++ Makefile	2004-03-30 18:41:49.000000000 -0800
+@@ -1789,19 +1789,19 @@ install-languages: languages $(DEST_LANG
+ # doesn't.<=looks strange to install icons to user's directory ;), i add my
+ # own install procedure, mikmak
+ installkdeicons:
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/applnk/Editors/
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/32x32/apps/
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/48x48/apps/
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/22x22/actions/
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/16x16/actions/
+-	mkdir -p $(DESTDIR)$(KDE_DIR)/share/apps/kvim
+-
+-	cp ../runtime/KVim.desktop $(DESTDIR)$(KDE_DIR)/share/applnk/Editors/ && chmod 644 $(DESTDIR)$(KDE_DIR)/share/applnk/Editors/KVim.desktop
+-	cp ../runtime/kvim32x32.png $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/32x32/apps/kvim.png && chmod 644 $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/32x32/apps/kvim.png
+-	cp ../runtime/kvim48x48.png $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/48x48/apps/kvim.png && chmod 644 $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/48x48/apps/kvim.png
+-	cp ../runtime/hi16-action-make.png $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/16x16/actions/hi16-action-make.png
+-	cp ../runtime/hi22-action-make.png $(DESTDIR)$(KDE_DIR)/share/icons/hicolor/22x22/actions/hi22-action-make.png
+-	cp ../runtime/kde-tips $(DESTDIR)$(KDE_DIR)/share/apps/kvim/tips && chmod 644 $(DESTDIR)$(KDE_DIR)/share/apps/kvim/tips
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/applnk/Editors/
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/32x32/apps/
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/48x48/apps/
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/22x22/actions/
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/16x16/actions/
++	mkdir -p $(DESTDIR)$(KDE_DIR)/share/kde/apps/kvim
++
++	cp ../runtime/KVim.desktop $(DESTDIR)$(KDE_DIR)/share/kde/applnk/Editors/ && chmod 644 $(DESTDIR)$(KDE_DIR)/share/kde/applnk/Editors/KVim.desktop
++	cp ../runtime/kvim32x32.png $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/32x32/apps/kvim.png && chmod 644 $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/32x32/apps/kvim.png
++	cp ../runtime/kvim48x48.png $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/48x48/apps/kvim.png && chmod 644 $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/48x48/apps/kvim.png
++	cp ../runtime/hi16-action-make.png $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/16x16/actions/hi16-action-make.png
++	cp ../runtime/hi22-action-make.png $(DESTDIR)$(KDE_DIR)/share/kde/icons/hicolor/22x22/actions/hi22-action-make.png
++	cp ../runtime/kde-tips $(DESTDIR)$(KDE_DIR)/share/kde/apps/kvim/tips && chmod 644 $(DESTDIR)$(KDE_DIR)/share/kde/apps/kvim/tips
+ 
+ ICON48PATH = $(DESTDIR)$(DATADIR)/icons/hicolor/48x48/apps
+ ICON32PATH = $(DESTDIR)$(DATADIR)/icons/locolor/32x32/apps
