@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.534 2002/11/16 00:09:59 wiz Exp $
+$NetBSD: CHANGES,v 1.535 2002/11/16 00:14:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3611,6 +3611,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bind4 to 4.9.10nb1 [itojun 2002-11-14]
 	Updated bind8 to 8.3.3nb1 [itojun 2002-11-14]
 	Updated tmda to 0.64 [kim 2002-11-14]
+	Updated pkglint to 3.37 [wiz 2002-11-14]
 	Updated zope25-ZPhotoSlides to 0.5 [drochner 2002-11-14]
 	Updated zope25-Silva to 0.8.5 [drochner 2002-11-14]
 	Added zope25-Calendar-1.0.10 [drochner 2002-11-14]
