@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2793 2003/07/15 14:49:04 hubertf Exp $
+$NetBSD: CHANGES,v 1.2794 2003/07/15 15:01:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2819,7 +2819,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsymcheck to 20030525 [dmcmahill 2003-07-15]
 	Updated libgeda to 20030525 [dmcmahill 2003-07-15]
 	Updated nulib2 to 2.0.0 [agc 2003-07-15]
-	Added xope-0.3 [itojun 2003-07-15]
+	Added xorp-0.3 [itojun 2003-07-15]
 	Updated verilog-current to 20030705 [drochner 2003-07-15]
 	Added gtkwave-2.0.0pre3.20030319 [drochner 2003-07-15]
 	Updated dinotrace to 9.1k [drochner 2003-07-15]
