@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/04/22 05:34:05 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/27 06:46:02 tron Exp $
 #
 
 DISTNAME=		lynx2.8.3pre.7
@@ -23,6 +23,7 @@ RESTRICTED=		"Crypto; export-controlled"
 WRKSRC=			${WRKDIR}/lynx2-8-3
 
 GNU_CONFIGURE=		yes
+USE_SSL=		yes
 INSTALL_TARGET=		install-full
 MAKEFILE=       	makefile
 
@@ -57,15 +58,6 @@ CONFIGURE_ARGS+=	--enable-justify-elts
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-.if !exists(/usr/bin/openssl)
-DEPENDS+=		openssl>=0.9.4:../../security/openssl
-SSLLIBS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE} -lssl -lcrypto
-SSLINCS=		-I${LOCALBASE}/include -I${LOCALBASE}/include/openssl
-.else
-SSLLIBS=		-lssl -lcrypto
-SSLINCS=		-I/usr/include/openssl
-.endif
-
 post-configure:
 	(${ECHO}; \
 	${ECHO} '#undef LYNX_CFG_FILE'; \
@@ -92,3 +84,11 @@ post-install:
 	fi
 
 .include "../../mk/bsd.pkg.mk"
+
+.if (${SSLBASE} == /usr)
+SSLLIBS=	-lssl -lcrypto
+SSLINCS=	-I/usr/include/openssl
+.else
+SSLLIBS=	-L${SSLBASE}/lib -Wl,-R${SSLBASE}/lib -lssl -lcrypto
+SSLINCS=	-I${SSLBASE}/include -I${SSLBASE}/include/openssl
+.endif
