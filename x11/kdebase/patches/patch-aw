@@ -1,0 +1,32 @@
+$NetBSD: patch-aw,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+
+diff -u kfm/kioserver.cpp.orig kfm/kioserver.cpp
+--- kfm/kioserver.cpp.orig	Tue Oct  5 20:30:24 1999
++++ kfm/kioserver.cpp	Tue Oct  5 20:36:31 1999
+@@ -19,7 +19,7 @@
+ #include <sys/mnttab.h>
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined (__NetBSD__)
+ #include <sys/param.h>
+ #include <sys/ucred.h>
+ #include <sys/mount.h>
+@@ -420,7 +420,7 @@
+ 
+ QString KIOServer::findDeviceMountPoint( const char *_device, const char *_file )
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined (__NetBSD__)
+     if( !strcmp( "/etc/mtab", _file))
+     {
+ 	struct statfs *buf;
+@@ -447,7 +447,7 @@
+ 	}
+     }
+     
+-#endif /* __FreeBSD__ */             
++#endif /* __FreeBSD__ || __NetBSD__ */             
+ 
+ #ifdef HAVE_VOLMGT
+     const char *volpath;

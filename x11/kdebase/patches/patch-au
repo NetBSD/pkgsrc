@@ -1,0 +1,35 @@
+$NetBSD: patch-au,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+
+diff -u kfm/kfmprops.cpp.orig kfm/kfmprops.cpp
+--- kfm/kfmprops.cpp.orig	Tue Oct  5 20:16:26 1999
++++ kfm/kfmprops.cpp	Tue Oct  5 20:18:37 1999
+@@ -2156,14 +2156,18 @@
+     mountpoint = new QLineEdit( this, "LineEdit_2" );
+     mountpoint->setGeometry( 10, 110, 180, 30 );
+     mountpoint->setText( "" );
++#ifndef __NetBSD__
+     if ( !IamRoot )
+ 	mountpoint->setEnabled( false );
++#endif
+     
+     readonly = new QCheckBox( this, "CheckBox_1" );
+     readonly->setGeometry( 220, 40, 130, 30 );
+     readonly->setText(  klocale->translate("Readonly") );
++#ifndef __NetBSD__
+     if ( !IamRoot )
+ 	readonly->setEnabled( false );
++#endif
+     
+     tmpQLabel = new QLabel( this, "Label_4" );
+     tmpQLabel->move( 10, 150 );
+@@ -2173,8 +2177,10 @@
+     fstype = new QLineEdit( this, "LineEdit_3" );
+     fstype->setGeometry( 10, 180, 280, 30 );
+     fstype->setText( "" );
++#ifndef __NetBSD__
+     if ( !IamRoot )
+ 	fstype->setEnabled( false );
++#endif
+ 
+     tmpQLabel = new QLabel( this, "Label_5" );
+     tmpQLabel->move( 10, 220 );
