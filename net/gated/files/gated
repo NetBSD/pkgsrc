@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gated,v 1.1 2001/04/05 16:58:50 wiz Exp $
+# $NetBSD: gated,v 1.2 2001/04/05 17:01:11 wiz Exp $
 #
 
 # PROVIDE: gated
@@ -8,9 +8,9 @@
 
 . /etc/rc.subr
 
-name="@PREFIX@/sbin/gated"
+name="gated"
 rcvar=$name
-command="/usr/sbin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="/etc/${name}.conf"
 
