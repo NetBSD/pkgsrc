@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2000/03/04 10:10:09 tron Exp $
+# $NetBSD: Makefile,v 1.60 2000/03/21 09:04:13 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -34,6 +34,7 @@
     SUBDIR += logtime
     SUBDIR += lsof
     SUBDIR += mc
+    SUBDIR += memconf
     SUBDIR += mkhybrid
     SUBDIR += mkisofs
     SUBDIR += mtools
