@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2824 2005/01/04 10:04:01 jmmv Exp $
+$NetBSD: TODO,v 1.2825 2005/01/04 11:29:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,9 @@ Suggested package updates
 	o docsis-0.9.1
 	o doxygen-1.4.0
 	o dpkg-1.10.25
+	o dropbear-0.44
 	o drscheme-208
+	o dspam-3.2.4
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.51.4
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
@@ -595,10 +597,11 @@ Suggested package updates
 	o icewm-gnome-1.2.19
 	o icewm-imlib-1.2.19
 	o icsi-finger-1.0.29
-	o idesk-0.5.6
+	o idesk-0.6.0 [pkg/28850]
 	o ifile-1.3.5
 	o ijs-0.35
 	o ike-scan-1.6.7
+	o imp-3.2.7
 	o inkscape-0.40
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
@@ -654,6 +657,7 @@ Suggested package updates
 	o libcdio-0.71
 	o libcomprex-0.3.3
 	o libetpan-0.34b
+	o libevent-1.0a
 	o libextractor-0.4.0
 	o libfwbuilder-2.0.4
 	o libgda-1.2.0
@@ -752,6 +756,7 @@ Suggested package updates
 	o ncmpc-0.11.0 [pkg/26237]
 	o ncview-1.92e
 	o nessus-2.2.2a
+	o netatalk-2.0.2
 	o netatalk1-1.6.4
 	o netcdf-3.6.0
 	o netio-123
