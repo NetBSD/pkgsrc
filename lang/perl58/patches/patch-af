@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2003/02/21 16:10:27 grant Exp $
+
+--- Configure.orig	Fri Jul 19 08:55:15 2002
++++ Configure
+@@ -9933,8 +9933,9 @@ eval $setvar
+ 
+ : see if crypt exists
+ echo " "
+-set crypt d_crypt
+-eval $inlibc
++: no, crypt is NOT in libc on FreeBSD
++: set crypt d_crypt
++: eval $inlibc
+ case "$d_crypt" in
+ $define) cryptlib='' ;;
+ *)	if set crypt val -f d_crypt; eval $csym; $val; then
