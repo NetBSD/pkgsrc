@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4166 2003/12/17 19:58:13 jdolecek Exp $
+$NetBSD: CHANGES,v 1.4167 2003/12/18 01:18:39 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5217,3 +5217,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pear-HTML_Select-1.2 [jdolecek 2003-12-17]
 	Added pear-Log-1.7.0 [jdolecek 2003-12-17]
 	Updated pear-Log to 1.8.1 [jdolecek 2003-12-17]
+	Updated tnftpd to 20031217 [lukem 2003-12-18]
