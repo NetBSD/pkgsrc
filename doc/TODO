@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2781 2004/12/27 14:14:21 wiz Exp $
+$NetBSD: TODO,v 1.2782 2004/12/27 18:21:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,6 @@ Suggested package updates
 	o cyrus-sasl-1.5.28
 	o daapd-0.2.3
 	o dact-0.8.37
-	o db4-4.3.21
 	o dbench-3.01
 	o dc_gui2-0.80
 	o dctc-0.85.9
