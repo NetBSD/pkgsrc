@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2001/10/19 21:31:10 jlam Exp $
+
+--- doc/Makefile.in.orig	Sun Jun 10 14:20:55 2001
++++ doc/Makefile.in
+@@ -20,7 +20,7 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ configdir = ${sysconfdir}/sane.d
+-docdir=$(prefix)/doc/sane-@VERSION@
++docdir=$(prefix)/share/doc/sane-@VERSION@
+ 
+ MKDIR = $(top_srcdir)/mkinstalldirs
+ INSTALL = @INSTALL@
+@@ -45,7 +45,7 @@
+ READMES = README AUTHORS COPYING ChangeLog LEVEL2 LICENSE NEWS PROBLEMS \
+           PROJECTS README README.aix README.hp-ux README.linux README.os2 \
+           README.solaris README.unixware2 README.unixware7 TODO
+-DOCS    = backend-writing.txt sane.ps sane.dvi
++DOCS    = backend-writing.txt
+ BACKDIRS= canon mustek umax
+ LATEX	= TEXINPUTS=$(srcdir):$$TEXINPUTS latex
+ DLH	= TEXINPUTS=$(srcdir):$$TEXINPUTS dlh
+@@ -55,7 +55,7 @@
+ EMACS   = xemacs
+ WWW_PATH= /home/httpd/html/sane/
+ 
+-all: sane.ps $(MANPAGES) 
++all: $(MANPAGES) 
+ 
+ %.1 %.5 %.7: %.man
+ 	@sed -e 's|@DATADIR@|$(datadir)|g' \
