@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2004/03/01 22:51:10 heinz Exp $
+# $NetBSD: Makefile,v 1.200 2004/03/05 12:17:09 adam Exp $
 #
 
 COMMENT=	Games
@@ -59,6 +59,7 @@ SUBDIR+=	fortune-strfile
 SUBDIR+=	fortunes-de
 SUBDIR+=	freeciv-client
 SUBDIR+=	freeciv-client-gtk
+SUBDIR+=	freeciv-client-gtk2
 SUBDIR+=	freeciv-manual
 SUBDIR+=	freeciv-server
 SUBDIR+=	freeciv-share
