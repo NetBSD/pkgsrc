@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $	*/
+/*	$NetBSD: sha1.c,v 1.2 2001/03/22 09:51:48 agc Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -143,14 +143,14 @@ void SHA1Transform(state, buffer)
     CHAR64LONG16 *block;
 
 #ifdef SHA1HANDSOFF
-    static u_char workspace[64];
+    CHAR64LONG16 workspace;
 #endif
 
     _DIAGASSERT(buffer != 0);
     _DIAGASSERT(state != 0);
 
 #ifdef SHA1HANDSOFF
-    block = (CHAR64LONG16 *)(void *)workspace;
+    block = &workspace;
     (void)memcpy(block, buffer, 64);
 #else
     block = (CHAR64LONG16 *)(void *)buffer;
