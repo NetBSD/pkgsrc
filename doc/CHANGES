@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.365 2002/10/26 18:47:14 grant Exp $
+$NetBSD: CHANGES,v 1.366 2002/10/26 19:39:25 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3393,3 +3393,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated fileutils to 4.1.11 [grant 2002-10-26]
 	Updated less to 378 [grant 2002-10-26]
 	Updated freetds to 0.60 [grant 2002-10-26]
+	Updated bins to 1.1.18 [dmcmahill 2002-10-26]
