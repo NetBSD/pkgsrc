@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/17 16:27:25 agc Exp $
+
+NetBSD-specific paths for tripwire.
+
+--- include/config.h	1994/07/15 11:02:52	1.5
++++ include/config.h	1998/11/17 14:40:02
+@@ -17,7 +17,7 @@
+  ***	file that corresponds with your operating system.
+  ***/
+ 
+-#include "../configs/conf-svr4.h"
++#include "../configs/conf-netbsd.h"
+ 
+ #ifdef TW_TYPE32
+ typedef TW_TYPE32 int32;
+@@ -102,9 +102,8 @@
+ # define DATABASE_PATH   "/usr/local/adm/tcheck/databases"
+ #endif
+ */
+-
+-#define CONFIG_PATH     "/tmp/genek"
+-#define DATABASE_PATH   "/tmp/genek"
++# define CONFIG_PATH     "@localbase@/etc/tripwire"
++# define DATABASE_PATH   "@localbase@/etc/tripwire/databases"
+ 
+ /******* name of Tripwire files **************************************
+  *
+@@ -121,7 +120,7 @@
+  *
+  *********************************************************************/
+ 
+-#define CONFIG_FILE 	"tw.config"
++#define CONFIG_FILE 	"tripwire.conf"
+ #define DATABASE_FILE	"tw.db_@"
+ 
+ /******* Default ignore mask ****************************************
