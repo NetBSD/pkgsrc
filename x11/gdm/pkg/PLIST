@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+bin/gdm
+bin/gdmchooser
+bin/gdmlogin
+etc/gdm/Init.default/Default
+etc/gdm/PostSession.default/Default
+etc/gdm/PreSession.default/Default
+etc/gdm/Sessions.default/Gnome
+etc/gdm/Sessions.default/KDE
+etc/gdm/Sessions.default/Xsession
+etc/gdm/gdm.conf.default
+etc/gdm/locale.alias.default
+etc/gnomerc.default
+share/gnome/help/gdm/C/configuration.html
+share/gnome/help/gdm/C/daemonov.html
+share/gnome/help/gdm/C/docbook.css
+share/gnome/help/gdm/C/f21.html
+share/gnome/help/gdm/C/gdm.html
+@exec mkdir -p %D/share/gnome/help/gdm/C/images
+share/gnome/help/gdm/C/index.html
+share/gnome/help/gdm/C/intro.html
+share/gnome/help/gdm/C/ln15.html
+share/gnome/help/gdm/C/x60.html
+share/gnome/help/gdm/C/x69.html
+share/gnome/help/gdm/C/x135.html
+share/locale/da/LC_MESSAGES/gdm.mo
+share/locale/de/LC_MESSAGES/gdm.mo
+share/locale/es/LC_MESSAGES/gdm.mo
+share/locale/et/LC_MESSAGES/gdm.mo
+share/locale/fr/LC_MESSAGES/gdm.mo
+share/locale/ko/LC_MESSAGES/gdm.mo
+share/locale/no/LC_MESSAGES/gdm.mo
+share/locale/sv/LC_MESSAGES/gdm.mo
+share/locale/pl/LC_MESSAGES/gdm.mo
+share/locale/pt_BR/LC_MESSAGES/gdm.mo
+share/pixmaps/gdm.xpm
+share/pixmaps/nobody.png
+share/pixmaps/nohost.png
+@dirrm share/gnome/help/gdm/C/images
+@dirrm share/gnome/help/gdm/C
+@dirrm share/gnome/help/gdm
+@dirrm etc/gdm/Sessions.default
+@dirrm etc/gdm/PreSession.default
+@dirrm etc/gdm/PostSession.default
+@dirrm etc/gdm/Init.default
+@unexec rmdir %D/etc/gdm/Sessions %D/etc/gdm/PreSession %D/etc/gdm/PostSession %D/etc/gdm/Init %D/etc/gdm 2>/dev/null || true
+@exec ${INSTALL} -d -o ${GDMOWN} -g ${GDMGRP} -m 750 ${LOCALSTATEDIR}/gdm
+@unexec rm -rf ${LOCALSTATEDIR}/gdm
