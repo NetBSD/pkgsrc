@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/11/12 14:45:50 agc Exp $
+
 --- sample.fvwmrc/Imakefile.dist	Thu Apr 25 23:23:35 1996
 +++ sample.fvwmrc/Imakefile	Thu Jan 30 15:47:29 1997
 @@ -8,5 +8,12 @@
