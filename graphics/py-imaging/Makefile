@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/20 04:58:29 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/02 03:36:53 wiz Exp $
 
 DISTNAME=	Imaging-1.0b1
 PKGNAME=	py-imaging-1.0b1
@@ -34,10 +34,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/PIL
 	${INSTALL_DATA} ${WRKSRC}/libImaging/*.h ${PREFIX}/include/PIL
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKSRC}/PIL; find . -name \*.py\* -print \
+	(cd ${WRKSRC}/PIL; ${FIND} . -name \*.py\* -print \
 		| ${SED} -e 's,^./,lib/python1.5/site-packages/,g' \
 		>>${PLIST_SRC})
-	(cd ${PREFIX}; find include/PIL -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} include/PIL -type f -print >>${PLIST_SRC})
 	${ECHO} "@dirrm include/PIL" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

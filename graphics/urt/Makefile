@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/11/22 11:11:32 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/02 03:36:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -33,13 +33,13 @@ post-install:
 	cd ${PREFIX}/share/doc/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-doc.tar; \
 	    cd doc; \
-	    find -d . | cpio -dump ..; \
+	    ${FIND} -d . | cpio -dump ..; \
 	    cd ..; \
 	    ${RM} -rf doc)
 	cd ${PREFIX}/share/examples/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-img.tar; \
-	    chown -R root:wheel . ; \
-	    find . -type d -exec chmod 775 '{}' \; ; \
-	    find . -type f -exec chmod 664 '{}' \;)
+	    ${CHOWN} -R root:wheel . ; \
+	    ${FIND} . -type d -exec ${CHMOD} 775 '{}' \; ; \
+	    ${FIND} . -type f -exec ${CHMOD} 664 '{}' \;)
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/10/08 21:12:50 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/02 03:36:53 wiz Exp $
 #
 
 DISTNAME=       xart19980415
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=      yes
 
 post-extract:
-	find ${WRKSRC} -type d -print | xargs chmod 755
-	find ${WRKSRC} -type f -print | xargs chmod 644
+	${FIND} ${WRKSRC} -type d -print | xargs ${CHMOD} 755
+	${FIND} ${WRKSRC} -type f -print | xargs ${CHMOD} 644
 
 .include "../../mk/bsd.pkg.mk"
