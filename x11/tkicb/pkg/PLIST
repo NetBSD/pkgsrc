@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/20 06:24:39 jwise Exp $
+bin/tkicb
+libdata/tkicb/icb.tcl
+libdata/tkicb/lib/confuse
+libdata/tkicb/lib/flirt
+libdata/tkicb/lib/servers
+libdata/tkicb/tcl/alert.tcl
+libdata/tkicb/tcl/away.tcl
+libdata/tkicb/tcl/color.tcl
+libdata/tkicb/tcl/commands.tcl
+libdata/tkicb/tcl/debug.tcl
+libdata/tkicb/tcl/friends.tcl
+libdata/tkicb/tcl/history.tcl
+libdata/tkicb/tcl/log.tcl
+libdata/tkicb/tcl/proclist.tcl
+libdata/tkicb/tcl/protocol.tcl
+libdata/tkicb/tcl/queue.tcl
+libdata/tkicb/tcl/tabhist.tcl
+libdata/tkicb/tcl/ui.tk.tcl
+libdata/tkicb/tcl/util.tcl
+libdata/tkicb/tcl/version.tcl
+@dirrm libdata/tkicb/lib
+@dirrm libdata/tkicb/tcl
+@dirrm libdata/tkicb
