@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/04/28 15:27:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/02/26 19:00:56 wiz Exp $
 bin/dx
 dx/lib_netbsd/arch.mak
 dx/lib_netbsd/libDXlite.a
@@ -2231,7 +2231,7 @@ dx/html/usrguide.htm
 dx/html/index.htm
 dx/html/index.html
 dx/man/manl/dx.l
-dx/man/catl/dx.l
+dx/man/catl/dx.0
 dx/fonts/Readme
 dx/fonts/area.dx
 dx/fonts/cyril_d.dx
