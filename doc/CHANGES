@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3342 2003/09/12 15:12:56 abs Exp $
+$NetBSD: CHANGES,v 1.3343 2003/09/12 17:40:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3654,4 +3654,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmail to 6.2.4nb1 [jlam 2003-09-12]
 	Updated pine to 4.58 [tron 2003-09-12]
 	Updated rconfig to 0.17nb1 [abs 2003-09-12]
+	Added gnome-themes-2.2 [xtraeme 2003-09-12]
+	Added gtk-thinice-engine-2.0.2 [xtraeme 2003-09-12]
+	Added gnome2-user-docs-2.0.6 [xtraeme 2003-09-12]
+	Added yelp-2.2.2 [xtraeme 2003-09-12]
 
