@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/08 19:52:52 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/13 02:57:02 minskim Exp $
 #
 
 DISTNAME=	cgi.tcl
@@ -10,7 +10,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://expect.nist.gov/cgi.tcl/
 COMMENT=	Library of Tcl procedures to assist in writing CGI scripts
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl83
+DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
 WRKSRC=		${WRKDIR}/cgi.tcl-1.3
 DIST_SUBDIR=	${PKGNAME}
