@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/26 10:32:34 martti Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/05 22:11:51 dmcmahill Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=	XFce4 filemanager
 MESSAGE_SRC+=	${.CURDIR}/MESSAGE
 
 PKGCONFIG_OVERRIDE=	src/xffm-1.0.pc.in
+
+UNLIMIT_RESOURCES+=     datasize
 
 .include "../../databases/dbh/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
