@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2728 2003/07/11 14:55:11 seb Exp $
+$NetBSD: CHANGES,v 1.2729 2003/07/11 15:28:38 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomeui to 2.2.2 [jmmv 2003-07-11]
 	Updated xchat to 2.0.3nb1 [jmmv 2003-07-11]
 	Added libkver-0.1 [seb 2003-07-11]
+	Updated jdbc-postgresql to 7.3.3 [abs 2003-07-11]
