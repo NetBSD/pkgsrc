@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/21 14:37:06 grant Exp $
 #
 
 DISTNAME=		htdocs-share-20041021
@@ -18,6 +18,8 @@ DIST_SUBDIR=		${PKGBASE}
 NO_CONFIGURE=		# defined
 NO_MTREE=		# defined
 USE_LANGUAGES=		# empty
+
+WRKSRC=			${WRKDIR}/${PKGNAME}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
@@ -61,6 +63,9 @@ do-build:
 .for _output_ in ${OUTPUTS}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${_output_}
 .endfor
+
+post-build:
+	@${RM} -f ${WRKSRC}/pkgsrc.tmp.html
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
