@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.3 2003/02/27 04:08:25 jschauma Exp $
+$NetBSD: patch-bb,v 1.4 2003/05/19 03:03:34 uebayasi Exp $
 
---- configure.orig	Mon Feb  3 07:20:35 2003
-+++ configure	Thu Feb  6 20:56:31 2003
+--- configure.orig	Mon Feb 10 15:26:24 2003
++++ configure
 @@ -4002,8 +4002,8 @@
                  INTLOBJS="\$(GETTOBJS)"
          BUILD_INCLUDED_LIBINTL=yes
@@ -13,3 +13,23 @@ $NetBSD: patch-bb,v 1.3 2003/02/27 04:08:25 jschauma Exp $
          LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
        fi
  
+@@ -13113,8 +13113,8 @@
+     
+     echo $ac_n "checking for gtkhtml < 1.1""... $ac_c" 1>&6
+ echo "configure:13116: checking for gtkhtml < 1.1" >&5
+-    GTKHTML_LIBS=`$GNOME_CONFIG --libs gtkhtml`
+-    GTKHTML_CFLAGS=`$GNOME_CONFIG --cflags gtkhtml`
++    GTKHTML_LIBS=`pkg-config --libs gtkhtml`
++    GTKHTML_CFLAGS=`pkg-config --cflags gtkhtml`
+     if test "x$GTKHTML_LIBS" != x; then
+ 	# check for gtkhtml and enable it via HAVE_LIBGTKHTML
+ 	# if found
+@@ -13125,7 +13125,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lgtkhtml $GTKHTML_LIBS $LIBS"
++LIBS="$GTKHTML_LIBS $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 13131 "configure"
+ #include "confdefs.h"
