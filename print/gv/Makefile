@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/19 00:01:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
 COMMENT=	PostScript and PDF previewer
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_IMAKE=		# defined
 XAW_TYPE?=		3d
 
@@ -41,6 +41,6 @@ post-extract:
 post-install:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install.doc
 
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
