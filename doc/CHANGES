@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7037 2004/08/30 06:52:29 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7038 2004/08/30 13:40:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4106,3 +4106,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ffmpeg to 0.4.8nb2 [wiz 2004-08-29]
 	Updated suse91_base to 9.1nb2 [wiz 2004-08-29]
 	Updated clamsmtp to 0.7 [xtraeme 2004-08-30]
+	Updated safecat to 1.12 [schmonz 2004-08-30]
