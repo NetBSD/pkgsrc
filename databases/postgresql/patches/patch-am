@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 1999/09/20 23:38:50 jlam Exp $
+$NetBSD: patch-am,v 1.3 2000/02/04 18:04:35 jlam Exp $
 
 --- ./pl/plpgsql/src/Makefile.in.orig	Wed Jun 30 19:57:31 1999
 +++ ./pl/plpgsql/src/Makefile.in	Mon Sep 20 01:27:23 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.2 1999/09/20 23:38:50 jlam Exp $
  OBJS=	pl_parse.o pl_handler.o pl_comp.o pl_exec.o pl_funcs.o
  
 -SHLIB_LINK+= -L$(LIBPQDIR) -lpq
-+SHLIB_LINK+= -L$(LIBPQ)
++SHLIB_LINK+= $(LIBPQ)
  
  # If crypt is a separate library, rather than part of libc, it may need
  # to be referenced separately to keep (broken) linkers happy.  (This is
