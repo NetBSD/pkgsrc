@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:09:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/10/11 09:26:04 agc Exp $
 
-SHA1 (exmh-2.1.1/exmh-2.1.1.tar.gz) = d8708662bd06da18d50ce0b90bfe58b5a1e9af05
-Size (exmh-2.1.1/exmh-2.1.1.tar.gz) = 867497 bytes
+SHA1 (exmh-2.5/exmh-2.5.tar.gz) = eb24358ae4f12b940b7ad5af64c7cf1f10e9e7fa
+Size (exmh-2.5/exmh-2.5.tar.gz) = 867121 bytes
 SHA1 (patch-aw) = d75b933531abfff577e989f5b372fb9189830424
