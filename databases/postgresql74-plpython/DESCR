@@ -1,5 +1,9 @@
-PL/Perl allows you to write functions in the Perl programming language
+PL/Python allows you to write functions in the Python programming language
 that may be used in SQL queries as if they were built into Postgres.
-The PL/Perl intepreter is a full Perl interpreter.  However, certain
-operations have been disabled in order to maintain the security of the
-system.
+The PL/Python intepreter is a full Python interpreter.
+
+As of PostgreSQL 7.4, PL/Python is only available as an "untrusted"
+language (meaning it does not offer any way of restricting what
+users can do in it). It has therefore been renamed to plpythonu.
+The trusted variant plpython may become available again in future,
+if a new secure execution mechanism is developed in Python.
