@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/05/13 12:06:23 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/05/14 09:25:46 tron Exp $
 
 --- Makefile.orig	Mon May  5 16:55:07 2003
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2003/05/13 12:06:23 wiz Exp $
  #######################################################################
  
 -CXXFLAGS:= -g -O -Wall -Wstrict-prototypes -Wuninitialized -Wno-long-long -Wno-multichar -Wno-unknown-pragmas
-+CXXFLAGS+= -Wall -Wstrict-prototypes -Wuninitialized -Wno-long-long -Wno-multichar -Wno-unknown-pragmas
++CXXFLAGS+= -Wall -Wstrict-prototypes -Wno-long-long -Wno-multichar -Wno-unknown-pragmas
  DEFINES :=
  LDFLAGS :=
  INCLUDES:= -I. -Icommon
