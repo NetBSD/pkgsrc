@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3298 2005/03/25 12:00:59 chris Exp $
+$NetBSD: TODO,v 1.3299 2005/03/26 09:17:07 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -337,7 +337,6 @@ Suggested package updates
 	o ccgo-0.3.5
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0
-	o cdpd-1.0.2
 	o cdrtools-2.01
 	o centericq-4.20.0
 	o cfengine2-2.1.13
