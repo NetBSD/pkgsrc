@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/09/23 09:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/10/12 22:51:18 jschauma Exp $
 
 DISTNAME=		sitecopy-0.13.4
 CATEGORIES=		www
@@ -19,8 +19,6 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--with-libxml2
 
-LIBS+=			${LIBGETOPT}
-
 # The build process doesn't correctly find the header for GNU fnmatch, which
 # is provided in ${WRKSRC}/lib.  Help the compiler by linking the header
 # to ${WRKSRC} and explicitly passing -I. to the compiler.
@@ -31,9 +29,13 @@ pre-build:
 	${RM} -f ${WRKSRC}/fnmatch.h
 	${LN} -sf ${WRKSRC}/lib/fnmatch.h ${WRKSRC}/fnmatch.h
 
+.if !exists(/usr/include/getopt.h)
+.  include "../../pkgtools/libnbcompat/buildlink2.mk"
+.endif
+
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgetopt/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
