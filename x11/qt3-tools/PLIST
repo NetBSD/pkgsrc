@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/08/12 11:53:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/08/13 10:16:59 adam Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -185,6 +185,7 @@ qt3/plugins/designer/libwizards.so
 @dirrm qt3/mkspecs/qnx-g++
 @dirrm qt3/mkspecs/openbsd-g++
 @dirrm qt3/mkspecs/netbsd-g++
+@dirrm qt3/mkspecs/macx-xlc
 @dirrm qt3/mkspecs/macx-pbuilder
 @dirrm qt3/mkspecs/macx-mwerks
 @dirrm qt3/mkspecs/macx-g++
