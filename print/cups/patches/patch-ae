@@ -1,0 +1,37 @@
+$NetBSD: patch-ae,v 1.6 2001/01/28 02:05:37 jlam Exp $
+
+--- cups.sh.in.orig	Mon Jan 22 10:03:16 2001
++++ cups.sh.in
+@@ -10,6 +10,12 @@
+ #   description: Startup/shutdown script for the Common UNIX \
+ #                Printing System (CUPS).
+ #
++#   NetBSD 1.5+ rcorder script lines.  The format of the following two
++#   lines is very strict -- please don't add additional spaces!
++#
++# PROVIDE: cups
++# REQUIRE: DAEMON
++#
+ #   Copyright 1997-2001 by Easy Software Products, all rights reserved.
+ #
+ #   These coded instructions, statements, and computer programs are the
+@@ -35,6 +41,9 @@
+ 		IS_ON=/sbin/chkconfig
+ 		;;
+ 
++	NetBSD*)
++		IS_ON=:
++
+ 	*)
+ 		IS_ON=/bin/true
+ 		;;
+@@ -57,6 +66,9 @@
+ 		pid=`ps -e | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
+ 		;;
+ 	Linux)
++		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
++		;;
++	NetBSD)
+ 		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
+ 		;;
+ 	*)
