@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.2 1999/02/23 18:28:34 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/01 06:46:32 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
 DISTNAME=	delegate5.8.8
 PKGNAME=	delegate-5.8.8
 CATEGORIES=	net
-MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/
+MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
+		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
+		ftp://ftp.nec.co.jp/pub/infosys/WWW/DeleGate/ \
+		ftp://ftp.fujitsu.co.jp/pub/networking/DeleGate/ \
+		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/ \
+		ftp://ftp.eni.co.jp/pub/mirrors/delegate/
 
 MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://wall.etl.go.jp/delegate/
