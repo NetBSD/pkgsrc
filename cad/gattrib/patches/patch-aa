@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2004/10/02 00:50:14 dmcmahill Exp $
+
+--- src/x_fileselect.c.orig	Sun Feb 22 17:58:27 2004
++++ src/x_fileselect.c
+@@ -22,6 +22,10 @@
+  * by SDB for use in gattrib.
+  *------------------------------------------------------------------*/
+ 
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
+ /*------------------------------------------------------------------
+  * Includes required to run graphical widgets.
+  *------------------------------------------------------------------*/
+@@ -39,19 +43,19 @@
+  */
+ #include <sys/types.h>
+ 
+-/* #ifdef HAVE_SYS_PARAM_H */
++#ifdef HAVE_SYS_PARAM_H 
+ #include <sys/param.h>
+-/* #endif */
++#endif
+ 
+ #include <sys/stat.h>
+ 
+-/* #ifdef HAVE_UNISTD_H */
++#ifdef HAVE_UNISTD_H 
+ #include <unistd.h>
+-/* #endif */
++#endif 
+ 
+-/* #ifdef HAVE_DIRENT_H */
++#ifdef HAVE_DIRENT_H 
+ #include <dirent.h>
+-/* #endif */
++#endif 
+ 
+ #ifdef HAVE_STRING_H
+ #include <string.h>
