@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/05/05 03:14:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.46 2004/06/17 16:07:25 xtraeme Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -91,6 +91,8 @@ PERL5_PKGSUFFIX=	# empty
 CONFLICTS+=		perl-thread-[0-9]*
 CONFIGURE_ARGS+=	-Uuseithreads
 .else
+PKGREVISION=		1
+PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
 PERL5_PKGSUFFIX=	-thread
 CONFLICTS+=		perl-[0-9]*
 CONFIGURE_ARGS+=	-Duseithreads
