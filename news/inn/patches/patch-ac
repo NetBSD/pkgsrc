@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 1999/07/29 20:27:20 tron Exp $
+$NetBSD: patch-ac,v 1.4 1999/07/29 21:15:47 tron Exp $
 
 --- Makefile.global.in.orig	Tue Oct 13 14:23:08 1998
 +++ Makefile.global.in	Thu Jul 29 21:18:18 1999
@@ -11,8 +11,7 @@ $NetBSD: patch-ac,v 1.3 1999/07/29 20:27:20 tron Exp $
  NEWSGROUP	= @NEWSGRP@
  
  PATHNEWS = @prefix@
--PATHBIN = @prefix@/bin
-+PATHBIN = @prefix@/libexec/inn
+ PATHBIN = @prefix@/bin
  PATHETC = @ETCDIR@
  PATHLIB = @LIBDIR@
  PATHCONTROL = $(PATHBIN)/control
@@ -24,10 +23,10 @@ $NetBSD: patch-ac,v 1.3 1999/07/29 20:27:20 tron Exp $
 -MAN3    = @MANDIR@/man3
 -MAN5    = @MANDIR@/man5
 -MAN8    = @MANDIR@/man8
-+MAN1    = $(PREFIX)/man/man1
-+MAN3    = $(PREFIX)/man/man3
-+MAN5    = $(PREFIX)/man/man5
-+MAN8    = $(PREFIX)/man/man8
++MAN1    = $(LOCALBASE)/man/man1
++MAN3    = $(LOCALBASE)/man/man3
++MAN5    = $(LOCALBASE)/man/man5
++MAN8    = $(LOCALBASE)/man/man8
  
  LEX	= @LEX@ 
  YACC	= @YACC@
