@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:55:21 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/11/26 15:58:08 jlam Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -15,7 +15,8 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 
 CONFIGURE_ARGS+=	--with-database=postgres --with-mm=${BUILDLINK_PREFIX.libmm}
-CONFIGURE_ENV+=		CPPFLAGS="-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql -I${BUILDLINK_PREFIX.apache}/include/httpd"
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+CFLAGS+=	`${APXS} -q CFLAGS CFLAGS_SHLIB`
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
