@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.6 2000/12/12 16:03:14 jlam Exp $
+# $NetBSD: INSTALL,v 1.7 2000/12/15 21:57:38 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -24,7 +24,8 @@ LOGDIR=/var/log/cups
 REQUESTDIR=/var/spool/cups
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/cups
 CONFDIR=/etc/cups
-CONFFILES="classes.conf client.conf cupsd.conf mime.convs mime.types printers.conf"
+CONFFILES="client.conf cupsd.conf"
+NONCONFFILES="classes.conf mime.convs mime.types printers.conf"
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -70,7 +71,7 @@ POST-INSTALL)
 	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
 
 	echo "Installing configuration files:"
-	for file in ${CONFFILES}
+	for file in ${CONFFILES} ${NONCONFFILES}
 	do
 		FILE=${CONFDIR}/${file}
 		SAMPLEFILE=${SAMPLECONFDIR}/${file}
@@ -84,6 +85,7 @@ POST-INSTALL)
 		fi
 	done
 	${CAT} << EOF
+
 ===========================================================================
 Some files you might need to customize include the following:
 
