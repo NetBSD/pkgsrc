@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/03 15:27:01 jmmv Exp $
 #
 
 DISTNAME=		gtk-engines-1.9.0
@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/1.9/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@hispabsd.org
+MAINTAINER=		jmmv@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme engines for GTK+ version 2
 

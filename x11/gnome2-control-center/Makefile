@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/03 15:27:01 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.0.1.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 

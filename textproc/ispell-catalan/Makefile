@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/11/19 15:11:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/03 15:27:00 jmmv Exp $
 #
 
 DISTNAME=	ispell-sc-ca
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.softcatala.org/cgi-bin/gaudi/contadorb/load.cgi?/fitxers/linux/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://www.softcatala.org/projectes/myspell/
 COMMENT=	Catalan dictionary for interactive spelling checker
 

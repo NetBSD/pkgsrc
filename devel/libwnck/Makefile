@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 06:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/03 15:26:57 jmmv Exp $
 #
 
 DISTNAME=	libwnck-0.17
@@ -7,7 +7,7 @@ CATEGORIES=	devel x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/0.17/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Library to write pagers and tasklists
 
