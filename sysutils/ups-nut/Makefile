@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/12/31 22:47:05 lukem Exp $
+# $NetBSD: Makefile,v 1.27 2003/01/28 22:04:19 jlam Exp $
 #
 
 DISTNAME=		nut-1.2.1
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-user=${NUT_USER}				\
@@ -71,5 +72,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${NUT_DOCDIR}/cables
 	${INSTALL_DATA} ${WRKSRC}/docs/drivers/*.txt ${NUT_DOCDIR}/drivers
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

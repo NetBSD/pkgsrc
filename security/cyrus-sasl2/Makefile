@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/11 23:48:58 chris Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/28 22:04:04 jlam Exp $
 
 DISTNAME=		cyrus-sasl-2.1.10
 SVR4_PKGNAME=		csasl
@@ -11,6 +11,7 @@ HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Simple Authentication and Security Layer
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
@@ -97,5 +98,4 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 
 .include "../../security/openssl/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/12 17:56:05 veego Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:07 jlam Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		1
@@ -17,6 +17,7 @@ BUILD_DEFS+=		USE_INET6
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
 			--enable-ipv6 \
@@ -47,5 +48,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${IRSSI_CONFIG}
 
 .include "../../devel/glib/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

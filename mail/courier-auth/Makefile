@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/08 23:15:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:28 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -9,6 +9,7 @@ CONFLICTS=	courier-imap<=1.4.0
 CONFLICTS+=	courier-imap-ldap-*
 
 USE_PERL5=		yes
+USE_PKGINSTALL=		yes
 REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.authdaemond"
@@ -37,5 +38,4 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file};			\
 	done
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/23 12:52:29 toshii Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:19 jlam Exp $
 
 DISTNAME=	monafont-2.22
 PKGNAME=	${DISTNAME:S/font/fonts/}
@@ -10,8 +10,9 @@ MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://monafont.sourceforge.net/
 COMMENT=	Japanese fonts for "Mona" seen at 2ch.net
 
-USE_X11BASE=	# Defined
-USE_PERL5=	# Defined
+USE_X11BASE=	yes
+USE_PKGINSTALL=	yes
+USE_PERL5=	yes
 ALL_TARGET=	bdf
 MAKE_FLAGS+=	SED_CMD=${SED:Q}
 MAKE_FLAGS+=	PERL_CMD=${PERL5:Q}
@@ -24,5 +25,4 @@ FILES_SUBST+=	X11FONTSSUBDIR=local
 post-extract:
 	${MKDIR} ${WRKSRC}/dist
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

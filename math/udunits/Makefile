@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/24 18:56:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:43 jlam Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
@@ -15,6 +15,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Df2cFortran -Dunix
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/UDUNITS/.packlist
@@ -27,5 +28,4 @@ post-install:
 	${RM} -rf ${WRKSRC}/perl/blib/lib
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/11 10:02:03 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/28 22:04:00 jlam Exp $
 
 DISTNAME=		auctex-11.13
 CATEGORIES=		print
@@ -10,7 +10,8 @@ COMMENT=		Enhanced LaTeX mode for Emacs
 
 DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 
-USE_GMAKE=		#defined
+USE_GMAKE=		yes
+USE_PKGINSTALL=		yes
 
 TEX_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		TEX_PREFIX=teTeX
@@ -59,5 +60,4 @@ do-install:
 
 .include "../../mk/emacs.mk"
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

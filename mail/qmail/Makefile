@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/09/19 09:04:12 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/28 22:03:38 jlam Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -26,6 +26,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 NO_PACKAGE=		"needs work to function properly as a binary package"
 
+USE_PKGINSTALL=		yes
 OWN_DIRS+=		${QMAILDIR}
 
 FILES_SUBST+=		QMAILDIR=${QMAILDIR}
@@ -54,5 +55,4 @@ post-install:
 	cd ${QMAILDIR}/alias && 					\
 		${TOUCH} .qmail-postmaster .qmail-mailer-daemon .qmail-root
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

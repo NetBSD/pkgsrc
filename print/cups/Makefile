@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/01/23 23:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2003/01/28 22:04:00 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -26,11 +26,12 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-USE_BUILDLINK2=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES=	datasize memorysize
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
@@ -131,5 +132,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/autoconf.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
