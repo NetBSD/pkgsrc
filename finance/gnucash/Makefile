@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2005/03/02 21:50:46 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2005/03/30 11:15:46 wiz Exp $
 
 DISTNAME=		gnucash-1.8.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
+DEPENDS+=		guile-slib-[0-9]*:../../finance/gnucash
 DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
 DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 
