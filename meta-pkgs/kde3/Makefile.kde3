@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.6 2004/02/04 14:01:16 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.7 2004/02/06 00:23:51 xtraeme Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -7,6 +7,18 @@
 CATEGORIES+=	kde
 _KDE_VERSION=	3.2.0
 MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://download.uk.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://download.au.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://mirrors.midco.net/pub/kde/stable/3.2/src/ \
+		ftp://download.uk.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://ftp.eu.uu.net/pub/kde/stable/3.2/src/ \
+		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/3.2/src/ \
+		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/3.2/src/ \
+		ftp://ftp.rediris.es/mirror/kde/stable/3.2/src/ \
+		ftp://ftp.du.se/pub/mirrors/kde/stable/3.2/src/ \
+		ftp://download.tw.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://www.t.ring.gr.jp/pub/X/kde/stable/3.2/src/ \
+		http://www.t.ring.gr.jp/archives/X/kde/stable/3.2/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://public.planetmirror.com.au/pub/kde/stable/3.2/src/ \
