@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8571 2005/01/02 20:19:46 minskim Exp $
+$NetBSD: CHANGES,v 1.8572 2005/01/02 22:32:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated icecast to 2.2.0 [wiz 2005-01-02]
 	Updated tcl-tclX to 8.3.5nb2 [minskim 2005-01-02]
 	Updated tk-tclX to 8.3.5nb2 [minskim 2005-01-02]
+	Updated gnucash to 1.8.10nb2 [wiz 2005-01-02]
