@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2004/03/23 04:40:59 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2004/11/08 13:38:17 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp
 #
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02
 CATEGORIES=		archivers
-MASTER_SITES=		ftp://rarsoft.ti.sk/pub/rar/ \
-			ftp://ftp.elf.stuba.sk/pub/pc/pack/
+MASTER_SITES=		ftp://ftp.elf.stuba.sk/pub/pc/pack/
 EXTRACT_SUFX=		.sfx
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -21,7 +20,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
-USE_BUILDLINK3=		yes
+NO_BUILDLINK=		yes
 
 pre-extract:
 	@if [ -z "$$KERNEL" ]; then \
