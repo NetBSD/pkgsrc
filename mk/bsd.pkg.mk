@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1570 2005/01/24 18:44:38 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1571 2005/01/24 19:32:33 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -955,24 +955,6 @@ RMAN?=			${X11BASE}/bin/rman
 .  endif
 .endif
 
-# Set the CLASSPATH for Java packages.  This must come after EVAL_PREFIX
-# is evaluated because PKG_JAVA_HOME is used in a .if.endif conditional,
-# and its value is indirectly set by EVAL_PREFIX.
-#
-.if defined(USE_JAVA)
-.  if exists(${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES})
-_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES}:
-.  endif
-.  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
-_JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
-.  endif
-CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
-
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
-.endif
-
 # Include popular master sites
 .include "../../mk/bsd.sites.mk"
 
@@ -1178,18 +1160,6 @@ USE_LANGUAGES?=		# empty
 .  include "../../mk/wrapper/bsd.wrapper.mk"
 .endif
 
-# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
-.if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*$//})
-${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
-_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
-${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
-MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
-.    endif
-.  endfor
-.endif
-
 .if defined(RECOMMENDED)
 .  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
 DEPENDS+=		${RECOMMENDED}
@@ -1207,19 +1177,33 @@ DEPENDS:=	${REDUCED_DEPENDS}
 .  include "../../mk/dirs.mk"
 .endif
 
-_PREPENDED_TO_PATH?=	# empty
-.for _dir_ in ${PREPEND_PATH}
-.  if empty(_PREPENDED_TO_PATH:M${_dir_})
-_PREPENDED_TO_PATH+=	${_dir_}
-PATH:=			${_dir_}:${PATH}
-.  endif
-.endfor
+# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*$//})
+${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
+MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
+.    endif
+.  endfor
+.endif
+
+.if !defined(_PATH_ORIG)
+_PATH_ORIG:=		${PATH}
+MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
+
+# This is very Special.  Because PREPEND_PATH is set with += in reverse order,
+# the awk expression reverses the order again (since bootstrap bmake doesn't
+# yet support the :[-1..1] construct).
+_PATH_CMD=		${ECHO} `${ECHO} ${PREPEND_PATH:Q} | ${AWK} '{ORS=":";for (i=NF;i>0;i--) print $$i}'`${_PATH_ORIG}
+PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
+.endif
 
 # Add these bits to the environment use when invoking the sub-make
 # processes for build-related phases.
 #
 BUILD_ENV+=	PATH=${PATH:Q}
-BUILD_ENV+=	_PREPENDED_TO_PATH=${_PREPENDED_TO_PATH:Q}
 
 .MAIN: all
 
