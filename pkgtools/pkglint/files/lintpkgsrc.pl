@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.94 2004/11/04 12:37:02 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.95 2005/02/04 15:46:58 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -355,7 +355,8 @@ sub convert_to_standard_dewey
     {
     # According to the current implementation in pkg_install/lib/str.c
     # as of 2002/06/02, '_' before a number, '.', and 'pl' get treated as 0,
-    # while 'rc' gets treated as -1; other characters are converted to lower
+    # while 'rc' and 'pre' get treated as -1; beta as '-2', alpha as '-3'.
+    # Other characters are converted to lower
     # case and then to a number: a->1, b->2, c->3, etc. Numbers stay the same.
     # 'nb' is a special case that's already been handled when we are here.
     my($elem, $underscore, @temp);
@@ -368,6 +369,9 @@ sub convert_to_standard_dewey
 	}
 	elsif ($elem =~ /^_$/) {
 	    push(@temp, 0);
+	}
+	elsif ($elem =~ /^pre$/) {
+	    push(@temp, -1);
 	}
 	elsif ($elem =~ /^rc$/) {
 	    push(@temp, -1);
@@ -652,9 +656,7 @@ sub package_globmatch
 
 	($matchpkgname, $test, $matchver) = ($1, $2, $3);
 
-	if ($test ne '-' && $matchver !~ /^[\d.]+(pl\d+|p\d+|rc\d+|nb\d+|)*$/ )
-	    { $matchver = "invalid-dewey($test$matchver)"; }
-	elsif (@pkgvers = $pkglist->pkgver($matchpkgname))
+	if (@pkgvers = $pkglist->pkgver($matchpkgname))
 	    {
 	    foreach my $pkgver (@pkgvers)
 		{
@@ -754,6 +756,13 @@ sub parse_makefile_pkgsrc
 	}
     if ($pkgname =~ /^pkg_install-(\d+)$/ && $1 < $pkg_installver)
 	{ $pkgname = "pkg_install-$pkg_installver"; }
+    if (defined $pkgname)
+        {
+	# XXX: hack for python and ruby prefix support
+	$pkgname =~ s/^py..pth-/py-/;
+	$pkgname =~ s/^py..-/py-/;
+	$pkgname =~ s/^ruby..-/ruby-/;
+        }
     if (defined $pkgname)
 	{
 	if (defined $vars->{PKGREVISION}
@@ -1211,6 +1220,10 @@ sub pkgsrc_check_depends
 	foreach my $depend (split(" ", $pkgver->var('DEPENDS')))
 	    {
 	    $depend =~ s/:.*// || next;
+	    # XXX: hack for python prefix support
+	    $depend =~ s/^py..pth-/py-/;
+	    $depend =~ s/^py..-/py-/;
+	    $depend =~ s/^ruby..-/ruby-/;
 	    if (($msg = invalid_version($depend)))
 		{
 		if (!defined($err))
