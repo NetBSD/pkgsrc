@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.136 2002/10/02 13:10:58 itojun Exp $
+$NetBSD: CHANGES,v 1.137 2002/10/02 13:32:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated vmware-module to 1.0nb1 [uebayasi 2002-10-02]
 	Updated gauche to 0.6.3 [minoura 2002-10-02]
 	Updated apache to 2.0.42 [itojun 2002-10-02]
+	Updated socks5 to 1.0.2nb1 [grant 2002-10-02]
