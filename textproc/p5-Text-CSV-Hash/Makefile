@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2002/12/09 19:18:43 abs Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/20 19:04:01 abs Exp $
 
-DISTNAME=		Text-CSV-Hash-0.16
+DISTNAME=		Text-CSV-Hash-0.17
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		http://www.mono.org/abs/tools/Text-CSV-Hash/
