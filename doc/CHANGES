@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7611 2004/10/30 05:09:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7612 2004/10/30 05:27:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4975,3 +4975,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated feh to 1.2.7 [xtraeme 2004-10-30]
 	Updated swiggle to 0.3.3 [minskim 2004-10-30]
 	Added swapd-1.0 [xtraeme 2004-10-30]
+	Updated tcl to 8.4.7nb3 [minskim 2004-10-30]
+	Updated tcl-expect to 5.38.0nb3 [minskim 2004-10-30]
