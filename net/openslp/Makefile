@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/31 17:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/15 04:12:19 markd Exp $
 
 DISTNAME=	openslp-1.0.7
 CATEGORIES=	net
@@ -41,7 +41,9 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
 			${PREFIX}/etc/rc.d/$${script};			\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/etc; for file in ${CONFS}; do			\
 		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
