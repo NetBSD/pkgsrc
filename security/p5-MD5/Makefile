@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/27 07:11:20 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/22 14:23:44 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:23 jfitz Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MD5/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MD5/MD5.html
 
-CONFLICTS+=		p5-Digest-MD5-*
+CONFLICTS+=		p5-Digest-MD5-[0-9]*
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MD5/.packlist
