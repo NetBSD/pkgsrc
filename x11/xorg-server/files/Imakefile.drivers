@@ -1,3 +1,0 @@
-/* $NetBSD: Imakefile.drivers,v 1.1 2005/01/24 10:57:27 hira Exp $ */
-
-CARDDRIVERS= XF86CardDrivers
