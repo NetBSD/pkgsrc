@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/22 09:16:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/22 10:11:16 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.4.4.7
@@ -12,6 +12,8 @@ MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
+BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -22,9 +24,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-CONFIGURE_ENV+=		X11BASE=${X11BASE} GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
-MAKE_ENV+=		ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 MAKE_ENV+=		CHMOD=${CHMOD} CHOWN=${CHOWN}
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/dm/Sessions
@@ -54,10 +54,14 @@ SUPPORT_FILES+=		${EGDIR}/gdm/$f \
 RCD_SCRIPTS=		gdm
 
 SUBST_CLASSES+=		desktop
-SUBST_MESSAGE.desktop=	"Enabling sessions."
-SUBST_STAGE.desktop=	post-patch
-SUBST_FILES.desktop=	config/default.desktop.in config/gnome.desktop.in
+SUBST_MESSAGE.desktop=	"Configuring GDM settings."
+SUBST_STAGE.desktop=	pre-configure
+SUBST_FILES.desktop=	config/default.desktop.in
+SUBST_FILES.desktop+=	config/gnome.desktop.in
+SUBST_FILES.desktop+=	config/gdm.conf.in
 SUBST_SED.desktop=	-e 's/^_//g'
+SUBST_SED.desktop+=	-e 's|@GDMOWN@|${GDMOWN}|g'
+SUBST_SED.desktop+=	-e 's|@GDMGRP@|${GDMGRP}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,14 +78,11 @@ BUILD_DEFS+=	USE_PAM
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink2.mk"
+CONFIGURE_ENV+=		USE_PAM=yes
 PLIST_SUBST+=		PAM_MISC=""
 .else
+CONFIGURE_ENV+=		USE_PAM=no
 PLIST_SUBST+=		PAM_MISC="@comment "
-SUBST_CLASSES+=		pam
-SUBST_MESSAGE.pam=	"Disabling PAM."
-SUBST_STAGE.pam=	post-patch
-SUBST_FILES.pam=	configure
-SUBST_SED.pam=		-e 's:security/pam_appl.h:nopam:g'
 .endif
 
 post-install:
