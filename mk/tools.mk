@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.4.2.5 2003/08/26 21:58:07 jlam Exp $
+# $NetBSD: tools.mk,v 1.4.2.6 2003/08/27 01:57:19 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -225,7 +225,7 @@ _TOOLS_PROGNAME.make=	${GMAKE}
 BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
 _TOOLS_OVERRIDE.make=	YES
 _TOOLS_PROGNAME.make=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}make
-GREP:=			${_TOOLS_PROGNAME.make}
+GMAKE:=			${_TOOLS_PROGNAME.make}
 .endif
 .if !empty(PKGPATH:Mdevel/gmake)
 _TOOLS_OVERRIDE.make=	NO
