@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.22.2.1 2004/05/26 10:55:01 grant Exp $
+$NetBSD: patch-aa,v 1.22.2.2 2004/05/31 22:26:04 grant Exp $
 
---- Makefile.tmpl.orig	Fri May 14 16:36:50 2004
+--- Makefile.tmpl.orig	2004-05-13 22:18:11.000000000 +0100
 +++ Makefile.tmpl
 @@ -56,6 +56,8 @@ INSTALL_DATA    = $(INSTALL) $(IFLAGS_DA
  PERL            = @PERL@
