@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/31 17:55:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/29 07:36:49 jlam Exp $
 #
 
 DISTNAME=	jikes-1.15
@@ -11,17 +11,13 @@ COMMENT=	Java source to byte-code compiler
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_CXX=		yes
 CXXFLAGS+=		${CFLAGS}
 UNLIMIT_RESOURCES=      datasize
 
 USE_GMAKE=	# uses multi-line comments with \ (naughty hack!)
 
-GCC_VERSION!=           gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as this package tickles c++ compiler bugs
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
