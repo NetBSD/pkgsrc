@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.32 2001/10/03 22:25:16 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.33 2001/10/03 23:27:07 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -103,6 +103,13 @@ MAKE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
 MAKE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
 .endif
 
+# Filter out libtool archives from the list of file to link into
+# ${BUILDLINK_DIR}.
+#
+_LIBTOOL_ARCHIVE_FILTER=						\
+	${SED}	-e 's|[^[:blank:]]*lib/[^[:blank:]]*.la$$||g'		\
+		-e 's|[^[:blank:]]*lib/[^[:blank:]]*.la[[:blank:]]||g'
+
 _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
@@ -110,7 +117,7 @@ _BUILDLINK_USE: .USE
 		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
-		files="`${ECHO} $${files} | ${SED} -e 's|[^[:blank:]]*lib/[^[:blank:]]*.la$$||g' -e 's|[^[:blank:]]*lib/[^[:blank:]]*.la[[:blank:]]||g'`"; \
+		files="`${ECHO} $${files} | ${LIBTOOL_ARCHIVE_FILTER}`"; \
 		for file in $${files}; do				\
 			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"` ; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
@@ -168,7 +175,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 
 .include "../../mk/bsd.prefs.mk"
 
-CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
+_CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
 
 # REPLACE_LIBNAMES_SCRIPT runs sed with ${REPLACE_LIBNAMES_SED} as the
 # substitution expression on the files specified in $${replace_libnames}.
@@ -185,7 +192,7 @@ REPLACE_LIBNAMES_SCRIPT=						\
 			${ECHO_MSG} "$${message}";			\
 			cd ${WRKSRC};					\
 			for file in $${replace_libnames}; do		\
-				if ${CHECK_IS_TEXT_FILE}; then		\
+				if ${_CHECK_IS_TEXT_FILE}; then		\
 					${ECHO_MSG} "	$${file}";	\
 					${SED}	${REPLACE_LIBNAMES_SED}	\
 						$${file} > $${file}.fixed; \
@@ -268,7 +275,7 @@ replace-buildlink:
 			${ECHO_MSG} "Fixing directory references and library names:"; \
 			cd ${WRKSRC};					\
 			for file in ${REPLACE_BUILDLINK}; do		\
-				if ${CHECK_IS_TEXT_FILE}; then		\
+				if ${_CHECK_IS_TEXT_FILE}; then		\
 					${ECHO_MSG} "	$${file}";	\
 					${SED}	${REPLACE_BUILDLINK_SED} \
 						${REPLACE_BUILDLINK_POST_SED} \
