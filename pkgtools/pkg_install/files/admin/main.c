@@ -1,9 +1,9 @@
-/*	$NetBSD: main.c,v 1.3 2003/01/07 16:10:02 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.4 2003/01/07 16:43:56 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.3 2003/01/07 16:10:02 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.4 2003/01/07 16:43:56 jschauma Exp $");
 #endif
 #endif
 
@@ -192,7 +192,7 @@ rebuild(void)
 	if (unlink(_pkgdb_getPKGDB_FILE(cachename, sizeof(cachename))) != 0 && errno != ENOENT)
 		err(EXIT_FAILURE, "unlink %s", cachename);
 
-	if (pkgdb_open(ReadWrite) == -1)
+	if (!pkgdb_open(ReadWrite))
 		err(EXIT_FAILURE, "cannot open pkgdb");
 
 	setbuf(stdout, NULL);
@@ -546,7 +546,7 @@ main(int argc, char *argv[])
 
 		printf("Dumping pkgdb %s:\n", _pkgdb_getPKGDB_FILE(cachename, sizeof(cachename)));
 
-		if (pkgdb_open(ReadOnly) == -1) {
+		if (!pkgdb_open(ReadOnly)) {
 			err(EXIT_FAILURE, "cannot open %s", cachename);
 		}
 		while ((key = pkgdb_iter())) {
@@ -563,7 +563,7 @@ main(int argc, char *argv[])
 
 		int     rc;
 
-		if (pkgdb_open(ReadWrite) == -1)
+		if (!pkgdb_open(ReadWrite))
 			err(EXIT_FAILURE, "cannot open pkgdb");
 
 		rc = pkgdb_remove(argv[2]);
@@ -580,7 +580,7 @@ main(int argc, char *argv[])
 
 		int     rc;
 
-		if (pkgdb_open(ReadWrite) == -1) {
+		if (!pkgdb_open(ReadWrite)) {
 			err(EXIT_FAILURE, "cannot open pkgdb");
 		}
 

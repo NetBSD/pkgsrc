@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.3 2003/01/07 16:10:03 jschauma Exp $	*/
+/*	$NetBSD: perform.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.3 2003/01/07 16:10:03 jschauma Exp $");
+__RCSID("$NetBSD: perform.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -338,7 +338,7 @@ pkg_perform(lpkg_head_t *pkghead)
 			char   *file, *pkg;
 
 			/* pkg_info -Fa => Dump pkgdb */
-			if (pkgdb_open(ReadOnly) == -1) {
+			if (!pkgdb_open(ReadOnly)) {
 				err(EXIT_FAILURE, "cannot open pkgdb");
 			}
 			while ((file = pkgdb_iter())) {
