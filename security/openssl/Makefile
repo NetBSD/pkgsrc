@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2001/08/30 14:02:06 skrll Exp $
+# $NetBSD: Makefile,v 1.45 2001/09/14 14:17:10 skrll Exp $
 
 DISTNAME=		openssl-0.9.6
-PKGNAME=		${DISTNAME}nb1
+PKGNAME=		${DISTNAME}nb2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/openssl/
@@ -35,7 +35,7 @@ CONFIGURE_ENV=		CC="${CC}"
 
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		openssl-0.9.6-20010830-netbsd.patch.gz
+PATCHFILES=		openssl-0.9.6-20010914-netbsd.patch.gz
 
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
 .endif
@@ -89,9 +89,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
 	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib
 .if ${OPSYS} == "NetBSD"
-	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.1.0 libssl.so.1.0 ${PREFIX}/lib
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.200.0 libssl.so.200.0 ${PREFIX}/lib
 .if ${OBJECT_FMT} == "ELF"
-.for shared_lib in libcrypto.so.1.0 libssl.so.1.0
+.for shared_lib in libcrypto.so.200.0 libssl.so.200.0
 	cd ${PREFIX}/lib && ${LN} -s ${shared_lib} ${shared_lib:R} && \
 		${LN} -s ${shared_lib} ${shared_lib:R:R}
 .endfor
