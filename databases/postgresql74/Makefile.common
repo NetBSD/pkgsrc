@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/10/10 07:30:22 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/10/10 16:44:39 jdolecek Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -102,6 +102,11 @@ post-extract:
 		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch];\
+		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]	\
+			${WRKSRC}/src/backend/port/dynloader/;	\
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
