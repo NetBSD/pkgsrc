@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.715 2002/12/07 18:15:11 cjep Exp $
+$NetBSD: CHANGES,v 1.716 2002/12/07 18:55:13 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3851,3 +3851,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated readline to 4.3 [jmmv 2002-12-07]
 	Added eukleides-0.9.0 [cjep 2002-12-07]
 	Added xeukleides-0.9.0 [cjep 2002-12-07]
+	Updated xpdf to 2.01 [drochner 2002-12-07]
+	Updated py-reportlab to 1.16 [drochner 2002-12-07]
+	Updated zope25-ZWiki to 0.13 [drochner 2002-12-07]
+	Updated htmldoc to 1.8.23 [drochner 2002-12-07]
