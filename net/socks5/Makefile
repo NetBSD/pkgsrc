@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:40 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/11 16:05:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.astec.co.jp/pub/security/socks/  \
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
+
+CONFLICTS=	socks4-2.2
 
 NO_CDROM=	"NEC has a funky license for this software"
 RESTRICTED=	"no commercial use"
