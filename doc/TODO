@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.802 2003/08/30 22:25:46 jmmv Exp $
+$NetBSD: TODO,v 1.803 2003/08/30 23:28:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -83,7 +83,6 @@ Suggested package updates
 	o balsa2-2.0.14
 	o bogofilter-0.14.5.2
 	o bzflag-1.7g2
-	o calc-2.11.8
 	o centericq-4.9.6
 	o cervisia-2.0
 	o citrix_ica-7.00.7757 [pkg/22209]
@@ -147,7 +146,6 @@ Suggested package updates
 	o grace-5.1.12
 	o grepmail-5.20
 	o grhino-0.8.1
-	o gsl-1.4
 	o gstreamer-0.6.3
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
