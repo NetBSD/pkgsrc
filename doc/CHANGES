@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5713 2004/04/22 12:00:43 abs Exp $
+$NetBSD: CHANGES,v 1.5714 2004/04/22 14:41:03 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2217,4 +2217,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ocaml to 3.06nb6 [tron 2004-04-22]
 	Updated lablgtk to 1.2.6nb1 [tron 2004-04-22]
 	Updated cpuflags to 0.67 [abs 2004-04-22]
-
+	Updated libtool to 1.5.6 [tv 2004-04-22]
