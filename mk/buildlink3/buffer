@@ -1,4 +1,4 @@
-# $NetBSD: buffer,v 1.5 2004/01/29 07:14:30 jlam Exp $
+# $NetBSD: buffer,v 1.6 2004/01/29 07:19:00 jlam Exp $
 #
 # Push arguments onto the argument stack and shift the arguments.  The
 # next argument checked by the cache and logic files is take from the
@@ -34,24 +34,16 @@ if $test -z "$depth"; then
 		arg=`$echo "X$arg" | $Xsed -e "s|^"$R"||g"`
 		allargs="$@"
 		save_IFS="${IFS}"; IFS=":"
-		dirlist=
 		set -- $arg
 		while $test $# -gt 0; do
-			case "$dirlist" in
-			"$1"|"$1 "*) ;;
-			*" $1 "*|*" $1")	 ;;
-			*) dirlist="$1 $dirlist" ;;
-			esac
+			depth=${depth}0
+			eval stack${depth}="\$R\$1"
 			shift
 		done
 		IFS="${save_IFS}"
 		if $test -n "$allargs"; then
 			set -- $allargs
 		fi
-		for dir in $dirlist; do
-			depth=${depth}0
-			eval stack${depth}="\$R\$dir"
-		done
 		;;
 	*)
 		depth=${depth}0
