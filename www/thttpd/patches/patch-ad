@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 1999/12/15 14:48:49 abs Exp $
+$NetBSD: patch-ad,v 1.2 2000/07/27 12:42:08 jlam Exp $
 
---- index.html.orig	Wed Dec 15 13:30:29 1999
-+++ index.html	Wed Dec 15 13:31:10 1999
-@@ -13,5 +13,9 @@
+--- index.html.orig	Wed Feb  9 16:52:20 2000
++++ index.html	Thu Jul 27 07:25:55 2000
+@@ -12,5 +12,9 @@
  
  <HR>
  <ADDRESS><A HREF="mailto:webmaster@acme.com">ACME Labs Webmaster &lt;webmaster@acme.com&gt;</A></ADDRESS>
 +<A HREF="http://www.netbsd.org/">
-+<IMG ALIGN=RIGHT SRC="sitedrivenby.gif" border=0 ALT="Site driven by NetBSD">
++<IMG ALIGN=RIGHT SRC="sitedrivenby.gif border=0 ALT="Site driven by NetBSD">
 +</A>
 +
  </BODY>

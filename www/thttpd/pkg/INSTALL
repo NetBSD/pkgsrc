@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/07/27 12:42:09 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	EXAMPLE_DIR=${PKG_PREFIX}/share/examples
+	INSTALL_DATA="/usr/bin/install -c -o root -g wheel -m 0644"
+
+	if [ ! -f /etc/thttpd.conf ]
+	then
+		echo "Installing example thttpd.conf in /etc..."
+		${INSTALL_DATA} ${EXAMPLE_DIR}/thttpd.conf /etc/thttpd.conf
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
