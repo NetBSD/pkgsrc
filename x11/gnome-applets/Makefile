@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/02/18 14:56:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2003/04/20 13:50:30 rh Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
 
 BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
+
+BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
