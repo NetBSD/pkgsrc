@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 1998/08/28 12:53:04 garbled Exp $
+--- Makefile.orig	Mon Dec 22 12:55:36 1997
++++ Makefile	Fri Aug 28 05:16:43 1998
+@@ -6,9 +6,10 @@
+ #
+ CC=  gcc  # gcc or g++
+ 
+-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
+-LDFLAGS=-L/usr/X11R6/lib
+-LIBS=-lXext -lX11 -lnsl -lm
++CFLAGS=-g -Wall -DNORMALUNIX # -DUSEASM 
++CFLAGS+= -I$(X11BASE)/include
++LDFLAGS=-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
++LIBS=-lXext -lX11 -lm
+ 
+ # subdirectory for objects
+ O=linux

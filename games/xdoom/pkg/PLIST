@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/28 12:53:06 garbled Exp $
+bin/xdoom
+share/doom/doom1.wad
+@dirrm share/doom

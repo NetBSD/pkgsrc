@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 1998/08/28 12:53:05 garbled Exp $
+--- i_sound.c.orig	Fri Aug 28 04:29:07 1998
++++ i_sound.c	Fri Aug 28 04:30:33 1998
+@@ -747,7 +747,7 @@
+ 	    getenv("DOOMWADDIR"),
+ 	    sndserver_filename);
+   else
+-    sprintf(buffer, "%s", sndserver_filename);
++    sprintf(buffer, "XXXPREFIXXXX/bin/%s", sndserver_filename);
+   
+   // start sound process
+   if ( !access(buffer, X_OK) )
