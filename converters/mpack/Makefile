@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/11 07:23:29 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/13 21:28:27 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	External MIME packer/unpacker
 
 WRKSRC=		${WRKDIR}/mpack
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
