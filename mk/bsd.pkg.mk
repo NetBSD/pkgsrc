@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1001 2002/07/02 15:25:50 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1002 2002/07/03 06:58:31 cjep Exp $
 #
 # This file is in the public domain.
 #
@@ -2476,7 +2476,7 @@ ${PATCH_COOKIE}:
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
-	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} configure\""
+	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
