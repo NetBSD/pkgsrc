@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/24 00:16:09 seb Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/10 12:52:47 wiz Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -12,14 +12,14 @@ COMMENT=	Berkeley nvi with additional features
 
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
-CONFIGURE_ARGS+=	--with-db3=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-db3=${BUILDLINK_PREFIX.db3}
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build.unix
 
-.include "../../databases/db3/buildlink.mk"
+.include "../../databases/db3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
