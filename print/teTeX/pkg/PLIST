@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 22:44:47 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/06/01 22:15:11 tron Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -73,6 +73,7 @@ bin/amstex
 bin/kpsexpand
 bin/kpsepath
 bin/kpsewhich
+bin/texi2dvi
 @unexec %D/bin/install-info --delete %D/info/latex %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/kpathsea.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/dvips.info %D/info/dir
@@ -3449,8 +3450,8 @@ share/texmf/ls-R
 @exec ln -sf ../latex/natbib %D/share/texmf/doc/bibtex/natbib
 @unexec rm -f %D/share/texmf/doc/bibtex/natbib
 @exec /bin/mkdir -p %D/share/texmf/fonts/pk
-@dirrm share/texmf/xdvi
-@dirrm share/texmf/web2c
+@unexec rm -rf %D/share/texmf/xdvi
+@unexec rm -rf %D/share/texmf/web2c
 @dirrm share/texmf/texconfig/x
 @dirrm share/texmf/texconfig/v
 @dirrm share/texmf/texconfig/g
@@ -3513,11 +3514,11 @@ share/texmf/ls-R
 @dirrm share/texmf/metapost/config
 @dirrm share/texmf/metapost/base
 @dirrm share/texmf/metapost
-@dirrm share/texmf/metafont/misc
+@unexec rm -rf %D/share/texmf/metafont/misc
 @dirrm share/texmf/metafont/config
 @dirrm share/texmf/metafont/base
 @dirrm share/texmf/metafont
-@dirrm share/texmf/maketex
+@unexec rm -rf %D/share/texmf/maketex
 @dirrm share/texmf/makeindex
 @dirrm share/texmf/lists
 @dirrm share/texmf/fonts/vf/bitstrea/charter
@@ -3607,7 +3608,7 @@ share/texmf/ls-R
 @dirrm share/texmf/fonts/source/ams/cmextra
 @dirrm share/texmf/fonts/source/ams
 @dirrm share/texmf/fonts/source
-@dirrm share/texmf/fonts/pk
+@unexec rm -rf %D/share/texmf/fonts/pk
 @dirrm share/texmf/fonts/afm/bitstrea/charter
 @dirrm share/texmf/fonts/afm/bitstrea
 @dirrm share/texmf/fonts/afm/adobe/zapfding
@@ -3630,7 +3631,7 @@ share/texmf/ls-R
 @dirrm share/texmf/dvips/psfrag
 @dirrm share/texmf/dvips/misc
 @dirrm share/texmf/dvips/gsftopk
-@dirrm share/texmf/dvips/config
+@unexec rm -rf %D/share/texmf/dvips/config
 @dirrm share/texmf/dvips/base
 @dirrm share/texmf/dvips
 @dirrm share/texmf/doc/tetex
