@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.6 2003/11/12 20:01:17 tron Exp $
+
+--- src/chrtrans/makefile.in.orig	2001-04-02 02:51:46.000000000 +0200
++++ src/chrtrans/makefile.in	2003-11-12 20:34:44.000000000 +0100
+@@ -99,7 +99,7 @@
+ 
+ makeuctb$(_O): $(srcdir)/UCkd.h $(srcdir)/makeuctb.c
+ 
+-.SUFFIXES : $(_O) .tbl .i
++.SUFFIXES : $(_O) .tbl .i .h
+ 
+ .c$(_O):
+ @RULE_CC@
