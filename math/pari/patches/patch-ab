@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2001/05/04 17:14:08 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2001/05/19 17:31:05 jtb Exp $
 
---- config/Makefile.SH.orig	Mon Mar 27 18:43:42 2000
+--- config/Makefile.SH.orig	Wed Apr 18 11:40:57 2001
 +++ config/Makefile.SH
-@@ -80,7 +80,7 @@
+@@ -81,7 +81,7 @@
  X11)
    PLOTFILE=plotX.c
    PLOTCFLAGS=-I$Xincroot
 -  PLOTLIBS="-L$X11 -lX11 $extralib"
-+  PLOTLIBS="-R$X11 -L$X11 -lX11 $extralib"
++  PLOTLIBS="-Wl,-R$X11 -L$X11 -lX11 $extralib"
    if test "$osname" = concentrix; then PLOTLIBS="-lX11"; fi
    plotrunpath=$X11
    ;;
-@@ -160,8 +160,9 @@
- INCLUDEDIR = $includedir
+@@ -175,8 +175,10 @@
+ MISCDIR = \$(ALLDIR)/misc
  
  INSTALL = $cfg/install
 -INSTALL_PROGRAM = \$(INSTALL)
@@ -20,15 +20,15 @@ $NetBSD: patch-ab,v 1.2 2001/05/04 17:14:08 jtb Exp $
 +INSTALL_PROGRAM = \$(BSD_INSTALL_PROGRAM)
 +INSTALL_SCRIPT = \$(BSD_INSTALL_SCRIPT)
 +INSTALL_DATA = \$(BSD_INSTALL_DATA)
++INSTALL_MAN = \$(BSD_INSTALL_MAN)
  
  # Graphic library.
  PLOTFILE   = $PLOTFILE
-@@ -257,21 +258,21 @@
+@@ -272,21 +274,17 @@
  	   \$(INSTALL_DATA) \$\$i.h                \$(INCLUDEDIR); done
  	-for i in $hlist; do \\
  	   \$(INSTALL_DATA) $src/headers/\$\$i.h   \$(INCLUDEDIR); done
 -	-\$(RM) \$(INCLUDEDIR)/genpari.h
-+#	-\$(RM) \$(INCLUDEDIR)/genpari.h
  	-\$(LN) pari.h \$(INCLUDEDIR)/genpari.h
  
  install-bin: install-bin-$dft
@@ -36,56 +36,52 @@ $NetBSD: patch-ab,v 1.2 2001/05/04 17:14:08 jtb Exp $
  install-bin-dyn: gp-dyn
  	-mkdir -p \$(BINDIR)
 -	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
-+#	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
  	-\$(LD) -o \$(BINDIR)/gp-$version \$(LDFLAGS) \$(OBJSGP) \$(RUNPTH_FINAL) \$(TOPLDDYN) \$(LDDYN) \$(PLOTLIBS) \$(LIBS)
 -	strip \$(BINDIR)/gp-$version
-+#	strip \$(BINDIR)/gp-$version
  	-\$(LN) gp-$version$exe_suff \$(BINDIR)/gp$exe_suff
  
  install-bin-sta: gp-sta
  	-mkdir -p \$(BINDIR)
 -	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
-+#	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
  	\$(INSTALL_PROGRAM) gp-sta$exe_suff \$(BINDIR)/gp-$version$exe_suff
  	-\$(LN) gp-$version$exe_suff \$(BINDIR)/gp$exe_suff
  # Can't strip it if we want install() to work on Linux or OSF.
-@@ -281,17 +282,17 @@
+@@ -294,15 +292,14 @@
+ 
+ install-man::
  	-mkdir -p \$(MANDIR)
- 	\$(INSTALL_DATA) $doc/gphelp.1 \$(MANDIR)
- 	\$(INSTALL_DATA) $doc/gp.1 \$(MANDIR)
+-	\$(INSTALL_DATA) $doc/gphelp.1 \$(MANDIR)
+-	\$(INSTALL_DATA) $doc/gp.1 \$(MANDIR)
 -	-\$(RM) \$(MANDIR)/pari.1
-+#	-\$(RM) \$(MANDIR)/pari.1
++	\$(INSTALL_MAN) $doc/gphelp.1 \$(MANDIR)
++	\$(INSTALL_MAN) $doc/gp.1 \$(MANDIR)
  	-\$(LN) gp.1 \$(MANDIR)/pari.1
  
- install-misc: $install_emacs_files
+ install-misc: $install_emacs_files install-top
+ 	-mkdir -p \$(MISCDIR) \$(BINDIR)
 -	\$(INSTALL_PROGRAM) $misc/tex2mail \$(BINDIR)
+-	\$(INSTALL_DATA) $doc/tex2mail.1 \$(MANDIR)
 +	\$(INSTALL_SCRIPT) $misc/tex2mail \$(BINDIR)
- 
- install-doc:
- 	-mkdir -p \$(MISCDIR)
- 	-mkdir -p \$(BINDIR)
++	\$(INSTALL_MAN) $doc/tex2mail.1 \$(MANDIR)
+ 	\$(INSTALL_DATA) $misc/README    \$(MISCDIR)
+ 	\$(INSTALL_DATA) $misc/color.dft \$(MISCDIR)
+ 	\$(INSTALL_DATA) $misc/gpalias   \$(MISCDIR)
+@@ -328,7 +325,7 @@
+ install-doc::
+ 	-mkdir -p \$(ALLDIR) \$(BINDIR) \$(DOCDIR)
  	-cd $doc; \$(MAKE) all
 -	-\$(INSTALL_PROGRAM) $doc/gphelp    \$(BINDIR)
 +	-\$(INSTALL_SCRIPT) $doc/gphelp    \$(BINDIR)
- 	-\$(INSTALL_DATA) $doc/translations \$(MISCDIR)
- 	-\$(INSTALL_DATA) $doc/paricfg.tex  \$(MISCDIR)
- 	-\$(INSTALL_DATA) $doc/parimacro.tex \$(MISCDIR)
-@@ -306,14 +307,13 @@
- 	-\$(INSTALL_DATA) $doc/refcard.ps   \$(MISCDIR)
- 
- install-data:
--	-mkdir -p \$(DATADIR)
--	@-for f in $data/*; do \$(INSTALL_DATA)  \$\$f \$(DATADIR); done 2>/dev/null
-+#	-mkdir -p \$(DATADIR)
-+#	@-for f in $data/*; do \$(INSTALL_DATA)  \$\$f \$(DATADIR); done 2>/dev/null
- 
- install-lib-sta: libpari.a
+ 	-\$(INSTALL_DATA) $doc/Makefile     \$(DOCDIR)
+ 	-\$(INSTALL_DATA) $doc/translations \$(DOCDIR)
+ 	-\$(INSTALL_DATA) $doc/appa.tex     \$(DOCDIR)
+@@ -372,8 +369,7 @@
+ install-lib-sta: \$(LIBPARI_STA)
  	-mkdir -p \$(LIBDIR)
--	-\$(RM) \$(LIBDIR)/libpari.a
--	\$(INSTALL_DATA) libpari.a \$(LIBDIR)/libpari.a.$version
--	-\$(LN) libpari.a.$version \$(LIBDIR)/libpari.a
-+#	-\$(RM) \$(LIBDIR)/libpari.a
-+	\$(INSTALL_DATA) libpari.a \$(LIBDIR)
+ 	-\$(RM) \$(LIBDIR)/\$(LIBPARI_STA)
+-	\$(INSTALL_DATA) \$(LIBPARI_STA) \$(LIBDIR)/\$(LIBPARI_STA).$version
+-	-\$(LN) \$(LIBPARI_STA).$version \$(LIBDIR)/\$(LIBPARI_STA)
++	\$(INSTALL_DATA) \$(LIBPARI_STA) \$(LIBDIR)
  
- install-lib-dyn: libpari.$somake
+ install-lib-dyn: \$(LIBPARI_DYN)
  	-mkdir -p \$(LIBDIR)
