@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7892 2004/11/18 06:27:20 grant Exp $
+$NetBSD: CHANGES,v 1.7893 2004/11/18 10:22:41 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5320,3 +5320,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lbreakout2 to 2.5.1 [adam 2004-11-17]
 	Added openvpn-current-2.0beta15 [xtraeme 2004-11-17]
 	Updated xmms to 1.2.10nb2 [grant 2004-11-18]
+	Updated wv2 to 0.2.2 [shannonjr 2004-11-18]
