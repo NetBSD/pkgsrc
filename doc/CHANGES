@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2351 2003/05/28 16:30:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.2352 2003/05/28 20:39:02 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2190,3 +2190,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated blender to 2.27 [jschauma 2003-05-28]
 	Added icdprog-0.3 [tsarna 2003-05-28]
 	Updated sirius to 0.6.0 [jmmv 2003-05-28]
+	Updated gzip-base to 1.2.4anb1 [salo 2003-05-28]
+	Updated gzip to 1.2.4anb1 [salo 2003-05-28]
