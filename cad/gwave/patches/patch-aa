@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/01 18:33:24 dmcmahill Exp $
+
+--- print.c.orig	Mon Sep 27 15:15:15 1999
++++ print.c	Wed Mar  1 12:09:30 2000
+@@ -34,6 +34,9 @@
+ #include <errno.h>
+ 
++#include <sys/types.h>
++#include <sys/wait.h>
++
+ #include <gtk/gtk.h>
+-#include <config.h>
++#include "config.h"
+ #include "gwave.h"
+ 
+@@ -172,5 +175,5 @@
+ 	graph_argv[graph_argc++] = NULL;
+ 	printf("running %s", graph_prog);
+-	for(i = 0; i < graph_argc; i++) {
++	for(i = 0; i < (graph_argc-1); i++) {
+ 		printf(" %s", graph_argv[i]);
+ 	}
