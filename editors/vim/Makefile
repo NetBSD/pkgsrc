@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/12/21 13:18:05 pooka Exp $
+# $NetBSD: Makefile,v 1.28 1999/12/21 17:18:59 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -23,9 +23,9 @@ DEPENDS+=               ncurses-4.2:../../devel/ncurses
 .endif
 
 post-install:
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/ex
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/view
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rvim
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rview
+	@${LN} -fs vim ${PREFIX}/bin/ex
+	@${LN} -fs vim ${PREFIX}/bin/view
+	@${LN} -fs vim ${PREFIX}/bin/rvim
+	@${LN} -fs vim ${PREFIX}/bin/rview
 
 .include "../../mk/bsd.pkg.mk"
