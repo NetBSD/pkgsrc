@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.anthy,v 1.1 2005/03/29 18:47:52 wiz Exp $
+lib/uim/plugin/libuim-anthy.la
