@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/20 16:06:22 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/26 05:23:01 snj Exp $
 #
 
 DISTNAME=	gphoto2-2.1.4
@@ -12,7 +12,7 @@ COMMENT=	Digital camera access command line client
 
 CONFLICTS=	gphoto-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -27,13 +27,13 @@ CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 #
 CONFIGURE_ARGS+=	--without-readline
 #USE_GNU_READLINE=	rl_completion_matches, rl_completion_append_character
-#.include "../../devel/readline/buildlink2.mk"
+#.include "../../devel/readline/buildlink3.mk"
 
-.include "../../devel/cdk/buildlink2.mk"
-.include "../../devel/libgphoto2/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../graphics/aalib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../devel/cdk/buildlink3.mk"
+.include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
