@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/04/14 16:15:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.44 2004/04/15 21:43:02 snj Exp $
 #
 
 DISTNAME=	bluefish-0.12
@@ -18,7 +18,7 @@ COMMENT=	GTK HTML editor for the experienced web designer
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
@@ -29,9 +29,9 @@ CONFIGURE_ARGS+=	--with-autocomplet
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
 CONFIGURE_ARGS+=	--with-gnome2-menu=${PREFIX}/share/applications
 
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
