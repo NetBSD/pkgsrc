@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4084 2003/12/14 01:18:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4085 2003/12/14 01:24:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3385,4 +3385,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added docbook-simple-1.0 [xtraeme 2003-12-13]
 	Added dtdparse-2.0beta6 [xtraeme 2003-12-13]
 	Updated wv to 1.0.0 [xtraeme 2003-12-13]
-	Added fribidi-0.10.4 [xtraeme 2003-12-13]
+	Added fribidi-0.10.4 [xtraeme 2003-12-14]
+	Added gucharmap-1.2.0 [xtraeme 2003-12-14]
