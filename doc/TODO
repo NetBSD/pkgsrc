@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.197 2003/01/18 10:51:06 jmmv Exp $
+$NetBSD: TODO,v 1.198 2003/01/19 00:41:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -100,8 +100,7 @@ Suggested package updates
 	o dylan-interpreter-2.3.9
 	o elinks-0.4.0
 	o elm-me-2.4pl100
-	o evilwm-0.99.11 [pkg/19257]
-	o evilwm-0.99.14
+	o evilwm-0.99.14 [pkg/19257]
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
 	o fltk-1.1.1
@@ -202,6 +201,7 @@ Suggested package updates
 	o plib-1.6.0
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
+	o pv-0.4.5 [pkg/19884]
 	o py-wxWindows-2.4.0.1
 	o pygtk-0.6.11
 	o qt3-3.1.1
