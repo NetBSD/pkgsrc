@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.30 2003/09/16 16:48:25 grant Exp $
+dnl $NetBSD: configure.ac,v 1.31 2003/12/05 15:43:10 erh Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -119,7 +119,7 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
 	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
-	poll setenv setprogname snprintf strdup strerror strlcat strlcpy \
+	poll setprogname snprintf strdup strerror strlcat strlcpy \
 	strmode strptime strsep strtoll timegm usleep])
 
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
@@ -128,9 +128,15 @@ AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([getmode setmode],
 	[pkg_use_nbcompat_setmode=no],
 	[pkg_use_nbcompat_setmode=yes; break])
+pkg_use_nbcompat_setenv=no
+AC_CHECK_FUNCS([setenv unsetenv], ,
+	[pkg_use_nbcompat_setenv=yes])
 
 if test $pkg_use_nbcompat_setmode = yes; then
 	AC_LIBOBJ(setmode)
+fi
+if test $pkg_use_nbcompat_setenv = yes; then
+	AC_LIBOBJ(setenv)
 fi
 
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
