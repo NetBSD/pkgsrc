@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2000/03/19 03:11:13 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2001/01/11 18:47:18 jlam Exp $
 
 --- pstree.c.orig	Sat May  1 15:40:56 1999
-+++ pstree.c	Sat Mar 18 22:06:19 2000
++++ pstree.c	Thu Jan 11 13:38:53 2001
 @@ -2,6 +2,9 @@
  
  /* Copyright 1993-1999 Werner Almesberger. See file COPYING for details. */
@@ -67,20 +67,22 @@ $NetBSD: patch-ad,v 1.4 2000/03/19 03:11:13 jlam Exp $
      if (print_args) {
  	for (i = 0; i < current->argc; i++) {
  	    out_char(' ');
-@@ -387,8 +402,11 @@
+@@ -387,8 +402,13 @@
      char path[PATH_MAX+1],comm[COMM_LEN+1];
      char *buffer;
      pid_t pid,ppid;
 +#if !defined(BSD_44_PROC) || defined(BSD_PROC_CMDLINE)
      int fd,size;
 -    int empty,dummy;
++#endif
++#if !defined(BSD_44_PROC)
 +    int dummy;
 +#endif
 +    int empty;
  
      if (!print_args) buffer = NULL;
      else if (!(buffer = malloc((size_t) (output_width+1)))) {
-@@ -402,15 +420,26 @@
+@@ -402,15 +422,26 @@
      empty = 1;
      while (de = readdir(dir))
  	if (pid = atoi(de->d_name)) {
@@ -107,7 +109,7 @@ $NetBSD: patch-ad,v 1.4 2000/03/19 03:11:13 jlam Exp $
  		    if (!print_args) add_proc(comm,pid,ppid,st.st_uid,NULL,0);
  		    else {
  			sprintf(path,"%s/%d/cmdline",PROC_BASE,pid);
-@@ -427,6 +456,7 @@
+@@ -427,6 +458,7 @@
  			if (size) buffer[size++] = 0;
  			add_proc(comm,pid,ppid,st.st_uid,buffer,size);
  		    }
