@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/13 05:19:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/18 13:01:18 grant Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
@@ -24,6 +24,7 @@ GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
+USE_GNU_GETTEXT=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
