@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/02/20 22:48:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1999/03/08 10:53:56 agc Exp $
 
 DISTNAME=	MySQLmodule-1.4
 PKGNAME=	py-mysql-1.4
@@ -20,7 +20,7 @@ do-configure:
 	${SED} -e 's,@PREFIX@,${PREFIX},' ${FILESDIR}/Setup.in \
 		>${WRKSRC}/Setup.in
 	${CP} ${PREFIX}/lib/python1.5/config/Makefile.pre.in ${WRKSRC}
-	(cd ${WRKSRC}; make -f Makefile.pre.in boot)
+	(cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot)
 	${CP} ${DISTDIR}/Mysqldb.py ${DISTDIR}/mysqlshelve.py ${WRKSRC}
 
 post-build:

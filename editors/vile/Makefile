@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/03/02 15:50:56 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/03/08 10:53:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 #
 
@@ -17,6 +17,6 @@ INSTALL_TARGET=	install install-perl
 
 post-install:
 	@echo "You might want to copy the *.rc files from the source tree before"
-	@echo "doing \`make clean'."
+	@echo "doing \`${MAKE} clean'."
 
 .include "../../mk/bsd.pkg.mk"
