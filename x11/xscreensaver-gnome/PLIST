@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/09/08 12:11:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/11/14 15:05:09 fredb Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -358,7 +358,6 @@ man/man1/xteevee.1
 man/man1/zoom.1
 share/control-center-2.0/capplets/screensaver-properties.desktop
 share/control-center/Desktop/screensaver-properties.desktop
-share/control-center/capplets/screensaver-properties.desktop
 share/control-center/screensavers/README
 share/control-center/screensavers/anemone.xml
 share/control-center/screensavers/ant.xml
@@ -571,7 +570,6 @@ share/xscreensaver/xscreensaver-demo.glade2
 @dirrm share/xscreensaver
 @comment in gnome-dirs: @dirrm share/gnome/apps/Settings/Desktop
 @dirrm share/control-center/screensavers
-@comment in controlcenter: @dirrm share/control-center/capplets
 @comment in controlcenter: @dirrm share/control-center/Desktop
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in gnome2-dirs: @dirrm share/control-center-2.0
