@@ -1,52 +1,12 @@
-*** contrib/fax2ps/Makefile.orig	Tue Jul 26 21:55:07 1994
---- contrib/fax2ps/Makefile	Wed Oct  4 04:55:32 1995
-***************
-*** 25,42 ****
-  TIFF=	../../libtiff
-  TOOLS=	../../tools
-  
-! BIN=	/usr/local/bin
-  NULL=
-! OBJS=	fax2ps.o faxdecode.o getopt.o
-  CONF_LIBRARY=\
-  	${NULL}
-! COPTS=	-O
-! CFLAGS=	${COPTS} -ansi ${CONF_LIBRARY} -I${TIFF}
-! LIBS=	${TIFF}/libtiff.a
-  
-  all:	fax2ps
-  
-! fax2ps:	${OBJS} ${LIBS}
-  	${CC} -o $@ ${OBJS} ${LDFLAGS} ${LIBS} -lm
-  
-  ${OBJS}: defs.h ${TIFF}/tiffio.h
---- 25,42 ----
-  TIFF=	../../libtiff
-  TOOLS=	../../tools
-  
-! BIN=	${PREFIX}/bin/
-  NULL=
-! OBJS=   fax2ps.o faxdecode.o
-  CONF_LIBRARY=\
-  	${NULL}
-! CFLAGS+= ${COPTS} ${CONF_LIBRARY} -I${TIFF}
-! LIBTIFF=	${TIFF}/libtiff.a
-! LIBS=	-L ../../libtiff -ltiff
-  
-  all:	fax2ps
-  
-! fax2ps:	${OBJS} ${LIBTIFF}
-  	${CC} -o $@ ${OBJS} ${LDFLAGS} ${LIBS} -lm
-  
-  ${OBJS}: defs.h ${TIFF}/tiffio.h
-***************
-*** 48,51 ****
-  	rm -f ${OBJS} fax2ps a.out core errs
-  
-  install: all
-! 	/etc/install -f ${BIN} -m 755 fax2ps
---- 48,51 ----
-  	rm -f ${OBJS} fax2ps a.out core errs
-  
-  install: all
-! 	install -o bin -g bin -c -s -m 755 fax2ps ${BIN}
+--- libtiff/Makefile.in.orig	Tue Sep  2 19:54:19 1997
++++ libtiff/Makefile.in	Mon Dec  1 00:20:35 1997
+@@ -197,7 +197,8 @@
+ 	@rm -f libtiff_pic.a
+ 	@${AR} cq libtiff_pic.a `lorder ${OBJS} | tsort -q`
+ 	${RANLIB} libtiff_pic.a
+-	${LD} -x -Bshareable -Bforcearchive -o libtiff.@DSOSUF@ libtiff_pic.a
++	if [ `uname -m` != "alpha" ]; then  ${LD} -x -Bshareable -Bforcearchive -o libtiff.@DSOSUF@ libtiff_pic.a ; fi
++	if [ `uname -m` = "alpha" ]; then  ${LD} -x -Bshareable -o libtiff.@DSOSUF@ libtiff_pic.a ; fi
+ 	rm -f libtiff_pic.a
+ 	touch $@
+ # linux ELF shared lib rule
