@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 13:39:55 wiz Exp $
 #
 
 DISTNAME=	geg-1.0.1
@@ -10,8 +10,8 @@ MAINTAINER=	chris@infolaunch.com
 HOMEPAGE=	http://www.infolaunch.com/~daveb/
 COMMENT=	Program for drawing 2D math functions within a nice GUI
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
-
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
