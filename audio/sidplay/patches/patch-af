@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+$NetBSD: patch-af,v 1.2 1999/02/09 13:34:10 frueauf Exp $
 
---- console/audiodrv.cpp-orig	Tue Feb  9 13:15:41 1999
-+++ console/audiodrv.cpp	Tue Feb  9 13:54:31 1999
+--- console/audio/linux/audiodrv.cpp-orig	Mon Oct  5 18:20:27 1998
++++ console/audio/linux/audiodrv.cpp	Tue Feb  9 14:27:18 1999
 @@ -7,7 +7,7 @@
  
  #include "audiodrv.h"
