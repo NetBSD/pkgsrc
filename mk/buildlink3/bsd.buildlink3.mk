@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.49 2004/01/14 06:57:46 rh Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.50 2004/01/19 12:34:54 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -304,29 +304,16 @@ BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .    endfor
 .  endif
 .endfor
-
-# _BLNK_BUILTIN_DIRS lists directories in /usr that shouldn't be stripped
-# from the command line by the wrapper scripts, e.g. /usr/include/krb5.
 #
-.for _pkg_ in ${_BLNK_PACKAGES}
-.  if ${BUILDLINK_PREFIX.${_pkg_}} == "/usr"
-.    if !empty(BUILDLINK_INCDIRS.${_pkg_}:Ninclude)
-.      for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:Ninclude:S/^/\/usr\//}
-.        if exists(${_dir_})
-_BLNK_BUILTIN_DIRS+=	${_dir_}
-.        endif
-.      endfor
-.    endif
-.    if !empty(BUILDLINK_LIBDIRS.${_pkg_}:Nlib)
-.      for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:Nlib:S/^/\/usr\//}
-.        if exists(${_dir_})
-_BLNK_BUILTIN_DIRS+=	${_dir_}
-.        endif
-.      endfor
-.    endif
+# Add the depot directory library directory for this package to the
+# runtime library search path.
+#
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.  if (${_USE_RPATH} == "yes") && \
+      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib)
+BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib
 .  endif
-.endfor
-
+.endif
 #
 # Add the default view library directories to the runtime library search
 # path so that wildcard dependencies on library packages can always be
@@ -609,65 +596,98 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 .  endif
 .endfor
 
-# _BLNK_ALLOWED_RPATHDIRS contains the list of directories for which we
-# allow adding to the runtime library search path.  Package makefiles may
-# add to its value through ${BUILDLINK_RPATHDIRS}.
+# _BLNK_PASSTHRU_DIRS contains the list of directories which we allow in
+#	preprocessor's header, linker's library, or the runtime library
+#	search paths.  The values of this list represent entire directory
+#	trees under each named directory.  Package makefiles may add to
+#	its value through ${BUILDLINK_PASSTHRU_DIRS}.
 #
-_BLNK_ALLOWED_RPATHDIRS=	# empty
+# _BLNK_PASSTHRU_RPATHDIRS contains an extra list of directories which we
+#	allow in the runtime library search paths.  Package makefiles may
+#	add to its value through ${BUILDLINK_PASSTHRU_RPATHDIRS}.
 #
-# Add all of the depot directories for packages whose headers and
+_BLNK_PASSTHRU_DIRS=		# empty
+_BLNK_PASSTHRU_RPATHDIRS=	# empty
+#
+# Allow all of the depot directories for packages whose headers and
 # libraries we use.
 #
 .for _pkg_ in ${_BLNK_PACKAGES}
 .  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
-_BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
+_BLNK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 .  endif
 .endfor
 #
-# Add the depot directory for the package we're building.
+# Allow the depot directory for the package we're building.
 #
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_BLNK_ALLOWED_RPATHDIRS+=	${PREFIX}
+_BLNK_PASSTHRU_DIRS+=	${PREFIX}
 .endif
 #
-# Always add ${LOCALBASE}/lib to the runtime library search path so that
-# wildcard dependencies work correctly when installing from binary
+# Allow any directories specified by the package or user.
+#
+_BLNK_PASSTHRU_DIRS+=	${BUILDLINK_PASSTHRU_DIRS}
+#
+# Strip out /usr, /usr/include, and /usr/lib as they're always
+# automatically added to all of the search paths.  Also strip out
+# ${LOCALBASE} and ${X11BASE} to prevent silly mistakes.
+#
+_BLNK_PASSTHRU_DIRS:=	${_BLNK_PASSTHRU_DIRS:N/usr:N/usr/lib:N/usr/include:N${LOCALBASE}:N${X11BASE}}
+#
+# Allow all directories in the library subdirectories listed for each
+# package to be in the runtime library search path.
+#
+.for _pkg_ in ${_BLNK_PACKAGES}
+.  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
+.    if !empty(BUILDLINK_LIBDIRS.${_pkg_})
+.      for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}}
+.        if exists(${BUILDLINK_PREFIX.${_pkg_}}/${_dir_})
+_BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}/${_dir_}
+.        endif
+.      endfor
+.    endif
+.  endif
+.endfor
+#
+# Always allow ${LOCALBASE}/lib in the runtime library search path so
+# that wildcard dependencies work correctly when installing from binary
 # packages.
 #
-_BLNK_ALLOWED_RPATHDIRS+=	${LOCALBASE}/lib
+_BLNK_PASSTHRU_RPATHDIRS+=	${LOCALBASE}/lib
 #
-# Add ${X11BASE}/lib to the runtime library search path for USE_X11
+# Allow ${X11BASE}/lib in the runtime library search path for USE_X11
 # packages so that X11 libraries can be found.
 #
 .if defined(USE_X11)
-_BLNK_ALLOWED_RPATHDIRS+=	${X11BASE}/lib
+_BLNK_PASSTHRU_RPATHDIRS+=	${X11BASE}/lib
 .endif
 #
-# Allow manually adding other directories to the runtime library search
-# path, e.g. ${LOCALBASE}/qt3/lib.
+# Allow any directories specified by the package or user.
 #
-.if defined(BUILDLINK_RPATHDIRS)
-.  for _dir_ in ${BUILDLINK_RPATHDIRS}
-_BLNK_ALLOWED_RPATHDIRS+=	${_dir_}
-.  endfor
-.endif
+_BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PASSTHRU_RPATHDIRS}
+#
+# Strip out /usr/lib as it's always automatically in the runtime library
+# search path.
+#
+_BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib}
 
 _BLNK_MANGLE_DIRS=	# empty
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_MANGLE_DIRS+=	${WRKDIR}
-_BLNK_MANGLE_DIRS+=	${_BLNK_ALLOWED_RPATHDIRS}
-_BLNK_MANGLE_DIRS+=	${_BLNK_BUILTIN_DIRS}
-
-# We only want these for the untransform case, so don't add these
-# directories to _BLNK_{,UN}PROTECT_DIRS below.
-#
+_BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_DIRS}
+_BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_RPATHDIRS}
+_BLNK_MANGLE_DIRS+=	/usr/include
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_MANGLE_DIRS+=	${PREFIX}
+.endif
 _BLNK_MANGLE_DIRS+=	${LOCALBASE}
+.if defined(USE_X11)
 _BLNK_MANGLE_DIRS+=	${X11BASE}
+.endif
 
-_BLNK_MANGLE_START=		_bUiLdLiNk_
-_BLNK_MANGLE_END=		\#
+_BLNK_MANGLE_START=	_bUiLdLiNk_
+_BLNK_MANGLE_END=	\#
 .for _dir_ in ${_BLNK_MANGLE_DIRS}
 _BLNK_MANGLE_DIR.${_dir_}=	\
 	${_BLNK_MANGLE_START}${_dir_:S/\//_/g}${_BLNK_MANGLE_END}
@@ -677,22 +697,21 @@ _BLNK_MANGLE_SED_PATTERN=	\
 
 _BLNK_PROTECT_DIRS=	# empty
 _BLNK_UNPROTECT_DIRS=	# empty
-_BLNK_PROTECT=		# empty
-_BLNK_UNPROTECT=	# empty
 
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
-_BLNK_PROTECT_DIRS+=	${_BLNK_BUILTIN_DIRS}
+_BLNK_PROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
+
+_BLNK_UNPROTECT_DIRS+=	/usr/include
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.  for _pkg_ in ${_BLNK_PACKAGES}
-.    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
-_BLNK_PROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
-_BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
-.    endif
-.  endfor
+_BLNK_UNPROTECT_DIRS+=	${PREFIX}
 .endif
-_BLNK_UNPROTECT_DIRS+=	${_BLNK_BUILTIN_DIRS}
+_BLNK_UNPROTECT_DIRS+=	${LOCALBASE}
+.if defined(USE_X11)
+_BLNK_UNPROTECT_DIRS+=	${X11BASE}
+.endif
+_BLNK_UNPROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
@@ -704,17 +723,23 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
+# Protect -I/usr/include/* from transformations (these aren't part of the
+# normal header search paths).
+#
+_BLNK_TRANSFORM+=	submangle:-I/usr/include:-I${_BLNK_MANGLE_DIR./usr/include}
+#
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
 #
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}:${LOCALBASE}
+.if defined(USE_X11)
+_BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}:${X11BASE}
 .endif
 #
 # Protect some directories that we allow to be specified for the runtime
 # library search path.
 #
-.for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
+.for _dir_ in ${_BLNK_PASSTHRU_DIRS} ${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
@@ -757,9 +782,13 @@ _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 #
 # Protect any remaining references to ${PREFIX}, ${LOCALBASE}, or ${X11BASE}.
 #
-.for _dir_ in ${PREFIX} ${LOCALBASE} ${X11BASE}
-_BLNK_TRANSFORM+=	untransform:mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
-.endfor
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_BLNK_TRANSFORM+=	untransform:submangle:${PREFIX}:${_BLNK_MANGLE_DIR.${PREFIX}}
+.endif
+_BLNK_TRANSFORM+=	untransform:submangle:${LOCALBASE}:${_BLNK_MANGLE_DIR.${LOCALBASE}}
+.if defined(USE_X11)
+_BLNK_TRANSFORM+=	untransform:submangle:${X11BASE}:${_BLNK_MANGLE_DIR.${X11BASE}}
+.endif
 #
 # Add any package specified transformations (l:, etc.)
 #
@@ -786,15 +815,8 @@ _BLNK_TRANSFORM+=	abs-rpath
 # Undo the protection for the directories that we allow to be specified
 # for the runtime library search path.
 #
-.for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
+.for _dir_ in ${_BLNK_PASSTHRU_DIRS} ${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
-.endfor
-#
-# Undo the protection for ${PREFIX}, ${X11BASE} and ${X11BASE} so that the
-# directory names are correct, e.g. when unbuildlinkifying files.
-#
-.for _dir_ in ${PREFIX} ${LOCALBASE} ${X11BASE}
-_BLNK_TRANSFORM+=	untransform:mangle:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 .endfor
 #
 # Undo the protection so the correct directory names are passed to the
@@ -1450,11 +1472,11 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
 .    endfor
 .  endif
 #
-# Allow all subdirs of ${_BLNK_ALLOWED_RPATHDIRS} to be in the runtime
-# library search path.
+# Allow all subdirs of ${_BLNK_PASSTHRU_DIRS} and ${_BLNK_PASSTHRU_RPATHDIRS}
+# to be in the runtime library search path.
 #
 .  if ${_USE_RPATH} == "yes"
-.    for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
+.    for _dir_ in ${_BLNK_PASSTHRU_DIRS} ${_BLNK_PASSTHRU_RPATHDIRS}
 .      for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
 .      endfor
