@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/11 13:24:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/04/03 14:39:31 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
 bin/kfax
 bin/kghostview
 bin/kiconedit
+bin/kooka
 bin/kpaint
 bin/kpovmodeler
 bin/kruler
@@ -13,7 +14,22 @@ bin/kuickshow
 bin/kview
 bin/kviewshell
 bin/mrmlsearch
+include/devselector.h
+include/dispgamma.h
+include/gammadialog.h
+include/img_canvas.h
+include/imgscaledialog.h
+include/kgammatable.h
 include/kmultipageInterface.h
+include/kscandevice.h
+include/kscanoption.h
+include/kscanoptset.h
+include/kscanslider.h
+include/massscandialog.h
+include/previewer.h
+include/scanparams.h
+include/scansourcedialog.h
+include/sizeindicator.h
 lib/kde3/kcm_kmrml.la
 lib/kde3/kcm_kmrml.so
 lib/kde3/kded_daemonwatcher.la
@@ -70,6 +86,10 @@ lib/libkmultipage.so.0
 lib/libkmultipage.so.0.0
 lib/libkpagetest.la
 lib/libkpagetest.so
+lib/libkscan.la
+lib/libkscan.so
+lib/libkscan.so.1
+lib/libkscan.so.1.0
 lib/libkuickshow_main.la
 lib/libkuickshow_main.so
 lib/libkuickshow_main.so.0
@@ -209,6 +229,7 @@ share/kde/applnk/Graphics/kdvi.desktop
 share/kde/applnk/Graphics/kfax.desktop
 share/kde/applnk/Graphics/kghostview.desktop
 share/kde/applnk/Graphics/kiconedit.desktop
+share/kde/applnk/Graphics/kooka.desktop
 share/kde/applnk/Graphics/kpaint.desktop
 share/kde/applnk/Graphics/kpovmodeler.desktop
 share/kde/applnk/Graphics/kruler.desktop
@@ -259,6 +280,17 @@ share/kde/apps/kiconedit/toolbar/spraycan-cursor.xpm
 share/kde/apps/kiconedit/toolbar/spraycan.png
 share/kde/apps/kiconedit/toolbar/transform.png
 share/kde/apps/konqueror/servicemenus/mrml-servicemenu.desktop
+share/kde/apps/kooka/kookaui.rc
+share/kde/apps/kooka/pics/mirror-both.png
+share/kde/apps/kooka/pics/mirror-horiz.png
+share/kde/apps/kooka/pics/mirror-vert.png
+share/kde/apps/kooka/pics/newfromselect.png
+share/kde/apps/kooka/pics/ocr-select.png
+share/kde/apps/kooka/pics/ocr.png
+share/kde/apps/kooka/pics/scaleorig.png
+share/kde/apps/kooka/pics/scaletoheight.png
+share/kde/apps/kooka/pics/scaletowidth.png
+share/kde/apps/kooka/pics/thumbviewtile.png
 share/kde/apps/kpaint/kpaintui.rc
 share/kde/apps/kpaint/toolbar/areaselect.png
 share/kde/apps/kpaint/toolbar/brush.png
@@ -619,7 +651,12 @@ share/kde/apps/kviewviewer/kpartplugins/kviewbrowser.rc
 share/kde/apps/kviewviewer/kviewpopup.rc
 share/kde/apps/kviewviewer/kviewviewer.rc
 share/kde/apps/kviewviewer/kviewviewer_ro.rc
+share/kde/config/kookarc
 share/kde/icons/crystalsvg/128x128/apps/kghostview.png
+share/kde/icons/crystalsvg/16x16/actions/palette_color.png
+share/kde/icons/crystalsvg/16x16/actions/palette_gray.png
+share/kde/icons/crystalsvg/16x16/actions/palette_halftone.png
+share/kde/icons/crystalsvg/16x16/actions/palette_lineart.png
 share/kde/icons/crystalsvg/16x16/apps/kcoloredit.png
 share/kde/icons/crystalsvg/16x16/apps/kdvi.png
 share/kde/icons/crystalsvg/16x16/apps/kfax.png
@@ -677,6 +714,7 @@ share/kde/services/kviewcanvas.desktop
 share/kde/services/kviewviewer.desktop
 share/kde/services/mrml.protocol
 share/kde/services/mrml_part.desktop
+share/kde/services/scanservice.desktop
 share/kde/servicetypes/kimageviewer.desktop
 share/kde/servicetypes/kimageviewercanvas.desktop
 @comment dirrm share/kde/servicetypes
@@ -725,7 +763,9 @@ share/kde/servicetypes/kimageviewercanvas.desktop
 @dirrm share/kde/apps/kpovmodeler
 @dirrm share/kde/apps/kpaint/toolbar
 @dirrm share/kde/apps/kpaint
-@dirrm share/kde/apps/konqueror/servicemenus
+@dirrm share/kde/apps/kooka/pics
+@dirrm share/kde/apps/kooka
+@comment dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/kiconedit/toolbar
 @dirrm share/kde/apps/kiconedit/pics
 @dirrm share/kde/apps/kiconedit
