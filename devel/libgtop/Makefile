@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/09/05 09:33:15 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2000/10/17 18:03:23 jlam Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -26,14 +26,12 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 .endif
 .endif
 
-GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib -lintl
+CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.
@@ -41,14 +39,12 @@ LDFLAGS+=		-L${LOCALBASE}/lib -lintl
 #CFLAGS+=		-g
 #LDFLAGS+=		-g
 
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
 			--with-libgtop-guile --with-catgets
 CONFIGURE_ENV+=		AWK="${AWK}" \
-			CPP="${CPP}" \
 			LN_S="${LN} -s" \
 			PERL="${PERL5}" \
 			CPPFLAGS="${CPPFLAGS}"  \
-			LOCALBASE=${LOCALBASE} \
-			X11BASE=${X11BASE}
 
 .include "../../mk/bsd.pkg.mk"
