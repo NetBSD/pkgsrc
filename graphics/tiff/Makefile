@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/06/03 19:18:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/01/21 18:25:50 tron Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -20,7 +20,7 @@ CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
+.if (${OPSYS} == "SunOS") && !exists(/usr/lib/libz.so)
 ZLIBDIR=	${LOCALBASE}/lib
 DEPENDS+=	zlib-*:../../devel/zlib
 .else
