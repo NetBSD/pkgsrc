@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.3 2002/12/06 16:50:04 jmmv Exp $
+$NetBSD: patch-ac,v 1.4 2003/07/12 10:07:35 wiz Exp $
 
---- src/curses_client/curses_client.c.orig	Tue Oct 15 15:31:34 2002
+--- src/curses_client/curses_client.c.orig	Fri Jun  6 21:13:04 2003
 +++ src/curses_client/curses_client.c
-@@ -48,7 +48,6 @@ static void PrepareHighScoreScreen(void)
- static void PrintHighScore(char *Data);
+@@ -45,7 +45,6 @@
+ #include "tstring.h"
  
  static int ResizedFlag;
 -static SCREEN *cur_screen;
  
  #define PromptAttr   (COLOR_PAIR(1))
  #define TextAttr     (COLOR_PAIR(2))
-@@ -107,7 +106,7 @@ static gboolean QuitRequest, WantColour 
+@@ -112,7 +111,7 @@ static gboolean QuitRequest, WantColour 
   */
  static void start_curses(void)
  {
