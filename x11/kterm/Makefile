@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/08/13 23:56:36 itojun Exp $
+# $NetBSD: Makefile,v 1.26 2003/08/24 20:28:12 itojun Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 # the following patch includes NFS xauth patch, and kamo's wd0.2 patch.
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES+=	kterm-620-0213-20030814.diff.gz
+PATCHFILES+=	kterm-620-0213-20030825.diff.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	sakamoto@NetBSD.org
