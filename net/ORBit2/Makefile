@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/04/01 20:27:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/24 15:21:35 danw Exp $
 #
 
 DISTNAME=		ORBit2-2.10.0
@@ -24,6 +24,8 @@ PKGCONFIG_OVERRIDE=	ORBit-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	ORBit-CosNaming-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	ORBit-imodule-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	src/idl-compiler/ORBit-idl-2.0.pc.in
+
+CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
