@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/31 11:25:31 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/02 02:23:05 jlam Exp $
 
 DISTNAME=	binutils-2.14
 PKGNAME=	binutils-2.14.0.0
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 
 USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.0
+MAKEFLAGS+=		TEXINFO_LOCALE=no
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
