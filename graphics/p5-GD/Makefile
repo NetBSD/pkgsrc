@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/06/20 21:52:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/07 16:51:26 xtraeme Exp $
 
 DISTNAME=	GD-2.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5bd
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
@@ -14,7 +14,6 @@ COMMENT=	Perl5 interface to gd graphics library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-USE_X11=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/.packlist
 
 MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
