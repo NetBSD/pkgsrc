@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+
+--- Lib/distutils/command/build_scripts.py.orig	2003-08-03 12:32:35.000000000 +0200
++++ Lib/distutils/command/build_scripts.py	2003-08-03 12:34:50.000000000 +0200
+@@ -99,7 +99,7 @@
+                         outf.write("#!%s%s\n" %
+                                    (os.path.join(
+                             sysconfig.get_config_var("BINDIR"),
+-                            "python" + sysconfig.get_config_var("EXE")),
++                            "python2p3" + sysconfig.get_config_var("EXE")),
+                                     post_interp))
+                     outf.writelines(f.readlines())
+                     outf.close()
