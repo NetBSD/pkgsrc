@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2001/12/05 15:00:48 agc Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/13 02:16:11 wiz Exp $
 #
 
-DISTNAME=	mtr-0.42
-PKGREVISION=	1
+DISTNAME=	mtr-0.49
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bitwizard.nl/mtr/ \
 		http://www.giovannelli.it/~gmarco/files/
@@ -14,6 +13,7 @@ COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK_ONLY=	YES
+CONFIGURE_ARGS+=	--without-gtk
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
