@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.36 2004/04/18 05:33:14 snj Exp $
 
 DISTNAME=		ClanLib-0.4.4
 PKGREVISION=		5
@@ -9,7 +9,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 COMMENT=		The ClanLib Game SDK
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11BASE=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
@@ -39,12 +39,12 @@ MAKE_ENV+=		X11BASE="${X11BASE}"
 post-patch:
 	${CHMOD} +x ${WRKSRC}/configure
 
-.include "../../graphics/hermes/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../graphics/hermes/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
