@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1661 2003/03/16 15:48:41 mjl Exp $
+$NetBSD: CHANGES,v 1.1662 2003/03/16 16:38:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1163,3 +1163,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Bit-Vector to 6.3 [mjl 2003-03-16]
 	Updated p5-Date-Calc to 5.3 [mjl 2003-03-16]
 	Updated p5-DBI to 1.35 [mjl 2003-03-16]
+	Updated p5-Jcode to 0.83 [taca 2003-03-16]
