@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2003/07/22 04:14:36 martti Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/23 09:05:23 wiz Exp $
 
-DISTNAME=		sitecopy-0.11.4
-PKGREVISION=		1
+DISTNAME=		sitecopy-0.13.4
 CATEGORIES=		www
 MASTER_SITES=		http://www.lyra.org/sitecopy/
 
@@ -17,7 +16,7 @@ BUILD_USES_MSGFMT=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-included-neon
-CONFIGURE_ARGS+=	--with-libxml1
+CONFIGURE_ARGS+=	--with-libxml2
 
 LIBS+=			${LIBGETOPT}
 
@@ -34,6 +33,6 @@ pre-build:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libgetopt/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
