@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 1998/09/08 22:34:53 tron Exp $
+$NetBSD: patch-af,v 1.6 1998/09/09 00:17:24 tv Exp $
 
 --- config_f.h.orig	Fri Apr 26 21:17:30 1996
 +++ config_f.h	Wed Sep  9 00:18:23 1998
@@ -24,12 +24,3 @@ $NetBSD: patch-af,v 1.5 1998/09/08 22:34:53 tron Exp $
  
  /*
   * SUSPENDED	Newer shells say 'Suspended' instead of 'Stopped'.
-@@ -141,7 +145,7 @@
-  *		successful, set $REMOTEHOST to the name or address of the
-  *		host
-  */
--#define REMOTEHOST
-+#undef REMOTEHOST
- 
- /*
-  * RCSID	This defines if we want rcs strings in the binary or not
