@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/12 01:43:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/01 17:26:54 jwise Exp $
 #
 
 DISTNAME=	BLT2.4o
@@ -9,13 +9,12 @@ MASTER_SITES=	ftp://ftp.tcltk.com/aa004735/pub/blt/
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.tcltk.com/blt/index.html
 
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib/tcl8.0
-CONFIGURE_ARGS+=	--with-tk=${LOCALBASE}/lib/tk8.0
+CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-tk=${LOCALBASE}/lib
 
 WRKSRC=		${WRKDIR}/blt2.4o
 

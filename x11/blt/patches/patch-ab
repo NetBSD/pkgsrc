@@ -1,19 +1,31 @@
-$NetBSD: patch-ab,v 1.2 2000/05/22 03:47:55 sakamoto Exp $
---- configure.orig	Thu Jan 13 05:15:36 2000
-+++ configure	Mon May 22 11:53:05 2000
-@@ -2695,5 +2695,7 @@
+--- configure.orig	Wed Jan 12 15:15:36 2000
++++ configure	Fri Sep  1 13:03:47 2000
+@@ -2694,13 +2694,13 @@
+ TK_LIB_DIR=${TK_EXEC_PREFIX}/lib
  
  case $target in
 -  *-sunos4*|NetBSD-*|FreeBSD-*|OpenBSD-*)
 +  *-sunos4*|*-*-netbsd|FreeBSD-*|OpenBSD-*)
-+    TCL_INC_DIR=${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}
-+    TK_INC_DIR=${TK_PREFIX}/include/tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}
      TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
      TK_LIB_SPEC="-ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
-@@ -3394,5 +3396,5 @@
+     ;;
+   *)
+-    TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
+-    TK_LIB_SPEC="-ltk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
++    TCL_LIB_SPEC="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
++    TK_LIB_SPEC="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
+     ;;
+ esac
+ 
+@@ -3391,9 +3391,10 @@
+ fi
+ 
+     if test "$test_ok" = yes; then
++      LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib"
        SHLIB_CFLAGS="-fpic"
        SHLIB_LD="ld"
 -      SHLIB_LD_FLAGS="-Bshareable -x"
-+      SHLIB_LD_FLAGS="-Bshareable -x -rpath ${LD_RUN_PATH}"
++      SHLIB_LD_FLAGS="-Bshareable -x -R${PREFIX}/lib -R${X11BASE}/lib"
      fi
      ;;
+ 
