@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:48:06 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/12/11 22:17:46 agc Exp $
 
 DISTNAME=		rlab-2.1.05
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rlab/}
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://rlab.sourceforge.net/
 COMMENT=		Matrix oriented, interactive programming environment
+
+BROKEN=			relies on API from older version of superlu
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
