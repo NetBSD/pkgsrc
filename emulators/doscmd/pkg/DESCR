@@ -5,4 +5,3 @@ than provide a software emulation of the 8086 CPU, it uses the
 NetBSD/i386 system call i386_vm86() call to access the VM86 mode of i386
 and later CPUs. It therefore runs much more quickly, at the cost of not
 running on other architectures. 
-
