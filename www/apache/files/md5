@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.16 2000/10/13 21:46:45 jlam Exp $
+$NetBSD: md5,v 1.17 2000/10/17 18:14:16 jlam Exp $
 
 MD5 (apache_1.3.14.tar.gz) = 34803e3d83a0a9ed981b571657b33109
-MD5 (mod_ssl-2.7.0-1.3.14.tar.gz) = 65aae4a18dcd0e36140dbfda4584f8d7
+MD5 (mod_ssl-2.7.1-1.3.14.tar.gz) = 99e05bd4ab7bd5c72fbb70bd8cfbf283
 MD5 (sitedrivenby.gif) = ad0647dceb931d02bfd046e55915f7b1
