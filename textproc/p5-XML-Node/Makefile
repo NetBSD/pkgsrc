@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/28 12:39:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/04 16:13:18 hubertf Exp $
 #
 
 DISTNAME=	XML-Node-0.10
@@ -10,7 +10,7 @@ MASTER_SITES=	http://belmont-shores.ics.uci.edu/pub/ \
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
 
-DEPENDS+=	XML-Parser-2.*:../p5-XML-Parser
+DEPENDS+=	p5-XML-Parser-2.*:../p5-XML-Parser
 
 USE_PERL5=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Node/.packlist
