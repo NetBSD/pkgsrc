@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 18:29:17 cjep Exp $
+lib/gap4.3/pkg/lag/doc/lag.tex
+lib/gap4.3/pkg/lag/doc/Makefile
+lib/gap4.3/pkg/lag/doc/config.lag
+lib/gap4.3/pkg/lag/doc/lag.msk
+lib/gap4.3/pkg/lag/doc/manual.bib
+lib/gap4.3/pkg/lag/doc/manual.mst
+lib/gap4.3/pkg/lag/doc/manual.tex
+lib/gap4.3/pkg/lag/doc/manual.dvi
+lib/gap4.3/pkg/lag/doc/manual.six
+lib/gap4.3/pkg/lag/doc/manual.pdf
+lib/gap4.3/pkg/lag/lib/lag.gd
+lib/gap4.3/pkg/lag/lib/lag.gi
+lib/gap4.3/pkg/lag/README.lag
+lib/gap4.3/pkg/lag/init.g
+lib/gap4.3/pkg/lag/htm/CHAP001.htm
+lib/gap4.3/pkg/lag/htm/chapters.htm
+lib/gap4.3/pkg/lag/htm/theindex.htm
+lib/gap4.3/pkg/lag/htm/indxA.htm
+lib/gap4.3/pkg/lag/htm/indxC.htm
+lib/gap4.3/pkg/lag/htm/indxI.htm
+lib/gap4.3/pkg/lag/htm/indxL.htm
+lib/gap4.3/pkg/lag/htm/indxN.htm
+lib/gap4.3/pkg/lag/htm/indxS.htm
+lib/gap4.3/pkg/lag/htm/indxU.htm
+lib/gap4.3/pkg/lag/htm/biblio.htm
+lib/gap4.3/pkg/lag/htm/indxT.htm
+lib/gap4.3/pkg/lag/ChangeLog
+lib/gap4.3/pkg/lag/VERSION
+lib/gap4.3/pkg/lag/read.g
+@dirrm lib/gap4.3/pkg/lag/doc
+@dirrm lib/gap4.3/pkg/lag/lib
+@dirrm lib/gap4.3/pkg/lag/htm
+@dirrm lib/gap4.3/pkg/lag
