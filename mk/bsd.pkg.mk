@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1071 2002/10/21 01:23:03 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1072 2002/10/21 01:40:56 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -329,16 +329,6 @@ PKGLIBTOOL=		${LIBTOOL}
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
-.endif
-
-.if defined(USE_XAW)
-.  if defined(XAW_TYPE)
-.    if ${XAW_TYPE} == "xpm"
-DEPENDS+=		Xaw-Xpm-1.1:../../x11/Xaw-Xpm
-.    elif ${XAW_TYPE} == "3d"
-DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
-.    endif
-.  endif
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && \
