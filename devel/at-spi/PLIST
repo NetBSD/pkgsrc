@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/12/28 21:50:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/26 17:25:15 jmmv Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -41,6 +41,10 @@ lib/pkgconfig/cspi-1.0.pc
 lib/pkgconfig/libloginhelper-1.0.pc
 lib/pkgconfig/libspi-1.0.pc
 libexec/at-spi-registryd
+share/doc/at-spi-cspi/home.png
+share/doc/at-spi-cspi/left.png
+share/doc/at-spi-cspi/right.png
+share/doc/at-spi-cspi/up.png
 share/idl/at-spi-1.0/Accessibility.idl
 share/idl/at-spi-1.0/Accessibility_Accessible.idl
 share/idl/at-spi-1.0/Accessibility_Action.idl
@@ -64,7 +68,6 @@ share/idl/at-spi-1.0/Accessibility_Text.idl
 share/idl/at-spi-1.0/Accessibility_Value.idl
 @dirrm share/idl/at-spi-1.0
 @comment in ORBit2: @dirrm share/idl
-@exec ${MKDIR} %D/share/doc/at-spi-cspi
 @dirrm share/doc/at-spi-cspi
 @comment in ORBit2: @dirrm lib/orbit-2.0
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
