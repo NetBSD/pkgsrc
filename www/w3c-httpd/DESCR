@@ -5,6 +5,3 @@ a server on a firewall machine -- that provides access for people
 inside a firewall to the outside world. When running as proxy httpd
 may be configured to do caching of documents resulting in faster
 response times.
-
-For more information on the Library, please look at the page
-	http://www.w3.org/hypertext/WWW/Daemon/Status.html
