@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6278 2004/06/22 20:06:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6279 2004/06/22 21:34:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bash2 to 2.05.2.7nb2 [minskim 2004-06-22]
 	Added pkgclean-20040622 [xtraeme 2004-06-22]
 	Added pkgfind-20040622 [xtraeme 2004-06-22]
+	Added drivel-1.0.0 [jmmv 2004-06-22]
