@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/23 00:15:20 taca Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/03 13:38:39 jlam Exp $
 
 DISTNAME=	maildrop-1.3.7
 COMMENT=	Courier mail delivery agent with filtering abilities
@@ -15,10 +15,8 @@ USE_BUILDLINK_ONLY=	yes
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-userdb
 
-.if !defined(STRIPFLAG) || empty(STRIPFLAG:M-s)
+.if defined(STRIPFLAG) && !empty(STRIPFLAG:M-s)
 INSTALL_TARGET=		install-strip
-.else
-INSTALL_TARGET=		install
 .endif
 
 post-install:
