@@ -1,0 +1,2 @@
+This package is an alias for ghostscript-x11 to facilitate correct
+dependencies involving older versions of ghostscript for binary packages.
