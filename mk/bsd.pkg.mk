@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1529 2004/10/28 14:05:56 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1530 2004/11/02 00:03:09 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1394,6 +1394,8 @@ UPDATE_TARGET=	install
 UPDATE_TARGET=	${DEPENDS_TARGET}
 .  endif
 .endif
+
+UPDATE_RUNNING?=	NO
 
 ################################################################
 # The following are used to create easy dummy targets for
@@ -3352,6 +3354,7 @@ reinstall:
 .if !target(deinstall)
 deinstall: do-su-deinstall
 
+.if !target(do-su-deinstall)
 do-su-deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGBASE}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3359,6 +3362,7 @@ do-su-deinstall: uptodate-pkgtools
 	realflags="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
 	action="deinstall";						\
 	${_SU_TARGET}
+.endif
 
 .  if (${DEINSTALLDEPENDS} != "NO")
 .    if (${DEINSTALLDEPENDS} != "ALL")
@@ -3371,6 +3375,12 @@ real-su-deinstall-flags+=	-r
 .  endif
 .  ifdef PKG_VERBOSE
 real-su-deinstall-flags+=	-v
+.  endif
+.  ifdef PKG_PRESERVE
+.    if (${UPDATE_RUNNING} == "YES")
+# used to update w/o removing any files
+real-su-deinstall-flags+=	-N -f
+.    endif
 .  endif
 
 .PHONY: real-su-deinstall
@@ -3417,7 +3427,7 @@ update:
 		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
 .  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
+		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
 .  endif
 .else
 RESUMEUPDATE?=	NO
@@ -3427,7 +3437,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
 .  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
-		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL	\
+		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL	\
 		|| (${RM} ${DDIR} && ${FALSE});				\
 	fi
 .  endif
@@ -3442,7 +3452,7 @@ update:
 			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ")" -a		\
 			     "${UPDATE_TARGET}" != "replace" ] ; then	\
-				${MAKE} ${MAKEFLAGS} deinstall;		\
+				${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES;		\
 			fi &&						\
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
@@ -3560,7 +3570,7 @@ _REPLACE=								\
 	if [ -f ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then	\
 		${MV} ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
 	fi;								\
-	${MAKE} deinstall;						\
+	${MAKE} deinstall UPDATE_RUNNING=YES;						\
 	$$replace_action;						\
 	if [ -f ${WRKDIR}/.req ]; then					\
 		${MV} ${WRKDIR}/.req ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
