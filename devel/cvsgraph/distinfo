@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/09 14:25:00 mjl Exp $
+
+SHA1 (cvsgraph-1.1.3.tar.gz) = 2711bfb471b59ff42d1f2d63fbeb7d1951be3a51
+Size (cvsgraph-1.1.3.tar.gz) = 49007 bytes
+SHA1 (patch-aa) = 2b42222cdf0fe979268500860c5d701f706cb8bd
+SHA1 (patch-ab) = 93b8ea10cff5c73d439675e31e749a9394aab891
