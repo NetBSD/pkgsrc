@@ -1,37 +1,12 @@
-$NetBSD: patch-aa,v 1.2 1998/10/11 10:25:24 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 1998/10/11 20:27:04 kim Exp $
 
---- Makefile.in.orig	Mon Aug  3 12:43:38 1998
-+++ Makefile.in	Sat Oct 10 22:06:42 1998
-@@ -48,7 +48,7 @@
- LDFLAGS = @LDFLAGS@ -L/usr/5lib
+--- Makefile.in.orig	Tue Oct  6 11:27:31 1998
++++ Makefile.in	Sun Oct 11 15:00:45 1998
+@@ -48,6 +48,7 @@
+ LDFLAGS = @LDFLAGS@
  
  # Standard LIBS
--LIBS = @LIBS@
-+LIBS = @LIBS@ -L${PREFIX}/lib -lncurses
++#LIBS = @LIBS@ -L${prefix}/lib -lncurses
+ LIBS = @LIBS@
  
  INSTALL = @INSTALL@
- 
-@@ -76,6 +76,8 @@
- 
- CLEANFILES = $(PROG) $(OBJ) $(GENSRC)
- 
-+all: $(PROG)
-+
- $(PROG): $(OBJ) @V_PCAPDEP@
- 	@rm -f $@
- 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
-@@ -90,12 +92,8 @@
- 	rm -f OS.NAME
- 
- install: force
--	$(INSTALL) -m 6111 -o root -g sys $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
--	chmod gou+s $(DESTDIR)$(BINDEST)/$(PROG)
--
--install-man: force
--	$(INSTALL) -m 444 -o bin -g bin $(PROG).8 \
--	    $(DESTDIR)$(MANDEST)/man8/$(PROG).8
-+	$(INSTALL) -m 6550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
-+	$(INSTALL) -m 444 $(PROG).8 $(DESTDIR)$(MANDEST)/man8/$(PROG).8
- 
- lint:	$(GENSRC) force
- 	lint -hbxn $(SRC) | \
