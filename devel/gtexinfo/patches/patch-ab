@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2004/04/02 02:01:34 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2004/07/04 23:17:59 wiz Exp $
 
---- info/Makefile.in.orig	Tue Jun 10 16:51:39 2003
+--- info/Makefile.in.orig	2004-04-09 23:25:01.000000000 +0200
 +++ info/Makefile.in
-@@ -66,7 +66,7 @@ CPP = @CPP@
- CPPFLAGS = @CPPFLAGS@
+@@ -147,7 +147,7 @@ CPPFLAGS = @CPPFLAGS@
  CYGPATH_W = @CYGPATH_W@
  DATADIRNAME = @DATADIRNAME@
--DEFS = @DEFS@ -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\"
-+DEFS = @DEFS@ -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\" -DPKGSRC_INFOPATH=\"$(PKGSRC_INFOPATH)\"
+ DEFS = @DEFS@ -DLOCALEDIR=\"$(localedir)\" -DINFODIR=\"$(infodir)\" \
+-	-DINFODIR2=\"$(infodir2)\"
++	-DINFODIR2=\"$(infodir2)\" -DPKGSRC_INFOPATH=\"$(PKGSRC_INFOPATH)\"
+ 
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
- ECHO_N = @ECHO_N@
