@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libungif.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define LIBUNGIF_REQD to the version of libungif desired.
+# (1) Optionally define BUILDLINK_DEPENDS.libungif to the dependency pattern
+#     for the version of libungif desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(LIBUNGIF_BUILDLINK_MK)
 LIBUNGIF_BUILDLINK_MK=	# defined
 
-LIBUNGIF_REQD?=		4.1.0
-DEPENDS+=		libungif>=${LIBUNGIF_REQD}:../../graphics/libungif
+BUILDLINK_DEPENDS.libungif?=	libungif>=4.1.0
+DEPENDS+=	${BUILDLINK_DEPENDS.libungif}:../../graphics/libungif
 
 BUILDLINK_PREFIX.libungif=	${LOCALBASE}
 BUILDLINK_FILES.libungif=	include/gif_lib.h

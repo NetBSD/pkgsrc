@@ -1,11 +1,12 @@
-# $NetBSD: buildlink.mk,v 1.11 2001/06/20 23:24:39 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.12 2001/06/23 19:26:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
 # To use this Makefile fragment, simply:
 #
 # (1) Optionally define USE_GNU_READLINE to force use of GNU readline.
-# (2) Optionally define READLINE_REQD to the version of GNU readline desired.
+# (2) Optionally define BUILDLINK_DEPENDS.readline to the dependency pattern
+#     for the version of GNU readline desired.
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
@@ -17,7 +18,7 @@
 .if !defined(READLINE_BUILDLINK_MK)
 READLINE_BUILDLINK_MK=	# defined
 
-READLINE_REQD?=		2.2
+BUILDLINK_DEPENDS.readline?=	readline>=2.2
 
 .if defined(USE_GNU_READLINE)
 _NEED_GNU_READLINE=	YES
@@ -29,7 +30,7 @@ _NEED_GNU_READLINE=	YES
 .endif
 
 .if ${_NEED_GNU_READLINE} == "YES"
-DEPENDS+=			readline>=${READLINE_REQD}:../../devel/readline
+DEPENDS+=			${BUILDLINK_DEPENDS.readline}:../../devel/readline
 BUILDLINK_PREFIX.readline=	${LOCALBASE}
 BUILDLINK_FILES.readline=	include/readline/*
 BUILDLINK_FILES.readline+=	lib/libreadline.*

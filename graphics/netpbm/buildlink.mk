@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use netpbm.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define NETPBM_REQD to the version of netpbm desired.
+# (1) Optionally define BUILDLINK_DEPENDS.netpbm to the dependency pattern
+#     for the version of netpbm desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(NETPBM_BUILDLINK_MK)
 NETPBM_BUILDLINK_MK=	# defined
 
-NETPBM_REQD?=		9.7
-DEPENDS+=		netpbm>=${NETPBM_REQD}:../../graphics/netpbm
+BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.7
+DEPENDS+=	${BUILDLINK_DEPENDS.netpbm}:../../graphics/netpbm
 
 BUILDLINK_PREFIX.netpbm=	${LOCALBASE}
 BUILDLINK_FILES.netpbm=		include/pbm.h

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/11 01:59:36 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/23 19:26:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use zlib. 
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define ZLIB_REQD to the version of zlib desired.
+# (1) Optionally define BUILDLINK_DEPENDS.zlib to the dependency pattern
+#     for the version of zlib desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,7 +15,7 @@
 .if !defined(ZLIB_BUILDLINK_MK)
 ZLIB_BUILDLINK_MK=	# defined
 
-ZLIB_REQD?=		1.1.3
+BUILDLINK_DEPENDS.zlib?=	zlib>=1.1.3
 
 .if exists(/usr/include/zlib.h)
 _NEED_ZLIB=		NO
@@ -23,7 +24,7 @@ _NEED_ZLIB=		YES
 .endif
 
 .if ${_NEED_ZLIB} == "YES"
-DEPENDS+=		zlib>=${ZLIB_REQD}:../../devel/zlib
+DEPENDS+=		${BUILDLINK_DEPENDS.zlib}:../../devel/zlib
 BUILDLINK_PREFIX.zlib=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.zlib=	/usr

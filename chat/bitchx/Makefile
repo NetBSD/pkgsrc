@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/20 02:54:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/23 19:26:49 jlam Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
@@ -15,8 +15,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl
 
 # We need ncurses since BitchX dumps core on startup when using curses.
-USE_NCURSES=		yes
-NCURSES_REQD=		5.2
+USE_NCURSES=			yes
+BUILDLINK_DEPENDS.ncurses=	ncurses>=5.2
 
 # Files are installed using a .bz2 extension, and BitchX assumes it can
 # find bunzip2 in the PATH.

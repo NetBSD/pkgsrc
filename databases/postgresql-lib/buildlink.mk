@@ -1,11 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/21 21:41:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use postgresql-lib.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define POSTGRESQL_LIB_REQD to the version of postgresql-lib
-#     desired.
+# (1) Optionally define BUILDLINK_DEPENDS.postgresql-lib to the dependency
+#     pattern for the version of postgresql-lib desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -15,11 +15,8 @@
 .if !defined(POSTGRESQL_LIB_BUILDLINK_MK)
 POSTGRESQL_LIB_BUILDLINK_MK=	# defined
 
-.if defined(POSTGRESQL_LIB_REQD)
-DEPENDS+=	postgresql-lib>=${POSTGRESQL_LIB_REQD}:../../databases/postgresql-lib
-.else
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-*}:../../databases/postgresql-lib
-.endif
+BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-{6.5.3*,7.0*,lib-*}
+DEPENDS+=	${BUILDLINK_DEPENDS.postgresql-lib}:../../databases/postgresql-lib
 
 BUILDLINK_PREFIX.postgresql-lib=	${LOCALBASE}
 BUILDLINK_FILES.postgresql-lib=		include/pgsql/*/*.h

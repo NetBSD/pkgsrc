@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/11 01:59:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rpc2.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define RPC2_REQD to the version of rpc2 desired.
+# (1) Optionally define BUILDLINK_DEPENDS.rpc2 to the dependency pattern
+#     for the version of rpc2 desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(RPC2_BUILDLINK_MK)
 RPC2_BUILDLINK_MK=	# defined
 
-RPC2_REQD?=		1.10
-DEPENDS+=		rpc2>=${RPC2_REQD}:../../devel/rpc2
+BUILDLINK_DEPENDS.rpc2?=	rpc2>=1.10
+DEPENDS+=			${BUILDLINK_DEPENDS.rpc2}:../../devel/rpc2
 
 BUILDLINK_PREFIX.rpc2=	${LOCALBASE}
 BUILDLINK_FILES.rpc2=	include/rpc2/*

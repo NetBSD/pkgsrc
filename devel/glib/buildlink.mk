@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use glib.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GLIB_REQD to the version of glib desired.
+# (1) Optionally define BUILDLINK_DEPENDS.glib to the dependency pattern
+#     for the version of glib desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GLIB_BUILDLINK_MK)
 GLIB_BUILDLINK_MK=	# defined
 
-GLIB_REQD?=		1.2.8
-DEPENDS+=		glib>=${GLIB_REQD}:../../devel/glib
+BUILDLINK_DEPENDS.glib?=	glib>=1.2.8
+DEPENDS+=	${BUILDLINK_DEPENDS.glib}:../../devel/glib
 
 BUILDLINK_PREFIX.glib=	${LOCALBASE}
 BUILDLINK_FILES.glib=	include/glib/*/*

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/16 19:53:09 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdk-pixbuf.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GDK_PIXBUF_REQD to the version of gdk-pixbuf desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gkd-pixbuf to the dependency version
+#     for the version of gdk-pixbuf desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GDK_PIXBUF_BUILDLINK_MK)
 GDK_PIXBUF_BUILDLINK_MK=	# defined
 
-GDK_PIXBUF_REQD?=	0.8.0nb1
-DEPENDS+=		gdk-pixbuf>=${GDK_PIXBUF_REQD}:../../graphics/gdk-pixbuf
+BUILDLINK_DEPENDS.gkd-pixbuf?=	gdk-pixbuf>=0.8.0nb1
+DEPENDS+=	${BUILDLINK_DEPENDS.gkd-pixbuf}:../../graphics/gdk-pixbuf
 
 BUILDLINK_PREFIX.gdk-pixbuf=	${X11PREFIX}
 BUILDLINK_FILES.gdk-pixbuf=	include/gdk-pixbuf/*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/06/21 21:40:09 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/23 19:26:52 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -11,10 +11,8 @@ MAINTAINER=		darcy@netbsd.org
 DEPENDS+=		python>=2.0:../../lang/python
 DEPENDS+=		py-mxDateTime-[0-9]*:../../time/py-mxDateTime
 
-USE_BUILDLINK_ONLY=	# defined
-POSTGRESQL_LIB_REQD=	${PG_BASE_VERS}
-
-.include "../../databases/postgresql-lib/buildlink.mk"
+USE_BUILDLINK_ONLY=			# defined
+BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
 
 PYTHON=			${LOCALBASE}/bin/python
 
@@ -56,4 +54,5 @@ post-install:
 		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial;		\
 	done
 
+.include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/22 05:49:42 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:50 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pilot-link.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define PILOT_LINK_REQD to the version of pilot-link desired.
+# (1) Optionally define BUILDLINK_DEPENDS.pilot-link to the dependency pattern
+#     for the version of pilot-link desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(PILOT_LINK_BUILDLINK_MK)
 PILOT_LINK_BUILDLINK_MK=	# defined
 
-PILOT_LINK_REQD?=	0.9.3
-DEPENDS+=		pilot-link>=${PILOT_LINK_REQD}:../../comms/pilot-link
+BUILDLINK_DEPENDS.pilot-link?=	pilot-link>=0.9.3
+DEPENDS+=	${BUILDLINK_DEPENDS.pilot-link}:../../comms/pilot-link
 
 BUILDLINK_PREFIX.pilot-link=	${LOCALBASE}
 BUILDLINK_FILES.pilot-link=	include/pi-*.*

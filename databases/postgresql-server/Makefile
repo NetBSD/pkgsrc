@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/21 21:40:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/23 19:26:52 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -7,11 +7,8 @@ PKGNAME=		postgresql-server-${PG_VERS}
 PG_PKG_VERS=		# empty
 COMMENT=		PostgreSQL database server programs
 
-USE_BUILDLINK_ONLY=	# defined
-POSTGRESQL_LIB_REQD=	${PG_BASE_VERS}
-
-.include "../../devel/libgetopt/buildlink.mk"
-.include "../../databases/postgresql-lib/buildlink.mk"
+USE_BUILDLINK_ONLY=			# defined
+BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
 
 DEPENDS+=		postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client
 
@@ -101,4 +98,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/libgetopt/buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:20 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:01 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GTK_REQD to the version of gtk desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gtk to the dependency pattern
+#     for the version of gtk desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GTK_BUILDLINK_MK)
 GTK_BUILDLINK_MK=	# defined
 
-GTK_REQD?=		1.2.8
-DEPENDS+=		gtk+>=${GTK_REQD}:../../x11/gtk
+BUILDLINK_DEPENDS.gtk?=	gtk+>=1.2.8
+DEPENDS+=		${BUILDLINK_DEPENDS.gtk}:../../x11/gtk
 
 BUILDLINK_PREFIX.gtk=	${X11PREFIX}
 BUILDLINK_FILES.gtk=	include/gtk-*/*/*

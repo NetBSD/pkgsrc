@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2001/06/18 20:49:01 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/23 19:26:55 jlam Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/gdk-pixbuf-/gdk-pixbuf-gnome-/}
-
 COMMENT=	the GNOME image loading library GNOME canvas support add-on
 
 CONFLICTS+=	gdk-pixbuf<0.10.1
 
-GDK_PIXBUF_REQD=	0.10.1
-
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
+BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.10.1
 
 # Fix config scripts by removing buildlink directory references.
 post-build:
@@ -38,4 +34,6 @@ do-install:
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} \
 	  ${INSTALL_TARGET}
 
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../x11/gnome-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/06/11 01:59:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/06/23 19:26:59 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpam.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define PAM_REQD to the version of pam desired.
+# (1) Optionally define BUILDLINK_DEPENDS.pam to the dependency pattern
+#     for the version of pam desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(PAM_BUILDLINK_MK)
 PAM_BUILDLINK_MK=	# defined
 
-PAM_REQD?=		0.72
-DEPENDS+=		PAM>=${PAM_REQD}:../../security/PAM
+BUILDLINK_DEPENDS.pam?=	PAM>=0.72
+DEPENDS+=		${BUILDLINK_DEPENDS.pam}:../../security/PAM
 
 BUILDLINK_PREFIX.pam=	${LOCALBASE}
 BUILDLINK_FILES.pam=	include/security/*

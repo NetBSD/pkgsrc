@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/11 01:59:36 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define FREETYPE_REQD to the version of freetype desired.
+# (1) Optionally define BUILDLINK_DEPENDS.freetype to the dependency pattern
+#     for the version of freetype desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(FREETYPE_BUILDLINK_MK)
 FREETYPE_BUILDLINK_MK=	# defined
 
-FREETYPE_REQD?=		1.3.1
-DEPENDS+=		freetype-lib>=${FREETYPE_REQD}:../../graphics/freetype-lib
+BUILDLINK_DEPENDS.freetype?=	freetype-lib>=1.3.1
+DEPENDS+=	${BUILDLINK_DEPENDS.freetype}:../../graphics/freetype-lib
 
 BUILDLINK_PREFIX.freetype=	${LOCALBASE}
 BUILDLINK_FILES.freetype=	include/freetype/*

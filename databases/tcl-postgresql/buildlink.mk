@@ -1,11 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/21 21:41:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcl-postgresql.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define TCL_POSTGRESQL_REQD to the version of tcl-postgresql
-#     desired.
+# (1) Optionally define BUILDLINK_DEPENDS.tcl-postgresql to the dependency
+#     pattern for the version of tcl-postgresql desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -15,8 +15,8 @@
 .if !defined(TCL_POSTGRESQL_BUILDLINK_MK)
 TCL_POSTGRESQL_BUILDLINK_MK=	# defined
 
-TCL_POSTGRESQL_REQD=	7.0
-DEPENDS+=	tcl-postgresql>=${TCL_POSTGRESQL_REQD}:../../databases/tcl-postgresql
+BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=7.0
+DEPENDS+=	${BUILDLINK_DEPENDS.tcl-postgresql}:../../databases/tcl-postgresql
 
 BUILDLINK_PREFIX.tcl-postgresql=	${LOCALBASE}
 BUILDLINK_FILES.tcl-postgresql=		include/pgsql/libpgtcl.h

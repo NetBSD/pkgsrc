@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/21 18:54:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:58 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcl.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define TCL_REQD to the version of tcl desired.
+# (1) Optionally define BUILDLINK_DEPENDS.tcl to the dependency pattern
+#     for the version of tcl desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(TCL_BUILDLINK_MK)
 TCL_BUILDLINK_MK=	# defined
 
-TCL_REQD?=		8.3.2
-DEPENDS+=		tcl>=${TCL_REQD}:../../lang/tcl
+BUILDLINK_DEPENDS.tcl?=	tcl>=8.3.2
+DEPENDS+=		${BUILDLINK_DEPENDS.tcl}:../../lang/tcl
 
 BUILDLINK_PREFIX.tcl=	${LOCALBASE}
 BUILDLINK_FILES.tcl=	include/tcl.h

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/19 03:59:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libaudiofile.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define AUDIOFILE_REQD to the version of libaudiofile desired.
+# (1) Optionally define BUILDLINK_DEPENDS.audiofile to the dependency pattern
+#     for the version of libaudiofile desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(AUDIOFILE_BUILDLINK_MK)
 AUDIOFILE_BUILDLINK_MK=	# defined
 
-AUDIOFILE_REQD?=	0.2.1
-DEPENDS+=		libaudiofile>=${AUDIOFILE_REQD}:../../audio/libaudiofile
+BUILDLINK_DEPENDS.audiofile?=	libaudiofile>=0.2.1
+DEPENDS+=	${BUILDLINK_DEPENDS.audiofile}:../../audio/libaudiofile
 
 BUILDLINK_PREFIX.audiofile=	${LOCALBASE}
 BUILDLINK_FILES.audiofile=	include/af_vfs.h

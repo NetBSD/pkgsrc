@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/06/11 01:59:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/06/23 19:26:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GETTEXT_REQD to the version of gettext desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gettext to the dependency pattern
+#     for the version of gettext desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,7 +15,7 @@
 .if !defined(GETTEXT_BUILDLINK_MK)
 GETTEXT_BUILDLINK_MK=	# defined
 
-GETTEXT_REQD?=		0.10.35nb1
+BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
 
 .if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
@@ -25,7 +26,7 @@ _NEED_GNU_GETTEXT=	YES
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
-DEPENDS+=		gettext-lib>=${GETTEXT_REQD}:../../devel/gettext-lib
+DEPENDS+=	${BUILDLINK_DEPENDS.gettext}:../../devel/gettext-lib
 BUILDLINK_PREFIX.gettext=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.gettext=	/usr
@@ -37,6 +38,9 @@ BUILDLINK_FILES.gettext+=	lib/libintl.*
 BUILDLINK_TARGETS.gettext=	gettext-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gettext}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
 .if defined(GNU_CONFIGURE)
 #
 # Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
@@ -44,12 +48,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gettext}
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=		LIBS="${LIBS}"
-CFLAGS+=		-I${BUILDLINK_DIR}/include
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include
-LDFLAGS+=		-L${BUILDLINK_DIR}/lib
 LIBS+=			-lintl
+.endif
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.gettext}

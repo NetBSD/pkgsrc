@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/20 23:46:23 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdbm.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GDBM_REQD to the version of gdbm desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gdbm to the dependency pattern
+#     for the version of gdbm desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GDBM_BUILDLINK_MK)
 GDBM_BUILDLINK_MK=	# defined
 
-GDBM_REQD?=		1.7.3
-DEPENDS+=		gdbm>=${GDBM_REQD}:../../databases/gdbm
+BUILDLINK_DEPENDS.gdbm?=	gdbm>=1.7.3
+DEPENDS+=	${BUILDLINK_DEPENDS.gdbm}:../../databases/gdbm
 
 BUILDLINK_PREFIX.gdbm=	${LOCALBASE}
 BUILDLINK_FILES.gdbm=	include/gdbm.h

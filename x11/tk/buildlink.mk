@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/21 21:41:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:02 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tk.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define TK_REQD to the version of tk desired.
+# (1) Optionally define BUILDLINK_DEPENDS.tk to the dependency pattern
+#     for the version of tk desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(TK_BUILDLINK_MK)
 TK_BUILDLINK_MK=	# defined
 
-TK_REQD?=		8.3.2
-DEPENDS+=		tk>=${TK_REQD}:../../x11/tk
+BUILDLINK_DEPENDS.tk?=	tk>=8.3.2
+DEPENDS+=		${BUILDLINK_DEPENDS.tk}:../../x11/tk
 
 BUILDLINK_PREFIX.tk=	${LOCALBASE}
 BUILDLINK_FILES.tk=	include/tk.h

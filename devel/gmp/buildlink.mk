@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/11 01:59:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/23 19:26:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gmp.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GMP_REQD to the version of gmp desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gmp to the dependency pattern
+#     for the version of gmp desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GMP_BUILDLINK_MK)
 GMP_BUILDLINK_MK=	# defined
 
-GMP_REQD?=		3.0
-DEPENDS+=		gmp>=${GMP_REQD}:../../devel/gmp
+BUILDLINK_DEPENDS.gmp?=	gmp>=3.0
+DEPENDS+=		${BUILDLINK_DEPENDS.gmp}:../../devel/gmp
 
 BUILDLINK_PREFIX.gmp=	${LOCALBASE}
 BUILDLINK_FILES.gmp=	include/gmp.h

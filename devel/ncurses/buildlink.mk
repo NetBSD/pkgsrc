@@ -1,17 +1,18 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/19 16:18:15 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
 # To use this Makefile fragment, simply:
 #
 # (1) Optionally define USE_NCURSES to force use of ncurses.
-# (2) Optionally define NCURSES_REQD to the version of ncurses desired.
+# (2) Optionally define BUILDLINK_DEPENDS.ncurses to the dependency pattern
+#     for the version of ncurses desired.
 # (3) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
 # (4) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
-NCURSES_REQD?=		5.0
+BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.0
 
 .if defined(USE_NCURSES)
 _NEED_NCURSES=		YES
@@ -52,7 +53,7 @@ BUILDLINK_FILES.ncurses+=	lib/libmenu.*
 BUILDLINK_FILES.ncurses+=	lib/libncurses++.*
 BUILDLINK_FILES.ncurses+=	lib/libncurses.*
 BUILDLINK_FILES.ncurses+=	lib/libpanel.*
-DEPENDS+=			ncurses>=${NCURSES_REQD}:../../devel/ncurses
+DEPENDS+=			${BUILDLINK_DEPENDS.ncurses}:../../devel/ncurses
 .else
 BUILDLINK_PREFIX.ncurses=	/usr
 BUILDLINK_FILES.ncurses=	include/curses.h

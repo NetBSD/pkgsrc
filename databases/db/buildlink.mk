@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/19 07:37:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:50 jlam Exp $
 #
 # This Makefile fragment is included by packages that use db.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define DB_REQD to the version of db desired.
+# (1) Optionally define BUILDLINK_DEPENDS.db to the dependency pattern
+#     for the version of db desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(DB_BUILDLINK_MK)
 DB_BUILDLINK_MK=	# defined
 
-DB_REQD?=		2.7.3
-DEPENDS+=		db>=${DB_REQD}:../../databases/db
+BUILDLINK_DEPENDS.db?=	db>=2.7.3
+DEPENDS+=		${BUILDLINK_DEPENDS.db}:../../databases/db
 
 BUILDLINK_PREFIX.db=	${LOCALBASE}
 BUILDLINK_FILES.db=	include/db2/*

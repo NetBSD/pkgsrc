@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/18 20:30:48 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pth.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define PTH_REQD to the version of pth desired.
+# (1) Optionally define BUILDLINK_DEPENDS.pth to the dependency pattern
+#     for the version of pth desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(PTH_BUILDLINK_MK)
 PTH_BUILDLINK_MK=	# defined
 
-PTH_REQD?=		1.3.2
-DEPENDS+=		pth>=${PTH_REQD}:../../devel/pth
+BUILDLINK_DEPENDS.pth?=	pth>=1.3.2
+DEPENDS+=		${BUILDLINK_DEPENDS.pth}:../../devel/pth
 
 BUILDLINK_PREFIX.pth=	${LOCALBASE}
 BUILDLINK_FILES.pth=	include/pth.h
