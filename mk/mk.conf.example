@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.237 2001/08/14 12:49:09 agc Exp $
+# $NetBSD: mk.conf.example,v 1.238 2001/08/19 08:47:57 zuntum Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -405,6 +405,13 @@
 #ARLA_CACHE=	/var/cache
 # Specifies the location of the cache used by arla. Should be on a local disk.
 # Default: ${LOCALBASE}/cache
+
+#AVIFILE_USE_QT=	YES
+# Enable support for qt2 in avifile-devel package. These utilities will be built
+# in addition to non-qt version: avi{bench,cat,make,recompress,avitype}.
+# aviplay (qt-based player that uses avifile libraries) will be built too,
+# but it has problems with threads and does not work yet.
+# Default: not defined
 
 #BASH_STATIC=	YES
 # Used in bash2 package to link it statically (for use as a root shell)
