@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/12/16 02:36:05 hubertf Exp $
+$NetBSD: md5,v 1.2 2001/02/21 15:56:02 fvdl Exp $
 
-MD5 (db-3.0.55.tar.gz) = c489c3322c4c2490133190166d58c12c
+MD5 (db-3.2.9.tar.gz) = 4df5c7051b11411e0a970f6c91613942
