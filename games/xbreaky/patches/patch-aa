@@ -1,26 +1,34 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 18:04:19 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/05 04:02:25 jlam Exp $
 
---- Makefile.orig	Thu May 11 09:53:15 2000
+--- Makefile.orig	Thu May 11 03:53:15 2000
 +++ Makefile
-@@ -4,9 +4,9 @@
- CC=g++
- GC=gcc
+@@ -1,36 +1,36 @@
+ # Makefile for Xbreaky from {davebrul@hotmail.com}   
+ 
+ 
+-CC=g++
+-GC=gcc
++#CXX=g++
++#CC=gcc
  
 -CFLAGS = -O2 -DPREFIX=\"${prefix}\"
 -LDFLAGS = -L/usr/X11R6/lib -I/usr/X11/include/X11 -lX11 -lXpm -lm
 -prefix = /usr/local
-+prefix?=${PREFIX}
-+CFLAGS+= -DPREFIX=\"${prefix}\" -I${X11BASE}/include
-+LDFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lX11 -lXpm -lm
++prefix ?= ${PREFIX}
++CFLAGS += -DPREFIX=\"${prefix}\"
++LDFLAGS += -lX11 -lXpm -lm
  
  all: xbreaky xbreaky.snd
  
-@@ -15,22 +15,22 @@
- 	$(CC) $(LDFLAGS) xbreaky.o -o xbreaky
+ xbreaky:
+-	$(CC) $(CFLAGS) -c xbreaky.cpp -o xbreaky.o
+-	$(CC) $(LDFLAGS) xbreaky.o -o xbreaky
++	$(CXX) $(CFLAGS) -c xbreaky.cpp -o xbreaky.o
++	$(CXX) $(LDFLAGS) xbreaky.o -o xbreaky
  
  xbreaky.snd:
 -	$(GC) $(CFLAGS) -lm -o xbreaky.snd xbreaky.snd.c
-+	$(GC) $(CFLAGS) -lm -o xbreaky.snd xbreaky.snd.c -lossaudio
++	$(CC) $(CFLAGS) -lm -o xbreaky.snd xbreaky.snd.c ${LIBOSSAUDIO}
  
  install:
  	for d in $(prefix)/bin $(prefix)/share/pixmaps $(prefix)/man/man6 \
