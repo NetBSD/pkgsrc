@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/11 22:11:09 damon Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/26 16:29:56 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.4
@@ -15,8 +15,6 @@ USE_GMAKE=	yes
 
 ALL_TARGET=	netbsd
 INSTALL_TARGET=	install_netbsd
-PLIST_SUBST+=	MKDIR='${MKDIR}' \
-		RMDIR='${RMDIR}'
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm
