@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6334 2004/06/26 19:19:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.6335 2004/06/26 20:41:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mencoder to 1.0pre4nb1 [grant 2004-06-26]
 	Updated pkglint to 3.79 [hubertf 2004-06-26]
 	Updated rdiff-backup to 0.12.7 [adrianp 2004-06-26]
+	Updated imp to 3.2.4 [adrianp 2004-06-26]
