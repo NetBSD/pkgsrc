@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.35 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-aa,v 1.36 2004/08/31 11:27:11 wiz Exp $
 
---- configure.orig	Sun Apr 18 07:51:57 2004
+--- configure.orig	2004-08-17 14:54:53.000000000 +0200
 +++ configure
-@@ -4814,8 +4814,18 @@ EOF
- EOF
+@@ -6101,8 +6101,18 @@ _ACEOF
+ _ACEOF
  
  	;;
 +
@@ -21,53 +21,53 @@ $NetBSD: patch-aa,v 1.35 2004/08/04 06:43:52 minskim Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -17263,12 +17273,20 @@ fi
- rm -f conftest.$ac_objext conftest.$ac_ext
+@@ -23790,12 +23800,19 @@ fi
+ rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
--		cat >>confdefs.h <<\EOF
+-		cat >>confdefs.h <<\_ACEOF
 +		for f in /var/run/utmpx; do
 +			if test -f $f ; then
 +				conf_utmpx_location=$f
 +			fi
 +		done
 +		if test -z "$conf_utmpx_location"; then
-+			cat >>confdefs.h <<\EOF
++			cat >>confdefs.h <<\_ACEOF
  #define DISABLE_UTMPX 1
- EOF
- 
+ _ACEOF
+-
 +		fi
  	fi
 -else
 +fi
 +if test -n "$conf_utmpx_location"; then
- 	cat >>confdefs.h <<EOF
+ 	cat >>confdefs.h <<_ACEOF
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
- EOF
-@@ -17323,12 +17341,20 @@ fi
- rm -f conftest.$ac_objext conftest.$ac_ext
+ _ACEOF
+@@ -23864,12 +23881,20 @@ fi
+ rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
--		cat >>confdefs.h <<\EOF
+-		cat >>confdefs.h <<\_ACEOF
 +		for f in /var/log/wtmpx; do
 +			if test -f $f ; then
 +				conf_wtmpx_location=$f
 +			fi
 +		done
 +		if test -z "$conf_wtmpx_location"; then
-+			cat >>confdefs.h <<\EOF
++			cat >>confdefs.h <<\_ACEOF
  #define DISABLE_WTMPX 1
- EOF
- 
+ _ACEOF
 +		fi
+ 
  	fi
 -else
 +fi
 +if test -n "$conf_wtmpx_location"; then
- 	cat >>confdefs.h <<EOF
+ 	cat >>confdefs.h <<_ACEOF
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
- EOF
-@@ -18237,7 +18263,7 @@ echo "OpenSSH has been configured with t
+ _ACEOF
+@@ -25091,7 +25116,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
