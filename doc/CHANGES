@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5226 2004/03/12 05:22:13 taca Exp $
+$NetBSD: CHANGES,v 1.5227 2004/03/12 06:07:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1432,3 +1432,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-base to 1.6.8.nb3  [taca 2004-03-12]
 	Added ruby-fcgi [taca 2004-03-12]
 	Added ruby-amrita [taca 2004-03-12]
+	Updated quirc to 0.9.84 [minskim 2004-03-12]
