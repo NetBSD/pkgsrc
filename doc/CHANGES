@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7297 2004/09/30 12:48:48 adrianp Exp $
+$NetBSD: CHANGES,v 1.7298 2004/09/30 13:01:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4484,7 +4484,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added firefox-gtk2-bin-flash-6.0.79 [rh 2004-09-29]
 	Added gattrib-20040313 [wulf 2004-09-29]
 	Updated tex-jadetex to 3.13 [hubertf 2004-09-29]
-	Added flodo-v3 [mrg 2004-09-29]
+	Added flodo-3-20040907 [mrg 2004-09-29]
 	Updated gtklife to 4.1 [wiz 2004-09-30]
 	Added shc-3.7 [grant 2004-09-30]
 	Updated dylan-interpreter to 2.3.11 [agc 2004-09-30]
