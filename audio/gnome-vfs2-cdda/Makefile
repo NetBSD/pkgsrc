@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:06 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/28 13:02:00 recht Exp $
 #
 
-PKGREVISION=		1
+#PKGREVISION=		1
 
 GNOME_VFS2_NAME=	cdda
 CATEGORIES=		audio
