@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/01/04 20:25:49 tron Exp $
+
+--- kfax/libtiffax/mkg3states.c.orig	Mon Oct  6 05:22:16 1997
++++ kfax/libtiffax/mkg3states.c	Mon Jan  4 21:09:01 1999
+@@ -29,6 +29,10 @@
+  * in Frank Cringle's viewfax program;
+  *      Copyright (C) 1990, 1995  Frank D. Cringle.
+  */
++#if defined(__NetBSD__)
++#define unix 42
++#endif
++
+ #if defined(unix) || defined(__unix)
+ #include "port.h"
+ #else
