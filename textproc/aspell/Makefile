@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2004/12/19 00:21:59 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/24 02:55:53 wiz Exp $
 #
 
-DISTNAME=		aspell-0.50.5
-PKGREVISION=		3
+DISTNAME=		aspell-0.60.2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
@@ -18,12 +17,22 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
-NOT_FOR_COMPILER+=	xlc
+INFO_FILES=		aspell-dev.info aspell.info
 
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
+CONFIGURE_ARGS+=	--enable-pkgdatadir=${PREFIX}/share/aspell
+CONFIGURE_ARGS+=	--enable-dict-dir=${PREFIX}/lib/aspell
 
 REPLACE_PERL=		scripts/aspell-import
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	post-build
+SUBST_MESSAGE.bash=	bash is not really necessary, use sh.
+SUBST_FILES.bash=	scripts/precat scripts/preunzip scripts/prezip
+SUBST_SED.bash=		"s!/bin/bash!/bin/sh!"
+
+NOT_FOR_COMPILER=	xlc
 
 LIBS.SunOS+=		-lm
 
@@ -33,13 +42,7 @@ LIBS.SunOS+=		-lm
 LIBS.SunOS+=		-lCrun -lCstd
 .endif
 
-pre-patch:
-.if !empty(PKGSRC_COMPILER:Msunpro)
-	@cd ${WRKSRC} && ${PATCH} -p1 -s < suncc/aspell-0.50.4.1-suncc.diff
-.endif
-
 # Create directory for dictionaries.
-#
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/aspell
 

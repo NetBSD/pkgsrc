@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2004/07/24 19:05:37 salo Exp $
+$NetBSD: patch-ag,v 1.2 2004/12/24 02:55:53 wiz Exp $
 
---- examples/Makefile.in.orig	Wed Feb 11 02:05:53 2004
-+++ examples/Makefile.in	Sat Jul 24 17:39:23 2004
-@@ -81,7 +81,7 @@
+--- examples/Makefile.in.orig	2004-08-23 03:22:40.000000000 +0200
++++ examples/Makefile.in
+@@ -86,7 +86,7 @@ AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
@@ -10,4 +10,4 @@ $NetBSD: patch-ag,v 1.1 2004/07/24 19:05:37 salo Exp $
 +CC = @CXX@
  CCDEPMODE = @CCDEPMODE@
  CFLAGS = @CFLAGS@
- CPP = @CPP@
+ COMPILE_IN_FILTERS_FALSE = @COMPILE_IN_FILTERS_FALSE@
