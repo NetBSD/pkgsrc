@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.129 2003/10/08 10:07:20 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.130 2003/10/11 06:46:45 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -85,6 +85,7 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
+LOWER_OPSYS_VERSUFFIX=	2
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
@@ -132,7 +133,7 @@ LOWER_VENDOR?=
 LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}
+MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${LOWER_OPSYS_VERSUFFIX}${APPEND_ELF}
 
 # Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
 # from being created in bsd.own.mk.
