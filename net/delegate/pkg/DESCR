@@ -1,9 +1,10 @@
-DeleGate is a general purpose protocol proxy system for protocols
-using TCP/IP.  This software includes support for HTTP, Gopher, FTP,
-SMTP, NNTP, POP, Telnet, Wais, Whois, etc.
-
-More information can be found at:
-  http://wall.etl.go.jp/delegate/
-
-- Max
-
+DeleGate is a general purpose application level gateway, or a proxy
+server which runs on multiple platforms (Unix, Windows and OS/2).
+DeleGate mediates communication of various protocols (HTTP, FTP, NNTP,
+POP, Telnet, etc.), applying cache and conversion for mediated data,
+controlling access from clients and routing toward servers.  It
+translates protocols between clients and servers, merging several
+servers into a single server view with aliasing and filtering.  Born
+as a tiny proxy for Gopher in March 1994, it has steadily grown into a
+general purpose proxy server.  Besides proxy, DeleGate can be used as a
+simple origin server for some protocols (HTTP, FTP and NNTP). 
