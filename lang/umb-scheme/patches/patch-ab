@@ -1,12 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/02 11:59:07 itojun Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/12 21:06:44 jtb Exp $
 
---- Makefile-	Thu Nov  2 20:49:05 2000
-+++ Makefile	Thu Nov  2 20:49:21 2000
+--- Makefile.orig	Sun Jan 21 22:15:47 1996
++++ Makefile
 @@ -1,6 +1,6 @@
  # Makefile for the UMB Scheme interpreter.
- CC = gcc
+-CC = gcc
 -CFLAGS =  -g -O   -pedantic -Wall
-+CFLAGS =  -g -O   -pedantic -Wall -I${.CURDIR}
++#CC = gcc
++#CFLAGS =  -g -O   -pedantic -Wall
  
  #CC = cc
  #CFLAGS = -O 
+@@ -11,7 +11,7 @@
+ 	  io.o compiler.o eval.o architecture.o number.o\
+ 	  fixnum.o bignum.o rational.o real.o complex.o
+ libraries = -lm
+-program = scheme
++program = umb-scheme
+ 
+ .PHONY:		default tags print
+ 
