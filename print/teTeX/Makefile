@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/08/03 13:29:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/08/18 07:48:31 tron Exp $
 #
 
 DISTNAME=	teTeX-1.0.6
@@ -19,6 +19,7 @@ NO_CONFIGURE=   yes
 NO_BUILD=       yes
 
 do-install:
-	@${ECHO_MSG} Hello world!
+	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} ${PKGNAME} \
+	  POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
