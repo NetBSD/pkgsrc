@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 19:41:24 xtraeme Exp $
+bin/dspam
+bin/dspam_2sql
+bin/dspam_clean
+bin/dspam_corpus
+bin/dspam_crc
+bin/dspam_dump
+bin/dspam_genaliases
+bin/dspam_merge
+bin/dspam_stats
+include/dspam/buffer.h
+include/dspam/decode.h
+include/dspam/error.h
+include/dspam/lht.h
+include/dspam/libdspam.h
+include/dspam/libdspam_objects.h
+include/dspam/nodetree.h
+include/dspam/storage_driver.h
+lib/libdspam.a
+lib/libdspam.la
+lib/libdspam.so
+lib/libdspam.so.5
+lib/libdspam.so.5.0
+lib/pkgconfig/dspam.pc
+man/man1/dspam.1
+man/man1/dspam_clean.1
+man/man1/dspam_corpus.1
+man/man1/dspam_dump.1
+man/man1/dspam_merge.1
+man/man1/dspam_stats.1
+share/doc/dspam/README
+share/doc/dspam/RELEASE.NOTES
+share/dspam/cgi/admin.cgi
+share/dspam/cgi/admingraph.cgi
+share/dspam/cgi/admins
+share/dspam/cgi/base.css
+share/dspam/cgi/default.prefs
+share/dspam/cgi/dspam.cgi
+share/dspam/cgi/graph.cgi
+share/dspam/cgi/logo.gif
+share/dspam/cgi/rgb.txt
+share/dspam/cgi/templates/nav_admin_error.html
+share/dspam/cgi/templates/nav_admin_preferences.html
+share/dspam/cgi/templates/nav_admin_status.html
+share/dspam/cgi/templates/nav_admin_user.html
+share/dspam/cgi/templates/nav_alerts.html
+share/dspam/cgi/templates/nav_analysis.html
+share/dspam/cgi/templates/nav_error.html
+share/dspam/cgi/templates/nav_history.html
+share/dspam/cgi/templates/nav_performance.html
+share/dspam/cgi/templates/nav_preferences.html
+share/dspam/cgi/templates/nav_quarantine.html
+share/dspam/cgi/templates/nav_viewmessage.html
+share/dspam/mysql/README
+share/dspam/mysql/mysql_objects.sql.space.optimized
+share/dspam/mysql/mysql_objects.sql.speed.optimized
+share/dspam/mysql/purge.sql
+share/dspam/mysql/virtual_users.sql
+share/dspam/pgsql/README
+share/dspam/pgsql/pgsql_objects.sql
+share/dspam/pgsql/purge.sql
+share/dspam/pgsql/virtual_users.sql
+share/dspam/txt/firstrun.txt
+share/dspam/txt/firstspam.txt
+share/dspam/txt/quarantinefull.txt
+@dirrm share/dspam/txt
+@dirrm share/dspam/pgsql
+@dirrm share/dspam/mysql
+@dirrm share/dspam/cgi/templates
+@dirrm share/dspam/cgi
+@dirrm share/dspam
+@dirrm share/doc/dspam
+@dirrm include/dspam
