@@ -1,0 +1,11 @@
+$NetBSD: patch-ba,v 1.1 1998/12/29 08:12:04 garbled Exp $
+--- mit-pthreads/pthreads/specific.c.orig	Mon Dec 28 23:52:16 1998
++++ mit-pthreads/pthreads/specific.c	Mon Dec 28 23:52:30 1998
+@@ -42,6 +42,7 @@
+ #include <errno.h>
+ #include <pthread.h>
+ #include <stdlib.h>
++#include <string.h>
+ 
+ static struct pthread_key key_table[PTHREAD_DATAKEYS_MAX];
+ static pthread_mutex_t key_mutex = PTHREAD_MUTEX_INITIALIZER;
