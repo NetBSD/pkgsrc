@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/07 10:32:35 rh Exp $
+bin/xml-i18n-extract
+bin/xml-i18n-merge
+bin/xml-i18n-prepare
+bin/xml-i18n-toolize
+bin/xml-i18n-unicodify
+bin/xml-i18n-update
+share/aclocal/xml-i18n-tools.m4
+share/doc/xml-i18n-tools/ABOUT-NLS
+share/doc/xml-i18n-tools/AUTHORS
+share/doc/xml-i18n-tools/COPYING
+share/doc/xml-i18n-tools/ChangeLog
+share/doc/xml-i18n-tools/NEWS
+share/doc/xml-i18n-tools/README
+share/xml-i18n-tools/xml-i18n-extract.in
+share/xml-i18n-tools/xml-i18n-merge.in
+share/xml-i18n-tools/xml-i18n-tools.Makefile.patch
+share/xml-i18n-tools/xml-i18n-update.in
+@dirrm share/xml-i18n-tools
+@dirrm share/doc/xml-i18n-tools
