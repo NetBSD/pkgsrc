@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2005/02/24 08:45:07 agc Exp $
+$NetBSD: distinfo,v 1.15 2005/03/19 09:13:57 seb Exp $
 
-SHA1 (graphviz-2.0/graphviz-2.0.tar.gz) = f324c9010fedcc97bd65a880d83b645dbe6282ef
-RMD160 (graphviz-2.0/graphviz-2.0.tar.gz) = 128e9d381cc34515864bab2c967dc0d8ac1c55d6
-Size (graphviz-2.0/graphviz-2.0.tar.gz) = 4384874 bytes
+SHA1 (graphviz-2.2/graphviz-2.2.tar.gz) = 2583bdd3ff082bf3a93ad7313b3261bea23a0f90
+RMD160 (graphviz-2.2/graphviz-2.2.tar.gz) = d1f97c236d045a43f8369f2fba3e4167b778eda7
+Size (graphviz-2.2/graphviz-2.2.tar.gz) = 4379295 bytes
 SHA1 (patch-ab) = c04269613e3e7ecefe9492b075d3303a1f125515
-SHA1 (patch-ac) = a03e3427863b64735aeff895e0bd8dcb0e6714e1
+SHA1 (patch-ac) = 6c48703788578a30473ceb079b286cbfeb2974f8
 SHA1 (patch-ad) = 93c24f960bf5bfb405ab2d8751efc1e652cd92a0
 SHA1 (patch-ae) = 9255ba6000a7ebc3483d915ff8468e3a448200f8
 SHA1 (patch-af) = 37d2492fd95256fb7b4031d5013c068c89a27946
@@ -23,8 +23,8 @@ SHA1 (patch-ar) = fc3892b5a70f2e22d45f4af6abab40895384be24
 SHA1 (patch-as) = 5a44b60202f70746efacfc6cf2d6d808f40a0f92
 SHA1 (patch-at) = 31057001f25260b72da8f8617c24627d721cf413
 SHA1 (patch-au) = 1b47f17ba332918378ab72750ca6d5a8fb510555
-SHA1 (patch-av) = b6f3789262b1df0004deba32a960e5aa26373b2d
-SHA1 (patch-aw) = 19bd5db29bde4fdb90d5f42dd86e1cbffee4350e
+SHA1 (patch-av) = 0ff41e9a005f47a52ea223480d635924a78110eb
+SHA1 (patch-aw) = 1510bf7d0675733ec88b7e40d035149213d11175
 SHA1 (patch-ax) = b290d89d881904f804d7a426aaa4510fb7e371bf
 SHA1 (patch-ay) = 7c12461a5429a66c426d868c3115e0f3422f59b9
 SHA1 (patch-az) = 65cc7e6820fcef2a65280c8f2f0f3ea6dfccab7c
@@ -51,8 +51,8 @@ SHA1 (patch-bt) = 301fec1d5c7b6879f71c7f89663ca313834611ff
 SHA1 (patch-bu) = af47727c3a1dd592f5d0b4f006ba7452b8f44da8
 SHA1 (patch-bv) = 7d6dc89a1ee5da5cbefe437cf8ffed62108d276c
 SHA1 (patch-bw) = 1912e141b9ef60be69099c94f9aa4342bcc18d80
-SHA1 (patch-bx) = 00d43b4790b9849a2ee89d93456af22784a9b8b5
-SHA1 (patch-by) = 25306d179e069581ada7ddb6f55607cfb1ab1512
+SHA1 (patch-bx) = 892e92417c3c8fb8e5d8995c7f2f547c98b25e4f
+SHA1 (patch-by) = fb4d9c2caf06709505d53f640becfb00ddac7ded
 SHA1 (patch-bz) = 988f3c93b6eeb2bd0efdf486e18189ec558d3769
 SHA1 (patch-ca) = 3a15d19801a946330a08ad1ffd2da4e95c0feb11
 SHA1 (patch-cb) = 50210dc6f6e0676df267af54422aab240feded78

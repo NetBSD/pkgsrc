@@ -1,6 +1,6 @@
-$NetBSD: patch-by,v 1.2 2004/12/24 18:26:57 seb Exp $
+$NetBSD: patch-by,v 1.3 2005/03/19 09:13:57 seb Exp $
 
---- Makefile.in.orig	2004-12-24 13:13:35.000000000 +0000
+--- Makefile.in.orig	2005-03-18 11:36:51.000000000 +0000
 +++ Makefile.in
 @@ -41,9 +41,9 @@ DIST_COMMON = README $(am__configure_dep
  	$(srcdir)/Makefile.in $(srcdir)/ast_common.h.in \
@@ -15,7 +15,7 @@ $NetBSD: patch-by,v 1.2 2004/12/24 18:26:57 seb Exp $
  subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  am__aclocal_m4_deps = $(top_srcdir)/m4/iconv.m4 \
-@@ -189,7 +189,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
+@@ -187,7 +187,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
  SORT = @SORT@
  STRIP = @STRIP@
  TCLINT_INCLUDES = @TCLINT_INCLUDES@
@@ -23,7 +23,7 @@ $NetBSD: patch-by,v 1.2 2004/12/24 18:26:57 seb Exp $
  TCL_CFLAGS = @TCL_CFLAGS@
  TCL_DEFS = @TCL_DEFS@
  TCL_INCLUDES = @TCL_INCLUDES@
-@@ -215,7 +214,6 @@ TK_VERSION = @TK_VERSION@
+@@ -213,7 +212,6 @@ TK_VERSION = @TK_VERSION@
  TK_XINCLUDES = @TK_XINCLUDES@
  TOP_DIR = @TOP_DIR@
  VERSION = @VERSION@
@@ -31,14 +31,12 @@ $NetBSD: patch-by,v 1.2 2004/12/24 18:26:57 seb Exp $
  WITH_MYLIBGD_FALSE = @WITH_MYLIBGD_FALSE@
  WITH_MYLIBGD_TRUE = @WITH_MYLIBGD_TRUE@
  WITH_TCL_FALSE = @WITH_TCL_FALSE@
-@@ -285,8 +283,8 @@ target_vendor = @target_vendor@
+@@ -283,7 +281,7 @@ target_vendor = @target_vendor@
  ACLOCAL_AMFLAGS = -I m4
  pkgindexdir = $(libdir)/@PACKAGE@
  pkgindex_DATA = pkgIndex.tcl
 -txtdir = $(pkgdatadir)/doc
--htmldir = $(pkgdatadir)/doc/html
 +txtdir = $(prefix)/share/doc/graphviz
-+htmldir = $(prefix)/share/doc/html/graphviz
- txt = AUTHORS COPYING ChangeLog NEWS FAQ.txt
- html = CPL.html
+ txt = AUTHORS COPYING ChangeLog NEWS cpl1.0.txt
  txt_DATA = $(txt)
+ SUBDIRS = cdt agraph agutil doc pathplan graph gd dotneato \

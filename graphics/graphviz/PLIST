@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/12/24 18:26:56 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/19 09:13:57 seb Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -179,14 +179,13 @@ share/doc/graphviz/AUTHORS
 share/doc/graphviz/COPYING
 share/doc/graphviz/ChangeLog
 share/doc/graphviz/Dot.ref
-share/doc/graphviz/FAQ.txt
 share/doc/graphviz/NEWS
+share/doc/graphviz/cpl1.0.txt
 share/doc/graphviz/latex_suggestions.txt
 share/doc/graphviz/pdf/dotguide.pdf
 share/doc/graphviz/pdf/dottyguide.pdf
 share/doc/graphviz/pdf/leftyguide.pdf
 share/doc/graphviz/pdf/neatoguide.pdf
-share/doc/html/graphviz/CPL.html
 share/doc/html/graphviz/FAQ.html
 share/doc/html/graphviz/Mcircle.gif
 share/doc/html/graphviz/Mdiamond.gif
@@ -250,7 +249,6 @@ share/doc/html/graphviz/aa_tee.gif
 share/doc/html/graphviz/aa_vee.gif
 share/doc/html/graphviz/attrs.html
 share/doc/html/graphviz/back.gif
-share/doc/html/graphviz/binlicense.htm
 share/doc/html/graphviz/both.gif
 share/doc/html/graphviz/box.gif
 share/doc/html/graphviz/build.html
