@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5084 2004/03/04 14:41:10 recht Exp $
+$NetBSD: CHANGES,v 1.5085 2004/03/04 14:52:33 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1149,3 +1149,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated priv to 1.0-beta2 [simonb 2004-03-04]
 	Added libelf-0.8.5 [recht 2004-03-04]
 	Updated py-psyco to 1.2 [recht 2004-03-04]
+	Added milter-greylist-0.9.tgz [manu 2004-03-04]
