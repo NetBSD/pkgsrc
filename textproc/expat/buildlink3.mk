@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/02/18 16:35:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/02/20 23:14:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EXPAT_BUILDLINK3_MK:=	${EXPAT_BUILDLINK3_MK}+
@@ -98,8 +98,8 @@ BUILDLINK_DEPENDS+=		expat
 BUILDLINK_DEPENDS.expat+=	expat>=1.95.4
 .  if !empty(BUILDLINK_USE_BUILTIN.expat:M[yY][eE][sS])
 BUILDLINK_PREFIX.expat=	${X11BASE}
+USE_X11=		yes
 .  endif
-USE_X11=	yes
 .endif	# EXPAT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
