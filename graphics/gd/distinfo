@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2001/06/28 20:02:56 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/01/21 16:29:25 wiz Exp $
 
-SHA1 (gd-1.8.3.tar.gz) = a0a40813a2a516be35f464a76f7e15af238b45e1
-Size (gd-1.8.3.tar.gz) = 274318 bytes
-SHA1 (patch-aa) = 18391771c9b58172d58b25e841c2793a74c43282
-SHA1 (patch-ab) = a00035b1d8a2c9f2f705778c7d3d3ccd5f8e9a5e
+SHA1 (gd-1.8.4.tar.gz) = be8b20ca26b116a22e7a40c8a33dd54edb4a3721
+Size (gd-1.8.4.tar.gz) = 257631 bytes
+SHA1 (patch-aa) = 179b1f581e8fd6d627e8b1993d9d3e8d1dc301fa
+SHA1 (patch-ab) = 3ccce1d70933fb45159fbcbec7ef5450f2238049
