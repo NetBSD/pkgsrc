@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/08/25 18:40:21 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2002/10/02 18:41:44 wiz Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -11,12 +11,12 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_PERL5=		build
+
+AUTOMAKE_REQD=		1.4
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
@@ -27,9 +27,9 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 pre-configure:
 	cd ${WRKSRC}; \
-	    ${LOCALBASE}/bin/aclocal && \
-	    ${LOCALBASE}/bin/automake && \
-	    ${LOCALBASE}/bin/autoconf
+	    ${ACLOCAL} && \
+	    ${AUTOMAKE} && \
+	    ${AUTOCONF}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,4 +49,5 @@ CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
