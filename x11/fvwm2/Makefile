@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/04 09:19:08 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 1998/07/14 10:56:16 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -33,6 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/icons/*.xpm ${WRKSRC}/icons/*.xbm \
 			${WRKSRC}/icons/*.bitmap ${WRKSRC}/icons/*.icon \
 		${PREFIX}/lib/X11/fvwm2/pixmaps
-	@${CAT} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
