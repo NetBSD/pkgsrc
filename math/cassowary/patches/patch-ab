@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/24 14:24:27 agc Exp $
+
+--- c++/Cassowary.h	1999/08/23 15:31:16	1.1
++++ c++/Cassowary.h	1999/08/23 15:31:24
+@@ -47,6 +47,11 @@
+ typedef double Number;
+ 
+ typedef long FDNumber;
++
++#ifndef MINLONG
++#include <limits.h>
++#define MINLONG	LONG_MIN
++#endif
+ 
+ enum { FDN_NOTSET = MINLONG };
+ 
