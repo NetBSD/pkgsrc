@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/27 15:44:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/02 02:08:28 minskim Exp $
 bin/gtetrinet
 man/man6/gtetrinet.6
 share/applications/gtetrinet.desktop
@@ -8,23 +8,41 @@ share/gtetrinet/themes/default/theme.cfg
 share/gtetrinet/themes/small/blocks.png
 share/gtetrinet/themes/small/theme.cfg
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtetrinet.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtetrinet.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtetrinet.mo
 share/pixmaps/gtetrinet.png
+share/pixmaps/gtetrinet/alone.png
+share/pixmaps/gtetrinet/team.png
+@dirrm share/pixmaps/gtetrinet
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gtetrinet/themes/small
 @dirrm share/gtetrinet/themes/default
 @dirrm share/gtetrinet/themes
 @dirrm share/gtetrinet
-@comment in GConf2: dirrm share/gconf/schemas
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
