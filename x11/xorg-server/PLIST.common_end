@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2004/09/21 17:38:53 xtraeme Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2004/10/08 03:35:25 xtraeme Exp $
 @dirrm ${X11ROOT_PREFIX}/lib/modules/input
 @dirrm ${X11ROOT_PREFIX}/lib/modules/fonts
 @dirrm ${X11ROOT_PREFIX}/lib/modules/extensions
@@ -29,4 +29,3 @@
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xserver
 @dirrm ${X11ROOT_PREFIX}/lib/X11/getconfig
 @dirrm ${X11ROOT_PREFIX}/include/X11/pixmaps
-@dirrm ${X11ROOT_PREFIX}/etc/init.d

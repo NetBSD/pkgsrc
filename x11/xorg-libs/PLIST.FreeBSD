@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2004/07/29 04:50:56 xtraeme Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2004/10/08 03:35:25 xtraeme Exp $
 ${X11ROOT_PREFIX}/lib/libFS.a
 ${X11ROOT_PREFIX}/lib/libFS.so
 ${X11ROOT_PREFIX}/lib/libFS.so.6
@@ -44,9 +44,6 @@ ${X11ROOT_PREFIX}/lib/libXext.so.6
 ${X11ROOT_PREFIX}/lib/libXfont.a
 ${X11ROOT_PREFIX}/lib/libXfont.so
 ${X11ROOT_PREFIX}/lib/libXfont.so.1
-${X11ROOT_PREFIX}/lib/libXfontcache.a
-${X11ROOT_PREFIX}/lib/libXfontcache.so
-${X11ROOT_PREFIX}/lib/libXfontcache.so.1
 ${X11ROOT_PREFIX}/lib/libXi.a
 ${X11ROOT_PREFIX}/lib/libXi.so
 ${X11ROOT_PREFIX}/lib/libXi.so.6
@@ -112,3 +109,18 @@ ${X11ROOT_PREFIX}/lib/libxkbfile.so.1
 ${X11ROOT_PREFIX}/lib/libxkbui.a
 ${X11ROOT_PREFIX}/lib/libxkbui.so
 ${X11ROOT_PREFIX}/lib/libxkbui.so.1
+${X11ROOT_PREFIX}/lib/libXaw.so.8
+${X11ROOT_PREFIX}/lib/libXcomposite.a
+${X11ROOT_PREFIX}/lib/libXcomposite.so
+${X11ROOT_PREFIX}/lib/libXcomposite.so.1
+${X11ROOT_PREFIX}/lib/libXdamage.a
+${X11ROOT_PREFIX}/lib/libXdamage.so
+${X11ROOT_PREFIX}/lib/libXdamage.so.1
+${X11ROOT_PREFIX}/lib/libXevie.a
+${X11ROOT_PREFIX}/lib/libXevie.so
+${X11ROOT_PREFIX}/lib/libXevie.so.1
+${X11ROOT_PREFIX}/lib/libXfixes.a
+${X11ROOT_PREFIX}/lib/libXfixes.so
+${X11ROOT_PREFIX}/lib/libXfixes.so.3
+${X11ROOT_PREFIX}/lib/libXprintAppUtil.a
+${X11ROOT_PREFIX}/lib/libXprintUtil.a

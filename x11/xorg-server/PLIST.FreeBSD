@@ -1,74 +1,8 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2004/07/29 04:52:40 xtraeme Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2004/10/08 03:35:25 xtraeme Exp $
+${X11ROOT_PREFIX}/etc/rc.d/xprint
 ${X11ROOT_PREFIX}/bin/kbd_mode
 ${X11ROOT_PREFIX}/lib/modules/freebsd/libdrm.a
+${X11ROOT_PREFIX}/lib/modules/extensions/libdri.a
 ${X11ROOT_PREFIX}/${MAN_DIR}/kbd_mode.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/ati_pcigart.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drmP.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_agpsupport.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_auth.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_bufs.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_context.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_dma.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_drawable.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_drv.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_fops.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_ioctl.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_irq.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_lock.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_memory.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_memory_debug.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_os_freebsd.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_os_netbsd.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_pci.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_sarea.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_scatter.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_sysctl.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/drm_vm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_dma.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_drm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_drv.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_drv.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_irq.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_state.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_ucode.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga_warp.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_cce.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_drm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_drv.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_drv.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_irq.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128_state.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_cp.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_drm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_drv.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_drv.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_irq.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_mem.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon_state.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_drm.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_drv.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_drv.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_ds.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_ds.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis_mm.c
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/tdfx.h
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/tdfx/Makefile
-${X11ROOT_PREFIX}/src/bsd/drm/kernel/tdfx_drv.c
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel/tdfx
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel/sis
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel/radeon
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel/r128
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel/mga
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm/kernel
-@dirrm ${X11ROOT_PREFIX}/src/bsd/drm
 @dirrm ${X11ROOT_PREFIX}/lib/modules/freebsd
+@dirrm ${X11ROOT_PREFIX}/etc/rc.d
