@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/31 21:19:50 agc Exp $
+
+Add support for NetBSD and Solaris
+
+--- app.cpp	1999/12/17 17:39:52	1.1
++++ app.cpp	1999/12/17 17:41:47
+@@ -67,6 +67,20 @@
+ 	#define		SIZE_MAXPATH			MAXPATH
+ 	#define		DELETEARRAY				delete
+ 
++#elif defined(__NetBSD__)
++	// NetBSD g++
++	#include	<unistd.h>
++	#include	<sys/syslimits.h>
++	#define		SIZE_MAXPATH			PATH_MAX
++	#define		DELETEARRAY				delete[]
++
++#elif defined(__sun__) && defined(__svr4__)
++	// Solaris 2.x g++
++	#include	<unistd.h>
++	#include	<limits.h>
++	#define		SIZE_MAXPATH			PATH_MAX
++	#define		DELETEARRAY				delete[]
++
+ #else
+ 	// not supported
+ 	#error ! ! compiler/platform not supported ! !
