@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.17 2004/10/25 07:48:22 tron Exp $
+# $NetBSD: bsd.sites.mk,v 1.18 2004/10/28 09:53:44 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -50,7 +50,7 @@ MASTER_SITE_GNUSTEP+=   \
 
 MASTER_SITE_PERL_CPAN+= \
 	ftp://cpan.pair.com/pub/CPAN/modules/by-module/ \
-	ftp://mirrors.cloud9.net/pub/mirrors/CPAN/modules/by-module/ \
+	ftp://mirrors.cloud9.net/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.uvsq.fr/pub/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
