@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:14:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/14 10:15:05 uebayasi Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -21,7 +21,7 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
-CFLAGS+=		-DDEV_SOUND=\"\\\"${DEVOSSSOUND}\\\"\"
+CFLAGS+=		-DDEV_SOUND="\"${DEVOSSSOUND}\""
 BUILD_TARGET=		fkiss
 
 post-patch:
