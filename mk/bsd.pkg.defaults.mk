@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.88 2002/09/23 08:45:40 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.89 2002/09/23 13:37:21 markd Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -503,6 +503,20 @@ CYRUS_USER?=	cyrus
 # installing setuid programs.
 # Possible: any user name
 # Default: cyrus
+
+DEFANG_GROUP?=	defang
+# Used in the mimedefang package to specify the group to run commands as
+# Possible: any group name
+# Default: defang
+
+DEFANG_USER?=	defang
+# Used in the mimedefang package to specify the user to run commands as
+# Possible: any user name
+# Default: defang
+
+DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
+# Location of spool and quarantined files for the mimedefang package
+# Default: /var/amanda
 
 #DEFAULT_IRC_SERVER=
 # Used in ircII to set the default irc server. 
