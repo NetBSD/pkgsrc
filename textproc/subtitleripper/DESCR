@@ -1,0 +1,6 @@
+This package extracts DVD subtitles from a subtitle stream and
+converts it to pgm or ppm images or into VobSub format.  The main
+purpose is to provide the required input to OCR software to convert
+the subtitle images into ASCII text. Please note that the conversion
+into ASCII is not part of this package but requires an OCR program
+like gocr.
