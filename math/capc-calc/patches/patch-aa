@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/08 10:25:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/16 20:28:41 jlam Exp $
 
---- Makefile.orig	Sun Dec 17 14:09:39 2000
+--- Makefile.orig	Sun Dec 17 08:09:39 2000
 +++ Makefile
 @@ -348,18 +348,18 @@
  # ${CUSTOMHELPDIR}	where custom help files are installed.
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/08 10:25:56 wiz Exp $
 +USE_READLINE= -DUSE_READLINE
  #
 -READLINE_LIB=
-+READLINE_LIB= -ledit -ltermcap
++READLINE_LIB= -lreadline -ltermcap
  #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory
  #READLINE_LIB= -lreadline -lhistory
  #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory
@@ -89,3 +89,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/08 10:25:56 wiz Exp $
  #DEBUG= -O2 -ipa
  #DEBUG= -O2 -g3 -ipa
  #
+@@ -636,10 +636,10 @@
+ CCOPT= ${DEBUG} ${NO_SHARED}
+ CCMISC=
+ #
+-CFLAGS= ${CCWARN} ${CCOPT} ${CCMISC}
+-ICFLAGS= ${CCWARN} ${CCMISC}
++CFLAGS= ${CCWARN} ${CCOPT} ${CCMISC} ${CPPFLAGS}
++ICFLAGS= ${CCWARN} ${CCMISC} ${CPPFLAGS}
+ #
+-LDFLAGS= ${NO_SHARED} ${LD_NO_SHARED}
++LDFLAGS+= ${NO_SHARED} ${LD_NO_SHARED}
+ ILDFLAGS=
+ #
+ LCC= gcc
