@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/09/13 09:05:25 agc Exp $
+$NetBSD: distinfo,v 1.7 2004/09/15 06:20:08 jlam Exp $
 
 SHA1 (festival-1.4.1.tar.gz) = d3be7d58b986c37c39444a2dcc044cdc3ee1e774
 Size (festival-1.4.1.tar.gz) = 543335 bytes
@@ -23,4 +23,4 @@ SHA1 (patch-al) = d8a22c5f509a6d75aa3295037654b594e8db4a4a
 SHA1 (patch-am) = cd6e07df1729fecca5cd9869229701b63ba71d14
 SHA1 (patch-an) = bdd701017c72db315de8fcfb4ac6ce3bf97d4d47
 SHA1 (patch-ao) = 5641ec3df224ff3e0703912c2d706899a6860184
-SHA1 (patch-ap) = 372c31b464d19616a7cc7073ce54a373f7bb4a22
+SHA1 (patch-ap) = e99db4ff827d94d7b121daba7dce656ba45c8057
