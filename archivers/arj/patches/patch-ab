@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2005/01/16 16:57:12 tv Exp $
+$NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
 
---- gnu/configure.in.orig	2004-04-17 07:28:06.000000000 -0400
+--- gnu/configure.in.orig	2004-04-17 06:28:06.000000000 -0500
 +++ gnu/configure.in
 @@ -12,13 +12,23 @@ dnl Installation script (let it be, temp
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
@@ -27,37 +27,64 @@ $NetBSD: patch-ab,v 1.5 2005/01/16 16:57:12 tv Exp $
  
  dnl Checks for header files.
  AC_HEADER_STDC
-@@ -36,6 +46,7 @@ AC_FUNC_SETVBUF_REVERSED
+@@ -35,7 +45,8 @@ AC_FUNC_MEMCMP
+ AC_FUNC_SETVBUF_REVERSED
  AC_TYPE_SIGNAL
  AC_FUNC_VPRINTF
- AC_CHECK_FUNCS([getcwd min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
+-AC_CHECK_FUNCS([getcwd min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
++AC_CHECK_FUNCS([getcwd lchown min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
 +AC_SEARCH_LIBS([dlsym], [dl])
  
  dnl Platform-specific tuning
  PROG_EXT=
-@@ -57,6 +68,11 @@ linux*)
-         DLL_FLAGS="-shared -export-dynamic"
-         LD_STRIP="gnu/stripgcc.lnk"
+@@ -45,30 +56,42 @@ REQUIRES_DEF=
+ OS_ID="UNIX"
+ OS_DEF="-D_UNIX"
+ DLL_CFLAGS="-fPIC"
++LD_STRIP="-s "
+ 
+ case $host_os in
+ linux*)
+ 	AC_DEFINE(ELF_EXECUTABLES, 1, [Define if executables use ELF format])
+         DYN_LIBS="-ldl"
+-        LD_STRIP="gnu/stripgcc.lnk"
++        LD_STRIP="-s gnu/stripgcc.lnk"
  	;;
+ *bsd*)
+ 	AC_DEFINE(ELF_EXECUTABLES)
+         DLL_FLAGS="-shared -export-dynamic"
+-        LD_STRIP="gnu/stripgcc.lnk"
++        LD_STRIP="-s gnu/stripgcc.lnk"
++	;;
++darwin*)
++	DLL_FLAGS="-bundle"
++	LD_STRIP=""
++	;;
 +interix3*)
 +	# not ELF
 +	DLL_FLAGS="-shared"
 +	DLL_CFLAGS=""
-+	;;
+ 	;;
  *qnx*)
  	AC_DEFINE(ELF_EXECUTABLES)
          DLL_FLAGS="-shared -fPIC"
-@@ -68,7 +84,9 @@ linux*)
+         DLL_CFLAGS="-shared -fPIC"
+-        LD_STRIP="gnu/stripgcc.lnk"
++        LD_STRIP="-s gnu/stripgcc.lnk"
+ 	;;
+ *solaris*)
+ 	AC_DEFINE(ELF_EXECUTABLES)
          CFLAGS="-DSUNOS -D_UNIX"
          DLL_FLAGS="-shared -fPIC"
          DLL_CFLAGS="-shared -fPIC"
+-        LD_STRIP="gnu/stripgcc.lnk"
 +	if test X"$ac_cv_prog_gnu_ld" = X"yes"; then
-         LD_STRIP="gnu/stripgcc.lnk"
++        LD_STRIP="-s gnu/stripgcc.lnk"
 +	fi
  	;;
  os2*)
  	PROG_EXT=".exe"
-@@ -115,7 +133,7 @@ dnl Initial setup
+@@ -115,7 +138,7 @@ dnl Initial setup
  
  test -z "$CONFIG_SHELL" && CONFIG_SHELL=/bin/sh
  AC_SUBST(CONFIG_SHELL)
