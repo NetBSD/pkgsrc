@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:47 skrll Exp $
+$NetBSD: distinfo,v 1.3 2004/09/24 00:58:30 kim Exp $
 
-SHA1 (wml-2.0.3.tar.gz) = 3bc1518add25a9d2c129b2ce54455eefa7f766e1
-Size (wml-2.0.3.tar.gz) = 2127889 bytes
-SHA1 (patch-aa) = 1310eb1af19a7ec0687240c58c566879759339b0
+SHA1 (wml-2.0.9.tar.gz) = ce95ad9c55fd52e2028099d391858d88cffd5d9f
+Size (wml-2.0.9.tar.gz) = 2570742 bytes
+SHA1 (patch-aa) = 398ddb03402c17306e259b10cf9b5d7ec774d71b
+SHA1 (patch-ab) = 77e99d3babc1e55c688fd607241fa5beeb29763c
+SHA1 (patch-ac) = 80863037faadf220ba1d01ef2133cdc42e08f0fa
+SHA1 (patch-ad) = 2955f349aa737f1758493897d1989a0b96220268
