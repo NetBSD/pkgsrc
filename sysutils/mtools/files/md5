@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 1998/08/14 23:11:20 tron Exp $
+$NetBSD: md5,v 1.5 1999/06/02 20:09:02 christos Exp $
 
-MD5 (mtools-3.9.1.tar.gz) = 2604651c49fb42c612ac4679054b2317
-MD5 (mtools-3.9.1-0907b.diff.gz) = 6df7e3fb6310bb3acf19a91a9cc05a0d
+MD5 (mtools-3.9.5.tar.gz) = 124289b95012cd19673b047dc7c40fd5
+MD5 (mtools-3.9.5-0905.diff.gz) = 3853530fbd84ee06ce99e870efedeafb
