@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/09/26 23:22:17 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/17 20:06:55 jlam Exp $
 
---- configure.orig	Fri Sep 14 13:36:02 2001
+--- configure.orig	Wed Oct 10 05:45:59 2001
 +++ configure
-@@ -7086,7 +7086,7 @@
+@@ -7091,7 +7091,7 @@
  fi
  
  
