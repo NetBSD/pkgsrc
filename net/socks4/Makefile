@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/31 13:39:32 zuntum Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -21,10 +21,6 @@ WRKSRC=		${WRKDIR}/socks.cstc.4.2
 NO_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CC=gcc CPPFLAGS=
-.endif
 
 post-patch:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${WRKSRC}/include/socks.h \
