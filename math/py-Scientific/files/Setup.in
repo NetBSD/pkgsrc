@@ -1,5 +1,8 @@
-*shared*
+# Uncomment the following line and change it to reflect the
+# requirements of your MPI installation; the line below is for MPICH
+# installed in a standard location searched by the compiler and
+# linker.
 
-Scientific_netcdf -I@NETCDFPREFIX@/include -I../Scientific/Include \
-                  Scientific_netcdf.c -Wl,-R@NETCDFPREFIX@/lib -L@NETCDFPREFIX@/lib -lnetcdf
-Scientific_mpi -I@MPICHPREFIX@/include -I@MPICHPREFIX@/include -I../Scientific/Include Scientific_mpi.c -L@MPICHPREFIX@/lib  -lmpich
+# NOTE: The MPI compiler is specified at the top of compile.py .
+
+Scientific_mpi -I../../Include Scientific_mpi.c -L@MPICHPREFIX@/lib -lmpich
