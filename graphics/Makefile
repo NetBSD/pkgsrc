@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2003/12/21 21:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2003/12/27 23:02:56 salo Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -36,6 +36,8 @@ SUBDIR+=	avifile-devel
 SUBDIR+=	barcode
 SUBDIR+=	bktr2jpeg
 SUBDIR+=	blender
+SUBDIR+=	blinkenthemes
+SUBDIR+=	blinkentools
 SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
