@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+$NetBSD: patch-aa,v 1.2 2000/03/22 12:12:30 fredb Exp $
 
---- Makefile.in.orig	Thu Jan 15 15:45:45 1998
-+++ Makefile.in	Thu Mar 19 22:44:33 1998
+--- Makefile.in.orig	Mon Apr 26 16:05:11 1999
++++ Makefile.in	Wed Mar 22 03:40:17 2000
 @@ -94,7 +94,7 @@
  
  ### Subdirectories to run make in for the primary targets.
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
 +USOURCE_SUBDIRS = lib diff src
  # All other subdirs:
  SUBDIRS = ${USOURCE_SUBDIRS} man doc contrib tools \
- 	windows-NT os2 emx macintosh vms
+ 	windows-NT os2 emx vms
 @@ -187,21 +187,18 @@
  .PHONY: check
  check:
