@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/11/01 13:51:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/09/23 16:28:17 hubertf Exp $
 
 DISTNAME=	sirc-2.211
 CATEGORIES=	net
@@ -34,8 +34,13 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 DIST_SUBDIR=	sirc
 
-### Enter Default IRC-Server here
+
+.include "../../mk/bsd.prefs.mk"
+.if defined(DEFAULT_IRC_SERVER)
+IRC_SERVER=	${DEFAULT_IRC_SERVER}
+.else
 IRC_SERVER=	us.undernet.org
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/sirc
