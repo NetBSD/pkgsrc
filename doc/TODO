@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2778 2004/12/27 11:29:09 wiz Exp $
+$NetBSD: TODO,v 1.2779 2004/12/27 13:30:03 darcy Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ Suggested package updates
 	o py-m2crypto-0.13
 	o py-mad-0.5.2
 	o py-matplotlib-0.64
-	o py-mxDateTime-2.0.6
 	o py-mysqldb-1.1.7
 	o py-numarray-1.1.1
 	o py-psycopg-1.1.16
