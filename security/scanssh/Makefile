@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.11.4.1 2004/07/26 16:33:41 agc Exp $
 
 DISTNAME=	scanssh-1.6b
 CATEGORIES=	security
@@ -11,5 +11,7 @@ COMMENT=	SSH remote version scanner
 
 WRKSRC=		${WRKDIR}/scanssh
 GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
