@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5069 2004/03/03 11:30:49 adam Exp $
+$NetBSD: CHANGES,v 1.5070 2004/03/03 13:08:47 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpdf to 3.00 [adam 2004-03-03]
 	Updated t1lib to 5.0.1 [adam 2004-03-03]
 	Updated zoom to 1.0.1anb1 [adam 2004-03-03]
+	Updated tavrasm to 1.20 [dillo 2004-03-03]
