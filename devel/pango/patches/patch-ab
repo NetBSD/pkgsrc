@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.9 2004/08/06 02:09:38 minskim Exp $
+
+--- modules/hangul/hangul-defs.h.orig	2002-11-03 13:56:24.000000000 -0600
++++ modules/hangul/hangul-defs.h
+@@ -48,6 +48,7 @@
+ #define HTONE1 0x302E
+ #define HTONE2 0x302F
+ 
++#define IS_JAMO(wc) (wc >= LBASE && wc <= TEND)
+ #define IS_L(wc) (wc >= LBASE && wc <= LEND)
+ #define IS_V(wc) (wc >= VFILL && wc <= VEND)
+ #define IS_T(wc) (wc > TBASE && wc <= TEND)
