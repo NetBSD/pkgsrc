@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/13 11:28:19 itojun Exp $
+bin/cvpasswd
+bin/cvsup
+bin/cvsup.nogui
+sbin/cvsupd
+man/man1/cvpasswd.1
+man/man1/cvsup.1
+man/man8/cvsupd.8
