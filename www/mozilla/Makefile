@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2000/12/25 02:16:07 martin Exp $
+# $NetBSD: Makefile,v 1.52 2001/01/16 16:01:21 taya Exp $
 
-DISTNAME=	mozilla-source
-PKGNAME=	mozilla-0.6
+DISTNAME=	mozilla-source-0.7
+PKGNAME=	mozilla-0.7
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla0.6/src/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla0.7/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
@@ -17,8 +17,6 @@ DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
-
-DIST_SUBDIR=	${PKGNAME}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
@@ -34,7 +32,7 @@ CONFIGURE_ARGS=	--disable-tests \
 		--with-png=${LOCALBASE} \
 		--enable-mathml \
 		--enable-svg \
-		--with-extensions=cookie,irc,wallet,xmlextras,psm-glue,xml-rpc
+		--with-extensions=cookie,irc,wallet,xmlextras,xml-rpc
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
@@ -70,6 +68,10 @@ post-extract:
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
+
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} BUILD_MODULES=psm
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
