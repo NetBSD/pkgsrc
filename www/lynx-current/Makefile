@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/07 17:24:23 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/10 18:11:19 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.7
@@ -39,7 +39,7 @@ USE_SSL=		yes
 INSTALL_TARGET=		install-bin install-man install-cfg install-help install-doc
 MAKEFILE=       	makefile
 
-BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS
+BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
 
 # For nls/gettext
 CONFIGURE_ARGS+=	--enable-nls
@@ -104,8 +104,9 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+# Pick a terminal library. Choice affects support for colors, mouse,
+# "color styles", and more. No library supports all features.
 LYNX_SCREEN_LIB?=	slang
-
 .if (${LYNX_SCREEN_LIB} == slang)
 DEPENDS+=		libslang-*:../../devel/libslang
 CONFIGURE_ENV+=		LIBS="-lm -ltermcap"
@@ -122,7 +123,7 @@ pre-configure:
 
 .endif
 
-# Include SOCKS firewall support
+# Include SOCKS firewall support, if desired.
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if (${LYNX_SCREEN_LIB} == slang)
 pre-configure:
@@ -144,8 +145,16 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
+# Do IPV6 on systems which can support it.
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ENV+=       CPPFLAGS=-DINET6
+.endif
+
 .include "../../mk/bsd.pkg.mk"
 
+# "USE_SSL", set above, pulls in the openssl package, if needed, and
+# "sets SSLBASE", which we use here to tell the package where it needs
+# to look for SSL libs and includes.
 .if (${SSLBASE} == /usr)
 SSLLIBS=	-lssl -lcrypto
 SSLINCS=	-I/usr/include/openssl
