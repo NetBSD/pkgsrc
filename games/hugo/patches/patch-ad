@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/05/28 14:24:04 dillo Exp $
+
+--- source/hdtools.c.orig	2004-01-05 20:21:48.000000000 +0100
++++ source/hdtools.c
+@@ -147,7 +147,7 @@ void DrawBranch(int obj)
+ 	/* Scroll the window up a line if necessary */
+ 	if (tree_lines>=D_SCREENHEIGHT-1)
+ 	{
+-		debug_windowscroll(1, 1, D_SCREENWIDTH, D_SCREENHEIGHT-1, UP, 1);
++		debug_windowscroll(1, 1, D_SCREENWIDTH, D_SCREENHEIGHT-1, EV_UP, 1);
+ 		debug_settextpos(1, D_SCREENHEIGHT-1);
+ 	}
+ 
