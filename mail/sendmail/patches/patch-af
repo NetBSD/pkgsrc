@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.7 2001/02/28 03:52:19 itojun Exp $
+$NetBSD: patch-af,v 1.8 2001/04/13 05:07:52 itojun Exp $
 
---- sendmail/conf.c.orig	Wed Feb 28 05:48:21 2001
-+++ sendmail/conf.c	Wed Feb 28 12:48:30 2001
-@@ -4546,7 +4546,8 @@
+--- sendmail/conf.c.orig	Thu Mar  8 09:07:50 2001
++++ sendmail/conf.c	Fri Mar 16 09:24:10 2001
+@@ -4237,7 +4237,8 @@
  
  #if NETINET6
  	if (type == AF_INET6 &&
