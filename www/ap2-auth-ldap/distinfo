@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/21 21:55:25 adrianp Exp $
+
+SHA1 (mod_auth_ldap2.16.tar.gz) = dbb9c5a20dbe9a252f40c2dad708360b126554b3
+Size (mod_auth_ldap2.16.tar.gz) = 548912 bytes
+SHA1 (patch-aa) = 1a1d75be98b8c91a8ddf31145373aaabb3a685a7
