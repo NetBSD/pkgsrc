@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.6 1998/11/12 23:50:33 frueauf Exp $
+
 --- include/btorder.h.orig	Sun Jul 19 19:28:10 1998
 +++ include/btorder.h	Sat Nov  7 14:40:40 1998
 @@ -46,7 +46,7 @@
