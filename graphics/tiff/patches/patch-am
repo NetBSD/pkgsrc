@@ -1,0 +1,76 @@
+$NetBSD: patch-am,v 1.1.2.2 2004/10/18 17:03:48 agc Exp $
+
+--- libtiff/tif_luv.c.orig	2003-11-27 16:08:10.000000000 +0100
++++ libtiff/tif_luv.c	2004-10-18 16:25:32.000000000 +0200
+@@ -212,11 +212,11 @@
+ 				rc = *bp++ + (2-128);
+ 				b = (int16)(*bp++ << shft);
+ 				cc -= 2;
+-				while (rc--)
++				while (rc-- && i < npixels)
+ 					tp[i++] |= b;
+ 			} else {			/* non-run */
+ 				rc = *bp++;		/* nul is noop */
+-				while (--cc && rc--)
++				while (--cc && rc-- && i < npixels)
+ 					tp[i++] |= (int16)*bp++ << shft;
+ 			}
+ 		if (i != npixels) {
+@@ -312,11 +312,11 @@
+ 				rc = *bp++ + (2-128);
+ 				b = (uint32)*bp++ << shft;
+ 				cc -= 2;
+-				while (rc--)
++				while (rc-- && i < npixels)
+ 					tp[i++] |= b;
+ 			} else {			/* non-run */
+ 				rc = *bp++;		/* nul is noop */
+-				while (--cc && rc--)
++				while (--cc && rc-- && i < npixels)
+ 					tp[i++] |= (uint32)*bp++ << shft;
+ 			}
+ 		if (i != npixels) {
+@@ -1161,6 +1161,17 @@
+ 	return (SGILOGDATAFMT_UNKNOWN);
+ }
+ 
++static uint32
++multiply(size_t m1, size_t m2)
++{
++	uint32	bytes = m1 * m2;
++
++	if (m1 && bytes / m1 != m2)
++		bytes = 0;
++
++	return bytes;
++}
++
+ static int
+ LogL16InitState(TIFF* tif)
+ {
+@@ -1189,9 +1200,9 @@
+ 		    "No support for converting user data format to LogL");
+ 		return (0);
+ 	}
+-	sp->tbuflen = td->td_imagewidth * td->td_rowsperstrip;
+-	sp->tbuf = (tidata_t*) _TIFFmalloc(sp->tbuflen * sizeof (int16));
+-	if (sp->tbuf == NULL) {
++	sp->tbuflen = multiply(td->td_imagewidth, td->td_rowsperstrip);
++	if (multiply(sp->tbuflen, sizeof (int16)) == 0 ||
++	    (sp->tbuf = (tidata_t*) _TIFFmalloc(sp->tbuflen * sizeof (int16))) == NULL) {
+ 		TIFFError(module, "%s: No space for SGILog translation buffer",
+ 		    tif->tif_name);
+ 		return (0);
+@@ -1287,9 +1298,9 @@
+ 		    "No support for converting user data format to LogLuv");
+ 		return (0);
+ 	}
+-	sp->tbuflen = td->td_imagewidth * td->td_rowsperstrip;
+-	sp->tbuf = (tidata_t*) _TIFFmalloc(sp->tbuflen * sizeof (uint32));
+-	if (sp->tbuf == NULL) {
++	sp->tbuflen = multiply(td->td_imagewidth, td->td_rowsperstrip);
++	if (multiply(sp->tbuflen, sizeof (uint32)) == 0 ||
++	    (sp->tbuf = (tidata_t*) _TIFFmalloc(sp->tbuflen * sizeof (uint32))) == NULL) {
+ 		TIFFError(module, "%s: No space for SGILog translation buffer",
+ 		    tif->tif_name);
+ 		return (0);
