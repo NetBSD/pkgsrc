@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.828 2001/10/24 19:42:28 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.829 2001/10/25 18:12:53 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1223,6 +1223,7 @@ MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0
 .endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 SORTED_MASTER_SITES_CMD= ${ECHO} '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
+SORTED_PATCH_SITES_CMD= ${ECHO} '${PATCH_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 
 
 .if !target(do-fetch)
@@ -1238,7 +1239,7 @@ do-fetch:
 	 done
 .  if defined(_PATCHFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	 sites="${PATCH_SITES}";					\
+	 sites=`${SORTED_PATCH_SITES_CMD}`;				\
 	 for file in "" ${_PATCHFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		bfile=`${BASENAME} $$file`;				\
@@ -2451,7 +2452,7 @@ fetch-list-one-pkg:
 		bfile=`${BASENAME} $$file`;				\
 		if [ ! -f $$file -a ! -f $$bfile ]; then		\
 			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f $$bfile ] || "; \
-			for site in ${PATCH_SITES}; do			\
+			for site in `${SORTED_PATCH_SITES_CMD}`; do	\
 				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| '; \
 			done;						\
 			${ECHO} "${ECHO} $${file} not fetched";		\
