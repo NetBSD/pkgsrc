@@ -1,6 +1,6 @@
 --- Makefile.orig	Wed Aug 21 17:19:11 1991
-+++ Makefile	Fri Feb 27 00:26:29 1998
-@@ -1,7 +1,10 @@
++++ Makefile	Sat Feb 28 18:59:23 1998
+@@ -1,7 +1,7 @@
  
 -CC = cc
 -CFLAGS = -O2
@@ -11,7 +11,4 @@
 +MANDIR=${PREFIX}/man
  
 -Bonnie:
-+# Kludge until "bsd.port.mk" gets fixed.
-+MANZ=1
-+
 +.include <bsd.prog.mk>
