@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
+include/cgi.h
+lib/libcgi.a
+libexec/cgi-bin/cgitest
+libexec/cgi-bin/jumpto
+share/doc/cgilib/cgi.5.html
+share/doc/cgilib/cgiDebug.3.html
+share/doc/cgilib/cgiFree.3.html
+share/doc/cgilib/cgiFreeList.3.html
+share/doc/cgilib/cgiGetCookie.3.html
+share/doc/cgilib/cgiGetCookies.3.html
+share/doc/cgilib/cgiGetValue.3.html
+share/doc/cgilib/cgiGetVariables.3.html
+share/doc/cgilib/cgiHeader.3.html
+share/doc/cgilib/cgiInit.3.html
+share/doc/cgilib/cgiRedirect.3.html
+share/doc/cgilib/cgiSetHeader.3.html
+share/doc/cgilib/cgiSetType.3.html
+@dirrm share/doc/cgilib
