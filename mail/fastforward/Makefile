@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/21 23:31:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/21 23:49:28 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -13,6 +13,8 @@ COMMENT=		Sendmail-style /etc/aliases support for qmail
 DEPENDS+=		{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
 
 CONFLICTS+=		postfix-[0-9]* sendmail-[0-9]*
+
+USE_BUILDLINK3=		yes
 
 ALL_TARGET=		it install instcheck
 INSTALL_TARGET=		setup check
