@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.473 2000/06/04 03:08:37 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.474 2000/06/04 04:35:13 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -589,7 +589,7 @@ PKG_INFO?=	${PKG_TOOLS_BIN}/pkg_info
 .if !exists(${IDENT})
 PKGTOOLS_VERSION=${PKGTOOLS_REQD}
 .else
-PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
+PKGTOOLS_VERSION!=${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} 'BEGIN {n = 0;}; $$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ {gsub("/", "", $$4); if ($$4 > n) {n = $$4;}}; END {print n;}'
 .endif
 .endif
 MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
