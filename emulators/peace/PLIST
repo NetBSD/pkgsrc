@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/21 15:17:46 kent Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/01 15:13:52 kent Exp $
 emul/pecoff/usr/bin/ldd.pe
+emul/pecoff/usr/bin/peace-setup
 emul/pecoff/usr/bin/regcomserver
 emul/pecoff/usr/bin/regimport
 emul/pecoff/usr/bin/regutil
