@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.921 2002/12/26 14:29:18 shell Exp $
+$NetBSD: CHANGES,v 1.922 2002/12/26 15:20:54 shell Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4271,3 +4271,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgdepgraph to 1.1 [atatat 2002-12-26]
 	Added exiftags-0.96 [shell 2002-12-26]
 	Updated py-Checker to 0.8.12 [shell 2002-12-26]
+	Updated py-Optik to 1.4 [shell 2002-12-26]
+	Updated nano to 1.0.9 [shell 2002-12-16]
