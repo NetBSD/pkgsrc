@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/01 01:59:10 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/30 21:24:40 jlam Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -10,6 +10,7 @@ COMMENT=		Cross-compile environment for NetBSD/mipseb
 
 WRKSRC=			${WRKDIR}/${EGCS_DISTNAME}
 
+USE_BUILDLINK2=		yes
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	elf32-bigmips
 BINUTILS_LDEMULATION=	elf32bmip
@@ -20,7 +21,7 @@ TARGET_ARCH=		mipseb-netbsd
 
 .include "../../mk/bsd.prefs.mk"
 .if (${MACHINE_ARCH} == sparc) 
-.include "../../lang/gcc/Makefile.gcc"
+.  include "../../lang/gcc/buildlink2.mk"
 .endif
 
 .include "../COMMON/cross.mk"
