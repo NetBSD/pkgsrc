@@ -1,0 +1,5 @@
+This is a really simple module for communicating with a Goofey server.
+
+Goofey is a bit like IRC and a bit like ICQ and a bit like email, it's
+used mostly at Monash University.  See the Goofey web page at:
+   http://www.cs.monash.edu.au/~tym/goofey.html
