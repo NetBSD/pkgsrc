@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 01:35:13 hubertf Exp $
+
+--- Makefile.orig	Thu Dec 30 01:40:03 1999
++++ Makefile
+@@ -1,25 +1,28 @@
+ # Change paths if necessary
+ 
+-CC = gcc
+-OPT = -m486 -O2
++#CC = gcc
++#OPT = -m486 -O2
+ #OPT = -mpentium -O6
+ #OPT = -mcpu=k6 -march=k6 -O6
+-CONF= -DNO_WIN_DECORATIONS
+-CFLAGS = $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
+-LFLAGS = -shared -fPIC -L/usr/local/lib -ldl
+-OBJ = dflowers.o
+-PREFIX = `which xmms | rev | cut -c10- | rev`
++#CONF= -DNO_WIN_DECORATIONS
++CFLAGS+= $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
++#LFLAGS = -shared -fPIC -L/usr/local/lib -ldl
++OBJ = dflowers.lo
++VPREFIX = `xmms-config --visualization-plugin-dir`
+ 
+-all: libdflowers.so
++.SUFFIXES: .c .lo
+ 
+-libdflowers.so: $(OBJ)
+-	$(CC) -o libdflowers.so $(OBJ) $(LFLAGS)
++all: libdflowers.la
+ 
+-.c.o:
+-	$(CC) $(CFLAGS) $(CONF) -c $< 
++libdflowers.la: $(OBJ)
++	${LIBTOOL} --mode=link $(CC) -o libdflowers.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath ${VPREFIX}
++
++.c.lo:
++	${LIBTOOL} $(CC) $(CFLAGS) $(CONF) -c $< 
+ 
+ clean:
+-	rm -f *.o core *.so* 
++	rm -f *.o core *.so*  *.la *.so *.lo
++	rm -fr .libs
+ 
+-install: libdflowers.so
+-	install libdflowers.so $(PREFIX)/lib/xmms/Visualization 
++install: libdflowers.la
++	${LIBTOOL} install libdflowers.la $(VPREFIX)
