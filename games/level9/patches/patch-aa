@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.1 2003/09/17 14:13:19 dillo Exp $
+
+--- unix-curses.c.orig	Wed Sep 17 20:53:54 2003
++++ unix-curses.c	Wed Sep 17 20:54:37 2003
+@@ -10,11 +10,6 @@
+  *
+  * A few notes on this port:
+  *
+- * I've modified level9.h to use the LITTLEENDIAN macro -- it assumes this if
+- *  you're using DOS or Windows, otherwise it uses the byte sex macros. This
+- *  shouldn't hurt a little-endian machine (Intel), but you must undefine
+- *  LITTLEENDIAN if you've got a Motorola-type machine.
+- *
+  * If you don't specify a path, level9 Linux will look first in the directory
+  *  $LEVEL9DIR, if defined, and then in the current directory.
+  *
+@@ -39,11 +34,6 @@
+ #define FILE_DELIM   '/'
+ 
+ /*
+- * Set this if you are compiling on a little-endian machine (ARM, Intel)
+- */
+-#define LITTLEENDIAN 1
+-
+-/*
+  * Define this as 1 to get the Emacs-type key bindings
+  *  Ctrl-A (go to beginning of line)
+  *  Ctrl-B (back one character)
+@@ -745,21 +735,6 @@
+   /*
+    * Check byte sex
+    */
+-# if LITTLEENDIAN
+-  L9UINT32 test = 0x12345678;
+-  char *tcp = (char *) &test;
+-# else
+-  L9UINT32 test = 0x78563412;
+-  char *tcp = (char *) &test;
+-# endif
+-  if ((tcp [0] != 0x78) || (tcp [1] != 0x56) ||
+-      (tcp [2] != 0x34) || (tcp [3] != 0x12))
+-  {
+-    fprintf (stderr, "%s: compiled with the wrong byte sex!\n"
+-	             " Check the LITTLEENDIAN macro in os/unix-curses.c\n",
+-	             argv [0]);
+-    exit (1);
+-  }
+ 
+   if (argc != 2)
+   {
