@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:43 skrll Exp $
 
-MD5 (rep-gtk-0.14.tar.gz) = ea1eb8f3128177b2df0cf06ba594aae4
+SHA1 (rep-gtk-0.14.tar.gz) = aeb73d6d0c37b9cc1221b6e41305d842e9a013de
+Size (rep-gtk-0.14.tar.gz) = 140584 bytes

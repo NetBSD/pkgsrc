@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:46 skrll Exp $
 
-MD5 (wmavgload-0.7.0.tar.gz) = 7cd2525b6aba7443d238dc361062e391
+SHA1 (wmavgload-0.7.0.tar.gz) = 9225ced4e799a900a18374613396b500740f13a8
+Size (wmavgload-0.7.0.tar.gz) = 11643 bytes
 SHA1 (patch-aa) = 5977b525fb10f4b11636e538c332d45c25c974c4
 SHA1 (patch-ab) = a0488a4cfdf50f69485386b30c00a39433d0fde1

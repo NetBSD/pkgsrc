@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:16:09 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:57 skrll Exp $
 
-MD5 (xmountains/xmountains_2.5.tar.gz) = 38561473f6298a7bb8d1a8234cbc5d3b
-MD5 (xmountains/vroot.h) = 29b64bf407c3aa903acb01a0c3e5fb65
+SHA1 (xmountains/xmountains_2.5.tar.gz) = b8a89a776971cde4f72dc732233bfdc455702e2f
+Size (xmountains/xmountains_2.5.tar.gz) = 25061 bytes
+SHA1 (xmountains/vroot.h) = dfd8a653a4a01489147f8386bc6243144301f65b
+Size (xmountains/vroot.h) = 5056 bytes

@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:37 skrll Exp $
 
-MD5 (Eterm-0.8.9.tar.gz) = 9e4945a6920f7d10cf28516266307519
-MD5 (Eterm-bg-scale-1.tar.gz) = 8fe075c118acb7bf050a5b616bf764e0
-MD5 (Eterm-bg-scale-2.tar.gz) = ba1b3ceec51bd4196df1b887c8396475
-MD5 (Eterm-bg-tile.tar.gz) = 24a60f33a3611b4c7a6e8a2b65dc120d
+SHA1 (Eterm-0.8.9.tar.gz) = 1bebc1707cd8f39e9c5a9ea55a9f656cdbc536a4
+Size (Eterm-0.8.9.tar.gz) = 564885 bytes
+SHA1 (Eterm-bg-scale-1.tar.gz) = 39c6146740edf04ddb0aa40ed4e078e8317b0557
+Size (Eterm-bg-scale-1.tar.gz) = 3420298 bytes
+SHA1 (Eterm-bg-scale-2.tar.gz) = 711365b4478dc7cb3891c77a5d9054778c581184
+Size (Eterm-bg-scale-2.tar.gz) = 3145775 bytes
+SHA1 (Eterm-bg-tile.tar.gz) = 2ccb31a8fd0e80e5dd92aebef6baf5554f66e361
+Size (Eterm-bg-tile.tar.gz) = 1568166 bytes
 SHA1 (patch-aa) = 056585ad4c39b60a3dbf41d8c7e65d31ba5f7fcd
 SHA1 (patch-ab) = d9b2874485ffcf411f83fd69f2fdc822bc76e657
 SHA1 (patch-ac) = c45dba8ca41b4d3d788c3b070aa09bedc9a22b1d

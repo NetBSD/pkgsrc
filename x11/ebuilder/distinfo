@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:36 skrll Exp $
 
-MD5 (ebuilder-0.56d.tar.gz) = 17b5f5ba852009750ca7a417a6f1cea2
+SHA1 (ebuilder-0.56d.tar.gz) = fb0c7d56a7c55580082a832be975d188fe0e5e5d
+Size (ebuilder-0.56d.tar.gz) = 84717 bytes
 SHA1 (patch-aa) = 7f780af128ba34f7ed0a828c3c458a875d1342f0

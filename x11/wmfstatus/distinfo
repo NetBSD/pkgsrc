@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:47 skrll Exp $
 
-MD5 (wmfstatus-0.3.tar.gz) = c5ad28b385b8c32e1387c5668508bba9
+SHA1 (wmfstatus-0.3.tar.gz) = d7fc132bfd7eeb61862769716a24a09f77aa189d
+Size (wmfstatus-0.3.tar.gz) = 21507 bytes
 SHA1 (patch-aa) = 2c4c1fc06509de2a816f83685b9ab64c7ed13622
