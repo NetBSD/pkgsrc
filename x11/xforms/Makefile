@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.22 1999/12/16 21:23:02 wrstuden Exp $
+# $NetBSD: Makefile,v 1.23 2000/02/29 19:28:53 dmcmahill Exp $
 #
 
 DISTNAME=       bxform-088
 PKGNAME=	xforms-0.88
 WRKSRC=		${WRKDIR}/xforms
 CATEGORIES=	x11
-MASTER_SITES=	ftp://bragg.phys.uwm.edu/pub/xforms/${ARCH_SUBDIR}/
+MASTER_SITES=	ftp://ncmir.ucsd.edu/pub/xforms/${ARCH_SUBDIR}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
+HOMEPAGE=	http://world.std.com/~xforms
 
 .if (${MACHINE_ARCH} == "arm32")
 ARCH_SUBDIR=    netBSD-arm
