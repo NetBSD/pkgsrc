@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/04/04 14:42:19 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/04/05 23:28:29 tron Exp $
 
---- configure.orig	Mon Mar 29 22:52:47 1999
-+++ configure	Sun Apr  4 14:59:12 1999
-@@ -642,7 +642,7 @@
+--- configure.orig	Thu Apr  1 04:56:41 1999
++++ configure	Tue Apr  6 01:09:43 1999
+@@ -644,7 +644,7 @@
  # It thinks the first close brace ends the variable substitution.
  test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
  
@@ -11,23 +11,23 @@ $NetBSD: patch-aa,v 1.4 1999/04/04 14:42:19 tron Exp $
  
  test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
-@@ -1543,6 +1543,7 @@
+@@ -1540,6 +1540,7 @@
  fi
  
- # Always use our own libtool.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
++if false; then
  # Check for any special flags to pass to ltconfig.
-@@ -1774,6 +1775,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1836,6 +1837,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -3056,7 +3058,7 @@
+@@ -3118,7 +3120,7 @@
  fi
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6

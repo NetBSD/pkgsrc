@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.7 1999/04/04 14:42:19 tron Exp $
+$NetBSD: md5,v 1.8 1999/04/05 23:28:29 tron Exp $
 
-MD5 (gimp-1.0.3.tar.bz2) = d4af07e1d05e39f9d07cf83ad6fba188
+MD5 (gimp-1.0.4.tar.bz2) = 597d316557194039178710fd8fa8b8f4
 MD5 (gimp-data-extras-1.0.0.tar.bz2) = 6c3865f33f9d950fed89c4298178ec2c
