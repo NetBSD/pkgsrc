@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/07/13 13:51:19 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/09/28 18:57:00 is Exp $
 #
 
 .if !defined(LIBGPHOTO2_BUILDLINK2_MK)
 LIBGPHOTO2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgphoto2
-BUILDLINK_DEPENDS.libgphoto2?=		libgphoto2>=2.1.1nb1
+BUILDLINK_DEPENDS.libgphoto2?=		libgphoto2>=2.1.2
 BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgphoto2=libgphoto2
