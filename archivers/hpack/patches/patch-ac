@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/23 22:41:21 tv Exp $
+
+--- keycvt/keycvt.c.orig	Fri Aug 13 16:06:28 1993
++++ keycvt/keycvt.c	Sun May 23 17:36:39 1999
+@@ -1034,13 +1034,17 @@
+ 		tempFileName[ pathLen++ ] = '/';
+ 	strcat( tempFileName, "randseed.bin" );
+ #else
+-	if( pathLen && ( ch = tempFileName[ pathLen - 1 ] ) != '\\' && ch != '/' )
++	if( pathLen && ( ch = tempFileName[ pathLen - 1 ] ) != '\\' && ch != '/' ) {
+ 		/* Add directory seperator if necessary */
+ 		tempFileName[ pathLen++ ] = '/';
++		tempFileName[ pathLen ] = '\0';
++	}
+ 	strcat( tempFileName, "randseed.bin" );
+ #endif /* __ARC__ */
+-	if( ( inFilePtr = fopen( tempFileName, "rb" ) ) == NULL )
++	if( ( inFilePtr = fopen( tempFileName, "rb" ) ) == NULL ) {
++		perror( tempFileName );
+ 		puts( "Cannot find PGP seed file, HPACK seed file not created" );
++	}
+ 	else
+ 		{
+ 		/* See if the output file exists */

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/23 22:41:21 tv Exp $
+bin/hpack
+bin/keycvt
+man/man1/hpack.1
+share/doc/hpack/hpackext.doc
+share/hpack/hpack.cfg.example
+@exec if [ ! %D/etc/hpack.cfg ]; then cp -p %F %D/etc/hpack.cfg; fi
+share/hpack/language.dat
+@dirrm share/doc/hpack
+@dirrm share/hpack
