@@ -1,0 +1,8 @@
+You may want to read ${PREFIX}/java/README for details about running
+this jdk. In a nutshell you may want to set the following in your
+shell environment:
+
+        CLASSPATH to ${PREFIX}/java/lib/classes.zip:.
+        JAVA_HOME to ${PREFIX}/java
+
+and add ${PREFIX}/java/bin to your ${PATH}.
