@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2927 2005/01/19 14:55:02 adam Exp $
+$NetBSD: TODO,v 1.2928 2005/01/19 15:10:57 adam Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ Suggested package updates
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.52.1
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
-	o dxpc-3.8.2
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.35
