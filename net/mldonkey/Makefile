@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/05/19 12:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/26 08:58:43 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.4-0.sources
+DISTNAME=	mldonkey-2.5-0.sources
 PKGNAME=	${DISTNAME:S/-0.sources/.0/}
 WRKSRC=		${WRKDIR}/mldonkey
 CATEGORIES=	net
-MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.4/official/
+MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.5/official/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
