@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1998/08/30 10:59:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.34 1998/08/30 21:19:04 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -14,27 +14,23 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-20.4/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.4/
 DISTFILES=	xemacs-20.4.tar.gz xemacs-20.4-info.tar.gz
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "FreeBSD")
-MAINTAINER=	me@FreeBSD.org
-WITH_SOUND=	--with-sound=native
-.elif (${OPSYS} == "NetBSD")
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
-WITH_SOUND=
-.endif
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 DEPENDS+=	png-1.0.2:../../graphics/png
+DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 
 CONFLICTS+=	xemacs-20.3
 
 HAS_CONFIGURE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 WITH_DIALOGS=	--with-dialogs=athena3d
+WITH_SOUND=
 
 .if defined(USE_MULE)
 WITH_MULE=	--with-mule
@@ -53,18 +49,19 @@ WITH_XFACE=	--with-xface=no
 
 CONFIGURE_ARGS+=${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
-		${WITH_SOUND} \
 		--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 		--site-libraries=${PREFIX}/lib \
-		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
-		${WITH_MULE} ${WITH_DIALOGS} ${WITH_XFACE}
+		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp \
+		${PREFIX}/share/xemacs/site-lisp" -with-ncurses=no \
+		${WITH_MULE} ${WITH_DIALOGS} ${WITH_XFACE} ${WITH_SOUND}
 
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 PLIST_SRC=	${WRKDIR}/PLIST.tmp
 
 pre-configure:
-	@echo "To compile in the MULE features, set the environment variable USE_MULE"
+	@${ECHO} "To compile in the MULE features, set the environment variable USE_MULE."
+	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
 
 pre-install:
 	${RM} -f ${WRKSRC}/etc/ctags.1.orig
