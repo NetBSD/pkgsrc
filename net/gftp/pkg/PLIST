@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2001/05/15 07:56:45 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/10/28 09:02:56 jmc Exp $
 bin/gftp
+bin/gftp-gtk
+bin/gftp-text
 share/locale/br/LC_MESSAGES/gftp.mo
 share/locale/cs/LC_MESSAGES/gftp.mo
 share/locale/da/LC_MESSAGES/gftp.mo
