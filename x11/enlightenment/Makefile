@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 1999/10/28 04:58:35 jlam Exp $
+# $NetBSD: Makefile,v 1.15 1999/10/28 23:50:58 jlam Exp $
 
-DISTNAME=		enlightenment-0.16.0
+DISTNAME=		enlightenment-0.16.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.enlightenment.org/pub/e/enlightenment/
 
@@ -22,36 +22,9 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-I${LOCALBASE}/include
 
-EMPTY_DIRS=	config/backup \
-		themes/BlueSteel/borders/BORDERLESS/images \
-		themes/BlueSteel/borders/FIXEDSIZE/images \
-		themes/BlueSteel/borders/SMALL/images \
-		themes/BlueSteel/borders/ICONBOX/images \
-		themes/BlueSteel/borders/VERYSMALLFIXED/images \
-		themes/BlueSteel/borders/SMALLFIXED/images \
-		themes/BlueSteel/buttons/images \
-		themes/BlueSteel/coords/images \
-		themes/BlueSteel/slideouts/images \
-		themes/BlueSteel/sound/samples \
-		themes/BrushedMetal-Tigert/borders/DEFAULT/images \
-		themes/BrushedMetal-Tigert/borders/BORDERLESS/images \
-		themes/BrushedMetal-Tigert/borders/ICONBOX/images \
-		themes/BrushedMetal-Tigert/borders/MENU/images \
-		themes/BrushedMetal-Tigert/borders/BORDER_ONLY/images \
-		themes/BrushedMetal-Tigert/borders/SHAPED/images \
-		themes/BrushedMetal-Tigert/borders/FIXED_SIZE/images \
-		themes/BrushedMetal-Tigert/borders/TRANSIENT/images \
-		themes/BrushedMetal-Tigert/borders/MENU_BORDER_ONLY/images \
-		themes/BrushedMetal-Tigert/buttons/images \
-		themes/BrushedMetal-Tigert/cursors/images \
-		themes/BrushedMetal-Tigert/slideouts/images \
-		themes/BrushedMetal-Tigert/ttfonts \
-		themes/ShinyMetal/borders/images \
-		themes/ShinyMetal/slideouts
-
 post-install:
-.for DIR in ${EMPTY_DIRS}
-	@${TOUCH} ${PREFIX}/share/enlightenment/${DIR}/.directory
-.endfor
+	for file in `${GREP} "\.directory$$" ${PKGDIR}/PLIST`; do \
+		${TOUCH} ${PREFIX}/$${file}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
