@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1999/08/23 21:06:23 tron Exp $
+
+--- policy.h-dist.orig	Fri Aug  7 19:42:16 1998
++++ policy.h-dist	Mon Aug 23 22:52:58 1999
+@@ -588,7 +588,7 @@
+  * If you don't want this type of service, do not define it at all
+  * Absolute path name has to be used here!
+  */
+-#define FAX_NOTIFY_PROGRAM "/usr/local/lib/mgetty+sendfax/new_fax"
++#define FAX_NOTIFY_PROGRAM PREFIX "/lib/mgetty+sendfax/new_fax"
+ 
+ /* default minimum space required on spooling partition for receiving a FAX
+  * (in KILObytes)
