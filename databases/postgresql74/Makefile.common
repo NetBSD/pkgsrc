@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/06/27 16:38:32 recht Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/07/24 22:44:12 recht Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -22,7 +22,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER?=		recht@NetBSD.org
 HOMEPAGE?=		http://www.postgresql.org/
 
-CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
+CONFLICTS+=		postgresql-[0-9]* postgresql73-[0-9]*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql74/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql74/files
@@ -37,8 +37,8 @@ PATCHDIR?=		${.CURDIR}/../postgresql74/patches
 DIST_VERS?=		7.4.3
 BASE_VERS?=		${DIST_VERS}
 
-BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
-BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
+BUILDLINK_DEPENDS.postgresql74-lib?=	postgresql74-lib>=${BASE_VERS}
+#BUILDLINK_DEPENDS.tcl-postgresql74?=	tcl-postgresq74l>=${BASE_VERS}
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
@@ -59,7 +59,7 @@ SUBST_SED.pkglocaledir2=	-e 's|\( localedir[	 :]*=\).*|\1${_PKGLOCALEDIR}|'
 # see http://gppl.terminal.ru/README.html for details.
 .if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
 PATCH_SITES=		http://gppl.terminal.ru/
-PATCHFILES=		hier-Pg7.4-0.5.2.tar.gz
+PATCHFILES=		hier-Pg7.4-0.5.3.tar.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 BUILD_DEFS+=	PGSQL_USE_HIER
