@@ -1,0 +1,5 @@
+File::DirSync will make two directories exactly the same. The goal is
+to perform this syncronization process as quickly as possible with as
+few stats and reads and writes as possible. It usually can perform the
+syncronization process within a few milliseconds - even for gigabytes
+or more of information.
