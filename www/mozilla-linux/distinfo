@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/12/03 08:59:48 grant Exp $
+$NetBSD: distinfo,v 1.3 2002/12/27 16:28:09 grant Exp $
 
-SHA1 (mozilla-i686-pc-linux-gnu-1.2.1.tar.gz) = fbb43144934c3f45edb9c9972b4172846778651d
-Size (mozilla-i686-pc-linux-gnu-1.2.1.tar.gz) = 13587558 bytes
+SHA1 (mozilla-i686-pc-linux-gnu-1.3a.tar.gz) = d584c1a02ad47af6bacbc732745c08932c371920
+Size (mozilla-i686-pc-linux-gnu-1.3a.tar.gz) = 13591017 bytes
