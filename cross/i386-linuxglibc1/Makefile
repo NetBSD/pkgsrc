@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:04:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/23 12:29:06 wiz Exp $
 #
 
 DISTVERSION=		5.3.12.1
@@ -34,7 +34,9 @@ post-extract:
 	@cd ${WRKDIR}/lib && ${MV} -f * ../usr/lib/
 	@cd ${WRKDIR}/usr/lib && \
 		${LN} -sf libc.so.*.* libc.so && \
-		${LN} -sf libm.so.*.* libm.so
+		${LN} -sf libc.so.5.* libc.so.5 && \
+		${LN} -sf libm.so.*.* libm.so && \
+		${LN} -sf libm.so.5.* libm.so.5
 	@cd ${WRKDIR}/usr/include && ${RM} -f asm linux scsi
 	@cd ${WRKDIR}/usr/src/linux-2.0.30/include && \
 		${MV} -f asm-i386 ${WRKDIR}/usr/include/asm && \
