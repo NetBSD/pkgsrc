@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6532 2004/07/12 08:25:18 martti Exp $
+$NetBSD: CHANGES,v 1.6533 2004/07/12 08:44:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-utils to 4.0.6 [martti 2004-07-12]
 	Updated xfce4-wm to 4.0.6 [martti 2004-07-12]
 	Updated xfce4-wm-themes to 4.0.6 [martti 2004-07-12]
+	Updated xemacs-packages to 1.15 [tron 2004-07-12]
