@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9054 2005/02/06 00:28:07 schmonz Exp $
+$NetBSD: CHANGES,v 1.9055 2005/02/06 04:33:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated elm to 2.5.7 [jdolecek 2005-02-05]
 	Updated elmo to 1.3.1 [jdolecek 2005-02-05]
 	Updated getmail to 4.3.2 [schmonz 2005-02-06]
+	Updated tcl-otcl to 1.9 [minskim 2005-02-06]
