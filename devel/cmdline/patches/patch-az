@@ -1,0 +1,615 @@
+$NetBSD: patch-az,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdline.h.orig	Thu Jan  2 13:33:32 1997
++++ src/lib/cmdline.h
+@@ -16,16 +16,26 @@
+ //    - Added cmd_description field to CmdLine
+ //    - Added exit_handler() and quit() member-functions to CmdLine
+ //    - Added ALLOW_PLUS to list of CmdLine configuration flags
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Add declarations from arglist.h.
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _usr_include_cmdline_h
+ #define _usr_include_cmdline_h
+ 
+-class  ostream ;
+-class  istream ;
++#include <iosfwd>
++#include <fifolist.h>
++
++namespace cmdline {
++
++class  CmdArg ;
+ class  CmdLine ;
+-class  CmdArgListIter ;
+-class  CmdArgListList ;
++
++DECLARE_FIFO_LIST(CmdArgList, CmdArg);
++DECLARE_FIFO_LIST(CmdArgListList, CmdArgList);
+ 
+ //-----------------------------------------------------------------------------
+ 
+@@ -110,7 +120,7 @@
+           const char * keyword,
+           const char * value,
+           const char * description,
+-          unsigned     syntax_flags =isOPTVALREQ);
++          unsigned int syntax_flags =isOPTVALREQ);
+ 
+       // Create an option that takes no value.
+       //
+@@ -123,7 +133,7 @@
+    CmdArg(char         optchar,
+           const char * keyword,
+           const char * description,
+-          unsigned     syntax_flags =isOPT);
++          unsigned int syntax_flags =isOPT);
+ 
+       // Create a positional argument.
+       //
+@@ -142,18 +152,18 @@
+       //
+    CmdArg(const char * value,
+           const char * description,
+-          unsigned     syntax_flags =isPOSVALREQ);
++          unsigned int syntax_flags =isPOSVALREQ);
+ 
+ 
+    CmdArg(const CmdArg & cp);
+ 
+-   virtual ~CmdArg(void);
++   virtual ~CmdArg();
+ 
+       // over-ride this function to return a non-zero value if you
+       // wish the argument to be ignored (except for usage messages).
+       //
+    virtual  int
+-   is_dummy(void);
++   is_dummy();
+ 
+       // Here is the "primary" function that makes everything work ...
+       //
+@@ -204,12 +214,12 @@
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+ 
+       // Retrieve the syntax flags for this argument.
+-   unsigned
+-   syntax(void) const  { return  arg_syntax; }
++   unsigned int
++   syntax() const  { return  arg_syntax; }
+ 
+       // Get the flags that say how this argument was specified.
+-   unsigned
+-   flags(void) const  { return  arg_flags; }
++   unsigned int
++   flags() const  { return  arg_flags; }
+ 
+       // Get the sequence number corresponding to the last
+       // time this argument was matched on the command-line.
+@@ -218,65 +228,65 @@
+       // will be zero, otherwise it will be 'N' where the last
+       // time this argument was matched, it was the 'N'th argument
+       // encountered.
+-   unsigned
+-   sequence(void) const { return arg_sequence; }
++   unsigned int
++   sequence() const { return arg_sequence; }
+ 
+       // Get the character (short-option) name of this argument.
+       // Returns '\0' if there isnt one.
+    char
+-   char_name(void) const  { return  arg_char_name; }
++   char_name() const  { return  arg_char_name; }
+ 
+       // Get the keyword (long-option) name of this argument
+       // Returns NULL if there isnt one.
+    const char *
+-   keyword_name(void) const  { return  arg_keyword_name; }
++   keyword_name() const  { return  arg_keyword_name; }
+ 
+       // Get the value name of this argument.
+       // Returns NULL if this argument takes no value.
+    const char *
+-   value_name(void) const  { return  arg_value_name; }
++   value_name() const  { return  arg_value_name; }
+ 
+       // Get the description (help-message) of this argument.
+    const char *
+-   description(void) const  { return  arg_description; }
++   description() const  { return  arg_description; }
+ 
+       // If we were compiled for dubugging, then dump this argument
+    virtual  void
+-   dump(ostream & os, unsigned level =0) const;
++   dump(std::ostream & os, unsigned int level =0) const;
+ 
+ private:
+    // Member functions for internal use
+ 
+    void
+-   adjust_syntax(void);
++   adjust_syntax();
+ 
+    void
+-   parse_description(void);
++   parse_description();
+ 
+    void
+-   parse_value(void);
++   parse_value();
+ 
+    void
+-   flags(unsigned newflags)  { arg_flags = newflags; }
++   flags(unsigned int newflags)  { arg_flags = newflags; }
+ 
+    void
+-   set(unsigned flags)  { arg_flags |= flags; }
++   set(unsigned int flags)  { arg_flags |= flags; }
+ 
+    void
+-   clear(unsigned flags =~0)  { arg_flags &= ~flags; }
++   clear(unsigned int flags =~0)  { arg_flags &= ~flags; }
+ 
+       // set sequence number
+    void
+-   sequence(unsigned  num) { arg_sequence = num; }
++   sequence(unsigned int num) { arg_sequence = num; }
+ 
+    // Private data members
+ 
+-   unsigned     alloc_value_name : 1 ;
++   unsigned int alloc_value_name : 1 ;
+ 
+-   unsigned     arg_flags : 8 ;
+-   unsigned     arg_syntax : 8 ;
++   unsigned int arg_flags : 8 ;
++   unsigned int arg_syntax : 8 ;
+ 
+-   unsigned     arg_sequence;
++   unsigned int arg_sequence;
+ 
+    char         arg_char_name;
+    const char * arg_keyword_name;
+@@ -293,19 +303,19 @@
+    //
+ class  CmdLineArgIter {
+ public:
+-   CmdLineArgIter(void);
++   CmdLineArgIter();
+ 
+-   virtual ~CmdLineArgIter(void);
++   virtual ~CmdLineArgIter();
+ 
+       // Return the current argument and advance to the next one.
+       // Returns NULL if we are already at the end of the arguments
+       //
+    virtual const char *
+-   operator()(void) = 0;
++   operator()() = 0;
+ 
+       // Are the args returned by operator() pointing to temporary storage?
+    virtual int
+-   is_temporary(void) const = 0;
++   is_temporary() const = 0;
+ 
+ private:
+    CmdLineArgIter(const CmdLineArgIter &) ;
+@@ -326,14 +336,14 @@
+    CmdArgvIter(const char * const argv[])
+       : array(argv), index(0), count(-1) {}
+ 
+-   virtual ~CmdArgvIter(void);
++   virtual ~CmdArgvIter();
+ 
+    virtual const char *
+-   operator()(void);
++   operator()();
+ 
+       // is_temporary returns 0 for CmdArgvIter
+    virtual int
+-   is_temporary(void) const;
++   is_temporary() const;
+ 
+       // Restart using a different string array.
+    void
+@@ -367,10 +377,10 @@
+ public:
+    CmdStrTokIter(const char * tokens, const char * delimiters =0);
+ 
+-   virtual ~CmdStrTokIter(void);
++   virtual ~CmdStrTokIter();
+ 
+    virtual const char *
+-   operator()(void);
++   operator()();
+ 
+       // Reset using a new token-string and delimiter set.
+    void
+@@ -378,7 +388,7 @@
+ 
+       // Get the current delimiter set
+    const char *
+-   delimiters(void) const { return  seps; }
++   delimiters() const { return  seps; }
+ 
+       // Change the current delimiter set
+    void
+@@ -386,7 +396,7 @@
+ 
+       // is_temporary returns 1 for CmdStrTokIter
+    virtual int
+-   is_temporary(void) const;
++   is_temporary() const;
+ 
+ private:
+    CmdStrTokIter(const CmdStrTokIter &) ;
+@@ -411,21 +421,21 @@
+    //
+ class  CmdIstreamIter : public CmdLineArgIter {
+ public:
+-   static const unsigned  MAX_LINE_LEN ;
++   static const unsigned int MAX_LINE_LEN ;
+ 
+-   CmdIstreamIter(istream & input);
++   CmdIstreamIter(std::istream & input);
+ 
+-   virtual ~CmdIstreamIter(void);
++   virtual ~CmdIstreamIter();
+ 
+    virtual const char *
+-   operator()(void);
++   operator()();
+ 
+       // is_temporary returns 1 for CmdIstreamIter
+    virtual int
+-   is_temporary(void) const;
++   is_temporary() const;
+ 
+ private:
+-   istream & is ;
++   std::istream & is ;
+    CmdStrTokIter * tok_iter ;
+ } ;
+ 
+@@ -496,11 +506,11 @@
+ 
+    CmdLine(CmdArg * cmdarg1 ...);  // last arg should be NULL
+ 
+-   virtual ~CmdLine(void);
++   virtual ~CmdLine();
+ 
+       // Get the command name.
+    const char *
+-   name(void)  const  { return  cmd_name; }
++   name()  const  { return  cmd_name; }
+ 
+       // Specify a command name.
+    void
+@@ -508,7 +518,7 @@
+ 
+       // Get the command description.
+    const char *
+-   description(void)  const  { return  cmd_description; }
++   description()  const  { return  cmd_description; }
+ 
+       // Specify a command description.
+    void
+@@ -548,11 +558,11 @@
+    } ;
+ 
+       // Print usage on the given output stream using the given verboseness
+-   ostream &
+-   usage(ostream & os, CmdUsageLevel level =DEFAULT_USAGE) const ;
++   std::ostream &
++   usage(std::ostream & os, CmdUsageLevel level =DEFAULT_USAGE) const ;
+ 
+       // Print usage on the CmdLine's error-outstream
+-   ostream &
++   std::ostream &
+    usage(CmdUsageLevel level =DEFAULT_USAGE) const ;
+ 
+       // Obtain the current status of the command. The status will be
+@@ -560,8 +570,8 @@
+       // to a combination of CmdStatus bitmasks telling us precisely
+       // what went wrong.
+       //
+-   unsigned
+-   status(void)  const  { return  cmd_status; }
++   unsigned int
++   status()  const  { return  cmd_status; }
+ 
+       // Print an error message prefix on the error output stream
+       // associated with this command. The prefix printed is the
+@@ -577,8 +587,8 @@
+       // (which may be useful if you wish only to obtain a reference
+       // this CmdLine's error-outstream).
+       //
+-   ostream &
+-   error(unsigned  quiet =0) const;
++   std::ostream &
++   error(unsigned int quiet =0) const;
+ 
+       // If the QUIET-flag is not set, then we need to know where
+       // to print any error messages (the default is cerr).
+@@ -587,27 +597,27 @@
+       // for error messages.
+       //
+    void
+-   error(ostream & os) { cmd_err = &os; }
++   error(std::ostream & os) { cmd_err = &os; }
+ 
+    //
+    // Get & set the command-parsing-flags
+    //
+ 
+       // Get the current set of command-flags
+-   unsigned
+-   flags(void) const  { return  cmd_flags; }
++   unsigned int
++   flags() const  { return  cmd_flags; }
+ 
+       // Specify a new set of command-flags
+    void
+-   flags(unsigned newflags)  { cmd_flags = newflags; }
++   flags(unsigned int newflags)  { cmd_flags = newflags; }
+ 
+       // Set only the given command-flags
+    void
+-   set(unsigned flags)  { cmd_flags |= flags; }
++   set(unsigned int flags)  { cmd_flags |= flags; }
+ 
+       // Clear only the given command-flags
+    void
+-   clear(unsigned flags =~0)  { cmd_flags &= ~flags; }
++   clear(unsigned int flags =~0)  { cmd_flags &= ~flags; }
+ 
+    //
+    // We are somewhat flexible in the way we parse arguments.
+@@ -632,33 +642,33 @@
+       //
+    enum { NO_PROCESSING = 0, AUTO_PROCESSING = 1 } ;
+ 
+-   unsigned
++   unsigned int
+    parse(CmdLineArgIter & arg_iter, int  processing =AUTO_PROCESSING) ;
+ 
+       // Perform the necessary pre-processing.
+       // Return the resultant command status.
+       //
+-   unsigned
+-   prologue(void) ;
++   unsigned int
++   prologue() ;
+ 
+       // Parse a single argument (pre- and post- processing is
+       // NOT performed).
+       //
+-   unsigned
++   unsigned int
+    parse_arg(const char * arg) ;
+ 
+       // Perform the necessary post-processing.
+       // Return the resultant command status.
+       //
+-   unsigned
+-   epilogue(void) ;
++   unsigned int
++   epilogue() ;
+ 
+    //
+    // Find out the number of arguments parsed so far
+    //
+ 
+-   unsigned
+-   nargs_parsed(void) const { return cmd_nargs_parsed; }
++   unsigned int
++   nargs_parsed() const { return cmd_nargs_parsed; }
+ 
+    //
+    // Exception handling (well -- not really)
+@@ -685,7 +695,7 @@
+       // Get the current quit-handler (returns NULL if there isnt one)
+       //
+    quit_func_t
+-   quit_handler(void) const { return  cmd_quit_handler; }
++   quit_handler() const { return  cmd_quit_handler; }
+ 
+ 
+    //
+@@ -714,16 +724,16 @@
+    //
+ 
+       // get the release number
+-   static  unsigned
+-   release(void);
++   static  unsigned int
++   release();
+ 
+       // get the patchlevel number
+-   static  unsigned
+-   patchlevel(void);
++   static  unsigned int
++   patchlevel();
+ 
+       // get the SCCS identifier string
+    static  const char *
+-   ident(void);
++   ident();
+ 
+    //
+    // These next few functions are used internally but are general
+@@ -740,7 +750,7 @@
+       // partial-match, and str_NONE otherwise.
+       //
+    static  strmatch_t
+-   strmatch(const char * src, const char * attempt, unsigned  len =0);
++   strmatch(const char * src, const char * attempt, unsigned int len =0);
+ 
+       // Print a hanging indented paragraph on an outstream. Long lines
+       // are broken at word boundaries and are wrapped to line up with
+@@ -753,12 +763,12 @@
+       //                                 is the second sentence. etc ...
+       //
+    static  void
+-   strindent(ostream    & os,
+-             unsigned     maxcols,
+-             unsigned     margin,
+-             const char * title,
+-             unsigned     indent,
+-             const char * text);
++   strindent(std::ostream & os,
++             unsigned int   maxcols,
++             unsigned int   margin,
++             const char   * title,
++             unsigned int   indent,
++             const char   * text);
+ 
+    //
+    // Debugging stuff ...
+@@ -766,24 +776,24 @@
+ 
+       // If we were compiled for dubugging, then dump this command
+    virtual  void
+-   dump(ostream & os, unsigned level =0) const;
++   dump(std::ostream & os, unsigned int level =0) const;
+ 
+       // If we were compiled for dubugging, then dump the argument list
+    virtual  void
+-   dump_args(ostream & os, unsigned level =0) const;
++   dump_args(std::ostream & os, unsigned int level =0) const;
+ 
+ private:
+       // Private data members
+-   unsigned          cmd_parse_state : 8 ;
+-   unsigned          cmd_state  : 8 ;
+-   unsigned          cmd_flags  : 16 ;
+-   unsigned          cmd_status : 16 ;
+-   unsigned          cmd_nargs_parsed ;
++   unsigned int      cmd_parse_state : 8 ;
++   unsigned int      cmd_state  : 8 ;
++   unsigned int      cmd_flags  : 16 ;
++   unsigned int      cmd_status : 16 ;
++   unsigned int      cmd_nargs_parsed ;
+    const char      * cmd_name ;
+    const char      * cmd_description ;
+    CmdArg          * cmd_matched_arg ;
+    CmdArgListList  * cmd_args ;
+-   ostream         * cmd_err ;
++   std::ostream    * cmd_err ;
+    quit_func_t       cmd_quit_handler ;
+ 
+       // Disallow copying and assignment
+@@ -803,16 +813,16 @@
+    handle_arg(CmdArg * cmdarg, const char * & arg);
+ 
+    void
+-   ck_need_val(void);
++   ck_need_val();
+ 
+    CmdLineSyntax
+-   syntax(void) const;
++   syntax() const;
+ 
+-   unsigned
++   unsigned int
+    prompt_user(CmdArg * cmdarg);
+ 
+-   unsigned
+-   missing_args(void);
++   unsigned int
++   missing_args();
+ 
+    CmdArg *
+    opt_match(char optchar) const;
+@@ -824,47 +834,47 @@
+              int          match_value =0) const;
+ 
+    CmdArg *
+-   pos_match(void) const;
++   pos_match() const;
+ 
+-   unsigned
++   unsigned int
+    parse_option(const char * arg);
+ 
+-   unsigned
++   unsigned int
+    parse_keyword(const char * arg);
+ 
+-   unsigned
++   unsigned int
+    parse_value(const char * arg);
+ 
+-   ostream &
++   std::ostream &
+    arg_error(const char * error_str, const CmdArg * cmdarg) const;
+ 
+-   unsigned
++   unsigned int
+    fmt_arg(const CmdArg * cmdarg,
+            char         * buf,
+-           unsigned       bufsize,
++           unsigned int   bufsize,
+            CmdLineSyntax  syntax,
+            CmdUsageLevel  level) const;
+ 
+    static  CmdUsageLevel
+-   get_usage_level(void);
++   get_usage_level();
+ 
+-   unsigned
+-   print_synopsis(CmdLineSyntax syntax,
+-                  ostream     & os,
+-                  int           cols) const;
++   unsigned int
++   print_synopsis(CmdLineSyntax  syntax,
++                  std::ostream & os,
++                  int            cols) const;
+ 
+    void
+    print_descriptions(CmdLineSyntax   syntax,
+-                      ostream       & os,
++                      std::ostream  & os,
+                       int             cols,
+-                      unsigned        longest) const;
++                      unsigned int    longest) const;
+ 
+ } ;
+ 
+ 
+    // "os << cmd" is equivalent to "cmd.usage(os)"
+-inline ostream &
+-operator <<(ostream & os, CmdLine & cmd)  { return  cmd.usage(os); }
++inline std::ostream &
++operator <<(std::ostream & os, CmdLine & cmd)  { return  cmd.usage(os); }
+ 
+ 
+ //-----------------------------------------------------------------------------
+@@ -879,13 +889,13 @@
+ 
+    CmdLineCmdArgIter(CmdLine * cmd);
+ 
+-   virtual ~CmdLineCmdArgIter(void);
++   virtual ~CmdLineCmdArgIter();
+ 
+       // Return the current argument and advance to the next one.
+       // Returns NULL if we are already at the end of the list.
+       //
+    CmdArg *
+-   operator()(void);
++   operator()();
+ 
+ private:
+    CmdLineCmdArgIter(const CmdLineCmdArgIter &);
+@@ -895,5 +905,7 @@
+ 
+    CmdArgListIter * iter;
+ } ;
++
++} // namespace cmdline
+ 
+ #endif /* _usr_include_cmdline_h */

@@ -1,0 +1,98 @@
+$NetBSD: patch-be,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/parse.c.orig	Thu Jan  2 13:33:34 1997
++++ src/lib/parse.c
+@@ -14,24 +14,28 @@
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added cmd_nargs_parsed field to CmdLine
+ //    - Added exit_handler() and quit() member-functions to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <ctype.h>
+-#include <string.h>
++#include <cstdlib>
++#include <cstring>
++#include <cctype>
++#include <iostream>
+ 
+ #include "exits.h"
+ #include "states.h"
+-#include "arglist.h"
+ #include "cmdline.h"
+ 
++namespace cmdline {
+ 
+ //-------
+ // ^FUNCTION: CmdLine::prologue - initialize before parsing
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::prologue(void)
++//    unsigned int CmdLine::prologue()
+ //
+ // ^PARAMETERS:
+ //    None.
+@@ -55,8 +59,8 @@
+ // ^ALGORITHM:
+ //    Follow along - its not too complicated.
+ //-^^----
+-unsigned
+-CmdLine::prologue(void)
++unsigned int
++CmdLine::prologue()
+ {
+    // reset parse-specific attributes
+    cmd_parse_state = cmd_START_STATE ;
+@@ -80,7 +84,7 @@
+ // ^FUNCTION: CmdLine::epilogue - clean up after parsing
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::epilogue(void)
++//    unsigned int CmdLine::epilogue()
+ //
+ // ^PARAMETERS:
+ //    None.
+@@ -112,8 +116,8 @@
+ //    - Print usage if required
+ //    - Exit if required
+ //-^^----
+-unsigned
+-CmdLine::epilogue(void)
++unsigned int
++CmdLine::epilogue()
+ {
+    if (cmd_err == NULL)  cmd_err = &cerr;
+ 
+@@ -167,21 +171,22 @@
+ // ^ALGORITHM:
+ //    Trivial - just iterate through calling parse_arg.
+ //-^^----------------
+-unsigned
++unsigned int
+ CmdLine::parse(CmdLineArgIter & arg_iter, int  auto_processing)
+ {
+    // NOTE: If arg_iter.is_temporary() is TRUE then we MUST remember
+    //       to set the CmdLine::TEMP flags before parsing (and put it
+    //       back the way it was when we are finished.
+    //
+-   if (auto_processing)  (void) prologue();
+-   unsigned  save_flags = cmd_flags;
++   if (auto_processing)  prologue();
++   unsigned int save_flags = cmd_flags;
+    if (arg_iter.is_temporary())  cmd_flags |= TEMP;
+    for (const char * arg = arg_iter() ; arg ; arg = arg_iter()) {
+-      (void) parse_arg(arg);
++      parse_arg(arg);
+    }
+    if (arg_iter.is_temporary())  cmd_flags = save_flags;
+-   if (auto_processing)  (void) epilogue();
++   if (auto_processing)  epilogue();
+    return  cmd_status ;
+ }
+ 
++} // namespace cmdline

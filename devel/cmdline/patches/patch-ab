@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+
+--- doc/Makefile.orig	Thu Jan  2 13:33:24 1997
++++ doc/Makefile
+@@ -47,18 +47,16 @@
+ 
+ .man1.1:
+ 	$(SOELIM) $< >$*.1
+-	$(MANTOCATMAN) $*.1
+ 
+ .man3.3:
+ 	$(SOELIM) $< >$*.3
+-	$(MANTOCATMAN) $*.3
+ 
+ ###
+ # installation dependencies
+ ###
+ all:
+ 
+-install: installman installcatman
++install: installman
+ 
+ installman: installman1 installman3
+ 
+@@ -66,19 +64,19 @@
+ 
+ installman1: $(MAN1FILES)
+ 	( $(CHDIR) $(MANDIR)$(MAN1DIR) ; $(RM) $(MAN1FILES) )
+-	$(CP) $(MAN1FILES) $(MANDIR)$(MAN1DIR)
++	$(BSD_INSTALL_MAN) $(MAN1FILES) $(MANDIR)$(MAN1DIR)
+ 
+ installcatman1: $(CATMAN1FILES)
+ 	( $(CHDIR) $(CATMANDIR)$(MAN1DIR) ; $(RM) $(CATMAN1FILES) )
+-	$(CP) $(CATMAN1FILES) $(CATMANDIR)$(MAN1DIR)
++	$(BSD_INSTALL_MAN) $(CATMAN1FILES) $(CATMANDIR)$(MAN1DIR)
+ 
+ installman3: $(MAN3FILES)
+ 	( $(CHDIR) $(MANDIR)$(MAN3DIR) ; $(RM) $(MAN3FILES) )
+-	$(CP) $(MAN3FILES) $(MANDIR)$(MAN3DIR)
++	$(BSD_INSTALL_MAN) $(MAN3FILES) $(MANDIR)$(MAN3DIR)
+ 
+ installcatman3: $(CATMAN3FILES)
+ 	( $(CHDIR) $(CATMANDIR)$(MAN3DIR) ; $(RM) $(CATMAN3FILES) )
+-	$(CP) $(CATMAN3FILES) $(CATMANDIR)$(MAN3DIR)
++	$(BSD_INSTALL_MAN) $(CATMAN3FILES) $(CATMANDIR)$(MAN3DIR)
+ 
+ ###
+ # maintenance dependencies

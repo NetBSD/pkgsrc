@@ -1,0 +1,100 @@
+$NetBSD: patch-bc,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/fifolist.c.orig	Thu Jan  2 13:33:33 1997
++++ src/lib/fifolist.c
+@@ -6,9 +6,14 @@
+ //
+ // ^HISTORY:
+ //    03/21/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Moved template code to fifolist.h from this file
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
++#include <cstdlib>
+ #include "cmdline.h"
+ #include "fifolist.h"
+ 
+@@ -16,10 +21,12 @@
+ # define NULL 0L
+ #endif
+ 
++namespace cmdline {
++
+ //------------------------------------------------------------- GenericFifoList
+ 
+    // Destructor
+-GenericFifoList::~GenericFifoList(void) {
++GenericFifoList::~GenericFifoList() {
+    GenericFifoListNode * nd = head;
+    head = NULL;
+    while (nd) {
+@@ -48,7 +55,7 @@
+ 
+    // Remove an item off the front
+ void *
+-GenericFifoList::remove(void) {
++GenericFifoList::remove() {
+    if (head == NULL)  return  NULL;
+    GenericFifoListNode * nd = head;
+    void * result = head->contents;
+@@ -61,10 +68,10 @@
+ 
+ //--------------------------------------------------------- GenericFifoListIter
+ 
+-GenericFifoListIter::~GenericFifoListIter(void) {}
++GenericFifoListIter::~GenericFifoListIter() {}
+ 
+ void *
+-GenericFifoListIter::operator()(void) {
++GenericFifoListIter::operator()() {
+    void * result = NULL;
+    if (current) {
+       result  = current->contents;
+@@ -75,11 +82,11 @@
+ 
+ //-------------------------------------------------------- GenericFifoListArray
+ 
+-GenericFifoListArray::~GenericFifoListArray(void) {}
++GenericFifoListArray::~GenericFifoListArray() {}
+ 
+ void *
+-GenericFifoListArray::operator[](unsigned  ndx) {
+-   unsigned  max_index = count();
++GenericFifoListArray::operator[](unsigned int ndx) {
++   unsigned int max_index = count();
+    if (! max_index--)  return  NULL;     // check for underflow
+    if (ndx > max_index)  return  NULL;  // check for overflow
+ 
+@@ -104,27 +111,4 @@
+    return  current->contents;
+ }
+ 
+-//-------------------------------------------------------------------- FifoList
+-
+-#ifdef TEMPLATES
+-
+-   // Destructor
+-template <class Type>
+-FifoList<Type>::~FifoList(void) {
+-   GenericFifoListNode * nd = head;
+-   head = NULL;
+-   while (nd) {
+-      GenericFifoListNode * to_delete = nd;
+-      nd = nd->next;
+-      if (del_items)  delete (Type *)to_delete->contents;
+-      delete  to_delete;
+-   }
+-}
+-
+-template <class Type>
+-FifoListIter<Type>::~FifoListIter(void) {}
+-
+-template <class Type>
+-FifoListArray<Type>::~FifoListArray(void) {}
+-
+-#endif
++} // namespace cmdline

@@ -1,0 +1,37 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/main.c.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/main.c
+@@ -6,21 +6,27 @@
+ //
+ // ^HISTORY:
+ //    05/03/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <new.h>
+-#include <iostream.h>
+-#include <stdlib.h>
++#include <cstdlib>
++#include <iostream>
++#include <new>
+ 
+ #include "cmdparse.h"
+ 
++using namespace std;
++using namespace cmdline;
++
+ //
+ //  cmdparse_new_handler -- allocation error handler for cmdparse(1).
+ //
+-void  cmdparse_new_handler(void)
++void  cmdparse_new_handler()
+ {
+    cerr << "cmdparse: free-store allocation error." << endl ;
+-   ::exit(127);
++   exit(127);
+ }
+ 
+ int

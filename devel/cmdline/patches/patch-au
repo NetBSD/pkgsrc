@@ -1,0 +1,30 @@
+$NetBSD: patch-au,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/arglist.h.orig	Thu Jan  2 13:33:32 1997
++++ src/lib/arglist.h
+@@ -10,6 +10,9 @@
+ //
+ // ^HISTORY:
+ //    03/21/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _arglist_h
+@@ -17,11 +20,15 @@
+ 
+ #include "fifolist.h"
+ 
++namespace cmdline {
++
+ class CmdArg;
+ 
+ DECLARE_FIFO_LIST(CmdArgList, CmdArg);
+ 
+ DECLARE_FIFO_LIST(CmdArgListList, CmdArgList);
++
++} // namespace cmdline
+ 
+ #endif /* _arglist_h */
+ 

@@ -1,0 +1,102 @@
+$NetBSD: patch-ba,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdtest.c.orig	Thu Jan  2 13:33:33 1997
++++ src/lib/cmdtest.c
+@@ -9,13 +9,18 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Attached a description to the command.
++//
++//    08/16/00  Johnny Lam      <lamj@stat.cmu.edu>
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cctype>
++#include <iostream>
+ #include <cmdargs.h>
+ 
++using namespace cmdline;
++
+ //---------------------------------------------------------------- CmdArgModCmd
+ 
+    // CmdArgModCmd is a special argument that we use for testing.
+@@ -34,7 +39,7 @@
+                 const char * keyword,
+                 const char * value,
+                 const char * description,
+-                unsigned     syntax_flags =CmdArg::isOPTVALOPT);
++                unsigned int syntax_flags =CmdArg::isOPTVALOPT);
+ 
+    virtual
+    ~CmdArgModCmd(void);
+@@ -47,14 +52,14 @@
+                            const char * keyword,
+                            const char * value,
+                            const char * description,
+-                           unsigned     syntax_flags)
++                           unsigned int syntax_flags)
+    : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+ CmdArgModCmd::~CmdArgModCmd(void) {}
+ 
+ int CmdArgModCmd::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  new_flags = 0;
++   unsigned int new_flags = 0;
+    for (const char * p = arg ; *p ; p++) {
+       char ch = *p;
+       if (isupper(ch))  ch = tolower(ch);
+@@ -142,7 +147,7 @@
+    cout << "xflag=" << (xflag ? "ON" : "OFF") << endl ;
+    cout << "count=" << count << endl ;
+ 
+-   unsigned  sflags = str.flags();
++   unsigned int sflags = str.flags();
+    if ((sflags & CmdArg::GIVEN) && (! (sflags & CmdArg::VALGIVEN))) {
+       cout << "No string given on command-line!" << endl ;
+    } else {
+@@ -154,20 +159,20 @@
+    cout << "why=\"" << why << "\"" << endl ;
+    cout << "who=\"" << who << "\"" << endl ;
+ 
+-   unsigned  nints = ints.count();
++   unsigned int nints = ints.count();
+    for (int i = 0; i < nints ; i++) {
+       cout << "int[" << i << "]=" << ints[i] << endl ;
+    }
+ 
+-   unsigned  ngrps = grps.count();
+-   for (i = 0; i < ngrps ; i++) {
++   unsigned int ngrps = grps.count();
++   for (int i = 0; i < ngrps ; i++) {
+       cout << "groups[" << i << "]=\"" << grps[i] << "\"" << endl ;
+    }
+ 
+    cout << "name=\"" << name << "\"" << endl ;
+ 
+-   unsigned  nfiles = files.count();
+-   for (i = 0; i < nfiles ; i++) {
++   unsigned int nfiles = files.count();
++   for (int i = 0; i < nfiles ; i++) {
+       cout << "files[" << i << "]=\"" << files[i] << "\"" << endl ;
+    }
+ }
+@@ -223,12 +228,12 @@
+    name = NULL;
+ 
+    cout << "Parsing the command-line ..." << endl ;
+-   unsigned status = cmd.parse(argv_iter);
++   unsigned int status = cmd.parse(argv_iter);
+    if (status)  cmd.error() << "parsing errors occurred!" << endl ;
+ 
+    print_args();
+ 
+-   unsigned dbg_flags = debug.flags();
++   unsigned int dbg_flags = debug.flags();
+    if ((dbg_flags & CmdArg::GIVEN) && (! (dbg_flags & CmdArg::VALGIVEN))) {
+       debug = 1;
+    }

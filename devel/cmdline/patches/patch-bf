@@ -1,0 +1,54 @@
+$NetBSD: patch-bf,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/patchlevel.c.orig	Thu Jan  2 13:33:35 1997
++++ src/lib/patchlevel.c
+@@ -21,10 +21,17 @@
+ //
+ //    01/11/94	Brad Appleton	<bradapp@enteract.com>
+ //    - Modified for patch 4
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Modified for patch 5
+ //-^^---------------------------------------------------------------------
+ 
+ #include "cmdline.h"
+ 
++namespace cmdline {
++
+    // Record the version-identifier for this configuration of the project.
+    //
+    // My source-code management system lets me use a symbolic-name
+@@ -33,24 +40,25 @@
+    // file that makes up this version of the project.
+    //
+ static const char ident[] =
+-   "@(#)SMS  task: cmdline-1.04" ;
++   "@(#)SMS  task: cmdline-1.05" ;
+ 
+ 
+    // Release and patchlevel information
+ #define  CMDLINE_RELEASE     1
+-#define  CMDLINE_PATCHLEVEL  4
+-#define  CMDLINE_IDENT       "@(#)CmdLine	1.04"
++#define  CMDLINE_PATCHLEVEL  5
++#define  CMDLINE_IDENT       "@(#)CmdLine	1.05"
+ 
+ unsigned
+-CmdLine::release(void)  { return  CMDLINE_RELEASE; }
++CmdLine::release()  { return  CMDLINE_RELEASE; }
+ 
+ unsigned
+-CmdLine::patchlevel(void)  { return  CMDLINE_PATCHLEVEL; }
++CmdLine::patchlevel()  { return  CMDLINE_PATCHLEVEL; }
+ 
+ const char *
+-CmdLine::ident(void) {
++CmdLine::ident() {
+    static const char Ident[] = CMDLINE_IDENT ;
+ 
+    return  Ident;
+ }
+ 
++} // namespace cmdline

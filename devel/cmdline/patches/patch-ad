@@ -1,0 +1,84 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+
+--- src/cmd/argtypes.c.orig	Thu Jan  2 13:33:27 1997
++++ src/cmd/argtypes.c
+@@ -1,10 +1,6 @@
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
+-
+ #include "argtypes.h"
+ 
++using namespace cmdline;
+ 
+ //-----------------------------------------------------------------------------
+ // ^FUNCTION: operator() - handle an argument from the command-line
+@@ -64,7 +60,7 @@
+ 
+ //-------------------------------------------------------------- ShellCmdArgInt
+ 
+-ShellCmdArgInt::~ShellCmdArgInt(void)
++ShellCmdArgInt::~ShellCmdArgInt()
+ {
+ }
+ 
+@@ -80,7 +76,7 @@
+ 
+ //------------------------------------------------------------ ShellCmdArgFloat
+ 
+-ShellCmdArgFloat::~ShellCmdArgFloat(void)
++ShellCmdArgFloat::~ShellCmdArgFloat()
+ {
+ }
+ 
+@@ -96,7 +92,7 @@
+ 
+ //------------------------------------------------------------- ShellCmdArgChar
+ 
+-ShellCmdArgChar::~ShellCmdArgChar(void)
++ShellCmdArgChar::~ShellCmdArgChar()
+ {
+ }
+ 
+@@ -112,7 +108,7 @@
+ 
+ //-------------------------------------------------------------- ShellCmdArgStr
+ 
+-ShellCmdArgStr::~ShellCmdArgStr(void)
++ShellCmdArgStr::~ShellCmdArgStr()
+ {
+ }
+ 
+@@ -131,7 +127,7 @@
+ const char * ShellCmdArgBool::true_string  = "TRUE" ;
+ const char * ShellCmdArgBool::false_string = "" ;
+ 
+-ShellCmdArgBool::~ShellCmdArgBool(void)
++ShellCmdArgBool::~ShellCmdArgBool()
+ {
+ }
+ 
+@@ -148,7 +144,7 @@
+ 
+ //------------------------------------------------------------ ShellCmdArgClear
+ 
+-ShellCmdArgClear::~ShellCmdArgClear(void)
++ShellCmdArgClear::~ShellCmdArgClear()
+ {
+ }
+ 
+@@ -165,7 +161,7 @@
+ 
+ //----------------------------------------------------------- ShellCmdArgToggle
+ 
+-ShellCmdArgToggle::~ShellCmdArgToggle(void)
++ShellCmdArgToggle::~ShellCmdArgToggle()
+ {
+ }
+ 
+@@ -179,4 +175,3 @@
+    }
+    return  badval;
+ }
+-

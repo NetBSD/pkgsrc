@@ -1,0 +1,42 @@
+$NetBSD: patch-aq,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/syntax.c.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/syntax.c
+@@ -7,18 +7,24 @@
+ //
+ // ^HISTORY:
+ //    03/25/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
+ 
+ #include <cmdline.h>
+ 
+ #include "syntax.h"
+ #include "quoted.h"
+ 
++using namespace cmdline;
++using namespace std;
++
+ //------------------------------------------------------------------ copy_token
+ 
+ //-------------------
+@@ -53,7 +59,7 @@
+ copy_token(const char * & dest, const SyntaxFSM::token_t & src)
+ {
+    char * tok = new char[src.len + 1] ;
+-   ::strncpy(tok, src.start, src.len);
++   strncpy(tok, src.start, src.len);
+    tok[src.len] = '\0';
+    dest = tok;
+ }

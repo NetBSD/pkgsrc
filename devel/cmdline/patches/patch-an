@@ -1,0 +1,77 @@
+$NetBSD: patch-an,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/shell_arg.h.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/shell_arg.h
+@@ -8,6 +8,10 @@
+ //
+ // ^HISTORY:
+ //    04/22/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Refer to namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef  _shell_arg_h
+@@ -29,43 +33,43 @@
+    //      already exited!).
+    //
+ 
+-class  ShellCmdArg : public CmdArg {
++class  ShellCmdArg : public cmdline::CmdArg {
+ public:
+    ShellCmdArg(char    * variable_name,
+                char      optchar,
+                char    * keyword,
+                char    * value,
+                char    * description,
+-               unsigned  syntax_flags =CmdArg::isOPTVALREQ);
++               unsigned int syntax_flags =cmdline::CmdArg::isOPTVALREQ);
+ 
+    ShellCmdArg(char    * variable_name,
+                char      optchar,
+                char    * keyword,
+                char    * description,
+-               unsigned  syntax_flags =CmdArg::isOPT);
++               unsigned int syntax_flags =cmdline::CmdArg::isOPT);
+ 
+    ShellCmdArg(char    * variable_name,
+                char    * value,
+                char    * description,
+-               unsigned  syntax_flags =CmdArg::isPOSVALREQ);
++               unsigned int syntax_flags =cmdline::CmdArg::isPOSVALREQ);
+ 
+-   virtual ~ShellCmdArg(void);
++   virtual ~ShellCmdArg();
+ 
+       // Return the name of this variable/array
+    const char *
+-   name(void) const { return  sca_name; }
++   name() const { return  sca_name; }
+ 
+       // Are we an array or a variable?
+    int
+-   is_array(void) const;
++   is_array() const;
+ 
+       // Return the variable portion
+    ShellVariable &
+-   variable(void)  { return  *shell_variable; }
++   variable()  { return  *shell_variable; }
+ 
+       // Return the array portion
+    ShellArray &
+-   array(void)  { return  *shell_array; }
++   array()  { return  *shell_array; }
+ 
+       // If we are a variable then the "set" member function sets the
+       // value of the variable, otherwise it appends to the list of
+@@ -75,7 +79,7 @@
+    set(const char * value);
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd) = 0;
++   operator()(const char * & arg, cmdline::CmdLine & cmd) = 0;
+ 
+ private:
+    ShellCmdArg(const ShellCmdArg & cp);

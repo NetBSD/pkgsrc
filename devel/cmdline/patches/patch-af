@@ -1,0 +1,160 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/cmdparse.c.orig	Thu Jan  2 13:33:27 1997
++++ src/cmd/cmdparse.c
+@@ -10,20 +10,26 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added ALLOW_PLUS to list of CmdLine configuration flags
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Update to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <fstream.h>
+-#include <strstream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <fstream>
++#include <iostream>
++#include <strstream>
+ 
+ #include <argtypes.h>
+ #include "cmdparse.h"
+ #include "syntax.h"
+ #include "quoted.h"
+ 
++using namespace cmdline;
++using namespace std;
++
+ enum { SUCCESS = 0, FAILURE = -1 } ;
+ 
+ enum { MAX_IDENT_LEN = 64, MAX_DESCRIPTION_LEN = 1024 } ;
+@@ -67,8 +73,8 @@
+ copy(char * & dest, const char * src)
+ {
+    if (src == NULL)  return ;
+-   dest = new char[::strlen(src) + 1] ;
+-   if (dest)  ::strcpy(dest, src);
++   dest = new char[strlen(src) + 1] ;
++   if (dest)  strcpy(dest, src);
+ }
+ 
+ //------------------------------------------------------------------ CmdArgVers
+@@ -78,7 +84,7 @@
+ {
+ }
+ 
+-CmdArgVers::~CmdArgVers(void)
++CmdArgVers::~CmdArgVers()
+ {
+ }
+ 
+@@ -136,7 +142,7 @@
+ //    Follow along - its pretty straightforward.
+ //-^^----------------
+ int
+-CmdParseCommand::parse_declarations(void)
++CmdParseCommand::parse_declarations()
+ {
+    const char * str = input_str ;
+    const char * varname = input_var ;
+@@ -176,7 +182,7 @@
+       //         means that standard input should be used.
+       //
+    if (filename) {
+-      if (::strcmp(filename, "-") == 0) {
++      if (strcmp(filename, "-") == 0) {
+          rc += parse_declarations(cin);
+       } else {
+          ifstream  ifs(filename);
+@@ -256,7 +262,7 @@
+    char * kwd  = NULL ;
+    char * val  = NULL ;
+    char * desc = NULL ;
+-   unsigned  flags = arg.syntax() ;
++   unsigned int flags = arg.syntax() ;
+    char  opt = arg.optchar() ;
+ 
+       // Need to make copies of some things because we cant assume they
+@@ -333,7 +339,7 @@
+ //    Parse the user's argument declarations from an input string.
+ //
+ // ^REQUIREMENTS:
+-//    This member function should only be called by parse_declarations(void).
++//    This member function should only be called by parse_declarations().
+ //
+ // ^SIDE-EFFECTS:
+ //    - modifies usr_cmd by appending to it any valid arguments that we parse.
+@@ -348,8 +354,8 @@
+ CmdParseCommand::parse_declarations(const char * str)
+ {
+    int  rc = 0;
+-   char * strbuf = new char[::strlen(str) + 1] ;
+-   (void) ::strcpy(strbuf, str);
++   char * strbuf = new char[strlen(str) + 1] ;
++   strcpy(strbuf, str);
+    istrstream  iss(strbuf);
+    rc = parse_declarations(iss);
+    delete  strbuf ;
+@@ -372,7 +378,7 @@
+ //    Parse the user's argument declarations from an input steam.
+ //
+ // ^REQUIREMENTS:
+-//    This member function should only be called by parse_declarations(void).
++//    This member function should only be called by parse_declarations().
+ //
+ // ^SIDE-EFFECTS:
+ //    - modifies usr_cmd by appending to it any valid arguments that we parse.
+@@ -394,7 +400,7 @@
+ CmdParseCommand::parse_declarations(istream & is)
+ {
+       // Keep track of the number of declarations that we parse.
+-   unsigned  nargs = 0;
++   unsigned int nargs = 0;
+ 
+    if (is.eof())  return  SUCCESS;
+ 
+@@ -408,7 +414,7 @@
+          // Skip all non-alpha-numerics
+      int c = is.peek() ;
+      while ((c != EOF) && (c != '_') && (! isalnum(c))) {
+-        (void) is.get();
++        is.get();
+         c = is.peek();
+      }
+   
+@@ -510,7 +516,7 @@
+ void
+ CmdParseCommand::set_args(UnixShell * shell)
+ {
+-   unsigned  flags, syntax;
++   unsigned int flags, syntax;
+    CmdLineCmdArgIter  iter(usr_cmd);
+ 
+    for (CmdArg * cmdarg = iter() ; cmdarg ; cmdarg = iter()) {
+@@ -533,8 +539,8 @@
+       if ((syntax & CmdArg::isVALTAKEN) && (! (flags & CmdArg::VALGIVEN))) {
+          // flag was given without its value - we need to record that
+          char  var_name[256];
+-         (void) ::strcpy(var_name, sh_cmdarg->name());
+-         (void) ::strcat(var_name, suffix_str);
++         strcpy(var_name, sh_cmdarg->name());
++         strcat(var_name, suffix_str);
+          ShellVariable  sh_var(var_name);
+          sh_var.set(ShellCmdArgBool::True());
+          shell->set(sh_var);
+@@ -646,7 +652,7 @@
+ 
+ //------------------------------------------- CmdParseCommand::~CmdParseCommand
+ 
+-CmdParseCommand::~CmdParseCommand(void)
++CmdParseCommand::~CmdParseCommand()
+ {
+    CmdLineCmdArgIter  iter(usr_cmd);
+ 

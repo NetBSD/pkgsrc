@@ -1,0 +1,184 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/argtypes.h.orig	Thu Jan  2 13:33:27 1997
++++ src/cmd/argtypes.h
+@@ -8,6 +8,10 @@
+ //
+ // ^HISTORY:
+ //    04/26/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Refer to namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _argtypes_h
+@@ -27,21 +31,21 @@
+                   char *       keyword,
+                   char *       value,
+                   char *       description,
+-                  unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                  unsigned int syntax_flags =cmdline::CmdArg::isOPTVALREQ)
+       : ShellCmdArg(name, optchar, keyword, value, description, syntax_flags)
+       {}
+ 
+    ShellCmdArgInt(char *       name,
+                   char *       value,
+                   char *       description,
+-                  unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                  unsigned int syntax_flags =cmdline::CmdArg::isPOSVALREQ)
+       : ShellCmdArg(name, value, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgInt(void);
++   virtual ~ShellCmdArgInt();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ //------------------------------------------------------------ ShellCmdArgFloat
+@@ -56,21 +60,21 @@
+                     char *       keyword,
+                     char *       value,
+                     char *       description,
+-                    unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                    unsigned int syntax_flags =cmdline::CmdArg::isOPTVALREQ)
+       : ShellCmdArg(name, optchar, keyword, value, description, syntax_flags)
+       {}
+ 
+    ShellCmdArgFloat(char *       name,
+                     char *       value,
+                     char *       description,
+-                    unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                    unsigned int syntax_flags =cmdline::CmdArg::isPOSVALREQ)
+       : ShellCmdArg(name, value, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgFloat(void);
++   virtual ~ShellCmdArgFloat();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ //------------------------------------------------------------- ShellCmdArgChar
+@@ -85,21 +89,21 @@
+                    char *       keyword,
+                    char *       value,
+                    char *       description,
+-                   unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                   unsigned int syntax_flags =cmdline::CmdArg::isOPTVALREQ)
+       : ShellCmdArg(name, optchar, keyword, value, description, syntax_flags)
+       {}
+ 
+    ShellCmdArgChar(char *       name,
+                    char *       value,
+                    char *       description,
+-                   unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                   unsigned int syntax_flags =cmdline::CmdArg::isPOSVALREQ)
+       : ShellCmdArg(name, value, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgChar(void);
++   virtual ~ShellCmdArgChar();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ //-------------------------------------------------------------- ShellCmdArgStr
+@@ -114,21 +118,21 @@
+                   char *       keyword,
+                   char *       value,
+                   char *       description,
+-                  unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                  unsigned int syntax_flags =cmdline::CmdArg::isOPTVALREQ)
+       : ShellCmdArg(name, optchar, keyword, value, description, syntax_flags)
+       {}
+ 
+    ShellCmdArgStr(char *       name,
+                   char *       value,
+                   char *       description,
+-                  unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                  unsigned int syntax_flags =cmdline::CmdArg::isPOSVALREQ)
+       : ShellCmdArg(name, value, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgStr(void);
++   virtual ~ShellCmdArgStr();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ //------------------------------------------------------------- ShellCmdArgBool
+@@ -142,23 +146,23 @@
+                    char         optchar,
+                    char *       keyword,
+                    char *       description,
+-                   unsigned     syntax_flags =CmdArg::isOPT)
++                   unsigned int syntax_flags =cmdline::CmdArg::isOPT)
+       : ShellCmdArg(name, optchar, keyword, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgBool(void);
++   virtual ~ShellCmdArgBool();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ 
+    // Need to know what the values to use for TRUE and FALSE are
+    //
+ 
+    static const char *
+-   True(void) { return  true_string ; }
++   True() { return  true_string ; }
+ 
+    static const char *
+-   False(void) { return  false_string ; }
++   False() { return  false_string ; }
+ 
+    // Need to be able to set the values to use for TRUE and FALSE
+ 
+@@ -184,14 +188,14 @@
+                     char         optchar,
+                     char *       keyword,
+                     char *       description,
+-                    unsigned     syntax_flags =CmdArg::isOPT)
++                    unsigned int syntax_flags =cmdline::CmdArg::isOPT)
+       : ShellCmdArgBool(name, optchar, keyword, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgClear(void);
++   virtual ~ShellCmdArgClear();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ //----------------------------------------------------------- ShellCmdArgToggle
+@@ -202,14 +206,14 @@
+                      char         optchar,
+                      char *       keyword,
+                      char *       description,
+-                     unsigned     syntax_flags =CmdArg::isOPT)
++                     unsigned int syntax_flags =cmdline::CmdArg::isOPT)
+       : ShellCmdArgBool(name, optchar, keyword, description, syntax_flags)
+       {}
+ 
+-   virtual ~ShellCmdArgToggle(void);
++   virtual ~ShellCmdArgToggle();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ #endif  /* _argtypes_h */

@@ -1,0 +1,242 @@
+$NetBSD: patch-bd,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/fifolist.h.orig	Thu Jan  2 13:33:34 1997
++++ src/lib/fifolist.h
+@@ -22,6 +22,11 @@
+ //
+ // ^HISTORY:
+ //    03/21/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Moved template code from fifolist.c to this header file
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _fifolist_h
+@@ -35,6 +40,7 @@
+ # endif
+ #endif
+ 
++namespace cmdline {
+ 
+    // GenericFifoList - a FIFO linked list of void * pointers
+    //
+@@ -51,41 +57,41 @@
+          : next(nd), contents(val) {}
+    } ;
+ 
+-   unsigned  mod : 1;
+-   unsigned  del_items : 1;
+-   unsigned  num_items ;
++   unsigned int mod : 1;
++   unsigned int del_items : 1;
++   unsigned int num_items ;
+    GenericFifoListNode * head;
+    GenericFifoListNode * tail;
+ 
+-   GenericFifoList(void)
++   GenericFifoList()
+       : head(0), tail(0), num_items(0), del_items(0), mod(0) {}
+ 
+    // Remove the first item from the list
+    void *
+-   remove(void);
++   remove();
+ 
+    // Add an item to the end of the list
+    void
+    add(void * item);
+ 
+ public:
+-   virtual  ~GenericFifoList(void);
++   virtual  ~GenericFifoList();
+ 
+    // Was the list modified since the last time we checked?
+    int
+-   modified(void) { return (mod) ? (mod = 0, 1) : 0 ; }
++   modified() { return (mod) ? (mod = 0, 1) : 0 ; }
+ 
+    // Is the list empty?
+    int
+-   is_empty(void) const { return  (num_items == 0); }
++   is_empty() const { return  (num_items == 0); }
+ 
+    // How many items are in the list?
+-   unsigned
+-   count(void) const { return  num_items; }
++   unsigned int
++   count() const { return  num_items; }
+ 
+    // Is the list responsible for deleting the items it contains?
+    int
+-   self_cleaning(void) const { return  int(del_items); }
++   self_cleaning() const { return  int(del_items); }
+ 
+    // Tell the list who is responsible for deleting the items it contains?
+    void
+@@ -112,10 +118,10 @@
+    // returns NULL if at end-of-list
+    //
+    void *
+-   operator()(void);
++   operator()();
+ 
+ public:
+-   virtual  ~GenericFifoListIter(void);
++   virtual  ~GenericFifoListIter();
+ 
+ } ;
+ 
+@@ -124,7 +130,7 @@
+ class  GenericFifoListArray {
+ private:
+    GenericFifoList &  list;
+-   unsigned           index;
++   unsigned int       index;
+    GenericFifoList::GenericFifoListNode * current;
+ 
+ protected:
+@@ -135,7 +141,7 @@
+       : list(*fifo_list), index(0), current(fifo_list->head) {}
+ 
+    // How many items are in the array?
+-   unsigned  count(void) const  { return  list.count(); }
++   unsigned int count() const  { return  list.count(); }
+ 
+    // Return a specified item in the array.
+    //   NOTE: the programmer is responsible for making sure the given index
+@@ -146,27 +152,27 @@
+    //         cause a NULL pointer dereferencing error!
+    //
+    void *
+-   operator[](unsigned  ndx);
++   operator[](unsigned int ndx);
+ 
+ public:
+-   virtual  ~GenericFifoListArray(void);
++   virtual  ~GenericFifoListArray();
+ 
+ } ;
+ 
+-#ifdef TEMPLATES
++#if 1	// TEMPLATES
+ 
+ template <class Type>
+ class FifoList : public GenericFifoList {
+ public:
+-   FifoList(void) {}
++   FifoList() {}
+ 
+-   virtual ~FifoList(void);
++   virtual ~FifoList();
+ 
+    void
+    add(Type * item)  { GenericFifoList::add((void *)item); }
+ 
+    Type *
+-   remove(void)  { return  (Type *) GenericFifoList::remove(); }
++   remove()  { return  (Type *) GenericFifoList::remove(); }
+ } ;
+ 
+ template <class Type>
+@@ -175,10 +181,10 @@
+    FifoListIter(FifoList<Type> & list) : GenericFifoListIter(list) {}
+    FifoListIter(FifoList<Type> * list) : GenericFifoListIter(list) {}
+ 
+-   virtual  ~FifoListIter(void);
++   virtual  ~FifoListIter();
+ 
+    Type *
+-   operator()(void)  {  return  (Type *) GenericFifoListIter::operator()(); }
++   operator()()  {  return  (Type *) GenericFifoListIter::operator()(); }
+ } ;
+ 
+ template <class Type>
+@@ -187,13 +193,31 @@
+    FifoListArray(FifoList<Type> & list) : GenericFifoListArray(list) {}
+    FifoListArray(FifoList<Type> * list) : GenericFifoListArray(list) {}
+ 
+-   virtual  ~FifoListArray(void);
++   virtual  ~FifoListArray();
+ 
+    Type &
+-   operator[](unsigned  ndx)
++   operator[](unsigned int ndx)
+       { return  *((Type *) GenericFifoListArray::operator[](ndx)); }
+ } ;
+ 
++template <class Type>
++FifoList<Type>::~FifoList() {
++   GenericFifoListNode * nd = head;
++   head = NULL;
++   while (nd) {
++      GenericFifoListNode * to_delete = nd;
++      nd = nd->next;
++      if (del_items)  delete (Type *)to_delete->contents;
++      delete  to_delete;
++   }
++}
++
++template <class Type>
++FifoListIter<Type>::~FifoListIter() {}
++
++template <class Type>
++FifoListArray<Type>::~FifoListArray() {}
++
+ #define  DECLARE_FIFO_LIST(Name,Type) \
+    typedef  FifoList<Type> Name; \
+    typedef  FifoListIter<Type>  name2(Name,Iter); \
+@@ -204,9 +228,9 @@
+ #define  DECLARE_FIFO_LIST(Name,Type) \
+    class Name : public GenericFifoList {  \
+    public:  \
+-      Name(void) {}  \
++      Name() {}  \
+ \
+-      virtual ~Name(void) {  \
++      virtual ~Name() {  \
+          GenericFifoListNode * nd = head;  \
+          head = 0; \
+          while (nd) {  \
+@@ -221,7 +245,7 @@
+       add(Type * item)  { GenericFifoList::add((void *)item); }  \
+ \
+       Type *  \
+-      remove(void)  { return  (Type *) GenericFifoList::remove(); }  \
++      remove()  { return  (Type *) GenericFifoList::remove(); }  \
+ \
+       friend  class name2(Name,Iter);  \
+    } ;  \
+@@ -231,10 +255,10 @@
+    name2(Name,Iter)(Name & list) : GenericFifoListIter(list) {}  \
+    name2(Name,Iter)(Name * list) : GenericFifoListIter(list) {}  \
+ \
+-   virtual ~ name2(Name,Iter)(void) {} \
++   virtual ~ name2(Name,Iter)() {} \
+ \
+    Type *  \
+-   operator()(void)  {  return  (Type *) GenericFifoListIter::operator()(); } \
++   operator()()  {  return  (Type *) GenericFifoListIter::operator()(); } \
+ } ; \
+ \
+ class name2(Name,Array) : public GenericFifoListArray {  \
+@@ -242,15 +266,15 @@
+    name2(Name,Array)(Name & list) : GenericFifoListArray(list) {}  \
+    name2(Name,Array)(Name * list) : GenericFifoListArray(list) {}  \
+ \
+-   virtual ~ name2(Name,Array)(void) {} \
++   virtual ~ name2(Name,Array)() {} \
+ \
+    Type &  \
+-   operator[](unsigned  ndx)  \
++   operator[](unsigned int ndx)  \
+       { return  *((Type *) GenericFifoListArray::operator[](ndx)); }  \
+ }
+ 
+ #endif  /* TEMPLATES */
+ 
++} // namespace cmdline
+ 
+ #endif /* _fifolist_h */
+-

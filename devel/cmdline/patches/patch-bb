@@ -1,0 +1,208 @@
+$NetBSD: patch-bb,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/dump.c.orig	Thu Jan  2 13:33:33 1997
++++ src/lib/dump.c
+@@ -13,18 +13,23 @@
+ //    - Added arg_sequence field to CmdArg
+ //    - Added cmd_nargs_parsed field to CmdLine
+ //    - Added cmd_description field to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #include  "cmdline.h"
+ 
+ #ifdef DEBUG_CMDLINE
+-# include  <iostream.h>
+-# include  <string.h>
++# include  <iostream>
+ 
+-# include  "arglist.h"
+ # include  "states.h"
+ #endif
+ 
++namespace cmdline {
++
++using std::ostream;
+ 
+ #ifdef DEBUG_CMDLINE
+ 
+@@ -32,7 +37,7 @@
+    // The number of spaces to indent is 3x the indent level
+    //
+ static ostream &
+-indent(ostream & os, unsigned level)
++indent(ostream & os, unsigned int level)
+ {
+    os.width(level * 3);
+    return  (os << "");
+@@ -42,7 +47,7 @@
+    // Dump the arg_syntax field of a CmdArg in a mnemonic format
+    //
+ static ostream &
+-dump_arg_syntax(ostream & os, unsigned  syntax)
++dump_arg_syntax(ostream & os, unsigned int syntax)
+ {
+    if (syntax & CmdArg::isREQ) {
+       os << "isREQ" ;
+@@ -78,7 +83,7 @@
+ 
+    // Dump the arg_flags field of a CmdArg in a mnemonic format
+ static ostream &
+-dump_arg_flags(ostream & os, unsigned  flags)
++dump_arg_flags(ostream & os, unsigned int flags)
+ {
+    if (flags & CmdArg::GIVEN) {
+       os << "GIVEN" ;
+@@ -109,7 +114,7 @@
+ 
+    // Dump the cmd_flags field of a CmdLine in a mnemonic format
+ static ostream &
+-dump_cmd_flags(ostream & os, unsigned flags)
++dump_cmd_flags(ostream & os, unsigned int flags)
+ {
+    if (flags & CmdLine::NO_ABORT) {
+       os << "NO_ABORT" ;
+@@ -147,7 +152,7 @@
+ 
+    // Dump the status of a CmdLine in a mnemonic format
+ static ostream &
+-dump_cmd_status(ostream & os, unsigned  status)
++dump_cmd_status(ostream & os, unsigned int status)
+ {
+    if (! status) {
+       os << "NO_ERROR";
+@@ -189,7 +194,7 @@
+ 
+    // Dump the state of a CmdLine in a mnemonic format
+ static ostream &
+-dump_cmd_state(ostream & os, unsigned  state)
++dump_cmd_state(ostream & os, unsigned int state)
+ {
+    if (! state) {
+       os << "NO_OPTIONS";
+@@ -215,7 +220,7 @@
+ 
+    // Dump the parse_state of a CmdLine in a mnemonic format
+ static ostream &
+-dump_cmd_parse_state(ostream & os, unsigned parse_state)
++dump_cmd_parse_state(ostream & os, unsigned int parse_state)
+ {
+    switch (parse_state) {
+    case cmd_START_STATE :
+@@ -264,9 +269,9 @@
+ 
+    // Dump the arguments (including the default arguments) in an arg_list
+ static ostream &
+-dump_cmd_args(ostream & os, CmdArgListList * arg_list, unsigned level)
++dump_cmd_args(ostream & os, CmdArgListList * arg_list, unsigned int level)
+ {
+-   ::indent(os, level) << "CmdLine::cmd_args {\n" ;
++   indent(os, level) << "CmdLine::cmd_args {\n" ;
+ 
+    CmdArgListListIter  list_iter(arg_list);
+    for (CmdArgList * alist = list_iter() ; alist ; alist = list_iter()) {
+@@ -276,7 +281,7 @@
+       }
+    }
+ 
+-   ::indent(os, level) << "}" << endl;
++   indent(os, level) << "}" << endl;
+    return  os;
+ }
+ 
+@@ -285,72 +290,73 @@
+ 
+    // Dump a CmdArg
+ void
+-CmdArg::dump(ostream & os, unsigned level) const
++CmdArg::dump(ostream & os, unsigned int level) const
+ {
+ #ifdef DEBUG_CMDLINE
+-   ::indent(os, level) << "CmdArg {\n" ;
++   indent(os, level) << "CmdArg {\n" ;
+ 
+-   ::indent(os, level + 1) << "option='" << char(arg_char_name) << "', "
++   indent(os, level + 1) << "option='" << char(arg_char_name) << "', "
+                          << "keyword=\"" << arg_keyword_name << "\", "
+                          << "value=\"" << arg_value_name << "\"\n" ;
+ 
+-   ::indent(os, level + 1) << "syntax=" ;
++   indent(os, level + 1) << "syntax=" ;
+    dump_arg_syntax(os, arg_syntax) << "\n";
+ 
+-   ::indent(os, level + 1) << "flags=" ;
++   indent(os, level + 1) << "flags=" ;
+    dump_arg_flags(os, arg_flags) << "\n";
+ 
+-   ::indent(os, level + 1) << "sequence=" << arg_sequence << "\n";
++   indent(os, level + 1) << "sequence=" << arg_sequence << "\n";
+ 
+-   ::indent(os, level) << "}" << endl;
++   indent(os, level) << "}" << endl;
+ #endif
+ }
+ 
+ 
+    // Dump a CmdLine
+ void
+-CmdLine::dump(ostream & os, unsigned level) const
++CmdLine::dump(ostream & os, unsigned int level) const
+ {
+ #ifdef DEBUG_CMDLINE
+-   ::indent(os, level) << "CmdLine {\n" ;
++   indent(os, level) << "CmdLine {\n" ;
+ 
+-   ::indent(os, level + 1) << "name=\"" << cmd_name << "\"\n";
++   indent(os, level + 1) << "name=\"" << cmd_name << "\"\n";
+ 
+-   ::indent(os, level + 1) << "description=\"" << cmd_description << "\"\n";
++   indent(os, level + 1) << "description=\"" << cmd_description << "\"\n";
+ 
+-   ::indent(os, level + 1) << "flags=" ;
++   indent(os, level + 1) << "flags=" ;
+    dump_cmd_flags(os, cmd_flags) << "\n";
+ 
+-   ::indent(os, level + 1) << "status=" ;
++   indent(os, level + 1) << "status=" ;
+    dump_cmd_status(os, cmd_status) << "\n";
+ 
+-   ::indent(os, level + 1) << "state=" ;
++   indent(os, level + 1) << "state=" ;
+    dump_cmd_state(os, cmd_state) << "\n";
+ 
+-   ::indent(os, level + 1) << "parse_state=" ;
++   indent(os, level + 1) << "parse_state=" ;
+    dump_cmd_parse_state(os, cmd_parse_state) << "\n";
+ 
+-   ::indent(os, level + 1);
++   indent(os, level + 1);
+    if (cmd_matched_arg == NULL) {
+       os << "matched_arg=NULL\n";
+    } else {
+       os << "matched_arg=" << (void *)cmd_matched_arg << "\n";
+    }
+ 
+-   ::indent(os, level + 1) << "# valid-args-parsed="
++   indent(os, level + 1) << "# valid-args-parsed="
+                            << cmd_nargs_parsed << "\n" ;
+ 
+-   ::indent(os, level) << "}" << endl;
++   indent(os, level) << "}" << endl;
+ #endif
+ }
+ 
+ 
+    // Dump the arguments of a CmdLine
+ void
+-CmdLine::dump_args(ostream & os, unsigned level) const
++CmdLine::dump_args(ostream & os, unsigned int level) const
+ {
+ #ifdef DEBUG_CMDLINE
+    dump_cmd_args(os, cmd_args, level);
+ #endif
+ }
+ 
++} // namespace cmdline

@@ -1,0 +1,76 @@
+$NetBSD: patch-bk,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/usage.c.orig	Thu Jan  2 13:33:35 1997
++++ src/lib/usage.c
+@@ -11,15 +11,25 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added cmd_description field to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <iostream.h>
+-#include <stdlib.h>
+-#include <string.h>
++#include <iostream>
++#include <cstdlib>
++#include <cstring>
+ 
+ #include "cmdline.h"
+ #include "states.h"
+-#include "arglist.h"
++
++namespace cmdline {
++
++using std::getenv;
++using std::ostream;
++using std::strlen;
++using std::strtol;
+ 
+ #ifdef vms
+ #  define  getenv  getsym
+@@ -31,7 +41,7 @@
+ // ^FUNCTION: CmdLine::get_usage_level
+ //
+ // ^SYNOPSIS:
+-//    CmdLine::CmdUsageLevel CmdLine::get_usage_level(void)
++//    CmdLine::CmdUsageLevel CmdLine::get_usage_level()
+ //
+ // ^PARAMETERS:
+ //    NONE.
+@@ -61,15 +71,15 @@
+ //    Read the usage_level from the environment and return it.
+ //-^^----
+ CmdLine::CmdUsageLevel
+-CmdLine::get_usage_level(void)
++CmdLine::get_usage_level()
+ {
+    long level;
+-   char * end_scan, * level_str = ::getenv("USAGE_LEVEL");
++   char * end_scan, * level_str = getenv("USAGE_LEVEL");
+ 
+    if (level_str == NULL)  return  VERBOSE_USAGE ;
+    if (*level_str == '\0') return  NO_USAGE ;
+ 
+-   level = ::strtol(level_str, &end_scan, 0);
++   level = strtol(level_str, &end_scan, 0);
+    if (end_scan == level_str)  return  VERBOSE_USAGE ;
+ 
+    switch(level) {
+@@ -127,7 +137,7 @@
+ 
+    // first print the command name
+    os << usg_prefix << cmd_name ;
+-   ll = (cmd_name ? ::strlen(cmd_name) : 0) + (sizeof(usg_prefix) - 1);
++   ll = (cmd_name ? strlen(cmd_name) : 0) + (sizeof(usg_prefix) - 1);
+ 
+    // set margin so that we always start printing arguments in a column
+    // that is *past* the command name.
+@@ -322,3 +332,4 @@
+    return  usage(*cmd_err, usage_level);
+ }
+ 
++} // namespace cmdline
