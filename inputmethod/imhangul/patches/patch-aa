@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/10 08:58:17 minskim Exp $
+
+--- Makefile.in.orig	2003-12-20 07:35:45.000000000 -0600
++++ Makefile.in
+@@ -696,6 +696,7 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ 
+ install-data-hook:
++no-install-data-hook:
+ 	if test -z "$(DESTDIR)" ; then \
+ 		$(mkinstalldirs) $(sysconfdir)/gtk-2.0; \
+ 		gtk-query-immodules-2.0 > $(DESTDIR)/$(GTK_IMMODULES); \
