@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/07 18:00:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/22 07:26:08 grant Exp $
 
 DISTNAME=	libao-0.8.4
 CATEGORIES=	audio devel
@@ -11,7 +11,7 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/ao.pc.in
