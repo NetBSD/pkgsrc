@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/07/15 09:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/23 10:21:19 jlam Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -11,6 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.techrescue.org/xboing/
 COMMENT=		Breakout style game for X11
 
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 
 NO_INSTALL_MANPAGES=	YES
@@ -21,6 +22,7 @@ post-install:
 	${CHMOD} 2755 ${X11PREFIX}/bin/xboing
 	${INSTALL_MAN} ${WRKSRC}/xboing.man ${X11PREFIX}/man/man6/xboing.6
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
