@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2003/10/05 10:17:15 wiz Exp $
+$NetBSD: distinfo,v 1.8 2004/02/06 17:09:29 jmmv Exp $
 
-SHA1 (audiofile-0.2.4.tar.gz) = ef591e2c802dc531460ab7f5cfa1ad5ba86161c1
-Size (audiofile-0.2.4.tar.gz) = 360358 bytes
+SHA1 (audiofile-0.2.5.tar.gz) = a413652dcdc634d1b089beba98a44e36f16f79a8
+Size (audiofile-0.2.5.tar.gz) = 362370 bytes
 SHA1 (patch-ab) = cd292a827aa18b9839305b2c62c3dbd526384430
