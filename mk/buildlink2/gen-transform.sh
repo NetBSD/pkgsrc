@@ -33,14 +33,14 @@ gen() {
 			@CAT@ >> $sedfile << EOF
 s|-$1$2[ 	]$|-$1$3 |g
 s|-$1$2$|-$1$3|g
-s|-$1$2\([^ 	]*\)|-$1$3\1|g
+s|-$1$2\([^ 	"':;]*\)|-$1$3\1|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
 s|-$1$3[ 	]$|-$1$2 |g
 s|-$1$3$|-$1$2|g
-s|-$1$3\([^ 	].*\)|-$1$2\1|g
+s|-$1$3\([^ 	"':;].*\)|-$1$2\1|g
 EOF
 			;;
 		esac
@@ -59,8 +59,8 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2\(/[^ 	]*/lib[^ 	/]*\.a\)[ 	]|$3\1 |g
-s|$2\(/[^ 	]*/lib[^ 	/]*\.a\)$|$3\1|g
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$3\1 |g
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$3\1|g
 EOF
 			;;
 		esac
@@ -69,7 +69,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|\($2/[^ 	]*\)/lib\([^ 	/]*\)\.so|-L\1 -l\2|g
+s|\($2/[^ 	"':;]*\)/lib\([^ 	/"':;]*\)\.so|-L\1 -l\2|g
 EOF
 			;;
 		esac
@@ -80,7 +80,7 @@ EOF
 			@CAT@ >> $sedfile << EOF
 s|$2[ 	]| |g
 s|$2$||g
-s|$2[^ 	]*||g
+s|$2[^ 	"':;]*||g
 EOF
 			;;
 		esac
@@ -115,9 +115,9 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|-Wl,-R[^ 	]*||g
-s|-Wl,-rpath,[^ 	]*||g
-s|-R[^ 	]*||g
+s|-Wl,-R[^ 	"':;]*||g
+s|-Wl,-rpath,[^ 	"':;]*||g
+s|-R[^ 	"':;]*||g
 EOF
 			;;
 		esac
