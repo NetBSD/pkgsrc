@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2004/01/05 09:00:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/06 03:53:05 uebayasi Exp $
 
 DISTNAME=	kochi-substitute-${KOCHI_VERSION}
 PKGNAME=	kochi-ttf-${KOCHI_VERSION}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	http://www.on.cs.keio.ac.jp/~yasu/linux/fonts/
+MASTER_SITES=	http://osdn.dl.sourceforge.jp/efont/5411/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.on.cs.keio.ac.jp/~yasu/jp_fonts.html
+HOMEPAGE=	http://wiki.fdiary.net/font/?kochi-alternative
 COMMENT=	Free Japanese TrueType font by Yasuyuki Furukawa
 
 DEPENDS+=	mkfontscale>=20020524:../../fonts/mkfontscale
