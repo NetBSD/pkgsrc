@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/15 19:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/23 10:02:49 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 COMMENT=		Freeciv game server
@@ -9,7 +9,7 @@ CONFIGURE_ARGS+=	--enable-client=no
 CONFIGURE_ARGS+=	--disable-make-data
 CONFIGURE_ARGS+=	--with-readline
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_GNU_READLINE=	# uses callback interface of GNU readline
 LIBS+=			-ltermcap
 
@@ -24,6 +24,7 @@ do-install:
 	cd ${WRKSRC}/server; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
