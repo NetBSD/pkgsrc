@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/10 19:32:44 wiz Exp $
 include/tvision/app.h
-include/tvision/buffers.h
 include/tvision/colorsel.h
 include/tvision/dialogs.h
 include/tvision/drawbuf.h
