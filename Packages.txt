@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.11 1998/01/28 15:37:19 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.12 1998/01/29 13:47:35 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -786,8 +786,10 @@ only with some debugging aids.
  - Fix RCS-ID in the package's Makefile, see section 4.1. 
  - Import unchanged FreeBSD source (ONLY if you have cvs access, not needed
    otherwise):
-   (cd ...pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
+   (cd .../pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
 	FREEBSD FreeBSD-current-yyyy-mm-dd)
+ - IF you dida CVS import, check it out to apply the following fixes
+   (not needed if you don't have CVS access!)
  - Look at Makefile, fix if necessary; see section 4.1. 
  - Look at patches, remember if not appropriate
  - Have a look at pkg/PLIST, add a "@comment <$>NetBSD<$>" line at the
