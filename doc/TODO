@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2757 2004/12/25 20:21:45 wiz Exp $
+$NetBSD: TODO,v 1.2758 2004/12/25 21:26:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ Suggested package updates
 	o gnome-vfsmm26-2.8.0?
 	o gnopernicus-0.9.17
 	o gnucash-1.8.10
-	o gnumeric-1.4.1
 	o gnumeric0-0.76
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
@@ -708,7 +707,6 @@ Suggested package updates
 	o mserv-devel-0.41
 	o msmtp-1.3.0
 	o mtail-1.1.1
-	o mtr-0.67
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.2
 	o nail-11.18
