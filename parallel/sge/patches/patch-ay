@@ -1,0 +1,18 @@
+$NetBSD: patch-ay,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_getloadavg.h	2003-10-02 14:25:49.000000000 +0200
++++ source/libs/uti/sge_getloadavg.h	2003-10-01 17:12:19.000000000 +0200
+@@ -32,11 +32,11 @@
+  ************************************************************************/
+ /*___INFO__MARK_END__*/
+ 
+-#if defined(LINUX) || defined(SOLARIS) || defined(SOLARIS64) || defined(CRAY) || defined(NEXSX4) || defined(NECSX5) || defined(ALPHA4) || defined(ALPHA5) || defined(IRIX6) || defined(DARWIN) || defined(FREEBSD)
++#if defined(LINUX) || defined(SOLARIS) || defined(SOLARIS64) || defined(CRAY) || defined(NEXSX4) || defined(NECSX5) || defined(ALPHA4) || defined(ALPHA5) || defined(IRIX6) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ #  define SGE_LOADAVG
+ #endif
+ 
+-#if defined(LINUX) || defined(SOLARIS) || defined(SOLARIS64) || defined(ALPHA4) || defined(ALPHA5) || defined(IRIX6) || defined(HP10) || defined(HP11) || defined(DARWIN) || defined(FREEBSD)
++#if defined(LINUX) || defined(SOLARIS) || defined(SOLARIS64) || defined(ALPHA4) || defined(ALPHA5) || defined(IRIX6) || defined(HP10) || defined(HP11) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ #  define SGE_LOADCPU
+ #endif
+ 
