@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/04 20:12:14 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/28 11:53:50 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
@@ -150,7 +150,6 @@ share/pcb/newlib/tests/TO99fromLED
 share/pcb/newlib/tests/UART
 share/pcb/newlib/tests/monoblock_small
 share/pcb/pcb-menu.res
-share/pcb/pcb.html
 share/pcb/pcb.pdf
 share/pcb/pcb.ps
 share/pcb/pcblib
