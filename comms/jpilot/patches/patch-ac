@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2000/11/08 11:56:45 tron Exp $
+
+--- jpilot.c.orig	Sat Feb 12 21:33:21 2000
++++ jpilot.c	Wed Nov  8 12:53:18 2000
+@@ -27,6 +27,9 @@
+ #include <signal.h>
+ #include <string.h>
+ #include <unistd.h>
++#ifdef __NetBSD__
++#include <locale.h>
++#endif
+ 
+ #include <pi-datebook.h>
+ #include <gdk/gdkkeysyms.h>
