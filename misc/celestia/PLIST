@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 23:47:03 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/09 00:23:56 salo Exp $
 bin/celestia
+share/celestia/COPYING
+share/celestia/controls.txt
 share/celestia/data/asterisms.dat
 share/celestia/data/boundaries.dat
 share/celestia/data/deepsky.dsc
@@ -199,8 +201,6 @@ share/celestia/textures/medres/venus.jpg
 share/celestia/textures/medres/venuslike.jpg
 share/celestia/textures/medres/venussurface.jpg
 share/celestia/textures/mstar.jpg
-share/doc/celestia/COPYING
-share/doc/celestia/controls.txt
 share/doc/html/celestia/manual/celestia.html
 share/doc/html/celestia/manual/manual.css
 share/doc/html/celestia/manual/movement.html
@@ -209,7 +209,6 @@ share/examples/celestia/celestia.cfg.default
 @dirrm share/examples/celestia
 @dirrm share/doc/html/celestia/manual
 @dirrm share/doc/html/celestia
-@dirrm share/doc/celestia
 @dirrm share/celestia/textures/medres
 @dirrm share/celestia/textures/lores
 @exec ${MKDIR} %D/share/celestia/textures/hires
