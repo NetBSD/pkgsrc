@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/30 17:02:45 tv Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/21 21:01:32 hubertf Exp $
 #
 
 DISTNAME=	bind-4.9.7-REL
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.isc.org/
 NO_WRKSUBDIR=	yes
 
 .if !exists(/usr/sbin/named-bootconf)
-IGNORE=		"Used with NetBSD 1.4 or higher"
+IGNORE=		"${PKGNAME} is intended for NetBSD 1.4 or higher"
 .endif
 
 post-extract:

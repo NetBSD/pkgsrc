@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/09 11:15:59 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/21 21:01:33 hubertf Exp $
 #
 
 # Note to package maintainers:
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/user
 ONLY_FOR_PLATFORM=	NetBSD-*-* # already in Solaris base system
 
 .if exists(/usr/sbin/user)
-IGNORE=			"is part of your NetBSD distribution"
+IGNORE=			"${PKGNAME} is part of your NetBSD distribution"
 .endif
 
 NO_CONFIGURE=		yes
