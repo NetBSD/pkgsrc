@@ -1,10 +1,39 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 18:22:48 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/20 20:22:12 minskim Exp $
 bin/liferea
-share/liferea/pixmaps/available.xpm
-share/liferea/pixmaps/directory.xpm
-share/liferea/pixmaps/ocs.xpm
+bin/liferea-bin
+lib/liferea/liblihtmlg.la
+lib/liferea/liblihtmlg.so
+man/man1/liferea.1
+share/applications/liferea.desktop
+share/liferea/css/liferea.css
+share/liferea/pixmaps/available.png
+share/liferea/pixmaps/directory.png
+share/liferea/pixmaps/empty.png
+share/liferea/pixmaps/flag.png
+share/liferea/pixmaps/help.png
+share/liferea/pixmaps/liferea.png
+share/liferea/pixmaps/ocs.png
+share/liferea/pixmaps/offline.png
+share/liferea/pixmaps/online.png
 share/liferea/pixmaps/read.xpm
-share/liferea/pixmaps/unavailable.xpm
-share/liferea/pixmaps/unread.xpm
+share/liferea/pixmaps/unavailable.png
+share/liferea/pixmaps/unread.png
+share/liferea/pixmaps/vfolder.png
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/liferea.mo
+share/pixmaps/liferea.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/liferea/pixmaps
+@dirrm share/liferea/css
 @dirrm share/liferea
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/liferea
