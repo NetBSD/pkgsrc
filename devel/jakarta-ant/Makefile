@@ -1,35 +1,39 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/18 22:53:47 jwise Exp $
 
-DISTNAME=	jakarta-ant
-PKGNAME=	jakarta-ant-3.1
+DISTNAME=	${PKGNAME}-src
+PKGNAME=	jakarta-ant-1.3
 CATEGORIES=	devel
-MASTER_SITES=	http://jakarta.apache.org/builds/ant/release/v3.1/src/
+MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-ant/release/v1.3/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache Project's Java-Based make(1) replacement
 
-DIST_SUBDIR=	jakarta-3.1
 USE_JAVA=	yes
 
-WRKSRC=		${WRKDIR}/jakarta-ant
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 do-build:
 	cd ${WRKSRC} && ${SH} bootstrap.sh
 
 post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@JAVA_HOME@,${JAVA_HOME},g' \
-		< ${WRKSRC}/bin/ant > ${WRKSRC}/bin/ant.tmp
-	${MV} ${WRKSRC}/bin/ant.tmp ${WRKSRC}/bin/ant
+		< ${FILESDIR}/ant > ${WRKDIR}/ant
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/ant ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/ant ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${FILESDIR}/antRun ${PREFIX}/bin
 	-${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/lib/xml.jar ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/lib/jaxp.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/lib/parser.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/build/lib/ant.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/build/lib/optional.jar ${PREFIX}/lib/java/ant-optional.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/ant
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/ant/manual
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
-	${INSTALL_DATA} ${WRKSRC}/docs/index.html ${PREFIX}/share/doc/java/ant
+	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/java/ant
+	(cd ${WRKSRC}/docs/manual && ${GTAR} pcf - .) | \
+		(cd ${PREFIX}/share/doc/java/ant/manual && ${GTAR} pxvf -)
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/ant
 
 .include "../../mk/bsd.pkg.mk"
