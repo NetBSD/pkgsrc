@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/04/21 14:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/04/30 19:02:27 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -41,7 +41,10 @@ WRKSRC=			${WRKDIR}/objdir
 .if (${OPSYS} != SunOS)
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
-PLIST_SRC=		${WRKDIR}/_PLIST_SRC
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
+PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
+PLIST_SRC+=		${PKGDIR}/PLIST
+.endif
 .else
 .if (${CC} != gcc)
 ALL_TARGET=		bootstrap
@@ -54,13 +57,6 @@ CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-.if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
-	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbegin.o' >>${PLIST_SRC}
-	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbeginS.o' >>${PLIST_SRC}
-	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtend.o' >>${PLIST_SRC}
-	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtendS.o' >>${PLIST_SRC}
-.endif
-	${CAT} ${PKGDIR}/PLIST >>${PLIST_SRC}
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
