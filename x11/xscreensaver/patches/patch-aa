@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.18 2002/04/05 11:25:54 skrll Exp $
+$NetBSD: patch-aa,v 1.19 2002/04/06 11:16:43 wiz Exp $
 
---- configure.orig	Mon Mar 18 23:42:35 2002
+--- configure.orig	Tue Mar 19 00:42:35 2002
 +++ configure
 @@ -1638,7 +1638,7 @@
  # implement the "install-strip" target properly (strip executables,
@@ -29,3 +29,12 @@ $NetBSD: patch-aa,v 1.18 2002/04/05 11:25:54 skrll Exp $
       if test -d $d; then
         X_CFLAGS="-I$d $X_CFLAGS"
         echo "$ac_t""$d" 1>&6
+@@ -10745,7 +10745,7 @@
+   GTK_ICONDIR='$(GNOME_DATADIR)/pixmaps'
+ elif test "$have_gtk" = yes; then
+   # should this be "$(prefix)/share/pixmaps"? But /usr/X11R6/share/ is wrong...
+-  GTK_ICONDIR='/usr/share/pixmaps'
++  GTK_ICONDIR='$(prefix)/share/pixmaps'
+ else
+   GTK_ICONDIR=''
+ fi
