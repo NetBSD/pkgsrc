@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/10/30 05:25:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/30 07:05:51 xtraeme Exp $
 #
 
-DISTNAME=	swapd-1.0
+DISTNAME=	swapd-1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rkeene.org/files/oss/swapd/source/
 
@@ -20,6 +20,8 @@ RCD_SCRIPTS=	swapd
 
 EGDIR=		${PREFIX}/share/examples/swapd
 CONF_FILES=	${EGDIR}/swapd.conf ${PKG_SYSCONFDIR}/swapd.conf
+
+CFLAGS+=	-DDEBUG
 
 .include "../../devel/libstatgrab/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
