@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2003/02/13 18:19:30 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2004/03/11 14:00:29 jmmv Exp $
 
---- libgda/Makefile.in.orig	2003-01-28 02:21:13.000000000 +0100
+--- libgda/Makefile.in.orig	2004-01-17 00:23:36.000000000 +0100
 +++ libgda/Makefile.in
-@@ -166,7 +166,7 @@ cxxflags_set = @cxxflags_set@
- 
- lib_LTLIBRARIES = libgda-2.la
- 
--INCLUDES =  	-I$(top_srcdir) 	-I$(top_builddir) 	$(LIBGDA_CFLAGS) 	-DLIBGDA_PLUGINDIR=\""$(prefix)/lib/libgda/providers"\" 	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" 	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/libgda/config"\"
-+INCLUDES =  	-I$(top_srcdir) 	-I$(top_builddir) 	$(LIBGDA_CFLAGS) 	-DLIBGDA_PLUGINDIR=\""$(prefix)/lib/libgda/providers"\" 	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" 	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/config"\"
+@@ -277,7 +277,7 @@ INCLUDES = \
+ 	$(LIBGDA_CFLAGS) \
+ 	-DLIBGDA_PLUGINDIR=\""$(libdir)/libgda/providers"\" \
+ 	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" \
+-	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/libgda/config"\"
++	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/config"\"
  
  
  gda_marshal_built_files = gda-marshal.h gda-marshal.c
