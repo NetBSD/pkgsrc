@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/08/30 17:35:57 garbled Exp $
+$NetBSD: patch-aa,v 1.2 1998/08/30 21:37:21 garbled Exp $
 --- Run.orig	Sat May 13 12:32:15 1995
 +++ Run	Sat Aug 29 10:39:35 1998
 @@ -1,6 +1,6 @@
@@ -52,13 +52,13 @@ $NetBSD: patch-aa,v 1.1 1998/08/30 17:35:57 garbled Exp $
  cd $PWD
  
 -TMPDIR=${HOMEDIR}/tmp
-+TMPDIR=${RESULTDIR-${HOMEDIR}/share/byte-bench}
++TMPDIR=${RESULTDIR-${HOMEDIR}/share/bytebench}
  cd $TMPDIR
  TMPDIR=`pwd`
  cd $PWD
  
 -RESULTDIR=${RESULTDIR-${HOMEDIR}/results}
-+RESULTDIR=${RESULTDIR-${HOMEDIR}/share/byte-bench}
++RESULTDIR=${RESULTDIR-${HOMEDIR}/share/bytebench}
  cd $RESULTDIR
  RESULTDIR=`pwd`
  cd $PWD
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.1 1998/08/30 17:35:57 garbled Exp $
  TIMEACCUM=${TIMEACCUM-${RESULTDIR}/times}
  
 -TESTDIR=${TESTDIR-${HOMEDIR}/testdir}
-+TESTDIR=${TESTDIR-${HOMEDIR}/share/byte-bench}
++TESTDIR=${TESTDIR-${HOMEDIR}/share/bytebench}
  cd $TESTDIR
  TESTDIR=`pwd`
  cd $PWD
