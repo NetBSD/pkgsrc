@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2005/03/23 22:08:06 jmmv Exp $
+
+DISTNAME=	sqlite-3.1.3
+PKGNAME=	${DISTNAME:S/-/3-/}
+CATEGORIES=	databases
+MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
+		http://www.sqlite.org/
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.hwaci.com/sw/sqlite/
+COMMENT=	SQL Database Engine in a C Library
+
+DISTINFO_FILE=	${.CURDIR}/../../databases/sqlite3/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/sqlite3/patches
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+
+PKGCONFIG_OVERRIDE=	sqlite3.pc.in

@@ -1,23 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/03/07 14:59:06 adam Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/23 22:08:06 jmmv Exp $
 
-DISTNAME=	sqlite-3.1.3
-PKGNAME=	${DISTNAME:S/-/3-/}
-PKGREVISION=	1
-CATEGORIES=	databases
-MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
-		http://www.sqlite.org/
+.include "Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.hwaci.com/sw/sqlite/
-COMMENT=	SQL Database Engine in a C Library
+PKGREVISION=		2
 
-USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite/sqlite3.pc.in
-
-.include "options.mk"
+CONFIGURE_ARGS+=	--disable-tcl
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/sqlite3.1 ${PREFIX}/man/man1/sqlite3.1
