@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/01/26 03:41:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/03 17:54:21 jschauma Exp $
 
 DISTNAME=		nspr-4.4.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES?=		${MASTER_SIZE_MOZILLA:=nspr/releases/v4.4.1/src}
 
@@ -20,7 +21,7 @@ AUTOCONF_REQD=		2.13
 
 MAKE_ENV=		DIST=${WRKSRC}/dist
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ENV=		LIBRUNPATH=${PREFIX}/lib
+CONFIGURE_ENV=		LIBRUNPATH=${PREFIX}/lib/nspr
 
 .include		"../../mk/bsd.prefs.mk"
 
@@ -38,8 +39,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/nspr
-	(cd ${WRKSRC}/dist/include && ${PAX} -Lrwvpe . ${PREFIX}/include/ )
-	(cd ${WRKSRC}/dist/lib && ${PAX} -Lrwvpe . ${PREFIX}/lib/ )
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/nspr
+	(cd ${WRKSRC}/dist/include && ${PAX} -Lrwpe . ${PREFIX}/include/ )
+	(cd ${WRKSRC}/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
 	${INSTALL_SCRIPT} ${WRKSRC}/config/nspr-config ${PREFIX}/bin
 
 
