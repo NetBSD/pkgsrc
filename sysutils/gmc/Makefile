@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.11 1999/07/22 07:10:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.12 1999/08/17 18:28:40 rh Exp $
 
-DISTNAME=	mc-4.5.33
-PKGNAME=	gmc-4.5.33
+DISTNAME=	mc-4.5.37
+PKGNAME=	gmc-4.5.37
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.sunet.se/pub/X11/GNOME/gnome-1.0/sources/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
+		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/ \
+		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/sources/mc/ \
+		http://gd.tuwien.ac.at/hci/gnome.org/GNOME/sources/mc/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
