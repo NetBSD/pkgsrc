@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2001/01/25 17:18:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2001/02/07 15:39:33 tron Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.4pl1
@@ -6,7 +6,8 @@ PHP_VERS=		4.0.4.1nb1
 CATEGORIES+=		www php4
 
 # Note the http address is written this way by purpose, so that bsd.pkg.mk DTRT
-MASTER_SITES=		http://www.php.net/do_download.php?source_site=www.php.net&download_file= \
+MASTER_SITES=		http://www.php.net/distributions/ \
+			http://php3.de/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
 
 MAINTAINER=		jdolecek@netbsd.org
