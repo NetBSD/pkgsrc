@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.25 2004/02/12 21:52:08 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2005/03/21 00:47:45 kei Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
 PKGNAME=	teTeX-share-2.0.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	listings${EXTRACT_SUFX}
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX, version 2
+
+SITES_listings.tar.gz= ${LOCAL_PORTS}
 
 CONFLICTS+=	teTeX2-share-[0-9]*
 
@@ -22,9 +27,13 @@ USE_GNU_TOOLS+=	patch
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
 .if defined(EXTRACT_USING_PAX)
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`
+	for i in ${DISTFILES}; do \
+		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`; \
+	done
 .else
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${GTAR} -X ${FILESDIR}/exclude -xpf -
+	for i in ${DISTFILES}; do \
+		cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/$$i | ${GTAR} -X ${FILESDIR}/exclude -xpf -; \
+	done
 .endif
 	cd ${PREFIX}/share/texmf/dvipdfm/config && \
 	${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${FILESDIR}/dvipdfm-config.diff && \
