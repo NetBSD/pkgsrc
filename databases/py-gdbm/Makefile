@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/10 15:08:19 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2004/06/12 02:35:29 grant Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
@@ -11,6 +11,8 @@ COMMENT=	Python interface to gdbm - GNU database manager
 
 DEPENDS+=	gdbm>=1.8.3:../../databases/gdbm
 EVAL_PREFIX+=	GDBMDIR=gdbm
+
+USE_GNU_TOOLS+=	patch
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/gdbmmodule.c
 PYDISTUTILSPKG=	yes
