@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.4 1998/04/25 10:51:02 frueauf Exp $
+$NetBSD: README,v 1.5 1998/04/30 20:58:13 frueauf Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -39,6 +39,10 @@ type "pkg_info".
 + To remove the work directory, type "make clean", and "make
 clean-depends" will clean up any working directories for other
 packages that are built in the process of making your package.
+
++ To find out what variables exists to customize some behaviour of
+pkgsrc (e.g. where it installs to) have a look at
+pkgsrc/mk/mk.conf.example. You can set those in /etc/mk.conf.
 
 The best way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory (this will usually be
