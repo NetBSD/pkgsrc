@@ -1,30 +1,39 @@
+# $NetBSD: Makefile,v 1.2 1997/10/03 11:33:08 agc Exp $
 # New ports collection makefile for:    top
-# Version required:     3.4
+# Version required:     3.5beta5
 # Date created:         25 Sep 1994
 # Whom:                 swallace
 #
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
-DISTNAME=       top-3.4
+DISTNAME=       top-3.5beta5
 CATEGORIES=	sysutils
-MASTER_SITES=   ftp://eecs.nwu.edu/pub/top/
+MASTER_SITES=   ftp://ftp.groupsys.com/pub/top/
 
-MAINTAINER=	peter@FreeBSD.org
+MAINTAINER=	agc@netbsd.org
 
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	Configure
+MAN1=			top.1
+
+OPSYS!= uname -s
+
+.if (${OPSYS} == "FreeBSD")
 OSVERSION!=	sysctl -n kern.osreldate
 .if ${OSVERSION} >= 221002
 BROKEN=		"top is included in FreeBSD version 221002 or later"
 .endif
-
-HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS=		freebsd2
-MAN1=			top.1
+.elif (${OPSYS} == "NetBSD")
+CONFIGURE_ARGS=		netbsd13
+.endif
 
 pre-configure:
 	${CP} ${FILESDIR}/defaults ${WRKSRC}/.defaults
+.if (${OPSYS} == "FreeBSD")
 	${CP} ${FILESDIR}/m_freebsd2.* ${WRKSRC}/machine
+.endif
 	chmod a-x ${WRKSRC}/install
 
 post-install:
