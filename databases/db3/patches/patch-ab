@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2001/02/21 15:56:02 fvdl Exp $
+
+--- ../dist/configure.orig	Wed Jan 24 16:16:18 2001
++++ ../dist/configure	Wed Feb 21 14:59:15 2001
+@@ -1605,6 +1605,7 @@
+ if test "$GXX" = "yes"; then
+ 	CXXVERSION=`${MAKEFILE_CXX} --version`
+ 	case ${CXXVERSION} in
++	egcs*)	CXXFLAGS="-fexceptions $CXXFLAGS";;
+ 	1.*|2.[01234567].*|*-1.*|*-2.[01234567].* )
+ 		CXXFLAGS="-fhandle-exceptions $CXXFLAGS";;
+ 	* )	CXXFLAGS="-fexceptions $CXXFLAGS";;
