@@ -1,24 +1,30 @@
-# $NetBSD: Makefile,v 1.11 2001/10/26 14:26:26 agc Exp $
-# FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
+# $NetBSD: Makefile,v 1.12 2002/07/04 20:24:40 wiz Exp $
+#
 
-DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
-PKGNAME=	smlnj-${SML_VERSION}
+DISTNAME=	boot.${BOX}-unix
+PKGNAME=	sml-nj-${SML_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${SML_VERSION}/ \
-		ftp://ftp.diku.dk/pub/smlnj/working/${SML_VERSION}/ \
-		ftp://sunsite.doc.ic.ac.uk/computing/programming/languages/ml/smlnj/working/${SML_VERSION}/ \
-		ftp://compiler.kaist.ac.kr/pub/sml/working/${SML_VERSION}/
-DISTFILES=	${SML_VERSION}-bin.${BOX}-unix.tar.Z ${SML_VERSION}-cm.tar.Z ${SML_VERSION}-cml.tar.Z \
-		${SML_VERSION}-config.tar.Z ${SML_VERSION}-eXene.tar.Z \
-		${SML_VERSION}-ml-burg.tar.Z ${SML_VERSION}-ml-lex.tar.Z ${SML_VERSION}-ml-yacc.tar.Z \
-		${SML_VERSION}-runtime.tar.Z ${SML_VERSION}-smlnj-c.tar.Z \
-		${SML_VERSION}-smlnj-lib.tar.Z
+		ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
+DISTFILES=	MLRISC.tgz			\
+		boot.${BOX}-unix.tgz		\
+		cm.tgz				\
+		cml.tgz				\
+		compiler.tgz			\
+		config.tgz			\
+		eXene.tgz			\
+		ml-burg.tgz			\
+		ml-lex.tgz			\
+		ml-yacc.tgz			\
+		runtime.tgz			\
+		smlnj-lib.tgz			\
+		system.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cm.bell-labs.com/cm/cs/what/smlnj/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.9.1
+SML_VERSION=	110.38
 
 # sml-nj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
@@ -29,19 +35,15 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
 # 	ftp://ftp.cl.cam.ac.uk/MIRRORED/smlnj/release/
 # 	ftp://ftp.ntua.gr/pub/lang/smlnj/release/
-# Mirror sites that keep files around in gzipped format
-# 	ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
 
-DIST_SUBDIR=	sml-nj
+DIST_SUBDIR=	sml-nj-${SML_VERSION}
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	${SML_VERSION}-config.tar.Z
+EXTRACT_ONLY=	config.tgz
 USE_GMAKE=	yes
 
 SML_BASE=	${PREFIX}/lib/sml-nj
 SML_LIBDIR=	${SML_BASE}/lib
 SML_BINDIR=	${SML_BASE}/bin
-SML_SRCDIR=	${SML_BASE}/src
-SML_EXES=	ml-burg ml-lex ml-yacc sml
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,31 +71,21 @@ do-build:
 		./config/install.sh
 
 # install target
+# (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
 # 1. create installation directories
-# 2. copy the ./bin directory across
-# 3. edit bin/.run_sml to override BIN_DIR
-# 4. copy all .stable files in CM/ directories
-# 5. find all .cm files reachable from $WRKDIR/lib and copy them across
-# 6. copy the aliases in ./lib changing WRKDIR to SML_LIBDIR
-# 7. install links to executables in $PREFIX/bin
+# 2. copy the ./bin and ./lib directories across
+# 3. edit scripts to override BIN_DIR and CM_PATHCONFIG
+# 4. install links to executables in $PREFIX/bin
 do-install:
-	${INSTALL_DATA_DIR} ${SML_BASE} ${SML_BINDIR} ${SML_LIBDIR}
-	${GTAR} -C ${WRKDIR} -cf - bin | ${GTAR} -C ${SML_BASE} -xf -
-	${RM} -f ${SML_BINDIR}/.run-sml
+	${INSTALL_DATA_DIR} ${SML_BASE}
+	(cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${SML_BASE})
+.for script in .link-sml .run-sml ml-build ml-makedepend
+	${RM} -f ${SML_BINDIR}/${script}
 	${SED} -e "s,^BIN_DIR=.*\$$,BIN_DIR=${SML_BINDIR}," \
-		${WRKDIR}/bin/.run-sml > ${SML_BINDIR}/.run-sml
-	${CHMOD} 755 ${SML_BINDIR}/.run-sml
-	cd ${WRKDIR} && ${GTAR} -cf - `${FIND} . -name '*.stable' | \
-		${GREP} CM` | ${GTAR} -C ${SML_BASE} -xf -
-	cd ${WRKDIR} && ${GTAR} -cf - `${FILESDIR}/get-cm ${WRKDIR}` | \
-		${GTAR} -C ${SML_BASE} -xf -
-	for file in ${WRKDIR}/lib/*; do\
-		${SED} -e "s,${WRKDIR},${SML_BASE}," $$file > \
-			${SML_LIBDIR}/`${BASENAME} $$file`; \
-	done
-.for file in ${SML_EXES}
-	-${RM} -f ${PREFIX}/bin/${file}
-	-${LN} -s ${SML_BINDIR}/${file} ${PREFIX}/bin/${file}
+	       -e "s,^exec,CM_PATHCONFIG=${SML_LIBDIR}/pathconfig exec," \
+		${WRKDIR}/bin/${script} > ${SML_BINDIR}/${script}
+	${CHMOD} ${BINMODE} ${SML_BINDIR}/${script}
 .endfor
+	(cd ${PREFIX}/bin && ${LN} -sf ${SML_BINDIR}/* .)
 
 .include "../../mk/bsd.pkg.mk"

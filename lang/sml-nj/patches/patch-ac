@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2001/03/20 09:43:22 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2002/07/04 20:24:42 wiz Exp $
 
 --- config/_arch-n-opsys.orig        Fri Oct 20 18:02:25 2000
 +++ config/_arch-n-opsys     Fri Mar  9 14:07:05 2001
-@@ -100,6 +100,7 @@
+@@ -107,6 +107,7 @@
        i486) ARCH=x86;;
        i586) ARCH=x86;;
        i686) ARCH=x86;;
