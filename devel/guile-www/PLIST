@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/23 18:28:58 agc Exp $
+share/guile/www/cgi.scm
+share/guile/www/http.scm
+share/guile/www/main.scm
+share/guile/www/url.scm
+share/guile/www/wwwcat
+@unexec ${INSTALL_INFO} --delete %D/info/guile-www.info %D/info/dir
+info/guile-www.info
+@exec ${INSTALL_INFO} %D/info/guile-www.info %D/info/dir
+@dirrm share/guile/www
