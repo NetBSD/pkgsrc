@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/19 17:53:55 wiz Exp $
+
+SHA1 (Test-Taint-1.04.tar.gz) = a0b7f19be31fefb1a475466599903ee1e33f1191
+Size (Test-Taint-1.04.tar.gz) = 12404 bytes
