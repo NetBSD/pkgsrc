@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.3 2001/06/07 16:05:10 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.4 2001/06/26 10:39:34 abs Exp $
 
 gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {print $3}'`
 hw_model=`sysctl -n hw.model`
@@ -44,6 +44,7 @@ else					# Modern gcc
 	TMS390Z50*)		FLAGS="-mcpu=supersparc"	;; # ss10/ss20
 	MB86930* | MB86934*)	FLAGS="-mcpu=sparclite"		;; # from gcc
 	MB86900/1A*)		FLAGS="-mcpu=cypress"		;; # ss1+
+	SUNW,UltraSPARC*)	FLAGS="-mcpu=ultrasparc"	;; # Ultra
 	#
 	# arm32
 	ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
