@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2004/07/26 18:27:39 dillo Exp $
+# $NetBSD: Makefile,v 1.112 2004/07/29 23:20:44 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -42,6 +42,7 @@ SUBDIR+=	libspectrum
 SUBDIR+=	linux-locale
 SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
+SUBDIR+=	m1
 SUBDIR+=	minivmac
 SUBDIR+=	mips64emul
 SUBDIR+=	mmix
