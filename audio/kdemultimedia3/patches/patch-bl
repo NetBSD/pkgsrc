@@ -1,0 +1,31 @@
+$NetBSD: patch-bl,v 1.1 2002/06/25 06:34:36 skrll Exp $
+
+--- noatun/modules/infrared/Makefile.in.orig	Sun Jun  9 12:19:30 2002
++++ noatun/modules/infrared/Makefile.in
+@@ -296,7 +296,7 @@
+ noinst_HEADERS = infrared.h lirc.h irprefs.h
+ 
+ noatun_infrared_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_infrared_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_infrared_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -310,7 +310,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_infrared_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_infrared_la_OBJECTS = infrared.lo lirc.lo irprefs.lo
+ #>- noatun_infrared_la_OBJECTS = $(am_noatun_infrared_la_OBJECTS)
+ #>+ 5
+@@ -667,7 +667,7 @@
+ 	-rm -f  noatun_infrared_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_infrared_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/infrared.cpp $(srcdir)/lirc.cpp $(srcdir)/irprefs.cpp noatun_infrared_la_meta_unload.cpp   irprefs.moc infrared.moc lirc.moc 
++noatun_infrared_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/infrared.cpp $(srcdir)/lirc.cpp $(srcdir)/irprefs.cpp $(srcdir)/noatun_infrared_la_meta_unload.cpp   irprefs.moc infrared.moc lirc.moc 
+ 	@echo 'creating noatun_infrared_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_infrared_la.all_cpp.files noatun_infrared_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_infrared_la.all_cpp.final; \

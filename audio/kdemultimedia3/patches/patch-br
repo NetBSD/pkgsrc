@@ -1,0 +1,40 @@
+$NetBSD: patch-br,v 1.1 2002/06/25 06:34:37 skrll Exp $
+
+--- noatun/modules/kjofol-skin/Makefile.in.orig	Sun Jun  9 12:26:23 2002
++++ noatun/modules/kjofol-skin/Makefile.in
+@@ -311,7 +311,7 @@
+ 
+ 
+ noatun_kjofol_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_kjofol_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_kjofol_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(LIB_KIO) -lm \
+ 	$(top_builddir)/arts/modules/libartsmodules.la
+ 
+@@ -332,7 +332,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_kjofol_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/arts/modules/libartsmodules.la
+ am_noatun_kjofol_la_OBJECTS = kjloader.lo kjwidget.lo kjbutton.lo \
+ 	kjseeker.lo kjsliders.lo kjfont.lo kjtextdisplay.lo kjvis.lo \
+@@ -598,7 +598,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kjsliders.cpp kjbackground.cpp kjequalizer.cpp kjofolui.plugin kjprefs.cpp helpers.cpp kjprefswidget.ui kjtextdisplay.cpp parser.cpp kjvis.cpp noatunui.cpp kjfont.cpp 
++KDE_DIST=kjprefswidget.ui kjtextdisplay.cpp parser.cpp kjsliders.cpp kjfont.cpp kjbackground.cpp kjvis.cpp kjequalizer.cpp kjprefswidget.cpp kjofolui.plugin kjprefs.cpp noatunui.cpp helpers.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -818,7 +818,7 @@
+ 	-rm -f  noatun_kjofol_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_kjofol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kjloader.cpp $(srcdir)/kjwidget.cpp $(srcdir)/kjbutton.cpp $(srcdir)/kjseeker.cpp $(srcdir)/kjsliders.cpp $(srcdir)/kjfont.cpp $(srcdir)/kjtextdisplay.cpp $(srcdir)/kjvis.cpp $(srcdir)/kjequalizer.cpp $(srcdir)/kjbackground.cpp $(srcdir)/noatunui.cpp $(srcdir)/parser.cpp $(srcdir)/kjprefs.cpp kjprefswidget.cpp noatun_kjofol_la_meta_unload.cpp   kjprefswidget.moc kjtextdisplay.moc kjequalizer.moc kjprefs.moc kjloader.moc 
++noatun_kjofol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kjloader.cpp $(srcdir)/kjwidget.cpp $(srcdir)/kjbutton.cpp $(srcdir)/kjseeker.cpp $(srcdir)/kjsliders.cpp $(srcdir)/kjfont.cpp $(srcdir)/kjtextdisplay.cpp $(srcdir)/kjvis.cpp $(srcdir)/kjequalizer.cpp $(srcdir)/kjbackground.cpp $(srcdir)/noatunui.cpp $(srcdir)/parser.cpp $(srcdir)/kjprefs.cpp $(srcdir)/kjprefswidget.cpp $(srcdir)/noatun_kjofol_la_meta_unload.cpp   kjprefswidget.moc kjtextdisplay.moc kjequalizer.moc kjprefs.moc kjloader.moc 
+ 	@echo 'creating noatun_kjofol_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_kjofol_la.all_cpp.files noatun_kjofol_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_kjofol_la.all_cpp.final; \

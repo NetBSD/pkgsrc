@@ -1,0 +1,40 @@
+$NetBSD: patch-bh,v 1.1 2002/06/25 06:34:35 skrll Exp $
+
+--- noatun/modules/excellent/Makefile.in.orig	Sun Jun  9 11:25:34 2002
++++ noatun/modules/excellent/Makefile.in
+@@ -298,7 +298,7 @@
+ 
+ noatun_excellent_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+ noatun_excellent_la_LIBADD = $(LIB_KFILE) \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/libnoatuncontrols.la \
+ 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+@@ -315,7 +315,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_excellent_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/libnoatuncontrols.la
+ am_noatun_excellent_la_OBJECTS = noatunui.lo userinterface.lo
+ #>- noatun_excellent_la_OBJECTS = $(am_noatun_excellent_la_OBJECTS)
+@@ -495,7 +495,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=excellentui.rc excellent.plugin 
++KDE_DIST=excellent.plugin excellentui.rc 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -664,7 +664,7 @@
+ 	-rm -f  noatun_excellent_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_excellent_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/userinterface.cpp noatun_excellent_la_meta_unload.cpp   userinterface.moc 
++noatun_excellent_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/userinterface.cpp $(srcdir)/noatun_excellent_la_meta_unload.cpp   userinterface.moc 
+ 	@echo 'creating noatun_excellent_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_excellent_la.all_cpp.files noatun_excellent_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_excellent_la.all_cpp.final; \
