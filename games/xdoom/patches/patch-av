@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.1 2000/02/03 16:01:16 abs Exp $
+$NetBSD: patch-av,v 1.2 2000/10/21 21:57:39 mycroft Exp $
 
 --- linuxdoom-1.10/w_wad.h.orig	Mon Dec 22 20:25:32 1997
 +++ linuxdoom-1.10/w_wad.h	Thu Feb  3 01:34:03 2000
@@ -9,8 +9,8 @@ $NetBSD: patch-av,v 1.1 2000/02/03 16:01:16 abs Exp $
 -    int			numlumps;
 -    int			infotableofs;
 -    
-+    int32_t		numlumps __attribute__ ((packed));
-+    int32_t		infotableofs __attribute__ ((packed));
++    int		numlumps __attribute__ ((packed));
++    int		infotableofs __attribute__ ((packed));
  } wadinfo_t;
  
  
