@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/01/11 12:32:53 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.8.3
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
-CPPFLAGS+=		-DPKGLOCALEDIR=\"\\\"${PKGLOCALEDIR}\\\"\"
+CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
 
 PKG_SYSCONFSUBDIR=	gnome-vfs-2.0
 
