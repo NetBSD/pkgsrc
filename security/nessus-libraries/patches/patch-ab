@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/30 11:14:32 frueauf Exp $
+
+--- libpeks/gmp3/mpn/Makefile.in-orig	Mon Jun 12 13:32:24 2000
++++ libpeks/gmp3/mpn/Makefile.in	Sat Jul 22 22:17:09 2000
+@@ -139,7 +139,7 @@
+ 
+ # COMPILE minus CC.  FIXME: Really pass *_CFLAGS to CPP?
+ COMPILE_FLAGS = \
+-	$(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++	$(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS)
+ 
+ 
+ SUFFIXES = .s .S .asm

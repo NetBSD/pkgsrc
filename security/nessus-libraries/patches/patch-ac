@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/30 11:14:32 frueauf Exp $
+
+--- Makefile-orig	Thu Mar 23 20:59:20 2000
++++ Makefile	Sat Jul 29 17:49:26 2000
+@@ -48,7 +48,8 @@
+ ###	soft migration to no public includes.h file -- jordan
+ #	rm -f ${includedir}/nessus/includes.h
+ #       not soft enough :-( -- jochen
+-	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
++# Use the includes.h from nessus-core:
++#	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
+ 	$(INSTALL) -m 0444 include/libnessus.h ${includedir}/nessus
+ 	$(INSTALL) -m 0444 include/harglists.h ${includedir}/nessus
+ 	$(INSTALL) -m 0444 include/libvers.h   ${includedir}/nessus
