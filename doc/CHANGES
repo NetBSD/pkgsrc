@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4469 2004/01/16 01:03:04 kristerw Exp $
+$NetBSD: CHANGES,v 1.4470 2004/01/16 02:30:19 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kde3-i18n-zu to 3.1.5 [markd 2004-01-15]
 	Added connect-1.69 [tron 2004-01-15]
 	Updated nhc98 to 1.16nb2 [kristerw 2004-01-16]
+	Updated racoon to 20040116a [itojun 2004-01-16]
