@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.11 2004/12/04 22:19:18 jmmv Exp $
+
+--- gdk-pixbuf/Makefile.in.orig	2004-12-04 22:58:57.000000000 +0100
++++ gdk-pixbuf/Makefile.in
+@@ -516,7 +516,7 @@ gdk_pixbuf_csource_SOURCES = gdk-pixbuf-
+ gdk_pixbuf_csource_LDADD = $(LDADDS)
+ 
+ gdk_pixbuf_query_loaders_DEPENDENCIES = $(DEPS)
+-gdk_pixbuf_query_loaders_LDADD = $(LDADDS)
++gdk_pixbuf_query_loaders_LDADD = $(LDADDS) -lpthread
+ 
+ gdk_pixbuf_query_loaders_SOURCES = queryloaders.c
+ 
