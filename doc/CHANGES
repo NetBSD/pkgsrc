@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1305 2003/02/02 21:32:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.1306 2003/02/03 01:05:50 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated spamassassin to 2.44 [heinz 2003-02-02]
 	Updated rid to 1.11nb1 [jmmv 2003-02-02]
 	Updated p0f to 1.8.2nb1 [jmmv 2003-02-02]
+	Updated lsof to 4.66nb1 [atatat 2003-02-02]
