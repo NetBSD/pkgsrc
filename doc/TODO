@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2768 2004/12/26 06:20:02 minskim Exp $
+$NetBSD: TODO,v 1.2769 2004/12/26 15:13:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.1.5
 	o nslint-2.1a3
-	o nut-10.13
 	o obexftp-0.10.6
 	o objc-3.2.6
 	o ocaml-3.08

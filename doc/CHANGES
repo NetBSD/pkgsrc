@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8454 2004/12/26 06:20:02 minskim Exp $
+$NetBSD: CHANGES,v 1.8455 2004/12/26 15:13:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6561,3 +6561,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-gtk2 to 1.0.0.20041224 [minskim 2004-12-26]
 	Updated xchm to 0.9.7 [minskim 2004-12-26]
 	Updated mathomatic to 11.6 [minskim 2004-12-26]
+	Updated nut to 10.13 [wiz 2004-12-26]
