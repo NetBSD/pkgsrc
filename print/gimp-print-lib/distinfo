@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/02/15 20:46:27 drochner Exp $
+
+SHA1 (gimp-print-4.2.0.tar.gz) = 3460b23a1c36c7f5dcfacc8dce5d0ee5f051a086
+Size (gimp-print-4.2.0.tar.gz) = 4501914 bytes
+SHA1 (patch-aa) = 9302f17215f3ee1dd3fd10dbf48f2bc4a4593aa8
+SHA1 (patch-ab) = ac96c5825c09a8507ce16efd95fa9d24720d6899

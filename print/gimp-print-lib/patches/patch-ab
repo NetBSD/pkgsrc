@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/02/15 20:46:28 drochner Exp $
+
+--- src/main/gimpprint-config.in.orig	Fri Feb 15 20:03:27 2002
++++ src/main/gimpprint-config.in	Fri Feb 15 20:04:48 2002
+@@ -87,7 +87,7 @@
+ fi
+ 
+ if test "$echo_libs" = "yes"; then
+-      libdirs=-L@libdir@
++      libdirs="-L@libdir@ -Wl,-R@libdir@"
+       echo $libdirs $gimpprint_libs @INTLLIBS@
+ fi
+ 
