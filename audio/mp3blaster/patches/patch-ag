@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2003/10/11 21:55:24 cube Exp $
+$NetBSD: patch-ag,v 1.3 2003/12/03 12:31:37 cube Exp $
 
---- src/main.cc.orig	2002-10-20 16:19:08.000000000 +0200
+--- src/main.cc.orig	2003-09-09 23:22:55.000000000 +0200
 +++ src/main.cc
-@@ -45,10 +45,10 @@
+@@ -51,10 +51,10 @@
  #include <pth.h>
  #endif
  #include NCURSES
@@ -15,13 +15,3 @@ $NetBSD: patch-ag,v 1.2 2003/10/11 21:55:24 cube Exp $
  #endif
  #ifdef HAVE_ERRNO_H
  #include <errno.h>
-@@ -133,7 +133,9 @@ void usage();
- void show_help();
- void draw_static(int file_mode=0);
- void draw_settings(int cleanit=0);
-+#if 0
- char *gettext(const char *label, short display_path=0);
-+#endif
- void fw_getpath(char *, void *);
- void fw_convmp3(char *, void *);
- void fw_addurl(char *, void *);
