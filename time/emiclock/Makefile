@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/03 03:23:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:59 grant Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11 time
 MASTER_SITES=	ftp://ftp.noge.com/pub/EmiClock/X11/
 
-MAINTAINER=	minoura@netbsd.org
+MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
 
 LICENSE=	emiclock-license

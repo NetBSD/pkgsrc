@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/01 16:19:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:55:43 grant Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://ftp-uk.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://ftp.informatik.rwth-aachen.de/pub/mirror/ftp.netscape.com/pub/netscape7/${SUB}/
 
-MAINTAINER=		jschauma@netbsd.org
+MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://channels.netscape.com/ns/browsers/default.jsp
 COMMENT=		Netscape Browser/Mail- and Newsreader suite version 7
 

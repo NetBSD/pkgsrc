@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:20 grant Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	libnids-1.14
 CATEGORIES=	net security
 MASTER_SITES=	http://www.packetfactory.net/Projects/Libnids/dist/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.packetfactory.net/Projects/Libnids/
 COMMENT=	Network monitoring library with TCP/IP reassembly
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/04/10 20:10:19 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:44 grant Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	4
@@ -17,7 +17,7 @@ DISTFILES=	ptex-texmf-2.0${EXTRACT_SUFX} \
 		jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
 		standard${EXTRACT_SUFX} morisawa${EXTRACT_SUFX}
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 COMMENT=	Machine-independent part of TeXfamily (pTeX, JTeX, MuLTeX)
 
 DEPENDS+=	teTeX>=1.0.7nb1:../../print/teTeX

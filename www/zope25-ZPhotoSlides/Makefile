@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:15:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:16 grant Exp $
 
 DISTNAME=	ZPhotoSlides-1.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.zope.org/Members/p3b/ZPhotoSlides/
 DEPENDS+=	zope25-LocalFS-[0-9]*:../../www/zope25-LocalFS
 BUILDLINK_DEPENDS.pyimaging= ${PYPKGPREFIX}-imaging>=1.1.3
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/p3b/ZPhotoSlides
 COMMENT=	present your photos quickly in zope
 

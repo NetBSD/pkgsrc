@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/13 13:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:51:21 grant Exp $
 #
 
 DISTNAME=		linc-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/linc/1.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		network client/server library
 

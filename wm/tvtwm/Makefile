@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:17 grant Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/tvtwm
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=window_managers/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Classic twm with virtual desktop support
 
 USE_BUILDLINK2=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:42:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:17 grant Exp $
 #
 
 DISTNAME=	pkgdep-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Script for displaying dependence information on software packages
 
 USE_PERL5=	YES

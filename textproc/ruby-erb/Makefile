@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/30 09:30:37 taca Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:49 grant Exp $
 #
 
 DISTNAME=	erb-1.4.3
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	implementation of eRuby (embedded ruby)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:17:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:43 grant Exp $
 #
 
 NAME=		textpos
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}/${NAME}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/supported/${NAME}/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 # HOMEPAGE=	
 COMMENT=	absolute positioning of text on the LaTeX page
 

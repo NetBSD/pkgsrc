@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/13 13:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:56:35 grant Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	3
@@ -10,7 +10,7 @@ PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES+=	kterm-620-0213-20010706.diff.gz
 PATCH_DIST_STRIP= -p1
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Multi-lingual terminal emulator for X
 
 USE_BUILDLINK2=	YES

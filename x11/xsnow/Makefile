@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/06 17:43:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:57:03 grant Exp $
 # FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.euronet.nl/~rja/Xsnow/
 
-MAINTAINER=	is@netbsd.org
+MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.euronet.nl/~rja/Xsnow/
 COMMENT=	Create a snowy and Santa-y desktop
 

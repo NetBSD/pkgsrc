@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 17:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:53:36 grant Exp $
 #
 
 DISTNAME=	grub-0.93
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/grub/
 COMMENT=	GRand Unified Bootloader -- Boots *BSD, Linux, groks ffs, FAT, ext2
 

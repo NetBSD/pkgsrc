@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:52:26 grant Exp $
 #
 
 DISTNAME=		ggv-2.0.0
@@ -7,7 +7,7 @@ CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 frontend for GhostScript
 

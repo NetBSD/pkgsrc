@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/06/29 23:52:03 jtb Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 22:51:59 grant Exp $
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	file-synchronization tool
 

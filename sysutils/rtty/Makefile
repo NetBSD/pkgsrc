@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/02 01:16:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 22:53:47 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.vix.com/pub/vixie/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	multiuser "tip"/"cu" replacement with logging
 
 pre-configure:

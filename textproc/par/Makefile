@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:16:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:54:21 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/13 06:33:51 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	par-1.52
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.cs.berkeley.edu/~amc/Par/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.berkeley.edu/~amc/Par/
 COMMENT=	Paragraph reformatter, vaguely similar to fmt, but better
 

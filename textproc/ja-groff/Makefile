@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:27 grant Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/27 07:41:16 fenner Exp $
 
 DISTNAME=	groff-1.10
@@ -11,7 +11,7 @@ PATCH_SITES=	ftp://ftp.ae.keio.ac.jp/pub/GNU/ \
 PATCHFILES=	jgroff-0.99.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
 

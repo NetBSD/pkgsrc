@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/29 13:15:34 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:53 grant Exp $
 #
 
 DISTNAME=	tac_plus.F4.0.4.alpha
@@ -7,7 +7,7 @@ CATEGORIES=	net security
 MASTER_SITES=	ftp://ftpeng.cisco.com/pub/tacacs/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gazi.edu.tr/~devrim/tacacs/
 COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/03/25 11:02:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:54 grant Exp $
 
 DISTNAME=		tcpdump-3.7.2
 CATEGORIES=		net
 MASTER_SITES= 		http://www.tcpdump.org/release/
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		network monitoring tool
 

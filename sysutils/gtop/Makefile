@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2003/07/13 13:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 22:53:36 grant Exp $
 
 DISTNAME=		gtop-1.0.13
 PKGREVISION=		4
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtop/1.0/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 

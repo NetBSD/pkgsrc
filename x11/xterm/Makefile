@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/07/15 13:19:44 tron Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:57:04 grant Exp $
 
 DISTNAME=	xterm-164
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/xterm/xterm.html
 COMMENT=	Latest terminal emulator for the X Window System
 

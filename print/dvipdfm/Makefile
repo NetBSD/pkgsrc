@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/05 11:24:27 markd Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:25 grant Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGREVISION=	1
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/dvipdfm
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
 
-MAINTAINER=	markd@netbsd.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	DVI to PDF translator
 

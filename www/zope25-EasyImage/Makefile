@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:15:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:11 grant Exp $
 
 DISTNAME=	EasyImage15
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 
 BUILDLINK_DEPENDS.pyimaging= ${PYPKGPREFIX}-imaging>=1.1.3
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/regebro/easyimage
 COMMENT=	image extension for Zope
 

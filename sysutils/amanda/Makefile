@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/06/04 18:21:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/17 22:53:25 grant Exp $
 #
 
 DISTNAME=	amanda-2.4.2p2
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.amanda.org/
 COMMENT=	The "meta-package" for Amanda, a network backup system
 

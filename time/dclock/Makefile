@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:59 grant Exp $
 #
 
 DISTNAME=	dclock
@@ -8,7 +8,7 @@ CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:S/contrib/R5contrib/}
 EXTRACT_SUFX=	.shar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Digital clock for X
 
 CONFLICTS+=	ivtools-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:16:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:55:00 grant Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		x11 graphics time
 MASTER_SITES=		http://www.daionet.gr.jp/~masa/archives/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.daionet.gr.jp/~masa/glclock
 COMMENT=		OpenGL-based pocket watch
 

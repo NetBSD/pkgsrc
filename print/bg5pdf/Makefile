@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:23 grant Exp $
 #
 
 DISTNAME=	bg5pdf-1.0.0
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/bg5pdf
 CATEGORIES=	print chinese
 MASTER_SITES=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 COMMENT=	wrap big5 encoding text file into PDF file by using PDFlib
 
