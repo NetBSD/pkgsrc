@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+
+--- installperl.orig	Sat Jan 16 11:31:26 1999
++++ installperl	Sun Jan 16 21:26:37 2000
+@@ -182,7 +182,7 @@
+ safe_unlink("$installbin/s$perl$ver$exe_ext");
+ if ($d_dosuid) {
+     copy("suidperl$exe_ext", "$installbin/s$perl$ver$exe_ext");
+-    chmod(04711, "$installbin/s$perl$ver$exe_ext");
++    chmod(04111, "$installbin/sperl$ver$exe_ext");
+ }
+ 
+ # Install library files.
+@@ -275,19 +275,19 @@
+ 	      (-l $usrbinperl) &&
+ 	      ((readlink $usrbinperl) eq $expinstperl));
+     }
+-    if ((! $mainperl_is_instperl) &&
+-	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
+-	     "Do you wish to have $usrbinperl be the same as\n" .
+-	     "$expinstperl? [y] ")))
+-    {
+-	unlink($usrbinperl);
+-	( $Config{'d_link'} eq 'define' &&
+-	  eval { CORE::link $instperl, $usrbinperl } )	||
+-	eval { symlink $expinstperl, $usrbinperl }	||
+-	copy($instperl, $usrbinperl);
+-
+-	$mainperl_is_instperl = 1;
+-    }
++#    if ((! $mainperl_is_instperl) &&
++#	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
++#	     "Do you wish to have $usrbinperl be the same as\n" .
++#	     "$expinstperl? [y] ")))
++#    {
++#	unlink($usrbinperl);
++#	( $Config{'d_link'} eq 'define' &&
++#	  eval { CORE::link $instperl, $usrbinperl } )	||
++#	eval { symlink $expinstperl, $usrbinperl }	||
++#	copy($instperl, $usrbinperl);
++#
++#	$mainperl_is_instperl = 1;
++#    }
+ }
+ 
+ # Make links to ordinary names if installbin directory isn't current directory.

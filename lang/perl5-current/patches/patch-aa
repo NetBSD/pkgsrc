@@ -1,0 +1,196 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+
+--- Configure.orig	Sun Jan 16 21:17:27 2000
++++ Configure	Sun Jan 16 21:25:08 2000
+@@ -70,7 +70,7 @@
+ fi
+ 
+ : Proper PATH setting
+-paths='/bin /usr/bin /usr/local/bin /usr/ucb /usr/local /usr/lbin'
++paths='/bin /usr/bin ${PREFIX}/bin /usr/ucb ${PREFIX} /usr/lbin'
+ paths="$paths /opt/bin /opt/local/bin /opt/local /opt/lbin"
+ paths="$paths /usr/5bin /etc /usr/gnu/bin /usr/new /usr/new/bin /usr/nbin"
+ paths="$paths /opt/gnu/bin /opt/new /opt/new/bin /opt/nbin"
+@@ -814,14 +814,14 @@
+ xlibpth='/usr/lib/386 /lib/386'
+ 
+ : Possible local library directories to search.
+-loclibpth="/usr/local/lib /opt/local/lib /usr/gnu/lib"
++loclibpth="${PREFIX}/lib /opt/local/lib /usr/gnu/lib"
+ loclibpth="$loclibpth /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib"
+ 
+ : general looking path for locating libraries
+ glibpth="/shlib /usr/shlib /lib/pa1.1 /usr/lib/large"
+ glibpth="$glibpth /lib /usr/lib $xlibpth"
+ glibpth="$glibpth /lib/large /usr/lib/small /lib/small"
+-glibpth="$glibpth /usr/ccs/lib /usr/ucblib /usr/local/lib"
++glibpth="$glibpth /usr/ccs/lib /usr/ucblib ${PREFIX}/lib"
+ 
+ : Private path used by Configure to find libraries.  Its value
+ : is prepended to libpth. This variable takes care of special
+@@ -834,7 +834,7 @@
+ ignore_versioned_solibs=''
+ : Possible local include directories to search.
+ : Set locincpth to "" in a hint file to defeat local include searches.
+-locincpth="/usr/local/include /opt/local/include /usr/gnu/include"
++locincpth="${PREFIX}/include /opt/local/include /usr/gnu/include"
+ locincpth="$locincpth /opt/gnu/include /usr/GNU/include /opt/GNU/include"
+ :
+ : no include file wanted by default
+@@ -855,9 +855,16 @@
+ : set usethreads on the Configure command line to enable threads.
+ : List of libraries we want.
+ : If anyone needs -lnet, put it in a hint file.
+-libswanted='sfio socket inet nsl nm ndbm gdbm dbm db malloc dl'
+-libswanted="$libswanted dld ld sun m c cposix posix ndir dir crypt"
+-libswanted="$libswanted ucb bsd BSD PW x"
++case `uname -s` in
++NetBSD)
++	libswanted='m crypt'
++	;;
++*)
++	libswanted='sfio net socket inet nsl nm ndbm dbm db malloc dl'
++	libswanted="$libswanted dld ld sun m c cposix posix ndir dir crypt"
++	libswanted="$libswanted ucb bsd BSD PW x"
++	;;
++esac
+ : We probably want to search /usr/shlib before most other libraries.
+ : This is only used by the lib/ExtUtils/MakeMaker.pm routine extliblist.
+ glibpth=`echo " $glibpth " | sed -e 's! /usr/shlib ! !'`
+@@ -1138,10 +1145,10 @@
+ case "$fastread$alldone" in
+ yescont|yesexit) ;;
+ *)
+-	if test ! -t 0; then
+-		echo "Say 'sh Configure', not 'sh <Configure'"
+-		exit 1
+-	fi
++#	if test ! -t 0; then
++#		echo "Say 'sh Configure', not 'sh <Configure'"
++#		exit 1
++#	fi
+ 	;;
+ esac
+ 
+@@ -2786,7 +2793,7 @@
+ : determine root of directory hierarchy where package will be installed.
+ case "$prefix" in
+ '')
+-	dflt=`./loc . /usr/local /usr/local /local /opt /usr`
++	dflt=`./loc . ${PREFIX} ${PREFIX} /local /opt /usr`
+ 	;;
+ *)
+ 	dflt="$prefix"
+@@ -2796,10 +2803,10 @@
+ 
+ By default, $package will be installed in $dflt/bin, manual
+ pages under $dflt/man, etc..., i.e. with $dflt as prefix for
+-all installation directories. Typically set to /usr/local, but you
++all installation directories. Typically set to ${PREFIX}, but you
+ may choose /usr if you wish to install $package among your system
+ binaries. If you wish to have binaries under /bin but manual pages
+-under /usr/local/man, that's ok: you will be prompted separately
++under ${PREFIX}/man, that's ok: you will be prompted separately
+ for each of the installation directories, the prefix being only used
+ to set the defaults.
+ 
+@@ -2887,7 +2894,7 @@
+ fi
+ 
+ : determine where private library files go
+-: Usual default is /usr/local/lib/perl5/$version.
++: Usual default is ${PREFIX}/lib/perl5.  Also allow things like 
+ : Also allow things like /opt/perl/lib/$version, since 
+ : /opt/perl/lib/perl5... would be redundant.
+ case "$prefix" in
+@@ -2938,8 +2945,8 @@
+ : determine where public architecture dependent libraries go
+ set archlib archlib
+ eval $prefixit
+-: privlib default is /usr/local/lib/$package/$version
+-: archlib default is /usr/local/lib/$package/$version/$archname
++: privlib default is ${PREFIX}/lib/$package/$version
++: archlib default is ${PREFIX}/lib/$package/$version/$archname
+ : privlib may have an optional trailing /share.
+ tdflt=`echo $privlib | $sed 's,/share$,,'`
+ tdflt=$tdflt/$archname
+@@ -3198,8 +3205,8 @@
+ 	syspath='/usr/man/man1 /usr/man/mann /usr/man/manl /usr/man/local/man1'
+ 	syspath="$syspath /usr/man/u_man/man1 /usr/share/man/man1"
+ 	syspath="$syspath /usr/catman/u_man/man1 /usr/man/l_man/man1"
+-	syspath="$syspath /usr/local/man/u_man/man1 /usr/local/man/l_man/man1"
+-	syspath="$syspath /usr/man/man.L /local/man/man1 /usr/local/man/man1"
++	syspath="$syspath ${PREFIX}/man/u_man/man1 ${PREFIX}/man/l_man/man1"
++	syspath="$syspath /usr/man/man.L /local/man/man1 ${PREFIX}/man/man1"
+ 	sysman=`./loc . /usr/man/man1 $syspath`
+ 	;;
+ esac
+@@ -3634,7 +3641,7 @@
+ : Set private lib path
+ case "$plibpth" in
+ '') if ./mips; then
+-		plibpth="$incpath/usr/lib /usr/local/lib /usr/ccs/lib"
++		plibpth="$incpath/usr/lib ${PREFIX}/lib /usr/ccs/lib"
+ 	fi;;
+ esac
+ case "$libpth" in
+@@ -5082,7 +5089,7 @@
+ 	# No dynamic loading being used, so don't bother even to prompt.
+ 	useshrplib='false'
+ 	;;
+-*)	case "$useshrplib" in
++*)	case true in
+ 	'')	case "$osname" in
+ 		svr4*|dgux|dynixptx|esix|powerux|beos)
+ 			dflt=y
+@@ -5237,10 +5244,10 @@
+ 	aix)
+ 		# We'll set it in Makefile.SH...
+ 		;;
+-	solaris|netbsd)
++	solaris)
+ 		xxx="-R $shrpdir"
+ 		;;
+-	freebsd)
++	freebsd|netbsd)
+ 		xxx="-Wl,-R$shrpdir"
+ 		;;
+ 	linux|irix*|dec_osf)
+@@ -5895,7 +5902,7 @@
+ 	: guess some guesses
+ 	$test -d /usr/share/scripts && dflt=/usr/share/scripts
+ 	$test -d /usr/share/bin && dflt=/usr/share/bin
+-	$test -d /usr/local/script && dflt=/usr/local/script
++	$test -d ${PREFIX}/script && dflt=${PREFIX}/script
+ 	$test -d $prefixexp/script && dflt=$prefixexp/script
+ 	set dflt
+ 	eval $prefixup
+@@ -5940,7 +5947,7 @@
+ fi
+ 
+ : determine where site specific libraries go.
+-: Usual default is /usr/local/lib/perl5/site_perl/$apiversion
++: Usual default is ${PREFIX}/lib/perl5/site_perl/$apiversion
+ prog=`echo $package | $sed 's/-*[0-9.]*$//'`
+ case "$prefix" in
+ *perl*) set dflt sitelib lib/site_$prog/$apiversion ;;
+@@ -5985,8 +5992,8 @@
+ fi
+ 
+ : determine where site specific architecture-dependent libraries go.
+-: sitelib  default is /usr/local/lib/perl5/site_perl/$apiversion
+-: sitearch default is /usr/local/lib/perl5/site_perl/$apiversion/$archname
++: sitelib  default is ${PREFIX}/lib/perl5/site_perl/$apiversion
++: sitearch default is ${PREFIX}/lib/perl5/site_perl/$apiversion/$archname
+ : sitelib may have an optional trailing /share.
+ tdflt=`echo $sitelib | $sed 's,/share$,,'`
+ tdflt="$tdflt/$archname"
+@@ -10216,7 +10223,7 @@
+ 	case "$ranlib" in
+ 	:) ranlib='';;
+ 	'')
+-		ranlib=`./loc ranlib X /usr/bin /bin /usr/local/bin`
++		ranlib=`./loc ranlib X /usr/bin /bin ${PREFIX}/bin`
+ 		$test -f $ranlib || ranlib=''
+ 		;;
+ 	esac
