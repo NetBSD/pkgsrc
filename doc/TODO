@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2774 2004/12/26 22:17:38 zuntum Exp $
+$NetBSD: TODO,v 1.2775 2004/12/26 22:22:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -534,7 +534,6 @@ Suggested package updates
 	o gri-2.12.8
 	o gsasl-0.2.3
 	o gsed-4.1.2
-	o gss-0.0.15
 	o gst-plugins-0.8.6
 	o gtar-1.15
 	o gtk-systrace-2003.06.23
