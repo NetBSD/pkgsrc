@@ -1,0 +1,10 @@
+$NetBSD: md5,v 1.1.1.1 1999/08/24 21:24:57 tron Exp $
+
+MD5 (suse/bin86.rpm) = 9865486f4b8a5caf7dbf8a1cf470f5f9
+MD5 (suse/binutils.rpm) = 7caae57b860869d58068e9003f871263
+MD5 (suse/egcs.rpm) = 349330e337a3bd742da5264a95e25d4c
+MD5 (suse/g77.rpm) = b5b7eccd31975ded722c79f8a72cedf3
+MD5 (suse/gpp.rpm) = c263c1d3cc9942ce40ba83b698d8f023
+MD5 (suse/libc.rpm) = ec6f80e89a3dfb72cfd394fee1862092
+MD5 (suse/linclude.rpm) = aab078fbc9acf4f1272986134693fc5a
+MD5 (suse/make.rpm) = e0ab861a085f79371532fe9a43b7243f
