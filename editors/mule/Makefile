@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/29 12:40:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/30 01:43:12 seb Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
@@ -41,10 +41,11 @@ CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${BUILDLINK_PREFIX.ja-freewnn}/inclu
 CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_PREFIX.canna}/include --canna-libraries=${BUILDLINK_PREFIX.canna}/lib
 .endif
 
-INFO_FILES=	antenews-jp canna-jp cl dired-x egg-jp emacs forms gnus mule \
-		mule-jp sc vip
-TEXINFO_OVERRIDE=	YES
-TEXINFO_PATTERNS+=	Makefile
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	CCL ISO2022 R2L XFONT antenews-jp canna-jp cl dired-x
+INFO_FILES+=	egg emacs forms gnus kbd-trans languages m2ps mule quail
+INFO_FILES+=	sc terminology vip
 
 MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
 
@@ -62,5 +63,4 @@ post-install:
 		< ${WRKSRC}/etc/CHARSETS > ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 	#diff -u		${WRKSRC}/etc/CHARSETS ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
