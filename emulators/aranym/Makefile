@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/06 07:28:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/06 07:31:56 xtraeme Exp $
 #
 
 DISTNAME=		aranym-0.8.8beta
@@ -11,6 +11,7 @@ COMMENT=		Atari Running on Any Machine
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/Unix
