@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/03/26 18:48:52 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/05/12 23:40:12 wiz Exp $
 
 DISTNAME=	courier-imap-2.2.1
 PKGREVISON=	1
@@ -22,9 +22,6 @@ INSTALL_EXTRA_TMPL=	${.CURDIR}/../courier-auth/INSTALL
 
 CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
 
-.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
-INSTALL_TARGET=         install-strip
-.endif
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 SYSCONFTOOL=		${PREFIX}/sbin/imapd.sysconftool
