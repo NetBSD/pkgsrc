@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/08 23:41:56 veego Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/07 12:53:06 veego Exp $
 man/man1/mplayer.1
-share/mplayer/DOCS/DVB
-share/mplayer/DOCS/DXR3
 share/mplayer/DOCS/French/bugreports.html
 share/mplayer/DOCS/French/cd-dvd.html
 share/mplayer/DOCS/French/codecs.html
@@ -14,11 +12,11 @@ share/mplayer/DOCS/French/video.html
 share/mplayer/DOCS/German/bugreports.html
 share/mplayer/DOCS/German/cd-dvd.html
 share/mplayer/DOCS/German/codecs.html
+share/mplayer/DOCS/German/default.css
 share/mplayer/DOCS/German/documentation.html
 share/mplayer/DOCS/German/encoding.html
 share/mplayer/DOCS/German/faq.html
 share/mplayer/DOCS/German/formats.html
-share/mplayer/DOCS/German/mencoder.1
 share/mplayer/DOCS/German/mplayer.1
 share/mplayer/DOCS/German/sound.html
 share/mplayer/DOCS/German/video.html
@@ -37,6 +35,7 @@ share/mplayer/DOCS/Hungarian/video.html
 share/mplayer/DOCS/Italian/bugreports.html
 share/mplayer/DOCS/Italian/cd-dvd.html
 share/mplayer/DOCS/Italian/codecs.html
+share/mplayer/DOCS/Italian/default.css
 share/mplayer/DOCS/Italian/documentation.html
 share/mplayer/DOCS/Italian/encoding.html
 share/mplayer/DOCS/Italian/faq.html
@@ -65,6 +64,7 @@ share/mplayer/DOCS/bugreports.html
 share/mplayer/DOCS/cd-dvd.html
 share/mplayer/DOCS/codecs-in.html
 share/mplayer/DOCS/codecs.html
+share/mplayer/DOCS/default.css
 share/mplayer/DOCS/documentation.html
 share/mplayer/DOCS/encoding.html
 share/mplayer/DOCS/faq.html
@@ -80,8 +80,10 @@ share/mplayer/DOCS/tech/cvs-howto.txt
 share/mplayer/DOCS/tech/dr-methods.txt
 share/mplayer/DOCS/tech/formats-hun.txt
 share/mplayer/DOCS/tech/formats.txt
+share/mplayer/DOCS/tech/general.txt
 share/mplayer/DOCS/tech/hwac3.txt
-share/mplayer/DOCS/tech/libavc-rate-control.txt
+share/mplayer/DOCS/tech/libao2.txt
+share/mplayer/DOCS/tech/libavc-options.txt
 share/mplayer/DOCS/tech/libvo.txt
 share/mplayer/DOCS/tech/libvo2.txt
 share/mplayer/DOCS/tech/mpsub.sub
@@ -90,10 +92,16 @@ share/mplayer/DOCS/tech/patches.txt
 share/mplayer/DOCS/tech/playtree
 share/mplayer/DOCS/tech/playtree-hun
 share/mplayer/DOCS/tech/porting-status.txt
+share/mplayer/DOCS/tech/realcodecs/TODO
+share/mplayer/DOCS/tech/realcodecs/audio-codecs.txt
+share/mplayer/DOCS/tech/realcodecs/streaming.txt
+share/mplayer/DOCS/tech/realcodecs/video-codecs.txt
 share/mplayer/DOCS/tech/subcp.txt
-share/mplayer/DOCS/tech/tech-eng.txt
+share/mplayer/DOCS/tech/swscaler_filters.txt
+share/mplayer/DOCS/tech/swscaler_methods.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/vop.txt
 share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
 share/mplayer/codecs.conf
+share/mplayer/input.conf
