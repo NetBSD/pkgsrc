@@ -19,7 +19,7 @@
 %% http://odo.kettering.edu/dvipdfm/
 %%
 \ProvidesFile{dvipdfm.def}
-        [1999/9/6 vx.x Driver-dependant file]
+        [1999/9/6 vx.x Driver-dependent file]
 \def\c@lor@arg#1{%
   \dimen@#1\p@
   \ifdim\dimen@<\z@\dimen@\maxdimen\fi
