@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.26 2003/09/18 23:02:33 grant Exp $
+# $NetBSD: install,v 1.27 2003/11/21 10:32:25 jlam Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -400,13 +400,15 @@ VIEW-INSTALL)
 		(${GREP} -v "^${PKG_SHELL}" /etc/shells.pkgsrc."$$" || ${TRUE}; ${ECHO} ${PKG_SHELL}) > /etc/shells
 		${RM} /etc/shells.pkgsrc."$$"
 	fi
+	#
+	# If ${PKG_SYSCONFBASE} points outside of ${PREFIX}, then add the
+	# package config files to the proper view.
+	#
 	if [ "${_PKG_CONFIG}" = "YES" -a -n "${PKG_SYSCONFDEPOTBASE}" ]; then
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
 		     -n "${SUPPORT_FILES}" -o				\
-		     -n "${SUPPORT_FILES_PERMS}" ] ||			\
-		   [ "${_PKG_RCD_SCRIPTS}" = "YES" -a			\
-		     -n "${RCD_SCRIPTS}" ]; then
+		     -n "${SUPPORT_FILES_PERMS}" ]; then
 			${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
 				${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
 		fi
