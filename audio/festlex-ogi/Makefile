@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/14 12:37:47 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/07/18 15:19:38 wiz Exp $
 
 DISTNAME=	OGIlexicon-2.0
 PKGNAME=	festlex-ogi-2.0
@@ -7,11 +7,11 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	Composite pronounciation dictionary from ogi.edu for festival
 
-DEPENDS+=	festival-1.4.0:../festival
-DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
+DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festlex-poslex>=1.4.0:../festlex-poslex
 
 LICENSE=	no-commercial-use
 
