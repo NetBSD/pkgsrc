@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2001/06/14 06:36:50 kei Exp $
+
+--- bdftogd.orig	Thu Jun 14 14:46:54 2001
++++ bdftogd	Thu Jun 14 14:49:18 2001
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!@PREFIX@/bin/perl -w
+ 
+ #
+ # Simple convertor from bdf to gd font format.
