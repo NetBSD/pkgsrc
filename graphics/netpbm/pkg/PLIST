@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/06/05 00:36:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/07/10 11:12:11 wiz Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -59,6 +59,7 @@ bin/pbmtopk
 bin/pbmtoplot
 bin/pbmtoppa
 bin/pbmtoptx
+bin/pbmtowbmp
 bin/pbmtox10bm
 bin/pbmtoxbm
 bin/pbmtoybm
@@ -113,6 +114,7 @@ bin/pnmpaste
 bin/pnmrotate
 bin/pnmscale
 bin/pnmshear
+bin/pnmsplit
 bin/pnmsmooth
 bin/pnmtile
 bin/pnmtoddif
@@ -196,6 +198,7 @@ bin/spottopgm
 bin/sputoppm
 bin/tgatoppm
 bin/tifftopnm
+bin/wbmptopbm
 bin/winicontoppm
 bin/xbmtopbm
 bin/ximtoppm
@@ -215,16 +218,16 @@ include/ppmcmap.h
 include/shhopt.h
 lib/libpbm.a
 lib/libpbm.la
-lib/libpbm.so.9.3
+lib/libpbm.so.${VERS}
 lib/libpgm.a
 lib/libpgm.la
-lib/libpgm.so.9.3
+lib/libpgm.so.${VERS}
 lib/libpnm.a
 lib/libpnm.la
-lib/libpnm.so.9.3
+lib/libpnm.so.${VERS}
 lib/libppm.a
 lib/libppm.la
-lib/libppm.so.9.3
+lib/libppm.so.${VERS}
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
 man/man1/atktopbm.1
@@ -284,6 +287,7 @@ man/man1/pbmtopk.1
 man/man1/pbmtoplot.1
 man/man1/pbmtoppa.1
 man/man1/pbmtoptx.1
+man/man1/pbmtowbmp.1
 man/man1/pbmtox10bm.1
 man/man1/pbmtoxbm.1
 man/man1/pbmtoybm.1
@@ -338,6 +342,7 @@ man/man1/pnmrotate.1
 man/man1/pnmscale.1
 man/man1/pnmshear.1
 man/man1/pnmsmooth.1
+man/man1/pnmsplit.1
 man/man1/pnmtile.1
 man/man1/pnmtoddif.1
 man/man1/pnmtofits.1
@@ -421,6 +426,7 @@ man/man1/spottopgm.1
 man/man1/sputoppm.1
 man/man1/tgatoppm.1
 man/man1/tifftopnm.1
+man/man1/wbmptopbm.1
 man/man1/winicontoppm.1
 man/man1/xbmtopbm.1
 man/man1/ximtoppm.1
