@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2873 2005/01/10 16:15:20 adam Exp $
+$NetBSD: TODO,v 1.2874 2005/01/10 16:28:26 dillo Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ Suggested package updates
 	o wmweather-2.4.3
 	o wol-0.7.1
 	o wwwoffle-2.8d
-	o wxhugo-31
 	o x2vnc-1.6.1
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xalan-c-1.8.0
