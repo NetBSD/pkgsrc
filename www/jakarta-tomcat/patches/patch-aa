@@ -1,5 +1,5 @@
 --- build.xml.orig	Fri Oct 26 09:59:03 2001
-+++ build.xml	Fri Apr 19 11:25:00 2002
++++ build.xml	Fri Apr 19 13:38:31 2002
 @@ -2,15 +2,15 @@
  
  
@@ -71,6 +71,18 @@
      <chmod perm="+x" file="${tomcat.build}/bin/jspc.sh"/>
      <chmod perm="+x" file="${tomcat.build}/bin/startup.sh"/>
      <chmod perm="+x" file="${tomcat.build}/bin/shutdown.sh"/>
+@@ -84,9 +92,9 @@
+ 
+     <!-- Determine availability of optional components -->
+     <available property="jsse.present" 
+-               classname="com.sun.net.ssl.internal.ssl.Provider" />
++               classname="NotFoundForPkgsrc" />
+     <available property="jdk12.present"
+-               classname="java.security.PrivilegedAction" />
++               classname="NotFoundForPkgsrc" />
+ 
+     <!-- Compile the standard Tomcat components -->
+     <javac srcdir="src/share" destdir="${tomcat.build}/classes"
 @@ -96,6 +104,8 @@
             deprecation="off" >
             <exclude name="**/Jdk12Interceptor.java" 
