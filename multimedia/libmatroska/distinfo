@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/07/27 04:14:56 salo Exp $
+$NetBSD: distinfo,v 1.7 2004/08/23 23:19:52 salo Exp $
 
-SHA1 (libmatroska-0.7.1.tar.bz2) = 8da497c0cd2dc6044489e8fdbae129254f7988f2
-Size (libmatroska-0.7.1.tar.bz2) = 78830 bytes
-SHA1 (patch-aa) = 673a3043692df4fc0f7babc4be13f92fdf1fda62
+SHA1 (libmatroska-0.7.3.tar.bz2) = 38b8c5c0b265fdddf1b295fd3508a0fdffed164e
+Size (libmatroska-0.7.3.tar.bz2) = 81678 bytes
 SHA1 (patch-ac) = 59225b6e89c6563e7245a94b46c798c2c44bd259
