@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2001/02/24 01:34:32 jtb Exp $
+# $NetBSD: Makefile,v 1.122 2001/03/05 21:48:55 jtb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -76,6 +76,7 @@ SUBDIR+=	opendis
 SUBDIR+=	openptc
 SUBDIR+=	p5-GD
 SUBDIR+=	p5-GDGraph
+SUBDIR+=	p5-GDGraph3d
 SUBDIR+=	p5-GDTextUtil
 SUBDIR+=	p5-Image-Size
 SUBDIR+=	p5-PerlMagick
