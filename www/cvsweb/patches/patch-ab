@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/06/27 03:22:25 lukem Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/27 04:24:56 lukem Exp $
 
 --- cvsweb.conf.orig	Wed May 22 16:19:12 2002
 +++ cvsweb.conf
@@ -14,3 +14,11 @@ $NetBSD: patch-ab,v 1.1 2002/06/27 03:22:25 lukem Exp $
  out Zeller's <a
  href="http://linux.fh-heilbronn.de/~zeller/cgi/cvsweb.cgi" >CVSweb
  distribution site</a>.  Bill's original script can be found <a
+@@ -508,6 +509,7 @@
+ @cvs_options = qw(-l);
+ 
+ push @cvs_options, '-R' if ($uname eq 'FreeBSD' || $uname eq 'OpenBSD');
++push @cvs_options, '-u' if ($uname eq 'NetBSD');
+ 
+ #      Only FreeBSD's and OpenBSD's cvs(1) supports -R (read only access
+ #      mode) option, which considerably speeds up checkouts over NFS.
