@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/05/28 12:51:29 grant Exp $
+# $NetBSD: Makefile,v 1.49 2003/06/12 15:40:31 jschauma Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -36,7 +36,10 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../devel/zlib/buildlink2.mk"
 
+.if ${OPSYS} != "IRIX"
 .include "../../mk/gcc.buildlink2.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
