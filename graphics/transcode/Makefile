@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/23 11:17:38 mrg Exp $
 
 DISTNAME=	transcode-0.6.6
 CATEGORIES=	graphics
@@ -22,14 +22,15 @@ CONFIGURE_ARGS+=	--without-libmpeg3
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_PREFIX.libdvdread}
 
-#post-patch:
-#	cd ${WRKSRC} && \
-#	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s| -ldl||g" acinclude.m4 > acinclude.new && \
-#	${MV} acinclude.new acinclude.m4 && \
-#	${ACLOCAL} && \
-#	${AUTOHEADER} && \
-#	${AUTOCONF}
-#	-cd ${WRKSRC} && ${AUTOMAKE}
+# this used to operate on acinclude.m4 and run aclocal, but running
+# aclocal here breaks due to missing DLFCN checking
+post-patch:
+	cd ${WRKSRC} && \
+	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s| -ldl||g" aclocal.m4 > aclocal.new && \
+	${MV} aclocal.new aclocal.m4 && \
+	${AUTOHEADER} && \
+	${AUTOCONF}
+	-cd ${WRKSRC} && ${AUTOMAKE}
 
 post-install:
 	${LN} -s ../libxvidcore.so ${PREFIX}/lib/transcode/libxvidcore.so
@@ -52,5 +53,5 @@ post-install:
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
-#.include "../../mk/automake.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
