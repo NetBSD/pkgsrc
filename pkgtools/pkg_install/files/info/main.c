@@ -1,13 +1,17 @@
-/*	$NetBSD: main.c,v 1.3 2003/03/29 18:41:56 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.4 2003/09/01 16:27:13 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.3 2003/03/29 18:41:56 jschauma Exp $");
-#endif
+__RCSID("$NetBSD: main.c,v 1.4 2003/09/01 16:27:13 jlam Exp $");
 #endif
 #endif
 
@@ -32,26 +36,21 @@ __RCSID("$NetBSD: main.c,v 1.3 2003/03/29 18:41:56 jschauma Exp $");
  *
  */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#ifdef HAVE_SYS_IOCTL_H
+#if HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>
 #endif
 
-#ifdef HAVE_TERMIOS_H
+#if HAVE_TERMIOS_H
 #include <termios.h>
 #endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
 
 #include "lib.h"
 #include "info.h"
 
-static const char Options[] = "aBbcDde:fFhIikLl:mnpqRrsSvV";
+static const char Options[] = "aBbcDde:fFhIiK:kLl:mNnpqRrsSvV";
 
 int     Flags = 0;
 Boolean AllInstalled = FALSE;
@@ -68,7 +67,7 @@ static void
 usage(void)
 {
 	fprintf(stderr, "%s\n%s\n%s\n",
-	    "usage: pkg_info [-BbcDdFfIikLmnpqRrSsVvh] [-e package] [-l prefix]",
+	    "usage: pkg_info [-BbcDdFfIikLmNnpqRrSsVvh] [-e package] [-l prefix]",
 	    "                pkg-name [pkg-name ...]",
 	    "       pkg_info -a [flags]");
 	exit(1);
@@ -77,11 +76,11 @@ usage(void)
 int
 main(int argc, char **argv)
 {
-	int     ch, rc;
 	lpkg_t *lpp;
+	int     ch;
+	int	rc;
 
 	setprogname(argv[0]);
-
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
 		case 'a':
@@ -128,6 +127,10 @@ main(int argc, char **argv)
 			Flags |= SHOW_INSTALL;
 			break;
 
+		case 'K':
+			_pkgdb_setPKGDB_DIR(optarg);
+			break;
+
 		case 'k':
 			Flags |= SHOW_DEINSTALL;
 			break;
@@ -142,6 +145,10 @@ main(int argc, char **argv)
 
 		case 'm':
 			Flags |= SHOW_MTREE;
+			break;
+
+		case 'N':
+			Flags |= SHOW_BLD_DEPENDS;
 			break;
 
 		case 'n':
@@ -177,7 +184,7 @@ main(int argc, char **argv)
 			/* Reasonable definition of 'everything' */
 			Flags = SHOW_COMMENT | SHOW_DESC | SHOW_PLIST | SHOW_INSTALL |
 			    SHOW_DEINSTALL | SHOW_REQUIRE | SHOW_DISPLAY | SHOW_MTREE |
-			    SHOW_REQBY | SHOW_DEPENDS | SHOW_PKG_SIZE | SHOW_ALL_SIZE;
+			    SHOW_REQBY | SHOW_BLD_DEPENDS | SHOW_DEPENDS | SHOW_PKG_SIZE | SHOW_ALL_SIZE;
 			break;
 
 		case 'V':
@@ -216,7 +223,7 @@ main(int argc, char **argv)
 	if (CheckPkg && File2Pkg) {
 		char   *s;
 
-		if (pkgdb_open(ReadOnly) == -1)
+		if (!pkgdb_open(ReadOnly))
 			err(EXIT_FAILURE, "cannot open pkgdb");
 
 		s = pkgdb_retrieve(CheckPkg);
@@ -256,6 +263,15 @@ main(int argc, char **argv)
 				if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs) <= 0)
 					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 			} else {
+				char   *dbdir;
+
+				dbdir = _pkgdb_getPKGDB_DIR();
+				if (**argv == '/' && strncmp(*argv, dbdir, strlen(dbdir)) == 0) {
+					*argv += strlen(dbdir) + 1;
+					if ((*argv)[strlen(*argv) - 1] == '/') {
+						(*argv)[strlen(*argv) - 1] = 0;
+					}
+				}
 				lpp = alloc_lpkg(*argv);
 				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 			}

@@ -1,13 +1,17 @@
-/*	$NetBSD: plist.c,v 1.3 2003/04/17 14:00:55 grant Exp $	*/
+/*	$NetBSD: plist.c,v 1.4 2003/09/01 16:27:15 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.3 2003/04/17 14:00:55 grant Exp $");
-#endif
+__RCSID("$NetBSD: plist.c,v 1.4 2003/09/01 16:27:15 jlam Exp $");
 #endif
 #endif
 
@@ -32,17 +36,13 @@ __RCSID("$NetBSD: plist.c,v 1.3 2003/04/17 14:00:55 grant Exp $");
  */
 
 #include "lib.h"
+#if HAVE_ERRNO_H
 #include <errno.h>
-
-#ifdef HAVE_ERR_H
+#endif
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
-#ifdef HAVE_MD5GLOBAL_H
-#include <md5global.h>
-#endif
-
-#ifdef HAVE_MD5_H
+#if HAVE_MD5_H
 #include <md5.h>
 #endif
 
@@ -247,7 +247,7 @@ plist_cmd(char *s, char **arg)
 	char   *cp;
 	char   *sp;
 
-	(void) strcpy(cmd, s);
+	(void) strlcpy(cmd, s, sizeof(cmd));
 	str_lowercase(cmd);
 	for (cp = cmd, sp = s; *cp; cp++, sp++) {
 		if (isspace((unsigned char) *cp)) {
@@ -467,8 +467,8 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg)
 }
 
 #ifdef DEBUG
-#define RMDIR(dir) vsystem("%s %s", RMDIR, dir)
-#define REMOVE(dir,ie) vsystem("%s %s%s", RM, (ie ? "-f " : ""), dir)
+#define RMDIR(dir) vsystem("%s %s", RMDIR_CMD, dir)
+#define REMOVE(dir,ie) vsystem("%s %s%s", REMOVE_CMD, (ie ? "-f " : ""), dir)
 #else
 #define RMDIR rmdir
 #define	REMOVE(file,ie) (remove(file) && !(ie))
@@ -490,7 +490,7 @@ delete_hierarchy(char *dir, Boolean ign_err, Boolean nukedirs)
 			    isdir(dir) ? "directory" : "file", dir);
 		return !ign_err;
 	} else if (nukedirs) {
-		if (vsystem("%s -r%s %s", RM, (ign_err ? "f" : ""), dir))
+		if (vsystem("%s -r%s %s", REMOVE_CMD, (ign_err ? "f" : ""), dir))
 			return 1;
 	} else if (isdir(dir)) {
 		if (RMDIR(dir) && !ign_err)

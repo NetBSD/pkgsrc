@@ -1,10 +1,14 @@
-/*	$NetBSD: pkgdb.c,v 1.10 2003/04/11 14:40:37 grant Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.11 2003/09/01 16:27:15 jlam Exp $	*/
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.10 2003/04/11 14:40:37 grant Exp $");
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
 #endif
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
+#ifndef lint
+__RCSID("$NetBSD: pkgdb.c,v 1.11 2003/09/01 16:27:15 jlam Exp $");
 #endif
 
 /*
@@ -36,37 +40,43 @@ __RCSID("$NetBSD: pkgdb.c,v 1.10 2003/04/11 14:40:37 grant Exp $");
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_DB1_DB_H
-#include <db1/db.h>
-#elif defined(HAVE_DB_H)
+#if HAVE_DB_H
 #include <db.h>
 #endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
+#if HAVE_ERRNO_H
 #include <errno.h>
-
-#ifdef HAVE_FCNTL_H
+#endif
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-
+#if HAVE_STDARG_H
 #include <stdarg.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
 
 #include "lib.h"
 
 #define PKGDB_FILE	"pkgdb.byfile.db"	/* indexed by filename */
 
-#if defined(HAVE_DBOPEN)
-static DB *pkgdbp;
-static int pkgdb_iter_flag;
-#endif /* HAVE_DBOPEN */
+/*
+ * Where we put logging information by default if PKG_DBDIR is unset.
+ */
+#ifndef DEF_LOG_DIR
+#define DEF_LOG_DIR		"/var/db/pkg"
+#endif
+
+/* just in case we change the environment variable name */
+#define PKG_DBDIR		"PKG_DBDIR"
+
+static DB   *pkgdbp;
+static char *pkgdb_dir = NULL;
+static char  pkgdb_cache[FILENAME_MAX];
 
 /*
  *  Open the pkg-database
@@ -77,11 +87,8 @@ static int pkgdb_iter_flag;
 int
 pkgdb_open(int mode)
 {
-#if defined(HAVE_DBOPEN)
 	BTREEINFO info;
 	char	cachename[FILENAME_MAX];
-
-	pkgdb_iter_flag = 0;	/* used in pkgdb_iter() */
 
 	/* try our btree format first */
 	info.flags = 0;
@@ -96,9 +103,6 @@ pkgdb_open(int mode)
 	    (mode == ReadOnly) ? O_RDONLY : O_RDWR | O_CREAT,
 	    0644, DB_BTREE, (void *) &info);
 	return (pkgdbp != NULL);
-#else
-	return -1;
-#endif /* HAVE_DBOPEN */
 }
 
 /*
@@ -107,12 +111,10 @@ pkgdb_open(int mode)
 void
 pkgdb_close(void)
 {
-#if defined(HAVE_DBOPEN)
 	if (pkgdbp != NULL) {
 		(void) (*pkgdbp->close) (pkgdbp);
 		pkgdbp = NULL;
 	}
-#endif /* HAVE_DBOPEN */
 }
 
 /*
@@ -125,7 +127,6 @@ pkgdb_close(void)
 int
 pkgdb_store(const char *key, const char *val)
 {
-#if defined(HAVE_DBOPEN)
 	DBT     keyd, vald;
 
 	if (pkgdbp == NULL)
@@ -140,9 +141,6 @@ pkgdb_store(const char *key, const char *val)
 		return -1;
 
 	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
-#else
-	return EXIT_SUCCESS;
-#endif /* HAVE_DBOPEN */
 }
 
 /*
@@ -154,7 +152,6 @@ pkgdb_store(const char *key, const char *val)
 char   *
 pkgdb_retrieve(const char *key)
 {
-#if defined(HAVE_DBOPEN)
 	DBT     keyd, vald;
 	int     status;
 
@@ -174,29 +171,25 @@ pkgdb_retrieve(const char *key)
 	}
 
 	return vald.data;
-#else
-	return NULL;
-#endif /* HAVE_DBOPEN */
 }
 
 /* dump contents of the database to stdout */
 void
 pkgdb_dump(void)
 {
-#if defined(HAVE_DBOPEN)
 	DBT     key;
-	DBT     val;
-	int     type;
+	DBT	val;
+	int	type;
 
 	if (pkgdb_open(ReadOnly)) {
 		for (type = R_FIRST ; (*pkgdbp->seq)(pkgdbp, &key, &val, type) == 0 ; type = R_NEXT) {
 			printf("file: %.*s pkg: %.*s\n",
-					(int) key.size, (char *) key.data,
-					(int) val.size, (char *) val.data);
+				(int) key.size, (char *) key.data,
+				(int) val.size, (char *) val.data);
 		}
 		pkgdb_close();
 	}
-#endif /* HAVE_DBOPEN */
+
 }
 
 /*
@@ -209,7 +202,6 @@ pkgdb_dump(void)
 int
 pkgdb_remove(const char *key)
 {
-#if defined(HAVE_DBOPEN)
 	DBT     keyd;
 
 	if (pkgdbp == NULL)
@@ -221,16 +213,12 @@ pkgdb_remove(const char *key)
 		return -1;
 
 	return (*pkgdbp->del) (pkgdbp, &keyd, 0);
-#else
-	return EXIT_SUCCESS;
-#endif /* HAVE_DBOPEN */
 }
 
 /* remove any entry from the cache which has a data field of `pkg' */
 int
 pkgdb_remove_pkg(const char *pkg)
 {
-#if defined(HAVE_DBOPEN)
 	DBT     data;
 	DBT     key;
 	int	type;
@@ -247,24 +235,20 @@ pkgdb_remove_pkg(const char *pkg)
 				printf("Removing file %s from pkgdb\n", (char *)key.data);
 			}
 			switch ((*pkgdbp->del)(pkgdbp, &key, 0)) {
-				case -1:
-					warn("Error removing %s from pkgdb", (char *) key.data);
-					ret = 0;
-					break;
-				case 1:
-					warn("Key %s not present in pkgdb", (char *) key.data);
-					ret = 0;
-					break;
+			case -1:
+				warn("Error removing %s from pkgdb", (char *) key.data);
+				ret = 0;
+				break;
+			case 1:
+				warn("Key %s not present in pkgdb", (char *) key.data);
+				ret = 0;
+				break;
 
 			}
 		}
 	}
 	return ret;
-#else
-	return EXIT_SUCCESS;
-#endif /* HAVE_DBOPEN */
 }
-
 
 /*
  *  Return name of cache file in the buffer that was passed.
@@ -282,11 +266,24 @@ _pkgdb_getPKGDB_FILE(char *buf, unsigned size)
 char *
 _pkgdb_getPKGDB_DIR(void)
 {
-	char   *tmp;
-	static char *cache = NULL;
+	char *tmp;
 
-	if (cache == NULL)
-		cache = (tmp = getenv(PKG_DBDIR)) ? tmp : DEF_LOG_DIR;
+	if (pkgdb_dir == NULL) {
+		if ((tmp = getenv(PKG_DBDIR)))
+			_pkgdb_setPKGDB_DIR(tmp);
+		else
+			_pkgdb_setPKGDB_DIR(DEF_LOG_DIR);
+	}
 
-	return cache;
+	return pkgdb_dir;
+}
+
+/*
+ *  Set the first place we look for where pkgdb is stored.
+ */
+void
+_pkgdb_setPKGDB_DIR(const char *dir)
+{
+	(void) snprintf(pkgdb_cache, sizeof(pkgdb_cache), "%s", dir);
+	pkgdb_dir = pkgdb_cache;
 }

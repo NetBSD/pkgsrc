@@ -1,38 +1,35 @@
-# $NetBSD: Makefile.in,v 1.2 2003/02/11 16:48:23 grant Exp $
-# Original from FreeBSD, no rcs id.
+# $NetBSD: Makefile.in,v 1.3 2003/09/01 16:27:14 jlam Exp $
+
+srcdir=		@srcdir@
+
+pkgdbdir=	@pkgdbdir@
 
 RANLIB=		@RANLIB@
 AR=		@AR@
 CC=		@CC@
-CCLD=		$(CC)
-LIBS=		@LIBS@ -linstall
-CPPFLAGS=	@CPPFLAGS@
-DEFS=		@DEFS@ -I. -I@srcdir@
+CPPFLAGS=	$(DEFS) @CPPFLAGS@ -I. -I$(srcdir)
+DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\"
 CFLAGS=		@CFLAGS@
-LDFLAGS=	@LDFLAGS@ -L../lib
 
-LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
-COMPILE=	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
+LIB=	libinstall.a
 
-LIBINSTALL=	libinstall.a
+SRCS=	exec.c fexec.c file.c ftpio.c global.c lpkg.c path.c pen.c \
+	pkgdb.c plist.c str.c version.c
+OBJS=	$(SRCS:.c=.o)
 
-SRCS=		digest.c exec.c file.c fgetln.c ftpio.c global.c lpkg.c \
-		pen.c pkgdb.c plist.c str.c version.c path.c \
-		err.c setprogname.c setenv.c unsetenv.c
-OBJS=		digest.o exec.o file.o fgetln.o ftpio.o global.o lpkg.o \
-		pen.o pkgdb.o plist.o str.o version.o path.o \
-		err.o setprogname.o setenv.o unsetenv.o
-
-libinstall.a: ${OBJS}
-	${AR} crv ${LIBINSTALL} ${OBJS}
-	${RANLIB} ${LIBINSTALL}
-
-version.o: version.h version.c
+.PHONY: all clean install
 
 .c.o:
-	$(COMPILE) -c $< -o $@
+	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
+
+all: $(LIB)
+
+$(LIB): $(OBJS)
+	$(AR) crv $@ $(OBJS)
+	$(RANLIB) $@
 
 clean:
-	rm -f ${OBJS} ${LIBINSTALL}
+	rm -f $(OBJS) $(LIB)
 
 install:
+	# do nothing

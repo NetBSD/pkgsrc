@@ -5,7 +5,8 @@ NNAAMMEE
      butions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--ffIIMMnnRRSSuuVVvv] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e] [--tt _t_e_m_p_l_a_t_e] [--pp _p_r_e_f_i_x]
+     ppkkgg__aadddd [--ffIILLMMnnRRSSuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
+             [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
              [ftp://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
 DDEESSCCRRIIPPTTIIOONN
@@ -50,6 +51,14 @@ OOPPTTIIOONNSS
 
      --II      If an installation script exists for a given package, do not exe-
              cute it.
+
+     --KK _p_k_g___d_b_d_i_r
+             Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
+             isn't specified, then the package database directory is taken
+             from the value of the environment variable PKG_DBDIR if it's set,
+             otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
+
+     --LL      Don't add the package to any views after installation.
 
      --MM      Run in MMAASSTTEERR mode.  This is a very specialized mode for running
              ppkkgg__aadddd and is meant to be run in conjunction with SSLLAAVVEE mode.
@@ -124,11 +133,19 @@ OOPPTTIIOONNSS
 
      --vv      Turn on verbose output.
 
+     --WW _v_i_e_w_b_a_s_e
+             Set _v_i_e_w_b_a_s_e as the base directory for the managed views.  The
+             default _v_i_e_w_b_a_s_e directory is set by pkg_view(1).
+
+     --ww _v_i_e_w
+             Set the _v_i_e_w to which packages should be added after installa-
+             tion.  The default _v_i_e_w is set by pkg_view(1).
+
      One or more _p_k_g_-_n_a_m_e arguments may be specified, each being either a file
      containing the package (these usually ending with the ``.tgz'' suffix) or
      a URL pointing at a file available on an ftp or web site.  Thus you may
      extract files directly from their anonymous ftp or WWW locations (e.g.
-     ppkkgg__aadddd ftp://ftp.netbsd.org/pub/NetBSD/pack-
+     ppkkgg__aadddd ftp://ftp.NetBSD.org/pub/NetBSD/pack-
      ages/1.5/i386/shells/bash-2.04.tgz).  Note:  If you wish to use _p_a_s_s_i_v_e
      _m_o_d_e  ftp in such transfers, set the variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E  to some
      value in your environment.  Otherwise, the more standard ACTIVE mode may
@@ -146,11 +163,14 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 tion is terminated if the --uu option is not given.
 
                 If the --uu option is given, it's assumed the package should be
-                upgraded instead.  This is prepared by moving an existing
-                _+_R_E_Q_U_I_R_E_D___B_Y file aside (if it exists), and by running
-                pkg_delete(1) on the installed package.  Installation then
-                proceeds as if the package was not installed, and restores the
-                _+_R_E_Q_U_I_R_E_D___B_Y file afterwards.
+                replaced by the new version instead.  Before doing so, all
+                packages that depend on the pkg being upgraded are checked if
+                they also work with the new version.  If that test is success-
+                ful, replacing is prepared by moving an existing _+_R_E_Q_U_I_R_E_D___B_Y
+                file aside (if it exists), and running pkg_delete(1) on the
+                installed package.  Installation then proceeds as if the pack-
+                age was not installed, and restores the _+_R_E_Q_U_I_R_E_D___B_Y file af-
+                terwards.
 
            2.   A check is made to determine if the package conflicts (from
                 @@ppkkggccffll directives, see pkg_create(1)) with an already record-
@@ -224,12 +244,15 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 into _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_> for subsequent possible use by
                 pkg_delete(1).  Any package dependencies are recorded in the
                 other packages' _/_v_a_r_/_d_b_/_p_k_g_/_<_o_t_h_e_r_-_p_k_g_>_/_+_R_E_Q_U_I_R_E_D___B_Y file (if
-                the environment variable PKG_DBDIR is set, this overrides the
-                _/_v_a_r_/_d_b_/_p_k_g_/ path shown above).
+                an alternate package database directory is specified, then it
+                overrides the _/_v_a_r_/_d_b_/_p_k_g path shown above).
 
-           12.  The staging area is deleted and the program terminates.
+           12.  If the package is a depoted package, then add it to the de-
+                fault view.
 
-           13.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
+           13.  The staging area is deleted and the program terminates.
+
+           14.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
                 that was moved aside before upgrading was started is now moved
                 back into place.
 
@@ -240,21 +263,21 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      user might change it with the --pp flag to ppkkgg__aadddd.
 
 EENNVVIIRROONNMMEENNTT
-   PPKKGG__PPAATTHH
-     The value of the PKG_PATH is used if a given package can't be found, it's
-     usually set to _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.  The environment variable should
-     be a series of entries separated by semicolons.  Each entry consists of a
-     directory name or URL.  The current directory may be indicated implicitly
-     by an empty directory name, or explicitly by a single period.  FTP URLs
-     may not end with a slash.
+     PKG_DBDIR   If the --KK flag isn't given, then PKG_DBDIR is the location of
+                 the package database directory.  The default package database
+                 directory is _/_v_a_r_/_d_b_/_p_k_g.
 
-   PPKKGG__DDBBDDIIRR
-     Where to register packages instead of _/_v_a_r_/_d_b_/_p_k_g.
+     PKG_PATH    The value of the PKG_PATH is used if a given package can't be
+                 found, it's usually set to _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.  The en-
+                 vironment variable should be a series of entries separated by
+                 semicolons.  Each entry consists of a directory name or URL.
+                 The current directory may be indicated implicitly by an empty
+                 directory name, or explicitly by a single period.  FTP URLs
+                 may not end with a slash.
 
-   PPKKGG__TTMMPPDDIIRR
-     Staging directory for installing packages, defaults to /var/tmp.  Set to
-     directory with lots of free disk if you run out of space when installing
-     a binary package.
+     PKG_TMPDIR  Staging directory for installing packages, defaults to
+                 /var/tmp.  Set to directory with lots of free disk if you run
+                 out of space when installing a binary package.
 
 EEXXAAMMPPLLEESS
      In all cases, ppkkgg__aadddd will try to install binary packages listed in de-
@@ -272,9 +295,9 @@ EEXXAAMMPPLLEESS
      You can grab a compiled binary package from remote location, by specify-
      ing a URL.  The URL can be put into an environment variable, PKG_PATH.
 
-     # pkg_add -v ftp://ftp.netbsd.org/pub/NetBSD/packages/1.5/i386/All/mozilla-0.8.1.tgz
+     # pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/1.5/i386/All/mozilla-0.8.1.tgz
 
-     # export PKG_PATH=ftp://ftp.netbsd.org/pub/NetBSD/packages/1.5/i386/All
+     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/1.5/i386/All
      # pkg_add -v mozilla
 
 SSEEEE AALLSSOO
@@ -302,4 +325,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 1.6                      August 15, 2002                              5
+NetBSD 1.6.1_STABLE             August 15, 2002                              5

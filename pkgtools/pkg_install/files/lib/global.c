@@ -1,13 +1,17 @@
-/*	$NetBSD: global.c,v 1.1.1.1 2002/12/20 18:14:01 schmonz Exp $	*/
+/*	$NetBSD: global.c,v 1.2 2003/09/01 16:27:14 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: global.c,v 1.6 1997/10/08 07:47:58 charnier Exp";
 #else
-__RCSID("$NetBSD: global.c,v 1.1.1.1 2002/12/20 18:14:01 schmonz Exp $");
-#endif
+__RCSID("$NetBSD: global.c,v 1.2 2003/09/01 16:27:14 jlam Exp $");
 #endif
 #endif
 

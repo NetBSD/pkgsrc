@@ -1,10 +1,14 @@
-/*	$NetBSD: ftpio.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.3 2003/09/01 16:27:14 jlam Exp $	*/
 
-#if 0
-#include <sys/cdefs.h>
-#ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
 #endif
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
+#ifndef lint
+__RCSID("$NetBSD: ftpio.c,v 1.3 2003/09/01 16:27:14 jlam Exp $");
 #endif
 
 /*
@@ -36,54 +40,54 @@ __RCSID("$NetBSD: ftpio.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
-
-#ifdef HAVE_SYS_TIME_H
+#endif
+#if HAVE_SYS_TIME_H
 #include <sys/time.h>
 #endif
-
-#ifdef HAVE_SIGNAL_H
+#if HAVE_SYS_POLL_H
+#include <sys/poll.h>
+#endif
+#if HAVE_SIGNAL_H
 #include <signal.h>
 #endif
-
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
-
+#if HAVE_CTYPE_H
 #include <ctype.h>
-
-#ifdef HAVE_ERR_H
+#endif
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
+#if HAVE_ERRNO_H
 #include <errno.h>
-
-#ifdef HAVE_FCNTL_H
+#endif
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-
-#ifdef HAVE_REGEX_H
+#if HAVE_REGEX_H
 #include <regex.h>
 #endif
-
-#ifdef HAVE_STRING_H
+#if HAVE_STRING_H
 #include <string.h>
 #endif
-
-#ifdef HAVE_NETDB_H
-#include <netdb.h>
-#endif
-
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_TERMCAP_H
+#include <termcap.h>
+#endif
+#if HAVE_UNISTD_H
 #include <unistd.h>
-
+#endif
 #ifdef EXPECT_DEBUG
-#ifdef HAVE_VIS_H
+#if HAVE_VIS_H
 #include <vis.h>
 #endif
 #endif
@@ -139,7 +143,7 @@ expect(int fd, const char *str, int *ftprc)
 #endif /* EXPECT_DEBUG */
     regex_t rstr;
     int done;
-    struct timeval timeout;
+    struct pollfd set[1];
     int retval;
     regmatch_t match;
     int verbose_expect=0;
@@ -163,16 +167,12 @@ expect(int fd, const char *str, int *ftprc)
 
     memset(buf, '\n', sizeof(buf));
 
-    timeout.tv_sec=10*60;    /* seconds until next message from tar */
-    timeout.tv_usec=0;
     done=0;
     retval=0;
+    set[0].fd = fd;
+    set[0].events = POLLIN;
     while(!done) {
-	fd_set fdset;
-
-	FD_ZERO(&fdset);
-	FD_SET(fd, &fdset);
-	rc = select(FD_SETSIZE, &fdset, NULL, NULL, &timeout);
+	rc = poll(set, 1, 10*60*1000);    /* seconds until next message from tar */
 	switch (rc) {
 	case -1:
 	    if (errno == EINTR)
@@ -203,6 +203,12 @@ expect(int fd, const char *str, int *ftprc)
 	    retval = -1;
 	    break;
 	default:
+	    if (set[0].revents & POLLHUP) {
+		done = 1;
+		retval = -1;
+		break;
+	    }
+
 	    rc=read(fd,&buf[sizeof(buf)-1],1);
 
 	    if (verbose_expect)
@@ -376,7 +382,7 @@ setupCoproc(const char *base)
 static void
 sigchld_handler (int n)
 {
-	/* Make select(2) return EINTR */
+	/* Make poll(2) return EINTR */
 }
 
 
@@ -451,14 +457,14 @@ ftp_start(char *base)
 	const char *currentDir=getenv(PKG_FTPIO_CURRENTDIR);
 	int urllen;
 
+#if HAVE_TGETENT
 	/* talk to termcap for bold on/off escape sequences */
-#if 0
-	if (tgetent(term, getenv("TERM")) < 0) {
-		bold_on[0]  = '\0';
-		bold_off[0] = '\0';
-	} else {
+	if (getenv("TERM") != NULL && tgetent(term, getenv("TERM")) > 0) {
 		p = bold_on;  tgetstr("md", &p);
 		p = bold_off; tgetstr("me", &p);
+	} else {
+		bold_on[0]  = '\0';
+		bold_off[0] = '\0';
 	}
 #else
 	bold_on[0]  = '\0';
@@ -565,7 +571,7 @@ expandURL(char *expandedurl, const char *wildcardurl)
 
     pkg=strrchr(wildcardurl, '/');
     if (pkg == NULL){
-	warnx("expandURL: no '/' in url %s?!", wildcardurl);
+	warnx("expandURL: no '/' in URL %s?!", wildcardurl);
 	return -1;
     }
     (void) snprintf(base, sizeof(base), "%*.*s/", (int)(pkg-wildcardurl),
@@ -585,7 +591,7 @@ expandURL(char *expandedurl, const char *wildcardurl)
 	char best[FILENAME_MAX];
 	int tfd;
 
-	strcpy(tmpname, "/var/tmp/pkg.XXXXXX");
+	strlcpy(tmpname, "/var/tmp/pkg.XXXXXX", sizeof(tmpname));
 	tfd=mkstemp(tmpname);
 	if (tfd == -1) {
 		warnx("Cannot generate temp file for ftp(1)'s nlist output");
@@ -697,7 +703,7 @@ unpackURL(const char *url, const char *dir)
 	char pkg_path[FILENAME_MAX];
 
 	{
-		/* Verify if the url is really ok */
+		/* Verify if the URL is really ok */
 		char expnd[FILENAME_MAX];
 
 		rc=expandURL(expnd, url);
@@ -714,7 +720,7 @@ unpackURL(const char *url, const char *dir)
 	
 	pkg=strrchr(url, '/');
 	if (pkg == NULL){
-		warnx("unpackURL: no '/' in url %s?!", url);
+		warnx("unpackURL: no '/' in URL %s?!", url);
 		return -1;
 	}
 	(void) snprintf(base, sizeof(base), "%*.*s/", (int)(pkg-url),
@@ -745,7 +751,7 @@ unpackURL(const char *url, const char *dir)
 			printf("unpackURL '%s' to '%s'\n", url, dir);
 
 		/* yes, this is gross, but needed for borken ftp(1) */
-		(void) snprintf(cmd, sizeof(cmd), "get %s \"| ( cd %s ; gunzip 2>/dev/null | " TAR_FULLPATHNAME " -%sx -f - | tee /dev/stderr )\"\n", pkg, dir, Verbose?"vv":"");
+		(void) snprintf(cmd, sizeof(cmd), "get %s \"| ( cd %s ; gunzip 2>/dev/null | " TAR_CMD " -%sx -f - | tee /dev/stderr )\"\n", pkg, dir, Verbose?"vv":"");
 		rc = ftp_cmd(cmd, "\n(226|550).*\n");
 		if (rc != 226) {
 			warnx("Cannot fetch file (%d!=226)!", rc);
@@ -770,7 +776,7 @@ miscstuff(const char *url)
 
     pkg=strrchr(url, '/');
     if (pkg == NULL){
-	warnx("miscstuff: no '/' in url %s?!", url);
+	warnx("miscstuff: no '/' in URL %s?!", url);
 	return -1;
     }
     (void) snprintf(base, sizeof(base), "%*.*s/", (int)(pkg-url), (int)(pkg-url),
