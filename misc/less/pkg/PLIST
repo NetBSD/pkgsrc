@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 10:05:26 bouyer Exp $
+bin/less
+bin/lesskey
+bin/lessecho
+man/man1/less.1
+man/man1/lesskey.1
