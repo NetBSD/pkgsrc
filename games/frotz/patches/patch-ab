@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2002/03/25 18:23:37 wiz Exp $
+
+--- ux_input.c.orig	Wed Feb 20 00:15:36 2002
++++ ux_input.c
+@@ -146,6 +146,7 @@
+ 		return ZC_TIME_OUT;
+ 	    else
+ 		continue;
++#if 0
+ 	case 0:
+ 		/* Zero is the character code returned by curses when the 
+ 		   user types Ctrl-@ (or Ctrl-Space).  It is also 
+@@ -153,6 +154,7 @@
+ 		   must not return a bogus timeout to the program.
+ 		*/
+ 		continue;
++#endif
+ 
+ 	/* Screen decluttering. */
+ 	case MOD_CTRL ^ 'L': case MOD_CTRL ^ 'R':
