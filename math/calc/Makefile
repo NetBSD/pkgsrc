@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/26 23:35:17 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/13 23:51:34 jtb Exp $
 
 DISTNAME=	calc-2.02f
 CATEGORIES=	math
@@ -7,17 +7,25 @@ MASTER_SITES=	${MASTER_SITE_GNU:=calc/}
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/calc/calc.html
 
-DEPENDS+=	emacs>=20.0:../../editors/emacs
+.include "../../mk/bsd.prefs.mk"
 
-EVAL_PREFIX+=	PREFIX=emacs
+.if defined(USE_XEMACS)
+MAKE_ENV+=	EMACS=xemacs
+DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
+SITE_LISP=	lib/xemacs/xemacs-packages/lisp
+.else
+MAKE_ENV+=	EMACS=emacs
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
+SITE_LISP=	share/emacs/site-lisp
+.endif
+
+PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp/calc
-	@(cd ${WRKSRC}; for i in *.el *.elc calccard.tex; do \
-	${INSTALL_DATA} $$i ${PREFIX}/share/emacs/site-lisp/calc ; \
-	done)
+	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
+	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}/calc
+	${INSTALL_DATA} ${WRKSRC}/*.el ${WRKSRC}/*.elc \
+	${WRKSRC}/calccard.tex ${PREFIX}/${SITE_LISP}/calc
 	${INSTALL_DATA} ${WRKSRC}/calc.info* ${PREFIX}/info
-	@install-info --dir-file=${PREFIX}/info/dir \
-	--info-file=${PREFIX}/info/calc.info
 
 .include "../../mk/bsd.pkg.mk"

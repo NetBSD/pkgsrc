@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/26 23:35:19 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/13 23:51:35 jtb Exp $
 
 --- Makefile.orig	Mon Dec 16 04:50:45 1996
 +++ Makefile
-@@ -32,7 +32,7 @@
- EMACS    = emacs
+@@ -29,10 +29,10 @@
+ 
+ 
+ # Programs.
+-EMACS    = emacs
++#EMACS    = xemacs
  TEX      = tex
  TEXINDEX = texindex
 -MAKEINFO = makeinfo
