@@ -1,5 +1,5 @@
  #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.1 2002/11/11 21:51:05 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.2 2002/11/13 01:05:03 dmcmahill Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -273,6 +273,7 @@ END {
 		nm=dpkgs[i];
 # we need a zillion escapes here because we need to end up with \\&lt; in 'htmldeps' so that when
 # we gsub htmldeps into the output file, we end up with &lt;
+		gsub(/&/,"\\\\\\&amp;",nm);
 		gsub(/</,"\\\\\\&lt;",nm);
 		gsub(/>/,"\\\\\\&gt;",nm);
 		htmldeps=htmldeps " <a href=\"../../" pat2dir[dpkgs[i]] "/"readme_name"\">" nm "</a>";
@@ -287,11 +288,18 @@ END {
 		if(debug) printf("Checking for %s (%s) vulnerabilities\n",toppkg,pkgbase);
 		while(i in vulpkg) {
 		    nm=vulpkg[i];
+		    gsub(/&/,"\\\\\\&amp;",nm);
 		    gsub(/</,"\\\\\\&lt;",nm);
 		    gsub(/>/,"\\\\\\&gt;",nm);
+		    url=vulref[i];
+		    gsub(/&/,"\\\\\\&",url);
+		    printurl=vulref[i];
+		    gsub(/&/,"\\\\\\&amp;",printurl);
+		    gsub(/</,"\\\\\\&lt;",printurl);
+		    gsub(/>/,"\\\\\\&gt;",printurl);
 		    if(vulpkg[i] ~ "^"pkgbase"[-<>=]+[0-9]") {
 			vul=sprintf("%s<STRONG><LI> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", 
-				    vul,nm,vultype[i],vulref[i],vulref[i]); 
+				    vul,nm,vultype[i],url,printurl); 
 		    }
 		    i=i+1;
 		}
