@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/22 08:06:15 tron Exp $
+# $NetBSD: Makefile,v 1.19 2002/09/26 12:46:40 seb Exp $
 
 DISTNAME=		ImageMagick-5.4.8-2
 PKGNAME=		p5-PerlMagick-5.4.8.2
@@ -22,13 +22,15 @@ PATCHDIR=		${.CURDIR}/../../graphics/ImageMagick/patches
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_PERL5=		YES
+PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Magick/.packlist
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-2//}
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/PerlMagick
+BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
 # These need to coordinate with the ImageMagick package.
 # Just leave out "--without-perl".
@@ -46,13 +48,7 @@ BUILD_DEPENDS+=		bash>=2.0:../../shells/bash2
 CONFIGURE_SCRIPT=	${LOCALBASE}/bin/bash ./configure
 .endif
 
-post-configure:
-	cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+post-configure: perl5-configure
 
-do-build:
-	@cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
-do-install:
-	@cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
