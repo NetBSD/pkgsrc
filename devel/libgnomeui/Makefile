@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2004/05/06 22:03:36 grant Exp $
+# $NetBSD: Makefile,v 1.35 2004/09/21 16:47:55 jmmv Exp $
 #
 
-DISTNAME=	libgnomeui-2.6.1.1
+DISTNAME=	libgnomeui-2.8.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -24,7 +24,7 @@ USE_X11=		yes
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
