@@ -1,0 +1,95 @@
+$NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/dfree.c.orig	Mon Jul  9 11:13:56 2001
++++ yatd/dfree.c
+@@ -72,12 +72,6 @@
+ 
+ #define DEBUG_LOCAL
+ 
+-#ifndef LONGLONG_OPTC 
+-/* LONGLONG_OPTCが定義されていない場合には 空白を定義して，
+-   リテラルの糊として使う */
+-#define LONGLONG_OPTC /* */
+-#endif
+-
+ int DFreeCheck(pPath, pSizFree, pNodFree)
+      char   * pPath;    /* ユーザーのホームディレクトリの位置 */
+      OFF_T  * pSizFree; /* 空きブロック数 */
+@@ -99,7 +93,7 @@
+   nodLimit = *pNodFree; /* リミットのノード数を指定する */
+ 
+ #ifdef DEBUG_LOCAL
+-  LogDEBUG("sizLimit:%" LONGLONG_OPTC  "d, nodLimit:%d, sizof(OFF_T):%d", 
++  LogDEBUG("sizLimit:%" LONGLONG_OPTC  "d, nodLimit:%ld, sizof(OFF_T):%d", 
+ 	   sizLimit, nodLimit, sizeof (OFF_T));
+ #endif /* DEBUG_LOCAL */
+ 
+@@ -123,22 +117,21 @@
+ # ifdef BSD44 
+   LogDEBUG("statfs() returns:");
+   LogDEBUG("  type: %d", statfsBuf.f_type);
+-  LogDEBUG("  flags: 0x%x", statfsBuf.f_flags);
++  LogDEBUG("  flags: 0x%lx", statfsBuf.f_flags);
+ #  ifdef __NetBSD__
+   LogDEBUG("  oflags: 0x%x", statfsBuf.f_oflags);
+ #  endif
+ #  ifdef BSDOS1
+   LogDEBUG("  fsize: %d", statfsBuf.f_fsize);
+ #  endif
+-  LogDEBUG("  bsize: %d", statfsBuf.f_bsize);
+-  LogDEBUG("  iosize: %d", statfsBuf.f_iosize);
+-  LogDEBUG("  blocks: %d", statfsBuf.f_blocks);
+-  LogDEBUG("  bfree: %d", statfsBuf.f_bfree);
+-  LogDEBUG("  bavail: %d", statfsBuf.f_bavail);
+-  LogDEBUG("  files: %d", statfsBuf.f_files);
+-  LogDEBUG("  ffree: %d", statfsBuf.f_ffree);
+-  LogDEBUG("  fsid: %d", statfsBuf.f_fsid);
+-  LogDEBUG("  owner %d", statfsBuf.f_owner);
++  LogDEBUG("  bsize: %ld", statfsBuf.f_bsize);
++  LogDEBUG("  iosize: %ld", statfsBuf.f_iosize);
++  LogDEBUG("  blocks: %ld", statfsBuf.f_blocks);
++  LogDEBUG("  bfree: %ld", statfsBuf.f_bfree);
++  LogDEBUG("  bavail: %ld", statfsBuf.f_bavail);
++  LogDEBUG("  files: %ld", statfsBuf.f_files);
++  LogDEBUG("  ffree: %ld", statfsBuf.f_ffree);
++  LogDEBUG("  fsid: %" LONGLONG_OPTC "u", statfsBuf.f_fsid);
+ #ifdef STRUCT_STATFS_HAVE_F_FSTYPENAME
+   LogDEBUG("  fstypename: %.256s", statfsBuf.f_fstypename);
+ #endif
+@@ -311,7 +304,7 @@
+   nodFree = SysData.nodLimitFree;
+ 
+ #ifdef DEBUG_LOCAL
+-    LogDEBUG("FuncDFree(): sizFree:%" LONGLONG_OPTC "d, nodFree:%d",
++    LogDEBUG("FuncDFree(): sizFree:%" LONGLONG_OPTC "d, nodFree:%ld",
+ 	     sizFree, nodFree);
+ #endif
+     
+@@ -325,7 +318,7 @@
+     if (DFreeCheck(SysData.szUserFldrDir, &sizFree, &nodFree)){
+       return FAILURE;
+     }
+-    Msg2Cli(SUCCESS, "%" LONGLONG_OPTC "d %d", sizFree, nodFree);
++    Msg2Cli(SUCCESS, "%" LONGLONG_OPTC "d %ld", sizFree, nodFree);
+ #endif /* DONT_CHECKDFREE */
+   return SUCCESS;
+ }
+@@ -449,12 +442,12 @@
+   switch( status ){
+   case SUCCESS:
+     LogDEBUG("quotactl() returns:");
+-    LogDEBUG(" bhardlimit: %d",quota_get_block_hard_limit(quota_block));
+-    LogDEBUG(" bsoftlimit: %d",quota_get_block_soft_limit(quota_block));
+-    LogDEBUG(" curblocks : %d",quota_get_block_current(quota_block));
+-    LogDEBUG(" ihardlimit: %d",quota_get_inode_hard_limit(quota_block));
+-    LogDEBUG(" isoftlimit: %d",quota_get_inode_soft_limit(quota_block));
+-    LogDEBUG(" curinodes : %d", quota_get_inode_current(quota_block));
++    LogDEBUG(" bhardlimit: %ld",quota_get_block_hard_limit(quota_block));
++    LogDEBUG(" bsoftlimit: %ld",quota_get_block_soft_limit(quota_block));
++    LogDEBUG(" curblocks : %ld",quota_get_block_current(quota_block));
++    LogDEBUG(" ihardlimit: %ld",quota_get_inode_hard_limit(quota_block));
++    LogDEBUG(" isoftlimit: %ld",quota_get_inode_soft_limit(quota_block));
++    LogDEBUG(" curinodes : %ld", quota_get_inode_current(quota_block));
+     return SUCCESS;
+   case FAILURE:
+     return FAILURE;

@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- conf.h.orig	Mon Jul  9 12:36:15 2001
++++ conf.h
+@@ -26,17 +26,20 @@
+ 
+ #if SIZEOF_OFF_T == SIZEOF_LONG_LONG
+ # define LONGLONG_OFF_T
++# define LONGLONG_CAST(c)	(long long)(c)
+ # ifndef LONGLONG_OPTC
+ #  if defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #   define LONGLONG_OPTC "q"
+ #  elif defined( __sun__ ) 
+ #   define LONGLONG_OPTC "ll"
+ #  else  
+-#   define LONGLONG_OPTC "ul"
++#   define LONGLONG_OPTC "lu"
+ #  endif 
+ # endif /* LONGLONG_OPTC */
+ #elif SIZEOF_OFF_T == SIZEOF_LONG 
+ # undef LONGLONG_OFF_T
++# define LONGLONG_CAST(c)	(c)
++# define LONGLONG_OPTC /* */
+ #else
+ # error
+ #endif /* SIZEOF_OFF_T == SIZEOF_LONG_LONG */
