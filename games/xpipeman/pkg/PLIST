@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/01 14:52:45 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/14 23:52:17 garbled Exp $
 bin/xpipeman
 man/man6/xpipeman.6
-share/xpipeman/xpipescores
-@unexec rm -f %D/share/xpipeman/xpipescores
 @dirrm share/xpipeman
