@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: cdgen.awk,v 1.4 2003/02/05 15:01:57 dmcmahill Exp $
+# $NetBSD: cdgen.awk,v 1.5 2005/01/09 15:33:09 dmcmahill Exp $
 #
 # Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
 #
@@ -116,7 +116,7 @@ BEGIN {
     }
     
     
-    now = strftime("%a %b %d %H:%M:%S %Z %Y");
+    "date" | getline now;
     printf("%s starting %28s\n",prog,now);
     
 #
@@ -406,7 +406,7 @@ BEGIN {
 
     close(cdlist);
 
-    now = strftime("%a %b %d %H:%M:%S %Z %Y");
+    "date" | getline now;
     printf("%s finished on %28s\n",prog,now);
 
     printf("\n");
