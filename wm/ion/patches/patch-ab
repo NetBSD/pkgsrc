@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/22 13:32:28 zuntum Exp $
+
+--- system.mk.orig	Mon Mar  5 17:16:01 2001
++++ system.mk
+@@ -7,13 +7,13 @@
+ ## Installation paths
+ ##
+ 
+-PREFIX=/usr/local
++PREFIX=$(X11BASE)
+ 
+ # No need to modify these usually
+ BINDIR=$(PREFIX)/bin
+ ETCDIR=$(PREFIX)/etc
+ MANDIR=$(PREFIX)/man
+-DOCDIR=$(PREFIX)/doc
++DOCDIR=$(PREFIX)/share/doc
+ # Not used
+ INCDIR=$(PREFIX)/include
+ LIBDIR=$(PREFIX)/lib
+@@ -24,7 +24,7 @@
+ ##
+ 
+ #MODULE_SUPPORT=-DCF_NO_MODULE_SUPPORT
+-MODULE_SUPPORT_LDFLAGS=-export-dynamic -ldl
++MODULE_SUPPORT_LDFLAGS=-export-dynamic
+ 
+ 
+ ##
+@@ -59,7 +59,6 @@
+ ## C compiler
+ ##
+ 
+-CC=gcc
+ 
+ # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
+ # they're mainly for development use. So, if they cause trouble (not
+@@ -86,8 +85,8 @@
+ 	-Wparentheses -pedantic-errors -Wuninitialized
+ 
+ 
+-CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
++CFLAGS+=$(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
++LDFLAGS+=$(LIBS) $(EXTRA_LIBS)
+ 
+ 
+ ##
+@@ -112,9 +111,9 @@
+ ##
+ 
+ # Should work almost everywhere
+-INSTALL=install
++#INSTALL=install
+ # On a system with pure BSD install, -c might be preferred
+-#INSTALL=install -c
++INSTALL=install -c
+ 
+ INSTALLDIR=mkdir -p
+ 
