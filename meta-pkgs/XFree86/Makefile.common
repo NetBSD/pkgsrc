@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/24 08:52:28 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/31 19:08:47 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -19,9 +19,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD"
-MANCOMPRESSED=	YES
-.elif ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux"
 USE_GNU_TOOLS+= make
 .endif
 
@@ -50,6 +48,7 @@ SYSTEMS=	FreeBSD NetBSD linux
 .if !defined(NO_XFREE86_TARGETS)
 
 .if !target(post-extract)
+
 post-extract:
 	@${SED} \
 		-e "s|@BLNK@|${BUILDLINK_DIR}|g" \
