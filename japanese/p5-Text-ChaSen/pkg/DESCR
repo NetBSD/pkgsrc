@@ -1,0 +1,5 @@
+Text::ChaSen - ChaSen library module for perl.
+
+This is a module to use ChaSen, Japanese Morphological
+Analysis System, developed by Nara Institute of Science
+and Technorogy, from perl.
