@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
 --- configure.orig	Tue Aug  8 15:17:11 2000
-+++ configure	Thu Aug 24 12:03:49 2000
-@@ -5070,8 +5070,8 @@
++++ configure	Thu Aug 24 17:27:16 2000
+@@ -5070,8 +5071,8 @@
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
  		DL_LIBS=""
@@ -12,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
  echo "configure:5077: checking for ELF" >&5
  		cat > conftest.$ac_ext <<EOF
-@@ -5789,7 +5789,7 @@
+@@ -5789,7 +5790,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
      else
@@ -21,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
  	RANLIB=":"
      fi
  else
-@@ -5859,9 +5859,9 @@
+@@ -5859,9 +5860,9 @@
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -33,3 +32,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
  fi
  
  #--------------------------------------------------------------------
+@@ -6097,6 +6098,8 @@
+ s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
+ s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
+ s%@CFLAGS_WARNING@%$CFLAGS_WARNING%g
++s%@LDFLAGS_DEBUG@%$LDFLAGS_DEBUG%g
++s%@LDFLAGS_OPTIMIZE@%$LDFLAGS_OPTIMIZE%g
+ s%@STUB_LIB_FILE@%$STUB_LIB_FILE%g
+ s%@TCL_STUB_LIB_FILE@%$TCL_STUB_LIB_FILE%g
+ s%@TCL_STUB_LIB_FLAG@%$TCL_STUB_LIB_FLAG%g
