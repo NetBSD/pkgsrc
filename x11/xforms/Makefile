@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:39 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/13 13:04:15 matthias Exp $
 #
 
 DISTNAME=		bxform-088
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://bragg.phys.uwm.edu/pub/xforms/%SUBDIR%/
 MASTER_SITE_SUBDIR=	netBSD-arm
 .elif (${MACHINE_ARCH} == "i386")
 MASTER_SITE_SUBDIR=	netBSD
+.elif (${MACHINE_ARCH} == "ns32k")
+MASTER_SITE_SUBDIR=	netBSD-pc532
 .else
 MASTER_SITE_SUBDIR=	netBSD-${MACHINE_ARCH}
 .endif
@@ -18,7 +20,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		lamj@stat.cmu.edu
 HOMEPAGE=		http://bragg.phys.uwm.edu/xforms/
 
-ONLY_FOR_ARCHS=		arm32 i386 m68k sparc pc532
+ONLY_FOR_ARCHS=		arm32 i386 m68k sparc ns32k
 
 DIST_SUBDIR=		xforms/${MASTER_SITE_SUBDIR}
 
