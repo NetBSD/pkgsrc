@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7973 2004/11/25 05:47:23 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7974 2004/11/25 09:34:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5409,3 +5409,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.5b [minskim 2004-11-24]
 	Added kapooka-0.2 [wiz 2004-11-24]
 	Added gld-1.4 [xtraeme 2004-11-25]
+	Updated balsa2 to 2.2.6 [adam 2004-11-25]
