@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:38:31 kei Exp $
+lib/X11/fonts/local/knmhn12x.pcf.gz
+lib/X11/fonts/local/knmzn12x.pcf.gz
+share/doc/kaname/readme.kaname_bdf
+share/doc/kaname/kaname.doc
+share/doc/kaname/readme.knm
+share/doc/kaname/gijutsu-siryou.doc
+@dirrm share/doc/kaname
+@exec mkfontdir %D/lib/X11/fonts/local
+@unexec mkfontdir %D/lib/X11/fonts/local
