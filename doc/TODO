@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3056 2005/02/19 11:22:31 wiz Exp $
+$NetBSD: TODO,v 1.3057 2005/02/19 11:23:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -723,7 +723,6 @@ Suggested package updates
 	o p5-Business-CreditCard-0.28
 	o p5-Business-ISBN-Data-1.09
 	o p5-CDDB-1.15
-	o p5-Class-MethodMaker-2.04.1
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12
 	o p5-Crypt-CipherSaber-0.61
