@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/22 22:18:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/29 11:03:56 wiz Exp $
 # FreeBSD: ports/mail/rblcheck/Makefile,v 1.6 1999/08/25 06:50:47 obrien Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rblcheck/} \
 		http://www.xnet.com/%7Eemarshal/rblcheck/
 
-MAINTAINER=	itojun@itojun.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://rblcheck.sourceforge.net/
 COMMENT=	Command-line interface to Paul Vixie's RBL filter
 
