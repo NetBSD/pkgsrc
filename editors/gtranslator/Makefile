@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/12/04 11:54:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2005/01/14 09:50:57 adam Exp $
 
-DISTNAME=	gtranslator-1.0
-PKGREVISION=	10
+DISTNAME=	gtranslator-1.0.2
 CATEGORIES=	editors
-MASTER_SITES=	http://gtranslator.sourceforge.net/download/releases/1.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtranslator/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gtranslator.sourceforge.net/
@@ -12,12 +10,12 @@ COMMENT=	Gettext po file editor for the GNOME2 desktop environment
 
 BUILD_USES_MSGFMT=	yes
 
-GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
+GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
 
 CONFIGURE_ARGS+=	--disable-debug
