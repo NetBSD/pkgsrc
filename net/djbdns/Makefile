@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/05/13 14:36:39 yyamano Exp $
+# $NetBSD: Makefile,v 1.19 2002/06/03 12:17:54 cjep Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
@@ -33,8 +33,10 @@ INSTALL_TARGET=	setup check
 
 MANVERSION=	20010212
 
-.if (${MACHINE_ARCH} == "arm32" && ${CFLAGS} == "-O2")
-CFLAGS=		-O0
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm") 
+.if (${CFLAGS:M-O2} == "-O2")
+CFLAGS:=        ${CFLAGS:S/-O2/-O0/}
+.endif
 .endif
 
 post-extract:
