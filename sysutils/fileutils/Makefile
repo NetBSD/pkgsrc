@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2002/10/09 17:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/10/26 15:43:50 grant Exp $
 
-DISTNAME=		fileutils-4.1.8
-PKGREVISION=		1
+DISTNAME=		fileutils-4.1.11
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://alpha.gnu.org/pub/gnu/fileutils/
 EXTRACT_SUFX=		.tar.bz2
