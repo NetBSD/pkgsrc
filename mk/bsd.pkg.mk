@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1423 2004/03/13 20:58:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1424 2004/03/17 16:36:28 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -2923,7 +2923,9 @@ _DYLIB_AWK= \
 				print lines[i]; \
 				if (rels[i] != "") { \
 					print rels[i]; \
-					"${LS} -l ${PREFIX}/" rels[i] | getline tgt; \
+					cmd = "${LS} -l ${PREFIX}/" rels[i]; \
+					cmd | getline tgt; \
+					close(cmd); \
 					gsub(".* ", "", tgt); \
 					if (tgts[tgt] == "") { \
 						tgts[tgt] = tgt; \
@@ -4981,7 +4983,7 @@ _PLIST_AWK_ADD_MANZ=							  \
 /^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)$$/ { \
 	$$0 = $$0 ".gz";						  \
 }
-	
+
 # plist awk pattern-action statement to handle PLIST_SUBST substitutions
 # BEWARE: the awk script quote is closed and reopened around the
 # string argument of gsub() calls so historic quoting semantic of
