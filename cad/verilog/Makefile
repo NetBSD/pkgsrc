@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2004/03/22 00:15:06 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/14 22:29:04 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-0.7
+DISTNAME=	verilog-0.8
 CATEGORIES=	cad
-MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.7/
+MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.8/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=	gperf>=2.7.2:../../devel/gperf
 
 CONFLICTS+=	verilog-current-[0-9]*
 
@@ -24,4 +23,8 @@ YACC=			${LOCALBASE}/bin/bison
 TEST_DIRS=	${WRKSRC}
 TEST_TARGET=	check
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
