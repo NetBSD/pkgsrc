@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: buildlink2.mk,v 1.5 2002/10/01 19:30:47 jlam Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
