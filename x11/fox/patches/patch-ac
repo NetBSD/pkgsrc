@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/02/24 16:56:56 sakamoto Exp $
+$NetBSD: patch-ac,v 1.2 2003/08/29 10:16:12 xtraeme Exp $
 
---- doc/Makefile.in.orig	Tue Feb 13 01:35:22 2001
-+++ doc/Makefile.in
-@@ -84,7 +84,7 @@
+--- doc/Makefile.in.orig	2003-08-29 10:16:59.000000000 +0200
++++ doc/Makefile.in	2003-08-29 10:17:21.000000000 +0200
+@@ -87,7 +87,7 @@
  VERSION = @VERSION@
  X_BASE_LIBS = @X_BASE_LIBS@
  
 -htmldir = $(prefix)/@PACKAGE@/html
 +htmldir = $(prefix)/share/doc/html/@PACKAGE@
  
- # Source code documentation tool
- PERCEPS = perceps
+ SUBDIRS = art screenshots
+ 
