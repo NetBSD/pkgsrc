@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/27 14:06:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/07 08:58:35 adam Exp $
 share/GNUstep/System/Applications/ProjectCenter.app/ProjectCenter
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/AggregateProject
 share/GNUstep/System/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Info-gnustep.plist
@@ -120,77 +120,77 @@ share/GNUstep/System/Applications/ProjectCenter.app/library_paths.openapp
 share/GNUstep/System/Applications/ProjectCenter.app/stamp.make
 share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Headers
 share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Resources
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCAddFilesPanel.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCBuildPanel.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCBundleLoader.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCButton.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCDefines.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditor.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditorView+Highlighting.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditorView.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileCreator.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileManager.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLaunchPanel.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLoadedFilesPanel.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCMakefileFactory.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProject.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBrowser.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBuilder.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectEditor.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectInspector.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLauncher.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLoadedFiles.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectManager.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectWindow.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCServer.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCSplitView.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCTextFinder+UInterface.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCTextFinder.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/ProjectCenter.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/ProjectType.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Server.h
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/ProjectCenter
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/data.classes
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/data.info
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/objects.gorm
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cfile.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cheader.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/class.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/gsmarkup.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/header.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/postamble.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/protocol.template
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so
-share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so.0.4.1
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCAddFilesPanel.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCBuildPanel.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCBundleLoader.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCButton.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCDefines.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCEditor.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCEditorView+Highlighting.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCEditorView.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCFileCreator.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCFileManager.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCLaunchPanel.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCLoadedFilesPanel.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCMakefileFactory.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProject.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectBrowser.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectBuilder.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectEditor.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectInspector.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectLauncher.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectLoadedFiles.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectManager.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCProjectWindow.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCServer.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCSplitView.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCTextFinder+UInterface.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/PCTextFinder.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/ProjectCenter.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/ProjectType.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers/Server.h
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/ProjectCenter
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/BuildAttributes.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/BuildAttributes.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/BuildAttributes.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/FileAttributes.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/FileAttributes.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/FileAttributes.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewFile.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewFile.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewFile.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewSubproject.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewSubproject.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewSubproject.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectDescription.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectDescription.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectDescription.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectInspector.gorm/data.classes
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectInspector.gorm/data.info
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectInspector.gorm/objects.gorm
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/cfile.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/cheader.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/class.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/gsmarkup.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/header.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/postamble.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/protocol.template
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/libProjectCenter.so
+share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/libProjectCenter.so.0.4.1
 share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/Current
 share/GNUstep/System/Library/Headers/ProjectCenter
 share/GNUstep/System/Library/Libraries/libProjectCenter.so
-share/GNUstep/System/Library/Libraries/libProjectCenter.so.${PKGVERSION}
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers
-@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}
+share/GNUstep/System/Library/Libraries/libProjectCenter.so.0.4.1
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectInspector.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/ProjectDescription.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewSubproject.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/NewFile.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/FileAttributes.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources/BuildAttributes.gorm
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Resources
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1/Headers
+@dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions/0.4.1
 @dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework/Versions
 @dirrm share/GNUstep/System/Library/Frameworks/ProjectCenter.framework
 @dirrm share/GNUstep/System/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Inspector.gorm

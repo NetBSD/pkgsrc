@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/01/27 14:06:11 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/07 08:58:35 adam Exp $
 
-SHA1 (ProjectCenter-0.4.1.tar.gz) = ed308cb37263a915922eb0b7c891208a652f0c02
-Size (ProjectCenter-0.4.1.tar.gz) = 302320 bytes
+SHA1 (ProjectCenter-0.4.2.tar.gz) = 202c4af75e8fb3ecea6897aacb3e134abbfab6a3
+Size (ProjectCenter-0.4.2.tar.gz) = 302035 bytes
