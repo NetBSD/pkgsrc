@@ -1,8 +1,9 @@
-$NetBSD: patch-ah,v 1.6 2004/06/02 11:43:55 tron Exp $
+$NetBSD: patch-ah,v 1.7 2004/07/24 23:55:28 grant Exp $
 
---- site/Makefile.orig	Thu May  3 22:27:32 2001
-+++ site/Makefile	Sun Jun 24 13:01:33 2001
-@@ -85,21 +85,10 @@
+--- site/Makefile.orig	2004-01-08 09:47:19.000000000 +1100
++++ site/Makefile
+@@ -68,22 +68,11 @@ REST		= \
+ ALL		= $(MOST) $(REST)
  
  REST_INSTALLED	= \
 -	$D$(PATH_NEWSFEEDS) $D$(PATH_INNDHOSTS) \

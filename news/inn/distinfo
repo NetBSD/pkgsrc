@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.11 2004/07/07 12:38:24 tron Exp $
+$NetBSD: distinfo,v 1.12 2004/07/24 23:55:27 grant Exp $
 
 SHA1 (inn-2.4.1.tar.gz) = f36267eca56a643a37ed6c2903cd6fbb71e407f5
 Size (inn-2.4.1.tar.gz) = 1849845 bytes
-SHA1 (patch-aa) = 39fcd03440ece2246503197d217e04e4724bbb8d
-SHA1 (patch-ab) = c3360248137c07c0e1750860de79aa1f372a6352
-SHA1 (patch-ac) = dafbd4918eb771cf0bb49b9d2503125812fe6852
-SHA1 (patch-ad) = c782b0510c460a8942bb272e18e6d8d78901d4c9
-SHA1 (patch-ae) = 1177f68a567cbbf4b131548c8a1a595e3d3f29b8
-SHA1 (patch-af) = 0cfdb3c63f782dfe7120a1ae85fe86b8e0582639
-SHA1 (patch-ag) = d91e1710a12d6bf39564f550947f4705b0ffd585
-SHA1 (patch-ah) = 719ed7d26c23ce5170275995e4bd9e5a337199b9
-SHA1 (patch-ai) = 30caac4e6b269dc7cfac507ca1f8f0fe5ac11329
+SHA1 (patch-aa) = 548acc9d7b8386ed055fae772c8c26e5c6225da6
+SHA1 (patch-ab) = a681fdecf562088cfb25e8625be1380b32331af0
+SHA1 (patch-ac) = c37aa2ea182fafd01ee4a20dbcd67816217a8587
+SHA1 (patch-ad) = 1f4d4b15a478d6d35185977d8bc32a4e161665c5
+SHA1 (patch-ae) = 28c36db3fee701d7a46e656e0911356b0fa40c59
+SHA1 (patch-af) = fda097d52bd77500d287e30af8332d7e817a46a2
+SHA1 (patch-ag) = 0d513b856f1dc75e8d72294dc6e88ca52b0b9cd3
+SHA1 (patch-ah) = 0d3dbaab7fa70c96528beec8e7b3f05f74822512
+SHA1 (patch-ai) = 9d99bd095dc5cb4b9c99274c0adeaab779ca2c2d
