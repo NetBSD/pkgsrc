@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/10/06 11:40:07 magick Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/01/18 05:45:42 uebayasi Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -10,6 +10,9 @@ bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
+@exec ${MKDIR} %D/lib/xemacs
+@exec ${MKDIR} %D/lib/xemacs/site-lisp
+@exec ${MKDIR} %D/lib/xemacs/site-modules
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/DOC
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/add-big-package.sh
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/config.values
@@ -64,7 +67,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/devslots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dragdrop.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dumper.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/eldap.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/elhash.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/emodules.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/event-gtk.h
@@ -229,7 +231,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix-types.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/opaque.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/paths.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/postgresql.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/process.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/procimpl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/rangetab.h
@@ -387,6 +388,8 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmprimitivep.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmu.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/make-docfile
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/mmencode
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.elc
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/movemail
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/profile
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/rcs2log
@@ -935,6 +938,8 @@ lib/${EMACSVER}/info/lispref.info-47
 lib/${EMACSVER}/info/lispref.info-48
 lib/${EMACSVER}/info/lispref.info-49
 lib/${EMACSVER}/info/lispref.info-5
+lib/${EMACSVER}/info/lispref.info-50
+lib/${EMACSVER}/info/lispref.info-51
 lib/${EMACSVER}/info/lispref.info-6
 lib/${EMACSVER}/info/lispref.info-7
 lib/${EMACSVER}/info/lispref.info-8
@@ -991,6 +996,7 @@ lib/${EMACSVER}/info/xemacs.info-20
 lib/${EMACSVER}/info/xemacs.info-21
 lib/${EMACSVER}/info/xemacs.info-22
 lib/${EMACSVER}/info/xemacs.info-23
+lib/${EMACSVER}/info/xemacs.info-24
 lib/${EMACSVER}/info/xemacs.info-3
 lib/${EMACSVER}/info/xemacs.info-4
 lib/${EMACSVER}/info/xemacs.info-5
@@ -999,7 +1005,6 @@ lib/${EMACSVER}/info/xemacs.info-7
 lib/${EMACSVER}/info/xemacs.info-8
 lib/${EMACSVER}/info/xemacs.info-9
 lib/${EMACSVER}/lisp/ChangeLog
-lib/${EMACSVER}/lisp/ChangeLog.1
 lib/${EMACSVER}/lisp/ChangeLog.GTK
 lib/${EMACSVER}/lisp/README
 lib/${EMACSVER}/lisp/abbrev.el
@@ -1545,35 +1550,32 @@ man/man1/gnuserv.1
 man/man1/xemacs-ctags.1
 man/man1/xemacs-etags.1
 man/man1/xemacs.1
-@dirrm lib/${EMACSVER}/etc/custom/example-themes
-@dirrm lib/${EMACSVER}/etc/custom
-@dirrm lib/${EMACSVER}/etc/eos
-@dirrm lib/${EMACSVER}/etc/idd
-@dirrm lib/${EMACSVER}/etc/photos
-@dirrm lib/${EMACSVER}/etc/sparcworks
+@exec ${MKDIR} /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
+@unexec ${RM} -rf /var/tmp/xemacs.lock
+@dirrm lib/${EMACSVER}/lisp/term
+@dirrm lib/${EMACSVER}/lisp/mule
+@dirrm lib/${EMACSVER}/lisp
+@dirrm lib/${EMACSVER}/info
+@dirrm lib/${EMACSVER}/etc/unicode/unicode-consortium
+@dirrm lib/${EMACSVER}/etc/unicode/other
+@dirrm lib/${EMACSVER}/etc/unicode/mule-ucs
+@dirrm lib/${EMACSVER}/etc/unicode/ibm
+@dirrm lib/${EMACSVER}/etc/unicode
+@dirrm lib/${EMACSVER}/etc/toolbar
 @dirrm lib/${EMACSVER}/etc/tests/external-widget
 @dirrm lib/${EMACSVER}/etc/tests
-@dirrm lib/${EMACSVER}/etc/toolbar
-@dirrm lib/${EMACSVER}/etc/unicode/ibm
-@dirrm lib/${EMACSVER}/etc/unicode/mule-ucs
-@dirrm lib/${EMACSVER}/etc/unicode/other
-@dirrm lib/${EMACSVER}/etc/unicode/unicode-consortium
-@dirrm lib/${EMACSVER}/etc/unicode
+@dirrm lib/${EMACSVER}/etc/sparcworks
+@dirrm lib/${EMACSVER}/etc/photos
+@dirrm lib/${EMACSVER}/etc/idd
+@dirrm lib/${EMACSVER}/etc/eos
+@dirrm lib/${EMACSVER}/etc/custom/example-themes
+@dirrm lib/${EMACSVER}/etc/custom
 @dirrm lib/${EMACSVER}/etc
-@dirrm lib/${EMACSVER}/lisp/mule
-@dirrm lib/${EMACSVER}/lisp/term
-@dirrm lib/${EMACSVER}/lisp
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules
-@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/${EMACSVER}/info
-@dirrm lib/${EMACSVER}
-@exec ${MKDIR} /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
-@unexec rm -rf /var/tmp/xemacs.lock
-@exec ${MKDIR} %D/lib/xemacs/site-lisp
-@exec ${MKDIR} %D/lib/xemacs/site-modules
-@dirrm lib/xemacs/site-lisp
 @dirrm lib/xemacs/site-modules
+@dirrm lib/xemacs/site-lisp
 @dirrm lib/xemacs
