@@ -1,25 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2001/06/15 19:49:21 magick Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/26 14:15:32 magick Exp $
 
-DISTNAME=	nxtvepg-0.5.2
+DISTNAME=	nxtvepg-0.6.0
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nefkom.net/tomzo/prj/nxtvepg/src/
 
 MAINTAINER=	magick@zhadum.de
-HOMEPAGE=	http://nxtvepg.tripod.com/
+HOMEPAGE=	http://www.nefkom.net/tomzo/prj/nxtvepg/
 COMMENT=	NextView EPG decoder
-
-DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
 
-NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
-
-USE_X11BASE=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
-
-MAKE_ENV+=	X11PREFIX=${X11PREFIX}
+USE_X11=	yes
 
 pre-configure:
 	cd ${WRKSRC};							\
@@ -27,4 +21,5 @@ pre-configure:
 	${SED} -e "s|@PERL5@|${PERL5}|g" pod2help.pl.orig > pod2help.pl; \
 	${CHMOD} +x ${WRKSRC}/pod2help.pl
 
+.include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
