@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/03 19:00:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	ode-0.039
@@ -11,7 +11,7 @@ HOMEPAGE=	http://opende.sourceforge.net/
 COMMENT=	Library for the simulation of Rigid Body Dynamics
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 do-configure:
