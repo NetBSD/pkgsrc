@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1471 2004/07/03 21:59:04 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1472 2004/07/03 22:07:11 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -547,13 +547,11 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .endif # defined(PATCHFILES)
 
 # Figure out where the local mtree file is
-.if !defined(MTREE_FILE)
-.  if defined(USE_X11BASE)
-MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.x11.dist
-.  else
-MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.pkg.dist
-.  endif
-.endif # ! MTREE_FILE
+.if defined(USE_X11BASE)
+MTREE_FILE?=	${_PKGSRCDIR}/mk/${OPSYS}.x11.dist
+.else
+MTREE_FILE?=	${_PKGSRCDIR}/mk/${OPSYS}.pkg.dist
+.endif
 
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
