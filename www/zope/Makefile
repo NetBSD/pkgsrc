@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2000/02/05 14:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/02/15 02:48:39 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.0.1-src
-PKGNAME=	zope-2.0.1
+DISTNAME=	Zope-2.1.4-src
+PKGNAME=	zope-2.1.4
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.0.1/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.4/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
 DEPENDS+=	python-1.5.2:../../lang/python
+DEPENDS+=	py-extclass-2.1.4:../../lang/py-extclass
+DEPENDS+=	py-dtml-2.1.4:../../textproc/py-dtml
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
@@ -19,7 +21,9 @@ ZOPEDIR=	${PREFIX}/lib/zope
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX}," \
 		<${FILESDIR}/Makefile.in > ${WRKSRC}/Makefile
-	(cd ${WRKSRC}; ${RM} -rf lib/Components/zlib)
+	(cd ${WRKSRC}/lib; ${RM} -rf Components/zlib \
+		Components/ExtensionClass python/DocumentTemplate \
+		python/StructuredText)
 	(cd ${WRKSRC}; make configure)
 
 do-install:

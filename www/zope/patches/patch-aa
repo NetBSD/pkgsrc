@@ -1,10 +1,29 @@
-$NetBSD: patch-aa,v 1.3 1999/12/08 07:27:55 rh Exp $
+$NetBSD: patch-aa,v 1.4 2000/02/15 02:48:40 tsarna Exp $
 
---- lib/python/Setup.orig	Tue Jul 20 00:55:11 1999
-+++ lib/python/Setup	Wed Dec  8 08:25:10 1999
-@@ -20,4 +20,4 @@
+Remove stuff built by other packages (py-extclass, zlib incl. in python)
+
+--- lib/python/Setup.orig	Mon Jul 19 18:55:11 1999
++++ lib/python/Setup	Mon Feb 14 20:37:57 2000
+@@ -1,15 +1,5 @@
+ *shared*
+ 
+-ExtensionClass 	  ../Components/ExtensionClass/ExtensionClass.c    -I../Components/ExtensionClass
+-Acquisition    	  ../Components/ExtensionClass/Acquisition.c       -I../Components/ExtensionClass
+-MethodObject   	  ../Components/ExtensionClass/MethodObject.c      -I../Components/ExtensionClass
+-MultiMapping   	  ../Components/ExtensionClass/MultiMapping.c      -I../Components/ExtensionClass
+-ThreadLock     	  ../Components/ExtensionClass/ThreadLock.c        -I../Components/ExtensionClass
+-Missing           ../Components/ExtensionClass/Missing.c           -I../Components/ExtensionClass
+-Sync              ../Components/ExtensionClass/Sync.c              -I../Components/ExtensionClass
+-Record            ../Components/ExtensionClass/Record.c            -I../Components/ExtensionClass
+-ComputedAttribute ../Components/ExtensionClass/ComputedAttribute.c -I../Components/ExtensionClass
+-
+ cStringIO      ../Components/cPickle/cStringIO.c
+ cPickle        ../Components/cPickle/cPickle.c
+ 
+@@ -18,6 +8,3 @@
+ IOBTree        ../Components/BTree/IOBTree.c  -I../Components/ExtensionClass  -I../Components/BTree -I./ZODB
+ OIBTree        ../Components/BTree/OIBTree.c  -I../Components/ExtensionClass  -I../Components/BTree -I./ZODB
  intSet         ../Components/BTree/intSet.c   -I../Components/ExtensionClass  -I../Components/BTree -I./ZODB
- 
- 
+-
+-
 -zlib ../Components/zlib/zlib.c -I../Components/zlib ../Components/zlib/adler32.c ../Components/zlib/compress.c ../Components/zlib/crc32.c ../Components/zlib/gzio.c ../Components/zlib/uncompr.c ../Components/zlib/deflate.c ../Components/zlib/trees.c ../Components/zlib/zutil.c ../Components/zlib/inflate.c ../Components/zlib/infblock.c ../Components/zlib/inftrees.c ../Components/zlib/infcodes.c ../Components/zlib/infutil.c ../Components/zlib/inffast.c
-+#zlib ../Components/zlib/zlib.c -I../Components/zlib ../Components/zlib/adler32.c ../Components/zlib/compress.c ../Components/zlib/crc32.c ../Components/zlib/gzio.c ../Components/zlib/uncompr.c ../Components/zlib/deflate.c ../Components/zlib/trees.c ../Components/zlib/zutil.c ../Components/zlib/inflate.c ../Components/zlib/infblock.c ../Components/zlib/inftrees.c ../Components/zlib/infcodes.c ../Components/zlib/infutil.c ../Components/zlib/inffast.c
