@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1252 2003/01/27 23:41:07 ad Exp $
+$NetBSD: CHANGES,v 1.1253 2003/01/27 23:48:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -447,3 +447,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated graphopt to 0.1nb1 [atatat 2003-01-27]
 	Updated gq to 0.3.0nb1 [jmmv 2003-01-27]
 	Updated dptutil to 3.31nb1 [ad 2003-01-27]
+	Updated dopewars to 1.5.8nb1 [jmmv 2003-01-27]
+	Updated xpuyopuyo to 0.9.1nb1 [jmmv 2003-01-27]
