@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:55 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 09:22:15 jlam Exp $
 
 .if !defined(LIBMCRYPT22_BUILDLINK2_MK)
 LIBMCRYPT22_BUILDLINK2_MK=	# defined
@@ -11,9 +11,11 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.libmcrypt22=libmcrypt22
 BUILDLINK_PREFIX.libmcrypt22_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libmcrypt22=	include/libmcrypt22/mcrypt.h
 BUILDLINK_FILES.libmcrypt22+=	lib/libmcrypt22.*
-
-BUILDLINK_TRANSFORM.libmcrypt22=	-e "s|include/libmcrypt22/|include/|g"
 BUILDLINK_TRANSFORM+=			l:mcrypt:mcrypt22
+
+BUILDLINK_CPPFLAGS.libmcrypt22= \
+	-I${BUILDLINK_PREFIX.libmcrypt22}/include/libmcrypt22
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.libmcrypt22}
 
 BUILDLINK_TARGETS+=	libmcrypt22-buildlink
 

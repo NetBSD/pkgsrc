@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 10:16:10 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 09:22:15 jlam Exp $
 
 .if !defined(ORBIT_BUILDLINK2_MK)
 ORBIT_BUILDLINK2_MK=	# defined
@@ -23,8 +23,7 @@ BUILDLINK_FILES.ORBit+=	lib/libORBitutil.*
 BUILDLINK_FILES.ORBit+=	lib/libname-server.*
 BUILDLINK_FILES.ORBit+=	lib/liborbit-c-backend.*
 
-# The ORBit headers should be found at the same location as for libxml.
-#BUILDLINK_TRANSFORM.ORBit=    -e "s|/include/orbit-1.0/|/include/|g"
+BUILDLINK_CPPFLAGS.ORBit=	-I${BUILDLINK_PREFIX.ORBit}/include/orbit-1.0
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
