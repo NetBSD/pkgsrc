@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.18 1998/05/26 22:09:20 tron Exp $
+#	$NetBSD: Makefile,v 1.19 1998/08/11 11:31:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -22,7 +22,6 @@
     SUBDIR += jive
     SUBDIR += kdeutils
     SUBDIR += kp
-#   SUBDIR += less
     SUBDIR += libutf
     SUBDIR += lile
     SUBDIR += logsurfer
@@ -37,6 +36,7 @@
     SUBDIR += p5-Search
 #   SUBDIR += plan		# requires Motif/Lesstif - HF
     SUBDIR += py-readline
+    SUBDIR += qterm
     SUBDIR += rpm
     SUBDIR += screen
     SUBDIR += splitvt
