@@ -1,31 +1,35 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/17 17:08:37 minskim Exp $
 
---- makefile.orig	2004-03-21 18:58:00.000000000 -0700
+--- makefile.orig	2004-04-12 14:05:50.000000000 -0500
 +++ makefile
-@@ -1,54 +1,22 @@
+@@ -1,18 +1,21 @@
  # Makefile for compiling Mathomatic for UNIX or Linux.
  
--#CC		= cc
--
--CFLAGS		= -c -DUNIX
--LFLAGS		= -s
+-CFLAGS		= -c -O -DUNIX
+-LDFLAGS		= -s
++#CFLAGS		= -c -O -DUNIX
++#LDFLAGS		= -s
+ 
  # To use readline, uncomment the following two lines:
- #CFLAGS		= -c -DUNIX -DREADLINE
- #LFLAGS		= -s -lreadline -lcurses
+ #CFLAGS		+= -DREADLINE
+ #LDFLAGS	+= -lreadline -lcurses
  
--INSTALL_DIR	= /usr/local
-+INSTALL_DIR	= ${PREFIX}
+-PREFIX	= /usr/local
++#PREFIX	= /usr/local
  
--AOUT	=am
-+AOUT	= am
+ AOUT	=am
  OBJECTS	=main.o am.o parse.o cmds.o simplify.o factor.o super.o \
  	unfactor.o diff.o complex.o list.o
  
 +.c.o:
-+	$(CC) $(CFLAGS) -c $<
++	${CC} ${CFLAGS} -c $<
 +
  all: $(AOUT)
  	@echo Make completed.
+ 
+@@ -20,46 +23,15 @@ test: $(AOUT)
+ 	./$(AOUT) -c all.in >test.out
+ 	diff all.out test.out
  
 -main.o: main.c am.h
 -	$(CC) $(CFLAGS) $*.c
@@ -59,13 +63,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
 -
 -list.o: list.c am.h externs.h
 -	$(CC) $(CFLAGS) $*.c
-+$(OBJECTS): am.h externs.h
++${OBJECTS}: am.h externs.h
  
  $(AOUT): $(OBJECTS)
- 	$(CC) $(LFLAGS) $(OBJECTS) -lm -o $(AOUT)
-@@ -59,4 +27,4 @@ install: $(AOUT)
+ 	$(CC) $(LDFLAGS) $(OBJECTS) -lm -o $(AOUT)
+ 
+ install: $(AOUT)
+-	install -m 0755 $(AOUT) $(PREFIX)/bin
+-	install -m 0644 am.1 $(PREFIX)/man/man1
++	${BSD_INSTALL_PROGRAM} $(AOUT) $(PREFIX)/bin
++	${BSD_INSTALL_MAN} am.1 $(PREFIX)/man/man1
  	@echo Install completed.
  
  clean:
--	rm *.o
-+	rm -f $(OBJECTS)
+-	rm -f *.o
++	rm -f ${OBJECTS}
