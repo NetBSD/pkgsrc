@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2004/09/20 07:58:20 adam Exp $
+
 --- Makefile.in.orig	Fri May  7 18:51:27 2004
 +++ Makefile.in	Fri May  7 18:49:11 2004
 @@ -41,7 +41,7 @@
