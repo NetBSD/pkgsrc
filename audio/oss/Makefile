@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/16 23:12:02 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/18 01:32:01 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -30,7 +30,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_BUILDLINK2=		# defined
 NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
 
 .if ${OPSYS} == "NetBSD"
 MODSTAT=		/usr/bin/modstat
@@ -65,6 +64,10 @@ post-extract:
 	) > ${WRKSRC}/install.sh
 	${CHMOD} +x ${WRKSRC}/install.sh
 
+do-build:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/soundconf.sh		\
+		${WRKDIR}/soundconf.sh
+
 chroot:
 	${PAX} -rw `${CAT} ${FILESDIR}/chroot` ${WRKSRC}
 	${CHROOT} -u ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC} ./install.sh
@@ -82,9 +85,9 @@ do-install: chroot
 	${LN} -sf ../lib/oss/play ${PREFIX}/bin/ossplay
 	${LN} -sf ../lib/oss/record ${PREFIX}/bin/ossrecord
 	${LN} -sf ../lib/oss/savemixer ${PREFIX}/bin/osssavemixer
-	${LN} -sf ../lib/oss/soundconf ${PREFIX}/sbin/soundconf
 	${LN} -sf ../lib/oss/soundoff ${PREFIX}/sbin/soundoff
 	${LN} -sf ../lib/oss/soundon ${PREFIX}/sbin/soundon
+	${INSTALL_SCRIPT} ${WRKDIR}/soundconf ${PREFIX}/sbin/soundconf
 
 	${RM} -rf ${WRKSRC}/bin ${WRKSRC}/sbin ${WRKSRC}/usr
 	${RM} -f ${WRKSRC}/dev/mixer0 ${WRKSRC}/dev/null
