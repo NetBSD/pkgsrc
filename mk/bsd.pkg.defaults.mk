@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.60 2002/05/08 11:05:39 markd Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.61 2002/05/12 16:54:58 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1160,6 +1160,22 @@ SDIST_PAWD?= pwd
 # Select SPARC target architecture under Solaris.
 # Possible: sparcv7, sparcv8 or sparcv9.
 # Default: sparcv7
+
+#SPOP3D_ENABLE_APOP= yes
+# Enable APOP support in the mail/solid-pop3d package.
+# Possible: undefined, defined
+# Default: undefined
+
+#SPOP3D_ENABLE_STANDALONE= yes
+# Build mail/solid-pop3d to run standalone instead of via inetd.
+# Possible: undefined, defined
+# Default: undefined 
+
+#SPOP3D_ENABLE_ALIASES= yes
+# Build mail/solid-pop3d with support for user names mapping and non-IP
+# based virtuals.
+# Possible: undefined, defined
+# Default: undefined
 
 #SQUID_CONFIGURE_ARGS=
 # Used in squid package to set build configuration options.
