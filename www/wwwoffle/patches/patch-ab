@@ -1,0 +1,70 @@
+$NetBSD: patch-ab,v 1.1 1999/11/30 03:53:30 itohy Exp $
+
+This patch is originated from the author, and will be included
+in future releases.
+
+--- misc.c.orig	Mon Nov 29 10:50:02 1999
++++ misc.c	Mon Nov 29 11:11:55 1999
+@@ -44,7 +44,7 @@
+  URL *Url=(URL*)malloc(sizeof(URL));
+  char *copyurl,*mallocurl=malloc(strlen(url)+2);
+  int i=0,n=0;
+- char *colon,*slash,*at,*temppath,root[2];
++ char *colon,*slash,*at,*ques,*temppath,root[2];
+ 
+  copyurl=mallocurl;
+  strcpy(copyurl,url);
+@@ -73,7 +73,8 @@
+     slash=strchr(copyurl,'/');
+    }
+  else if(colon && !isdigit(*(colon+1)) &&
+-         (!at || (slash && at>slash)))  /* http:www.foo.com/... */
++         (!slash || colon<slash) &&
++         (!at || (slash && at>slash)))  /* http:www.foo.com/...[:@]...  */
+    {
+     *colon=0;
+     Url->proto=(char*)malloc(colon-copyurl+1);
+@@ -127,6 +128,16 @@
+     Url->pass=NULL;
+    }
+ 
++ /* Arguments */
++ ques=strchr(copyurl,'?');
++ if(ques)                       /* ../path?... */
++   {
++    *ques++=0;
++    Url->args=(char*)malloc(strlen(ques)+1);
++    strcpy(Url->args,ques);
++   }
++ else
++    Url->args=NULL;
+  /* Hostname */
+ 
+  if(*copyurl=='/')              /* /path/... (local) */
+@@ -139,24 +150,11 @@
+     Url->host=copyurl;
+     Url->local=0;
+ 
+-    if(slash)                   /* www.foo.com/... */
++    if(slash && (!ques || slash<ques)) /* www.foo.com/...[?]... */
+        copyurl=slash;
+-    else                        /* www.foo.com */
++    else                        /* www.foo.com[?]... */
+       {root[0]='/';root[1]=0;copyurl=root;}
+    }
+-
+- /* Arguments */
+-
+- Url->args=NULL;
+-
+- for(i=0;copyurl[i];i++)
+-    if(copyurl[i]=='?')
+-      {
+-       copyurl[i]=0;
+-       Url->args=(char*)malloc(strlen(copyurl+i+1)+1);
+-       strcpy(Url->args,copyurl+i+1);
+-       break;
+-      }
+ 
+  /* Pathname */
+ 
