@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/12/11 12:53:51 kristerw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 11:02:56 agc Exp $
 
 SHA1 (open2300-1.8.tar.gz) = 86fd2dcdef995498ed17062dd4b8df5db6b3383d
+RMD160 (open2300-1.8.tar.gz) = d0b7618cfa7d0ea92708d949fd4521311627865f
 Size (open2300-1.8.tar.gz) = 330320 bytes
 SHA1 (patch-aa) = 3f2cc9994e45a77d2bfc6907515e5c7c4a6d13d3
 SHA1 (patch-ab) = 9437137a36e434fcabde6acc5373be04523357e9

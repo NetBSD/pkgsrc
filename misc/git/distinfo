@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/08/03 00:12:31 seb Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 11:02:52 agc Exp $
 
 SHA1 (git-4.3.17.tar.gz) = f822365367508a2b6900092a2c36c9d82dcc250b
+RMD160 (git-4.3.17.tar.gz) = 79abefa501bac7670c6c2a7762daf162345ab91e
 Size (git-4.3.17.tar.gz) = 402888 bytes
 SHA1 (patch-aa) = f8c73bf43f75a7b58293cc16afa60f2d70125ae0
 SHA1 (patch-ab) = 53f4e2d24435db4aed7e61904dafe1d2e5de6463

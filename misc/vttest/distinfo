@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/06/06 14:49:52 drochner Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 11:02:58 agc Exp $
 
 SHA1 (vttest-20020422.tgz) = acf454db06dbd9e35d8383e34633ff69e6302f93
+RMD160 (vttest-20020422.tgz) = 13df21353ad7547f57f002f5980c347b25e5c265
 Size (vttest-20020422.tgz) = 98318 bytes

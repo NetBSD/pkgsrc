@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/13 08:21:08 mjl Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:56 agc Exp $
 
 SHA1 (I18N-LangTags-0.30.tar.gz) = be829f7723cb7c595ca1c1efcfefbfa51e7333a3
+RMD160 (I18N-LangTags-0.30.tar.gz) = 2aed1a498d037407e9a2e58e3fc34fb45cdbc011
 Size (I18N-LangTags-0.30.tar.gz) = 29230 bytes

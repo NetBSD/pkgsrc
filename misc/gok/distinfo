@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2004/12/28 21:54:11 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 11:02:52 agc Exp $
 
 SHA1 (gok-0.11.16.tar.bz2) = fd6472c49f480474fdf950e528c58e532b08b6ea
+RMD160 (gok-0.11.16.tar.bz2) = 8799efa3755ebb3fc7437dfb8cb8f40c44d7843a
 Size (gok-0.11.16.tar.bz2) = 1244123 bytes
 SHA1 (patch-aa) = 48aa6d30bcb91fb02049d5efbcf8f5c33bb13e04

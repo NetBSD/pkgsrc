@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2003/12/21 04:56:15 uebayasi Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 11:02:55 agc Exp $
 
 SHA1 (lv450.tar.gz) = 6438609aa6a320641201c3e90132676d53bb0456
+RMD160 (lv450.tar.gz) = 3a1bb2816aa043995d60b88ea9bd7c64f97b2549
 Size (lv450.tar.gz) = 604731 bytes
 SHA1 (patch-aa) = 9221506a523a0ada4153f81a18152de01bfac315

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/24 04:43:10 grant Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 11:02:58 agc Exp $
 
 SHA1 (rpm-2.5.4.tar.gz) = a7fcd67883aec8d5f17483d5efebe7e5f5453462
+RMD160 (rpm-2.5.4.tar.gz) = 6c9a46d370fe97c7fcf7f814db049ea2bba300da
 Size (rpm-2.5.4.tar.gz) = 727849 bytes
 SHA1 (patch-aa) = 3ee3193cc8e9043017b1f507b606c72acab77ddb
 SHA1 (patch-ab) = 63635f4f7fd96b4e7a40bfbaffd5673b40db3a13

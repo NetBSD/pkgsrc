@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/01/14 05:19:24 rh Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 11:02:52 agc Exp $
 
 SHA1 (gnome-pim-1.4.6.tar.gz) = ea752354cbe27ecee529bcfa611c19c11327a64f
+RMD160 (gnome-pim-1.4.6.tar.gz) = 83b0d818ef08ef92ffa2517da5b04cdc4b8a9906
 Size (gnome-pim-1.4.6.tar.gz) = 1413421 bytes
 SHA1 (patch-aa) = ae208031c1e1e44d538f3d5dd1a268d6d3f479df
 SHA1 (patch-ab) = e16133ee1f25ac3ea60d391eb66168288435f27e

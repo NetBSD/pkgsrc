@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 11:02:59 agc Exp $
 
 SHA1 (xtend-1.2beta4.tar.gz) = 475b5aa26502a5b3f7a828c038d3dade3884fd88
+RMD160 (xtend-1.2beta4.tar.gz) = aa705d00b22ca3b7c7c83c54908d91000c61f768
 Size (xtend-1.2beta4.tar.gz) = 49502 bytes
