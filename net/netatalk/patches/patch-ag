@@ -1,0 +1,9 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- /dev/null	Mon Oct 26 13:12:53 1998
++++ libatalk/asp/Makefile.inc	Mon Oct 26 13:19:11 1998
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/asp
++
++SRCS+= asp_close.c asp_cmdreply.c asp_getreq.c
++SRCS+= asp_getsess.c asp_init.c asp_write.c asp_shutdown.c

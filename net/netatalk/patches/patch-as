@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- man/man8/Makefile	1998/10/26 14:10:42	1.1
++++ man/man8/Makefile	1998/10/26 14:10:55
+@@ -14,7 +14,7 @@
+ 	-mkdir ${MANDIR}/man8
+ 	for i in ${SRC} ; do \
+ 	    rm -f ${MANDIR}/man8/$$i; \
+-	    sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
++	    sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \

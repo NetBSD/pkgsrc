@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- Makefile.orig	Thu Oct  1 18:45:05 1998
++++ Makefile	Sat Sep 26 10:49:57 1998
+@@ -1,22 +1,24 @@
+-# Root of installation. Subdirectories will be ${DESTDIR}/etc,
+-# ${DESTDIR}/bin, and ${DESTDIR}/lib.
+-DESTDIR=/usr/local/atalk
++# Root of installation. Subdirectories will be ${ATALK_DESTDIR}/etc,
++# ${ATALK_DESTDIR}/bin, and ${ATALK_DESTDIR}/lib.
++ATALK_DESTDIR=${PREFIX}
+ 
+ # for system-level binaries
+-SBINDIR=$(DESTDIR)/etc
++SBINDIR=$(ATALK_DESTDIR)/sbin
++# for system-level daemons
++LIBEXECDIR=$(ATALK_DESTDIR)/libexec
+ # for user-level binaries
+-BINDIR=$(DESTDIR)/bin
++BINDIR=$(ATALK_DESTDIR)/bin
+ # for program libraries (*.a)
+-LIBDIR=$(DESTDIR)/lib
++LIBDIR=$(ATALK_DESTDIR)/lib
+ # for machine-independent resources (pagecount.ps, etc.)
+-RESDIR=$(DESTDIR)/etc
++RESDIR=$(ATALK_DESTDIR)/share
+ # for configuration files (AppleVolumes.system, etc.)
+-ETCDIR=$(DESTDIR)/etc
++ETCDIR=$(ATALK_DESTDIR)/etc
+ # for include files
+-INCDIR=$(DESTDIR)/include
++INCDIR=$(ATALK_DESTDIR)/include
+ # Root of man pages.  Subdirectories will be
+ # ${MANDIR}/man1, ${MANDIR}/man4, and ${MANDIR}/man8.
+-MANDIR=$(DESTDIR)/man
++MANDIR=$(ATALK_DESTDIR)/man
+ 
+ #SBINDIR=/usr/sbin
+ #BINDIR=/usr/bin
+@@ -57,8 +59,9 @@
+ 	cd sys/$$ARCH && ${MAKE} ${MFLAGS} \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-	    DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
+-	    AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" $@
++	    ATALK_DESTDIR="${ATALK_DESTDIR}" MANDIR="${MANDIR}" \
++	    AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" LIBEXECDIR="${LIBEXECDIR}" \
++	    OPTOPTS="${OPTOPTS}" $@
+ 
+ FRC:
+ 

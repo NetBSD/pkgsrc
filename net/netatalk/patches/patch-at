@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- bin/Makefile	1998/10/26 14:11:36	1.1
++++ bin/Makefile	1998/10/26 14:11:55
+@@ -9,7 +9,7 @@
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-	    DESTDIR="${DESTDIR}"
++	    ATALK_DESTDIR="${ATALK_DESTDIR}"
+ 
+ FRC:
+ 
+@@ -26,7 +26,7 @@
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" install); \
++		ATALK_DESTDIR="${ATALK_DESTDIR}" INSTALL="${INSTALL}" install); \
+ 	done
+ 
+ clean:
