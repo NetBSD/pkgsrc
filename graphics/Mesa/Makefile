@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/04/03 11:15:00 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2000/04/04 07:59:48 tron Exp $
 #
 
 DISTNAME=       MesaLib-3.1
@@ -7,8 +7,8 @@ CATEGORIES=	graphics
 MASTER_SITES= 	ftp://ftp.mesa3d.org/mesa/ \
 		http://download.sourceforge.net/mesa3d/
 # MesaDemos is needed for glut
-DISTFILES=	MesaLib-3.1.tar.gz \
-		MesaDemos-3.1.tar.gz
+DISTFILES=	MesaLib-3.1.tar.bz2 \
+		MesaDemos-3.1.tar.bz2
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
