@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.852 2002/12/20 18:00:02 fredb Exp $
+$NetBSD: CHANGES,v 1.853 2002/12/20 19:08:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added fakeroot-0.5.8 [lonewolf 2002-12-20]
 	Updated matchbox to 0.3.6 [tsarna 2002-12-20]
 	Updated png to 1.2.5nb2 [fredb 2002-12-20]
+	Updated waimea to 0.4.0nb1 [jmmv 2002-12-20]
