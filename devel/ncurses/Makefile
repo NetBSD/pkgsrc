@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/07/06 07:51:03 jlam Exp $
+# $NetBSD: Makefile,v 1.21 1999/07/13 23:54:16 bad Exp $
 
 DISTNAME=		ncurses-4.2
 CATEGORIES=		devel
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.gnu.org/software/ncurses/ncurses.html
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	--with-normal --without-debug --enable-bsdpad
+CONFIGURE_ARGS+=	--with-normal --without-debug --enable-bsdpad --without-cxx
 MAKE_ENV+=		NCURSES_MAJOR="${NCURSES_MAJOR}" \
 			NCURSES_MINOR="${NCURSES_MINOR}"
 
