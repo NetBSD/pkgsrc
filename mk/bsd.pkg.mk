@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.440 2000/05/30 21:35:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.441 2000/05/30 22:00:48 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -25,18 +25,17 @@
 .for __tmp__ in ${ONLY_FOR_PLATFORM}
 .if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 __PLATFORM_OK?=
-.endif
-.endfor
-.else
+.endif	# MACHINE_PLATFORM
+.endfor	# __tmp__
+.else	# ONLY_FOR_PLATFORM
 __PLATFORM_OK?=
-.endif
+.endif	# ONLY_FOR_PLATFORM
 
 .for __tmp__ in ${NOT_FOR_PLATFORM}
 .if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 .undef __PLATFORM_OK
-.endif
-.endfor
-
+.endif	# MACHINE_PLATFORM
+.endfor	# __tmp__
 .if !defined(__PLATFORM_OK)
 IGNORE=			"is not available for ${MACHINE_PLATFORM}"
 .endif
@@ -933,15 +932,15 @@ IGNORE=	"is marked as broken: ${BROKEN}"
 .for _lic in ${ACCEPTABLE_LICENSES}
 .if ${LICENSE} == "${_lic}"
 _ACCEPTABLE=	yes
-.endif
+.endif	# LICENSE
 .endfor	# _lic
 .endif	# ACCEPTABLE_LICENSES
 .ifndef _ACCEPTABLE
 IGNORE=	"Unacceptable license: ${LICENSE}." \
 	"	To build this package, add this line to your /etc/mk.conf:" \
 	"	ACCEPTABLE_LICENSES+=${LICENSE}"
-.endif
-.endif
+.endif	# _ACCEPTABLE
+.endif	# .elif row
 
 .if defined(IGNORE)
 .if defined(IGNORE_SILENT)
