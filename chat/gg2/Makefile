@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/11/03 13:43:39 adam Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/09 14:50:28 adam Exp $
 
-DISTNAME=	gg2-2.2.1
+DISTNAME=	gg2-2.2.2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ggadu/}
 
