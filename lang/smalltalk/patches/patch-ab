@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2003/07/02 00:00:23 jtb Exp $
+$NetBSD: patch-ab,v 1.6 2003/07/02 22:35:38 jtb Exp $
 
 --- Makefile.in.orig
 +++ Makefile.in
@@ -11,12 +11,12 @@ $NetBSD: patch-ab,v 1.5 2003/07/02 00:00:23 jtb Exp $
  LIBS = @LIBS@
  LIBSNPRINTFV = @LIBSNPRINTFV@
  LIBTCLTK = @LIBTCLTK@
-@@ -349,7 +349,7 @@
- 	done
- gst$(EXEEXT): $(gst_OBJECTS) $(gst_DEPENDENCIES) 
- 	@rm -f gst$(EXEEXT)
--	$(LINK) $(gst_LDFLAGS) $(gst_OBJECTS) $(gst_LDADD) $(LIBS)
-+	$(LINK) $(gst_LDFLAGS) $(gst_OBJECTS) $(gst_LDADD) $(LIBS) $(LIBREADLINE)
- binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
- install-binSCRIPTS: $(bin_SCRIPTS)
- 	@$(NORMAL_INSTALL)
+@@ -216,7 +216,7 @@
+ bin_SCRIPTS = gst-package gst-config
+ 
+ gst_SOURCES = main.c
+-gst_LDADD = libgst/libgst.la @ICON@
++gst_LDADD = libgst/libgst.la $(LIBGMP) $(LIBLTDL) $(LIBREADLINE) $(LIBSNPRINTFV)
+ gst_LDFLAGS = -export-dynamic
+ gst_DEPENDENCIES = libgst/libgst.la @ICON@
+ INCLUDES = -I$(top_srcdir)/libgst
