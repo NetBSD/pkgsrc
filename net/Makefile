@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2001/06/14 14:45:49 tron Exp $
+# $NetBSD: Makefile,v 1.229 2001/06/19 11:34:14 zuntum Exp $
 #
 
 COMMENT=	Networking tools
@@ -178,6 +178,7 @@ SUBDIR+=	whatmask
 SUBDIR+=	wminet
 SUBDIR+=	wmnet
 SUBDIR+=	wmpload
+SUBDIR+=	vsftpd
 SUBDIR+=	wu-ftpd
 SUBDIR+=	xarchie
 SUBDIR+=	xipdump
