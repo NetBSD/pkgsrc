@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+
+--- configure.orig	Thu Nov 25 21:24:04 1999
++++ configure	Fri Nov 26 16:05:46 1999
+@@ -668,7 +668,7 @@
+ # It thinks the first close brace ends the variable substitution.
+ test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
+ 
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+@@ -1354,6 +1354,7 @@
+ fi
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1507,6 +1508,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -4657,7 +4659,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ltiff -lm $LIBS"
++LIBS="-ltiff -lz -ljpeg -lm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 4663 "configure"
+ #include "confdefs.h"
