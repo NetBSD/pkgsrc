@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:07:14 agc Exp $
+
+MD5 (pgsql_perl5-1.9.0.tar.gz) = ec20b8e1596022f8f354550147259d56
+SHA1 (patch-aa) = 0e87750d181e72757f5ba4e2f06702481a7dfbd0

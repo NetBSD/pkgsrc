@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:07:24 agc Exp $
+
+MD5 (xmysql-1.10.tar.gz) = 73458fbbfb1598ea7fa195fe9ddc184f
+SHA1 (patch-aa) = 48dc8992d6c7b25049d04fd8415d7572f077f80d
