@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- MINTERMS.txt.orig	Fri Oct  6 18:10:34 2000
++++ MINTERMS.txt
+@@ -2,7 +2,7 @@
+ Appendix A - Minimum Terms
+ --------------------------
+ 
+-LICENSOR: ______________
++LICENSOR: The NetBSD Project
+ 
+ LICENSE AGREEMENT
+ 
