@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/26 18:23:23 dillo Exp $
+
+--- src/gens/gtkui/support.c.orig	2004-05-18 20:04:29.000000000 +0200
++++ src/gens/gtkui/support.c
+@@ -783,12 +783,14 @@ addIsoFilter(GtkWidget* widget)
+ // "SegaCD image file\0*.bin;*.iso;*.raw\0All files\0*.*\0\0"
+ 	const char* bin = "*.[bb][iI][nN]";
+ 	const char* iso = "*.[iI][sS][oO]";
++	const char* chd = "*.[cC][hH][dD]";
+ 	const char* raw = "*.[rR][aA][wW]";
+ 	
+ 	filter = gtk_file_filter_new ();
+ 	gtk_file_filter_set_name (filter, "SegaCD image file");
+ 	gtk_file_filter_add_pattern (filter, bin);
+ 	gtk_file_filter_add_pattern (filter, iso);
++	gtk_file_filter_add_pattern (filter, chd);
+ 	gtk_file_filter_add_pattern (filter, raw);
+ 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (widget), filter);
+ }
+@@ -803,6 +805,7 @@ addRomsFilter(GtkWidget* widget)
+ 	const char* gen = "*.[gG][eE][nN]";
+ 	const char* _32x = "*.32[xX]";
+ 	const char* iso = "*.[iI][sS][oO]";
++	const char* chd = "*.[cC][hH][dD]";
+ 	const char* raw = "*.[rR][aA][wW]";
+ 	const char* zip = "*.[zZ][iI][pP]";
+ 	const char* gz ="*.[gG][zZ]";
+@@ -816,6 +819,7 @@ addRomsFilter(GtkWidget* widget)
+ 	gtk_file_filter_add_pattern (filter, gen);
+ 	gtk_file_filter_add_pattern (filter, _32x);
+ 	gtk_file_filter_add_pattern (filter, iso);
++	gtk_file_filter_add_pattern (filter, chd);
+ 	gtk_file_filter_add_pattern (filter, raw);
+ 	gtk_file_filter_add_pattern (filter, zip);
+ 	gtk_file_filter_add_pattern (filter, gz);
+@@ -842,6 +846,7 @@ addRomsFilter(GtkWidget* widget)
+ 	filter = gtk_file_filter_new ();
+     gtk_file_filter_set_name (filter, "SegaCD image");
+ 	gtk_file_filter_add_pattern (filter, iso);
++	gtk_file_filter_add_pattern (filter, chd);
+ 	gtk_file_filter_add_pattern (filter, raw);
+ 	gtk_file_filter_add_pattern (filter, bin);
+ 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (widget), filter);

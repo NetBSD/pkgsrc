@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/07/26 18:23:22 dillo Exp $
+
+--- src/gens/gtkui/glade/interface.c.orig	2004-05-19 21:49:28.000000000 +0200
++++ src/gens/gtkui/glade/interface.c
+@@ -486,10 +486,13 @@ create_gens_window (void)
+   gtk_container_add (GTK_CONTAINER (item15_menu), separator16);
+   gtk_widget_set_sensitive (separator16, FALSE);
+ 
+-  quit = gtk_image_menu_item_new_with_mnemonic ("Quit");
++  quit = gtk_image_menu_item_new_with_mnemonic ("_Quit");
+   gtk_widget_set_name (quit, "quit");
+   gtk_widget_show (quit);
+   gtk_container_add (GTK_CONTAINER (item15_menu), quit);
++  gtk_widget_add_accelerator (quit, "activate", accel_group,
++                              GDK_Q, GDK_CONTROL_MASK,
++                              GTK_ACCEL_VISIBLE);
+ 
+   image2789 = gtk_image_new_from_stock ("gtk-quit", GTK_ICON_SIZE_MENU);
+   gtk_widget_set_name (image2789, "image2789");

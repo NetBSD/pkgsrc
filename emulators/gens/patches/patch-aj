@@ -1,0 +1,35 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
+
+--- src/gens/emulator/g_main.c.orig	2004-05-18 22:34:00.000000000 +0200
++++ src/gens/emulator/g_main.c
+@@ -394,6 +394,13 @@ update_SDL_events ()
+ 
+ 	      break;
+ 
++	    case SDLK_q:
++	      if (KMOD_CTRL & mod)
++		{
++		  close_gens ();
++		}
++	      break;
++
+ 	    case SDLK_v:
+ 	      if (KMOD_CTRL & mod)
+ 		{
+@@ -429,14 +436,14 @@ update_SDL_events ()
+ 	case SDL_JOYAXISMOTION:
+ 	  if (event.jaxis.axis < 2)
+ 	    {
+-	      if (event.jaxis.value < -500)
++	      if (event.jaxis.value < -10922)
+ 		{
+ 		  joystate[0x100 * event.jaxis.which +
+ 			   ((event.jaxis.axis == 0) ? 0x3 : 0x1)] = 1;
+ 		  joystate[0x100 * event.jaxis.which +
+ 			   ((event.jaxis.axis == 0) ? 0x4 : 0x2)] = 0;
+ 		}
+-	      else if (event.jaxis.value > 500)
++	      else if (event.jaxis.value > 10922)
+ 		{
+ 		  joystate[0x100 * event.jaxis.which +
+ 			   ((event.jaxis.axis == 0) ? 0x4 : 0x2)] = 1;
