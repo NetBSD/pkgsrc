@@ -1,8 +1,0 @@
-$NetBSD: patch-av,v 1.1 2003/12/30 14:41:09 cjep Exp $
-
---- ../sqlite/src/util.c.orig	2003-06-05 15:27:56.000000000 +0100
-+++ ../sqlite/src/util.c
-@@ -18,2 +18,3 @@
- */
-+#include "os.h"
- #include "sqliteInt.h"

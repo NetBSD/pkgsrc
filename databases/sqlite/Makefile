@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/31 05:50:17 snj Exp $
 
-DISTNAME=		sqlite-2.8.5
+DISTNAME=		sqlite-2.8.13
 CATEGORIES=		databases
 MASTER_SITES=		http://www.hwaci.com/sw/sqlite/ \
 			http://www.sqlite.org/
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.hwaci.com/sw/sqlite/
-COMMENT=		SQL Database Engine In A C Library
+COMMENT=		SQL Database Engine in a C Library
 
 WRKSRC=			${WRKDIR}/sqlite-build
-USE_BUILDLINK2=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../sqlite/configure
@@ -27,5 +27,5 @@ PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite/sqlite.pc.in
 post-extract:
 	${MKDIR} ${WRKSRC}
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
