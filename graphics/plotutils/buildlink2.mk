@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/01/25 12:06:27 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/06/07 17:39:24 jschauma Exp $
 
 .if !defined(PLOTUTILS_BUILDLINK2_MK)
 PLOTUTILS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		plotutils
-BUILDLINK_DEPENDS.plotutils?=	plotutils>=2.4.1nb1
+BUILDLINK_DEPENDS.plotutils?=	plotutils>=2.4.1nb2
 BUILDLINK_PKGSRCDIR.plotutils?=	../../graphics/plotutils
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.plotutils=plotutils
