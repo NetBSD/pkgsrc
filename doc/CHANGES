@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3872 2003/11/27 17:40:02 abs Exp $
+$NetBSD: CHANGES,v 1.3873 2003/11/27 20:30:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4663,5 +4663,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-URI to 1.27 [grant 2003-11-27]
 	Updated tightvnc to 1.2.9 [abs 2003-11-27]
 	Updated abcde to 2.1.9 [abs 2003-11-27]
-
-
+	Updated screen to 4.0.1nb1 [wiz 2003-11-27]
