@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/extern.h ./extern.h
 --- ../faces-DIST/extern.h	Tue Nov 19 15:00:48 1991
 +++ ./extern.h	Fri Oct  1 14:32:02 1999

@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/filters/ikon2xbm ./filters/ikon2xbm
 --- ../faces-DIST/filters/ikon2xbm	Tue May  7 08:51:50 1991
 +++ ./filters/ikon2xbm	Fri Oct  1 14:32:09 1999

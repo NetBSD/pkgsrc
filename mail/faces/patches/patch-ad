@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.4 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/compface/compface.1 ./compface/compface.1
 --- ../faces-DIST/compface/compface.1	Fri Mar 15 15:10:29 1991
 +++ ./compface/compface.1	Fri Oct  1 14:32:06 1999

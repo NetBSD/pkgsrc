@@ -1,3 +1,5 @@
+$NetBSD: patch-at,v 1.2 1999/10/01 07:49:21 simonb Exp $
+
 diff -ur ../faces-DIST/x11.c ./x11.c
 --- ../faces-DIST/x11.c	Tue Nov 19 15:00:50 1991
 +++ ./x11.c	Fri Oct  1 14:32:03 1999

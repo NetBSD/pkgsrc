@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/compface/file.c ./compface/file.c
 --- ../faces-DIST/compface/file.c	Wed Jun 19 16:29:13 1991
 +++ ./compface/file.c	Fri Oct  1 14:32:06 1999
