@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/02/11 01:46:30 abs Exp $
+# $NetBSD: Makefile,v 1.38 2004/02/11 12:20:03 jlam Exp $
 
 DISTNAME=		glib-2.2.3
 PKGREVISION=		1
@@ -37,7 +37,7 @@ TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"
 
-.if defined(ICONV_IS_GNU)
+.if defined(ICONV_TYPE) && (${ICONV_TYPE} == "gnu")
 CONFIGURE_ARGS+=	--with-libiconv=gnu
 .endif
 
