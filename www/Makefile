@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2003/02/18 00:54:39 grant Exp $
+# $NetBSD: Makefile,v 1.240 2003/03/07 23:47:13 salo Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -175,6 +175,7 @@ SUBDIR+=	swish-e
 SUBDIR+=	tcl-cgi
 SUBDIR+=	thttpd
 SUBDIR+=	tidy
+SUBDIR+=	tinyproxy
 SUBDIR+=	urlget
 SUBDIR+=	w3
 SUBDIR+=	w3c-httpd
