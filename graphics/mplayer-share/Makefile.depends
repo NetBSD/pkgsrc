@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.depends,v 1.8 2002/11/13 15:25:34 wiz Exp $
+# $NetBSD: Makefile.depends,v 1.9 2002/12/06 14:21:46 wiz Exp $
 
-DEPENDS+=	mplayer-share-${MPLAYER_PKG_VERSION}${PKGREVISION:Dnb${PKGREVISION}}:../../graphics/mplayer-share
+DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
 
 .if (${OPSYS} == "NetBSD")
 .  include "../../devel/binutils/buildlink2.mk"
