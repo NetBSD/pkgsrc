@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/21 02:59:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/21 03:05:19 xtraeme Exp $
 
 DISTNAME=	firefox-gtk2-bin-acroread-1.0
 CATEGORIES=	www print
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readermain.html
 COMMENT=	Acrobat Reader 5 plugin for firefox-gtk2-bin
 
-DEPENDS+=	acroread5>=5.10nb1:../../print/acroread
+DEPENDS+=	acroread5>=5.10nb1:../../print/acroread5
 DEPENDS+=	firefox-gtk2-bin>=0.10.1:../../www/firefox-gtk2-bin
 
 ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
