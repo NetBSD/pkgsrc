@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/30 14:42:38 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/31 15:44:29 jlam Exp $
 #
 
 DISTNAME=	xnap-2.0
@@ -9,7 +9,6 @@ MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://xnap.sourceforge.net/
 COMMENT=	Java filesharing client with support for OpenNap
 
-USE_JAVA=	yes
 NO_BUILD=       yes
 
 do-install:
@@ -20,7 +19,10 @@ do-install:
 	${CP} ${WRKSRC}/README ${PREFIX}/share/doc/xnap
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/xnap ${PREFIX}/share/doc/xnap
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/java-vm.mk"
+
 .if ${PKG_JVM} == "jdk" || ${PKG_JVM} == "kaffe"
 DEPENDS+=	swing-[0-9]*:../../x11/swing
 .endif
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/10/10 01:01:12 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/12/31 15:44:30 jlam Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -13,6 +13,7 @@ COMMENT=	the Apache Project's XML/XSL based web publishing system
 # so until the interfaces stabilize more.  Until then, new versions of these
 # libraries will be tested heavily with cocoon, and if not usable will be
 # imported as -current packages.
+#
 DEPENDS+=	xalan-j-1.2:../../textproc/xalan-j
 DEPENDS+=	fop-0.15.0:../../textproc/fop
 DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
@@ -30,8 +31,6 @@ DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 NO_CONFIGURE=
-
-USE_JAVA=	yes
 
 post-extract:
 	${RM} ${WRKSRC}/lib/fop_0_15_0.jar ${WRKSRC}/lib/servlet_2_2.jar \
@@ -60,6 +59,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/cocoon.properties ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	cd ${WRKSRC}/samples && ${PAX} -rwpp . ${PREFIX}/share/examples/java/cocoon
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
 CLASSPATH:=${CLASSPATH}:${LOCALBASE}/lib/java/fop.jar:${LOCALBASE}/lib/java/xalan.jar:${LOCALBASE}/lib/java/bsf.jar:${LOCALBASE}/lib/java/xerces.jar:${LOCALBASE}/lib/java/servlet.jar:${PKG_JAVA_HOME}/lib/classes.zip:${PKG_JAVA_HOME}/lib/tools.jar
