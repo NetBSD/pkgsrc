@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/11/24 07:56:07 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 1998/11/24 16:32:06 mycroft Exp $
 
 --- configure.orig	Mon Jun 24 02:59:45 1996
 +++ configure	Tue Nov 24 08:38:21 1998
@@ -224,9 +224,9 @@ $NetBSD: patch-aa,v 1.4 1998/11/24 07:56:07 hubertf Exp $
 +  if test "$ac_test_CFLAGS" = set; then
 +    CFLAGS="$ac_save_CFLAGS"
 +  elif test $ac_cv_prog_cc_g = yes; then
-+    CFLAGS="-g -O6"
++    CFLAGS="-g -O2"
 +  else
-+    CFLAGS="-O6"
++    CFLAGS="-O2"
    fi
  else
    GCC=
@@ -346,9 +346,9 @@ $NetBSD: patch-aa,v 1.4 1998/11/24 07:56:07 hubertf Exp $
 +  if test "$ac_test_CXXFLAGS" = set; then
 +    CXXFLAGS="$ac_save_CXXFLAGS"
 +  elif test $ac_cv_prog_cxx_g = yes; then
-+    CXXFLAGS="-g -O6"
++    CXXFLAGS="-g -O2"
 +  else
-+    CXXFLAGS="-O6"
++    CXXFLAGS="-O2"
    fi
  else
    GXX=
@@ -704,15 +704,6 @@ $NetBSD: patch-aa,v 1.4 1998/11/24 07:56:07 hubertf Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -1223,7 +1328,7 @@
-   enableval="$enable_debug"
-   V_CCOPT="-g"
- else
--  V_CCOPT="-O2"
-+  V_CCOPT="-O6"
- fi
- 
- 
 @@ -1304,18 +1409,20 @@
  echo "checking for X11 header files"
  if test "$x_includes" = NONE ; then
@@ -1144,12 +1135,7 @@ $NetBSD: patch-aa,v 1.4 1998/11/24 07:56:07 hubertf Exp $
  		/usr/local/lib/tk \
  		/usr/lib/tk \
  		/usr/lib/tk/tk \
-@@ -2067,12 +2196,17 @@
- 	# the following line should be deleted.
- 	V_SHM=""
- 	V_TARCMD="tar cfL"
--	V_CCOPT="-O2 -m486"
-+	V_CCOPT="-O6 -m486"
+@@ -2071,8 +2200,13 @@
  	V_LIB="$V_LIB -lipc"
  	;;
  *-*-netbsd*)
