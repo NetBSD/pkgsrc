@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2002/01/03 14:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/22 22:06:36 mycroft Exp $
 #
 
-DISTNAME=		gdkxft-1.0
+DISTNAME=		gdkxft-1.5
 CATEGORIES=		x11
-MASTER_SITES=		http://philrsss.anu.edu.au/~josh/gdkxft/
+MASTER_SITES=		http://prdownloads.sourceforge.net/gdkxft/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://philrsss.anu.edu.au/~josh/gdkxft/
+HOMEPAGE=		http://gdkxft.sourceforge.net/
 COMMENT=		transparently add anti-aliased font support to gtk+ applications
 
 .include "../../mk/bsd.prefs.mk"
@@ -15,12 +15,16 @@ COMMENT=		transparently add anti-aliased font support to gtk+ applications
 IGNORE=			"${PKGNAME} requires XFree86-4.0 or higher"
 .endif
 
+DEPENDS+=		control-center>=1.2.0:../../x11/controlcenter
 GNU_CONFIGURE=		YES
 USE_PERL5=		YES
 USE_LIBTOOL=		YES
+USE_X11BASE=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_BUILDLINK_ONLY=	YES
+
+CONFIGURE_ARGS+=	--enable-static
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gdkxft
@@ -28,6 +32,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/gdkxft
 .endfor
 
+.include "../../converters/libiconv/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
