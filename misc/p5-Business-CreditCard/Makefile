@@ -3,7 +3,8 @@
 # Date created:				October 20th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/24 21:22:55 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
 DISTNAME=	Business-CreditCard-0.1
