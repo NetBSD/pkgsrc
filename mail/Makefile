@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/08/25 12:37:52 veego Exp $
+# $NetBSD: Makefile,v 1.49 2000/08/25 15:26:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -6,7 +6,6 @@
     SUBDIR += coolmail
     SUBDIR += cucipop
     SUBDIR += cyrus-imapd
-    SUBDIR += cyrus-sasl
     SUBDIR += distribute
     SUBDIR += drac
     SUBDIR += elm
