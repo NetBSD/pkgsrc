@@ -1,0 +1,34 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/03/14 16:14:06 skrll Exp $
+
+--- mpeglib/lib/Makefile.in.orig	Wed Feb 21 11:00:42 2001
++++ mpeglib/lib/Makefile.in
+@@ -256,7 +256,8 @@
+ SUBDIRS = util input output decoder 			splay mpegplay mpgplayer tplay yuv
+ 
+ 
+-MMXFILES = mpegplay/copyFunctions.o 			mpegplay/mmxidct_asm.o 			util/render/dither/ditherer_mmx16.o 			util/render/dither/dither32mmx.o 			util/mmxflags_asm.o
++#HF# The *.lo globs below already include these files:
++#HF#MMXFILES = mpegplay/copyFunctions.o 			mpegplay/mmxidct_asm.o 			util/render/dither/ditherer_mmx16.o 			util/render/dither/dither32mmx.o 			util/mmxflags_asm.o
+ 
+ 
+ EXTRA_DIST = README
+@@ -268,7 +269,7 @@
+ 
+ libmpeg_la_SOURCES = dummy.cpp
+ 
+-libmpeg_la_LDFLAGS = $(all_libraries) 				-module 				-release $(MPEGLIB_VERSION) 				-version-info $(MPEGLIB_MAJOR_VERSION):$(MPEGLIB_MINOR_VERSION):$(MPEGLIB_MICRO_VERSION)
++libmpeg_la_LDFLAGS = $(all_libraries) 				-module 				-release $(MPEGLIB_VERSION) 				-version-info $(MPEGLIB_MAJOR_VERSION):$(MPEGLIB_MINOR_VERSION):$(MPEGLIB_MICRO_VERSION) $(LIBOSSAUDIO)
+ 
+ 
+ libmpeg_la_LIBADD = $(MPEG_EXTRALIBS) $(MMXFILES) 				$(MPEGLIB_LIBS)
+@@ -287,9 +288,7 @@
+ libmpeg_la_DEPENDENCIES =  mpgplayer/*.lo mpegplay/*.lo splay/*.lo \
+ tplay/*.lo decoder/*.lo output/*.lo input/*.lo util/render/*.lo \
+ util/render/dither/*.lo util/render/dither2YUV/*.lo util/audio/*.lo \
+-util/*.lo yuv/*.lo util/abstract/*.lo mpegplay/copyFunctions.o \
+-mpegplay/mmxidct_asm.o util/render/dither/ditherer_mmx16.o \
+-util/render/dither/dither32mmx.o util/mmxflags_asm.o
++util/*.lo yuv/*.lo util/abstract/*.lo
+ #>- libmpeg_la_OBJECTS =  dummy.lo
+ #>+ 1
+ libmpeg_la_OBJECTS = dummy.lo
