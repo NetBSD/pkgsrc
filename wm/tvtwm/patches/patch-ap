@@ -1,13 +1,7 @@
-$NetBSD: patch-ap,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ap,v 1.2 2004/09/18 11:59:06 blymn Exp $
 
-Index: move.c
-===================================================================
-RCS file: /home/siren/src/tvtwm/move.c,v
-retrieving revision 1.1.1.1
-retrieving revision 1.2
-diff -u -r1.1.1.1 -r1.2
---- move.c	1999/08/08 05:46:52	1.1.1.1
-+++ move.c	1999/08/08 05:56:54	1.2
+--- move.c.orig	1994-05-12 08:28:47.000000000 +0930
++++ move.c
 @@ -34,11 +34,6 @@
   *
   **********************************************************************/
@@ -20,7 +14,7 @@ diff -u -r1.1.1.1 -r1.2
  #include <stdio.h>
  #include <X11/X.h>
  #include <X11/Xatom.h>
-@@ -70,7 +65,8 @@
+@@ -70,7 +65,8 @@ static int doingMove = False;
  
  static void reallyStartMove();
  static void doMove();
@@ -30,7 +24,7 @@ diff -u -r1.1.1.1 -r1.2
  
  /***********************************************************************
   *
-@@ -165,11 +161,9 @@
+@@ -165,11 +161,9 @@ int adding;		/* adding a window from add
  int pulldown;		/* moving window from a pulldown menu */
  {
      Window junkRoot, junkChild;
@@ -43,7 +37,7 @@ diff -u -r1.1.1.1 -r1.2
      int first;
      XSetWindowAttributes attr;
      XWindowAttributes wattr;
-@@ -338,7 +332,7 @@
+@@ -338,7 +332,7 @@ int panner;
  	XRaiseWindow(dpy, window);
  
      while (True) {
@@ -52,7 +46,7 @@ diff -u -r1.1.1.1 -r1.2
  	if (done) {
  	    doMove(tmp_win, window, *x_root, *y_root, &xdest, &ydest, panner, False);
  	    break;
-@@ -363,9 +357,8 @@
+@@ -363,9 +357,8 @@ int panner;
  int paint;
  {
      int xl, yt;
@@ -63,7 +57,7 @@ diff -u -r1.1.1.1 -r1.2
      Window actual, virtual;
  
      dragX = x_root;
-@@ -374,8 +367,8 @@
+@@ -374,8 +367,8 @@ int paint;
      xl = dragX + diffX;
      yt = dragY + diffY;
  
@@ -74,7 +68,7 @@ diff -u -r1.1.1.1 -r1.2
  
      if (MoveFunction != F_FORCEMOVE && Scr->DontMoveOff && outlineWindow != Scr->Panner) {
  	if (tmp_win->root == Scr->VirtualDesktop || tmp_win->root == Scr->Panner) {
-@@ -438,8 +431,8 @@
+@@ -438,8 +431,8 @@ int paint;
  }
  
  static void
@@ -85,7 +79,7 @@ diff -u -r1.1.1.1 -r1.2
  int *x_root;
  int *y_root;
  int *cancel;
-@@ -448,11 +441,9 @@
+@@ -448,11 +441,9 @@ int *first;
  int adding;
  int pulldown;
  {
@@ -97,3 +91,21 @@ diff -u -r1.1.1.1 -r1.2
      unsigned mask;
      static int buttons;
  
+@@ -521,7 +512,7 @@ int pulldown;
+ 		}
+ 		break;
+ 	    case EnterNotify:
+-                if (doingMove && event.xcrossing.window == Scr->Panner && event.xcrossing.detail != NotifyInferior)
++                if (doingMove && Scr != NULL && event.xcrossing.window == Scr->Panner && event.xcrossing.detail != NotifyInferior)
+                 {
+                     MoveOutline(outlineWindow, 0,0,0,0,0,0);
+                     *cancel = IN_PANNER;
+@@ -530,7 +521,7 @@ int pulldown;
+                 }
+ 		break;
+ 	    case LeaveNotify:
+-                if (doingMove && event.xcrossing.window == Scr->Panner &&
++                if (doingMove && Scr != NULL && event.xcrossing.window == Scr->Panner &&
+ 		    event.xcrossing.detail != NotifyInferior && event.xcrossing.mode == NotifyNormal)
+                 {
+                     MoveOutline(outlineWindow, 0,0,0,0,0,0);
