@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/11/27 14:26:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/11/27 16:00:20 tron Exp $
 bin/gconf-config
 bin/gconf-config-1
 bin/gconfd-1
@@ -17,7 +17,7 @@ include/gconf/1/gconf/gconf-value.h
 include/gconf/1/gconf/gconf.h
 lib/GConf/1/libgconfbackend-xml.a
 lib/GConf/1/libgconfbackend-xml.la
-lib/GConf/1/libgconfbackend-xml.so.0.0
+lib/GConf/1/libgconfbackend-xml.so
 lib/libgconf-1.a
 lib/libgconf-1.la
 lib/libgconf-1.so.1.0

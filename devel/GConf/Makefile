@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/27 14:26:17 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/11/27 16:00:19 tron Exp $
 #
 
 DISTNAME=	GConf-0.11
@@ -30,9 +30,5 @@ post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
 	  ${LOCALBASE}/share/aclocal/gconf-1.m4
-	[ -f ${PREFIX}/lib/GConf/1/libgconfbackend-xml.so.0.0 ] || \
-	[ ! -f ${PREFIX}/lib/GConf/1/libgconfbackend-xml.so ] || \
-	${MV} ${PREFIX}/lib/GConf/1/libgconfbackend-xml.so \
-	   ${PREFIX}/lib/GConf/1/libgconfbackend-xml.so.0.0
 
 .include "../../mk/bsd.pkg.mk"
