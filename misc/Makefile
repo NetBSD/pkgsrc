@@ -1,5 +1,5 @@
-#	$NetBSD: Makefile,v 1.69 2000/12/11 14:15:32 wiz Exp $
-# FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
+# $NetBSD: Makefile,v 1.70 2000/12/12 01:30:57 wiz Exp $
+#
 
     SUBDIR += ascii
     SUBDIR += asr-manpages

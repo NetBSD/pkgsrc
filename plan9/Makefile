@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/15 11:53:25 agc Exp $
-# FreeBSD Id: Makefile,v 1.3 1996/11/26 08:57:54 asami Exp
+# $NetBSD: Makefile,v 1.9 2000/12/12 01:31:03 wiz Exp $
 #
 
     SUBDIR += 9menu
