@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 1999/04/03 00:51:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/14 22:25:46 wiz Exp $
 bin/tcl
 bin/tclhelp
 bin/wishx
 include/tclExtend.h
 lib/libtclx804.a
+lib/libtclx804.la
 lib/libtclx804.so.1.0
 lib/libtkx804.a
+lib/libtkx804.la
 lib/libtkx804.so.1.0
 lib/tclX8.0.4/autoload.tcl
 lib/tclX8.0.4/buildidx.tcl
