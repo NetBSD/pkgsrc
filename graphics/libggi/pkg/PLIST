@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/24 02:31:57 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/16 16:07:05 mycroft Exp $
 man/man7/libggi.7
 man/man6/cube3d.6
 man/man3/ggiResourceMustAcquire.3
@@ -138,28 +138,6 @@ lib/ggi/display/X.so
 lib/ggi/display/mansync.la
 lib/ggi/display/mansync.so
 @dirrm lib/ggi/display
-lib/ggi/input/null.so
-lib/ggi/input/null.la
-lib/ggi/input/file.so
-lib/ggi/input/file.la
-lib/ggi/input/stdin.so
-lib/ggi/input/stdin.la
-lib/ggi/input/x.so
-lib/ggi/input/x.la
-lib/ggi/input/xwin.so
-lib/ggi/input/xwin.la
-lib/ggi/input/mouse.so
-lib/ggi/input/mouse.la
-lib/ggi/input/linux_mouse.so
-lib/ggi/input/linux_mouse.la
-lib/ggi/input/spaceorb.so
-lib/ggi/input/spaceorb.la
-@dirrm lib/ggi/input
-lib/ggi/filter/mouse.so
-lib/ggi/filter/mouse.la
-lib/ggi/filter/save.so
-lib/ggi/filter/save.la
-@dirrm lib/ggi/filter
 @dirrm lib/ggi
 include/ggi/misc.h
 include/ggi/ggi-unix.h
@@ -197,20 +175,6 @@ include/ggi/internal/ggidlinit.h
 include/ggi/internal/ggi-dl.h
 include/ggi/internal/dltypes.h
 include/ggi/internal/debug.h
-include/ggi/internal/gii_debug.h
-include/ggi/internal/gii-dl.h
-include/ggi/internal/gii.h
-@dirrm include/ggi/internal
-include/ggi/gii-unix.h
-include/ggi/gii.h
-include/ggi/keyboard.h
-include/ggi/events.h
-include/ggi/system.h
-include/ggi/gg.h
-include/ggi/errors.h
-include/ggi/input/xwin.h
-include/ggi/input/lin_kbd.h
-@dirrm include/ggi/input
 @dirrm include/ggi
 etc/ggi/libggi.conf
 etc/ggi/libggimisc.conf
