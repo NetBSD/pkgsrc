@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.159 1998/09/07 15:41:28 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.160 1998/09/14 17:07:46 garbled Exp $
 #
 # This file is in the public domain.
 #
@@ -187,6 +187,13 @@ MD5?=			/usr/bin/md5
 MD5?=			md5
 .endif
 MD5_FILE?=		${FILESDIR}/md5
+
+.if defined(USE_MOTIF) || defined(USE_X11)
+LDFLAGS+=		-Wl,-R${X11BASE}/lib
+.endif
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
