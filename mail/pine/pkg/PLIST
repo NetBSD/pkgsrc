@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 1998/07/19 04:33:07 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/07/31 17:51:21 tv Exp $
 bin/abookcpy
 bin/pine
 bin/pgpdecode
 bin/pgpencrypt
 bin/pgpsign
-lib/pine.conf
-lib/pine.conf.fixed
+etc/pine.conf
+etc/pine.conf.fixed
 man/man1/pine.1
 share/doc/pine/tech-notes.txt
 share/examples/pine/dot.pinerc.pgp.sample
