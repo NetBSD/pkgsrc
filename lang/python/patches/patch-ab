@@ -1,39 +1,19 @@
-$NetBSD: patch-ab,v 1.1 1998/02/01 01:48:52 tron Exp $
-
-Patches submitted to Guido, comitted for next release.
-
-	-- tsarna@endicor.com, 21 January, 1998
-
---- Python/importdl.c.orig	Sun Jan 11 12:53:01 1998
-+++ Python/importdl.c	Sun Jan 11 12:54:01 1998
-@@ -53,7 +53,7 @@
-    SHORT_EXT	-- short extension for dynamic module, e.g. ".so"
-    LONG_EXT	-- long extension, e.g. "module.so"
-    hpux		-- HP-UX Dynamic Linking - defined by the compiler
--   __NetBSD__	-- NetBSD shared libraries (not quite SVR4 compatible)
-+   __NetBSD__	-- NetBSD shared libraries
-    __FreeBSD__	-- FreeBSD shared libraries
- 
-    (The other WITH_* symbols are used only once, to set the
-@@ -88,7 +88,11 @@
- #define LONG_EXT ".dll"
- #endif
- 
--#if defined(__NetBSD__)
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
-+
-+#if defined(__NetBSD__) && (NetBSD < 199712)
- #define DYNAMIC_LINK
- #define USE_SHLIB
- 
-@@ -157,7 +161,7 @@
- #ifdef USE_SHLIB
- #include <sys/types.h>
- #include <sys/stat.h>
--#if defined(__NetBSD__)
-+#if defined(__NetBSD__) && (NetBSD < 199712)
- #include <nlist.h>
- #include <link.h>
- #else
+Index: Modules/_tkinter.c
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Modules/_tkinter.c,v
+retrieving revision 1.62
+diff -c -r1.62 _tkinter.c
+*** _tkinter.c	1998/04/10 22:27:26	1.62
+--- _tkinter.c	1998/04/20 18:19:51
+***************
+*** 1548,1554 ****
+--- 1548,1556 ----
+  	if (PyErr_Occurred())
+  		return;
+  
++ #if TKMAJORMINOR >= 8000
+  	Py_AtExit(Tcl_Finalize);
++ #endif
+  
+  #ifdef macintosh
+  	/*

@@ -1,0 +1,257 @@
+Index: Modules/pcre-int.h
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Modules/pcre-int.h,v
+retrieving revision 2.3
+diff -c -r2.3 pcre-int.h
+*** pcre-int.h	1998/04/03 21:13:23	2.3
+--- pcre-int.h	1998/05/01 14:52:20
+***************
+*** 3,9 ****
+  *************************************************/
+  
+  
+! #define PCRE_VERSION       "1.07 16-Feb-1998"
+  
+  
+  /* This is a library of functions to support regular expressions whose syntax
+--- 3,9 ----
+  *************************************************/
+  
+  
+! #define PCRE_VERSION       "1.09 28-Apr-1998"
+  
+  
+  /* This is a library of functions to support regular expressions whose syntax
+***************
+*** 80,90 ****
+  #ifdef FOR_PYTHON
+  #define PUBLIC_OPTIONS \
+    (PCRE_CASELESS|PCRE_EXTENDED|PCRE_ANCHORED|PCRE_MULTILINE| \
+!    PCRE_DOTALL|PCRE_DOLLAR_ENDONLY|PCRE_EXTRA|PCRE_LOCALE)
+  #else
+  #define PUBLIC_OPTIONS \
+    (PCRE_CASELESS|PCRE_EXTENDED|PCRE_ANCHORED|PCRE_MULTILINE| \
+!    PCRE_DOTALL|PCRE_DOLLAR_ENDONLY|PCRE_EXTRA)
+  #endif
+  #define PUBLIC_EXEC_OPTIONS \
+    (PCRE_CASELESS|PCRE_ANCHORED|PCRE_MULTILINE|PCRE_NOTBOL|PCRE_NOTEOL| \
+--- 80,91 ----
+  #ifdef FOR_PYTHON
+  #define PUBLIC_OPTIONS \
+    (PCRE_CASELESS|PCRE_EXTENDED|PCRE_ANCHORED|PCRE_MULTILINE| \
+!    PCRE_DOTALL|PCRE_DOLLAR_ENDONLY|PCRE_EXTRA|PCRE_UNGREEDY| \
+!    PCRE_LOCALE)
+  #else
+  #define PUBLIC_OPTIONS \
+    (PCRE_CASELESS|PCRE_EXTENDED|PCRE_ANCHORED|PCRE_MULTILINE| \
+!    PCRE_DOTALL|PCRE_DOLLAR_ENDONLY|PCRE_EXTRA|PCRE_UNGREEDY)
+  #endif
+  #define PUBLIC_EXEC_OPTIONS \
+    (PCRE_CASELESS|PCRE_ANCHORED|PCRE_MULTILINE|PCRE_NOTBOL|PCRE_NOTEOL| \
+Index: Modules/pcre.h
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Modules/pcre.h,v
+retrieving revision 2.6
+diff -c -r2.6 pcre.h
+*** pcre.h	1998/04/03 21:13:25	2.6
+--- pcre.h	1998/05/01 14:52:20
+***************
+*** 34,39 ****
+--- 34,40 ----
+  #define PCRE_EXTRA           0x0040
+  #define PCRE_NOTBOL          0x0080
+  #define PCRE_NOTEOL          0x0100
++ #define PCRE_UNGREEDY        0x0400
+  #ifdef FOR_PYTHON
+  #define PCRE_LOCALE          0x0200
+  #endif
+Index: Modules/pypcre.c
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Modules/pypcre.c,v
+retrieving revision 2.12
+diff -c -r2.12 pypcre.c
+*** pypcre.c	1998/04/10 21:50:23	2.12
+--- pypcre.c	1998/05/01 14:52:21
+***************
+*** 1216,1221 ****
+--- 1216,1222 ----
+  int repeat_type, op_type;
+  int repeat_min, repeat_max;
+  int bravalue, length;
++ int greedy_default, greedy_non_default;
+  register int c;
+  register uschar *code = *codeptr;
+  const uschar *ptr = *ptrptr;
+***************
+*** 1224,1229 ****
+--- 1225,1235 ----
+  uschar class[32];
+  uschar *class_flag;  /* Pointer to the single-byte flag for OP_CLASS_L */
+  
++ /* Set up the default and non-default settings for greediness */
++  
++ greedy_default = ((options & PCRE_UNGREEDY) != 0);
++ greedy_non_default = greedy_default ^ 1;
++  
+  /* Switch on next character until the end of the branch */
+  
+  for (;; ptr++)
+***************
+*** 1536,1545 ****
+        goto FAILED;
+        }
+  
+!     /* If the next character is '?' this is a minimizing repeat. Advance to the
+      next character. */
+  
+!     if (ptr[1] == '?') { repeat_type = 1; ptr++; } else repeat_type = 0;
+  
+      /* If the maximum is zero then the minimum must also be zero; Perl allows
+      this case, so we do too - by simply omitting the item altogether. */
+--- 1542,1554 ----
+        goto FAILED;
+        }
+  
+!     /* If the next character is '?' this is a minimizing repeat, by default,
+!     but if PCRE_UNGREEDY is set, it works the other way round. Advance to the
+      next character. */
+  
+!     if (ptr[1] == '?')
+!       { repeat_type = greedy_non_default; ptr++; }
+!     else repeat_type = greedy_default;
+  
+      /* If the maximum is zero then the minimum must also be zero; Perl allows
+      this case, so we do too - by simply omitting the item altogether. */
+***************
+*** 1628,1641 ****
+          /* If the mininum is 1 and the previous item was a character string,
+          we either have to put back the item that got cancelled if the string
+          length was 1, or add the character back onto the end of a longer
+!         string. For a character type nothing need be done; it will just get put
+!         back naturally. */
+  
+          else if (*previous == OP_CHARS)
+            {
+            if (code == previous) code += 2; else previous[1]++;
+            }
+  
+          /* If the maximum is unlimited, insert an OP_STAR. */
+  
+          if (repeat_max < 0)
+--- 1637,1656 ----
+          /* If the mininum is 1 and the previous item was a character string,
+          we either have to put back the item that got cancelled if the string
+          length was 1, or add the character back onto the end of a longer
+!         string. For a character type nothing need be done; it will just get
+!         put back naturally. Note that the final character is always going to
+!         get added below. */
+  
+          else if (*previous == OP_CHARS)
+            {
+            if (code == previous) code += 2; else previous[1]++;
+            }
+  
++         /*  For a single negated character we also have to put back the
++         item that got cancelled. */
++ 
++         else if (*previous == OP_NOT) code++;
++ 
+          /* If the maximum is unlimited, insert an OP_STAR. */
+  
+          if (repeat_max < 0)
+***************
+*** 1779,1784 ****
+--- 1794,1801 ----
+          case 'm':
+          case 's':
+          case 'x':
++         case 'U':
++         case 'X':
+          ptr++;
+          while (*ptr != ')') ptr++;
+          previous = NULL;
+***************
+*** 2484,2490 ****
+          ptr += 2;
+          break;
+          }
+!       /* Else fall thourh */
+  
+        /* Else loop setting valid options until ) is met. Anything else is an
+        error. */
+--- 2501,2507 ----
+          ptr += 2;
+          break;
+          }
+!       /* Else fall through */
+  
+        /* Else loop setting valid options until ) is met. Anything else is an
+        error. */
+***************
+*** 2519,2524 ****
+--- 2536,2551 ----
+            length -= spaces;          /* Already counted spaces */
+            continue;
+            }
++         else if (c == 'X')
++           {
++           options |= PCRE_EXTRA;
++           continue;
++           }
++         else if (c == 'U')
++           {
++           options |= PCRE_UNGREEDY;
++           continue;
++           }
+          else if (c == ')') break;
+  
+          *errorptr = ERR12;
+***************
+*** 2725,2738 ****
+  
+  if (re->options != 0)
+    {
+!   printf("%s%s%s%s%s%s%s\n",
+      ((re->options & PCRE_ANCHORED) != 0)? "anchored " : "",
+      ((re->options & PCRE_CASELESS) != 0)? "caseless " : "",
+      ((re->options & PCRE_EXTENDED) != 0)? "extended " : "",
+      ((re->options & PCRE_MULTILINE) != 0)? "multiline " : "",
+      ((re->options & PCRE_DOTALL) != 0)? "dotall " : "",
+      ((re->options & PCRE_DOLLAR_ENDONLY) != 0)? "endonly " : "",
+!     ((re->options & PCRE_EXTRA) != 0)? "extra " : "");
+    }
+  
+  if ((re->options & PCRE_FIRSTSET) != 0)
+--- 2752,2766 ----
+  
+  if (re->options != 0)
+    {
+!   printf("%s%s%s%s%s%s%s%s\n",
+      ((re->options & PCRE_ANCHORED) != 0)? "anchored " : "",
+      ((re->options & PCRE_CASELESS) != 0)? "caseless " : "",
+      ((re->options & PCRE_EXTENDED) != 0)? "extended " : "",
+      ((re->options & PCRE_MULTILINE) != 0)? "multiline " : "",
+      ((re->options & PCRE_DOTALL) != 0)? "dotall " : "",
+      ((re->options & PCRE_DOLLAR_ENDONLY) != 0)? "endonly " : "",
+!     ((re->options & PCRE_EXTRA) != 0)? "extra " : "",
+!     ((re->options & PCRE_UNGREEDY) != 0)? "ungreedy " : "");  
+    }
+  
+  if ((re->options & PCRE_FIRSTSET) != 0)
+***************
+*** 3070,3076 ****
+    if (md->offset_top == NULL || md->eptr == NULL || md->ecode == NULL ||
+        md->off_num == NULL || md->r1 == NULL || md->r2 == NULL) 
+      {
+!       PyErr_SetString(PyExc_MemoryError, "Can't increase failure stack for re operation");
+        longjmp(md->error_env, 1);
+      }
+    return 0;
+--- 3098,3104 ----
+    if (md->offset_top == NULL || md->eptr == NULL || md->ecode == NULL ||
+        md->off_num == NULL || md->r1 == NULL || md->r2 == NULL) 
+      {
+!       PyErr_NoMemory();
+        longjmp(md->error_env, 1);
+      }
+    return 0;
