@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.15 2004/04/22 12:00:05 abs Exp $
+# $Id: optimize_gcc.mk,v 1.16 2004/05/10 17:39:39 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -29,8 +29,9 @@ PKGBASE=${.CURDIR:C:.*/::}
 
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=galeon galeon-devel lua lua4
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=mozilla mozilla-gtk2
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=firefox firefox-gtk2 galeon galeon-devel
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=lua lua4 mozilla mozilla-gtk2
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=thunderbird thunderbird-gtk2
 PKG_EXCLUDE_INLINE_FUNCTIONS+=userppp
 .if !defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3 koffice
