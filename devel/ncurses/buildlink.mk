@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.21 2002/08/25 18:38:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.22 2002/09/01 19:02:17 tron Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -36,7 +36,7 @@ _INCOMPAT_CURSES+=      NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
 # the safe side.  We can narrow down the match when we have better
 # information.
 #
-_INCOMPAT_CURSES+=	SunOS-*-*
+_INCOMPAT_CURSES+=	SunOS-5.[0-8]-*
 INCOMPAT_CURSES?=	# empty
 .  for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
