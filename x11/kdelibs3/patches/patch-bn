@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
+$NetBSD: patch-bn,v 1.7 2004/01/15 09:52:51 markd Exp $
 
---- kioslave/http/Makefile.in.orig	Thu May  8 05:24:13 2003
+--- kioslave/http/Makefile.in.orig	2003-12-29 11:17:01.000000000 +1300
 +++ kioslave/http/Makefile.in
-@@ -383,7 +383,7 @@ INCLUDES = -I$(top_srcdir)/interfaces $(
+@@ -385,7 +385,7 @@ INCLUDES = -I$(top_srcdir)/interfaces $(
  
  ####### Files
  bin_PROGRAMS = kio_http_cache_cleaner
@@ -11,7 +11,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  kde_module_LTLIBRARIES = kio_http.la
  
  kio_http_la_SOURCES = http.cc httpfilter.cc
-@@ -391,12 +391,15 @@ kio_http_la_SOURCES = http.cc httpfilter
+@@ -393,12 +393,15 @@ kio_http_la_SOURCES = http.cc httpfilter
  kio_http_la_LIBADD = $(LIB_KIO) $(LIBZ)
  kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
  
@@ -31,7 +31,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version $(all_libraries)
  
  noinst_HEADERS = http.h
-@@ -419,33 +422,47 @@ kio_http_la_final_OBJECTS = kio_http_la.
+@@ -422,33 +425,47 @@ kio_http_la_final_OBJECTS = kio_http_la.
  kio_http_la_nofinal_OBJECTS = http.lo httpfilter.lo
  @KDE_USE_FINAL_FALSE@kio_http_la_OBJECTS = $(kio_http_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kio_http_la_OBJECTS = $(kio_http_la_final_OBJECTS)
@@ -89,7 +89,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/httpfilter.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -468,6 +485,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -471,6 +488,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kio_http_la_SOURCES) \
  	$(kio_http_cache_cleaner_la_SOURCES) \
@@ -97,7 +97,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  	$(kio_http_cache_cleaner_SOURCES)
  DATA = $(kdelnk_DATA)
  
-@@ -481,7 +499,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -484,7 +502,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -106,7 +106,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -561,6 +579,8 @@ clean-libLTLIBRARIES:
+@@ -564,6 +582,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kio_http_la_LDFLAGS) $(kio_http_la_OBJECTS) $(kio_http_la_LIBADD) $(LIBS)
  kio_http_cache_cleaner.la: $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kio_http_cache_cleaner_la_LDFLAGS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_LIBADD) $(LIBS)
@@ -115,7 +115,7 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -600,9 +620,10 @@ mostlyclean-compile:
+@@ -603,9 +623,10 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -127,16 +127,16 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/httpfilter.Plo@am__quote@
  
  distclean-depend:
-@@ -821,7 +842,7 @@ distclean-tags:
+@@ -830,7 +851,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=webdav.protocol http_cache_cleaner.desktop README.webdav rfc2817.txt THOUGHTS README.http_cache_cleaner webdavs.protocol rfc2617.txt rfc2818.txt rfc2616.txt http.protocol https.protocol httpfilter.h rfc3253.txt rfc2518.txt 
-+KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop rfc2817.txt httpfilter.h webdavs.protocol rfc3253.txt rfc2818.txt http.protocol webdav.protocol README.webdav https.protocol rfc2616.txt rfc2518.txt rfc2617.txt THOUGHTS 
+-KDE_DIST=http_cache_cleaner.desktop rfc2818.txt webdavs.protocol rfc2518.txt rfc2817.txt webdav.protocol rfc2616.txt https.protocol rfc3253.txt http.protocol README.webdav rfc2617.txt README.http_cache_cleaner THOUGHTS httpfilter.h 
++KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop rfc2817.txt httpfilter.h webdavs.protocol rfc3253.txt rfc2818.txt http.protocol webdav.protocol README.webdav https.protocol rfc2616.txt rfc2518.txt rfc2617.txt Makefile.in.rej THOUGHTS 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -985,9 +1006,6 @@ uninstall-info: uninstall-info-recursive
+@@ -994,9 +1015,6 @@ uninstall-info: uninstall-info-recursive
  	uninstall-kdelnkDATA uninstall-libLTLIBRARIES \
  	uninstall-recursive
  
@@ -146,13 +146,50 @@ $NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -1064,7 +1082,7 @@ kde-rpo-clean:
+@@ -1011,20 +1029,20 @@ kio_http.la.closure: $(kio_http_la_OBJEC
+ 
+ 
+ #>+ 3
+-httpfilter.moc: $(srcdir)/httpfilter.h
+-	$(MOC) $(srcdir)/httpfilter.h -o httpfilter.moc
+-
+-#>+ 1
+-mocs: httpfilter.moc
+-#>+ 3
+ http.moc: $(srcdir)/http.h
+ 	$(MOC) $(srcdir)/http.h -o http.moc
+ 
+ #>+ 1
+ mocs: http.moc
+ #>+ 3
++httpfilter.moc: $(srcdir)/httpfilter.h
++	$(MOC) $(srcdir)/httpfilter.h -o httpfilter.moc
++
++#>+ 1
++mocs: httpfilter.moc
++#>+ 3
+ clean-metasources:
+-	-rm -f  httpfilter.moc http.moc
++	-rm -f  http.moc httpfilter.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -1041,7 +1059,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-kio_http_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/http.cc $(srcdir)/httpfilter.cc  httpfilter.moc http.moc
++kio_http_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/http.cc $(srcdir)/httpfilter.cc  http.moc httpfilter.moc
+ 	@echo 'creating kio_http_la.all_cc.cc ...'; \
+ 	rm -f kio_http_la.all_cc.files kio_http_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kio_http_la.all_cc.final; \
+@@ -1077,7 +1095,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5
+-httpfilter.o: httpfilter.moc 
 +http.o: http.moc 
-+httpfilter.lo: httpfilter.moc 
- httpfilter.o: httpfilter.moc 
+ httpfilter.lo: httpfilter.moc 
++httpfilter.o: httpfilter.moc 
  http.lo: http.moc 
--httpfilter.lo: httpfilter.moc 
 -http.o: http.moc 

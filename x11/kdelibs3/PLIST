@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/07/30 13:16:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/01/15 09:52:51 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -3710,6 +3710,8 @@ share/kde/mimelnk/application/x-cda.desktop
 share/kde/mimelnk/application/x-compress.desktop
 share/kde/mimelnk/application/x-core.desktop
 share/kde/mimelnk/application/x-cpio.desktop
+share/kde/mimelnk/application/x-cue.desktop
+share/kde/mimelnk/application/x-dbase.desktop
 share/kde/mimelnk/application/x-designer.desktop
 share/kde/mimelnk/application/x-desktop.desktop
 share/kde/mimelnk/application/x-dvi.desktop
@@ -3725,6 +3727,7 @@ share/kde/mimelnk/application/x-gnumeric.desktop
 share/kde/mimelnk/application/x-graphite.desktop
 share/kde/mimelnk/application/x-gzip.desktop
 share/kde/mimelnk/application/x-hancomword.desktop
+share/kde/mimelnk/application/x-iso.desktop
 share/kde/mimelnk/application/x-jar.desktop
 share/kde/mimelnk/application/x-java-applet.desktop
 share/kde/mimelnk/application/x-java.desktop
