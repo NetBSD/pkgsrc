@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
-# FreeBSD Id: ports/x11-fm/tkdesk/Makefile,v 1.18 2001/09/03 18:17:47 knu Exp
+# $NetBSD: Makefile,v 1.2 2002/10/25 09:21:11 wiz Exp $
+#
 
 DISTNAME=	tkdesk-1.2
 CATEGORIES=	sysutils
@@ -9,20 +9,20 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://tkdesk.sourceforge.net/
 COMMENT=	graphical file manager
 
-DEPENDS+=	tcl-itcl>=3.2:../../lang/tcl-itcl
-DEPENDS+=	blt>=2.4:../../x11/blt
-
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-tcl=${LOCALBASE}/lib	\
-		--with-tk=${LOCALBASE}/lib	\
-		--with-itcl=${LOCALBASE}/lib	\
-		--with-blt=${LOCALBASE}/lib
+CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
+		--with-tk=${BUILDLINK_PREFIX.tk}/lib	\
+		--with-itcl=${BUILDLINK_PREFIX.tcl-itcl}/lib	\
+		--with-blt=${BUILDLINK_PREFIX.blt}/lib
 
 pre-install:
 	${RM} -Rf ${WRKSRC}/tcldesk/configs/.trash
 	${FIND} ${WRKSRC}/tcldesk -type f -name '*.orig' | ${XARGS} ${RM} -rf
 	${FIND} ${WRKSRC}/tcldesk -name '*' -exec ${TOUCH} {} ';'
 
-.include "../../lang/tcl/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl-itcl/buildlink2.mk"
+.include "../../x11/blt/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
