@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/01/14 08:57:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/04 08:26:29 adam Exp $
 
-DISTNAME=	gg2-2.2.4
+DISTNAME=	gg2-2.2.5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ggadu/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://ggadu.sourceforge.net/
@@ -12,13 +13,16 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
-PKGCONFIG_OVERRIDE+=	lib/gg2_core.pc.in
 GNU_CONFIGURE=		yes
 LIBS+=			-lm
+PKGCONFIG_OVERRIDE+=	lib/gg2_core.pc.in
 
-CONFIGURE_ARGS+=	--without-gtkspell --without-remote \
-			--without-update --without-external --without-arts \
-			--with-external-libgadu
+CONFIGURE_ARGS+=	--with-external-libgadu
+CONFIGURE_ARGS+=	--without-arts
+CONFIGURE_ARGS+=	--without-external
+CONFIGURE_ARGS+=	--without-gtkspell
+CONFIGURE_ARGS+=	--without-remote
+CONFIGURE_ARGS+=	--without-update
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../chat/ekg/buildlink3.mk"
