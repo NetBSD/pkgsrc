@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/01 12:27:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/30 14:11:59 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kbouboule.kss
@@ -610,7 +610,6 @@ share/kde/icons/Locolor/16x16/apps/kpm.png
 share/kde/icons/Locolor/16x16/apps/kpoker.png
 share/kde/icons/Locolor/16x16/apps/kppp.png
 share/kde/icons/Locolor/16x16/apps/kpresenter.png
-share/kde/icons/Locolor/16x16/apps/krayon.png
 share/kde/icons/Locolor/16x16/apps/kreversi.png
 share/kde/icons/Locolor/16x16/apps/kruler.png
 share/kde/icons/Locolor/16x16/apps/ksame.png
@@ -932,7 +931,6 @@ share/kde/icons/Locolor/32x32/apps/kpm.png
 share/kde/icons/Locolor/32x32/apps/kpoker.png
 share/kde/icons/Locolor/32x32/apps/kppp.png
 share/kde/icons/Locolor/32x32/apps/kpresenter.png
-share/kde/icons/Locolor/32x32/apps/krayon.png
 share/kde/icons/Locolor/32x32/apps/kreversi.png
 share/kde/icons/Locolor/32x32/apps/kruler.png
 share/kde/icons/Locolor/32x32/apps/ksame.png
@@ -2370,7 +2368,6 @@ share/kde/icons/kdeclassic/16x16/apps/kpoker.png
 share/kde/icons/kdeclassic/16x16/apps/kpovmodeler.png
 share/kde/icons/kdeclassic/16x16/apps/kppp.png
 share/kde/icons/kdeclassic/16x16/apps/kpresenter.png
-share/kde/icons/kdeclassic/16x16/apps/krayon.png
 share/kde/icons/kdeclassic/16x16/apps/kreversi.png
 share/kde/icons/kdeclassic/16x16/apps/krita.png
 share/kde/icons/kdeclassic/16x16/apps/kruler.png
@@ -3722,7 +3719,6 @@ share/kde/icons/kdeclassic/32x32/apps/kpoker.png
 share/kde/icons/kdeclassic/32x32/apps/kpovmodeler.png
 share/kde/icons/kdeclassic/32x32/apps/kppp.png
 share/kde/icons/kdeclassic/32x32/apps/kpresenter.png
-share/kde/icons/kdeclassic/32x32/apps/krayon.png
 share/kde/icons/kdeclassic/32x32/apps/krdc.png
 share/kde/icons/kdeclassic/32x32/apps/kreversi.png
 share/kde/icons/kdeclassic/32x32/apps/krfb.png
@@ -4109,7 +4105,6 @@ share/kde/icons/kdeclassic/48x48/apps/kpilotDaemon.png
 share/kde/icons/kdeclassic/48x48/apps/kpoker.png
 share/kde/icons/kdeclassic/48x48/apps/kppp.png
 share/kde/icons/kdeclassic/48x48/apps/kpresenter.png
-share/kde/icons/kdeclassic/48x48/apps/krayon.png
 share/kde/icons/kdeclassic/48x48/apps/krdc.png
 share/kde/icons/kdeclassic/48x48/apps/krec.png
 share/kde/icons/kdeclassic/48x48/apps/kreversi.png
@@ -4561,7 +4556,6 @@ share/kde/icons/slick/16x16/apps/konsole.png
 share/kde/icons/slick/16x16/apps/kontour.png
 share/kde/icons/slick/16x16/apps/kppp.png
 share/kde/icons/slick/16x16/apps/kpresenter.png
-share/kde/icons/slick/16x16/apps/krayon.png
 share/kde/icons/slick/16x16/apps/kreatecd.png
 share/kde/icons/slick/16x16/apps/kshowmail.png
 share/kde/icons/slick/16x16/apps/kspread.png
@@ -5086,7 +5080,6 @@ share/kde/icons/slick/32x32/apps/kontour.png
 share/kde/icons/slick/32x32/apps/kpf.png
 share/kde/icons/slick/32x32/apps/kppp.png
 share/kde/icons/slick/32x32/apps/kpresenter.png
-share/kde/icons/slick/32x32/apps/krayon.png
 share/kde/icons/slick/32x32/apps/kreatecd.png
 share/kde/icons/slick/32x32/apps/kshowmail.png
 share/kde/icons/slick/32x32/apps/kspread.png
@@ -5493,7 +5486,6 @@ share/kde/icons/slick/48x48/apps/konsole_blue.png
 share/kde/icons/slick/48x48/apps/kontour.png
 share/kde/icons/slick/48x48/apps/kppp.png
 share/kde/icons/slick/48x48/apps/kpresenter.png
-share/kde/icons/slick/48x48/apps/krayon.png
 share/kde/icons/slick/48x48/apps/kreatecd.png
 share/kde/icons/slick/48x48/apps/kshowmail.png
 share/kde/icons/slick/48x48/apps/kspread.png
