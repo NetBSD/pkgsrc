@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/26 22:42:23 wulf Exp $
+
+--- src/event.c.orig	2003-06-22 16:01:28.000000000 +0930
++++ src/event.c	2003-06-22 16:04:30.000000000 +0930
+@@ -74,7 +74,7 @@
+ 
+ 	sigemptyset(&act.sa_mask);
+ 
+-#ifdef HAVE_SIGINFO_T
++#if defined(HAVE_SIGINFO_T) && defined(SA_SIGINFO)
+ 	act.sa_flags = SA_SIGINFO;
+ #else
+ 	act.sa_flags = 0;
