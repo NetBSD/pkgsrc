@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/03/26 20:53:54 jtb Exp $
+
+--- rfonts.cpp.orig	Tue Feb 20 21:32:17 2001
++++ rfonts.cpp
+@@ -68,7 +68,7 @@
+ 
+ #ifndef DEF_WINDOWS
+   // Lookup from /usr/share/<proj>/fonts:
+-  lookupFonts( QString("/usr/share/")+DEF_APPNAME_L+"/fonts" );
++  lookupFonts( QString("@PREFIX@/share/")+DEF_APPNAME_L+"/fonts" );
+ 
+   // Lookup from /usr/local/<proj>/fonts:
+   lookupFonts( QString("/usr/local/")+DEF_APPNAME_L+"/fonts" );
