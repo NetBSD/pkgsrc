@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/11/05 23:03:54 seb Exp $
+
+--- gcc-2.95.3-20011106/gcc/Makefile.in.orig	Fri Oct 19 08:13:13 2001
++++ gcc-2.95.3-20011106/gcc/Makefile.in
+@@ -839,7 +839,7 @@ all.internal: start.encap rest.encap doc
+ # Note that we can compile enquire using the cross-compiler just built,
+ # although we can't run it on this machine.
+ all.cross: native gcc-cross specs stmp-headers $(STMP_FIXPROTO) $(LIBGCC) \
+-	$(LIBGCC1_TEST) $(EXTRA_PARTS) lang.all.cross doc
++	$(LIBGCC1_TEST) $(EXTRA_PARTS) lang.all.cross
+ # This is what to compile if making gcc with a cross-compiler.
+ all.build: native xgcc$(exeext) cpp$(exeext) $(EXTRA_PARTS) lang.all.build
+ # This is what must be made before installing GCC and converting libraries.
