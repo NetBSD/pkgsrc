@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/18 17:51:40 snj Exp $
 
 DISTNAME=       djbfft-0.76
 CATEGORIES=     math
@@ -10,6 +10,8 @@ COMMENT=        Extremely fast library for floating-point convolution
 
 ALL_TARGET=
 INSTALL_TARGET=	setup check
+
+USE_BUILDLINK3=	yes
 
 NOT_FOR_PLATFORM=	IRIX-*-*
 
