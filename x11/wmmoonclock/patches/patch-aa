@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/30 20:30:30 tron Exp $
+
+--- Makefile.orig	Tue Mar 23 03:20:32 1999
++++ Makefile	Sun Jul 30 22:28:09 2000
+@@ -1,8 +1,8 @@
+ CC     = gcc
+ CFLAGS = -O2
+-INCDIR = -I/usr/X11R6/include/X11
+-DESTDIR= /usr/X11R6
+-LIBDIR = -L/usr/X11R6/lib
++INCDIR = -I${PREFIX}/include
++DESTDIR= ${PREFIX}
++LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
+ 
+ # for Linux
+ LIBS   = -lXpm -lX11 -lXext
+@@ -31,6 +31,5 @@
+ 	rm -f wmMoonClock
+ 
+ install:: wmMoonClock
+-	install -s -m 0755 wmMoonClock $(DESTDIR)/bin
+-	install    -m 0644 wmMoonClock.1 $(DESTDIR)/man/man1 
+-
++	$(BSD_INSTALL_PROGRAM) wmMoonClock $(DESTDIR)/bin
++	$(BSD_INSTALL_DATA) wmMoonClock.1 $(DESTDIR)/man/man1 
