@@ -1,0 +1,6 @@
+Displays a given file anywhere on your X11 root window with a
+transparent background. It was made because I'm very lazy and this was
+easier than making a new rxvt pixmap each time I changed my background
+to simulate that transparent effect. A null desc (example:
+"/var/log/messages,red,") will prevent the printing of a description
+and the []'s.
