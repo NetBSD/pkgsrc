@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3327 2005/03/29 14:40:36 wiz Exp $
+$NetBSD: TODO,v 1.3328 2005/03/29 16:03:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -702,7 +702,6 @@ Suggested package updates
 	o openacs-5.1.4
 	o openal-20050202
 	o opencobol-0.31
-	o openexr-1.2.2
 	o openh323-1.17.1
 	o openldap-2.2.24
 	o openmotif-2.2.4
