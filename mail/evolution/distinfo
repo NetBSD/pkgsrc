@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2003/03/22 04:35:09 rh Exp $
+$NetBSD: distinfo,v 1.21 2003/04/12 04:26:41 rh Exp $
 
-SHA1 (evolution-1.2.3.tar.gz) = 3c93130606e99c3a58b9be6cfad1d7b3ba473704
-Size (evolution-1.2.3.tar.gz) = 16331377 bytes
+SHA1 (evolution-1.2.4.tar.bz2) = 924ef022d39ab437e41b784181ba572e8a16e59d
+Size (evolution-1.2.4.tar.bz2) = 12940769 bytes
 SHA1 (patch-aa) = e571e75bcb93801bc6132bb2ca3f96abbde22494
 SHA1 (patch-ab) = 0e0f5fd6efe83f14aee9be54e855a4844ae2f3ef
 SHA1 (patch-ac) = 3622582ad55b0afe7662787747958bda677833f5
