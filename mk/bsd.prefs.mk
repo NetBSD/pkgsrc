@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.55 2001/07/26 08:33:02 hubertf Exp $
+# $NetBSD: bsd.prefs.mk,v 1.56 2001/07/26 16:13:52 hubertf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -288,7 +288,11 @@ PKG_TOOLS_BIN?=		/usr/sbin
 # end of migration aid
 LOCALBASE?=             ${DESTDIR}/usr/pkg
 .if !defined(ZOULARISBASE)
+.  if exists(${LOCALBASE}/bsd)
 ZOULARISBASE:=		${LOCALBASE}/bsd
+.  else
+ZOULARISBASE:=		${LOCALBASE}
+.  endif
 .endif
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 
