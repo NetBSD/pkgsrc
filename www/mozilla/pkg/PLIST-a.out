@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-a.out,v 1.9 2001/02/17 11:03:28 taya Exp $
+@comment $NetBSD: PLIST-a.out,v 1.10 2001/03/30 09:37:51 taya Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
@@ -8,7 +8,6 @@ lib/mozilla/regExport
 lib/mozilla/regchrome
 lib/mozilla/regxpcom
 lib/mozilla/timebombgen
-lib/mozilla/vreg
 lib/mozilla/xpidl
 lib/mozilla/xpt_dump
 lib/mozilla/xpt_link
@@ -31,6 +30,7 @@ lib/mozilla/components/libeditor.so.1.0
 lib/mozilla/components/libembedcomponents.so.1.0
 lib/mozilla/components/libgfx_gtk.so.1.0
 lib/mozilla/components/libgfxps.so.1.0
+lib/mozilla/components/libgkcontent.so.1.0
 lib/mozilla/components/libgklayout.so.1.0
 lib/mozilla/components/libgkplugin.so.1.0
 lib/mozilla/components/libgkview.so.1.0
@@ -117,12 +117,13 @@ lib/mozilla/plugins/libnullplugin.so.1.0
 @comment end DSO
 @comment begin DATA
 lib/mozilla/bloaturls.txt
-lib/mozilla/chrome/blue.jar
+lib/mozilla/chrome/US.jar
 lib/mozilla/chrome/chatzilla.jar
 lib/mozilla/chrome/classic.jar
 lib/mozilla/chrome/comm.jar
 lib/mozilla/chrome/embed.jar
 lib/mozilla/chrome/en-US.jar
+lib/mozilla/chrome/en-unix.jar
 lib/mozilla/chrome/installed-chrome.txt
 lib/mozilla/chrome/messenger.jar
 lib/mozilla/chrome/modern.jar
@@ -136,11 +137,13 @@ lib/mozilla/components/caps.xpt
 lib/mozilla/components/chardet.xpt
 lib/mozilla/components/chatzilla-service.js
 lib/mozilla/components/chrome.xpt
+lib/mozilla/components/content_base.xpt
 lib/mozilla/components/cookieviewer.xpt
 lib/mozilla/components/directory.xpt
 lib/mozilla/components/docshell.xpt
 lib/mozilla/components/dom.xpt
 lib/mozilla/components/editor.xpt
+lib/mozilla/components/embed_base.xpt
 lib/mozilla/components/exthandler.xpt
 lib/mozilla/components/gfx.xpt
 lib/mozilla/components/history.xpt
@@ -152,6 +155,7 @@ lib/mozilla/components/jsurl.xpt
 lib/mozilla/components/layout.xpt
 lib/mozilla/components/layout_base.xpt
 lib/mozilla/components/layout_xul.xpt
+lib/mozilla/components/layout_xul_outliner.xpt
 lib/mozilla/components/locale.xpt
 lib/mozilla/components/mailnews.xpt
 lib/mozilla/components/mime.xpt
@@ -216,7 +220,6 @@ lib/mozilla/components/widget.xpt
 lib/mozilla/components/windowwatcher.xpt
 lib/mozilla/components/xml-rpc.xpt
 lib/mozilla/components/xmlextras.xpt
-lib/mozilla/components/xmlsoap.xpt
 lib/mozilla/components/xpcom_base.xpt
 lib/mozilla/components/xpcom_components.xpt
 lib/mozilla/components/xpcom_ds.xpt
@@ -225,6 +228,8 @@ lib/mozilla/components/xpcom_threads.xpt
 lib/mozilla/components/xpcom_xpti.xpt
 lib/mozilla/components/xpconnect.xpt
 lib/mozilla/components/xpinstall.xpt
+lib/mozilla/components/xuldoc.xpt
+lib/mozilla/components/xultmpl.xpt
 lib/mozilla/defaults/pref/all.js
 lib/mozilla/defaults/pref/config.js
 lib/mozilla/defaults/pref/editor.js
@@ -233,12 +238,12 @@ lib/mozilla/defaults/pref/mailnews.js
 lib/mozilla/defaults/pref/security-prefs.js
 lib/mozilla/defaults/pref/unix.js
 lib/mozilla/defaults/pref/xpinstall.js
+lib/mozilla/defaults/profile/US/bookmarks.html
+lib/mozilla/defaults/profile/US/localstore.rdf
+lib/mozilla/defaults/profile/US/mimeTypes.rdf
+lib/mozilla/defaults/profile/US/panels.rdf
+lib/mozilla/defaults/profile/US/search.rdf
 lib/mozilla/defaults/profile/bookmarks.html
-lib/mozilla/defaults/profile/en-US/bookmarks.html
-lib/mozilla/defaults/profile/en-US/localstore.rdf
-lib/mozilla/defaults/profile/en-US/mimeTypes.rdf
-lib/mozilla/defaults/profile/en-US/panels.rdf
-lib/mozilla/defaults/profile/en-US/search.rdf
 lib/mozilla/defaults/profile/localstore.rdf
 lib/mozilla/defaults/profile/mimeTypes.rdf
 lib/mozilla/defaults/profile/panels.rdf
@@ -352,8 +357,8 @@ lib/mozilla/searchplugins/mozilla.gif
 lib/mozilla/searchplugins/mozilla.src
 lib/mozilla/splash.xpm
 @comment end DATA
-@exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
-@exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
+@exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
+@exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
 @unexec rm %D/lib/mozilla/component.reg
 @unexec rm %D/lib/mozilla/chrome/user-locales.rdf
 @unexec rm %D/lib/mozilla/chrome/user-skins.rdf
@@ -393,7 +398,7 @@ lib/mozilla/splash.xpm
 @dirrm lib/mozilla/icons
 @dirrm lib/mozilla/dtd
 @dirrm lib/mozilla/defaults/wallet
-@dirrm lib/mozilla/defaults/profile/en-US
+@dirrm lib/mozilla/defaults/profile/US
 @dirrm lib/mozilla/defaults/profile
 @dirrm lib/mozilla/defaults/pref
 @dirrm lib/mozilla/defaults
