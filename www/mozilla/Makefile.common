@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2004/08/31 02:37:57 danw Exp $
+# $NetBSD: Makefile.common,v 1.44.2.1 2004/11/30 23:29:14 salo Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -21,12 +21,17 @@ USE_PERL5=	build
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-gtkmozembed.pc.in
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-js.pc.in
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-nspr.pc.in
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-nss.pc.in
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-plugin.pc.in
-PKGCONFIG_OVERRIDE+=	build/unix/mozilla-xpcom.pc.in
+
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-gtkmozembed.pc
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-js.pc
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-nspr.pc
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-nss.pc
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-plugin.pc
+PKGCONFIG_OVERRIDE+=	build/unix/mozilla-xpcom.pc
+# Some .pc files are filled in by the build process, so we can't fix the
+# rpaths until this has happened.
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+
 CONFIGURE_ARGS+= --disable-tests \
 		--disable-debug \
 		--disable-pedantic \
@@ -129,6 +134,10 @@ SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX:Q}
 SCRIPTS_ENV+=	SUNOSLIB=${SUNOSLIB}
 
 PTHREAD_OPTS+=	native optional
+
+.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
+GCC_REQD+=	3.4
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc*)
