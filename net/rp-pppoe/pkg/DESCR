@@ -1,0 +1,18 @@
+BSD port of Roaring Penguin's pppoe client by
+Geoff Mottram <minaret@sprynet.com>.
+
+This BSD port of Roaring Penguin's PPPoE client uses the Berkeley
+Packet Filter to provide direct access to the Ethernet protocol
+for the pppd(8) daemon.  It adds an additional feature that is
+not found in the Linux distribution for watching PPPoE packets.
+Details on this feature can be found in the "PPPoE Packet Watching"
+section at the bottom of this file.
+
+The Roaring Penguin PPPoE client is a robust product that has been
+widely used and tested by the Linux community.  It integrates tightly
+with the PPP daemon (pppd) to take advantage of all of the features of
+that package.
+
+The software has been tested on NetBSD 1.4.2 but should run on
+any BSD variant that has pppd version 2.3.7 or later.  Note that
+demand-dialing requires pppd 2.3.10 or later.

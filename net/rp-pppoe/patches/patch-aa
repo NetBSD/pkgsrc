@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/11 21:20:36 tron Exp $
+
+--- Makefile.in.orig	Fri May 26 01:16:22 2000
++++ Makefile.in	Tue Jul 11 23:15:10 2000
+@@ -32,32 +32,10 @@
+ install: pppoe
+ 	@INSTALL@ -m 755 -o root -s pppoe @sbindir@
+ 	@INSTALL@ -m 755 -o root adsl-connect adsl-start adsl-status adsl-stop adsl-setup @sbindir@
+-	-mkdir -p /usr/doc/rp-pppoe-$(VERSION)
+-	@INSTALL@ -m 644 CHANGES HOW-TO-CONNECT LICENSE README firewall pap-secrets adsl-state.pl /usr/doc/rp-pppoe-$(VERSION)
++	-mkdir -p @prefix@/share/doc/rp-pppoe
++	@INSTALL@ -m 644 CHANGES HOW-TO-CONNECT LICENSE README pap-secrets adsl-state.pl @prefix@/share/doc/rp-pppoe
+ 	@INSTALL@ -m 644 pppoe.8 adsl-start.8 adsl-stop.8 adsl-status.8 adsl-connect.8 adsl-setup.8 @mandir@/man8
+ 	@INSTALL@ -m 644 pppoe.conf.5 @mandir@/man5
+-	@if [ ! -d /etc/ppp ] ; then \
+-		if [ -e /etc/ppp ] ; then \
+-			echo "/etc/ppp is not a directory, rename /etc/ppp and rerun \"make install\"" ; \
+-			exit 1 ; \
+-		else \
+-			mkdir /etc/ppp ; \
+-			chown 0.0 /etc/ppp ; \
+-			chmod 755 /etc/ppp ; \
+-		fi ; \
+-	fi
+-	@for i in pppoe.conf firewall-standalone firewall-masq ; do \
+-		if [ ! -f /etc/ppp/$$i ] ; then \
+-			@INSTALL@ -m 644 -o root $$i /etc/ppp ; \
+-		else \
+-			echo "NOT overwriting existing /etc/ppp/$$i" ;\
+-			@INSTALL@ -m 644 -o root $$i /etc/ppp/$$i-$(VERSION) ;\
+-		fi ;\
+-	done
+-	@if [ -f /etc/redhat-release ] ; then \
+-		echo "Looks like a Red Hat system; installing /etc/rc.d/init.d/adsl" ; \
+-		@INSTALL@ -m 755 -o root adsl-init /etc/rc.d/init.d/adsl ; \
+-	fi
+ 	-@echo "Before running rp-pppoe, run 'adsl-setup' or edit the file /etc/ppp/pppoe.conf"
+ 
+ distro:
