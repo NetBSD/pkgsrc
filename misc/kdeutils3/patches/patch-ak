@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
+$NetBSD: patch-ak,v 1.7 2004/01/15 11:12:40 markd Exp $
 
---- klaptopdaemon/Makefile.in.orig	2003-07-15 22:19:25.000000000 +1200
+--- klaptopdaemon/Makefile.in.orig	2003-12-29 11:33:18.000000000 +1300
 +++ klaptopdaemon/Makefile.in
 @@ -91,7 +91,7 @@ KDE_USE_FINAL_FALSE = @KDE_USE_FINAL_FAL
  KDE_USE_FINAL_TRUE = @KDE_USE_FINAL_TRUE@
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  LIBCOMPAT = @LIBCOMPAT@
  LIBCRYPT = @LIBCRYPT@
  LIBDL = @LIBDL@
-@@ -271,20 +271,24 @@ target_os = @target_os@
+@@ -272,20 +272,24 @@ target_os = @target_os@
  target_vendor = @target_vendor@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
@@ -41,7 +41,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  
  kcm_laptop_la_SOURCES = battery.cpp main.cpp pcmcia.cpp power.cpp warning.cpp \
  	portable.cpp acpi_config.cpp
-@@ -311,49 +315,60 @@ kcm_laptop_la_nofinal_OBJECTS = battery.
+@@ -313,49 +317,60 @@ kcm_laptop_la_nofinal_OBJECTS = battery.
  	warning.lo portable.lo acpi_config.lo
  @KDE_USE_FINAL_FALSE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_final_OBJECTS)
@@ -122,7 +122,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/laptop_daemon.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/notify.Plo ./$(DEPDIR)/pcmcia.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/portable.Plo ./$(DEPDIR)/power.Plo \
-@@ -378,7 +393,7 @@ CXXLD = $(CXX)
+@@ -380,7 +395,7 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) \
@@ -131,7 +131,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  
  RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
  	ps-recursive install-info-recursive uninstall-info-recursive \
-@@ -387,7 +402,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -389,7 +404,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = README Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -140,7 +140,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -467,6 +482,8 @@ clean-libLTLIBRARIES:
+@@ -469,6 +484,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_laptop_la_LDFLAGS) $(kcm_laptop_la_OBJECTS) $(kcm_laptop_la_LIBADD) $(LIBS)
  klaptopdaemon.la: $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(klaptopdaemon_la_LDFLAGS) $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_LIBADD) $(LIBS)
@@ -149,7 +149,7 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -509,7 +526,8 @@ distclean-compile:
+@@ -511,7 +528,8 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/acpi_config.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/battery.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/daemondock.Plo@am__quote@
@@ -159,16 +159,16 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kpcmcia.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kpcmciainfo.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/laptop_daemon.Plo@am__quote@
-@@ -685,7 +703,7 @@ distclean-tags:
+@@ -693,7 +711,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=pcmcia.h power.h portable.h daemondock.h laptop_daemon.h kpcmciainfo.h main.h acpi_config.h warning.h kpcmcia.h notify.h configure.in.in battery.h version.h 
+-KDE_DIST=laptop_daemon.h pcmcia.h acpi_config.h warning.h notify.h power.h configure.in.in version.h battery.h portable.h kpcmciainfo.h main.h kpcmcia.h daemondock.h 
 +KDE_DIST=power.h warning.h configure.in.in kpcmciainfo.h acpi_config.h battery.h version.h pcmcia.h portable.h daemondock.h main.h Makefile.in.rej kpcmcia.h laptop_daemon.h notify.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -851,9 +869,6 @@ uninstall-info: uninstall-info-recursive
+@@ -859,9 +877,6 @@ uninstall-info: uninstall-info-recursive
  messages:
  	$(XGETTEXT) $(klaptopdaemon_la_SOURCES) -o $(podir)/klaptopdaemon.pot
  	$(XGETTEXT) $(kcm_laptop_la_SOURCES) -o $(podir)/kcmlaptop.pot
@@ -178,81 +178,33 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -874,11 +889,23 @@ kpcmcia.moc: $(srcdir)/kpcmcia.h
- #>+ 1
- mocs: kpcmcia.moc
+@@ -876,17 +891,17 @@ kcm_laptop.la.closure: $(kcm_laptop_la_O
+ 
+ 
  #>+ 3
--kpcmciainfo.moc: $(srcdir)/kpcmciainfo.h
--	$(MOC) $(srcdir)/kpcmciainfo.h -o kpcmciainfo.moc
+-pcmcia.moc: $(srcdir)/pcmcia.h
+-	$(MOC) $(srcdir)/pcmcia.h -o pcmcia.moc
++kpcmcia.moc: $(srcdir)/kpcmcia.h
++	$(MOC) $(srcdir)/kpcmcia.h -o kpcmcia.moc
+ 
+ #>+ 1
+-mocs: pcmcia.moc
++mocs: kpcmcia.moc
+ #>+ 3
+-battery.moc: $(srcdir)/battery.h
+-	$(MOC) $(srcdir)/battery.h -o battery.moc
 +pcmcia.moc: $(srcdir)/pcmcia.h
 +	$(MOC) $(srcdir)/pcmcia.h -o pcmcia.moc
  
  #>+ 1
--mocs: kpcmciainfo.moc
+-mocs: battery.moc
 +mocs: pcmcia.moc
-+#>+ 3
-+daemondock.moc: $(srcdir)/daemondock.h
-+	$(MOC) $(srcdir)/daemondock.h -o daemondock.moc
-+
-+#>+ 1
-+mocs: daemondock.moc
-+#>+ 3
-+notify.moc: $(srcdir)/notify.h
-+	$(MOC) $(srcdir)/notify.h -o notify.moc
-+
-+#>+ 1
-+mocs: notify.moc
  #>+ 3
- main.moc: $(srcdir)/main.h
- 	$(MOC) $(srcdir)/main.h -o main.moc
-@@ -886,17 +913,23 @@ main.moc: $(srcdir)/main.h
+ daemondock.moc: $(srcdir)/daemondock.h
+ 	$(MOC) $(srcdir)/daemondock.h -o daemondock.moc
+@@ -894,41 +909,35 @@ daemondock.moc: $(srcdir)/daemondock.h
  #>+ 1
- mocs: main.moc
- #>+ 3
-+kpcmciainfo.moc: $(srcdir)/kpcmciainfo.h
-+	$(MOC) $(srcdir)/kpcmciainfo.h -o kpcmciainfo.moc
-+
-+#>+ 1
-+mocs: kpcmciainfo.moc
-+#>+ 3
- battery.moc: $(srcdir)/battery.h
- 	$(MOC) $(srcdir)/battery.h -o battery.moc
- 
- #>+ 1
- mocs: battery.moc
- #>+ 3
--daemondock.moc: $(srcdir)/daemondock.h
--	$(MOC) $(srcdir)/daemondock.h -o daemondock.moc
-+acpi_config.moc: $(srcdir)/acpi_config.h
-+	$(MOC) $(srcdir)/acpi_config.h -o acpi_config.moc
- 
- #>+ 1
--mocs: daemondock.moc
-+mocs: acpi_config.moc
- #>+ 3
- power.moc: $(srcdir)/power.h
- 	$(MOC) $(srcdir)/power.h -o power.moc
-@@ -910,32 +943,14 @@ warning.moc: $(srcdir)/warning.h
- #>+ 1
- mocs: warning.moc
- #>+ 3
--pcmcia.moc: $(srcdir)/pcmcia.h
--	$(MOC) $(srcdir)/pcmcia.h -o pcmcia.moc
--
--#>+ 1
--mocs: pcmcia.moc
--#>+ 3
--notify.moc: $(srcdir)/notify.h
--	$(MOC) $(srcdir)/notify.h -o notify.moc
--
--#>+ 1
--mocs: notify.moc
--#>+ 3
- laptop_daemon.moc: $(srcdir)/laptop_daemon.h
- 	$(MOC) $(srcdir)/laptop_daemon.h -o laptop_daemon.moc
- 
- #>+ 1
- mocs: laptop_daemon.moc
+ mocs: daemondock.moc
  #>+ 3
 -acpi_config.moc: $(srcdir)/acpi_config.h
 -	$(MOC) $(srcdir)/acpi_config.h -o acpi_config.moc
@@ -260,26 +212,92 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
 -#>+ 1
 -mocs: acpi_config.moc
 -#>+ 3
+-kpcmcia.moc: $(srcdir)/kpcmcia.h
+-	$(MOC) $(srcdir)/kpcmcia.h -o kpcmcia.moc
+-
+-#>+ 1
+-mocs: kpcmcia.moc
+-#>+ 3
+ notify.moc: $(srcdir)/notify.h
+ 	$(MOC) $(srcdir)/notify.h -o notify.moc
+ 
+ #>+ 1
+ mocs: notify.moc
+ #>+ 3
+-warning.moc: $(srcdir)/warning.h
+-	$(MOC) $(srcdir)/warning.h -o warning.moc
++main.moc: $(srcdir)/main.h
++	$(MOC) $(srcdir)/main.h -o main.moc
+ 
+ #>+ 1
+-mocs: warning.moc
++mocs: main.moc
+ #>+ 3
+-laptop_daemon.moc: $(srcdir)/laptop_daemon.h
+-	$(MOC) $(srcdir)/laptop_daemon.h -o laptop_daemon.moc
++kpcmciainfo.moc: $(srcdir)/kpcmciainfo.h
++	$(MOC) $(srcdir)/kpcmciainfo.h -o kpcmciainfo.moc
+ 
+ #>+ 1
+-mocs: laptop_daemon.moc
++mocs: kpcmciainfo.moc
+ #>+ 3
+-main.moc: $(srcdir)/main.h
+-	$(MOC) $(srcdir)/main.h -o main.moc
++battery.moc: $(srcdir)/battery.h
++	$(MOC) $(srcdir)/battery.h -o battery.moc
+ 
+ #>+ 1
+-mocs: main.moc
++mocs: battery.moc
++#>+ 3
++acpi_config.moc: $(srcdir)/acpi_config.h
++	$(MOC) $(srcdir)/acpi_config.h -o acpi_config.moc
++
++#>+ 1
++mocs: acpi_config.moc
+ #>+ 3
+ power.moc: $(srcdir)/power.h
+ 	$(MOC) $(srcdir)/power.h -o power.moc
+@@ -936,14 +945,20 @@ power.moc: $(srcdir)/power.h
+ #>+ 1
+ mocs: power.moc
+ #>+ 3
+-kpcmciainfo.moc: $(srcdir)/kpcmciainfo.h
+-	$(MOC) $(srcdir)/kpcmciainfo.h -o kpcmciainfo.moc
++warning.moc: $(srcdir)/warning.h
++	$(MOC) $(srcdir)/warning.h -o warning.moc
+ 
+ #>+ 1
+-mocs: kpcmciainfo.moc
++mocs: warning.moc
++#>+ 3
++laptop_daemon.moc: $(srcdir)/laptop_daemon.h
++	$(MOC) $(srcdir)/laptop_daemon.h -o laptop_daemon.moc
++
++#>+ 1
++mocs: laptop_daemon.moc
+ #>+ 3
  clean-metasources:
--	-rm -f  kpcmcia.moc kpcmciainfo.moc main.moc battery.moc daemondock.moc power.moc warning.moc pcmcia.moc notify.moc laptop_daemon.moc acpi_config.moc
+-	-rm -f  pcmcia.moc battery.moc daemondock.moc acpi_config.moc kpcmcia.moc notify.moc warning.moc laptop_daemon.moc main.moc power.moc kpcmciainfo.moc
 +	-rm -f  kpcmcia.moc pcmcia.moc daemondock.moc notify.moc main.moc kpcmciainfo.moc battery.moc acpi_config.moc power.moc warning.moc laptop_daemon.moc
  
  #>+ 3
  clean-closures:
-@@ -952,7 +967,7 @@ force-reedit:
+@@ -960,7 +975,7 @@ force-reedit:
  
  
  #>+ 11
--kcm_laptop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/battery.cpp $(srcdir)/main.cpp $(srcdir)/pcmcia.cpp $(srcdir)/power.cpp $(srcdir)/warning.cpp $(srcdir)/portable.cpp $(srcdir)/acpi_config.cpp  battery.moc pcmcia.moc warning.moc power.moc acpi_config.moc main.moc
+-kcm_laptop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/battery.cpp $(srcdir)/main.cpp $(srcdir)/pcmcia.cpp $(srcdir)/power.cpp $(srcdir)/warning.cpp $(srcdir)/portable.cpp $(srcdir)/acpi_config.cpp  pcmcia.moc battery.moc acpi_config.moc warning.moc main.moc power.moc
 +kcm_laptop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/battery.cpp $(srcdir)/main.cpp $(srcdir)/pcmcia.cpp $(srcdir)/power.cpp $(srcdir)/warning.cpp $(srcdir)/portable.cpp $(srcdir)/acpi_config.cpp  pcmcia.moc main.moc battery.moc acpi_config.moc warning.moc power.moc
  	@echo 'creating kcm_laptop_la.all_cpp.cpp ...'; \
  	rm -f kcm_laptop_la.all_cpp.files kcm_laptop_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kcm_laptop_la.all_cpp.final; \
-@@ -964,33 +979,33 @@ kcm_laptop_la.all_cpp.cpp: $(srcdir)/Mak
+@@ -972,33 +987,33 @@ kcm_laptop_la.all_cpp.cpp: $(srcdir)/Mak
  	rm -f kcm_laptop_la.all_cpp.final kcm_laptop_la.all_cpp.files
  
  #>+ 11
--klaptopdaemon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/laptop_daemon.cpp $(srcdir)/kpcmcia.cpp $(srcdir)/kpcmciainfo.cpp $(srcdir)/daemondock.cpp $(srcdir)/notify.cpp $(srcdir)/portable.cpp $(srcdir)/acpi_config.cpp  daemondock.moc kpcmcia.moc laptop_daemon.moc notify.moc kpcmciainfo.moc acpi_config.moc
+-klaptopdaemon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/laptop_daemon.cpp $(srcdir)/kpcmcia.cpp $(srcdir)/kpcmciainfo.cpp $(srcdir)/daemondock.cpp $(srcdir)/notify.cpp $(srcdir)/portable.cpp $(srcdir)/acpi_config.cpp  daemondock.moc acpi_config.moc kpcmcia.moc notify.moc laptop_daemon.moc kpcmciainfo.moc
 -	@echo 'creating klaptopdaemon_la.all_cpp.cpp ...'; \
 -	rm -f klaptopdaemon_la.all_cpp.files klaptopdaemon_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> klaptopdaemon_la.all_cpp.final; \
@@ -322,43 +340,45 @@ $NetBSD: patch-ak,v 1.6 2003/07/30 14:24:50 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1001,24 +1016,24 @@ kde-rpo-clean:
+@@ -1008,25 +1023,25 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
  #>+ 23
- kpcmcia.o: kpcmcia.moc 
--battery.lo: battery.moc 
--main.lo: main.moc 
--notify.o: notify.moc 
--pcmcia.lo: pcmcia.moc 
- kpcmcia.lo: kpcmcia.moc 
--main.o: main.moc 
 -laptop_daemon.lo: laptop_daemon.moc 
-+laptop_daemon.o: laptop_daemon.moc 
-+notify.o: notify.moc 
- power.o: power.moc 
 -daemondock.o: daemondock.moc 
--power.lo: power.moc 
- notify.lo: notify.moc 
--battery.o: battery.moc 
 -pcmcia.o: pcmcia.moc 
-+warning.lo: warning.moc 
+-kpcmciainfo.lo: kpcmciainfo.moc 
+-battery.lo: battery.moc 
+-power.o: power.moc 
++kpcmcia.o: kpcmcia.moc 
++kpcmcia.lo: kpcmcia.moc 
++laptop_daemon.o: laptop_daemon.moc 
+ notify.o: notify.moc 
+-power.lo: power.moc 
+-daemondock.lo: daemondock.moc 
+-pcmcia.lo: pcmcia.moc 
++power.o: power.moc 
++notify.lo: notify.moc 
+ warning.lo: warning.moc 
+-kpcmcia.o: kpcmcia.moc 
+-kpcmciainfo.o: kpcmciainfo.moc 
 +warning.o: warning.moc 
  acpi_config.lo: acpi_config.moc 
--daemondock.lo: daemondock.moc 
-+main.lo: main.moc 
+ main.lo: main.moc 
 +laptop_daemon.lo: laptop_daemon.moc 
 +kpcmciainfo.o: kpcmciainfo.moc 
 +battery.o: battery.moc 
  acpi_config.o: acpi_config.moc 
+-notify.lo: notify.moc 
 -warning.o: warning.moc 
 +pcmcia.lo: pcmcia.moc 
 +battery.lo: battery.moc 
 +daemondock.lo: daemondock.moc 
 +daemondock.o: daemondock.moc 
 +pcmcia.o: pcmcia.moc 
-+main.o: main.moc 
- kpcmciainfo.lo: kpcmciainfo.moc 
+ main.o: main.moc 
+-battery.o: battery.moc 
+-kpcmcia.lo: kpcmcia.moc 
 -laptop_daemon.o: laptop_daemon.moc 
--warning.lo: warning.moc 
--kpcmciainfo.o: kpcmciainfo.moc 
++kpcmciainfo.lo: kpcmciainfo.moc 
 +power.lo: power.moc 
