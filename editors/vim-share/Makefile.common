@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.15 2001/10/25 07:34:05 martti Exp $
-# Obtained from:	FreeBSD vim port (obrien)
+# $NetBSD: Makefile.common,v 1.16 2001/11/07 16:39:15 martti Exp $
 
-VIM_VERSION=		6.0.25
+VIM_VERSION=		6.0.92
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -11,13 +10,21 @@ DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
 #
-# Notes:
-# - patch 12 was ignored
+# Following patches were ignored:
+# 12, 27, 48, 53, 64, 70, 73, 87
 #
 PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
-.for p in		01 02 03 04 05 06 07 08 09 10 11 13 14 15 16 17 18 \
-			19 20 21 22 23 24 25
-PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.0${p}
+.for p in		001 002 003 004 005 006 007 008 009 010 \
+			011 013 014 015 016 017 018 019 020 \
+			021 022 023 024 025 026 028 029 030 \
+			031 032 033 034 035 036 037 038 039 040 \
+			041 042 043 044 045 046 047 049 050 \
+			051 052 054 055 056 057 058 059 060 \
+			061 062 063 065 066 067 068 069 \
+			071 072 074 075 076 077 078 079 080 \
+			081 082 083 084 085 086 088 089 090 \
+			091 092
+PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
 .endfor
 
 MAINTAINER=		martti@netbsd.org
