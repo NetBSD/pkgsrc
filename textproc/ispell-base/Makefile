@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/03/14 13:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/15 15:22:00 wiz Exp $
 #
 
 DISTNAME=	ispell-3.1.20
-PKGNAME=	ispell-base-3.1.20
+PKGNAME=	ispell-base-3.1.20nb1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
 
@@ -28,6 +28,7 @@ do-configure:
 	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.samp >local.h;	\
 	${ECHO} "#undef NO8BIT" >> local.h ;				\
 	${ECHO} "#define LANGUAGES \"{american,MASTERDICTS=american.med+,HASHFILES=americanmed+.hash,EXTRADICT=/usr/share/dict/words}\""  >>local.h; \
+	${ECHO} "#define MASKBITS 64" >>local.h;			\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
 	${ECHO} '#define WORDS   "/usr/share/dict/words"'  >> local.h ;	\
 	${ECHO} '#undef ELISPDIR'  >> local.h;				\
