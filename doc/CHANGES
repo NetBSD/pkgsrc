@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3970 2003/12/04 15:36:56 grant Exp $
+$NetBSD: CHANGES,v 1.3971 2003/12/04 16:14:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4843,3 +4843,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added Xrandr-1.0.1 [recht 2003-12-04]
 	Updated slatec to 4.1nb1 [adam 2003-12-04]
 	Added p5-CGI-FormBuilder [grant 2003-12-04]
+	Added sarg-1.4.1 [xtraeme 2003-12-04]
+	Added grdc-20031019 [xtraeme 2003-12-04]
