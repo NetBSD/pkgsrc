@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 1999/11/22 21:23:49 rh Exp $
+# $NetBSD: INSTALL,v 1.2 1999/11/24 20:04:51 rh Exp $
 #
 
 case $2 in
@@ -8,7 +8,7 @@ case $2 in
         ;;
     POST-INSTALL)
     	for i in backup store store/trash download work ; do
-	    mkdir -p @@PREFIX@@/$i
+	    mkdir -p @@PREFIX@@/Office51/$i
 	done
 	;;
     *)
