@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/10/05 09:27:13 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/11/05 21:33:42 markd Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -45,7 +45,7 @@ lib/xine/plugins/1.0.0/post/xineplug_post_planar.so
 lib/xine/plugins/1.0.0/post/xineplug_post_switch.a
 lib/xine/plugins/1.0.0/post/xineplug_post_switch.so
 lib/xine/plugins/1.0.0/post/xineplug_post_tvtime.a
-lib/xine/plugins/1.0.0/post/xineplug_post_tvtime.so
+${XV_WORKAROUND}lib/xine/plugins/1.0.0/post/xineplug_post_tvtime.so
 lib/xine/plugins/1.0.0/post/xineplug_post_visualizations.a
 lib/xine/plugins/1.0.0/post/xineplug_post_visualizations.so
 lib/xine/plugins/1.0.0/xineplug_ao_out_esd.a
@@ -213,7 +213,7 @@ lib/xine/plugins/1.0.0/xineplug_vo_out_syncfb.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_xshm.a
 lib/xine/plugins/1.0.0/xineplug_vo_out_xshm.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_xv.a
-lib/xine/plugins/1.0.0/xineplug_vo_out_xv.so
+${XV_WORKAROUND}lib/xine/plugins/1.0.0/xineplug_vo_out_xv.so
 man/man1/xine-config.1
 share/aclocal/xine.m4
 share/doc/xine/README
