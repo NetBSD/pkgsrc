@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:43 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/23 11:54:03 wiz Exp $
 #
 
 DISTNAME=	kdf-0.5.1
@@ -12,21 +12,20 @@ HOMEPAGE=	http://www.edu.uni-klu.ac.at/~mkropfbe
 COMMENT=	Shows disk usage graphically and lets you mount/umount devices
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	kde-1.1.2nb1:../../x11/kde
 
-USE_LIBINTL=	YES
+USE_BUILDLINK2=	YES
+USE_LIBTOOL=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-EVAL_PREFIX+=	KDEBASEDIR=kdebase QT1DIR=qt1
-CONFIGURE_ARGS+=--datadir=${KDEBASEDIR}/share/kde \
-		--with-qt-dir=${QT1DIR}/qt1 \
+CONFIGURE_ARGS+=--datadir=${BUILDLINK_PREFIX.kdebase}/share/kde \
+		--with-qt-dir=${QTDIR} \
 		--enable-path-check
-CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
-		QTDIR=${QT1DIR}/qt1 \
-		MOC=${QT1DIR}/qt1/bin/moc \
+CONFIGURE_ENV=	KDEDIR=${BUILDLINK_PREFIX.kdebase} \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/kdebase/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
