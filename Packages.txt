@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.281 2003/01/19 17:38:40 jschauma Exp $
+# $NetBSD: Packages.txt,v 1.282 2003/01/22 19:22:05 jdolecek Exp $
 ###########################################################################
 
 			==========================
@@ -1854,7 +1854,7 @@ the distfiles on ftp.netbsd.org and the one on ftp.freebsd.org contains
 many distfiles for which there are no ports (yet).
 
 The answer here is to do a "make fetch-list" in /usr/pkgsrc, carry the 
-resulting list to your machine at work/school and use it there If you don't
+resulting list to your machine at work/school and use it there. If you don't
 have a NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget to
 set FETCH_CMD to something that fetches an URL:
 
