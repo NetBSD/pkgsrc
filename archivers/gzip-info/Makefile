@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/07 21:56:02 reed Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-info-1.2.4a
@@ -19,6 +19,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/gzip.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/gzip.info ${PREFIX}/${INFO_DIR}
 
 .include "../../mk/bsd.pkg.mk"
