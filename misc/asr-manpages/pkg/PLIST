@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/07 02:22:48 hubertf Exp $
+man/man1/c.1
+man/man1/lart.1
+man/man1/rtfm.1
+man/man1/slave.1
+man/man1/sysadmin.1
+man/man1/think.1
+man/man1/whack.1
+man/man2/people.2
+man/man3/chastise.3
+man/man5/normality.5
+man/man8/bosskill.8
+man/man8/ctluser.8
+man/man8/guru.8
+man/man8/knife.8
+man/man8/luser.8
+man/man8/nuke.8
+man/man8/pmsd.8
