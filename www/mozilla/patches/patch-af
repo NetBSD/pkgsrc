@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.11 2000/10/28 18:55:25 mycroft Exp $
+$NetBSD: patch-af,v 1.12 2001/01/16 16:01:22 taya Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	Wed Jul 19 19:53:01 2000
-+++ xpcom/reflect/xptcall/src/md/unix/Makefile.in	Thu Oct 26 07:46:49 2000
+diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	Tue Nov 28 14:27:19 2000
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	Mon Jan 15 15:38:34 2001
 @@ -105,11 +105,11 @@
  #
  # NetBSD/ARM
@@ -31,17 +32,19 @@ $NetBSD: patch-af,v 1.11 2000/10/28 18:55:25 mycroft Exp $
  ifeq ($(OS_ARCH),Rhapsody)
  CPPSRCS		:= xptcinvoke_ppc_rhapsody.cpp xptcstubs_ppc_rhapsody.cpp
  ASFILES		:= xptcinvoke_asm_ppc_rhapsody.s xptcstubs_asm_ppc_rhapsody.s
-@@ -195,6 +200,13 @@
- ifeq ($(OS_ARCH)$(OS_TEST),Linuxsparc)
+@@ -196,6 +201,15 @@
+ ifneq (,$(findstring sparc,$(OS_TEST)))
  CPPSRCS		:= xptcinvoke_sparc_solaris.cpp xptcstubs_sparc_solaris.cpp
  ASFILES		:= xptcinvoke_asm_sparc_linux.s xptcstubs_asm_sparc_solaris.s
++endif
 +endif
 +#
 +# NetBSD/SPARC
 +#
-+ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
++ifeq ($(OS_ARCH),NetBSD)
++ifneq (,$(findstring sparc,$(OS_TEST)))
 +CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
 +ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
+ endif
  #
- # Solaris/SPARC
