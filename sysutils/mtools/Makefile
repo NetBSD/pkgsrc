@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2002/02/18 15:14:41 seb Exp $
+# $NetBSD: Makefile,v 1.26.6.1 2003/06/19 01:10:19 grant Exp $
 #
 
 DISTNAME=	mtools-3.9.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
 
@@ -12,34 +12,22 @@ COMMENT=	FAT (MS-DOS, Atari) disk access tools
 
 NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
 INFO_FILES=	mtools.info
+
 TEXINFO_OVERRIDE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef MTOOLS_ENABLE_FLOPPYD
-USE_X11=	yes
-CPPFLAGS+=	-I${X11BASE}/include
-CONFIGURE_ARGS+=	--enable-floppyd
-.endif
-
-PLIST_SRC=	${WRKDIR}/PLIST
-
-pre-patch:
-	@${LN} -s . ${WRKSRC}/mtools
-
-post-patch:
-	@${RM} ${WRKSRC}/mtools
-
-post-install:
-.ifdef MTOOLS_ENABLE_FLOPPYD
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.if defined(MTOOLS_ENABLE_FLOPPYD) && !empty(MTOOLS_ENABLE_FLOPPYD:M[Yy][Ee][Ss])
+USE_X11=	YES
+CPPFLAGS=	-I${X11BASE}/include
+CONFIGURE_ARGS=	--enable-floppyd
+PLIST_SUBST=	NOFLOPPYD=
 .else
-	${RM} -f ${PREFIX}/man/man1/floppyd.1
-	${RM} -f ${PREFIX}/bin/floppyd ${PREFIX}/bin/floppyd_installtest
-	${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}
+CONFIGURE_ARGS=	--disable-floppyd
+PLIST_SUBST=	NOFLOPPYD="@comment "
 .endif
 
 .include "../../mk/texinfo.mk"
