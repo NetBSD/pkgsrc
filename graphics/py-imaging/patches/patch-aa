@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1 1999/09/20 04:58:32 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/10 13:46:30 wiz Exp $
 
---- ./libImaging/Makefile.in.orig	Sun Jan 10 05:00:22 1999
-+++ ./libImaging/Makefile.in	Mon Sep 20 09:02:53 1999
-@@ -31,5 +31,5 @@
+--- libImaging/Makefile.in.org	Thu Dec 28 00:47:57 2000
++++ libImaging/Makefile.in	Thu Dec 28 00:49:51 2000
+@@ -30,7 +30,7 @@
+ # Other things that are customizable but not by configure
  
  INCLDIR=	$(srcdir)/.
 -JPEGINCLUDE=	/usr/local/include
 +JPEGINCLUDE=	$(PREFIX)/include
  OPT=		@OPT@
  #OPT=		-g
+ CFLAGS=		$(OPT) -I$(INCLDIR) -I$(JPEGINCLUDE) $(DEFS)
