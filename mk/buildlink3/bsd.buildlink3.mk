@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.145 2004/06/22 23:23:36 xtraeme Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.146 2004/07/29 05:09:29 xtraeme Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -81,6 +81,7 @@ X11_TYPE?=		native
 X11_PKGSRCDIR.native=	../../pkgtools/x11-links
 X11_PKGSRCDIR.XFree86=	../../x11/XFree86-libs
 X11_PKGSRCDIR.xlibs=	../../x11/xlibs
+X11_PKGSRCDIR.xorg=	../../x11/xorg-libs
 .  if exists(${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk)
 .    include "${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk"
 .    if exists(${X11_PKGSRCDIR.${X11_TYPE}}/builtin.mk)
