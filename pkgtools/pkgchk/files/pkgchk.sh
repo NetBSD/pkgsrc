@@ -1,9 +1,11 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.9 2001/08/08 13:41:43 abs Exp $
+# $Id: pkgchk.sh,v 1.10 2001/08/10 10:54:21 drochner Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
+
+PATH=/usr/sbin:${PATH}
 
 extract_variables()
     {
