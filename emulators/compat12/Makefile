@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/04/15 16:35:13 tv Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/27 11:53:39 tv Exp $
 #
 
 DISTNAME=	compat12-${MACHINE_ARCH}
@@ -13,6 +13,12 @@ ONLY_FOR_ARCHS=	i386 m68k ns32k sparc
 ONLY_FOR_OPSYS=	NetBSD
 
 NO_BUILD=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# This installs in /usr to avoid dynamic linker annoyances
+LOCALBASE=	/usr 
+NO_MTREE=	yes
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/lib/
