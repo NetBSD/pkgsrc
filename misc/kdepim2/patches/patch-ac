@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2001/10/15 22:46:20 skrll Exp $
+
+--- libkcal/Makefile.in.orig	Sat Sep  8 01:48:15 2001
++++ libkcal/Makefile.in
+@@ -598,10 +598,10 @@
+ 
+ 
+ $(srcdir)/parseholiday.c: parseholiday.y
+-	cd $(srcdir) && bison -p kcal -d -o parseholiday.c parseholiday.y
++	cd $(srcdir) && yacc -p kcal -d -o parseholiday.c parseholiday.y
+ 
+ $(srcdir)/parseholiday.h: parseholiday.y
+-	cd $(srcdir) && bison -p kcal -d -o parseholiday.c parseholiday.y
++	cd $(srcdir) && yacc -p kcal -d -o parseholiday.c parseholiday.y
+ 
+ $(srcdir)/scanholiday.c: scanholiday.lex parseholiday.h
+ 	cd $(srcdir) && flex -Pkcal -B -oscanholiday.c scanholiday.lex

@@ -1,0 +1,25 @@
+$NetBSD: patch-dq,v 1.1 2001/10/15 22:46:09 skrll Exp $
+
+--- kwin/clients/kde1/Makefile.in.orig	Sat Sep  8 01:36:49 2001
++++ kwin/clients/kde1/Makefile.in
+@@ -279 +279 @@
+-libkwinkde1_la_LIBADD = ../../kwin.la
++libkwinkde1_la_LIBADD = ../../libkwin.la
+@@ -300 +300 @@
+-libkwinkde1_la_DEPENDENCIES =  ../../kwin.la
++libkwinkde1_la_DEPENDENCIES =  ../../libkwin.la
+@@ -328 +328 @@
+-KDE_DIST=kde1.desktop kde1client_bitmaps.h 
++KDE_DIST=kde1client_bitmaps.h kde1.desktop 
+@@ -488,11 +487,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

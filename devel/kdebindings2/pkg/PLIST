@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 17:33:12 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/15 22:46:18 skrll Exp $
+bin/shell_xparthost
+bin/xp_notepad
 include/dcopc/dcopc.h
 include/dcopc/dcopobject.h
 include/dcopc/marshal.h
 include/dcopc/util.h
 include/xkparts/gtkbrowserextension.h
 include/xkparts/gtkpart.h
-include/xkparts/kparthost.h
 include/xkparts/xpart.h
 include/xkparts/xparthost.h
 lib/libdcopc.a
@@ -23,15 +24,11 @@ lib/libkdexparts.la
 lib/libkdexparts.so
 lib/libkdexparts.so.1
 lib/libkdexparts.so.1.0
+lib/libxp_notepadpart.a
+lib/libxp_notepadpart.la
+lib/libxp_notepadpart.so
+lib/libxp_notepadpart.so.0
+lib/libxp_notepadpart.so.0.0
+share/kde/services/xp_notepad.desktop
 @dirrm include/xkparts
 @dirrm include/dcopc
-@cwd ${LOCALBASE}
-@cwd ${LOCALBASE}
-${PYTHON_LIBDIR}/site-packages/pcop.la
-${PYTHON_LIBDIR}/site-packages/pcop.a
-${PYTHON_LIBDIR}/site-packages/libpyqt.so
-${PYTHON_LIBDIR}/site-packages/libpyqt.la
-${PYTHON_LIBDIR}/site-packages/libpyqt.a
-${PYTHON_LIBDIR}/site-packages/pcop.so
-${PYTHON_LIBDIR}/dcop.py
-${PYTHON_LIBDIR}/qt.py

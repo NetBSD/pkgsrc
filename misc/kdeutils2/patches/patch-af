@@ -1,13 +1,22 @@
-$NetBSD: patch-af,v 1.1 2001/03/22 14:02:24 tron Exp $
+$NetBSD: patch-af,v 1.2 2001/10/15 22:45:58 skrll Exp $
 
---- kdf/kwikdisk.h.orig	Mon Jan 22 13:16:47 2001
-+++ kdf/kwikdisk.h	Thu Mar 22 14:30:36 2001
-@@ -106,7 +106,7 @@
-     void updateDF( void );
-     void updateDFDone( void );
-     void setUpdateFrequency( int frequency );
--    void sysCallError(DiskEntry *disk, int errno);
-+    void sysCallError(DiskEntry *disk, int err_no);
+--- khexedit/optiondialog.cc.orig	Mon Dec 11 23:32:34 2000
++++ khexedit/optiondialog.cc
+@@ -24,7 +24,7 @@
+ #include <qvbuttongroup.h> 
  
-   protected:
-     void mousePressEvent(QMouseEvent *);
+ 
+-#include <values.h>
++#include <limits.h>
+ 
+ #include <qbuttongroup.h>
+ #include <qcheckbox.h>
+@@ -495,7 +495,7 @@
+ 
+   mMisc.thresholdSpin = new QSpinBox( page );
+   mMisc.thresholdSpin->setMinimumWidth( fontMetrics().width("M") * 10 );
+-  mMisc.thresholdSpin->setRange( 5, MAXINT );
++  mMisc.thresholdSpin->setRange( 5, INT_MAX );
+   mMisc.thresholdSpin->setSteps( 5, 5 );
+   mMisc.thresholdSpin->setValue( 5 );
+ 

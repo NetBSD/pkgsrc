@@ -1,0 +1,214 @@
+$NetBSD: patch-bw,v 1.1 2001/10/15 22:46:03 skrll Exp $
+
+--- kicker/proxy/Makefile.in.orig	Sat Sep  8 01:36:34 2001
++++ kicker/proxy/Makefile.in
+@@ -279 +279,6 @@
+-lib_LTLIBRARIES = appletproxy.la extensionproxy.la
++lib_LTLIBRARIES = libappletproxy_sl.la appletproxy.la libextensionproxy_sl.la extensionproxy.la
++
++libappletproxy_sl_la_LIBADD = $(LIB_KDEUI) ../share/libkicker_share.la
++libappletproxy_sl_la_SOURCES = appletproxy.cpp
++#>- libappletproxy_sl_la_METASOURCES = appletproxy.moc
++libappletproxy_sl_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+@@ -282,2 +287 @@
+-appletproxy_la_SOURCES = appletproxy.cpp
+-#>- appletproxy_la_METASOURCES = appletproxy.moc
++appletproxy_la_SOURCES = appletproxy_main.cpp
+@@ -286,2 +290,2 @@
+-appletproxy_LDADD = appletproxy.la
+-appletproxy_SOURCES = dummy.cpp
++appletproxy_LDADD = libappletproxy_sl.la
++appletproxy_SOURCES = appletproxy_main.cpp
+@@ -290,3 +294,7 @@
+-extensionproxy_la_LIBADD = $(LIB_KDEUI) ../share/libkicker_share.la
+-extensionproxy_la_SOURCES = extensionproxy.cpp
+-#>- extensionproxy_la_METASOURCES = extensionproxy.moc
++libextensionproxy_sl_la_LIBADD = $(LIB_KDEUI) ../share/libkicker_share.la
++libextensionproxy_sl_la_SOURCES = extensionproxy.cpp
++#>- libextensionproxy_sl_la_METASOURCES = extensionproxy.moc
++libextensionproxy_sl_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
++extensionproxy_la_LIBADD = libextensionproxy_sl.la
++extensionproxy_la_SOURCES = extensionproxy_main.cpp
+@@ -295,2 +303,2 @@
+-extensionproxy_LDADD = extensionproxy.la
+-extensionproxy_SOURCES = dummy.cpp
++extensionproxy_LDADD = libextensionproxy_sl.la
++extensionproxy_SOURCES = extensionproxy_main.cpp
+@@ -312,2 +320,2 @@
+-appletproxy_la_DEPENDENCIES =  ../share/libkicker_share.la
+-#>- appletproxy_la_OBJECTS =  appletproxy.lo
++libappletproxy_sl_la_DEPENDENCIES =  ../share/libkicker_share.la
++#>- libappletproxy_sl_la_OBJECTS =  appletproxy.lo
+@@ -315,7 +323,11 @@
+-appletproxy_la_final_OBJECTS = appletproxy_la.all_cpp.lo 
+-appletproxy_la_nofinal_OBJECTS = appletproxy.lo \
+-appletproxy_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@appletproxy_la_OBJECTS = $(appletproxy_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@appletproxy_la_OBJECTS = $(appletproxy_la_final_OBJECTS)
+-extensionproxy_la_DEPENDENCIES =  ../share/libkicker_share.la
+-#>- extensionproxy_la_OBJECTS =  extensionproxy.lo
++libappletproxy_sl_la_final_OBJECTS = libappletproxy_sl_la.all_cpp.lo 
++libappletproxy_sl_la_nofinal_OBJECTS = appletproxy.lo \
++libappletproxy_sl_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libappletproxy_sl_la_OBJECTS = $(libappletproxy_sl_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libappletproxy_sl_la_OBJECTS = $(libappletproxy_sl_la_final_OBJECTS)
++appletproxy_la_DEPENDENCIES =  ../share/libkicker_share.la
++#>- appletproxy_la_OBJECTS =  appletproxy_main.lo
++#>+ 1
++appletproxy_la_OBJECTS = appletproxy_main.lo
++libextensionproxy_sl_la_DEPENDENCIES =  ../share/libkicker_share.la
++#>- libextensionproxy_sl_la_OBJECTS =  extensionproxy.lo
+@@ -323,5 +335,9 @@
+-extensionproxy_la_final_OBJECTS = extensionproxy_la.all_cpp.lo 
+-extensionproxy_la_nofinal_OBJECTS = extensionproxy.lo \
+-extensionproxy_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@extensionproxy_la_OBJECTS = $(extensionproxy_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@extensionproxy_la_OBJECTS = $(extensionproxy_la_final_OBJECTS)
++libextensionproxy_sl_la_final_OBJECTS = libextensionproxy_sl_la.all_cpp.lo 
++libextensionproxy_sl_la_nofinal_OBJECTS = extensionproxy.lo \
++libextensionproxy_sl_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libextensionproxy_sl_la_OBJECTS = $(libextensionproxy_sl_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libextensionproxy_sl_la_OBJECTS = $(libextensionproxy_sl_la_final_OBJECTS)
++extensionproxy_la_DEPENDENCIES =  libextensionproxy_sl.la
++#>- extensionproxy_la_OBJECTS =  extensionproxy_main.lo
++#>+ 1
++extensionproxy_la_OBJECTS = extensionproxy_main.lo
+@@ -331 +347 @@
+-#>- appletproxy_OBJECTS =  dummy.$(OBJEXT)
++#>- appletproxy_OBJECTS =  appletproxy_main.$(OBJEXT)
+@@ -333,3 +349,3 @@
+-appletproxy_OBJECTS = dummy.$(OBJEXT)
+-appletproxy_DEPENDENCIES =  appletproxy.la
+-#>- extensionproxy_OBJECTS =  dummy.$(OBJEXT)
++appletproxy_OBJECTS = appletproxy_main.$(OBJEXT)
++appletproxy_DEPENDENCIES =  libappletproxy_sl.la
++#>- extensionproxy_OBJECTS =  extensionproxy_main.$(OBJEXT)
+@@ -337,2 +353,2 @@
+-extensionproxy_OBJECTS = dummy.$(OBJEXT)
+-extensionproxy_DEPENDENCIES =  extensionproxy.la
++extensionproxy_OBJECTS = extensionproxy_main.$(OBJEXT)
++extensionproxy_DEPENDENCIES =  libextensionproxy_sl.la
+@@ -359,2 +375,2 @@
+-SOURCES = $(appletproxy_la_SOURCES) $(extensionproxy_la_SOURCES) $(appletproxy_SOURCES) $(extensionproxy_SOURCES)
+-OBJECTS = $(appletproxy_la_OBJECTS) $(extensionproxy_la_OBJECTS) $(appletproxy_OBJECTS) $(extensionproxy_OBJECTS)
++SOURCES = $(libappletproxy_sl_la_SOURCES) $(appletproxy_la_SOURCES) $(libextensionproxy_sl_la_SOURCES) $(extensionproxy_la_SOURCES) $(appletproxy_SOURCES) $(extensionproxy_SOURCES)
++OBJECTS = $(libappletproxy_sl_la_OBJECTS) $(appletproxy_la_OBJECTS) $(libextensionproxy_sl_la_OBJECTS) $(extensionproxy_la_OBJECTS) $(appletproxy_OBJECTS) $(extensionproxy_OBJECTS)
+@@ -446,0 +463,3 @@
++libappletproxy_sl.la: $(libappletproxy_sl_la_OBJECTS) $(libappletproxy_sl_la_DEPENDENCIES)
++	$(CXXLINK) -rpath $(libdir) $(libappletproxy_sl_la_LDFLAGS) $(libappletproxy_sl_la_OBJECTS) $(libappletproxy_sl_la_LIBADD) $(LIBS)
++
+@@ -449,0 +469,3 @@
++libextensionproxy_sl.la: $(libextensionproxy_sl_la_OBJECTS) $(libextensionproxy_sl_la_DEPENDENCIES)
++	$(CXXLINK) -rpath $(libdir) $(libextensionproxy_sl_la_LDFLAGS) $(libextensionproxy_sl_la_OBJECTS) $(libextensionproxy_sl_la_LIBADD) $(LIBS)
++
+@@ -526,11 +547,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10
+@@ -638,3 +648,0 @@
+-dummy.cpp:
+-	echo > dummy.cpp
+-
+@@ -667,8 +675,8 @@
+-appletproxy_la_meta_unload.cpp:  appletproxy.moc
+-	@echo 'creating appletproxy_la_meta_unload.cpp'
+-	@-rm -f appletproxy_la_meta_unload.cpp
+-	@echo 'static const char * _metalist_appletproxy_la[] = {' > appletproxy_la_meta_unload.cpp
+-	@cat  appletproxy.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> appletproxy_la_meta_unload.cpp
+-	@echo '0};' >> appletproxy_la_meta_unload.cpp
+-	@echo '#include <kunload.h>' >> appletproxy_la_meta_unload.cpp
+-	@echo '_UNLOAD(appletproxy_la)' >> appletproxy_la_meta_unload.cpp
++libappletproxy_sl_la_meta_unload.cpp:  appletproxy.moc
++	@echo 'creating libappletproxy_sl_la_meta_unload.cpp'
++	@-rm -f libappletproxy_sl_la_meta_unload.cpp
++	@echo 'static const char * _metalist_libappletproxy_sl_la[] = {' > libappletproxy_sl_la_meta_unload.cpp
++	@cat  appletproxy.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libappletproxy_sl_la_meta_unload.cpp
++	@echo '0};' >> libappletproxy_sl_la_meta_unload.cpp
++	@echo '#include <kunload.h>' >> libappletproxy_sl_la_meta_unload.cpp
++	@echo '_UNLOAD(libappletproxy_sl_la)' >> libappletproxy_sl_la_meta_unload.cpp
+@@ -678,8 +686,8 @@
+-extensionproxy_la_meta_unload.cpp:  extensionproxy.moc
+-	@echo 'creating extensionproxy_la_meta_unload.cpp'
+-	@-rm -f extensionproxy_la_meta_unload.cpp
+-	@echo 'static const char * _metalist_extensionproxy_la[] = {' > extensionproxy_la_meta_unload.cpp
+-	@cat  extensionproxy.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> extensionproxy_la_meta_unload.cpp
+-	@echo '0};' >> extensionproxy_la_meta_unload.cpp
+-	@echo '#include <kunload.h>' >> extensionproxy_la_meta_unload.cpp
+-	@echo '_UNLOAD(extensionproxy_la)' >> extensionproxy_la_meta_unload.cpp
++libextensionproxy_sl_la_meta_unload.cpp:  extensionproxy.moc
++	@echo 'creating libextensionproxy_sl_la_meta_unload.cpp'
++	@-rm -f libextensionproxy_sl_la_meta_unload.cpp
++	@echo 'static const char * _metalist_libextensionproxy_sl_la[] = {' > libextensionproxy_sl_la_meta_unload.cpp
++	@cat  extensionproxy.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libextensionproxy_sl_la_meta_unload.cpp
++	@echo '0};' >> libextensionproxy_sl_la_meta_unload.cpp
++	@echo '#include <kunload.h>' >> libextensionproxy_sl_la_meta_unload.cpp
++	@echo '_UNLOAD(libextensionproxy_sl_la)' >> libextensionproxy_sl_la_meta_unload.cpp
+@@ -690 +698,13 @@
+-	-rm -f  appletproxy_la_meta_unload.cpp extensionproxy_la_meta_unload.cpp
++	-rm -f  libappletproxy_sl_la_meta_unload.cpp libextensionproxy_sl_la_meta_unload.cpp
++
++#>+ 11
++libappletproxy_sl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/appletproxy.cpp libappletproxy_sl_la_meta_unload.cpp   appletproxy.moc 
++	@echo 'creating libappletproxy_sl_la.all_cpp.cpp ...'; \
++	rm -f libappletproxy_sl_la.all_cpp.files libappletproxy_sl_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libappletproxy_sl_la.all_cpp.final; \
++	for file in appletproxy.cpp libappletproxy_sl_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libappletproxy_sl_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libappletproxy_sl_la.all_cpp.final; \
++	done; \
++	cat libappletproxy_sl_la.all_cpp.final libappletproxy_sl_la.all_cpp.files  > libappletproxy_sl_la.all_cpp.cpp; \
++	rm -f libappletproxy_sl_la.all_cpp.final libappletproxy_sl_la.all_cpp.files
+@@ -693 +713 @@
+-appletproxy_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/appletproxy.cpp appletproxy_la_meta_unload.cpp   appletproxy.moc 
++appletproxy_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/appletproxy_main.cpp  
+@@ -697 +717 @@
+-	for file in appletproxy.cpp appletproxy_la_meta_unload.cpp ; do \
++	for file in appletproxy_main.cpp ; do \
+@@ -705 +725,13 @@
+-extensionproxy_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/extensionproxy.cpp extensionproxy_la_meta_unload.cpp   extensionproxy.moc 
++libextensionproxy_sl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/extensionproxy.cpp libextensionproxy_sl_la_meta_unload.cpp   extensionproxy.moc 
++	@echo 'creating libextensionproxy_sl_la.all_cpp.cpp ...'; \
++	rm -f libextensionproxy_sl_la.all_cpp.files libextensionproxy_sl_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libextensionproxy_sl_la.all_cpp.final; \
++	for file in extensionproxy.cpp libextensionproxy_sl_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libextensionproxy_sl_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libextensionproxy_sl_la.all_cpp.final; \
++	done; \
++	cat libextensionproxy_sl_la.all_cpp.final libextensionproxy_sl_la.all_cpp.files  > libextensionproxy_sl_la.all_cpp.cpp; \
++	rm -f libextensionproxy_sl_la.all_cpp.final libextensionproxy_sl_la.all_cpp.files
++
++#>+ 11
++extensionproxy_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/extensionproxy_main.cpp  
+@@ -709 +741 @@
+-	for file in extensionproxy.cpp extensionproxy_la_meta_unload.cpp ; do \
++	for file in extensionproxy_main.cpp ; do \
+@@ -717 +749 @@
+-appletproxy.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++appletproxy.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/appletproxy_main.cpp  
+@@ -721 +753 @@
+-	for file in dummy.cpp ; do \
++	for file in appletproxy_main.cpp ; do \
+@@ -729 +761 @@
+-extensionproxy.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++extensionproxy.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/extensionproxy_main.cpp  
+@@ -733 +765 @@
+-	for file in dummy.cpp ; do \
++	for file in extensionproxy_main.cpp ; do \
+@@ -742 +774 @@
+-	-rm -f appletproxy_la.all_cpp.cpp extensionproxy_la.all_cpp.cpp appletproxy.all_cpp.cpp extensionproxy.all_cpp.cpp
++	-rm -f libappletproxy_sl_la.all_cpp.cpp appletproxy_la.all_cpp.cpp libextensionproxy_sl_la.all_cpp.cpp extensionproxy_la.all_cpp.cpp appletproxy.all_cpp.cpp extensionproxy.all_cpp.cpp
+@@ -746 +778 @@
+-	$(MAKE) appletproxy_la_OBJECTS="$(appletproxy_la_final_OBJECTS)" extensionproxy_la_OBJECTS="$(extensionproxy_la_final_OBJECTS)" all-am
++	$(MAKE) libappletproxy_sl_la_OBJECTS="$(libappletproxy_sl_la_final_OBJECTS)" libextensionproxy_sl_la_OBJECTS="$(libextensionproxy_sl_la_final_OBJECTS)" all-am
+@@ -749 +781 @@
+-	$(MAKE) appletproxy_la_OBJECTS="$(appletproxy_la_nofinal_OBJECTS)" extensionproxy_la_OBJECTS="$(extensionproxy_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libappletproxy_sl_la_OBJECTS="$(libappletproxy_sl_la_nofinal_OBJECTS)" libextensionproxy_sl_la_OBJECTS="$(libextensionproxy_sl_la_nofinal_OBJECTS)" all-am

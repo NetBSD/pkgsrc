@@ -1,53 +1,20 @@
-$NetBSD: patch-ao,v 1.2 2001/09/07 14:32:21 drochner Exp $
+$NetBSD: patch-ao,v 1.3 2001/10/15 22:46:22 skrll Exp $
 
---- kinit/kinit.cpp.orig	Thu Mar 15 01:38:06 2001
-+++ kinit/kinit.cpp	Thu Aug  9 16:12:05 2001
-@@ -64,18 +64,8 @@
- # include <dlfcn.h>
- #endif
+--- kdecore/Makefile.am.orig	Sun Jun 10 01:07:44 2001
++++ kdecore/Makefile.am
+@@ -89,7 +89,6 @@
+ install-data-local: charsets.config
+ 	$(mkinstalldirs) $(includedir)
+ 	$(mkinstalldirs) $(includedir)/kio
+-	$(INSTALL_DATA) $(srcdir)/../libltdl/ltdl.h $(includedir)/ltdl.h
+ 	$(mkinstalldirs) $(kde_confdir)
+ 	$(INSTALL_DATA) $(srcdir)/charsets.config $(kde_confdir)/charsets
+ 	$(mkinstalldirs) $(kde_datadir)/knotify
+@@ -102,7 +101,6 @@
  
--#ifdef RTLD_GLOBAL
--# define LTDL_GLOBAL	RTLD_GLOBAL
--#else
--# ifdef DL_GLOBAL
--#  define LTDL_GLOBAL	DL_GLOBAL
--# else
--#  define LTDL_GLOBAL	0
--# endif
--#endif
+ uninstall-local:
+ 	-rm -f $(kde_confdir)/charsets
+-	-rm -f $(includedir)/ltdl.h
+ 	-rm -f $(includedir)/kio/kmdcodec.h
  
- 
--extern int lt_dlopen_flag;
- static int X11fd = -1;
- static Display *X11display = 0;
- static const KInstance *s_instance = 0;
-@@ -96,11 +86,10 @@
-   pid_t my_pid;
-   int n;
-   lt_dlhandle handle;
--  lt_ptr_t sym;
-+  lt_ptr sym;
-   char **argv;
-   int (*func)(int, char *[]);
-   int (*launcher_func)(int);
--  int lt_dlopen_flag;
- } d;
- 
- extern "C" {
-@@ -228,7 +217,6 @@
-            }
-         }
-      }
--     lt_dlopen_flag = d.lt_dlopen_flag;
-      if (!d.handle )
-      {
-         d.result = 2; // Try execing
-@@ -993,8 +981,6 @@
-    d.maxname = strlen(argv[0]);
-    d.launcher_pid = 0;
-    d.wrapper = 0;
--   d.lt_dlopen_flag = lt_dlopen_flag;
--   lt_dlopen_flag |= LTDL_GLOBAL;
-    init_signals();
- 
- 
+ EXTRA_DIST = generate_keys.sh charsets.config $(kdebug_DATA) Web.colors \

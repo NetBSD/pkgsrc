@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2001/09/28 20:18:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/10/15 22:46:12 skrll Exp $
+share/doc/kde/HTML/en/kdm/Daemon.README
+share/kde/icons/Daemon.png
 bin/appletproxy
 bin/chooser
 bin/conttest
 bin/drkonqi
 bin/extensionproxy
 bin/kaccess
+bin/kaddressbook
 bin/kappfinder
+bin/kate
 bin/kbanner.kss
 bin/kblankscrn.kss
 bin/kblob.kss
 bin/kbouboule.kss
-bin/kbsod.kss
 bin/kcheckpass
 bin/kcminit
 bin/kcmshell
@@ -18,20 +21,22 @@ bin/kcontrol
 bin/kdcop
 bin/kdebugdialog
 bin/kdeeject
+bin/kdeprintfax
 bin/kdesktop
 bin/kdesu
 bin/kdesud
 bin/kdm
+bin/kdm_config
+bin/kdm_greet
 bin/kdmdesktop
 bin/keditbookmarks
 bin/keditfiletype
 bin/kfmclient
 bin/kfmexec
 bin/khelpcenter
-bin/khop.kss
 bin/khotkeys
-bin/khtmlindex
 bin/kicker
+bin/kjobviewer
 bin/klegacyimport
 bin/klines.kss
 bin/klipper
@@ -43,8 +48,11 @@ bin/konqueror
 bin/konsole
 bin/konsole_grantpty
 bin/kpager
+bin/kpartsaver.kss
+bin/kpersonalizer
 bin/kpipes.kss
 bin/kpolygon.kss
+bin/kprinter
 bin/kpyro.kss
 bin/krandom.kss
 bin/krdb
@@ -71,17 +79,21 @@ bin/kxkb
 bin/kxmlrpcd
 bin/kxsconfig
 bin/kxsrun
-@comment Only if Motif is installed
-bin/nspluginscan
-@comment Only if Motif is installed
-bin/nspluginviewer
 bin/startkde
+etc/ksysguarddrc
 include/KBackgroundIface.h
 include/KDesktopIface.h
 include/KScreensaverIface.h
 include/KWinInterface.h
 include/KonquerorIface.h
 include/ccont.h
+include/kate/application.h
+include/kate/docmanager.h
+include/kate/document.h
+include/kate/mainwindow.h
+include/kate/plugin.h
+include/kate/view.h
+include/kate/viewmanager.h
 include/kbookmark.h
 include/kbookmarkbar.h
 include/kbookmarkdrag.h
@@ -111,6 +123,7 @@ include/konq_propsview.h
 include/konq_settings.h
 include/konq_undo.h
 include/kwin/client.h
+include/kwin/kwinbutton.h
 include/kwin/options.h
 include/kwin/workspace.h
 include/thumbcreator.h
@@ -120,15 +133,12 @@ lib/appletproxy.so
 lib/extensionproxy.a
 lib/extensionproxy.la
 lib/extensionproxy.so
-lib/kcminit.a
-lib/kcminit.la
-lib/kcminit.so
-lib/kcmshell.a
-lib/kcmshell.la
-lib/kcmshell.so
-lib/kcontrol.a
-lib/kcontrol.la
-lib/kcontrol.so
+lib/kate.a
+lib/kate.la
+lib/kate.so
+lib/kde2/gsthumbnail.a
+lib/kde2/gsthumbnail.la
+lib/kde2/gsthumbnail.so
 lib/kde2/htmlthumbnail.a
 lib/kde2/htmlthumbnail.la
 lib/kde2/htmlthumbnail.so
@@ -138,6 +148,18 @@ lib/kde2/imagethumbnail.so
 lib/kde2/kaccess.a
 lib/kde2/kaccess.la
 lib/kde2/kaccess.so
+lib/kde2/kcminit.a
+lib/kde2/kcminit.la
+lib/kde2/kcminit.so
+lib/kde2/kcmshell.a
+lib/kde2/kcmshell.la
+lib/kde2/kcmshell.so
+lib/kde2/kcontrol.a
+lib/kde2/kcontrol.la
+lib/kde2/kcontrol.so
+lib/kde2/khelpcenter.a
+lib/kde2/khelpcenter.la
+lib/kde2/khelpcenter.so
 lib/kde2/kio_filter.a
 lib/kde2/kio_filter.la
 lib/kde2/kio_filter.so
@@ -150,9 +172,6 @@ lib/kde2/kio_floppy.so
 lib/kde2/kio_gopher.a
 lib/kde2/kio_gopher.la
 lib/kde2/kio_gopher.so
-lib/kde2/kio_help.a
-lib/kde2/kio_help.la
-lib/kde2/kio_help.so
 lib/kde2/kio_imap4.a
 lib/kde2/kio_imap4.la
 lib/kde2/kio_imap4.so
@@ -174,15 +193,17 @@ lib/kde2/kio_pop3.so
 lib/kde2/kio_smb.a
 lib/kde2/kio_smb.la
 lib/kde2/kio_smb.so
-lib/kde2/kio_smtp.a
-lib/kde2/kio_smtp.la
-lib/kde2/kio_smtp.so
 lib/kde2/kio_tar.a
 lib/kde2/kio_tar.la
 lib/kde2/kio_tar.so
 lib/kde2/kio_thumbnail.a
 lib/kde2/kio_thumbnail.la
 lib/kde2/kio_thumbnail.so
+lib/kde2/libkaccess_sl.a
+lib/kde2/libkaccess_sl.la
+lib/kde2/libkaccess_sl.so
+lib/kde2/libkaccess_sl.so.0
+lib/kde2/libkaccess_sl.so.0.0
 lib/kde2/libkcm_access.a
 lib/kde2/libkcm_access.la
 lib/kde2/libkcm_access.so
@@ -204,6 +225,9 @@ lib/kde2/libkcm_colors.so
 lib/kde2/libkcm_crypto.a
 lib/kde2/libkcm_crypto.la
 lib/kde2/libkcm_crypto.so
+lib/kde2/libkcm_css.a
+lib/kde2/libkcm_css.la
+lib/kde2/libkcm_css.so
 lib/kde2/libkcm_email.a
 lib/kde2/libkcm_email.la
 lib/kde2/libkcm_email.so
@@ -224,6 +248,9 @@ lib/kde2/libkcm_info.so
 lib/kde2/libkcm_input.a
 lib/kde2/libkcm_input.la
 lib/kde2/libkcm_input.so
+lib/kde2/libkcm_ioslaveinfo.a
+lib/kde2/libkcm_ioslaveinfo.la
+lib/kde2/libkcm_ioslaveinfo.so
 lib/kde2/libkcm_kdm.a
 lib/kde2/libkcm_kdm.la
 lib/kde2/libkcm_kdm.so
@@ -248,12 +275,23 @@ lib/kde2/libkcm_konq.so
 lib/kde2/libkcm_konqhtml.a
 lib/kde2/libkcm_konqhtml.la
 lib/kde2/libkcm_konqhtml.so
+lib/kde2/libkcm_konsole.a
+lib/kde2/libkcm_konsole.la
+lib/kde2/libkcm_konsole.so
 lib/kde2/libkcm_kurifilt.a
 lib/kde2/libkcm_kurifilt.la
 lib/kde2/libkcm_kurifilt.so
+lib/kde2/libkcm_kwindecoration.a
+lib/kde2/libkcm_kwindecoration.la
+lib/kde2/libkcm_kwindecoration.so
 lib/kde2/libkcm_kwinoptions.a
 lib/kde2/libkcm_kwinoptions.la
 lib/kde2/libkcm_kwinoptions.so
+lib/kde2/libkcm_launch.a
+lib/kde2/libkcm_launch.la
+lib/kde2/libkcm_launch.so
+lib/kde2/libkcm_launch.so.0
+lib/kde2/libkcm_launch.so.0.0
 lib/kde2/libkcm_locale.a
 lib/kde2/libkcm_locale.la
 lib/kde2/libkcm_locale.so
@@ -263,6 +301,9 @@ lib/kde2/libkcm_midi.so
 lib/kde2/libkcm_passwords.a
 lib/kde2/libkcm_passwords.la
 lib/kde2/libkcm_passwords.so
+lib/kde2/libkcm_printmgr.a
+lib/kde2/libkcm_printmgr.la
+lib/kde2/libkcm_printmgr.so
 lib/kde2/libkcm_samba.a
 lib/kde2/libkcm_samba.la
 lib/kde2/libkcm_samba.so
@@ -271,6 +312,12 @@ lib/kde2/libkcm_screensaver.la
 lib/kde2/libkcm_smserver.a
 lib/kde2/libkcm_smserver.la
 lib/kde2/libkcm_smserver.so
+lib/kde2/libkcm_socks.a
+lib/kde2/libkcm_socks.la
+lib/kde2/libkcm_socks.so
+lib/kde2/libkcm_spellchecking.a
+lib/kde2/libkcm_spellchecking.la
+lib/kde2/libkcm_spellchecking.so
 lib/kde2/libkcm_style.a
 lib/kde2/libkcm_style.la
 lib/kde2/libkcm_style.so
@@ -280,15 +327,61 @@ lib/kde2/libkcm_taskbar.so
 lib/kde2/libkcm_themes.a
 lib/kde2/libkcm_themes.la
 lib/kde2/libkcm_themes.so
+lib/kde2/libkcm_usb.a
+lib/kde2/libkcm_usb.la
+lib/kde2/libkcm_usb.so
+lib/kde2/libkcminit_main.a
+lib/kde2/libkcminit_main.la
+lib/kde2/libkcminit_main.so
+lib/kde2/libkcminit_main.so.0
+lib/kde2/libkcminit_main.so.0.0
+lib/kde2/libkcmshell_main.a
+lib/kde2/libkcmshell_main.la
+lib/kde2/libkcmshell_main.so
+lib/kde2/libkcmshell_main.so.0
+lib/kde2/libkcmshell_main.so.0.0
+lib/kde2/libkcontrol_main.a
+lib/kde2/libkcontrol_main.la
+lib/kde2/libkcontrol_main.so
+lib/kde2/libkcontrol_main.so.0
+lib/kde2/libkcontrol_main.so.0.0
+lib/kde2/libkded_favicons.a
+lib/kde2/libkded_favicons.la
+lib/kde2/libkded_favicons.so
 lib/kde2/libkfindpart.a
 lib/kde2/libkfindpart.la
 lib/kde2/libkfindpart.so
+lib/kde2/libkhelpcenterpart.a
+lib/kde2/libkhelpcenterpart.la
+lib/kde2/libkhelpcenterpart.so
 lib/kde2/libkonqiconview.a
 lib/kde2/libkonqiconview.la
 lib/kde2/libkonqiconview.so
 lib/kde2/libkonqlistview.a
 lib/kde2/libkonqlistview.la
 lib/kde2/libkonqlistview.so
+lib/kde2/libkonqsidebar_classic_wrap.a
+lib/kde2/libkonqsidebar_classic_wrap.la
+lib/kde2/libkonqsidebar_classic_wrap.so
+lib/kde2/libkonqsidebar_tree.a
+lib/kde2/libkonqsidebar_tree.la
+lib/kde2/libkonqsidebar_tree.so
+lib/kde2/libkonqsidebartree_bookmarks.a
+lib/kde2/libkonqsidebartree_bookmarks.la
+lib/kde2/libkonqsidebartree_bookmarks.so
+lib/kde2/libkonqsidebartree_bookmarks.so.0
+lib/kde2/libkonqsidebartree_bookmarks.so.0.0
+lib/kde2/libkonqsidebartree_dirtree.a
+lib/kde2/libkonqsidebartree_dirtree.la
+lib/kde2/libkonqsidebartree_dirtree.so
+lib/kde2/libkonqsidebartree_history.a
+lib/kde2/libkonqsidebartree_history.la
+lib/kde2/libkonqsidebartree_history.so
+lib/kde2/libkonqsidebartree_history.so.0
+lib/kde2/libkonqsidebartree_history.so.0.0
+lib/kde2/libkonqsound.a
+lib/kde2/libkonqsound.la
+lib/kde2/libkonqsound.so
 lib/kde2/libkonqtree.a
 lib/kde2/libkonqtree.la
 lib/kde2/libkonqtree.so
@@ -304,12 +397,21 @@ lib/kde2/libkuriikwsfilter.so
 lib/kde2/libkurisearchfilter.a
 lib/kde2/libkurisearchfilter.la
 lib/kde2/libkurisearchfilter.so
-lib/kde2/libkwin2k.a
-lib/kde2/libkwin2k.la
-lib/kde2/libkwin2k.so
 lib/kde2/libkwinb2.a
 lib/kde2/libkwinb2.la
 lib/kde2/libkwinb2.so
+lib/kde2/libkwindefault.a
+lib/kde2/libkwindefault.la
+lib/kde2/libkwindefault.so
+lib/kde2/libkwindefault_config.a
+lib/kde2/libkwindefault_config.la
+lib/kde2/libkwindefault_config.so
+lib/kde2/libkwinicewm.a
+lib/kde2/libkwinicewm.la
+lib/kde2/libkwinicewm.so
+lib/kde2/libkwinicewm_config.a
+lib/kde2/libkwinicewm_config.la
+lib/kde2/libkwinicewm_config.so
 lib/kde2/libkwinkde1.a
 lib/kde2/libkwinkde1.la
 lib/kde2/libkwinkde1.so
@@ -325,12 +427,30 @@ lib/kde2/libkwinlaptop.so
 lib/kde2/libkwinmodernsys.a
 lib/kde2/libkwinmodernsys.la
 lib/kde2/libkwinmodernsys.so
+lib/kde2/libkwinmodernsys_config.a
+lib/kde2/libkwinmodernsys_config.la
+lib/kde2/libkwinmodernsys_config.so
+lib/kde2/libkwinmwm.a
+lib/kde2/libkwinmwm.la
+lib/kde2/libkwinmwm.so
+lib/kde2/libkwinquartz.a
+lib/kde2/libkwinquartz.la
+lib/kde2/libkwinquartz.so
+lib/kde2/libkwinquartz_config.a
+lib/kde2/libkwinquartz_config.la
+lib/kde2/libkwinquartz_config.so
+lib/kde2/libkwinredmond.a
+lib/kde2/libkwinredmond.la
+lib/kde2/libkwinredmond.so
 lib/kde2/libkwinriscos.a
 lib/kde2/libkwinriscos.la
 lib/kde2/libkwinriscos.so
 lib/kde2/libkwinsystem.a
 lib/kde2/libkwinsystem.la
 lib/kde2/libkwinsystem.so
+lib/kde2/libkwinweb.a
+lib/kde2/libkwinweb.la
+lib/kde2/libkwinweb.so
 lib/kde2/textthumbnail.a
 lib/kde2/textthumbnail.la
 lib/kde2/textthumbnail.so
@@ -349,6 +469,9 @@ lib/khotkeys.so
 lib/kicker.a
 lib/kicker.la
 lib/kicker.so
+lib/kjobviewer.a
+lib/kjobviewer.la
+lib/kjobviewer.so
 lib/klegacyimport.a
 lib/klegacyimport.la
 lib/klegacyimport.so
@@ -376,6 +499,11 @@ lib/kxkb.so
 lib/kxmlrpcd.a
 lib/kxmlrpcd.la
 lib/kxmlrpcd.so
+lib/libappletproxy_sl.a
+lib/libappletproxy_sl.la
+lib/libappletproxy_sl.so
+lib/libappletproxy_sl.so.0
+lib/libappletproxy_sl.so.0.0
 lib/libccont.a
 lib/libchildpanelextension.a
 lib/libchildpanelextension.la
@@ -392,37 +520,71 @@ lib/libdockbarextension.la
 lib/libdockbarextension.so
 lib/libdockbarextension.so.1
 lib/libdockbarextension.so.1.0
-lib/libhtmlsearch.a
-lib/libhtmlsearch.la
-lib/libhtmlsearch.so
+lib/libextensionproxy_sl.a
+lib/libextensionproxy_sl.la
+lib/libextensionproxy_sl.so
+lib/libextensionproxy_sl.so.0
+lib/libextensionproxy_sl.so.0.0
 lib/libkasbarextension.a
 lib/libkasbarextension.la
 lib/libkasbarextension.so
 lib/libkasbarextension.so.1
 lib/libkasbarextension.so.1.0
-lib/libkcm_htmlsearch.a
-lib/libkcm_htmlsearch.la
-lib/libkcm_htmlsearch.so
-lib/libkcm_ioslaveinfo.a
-lib/libkcm_ioslaveinfo.la
-lib/libkcm_ioslaveinfo.so
-lib/libkcm_layout.a
-lib/libkcm_layout.la
-lib/libkcm_layout.so
-@comment Only if Motif is installed
-lib/libkcm_nsplugin.a
-@comment Only if Motif is installed
-lib/libkcm_nsplugin.la
-@comment Only if Motif is installed
-lib/libkcm_nsplugin.so
+lib/libkate_main.a
+lib/libkate_main.la
+lib/libkate_main.so
+lib/libkate_main.so.0
+lib/libkate_main.so.0.0
+lib/libkatecore.a
+lib/libkatecore.la
+lib/libkatecore.so
+lib/libkateinterfaces.a
+lib/libkateinterfaces.la
+lib/libkateinterfaces.so
+lib/libkcm_keyboard.a
+lib/libkcm_keyboard.la
+lib/libkcm_keyboard.so
 lib/libkcm_xmlrpcd.a
 lib/libkcm_xmlrpcd.la
 lib/libkcm_xmlrpcd.so
-lib/libkhelpcenter.a
-lib/libkhelpcenter.la
-lib/libkhelpcenter.so
-lib/libkhelpcenter.so.1
-lib/libkhelpcenter.so.1.0
+lib/libkdesktop_main.a
+lib/libkdesktop_main.la
+lib/libkdesktop_main.so
+lib/libkdesktop_main.so.0
+lib/libkdesktop_main.so.0.0
+lib/libkeditbookmarks_main.a
+lib/libkeditbookmarks_main.la
+lib/libkeditbookmarks_main.so
+lib/libkeditbookmarks_main.so.0
+lib/libkeditbookmarks_main.so.0.0
+lib/libkfmclient_main.a
+lib/libkfmclient_main.la
+lib/libkfmclient_main.so
+lib/libkfmclient_main.so.0
+lib/libkfmclient_main.so.0.0
+lib/libkhotkeys_main.a
+lib/libkhotkeys_main.la
+lib/libkhotkeys_main.so
+lib/libkhotkeys_main.so.0
+lib/libkhotkeys_main.so.0.0
+lib/libkicker.a
+lib/libkicker.la
+lib/libkicker.so
+lib/libkjobviewer_main.a
+lib/libkjobviewer_main.la
+lib/libkjobviewer_main.so
+lib/libkjobviewer_main.so.0
+lib/libkjobviewer_main.so.0.0
+lib/libklegacyimport_main.a
+lib/libklegacyimport_main.la
+lib/libklegacyimport_main.so
+lib/libklegacyimport_main.so.0
+lib/libklegacyimport_main.so.0.0
+lib/libkmenuedit_main.a
+lib/libkmenuedit_main.la
+lib/libkmenuedit_main.so
+lib/libkmenuedit_main.so.0
+lib/libkmenuedit_main.so.0.0
 lib/libkminipagerapplet.a
 lib/libkminipagerapplet.la
 lib/libkminipagerapplet.so
@@ -436,6 +598,20 @@ lib/libkonq.so.3.0
 lib/libkonqaboutpage.a
 lib/libkonqaboutpage.la
 lib/libkonqaboutpage.so
+lib/libkonqsidebar.a
+lib/libkonqsidebar.la
+lib/libkonqsidebar.so
+lib/libkonqsidebarplugin.a
+lib/libkonqsidebarplugin.la
+lib/libkonqsidebarplugin.so
+lib/libkonqueror_main.a
+lib/libkonqueror_main.la
+lib/libkonqueror_main.so
+lib/libkonsole_main.a
+lib/libkonsole_main.la
+lib/libkonsole_main.so
+lib/libkonsole_main.so.0
+lib/libkonsole_main.so.0.0
 lib/libkonsolepart.a
 lib/libkonsolepart.la
 lib/libkonsolepart.so
@@ -454,42 +630,49 @@ lib/libksystemtrayapplet.la
 lib/libksystemtrayapplet.so
 lib/libksystemtrayapplet.so.1
 lib/libksystemtrayapplet.so.1.0
-lib/libktaskbarapplet.a
-lib/libktaskbarapplet.la
-lib/libktaskbarapplet.so
-lib/libktaskbarapplet.so.1
-lib/libktaskbarapplet.so.1.0
 lib/libkwin.a
 lib/libkwin.la
 lib/libkwin.so
-lib/libkwindefault.a
-lib/libkwindefault.la
-lib/libkwindefault.so
-lib/libkwindefault.so.0
-lib/libkwindefault.so.0.0
-lib/libkwritepart.a
-lib/libkwritepart.la
-lib/libkwritepart.so
+lib/libkwrite_main.a
+lib/libkwrite_main.la
+lib/libkwrite_main.so
+lib/libkwrite_main.so.0
+lib/libkwrite_main.so.0.0
+lib/libkwrited_main.a
+lib/libkwrited_main.la
+lib/libkwrited_main.so
+lib/libkwrited_main.so.0
+lib/libkwrited_main.so.0.0
+lib/libkxkb_main.a
+lib/libkxkb_main.la
+lib/libkxkb_main.so
+lib/libkxkb_main.so.0
+lib/libkxkb_main.so.0.0
+lib/libkxmlrpcd_main.a
+lib/libkxmlrpcd_main.la
+lib/libkxmlrpcd_main.so
+lib/libkxmlrpcd_main.so.0
+lib/libkxmlrpcd_main.so.0.0
 lib/libnaughtyapplet.a
 lib/libnaughtyapplet.la
 lib/libnaughtyapplet.so
 lib/libnaughtyapplet.so.1
 lib/libnaughtyapplet.so.1.0
-@comment Only if Motif is installed
-lib/libnsplugin.a
-@comment Only if Motif is installed
-lib/libnsplugin.la
-@comment Only if Motif is installed
-lib/libnsplugin.so
-@comment Only if Motif is installed
-lib/libnsplugin.so.1
-@comment Only if Motif is installed
-lib/libnsplugin.so.1.1
 lib/libquicklauncher.a
 lib/libquicklauncher.la
 lib/libquicklauncher.so
 lib/libquicklauncher.so.1
 lib/libquicklauncher.so.1.0
+lib/libtaskbar.a
+lib/libtaskbar.la
+lib/libtaskbar.so
+lib/libtaskbar.so.1
+lib/libtaskbar.so.1.0
+lib/libtaskbarapplet.a
+lib/libtaskbarapplet.la
+lib/libtaskbarapplet.so
+lib/libtaskbarapplet.so.1
+lib/libtaskbarapplet.so.1.0
 lib/libtaskbarextension.a
 lib/libtaskbarextension.la
 lib/libtaskbarextension.so
@@ -503,59 +686,33 @@ lib/libtaskmanager.so.1.0
 share/autostart/kdesktop.desktop
 share/autostart/khotkeys.desktop
 share/autostart/klipper.desktop
+share/autostart/kpersonalizer.desktop
 share/autostart/ktip.desktop
 share/autostart/kwrited.desktop
 share/autostart/panel.desktop
-share/doc/kde/HTML/en/kcontrol/.anchors
-share/doc/kde/HTML/en/kcontrol/action.html
-share/doc/kde/HTML/en/kcontrol/background.html
-share/doc/kde/HTML/en/kcontrol/batmon.html
-share/doc/kde/HTML/en/kcontrol/bell.html
-share/doc/kde/HTML/en/kcontrol/borders.html
-share/doc/kde/HTML/en/kcontrol/color.html
+share/doc/kde/HTML/en/kaddressbook/common
+share/doc/kde/HTML/en/kaddressbook/index.cache.bz2
+share/doc/kde/HTML/en/kaddressbook/index.docbook
+share/doc/kde/HTML/en/kate/common
+share/doc/kde/HTML/en/kate/index.cache.bz2
+share/doc/kde/HTML/en/kate/index.docbook
 share/doc/kde/HTML/en/kcontrol/common
-share/doc/kde/HTML/en/kcontrol/control-center-exiting.html
-share/doc/kde/HTML/en/kcontrol/control-center-menus.html
-share/doc/kde/HTML/en/kcontrol/control-center-run-indiv.html
-share/doc/kde/HTML/en/kcontrol/control-center-screen.html
-share/doc/kde/HTML/en/kcontrol/control-center.html
-share/doc/kde/HTML/en/kcontrol/cookie.html
-share/doc/kde/HTML/en/kcontrol/credits.html
-share/doc/kde/HTML/en/kcontrol/crypto.html
-share/doc/kde/HTML/en/kcontrol/datetime.html
-share/doc/kde/HTML/en/kcontrol/desktop.html
-share/doc/kde/HTML/en/kcontrol/devices.html
-share/doc/kde/HTML/en/kcontrol/dma.html
-share/doc/kde/HTML/en/kcontrol/ebrowse.html
-share/doc/kde/HTML/en/kcontrol/email.html
-share/doc/kde/HTML/en/kcontrol/energy.html
-share/doc/kde/HTML/en/kcontrol/file-assoc.html
-share/doc/kde/HTML/en/kcontrol/file-manager.html
-share/doc/kde/HTML/en/kcontrol/fonts.html
-share/doc/kde/HTML/en/kcontrol/help-index.html
-share/doc/kde/HTML/en/kcontrol/icons.html
+share/doc/kde/HTML/en/kcontrol/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/index.docbook
-share/doc/kde/HTML/en/kcontrol/index.html
-share/doc/kde/HTML/en/kcontrol/interrupts.html
-share/doc/kde/HTML/en/kcontrol/introduction.html
-share/doc/kde/HTML/en/kcontrol/ioports.html
-share/doc/kde/HTML/en/kcontrol/kbd.html
-share/doc/kde/HTML/en/kcontrol/kblayout.html
 share/doc/kde/HTML/en/kcontrol/kcmaccess.docbook
 share/doc/kde/HTML/en/kcontrol/kcmaction.docbook
 share/doc/kde/HTML/en/kcontrol/kcmbackgnd.docbook
 share/doc/kde/HTML/en/kcontrol/kcmbatmon.docbook
 share/doc/kde/HTML/en/kcontrol/kcmbell.docbook
 share/doc/kde/HTML/en/kcontrol/kcmblockdev.docbook
-share/doc/kde/HTML/en/kcontrol/kcmborders.docbook
 share/doc/kde/HTML/en/kcontrol/kcmcolor.docbook
 share/doc/kde/HTML/en/kcontrol/kcmcookie.docbook
 share/doc/kde/HTML/en/kcontrol/kcmcrypto.docbook
+share/doc/kde/HTML/en/kcontrol/kcmcss.docbook
 share/doc/kde/HTML/en/kcontrol/kcmdatetime.docbook
 share/doc/kde/HTML/en/kcontrol/kcmdesktop.docbook
 share/doc/kde/HTML/en/kcontrol/kcmdeviceinfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmdmainfo.docbook
-share/doc/kde/HTML/en/kcontrol/kcmdrkonqi.docbook
 share/doc/kde/HTML/en/kcontrol/kcmebrowse.docbook
 share/doc/kde/HTML/en/kcontrol/kcmemail.docbook
 share/doc/kde/HTML/en/kcontrol/kcmenergy.docbook
@@ -564,13 +721,15 @@ share/doc/kde/HTML/en/kcontrol/kcmfileman.docbook
 share/doc/kde/HTML/en/kcontrol/kcmfonts.docbook
 share/doc/kde/HTML/en/kcontrol/kcmhelpindex.docbook
 share/doc/kde/HTML/en/kcontrol/kcmicon.docbook
-share/doc/kde/HTML/en/kcontrol/kcmiconstyle.docbook
 share/doc/kde/HTML/en/kcontrol/kcmintinfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmioportinfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmkbd.docbook
-share/doc/kde/HTML/en/kcontrol/kcmkblayout.docbook
 share/doc/kde/HTML/en/kcontrol/kcmkbrowse.docbook
 share/doc/kde/HTML/en/kcontrol/kcmkeybind.docbook
+share/doc/kde/HTML/en/kcontrol/kcmkonsole.docbook
+share/doc/kde/HTML/en/kcontrol/kcmkwintheme.docbook
+share/doc/kde/HTML/en/kcontrol/kcmlaunch.docbook
+share/doc/kde/HTML/en/kcontrol/kcmlisa.docbook
 share/doc/kde/HTML/en/kcontrol/kcmlocate.docbook
 share/doc/kde/HTML/en/kcontrol/kcmloginmanage.docbook
 share/doc/kde/HTML/en/kcontrol/kcmlowbatcrit.docbook
@@ -579,9 +738,7 @@ share/doc/kde/HTML/en/kcontrol/kcmmemoryinfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmmidi.docbook
 share/doc/kde/HTML/en/kcontrol/kcmmixer.docbook
 share/doc/kde/HTML/en/kcontrol/kcmmouse.docbook
-share/doc/kde/HTML/en/kcontrol/kcmmousebeh.docbook
 share/doc/kde/HTML/en/kcontrol/kcmnetscapeplugins.docbook
-share/doc/kde/HTML/en/kcontrol/kcmnumbername.docbook
 share/doc/kde/HTML/en/kcontrol/kcmpanel.docbook
 share/doc/kde/HTML/en/kcontrol/kcmpartitioninfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmpasswd.docbook
@@ -596,207 +753,226 @@ share/doc/kde/HTML/en/kcontrol/kcmsessionman.docbook
 share/doc/kde/HTML/en/kcontrol/kcmsmbstat.docbook
 share/doc/kde/HTML/en/kcontrol/kcmsndinfo.docbook
 share/doc/kde/HTML/en/kcontrol/kcmsndsrv.docbook
+share/doc/kde/HTML/en/kcontrol/kcmsocks.docbook
+share/doc/kde/HTML/en/kcontrol/kcmspellchecking.docbook
 share/doc/kde/HTML/en/kcontrol/kcmstyle.docbook
 share/doc/kde/HTML/en/kcontrol/kcmsysnotify.docbook
 share/doc/kde/HTML/en/kcontrol/kcmtalk.docbook
 share/doc/kde/HTML/en/kcontrol/kcmtaskbar.docbook
+share/doc/kde/HTML/en/kcontrol/kcmusb.docbook
 share/doc/kde/HTML/en/kcontrol/kcmuseragent.docbook
 share/doc/kde/HTML/en/kcontrol/kcmwinshare.docbook
 share/doc/kde/HTML/en/kcontrol/kcmxservinfo.docbook
-share/doc/kde/HTML/en/kcontrol/key-bindings.html
 share/doc/kde/HTML/en/kcontrol/kfileman1.png
 share/doc/kde/HTML/en/kcontrol/kfileman2.png
-share/doc/kde/HTML/en/kcontrol/konq-browsing.html
-share/doc/kde/HTML/en/kcontrol/laptop.html
-share/doc/kde/HTML/en/kcontrol/locale.html
-share/doc/kde/HTML/en/kcontrol/login-manager.html
-share/doc/kde/HTML/en/kcontrol/lowbatcrit.html
-share/doc/kde/HTML/en/kcontrol/lowbatwarn.html
-share/doc/kde/HTML/en/kcontrol/memory.html
-share/doc/kde/HTML/en/kcontrol/midi.html
-share/doc/kde/HTML/en/kcontrol/mixer.html
-share/doc/kde/HTML/en/kcontrol/module.html
-share/doc/kde/HTML/en/kcontrol/modules.html
-share/doc/kde/HTML/en/kcontrol/mouse-behav.html
-share/doc/kde/HTML/en/kcontrol/mouse.html
-share/doc/kde/HTML/en/kcontrol/nsplugins.html
-share/doc/kde/HTML/en/kcontrol/panel.html
-share/doc/kde/HTML/en/kcontrol/partitions.html
-share/doc/kde/HTML/en/kcontrol/passwords.html
-share/doc/kde/HTML/en/kcontrol/pci.html
-share/doc/kde/HTML/en/kcontrol/pcmcia.html
-share/doc/kde/HTML/en/kcontrol/powerctrl.html
-share/doc/kde/HTML/en/kcontrol/processor.html
-share/doc/kde/HTML/en/kcontrol/proxies.html
-share/doc/kde/HTML/en/kcontrol/sambastatus.html
-share/doc/kde/HTML/en/kcontrol/screensaver.html
+share/doc/kde/HTML/en/kcontrol/nettimeouts.docbook
+share/doc/kde/HTML/en/kcontrol/printmanager.docbook
+share/doc/kde/HTML/en/kcontrol/printsystem.docbook
+share/doc/kde/HTML/en/kcontrol/protocols.docbook
 share/doc/kde/HTML/en/kcontrol/screenshot.png
-share/doc/kde/HTML/en/kcontrol/scsi.html
-share/doc/kde/HTML/en/kcontrol/sessions.html
-share/doc/kde/HTML/en/kcontrol/sndserver.html
-share/doc/kde/HTML/en/kcontrol/soundinfo.html
-share/doc/kde/HTML/en/kcontrol/style.html
-share/doc/kde/HTML/en/kcontrol/sys-notify.html
-share/doc/kde/HTML/en/kcontrol/taskbar.html
-share/doc/kde/HTML/en/kcontrol/user-agent.html
-share/doc/kde/HTML/en/kcontrol/windows-shares.html
-share/doc/kde/HTML/en/kcontrol/xserver.html
-share/doc/kde/HTML/en/kdebugdialog/.anchors
+share/doc/kde/HTML/en/kcontrol/systemcontrol.docbook
+share/doc/kde/HTML/en/kcontrol/thememgr.docbook
 share/doc/kde/HTML/en/kdebugdialog/common
+share/doc/kde/HTML/en/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/en/kdebugdialog/index.docbook
-share/doc/kde/HTML/en/kdebugdialog/index.html
-share/doc/kde/HTML/en/kdebugdialog/introduction.html
-share/doc/kde/HTML/en/kdesu/.anchors
-share/doc/kde/HTML/en/kdesu/author.html
+share/doc/kde/HTML/en/kdeprint/KDE-printingmanager-im-controlcenter-2.png
+share/doc/kde/HTML/en/kdeprint/KDE-printingmanager-im-controlcenter.png
+share/doc/kde/HTML/en/kdeprint/PPD-options-for-HP8100mopier.png
+share/doc/kde/HTML/en/kdeprint/PPD-options-for-infotecP450.png
+share/doc/kde/HTML/en/kdeprint/PrintQueue-KJobViewer.png
+share/doc/kde/HTML/en/kdeprint/add-printer-wizard-confirmation-1.png
+share/doc/kde/HTML/en/kdeprint/big-ppd-esppp-gui.png
+share/doc/kde/HTML/en/kdeprint/common
+share/doc/kde/HTML/en/kdeprint/cups-filterarchitecture-kivio-50Percent-scaled.png
+share/doc/kde/HTML/en/kdeprint/cups-filterarchitecture-kivio-70Percent-scaled.png
+share/doc/kde/HTML/en/kdeprint/cups-filterarchitecture-kivio.png
+share/doc/kde/HTML/en/kdeprint/cups-server-configuration-2.png
+share/doc/kde/HTML/en/kdeprint/cups-server-configuration-3.png
+share/doc/kde/HTML/en/kdeprint/cups-server-configuration-4.png
+share/doc/kde/HTML/en/kdeprint/cups-server-configuration.png
+share/doc/kde/HTML/en/kdeprint/cupsaddpostscriptprinter_fromcommandline.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard1.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard2_backendselection.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard3_networkscan.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard3_networkscan_results.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard4_networkscan_config.png
+share/doc/kde/HTML/en/kdeprint/cupsaddprinterwizard5_networkscan_SMBresults.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_broadcastaddress_add_button.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browse_relay_add_button.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browserelay_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsetimeouts_browseinterval_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsetimeouts_browsetimeout_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingconnection_browseaddress_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingconnection_browsepoll_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingconnection_browseport_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsinggeneral_browseshortnames_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsinggeneral_browsingonoff_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsinggeneral_implicitclasses_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingmasks_add_button.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingmasks_browseallowdeny_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_browsingmasks_browseorder_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkclients_keepalive_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkclients_keepalivetimeout_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkclients_maxclients_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkgeneral_hostnamelookups_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkgeneral_maxrequestsize_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkgeneral_portsaddresses_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_networkgeneral_timeout_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_accesspermissions_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_allowfrom_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_authclass_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_authgroupname_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_authtype_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_denyfrom_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_encryption_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_order_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_securityconfig_systemgroup_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_data_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_defaultcharset_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_defaultlanguage.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_documenttroot_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_executables_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_fontpath_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_requestroot_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_serverroot_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_temdir_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverdirectories_tempdir_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverencryptionconfig_servercertificate_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverencryptionconfig_serverkey_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servergeneral_group_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servergeneral_remoteroot_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servergeneral_serveradmin_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servergeneral_servername_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servergeneral_user_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverhttpconfig_defaultcharset_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverhttpconfig_defaultlanguage.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverhttpconfig_documenttroot_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverlogging_accesslog_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverlogging_errorlog_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverlogging_loglevel_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverlogging_maxlogsize_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_serverlogging_pagelog_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servermiscellaneous_filterlimit_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servermiscellaneous_preservehistory_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servermiscellaneous_preservejobfiles_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servermiscellaneous_printcap_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfig_servermiscellaneous_ripcache_blurb.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration10_browsinggeneral.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration11_browsingconnections.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration11_browsingmasks.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration12_browsingtimeouts.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration14_browsingrelay.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration15a_resourceallprinters_defineaccess.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration15b_resourceallprinters_defineaccess.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration15c_resourceallprinters_defineaccess.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration1_welcome.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration2_general.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration3_logging.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration4_directories.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration5_HTTP.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration6_encryption.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration7_miscellanious.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration8_networkgeneral.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration9_networkclients.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_resourceadminaccessmasks.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_resourceadminaddprinters.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_resourceadminaddprinters_defineaccess.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_resourceadminauthorization.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_securityoverview.png
+share/doc/kde/HTML/en/kdeprint/cupsserverconfiguration_securityoverview1.png
+share/doc/kde/HTML/en/kdeprint/hi32-action-wizard.png
+share/doc/kde/HTML/en/kdeprint/iconview-printerwindow.png
+share/doc/kde/HTML/en/kdeprint/index.cache.bz2
+share/doc/kde/HTML/en/kdeprint/index.docbook
+share/doc/kde/HTML/en/kdeprint/info-tab.png
+share/doc/kde/HTML/en/kdeprint/ipp-scan-result-1.png
+share/doc/kde/HTML/en/kdeprint/kcontrol-icon.png
+share/doc/kde/HTML/en/kdeprint/kcontrolcenter-printmanager-jobcontrol-2.png
+share/doc/kde/HTML/en/kdeprint/kcontrolcenter-printmanager-jobcontrol.png
+share/doc/kde/HTML/en/kdeprint/kcontrolcenter-printmanager-spartanicview.png
+share/doc/kde/HTML/en/kdeprint/kcontrolcenter-printmanager-toolbarplusinfoview.png
+share/doc/kde/HTML/en/kdeprint/kcontrolcenter-printsystem.png
+share/doc/kde/HTML/en/kdeprint/kcron_to_be_printed.png
+share/doc/kde/HTML/en/kdeprint/kdeprint-jobviewer.png
+share/doc/kde/HTML/en/kdeprint/kdeprint_printer.png
+share/doc/kde/HTML/en/kdeprint/kdeprint_printer_class.png
+share/doc/kde/HTML/en/kdeprint/kdeprint_printer_class_stopped.png
+share/doc/kde/HTML/en/kdeprint/kdeprint_printer_remote.png
+share/doc/kde/HTML/en/kdeprint/kdeprint_printer_stopped.png
+share/doc/kde/HTML/en/kdeprint/kprinter-as-netscape-printcommand.png
+share/doc/kde/HTML/en/kdeprint/kprinter-dialog.png
+share/doc/kde/HTML/en/kdeprint/kprinter-fonts.png
+share/doc/kde/HTML/en/kdeprint/kprinter-kivio.png
+share/doc/kde/HTML/en/kdeprint/kprinter.png
+share/doc/kde/HTML/en/kdeprint/kprinter_called_from_run_command.png
+share/doc/kde/HTML/en/kdeprint/kprinter_with_kcron_developer_special.png
+share/doc/kde/HTML/en/kdeprint/kprinter_with_kcron_developer_special_nodeco.png
+share/doc/kde/HTML/en/kdeprint/printericons-meanings.png
+share/doc/kde/HTML/en/kdeprint/ps-boxes.png
+share/doc/kde/HTML/en/kdeprint/selecting-printingsystem.png
+share/doc/kde/HTML/en/kdeprint/smb-scan-result-2.png
+share/doc/kde/HTML/en/kdeprint/smb-scan-result-3.png
+share/doc/kde/HTML/en/kdeprint/steinbruch.png
+share/doc/kde/HTML/en/kdeprint/steinbruch_scaled.png
+share/doc/kde/HTML/en/kdeprint/taskbar-icons.png
+share/doc/kde/HTML/en/kdeprint/test_size_withdecoration.png
+share/doc/kde/HTML/en/kdeprint/test_size_without_decoration.png
+share/doc/kde/HTML/en/kdeprint/xpp-fonts.png
 share/doc/kde/HTML/en/kdesu/common
-share/doc/kde/HTML/en/kdesu/compiling.html
-share/doc/kde/HTML/en/kdesu/configuration.html
+share/doc/kde/HTML/en/kdesu/index.cache.bz2
 share/doc/kde/HTML/en/kdesu/index.docbook
-share/doc/kde/HTML/en/kdesu/index.html
-share/doc/kde/HTML/en/kdesu/installation.html
-share/doc/kde/HTML/en/kdesu/interface-to-su.html
-share/doc/kde/HTML/en/kdesu/internals.html
-share/doc/kde/HTML/en/kdesu/introduction.html
-share/doc/kde/HTML/en/kdesu/password-checking.html
-share/doc/kde/HTML/en/kdesu/sec-password-keeping.html
-share/doc/kde/HTML/en/kdesu/using-kdesu.html
-share/doc/kde/HTML/en/kdm/.anchors
-share/doc/kde/HTML/en/kdm/Daemon.README
-share/doc/kde/HTML/en/kdm/building-and-installing-kdm.html
 share/doc/kde/HTML/en/kdm/common
-share/doc/kde/HTML/en/kdm/configuring-kdm.html
-share/doc/kde/HTML/en/kdm/configuring-your-system-for-kdm.html
-share/doc/kde/HTML/en/kdm/credits.html
-share/doc/kde/HTML/en/kdm/different-window-managers-with-kdm.html
+share/doc/kde/HTML/en/kdm/index.cache.bz2
 share/doc/kde/HTML/en/kdm/index.docbook
-share/doc/kde/HTML/en/kdm/index.html
-share/doc/kde/HTML/en/kdm/introduction.html
-share/doc/kde/HTML/en/kdm/kdmdesktop.html
-share/doc/kde/HTML/en/kdm/lilo.html
-share/doc/kde/HTML/en/kdm/locale.html
-share/doc/kde/HTML/en/kdm/other-information.html
-share/doc/kde/HTML/en/khelpcenter/.anchors
 share/doc/kde/HTML/en/khelpcenter/background.png
 share/doc/kde/HTML/en/khelpcenter/bgtable.png
 share/doc/kde/HTML/en/khelpcenter/common
-share/doc/kde/HTML/en/khelpcenter/contact-developers.html
-share/doc/kde/HTML/en/khelpcenter/contact-more-information.html
-share/doc/kde/HTML/en/khelpcenter/contact-official.html
-share/doc/kde/HTML/en/khelpcenter/contact-the-kde-team.html
 share/doc/kde/HTML/en/khelpcenter/contact.docbook
-share/doc/kde/HTML/en/khelpcenter/credits.html
-share/doc/kde/HTML/en/khelpcenter/faq/.anchors
 share/doc/kde/HTML/en/khelpcenter/faq/TODO
-share/doc/kde/HTML/en/khelpcenter/faq/about.html
-share/doc/kde/HTML/en/khelpcenter/faq/applications.html
+share/doc/kde/HTML/en/khelpcenter/faq/about.docbook
 share/doc/kde/HTML/en/khelpcenter/faq/common
-share/doc/kde/HTML/en/khelpcenter/faq/configure.html
-share/doc/kde/HTML/en/khelpcenter/faq/contribute.html
-share/doc/kde/HTML/en/khelpcenter/faq/credits.html
-share/doc/kde/HTML/en/khelpcenter/faq/desktop.html
-share/doc/kde/HTML/en/khelpcenter/faq/filemanager.html
-share/doc/kde/HTML/en/khelpcenter/faq/getting-kde.html
+share/doc/kde/HTML/en/khelpcenter/faq/configkde.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/contrib.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/desktop.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/filemng.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/getkde.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/index.cache.bz2
 share/doc/kde/HTML/en/khelpcenter/faq/index.docbook
-share/doc/kde/HTML/en/khelpcenter/faq/index.html
-share/doc/kde/HTML/en/khelpcenter/faq/install.html
-share/doc/kde/HTML/en/khelpcenter/faq/introduction.html
-share/doc/kde/HTML/en/khelpcenter/faq/misc.html
-share/doc/kde/HTML/en/khelpcenter/faq/more-info.html
-share/doc/kde/HTML/en/khelpcenter/faq/non-kde-apps.html
-share/doc/kde/HTML/en/khelpcenter/faq/not-kde.html
-share/doc/kde/HTML/en/khelpcenter/faq/panel.html
-share/doc/kde/HTML/en/khelpcenter/faq/tips.html
-share/doc/kde/HTML/en/khelpcenter/faq/windowmanager.html
-share/doc/kde/HTML/en/khelpcenter/help-system-user-manual.html
+share/doc/kde/HTML/en/khelpcenter/faq/index.docbook.old
+share/doc/kde/HTML/en/khelpcenter/faq/install.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/intro.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/kdeapps.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/misc.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/moreinfo.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/nonkdeapps.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/notrelated.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/panel.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/tips.docbook
+share/doc/kde/HTML/en/khelpcenter/faq/winmng.docbook
+share/doc/kde/HTML/en/khelpcenter/glossary/common
+share/doc/kde/HTML/en/khelpcenter/glossary/index.cache.bz2
+share/doc/kde/HTML/en/khelpcenter/glossary/index.docbook
 share/doc/kde/HTML/en/khelpcenter/help.docbook
+share/doc/kde/HTML/en/khelpcenter/index.cache.bz2
 share/doc/kde/HTML/en/khelpcenter/index.docbook
-share/doc/kde/HTML/en/khelpcenter/index.html
-share/doc/kde/HTML/en/khelpcenter/interface-basics.html
-share/doc/kde/HTML/en/khelpcenter/invoking-help.html
 share/doc/kde/HTML/en/khelpcenter/kdelogo2.png
 share/doc/kde/HTML/en/khelpcenter/khelpcenter.png
 share/doc/kde/HTML/en/khelpcenter/konq.css
 share/doc/kde/HTML/en/khelpcenter/lines.png
 share/doc/kde/HTML/en/khelpcenter/lines2.png
 share/doc/kde/HTML/en/khelpcenter/links.docbook
-share/doc/kde/HTML/en/khelpcenter/main.html
-share/doc/kde/HTML/en/khelpcenter/no-html.html
 share/doc/kde/HTML/en/khelpcenter/pointers.png
-share/doc/kde/HTML/en/khelpcenter/quickstart/.anchors
-share/doc/kde/HTML/en/khelpcenter/quickstart/advanced-topics.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/an-overview-of-kde.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/archives-and-networks.html
 share/doc/kde/HTML/en/khelpcenter/quickstart/common
-share/doc/kde/HTML/en/khelpcenter/quickstart/configuration-modules.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/configure.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/credits.html
+share/doc/kde/HTML/en/khelpcenter/quickstart/index.cache.bz2
 share/doc/kde/HTML/en/khelpcenter/quickstart/index.docbook
-share/doc/kde/HTML/en/khelpcenter/quickstart/index.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/introduction.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/kde-an-exciting-journey.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/launching-applications.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/logging-out.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/managing-your-files.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/ready-set-go.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/using-taskbar.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/using-templates.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/using-v-desktops.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/want-command-line-back.html
-share/doc/kde/HTML/en/khelpcenter/quickstart/working-with-windows.html
 share/doc/kde/HTML/en/khelpcenter/shadow1.png
 share/doc/kde/HTML/en/khelpcenter/support.docbook
-share/doc/kde/HTML/en/khelpcenter/supporting-kde-financial-support.html
-share/doc/kde/HTML/en/khelpcenter/supporting-kde-get-started.html
-share/doc/kde/HTML/en/khelpcenter/supporting-kde.html
-share/doc/kde/HTML/en/khelpcenter/userguide/.anchors
-share/doc/kde/HTML/en/khelpcenter/userguide/about-this-preview.html
-share/doc/kde/HTML/en/khelpcenter/userguide/adding-programs.html
-share/doc/kde/HTML/en/khelpcenter/userguide/all-about-your-desktop.html
-share/doc/kde/HTML/en/khelpcenter/userguide/background-of-kde.html
 share/doc/kde/HTML/en/khelpcenter/userguide/common
-share/doc/kde/HTML/en/khelpcenter/userguide/creating-new-files-on-your-desktop.html
-share/doc/kde/HTML/en/khelpcenter/userguide/desktop-components.html
-share/doc/kde/HTML/en/khelpcenter/userguide/docu-staff.html
-share/doc/kde/HTML/en/khelpcenter/userguide/entertainment-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/finding-your-lost-files.html
-share/doc/kde/HTML/en/khelpcenter/userguide/first-impressions.html
-share/doc/kde/HTML/en/khelpcenter/userguide/frequently-asked-questions.html
-share/doc/kde/HTML/en/khelpcenter/userguide/getting-kde.html
-share/doc/kde/HTML/en/khelpcenter/userguide/getting-started.html
-share/doc/kde/HTML/en/khelpcenter/userguide/graphical-applications.html
+share/doc/kde/HTML/en/khelpcenter/userguide/index.cache.bz2
 share/doc/kde/HTML/en/khelpcenter/userguide/index.docbook
-share/doc/kde/HTML/en/khelpcenter/userguide/index.html
-share/doc/kde/HTML/en/khelpcenter/userguide/installation.html
-share/doc/kde/HTML/en/khelpcenter/userguide/installing-debian.html
-share/doc/kde/HTML/en/khelpcenter/userguide/introduction.html
-share/doc/kde/HTML/en/khelpcenter/userguide/kdeadmin-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/kdebase-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/kdepim-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/legal-notices.html
-share/doc/kde/HTML/en/khelpcenter/userguide/legal-status.html
-share/doc/kde/HTML/en/khelpcenter/userguide/license.html
-share/doc/kde/HTML/en/khelpcenter/userguide/linux-installing-rpms.html
-share/doc/kde/HTML/en/khelpcenter/userguide/more-help.html
-share/doc/kde/HTML/en/khelpcenter/userguide/mouse-techniques.html
-share/doc/kde/HTML/en/khelpcenter/userguide/moving-files-with-drag-and-drop.html
-share/doc/kde/HTML/en/khelpcenter/userguide/multimedia-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/network-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/quitting-kde.html
-share/doc/kde/HTML/en/khelpcenter/userguide/shortcuts.html
-share/doc/kde/HTML/en/khelpcenter/userguide/source-distribution.html
-share/doc/kde/HTML/en/khelpcenter/userguide/sources-of-information-used-during-the-creat.html
-share/doc/kde/HTML/en/khelpcenter/userguide/suse-install.html
-share/doc/kde/HTML/en/khelpcenter/userguide/using-command-line-and-terminals.html
-share/doc/kde/HTML/en/khelpcenter/userguide/using-multiple-desktops.html
-share/doc/kde/HTML/en/khelpcenter/userguide/using-templates.html
-share/doc/kde/HTML/en/khelpcenter/userguide/using-the-trashcan.html
-share/doc/kde/HTML/en/khelpcenter/userguide/utility-applications.html
-share/doc/kde/HTML/en/khelpcenter/userguide/we-still-need-people.html
-share/doc/kde/HTML/en/khelpcenter/visualdict/.anchors
 share/doc/kde/HTML/en/khelpcenter/visualdict/common
-share/doc/kde/HTML/en/khelpcenter/visualdict/credits.html
+share/doc/kde/HTML/en/khelpcenter/visualdict/index.cache.bz2
 share/doc/kde/HTML/en/khelpcenter/visualdict/index.docbook
-share/doc/kde/HTML/en/khelpcenter/visualdict/index.html
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict1.png
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict10.png
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict11.png
@@ -817,77 +993,58 @@ share/doc/kde/HTML/en/khelpcenter/visualdict/pict6.png
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict7.png
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict8.png
 share/doc/kde/HTML/en/khelpcenter/visualdict/pict9.png
-share/doc/kde/HTML/en/khelpcenter/visualdict/visual-dictionary.html
-share/doc/kde/HTML/en/khelpcenter/web.html
-share/doc/kde/HTML/en/khelpcenter/welcome-to-kde.html
 share/doc/kde/HTML/en/khelpcenter/welcome.docbook
-share/doc/kde/HTML/en/khelpcenter/what-is-kde-the-desktop.html
-share/doc/kde/HTML/en/khelpcenter/what-is-kde-the-development-framework.html
-share/doc/kde/HTML/en/khelpcenter/what-is-kde-the-office-suite.html
-share/doc/kde/HTML/en/khelpcenter/what-is-kde.html
 share/doc/kde/HTML/en/khelpcenter/whatiskde.docbook
-share/doc/kde/HTML/en/kicker/.anchors
-share/doc/kde/HTML/en/kicker/applets.html
-share/doc/kde/HTML/en/kicker/application-group.html
-share/doc/kde/HTML/en/kicker/basics.html
-share/doc/kde/HTML/en/kicker/browsers.html
-share/doc/kde/HTML/en/kicker/child-panel-extension.html
-share/doc/kde/HTML/en/kicker/clock-applet.html
-share/doc/kde/HTML/en/kicker/commands.html
+share/doc/kde/HTML/en/kicker/bookmarks_icon.png
 share/doc/kde/HTML/en/kicker/common
-share/doc/kde/HTML/en/kicker/compilation.html
-share/doc/kde/HTML/en/kicker/configuration.html
-share/doc/kde/HTML/en/kicker/configuring-apps.html
-share/doc/kde/HTML/en/kicker/configuring.html
-share/doc/kde/HTML/en/kicker/credits.html
-share/doc/kde/HTML/en/kicker/dock-application-bar-extension.html
-share/doc/kde/HTML/en/kicker/extensions.html
-share/doc/kde/HTML/en/kicker/faq.html
+share/doc/kde/HTML/en/kicker/desktop_icon.png
+share/doc/kde/HTML/en/kicker/index.cache.bz2
 share/doc/kde/HTML/en/kicker/index.docbook
-share/doc/kde/HTML/en/kicker/index.html
-share/doc/kde/HTML/en/kicker/installation.html
-share/doc/kde/HTML/en/kicker/introduction.html
-share/doc/kde/HTML/en/kicker/k-menu.html
 share/doc/kde/HTML/en/kicker/k_menu_icon.png
-share/doc/kde/HTML/en/kicker/kasbar-extension.html
-share/doc/kde/HTML/en/kicker/kfind-advanced.html
-share/doc/kde/HTML/en/kicker/kfind-date-range.html
-share/doc/kde/HTML/en/kicker/kfind.html
-share/doc/kde/HTML/en/kicker/launcher-applet.html
-share/doc/kde/HTML/en/kicker/most-recently-group.html
-share/doc/kde/HTML/en/kicker/naughty-applet.html
-share/doc/kde/HTML/en/kicker/pager-applet.html
-share/doc/kde/HTML/en/kicker/panel-applets.html
-share/doc/kde/HTML/en/kicker/panel-buttons.html
-share/doc/kde/HTML/en/kicker/panel-looknfeel.html
-share/doc/kde/HTML/en/kicker/panel-menus.html
-share/doc/kde/HTML/en/kicker/requirements.html
-share/doc/kde/HTML/en/kicker/run-applet.html
-share/doc/kde/HTML/en/kicker/run-command.html
+share/doc/kde/HTML/en/kicker/recent_docs_icon.png
 share/doc/kde/HTML/en/kicker/screenshot_left.png
 share/doc/kde/HTML/en/kicker/screenshot_right.png
-share/doc/kde/HTML/en/kicker/systemtray-applet.html
-share/doc/kde/HTML/en/kicker/using-kicker.html
+share/doc/kde/HTML/en/kicker/taskbar_group.png
+share/doc/kde/HTML/en/kicker/terminals_icon.png
 share/doc/kde/HTML/en/kicker/windowlist_icon.png
-share/doc/kde/HTML/en/klipper/.anchors
-share/doc/kde/HTML/en/klipper/actions.html
+share/doc/kde/HTML/en/kioslave/audiocd.docbook
+share/doc/kde/HTML/en/kioslave/bzip.docbook
+share/doc/kde/HTML/en/kioslave/bzip2.docbook
+share/doc/kde/HTML/en/kioslave/common
+share/doc/kde/HTML/en/kioslave/file.docbook
+share/doc/kde/HTML/en/kioslave/finger.docbook
+share/doc/kde/HTML/en/kioslave/floppy.docbook
+share/doc/kde/HTML/en/kioslave/ftp.docbook
+share/doc/kde/HTML/en/kioslave/gopher.docbook
+share/doc/kde/HTML/en/kioslave/gzip.docbook
+share/doc/kde/HTML/en/kioslave/help.docbook
+share/doc/kde/HTML/en/kioslave/http.docbook
+share/doc/kde/HTML/en/kioslave/https.docbook
+share/doc/kde/HTML/en/kioslave/imap.docbook
+share/doc/kde/HTML/en/kioslave/imaps.docbook
+share/doc/kde/HTML/en/kioslave/index.cache.bz2
+share/doc/kde/HTML/en/kioslave/index.docbook
+share/doc/kde/HTML/en/kioslave/info.docbook
+share/doc/kde/HTML/en/kioslave/lan.docbook
+share/doc/kde/HTML/en/kioslave/ldap.docbook
+share/doc/kde/HTML/en/kioslave/mailto.docbook
+share/doc/kde/HTML/en/kioslave/man.docbook
+share/doc/kde/HTML/en/kioslave/news.docbook
+share/doc/kde/HTML/en/kioslave/nfs.docbook
+share/doc/kde/HTML/en/kioslave/nntp.docbook
+share/doc/kde/HTML/en/kioslave/pop3.docbook
+share/doc/kde/HTML/en/kioslave/pop3s.docbook
+share/doc/kde/HTML/en/kioslave/rlan.docbook
+share/doc/kde/HTML/en/kioslave/rlogin.docbook
+share/doc/kde/HTML/en/kioslave/smb.docbook
+share/doc/kde/HTML/en/kioslave/tar.docbook
+share/doc/kde/HTML/en/kioslave/telnet.docbook
+share/doc/kde/HTML/en/kioslave/thumbnail.docbook
 share/doc/kde/HTML/en/klipper/common
-share/doc/kde/HTML/en/klipper/compilation.html
-share/doc/kde/HTML/en/klipper/configuration.html
-share/doc/kde/HTML/en/klipper/credits.html
+share/doc/kde/HTML/en/klipper/index.cache.bz2
 share/doc/kde/HTML/en/klipper/index.docbook
-share/doc/kde/HTML/en/klipper/index.html
-share/doc/kde/HTML/en/klipper/installation.html
-share/doc/kde/HTML/en/klipper/introduction.html
-share/doc/kde/HTML/en/klipper/requirements.html
 share/doc/kde/HTML/en/klipper/screenshot.png
-share/doc/kde/HTML/en/klipper/using-klipper.html
-share/doc/kde/HTML/en/kmenuedit/.anchors
 share/doc/kde/HTML/en/kmenuedit/common
-share/doc/kde/HTML/en/kmenuedit/compilation.html
-share/doc/kde/HTML/en/kmenuedit/credits.html
-share/doc/kde/HTML/en/kmenuedit/details-advanced.html
-share/doc/kde/HTML/en/kmenuedit/glossary.html
 share/doc/kde/HTML/en/kmenuedit/i_copy.png
 share/doc/kde/HTML/en/kmenuedit/i_cut.png
 share/doc/kde/HTML/en/kmenuedit/i_delete.png
@@ -897,126 +1054,39 @@ share/doc/kde/HTML/en/kmenuedit/i_new_submenu.png
 share/doc/kde/HTML/en/kmenuedit/i_paste.png
 share/doc/kde/HTML/en/kmenuedit/icon_sets.png
 share/doc/kde/HTML/en/kmenuedit/icons.png
+share/doc/kde/HTML/en/kmenuedit/index.cache.bz2
 share/doc/kde/HTML/en/kmenuedit/index.docbook
-share/doc/kde/HTML/en/kmenuedit/index.html
-share/doc/kde/HTML/en/kmenuedit/installation.html
-share/doc/kde/HTML/en/kmenuedit/introduction.html
-share/doc/kde/HTML/en/kmenuedit/menu-reference.html
-share/doc/kde/HTML/en/kmenuedit/using-kmenuedit.html
-share/doc/kde/HTML/en/konqueror/.anchors
-share/doc/kde/HTML/en/konqueror/basics.html
-share/doc/kde/HTML/en/konqueror/bookmarks.html
-share/doc/kde/HTML/en/konqueror/browser.html
-share/doc/kde/HTML/en/konqueror/bubble.html
 share/doc/kde/HTML/en/konqueror/cmndline.png
-share/doc/kde/HTML/en/konqueror/commandline.html
-share/doc/kde/HTML/en/konqueror/commands.html
 share/doc/kde/HTML/en/konqueror/common
-share/doc/kde/HTML/en/konqueror/config.html
-share/doc/kde/HTML/en/konqueror/configfm.html
-share/doc/kde/HTML/en/konqueror/configure-browser.html
-share/doc/kde/HTML/en/konqueror/configure-enhanced-browsing.html
-share/doc/kde/HTML/en/konqueror/configure-proxy.html
-share/doc/kde/HTML/en/konqueror/configure-user-agent.html
-share/doc/kde/HTML/en/konqueror/cookies.html
-share/doc/kde/HTML/en/konqueror/credits.html
-share/doc/kde/HTML/en/konqueror/crypto.html
-share/doc/kde/HTML/en/konqueror/deleting.html
 share/doc/kde/HTML/en/konqueror/dirtree.png
 share/doc/kde/HTML/en/konqueror/dragdrop.png
-share/doc/kde/HTML/en/konqueror/faq.html
-share/doc/kde/HTML/en/konqueror/file-associations.html
-share/doc/kde/HTML/en/konqueror/filemanager.html
 share/doc/kde/HTML/en/konqueror/filetype1.png
 share/doc/kde/HTML/en/konqueror/filetype3.png
 share/doc/kde/HTML/en/konqueror/filetype4.png
-share/doc/kde/HTML/en/konqueror/ftp.html
+share/doc/kde/HTML/en/konqueror/index.cache.bz2
 share/doc/kde/HTML/en/konqueror/index.docbook
-share/doc/kde/HTML/en/konqueror/index.html
-share/doc/kde/HTML/en/konqueror/installation.html
 share/doc/kde/HTML/en/konqueror/konqorg.png
-share/doc/kde/HTML/en/konqueror/lmb-mmb.html
-share/doc/kde/HTML/en/konqueror/making.html
-share/doc/kde/HTML/en/konqueror/man-info.html
-share/doc/kde/HTML/en/konqueror/moving.html
-share/doc/kde/HTML/en/konqueror/multiple.html
-share/doc/kde/HTML/en/konqueror/newname.html
-share/doc/kde/HTML/en/konqueror/parts.html
 share/doc/kde/HTML/en/konqueror/parts.png
-share/doc/kde/HTML/en/konqueror/plugin.html
-share/doc/kde/HTML/en/konqueror/rmb-menus.html
 share/doc/kde/HTML/en/konqueror/samba.png
-share/doc/kde/HTML/en/konqueror/save-print-web.html
-share/doc/kde/HTML/en/konqueror/save-settings.html
-share/doc/kde/HTML/en/konqueror/surf.html
-share/doc/kde/HTML/en/konsole/.anchors
-share/doc/kde/HTML/en/konsole/command-line-options.html
 share/doc/kde/HTML/en/konsole/common
-share/doc/kde/HTML/en/konsole/credits.html
-share/doc/kde/HTML/en/konsole/history-option.html
+share/doc/kde/HTML/en/konsole/index.cache.bz2
 share/doc/kde/HTML/en/konsole/index.docbook
-share/doc/kde/HTML/en/konsole/index.html
-share/doc/kde/HTML/en/konsole/installation.html
-share/doc/kde/HTML/en/konsole/introduction.html
 share/doc/kde/HTML/en/konsole/konsole.png
 share/doc/kde/HTML/en/konsole/konsole1.gif
 share/doc/kde/HTML/en/konsole/konsole2.gif
-share/doc/kde/HTML/en/konsole/menubar.html
-share/doc/kde/HTML/en/konsole/mousebuttons.html
 share/doc/kde/HTML/en/konsole/techref.html
-share/doc/kde/HTML/en/konsole/toolbar.html
-share/doc/kde/HTML/en/konsole/use-of-konsole.html
 share/doc/kde/HTML/en/konsole/vt100.gif
-share/doc/kde/HTML/en/kpager/.anchors
-share/doc/kde/HTML/en/kpager/commands.html
 share/doc/kde/HTML/en/kpager/common
-share/doc/kde/HTML/en/kpager/compilation.html
-share/doc/kde/HTML/en/kpager/credits.html
-share/doc/kde/HTML/en/kpager/faq.html
+share/doc/kde/HTML/en/kpager/index.cache.bz2
 share/doc/kde/HTML/en/kpager/index.docbook
-share/doc/kde/HTML/en/kpager/index.html
-share/doc/kde/HTML/en/kpager/installation.html
-share/doc/kde/HTML/en/kpager/introduction.html
-share/doc/kde/HTML/en/kpager/kapp-settings.html
-share/doc/kde/HTML/en/kpager/requirements.html
 share/doc/kde/HTML/en/kpager/screenshot.png
 share/doc/kde/HTML/en/kpager/settings.png
-share/doc/kde/HTML/en/kpager/using-kapp.html
-share/doc/kde/HTML/en/ksysguard/.anchors
 share/doc/kde/HTML/en/ksysguard/common
-share/doc/kde/HTML/en/ksysguard/compilationandinstallation.html
-share/doc/kde/HTML/en/ksysguard/credits-and-licenses.html
+share/doc/kde/HTML/en/ksysguard/index.cache.bz2
 share/doc/kde/HTML/en/ksysguard/index.docbook
-share/doc/kde/HTML/en/ksysguard/index.html
-share/doc/kde/HTML/en/ksysguard/installation.html
-share/doc/kde/HTML/en/ksysguard/introduction.html
-share/doc/kde/HTML/en/ksysguard/requirements.html
-share/doc/kde/HTML/en/ksysguard/the-sensor-browser.html
-share/doc/kde/HTML/en/ksysguard/the-workspace.html
-share/doc/kde/HTML/en/ksysguard/usingtheksysguard.html
-share/doc/kde/HTML/en/kwrite/.anchors
-share/doc/kde/HTML/en/kwrite/command-line-options.html
 share/doc/kde/HTML/en/kwrite/common
-share/doc/kde/HTML/en/kwrite/credits.html
-share/doc/kde/HTML/en/kwrite/edit.html
-share/doc/kde/HTML/en/kwrite/go.html
-share/doc/kde/HTML/en/kwrite/help.html
+share/doc/kde/HTML/en/kwrite/index.cache.bz2
 share/doc/kde/HTML/en/kwrite/index.docbook
-share/doc/kde/HTML/en/kwrite/index.html
-share/doc/kde/HTML/en/kwrite/installation.html
-share/doc/kde/HTML/en/kwrite/introduction.html
-share/doc/kde/HTML/en/kwrite/keybindings.html
-share/doc/kde/HTML/en/kwrite/on-screen-fundamentals.html
-share/doc/kde/HTML/en/kwrite/pref-dialog.html
-share/doc/kde/HTML/en/kwrite/pref-edit.html
-share/doc/kde/HTML/en/kwrite/pref-highlighting.html
-share/doc/kde/HTML/en/kwrite/pref-indent.html
-share/doc/kde/HTML/en/kwrite/pref-select.html
-share/doc/kde/HTML/en/kwrite/prefspellchecker.html
-share/doc/kde/HTML/en/kwrite/settings.html
-share/doc/kde/HTML/en/kwrite/the-menu-entries.html
-share/doc/kde/HTML/en/kwrite/tools.html
-share/doc/kde/HTML/en/no-html.html
 share/fonts/9x15.pcf.gz
 share/fonts/console8x16.pcf.gz
 share/fonts/console8x8.pcf.gz
@@ -1027,10 +1097,86 @@ share/kde/apps/drkonqi/debuggers/gdbrc
 share/kde/apps/drkonqi/pics/konqi.png
 share/kde/apps/drkonqi/presets/developerrc
 share/kde/apps/drkonqi/presets/enduserrc
+share/kde/apps/kaddressbook/kaddressbookui.rc
+share/kde/apps/kaddressbook/pics/abentry.xpm
+share/kde/apps/kaddressbook/pics/delete.xpm
+share/kde/apps/kaddressbook/pics/down.xpm
+share/kde/apps/kaddressbook/pics/filemail.xpm
+share/kde/apps/kaddressbook/pics/find.xpm
+share/kde/apps/kaddressbook/pics/group.xpm
+share/kde/apps/kaddressbook/pics/page.xpm
+share/kde/apps/kaddressbook/pics/up.xpm
+share/kde/apps/kate/icons/hicolor/16x16/actions/curfiledir.png
+share/kde/apps/kate/icons/hicolor/16x16/actions/highlighting.png
+share/kde/apps/kate/icons/hicolor/16x16/actions/modified.png
+share/kde/apps/kate/icons/hicolor/16x16/actions/null.png
+share/kde/apps/kate/icons/hicolor/16x16/actions/save_all.png
+share/kde/apps/kate/icons/hicolor/22x22/actions/save_all.png
+share/kde/apps/kate/icons/hicolor/32x32/actions/highlighting.png
+share/kde/apps/kate/icons/hicolor/32x32/actions/indent.png
+share/kde/apps/kate/icons/hicolor/32x32/actions/unindent.png
+share/kde/apps/kate/icons/hicolor/48x48/actions/indent.png
+share/kde/apps/kate/icons/hicolor/48x48/actions/unindent.png
+share/kde/apps/kate/icons/locolor/16x16/actions/curfiledir.png
+share/kde/apps/kate/icons/locolor/16x16/actions/indent.png
+share/kde/apps/kate/icons/locolor/16x16/actions/modified.png
+share/kde/apps/kate/icons/locolor/16x16/actions/null.png
+share/kde/apps/kate/icons/locolor/16x16/actions/save_all.png
+share/kde/apps/kate/icons/locolor/16x16/actions/unindent.png
+share/kde/apps/kate/icons/locolor/22x22/actions/indent.png
+share/kde/apps/kate/icons/locolor/22x22/actions/save_all.png
+share/kde/apps/kate/icons/locolor/22x22/actions/unindent.png
+share/kde/apps/kate/katepartbrowserui.rc
+share/kde/apps/kate/katepartui.rc
+share/kde/apps/kate/kateui.rc
+share/kde/apps/kate/pics/fileselector.png
+share/kde/apps/kate/pics/indicator_empty.png
+share/kde/apps/kate/pics/indicator_viewactive.png
+share/kde/apps/kate/pics/openfiles.png
+share/kde/apps/kate/syntax/ada.xml
+share/kde/apps/kate/syntax/bash.xml
+share/kde/apps/kate/syntax/c.xml
+share/kde/apps/kate/syntax/changelog.xml
+share/kde/apps/kate/syntax/cpp.xml
+share/kde/apps/kate/syntax/css.xml
+share/kde/apps/kate/syntax/desktop.xml
+share/kde/apps/kate/syntax/diff.xml
+share/kde/apps/kate/syntax/html.xml
+share/kde/apps/kate/syntax/java.xml
+share/kde/apps/kate/syntax/kbasic.xml
+share/kde/apps/kate/syntax/language.dtd
+share/kde/apps/kate/syntax/latex.xml
+share/kde/apps/kate/syntax/objectivec.xml
+share/kde/apps/kate/syntax/perl.xml
+share/kde/apps/kate/syntax/php.xml
+share/kde/apps/kate/syntax/postscript.xml
+share/kde/apps/kate/syntax/rpmspec.xml
+share/kde/apps/kate/syntax/ruby.xml
+share/kde/apps/kate/syntax/sql.xml
+share/kde/apps/kate/syntax/syntax.template
+share/kde/apps/kate/syntax/vhdl.xml
+share/kde/apps/kate/syntax/xml.xml
 share/kde/apps/kbookmark/directory_bookmarkbar.desktop
+share/kde/apps/kcmcss/template.css
 share/kde/apps/kcminput/cursor_large.pcf.gz
-share/kde/apps/kcmkeys/standard/Unix.kksrc
+share/kde/apps/kcminput/pics/mouse_lh.png
+share/kde/apps/kcminput/pics/mouse_rh.png
+share/kde/apps/kcmkeys/global/global-kde3.kksrc
+share/kde/apps/kcmkeys/global/global-kde4.kksrc
+share/kde/apps/kcmkeys/global/global-mac3.kksrc
+share/kde/apps/kcmkeys/global/global-unix3.kksrc
+share/kde/apps/kcmkeys/global/global-win3.kksrc
+share/kde/apps/kcmkeys/global/global-win4.kksrc
+share/kde/apps/kcmkeys/standard/app-kde3.kksrc
+share/kde/apps/kcmkeys/standard/app-kde4.kksrc
+share/kde/apps/kcmkeys/standard/app-mac3.kksrc
+share/kde/apps/kcmkeys/standard/app-unix3.kksrc
+share/kde/apps/kcmkeys/standard/app-win3.kksrc
 share/kde/apps/kcmlocale/pics/background.png
+share/kde/apps/kcmusb/usb.ids
+share/kde/apps/kconf_update/klipper-1-2.pl
+share/kde/apps/kconf_update/klipperrc.upd
+share/kde/apps/kconf_update/konsole.upd
 share/kde/apps/kcontrol/kcontrolui.rc
 share/kde/apps/kcontrol/pics/energybig.png
 share/kde/apps/kcontrol/pics/lo-energy.png
@@ -1044,6 +1190,10 @@ share/kde/apps/kcontrol/pics/part2.png
 share/kde/apps/kcontrol/pics/part3.png
 share/kde/apps/kcontrol/pics/play.png
 share/kde/apps/kdcop/kdcopui.rc
+share/kde/apps/kdeprintfax/anytops
+share/kde/apps/kdeprintfax/faxfilters
+share/kde/apps/kdeprintfax/icons/hicolor/16x16/actions/abentry.png
+share/kde/apps/kdeprintfax/kdeprintfaxui.rc
 share/kde/apps/kdesktop/DesktopLinks/Home.desktop
 share/kde/apps/kdesktop/directory.autostart
 share/kde/apps/kdesktop/directory.desktop
@@ -1077,8 +1227,10 @@ share/kde/apps/kdisplay/app-defaults/AAAAAAGeneral.ad
 share/kde/apps/kdisplay/app-defaults/AAAMotif.ad
 share/kde/apps/kdisplay/app-defaults/AAATk.ad
 share/kde/apps/kdisplay/app-defaults/AAAXaw.ad
+share/kde/apps/kdisplay/app-defaults/AcroRead.ad
 share/kde/apps/kdisplay/app-defaults/Editres.ad
 share/kde/apps/kdisplay/app-defaults/Emacs.ad
+share/kde/apps/kdisplay/app-defaults/GV.ad
 share/kde/apps/kdisplay/app-defaults/ML.ad
 share/kde/apps/kdisplay/app-defaults/Nedit.ad
 share/kde/apps/kdisplay/app-defaults/Netscape.ad
@@ -1089,6 +1241,7 @@ share/kde/apps/kdisplay/app-defaults/XOsview.ad
 share/kde/apps/kdisplay/app-defaults/XTerm.ad
 share/kde/apps/kdisplay/app-defaults/XV.ad
 share/kde/apps/kdisplay/app-defaults/Xawtv.ad
+share/kde/apps/kdisplay/app-defaults/Xdvi.ad
 share/kde/apps/kdisplay/app-defaults/Xpdf.ad
 share/kde/apps/kdisplay/color-schemes/AtlasGreen.kcsrc
 share/kde/apps/kdisplay/color-schemes/BeOS.kcsrc
@@ -1097,7 +1250,9 @@ share/kde/apps/kdisplay/color-schemes/CDE.kcsrc
 share/kde/apps/kdisplay/color-schemes/DarkBlue.kcsrc
 share/kde/apps/kdisplay/color-schemes/DesertRed.kcsrc
 share/kde/apps/kdisplay/color-schemes/DigitalCDE.kcsrc
+share/kde/apps/kdisplay/color-schemes/EveX.kcsrc
 share/kde/apps/kdisplay/color-schemes/KDEOne.kcsrc
+share/kde/apps/kdisplay/color-schemes/MediaPeach.kcsrc
 share/kde/apps/kdisplay/color-schemes/Next.kcsrc
 share/kde/apps/kdisplay/color-schemes/PaleGray.kcsrc
 share/kde/apps/kdisplay/color-schemes/PointReyesGreen.kcsrc
@@ -1105,6 +1260,7 @@ share/kde/apps/kdisplay/color-schemes/Pumpkin.kcsrc
 share/kde/apps/kdisplay/color-schemes/SolarisCDE.kcsrc
 share/kde/apps/kdisplay/color-schemes/Storm.kcsrc
 share/kde/apps/kdisplay/color-schemes/System.kcsrc
+share/kde/apps/kdisplay/color-schemes/Windows2000.kcsrc
 share/kde/apps/kdisplay/color-schemes/Windows95.kcsrc
 share/kde/apps/kdm/pics/kdeflower.png
 share/kde/apps/kdm/pics/kdelogo.png
@@ -1120,17 +1276,9 @@ share/kde/apps/kfind/icons/locolor/22x22/actions/info.png
 share/kde/apps/kfind/icons/locolor/22x22/actions/openfile.png
 share/kde/apps/kfind/icons/locolor/22x22/actions/save.png
 share/kde/apps/kfind/icons/locolor/22x22/actions/search.png
-share/kde/apps/khelpcenter/en/bad_words
-share/kde/apps/khelpcenter/en/long.html
-share/kde/apps/khelpcenter/en/nomatch.html
-share/kde/apps/khelpcenter/en/short.html
-share/kde/apps/khelpcenter/en/syntax.html
-share/kde/apps/khelpcenter/en/wrapper.html
-share/kde/apps/khelpcenter/icons/locolor/16x16/apps/helpbook_open.png
-share/kde/apps/khelpcenter/pics/checked.xpm
-share/kde/apps/khelpcenter/pics/star.png
-share/kde/apps/khelpcenter/pics/star_blank.png
-share/kde/apps/khelpcenter/pics/unchecked.xpm
+share/kde/apps/khelpcenter/glossary.html.in
+share/kde/apps/khelpcenter/intro.html.in
+share/kde/apps/khelpcenter/khelpcenterui.rc
 share/kde/apps/khelpcenter/plugins/Tutorials/.directory
 share/kde/apps/khelpcenter/plugins/Tutorials/quickstart.desktop
 share/kde/apps/khelpcenter/plugins/Tutorials/visualdict.desktop
@@ -1142,6 +1290,7 @@ share/kde/apps/kicker/applets/ksystemtrayapplet.desktop
 share/kde/apps/kicker/applets/ktaskbarapplet.desktop
 share/kde/apps/kicker/applets/naughtyapplet.desktop
 share/kde/apps/kicker/applets/quicklauncher.desktop
+share/kde/apps/kicker/default-apps
 share/kde/apps/kicker/extensions/childpanelextension.desktop
 share/kde/apps/kicker/extensions/dockbarextension.desktop
 share/kde/apps/kicker/extensions/kasbarextension.desktop
@@ -1263,6 +1412,8 @@ share/kde/apps/kio_finger/kio_finger.css
 share/kde/apps/kio_finger/kio_finger.pl
 share/kde/apps/kio_info/kde-info2html
 share/kde/apps/kio_info/kde-info2html.conf
+share/kde/apps/kioslave/smb.html
+share/kde/apps/kjobviewer/kjobviewerui.rc
 share/kde/apps/kmenuedit/icons/hicolor/22x22/actions/menu_new.png
 share/kde/apps/kmenuedit/icons/hicolor/32x32/actions/menu_new.png
 share/kde/apps/kmenuedit/icons/locolor/16x16/actions/menu_new.png
@@ -1274,6 +1425,28 @@ share/kde/apps/konqlistview/konq_detailedlistview.rc
 share/kde/apps/konqlistview/konq_textview.rc
 share/kde/apps/konqlistview/konq_treeview.rc
 share/kde/apps/konqlistview/kpartplugins/kshellcmdplugin.rc
+share/kde/apps/konqsidebartng/add/sidebar_classic_add.desktop
+share/kde/apps/konqsidebartng/add/virtualfolderadd.desktop
+share/kde/apps/konqsidebartng/dirtree/bookmarks_module.desktop
+share/kde/apps/konqsidebartng/dirtree/dirtree_module.desktop
+share/kde/apps/konqsidebartng/dirtree/history_module.desktop
+share/kde/apps/konqsidebartng/entries/.version
+share/kde/apps/konqsidebartng/entries/bookmarks.desktop
+share/kde/apps/konqsidebartng/entries/history.desktop
+share/kde/apps/konqsidebartng/entries/home.desktop
+share/kde/apps/konqsidebartng/entries/remote.desktop
+share/kde/apps/konqsidebartng/entries/root.desktop
+share/kde/apps/konqsidebartng/entries/services.desktop
+share/kde/apps/konqsidebartng/entries/sidebar_classic.desktop
+share/kde/apps/konqsidebartng/virtual_folders/remote/.directory
+share/kde/apps/konqsidebartng/virtual_folders/remote/ftp/.directory
+share/kde/apps/konqsidebartng/virtual_folders/remote/ftp/kde_ftp.desktop
+share/kde/apps/konqsidebartng/virtual_folders/remote/web/.directory
+share/kde/apps/konqsidebartng/virtual_folders/remote/web/apps_web.desktop
+share/kde/apps/konqsidebartng/virtual_folders/remote/web/dot_web.desktop
+share/kde/apps/konqsidebartng/virtual_folders/remote/web/kde_web.desktop
+share/kde/apps/konqsidebartng/virtual_folders/services/.directory
+share/kde/apps/konqsidebartng/virtual_folders/services/audiocd.desktop
 share/kde/apps/konqueror/about/back.png
 share/kde/apps/konqueror/about/background.png
 share/kde/apps/konqueror/about/bgtable.png
@@ -1283,6 +1456,7 @@ share/kde/apps/konqueror/about/intro.html
 share/kde/apps/konqueror/about/kdelogo2.png
 share/kde/apps/konqueror/about/konq.css
 share/kde/apps/konqueror/about/konqueror.png
+share/kde/apps/konqueror/about/lightning.png
 share/kde/apps/konqueror/about/lines.png
 share/kde/apps/konqueror/about/lines2.png
 share/kde/apps/konqueror/about/locationbar_erase.png
@@ -1302,34 +1476,19 @@ share/kde/apps/konqueror/dirtree/remote/.directory
 share/kde/apps/konqueror/dirtree/remote/ftp/.directory
 share/kde/apps/konqueror/dirtree/remote/ftp/kde_ftp.desktop
 share/kde/apps/konqueror/dirtree/remote/web/.directory
+share/kde/apps/konqueror/dirtree/remote/web/apps_web.desktop
+share/kde/apps/konqueror/dirtree/remote/web/dot_web.desktop
 share/kde/apps/konqueror/dirtree/remote/web/kde_web.desktop
 share/kde/apps/konqueror/dirtree/root.desktop
-share/kde/apps/konqueror/icons/hicolor/16x16/actions/remove_view.png
-share/kde/apps/konqueror/icons/hicolor/16x16/actions/view_bottom.png
-share/kde/apps/konqueror/icons/hicolor/16x16/actions/view_left_right.png
-share/kde/apps/konqueror/icons/hicolor/16x16/actions/view_right.png
-share/kde/apps/konqueror/icons/hicolor/16x16/actions/view_top_bottom.png
-share/kde/apps/konqueror/icons/hicolor/22x22/actions/remove_view.png
-share/kde/apps/konqueror/icons/hicolor/22x22/actions/view_bottom.png
-share/kde/apps/konqueror/icons/hicolor/22x22/actions/view_left_right.png
-share/kde/apps/konqueror/icons/hicolor/22x22/actions/view_right.png
-share/kde/apps/konqueror/icons/hicolor/22x22/actions/view_top_bottom.png
-share/kde/apps/konqueror/icons/hicolor/32x32/actions/remove_view.png
-share/kde/apps/konqueror/icons/hicolor/32x32/actions/view_bottom.png
-share/kde/apps/konqueror/icons/hicolor/32x32/actions/view_left_right.png
-share/kde/apps/konqueror/icons/hicolor/32x32/actions/view_right.png
-share/kde/apps/konqueror/icons/hicolor/32x32/actions/view_top_bottom.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde1.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde2.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde3.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde4.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde5.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/kde6.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/remove_view.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/view_bottom.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/view_left_right.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/view_right.png
-share/kde/apps/konqueror/icons/locolor/16x16/actions/view_top_bottom.png
+share/kde/apps/konqueror/dirtree/services/.directory
+share/kde/apps/konqueror/dirtree/services/audiocd.desktop
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/history_clear.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde1.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde2.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde3.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde4.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde5.png
+share/kde/apps/konqueror/icons/hicolor/16x16/actions/kde6.png
 share/kde/apps/konqueror/konqueror.rc
 share/kde/apps/konqueror/pics/indicator_anchor.png
 share/kde/apps/konqueror/pics/indicator_connect.png
@@ -1364,6 +1523,7 @@ share/kde/apps/konsole/README.KeyTab
 share/kde/apps/konsole/README.Schema
 share/kde/apps/konsole/Transparent.schema
 share/kde/apps/konsole/Transparent_MC.schema
+share/kde/apps/konsole/Transparent_darkbg.schema
 share/kde/apps/konsole/Transparent_lightbg.schema
 share/kde/apps/konsole/WhiteOnBlack.schema
 share/kde/apps/konsole/XTerm.schema
@@ -1378,13 +1538,18 @@ share/kde/apps/konsole/pics/colourness.png
 share/kde/apps/konsole/pics/contrast.png
 share/kde/apps/konsole/shell.desktop
 share/kde/apps/konsole/su.desktop
+share/kde/apps/konsole/sumc.desktop
 share/kde/apps/konsole/syscolor.schema
 share/kde/apps/konsole/vim.schema
 share/kde/apps/konsole/vt100.keytab
 share/kde/apps/konsole/vt420pc.keytab
 share/kde/apps/konsole/x11r5.keytab
-share/kde/apps/kscreensaver/kscience-small.gif
-share/kde/apps/kscreensaver/kscience.gif
+share/kde/apps/kpersonalizer/pics/step1.png
+share/kde/apps/kpersonalizer/pics/step2.png
+share/kde/apps/kpersonalizer/pics/step3.png
+share/kde/apps/kpersonalizer/pics/step4.png
+share/kde/apps/kpersonalizer/pics/step5.png
+share/kde/apps/kscreensaver/kscience.png
 share/kde/apps/ksplash/pics/locolor/splash_active_bar.png
 share/kde/apps/ksplash/pics/locolor/splash_bottom.png
 share/kde/apps/ksplash/pics/locolor/splash_inactive_bar.png
@@ -1396,56 +1561,19 @@ share/kde/apps/ksplash/pics/splash_top.png
 share/kde/apps/ksysguard/KSysGuardApplet.xml
 share/kde/apps/ksysguard/ProcessTable.sgrd
 share/kde/apps/ksysguard/SystemLoad.sgrd
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/X.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/artsd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/automount.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/bash.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/c++.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/cc.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/computer.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/console.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/csh.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/emacs.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/g++.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/gcc.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/gdb.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/httpd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/in.identd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/inetd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/init.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kcookiejar.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kdesktop.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kflushd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kicker.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kio_file.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/klauncher.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/ksh.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kswapd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/ksysguardd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/kupdate.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/login.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/lpd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/mingetty.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/mutt.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/nscd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/pine.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/portmap.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/sendmail.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/sh.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/ssh.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/startkde.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/startx.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/syslogd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/tcsh.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/unknown.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/xemacs.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/xinit.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/xntpd.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/xterm.png
-share/kde/apps/ksysguard/icons/locolor/16x16/apps/ypbind.png
 share/kde/apps/ksysguard/ksysguardui.rc
+share/kde/apps/ksysguard/pics/X.png
+share/kde/apps/ksysguard/pics/computer.png
+share/kde/apps/ksysguard/pics/daemon.png
+share/kde/apps/ksysguard/pics/kdeapp.png
+share/kde/apps/ksysguard/pics/kernel.png
+share/kde/apps/ksysguard/pics/ksysguardd.png
+share/kde/apps/ksysguard/pics/running.png
+share/kde/apps/ksysguard/pics/shell.png
+share/kde/apps/ksysguard/pics/tools.png
+share/kde/apps/ksysguard/pics/unknownapp.png
+share/kde/apps/ksysguard/pics/waiting.png
 share/kde/apps/kthememgr/Themes/Default.ktheme
-share/kde/apps/kthememgr/Themes/Eclipse.ktheme
 share/kde/apps/kthememgr/Themes/MGBreizh.ktheme
 share/kde/apps/kthememgr/Themes/Nostalgy.ktheme
 share/kde/apps/kthememgr/Themes/Template.themerc
@@ -1453,11 +1581,45 @@ share/kde/apps/kthememgr/Themes/Wood.ktheme
 share/kde/apps/kthememgr/theme.mappings
 share/kde/apps/kwin/b2.desktop
 share/kde/apps/kwin/eventsrc
-share/kde/apps/kwin/kde.desktop
+share/kde/apps/kwin/icewm-themes/closeA.xpm
+share/kde/apps/kwin/icewm-themes/closeI.xpm
+share/kde/apps/kwin/icewm-themes/default.theme
+share/kde/apps/kwin/icewm-themes/depthA.xpm
+share/kde/apps/kwin/icewm-themes/depthI.xpm
+share/kde/apps/kwin/icewm-themes/maximizeA.xpm
+share/kde/apps/kwin/icewm-themes/maximizeI.xpm
+share/kde/apps/kwin/icewm-themes/menuButtonA.xpm
+share/kde/apps/kwin/icewm-themes/menuButtonI.xpm
+share/kde/apps/kwin/icewm-themes/minimizeA.xpm
+share/kde/apps/kwin/icewm-themes/minimizeI.xpm
+share/kde/apps/kwin/icewm-themes/restoreA.xpm
+share/kde/apps/kwin/icewm-themes/restoreI.xpm
+share/kde/apps/kwin/icewm-themes/rolldownA.xpm
+share/kde/apps/kwin/icewm-themes/rolldownI.xpm
+share/kde/apps/kwin/icewm-themes/rollupA.xpm
+share/kde/apps/kwin/icewm-themes/rollupI.xpm
+share/kde/apps/kwin/icewm-themes/titleAB.xpm
+share/kde/apps/kwin/icewm-themes/titleAJ.xpm
+share/kde/apps/kwin/icewm-themes/titleAM.xpm
+share/kde/apps/kwin/icewm-themes/titleAP.xpm
+share/kde/apps/kwin/icewm-themes/titleAQ.xpm
+share/kde/apps/kwin/icewm-themes/titleAR.xpm
+share/kde/apps/kwin/icewm-themes/titleAS.xpm
+share/kde/apps/kwin/icewm-themes/titleAT.xpm
+share/kde/apps/kwin/icewm-themes/titleIB.xpm
+share/kde/apps/kwin/icewm-themes/titleIJ.xpm
+share/kde/apps/kwin/icewm-themes/titleIM.xpm
+share/kde/apps/kwin/icewm-themes/titleIP.xpm
+share/kde/apps/kwin/icewm-themes/titleIQ.xpm
+share/kde/apps/kwin/icewm-themes/titleIR.xpm
+share/kde/apps/kwin/icewm-themes/titleIS.xpm
+share/kde/apps/kwin/icewm-themes/titleIT.xpm
+share/kde/apps/kwin/icewm.desktop
 share/kde/apps/kwin/kde1.desktop
 share/kde/apps/kwin/kstep.desktop
 share/kde/apps/kwin/laptop.desktop
 share/kde/apps/kwin/modernsystem.desktop
+share/kde/apps/kwin/mwm.desktop
 share/kde/apps/kwin/pics/bluesun.png
 share/kde/apps/kwin/pics/close.png
 share/kde/apps/kwin/pics/fog-grey.png
@@ -1471,13 +1633,12 @@ share/kde/apps/kwin/pics/menu.png
 share/kde/apps/kwin/pics/pindown.png
 share/kde/apps/kwin/pics/pinup.png
 share/kde/apps/kwin/pics/unknown.png
+share/kde/apps/kwin/quartz.desktop
+share/kde/apps/kwin/redmond.desktop
 share/kde/apps/kwin/riscos.desktop
 share/kde/apps/kwin/system.desktop
-share/kde/apps/kwin/win2k.desktop
-share/kde/apps/kwrite/kwrite_browser.rc
-share/kde/apps/kwrite/kwrite_shell.rc
+share/kde/apps/kwin/web.desktop
 share/kde/apps/kwrite/kwriteui.rc
-share/kde/apps/kwrite/syntax.xml
 share/kde/apps/naughtyapplet/pics/naughty-happy.png
 share/kde/apps/naughtyapplet/pics/naughty-sad.png
 share/kde/config/antrc
@@ -1503,8 +1664,10 @@ share/kde/config/imsmaprc
 share/kde/config/interferencerc
 share/kde/config/kdesktop_custom_menu1
 share/kde/config/kdesktop_custom_menu2
-share/kde/config/kdmrc
+share/kde/config/kdm/README
+share/kde/config/kdm/kdmrc
 share/kde/config/klipperrc
+share/kde/config/konqsidebartng.rc
 share/kde/config/konsolerc
 share/kde/config/kshorturifilterrc
 share/kde/config/kumpparc
@@ -1514,41 +1677,103 @@ share/kde/config/lissierc
 share/kde/config/penroserc
 share/kde/config/rocksrc
 share/kde/config/sliprc
-share/kde/icons/Daemon.png
+share/kde/icons/hicolor/16x16/actions/view_choose.png
+share/kde/icons/hicolor/16x16/actions/view_detailed.png
+share/kde/icons/hicolor/16x16/actions/view_icon.png
+share/kde/icons/hicolor/16x16/actions/view_multicolumn.png
+share/kde/icons/hicolor/16x16/actions/view_text.png
+share/kde/icons/hicolor/16x16/actions/view_tree.png
 share/kde/icons/hicolor/16x16/apps/access.png
+share/kde/icons/hicolor/16x16/apps/acroread.png
+share/kde/icons/hicolor/16x16/apps/agent.png
+share/kde/icons/hicolor/16x16/apps/alevt.png
+share/kde/icons/hicolor/16x16/apps/applixware.png
+share/kde/icons/hicolor/16x16/apps/arts.png
 share/kde/icons/hicolor/16x16/apps/background.png
 share/kde/icons/hicolor/16x16/apps/bell.png
+share/kde/icons/hicolor/16x16/apps/blender.png
+share/kde/icons/hicolor/16x16/apps/clock.png
+share/kde/icons/hicolor/16x16/apps/colors.png
 share/kde/icons/hicolor/16x16/apps/cookie.png
+share/kde/icons/hicolor/16x16/apps/date.png
+share/kde/icons/hicolor/16x16/apps/designer.png
+share/kde/icons/hicolor/16x16/apps/dlgedit.png
+share/kde/icons/hicolor/16x16/apps/emacs.png
 share/kde/icons/hicolor/16x16/apps/email.png
 share/kde/icons/hicolor/16x16/apps/energy.png
+share/kde/icons/hicolor/16x16/apps/energy_star.png
 share/kde/icons/hicolor/16x16/apps/enhanced_browsing.png
+share/kde/icons/hicolor/16x16/apps/filetypes.png
+share/kde/icons/hicolor/16x16/apps/fonts.png
+share/kde/icons/hicolor/16x16/apps/gimp.png
 share/kde/icons/hicolor/16x16/apps/go.png
+share/kde/icons/hicolor/16x16/apps/gv.png
+share/kde/icons/hicolor/16x16/apps/gvim.png
+share/kde/icons/hicolor/16x16/apps/help_index.png
 share/kde/icons/hicolor/16x16/apps/hwinfo.png
+share/kde/icons/hicolor/16x16/apps/icons.png
+share/kde/icons/hicolor/16x16/apps/iconthemes.png
 share/kde/icons/hicolor/16x16/apps/input_devices_settings.png
+share/kde/icons/hicolor/16x16/apps/kaddressbook.png
 share/kde/icons/hicolor/16x16/apps/kappfinder.png
+share/kde/icons/hicolor/16x16/apps/kate.png
+share/kde/icons/hicolor/16x16/apps/kcmdevices.png
+share/kde/icons/hicolor/16x16/apps/kcmkicker.png
 share/kde/icons/hicolor/16x16/apps/kcmkwm.png
+share/kde/icons/hicolor/16x16/apps/kcmmemory.png
+share/kde/icons/hicolor/16x16/apps/kcmmidi.png
+share/kde/icons/hicolor/16x16/apps/kcmpartitions.png
+share/kde/icons/hicolor/16x16/apps/kcmpci.png
+share/kde/icons/hicolor/16x16/apps/kcmprocessor.png
+share/kde/icons/hicolor/16x16/apps/kcmscsi.png
+share/kde/icons/hicolor/16x16/apps/kcmsound.png
 share/kde/icons/hicolor/16x16/apps/kcmsystem.png
+share/kde/icons/hicolor/16x16/apps/kcmx.png
 share/kde/icons/hicolor/16x16/apps/kcontrol.png
+share/kde/icons/hicolor/16x16/apps/kdeprintfax.png
 share/kde/icons/hicolor/16x16/apps/kdisknav.png
+share/kde/icons/hicolor/16x16/apps/kdmconfig.png
 share/kde/icons/hicolor/16x16/apps/keditbookmarks.png
 share/kde/icons/hicolor/16x16/apps/key_bindings.png
+share/kde/icons/hicolor/16x16/apps/keyboard.png
+share/kde/icons/hicolor/16x16/apps/keyboard_layout.png
 share/kde/icons/hicolor/16x16/apps/kfm.png
 share/kde/icons/hicolor/16x16/apps/kfm_home.png
 share/kde/icons/hicolor/16x16/apps/khelpcenter.png
+share/kde/icons/hicolor/16x16/apps/kicker.png
+share/kde/icons/hicolor/16x16/apps/kjobviewer.png
 share/kde/icons/hicolor/16x16/apps/klipper.png
+share/kde/icons/hicolor/16x16/apps/kmenuedit.png
+share/kde/icons/hicolor/16x16/apps/knotify.png
 share/kde/icons/hicolor/16x16/apps/konqueror.png
 share/kde/icons/hicolor/16x16/apps/konsole.png
+share/kde/icons/hicolor/16x16/apps/kpager.png
+share/kde/icons/hicolor/16x16/apps/kpersonalizer.png
 share/kde/icons/hicolor/16x16/apps/kscreensaver.png
 share/kde/icons/hicolor/16x16/apps/ksysguard.png
+share/kde/icons/hicolor/16x16/apps/kthememgr.png
 share/kde/icons/hicolor/16x16/apps/ktip.png
+share/kde/icons/hicolor/16x16/apps/kwin.png
 share/kde/icons/hicolor/16x16/apps/kwrite.png
+share/kde/icons/hicolor/16x16/apps/licq.png
 share/kde/icons/hicolor/16x16/apps/locale.png
 share/kde/icons/hicolor/16x16/apps/looknfeel.png
+share/kde/icons/hicolor/16x16/apps/lyx.png
+share/kde/icons/hicolor/16x16/apps/mathematica.png
+share/kde/icons/hicolor/16x16/apps/mouse.png
+share/kde/icons/hicolor/16x16/apps/mozilla.png
 share/kde/icons/hicolor/16x16/apps/multimedia.png
+share/kde/icons/hicolor/16x16/apps/nedit.png
 share/kde/icons/hicolor/16x16/apps/netscape.png
 share/kde/icons/hicolor/16x16/apps/package_applications.png
 share/kde/icons/hicolor/16x16/apps/package_development.png
 share/kde/icons/hicolor/16x16/apps/package_editors.png
+share/kde/icons/hicolor/16x16/apps/package_favourite.png
+share/kde/icons/hicolor/16x16/apps/package_games.png
+share/kde/icons/hicolor/16x16/apps/package_games_arcade.png
+share/kde/icons/hicolor/16x16/apps/package_games_board.png
+share/kde/icons/hicolor/16x16/apps/package_games_card.png
+share/kde/icons/hicolor/16x16/apps/package_games_strategy.png
 share/kde/icons/hicolor/16x16/apps/package_graphics.png
 share/kde/icons/hicolor/16x16/apps/package_multimedia.png
 share/kde/icons/hicolor/16x16/apps/package_network.png
@@ -1557,25 +1782,41 @@ share/kde/icons/hicolor/16x16/apps/package_system.png
 share/kde/icons/hicolor/16x16/apps/package_toys.png
 share/kde/icons/hicolor/16x16/apps/package_utilities.png
 share/kde/icons/hicolor/16x16/apps/package_wordprocessing.png
+share/kde/icons/hicolor/16x16/apps/panel.png
+share/kde/icons/hicolor/16x16/apps/panel_settings.png
+share/kde/icons/hicolor/16x16/apps/password.png
+share/kde/icons/hicolor/16x16/apps/penguin.png
+share/kde/icons/hicolor/16x16/apps/personal.png
+share/kde/icons/hicolor/16x16/apps/plan.png
+share/kde/icons/hicolor/16x16/apps/printmgr.png
+share/kde/icons/hicolor/16x16/apps/proxy.png
 share/kde/icons/hicolor/16x16/apps/pybliographic.png
 share/kde/icons/hicolor/16x16/apps/realplayer.png
 share/kde/icons/hicolor/16x16/apps/remote.png
 share/kde/icons/hicolor/16x16/apps/samba.png
 share/kde/icons/hicolor/16x16/apps/style.png
+share/kde/icons/hicolor/16x16/apps/stylesheet.png
+share/kde/icons/hicolor/16x16/apps/terminal.png
+share/kde/icons/hicolor/16x16/apps/usb.png
+share/kde/icons/hicolor/16x16/apps/wabi.png
 share/kde/icons/hicolor/16x16/apps/window_list.png
-share/kde/icons/hicolor/16x16/devices/3floppy_mount.png
-share/kde/icons/hicolor/16x16/devices/3floppy_unmount.png
-share/kde/icons/hicolor/16x16/devices/cdaudio_mount.png
-share/kde/icons/hicolor/16x16/devices/cdaudio_unmount.png
-share/kde/icons/hicolor/16x16/devices/cdrom_mount.png
-share/kde/icons/hicolor/16x16/devices/cdrom_unmount.png
-share/kde/icons/hicolor/16x16/devices/dvd_mount.png
-share/kde/icons/hicolor/16x16/devices/dvd_unmount.png
-share/kde/icons/hicolor/16x16/devices/hdd_mount.png
-share/kde/icons/hicolor/16x16/devices/hdd_unmount.png
-share/kde/icons/hicolor/16x16/devices/nfs_mount.png
-share/kde/icons/hicolor/16x16/devices/nfs_unmount.png
-share/kde/icons/hicolor/16x16/devices/printer1.png
+share/kde/icons/hicolor/16x16/apps/winprops.png
+share/kde/icons/hicolor/16x16/apps/wp.png
+share/kde/icons/hicolor/16x16/apps/xcalc.png
+share/kde/icons/hicolor/16x16/apps/xclipboard.png
+share/kde/icons/hicolor/16x16/apps/xclock.png
+share/kde/icons/hicolor/16x16/apps/xconsole.png
+share/kde/icons/hicolor/16x16/apps/xedit.png
+share/kde/icons/hicolor/16x16/apps/xemacs.png
+share/kde/icons/hicolor/16x16/apps/xeyes.png
+share/kde/icons/hicolor/16x16/apps/xfig.png
+share/kde/icons/hicolor/16x16/apps/xfmail.png
+share/kde/icons/hicolor/16x16/apps/xload.png
+share/kde/icons/hicolor/16x16/apps/xmag.png
+share/kde/icons/hicolor/16x16/apps/xmms.png
+share/kde/icons/hicolor/16x16/apps/xosview.png
+share/kde/icons/hicolor/16x16/apps/xpaint.png
+share/kde/icons/hicolor/16x16/apps/xv.png
 share/kde/icons/hicolor/16x16/filesystems/file_important.png
 share/kde/icons/hicolor/16x16/filesystems/folder_important.png
 share/kde/icons/hicolor/22x22/actions/view_choose.png
@@ -1593,27 +1834,41 @@ share/kde/icons/hicolor/32x32/actions/view_tree.png
 share/kde/icons/hicolor/32x32/apps/access.png
 share/kde/icons/hicolor/32x32/apps/acroread.png
 share/kde/icons/hicolor/32x32/apps/agent.png
+share/kde/icons/hicolor/32x32/apps/alevt.png
+share/kde/icons/hicolor/32x32/apps/applixware.png
+share/kde/icons/hicolor/32x32/apps/background.png
 share/kde/icons/hicolor/32x32/apps/bell.png
 share/kde/icons/hicolor/32x32/apps/blender.png
+share/kde/icons/hicolor/32x32/apps/clanbomber.png
 share/kde/icons/hicolor/32x32/apps/clock.png
 share/kde/icons/hicolor/32x32/apps/colors.png
 share/kde/icons/hicolor/32x32/apps/cookie.png
 share/kde/icons/hicolor/32x32/apps/date.png
 share/kde/icons/hicolor/32x32/apps/designer.png
+share/kde/icons/hicolor/32x32/apps/dlgedit.png
 share/kde/icons/hicolor/32x32/apps/emacs.png
 share/kde/icons/hicolor/32x32/apps/email.png
 share/kde/icons/hicolor/32x32/apps/energy.png
+share/kde/icons/hicolor/32x32/apps/energy_star.png
 share/kde/icons/hicolor/32x32/apps/enhanced_browsing.png
+share/kde/icons/hicolor/32x32/apps/error.png
 share/kde/icons/hicolor/32x32/apps/filetypes.png
 share/kde/icons/hicolor/32x32/apps/fonts.png
+share/kde/icons/hicolor/32x32/apps/gimp.png
 share/kde/icons/hicolor/32x32/apps/go.png
+share/kde/icons/hicolor/32x32/apps/gv.png
+share/kde/icons/hicolor/32x32/apps/gvim.png
 share/kde/icons/hicolor/32x32/apps/help_index.png
 share/kde/icons/hicolor/32x32/apps/hwinfo.png
 share/kde/icons/hicolor/32x32/apps/icons.png
 share/kde/icons/hicolor/32x32/apps/iconthemes.png
+share/kde/icons/hicolor/32x32/apps/input_devices_settings.png
+share/kde/icons/hicolor/32x32/apps/kaddressbook.png
 share/kde/icons/hicolor/32x32/apps/kappfinder.png
+share/kde/icons/hicolor/32x32/apps/kate.png
 share/kde/icons/hicolor/32x32/apps/kcmdevices.png
 share/kde/icons/hicolor/32x32/apps/kcmdrkonqi.png
+share/kde/icons/hicolor/32x32/apps/kcmkicker.png
 share/kde/icons/hicolor/32x32/apps/kcmkwm.png
 share/kde/icons/hicolor/32x32/apps/kcmmemory.png
 share/kde/icons/hicolor/32x32/apps/kcmmidi.png
@@ -1625,36 +1880,48 @@ share/kde/icons/hicolor/32x32/apps/kcmsound.png
 share/kde/icons/hicolor/32x32/apps/kcmsystem.png
 share/kde/icons/hicolor/32x32/apps/kcmx.png
 share/kde/icons/hicolor/32x32/apps/kcontrol.png
+share/kde/icons/hicolor/32x32/apps/kdeprintfax.png
 share/kde/icons/hicolor/32x32/apps/kdisknav.png
 share/kde/icons/hicolor/32x32/apps/kdmconfig.png
 share/kde/icons/hicolor/32x32/apps/keditbookmarks.png
 share/kde/icons/hicolor/32x32/apps/key_bindings.png
+share/kde/icons/hicolor/32x32/apps/keyboard.png
 share/kde/icons/hicolor/32x32/apps/keyboard_layout.png
 share/kde/icons/hicolor/32x32/apps/kfm.png
 share/kde/icons/hicolor/32x32/apps/kfm_home.png
 share/kde/icons/hicolor/32x32/apps/khelpcenter.png
+share/kde/icons/hicolor/32x32/apps/kjobviewer.png
 share/kde/icons/hicolor/32x32/apps/klipper.png
 share/kde/icons/hicolor/32x32/apps/kmenuedit.png
 share/kde/icons/hicolor/32x32/apps/knotify.png
 share/kde/icons/hicolor/32x32/apps/konqueror.png
 share/kde/icons/hicolor/32x32/apps/konsole.png
 share/kde/icons/hicolor/32x32/apps/kpager.png
+share/kde/icons/hicolor/32x32/apps/kpersonalizer.png
 share/kde/icons/hicolor/32x32/apps/kscreensaver.png
 share/kde/icons/hicolor/32x32/apps/ksysguard.png
 share/kde/icons/hicolor/32x32/apps/kthememgr.png
 share/kde/icons/hicolor/32x32/apps/ktip.png
 share/kde/icons/hicolor/32x32/apps/kwin.png
 share/kde/icons/hicolor/32x32/apps/kwrite.png
+share/kde/icons/hicolor/32x32/apps/licq.png
 share/kde/icons/hicolor/32x32/apps/locale.png
 share/kde/icons/hicolor/32x32/apps/looknfeel.png
+share/kde/icons/hicolor/32x32/apps/lyx.png
+share/kde/icons/hicolor/32x32/apps/mathematica.png
 share/kde/icons/hicolor/32x32/apps/mouse.png
 share/kde/icons/hicolor/32x32/apps/multimedia.png
+share/kde/icons/hicolor/32x32/apps/nedit.png
 share/kde/icons/hicolor/32x32/apps/netscape.png
 share/kde/icons/hicolor/32x32/apps/package.png
 share/kde/icons/hicolor/32x32/apps/package_applications.png
 share/kde/icons/hicolor/32x32/apps/package_editors.png
 share/kde/icons/hicolor/32x32/apps/package_favourite.png
 share/kde/icons/hicolor/32x32/apps/package_games.png
+share/kde/icons/hicolor/32x32/apps/package_games_arcade.png
+share/kde/icons/hicolor/32x32/apps/package_games_board.png
+share/kde/icons/hicolor/32x32/apps/package_games_card.png
+share/kde/icons/hicolor/32x32/apps/package_games_strategy.png
 share/kde/icons/hicolor/32x32/apps/package_graphics.png
 share/kde/icons/hicolor/32x32/apps/package_multimedia.png
 share/kde/icons/hicolor/32x32/apps/package_network.png
@@ -1664,44 +1931,41 @@ share/kde/icons/hicolor/32x32/apps/package_toys.png
 share/kde/icons/hicolor/32x32/apps/package_utilities.png
 share/kde/icons/hicolor/32x32/apps/package_wordprocessing.png
 share/kde/icons/hicolor/32x32/apps/password.png
+share/kde/icons/hicolor/32x32/apps/penguin.png
+share/kde/icons/hicolor/32x32/apps/personal.png
+share/kde/icons/hicolor/32x32/apps/plan.png
+share/kde/icons/hicolor/32x32/apps/printmgr.png
 share/kde/icons/hicolor/32x32/apps/proxy.png
 share/kde/icons/hicolor/32x32/apps/pybliographic.png
+share/kde/icons/hicolor/32x32/apps/pysol.png
 share/kde/icons/hicolor/32x32/apps/realplayer.png
+share/kde/icons/hicolor/32x32/apps/samba.png
 share/kde/icons/hicolor/32x32/apps/style.png
+share/kde/icons/hicolor/32x32/apps/stylesheet.png
 share/kde/icons/hicolor/32x32/apps/terminal.png
+share/kde/icons/hicolor/32x32/apps/usb.png
+share/kde/icons/hicolor/32x32/apps/wabi.png
 share/kde/icons/hicolor/32x32/apps/window_list.png
 share/kde/icons/hicolor/32x32/apps/winprops.png
+share/kde/icons/hicolor/32x32/apps/wp.png
+share/kde/icons/hicolor/32x32/apps/x.png
 share/kde/icons/hicolor/32x32/apps/xapp.png
 share/kde/icons/hicolor/32x32/apps/xawtv.png
+share/kde/icons/hicolor/32x32/apps/xcalc.png
+share/kde/icons/hicolor/32x32/apps/xclipboard.png
+share/kde/icons/hicolor/32x32/apps/xclock.png
+share/kde/icons/hicolor/32x32/apps/xconsole.png
 share/kde/icons/hicolor/32x32/apps/xedit.png
 share/kde/icons/hicolor/32x32/apps/xemacs.png
+share/kde/icons/hicolor/32x32/apps/xeyes.png
+share/kde/icons/hicolor/32x32/apps/xfig.png
+share/kde/icons/hicolor/32x32/apps/xfmail.png
+share/kde/icons/hicolor/32x32/apps/xload.png
 share/kde/icons/hicolor/32x32/apps/xmag.png
+share/kde/icons/hicolor/32x32/apps/xmms.png
+share/kde/icons/hicolor/32x32/apps/xosview.png
+share/kde/icons/hicolor/32x32/apps/xpaint.png
 share/kde/icons/hicolor/32x32/apps/xv.png
-share/kde/icons/hicolor/32x32/devices/3floppy_mount.png
-share/kde/icons/hicolor/32x32/devices/3floppy_unmount.png
-share/kde/icons/hicolor/32x32/devices/5floppy_mount.png
-share/kde/icons/hicolor/32x32/devices/5floppy_unmount.png
-share/kde/icons/hicolor/32x32/devices/cdaudio_mount.png
-share/kde/icons/hicolor/32x32/devices/cdaudio_unmount.png
-share/kde/icons/hicolor/32x32/devices/cdrom_mount.png
-share/kde/icons/hicolor/32x32/devices/cdrom_unmount.png
-share/kde/icons/hicolor/32x32/devices/cdwriter_mount.png
-share/kde/icons/hicolor/32x32/devices/cdwriter_unmount.png
-share/kde/icons/hicolor/32x32/devices/dvd_mount.png
-share/kde/icons/hicolor/32x32/devices/dvd_unmount.png
-share/kde/icons/hicolor/32x32/devices/hdd_mount.png
-share/kde/icons/hicolor/32x32/devices/hdd_unmount.png
-share/kde/icons/hicolor/32x32/devices/memory.png
-share/kde/icons/hicolor/32x32/devices/mo_mount.png
-share/kde/icons/hicolor/32x32/devices/mo_unmount.png
-share/kde/icons/hicolor/32x32/devices/nfs_mount.png
-share/kde/icons/hicolor/32x32/devices/nfs_unmount.png
-share/kde/icons/hicolor/32x32/devices/printer1.png
-share/kde/icons/hicolor/32x32/devices/printer2.png
-share/kde/icons/hicolor/32x32/devices/scanner.png
-share/kde/icons/hicolor/32x32/devices/tablet.png
-share/kde/icons/hicolor/32x32/devices/zip_mount.png
-share/kde/icons/hicolor/32x32/devices/zip_unmount.png
 share/kde/icons/hicolor/32x32/filesystems/file_important.png
 share/kde/icons/hicolor/32x32/filesystems/folder_important.png
 share/kde/icons/hicolor/48x48/apps/access.png
@@ -1716,6 +1980,7 @@ share/kde/icons/hicolor/48x48/apps/designer.png
 share/kde/icons/hicolor/48x48/apps/emacs.png
 share/kde/icons/hicolor/48x48/apps/email.png
 share/kde/icons/hicolor/48x48/apps/energy.png
+share/kde/icons/hicolor/48x48/apps/energy_star.png
 share/kde/icons/hicolor/48x48/apps/enhanced_browsing.png
 share/kde/icons/hicolor/48x48/apps/filetypes.png
 share/kde/icons/hicolor/48x48/apps/fonts.png
@@ -1726,7 +1991,9 @@ share/kde/icons/hicolor/48x48/apps/help_index.png
 share/kde/icons/hicolor/48x48/apps/hwinfo.png
 share/kde/icons/hicolor/48x48/apps/icons.png
 share/kde/icons/hicolor/48x48/apps/iconthemes.png
+share/kde/icons/hicolor/48x48/apps/input_devices_settings.png
 share/kde/icons/hicolor/48x48/apps/kappfinder.png
+share/kde/icons/hicolor/48x48/apps/kate.png
 share/kde/icons/hicolor/48x48/apps/kcmdevices.png
 share/kde/icons/hicolor/48x48/apps/kcmdrkonqi.png
 share/kde/icons/hicolor/48x48/apps/kcmkwm.png
@@ -1758,6 +2025,7 @@ share/kde/icons/hicolor/48x48/apps/kthememgr.png
 share/kde/icons/hicolor/48x48/apps/ktip.png
 share/kde/icons/hicolor/48x48/apps/kwin.png
 share/kde/icons/hicolor/48x48/apps/kwrite.png
+share/kde/icons/hicolor/48x48/apps/licq.png
 share/kde/icons/hicolor/48x48/apps/locale.png
 share/kde/icons/hicolor/48x48/apps/looknfeel.png
 share/kde/icons/hicolor/48x48/apps/mouse.png
@@ -1768,6 +2036,10 @@ share/kde/icons/hicolor/48x48/apps/package_applications.png
 share/kde/icons/hicolor/48x48/apps/package_editors.png
 share/kde/icons/hicolor/48x48/apps/package_favourite.png
 share/kde/icons/hicolor/48x48/apps/package_games.png
+share/kde/icons/hicolor/48x48/apps/package_games_arcade.png
+share/kde/icons/hicolor/48x48/apps/package_games_board.png
+share/kde/icons/hicolor/48x48/apps/package_games_card.png
+share/kde/icons/hicolor/48x48/apps/package_games_strategy.png
 share/kde/icons/hicolor/48x48/apps/package_graphics.png
 share/kde/icons/hicolor/48x48/apps/package_multimedia.png
 share/kde/icons/hicolor/48x48/apps/package_network.png
@@ -1777,321 +2049,24 @@ share/kde/icons/hicolor/48x48/apps/package_toys.png
 share/kde/icons/hicolor/48x48/apps/package_utilities.png
 share/kde/icons/hicolor/48x48/apps/package_wordprocessing.png
 share/kde/icons/hicolor/48x48/apps/password.png
+share/kde/icons/hicolor/48x48/apps/personal.png
 share/kde/icons/hicolor/48x48/apps/proxy.png
 share/kde/icons/hicolor/48x48/apps/remote.png
 share/kde/icons/hicolor/48x48/apps/samba.png
 share/kde/icons/hicolor/48x48/apps/style.png
+share/kde/icons/hicolor/48x48/apps/stylesheet.png
 share/kde/icons/hicolor/48x48/apps/terminal.png
+share/kde/icons/hicolor/48x48/apps/usb.png
 share/kde/icons/hicolor/48x48/apps/window_list.png
 share/kde/icons/hicolor/48x48/apps/winprops.png
 share/kde/icons/hicolor/48x48/apps/xedit.png
 share/kde/icons/hicolor/48x48/apps/xemacs.png
 share/kde/icons/hicolor/48x48/apps/xmag.png
 share/kde/icons/hicolor/48x48/apps/xv.png
-share/kde/icons/hicolor/48x48/devices/3floppy_mount.png
-share/kde/icons/hicolor/48x48/devices/3floppy_unmount.png
-share/kde/icons/hicolor/48x48/devices/5floppy_mount.png
-share/kde/icons/hicolor/48x48/devices/5floppy_unmount.png
-share/kde/icons/hicolor/48x48/devices/cdaudio_mount.png
-share/kde/icons/hicolor/48x48/devices/cdaudio_unmount.png
-share/kde/icons/hicolor/48x48/devices/cdrom_mount.png
-share/kde/icons/hicolor/48x48/devices/cdrom_unmount.png
-share/kde/icons/hicolor/48x48/devices/cdwriter_mount.png
-share/kde/icons/hicolor/48x48/devices/cdwriter_unmount.png
-share/kde/icons/hicolor/48x48/devices/dvd_mount.png
-share/kde/icons/hicolor/48x48/devices/dvd_unmount.png
-share/kde/icons/hicolor/48x48/devices/hdd_mount.png
-share/kde/icons/hicolor/48x48/devices/hdd_unmount.png
-share/kde/icons/hicolor/48x48/devices/memory.png
-share/kde/icons/hicolor/48x48/devices/mo_mount.png
-share/kde/icons/hicolor/48x48/devices/mo_unmount.png
-share/kde/icons/hicolor/48x48/devices/nfs_mount.png
-share/kde/icons/hicolor/48x48/devices/nfs_unmount.png
-share/kde/icons/hicolor/48x48/devices/printer1.png
-share/kde/icons/hicolor/48x48/devices/printer2.png
-share/kde/icons/hicolor/48x48/devices/scanner.png
-share/kde/icons/hicolor/48x48/devices/tablet.png
-share/kde/icons/hicolor/48x48/devices/zip_mount.png
-share/kde/icons/hicolor/48x48/devices/zip_unmount.png
 share/kde/icons/hicolor/48x48/filesystems/file_important.png
 share/kde/icons/hicolor/48x48/filesystems/folder_important.png
-share/kde/icons/locolor/16x16/actions/bookmark_folder.png
-share/kde/icons/locolor/16x16/actions/view_choose.png
-share/kde/icons/locolor/16x16/actions/view_detailed.png
-share/kde/icons/locolor/16x16/actions/view_icon.png
-share/kde/icons/locolor/16x16/actions/view_multicolumn.png
-share/kde/icons/locolor/16x16/actions/view_text.png
-share/kde/icons/locolor/16x16/actions/view_tree.png
-share/kde/icons/locolor/16x16/apps/access.png
-share/kde/icons/locolor/16x16/apps/acroread.png
-share/kde/icons/locolor/16x16/apps/agent.png
-share/kde/icons/locolor/16x16/apps/alevt.png
-share/kde/icons/locolor/16x16/apps/applixware.png
-share/kde/icons/locolor/16x16/apps/arts.png
-share/kde/icons/locolor/16x16/apps/background.png
 share/kde/icons/locolor/16x16/apps/bell.png
-share/kde/icons/locolor/16x16/apps/blender.png
-share/kde/icons/locolor/16x16/apps/clock.png
-share/kde/icons/locolor/16x16/apps/colors.png
-share/kde/icons/locolor/16x16/apps/cookie.png
-share/kde/icons/locolor/16x16/apps/date.png
-share/kde/icons/locolor/16x16/apps/dlgedit.png
-share/kde/icons/locolor/16x16/apps/emacs.png
-share/kde/icons/locolor/16x16/apps/email.png
-share/kde/icons/locolor/16x16/apps/energy.png
-share/kde/icons/locolor/16x16/apps/enhanced_browsing.png
-share/kde/icons/locolor/16x16/apps/filetypes.png
-share/kde/icons/locolor/16x16/apps/fonts.png
-share/kde/icons/locolor/16x16/apps/gimp.png
-share/kde/icons/locolor/16x16/apps/go.png
-share/kde/icons/locolor/16x16/apps/gv.png
-share/kde/icons/locolor/16x16/apps/gvim.png
-share/kde/icons/locolor/16x16/apps/help_index.png
-share/kde/icons/locolor/16x16/apps/hwinfo.png
-share/kde/icons/locolor/16x16/apps/icons.png
-share/kde/icons/locolor/16x16/apps/iconthemes.png
-share/kde/icons/locolor/16x16/apps/input_devices_settings.png
-share/kde/icons/locolor/16x16/apps/kappfinder.png
-share/kde/icons/locolor/16x16/apps/kcmdevices.png
-share/kde/icons/locolor/16x16/apps/kcmdrkonqi.png
-share/kde/icons/locolor/16x16/apps/kcmkicker.png
-share/kde/icons/locolor/16x16/apps/kcmkwm.png
-share/kde/icons/locolor/16x16/apps/kcmmemory.png
-share/kde/icons/locolor/16x16/apps/kcmmidi.png
-share/kde/icons/locolor/16x16/apps/kcmpartitions.png
-share/kde/icons/locolor/16x16/apps/kcmpci.png
-share/kde/icons/locolor/16x16/apps/kcmprocessor.png
-share/kde/icons/locolor/16x16/apps/kcmscsi.png
-share/kde/icons/locolor/16x16/apps/kcmsound.png
-share/kde/icons/locolor/16x16/apps/kcmsystem.png
-share/kde/icons/locolor/16x16/apps/kcmx.png
-share/kde/icons/locolor/16x16/apps/kcontrol.png
-share/kde/icons/locolor/16x16/apps/kdisknav.png
-share/kde/icons/locolor/16x16/apps/kdmconfig.png
-share/kde/icons/locolor/16x16/apps/keditbookmarks.png
-share/kde/icons/locolor/16x16/apps/key_bindings.png
-share/kde/icons/locolor/16x16/apps/keyboard.png
-share/kde/icons/locolor/16x16/apps/keyboard_layout.png
-share/kde/icons/locolor/16x16/apps/kfm.png
-share/kde/icons/locolor/16x16/apps/kfm_home.png
-share/kde/icons/locolor/16x16/apps/khelpcenter.png
-share/kde/icons/locolor/16x16/apps/kicker.png
-share/kde/icons/locolor/16x16/apps/klipper.png
-share/kde/icons/locolor/16x16/apps/kmenuedit.png
-share/kde/icons/locolor/16x16/apps/knotify.png
-share/kde/icons/locolor/16x16/apps/konqueror.png
-share/kde/icons/locolor/16x16/apps/konsole.png
-share/kde/icons/locolor/16x16/apps/kpager.png
-share/kde/icons/locolor/16x16/apps/kscreensaver.png
-share/kde/icons/locolor/16x16/apps/ksysguard.png
-share/kde/icons/locolor/16x16/apps/kthememgr.png
-share/kde/icons/locolor/16x16/apps/ktip.png
-share/kde/icons/locolor/16x16/apps/kwin.png
-share/kde/icons/locolor/16x16/apps/kwrite.png
-share/kde/icons/locolor/16x16/apps/locale.png
-share/kde/icons/locolor/16x16/apps/looknfeel.png
-share/kde/icons/locolor/16x16/apps/lyx.png
-share/kde/icons/locolor/16x16/apps/mathematica.png
-share/kde/icons/locolor/16x16/apps/mouse.png
-share/kde/icons/locolor/16x16/apps/mozilla.png
-share/kde/icons/locolor/16x16/apps/multimedia.png
-share/kde/icons/locolor/16x16/apps/nedit.png
-share/kde/icons/locolor/16x16/apps/netscape.png
-share/kde/icons/locolor/16x16/apps/package.png
-share/kde/icons/locolor/16x16/apps/package_applications.png
-share/kde/icons/locolor/16x16/apps/package_editors.png
-share/kde/icons/locolor/16x16/apps/package_favourite.png
-share/kde/icons/locolor/16x16/apps/package_games.png
-share/kde/icons/locolor/16x16/apps/package_graphics.png
-share/kde/icons/locolor/16x16/apps/package_multimedia.png
-share/kde/icons/locolor/16x16/apps/package_network.png
-share/kde/icons/locolor/16x16/apps/package_settings.png
-share/kde/icons/locolor/16x16/apps/package_system.png
-share/kde/icons/locolor/16x16/apps/package_utilities.png
-share/kde/icons/locolor/16x16/apps/panel.png
-share/kde/icons/locolor/16x16/apps/panel_settings.png
-share/kde/icons/locolor/16x16/apps/password.png
-share/kde/icons/locolor/16x16/apps/penguin.png
-share/kde/icons/locolor/16x16/apps/plan.png
-share/kde/icons/locolor/16x16/apps/proxy.png
-share/kde/icons/locolor/16x16/apps/pybliographic.png
-share/kde/icons/locolor/16x16/apps/realplayer.png
-share/kde/icons/locolor/16x16/apps/remote.png
-share/kde/icons/locolor/16x16/apps/samba.png
-share/kde/icons/locolor/16x16/apps/style.png
-share/kde/icons/locolor/16x16/apps/terminal.png
-share/kde/icons/locolor/16x16/apps/wabi.png
-share/kde/icons/locolor/16x16/apps/window_list.png
-share/kde/icons/locolor/16x16/apps/winprops.png
-share/kde/icons/locolor/16x16/apps/wp.png
-share/kde/icons/locolor/16x16/apps/xapp.png
-share/kde/icons/locolor/16x16/apps/xcalc.png
-share/kde/icons/locolor/16x16/apps/xclipboard.png
-share/kde/icons/locolor/16x16/apps/xclock.png
-share/kde/icons/locolor/16x16/apps/xconsole.png
-share/kde/icons/locolor/16x16/apps/xedit.png
-share/kde/icons/locolor/16x16/apps/xemacs.png
-share/kde/icons/locolor/16x16/apps/xeyes.png
-share/kde/icons/locolor/16x16/apps/xfig.png
-share/kde/icons/locolor/16x16/apps/xfmail.png
-share/kde/icons/locolor/16x16/apps/xload.png
-share/kde/icons/locolor/16x16/apps/xmag.png
-share/kde/icons/locolor/16x16/apps/xosview.png
-share/kde/icons/locolor/16x16/apps/xpaint.png
-share/kde/icons/locolor/16x16/apps/xv.png
-share/kde/icons/locolor/16x16/devices/3floppy_mount.png
-share/kde/icons/locolor/16x16/devices/3floppy_unmount.png
-share/kde/icons/locolor/16x16/devices/5floppy_mount.png
-share/kde/icons/locolor/16x16/devices/5floppy_unmount.png
-share/kde/icons/locolor/16x16/devices/cdrom_mount.png
-share/kde/icons/locolor/16x16/devices/cdrom_unmount.png
-share/kde/icons/locolor/16x16/devices/cdwriter_mount.png
-share/kde/icons/locolor/16x16/devices/cdwriter_unmount.png
-share/kde/icons/locolor/16x16/devices/hdd_mount.png
-share/kde/icons/locolor/16x16/devices/hdd_unmount.png
-share/kde/icons/locolor/16x16/devices/memory.png
-share/kde/icons/locolor/16x16/devices/mo_mount.png
-share/kde/icons/locolor/16x16/devices/mo_unmount.png
-share/kde/icons/locolor/16x16/devices/printer1.png
-share/kde/icons/locolor/16x16/devices/printer2.png
-share/kde/icons/locolor/16x16/devices/scanner.png
-share/kde/icons/locolor/16x16/devices/tablet.png
-share/kde/icons/locolor/16x16/devices/zip_mount.png
-share/kde/icons/locolor/16x16/devices/zip_unmount.png
-share/kde/icons/locolor/32x32/apps/access.png
-share/kde/icons/locolor/32x32/apps/acroread.png
-share/kde/icons/locolor/32x32/apps/agent.png
-share/kde/icons/locolor/32x32/apps/alevt.png
-share/kde/icons/locolor/32x32/apps/applixware.png
-share/kde/icons/locolor/32x32/apps/background.png
 share/kde/icons/locolor/32x32/apps/bell.png
-share/kde/icons/locolor/32x32/apps/blender.png
-share/kde/icons/locolor/32x32/apps/clanbomber.png
-share/kde/icons/locolor/32x32/apps/clock.png
-share/kde/icons/locolor/32x32/apps/colors.png
-share/kde/icons/locolor/32x32/apps/cookie.png
-share/kde/icons/locolor/32x32/apps/date.png
-share/kde/icons/locolor/32x32/apps/dlgedit.png
-share/kde/icons/locolor/32x32/apps/emacs.png
-share/kde/icons/locolor/32x32/apps/email.png
-share/kde/icons/locolor/32x32/apps/energy.png
-share/kde/icons/locolor/32x32/apps/enhanced_browsing.png
-share/kde/icons/locolor/32x32/apps/error.png
-share/kde/icons/locolor/32x32/apps/filetypes.png
-share/kde/icons/locolor/32x32/apps/fonts.png
-share/kde/icons/locolor/32x32/apps/gimp.png
-share/kde/icons/locolor/32x32/apps/go.png
-share/kde/icons/locolor/32x32/apps/gv.png
-share/kde/icons/locolor/32x32/apps/gvim.png
-share/kde/icons/locolor/32x32/apps/help_index.png
-share/kde/icons/locolor/32x32/apps/hwinfo.png
-share/kde/icons/locolor/32x32/apps/icons.png
-share/kde/icons/locolor/32x32/apps/iconthemes.png
-share/kde/icons/locolor/32x32/apps/input_devices_settings.png
-share/kde/icons/locolor/32x32/apps/kappfinder.png
-share/kde/icons/locolor/32x32/apps/kcmdevices.png
-share/kde/icons/locolor/32x32/apps/kcmdrkonqi.png
-share/kde/icons/locolor/32x32/apps/kcmkicker.png
-share/kde/icons/locolor/32x32/apps/kcmkwm.png
-share/kde/icons/locolor/32x32/apps/kcmmemory.png
-share/kde/icons/locolor/32x32/apps/kcmmidi.png
-share/kde/icons/locolor/32x32/apps/kcmpartitions.png
-share/kde/icons/locolor/32x32/apps/kcmpci.png
-share/kde/icons/locolor/32x32/apps/kcmprocessor.png
-share/kde/icons/locolor/32x32/apps/kcmscsi.png
-share/kde/icons/locolor/32x32/apps/kcmsound.png
-share/kde/icons/locolor/32x32/apps/kcmsystem.png
-share/kde/icons/locolor/32x32/apps/kcmx.png
-share/kde/icons/locolor/32x32/apps/kcontrol.png
-share/kde/icons/locolor/32x32/apps/kdisknav.png
-share/kde/icons/locolor/32x32/apps/kdmconfig.png
-share/kde/icons/locolor/32x32/apps/key_bindings.png
-share/kde/icons/locolor/32x32/apps/keyboard.png
-share/kde/icons/locolor/32x32/apps/keyboard_layout.png
-share/kde/icons/locolor/32x32/apps/kfm.png
-share/kde/icons/locolor/32x32/apps/kfm_home.png
-share/kde/icons/locolor/32x32/apps/khelpcenter.png
-share/kde/icons/locolor/32x32/apps/klipper.png
-share/kde/icons/locolor/32x32/apps/knotify.png
-share/kde/icons/locolor/32x32/apps/konqueror.png
-share/kde/icons/locolor/32x32/apps/konsole.png
-share/kde/icons/locolor/32x32/apps/kpager.png
-share/kde/icons/locolor/32x32/apps/kscreensaver.png
-share/kde/icons/locolor/32x32/apps/ksysguard.png
-share/kde/icons/locolor/32x32/apps/kthememgr.png
-share/kde/icons/locolor/32x32/apps/ktip.png
-share/kde/icons/locolor/32x32/apps/kwin.png
-share/kde/icons/locolor/32x32/apps/kwrite.png
-share/kde/icons/locolor/32x32/apps/locale.png
-share/kde/icons/locolor/32x32/apps/looknfeel.png
-share/kde/icons/locolor/32x32/apps/lyx.png
-share/kde/icons/locolor/32x32/apps/mathematica.png
-share/kde/icons/locolor/32x32/apps/mouse.png
-share/kde/icons/locolor/32x32/apps/multimedia.png
-share/kde/icons/locolor/32x32/apps/nedit.png
-share/kde/icons/locolor/32x32/apps/netscape.png
-share/kde/icons/locolor/32x32/apps/package.png
-share/kde/icons/locolor/32x32/apps/package_applications.png
-share/kde/icons/locolor/32x32/apps/package_editors.png
-share/kde/icons/locolor/32x32/apps/package_favourite.png
-share/kde/icons/locolor/32x32/apps/package_games.png
-share/kde/icons/locolor/32x32/apps/package_graphics.png
-share/kde/icons/locolor/32x32/apps/package_multimedia.png
-share/kde/icons/locolor/32x32/apps/package_network.png
-share/kde/icons/locolor/32x32/apps/package_settings.png
-share/kde/icons/locolor/32x32/apps/package_system.png
-share/kde/icons/locolor/32x32/apps/package_utilities.png
-share/kde/icons/locolor/32x32/apps/panel_settings.png
-share/kde/icons/locolor/32x32/apps/password.png
-share/kde/icons/locolor/32x32/apps/penguin.png
-share/kde/icons/locolor/32x32/apps/plan.png
-share/kde/icons/locolor/32x32/apps/proxy.png
-share/kde/icons/locolor/32x32/apps/pybliographic.png
-share/kde/icons/locolor/32x32/apps/pysol.png
-share/kde/icons/locolor/32x32/apps/realplayer.png
-share/kde/icons/locolor/32x32/apps/samba.png
-share/kde/icons/locolor/32x32/apps/style.png
-share/kde/icons/locolor/32x32/apps/terminal.png
-share/kde/icons/locolor/32x32/apps/wabi.png
-share/kde/icons/locolor/32x32/apps/window_list.png
-share/kde/icons/locolor/32x32/apps/winprops.png
-share/kde/icons/locolor/32x32/apps/wp.png
-share/kde/icons/locolor/32x32/apps/xapp.png
-share/kde/icons/locolor/32x32/apps/xawtv.png
-share/kde/icons/locolor/32x32/apps/xcalc.png
-share/kde/icons/locolor/32x32/apps/xclipboard.png
-share/kde/icons/locolor/32x32/apps/xclock.png
-share/kde/icons/locolor/32x32/apps/xconsole.png
-share/kde/icons/locolor/32x32/apps/xedit.png
-share/kde/icons/locolor/32x32/apps/xemacs.png
-share/kde/icons/locolor/32x32/apps/xeyes.png
-share/kde/icons/locolor/32x32/apps/xfig.png
-share/kde/icons/locolor/32x32/apps/xfmail.png
-share/kde/icons/locolor/32x32/apps/xload.png
-share/kde/icons/locolor/32x32/apps/xmag.png
-share/kde/icons/locolor/32x32/apps/xmms.png
-share/kde/icons/locolor/32x32/apps/xosview.png
-share/kde/icons/locolor/32x32/apps/xpaint.png
-share/kde/icons/locolor/32x32/apps/xv.png
-share/kde/icons/locolor/32x32/devices/3floppy_mount.png
-share/kde/icons/locolor/32x32/devices/3floppy_unmount.png
-share/kde/icons/locolor/32x32/devices/5floppy_mount.png
-share/kde/icons/locolor/32x32/devices/5floppy_unmount.png
-share/kde/icons/locolor/32x32/devices/cdrom_mount.png
-share/kde/icons/locolor/32x32/devices/cdrom_unmount.png
-share/kde/icons/locolor/32x32/devices/cdwriter_mount.png
-share/kde/icons/locolor/32x32/devices/cdwriter_unmount.png
-share/kde/icons/locolor/32x32/devices/hdd_mount.png
-share/kde/icons/locolor/32x32/devices/hdd_unmount.png
-share/kde/icons/locolor/32x32/devices/memory.png
-share/kde/icons/locolor/32x32/devices/mo_mount.png
-share/kde/icons/locolor/32x32/devices/mo_unmount.png
-share/kde/icons/locolor/32x32/devices/printer1.png
-share/kde/icons/locolor/32x32/devices/printer2.png
-share/kde/icons/locolor/32x32/devices/scanner.png
-share/kde/icons/locolor/32x32/devices/tablet.png
-share/kde/icons/locolor/32x32/devices/zip_mount.png
-share/kde/icons/locolor/32x32/devices/zip_unmount.png
 share/kde/locale/C/entry.desktop
 share/kde/locale/C/flag.png
 share/kde/locale/l10n/C/entry.desktop
@@ -2106,6 +2081,8 @@ share/kde/locale/l10n/at/entry.desktop
 share/kde/locale/l10n/at/flag.png
 share/kde/locale/l10n/au/entry.desktop
 share/kde/locale/l10n/au/flag.png
+share/kde/locale/l10n/az/entry.desktop
+share/kde/locale/l10n/az/flag.png
 share/kde/locale/l10n/bb/entry.desktop
 share/kde/locale/l10n/bb/flag.png
 share/kde/locale/l10n/be/entry.desktop
@@ -2189,9 +2166,10 @@ share/kde/locale/l10n/lv/entry.desktop
 share/kde/locale/l10n/lv/flag.png
 share/kde/locale/l10n/mk/entry.desktop
 share/kde/locale/l10n/mk/flag.png
+share/kde/locale/l10n/mt/entry.desktop
+share/kde/locale/l10n/mt/flag.png
 share/kde/locale/l10n/mx/entry.desktop
 share/kde/locale/l10n/mx/flag.png
-share/kde/locale/l10n/nl/README
 share/kde/locale/l10n/nl/entry.desktop
 share/kde/locale/l10n/nl/flag.png
 share/kde/locale/l10n/no/entry.desktop
@@ -2248,20 +2226,23 @@ share/kde/locale/l10n/westeurope.desktop
 share/kde/locale/l10n/za/entry.desktop
 share/kde/locale/l10n/za/flag.png
 share/kde/mimelnk/application/x-konsole.desktop
+share/kde/mimelnk/application/x-ksysguard.desktop
 share/kde/mimelnk/application/x-ktheme.desktop
 share/kde/services/bzip.protocol
 share/kde/services/bzip2.protocol
 share/kde/services/finger.protocol
 share/kde/services/floppy.protocol
 share/kde/services/gopher.protocol
+share/kde/services/gsthumbnail.desktop
 share/kde/services/gzip.protocol
-share/kde/services/help.protocol
 share/kde/services/htmlthumbnail.desktop
 share/kde/services/imagethumbnail.desktop
 share/kde/services/imap4.protocol
 share/kde/services/imaps.protocol
 share/kde/services/info.protocol
 share/kde/services/kaccess.desktop
+share/kde/services/kate_component.desktop
+share/kde/services/kded/favicons.desktop
 share/kde/services/kfindpart.desktop
 share/kde/services/khelpcenter.desktop
 share/kde/services/konq_aboutpage.desktop
@@ -2269,6 +2250,7 @@ share/kde/services/konq_detailedlistview.desktop
 share/kde/services/konq_dirtree.desktop
 share/kde/services/konq_iconview.desktop
 share/kde/services/konq_multicolumnview.desktop
+share/kde/services/konq_sidebartng.desktop
 share/kde/services/konq_textview.desktop
 share/kde/services/konq_treeview.desktop
 share/kde/services/konqueror.desktop
@@ -2306,17 +2288,37 @@ share/kde/services/searchproviders/realnames.desktop
 share/kde/services/searchproviders/rpmfind.desktop
 share/kde/services/searchproviders/seek.desktop
 share/kde/services/searchproviders/thesaurus.desktop
+share/kde/services/searchproviders/vivisimo.desktop
 share/kde/services/searchproviders/voila.desktop
 share/kde/services/searchproviders/webster.desktop
+share/kde/services/searchproviders/whatis.desktop
 share/kde/services/smb.protocol
-share/kde/services/smtp.protocol
 share/kde/services/tar.protocol
 share/kde/services/textthumbnail.desktop
 share/kde/services/thumbnail.protocol
+share/kde/services/useragentstrings/ie401onwinnt4.desktop
+share/kde/services/useragentstrings/ie45onwinnt5.desktop
+share/kde/services/useragentstrings/ie501onwinnt5.desktop
+share/kde/services/useragentstrings/ie50onppc.desktop
+share/kde/services/useragentstrings/ie50onwin95.desktop
+share/kde/services/useragentstrings/ie55onwin98.desktop
+share/kde/services/useragentstrings/ie55onwinnt5.desktop
+share/kde/services/useragentstrings/lynxoncurrent.desktop
+share/kde/services/useragentstrings/mozm18oncurrent.desktop
+share/kde/services/useragentstrings/mozm18onwinnt4.desktop
+share/kde/services/useragentstrings/nn301oncurrent.desktop
+share/kde/services/useragentstrings/nn475oncurrent.desktop
+share/kde/services/useragentstrings/nn475onwin95.desktop
+share/kde/services/useragentstrings/nn476onppc.desktop
+share/kde/services/useragentstrings/op403onwinnt4.desktop
+share/kde/services/useragentstrings/w3moncurrent.desktop
+share/kde/services/useragentstrings/wgetoncurrent.desktop
 share/kde/servicetypes/findpart.desktop
+share/kde/servicetypes/kate_servicetype.desktop
 share/kde/servicetypes/konqaboutpage.desktop
 share/kde/servicetypes/searchprovider.desktop
 share/kde/servicetypes/thumbcreator.desktop
+share/kde/servicetypes/uasprovider.desktop
 share/kde/sounds/KDE_Beep_Ahem.wav
 share/kde/sounds/KDE_Beep_Beep.wav
 share/kde/sounds/KDE_Beep_Bottles.wav
@@ -2331,12 +2333,28 @@ share/kde/sounds/KDE_Beep_RimShot.wav
 share/kde/sounds/KDE_Beep_RingRing.wav
 share/kde/sounds/KDE_Beep_ShortBeep.wav
 share/kde/sounds/KDE_Beep_Yo.wav
+share/kde/sounds/KDE_Click.wav
 share/kde/sounds/KDE_Close_Window.wav
+share/kde/sounds/KDE_Critical_Error.wav
+share/kde/sounds/KDE_Desktop1.wav
+share/kde/sounds/KDE_Desktop2.wav
+share/kde/sounds/KDE_Desktop3.wav
+share/kde/sounds/KDE_Desktop4.wav
+share/kde/sounds/KDE_Desktop5.wav
+share/kde/sounds/KDE_Desktop6.wav
+share/kde/sounds/KDE_Desktop7.wav
+share/kde/sounds/KDE_Desktop8.wav
+share/kde/sounds/KDE_Dialog_Appear.wav
+share/kde/sounds/KDE_Dialog_Disappear.wav
+share/kde/sounds/KDE_Error.wav
 share/kde/sounds/KDE_Logout.wav
+share/kde/sounds/KDE_Notify.wav
 share/kde/sounds/KDE_Startup.wav
+share/kde/sounds/KDE_Window_Close.wav
 share/kde/sounds/KDE_Window_DeIconify.wav
 share/kde/sounds/KDE_Window_Iconify.wav
 share/kde/sounds/KDE_Window_Maximize.wav
+share/kde/sounds/KDE_Window_Open.wav
 share/kde/sounds/KDE_Window_Shade_Down.wav
 share/kde/sounds/KDE_Window_Shade_Up.wav
 share/kde/sounds/KDE_Window_Sticky.wav
@@ -2345,6 +2363,7 @@ share/kde/sounds/KDE_Window_UnSticky.wav
 share/kde/sounds/pop.wav
 share/kde/templates/.source/CDROM-Device.desktop
 share/kde/templates/.source/Floppy.desktop
+share/kde/templates/.source/HD.desktop
 share/kde/templates/.source/HTMLFile.html
 share/kde/templates/.source/Program.desktop
 share/kde/templates/.source/TextFile.txt
@@ -2354,6 +2373,7 @@ share/kde/templates/HTMLFile.desktop
 share/kde/templates/TextFile.desktop
 share/kde/templates/linkCDROM.desktop
 share/kde/templates/linkFloppy.desktop
+share/kde/templates/linkHD.desktop
 share/kde/templates/linkProgram.desktop
 share/kde/templates/linkURL.desktop
 share/kde/wallpapers/All-Good-People-1.jpg
@@ -2378,6 +2398,7 @@ share/kde/wallpapers/Whirling_Spirit.jpg
 share/kde/wallpapers/Won-Ton-Soup-3.jpg
 share/kde/wallpapers/blue_angle_swirl.jpg
 share/kde/wallpapers/bluegreencrisscross.jpg
+share/kde/wallpapers/default_blue.jpg
 share/kde/wallpapers/gold_crinkle.jpg
 share/kde/wallpapers/kdm_bg.jpg
 share/kde/wallpapers/northbeach.jpg
@@ -2390,10 +2411,8 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/templates/.source
 @dirrm share/kde/templates
 @dirrm share/kde/sounds
-@comment kdelibs:dirrm share/kde/servicetypes
+@dirrm share/kde/services/useragentstrings
 @dirrm share/kde/services/searchproviders
-@comment kdelibs:dirrm share/kde/services
-@comment kdelibs:dirrm share/kde/mimelnk/application
 @dirrm share/kde/locale/l10n/za
 @dirrm share/kde/locale/l10n/ve
 @dirrm share/kde/locale/l10n/vc
@@ -2420,6 +2439,7 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/locale/l10n/no
 @dirrm share/kde/locale/l10n/nl
 @dirrm share/kde/locale/l10n/mx
+@dirrm share/kde/locale/l10n/mt
 @dirrm share/kde/locale/l10n/mk
 @dirrm share/kde/locale/l10n/lv
 @dirrm share/kde/locale/l10n/lu
@@ -2460,6 +2480,7 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/locale/l10n/bg
 @dirrm share/kde/locale/l10n/be
 @dirrm share/kde/locale/l10n/bb
+@dirrm share/kde/locale/l10n/az
 @dirrm share/kde/locale/l10n/au
 @dirrm share/kde/locale/l10n/at
 @dirrm share/kde/locale/l10n/ar
@@ -2468,66 +2489,55 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/locale/l10n
 @dirrm share/kde/locale/C
 @dirrm share/kde/locale
-@dirrm share/kde/icons/locolor/32x32/devices
 @dirrm share/kde/icons/locolor/32x32/apps
-@comment kdelibs:dirrm share/kde/icons/locolor/32x32
-@dirrm share/kde/icons/locolor/16x16/devices
+@dirrm share/kde/icons/locolor/32x32
 @dirrm share/kde/icons/locolor/16x16/apps
-@comment kdelibs:dirrm share/kde/icons/locolor/16x16/actions
-@comment kdelibs:dirrm share/kde/icons/locolor/16x16
-@comment kdelibs:dirrm share/kde/icons/hicolor/48x48/filesystems
-@dirrm share/kde/icons/hicolor/48x48/devices
+@dirrm share/kde/icons/locolor/16x16
+@dirrm share/kde/icons/locolor
 @dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdelibs:dirrm share/kde/icons/hicolor/48x48
-@comment kdelibs:dirrm share/kde/icons/hicolor/32x32/filesystems
-@dirrm share/kde/icons/hicolor/32x32/devices
 @dirrm share/kde/icons/hicolor/32x32/apps
-@comment kdelibs:dirrm share/kde/icons/hicolor/32x32/actions
-@comment kdelibs:dirrm share/kde/icons/hicolor/32x32
-@comment kdelibs:dirrm share/kde/icons/hicolor/22x22/actions
-@comment kdelibs:dirrm share/kde/icons/hicolor/16x16/filesystems
-@dirrm share/kde/icons/hicolor/16x16/devices
-@dirrm share/kde/icons/hicolor/16x16/apps
-@comment kdelibs:dirrm share/kde/icons
-@comment kdelibs:dirrm share/kde/config
+@dirrm share/kde/config/kdm
 @dirrm share/kde/apps/naughtyapplet/pics
 @dirrm share/kde/apps/naughtyapplet
 @dirrm share/kde/apps/kwrite
 @dirrm share/kde/apps/kwin/pics
+@dirrm share/kde/apps/kwin/icewm-themes
 @dirrm share/kde/apps/kwin
 @dirrm share/kde/apps/kthememgr/Themes
 @dirrm share/kde/apps/kthememgr
-@dirrm share/kde/apps/ksysguard/icons/locolor/16x16/apps
-@dirrm share/kde/apps/ksysguard/icons/locolor/16x16
-@dirrm share/kde/apps/ksysguard/icons/locolor
-@dirrm share/kde/apps/ksysguard/icons
+@dirrm share/kde/apps/ksysguard/pics
 @dirrm share/kde/apps/ksysguard
 @dirrm share/kde/apps/ksplash/pics/locolor
 @dirrm share/kde/apps/ksplash/pics
 @dirrm share/kde/apps/ksplash
 @dirrm share/kde/apps/kscreensaver
+@dirrm share/kde/apps/kpersonalizer/pics
+@dirrm share/kde/apps/kpersonalizer
 @dirrm share/kde/apps/konsole/pics
 @dirrm share/kde/apps/konsole
 @dirrm share/kde/apps/konqueror/tiles
 @dirrm share/kde/apps/konqueror/profiles
 @dirrm share/kde/apps/konqueror/pics
-@dirrm share/kde/apps/konqueror/icons/locolor/16x16/actions
-@dirrm share/kde/apps/konqueror/icons/locolor/16x16
-@dirrm share/kde/apps/konqueror/icons/locolor
-@dirrm share/kde/apps/konqueror/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/konqueror/icons/hicolor/32x32
-@dirrm share/kde/apps/konqueror/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/konqueror/icons/hicolor/22x22
 @dirrm share/kde/apps/konqueror/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/konqueror/icons/hicolor/16x16
 @dirrm share/kde/apps/konqueror/icons/hicolor
 @dirrm share/kde/apps/konqueror/icons
+@dirrm share/kde/apps/konqueror/dirtree/services
 @dirrm share/kde/apps/konqueror/dirtree/remote/web
 @dirrm share/kde/apps/konqueror/dirtree/remote/ftp
 @dirrm share/kde/apps/konqueror/dirtree/remote
 @dirrm share/kde/apps/konqueror/dirtree
 @dirrm share/kde/apps/konqueror/about
 @dirrm share/kde/apps/konqueror
+@dirrm share/kde/apps/konqsidebartng/virtual_folders/services
+@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/web
+@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/ftp
+@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote
+@dirrm share/kde/apps/konqsidebartng/virtual_folders
+@dirrm share/kde/apps/konqsidebartng/entries
+@dirrm share/kde/apps/konqsidebartng/dirtree
+@dirrm share/kde/apps/konqsidebartng/add
+@dirrm share/kde/apps/konqsidebartng
 @dirrm share/kde/apps/konqlistview/kpartplugins
 @dirrm share/kde/apps/konqlistview
 @dirrm share/kde/apps/konqiconview/kpartplugins
@@ -2542,6 +2552,8 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/kmenuedit/icons/hicolor
 @dirrm share/kde/apps/kmenuedit/icons
 @dirrm share/kde/apps/kmenuedit
+@dirrm share/kde/apps/kjobviewer
+@dirrm share/kde/apps/kioslave
 @dirrm share/kde/apps/kio_info
 @dirrm share/kde/apps/kio_finger
 @dirrm share/kde/apps/kicker/wallpapers
@@ -2559,12 +2571,6 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/kicker
 @dirrm share/kde/apps/khelpcenter/plugins/Tutorials
 @dirrm share/kde/apps/khelpcenter/plugins
-@dirrm share/kde/apps/khelpcenter/pics
-@dirrm share/kde/apps/khelpcenter/icons/locolor/16x16/apps
-@dirrm share/kde/apps/khelpcenter/icons/locolor/16x16
-@dirrm share/kde/apps/khelpcenter/icons/locolor
-@dirrm share/kde/apps/khelpcenter/icons
-@dirrm share/kde/apps/khelpcenter/en
 @dirrm share/kde/apps/khelpcenter
 @dirrm share/kde/apps/kfind/icons/locolor/22x22/actions
 @dirrm share/kde/apps/kfind/icons/locolor/22x22
@@ -2585,24 +2591,50 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/kdesktop/patterns
 @dirrm share/kde/apps/kdesktop/DesktopLinks
 @dirrm share/kde/apps/kdesktop
+@dirrm share/kde/apps/kdeprintfax/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kdeprintfax/icons/hicolor/16x16
+@dirrm share/kde/apps/kdeprintfax/icons/hicolor
+@dirrm share/kde/apps/kdeprintfax/icons
+@dirrm share/kde/apps/kdeprintfax
 @dirrm share/kde/apps/kdcop
 @dirrm share/kde/apps/kcontrol/pics
 @dirrm share/kde/apps/kcontrol
+@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
 @dirrm share/kde/apps/kcmkeys/standard
+@dirrm share/kde/apps/kcmkeys/global
 @dirrm share/kde/apps/kcmkeys
+@dirrm share/kde/apps/kcminput/pics
 @dirrm share/kde/apps/kcminput
+@dirrm share/kde/apps/kcmcss
 @dirrm share/kde/apps/kbookmark
+@dirrm share/kde/apps/kate/syntax
+@dirrm share/kde/apps/kate/pics
+@dirrm share/kde/apps/kate/icons/locolor/22x22/actions
+@dirrm share/kde/apps/kate/icons/locolor/22x22
+@dirrm share/kde/apps/kate/icons/locolor/16x16/actions
+@dirrm share/kde/apps/kate/icons/locolor/16x16
+@dirrm share/kde/apps/kate/icons/locolor
+@dirrm share/kde/apps/kate/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/kate/icons/hicolor/48x48
+@dirrm share/kde/apps/kate/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kate/icons/hicolor/32x32
+@dirrm share/kde/apps/kate/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kate/icons/hicolor/22x22
+@dirrm share/kde/apps/kate/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kate/icons/hicolor/16x16
+@dirrm share/kde/apps/kate/icons/hicolor
+@dirrm share/kde/apps/kate/icons
+@dirrm share/kde/apps/kate
+@dirrm share/kde/apps/kaddressbook/pics
+@dirrm share/kde/apps/kaddressbook
 @dirrm share/kde/apps/drkonqi/presets
 @dirrm share/kde/apps/drkonqi/pics
 @dirrm share/kde/apps/drkonqi/debuggers
 @dirrm share/kde/apps/drkonqi
 @dirrm share/kde/apps/clockapplet/pics
 @dirrm share/kde/apps/clockapplet
-@comment kdelibs:dirrm share/kde/apps
-@comment kdelibs:dirrm share/kde
-@dirrm share/fonts/override
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/ksysguard
 @dirrm share/doc/kde/HTML/en/kpager
@@ -2610,17 +2642,21 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/doc/kde/HTML/en/konqueror
 @dirrm share/doc/kde/HTML/en/kmenuedit
 @dirrm share/doc/kde/HTML/en/klipper
+@dirrm share/doc/kde/HTML/en/kioslave
 @dirrm share/doc/kde/HTML/en/kicker
 @dirrm share/doc/kde/HTML/en/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/en/khelpcenter/userguide
 @dirrm share/doc/kde/HTML/en/khelpcenter/quickstart
+@dirrm share/doc/kde/HTML/en/khelpcenter/glossary
 @dirrm share/doc/kde/HTML/en/khelpcenter/faq
 @dirrm share/doc/kde/HTML/en/khelpcenter
 @dirrm share/doc/kde/HTML/en/kdm
 @dirrm share/doc/kde/HTML/en/kdesu
+@dirrm share/doc/kde/HTML/en/kdeprint
 @dirrm share/doc/kde/HTML/en/kdebugdialog
 @dirrm share/doc/kde/HTML/en/kcontrol
-@comment kdelibs:dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/en/kate
+@dirrm share/doc/kde/HTML/en/kaddressbook
 @dirrm share/autostart
-@comment kdelibs:dirrm lib/kde2
 @dirrm include/kwin
+@dirrm include/kate

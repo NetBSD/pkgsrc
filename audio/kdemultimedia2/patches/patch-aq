@@ -1,52 +1,13 @@
-$NetBSD: patch-aq,v 1.2 2001/04/19 06:47:00 skrll Exp $
+$NetBSD: patch-aq,v 1.3 2001/10/15 22:45:56 skrll Exp $
 
---- kscd/config.h.std.orig	Wed Aug 23 06:31:58 2000
-+++ kscd/config.h.std
-@@ -120,18 +120,24 @@
- 
- /*************************************************************************
-  *
-- *	FreeBSD/NetBSD
-+ *	NetBSD
-  *
-  *************************************************************************/
- 
--#if defined(__FreeBSD__) || defined(__NetBSD__)
--
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__)
- 
- /* Is this the most commonly used cd device on FreeBSD ? */
- #define DEFAULT_CD_DEVICE       "/dev/rmatcd0c"
- 
--#else /* __NetBSD__ */
-+#endif
-+
-+/*************************************************************************
-+ *
-+ *	NetBSD
-+ *
-+ *************************************************************************/
-+
-+#if defined(__NetBSD__)
- 
- /* The raw partition on disk device is *d on i386, *c on everything else */
- #ifdef __i386__
-@@ -140,7 +146,7 @@
- #define DEFAULT_CD_DEVICE       "/dev/rcd0c"
- #endif
- 
--#endif /* __FreeBSD__ */
-+#endif /* __NetBSD__ */
- 
- /* Please have a look at void KSCD::playClicked() in kscd.cpp. You will find
-    there the following code:
-@@ -154,8 +160,6 @@
- Try either one there ( THAT IS IN kscd.cpp NOT HERE ), and tell me which version 
- works for you. -- thanks !
- */
--
--#endif
- 
- 
- /*************************************************************************
+--- mpeglib/lib/util/audio/Makefile.in.orig	Sun Sep  9 06:07:41 2001
++++ mpeglib/lib/util/audio/Makefile.in
+@@ -293,7 +293,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
+-libaudio_la_LDFLAGS = 
++libaudio_la_LDFLAGS = $(LIBOSSAUDIO)
+ libaudio_la_LIBADD = 
+ #>- libaudio_la_OBJECTS =  audioIO.lo dspWrapper.lo
+ #>+ 4

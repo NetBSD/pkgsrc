@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:05:49 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/15 22:45:58 skrll Exp $
 
---- khexedit/chartabledialog.cc.orig	Mon Jul 10 19:41:46 2000
-+++ khexedit/chartabledialog.cc
-@@ -18,7 +18,7 @@
-  *
-  */
+--- kdf/kwikdisk.h.orig	Sat Dec 23 14:29:09 2000
++++ kdf/kwikdisk.h
+@@ -106,7 +106,7 @@
+     void updateDF( void );
+     void updateDFDone( void );
+     void setUpdateFrequency( int frequency );
+-    void sysCallError(DiskEntry *disk, int errno);
++    void sysCallError(DiskEntry *disk, int err_no);
  
--#include <values.h>
-+#include <limits.h>
- 
- #include <qlabel.h>
- #include <qframe.h>
-@@ -75,7 +75,7 @@
- 
-   mInputCountSpin = new QSpinBox( plainPage(), "spin" );
-   mInputCountSpin->setMinimumWidth( fontMetrics().maxWidth()*7 );
--  mInputCountSpin->setRange( 1, MAXINT );
-+  mInputCountSpin->setRange( 1, INT_MAX );
-   mInputCountSpin->setValue( 1 );
-   hbox->addWidget( mInputCountSpin );
- 
+   protected:
+     void mousePressEvent(QMouseEvent *);

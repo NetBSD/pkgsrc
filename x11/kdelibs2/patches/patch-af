@@ -1,45 +1,25 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/03/14 15:59:48 skrll Exp $
+$NetBSD: patch-af,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kdecore/kapp.cpp.orig	Thu Feb 22 18:12:55 2001
-+++ kdecore/kapp.cpp
-@@ -1433,18 +1433,18 @@
-             setStyle(pKStyle);
-         }
-         else{
--            lt_ptr_t alloc_func;
-+            lt_ptr alloc_func;
-             if (styleStr.find("basicstyle.la",0,false)==-1)
--                alloc_func=lt_dlsym(styleHandle,"allocate");
-+                alloc_func=lt_dlsym((lt_dlhandle)styleHandle,"allocate");
-             else
--                alloc_func= lt_dlsym(styleHandle,"allocateCustomTheme");
-+                alloc_func= lt_dlsym((lt_dlhandle)styleHandle,"allocateCustomTheme");
+--- configure.orig	Wed Sep 12 06:10:21 2001
++++ configure
+@@ -6211,9 +6211,10 @@
+   x_libraries="/usr/lib";  else
+   x_libraries=$kde_x_libraries
+   X_LDFLAGS="-L$x_libraries"
++  X_WLRFLAGS="-Wl,-R$x_libraries"
+ fi
+ all_includes="$X_INCLUDES"
+-all_libraries="$X_LDFLAGS"
++all_libraries="$X_LDFLAGS $X_WLRFLAGS"
  
-             if(!alloc_func){
- 	        kdWarning() << "Unable to init style plugin " << styleStr
- 		                      << "(" << lt_dlerror() << ")\n";
-                 pKStyle = new KDEStyle;
-                 setStyle(pKStyle);
--                lt_dlclose(styleHandle);
-+                lt_dlclose((lt_dlhandle)styleHandle);
-                 styleHandle = 0;
-             }
-             else{
-@@ -1467,7 +1467,7 @@
-                     kdWarning() << "Style plugin unable to allocate style.\n";
-                     pKStyle = new KDEStyle;
-                     setStyle(pKStyle);
--                    lt_dlclose(styleHandle);
-+                    lt_dlclose((lt_dlhandle)styleHandle);
-                     styleHandle = 0;
-                 }
-             }
-@@ -1480,7 +1480,7 @@
-     }
  
-     if(oldHandle){
--        lt_dlclose((lt_dlhandle*)oldHandle);
-+        lt_dlclose((lt_dlhandle)oldHandle);
-     }
-     if(pKStyle)
-         connect(pKStyle, SIGNAL(destroyed()), SLOT(kstyleDestroyed()));
+ 
+@@ -6889,7 +6890,7 @@
+ ac_link='${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cxx_cross
+ 
+-ac_link='rm -rf SunWS_cache; ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
++ac_link='rm -rf SunWS_cache; ${LIBTOOL_SHELL} --tag=CXX --mode=link ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ 
+ 
+ 
