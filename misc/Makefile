@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1997/10/24 01:33:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1997/10/27 02:04:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 #
 
@@ -8,11 +8,11 @@
     SUBDIR += cal
     SUBDIR += chord
     SUBDIR += colorls
-#    SUBDIR += ctk		# needs ncurses - HF
+#    SUBDIR += ctk		# broken w/ tcl/tk V8.0 - HF
 #    SUBDIR += dejagnu		# needs expect - HF
     SUBDIR += dotfile
 #    SUBDIR += ecc		# broken - HF
-#    SUBDIR += estic		# needs unzip - HF
+#    SUBDIR += estic		# left for someone w/ an Istec - HF
     SUBDIR += fd
     SUBDIR += fep
     SUBDIR += figlet
@@ -20,38 +20,38 @@
     SUBDIR += gnuls
 #    SUBDIR += ical		# broken w/ tcl/tk V8.0 - HF
     SUBDIR += jive
-#    SUBDIR += kp		# path of wish8.0 - how? - HF
-#    SUBDIR += less
+    SUBDIR += kp
+    SUBDIR += less
     SUBDIR += libutf
-#    SUBDIR += lile
-#    SUBDIR += logsurfer
-#    SUBDIR += mc
+    SUBDIR += lile
+    SUBDIR += logsurfer
+    SUBDIR += mc
 #    SUBDIR += mmv
-#    SUBDIR += most
-#    SUBDIR += mshell
-#    SUBDIR += nwrite
-#    SUBDIR += p5-Array-PrintCols
-#    SUBDIR += p5-Business-CreditCard
-#    SUBDIR += p5-Locale-Codes
-#    SUBDIR += p5-Search
-#    SUBDIR += plan
+    SUBDIR += most
+    SUBDIR += mshell		# displays nothing, needs debugging - HF
+    SUBDIR += nwrite
+    SUBDIR += p5-Array-PrintCols
+    SUBDIR += p5-Business-CreditCard
+    SUBDIR += p5-Locale-Codes
+    SUBDIR += p5-Search
+#    SUBDIR += plan		# requires Motif/Lesstif - HF
     SUBDIR += rpm
     SUBDIR += screen
-#    SUBDIR += splitvt
+    SUBDIR += splitvt
     SUBDIR += team
-#    SUBDIR += tkcron
-#    SUBDIR += tkinfo
-#    SUBDIR += tkman
-#    SUBDIR += unclutter
-#    SUBDIR += viz
+    SUBDIR += tkcron
+    SUBDIR += tkinfo
+#    SUBDIR += tkman		# needs rman, glimpse - HF
+    SUBDIR += unclutter
+    SUBDIR += viz
 #    SUBDIR += xcalendar
-#    SUBDIR += xgas
-#    SUBDIR += xless
-#    SUBDIR += xmaddressbook
-#    SUBDIR += xopps
-#    SUBDIR += xpns
-#    SUBDIR += xtar
-#    SUBDIR += xtimer
-#    SUBDIR += zorro
+    SUBDIR += xgas
+    SUBDIR += xless
+#    SUBDIR += xmaddressbook	# needs Motif/Lesstif - HF
+#    SUBDIR += xopps		# needs Motif/Lesstif - HF
+    SUBDIR += xpns
+#    SUBDIR += xtar		# needs Motif/Lesstif - HF
+    SUBDIR += xtimer
+    SUBDIR += zorro
 
 .include <bsd.port.subdir.mk>
