@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/06/27 20:28:53 kristerw Exp $
+
+--- makefile.orig	Sun Jun 27 21:49:38 2004
++++ makefile	Sun Jun 27 21:51:54 2004
+@@ -71,7 +71,7 @@
+ 
+ REP=$(shell pwd)
+ ARCHIVE=$(shell basename $(REP))
+-LIBS=-lpthread
++LIBS=-Wl,-R${LOCALBASE}/lib -lpthread
+ 
+ all: test_emul 7z
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/27 20:28:53 kristerw Exp $
 #
 
 DISTNAME=		p7zip_0.80
@@ -12,13 +12,18 @@ HOMEPAGE=		http://p7zip.sourceforge.net/
 COMMENT=		File archiver with high compression
 
 USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 MAKEFILE=		makefile
 NO_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
+PTHREAD_OPTS+=		require
+
+GCC_REQD=		3.0
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/7z ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/p7zip
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
