@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5959 2004/05/15 16:42:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.5960 2004/05/15 16:52:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-applets to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome2-media to 2.6.2 [jmmv 2004-05-15]
 	Updated gnome-session to 2.6.1 [jmmv 2004-05-15]
+	Updated nautilus-cd-burner to 2.6.1 [jmmv 2004-05-15]
