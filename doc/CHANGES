@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6505 2004/07/08 19:45:22 erh Exp $
+$NetBSD: CHANGES,v 1.6506 2004/07/08 20:37:53 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Date-Business-1.2 [erh 2004-07-08]
 	Added p5-DBIWrapper-0.20 [erh 2004-07-08]
 	Added p5-HTMLObject-2.22 [erh 2004-07-08]
+	Update hylafax to 4.1.8nb3 [heinz 2004-07-08]
