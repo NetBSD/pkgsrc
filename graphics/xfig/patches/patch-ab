@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 1999/01/05 21:37:55 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 2000/06/22 08:18:08 itohy Exp $
 
---- w_help.c-orig	Tue Jun 16 18:06:43 1998
-+++ w_help.c	Tue Jan  5 21:41:46 1999
-@@ -33,13 +33,13 @@
- 	char filename[PATH_MAX];
+--- w_help.c.orig	Wed Jan 19 10:36:32 2000
++++ w_help.c	Thu Jun 22 00:49:54 2000
+@@ -44,13 +44,13 @@
+ 	int pid;
  
  	/* first check if at least the index file is installed */
 -	sprintf(filename, "%s/html/index.html", XFIGLIBDIR);
@@ -20,36 +20,21 @@ $NetBSD: patch-ab,v 1.1 1999/01/05 21:37:55 frueauf Exp $
  	}
  #endif
  	if (!check_docfile(filename))
-@@ -63,13 +63,13 @@
- 	int pid;
+@@ -64,7 +64,7 @@
+     XtPointer closure;
+     XtPointer call_data;
+ {
+-	sprintf(filename,"%s/xfig-howto.pdf",XFIGLIBDIR);
++	sprintf(filename,"%s/xfig-howto.pdf",XFIGDOCDIR);
+ 	launch_viewer(filename,"Launching PDF viewer for How-to Tutorial", appres.pdf_viewer);
+ }
  
- 	/* first check if the file is installed */
--	sprintf(cmd,"%s/xfig-howto.pdf",XFIGLIBDIR);
-+	sprintf(cmd,"%s/xfig-howto.pdf",XFIGDOCDIR);
- 	if (!check_docfile(cmd))
- 		return;
- 	pid = fork();
- 	if (pid == 0) {
- 	    /* child process launches pdf viewer */
--	    sprintf(cmd,"%s %s/xfig-howto.pdf &",appres.pdf_viewer,XFIGLIBDIR);
-+	    sprintf(cmd,"%s %s/xfig-howto.pdf &",appres.pdf_viewer,XFIGDOCDIR);
- 	    system(cmd);
- 	    exit(0);
- 	}
-@@ -84,14 +84,14 @@
- 	int pid;
+@@ -74,7 +74,7 @@
+     XtPointer closure;
+     XtPointer call_data;
+ {
+-	sprintf(filename,"%s/xfig.html",XFIGLIBDIR);
++	sprintf(filename,"%s/xfig.html",XFIGDOCDIR);
+ 	launch_viewer(filename,"Launching Web browser for man pages", appres.browser);
+ }
  
- 	/* first check if the file is installed */
--	sprintf(cmd,"%s/xfig.pdf",XFIGLIBDIR);
-+	sprintf(cmd,"%s/xfig.pdf",XFIGDOCDIR);
- 	if (!check_docfile(cmd))
- 		return;
- 	put_msg("Launching %s for man pages",appres.pdf_viewer);
- 	pid = fork();
- 	if (pid == 0) {
- 	    /* child process launches pdf viewer */
--	    sprintf(cmd,"%s %s/xfig.pdf &",appres.pdf_viewer,XFIGLIBDIR);
-+	    sprintf(cmd,"%s %s/xfig.pdf &",appres.pdf_viewer,XFIGDOCDIR);
- 	    system(cmd);
- 	    exit(0);
- 	}

@@ -1,28 +1,20 @@
-$NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 2000/06/22 08:18:08 itohy Exp $
 
---- Imakefile.orig	Thu Jul  2 19:37:09 1998
-+++ Imakefile	Tue Jan  5 21:40:08 1999
-@@ -40,7 +40,8 @@
+--- Imakefile.orig	Fri Jan 14 12:25:09 2000
++++ Imakefile	Thu Jun 22 07:15:59 2000
+@@ -40,8 +40,8 @@
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
+-JPEGINCDIR = /usr/include/X11
 +JPEGLIBDIR = $(LOCALBASE)/lib
-+JPEGINCDIR = -I$(LOCALBASE)/include
++JPEGINCDIR = $(LOCALBASE)/include
  #else
  JPEGLIBDIR = ../jpeg
- #endif
-@@ -54,7 +55,7 @@
- XCOMM Uncomment the following definition for XAWLIB if you want to use
- XCOMM the 3d Athena Widget Set (highly recommended!)
- 
--XCOMM XAWLIB = -lXaw3d
-+XAWLIB = -lXaw3d
- 
- XCOMM Uncomment the following if needed for DECstations running older X11R4
- XCOMM INCROOT=/usr/include/mit
-@@ -70,12 +71,12 @@
- XCOMM Change XPMLIBS if necessary to point to the xpm library (libXpm)
+ JPEGINCDIR = $(JPEGLIBDIR)
+@@ -59,12 +59,12 @@
+ XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
  XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
  
 -XCOMM #define USEXPM
@@ -32,12 +24,30 @@ $NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
  
  #ifdef USEXPM
  XPMLIBDIR = $(USRLIBDIR)
--XPMINC = -I$(INCDIR)
+-XPMINC = -I/usr/include/X11
 +XPMINC = -I$(INCDIR)/X11
- XPMLIBS = -L$(XPMLIBDIR) -lXpm
  #endif
  
-@@ -101,7 +102,7 @@
+ XCOMM Uncomment the following definiton if you want to use the small icons
+@@ -75,7 +75,7 @@
+ XCOMM Uncomment the following definition for XAW3D if you want to use
+ XCOMM the 3d Athena Widget Set (highly recommended!)
+ 
+-#define XAW3D
++XCOMM #define XAW3D
+ #ifdef XAW3D
+ DUSEXAW3D = -DXAW3D
+ XAWLIB = -lXaw3d
+@@ -99,7 +99,7 @@
+ XCOMM Uncomment the next line if you want use Japanese (i18n) on xfig.
+ XCOMM If your setlocale() dosen't support the locale, you should
+ XCOMM add -DSETLOCALE to I18N_DEFS.
+-XCOMM #define I18N
++#define I18N
+ 
+ XCOMM If using an input tablet uncomment the following
+ 
+@@ -110,7 +110,7 @@
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -46,7 +56,7 @@ $NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
-@@ -110,6 +111,8 @@
+@@ -119,6 +119,8 @@
  XCOMM use this if you want the multi-key data base file in the standard X11 tree
  XFIGLIBDIR = $(LIBDIR)/xfig
  
@@ -55,17 +65,16 @@ $NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
  XCOMM If your system doesn't have strstr undefine the following definition
  XCOMM HAVE_NO_NOSTRSTR = -DNOSTRSTR
  
-@@ -169,8 +172,7 @@
+@@ -179,7 +181,7 @@
+ JPEGINC = -I$(JPEGINCDIR)
  
- #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
--JPEGINCDIR = -I/usr/include/X11
 -JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
 +JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
  #else
  JPEGCONF = configure
- JPEGINCDIR = -I$(JPEGLIBDIR)
-@@ -185,7 +187,7 @@
+ JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
+@@ -194,7 +196,7 @@
  I18N_OBJ = w_i18n.o
  #endif
  
@@ -74,40 +83,49 @@ $NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
  
  XCOMM location of Fig object libraries
  OBJLIBDIR =		$(XFIGLIBDIR)/Libraries
-@@ -314,22 +316,23 @@
- 
- XCOMM Install the object libraries here
- install::
--	@echo Copying PDF documentation to $(XFIGLIBDIR)
-+	@echo Copying PDF documentation to $(XFIGDOCDIR)
+@@ -336,21 +338,22 @@
+ 	@make install.jhtml
+ #endif
  	@(cd Doc ; \
+-	echo Copying pdf and html files to $(XFIGLIBDIR) ; \
+-	$(INSTALL) -c xfig.html $(XFIGLIBDIR) ; \
 -	$(INSTALL) -c xfig-howto.pdf $(XFIGLIBDIR) ; \
--	$(INSTALL) -c xfig.pdf $(XFIGLIBDIR) ; \
--	echo Copying html files to $(XFIGLIBDIR)/html ; \
 -	if [ -d $(XFIGLIBDIR)/html ]; then set +x; \
 -	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html ); fi ; \
--	(cd html ; $(INSTALL) -c *.* $(XFIGLIBDIR)/html ; ) ;\
-+	/bin/mkdir -p $(XFIGDOCDIR); \
++	echo Copying pdf and html files to $(XFIGDOCDIR) ; \
++	$(MKDIRHIER) $(XFIGDOCDIR) ; \
++	$(INSTALL) -c xfig.html $(XFIGDOCDIR) ; \
 +	$(INSTALL) -c xfig-howto.pdf $(XFIGDOCDIR) ; \
-+	$(INSTALL) -c xfig.pdf $(XFIGDOCDIR) ; \
-+	echo Copying html files to $(XFIGDOCDIR)/html ; \
 +	if [ -d $(XFIGDOCDIR)/html ]; then set +x; \
 +	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html ); fi ; \
-+	(cd html ; $(INSTALL) -c *.* $(XFIGDOCDIR)/html ; ) ;\
- 	echo "  Copying japanese html files" ; \
--	if [ -d $(XFIGLIBDIR)/html/japanese ]; then set +x; \
--	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/japanese ); fi ; \
--	(cd html/japanese ; $(INSTALL) -c * $(XFIGLIBDIR)/html/japanese ; ) ; \
-+	if [ -d $(XFIGDOCDIR)/html/japanese ]; then set +x; \
-+	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/japanese ); fi ; \
-+	(cd html/japanese ; $(INSTALL) -c * $(XFIGDOCDIR)/html/japanese ; ) ; \
+ 	(cd html ; \
+ 	   for f in *.* ; do \
+-	      $(INSTALL) -c $$f $(XFIGLIBDIR)/html ; \
++	      $(INSTALL) -c $$f $(XFIGDOCDIR)/html ; \
+ 	   done) ; \
  	echo "  Copying image files for html" ; \
 -	if [ -d $(XFIGLIBDIR)/html/images ]; then set +x; \
 -	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/images ); fi ; \
--	(cd html/images ; $(INSTALL) -c * $(XFIGLIBDIR)/html/images ; ) ; \
 +	if [ -d $(XFIGDOCDIR)/html/images ]; then set +x; \
 +	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/images ); fi ; \
-+	(cd html/images ; $(INSTALL) -c * $(XFIGDOCDIR)/html/images ; ) ; \
+ 	(cd html/images ; \
+ 	   for f in * ; do \
+-	       $(INSTALL) -c $$f $(XFIGLIBDIR)/html/images ; \
++	       $(INSTALL) -c $$f $(XFIGDOCDIR)/html/images ; \
+ 	   done) ; \
  	) ;
- 	@echo "Copying Fig Object Libraries"
- 	@(cd Examples/Libraries ; \
+ 
+@@ -358,10 +361,10 @@
+ install.jhtml::
+ 	@echo "Copying japanese html files"
+ 	@(cd Doc/html/japanese ; \
+-	if [ -d $(XFIGLIBDIR)/html/japanese ]; then set +x; \
+-	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/japanese ); fi ; \
++	if [ -d $(XFIGDOCDIR)/html/japanese ]; then set +x; \
++	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/japanese ); fi ; \
+ 	for f in * ; do \
+-	      $(INSTALL) -c $$f $(XFIGLIBDIR)/html/japanese ; \
++	      $(INSTALL) -c $$f $(XFIGDOCDIR)/html/japanese ; \
+ 	done) ;
+ #endif
+ 
