@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.19 2004/11/17 17:14:43 tv Exp $
+# $NetBSD: ccache.mk,v 1.20 2004/11/17 17:18:33 tv Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -34,6 +34,7 @@ _USE_CCACHE=	YES
 .if !empty(_USE_CCACHE:M[yY][eE][sS])
 EVAL_PREFIX+=		_CCACHEBASE=ccache
 _CCACHEBASE_DEFAULT=	${LOCALBASE}
+_CCACHEBASE?=		${LOCALBASE}
 
 _CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_LINKS=	# empty
