@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/28 23:10:10 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/11 05:29:55 jlam Exp $
 bin/bmp2tiff
 bin/fax2ps
 bin/fax2tiff
@@ -27,6 +27,7 @@ include/tiffio.h
 include/tiffio.hxx
 include/tiffvers.h
 lib/libtiff.la
+lib/libtiffcxx.la
 man/man1/bmp2tiff.1
 man/man1/fax2ps.1
 man/man1/fax2tiff.1
