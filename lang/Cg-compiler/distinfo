@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/18 21:12:50 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/11/25 19:40:34 minskim Exp $
 
-SHA1 (Cg-1.2.1-Linux.tar.gz) = 5af8228778c7f3549e43a23a224806fb33c62b27
-Size (Cg-1.2.1-Linux.tar.gz) = 4186931 bytes
+SHA1 (CgLinux-1.3.0408-0400.tar.gz) = 56adb5f8e9859f422e21a6f71d0dc832c7e0fb69
+Size (CgLinux-1.3.0408-0400.tar.gz) = 4901909 bytes
