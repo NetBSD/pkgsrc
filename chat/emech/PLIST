@@ -1,0 +1,5 @@
+bin/mech
+bin/genuser
+share/example/emech/sample.set
+share/example/emech/mech.help
+@dirrm share/example/emech
