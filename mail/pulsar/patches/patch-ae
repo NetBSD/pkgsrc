@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+
+--- support_files/Makefile.in.orig	Sun Jul  6 23:42:05 2003
++++ support_files/Makefile.in
+@@ -36,11 +36,11 @@ clean:
+ 	@rm -f ../*.rpm
+ 
+ install:
+-	${INSTALL} -m 0555 -g root -o root -d            ${sup_dir}
+-	${INSTALL} -m 0644 -g root -o root pulsar.conf   ${sup_dir}
+-	${INSTALL} -m 0555 -g root -o root pulsar.init   ${sup_dir}
+-	${INSTALL} -m 0444 -g root -o root pulsar.pamd   ${sup_dir}
+-	${INSTALL} -m 0444 -g root -o root pulsar.xinetd ${sup_dir}
++	${INSTALL} -m 0555 -d            ${sup_dir}
++	${INSTALL} -m 0644 pulsar.conf   ${sup_dir}
++	${INSTALL} -m 0555 pulsar.init   ${sup_dir}
++	${INSTALL} -m 0444 pulsar.pamd   ${sup_dir}
++	${INSTALL} -m 0444 pulsar.xinetd ${sup_dir}
+ 
+ rpm:
+ 	@echo -en "Building RPM package:\t"
