@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1190 2003/12/14 12:04:52 markd Exp $
+$NetBSD: TODO,v 1.1191 2003/12/14 12:39:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,6 @@ Suggested package updates
 	o gnumeric-1.2.0
 	o gossip-0.6
 	o gpa-0.7.0
-	o gperiodic-2.0.7
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o grepmail-5.21
