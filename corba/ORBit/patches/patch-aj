@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 1999/03/05 00:25:10 tron Exp $
+$NetBSD: patch-aj,v 1.2 1999/03/11 20:07:57 tron Exp $
 
 --- src/IIOP/Makefile.in.orig	Thu Feb 25 16:17:16 1999
-+++ src/IIOP/Makefile.in	Fri Mar  5 00:29:31 1999
++++ src/IIOP/Makefile.in	Thu Mar 11 21:02:03 1999
 @@ -90,9 +90,7 @@
  VERSION = @VERSION@
  YACC = @YACC@
@@ -13,3 +13,15 @@ $NetBSD: patch-aj,v 1.1 1999/03/05 00:25:10 tron Exp $
  
  libIIOPincludedir = $(includedir)/IIOP
  
+@@ -123,10 +121,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-@HAVE_HOSTS_ACCESS_TRUE@libIIOP_la_DEPENDENCIES =  $(addsuffix .lo, \
+-@HAVE_HOSTS_ACCESS_TRUE@$(basename $(filter %.o, $(shell ar t \
+-@HAVE_HOSTS_ACCESS_TRUE@$(LIBWRAP_PATH)))))
+-@HAVE_HOSTS_ACCESS_FALSE@libIIOP_la_DEPENDENCIES = 
++libIIOP_la_DEPENDENCIES = 
+ libIIOP_la_OBJECTS =  connection.lo encoders.lo giop-msg-buffer.lo \
+ iiop-endian.lo
+ CFLAGS = @CFLAGS@
