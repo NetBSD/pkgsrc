@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6276 2004/06/22 13:50:21 grant Exp $
+$NetBSD: CHANGES,v 1.6277 2004/06/22 14:06:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3020,3 +3020,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Device-Modem to 1.36 [grant 2004-06-22]
 	Updated file to 4.09 [grant 2004-06-22]
 	Updated p5-Device-Gsm to 1.33 [grant 2004-06-22]
+	Updated bash2 to 2.05.2.7nb2 [minskim 2004-06-22]
