@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/01 13:36:56 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/05 18:39:10 wiz Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
@@ -23,7 +23,7 @@ post-patch:
 	for dir in bitmap image; do \
 		for sub in block explosion misc score sprite; do \
 			${MV} ${WRKSRC}/$$dir/$$sub/Imakefile ${WRKSRC}/$$dir/$$sub/foo; \
-			${SED} -e 's|XBLASTDIR=.*/xblast|XBLASTDIR=$(PREFIX)/share/xblast|' <${WRKSRC}/$$dir/$$sub/foo>${WRKSRC}/$$dir/$$sub/Imakefile; \
+			${SED} -e 's|XBLASTDIR=.*/xblast|XBLASTDIR=${PREFIX}/share/xblast|' <${WRKSRC}/$$dir/$$sub/foo>${WRKSRC}/$$dir/$$sub/Imakefile; \
 			${RM} ${WRKSRC}/$$dir/$$sub/foo; \
 		done; \
 	done
