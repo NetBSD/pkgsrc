@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2001/05/24 02:58:30 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2001/10/23 09:55:47 jlam Exp $
 
 --- configure.in.orig	Tue Aug  8 15:19:32 2000
 +++ configure.in
@@ -8,8 +8,8 @@ $NetBSD: patch-ad,v 1.1 2001/05/24 02:58:30 jlam Exp $
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
 +elif test "${TCL_LD_SEARCH_FLAGS}" = '-R${LIB_RUNTIME_DIR}'; then
 +    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -R/g'`
-+elif test "${TCL_LD_SEARCH_FLAGS}" = '-Wl,-rpath,${LIB_RUNTIME_DIR}'; then
-+    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -Wl,-rpath,/g'`
++elif test "${TCL_LD_SEARCH_FLAGS}" = '-Wl,-R${LIB_RUNTIME_DIR}'; then
++    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -Wl,-R/g'`
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
