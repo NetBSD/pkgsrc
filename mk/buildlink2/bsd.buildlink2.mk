@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.53 2002/11/20 22:34:35 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.54 2002/11/21 00:21:11 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -857,6 +857,7 @@ buildlink-check:
 # scripts to think that they can't be found.
 #
 AUTOMAKE_OVERRIDE?=	NO
+_GNU_MISSING=		${.CURDIR}/../../mk/gnu-config/missing
 _HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
 			bin/autoheader	bin/autoheader-2.13		\
 			bin/autom4te					\
@@ -876,18 +877,16 @@ _HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
 do-buildlink: hide-autotools
 hide-autotools:	# empty
 
-${BUILDLINK_DIR}/bin/.gnu_missing:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "#!${SH}" > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "exit 1" >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-
 .for _autotool_ in autoconf automake
 hide-autotools: hide-${_autotool_}
 .  for _prog_ in ${_HIDE_PROGS.${_autotool_}}
 hide-${_autotool_}: ${BUILDLINK_DIR}/${_prog_}
-${BUILDLINK_DIR}/${_prog_}: ${BUILDLINK_DIR}/bin/.gnu_missing
+${BUILDLINK_DIR}/${_prog_}: ${_GNU_MISSING}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} ${.ALLSRC} ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "exec ${_GNU_MISSING} ${_prog_:T:C/-[0-9].*$//}" >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  endfor
 .endfor
