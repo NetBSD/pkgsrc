@@ -1,21 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2000/04/02 16:07:05 pooka Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/31 02:41:08 mycroft Exp $
 
-*** drivers/drv_sun.c.orig	Tue Feb 15 00:10:21 2000
---- drivers/drv_sun.c	Sun Apr  2 15:18:28 2000
-***************
-*** 61,67 ****
-  #include <sys/audioio.h>
-  #endif
-  
-! #define DEFAULT_FRAGSIZE 12
-  
-  #if !defined __NetBSD__  && !defined __OpenBSD__
-  #ifdef HAVE_SUN_AUDIOIO_H
---- 61,67 ----
-  #include <sys/audioio.h>
-  #endif
-  
-! #define DEFAULT_FRAGSIZE 13
-  
-  #if !defined __NetBSD__  && !defined __OpenBSD__
-  #ifdef HAVE_SUN_AUDIOIO_H
+--- drivers/drv_sun.c.orig	Mon Feb 14 22:10:21 2000
++++ drivers/drv_sun.c	Sat Mar 31 02:39:24 2001
+@@ -61,7 +61,7 @@
+ #include <sys/audioio.h>
+ #endif
+ 
+-#define DEFAULT_FRAGSIZE 12
++#define DEFAULT_FRAGSIZE 13
+ 
+ #if !defined __NetBSD__  && !defined __OpenBSD__
+ #ifdef HAVE_SUN_AUDIOIO_H
+@@ -72,7 +72,7 @@
+ #endif
+ 
+ /* Sound device to open */
+-#ifdef SUNOS4
++#if defined SUNOS4 || defined __NetBSD__
+ #define SOUNDDEVICE "/dev/sound"
+ #else /* Solaris, *BSD */
+ #define SOUNDDEVICE "/dev/audio"
