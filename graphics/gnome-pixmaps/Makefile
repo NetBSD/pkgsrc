@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/15 05:40:42 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/15 05:58:57 rh Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -11,8 +11,10 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Pixmaps for gnome-core
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFLICTS=		gnome-core<1.4.2
-.if (${LOCALBASE} == ${X11BASE})
+.if (${LOCALBASE} == ${X11PREFIX})
 CONFLICTS+=		gnome2-pixmaps-[0-9]*
 .endif
 
