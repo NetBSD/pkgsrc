@@ -5,9 +5,9 @@ clock_t
 
 cc
 @CFLAGS@
--I${PREFIX}/include -I${URTDIR}/include
+-I${PREFIX}/include -I${LOCALBASE}/include
 
-${URTDIR}
+${LOCALBASE}/include
 ${PREFIX}/lib/librle.a
 drand48
 11
