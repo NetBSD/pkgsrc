@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/12 08:57:37 zuntum Exp $
+
+--- Makefile.orig	Thu Feb  8 19:27:43 2001
++++ Makefile
+@@ -1,8 +1,6 @@
+-DEBUG = #-g
+-GLIBS = -L/usr/X11/lib \
+-	-I$(QTDIR)/include -L$(QTDIR)/lib\
+-	-lqt -lX11 -lXext 
+-INSTALL = /usr/games/
++LIBS =	-L@X11BASE@/lib -Wl,-R@X11BASE@/lib -L@X11BASE@/qt2/lib -Wl,-R@X11BASE@/qt2/lib \
++	-I@X11BASE@/qt2/include -L@LOCALBASE@/lib -Wl,-R@LOCALBASE@/lib -I@LOCALBASE@/include \
++	-lqt -lX11 -lXext -lpng
+ # obrazki w $(INSTALL)/images
+ #
+ #GLIBS= -L/mnt/sys2/xlib -lm -lX11 -lXext /usr/X11R6/lib/libqt.a \
+@@ -10,18 +8,17 @@
+ #	 /usr/X11R6/lib/libkfm.la /usr/X11R6/lib/libkfile.la \
+ #	  /usr/X11R6/lib/libkfm.la /usr/lib/libpng.a \
+ #	  /usr/lib/libjpeg.a 
+-GINCLUDE = -I$(QTDIR)/include
+-CFLAGS =  -Wall -pipe -O2 -DINSTALL=\"$(INSTALL)/kulki_dir\"
+ 
+ .SUFFIXES:
+ %moc.moc: %.h
+-	moc $< -o `basename $< .h`moc.moc
++	$(MOC) $< -o `basename $< .h`moc.moc
+ 
+ %.cc: %.moc
+-	cp `basename $< .moc`.moc  `basename $< .moc`.cc
++	$(CP) `basename $< .moc`.moc  `basename $< .moc`.cc
+ 
+ %.o: %.cc
+-	g++ $(CFLAGS) $(DEBUG) $(GINCLUDE) -c $<
++	$(CXX) $(CXXFLAGS) -DINSTALL=\"@PREFIX@/share/kulki\" -L@X11BASE@/lib -L@X11BASE@/qt2/lib -I@X11BASE@/include \
++		-I@X11BASE@/qt2/include -c $<
+ 
+ 	
+ GOB = main.o main_window.o szcanvas.o szsprite.o hscor.o 
+@@ -30,7 +27,7 @@
+ all: gui kulki
+ 
+ kulki: gui
+-	g++ $(MOB) $(LOB) $(GLIBS) $(GOB) -o kulki && strip kulki
++	$(CXX) $(MOB) $(LOB) $(LIBS) $(GOB) -o kulki
+ 	
+ gui: $(MOB) $(GOB)
+ 
