@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.2 2001/08/10 23:17:22 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2002/10/02 05:28:36 uebayasi Exp $
 
 SHA1 (vmware-netbsd-1.0.tgz) = ea3ec59de0bab2ecd57aedbff0ade54f88f84ae2
 Size (vmware-netbsd-1.0.tgz) = 93286 bytes
 SHA1 (patch-aa) = dc008ea571bb2fd15be77a3bd39bfdecf9f1f243
 SHA1 (patch-ab) = 2ff6e47f7e57c56ac026749e579bf4ebe0d8ac6f
 SHA1 (patch-ac) = 528dab24b0daebb97fcfd911d9abe0c60804351a
-SHA1 (patch-ad) = b04cb3a5422fbe5f97c9f5998272b9c7e2c64e47
-SHA1 (patch-ae) = 9f4025f006228505d14d241e2a89be291105e7f4
+SHA1 (patch-ad) = d027b3f5b9e25309ecac585d5b27c815a83ace86
+SHA1 (patch-ae) = ae83d79b8f2ad4f211e1d1fb26b05df6405f4e6a
+SHA1 (patch-af) = f9a5d00028faa5d30a9a19cd92b18eb825327aeb
+SHA1 (patch-ag) = 14dd7c64d9c0644f1173110b4330e39553ca806f
+SHA1 (patch-ah) = 9c0fb3cefb0fc971b4eaeaf6a6ec2f458fe837f7
+SHA1 (patch-ai) = c3ef59e2c749d3eb910996eeae3c7785653a8f92

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
+$NetBSD: patch-ad,v 1.3 2002/10/02 05:28:36 uebayasi Exp $
 
 --- source/vmnet/if_hubvar.h	Tue Apr  3 00:57:57 2001
 +++ source/vmnet/if_hubvar.h	Sun Jun 10 11:35:34 2001
@@ -14,7 +14,19 @@ $NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
 +#endif
 --- source/vmnet/if_hubmod.c	Tue Apr  3 22:51:19 2001
 +++ source/vmnet/if_hubmod.c	Sat Jun 23 23:56:58 2001
-@@ -141,10 +141,19 @@
+@@ -128,7 +128,11 @@
+ static struct hubdev_softc *hub_scs[MAXHUBDEVS];
+ 
+ 
++#if __NetBSD_Version__ >= 106080000
++MOD_DEV("vmnet", "vmnet", NULL, -1, &hub_dev, -1)
++#else
+ MOD_DEV("vmnet", LM_DT_CHAR, -1, &hub_dev)
++#endif
+ 
+ int
+ if_hub_lkmentry(struct lkm_table *lkmtp, int cmd, int ver)
+@@ -141,10 +145,19 @@
  {
  	int error = 0, i, j;
  	struct hubdev_softc *sc;
@@ -34,7 +46,7 @@ $NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
  			printf("if_hub: HUBMAXPKT > MCLBYTES\n");
  			return EIO;
  		}
-@@ -496,6 +505,11 @@
+@@ -496,6 +509,11 @@
  	fp->f_type = DTYPE_VNODE;
  	fp->f_ops = &vnops;
  	fp->f_data = (caddr_t)vp;
@@ -46,7 +58,7 @@ $NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
  	FILE_UNUSE(fp, p);
  
  	p->p_dupfd = fd;
-@@ -903,6 +917,9 @@
+@@ -903,6 +921,9 @@
  	struct hubport_softc *portsc;
  	struct mbuf *m;
  	int error;
@@ -56,7 +68,7 @@ $NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
  
  	hubsc = hub_scs[HUBUNIT(dev)];
  	if (hubsc == NULL)
-@@ -917,7 +934,12 @@
+@@ -917,7 +938,12 @@
  	if (uio->uio_resid == 0)
  		return (0);
  

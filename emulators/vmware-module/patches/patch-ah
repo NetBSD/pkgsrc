@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2002/10/02 05:28:38 uebayasi Exp $
+
+--- share/lkm/vmmon_post.sh	Thu Sep 19 23:47:20 2002
++++ share/lkm/vmmon_post.sh	Thu Sep 19 23:48:17 2002
+@@ -7,8 +7,8 @@
+ #
+ #	modload -e vmmon_lkmentry -p vmmon_post.sh vmmon.o
+ # 
+-if [ $# -ne 3 ]; then
+-    echo "$0 should only be called from modload(8) with 3 args"
++if [ $# -lt 3 ]; then
++    echo "$0: should be called by modload(8) with at least 3 arguments"
+     exit 1
+ fi
+ 
