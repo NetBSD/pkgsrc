@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 04:53:23 xtraeme Exp $
+bin/dgen
+bin/tobin
+man/man1/dgen.1
+man/man1/tobin.1
+man/man5/dgenrc.5
