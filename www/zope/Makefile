@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 1999/04/16 06:27:41 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 1999/06/19 22:48:23 tsarna Exp $
 #
 
-DISTNAME=	Zope-1.10.2-src
-PKGNAME=	zope-1.10.2
+DISTNAME=	Zope-1.10.3-src
+PKGNAME=	zope-1.10.3
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Download/Releases/Zope-1.10.2/
+MASTER_SITES=   http://www.zope.org/Download/Releases/Zope-1.10.3/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
@@ -14,7 +14,7 @@ DEPENDS+=	python-1.5.2:../../lang/python
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-ZOPEDIR=	${PREFIX}/zope
+ZOPEDIR=	${PREFIX}/lib/zope
 
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX}," \
@@ -29,11 +29,13 @@ do-install:
 	${PREFIX}/bin/python \
 		${PREFIX}/lib/python1.5/compileall.py ${ZOPEDIR}
 	chmod -R a+rX ${ZOPEDIR}
-	(cd ${PREFIX}; find zope -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; find -d zope -type d -print | \
+	(cd ${PREFIX}; find lib/zope -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; find -d lib/zope -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
 		<${FILESDIR}/zope-install.py >${PREFIX}/sbin/zope-install
-	chmod 755 ${PREFIX}/sbin/zope-install
+	${SED} -e "s,/usr/pkg,${PREFIX}," \
+		<${FILESDIR}/zope-shutdown.py >${PREFIX}/sbin/zope-shutdown
+	chmod 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
 
 .include "../../mk/bsd.pkg.mk"
