@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/02 17:27:48 tron Exp $
+bin/libgcrypt-config
+include/gcrypt.h
+@unexec ${INSTALL_INFO} --delete %D/info/gcrypt.info %D/info/dir
+info/gcrypt.info
+info/gcrypt.info-1
+info/gcrypt.info-2
+@exec ${INSTALL_INFO} %D/info/gcrypt.info %D/info/dir
+lib/libgcrypt.a
+lib/libgcrypt.la
+lib/libgcrypt.so
+lib/libgcrypt.so.6
+lib/libgcrypt.so.6.0
+share/aclocal/libgcrypt.m4
