@@ -1,0 +1,246 @@
+#! /bin/sh
+
+# $NetBSD: mksandbox,v 1.8.2.2 2002/08/21 05:19:49 jlam Exp $
+#
+#
+# Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#	This product includes software developed by Alistair G. Crooks
+#	for the NetBSD project.
+# 4. The name of the author may not be used to endorse or promote
+#    products derived from this software without specific prior written
+#    permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+# OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir
+# 
+# A small shell script to set up a sandbox (usually for a pkgsrc bulk
+# build), using null mounts.
+
+pkgsrc=/usr/pkgsrc
+src=/usr/src
+
+opsys=`uname -s`
+case "$opsys" in
+Darwin)
+	bmakeprog=bmake
+	chmodprog=/bin/chmod
+	chownprog=/usr/sbin/chown
+	cpprog=/bin/cp
+	gtarprog=/usr/bin/gnutar
+	mkdirprog="/bin/mkdir -p"
+	mountprog=/sbin/mount
+	paxprog=/bin/pax
+	sedprog=/usr/bin/sed
+	;;
+Linux)
+	bmakeprog=bmake
+	chmodprog=/bin/chmod
+	chownprog=/bin/chown
+	cpprog=/bin/cp
+	gtarprog=/bin/tar
+	mkdirprog="/bin/mkdir -p"
+	mountprog=/sbin/mount
+	paxprog=""
+	sedprog=/bin/sed
+	;;
+NetBSD)
+	bmakeprog=make
+	chmodprog=/bin/chmod
+	chownprog=/usr/sbin/chown
+	cpprog=/bin/cp
+	gtarprog=/usr/bin/tar
+	mkdirprog="/bin/mkdir -p"
+	mountprog=/sbin/mount
+	paxprog=/bin/pax
+	sedprog=/usr/bin/sed
+	;;
+SunOS)
+	bmakeprog=bmake
+	chmodprog=/usr/bin/chmod
+	chownprog=/usr/bin/chown
+	cpprog=/usr/bin/cp
+	gtarprog=""
+	mkdirprog="/usr/bin/mkdir -p"
+	mountprog=/sbin/mount
+	paxprog=/bin/pax
+	sedprog=/usr/xpg4/bin/sed
+	;;
+*)
+	echo "Unknown Operating System ($opsys) - good luck"
+	bmakeprog=bmake
+	chmodprog=chmod
+	chownprog=chown
+	cpprog=cp
+	gtarprog="tar"
+	mkdirprog="mkdir -p"
+	mountprog=mount
+	paxprog=pax
+	sedprog=sed
+	;;
+esac
+
+while [ $# -gt 0 ]; do
+	case "$1" in
+	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
+	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
+	--verbose)	set -x ;;
+	*)		break ;;
+	esac
+	shift
+done
+
+if [ $# -ne 1 ]; then
+	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir"
+	exit 1
+fi
+
+if [ `id -u` -ne 0 ]; then
+	echo "You must be root to run this script"
+	exit 1
+fi
+
+sandbox=$1
+sandbox_script="$sandbox/sandbox"
+
+packages=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PACKAGES)`
+distfiles=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=DISTDIR)`
+localbase=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALBASE)`
+pkg_dbdir=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PKG_DBDIR)`
+
+$mkdirprog $sandbox
+cat > $sandbox_script <<EOS
+#! /bin/sh -
+sandbox=$sandbox
+fses="\\
+EOS
+
+echo "Copying the kernel"
+$cpprog /netbsd $sandbox
+
+echo "Checking package hierarchy in $localbase and package database in $pkg_dbdir exist"
+$mkdirprog $sandbox/$localbase $sandbox/$pkg_dbdir
+
+echo "Make and populate $sandbox/dev"
+$mkdirprog $sandbox/dev
+$cpprog /dev/MAKEDEV* $sandbox/dev
+(cd $sandbox/dev; ./MAKEDEV all)
+
+echo "Make and populate $sandbox/etc"
+$mkdirprog $sandbox/etc
+case "$paxprog" in
+"")	(cd /etc; $gtarprog -cf - . | (cd $sandbox/etc; $gtarprog xf - )) ;;
+*)	(cd /etc; $paxprog -rwpe . $sandbox/etc) ;;
+esac
+rm -f $sandbox/etc/localtime
+$cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
+
+echo "Make empty dirs upon which to mount the null mounts"
+for d in	/bin							\
+		/sbin							\
+		/usr/X11R6						\
+		/usr/bin						\
+		/usr/games						\
+		/usr/include						\
+		/usr/lib						\
+		/usr/libdata						\
+		/usr/libexec						\
+		/usr/lkm						\
+		/usr/share						\
+		/usr/sbin						\
+		/var/mail; do						\
+	$mkdirprog $sandbox$d;						\
+	$mountprog -r -t null $d $sandbox$d;				\
+	echo "$d $d ro \\" >> $sandbox_script
+done
+
+echo "Making /tmp in $sandbox"
+$mkdirprog $sandbox/tmp $sandbox/var/tmp
+$chmodprog 1777 $sandbox/tmp $sandbox/var/tmp
+
+echo "Making /var/games in $sandbox"
+$mkdirprog $sandbox/var/games
+$chownprog games:games $sandbox/var/games
+$chmodprog 2775 $sandbox/var/games
+
+echo "Mount $src from $sandbox"
+$mkdirprog $sandbox/usr/src
+$mountprog -r -t null $src $sandbox/usr/src
+echo "$src /usr/src ro \\" >> $sandbox_script
+
+echo "Mount $pkgsrc from $sandbox"
+$mkdirprog $sandbox/usr/pkgsrc
+$mountprog -t null $pkgsrc $sandbox/usr/pkgsrc
+echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
+
+echo "Mounting $packages and $distfiles from $sandbox"
+$mkdirprog $sandbox/$packages $sandbox/$distfiles
+$mkdirprog $packages $distfiles
+$mountprog -t null $packages $sandbox/$packages
+$mountprog -t null $distfiles $sandbox/$distfiles
+echo "$packages $packages rw \\" >> $sandbox_script
+echo "$distfiles $distfiles rw \\" >> $sandbox_script
+
+cat >> $sandbox_script <<EOS
+"
+case x\$1 in
+	xmount)
+	set dummy \$fses
+	shift
+	while [ \$# -ge 3 ]; do
+		fs=\$1; shift
+		mntpoint=\$1; shift
+		rwro=\$1; shift
+		case \$rwro in
+			ro) mount -r -t null \$fs \$sandbox/\$mntpoint || exit 1 ;;
+			rw) mount -t null \$fs \$sandbox/\$mntpoint || exit 1 ;;
+		esac
+	done
+	;;
+	xumount)
+	set dummy \$fses
+	shift
+	while [ \$# -ge 3 ]; do
+		fs=\$1; shift
+		mntpoint=\$1; shift
+		dummy=\$1; shift
+		umount \$sandbox/\$mntpoint
+	done
+	;;
+	*)
+	if [ \$# -eq 0 ]; then
+		set dummy /bin/sh
+		shift
+	fi
+	chroot \$sandbox "\$@"
+	;;
+esac
+EOS
+
+chmod +x $sandbox_script
+
+echo "Sandbox creation is now complete"
+
+exit 0

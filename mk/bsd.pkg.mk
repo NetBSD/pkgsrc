@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.8 2002/06/30 08:26:21 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.9 2002/08/21 05:19:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -63,6 +63,8 @@ SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
 
+INTERACTIVE_STAGE?=	none
+
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
 .  if !defined(PKG_JVM)
@@ -71,48 +73,74 @@ BUILD_DEFS+=		PKG_JVM JAVA_HOME
 PKG_JVM?=		jdk
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
 PKG_JVM?=		blackdown-jdk13
+.    elif ${MACHINE_PLATFORM:MDarwin-*-*} != ""
+PKG_JVM?=		sun-jdk
 .    else
 PKG_JVM?=		kaffe
 .    endif
 .  endif
+.  if (${USE_JAVA} == "run")
+_JDK_DEPMETHOD=		_UNUSED_DEPENDS
+.  else
+_JDK_DEPMETHOD=		BUILD_DEPENDS
+.  endif
 .  if ${PKG_JVM} == "jdk"
+_JAVA_PKGBASE=		jdk
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
+_JAVA_HOME=		${_JAVA_PREFIX}
 DEPENDS+=		jdk-[0-9]*:../../lang/jdk
-.    if defined(JDK_HOME)
-JAVA_HOME?=		${JDK_HOME}
-.    else
-JAVA_HOME?=		${LOCALBASE}/java
-.    endif
 .  elif ${PKG_JVM} == "sun-jdk14"
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk14
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre14
-JAVA_HOME?=		${LOCALBASE}/java
+_JAVA_PKGBASE=		sun-jdk14
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
+_JAVA_HOME=		${_JAVA_PREFIX}
+${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 .  elif ${PKG_JVM} == "sun-jdk13"
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
-JAVA_HOME?=		${LOCALBASE}/java
+_JAVA_PKGBASE=		sun-jdk13
+.    if ${OPSYS} == "Darwin"
+_JAVA_PREFIX_DEFAULT=	/usr
+.    else
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
+.    endif
+_JAVA_HOME=		${_JAVA_PREFIX}
+${_JDK_DEPMETHOD}+=	sun-jdk13-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .  elif ${PKG_JVM} == "sun-jdk"
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
-	${MACHINE_PLATFORM:MNetBSD-1.[6-9]-i386} != "" || \
+	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-BUILD_DEPENDS+=         sun-jdk-[0-9]*:../../lang/sun-jdk14
-DEPENDS+=               sun-jre-[0-9]*:../../lang/sun-jre14
+_JAVA_PKGBASE=		sun-jdk1[34]*
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
+_JAVA_HOME=		${_JAVA_PREFIX}
+${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
+	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
+_JAVA_PKGBASE=		sun-jdk1[34]*
+.    if ${OPSYS} == "Darwin"
+_JAVA_PREFIX_DEFAULT=	/usr
+.    else
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 .    endif
-JAVA_HOME?=		${LOCALBASE}/java
+_JAVA_HOME=		${_JAVA_PREFIX}
+${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre13
+.    endif
 .  elif ${PKG_JVM} == "blackdown-jdk13"
-DEPENDS+=		blackdown-jdk-[0-9]*:../../lang/blackdown-jdk13
-JAVA_HOME?=		${LOCALBASE}/java
+_JAVA_PKGBASE=		blackdown-jdk13
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
+_JAVA_HOME=		${_JAVA_PREFIX}/java/blackdown-1.3.1
+${_JDK_DEPMETHOD}+=	blackdown-jdk13-[0-9]*:../../lang/blackdown-jdk13
+DEPENDS+=		blackdown-jre13-[0-9]*:../../lang/blackdown-jre13
 .  elif ${PKG_JVM} == "kaffe"
+_JAVA_PKGBASE=		kaffe
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
+_JAVA_HOME=		${_JAVA_PREFIX}/java/kaffe
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
-JAVA_HOME?=		${LOCALBASE}/kaffe
 .  endif
-.  if exists(${JAVA_HOME}/lib/classes.zip)
-CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
-.  endif
-PATH:=			${PATH}:${JAVA_HOME}/bin
+.  undef _UNUSED_DEPENDS
+EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGBASE}
 MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
 CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
@@ -162,15 +190,15 @@ PREFIX=			${LOCALBASE}
 .endif
 
 # We need to make sure the buildlink-x11 package is not installed since it
-# currently breaks builds that use imake.
+# breaks builds that use imake.
 #
-.if defined(USE_IMAKE) && !defined(USE_BUILDLINK_X11)
+.if defined(USE_IMAKE)
 .  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
       exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
 IGNORE+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
 	 "    Please deinstall it (pkg_delete buildlink-x11)."
 .  endif
-.endif	# USE_IMAKE && !USE_BUILDLINK_X11
+.endif	# USE_IMAKE
 
 .if defined(USE_GMAKE)
 .  if ${_OPSYS_HAS_GMAKE} == "no"
@@ -192,8 +220,47 @@ BUILD_DEFS+=		KERBEROS
 .endif
 
 PERL5_REQD?=		5.0
+PERL5_PKGSRCDIR?=	../../lang/perl5
+
+# _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
+_PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
+
+# Darwin support was added to perl beginning with release 5.8.0.  Tweak the
+# value of PERL5_REQD (possible user-supplied) so that it is always at least
+# 5.8.0.
+#
+.if ${OPSYS} == "Darwin"
+_PERL58_REQD?=		5.8.0
+.  for _pattern_ in ${_PERL58_PATTERNS}
+.    if !empty(PERL5_REQD:M${_pattern_})
+_PERL58_REQD:=		${PERL5_REQD}
+.    endif
+.  endfor
+PERL5_REQD:=		${_PERL58_REQD}
+.endif
+
+# For perl>=5.8.0, we need to build perl from ../../lang/perl58.
+.for _pattern_ in ${_PERL58_PATTERNS}
+.  if !empty(PERL5_REQD:M${_pattern_})
+PERL5_PKGSRCDIR=	../../lang/perl58
+.  endif
+.endfor
+
+# Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
+# whether we want a build-time or run-time dependency on perl.
+#
 .if defined(USE_PERL5)
-DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
+.  if (${USE_PERL5} == "build")
+_PERL5_DEPMETHOD=	BUILD_DEPENDS
+.  else
+USE_PERL5:=		run
+_PERL5_DEPMETHOD=	DEPENDS
+.  endif
+_PERL5_DEPENDS=		perl>=${PERL5_REQD}
+${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
+.endif
+
+.if defined(USE_PERL5) && (${USE_PERL5} == "run")
 .  if exists(${PERL5})
 .    if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
 .      include "${LOCALBASE}/share/mk/bsd.perl.mk"
@@ -209,7 +276,7 @@ MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
 MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
 .    endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
 .  endif # exists($PERL5)
-.endif # USE_PERL5
+.endif # USE_PERL5 == run
 
 .if defined(USE_FORTRAN)
 .  if !exists(/usr/bin/f77)
@@ -297,18 +364,6 @@ CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
-.if defined(USE_SSL)
-.  if exists(/usr/include/openssl/ssl.h)
-SSLBASE=	/usr
-SSLCERTS=	/etc/openssl/certs
-.  else
-DEPENDS+=	openssl-0.9.[56]*:../../security/openssl
-SSLBASE=	${LOCALBASE}
-SSLCERTS=	${SSLBASE}/certs
-.  endif
-BUILD_DEFS+=	SSLBASE
-.endif
-
 .if defined(USE_XAW)
 .  if defined(XAW_TYPE)
 .    if ${XAW_TYPE} == "xpm"
@@ -335,6 +390,7 @@ INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
+INTERACTIVE_COOKIE=	.interactive_stage
 NULL_COOKIE=		${WRKDIR}/.null
 
 # New message digest defs
@@ -401,6 +457,7 @@ PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
+PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
 EXTRACT_SUFX?=		.tar.gz
@@ -532,6 +589,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_ARCH=${MACHINE_ARCH}				\
 		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}			\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
+		LN=${LN:Q}						\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
 		LOWER_OS_VERSION=${LOWER_OS_VERSION}			\
@@ -847,6 +905,7 @@ MASTER_SITE_MOZILLA+=	\
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
+	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 .if defined(DIST_SUBDIR)
@@ -863,7 +922,7 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?= \
-	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
+	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
@@ -1002,6 +1061,7 @@ PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 
 CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+BUILD_DEFS+=		PKG_SYSCONFDIR
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
@@ -1041,13 +1101,6 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 ################################################################
 # Many ways to disable a package.
 #
-# If we're in BATCH mode and the package is interactive, or we're
-# in interactive mode and the package is non-interactive, skip
-# all the important targets. The reason we have two modes is that
-# one might want to leave a build in BATCH mode running overnight,
-# then come back in the morning and do _only_ the interactive ones
-# that required your intervention.
-#
 # Ignore packages that can't be resold if building for a CDROM.
 #
 # Don't build a package if it's restricted and we don't want to
@@ -1062,12 +1115,6 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 ################################################################
 
 .if !defined(NO_IGNORE)
-.  if (defined(IS_INTERACTIVE) && defined(BATCH))
-IGNORE+= "${PKGNAME} is an interactive package"
-.  endif
-.  if (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
-IGNORE+= "${PKGNAME} is not an interactive package"
-.  endif
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
 IGNORE+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
@@ -1081,7 +1128,7 @@ IGNORE+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
-.    if (defined(CRYPTO) || defined(USE_SSL))
+.    if defined(CRYPTO)
 IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
@@ -1348,19 +1395,49 @@ SITES_${fetchfile:T}?= ${PATCH_SITES}
 .  endfor
 .endif
 
+# This code is only called in a batch case, to check for the presence of
+# the distfiles
+batch-check-distfiles:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	gotfiles=yes;							\
+	for file in "" ${_ALLFILES}; do					\
+		case "$$file" in					\
+		"")	continue ;;					\
+		*)	if [ ! -f ${DISTDIR}/$$file ]; then		\
+				gotfiles=no;				\
+			fi ;;						\
+		esac;							\
+	done;								\
+	case "$$gotfiles" in						\
+	no)	${ECHO} "*** This package requires user intervention to download the distfiles"; \
+		${ECHO} "*** Please fetch the distfiles manually and place them in"; \
+		${ECHO} "*** ${DISTDIR}";				\
+		[ ! -z "${MASTER_SITES}" ] &&				\
+			${ECHO} "*** The distfiles are available from ${MASTER_SITES}";	\
+		[ ! -z "${HOMEPAGE}" ] && 				\
+			${ECHO} "*** See ${HOMEPAGE} for more details";	\
+		${ECHO};						\
+		${TOUCH} ${INTERACTIVE_COOKIE};				\
+		${FALSE} ;;						\
+	esac
+
 .if !target(do-fetch)
 do-fetch:
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
-.    for fetchfile in ${_ALLFILES}
-.      if defined(_FETCH_MESSAGE)
+.    if ${INTERACTIVE_STAGE:Mfetch} == "fetch" && defined(BATCH)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MAKE} ${MAKEFLAGS} batch-check-distfiles
+.    else
+.      for fetchfile in ${_ALLFILES}
+.        if defined(_FETCH_MESSAGE) 
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	file="${fetchfile}";						\
 	if [ ! -f ${DISTDIR}/$$file ]; then				\
 		${_FETCH_MESSAGE};					\
 	fi
-.      else
+.        else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${_DISTDIR};							\
 	file="${fetchfile}";						\
@@ -1369,8 +1446,9 @@ do-fetch:
 	sites="${ORDERED_SITES}";					\
 	${_CHECK_DIST_PATH};						\
 	${_FETCH_FILE};
-.      endif # defined(_FETCH_MESSAGE)
-.    endfor
+.        endif # defined(_FETCH_MESSAGE)
+.      endfor
+.    endif # INTERACTIVE_STAGE == fetch
 .  endif # !empty(_ALLFILES)
 .endif
 
@@ -1480,7 +1558,7 @@ show-downlevel:
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
-			${ECHO} "stoping after first downlevel pkg found"; \
+			${ECHO} "stopping after first downlevel pkg found"; \
 			exit 1;						\
 		fi;							\
 	fi
@@ -1513,6 +1591,18 @@ MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 .      endif
 .    endif
 .  endfor
+.endif
+
+.if defined(USE_JAVA)
+JAVA_HOME?=		${_JAVA_HOME}
+.  if exists(${JAVA_HOME}/lib/classes.zip)
+_JAVA_CLASSES_ZIP=	${JAVA_HOME}/lib/classes.zip:
+.  endif
+.  if exists(${JAVA_HOME}/lib/tools.jar)
+_JAVA_TOOLS_JAR=	${JAVA_HOME}/lib/tools.jar:
+.  endif
+CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
+PATH:=			${PATH}:${JAVA_HOME}/bin
 .endif
 
 .if !target(show-pkgsrc-dir)
@@ -1604,6 +1694,13 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
 BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha  
+.endif
+.if !defined(GZCAT)
+.  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
+      !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
+BUILD_DEPENDS+=         gzip-base:../../archivers/gzip-base
+GZCAT=                  ${LOCALBASE}/bin/zcat
+.  endif
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
@@ -1844,6 +1941,25 @@ do-ltconfig-override:
 .  endfor
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
+.endif
+
+.if defined(CONFIG_GUESS_OVERRIDE) || defined(CONFIG_SUB_OVERRIDE)
+_CONFIGURE_PREREQ+=	do-config-star-override
+do-config-star-override:
+.  if defined(CONFIG_GUESS_OVERRIDE)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for g in ${CONFIG_GUESS_OVERRIDE}; do				\
+		${RM} -f $$g;						\
+		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.guess $$g;	\
+	done
+.  endif
+.  if defined(CONFIG_SUB_OVERRIDE)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for s in ${CONFIG_SUB_OVERRIDE}; do				\
+		${RM} -f $$s;						\
+		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.sub $$s;	\
+	done
+.  endif
 .endif
 
 # By default, prevent invocation of GNU "auto*" driven by the generated
@@ -2502,11 +2618,35 @@ ${PATCH_COOKIE}:
 ${BUILDLINK_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink
 ${CONFIGURE_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
+	@${ECHO} "*** The configuration stage of this package requires user interaction"
+	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
+.endif
+
 ${BUILD_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
+	@${ECHO} "*** The build stage of this package requires user interaction"
+	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
+.endif
+
 ${INSTALL_COOKIE}:
+.if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
+	@${ECHO} "*** The installation stage of this package requires user interaction"
+	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install
+.endif
+
 ${PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
 
@@ -2573,7 +2713,7 @@ _SU_TARGET=								\
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to $$action ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
 
 do-su-install: 
@@ -3101,7 +3241,10 @@ makesum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if [ -f ${DISTINFO_FILE} ]; then				\
-		${AWK} -- '{print ; exit}' ${DISTINFO_FILE} > $$newfile; \
+		${GREP} '^.NetBSD' ${DISTINFO_FILE} > $$newfile ||	\
+			(${ECHO} -n "$$" > $$newfile &&			\
+			 ${ECHO} -n "NetBSD" >> $$newfile && 		\
+			 ${ECHO} "$$" >> $$newfile)			\
 	else								\
 		${ECHO} -n "$$" > $$newfile;				\
 		${ECHO} -n "NetBSD" >> $$newfile; 			\
@@ -3139,6 +3282,7 @@ makepatchsum mps: uptodate-digest
 		${ECHO} -n "$$" > $$newfile;				\
 		${ECHO} -n "NetBSD" >> $$newfile; 			\
 		${ECHO} "$$" >> $$newfile;				\
+		${ECHO} "" >> $$newfile;				\
 	fi;								\
 	if [ -d ${PATCHDIR} ]; then					\
 		(cd ${PATCHDIR};					\
@@ -3705,6 +3849,19 @@ print-pkg-size-depends:
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
+SUBST_PLIST_REPLACEMENT=\
+		-e  's@${OPSYS}@\$${OPSYS}@' 				\
+		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
+		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
+		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
+		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
+		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
+		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
+		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
+		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 			\
+		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+
 .if make(print-PLIST)
 COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 			i=0; 						\
@@ -3751,17 +3908,7 @@ print-PLIST:
 	 | ${SORT}							\
 	 | ${SED}							\
 		-e  's@${PREFIX}/./@@' 					\
-		-e  's@${OPSYS}@\$${OPSYS}@' 				\
-		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'		\
-		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
-		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
-		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
-		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
-		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
-		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-		-e  's@${PKGVERSION}@\$${PKGVERSION}@'			\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+		${SUBST_PLIST_REPLACEMENT}				\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -3794,7 +3941,7 @@ print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
 			| ${SED}					\
-				-e s@${PREFIX}/./@@			\
+				-e 's@${PREFIX}/./@@'			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
 			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
 	do								\
@@ -3803,19 +3950,9 @@ print-PLIST:
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
-	| ${GREP} -v emul/linux/proc || ${TRUE}				\
+	| ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	| ${SED}							\
-		-e  s@${OPSYS}@\$${OPSYS}@ 				\
-		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
-		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
-		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
-		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
-		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
-		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
-		-e  s@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@ 	\
-		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
-		-e  s@${PKGVERSION}@\$${PKGVERSION}@			\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
+		${SUBST_PLIST_REPLACEMENT}
 .endif # target(print-PLIST)
 
 
@@ -3871,7 +4008,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	@if ${CC} --version >/dev/null 2>&1; then \
 	  ${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}; \
 	fi
-.  ifdef USE_PERL5
+.  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=	`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
 .  ifdef USE_GMAKE

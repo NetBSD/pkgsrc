@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.9 2001/10/14 20:34:53 dmcmahill Exp $
+# $NetBSD: printdepends,v 1.9.2.1 2002/08/21 05:19:50 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -62,14 +62,14 @@ do
 	else
 		cd $pkgdir
 
-		l=`make show-depends-dirs`
+		l=`${BMAKE} show-depends-dirs`
 		if [ $? != 0 ]; then
 			echo "WARNING (printdepends):  the package in $pkgdir had problem with" > /dev/stderr
-			echo "    make show-depends-dirs" > /dev/stderr
+			echo "    ${BMAKE} show-depends-dirs" > /dev/stderr
 			echo "    dependency information in the cache will" > /dev/stderr
 			echo "    be dropped for $pkgdir" > /dev/stderr
-			echo "make show-depends-dirs failed:" > $brokenfile
-			make show-depends-dirs  >> $brokenfile 2>&1
+			echo "${BMAKE} show-depends-dirs failed:" > $brokenfile
+			${BMAKE} show-depends-dirs  >> $brokenfile 2>&1
 			echo "$pkgdir $pkgdir"
 		else
 			if [ "$l" = "" ]; then

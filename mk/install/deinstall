@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.8.2.1 2002/06/23 18:54:45 jlam Exp $
+# $NetBSD: deinstall,v 1.8.2.2 2002/08/21 05:19:51 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -27,7 +27,7 @@ for file; do
 done
 eval set -- ${RCD_SCRIPTS}
 for script; do
-	samplefile="${PKG_PREFIX}/etc/rc.d/${script}"
+	samplefile="${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
 	file="${RCD_SCRIPTS_DIR}/${script}"
 	shift
 	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
@@ -124,9 +124,19 @@ POST-DEINSTALL)
 				${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
 				;;
 			esac
-			if [ -d "${dir}" ]; then
-				existing_dirs="${existing_dirs} \"${dir}\""
-			fi
+			case "${dir}" in
+			#
+			# Don't bother the admin about the following dirs
+			# if they still exist.
+			#
+			${PKG_SYSCONFBASE}|${RCD_SCRIPTS_DIR})
+				;;
+			*)	
+				if [ -d "${dir}" ]; then
+					existing_dirs="${existing_dirs} \"${dir}\""
+				fi
+				;;
+			esac
 		fi
 	done
 

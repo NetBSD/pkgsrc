@@ -1,15 +1,9 @@
-# $NetBSD: x11.buildlink.mk,v 1.17 2002/04/12 14:06:46 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.17.2.1 2002/08/21 05:19:47 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.  It's
 # only purpose is to make a package strongly buildlinked, so packages
 # that include this file must already satisfy the requirements for
 # USE_BUILDLINK_ONLY.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define USE_BUILDLINK_X11 to use pkgtools/buildlink-x11
-#     to cause packages that use imake to use buildlink, and
-# (2) Include this Makefile fragment in the package Makefile.
 #
 # NOTE: This file must be included _before_ bsd.pkg.mk.
 # NOTE: This file should _not_ be included in any package's buildlink.mk file.
@@ -49,29 +43,6 @@ LDFLAGS+=		${_BUILDLINK_X11_LDFLAGS}
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_X11_DIR}/include
 CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_X11_DIR}/lib
-.endif
-
-# Separate out optional code to use buildlink-x11, which causes packages
-# that use imake to use buildlink.  If USE_BUILDLINK_X11 is defined, then
-# X11 packages will need to be patched to replace any hard-coded instances
-# of /usr/X11R6 with ${BUILDLINK_X11_DIR} in the library search path.
-#
-# Note:	The use of this code is _untested_ and not recommended.  Packages
-#	have not been modified to satisfy the assumptions used by
-#	buildlink-x11 yet, and using this code will likely cause pkgsrc to
-#	break.
-#
-.if defined(USE_BUILDLINK_X11)
-BUILD_DEPENDS+=		buildlink-x11>=0.8:../../pkgtools/buildlink-x11
-MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
-MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
-MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
-MAKE_ENV+=		PKGSRC_LDFLAGS="${LDFLAGS}"
-XMKMF_CMD?=		${X11PREFIX}/bin/buildlink-xmkmf
-.if defined(USE_BUILDLINK_ONLY)
-XMKMF_FLAGS+=		-DBuildLink
-XMKMF_FLAGS+=		-DBuildLinkX11
-.endif
 .endif
 
 # Make the appropriate substitutions for ${X11BASE} <--> ${BUILDLINK_X11_DIR}.

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.20 2001/12/17 02:32:23 dmcmahill Exp $
+# $NetBSD: build,v 1.20.2.1 2002/08/21 05:19:48 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -34,6 +34,14 @@
 # Do builk build
 #
 
+opsys=`uname -s`
+case "$opsys" in
+NetBSD)	BMAKE=make ;;
+*)	BMAKE=bmake ;;
+esac
+
+export BMAKE
+
 # Set ressource limits as high as possible
 ulimit -S -s `ulimit -H -s`
 ulimit -S -d `ulimit -H -d`
@@ -54,6 +62,11 @@ else
 		exit 1
 	fi
 fi
+
+# set up variables specifically for the bulk build
+BATCH=1
+DEPENDS_TARGET=bulk-install
+export BATCH DEPENDS_TARGET
 
 if [ "$http_proxy" != "" ]; then
 	echo "Using HTTP proxy $http_proxy"
@@ -78,13 +91,14 @@ fi
 fail=no
 if [ -d pkgtools/pkglint ]; then
 	cd pkgtools/pkglint
-	DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE` || fail=yes
-	DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE` || fail=yes
-	SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE` || fail=yes
-	INDEXFILE=`make show-var VARNAME=INDEXFILE` || fail=yes
-	ORDERFILE=`make show-var VARNAME=ORDERFILE` || fail=yes
-	BROKENFILE=`make show-var VARNAME=BROKENFILE` || fail=yes
-	BUILDLOG=`make show-var VARNAME=BUILDLOG` || fail=yes
+	DEPENDSTREEFILE=`${BMAKE} show-var VARNAME=DEPENDSTREEFILE` || fail=yes
+	DEPENDSFILE=`${BMAKE} show-var VARNAME=DEPENDSFILE` || fail=yes
+	SUPPORTSFILE=`${BMAKE} show-var VARNAME=SUPPORTSFILE` || fail=yes
+	INDEXFILE=`${BMAKE} show-var VARNAME=INDEXFILE` || fail=yes
+	ORDERFILE=`${BMAKE} show-var VARNAME=ORDERFILE` || fail=yes
+	BROKENFILE=`${BMAKE} show-var VARNAME=BROKENFILE` || fail=yes
+	BUILDLOG=`${BMAKE} show-var VARNAME=BUILDLOG` || fail=yes
+	STARTFILE=`${BMAKE} show-var VARNAME=STARTFILE` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
@@ -101,6 +115,7 @@ echo "INDEXFILE       = $INDEXFILE"
 echo "ORDERFILE       = $ORDERFILE"
 echo "BROKENFILE      = $BROKENFILE"
 echo "BUILDLOG        = $BUILDLOG"
+echo "STARTFILE       = $STARTFILE"
 echo "----------------------------------"
 
 # make sure we have values for these very important
@@ -112,7 +127,8 @@ if [ $fail = "yes" -o \
 	-z "$INDEXFILE" -o \
 	-z "$ORDERFILE" -o \
 	-z "$BROKENFILE" -o \
-	-z "$BUILDLOG" \
+	-z "$BUILDLOG" -o \
+	-z "$STARTFILE" \
 	]; then
 	echo "ERROR:  build failed to extract certain key variables."
 	echo "        please examine the above list and correct the"
@@ -124,7 +140,7 @@ cd ${USR_PKGSRC}
 
 # get the list of packages which should always be installed during the build
 cd ${USR_PKGSRC}/pkgtools/pkglint
-BULK_PREREQ=`make show-var VARNAME=BULK_PREREQ`
+BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
 cd ${USR_PKGSRC}
 
 # install prerequisite packages.  Note:  we do this _before_ the depends tree
@@ -134,13 +150,13 @@ for pkgdir in $BULK_PREREQ
 do
 	echo $pkgdir
 	# make sure its installed _and_ packaged
-	cd ${USR_PKGSRC}/$pkgdir && make bulk-install
+	cd ${USR_PKGSRC}/$pkgdir && ${BMAKE} bulk-install
 done
 
 # Create the bulk cache files
 cd ${USR_PKGSRC}
 if [ "$1" != "restart" ]; then
-	cd ${USR_PKGSRC} && make bulk-cache
+	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache
 fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
@@ -165,7 +181,7 @@ do
         if ! grep -q "^${pkgdir}\$" $BUILDLOG ; then
 		built=`wc -l $BUILDLOG | awk '{print $1}'`
 		percent=`echo $built $tot | awk '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 make USE_BULK_CACHE=yes bulk-package </dev/null | sed "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")              
+		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | sed "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
@@ -197,7 +213,7 @@ echo "Post processing bulk build results..."
 #rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
 
 # Perl was wiped, reinstall it!
-( cd lang/perl5 && make bulk-install )
+( cd lang/perl5 && ${BMAKE} bulk-install )
 perl mk/bulk/post-build | mail -s "pkgsrc/`uname -p` bulk build results `date +%F`" $ADMIN
 
 # Done!

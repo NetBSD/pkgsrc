@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.59.2.1 2002/06/23 18:54:37 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.59.2.2 2002/08/21 05:19:40 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -329,11 +329,16 @@ PRE_ROOT_CMD?=	${TRUE}
 # Possible: any shell commands
 # Default: none
 
-SU_CMD?= su - root -c
+SU_CMD?= ${ROOT_CMD}
 # Command to perform before "make install", if the user does not have
 # an effective uid of 0.  A possible substitute is "sudo sh -c"
 # Possible: su, sudo, or priv, with appropriate arguments
-# Default: ${SU} root -c
+# Default: dependent on operating system. For NetBSD: ${SU} - root -c
+
+SU_CMD_PATH_APPEND?=/sbin:/usr/sbin
+# Additional directories (in a colon separated list) to be added to the 
+# PATH environment variable when running ${SU_CMD}.
+# Default: /sbin:/usr/sbin
 
 FATAL_OBJECT_FMT_SKEW?=yes
 # If there is a pre-requisite package, which has a different object format
@@ -405,28 +410,36 @@ AMANDA_VAR?=	/var/amanda
 # Possible: not defined, YES
 # Default: not defined
 
+APACHE_USER?=	www
+# Used in the apache package to specify the user allowed to execute
+# the `suexec' wrapper.  Expected to be the user the httpd server
+# normally runs as.  Also used by packages with CGIs.
+# Possible: any user name
+# Default: www
+
+APACHE_GROUP?=	www
+# Used in the apache package to specify the default group of the user
+# allowed to execute the `suexec' wrapper.  Expected to be the group
+# the httpd server normally runs as.  Also used by packages with CGIs.
+# Possible: any group name
+# Default: www
+
 #APACHE_SUEXEC=	YES
 # Enable support Switch User For Exec.  See
 # http://www.apache.org/docs/suexec.html for more informations.
 # Possible: not defined, YES
 # Default: not defined
 
-APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
-# Specifies the document space in which suexec will be allowed to work.      
-# Possible: Any valid directory                                              
-# Default: ${LOCALBASE}/share/httpd/htdocs                                   
-
-APACHE_SUEXEC_USER?=	www
-# Used in the apache package to specify the user allowed to execute
-# the `suexec' wrapper.
-# Possible: any user name
-# Default: www
-
 #APACHE_SUEXEC_CONFIGURE_ARGS=	--suexec-uidmin=1000
 # Used in the apache package to specify additional suexec options to be
 # passed to the Apache configure script.
 # Possible: any --suexec-* options recognized by the Apache configure script.
 # Default: not defined
+
+APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
+# Specifies the document space in which suexec will be allowed to work.      
+# Possible: Any valid directory                                              
+# Default: ${LOCALBASE}/share/httpd/htdocs                                   
 
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Specifies the location of the cache used by arla. Should be on a local disk.
@@ -546,9 +559,25 @@ FOX_USE_XUNICODE?=	YES
 # Possible: YES, NO
 # Default: YES
 
+FREEWNN_USER?=	wnn
+# Used in the ja-freewnn-server-bin package to specify the Free wnn user.
+# Possible: any user name
+# Default: wnn
+
+FREEWNN_GROUP?=	jserver
+# Used in the ja-freewnn-server-bin package to specify the Free wnn group.
+# Possible: any group name
+# Default: jserver
+
 GAWK_ENABLE_PORTALS?=	NO
 # Used by gawk package to enable/disable handling file names that start with
 # `/p/' as a 4.4 BSD type portal file, i.e., a two-way pipe for `|&'.
+# Possible: YES, NO
+# Default: NO
+
+GMAKE_NSEC_TIMESTAMPS?=	NO
+# Used by GNU make to enable/disable support of micro- and nano-second
+# timestamp values provided by stat(2).
 # Possible: YES, NO
 # Default: NO
 
@@ -565,6 +594,19 @@ GAWK_ENABLE_PORTALS?=	NO
 # Possible: yes, no, not defined
 # Default: not defined (-> Russian support enabled)
 
+#GRUB_NETWORK_CARDS=
+# Compile netboot support for the listed network interface cards into GRUB.
+# Use e.g. "rtl8139" for RealTek 8139 support or "eepro100 epic100" for
+# Intel Etherexpress Pro/100 and SMC EtherPower II support.
+# Default: not defined (-> no netboot support)
+
+#GRUB_SCAN_ARGS=
+# Can be used to supply additional configure arguments for netboot support in
+# GRUB. Set e.g. "GRUB_NETWORK_CARDS" to "ne" and "GRUB_SCAN_ARGS" to
+# "--enable-ne-scan=0x300" to let the boot loader search for an NE 2000 ISA
+# card at I/O offset 0x300.
+# Default: not defined
+
 IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Used in imap-uw to set the default format used by c-client programs for
 # new mailbox creation.  Check the UW IMAP documentation for more details
@@ -576,6 +618,14 @@ IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 #IMAP_UW_NO_CLEARTEXT?=	YES
 # Used in imap-uw to disallow plaintext passwords except when SSL or TLS
 # is used. This effectively disallows cleartext passwords.
+#
+# Possible: not defined, YES
+# Default: not defined
+
+#IMAP_UW_NO_SSL?= YES
+# Used in imap-uw to build without any SSL or TLS support at all. Note that
+# it doesn't make any sense to enable this together with IMAP_UW_NO_CLEARTEXT,
+# nor is is it fully supported in pkgsrc for all clients.
 #
 # Possible: not defined, YES
 # Default: not defined
@@ -899,10 +949,17 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
-MPLAYER_FONT?= iso-8859-1/arial-18
-# Used by the mplayer-share package to display subtitles and the timer
+MPLAYER_FONT?= iso-8859-1/arial-14
+# Used by the mplayer-share package to display subtitles and the timer.
 # Possible: any font directory which contains the mplayer font.desc
-# Default: iso-8859-1/arial-18
+# Default: iso-8859-1/arial-14
+
+MPLAYER_USE_REALMEDIA?= NO
+# Used by mplayer to enable realmedia support by using the realplayer
+# libraries. Note that this only works on i386 and also adds a
+# dependency for the linux emulation to this package.
+# Possible: YES, NO
+# Default: NO
 
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink.mk to choose which Motif-2.0-compatible
@@ -933,6 +990,11 @@ MPLAYER_FONT?= iso-8859-1/arial-18
 # Used by motif.buildlink.mk as the final default value for MOTIF12_TYPE.
 # Possible:  lesstif12, dt (for Solaris only)
 # Default: lesstif12, or dt (for Solaris only)
+
+#MPG123_ARM_FIXED64=YES
+# Used by mpg123 and mpg123-esound to enable ARM to use 64bit fixedpoint
+# Possible: not defined, YES
+# Default: not defined
 
 #MTOOLS_ENABLE_FLOPPYD=
 # Used by the mtools package to determine whether or not the floppyd
@@ -986,6 +1048,12 @@ NMH_PAGER?= more
 #NS_USE_BSDI=	YES
 # Used to decide if i386 BSDi Netscape binary should be used in preference 
 # to linux version.
+# Possible: not defined, YES
+# Default: not defined
+
+#NS_USE_SUNOS=	YES
+# Used to decide if sparc SunOS-4.1 Netscape binary should be used in preference 
+# to the Solaris-2.5.1 version.
 # Possible: not defined, YES
 # Default: not defined
 
@@ -1079,6 +1147,11 @@ PILRC_USE_GTK?=	YES
 
 #POSTFIX_USE_PCRE=YES
 # Add support for Perl Compatible Regular Expressions.
+# Possible: YES, not defined
+# Default: not defined
+
+#POSTFIX_USE_TLS=YES
+# Add support for TLS.
 # Possible: YES, not defined
 # Default: not defined
 
@@ -1351,6 +1424,11 @@ USE_WNN4?= YES
 # (pkgsrc/mail/face)
 # Possible: not defined, YES
 # Default: not defined
+
+USERPPP_GROUP?=	network
+# Used in the userppp package to specify the default group.
+# Possible: any group name
+# Default: network
 
 #VIM_EXTRA_OPTS=
 # Used in vim package to build with non-gui extra options
