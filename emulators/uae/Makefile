@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2001/11/27 00:04:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/01 16:23:22 kristerw Exp $
 
-DISTNAME=	uae-0.8.18
+DISTNAME=	uae-0.8.19
 PKGNAME=	${DISTNAME}
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/
+MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
 
 MAINTAINER=	kristerw@netbsd.org
 HOMEPAGE=	http://www.freiburg.linux.de/~uae/
