@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/22 03:50:59 hubertf Exp $
+
+--- lib/isc/Makefile.in.orig	Mon Feb 21 04:39:23 2000
++++ lib/isc/Makefile.in	Mon Feb 21 04:40:43 2000
+@@ -78,7 +78,7 @@
+ 		-DLIBAGE=${LIBAGE} \
+ 		-c ${srcdir}/version.c
+ 
+-libisc.@A@: ${OBJS}
++libisc.a: ${OBJS}
+ 	${AR} ${ARFLAGS} $@ ${OBJS}
+ 	${RANLIB} $@
+ 
