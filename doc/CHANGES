@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5514 2004/04/10 23:58:43 rh Exp $
+$NetBSD: CHANGES,v 1.5515 2004/04/11 00:03:46 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lftp to 3.0.1 [salo 2004-04-11]
 	Updated Pantomime to 1.1.2 [rh 2004-04-11]
 	Updated Addresses to 0.4.5nb1 [rh 2004-04-11]
+	Updated GNUMail to 1.1.2 [rh 2004-04-11]
