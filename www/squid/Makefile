@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2004/06/19 16:54:31 taca Exp $
+# $NetBSD: Makefile,v 1.112 2004/06/19 22:05:48 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE5
 PKGNAME=	squid-2.5.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -40,8 +40,8 @@ PATCHFILES=	squid-2.5.STABLE5-ntlm_assert.patch \
 		squid-2.5.STABLE5-va_copy.patch \
 		squid-2.5.STABLE5-CONNECT_log_size.patch \
 		squid-2.5.STABLE5-proxy_abuse.patch \
+		squid-2.5.STABLE5-sasl_auth_SASL2.patch \
 		squid-2.5.STABLE5-ntlm_auth_overflow.patch
-#		squid-2.5.STABLE5-sasl_auth_SASL2.patch	   # currently broken
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
