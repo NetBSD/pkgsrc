@@ -1,4 +1,4 @@
-# $NetBSD: horde.conf.dist,v 1.1.1.1 2001/02/12 15:26:04 jlam Exp $
+# $NetBSD: horde.conf.dist,v 1.2 2001/02/13 03:54:00 jlam Exp $
 #
 # Horde configuration file fragment for Apache
 
@@ -37,6 +37,10 @@
     Deny from all
 </Directory>
 <Directory "@HORDEDIR@/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@PHPLIBDIR@">
     Order deny,allow
     Deny from all
 </Directory>
