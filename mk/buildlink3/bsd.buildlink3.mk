@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.152 2004/09/07 00:14:13 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.153 2004/09/08 08:02:00 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1003,18 +1003,16 @@ MAKE_ENV+=	BUILDLINK_REORDER=yes
 _BLNK_TRANSFORM_SED+=	-f ${_BLNK_TRANSFORM_SEDFILE}
 _BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 
-# UNBUILDLINK_PATTERNS and UNBUILDLINK_FILES list shell globs and files
-# relative to ${WRKSRC} that need to have reference to ${BUILDLINK_DIR}
-# stripped out of them.
+# UNWRAP_PATTERNS and UNWRAP_FILES list shell globs and files relative to
+# ${WRKSRC} that need to have reference to ${BUILDLINK_DIR} stripped out
+# of them.
 #
-UNBUILDLINK_PATTERNS?=		# empty
 _UNBUILDLINK_PATTERNS=		${UNWRAP_PATTERNS}
 _UNBUILDLINK_PATTERNS+=		*-config
 _UNBUILDLINK_PATTERNS+=		*Conf.sh
 _UNBUILDLINK_PATTERNS+=		*.pc
 _UNBUILDLINK_PATTERNS_FIND=	\
 	\( ${_UNBUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
-UNBUILDLINK_FILES?=		# empty
 _UNBUILDLINK_FILES=		\
 	${UNWRAP_FILES}		\
 	`${FIND} . ${_UNBUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
