@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.13 2003/09/12 23:39:42 jlam Exp $
+# $NetBSD: module.mk,v 1.14 2003/09/13 01:56:25 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -130,6 +130,15 @@ PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
 			${PERL5_PLIST_DIRS}
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .endif
+
+# Skip appending to perllocal.pod.  We don't keep this consistent anyway
+# with binary packages.
+#
+# XXX We should be adding to and removing from perllocal.pod in
+# XXX VIEW-{INSTALL,DEINSTALL} actions from the INSTALL/DEINSTALL
+# XXX scripts.
+#
+INSTALL_TARGET?=	pure_install
 
 # Default test target for perl5 modules
 TEST_TARGET?=	test
