@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:50 agc Exp $
 
-MD5 (ghc-4.04-src.tar.gz) = e1211129906c45709ecf5159eb6d9d08
-MD5 (ghc-4.04-x86-hc.tar.gz) = 19287b805f9f528559a46059bbc9c4b9
+SHA1 (ghc-4.04-src.tar.gz) = 511c2b9d64c6af2b489530103b07f83323eba3f6
+Size (ghc-4.04-src.tar.gz) = 2936850 bytes
+SHA1 (ghc-4.04-x86-hc.tar.gz) = 25cdb6c3685cb39193b827da2528e00c159b1d8b
+Size (ghc-4.04-x86-hc.tar.gz) = 4658226 bytes
 SHA1 (patch-aa) = d29edb890055c7ceb85cd17ee95d23f0c4b459d1
 SHA1 (patch-ab) = 13987418d558585fb68481e9efdaf718fcf1b0a9
 SHA1 (patch-ac) = e321019d10d05c727e07e08e697a3daa92a0db9a
