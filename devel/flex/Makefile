@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/02 08:46:51 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/28 05:18:43 wiz Exp $
 #
 
 DISTNAME=		flex-2.5.4a
@@ -6,7 +6,6 @@ CATEGORIES=		lang
 MASTER_SITES=   	${MASTER_SITE_GNU:=flex/}
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
