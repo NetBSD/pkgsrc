@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.43 1998/08/24 10:31:00 agc Exp $
+# $NetBSD: Packages.txt,v 1.44 1998/09/23 13:09:33 agc Exp $
 ###########################################################################
 
 			==========================
@@ -81,8 +81,8 @@ is a description of all the terminology used within this document:
    /usr/pkgsrc/packages by the NetBSD package system; there is also an
    archive on ftp.netbsd.org.
 
-   Sometimes, this is referred to by the term "package" too, esp. in the
-   context of precompiled packages.
+   Sometimes, this is referred to by the term "package" too,
+   especially in the context of precompiled packages.
 
  * Program:
    The piece of software to be installed which will be constructed from
@@ -307,8 +307,9 @@ package from the FreeBSD ports collection:
  - Add MANCOMPRESSED (if not already there) if manpages are installed in
    compressed form by the package; see comment in bsd.pkg.mk
  - Replace /usr/local by ${PREFIX} in all files  (see patches below)
- - Rewrite any ldconfig commands as "ldconfig || ${TRUE}", as there isn't a
-   ldconfig command on all platforms NetBSD runs on (e.g. alpha).
+ - Delete any ldconfig commands - this will be done automatically for you
+   if the NetBSD platform supports ldconfig, and other measures will be
+   taken on platforms which do not support ldconfig (e.g. NetBSD/Alpha)
  - If modifying a package from the FreeBSD ports collection, preserve
    their RCS ID: remove the '$'s around the FreeBSD RCS Id, and insert the
    word FreeBSD, then add a <$>NetBSD<$> (Without the <>s, please remember
@@ -655,10 +656,11 @@ NetBSD supports many different machines, with different object formats
 like a.out and ELF, and varying abilities to do shared library and
 dynamic loading at all. To accompany this, verying commands and options
 have to be passed to the compiler, linker etc. to get the Right Thing,
-which can be pretty annoying esp. if you don't have all the machines at
-your hand to test things. The "libtool" pkg can help here, as it just
-"knows" how to build both static and dynamic libraries from a set our
-source files, thus being platform independent. 
+which can be pretty annoying especially if you don't have all the
+machines at your hand to test things.  The "libtool" pkg can help
+here, as it just "knows" how to build both static and dynamic
+libraries from a set our source files, thus being platform
+independent. 
 
 To use "libtool", add a build-dependency on the libtool-pkg, then modify
 the pkg's sources to use libtool for building it's libraries and add the
@@ -729,10 +731,10 @@ the pkg's own libtool.
 See section 4.1 for Makefile issues (MANx, CATx, MANCOMPRESSED, ldconfig,
 RCS IDs) and section 4.3 for gotchas on using patches from FreeBSD ports.
 
-One of the biggest problems with FreeBSD ports is that too many of them
-assume they will install into /usr/local, instead of regarding ${PREFX}
-properly. To change this, add something like the following into your
-package Makefile:
+One of the biggest problems with FreeBSD ports is that too many of
+them assume they will install into /usr/local, instead of honouring
+any ${PREFX} setting properly.  To change this, add something like the
+following into your package Makefile:
 
 pre-configure:
         for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do
@@ -745,10 +747,19 @@ This is taken from the sysutils/rtty package; be sure this works for your
 package - it may actually make sense to look for some things in /usr/local,
 for example. So don't blindly replace all occurrences of /usr/local!
 
-Side note on manpages in PLIST: we don't regard any .gz suffix there, as
-many FreeBSD ports seem to have .gz pages in PLIST even when they install
-manpages without compressing them; rather, we add our own .gz suffix there
-according to MANZ.
+FreeBSD has decided to list manual pages in the package Makefile, with
+no corresponding entry in the PLIST.  You will thus need to add any
+MAN[1-8ln] files to the PLIST, before deleting the MAN[1-8ln]
+definition.  Similarly with MLINKS and CAT[1-8ln] entries.
+
+Side note on manpages in PLIST:  we don't take any notice of any .gz
+suffix there, as many FreeBSD ports seem to have .gz pages in PLIST
+even when they install manpages without compressing them; rather, we
+add our own .gz suffix there according to MANZ.  In short, it does not
+matter whether the manual page name in the PLIST has a .gz suffix or
+not - if it needs one which is not already there, it will be appended
+automatically, and if there is a .gz suffix which is not needed, it
+will be deleted automatically.
 
 
  6.4 Feedback to the author
@@ -771,7 +782,7 @@ The basic steps for building a program are always the same.  First the
 program's source (distfile) must be brought to the local system and
 then extracted.  After any patches to compile properly on NetBSD are
 applied, the software can be configured, then built (usually by
-compiling), and finally the produced binaries etc.  can be put into
+compiling), and finally the generated binaries etc.  can be put into
 place on the system.  These are exactly the steps performed by the
 NetBSD package system, which is implemented as a series of targets in
 a central Makefile, /usr/pkgsrc/mk/bsd.pkg.mk.
@@ -926,6 +937,29 @@ perform the equivalent of:
    properly, you can repeat the installation with this target, which will
    ignore the "already installed" flag. 
 
+ * deinstall:
+   This target does a pkg_delete(1) in the current directory,
+   effectively de-installing the package.
+
+ * readme:
+   This target generates a README.html file, which can be viewed using a
+   browser such as netscape (pkgsrc/www/mozilla) or lynx (pkgsrc/www/lynx).
+   The generated files contain references to any packages which are in the
+   ${PACKAGES} directory on the local host.  The generated files can
+   be made to refer to URLs based on FTP_PKG_URL_HOST and
+   FTP_PKG_URL_DIR.  (For example, if I wanted to generate README.html
+   files which pointed to binary packages on the local machine, in the
+   directory /usr/packages, set FTP_PKG_URL_HOST=file://localhost and
+   FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
+   subdirectories will be searched for all the binary packages.)
+
+ * cdrom-readme:
+   This is very much the same as the readme: target (see above), but is
+   to be used when generating a pkgsrc tree to be written to a CD-ROM.
+   This target also produces README.html files, and can be made to refer
+   to URLs based on CDROM_PKG_URL_HOST and CDROM_PKG_URL_DIR.
+
+
 
  8 Debugging
  ===========
@@ -992,7 +1026,7 @@ have to do that yourself, and this may not be what you want.
 If your package uses a different distribution method from .tar.gz, take a
 look at the package for plan9/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
-DIST_NAME field, and add the following to your package's Makefile:
+DISTNAME field, and add the following to your package's Makefile:
 
 > EXTRACT_SUFX=   .msg.gz
 > EXTRACT_CMD=            zcat
@@ -1018,13 +1052,13 @@ quick answer is:
 
 > HAS_CONFIGURE=          yes
 > CONFIGURE_SCRIPT=       Configure
-> CONFIGURE_ARGS=         netbsd13
+> CONFIGURE_ARGS+=        netbsd13
 
 
- 9.5 Packages not building in their DIST_NAME directory
+ 9.5 Packages not building in their DISTNAME directory
  ======================================================
 
-Your package builds in a different directory from its base DIST_NAME - see
+Your package builds in a different directory from its base DISTNAME - see
 tcl and tk packages:
 
 > WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
@@ -1262,7 +1296,6 @@ The file contents in this section must be used without the "> " prefix.
 > info/bison.info-3
 > info/bison.info-4
 > info/bison.info-5
-> @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 > @exec %D/bin/install-info %D/info/bison.info %D/info/dir
 > share/bison.simple
 > share/bison.hairy
