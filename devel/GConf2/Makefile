@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/12/04 19:48:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2003/12/14 19:44:38 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2/}
-PKGREVISION=	4
 
 USE_PKGINSTALL=	YES
 
@@ -27,7 +26,6 @@ post-install:
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
-.include "../../net/linc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/xmlcatmgr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
