@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2032 2004/08/14 20:36:35 ben Exp $
+$NetBSD: TODO,v 1.2033 2004/08/14 20:39:42 ben Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ Suggested package updates
 	o php-5.0.0
 	o phppgadmin-3.4 [pkg/26130|recht]
 	o phppgadmin-3.4.1 [pkg/26539|recht]
+	o phylib-3.61
 	o physfs-1.0.0
 	o plib-1.7.0
 	o povray-3.6.1
