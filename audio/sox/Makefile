@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1999/09/29 15:53:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/29 23:15:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
-DISTNAME=	soxgamma
-PKGNAME=	sox-12.16
+DISTNAME=	sox-12.16
 CATEGORIES=	audio
 MASTER_SITES=	http://metalab.unc.edu/pub/Linux/apps/sound/convert/
 
