@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.385 2000/01/10 15:42:57 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.386 2000/01/10 19:17:27 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2453,25 +2453,28 @@ print-pkg-size:
 		-e '/^\//p'						\
 		<${PLIST} ;						\
 	${SHCOMMENT} "Any depending pkgs' files" ;			\
-	if [ "${SIZEDEPENDS}" != "" ]; then				\
-		for p in ${DEPENDS:C/:.*//:Q} "" ; do			\
-			if [ "X$$p" = "X" ]; then continue; fi;		\
-			${SHCOMMENT} direct depends ;			\
-			pkg_info -qL "$$p" ;				\
-			${SHCOMMENT} "depends of depends (XXX complete!)"; \
-			dps=`pkg_info -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
-			for dp in $$dps "" ; do				\
-				if [ "X$$dp" = "X" ]; then continue; fi;\
-				pkg_info -qL "$$dp" ;			\
-			done ;						\
-		done ;							\
-	fi ;							 	\
+	if [ "${SIZEDEPENDS}" != "" ]; then 				\
+		${MAKE} print-pkg-depend-sizes ;			\
+	fi ;								\
 	)								\
 	| sort -u							\
 	| xargs ls -ld							\
 	| awk 'BEGIN { sum=0; }						\
 	       { sum+=$$5; }						\
 	       END { print sum; }'
+
+# Find sizes of required pkgs
+print-pkg-depend-sizes:
+.for dep in ${DEPENDS}
+	@p="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
+	${SHCOMMENT} direct depends ;					\
+	${PKG_INFO} -qL "$$p" ;						\
+	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
+	dps=`${PKG_INFO} -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
+	for dp in $$dps ; do						\
+			${PKG_INFO} -qL "$$dp" ;			\
+	done
+.endfor
 
 
 # Fake installation of package so that user can pkg_delete it later.
