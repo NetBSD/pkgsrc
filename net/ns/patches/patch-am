@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2003/09/01 18:21:13 seb Exp $
+$NetBSD: patch-am,v 1.3 2003/10/06 11:02:45 jlam Exp $
 
 --- indep-utils/webtrace-conv/dec/Makefile.in.orig	Wed Feb 16 18:08:26 2000
 +++ indep-utils/webtrace-conv/dec/Makefile.in
@@ -11,3 +11,12 @@ $NetBSD: patch-am,v 1.2 2003/09/01 18:21:13 seb Exp $
  LIBS = @V_LIB_TCL@ @V_LIB@ @LIBS@
  INSTALL = @INSTALL@
  
+@@ -50,7 +50,7 @@
+ all: dec-tr-stat
+ 
+ install: dec-tr-stat
+-	$(INSTALL) -m 555 -o bin -g bin dec-tr-stat $(DESTDIR)$(BINDEST)
++	$(INSTALL) -m 555 dec-tr-stat $(DESTDIR)$(BINDEST)
+ 
+ dec-tr-stat: $(OBJ)
+ 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OBJ) $(LIBS)

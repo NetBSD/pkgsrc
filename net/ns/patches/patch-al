@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2003/09/03 13:42:45 seb Exp $
+$NetBSD: patch-al,v 1.4 2003/10/06 11:02:45 jlam Exp $
 
 --- indep-utils/cmu-scen-gen/setdest/Makefile.in.orig	Fri Jan 11 22:06:09 2002
 +++ indep-utils/cmu-scen-gen/setdest/Makefile.in
-@@ -38,7 +38,7 @@ MKDEP	= ../../../conf/mkdep
+@@ -39,7 +39,7 @@ MKDEP	= ../../../conf/mkdep
  # when including files from ns, we need to take care STL_NAMESPACE
  DEFINE = -Dstand_alone -DSTL_NAMESPACE=@STL_NAMESPACE@
  CFLAGS = @V_CCOPT@ 
@@ -11,3 +11,14 @@ $NetBSD: patch-al,v 1.3 2003/09/03 13:42:45 seb Exp $
  LIBS = @V_LIB@ -lm @LIBS@
  INSTALL = @INSTALL@
  
+@@ -46,8 +46,8 @@
+ all: setdest calcdest
+ 
+ install: setdest calcdest
+-	$(INSTALL) -m 555 -o bin -g bin setdest $(DESTDIR)$(BINDEST)
++	$(INSTALL) -m 555 setdest $(DESTDIR)$(BINDEST)
+-	$(INSTALL) -m 555 -o bin -g bin calcdest $(DESTDIR)$(BINDEST)
++	$(INSTALL) -m 555 calcdest $(DESTDIR)$(BINDEST)
+ 
+ setdest: rng.o setdest.o
+ 	$(CCX) -o setdest $@.o rng.o $(DEFINE) $(LDFLAGS) $(CFLAGS) \
