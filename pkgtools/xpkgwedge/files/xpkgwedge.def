@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.9 2003/09/10 17:31:44 gavan Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.10 2004/01/03 23:34:21 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -50,13 +50,13 @@ InstallNamedTargetNoClobber(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class
 
 #ifdef UseInstalled
 /*
- * We need to redefine ImakeCmd so that imake will look in
- * $(PREFIX)/lib/X11/config *before* looking in the standard X
- * config directory to override any configuration files installed
- * there.
+ * We need to redefine ImakeCmd so that imake will look in both
+ * $(PREFIX)/lib/X11/config and $(VIEWBASE)/lib/X11/config *before*
+ * looking in the standard X11 config directory to override any
+ * configuration files installed there.
  */
 #undef ImakeCmd
-#define ImakeCmd imake -I$(PREFIX)/lib/X11/config
+#define ImakeCmd imake -I$(PREFIX)/lib/X11/config -I$(VIEWBASE)/lib/X11/config
 #endif
 
 #endif /* AfterVendorCF */
