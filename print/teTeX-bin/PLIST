@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:57 skrll Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 lib/libkpathsea.a
@@ -350,4 +350,4 @@ bin/mktexmf
 bin/mktexpk
 @comment The next file is changed by various sub-pkgs (hugetex, ...)
 @exec %D/bin/mktexlsr
-@unexec rm -f %D/share/texmf/ls-R
+@unexec ${RM} -f %D/share/texmf/ls-R

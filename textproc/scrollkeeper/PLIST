@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/02 04:49:35 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:13:00 skrll Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-get-cl
 bin/scrollkeeper-get-content-list
@@ -465,8 +465,8 @@ var/lib/scrollkeeper/bg_BG
 @dirrm share/scrollkeeper/doc/scrollkeeper_manual
 @dirrm share/scrollkeeper/doc
 @dirrm share/scrollkeeper
-@unexec rmdir %D/share/omf/scrollkeeper || true
-@unexec rmdir %D/share/omf || true
+@unexec ${RMDIR} %D/share/omf/scrollkeeper || true
+@unexec ${RMDIR} %D/share/omf || true
 @dirrm share/doc/scrollkeeper-0.2
-@unexec rm -rf %D/var/scrollkeeper || true
-@unexec rmdir %D/var || true
+@unexec ${RM} -rf %D/var/scrollkeeper || true
+@unexec ${RMDIR} %D/var || true

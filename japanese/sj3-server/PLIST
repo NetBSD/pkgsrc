@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/13 22:44:25 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:45 skrll Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 sj3/sj3main.dic
@@ -28,6 +28,6 @@ share/sj3/sjrk
 @dirrm share/sj3
 @exec ${MKDIR} ${DICT_DIR}/sj3/user
 @exec ${CHMOD} 755 ${DICT_DIR}/sj3/user
-@exec chown ${SJ3OWNER}:${SJ3GROUP} ${DICT_DIR}/sj3/user
-@unexec rmdir ${DICT_DIR}/sj3/user
-@unexec rmdir ${DICT_DIR}/sj3
+@exec ${CHOWN} ${SJ3OWNER}:${SJ3GROUP} ${DICT_DIR}/sj3/user
+@unexec ${RMDIR} ${DICT_DIR}/sj3/user
+@unexec ${RMDIR} ${DICT_DIR}/sj3

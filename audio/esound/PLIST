@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:28 skrll Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -18,4 +18,4 @@ lib/libesd.so.2
 lib/libesd.so.2.23
 lib/pkgconfig/esound.pc
 share/aclocal/esd.m4
-@unexec rmdir %D/lib/pkgconfig 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || true

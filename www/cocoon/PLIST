@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:02 skrll Exp $
 lib/java/cocoon.jar
 lib/java/sax-bugfix.jar
 lib/java/turbine-pool.jar
@@ -594,7 +594,7 @@ share/examples/java/cocoon/ldap/ldap.xml
 share/examples/java/cocoon/ldap/ldap.xsl
 share/examples/java/cocoon/index.xml
 share/examples/java/cocoon/index.xsl
-@unexec rm -rf tomcat/repository
+@unexec ${RM} -rf tomcat/repository
 @dirrm share/examples/java/cocoon/xsp
 @dirrm share/examples/java/cocoon/xinclude
 @dirrm share/examples/java/cocoon/wap

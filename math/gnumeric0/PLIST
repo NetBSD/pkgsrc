@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/25 01:39:53 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:50 skrll Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -786,4 +786,4 @@ share/pixmaps/gnumeric/top_border
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo
 @dirrm lib/gnumeric
-@unexec rmdir %D/share/mc/templates >/dev/null 2>&1 || true
+@unexec ${RMDIR} %D/share/mc/templates >/dev/null 2>&1 || true

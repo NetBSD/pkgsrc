@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:40 skrll Exp $
 bin/heretic2-demo
 lib/lokigames/heretic2-demo/base/book/back/b_conback8.bk
 lib/lokigames/heretic2-demo/base/book/back/b_conback8_00.m8
@@ -2150,5 +2150,5 @@ share/doc/lokigames/heretic2-demo-README
 @dirrm lib/lokigames/heretic2-demo/base/book
 @dirrm lib/lokigames/heretic2-demo/base
 @dirrm lib/lokigames/heretic2-demo
-@unexec rmdir -p %D/lib/lokigames 2>/dev/null || true
-@unexec rmdir -p %D/share/doc/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || true

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:57 skrll Exp $
 bin/pcps
 man/man1/pcps.1
 share/doc/pcps/pcps.man
 share/doc/pcps/license.doc
 share/doc/pcps/register.doc
 @dirrm share/doc/pcps
-@unexec rm -f %D/bin/pcps.cfg
+@unexec ${RM} -f %D/bin/pcps.cfg
