@@ -1,8 +1,17 @@
-$NetBSD: patch-aj,v 1.1 1999/05/01 15:10:42 tron Exp $
+$NetBSD: patch-aj,v 1.2 2000/05/30 19:23:48 drochner Exp $
 
---- gnome-config.in.orig	Mon Feb 15 19:05:33 1999
-+++ gnome-config.in	Sat May  1 16:56:02 1999
-@@ -213,7 +213,7 @@
+--- gnome-config.in.orig	Tue Sep  7 21:25:26 1999
++++ gnome-config.in	Tue May 30 17:56:22 2000
+@@ -40,6 +40,8 @@
+     module_dirs="$extra:$module_dirs"
+ done
+ 
++module_dirs="XXXLOCALBASEXXX/lib:$module_dirs"
++
+ usage()
+ {
+     exit_code=$1
+@@ -239,7 +241,7 @@
      case "$i" in
      # a library, save it for later, in reverse order
      -l*) rev_libs="$i $rev_libs" ;;

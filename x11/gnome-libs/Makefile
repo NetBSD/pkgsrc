@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2000/05/12 09:21:12 agc Exp $
+# $NetBSD: Makefile,v 1.43 2000/05/30 19:23:46 drochner Exp $
 
-DISTNAME=		gnome-libs-1.0.56
+DISTNAME=		gnome-libs-1.2.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-libs/}
 
@@ -41,6 +41,11 @@ pre-configure:
 		${SED} -e 's|-ldb|-ldb2|g' ${WRKSRC}/configure-pre-db-sub > ${WRKSRC}/configure && \
 		${CHMOD} 0755 ${WRKSRC}/configure
 .endif
+
+post-patch:
+	${MV} ${WRKSRC}/gnome-config.in ${WRKSRC}/gnome-config.in-pre-lpath && \
+	${SED} -e "s|XXXLOCALBASEXXX|${LOCALBASE}|" \
+		${WRKSRC}/gnome-config.in-pre-lpath >${WRKSRC}/gnome-config.in
 
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
