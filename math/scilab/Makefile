@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/11/23 16:12:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 1999/11/23 16:26:13 hubertf Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -14,8 +14,8 @@ HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 RUN_DEPENDS+=	xless-1.7:../../x11/xless
 DEPENDS+=	pvm-3.4.2:../../parallel/pvm3
 
-NO_CDROM=	"no paid distribution of SCILAB"
 RESTRICTED=	"no paid distribution of SCILAB"
+NO_CDROM=	${RESTRICTED}
 
 USE_FORTRAN=	yes
 USE_X11BASE=	yes
