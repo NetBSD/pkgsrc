@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/11/25 11:16:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/23 16:17:34 cjep Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -62,7 +62,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${EMUL_LINUX}
 	${INSTALL_DATA_DIR} /${EMUL_LINUX}
 	${RPM2PKG} -d ${PREFIX} -f ${WRKDIR}/PLIST_DYNAMIC -p emul/linux ${RPMARGS}
-	
+
 	# Fix Linux's ldd paths (ldd is a shell script on Linux)
 	${SED} 's|^\(TEXTDOMAINDIR=\)\(/usr/share/locale\)|\1${PREFIX}/${EMUL_LINUX}\2|; \
 		s|^\(RTLD=\)\(/lib/ld.so.1\)|\1${PREFIX}/${EMUL_LINUX}\2|' \
@@ -72,7 +72,7 @@ do-install:
 	    ${PREFIX}/${EMUL_LINUX}/usr/bin/ldd
 	${CHMOD} 755 ${PREFIX}/${EMUL_LINUX}/usr/bin/ldd
 
-	# Unpack shared libraries for OpenMotif 
+	# Unpack shared libraries for OpenMotif
 	cd ${PREFIX}/${EMUL_LINUX}/usr/X11R6 ; ${GTAR} -x 'lib/*.so*' \
 	    -zvf ${DISTDIR}/${DIST_SUBDIR}/openmotif-2.1.30-3_MLI_jdk.tar.gz | \
 	    ${SED} -e "s|^|${EMUL_LINUX}/usr/X11R6/|" >> ${WRKDIR}/PLIST_DYNAMIC
@@ -92,5 +92,4 @@ do-install:
 	${SORT} -r ${WRKDIR}/PLIST_DYNAMIC > ${WRKDIR}/PLIST_DYNAMIC.sorted
 	${MV} ${WRKDIR}/PLIST_DYNAMIC.sorted ${WRKDIR}/PLIST_DYNAMIC
 
-	
 .include "../../mk/bsd.pkg.mk"

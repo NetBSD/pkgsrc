@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/06/06 23:07:06 cjep Exp $
+# $NetBSD: Makefile,v 1.22 2002/12/23 16:15:27 cjep Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -14,7 +14,7 @@ COMMENT=		Project Revision Control System
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 	\
 			NetBSD-*-mips* NetBSD-*-pc532 NetBSD-*-powerpc	\
 			NetBSD-*-sparc NetBSD-*-vax NetBSD-*-arm 	\
-			SunOS-*-* 
+			SunOS-*-*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/01 18:33:41 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/23 16:18:43 cjep Exp $
 #
 
 DISTNAME=	graphviz-1.8.10
@@ -43,7 +43,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${__f__} ${PREFIX}/share/doc/html/graphviz
 .endfor
 .if 0	# dynagraph "disabled"
-	${INSTALL_DATA} ${WRKSRC}/dynagraph/dynagraph.html ${PREFIX}/share/doc/html/graphviz	
+	${INSTALL_DATA} ${WRKSRC}/dynagraph/dynagraph.html ${PREFIX}/share/doc/html/graphviz
 .endif
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/graphviz
 	${INSTALL_DATA} ${WRKSRC}/MINTERMS.txt ${PREFIX}/share/doc/graphviz
