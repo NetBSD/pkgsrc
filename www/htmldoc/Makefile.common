@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2002/10/03 15:33:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/12/07 18:53:13 drochner Exp $
 #
 
-HTMLDOC_VERSION=	1.8.22
+HTMLDOC_VERSION=	1.8.23
 DISTNAME=		htmldoc-${HTMLDOC_VERSION}-source
 WRKSRC=			${WRKDIR}/htmldoc-${HTMLDOC_VERSION}
 CATEGORIES=		www
