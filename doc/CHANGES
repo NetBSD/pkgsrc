@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5616 2004/04/16 21:29:16 kristerw Exp $
+$NetBSD: CHANGES,v 1.5617 2004/04/16 21:39:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2032,3 +2032,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added powermanga-0.78 [xtraeme 2004-04-16]
 	Updated xmame to 0.81.1 [kristerw 2004-04-16]
 	Updated xmess to 0.81.1 [kristerw 2004-04-16]
+	Added p5-WWW-Mechanize-1.02 [minskim 2004-04-16]
