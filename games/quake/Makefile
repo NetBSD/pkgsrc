@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/28 14:20:41 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/13 00:35:04 wiz Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -16,7 +16,7 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 USE_GMAKE=	yes
 
-BROKEN=		more patches are needed to make it build.
+BROKEN=		untested, only compiles on a.out for now
 
 EXTRACT_CMD=	${UNZIP} -q ${DISTDIR}/${EXTRACT_ONLY}
 MAKE_ENV+=	MAINDIR=${WRKSRC}

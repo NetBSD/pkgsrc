@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2000/01/13 00:35:06 wiz Exp $
+
+--- client/snd_linux.c.orig	Mon Jul  7 20:08:00 1997
++++ client/snd_linux.c	Thu Jan 13 00:29:11 2000
+@@ -6,7 +6,11 @@
+ #include <sys/mman.h>
+ #include <sys/shm.h>
+ #include <sys/wait.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <linux/soundcard.h>
++#endif
+ #include <stdio.h>
+ #include "quakedef.h"
+ 
