@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/11/08 20:37:45 tv Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/10 18:09:07 epg Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -10,6 +10,8 @@ COMMENT=	Apache Portable Runtime
 # Don't bump this when apache upgrades; it is only apache2-2.0.45 and
 # under that includes its own apr.  apr was split out in 2.0.45nb1.
 CONFLICTS=		apache2<=2.0.45
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
