@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2001/02/13 11:47:06 tron Exp $
+$NetBSD: patch-aa,v 1.11 2002/10/08 17:27:20 wiz Exp $
 
 --- configure.orig	Mon Jul  3 10:31:57 2000
 +++ configure
@@ -6,8 +6,8 @@ $NetBSD: patch-aa,v 1.10 2001/02/13 11:47:06 tron Exp $
  
  
  
-+# Set DATADIRNAME to "${LOCALEDIR}"
-+DATADIRNAME="${LOCALEDIR}"
++# Set DATADIRNAME to "${PKGLOCALEDIR}"
++DATADIRNAME="${PKGLOCALEDIR}"
 +INTLDEPS=
 +INTLLIBS="-lintl"
 +

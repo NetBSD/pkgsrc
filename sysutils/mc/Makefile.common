@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2002/10/02 19:09:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2002/10/08 17:27:19 wiz Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -33,23 +33,11 @@ CONFIGURE_ENV+=		ac_cv_header_readline_history_h=no
 CONFIGURE_ENV+=		ac_cv_header_readline_readline_h=no
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
-CONFIGURE_ENV+=		LOCALEDIR="${LOCALEDIR}"
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 LIBS+=			-lm -ltermcap		# -lslang
 LIBS+=			-lintl			# check for gettext is broken
 CPPFLAGS+=		-I${LOCALBASE}/include	# slang.h
 CPPFLAGS+=		-Dunix
-
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-# 	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
 
 .include "../../mk/bsd.pkg.mk"
