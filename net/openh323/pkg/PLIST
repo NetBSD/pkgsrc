@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
+lib/libh323.la
+lib/libh323.a
+lib/libh323.so
+bin/simph323
+include/QTIoctl.h
+include/acmcodec.h
+include/channels.h
+include/codecs.h
+include/gkclient.h
+include/gsmcodec.h
+include/h261codec.h
+include/h323.h
+include/h323caps.h
+include/h323neg.h
+include/h323pdu.h
+include/h323rtp.h
+include/ixjDefs.h
+include/ixjlid.h
+include/jitter.h
+include/lid.h
+include/lpc10codec.h
+include/q931.h
+include/rtp.h
+include/transports.h
+include/videoio.h
+include/vpbapi.h
+include/vpblid.h
+include/x224.h
+include/h225.h
+include/h235.h
+include/h245.h
+include/mcspdu.h
+include/gccpdu.h
+include/ldap.h
+share/openh323/openh323u.mak
+@dirrm share/openh323

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
+
+--- samples/simple/Makefile.orig	Thu Aug 24 17:31:34 2000
++++ samples/simple/Makefile	Thu Aug 24 17:31:57 2000
+@@ -33,7 +33,7 @@
+ PWLIBDIR=$(HOME)/pwlib
+ endif
+ 
+-include $(PWLIBDIR)/make/ptlib.mak
++include $(PWLIBDIR)/share/pwlib/make/ptlib.mak
+ 
+ ifndef OPENH323DIR
+ OPENH323DIR=$(HOME)/openh323
