@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9452 2005/03/07 10:20:12 adam Exp $
+$NetBSD: CHANGES,v 1.9453 2005/03/07 12:38:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added kochi-ttf-20030809 [uebayasi 2005-03-07]
 	Updated abiword to 2.2.5 [adam 2005-03-07]
 	Updated abiword-plugins to 2.2.5 [adam 2005-03-07]
+	Updated gimp-docs to 2.0.7 [adam 2005-03-07]
