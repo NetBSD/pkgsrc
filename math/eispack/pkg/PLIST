@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 01:46:18 jtb Exp $
+lib/libeispack.a
+lib/libeispack.la
+lib/libeispack.so.0.0
