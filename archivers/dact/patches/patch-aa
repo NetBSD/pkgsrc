@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/09/09 15:06:11 rh Exp $
+
+--- Makefile.in.orig	Fri Sep  7 22:29:02 2001
++++ Makefile.in
+@@ -69,7 +69,7 @@
+ 
+ install: all
+ 	$(INSTALL) -c -m 755 dact $(bindir)/dact
+-	$(INSTALL) -c -m 644 dact.conf $(CONF)
++	$(INSTALL) -c -m 644 dact.conf $(CONF).sample
+ 	$(INSTALL) -c -m 644 Docs/dact.1 $(mandir)/man1/dact.1
+ @MODS@	mkdir -p -m 755 $(datadir)/dact
+ @MODS@	for so in *.so; do $(INSTALL) -c -m 644 $$so $(datadir)/dact/$$so; done
