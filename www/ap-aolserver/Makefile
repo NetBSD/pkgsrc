@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/02 13:31:33 wiz Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--with-database=postgres
 CONFIGURE_ARGS+=	--with-mm=${BUILDLINK_PREFIX.libmm}
 
 CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql
-CFLAGS+=	`${APXS} -q CFLAGS CFLAGS_SHLIB`
+CFLAGS+=	${APXSFLAGS}
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
@@ -33,3 +33,5 @@ post-install:
 .include "../../www/apache/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+APXSFLAGS!=	${PREFIX}/sbin/apxs -q CFLAGS CFLAGS_SHLIB
