@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.23 2004/12/02 21:56:06 dillo Exp $
+# $NetBSD: bsd.sites.mk,v 1.24 2004/12/08 16:21:00 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -127,7 +127,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/ \
-	ftp://ftp3.sourceforge.net/pub/sourceforge/
+	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
 
