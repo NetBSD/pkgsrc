@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/12/24 06:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2003/01/16 01:18:39 salo Exp $
 #
 
 DISTNAME=	balsa-1.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
 		ftp://ftp.newton.cx/pub/balsa/
@@ -28,6 +28,6 @@ CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 .include "../../devel/libproplist/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libpspell/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
