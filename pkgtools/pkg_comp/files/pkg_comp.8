@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.13 2003/09/07 22:31:18 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.14 2003/12/13 18:29:47 seb Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@netbsd.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd September 7, 2003
+.Dd December 13, 2003
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -35,7 +35,11 @@
 .Nd build packages inside a chroot
 .Sh SYNOPSIS
 .Nm
-.Op Ar -c conf_file
+.Oo Fl Po
+.Cm c Ns \&| Ns Cm C
+.Pc
+.Ar conf_file
+.Oc
 .Ar target
 .Op Ar pkg_name ...
 .Sh DESCRIPTION
@@ -97,6 +101,13 @@ followed by the configuration file name and the .conf suffix.
 The default configuration file is
 .Pa $HOME/pkg_comp/default.conf ,
 and is always used if you do not specify another one.
+The configuration file name is specified by the argument of the
+.Fl c
+option.
+Alternatively you can specify any pathname as a configuration file
+with the argument of the 
+.Fl C
+option.
 .Pp
 Configuration files are simple shell scripts that define
 variables.
@@ -171,17 +182,12 @@ If set to
 .Ql no ,
 no special action is taken (this is useful if the system version inside
 the chroot matches the outside one).
-Otherwise, the
-.Pa pkgtools/libkver
-package is installed, configuring it with the version set in the variable.
-This package fakes some system functions and calls to the
-.Xr sysctl 8
-utility so that programs get the right kernel version with respect to the
-installed userland (inside the chroot).
-Note that
-.Va REAL_SRC
-has to point to a directory holding system sources
-matching the selected version.
+Otherwise, the file
+.Pa /libkver_osrelease
+inside the chroot will hold this variable's value.
+The pkgsrc system will pick up this file and fake the
+.Xr uname
+command's output.
 Defaults to
 .Ql no .
 .It PKG_SYSCONFBASE
