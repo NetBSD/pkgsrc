@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.350 2002/10/24 18:59:30 hubertf Exp $
+$NetBSD: CHANGES,v 1.351 2002/10/25 02:30:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3374,3 +3374,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added net-snmp-5.0.6 [jlam 2002-10-24]
 	Removed net-snmp-current [jlam 2002-10-24]
 	Added hot-babe-0.1.2 [hubertf 2002-10-24]
+	Updated ap-ssl to 2.8.12 [taca 2002-10-25]
