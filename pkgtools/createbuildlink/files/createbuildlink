@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.12 2003/04/04 22:13:16 rh Exp $
+#	$NetBSD: createbuildlink,v 1.13 2003/04/29 01:36:08 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink2.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.12 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.13 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -88,12 +88,12 @@ commons=`grep '^.include.*Makefile.common\"' $makefile |		\
 ## package specific variables
 ##
 CURDIR=`pwd | sed 's|^.*/\([^/]*/[^/]*\)$|\1|'`
-PKGNAME=`make show-var VARNAME=PKGNAME`
+PKGNAME=`@MAKE@ show-var VARNAME=PKGNAME`
 PKGVER=`echo $PKGNAME | sed -e 's/^.*-//'`
 PKGNOVER=`echo $PKGNAME | sed -e 's/-[^-]*$//'`
 PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
 PREFIX=X11PREFIX
-USE_X11BASE=`make show-var VARNAME=USE_X11BASE`
+USE_X11BASE=`@MAKE@ show-var VARNAME=USE_X11BASE`
 if [ -z "$USE_X11BASE" ]; then
 	if ! grep -q "^USE_X11BASE" $makefile $commons ; then
 		PREFIX=LOCALBASE
