@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/05/04 09:19:21 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/04 10:15:46 skrll Exp $
 ${PKGNAME}/${MACHINE_GCC_PLATFORM}/include/_G_config.h
 ${PKGNAME}/bin/${MACHINE_GCC_PLATFORM}-gcc
 ${PKGNAME}/bin/c++
@@ -164,11 +164,16 @@ ${PKGNAME}/include/g++-3/utility
 ${PKGNAME}/include/g++-3/valarray
 ${PKGNAME}/include/g++-3/vector
 ${PKGNAME}/include/g++-3/vector.h
+@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/chill.info
 ${PKGNAME}/info/chill.info
+@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/chill.info
+@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/cpp.info
 ${PKGNAME}/info/cpp.info
 ${PKGNAME}/info/cpp.info-1
 ${PKGNAME}/info/cpp.info-2
 ${PKGNAME}/info/cpp.info-3
+@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/cpp.info
+@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/g77.info
 ${PKGNAME}/info/g77.info
 ${PKGNAME}/info/g77.info-1
 ${PKGNAME}/info/g77.info-10
@@ -191,6 +196,8 @@ ${PKGNAME}/info/g77.info-6
 ${PKGNAME}/info/g77.info-7
 ${PKGNAME}/info/g77.info-8
 ${PKGNAME}/info/g77.info-9
+@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/g77.info
+@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/gcc.info
 ${PKGNAME}/info/gcc.info
 ${PKGNAME}/info/gcc.info-1
 ${PKGNAME}/info/gcc.info-10
@@ -222,6 +229,7 @@ ${PKGNAME}/info/gcc.info-6
 ${PKGNAME}/info/gcc.info-7
 ${PKGNAME}/info/gcc.info-8
 ${PKGNAME}/info/gcc.info-9
+@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/gcc.info
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/SYSCALLS.c.X
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1chill
@@ -286,7 +294,9 @@ ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libobjc.a
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libstdc++.a
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/specs
 ${PKGNAME}/lib/libiberty.a
-${PKGNAME}/lib/libstdc++.a.2.10.0
+${PKGNAME}/lib/libstdc++.a.2.10
+${PKGNAME}/lib/libstdc++.so.2
+${PKGNAME}/lib/libstdc++.so.2.10
 ${PKGNAME}/man/man1/cccp.1
 ${PKGNAME}/man/man1/g++.1
 ${PKGNAME}/man/man1/g77.1
