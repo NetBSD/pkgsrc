@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2372 2004/11/15 17:03:32 xtraeme Exp $
+$NetBSD: TODO,v 1.2373 2004/11/16 00:13:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -254,6 +254,7 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o amavisd-new-2.1.2 [pkg/26843]
 	o amavisd-new-2.2.0
+	o antiword-0.36
 	o ap-jk-5.0.25
 	o apcupsd-3.10.13
 	o apr-1.0.0
@@ -283,7 +284,7 @@ Suggested package updates
 	o chemtool-1.6.3
 	o cint-5.15
 	o clanlib-0.7.8
-	o classpath-0.11
+	o classpath-0.12
 	o clisp-2.33.2
 	o cmp3-2.0pre6
 	o cocoon-2.1.5
@@ -353,7 +354,7 @@ Suggested package updates
 	o glitz-0.2.3 [pkg/28107|rh]
 	o glpk-4.6
 	o gmpc-0.11.2
-	o gnunet-0.6.4a
+	o gnunet-0.6.5
 	o gnustep-ssl-1.10.1 [pkg/28112|rh]
 	o gobo-eiffel-3.3
 	o gogo-3.11p1
@@ -413,7 +414,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libopendaap-0.2.3
 	o libpixman-0.1.2 [pkg/28108|rh]
-	o libstatgrab-0.11 [pkg/28258]
+	o libsndfile-1.0.11
 	o libtiff-3.7.0 [reed]
 	o licq-1.3.0
 	o lilypond-2.4
@@ -446,6 +447,7 @@ Suggested package updates
 	o namazu-2.0.13
 	o nap-1.5.2
 	o napshare-1.2
+	o nas-1.7
 	o ncmpc-0.11.0 [pkg/26237]
 	o netcdf-3.5.1
 	o netio-123
@@ -480,6 +482,7 @@ Suggested package updates
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o phppgadmin-3.4.1 [pkg/26539|recht]
+	o phppgadmin-3.5
 	o phylip-3.62
 	o pilot-link-0.11.8
 	o plib-1.7.0
