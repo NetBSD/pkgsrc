@@ -1,16 +1,26 @@
-$NetBSD: patch-aa,v 1.3 2002/11/26 21:38:24 cjep Exp $
---- kdevelop/tools/processes.pl.in.orig	Wed Apr  3 10:27:20 2002
-+++ kdevelop/tools/processes.pl.in
+$NetBSD: patch-aa,v 1.4 2004/02/15 11:25:24 markd Exp $
 
-@@ -11,9 +11,9 @@ my $entriesfilename= shift || "entries";
- my %changings;
+--- configure.orig	2004-01-26 08:14:50.000000000 +1300
++++ configure
+@@ -36447,7 +36447,7 @@ ac_link='rm -rf SunWS_cache; ${CXX-g++} 
  
- my $homedirectory = $ENV{KDEHOME};
--$homedirectory = "$ENV{HOME}/.kde2"    if (!$homedirectory);
-+$homedirectory = "$ENV{HOME}/.kde"    if (!$homedirectory);
+     save_CXXFLAGS="$CXXFLAGS"
  
--my $local_datadir     = shift || ($homedirectory  . "/share/apps/kdevelop");
-+my $local_datadir     = shift || ($homedirectory  . "/share/kde/apps/kdevelop");
- my $kde_miniicondir   = $kde_icondir    . "/locolor/16x16/apps/";
+-    CXXFLAGS="$CXXFLAGS $X_CFLAGS -ldb"
++    CXXFLAGS="$CXXFLAGS $X_CFLAGS -ldb4"
  
- printflush (STDOUT,"Starting with installation\n");
+     cat >conftest.$ac_ext <<_ACEOF
+ /* #line $LINENO "configure" */
+@@ -37480,9 +37480,9 @@ fi
+ 
+   test -n "$TAR" && break
+ done
+-test -n "$TAR" || TAR="
+-tar=${tar-"${am_missing_run}"}
+-"
++#test -n "$TAR" || TAR="
++#tar=${tar-"${am_missing_run}"}
++#"
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
