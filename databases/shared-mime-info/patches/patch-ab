@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/04/05 18:16:20 adam Exp $
+
+--- configure.orig	Mon Apr  5 19:39:49 2004
++++ configure
+@@ -1779,7 +1779,7 @@ if test -z "`$INTLTOOL_PERL -v | fgrep '
+ echo "$as_me: error: perl 5.x required for intltool" >&2;}
+    { (exit 1); exit 1; }; }
+ fi
+-if `perl -e "require XML::Parser" 2>/dev/null`; then
++if `$INTLTOOL_PERL -e "require XML::Parser" 2>/dev/null`; then
+ :
+ else
+    { { echo "$as_me:$LINENO: error: XML::Parser perl module is required for intltool" >&5
