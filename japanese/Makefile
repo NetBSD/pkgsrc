@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/05/07 02:45:11 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2000/05/18 09:15:01 itohy Exp $
 #
 
     SUBDIR += a2ps
@@ -14,6 +14,7 @@
     SUBDIR += groff
     SUBDIR += jhd
     SUBDIR += kakasi
+    SUBDIR += kbanner
     SUBDIR += king
     SUBDIR += kinput2
     SUBDIR += less
