@@ -1,18 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/07/15 14:41:27 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2002/10/13 04:42:13 hubertf Exp $
 
---- snort.c.orig	Fri Jun 28 16:22:59 2002
-+++ snort.c
-@@ -43,6 +43,9 @@
- 
- /*  I N C L U D E S  **********************************************************/
- #include "snort.h"
-+#ifdef __NetBSD__
-+#include <sys/param.h>
-+#endif
- 
- 
- /*  G L O B A L S  ************************************************************/
-@@ -1480,6 +1483,19 @@
+--- src/snort.c.orig	Wed Sep 25 21:56:53 2002
++++ src/snort.c
+@@ -1437,6 +1437,19 @@
  
              break;
  
@@ -32,3 +22,12 @@ $NetBSD: patch-aa,v 1.7 2002/07/15 14:41:27 wiz Exp $
          case DLT_PPP:                /* point-to-point protocol */
              if(!pv.readmode_flag)
              {
+@@ -2193,7 +2206,7 @@
+     struct stat st;
+     int found;
+     int i;
+-    char *conf_files[]={"/etc/snort.conf", "./snort.conf", NULL};
++    char *conf_files[]={ PREFIX "/etc/snort.conf", "./snort.conf", NULL};
+     char *fname = NULL;
+     char *home_dir;
+     char *tmp;
