@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2003/09/26 12:40:27 wiz Exp $
+
+--- src/profile.c.orig	Wed Jan 30 18:57:23 2002
++++ src/profile.c
+@@ -75,7 +75,7 @@ int Prf_Ld()
+ #ifdef ASCII
+         F_GetE(f, str, F_VAL); str[strlen(str) - 1] = 0;
+         if (strncmp(str,"ascii",5)) {
+-            printf("\nWARNING: trying to load raw binary data in ascii; cannot read profiles\n", prf_pth);
++            printf("\nWARNING: trying to load raw binary data in ascii; cannot read profiles\n");
+             Prf_Crt("Michael");
+             not_f = 1;
+         }

@@ -1,0 +1,23 @@
+$NetBSD: patch-ap,v 1.1 2003/09/26 12:40:27 wiz Exp $
+
+--- src/cfg.c.orig	Wed Mar  6 21:46:43 2002
++++ src/cfg.c
+@@ -40,9 +40,16 @@ Cfg cfg;
+ void C_StPth()
+ {
+ #ifdef _WIN32
+-    sprintf( c_pth, "%s/lgames", (getenv( "HOME" )?getenv( "HOME" ):".") );
++    snprintf( c_pth, sizeof( c_pth ) - 1, "%s/lgames", (getenv( "HOME" )?getenv( "HOME" ):".") );
+ #else
+-    sprintf( c_pth, "%s/.lgames", getenv( "HOME" ) );
++    if ( getenv( "HOME" ) )
++    {
++    	snprintf( c_pth, sizeof( c_pth ) - 1, "%s/.lgames", getenv( "HOME" ) );
++    }
++    else
++    {
++	strcpy( c_pth, ".lgames" );
++    }
+ #endif
+     /* create .lgames directory if not found */
+     if ( opendir( c_pth ) == 0 ) {
