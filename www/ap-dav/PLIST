@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/06 15:35:04 jlam Exp $
 lib/httpd/mod_dav.so
 share/doc/html/mod_dav/LICENSE.html
+share/doc/mod_dav/README
 share/doc/mod_dav/INSTALL
 @dirrm share/doc/mod_dav
 @dirrm share/doc/html/mod_dav
