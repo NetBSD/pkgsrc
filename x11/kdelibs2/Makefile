@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/01/21 12:11:16 skrll Exp $
+# $NetBSD: Makefile,v 1.32 2002/02/15 09:26:32 skrll Exp $
 
 DISTNAME=	kdelibs-2.2.2
 CATEGORIES=	x11
@@ -19,6 +19,11 @@ CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
 
 .if ${OPSYS} == "NetBSD"
 LIBS+=			-Wl,--export-dynamic
+.endif
+
+GCC_VERSION!=		gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
+.include "../../lang/gcc/Makefile.gcc"
 .endif
 
 # Override KDE_INCLUDES and QT_INCLUDES at build-time since their values
