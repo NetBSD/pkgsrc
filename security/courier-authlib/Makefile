@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 17:08:39 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/26 22:14:01 jlam Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.54
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,12 +42,14 @@ CONFIGURE_ENV+=		EXPECT="${LOCALBASE}/bin/expect"
 AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
 AUTHEXAMPLEDIR=		share/examples/courier-authlib
+AUTHDOCDIR=		share/doc/courier-authlib
 FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR}
 FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR}
 
 PKG_SYSCONFSUBDIR?=	courier
 
 EGDIR=			${PREFIX}/${AUTHEXAMPLEDIR}
+DOCDIR=			${PREFIX}/${AUTHDOCDIR}
 RCD_SCRIPTS=		authdaemond
 GEN_FILES=		authdaemonrc
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
@@ -62,6 +64,8 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			authmysqlrc=${EGDIR}/authmysqlrc		\
 			authpgsqlrc=${EGDIR}/authpgsqlrc
 
+POST_INSTALL_TARGETS=	post-install-common
+
 .include "options.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 
@@ -73,16 +77,26 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}.dist ${PKG_SYSCONFDIR}/${_file_} \
 .for _file_ in ${AUTHLIB_PLIST}
 GENERATE_PLIST+=	${TEST} -f ${PREFIX}/${_file_} && ${ECHO} "${_file_}";
 .endfor
+.if !empty(AUTHLIB_PLIST:M${AUTHEXAMPLEDIR}/*)
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHEXAMPLEDIR}";
+.endif
+GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHDOCDIR}";
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHLIBEXECDIR}";
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHLIBDIR}";
 
 INSTALLATION_DIRS=	bin sbin
 
-post-install:
+post-install: ${POST_INSTALL_TARGETS}
+
+post-install-common:
 	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.authdebug.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README_authlib.html ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
