@@ -3,7 +3,7 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $NetBSD: Makefile,v 1.8 1998/02/02 08:59:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/02/25 02:35:35 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
 #
 
@@ -23,6 +23,9 @@ USE_X11=	yes
 LIBS=		libMesaGL libMesaGLU libMesaaux libMesatk
 SHLIB_VERSION=	2.4
 
+post-extract:
+	chmod +r ${WRKSRC}/demos/*
+
 do-install:
 .for file in ${LIBS}
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}_pic.a ${PREFIX}/lib
@@ -40,6 +43,7 @@ do-install:
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
 	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
