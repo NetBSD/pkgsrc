@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.809 2001/09/11 16:41:36 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.810 2001/09/12 10:38:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1570,8 +1570,8 @@ do-install:
 
 # Package
 
-.if !target(do-package)
-do-package: ${PLIST} ${DESCR}
+.if !target(real-su-package)
+real-su-package: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
 	if [ ! -d ${PKGREPOSITORY} ]; then			\
@@ -1597,7 +1597,7 @@ do-package: ${PLIST} ${DESCR}
 .  endif
 .endif
 
-# Some support rules for do-package
+# Some support rules for real-su-package
 
 .if !target(package-links)
 package-links:
@@ -2029,32 +2029,19 @@ real-configure: _PORT_USE
 real-build: _PORT_USE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
 real-install: do-su-install
-real-package: _PORT_USE
+real-package: do-su-package
 
 # sudo or priv are acceptable substitutes
 SU_CMD?=	${SU} root -c
 PRE_ROOT_CMD?=	${TRUE}
 
-do-su-install: 
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
-	case "$$extractname" in						\
-	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
-	"${PKGNAME}")	;;						\
-	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}"; \
-		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
-		${ECHO_MSG} "*** Please rebuild the package using the newer version: \"make clean && make\""; \
-		exit 1 ;; \
-	esac
-	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+_SU_TARGET=								\
 	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${MAKEFLAGS} real-su-install;			\
+		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	else								\
-		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
 		args="";						\
 		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
 			args="FORCE_PKG_REGISTER=1";			\
@@ -2068,8 +2055,31 @@ do-su-install:
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${MAKEFLAGS} real-su-install"; \
+		${SU_CMD} "cd ${.CURDIR}; ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
+
+do-su-install: 
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
+	case "$$extractname" in						\
+	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
+	"${PKGNAME}")	;;						\
+	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}"; \
+		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
+		${ECHO_MSG} "*** Please rebuild the package using the newer version: \"${MAKE} clean && ${MAKE}\""; \
+		exit 1 ;;						\
+	esac
+	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-install";					\
+	${_SU_TARGET} 
+
+do-su-package:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Packaging ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-package";					\
+	${_SU_TARGET} 
+	
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
 # in the _PORT_USE macro
@@ -2108,14 +2118,9 @@ deinstall: do-su-deinstall
 do-su-deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${MAKEFLAGS} real-su-deinstall;			\
-	else								\
-		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
-		${SU_CMD} "cd ${.CURDIR}; $$make ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} real-su-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
-	fi
-
+	realtarget="real-su-deinstall";					\
+	realflags="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
+	${_SU_TARGET} 
 
 .  if (${DEINSTALLDEPENDS} != "NO")
 .    if (${DEINSTALLDEPENDS} != "ALL")
