@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/13 20:00:29 dillo Exp $
+bin/test_physfs
+include/physfs.h
+lib/libphysfs.a
+lib/libphysfs.la
+lib/libphysfs.so
+lib/libphysfs.so.8
+lib/libphysfs.so.8.0
