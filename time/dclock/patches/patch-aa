@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:16 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/15 22:46:27 wiz Exp $
 
 --- Makefile.orig	Wed Oct 20 11:40:45 1999
 +++ Makefile	Wed Oct 20 11:43:33 1999
@@ -26,8 +26,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:16 wiz Exp $
 +	${CC} ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
 +
 +install: dclock
-+	${BSD_INSTALL_PROGRAM} dclock $(X11BASE)/bin
-+	${BSD_INSTALL_MAN} dclock.man $(X11BASE)/man/man1/dclock.1
++	${BSD_INSTALL_PROGRAM} dclock $(PREFIX)/bin
++	${BSD_INSTALL_MAN} dclock.man $(PREFIX)/man/man1/dclock.1
  
  clean: ; rm -f ${OBJS} core dclock
  
