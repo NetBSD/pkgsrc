@@ -1,8 +1,60 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/05 18:11:38 magick Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/29 09:54:28 seb Exp $
 
---- Imakefile.orig	Fri Jun  1 16:44:51 2001
+--- Imakefile.orig	2003-09-29 08:13:05.000000000 +0000
 +++ Imakefile
-@@ -29,29 +29,14 @@
+@@ -1,27 +1,27 @@
+-/**/# Based on an Imakefile from:
+-/**/# Andreas Stolcke
+-/**/# International Computer Science Institute, Berkeley.
+-/**/# With help from:
+-/**/# George Lindholm, Jonathan I. Kamens, Braham Levy.
+-
+-
+-/**/# o Define FORKRETURNSSHORT/FORKRETURNSLONG/FORKRETURNSPID_T if your
+-/**/#   fork(2) returns short/long/pid_t not int.
+-/**/# o Define USEFLOCK or USELOCKF to use flock(2) or lockf(3) to lock files,
+-/**/#   rather than fcntl(2).
+-/**/# o Define USELSEEK to use lseek(2) to move to the end of the file, rather
+-/**/#   than fseek(3).
+-/**/# o Define USERENAME to use rename(2) to rename file names (otherwise
+-/**/#   un/link(2)).
+-/**/# o Define USEGETHOSTNAME or USEUNAME (or neither if you don't have
+-/**/#   gethostname(2) or uname(2)) to get the name of your system.
+-/**/# o Define USEGETPWUID to use getpwuid(3) and getuid(2) to get the user
+-/**/#   name and home directory on your system.  Note that if you want to use
+-/**/#   this method to get the user's home directory, but another method to get
+-/**/#   the user name, this symbol must still be defined.
+-/**/# o Define USEGETLOGIN to use getlogin(3) to get the user name (note that
+-/**/#   this may not work if xalarm is invoked from a pseudo terminal).
+-/**/# o Define USECUSERID to use cuserid(3) to get the user name.
++XCOMM # Based on an Imakefile from:
++XCOMM # Andreas Stolcke
++XCOMM # International Computer Science Institute, Berkeley.
++XCOMM # With help from:
++XCOMM # George Lindholm, Jonathan I. Kamens, Braham Levy.
++
++
++XCOMM # o Define FORKRETURNSSHORT/FORKRETURNSLONG/FORKRETURNSPID_T if your
++XCOMM #   fork(2) returns short/long/pid_t not int.
++XCOMM # o Define USEFLOCK or USELOCKF to use flock(2) or lockf(3) to lock files,
++XCOMM #   rather than fcntl(2).
++XCOMM # o Define USELSEEK to use lseek(2) to move to the end of the file, rather
++XCOMM #   than fseek(3).
++XCOMM # o Define USERENAME to use rename(2) to rename file names (otherwise
++XCOMM #   un/link(2)).
++XCOMM # o Define USEGETHOSTNAME or USEUNAME (or neither if you don't have
++XCOMM #   gethostname(2) or uname(2)) to get the name of your system.
++XCOMM # o Define USEGETPWUID to use getpwuid(3) and getuid(2) to get the user
++XCOMM #   name and home directory on your system.  Note that if you want to use
++XCOMM #   this method to get the user's home directory, but another method to get
++XCOMM #   the user name, this symbol must still be defined.
++XCOMM # o Define USEGETLOGIN to use getlogin(3) to get the user name (note that
++XCOMM #   this may not work if xalarm is invoked from a pseudo terminal).
++XCOMM # o Define USECUSERID to use cuserid(3) to get the user name.
+ 
+ DEFINES = $(SIGNAL_DEFINES) -DUSERENAME -DUSEGETHOSTNAME -DUSEGETPWUID
+ 
+@@ -29,29 +29,14 @@ DEFINES = $(SIGNAL_DEFINES) -DUSERENAME 
  OBJS = alarm.o when.o warnings.o times.o dates.o file.o fns.o xalarm.o
  SRCS = alarm.c when.c warnings.c times.c dates.c file.c fns.c xalarm.c
  
@@ -33,11 +85,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/05 18:11:38 magick Exp $
  
  xfortune::
  
-@@ -59,14 +44,6 @@
- 
+@@ -60,14 +45,6 @@ xyow::
  clean::
  	$(RM) xfortune xyow xmemo.man xyow.man xfortune.man fns.h .config
--
+ 
 -config::
 -	@./config.1st -quick $(WHICH) fortune yow
 -	@xrdb -merge XAlarm.ad
@@ -45,6 +96,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/05 18:11:38 magick Exp $
 -
 -.config::
 -	@-$(MADE) .config || make config
- 
+-
  alarm.o:	xalarm.h patchlevel.h
  when.o:		xalarm.h patchlevel.h dates.h
+ warnings.o:	xalarm.h patchlevel.h
