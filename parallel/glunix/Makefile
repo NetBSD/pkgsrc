@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/10/10 19:25:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/21 22:52:37 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -10,7 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} makedepend${EXTRACT_SUFX}
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://now.cs.berkeley.edu/Glunix/glunix.html
 
-.if exists(/usr/bin/ssh)                 
+.if exists(/usr/bin/ssh)
 SSH=		/usr/bin/ssh
 .else
 DEPENDS+=	{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
