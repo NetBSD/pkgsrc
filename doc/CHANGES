@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7230 2004/09/24 13:06:05 wiz Exp $
+$NetBSD: CHANGES,v 1.7231 2004/09/24 13:43:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cgoban-java to 2.6.5 [rh 2004-09-24]
 	Updated libogg to 1.1.2 [wiz 2004-09-24]
 	Updated libvorbis to 1.1.0 [wiz 2004-09-24]
+	Updated atari800 to 1.3.3 [adam 2004-09-24]
