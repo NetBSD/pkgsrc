@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/06/18 09:03:16 agc Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/27 17:19:21 seb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -14,6 +14,8 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
 COMMENT=	Handle external logins, send and receive faxes
 
+BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
+
 CONFLICTS=	hylafax-[0-9]*
 
 USE_BUILDLINK2=		yes
@@ -21,6 +23,8 @@ USE_PKGINSTALL=		yes
 
 MAKE_ENV=		MGETTY_CONFDIR=${PKG_SYSCONFDIR}
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		mgetty.info
 PKG_SYSCONFSUBDIR=	mgetty+sendfax
 
@@ -50,5 +54,4 @@ do-configure:
 	&& ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
 .include "../../graphics/netpbm/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
