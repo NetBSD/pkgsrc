@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 1999/05/02 18:41:37 bad Exp $
+# $NetBSD: Makefile,v 1.5 1999/09/10 19:56:13 bad Exp $
 
-DISTNAME=	baduki-0.2.7
+DISTNAME=	baduki-0.2.9
 CATEGORIES=	games
 MASTER_SITES=	http://soback.kornet21.net/~artist/baduk/
 
