@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/12/13 00:40:06 kei Exp $
+# $NetBSD: Makefile,v 1.50 2000/12/21 15:06:36 jlam Exp $
 #
 
     SUBDIR += LPRng
@@ -10,6 +10,7 @@
     SUBDIR += auctex
     SUBDIR += cups
     SUBDIR += cupsomatic
+    SUBDIR += cupsomatic-ppds
     SUBDIR += dvidvi
     SUBDIR += enscript
     SUBDIR += ggv
