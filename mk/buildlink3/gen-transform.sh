@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.19 2004/01/30 11:29:56 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.20 2004/02/01 00:41:25 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -130,7 +130,7 @@ EOF
 		-l$2)
 			case "\${_libs}" in
 			-l$3" "*|*" "-l$3" "*)
-				_libs="\${_libs%%-l$3 *}-l$2 -l$3 \${_libs#*-lb }"
+				_libs="\${_libs%%-l$3 *}-l$2 -l$3 \${_libs#*-l3 }"
 				;;
 			-l$3|*" "-l$3)
 				_libs="\${_libs%%-l$3}-l$2 -l$3"
