@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/09/27 11:19:57 adam Exp $
 bin/gimp
 bin/gimp-2.0
 bin/gimp-remote
@@ -1603,6 +1603,10 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1635,6 +1639,10 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gimp20-std-plug-ins.mo
