@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/01/28 14:08:01 taca Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/28 14:19:35 taca Exp $
 #
 
 DISTNAME=	newfile-1.0.14
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
 MAINTAINER=	flynn@energyhq.es.eu.org
