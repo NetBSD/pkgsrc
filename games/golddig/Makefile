@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/26 22:13:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/27 14:06:08 garbled Exp $
 #
 
 DISTNAME=	golddig2
@@ -14,7 +14,3 @@ post-extract:
 	${RM} ${WRKSRC}/golddig ${WRKSRC}/makelev ${WRKSRC}/*.o
 
 .include "../../mk/bsd.pkg.mk"
-.if (${OBJECT_FMT} == "ELF")
-RPATH=		-Wl,-rpath,${PREFIX}/lib
-.endif
-MAKE_ENV+=	RPATH=${RPATH}
