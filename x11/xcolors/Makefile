@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/21 22:00:05 wiz Exp $
 # FreeBSD: Makefile,v 1.9 1998/01/22 00:41:36 fenner Exp
 #
 
@@ -12,6 +12,5 @@ COMMENT=	Display all (ok, most of) the colors in the universe
 
 WRKSRC=		${WRKDIR}/xcolors
 USE_IMAKE=	yes
-IGNOREFILES=	xcolors.tar.gz
 
 .include "../../mk/bsd.pkg.mk"
