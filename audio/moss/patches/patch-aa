@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+
+--- setup.py.orig	2004-08-07 00:35:08.000000000 +0900
++++ setup.py
+@@ -47,8 +47,8 @@ class my_install_data(install_data):
+ 			print "creating %s" % os.path.join(self.install_dir, "etc")
+ 			os.mkdir(os.path.join(self.install_dir, "etc"))
+ 		
+-		print "copying moss.conf.sample -> %s" % os.path.join(self.install_dir, "etc/moss.conf")
+-		shutil.copyfile("moss.conf.sample", os.path.join(self.install_dir, "etc/moss.conf"))
++		#print "copying moss.conf.sample -> %s" % os.path.join(self.install_dir, "etc/moss.conf")
++		#shutil.copyfile("moss.conf.sample", os.path.join(self.install_dir, "etc/moss.conf"))
+ 		print "changing permission %s to 0755" % (os.path.join(installed_lib_dir, "moss/moss.py"))
+ 		os.chmod(os.path.join(installed_lib_dir, "moss/moss.py"), 0755)
+ 		
