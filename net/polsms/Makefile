@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/04/03 07:05:43 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/09 09:11:27 zuntum Exp $
 #
 
-DISTNAME=	sms-1.8.8d
-PKGNAME=	polsms-1.8.8d
+DISTNAME=	sms-1.8.9
+PKGNAME=	pol${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 
@@ -10,9 +10,8 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	useful command-line interface to sending SMS to Polish GSM networks
 
-DEPENDS+=	gdbm-*:../../databases/gdbm
-
-USE_GMAKE=	YES
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
 
 WRKSRC=		${WRKDIR}/sms
 
@@ -30,4 +29,5 @@ do-install:
 	cd ${WRKSRC}/contrib && ${INSTALL_DATA} mimecut procmailrc	\
 		sms.cgi sms.html ${PREFIX}/share/sms/contrib
 
+.include "../../databases/gdbm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
