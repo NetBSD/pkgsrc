@@ -1,13 +1,9 @@
-$NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
+$NetBSD: patch-ai,v 1.3 2003/11/11 10:42:32 wiz Exp $
 
---- fep_hist.c.orig	1988-11-25 06:45:42.000000000 -0500
-+++ fep_hist.c	2003-11-07 11:20:24.000000000 -0500
-@@ -3,9 +3,11 @@
- #ifndef lint
- static char rcsid[]=
- "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $ (SRA)";
--#endif lint
-+#endif /* lint */
+--- fep_hist.c.orig	Fri Nov 25 12:45:42 1988
++++ fep_hist.c
+@@ -6,6 +6,8 @@ static char rcsid[]=
+ #endif lint
  
  #include <stdio.h>
 +#include <stdlib.h>
@@ -15,7 +11,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
  #include <ctype.h>
  #include "fep_defs.h"
  #include "fep_glob.h"
-@@ -255,7 +257,7 @@
+@@ -255,7 +257,7 @@ historyExtract(string)
  
  	default:
  	    {
@@ -24,7 +20,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
  
  		strcpy (buf, "^");
  		strncat (buf, string, 64);
-@@ -267,6 +269,7 @@
+@@ -267,6 +269,7 @@ historyExtract(string)
  
  char *
  search_reverse_history (string)
@@ -32,7 +28,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
  {
      register int i;
      char *re_comp();
-@@ -291,6 +294,7 @@
+@@ -291,6 +294,7 @@ search_reverse_history (string)
  
  char *
  search_forward_history (string)
@@ -40,7 +36,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
  {
      register int i;
      char *re_comp();
-@@ -412,7 +416,7 @@
+@@ -412,7 +416,7 @@ char *
  mk_home_relative (cp)
      char *cp;
  {
@@ -49,7 +45,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
  
      /*
       * If variable "history-file" is not absolute path name,
-@@ -540,7 +544,7 @@
+@@ -540,7 +544,7 @@ read_history (file)
      char *file;
  {
      FILE *fp;
@@ -58,7 +54,7 @@ $NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
      register int i;
  
      if ((fp = fopen (file, "r")) == NULL) {
-@@ -550,7 +554,7 @@
+@@ -550,7 +554,7 @@ read_history (file)
  	return;
      }
  
