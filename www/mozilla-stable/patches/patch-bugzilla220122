@@ -1,0 +1,19 @@
+$NetBSD: patch-bugzilla220122,v 1.1.2.2 2003/12/05 19:15:10 agc Exp $
+
+diff -ru ../Orig/mozilla/netwerk/protocol/http/src/nsHttpChannel.cpp ./netwerk/protocol/http/src/nsHttpChannel.cpp
+--- ../Orig/mozilla/netwerk/protocol/http/src/nsHttpChannel.cpp	2003-05-30 04:29:03.000000000 +0900
++++ ./netwerk/protocol/http/src/nsHttpChannel.cpp	2003-11-28 00:24:58.000000000 +0900
+@@ -1960,7 +1960,12 @@
+     nsHttpAuthIdentity *ident;
+     nsCAutoString path;
+ 
+-    if (proxyAuth) {
++    // it is possible for the origin server to fake a proxy challenge.  if
++    // that happens we need to be sure to use the origin server as the auth
++    // domain.  otherwise, we could inadvertantly expose the user's proxy
++    // credentials to an origin server.
++
++    if (proxyAuth && mConnectionInfo->ProxyHost()) {
+         host = mConnectionInfo->ProxyHost();
+         port = mConnectionInfo->ProxyPort();
+         ident = &mProxyIdent;

@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.1.1.1 2002/10/04 15:47:17 taya Exp $
+# $NetBSD: moz-install,v 1.1.1.1.4.1 2003/12/05 19:15:10 agc Exp $
 
-${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
+${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
 ${CHGRP} ${BINGRP} ${PREFIX}/bin/${MOZILLA}
 ${CHMOD} ${BINMODE} ${PREFIX}/bin/${MOZILLA}
@@ -10,47 +10,47 @@ ${CHMOD} ${BINMODE} ${PREFIX}/bin/${MOZILLA}
 #
 #	Substitute variables
 #
-TMP_PLIST=/tmp/TMP_PLIST.$$
-trap "${RM} -f ${TMP_PLIST}" 1 2 3 10 11
+TMP_PLIST=${WRKDIR}/TMP_PLIST.$$
+trap "${RM} -f ${TMP_PLIST}" 1 2 15
 
-${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" < ${PLIST_SRC} > ${TMP_PLIST}
+${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" -e "s/\${SUNOSLIB}/${SUNOSLIB}/" < ${PLIST_SRC} > ${TMP_PLIST}
 
 # make directories 
-for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment | ${SED} -e 's/^@dirrm//'` ; do
+for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} ^@dirrm | ${SED} -e 's/^@dirrm//'` ; do
 	${BSD_INSTALL_DATA_DIR} ${PREFIX}/$i
 done
 
 # install programs
 for i in `${SED} -n -e '/^@comment begin PROGRAMS$/,/^@comment end PROGRAMS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
-	src=`echo $i | sed -e "s@lib/${MOZILLA}@dist/bin@"`;
+	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install scripts
 for i in `${SED} -n -e '/^@comment begin SCRIPTS$/,/^@comment end SCRIPTS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
-	src=`echo $i | sed -e "s@lib/${MOZILLA}@dist/bin@"`;
+	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
 	${BSD_INSTALL_SCRIPT} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install DSO
 for i in `${SED} -n -e '/^@comment begin DSO$/,/^@comment end DSO$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
-	src=`echo $i | sed -e "s@lib/${MOZILLA}@dist/bin@"`;
+	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install DATA
 for i in `${SED} -n -e '/^@comment begin DATA$/,/^@comment end DATA$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
-	src=`echo $i | sed -e "s@lib/${MOZILLA}@dist/bin@"`;
+	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install INCLUDE
 for i in `${SED} -n -e '/^@comment begin INCLUDE$/,/^@comment end INCLUDE$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
-	src=`echo $i | sed -e "s@include/${MOZILLA}@dist/include@"`;
+	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/include@"`;
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
-#${RM} -f ${TMP_PLIST}
+${RM} -f ${TMP_PLIST}
 #
 #
 #

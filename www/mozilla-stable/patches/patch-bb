@@ -1,7 +1,8 @@
-$NetBSD: patch-bb,v 1.2 2002/11/26 22:02:46 cjep Exp $
+$NetBSD: patch-bb,v 1.2.4.1 2003/12/05 19:15:10 agc Exp $
+
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
---- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Wed Apr 10 12:16:43 2002
-+++ ./nsprpub/pr/include/md/_netbsd.h	Wed Sep 11 23:47:54 2002
+--- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	2003-01-17 08:09:14.000000000 +0900
++++ ./nsprpub/pr/include/md/_netbsd.h	2003-03-14 16:59:00.000000000 +0900
 @@ -48,12 +48,20 @@
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)
@@ -23,7 +24,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #endif
  
  #if defined(__ELF__)
-@@ -106,7 +114,17 @@
+@@ -107,7 +115,17 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
  #endif
@@ -42,7 +43,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
  {									\
      sigsetjmp(CONTEXT(_thread), 1);					\
-@@ -148,7 +166,7 @@
+@@ -149,7 +167,7 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[32]
  #endif
