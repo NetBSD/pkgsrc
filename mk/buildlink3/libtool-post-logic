@@ -1,4 +1,4 @@
-# $NetBSD: libtool-post-logic,v 1.2 2003/09/02 06:59:58 jlam Exp $
+# $NetBSD: libtool-post-logic,v 1.3 2003/09/19 22:49:22 jlam Exp $
 #
 # Workaround software authors that don't follow the libtool
 # documentation and link against uninstalled libtool archives with:
@@ -31,6 +31,7 @@ case $arg in
 			*"$lpath"*)	;;
 			*)		rellpath="$rellpath $lpath" ;;
 			esac
+			addtocache=no
 			;;
 		esac
 		;;
