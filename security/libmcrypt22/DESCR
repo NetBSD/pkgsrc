@@ -1,0 +1,4 @@
+libmcrypt is a library which implements block and stream encryption
+algorithms and modes.
+
+This packages contains the older 2.2.x release of libmcrypt.
