@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:08 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1998/09/10 10:39:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -12,10 +12,12 @@ HOMEPAGE=		http://www.scriptics.com/
 
 WRKSRC=			${WRKDIR}/tcl8.0/unix
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ENV+=		PORTSDIR=${.CURDIR}/../../../../..
+
+# let libtool deal with shared libraries
+USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	--disable-shared
 
 test:
-	cd ${WRKSRC} && ${MAKE} test
+	cd ${WRKSRC} && /usr/bin/env LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
 
 .include "../../mk/bsd.pkg.mk"
