@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2624 2004/12/02 00:09:53 dmcmahill Exp $
+$NetBSD: TODO,v 1.2625 2004/12/02 06:46:06 snj Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ Suggested package updates
 	o netcdf-3.5.1
 	o netio-123
 	o netpbm-10.25
-	o netperf-2.3pl1
 	o netpipe-3.6.2
 	o netramet-50
 	o netscape7-7.2
@@ -1025,7 +1024,6 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o racoon-20040818a
 	o raine-0.42.0
 	o randread-0.2
 	o raptor-1.4.2
