@@ -1,8 +1,13 @@
-$NetBSD: patch-af,v 1.1 2003/12/08 21:13:56 recht Exp $
+$NetBSD: patch-af,v 1.2 2004/06/10 10:13:06 recht Exp $
 
 --- Lib/test/test_fcntl.py.orig	2002-07-23 21:03:51.000000000 +0200
 +++ Lib/test/test_fcntl.py
-@@ -24,7 +24,7 @@ if sys.platform in ('netbsd1', 'Darwin1.
+@@ -20,11 +20,11 @@ else:
+ if sys.platform.startswith('atheos'):
+     start_len = "qq"
+ 
+-if sys.platform in ('netbsd1', 'Darwin1.2', 'darwin',
++if sys.platform in ('netbsd1', 'netbsd2', 'Darwin1.2', 'darwin',
                      'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                      'bsdos2', 'bsdos3', 'bsdos4',
                      'openbsd', 'openbsd2', 'openbsd3'):
@@ -11,3 +16,4 @@ $NetBSD: patch-af,v 1.1 2003/12/08 21:13:56 recht Exp $
  elif sys.platform in ['aix3', 'aix4', 'hp-uxB', 'unixware7']:
      lockdata = struct.pack('hhlllii', fcntl.F_WRLCK, 0, 0, 0, 0, 0, 0)
  elif sys.platform in ['os2emx']:
+
