@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2003/02/27 08:51:00 darcy Exp $
+$NetBSD: distinfo,v 1.2 2003/02/27 11:30:00 darcy Exp $
 
 SHA1 (freeradius-0.7.tar.gz) = 8f44f1f9fedf69b71aa4aed9c0b7222d012ee8d6
 Size (freeradius-0.7.tar.gz) = 1659035 bytes
 SHA1 (patch-aa) = dc2c8c62ed2d11ebf682f7d9fcbaf7a410cbce0d
-SHA1 (patch-ab) = 0715679a341dae04184b761a9133b5c7f84fedea
+SHA1 (patch-ab) = 26092b974a27151d69ab87ae7ba42e67aeef448b

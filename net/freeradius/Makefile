@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/02/27 08:51:00 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/27 11:30:00 darcy Exp $
 
 DISTNAME=	freeradius-0.7
 CATEGORIES=	net
@@ -9,6 +9,7 @@ MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.freeradius.org/
 COMMENT=	Free RADIUS server implementation
 
+CONFLICTS+=	radiusd-cistron*
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--quiet --with-logdir=/var/log
@@ -31,7 +32,8 @@ post-install:
 .for db in ${RADDB}
 	${INSTALL_DATA} ${WRKSRC}/raddb/${db} ${PREFIX}/etc/raddb/${db}.sample
 .endfor
-	${INSTALL_SCRIPT} ${FILESDIR}/radiusd ${PREFIX}/etc/rc.d/radiusd
+	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" ${FILESDIR}/radiusd \
+		> ${PREFIX}/etc/rc.d/radiusd
 
 .include "../../databases/gdbm/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
