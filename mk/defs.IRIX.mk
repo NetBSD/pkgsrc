@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.9 2002/12/11 22:39:11 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.10 2002/12/15 02:12:32 salo Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -17,6 +17,7 @@ ECHO?=		/sbin/echo
 EGREP?=		/bin/grep
 EXPR?=		/bin/expr
 FALSE?=		/usr/bin/false
+FGREP?=		/usr/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/sbin/find
 .if exists(${LOCALBASE}/bin/gmake)

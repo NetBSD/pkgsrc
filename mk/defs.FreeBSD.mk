@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.9 2002/12/03 21:13:38 agc Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.10 2002/12/15 02:12:32 salo Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -17,6 +17,7 @@ ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
+FGREP?=		/usr/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
