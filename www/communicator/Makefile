@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/08/19 15:49:03 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/09/04 16:37:53 jlam Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -56,30 +56,35 @@ NO_BUILD=	yes
 
 WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-NS_PLIST_SED=	"s,\$${NS_VERS},${NS_VERS},g"
+NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC=	${PKGDIR}/PLIST.pre \
+		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} \
+		${PKGDIR}/PLIST.post
+PLIST_SUBST+=	NS_VERS=${NS_VERS}
 
 .if (${NS_ENCRYPTION} == "us")
 MASTER_SITES=
 RESTRICTED=		"128-bit key strong encryption; export-controlled"
 MIRROR_DISTFILE=	no
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386
+DOWNLOAD=		http://www.netscape.com/download/
 
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG}; \
+	    ${ECHO_MSG} "==============================================================="; \
 	    ${ECHO_MSG} "    The 128-bit key strong encryption version of"; \
-	    ${ECHO_MSG} "        Netscape for this platform must be fetched"; \
-	    ${ECHO_MSG} "        into ${DISTDIR} from"; \
-	    ${ECHO_MSG} "        http://www.netscape.com/download/"; \
-	    ${ECHO_MSG}; \
+	    ${ECHO_MSG} "    Netscape for this platform must be fetched"; \
+	    ${ECHO_MSG} "    into \"${DISTDIR}\" from the following URL:"; \
+	    ${ECHO_MSG} "    ${DOWNLOAD}"; \
+	    ${ECHO_MSG} "==============================================================="; \
+	    ${FALSE}; \
 	fi
 .endif
 
 do-install:
-	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${MKDIR} ${MOZILLA_HOME}/java/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/vreg ${MOZILLA_HOME}
 .for file in ifc11.jar iiop10.jar jae40.jar java40.jar jio40.jar jsd10.jar \
@@ -91,6 +96,7 @@ do-install:
 	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/spellchk-v${NS_VERS_SHORT}.nif
 
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
+	       -e 's#@@NS_PLUGINS_DIR@@#${NS_PLUGINS_DIR}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${PKGNAME}
 	${RM} -f ${PREFIX}/bin/${BINNAME}
@@ -108,13 +114,9 @@ do-install:
 	${MV} ${MOZILLA_HOME}/netscape ${MOZILLA_HOME}/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
 .endif
-
-	${SED} -e ${NS_PLIST_SED} \
-		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} >>${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 
 	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
-
-	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.post >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
