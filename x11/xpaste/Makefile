@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:43:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/29 09:20:12 seb Exp $
 #
 
 DISTNAME=	xpaste-1.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 EXTRACT_SUFX=	.shar.gz
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	seb@NetBSD.org
 COMMENT=	Display the content of the X11 paste buffer in a window
 
 USE_IMAKE=	yes
