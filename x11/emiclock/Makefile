@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/14 05:06:37 minoura Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/20 21:56:30 wiz Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -13,7 +13,7 @@ USE_XAW=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
+.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
 post-patch:
 	echo "#define USE_XAW3D" > ${WRKSRC}/xawconfig.h
 .else
