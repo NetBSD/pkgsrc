@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2001/02/28 10:26:03 wiz Exp $
+$NetBSD: patch-ae,v 1.3 2002/07/18 05:24:49 grant Exp $
 --- xfstt.1x.orig	Tue Jul 13 05:07:15 1999
 +++ xfstt.1x	Sat Nov 18 16:08:20 2000
 @@ -3,7 +3,7 @@
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.2 2001/02/28 10:26:03 wiz Exp $
  .I "\-\-dir name"
  Change xfstt's font directory.
 -The default is --dir /usr/share/fonts/truetype.
-+The default is --dir /usr/X11R6/lib/X11/fonts/TrueType.
++The default is --dir @X11BASE@/lib/X11/fonts/TrueType.
  .TP
  .I "\-\-res value"
  Force the resolution for underspecified fonts to value (typically 96 or 120).
