@@ -1,0 +1,11 @@
+--- ncurs_c.c.orig	Mon May 20 17:27:35 1996
++++ ncurs_c.c	Sat Mar  7 14:51:09 1998
+@@ -422,7 +422,7 @@
+ static int ctl_read(int32 *valp)
+ {
+   int c;
+-  while ((c=getch())!=ERR)
++  while ((c=wgetch(dftwin))!=ERR)
+     {
+       switch(c)
+ 	{
