@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/05/31 12:45:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.24 1998/05/31 13:24:06 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -37,7 +37,8 @@ WITH_MULE=	--with-mule
 DISTFILES+=	xemacs-20.3-mule.tar.gz
 .endif
 
-CONFIGURE_ARGS+=--prefix=${PREFIX} --site-includes=${PREFIX}/include \
+CONFIGURE_ARGS+=${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
+		--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
