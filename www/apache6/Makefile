@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/10/17 19:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/10/20 17:46:50 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -78,11 +78,11 @@ APACHE_CUSTOM_CFLAGS+=	-DBUFFERED_LOGS
 APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
-# On NetBSD, we need to link libgcc.a whole-archive so that certain symbols
-# from the C++ implementation (__get_eh_context, etc.) referenced by DSOs
-# written in C++ will resolve correctly.
+# On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
+# certain symbols from the C++ implementation (__get_eh_context, etc.)
+# referenced by DSOs written in C++ will resolve correctly.
 #
-.if (${OPSYS} == "NetBSD")
+.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
 LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
