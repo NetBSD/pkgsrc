@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1 2004/12/01 04:47:53 dmcmahill Exp $
+
+--- src/graph/graphunixx11.c.orig	Fri Jul 16 01:59:53 2004
++++ src/graph/graphunixx11.c
+@@ -3085,11 +3085,30 @@ void ewait(INTBIG process)
+ /*
+  * Routine to return the number of processors on this machine.
+  */
++
++/* XXX there should really be some sort of autoconf test here... */
++#ifdef __NetBSD__
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#endif
++
+ INTBIG enumprocessors(void)
+ {
+ 	INTBIG numproc;
+ 
++#ifdef __NetBSD__
++	int mib[2], ncpu;
++	size_t len;
++
++	mib[0] = CTL_HW;
++	mib[1] = HW_NCPU;
++	len = sizeof(ncpu);
++	sysctl(mib, 2, &ncpu, &len, NULL, 0);
++	numproc = (INTBIG) ncpu;
++
++#else
+ 	numproc = sysconf(_SC_NPROCESSORS_ONLN);
++#endif
+ 	return(numproc);
+ }
+ 
