@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1369 2003/02/15 04:22:11 salo Exp $
+$NetBSD: CHANGES,v 1.1370 2003/02/15 05:22:27 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -665,3 +665,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tspc to 0.9.7 [salo 2003-02-15]
 	Updated giram to 0.3.4 [salo 2003-02-15]
 	Updated micq to 0.4.10.1 [salo 2003-02-15]
+	Updated jwhois to 3.2.1 [salo 2003-02-15]
