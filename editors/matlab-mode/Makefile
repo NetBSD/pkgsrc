@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:34:38 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:14:05 agc Exp $
 #
 
 DISTNAME=		matlab.el
 PKGNAME=		matlab-mode-2.3
-WRKSRC=			${WRKDIR}
 CATEGORIES=		editors math
 MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=
@@ -12,6 +11,7 @@ MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=104&objectType=file
 COMMENT=		Matlab mode for Emacs
 
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}
 DIST_SUBDIR=		${PKGNAME}
 

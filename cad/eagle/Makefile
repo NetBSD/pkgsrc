@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:32:10 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:09:09 agc Exp $
 #
 
 DISTNAME=		eagle-4.09r2e
 PKGNAME=		eagle-4.09r2
-WRKSRC=			${WRKDIR}/${DISTNAME:C/.$//}
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.09r2/
 EXTRACT_SUFX=		.tgz
@@ -24,6 +23,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=			${WRKDIR}/${DISTNAME:C/.$//}
 NO_BUILD=		YES
 
 do-configure:

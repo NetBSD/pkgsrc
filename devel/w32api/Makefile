@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2003/09/21 19:58:38 kent Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:13:30 agc Exp $
 
 DISTNAME=	w32api-2.4-src
 PKGNAME=	w32api-2.4
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
 DISTFILES+=	${DISTNAME}.tar.gz pe-crt-1.2.1.tar.gz
@@ -14,6 +13,7 @@ COMMENT=	Free headers and libraries for the Win32 API
 
 BUILD_DEPENDS+=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 PE_CC=		${CROSSBASE}/bin/i386-netbsdpe-cc -I${WRKSRC}/include
 PE_AR=		${CROSSBASE}/bin/i386-netbsdpe-ar
 CRTWRKSRC=	${WRKDIR}/pe-crt-1.2.1

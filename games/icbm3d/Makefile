@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/11/08 08:29:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:40 agc Exp $
 #
 
 DISTNAME=	icbm3d.0.4
 PKGNAME=	${DISTNAME:S/./-/}
-WRKSRC=		${WRKDIR}/icbm3d
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/icbm3d/
 
@@ -11,6 +10,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/icbm3d/
 COMMENT=	3D X11 game of defense
 
+WRKSRC=		${WRKDIR}/icbm3d
 MAKEFILE=	makefile
 USE_X11=	yes
 

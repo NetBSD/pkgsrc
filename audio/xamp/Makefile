@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/08/16 03:12:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:07:43 agc Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
-WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 CATEGORIES=	audio
 MASTER_SITES=	http://andrej.co.ru/~andrej/programs/xamp/ \
 		http://andrej.co.ru/~andrej/programs/xamp/backs/
@@ -17,6 +16,7 @@ COMMENT=	Version of amp (stands for `Audio Mpeg Player') plus a Qt GUI
 
 DEPENDS+=	qt1-1.44:../../x11/qt1
 
+WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 DIST_SUBDIR=	xamp
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"

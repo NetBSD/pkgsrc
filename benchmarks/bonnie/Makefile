@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/03/29 12:40:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/20 12:08:12 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
 DISTNAME=       bonnie
 PKGNAME=	bonnie-2.06
-WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks
 MASTER_SITES=   http://www.textuality.com/bonnie/
 
@@ -13,6 +12,7 @@ HOMEPAGE=	http://www.textuality.com/bonnie/index.html
 COMMENT=	Performance Test of Filesystem I/O
 
 NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}
 
 MANCOMPRESSED_IF_MANZ=	yes
 
