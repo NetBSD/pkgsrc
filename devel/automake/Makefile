@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/05/18 13:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2003/06/19 23:46:43 seb Exp $
 #
 
 DISTNAME=	automake-1.7.5
@@ -22,12 +22,12 @@ M4=			${PREFIX}/bin/gm4
 MAKEINFOFLAGS=		--no-split
 MAKE_ENV+=		MAKEINFOFLAGS="${MAKEINFOFLAGS}"
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
+TEXINFO_REQD=		4.0
 INFO_FILES=		automake.info
 
 PERL5_REQD=		5.5
-TEXINFO_REQD=		4.0
-TEXINFO_OVERRIDE=	YES
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
