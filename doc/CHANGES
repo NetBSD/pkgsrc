@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2827 2003/07/18 18:06:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.2828 2003/07/19 03:07:27 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bbmail to 0.8.3 [jschauma 2003-07-18]
 	Added bbdate-0.2.4 [jschauma 2003-07-18]
 	Updated dopewars to 1.5.9nb2 [jmmv 2003-07-18]
+	Updated libnbcompat to 20030718 [grant 2003-07-18]
