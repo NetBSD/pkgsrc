@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 03:10:20 jschauma Exp $
-bin/distalign
-bin/pdbalign
-bin/pdbdist
