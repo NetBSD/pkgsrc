@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.19 2003/10/11 03:43:14 grant Exp $
+# $NetBSD: compiler.mk,v 1.20 2003/10/12 03:05:37 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -46,7 +46,8 @@
 #
 # CC_VERSION
 #	The compiler and version being used. For gcc, this is
-#	'gcc-<version>' and (currently) empty for other compilers.
+#	'gcc-<version>' and the string reported by ${CC} -V | grep
+#	'^cc' for others.
 #
 #	e.g.
 #		.include "../../mk/bsd.prefs.mk"
@@ -229,20 +230,20 @@ libstdc++-buildlink-la:
 .endif
 
 # CC_VERSION can be tested by package Makefiles to tweak things based
-# on the compiler being used. This is only functional for gcc right now.
+# on the compiler being used.
 #
 CC_VERSION?=		# empty
-.if !defined(_CC_VERSION)
-.  if defined(_CC_IS_GCC)
+.if defined(_CC_IS_GCC)
+.  if !defined(_CC_VERSION)
 _CC_VERSION!=		if ${CC} -dumpversion > /dev/null 2>&1; then \
 				${ECHO} `${CC} -dumpversion`; \
 			else \
 				${ECHO} ""; \
 			fi
-CC_VERSION=		gcc-${_CC_VERSION}
-.  else
-CC_VERSION!=		${CC} -V 2>&1 | ${GREP} '^cc'
 .  endif
+CC_VERSION=		gcc-${_CC_VERSION}
+.else
+CC_VERSION!=		${CC} -V 2>&1 | ${GREP} '^cc'
 .endif
 
 # The SunPro C++ compiler doesn't support passing linker flags with
