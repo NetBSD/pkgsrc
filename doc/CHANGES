@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1246 2003/01/27 13:03:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.1247 2003/01/27 13:21:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -442,3 +442,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.59.8nb2 [jmmv 2003-01-27]
 	Updated gaim-gnome to 0.59.8nb2 [jmmv 2003-01-27]
 	Updated gnome-pilot to 0.1.71nb1 [jmmv 2003-01-27]
+	Added iperf-1.6.5 [seb 2003-01-27]
