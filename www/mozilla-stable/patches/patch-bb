@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.5 2004/12/04 03:50:40 taya Exp $
+$NetBSD: patch-bb,v 1.6 2004/12/25 15:39:43 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	2003-09-12 02:24:53.000000000 +0900
@@ -23,7 +23,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #define _PR_SI_ARCHITECTURE "arm32"
 +#elif defined(__ARMEL__)
 +#define _PR_SI_ARCHITECTURE "armel"
-+#elif defined(__ARMEL__)
++#elif defined(__ARMEB__)
 +#define _PR_SI_ARCHITECTURE "armeb"
 +#elif defined(__arm__)
 +#define _PR_SI_ARCHITECTURE "arm"
