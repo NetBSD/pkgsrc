@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/01/26 13:08:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2004/01/26 15:21:52 jmmv Exp $
 
 DISTNAME=	kdemultimedia-3.1.5
 PKGREVISION=	2
@@ -9,7 +9,7 @@ CONFLICTS=	timidity-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-DEPENDS+=	xanim>=2.80.0:../../graphics/xanim
+DEPENDS+=	xanim>=2.80.0:../../multimedia/xanim
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_BUILDLINK2=		YES
