@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1887 2004/07/02 11:30:12 wiz Exp $
+$NetBSD: TODO,v 1.1888 2004/07/02 13:18:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -292,7 +292,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o libsigc++-2.0.3
 	o licq-1.2.7
-	o liferea-0.5.1
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
