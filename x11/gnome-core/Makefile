@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/08/23 14:43:26 tron Exp $
+# $NetBSD: Makefile,v 1.49 2000/08/27 02:46:08 jlam Exp $
 
 DISTNAME=		gnome-core-1.2.1
 CATEGORIES=		x11 gnome
@@ -38,7 +38,7 @@ post-patch:
 	cd ${WRKSRC}; \
 	for FILE in ${PERL_SCRIPTS}; do \
 	  ${CP} $$FILE $${FILE}.orig; \
-	  ${SED} -e 's#/usr/bin/perl#${LOCALBASE}/bin/perl#g' \
+	  ${SED} -e 's#/usr/bin/perl#${PERL5}#g' \
 	    <$${FILE}.orig >$$FILE; \
 	done
 

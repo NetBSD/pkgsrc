@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/26 03:26:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 02:46:03 jlam Exp $
 #
 
 DISTNAME=	spiceprm-0.11
@@ -8,12 +8,12 @@ MASTER_SITES=	http://metalab.unc.edu/pub/Linux/apps/circuits/
 
 MAINTAINER=	packages@netbsd.org
 
-NO_CONFIGURE=	YES
-USE_PERL5=	YES
+NO_CONFIGURE=	# defined
+USE_PERL5=	# defined
 
 do-build:
 	${MV} ${WRKSRC}/spiceprm ${WRKSRC}/spiceprm.BAK
-	${SED} 's!/usr/bin/perl!${LOCALBASE}/bin/perl!g' \
+	${SED} 's!/usr/bin/perl!${PERL5}!g' \
 	  < ${WRKSRC}/spiceprm.BAK > ${WRKSRC}/spiceprm
 
 do-install:

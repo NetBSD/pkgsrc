@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/04/06 23:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/27 02:46:05 jlam Exp $
 
 DISTNAME=	sirc-2.211
 CATEGORIES=	net
@@ -10,7 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 SIRC_SCRIPTS= \
@@ -54,7 +54,7 @@ do-install:
 		${ECHO} "" ; \
 		${ECHO} "-O3" ; \
 		${ECHO} "" ; \
-		${ECHO} "${PREFIX}/bin/perl" ; \
+		${ECHO} "${PERL5}" ; \
 		${ECHO} "${PREFIX}/bin" ; \
 		${ECHO} "y" ; \
 		${ECHO} "${PREFIX}/lib/sirc" ; \
