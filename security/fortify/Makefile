@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/28 00:02:08 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/28 00:08:42 jlam Exp $
 #
 
 DISTNAME=	Fortify-1.4.5-unix-src
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://ftp.fortify.net/pub/Fortify/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fortify.net/
 
-#LICENSE=	fee-based-commercial-use
+LICENSE=	fee-based-commercial-use
 
 INSTALL_DIRS=	alpha-dec-osf2.0 alpha-dec-osf3.2 alpha-dec-osf4.0 \
 		mips-sgi-irix5.2 mips-sgi-irix5.3 mips-sgi-irix6.2 \
