@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.160 2002/09/24 13:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2002/09/28 02:20:48 rh Exp $
 
 COMMENT=	System utilities
 
+SUBDIR+=	GWLib
 SUBDIR+=	adjustkernel
 SUBDIR+=	amanda
 SUBDIR+=	amanda-client
@@ -55,6 +56,7 @@ SUBDIR+=	gpart
 SUBDIR+=	grub
 SUBDIR+=	grun
 SUBDIR+=	gtop
+SUBDIR+=	gworkspace
 SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
 SUBDIR+=	isapnptools
