@@ -1,39 +1,39 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/23 22:07:52 reed Exp $
-lib/silcd/libsilc-1.0.so.3
-lib/silcd/libsilc-1.0.so.3.0
-lib/silcd/libsilc.la
-lib/silcd/libsilc.so
-lib/silcd/modules/aes.sim.so
-lib/silcd/modules/blowfish.sim.so
-lib/silcd/modules/cast.sim.so
-lib/silcd/modules/md5.sim.so
-lib/silcd/modules/none.sim.so
-lib/silcd/modules/rc5.sim.so
-lib/silcd/modules/rsa.sim.so
-lib/silcd/modules/sha1.sim.so
-lib/silcd/modules/twofish.sim.so
+@comment $NetBSD: PLIST,v 1.15 2004/06/06 11:47:30 salo Exp $
+lib/silc-server/libsilc-1.0.so.3
+lib/silc-server/libsilc-1.0.so.3.0
+lib/silc-server/libsilc.la
+lib/silc-server/libsilc.so
+lib/silc-server/modules/aes.sim.so
+lib/silc-server/modules/blowfish.sim.so
+lib/silc-server/modules/cast.sim.so
+lib/silc-server/modules/md5.sim.so
+lib/silc-server/modules/none.sim.so
+lib/silc-server/modules/rc5.sim.so
+lib/silc-server/modules/rsa.sim.so
+lib/silc-server/modules/sha1.sim.so
+lib/silc-server/modules/twofish.sim.so
 man/man5/silcd.conf.5
 man/man8/silcd.8
 sbin/silcd
-share/doc/silcd/CHANGES
-share/doc/silcd/COPYING
-share/doc/silcd/CREDITS
-share/doc/silcd/CodingStyle
-share/doc/silcd/FAQ
-share/doc/silcd/INSTALL
-share/doc/silcd/README
-share/doc/silcd/TODO
-share/examples/silcd/README
-share/examples/silcd/cell_backup.conf
-share/examples/silcd/cell_router.conf
-share/examples/silcd/cell_server1.conf
-share/examples/silcd/cell_server2.conf
-share/examples/silcd/motd.txt.default
-share/examples/silcd/silcalgs.conf.default
-share/examples/silcd/silcd.conf.default
-share/examples/silcd/silcd.prv
-share/examples/silcd/silcd.pub
-@dirrm share/examples/silcd
-@dirrm share/doc/silcd
-@dirrm lib/silcd/modules
-@dirrm lib/silcd
+share/doc/silc-server/CHANGES
+share/doc/silc-server/COPYING
+share/doc/silc-server/CREDITS
+share/doc/silc-server/CodingStyle
+share/doc/silc-server/FAQ
+share/doc/silc-server/INSTALL
+share/doc/silc-server/README
+share/doc/silc-server/TODO
+share/examples/silc-server/README
+share/examples/silc-server/cell_backup.conf
+share/examples/silc-server/cell_router.conf
+share/examples/silc-server/cell_server1.conf
+share/examples/silc-server/cell_server2.conf
+share/examples/silc-server/motd.txt.default
+share/examples/silc-server/silcalgs.conf.default
+share/examples/silc-server/silcd.conf.default
+share/examples/silc-server/silcd.prv
+share/examples/silc-server/silcd.pub
+@dirrm share/examples/silc-server
+@dirrm share/doc/silc-server
+@dirrm lib/silc-server/modules
+@dirrm lib/silc-server

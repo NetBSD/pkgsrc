@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2004/03/20 05:15:45 snj Exp $
+# $NetBSD: Makefile,v 1.33 2004/06/06 11:47:30 salo Exp $
 #
 
 DISTNAME=		silc-server-0.9.18
+PKGREVISION=		1
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -29,10 +30,9 @@ SILCD_GROUP?=		silcd
 PKG_GROUPS=		${SILCD_GROUP}
 PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\\ Server\\ user
 
-PKG_SYSCONFSUBDIR?=	silcd
+PKG_SYSCONFSUBDIR?=	${PKGBASE}
 
-EGDIR=			${PREFIX}/share/examples/silcd
-
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MAKE_ENV+=		examplesdir=${EGDIR}
 
 CONF_FILES_MODE=	0600
@@ -53,17 +53,18 @@ RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.generic
 
 OWN_DIRS_PERMS+=	/var/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silcd
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silcd
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-silcd-config-file=${PKG_SYSCONFDIR}/silcd.conf
-CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silcd/modules
+CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
 CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
 CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
 
-# Avoid an ICE in gcc2 on sparc64
+# XXX: Avoid an ICE in gcc2 on sparc64
+#
 CONFIGURE_ENV+=		F77=${FALSE}
 
 BUILD_DEFS+=		USE_INET6
