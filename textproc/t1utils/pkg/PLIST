@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/12 05:35:50 jonb Exp $
+bin/t1ascii
+bin/t1asm
+bin/t1binary
+bin/t1disasm
+bin/t1unmac
+man/man1/t1ascii.1
+man/man1/t1asm.1
+man/man1/t1binary.1
+man/man1/t1disasm.1
+man/man1/t1unmac.1
