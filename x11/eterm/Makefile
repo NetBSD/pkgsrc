@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/06 14:41:22 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/06 14:58:50 agc Exp $
 
 DISTNAME=		Eterm-0.8.8
 PKGNAME=		eterm-0.8.8
@@ -22,5 +22,6 @@ post-extract:
 	${MV} ${WRKDIR}/Eterm/bg/scale/* ${WRKSRC}/bg/scale
 	${MV} ${WRKDIR}/Eterm/bg/tile/* ${WRKSRC}/bg/tile
 	${RM} -r ${WRKDIR}/Eterm
+	${CHMOD} -R o+r ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
