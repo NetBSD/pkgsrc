@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/02/22 18:25:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.75 2005/03/04 12:20:25 wiz Exp $
 
 DISTNAME=		evolution-2.0.4
 CATEGORIES=		mail time gnome
@@ -14,8 +14,9 @@ BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.gal2+=	gal2>=2.2.5
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
-BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.4
-BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.0.3
+BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.5
+BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.0.4
+BUILDLINK_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
 PKG_SUPPORTED_OPTIONS=	ipv6 krb4 krb5 ssl
