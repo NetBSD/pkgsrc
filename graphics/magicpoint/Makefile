@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/03/04 09:06:13 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/03/11 16:19:46 tron Exp $
 
 DISTNAME=		magicpoint-1.07a
 CATEGORIES=		x11 graphics
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		LIBS="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE
 # We need to perform the steps normally done by ``xmkmf -a'' since some
 # files need to be created before ``make depend''.
 #
-XMKMF=			xmkmf
+XMKMF=			${X11BASE}/bin/xmkmf
 
 post-configure:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ctlwords.h
