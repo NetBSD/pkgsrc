@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.61 2002/12/13 19:11:06 jmmv Exp $
+$NetBSD: TODO,v 1.62 2002/12/14 17:32:12 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -161,7 +161,6 @@ Suggested package updates
 	o libmng-1.0.5rc2
 	o librep-0.16.1
 	o libslang-1.4.6
-	o libsndfile-1.0.3
 	o libxml-2.4.28 [problems with kde2(?)]
 	o libxslt-1.0.23 [problems with kde2]
 	o lilypond-1.6.6
