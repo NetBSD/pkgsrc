@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/30 13:22:05 damon Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/01 15:28:44 damon Exp $
 
 DISTNAME=	gkrellmms-0.5.5
 PKGNAME=	gkrellm-xmms-0.5.5
@@ -12,5 +12,8 @@ COMMENT=	gkrellm xmms plugin
 
 DEPENDS+=       xmms>=1.2.5:../xmms
 DEPENDS+=       gkrellm-1.2.*:../../sysutils/gkrellm
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
 .include "../../mk/bsd.pkg.mk"

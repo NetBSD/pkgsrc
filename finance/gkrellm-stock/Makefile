@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/30 13:23:40 damon Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/01 15:30:54 damon Exp $
 
 DISTNAME=	gkrellstock-0.2
 PKGNAME=	gkrellm-stock-0.2
@@ -21,5 +21,8 @@ do-configure:
 	${SED} -e "s,/usr/bin/perl,${PERL5},g" \
 		< ${WRKSRC}/${FILE}.ORIG > ${WRKSRC}/${FILE}
 .endfor
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
 .include "../../mk/bsd.pkg.mk"
