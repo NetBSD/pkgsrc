@@ -3,7 +3,7 @@
 # Date created:         29 Jan 1998
 # Whom:                 bouyer
 #
-# $NetBSD: Makefile,v 1.1 1998/01/29 11:46:05 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/30 13:58:02 agc Exp $
 #
 
 DISTNAME=       xdemineur-2.0
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	games
 
 MAINTAINER= bouyer@netbsd.org
 
-LIB_DEPENDS=    Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
+LIB_DEPENDS=    Xpm.4.:${PORTSDIR}/graphics/xpm
 
 USE_IMAKE=	yes
 

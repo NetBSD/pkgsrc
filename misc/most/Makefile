@@ -3,7 +3,7 @@
 # Date created:		31 May 1997
 # Whom:			rhwang@bigpanda.com
 #
-# $NetBSD: Makefile,v 1.2 1998/01/24 21:20:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/30 13:57:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 
 MAINTAINER=	rhwang@bigpanda.com
 
-LIB_DEPENDS=	slang\\.0\\.99[0-9][0-9]:${PORTSDIR}/devel/libslang
+LIB_DEPENDS=	slang.0.99[0-9][0-9]:${PORTSDIR}/devel/libslang
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/most

@@ -3,7 +3,7 @@
 # Date created:		27 November 1997
 # Whom:			tron
 #
-# $NetBSD: Makefile,v 1.5 1998/01/29 16:55:20 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/30 13:57:07 agc Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg
 
 MAN1=	fax2ps.1 fax2tiff.1 gif2tiff.1 pal2rgb.1 ppm2tiff.1 ras2tiff.1 \
 	rgb2ycbcr.1 sgi2tiff.1 thumbnail.1 tiff2bw.1 tiff2ps.1 tiffcmp.1 \

@@ -3,7 +3,7 @@
 # Date created:         11th December 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.6 1998/01/29 16:48:09 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/30 13:57:13 agc Exp $
 #
 
 DISTNAME=	ImageMagick-4.0
@@ -14,10 +14,10 @@ MASTER_SITES=	ftp://ftp.wizards.dupont.com/pub/ImageMagick/ \
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		mpeg\\.1\\.2:${PORTSDIR}/graphics/mpeg-lib \
-		png\\.0\\.:${PORTSDIR}/graphics/png \
-		tiff\\.3\\.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
+		mpeg.1.2:${PORTSDIR}/graphics/mpeg-lib \
+		png.0.:${PORTSDIR}/graphics/png \
+		tiff.3.4:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
 USE_X11=	yes

@@ -3,7 +3,7 @@
 # Date created:		30 October 1994
 # Whom:			smace
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 05:32:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -20,8 +20,8 @@ PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		tiff\\.3\\.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
+		tiff.3.4:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
 

@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.8 1998/01/29 14:48:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/01/30 13:57:03 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -28,10 +28,10 @@ MAINTAINER=	agc@netbsd.org
 WITH_SOUND=
 .endif
 
-LIB_DEPENDS=	Xaw3d\\.6\\.:${PORTSDIR}/x11/Xaw3d \
-		Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
-		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		png\\.0\\.:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	Xaw3d.6.:${PORTSDIR}/x11/Xaw3d \
+		Xpm.4.:${PORTSDIR}/graphics/xpm \
+		jpeg.7.:${PORTSDIR}/graphics/jpeg \
+		png.0.:${PORTSDIR}/graphics/png
 
 #USE_GMAKE=	yes
 STRIP=
