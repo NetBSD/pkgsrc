@@ -1,42 +1,469 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:10:54 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
 
---- Makefile.in~	Fri Sep 13 07:42:06 1996
-+++ Makefile.in	Fri Sep 13 09:28:45 1996
-@@ -469,7 +469,7 @@
- 	@$(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
- 	@$(INSTALL_DATA) tnm$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
- 	@chmod 555 $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
+--- Makefile.in.orig	Fri Jan 30 14:46:51 1998
++++ Makefile.in	Fri Sep 18 18:15:41 1998
+@@ -386,22 +386,28 @@
+ 
+ TKI_OBJS =	$(TKI_GENERIC_OBJS)
+ 
++LIBTNM=		libtnm${TNM_VERSION}.a
++LIBTKINED=	libtkined${TKI_VERSION}.a
++LIBMAP=		libmap.a
++
+ all: @TARGET@
+ 
+-scotty: tnm$(SHLIB_SUFFIX) ntping straps scotty.o
+-	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
++scotty: ${LIBTNM} ntping straps scotty.o
++	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o ${LIBTNM:.a=.la} $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
+ 
+-tnm$(SHLIB_SUFFIX): $(TNM_OBJS)
+-	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)
++#	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)
++${LIBTNM}: $(TNM_OBJS)
++	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${TNM_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 
+-tkined: tkined$(SHLIB_SUFFIX) tkined.in
++tkined: ${LIBTKINED} tkined.in
+ 	@sed -e 's+%WISH%+$(TK_WISH)+' \
+ 	    -e 's+%TCL_VERSION%+$(TCL_VERSION)+' \
+ 	    -e 's+%TK_VERSION%+$(TK_VERSION)+' \
+ 		    tkined.in > tkined
+ 
+-tkined$(SHLIB_SUFFIX): $(TKI_GENERIC_OBJS)
+-	$(SHLIB_LD) $(TKI_GENERIC_OBJS) -o tkined$(SHLIB_SUFFIX) $(LIBS)
++#	$(SHLIB_LD) $(TKI_GENERIC_OBJS) -o tkined$(SHLIB_SUFFIX) $(LIBS)
++${LIBTKINED}: $(TKI_GENERIC_OBJS)
++	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${TKI_GENERIC_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 
+ test:
+ 	@echo
+@@ -476,7 +482,7 @@
+ 	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
+ 	    done;
+ 
+-tnm-install-bin: scotty tnm$(SHLIB_SUFFIX)
++tnm-install-bin: scotty ${LIBTNM}
+ 	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TNM_INSTALL_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -487,10 +493,9 @@
+ 		fi; \
+ 	    done;
+ 	@echo "Installing scotty$(TNM_VERSION) and tnm$(TNM_VERSION)$(SHLIB_SUFFIX)"
+-	@$(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
+-	@$(INSTALL_DATA) tnm$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
+-	@chmod 555 $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
 -	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)[info sharedlibextension]"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
-+	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION).so"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
++	@${LIBTOOL} --mode=install $(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
++	@${LIBTOOL} --mode=install $(INSTALL_DATA) ${LIBTNM:.a=.la} $(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/libtnm$(TNM_VERSION).so.1.0"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
  
  tnm-install-mibs:
  	@for i in $(TNM_INSTALL_DIR)/mibs ; \
-@@ -567,10 +567,14 @@
+@@ -578,7 +583,7 @@
+ 	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/agents; \
+ 	    done
+ 
+-tki-install-bin: tkined tkined$(SHLIB_SUFFIX) $(TKI_LIBRARY_DIR)/pkgIndex.tcl
++tki-install-bin: tkined ${LIBTKINED} $(TKI_LIBRARY_DIR)/pkgIndex.tcl
+ 	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TKI_INSTALL_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -589,10 +594,13 @@
  		fi; \
  	    done;
  	@echo "Installing tkined$(TNM_VERSION) and tkined$(TNM_VERSION)$(SHLIB_SUFFIX)"
 -	@$(INSTALL_PROGRAM) $(UNIX_DIR)/tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
+-	@$(INSTALL_DATA) tkined$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
+-	@chmod 555 $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
+-	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
 +	@sed s,@PREFIX@,${prefix},g tkined.sh.in >tkined.sh
 +	@$(INSTALL) -m 555 ${UNIX_DIR}/tkined.sh ${BIN_INSTALL_DIR}/tkined
-+	@$(INSTALL) -m 555 $(UNIX_DIR)/tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
++	@${LIBTOOL} --mode=install $(INSTALL) -m 555 $(UNIX_DIR)/tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
 +	@sed s,@PREFIX@,${prefix},g scotty.sh.in >scotty.sh
 +	@$(INSTALL) -m 555 ${UNIX_DIR}/scotty.sh ${BIN_INSTALL_DIR}/scotty
- 	@$(INSTALL_DATA) tkined$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
- 	@chmod 555 $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
--	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
-+	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION).so"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
++	@${LIBTOOL} --mode=install $(INSTALL_DATA) ${LIBTKINED:.a=.la} $(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/libtkined$(TKI_VERSION).so.1.0"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
  	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
  
  tki-install-library:
---- tkined.sh.in~	Fri Sep 13 09:30:41 1996
-+++ tkined.sh.in	Fri Sep 13 09:26:21 1996
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+export TCLLIBPATH="@PREFIX@/lib/tkined1.4.8 @PREFIX@/lib/tnm2.1.8"
-+exec @PREFIX@/bin/tkined1.4.8 $*
---- scotty.sh.in~	Fri Sep 13 09:30:41 1996
-+++ scotty.sh.in	Fri Sep 13 09:26:21 1996
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+export TCLLIBPATH="@PREFIX@/lib/tnm2.1.8"
-+exec @PREFIX@/bin/scotty2.1.8
+@@ -731,7 +739,7 @@
+ 	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
+ 	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
+ 	@rm -f scotty ntping straps tkined
+-	@rm -f tnm$(SHLIB_SUFFIX) tkined$(SHLIB_SUFFIX)
++	@rm -f ${LIBTNM} ${LIBTKINED}
+ 	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
+ 	@rm -f map.so tnmMap.o tnmMapUtil.o 
+ 	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
+@@ -786,8 +794,8 @@
+ 		$(MAN8_INSTALL_DIR)/straps.8 \
+ 		$(BIN_INSTALL_DIR)/ntping \
+ 		$(MAN8_INSTALL_DIR)/ntping.8 \
+-		$(LIB_RUNTIME_DIR)/tkined$(SHLIB_SUFFIX) \
+-		$(LIB_RUNTIME_DIR)/tnm$(SHLIB_SUFFIX) \
++		$(LIB_RUNTIME_DIR)/${LIBTKINED} \
++		$(LIB_RUNTIME_DIR)/${LIBTNM} \
+ 		$(TNM_INSTALL_DIR) $(TKI_INSTALL_DIR)
+ 
+ bintar:
+@@ -802,77 +810,77 @@
+ #----------------------------------------------------------------
+ 
+ ntping.o: $(TNM_NTPING_DIR)/ntping.c
+-	$(CC) -c $(CFLAGS) -I. -DHAVE_CONFIG_H $(TNM_NTPING_DIR)/ntping.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS) -I. -DHAVE_CONFIG_H $(TNM_NTPING_DIR)/ntping.c
+ 
+ ntping:	ntping.o
+ 	@if [ -f ntping ] ; then mv -f ntping ntpink.bak ; else true ; fi
+ 	@rm -f ntping.bak || true
+-	$(LD) $(LD_FLAGS) -o ntping ntping.o $(LIBS)
++	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) -o ntping ntping.o $(LIBS)
+ 
+ straps.o: $(TNM_SNMP_DIR)/straps.c
+-	$(CC) -c $(CFLAGS) -I. $(TNM_SNMP_DIR)/straps.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS) -I. $(TNM_SNMP_DIR)/straps.c
+ 
+ straps:	straps.o
+ 	@if [ -f straps ] ; then mv -f straps straps.bak ; else true ; fi
+ 	@rm -f straps.bak || true
+-	$(LD) $(LD_FLAGS) -o straps straps.o $(LIBS)
++	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) -o straps straps.o $(LIBS)
+ 
+ scotty.o: $(UNIX_DIR)/scotty.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I. -I$(TNM_GENERIC_DIR) $(TCL_INCLUDES) $(UNIX_DIR)/scotty.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I. -I$(TNM_GENERIC_DIR) $(TCL_INCLUDES) $(UNIX_DIR)/scotty.c
+ 
+ tnmEvent.o: $(TNM_GENERIC_DIR)/tnmEvent.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmEvent.c
+ 
+ tnmJob.o: $(TNM_GENERIC_DIR)/tnmJob.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmJob.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmJob.c
+ 
+ tnmIned.o: $(TNM_GENERIC_DIR)/tnmIned.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TNM_GENERIC_DIR)/tnmIned.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TNM_GENERIC_DIR)/tnmIned.c
+ 
+ tnmSyslog.o: $(TNM_GENERIC_DIR)/tnmSyslog.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmSyslog.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmSyslog.c
+ 
+ tnmIcmp.o: $(TNM_GENERIC_DIR)/tnmIcmp.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmIcmp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmIcmp.c
+ 
+ tnmDns.o: $(TNM_GENERIC_DIR)/tnmDns.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmDns.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmDns.c
+ 
+ tnmUdp.o: $(TNM_GENERIC_DIR)/tnmUdp.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmUdp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmUdp.c
+ 
+ tnmSunRpc.o: $(TNM_GENERIC_DIR)/tnmSunRpc.c mount.h ether.h rstat.h pcnfsd.h
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmSunRpc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmSunRpc.c
+ 
+ tnmNtp.o: $(TNM_GENERIC_DIR)/tnmNtp.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmNtp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmNtp.c
+ 
+ tnmRpc.o: $(TNM_GENERIC_DIR)/tnmRpc.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmRpc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmRpc.c
+ 
+ tnmHttp.o: $(TNM_GENERIC_DIR)/tnmHttp.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmHttp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmHttp.c
+ 
+ tnmNetdb.o: $(TNM_GENERIC_DIR)/tnmNetdb.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmNetdb.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmNetdb.c
+ 
+ tnmUnixInit.o: $(UNIX_DIR)/tnmUnixInit.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixInit.c
+ 
+ tnmUnixLog.o: $(UNIX_DIR)/tnmUnixLog.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixLog.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixLog.c
+ 
+ tnmUnixSocket.o: $(UNIX_DIR)/tnmUnixSocket.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixSocket.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(UNIX_DIR)/tnmUnixSocket.c
+ 
+ tnmUnixIcmp.o: $(UNIX_DIR)/tnmUnixIcmp.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DNTPING=\"$(NTPING)\" $(UNIX_DIR)/tnmUnixIcmp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DNTPING=\"$(NTPING)\" $(UNIX_DIR)/tnmUnixIcmp.c
+ 
+ tnmInit.o: $(TNM_GENERIC_DIR)/tnmInit.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DTNMLIB=\"$(TNM_INSTALL_DIR)\" $(TNM_GENERIC_DIR)/tnmInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DTNMLIB=\"$(TNM_INSTALL_DIR)\" $(TNM_GENERIC_DIR)/tnmInit.c
+ 
+ tnmUtil.o: $(TNM_GENERIC_DIR)/tnmUtil.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(TNM_GENERIC_DIR)/tnmUtil.c
+ 
+ mount.x: $(TNM_GENERIC_DIR)/mount.x
+ 	cp $(TNM_GENERIC_DIR)/mount.x .
+@@ -881,10 +889,10 @@
+ 	$(RPCGEN) mount.x
+ 
+ mount_xdr.o: mount_xdr.c
+-	$(CC) -c $(TNM_CC_SWITCHES) mount_xdr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) mount_xdr.c
+ 
+ mount_clnt.o: mount_clnt.c
+-	$(CC) -c $(TNM_CC_SWITCHES) mount_clnt.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) mount_clnt.c
+ 
+ ether.x: $(TNM_GENERIC_DIR)/ether.x
+ 	cp $(TNM_GENERIC_DIR)/ether.x .
+@@ -893,10 +901,10 @@
+ 	$(RPCGEN) ether.x
+ 
+ ether_xdr.o: ether_xdr.c
+-	$(CC) -c $(TNM_CC_SWITCHES) ether_xdr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) ether_xdr.c
+ 
+ ether_clnt.o: ether_clnt.c
+-	$(CC) -c $(TNM_CC_SWITCHES) ether_clnt.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) ether_clnt.c
+ 
+ rstat.x: $(TNM_GENERIC_DIR)/rstat.x
+ 	cp $(TNM_GENERIC_DIR)/rstat.x .
+@@ -905,10 +913,10 @@
+ 	$(RPCGEN) rstat.x
+ 
+ rstat_xdr.o: rstat_xdr.c
+-	$(CC) -c $(TNM_CC_SWITCHES) rstat_xdr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) rstat_xdr.c
+ 
+ rstat_clnt.o: rstat_clnt.c
+-	$(CC) -c $(TNM_CC_SWITCHES) rstat_clnt.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) rstat_clnt.c
+ 
+ pcnfsd.x: $(TNM_GENERIC_DIR)/pcnfsd.x
+ 	cp $(TNM_GENERIC_DIR)/pcnfsd.x .
+@@ -917,61 +925,61 @@
+ 	$(RPCGEN) pcnfsd.x
+ 
+ pcnfsd_xdr.o: pcnfsd_xdr.c
+-	$(CC) -c $(TNM_CC_SWITCHES) pcnfsd_xdr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) pcnfsd_xdr.c
+ 
+ pcnfsd_clnt.o: pcnfsd_clnt.c
+-	$(CC) -c $(TNM_CC_SWITCHES) pcnfsd_clnt.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) pcnfsd_clnt.c
+ 
+ tnmAsn1.o: $(TNM_SNMP_DIR)/tnmAsn1.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmAsn1.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmAsn1.c
+ 
+ tnmMD5.o: $(TNM_SNMP_DIR)/tnmMD5.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMD5.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMD5.c
+ 
+ tnmSnmpNet.o: $(TNM_SNMP_DIR)/tnmSnmpNet.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -DSTRAPS=\"$(STRAPS)\" $(TNM_SNMP_DIR)/tnmSnmpNet.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -DSTRAPS=\"$(STRAPS)\" $(TNM_SNMP_DIR)/tnmSnmpNet.c
+ 
+ tnmSnmpUtil.o: $(TNM_SNMP_DIR)/tnmSnmpUtil.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpUtil.c
+ 
+ tnmSnmpInst.o: $(TNM_SNMP_DIR)/tnmSnmpInst.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpInst.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpInst.c
+ 
+ tnmSnmpSend.o: $(TNM_SNMP_DIR)/tnmSnmpSend.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpSend.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpSend.c
+ 
+ tnmSnmpRecv.o: $(TNM_SNMP_DIR)/tnmSnmpRecv.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpRecv.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpRecv.c
+ 
+ tnmSnmpAgent.o: $(TNM_SNMP_DIR)/tnmSnmpAgent.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpAgent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpAgent.c
+ 
+ tnmSnmpTcl.o: $(TNM_SNMP_DIR)/tnmSnmpTcl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpTcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmSnmpTcl.c
+ 
+ tnmMibQuery.o: $(TNM_SNMP_DIR)/tnmMibQuery.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibQuery.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibQuery.c
+ 
+ tnmMibParser.o: $(TNM_SNMP_DIR)/tnmMibParser.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibParser.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibParser.c
+ 
+ tnmMibTree.o: $(TNM_SNMP_DIR)/tnmMibTree.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibTree.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibTree.c
+ 
+ tnmMibFrozen.o: $(TNM_SNMP_DIR)/tnmMibFrozen.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibFrozen.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibFrozen.c
+ 
+ tnmMibTcl.o: $(TNM_SNMP_DIR)/tnmMibTcl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibTcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) $(TNM_SNMP_DIR)/tnmMibTcl.c
+ 
+ tnmGdmoTcl.o: $(TNM_GDMO_DIR)/tnmGdmoTcl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) $(TNM_GDMO_DIR)/tnmGdmoTcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) $(TNM_GDMO_DIR)/tnmGdmoTcl.c
+ 
+ tnmGdmoScan.o: tnmGdmoScan.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) tnmGdmoScan.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) tnmGdmoScan.c
+ 
+ tnmGdmoParser.o: tnmGdmoParser.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) tnmGdmoParser.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_GDMO_DIR) tnmGdmoParser.c
+ 
+ tnmGdmoScan.c: $(TNM_GDMO_DIR)/tnmGdmo.h $(TNM_GDMO_DIR)/tnmGdmoScan.l tnmGdmoParser.h 
+ 	$(LEX) $(TNM_GDMO_DIR)/tnmGdmoScan.l
+@@ -983,78 +991,78 @@
+ 	mv -f y.tab.h tnmGdmoParser.h
+ 
+ msqltcl.o: $(TNM_MSQL_DIR)/msqltcl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(MSQL_INCLUDES) -I$(TNM_MSQL_DIR) $(TNM_MSQL_DIR)/msqltcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(MSQL_INCLUDES) -I$(TNM_MSQL_DIR) $(TNM_MSQL_DIR)/msqltcl.c
+ 
+ tnmCmipAction.o: $(TNM_CMIP_DIR)/tnmCmipAction.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipAction.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipAction.c
+ 
+ tnmCmipDelete.o: $(TNM_CMIP_DIR)/tnmCmipDelete.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipDelete.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipDelete.c
+ 
+ tnmCmipGet.o: $(TNM_CMIP_DIR)/tnmCmipGet.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipGet.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipGet.c
+ 
+ tnmCmipSet.o: $(TNM_CMIP_DIR)/tnmCmipSet.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipSet.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipSet.c
+ 
+ tnmCmipCreate.o: $(TNM_CMIP_DIR)/tnmCmipCreate.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipCreate.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipCreate.c
+ 
+ tnmCmipCancel.o: $(TNM_CMIP_DIR)/tnmCmipCancel.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipCancel.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipCancel.c
+ 
+ tnmCmipEvent.o: $(TNM_CMIP_DIR)/tnmCmipEvent.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipEvent.c
+ 
+ tnmCmipWait.o: $(TNM_CMIP_DIR)/tnmCmipWait.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipWait.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipWait.c
+ 
+ tnmCmipTcl.o: $(TNM_CMIP_DIR)/tnmCmipTcl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipTcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -DOSIMIS_3 $(OSIMIS_INCLUDES) -I$(TNM_CMIP_DIR) $(TNM_CMIP_DIR)/tnmCmipTcl.c
+ 
+ #------------------------------------------------------------------
+ # These rules are used to build a dynamic loadable tkined library.
+ #------------------------------------------------------------------
+ 
+ tkiEditor.o: $(TKI_GENERIC_DIR)/tkiEditor.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiEditor.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiEditor.c
+ 
+ tkiObjects.o: $(TKI_GENERIC_DIR)/tkiObjects.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiObjects.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiObjects.c
+ 
+ tkiMethods.o: $(TKI_GENERIC_DIR)/tkiMethods.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiMethods.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiMethods.c
+ 
+ tkiMisc.o: $(TKI_GENERIC_DIR)/tkiMisc.c
+-	$(CC) -c $(TKI_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TKI_GENERIC_DIR)/tkiMisc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TKI_GENERIC_DIR)/tkiMisc.c
+ 
+ tkiFlash.o: $(TKI_GENERIC_DIR)/tkiFlash.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiFlash.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiFlash.c
+ 
+ tkiBarchart.o: $(TKI_GENERIC_DIR)/tkiBarchart.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiBarchart.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiBarchart.c
+ 
+ tkiStripchart.o: $(TKI_GENERIC_DIR)/tkiStripchart.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiStripchart.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiStripchart.c
+ 
+ tkiUtil.o: $(TKI_GENERIC_DIR)/tkiUtil.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(TKI_GENERIC_DIR)/tkiUtil.c
+ 
+ tkiInit.o: $(TKI_GENERIC_DIR)/tkiInit.c
+-	$(CC) -c $(TKI_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TKI_GENERIC_DIR)/tkiInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) -DTKINEDLIB=\"$(TKI_INSTALL_DIR)\" $(TKI_GENERIC_DIR)/tkiInit.c
+ 
+ tkiUnixInit.o: $(UNIX_DIR)/tkiUnixInit.c
+-	$(CC) -c $(TKI_CC_SWITCHES) $(UNIX_DIR)/tkiUnixInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TKI_CC_SWITCHES) $(UNIX_DIR)/tkiUnixInit.c
+ 
+ #------------------------------------------------------------------
+ # These rules are used to build stuff under development.
+ #------------------------------------------------------------------
+ 
+ tnmMibScan.o: tnmMibScan.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -I$(NEW_DIR) tnmMibScan.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -I$(NEW_DIR) tnmMibScan.c
+ 
+ tnmMibYacc.o: tnmMibYacc.c
+-	$(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -I$(NEW_DIR) tnmMibYacc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) -I$(TNM_SNMP_DIR) -I$(NEW_DIR) tnmMibYacc.c
+ 
+ tnmMibScan.c: $(TNM_SNMP_DIR)/tnmMib.h $(NEW_DIR)/tnmMibScan.l tnmMibYacc.h 
+ 	$(LEX) -PTnmMib $(NEW_DIR)/tnmMibScan.l
+@@ -1066,24 +1074,28 @@
+ 	mv -f y.tab.h tnmMibYacc.h
+ 
+ mib: tnmMibScan.o tnmMibYacc.o
+-	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o mib tnmMibYacc.o tnmMibScan.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
++	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o mib tnmMibYacc.o tnmMibScan.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
+ 
+ tnmMap.o: $(NEW_DIR)/tnmMap.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMap.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMap.c
+ 
+ tnmMapUtil.o: $(NEW_DIR)/tnmMapUtil.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapUtil.c
+ 
+ tnmMapNode.o: $(NEW_DIR)/tnmMapNode.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapNode.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapNode.c
+ 
+ tnmMapClnt.o: $(NEW_DIR)/tnmMapClnt.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapClnt.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapClnt.c
+ 
+ tnmMapAppl.o: $(NEW_DIR)/tnmMapAppl.c
+-	$(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapAppl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(TNM_CC_SWITCHES) $(NEW_DIR)/tnmMapAppl.c
++
++#	$(SHLIB_LD) tnmMap.o tnmMapUtil.o tnmMapNode.o tnmMapClnt.o tnmMapAppl.o -o map$(SHLIB_SUFFIX) $(LIBS)
++
++MAP_OBJS= tnmMap.o tnmMapUtil.o tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
+ 
+-map$(SHLIB_SUFFIX): tnmMap.o tnmMapUtil.o tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
+-	$(SHLIB_LD) tnmMap.o tnmMapUtil.o tnmMapNode.o tnmMapClnt.o tnmMapAppl.o -o map$(SHLIB_SUFFIX) $(LIBS)
++${LIBMAP} : ${MAP_OBJS}
++	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${MAP_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
