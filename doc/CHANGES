@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4149 2003/12/16 22:35:42 heinz Exp $
+$NetBSD: CHANGES,v 1.4150 2003/12/16 22:47:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-INET6-2.00 [martti 2003-12-16]
 	Updated mrtg to 2.10.11nb1 [martti 2003-12-16]
 	Updated p5-Digest to 1.05nb1 [heinz 2003-12-16]
+	Updated xmlcatmgr to 1.2 [jmmv 2003-12-16]
