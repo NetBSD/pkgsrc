@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 23:32:29 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/23 15:58:51 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}mode-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -11,8 +12,10 @@ HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	Ruby editing mode for Emacs
 
 DIST_SUBDIR=	ruby
-DISTINFO_FILE=	${RUBY_DISTINFO}
 WRKSRC=		${RUBY_WRKSRC}/misc
+
+.include "../../mk/bsd.prefs.mk"
+RUBY_VER=	1.6		# always use 1.6 base
 
 .if defined(USE_XEMACS)
 DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
@@ -25,7 +28,6 @@ SITE_LISP=	share/emacs/site-lisp
 .endif
 
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/misc
-NO_PATCH=	# defined
 NO_CONFIGURE=	# defined
 
 SRCS=		ruby-mode.el rubydb3x.el inf-ruby.el
