@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.4 2001/12/27 15:02:42 taya Exp $
+$NetBSD: patch-ba,v 1.5 2002/02/09 03:54:48 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	Sat Dec  2 06:29:17 2000
-+++ ./nsprpub/pr/include/md/_netbsd.cfg	Sat Dec 22 13:02:41 2001
++++ ./nsprpub/pr/include/md/_netbsd.cfg	Thu Feb  7 00:40:50 2002
 @@ -91,6 +91,52 @@
  #define PR_ALIGN_OF_DOUBLE  4
  #define PR_ALIGN_OF_POINTER 4

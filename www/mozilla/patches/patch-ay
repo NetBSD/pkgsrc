@@ -1,26 +1,60 @@
-$NetBSD: patch-ay,v 1.6 2001/12/27 15:02:41 taya Exp $
+$NetBSD: patch-ay,v 1.7 2002/02/09 03:54:48 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h ./netwerk/base/src/nsSocketTransport.h
 --- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Wed Nov 28 09:42:57 2001
-+++ ./netwerk/base/src/nsSocketTransport.h	Sat Dec 22 13:02:38 2001
-@@ -123,6 +123,11 @@
-   eSocketDNS_Wait             = 0x2020
- };
- 
-+struct nsNetAddrList {
-+    PRNetAddr addr;
-+    struct nsNetAddrList *next;
-+};
++++ ./netwerk/base/src/nsSocketTransport.h	Sat Feb  9 09:22:49 2002
+@@ -176,7 +176,7 @@
+     PRFileDesc* GetSocket(void)      { return mSocketFD;    }
+     PRInt16     GetSelectFlags(void) { return mSelectFlags; }
+     PRCList*    GetListNode(void)    { return &mListLink;   }
+-    
 +
- //
- // This is the default timeout value (in milliseconds) for sockets which have
- // no activity...
-@@ -249,7 +254,7 @@
+     static nsSocketTransport* GetInstance(PRCList* qp) { return (nsSocketTransport*)((char*)qp - offsetof(nsSocketTransport, mListLink)); }
+     
+     PRBool CanBeReused() { return 
+@@ -237,8 +237,27 @@
+     inline void ClearFlag(nsSocketReadWriteInfo aFlag) {
+         mReadWriteState &= ~aFlag;
+     } 
++
++    PRInt32     GetSocketPort(void)  { return (mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort; }
++    const char *GetSocketHost(void)  { return (mProxyHost && !mProxyTransparent) ? mProxyHost : mHostName; }
+     
+ protected:
++    class nsNetAddrList {
++    public:
++        nsNetAddrList() : mList(nsnull), mLen(0) {}
++       ~nsNetAddrList() { delete[] mList; }
++
++        // allocate space for the address list
++        nsresult Init(PRUint32 len);
++
++        // given a net addr in the list, return the next addr.
++        // if given NULL, then return the first addr in the list.
++        // returns NULL if given addr is the last addr.
++        PRNetAddr *GetNext(PRNetAddr *currentAddr);
++    private:
++        PRNetAddr *mList;
++        PRUint32   mLen;
++    };
+     
+     nsSocketState                   mCurrentState;
+     nsCOMPtr<nsIRequest>            mDNSRequest;
+@@ -249,7 +268,8 @@
      PRIntervalTime                  mLastActiveTime;
      PRCList                         mListLink;
      PRMonitor*                      mMonitor;
 -    PRNetAddr                       mNetAddress;
-+    nsNetAddrList                   *mNetAddressList;
++    nsNetAddrList                   mNetAddrList;
++    PRNetAddr                      *mNetAddress;
      nsSocketOperation               mOperation;
      nsCOMPtr<nsISupports>           mSecurityInfo;
  
+@@ -415,6 +435,7 @@
+     PRBool IsInitialized() { return mStartFired; }
+     PRBool IsSuspended() { return mSuspendCount > 0; }
+     PRBool IsCanceled() { return mCanceled; }
++    PRBool HasFailed() { return NS_FAILED(mStatus); }
+ 
+     void SetTransport(nsSocketTransport *);
+     void SetObserver(nsIRequestObserver *obs) { mObserver = obs; }
