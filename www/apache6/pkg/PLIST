@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/07/23 18:19:31 itojun Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -14,10 +14,10 @@ include/httpd/ap.h
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
-include/httpd/ap_ctx.h
+@comment include/httpd/ap_ctx.h
 include/httpd/ap_ctype.h
-include/httpd/ap_hook.h
-include/httpd/ap_include_extern.h
+@comment include/httpd/ap_hook.h
+@comment include/httpd/ap_include_extern.h
 include/httpd/ap_md5.h
 include/httpd/ap_mmn.h
 include/httpd/buff.h
