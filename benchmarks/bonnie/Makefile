@@ -3,7 +3,7 @@
 # Date created:         26 September 1994
 # Whom:                 se
 #
-# $NetBSD: Makefile,v 1.4 1998/03/07 13:58:27 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/20 22:04:08 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
@@ -17,10 +17,8 @@ MAINTAINER=	se@FreeBSD.org
 
 NO_CONFIGURE=	yes
 
-CAT1=		bonnie.0
-MAN1=		bonnie.1
-
-MANCOMPRESSED=	1
+# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
+# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
 
 post-extract:
 	${MV} ${WRKSRC}/Bonnie.c ${WRKSRC}/bonnie.c
