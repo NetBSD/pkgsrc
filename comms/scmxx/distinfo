@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.16 2003/03/16 10:21:03 kleink Exp $
+$NetBSD: distinfo,v 1.17 2003/04/18 16:18:32 wiz Exp $
 
-SHA1 (scmxx-0.6.3.6.tar.bz2) = f77a21629873d5a34e99d1bcbd3f06c29e835740
-Size (scmxx-0.6.3.6.tar.bz2) = 77096 bytes
+SHA1 (scmxx-0.6.3.7.tar.bz2) = c344cdda631c000ccb618917a4d674021f577e82
+Size (scmxx-0.6.3.7.tar.bz2) = 77520 bytes
+SHA1 (patch-aa) = ee944e84895dc5e44b34d32470e536f9e09158cf
+SHA1 (patch-ab) = 4632e5249ee95a84a17e95239b1be8cf59e72e86
