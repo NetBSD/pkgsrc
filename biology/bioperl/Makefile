@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/28 05:20:39 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 22:51:06 seb Exp $
 #
 
 DISTNAME=		bioperl-0.7.0
@@ -9,15 +9,12 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://bioperl.org/
 COMMENT=		Perl tools for computational molecular biology
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Bio/.packlist
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bioperl
 	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/bioperl
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
