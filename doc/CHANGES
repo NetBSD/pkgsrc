@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5068 2004/03/03 10:55:19 drochner Exp $
+$NetBSD: CHANGES,v 1.5069 2004/03/03 11:30:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1132,3 +1132,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-soappy to 0.11.3 [recht 2004-03-03]
 	Updated py-google to 0.6 [recht 2004-03-03]
 	Updated xpdf to 3.00 [adam 2004-03-03]
+	Updated t1lib to 5.0.1 [adam 2004-03-03]
+	Updated zoom to 1.0.1anb1 [adam 2004-03-03]
