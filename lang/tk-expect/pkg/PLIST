@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/05 17:13:30 jwise Exp $
+bin/expectk
+man/man1/expectk.1
