@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.6 2002/11/23 22:49:48 jschauma Exp $
+$NetBSD: patch-ad,v 1.7 2002/11/23 23:03:25 jschauma Exp $
 
---- lib/Makefile.orig	Sat Nov 23 17:40:45 2002
-+++ lib/Makefile	Sat Nov 23 17:42:52 2002
+--- lib/Makefile.orig	Sat Nov 23 17:59:40 2002
++++ lib/Makefile	Sat Nov 23 18:01:12 2002
 @@ -1,17 +1,41 @@
- # $NetBSD: patch-ad,v 1.6 2002/11/23 22:49:48 jschauma Exp $
+ # $NetBSD: patch-ad,v 1.7 2002/11/23 23:03:25 jschauma Exp $
  # Original from FreeBSD, no rcs id.
  
 +OPSYS!=		uname -s
