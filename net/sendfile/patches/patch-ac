@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2000/09/09 19:51:39 wiz Exp $
+
+--- develop/install.orig	Thu Jan 28 22:45:40 1999
++++ develop/install
+@@ -165,14 +165,6 @@
+ To deinstall the sendfile-daemon, simply type: 	rm -f $SERVERDIR/sendfiled
+ 
+ EOD
+-echo 'If you are satisfied with these defaults, then type "ok" now:'
+-read answer
+-if [ "$answer" != ok ]; then
+-  echo
+-  echo "You can install sendfile manually, too. Please type: more doc/README"
+-  echo
+-  exit
+-fi
+ 
+ umask 022
+ 
+@@ -304,7 +296,7 @@
+     echo "adding check_sendfile to /etc/csh.login"
+     echo >>/etc/csh.login
+     echo "test -x $BINDIR/check_sendfile && $BINDIR/check_sendfile" \
+-         >>/etc/profile
++         >>/etc/csh.login
+   fi
+ fi
+ 				
