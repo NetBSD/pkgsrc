@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/10/29 17:47:30 xtraeme Exp $
-
-Don't forget to create the ``menu.lst'' file in $ISODIR/boot/grub
-to specify what kernels you want to boot.
-
-Good luck!
-
-===========================================================================
