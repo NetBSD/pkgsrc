@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4776 2004/02/10 17:58:07 minskim Exp $
+$NetBSD: CHANGES,v 1.4777 2004/02/10 18:00:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added openvpn-1.5.0 [wulf 2004-02-10]
 	Updated mldonkey to 2.5.10 [wiz 2004-02-10]
 	Updated py-bsddb3 to 4.1.6 [minskim 2004-02-10]
+	Updated nautilus to 2.4.2nb2 [jmmv 2004-02-10]
