@@ -1,0 +1,139 @@
+--- nfsshell.c.orig	Mon Sep 28 15:54:36 1998
++++ nfsshell.c	Mon Sep 28 15:57:22 1998
+@@ -1,3 +1,4 @@
++/* URL: http://www.asmodeus.com/archive/Xnix/nfsShell */
+ /*
+  * Copyright, 1991, 1992, by Leendert van Doorn (leendert@cs.vu.nl)
+  *
+@@ -21,14 +22,19 @@
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+ #include <sys/vnode.h>
+-#include <sys/vfs.h>
++/* #include <sys/vfs.h> *//*HF*/
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <sys/time.h>
+-#include <ufs/inode.h>
++#include <ufs/ufs/dinode.h> /*HF: NetBSD*/
++/* #include <sys/fs/ufs_inode.h> *//*HF: Solaris*/
++#include <sys/filio.h>
+ #include "mount.h"
+ #include "nfs_prot.h"
+ 
++int getline(char *buf, int bufsize, int *argc, char **argv, int argvsize);
++
++
+ /*
+  * Fundamental constants
+  */
+@@ -284,8 +290,11 @@
+     register char *p;
+ 
+     if (interact) printf("nfs> ");
+-    if (fgets(buf, bufsize, stdin) == NULL)
++    if (fgets(buf, bufsize, stdin) == NULL){ 
++	perror("fgets");
++	fprintf(stderr,"EOF?!\n");
+ 	return 0;
++    }
+     *argc = 0;
+     for (p = buf; *p == ' ' || *p == '\t'; p++)
+ 	/* skip white spaces */;
+@@ -340,7 +349,7 @@
+     *var = argc == 2 ? atoi(argv[1]) : -2;
+     if (nfsclient && nfsclient->cl_auth) {
+ 	auth_destroy(nfsclient->cl_auth);
+-	nfsclient->cl_auth = authunix_create_default(uid, gid);
++	nfsclient->cl_auth = MYauthunix_create_default(uid, gid);
+     }
+ }
+ 
+@@ -509,8 +518,7 @@
+ /*
+  * Print long listing of a files, much in the way ``ls -l'' does
+  */
+-printfilestatus(name)
+-    char *name;
++printfilestatus(char *name)
+ {
+     diropargs args;
+     diropres *res;
+@@ -1160,7 +1168,7 @@
+         return 0;
+     }
+     clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
+-    nfsclient->cl_auth = authunix_create_default(uid, gid);
++    nfsclient->cl_auth = MYauthunix_create_default(uid, gid);
+ 
+     /* provide some generic name for it */
+     if ((mountpath = malloc(8 + 1)) == NULL) {
+@@ -1235,7 +1243,7 @@
+     *var = 0x00100000;
+     if (nfsclient && nfsclient->cl_auth) {
+ 	auth_destroy(nfsclient->cl_auth);
+-	nfsclient->cl_auth = authunix_create_default(uid, gid);
++	nfsclient->cl_auth = MYauthunix_create_default(uid, gid);
+     }
+ /*
+  * Put in some type of code here
+@@ -1493,7 +1501,7 @@
+         return 0;
+     }
+     clnt_control(mntclient, CLSET_TIMEOUT, &timeout);
+-    mntclient->cl_auth = authunix_create_default(0, 0);
++    mntclient->cl_auth = MYauthunix_create_default(0, 0);
+     if (verbose)
+ 	printf("Open %s (%s)\n",
+ 	    remotehost, inet_ntoa(server_addr.sin_addr));
+@@ -1540,7 +1548,7 @@
+         return 0;
+     }
+     clnt_control(nfsclient, CLSET_TIMEOUT, &timeout);
+-    nfsclient->cl_auth = authunix_create_default(uid, gid);
++    nfsclient->cl_auth = MYauthunix_create_default(uid, gid);
+ 
+     /*
+      * Get file handle for this path from the mount daemon. There
+@@ -1634,7 +1642,7 @@
+ 	return RPC_ANYSOCK;
+     for (;;) {
+ 	sin.sin_port = htons((u_short)lport);
+-	if (bind(s, (caddr_t)&sin, sizeof (sin), 0) >= 0) {
++	if (bind(s, (caddr_t)&sin, sizeof (sin)/*, 0*//*HF*/) >= 0) {
+ 	    (void)ioctl(s, FIONBIO, (char *) &dontblock);
+ 	    if (verbose)
+ 		fprintf(stderr, "Using a privileged port (%d)\n", lport);
+@@ -1672,14 +1680,14 @@
+  * syscalls.
+  */
+ AUTH *
+-authunix_create_default(uid, gid)
++MYauthunix_create_default(uid, gid)
+     int uid, gid;
+ {
+     char machname[MAX_MACHINE_NAME + 1];
+     int gids[1];
+ 
+     if (gethostname(machname, MAX_MACHINE_NAME) == -1) {
+-	fprintf(stderr, "authunix_create_default: cannot get hostname\n");
++	fprintf(stderr, "MYauthunix_create_default: cannot get hostname\n");
+ 	exit(1);
+     }
+     machname[MAX_MACHINE_NAME] = 0;
+@@ -1858,8 +1866,7 @@
+  * NFS errors
+  */
+ char *
+-nfs_error(nfsstat)
+-    enum nfsstat nfsstat;
++nfs_error(enum nfsstat nfsstat)
+ {
+     switch (nfsstat) {
+     case NFS_OK:
+@@ -1903,4 +1910,3 @@
+     }
+ }
+ 
+-
+\ No newline at end of file

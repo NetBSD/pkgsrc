@@ -1,0 +1,40 @@
+--- Makefile.orig	Fri Feb 17 06:57:26 1995
++++ Makefile	Mon Sep 28 17:44:50 1998
+@@ -1,21 +1,33 @@
+-CC=cc
+-#CFLAGS=-g -I. -DSVR4
++CC=gcc
++CFLAGS=-O2 -I.
++#CFLAGS=-ggdb -I. -DSVR4 -w
+ #LIBS=-lsocket -lnsl -L/usr/ucblib -lucb -lresolv
+-CFLAGS=-ggdb -I.
++#LIBS=-lsocket -lnsl -lresolv
++#CFLAGS=-ggdb -I.
+ LIBS=
+ NFSBUG_SOURCES=mount_clnt.c mount_xdr.c nfs_prot_clnt.c nfs_prot_xdr.c nfsbug.c
+ NFSBUG_OBJECTS=mount_clnt.o mount_xdr.o nfs_prot_clnt.o nfs_prot_xdr.o nfsbug.o
++NFSSHELL_SOURCES=nfsshell.c nfs_prot_clnt.c nfs_prot_xdr.c mount_clnt.c mount_xdr.c
++NFSSHELL_OBJECTS=nfsshell.o nfs_prot_clnt.o nfs_prot_xdr.o mount_clnt.o mount_xdr.o
+ RPCGEN_MOUNT= mount.h mount_clnt.c mount_svc.c mount_xdr.c
+ RPCGEN_NFS_PROT= nfs_prot.h nfs_prot_clnt.c nfs_prot_svc.c nfs_prot_xdr.c
+ 
++all: nfsbug nfsshell
++
++nfsshell: ${NFSSHELL_OBJECTS}
++	$(CC) ${CFLAGS} -o nfsshell $(NFSSHELL_OBJECTS) $(LIBS)
++
++${NFSSHELL_OBJECTS}: ${NFSSHELL_SOURCES}
++
+ nfsbug:	$(NFSBUG_OBJECTS)
+-	$(CC) -g -o nfsbug $(NFSBUG_OBJECTS) $(LIBS)
++	$(CC) ${CFLAGS} -o nfsbug $(NFSBUG_OBJECTS) $(LIBS)
+ 
+ lint:	$(NFSBUG_SOURCES)
+ 	lint $(NFSBUG_SOURCES)
+ 
+ clean:
+ 	rm -f nfsbug $(NFSBUG_OBJECTS) $(RPCGEN_MOUNT) $(RPCGEN_NFS_PROT) core
++	rm -f ${NFSSHELL_OBJECTS}
+ 
+ $(RPCGEN_MOUNT):; rpcgen mount.x
+ $(RPCGEN_NFS_PROT):; rpcgen nfs_prot.x
