@@ -1,12 +1,11 @@
-$NetBSD: patch-al,v 1.11 2001/11/06 20:04:47 tv Exp $
+$NetBSD: patch-al,v 1.12 2001/12/15 08:31:38 martti Exp $
 
---- build.orig	Thu Aug  2 03:35:02 2001
-+++ build	Mon Oct  8 10:11:41 2001
-@@ -344,27 +344,6 @@
- 	  esac
+--- build.orig	Thu Nov  1 00:01:04 2001
++++ build	Fri Dec 14 19:28:03 2001
+@@ -332,27 +332,6 @@
  	  echo "Including SSL functionality"
  	fi
--
+ 
 -        if [ -s c-client ] ; then rm -f c-client ; fi
 -        ln -s imap/c-client c-client
 -        if [ -s mtest    ] ; then rm -f mtest    ; fi
@@ -15,10 +14,11 @@ $NetBSD: patch-al,v 1.11 2001/11/06 20:04:47 tv Exp $
 -        ln -s imap/imapd imapd
 -        if [ -s ipopd    ] ; then rm -f ipopd    ; fi
 -        ln -s imap/ipopd ipopd
--        echo "Making c-client library, mtest and imapd"
--        eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
+-        echo "Making c-client library, imapd, and ipopd"
+-	echo $S1 $S2 $S3 $S4 $K1 > imap/SPECIALS
 -        cd $PHOME/imap
--        eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
+-        eval echo eval make "$makeargs" "$SSL" "SPECIALS=`cat SPECIALS`" "$K2" $ccltarg
+-        eval make "$makeargs" "$SSL" "SPECIALS=`cat SPECIALS`" "$K2" $ccltarg
 -        echo ''
 -
 -        echo "Making Pico and Pilot"
@@ -27,10 +27,10 @@ $NetBSD: patch-al,v 1.11 2001/11/06 20:04:47 tv Exp $
 -        eval make "$makeargs" -f makefile.$picotarg
 -        echo ''
 -
-         echo "Making Pine".
+         echo "Making Pine and rpload/rpdump".
          cd $PHOME/pine
          eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
-@@ -384,8 +363,6 @@
+@@ -372,8 +351,6 @@
          if [ -s ../pine/rpdump ] ;    then ln ../pine/rpdump rpdump   ; fi
          cd $PHOME
          echo ''
@@ -39,13 +39,20 @@ $NetBSD: patch-al,v 1.11 2001/11/06 20:04:47 tv Exp $
  	case $maketarg in
  	    mnt)    echo "Fixing stacksizes ..."
  		    fixstk 64K bin/pine bin/pico bin/imapd bin/mtest bin/pilot
-@@ -421,9 +398,6 @@
+@@ -409,16 +386,9 @@
  
  
      clean) # This only sort of works 
+-        rm -f c-client mtest imapd ipopd
 -        echo "Cleaning c-client and imapd"
 -	cd $PHOME/imap
 -	make clean
          echo "Cleaning Pine"
          cd $PHOME/pine
          make -f makefile.ult clean
+-        echo "Cleaning pico"
+-        cd $PHOME/pico
+-        make $makeargs -f makefile.ult clean
+         echo "Done"
+         cd $PHOME
+         ;;
