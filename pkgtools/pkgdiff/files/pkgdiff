@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@SH@
 #
-# $NetBSD: pkgdiff,v 1.12 2003/06/14 19:12:41 atatat Exp $
+# $NetBSD: pkgdiff,v 1.13 2003/07/07 12:55:17 seb Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
