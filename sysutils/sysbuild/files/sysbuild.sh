@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.2 2002/11/30 15:50:17 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.3 2002/12/01 19:39:51 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -43,6 +43,7 @@ usage() {
     echo
     echo "Flags:"
     echo "    -c conf    Base name of configuration file"
+    echo "    -f         Fast mode"
     echo "    -m         Send all output by mail instead of console"
     echo "    -s         Run 'su' to change privileges if needed"
     echo
@@ -53,6 +54,7 @@ usage() {
     echo "    clean             Clean work directories"
     echo "    clean-srcs        Fix ownerships in source directories"
     echo "    config            Create or edit a configuration file"
+    echo "    config-kernel     Create or edit a kernel configuration file"
     echo "    destroy           Remove all build stuff"
     echo "    etcupdate         Run etcupdate (interactive)"
     echo "    init              Initialize work directories"
@@ -138,8 +140,18 @@ sysbuild_build_kernels() {
     for _k in $_confs; do
         if [ ! -f "$KERNCONFDIR/$_k" ]; then
             echo "No such kernel configuration $_k"
+        elif [ "$fast" = "yes" -a -d $BUILDDIR/kernel/$_k ]; then
+            cd $BUILDDIR/kernel/$_k
+            printf "Buildling kernel $_k (fast mode):"
+            make >> $_log 2>&1
+            if [ $? -ne 0 ]; then
+                echo " failed."
+            else
+                echo " done."
+                echo "Kernel MD5: `md5 netbsd`"
+            fi
         else
-            echo -n "Configuring kernel $_k:"
+            printf "Configuring kernel $_k:"
             mkdir -p $BUILDDIR/kernel/$_k
             config -s $SRCDIR/sys -b $BUILDDIR/kernel/$_k $KERNCONFDIR/$_k >> $_log 2>&1
             if [ $? -ne 0 ]; then
@@ -148,18 +160,18 @@ sysbuild_build_kernels() {
                 echo " done."
                 cd $BUILDDIR/kernel/$_k
 
-                echo -n "Cleaning kernel $_k:"
+                printf "Cleaning kernel $_k:"
                 make cleandir >> $_log 2>&1
                 echo " done."
 
-                echo -n "Depending kernel $_k:"
+                printf "Depending kernel $_k:"
                 make depend >> $_log 2>&1
                 if [ $? -ne 0 ]; then
                     echo " failed."
                 else
                     echo " done."
 
-                    echo -n "Buildling kernel $_k:"
+                    printf "Buildling kernel $_k:"
                     make >> $_log 2>&1
                     if [ $? -ne 0 ]; then
                         echo " failed."
@@ -216,10 +228,14 @@ sysbuild_build_release() {
     else
         echo "Logging to $_log (will NOT be removed later)"
     fi
-    echo -n "Building full release:"
+    printf "Building full release:"
     mkdir -p $RELEASEDIR
     cd $SRCDIR
-    BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U >> $_log 2>&1
+    if [ "$fast" = "yes" ]; then
+        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U -u >> $_log 2>&1
+    else
+        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U >> $_log 2>&1
+    fi
     if [ $? -ne 0 ]; then
         echo " failed."
     else
@@ -245,15 +261,19 @@ sysbuild_build_sets() {
     else
         echo "Logging to $_log (will NOT be removed later)"
     fi
-    echo -n "Building system:"
+    printf "Building system:"
     cd $SRCDIR
-    BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U >> $_log 2>&1
+    if [ "$fast" = "yes" ]; then
+        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U >> $_log 2>&1
+    else
+        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U -u >> $_log 2>&1
+    fi
     if [ $? -ne 0 ]; then
         echo " failed."
     else
         echo " done."
 
-        echo -n "Making sets:"
+        printf "Making sets:"
         mkdir -p $RELEASEDIR/binary/sets
         cd $SRCDIR/distrib/sets
         make sets TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
@@ -276,7 +296,7 @@ sysbuild_install_sets() {
     check_init
 
     for _s in $SETS; do
-        echo -n "Installing $_s:"
+        printf "Installing $_s:"
         if [ ! -f $RELEASEDIR/binary/sets/$_s ]; then
             echo " not built yet"
         else
@@ -300,15 +320,15 @@ sysbuild_clean() {
     check_noroot
     check_init
 
-    echo -n "Cleaning $BUILDDIR/obj contents:"
+    printf "Cleaning $BUILDDIR/obj contents:"
     rm -rf $BUILDDIR/obj/*
     echo " done."
 
-    echo -n "Cleaning $BUILDDIR/root contents:"
+    printf "Cleaning $BUILDDIR/root contents:"
     rm -rf $BUILDDIR/root/*
     echo " done."
 
-    echo -n "Cleaning $BUILDDIR/tools contents:"
+    printf "Cleaning $BUILDDIR/tools contents:"
     rm -rf $BUILDDIR/tools/*
     echo " done."
 }
@@ -316,7 +336,7 @@ sysbuild_clean() {
 sysbuild_destroy() {
     check_root
 
-    echo -n "Destroying $BUILDDIR:"
+    printf "Destroying $BUILDDIR:"
     rm -rf $BUILDDIR
     echo " done."
 }
@@ -328,11 +348,11 @@ sysbuild_etcupdate() {
     if [ ! -f $RELEASEDIR/binary/sets/etc.tgz ]; then
         err "etc.tgz is not yet built."
     fi
-    echo -n "Backing up /etc to /etc.old:"
+    printf "Backing up /etc to /etc.old:"
     rm -rf /etc.old
     cp -rf /etc /etc.old > /dev/null 2>&1
     echo " done."
-    echo -n "Unpacking etc.tgz:"
+    printf "Unpacking etc.tgz:"
     cd $tmp && tar xzpf $RELEASEDIR/binary/sets/etc.tgz > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         echo " failed."
@@ -350,12 +370,16 @@ sysbuild_etcupdate() {
 sysbuild_init() {
     check_root
 
-    echo -n "Initializing $HOMEDIR:"
+    printf "Initializing $HOMEDIR:"
     mkdir -p $HOMEDIR
     chown $USER:$OBJGROUP $HOMEDIR
+    if [ ! -f $HOMEDIR/.profile ]; then
+        cp @EGDIR@/profile $HOMEDIR/.profile
+        cp @EGDIR@/profile $HOMEDIR/.shrc
+    fi
     echo " done."
 
-    echo -n "Initializing $BUILDDIR:"
+    printf "Initializing $BUILDDIR:"
     # Make main directory
     mkdir -p $BUILDDIR
     chown $USER:$OBJGROUP $BUILDDIR
@@ -389,8 +413,32 @@ sysbuild_config() {
     _conffile="@SYSBUILD_HOMEDIR@/$_conf.conf"
 
     if [ ! -f "$_conffile" ]; then
-        echo -n "Copying template to $_conffile:"
+        printf "Copying template to $_conffile:"
         cp @EGDIR@/default.conf $_conffile
+        chmod 644 $_conffile
+        echo " done."
+    fi
+
+    if [ -z "$EDITOR" ]; then
+        vi $_conffile
+    else
+        $EDITOR $_conffile
+    fi
+}
+
+sysbuild_config_kernel() {
+    check_root
+
+    _conf="$1"
+    if [ -z "$_conf" ]; then
+        err "kernel name must be specified"
+    fi
+    _conffile="@SYSBUILD_HOMEDIR@/$_conf"
+
+    if [ ! -f "$_conffile" ]; then
+        printf "Copying template to $_conffile:"
+        _generic="$SRCDIR/sys/arch/`uname -p`/conf/GENERIC"
+        cp "$_generic" $_conffile
         chmod 644 $_conffile
         echo " done."
     fi
@@ -415,7 +463,7 @@ sysbuild_clean_srcs() {
     fi
 
     for _d in $_dirs; do
-        echo -n "Fixing ownerships and permissions of $_d:"
+        printf "Fixing ownerships and permissions of $_d:"
         chown -R $CVSDIRS_OWNER:$CVSDIRS_GROUP $_d
         if [ -n "$CVSDIRS_PERMS" ]; then
             chmod -R $CVSDIRS_PERMS $_d
@@ -444,7 +492,7 @@ sysbuild_update_srcs() {
 # --------------------------------------------------------------------
 
 # Parse options
-args=`getopt c:ms $*`
+args=`getopt c:fms $*`
 if [ $? != 0 ]; then
     usage
     exit 1
@@ -452,11 +500,15 @@ fi
 set -- $args
 maillog="no"
 autosu="no"
+fast="no"
 while [ $# -gt 0 ]; do
     case "$1" in
         -c)
             conffile="@SYSBUILD_HOMEDIR@/$2.conf"
             shift
+            ;;
+        -f)
+            fast="yes"
             ;;
         -m)
             maillog="yes"
@@ -526,6 +578,9 @@ case $target in
         ;;
     config)
         sysbuild_config $*
+        ;;
+    config-kernel)
+        sysbuild_config_kernel $*
         ;;
     destroy)
         sysbuild_destroy

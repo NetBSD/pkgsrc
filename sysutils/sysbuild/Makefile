@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/11/30 15:50:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/01 19:39:50 jmmv Exp $
 #
 
-DISTNAME=	sysbuild-1.1
+DISTNAME=	sysbuild-1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -55,6 +55,8 @@ do-build:
 	        ${WRKSRC}/default.conf
 	@${ECHO} "Generating sample crontab..."
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/crontab > ${WRKSRC}/crontab
+	@${ECHO} "Generating sample profile..."
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/profile > ${WRKSRC}/profile
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sysbuild
@@ -62,6 +64,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/sysbuild.8 ${PREFIX}/man/man8/sysbuild.8
 	${INSTALL_DATA} ${WRKSRC}/default.conf ${EGDIR}/default.conf
 	${INSTALL_DATA} ${WRKSRC}/crontab ${EGDIR}/crontab
+	${INSTALL_DATA} ${WRKSRC}/profile ${EGDIR}/profile
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
