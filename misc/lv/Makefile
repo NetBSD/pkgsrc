@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/05/10 04:06:50 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/28 19:40:04 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.3 1999/01/08 03:32:06 itojun Exp $
 
-DISTNAME=	lv441
-PKGNAME=	lv-4.41
+DISTNAME=	lv4493
+PKGNAME=	lv-4.49.3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.ff.iij4u.or.jp/~nrt/freeware/
 
