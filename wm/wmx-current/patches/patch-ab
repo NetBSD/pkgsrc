@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/18 20:17:11 jlam Exp $
+
+--- Makefile.in.orig	Tue Aug 31 19:53:08 1999
++++ Makefile.in
+@@ -15,7 +15,7 @@
+ # as a -I option here (excluding the X11 bit).  If you're using I18N
+ # and Xlocale, please add -DX_LOCALE.
+ #CFLAGS = -g -O2 -I/usr/include -I/usr/openwin/include
+-CXXFLAGS=@CXXFLAGS@
++CXXFLAGS=@CXXFLAGS@ -DPREFIX=\"${PREFIX}\"
+ 
+ OBJECTS	= Border.o Buttons.o Channel.o Client.o Config.o Events.o Main.o Manager.o Menu.o Rotated.o Session.o
+ 
