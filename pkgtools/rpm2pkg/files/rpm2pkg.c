@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.4 2004/02/18 21:29:37 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.5 2004/05/27 10:28:00 tron Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -128,12 +128,18 @@ typedef struct FileHandleStruct {
 } FileHandle;
 
 static int
-InitBuffer(void **Buffer,int *BufferSize)
+InitBuffer(void **Buffer, int *BufferSizePtr)
 {
 	if (*Buffer == NULL) {
-		*BufferSize = sysconf(_SC_PAGESIZE) * 256;
-		if ((*Buffer = malloc(*BufferSize)) == NULL)
-			return FALSE;
+		int	BufferSize;
+
+		BufferSize = sysconf(_SC_PAGESIZE) * 256;
+		while ((*Buffer = malloc(BufferSize)) == NULL) {
+			BufferSize >>= 1;
+			if (BufferSize == 0)
+				return FALSE;
+		}
+		*BufferSizePtr = BufferSize;
 	}
 	return TRUE;
 }
@@ -290,10 +296,51 @@ PListEntryFile(PListEntry *Node, FILE *Out)
 	(void)fputc('\n', Out);
 }
 
+static char *
+StrCat(char *Prefix, char *Suffix)
+{
+	int	Length;
+	char	*Str;
+
+	Length = strlen(Prefix);
+	if ((Str = malloc(Length + strlen(Suffix) + 1)) == NULL) {
+	     perror("malloc");
+	     exit(EXIT_FAILURE);
+	}
+
+	(void)memcpy(Str, Prefix, Length);
+	(void)strcpy(&Str[Length], Suffix);
+
+	return Str;
+}
+
 static void
 PListEntryLink(PListEntry *Node, FILE *Out)
 
 {
+	char		*Ptr;
+	struct stat	Stat;
+	int		Result;
+
+	if ((Ptr = strrchr(Node->pe_Name, '/')) != NULL) {
+		char	Old, *Targetname;
+
+		Old = Ptr[1];
+		Ptr[1] = '\0';
+		Targetname = StrCat(Node->pe_Name, Node->pe_Link);
+		Ptr[1] = Old;
+
+		Result = stat(Targetname, &Stat);
+		free(Targetname);
+	} else {
+		Result = stat(Node->pe_Link, &Stat);
+	}
+
+	if ((Result == 0) && ((Stat.st_mode & S_IFMT) == S_IFREG)) {
+		PListEntryFile(Node, Out);
+		return;
+	}
+
 	(void)fprintf(Out, "@exec ln -fs %s %%D/%s\n@unexec rm -f %%D/%s\n",
 	    Node->pe_Link, Node->pe_Name, Node->pe_Name);
 }
@@ -470,24 +517,6 @@ MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 
 	*Basename = '/';
 	return Result;
-}
-
-static char
-*StrCat(char *Prefix, char *Suffix)
-{
-	int	Length;
-	char	*Str;
-
-	Length = strlen(Prefix);
-	if ((Str = malloc(Length + strlen(Suffix) + 1)) == NULL) {
-	     perror("malloc");
-	     exit(EXIT_FAILURE);
-	}
-
-	(void)memcpy(Str, Prefix, Length);
-	(void)strcpy(&Str[Length], Suffix);
-
-	return Str;
 }
 
 static int
