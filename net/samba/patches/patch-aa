@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.29 2005/01/09 06:33:28 christos Exp $
+
+--- nsswitch/pam_winbind.c.orig	2004-10-25 17:04:57.000000000 -0400
++++ nsswitch/pam_winbind.c	2005-01-09 01:17:21.000000000 -0500
+@@ -338,10 +338,10 @@
+ 			item = NULL;
+ 			return PAM_SUCCESS;
+ 		} else if (on(WINBIND_USE_FIRST_PASS_ARG, ctrl)) {
+-			return PAM_AUTHTOK_RECOVER_ERR;		/* didn't work */
++			return PAM_AUTHTOK_RECOVERY_ERR;		/* didn't work */
+ 		} else if (on(WINBIND_USE_AUTHTOK_ARG, ctrl)
+ 			   && off(WINBIND__OLD_PASSWORD, ctrl)) {
+-			return PAM_AUTHTOK_RECOVER_ERR;
++			return PAM_AUTHTOK_RECOVERY_ERR;
+ 		}
+ 	}
+ 	/*
+@@ -394,7 +394,7 @@
+ 						if (!resp[i - 1].resp
+ 						    || strcmp(token, resp[i - 1].resp)) {
+ 							_pam_delete(token);	/* mistyped */
+-							retval = PAM_AUTHTOK_RECOVER_ERR;
++							retval = PAM_AUTHTOK_RECOVERY_ERR;
+ 							_make_remark(pamh								    ,PAM_ERROR_MSG, MISTYPED_PASS);
+ 						}
+ 					}
+@@ -413,7 +413,7 @@
+ 
+ 		} else {
+ 			retval = (retval == PAM_SUCCESS)
+-			    ? PAM_AUTHTOK_RECOVER_ERR : retval;
++			    ? PAM_AUTHTOK_RECOVERY_ERR : retval;
+ 		}
+ 	}
+ 
