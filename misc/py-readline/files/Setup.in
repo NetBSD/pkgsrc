@@ -1,2 +1,4 @@
+# $NetBSD: Setup.in,v 1.2 1998/08/07 14:58:44 agc Exp $
+#
 *shared*
 readline readline.c -L@LOCALBASE@/lib -I@LOCALBASE@/include -lreadline -ltermcap
