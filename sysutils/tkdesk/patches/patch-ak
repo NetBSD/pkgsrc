@@ -1,0 +1,44 @@
+$NetBSD: patch-ak,v 1.1.1.1 2002/07/03 09:27:01 dmcmahill Exp $
+
+--- tcldesk/util.tcl.orig	Fri Jun 28 15:05:45 2002
++++ tcldesk/util.tcl
+@@ -112,8 +112,8 @@
+     #}
+     if {$windows != ""} {
+ 	foreach win $windows {
+-	    #puts "blt_busy(1) hold $win"
+-	    catch {blt_busy hold $win \
++	    #puts "busy(1) hold $win"
++	    catch {busy hold $win \
+ 		    -cursor "@$cb_tools(path)/bitmaps/timer1.xbm \
+ 		    $cb_tools(path)/bitmaps/timer.mask.xbm black white"}
+ 	    if {[lsearch $dsk_busy(windows) $win] < 0} {
+@@ -141,8 +141,8 @@
+ 
+     set cb_balloonHelp(bltbusy) 1
+     foreach win $dsk_busy(busy) {
+-	#puts "blt_busy(2) hold $win"
+-	catch {blt_busy hold $win \
++	#puts "busy(2) hold $win"
++	catch {busy hold $win \
+ 		-cursor "@$cb_tools(path)/bitmaps/timer1.xbm \
+ 		$cb_tools(path)/bitmaps/timer.mask.xbm black white"}
+     }
+@@ -177,7 +177,7 @@
+     #}
+     if {$windows != ""} {
+     	 foreach win $windows {
+-    	     catch {blt_busy release $win}
++    	     catch {busy release $win}
+ 	     set l [lsearch $dsk_busy(windows) $win]
+ 	     if {$l >= 0} {
+ 		 set dsk_busy(windows) [lreplace $dsk_busy(windows) $l $l]
+@@ -202,7 +202,7 @@
+     
+     foreach win $dsk_busy(busy) {
+ 	if {([lsearch $dsk_busy(windows) $win] < 0) || ($force != "")} {
+-	    catch {blt_busy release $win}
++	    catch {busy release $win}
+ 	}
+     }
+     

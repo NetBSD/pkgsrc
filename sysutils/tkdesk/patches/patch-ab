@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
+
+--- Makefile.in.orig	Mon Nov 15 06:07:45 1999
++++ Makefile.in
+@@ -28,7 +28,7 @@
+ INSTALL_ROOT =
+ 
+ # Directory from which TkDesk will reference its library of Tcl scripts:
+-TKDESK_LIBRARY =	@libdir@/TkDesk
++TKDESK_LIBRARY =	@libdir@/tkdesk
+ 
+ # Path name to use when installing library scripts:
+ SCRIPT_INSTALL_DIR =	$(INSTALL_ROOT)$(TKDESK_LIBRARY)
+@@ -187,26 +187,28 @@
+ rm_tkdesk_script:
+ 	@rm -f tkdesk
+ 
+-install: tkdesksh client rm_tkdesk_script tkdesk_script dirs
+-	@chmod +x install-sh
++install: tkdesksh client rm_tkdesk_script tkdesk_script
+ 	@echo "=== Installing the executables..."
+-	@for f in tkdesksh tkdesk tkdeskclient/tkdeskclient tools/pauseme tools/ed-tkdesk tools/cd-tkdesk tools/od-tkdesk tools/op-tkdesk tools/pop-tkdesk; do \
++	@for f in tkdesksh tkdeskclient/tkdeskclient; do \
+ 	    echo "installing $$f" ;\
+-	    rm -f $(BIN_INSTALL_DIR)/`basename $$f` ;\
+-	    $(INSTALL_PROGRAM) $$f $(BIN_INSTALL_DIR) ;\
++	    $(BSD_INSTALL_PROGRAM) $$f $(BIN_INSTALL_DIR) ;\
++	done
++	@for f in tkdesk tools/pauseme tools/ed-tkdesk tools/cd-tkdesk tools/od-tkdesk tools/op-tkdesk tools/pop-tkdesk; do \
++	    echo "installing $$f" ;\
++	    $(BSD_INSTALL_SCRIPT) $$f $(BIN_INSTALL_DIR) ;\
+ 	done
+ 	@echo "=== Installing TkDesk's library..."
++	$(BSD_INSTALL_DATA_DIR) $(SCRIPT_INSTALL_DIR)
+ 	@cd ./tcldesk; tar cf - * | (cd $(SCRIPT_INSTALL_DIR); tar xvf -)
+ 	@echo "=== Setting permissions..."
+ 	find $(SCRIPT_INSTALL_DIR) -type f -exec chmod a+r {} \;
+ 	find $(SCRIPT_INSTALL_DIR) -type d -exec chmod a+rx {} \;
+ 	@echo "=== Creating index..."
+-	cd $(SCRIPT_INSTALL_DIR); $(BIN_INSTALL_DIR)/tkdesksh mkindex
++	cd $(SCRIPT_INSTALL_DIR); tclsh mkindex
+ 	@echo "=== Installing the manual pages..."
+ 	@for f in tkdesk.1 cd-tkdesk.1 ed-tkdesk.1 od-tkdesk.1; do \
+ 	    echo "installing $$f" ;\
+-	    rm -f $(MAN1_INSTALL_DIR)/$$f ;\
+-	    $(INSTALL_DATA) doc/$$f $(MAN1_INSTALL_DIR) ;\
++	    $(BSD_INSTALL_MAN) doc/$$f $(MAN1_INSTALL_DIR) ;\
+ 	done
+ 	@echo "=== Installation complete."
+ 
