@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/04/25 04:06:14 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/08 14:32:34 wiz Exp $
 
-DISTNAME=		doc++-3.4.9
+DISTNAME=		doc++-3.4.10
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docpp/}
 
@@ -13,8 +13,12 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+#post-extract:
+#	${RM} ${WRKSRC}/src/getopt.h
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/doc++
 	${INSTALL_DATA} ${WRKSRC}/doc/manual/html/* ${PREFIX}/share/doc/doc++
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
