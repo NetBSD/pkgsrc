@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.31 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/22 17:34:48 recht Exp $
 
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
 CATEGORIES=	editors
-MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
-		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
-		ftp://ftp.nl.nedit.org/pub/mirror/NEdit/v${VERS:S/./_/g}/
-EXTRACT_SUFX=	.tar.bz2
+#MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
+#		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
+#		ftp://ftp.nl.nedit.org/pub/mirror/NEdit/v${VERS:S/./_/g}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nedit/}
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.nedit.org/
+#XXX nedit.org's ISP currently has problems
+#HOMEPAGE=	http://www.nedit.org/
+HOMEPAGE=	http://nedit.sourceforge.net/
 COMMENT=	Motif based standard GUI style text editor
 
-VERS=		5.3
+VERS=		5.4
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		YES
