@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 00:16:52 reed Exp $
+sbin/pppd
+man/man8/pppd.8
+man/cat8/pppd.0
+lkm/lzs.o
+@dirrm lkm
