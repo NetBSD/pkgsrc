@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.20 2001/11/21 14:10:07 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.21 2001/12/19 10:29:11 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -18,6 +18,7 @@ EGREP?=		/bin/egrep
 FALSE?=		/bin/false
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
+GMAKE?=		/usr/bin/make
 GREP?=		/bin/grep
 GTAR?=		/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
@@ -71,6 +72,7 @@ ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
 _DO_LIBINTL_CHECKS=	no	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
+_OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _PATCH_BACKUP_ARG= 	-z	# switch to patch(1) for backup file
