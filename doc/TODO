@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2123 2004/09/15 15:43:49 jlam Exp $
+$NetBSD: TODO,v 1.2124 2004/09/16 12:49:05 cjep Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,7 @@ Suggested package updates
 	o multitail-3.2.2
 	o mummer-3.15
 	o mysql-4.0.21
-	o nail-11.6 [cjep - after freeze]
+	o nail-11.7 [cjep - after freeze]
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
