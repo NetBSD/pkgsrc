@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/26 14:28:09 abs Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/30 10:02:57 abs Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://jabber.terrapin.com/JCR/ http://www.jabberstudio.org/projects/mu-conference/releases/download.php?file=
 DISTFILES=		${DISTNAME}.tar.gz jcr-0.1.2.tar.gz
@@ -24,7 +25,11 @@ USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=      jabberd
 RCD_SCRIPTS=            muc
 
+BUILD_DEFS+=		JABBERD_USER JABBERD_LOGDIR JABBERD_PIDDIR
+JABBERD_USER?=		jabberd
+
 FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR}
+FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR}/muc-jcr.xml
