@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.2 2004/03/28 22:06:15 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.3 2004/04/27 21:49:57 reed Exp $ */
 
 #define ProjectRoot @PREFIX@
 
@@ -33,6 +33,8 @@
 
 #undef  SharedLibXinerama
 #define SharedLibXinerama      YES
+
+#define NormalLibPSRes	YES
 
 #define LibInstallBuild  YES
 
