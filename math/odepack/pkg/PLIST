@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 00:51:16 jtb Exp $
+lib/libodepack.a
+lib/libodepack.la
+lib/libodepack.so.0.0
+share/doc/odepack/doc
+share/doc/odepack/readme
+share/examples/odepack/demo.f
+@dirrm share/examples/odepack
+@dirrm share/doc/odepack
