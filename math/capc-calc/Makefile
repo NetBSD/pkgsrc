@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/10 00:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/11 02:05:12 jlam Exp $
 #
 
 DISTNAME=	calc-2.11.4t2
@@ -14,7 +14,5 @@ COMMENT=	C arbitrary precision calculator
 .include "../../devel/readline/buildlink.mk"
 
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=	-I${BUILDLINK_INCDIR}
-LDFLAGS+=	-L${BUILDLINK_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"

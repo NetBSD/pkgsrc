@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/10 00:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/11 02:05:10 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -35,7 +35,7 @@ ALL_TARGET=	compile canonical
 .include "../../graphics/png/buildlink.mk"
 
 OS_CFLAGS=	${CFLAGS}
-OS_CFLAGS+=	-I${BUILDLINK_INCDIR}
+OS_CFLAGS+=	${BUILDLINK_CPPFLAGS}
 
 .if exists(/usr/include/inttypes.h)
 OS_CFLAGS+=	-DHAVE_INTTYPE_H=1
@@ -44,8 +44,7 @@ OS_CFLAGS+=	-DHAVE_INTTYPE_H=1
 # AbiWord expects the iconv functions to be in the system libraries, so
 # unconditionally link against the pkgsrc libiconv.so.
 #
-XLDFLAGS=	-L${BUILDLINK_LIBDIR}
-XLDFLAGS+=	${LDFLAGS} -liconv
+XLDFLAGS=	${LDFLAGS} -liconv
 
 MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
 MAKE_ENV+=	XLDFLAGS="${XLDFLAGS}"
