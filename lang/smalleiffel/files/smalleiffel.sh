@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: smalleiffel.sh,v 1.5 2000/09/06 14:31:38 jlam Exp $
+# $NetBSD: smalleiffel.sh,v 1.6 2003/10/12 11:55:47 jmmv Exp $
 #
 # This script is invoked as:
 #
@@ -29,7 +29,7 @@ where <cmd> can be:
 
 For more documentation on these commands, point a Web browser at:
 
-	@SE_DOC@/index.html
+	@@SE_DOC@@/index.html
 
 EOF
 exit 0
