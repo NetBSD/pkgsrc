@@ -1,20 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.33 2005/01/06 23:44:35 jlam Exp $
-
-if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
-     -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
-     "${_PKG_CONFIG}" = "NO" ]; then
-	:
-else
-	MAKE_DIRS="${MAKE_DIRS} \"${PKG_SYSCONFDIR}\""
-fi
-
-if [ -z "${RCD_SCRIPTS}" -o "${_PKG_RCD_SCRIPTS}" = "NO" ]; then
-	:
-else
-	MAKE_DIRS="${MAKE_DIRS} \"${RCD_SCRIPTS_DIR}\""
-fi
+# $NetBSD: install,v 1.34 2005/01/28 06:30:59 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -131,97 +117,18 @@ PRE-INSTALL)
 			${LN} -sf $sysconfdir ${PKG_SYSCONFDIR}
 		fi
 	fi
-	if [ -n "${MAKE_DIRS}" -o -n "${OWN_DIRS}" -o			\
-	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
-		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
-		for dir; do
-			if [ -d "${dir}" ]; then
-				continue
-			fi
-			if [ "${_PKG_CONFIG}" = "YES" ]; then
-				${MKDIR} "${dir}"
-				if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then
-					case "${dir}" in
-					${PKG_PREFIX}|${PKG_PREFIX}/*)	;;
-					*)	${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc" ;;
-					esac
-				else
-					${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
-				fi
-			fi
-		done
-		eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
-		while [ $# -gt 0 ]; do
-			dir="$1"; owner="$2"; group="$3"; mode="$4"
-			shift; shift; shift; shift
-			if [ "${_PKG_CONFIG}" = "YES" ]; then
-				if [ ! -d "${dir}" ]; then
-					${MKDIR} "${dir}"
-					if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then
-						case "${dir}" in
-						${PKG_PREFIX}|${PKG_PREFIX}/*)	;;
-						*)	${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc" ;;
-						esac
-					else
-						${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
-					fi
-					${CHOWN} -R "${owner}" "${dir}"
-					${CHGRP} -R "${group}" "${dir}"
-					${CHMOD} -R "${mode}" "${dir}"
-				fi
-			fi
-		done
-	fi
-	if ! msgempty; then
-		${ECHO} "==========================================================================="
-		msgprint
-		${ECHO} ""
-		${ECHO} "==========================================================================="
-	fi
-	if [ ${_pkg_exit} -gt 0 ]; then
-		exit ${_pkg_exit}
-	fi
+	case ${_PKG_CONFIG} in
+        YES)	${TEST} -x ./+DIRS && ./+DIRS ADD ${PKG_METADATA_DIR} ;;
+        esac
         ;;
 
 POST-INSTALL)
 	#
 	# Note any missing package directories.
 	#
-	msginit
-	if [ -n "${MAKE_DIRS}" -o -n "${OWN_DIRS}" -o			\
-	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
-		_print_dir_header=1
-		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
-		for dir; do
-			if [ -d "${dir}" ]; then
-				continue
-			fi
-			if [ "${_PKG_CONFIG}" = "NO" ]; then
-				if [ ${_print_dir_header} -gt 0 ]; then
-					_print_dir_header=0
-					msgadd ""
-					msgadd "The following directories should be created for ${PKGNAME}:"
-					msgadd ""
-				fi
-				msgadd "#${dir}"
-			fi
-		done
-		eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
-		while [ $# -gt 0 ]; do
-			dir="$1"; owner="$2"; group="$3"; mode="$4"
-			shift; shift; shift; shift
-			if [ "${_PKG_CONFIG}" = "NO" ]; then
-				if [ ${_print_dir_header} -gt 0 ]; then
-					_print_dir_header=0
-					msgadd ""
-					msgadd "The following directories should be created for ${PKGNAME}:"
-					msgadd ""
-				fi
-				msgadd "#${dir} (o=${owner}, g=${group}, m=${mode})"
-			fi
-		done
-	fi
+	${TEST} -x ./+DIRS && ./+DIRS CHECK-ADD
 
+	msginit
 	if [ "${_PKG_CONFIG}" = "YES" ]; then
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
