@@ -1,6 +1,6 @@
---- configure.orig	Mon Oct 28 08:26:46 1996
-+++ configure	Sun Feb 22 21:23:03 1998
-@@ -1075,7 +1075,7 @@
+--- configure.orig	Fri Jul 31 22:54:32 1998
++++ configure	Fri Jul 31 22:52:16 1998
+@@ -1072,7 +1072,7 @@
  echo "checking for extra include and lib directories..." 1>&6
  b1=`cd .. ; pwd`
  b2=`cd ../.. ; pwd`
@@ -9,3 +9,12 @@
  
  subexdirs="-"
  if test "$subexdirs" = "" ; then
+@@ -1766,7 +1766,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-      if test "$ac_cv_lib_socks5" = yes ; then
++      if test "$ac_cv_lib_socks5_SOCKSinit" = yes ; then
+               nc_cv_socks=no
+       else
+               LIBS="$savelibs"
