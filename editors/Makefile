@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/10/23 20:24:03 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/10/29 19:52:51 explorer Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -10,7 +10,7 @@
     SUBDIR += emacs
 #    SUBDIR += gvim
 #    SUBDIR += jed
-#    SUBDIR += joe
+    SUBDIR += joe
 #    SUBDIR += jove
 #    SUBDIR += mule
 #    SUBDIR += mule-common
