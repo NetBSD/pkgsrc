@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5615 2004/04/16 19:35:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5616 2004/04/16 21:29:16 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2030,3 +2030,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-wm-themes to 4.0.5
 	Added urban-1.5.2 [xtraeme 2004-04-16]
 	Added powermanga-0.78 [xtraeme 2004-04-16]
+	Updated xmame to 0.81.1 [kristerw 2004-04-16]
+	Updated xmess to 0.81.1 [kristerw 2004-04-16]
