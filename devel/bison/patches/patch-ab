@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 1998/09/14 15:14:52 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/08/24 12:51:25 agc Exp $
 
 Use mkstemp(3) to make temporary files.
 
---- files.c.orig	Sun Oct 15 21:01:30 1995
-+++ files.c	Mon Sep 14 15:58:01 1998
+--- src/files.c.orig	Sun Oct 15 21:01:30 1995
++++ src/files.c	Mon Sep 14 15:58:01 1998
 @@ -235,12 +235,64 @@
    tmpattrsfile = mktemp(stringappend(tmp_base, tmp_len, "atXXXXXX"));
    tmptabfile = mktemp(stringappend(tmp_base, tmp_len, "taXXXXXX"));
