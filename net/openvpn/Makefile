@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/11 07:23:57 snj Exp $
 
 DISTNAME=	openvpn-1.5.0
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://openvpn.sourceforge.net/
 COMMENT=	Easy-to-use, robust, and highly configurable VPN over UDP
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 #USE_PKGINSTALL=		YES
 
 GNU_CONFIGURE=		YES
@@ -28,6 +28,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}/sample-scripts
 	${INSTALL_DATA}	${WRKSRC}/sample-scripts/* ${EGDIR}/sample-scripts
 
-.include "../../archivers/liblzo/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
