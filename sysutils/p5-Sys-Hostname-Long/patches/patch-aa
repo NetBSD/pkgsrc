@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/07 01:23:28 heinz Exp $
+
+--- lib/Sys/Hostname/Long.pm.orig	Sat Sep 22 08:23:46 2001
++++ lib/Sys/Hostname/Long.pm
+@@ -35,8 +35,9 @@ sub hostname_long {
+ 		#		. Linux
+ 		#		. FreeBSD
+ 		#	- MacOS X (Rhapsody/Darwin)
+-		$hostlong = `hostname --fqdn`;
+-		$hostlong =~ tr/\0\r\n//d;
++		# Emulate `hostname --fqdn` with Perl; more portable
++		$hostlong = Sys::Hostname::hostname();
++		($hostlong) = gethostbyname($hostlong);
+ 	}
+ 
+ 	return $hostlong;
