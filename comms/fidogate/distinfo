@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/12/08 14:55:56 tv Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 16:05:29 agc Exp $
 
 SHA1 (fidogate-4.4.9.tar.gz) = 7d23802931a67b5b3cc256f5dd85d8b2c47ab4fe
+RMD160 (fidogate-4.4.9.tar.gz) = c073aa157cc5bfe6b005076e0c94c1aa427dbf01
 Size (fidogate-4.4.9.tar.gz) = 1186562 bytes
 SHA1 (patch-aa) = a12ffe978a32b342a48927b2887b4c5340816c5c
 SHA1 (patch-ab) = 27457fff799208f3daf72eabb6a7b0b056faf945

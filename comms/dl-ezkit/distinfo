@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/08/30 15:24:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 16:05:29 agc Exp $
 
 SHA1 (dl-ezkit-0.8.1-bsd.tar.gz) = d134aef41f559e23d79eca85e15273d60135a7f0
+RMD160 (dl-ezkit-0.8.1-bsd.tar.gz) = f52b91f7a867dc8dee7f487b7f8418de9a206910
 Size (dl-ezkit-0.8.1-bsd.tar.gz) = 32166 bytes
 SHA1 (patch-aa) = 891778644b6e66d704c3efe3688c3fb7abc64e96
 SHA1 (patch-ab) = 6a8bd14cb90517ca3c859a0b89f762ed8f2e82fb

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/09/28 16:14:44 tron Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 16:05:29 agc Exp $
 
 SHA1 (gnome-pilot-0.1.71.tar.bz2) = 528b3b6d053f2433c82af241ae9bd245d9fbea17
+RMD160 (gnome-pilot-0.1.71.tar.bz2) = 4b8552e25b67588f7898148426b951c296f9e00b
 Size (gnome-pilot-0.1.71.tar.bz2) = 679057 bytes
 SHA1 (patch-aa) = de3b48de8d08dce05b43af685dd0616544d41257
 SHA1 (patch-ab) = d0c60797a18db383467090ee995dbe2bbfb110cf

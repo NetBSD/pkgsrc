@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/26 12:49:23 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 16:05:30 agc Exp $
 
 SHA1 (openobex-1.0.1.tar.gz) = aa73b3f9e345088e8f1c070e0e727f586820d20e
+RMD160 (openobex-1.0.1.tar.gz) = 70dc7d2e38b819af0c35ccb26f806b7aa7682b0e
 Size (openobex-1.0.1.tar.gz) = 211696 bytes

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2003/12/28 21:53:44 tron Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 16:05:29 agc Exp $
 
 SHA1 (estic-1.60-sources.zip) = ce66a6d52faaf6adba492bb3f74e49eab608d0c3
+RMD160 (estic-1.60-sources.zip) = be071c72ab881c815dc9a0847f2b09914bdeb2ed
 Size (estic-1.60-sources.zip) = 892311 bytes
 SHA1 (estic-1.61-patch-from-1.60.zip) = b58cf388e2eb60685402a84cc260d88dc7c1820f
+RMD160 (estic-1.61-patch-from-1.60.zip) = d450161014f353892d72b5ddb87f9d6560ee8c1d
 Size (estic-1.61-patch-from-1.60.zip) = 1017 bytes
 SHA1 (patch-aa) = d94d170ac16a95f96730d64ca77be18446515fd7
 SHA1 (patch-ab) = 1ee3659e221e07796f4581bd191145c8cc6673a1
