@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.27 2004/11/23 00:46:26 dmcmahill Exp $
+# $NetBSD: mipspro.mk,v 1.28 2004/11/23 05:32:22 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -34,10 +34,10 @@ CXX=			${PKG_CXX:T}
 CXXPATH=		${MIPSPROBASE}/bin/CC
 .endif
 
-.if exists(${MIPSPROBASE}/bin/cc)
+.if exists(${CCPATH})
 # MIPSpro Compilers: Version 7.3.1.2m
-CC_VERSION_STRING!=	${MIPSPROBASE}/bin/cc -version 2>&1 || ${TRUE}
-CC_VERSION!=		${MIPSPROBASE}/bin/cc -version 2>&1 | ${GREP} '^MIPSpro'
+CC_VERSION_STRING!=	${CCPATH} -version 2>&1 || ${TRUE}
+CC_VERSION!=		${CCPATH} -version 2>&1 | ${GREP} '^MIPSpro'
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		MIPSpro Compilers

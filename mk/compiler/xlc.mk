@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.4 2004/11/23 05:24:28 jlam Exp $
+# $NetBSD: xlc.mk,v 1.5 2004/11/23 05:32:22 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -34,8 +34,8 @@ CXX=		${PKG_CXX:T}
 CXXPATH=	${XLCBASE}/bin/xlc++
 .endif
 
-.if exists(${XLCBASE}/bin/xlc)
-CC_VERSION_STRING!=	${XLCBASE}/bin/xlc -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
+.if exists(${CCPATH})
+CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
 CC_VERSION=		${CC_VERSION_STRING}
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
