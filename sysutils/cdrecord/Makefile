@@ -3,7 +3,7 @@
 # Date created:         2 November 1997
 # Whom:                 jmz
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 23:22:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/07 02:15:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -23,7 +23,7 @@ do-build:
 	@cd ${WRKSRC}/cdrecord && ../Gmake PREFIX=${PREFIX}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/i386-netbsd-cc/cdrecord \
+	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/${MACHINE_ARCH}-netbsd-cc/cdrecord \
 	 ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/cdrecord/cdrecord.1 ${PREFIX}/man/man1
 #	@cd /dev && ln -sf /dev/rworm0.ctl sgx
