@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.5 2001/02/27 09:45:13 skrll Exp $
+$NetBSD: patch-ad,v 1.6 2001/02/27 09:49:25 skrll Exp $
 
---- configure.orig	Wed Sep  8 14:32:18 1999
-+++ configure	Mon Jan  3 17:34:05 2000
+--- configure.orig	Mon Mar 20 18:20:42 2000
++++ configure
+@@ -512,7 +512,7 @@
+     $RM dummy dummy.o
+     capture $compiler -o dummy ${C_ANSI} dummy.c && {
+ 	CC=$compiler;
+-	test -z "${CCOMPILER-}" && CCOMPILER=`findApp $compiler $PATH`
++	test -z "${CCOMPILER-}" && CCOMPILER=$compiler
+ 	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
+ 	return 0
+     }
 @@ -1661,6 +1661,7 @@
  	    -[LR]/*)	echo "$i" ;;
  	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
