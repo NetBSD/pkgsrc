@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2001/10/23 10:30:59 agc Exp $
+# $NetBSD: Makefile,v 1.115 2001/11/15 15:47:56 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -68,6 +68,7 @@ SUBDIR+=	ruby-syslog
 SUBDIR+=	safetynet
 SUBDIR+=	sarah
 SUBDIR+=	service-config
+SUBDIR+=	setquota
 SUBDIR+=	sh-utils
 SUBDIR+=	skill
 SUBDIR+=	socket
