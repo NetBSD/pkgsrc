@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/24 13:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/25 00:19:51 rh Exp $
 #
 
 DISTNAME=	skipstone-0.7.8
@@ -12,6 +12,7 @@ COMMENT=	Gtk+ web browser that embeds Mozilla's renderer
 DEPENDS+=	mozilla>=0.9.7:../../www/mozilla
 
 USE_GMAKE=	yes
+USE_X11BASE=	yes
 
 MAKE_ENV+=	X11PREFIX="${X11PREFIX}"
 
