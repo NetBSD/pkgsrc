@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5767 2004/04/29 08:04:27 adam Exp $
+$NetBSD: CHANGES,v 1.5768 2004/04/29 09:28:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2280,3 +2280,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gossip to 0.7.5 [jmmv 2004-04-29]
 	Added gpass-0.4 [jmmv 2004-04-29]
 	Updated netpbm to 10.18.12 [adam 2004-04-29]
+	Updated links to 2.1.0.15 [wiz 2004-04-29]
+	Updated links-gui to 2.1.0.15 [wiz 2004-04-29]
