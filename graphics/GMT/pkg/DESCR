@@ -7,3 +7,6 @@ perspective views in black and white, gray tone, hachure patterns, and
 24-bit color. GMT supports 25 common map projections plus linear, log,
 and power scaling, and comes with support data such as coastlines,
 rivers, and political boundaries.
+
+The package also include 39 supplemetal programs, html documentation,
+and examples.

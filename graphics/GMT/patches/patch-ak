@@ -1,0 +1,27 @@
+$NetBSD: patch-ak,v 1.1 2001/01/27 08:16:01 jtb Exp $
+
+--- src/dbase/makefile.orig	Wed Oct 18 03:01:08 2000
++++ src/dbase/makefile
+@@ -14,18 +14,18 @@
+ all:		grdraster
+ 
+ install:	all
+-		$(INSTALL) grdraster$(EXE) $(bindir)
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) grdraster$(EXE) $(bindir)
+ 
+ uninstall:
+ 		\rm -f $(bindir)/grdraster$(EXE)
+ 
+ grdraster:	grdraster.o
+-		$(CC) $(CFLAGS) $(LDFLAGS) grdraster.o -L.. -lgmt -lpsl $(CDF) $(LIBS) -o grdraster
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) grdraster.o ../libgmt.la ../libpsl.la $(CDF) $(LIBS) -o grdraster
+ 
+ spotless:	clean
+ 
+ clean:	
+-		rm -f *.o grdraster$(EXE)
++		rm -f *.o *.lo .libs grdraster$(EXE)
+ 
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<

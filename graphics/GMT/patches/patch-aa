@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2001/01/27 08:16:01 jtb Exp $
 
 --- src/Makefile.orig	Wed Oct 18 03:30:08 2000
 +++ src/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
  NETCDFINC	= $(NETCDF)/include
  CFLAGS		= -I$(NETCDFINC) $(WIN32) $(CC_OPT) -DGMT_DEFAULT_PATH=\"$(GMT_DEFAULT_PATH)\" $(TRIANGLE_D)
 -CDF		= -L$(NETCDFLIB) -lnetcdf
-+CDF		= -L$(NETCDFLIB) -Wl,-R$(NETCDFLIB) -lnetcdf
++CDF		= -Wl,-R$(NETCDFLIB) -L$(NETCDFLIB) -lnetcdf
  
  PS	= -lpsl
  GMT	= -lgmt
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
  
 -SHARED_LIB	= libpsl.a libgmt.a libpsl.$(SL) libgmt.$(SL)
 -STATIC_LIB	= libpsl.a libgmt.a
-+SHARED_LIB	= libpsl libgmt
++SHARED_LIB	= libpsl.la libgmt.la
 +STATIC_LIB	= 
  
  #-------------------------------------------------------------------------------
@@ -50,8 +50,8 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
 -				$(INSTALL) -m 444 libpsl.$(SL) $(libdir); \
 -				$(INSTALL) -m 444 libgmt.$(SL) $(libdir); \
 -			fi; \
-+			$(LIBTOOL) --mode=install $(INSTALL) libpsl.la $(libdir);\
-+			$(LIBTOOL) --mode=install $(INSTALL) libgmt.la $(libdir);\
++			$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) libpsl.la $(libdir);\
++			$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) libgmt.la $(libdir);\
 +		fi
 +		if [ ! -d $(bindir) ]; then \
 +			mkdir -p $(bindir); \
@@ -89,18 +89,18 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
  #-------------------------------------------------------------------------------
  
 -libs:		$(GMTLIB)
-+libs:		libpsl libgmt
++libs:		libpsl.la libgmt.la
  
 -libpsl.a:	pslib.o
 -		$(AR) cvur libpsl.a $?
 -		$(RANLIB) libpsl.a
-+libpsl:		pslib.o
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libpsl.la \
-+		pslib.lo -rpath $(libdir) --version-info 0:0
++libpsl.la:		pslib.o
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
++		pslib.lo -lm -rpath $(libdir) --version-info 0:0
  
  pslib.o:	pslib.c $(PS_H)
 -		$(CC) $(CFLAGS) -c pslib.c
-+		@$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c pslib.c
++		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c pslib.c
  
 -libgmt.a:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(AR) cvur $@ $?
@@ -111,10 +111,10 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
 -
 -libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(LD) $(LD_OPT) $(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O) -o $@
-+libgmt:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libgmt.la \
++libgmt.la:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
 +		$(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O.o=.lo) \
-+		-rpath $(libdir) --version-info 0:0
++		$(LDFLAGS) $(CDF) $(LIB) -rpath $(libdir) --version-info 0:0
  
  #-------------------------------------------------------------------------------
  #	program dependencies
@@ -122,9 +122,9 @@ $NetBSD: patch-aa,v 1.3 2000/12/14 00:44:08 jtb Exp $
  
  $(PROGS):	$(GMTLIB) $(PROGS_O)
 -		$(CC) $(CFLAGS) $@.o -L. -lgmt -lpsl $(CDF) $(LIBS) $(LDFLAGS) -o $@
-+		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $@.o libgmt.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $@.o libgmt.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
  		$(COMPRESS) $@$(EXE)
 +
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		@$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<

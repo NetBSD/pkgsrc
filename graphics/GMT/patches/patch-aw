@@ -1,0 +1,11 @@
+$NetBSD: patch-aw,v 1.1 2001/01/27 08:16:02 jtb Exp $
+
+--- src/meca/meca.h.orig	Sun Dec 10 14:43:19 2000
++++ src/meca/meca.h
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <math.h>
++#include <sys/types.h>
+ 
+ #define EPSIL 0.0001
+ 

@@ -1,0 +1,35 @@
+$NetBSD: patch-ao,v 1.1 2001/01/27 08:16:01 jtb Exp $
+
+--- src/imgsrc/makefile.orig	Sat Jan 27 03:13:35 2001
++++ src/imgsrc/makefile
+@@ -7,24 +7,24 @@
+ include ../makegmt.macros
+ 
+ CDF		= -L$(NETCDF)/lib -lnetcdf
+-GMT		= -L.. -lgmt -lpsl
++GMT		= ../libgmt.la ../libpsl.la
+ CFLAGS		= $(CC_OPT) $(WIN32) -I.. -I$(NETCDF)/include
+ 
+ all:		img2mercgrd
+ 
+ install:	all
+-		$(INSTALL) img2mercgrd$(EXE) $(bindir)
+-		$(INSTALL) img2grd $(bindir)
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) img2mercgrd$(EXE) $(bindir)
++		$(INSTALL_SCRIPT) img2grd $(bindir)
+ 
+ uninstall:
+ 		\rm -f $(bindir)/img2mercgrd$(EXE) $(bindir)/img2grd
+ 
+ img2mercgrd:	img2mercgrd.o gmt_imgsubs.o
+-		$(CC) $(CFLAGS) $(LDFLAGS) img2mercgrd.o gmt_imgsubs.o $(GMT) $(CDF) $(LIBS) -o img2mercgrd
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) img2mercgrd.lo gmt_imgsubs.lo $(GMT) $(CDF) $(LIBS) -o img2mercgrd
+ 
+ spotless:	clean
+ 
+ clean:	
+-		rm -f *.o img2mercgrd$(EXE)
++		rm -fr *.o *.lo .libs img2mercgrd$(EXE)
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<

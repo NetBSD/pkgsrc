@@ -1,0 +1,34 @@
+$NetBSD: patch-ay,v 1.1 2001/01/27 08:16:03 jtb Exp $
+
+--- src/xgrid/makefile.in.orig	Sat Jan 27 04:55:11 2001
++++ src/xgrid/makefile.in
+@@ -19,7 +19,7 @@
+ #	Location of GMT and CDF header files
+ 
+ CFLAGS=	$(CC_OPT) $(WIN32) -I.. -I$(NETCDF)/include @X_CFLAGS@ @CFLAGS@
+-XLIBS=@X_PRE_LIBS@ @X_LIBS@ -lXt -lXaw -lXmu -lXext -lX11 @X_EXTRA_LIBS@ -L.. -lgmt -lpsl -lnetcdf
++XLIBS=@X_PRE_LIBS@ @X_LIBS@ -lXt -lXaw -lXmu -lXext -lX11 @X_EXTRA_LIBS@ ../libgmt.la ../libpsl.la -lnetcdf
+ 
+ all:		@buildtarget@
+ 
+@@ -35,15 +35,16 @@
+ 		\rm -f makefile config.cache config.log config.status
+ 
+ clean:
+-		rm -f *.o xgridedit$(EXE)
++		rm -f *.o *.lo .libs xgridedit$(EXE)
+ 
+ xgridedit:	$(OBJS) $(EDITOBJS) xgridedit.o
+-		$(CC) $(CFLAGS) xgridedit.o -o xgridedit $(OBJS) \
+-			$(EDITOBJS) $(CDF) $(XLIBS) $(LIBS) $(LDFLAGS)
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) xgridedit.lo -o	    \
++		xgridedit $(OBJS:.o=.lo) $(EDITOBJS:.o=.lo) $(CDF) $(XLIBS) \
++		$(LIBS) $(LDFLAGS)
+ 
+ xgridedit.o:	xGridEdit.c xgrid_utility.h xgrid_controls.h \
+ 			xgrid_messages.h xgrid_view.h xgrid_textInput.h
+-		$(CC) $(CFLAGS) -c xGridEdit.c -o xgridedit.o
++		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c xGridEdit.c -o xgridedit.lo
+ 
+ xgrid_utility.o:	xgrid_utility.h
+ 
