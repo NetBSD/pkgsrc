@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/10/08 20:36:33 is Exp $
+# $NetBSD: Makefile,v 1.13 2000/10/21 22:19:21 wiz Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -10,8 +10,9 @@ MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
 
-CONFLICTS=	hylafax-*
 DEPENDS=	netpbm-[0-9]*:../../graphics/netpbm
+
+CONFLICTS=	hylafax-*
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 INFO_FILES=	mgetty.info
