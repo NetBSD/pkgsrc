@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/11 16:02:30 proff Exp $
+share/mbrola/voices/us1/us1
+share/mbrola/voices/us1/us1mrpa
+share/mbrola/voices/us1/us1.txt
+share/mbrola/voices/us1/license.txt
+share/mbrola/voices/us1/TEST
+share/mbrola/voices/us1/TEST/alice.pho
+share/mbrola/voices/us1/TEST/xmas.pho
+share/mbrola/voices/us1/TEST/mbrola.pho
+share/mbrola/voices/us1/TEST/push.pho
+share/mbrola/voices/us1/TEST/mbroli.ini
+@dirrm share/mbrola/voices/us1/TEST
+@dirrm share/mbrola/voices/us1
+@dirrm share/mbrola/voices
+@dirrm share/mbrola
