@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/07/14 02:13:25 rh Exp $
+# $NetBSD: Makefile,v 1.53 2002/07/15 14:47:13 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.0.7
@@ -33,10 +33,8 @@ USE_GMAKE=		YES
 USE_PERL5=		YES
 USE_BUILDLINK_ONLY=	YES
 
-LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
-CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
@@ -50,9 +48,7 @@ pre-configure:
 		${MV} $$i.fixed $$i ;					\
 	done
 
-.include "../../print/gnome-print/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"
@@ -60,6 +56,9 @@ pre-configure:
 .include "../../devel/libole2/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"
+.include "../../print/gnome-print/buildlink.mk"
+.include "../../textproc/libunicode/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
