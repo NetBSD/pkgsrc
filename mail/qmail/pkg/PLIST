@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/13 09:10:10 zuntum Exp $
+@unexec cd ${QMAILDIR} && rm -rf bin boot doc man
