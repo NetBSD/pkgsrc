@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 18:40:48 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/02/17 15:28:04 dillo Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -18,6 +18,7 @@ MAKE_ENV+=		TOUCH="${TOUCH}"
 USE_X11=		yes
 USE_LIBTOOL=		yes
 USE_BUILDLINK2=		yes
+TEST_TARGET=		test
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
@@ -82,9 +83,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixDefault.h ${PREFIX}/include/tk/unix
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixInt.h ${PREFIX}/include/tk/unix
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixPort.h ${PREFIX}/include/tk/unix
-
-test:
-	cd ${WRKSRC}; ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
 
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/08 11:34:39 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/17 15:28:03 dillo Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -38,6 +38,7 @@ USE_PERL5=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
+TEST_TARGET=		check
 
 CONFLICTS+=	namazu-[0-9]*
 
@@ -55,9 +56,6 @@ post-build:
 post-install:
 	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
 	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
-
-test:
-	@cd ${WRKSRC}; make check
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/09/29 07:34:30 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2003/02/17 15:27:59 dillo Exp $
 #
 
 DISTNAME=	ddd-3.3
@@ -14,6 +14,7 @@ USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
+TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-ncurses=no
 
@@ -44,9 +45,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.dddinit ${PREFIX}/share/doc/ddd
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
-
-test:
-	(cd ${WRKSRC} ; ${MAKE_PROGRAM} check)
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/25 18:39:28 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/02/17 15:28:01 dillo Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -18,6 +18,7 @@ CONFLICTS+=		tclman80-[0-9]*
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
+TEST_TARGET=		test
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
@@ -82,8 +83,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclPlatDecls.h ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclPort.h ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclRegexp.h ${PREFIX}/include/tcl/generic
-
-test:
-	cd ${WRKSRC} && ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
 
 .include "../../mk/bsd.pkg.mk"
