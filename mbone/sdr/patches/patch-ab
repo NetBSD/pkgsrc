@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.5 1998/11/05 05:32:19 mycroft Exp $
-
---- src/sip_common.c.orig	Thu Oct  1 18:53:01 1998
-+++ src/sip_common.c	Wed Nov  4 23:44:12 1998
-@@ -256,7 +256,7 @@
+$NetBSD: patch-ab,v 1.6 1999/01/01 07:58:29 garbled Exp $
+--- src/sip_common.c.orig	Thu Oct  1 15:53:01 1998
++++ src/sip_common.c	Thu Dec 31 23:04:38 1998
+@@ -41,6 +41,9 @@
+ #include <arpa/nameser.h>
+ #include <resolv.h>
+ #endif
++#ifdef HAVE_SYS_INTTYPES_H
++#include <inttypes.h>
++#endif
+ #include "dns.h"
+ #include "prototypes.h"
+ #include <sys/uio.h>
+@@ -256,7 +259,7 @@
  	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, 
  			  NULL, buf, 200);
  	  if (len==-1) perror("res_mkquery");
@@ -11,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 1998/11/05 05:32:19 mycroft Exp $
  	  if (len==-1) perror("res_send");
  	  ans[0]=htonl(ans[0]);
  	  ans[1]=htonl(ans[1]);
-@@ -328,7 +328,8 @@
+@@ -328,7 +331,8 @@
  		    } else {
  		      /*it's compressed*/
  		        if(*tstr==0) tstr+=2;
@@ -21,3 +30,15 @@ $NetBSD: patch-ab,v 1.5 1998/11/05 05:32:19 mycroft Exp $
  			tstr+=1;
  			ctr=0;
  		    }
+@@ -1238,7 +1242,11 @@
+   }
+   printf("clen=%d\n", clen);
+   ptr=find_end_of_header(data, len);
++#ifdef HAVE_SYS_INTTYPES_H
++  printf("eoh at %x, start at %x, len: %d\n", (intptr_t)ptr, (intptr_t)data, len);
++#else
+   printf("eoh at %x, start at %x, len: %d\n", (unsigned int)ptr, (unsigned int)data, len);
++#endif
+   if (ptr==NULL) return 0;
+   if (clen==0) return 1;
+   if ((ptr-data)+clen<=len) return 1;

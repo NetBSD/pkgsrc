@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.4 1999/01/01 07:58:29 garbled Exp $
+--- src/crypt.c.orig	Thu Dec 31 23:07:10 1998
++++ src/crypt.c	Thu Dec 31 23:07:36 1998
+@@ -2,6 +2,7 @@
+   the padding bit is 0x80 in byte 0, rather than 0x20 in RTP.*/
+ 
+ #include <sys/types.h>
++#include <string.h>
+ #include "crypt.h"
+ #include "qfDES.h"
+ #include "md5.h"
