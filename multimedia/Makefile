@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/28 14:32:44 recht Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/28 15:01:24 recht Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -19,6 +19,7 @@ SUBDIR+=	gxine
 SUBDIR+=	kdemultimedia2
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	kmplayer
+SUBDIR+=	libdvbpsi
 SUBDIR+=	libdvdcss
 SUBDIR+=	libdvdplay
 SUBDIR+=	libdvdread
