@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/02 08:37:23 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/24 21:44:31 tsarna Exp $
 #
 
 DISTNAME=		doscmd-19960502-2
@@ -6,7 +6,7 @@ PKGNAME=		doscmd-19960502.2
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/arch/i386/doscmd/
 
-MAINTAINER=		tsarna@netbsd.org
+MAINTAINER=		packages@netbsd.org
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
