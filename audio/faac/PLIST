@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/16 01:51:21 xtraeme Exp $
+bin/faac
+include/faac.h
+include/faaccfg.h
+lib/libfaac.a
+lib/libfaac.la
+lib/libfaac.so
+lib/libfaac.so.0
+lib/libfaac.so.0.0
