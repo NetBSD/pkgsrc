@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
+$NetBSD: patch-ab,v 1.6 2000/07/08 12:47:04 tron Exp $
 
---- /dev/null	Wed May 24 10:07:55 2000
-+++ Makefile	Wed May 24 10:11:02 2000
+--- Makefile.orig	Sat Jul  8 14:25:27 2000
++++ Makefile	Sat Jul  8 14:28:16 2000
 @@ -0,0 +1,475 @@
 +#
 +#  Makefile for faces, an icon face server, plus associated software.
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
 +#
 +#========================================================================
 +# Installation prefix.
-+PREFIX           ?=/usr/local
++#PREFIX           ?=/usr/local
 +#------------------------------------------------------------------------
 +#  If you want audio support, then the following line should be uncommented.
 +#
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
 +#  play audio files. Alternatively you can specify your own custom
 +#  command here. Uncomment the following line and set appropriately.
 +#
-+AUDIO_CMD         = -DAUDIO_CMD=\"/usr/local/bin/rplay\"
++AUDIO_CMD         = -DAUDIO_CMD=\"$(PREFIX)/bin/rplay\"
 +#========================================================================
 +#  Faces displays a background pattern in its' window. When the window
 +#  is not completely full, this gives the appearance of trying to blend
@@ -46,7 +46,7 @@ $NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
 +#  can specify the name of a file containing an alternate pattern to use.
 +#  Uncomment the next two lines and set appropriately.
 +#
-+#BACKNAME          = /usr/local/sample-background
++#BACKNAME          = $(PREFIX)/sample-background
 +#BACKGROUND        = -DBACKGROUND=\"$(BACKNAME)\"
 +#------------------------------------------------------------------------
 +#  Uncomment the following two lines to use the Domain Name Service to 
@@ -80,12 +80,12 @@ $NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
 +#
 +#DONTSHOWUSER     = -DDONTSHOWUSER
 +#------------------------------------------------------------------------
-+#  By default, faces looks for the face images in /usr/local/faces. If
++#  By default, faces looks for the face images in $(PREFIX)/faces. If
 +#  you wish to specify an alternate location, then these two lines should
 +#  be uncommented and set appropriately. Note that the value must be
 +#  a single directory name, not a colon separated list of paths.
 +#               
-+FACEDIR           = /usr/local/share/faces
++FACEDIR           = $(PREFIX)/share/faces
 +CFACEDIR	= -DFACEDIR=\"$(FACEDIR)\"
 +#------------------------------------------------------------------------
 +#  It is possible to determine what type of monitoring faces does at

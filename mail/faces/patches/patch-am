@@ -1,8 +1,7 @@
-$NetBSD: patch-am,v 1.2 1999/10/01 07:49:21 simonb Exp $
+$NetBSD: patch-am,v 1.3 2000/07/08 12:47:07 tron Exp $
 
-diff -ur ../faces-DIST/filters/rs2icon.c ./filters/rs2icon.c
---- ../faces-DIST/filters/rs2icon.c	Mon Apr 15 13:40:03 1991
-+++ ./filters/rs2icon.c	Fri Oct  1 14:32:15 1999
+--- filters/rs2icon.c.orig	Mon Apr 15 05:40:03 1991
++++ filters/rs2icon.c	Sat Jul  8 14:25:27 2000
 @@ -21,7 +21,7 @@
   */
  

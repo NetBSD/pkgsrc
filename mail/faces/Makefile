@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/05/24 09:15:57 agc Exp $
+# $NetBSD: Makefile,v 1.15 2000/07/08 12:47:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/ \
 		ftp://odie.physik2.uni-rostock.de/pub/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	Lars.Koeller@Uni-Bielefeld.DE
+MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/faces
 
@@ -17,7 +17,9 @@ USE_X11=	yes
 MAKE_ENV+=	MKLINT=no
 
 post-configure:
-	@for f in ${WRKSRC}/Makefile ${WRKSRC}/faces.h ${WRKSRC}/x11.c; do \
+	@cd ${WRKSRC}; \
+	for f in Makefile faces.h x11.c scripts/addxface scripts/facesall \
+	          scripts/mkfacesindex; do \
 		${MV} $$f $$f.in;					\
 		${SED} -e 's|@localbase@|'${LOCALBASE}'|g' 		\
 			-e 's|@x11base@|'${X11BASE}'|g' < $$f.in > $$f;	\

@@ -1,8 +1,7 @@
-$NetBSD: patch-ae,v 1.4 1999/10/01 07:49:20 simonb Exp $
+$NetBSD: patch-ae,v 1.5 2000/07/08 12:47:05 tron Exp $
 
-diff -ur ../faces-DIST/compface/file.c ./compface/file.c
---- ../faces-DIST/compface/file.c	Wed Jun 19 16:29:13 1991
-+++ ./compface/file.c	Fri Oct  1 14:32:06 1999
+--- compface/file.c.orig	Wed Jun 19 08:29:13 1991
++++ compface/file.c	Sat Jul  8 14:25:27 2000
 @@ -15,6 +15,8 @@
  
  #include "compface.h"

@@ -1,14 +1,13 @@
-$NetBSD: patch-ar,v 1.2 1999/10/01 07:49:21 simonb Exp $
+$NetBSD: patch-ar,v 1.3 2000/07/08 12:47:09 tron Exp $
 
-diff -ur ../faces-DIST/scripts/facesall ./scripts/facesall
---- ../faces-DIST/scripts/facesall	Mon Nov 25 11:30:24 1991
-+++ ./scripts/facesall	Fri Oct  1 14:32:12 1999
+--- scripts/facesall.orig	Mon Nov 25 01:30:24 1991
++++ scripts/facesall	Sat Jul  8 14:36:06 2000
 @@ -20,7 +20,7 @@
  #$olddb = 1;
  
  $cols = 15; $rows = 13;
 -$FACEDIR = '/usr/local/faces';
-+$FACEDIR = '/usr/local/share/faces';
++$FACEDIR = '@localbase@/share/faces';
  
  # facesall - show all available faces in the given faces bitmap directory
  # usage: facesall [ -a ] [ bitmap_directory ]

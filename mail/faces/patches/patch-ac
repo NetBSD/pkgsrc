@@ -1,8 +1,7 @@
-$NetBSD: patch-ac,v 1.6 1999/12/05 22:06:22 bouyer Exp $
+$NetBSD: patch-ac,v 1.7 2000/07/08 12:47:05 tron Exp $
 
-diff -ur ../faces-DIST/compface/Makefile ./compface/Makefile
---- ../faces-DIST/compface/Makefile	Thu Oct 24 12:28:06 1991
-+++ ./compface/Makefile	Fri Oct  1 14:32:06 1999
+--- compface/Makefile.orig	Thu Oct 24 03:28:06 1991
++++ compface/Makefile	Sat Jul  8 14:28:58 2000
 @@ -19,62 +19,64 @@
  #
  #SYSV           = -DSYSV32
@@ -11,11 +10,13 @@ diff -ur ../faces-DIST/compface/Makefile ./compface/Makefile
 +# BINDIR, LIBDIR, INCDIR and MANDIR are expected to be overridden by the
  # calling Makefile
  
- BINDIR		= /usr/local/bin
- LIBDIR		= /usr/local/lib
+-BINDIR		= /usr/local/bin
+-LIBDIR		= /usr/local/lib
 -MANDIR		= /usr/manl
-+INCDIR		= /usr/local/include
-+MANDIR		= /usr/local/man
++BINDIR		= $(PREFIX)/bin
++LIBDIR		= $(PREFIX)/lib
++INCDIR		= $(PREFIX)/include
++MANDIR		= $(PREFIX)/man
  
  NAME		= compface
  UNNAME		= uncompface
