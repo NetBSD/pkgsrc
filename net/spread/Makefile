@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 21:24:09 recht Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/30 11:54:12 recht Exp $
 #
 
-DISTNAME=	spread-src-3.17.1
+DISTNAME=	spread-src-3.17.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 
@@ -17,9 +16,7 @@ USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/spread
-MAKE_FLAGS=	LD="${CC}"
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
+MAKE_FLAGS=	LD=${CC:Q}
 
 SPREAD_USER=	spread
 SPREAD_GROUP=	spread
@@ -33,7 +30,7 @@ BUILD_DEFS+=	SPREAD_USER SPREAD_GROUP
 INCLUDEDIR=	${PREFIX}/include/spread
 DOCSDIR=	${PREFIX}/share/doc/spread
 EXAMPLEDIR=	${PREFIX}/share/examples/spread
-RUNTIME_DIR=	/var/run/spread
+RUNTIME_DIR=	${VARBASE}/run/spread
 
 RCD_SCRIPTS=	spread
 PKG_GROUPS=	${SPREAD_USER}
