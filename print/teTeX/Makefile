@@ -3,17 +3,21 @@
 # Date created:		5 December 1996
 # Whom:			Bernd Rosauer <br@schiele-ct.de>
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/23 16:20:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/23 16:28:14 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
 DISTNAME=	teTeX-src-0.4
-PKGNAME=	teTeX-0.4
+PKGNAME=	teTeX-0.4pl8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN}
 MASTER_SITE_SUBDIR=	systems/unix/teTeX/distrib/sources
 DISTFILES=	${TETEX_SRC} ${TETEX_LIB}
 
 MAINTAINER=	br@schiele-ct.de
+
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 DIST_SUBDIR=	teTeX
 PATCH_DIST_STRIP=	-p1
@@ -34,7 +38,7 @@ MAN1=		afm2tfm.1 allcm.1 alldc.1 allneeded.1 amslatex.1 \
 TETEX_SRC=	teTeX-src-0.4pl7.tar.gz
 TETEX_LIB=	teTeX-lib-0.4pl8.tar.gz
 WRKLIB=		${WRKDIR}/teTeX
-INSTALL_INFO=	/usr/bin/install-info
+INSTALL_INFO=	${PREFIX}/bin/install-info
 
 pre-install:
 	@${RM} -f ${PREFIX}/share/texmf/ls-R
@@ -51,6 +55,8 @@ post-install:
 	${INSTALL_INFO} ${PREFIX}/info/kpathsea.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/dvips.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/fontname.info ${PREFIX}/info/dir
-	@${SETENV} PREFIX=${PREFIX} ${SH} files/install-note
+	@find ${PREFIX}/share/texmf/fonts/{pk,tfm} -type d -print | \
+		xargs chmod 1777
+	@${SETENV} PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL
 
 .include <bsd.port.mk>
