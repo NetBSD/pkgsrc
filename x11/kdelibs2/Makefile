@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/12/07 07:22:47 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/12/07 10:59:31 skrll Exp $
 
 DISTNAME=	kdelibs-2.2.2
 CATEGORIES=	x11
@@ -6,7 +6,6 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
 
-#DEPENDS+=	jade>=1.2.1:../../textproc/jade
 BUILDLINK_DEPENDS.audiofile=  libaudiofile>=0.1.9
 
 USE_BUILDLINK_ONLY=	YES
