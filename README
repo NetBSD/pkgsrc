@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.9 2000/01/14 10:32:35 abs Exp $
+$NetBSD: README,v 1.10 2000/07/23 17:59:17 fredb Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -78,8 +78,8 @@ architecture.
 One limitation of using binary packages provided from ftp.netbsd.org
 is that all mk.conf options were set to the defaults at compile time.
 
-LOCALBASE, in particular, is the default /usr/pkg, so non-X binaries
-will be installed in /usr/pkg/bin. Man pages will be installed in
+LOCALBASE, in particular, defaults to /usr/pkg, so non-X binaries
+will be installed in /usr/pkg/bin, man pages will be installed in
 /usr/pkg/man...
 
 When a packaged tool has major compile time choices, such as support
