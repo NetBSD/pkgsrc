@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1 2003/02/27 04:08:25 jschauma Exp $
+$NetBSD: patch-be,v 1.2 2004/12/26 21:34:47 wiz Exp $
 
---- src/doc/Makefile.in.orig	Mon Feb 10 02:47:37 2003
-+++ src/doc/Makefile.in	Wed Feb 26 15:34:46 2003
-@@ -258,7 +258,7 @@
+--- src/doc/Makefile.in.orig	2004-12-13 01:40:58.000000000 +0100
++++ src/doc/Makefile.in
+@@ -262,7 +262,7 @@ EXTRA_DIST = \
    user-prefs-howto.txt
  
  
@@ -11,16 +11,16 @@ $NetBSD: patch-be,v 1.1 2003/02/27 04:08:25 jschauma Exp $
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../../config.h
  CONFIG_CLEAN_FILES = 
-@@ -489,10 +489,10 @@
+@@ -493,10 +493,10 @@ maintainer-clean-local:
  	rm -f refman.pdf
  
  install-data-hook:
 -	$(mkinstalldirs) $(DESTDIR)$(docdir)/html
-+	$(mkinstalldirs) $(DESTDIR)$(docdir)/html/gnucash
++	$(mkinstalldirs) $(DESTDIR)$(docdir)/gnucash
  	mkdir -p html #Workaround to allow libofx-cvs user to install without doc.
  #	cp -rp $(srcdir)/html ${docdir}
 -	cp -rp html $(DESTDIR)$(docdir)/html
-+	cp -p html/* $(DESTDIR)$(docdir)/html/gnucash
++	cp -p html/* $(DESTDIR)$(docdir)/gnucash
  
  uninstall-hook:
  	rm -rf ${docdir}/html
