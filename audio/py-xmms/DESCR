@@ -1,0 +1,3 @@
+PyXMMS is a Python interface to XMMS, a multimedia player written for
+the X Window System.  PyXMMS can be used to control XMMS or manage its
+main configuration file from a program written in Python.
