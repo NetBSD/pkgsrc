@@ -1,0 +1,17 @@
+Eggdrop is an IRC bot, written in C.  If you don't know what IRC is, this
+is probably not whatever you're looking for!  Eggdrop, being a bot, sits
+on a channel and takes protective measures: to keep the channel from being
+taken over (in the few ways that anything CAN), to recognize banished
+users or sites and reject them, to recognize priveledged users and let
+them gain ops, etc.
+
+One of the more unique features of eggdrop is its "party line", accessable
+via DCC chat, which allows you to talk to other people lag-free.  
+Consider it a multi-way DCC chat, or a miniature IRC (complete with
+channels).  You can link up with other bots and expand the party line
+until it actually becomes something very much like IRC, in fact.
+
+The preliminary documentation is in "eggdrop.doc" and is intended to be
+read after you have eggdrop compiled and set up.  It's changing all the
+time and getting new sections added.  If you'd like to write a section,
+then please do!

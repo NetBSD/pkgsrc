@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 1998/11/24 04:12:09 tv Exp $
+
+--- configure.orig	Sat Oct 17 07:17:39 1998
++++ configure	Mon Nov 23 19:19:22 1998
+@@ -1101,7 +1101,13 @@
+   *BSD)
+     echo "$ac_t""FreeBSD/NetBSD - choose your poison" 1>&6
+     SHLIB_CC="$CC -fpic"
++if [ `echo __ELF__ | $CC -E - | grep -v '#'` = 1 ]; then
++    SHLIB_LD="ld -shared -x"
++    BEL_MOD_LD="$CC -Wl,-E $LDFLAGS"
++else
+     SHLIB_LD="ld -Bshareable -x"
++    BEL_MOD_LD="$CC $LDFLAGS"
++fi
+     cat >> confdefs.h <<\EOF
+ #define MODULES_OK 1
+ EOF
