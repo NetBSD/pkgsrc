@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/05 08:24:12 garbled Exp $
+--- include/Compat.hh.orig	Tue Jul  7 14:02:01 1998
++++ include/Compat.hh	Wed Nov  4 23:57:19 1998
+@@ -22,7 +22,9 @@
+ 	memset(data, 0, size);
+ }
+ 
++#ifndef __NetBSD__
+ const double PI=3.1415926535797;
++#endif
+ 
+ inline int byteswap(int old)
+ {
+@@ -34,12 +36,15 @@
+ 
+ inline int byteswapshort(unsigned short old)
+ {
+-  return ((old & 0xff) << 8)
+-       + ((old & 0xff00) >> 8);
++/*  return ((old & 0xff) << 8)
++       + ((old & 0xff00) >> 8);*/
++	return(old);
+ }
++#ifndef __NetBSD__
+ extern "C" {
+ int usleep(unsigned int);
+ }
++#endif
+ 
+ #endif
+ #ifdef Linux

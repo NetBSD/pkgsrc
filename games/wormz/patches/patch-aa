@@ -1,0 +1,91 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/05 08:24:12 garbled Exp $
+--- Makefile.orig	Tue Jul 14 06:41:40 1998
++++ Makefile	Wed Nov  4 21:36:13 1998
+@@ -3,8 +3,8 @@
+ 
+ #BinInstallPath=$(ARCH)/
+ #LibInstallPath=images/
+-BinInstallPath=/usr/X11R6/bin/
+-LibInstallPath=/usr/lib/Wormz/
++BinInstallPath=$(PREFIX)/bin/
++LibInstallPath=$(PREFIX)/share/Wormz/
+ 
+ #AllDepths=16
+ AllDepths=8 16 24
+@@ -29,13 +29,18 @@
+ ifeq ($(TYPEOS),Linux)
+ ARCH=Linux
+ EXTRALIBS=-lm
++else
++ifeq ($(TYPEOS),NetBSD)
++ARCH=NetBSD
++EXTRALIBS=-lm
++else
+ #!!!
+ #EXTRALIBS=-lefence
+-else
+ 
+ endif
+ endif
+ endif
++endif
+ 
+ ifdef USE_GGI
+ EXTRAGGILIBS=-lggi -lt1
+@@ -43,8 +48,8 @@
+ 
+ ifdef ARCH
+ 
+-INSTALL=install
+-INSTALLBIN=install -s
++INSTALL=install -c
++INSTALLBIN=install -c -s
+ INSTALLDIR=install -d
+ 
+ CC=gcc
+@@ -60,8 +65,8 @@
+ #-lefence
+ CFLAGS=-pipe $(INCLUDE) $(OPTFLAGS) $(DEBUGFLAGS) $(WARNFLAGS) $(CDEFS)
+ #-Wshadow
+-X11INCLUDE=-I/usr/openwin/share/include/
+-STDINCLUDE=-I/usr/local/lib/g++-include/ -I/usr/include/g++/
++X11INCLUDE=-I${PREFIX}/include
++STDINCLUDE=-I${LOCALBASE}/include
+ INCLUDE=-I./include -I. $(X11INCLUDE) $(STDINCLUDE)
+ 
+ 
+@@ -108,7 +113,7 @@
+ 
+ SrcsClient=$(SrcsClientND) $(SrcsClientDD)
+ ObjsClient=$(ObjsClientND) $(ObjsClientDD)
+-LibsClient=-L/usr/X11R6/lib/ -L/usr/local/lib/ -lX11 -lXext $(EXTRALIBS) $(EXTRAGGILIBS)
++LibsClient=${LDFLAGS} -L${LOCALBASE}/lib -L${PREFIX}/lib -lX11 -lXext $(EXTRALIBS) $(EXTRAGGILIBS)
+ 
+ SrcsServer=$(foreach dir,$(DirsServer),$(wildcard $(dir)/*.cc))
+ SrcsServerNotDir=$(notdir $(SrcsServer))
+@@ -120,7 +125,7 @@
+ SrcsRunnerNotDir=$(notdir $(SrcsRunner))
+ ObjsRunnerNotDir=$(SrcsRunnerNotDir:.cc=.o)
+ ObjsRunner=$(addprefix $(OBJDIR),$(ObjsRunnerNotDir))
+-LibsRunner=-L/usr/X11R6/lib/ -L/usr/local/lib/ -lX11
++LibsRunner=${LDFLAGS} -L${LOCALBASE}/lib -L${PREFIX}/lib/ -lX11
+ 
+ AllDSrcs=$(foreach dir,$(DepthDepenceDirs),$(wildcard $(dir)/*.cc))
+ AllNSrcs=$(foreach dir,$(NotDepthDepenceDirs),$(wildcard $(dir)/*.cc))
+@@ -178,14 +183,14 @@
+ Create-PathConfig:
+ 	echo '#ifndef _PathConfig_hh_' > $(PathConfig)
+ 	echo '#define _PathConfig_hh_' >> $(PathConfig)
+-	echo '#define ClientBinInstallPath "$(LibInstallPath)$(TargetNameClient)"' >> $(PathConfig)
++	echo '#define ClientBinInstallPath "$(BinInstallPath)$(TargetNameClient)"' >> $(PathConfig)
+ 	echo '#define ServerBinInstallPath "$(BinInstallPath)$(TargetNameServer)"' >> $(PathConfig)
+ 	echo '#define LibInstallPath "$(LibInstallPath)"' >> $(PathConfig)
+ 	echo '#define '$(DEF_USE_GGI) >> $(PathConfig)
+ 	echo '#endif' >> $(PathConfig)
+ 
+ install-client2:
+-	$(INSTALLBIN) $(TargetClient) $(LibInstallPath)$(TargetNameClient)
++	$(INSTALLBIN) $(TargetClient) $(BinInstallPath)$(TargetNameClient)
+ 	
+ install: all
+ 	$(INSTALLDIR) $(BinInstallPath)

@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/05 08:24:12 garbled Exp $
+share/Wormz/ArrowL.tga
+share/Wormz/ArrowR.tga
+share/Wormz/CPUChip.tga
+share/Wormz/Human.tga
+share/Wormz/Network.tga
+share/Wormz/None.tga
+share/Wormz/README.fonts
+share/Wormz/Title.tga
+share/Wormz/bchr.afm
+share/Wormz/bchr.pfb
+share/Wormz/bchri.afm
+share/Wormz/bchri.pfb
+share/Wormz/blue-wood.tga
+share/Wormz/checkbox-c.tga
+share/Wormz/checkbox-u.tga
+share/Wormz/checker.tga
+share/Wormz/darkwood.tga
+share/Wormz/grass.tga
+share/Wormz/linux.tga
+share/Wormz/parquet.tga
+share/Wormz/plasma.tga
+share/Wormz/plasma2-cubism.tga
+share/Wormz/plasma2.tga
+share/Wormz/plasma2-mosaic.tga
+share/Wormz/plasma3-mosaic.tga
+bin/Wormz
+bin/Wormz-server
+bin/Wormz-client8
+bin/Wormz-client16
+bin/Wormz-client24
+@dirrm share/Wormz
