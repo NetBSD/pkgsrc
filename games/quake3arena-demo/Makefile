@@ -1,21 +1,29 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:39:18 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/16 14:21:00 xtraeme Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGNAME=	quake3arena-demo-1.11.6
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
-MASTER_SITES=	http://download1.activision.com/activision/quake3/demo/ \
-		http://download2.activision.com/activision/quake3/demo/
+MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \
+		ftp://mirrors.xmission.com/idsoftware/quake3/linux/
 EXTRACT_SUFX=	.sh
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
+CONFLICTS=	quake3arena-[0-9]*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != Linux
 DEPENDS+=	suse_linux>=6.3:../../emulators/${SUSE_DIR_PREFIX}_linux
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
-
-CONFLICTS=	quake3arena-[0-9]*
+.include "../../emulators/suse_linux/Makefile.application"
+.else
+USE_X11=	yes
+.include "../../graphics/MesaLib/buildlink2.mk"
+.endif
 
 NO_CONFIGURE=	yes
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
@@ -55,5 +63,4 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw Help ${SHAREDIR}
 	${MV} ${SHAREDIR}/Help ${SHAREDIR}/quake3arena-Help
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
