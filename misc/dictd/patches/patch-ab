@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/04 09:05:27 uebayasi Exp $
+
+--- Makefile.in.orig	Tue Aug 13 22:28:04 2002
++++ Makefile.in
+@@ -33,7 +33,7 @@
+ srcdir=		@srcdir@
+ VPATH=		@srcdir@
+ prefix=		@prefix@
+-subdirs=        @allsubdirs@ regex # doc -- use rfc2229 instead
++subdirs=        @allsubdirs@ # doc -- use rfc2229 instead
+ exec_prefix=	@exec_prefix@
+ man1_prefix=	@mandir@/man1
+ man8_prefix=	@mandir@/man8
+@@ -48,6 +48,7 @@
+ RANLIB=		@RANLIB@
+ INSTALL=	@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_SCRIPT=	$(BSD_INSTALL_SCRIPT)
+ INSTALL_DATA=	@INSTALL_DATA@
+ LEX=		@LEX@
+ LEXLIB= 	@LEXLIB@
+@@ -57,9 +58,9 @@
+ 		-DDICT_CONFIG_PATH=\"$(conf)\"
+ SCFLAGS=        @SCFLAGS@
+ LDFLAGS=        @LDFLAGS@
+-XTRACFLAGS=     @WCFLAGS@ @XTRACFLAGS@ @DEFS@ @CPPFLAGS@ -I. -Iregex
++XTRACFLAGS=     @WCFLAGS@ @XTRACFLAGS@ @DEFS@ @CPPFLAGS@ -I.
+ XTRALDFLAGS=    @WLDFLAGS@ @XTRALDFLAGS@
+-LDLIBS=		@LIBS@ -Lregex -lregex
++LDLIBS=		@LIBS@
+ 
+ EXES=	 	dict dictd dictzip dictfmt
+ 
+@@ -162,7 +163,7 @@
+ 	if test ! -d $(bindir); then $(INSTALL) -d 755 $(bindir); fi
+ 	if test ! -d $(man1_prefix); then $(INSTALL) -d 755 $(man1_prefix); fi
+ 	$(INSTALL_PROGRAM) dictfmt $(bindir)
+-	$(INSTALL_PROGRAM) dictfmt_index2suffix $(bindir)
++	$(INSTALL_SCRIPT) dictfmt_index2suffix $(bindir)
+ 	$(INSTALL_DATA) dictfmt.1 $(man1_prefix)/dictfmt.1
+ 
+ install.dictd: dictd
