@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2003/06/23 20:03:01 jtb Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/11 07:40:44 jtb Exp $
 
-DISTNAME=	vm-7.16
+DISTNAME=	vm-7.17
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://tug.org/vm/ \
