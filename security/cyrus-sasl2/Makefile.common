@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/02/12 13:34:29 jlam Exp $
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -31,7 +31,7 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-MAKE_ENV+=		SHLIBTOOL="${PKGSHLIBTOOL}"
+MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator
