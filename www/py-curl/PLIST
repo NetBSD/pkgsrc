@@ -1,2 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:22:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/20 02:53:04 shell Exp $
 ${PYSITELIB}/pycurl.so
+doc/pycurl/COPYING
+doc/pycurl/ChangeLog
+doc/pycurl/INSTALL
+doc/pycurl/README
+doc/pycurl/TODO
+doc/pycurl/examples/basicfirst.py
+doc/pycurl/examples/curl.py
+doc/pycurl/examples/gtkhtml_demo.py
+doc/pycurl/examples/retriever.py
+doc/pycurl/examples/sfquery.py
+doc/pycurl/examples/xmlrpc_curl.py
+@dirrm doc/pycurl/examples
+@dirrm doc/pycurl
