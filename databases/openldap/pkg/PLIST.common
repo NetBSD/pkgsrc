@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2000/07/17 09:19:44 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2000/08/14 16:35:32 wiz Exp $
 bin/ud
 bin/ldapsearch
 bin/ldapmodify
@@ -6,10 +6,12 @@ bin/ldapdelete
 bin/ldapmodrdn
 bin/ldappasswd
 bin/ldapadd
-lib/liblber.so.1.0
 lib/liblber.a
-lib/libldap.so.1.0
+lib/liblber.la
+lib/liblber.so.1.0
 lib/libldap.a
+lib/libldap.la
+lib/libldap.so.1.0
 man/man1/ldapadd.1
 man/man1/ldapdelete.1
 man/man1/ldapmodify.1
@@ -214,5 +216,6 @@ sbin/ldbmtest
 share/openldap/ldapfriendly
 share/openldap/go500gw.help
 share/openldap/rcpt500.help
-@unexec rmdir etc/openldap 2>/dev/null || true
+@unexec rmdir %D/etc/openldap 2>/dev/null || true
+@unexec rmdir -p %D/var/openldap-ldbm 2>/dev/null || true
 @dirrm share/openldap

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/07/17 09:19:43 veego Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/14 16:35:31 wiz Exp $
 #
 
 DISTNAME=	openldap-1.2.11
@@ -14,7 +14,9 @@ HOMEPAGE=	http://www.OpenLDAP.org/
 
 CONFLICTS+=	ldapsdk*
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +37,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 post-build:
 	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
+	${SED} "s,@PREFIX@,${PREFIX}," ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
