@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 1999/10/01 16:12:19 drochner Exp $
+# $NetBSD: Makefile,v 1.61 1999/10/09 20:07:22 jlam Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -42,6 +42,7 @@
     SUBDIR += kdegraphics
     SUBDIR += libggi
     SUBDIR += libgii
+    SUBDIR += libungif
     SUBDIR += magicpoint
     SUBDIR += mpeg-lib
     SUBDIR += mpeg2codec
