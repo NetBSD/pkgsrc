@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/01/10 07:57:23 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/05 17:42:24 taca Exp $
 
 DISTNAME=	weex-2.6.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.enjoy.ne.jp/~gm/program/weex/arc/
 
-MAINTAINER=	tech-pkg-jp@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.enjoy.ne.jp/~gm/program/weex/index.html
 COMMENT=	non-interactive ftp client
 
