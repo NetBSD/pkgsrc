@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/09/28 18:10:28 tron Exp $
+
+--- Makefile.orig	Sat Jul 20 01:35:46 1996
++++ Makefile	Tue Sep 22 22:36:04 1998
+@@ -30,23 +30,23 @@
+ # uncomment the following two lines if you want to include X11 support
+ # (mpeg2decode)
+ 
+-#USE_DISP = -DDISPLAY
+-#LIBS = -lX11
++USE_DISP = -DDISPLAY
++LIBS = -lX11
+ 
+ # uncomment the following two lines if you want to use shared memory
+ # (faster display if server and client run on the same machine)
+ # (mpeg2decode)
+ 
+-#USE_SHMEM = -DSH_MEM
+-#LIBS = -lXext -lX11
++USE_SHMEM = -DSH_MEM
++LIBS = -lXext -lX11
+ 
+ # if your X11 include files / libraries are in a non standard location:
+ # set INCLUDEDIR to -I followed by the appropriate include file path and
+ # set LIBRARYDIR to -L followed by the appropriate library path
+ # (mpeg2decode)
+ 
+-#INCLUDEDIR = -I/usr/openwin/include
+-#LIBRARYDIR = -L/usr/openwin/lib
++INCLUDEDIR = -I${PREFIX}/include
++LIBRARYDIR = -L${PREFIX}/lib
+ 
+ # select one of the following CC CFLAGS settings
+ 
