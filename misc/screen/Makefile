@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/03/15 16:16:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2003/04/09 21:04:08 grant Exp $
 
 DISTNAME=	screen-3.9.15
 CATEGORIES=	misc
@@ -23,13 +23,13 @@ CONFIGURE_ARGS+=	--enable-telnet
 
 post-patch:
 	@for file in etc/etcscreenrc doc/screen.1; do 			\
-	${MV} ${WRKSRC}/$$file ${WRKSRC}/$$file.orig;			\
-	${SED} ${FILES_SUBST_SED}					\
-		${WRKSRC}/$$file.orig > ${WRKSRC}/$$file;		\
+		${MV} ${WRKSRC}/$$file ${WRKSRC}/$$file.orig;		\
+		${SED} ${FILES_SUBST_SED}				\
+			${WRKSRC}/$$file.orig > ${WRKSRC}/$$file;	\
 	done
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
 		${PREFIX}/share/examples/screen/screenrc
 .if ${OPSYS} == "SunOS"
