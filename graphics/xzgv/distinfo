@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:31 wiz Exp $
 
-MD5 (xzgv-0.6.tar.gz) = 10e084593c2e8e4f9d92eefb35a02162
+SHA1 (xzgv-0.6.tar.gz) = e9ae26408df689d36d69fe27d67eabb241710175
+Size (xzgv-0.6.tar.gz) = 272567 bytes
 SHA1 (patch-aa) = 3f57746139c282fd8dfb6fd42182aadf0e22acfd
 SHA1 (patch-ab) = 036946f88064a94f06f07962c063a79d83d4e413

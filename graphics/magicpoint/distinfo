@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:19 wiz Exp $
 
-MD5 (magicpoint-1.07a.tar.gz) = 11a5d1a56de56ba8a334b3f14e0f6f50
+SHA1 (magicpoint-1.07a.tar.gz) = 952de711444cef2b97073c66844579bb6cd9ad95
+Size (magicpoint-1.07a.tar.gz) = 659770 bytes

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:37 wiz Exp $
 
-MD5 (skk/skk9.6.tar.gz) = 26bd151234f69caa2e1591aaf551fb1d
-MD5 (skk/SKK-JISYO.L.diff.gz) = b02ed27b6b05fe1fbc06ce108d79aa16
+SHA1 (skk/skk9.6.tar.gz) = f462b4586dff6e36bfe331a526e054c3f6c3aad9
+Size (skk/skk9.6.tar.gz) = 2407653 bytes
+SHA1 (skk/SKK-JISYO.L.diff.gz) = aecf9a7aa8607b9e9a4a3c7e74268ffb09c775ad
+Size (skk/SKK-JISYO.L.diff.gz) = 15533 bytes
 SHA1 (patch-aa) = d9ee708fe5dcf36258256bdb4ba4c8d7e16905da
 SHA1 (patch-ab) = 5103484679c5d82a8d79460cc24e8857fc89460a
 SHA1 (patch-ac) = 3a1818c3bb453b69eb23154ed0daa6909275774b
