@@ -1,26 +1,28 @@
-$NetBSD: patch-aa,v 1.4 1998/10/18 09:58:55 matthias Exp $
+$NetBSD: patch-aa,v 1.5 1999/07/18 23:34:13 tron Exp $
 
---- configure.orig	Fri Jul 24 15:13:00 1998
-+++ configure	Thu Oct  8 11:39:49 1998
-@@ -960,7 +960,7 @@
+--- configure.orig	Mon May 17 10:25:36 1999
++++ configure	Mon May 17 10:25:41 1999
+@@ -959,20 +959,9 @@
  
  
  
--
-+if false; then
- LIBTOOL='$(SHELL) ../libtool'
- UPLIBTOOL='$(SHELL) ../../libtool'
- EXTOBJ='lo'
-@@ -1057,7 +1057,11 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
--
-+else
-+UPLIBTOOL=$LIBTOOL
-+EXTLIB=la
-+EXTOBJ=lo
-+fi
+-LIBTOOL=''
+-UPLIBTOOL=''
+-EXTOBJ='o'
+-EXTLIB='a'
+-# Check whether --enable-libtool or --disable-libtool was given.
+-if test "${enable_libtool+set}" = set; then
+-  enableval="$enable_libtool"
+-  if test "$enableval" = yes; then
+-  LIBTOOL='$(SHELL) ../libtool'
+-  UPLIBTOOL='$(SHELL) ../../libtool'
+-  EXTOBJ='lo'
+-  EXTLIB='la'
+-fi
+-fi
++UPLIBTOOL="${LIBTOOL}"
++EXTOBJ='lo'
++EXTLIB='la'
  
- test "x$prefix" = xNONE && prefix=$ac_default_prefix
- test "x$exec_prefix" = xNONE && exec_prefix=$ac_default_prefix
+ 
+ 
