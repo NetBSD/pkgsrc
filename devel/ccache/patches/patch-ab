@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 2004/02/12 07:11:43 jlam Exp $
+
+--- ccache.c.orig	Sat Sep 27 21:48:17 2003
++++ ccache.c
+@@ -252,6 +252,7 @@ static void find_hash(ARGS *args)
+ 	int i;
+ 	char *path_stdout, *path_stderr;
+ 	char *hash_dir;
++	const char *hash_cc;
+ 	char *s;
+ 	struct stat st;
+ 	int status;
+@@ -314,15 +315,21 @@ static void find_hash(ARGS *args)
+ 		hash_string(args->argv[i]);
+ 	}
+ 
+-	/* the compiler driver size and date. This is a simple minded way
+-	   to try and detect compiler upgrades. It is not 100% reliable */
+-	if (stat(args->argv[0], &st) != 0) {
+-		cc_log("Couldn't stat the compiler!? (argv[0]='%s')\n", args->argv[0]);
+-		stats_update(STATS_COMPILER);
+-		failed();
++	/* If CCACHE_HASHCC is defined, then hash that string, otherwise, hash
++	   the compiler driver size and date. This is a simple minded way to
++	   try and detect compiler upgrades. It is not 100% reliable */
++	hash_cc = getenv("CCACHE_HASHCC");
++	if (hash_cc) {
++		hash_string(hash_cc);
++	} else {
++		if (stat(args->argv[0], &st) != 0) {
++			cc_log("Couldn't stat the compiler!? (argv[0]='%s')\n", args->argv[0]);
++			stats_update(STATS_COMPILER);
++			failed();
++		}
++		hash_int(st.st_size);
++		hash_int(st.st_mtime);
+ 	}
+-	hash_int(st.st_size);
+-	hash_int(st.st_mtime);
+ 
+ 	/* possibly hash the current working directory */
+ 	if (getenv("CCACHE_HASHDIR")) {
