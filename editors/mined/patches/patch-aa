@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/05 14:25:36 agc Exp $
+
+--- makefile.bsd	2003/03/03 15:02:38	1.1
++++ makefile.bsd	2003/03/03 15:04:03
+@@ -4,10 +4,10 @@
+ 
+ #############################################################################
+ # Where and how to install
+-prefix	= $(INSTALLROOT)/usr/local
++prefix	= $(PREFIX)
+ bindir	= $(prefix)/bin
+ helpdir	= $(prefix)/share/help
+-mandir	= $(prefix)/share/man
++mandir	= $(prefix)/man
+ INSTALL = install
+ #INSTALL = /bin/cp -p
+ 
+@@ -16,7 +16,7 @@
+ # compilation target options
+ 
+ # terminal handling mode 1: termio
+-#SCREEN	= -DTERMIO
++SCREEN	= -DTERMIO
+ # link termcap functions:
+ #SLIB	= -ltermcap	# usual termcap library
+ #SLIB	= -L/usr/lib/termcap -ltermcap	# if deprecated (Linux)
+@@ -24,10 +24,10 @@
+ SLIB	= -lncurses	# includes termcap library (Linux)
+ 
+ # terminal handling mode 2: sgtty (old, BSD)
+-SCREEN	= -DSGTTY
++#SCREEN	= -DSGTTY
+ #SLIB	= -ltermcap
+ # the following was reported to compile better on some BSD system:
+-SLIB	= -L/usr/local/lib -lncurses	# includes termcap library
++#SLIB	= -L/usr/local/lib -lncurses	# includes termcap library
+ 
+ # terminal handling mode 3: curses
+ # Choose curses only in case of emergency, else better leave it.
