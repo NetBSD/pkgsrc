@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.11 2000/12/18 04:21:09 wiz Exp $
+
+--- Makefile.in.orig	Sun Dec  3 07:35:39 2000
++++ Makefile.in
+@@ -109,11 +109,11 @@
+ skindir = $(prefix)/share/gqmpeg/skins
+ skin_DATA = 
+ 
+-@HAVE_GNOME_TRUE@desktopdir = $(GNOME_DATADIR)/gnome/apps/Multimedia
+-@HAVE_GNOME_TRUE@desktop_DATA = gqmpeg.desktop
++desktopdir = $(datadir)/gnome/apps/Multimedia
++desktop_DATA = gqmpeg.desktop
+ 
+-@HAVE_GNOME_TRUE@icondir = $(GNOME_DATADIR)/pixmaps
+-@HAVE_GNOME_TRUE@icon_DATA = gqmpeg.png
++icondir = $(datadir)/pixmaps
++icon_DATA = gqmpeg.png
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
