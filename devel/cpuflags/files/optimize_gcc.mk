@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.2 2003/06/06 15:26:50 abs Exp $
+# $Id: optimize_gcc.mk,v 1.3 2003/06/06 22:54:05 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -28,6 +28,7 @@ PKGBASE=${.CURDIR:C:.*/::}
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
 PKG_EXCLUDE_OMIT_FRAME_POINTER=lua4
+PKG_EXCLUDE_O3=
 .if defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=mozilla phoenix qt3-libs kdeedu3
 PKG_EXCLUDE_O3+=perl5 perl58
