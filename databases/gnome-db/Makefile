@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/20 23:57:40 salo Exp $
 #
 
 DISTNAME=		gnome-db-0.8.192
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+BROKEN=			Does not compile anymore with recent libgnomedb. Obsoleted by mergeant.
 
 .include "../../databases/libgnomedb/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
