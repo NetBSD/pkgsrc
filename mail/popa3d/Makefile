@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/25 23:55:35 zuntum Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/26 20:38:31 jlam Exp $
 #
 
 DISTNAME=	popa3d-0.4.9.4
@@ -12,10 +12,8 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
 COMMENT=	secure, reliable, performant, and small pop3 server
 
-PKG_GROUP=	popa3d
-PKG_USER=	popa3d
-PKG_USER_HOME=	/nonexistent
-PKG_USER_SHELL=	/sbin/nologin
+PKG_GROUPS=	popa3d
+PKG_USERS=	popa3d:popa3d
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL

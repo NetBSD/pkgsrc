@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/11/25 18:59:47 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/11/26 20:38:31 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -61,9 +61,8 @@ BUILD_DEFS+=		CUPS_USER CUPS_GROUP
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
 
-PKG_USER=		${CUPS_USER}
-PKG_USER_DESCR=		Common UNIX Printing System user
-PKG_GROUP=		${CUPS_GROUP}
+PKG_GROUPS=	${CUPS_GROUP}
+PKG_USERS=	${CUPS_USER}:${CUPS_GROUP}::Common\\ UNIX\\ Printing\\ System\\ user:${SH}
 
 CONF_FILES=	${EGDIR}/client.conf ${PKG_SYSCONFDIR}/cups/client.conf
 CONF_FILES+=	${EGDIR}/cupsd.conf ${PKG_SYSCONFDIR}/cups/cupsd.conf
