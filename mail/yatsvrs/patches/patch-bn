@@ -1,0 +1,15 @@
+$NetBSD: patch-bn,v 1.1 2004/12/15 13:18:02 taca Exp $
+
+--- configure.orig	2001-12-20 16:23:50.000000000 +0900
++++ configure
+@@ -3929,6 +3929,10 @@ test -n "$MAIL_COMMAND" && break
+ done
+ test -n "$MAIL_COMMAND" || MAIL_COMMAND="no"
+ 
++   case "${OPSYS}" in
++   SunOS)	MAIL_COMMAND="/usr/lib/sendmail";;
++   *)		MAIL_COMMAND="/usr/sbin/sendmail";;
++   esac
+    if test "$MAIL_COMMAND" = "no" ; then
+       { echo "configure: error: configure script cannot find sendmail. " 1>&2; exit 1; }
+    else
