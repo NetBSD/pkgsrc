@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/01/13 14:23:37 skrll Exp $
+# $NetBSD: Makefile,v 1.27 2002/01/31 19:52:02 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -63,8 +63,9 @@ CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 PLIST_SRC+=		${PKGDIR}/PLIST.plugins
 
 .if defined(USE_PAM)
-CONFIGURE_ARGS+=	--with-pam=${PREFIX}
 .include "../../security/PAM/buildlink.mk"
+BUILD_DEFS+=		USE_PAM
+CONFIGURE_ARGS+=	--with-pam=${PREFIX}
 .endif
 
 PKG_GROUPS=		${CYRUS_GROUP}
