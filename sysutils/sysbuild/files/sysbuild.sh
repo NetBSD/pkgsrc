@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.1.1.1 2002/11/28 19:57:29 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.2 2002/11/30 15:50:17 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -256,7 +256,7 @@ sysbuild_build_sets() {
         echo -n "Making sets:"
         mkdir -p $RELEASEDIR/binary/sets
         cd $SRCDIR/distrib/sets
-        make sets DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
+        make sets TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
         if [ $? -ne 0 ]; then
             echo " failed."
         else
