@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 1999/08/01 15:55:00 abs Exp $
+
+--- Makefile.in.orig	Sat Jul 31 20:37:15 1999
++++ Makefile.in	Sat Jul 31 20:39:29 1999
+@@ -324,15 +324,15 @@
+ 
+ gnome-font-install: $(gnome_font_install_OBJECTS) $(gnome_font_install_DEPENDENCIES)
+ 	@rm -f gnome-font-install
+-	$(LINK) $(gnome_font_install_LDFLAGS) $(gnome_font_install_OBJECTS) $(gnome_font_install_LDADD) $(LIBS)
++	$(LINK) $(gnome_font_install_OBJECTS) $(gnome_font_install_LDFLAGS) $(gnome_font_install_LDADD) $(LIBS)
+ 
+ testprint: $(testprint_OBJECTS) $(testprint_DEPENDENCIES)
+ 	@rm -f testprint
+-	$(LINK) $(testprint_LDFLAGS) $(testprint_OBJECTS) $(testprint_LDADD) $(LIBS)
++	$(LINK) $(testprint_OBJECTS) $(testprint_LDFLAGS) $(testprint_LDADD) $(LIBS)
+ 
+ testtext: $(testtext_OBJECTS) $(testtext_DEPENDENCIES)
+ 	@rm -f testtext
+-	$(LINK) $(testtext_LDFLAGS) $(testtext_OBJECTS) $(testtext_LDADD) $(LIBS)
++	$(LINK) $(testtext_OBJECTS) $(testtext_LDFLAGS) $(testtext_LDADD) $(LIBS)
+ 
+ install-confexecDATA: $(confexec_DATA)
+ 	@$(NORMAL_INSTALL)
