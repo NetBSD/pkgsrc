@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/07/09 05:37:44 jun Exp $
+$NetBSD: distinfo,v 1.4 2003/01/11 15:21:20 uebayasi Exp $
 
-SHA1 (semi-1.14.4.tar.gz) = b79651c80421b534c9dadae45543df46e830d083
-Size (semi-1.14.4.tar.gz) = 136013 bytes
+SHA1 (semi-1.14.5.tar.gz) = 2bc18d006f87ad2279a77d99ef50149f13076a96
+Size (semi-1.14.5.tar.gz) = 137993 bytes
 SHA1 (patch-aa) = f00701e02948a87689b2064a4016c76afa5c6da2
