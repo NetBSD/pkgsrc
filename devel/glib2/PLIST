@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/07/30 22:14:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/08/14 11:24:13 xtraeme Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -75,22 +75,22 @@ lib/libglib-2.0.a
 lib/libglib-2.0.la
 lib/libglib-2.0.so
 lib/libglib-2.0.so.400
-lib/libglib-2.0.so.400.5
+lib/libglib-2.0.so.400.6
 lib/libgmodule-2.0.a
 lib/libgmodule-2.0.la
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.400
-lib/libgmodule-2.0.so.400.5
+lib/libgmodule-2.0.so.400.6
 lib/libgobject-2.0.a
 lib/libgobject-2.0.la
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.400
-lib/libgobject-2.0.so.400.5
+lib/libgobject-2.0.so.400.6
 lib/libgthread-2.0.a
 lib/libgthread-2.0.la
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.400
-lib/libgthread-2.0.so.400.5
+lib/libgthread-2.0.so.400.6
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
@@ -246,6 +246,7 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/glib20.mo
