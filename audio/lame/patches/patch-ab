@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2000/02/15 18:12:17 garbled Exp $
+
+--- Makefile.orig	Mon Feb 14 17:18:19 2000
++++ Makefile	Mon Feb 14 17:16:38 2000
+@@ -50,6 +50,17 @@
+ #GTK = -DHAVEGTK `gtk-config --cflags`
+ #GTKLIBS = `gtk-config --libs` 
+ 
++ifeq ($(MACHINE_ARCH),alpha)
++# double is faster than float on Alpha
++CC_OPTS =       -O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
++                -mfp-regs -fschedule-insns -fschedule-insns2 \
++                -finline-functions \
++                -DFLOAT=double
++# optimized libffm (free fast math library)
++LIBS	=	-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lffm -lm
++# Compaq's fast math library
++#LIBS    =       -lcpml 
++endif
+ 
+ ##########################################################################
+ # LINUX   
