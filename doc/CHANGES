@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7034 2004/08/29 21:56:19 epg Exp $
+$NetBSD: CHANGES,v 1.7035 2004/08/29 22:46:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4103,3 +4103,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated torrentutils to 0.3.0nb2 [wiz 2004-08-29]
 	Added p5-MusicBrainz-Queries-0.07 [epg 2004-08-29]
 	Added p5-MusicBrainz-Client-0.08 [epg 2004-08-29]
+	Updated ffmpeg to 0.4.8nb2 [wiz 2004-08-29]
