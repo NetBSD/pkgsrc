@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/09/14 21:48:04 garbled Exp $
+# $NetBSD: Makefile,v 1.12 1998/09/16 21:54:26 tron Exp $
 
 DISTNAME=	vim-5.3
 CATEGORIES=	editors
@@ -14,5 +14,6 @@ HOMEPAGE=	http://www.vim.org/
 LDFLAGS+=	-Wl,-R${X11BASE}/lib
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--enable-gui=athena
 
 .include "../../mk/bsd.pkg.mk"
