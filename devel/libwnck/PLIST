@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/08 15:08:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/03/22 16:05:36 jmmv Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
 include/libwnck-1.0/libwnck/pager.h
 include/libwnck-1.0/libwnck/screen.h
+include/libwnck-1.0/libwnck/selector.h
 include/libwnck-1.0/libwnck/tasklist.h
 include/libwnck-1.0/libwnck/util.h
 include/libwnck-1.0/libwnck/window-action-menu.h
-include/libwnck-1.0/libwnck/window-menu.h
 include/libwnck-1.0/libwnck/window.h
 include/libwnck-1.0/libwnck/wnck-enum-types.h
 include/libwnck-1.0/libwnck/workspace.h
@@ -86,6 +86,7 @@ ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libwnck.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libwnck.mo
