@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/12 09:44:29 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/16 14:08:38 wiz Exp $
 #
 
 DISTNAME=		cdif-1.15
 CATEGORIES=		textproc
 MASTER_SITES=		ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/
-DISTFILES=		${DISTNAME}
+EXTRACT_SUFX=		# empty
 
 MAINTAINER=		packages@netbsd.org
 
