@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/08/10 01:59:40 david Exp $
-# FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
-#
+# $NetBSD: Makefile,v 1.6 2001/10/15 21:27:17 veego Exp $
 
-DISTNAME=       sane-backends-1.0.4
+DISTNAME=       sane-backends-1.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/ \
 		ftp://ftp.mostang.com/pub/sane/old-versions/ \
@@ -22,7 +20,6 @@ CONFLICTS+=	sane<=1.0.3
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-#USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 CPPFLAGS+=	-I${PREFIX}/include
