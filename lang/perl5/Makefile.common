@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2001/06/07 04:25:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/06/07 12:39:24 tron Exp $
 
 DISTNAME=	perl-${PERL5_DIST_VERS}
 CATEGORIES+=	perl5
 MASTER_SITES+=	ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/
+		ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/ \
+		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/ \
+		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/
 
 # Version numbering scheme:
 #
