@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.45 2001/11/28 10:21:47 abs Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.46 2002/02/28 14:42:39 fredb Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -93,10 +93,11 @@ ${SUBDIR}::
 	fi; \
 	${MAKE} ${MAKEFLAGS} all
 
-.for __target in all fetch fetch-list package extract configure build clean \
+.for __target in all fetch package extract configure build clean \
 		cleandir distclean depend describe reinstall tags checksum \
 		makepatchsum mirror-distfiles deinstall show-downlevel \
 		show-pkgsrc-dir show-var show-vars bulk-install bulk-package \
+		fetch-list-one-pkg fetch-list-recursive \
 		${PKG_MISC_TARGETS}
 .if !target(__target)
 ${__target}: _SUBDIRUSE
@@ -203,3 +204,44 @@ show-distfiles:
 		fi;							\
 	done
 .endif
+
+
+# Print out a script to fetch all needed files (no checksumming).
+#
+# When invoked at the top or category level, this target needs to be
+# handled specially, to elide the "===>" messages that would otherwise
+# ruin the script.
+#
+.if !target(fetch-list)
+.PHONY: fetch-list
+
+fetch-list:
+	@${ECHO} '#!/bin/sh'
+	@${ECHO} '#'
+	@${ECHO} '# This is an auto-generated script, the result of running'
+	@${ECHO} '# `make fetch-list'"'"' in directory "'"`pwd`"'"'
+	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
+	@${ECHO} '#'
+.if defined(PKGSRCTOP) && !defined(SPECIFIC_PKGS)
+#	Recursing over dependencies would be pointless, in this case.
+	@${MAKE} ${MAKEFLAGS} fetch-list-one-pkg		\
+	| ${AWK} '						\
+	function do_block () {					\
+		if (FoundSomething) {				\
+			for (line = 0; line < c; line++)	\
+				print block[line];		\
+			FoundSomething = 0			\
+			}					\
+		c = 0						\
+		}						\
+	/^[^#=]/ { FoundSomething = 1 }				\
+	/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
+	!/^=/ { block[c++] = $$0 }				\
+	/^=/ { do_block() }					\
+	END { do_block() }					\
+	'
+.else
+	@${MAKE} ${MAKEFLAGS} fetch-list-recursive		\
+	| ${SED} '/^=/d'
+.endif
+.endif # !target(fetch-list)
