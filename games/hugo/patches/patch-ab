@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/22 23:37:06 dillo Exp $
+
+--- source/hcfile.c.orig	Wed Jan  8 05:26:08 2003
++++ source/hcfile.c
+@@ -380,6 +380,15 @@ FILE *TrytoOpen(char *f, char *p, char *
+ 				return tempfile;
+ 			}
+ 		}
++
++		if (STRICMP(d, "lib") == 0) {
++			hugo_makepath(temppath, "", HUGO_LIBDIR, fname, ext);
++			if ((tempfile = HUGO_FOPEN(temppath, p)))
++			{
++				strcpy(f, temppath);  /* the new pathname */
++				return tempfile;
++			}
++		}
+ 	}
+ 
+ 	/* Try to open the given, vanilla filename */
