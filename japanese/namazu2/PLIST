@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/27 14:46:22 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -81,7 +81,6 @@ share/namazu/filter/compress.pl
 share/namazu/filter/deb.pl
 share/namazu/filter/dvi.pl
 share/namazu/filter/excel.pl
-share/namazu/filter/gfilter.pl
 share/namazu/filter/gzip.pl
 share/namazu/filter/hdml.pl
 share/namazu/filter/hnf.pl
@@ -103,6 +102,7 @@ share/namazu/namazurc.example
 share/namazu/pl/codeconv.pl
 share/namazu/pl/conf.pl
 share/namazu/pl/gettext.pl
+share/namazu/pl/gfilter.pl
 share/namazu/pl/htmlsplit.pl
 share/namazu/pl/nmzidx.pl
 share/namazu/pl/seed.pl
