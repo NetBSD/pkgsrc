@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2337 2003/05/27 17:15:50 wiz Exp $
+$NetBSD: CHANGES,v 1.2338 2003/05/27 17:26:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2174,3 +2174,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtetrinet to 0.7.1 [jmmv 2003-05-27]
 	Updated ja-samba to 2.2.8.1.1.0 [taca 2003-05-27]
 	Updated pkglint to 3.54 [wiz 2003-05-27]
+	Updated seahorse to 0.7.1 [jmmv 2003-05-27]
