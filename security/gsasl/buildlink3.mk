@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/09/19 12:48:45 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GSASL_BUILDLINK3_MK:=	${GSASL_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngsasl}
 BUILDLINK_PACKAGES+=	gsasl
 
 .if !empty(GSASL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gsasl+=	gsasl>=0.0.8
+BUILDLINK_DEPENDS.gsasl+=	gsasl>=0.1.4
 BUILDLINK_PKGSRCDIR.gsasl?=	../../security/gsasl
 .endif	# GSASL_BUILDLINK3_MK
 
