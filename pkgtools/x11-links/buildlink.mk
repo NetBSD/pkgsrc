@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/12/21 16:22:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2002/01/27 10:32:31 markd Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -390,6 +390,13 @@ BUILDLINK_FILES.X11+=	include/X11/extensions/xf86mscstr.h
 BUILDLINK_FILES.X11+=	include/X11/extensions/xf86vmode.h
 BUILDLINK_FILES.X11+=	include/X11/extensions/xf86vmstr.h
 BUILDLINK_FILES.X11+=	include/X11/extensions/xtestext1.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtrapbits.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtrapddmi.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtrapdi.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtrapemacros.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtraplib.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtraplibp.h
+BUILDLINK_FILES.X11+=	include/X11/extensions/xtrapproto.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/FS.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/FSlib.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/FSproto.h
@@ -399,6 +406,7 @@ BUILDLINK_FILES.X11+=	include/X11/fonts/codeconv/xttcconv.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/codeconv/xttcconvP.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/codeconv/xttcommon.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/codeconv/xttversion.h
+BUILDLINK_FILES.X11+=	include/X11/fonts/fontenc.h
 BUILDLINK_FILES.X11+=	include/X11/fonts/fsmasks.h
 BUILDLINK_FILES.X11+=	include/X11/keysym.h
 BUILDLINK_FILES.X11+=	include/X11/keysymdef.h
@@ -426,6 +434,10 @@ BUILDLINK_FILES.X11+=	lib/libXIE.a
 BUILDLINK_FILES.X11+=	lib/libXIE.so
 BUILDLINK_FILES.X11+=	lib/libXIE.so.6
 BUILDLINK_FILES.X11+=	lib/libXIE.so.6.0
+BUILDLINK_FILES.X11+=	lib/libXTrap.a
+BUILDLINK_FILES.X11+=	lib/libXTrap.so
+BUILDLINK_FILES.X11+=	lib/libXTrap.so.6
+BUILDLINK_FILES.X11+=	lib/libXTrap.so.6.4
 BUILDLINK_FILES.X11+=	lib/libXau.a
 BUILDLINK_FILES.X11+=	lib/libXaw.a
 BUILDLINK_FILES.X11+=	lib/libXaw.so
@@ -455,6 +467,9 @@ BUILDLINK_FILES.X11+=	lib/libXi.so
 BUILDLINK_FILES.X11+=	lib/libXi.so.6
 BUILDLINK_FILES.X11+=	lib/libXi.so.6.0
 BUILDLINK_FILES.X11+=	lib/libXinerama.a
+BUILDLINK_FILES.X11+=	lib/libXinerama.so
+BUILDLINK_FILES.X11+=	lib/libXinerama.so.1
+BUILDLINK_FILES.X11+=	lib/libXinerama.so.1.0
 BUILDLINK_FILES.X11+=	lib/libXmu.a
 BUILDLINK_FILES.X11+=	lib/libXmu.so
 BUILDLINK_FILES.X11+=	lib/libXmu.so.6
@@ -476,6 +491,7 @@ BUILDLINK_FILES.X11+=	lib/libXrender.a
 BUILDLINK_FILES.X11+=	lib/libXrender.so
 BUILDLINK_FILES.X11+=	lib/libXrender.so.1
 BUILDLINK_FILES.X11+=	lib/libXrender.so.1.0
+BUILDLINK_FILES.X11+=	lib/libXrender.so.1.1
 BUILDLINK_FILES.X11+=	lib/libXss.a
 BUILDLINK_FILES.X11+=	lib/libXt.a
 BUILDLINK_FILES.X11+=	lib/libXt.so
