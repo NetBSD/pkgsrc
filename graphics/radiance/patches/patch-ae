@@ -1,0 +1,27 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+
+--- ./src/common/Rmakefile.orig	2005-02-15 14:28:10.000000000 -0500
++++ ./src/common/Rmakefile	2005-02-15 14:29:16.000000000 -0500
+@@ -6,12 +6,11 @@
+ OPT = -O
+ MACH = -DBSD
+ CFLAGS = $(MACH) $(OPT)
+-CC = cc
+ SPECIAL =
+ 
+ COMPAT = bmalloc.o erf.o strcmp.o # frexp.o fwrite.o random.o
+ 
+-LIBDIR = /usr/local/lib/ray
++LIBDIR = @WRKSRC@/radiance/lib
+ 
+ RTOBJ = cone.o face.o free_os.o instance.o readobj.o readoct.o otypes.o \
+ 	objset.o octree.o readfargs.o modobject.o getlibpath.o \
+@@ -62,7 +61,7 @@
+ sun:
+ 
+ getlibpath.o:	getlibpath.c
+-	$(CC) $(CFLAGS) -DDEFPATH=\":$(LIBDIR)\" -c getlibpath.c
++	$(CC) $(CFLAGS) -DDEFPATH=\":@PREFIX@/radiance/lib\" -c getlibpath.c
+ 
+ tmapcolrs.o:	tmapcolrs.c
+ 	$(CC) $(CFLAGS) -DPCOND=\"pcond\" -c tmapcolrs.c
