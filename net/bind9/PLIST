@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/05 05:40:45 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/17 14:44:13 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -171,8 +171,8 @@ include/lwres/result.h
 lib/libdns.a
 lib/libdns.la
 lib/libdns.so
-lib/libdns.so.8
-lib/libdns.so.8.1
+lib/libdns.so.10
+lib/libdns.so.10.0
 lib/libisc.a
 lib/libisc.la
 lib/libisc.so
@@ -186,8 +186,8 @@ lib/libisccc.so.0.1
 lib/libisccfg.a
 lib/libisccfg.la
 lib/libisccfg.so
-lib/libisccfg.so.0
-lib/libisccfg.so.0.4
+lib/libisccfg.so.1
+lib/libisccfg.so.1.0
 lib/liblwres.a
 lib/liblwres.la
 lib/liblwres.so
