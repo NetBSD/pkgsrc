@@ -1,5 +1,5 @@
---- extract.c.orig	Tue Apr 22 20:05:57 1997
-+++ extract.c	Fri Mar  6 14:33:05 1998
+--- src/extract.c.orig	Tue Apr 22 20:05:57 1997
++++ src/extract.c	Fri Mar  6 14:33:05 1998
 @@ -103,7 +103,7 @@
  
    if (!keep_old_files_option
@@ -58,8 +58,8 @@
  
    /* If we are root, set the owner and group of the extracted file, so we
       extract as the original owner.  Or else, if we are running as a user,
---- tar.c.orig	Fri Apr 25 16:09:49 1997
-+++ tar.c	Sat Mar  7 21:43:15 1998
+--- src/tar.c.orig	Fri Apr 25 16:09:49 1997
++++ src/tar.c	Sat Mar  7 21:43:15 1998
 @@ -163,6 +163,7 @@
  #define SUFFIX_OPTION			15
  #define USE_COMPRESS_PROGRAM_OPTION	16
