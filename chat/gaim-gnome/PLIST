@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2002/07/09 02:13:27 rafal Exp $
+bin/gaim_applet
+etc/CORBA/servers/gaim_applet.gnorba
+share/applets/Network/gaim_applet.desktop
+share/pixmaps/gaim/away.png
+share/pixmaps/gaim/connect.png
+share/pixmaps/gaim/msgpend.png
+share/pixmaps/gaim/offline.png
+share/pixmaps/gaim/online.png
+@dirrm share/applets/Network
+@dirrm share/applets
+@dirrm share/pixmaps/gaim
