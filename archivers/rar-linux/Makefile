@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/10/01 10:37:33 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/27 17:02:00 wiz Exp $
 #
 
 DISTNAME=		rarlinux-3.3.0
 CATEGORIES=		archivers
-MASTER_SITES=		http://www.rarsoft.com/rar/
+MASTER_SITES=		http://www.rarsoft.com/rar/ \
+			ftp://ftp.rarsoft.com/rar/
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.rarsoft.com/rar/
