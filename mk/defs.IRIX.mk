@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.10 2002/12/15 02:12:32 salo Exp $
+# $NetBSD: defs.IRIX.mk,v 1.11 2002/12/15 13:03:02 salo Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/sbin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/sbin/cp
 CUT?=		/usr/bin/cut
+DATE?=		/sbin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/sbin/echo
@@ -51,6 +52,7 @@ MTREE?=		${LOCALBASE}/sbin/mtree
 .endif
 MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/sbin/mv
+NICE?=		/sbin/nice
 PATCH?=		/usr/sbin/patch -b
 PAX?=		/usr/sbin/pax
 PERL5?=		${LOCALBASE}/bin/perl

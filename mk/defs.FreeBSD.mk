@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.10 2002/12/15 02:12:32 salo Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.11 2002/12/15 13:03:02 salo Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
+DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
@@ -39,6 +40,7 @@ LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
+NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
