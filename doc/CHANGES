@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3577 2003/09/29 21:32:04 jschauma Exp $
+$NetBSD: CHANGES,v 1.3578 2003/09/30 00:08:56 reed Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated MesaDemos to 5.0.2 [jschauma 2003-09-29]
 	Updated glu to 5.0.2 [jschauma 2003-09-29]
 	Updated glut to 5.0.2 [jschauma 2003-09-29]
+	Added bc-1.06 [reed 2003-09-29]
