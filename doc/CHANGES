@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7554 2004/10/25 08:52:20 tron Exp $
+$NetBSD: CHANGES,v 1.7555 2004/10/25 09:03:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4850,3 +4850,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.11 [xtraeme 2004-10-25] 
 	Updated apache to 1.3.32 [tron 2004-10-25]
 	Updated ap-ssl to 2.8.21 [tron 2004-10-25]
+	Removed streamtuner-live365 [xtraeme 2004-10-25]
+	Removed streamtuner-local [xtraeme 2004-10-25]
