@@ -1,0 +1,10 @@
+$NetBSD: patch-az,v 1.1 1998/08/25 12:53:10 agc Exp $
+
+--- ./pvm3/src/task.c.orig	Sat Jul 18 22:31:52 1998
++++ ./pvm3/src/task.c	Sat Jul 18 22:31:52 1998
+@@ -143,4 +143,5 @@
+  */
+ 
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

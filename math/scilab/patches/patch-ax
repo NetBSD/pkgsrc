@@ -1,0 +1,10 @@
+$NetBSD: patch-ax,v 1.1 1998/08/25 12:53:10 agc Exp $
+
+--- ./pvm3/src/pvmdunix.c.orig	Sat Jul 18 22:31:51 1998
++++ ./pvm3/src/pvmdunix.c	Sat Jul 18 22:31:51 1998
+@@ -78,4 +78,5 @@
+ #include <sys/param.h>
+ #endif
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

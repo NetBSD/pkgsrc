@@ -1,0 +1,24 @@
+Scilab is a scientific software package for numerical computations including:
+ * Elaborate data structures (polynomial, rational and string matrices, lists,
+   multivariable linear systems,...).
+ * Sophisticated interpreter and programming language with Matlab-like syntax.
+ * Hundreds of built-in math functions (new primitives can easily be added).
+ * Stunning graphics (2d, 3d, animation).
+ * Open structure (easy interfacing with Fortran and C via online dynamic
+   link).
+ * Many built-in libraries:
+    + Linear Algebra (including sparse matrices, Kronecker form, 
+      ordered Schur,...).
+    + Control (Classical, LQG, H-infinity,...).
+    + Package for LMI (Linear Matrix Inequalities) optimization.
+    + Signal processing.
+    + Simulation (various ode's, dassl,...).
+    + Optimization (differentiable and non-differentiable, LQ solver).
+    + Scicos, an interactive environment for modeling and simulation of 
+      hybrid systems.
+    + Metanet (network analysis and optimization).
+ * Symbolic capabilities through Maple interface.
+ * Parallel Scilab.
+For more information about Scilab, send an e-mail to Doctor Scilab: 
+Scilab@inria.fr or visit the Scilab homepage at:
+http://arikara.inria.fr/www-rocq.inria.fr/scilab/scilab.html

@@ -1,0 +1,10 @@
+$NetBSD: patch-as,v 1.1 1998/08/25 12:53:09 agc Exp $
+
+--- ./pvm3/src/lpvmpack.c.orig	Sat Jul 18 22:31:47 1998
++++ ./pvm3/src/lpvmpack.c	Sat Jul 18 22:31:47 1998
+@@ -138,4 +138,5 @@
+ #endif
+ #include <stdio.h>
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

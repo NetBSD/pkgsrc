@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 1998/08/25 12:53:08 agc Exp $
+
+--- ./routines/graphics/Plo3d.c.orig	Sat Jul 18 22:31:40 1998
++++ ./routines/graphics/Plo3d.c	Sat Jul 18 22:31:39 1998
+@@ -16,5 +16,11 @@
+ #define M_PI	3.14159265358979323846
+ #else
++#if defined(HAVE_VALUES_H)
+ #include <values.h>
++#else
++#ifndef M_PI
++#define M_PI    3.14159265358979323846 
++#endif
++#endif
+ #endif
+ 
