@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/23 15:47:43 agc Exp $
+bin/helpdeco
+bin/zapres
+bin/splitmrb
+share/doc/helpdeco/helpdeco-de.txt
+share/doc/helpdeco/helpdeco-en.txt
+share/doc/helpdeco/helpfile.txt
+@dirrm share/doc/helpdeco
