@@ -1,21 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/07 00:34:04 jwise Exp $
---- scripts/xfhelp.in.orig	Wed Aug 25 08:07:42 1999
-+++ scripts/xfhelp.in	Mon Sep  6 19:27:21 1999
-@@ -21,7 +21,7 @@
+$NetBSD: patch-ab,v 1.2 2000/03/03 17:50:28 jwise Exp $
+--- other/sample.xfsoundrc.in.orig	Fri Mar  3 12:38:11 2000
++++ other/sample.xfsoundrc.in	Fri Mar  3 12:38:28 2000
+@@ -1,5 +1,5 @@
+ Play
+-esdplay
++/usr/bin/audioplay
+ XFCE_DIR/sounds/beep03.wav
+ XFCE_DIR/sounds/pop02.wav
  
- if [ "x$BROWSER" = "x" ]
- then
--  BROWSER=netscape
-+  BROWSER=communicator
- fi
- 
- if [ -d $XFCE_DATA/help/ ]
-@@ -31,7 +31,7 @@
-   HELP_FILE=XFCE_DIR/help/help.html
- fi
- 
--if [ "x$BROWSER" = "xnetscape" ]
-+if [ "x$BROWSER" = "xnavigator" -o "x$BROWSER" = "xcommunicator" ]
- then
-   $BROWSER -remote openurl\(file:///$HELP_FILE\) || $BROWSER $HELP_FILE
- else
