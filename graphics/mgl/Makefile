@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/03 01:08:30 hubertf Exp $
 
 DISTNAME=       mgl2-alpha-019
 PKGNAME=        mgl-0.1.9a
@@ -59,6 +59,11 @@ post-install:
 	@if ${TEST} -e ${PREFIX}/bin/mglsvrcons; \
 		then ${MV} -f ${PREFIX}/bin/mglsvrcons ${PREFIX}/sbin/; \
 	fi
+	# The following three commands are only present on hpcmips:
+	@${TOUCH} ${PREFIX}/sbin/mglcalibrate
+	@${TOUCH} ${PREFIX}/sbin/calibconf
+	@${TOUCH} ${PREFIX}/sbin/calibdata-update
+	#
 	@${MKDIR} ${PREFIX}/share/mgl2
 .for i in ${MGLFONTUTILS}
 	@${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/mgl2
