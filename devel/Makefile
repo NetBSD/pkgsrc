@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.248 2001/10/16 06:38:17 jlam Exp $
+# $NetBSD: Makefile,v 1.249 2001/10/16 07:13:58 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -189,6 +189,7 @@ SUBDIR+=	pccts
 SUBDIR+=	pcre
 SUBDIR+=	pedisassem
 SUBDIR+=	php4-gettext
+SUBDIR+=	php4-gmp
 SUBDIR+=	php4-pcre
 SUBDIR+=	php4-posix
 SUBDIR+=	php4-session
