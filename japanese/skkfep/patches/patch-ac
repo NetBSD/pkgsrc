@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- Makefile.orig	Tue Jul  7 00:31:14 1998
++++ Makefile	Mon Dec 20 23:45:52 1999
+@@ -15,5 +15,8 @@
+ 	rm -f genMakefile
+ 
+ genMakefile: protoMakefile config.h
+-	awk -f extrpar `grep 'configs/.*\.h' config.h | sed 's/.*\(configs\/.*\.h\).*/\1/'` > genMakefile
++	rm -f genMakefile
++	cp config.h junk.c
++	awk -f extrpar `cc -E junk.c | sed -n 's/^#[^"]*"\([^/][^"]*onfigs[^"]*\)".*/\1/p' | sort | uniq` > genMakefile
++	rm -f junk.c
+ 	awk -f extrpar config.h | cat - protoMakefile >> genMakefile

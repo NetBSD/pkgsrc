@@ -1,0 +1,11 @@
+$NetBSD: patch-ba,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- protoMakefile.orig	Tue Jul  7 00:31:15 1998
++++ protoMakefile	Mon Dec 20 23:49:42 1999
+@@ -1,4 +1,5 @@
+-CFLAGS=$(SYSINCLUDE) $(SYSDEFINE) $(DEFINE) $(OPTIMIZE)
++CFLAGS=$(SYSINCLUDE) $(SYSDEFINE) $(DEFINE) $(OPTIMIZE) \
++	-DSKK_CONF=\"$(EXECBASE)/etc/skk.conf\"
+ LIBS  =$(SYSLIBS) $(EXTRALIBS) -ltermcap
+ 
+ OBJS=fep.o connsh.o readwrite.o terms.o stty.o keybind.o romkan.o etc.o\
