@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/14 15:51:25 tv Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/14 15:52:39 tv Exp $
 #
 
 DISTNAME=	plex86
@@ -22,7 +22,7 @@ USE_GMAKE=	yes
 NO_PKG_REGISTER=	yes	# ONLY until we really install files!!!
 NO_PACKAGE=	Incomplete	# ONLY until we really install files!!!
 
-BSDSRCDIR?=	/nonexistent
+BSDSRCDIR?=	/nonexistent	# (to override <bsd.own.mk>)
 .include "../../mk/bsd.prefs.mk"
 
 pre-extract:
