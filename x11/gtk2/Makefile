@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2004/06/04 17:55:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.56 2004/06/20 20:12:20 jmmv Exp $
 #
 
-DISTNAME=		gtk+-2.4.2
+DISTNAME=		gtk+-2.4.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
@@ -40,6 +40,8 @@ PKGCONFIG_OVERRIDE+=	gtk+-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
+MAKE_DIRS+=		${PREFIX}/libdata/gtk-2.0
+
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/themes\/Default$$/ \
@@ -62,6 +64,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.4.0/engines
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.4.0/filesystems
+
+_BUILDING_GTK2=	yes
+.include "modules.mk"
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
