@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/02/15 19:14:09 jschauma Exp $
+bin/larsclock
+bin/larsremote
+bin/larswm
+share/doc/larswm/keyboard_refcard.pdf
+share/doc/larswm/mouse_refcard.pdf
+@dirrm share/doc/larswm
