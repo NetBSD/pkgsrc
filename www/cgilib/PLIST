@@ -1,22 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/14 20:41:19 tv Exp $
 include/cgi.h
 lib/libcgi.la
 libexec/cgi-bin/cgitest
 libexec/cgi-bin/jumpto
-share/doc/html/cgilib/cgi.5.html
-share/doc/html/cgilib/cgiDebug.3.html
-share/doc/html/cgilib/cgiFree.3.html
-share/doc/html/cgilib/cgiFreeList.3.html
-share/doc/html/cgilib/cgiGetCookie.3.html
-share/doc/html/cgilib/cgiGetCookies.3.html
-share/doc/html/cgilib/cgiGetValue.3.html
-share/doc/html/cgilib/cgiGetVariables.3.html
-share/doc/html/cgilib/cgiHeader.3.html
-share/doc/html/cgilib/cgiInit.3.html
-share/doc/html/cgilib/cgiRedirect.3.html
-share/doc/html/cgilib/cgiSetHeader.3.html
-share/doc/html/cgilib/cgiSetType.3.html
+man/man3/cgiDebug.3
+man/man3/cgiFree.3
+man/man3/cgiFreeList.3
+man/man3/cgiGetCookie.3
+man/man3/cgiGetCookies.3
+man/man3/cgiGetValue.3
+man/man3/cgiGetVariables.3
+man/man3/cgiHeader.3
+man/man3/cgiInit.3
+man/man3/cgiRedirect.3
+man/man3/cgiSetHeader.3
+man/man3/cgiSetType.3
+man/man5/cgi.5
 share/examples/cgilib/cgitest.c
 share/examples/cgilib/jumpto.c
 @dirrm share/examples/cgilib
-@dirrm share/doc/html/cgilib
