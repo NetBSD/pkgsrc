@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/09/09 12:23:28 martti Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/20 11:13:51 heinz Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -86,7 +86,7 @@ post-patch:
 do-configure:
 	${MKDIR} ${WRKSRC}/imports/x11
 	cd ${WRKSRC}/imports/x11; for dir in bin include lib; do	\
-		if [ -e $${dir} ]; then					\
+		if [ -d $${dir} ]; then					\
 			${RM} $${dir};					\
 		fi;							\
 		${LN} -s ${BUILDLINK_X11_DIR}/$${dir} $${dir};		\
