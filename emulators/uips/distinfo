@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/27 15:35:57 wiz Exp $
+
+SHA1 (uips-1.0/uips.c) = ef0acd30549d815a997cf1a7501c072e061fc79a
+Size (uips-1.0/uips.c) = 12410 bytes
+SHA1 (uips-1.0/uips.txt) = b9da81d6a2242bb2fd2a0bd20aa26669b106b326
+Size (uips-1.0/uips.txt) = 1833 bytes
