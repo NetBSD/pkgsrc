@@ -12,8 +12,8 @@ fi
 
 name="slpd"
 rcvar=${name}
-command="@PREFIX@/sbin/slpd"
-pidfile="/var/run/slpd.pid"
+command="@PREFIX@/sbin/${name}"
+pidfile="/var/run/${name}.pid"
 required_files="/etc/slp.conf"
 
 if [ ! -d /etc/rc.d ]
