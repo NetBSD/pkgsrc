@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/04 19:37:38 wiz Exp $
+bin/bins
+bin/bins_edit
+man/man1/bins.1
+man/man1/bins_edit.1
+share/examples/bins/templates.default/details.html
+share/examples/bins/templates.default/footer.html
+share/examples/bins/templates.default/image.html
+share/examples/bins/templates.default/imagelist.html
+share/examples/bins/templates.default/navbar.html
+share/examples/bins/templates.default/path.html
+share/examples/bins/templates.default/subalbum.html
+share/examples/bins/templates.default/thumbnail.html
+share/examples/bins/templates.default/tree.html
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
+@dirrm share/examples/bins/templates.default
+@dirrm share/examples/bins
