@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/01/25 18:41:20 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/20 21:47:35 schwarz Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -13,6 +13,10 @@ USE_BUILDLINK3=		yes
 
 MAKE_ENV+=		PILIB="libsock/libpisock.la"
 MAKE_ENV+=		PICCLIB="libcc/libpicc.a"
+
+.if ${LOWER_OPSYS} == "irix5.3"
+CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
+.endif
 
 BUILD_DIRS=		${WRKSRC}/include
 BUILD_DIRS+=		${WRKSRC}/libpisock
