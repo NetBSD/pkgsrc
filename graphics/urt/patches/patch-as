@@ -1,15 +1,14 @@
-$NetBSD: patch-as,v 1.1 2001/02/26 16:56:36 agc Exp $
+$NetBSD: patch-as,v 1.2 2001/03/26 22:51:39 skrll Exp $
 
-Use libtool
-
---- cnv/rletogif/makefile.src	2001/02/26 16:03:14	1.1
-+++ cnv/rletogif/makefile.src	2001/02/26 16:04:11
-@@ -15,7 +15,7 @@
+--- cnv/rletogif/makefile.src.orig	Fri Jun  7 16:57:40 1991
++++ cnv/rletogif/makefile.src
+@@ -15,8 +15,7 @@
  # The executable.  The ".out" will be stripped off in the install action.
  
  rletogif.out: ${OBJ}
 -	${CC} ${CFLAGS} ${OBJ} ${LIBS} -o rletogif.new
-+	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${OBJ} -o rletogif.new ../../lib/librle.la -lm
- 	mv rletogif.new rletogif.out
+-	mv rletogif.new rletogif.out
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${OBJ} -o rletogif.out ../../lib/librle.la -lm
  
  # Incremental install, copies executable to DEST dir.
+ install		:	default install-pgm
