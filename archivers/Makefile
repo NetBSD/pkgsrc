@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/09/09 15:06:36 rh Exp $
+# $NetBSD: Makefile,v 1.34 2001/09/16 19:02:50 zuntum Exp $
 #
 
 COMMENT=	Archivers
@@ -24,6 +24,7 @@ SUBDIR+=	lha
 SUBDIR+=	liblzo
 SUBDIR+=	lzop
 SUBDIR+=	macutil
+SUBDIR+=	mscompress
 SUBDIR+=	nulib2
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
