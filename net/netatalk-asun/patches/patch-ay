@@ -1,20 +1,13 @@
-$NetBSD: patch-ay,v 1.1 2000/07/31 18:33:52 abs Exp $
+$NetBSD: patch-ay,v 1.2 2000/08/15 14:48:24 abs Exp $
 
---- bin/Makefile.orig	Wed Dec 30 07:30:33 1998
-+++ bin/Makefile	Mon Jul 31 18:46:20 2000
-@@ -7,6 +7,7 @@
- ${ALL}: FRC
- 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    DESTDIR="${DESTDIR}"
-@@ -24,6 +25,7 @@
- 	for i in ${ALL}; \
- 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" install); \
+--- man/man8/Makefile.orig	Tue May 20 18:35:43 1997
++++ man/man8/Makefile
+@@ -18,6 +18,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		< $$i > ${MANDIR}/man8/$$i; \
+ 	done
+ 

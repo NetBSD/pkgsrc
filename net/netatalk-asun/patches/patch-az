@@ -1,12 +1,19 @@
-$NetBSD: patch-az,v 1.1 2000/07/31 18:33:53 abs Exp $
+$NetBSD: patch-az,v 1.2 2000/08/15 14:48:24 abs Exp $
 
---- libatalk/atp/atp_rsel.c.orig	Thu Feb  4 07:36:30 1999
-+++ libatalk/atp/atp_rsel.c	Mon Jul 31 18:53:38 2000
-@@ -10,6 +10,7 @@
- #include <sys/errno.h>
- #include <sys/uio.h>
- #include <signal.h>
-+#include <string.h>
- 
- #include <netatalk/endian.h>
- #include <netatalk/at.h>
+--- man/man8/psf.8.orig	Tue May 20 18:35:43 1997
++++ man/man8/psf.8
+@@ -93,10 +93,10 @@
+     :sd=/usr/spool/lpd/laser:\\
+     :lp=/usr/spool/lpd/laser/null:\\
+     :lf=/var/adm/lpd-errs:pw#80:hl:\\
+-    :of=:LIBDIR:/filters/ofpap:\\
+-    :if=:LIBDIR:/filters/ifpaprev:\\
+-    :tf=:LIBDIR:/filters/tfpaprev:\\
+-    :df=:LIBDIR:/filters/dfpaprev:
++    :of=:LIBEXECDIR:/psffilters/ofpap:\\
++    :if=:LIBEXECDIR:/psffilters/ifpaprev:\\
++    :tf=:LIBEXECDIR:/psffilters/tfpaprev:\\
++    :df=:LIBEXECDIR:/psffilters/dfpaprev:
+ .fi
+ .RE
+ .sp
