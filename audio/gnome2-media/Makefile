@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 16:38:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/26 11:54:45 jmmv Exp $
 
 DISTNAME=		gnome-media-2.4.1.1
 PKGREVISION=		3
@@ -42,8 +42,8 @@ GCONF2_SCHEMAS+=	gnome-volume-control.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../misc/gst-plugins/buildlink2.mk"
-.include "../../misc/gstreamer/buildlink2.mk"
+.include "../../multimedia/gst-plugins/buildlink2.mk"
+.include "../../multimedia/gstreamer/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/GConf2-ui/buildlink2.mk"
 .include "../../devel/gail/buildlink2.mk"
