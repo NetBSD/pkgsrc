@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 1999/09/09 08:49:52 drochner Exp $
+# $NetBSD: Makefile,v 1.111 1999/09/10 00:41:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -66,6 +66,7 @@
 #    SUBDIR += mouseclock
 #    SUBDIR += neXtaw
 #    SUBDIR += olvwm
+    SUBDIR += oneko
 #    SUBDIR += p5-Tcl-Tk
     SUBDIR += p5-Tk
     SUBDIR += p5-gtk
