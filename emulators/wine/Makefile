@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2005/03/07 09:48:36 uebayasi Exp $
+# $NetBSD: Makefile,v 1.80 2005/03/14 13:56:57 abs Exp $
 
 DISTNAME=	Wine-20050211
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -39,7 +39,7 @@ REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
 # against the libraries.
 #
 CONFIGURE_ENV+=		X_LIBS="${LDFLAGS}"
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
