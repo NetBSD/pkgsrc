@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/11 22:36:52 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/03/01 14:11:52 jmmv Exp $
 
 .if !defined(GNOMEMM_BUILDLINK2_MK)
 GNOMEMM_BUILDLINK2_MK=	# defined
@@ -16,7 +16,7 @@ BUILDLINK_FILES.gnomemm+=	include/gnome--.h
 BUILDLINK_FILES.gnomemm+=	lib/libgnomemm-1.1.*
 BUILDLINK_FILES.gnomemm+=	lib/libgnomemm.*
 
-.include "../../devel/libsigc++/buildlink2.mk"
+.include "../../devel/libsigc++10/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 
