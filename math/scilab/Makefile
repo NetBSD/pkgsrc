@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/27 23:56:21 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1999/08/06 13:45:51 agc Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -44,14 +44,5 @@ post-patch:
 	@if [ ${MACHINE_ARCH} != "alpha" ]; then \
 		${MV} ${WRKSRC}/scilab.star.orig ${WRKSRC}/scilab.star ; \
 	fi
-
-post-install:
-	@${ECHO} "******************************************************************************"
-	@${ECHO} "0 - COPYRIGHT NOTICE"
-	@${ECHO} " "
-	@${ECHO} "To use Scilab, you need to fill and return the end of the file notice.tex"
-	@${ECHO} "or notice.ps (postscript file). You may email to Scilab@inria.fr."
-	@${ECHO} "These files are in ${PREFIX}/share/scilab-2.4.1/"
-	@${ECHO} "******************************************************************************"
 
 .include "../../mk/bsd.pkg.mk"
