@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.9 2003/02/24 03:35:29 dmcmahill Exp $
+$NetBSD: distinfo,v 1.10 2003/09/12 20:46:48 dmcmahill Exp $
 
-SHA1 (scilab-2.7.src.tar.gz) = ce1ab6cb06d938239590e31ac3701ced6f9b3505
-Size (scilab-2.7.src.tar.gz) = 9510676 bytes
+SHA1 (scilab-2.7/scilab-2.7.src.tar.gz) = ce1ab6cb06d938239590e31ac3701ced6f9b3505
+Size (scilab-2.7/scilab-2.7.src.tar.gz) = 9510676 bytes
+SHA1 (scilab-2.7/scicos.tar.gz) = 05ed3013854d8db5fc02651d351f17ee7c5a0dce
+Size (scilab-2.7/scicos.tar.gz) = 82793 bytes
+SHA1 (scilab-2.7/scicos_blocks.tar.gz) = bdf4eef1a47417a8f816ae213fc4e262e2605b79
+Size (scilab-2.7/scicos_blocks.tar.gz) = 3219 bytes
 SHA1 (patch-aa) = 93efb013a8651829dcef30b13fa6de085375d76c
 SHA1 (patch-ab) = 2a13fc2bf4bd6dc55dc12480acb4f44b8c5ef14f
 SHA1 (patch-ac) = 8d8e2352815b4c1ad61545ccb7e430169eae876e
