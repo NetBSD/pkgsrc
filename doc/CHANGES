@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7159 2004/09/17 14:03:22 taya Exp $
+$NetBSD: CHANGES,v 1.7160 2004/09/17 20:45:49 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4258,3 +4258,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sudo to 1.6.8p1 [cube 2004-09-17]
 	Updated mozilla to 1.7.3 [taya 2004-09-17]
 	Updated mozilla-gtk2 to 1.7.3 [taya 2004-09-17]
+	Removed CompuPic [hubertf 2004-09-17]
