@@ -1,11 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2000/07/31 04:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/07 11:48:47 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.3rel.1
-PKGNAME=		lynx-2.8.3rel.1
+DISTNAME=		lynx2.8.4dev.7
+PKGNAME=		lynx-2.8.4dev.7
 CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/current/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		http://lynx.isc.org/current/ \
+			http://lynx.isc.org/po/ \
+			http://www.iro.umontreal.ca/contrib/po/teams/PO/
+DISTFILES+=		lynx2.8.4dev.7.tar.bz2
+DISTFILES+=		lynx-2.8.3.rel1.cs.po
+DISTFILES+=		lynx-2.8.4.da.po
+DISTFILES+=		lynx-2.8.3.rel1.de.po
+DISTFILES+=		lynx-2.8.3.rel1.ja.po
+DISTFILES+=		lynx-2.8.3.rel1.nl.po
+DISTFILES+=		lynx-2.8.3.rel1.pt_BR.po
+DISTFILES+=		lynx-2.8.3.rel1.ru.po
+DISTFILES+=		lynx-2.8.3.rel1.sl.po
 
 PATCH_SITES=		http://www.moxienet.com/lynx/
 PATCHFILES= 		lynx-283-ssl.patch.gz
@@ -20,7 +30,7 @@ RESTRICTED=		"Crypto, export-controlled"
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-WRKSRC=			${WRKDIR}/lynx2-8-3
+WRKSRC=			${WRKDIR}/lynx2-8-4
 
 GNU_CONFIGURE=		yes
 USE_SSL=		yes
@@ -55,6 +65,16 @@ CONFIGURE_ARGS+=	--enable-justify-elts
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
+post-extract:
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.cs.po ${WRKSRC}/po/cs.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.de.po ${WRKSRC}/po/de.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.ja.po ${WRKSRC}/po/ja.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.nl.po ${WRKSRC}/po/nl.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.pt_BR.po ${WRKSRC}/po/pt_BR.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.ru.po ${WRKSRC}/po/ru.po
+	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.sl.po ${WRKSRC}/po/sl.po
+	@${CP} ${DISTDIR}/lynx-2.8.4.da.po ${WRKSRC}/po/da.po
+
 post-configure:
 	(${ECHO}; \
 	${ECHO} '#undef LYNX_CFG_FILE'; \
@@ -82,17 +102,7 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX Not yet
-#NM?=			/usr/bin/nm
-#CURSES_HAS_COLORS!=	${NM} /usr/lib/libcurses.a | \
-#				${GREP} -q has_colors && \
-#				${ECHO} YES || ${ECHO} NO
-#
-#.if defined(CURSES_HAS_COLORS) && ${CURSES_HAS_COLORS} == YES
-#LYNX_SCREEN_LIB?=	curses
-#.else
 LYNX_SCREEN_LIB?=	slang
-#.endif
 
 .if (${LYNX_SCREEN_LIB} == slang)
 DEPENDS+=		libslang-*:../../devel/libslang
