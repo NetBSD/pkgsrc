@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2000/12/11 00:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2000/12/22 19:41:52 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -76,6 +76,9 @@ CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 
 BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC
 
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
@@ -103,6 +106,16 @@ post-build:
 
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
+	${SED}	-e "s,@CAT@,${CAT},g" \
+		-e "s,@RM@,${RM},g" \
+		-e "s,@RMDIR@,${RMDIR},g" \
+		-e "s,@TRUE@,${TRUE},g" \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s,@CAT@,${CAT},g" \
+		-e "s,@CHMOD@,${CHMOD},g" \
+		-e "s,@CP@,${CP},g" \
+		-e "s,@MKDIR@,${MKDIR},g" \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
