@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/29 20:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/14 06:21:50 minskim Exp $
 #
 
 DISTNAME=		gmpc-0.11.2
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		yes
 
 USE_DIRS+=		xdg-1.1
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
