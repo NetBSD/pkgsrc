@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 1999/04/13 01:25:35 abs Exp $
+# $NetBSD: Makefile,v 1.16 1999/06/28 07:49:05 tron Exp $
 #
 
-DISTNAME=	xmcd-2.4
+DISTNAME=	xmcd-2.5
 CATEGORIES=	audio
 MASTER_SITES=	http://mercury.hypersurf.com/~amb/download/xmcd/src/
 
@@ -13,12 +13,13 @@ DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 USE_MOTIF=	yes
 USE_IMAKE=	yes
 IS_INTERACTIVE=	yes	# asks a lot of questions
+MAKE_ENV+=	MACHINE_ARCH="${MACHINE_ARCH}" SHELL=/bin/sh
 
 post-install:
-	@strip ${PREFIX}/bin/cda
-	@strip ${PREFIX}/bin/cddbcmd
-	@strip ${PREFIX}/bin/wm2xmcd
-	@strip ${PREFIX}/bin/xmcd
+.for FILE in cda cddbcmd wm2xmcd xmcd
+	@test -n "${STRIPFLAG}" && \
+	strip ${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/${FILE}
+.endfor
 	${MV} ${PREFIX}/man/cat1/cda.1 ${PREFIX}/man/man1/cda.1
 	${MV} ${PREFIX}/man/cat1/cddbcmd.1 ${PREFIX}/man/man1/cddbcmd.1
 	${MV} ${PREFIX}/man/cat1/dp2xmcd.1 ${PREFIX}/man/man1/dp2xmcd.1
