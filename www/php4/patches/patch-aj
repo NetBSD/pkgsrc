@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/01/16 15:04:54 jdolecek Exp $
+$NetBSD: patch-aj,v 1.8 2004/10/31 18:23:24 jdolecek Exp $
 
---- config.m4.orig	2003-10-03 07:25:35.000000000 +0200
-+++ config.m4
-@@ -54,6 +54,14 @@ AC_DEFUN(PHP_IMAP_TEST_BUILD, [
+--- ext/imap/config.m4.orig	2004-01-17 01:01:06.000000000 +0100
++++ ext/imap/config.m4	2004-10-31 18:49:03.000000000 +0100
+@@ -54,6 +54,14 @@
    ])
  ])
  
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2004/01/16 15:04:54 jdolecek Exp $
  AC_DEFUN(PHP_IMAP_KRB_CHK, [
    AC_ARG_WITH(kerberos,
    [  --with-kerberos[=DIR]     IMAP: Include Kerberos support. DIR is the Kerberos install dir.],[
-@@ -90,7 +98,7 @@ AC_DEFUN(PHP_IMAP_KRB_CHK, [
+@@ -90,7 +98,7 @@
      PHP_ADD_LIBRARY(k5crypto, 1, IMAP_SHARED_LIBADD)
      PHP_ADD_LIBRARY(com_err,  1, IMAP_SHARED_LIBADD)
      PHP_ADD_INCLUDE($PHP_KERBEROS_DIR/include)
