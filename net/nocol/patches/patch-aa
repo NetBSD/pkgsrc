@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/07/13 11:09:18 abs Exp $
+$NetBSD: patch-aa,v 1.5 2002/06/28 08:42:35 agc Exp $
 
 --- netconsole/build_display.c.orig	Thu Jul 13 11:13:37 2000
 +++ netconsole/build_display.c	Thu Jul 13 11:15:26 2000
@@ -11,6 +11,17 @@ $NetBSD: patch-aa,v 1.4 2000/07/13 11:09:18 abs Exp $
  
  build_display ()
  {
+@@ -229,8 +229,8 @@
+ 		"\n(DEBUG): frozen = %s, quiet = %s\n", 
+ 		frozen ? "YES" : "NO", quiet ? "YES" : "NO" );
+ 	wprintw(aw.wmsg,		
+-		"(DEBUG): Term= %s, LINES= %d, COLS= %d, Datadir= %s", ttytype,
+-		LINES, COLS, datadir) ;	 	/* ttytype in curses.h */
++		"(DEBUG): LINES= %d, COLS= %d, Datadir= %s",
++		LINES, COLS, datadir) ;
+ 	wclrtoeol(aw.wmsg);
+     }
+     
 @@ -238,8 +238,8 @@
       * Am calling touchwin() since its foolproof (see discussion above)
       */
