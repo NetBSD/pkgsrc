@@ -1,0 +1,17 @@
+$NetBSD: patch-bc,v 1.1 2001/03/20 00:20:41 fredb Exp $
+
+--- kdehelp/man.cpp.orig	Thu Aug 19 14:32:11 1999
++++ kdehelp/man.cpp
+@@ -475,8 +475,12 @@
+ 		sprintf(errFile, "%s/khelpXXXXXX", _PATH_TMP);	// temp file
+ 		mktemp(errFile);
+ 
++#ifdef RMAN
++		sprintf(rmanCmd, "%s -f HTML", RMAN);
++#else
+ 		sprintf(rmanCmd, "%s/rman -f HTML",
+ 			(const char *)KApplication::kde_bindir());
++#endif
+ 
+ 		// create the system cmd to read the man page
+ 		if ( (ptr = strchr(tmpName, '(')) )

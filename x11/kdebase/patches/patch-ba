@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2001/03/20 00:20:41 fredb Exp $
+
+--- kdehelp/Makefile.am.orig	Sun Aug  8 09:26:45 1999
++++ kdehelp/Makefile.am
+@@ -2,7 +2,7 @@
+ INCLUDES =  $(all_includes)
+ LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ LDADD = $(LIB_KFILE) $(LIB_KHTMLW) $(LIBCOMPAT)
+-SUBDIRS = search index rman
++SUBDIRS = search index
+ 
+ ########## Files ##########
+ 
