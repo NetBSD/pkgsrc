@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+
+--- kchart/engine.h.orig	Sat Oct 14 16:30:40 2000
++++ kchart/engine.h
+@@ -13,7 +13,7 @@
+ 
+ #include <qfont.h>
+ #include <qcolor.h>
+-#include <values.h>
++#include <limits.h>
+ #include <kchart_part.h>
+ 
+ class KChartParameters;
