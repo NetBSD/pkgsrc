@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:14:50 tv Exp $
-#
+# $NetBSD: Makefile,v 1.15 2005/01/19 09:05:44 adam Exp $
 
-DISTNAME=	gdchart0.11.4dev
-PKGNAME=	gdchart-0.11.4
-PKGREVISION=	3
+DISTNAME=	gdchart0.11.5dev
+PKGNAME=	gdchart-0.11.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.fred.net/brv/chart/ \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
@@ -12,30 +10,27 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.fred.net/brv/chart/
 COMMENT=	Easy to use, fast C API for creating charts and graphs
 
-MAKEFILE=	makefile
-
-USE_BUILDLINK3=	YES
-USE_LIBTOOL=	YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 
 TEST_TARGET=	gdc_samp1 gdc_samp2 gdc_pie_samp ft_samp
 
 post-patch:
-	for fn in ${WRKSRC}/*.[ch]; do					      \
-		${SED} 's/^#ifdef HAVE_JPEG/#ifndef NO_JPEG/' $${fn}	      \
-			> $${fn}.new;					      \
-		${MV} $${fn}.new $${fn};				      \
+	for fn in ${WRKSRC}/*.[ch]; do					\
+		${SED} 's/^#ifdef HAVE_JPEG/#ifndef NO_JPEG/' $${fn}	\
+			> $${fn}.new;					\
+		${MV} $${fn}.new $${fn};				\
 	done
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/libgdchart.la \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libgdchart.la \
 		 ${PREFIX}/lib
 	${LIBTOOL} -n --finish ${PREFIX}/lib
 	${INSTALL_DATA}	${WRKSRC}/gdchart.h ${PREFIX}/include
 	${INSTALL_DATA}	${WRKSRC}/gdc.h ${PREFIX}/include
 	${INSTALL_DATA}	${WRKSRC}/gdcpie.h ${PREFIX}/include
-	${INSTALL_DATA}	${WRKSRC}/gifencode.h ${PREFIX}/include
 	${INSTALL_DATA_DIR} -d -m 0755 ${PREFIX}/share/doc/gdchart
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gdchart
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/gdchart
 	${INSTALL_DATA_DIR} -d -m 0755 ${PREFIX}/share/examples/gdchart
 	${INSTALL_DATA} ${WRKSRC}/gdc_samp1.c ${PREFIX}/share/examples/gdchart
 	${INSTALL_DATA} ${WRKSRC}/gdc_samp2.c ${PREFIX}/share/examples/gdchart
@@ -43,4 +38,5 @@ do-install:
 		${PREFIX}/share/examples/gdchart
 
 .include "../../graphics/gd/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

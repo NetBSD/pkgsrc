@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/19 09:05:44 adam Exp $
 include/gdc.h
 include/gdchart.h
 include/gdcpie.h
-include/gifencode.h
 lib/libgdchart.la
-share/doc/gdchart/README
+share/doc/gdchart/README.txt
 share/examples/gdchart/gdc_pie_samp.c
 share/examples/gdchart/gdc_samp1.c
 share/examples/gdchart/gdc_samp2.c
