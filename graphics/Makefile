@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 1999/11/23 04:23:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.64 1999/11/24 20:31:27 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -65,6 +65,7 @@
     SUBDIR += photopc
     SUBDIR += pixmap
 #    SUBDIR += plotmtv
+    SUBDIR += ploticus
     SUBDIR += plotutils
     SUBDIR += png
     SUBDIR += povray
