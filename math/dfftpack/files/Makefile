@@ -13,7 +13,7 @@ OBJS = 	zfftb.o cfftb1.o zfftf.o cfftf1.o zffti.o cffti1.o dcosqb.o	\
 	rffti1.o dsinqb.o dsinqf.o dsinqi.o dsint.o sint1.o dsinti.o
 
 lib$(LIB).la:	$(OBJS)
-	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) -o $@ $(OBJ:.o=.lo) \
+	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) -o $@ $(OBJS:.o=.lo) \
 	-rpath $(LIBDIR) --version-info 0:0
 
 .f.o:
