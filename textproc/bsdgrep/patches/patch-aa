@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/19 07:15:14 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2002/11/23 16:15:21 cjep Exp $
 
 --- Makefile.orig	Fri Nov  5 15:28:02 1999
 +++ Makefile
