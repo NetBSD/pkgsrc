@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/06/12 16:54:25 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/27 09:36:11 drochner Exp $
 
-DISTNAME=	Formulator-1.4.1
-PKGNAME=	zope25-Formulator-1.4.1
+DISTNAME=	Formulator-1.4.2
+PKGNAME=	zope25-Formulator-1.4.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/faassen/Formulator/
 EXTRACT_SUFX=	.tgz
