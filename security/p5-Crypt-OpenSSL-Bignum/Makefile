@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/27 05:44:22 snj Exp $
 #
 
 DISTNAME=		Crypt-OpenSSL-Bignum-0.03
@@ -13,9 +13,9 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://perl-openssl.sourceforge.net/
 COMMENT=		Perl5 wrapper module for the OpenSSL Bignum functions
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/OpenSSL/Bignum/.packlist
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
