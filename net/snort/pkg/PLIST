@@ -1,14 +1,29 @@
-@comment $NetBSD: PLIST,v 1.3 2000/02/04 16:18:02 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/12/27 10:08:35 rh Exp $
 bin/snort
 man/man8/snort.8
 share/snort/backdoor-lib
+share/snort/ddos-lib
+share/snort/finger-lib
+share/snort/ftp-lib
 share/snort/misc-lib
+share/snort/netbios-lib
 share/snort/overflow-lib
+share/snort/ping-lib
+share/snort/rpc-lib
 share/snort/scan-lib
+share/snort/smtp-lib
 share/snort/snort-lib
-share/snort/web-lib
+share/snort/telnet-lib
+share/snort/webcf-lib
+share/snort/webcgi-lib
+share/snort/webfp-lib
+share/snort/webiis-lib
+share/snort/webmisc-lib
 @dirrm share/snort
+share/doc/snort/BUGS
+share/doc/snort/CREDITS
 share/doc/snort/README
+share/doc/snort/README.FLEXRESP
 share/doc/snort/README.PLUGINS
 share/doc/snort/NEWS
 share/doc/snort/RULES.SAMPLE
