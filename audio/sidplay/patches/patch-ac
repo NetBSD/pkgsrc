@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+
+--- ./libsidplay/include/config.h.in.orig	Thu Jul  2 21:45:06 1998
++++ ./libsidplay/include/config.h.in	Sun Jan 31 12:47:40 1999
+@@ -21,6 +21,7 @@
+ #undef HAVE_MSDOS
+ #undef HAVE_BEOS
+ #undef HAVE_RISCOS
++#undef HAVE_NETBSD
+ 
+ /* Define the file/path separator(s) that your filesystem uses:
+    FS_IS_COLON_AND_BACKSLASH, FS_IS_COLON_AND_SLASH, FS_IS_BACKSLASH,
+@@ -79,6 +80,9 @@
+ 
+ /* Define if you have the <machine/soundcard.h> header file.  */
+ #undef HAVE_MACHINE_SOUNDCARD_H
++
++/* Define if you have the <soundcard.h> header file. */
++#undef HAVE_SOUNDCARD_H
+ 
+ /* Define if you have the <sun/audioio.h> header file.  */
+ #undef HAVE_SUN_AUDIOIO_H
