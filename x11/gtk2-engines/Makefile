@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:31 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/23 14:00:06 jmmv Exp $
 #
 
 DISTNAME=		gtk-engines-2.2.0
@@ -18,6 +18,8 @@ USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gtk-engines-2.pc.in
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
