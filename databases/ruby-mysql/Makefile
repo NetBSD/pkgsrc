@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/01/28 14:08:01 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/06 12:58:04 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.5.1
@@ -23,7 +23,7 @@ DOCS=		README.html README_ja.html
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mysql
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/mysql
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mysql
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mysql
 	${INSTALL_SCRIPT} ${WRKSRC}/test.rb ${RUBY_EXAMPLESDIR}/mysql
