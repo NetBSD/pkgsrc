@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.676 2001/03/06 14:50:45 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.677 2001/03/06 16:00:15 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -565,7 +565,6 @@ PATCH?=		/usr/bin/gpatch -b
 PATCH?=		${LOCALBASE}/bin/patch -b
 .endif
 PAX?=		/bin/pax
-PKG_TOOLS_BIN?= ${LOCALBASE}/bsd/bin
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
@@ -611,7 +610,6 @@ MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/usr/local/bsd/bin/pax
-PKG_TOOLS_BIN?= ${LOCALBASE}/bsd/bin
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
@@ -657,7 +655,6 @@ MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
-PKG_TOOLS_BIN?= /usr/sbin
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -697,17 +694,8 @@ uptodate-digest:
 		esac							\
 	fi
 
-.if !defined(PKGTOOLS_VERSION)
-.if !exists(${IDENT})
-PKGTOOLS_VERSION=${PKGTOOLS_REQD}
-.else
-PKGTOOLS_VERSION!=${IDENT} ${PKG_TOOLS_BIN}/pkg_add ${PKG_TOOLS_BIN}/pkg_admin ${PKG_TOOLS_BIN}/pkg_create ${PKG_TOOLS_BIN}/pkg_delete ${PKG_TOOLS_BIN}/pkg_info | ${AWK} 'BEGIN {n = 0;}; $$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ {gsub("/", "", $$4); if ($$4 > n) {n = $$4;}}; END {print n;}'
-.endif
-.endif
-MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
-
 # Latest version of pkgtools required for this file.
-PKGTOOLS_REQD=		20000202
+PKGTOOLS_REQD=		20010306
 
 # Check that we're using up-to-date pkg_* tools with this file.
 uptodate-pkgtools:
