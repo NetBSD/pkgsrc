@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2070 2003/04/28 20:51:55 salo Exp $
+$NetBSD: CHANGES,v 1.2071 2003/04/28 20:55:56 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated netpbm to 10.11.8 [tron 2003-04-28]
 	Updated nmap to 3.27 [salo 2003-04-28]
 	Updated nmapfe to 0.95nb4 [salo 2003-04-28]
+	Updated rxvt to 2.7.10nb3 [martin 2003-04-28]
