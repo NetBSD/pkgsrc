@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/07/05 22:13:06 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/11 23:43:41 wiz Exp $
 #
 
-DISTNAME=		mirrormagic-2.0.0
+DISTNAME=		mirrormagic-2.0.1
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.artsoft.org/mirrormagic/
 COMMENT=		Nice little puzzle game with color graphics and sound
 
 USE_GMAKE=		YES
+PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=		/var/games/mirrormagic
@@ -18,7 +19,7 @@ do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 \
 		${WRKSRC}/mirrormagic ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mirrormagic
-	cd ${WRKSRC} && ${PAX} -r -w sounds graphics levels \
+	cd ${WRKSRC} && ${PAX} -r -w graphics levels music sounds \
 		${PREFIX}/share/mirrormagic/
 	${CHOWN} -R games:games ${PREFIX}/share/mirrormagic
 	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
@@ -27,6 +28,15 @@ do-install:
 .for directory in classic_deflektor classic_mindbender
 		${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/${directory} \
 		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
+.endfor
+	${RM} -f ${WRKDIR}/PLIST
+.for levdir in Classic_Games
+	cd ${PREFIX} && \
+	${FIND} share/mirrormagic/levels/${levdir} -type f >>${WRKDIR}/PLIST
+.endfor
+.for directory in graphics music sounds
+	cd ${PREFIX} && \
+	${FIND} share/mirrormagic/${directory} -type f >>${WRKDIR}/PLIST
 .endfor
 	${CHOWN} -R games:games ${SCORE_PATH}
 
