@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/05 07:00:21 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/06 14:30:51 rh Exp $
 #
 # This Makefile fragment is included by packages that use gtkhtml.
 #
@@ -26,10 +26,12 @@ BUILDLINK_FILES.gtkhtml+=		include/gtkhtml/*
 BUILDLINK_FILES.gtkhtml+=		lib/bonobo/libstorage_http.*
 BUILDLINK_FILES.gtkhtml+=		lib/libgtkhtml.*
 
-.include "../../print/gnome-print/buildlink.mk"
-.include "../../www/libghttp/buildlink.mk"
 .include "../../devel/bonobo/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"
+.include "../../print/gnome-print/buildlink.mk"
+.include "../../www/glibwww/buildlink.mk"
+.include "../../www/libghttp/buildlink.mk"
+.include "../../x11/controlcenter/buildlink.mk"
 
 BUILDLINK_TARGETS.gtkhtml=		gtkhtml-buildlink
 BUILDLINK_TARGETS.gtkhtml+=		gtkhtml-buildlink-config-wrapper
