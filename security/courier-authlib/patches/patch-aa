@@ -1,8 +1,80 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
 
---- Makefile.in.orig	2005-01-11 21:42:54.000000000 -0500
+--- Makefile.in.orig	2005-02-28 21:22:03.000000000 -0500
 +++ Makefile.in
-@@ -608,8 +608,8 @@ authdaemondprog_SOURCES = authdaemond.c
+@@ -465,6 +465,7 @@ commonlibdep = libcourierauthcommon.la
+ commonldflags = -module -rpath $(pkglibdir) -export-symbols-regex 'courier_auth.*_init'
+ commonlibadd = libcourierauthcommon.la
+ libcourierauthcommon_t = @CRYPTLIBS@
++libcourierauthcommon_t := $(libcourierauthcommon_t:-Wl,%=%)
+ libcourierauthcommon_la_SOURCES = \
+ 	auth.h courierauth.h \
+ 	authpwdenumerate.c \
+@@ -481,6 +482,7 @@ libcourierauthcommon_la_LDFLAGS = libcou
+ 	$(libcourierauthcommon_t:%=-Wl,%)
+ 
+ libcourierauth_t = random128/libshrandom128.a rfc822/libshencode.a @NETLIBS@
++libcourierauth_t := $(libcourierauth_t:-Wl,%=%)
+ libcourierauth_la_SOURCES = authdaemon.c authdaemonlib.c preauthdaemon.c \
+ 	authmoduser2.c authmoduser3.c debug.c \
+ 	courierauthdebug.h \
+@@ -491,6 +493,7 @@ libcourierauth_la_LDFLAGS = -Wl,numlib/l
+ 
+ # The userdb module
+ libauthuserdb_t = userdb/libshuserdb.a @shdblibrary@ @LIBGDBM@ @LIBDB@
++libauthuserdb_t := $(libauthuserdb_t:-Wl,%=%)
+ libauthuserdb_la_SOURCES = authuserdb.c preauthuserdb.c preauthuserdbcommon.c \
+ 	 authuserdbpwd.c
+ 
+@@ -500,6 +503,7 @@ libauthuserdb_la_LDFLAGS = $(commonldfla
+ 
+ # the authpam module
+ libauthpam_t = -lpam @SHADOWLIBS@ @AUTHPAMCRYPT@ @LIBDL@
++libauthpam_t := $(libauthpam_t:-Wl,%=%)
+ libauthpam_la_SOURCES = authpam.c preauthpam.c authwait.h
+ libauthpam_la_DEPENDENCIES = $(commonlibdep)
+ libauthpam_la_LIBADD = $(commonlibadd)
+@@ -513,6 +517,7 @@ libauthpwd_la_LDFLAGS = $(commonldflags)
+ 
+ # The authshadow module
+ libauthshadow_t = @SHADOWLIBS@
++libauthshadow_t := $(libauthshadow_t:-Wl,%=%)
+ libauthshadow_la_SOURCES = authshadow.c preauthshadow.c
+ libauthshadow_la_DEPENDENCIES = $(commonlibdep)
+ libauthshadow_la_LIBADD = $(commonlibadd)
+@@ -520,6 +525,7 @@ libauthshadow_la_LDFLAGS = $(commonldfla
+ 
+ # The authvchkpw module
+ libauthvchkpw_t = @VPOPMAILLIBS@ @LIBM@
++libauthvchkpw_t := $(libauthvchkpw_t:-Wl,%=%)
+ libauthvchkpw_la_SOURCES = authvchkpw.c authvchkpwlib.c preauthvchkpw.c
+ libauthvchkpw_la_DEPENDENCIES = $(commonlibdep)
+ libauthvchkpw_la_LIBADD = $(commonlibadd)
+@@ -527,6 +533,7 @@ libauthvchkpw_la_LDFLAGS = $(commonldfla
+ 
+ # The authpgsql module
+ libauthpgsql_t = @PGSQL_LIBS@ @LIBM@ @NETLIBS@
++libauthpgsql_t := $(libauthpgsql_t:-Wl,%=%)
+ libauthpgsql_la_SOURCES = authpgsql.c preauthpgsql.c authpgsqllib.c authpgsql.h
+ libauthpgsql_la_DEPENDENCIES = $(commonlibdep)
+ libauthpgsql_la_LIBADD = $(commonlibadd)
+@@ -534,6 +541,7 @@ libauthpgsql_la_LDFLAGS = $(commonldflag
+ 
+ # The authldap module
+ libauthldap_t = @LDAPLIBS@ @NETLIBS@
++libauthldap_t := $(libauthldap_t:-Wl,%=%)
+ libauthldap_la_SOURCES = authldap.c preauthldap.c authldaplib.c authldap.h
+ libauthldap_la_DEPENDENCIES = $(commonlibdep)
+ libauthldap_la_LIBADD = $(commonlibadd)
+@@ -541,6 +549,7 @@ libauthldap_la_LDFLAGS = $(commonldflags
+ 
+ # The authmysql module
+ libauthmysql_t = @MYSQL_LIBS@ @LIBM@ @NETLIBS@
++libauthmysql_t := $(libauthmysql_t:-Wl,%=%)
+ libauthmysql_la_SOURCES = authmysql.c preauthmysql.c authmysqllib.c authmysql.h
+ libauthmysql_la_DEPENDENCIES = $(commonlibdep)
+ libauthmysql_la_LIBADD = $(commonlibadd)
+@@ -608,8 +617,8 @@ authdaemondprog_SOURCES = authdaemond.c
  authdaemondprog_DEPENDENCIES = libcourierauthcommon.la \
  	liblock/liblock.la $(modules)
  
@@ -13,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
  authdaemontest_SOURCES = authdaemontest.c
  authdaemontest_DEPENDENCIES = libcourierauthcommon.la
  authdaemontest_LDADD = libcourierauthcommon.la @NETLIBS@
-@@ -1437,14 +1437,12 @@ vpopmail_config.h:
+@@ -1437,14 +1446,12 @@ vpopmail_config.h:
  authpgsqllib.lo: authpgsqllib.c authpgsqlrc.h
  
  @HAVE_AUTHPGSQL_TRUE@install-authpgsqlrc:
@@ -32,7 +104,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
  
  @HAVE_AUTHPGSQL_FALSE@install-authpgsqlrc:
  @HAVE_AUTHPGSQL_FALSE@	@:
-@@ -1458,14 +1456,12 @@ authpgsqlrc.h:
+@@ -1458,14 +1465,12 @@ authpgsqlrc.h:
  authldaplib.lo: authldaplib.c authldaprc.h
  
  @HAVE_LDAP_TRUE@install-authldaprc:
@@ -51,7 +123,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
  
  @HAVE_LDAP_FALSE@install-authldaprc:
  @HAVE_LDAP_FALSE@	@:
-@@ -1479,14 +1475,12 @@ authldaprc.h:
+@@ -1479,14 +1484,12 @@ authldaprc.h:
  authmysqllib.lo: authmysqllib.c authmysqlrc.h
  
  @HAVE_AUTHMYSQL_TRUE@install-authmysqlrc:
@@ -70,7 +142,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
  
  @HAVE_AUTHMYSQL_FALSE@install-authmysqlrc:
  @HAVE_AUTHMYSQL_FALSE@	@:
-@@ -1498,12 +1492,10 @@ authmysqlrc.h:
+@@ -1498,12 +1501,10 @@ authmysqlrc.h:
  	echo "#define AUTHMYSQLRC \"@authmysqlrc@\"" >authmysqlrc.h
  
  install-authdaemonrc:
@@ -85,7 +157,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
  
  uninstall-authdaemonrc:
  	rm -f $(DESTDIR)@authdaemonrc@.dist
-@@ -1557,10 +1549,6 @@ install-exec-hook:
+@@ -1557,10 +1558,6 @@ install-exec-hook:
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
  	$(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) authdaemondprog $(DESTDIR)$(pkglibexecdir)/authdaemond
