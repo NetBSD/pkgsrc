@@ -3,19 +3,23 @@
 # Date created:         03 Aug 1996
 # Whom:                 shanee@rabbit.augusta.de
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:55:18 hubertf Exp $
+# $Id: Makefile,v 1.2 1997/10/27 02:00:27 hubertf Exp $
 #
 
 DISTNAME=	zorro-1.1p8
 PKGNAME=	zorro-1.1.8
-CATEGORIES=	misc tk41
+CATEGORIES=	misc tk80
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 
 MAINTAINER=	shanee@augusta.de
 
-LIB_DEPENDS=	tk41\\.1\\.:${PORTSDIR}/x11/tk41
+LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
 
 NO_BUILD=	yes
+
+post-patch:
+	( cd ${WRKSRC} ; sed 's|/usr/local|'${PREFIX}'|g' \
+		<zorro >zorro.BAK ; mv zorro.BAK zorro )
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
