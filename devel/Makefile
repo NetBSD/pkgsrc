@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2002/10/30 09:15:15 rh Exp $
+# $NetBSD: Makefile,v 1.346 2002/11/02 05:46:21 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -86,6 +86,7 @@ SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
 SUBDIR+=	gail
 SUBDIR+=	gal
+SUBDIR+=	gal2
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gettext
