@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 10:29:18 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/29 05:05:41 jlam Exp $
 
 .if !defined(PY_NUMERIC_BUILDLINK2_MK)
 PY_NUMERIC_BUILDLINK2_MK=	# defined
@@ -6,7 +6,8 @@ PY_NUMERIC_BUILDLINK2_MK=	# defined
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=		pynumeric
-BUILDLINK_DEPENDS.pynumeric?=	${PYPKGPREFIX}-Numeric-*
+BUILDLINK_PKGBASE.pynumeric?=	${PYPKGPREFIX}-Numeric
+BUILDLINK_DEPENDS.pynumeric?=	${PYPKGPREFIX}-Numeric-[0-9]*
 BUILDLINK_PKGSRCDIR.pynumeric?=	../../math/py-Numeric
 
 EVAL_PREFIX+=   BUILDLINK_PREFIX.pynumeric=pynumeric
