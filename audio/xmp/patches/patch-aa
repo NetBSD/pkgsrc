@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/28 01:25:40 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2002/01/29 07:41:28 martti Exp $
 
---- Makefile.orig	Sat Sep 16 01:24:09 2000
-+++ Makefile	Sat Sep 16 01:25:45 2000
-@@ -15,6 +15,7 @@
- DDIRS	= lib docs etc src scripts debian
+--- Makefile.orig	Sat Jan 20 02:51:28 2001
++++ Makefile	Mon Jan 28 15:30:21 2002
+@@ -16,6 +16,7 @@
+ DDIRS	= lib docs etc src scripts debian modules
  CFILES	=
  DCFILES	= Makefile.rules.old config.log config.status config.cache
 +ETCDIR	= ${PREFIX}/etc
  
  all: xmp
  
-@@ -42,8 +43,8 @@
+@@ -43,8 +44,8 @@
  
  install::
  	@echo
