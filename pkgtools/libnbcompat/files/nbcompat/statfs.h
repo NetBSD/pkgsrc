@@ -1,4 +1,4 @@
-/*	$NetBSD: statfs.h,v 1.1 2003/09/03 13:35:53 jlam Exp $	*/
+/*	$NetBSD: statfs.h,v 1.2 2004/03/11 13:28:45 grant Exp $	*/
 
 #ifndef _NBCOMPAT_STATFS_H
 #define _NBCOMPAT_STATFS_H
@@ -24,6 +24,10 @@
 #endif
 #ifndef MNAMELEN
 #define	MNAMELEN	90	/* length of buffer for returned name */
+#endif
+
+#if !HAVE_FSID_T
+typedef struct { int32_t val[2]; } fsid_t;
 #endif
 
 struct statfs {
