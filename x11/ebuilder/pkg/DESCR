@@ -1,0 +1,18 @@
+Ebuilder features:
+------------------
+- Allows creation of either a QWidget or a QDialog (modal or modeless).
+- Provides a hierarchal view that shows the parent-child relations of the Qt
+  widgets in your design
+- Uses unmodified Qt widgets to create your design. This means that your
+  design looks exactly like the final implementation.
+- Load and save capability using a text file format.
+- Exports C++ header (.h) and implementation (.cc) files that compile
+  without modification. The header file contains a single class declaration
+  for your design.
+- Allows the definition of member functions, SLOTs, SIGNALs and member
+  variables from within the program. It is possible to add code to the
+  constructor and destructor of the class.
+- Allows you to add extra includes to your design. You may need this for
+  member variables or simply to use the iostream classes.
+- Allows you to modify most, if not all, properties of the widgets in your
+  design through a tabdialog.
