@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/03/04 16:52:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/03/26 14:55:12 jmmv Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -43,7 +43,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.7
-lib/libxml2.so.7.4
+lib/libxml2.so.7.5
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -78,6 +78,7 @@ share/doc/html/libxml2/libxml-nanohttp.html
 share/doc/html/libxml2/libxml-notes.html
 share/doc/html/libxml2/libxml-parser.html
 share/doc/html/libxml2/libxml-parserinternals.html
+share/doc/html/libxml2/libxml-relaxng.html
 share/doc/html/libxml2/libxml-sax.html
 share/doc/html/libxml2/libxml-schemasinternals.html
 share/doc/html/libxml2/libxml-threads.html
@@ -89,6 +90,7 @@ share/doc/html/libxml2/libxml-xmlautomata.html
 share/doc/html/libxml2/libxml-xmlerror.html
 share/doc/html/libxml2/libxml-xmlio.html
 share/doc/html/libxml2/libxml-xmlmemory.html
+share/doc/html/libxml2/libxml-xmlreader.html
 share/doc/html/libxml2/libxml-xmlregexp.html
 share/doc/html/libxml2/libxml-xmlschemas.html
 share/doc/html/libxml2/libxml-xmlschemastypes.html
