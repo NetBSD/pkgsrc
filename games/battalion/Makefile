@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/05/24 20:39:42 tv Exp $
+# $NetBSD: Makefile,v 1.14 1999/09/29 22:58:43 tron Exp $
 #
 
 DISTNAME=		battalion
@@ -11,7 +11,7 @@ DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.evl.uic.edu/aej/AndyBattalion.html
 
-DEPENDS=		Mesa-3.0:../../graphics/Mesa
+DEPENDS=		Mesa-*:../../graphics/Mesa
 
 NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 

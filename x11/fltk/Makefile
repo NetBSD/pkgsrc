@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/10 01:15:47 nathanw Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/29 22:58:45 tron Exp $
 #
 
 DISTNAME=	fltk-1.0.3-source
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.fltk.org/pub/fltk/1.0.3/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://fltk.easysw.com/
 
-DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
