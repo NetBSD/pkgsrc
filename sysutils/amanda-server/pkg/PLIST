@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2001/01/16 21:59:41 cjones Exp $
-lib/libamserver-2.4.2.so
+@comment $NetBSD: PLIST,v 1.7 2001/03/05 13:05:09 skrll Exp $
 lib/libamserver.a
 lib/libamserver.la
+lib/libamserver.so
+lib/libamserver.so.0
+lib/libamserver.so.0.0
 libexec/amcleanupdisk
 libexec/amidxtaped
 libexec/amindexd
