@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/02/24 20:43:33 tron Exp $
+# $NetBSD: Makefile,v 1.29 2005/02/24 20:52:09 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -6,11 +6,9 @@ CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
-
-BROKEN=		Edit table entries is seriously broken.
 
 DEPENDS+=	php-mbstring{,i}>=4.3.3:../../misc/php-mbstring
 DEPENDS+=	php-mysql{,i}>=4.3.3:../../databases/php-mysql
@@ -21,7 +19,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
 		PMDIR=${PMDIR} EXDIR=${EXDIR}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.6.1-pl1
+DIST_VERSION=	2.6.1-pl2
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
