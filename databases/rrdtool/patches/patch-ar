@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2000/06/27 01:32:13 hubertf Exp $
+
+--- contrib/add_ds/Makefile.in.orig	Tue Jun 27 01:52:30 2000
++++ contrib/add_ds/Makefile.in	Tue Jun 27 01:54:08 2000
+@@ -85,7 +85,7 @@
+ 
+ EXTRA_DIST = add_ds.pl.in batch.pl.in
+ 
+-contribdir = $(prefix)/contrib/add_ds
++contribdir = $(prefix)/share/rrdtool/contrib/add_ds
+ contrib_DATA = README
+ contrib_SCRIPTS = add_ds.pl  batch.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
