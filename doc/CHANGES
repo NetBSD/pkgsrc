@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2259 2003/05/18 12:08:12 lukem Exp $
+$NetBSD: CHANGES,v 1.2260 2003/05/18 13:11:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated oo2c to 2.0.9 [jtb 2003-05-17]
 	Updated phoenix-bin to 0.6 [grant 2003-05-17]
 	Updated roundup to 0.5.7 [lukem 2003-05-18]
+	Updated automake to 1.7.5 [wiz 2003-05-18]
