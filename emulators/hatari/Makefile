@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:14:40 tv Exp $
-#
+# $NetBSD: Makefile,v 1.12 2004/11/19 10:09:48 adam Exp $
 
-DISTNAME=	hatari-0.45
-PKGREVISION=	1
+DISTNAME=	hatari-0.50
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
 
@@ -10,21 +8,15 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://hatari.sourceforge.net/
 COMMENT=	Atari ST emulator
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=	YES
-USE_X11=	YES
-USE_GNU_TOOLS+=	make
+USE_BUILDLINK3=		YES
+USE_GNU_TOOLS+=		make
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 
-ALL_TARGET=	hatari
-MAKE_FLAGS+=	DATADIR="${PREFIX}/share/hatari"
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hatari ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/hatari
-	${INSTALL_DATA} ${WRKSRC}/font8.bmp ${PREFIX}/share/hatari
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hatari
-	cd ${WRKSRC}/.. && ${INSTALL_DATA} *.txt ${PREFIX}/share/doc/hatari
-	cd ${WRKSRC}/../doc && ${INSTALL_DATA} *.txt manual.html	\
+	cd ${WRKSRC} && ${INSTALL_DATA} *.txt ${PREFIX}/share/doc/hatari
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.txt *.html \
 			${PREFIX}/share/doc/hatari
 
 .include "../../devel/SDL/buildlink3.mk"
