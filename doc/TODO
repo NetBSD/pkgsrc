@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.735 2003/07/22 08:21:28 wiz Exp $
+$NetBSD: TODO,v 1.736 2003/07/22 12:28:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -77,7 +77,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o balsa2-2.0.11
-	o biew-5.5.0
 	o bind-8.4.0
 	o bluefish-0.10
 	o bzflag-1.7g0
@@ -94,7 +93,6 @@ Suggested package updates
 	o cyrus-imapd21-2.1.14
 	o ddd-3.3.5
 	o disc-cover-1.5.2
-	o dmalloc-5.2.1 [pkg/21951]
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
