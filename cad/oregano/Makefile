@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/27 12:37:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/27 19:51:25 jmmv Exp $
 #
 
 DISTNAME=		oregano-0.20
@@ -18,7 +18,6 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../devel/libglade/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../print/gnome-print/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 
