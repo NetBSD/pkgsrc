@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.134 2000/04/27 01:10:00 kim Exp $
+# $NetBSD: mk.conf.example,v 1.135 2000/04/28 10:30:36 sakamoto Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -413,6 +413,13 @@
 # connection attempts
 # Possible: not defined, YES
 # Default: not defined
+
+#LINUX_LOCALES=
+# Used in linux-locale package to install specify language(s)
+# Possible: af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
+#	    he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro \
+#	    ru sk sl sr sv th tr uk vi wa zh
+# Default: all languages
 
 #LPRNG_SUID=		YES
 # Used by LPRng to enable setuid installation of LPRng binaries.
