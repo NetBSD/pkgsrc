@@ -1,10 +1,16 @@
-$NetBSD: patch-ab,v 1.11 2002/06/25 02:13:13 itojun Exp $
+$NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
 
-use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
-
---- configure.ac.orig	Fri Jun 21 09:01:19 2002
-+++ configure.ac	Tue Jun 25 10:54:10 2002
-@@ -183,8 +183,6 @@
+--- configure.ac.orig	Tue Jun 25 15:35:16 2002
++++ configure.ac
+@@ -167,6 +167,7 @@ mips-sony-bsd|mips-sony-newsos4)
+ 	SONY=1
+ 	;;
+ *-*-netbsd*)
++	check_for_libcrypt_before=1
+ 	need_dash_r=1
+ 	;;
+ *-*-freebsd*)
+@@ -185,8 +186,6 @@ mips-sony-bsd|mips-sony-newsos4)
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -13,7 +19,7 @@ use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
  	need_dash_r=1
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
-@@ -310,6 +308,9 @@
+@@ -312,6 +311,9 @@ mips-sony-bsd|mips-sony-newsos4)
  	;;
  esac
  
@@ -23,7 +29,7 @@ use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -543,6 +544,10 @@
+@@ -545,6 +547,10 @@ AC_ARG_WITH(tcp-wrappers,
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
  				[
@@ -34,16 +40,20 @@ use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -725,7 +730,7 @@
- 		fi
- 	]
- )
--LIBS="$LIBS -lcrypto"
-+LIBS="$LIBS -lcrypt -lcrypto"
- AC_TRY_LINK_FUNC(RAND_add, AC_DEFINE(HAVE_OPENSSL),
- 	[
- 		dnl Check default openssl install dir
-@@ -2372,7 +2377,7 @@
+@@ -723,6 +729,12 @@ if test "x$PAM_MSG" = "xyes" ; then
+ 	)
+ fi
+ 
++# Some systems want crypt() from libcrypt, *not* the version in OpenSSL,
++# because the system crypt() is more featureful.
++if test "x$check_for_libcrypt_before" = "x1"; then
++	AC_CHECK_LIB(crypt, crypt)
++fi
++
+ # Search for OpenSSL
+ saved_CPPFLAGS="$CPPFLAGS"
+ saved_LDFLAGS="$LDFLAGS"
+@@ -2385,7 +2397,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
