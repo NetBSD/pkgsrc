@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/02/19 01:01:06 tv Exp $
+# $NetBSD: Makefile,v 1.20 2000/07/29 02:21:56 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/ \
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.rpm.org/
 
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libintl.a:../../devel/gettext
+DEPENDS+=	gettext-0.10.*:../../devel/gettext
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
