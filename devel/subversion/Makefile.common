@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/06/18 13:26:25 epg Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/09/08 04:47:51 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -33,7 +33,7 @@ pre-configure:
 	${MV} ${WRKSRC}/tools/backup/hot-backup.py.in.new \
 		${WRKSRC}/tools/backup/hot-backup.py.in
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		< ${WRKSRC}/tools/cgi/tweak-log.cgi \
-		> ${WRKSRC}/tools/cgi/tweak-log.cgi.new
-	${MV} ${WRKSRC}/tools/cgi/tweak-log.cgi.new \
-		${WRKSRC}/tools/cgi/tweak-log.cgi
+		< ${WRKSRC}/contrib/cgi/tweak-log.cgi \
+		> ${WRKSRC}/contrib/cgi/tweak-log.cgi.new
+	${MV} ${WRKSRC}/contrib/cgi/tweak-log.cgi.new \
+		${WRKSRC}/contrib/cgi/tweak-log.cgi
