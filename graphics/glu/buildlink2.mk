@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/11/19 09:19:37 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/11/20 22:13:22 jlam Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
@@ -34,14 +34,8 @@ _NEED_GLU=		YES
 # BUILDLINK_DEPENDS.glu to see if we need to install the pkgsrc Mesa/GLU
 # or if the built-in one is sufficient.
 #
-.    if exists(${X11BASE}/bin/glxinfo) && defined(DISPLAY)
-_GLU_VERSION!= \
-	${X11BASE}/bin/glxinfo |					\
-	${SED} -n "/OpenGL version string/s/.*Mesa *//p"
-.    else
-_GLU_VERSION?=		3.4
-.    endif
-_GLU_PKG=		glu-${_GLU_VERSION}
+.    include "../../graphics/Mesa/version.mk"
+_GLU_PKG=		glu-${_MESA_VERSION}
 _GLU_DEPENDS=		${BUILDLINK_DEPENDS.glu}
 _NEED_GLU!= \
 	if ${PKG_ADMIN} pmatch '${_GLU_DEPENDS}' ${_GLU_PKG}; then	\
