@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/07/14 08:28:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.39 2004/07/14 13:21:37 xtraeme Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 CATEGORIES=		www
@@ -75,7 +75,7 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 			--with-suexec-caller=${APACHE_USER}		\
 			--with-suexec-safepath='${APACHE_SUEXEC_PATH}'	\
 			--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT}	\
-			--with-suexec-logfile=/var/log/httpd/suexec.log
+			--with-suexec-logfile=${VARBASE}/log/httpd/suexec.log
 APACHE_MODULES+=	suexec
 CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=		APACHE_SUEXEC APACHE_SUEXEC_CONFIGURE_ARGS
@@ -101,9 +101,9 @@ RCD_SCRIPTS=		apache
 
 MAKE_DIRS=		${PREFIX}/share/httpd
 MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
-OWN_DIRS= 		/var/log/httpd
-OWN_DIRS+=		/var/db/httpd
-OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
+OWN_DIRS= 		${VARBASE}/log/httpd
+OWN_DIRS+=		${VARBASE}/db/httpd
+OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std
 
 SUBST_CLASSES=		paths
@@ -120,7 +120,7 @@ SUBST_FILES.confs=	${EGDIR}/highperformance-std.conf \
 SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g" \
 			-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g" \
 			-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g" \
-			-e "s|logs/|/var/log/httpd/|g" \
+			-e "s|logs/|${VARBASE}/log/httpd/|g" \
 			-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g" \
 			-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g" \
 			-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
