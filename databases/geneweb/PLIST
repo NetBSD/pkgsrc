@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/02/04 22:17:51 adrianp Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
@@ -7,8 +7,94 @@ bin/gwtp
 bin/gwu
 libexec/gwd
 sbin/gwsetup
-share/doc/geneweb/CREDITS.htm
-share/doc/geneweb/LICENSE.htm
+share/doc/geneweb/de/cdrom.htm
+share/doc/geneweb/images/gwlogo.png
+share/examples/geneweb/a.gwf
+share/examples/geneweb/only.txt
+share/geneweb/etc/moved.txt
+share/geneweb/gwtp_tmp/lang/lexicon.txt
+share/geneweb/images/female.png
+share/geneweb/images/gwlogo.png
+share/geneweb/images/l-pt-br.jpg
+share/geneweb/images/male.png
+share/geneweb/images/t-af.png
+share/geneweb/images/t-bg.png
+share/geneweb/images/t-br.png
+share/geneweb/images/t-ca.png
+share/geneweb/images/t-cs.png
+share/geneweb/images/t-da.png
+share/geneweb/images/t-de.png
+share/geneweb/images/t-en.png
+share/geneweb/images/t-eo.png
+share/geneweb/images/t-es.png
+share/geneweb/images/t-et.png
+share/geneweb/images/t-fi.png
+share/geneweb/images/t-fr.png
+share/geneweb/images/t-he.png
+share/geneweb/images/t-is.png
+share/geneweb/images/t-it.png
+share/geneweb/images/t-lv.png
+share/geneweb/images/t-nl.png
+share/geneweb/images/t-no.png
+share/geneweb/images/t-pl.png
+share/geneweb/images/t-pt.png
+share/geneweb/images/t-ro.png
+share/geneweb/images/t-ru.png
+share/geneweb/images/t-sl.png
+share/geneweb/images/t-sv.png
+share/geneweb/images/t-zh.png
+share/geneweb/images/gwback.jpg
+share/geneweb/images/l-af.jpg
+share/geneweb/images/l-bg.jpg
+share/geneweb/images/l-br.jpg
+share/geneweb/images/l-ca.jpg
+share/geneweb/images/l-cs.jpg
+share/geneweb/images/l-da.jpg
+share/geneweb/images/l-de.jpg
+share/geneweb/images/l-en.jpg
+share/geneweb/images/l-eo.jpg
+share/geneweb/images/l-es.jpg
+share/geneweb/images/l-et.jpg
+share/geneweb/images/l-fi.jpg
+share/geneweb/images/l-fr.jpg
+share/geneweb/images/l-he.jpg
+share/geneweb/images/l-is.jpg
+share/geneweb/images/l-it.jpg
+share/geneweb/images/l-lv.jpg
+share/geneweb/images/l-nl.jpg
+share/geneweb/images/l-no.jpg
+share/geneweb/images/l-pl.jpg
+share/geneweb/images/l-pt.jpg
+share/geneweb/images/l-ro.jpg
+share/geneweb/images/l-ru.jpg
+share/geneweb/images/l-sl.jpg
+share/geneweb/images/l-sv.jpg
+share/geneweb/images/l-zh.jpg
+share/geneweb/images/left.jpg
+share/geneweb/images/up.jpg
+share/geneweb/gwtp_tmp/lang/conf.txt
+share/geneweb/gwtp_tmp/lang/recv.txt
+share/geneweb/gwtp_tmp/lang/send.txt
+share/geneweb/gwtp_tmp/lang/send_gedcom.txt
+share/geneweb/gwtp_tmp/README
+share/geneweb/gwtp_tmp/gwtp
+share/geneweb/gwtp_tmp/gwtp.log
+share/geneweb/gwtp_tmp/passwd
+share/geneweb/etc/copyr.txt
+share/geneweb/etc/index.txt
+share/geneweb/etc/perso.txt
+share/geneweb/etc/redirect.txt
+share/geneweb/etc/renamed.txt
+share/geneweb/etc/robot.txt
+share/geneweb/etc/updfam.txt
+share/geneweb/etc/updind.txt
+share/doc/geneweb/images/gwback.jpg
+share/doc/geneweb/images/l-de.jpg
+share/doc/geneweb/images/l-en.jpg
+share/doc/geneweb/images/l-fr.jpg
+share/doc/geneweb/images/l-it.jpg
+share/doc/geneweb/images/l-nl.jpg
+share/doc/geneweb/images/l-sv.jpg
 share/doc/geneweb/de/access.htm
 share/doc/geneweb/de/consang.htm
 share/doc/geneweb/de/diruse.htm
@@ -26,25 +112,6 @@ share/doc/geneweb/de/report.htm
 share/doc/geneweb/de/server.htm
 share/doc/geneweb/de/start.htm
 share/doc/geneweb/de/update.htm
-share/doc/geneweb/en/access.htm
-share/doc/geneweb/en/cdrom.htm
-share/doc/geneweb/en/consang.htm
-share/doc/geneweb/en/diruse.htm
-share/doc/geneweb/en/divide.htm
-share/doc/geneweb/en/faq.htm
-share/doc/geneweb/en/gwformat.htm
-share/doc/geneweb/en/gwsetup.htm
-share/doc/geneweb/en/initial.htm
-share/doc/geneweb/en/links.htm
-share/doc/geneweb/en/maint.htm
-share/doc/geneweb/en/merge.htm
-share/doc/geneweb/en/pcustom.htm
-share/doc/geneweb/en/problem.htm
-share/doc/geneweb/en/recover.htm
-share/doc/geneweb/en/report.htm
-share/doc/geneweb/en/server.htm
-share/doc/geneweb/en/start.htm
-share/doc/geneweb/en/update.htm
 share/doc/geneweb/fr/access.htm
 share/doc/geneweb/fr/cdrom.htm
 share/doc/geneweb/fr/consang.htm
@@ -64,15 +131,25 @@ share/doc/geneweb/fr/report.htm
 share/doc/geneweb/fr/server.htm
 share/doc/geneweb/fr/start.htm
 share/doc/geneweb/fr/update.htm
-share/doc/geneweb/images/gwback.jpg
-share/doc/geneweb/images/gwlogo.gif
-share/doc/geneweb/images/l-de.jpg
-share/doc/geneweb/images/l-en.jpg
-share/doc/geneweb/images/l-fr.jpg
-share/doc/geneweb/images/l-it.jpg
-share/doc/geneweb/images/l-nl.jpg
-share/doc/geneweb/images/l-sv.jpg
-share/doc/geneweb/index.htm
+share/doc/geneweb/en/access.htm
+share/doc/geneweb/en/cdrom.htm
+share/doc/geneweb/en/consang.htm
+share/doc/geneweb/en/diruse.htm
+share/doc/geneweb/en/divide.htm
+share/doc/geneweb/en/faq.htm
+share/doc/geneweb/en/gwformat.htm
+share/doc/geneweb/en/gwsetup.htm
+share/doc/geneweb/en/initial.htm
+share/doc/geneweb/en/links.htm
+share/doc/geneweb/en/maint.htm
+share/doc/geneweb/en/merge.htm
+share/doc/geneweb/en/pcustom.htm
+share/doc/geneweb/en/problem.htm
+share/doc/geneweb/en/recover.htm
+share/doc/geneweb/en/report.htm
+share/doc/geneweb/en/server.htm
+share/doc/geneweb/en/start.htm
+share/doc/geneweb/en/update.htm
 share/doc/geneweb/it/access.htm
 share/doc/geneweb/it/cdrom.htm
 share/doc/geneweb/it/consang.htm
@@ -124,88 +201,14 @@ share/doc/geneweb/sv/report.htm
 share/doc/geneweb/sv/server.htm
 share/doc/geneweb/sv/start.htm
 share/doc/geneweb/sv/update.htm
-share/examples/geneweb/a.gwf
-share/examples/geneweb/only.txt
-share/geneweb/etc/copyr.txt
-share/geneweb/etc/index.txt
-share/geneweb/etc/perso.txt
-share/geneweb/etc/redirect.txt
-share/geneweb/etc/renamed.txt
-share/geneweb/etc/robot.txt
-share/geneweb/etc/updfam.txt
-share/geneweb/etc/updind.txt
-share/geneweb/gwtp_tmp/README
-share/geneweb/gwtp_tmp/gwtp
-share/geneweb/gwtp_tmp/gwtp.log
-share/geneweb/gwtp_tmp/lang/conf.txt
-share/geneweb/gwtp_tmp/lang/recv.txt
-share/geneweb/gwtp_tmp/lang/send.txt
-share/geneweb/gwtp_tmp/lang/send_gedcom.txt
-share/geneweb/gwtp_tmp/passwd
-share/geneweb/images/female.gif
-share/geneweb/images/gwback.jpg
-share/geneweb/images/gwlogo.gif
-share/geneweb/images/l-af.jpg
-share/geneweb/images/l-bg.jpg
-share/geneweb/images/l-br.jpg
-share/geneweb/images/l-ca.jpg
-share/geneweb/images/l-cs.jpg
-share/geneweb/images/l-da.jpg
-share/geneweb/images/l-de.jpg
-share/geneweb/images/l-en.jpg
-share/geneweb/images/l-eo.jpg
-share/geneweb/images/l-es.jpg
-share/geneweb/images/l-et.jpg
-share/geneweb/images/l-fi.jpg
-share/geneweb/images/l-fr.jpg
-share/geneweb/images/l-he.jpg
-share/geneweb/images/l-is.jpg
-share/geneweb/images/l-it.jpg
-share/geneweb/images/l-lv.jpg
-share/geneweb/images/l-nl.jpg
-share/geneweb/images/l-no.jpg
-share/geneweb/images/l-pl.jpg
-share/geneweb/images/l-pt.jpg
-share/geneweb/images/l-ro.jpg
-share/geneweb/images/l-ru.jpg
-share/geneweb/images/l-sl.jpg
-share/geneweb/images/l-sv.jpg
-share/geneweb/images/l-zh.jpg
-share/geneweb/images/left.jpg
-share/geneweb/images/male.gif
-share/geneweb/images/t-af.gif
-share/geneweb/images/t-bg.gif
-share/geneweb/images/t-br.gif
-share/geneweb/images/t-ca.gif
-share/geneweb/images/t-cs.gif
-share/geneweb/images/t-da.gif
-share/geneweb/images/t-de.gif
-share/geneweb/images/t-en.gif
-share/geneweb/images/t-eo.gif
-share/geneweb/images/t-es.gif
-share/geneweb/images/t-et.gif
-share/geneweb/images/t-fi.gif
-share/geneweb/images/t-fr.gif
-share/geneweb/images/t-he.gif
-share/geneweb/images/t-is.gif
-share/geneweb/images/t-it.gif
-share/geneweb/images/t-lv.gif
-share/geneweb/images/t-nl.gif
-share/geneweb/images/t-no.gif
-share/geneweb/images/t-pl.gif
-share/geneweb/images/t-pt.gif
-share/geneweb/images/t-ro.gif
-share/geneweb/images/t-ru.gif
-share/geneweb/images/t-sl.gif
-share/geneweb/images/t-sv.gif
-share/geneweb/images/t-zh.gif
-share/geneweb/images/up.jpg
+share/doc/geneweb/CREDITS.htm
+share/doc/geneweb/LICENSE.htm
+share/doc/geneweb/index.htm
 share/geneweb/lang/advanced.txt
 share/geneweb/lang/alias_lg.txt
 share/geneweb/lang/lexicon.txt
 share/geneweb/lang/start.txt
 share/geneweb/lang/version.txt
-share/geneweb/setup/intro.txt
 share/geneweb/setup/lang/backg.htm
 share/geneweb/setup/lang/bsi.htm
 share/geneweb/setup/lang/bsi_err.htm
@@ -257,20 +260,21 @@ share/geneweb/setup/lang/save.htm
 share/geneweb/setup/lang/simple.htm
 share/geneweb/setup/lang/traces.htm
 share/geneweb/setup/lang/welcome.htm
-@dirrm share/geneweb/setup/lang
-@dirrm share/geneweb/setup
-@dirrm share/geneweb/lang
+share/geneweb/setup/intro.txt
 @dirrm share/geneweb/images
 @dirrm share/geneweb/gwtp_tmp/lang
 @dirrm share/geneweb/gwtp_tmp
 @dirrm share/geneweb/etc
+@dirrm share/geneweb/lang
+@dirrm share/geneweb/setup/lang
+@dirrm share/geneweb/setup
 @dirrm share/geneweb
-@dirrm share/examples/geneweb
-@dirrm share/doc/geneweb/sv
-@dirrm share/doc/geneweb/nl
-@dirrm share/doc/geneweb/it
 @dirrm share/doc/geneweb/images
-@dirrm share/doc/geneweb/fr
-@dirrm share/doc/geneweb/en
 @dirrm share/doc/geneweb/de
+@dirrm share/doc/geneweb/en
+@dirrm share/doc/geneweb/fr
+@dirrm share/doc/geneweb/it
+@dirrm share/doc/geneweb/nl
+@dirrm share/doc/geneweb/sv
 @dirrm share/doc/geneweb
+@dirrm share/examples/geneweb
