@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/04 19:24:13 jlam Exp $
 #
 
 DISTNAME=	gnustep-back-0.8.5
@@ -25,5 +25,5 @@ LDFLAGS+=		-lossaudio
 .include "../../x11/gnustep-gui/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/x11.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

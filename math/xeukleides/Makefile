@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/17 20:32:22 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/04 19:24:13 jlam Exp $
 # FreeBSD Id: ports/math/eukleides/Makefile,v 1.1 2002/06/04 18:40:20 ijliao Exp
 
 DISTNAME=	xeukleides.0.9.0
@@ -21,5 +21,4 @@ ALL_TARGET=	xeukleides
 USE_GMAKE=	yes
 
 .include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/x11.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
