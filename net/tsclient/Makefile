@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/17 08:14:18 xtraeme Exp $
 #
 
-DISTNAME=		tsclient-0.124
-PKGREVISION=		2
+DISTNAME=		tsclient-0.132
 CATEGORIES=		net
 MASTER_SITES=		http://www.gnomepro.com/tsclient/
 
@@ -14,9 +13,6 @@ DEPENDS+=       	rdesktop-[0-9]*:../../net/rdesktop
 DEPENDS+=       	vncviewer-[0-9]*:../../net/vncviewer
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
-
-# this is because they modified the distfile without changing the number
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
