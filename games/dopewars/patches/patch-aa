@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2002/12/06 16:50:03 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/30 16:12:38 jmmv Exp $
 
---- Makefile.in.orig	Mon Oct 21 13:09:21 2002
+--- Makefile.in.orig	2003-06-06 21:19:21.000000000 +0200
 +++ Makefile.in
 @@ -132,10 +132,10 @@ am__quote = @am__quote@
  install_sh = @install_sh@
@@ -15,3 +15,12 @@ $NetBSD: patch-aa,v 1.4 2002/12/06 16:50:03 jmmv Exp $
  SCORE = ${SCOREDIR}/dopewars.sco
  EXTRA_DIST = ABOUT-NLS LICENCE dopewars.desktop dopewars.spec.in depcomp \
                   runindent.sh win32/Makefile win32/README win32/contid.h \
+@@ -512,8 +512,6 @@ install-data-local:
+ 	@chgrp games ${SCORE} || chgrp wheel ${SCORE} || \
+ 	  echo "Unable to change group ownership of the high score file"
+ 	chmod 0660 ${SCORE}
+-	${mkinstalldirs} ${DESKTOPDIR}
+-	${INSTALL} -m 0644 ${srcdir}/${DESKTOP} ${DESKTOPDIR}
+ 
+ uninstall-local:
+ 	/bin/rm -f ${SCORE} ${DESKTOPDIR}/${DESKTOP}
