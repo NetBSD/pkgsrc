@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/02/05 23:45:36 salo Exp $
+
+--- src/input/r_matroska.cpp.orig	Sat Jan 29 23:33:37 2005
++++ src/input/r_matroska.cpp	Sat Jan 29 23:34:16 2005
+@@ -1668,7 +1668,7 @@
+           id = 0;
+           profile = 0;
+           if (t->a_formattag == FOURCC('M', 'P', '4', 'A')) {
+-            if (!parse_aac_codec_id(string(t->codec_id), id, profile))
++            if (!parse_aac_codec_id(t->codec_id, id, profile))
+               mxerror(FMT_TID "Malformed codec id '%s'.\n", ti->fname,
+                       (int64_t)t->tnum, t->codec_id);
+           } else {
