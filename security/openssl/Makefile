@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/04/30 04:16:11 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/05/11 22:24:16 tron Exp $
 
 DISTNAME=		openssl-0.9.6
 CATEGORIES=		security
@@ -31,8 +31,10 @@ CONFIGURE_ENV=		CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"
 
-PATCHDIR=		${WRKDIR}/.patches
 .if ${OPSYS} == "NetBSD"
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		openssl-0.9.6-netbsd.patch.gz
+
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
 .endif
 
@@ -46,15 +48,6 @@ IGNORE=			${PKGNAME} requires shared object support
 DEPENDS=		rsaref-2.0p3:../../security/rsaref
 CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
-.endif
-
-pre-patch:
-	${MKDIR} ${WRKDIR}/.patches
-	@${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
-.if ${OPSYS} == "NetBSD"
-	for FILE in ${.CURDIR}/patches/patch_netbsd-*; do \
-		${CP} $$FILE ${PATCHDIR}/patch-$${FILE##*-}; \
-	done
 .endif
 
 # The Perl stuff doesn't work yet (nor did it work properly in SSLeay...)
