@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 10:03:34 adam Exp $
+
+--- fontforge/Makefile.dynamic.in.orig	2004-09-30 03:56:44.000000000 +0000
++++ fontforge/Makefile.dynamic.in
+@@ -13,7 +13,7 @@ LIBTOOL = @LIBTOOL@
+ CC = @CC@
+ 
+ X_CFLAGS = @X_CFLAGS@
+-X_LIBS = @X_LIBS@
++X_LIBS = @X_LIBS@ -Wl,-R${X11BASE}/lib
+ X_11LIB = @X_11LIB@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+@@ -69,7 +69,7 @@ splinerefigure.o: splinerefigure.c
+ #this makes all the .ui files but wildcarding doesn't work too well if the
+ # files don't exist.
+ nomen.h pfaedit-ui.c pfaedit-en.ui: $(srcdir)/nomen-*.c makenomenh.c
+-	$(LIBTOOL) $(CC) -o makenomenh $(CFLAGS) $(srcdir)/makenomenh.c $(LIBS)
++	$(LIBTOOL) $(CC) -o makenomenh $(CFLAGS) $(LDFLAGS) $(srcdir)/makenomenh.c $(LIBS)
+ 	-ln -s $(srcdir)/nomen-*.c .
+ 	./makenomenh
+ 	mv pfaedit-ui-en.c pfaedit-ui.c
