@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.941 2003/10/13 12:17:55 jmmv Exp $
+$NetBSD: TODO,v 1.942 2003/10/13 14:09:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -25,11 +25,6 @@ Suggested new packages
 	gd-noX11
 	Version of gd for systems without X11.
 	[cjep is looking at this]
-
-	jabberd
-	Messaging server.
-	http://www.jabberstudio.org/projects/jabberd2/releases/
-	[pkgsrc-wip]
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
@@ -101,10 +96,6 @@ Suggested new packages
 	Perl CGI Form builder
 	${MASTER_SITE_PERL_CPAN:=CGI/}
 
-	cvsd
-	Wrapper for cvs pserver
-	http://tiefighter.et.tudelft.nl/~arthur/cvsd/
-
 Suggested package updates
 =========================
 
@@ -113,7 +104,7 @@ Suggested package updates
 	o Lesstif-0.93.91
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.8.0
-	o TeXmacs-1.0.2.2
+	o TeXmacs-1.0.2.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0
@@ -145,12 +136,13 @@ Suggested package updates
 	o distcc-2.11.1
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
+	o dropbear-0.38 [pkg/22984]
 	o dvd+rw-tools-5.9.4.4.4 [pkg/23106]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o echoping-5.0.1
 	o elk-3.99.5
-	o elm-me-2.4pl107a
+	o elm-me-2.4pl108
 	o ettercap-0.6.b
 	o evilwm-0.99.16
 	o evolution-1.4.4
@@ -161,17 +153,19 @@ Suggested package updates
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
+	o fvwm-2.4.17
 	o gaim-0.71 [jmmv]
 	o gauche-0.7 [kei]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
 	o generator-0.35
+	o gentoo-0.11.36
 	o getmail-3.2.0
 	o gettext-0.12.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
-	o gkrellm-2.1.12 [pkgsrc-wip]
+	o gkrellm-2.1.21 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o global-4.6
 	o gnats-4.0
@@ -214,7 +208,7 @@ Suggested package updates
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
 	o lilypond-2.0.0
-	o links-2.11pre12
+	o links-2.11pre13
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -230,6 +224,7 @@ Suggested package updates
 	o mimedefang-2.38
 	o minicom-2.1
 	o mowitz-0.3.0
+	o mozilla-1.4.1
 	o mozilla-thunderbird-0.2
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
@@ -247,6 +242,7 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
+	o nxtvepg-2.6.0
 	o openh323-1.11.2
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
@@ -302,7 +298,7 @@ Suggested package updates
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
 	o tla-1.1.0.7
-	o top-3.5b12.7
+	o top-3.5b12.8
 	o transcode-0.6.10
 	o ttf2pt1-3.4.3
 	o vfu-4.03
@@ -330,6 +326,7 @@ Suggested package updates
 	o xmms-crossfade-0.3.4
 	o xmule-1.6.1
 	o xosview-1.8.0 [pkg/20265]
+	o xpdf-2.03
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
