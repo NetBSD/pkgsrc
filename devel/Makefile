@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2002/08/28 19:34:31 seb Exp $
+# $NetBSD: Makefile,v 1.314 2002/09/01 02:37:30 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -173,6 +173,9 @@ SUBDIR+=	noweb
 SUBDIR+=	nqc
 SUBDIR+=	oaf
 SUBDIR+=	opencm
+SUBDIR+=	p4
+SUBDIR+=	p4-docs
+SUBDIR+=	p4d
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
