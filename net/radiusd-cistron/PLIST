@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/15 10:12:54 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:36 tron Exp $
 bin/radclient
 bin/radlast
 bin/radtest
@@ -53,7 +53,7 @@ share/doc/radiusd-cistron/README.simul
 share/doc/radiusd-cistron/README.tunnel
 share/doc/radiusd-cistron/README.usersfile
 @dirrm share/doc/radiusd-cistron
-@unexec ${RMDIR} %D/etc/raddbr 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/raddbr 2>/dev/null || ${TRUE}
 @unexec ${RM} -f /var/log/radius.log
 @unexec ${RM} -f /var/run/radiusd.pid
 @unexec echo "Leaving /var/run/radutmp, /var/log/radwtmp and /var/log/radacct alone."

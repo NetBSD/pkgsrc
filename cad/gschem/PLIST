@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/18 18:08:43 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:14 tron Exp $
 bin/gschem
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gschemdoc.info
 info/gschemdoc.info
@@ -28,5 +28,5 @@ share/gEDA/scheme/generate_netlist.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/list-keys.scm
 share/gEDA/scheme/print-NB-attribs.scm
-@unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gEDA 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}

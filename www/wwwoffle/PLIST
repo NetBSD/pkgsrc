@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/09/05 16:56:54 fredb Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:53 tron Exp $
 bin/wwwoffle
 bin/wwwoffle-hash
 bin/wwwoffle-ls
@@ -60,15 +60,15 @@ share/doc/wwwoffle/pl/LSM
 share/doc/wwwoffle/pl/README.1st
 share/doc/wwwoffle/pl/README.lang
 share/examples/wwwoffle.conf
-@unexec rmdir %D/share/doc/wwwoffle/ru 2>/dev/null || true
+@unexec rmdir %D/share/doc/wwwoffle/ru 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/pl
-@unexec rmdir %D/share/doc/wwwoffle/nl 2>/dev/null || true
-@unexec rmdir %D/share/doc/wwwoffle/it 2>/dev/null || true
+@unexec rmdir %D/share/doc/wwwoffle/nl 2>/dev/null || ${TRUE}
+@unexec rmdir %D/share/doc/wwwoffle/it 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/fr
 @dirrm share/doc/wwwoffle/es
 @dirrm share/doc/wwwoffle/de
 @dirrm share/doc/wwwoffle
 @exec ${GTAR} xzCf / %D/libdata/wwwoffle-spool.tar.gz
 @unexec cd /var/wwwoffle && ${RM} -rf html* search*
-@unexec ${RMDIR} /var/wwwoffle/* 2>/dev/null && ${RMDIR} /var/wwwoffle 2>/dev/null || true
+@unexec ${RMDIR} /var/wwwoffle/* 2>/dev/null && ${RMDIR} /var/wwwoffle 2>/dev/null || ${TRUE}
 @unexec if [ -d /var/wwwoffle ]; then echo "If you won't use the WWWOFFLE package anymore, remove the cache manually by"; echo '	rm -rf /var/wwwoffle'; fi

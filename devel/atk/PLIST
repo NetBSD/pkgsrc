@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/23 03:05:16 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:17 tron Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -57,7 +57,7 @@ share/gtk-doc/html/atk/atk.html
 share/gtk-doc/html/atk/book1.html
 share/gtk-doc/html/atk/index.sgml
 @dirrm share/gtk-doc/html/atk
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0

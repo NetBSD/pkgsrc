@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/12 04:56:08 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:58 tron Exp $
 lib/gtk-2.0/2.0.0/engines/libmetal.la
 lib/gtk-2.0/2.0.0/engines/libmetal.so
 lib/gtk-2.0/2.0.0/engines/libpixmap.la
@@ -16,4 +16,4 @@ share/themes/Redmond95/gtk-2.0/gtkrc
 @dirrm share/themes/Metal/gtk-2.0
 @dirrm share/themes/Metal
 @dirrm lib/gtk-2.0/2.0.0/engines
-@unexec ${RMDIR} %D/lib/gtk-2.0/2.0.0 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/gtk-2.0/2.0.0 2>/dev/null || ${TRUE}

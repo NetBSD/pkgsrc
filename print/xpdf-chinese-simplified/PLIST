@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/08 10:02:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:38 tron Exp $
 share/xpdf/chinese-simplified/Adobe-GB1.cidToUnicode
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-0
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-1
@@ -36,4 +36,4 @@ share/xpdf/chinese-simplified/GBK.unicodeMap
 share/xpdf/chinese-simplified/ISO-2022-CN.unicodeMap
 @dirrm share/xpdf/chinese-simplified/CMap
 @dirrm share/xpdf/chinese-simplified
-@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || true
+@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || ${TRUE}
