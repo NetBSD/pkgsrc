@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2005/03/23 22:07:08 markd Exp $
+
+--- kresources/kolab/knotes/resourcekolab.cpp.orig	2005-02-24 00:09:07.000000000 +1300
++++ kresources/kolab/knotes/resourcekolab.cpp
+@@ -52,7 +52,7 @@ static const char* inlineMimeType = "tex
+ ResourceKolab::ResourceKolab( const KConfig *config )
+   : ResourceNotes( config ), ResourceKolabBase( "ResourceKolab-KNotes" )
+ {
+-  setType( "kolab" );
++  setType( "imap" );
+ }
+ 
+ ResourceKolab::~ResourceKolab()
