@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/29 11:26:45 rh Exp $
+bin/bfspeed
+bin/bftest
+include/blowfish.h
+lib/libblowfish.a
+share/doc/blowfish/COPYRIGHT
+share/doc/blowfish/README
+share/doc/blowfish/VERSION
+share/doc/blowfish/blowfish.doc
+@dirrm share/doc/blowfish
