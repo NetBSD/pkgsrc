@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2005/01/10 15:47:18 xtraeme Exp $
+$NetBSD: patch-af,v 1.6 2005/01/17 14:42:35 xtraeme Exp $
 
---- configure.orig	2004-12-27 17:48:08.000000000 +0100
-+++ configure	2005-01-10 15:44:21.000000000 +0100
-@@ -36429,34 +36429,10 @@
+--- configure.orig	2005-01-17 15:03:22.000000000 +0100
++++ configure	2005-01-17 15:05:30.000000000 +0100
+@@ -36436,30 +36436,10 @@
  fi;
  
  
@@ -23,25 +23,17 @@ $NetBSD: patch-af,v 1.5 2005/01/10 15:47:18 xtraeme Exp $
 -_ACEOF
 -
 -else
--  orbit_exec_prefix=
--  orbit_includes=
--  orbit_libs=
--  orbit_idl=
+   orbit_exec_prefix=
+   orbit_includes=
+   orbit_libs=
+   orbit_idl=
 -  echo "$as_me:$LINENO: result: not found" >&5
 -echo "${ECHO_T}not found" >&6
 -fi
--
--
--
--
-+orbit_exec_prefix=
-+orbit_includes=
-+orbit_libs=
-+orbit_idl=
  
-   echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5
- echo $ECHO_N "checking if we should build MySQLFS... $ECHO_C" >&6
-@@ -36731,7 +36707,7 @@
+ 
+ 
+@@ -36738,7 +36718,7 @@
  else
    bench_dirs=""
  fi
@@ -50,12 +42,3 @@ $NetBSD: patch-af,v 1.5 2005/01/10 15:47:18 xtraeme Exp $
  
  
  # Don't build readline, i have it already
-@@ -38915,7 +38891,7 @@
- server_scripts=
- thread_dirs=
- 
--sql_client_dirs="libmysql client"
-+sql_client_dirs="libmysql regex client"
- linked_client_targets="linked_libmysql_sources"
- CLIENT_LIBS=$NON_THREADED_CLIENT_LIBS
- if test "$THREAD_SAFE_CLIENT" != "no"
