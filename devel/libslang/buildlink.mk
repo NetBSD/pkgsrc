@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:39 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libslang.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libslang?=	libslang>=1.4.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libslang}:../../devel/libslang
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libslang=libslang
+BUILDLINK_PREFIX.libslang_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libslang=	include/slcurses.h
 BUILDLINK_FILES.libslang+=	include/slang.h
 BUILDLINK_FILES.libslang+=	lib/libslang.*

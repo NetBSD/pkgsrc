@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:52 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:36 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libghttp.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libghttp?=	libghttp>=1.0.9
 DEPENDS+=	${BUILDLINK_DEPENDS.libghttp}:../../www/libghttp
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libghttp=libghttp
+BUILDLINK_PREFIX.libghttp_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libghttp=	include/ghttp*
 BUILDLINK_FILES.libghttp+=	lib/libghttp.*
 
