@@ -1,30 +1,22 @@
-$NetBSD: patch-ac,v 1.3 1998/12/29 14:23:04 tron Exp $
+$NetBSD: patch-ac,v 1.4 1999/01/01 23:40:43 tron Exp $
 
---- libgnome/gnome-gen-mimedb.c.orig	Wed Dec 16 07:48:42 1998
-+++ libgnome/gnome-gen-mimedb.c	Tue Dec 29 14:39:59 1998
-@@ -1,10 +1,14 @@
- #include <stdio.h>
-+#include <string.h>
+--- support/Makefile.in.orig	Wed Dec 16 10:56:34 1998
++++ support/Makefile.in	Sat Jan  2 00:14:13 1999
+@@ -160,7 +160,7 @@
  
- #define GEN_MIMEDB 1
- #include "gnome-magic.c"
+ popt_sources = findme.c poptconfig.c poptparse.c popt.c popthelp.c
  
- extern GnomeMagicEntry *gnome_magic_parse (const char *filename, int *nents);
+-libgnomesupport_la_SOURCES = gnomesupport.h $(popt_sources)
++libgnomesupport_la_SOURCES = gnomesupport.h $(popt_sources) gnome-argp.c
+ #libgnomesupport_la_LIBADD  = @LTLIBOBJS@
+ libgnomesupport_la_LDFLAGS = -version-info 0:0:0
  
-+char *program_invocation_name;
-+char *program_invocation_short_name;
-+
- int main(int argc, char *argv[])
- {
-   GnomeMagicEntry *ents = NULL;
-@@ -16,6 +20,10 @@
- 
-   gnome_do_not_create_directories = 1;
-   gnomelib_init("gnome-gen-mimedb", VERSION);
-+
-+  program_invocation_name = argv[0];
-+  if ((program_invocation_short_name = strrchr(argv[0], '/')) == NULL)
-+    program_invocation_short_name = argv[0];
- 
-   if(argc > 1) {
-     if(argv[1][0] == '-') {
+@@ -188,7 +188,7 @@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libgnomesupport_la_LIBADD = 
+ libgnomesupport_la_OBJECTS =  findme.lo poptconfig.lo poptparse.lo \
+-popt.lo popthelp.lo
++popt.lo popthelp.lo gnome-argp.lo
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
