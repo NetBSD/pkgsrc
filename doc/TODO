@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.199 2003/01/19 01:29:23 seb Exp $
+$NetBSD: TODO,v 1.200 2003/01/19 06:08:48 salo Exp $
 
 Suggested new packages
 ======================
@@ -100,7 +100,6 @@ Suggested package updates
 	o dylan-interpreter-2.3.9
 	o elinks-0.4.0
 	o elm-me-2.4pl100
-	o evilwm-0.99.14 [pkg/19257]
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
 	o fltk-1.1.1
