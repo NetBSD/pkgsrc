@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/13 10:31:14 tron Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/23 15:00:35 erh Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -20,6 +20,7 @@ RPMFILES=		aaa_base-9.1-0.${SUSE_ARCH}.rpm \
 			bash-2.05b-305.${SUSE_ARCH}.rpm \
 			coreutils-5.2.1-23.${SUSE_ARCH}.rpm \
 			glibc-2.3.3-98.${SUSE_ARCH}.rpm \
+			libgcc-3.3.3-41.i586.rpm \
 			libstdc++-3.3.3-41.${SUSE_ARCH}.rpm \
 			ncurses-5.4-59.${SUSE_ARCH}.rpm \
 			readline-4.3-306.${SUSE_ARCH}.rpm \
