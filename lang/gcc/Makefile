@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/05/14 14:01:33 yyamano Exp $
+# $NetBSD: Makefile,v 1.43 2002/08/06 23:44:36 kristerw Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -77,6 +77,10 @@ pre-install:
 
 .if (${OPSYS} != SunOS)
 post-install:
+.	if exists(/usr/include/g++/FlexLexer.h)
+		${LN} -s /usr/include/g++/FlexLexer.h \
+			 ${PREFIX}/${PKGNAME}/include/g++-3/FlexLexer.h
+.	endif
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
