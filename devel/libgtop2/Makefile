@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/08/09 10:44:45 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/12/13 20:27:42 xtraeme Exp $
 
-DISTNAME=		libgtop-2.0.0
+DISTNAME=		libgtop-2.0.7
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		4
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +37,7 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgtop-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/support/gnome-support-2.0.pc.in
 USE_MAKEINFO=		YES
 INFO_FILES=		libgtop2.info
 
@@ -52,6 +52,7 @@ CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
+.include "../../devel/popt/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

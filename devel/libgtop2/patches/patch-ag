@@ -1,16 +1,16 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/11/04 02:56:17 rh Exp $
+$NetBSD: patch-ag,v 1.2 2003/12/13 20:27:42 xtraeme Exp $
 
---- sysdeps/freebsd/procmem.c.orig	Thu May 27 20:56:49 1999
-+++ sysdeps/freebsd/procmem.c
+--- sysdeps/freebsd/procmem.c.orig	Sat Sep  6 00:18:49 2003
++++ sysdeps/freebsd/procmem.c	Sat Sep  6 00:22:45 2003
 @@ -31,8 +31,12 @@
  #include <sys/param.h>
  #include <sys/proc.h>
  #include <sys/resource.h>
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 105020000)
++#ifdef __NetBSD__ && (__NetBSD_Version__ >= 105020000)
++#include <uvm/uvm_extern.h>
++#else
  #include <vm/vm_object.h>
  #include <vm/vm_map.h>
-+#else
-+#include <uvm/uvm_extern.h>
 +#endif
  
  #include <sys/vnode.h>
@@ -19,10 +19,10 @@ $NetBSD: patch-ag,v 1.1.1.1 2002/11/04 02:56:17 rh Exp $
  #include <sys/user.h>
  #endif
  #include <sys/sysctl.h>
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 105020000)
- #include <vm/vm.h>
-+#else
++#ifdef __NetBSD__ && (__NetBSD_Version__ >= 105020000)
 +#include <uvm/uvm.h>
++#else
+ #include <vm/vm.h>
 +#endif
  
 -#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
@@ -39,25 +39,65 @@ $NetBSD: patch-ag,v 1.1.1.1 2002/11/04 02:56:17 rh Exp $
  #else
  	struct vm_object object;
  #endif
-@@ -233,17 +241,27 @@
+@@ -136,9 +144,24 @@
+ 		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
+ 		return;
+ 	}
++#if defined(__FreeBSD__) && (__FreeBSD_version >= 500013)
++
++#define        XXX_P_VMSPACE   ki_vmspace
++
++       buf->rss_rlim = pinfo [0].ki_rssize;
++
++       buf->vsize = buf->size = (u_int64_t) pagetok
++               (pinfo [0].ki_tsize + pinfo [0].ki_dsize + pinfo[0].ki_ssize)
++                       << LOG1024;
++       buf->resident = buf->rss = (u_int64_t) pagetok
++               (pinfo [0].ki_rssize) << LOG1024;
++
++#else
++
++#define        XXX_P_VMSPACE   kp_proc.p_vmspace
+ 
+ 	if (kvm_read (server->machine.kd,
+-		      (unsigned long) pinfo [0].kp_proc.p_limit,
++			(unsigned long) pinfo [0].XXX_P_VMSPACE,
+ 		      (char *) &plimit, sizeof (plimit)) != sizeof (plimit)) {
+ 		glibtop_warn_io_r (server, "kvm_read (plimit)");
+ 		return;
+@@ -154,11 +177,12 @@
+ 	
+ 	buf->resident = buf->rss = (u_int64_t) pagetok
+ 		(vms->vm_rssize) << LOG1024;
++#endif
+ 
+ 	/* Now we get the shared memory. */
+ 
+ 	if (kvm_read (server->machine.kd,
+-		      (unsigned long) pinfo [0].kp_proc.p_vmspace,
++		      (unsigned long) pinfo [0].XXX_P_VMSPACE,
+ 		      (char *) &vmspace, sizeof (vmspace)) != sizeof (vmspace)) {
+ 		glibtop_warn_io_r (server, "kvm_read (vmspace)");
+ 		return;
+@@ -233,17 +257,26 @@
  		/* If the object is of type vnode, add its size */
  
  #if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
 +#if defined(UVM_VNODE_VALID)
  		if (!vnode.v_uvm.u_flags & UVM_VNODE_VALID)
  			continue;
+-
 +#endif
- 
  		if ((vnode.v_type != VREG) || (vnode.v_tag != VT_UFS) ||
  		    !vnode.v_data) continue;
- 
-+#if (__NetBSD_Version__ >= 105250000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 105250000)
 +		/* Reference count must be at least two. */
 +		if (vnode.v_usecount <= 1)
 +			continue;
 +
 +		buf->share += pagetok (vnode.v_uobj.uo_npages) << LOG1024;
 +#else
+ 
  		/* Reference count must be at least two. */
  		if (vnode.v_uvm.u_obj.uo_refs <= 1)
  			continue;
