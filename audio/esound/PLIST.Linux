@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2003/09/25 04:39:11 grant Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2004/03/10 20:34:48 minskim Exp $
 bin/esddsp
 lib/libesddsp.a
 lib/libesddsp.la
 lib/libesddsp.so
 lib/libesddsp.so.2
-lib/libesddsp.so.2.32
+lib/libesddsp.so.2.33
