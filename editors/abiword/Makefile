@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/05/02 23:35:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/05/20 01:57:59 wiz Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -41,5 +41,8 @@ LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lpng
 MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}" \
 		OS_CFLAGS="${CPPFLAGS}" \
 		OS_DLLFLAGS="${LDFLAGS}"
+
+post-install:
+	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
 
 .include "../../mk/bsd.pkg.mk"
