@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1492 2003/02/26 21:49:35 fredb Exp $
+$NetBSD: CHANGES,v 1.1493 2003/02/27 02:19:32 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xemacs to 21.4.12nb2 [tron 2003-02-26]
 	Updated leafnode to 1.9.36 [cjep 2003-02-26]
 	Updated mgetty to 1.1.28nb2 [fredb 2003-02-26]
+	Updated latex-mk to 1.0 [dmcmahill 2003-02-26]
