@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/09 17:37:43 tv Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/13 07:13:37 jlam Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -35,7 +35,7 @@ do-build:
 	  ${CAT} ${WRKSRC}/h2ph_log \
 		| ${GREP} -- "->" \
 		| ${SED} -e "s,.*\./,${PERL5_SITEARCH}/,g" ) \
-		| sort -u \
+		| ${SORT} -u \
 		> ${WRKSRC}/packlist
 
 do-install:
