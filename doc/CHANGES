@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4857 2004/02/16 11:48:45 martti Exp $
+$NetBSD: CHANGES,v 1.4858 2004/02/16 14:08:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ircII to 20040216 [mrg 2004-02-16]
 	Updated darkice to 0.14 [xtraeme 2004-02-16]
 	Updated stunnel to 4.05 [martti 2004-02-16]
+	Updated wine to 20040213 [adam 2004-02-16]
