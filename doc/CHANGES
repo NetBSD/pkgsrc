@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5613 2004/04/16 17:35:20 tv Exp $
+$NetBSD: CHANGES,v 1.5614 2004/04/16 18:20:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-utils to 4.0.5
 	Updated xfce4-wm to 4.0.5
 	Updated xfce4-wm-themes to 4.0.5
+	Added urban-1.5.2 [xtraeme 2004-04-15]
