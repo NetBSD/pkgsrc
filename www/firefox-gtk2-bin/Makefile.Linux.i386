@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2004/02/09 10:36:54 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.2 2004/09/20 15:48:58 erh Exp $
 
-DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-linux-gtk2+xft
+DISTNAME=	${MOZILLA}-${MOZ_DISTVER}-i686-linux-gtk2+xft
 
 MOZ_PLATFORM=	linux

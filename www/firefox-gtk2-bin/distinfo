@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/03/05 14:48:08 grant Exp $
+$NetBSD: distinfo,v 1.3 2004/09/20 15:48:58 erh Exp $
 
-SHA1 (firefox-0.8-i686-linux-gtk2+xft.tar.gz) = 5b2f750fb40762c21cf803a360cd688868f59aad
-Size (firefox-0.8-i686-linux-gtk2+xft.tar.gz) = 7673647 bytes
-SHA1 (firefox-0.8-sparc-sun-solaris2.8-gtk2.tar.gz) = 88731bc26a6cc01ab4767c1301390a987c570ea1
-Size (firefox-0.8-sparc-sun-solaris2.8-gtk2.tar.gz) = 13181736 bytes
+SHA1 (firefox-1.0PR-i686-linux-gtk2+xft.tar.gz) = c9998d33849358a92c4e0bb0b510e6e07edb68a9
+Size (firefox-1.0PR-i686-linux-gtk2+xft.tar.gz) = 8144842 bytes
