@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7560 2004/10/25 15:29:48 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7561 2004/10/25 15:39:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4858,3 +4858,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kile to 1.7.1 [markd 2004-10-25]
 	Updated dcraw to 1.213 [seb 2004-10-25]
 	Updated gkrellm to 2.2.4 [xtraeme 2004-10-25]
+	Updated liferea to 0.6.0 [minskim 2004-10-25]
