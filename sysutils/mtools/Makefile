@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/09/26 11:09:27 agc Exp $
+# $NetBSD: Makefile,v 1.19 2000/09/26 13:46:34 agc Exp $
 #
 
 DISTNAME=	mtools-3.9.5
@@ -34,11 +34,11 @@ post-patch:
 
 post-install:
 .ifdef MTOOLS_ENABLE_FLOPPYD
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.else
 	${RM} -f ${PREFIX}/man/man1/floppyd.1
 	${RM} -f ${PREFIX}/bin/floppyd ${PREFIX}/bin/floppyd_installtest
 	${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}
-.else
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
