@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 1999/03/06 20:37:32 kim Exp $
+
+--- zotnet/tws/dtime.c.orig	Sun Jul 12 16:16:33 1998
++++ zotnet/tws/dtime.c	Sat Mar  6 15:17:04 1999
+@@ -247,7 +247,7 @@
+ char *
+ dctime (struct tws *tw)
+ {
+-    static char buffer[25];
++    static char buffer[26];
+ 
+     if (!tw)
+ 	return NULL;

@@ -1,0 +1,20 @@
+$NetBSD: patch-cc,v 1.1 1999/03/06 20:37:32 kim Exp $
+
+--- uip/show.c.orig	Thu Dec  3 18:22:07 1998
++++ uip/show.c	Sat Mar  6 14:55:52 1999
+@@ -315,6 +315,15 @@
+ 	vec[vecp] = NULL;
+     }
+ 
++    /* If the "proc" is "mhshow", add "-file" if showing file or draft.
++     * Ruud de Rooij <ruud@debian.org>  Wed, 24 Feb 1999 19:31:40 +0100
++     */
++    if (strcmp (r1bindex (proc, '/'), "mhshow") == 0 && (draftsw || file) ) {
++       vec[vecp] = vec[vecp - 1];
++       vec[vecp - 1] = "-file";
++       vec[++vecp] = NULL;
++    }
++
+     /*
+      * If "proc" is mhl, then run it internally
+      * rather than exec'ing it.
