@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/17 21:39:46 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/08/22 22:22:55 tron Exp $
 share/texmf/source/latex/oberdiek/twoopt.sty
 share/texmf/source/latex/oberdiek/pagesel.sty
 share/texmf/source/latex/oberdiek/hypbmsec.sty
@@ -477,7 +477,8 @@ share/texmf/source/latex/picins/LIES.MICH
 share/texmf/source/latex/picins/README.1st
 share/texmf/source/latex/picins/mexhat2.msp
 @dirrm share/texmf/source/latex/picins
-share/texmf/source/latex/aguplus
+@exec mkdir -p %D/share/texmf/source/latex/aguplus
+@dirrm share/texmf/source/latex/aguplus
 share/texmf/source/latex/afthesis/README
 share/texmf/source/latex/afthesis/usethesis.tex
 share/texmf/source/latex/afthesis/usethesis.dvi
