@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2004/01/22 08:36:04 grant Exp $
+# $NetBSD: Makefile,v 1.66 2004/01/22 15:46:43 adam Exp $
 #
 
-DISTNAME=	Wine-20031212
+DISTNAME=	Wine-20040121
 PKGNAME=	${DISTNAME:S/W/w/}
-PKGREVISION=	 	1
+WRKSRC= 	${WRKDIR}/${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.ibiblio.org/Linux/ALPHA/wine/development/ \
+MASTER_SITES=	http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/} \
 		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
@@ -24,7 +24,6 @@ ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
 
 BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 
-WRKSRC= 		${WRKDIR}/${DISTNAME:S/W/w/}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -34,8 +33,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
-
-UNLIMIT_RESOURCES=      datasize
 
 REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
 
@@ -70,7 +67,6 @@ post-install:
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
-.include "../../textproc/icu/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
