@@ -34,6 +34,8 @@
  */
 
 
+#include <sys/cdefs.h>		/* hfpkg */
+
 #include <stdio.h>
 #include <string.h>	/* memcpy()/memset() or bcopy()/bzero() */
 #include <assert.h>	/* assert() */
