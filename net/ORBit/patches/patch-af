@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.6 2001/10/04 19:25:26 rh Exp $
+
+--- src/IIOP/Makefile.in.orig	Sun May 13 09:20:26 2001
++++ src/IIOP/Makefile.in
+@@ -128,7 +128,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lpthread
+ @HAVE_HOSTS_ACCESS_TRUE@libIIOP_la_DEPENDENCIES =  $(addsuffix .lo, \
+ @HAVE_HOSTS_ACCESS_TRUE@$(basename $(filter %.o, $(shell ar t \
+ @HAVE_HOSTS_ACCESS_TRUE@$(LIBWRAP_PATH)))))

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
+$NetBSD: patch-ag,v 1.7 2001/10/04 19:25:26 rh Exp $
 
 --- src/IIOP/connection.c.orig	Sun May 13 09:07:46 2001
 +++ src/IIOP/connection.c
@@ -18,16 +18,18 @@ $NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
  #include <fcntl.h>
  #include <sys/socket.h>
  #include <sys/un.h>
-@@ -32,7 +34,7 @@
+@@ -31,8 +33,9 @@
+ #include <sys/ioctl.h>
  #include <signal.h>
  #include <syslog.h>
++#include <pthread.h>
  
 -#if defined(HAVE_TCPD_H) && defined(HAVE_HOSTS_ACCESS)
 +#if defined(HAVE_TCPD_H)
  #include <tcpd.h>
  #endif
  
-@@ -80,7 +82,7 @@
+@@ -80,7 +83,7 @@
  GIOPConnectionList giop_connection_list;
  static GSList *iiop_unix_socket_list = NULL;
  
@@ -36,7 +38,7 @@ $NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
  static const char *argv0_val = NULL;
  #endif
  
-@@ -104,7 +106,7 @@
+@@ -104,7 +107,7 @@
    struct sigaction mypipe;
    g_assert(sizeof(GIOPMessageHeader) == 12);
  
@@ -45,7 +47,7 @@ $NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
    argv0_val = g_strdup(g_basename(argv0)); /* For TCP wrappers */
  #endif
  
-@@ -1007,7 +1009,7 @@
+@@ -1007,7 +1010,7 @@
   */
  int allow_severity = LOG_INFO, deny_severity = LOG_NOTICE;
  
@@ -54,7 +56,7 @@ $NetBSD: patch-ag,v 1.6 2001/05/21 19:59:04 rh Exp $
  DEFINE_LOCK(tcp_wrappers_usage);
  
  #endif
-@@ -1033,7 +1035,7 @@
+@@ -1033,7 +1036,7 @@
  
    newfd = accept(GIOP_CONNECTION_GET_FD(connection), &sock, &n);
  

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2001/10/03 22:36:40 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2001/10/04 19:25:25 rh Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/ORBit/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,6 +23,8 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/ltconfig
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 
+CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
+
 # for DISTNAME, PKGNAME, and PLIST
 ORBIT_MAJOR=		5
 ORBIT_MINOR=		8
@@ -31,5 +34,6 @@ INFO_FILES=		libIDL.info
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
 .include "../../security/tcp_wrappers/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
