@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2957 2005/01/23 04:36:44 jlam Exp $
+$NetBSD: TODO,v 1.2958 2005/01/24 14:41:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rtcw-1.41.3
-	o ruby-1.8.2
 	o rudiments-0.27
 	o rvm-1.10
 	o sablecc-2.18.2
