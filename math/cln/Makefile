@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:12:55 tv Exp $
-#
+# $NetBSD: Makefile,v 1.4 2004/11/29 08:47:29 adam Exp $
 
-DISTNAME=	cln-1.1.6
-PKGREVISION=	1
+DISTNAME=	cln-1.1.9
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/ \
 		ftp://ftp.santafe.edu/pub/gnu/ \
@@ -15,8 +13,8 @@ COMMENT=	CLN Class Library for Numbers
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/cln.pc.in
 
