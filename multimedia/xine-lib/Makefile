@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/01/07 14:54:47 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/30 10:23:45 tron Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=       	win32-codecs>=011227:../../multimedia/win32-codecs
@@ -36,6 +38,7 @@ PLIST_SUBST+=		OPENGL_PLUGIN='@comment '
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
