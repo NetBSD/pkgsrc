@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/06/15 22:46:27 wiz Exp $
 
 SHA1 (dclock.shar.Z) = 1e9dac79e11f7075fd216e90d45218f499c9b035
 Size (dclock.shar.Z) = 23855 bytes
-SHA1 (patch-aa) = b246b08dfe0c1980f5488e25df7defd9e7e15ae6
+SHA1 (patch-aa) = 2566c9d51455ab1c1a47a0a81394eb01fcef972a
 SHA1 (patch-ab) = a09a39fa57baa92ef50febfb060a0ab50febc4e2
 SHA1 (patch-ac) = 71ea6994b2466ca69a2e5a0b23bd944f94f182be
