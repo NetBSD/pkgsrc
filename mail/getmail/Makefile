@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2003/10/29 11:55:27 xtraeme Exp $
-#
+# $NetBSD: Makefile,v 1.14 2004/03/29 08:16:38 snj Exp $
 
-DISTNAME=	getmail-3.2.1
+DISTNAME=	getmail-3.2.2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.ca/~charlesc/software/getmail-3.0/ \
 		http://www.qcc.ca/~charlesc/software/getmail-3.0/old-versions/
