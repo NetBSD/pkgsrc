@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1783 2003/03/27 12:58:09 agc Exp $
+$NetBSD: CHANGES,v 1.1784 2003/03/27 14:15:30 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1321,7 +1321,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Added clamav-0.54 [agc 2003-03-26]
 	Added SDL_sound-1.0.0 [wiz 2003-03-26]
 	Updated opera6 to 6.12 [jdolecek 2003-03-26]
-	Updated pkglint to 3.47 [atatat 2003-03-26]
+	Updated pkglint to 3.47 [atatat 2003-03-27]
 	Updated rxvt to 2.7.10 [wiz 2003-03-27]
 	Updated polsms to 1.9.1h [zuntum 2003-03-27]
 	Updated mined to 2000.6 [agc 2003-03-27]
+	Updated lsof to 4.67 [atatat 2003-03-27]
