@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/02/22 23:27:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/25 16:09:46 minskim Exp $
 #
 
 DISTNAME=		bitlbee-0.84
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
