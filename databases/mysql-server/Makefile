@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/05/14 10:53:29 grant Exp $
+# $NetBSD: Makefile,v 1.55 2004/05/14 11:09:56 grant Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -6,7 +6,6 @@ COMMENT=		MySQL 3, a free SQL database (server)
 
 .include "../../databases/mysql-client/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
@@ -30,6 +29,14 @@ MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 BUILD_DEFS+=		MYSQL_DATADIR
 OWN_DIRS_PERMS+=	${MYSQL_DATADIR} ${MYSQL_USER} ${MYSQL_GROUP} 0700
 
+# XXX TCP wrapper support is broken on (at least) Linux and Solaris.
+# ref: http://bugs.mysql.com/bug.php?id=599
+#      http://mail-index.netbsd.org/tech-pkg/2003/08/07/0003.html
+.if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
+CONFIGURE_ARGS+=	--with-libwrap
+.  include "../../security/tcp_wrappers/buildlink3.mk"
+.endif
+
 post-configure:
 	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h
 
@@ -46,7 +53,6 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/mysql-client/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "pth"
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
