@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/16 15:29:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/27 20:48:59 seb Exp $
 
 DISTNAME=		HTML-Format-1.23
 PKGNAME=		p5-${DISTNAME}
@@ -12,11 +12,8 @@ COMMENT=		perl5 modules for converting HTML to other text formats
 DEPENDS+=		p5-Font-AFM>=1.18:../../fonts/p5-Font-AFM
 DEPENDS+=		p5-HTML-Tree>=3.04:../../www/p5-HTML-Tree
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML-Format/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

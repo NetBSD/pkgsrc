@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/04/20 18:46:07 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/27 20:48:58 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:53:13 jfitz Exp
 #
 
@@ -12,9 +12,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Perl5 module for interfacing to the UCD SNMP library
 
-DEPENDS=	ucd-snmp-4.2.4*:../../net/ucd-snmp
-
-USE_PERL5=	# defined
+USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/SNMP/.packlist
 
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
@@ -23,9 +21,6 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/SNMP/.packlist
 
 PLFILES=	async1.pl async2.pl ipforward.pl mibtree.pl mibwalk.pl
 PLFILES+=	pingmib.pl tablewalk.pl testleak.pl
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 post-build:
 	@for i in ${PLFILES} ; do ${ECHO} "#! ${PREFIX}/bin/perl" | ${CAT} - ${WRKSRC}/examples/$$i > ${WRKDIR}/$$i ; done
@@ -38,4 +33,6 @@ post-install:
 test:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+.include "../../lang/perl5/module.mk"
+.include "../../net/ucd-snmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/27 20:49:01 seb Exp $
 
 DISTNAME=	Apache-Filter-1.019
 PKGNAME=	p5-${DISTNAME}
@@ -9,13 +9,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 module to alter the output of previous Apache handlers
 
-DEPENDS+=	ap-perl>=1.25:../../www/ap-perl
-
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Filter/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../www/ap-perl/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

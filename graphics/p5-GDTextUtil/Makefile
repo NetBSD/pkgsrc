@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/03/13 17:37:14 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/27 20:49:02 seb Exp $
 #
 
 DISTNAME=	GDTextUtil-0.80
@@ -14,11 +14,8 @@ COMMENT=	Perl 5 text utilities for use with the GD drawing package
 
 DEPENDS+=	p5-GD>=1.30:../../graphics/p5-GD
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/Text/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

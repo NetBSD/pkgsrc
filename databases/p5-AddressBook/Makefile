@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/28 02:22:59 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/27 20:49:02 seb Exp $
 
 DISTNAME=	AddressBook-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-XML-DOM>=1.25:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-perl-ldap>=0.20:../../databases/p5-perl-ldap
 DEPENDS+=	p5-pilot-link-[0-9]*:../../comms/p5-pilot-link
 
-USE_PERL5=	YES
+USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/AddressBook/.packlist
 
 REPLACE_PERL=	examples/SyncAbook.pm
@@ -25,9 +25,6 @@ REPLACE_PERL+=	examples/phonelist.cgi
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC};							\
@@ -35,4 +32,5 @@ post-install:
 		${INSTALL_DATA} $${file} ${EGDIR};			\
 	done
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
