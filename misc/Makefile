@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2003/07/24 07:09:06 agc Exp $
+# $NetBSD: Makefile,v 1.163 2003/07/28 14:58:07 drochner Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -126,6 +126,7 @@ SUBDIR+=	qterm
 SUBDIR+=	reed
 SUBDIR+=	root
 SUBDIR+=	root-tail
+SUBDIR+=	routeplanner-cli
 SUBDIR+=	rpm
 SUBDIR+=	sch
 SUBDIR+=	sci
