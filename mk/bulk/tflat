@@ -1,0 +1,178 @@
+#!/usr/bin/awk -f
+# $NetBSD: tflat,v 1.1 2001/01/28 20:58:50 dmcmahill Exp $
+#
+# Copyright (c) 2001 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by 
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+
+BEGIN {
+	if (ARGC != 3){
+		printf("tflat:  wrong number of arguments\n");
+		usage();
+		exit(1);
+	}
+
+	if ( ARGV[1] ~/^-u$/ ) { 
+		up=1;
+	}
+	else{
+		if ( ARGV[1] ~/^-d$/ ) { up=0; }
+		else{ 
+			printf("tflat: unknown option  \"%s\"\n",ARGV[1]);
+			usage();
+			exit(1);
+		}
+	}
+	
+	InFile = ARGV[2];
+
+	#
+	# Read in the entire depends tree
+	# 
+
+	if (up){
+        	while(getline < InFile > 0){topdepends[$1] = topdepends[$1] " " $2 " " ;}
+		depstr = " is depended on by: ";
+	}
+	else{
+        	while(getline < InFile > 0){topdepends[$2] = topdepends[$2] " " $1 " " ;}
+		depstr = " depends on: ";
+	}
+
+	#
+	# Now recurse the tree to give a flattened depends list for each pkg
+	#
+
+
+	depth=0;
+	for (toppkg in topdepends){
+		find_all_depends(toppkg);
+	}
+
+	for (x in alldepends){
+		print x depstr alldepends[x] | "sort";
+	}
+
+	printf("\n");
+        exit 0
+} 
+
+function find_all_depends(pkg,i,deps){
+
+	# if we find the package already has been fully depended
+	# then return the depends list
+	if (pkg in alldepends){
+		return(alldepends[pkg]);	
+	}
+
+	# if we find the package listed in its own depends list, then
+	# return an empty list
+	if (topdepends[pkg]~reg2str(pkg)){
+		alldepends[pkg] = " ";
+		return(alldepends[pkg]);	
+	}
+
+	# otherwise recursively gather depends that each of the depends
+	# has
+	split(topdepends[pkg],deps);
+	i=1;
+	while ( i in deps ){
+		alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(deps[i]);
+		i=i+1;
+	}
+	alldepends[pkg] = uniq(alldepends[pkg]);
+	return(alldepends[pkg]);	
+}
+
+#
+# take a string which has special characters like '+' in it and
+# escape them.  Also put a space before and after since thats how
+# we'll distinguish things like gnome from gnome-libs
+#
+function reg2str(reg){
+	gsub(/\+/,"\\\+",reg);
+	reg = " "reg" ";
+	return(reg);
+}
+
+#
+# take the depends lists and uniq them.
+#
+function uniq(list,deps,i,ulist){
+	
+	# split out the depends
+	split(list,deps);
+
+	i=1;
+	ulist = " ";
+	while (i in deps){
+		if (ulist !~reg2str(deps[i])){
+			ulist = ulist deps[i]" ";
+		}
+		i++;
+	}
+	return(ulist);
+}
+
+#
+# show usage
+#
+function usage(){
+	printf("tflat -- flatten a depends tree.  tflat is used to show all\n");
+	printf("         packages which depend upon a given package or alternatively\n");
+	printf("         all packages which are depend upon by a given package.\n");
+	printf("\n");
+	printf("Usage:\ttflat -u|-d depfile\n");
+	printf("\n");
+	printf("Options:\t-d\tgo down the depends tree (ie \"foo is depends on:\")\n");
+	printf("        \t-u\tgo up the depends tree (ie \"foo is depended on by:\")\n");
+	printf("\n");
+	printf("Input file format is in the form\n");
+	printf("foo	bar\n");
+	printf("foo	baz\n");
+	printf("bar	libbar\n");
+	printf("\n");
+	printf("meaning \"foo is depended upon by bar,\n");
+	printf("         foo is depended upon by baz,\n");
+	printf("         libbar is depended upon by bar\"\n");
+	printf("\n");
+	printf("The typical use is:\n");
+	printf("cd /usr/pkgsrc\n");
+	printf("./mk/bulk/printdepends > .depends\n");
+	printf("./mk/bulk/tflat -u .depends > .supports\n");
+	printf("./mk/bulk/tflat -d .depends > .requires\n");
+	printf("\n");
+
+}
+
