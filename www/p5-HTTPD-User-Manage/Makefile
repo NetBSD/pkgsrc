@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/18 15:20:51 veego Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/26 05:18:32 jlam Exp $
 
 DISTNAME=	HTTPD-User-Manage-1.58
 PKGNAME=	p5-${DISTNAME}
@@ -14,13 +14,20 @@ USE_PERL5=              # defined
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/HTTPD-User-Manage/.packlist
 REPLACE_PERL=		user_manage
 
+PKG_SYSCONFSUBDIR?=	httpd
+
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-patch:
-	@${MV} ${WRKSRC}/user_manage ${WRKSRC}/user_manage.old
-	@${SED} -e "s+__PREFIX__+${PREFIX}+g" \
-		${WRKSRC}/user_manage.old > ${WRKSRC}/user_manage
+	cd ${WRKSRC}; for file in user_manage; do			\
+		${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			$${file} > $${file}.fixed;			\
+		if [ -x $${file} ]; then				\
+			${CHMOD} +x $${file}.fixed;			\
+		fi;							\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${PREFIX}/bin
