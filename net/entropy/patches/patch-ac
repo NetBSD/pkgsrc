@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/29 18:40:43 tv Exp $
+
+--- entropy.conf-dist.orig	Wed Nov 19 12:40:20 2003
++++ entropy.conf-dist
+@@ -66,7 +66,7 @@ crypto_default=lorenz
+ # If you list modules here, your node will reject connections trying to
+ # use the specified module. The modules crypt0, crypt1 and incr could
+ # be listed here, but they aren't (currently) used anyways.
+-crypto_reject=crypt0,incr
++crypto_reject=crypt0,crypt1,crypt2,vmc1,incr
+ 
+ # Select a log filename. Default is entropy.log in the current directory.
+ logfile=entropy.log
