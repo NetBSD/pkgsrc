@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/10 09:05:28 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/02/11 21:15:48 zuntum Exp $
 
-SHA1 (SDL_net-1.2.0.tar.gz) = 69c43246c365a1f418cd86d8cc4fd7127976dc0b
-Size (SDL_net-1.2.0.tar.gz) = 156381 bytes
-SHA1 (patch-aa) = 2c1b70ea58eb61ef11c8be16d51b96e3dac1ad69
+SHA1 (SDL_net-1.2.3.tar.gz) = 227d6bbbddd1f810b8e60ba061832fe905763917
+Size (SDL_net-1.2.3.tar.gz) = 167153 bytes
