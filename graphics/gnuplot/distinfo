@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:48 agc Exp $
+
+MD5 (gnuplot-3.7.1.tar.gz) = 30798b4c14ea734969a86ee41a9c1dca
+SHA1 (patch-aa) = 74dc3f1bc1daf4976ea080dbdef5c22a709a7d7a
+SHA1 (patch-ab) = 902b43ac6b2a026b563f9aca6b4f434643c80b1c

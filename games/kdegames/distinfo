@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:51 agc Exp $
+
+MD5 (kdegames-1.1.2.tar.bz2) = 49daf53e4fc06f7190599e8bb0c19c98
+SHA1 (patch-aa) = 967b5b99fe604beb6fd085e510f93dc646445dba
+SHA1 (patch-ab) = 1da1f76b1e7df578f285493b703cd82afea5f25f
+SHA1 (patch-ac) = b6b665ea4e17f71698e670c5e9f2f9107e65a73f

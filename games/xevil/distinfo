@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:28 agc Exp $
+
+MD5 (xevil1.5.1e.tar.Z) = dc3a32f6c88a3348d190b853bec70fcf
+SHA1 (patch-aa) = 310dbab8e8921d4cef9e336052e8bbd0a32f704a
+SHA1 (patch-ab) = 1a733a118dee1aebc56b441df929315df328de20
+SHA1 (patch-ac) = 3562033cb5827af191e8c6fa2d42b380610651b6

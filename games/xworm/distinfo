@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:11 agc Exp $
+
+MD5 (xworm102.tar.gz) = 17c7a53c48d4b7489d507fab020e4134
+SHA1 (patch-aa) = afdc57c408d1659d20bbb6c73e507df28619a7c7
+SHA1 (patch-ab) = ed79deb1d7133f39d7e51e022eff685d1af42829

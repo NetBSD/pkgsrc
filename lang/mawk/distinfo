@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:32 agc Exp $
+
+MD5 (mawk1.3.3.tar.gz) = ad46743641924e1234b2bfba92641085
+SHA1 (patch-aa) = 49ef8e8f9d5392c47933eadba87aceae1079d89b

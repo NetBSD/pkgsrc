@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:58 agc Exp $
+
+MD5 (povray-3.1g/povuni_s.tgz) = 6da91fb1d3d48cd44f46b831760d233f
+MD5 (povray-3.1g/povuni_d.tgz) = dff3b8f3bc2a6dd131a9d008d0f46295
+SHA1 (patch-aa) = a89307c6b7e8b6b42bcd1e6313810c621b5055c3
+SHA1 (patch-ab) = c037d717dcbc16800ae0ec2d6ca6777a6fd394d1
+SHA1 (patch-ac) = 59caec80ec5d094227d16a3d96caf8747a01da81

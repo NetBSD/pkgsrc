@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:35 agc Exp $
+
+MD5 (gnugo-2.6.tar.gz) = 34c84ae83668a66677df4032fad478d9
+SHA1 (patch-aa) = 8ba523dd10dfc3c08af06750bf1eff9eff76571b

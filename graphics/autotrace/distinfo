@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:44 agc Exp $
+
+MD5 (autotrace-0.26.tar.gz) = 3b4dd2f63840642aad6110aa80ac299d
+SHA1 (patch-aa) = f90fae93064171c057873489dc7daa26048dc118

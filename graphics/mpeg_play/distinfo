@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:50 agc Exp $
+
+MD5 (mpeg_play-2.4-patched-src.tar.gz) = 8fd5d8c2137b14234da4dfc898900166
+SHA1 (patch-aa) = b9538234c58dd7e671e61bc4e0ed14efb1f3e733
+SHA1 (patch-ab) = 104053d82635859c66d4a968c08110e5b33d88de

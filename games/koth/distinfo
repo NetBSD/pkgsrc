@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:28:04 agc Exp $
+
+MD5 (koth-0.7.6.tar.gz) = 9aa23274328ac8a9ab912830ea458200
+SHA1 (patch-aa) = 5235e02794ef94ee1c49d895b8cc0ab4ec09a68b

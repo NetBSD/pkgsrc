@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:27 agc Exp $
+
+MD5 (xemeraldia-0.3.tar.gz) = 35c30637ea597ce995d8b51a3d8e4080
+MD5 (xemeraldia-0.3to0.31.patch.gz) = 77287135b5d28d67c1245241dbd6534f
+SHA1 (patch-aa) = 0a6bf6be729bf289a940c39c76f7aba921dcc981
+SHA1 (patch-ab) = dd8d2cca732bd3dbd0598e0484067a8c8aba306f
+SHA1 (patch-ac) = 8488955229bcf85472c424e503e7f09c7cb7785c

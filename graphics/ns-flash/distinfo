@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:02 agc Exp $
+
+MD5 (flash/5.0r47/flash_linux.tar.gz) = 5e27c9c86790fce3f667819fc1c40c46
+MD5 (flash/5.0r52/flash_solaris.tar.gz) = c9d782711553efabc0bcf8b0c3850cc4

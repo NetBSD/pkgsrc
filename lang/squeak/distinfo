@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:09 agc Exp $
+
+MD5 (squeak/Squeak2.7-src.tar.gz) = b52ff01a25eac4d5ec0088b432f2d8a1
+MD5 (squeak/Squeak2.7.image.gz) = c74bdb08de5e88eab5dd5e042dc0f98e
+MD5 (squeak/Squeak2.7.changes.gz) = 303220f35e986ea27003ddda2087c12a
+MD5 (squeak/SqueakV2.sources.gz) = 80487895bb1d1cbfddc8736273cccc92
+SHA1 (patch-aa) = 596cbde681465e6501fb8dd490175a5ff37cfbb3
+SHA1 (patch-ac) = e8fc5e9456b98adb11ac0e96ecc9f744491e1d05

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:08 agc Exp $
+
+MD5 (sed-3.02.tar.gz) = 74db866f052b47fa8ec1c2b8f967bc69
+MD5 (sedmb108.diff.gz) = 8ad0b4c5a9f93a0499378c610a6d062f
+SHA1 (patch-aa) = 232eadc7bf171af0a05ef931b391e47787cafce2
