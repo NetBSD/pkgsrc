@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.349 2004/08/06 15:27:21 jlam Exp $
+# $NetBSD: Packages.txt,v 1.350 2004/08/07 10:15:47 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2115,7 +2115,7 @@ of features.  bsd.options.mk is a pkgsrc framework that provides
 generic handling of those options that determine different ways in
 which the packages can be built.  It's possible for the user to specify
 exactly which sets of options will be built into a package or to allow
-a set of global default options apply .
+a set of global default options apply.
 
 
  9.1 Global default options
@@ -2221,7 +2221,7 @@ The correct way to check for an option is to check whether it is listed
 in PKG_OPTIONS.
 
 
- 11 Debugging
+ 10 Debugging
  ============
 
 To check out all the gotchas when building a package, here are the steps
