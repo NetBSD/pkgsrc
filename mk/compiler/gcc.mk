@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.61 2004/03/13 20:02:52 jlam Exp $
+# $NetBSD: gcc.mk,v 1.62 2004/03/30 21:39:24 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -121,6 +121,16 @@ _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .endfor
+
+# GCC has this annoying behaviour where it advocates in a multi-line
+# banner the use of "#include" over "#import" when including headers.
+# This generates a huge number of warnings when building practically all
+# Objective-C code where it is convention to use "#import".  Suppress
+# the warning if we're building Objective-C code using GCC.
+# 
+.if !empty(_LANGUAGES.gcc:Mobjc)
+CFLAGS+=	-Wno-import
+.endif
 
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
 #
