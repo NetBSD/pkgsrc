@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2000/07/15 20:39:27 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/20 14:33:25 drochner Exp $
 #
 
 DISTNAME=	qtarch-2.0-1
 PKGNAME=	qtarch-2.0
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	x11 devel
-MASTER_SITES=	http://www.qtarch.intranova.net/
+MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.qtarch.intranova.net/
+HOMEPAGE=	http://qtarch.sourceforge.net/
 
 DEPENDS+=	qt2-*:../../x11/qt
 DEPENDS+=	png-*:../../graphics/png
