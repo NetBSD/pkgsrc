@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: java-wrapper.sh,v 1.1.1.1 2004/06/04 16:35:07 jmmv Exp $
+# $NetBSD: java-wrapper.sh,v 1.2 2004/08/11 14:45:31 tv Exp $
 #
 # java-wrapper - Runs different Java implementations transparently.
 # Copyright (c) 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -52,16 +52,19 @@ else
 fi
 
 varname=$(echo ${progname} | ${TR} a-z A-Z)
+eval cmd=\"\$${varname}_CMD\"
 eval impl=\"\$${varname}\"
 
-if [ -z "${impl}" -a -z "${DEFAULT}" ]; then
-	err "no mapping defined (${varname} and DEFAULT are empty)."
+if [ -z "${cmd}" -a -z "${impl}" -a -z "${DEFAULT}" ]; then
+	err "no mapping defined (${varname}_CMD, ${varname}, and DEFAULT are empty)."
 fi
 
-bin=${PREFIX}/bin/${impl:-${DEFAULT}}-${progname}
+if [ -z "${cmd}" ]; then
+	cmd=${PREFIX}/bin/${impl:-${DEFAULT}}-${progname}
 
-if [ ! -f ${bin} ]; then
-	err "cannot locate ${bin} (incorrect mapping or missing package)."
+	if [ ! -f ${cmd} ]; then
+		err "cannot locate ${cmd} (incorrect mapping or missing package)."
+	fi
 fi
 
-${bin} "$@"
+exec ${cmd} "$@"
