@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.1 2001/10/31 23:31:21 zuntum Exp $
+@comment $NetBSD: PLIST.pre,v 1.2 2004/12/21 15:32:03 xtraeme Exp $
 Acrobat4/Browsers/netscape
 Acrobat4/Browsers/${PLATFORM}/nppdf.so
 Acrobat4/ReadMe
@@ -40,5 +40,4 @@ Acrobat4/Resource/Font/TimesNewRoman-BoldItalic
 Acrobat4/Resource/Font/TimesNewRoman-Italic
 Acrobat4/Resource/Font/ZapfDingbats
 Acrobat4/bin/acroread
-bin/acroread
 bin/acroread4
