@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/29 15:56:34 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/24 20:47:09 kristerw Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
@@ -17,7 +17,9 @@ NO_BUILDLINK=	YES
 INSTALLATION_DIRS=	${PREFIX}/share/phpldapadmin
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -s ',\.cvsignore,,' \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin
+	cd ${WRKSRC} && ${PAX} \
 		-rwppm . ${PREFIX}/share/phpldapadmin
+	${RM} ${PREFIX}/share/phpldapadmin/.cvsignore
 
 .include "../../mk/bsd.pkg.mk"
