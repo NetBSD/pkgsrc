@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/01/12 15:32:00 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2005/01/12 22:49:35 jlam Exp $
 
 DISTNAME=		R-2.0.1
 CATEGORIES=		math
@@ -80,19 +80,18 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
 R_INSTALL_DIRS=		${R_LIBDIR}
 
-# XXX: following comment still true for buildlink3?
-# R does ugly things in the configure to get the default list of arguments
-# for linking Fortran, which exposes the buildlink2 tricks so clean up
-# afterwards
+# R does ugly things in the configure to get the default list of
+# arguments for linking Fortran and exposes the buildlink directory
+# in various files and scripts that will later be installed, so clean
+# up after configure is complete.
 #
-post-configure:
-	( cd ${WRKSRC};							\
-	  for file in src/scripts/R.sh src/scripts/f77 etc/Makeconf; do	\
-	    ${SED} -e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"		\
-		   -e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g" $${file} > $${file}.fix; \
-	    ${MV} $${file}.fix $${file};				\
-	  done;								\
-	)
+SUBST_CLASSES+=		fix-R
+SUBST_STAGE.fix-R=	post-configure
+SUBST_MESSAGE.fix-R=	${SUBST_MESSAGE.unwrap}
+SUBST_FILES.fix-R=	etc/Makeconf src/scripts/R.sh src/scripts/f77
+SUBST_SED.fix-R=	${SUBST_SED.unwrap}				\
+			-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"	\
+			-e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"
 
 # Generate the PLIST dynamically as it changes in each version only in a
 # specific subtree.  This will make maintaining this package a little easier
