@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $NetBSD: create-dev-link,v 1.4 1998/08/07 10:36:44 agc Exp $
+# $NetBSD: create-dev-link,v 1.5 2004/07/10 22:41:39 salo Exp $
 #
 #	pre-install script for Minicom port to FreeBSD 2.x
 
@@ -26,8 +26,7 @@ echo "I (the porter) have adopted Satoshi Asami's lead of using /dev/modem."
 echo ""
 echo -n "Lets see if you have too..."
 
-# might want to test for ``-h'' rather than ``-e''
-if [ -e /dev/modem ]; then
+if [ -h /dev/modem -o -c /dev/modem ]; then
 	echo "  Good you do:"
 	/bin/ls -l /dev/modem
 else
@@ -46,7 +45,7 @@ else
 		echo -n "Enter the number X from ttyX above : "
 		read bar
 		if [ ${bar} ] ; then
-			if [ -e /dev/tty${bar} ]; then
+			if [ -c /dev/tty${bar} ]; then
 				ln -s /dev/tty${bar} /dev/modem
 			else
 				echo "Error: /dev/tty${bar} doesn't exist."
