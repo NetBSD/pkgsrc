@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/12 23:53:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/12 23:58:43 xtraeme Exp $
 #
 
 DISTNAME=	awstats-5.9
@@ -14,12 +14,8 @@ USE_BUILDLINK2=	YES
 NO_BUILD=	YES
 USE_PERL5=	run
 
-REPLACE_PERL =						\
-		tools/awstats_buildstaticpages.pl	\
-		tools/awstats_updateall.pl		\
-		tools/logresolvemerge.pl		\
-		wwwroot/cgi-bin/awredir.pl		\
-		wwwroot/cgi-bin/awstats.pl
+REPLACE_PERL=	tools/*.pl		\
+		wwwroot/cgi-bin/*.pl
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats
