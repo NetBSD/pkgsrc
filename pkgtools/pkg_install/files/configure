@@ -3842,7 +3842,7 @@ done
 
 
 for ac_header in assert.h ctype.h dirent.h errno.h err.h fnctl.h fnmatch.h \
-	glob.h limits.h md5.h netdb.h pwd.h regext.h signal.h stdarg.h \
+	glob.h limits.h md5.h netdb.h pwd.h regex.h signal.h stdarg.h \
 	stdio.h stdlib.h string.h termcap.h termios.h time.h unistd.h vis.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
