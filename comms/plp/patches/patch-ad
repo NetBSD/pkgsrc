@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+
+--- rfsv/Makefile.orig	Tue Feb  2 21:16:15 1999
++++ rfsv/Makefile	Mon Apr 19 12:00:07 1999
+@@ -3,14 +3,14 @@
+ 
+ OBJ=$(CCSOURCE:%.cc=%.o) $(CSOURCE:%.c=%.o)
+ 
+-../bin/rfsv : $(OBJ)
+-	$(LD) $(OBJ) $(LIBS) -o $@
++rfsv : $(OBJ)
++	$(LD) $(OBJ) $(LIBS) -o $@
+ 
+ %.o : %.cc
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ %.o : %.c
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ clean :
+-	rm -f ../bin/rfsv core $(OBJ) *~
++	rm -f .libs rfsv core $(OBJ) *~

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+
+--- defaults.h.orig	Tue Apr 13 07:25:01 1999
++++ defaults.h	Mon Apr 19 10:36:39 1999
+@@ -19,7 +19,7 @@
+ 
+ // This is the default device driver for the serial link
+ // N.B. This was "/dev/cua1" in the previous release
+-#define DEFAULT_SERIAL_DEVICE "/dev/ttyS1"
++#define DEFAULT_SERIAL_DEVICE "/dev/tty00"
+ 
+ // This is the default drive to use on the psion
+ #define DEFAULT_DRIVE "C:\\"
