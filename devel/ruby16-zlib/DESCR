@@ -1,0 +1,2 @@
+This is an extension library to use zlib from Ruby 1.6.X.
+Ruby/zlib has original .gz file handler of its own.
