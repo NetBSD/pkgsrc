@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 12:37:01 wiz Exp $
-
-SHA1 (ascp-1.0.3.tgz) = 805f2f90a3a0d56ff031beddc2760b4959fe1b0d
-Size (ascp-1.0.3.tgz) = 192246 bytes
-SHA1 (patch-aa) = 6507983e23f589885620f379fa90941c969a700e
