@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/09/12 17:23:01 wennmach Exp $
+# $NetBSD: Makefile,v 1.13 2000/12/08 09:43:06 wiz Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -18,7 +18,7 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .endif
 
 PLIST_SRC=	${WRKDIR}/PLIST-src
-REQ_FILE=	${WRKDIR}/REQ
+INSTALL_FILE=	${WRKDIR}/INSTALL
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 CONFIGDIR=	${WRKDIR}/${PKGNAME}/config
@@ -135,8 +135,12 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 		-e 's|@ADDUSER@|${ADDUSER}|g'				      \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g'				      \
-			<${PKGDIR}/REQ                                        \
-			>${REQ_FILE}
+		-e 's|@CHGRP@|${CHGRP}|g'                                     \
+		-e 's|@ID@|${ID}|g'                                           \
+		-e 's|@TOUCH@|${TOUCH}|g'                                     \
+		-e 's|@RM@|${RM}|g'                                           \
+			<${PKGDIR}/INSTALL                                    \
+			>${INSTALL_FILE}
 	@${SED}                                                               \
 		-e 's|@JB_DATADIR@|${JB_DATADIR}|g'                           \
 		-e 's|@CGIBINDIR@|${CGIBINDIR}|g'                             \
@@ -175,7 +179,7 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g'				      \
 			< ${FILESDIR}/httpd.conf			      \
 			> ${WRKDIR}/httpd.conf
-	${SH} ${REQ_FILE} ${PKGNAME} INSTALL
+	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${MKDIR} ${PREFIX}/${JB_CONFIGDIR}
