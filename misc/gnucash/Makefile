@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/06/26 17:03:01 rh Exp $
+# $NetBSD: Makefile,v 1.15 2000/06/26 20:52:33 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.4.1
@@ -14,7 +14,7 @@ DEPENDS+=		gettext>=0.10.35:../../devel/gettext
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		libperl-5.00404:../../lang/libperl
 DEPENDS+=		g-wrap>=0.9.4:../../devel/g-wrap
-DEPENDS+=		guile-slib-2c7:../../devel/guile-slib
+DEPENDS+=		guile-slib-2c8:../../devel/guile-slib
 DEPENDS+=		swig-1.1p5:../../devel/swig
 DEPENDS+=		libxml>=1.8.7:../../textproc/libxml
 
