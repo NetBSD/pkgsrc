@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:01 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/10/11 07:10:52 grant Exp $
 
 .if !defined(EXPAT_BUILDLINK2_MK)
 EXPAT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		expat
-BUILDLINK_DEPENDS.expat?=	expat>=1.95.2
+BUILDLINK_DEPENDS.expat?=	expat>=1.95.4
 BUILDLINK_PKGSRCDIR.expat?=	../../textproc/expat
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.expat=expat
