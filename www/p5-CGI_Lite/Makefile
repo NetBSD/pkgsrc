@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2004/12/20 11:31:13 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/20 20:55:33 bad Exp $
 #
 
-NAME=			CGI-Lite-2.001
-DISTNAME=       	${NAME}-emergencyrelease
+NAME=			CGI-Lite-2.02
+DISTNAME=       	${NAME}
 PKGNAME=        	p5-${NAME}
 SVR4_PKGNAME=		p5cgl
-PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
@@ -14,9 +13,6 @@ COMMENT=		Simple perl5 module for writing forms-based CGI programs
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/Lite/.packlist
-
-pre-configure:
-	${CP} ${FILESDIR}/Makefile.PL ${WRKDIR}/Makefile.PL
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
