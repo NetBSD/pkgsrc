@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/15 17:38:10 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/03/29 05:43:30 jlam Exp $
 
 _GL_GLX_H=	${X11BASE}/include/GL/glx.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
@@ -21,16 +21,11 @@ IS_BUILTIN.MesaLib!=							\
 # Mesa software distributed with the built-in XFree86.
 #
 BUILTIN_PKG.MesaLib=	MesaLib-${_MESA_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.MesaLib=${BUILTIN_PKG.MesaLib}
+BUILDLINK_VARS+=	BUILTIN_PKG.MesaLib
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.MesaLib=${IS_BUILTIN.MesaLib}
-.endif
-
-CHECK_BUILTIN.MesaLib?=	no
-.if !empty(CHECK_BUILTIN.MesaLib:M[yY][eE][sS])
-USE_BUILTIN.MesaLib=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.MesaLib
+.endif	# IS_BUILTIN.MesaLib
 
 .if !defined(USE_BUILTIN.MesaLib)
 USE_BUILTIN.MesaLib?=	${IS_BUILTIN.MesaLib}
@@ -50,6 +45,9 @@ USE_BUILTIN.MesaLib!=	\
 .  endif
 .endif	# USE_BUILTIN.MesaLib
 
+CHECK_BUILTIN.MesaLib?=	no
+.if !empty(CHECK_BUILTIN.MesaLib:M[nN][oO])
+
 .if !empty(USE_BUILTIN.MesaLib:M[nN][oO])
 BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.0
 .endif
@@ -59,3 +57,5 @@ BUILDLINK_PREFIX.MesaLib=	${X11BASE}
 USE_X11=			yes
 _MESA_REQD=			${_MESA_VERSION}
 .endif
+
+.endif	# CHECK_BUILTIN.MesaLib
