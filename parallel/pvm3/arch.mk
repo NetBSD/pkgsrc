@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.2 2002/10/12 17:30:33 dmcmahill Exp $
+# $NetBSD: arch.mk,v 1.3 2002/10/29 19:57:47 jlam Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -8,8 +8,10 @@ _PVM_OPSYS=	NETBSD
 _PVM_ARCH!=	${ECHO} ${MACHINE_ARCH} | ${TR} [a-z] [A-Z]
 .elif ${OPSYS} == "Linux"
 _PVM_OPSYS=	LINUX
-.  if !empty(MACHINE_ARCH:Marm*)
+.  if !empty(MACHINE_ARCH:Malpha*)
 _PVM_ARCH=	ALPHA
+.  if !empty(MACHINE_ARCH:Marm*)
+_PVM_ARCH=	ARM
 .  elif !empty(MACHINE_ARCH:Msparc*)
 _PVM_ARCH=	SPARC
 .  elif !empty(MACHINE_ARCH:Mhp_pa*)
