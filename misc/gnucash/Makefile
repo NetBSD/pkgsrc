@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/05 06:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/02/13 01:59:32 wiz Exp $
 #
 
 DISTNAME=       gnucash-1.1.25
@@ -15,6 +15,7 @@ DEPENDS+=	eperl-2.2.14:../../textproc/eperl
 DEPENDS+=	XmHTML-1.1.*:../../x11/XmHTML
 DEPENDS+=	guile-1.3.*:../../lang/guile
 DEPENDS+=	libperl-5.00404:../../lang/libperl
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 USE_X11=	yes
 USE_MOTIF=	yes
