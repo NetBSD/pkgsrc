@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5579 2004/04/15 08:38:30 adam Exp $
+$NetBSD: CHANGES,v 1.5580 2004/04/15 09:44:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xchat2 to 2.0.8nb2 [xtraeme 2004-04-14]
 	Updated xchat to 1.8.11nb7 [tron 2004-04-14]
 	Updated gimp to 2.0.1 [adam 2004-04-15]
+	Updated pkglint to 3.71 [jmmv 2004-04-15]
