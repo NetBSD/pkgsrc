@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.56 2004/04/23 22:07:52 reed Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.57 2004/04/27 03:30:04 tv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -107,7 +107,7 @@ FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 USE_USERADD=		YES
 .endif
 .if !empty(PKG_GROUPS)
-USE_USERGROUP=		YES
+USE_GROUPADD=		YES
 .endif
 
 # SPECIAL_PERMS are lists that look like:
