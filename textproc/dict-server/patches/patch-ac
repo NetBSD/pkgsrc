@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/28 16:17:20 tron Exp $
+
+--- libmaa/maaP.h.orig	Sun Feb 22 14:41:19 1998
++++ libmaa/maaP.h	Wed Jul 28 17:57:42 1999
+@@ -103,9 +103,11 @@
+ #else
+ #if !defined(__FreeBSD__) && !defined(__DGUX__) && !defined(__hpux__)
+ #if !defined(__bsdi__) && !(defined(__sparc) && defined(__svr4__))
++#if !defined(__NetBSD__)
+ extern int  getopt( int, char **, char * );
+ extern int  optind;
+ extern char *optarg;
++#endif
+ #endif
+ #endif
+ #endif
