@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.4 2004/07/29 07:27:43 xtraeme Exp $
+# $NetBSD: dirs.mk,v 1.5 2004/08/07 14:44:05 xtraeme Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -21,11 +21,12 @@ _USE_GNOME1_DIRS:=	${ver}
 _USE_GNOME2_DIRS:=	${ver}
 .  elif ${pkg} == "xdg" && ${_USE_XDG_DIRS} < ${ver} && !defined(USE_X11BASE)
 _USE_XDG_DIRS:=		${ver}
-.  elif ${pkg} == "xdg" && ${_USE_XDG_X11_DIRS} < ${ver} && defined(USE_X11BASE)
+.  elif ${pkg} == "xdg-x11" && ${_USE_XDG_X11_DIRS} < ${ver} && \
+	defined(USE_X11BASE)
 _USE_XDG_X11_DIRS:=	${ver}
-.  elif ${pkg} == "xdg" && ${_USE_XFREE86_DIRS} < ${ver}
+.  elif ${pkg} == "XFree86" && ${_USE_XFREE86_DIRS} < ${ver}
 _USE_XFREE86_DIRS:=	${ver}
-.  elif ${pkg} == "xdg" && ${_USE_XORG_DIRS} < ${ver}
+.  elif ${pkg} == "xorg" && ${_USE_XORG_DIRS} < ${ver}
 _USE_XORG_DIRS:=	${ver}
 .  endif
 
