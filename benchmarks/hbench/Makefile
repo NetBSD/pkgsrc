@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/01/22 20:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/11 00:54:28 seb Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -12,7 +12,7 @@ COMMENT=		Suite of portable benchmarks to measure the OS and the hardware
 
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 OSVERSION_SPECIFIC=	YES
 ALL_TARGET=		build
 WRKSRC=			${WRKDIR}/hbench-OS
@@ -62,5 +62,5 @@ results:
 	-@cd ${WRKSRC} ; \
 	tar -cf /tmp/benches/`domainname`/hbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results conf
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
