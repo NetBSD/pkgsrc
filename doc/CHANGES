@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9699 2005/03/31 02:18:33 seb Exp $
+$NetBSD: CHANGES,v 1.9700 2005/03/31 11:10:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1836,3 +1836,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated icu to 3.2nb1 [recht 2005-03-30]
 	Updated horde to 3.0.4 [adrianp 2005-03-30]
 	Updated cssc to 1.0.1 [seb 2005-03-31]
+	Updated xpaint to 2.7.6 [adam 2005-03-31]
