@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/10/04 23:47:28 jlam Exp $
 
 SHA1 (minicom-1.83.1.src.tar.gz) = 0c1c7fd8c95304c47c0c106f54b997f2d320c883
 Size (minicom-1.83.1.src.tar.gz) = 323223 bytes
-SHA1 (patch-aa) = f90b80f4697b4121e31107094149ad2ded2c7109
+SHA1 (patch-aa) = aca3573b4ba3b56e8f03667e8c59131b4926d0bb
 SHA1 (patch-ab) = 16aba24da471e1f04e2a86a3d198c8b75ec13a9c
 SHA1 (patch-ac) = 53dd29da9c9355ba0dd003f1da13daa4775f5426
 SHA1 (patch-ad) = 52ae46aa6633f6d3cfcf478e46712963b1c9286b
