@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2001/04/13 00:30:08 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2001/04/13 01:28:01 jtb Exp $
 
 --- ratfor.man.orig	Sun Feb 14 02:05:24 1999
 +++ ratfor.man
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.2 2001/04/13 00:30:08 jtb Exp $
 +.Os
 +.Sh NAME
 +.Nm ratfor
-+.Nd a A Preprocessor for the Ratfor dialect of Fortran
++.Nd Preprocessor for Rational Fortran
 +.Sh SYNOPSIS
 +.Nm
 +.Op Fl l Ar n
