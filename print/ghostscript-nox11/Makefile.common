@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2001/06/11 02:05:14 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2001/07/14 15:38:19 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -145,9 +145,9 @@ HTML_DIR=		${PREFIX}/share/doc/html/ghostscript
 LIB_DIR=		${GSINST_DIR}/lib
 
 post-extract:
-.for FILE in ${EXTRACT_LIST}
-	cd ${WRKDIR}; ${PAX} -zrf ${_DISTDIR}/${FILE}
-.endfor
+	@cd ${WRKDIR}; for file in ${EXTRACT_LIST}; do			\
+		${PAX} -zrf ${_DISTDIR}/$${file}
+	done
 	cd ${WRKSRC}/src; ${PAX} -rf ${WRKDIR}/${HPDJ_DRV}/hpdj.tar
 	${MV} ${WRKSRC}/src/gs-hpdj.1 ${WRKSRC}/man
 	cd ${WRKDIR}; ${CP} gdevdmpr.c gdevdmpr.mak		${WRKSRC}/src
