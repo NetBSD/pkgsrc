@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8732 2005/01/13 10:22:06 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8733 2005/01/13 13:00:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -280,3 +280,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword to 2.2.3 [adam 2005-01-13]
 	Updated ORBit to 0.5.17 [adam 2005-01-13]
 	Added hobbitmon-4.0beta2 [manu 2005-01-13]
+	Updated gst-plugins to 0.8.7nb1 [jmmv 2005-01-13]
+	Added gst-plugins-opengl-0.8.7 [jmmv 2005-01-13]
