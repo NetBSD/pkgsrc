@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1392 2004/02/17 03:26:46 snj Exp $
+$NetBSD: TODO,v 1.1393 2004/02/17 03:43:50 minskim Exp $
 
 Suggested new packages
 ======================
@@ -272,6 +272,7 @@ Suggested package updates
 	o oss-3.9.8d
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o p5-DateTime-0.20
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
