@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/06/14 16:40:53 veego Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/15 12:32:33 veego Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -45,10 +45,11 @@ DEPENDS+=	db-2.7.7:../../databases/db
 
 MAKE_ENV+=	DB_ENVDEF="-I${LOCALBASE}/include/db2" \
 		DB_LIBS="-L${LOCALBASE}/lib -ldb2"
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 .else
 MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 .endif
+
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 DEPENDS+=	openldap-1.2.7p1:../../databases/openldap
@@ -77,11 +78,11 @@ post-build:
 	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
 	  -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 .if ${USE_DB2} == YES
 	${ECHO} >>${MESSAGE_FILE} ""
 	${ECHO} >>${MESSAGE_FILE} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all"
 	${ECHO} >>${MESSAGE_FILE} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"."
-	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
 	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif
