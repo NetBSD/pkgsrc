@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/07 15:18:34 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/24 23:06:56 recht Exp $
 #
 
 DISTNAME=	dspam-3.0.0
@@ -109,12 +109,12 @@ CONFIGURE_ARGS+=	\
 CONFIGURE_ARGS+=	\
 	--with-mysql-libraries=${BUILDLINK_PREFIX.mysql-client}/lib
 .elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-.  include "../../databases/postgresql74-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
 CONFIGURE_ARGS+=	\
-	--with-pgsql-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+	--with-pgsql-includes=${PGSQL_PREFIX}/include/postgresql
 CONFIGURE_ARGS+=	\
-	--with-pgsql-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib
+	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
 .elif !empty(DSPAM_STORAGE_DRIVER:M${BDB_TYPE})
 CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
 .endif
