@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2753 2004/12/25 19:43:54 wiz Exp $
+$NetBSD: TODO,v 1.2754 2004/12/25 20:09:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -96,11 +96,7 @@ Suggested new packages
 
 	wxmozilla
 	http://wxmozilla.sourceforge.net/
-	Mozilla using the wxWindows toolkit.
-
-	wxWindows -> wxWidgets rename
-	http://www.wxwidgets.org/name.htm
-	Update all wxwindows packages and dependencies to wxwidgets.
+	Mozilla using the wxWidgets toolkit.
 
 	linphone
 	http://www.linphone.org/
