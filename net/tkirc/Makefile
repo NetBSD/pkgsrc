@@ -3,13 +3,12 @@
 # Date created:         1997/11/09
 # Whom:                 Hubert Feyrer <hubertf@netbsd.org>
 #
-# $NetBSD: Makefile,v 1.4 1998/03/28 14:54:12 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/28 21:41:11 tron Exp $
 
-DISTNAME=	tkirc-1.202
-WRKSRC=		${WRKDIR}/tkirc
+DISTNAME=	tkirc1.202
+PKGNAME=	tkirc-1.202
 CATEGORIES=	net x11
 MASTER_SITES=	ftp://ftp.informatik.uni-oldenburg.de/pub/tkirc/
-DISTFILES=	tkirc1.202.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
 
@@ -18,6 +17,7 @@ RUN_DEPENDS=	irc:${PORTSDIR}/net/ircII \
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/tkirc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tkirc	  ${PREFIX}/bin
