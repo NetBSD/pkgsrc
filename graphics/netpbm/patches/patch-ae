@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.3 1999/01/10 23:52:16 tron Exp $
+
+--- pbm/pbmmerge.c.orig	Wed Nov  3 10:28:55 1993
++++ pbm/pbmmerge.c	Sun Jan 10 23:48:40 1999
+@@ -29,6 +29,10 @@
+ 	{
+ 	++argv;
+ 	--argc;
++	if(!*argv)	{
++		fprintf(stderr, "Usage: pbmmerge pbm_program_name [args ...]\n");
++		exit(1);
++		}
+ 	goto again;
+ 	}
+ 

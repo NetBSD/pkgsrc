@@ -1,7 +1,7 @@
-$NetBSD: patch-bi,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-am,v 1.1 1999/01/10 23:52:16 tron Exp $
 
---- ./pnm/pnmarith.c.orig	Sun Aug 13 00:04:38 1995
-+++ ./pnm/pnmarith.c	Sun Aug 13 00:08:04 1995
+--- pnm/pnmarith.c.orig	Wed Jan  5 11:04:53 1994
++++ pnm/pnmarith.c	Sun Jan 10 23:48:40 1999
 @@ -29,7 +29,8 @@
      xelval maxval1, maxval2, maxval3;
      int argn, rows1, cols1, format1, rows2, cols2, format2, format3, row, col;

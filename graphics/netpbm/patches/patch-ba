@@ -1,52 +1,13 @@
-$NetBSD: patch-ba,v 1.2 1998/08/07 10:40:50 agc Exp $
+$NetBSD: patch-ba,v 1.3 1999/01/10 23:52:17 tron Exp $
 
---- ./pnm/anytopnm.orig	Mon Oct  4 05:11:29 1993
-+++ ./pnm/anytopnm	Sat Jul 20 22:19:05 1996
-@@ -53,7 +53,7 @@
- 	;;
- 
- 	*GIF* )
--	giftoppm "$file"
-+	giftopnm "$file"
- 	break
- 	;;
- 
-@@ -82,6 +82,15 @@
- 	break
- 	;;
- 
-+        *JPEG* | *JFIF* )
-+        djpeg "$file"
-+        ;;
-+
-+        *PNG* )
-+        pngtopnm "$file"
-+        break
-+        ;;
-+
- 	* )
- 	# Can't figure out the file type from the magic number,
- 	# try the extension.
-@@ -130,7 +139,7 @@
- 	    fitstopgm "$file"
- 	    ;;
- 	    *.gif | *.gif.* )
--	    giftoppm "$file"
-+	    giftopnm "$file"
- 	    ;;
- 	    *.iff | *.iff.* | *.ilbm | *.ilbm.* )
- 	    ilbmtoppm "$file"
-@@ -168,6 +177,13 @@
- 	    *.ybm | *.ybm.* | *.face | *.face.* )
- 	    ybmtopbm "$file"
- 	    ;;
-+            *.JPEG | *.jpeg | *.jpg | *.JPG )
-+            djpeg "$file"
-+            ;;
-+            *.png | *.PNG )
-+            pngtopnm "$file"
-+            break
-+            ;;
- 	    * )
- 	    echo "$0: unknown file type" 1>&2
- 	    exit 1
+--- ppm/ppmtogif.1.orig	Fri Nov 12 10:18:30 1993
++++ ppm/ppmtogif.1	Sun Jan 10 23:48:41 1999
+@@ -54,7 +54,7 @@
+ .PP
+ All flags can be abbreviated to their shortest unique prefix.
+ .SH "SEE ALSO"
+-giftoppm(1), ppmquant(1), ppm(5)
++giftopnm(1), ppmquant(1), ppm(5)
+ .SH AUTHOR
+ Based on GIFENCOD by David Rowley <mgardi@watdcsu.waterloo.edu>.
+ Lempel-Ziv compression based on "compress".
