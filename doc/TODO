@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2179 2004/09/28 22:29:32 grant Exp $
+$NetBSD: TODO,v 1.2180 2004/09/28 22:29:52 grant Exp $
 
 Suggested new packages
 ======================
@@ -183,6 +183,7 @@ Suggested package updates
 	o allegro-4.1.15
 	o amavisd-new-2.1.2 [pkg/26843]
 	o anjuta-1.2.2
+	o apache-2.0.52
 	o ap-jk-5.0.25
 	o apcupsd-3.10.13
 	o apr-1.0.0
