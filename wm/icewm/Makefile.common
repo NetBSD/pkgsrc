@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2003/06/03 17:13:34 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.23 2003/06/04 08:56:46 tron Exp $
 
 DISTNAME=		icewm-1.2.7
 CATEGORIES=		x11 wm
@@ -48,3 +48,4 @@ post-install:
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
