@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2003/03/02 19:34:09 mjl Exp $
+# $NetBSD: Makefile,v 1.382 2003/03/04 16:27:58 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -225,6 +225,7 @@ SUBDIR+=	p5-Class-Loader
 SUBDIR+=	p5-Class-ObjectTemplate
 SUBDIR+=	p5-Class-ReturnValue
 SUBDIR+=	p5-Compress-Zlib
+SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Buffer
