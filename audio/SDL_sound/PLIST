@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/26 22:48:26 wiz Exp $
+bin/playsound
+include/SDL/SDL_sound.h
+lib/libSDL_sound-1.0.so
+lib/libSDL_sound-1.0.so.0
+lib/libSDL_sound-1.0.so.0.0
+lib/libSDL_sound.a
+lib/libSDL_sound.la
+lib/libSDL_sound.so
