@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8281 2004/12/05 15:25:59 cube Exp $
+$NetBSD: CHANGES,v 1.8282 2004/12/05 15:32:22 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated python-mode to 4.54 [ben 2004-12-05]
 	Updated ruby-rexml to 3.1.2nb1 [taca 2004-12-05]
 	Updated mummer to 3.15 [cube 2004-12-05]
+	Updated p5-HTML-Template to 2.7 [he 2004-12-05]
