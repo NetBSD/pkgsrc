@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 1999/09/04 16:44:10 jlam Exp $
+# $NetBSD: Makefile,v 1.58 1999/09/17 03:49:18 jwise Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -64,7 +64,7 @@
     SUBDIR += povray
     SUBDIR += py-gd
     SUBDIR += py-imaging
-#    SUBDIR += qvplay
+    SUBDIR += qvplay
     SUBDIR += rayshade
     SUBDIR += sane
 #    SUBDIR += sced
