@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.57 2001/12/03 17:52:25 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.58 2001/12/03 18:20:49 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -17,6 +17,7 @@ $^W = 1;
 use strict;
 use Getopt::Std;
 use File::Find;
+use Cwd;
 my(	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
@@ -27,18 +28,18 @@ my(	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('BDK:LM:OP:RSVdg:hilmopru', \%opt) || $opt{'h'} ||
-	! ( defined($opt{'d'}) || defined($opt{'g'}) || defined($opt{'i'}) ||
-	    defined($opt{'l'}) || defined($opt{'m'}) || defined($opt{'o'}) ||
-	    defined($opt{'p'}) || defined($opt{'r'}) || defined($opt{'u'}) ||
-	    defined($opt{'B'}) || defined($opt{'D'}) || defined($opt{'R'}) ||
-	    defined($opt{'O'}) || defined($opt{'S'}) || defined($opt{'V'}) ))
+if (! &getopts('BDK:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
+	! ( defined($opt{d}) || defined($opt{g}) || defined($opt{i}) ||
+	    defined($opt{l}) || defined($opt{m}) || defined($opt{o}) ||
+	    defined($opt{p}) || defined($opt{r}) || defined($opt{u}) ||
+	    defined($opt{B}) || defined($opt{D}) || defined($opt{R}) ||
+	    defined($opt{O}) || defined($opt{S}) || defined($opt{V}) ))
     { &usage_and_exit; }
 $| = 1;
 
 &get_default_makefile_vars; # $default_vars
 
-if ($opt{'D'} && @ARGV)
+if ($opt{D} && @ARGV)
     {
     my($file);
     foreach $file (@ARGV)
@@ -48,12 +49,12 @@ if ($opt{'D'} && @ARGV)
 	if (! -f $file)
 	    { &fail("No such file: $file"); }
 	my($pkgname, $vars);
-	($pkgname, $vars) = &parse_makefile_pkgsrc($file);
+	($pkgname, $vars) = parse_makefile_pkgsrc($file);
 	$pkgname ||= 'UNDEFINED';
 	print "$file -> $pkgname\n";
 	foreach ( sort keys %{$vars} )
 	    { print "\t$_ = $vars->{$_}\n"; }
-	if ($opt{'d'})
+	if ($opt{d})
 	    { &pkgsrc_check_depends(); }
 	}
     exit;
@@ -63,21 +64,21 @@ if ($opt{'D'} && @ARGV)
     {
     my($pkglint_flags, $pkgsrcdir, $pkgdistdir);
 
-    $pkgsrcdir = $default_vars->{'PKGSRCDIR'};
-    $pkgdistdir = $default_vars->{'DISTDIR'};
+    $pkgsrcdir = $default_vars->{PKGSRCDIR};
+    $pkgdistdir = $default_vars->{DISTDIR};
     $pkglint_flags = '-v';
 
-    if ($opt{'r'} && !$opt{'o'} && !$opt{'m'} && !$opt{'p'})
-	{ $opt{'o'} = $opt{'m'} = $opt{'p'} = 1; }
-    if ($opt{'o'} || $opt{'m'})
+    if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p})
+	{ $opt{o} = $opt{m} = $opt{p} = 1; }
+    if ($opt{o} || $opt{m})
 	{
 	my(@baddist);
 
 	@baddist = &scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir,
-							$opt{'o'}, $opt{'m'});
-	if ($opt{'r'})
+							$opt{o}, $opt{m});
+	if ($opt{r})
 	    {
-	    &safe_chdir("$pkgdistdir");
+	    safe_chdir("$pkgdistdir");
 	    &verbose("Unlinking 'bad' distfiles\n");
 	    foreach (@baddist)
 		{ unlink($_); }
@@ -85,7 +86,7 @@ if ($opt{'D'} && @ARGV)
 	}
 
     # List BROKEN packages
-    if ($opt{'B'})
+    if ($opt{B})
 	{
 	my($pkgname, $ver);
 	&scan_pkgsrc_makefiles($pkgsrcdir);
@@ -93,17 +94,17 @@ if ($opt{'D'} && @ARGV)
 	    {			# Print highest number first
 	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
 		{
-		if ($pkg{$pkgname}{$ver}{'BROKEN'})
-		    { print "$pkgname-$ver: $pkg{$pkgname}{$ver}{'BROKEN'}\n"; }
+		if ($pkg{$pkgname}{$ver}{BROKEN})
+		    { print "$pkgname-$ver: $pkg{$pkgname}{$ver}{BROKEN}\n"; }
 		}
 	    }
 	}
 
     # List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
     #
-    if ($opt{'p'} || $opt{'O'} || $opt{'R'} || $opt{'V'})
+    if ($opt{p} || $opt{O} || $opt{R} || $opt{V})
 	{
-	if ($opt{'V'})
+	if ($opt{V})
 	    {
 	    my($vuln) = "$pkgdistdir/vulnerabilities";
 	    if (! open(VULN, $vuln))
@@ -116,12 +117,12 @@ if ($opt{'D'} && @ARGV)
 		}
 	    close(VULN);
 	    }
-	if ($opt{'p'} || $opt{'O'} || $opt{'R'})
+	if ($opt{p} || $opt{O} || $opt{R})
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
-	@prebuilt_pkgdirs = ($default_vars->{'PACKAGES'});
+	@prebuilt_pkgdirs = ($default_vars->{PACKAGES});
 	while (@prebuilt_pkgdirs)
 	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
-	if ($opt{'r'})
+	if ($opt{r})
 	    {
 	    &verbose("Unlinking listed prebuiltpackages\n");
 	    foreach (@matched_prebuiltpackages)
@@ -129,16 +130,16 @@ if ($opt{'D'} && @ARGV)
 	    }
 	}
 
-    if ($opt{'S'})
+    if ($opt{S})
 	{
 	my($cat, %in_subdir, $pkgname, $ver);
 
 	foreach $cat (&list_pkgsrc_categories($pkgsrcdir))
 	    {
 	    my($vars) = parse_makefile_vars("$pkgsrcdir/$cat/Makefile");
-	    if (! $vars->{'SUBDIR'})
+	    if (! $vars->{SUBDIR})
 		{ print "Warning - no SUBDIR for $cat\n"; next; }
-	    foreach (split(/\s+/, $vars->{'SUBDIR'}))
+	    foreach (split(/\s+/, $vars->{SUBDIR}))
 		{ $in_subdir{"$cat/$_"} = 1; }
 	    }
 
@@ -147,17 +148,17 @@ if ($opt{'D'} && @ARGV)
 	    {			# Print highest number first
 	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
 		{
-		if (!defined $in_subdir{$pkg{$pkgname}{$ver}{'dir'}})
-		    { print "$pkg{$pkgname}{$ver}{'dir'}: Not in SUBDIR\n"; }
+		if (!defined $in_subdir{$pkg{$pkgname}{$ver}{dir}})
+		    { print "$pkg{$pkgname}{$ver}{dir}: Not in SUBDIR\n"; }
 		}
 	    }
 	}
 
-    if ($opt{'g'})
+    if ($opt{g})
 	{
 	my($pkgname, $ver, $tmpfile);
 
-	$tmpfile = "$opt{'g'}.tmp.$$";
+	$tmpfile = "$opt{g}.tmp.$$";
 
 	&scan_pkgsrc_makefiles($pkgsrcdir);
 	if (!open(TABLE, ">$tmpfile"))
@@ -165,20 +166,20 @@ if ($opt{'D'} && @ARGV)
 	foreach $pkgname (sort keys %pkg)
 	    {			# Print highest number first
 	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
-		{ print TABLE "$pkgname\t$pkg{$pkgname}{$ver}{'dir'}\t$ver\n"; }
+		{ print TABLE "$pkgname\t$pkg{$pkgname}{$ver}{dir}\t$ver\n"; }
 	    }
 	if (!close(TABLE))
 	    { &fail("Error while writing '$tmpfile': $!"); }
-	if (!rename($tmpfile, $opt{'g'}))
-	    { &fail("Error in rename('$tmpfile','$opt{'g'}'): $!"); }
+	if (!rename($tmpfile, $opt{g}))
+	    { &fail("Error in rename('$tmpfile','$opt{g}'): $!"); }
 	}
 
-    if ($opt{'d'})
+    if ($opt{d})
 	{
 	&scan_pkgsrc_makefiles($pkgsrcdir);
 	&pkgsrc_check_depends;
 	}
-    if ($opt{'i'} || $opt{'u'})
+    if ($opt{i} || $opt{u})
 	{
 	my(@pkgs, %update, $pkg);
 
@@ -195,7 +196,7 @@ if ($opt{'D'} && @ARGV)
 		    my($ver);
 		    foreach (reverse sort keys %{$pkg{$1}})
 			{
-			$pkg{$1}{$_}->{'dir'} =~ /-current/ && next;
+			$pkg{$1}{$_}->{dir} =~ /-current/ && next;
 			$update{$1} = $_;
 			last;
 			}
@@ -203,7 +204,7 @@ if ($opt{'D'} && @ARGV)
 		}
 	    }
 
-	if ($opt{'u'})
+	if ($opt{u})
 	    {
 	    my($pkgname);
 	    print "\nREQUIRED details for packages that could be updated:\n";
@@ -233,7 +234,7 @@ if ($opt{'D'} && @ARGV)
 		{
 		my($pkgdir);
 
-		$pkgdir = $pkg{$pkgname}{$update{$pkgname}}->{'dir'};
+		$pkgdir = $pkg{$pkgname}{$update{$pkgname}}->{dir};
 		if (!defined($pkgdir))
 		    { &fail("Unable to determine directory for '$pkgname'"); }
 		print "$pkgsrcdir/$pkgdir\n";
@@ -242,7 +243,7 @@ if ($opt{'D'} && @ARGV)
 		}
 	    }
 	}
-    if ($opt{'l'})
+    if ($opt{l})
 	{ &pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
     }
 exit;
@@ -258,7 +259,7 @@ sub check_prebuilt_packages
 	my($pkgname, $ver);
 	($pkgname, $ver) = ($1, $2);
 
-	if ($opt{'V'} && $vuln{$pkgname})
+	if ($opt{V} && $vuln{$pkgname})
 	    {
 	    my($chk);
 	    foreach $chk (@{$vuln{$pkgname}})
@@ -278,7 +279,7 @@ sub check_prebuilt_packages
 	    my($chkver) = ($ver);
 	    if (!defined $pkg{$pkgname}{$chkver})
 		{
-		if ($opt{'p'})
+		if ($opt{p})
 		    {
 		    print "$File::Find::dir/$_\n";
 		    push(@matched_prebuiltpackages, "$File::Find::dir/$_");
@@ -286,12 +287,12 @@ sub check_prebuilt_packages
 		# Pick probably the last version
 		($chkver) = (reverse sort keys %{$pkg{$pkgname}});
 		}
-	    if ($opt{'R'} && defined $pkg{$pkgname}{$chkver}->{'restricted'})
+	    if ($opt{R} && defined $pkg{$pkgname}{$chkver}->{restricted})
 		{
 		print "$File::Find::dir/$_\n";
 		push(@matched_prebuiltpackages, "$File::Find::dir/$_");
 		}
-	    if ($opt{'O'} && defined $pkg{$pkgname}{$chkver}->{'osversion_specific'})
+	    if ($opt{O} && defined $pkg{$pkgname}{$chkver}->{osversion_specific})
 		{
 		print "$File::Find::dir/$_\n";
 		push(@matched_prebuiltpackages, "$File::Find::dir/$_");
@@ -358,44 +359,44 @@ sub fail
 sub get_default_makefile_vars
     {
     chomp($_ = `uname -srm`);
-    ( $default_vars->{'OPSYS'},
-	$default_vars->{'OS_VERSION'},
-	$default_vars->{'MACHINE'} ) = (split);
+    ( $default_vars->{OPSYS},
+	$default_vars->{OS_VERSION},
+	$default_vars->{MACHINE} ) = (split);
 
     # Handle systems without uname -p  (NetBSD pre 1.4)
-    chomp($default_vars->{'MACHINE_ARCH'} = `uname -p 2>/dev/null`);
-    if (! $default_vars->{'MACHINE_ARCH'} &&
-				$default_vars->{'OS_VERSION'} eq 'NetBSD')
-	{ chomp($default_vars->{'MACHINE_ARCH'} = `sysctl -n hw.machine_arch`);}
-    if (! $default_vars->{'MACHINE_ARCH'})
-	{ $default_vars->{'MACHINE_ARCH'} = $default_vars->{'MACHINE'}; }
+    chomp($default_vars->{MACHINE_ARCH} = `uname -p 2>/dev/null`);
+    if (! $default_vars->{MACHINE_ARCH} &&
+				$default_vars->{OS_VERSION} eq 'NetBSD')
+	{ chomp($default_vars->{MACHINE_ARCH} = `sysctl -n hw.machine_arch`);}
+    if (! $default_vars->{MACHINE_ARCH})
+	{ $default_vars->{MACHINE_ARCH} = $default_vars->{MACHINE}; }
 
-    $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
-    $default_vars->{'OBJECT_FMT'} = 'x';
-    $default_vars->{'LOWER_OPSYS'} = lc($default_vars->{'OPSYS'});
+    $default_vars->{EXTRACT_SUFX} = 'tar.gz';
+    $default_vars->{OBJECT_FMT} = 'x';
+    $default_vars->{LOWER_OPSYS} = lc($default_vars->{OPSYS});
 
-    if ($opt{'P'})
-	{ $default_vars->{'PKGSRCDIR'} = $opt{'P'}; }
+    if ($opt{P})
+	{ $default_vars->{PKGSRCDIR} = $opt{P}; }
     else
-	{ $default_vars->{'PKGSRCDIR'} = '/usr/pkgsrc'; }
+	{ $default_vars->{PKGSRCDIR} = '/usr/pkgsrc'; }
 
     my($vars);
-    if (-f '/etc/mk.conf' && ($vars = &parse_makefile_vars('/etc/mk.conf')))
+    if (-f '/etc/mk.conf' && ($vars = parse_makefile_vars('/etc/mk.conf')))
 	{
 	foreach (keys %{$vars})
 	    { $default_vars->{$_} = $vars->{$_}; }
 	}
 
-    if ($opt{'P'})
-	{ $default_vars->{'PKGSRCDIR'} = $opt{'P'}; }
+    if ($opt{P})
+	{ $default_vars->{PKGSRCDIR} = $opt{P}; }
 
-    if ($opt{'M'})
-	{ $default_vars->{'DISTDIR'} = $opt{'M'}; }
-    $default_vars->{'DISTDIR'} ||= $default_vars->{'PKGSRCDIR'}.'/distfiles';
+    if ($opt{M})
+	{ $default_vars->{DISTDIR} = $opt{M}; }
+    $default_vars->{DISTDIR} ||= $default_vars->{PKGSRCDIR}.'/distfiles';
 
-    if ($opt{'K'})
-	{ $default_vars->{'PACKAGES'} = $opt{'K'}; }
-    $default_vars->{'PACKAGES'} ||= $default_vars->{'PKGSRCDIR'}.'/packages';
+    if ($opt{K})
+	{ $default_vars->{PACKAGES} = $opt{K}; }
+    $default_vars->{PACKAGES} ||= $default_vars->{PKGSRCDIR}.'/packages';
     }
 
 # Determine if a package version is current. If not, report correct version
@@ -529,7 +530,7 @@ sub glob2regex
 	{ return undef; }
     if ($regex eq $glob)
 	{ return(''); }
-    if ($opt{'D'})
+    if ($opt{D})
 	{ print "glob2regex: $glob -> $regex\n"; }
     '^'.$regex.'$';
     }
@@ -628,21 +629,23 @@ sub parse_makefile_pkgsrc
     my($file) = @_;
     my($pkgname, $vars);
 
-    $vars = &parse_makefile_vars($file);
+    $vars = parse_makefile_vars($file);
 
     if (!$vars) # Missing Makefile
 	{ return(undef); }
 
-    if (defined $vars->{'PKGNAME'})
-	{ $pkgname = $vars->{'PKGNAME'}; }
-    elsif (defined $vars->{'DISTNAME'})
-	{ $pkgname = $vars->{'DISTNAME'}; }
+    if (defined $vars->{PKGNAME})
+	{ $pkgname = $vars->{PKGNAME}; }
+    elsif (defined $vars->{DISTNAME})
+	{
+	$pkgname = $vars->{DISTNAME};
+	}
     if (defined $pkgname)
 	{
-	if (defined $vars->{'PKGREVISION'})
+	if (defined $vars->{PKGREVISION})
 	    {
 	    $pkgname .= "nb";
-	    $pkgname .= $vars->{'PKGREVISION'};
+	    $pkgname .= $vars->{PKGREVISION};
 	    }
 	if ( $pkgname =~ /\$/ )
 	    { print "\rBogus: $pkgname (from $file)\n"; }
@@ -650,13 +653,13 @@ sub parse_makefile_pkgsrc
 	    {
 	    my($cat, $pkgdir);
 
-	    if (defined $vars->{'NO_BIN_ON_FTP'} ||
-		defined $vars->{'RESTRICTED'})
-		{ $pkg{$1}{$2}{'restricted'} = 1; }
-	    if (defined $vars->{'OSVERSION_SPECIFIC'})
-		{ $pkg{$1}{$2}{'osversion_specific'} = 1; }
-	    if (defined $vars->{'BROKEN'})
-		{ $pkg{$1}{$2}{'BROKEN'} = $vars->{'BROKEN'}; }
+	    if (defined $vars->{NO_BIN_ON_FTP} ||
+		defined $vars->{RESTRICTED})
+		{ $pkg{$1}{$2}{restricted} = 1; }
+	    if (defined $vars->{OSVERSION_SPECIFIC})
+		{ $pkg{$1}{$2}{osversion_specific} = 1; }
+	    if (defined $vars->{BROKEN})
+		{ $pkg{$1}{$2}{BROKEN} = $vars->{BROKEN}; }
 	    if ($file =~ m:([^/]+)/([^/]+)/Makefile$:)
 		{
 		$cat = $1;
@@ -671,8 +674,8 @@ sub parse_makefile_pkgsrc
 		}
 	    else
 		{
-		$pkg{$1}{$2}{'dir'} = "$cat/$pkgdir";
-		$pkg{$1}{$2}{'depends'} = $vars->{'DEPENDS'};
+		$pkg{$1}{$2}{dir} = "$cat/$pkgdir";
+		$pkg{$1}{$2}{depends} = $vars->{DEPENDS};
 		}
 	    }
 	return($pkgname, $vars);
@@ -697,13 +700,16 @@ sub parse_makefile_vars
 
     # Some Makefiles depend on these being set
     if ($file eq '/etc/mk.conf')
-	{ $vars{'LINTPKGSRC'} = 'YES'; }
+	{ $vars{LINTPKGSRC} = 'YES'; }
     else
 	{ %vars = %{$default_vars}; }
+    $vars{BSD_PKG_MK} = 'YES';
 
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
-    if ($opt{'L'})
+    else
+	{ $vars{'.CURDIR'} = getcwd; }
+    if ($opt{L})
 	{ print "$file\n"; }
 
     while( defined($_ = shift(@data)) )
@@ -802,7 +808,7 @@ sub parse_makefile_vars
 	    } 
 	}
 
-    debug("expand: $file\n");
+    debug("$file: expand\n");
 
     # Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
     #
@@ -835,7 +841,7 @@ sub parse_makefile_vars
 		if (index($result, '${') != -1)
 		    { next; }
 
-		debug("substitutelist: $key ($result) $subvar (@patterns)\n");
+		debug("$file: substitutelist $key ($result) $subvar (@patterns)\n");
 		foreach (@patterns)
 		    {
 		    if (! m#([CS])/([^/]+)/([^/]*)/([1g]*)#)
@@ -843,7 +849,7 @@ sub parse_makefile_vars
 
 		    my($how, $from, $to, $global) = ($1, $2, $3, $4);
 
-		    debug("substituteglob: $subvar, $how, $from, $to, $global\n");
+		    debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
 		    if ($how eq 'S') # Limited substitution - keep ^ and $
 			{ $from =~ s/([?.{}\]\[*+])/\\$1/g; }
 		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
@@ -852,7 +858,7 @@ sub parse_makefile_vars
 		    if ($global =~ s/1//)
 			{ ($from, $notfirst) = split('\s', $from, 2); }
 
-		    debug("substituteperl: $subvar, $how, $from, $to\n");
+		    debug("$file: substituteperl $subvar, $how, $from, $to\n");
 		    eval "\$result =~ s/$from/$to/$global";
 		    if (defined $notfirst)
 			{ $result .= " $notfirst"; }
@@ -920,7 +926,7 @@ sub pkglint_all_pkgsrc
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     foreach $cat ( sort @categories )
 	{
-	&safe_chdir("$pkgsrcdir/$cat");
+	safe_chdir("$pkgsrcdir/$cat");
 	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
 	    if (-f "$pkgdir/Makefile")
@@ -940,7 +946,7 @@ sub pkglint_all_pkgsrc
 	}
     }
 
-# chdir() || &fail()
+# chdir() || fail()
 #
 sub safe_chdir
     {
@@ -961,7 +967,7 @@ sub scan_pkgsrc_makefiles
 	{ return; }
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     &verbose("Scanning pkgsrc Makefiles: ");
-    if (!$opt{'L'})
+    if (!$opt{L})
 	{ &verbose('_'x@categories."\b"x@categories); }
     else
 	{ &verbose("\n"); }
@@ -972,13 +978,13 @@ sub scan_pkgsrc_makefiles
 	    {
 	    my($vars);
 	    ($pkgname, $vars) =
-		    &parse_makefile_pkgsrc("$pkgsrcdir/$cat/$pkgdir/Makefile");
+		    parse_makefile_pkgsrc("$pkgsrcdir/$cat/$pkgdir/Makefile");
 	    }
-	if (!$opt{'L'})
+	if (!$opt{L})
 	    { &verbose('.'); }
 	}
 
-    if (!$opt{'L'})
+    if (!$opt{L})
 	{
 	my ($len);
 	$_ = scalar(keys %pkg).' packages';
@@ -998,8 +1004,8 @@ sub pkgsrc_check_depends
 	foreach $ver (keys %{$pkg{$pkgname}})
 	    {
 	    my($err, $msg);
-	    defined $pkg{$pkgname}{$ver}{'depends'} || next;
-	    foreach (split(" ", $pkg{$pkgname}{$ver}{'depends'}))
+	    defined $pkg{$pkgname}{$ver}{depends} || next;
+	    foreach (split(" ", $pkg{$pkgname}{$ver}{depends}))
 		{
 		s/:.*// || next;
 		if (($msg = &invalid_version($_)) )
@@ -1042,15 +1048,15 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 			    { next; }
 			if (!defined $distfiles{$2})
 			    {
-			    $distfiles{$2}{'sumtype'} = $1;
-			    $distfiles{$2}{'sum'} = $3;
-			    $distfiles{$2}{'path'} = "$cat/$pkgdir";
+			    $distfiles{$2}{sumtype} = $1;
+			    $distfiles{$2}{sum} = $3;
+			    $distfiles{$2}{path} = "$cat/$pkgdir";
 			    }
-			elsif ($distfiles{$2}{'sumtype'} eq $1 &&
-				$distfiles{$2}{'sum'} ne $3)
+			elsif ($distfiles{$2}{sumtype} eq $1 &&
+				$distfiles{$2}{sum} ne $3)
 			    {
 			    push(@distwarn, "checksum mismatch between '$1' ".
-			    "in $cat/$pkgdir and $distfiles{$2}{'path'}\n");
+			    "in $cat/$pkgdir and $distfiles{$2}{path}\n");
 			    }
 			}
 		    }
@@ -1062,7 +1068,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
     &verbose(" ($numpkg packages)\n");
 
     # Do not mark the vulnerabilities file as unknown
-    $distfiles{'vulnerabilities'} = { path => 'vulnerabilities',
+    $distfiles{vulnerabilities} = { path => 'vulnerabilities',
 				      sum => 'IGNORE'};
 
     foreach $file (&listdir("$pkgdistdir"))
@@ -1072,8 +1078,8 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	    { $bad_distfiles{$file} = 1; }
 	else
 	    {
-	    if ($dist->{'sum'} ne 'IGNORE')
-		{ push(@{$sumfiles{$dist->{'sumtype'}}}, $file); }
+	    if ($dist->{sum} ne 'IGNORE')
+		{ push(@{$sumfiles{$dist->{sumtype}}}, $file); }
 	    }
 	}
 
@@ -1090,14 +1096,14 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	if (@distwarn)
 	    { &verbose(@distwarn); }
 	&verbose("checksum mismatches\n");
-	&safe_chdir("$pkgdistdir");
+	safe_chdir("$pkgdistdir");
 	foreach $sum (keys %sumfiles)
 	    {
 	    if ($sum eq 'Size')
 		{
 		foreach (@{$sumfiles{$sum}})
 		    {
-		    if (! -f $_ || -S $_ != $distfiles{$_}{'sum'})
+		    if (! -f $_ || -S $_ != $distfiles{$_}{sum})
 			{
 			print $_, " (Size)\n";
 			$bad_distfiles{$_} = 1;
@@ -1111,7 +1117,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 		{
 		if (m/^$sum ?\(([^\)]+)\) = (\S+)/)
 		    {
-		    if ($distfiles{$1}{'sum'} ne $2)
+		    if ($distfiles{$1}{sum} ne $2)
 			{
 			print $1, " ($sum)\n";
 			$bad_distfiles{$1} = 1;
@@ -1165,5 +1171,5 @@ sub verbose
 
 sub debug
     {
-    ($opt{'D'}) && print STDERR 'DEBUG: ', @_;
+    ($opt{D}) && print STDERR 'DEBUG: ', @_;
     }
