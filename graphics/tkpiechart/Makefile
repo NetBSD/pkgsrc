@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:42:52 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 20:27:14 minskim Exp $
 
 DISTNAME=	tkpiechart-5.4
 CATEGORIES=	graphics
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://jfontain.free.fr/
 COMMENT=	Tcl/Tk pie-chart utility; in Tcl, not as an extension
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk83
 DEPENDS+=	stooop>=3.7:../../devel/stooop
 
 NO_CONFIGURE=	yes

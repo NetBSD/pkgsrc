@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
@@ -11,7 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.ikp.uni-koeln.de/~vogel/xblast/xblast.html
 COMMENT=		2-6 player kill the other guy with bombs game. A real blast!
 
-DEPENDS+=		tk>=8.3.2:../../x11/tk
+DEPENDS+=		tk>=8.3.2:../../x11/tk83
 
 WRKSRC=			${WRKDIR}/XBlast-2.6.beta
 USE_IMAKE=		yes

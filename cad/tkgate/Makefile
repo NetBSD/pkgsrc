@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/25 03:08:46 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 20:27:13 minskim Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -33,5 +33,5 @@ do-configure:
 	${ECHO} "${TKGATE_SITENAME}" > ${WRKSRC}/sitename.txt
 	( cd ${WRKSRC} && ${CONFIGURE_ENV} ./configure )
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

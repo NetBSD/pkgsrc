@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:28:27 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:17 minskim Exp $
 #
 
 DISTNAME=	tix8.2.0b1
@@ -21,5 +21,5 @@ MAKE_ENV+=		TCL_DIR=${BUILDLINK_PREFIX.tcl}
 MAKE_ENV+=		TK_DIR=${BUILDLINK_PREFIX.tk}
 TEST_TARGET=		test
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

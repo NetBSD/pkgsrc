@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -62,6 +62,6 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,, -rw . ${PREFIX}/pvs
 	${CHMOD} 755 ${PREFIX}/pvs/pvs
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"

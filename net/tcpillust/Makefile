@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:51:55 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 20:27:15 minskim Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.csl.sony.co.jp/person/nishida/tcpillust.html
 COMMENT=	Graphical TCP connection analysis tool
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 USE_IMAKE=	yes
 GNU_CONFIGURE=	yes

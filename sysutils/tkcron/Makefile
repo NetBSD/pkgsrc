@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 20:27:15 minskim Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tcl.gz
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Graphical frontend to crontab
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 WRKSRC=		${WRKDIR}
 USE_X11=	yes

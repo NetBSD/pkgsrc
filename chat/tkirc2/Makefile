@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:09:35 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/08 20:27:13 minskim Exp $
 
 DISTNAME=	tkirc2.46
 PKGNAME=	tkirc2-2.46
@@ -10,7 +10,7 @@ HOMEPAGE=	http://netsplit.de/tkirc2/
 COMMENT=	GUI for the ircII Internet Relay Chat client
 
 DEPENDS+=	ircII-[0-9]*:../../chat/ircII
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 WRKSRC=		${WRKDIR}/tkirc2
 USE_X11=	yes

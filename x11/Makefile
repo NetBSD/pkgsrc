@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2004/02/23 13:28:21 cube Exp $
+# $NetBSD: Makefile,v 1.341 2004/03/08 20:27:16 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -193,6 +193,7 @@ SUBDIR+=	ssystem
 SUBDIR+=	startup-notification
 SUBDIR+=	swing
 SUBDIR+=	tk
+SUBDIR+=	tk83
 SUBDIR+=	tk-Tix
 SUBDIR+=	tkinfo
 SUBDIR+=	tkman

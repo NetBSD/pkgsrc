@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/08 20:27:14 minskim Exp $
 
 DISTNAME=		plplot-5.2.1
 CATEGORIES=		graphics
@@ -62,7 +62,7 @@ post-install:
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../lang/tcl83/buildlink2.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=	ocaml-3.06
@@ -59,5 +59,5 @@ PLIST_SUBST+=		NATIVE_THREADS=
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 
-.include "../../x11/tk/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

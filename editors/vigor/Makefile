@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:14:06 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -34,5 +34,5 @@ post-patch:
 post-build:
 	nroff -mandoc ${WRKSRC}/../docs/USD.doc/vi.man/vi.1 >${WRKSRC}/../docs/USD.doc/vi.man/vi.0
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
