@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/14 20:34:42 minskim Exp $
 #
 
 DISTNAME=	linda-0.1.1
@@ -15,4 +15,5 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		# defined
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
