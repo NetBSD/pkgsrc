@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8130 2004/11/29 02:28:11 tv Exp $
+$NetBSD: CHANGES,v 1.8131 2004/11/29 04:53:04 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5617,3 +5617,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cygwin_lib to 1.5.12.1 [tv 2004-11-29]
 	Updated p5-Mail-SRS to 0.31 [tv 2004-11-29]
 	Updated libextractor to 0.3.11 [tv 2004-11-29]
+	Updated nulib2 to 2.0.3 [tv 2004-11-29]
