@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/02/05 06:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/17 02:26:28 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -10,15 +10,25 @@ MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
-ADDUSER_PROG=		${PREFIX}/sbin/addnerd
+.if exists(/usr/sbin/user)
+ADDUSER=		/usr/sbin/useradd
+ADDGROUP=		/usr/sbin/groupadd
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+ADDUSER=		${LOCALBASE}/sbin/useradd
+ADDGROUP=		${LOCALBASE}/sbin/groupadd
+.endif
 .elif ${OPSYS} == "SunOS"
-ADDUSER_PROG=		useradd
 MAKE_ENV+=		CPPFLAGS=-D_LARGEFILE64_SOURCE
+ADDUSER=		useradd
+ADDGROUP=		groupadd
 .endif
 
 CONFIGURE_ARGS+=	--without-server --without-restore --without-client
@@ -28,10 +38,13 @@ CPPFLAGS=		# empty
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 pre-install:
-	case `${GREP} -c '^${AMANDA_USER}:' /etc/passwd || ${TRUE}` in	\
-	0)								\
-		${SETENV} ${MAKE_ENV} ${ADDUSER_PROG} -g ${AMANDA_GROUP} ${AMANDA_USER} \
-		;;							\
-	esac
+	${SED}  -e 's|@AMUSER@|${AMANDA_USER}|g' \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}  -e 's|@AMUSER@|${AMANDA_USER}|g' \
+		-e 's|@AMGROUP@|${AMANDA_GROUP}|g' \
+		-e 's|@ADDUSER@|${ADDUSER}|g' \
+		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
