@@ -1,5 +1,6 @@
-#!/bin/sh
-# $NetBSD: sfssd,v 1.2 2003/03/25 06:45:01 lukem Exp $
+#!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: sfssd.sh,v 1.1 2003/03/25 15:51:51 grant Exp $
 #
 # start script for SFS server daemon 
 
