@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/05/03 22:37:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/11 16:25:31 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.31_W
-PKGNAME=		lsof-4.31
+DISTNAME=		lsof_4.33_W
+PKGNAME=		lsof-4.33
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
@@ -23,8 +23,6 @@ CONFIGURE_ARGS=		-n freebsd
 .elif (${OPSYS} == "NetBSD")
 CONFIGURE_ARGS=		-n netbsd
 .endif
-
-MAKE_FLAGS=		UVM=${UVM}
 
 MAN1=			lsof.1
 
