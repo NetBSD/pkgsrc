@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.9 2000/05/20 19:34:21 jlam Exp $
+
+--- pl/tcl/Makefile.orig	Sat Apr 29 13:45:42 2000
++++ pl/tcl/Makefile	Sat May 20 00:14:18 2000
+@@ -70,7 +70,7 @@
+ 
+ CFLAGS+= $(TCL_SHLIB_CFLAGS) $(TCL_DEFS)
+ 
+-CFLAGS+= -I$(SRCDIR)/include -I$(SRCDIR)/backend
++CFLAGS+= -I$(SRCDIR)/include -I$(SRCDIR)/backend -I$(LIBPQDIR) $(CPPFLAGS)
+         
+ #
+ # Uncomment the following to enable the unknown command lookup
