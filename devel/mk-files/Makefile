@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/02/06 16:58:13 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/20 07:00:56 sjg Exp $
 #
 
-DISTNAME=       mk-1.2.5
-PKGNAME=	mk-files-1.2.5
+DISTNAME=	mk-1.3.2
+PKGNAME=	mk-files-1.3.2
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/incoming/sjg/
 
@@ -15,33 +15,23 @@ WRKSRC=		${WRKDIR}/mk
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-MKFILES=	autodep.mk dep.mk doc.mk lib.mk man.mk nls.mk 
-MKFILES+=	obj.mk own.mk prog.mk subdir.mk target-flags.mk
-
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "NetBSD"
-# we don't want to use these on BSD systems, since prog.mk and
-# lib.mk now rely on finding the correct bsd.prog.mk etc to
-# get the right magic on ELF systems.
-MKFILES+=	bsd.dep.mk bsd.doc.mk bsd.lib.mk bsd.man.mk
-MKFILES+=	bsd.nls.mk bsd.obj.mk bsd.own.mk bsd.prog.mk bsd.subdir.mk
-
-# need to include the commented out guys
 PLIST_SRC=${WRKDIR}/.PLIST_SRC
 
-${WRKDIR}/.PLIST_SRC:	${PKGDIR}/PLIST
-	@${SED} 's,^@comment.*skip-on-BSD ,,' $> > $@
-
-.endif
-
 do-install:
-.if ${OPSYS} != "NetBSD"
-	${INSTALL_DATA} ${WRKSRC}/`uname -s`.sys.mk ${PREFIX}/share/mk/sys.mk
-.endif
-	for f in ${MKFILES}; do						\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/mk/;	\
-	done
+	${WRKSRC}/install-mk ${PREFIX}/share/mk
 
 .include "../../mk/bsd.pkg.mk"
 
+# The logic below mimics what install-mk does.
+# Ie. it won't install a sys.mk if a standard BSD one exists
+# same goes for the bsd.*.mk files (it makes the symlinks to *.mk)
+${WRKSRC}/FILES:	extract
+${WRKDIR}/.PLIST_SRC:	${WRKSRC}/FILES
+	@( grep '^[a-z].*\.mk' $> ; \
+	[ -f /usr/share/mk/sys.mk ] || echo sys.mk; \
+	[ -f /usr/share/mk/bsd.prog.mk ] || \
+	for f in dep doc init lib man nls obj own prog subdir; do \
+		echo bsd.$$f.mk; \
+	done ) | sed 's,^,share/mk/,' > $@
