@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1057 2003/01/09 09:48:28 rh Exp $
+$NetBSD: CHANGES,v 1.1058 2003/01/09 10:49:09 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added driftnet-0.1.6 [hubertf 2003-01-09]
 	Updated Xft2 to 2.1nb2 [jmmv 2003-01-09]
 	Updated gnome-vfs to 1.0.5 [rh 2003-01-09]
+	Updated gal to 0.22 [rh 2003-01-09]
