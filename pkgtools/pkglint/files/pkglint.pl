@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.60 2001/11/03 21:34:36 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.61 2001/11/03 21:41:49 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -205,11 +205,11 @@ if (-e <$pkgdir/COMMENT> ) {
 	&perror("FATAL: $pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
 }
 if (-d "$portdir/pkg" ) {
-	&perror("FATAL: $portdir/pkg and it's contents are deprecated!\n".
+	&perror("FATAL: $portdir/pkg and its contents are deprecated!\n".
 		"\tPlease 'mv $portdir/pkg/* $portdir' and 'rmdir $portdir/pkg'.");
 }
 if (-d "$portdir/scripts" ) {
-	&perror("WARN: $portdir/scripts and it's contents are deprecated! Please call the script(s)\n".
+	&perror("WARN: $portdir/scripts and its contents are deprecated! Please call the script(s)\n".
 		"\texplicitly from the corresponding target(s) in the pkg's Makefile.");
 }
 if (! -f "$portdir/$pkgdir/PLIST"
