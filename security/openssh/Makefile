@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2004/05/21 22:54:43 reed Exp $
+# $NetBSD: Makefile,v 1.139 2004/05/21 23:00:23 reed Exp $
 
 DISTNAME=		openssh-3.8.1p1
 PKGNAME=		openssh-3.8.1.1
@@ -112,7 +112,9 @@ CONFS=			ssh_config sshd_config
 SUPPS=			moduli
 
 .if exists(/dev/urandom)
+.  if ${OPSYS} == "NetBSD"
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.urandom
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-random
 CONFS+=			ssh_prng_cmds
