@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2003/01/03 23:04:36 wiz Exp $
+$NetBSD: distinfo,v 1.13 2003/04/15 11:11:50 mjl Exp $
 
-SHA1 (ImageMagick-5.5.3-2.tar.bz2) = cb557cb06d9b9ed595b3910ac73efd65dc3f8f6b
-Size (ImageMagick-5.5.3-2.tar.bz2) = 3391584 bytes
+SHA1 (ImageMagick-5.5.6.tar.bz2) = 952695b25f53a11c1cf576f790a1d06299a750fb
+Size (ImageMagick-5.5.6.tar.bz2) = 3526303 bytes
