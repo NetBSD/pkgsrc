@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2002/09/21 12:49:55 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2003/03/09 19:17:55 jschauma Exp $
 
 DISTNAME=		ClanLib-0.4.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics games devel x11
 MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/
 
@@ -33,12 +33,15 @@ CONFIGURE_ARGS+=	--disable-vidmode
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 MAKE_ENV+=		X11BASE="${X11BASE}"
 
+.include "../../mk/bsd.prefs.mk"
+
 post-patch:
 	${CHMOD} +x ${WRKSRC}/configure
 
 .include "../../graphics/hermes/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
