@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2001/04/30 20:56:52 jtb Exp $
+
+--- src/Velvet/Makefile.orig	Mon Feb 21 22:44:51 2000
++++ src/Velvet/Makefile
+@@ -40,4 +40,4 @@
+ 
+ velvet.o:	velvet.ad.h interface.h
+ 
+-install::;	@$(INSTALL) -m 0644 Velvet.ad $(X11DEF) 2> /dev/null || true
++install::;	@$(INSTALL) -m 0644 Velvet.ad $(X11DEF)/Velvet 2> /dev/null || true
