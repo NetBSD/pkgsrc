@@ -12,9 +12,9 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.51 2001/06/09 12:30:53 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.52 2001/06/09 15:36:13 wiz Exp $
 #
-# This version contains some changes necessary for NetBSD packages
+# This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
 # Thorsten Frueauf <frueauf@netbsd.org>, Thomas Klausner <wiz@netbsd.org>
 # and others.
@@ -31,18 +31,12 @@ $showmakefile = 0;				# -I
 $contblank = 1;
 $portdir = '.';
 
-# default setting - for FreeBSD
-$portsdir = '/usr/ports';
-$rcsidstr = 'Id';
-$multiplist = 0;
-$ldconfigwithtrue = 0;
-$rcsidinplist = 0;
-$mancompress = 1;
-$manstrict = 0;
-$manchapters = '123456789ln';
-$localbase = "/usr/local";
+# default settings for NetBSD
+$portsdir = '@PORTSDIR@';
+$rcsidstr = 'NetBSD';
+$localbase = '@PREFIX@';
 
-getopts('habcINB:vV');
+getopts('hINB:vV');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
@@ -56,8 +50,6 @@ usage: $prog [-vIN] [-B#] [package_directory]
 EOF
 		exit 0;
 };
-print "One or more of the given options are now on by default.\n"
-	if $opt_a or $opt_b or $opt_c;
 $verbose = 1	if $opt_v;
 $newpkg = 1	if $opt_N;
 $showmakefile = 1	if $opt_I;
@@ -70,34 +62,9 @@ if ($opt_V) {
 	exit;
 }
 
-# OS dependent configs
-# os    portsdir        rcsid   mplist  ldcfg   plist-rcsid mancompresss strict localbase
-@osdep = split(/\n/, <<EOF);
-FreeBSD /usr/ports	Id	0	0	0	    1		 0	/usr/local
-NetBSD	@PORTSDIR@	NetBSD	1	1	1	    0		 1	@PREFIX@
-EOF
-$osname = `uname -s`;
-$osname =~ s/\n$//;
-if (($osname eq "SunOS") || ($osname eq "Linux")) {
-	$osname = "NetBSD"
-}
-foreach $i (@osdep) {
-	if ($i =~ /^$osname\t(.*)/) {
-		print "OK: found OS config for $osname.\n" if ($verbose);
-		($portsdir, $rcsidstr, $multiplist, $ldconfigwithtrue,
-			$rcsidinplist, $mancompress, $manstrict, $localbase)
-				= split(/\t+/, $1);
-		last;
-	}
-}
 if ($verbose) {
 	print "OK: config: portsdir: \"$portsdir\" ".
 		"rcsidstr: \"$rcsidstr\" ".
-		"multiplist: $multiplist ".
-		"ldconfigwithtrue: $ldconfigwithtrue ".
-		"rcsidinplist: $rcsidinplist ".
-		"mancompress: $mancompress ".
-		"manstrict: $manstrict ".
 		"localbase: $localbase\n";
 }
 
@@ -113,10 +80,6 @@ if (! -d $portdir) {
 # variables for global checks.
 #
 $sharedocused = 0;
-%plistmanall = ();
-%plistmangz = ();
-%plistman = ();
-%manlangs = ();
 $seen_PLIST_SRC = 0;
 $seen_NO_PKG_REGISTER = 0;
 $seen_NO_CHECKSUM = 0;
@@ -173,7 +136,7 @@ if ($extrafile) {
 		$i =~ s/^\Q$portdir\E\///;
 		next if (defined $checker{$i});
 		if ($i =~ /pkg\/PLIST$/ ||
-                    ($multiplist && $i =~ /pkg\/PLIST/)) {
+                    ($i =~ /pkg\/PLIST/)) {
 		        unshift(@checker, $i);
 			$checker{$i} = 'checkplist';
 		} else {
@@ -374,7 +337,7 @@ sub checkplist {
 
 		$_ =~ s/\n$//;
 		
-	        if (($osname eq "NetBSD") && ($_ =~ /<\$ARCH>/)) {
+	        if ($_ =~ /<\$ARCH>/) {
 		    &perror("WARN: $file $.: use of <\$ARCH> ".
 			    "deprecated, use \${MACHINE_ARCH instead}.");
 		}
@@ -390,8 +353,7 @@ sub checkplist {
 			} elsif ($_ =~ /^\@unexec[ \t]+(.*\/)?install-info[ \t]+--delete/) {
 				$inforemoveseen = $.
 			} elsif ($_ =~ /^\@(exec|unexec)/) {
-				if ($ldconfigwithtrue
-				 && /ldconfig/
+				if (/ldconfig/
 				 && !/\/usr\/bin\/true/) {
 					&perror("FATAL: $file $.: ldconfig ".
 						"must be used with ".
@@ -431,31 +393,6 @@ sub checkplist {
 			$infooverwrite++;
 		}
 
-		if ($_ =~ m#man/([^/]+/)?man([$manchapters])/(.+\.[$manchapters])(\.gz)?#) { # was bugg for manpages w/ . in name - HF
-		        if ($osname eq "FreeBSD") {
-			     if ($4 eq '') {
-				 $plistman{$2} .= ' ' . $3;
-				 if ($mancompress) {
-				     &perror("FATAL: $file $.: ".
-					     "unpacked man file $3 ".
-					     "listed. must be gzipped.");
-				 }
-			     } else {
-				 $plistmangz{$2} .= ' ' . $3;
-				 if (!$mancompress) {
-				     &perror("FATAL: $file $.: ".
-					     "gzipped man file $3$4 ".
-					     "listed. unpacked one should ".
-					     "be installed.");
-				 }
-			     }
-			 }
-			$plistmanall{$2} .= ' ' . $3;
-			if ($1 ne '') {
-				$manlangs{substr($1, 0, length($1) - 1)}++;
-			}
-		}
-
 		if ($curdir !~ m#^$localbase#
 		 && $curdir !~ m#^/usr/X11R6#) {
 			&perror("WARN: $file $.: installing to ".
@@ -470,7 +407,7 @@ sub checkplist {
 		}
 	}
 
-	if ($rcsidinplist && !$rcsidseen) {
+	if (!$rcsidseen) {
 		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
 			"in $file as \@comment.")
 	}
@@ -637,7 +574,6 @@ sub checkmakefile {
 	local($distfiles, $pkgname, $distname, $extractsufx) = ('', '', '', '');
 	local($bogusdistfiles) = (0);
 	local($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
-	local(@mman, @pman);
 	local($includefile);
 
 	$tmp = 0;
@@ -688,6 +624,7 @@ sub checkmakefile {
 	$patchdir = "patches";
 	$patchdir = $1 if ($whole =~ /\nPATCHDIR[+?]?=[ \t]*([^\n]+)\n/);
 	$patchdir =~ s/\$\{.CURDIR\}/./;
+	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
 
 	$pkgdir = "pkg";
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
@@ -707,7 +644,7 @@ sub checkmakefile {
 	      "DISTINFO: $distinfo\n") if ($verbose);
 
 	#
-	# whole file: IS_INTERACTIVE/NOPORTDOCS
+	# whole file: IS_INTERACTIVE
 	#
 	$whole =~ s/\n#[^\n]*/\n/g;
 	$whole =~ s/\n\n+/\n/g;
@@ -718,13 +655,6 @@ sub checkmakefile {
 				"provide batch mode by using BATCH and/or ".
 				"FOR_CDROM.");
 		}
-	}
-	print "OK: checking for use of NOPORTDOCS.\n" if ($verbose);
-	if ($sharedocused && $whole !~ /defined\(NOPORTDOCS\)/
-	 && $whole !~ m#(\$[\{\(]PREFIX[\}\)]|$localbase)/share/doc#) {
-		&perror("WARN: use \".if !defined(NOPORTDOCS)\" to wrap ".
-			"installation of files into $localbase/share/doc.")
-	            if $osname ne "NetBSD"; # how do you get this out of PLIST?
 	}
 	print "OK: checking for PLIST_SRC.\n" if ($verbose);
 	if ($whole =~ /\nPLIST_SRC/) {
@@ -826,8 +756,7 @@ EOF
 	#
 	# whole file: ldconfig must come with "true" command
 	#
-	if ($ldconfigwithtrue
-	 && $j =~ /(ldconfig|\$[{(]LDCONFIG[)}])/
+	if ($j =~ /(ldconfig|\$[{(]LDCONFIG[)}])/
 	 && $j !~ /(\/usr\/bin\/true|\$[{(]TRUE[)}])/) {
 		&perror("FATAL: ldconfig must be used with \"||\${TRUE}\".");
 	}
@@ -867,36 +796,8 @@ EOF
 	# section 1: comment lines.
 	#
 	print "OK: checking comment section of $file.\n" if ($verbose);
-	if($osname ne "NetBSD"){
-		@linestocheck = split("\n", <<EOF);
-Whom
-Version [rR]equired
-Date [cC]reated
-EOF
-		unshift(@linestocheck,'(New )?[pP]orts [cC]ollection [mM]akefile [fF]or');
-		$tmp = $sections[$idx++];
-		$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
-
-		if ($tmp =~ /\n[^#]/) {
-			&perror("FATAL: non-comment line in comment section of $file.");
-		}
-		foreach $i (@linestocheck) {
-			$j = $i;
-			$j =~ s/\(.*\)\?//g;
-			$j =~ s/\[(.)[^\]]*\]/$1/g;
-			if ($tmp !~ /# $i:[ \t]+\S+/) {
-				&perror("FATAL: no \"$j\" line in ".
-					"comment section of $file.");
-			} else {
-				print "OK: \"$j\" seen in $file.\n" if ($verbose);
-			}
-		}
-	} else {
-		$tmp = $sections[$idx++];
-	}
-	if ((($tmp !~ /#(\s+)\$$rcsidstr([^\$]*)\$/) && ($osname eq "NetBSD"))
-	    || (($tmp !~ /#\n#(\s+)\$$rcsidstr([^\$]*)\$/) &&
-	       ($osname eq "FreeBSD"))) {
+	$tmp = $sections[$idx++];
+	if ($tmp !~ /#(\s+)\$$rcsidstr([^\$]*)\$/) {
 		&perror("FATAL: no \$$rcsidstr\$ line in $file comment ".
 			"section.");
 	} else {
@@ -940,11 +841,9 @@ EOF
 DISTNAME PKGNAME WRKSRC NO_WRKSUBDIR CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
 EXTRACT_SUFX DISTFILES
 EOF
-	if ($osname eq "NetBSD") {
-	    push(@tocheck,"ONLY_FOR_ARCHS");
-	    push(@tocheck,"NO_SRC_ON_FTP");
-	    push(@tocheck,"NO_BIN_ON_FTP");
-	}
+	push(@tocheck,"ONLY_FOR_ARCHS");
+	push(@tocheck,"NO_SRC_ON_FTP");
+	push(@tocheck,"NO_BIN_ON_FTP");
         &checkorder('DISTNAME', $tmp, @tocheck);
 
 	# check the items that has to be there.
@@ -1042,8 +941,7 @@ EOF
 				(($pkgname eq '')
 					? ', which is derived from DISTNAME, '
 					: ' ').
-				"looks illegal. You should modify \"-$k\"" .
-                                ($osname ne "NetBSD"?" to obey the handbook.":"."));
+				"looks illegal. You should modify \"-$k\"");
 		}
 	} else {
 		&perror("FATAL: PKGNAME".
@@ -1204,17 +1102,10 @@ EOF
 		if ($verbose);
 	$tmp = $sections[$idx];
 
-	# NOTE: EXEC_DEPENDS is obsolete, so it should not be listed.
 	@linestocheck = split(/\s+/, <<EOF);
-BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS DEPENDS_TARGET FETCH_DEPENDS
-LIB_DEPENDS RUN_DEPENDS
+BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS
 EOF
-        $warn_lib_depends_backslashes=0
-            if $osname eq "NetBSD";
-        if ($tmp =~ /(RUN_DEPENDS).*=/) {
-		&perror("WARN: $1 is deprecated, please use DEPENDS.");
-	}
-        if ($tmp =~ /(LIB_DEPENDS).*=/) {
+        if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
 		&perror("WARN: $1 is deprecated, please use DEPENDS.");
 	}
 	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/ or
@@ -1238,8 +1129,8 @@ EOF
 				}
 				# check USE_PERL5
 				$l = (split(':', $k))[0];
-				if ($l =~ /^perl5(\.\d+)?$/) {
-					&perror("WARN: dependency to perl5 ".
+				if ($l =~ /^perl(\.\d+)?$/) {
+					&perror("WARN: dependency to perl ".
 						"listed in $j. Consider using".
 						" USE_PERL5.");
 				}
@@ -1250,12 +1141,6 @@ EOF
 						"listed in $j. Consider using".
 						" USE_GMAKE.");
 				}
-                                # check for LIB_DEPENDS w/o backslashes
-                                if ($osname eq "NetBSD") {
-	                                if (("$j" eq "LIB_DEPENDS") && ($l =~ /\\\\\./)) {
-                                                $warn_lib_depends_backslashes=1;
-  	                                }
-	                        }
 
 				# check pkg dir existence
 				$k = (split(':', $k))[1];
@@ -1270,9 +1155,6 @@ EOF
 				}
 			}
 		}
-                if (($osname eq "NetBSD") && ($warn_lib_depends_backslashes == 1)) {
-                        &perror("WARN: use of backslashes in LIB_DEPENDS is deprecated.");
-                }
 		foreach $i (@linestocheck) {
 			$tmp =~ s/$i[?+]?=[^\n]+\n//g;
 		}
@@ -1346,69 +1228,6 @@ EOF
 		if ($wrksrc eq 'work' || $wrksrc =~ /^$[\{\(]WRKDIR[\}\)]/) {
 			&perror("WARN: definition of WRKSRC not necessary. ".
 				"WRKSRC is \${WRKDIR} by default.");
-		}
-	}
-
-	# next check commented out since NetBSD doesn't have pkgsrc/LEGAL
-	# check RESTRICTED/NO_SRC_ON_CDROM/NO_BIN_ON_CDROM/NO_PACKAGE
-	# print "OK: checking RESTRICTED/NO_{SRC,BIN}_ON_CDROM/NO_PACKAGE.\n"
-	# if ($verbose);
-	# if ($committer && $tmp =~ /\n(RESTRICTED|NO_{SRC,BIN}_ON_CDROM|NO_PACKAGE)[+?]?=/) {
-	#	&perror("WARN: \"$1\" found. Do not forget to update ".
-	#		"ports/LEGAL.");
-	# }
-
-	# check MAN[1-9LN]
-	if ($extrafile && $osname ne "NetBSD") {
-		print "OK: checking MAN[0-9LN].\n" if ($verbose);
-		foreach $i (split(//, $manchapters)) {
-			next if ($i eq '');
-			if ($tmp =~ /MAN\U$i\E=\s*([^\n]*)\n/) {
-				@mman = split(/\s+/, $1);
-				@pman = split(/\s+/, $plistmanall{$i});
-				foreach $j (@mman) {
-			                next if ($j eq '');
-					if (!grep($_ eq $j, @pman)) {
-						&perror("WARN: manpage $j in $file ".
-							"MAN$i but not in PLIST.");
-					}
-				}
-				foreach $j (@pman) {
-			                next if ($j eq '');
-					if (!grep($_ eq $j, @mman)) {
-						&perror("WARN: manpage $j in PLIST ".
-							"but not in $file MAN$i.");
-					}
-				}
-			} else {
-				if ($plistmanall{$i}) {
-					if ($manstrict) {
-						&perror("FATAL: manpage for chapter ".
-							"$i must be listed in ".
-							"$file MAN\U$i\E. ");
-					} else {
-						&perror("WARN: manpage for chapter ".
-							"$i should be listed in ".
-							"MAN\U$i\E, ".
-							"even if compression is ".
-							"not necessary.");
-					}
-				}
-				if ($mancompress && $plistman{$i}) {
-					&perror("WARN: MAN\U$i\E? will help you ".
-						"compressing manual page in chapter ".
-						"\"$i\".");
-				} elsif (!$mancompress && $plistmangz{$i}) {
-					&perror("WARN: MAN\U$i\E? will help you ".
-						"uncompressing manual page in chapter ".
-						"\"$i\".");
-				}
-			}
-		}
-		if ($tmp !~ /MANLANG/ && scalar(keys %manlangs)) {
-			$i = (keys %manlangs)[0];
-			&perror("WARN: how about using MANLANG for ".
-				"designating manual language, such as \"$i\"?");
 		}
 	}
 
@@ -1548,6 +1367,7 @@ sub abspathname {
 $portsdir	\${PORTSDIR} instead
 $localbase	\${PREFIX} or \${LOCALBASE}, as appropriate
 /usr/X11	\${PREFIX} or \${X11BASE}, as appropriate
+/usr/X11R6	\${PREFIX} or \${X11BASE}, as appropriate
 EOF
 	foreach $i (keys %cmdnames) {
 		if ($str =~ /$i/) {
