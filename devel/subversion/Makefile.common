@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.16 2004/11/19 04:01:59 epg Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/11/27 00:36:25 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
 MASTER_SITES=   	http://subversion.tigris.org/tarballs/
 
-MAINTAINER=		epg@pretzelnet.org
+MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
 
 .include "../../devel/subversion/Makefile.version"
@@ -13,7 +13,7 @@ SVNEXAMPLES=		${PREFIX}/share/examples/subversion
 SVNDOC=			${PREFIX}/share/doc/subversion
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/subversion/distinfo
-COMMON_FILESDIR=	${.CURDIR}/../../devel/subversion/files
+FILESDIR=       	${.CURDIR}/../../devel/subversion/files
 PATCHDIR=		${.CURDIR}/../../devel/subversion/patches
 
 GNU_CONFIGURE=		YES

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2004/11/22 21:13:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/11/27 00:36:25 epg Exp $
 
 DISTNAME=       swig-${SWIG_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
-MAINTAINER=	epg@pretzelnet.org
+MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://www.swig.org/
 
 .include "../../devel/swig-build/Makefile.version"
