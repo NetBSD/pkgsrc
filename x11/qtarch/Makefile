@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/28 00:05:24 snj Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://qtarch.sourceforge.net/
 COMMENT=	Graphical dialog editor for the Qt widget set
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/qtarch/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/qtarch/doc
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
