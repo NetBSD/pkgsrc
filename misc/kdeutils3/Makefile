@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/04 20:38:00 markd Exp $
 
-DISTNAME=	kdeutils-3.1.5
-PKGREVISION=	1
+DISTNAME=	kdeutils-${_KDE_VERSION}
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
@@ -18,13 +17,6 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=             -D__NetBSD_APM__
 .endif
-
-FOO_MAIN_FILES= \
-	kcalc/kcalc_main.cpp \
-	kedit/kedit_main.cpp \
-	klaptopdaemon/klaptopdaemon_main.cpp
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
