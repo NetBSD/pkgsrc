@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.1 2001/07/13 16:08:41 taca Exp $
+$NetBSD: patch-ag,v 1.2 2003/06/04 06:12:22 jlam Exp $
 
---- script/installbin.sh.orig	Sat Jan 13 04:28:02 2001
+--- script/installbin.sh.orig	Fri Jan 12 11:28:02 2001
 +++ script/installbin.sh
+@@ -11,7 +11,7 @@
+ shift
+ shift
+ 
+-for d in $BASEDIR $BINDIR $LIBDIR $VARDIR $BASEDIR/private; do
++for d in $BASEDIR $BINDIR $LIBDIR $VARDIR; do
+ if [ ! -d $d ]; then
+ mkdir $d
+ if [ ! -d $d ]; then
 @@ -30,7 +30,9 @@
     mv $BINDIR/$p2 $BINDIR/$p2.old
   fi
