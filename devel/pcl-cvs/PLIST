@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/10 14:39:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/06/23 22:27:05 seb Exp $
 ${EMACS_LISPPREFIX}/pcl-cvs/cvs-compat.el
 ${EMACS_LISPPREFIX}/pcl-cvs/cvs-compat.elc
 ${EMACS_LISPPREFIX}/pcl-cvs/cvs-edit.el
@@ -18,9 +18,7 @@ ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs-util.el
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs-util.elc
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs.el
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs.elc
-@unexec install-info --delete --info-dir=%D/info %D/info/pcl-cvs.info
 info/pcl-cvs.info
 info/pcl-cvs.info-1
 info/pcl-cvs.info-2
-@exec install-info --info-dir=%D/info %D/info/pcl-cvs.info
 @dirrm ${EMACS_LISPPREFIX}/pcl-cvs

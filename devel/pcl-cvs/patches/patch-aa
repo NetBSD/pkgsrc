@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/08 17:33:18 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/23 22:27:06 seb Exp $
 
 --- Makefile.orig	Sun Mar  5 21:32:20 2000
 +++ Makefile
@@ -11,17 +11,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/08 17:33:18 cjep Exp $
  datadir = $(prefix)/share
  
  # the directory where you install third-party emacs packges
-@@ -102,8 +102,7 @@
+@@ -47,7 +47,6 @@ infodir = $(prefix)/info
+ docdir = $(prefix)/doc
+ 
+ EMACS	= emacs
+-MAKEINFO= makeinfo
+ TEXI2DVI= texi2dvi
+ SHELL	= /bin/sh
+ DVIPS	= dvips
+@@ -102,8 +101,6 @@ install_el:
  install_info: $(PACKAGE).info
  	$(MKDIR) $(infodir)
  	$(CP) *.info* $(infodir)/
 -	-[ ! -w $(infodir)/dir ] \
 -	    || install-info --info-dir=$(infodir) $(PACKAGE).info
-+	-[ -w $(infodir)/dir ] && install-info --info-dir=$(infodir) $(PACKAGE).info
  
  install_startup:
  	$(MKDIR) $(lispdir)
-@@ -130,7 +129,7 @@
+@@ -130,7 +127,7 @@ install_dvi: dvi
  	$(MKDIR) $(docdir)
  	$(CP) *.dvi $(docdir)/
  
