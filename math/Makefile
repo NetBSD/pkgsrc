@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2002/04/23 01:49:34 markd Exp $
+# $NetBSD: Makefile,v 1.77 2002/05/04 01:10:45 jtb Exp $
 #
 
 COMMENT=	Mathematics
@@ -16,6 +16,7 @@ SUBDIR+=	R-rpart
 SUBDIR+=	R-survival
 SUBDIR+=	abs
 SUBDIR+=	admesh
+SUBDIR+=	algae
 SUBDIR+=	aribas
 SUBDIR+=	blas
 SUBDIR+=	calc
