@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/30 16:56:33 taca Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/28 14:08:01 taca Exp $
 # FreeBSD: ports/archivers/ruby-zlib/Makefile,v 1.7 2000/09/26 22:01:12 knu Exp
 
 DISTNAME=	ruby-zlib-${VERSION}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.blue.sky.or.jp/atelier/
 COMMENT=	Zlib library for Ruby 1.6.X
 
 VERSION=		0.6.0
+RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION=		${RUBY16_VERSION}
 USE_RUBY_EXTCONF=	yes
 
