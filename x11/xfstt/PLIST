@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:10 zuntum Exp $
+bin/xfstt
+etc/rc.d/xfstt
+man/man1/xfstt.1
+share/doc/xfstt/FAQ
+share/doc/xfstt/CHANGES
+share/doc/xfstt/INSTALL
+share/doc/xfstt/THANKS.txt
+lib/X11/fonts/TrueType/.keepme
+@dirrm lib/X11/fonts/TrueType
+@dirrm share/doc/xfstt
