@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 1998/08/20 15:16:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1998/12/03 09:08:24 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
-DISTNAME=	ddd-2.2.3
+DISTNAME=	ddd-3.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
@@ -10,10 +10,12 @@ MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/  \
 		ftp://ftp.th-darmstadt.de/pub/programming/tools/ddd/
 
-MAINTAINER=     obrien@NUXI.com
+MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
+
+CONFLICTS=	ddd-2.2.3
 
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
