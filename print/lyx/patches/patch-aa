@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2002/04/17 04:45:17 fredb Exp $
+$NetBSD: patch-aa,v 1.8 2002/04/18 23:55:27 fredb Exp $
 
 --- configure.orig	Fri Aug  3 07:21:35 2001
 +++ configure
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.7 2002/04/17 04:45:17 fredb Exp $
  else
    echo "$ac_t""no" 1>&6
  echo $ac_n "checking for fl_initialize in -lxforms""... $ac_c" 1>&6
+@@ -9764,7 +9764,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
