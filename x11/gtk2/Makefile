@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/09/08 15:07:22 adam Exp $
+# $NetBSD: Makefile,v 1.34 2003/10/22 01:20:30 grant Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
-COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
+COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
