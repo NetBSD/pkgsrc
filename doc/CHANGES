@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7172 2004/09/20 07:59:29 adam Exp $
+$NetBSD: CHANGES,v 1.7173 2004/09/20 08:05:00 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4272,3 +4272,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wl to 2.10.1 [wiz 2004-09-19]
 	Updated mozilla-bin to 1.7.3 [tron 2004-09-19]
 	Updated m4 to 1.4.1 [adam 2004-09-20]
+	Updated firefox to 0.10 [taya 2004-09-20]
+	Updated firefox-gtk2 to 0.10 [taya 2004-09-20]
