@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/02/06 17:56:42 tv Exp $
+# $NetBSD: Makefile,v 1.12 1999/03/06 21:24:43 kim Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -21,8 +21,17 @@ NO_WRKSUBDIR=	yes
 MANCOMPRESSED=	yes
 .endif
 
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/PLIST.man
+
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit
 	${INSTALL_DATA} ${FILESDIR}/dot.kermrc ${PREFIX}/share/examples/kermit
+	@${CP} /dev/null ${WRKDIR}/PLIST.man
+	@for i in ${MANINSTALL} x; do \
+	    case $$i in \
+	    catinstall) echo man/cat1/kermit.0 >> ${WRKDIR}/PLIST.man;; \
+	    maninstall) echo man/man1/kermit.1 >> ${WRKDIR}/PLIST.man;; \
+	    esac; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
