@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:37:46 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/23 23:19:55 jlam Exp $
 #
 
 DISTNAME=		enlightenment-conf-0.15
@@ -11,9 +11,10 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 COMMENT=		configuration tool for easily setting up Enlightenment
 
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../x11/controlcenter/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/controlcenter/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
