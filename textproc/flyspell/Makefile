@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/16 07:29:18 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/27 03:09:18 minskim Exp $
 #
 
 DISTNAME=	flyspell-1.7f.el
@@ -23,7 +23,7 @@ NO_CONFIGURE=	#
 NO_BUILD=	#
 
 do-extract:
-	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/flyspell
