@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
+$NetBSD: patch-ct,v 1.4 2003/01/02 09:12:35 skrll Exp $
 
---- konsole/konsole/Makefile.in.orig	Wed Aug  7 18:19:54 2002
+--- konsole/konsole/Makefile.in.orig	Fri Dec 27 18:19:11 2002
 +++ konsole/konsole/Makefile.in
-@@ -304,7 +304,9 @@ INCLUDES = $(all_includes)
+@@ -303,7 +303,9 @@ INCLUDES = $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
@@ -13,7 +13,7 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
  # install it under kde_module
-@@ -337,18 +339,26 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+@@ -336,28 +338,36 @@ libkonsolepart_la_LDFLAGS = $(all_librar
  libkonsolepart_la_LIBADD = $(LIBUTIL) @XTESTLIB@ $(LIB_KPARTS)
  
  # kwrited kdeinit module
@@ -46,16 +46,19 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  # konsole executable - has all the sources, doesn't link kparts, saves startup time
-@@ -358,7 +368,7 @@ konsole_la_LDFLAGS = $(all_libraries) -m
+ #>- konsole_SOURCES = TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
+ #>-                   TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
+-#>-                   konsole_wcwidth.cpp
++#>-                   konsole_wcwidth.cpp konsole_main.cpp
  #>+ 3
  konsole_SOURCES=TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
- 	TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp   \
--	konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
-+	konsole_wcwidth.cpp konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
+                   TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp   \
+-                  konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
++                  konsole_wcwidth.cpp konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
  
  konsole_LDADD = $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@ $(LIB_KDEUI)
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-@@ -392,24 +402,25 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -391,19 +401,24 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -64,10 +67,9 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
 +konsole_la_DEPENDENCIES = libkonsole_main.la
 +am_konsole_la_OBJECTS = konsole_main.lo
  #>- konsole_la_OBJECTS = $(am_konsole_la_OBJECTS)
--#>+ 5
+-#>+ 4
 -konsole_la_final_OBJECTS = konsole_la.all_cpp.lo 
--konsole_la_nofinal_OBJECTS = main.lo konsole.lo \
--	konsole_la_meta_unload.lo 
+-konsole_la_nofinal_OBJECTS = main.lo konsole.lo
 -@KDE_USE_FINAL_FALSE@konsole_la_OBJECTS = $(konsole_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@konsole_la_OBJECTS = $(konsole_la_final_OBJECTS)
 -kwrited_la_DEPENDENCIES = libkonsolepart.la
@@ -77,60 +79,51 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
 +kwrited_la_DEPENDENCIES = libkwrited_main.la
 +am_kwrited_la_OBJECTS = kwrited_main.lo
  #>- kwrited_la_OBJECTS = $(am_kwrited_la_OBJECTS)
-+#>+ 1
+ #>+ 1
+-kwrited_la_OBJECTS = kwrited.lo
 +kwrited_la_OBJECTS = kwrited_main.lo
 +libkonsole_main_la_DEPENDENCIES = libkonsolepart.la
 +am_libkonsole_main_la_OBJECTS = main.lo konsole.lo
 +#>- libkonsole_main_la_OBJECTS = $(am_libkonsole_main_la_OBJECTS)
- #>+ 5
--kwrited_la_final_OBJECTS = kwrited_la.all_cpp.lo 
--kwrited_la_nofinal_OBJECTS = kwrited.lo \
--	kwrited_la_meta_unload.lo 
--@KDE_USE_FINAL_FALSE@kwrited_la_OBJECTS = $(kwrited_la_nofinal_OBJECTS)
--@KDE_USE_FINAL_TRUE@kwrited_la_OBJECTS = $(kwrited_la_final_OBJECTS)
++#>+ 4
 +libkonsole_main_la_final_OBJECTS = libkonsole_main_la.all_cpp.lo 
-+libkonsole_main_la_nofinal_OBJECTS = main.lo konsole.lo \
-+	libkonsole_main_la_meta_unload.lo 
++libkonsole_main_la_nofinal_OBJECTS = main.lo konsole.lo
 +@KDE_USE_FINAL_FALSE@libkonsole_main_la_OBJECTS = $(libkonsole_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkonsole_main_la_OBJECTS = $(libkonsole_main_la_final_OBJECTS)
  libkonsolepart_la_DEPENDENCIES =
  am_libkonsolepart_la_OBJECTS = TEPty.lo BlockArray.lo konsole_part.lo \
  	schema.lo session.lo TEWidget.lo TEmuVt102.lo TEScreen.lo \
-@@ -423,6 +434,15 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
- 	libkonsolepart_la_meta_unload.lo 
+@@ -416,6 +431,11 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
+ 	konsole_wcwidth.lo TEmulation.lo TEHistory.lo keytrans.lo konsoleiface_skel.lo sessioniface_skel.lo
  @KDE_USE_FINAL_FALSE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_final_OBJECTS)
 +libkwrited_main_la_DEPENDENCIES = libkonsolepart.la
 +am_libkwrited_main_la_OBJECTS = kwrited.lo
 +#>- libkwrited_main_la_OBJECTS = $(am_libkwrited_main_la_OBJECTS)
-+#>+ 5
-+libkwrited_main_la_final_OBJECTS = libkwrited_main_la.all_cpp.lo 
-+libkwrited_main_la_nofinal_OBJECTS = kwrited.lo \
-+	libkwrited_main_la_meta_unload.lo 
-+@KDE_USE_FINAL_FALSE@libkwrited_main_la_OBJECTS = $(libkwrited_main_la_nofinal_OBJECTS)
-+@KDE_USE_FINAL_TRUE@libkwrited_main_la_OBJECTS = $(libkwrited_main_la_final_OBJECTS)
++#>+ 1
++libkwrited_main_la_OBJECTS = kwrited.lo
  bin_PROGRAMS = konsole$(EXEEXT) konsole_grantpty$(EXEEXT) \
  	kwrited$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
-@@ -431,7 +451,7 @@ am_konsole_OBJECTS = TEPty.$(OBJEXT) Blo
+@@ -424,7 +444,7 @@ am_konsole_OBJECTS = TEPty.$(OBJEXT) Blo
  	konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) \
  	TEWidget.$(OBJEXT) TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) \
  	TEmulation.$(OBJEXT) TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
 -	konsole_wcwidth.$(OBJEXT)
 +	konsole_wcwidth.$(OBJEXT) konsole_main.$(OBJEXT)
  #>- konsole_OBJECTS = $(am_konsole_OBJECTS)
- #>+ 9
+ #>+ 8
  konsole_final_OBJECTS = konsole.all_cpp.o 
-@@ -439,7 +459,7 @@ konsole_nofinal_OBJECTS = TEPty.$(OBJEXT
+@@ -432,7 +452,7 @@ konsole_nofinal_OBJECTS = TEPty.$(OBJEXT
  	konsole.$(OBJEXT) schema.$(OBJEXT) session.$(OBJEXT) \
  	TEWidget.$(OBJEXT) TEmuVt102.$(OBJEXT) TEScreen.$(OBJEXT) \
  	TEmulation.$(OBJEXT) TEHistory.$(OBJEXT) keytrans.$(OBJEXT) \
--	konsole_wcwidth.$(OBJEXT) konsoleiface_skel.$(OBJEXT) sessioniface_skel.$(OBJEXT) \
-+	konsole_wcwidth.$(OBJEXT) konsole_main.$(OBJEXT) konsoleiface_skel.$(OBJEXT) sessioniface_skel.$(OBJEXT) \
- 	konsole_meta_unload.o 
+-	konsole_wcwidth.$(OBJEXT) konsoleiface_skel.$(OBJEXT) sessioniface_skel.$(OBJEXT)
++	konsole_wcwidth.$(OBJEXT) konsole_main.$(OBJEXT) konsoleiface_skel.$(OBJEXT) sessioniface_skel.$(OBJEXT)
  @KDE_USE_FINAL_FALSE@konsole_OBJECTS = $(konsole_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@konsole_OBJECTS = $(konsole_final_OBJECTS)
-@@ -450,11 +470,11 @@ am_konsole_grantpty_OBJECTS = konsole_gr
+ konsole_DEPENDENCIES =
+@@ -442,11 +462,11 @@ am_konsole_grantpty_OBJECTS = konsole_gr
  konsole_grantpty_OBJECTS = konsole_grantpty.$(OBJEXT)
  konsole_grantpty_LDADD = $(LDADD)
  konsole_grantpty_DEPENDENCIES =
@@ -145,33 +138,88 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -469,15 +489,19 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- 	@AMDEP_TRUE@	$(DEPDIR)/TEWidget.Plo $(DEPDIR)/TEWidget.Po \
- 	@AMDEP_TRUE@	$(DEPDIR)/TEmuVt102.Plo $(DEPDIR)/TEmuVt102.Po \
- 	@AMDEP_TRUE@	$(DEPDIR)/TEmulation.Plo $(DEPDIR)/TEmulation.Po \
--	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/keytrans.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Po $(DEPDIR)/konsole.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/konsole.Po $(DEPDIR)/konsole_grantpty.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Plo $(DEPDIR)/keytrans.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/konsole.Plo $(DEPDIR)/konsole.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/konsole_grantpty.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Po \
- 	@AMDEP_TRUE@	$(DEPDIR)/konsole_part.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Po $(DEPDIR)/kwrited.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/main.Po \
--	@AMDEP_TRUE@	$(DEPDIR)/schema.Plo $(DEPDIR)/schema.Po \
--	@AMDEP_TRUE@	$(DEPDIR)/session.Plo $(DEPDIR)/session.Po
-+	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Po $(DEPDIR)/main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/main.Po $(DEPDIR)/schema.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/schema.Po $(DEPDIR)/session.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/session.Po
+@@ -461,32 +481,40 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ #>- @AMDEP_TRUE@	$(DEPDIR)/TEWidget.Plo $(DEPDIR)/TEWidget.Po \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/TEmuVt102.Plo $(DEPDIR)/TEmuVt102.Po \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/TEmulation.Plo $(DEPDIR)/TEmulation.Po \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/keytrans.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/keytrans.Po $(DEPDIR)/konsole.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/konsole.Po $(DEPDIR)/konsole_grantpty.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/keytrans.Plo $(DEPDIR)/keytrans.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/konsole.Plo $(DEPDIR)/konsole.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/konsole_grantpty.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/konsole_main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/konsole_main.Po \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/konsole_part.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Po $(DEPDIR)/kwrited.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/main.Po \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/schema.Plo $(DEPDIR)/schema.Po \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/session.Plo $(DEPDIR)/session.Po
+-#>+ 33
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/konsoleiface_skel.P $(DEPDIR)/sessioniface_skel.P  $(DEPDIR)/konsole_la.all_cpp.P $(DEPDIR)/libkonsolepart_la.all_cpp.P $(DEPDIR)/konsole.all_cpp.P  $(DEPDIR)/BlockArray.Plo $(DEPDIR)/BlockArray.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Po $(DEPDIR)/main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/main.Po $(DEPDIR)/schema.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/schema.Po $(DEPDIR)/session.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/session.Po
++#>+ 41
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/konsoleiface_skel.P $(DEPDIR)/sessioniface_skel.P  $(DEPDIR)/libkonsole_main_la.all_cpp.P $(DEPDIR)/libkonsolepart_la.all_cpp.P $(DEPDIR)/konsole.all_cpp.P  $(DEPDIR)/BlockArray.Plo $(DEPDIR)/BlockArray.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEHistory.Plo $(DEPDIR)/TEHistory.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEPty.Plo $(DEPDIR)/TEPty.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEScreen.Plo $(DEPDIR)/TEScreen.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEWidget.Plo $(DEPDIR)/TEWidget.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEmuVt102.Plo $(DEPDIR)/TEmuVt102.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/TEmulation.Plo $(DEPDIR)/TEmulation.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/keytrans.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Po $(DEPDIR)/konsole.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole.Po $(DEPDIR)/konsole_grantpty.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Plo $(DEPDIR)/keytrans.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole.Plo $(DEPDIR)/konsole.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_grantpty.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Po $(DEPDIR)/kwrited.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/main.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/schema.Plo $(DEPDIR)/schema.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/session.Plo $(DEPDIR)/session.Po
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Po $(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Po $(DEPDIR)/schema.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/schema.Po $(DEPDIR)/session.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/session.Po
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/konsoleiface_skel.P $(DEPDIR)/sessioniface_skel.P  $(DEPDIR)/BlockArray.Plo $(DEPDIR)/BlockArray.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/TEHistory.Plo $(DEPDIR)/TEHistory.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/TEPty.Plo $(DEPDIR)/TEPty.Po \
+@@ -494,15 +522,19 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/TEWidget.Plo $(DEPDIR)/TEWidget.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/TEmuVt102.Plo $(DEPDIR)/TEmuVt102.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/TEmulation.Plo $(DEPDIR)/TEmulation.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/keytrans.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Po $(DEPDIR)/konsole.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole.Po $(DEPDIR)/konsole_grantpty.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/keytrans.Plo $(DEPDIR)/keytrans.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole.Plo $(DEPDIR)/konsole.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_grantpty.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konsole_wcwidth.Po $(DEPDIR)/kwrited.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/main.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/schema.Plo $(DEPDIR)/schema.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/session.Plo $(DEPDIR)/session.Po
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kwrited_main.Po $(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Po $(DEPDIR)/schema.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/schema.Po $(DEPDIR)/session.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/session.Po
+ 
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -506,14 +530,15 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -532,14 +564,15 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(konsole_la_SOURCES) $(kwrited_la_SOURCES) \
@@ -189,7 +237,7 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -564,11 +589,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
+@@ -590,11 +623,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
  	$(CXXLINK) -rpath $(libdir) $(konsole_la_LDFLAGS) $(konsole_la_OBJECTS) $(konsole_la_LIBADD) $(LIBS)
  kwrited.la: $(kwrited_la_OBJECTS) $(kwrited_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrited_la_LDFLAGS) $(kwrited_la_OBJECTS) $(kwrited_la_LIBADD) $(LIBS)
@@ -205,7 +253,7 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -623,16 +652,19 @@ distclean-compile:
+@@ -649,16 +686,19 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmuVt102.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmulation.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/TEmulation.Po@am__quote@
@@ -226,198 +274,166 @@ $NetBSD: patch-ct,v 1.3 2002/08/28 07:15:42 skrll Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/schema.Plo@am__quote@
-@@ -750,7 +782,7 @@ distclean-tags:
+@@ -776,7 +816,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=konsoleiface.h konsole_wcwidth.cpp MakeDefaults TEHistory.cpp TEScreen.cpp TEmulation.cpp sessioniface.h keytrans.cpp x-konsole.desktop konsolerc konsole_part.h 
-+KDE_DIST=TEWidget.cpp keytrans.cpp konsoleiface.h konsole_part.h konsole_wcwidth.cpp x-konsole.desktop session.cpp konsolerc sessioniface.h MakeDefaults TEHistory.cpp TEScreen.cpp TEmuVt102.cpp TEmulation.cpp 
+-KDE_DIST=x-konsole.desktop sessioniface.h TEScreen.cpp MakeDefaults konsole_part.h TEmulation.cpp keytrans.cpp konsolerc konsoleiface.h TEHistory.cpp konsole_wcwidth.cpp 
++KDE_DIST=keytrans.cpp konsoleiface.h konsole_part.h konsole_wcwidth.cpp x-konsole.desktop konsolerc sessioniface.h MakeDefaults TEHistory.cpp TEScreen.cpp TEmulation.cpp 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -892,9 +924,6 @@ messages: rc.cpp
+@@ -918,9 +958,6 @@ messages: rc.cpp
  	rm -f schemas.cpp
  	rm -f tips.cpp
  
 -dummy.cpp:
 -	echo > dummy.cpp
 -
- konsole.lo: konsole.o
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
-@@ -978,29 +1007,16 @@ force-reedit:
- 
- 
- #>+ 12
--konsole_la_meta_unload.cpp:  konsole.moc
--	@echo 'creating konsole_la_meta_unload.cpp'
--	@-rm -f konsole_la_meta_unload.cpp
--	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_konsole_la[] = {' > konsole_la_meta_unload.cpp ;\
--		cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> konsole_la_meta_unload.cpp ;\
--		echo '0};' >> konsole_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> konsole_la_meta_unload.cpp ;\
--		echo '_UNLOAD(konsole_la)' >> konsole_la_meta_unload.cpp ;\
--	else echo > konsole_la_meta_unload.cpp; fi
--
--
--#>+ 12
--kwrited_la_meta_unload.cpp:  kwrited.moc
--	@echo 'creating kwrited_la_meta_unload.cpp'
--	@-rm -f kwrited_la_meta_unload.cpp
-+libkonsole_main_la_meta_unload.cpp:  konsole.moc
-+	@echo 'creating libkonsole_main_la_meta_unload.cpp'
-+	@-rm -f libkonsole_main_la_meta_unload.cpp
- 	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_kwrited_la[] = {' > kwrited_la_meta_unload.cpp ;\
--		cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrited_la_meta_unload.cpp ;\
--		echo '0};' >> kwrited_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> kwrited_la_meta_unload.cpp ;\
--		echo '_UNLOAD(kwrited_la)' >> kwrited_la_meta_unload.cpp ;\
--	else echo > kwrited_la_meta_unload.cpp; fi
-+		echo 'static const char * _metalist_libkonsole_main_la[] = {' > libkonsole_main_la_meta_unload.cpp ;\
-+		cat  konsole.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkonsole_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkonsole_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkonsole_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkonsole_main_la)' >> libkonsole_main_la_meta_unload.cpp ;\
-+	else echo > libkonsole_main_la_meta_unload.cpp; fi
- 
- 
- #>+ 12
-@@ -1017,6 +1033,19 @@ libkonsolepart_la_meta_unload.cpp:  TEmu
- 
- 
- #>+ 12
-+libkwrited_main_la_meta_unload.cpp:  kwrited.moc
-+	@echo 'creating libkwrited_main_la_meta_unload.cpp'
-+	@-rm -f libkwrited_main_la_meta_unload.cpp
-+	@if test ${kde_qtver} = 2; then \
-+		echo 'static const char * _metalist_libkwrited_main_la[] = {' > libkwrited_main_la_meta_unload.cpp ;\
-+		cat  kwrited.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrited_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkwrited_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkwrited_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkwrited_main_la)' >> libkwrited_main_la_meta_unload.cpp ;\
-+	else echo > libkwrited_main_la_meta_unload.cpp; fi
-+
-+
-+#>+ 12
- konsole_meta_unload.cpp:  TEmulation.moc TEWidget.moc TEPty.moc konsole.moc session.moc TEmuVt102.moc
- 	@echo 'creating konsole_meta_unload.cpp'
- 	@-rm -f konsole_meta_unload.cpp
-@@ -1031,14 +1060,14 @@ konsole_meta_unload.cpp:  TEmulation.moc
+ #>- konsole.lo: konsole.o
+ #>+ 1
+ konsole.lo: konsole.moc  konsole.o
+@@ -929,8 +966,12 @@ konsole.lo: konsole.moc  konsole.o
+ .NOEXPORT:
  
  #>+ 3
- clean-moc-classes:
--	-rm -f  konsole_la_meta_unload.cpp kwrited_la_meta_unload.cpp libkonsolepart_la_meta_unload.cpp konsole_meta_unload.cpp
-+	-rm -f  libkonsole_main_la_meta_unload.cpp libkonsolepart_la_meta_unload.cpp libkwrited_main_la_meta_unload.cpp konsole_meta_unload.cpp
+-kwrited.moc: $(srcdir)/kwrited.h
+-	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
++konsole_part.moc: $(srcdir)/konsole_part.h
++	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
++
++#>+ 3
++konsole.moc: $(srcdir)/konsole.h
++	$(MOC) $(srcdir)/konsole.h -o konsole.moc
+ 
+ #>+ 3
+ TEWidget.moc: $(srcdir)/TEWidget.h
+@@ -941,10 +982,6 @@ TEmulation.moc: $(srcdir)/TEmulation.h
+ 	$(MOC) $(srcdir)/TEmulation.h -o TEmulation.moc
+ 
+ #>+ 3
+-konsole.moc: $(srcdir)/konsole.h
+-	$(MOC) $(srcdir)/konsole.h -o konsole.moc
+-
+-#>+ 3
+ session.moc: $(srcdir)/session.h
+ 	$(MOC) $(srcdir)/session.h -o session.moc
+ 
+@@ -953,8 +990,8 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
+ 	$(MOC) $(srcdir)/TEmuVt102.h -o TEmuVt102.moc
+ 
+ #>+ 3
+-konsole_part.moc: $(srcdir)/konsole_part.h
+-	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
++kwrited.moc: $(srcdir)/kwrited.h
++	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
+ 
+ #>+ 3
+ TEPty.moc: $(srcdir)/TEPty.h
+@@ -981,7 +1018,7 @@ libkonsolepart.la.closure: $(libkonsolep
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  kwrited.moc TEWidget.moc TEmulation.moc konsole.moc session.moc TEmuVt102.moc konsole_part.moc TEPty.moc
++	-rm -f  konsole_part.moc konsole.moc TEWidget.moc TEmulation.moc session.moc TEmuVt102.moc kwrited.moc TEPty.moc
+ 
+ #>+ 7
+ clean-idl:
+@@ -1006,19 +1043,19 @@ force-reedit:
+ 
  
  #>+ 11
--konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/konsole.cpp konsole_la_meta_unload.cpp   konsole_part.moc konsole.moc TEWidget.moc TEmulation.moc session.moc TEmuVt102.moc kwrited.moc TEPty.moc 
-+konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/konsole_main.cpp   konsole_part.moc konsole.moc TEWidget.moc TEmulation.moc session.moc TEmuVt102.moc kwrited.moc TEPty.moc 
- 	@echo 'creating konsole_la.all_cpp.cpp ...'; \
- 	rm -f konsole_la.all_cpp.files konsole_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_cpp.final; \
--	for file in main.cpp konsole.cpp konsole_la_meta_unload.cpp ; do \
-+	for file in konsole_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> konsole_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_cpp.final; \
- 	done; \
-@@ -1046,11 +1075,11 @@ konsole_la.all_cpp.cpp: $(srcdir)/Makefi
- 	rm -f konsole_la.all_cpp.final konsole_la.all_cpp.files
- 
- #>+ 11
--kwrited_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited.cpp kwrited_la_meta_unload.cpp  
-+kwrited_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited_main.cpp  
- 	@echo 'creating kwrited_la.all_cpp.cpp ...'; \
- 	rm -f kwrited_la.all_cpp.files kwrited_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kwrited_la.all_cpp.final; \
--	for file in kwrited.cpp kwrited_la_meta_unload.cpp ; do \
-+	for file in kwrited_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kwrited_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited_la.all_cpp.final; \
- 	done; \
-@@ -1058,6 +1087,18 @@ kwrited_la.all_cpp.cpp: $(srcdir)/Makefi
- 	rm -f kwrited_la.all_cpp.final kwrited_la.all_cpp.files
- 
- #>+ 11
-+libkonsole_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/konsole.cpp libkonsole_main_la_meta_unload.cpp  
+-konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/konsole.cpp  konsole.moc
+-	@echo 'creating konsole_la.all_cpp.cpp ...'; \
+-	rm -f konsole_la.all_cpp.files konsole_la.all_cpp.final; \
+-	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_cpp.final; \
++libkonsole_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/konsole.cpp  konsole.moc
 +	@echo 'creating libkonsole_main_la.all_cpp.cpp ...'; \
 +	rm -f libkonsole_main_la.all_cpp.files libkonsole_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkonsole_main_la.all_cpp.final; \
-+	for file in main.cpp konsole.cpp libkonsole_main_la_meta_unload.cpp ; do \
+ 	for file in main.cpp konsole.cpp ; do \
+-	  echo "#include \"$$file\"" >> konsole_la.all_cpp.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkonsole_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkonsole_main_la.all_cpp.final; \
-+	done; \
-+	cat libkonsole_main_la.all_cpp.final libkonsole_main_la.all_cpp.files  > libkonsole_main_la.all_cpp.cpp; \
+ 	done; \
+-	cat konsole_la.all_cpp.final konsole_la.all_cpp.files > konsole_la.all_cpp.cpp; \
+-	rm -f konsole_la.all_cpp.final konsole_la.all_cpp.files
++	cat libkonsole_main_la.all_cpp.final libkonsole_main_la.all_cpp.files > libkonsole_main_la.all_cpp.cpp; \
 +	rm -f libkonsole_main_la.all_cpp.final libkonsole_main_la.all_cpp.files
-+
-+#>+ 11
- libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp libkonsolepart_la_meta_unload.cpp  
+ 
+ #>+ 11
+-libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEWidget.moc TEmulation.moc session.moc TEmuVt102.moc konsole_part.moc TEPty.moc
++libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEmulation.moc TEWidget.moc TEPty.moc konsole_part.moc session.moc TEmuVt102.moc
  	@echo 'creating libkonsolepart_la.all_cpp.cpp ...'; \
  	rm -f libkonsolepart_la.all_cpp.files libkonsolepart_la.all_cpp.final; \
-@@ -1070,11 +1111,23 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
+ 	echo "#define KDE_USE_FINAL 1" >> libkonsolepart_la.all_cpp.final; \
+@@ -1030,11 +1067,11 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
  	rm -f libkonsolepart_la.all_cpp.final libkonsolepart_la.all_cpp.files
  
  #>+ 11
--konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp konsole_meta_unload.cpp  
-+libkwrited_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited.cpp libkwrited_main_la_meta_unload.cpp  
-+	@echo 'creating libkwrited_main_la.all_cpp.cpp ...'; \
-+	rm -f libkwrited_main_la.all_cpp.files libkwrited_main_la.all_cpp.final; \
-+	echo "#define KDE_USE_FINAL 1" >> libkwrited_main_la.all_cpp.final; \
-+	for file in kwrited.cpp libkwrited_main_la_meta_unload.cpp ; do \
-+	  echo "#include \"$$file\"" >> libkwrited_main_la.all_cpp.files; \
-+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkwrited_main_la.all_cpp.final; \
-+	done; \
-+	cat libkwrited_main_la.all_cpp.final libkwrited_main_la.all_cpp.files  > libkwrited_main_la.all_cpp.cpp; \
-+	rm -f libkwrited_main_la.all_cpp.final libkwrited_main_la.all_cpp.files
-+
-+#>+ 11
-+konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp konsole_meta_unload.cpp  
+-konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEWidget.moc TEmulation.moc konsole.moc session.moc TEmuVt102.moc TEPty.moc
++konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEmulation.moc TEWidget.moc TEPty.moc konsole.moc session.moc TEmuVt102.moc
  	@echo 'creating konsole.all_cpp.cpp ...'; \
  	rm -f konsole.all_cpp.files konsole.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> konsole.all_cpp.final; \
--	for file in TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp konsole_meta_unload.cpp ; do \
-+	for file in TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsole_wcwidth.cpp konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp konsole_meta_unload.cpp ; do \
+-	for file in TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsole_wcwidth.cpp konsoleiface_skel.cpp sessioniface_skel.cpp ; do \
++	for file in TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsole_wcwidth.cpp konsole_main.cpp konsoleiface_skel.cpp sessioniface_skel.cpp ; do \
  	  echo "#include \"$$file\"" >> konsole.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konsole.all_cpp.final; \
  	done; \
-@@ -1082,11 +1135,11 @@ konsole.all_cpp.cpp: $(srcdir)/Makefile.
- 	rm -f konsole.all_cpp.final konsole.all_cpp.files
- 
- #>+ 11
--kwrited.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+kwrited.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwrited_main.cpp  
- 	@echo 'creating kwrited.all_cpp.cpp ...'; \
- 	rm -f kwrited.all_cpp.files kwrited.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kwrited.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in kwrited_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kwrited.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrited.all_cpp.final; \
- 	done; \
-@@ -1095,20 +1148,20 @@ kwrited.all_cpp.cpp: $(srcdir)/Makefile.
+@@ -1043,20 +1080,20 @@ konsole.all_cpp.cpp: $(srcdir)/Makefile.
  
  #>+ 3
  clean-final:
--	-rm -f konsole_la.all_cpp.cpp kwrited_la.all_cpp.cpp libkonsolepart_la.all_cpp.cpp konsole.all_cpp.cpp kwrited.all_cpp.cpp
-+	-rm -f konsole_la.all_cpp.cpp kwrited_la.all_cpp.cpp libkonsole_main_la.all_cpp.cpp libkonsolepart_la.all_cpp.cpp libkwrited_main_la.all_cpp.cpp konsole.all_cpp.cpp kwrited.all_cpp.cpp
+-	-rm -f konsole_la.all_cpp.cpp libkonsolepart_la.all_cpp.cpp konsole.all_cpp.cpp
++	-rm -f libkonsole_main_la.all_cpp.cpp libkonsolepart_la.all_cpp.cpp konsole.all_cpp.cpp
  
  #>+ 2
  final:
--	$(MAKE) konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
-+	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
+-	$(MAKE) konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
++	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" all-am
  #>+ 2
  final-install:
--	$(MAKE) konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
-+	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
+-	$(MAKE) konsole_la_OBJECTS="$(konsole_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
++	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_final_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_final_OBJECTS)" konsole_OBJECTS="$(konsole_final_OBJECTS)" install-am
  #>+ 2
  no-final:
--	$(MAKE) konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
-+	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
+-	$(MAKE) konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
++	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" all-am
  #>+ 2
  no-final-install:
--	$(MAKE) konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" kwrited_la_OBJECTS="$(kwrited_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
-+	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" libkwrited_main_la_OBJECTS="$(libkwrited_main_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
+-	$(MAKE) konsole_la_OBJECTS="$(konsole_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
++	$(MAKE) libkonsole_main_la_OBJECTS="$(libkonsole_main_la_nofinal_OBJECTS)" libkonsolepart_la_OBJECTS="$(libkonsolepart_la_nofinal_OBJECTS)" konsole_OBJECTS="$(konsole_nofinal_OBJECTS)" install-am
  #>+ 3
  cvs-clean:
- 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+ 	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -1066,18 +1103,18 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 16
+-kwrited.lo: kwrited.moc 
+-TEmuVt102.o: TEmuVt102.moc 
+-TEWidget.o: TEWidget.moc 
+-session.lo: session.moc 
+-TEPty.lo: TEPty.moc 
+-session.o: session.moc 
+-TEmulation.lo: TEmulation.moc 
++TEmuVt102.lo: TEmuVt102.moc 
+ konsole.o: konsole.moc 
++TEPty.lo: TEPty.moc 
++session.lo: session.moc 
+ TEPty.o: TEPty.moc 
+-TEmuVt102.lo: TEmuVt102.moc 
++TEmulation.lo: TEmulation.moc 
+ konsole_part.lo: konsole_part.moc 
++session.o: session.moc 
++TEWidget.lo: TEWidget.moc 
+ TEmulation.o: TEmulation.moc 
+-konsole_part.o: konsole_part.moc 
+ kwrited.o: kwrited.moc 
+-TEWidget.lo: TEWidget.moc 
++konsole_part.o: konsole_part.moc 
++kwrited.lo: kwrited.moc 
++TEmuVt102.o: TEmuVt102.moc 
++TEWidget.o: TEWidget.moc 

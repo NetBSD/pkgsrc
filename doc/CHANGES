@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.970 2003/01/02 06:42:08 jlam Exp $
+$NetBSD: CHANGES,v 1.971 2003/01/02 09:12:19 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -12,3 +12,19 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-vfs to 1.0.3nb1 [rh 2003-01-02]
 	Updated gnome-mime-data to 2.0.1nb2 [rh 2003-01-02]
 	Updated iasp to 2.1.1nb1 [jlam 2003-01-02]
+	Updated arts to 1.0.5.1 [skrll 2003-01-02]
+	Updated kde3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdeaddons3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdeadmin3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdeartwork3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdebase3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdeedu3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdegames3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdegraphics3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdelibs3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdemultimedia3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdenetwork3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdepim3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdetoys3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdeutils3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated kdesdk3 to 3.0.5.1 [skrll 2003-01-02]

@@ -1,8 +1,8 @@
-$NetBSD: patch-bp,v 1.1 2002/06/25 06:34:37 skrll Exp $
+$NetBSD: patch-bp,v 1.2 2003/01/02 09:12:22 skrll Exp $
 
---- noatun/modules/keyz/Makefile.in.orig	Sun Jun  9 12:22:33 2002
+--- noatun/modules/keyz/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ noatun/modules/keyz/Makefile.in
-@@ -295,7 +295,7 @@
+@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_keyz.la
  noatun_keyz_la_SOURCES = keyz.cpp
  
  noatun_keyz_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bp,v 1.1 2002/06/25 06:34:37 skrll Exp $
  
  #>- noatun_keyz_la_METASOURCES = AUTO
  
-@@ -309,7 +309,7 @@
+@@ -308,7 +308,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_keyz_la_DEPENDENCIES = \
@@ -19,13 +19,11 @@ $NetBSD: patch-bp,v 1.1 2002/06/25 06:34:37 skrll Exp $
 +	$(top_builddir)/noatun/library/libnoatun_core.la
  am_noatun_keyz_la_OBJECTS = keyz.lo
  #>- noatun_keyz_la_OBJECTS = $(am_noatun_keyz_la_OBJECTS)
- #>+ 5
-@@ -655,7 +655,7 @@
- 	-rm -f  noatun_keyz_la_meta_unload.cpp
+ #>+ 1
+@@ -656,5 +656,5 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
- #>+ 11
--noatun_keyz_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/keyz.cpp noatun_keyz_la_meta_unload.cpp   keyz.moc 
-+noatun_keyz_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/keyz.cpp $(srcdir)/noatun_keyz_la_meta_unload.cpp   keyz.moc 
- 	@echo 'creating noatun_keyz_la.all_cpp.cpp ...'; \
- 	rm -f noatun_keyz_la.all_cpp.files noatun_keyz_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> noatun_keyz_la.all_cpp.final; \
+ #>+ 3
+-keyz.lo: keyz.moc 
+ keyz.o: keyz.moc 
++keyz.lo: keyz.moc 

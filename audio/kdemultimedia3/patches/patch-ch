@@ -1,8 +1,8 @@
-$NetBSD: patch-ch,v 1.1 2002/06/25 06:34:41 skrll Exp $
+$NetBSD: patch-ch,v 1.2 2003/01/02 09:12:23 skrll Exp $
 
---- noatun/modules/voiceprint/Makefile.in.orig	Sun Jun  9 12:43:40 2002
+--- noatun/modules/voiceprint/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ noatun/modules/voiceprint/Makefile.in
-@@ -295,7 +295,7 @@
+@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_voicepri
  noatun_voiceprint_la_SOURCES = voiceprint.cpp prefs.cpp
  
  noatun_voiceprint_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-ch,v 1.1 2002/06/25 06:34:41 skrll Exp $
  
  #>- noatun_voiceprint_la_METASOURCES = AUTO
  
-@@ -309,7 +309,7 @@
+@@ -308,7 +308,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_voiceprint_la_DEPENDENCIES = \
@@ -19,13 +19,15 @@ $NetBSD: patch-ch,v 1.1 2002/06/25 06:34:41 skrll Exp $
 +	$(top_builddir)/noatun/library/libnoatun_core.la
  am_noatun_voiceprint_la_OBJECTS = voiceprint.lo prefs.lo
  #>- noatun_voiceprint_la_OBJECTS = $(am_noatun_voiceprint_la_OBJECTS)
- #>+ 5
-@@ -660,7 +660,7 @@
- 	-rm -f  noatun_voiceprint_la_meta_unload.cpp
+ #>+ 4
+@@ -681,7 +681,7 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
- #>+ 11
--noatun_voiceprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/voiceprint.cpp $(srcdir)/prefs.cpp noatun_voiceprint_la_meta_unload.cpp   voiceprint.moc prefs.moc 
-+noatun_voiceprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/voiceprint.cpp $(srcdir)/prefs.cpp $(srcdir)/noatun_voiceprint_la_meta_unload.cpp   voiceprint.moc prefs.moc 
- 	@echo 'creating noatun_voiceprint_la.all_cpp.cpp ...'; \
- 	rm -f noatun_voiceprint_la.all_cpp.files noatun_voiceprint_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> noatun_voiceprint_la.all_cpp.final; \
+ #>+ 5
+-prefs.o: prefs.moc 
+-voiceprint.lo: voiceprint.moc 
+-voiceprint.o: voiceprint.moc 
+ prefs.lo: prefs.moc 
++voiceprint.o: voiceprint.moc 
++voiceprint.lo: voiceprint.moc 
++prefs.o: prefs.moc 
