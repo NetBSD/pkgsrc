@@ -1,0 +1,8 @@
+--- fs2.c.orig	Mon Sep 25 10:22:05 1995
++++ fs2.c	Sat Jun 20 00:33:27 1998
+@@ -25,2 +25,5 @@
+ #include "proto.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

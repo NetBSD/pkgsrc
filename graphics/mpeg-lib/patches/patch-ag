@@ -1,0 +1,8 @@
+--- fs4.c.orig	Mon Sep 25 10:22:06 1995
++++ fs4.c	Sat Jun 20 00:33:28 1998
+@@ -27,2 +27,5 @@
+ #include "dither.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 
