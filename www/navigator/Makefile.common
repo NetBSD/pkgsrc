@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2000/04/30 14:42:22 sakamoto Exp $
+# $NetBSD: Makefile.common,v 1.8 2000/04/30 17:03:20 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -139,6 +139,6 @@ do-install:
 	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 	cd ${MOZILLA_HOME} ; patch -s < ${FILESDIR}/bookmarks.patch
-	@rm -f ${MOZILLA_HOME}/bookmark.htm.orig
+	@${RM} -f ${MOZILLA_HOME}/bookmark.htm.orig
 
 .include "../../mk/bsd.pkg.mk"
