@@ -1,4 +1,4 @@
-#! /bin/sh
+#! @SH@
 
 ulimit -d 524288
 
