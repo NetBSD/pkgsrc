@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 11:36:47 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 16:12:27 salo Exp $
 share/games/fillets-ng/sound/airplane/cs/let-m-divna.ogg
 share/games/fillets-ng/sound/airplane/cs/let-m-oko.ogg
 share/games/fillets-ng/sound/airplane/cs/let-m-sedadlo.ogg
@@ -7,6 +7,97 @@ share/games/fillets-ng/sound/airplane/cs/let-v-oko.ogg
 share/games/fillets-ng/sound/airplane/cs/let-v-vrak0.ogg
 share/games/fillets-ng/sound/airplane/cs/let-v-vrak1.ogg
 share/games/fillets-ng/sound/airplane/cs/let-v-vrak2.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-amfornictvi.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-cetky.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-hrncirstvi.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-hromado.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-kramy.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-mise.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-svicny.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-m-tloustka.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-amforstvi.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-ber.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-padavko.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-proc.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-prolezt.ogg
+share/games/fillets-ng/sound/alibaba/cs/kni-v-vypni.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-costim.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-kalet.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-nechat.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-neopatrnost.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-no1.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-potize.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-spunt.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-taky.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vratit0.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vratit1.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vydrz.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vymluva0.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vymluva1.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vymluva2.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vymluva3.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vymluva4.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-m-vytazeny.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-centrala.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-co.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-dotoho.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-jedno.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-kdoby.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-nesmysl.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-no0.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-pocit.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-trapne.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-ven.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-vratit0.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-vratit1.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-vzit.ogg
+share/games/fillets-ng/sound/atlantis/cs/sp-v-zahynuli.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-ble.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-padaji.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-vidim.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-vidis.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-vypada.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-zajem.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-m-zivy.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-lebka.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-podivat.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-totem.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-uveznen0.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-uveznen1.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-vsak0.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-vsak1.ogg
+share/games/fillets-ng/sound/aztec/cs/bot-v-vsim.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-barel.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-dost0.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-dost1.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-fdto.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-kachna.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-mutanti.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-no.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-noha.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-panb.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-pobit.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-promin.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-pudy.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-rada.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-rybka.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-videt1.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-m-zmeni.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-co.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-fotka.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-genofond.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-kdyby0.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-kdyby1.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-krab.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-lih.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-pld.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-priciny.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-sbirka.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-sud.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-traverza.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-ufouni.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-v-videt0.ogg
+share/games/fillets-ng/sound/barrel/cs/bar-x-vypr.ogg
 share/games/fillets-ng/sound/bathroom/cs/br-m-ahoj.ogg
 share/games/fillets-ng/sound/bathroom/cs/br-m-bavi.ogg
 share/games/fillets-ng/sound/bathroom/cs/br-m-bydli.ogg
@@ -200,6 +291,32 @@ share/games/fillets-ng/sound/captain/cs/vl-v-kaj2.ogg
 share/games/fillets-ng/sound/captain/cs/vl-v-lodni.ogg
 share/games/fillets-ng/sound/captain/cs/vl-v-silha.ogg
 share/games/fillets-ng/sound/captain/cs/vl-x-site.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-deprese.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-netopyr.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-netopyr0.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-netopyr1.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-netopyr2.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-netopyr3.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-potvora0.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-potvora1.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-potvora2.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-ryba.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-takvidis.ogg
+share/games/fillets-ng/sound/cave/cs/jes-m-tvor.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-gral.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-kamen.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-nechut0.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-nechut1.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-nestezuj.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-netopyr0.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-netopyr1.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-netopyr2.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-nevim.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-potvora0.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-potvora1.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-potvora2.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-tojo.ogg
+share/games/fillets-ng/sound/cave/cs/jes-v-uzke.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-m-chytit.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-m-jakudelat.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-m-kniha.ogg
@@ -231,6 +348,29 @@ share/games/fillets-ng/sound/cellar/cs/pra-v-valec.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-v-vzit.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-v-zapeklita.ogg
 share/games/fillets-ng/sound/cellar/cs/pra-v-zavazis.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-co.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-nejistota.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-oznamit.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-trpyt.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-truhla0.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-truhla1.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-vzit0.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-vzit1.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-vzit2.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-zpochybnit.ogg
+share/games/fillets-ng/sound/chest/cs/tru-m-zrada.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-gral.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-nasly.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-nejspis.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-poklad.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-stacit.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-truhla0.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-truhla1.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-vkupe.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-vzit0.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-vzit1.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-vzit2.ogg
+share/games/fillets-ng/sound/chest/cs/tru-v-zrak.ogg
 share/games/fillets-ng/sound/city/cs/vit-hs-demoni0.ogg
 share/games/fillets-ng/sound/city/cs/vit-hs-dite0.ogg
 share/games/fillets-ng/sound/city/cs/vit-hs-jidelna1.ogg
@@ -325,6 +465,50 @@ share/games/fillets-ng/sound/corals/cs/re-v-nevsimej.ogg
 share/games/fillets-ng/sound/corals/cs/re-v-obejit.ogg
 share/games/fillets-ng/sound/corals/cs/re-v-ocel.ogg
 share/games/fillets-ng/sound/corals/cs/re-v-pokoj.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-blik0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-blik1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-blik2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-bojim0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-bojim1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-bojim2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-doufam.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-odpoved0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-odpoved1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-odpoved2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-odpoved3.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-rozsvit0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-rozsvit1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-rozsvit2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-tady0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-tady1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-tady2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-ten.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-m-vubec.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-anavic0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-anavic1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-anavic2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-anavic3.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-hracka.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-ikdyz0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-ikdyz1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-ikdyz2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-ikdyz3.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-nevsimej0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-nevsimej1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-r-nevsimej2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-halo0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-halo1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-halo2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-neboj0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-neboj1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-neboj2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-pockej0.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-pockej1.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-pockej2.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-pozor.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-robopes.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-smysl.ogg
+share/games/fillets-ng/sound/corridor/cs/ch-v-zapada.ogg
 share/games/fillets-ng/sound/crabshow/cs/sec-m-balonky.ogg
 share/games/fillets-ng/sound/crabshow/cs/sec-m-dole0.ogg
 share/games/fillets-ng/sound/crabshow/cs/sec-m-dole1.ogg
@@ -453,32 +637,318 @@ share/games/fillets-ng/sound/elevator2/cs/zd2-x-necurat.ogg
 share/games/fillets-ng/sound/elevator2/cs/zd2-x-neklast.ogg
 share/games/fillets-ng/sound/elevator2/cs/zd2-x-pokoj.ogg
 share/games/fillets-ng/sound/elevator2/cs/zd2-x-ritual.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-ja.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-los.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-los0.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-los1.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-necital.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-nesmotrel.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-neznaju.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-pozalsta.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-tovarisci.ogg
-share/games/fillets-ng/sound/elk/cs/deu-l-zivjot.ogg
 share/games/fillets-ng/sound/elk/cs/deu-m-bojovat.ogg
 share/games/fillets-ng/sound/elk/cs/deu-m-valka.ogg
 share/games/fillets-ng/sound/elk/cs/deu-m-zvlastni.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-jawohl.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-los.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-ordnung.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-schnell.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-skoll.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-stimmt.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-streng.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-trinken0.ogg
-share/games/fillets-ng/sound/elk/cs/deu-p-trinken1.ogg
 share/games/fillets-ng/sound/elk/cs/deu-v-losa.ogg
 share/games/fillets-ng/sound/elk/cs/deu-v-nepratelstvi.ogg
 share/games/fillets-ng/sound/elk/cs/deu-v-radsi.ogg
 share/games/fillets-ng/sound/elk/cs/deu-v-slysel.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-highway.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-jetpack.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-knight.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-necodosebe.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-ocel.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-pametnici.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-pixel.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-m-premyslis.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-hry.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-manicminer.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-nahravani.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-osmibit.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-otazka.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-pamet.ogg
+share/games/fillets-ng/sound/emulator/cs/zx-v-roboti.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-1.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-10.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-100.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-11.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-12.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-13.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-14.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-15.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-16.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-17.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-18.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-19.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-2.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-20.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-200.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-3.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-30.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-4.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-40.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-5.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-50.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-6.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-60.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-7.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-70.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-8.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-80.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-9.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-90.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-hodin.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-konkretne.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-set.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-sta.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-tisic.ogg
+share/games/fillets-ng/sound/ending/cs/z-c-tisice.ogg
+share/games/fillets-ng/sound/ending/cs/z-m-dlouho.ogg
+share/games/fillets-ng/sound/ending/cs/z-m-nemluv.ogg
+share/games/fillets-ng/sound/ending/cs/z-m-netusi.ogg
+share/games/fillets-ng/sound/ending/cs/z-m-oblicej.ogg
+share/games/fillets-ng/sound/ending/cs/z-m-pocit.ogg
+share/games/fillets-ng/sound/ending/cs/z-o-blahoprejeme.ogg
+share/games/fillets-ng/sound/ending/cs/z-v-doma.ogg
+share/games/fillets-ng/sound/ending/cs/z-v-forky.ogg
+share/games/fillets-ng/sound/ending/cs/z-v-pozdrav.ogg
+share/games/fillets-ng/sound/ending/cs/z-v-sef.ogg
+share/games/fillets-ng/sound/ending/cs/z-v-slyset.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-akce0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-akce1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-akce2.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-info.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-konecne0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-konecne1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-mayday.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-nemuzu0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-nemuzu1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-tak.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-ublizit.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-zvuky0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-m-zvuky1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-funkce0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-funkce1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-funkce2.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-klic.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-konecne0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-konecne1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-konvencni.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-nemuzu0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-nemuzu1.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-zavery.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-znovu0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-zvuky0.ogg
+share/games/fillets-ng/sound/engine/cs/mot-v-zvuky1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-bojim.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-fuj.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-hlavakolem.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-jejda.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-kouka.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-labolator1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-labolator2.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-labolator3.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-mrtvolka.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-nerus.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-nervozni.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-nesetkala.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-ocicka.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-organismy.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-prehnal1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-prehnal2.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-prohlednout.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-rozbila.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-tvorove.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-m-zkumavka.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-flaska.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-jeste.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-mnozeni.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-nahazet.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-neproplavu1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-neproplavu2.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-pokusy1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-pokusy2.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-pomoc.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-potvory.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-vypad1.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-vypad2.ogg
+share/games/fillets-ng/sound/experiments/cs/bank-v-zije.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-depres.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-nahrat.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-potvory.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-sakra.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-tady.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-tvorecci.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-ukol.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-vejit.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-velka.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-zmatlo.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-m-zvednem.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-kriz.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-mas.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-metrova.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-naano.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-nane.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-nejde.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-neverim.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-pozor.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-tady.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-tezko.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-ulamu.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-viry.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-v-vratime.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-x-jejda0.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-x-jejda1.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-x-mazany.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-x-nepohnes.ogg
+share/games/fillets-ng/sound/floppy/cs/disk-x-uzne.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-hopskok.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-hrac.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-kameny.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-krasa.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-pohnout.ogg
+share/games/fillets-ng/sound/gems/cs/zav-m-pravda.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-restart.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-sto.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-trpyt.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-venku.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-zachranit.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-zaval.ogg
+share/games/fillets-ng/sound/gems/cs/zav-v-zeleny.ogg
+share/games/fillets-ng/sound/gods/cs/b1-1.ogg
+share/games/fillets-ng/sound/gods/cs/b1-10.ogg
+share/games/fillets-ng/sound/gods/cs/b1-2.ogg
+share/games/fillets-ng/sound/gods/cs/b1-3.ogg
+share/games/fillets-ng/sound/gods/cs/b1-4.ogg
+share/games/fillets-ng/sound/gods/cs/b1-5.ogg
+share/games/fillets-ng/sound/gods/cs/b1-6.ogg
+share/games/fillets-ng/sound/gods/cs/b1-7.ogg
+share/games/fillets-ng/sound/gods/cs/b1-8.ogg
+share/games/fillets-ng/sound/gods/cs/b1-9.ogg
+share/games/fillets-ng/sound/gods/cs/b1-a.ogg
+share/games/fillets-ng/sound/gods/cs/b1-b.ogg
+share/games/fillets-ng/sound/gods/cs/b1-c.ogg
+share/games/fillets-ng/sound/gods/cs/b1-d.ogg
+share/games/fillets-ng/sound/gods/cs/b1-dobre.ogg
+share/games/fillets-ng/sound/gods/cs/b1-e.ogg
+share/games/fillets-ng/sound/gods/cs/b1-f.ogg
+share/games/fillets-ng/sound/gods/cs/b1-g.ogg
+share/games/fillets-ng/sound/gods/cs/b1-h.ogg
+share/games/fillets-ng/sound/gods/cs/b1-i.ogg
+share/games/fillets-ng/sound/gods/cs/b1-j.ogg
+share/games/fillets-ng/sound/gods/cs/b1-nepodvadim.ogg
+share/games/fillets-ng/sound/gods/cs/b1-potop1.ogg
+share/games/fillets-ng/sound/gods/cs/b1-potop2.ogg
+share/games/fillets-ng/sound/gods/cs/b1-potop3.ogg
+share/games/fillets-ng/sound/gods/cs/b1-spletl.ogg
+share/games/fillets-ng/sound/gods/cs/b1-voda1.ogg
+share/games/fillets-ng/sound/gods/cs/b1-voda2.ogg
+share/games/fillets-ng/sound/gods/cs/b1-voda3.ogg
+share/games/fillets-ng/sound/gods/cs/b1-voda4.ogg
+share/games/fillets-ng/sound/gods/cs/b1-voda5.ogg
+share/games/fillets-ng/sound/gods/cs/b1-vyhral.ogg
+share/games/fillets-ng/sound/gods/cs/b1-zacinam.ogg
+share/games/fillets-ng/sound/gods/cs/b1-zasah1.ogg
+share/games/fillets-ng/sound/gods/cs/b1-zasah2.ogg
+share/games/fillets-ng/sound/gods/cs/b1-zasah3.ogg
+share/games/fillets-ng/sound/gods/cs/b1-zasah4.ogg
+share/games/fillets-ng/sound/gods/cs/b1-znovu.ogg
+share/games/fillets-ng/sound/gods/cs/b2-1.ogg
+share/games/fillets-ng/sound/gods/cs/b2-10.ogg
+share/games/fillets-ng/sound/gods/cs/b2-2.ogg
+share/games/fillets-ng/sound/gods/cs/b2-3.ogg
+share/games/fillets-ng/sound/gods/cs/b2-4.ogg
+share/games/fillets-ng/sound/gods/cs/b2-5.ogg
+share/games/fillets-ng/sound/gods/cs/b2-6.ogg
+share/games/fillets-ng/sound/gods/cs/b2-7.ogg
+share/games/fillets-ng/sound/gods/cs/b2-8.ogg
+share/games/fillets-ng/sound/gods/cs/b2-9.ogg
+share/games/fillets-ng/sound/gods/cs/b2-a.ogg
+share/games/fillets-ng/sound/gods/cs/b2-b.ogg
+share/games/fillets-ng/sound/gods/cs/b2-c.ogg
+share/games/fillets-ng/sound/gods/cs/b2-d.ogg
+share/games/fillets-ng/sound/gods/cs/b2-dobre.ogg
+share/games/fillets-ng/sound/gods/cs/b2-e.ogg
+share/games/fillets-ng/sound/gods/cs/b2-f.ogg
+share/games/fillets-ng/sound/gods/cs/b2-g.ogg
+share/games/fillets-ng/sound/gods/cs/b2-h.ogg
+share/games/fillets-ng/sound/gods/cs/b2-i.ogg
+share/games/fillets-ng/sound/gods/cs/b2-j.ogg
+share/games/fillets-ng/sound/gods/cs/b2-nemuze.ogg
+share/games/fillets-ng/sound/gods/cs/b2-podvadis.ogg
+share/games/fillets-ng/sound/gods/cs/b2-potop1.ogg
+share/games/fillets-ng/sound/gods/cs/b2-potop2.ogg
+share/games/fillets-ng/sound/gods/cs/b2-potop3.ogg
+share/games/fillets-ng/sound/gods/cs/b2-rikal1.ogg
+share/games/fillets-ng/sound/gods/cs/b2-rikal2.ogg
+share/games/fillets-ng/sound/gods/cs/b2-spatne.ogg
+share/games/fillets-ng/sound/gods/cs/b2-voda1.ogg
+share/games/fillets-ng/sound/gods/cs/b2-voda2.ogg
+share/games/fillets-ng/sound/gods/cs/b2-voda3.ogg
+share/games/fillets-ng/sound/gods/cs/b2-voda4.ogg
+share/games/fillets-ng/sound/gods/cs/b2-voda5.ogg
+share/games/fillets-ng/sound/gods/cs/b2-vyhral.ogg
+share/games/fillets-ng/sound/gods/cs/b2-zasah1.ogg
+share/games/fillets-ng/sound/gods/cs/b2-zasah2.ogg
+share/games/fillets-ng/sound/gods/cs/b2-zasah3.ogg
+share/games/fillets-ng/sound/gods/cs/b2-zasah4.ogg
+share/games/fillets-ng/sound/gods/cs/b2-znovu.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-bohove.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-co.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-costim.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-hrac.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-jednoho.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-micek.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-modry.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-oba.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-ozizlana.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-palka.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-pravda0.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-pravda1.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-pravda2.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-vyznam.ogg
+share/games/fillets-ng/sound/gods/cs/lod-m-zluty.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-cvok.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-golf.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-hrac.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-hravost.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-hul.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-internovat.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-kdovi.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-koho.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-micky.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-modry.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-rozliseni.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-silenost0.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-silenost1.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-silenost2.ogg
+share/games/fillets-ng/sound/gods/cs/lod-v-zluty.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-gral.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-jensvaty.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-svaty0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-svaty1.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-tuseni.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-vsechny0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-vsechny1.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-zare0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-zare1.ogg
+share/games/fillets-ng/sound/grail/cs/gr-m-zare2.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-jiste.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-nic0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-nic1.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-nic2.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-skoro0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-skoro1.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-tuseni.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-vsechny0.ogg
+share/games/fillets-ng/sound/grail/cs/gr-v-vsechny1.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-co.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-nech.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-nepasuje.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-pocitace.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-spoje1.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-spoje2.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-spoje3.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-m-vylez.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-co1.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-co2.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-dat.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-hej.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-klice1.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-klice2.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-v-zaskladanej.ogg
+share/games/fillets-ng/sound/hardware/cs/pz-x-pocitac.ogg
 share/games/fillets-ng/sound/imprisoned/cs/ncp-m-barvy.ogg
 share/games/fillets-ng/sound/imprisoned/cs/ncp-m-komari.ogg
 share/games/fillets-ng/sound/imprisoned/cs/ncp-m-koraly.ogg
@@ -584,6 +1054,47 @@ share/games/fillets-ng/sound/library/cs/vrak-v-vraky0.ogg
 share/games/fillets-ng/sound/library/cs/vrak-v-vraky1.ogg
 share/games/fillets-ng/sound/library/cs/vrak-v-vraky2.ogg
 share/games/fillets-ng/sound/library/cs/vrak-v-vyhodit.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-coje.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-jejedno.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-magnet.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-mraz.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-naucit.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-nechme.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-nedobre.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-nejde.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-nepohnu.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-ocel.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-pistole.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-radio.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-teorie.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-m-zvlastni.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-divny.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-ha.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-laserova.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-nemir.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-pole.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-potrebovat.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-prekvapeni.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-radio.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-tesno.ogg
+share/games/fillets-ng/sound/magnet/cs/pap-v-vufu.ogg
+share/games/fillets-ng/sound/map/cs/map-m-mapa.ogg
+share/games/fillets-ng/sound/map/cs/map-m-neplacej.ogg
+share/games/fillets-ng/sound/map/cs/map-m-pohnout.ogg
+share/games/fillets-ng/sound/map/cs/map-m-pravidla.ogg
+share/games/fillets-ng/sound/map/cs/map-m-sneci.ogg
+share/games/fillets-ng/sound/map/cs/map-m-ukol.ogg
+share/games/fillets-ng/sound/map/cs/map-m-uvidime.ogg
+share/games/fillets-ng/sound/map/cs/map-m-uz.ogg
+share/games/fillets-ng/sound/map/cs/map-v-cojetam.ogg
+share/games/fillets-ng/sound/map/cs/map-v-dal.ogg
+share/games/fillets-ng/sound/map/cs/map-v-jasne.ogg
+share/games/fillets-ng/sound/map/cs/map-v-mapa.ogg
+share/games/fillets-ng/sound/map/cs/map-v-oci.ogg
+share/games/fillets-ng/sound/map/cs/map-v-poklady.ogg
+share/games/fillets-ng/sound/map/cs/map-v-restart.ogg
+share/games/fillets-ng/sound/map/cs/map-v-ukol.ogg
+share/games/fillets-ng/sound/map/cs/map-x-hlemyzdi.ogg
 share/games/fillets-ng/sound/music/cs/ves-hs-hrajeme.ogg
 share/games/fillets-ng/sound/music/cs/ves-m-dik.ogg
 share/games/fillets-ng/sound/music/cs/ves-m-krab.ogg
@@ -665,6 +1176,28 @@ share/games/fillets-ng/sound/pearls/cs/jed-v-uzivat0.ogg
 share/games/fillets-ng/sound/pearls/cs/jed-v-uzivat1.ogg
 share/games/fillets-ng/sound/pearls/cs/jed-v-vzdelat.ogg
 share/games/fillets-ng/sound/pearls/cs/jed-x-nedam.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-dobre.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-dobryden0.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-dobryden1.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-motor.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-pohadali.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-princip.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-projekt.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-reaktor.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-sest.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-sestra.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-m-tosnadne.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-automat.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-biosila.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-forma.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-klec.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-neuveri.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-pomoct.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-setkani.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-takhle.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-tocit.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-ukol.ogg
+share/games/fillets-ng/sound/propulsion/cs/poh-v-zarizeni.ogg
 share/games/fillets-ng/sound/puzzle/cs/puc-m-hele.ogg
 share/games/fillets-ng/sound/puzzle/cs/puc-m-koukej.ogg
 share/games/fillets-ng/sound/puzzle/cs/puc-m-oblicej.ogg
@@ -691,6 +1224,23 @@ share/games/fillets-ng/sound/pyramid/cs/pyr-v-sark.ogg
 share/games/fillets-ng/sound/pyramid/cs/pyr-v-sbohem.ogg
 share/games/fillets-ng/sound/pyramid/cs/pyr-v-sfing.ogg
 share/games/fillets-ng/sound/pyramid/cs/pyr-v-vsim.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-anebo.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-cojavim.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-comyslis.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-doufam.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-jakmuzes.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-mohl.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-nevim.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-m-proboha.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-acoby.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-coto.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-kolik.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-ledaze.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-nemudruj.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-patrne.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-radeji.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-takvidis.ogg
+share/games/fillets-ng/sound/reactor/cs/rea-v-tozni.ogg
 share/games/fillets-ng/sound/reef/cs/uts-m-batyskaf.ogg
 share/games/fillets-ng/sound/reef/cs/uts-m-chudak.ogg
 share/games/fillets-ng/sound/reef/cs/uts-m-lastura.ogg
@@ -854,7 +1404,6 @@ share/games/fillets-ng/sound/start/cs/1st-m-cotobylo.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-diky.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-hej.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-hmmm.ogg
-share/games/fillets-ng/sound/start/cs/1st-m-navod2.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-navod4.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-navod6.ogg
 share/games/fillets-ng/sound/start/cs/1st-m-navod8.ogg
@@ -869,7 +1418,6 @@ share/games/fillets-ng/sound/start/cs/1st-v-davej.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-jedno.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-najit.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-navod1.ogg
-share/games/fillets-ng/sound/start/cs/1st-v-navod3.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-navod5.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-navod7.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-nedostanu.ogg
@@ -883,6 +1431,8 @@ share/games/fillets-ng/sound/start/cs/1st-v-takukaz.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-ven.ogg
 share/games/fillets-ng/sound/start/cs/1st-v-znovu.ogg
 share/games/fillets-ng/sound/start/cs/1st-x-ocel.ogg
+share/games/fillets-ng/sound/steel/cs/steel-m-0.ogg
+share/games/fillets-ng/sound/steel/cs/steel-m-1.ogg
 share/games/fillets-ng/sound/submarine/cs/zr-m-komu.ogg
 share/games/fillets-ng/sound/submarine/cs/zr-m-nepovykuj.ogg
 share/games/fillets-ng/sound/submarine/cs/zr-m-nervi.ogg
@@ -915,6 +1465,51 @@ share/games/fillets-ng/sound/tank/cs/sv-v-potopena.ogg
 share/games/fillets-ng/sound/tank/cs/sv-v-proc.ogg
 share/games/fillets-ng/sound/tank/cs/sv-v-ucpat.ogg
 share/games/fillets-ng/sound/tank/cs/sv-v-zebrik.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-ano.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-jaklepsi.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-lepe.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-pozor.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-predmety.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-program.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-usudek.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-m-vypadala.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-hybat.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-kostky.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-lepsi.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-myslim.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-ucta.ogg
+share/games/fillets-ng/sound/tetris/cs/tet-v-uprava.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-cimtoje.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-coto0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-coto1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-coto2.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-fotky0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-fotky1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-jasne.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-jednoduse.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-nevim0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-nevim1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-potvora0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-potvora1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-priroda.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-m-tazelva.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-bizarni.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-cosedeje.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-coto0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-coto1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-coto2.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-nevim0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-nevim1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-pochyby.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-stacit0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-stacit1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-tazelva.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-tvary.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-ukol.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-zelva0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-zelva1.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-zmistnosti0.ogg
+share/games/fillets-ng/sound/turtle/cs/zel-v-zmistnosti1.ogg
 share/games/fillets-ng/sound/ufo/cs/ufo-m-moc.ogg
 share/games/fillets-ng/sound/ufo/cs/ufo-m-ne.ogg
 share/games/fillets-ng/sound/ufo/cs/ufo-m-nevim.ogg
@@ -1005,6 +1600,20 @@ share/games/fillets-ng/sound/viking2/cs/dr1-v-snorr.ogg
 share/games/fillets-ng/sound/viking2/cs/dr1-v-thorson.ogg
 share/games/fillets-ng/sound/viking2/cs/dr1-v-urcite.ogg
 share/games/fillets-ng/sound/viking2/cs/dr1-x-erik.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-aznato.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-hodiny.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-hrad.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-kam.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-ocel.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-peoni.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-pichat.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-m-povazuji.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-blizzard.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-doly.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-pohadka.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-povedome.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-prozradit.ogg
+share/games/fillets-ng/sound/warcraft/cs/war-v-vesnicane.ogg
 share/games/fillets-ng/sound/wc/cs/wc-m-coze.ogg
 share/games/fillets-ng/sound/wc/cs/wc-m-hrbitov.ogg
 share/games/fillets-ng/sound/wc/cs/wc-m-nevis.ogg
@@ -1016,6 +1625,37 @@ share/games/fillets-ng/sound/wc/cs/wc-v-hygiena.ogg
 share/games/fillets-ng/sound/wc/cs/wc-v-neznas.ogg
 share/games/fillets-ng/sound/wc/cs/wc-v-oblibene.ogg
 share/games/fillets-ng/sound/wc/cs/wc-v-zmatek.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-blok.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-chodila.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-costim0.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-costim1.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-costim2.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-costim3.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-costim4.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-dira.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-jejda.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-nemusim.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-nic1.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-nic3.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-okno.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-ven.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-vga.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-vzit.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-zahrat.ogg
+share/games/fillets-ng/sound/windoze/cs/win-m-zavrene.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-citim.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-hav.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-hra.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-nehrajem.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-nic0.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-nic2.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-osvobodit.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-plocha.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-pocitala.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-pockej.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-premyslej.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-real.ogg
+share/games/fillets-ng/sound/windoze/cs/win-v-tamhle.ogg
 share/games/fillets-ng/sound/wreck/cs/pot-m-dik.ogg
 share/games/fillets-ng/sound/wreck/cs/pot-m-dovn.ogg
 share/games/fillets-ng/sound/wreck/cs/pot-m-hnil.ogg
@@ -1042,12 +1682,17 @@ share/games/fillets-ng/sound/wreck/cs/pot-v-slus.ogg
 share/games/fillets-ng/sound/wreck/cs/pot-v-trub.ogg
 share/games/fillets-ng/sound/wreck/cs/pot-v-vidim.ogg
 @dirrm share/games/fillets-ng/sound/wreck/cs
+@dirrm share/games/fillets-ng/sound/windoze/cs
 @dirrm share/games/fillets-ng/sound/wc/cs
+@dirrm share/games/fillets-ng/sound/warcraft/cs
 @dirrm share/games/fillets-ng/sound/viking2/cs
 @dirrm share/games/fillets-ng/sound/viking1/cs
 @dirrm share/games/fillets-ng/sound/ufo/cs
+@dirrm share/games/fillets-ng/sound/turtle/cs
+@dirrm share/games/fillets-ng/sound/tetris/cs
 @dirrm share/games/fillets-ng/sound/tank/cs
 @dirrm share/games/fillets-ng/sound/submarine/cs
+@dirrm share/games/fillets-ng/sound/steel/cs
 @dirrm share/games/fillets-ng/sound/start/cs
 @dirrm share/games/fillets-ng/sound/stairs/cs
 @dirrm share/games/fillets-ng/sound/society/cs
@@ -1056,18 +1701,31 @@ share/games/fillets-ng/sound/wreck/cs/pot-v-vidim.ogg
 @dirrm share/games/fillets-ng/sound/share/border/cs
 @dirrm share/games/fillets-ng/sound/share/blackjokes/cs
 @dirrm share/games/fillets-ng/sound/reef/cs
+@dirrm share/games/fillets-ng/sound/reactor/cs
 @dirrm share/games/fillets-ng/sound/pyramid/cs
 @dirrm share/games/fillets-ng/sound/puzzle/cs
+@dirrm share/games/fillets-ng/sound/propulsion/cs
 @dirrm share/games/fillets-ng/sound/pearls/cs
 @dirrm share/games/fillets-ng/sound/pavement/cs
 @dirrm share/games/fillets-ng/sound/party2/cs
 @dirrm share/games/fillets-ng/sound/party1/cs
 @dirrm share/games/fillets-ng/sound/noground/cs
 @dirrm share/games/fillets-ng/sound/music/cs
+@dirrm share/games/fillets-ng/sound/map/cs
+@dirrm share/games/fillets-ng/sound/magnet/cs
 @dirrm share/games/fillets-ng/sound/library/cs
 @dirrm share/games/fillets-ng/sound/labyrinth/cs
 @dirrm share/games/fillets-ng/sound/kitchen/cs
 @dirrm share/games/fillets-ng/sound/imprisoned/cs
+@dirrm share/games/fillets-ng/sound/hardware/cs
+@dirrm share/games/fillets-ng/sound/grail/cs
+@dirrm share/games/fillets-ng/sound/gods/cs
+@dirrm share/games/fillets-ng/sound/gems/cs
+@dirrm share/games/fillets-ng/sound/floppy/cs
+@dirrm share/games/fillets-ng/sound/experiments/cs
+@dirrm share/games/fillets-ng/sound/engine/cs
+@dirrm share/games/fillets-ng/sound/ending/cs
+@dirrm share/games/fillets-ng/sound/emulator/cs
 @dirrm share/games/fillets-ng/sound/elk/cs
 @dirrm share/games/fillets-ng/sound/elevator2/cs
 @dirrm share/games/fillets-ng/sound/elevator1/cs
@@ -1075,11 +1733,14 @@ share/games/fillets-ng/sound/wreck/cs/pot-v-vidim.ogg
 @dirrm share/games/fillets-ng/sound/duckie/cs
 @dirrm share/games/fillets-ng/sound/creatures/cs
 @dirrm share/games/fillets-ng/sound/crabshow/cs
+@dirrm share/games/fillets-ng/sound/corridor/cs
 @dirrm share/games/fillets-ng/sound/corals/cs
 @dirrm share/games/fillets-ng/sound/computer/cs
 @dirrm share/games/fillets-ng/sound/columns/cs
 @dirrm share/games/fillets-ng/sound/city/cs
+@dirrm share/games/fillets-ng/sound/chest/cs
 @dirrm share/games/fillets-ng/sound/cellar/cs
+@dirrm share/games/fillets-ng/sound/cave/cs
 @dirrm share/games/fillets-ng/sound/captain/cs
 @dirrm share/games/fillets-ng/sound/cannons/cs
 @dirrm share/games/fillets-ng/sound/cancan/cs
@@ -1089,4 +1750,8 @@ share/games/fillets-ng/sound/wreck/cs/pot-v-vidim.ogg
 @dirrm share/games/fillets-ng/sound/briefcase/cs
 @dirrm share/games/fillets-ng/sound/bathyscaph/cs
 @dirrm share/games/fillets-ng/sound/bathroom/cs
+@dirrm share/games/fillets-ng/sound/barrel/cs
+@dirrm share/games/fillets-ng/sound/aztec/cs
+@dirrm share/games/fillets-ng/sound/atlantis/cs
+@dirrm share/games/fillets-ng/sound/alibaba/cs
 @dirrm share/games/fillets-ng/sound/airplane/cs
