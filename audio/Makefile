@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2001/05/19 13:14:05 drochner Exp $
+# $NetBSD: Makefile,v 1.97 2001/05/23 20:18:13 rh Exp $
 #
 
 COMMENT=	Audio tools
@@ -115,6 +115,7 @@ SUBDIR+=	xmcd
 SUBDIR+=	xmix
 SUBDIR+=	xmmix
 SUBDIR+=	xmms
+SUBDIR+=	xmms-crossfade
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
 SUBDIR+=	xsidplay
