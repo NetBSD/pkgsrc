@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.12 2002/09/18 22:58:49 jlam Exp $
+
+--- man/Makefile.orig	Mon Sep 16 14:35:20 2002
++++ man/Makefile
+@@ -40,7 +40,7 @@ LANGDIRS =	fr
+ all:	$(CAT1) $(CAT3) $(CAT5) $(CAT8)
+ 	for dir in $(LANGDIRS); do \
+ 		echo "Making all in man/$$dir..."; \
+-		(cd $$dir; make all); \
++		(cd $$dir; $(MAKE) $(MFLAGS) all); \
+ 	done
+ 
+ 
+@@ -52,7 +52,7 @@ clean:
+ 	$(RM) $(CAT1) $(CAT3) $(CAT5) $(CAT8)
+ 	for dir in $(LANGDIRS); do \
+ 		echo "Cleaning all in man/$$dir..."; \
+-		(cd $$dir; make clean); \
++		(cd $$dir; $(MAKE) $(MFLAGS) clean); \
+ 	done
+ 
+ 
+@@ -114,7 +114,7 @@ install:	all
+ 	$(LN) enable.$(CAT8EXT) $(AMANDIR)/cat$(MAN8EXT)/disable.$(CAT8EXT)
+ 	for dir in $(LANGDIRS); do \
+ 		echo "Installing all in man/$$dir..."; \
+-		(cd $$dir; make install); \
++		(cd $$dir; $(MAKE) $(MFLAGS) install); \
+ 	done
+ 
+ 
