@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2002/01/07 21:29:34 wiz Exp $
+$NetBSD: distinfo,v 1.8 2002/05/07 18:48:46 wiz Exp $
 
-SHA1 (gnupg-1.0.6.tar.gz) = 3d5f0b6c123916aebd64fcbf34117019642dde98
-Size (gnupg-1.0.6.tar.gz) = 1941676 bytes
+SHA1 (gnupg-1.0.7.tar.gz) = 46da038c60143fa49abae2fae6fcbd0f58f7a46e
+Size (gnupg-1.0.7.tar.gz) = 2399025 bytes
 SHA1 (idea.c.20010605) = f6e237b84285964f09b3806b91170b6523384a48
 Size (idea.c.20010605) = 15480 bytes
 SHA1 (patch-aa) = fffd3e55792bb27df002bacbc5d8bf9096d5dd64
-SHA1 (patch-ab) = 26938c9933564f263a02ac3c01b47fa185142f28
-SHA1 (patch-ac) = 1d191cdabab38afa537b26dbf340aede0c79748c
+SHA1 (patch-ab) = ce3b5ff0331e51ca6cd11b969e8df3719ca5d547
+SHA1 (patch-ac) = 9e3d0c6a7b828e52f5a773591f87e4a9072ad698
