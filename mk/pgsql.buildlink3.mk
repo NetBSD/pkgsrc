@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.5 2005/02/07 04:07:13 dan Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.6 2005/02/07 04:12:49 dan Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -62,7 +62,7 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 # set variables for the version we decided to use:
 #
 .if ${_PGSQL_VERSION} == "80"
-PGPKGSRCDIR=	../../wip/postgresql80-lib
+PGPKGSRCDIR=	../../databases/postgresql80-lib
 .elif ${_PGSQL_VERSION} == "74"
 PGPKGSRCDIR=	../../databases/postgresql74-lib
 .elif ${_PGSQL_VERSION} == "73"
