@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9582 2005/03/23 17:01:56 salo Exp $
+$NetBSD: CHANGES,v 1.9583 2005/03/23 17:07:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1595,3 +1595,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libmpeg2 to 0.4.0b [wiz 2005-03-23]
 	Updated mkvtoolnix to 1.4.1 [salo 2005-03-23]
 	Updated mmg to 1.4.1 [salo 2005-03-23]
+	Updated libnids to 1.20 [wiz 2005-03-23]
