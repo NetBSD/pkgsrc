@@ -1,13 +1,9 @@
-$NetBSD: patch-ae,v 1.2 2003/10/05 12:02:52 martti Exp $
+$NetBSD: patch-ae,v 1.3 2004/02/15 07:34:04 martti Exp $
 
---- lib/mrtg2/SNMP_Session.pm.orig	Fri Sep 12 00:15:23 2003
-+++ lib/mrtg2/SNMP_Session.pm	Sun Oct  5 13:03:08 2003
-@@ -105,7 +105,7 @@
- ### some agents erroneously encode the response ID as an unsigned,
- ### which prevents this code from matching such responses to requests.
+--- lib/mrtg2/SNMP_Session.pm.orig	Mon Jan 19 09:30:19 2004
++++ lib/mrtg2/SNMP_Session.pm	Sun Feb 15 09:21:08 2004
+@@ -109,3 +109,3 @@
  ###
 -$SNMP_Session::default_avoid_negative_request_ids = 0;
 +$SNMP_Session::default_avoid_negative_request_ids = 1;
  
- ### Whether all SNMP_Session objects should share a single UDP socket.
- ###
