@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:08 agc Exp $
 
-MD5 (stow-1.3.2.tar.gz) = 376ceb0aee5a739ea83d1246dc25b3f2
+SHA1 (stow-1.3.2.tar.gz) = a9d1e6de2f4f1a93441ba8296665cf88e79b538d
+Size (stow-1.3.2.tar.gz) = 107258 bytes
 SHA1 (patch-aa) = 8bde49611c7d7f18240d55b16c54e6edca27508c
