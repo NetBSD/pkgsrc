@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/10 19:50:11 jmmv Exp $
 bin/gabber
 etc/sound/events/gabber.soundlist
 man/man1/gabber.1
@@ -73,7 +73,7 @@ share/gabber/glade-unlock-key.xpm
 share/gabber/glade-users.xpm
 share/gabber/gnome-globe.png
 share/gabber/gnome-info.png
-share/gabber/gnome-locksreen.png
+share/gabber/gnome-lockscreen.png
 share/gabber/gnome-modem.png
 share/gabber/gnome-question.png
 share/gabber/gpg-badsigned.xpm
@@ -83,33 +83,24 @@ share/gabber/gpg-unencrypted.xpm
 share/gabber/gpg-unsigned.xpm
 share/gabber/offline.xpm
 share/gnome/apps/Internet/gabber.desktop
-share/gnome/help/gabber/C/first.html
-share/gnome/help/gabber/C/first.png
-share/gnome/help/gabber/C/gabber.sgml
-share/gnome/help/gabber/C/index.html
-share/gnome/help/gabber/C/intro.html
-share/gnome/help/gabber/C/legalnotice.html
-share/gnome/help/gabber/C/login.png
-share/gnome/help/gabber/C/main-menubar.html
-share/gnome/help/gabber/C/main-status.html
-share/gnome/help/gabber/C/main-toolbar.html
-share/gnome/help/gabber/C/main.html
-share/gnome/help/gabber/C/main.png
-share/gnome/help/gabber/C/msg-normal.png
-share/gnome/help/gabber/C/msg-ooo.png
-share/gnome/help/gabber/C/stylesheet-images/caution.gif
-share/gnome/help/gabber/C/stylesheet-images/home.gif
-share/gnome/help/gabber/C/stylesheet-images/important.gif
-share/gnome/help/gabber/C/stylesheet-images/next.gif
-share/gnome/help/gabber/C/stylesheet-images/note.gif
-share/gnome/help/gabber/C/stylesheet-images/prev.gif
-share/gnome/help/gabber/C/stylesheet-images/tip.gif
-share/gnome/help/gabber/C/stylesheet-images/toc-blank.gif
-share/gnome/help/gabber/C/stylesheet-images/toc-minus.gif
-share/gnome/help/gabber/C/stylesheet-images/toc-plus.gif
-share/gnome/help/gabber/C/stylesheet-images/up.gif
-share/gnome/help/gabber/C/stylesheet-images/warning.gif
+share/gnome/help/gabber/C/agents.xml
+share/gnome/help/gabber/C/figures/first.png
+share/gnome/help/gabber/C/figures/login.png
+share/gnome/help/gabber/C/figures/main.png
+share/gnome/help/gabber/C/figures/msg-normal.png
+share/gnome/help/gabber/C/figures/msg-ooo.png
+share/gnome/help/gabber/C/file.xml
+share/gnome/help/gabber/C/first.xml
+share/gnome/help/gabber/C/gabber.xml
+share/gnome/help/gabber/C/intro.xml
+share/gnome/help/gabber/C/login.xml
+share/gnome/help/gabber/C/main.xml
+share/gnome/help/gabber/C/msg.xml
+share/gnome/help/gabber/C/panel.xml
+share/gnome/help/gabber/C/pref.xml
 share/gnome/help/gabber/C/topic.dat
+share/gnome/help/gabber/C/userinfo.xml
+share/gnome/help/gabber/C/users.xml
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gabber.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gabber.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gabber.mo
@@ -170,7 +161,7 @@ share/sounds/gabber/gabber_subrequest.wav
 @dirrm share/pixmaps/gabber
 @dirrm share/omf/gabber
 @comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/gabber/C/stylesheet-images
+@dirrm share/gnome/help/gabber/C/figures
 @dirrm share/gnome/help/gabber/C
 @dirrm share/gnome/help/gabber
 @comment in gnome-dirs: @dirrm share/gnome/help
