@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9298 2005/02/24 20:52:53 tron Exp $
+$NetBSD: CHANGES,v 1.9299 2005/02/24 22:52:39 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1075,3 +1075,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated hdf to 4.2r1 [adam 2005-02-24]
 	Updated phpmyadmin to 2.6.1pl1 [adrianp 2005-02-24]
 	Updated phpmyadmin to 2.6.1pl2 [tron 2005-02-24]
+	Updated pkglint to 4.08 [rillig 2005-02-24]
