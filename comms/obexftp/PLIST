@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+bin/gsm2vmo
+bin/obexftp
+bin/vmo2gsm
+bin/vmo2wav
+include/bfb/bfb.h
+include/bfb/bfb_io.h
+include/cobexbfb/cobex_bfb.h
+include/cobexpe/cobex_pe.h
+include/obexftp/client.h
+include/obexftp/obexftp.h
+include/obexftp/object.h
+lib/libbfb.a
+lib/libbfb.la
+lib/libbfb.so
+lib/libbfb.so.0
+lib/libbfb.so.0.4
+lib/libcobexbfb.a
+lib/libcobexbfb.la
+lib/libcobexbfb.so
+lib/libcobexbfb.so.0
+lib/libcobexbfb.so.0.8
+lib/libcobexpe.a
+lib/libcobexpe.la
+lib/libcobexpe.so
+lib/libcobexpe.so.0
+lib/libcobexpe.so.0.2
+lib/libobexftp.a
+lib/libobexftp.la
+lib/libobexftp.so
+lib/libobexftp.so.0
+lib/libobexftp.so.0.11
+man/man1/flexmem.1
+@dirrm include/obexftp
+@dirrm include/cobexpe
+@dirrm include/cobexbfb
+@dirrm include/bfb

@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- obexftp/obexftp_io.c.orig	2003-01-15 23:52:12.000000000 +0100
++++ obexftp/obexftp_io.c
+@@ -24,6 +24,7 @@
+ #include <unistd.h>
+ #include <stdio.h>	/* FIXME: libraries shouldn't do this */
+ #include <sys/stat.h>
++#include <limits.h>
+ 
+ #include <fcntl.h>
+ #include <string.h>

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- obexftp/dirtraverse.c.orig	2003-01-15 23:52:47.000000000 +0100
++++ obexftp/dirtraverse.c
+@@ -22,6 +22,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <stdlib.h>
++#include <limits.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #ifdef _WIN32
