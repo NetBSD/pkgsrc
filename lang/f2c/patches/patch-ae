@@ -1,4 +1,7 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:08:58 agc Exp $
+$NetBSD: patch-ae,v 1.3 1998/08/25 08:54:07 agc Exp $
+
+Omit any package-modified files from the distributed checksum
+(the pkgsrc checksum is still valid)
 
 --- libF77/makefile.orig	Sun Jul 19 22:58:11 1998
 +++ libF77/makefile	Sun Jul 19 23:11:54 1998
