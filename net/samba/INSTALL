@@ -1,7 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2001/11/21 16:44:17 jlam Exp $
+# $NetBSD: INSTALL,v 1.3 2002/02/05 00:36:25 taca Exp $
 
+SAMBA_LOCKDIR="@SAMBA_LOCKDIR@"
 SAMBA_PRIVATE="@SAMBA_PRIVATE@"
 
 case ${STAGE} in
@@ -16,6 +17,20 @@ POST-INSTALL)
 		${CHMOD} 600 ${SAMBA_PRIVATE}/smbpasswd
 		${CHMOD} 500 ${SAMBA_PRIVATE}
 		echo "done."
+	fi
+
+	# Check for files in old "lock" directory.
+	if [ -e /var/run/samba ]
+	then
+		${CAT} << EOF
+===========================================================================
+
+The location of the Samba cache directory has moved to ${SAMBA_LOCKDIR}.
+If you have any files under /var/run/samba, please move them into
+${SAMBA_LOCKDIR} and restart the SMB and NMB servers.
+
+===========================================================================
+EOF
 	fi
 	;;
 esac

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2002/02/04 21:33:19 tron Exp $
+# $NetBSD: Makefile,v 1.78 2002/02/05 00:36:25 taca Exp $
 
 DISTNAME=		samba-2.2.3
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
@@ -25,21 +26,24 @@ USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 PKG_SYSCONFSUBDIR?=	samba
 
-SAMBA_LOGDIR?=		/var/log
-SAMBA_LOCKDIR?=		/var/run/samba
+VARDIR?=		/var
 SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
-SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_DATADIR=		${PREFIX}/share
+SAMBA_LOCKDIR?=		${VARDIR}/db/samba
+SAMBA_LOGDIR?=		${VARDIR}/log
+SAMBA_PIDDIR?=		${VARDIR}/run
+SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 
 MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
 MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
 
-CONFIGURE_ARGS+=	--localstatedir=${SAMBA_LOGDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARDIR}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_DATADIR}/samba/codepages
 CONFIGURE_ARGS+=	--with-datadir=${SAMBA_DATADIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
+CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
 CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
 
@@ -86,8 +90,7 @@ MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
 RCD_SCRIPTS=		samba nmbd smbd
-MAKE_DIRS=		${SAMBA_LOCKDIR}
-OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE} ${SAMBA_LOCKDIR}
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
