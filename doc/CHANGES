@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4904 2004/02/18 15:43:05 wiz Exp $
+$NetBSD: CHANGES,v 1.4905 2004/02/18 18:50:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -917,3 +917,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.3nb1 [jmmv 2004-02-18]
 	Added xhtml-1.0 [jmmv 2004-02-18]
 	Updated doclifter to 1.7 [wiz 2004-02-18]
+	Added ipgrab-0.9.8 [minskim 2004-02-18]
