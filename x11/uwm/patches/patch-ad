@@ -1,0 +1,178 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
+
+--- gram.y.orig	Thu Sep 22 22:14:31 1988
++++ gram.y	Wed Dec 22 22:32:46 1999
+@@ -111,24 +111,26 @@
+ 	|	';'
+ 	;
+ 
+-expr:		keyword '=' compexpr
++string_slot:	/* empty */
++
++expr:		keyword '=' string_slot compexpr
+ 			{
+ 			    switch (KeywordTable[$1].type) {
+ 			        case IsString:
+-			            if ($3 == C_STRING) {
++			            if ($4 == C_STRING) {
+ 			                strcpy(KeywordTable[$1].sptr,
+-			                        yylval.sval);
++			                        $<sval>3);
+ 			            } else {
+ 			                yyerror("illegal construct");
+ 			            }
+-			            free(yylval.sval);
++			            free($<sval>3);
+ 			            break;
+ 			        case IsNumeric:
+-			            if ($3 == C_STRING) {
++			            if ($4 == C_STRING) {
+ 			                *(KeywordTable[$1].nptr) =
+-			                                   y_atoi(yylval.sval);
++			                                   y_atoi($<sval>3);
+ 			            } else yyerror("illegal construct");
+-			            free(yylval.sval);
++			            free($<sval>3);
+ 			            break;
+ 			        case IsBoolTrue:
+ 			        case IsBoolFalse:
+@@ -136,7 +138,7 @@
+ 			            break;
+ 			        case IsQuitFunction:
+ 			        case IsFunction:
+-			            if ($3 == C_MAP) {
++			            if ($4 == C_MAP) {
+ 			                bindtofunc($1, bkmask, cmask, NULL);
+ 			            } else yyerror("illegal construct");
+ 			            break;
+@@ -147,7 +149,7 @@
+ 			                        KeywordTable[$1].name);
+ 			                yyerror(msg);
+ 			            }
+-			            if ($3 == C_MAP) {
++			            if ($4 == C_MAP) {
+ 			                bindtofunc($1, bkmask, cmask, NULL);
+ 			            } else yyerror("illegal construct");
+ 			            break;
+@@ -158,13 +160,13 @@
+ 			                        KeywordTable[$1].name);
+ 			                yyerror(msg);
+ 			            }
+-			            if ($3 == C_MENUMAP) {
++			            if ($4 == C_MENUMAP) {
+ 			                bindtofunc
+ ($1, bkmask, cmask, menu_name);
+ 			            } else yyerror("illegal construct");
+ 			            break;
+ 			        case IsMenu:
+-			            if ($3 == C_MENU) {
++			            if ($4 == C_MENU) {
+ 			                menu_info = stashmenuinfo(menu_name, ml_ptr, hcolors);
+ 			                menu_link = stashmenulink(menu_info);
+ 			                Menus = appendmenulink(Menus, menu_link);
+@@ -197,12 +199,12 @@
+ 			    ml_ptr = $3;
+ 			}
+ 	|	STRING
+-			{ $$ = C_STRING; }
++			{ $$ = C_STRING; $<sval>0 = $1; }
+ 	;
+ 
+ boolvar:	STRING
+ 			{
+-			    ki = keywordlookup(yylval.sval);
++			    ki = keywordlookup($1);
+ 			    switch (KeywordTable[ki].type) {
+ 			    case IsBoolTrue:
+ 			        *(KeywordTable[ki].bptr) = TRUE;
+@@ -220,7 +222,7 @@
+ 	;
+ 
+ keyword:	STRING	{
+-			    $$ = keywordlookup(yylval.sval);
++			    $$ = keywordlookup($1);
+ 			}
+ 	;
+ 
+@@ -246,9 +248,9 @@
+ 			{ $$ = CheckButtonState($1); }
+ 	;
+ 
+-kmask:		STRING { $$ = keyexprlookup(yylval.sval); }
++kmask:		STRING { $$ = keyexprlookup($1); }
+ 
+-contmask:	STRING { $$ = contexprlookup(yylval.sval); }
++contmask:	STRING { $$ = contexprlookup($1); }
+ 
+ buttmodexpr: 	buttmodifier
+ 			{ $$ = $1; }
+@@ -257,7 +259,7 @@
+ 	;
+ 
+ buttmodifier:	STRING
+-			{ $$ = buttexprlookup(yylval.sval); }
++			{ $$ = buttexprlookup($1); }
+ 	;
+ 
+ menuname:	STRING
+@@ -304,7 +306,7 @@
+ 
+ menuaction:	STRING
+ 			{
+-			    ki = keywordlookup(yylval.sval);
++			    ki = keywordlookup($1);
+ 			    if ((ki != -1) &&
+ 			        (KeywordTable[ki].type != IsFunction) &&
+ 			        (KeywordTable[ki].type != IsQuitFunction) &&
+@@ -350,7 +352,7 @@
+ 			}
+ 	;
+ 
+-strings:	STRING	{ $$ = yylval.sval; }
++strings:	STRING	{ $$ = $1; }
+ 	|	strings STRING
+ 			{ $$ = strconcat($1, $2); }
+ 	;
+@@ -387,7 +389,7 @@
+ 			}
+ 	;
+ 
+-color:		STRING	{ $$ = yylval.sval; }
++color:		STRING	{ $$ = $1; }
+ 	|	/* empty */	{ $$ = NULL; }
+ 	;
+ %%
+@@ -572,6 +574,7 @@
+         setbinding(ICON, index, mask, name);
+     if (context & WINDOW)
+         setbinding(WINDOW, index, mask, name);
++    free(name);
+ }
+ 
+ /*
+@@ -599,12 +602,13 @@
+ char *mname;		/* Pointer to menu name, if needed. */
+ {
+     Binding *ptr;
++    extern char *stash();
+ 
+     ptr = AllocBinding();
+     ptr->context = cont;
+     ptr->mask = m;
+     ptr->func = KeywordTable[i].fptr;
+-    ptr->menuname = mname;
++    ptr->menuname = mname ? stash(mname) : NULL;
+ 
+     switch (m & (LeftMask | MiddleMask | RightMask)) {
+     case LeftMask:
+@@ -771,9 +775,8 @@
+     else {
+         for(ptr = list; ptr->next; ptr = ptr->next) /* NULL */;
+         ptr->next = link;
+-        ptr = ptr->next;
+-        ptr->next = NULL;
+     }
++    link->next = NULL;
+     return(list);
+ }
+ 
