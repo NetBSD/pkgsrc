@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2002/06/28 16:03:04 agc Exp $
+
+--- externs.h	2002/06/28 15:55:12	1.1
++++ externs.h	2002/06/28 15:55:45
+@@ -78,7 +78,7 @@
+ extern move_info_type move_info[9];
+ extern tactic_info_type tactic_info[9];
+ extern activation activation_info[MAX_T_ACT];
+-extern music music_info[MAX_MUSICS];
++extern music_t music_info[MAX_MUSICS];
+ extern inscription_info_type inscription_info[MAX_INSCRIPTIONS];
+ extern cptr sense_desc[];
+ 
+@@ -459,7 +459,7 @@
+ extern s16b bounties[MAX_BOUNTIES][2];
+ extern random_spell random_spells[MAX_SPELLS];
+ extern s16b spell_num;
+-extern fate fates[MAX_FATES];
++extern fate_t fates[MAX_FATES];
+ extern byte vanilla_town;
+ extern byte dungeon_type;
+ extern byte *spec_history[MAX_DUNGEON_DEPTH];
