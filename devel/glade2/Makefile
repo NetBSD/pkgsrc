@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/02/21 11:34:45 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/25 06:00:26 rh Exp $
 #
 
-DISTNAME=		glade-1.1.2
+DISTNAME=		glade-2.0.0
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		http://glade.pn.org/				\
-			${MASTER_SITE_GNOME:=sources/glade/1.1/}
+			${MASTER_SITE_GNOME:=sources/glade/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
@@ -22,8 +21,6 @@ USE_GMAKE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-BROKEN=			Incompatible with the new libgnomedb. Will be fixed in next release.
 
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../databases/libgnomedb/buildlink2.mk"
