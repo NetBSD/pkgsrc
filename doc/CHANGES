@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.671 2002/12/03 06:37:22 martti Exp $
+$NetBSD: CHANGES,v 1.672 2002/12/03 09:01:11 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3798,3 +3798,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added blackbook-3.0 [jmmv 2002-12-02]
 	Updated normalize to 0.7.6nb1 [jlam 2002-12-02]
 	Updated squirrelmail to 1.2.10 [martti 2002-12-03]
+	Updated mozilla-linux to 1.2.1 [grant 2002-12-03]
