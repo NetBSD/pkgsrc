@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8622 2005/01/05 14:13:52 wiz Exp $
+$NetBSD: CHANGES,v 1.8623 2005/01/05 15:28:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added kgeography-0.3 [wiz 2005-01-05]
 	Updated mftrace to 1.1.1nb1 [wiz 2005-01-05]
 	Updated libevent to 1.0a [wiz 2005-01-05]
+	Updated cooledit to 3.17.14 [adam 2005-01-05]
