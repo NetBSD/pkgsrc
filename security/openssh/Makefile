@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2003/07/17 22:53:01 grant Exp $
+# $NetBSD: Makefile,v 1.103 2003/07/24 20:59:03 jwise Exp $
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh-3.6.1.2
@@ -19,6 +19,7 @@ COMMENT=		Open Source Secure shell client and server (remote login program)
 
 CONFLICTS=		sftp-[0-9]*
 CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]* ssh2-[0-9]*
+CONFLICTS+=		openssh+gssapi-[0-9]*
 
 USE_PERL5=		build
 
