@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 16:50:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/29 17:26:33 drochner Exp $
 lib/zope/lib/python/Products/ActivePak/README
 lib/zope/lib/python/Products/ActivePak/__init__.py
 lib/zope/lib/python/Products/ActivePak/__init__.pyc
@@ -240,11 +240,13 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_3rdParty/XSDHTMLEditor/index.h
 lib/zope/lib/python/Products/CMFPlone/skins/plone_3rdParty/XSDHTMLEditor/license.html.dtml
 lib/zope/lib/python/Products/CMFPlone/skins/plone_3rdParty/ratings/rate_content.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_3rdParty/ratings/ratings_box.pt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_content/data.xml.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/discussionitem_view.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/document_edit_form.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/document_edit_form.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/document_view.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/document_view.pt.properties
+lib/zope/lib/python/Products/CMFPlone/skins/plone_content/event_edit_form.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/event_view.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/event_view.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_content/favorite_view.pt
@@ -271,7 +273,9 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_ecmascript/plone_javascripts.j
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/content_status_history.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/content_status_history.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/discussion_reply_form.pt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/discussion_reply_form.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/discussion_reply_preview.pt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/discussion_reply_preview.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/folder_edit_form.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/folder_factories.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/folder_factories.pt.properties
@@ -318,6 +322,7 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/search.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/search_form.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/search_form.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/sendto_form.pt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/sendto_form.pt.properties
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/synPropertiesForm.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/talkback_tree.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_forms/undo_form.pt
@@ -412,6 +417,7 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/form_scripts/validate_
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/form_scripts/validate_sendto.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/fromPortalTime.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/generateId.py
+lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/getFolderContents.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/getObjSize.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/getPersonalFolderFor.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/getPlonePersonalPortait.py
@@ -436,6 +442,8 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/queryCatalog.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/quick_undo.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/rejectAnonymous.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/reverseList.py
+lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/save_xml.py
+lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/save_xml.pyc
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/selectedTabs.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/setAuthCookie.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/setAuthCookie.pyc
@@ -446,6 +454,19 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/sort_modified_ascendin
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/toPortalTime.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/undo.py
 lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/unique.py
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core/bullet.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core/dump.txt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core/linkOpaque.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core/stylesheet_properties.props
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core/user.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/arrowDown.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/arrowUp.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/bullet.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/linkOpaque.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/linkTransparent.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/required.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/stylesheet_properties.props
+lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate/user.gif
 lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/mozilla/addFavorite.gif
 lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/mozilla/arrowDown.gif
 lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/mozilla/arrowUp.gif
@@ -521,6 +542,260 @@ lib/zope/lib/python/Products/CMFPlone/skins/plone_templates/ui_slots/workflow_re
 lib/zope/lib/python/Products/CMFPlone/skins/plone_templates/viewThreadsAtBottom.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/wysiwyg_popup.pt
 lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/wysiwyg_support.pt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/cabinstall/install_msxml4l.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/cabinstall/msxml4.cab
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/document_edit.xsd.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/document_edit.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/EXAMPLES.txt
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/data.xml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/data2.xml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/include.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/schema.xsd
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/stylesheet1.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples/stylesheet2.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/animator/animator.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/animator/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/constants.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/context.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/contextmenu.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/contextmenu.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/Copy of bg_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bg_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bg_sel_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bullit.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bullit_dis_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bullit_dis_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/bullit_sel.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/check.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/check_dis_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/check_dis_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/check_sel.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/icons/bookmark.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/icons/favorite.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/icons/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/more.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/more_dis_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/more_dis_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/more_sel.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/cookie.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog/bg_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog/dialog.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog/dialog.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog/mask.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/domrange.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/editordriver.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/errorhandler.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/framework.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/globals.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/bl.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/br.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/help.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/help.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/tl.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/tr.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_cn.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_da.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_de.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_en.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_es.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_fr.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_gr.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_it.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_ja.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_nl.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_pl.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_ru.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help/xopus_ua.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/loader.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/locale.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_cn.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_da.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_de.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_en.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_es.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_fr.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_gr.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_it.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_ja.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_nl.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_pl.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_ru.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale/userMessages_ua.xml.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/agree.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/attach.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/bold.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/bullititem.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/clear.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/collapse.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/config.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/contexthelp.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/copy.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/cut.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/date.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/delete.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/deletenode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/down.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/expand.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/fontsizedown.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/fontsizeup.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/h1.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/help.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/indent.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/insertlink.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/insertnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/insertpicture.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/insertsymbol.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/inserttable.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/italic.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/language.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/more.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/movedownnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/moveupnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/new.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/numbereditem.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/ol.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/openweb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/outdent.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/outline.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/paste.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/properties.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/redo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/save.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/searchweb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/separator_hor.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/separator_ver.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/settings.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/spellcheck.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/subscript.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/superscript.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/thumb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/time.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/ul.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/undo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/up.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/view.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16/xopus.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/agree.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/attach.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/bold.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/bullititem.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/clear.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/collapse.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/config.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/contexthelp.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/copy.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/cut.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/date.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/delete.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/deletenode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/down.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/expand.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/fontsizedown.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/fontsizeup.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/h1.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/help.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/indent.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/insertlink.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/insertnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/insertpicture.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/insertsymbol.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/inserttable.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/italic.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/language.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/more.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/movedownnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/moveupnode.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/new.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/numbereditem.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/ol.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/openweb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/outdent.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/outline.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/paste.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/properties.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/redo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/save.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/searchweb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/settings.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/spellcheck.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/subscript.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/superscript.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/thumb.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/time.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/ul.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/undo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/up.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/view.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20/xopus.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/q42logo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/xopuslogo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/nix.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/xopuslogo.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/mozilla/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/mozilla/moz2ie.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/mozilla/moz_som.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/objectfactory.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/pipeline.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/pipeline_addpaths.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/pipeline_copypis.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/pipeline_finalize.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/pipeline_keepids.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline/xpath.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/schema.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/status.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons/toolbarbottom.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons/toolbarleft.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons/toolbarright.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons/toolbartop.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/separator_hor.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/separator_ver.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bg_hor_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bg_hor_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bg_left_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bg_right_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bg_ver_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgend_hor_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgend_ver_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgstart_hor_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgstart_hor_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgstart_left_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgstart_right_moz.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_bgstart_ver_ie.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_xopuslogo_hor.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/toolbar_xopuslogo_ver.gif
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/toolbar.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/toolbar_ie.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/toolbar_moz.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treemorpher.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treeview/index.html
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treeview/tree.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treeview/tree.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treeview/tree.xsl.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/utils.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xmlhandler.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xmllib.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xopus.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xopus_ie.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xopus_moz.css.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xopusobj.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/xopusui.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopusPlugins/databasedriver.js.dtml
+lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopusPlugins/editors.js.dtml
 lib/zope/lib/python/Products/CMFPlone/temp/edit_xml.py
 lib/zope/lib/python/Products/CMFPlone/temp/edit_xml.pyc
 lib/zope/lib/python/Products/CMFPlone/temp/export.xml
@@ -533,7 +808,6 @@ lib/zope/lib/python/Products/CMFPlone/version.txt
 lib/zope/lib/python/Products/CMFPlone/www/addPropertySheet.zpt
 lib/zope/lib/python/Products/CMFPlone/www/addSite.zpt
 lib/zope/lib/python/Products/CMFPlone/www/migrationTool.dtml
-lib/zope/lib/python/Products/DCWorkflow/.#Transitions.py.1.8
 lib/zope/lib/python/Products/DCWorkflow/CHANGES.txt
 lib/zope/lib/python/Products/DCWorkflow/ContainerTab.py
 lib/zope/lib/python/Products/DCWorkflow/ContainerTab.pyc
@@ -621,11 +895,35 @@ lib/zope/lib/python/Products/DCWorkflow/version.txt
 @dirrm lib/zope/lib/python/Products/CMFPlone/www
 @dirrm lib/zope/lib/python/Products/CMFPlone/tests
 @dirrm lib/zope/lib/python/Products/CMFPlone/temp
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopusPlugins
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/treeview
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media/icons
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar/media
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/toolbar
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/pipeline
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/mozilla
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/20x20
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons/16x16
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media/icons
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/media
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/locale
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/help
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/dialog
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media/icons
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu/media
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/contextmenu
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus/animator
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/xopus
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/examples
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus/cabinstall
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg/xopus
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_wysiwyg
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_templates/ui_slots
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_templates
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/winxp
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/mozilla
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/corporate
+@dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_styles/core
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_styles
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts/form_scripts
 @dirrm lib/zope/lib/python/Products/CMFPlone/skins/plone_scripts
