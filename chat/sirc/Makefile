@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/21 23:02:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/21 23:04:00 hubertf Exp $
 
 DISTNAME=	sirc-2.211
 PKGNAME=	sirc-2.211nb1
@@ -12,6 +12,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 
 USE_PERL5=	# defined
+DEPENDS+=	p5-Socket6-0.07:../../net/p5-Socket6
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 SIRC_SCRIPTS= \
