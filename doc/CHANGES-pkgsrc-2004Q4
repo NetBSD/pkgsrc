@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.69 2005/02/14 16:22:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.70 2005/02/15 06:32:07 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -147,3 +147,5 @@ Pullup ticket 284 - requested by Min Sik Kim
 distfile fix for awstats
 Pullup ticket 285 - requested by Min Sik Kim
 compatibility fix for battalion
+Pullup ticket 286 - requested by grant beattie
+clamav update
