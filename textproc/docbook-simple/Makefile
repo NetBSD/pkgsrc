@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/05/28 16:40:34 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/30 06:31:02 minskim Exp $
 #
 
-DISTNAME=	docbook-simple-1.1b3
+DISTNAME=	docbook-simple-1.1CR2
+PKGNAME=	${DISTNAME:C/CR/rc/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://docbook.org/xml/simple/1.1b3/
+MASTER_SITES=	http://docbook.org/xml/simple/1.1CR2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	minskim@NetBSD.org
@@ -23,9 +24,9 @@ DTDFILES=	sdbcent.mod sdocbook-custom.dtd sdocbookref-custom.dtd \
 		sinclist.mod
 MISCFILES=	sdocbook.css
 
-XML_ENTRIES=	public "-//OASIS//DTD Simplified DocBook XML V1.1b3//EN" \
+XML_ENTRIES=	public "-//OASIS//DTD Simplified DocBook XML V1.1CR2//EN" \
 		${PREFIX}/share/xml/docbook-simple/sdocbook.dtd
-XML_ENTRIES+=	public "-//OASIS//DTD Simplified DocBook RefEntry XML V1.1b3//EN" \
+XML_ENTRIES+=	public "-//OASIS//DTD Simplified DocBook RefEntry XML V1.1CR2//EN" \
 		${PREFIX}/share/xml/docbook-simple/sdocbookref.dtd
 
 do-install:
