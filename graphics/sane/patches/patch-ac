@@ -1,13 +1,21 @@
-$NetBSD: patch-ac,v 1.3 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-ac,v 1.4 1998/11/28 20:59:58 frueauf Exp $
 
---- frontend/Makefile.in.orig	Fri May 15 08:18:10 1998
-+++ frontend/Makefile.in	Thu Aug  6 22:51:32 1998
-@@ -28,7 +28,7 @@
+--- backend/snapscan.c-orig	Thu Oct 29 08:02:29 1998
++++ backend/snapscan.c	Sat Nov 28 12:16:28 1998
+@@ -55,7 +55,6 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#include <values.h>
+ #include <limits.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+@@ -3150,7 +3149,7 @@
  
- CC = @CC@
- INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include \
--	@INCLUDES@
-+	@INCLUDES@ -I${prefix}/lib/glib/include
- DEFS = @DEFS@
- CPPFLAGS = @CPPFLAGS@
- CFLAGS = @CFLAGS@ @GTK_CFLAGS@
+ 	{
+ 	  int result = write (pss->tfd, other_buf, pss->read_bytes);
+-	  if (result < 0 || result == MAXINT)
++	  if (result < 0 || result == INT_MAX)
+ 	    {
+ 	      DBG (DL_MAJOR_ERROR, "%s: write of test data to file failed.\n",
+ 		   me);
