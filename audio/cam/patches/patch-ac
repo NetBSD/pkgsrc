@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2000/09/30 17:24:50 hubertf Exp $
+$NetBSD: patch-ac,v 1.6 2004/03/31 10:40:29 minskim Exp $
 
 --- Makefile.orig	Thu Sep 19 19:18:29 1996
 +++ Makefile	Sat Sep 30 16:51:14 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.5 2000/09/30 17:24:50 hubertf Exp $
  CC     = gcc
  CFLAGS = -Wall -O2
 -LIBS   = -lncurses
-+LIBS   = -lcurses -lossaudio
++LIBS   = -lcurses ${LIBOSSAUDIO}
  INSTALL = install
 -BINDIR = /usr/local/bin
 +BINDIR = ${PREFIX}/bin
