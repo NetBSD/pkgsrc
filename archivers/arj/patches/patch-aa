@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/06 10:11:15 jmmv Exp $
 
 --- environ.c.orig	Thu Mar 28 00:02:38 2002
 +++ environ.c
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
   } while(*pe!='\0');
   #if SFX_LEVEL==ARJ
 -  strcpy(dest, "/usr/bin/arj");
-+  strcpy(dest, "/usr/pkg/bin/arj");
++  strcpy(dest, "@PREFIX@/bin/arj");
   #elif SFX_LEVEL==ARJSFXV
    strcpy(dest, "./arjsfxv");
   #elif SFX_LEVEL==ARJSFX
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
    strcpy(dest, "./arjsfxjr");
   #elif defined(REARJ)
 -  strcpy(dest, "/usr/bin/rearj");
-+  strcpy(dest, "/usr/pkg/bin/rearj");
++  strcpy(dest, "@PREFIX@/bin/rearj");
   #else
    dest[0]='\0';
   #endif
