@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/02 02:11:19 markd Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/07 09:06:35 jlam Exp $
 
 DISTNAME=	kdebase-3.0.3
 CATEGORIES=	x11
@@ -55,12 +55,20 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 ICONDIR=		share/kde/icons
 
+# Several programs need to be setuid-root, but due to the way that KDE3
+# finds executables, the files must have their read bit set so that
+# KStandardDir::findResource() will find them.
+#
+_KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
+SPECIAL_PERMS+=	${PREFIX}/bin/konsole_grantpty	${_KDE_SETUID_ROOT}
+SPECIAL_PERMS+=	${PREFIX}/bin/kcheckpass	${_KDE_SETUID_ROOT}
+SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${_KDE_SETUID_ROOT}
+
 post-build:
 	cd ${WRKSRC};							\
 	files="kioslave/info/kde-info2html.conf";			\
 	for file in $${files}; do					\
-		${SED}	-e "s|@LOCALBASE@|${LOCALBASE}|"		\
-			$${file} > $${file}.new;			\
+		${SED} ${FILES_SUBST_SED} $${file} > $${file}.new;	\
 		${MV} -f $${file}.new $${file};				\
 	done
 
@@ -69,19 +77,6 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/${ICONDIR}
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README			\
 		${PREFIX}/share/doc/kde/HTML/en/kdm
-
-	@# Several programs need to be setuid-root, but due to the way that
-	@# KDE3 finds executables, the files must have their read bit set
-	@# so that KStandardDir::findResource() will find them
-	@#
-	suid_progs="							\
-		bin/konsole_grantpty					\
-		bin/kcheckpass						\
-		bin/ksysguardd						\
-	";								\
-	for prog in $${suid_progs}; do					\
-		${CHMOD} 4755 ${PREFIX}/$${prog};			\
-	done
 
 	@# The global desktop template files need to be user-writeable, or
 	@# else users won't be able to alter them after copying them to 
@@ -116,4 +111,6 @@ post-install:
 .include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
