@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2000/12/15 04:00:15 wiz Exp $
+$NetBSD: patch-ah,v 1.6 2001/08/23 15:55:26 jlam Exp $
 
 --- Makefile.in.orig	Sun Apr  9 14:17:58 2000
 +++ Makefile.in
@@ -82,7 +82,7 @@ $NetBSD: patch-ah,v 1.5 2000/12/15 04:00:15 wiz Exp $
  Libs/libclan-sound.so.$(D_VERSION_MINOR): $(OBJF_SOUND_CLANSOUND)
  	@echo "Building sound target"
 -	@$(LINK_COMMAND) -o Libs/libclan-sound.so.$(D_VERSION_MINOR) $(OBJF_SOUND_CLANSOUND)
-+	@$(LINK_COMMAND) -lossaudio -o Libs/libclan-sound.so.$(D_VERSION_MINOR) $(OBJF_SOUND_CLANSOUND)
++	@$(LINK_COMMAND) ${LIBOSSAUDIO} -o Libs/libclan-sound.so.$(D_VERSION_MINOR) $(OBJF_SOUND_CLANSOUND)
  
  Libs/libclan-input-tty.so.$(D_VERSION_MINOR): $(OBJF_INPUT_TTY)
  	@echo "Building tty input target"
