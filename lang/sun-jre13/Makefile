@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:18 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/01 01:58:36 abs Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -40,7 +40,7 @@ JDK_HOME:=	${LOCALBASE}/java
 # since we change PREFIX:
 NO_MTREE=	yes
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
 LDD=		${TRUE}
 
 post-fetch:
