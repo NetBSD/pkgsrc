@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:36:48 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/22 00:13:14 schmonz Exp $
 #
 
 DISTNAME=	cvsgraph-1.2.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 
-MAINTAINER=	schmonz+netbsd@schmonz.com
+MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	graphically represents CVS/RCS branches and file revisions
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/06/07 08:17:33 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/22 00:13:13 schmonz Exp $
 
 DISTNAME=	cdb-0.75
 CATEGORIES=	databases
 MASTER_SITES=	http://cr.yp.to/cdb/
 
-MAINTAINER=	schmonz+netbsd@schmonz.com
+MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://cr.yp.to/cdb.html
 COMMENT=	creates and reads constant databases
 
