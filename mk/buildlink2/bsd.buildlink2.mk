@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.21 2002/09/17 19:15:35 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.22 2002/09/18 00:46:58 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -97,6 +97,11 @@ buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
 
+# Create the buildlink wrappers before any of the other buildlink targets
+# are run, as the wrapper may need to be used in some of those targets.
+#
+do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
+
 # Add each of the *-buildlink targets as a prerequisite for the
 # buildlink target.  This ensures that the symlinks are created
 # before any configure scripts or build commands are called.
@@ -194,8 +199,6 @@ _BUILDLINK_USE: .USE
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
-do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
-
 # _BLNK_TRANSFORM mini language for translating wrapper arguments into
 #	their buildlink equivalents:
 #
@@ -242,13 +245,17 @@ _BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
 # separate variables instead of just one because the contents are too long
 # for one variable when we substitute into a shell script later on.
 #
-_BLNK_TRANSFORM_SED.1+=	${_BLNK_PROTECT_SED}
-_BLNK_TRANSFORM_SED.2+=	${_BLNK_PROTECT_SED}
-_BLNK_TRANSFORM_SED.3+=	${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.1+=		${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.3+=		${_BLNK_PROTECT_SED}
 #
-# Change "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo" and
+# Change "/usr/lib/libfoo.so"       into "-lfoo",
+#        "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo",
 #        "/usr/X11R6/lib/libbar.so" into "-L/usr/X11R6/lib -lbar".
 #
+_BLNK_TRANSFORM_SED.libpath+= \
+	-e "s|/usr/lib/lib\([^	 ]*\)\.a|-l\1|g"			\
+	-e "s|/usr/lib/lib\([^	 ]*\)\.so|-l\1|g"
 _BLNK_TRANSFORM_SED.libpath+= \
 	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
 	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
@@ -256,6 +263,7 @@ _BLNK_TRANSFORM_SED.libpath+= \
 	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
 	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
 _BLNK_TRANSFORM_SED.1+=		${_BLNK_TRANSFORM_SED.libpath}
+_BLNK_UNTRANSFORM_SED.1+=	${_BLNK_TRANSFORM_SED.libpath}
 #
 # Transform "I:/usr/pkg:/buildlink" into:
 #	-e "s|-I/usr/pkg |-I/buildlink |g"
@@ -345,11 +353,14 @@ _BLNK_TRANSFORM_SED.l+= \
 	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/}$$|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/}|g"
 .endfor
 _BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.l}
+_BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.l}
 #
 # Fix up references to the x11-links directory.
 #
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 _BLNK_TRANSFORM_SED.3+= \
+	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
+_BLNK_UNTRANSFORM_SED.3+= \
 	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
 .endif
 #
@@ -365,6 +376,7 @@ _BLNK_TRANSFORM_SED.r+= \
 	-e "s|${_transform_:S/^r://}/[^	 ]*||g"
 .endfor
 _BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.r}
+_BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.r}
 #
 # Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
 #
@@ -373,10 +385,15 @@ _BLNK_TRANSFORM_SED.3+= \
 	-e "s|-I/usr/include$$||g"					\
 	-e "s|-L/usr/lib ||g"						\
 	-e "s|-L/usr/lib$$||g"
+_BLNK_UNTRANSFORM_SED.3+= \
+	-e "s|-I/usr/include ||g"					\
+	-e "s|-I/usr/include$$||g"					\
+	-e "s|-L/usr/lib ||g"						\
+	-e "s|-L/usr/lib$$||g"
 
-_BLNK_TRANSFORM_SED.1+=	${_BLNK_UNPROTECT_SED}
-_BLNK_TRANSFORM_SED.2+=	${_BLNK_UNPROTECT_SED}
-_BLNK_TRANSFORM_SED.3+=	${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.1+=		${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.3+=		${_BLNK_UNPROTECT_SED}
 
 _BLNK_CHECK_IS_TEXT_FILE?= \
 	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
@@ -437,9 +454,17 @@ _REPLACE_BUILDLINK= \
 	${REPLACE_BUILDLINK}						\
 	`${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
 
+# When "unbuildlinkifying" a file, we must remove references to the
+# buildlink directories and change any -llib to the proper replacement
+# libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
+# options are removed to optimize the resulting file.
+#
 REPLACE_BUILDLINK_SED?=		# empty
 _REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
-_REPLACE_BUILDLINK_SED+=	${_BLNK_TRANSFORM_SED.l}
+_REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.1}
+_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.2}
+_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.3}
 
 BUILDLINK_SUBST_MESSAGE.unbuildlink= \
 	"Fixing buildlink references in files-to-be-installed."
@@ -448,6 +473,19 @@ BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
 
 post-build: unbuildlink-buildlink-subst
 unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
+
+# Create a fake libtool archive $$lafile that uses the shared libraries 
+# named in $$libpattern.
+#
+BUILDLINK_FAKE_LA=							\
+	if [ ! -f $$lafile ]; then					\
+		${ECHO_BUILDLINK_MSG} "Creating libtool archive: $$lafile"; \
+		case ${OBJECT_FMT} in					\
+		Mach-O) _lib=`${LS} -1 $$libpattern | ${HEAD} -1` ;;	\
+		*)      _lib=`${LS} -1r $$libpattern | ${HEAD} -1` ;;	\
+		esac;							\
+		${_BLNK_FAKE_LA} $$_lib > $$lafile;			\
+	fi
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
@@ -524,6 +562,7 @@ _BLNK_WRAP_CACHE_TRANSFORM=		${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_LOGIC_TRANSFORM=		${BUILDLINK_DIR}/bin/.logic-trans
 _BLNK_WRAP_LOG=				${BUILDLINK_DIR}/.wrapper.log
 _BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
+_BLNK_FAKE_LA=				${BUILDLINK_DIR}/bin/.fake-la
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
@@ -558,17 +597,8 @@ _BLNK_WRAP_ENV.LIBTOOL=		# empty
 _BLNK_WRAPPER_SH.LIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 
-# In the libtool archives, we must remove references to the buildlink
-# directories and change any -llib to the proper replacement libraries
-# (-lreadline -> -ledit, etc.).  Redundant -Ldir options are removed to
-# optimize the resulting libtool archives.
-#
-_BLNK_WRAP_LT_UNTRANSFORM_SED=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
-_BLNK_WRAP_LT_UNTRANSFORM_SED+=	${_BLNK_UNTRANSFORM_SED.1}
-_BLNK_WRAP_LT_UNTRANSFORM_SED+=	${_BLNK_UNTRANSFORM_SED.2}
-_BLNK_WRAP_LT_UNTRANSFORM_SED+=	${_BLNK_UNTRANSFORM_SED.3}
-_BLNK_WRAP_LT_UNTRANSFORM_SED+=	-e "s|-L/usr/lib ||g"
-_BLNK_WRAP_LT_UNTRANSFORM_SED+=	-e "s|-L/usr/lib$$||g"
+# We need to "unbuildlinkify" any libtool archives.
+_BLNK_WRAP_LT_UNTRANSFORM_SED=	${_REPLACE_BUILDLINK_SED}
 
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
@@ -585,6 +615,7 @@ buildlink-wrappers: ${_BLNK_WRAP_CACHE_TRANSFORM}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC}
 buildlink-wrappers: ${_BLNK_WRAP_LOGIC_TRANSFORM}
 buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
+buildlink-wrappers: ${_BLNK_FAKE_LA}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 CONFIGURE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
@@ -759,6 +790,26 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
+		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"		\
+		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
+		-e "s|@CC@|${BUILDLINK_CC:Q}|g"				\
+		-e "s|@CP@|${CP:Q}|g"					\
+		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
+		-e "s|@ECHO@|${ECHO:Q}|g"				\
+		-e "s|@EGREP@|${EGREP:Q}|g"				\
+		-e "s|@LIBTOOL@|${BUILDLINK_LIBTOOL:Q}|g"		\
+		-e "s|@MKDIR@|${MKDIR:Q}|g"				\
+		-e "s|@MV@|${MV:Q}|g"					\
+		-e "s|@RM@|${RM:Q}|g"					\
+		-e "s|@SED@|${SED:Q}|g"					\
+		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 clear-buildlink-cache: remove-buildlink-cache buildlink-wrappers

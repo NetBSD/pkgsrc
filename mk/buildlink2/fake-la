@@ -1,0 +1,40 @@
+#!@BUILDLINK_SHELL@
+#
+# $NetBSD: fake-la,v 1.1 2002/09/18 00:46:59 jlam Exp $
+
+BASENAME="@BASENAME@"
+CC="@CC@"
+CP="@CP@"
+DIRNAME="@DIRNAME@"
+ECHO="@ECHO@"
+LIBTOOL="@LIBTOOL@ --quiet"
+MKDIR="@MKDIR@"
+MV="@MV@"
+RM="@RM@"
+SED="@SED@"
+
+BUILDLINK_DIR="@BUILDLINK_DIR@"
+
+reallib="$1"
+realdir=`${DIRNAME} $reallib`
+libname=`${BASENAME} $reallib`
+tmpdir=${BUILDLINK_DIR}/.tmp
+
+if [ ! -f $tmpdir/inst/$libbase.la ]; then
+	case $libname in
+	*.so.[0-9]*)
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.so\.[0-9.]*$//"`
+		version=`${ECHO} $libname | ${SED} -e "s/.*\.so\.//;s/\./:/g"`
+		;;
+
+	*[0-9].dylib)
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.[0-9.]*\.dylib$//"`
+		version=`${ECHO} $libname | ${SED} -e "s/^[^.]*\.\([0-9]*\.[0-9]*\)\.dylib/\1/;s/\./:/g"`
+		;;
+	esac
+	${MKDIR} $tmpdir/inst
+	cd $tmpdir
+	${LIBTOOL} ${CC} -o $libbase.la -rpath $tmpdir/inst -version-info $version
+	${LIBTOOL} --mode=install ${CP} $libbase.la $tmpdir/inst >/dev/null
+fi
+${SED} -e "s,$tmpdir/inst,$realdir,g" $tmpdir/inst/$libbase.la
