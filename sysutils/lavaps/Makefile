@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/31 02:03:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/19 20:31:57 wiz Exp $
 #
 
 DISTNAME=	lavaps-1.20
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
+BUILD_DEPENDS+=	perl>=5.0:../../lang/perl5
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 USE_X11=	# defined
