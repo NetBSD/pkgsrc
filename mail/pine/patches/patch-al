@@ -1,29 +1,52 @@
-$NetBSD: patch-al,v 1.5 1999/11/11 17:40:18 tv Exp $
+$NetBSD: patch-al,v 1.6 2000/09/19 13:27:01 hubertf Exp $
 
---- build.orig	Fri Feb 19 18:30:54 1999
-+++ build	Thu Nov 11 12:04:59 1999
-@@ -280,20 +280,12 @@
-         ln -s imap/c-client c-client
-         if [ -s mtest    ] ; then rm -f mtest    ; fi
-         ln -s imap/mtest mtest
+--- build.orig	Mon Nov 15 23:16:25 1999
++++ build
+@@ -180,7 +180,7 @@
+      mnt) makeargs="CC=gcc $makeargs" ;;
+      bs3) makeargs="CC=shlicc $makeargs" ;;
+      lyn) [ -f /CYGNUS.bash ] && . /CYGNUS.bash; makeargs="CC=gcc $makeargs" ;;
+-       *) makeargs="CC=cc $makeargs" ;;
++       *) makeargs="CC=${LT}\ cc $makeargs" ;;
+   esac
+ fi
+ 
+@@ -277,23 +277,17 @@
+ 	  esac
+ 	fi
+ 
+-        if [ -s c-client ] ; then rm -f c-client ; fi
+-        ln -s imap/c-client c-client
+-        if [ -s mtest    ] ; then rm -f mtest    ; fi
+-        ln -s imap/mtest mtest
 -        if [ -s imapd    ] ; then rm -f imapd    ; fi
 -        ln -s imap/imapd imapd
-         echo "Making c-client library, mtest and imapd"
-         eval echo make "$makeargs" "$K1" "$K2" $ccltarg
-         cd $PHOME/imap
-         eval make "$makeargs" "$K1" "$K2" $ccltarg
-         echo ''
- 
+-        echo "Making c-client library, mtest and imapd"
+-        eval echo make "$makeargs" "$K1" "$K2" $ccltarg
+-        cd $PHOME/imap
+-        eval make "$makeargs" "$K1" "$K2" $ccltarg
+-        echo ''
+-
 -        echo "Making Pico and Pilot"
 -        cd $PHOME/pico
 -        eval echo make "$makeargs" -f makefile.$picotarg
 -        eval make "$makeargs" -f makefile.$picotarg
 -        echo ''
--
++# We use the ima-uw pkg's stuff for that, see
++# http://www.securityfocus.com/advisories/2646:
++#       if [ -s c-client ] ; then rm -f c-client ; fi
++#       ln -s imap/c-client c-client
++#       if [ -s mtest    ] ; then rm -f mtest    ; fi
++#       ln -s imap/mtest mtest
++#       echo "Making c-client library, mtest and imapd"
++#       eval echo make "$makeargs" "$K1" "$K2" $ccltarg
++#       cd $PHOME/imap
++#       eval make "$makeargs" "$K1" "$K2" $ccltarg
++#       echo ''
+ 
          echo "Making Pine".
          cd $PHOME/pine
-         eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
-@@ -309,8 +301,6 @@
+@@ -310,8 +304,6 @@
          if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
          cd $PHOME
          echo ''

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2000/02/09 22:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.35 2000/09/19 13:27:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
 DISTNAME=       pine4.21
-PKGNAME=        pine-4.21
+PKGNAME=        pine-4.21nb1
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -14,9 +14,19 @@ HOMEPAGE=	http://www.washington.edu/pine/
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS=	pico-3.7:../../editors/pico
 
+USE_LIBTOOL=	yes
+CONFIGURE_ENV+=	LT=${LIBTOOL}
+MAKE_ENV+=	LT=${LIBTOOL}
+
+pre-patch:
+	# Make sure the imap lib that comes with pine4.21 isn't
+	# used (see http://www.securityfocus.com/advisories/2646)
+	rm -fr ${WRKSRC}/imap
+
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
-	${SED} -e 's@/usr/local/lib/@${PREFIX}/etc/@' \
+	${SED} \
+		-e 's@/usr/local/lib/@${PREFIX}/etc/@' \
 		<${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
 	@${RM} -rf ${WRKSRC}/pico
 	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
@@ -25,8 +35,8 @@ do-build:
 	cd ${WRKSRC} && ./build ${BUILDNAME} PREFIX=${PREFIX}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/pine/abookcpy ${PREFIX}/bin/
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/pine ${PREFIX}/bin/
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/abookcpy ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/
