@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/05 05:02:42 xtraeme Exp $
+
+--- setup/setup.c.orig	Sun Jun 29 16:27:02 2003
++++ setup/setup.c	Wed Jul  2 13:02:28 2003
+@@ -211,7 +211,7 @@
+  #endif
+ 
+  #ifdef DIGI_OSS
+-   { "oss_driver",         param_str,     "",      "/dev/dsp", NULL,             "Drv:",     "",         NULL,    "Name of the driver (e.g. /dev/dsp)" },
++   { "oss_driver",         param_str,     "",      DEVOSSAUDIO, NULL,             "Drv:",     "",         NULL,    "Name of the driver (e.g. /dev/dsp)" },
+    { "oss_numfrags",       param_int,     "",      "-1",       &_oss_numfrags,   "NumFr:",   NULL,       NULL,    "Number of fragments (use 2, other values make little difference)" },
+    { "oss_fragsize",       param_num,     "",      "-1",       &_oss_fragsize,   "Siz:",     NULL,       NULL,    "Size of fragment (small values -- choppy sound, large values -- delayed sound)" },
+  #endif

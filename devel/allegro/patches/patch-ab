@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/05 05:02:42 xtraeme Exp $
+
+--- src/unix/uoss.c.orig	Sun Jun 29 16:27:04 2003
++++ src/unix/uoss.c	Wed Jul  2 13:25:43 2003
+@@ -176,6 +176,8 @@
+ 	 _mix_some_samples((unsigned long) oss_bufdata, 0, oss_signed);
+       }
+    }
++
++   yield_timeslice();
+ }
+ 
+ 
+@@ -191,7 +193,7 @@
+ 
+    ustrzcpy(_oss_driver, sizeof(_oss_driver), get_config_string(uconvert_ascii("sound", tmp1),
+ 					                        uconvert_ascii("oss_driver", tmp2),
+-					                        uconvert_ascii("/dev/dsp", tmp3)));
++					                        uconvert_ascii(DEVOSSAUDIO, tmp3)));
+ 
+    ustrzcpy(_oss_mixer_driver, sizeof(_oss_mixer_driver), get_config_string(uconvert_ascii("sound", tmp1),
+ 					                                    uconvert_ascii("oss_mixer_driver", tmp2),
+@@ -583,6 +585,7 @@
+ 	 p[i] ^= 0x80;
+    }
+ 
++   yield_timeslice();
+    return 1;
+ }
+ 
