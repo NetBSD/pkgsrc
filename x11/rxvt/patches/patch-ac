@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2000/08/30 00:01:05 wiz Exp $
+
+--- configure.orig	Sun Mar 26 16:47:39 2000
++++ configure	Wed Aug 16 03:06:27 2000
+@@ -4163,6 +4163,7 @@
+   cat > conftest.$ac_ext <<EOF
+ #line 4165 "configure"
+ #include "confdefs.h"
++#include <sys/types.h>
+ #include <stdio.h>
+ #include <utmp.h>
+ #include <errno.h>
