@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2937 2005/01/20 12:07:26 salo Exp $
+$NetBSD: TODO,v 1.2938 2005/01/20 14:01:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,6 +514,7 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnucash-docs-1.8.5
+	o gnumeric-1.4.2
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -563,6 +564,7 @@ Suggested package updates
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20041104
+	o iozone-3.228
 	o ipcheck-0.219
 	o ipsec-tools-0.5beta1
 	o ircd-hybrid-7.0.4
@@ -730,7 +732,7 @@ Suggested package updates
 	o oregano-0.40.1
 	o oroborus-2.0.13.1
 	o osh-041231
-	o oss-3.99.1i [also available for 2.0]
+	o oss-3.99.2a [for 2.0]
 	o p11-2.10c
 	o p5-Apache-ASP-2.57
 	o p5-Apache-Gallery-0.9.1
@@ -1167,8 +1169,10 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xlog-1.0
 	o xm7-303
+	o xmame-0.90
 	o xmbdfed-4.5
 	o xmcd-3.3.0
+	o xmess-0.90
 	o xmlstarlet-0.9.5
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
