@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/28 05:24:25 snj Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -12,7 +12,8 @@ COMMENT=		OO framework for data analysis and visualisation
 BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK2=		YES
+BUILDLINK_PASSTHRU_DIRS=${PREFIX}/root/lib
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 
@@ -38,5 +39,5 @@ do-install:
 	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/root.sh >${PREFIX}/bin/root
 	${CHMOD} +x ${PREFIX}/bin/root
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
