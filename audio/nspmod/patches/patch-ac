@@ -1,5 +1,5 @@
-*** nspmod.c.orig	Wed Sep  3 14:58:19 1997
---- nspmod.c	Wed Sep  3 14:55:06 1997
+*** nspmod.c.orig	Sat Sep 16 04:10:37 1995
+--- nspmod.c	Sat Mar  7 04:43:55 1998
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -19,7 +19,10 @@
       printf(" -e    show events\n");
       printf(" -f #  output sample rate\n");
 ***************
-*** 62,69 ****
+*** 59,69 ****
+      static OptInfo oi;
+      int optChar;
+  
       oi.outRate = DEF_OUTRATE;
       oi.ovsFreq = -1;
       /*oi.repLimit = 1;*/
@@ -28,7 +31,11 @@
   	case 'c': oi.onlyCh = (i15x)strtol(optarg, NULL, 0) | 0x100; break;
   	case 'e': oi.showEvents++; break;
   	case 'f': oi.outRate = (u16x)strtol(optarg, NULL, 0); break;
---- 64,72 ----
+--- 61,73 ----
+      static OptInfo oi;
+      int optChar;
+  
++     oi.bits = 8;
       oi.outRate = DEF_OUTRATE;
       oi.ovsFreq = -1;
       /*oi.repLimit = 1;*/
@@ -40,7 +47,7 @@
   	case 'f': oi.outRate = (u16x)strtol(optarg, NULL, 0); break;
 ***************
 *** 116,121 ****
---- 119,125 ----
+--- 120,126 ----
   
       lookOverFile(p, statbuf.st_size);
       dacioInit();
