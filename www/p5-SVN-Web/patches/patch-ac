@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/Browse.pm.orig	Tue Aug 26 10:33:17 2003
++++ lib/SVN/Web/Browse.pm
+@@ -19,24 +19,24 @@ sub run {
+     my $rev = $self->{cgi}->param('rev') || $fs->youngest_rev;
+     my $root = $fs->revision_root ($rev);
+ 
+-    my $kind = SVN::Fs::check_path ($root, $self->{path});
++    my $kind = $root->check_path ($self->{path});
+ 
+-    die "path does not exist" if $kind == $SVN::Core::node_none;
++    die "path does not exist" if $kind == $SVN::Node::none;
+ 
+-    die "not a directory in browse" unless $kind == $SVN::Core::node_dir;
++    die "not a directory in browse" unless $kind == $SVN::Node::dir;
+ 
+     my $entries = [ map {{ name => $_->name,
+ 			   kind => $_->kind,
+-			   isdir => ($_->kind == $SVN::Core::node_dir),
+-		       }} values %{SVN::Fs::dir_entries ($root, $self->{path})}];
++			   isdir => ($_->kind == $SVN::Node::dir),
++		       }} values %{$root->dir_entries ($self->{path})}];
+ 
+     for (@$entries) {
+-	$_->{rev} = SVN::Repos::revisions_changed
+-	    ($fs, $self->{path}.'/'.$_->{name}, 0, $rev, 0)->[0];
++	$_->{rev} = ($fs->revision_root ($rev)->node_history
++		     ($self->{path}.'/'.$_->{name})->prev(0)->location)[1];
+ 	$_->{size} = $_->{isdir} ? '' :
+-	    SVN::Fs::file_length ($root, $self->{path}.'/'.$_->{name});
+-	$_->{type} = SVN::Fs::node_prop ($root, $self->{path}.$_->{name},
+-					  'svn:mime-type') unless $_->{isdir};
++	    $root->file_length ($self->{path}.'/'.$_->{name});
++	$_->{type} = $root->node_prop ($self->{path}.$_->{name},
++				       'svn:mime-type') unless $_->{isdir};
+ 	$_->{type} =~ s|/\w+|| if $_->{type};
+ 
+     }
