@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/02/04 10:39:14 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/04 10:40:00 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -66,7 +66,7 @@ include/dns/request.h
 include/dns/resolver.h
 include/dns/result.h
 include/dns/rootns.h
-include/dns/sdb.h        
+include/dns/sdb.h
 include/dns/secalg.h
 include/dns/secproto.h
 include/dns/ssu.h
