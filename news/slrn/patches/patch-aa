@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2001/08/22 14:21:48 mjl Exp $
+$NetBSD: patch-aa,v 1.8 2003/10/27 21:48:27 cube Exp $
 
---- configure.orig	Wed Aug 15 00:00:36 2001
-+++ configure	Wed Aug 22 16:06:15 2001
-@@ -2219,11 +2219,6 @@
-     
-             
+--- configure.orig	2003-08-25 16:40:02.000000000 +0200
++++ configure
+@@ -5134,11 +5134,6 @@ else
+ 
+ 
        slang_library_dirs="\
 -        /usr/local/lib/slang \
 -	/usr/local/lib \
@@ -12,23 +12,11 @@ $NetBSD: patch-aa,v 1.7 2001/08/22 14:21:48 mjl Exp $
 -        /usr/lib \
 -	/usr/pkg/lib \
  	$ev_libdir"
-   
-       for slang_dir in $slang_library_dirs; do
-@@ -2298,11 +2293,6 @@
  
-             
-       slang_include_dirs="\
--        /usr/local/include/slang \
--	/usr/local/include \
--	/usr/include/slang \
--        /usr/include \
--	/usr/pkg/include \
- 	$ev_includedir"
-       
-       for slang_dir in $slang_include_dirs; do
-@@ -2394,11 +2384,7 @@
-     
-             
+       for slang_dir in $slang_library_dirs; do
+@@ -5334,11 +5329,7 @@ else
+ 
+ 
        ssl_library_dirs="\
 -        /usr/local/ssl/lib \
 -	/usr/local/lib \
@@ -36,41 +24,41 @@ $NetBSD: patch-aa,v 1.7 2001/08/22 14:21:48 mjl Exp $
 -        /usr/lib \
 -	/usr/pkg/lib"
 +	$ev_libdir"
-   	
+ 
        if test "x$ac_ssl_home" != xno && test "x$ac_ssl_home" != xyes ; then
          ssl_library_dirs="$ac_ssl_home $ac_ssl_home/lib $ssl_library_dirs"
-@@ -2457,11 +2443,7 @@
+@@ -5588,11 +5579,7 @@ else
  
-             
-       ssl_include_dirs="\
--        /usr/local/ssl/include \
--	/usr/local/include \
--	/usr/ssl/include \
--        /usr/include \
--	/usr/pkg/include"
+ 
+       ssl_library_dirs="\
+-        /usr/local/ssl/lib \
+-	/usr/local/lib \
+-  	/usr/ssl/lib \
+-        /usr/lib \
+-	/usr/pkg/lib"
 +	$ev_includedir"
- 	
+ 
        if test "x$ac_ssl_home" != xno && test "x$ac_ssl_home" != xyes ; then
-         ssl_include_dirs="$ac_ssl_home $ac_ssl_home/include $ssl_include_dirs"
-@@ -2544,9 +2526,7 @@
-     
-             
-       uu_library_dirs="\
+         ssl_library_dirs="$ac_ssl_home $ac_ssl_home/lib $ssl_library_dirs"
+@@ -5914,9 +5901,7 @@ else
+ 
+ 
+       opt_library_dirs="\
 -	/usr/local/lib \
 -        /usr/lib \
 -	/usr/pkg/lib"
 +	$ev_libdir"
-   	
-       if test "x$ac_uu_home" != xno && test "x$ac_uu_home" != xyes ; then
-         uu_library_dirs="$ac_uu_home $ac_uu_home/lib $uu_library_dirs"
-@@ -2604,9 +2584,7 @@
  
-             
-       uu_include_dirs="\
--	/usr/local/include \
--        /usr/include \
--	/usr/pkg/include"
+       if test "x$ac_optlib_home" != xno && test "x$ac_optlib_home" != xyes ; then
+         opt_library_dirs="$ac_optlib_home $ac_optlib_home/lib $opt_library_dirs"
+@@ -6077,9 +6062,7 @@ else
+ 
+ 
+       opt_library_dirs="\
+-	/usr/local/lib \
+-        /usr/lib \
+-	/usr/pkg/lib"
 +	$ev_includedir"
- 	
-       if test "x$ac_uu_home" != xno && test "x$ac_uu_home" != xyes ; then
-         uu_include_dirs="$ac_uu_home $ac_uu_home/include $uu_include_dirs"
+ 
+       if test "x$ac_optlib_home" != xno && test "x$ac_optlib_home" != xyes ; then
+         opt_library_dirs="$ac_optlib_home $ac_optlib_home/lib $opt_library_dirs"
