@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2028 2004/08/14 12:20:18 xtraeme Exp $
+$NetBSD: TODO,v 1.2029 2004/08/14 12:41:19 ben Exp $
 
 Suggested new packages
 ======================
@@ -270,6 +270,7 @@ Suggested package updates
 	o guile-gtk-0.40.90 [in wip]
 	o hatari-0.50
 	o heimdal-0.6.2
+	o hmmer-2.3.2
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o icepref-2.3
