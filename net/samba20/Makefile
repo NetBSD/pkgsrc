@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/12/02 06:56:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/18 20:23:00 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -37,8 +37,9 @@ CONFIGURE_ARGS+=	--with-ssl
 CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
 CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl      # ssl.h, err.h
 
-.if defined(SAMBA_WITH_CUPS)
+.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink.mk"
+BUILD_DEFS+=		USE_CUPS
 .endif
 
 .if defined(USE_PAM)
