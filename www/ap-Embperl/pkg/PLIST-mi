@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/12/02 20:46:35 rh Exp $
+lib/perl5/site_perl/HTML/Features.pod
+lib/perl5/site_perl/HTML/IntroD.pod
+lib/perl5/site_perl/HTML/embpcgi.pl
+lib/perl5/site_perl/HTML/Embperl.pm
+lib/perl5/site_perl/HTML/embpexec.pl
+lib/perl5/site_perl/HTML/FeaturesD.pod
+lib/perl5/site_perl/HTML/Embperl/Session.pm
+lib/perl5/site_perl/HTML/Embperl/Module.pm
+lib/perl5/site_perl/HTML/INSTALL.pod
+lib/perl5/site_perl/HTML/Embperl.pod
+lib/perl5/site_perl/HTML/Faq.pod
+lib/perl5/site_perl/HTML/Changes.pod
+lib/perl5/site_perl/HTML/EmbperlD.pod
+lib/perl5/site_perl/HTML/Intro.pod
+lib/perl5/site_perl/HTML/embpcgi.test.pl
+lib/perl5/man/man3/HTML::Embperl.3
+lib/perl5/man/man3/HTML::EmbperlD.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Embperl/.packlist
+@dirrm lib/perl5/site_perl/HTML/Embperl
