@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/01/19 16:33:56 tv Exp $
+# $NetBSD: Makefile,v 1.56 2005/03/03 20:33:44 garbled Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -21,6 +21,9 @@ CONFLICTS+=	libtool<=1.3.5nb11
 
 TEST_TARGET=	check
 
+.if ${OPSYS} == "AIX"
+LDFLAGS+=       -Wl,-brtl
+.endif
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 CONFIGURE_ARGS+=	--disable-shared
