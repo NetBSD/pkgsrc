@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:29:10 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:36 reed Exp $
 #
 
 DISTNAME=	xmysql-1.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases x11
 MASTER_SITES=	http://web.wt.net/~dblhack/
 

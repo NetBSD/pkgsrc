@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:52:10 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:43 reed Exp $
 #
 
 .if !defined(LIBRSVG_BUILDLINK2_MK)
 LIBRSVG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			librsvg
-BUILDLINK_DEPENDS.librsvg?=		librsvg>=1.0.1nb4
+BUILDLINK_DEPENDS.librsvg?=		librsvg>=1.0.1nb5
 BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.librsvg=librsvg

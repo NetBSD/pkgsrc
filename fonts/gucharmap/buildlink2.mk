@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/14 01:23:13 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 18:49:40 reed Exp $
 #
 # This Makefile fragment is included by packages that use gucharmap.
 #
@@ -9,7 +9,7 @@
 GUCHARMAP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gucharmap
-BUILDLINK_DEPENDS.gucharmap?=		gucharmap>=1.0.0
+BUILDLINK_DEPENDS.gucharmap?=		gucharmap>=1.2.0nb2
 BUILDLINK_PKGSRCDIR.gucharmap?=		../../fonts/gucharmap
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gucharmap=gucharmap

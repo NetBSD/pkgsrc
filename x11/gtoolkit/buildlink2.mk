@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:57:09 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/01/03 18:49:57 reed Exp $
 #
 # This Makefile fragment is included by packages that use gtoolkit.
 #
@@ -9,7 +9,7 @@
 GTOOLKIT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtoolkit
-BUILDLINK_DEPENDS.gtoolkit?=		gtoolkit>=0.9.5nb1
+BUILDLINK_DEPENDS.gtoolkit?=		gtoolkit>=0.9.5nb2
 BUILDLINK_PKGSRCDIR.gtoolkit?=		../../x11/gtoolkit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtoolkit=gtoolkit

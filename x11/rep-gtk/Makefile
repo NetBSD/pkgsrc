@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:56:44 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/03 18:50:00 reed Exp $
 #
 
 DISTNAME=		rep-gtk-0.15
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 

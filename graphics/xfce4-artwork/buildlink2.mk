@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:44 reed Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-artwork.
 #
@@ -9,7 +9,7 @@
 XFCE4_ARTWORK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-artwork
-BUILDLINK_DEPENDS.xfce4-artwork?=		xfce4-artwork>=0.0.4nb1
+BUILDLINK_DEPENDS.xfce4-artwork?=		xfce4-artwork>=0.0.4nb2
 BUILDLINK_PKGSRCDIR.xfce4-artwork?=		../../graphics/xfce4-artwork
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-artwork=xfce4-artwork

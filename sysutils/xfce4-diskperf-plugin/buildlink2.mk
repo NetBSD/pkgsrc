@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/01/03 18:49:53 reed Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-diskperf-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_DISKPERF_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-diskperf-plugin
-BUILDLINK_DEPENDS.xfce4-diskperf-plugin?=		xfce4-diskperf-plugin>=1.4nb1
+BUILDLINK_DEPENDS.xfce4-diskperf-plugin?=		xfce4-diskperf-plugin>=1.4nb2
 BUILDLINK_PKGSRCDIR.xfce4-diskperf-plugin?=		../../sysutils/xfce4-diskperf-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-diskperf-plugin=xfce4-diskperf-plugin

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/12/26 19:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:35 reed Exp $
 
 DISTNAME=		kicq-1.0.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		chat kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kicq/}
 

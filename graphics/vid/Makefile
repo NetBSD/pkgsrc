@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:51:52 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:44 reed Exp $
 #
 
 DISTNAME=	vid-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://members.home.com/housel/
 

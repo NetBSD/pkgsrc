@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/22 04:14:22 martti Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/03 18:49:55 reed Exp $
 #
 
 DISTNAME=		glibwww-0.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		www gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glibwww/0.2/}
 

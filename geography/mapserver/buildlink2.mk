@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/05 17:41:31 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 18:49:41 reed Exp $
 #
 # This Makefile fragment is included by packages that use mapserver.
 #
@@ -9,7 +9,7 @@
 MAPSERVER_BUILDLINK2_MK=		# defined
 
 BUILDLINK_PACKAGES+=			mapserver
-BUILDLINK_DEPENDS.mapserver?=		mapserver>=4.0
+BUILDLINK_DEPENDS.mapserver?=		mapserver>=4.0nb1
 BUILDLINK_PKGSRCDIR.mapserver?=		../../geography/mapserver
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mapserver=mapserver

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2003/09/17 19:41:25 grant Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/03 18:50:00 reed Exp $
 
 DISTNAME=		xfce-3.8.18
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 

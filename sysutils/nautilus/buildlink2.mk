@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/12/14 23:09:02 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/01/03 18:49:53 reed Exp $
 #
 # This Makefile fragment is included by packages that use nautilus.
 #
@@ -9,7 +9,7 @@
 NAUTILUS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			nautilus
-BUILDLINK_DEPENDS.nautilus?=		nautilus>=2.4.1
+BUILDLINK_DEPENDS.nautilus?=		nautilus>=2.4.1nb2
 BUILDLINK_PKGSRCDIR.nautilus?=		../../sysutils/nautilus
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.nautilus=nautilus
@@ -34,7 +34,7 @@ BUILDLINK_FILES.nautilus+=	lib/libnautilus-private.*
 BUILDLINK_FILES.nautilus+=	lib/libnautilus.*
 BUILDLINK_FILES.nautilus+=	lib/pkgconfig/libnautilus.pc
 
-BUILDLINK_DEPENDS.esound=	esound>=0.2.27
+BUILDLINK_DEPENDS.esound=	esound>=2.4.1nb2
 
 .include "../../devel/eel2/buildlink2.mk"
 .include "../../graphics/imlib2/buildlink2.mk"

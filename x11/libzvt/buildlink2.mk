@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/12/13 00:45:26 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/01/03 18:49:59 reed Exp $
 #
 # This Makefile fragment is included by packages that use libzvt.
 #
@@ -9,7 +9,7 @@
 LIBZVT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libzvt
-BUILDLINK_DEPENDS.libzvt?=		libzvt>=2.0.1nb4
+BUILDLINK_DEPENDS.libzvt?=		libzvt>=2.0.1nb5
 BUILDLINK_PKGSRCDIR.libzvt?=		../../x11/libzvt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libzvt=libzvt

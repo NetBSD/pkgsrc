@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/01/03 18:49:54 reed Exp $
 #
 # This Makefile fragment is included by packages that use gtkspell.
 #
@@ -9,7 +9,7 @@
 GTKSPELL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkspell
-BUILDLINK_DEPENDS.gtkspell?=		gtkspell>=2.0.2nb5
+BUILDLINK_DEPENDS.gtkspell?=		gtkspell>=2.0.2nb6
 BUILDLINK_PKGSRCDIR.gtkspell?=		../../textproc/gtkspell
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkspell=gtkspell

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/09/30 18:20:01 mycroft Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/03 18:49:41 reed Exp $
 
 IM_MAJOR_VER=		5.5.7
 IM_MINOR_VER=		11
@@ -14,6 +14,7 @@ DISTNAME=		ImageMagick-${DISTSUFFIX}
 DISTVERSION=		${DISTSUFFIX:S/-/./}
 
 WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+PKGREVISION=		1
 
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \

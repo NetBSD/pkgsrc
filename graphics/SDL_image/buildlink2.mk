@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/26 21:41:23 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:41 reed Exp $
 #
 
 .if !defined(SDL_IMAGE_BUILDLINK2_MK)
 SDL_IMAGE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			SDL_image
-BUILDLINK_DEPENDS.SDL_image?=		SDL_image>=1.2.2nb2
+BUILDLINK_DEPENDS.SDL_image?=		SDL_image>=1.2.3nb1
 BUILDLINK_PKGSRCDIR.SDL_image?=		../../graphics/SDL_image
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.SDL_image=SDL_image

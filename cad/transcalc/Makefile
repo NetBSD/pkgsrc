@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:35 reed Exp $
 #
 
 DISTNAME=	transcalc-0.13
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	http://transcalc.sourceforge.net/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=transcalc/}
