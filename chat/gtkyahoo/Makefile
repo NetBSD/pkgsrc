@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/23 02:04:32 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/23 13:14:47 jlam Exp $
 
 DISTNAME=	gtkyahoo-0.18.2
 CATEGORIES=	chat
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-libyahoo="${BUILDLINK_DIR}"
 pre-configure:
 	${RM} -rf ${WRKSRC}/libyahoo
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../chat/libyahoo/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

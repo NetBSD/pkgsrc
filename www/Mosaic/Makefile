@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/09/13 22:23:55 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/10/23 13:15:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -38,10 +38,10 @@ do-install:
 		${PREFIX}/lib/X11/app-defaults/Mosaic
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mosaic
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/18 05:33:34 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/23 13:14:43 jlam Exp $
 
 DISTNAME=	mp3info-0.8.2
 PKGNAME=	g${DISTNAME}
@@ -24,7 +24,7 @@ HAVE_WGETNSTR!=		${GREP} -cw wgetnstr /usr/include/curses.h || ${TRUE}
 USE_NCURSES=		YES
 .endif
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
