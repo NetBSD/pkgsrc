@@ -1,15 +1,17 @@
-$NetBSD: patch-aj,v 1.8 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-aj,v 1.9 2001/09/05 12:48:48 rh Exp $
 
---- src/makefiles/Makefile.netbsd.orig	Sat Jan  6 21:03:41 2001
+--- src/makefiles/Makefile.netbsd.orig	Sat Dec 16 19:14:25 2000
 +++ src/makefiles/Makefile.netbsd
-@@ -3,7 +3,9 @@
+@@ -2,8 +2,10 @@
+ 
  ifdef ELF_SYSTEM
  export_dynamic = -Wl,-E
- rpath = -Wl,-R$(libdir)
+-rpath = -Wl,-R$(libdir)
 -shlib_symbolic = -Wl,-Bsymbolic
++rpath = -L$(libdir) -Wl,-R$(libdir)
 +shlib_symbolic = -Wl,-Bsymbolic -lc
 +else
-+rpath = -R$(libdir)
++rpath = -L$(libdir) -R$(libdir)
  endif
  
  DLSUFFIX = .so
