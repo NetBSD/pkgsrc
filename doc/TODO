@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3243 2005/03/21 00:17:57 jlam Exp $
+$NetBSD: TODO,v 1.3244 2005/03/21 12:42:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,6 +309,7 @@ Suggested package updates
 	o avidemux-2.0.36
 	o avl-2.0.1
 	o avr-libc-1.2.3
+	o awstats-6.4
 	o baci-20040415
 	o bacula-1.36.1
 	o balsa-1.4.4
@@ -330,7 +331,7 @@ Suggested package updates
 	o browser-bookmarks-menu-0.4
 	o btparse-0.34
 	o bugzilla-2.19.2
-	o bzflag-2.0.0
+	o bzflag-2.0.2
 	o c4-1.10
 	o cal3d-0.10.0
 	o catdoc-0.93.4
@@ -462,7 +463,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o gaim-1.2.0
+	o gaim-1.2.0 [pkg/29752]
 	o galeon-1.3.20
 	o gap-4r4p3
 	o garmin-utils-2.2
@@ -512,6 +513,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.13.0
 	o grace-5.1.18
+	o gramps-1.0.11
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
@@ -606,6 +608,7 @@ Suggested package updates
 	o libgnomemm26-2.8.0?
 	o libgnomeuimm26-2.8.0?
 	o libhydrogen-0.9.0
+	o libidn-0.5.15
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblibve-2005.02.14
@@ -680,8 +683,8 @@ Suggested package updates
 	o multitail-3.4.8
 	o muse-0.9.1
 	o magios-2.0b2 [replacing netsaint]
+	o nail-11.22
 	o naim-0.11.7.3.1
-	o nano-1.3.5 [devel version]
 	o nap-1.5.3
 	o navi2ch-1.7.5
 	o nawk-20041222
@@ -1020,6 +1023,7 @@ Suggested package updates
 	o smokeping-1.38
 	o snd-7.11
 	o snes9x-1.43
+	o snortsnarf-050314.1 [pkg/29753]
 	o snownews-1.5.6.1
 	o socat-1.4.2.0
 	o sox-12.17.7
@@ -1118,7 +1122,7 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-0.5.14
 	o vsftpd-2.01 [pkg/26811]
-	o vsftpd-2.0.2
+	o vsftpd-2.0.3
 	o vttest-20050107
 	o w32api-3.2
 	o wap-utils-1.4.1
@@ -1153,6 +1157,7 @@ Suggested package updates
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
+	o xfce-4.2.1.1
 	o xfce4-netload-plugin-0.2.4
 	o xfce4-notes-plugin-0.10.0
 	o xfce4-systemload-plugin-0.3.6
@@ -1177,14 +1182,15 @@ Suggested package updates
 	o xmms-nebulus-0.7.0
 	o xmmsctrl-1.8
 	o xmon-1.5.6
+	o xmule-1.10.0
 	o xnap-2.5r3
 	o xpad-2.6
-	o xpaint-2.7.4
+	o xpaint-2.7.5
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrn-9.02
 	o xsane-0.97
-	o xscreensaver-4.20
+	o xscreensaver-4.21
 	o xskat-4.0
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
