@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 18:10:59 jmmv Exp $
-bin/beep-config
+@comment $NetBSD: PLIST,v 1.2 2004/08/31 15:47:56 jmmv Exp $
 bin/beep-media-player
-include/beep/beepctrl.h
-include/beep/configfile.h
-include/beep/dirbrowser.h
-include/beep/formatter.h
-include/beep/titlestring.h
-include/beep/util.h
+include/bmp/beepctrl.h
+include/bmp/configdb.h
+include/bmp/configfile.h
+include/bmp/dirbrowser.h
+include/bmp/formatter.h
 include/bmp/fullscreen.h
 include/bmp/plugin.h
+include/bmp/rcfile.h
+include/bmp/titlestring.h
+include/bmp/util.h
+include/bmp/vfs.h
 lib/bmp/Input/libcdaudio.a
 lib/bmp/Input/libcdaudio.la
 lib/bmp/Input/libcdaudio.so
@@ -30,12 +32,11 @@ lib/bmp/Visualization/libbscope.so
 lib/libbeep.a
 lib/libbeep.la
 lib/libbeep.so
-lib/libbeep.so.1
-lib/libbeep.so.1.0
-lib/pkgconfig/beep.pc
+lib/libbeep.so.2
+lib/libbeep.so.2.0
+lib/pkgconfig/bmp.pc
 man/man1/beep-media-player.1
-share/aclocal/beep.m4
-share/applications/beep.desktop
+share/applications/bmp.desktop
 share/bmp/Skins/Default/Avs.bmp
 share/bmp/Skins/Default/Balance.bmp
 share/bmp/Skins/Default/Eq_ex.bmp
@@ -56,9 +57,30 @@ share/bmp/Skins/Default/pLedit.txt
 share/bmp/Skins/Default/readme.txt
 share/bmp/Skins/Default/screenshot.bmp
 share/bmp/Skins/Default/vIscolor.txt
-share/bmp/beep.svg
-share/bmp/beep_logo.xpm
+share/bmp/glade/equalizerwin_preset_menu.glade
+share/bmp/glade/prefswin.glade
+share/bmp/images/appearance.png
+share/bmp/images/eq.png
+share/bmp/images/mouse.png
+share/bmp/images/playlist.png
+share/bmp/images/plugins.png
+share/icons/bmp.svg
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bmp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bmp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bmp.mo
+@comment in xdg-dirs: @dirrm share/icons
+@dirrm share/bmp/images
+@dirrm share/bmp/glade
 @dirrm share/bmp/Skins/Default
 @dirrm share/bmp/Skins
 @dirrm share/bmp
@@ -68,4 +90,3 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmp.mo
 @dirrm lib/bmp/Input
 @dirrm lib/bmp
 @dirrm include/bmp
-@dirrm include/beep

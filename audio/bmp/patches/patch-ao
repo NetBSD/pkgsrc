@@ -1,10 +1,10 @@
-$NetBSD: patch-ao,v 1.1 2004/05/15 09:34:53 jmmv Exp $
+$NetBSD: patch-ao,v 1.2 2004/08/31 15:47:56 jmmv Exp $
 
---- config.h.in.orig	2003-12-24 20:16:48.000000000 +0100
+--- config.h.in.orig	2004-08-22 15:50:43.000000000 +0200
 +++ config.h.in
-@@ -195,6 +195,9 @@
- /* Define to 1 if you have the `srandomdev' function. */
- #undef HAVE_SRANDOMDEV
+@@ -180,6 +180,9 @@
+ /* Define to 1 if you have the `setlocale' function. */
+ #undef HAVE_SETLOCALE
  
 +/* Define to 1 if you have the `statvfs' function. */
 +#undef HAVE_STATVFS
