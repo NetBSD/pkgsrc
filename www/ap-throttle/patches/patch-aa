@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/16 11:19:03 grant Exp $
+
+--- mod_throttle.c.orig	Sun Dec  3 04:15:10 2000
++++ mod_throttle.c
+@@ -719,7 +719,7 @@ critical_release(t_critical *mp)
+ #include <sys/ipc.h>
+ #include <sys/sem.h>
+ 
+-#if (defined(__GNU_LIBRARY__) && (!defined(_SEM_SEMUN_UNDEFINED))) || defined(__FreeBSD__) || defined(__NetBSD__)
++#if (defined(__GNU_LIBRARY__) && (!defined(_SEM_SEMUN_UNDEFINED))) || defined(__FreeBSD__)
+ /* union semun is defined by including <sys/sem.h> */
+ #else
+ /* X/OPEN says we have to define it ourselves (twits). */
