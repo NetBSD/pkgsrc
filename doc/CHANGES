@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5943 2004/05/15 11:34:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.5944 2004/05/15 12:03:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2536,3 +2536,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ploticus to 2.21 [grant 2004-05-15]
 	Updated libbonoboui to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-keyring to 0.2.1 [jmmv 2004-05-15]
+	Updated librsvg2 to 2.6.5 [jmmv 2004-05-15]
+	Updated librsvg2-gtk2 to 2.6.5 [jmmv 2004-05-15]
