@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/05 08:27:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/15 11:10:50 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -101,6 +101,8 @@ lib/kde3/kbabel_whitespacetool.la
 lib/kde3/kbabel_whitespacetool.so
 lib/kde3/kbabel_xmltool.la
 lib/kde3/kbabel_xmltool.so
+lib/kde3/kbabeldict_dbsearchengine.la
+lib/kde3/kbabeldict_dbsearchengine.so
 lib/kde3/kbabeldict_poauxiliary.la
 lib/kde3/kbabeldict_poauxiliary.so
 lib/kde3/kbabeldict_pocompendium.la
@@ -704,6 +706,7 @@ share/kde/icons/locolor/32x32/mimetypes/umbrellofile.png
 share/kde/mimelnk/application/x-kcachegrind.desktop
 share/kde/mimelnk/application/x-umbrello.desktop
 share/kde/services/cvsservice.desktop
+share/kde/services/dbsearchengine.desktop
 share/kde/services/designerthumbnail.desktop
 share/kde/services/kbabel_accelstool.desktop
 share/kde/services/kbabel_argstool.desktop
