@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.7 2004/08/17 23:38:21 schmonz Exp $
+$NetBSD: README,v 1.8 2004/08/19 22:15:31 schmonz Exp $
 
  0 Introduction
  ==============
@@ -48,6 +48,7 @@ on the following operating systems:
 
 	FreeBSD-4.8/i386		<jlam@NetBSD.org>
 	Debian Linux 3.0 (woody)	<wiz@NetBSD.org>
+	Interix 3.5			<schmonz@NetBSD.org>
 	IRIX 6.5			<schmonz@NetBSD.org>
 	MacOS X 10.2.8			<jlam@NetBSD.org>
 	MacOS X 10.3.5			<schmonz@NetBSD.org>
