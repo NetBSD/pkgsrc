@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/16 08:52:27 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/29 14:03:28 recht Exp $
 lib/aspell/de-only.rws
 lib/aspell/de.multi
 lib/aspell/de_CH-only.rws
@@ -7,6 +7,7 @@ lib/aspell/de_DE-only.rws
 lib/aspell/de_DE.multi
 lib/aspell/deutsch.alias
 lib/aspell/german.alias
+lib/aspell/ngerman.alias
 lib/aspell/swiss.alias
 share/aspell/de.dat
 share/aspell/de_phonet.dat
