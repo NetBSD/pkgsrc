@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 1998/09/22 06:11:37 garbled Exp $
+# $NetBSD: Makefile,v 1.26 1998/11/07 17:21:29 mycroft Exp $
 
-DISTNAME=	gimp-1.0.0
+DISTNAME=	gimp-1.0.2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.0/ \
-		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.0/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
+		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.2/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${GIMP_DATA}${EXTRACT_SUFX}
 
@@ -13,13 +13,13 @@ MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gimp.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk+-1.0.4:../../x11/gtk10
+DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-CONFLICTS+=	gimp-0.99.28
+CONFLICTS+=	gimp-0.99.28 gimp-1.0.0
 
 GIMP_DATA=	gimp-data-extras-1.0.0
 
@@ -31,13 +31,14 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		CPPFLAGS="-I${LOCALBASE}/include"
 CFLAGS=		-pipe -O2 -I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 INFO_FILES=	pdb.info
 
 post-configure:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
-	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} ${SH} \
-		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} )
+	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
+	    ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
 pre-build:
 	@if [ "$$DISPLAY" = "" ]; then \
@@ -46,8 +47,10 @@ pre-build:
 	 fi
 
 post-install:
+	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
+	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	@${ECHO_MSG} "--> now installing in ${GIMP_DATA}"
 	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
-		${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+	    ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 
 .include <../../mk/bsd.pkg.mk>
