@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2002/12/06 19:51:25 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/08 23:53:53 salo Exp $
 
-DISTNAME=		silc-client-0.9.10
+DISTNAME=		silc-client-0.9.11
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
 			http://www.fi.silcnet.org/download/client/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/client/sources/ \
-			http://www.us.silcnet.org/download/client/sources/ \
-			ftp://ftp.no.silcnet.org/pub/silc/client/sources/ \
 			http://www.at.silcnet.org/download/client/sources/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -15,11 +13,11 @@ MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Client for the Secure Internet Live Conferencing (SILC) protocol
 
-GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
-USE_GNU_ICONV=		# defined
-USE_BUILDLINK2=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_GNU_ICONV=		YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
 			${WRKSRC}/lib/silcmath/mpi/libtool
 
@@ -41,6 +39,7 @@ CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-terminfo
+CONFIGURE_ARGS+=	--without-libtoolfix
 
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")

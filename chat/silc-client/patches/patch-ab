@@ -1,22 +1,19 @@
-$NetBSD: patch-ab,v 1.7 2002/12/06 19:51:26 salo Exp $
+$NetBSD: patch-ab,v 1.8 2003/01/08 23:53:53 salo Exp $
 
---- lib/silcsim/Makefile.in.orig	Thu Dec  5 22:39:00 2002
-+++ lib/silcsim/Makefile.in	Fri Dec  6 17:48:33 2002
-@@ -561,7 +561,7 @@
- $(SIM_CIPHER_OBJS):
- 	@if test '!' -f lib$*.la ; then \
- 	  $(LIBTOOL) --mode=link $(CCLD) -rpath $(silc_modulesdir) \
--		../silccrypt/$*.lo -o lib$*.la --libtool-enable-shared; \
-+		../silccrypt/$*.lo -o lib$*.la ; \
- 	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so \
- 		$(srcdir)/$*.sim.so; \
- 	fi
-@@ -569,7 +569,7 @@
- $(SIM_HASH_OBJS):
- 	@if test '!' -f lib$*.la ; then \
- 	  $(LIBTOOL) --mode=link $(CCLD) -rpath $(silc_modulesdir) \
--		../silccrypt/$*.lo -o lib$*.la --libtool-enable-shared; \
-+		../silccrypt/$*.lo -o lib$*.la ; \
- 	  cd $(srcdir) && $(LN_S) -f $(srcdir)/.libs/lib$*.so \
- 		$(srcdir)/$*.sim.so; \
- 	fi
+--- lib/silccrypt/Makefile.in.orig	Wed Jan  8 17:19:42 2003
++++ lib/silccrypt/Makefile.in	Wed Jan  8 23:00:18 2003
+@@ -366,6 +366,14 @@
+ .c.obj:
+ 	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'`
+ 
++# Workaround a bug in GCC which causes momory exhaustion
++# when compiling sha1 with optimizations on UltraSPARC.
++#
++ifeq (sparc64, $(host_cpu))
++sha1.lo:
++	$(LTCOMPILE) -O0 -c -o $@ `test -f 'sha1.c' || echo '$(srcdir)/'`sha1.c
++ endif
++
+ .c.lo:
+ 	$(LTCOMPILE) -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
+ 
