@@ -1,0 +1,20 @@
+$NetBSD: patch-bo,v 1.1 2003/02/02 08:08:05 taya Exp $
+
+--- ../Orig/mozilla/nsprpub/configure.in	2002-09-26 21:46:25.000000000 +0900
++++ ./nsprpub/configure.in	2003-01-31 00:45:26.000000000 +0900
+@@ -2127,7 +2127,14 @@
+ 	        _PTHREAD_LDFLAGS="-lc_r"
+ 	    fi
+ 	    ;;
+-    *-openbsd*|*-bsdi*|*-netbsd*)
++    *-netbsd*)
++	    AC_DEFINE(_REENTRANT)
++	    AC_DEFINE(_THREAD_SAFE)
++	    if test "$ac_cv_have_dash_pthread" = "yes"; then
++	        _PTHREAD_LDFLAGS="-pthread"
++	    fi
++	    ;;
++    *-openbsd*|*-bsdi*)
+ 	    AC_DEFINE(_THREAD_SAFE)
+ 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
+ 	    if test "$ac_cv_have_dash_pthread" = "yes"; then
