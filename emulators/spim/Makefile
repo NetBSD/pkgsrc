@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2003/05/05 17:53:12 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/18 09:22:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
 DISTNAME=		spim
 PKGNAME=		spim-6.5
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.cs.wisc.edu/~larus/SPIM/ \
 			ftp://ftp.cs.wisc.edu/pub/spim/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/11/10 00:35:08 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/18 09:22:24 agc Exp $
 #
 
 DISTNAME=		${PKGNAME}.src
 PKGNAME=		cdrdao-1.1.7
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 

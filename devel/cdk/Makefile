@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/01/24 13:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/18 09:22:17 agc Exp $
 #
 
 DISTNAME=		latestCDK
 PKGNAME=		cdk-4.9.9
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.vexus.ca/release/
 EXTRACT_SUFX=		.tgz

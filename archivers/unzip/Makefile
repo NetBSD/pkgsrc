@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2003/06/02 01:21:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.39 2003/06/18 09:22:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp
 #
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/ \
