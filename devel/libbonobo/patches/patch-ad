@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2004/04/01 18:18:00 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=137193
+
+--- bonobo-activation/bonobo-activation-get-language-list.c	9 Jun 2003 13:17:55 -0000	1.2
++++ bonobo-activation/bonobo-activation-get-language-list.c	14 Mar 2004 21:37:13 -0000
+@@ -71,6 +71,7 @@
+   int i;
+   if (!alias_table)
+     {
++      read_aliases (BONOBO_ACTIVATION_LOCALEDIR "/locale.alias");
+       read_aliases ("/usr/share/locale/locale.alias");
+       read_aliases ("/usr/local/share/locale/locale.alias");
+       read_aliases ("/usr/lib/X11/locale/locale.alias");
