@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.10 2001/08/10 10:54:21 drochner Exp $
+# $Id: pkgchk.sh,v 1.11 2001/08/10 11:05:55 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -123,7 +123,7 @@ while [ $# != 0 ]; do
 	-i )	opt_i=1 ;;
 	-n )	opt_n=1 ;;
 	-s )	opt_s=1 ;;
-	-u )	opt_u=1 ;;
+	-u )	opt_u=1 ; opt_i=1 ;;
 	-v )	opt_v=1 ;;
 	-- )	break ;;
     esac
@@ -135,7 +135,7 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
 fi
 
 if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_i" ];then
-    echo "Must specify at least one of -a, -c, or -i";
+    echo "Must specify at least one of -a, -c, -i, or -u";
     echo
     opt_h=1;
 fi
@@ -149,10 +149,10 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-b      Limit installations to binary packages
 	-c      Check installed packages against pkgchk.conf
 	-h      This help
-	-i	Check versions of installed packages (ignore pkgchk.conf)
+	-i	Check versions of installed packages (not using pkgchk.conf)
 	-n	Display actions that would be taken, but do not perform them
 	-s      Limit installations to building from source
-	-u      Update all mismatched packages
+	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
 
 pkgchk verifies installed packages against pkgsrc.
