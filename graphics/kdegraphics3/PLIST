@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/09 14:01:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/03/01 11:37:15 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -194,7 +194,7 @@ include/scanparams.h
 include/scansourcedialog.h
 include/sizeindicator.h
 lib/kde3/kcm_kgamma.la
-lib/kde3/kcm_kgamma.so
+lib/kde3/kcm_kgamma.${KGAMMA_SUFFIX}
 lib/kde3/kcm_kmrml.la
 lib/kde3/kcm_kmrml.so
 lib/kde3/kcm_kviewcanvasconfig.la
