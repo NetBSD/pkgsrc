@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2004/03/11 14:01:34 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2004/04/20 16:26:01 jmmv Exp $
 
---- control-center/database-properties.desktop.in.orig	2003-01-10 03:47:56.000000000 +0100
-+++ control-center/database-properties.desktop.in
-@@ -1,7 +1,7 @@
- [Desktop Entry]
- _Name=Database configuration
- _Comment=Configure your database environment
--Icon=gnome-db.png
-+Icon=libgnomedb/gnome-db.png
- Exec=gnome-database-properties
- Terminal=0
- Type=Application
+--- Makefile.in.orig	2004-04-18 21:19:38.000000000 +0200
++++ Makefile.in
+@@ -213,7 +213,7 @@ target_alias = @target_alias@
+ @BUILD_WITH_GNOME_TRUE@GNOME_DIRECTORY = control-center components monikers
+ 
+ @ENABLE_GTK_DOC_TRUE@DOC_DIRECTORY = doc
+-@ENABLE_GTK_DOC_FALSE@DOC_DIRECTORY = 
++@ENABLE_GTK_DOC_FALSE@DOC_DIRECTORY = doc
+ 
+ SUBDIRS = \
+ 	po \
