@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.96 2002/10/13 00:36:20 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.97 2002/10/13 23:13:50 kim Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1251,6 +1251,11 @@ PKG_LANG?=english
 #SAMBA_USE_LDAP=YES
 # Add support for LDAP.
 # Possible: YES, not defined
+# Default: not defined
+
+#SAMBA_USE_MSDFS=#defined
+# Add support for MSDFS.
+# Possible: defined, not defined
 # Default: not defined
 
 #SASL_USE_GSSAPI=YES
