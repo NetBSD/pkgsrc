@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2003/04/13 04:16:18 uebayasi Exp $
+
+--- mime-ja.texi.orig	Wed Oct  9 00:50:05 2002
++++ mime-ja.texi
+@@ -11,6 +11,9 @@
+ @top FLIM 1.14 MIME 機能説明書
+ 
+ @ifinfo
++@direntry
++* FLIM-ja: (mime-en).     FLIM, a fundamental library to process Internet Messages for GNU Emacsen.
++@end direntry
+ 
+ This file documents MIME features of FLIM, a fundamental library to
+ process Internet Messages for GNU Emacsen.@refill
