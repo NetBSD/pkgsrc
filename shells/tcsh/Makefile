@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/07/02 05:56:03 grant Exp $
+# $NetBSD: Makefile,v 1.45 2004/04/18 04:34:14 snj Exp $
 #
 
 DISTNAME=	tcsh-6.12.00
@@ -14,7 +14,7 @@ COMMENT=	Extended C-shell with many useful features
 
 CONFLICTS=	static-tcsh-[0-9]*
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all catalogs
