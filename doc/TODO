@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2588 2004/11/29 20:35:39 wiz Exp $
+$NetBSD: TODO,v 1.2589 2004/11/29 20:46:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o gliv-1.8.4
 	o glpk-4.7
-	o gmpc-0.11.2 [pkg/28456]
 	o gnet1-1.1.9
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
