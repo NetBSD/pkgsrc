@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/21 20:26:11 hubertf Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.yk.rim.or.jp/~mamo/Computer/DS-7/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.yk.rim.or.jp/~mamo/Computer/DS-7/index-e.html
 COMMENT=	Read pictures from a FUJIFILM DS-7(DS series) digital camera
 
