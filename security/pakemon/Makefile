@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/01/28 23:35:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/05 16:11:48 adrianp Exp $
 
 DISTNAME=	pakemon-0.3.1
 PKGREVISION=	3
@@ -14,7 +14,7 @@ COMMENT=	Packet monster, an Open Source Intrusion Detection System
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
-BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
+BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
 
 post-extract:
 	${CP} ${WRKSRC}/pakemon.h ${WRKSRC}/pakemon.h.in
