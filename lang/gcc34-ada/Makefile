@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/27 09:17:30 shannonjr Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/29 11:07:55 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -56,6 +56,7 @@ CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
+CONFIGURE_ARGS+=	--enable-shared
 
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. You
@@ -141,6 +142,7 @@ do-configure:
 
 do-build:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib-shared)
 	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 
 do-test:
