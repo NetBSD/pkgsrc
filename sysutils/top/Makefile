@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 22:53:55 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/22 07:32:36 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -24,10 +24,6 @@ MAKE_ENV+=		CPPFLAGS=
 .endif
 
 CONFIGURE_ARGS+=	${CONF}
-
-.if exists(/usr/bin/top)
-PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
-.endif
 
 MAKE_ENV+=	COPY="${COPY}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
 
