@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2001/04/27 16:54:41 zuntum Exp $
+# $NetBSD: Makefile,v 1.80 2001/05/16 07:59:20 jlam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -56,6 +56,7 @@ SUBDIR+=	sendmail88
 SUBDIR+=	sendmail-current
 SUBDIR+=	smtpfeed
 SUBDIR+=	spruce
+SUBDIR+=	sq-squirrelspell
 SUBDIR+=	squirrelmail
 SUBDIR+=	sylpheed
 SUBDIR+=	teapop
