@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.595 2000/11/01 09:06:22 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.596 2000/11/02 03:01:40 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -192,24 +192,8 @@ MAKE_ENV+=	FC="${FC}"
 USE_GTEXINFO=		yes
 .endif
 
-.if defined(USE_CURSES) && !defined(NEED_NCURSES)
-.if ${OPSYS} == "NetBSD"
-GOOD_CURSES=    1.4[YZ] 1.4Z[A-D] 1.[5-9]*
-NEED_NCURSES=	YES
-.for PATTERN in ${GOOD_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-NEED_NCURSES=   NO
-.endif
-.endfor
-.else
-NEED_NCURSES=	NO
-.endif
-# do _not_ pass NEED_NCURSES flag down, or we end up with recursive
-# dependency of ncurses on itself on <1.4Y.
-# MAKEFLAGS+=	NEED_NCURSES=${NEED_NCURSES}
-.endif
-
-.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
+.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES" && \
+	${PKGBASE} != "ncurses"
 DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 .endif
 
@@ -1459,11 +1443,9 @@ do-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
 		${SED}  -e "s/ncurses/curses/g" ${f} > ${f}.new;	\
 		if [ -x ${f} ]; then					\
-			${MV} ${f}.new ${f};				\
-			${CHMOD} a+x ${f};				\
-		else							\
-			${MV} ${f}.new ${f};				\
-		fi							\
+			${CHMOD} a+x ${f}.new;				\
+		fi;							\
+		${MV} ${f}.new ${f};					\
 	fi
 .endfor
 .endif
