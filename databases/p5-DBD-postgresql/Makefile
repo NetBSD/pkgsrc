@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/05/25 20:40:03 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/02 14:56:26 mjl Exp $
 #
 
-VER=		0.99
+VER=		1.00
 DISTNAME=	DBD-Pg-${VER}
 PKGNAME=	p5-DBD-postgresql-${VER}
 CATEGORIES=	databases perl5
