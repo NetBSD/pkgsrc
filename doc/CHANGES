@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9080 2005/02/09 06:55:16 martti Exp $
+$NetBSD: CHANGES,v 1.9081 2005/02/09 08:41:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libdfui-3.0 [xtraeme 2005-02-09]
 	Added libinstaller-4.0 [xtraeme 2005-02-09]
 	Updated postfix to 2.1.5nb5 [martti 2005-02-09]
+	Updated vip to 19971113nb1 [seb 2005-02-09]
