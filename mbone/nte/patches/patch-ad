@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:56 agc Exp $
+$NetBSD: patch-ad,v 1.3 1999/07/27 08:47:44 mycroft Exp $
 
 *** /dev/null	Thu Mar  5 20:41:40 1998
 --- netbsd/Makefile.netbsd	Thu Mar  5 18:23:50 1998
@@ -8,7 +8,7 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 11:09:56 agc Exp $
 + CC=cc
 + INCLUDES=-I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0 -I${X11BASE}/include -I${TK_SRC}/generic -I${TK_SRC}/unix
 + LIB_DIR=${LOCALBASE}/lib
-+ LIBS=-L${LIB_DIR} -ltk80 -ltcl80 -lm -L${X11BASE}/lib -lX11
++ LIBS=-Wl,-R${LIB_DIR} -L${LIB_DIR} -ltk80 -ltcl80 -lm -Wl,-R${X11BASE} -L${X11BASE}/lib -lX11
 + CFLAGS+=-ggdb $(INCLUDES) -DFREEBSD -DPROTOTYPES -DHAVE_NO_VALUES_H -DHAVE_LIMITS_H -DHAVE_UNISTD_H -DMAXINT=INT_MAX -DDEFINED_ERRLIST
 + # for search.h
 + CFLAGS+=-I../src
