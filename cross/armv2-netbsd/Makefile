@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/27 14:35:06 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/05 23:31:59 skrll Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -25,7 +25,7 @@ post-patch: egcs-autoconf
 egcs-autoconf:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/gcc && ${LOCALBASE}/bin/autoconf
 
-# FOllowing chunk ripped from cross.mk
+# Following chunk ripped from cross.mk
 
 BINUTILS_DISTNAME=	binutils-2.10
 BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
