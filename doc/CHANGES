@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8074 2004/11/27 15:17:53 taca Exp $
+$NetBSD: CHANGES,v 1.8075 2004/11/27 15:20:58 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ruby16-tk-1.6.8 [taca 2004-11-27]
 	Updated ruby-mode to 1.8.1 [taca 2004-11-27]
 	Updated ruby to 1.8.1 [taca 2004-11-27]
+	Updated covered to 0.3 [dmcmahill 2004-11-27]
