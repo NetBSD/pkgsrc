@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/11/30 17:21:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/12/23 17:02:31 bjoern Exp $
 #
 # This Makefile fragment is included by packages that use tcl.
 #
@@ -17,13 +17,14 @@ TCL_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.tcl?=	tcl>=8.3.2
+BUILDLINK_DEPENDS.tcl?=	tcl>=8.3.4
 DEPENDS+=		${BUILDLINK_DEPENDS.tcl}:../../lang/tcl
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.tcl=tcl
 BUILDLINK_PREFIX.tcl_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.tcl=	include/tcl.h
 BUILDLINK_FILES.tcl+=	include/tclDecls.h
+BUILDLINK_FILES.tcl+=	include/tclPlatDecls.h
 BUILDLINK_FILES.tcl+=	include/tcl/*/*.h
 BUILDLINK_FILES.tcl+=	lib/libtcl83.*
 BUILDLINK_FILES.tcl+=	lib/libtclstub83.*

@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.1 2001/05/24 02:58:16 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2001/12/23 17:02:31 bjoern Exp $
 
---- configure.in.orig	Tue Aug  8 15:17:11 2000
+--- configure.in.orig	Sat Oct 20 02:24:15 2001
 +++ configure.in
-@@ -440,7 +440,7 @@
+@@ -386,7 +386,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
- 	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
+ 	MAKE_LIB="\${STLIB_LD} \[$]@ \${OBJS}"
      else
--	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE} \${OBJS} ${SHLIB_LD_LIBS}"
-+	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:C/\.so.*/.la/} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
- 	RANLIB=":"
+-	MAKE_LIB="\${SHLIB_LD} ${TCL_SHLIB_LD_EXTRAS} -o \[$]@ \${OBJS} ${SHLIB_LD_LIBS}"
++	MAKE_LIB="\${SHLIB_LD} ${TCL_SHLIB_LD_EXTRAS} -o \${@:C/\.so.*/.la/} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
      fi
  else
-@@ -480,7 +480,7 @@
+     case $system in
+@@ -424,7 +424,7 @@
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.1 2001/05/24 02:58:16 jlam Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -510,9 +510,9 @@
+@@ -454,9 +454,9 @@
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -32,12 +32,21 @@ $NetBSD: patch-ae,v 1.1 2001/05/24 02:58:16 jlam Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -558,6 +558,8 @@
+@@ -469,7 +469,7 @@
+ # Replace DBGX with TCL_DBGX
+ eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  
- AC_SUBST(BUILD_DLTEST)
+-MAKE_STUB_LIB="\${STLIB_LD} \[$]@ \${STUB_LIB_OBJS}"
++MAKE_STUB_LIB="\${STLIB_LD} -o \[$]@ \${STUB_LIB_OBJS}"
+ 
+ if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+     TCL_STUB_LIB_FLAG="-ltclstub${TCL_VERSION}\${TCL_DBGX}"
+@@ -511,6 +511,8 @@
+ AC_SUBST(CFG_TCL_EXPORT_FILE_SUFFIX)
+ 
  AC_SUBST(CFLAGS)
 +AC_SUBST(LDFLAGS_DEBUG)
 +AC_SUBST(LDFLAGS_OPTIMIZE)
- AC_SUBST(CFG_TCL_SHARED_LIB_SUFFIX)
- AC_SUBST(CFG_TCL_UNSHARED_LIB_SUFFIX)
- AC_SUBST(CFG_TCL_EXPORT_FILE_SUFFIX)
+ AC_SUBST(CFLAGS_DEFAULT)
+ AC_SUBST(EXTRA_CFLAGS)
+ AC_SUBST(DL_OBJS)

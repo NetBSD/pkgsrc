@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/23 17:02:31 bjoern Exp $
 bin/tclsh
 bin/tclsh8.3
 include/tcl.h
@@ -16,6 +16,7 @@ include/tcl/generic/tclPort.h
 include/tcl/generic/tclRegexp.h
 include/tcl/unix/tclUnixPort.h
 include/tclDecls.h
+include/tclPlatDecls.h
 lib/libtcl83.a
 lib/libtcl83.la
 lib/libtcl83.so
@@ -55,6 +56,7 @@ lib/tcl8.3/encoding/cp936.enc
 lib/tcl8.3/encoding/cp949.enc
 lib/tcl8.3/encoding/cp950.enc
 lib/tcl8.3/encoding/dingbats.enc
+lib/tcl8.3/encoding/ebcdic.enc
 lib/tcl8.3/encoding/euc-cn.enc
 lib/tcl8.3/encoding/euc-jp.enc
 lib/tcl8.3/encoding/euc-kr.enc
@@ -65,6 +67,11 @@ lib/tcl8.3/encoding/iso2022-jp.enc
 lib/tcl8.3/encoding/iso2022-kr.enc
 lib/tcl8.3/encoding/iso2022.enc
 lib/tcl8.3/encoding/iso8859-1.enc
+lib/tcl8.3/encoding/iso8859-10.enc
+lib/tcl8.3/encoding/iso8859-13.enc
+lib/tcl8.3/encoding/iso8859-14.enc
+lib/tcl8.3/encoding/iso8859-15.enc
+lib/tcl8.3/encoding/iso8859-16.enc
 lib/tcl8.3/encoding/iso8859-2.enc
 lib/tcl8.3/encoding/iso8859-3.enc
 lib/tcl8.3/encoding/iso8859-4.enc
@@ -77,6 +84,7 @@ lib/tcl8.3/encoding/jis0201.enc
 lib/tcl8.3/encoding/jis0208.enc
 lib/tcl8.3/encoding/jis0212.enc
 lib/tcl8.3/encoding/koi8-r.enc
+lib/tcl8.3/encoding/koi8-u.enc
 lib/tcl8.3/encoding/ksc5601.enc
 lib/tcl8.3/encoding/macCentEuro.enc
 lib/tcl8.3/encoding/macCroatian.enc
@@ -92,16 +100,17 @@ lib/tcl8.3/encoding/macTurkish.enc
 lib/tcl8.3/encoding/macUkraine.enc
 lib/tcl8.3/encoding/shiftjis.enc
 lib/tcl8.3/encoding/symbol.enc
+lib/tcl8.3/encoding/tis-620.enc
 lib/tcl8.3/history.tcl
 lib/tcl8.3/http1.0/http.tcl
 lib/tcl8.3/http1.0/pkgIndex.tcl
-lib/tcl8.3/http2.3/http.tcl
-lib/tcl8.3/http2.3/pkgIndex.tcl
+lib/tcl8.3/http2.4/http.tcl
+lib/tcl8.3/http2.4/pkgIndex.tcl
 lib/tcl8.3/init.tcl
 lib/tcl8.3/ldAix
 lib/tcl8.3/ldAout.tcl
-lib/tcl8.3/msgcat1.0/msgcat.tcl
-lib/tcl8.3/msgcat1.0/pkgIndex.tcl
+lib/tcl8.3/msgcat1.1/msgcat.tcl
+lib/tcl8.3/msgcat1.1/pkgIndex.tcl
 lib/tcl8.3/opt0.4/optparse.tcl
 lib/tcl8.3/opt0.4/pkgIndex.tcl
 lib/tcl8.3/package.tcl
@@ -340,7 +349,6 @@ man/man3/Tcl_ListObjIndex.3
 man/man3/Tcl_ListObjLength.3
 man/man3/Tcl_ListObjReplace.3
 man/man3/Tcl_LogCommandInfo.3
-man/man3/Tcl_Main.3
 man/man3/Tcl_MakeFileChannel.3
 man/man3/Tcl_MakeSafe.3
 man/man3/Tcl_MakeTcpClientChannel.3
@@ -422,6 +430,7 @@ man/man3/Tcl_SetHashValue.3
 man/man3/Tcl_SetIntObj.3
 man/man3/Tcl_SetListObj.3
 man/man3/Tcl_SetLongObj.3
+man/man3/Tcl_SetMainLoop.3
 man/man3/Tcl_SetMaxBlockTime.3
 man/man3/Tcl_SetObjErrorCode.3
 man/man3/Tcl_SetObjLength.3
@@ -492,6 +501,7 @@ man/man3/Tcl_VarEvalVA.3
 man/man3/Tcl_VarTraceInfo.3
 man/man3/Tcl_VarTraceInfo2.3
 man/man3/Tcl_WaitForEvent.3
+man/man3/Tcl_WaitPid.3
 man/man3/Tcl_WinTCharToUtf.3
 man/man3/Tcl_WinUtfToTChar.3
 man/man3/Tcl_Write.3
@@ -614,8 +624,8 @@ man/mann/vwait.n
 man/mann/while.n
 @dirrm lib/tcl8.3/tcltest1.0
 @dirrm lib/tcl8.3/opt0.4
-@dirrm lib/tcl8.3/msgcat1.0
-@dirrm lib/tcl8.3/http2.3
+@dirrm lib/tcl8.3/msgcat1.1
+@dirrm lib/tcl8.3/http2.4
 @dirrm lib/tcl8.3/http1.0
 @dirrm lib/tcl8.3/encoding
 @dirrm lib/tcl8.3
