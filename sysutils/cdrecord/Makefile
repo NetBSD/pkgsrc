@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/07/22 16:14:48 rh Exp $
+# $NetBSD: Makefile,v 1.33 2000/09/10 17:37:10 wiz Exp $
 
 DISTNAME=	cdrecord-1.9
 CATEGORIES=	sysutils
@@ -35,6 +35,8 @@ do-install:
 	cd ${WRKSRC}/mkisofs; \
 	    ${INSTALL_PROGRAM} ${TARGET_DIR}/mkisofs ${PREFIX}/bin; \
 	    ${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
-	${INSTALL_PROGRAM} ${WRKSRC}/misc/${TARGET_DIR}/readcd ${PREFIX}/bin
+	cd ${WRKSRC}/misc; \
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/readcd ${PREFIX}/bin; \
+	    ${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
