@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.1 1998/09/03 04:30:28 garbled Exp $
---- src/looper.c.orig	Sat May 13 12:32:00 1995
-+++ src/looper.c	Wed Sep  2 21:10:45 1998
+$NetBSD: patch-ac,v 1.2 2000/01/05 12:23:56 agc Exp $
+
+--- src/looper.c.orig	Sat May 13 20:32:00 1995
++++ src/looper.c	Wed Jan  5 12:17:10 2000
 @@ -22,6 +22,9 @@
  
  #include <stdio.h>
@@ -11,21 +12,21 @@ $NetBSD: patch-ac,v 1.1 1998/09/03 04:30:28 garbled Exp $
  
  unsigned long iter;
  char *cmd_argv[28];
-@@ -84,14 +87,22 @@
+@@ -84,14 +87,30 @@
  		perror("Reason");
  		exit(2);
  		} 
 -	else
 +	else {
  		/* master */
--		wait(&status);
+ 		wait(&status);
 -	if (status != 0) 
 -		{
 -		printf("Bad wait status: 0x%x\n", status);
 -		exit(2);
--		}
-+		wait(&status); /* NetBSD 1.3H and lower have a bug in dc */
-+		if (NetBSD < 199810 && strcmp(cmd_argv[0],"dc") != 0) {
++#if (defined(NetBSD) && (NetBSD < 199810))
++		/* NetBSD 1.3H and lower have a bug in dc */
++		if (strcmp(cmd_argv[0],"dc") != 0) {
 +		  if (WIFSIGNALED(status)) {
 +		    printf("signaled: %d\n",WTERMSIG(status));
 +		    exit(2);
@@ -37,6 +38,12 @@ $NetBSD: patch-ac,v 1.1 1998/09/03 04:30:28 garbled Exp $
 +		    }
 +		  }
 +	        } /* NetBSD 1.3H */
++#else
++		if (status != 0) {
++		    printf("Bad wait status: 0x%x\n", status);
++		    exit(2);
+ 		}
++#endif
 +	     }  /* else */
  	iter++;
  	}
