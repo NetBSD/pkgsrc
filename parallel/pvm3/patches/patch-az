@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.3 2002/11/09 12:10:20 is Exp $
+$NetBSD: patch-az,v 1.4 2004/03/12 01:14:00 dmcmahill Exp $
 
---- man/man1/pvm_intro.1.old	Fri Feb 18 18:12:52 2000
-+++ man/man1/pvm_intro.1	Sat Nov  9 11:21:26 2002
-@@ -145,24 +145,24 @@
+--- man/man1/pvm_intro.1.orig	Thu Sep 27 17:55:23 2001
++++ man/man1/pvm_intro.1
+@@ -145,24 +145,27 @@ Mips
  NETBSDALPHA
  DEC Alpha running NetBSD
  .TP
@@ -26,6 +26,9 @@ $NetBSD: patch-az,v 1.3 2002/11/09 12:10:20 is Exp $
  NETBSDI386
 -80[345]86 running NetBSD
 +80[3456]86 running NetBSD
++.TP
++NETBSDM68000
++Any Motorola 68000 (i.e. sun2) running NetBSD
  .TP
  NETBSDM68K
  Any Motorola 68K running NetBSD
@@ -36,23 +39,47 @@ $NetBSD: patch-az,v 1.3 2002/11/09 12:10:20 is Exp $
  NETBSDMIPSEB
  Mips EB running NetBSD
  .TP
-@@ -172,9 +172,6 @@
+@@ -172,8 +175,8 @@ Mips EL running NetBSD
  NETBSDNS32K
  NS32K running NetBSD
  .TP
 -NETBSDPMAX
 -DEC Pmax running NetBSD
--.TP
++NETBSDPDP10
++PDP10 running NetBSD
+ .TP
  NETBSDPOWERPC
  PowerPC running NetBSD
+@@ -181,17 +184,29 @@ PowerPC running NetBSD
+ NETBSDSH3
+ SH3 running NetBSD
  .TP
-@@ -186,9 +183,6 @@
++NETBSDSH3EB
++Big endian SH3 running NetBSD
++.TP
++NETBSDSH3EL
++Little endian SH3 running NetBSD
++.TP
++NETBSDSH5EB
++Big endian SH3 running NetBSD
++.TP
++NETBSDSH5EL
++Little endian SH3 running NetBSD
++.TP
+ NETBSDSPARC
+ Sparc running NetBSD
  .TP
  NETBSDSPARC64
  Sparc64 running NetBSD
--.TP
+ .TP
 -NETBSDSUN3
 -SUN 3 running NetBSD
- .TP
+-.TP
  NETBSDVAX
  Vax running NetBSD
++.TP
++NETBSDX86_64
++x86_64 (amd64) running NetBSD
+ .TP
+ NEXT
+ NeXT
