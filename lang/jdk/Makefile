@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/03 23:17:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/12/17 21:45:13 jwise Exp $
 
 DISTNAME=		jdk116-beta2
 PKGNAME=		jdk-1.1.6b2
@@ -18,6 +18,8 @@ ONLY_FOR_ARCHS=		i386
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+
+CONFLICTS=		jdk-1.1.5b1
 
 do-install:
 	${RM} ${WRKSRC}/README.NetBSD.orig
