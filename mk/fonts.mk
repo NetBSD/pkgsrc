@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.1 2003/02/16 12:14:31 jmmv Exp $
+# $NetBSD: fonts.mk,v 1.2 2003/02/16 21:34:04 seb Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # fonts (most of them in the fonts category).  It takes care of updating the
@@ -29,16 +29,20 @@ INSTALL_EXTRA_TMPL+=	../../mk/install/fonts
 DEINSTALL_EXTRA_TMPL+=	../../mk/install/fonts
 
 .if !empty(FONTS_TTF_DIRS)
+EVAL_PREFIX+=			TTMKFDIR_PREFIX=ttmkfdir
+TTMKFDIR_PREFIX_DEFAULT=	${LOCALBASE}
 FILES_SUBST+=		FONTS_TTF="YES"
 FILES_SUBST+=		FONTS_TTF_DIRS="${FONTS_TTF_DIRS}"
-FILES_SUBST+=		TTMKFDIR="${LOCALBASE}/bin/ttmkfdir"
+FILES_SUBST+=		TTMKFDIR="${TTMKFDIR_PREFIX}/bin/ttmkfdir"
 DEPENDS+=		ttmkfdir>=0:../../fonts/ttmkfdir
 .endif
 
 .if !empty(FONTS_TYPE1_DIRS)
+EVAL_PREFIX+=			TYPE1INST_PREFIX=type1inst
+TYPE1INST_PREFIX_DEFAULT=	${LOCALBASE}
 FILES_SUBST+=		FONTS_TYPE1="YES"
 FILES_SUBST+=		FONTS_TYPE1_DIRS="${FONTS_TYPE1_DIRS}"
-FILES_SUBST+=		TYPE1INST="${LOCALBASE}/bin/type1inst"
+FILES_SUBST+=		TYPE1INST="${TYPE1INST_PREFIX}/bin/type1inst"
 DEPENDS+=		type1inst>=0.6.1:../../fonts/type1inst
 .endif
 
