@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/22 04:08:20 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/23 00:40:04 jlam Exp $
 #
 
 DISTNAME=	nmap-3.20
@@ -13,25 +13,18 @@ HOMEPAGE=	http://www.insecure.org/nmap/index.html
 COMMENT=	graphical front end to the nmap port scanner
 
 DEPENDS+=	nmap-[23].*:../../net/nmap
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
 PATCHDIR=	${.CURDIR}/../../net/nmap/patches
 DISTINFO_FILE=	${.CURDIR}/../../net/nmap/distinfo
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=      CPPFLAGS=""
-.endif
-
-do-build:
-	cd ${WRKSRC}/nbase ; ${SETENV} ${BUILD_ENV} ${MAKE}
-	cd ${WRKSRC}/nmapfe ; ${SETENV} ${BUILD_ENV} ${MAKE}
+BUILD_DIRS=	${WRKSRC}/nbase ${WRKSRC}/nmapfe
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nmapfe/nmapfe ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/nmapfe.1 ${PREFIX}/man/man1
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
