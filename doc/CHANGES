@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2660 2003/07/02 16:11:39 grant Exp $
+$NetBSD: CHANGES,v 1.2661 2003/07/02 16:42:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2653,3 +2653,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla-bin to 1.4 [agc 2003-07-02]
 	Updated galeon to 1.2.11nb1 [taya 2003-07-02]
 	gtexinfo: Downgraded to 4.6 [grant 2003-07-02]
+	Updated postfix to 2.0.13 [martti 2003-07-02]
