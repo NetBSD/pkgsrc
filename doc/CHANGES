@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9321 2005/02/26 16:40:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9322 2005/02/26 17:22:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1120,3 +1120,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emacs to 21.4a [wiz 2005-02-26]
 	Updated leim to 21.4 [wiz 2005-02-26]
 	Updated fontconfig to 2.2.99 [wiz 2005-02-26]
+	Updated p5-Compress-Zlib to 1.34 [wiz 2005-02-26]
