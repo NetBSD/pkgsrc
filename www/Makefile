@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2001/05/03 16:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2001/05/03 17:01:16 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -95,6 +95,7 @@ SUBDIR+=	php3
 SUBDIR+=	php3-gd
 SUBDIR+=	php3-ldap
 SUBDIR+=	php3-mysql
+SUBDIR+=	php3-pdflib
 SUBDIR+=	php3-pgsql
 SUBDIR+=	php3-snmp
 SUBDIR+=	php4
