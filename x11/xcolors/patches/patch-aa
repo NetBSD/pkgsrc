@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-aa,v 1.4 2002/05/20 19:11:41 cjep Exp $
 
 --- Imakefile.orig	Fri Dec  7 21:14:34 2001
 +++ Imakefile	Fri Dec  7 21:16:36 2001
