@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.32 2003/08/25 19:37:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.33 2003/08/25 20:51:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -199,9 +199,13 @@ _PKG_DBDIR=		${DEPOTBASE}
 #
 _PLIST_IGNORE_FILES=	+*			# package metadata files
 _PLIST_IGNORE_FILES+=	info/dir
-_PLIST_IGNORE_FILES+=	*[~#] *.OLD *.orig *,v	# scratch config files
+.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
+_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
+.endif
+_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
+BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 # We need to make sure the buildlink-x11 package is not installed since it
 # breaks builds that use imake.
