@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2003/12/11 07:15:18 tron Exp $
+# $NetBSD: Makefile,v 1.107 2003/12/11 22:23:23 grant Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -73,7 +73,7 @@ pre-build:
 	       < ${WRKSRC}/doc/mutt.man.in > ${WRKSRC}/doc/mutt.man
 
 post-install:
-	${LN} -fs ${EGDIR} ${PREFIX}/share/doc/mutt/samples
+	${LN} -f -s ${EGDIR} ${PREFIX}/share/doc/mutt/samples
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
 		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
