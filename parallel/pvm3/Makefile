@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/03 13:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/09/05 11:09:40 wiz Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -56,7 +56,9 @@ do-install:
 	${INSTALL_MAN_DIR}  ${PREFIX}/man/man1 ;\
 	${INSTALL_MAN_DIR}  ${PREFIX}/man/man3 ;\
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1 ;\
-	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/man/man3 ;\
+	${RM} ${PREFIX}/man/man1/PVM.1 ;\
+	${LN} -s ${PREFIX}/man/man1/pvm_intro.1 ${PREFIX}/man/man1/PVM.1
 
 post-install:
 	${SED} "s/@pvmarch@/`${PVM_ROOT}/lib/pvmgetarch`/g" < ${PKGDIR}/PLIST > ${PLIST_SRC}
