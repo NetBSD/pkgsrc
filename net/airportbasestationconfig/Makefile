@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/06 23:58:01 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/08 19:24:21 tron Exp $
 
 DISTNAME=	configurator
 PKGNAME=	${BINNAME}-1.2.2
@@ -29,9 +29,10 @@ PKG_JVM=	sun-jdk
 PKG_JVM=	blackdown-jdk13
 .endif
 
-JVM_OPTS=	-jar
 .if ${PKG_JVM} == blackdown-jdk13
-JVM_OPTS+=	-green
+JVM_OPTS+=	-green -jar
+.else
+JVM_OPTS=	-jar
 .endif
 
 post-extract:
