@@ -1,15 +1,39 @@
-$NetBSD: patch-ag,v 1.3 2004/11/12 21:17:55 kristerw Exp $
+$NetBSD: patch-ag,v 1.4 2005/01/04 14:29:19 sekiya Exp $
 
---- src/wmspec.c.orig	Fri Nov 12 22:06:05 2004
-+++ src/wmspec.c	Fri Nov 12 22:08:17 2004
-@@ -392,8 +392,9 @@
+--- src/wmspec.c.orig	2004-10-25 04:36:15.000000000 +0900
++++ src/wmspec.c	2005-01-04 23:18:46.000000000 +0900
+@@ -382,18 +382,19 @@
+                                 &nitems_return, &bytes_after_return, &prop_return);
+ 
+     if (rc==Success && prop_return) {
+-        unsigned int *data = (unsigned int *)prop_return;
+-        unsigned int pos = 0, len = 0;
+-        unsigned int best_pos = 0, best_tmp = ~0;
++        unsigned long *data = (unsigned int *)prop_return;
++        unsigned long pos = 0, len = 0;
++        unsigned long best_pos = 0, best_tmp = ~0;
+         extern WPreferences wPreferences;
+-        unsigned int pref_size = wPreferences.icon_size;
+-        unsigned int pref_sq = pref_size*pref_size;
++        unsigned long pref_size = wPreferences.icon_size;
++        unsigned long pref_sq = pref_size*pref_size;
+         char *src, *dst;
          RImage *new_rimage;
  
          do {
-+            unsigned int tmp;
++            unsigned long tmp;
              len = data[pos+0]*data[pos+1];
 -            unsigned int tmp = pref_sq-len;
 +            tmp = pref_sq-len;
              if (tmp < best_tmp && tmp > 0) {
                  best_tmp = tmp;
                  best_pos = pos;
+@@ -405,7 +406,7 @@
+         len = data[best_pos+0] * data[best_pos+1];
+         src = (char*)&data[best_pos+2];
+         dst = new_rimage->data;
+-        for (pos=0; pos<len; ++pos, src+=4, dst+=4) {
++        for (pos=0; pos<len; ++pos, src+=sizeof(long), dst+=4) {
+             dst[0] = src[2]; /* R */
+             dst[1] = src[1]; /* G */
+             dst[2] = src[0]; /* B */
