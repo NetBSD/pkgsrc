@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2003/06/19 03:09:37 atatat Exp $
+# $NetBSD: Makefile,v 1.64 2003/06/19 07:31:13 tron Exp $
 #
 
 DISTNAME=		lsof_4.68
@@ -9,8 +9,7 @@ MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
 			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
 			ftp://ftp.auscert.org.au/pub/mirrors/vic.cc.purdue.edu/lsof/  \
-			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
-			ftp://ftp0.sunet.se/pub/unix/admin/lsof/
+			ftp://ftp.sunet.se/pub/unix/admin/lsof/
 
 MAINTAINER=		atatat@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
