@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/29 01:18:33 abs Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/18 00:10:07 abs Exp $
 
---- ppp.conf.sample.orig	Sun Jul 29 01:39:43 2001
-+++ ppp.conf.sample
-@@ -7,7 +7,7 @@
-  accept chap
-  # These are the value of vpi and vci in france.
-  # Check in the INSTALL-BSD to see value for uk or netherland
-- set device !"/usr/local/bin/pppoa2 -vpi 8 -vci 35"
-+ set device !"/usr/local/sbin/pppoa2 -vpi 8 -vci 35"
-  set speed sync
-  set authname login@provider
-  set authkey password
+--- src/pusb-bsd.c.orig	Sat Jun  1 00:34:26 2002
++++ src/pusb-bsd.c
+@@ -40,9 +40,9 @@
+ /******************************************************************************
+ * Patch USB structures for the change in early 2002 
+ ******************************************************************************/
+-#if ((defined (__FreeBSD__)) && (__FreeBSD_version > 500000 && __FreeBSD_version < 500031) || (__FreeBSD_version < 450001)) || (defined (__NetBSD__) && (__NetBSD_version__ < 105280000)) || (defined (__OpenBSD__))
++#if ((defined (__FreeBSD__)) && ((__FreeBSD_version > 500000 && __FreeBSD_version < 500031) || (__FreeBSD_version < 450001))) || (defined (__NetBSD__) && __NetBSD_Version__ < 105280000) || (defined (__OpenBSD__))
+ 
+-/* strcut usb_ctl_request */
++/* struct usb_ctl_request */
+ #define ucr_actlen  actlen
+ #define ucr_flags   flags
+ #define ucr_data    data
