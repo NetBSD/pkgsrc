@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2003/07/03 13:40:28 seb Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/03 17:38:27 jschauma Exp $
 
 DISTNAME=		geomview-1.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=geomview/}
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.geomview.org
 COMMENT=		Interactive geometry viewing program
-
-CONFLICTS=		ImageMagick-[0-9]*	# both have a program named 'animate'
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
