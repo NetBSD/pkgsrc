@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2004/08/04 19:41:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2004/08/13 18:08:02 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -41,23 +41,10 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
-# CYRUS_USER		username of the Cyrus administrator
-# CYRUS_GROUP		group of the Cyrus administrator
-#
-CYRUS_USER?=		cyrus
-CYRUS_GROUP?=		mail
-FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
-FILES_SUBST+=		ROOT_USER=${ROOT_USER}
-BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
-
+HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
 _PLUGINDIR=		${VIEWBASE}/lib/sasl2
 
-HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
-SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
-BUILD_DEFS+=		SASLSOCKETDIR
-
-CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR}
 
 # Authentication mechanisms
@@ -75,14 +62,16 @@ CONFIGURE_ARGS+=	--disable-sql		# SQL
 CONFIGURE_ARGS+=	--disable-srp		# SRP
 CONFIGURE_ARGS+=	--disable-srp-setpass
 CONFIGURE_ARGS+=	--with-dblib=none
+CONFIGURE_ARGS+=	--without-openssl
 CONFIGURE_ARGS+=	--without-pam
-
-# clean up a bit to help package maintainer produce patch files
-post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
+CONFIGURE_ARGS+=	--without-saslauthd
 
 # Left here as reference for patch makers...
+# clean up a bit to help package maintainer produce patch files
+#post-extract:
+#	${_PKG_SILENT}${_PKG_DEBUG}					\
+#	${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
+#
 #pre-configure:
 #	cd ${WRKSRC};							\
 #	${ACLOCAL} -I cmulocal -I config;				\
@@ -91,10 +80,3 @@ post-extract:
 #	${AUTOCONF}
 #
 #.include "../../mk/automake.mk"
-
-post-configure:
-	cd ${WRKSRC}; for file in plugins/Makefile; do			\
-		${SED}	-e "s|^\(LIBTOOL =\).*|\1 \$$(SHLIBTOOL)|g"	\
-			$$file > $$file.new;				\
-		${MV} -f $$file.new $$file;				\
-	done
