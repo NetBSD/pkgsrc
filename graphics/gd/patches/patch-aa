@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
+$NetBSD: patch-aa,v 1.15 2003/06/07 11:32:39 cjep Exp $
 
---- Makefile.orig	Thu Feb 22 18:03:43 2001
+--- Makefile.orig	2001-02-22 17:03:43.000000000 +0000
 +++ Makefile
 @@ -3,7 +3,8 @@
  #If you do not have gcc, change the setting for COMPILER, but you must
@@ -8,11 +8,11 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  #compiler; get gcc if you are still using it). 
 -COMPILER=gcc
 +#COMPILER=gcc
-+INSTALL=$(LIBTOOL) install -c -m
++INS=$(LIBTOOL) $(INSTALL) -c -m
  
  #If the ar command fails on your system, consult the ar manpage
  #for your system. 
-@@ -12,12 +13,11 @@
+@@ -12,12 +13,11 @@ AR=ar
  #If you don't have FreeType, libjpeg and/or Xpm installed, including the
  #header files, uncomment this (default). You really must install
  #libpng and zlib to get anywhere if you wish to create PNG images.
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  
  #To use the old FreeType 1.x library, add this additional #define
  #to the line above
-@@ -30,13 +30,13 @@
+@@ -30,13 +30,13 @@ CFLAGS=-O -DHAVE_LIBPNG -DHAVE_LIBJPEG
  #Some systems are very picky about link order. They don't all agree
  #on the right order, either.
  
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  
  #Note: for Freetype 1.x, use DHAVE_LIBTTF and -lttf instead.
  
-@@ -45,7 +45,7 @@
+@@ -45,7 +45,7 @@ LIBS=-lgd -lpng -lz -lm
  #ensure that the version of gd you are installing is used, and not an 
  #older release in your directory tree somewhere.
  
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  
  #Typical install locations for freetype, zlib, xpm and libpng libraries.
  #If yours are somewhere else, other than a standard location
-@@ -55,16 +55,16 @@
+@@ -55,16 +55,16 @@ INCLUDEDIRS=-I. -I/usr/include/freetype2
  #on your system can't cause conflicts while building a new one.
  #This line shouldn't hurt if you don't actually have some of the
  #optional libraries and directories.
@@ -73,7 +73,7 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  
  #
  #
-@@ -74,7 +74,7 @@
+@@ -74,7 +74,7 @@ INSTALL_BIN=/usr/local/bin
  
  VERSION=1.8.4
  
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  LINK=$(CC) $(LIBDIRS) $(LIBS)
  
  PROGRAMS=$(BIN_PROGRAMS) $(TEST_PROGRAMS)
-@@ -82,75 +82,75 @@
+@@ -82,75 +82,75 @@ PROGRAMS=$(BIN_PROGRAMS) $(TEST_PROGRAMS
  BIN_PROGRAMS=pngtogd pngtogd2 gdtopng gd2topng gd2copypal gdparttopng webpng
  TEST_PROGRAMS=gdtest gddemo gd2time gdtestft gdtestttf
  
@@ -111,23 +111,23 @@ $NetBSD: patch-aa,v 1.14 2002/01/21 16:29:26 wiz Exp $
  
 -gddemo: gddemo.o libgd.a
 +install: $(LIBGD) $(BIN_PROGRAMS)
-+	sh $(INSTALL) 644 $(LIBGD) $(INSTALL_LIB)
-+	sh $(INSTALL) 755 pngtogd $(INSTALL_BIN)/pngtogd
-+	sh $(INSTALL) 755 pngtogd2 $(INSTALL_BIN)/pngtogd2
-+	sh $(INSTALL) 755 gdtopng $(INSTALL_BIN)/gdtopng
-+	sh $(INSTALL) 755 gd2topng $(INSTALL_BIN)/gd2topng
-+	sh $(INSTALL) 755 gd2copypal $(INSTALL_BIN)/gd2copypal
-+	sh $(INSTALL) 755 gdparttopng $(INSTALL_BIN)/gdparttopng
-+	sh $(INSTALL) 755 webpng $(INSTALL_BIN)/webpng
-+	sh $(INSTALL) 755 bdftogd $(INSTALL_BIN)/bdftogd
-+	sh $(INSTALL) 644 gd.h $(INSTALL_INCLUDE)/gd.h
-+	sh $(INSTALL) 644 gdcache.h $(INSTALL_INCLUDE)/gdcache.h
-+	sh $(INSTALL) 644 gd_io.h $(INSTALL_INCLUDE)/gd_io.h
-+	sh $(INSTALL) 644 gdfontg.h $(INSTALL_INCLUDE)/gdfontg.h
-+	sh $(INSTALL) 644 gdfontl.h $(INSTALL_INCLUDE)/gdfontl.h
-+	sh $(INSTALL) 644 gdfontmb.h $(INSTALL_INCLUDE)/gdfontmb.h
-+	sh $(INSTALL) 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
-+	sh $(INSTALL) 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
++	sh $(INS) 644 $(LIBGD) $(INSTALL_LIB)
++	sh $(INS) 755 pngtogd $(INSTALL_BIN)/pngtogd
++	sh $(INS) 755 pngtogd2 $(INSTALL_BIN)/pngtogd2
++	sh $(INS) 755 gdtopng $(INSTALL_BIN)/gdtopng
++	sh $(INS) 755 gd2topng $(INSTALL_BIN)/gd2topng
++	sh $(INS) 755 gd2copypal $(INSTALL_BIN)/gd2copypal
++	sh $(INS) 755 gdparttopng $(INSTALL_BIN)/gdparttopng
++	sh $(INS) 755 webpng $(INSTALL_BIN)/webpng
++	sh $(INS) 755 bdftogd $(INSTALL_BIN)/bdftogd
++	sh $(INS) 644 gd.h $(INSTALL_INCLUDE)/gd.h
++	sh $(INS) 644 gdcache.h $(INSTALL_INCLUDE)/gdcache.h
++	sh $(INS) 644 gd_io.h $(INSTALL_INCLUDE)/gd_io.h
++	sh $(INS) 644 gdfontg.h $(INSTALL_INCLUDE)/gdfontg.h
++	sh $(INS) 644 gdfontl.h $(INSTALL_INCLUDE)/gdfontl.h
++	sh $(INS) 644 gdfontmb.h $(INSTALL_INCLUDE)/gdfontmb.h
++	sh $(INS) 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
++	sh $(INS) 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
 +
 +gddemo: gddemo.o $(LIBGD)
  	$(CC) gddemo.o -o gddemo	$(LIBDIRS) $(LIBS)
