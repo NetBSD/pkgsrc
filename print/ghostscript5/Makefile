@@ -3,7 +3,8 @@
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/22 22:55:04 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/22 23:01:13 augustss Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
 DISTNAME=	ghostscript-5.03
@@ -28,11 +29,7 @@ MAN1=		gs.1 pdf2dsc.1 pdf2ps.1 ps2ascii.1 ps2epsi.1 ps2pdf.1
 
 GS_SOURCES=	ghostscript-5.03.tar.gz
 GS_SOURCES+=	ghostscript-5.03gnu.tar.gz
-#  Note: the following two are real files that have symlinks with
-#  later version numbers pointing to them.  To avoid unnecessarily
-#  downloading distfiles, do not change these when upgrading the port
-#  unless the files really change.
-GS_FONTS_STD=	ghostscript-fonts-std-4.0.tar.gz
+GS_FONTS_STD=	ghostscript-fonts-std-5.0.tar.gz
 GS_FONTS_OTHER=	ghostscript-fonts-other-5.03.tar.gz
 
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
