@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:46:27 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/10/19 21:05:35 bouyer Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -26,7 +26,7 @@ CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-CFLAGS=		-DSYSV
+CFLAGS+=		-DSYSV
 .endif
 
 post-patch:
