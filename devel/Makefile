@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2001/06/20 16:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.220 2001/06/24 13:30:50 zuntum Exp $
 #
 
 COMMENT=	Development utilities
@@ -30,6 +30,7 @@ SUBDIR+=	cpuflags
 SUBDIR+=	cscope
 SUBDIR+=	cvs
 SUBDIR+=	cvs2cl
+SUBDIR+=	cvs2html
 SUBDIR+=	cvslock
 SUBDIR+=	cvsup
 SUBDIR+=	cweb
