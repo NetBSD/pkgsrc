@@ -1,0 +1,31 @@
+--- lib/Makefile.in.orig	Wed May 27 16:49:38 1998
++++ lib/Makefile.in	Wed Jul 29 12:46:56 1998
+@@ -23,7 +23,7 @@
+ 
+ # -----------------------------------------------------------------------
+ 
+-include ../Makefile.inc
++.include "../Makefile.inc"
+ 
+ TARGET=allprogs
+ 
+@@ -41,7 +41,8 @@
+ 
+ $(PROGS): $(LIBRPM)
+ 
+-$(LIBRPM): $(LIBRPM)($(LIBOBJECTS) $(TAGTABLE))
++$(LIBRPM): $(LIBOBJECTS) $(TAGTABLE)
++	$(AR) r $@ $(LIBOBJECTS) $(TAGTABLE)
+ 	$(RANLIB) $@
+ 
+ tagtable.c: rpmlib.h 
+@@ -74,6 +75,6 @@
+ 	    $(CPP) $(CFLAGS) -MM $(SOURCES) | \
+ 		sed s+$$topdir_path+$(top_srcdir)+g > .depend
+ 
+-ifeq (.depend,$(wildcard .depend))
+-include .depend
+-endif
++.if exists(.depend)
++.include ".depend"
++.endif
