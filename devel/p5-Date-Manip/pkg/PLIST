@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/07 23:15:58 jwise Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Date/Manip/.packlist
+lib/perl5/site_perl/Date/Manip.pm
+lib/perl5/site_perl/Date/Manip.pod
+lib/perl5/man/man3/Date::Manip.3
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Date/Manip/

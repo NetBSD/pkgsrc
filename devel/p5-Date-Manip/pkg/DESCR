@@ -1,0 +1,17 @@
+This is a set of routines designed to make any common date/time
+manipulation easy to do.  Operations such as comparing two times,
+calculating a time a given amount of time from another, or parsing
+international times are all easily done.
+
+Date::Manip deals only with the Gregorian calendar (the one currently in
+use).  The Julian calendar defined leap years as every 4th year.  The
+Gregorian calendar improved this by making every 100th year NOT a leap
+year, unless it was also the 400th year.  The Gregorian calendar has been
+extrapolated back to the year 1000 AD and forward to the year 9999 AD.
+Note that in historical context, the Julian calendar was in use until 1582
+when the Gregorian calendar was adopted by the Catholic church.  Protestant
+countries did not accept it until later; Germany and Netherlands in 1698,
+British Empire in 1752, Russia in 1918.  Note that the Gregorian calendar
+is itself imperfect.  Each year is on average 26 seconds too long, which
+means that every 3,323 years, a day should be removed from the calendar.
+No attempt is made to correct for that.
