@@ -1,10 +1,9 @@
---- subst.pl.orig	Thu Jul 16 10:20:52 1998
-+++ subst.pl	Thu Jul 16 10:22:04 1998
-@@ -39,6 +39,7 @@
-     for $s (keys %macros) {
- 	$r = $macros{$s};
+--- subst.pl.orig	Sat Sep 28 04:13:51 1996
++++ subst.pl	Thu Jul 16 18:35:06 1998
+@@ -41,5 +41,6 @@
  	s/<$s>/$r/g;
-+	s/\$\{PREFIX\}/$ENV{'PREFIX'}/g;
      }
  
++    s/\$\{PREFIX\}/$ENV{'PREFIX'}/g;
      print;
+ }
