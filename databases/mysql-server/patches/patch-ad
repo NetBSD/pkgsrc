@@ -1,22 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2000/12/24 12:27:16 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/26 13:46:20 bad Exp $
 
---- mit-pthreads/gen/ctime.c.orig	Sun Dec 24 12:05:34 2000
-+++ mit-pthreads/gen/ctime.c
-@@ -129,7 +129,7 @@
- ** Prototypes for static functions.
- */
+--- mit-pthreads/gen/ctime.c.orig	Mon Jan 22 14:37:02 2001
++++ mit-pthreads/gen/ctime.c	Fri Feb  2 00:25:39 2001
+@@ -177,7 +177,7 @@
  
--static long			detzcode __P_((const char *));
-+static int			detzcode __P_((const char *));
- static const char *	getnum __P_((const char *, int *, int, int));
- static const char *	getsecs __P_((const char *, long *));
- static const char *	getoffset __P_((const char *, long *));
-@@ -175,9 +175,9 @@
- time_t			altzone = 0;
- #endif /* defined ALTZONE */
- 
--static long detzcode(const char * codep)
-+static int detzcode(const char * codep)
+ static int detzcode(const char * codep)
  {
 -	long result;
 +	int result;
