@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/12 22:21:34 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/13 17:47:53 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
 PKGNAME=	jakarta-tomcat-3.0
@@ -9,21 +9,20 @@ DISTFILES=	jakarta-tomcat.src.zip jakarta-tools.src.zip
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 
-DEPENDS+=	jdk-*:../../lang/jdk
+USE_JAVA=	yes
 
 WRKSRC=		${WRKDIR}/jakarta-tomcat
-BUILD_DEFS=	JDK_HOME JAKARTA_HOME
+BUILD_DEFS+=	JAKARTA_HOME
 EXTRACT_CMD=    ${DO_NADA}
 
 .include "../../mk/bsd.prefs.mk"
 
-JDK_HOME?=      ${LOCALBASE}/java
-JAKARTA_HOME?=	${JDK_HOME}/jakarta
-MAKE_ENV+=	JAVA_HOME=${JDK_HOME}
+JAKARTA_HOME?=	${JAVA_HOME}/jakarta
+MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 
 post-extract:
 .for x in ${DISTFILES}
-	cd ${WRKDIR} && ${LOCALBASE}/java/bin/jar xf ${DISTDIR}/$x
+	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/$x
 .endfor
 
 post-patch:
@@ -43,4 +42,12 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk 
-PREFIX:=        ${JDK_HOME}
+PREFIX:=        ${JAVA_HOME}
+
+# work around a bug in kaffe's jar utility
+.if ${PKG_JVM} == "kaffe"
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+EXTRACTOR=	${LOCALBASE}/bin/unzip -x
+.else
+EXTRACTOR=	${JAVA_HOME}/bin/jar xf
+.endif
