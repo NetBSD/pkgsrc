@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2005/02/24 09:59:26 agc Exp $
+$NetBSD: distinfo,v 1.82.2.1 2005/04/04 08:14:31 salo Exp $
 
 SHA1 (postfix/postfix-2.1.5.tar.gz) = bbc65c9fdc1cbd8e553816a5549b2685255cf69d
 RMD160 (postfix/postfix-2.1.5.tar.gz) = c0e078babbc3e76035fe4f502ea5fb3645e8ed92
@@ -15,4 +15,4 @@ SHA1 (patch-aa) = 279b54f19289b56a423214716386c5aab79a57d5
 SHA1 (patch-ab) = c506a08b694f94ef4884fa97eec51e44c92812dd
 SHA1 (patch-ac) = f26b493c648c84af6ff70c54da82876eae8c2637
 SHA1 (patch-ag) = d5e9aab43b5d3be6df9ad8e3f03572b9a228f784
-SHA1 (patch-ai) = f166c2d52bfb8a441db22a9090312c0a2de56a6f
+SHA1 (patch-ai) = d24b434fcd8964d1d27e6c0eac93e2d742de98ab
