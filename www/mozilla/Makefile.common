@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/05/13 13:36:04 markd Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/05/22 23:41:48 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 USE_BUILDLINK2=	yes
 USE_PERL5=	build
 USE_GMAKE=	yes
-USE_X11BASE=	yes
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-tests \
 		--disable-debug \
