@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2002/05/31 14:23:31 skrll Exp $
+# $NetBSD: Makefile,v 1.127 2002/05/31 15:02:42 seb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -41,6 +41,9 @@ SUBDIR+=	heyu
 SUBDIR+=	hitchhiker
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	iselect
+SUBDIR+=	ja-less
+SUBDIR+=	ja-man
+SUBDIR+=	jhd
 SUBDIR+=	jitterbug
 SUBDIR+=	jive
 SUBDIR+=	kdeadmin2
@@ -107,6 +110,7 @@ SUBDIR+=	vera
 SUBDIR+=	vfu
 SUBDIR+=	vttest
 SUBDIR+=	watch
+SUBDIR+=	xjdic
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
 SUBDIR+=	xtend

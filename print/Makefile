@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2002/05/08 11:58:51 markd Exp $
+# $NetBSD: Makefile,v 1.71 2002/05/31 15:02:43 seb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -29,6 +29,11 @@ SUBDIR+=	gnome-print
 SUBDIR+=	gv
 SUBDIR+=	html2ps
 SUBDIR+=	if-psprint
+SUBDIR+=	ja-a2ps
+SUBDIR+=	ja-vflib
+SUBDIR+=	ja-vflib-lib
+SUBDIR+=	ja-vflib-utils
+SUBDIR+=	ja-vfxdvik
 SUBDIR+=	lgrind
 SUBDIR+=	lilypond
 SUBDIR+=	lyx
@@ -58,6 +63,8 @@ SUBDIR+=	teTeX-sharesrc
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-jadetex
+SUBDIR+=	texfamily
+SUBDIR+=	texfamily-share
 SUBDIR+=	transfig
 SUBDIR+=	ttftot42
 SUBDIR+=	xpdf
