@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.27 1999/01/23 03:56:56 mellon Exp $
+#	$NetBSD: Makefile,v 1.28 1999/01/26 23:28:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -44,6 +44,7 @@
     SUBDIR += siag
     SUBDIR += splitvt
     SUBDIR += team
+   SUBDIR += vfu
 #   SUBDIR += viz
 # These programs shouldbe in ../x11
 #    SUBDIR += xcalendar
