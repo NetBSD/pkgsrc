@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1401 2004/02/18 05:13:01 ben Exp $
+$NetBSD: TODO,v 1.1402 2004/02/18 15:37:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -124,7 +124,7 @@ Suggested package updates
 	o TeXmacs-1.0.3.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abcde-2.1.14
+	o abcde-2.1.15
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o ap-python-2.7.10
@@ -255,9 +255,9 @@ Suggested package updates
 	o moz-bin-plugger-1.5
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.0.5
+	o multitail-3.1.0
 	o mutt-1.4.2.1
-	o nano-1.2.2
+	o nano-1.2.3
 	o nap-1.5.2
 	o napshare-1.2
 	o ncurses-5.4
@@ -307,7 +307,7 @@ Suggested package updates
 	o siag-3.6.0
 	o skill-4.1.1
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o sml-nj-110.44
+	o sml-nj-110.45
 	o snd-7.1
 	o snes9x-1.42
 	o snownews-1.4.4
