@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.4 2002/08/12 10:12:09 agc Exp $
+# $NetBSD: mksandbox,v 1.5 2002/08/12 14:47:07 seb Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -143,6 +143,7 @@ case "$paxprog" in
 "")	(cd /etc; $gtarprog -cf - . | (cd $sandbox/etc; $gtarprog xf - )) ;;
 *)	(cd /etc; $paxprog -rwpe . $sandbox/etc) ;;
 esac
+rm -f $sandbox/etc/localtime
 $cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
 
 echo "Make empty dirs upon which to mount the null mounts"
@@ -167,16 +168,16 @@ echo "Making /tmp in $sandbox"
 $mkdirprog $sandbox/tmp $sandbox/var/tmp
 $chmodprog 1777 $sandbox/tmp $sandbox/var/tmp
 
-echo "Mount /usr/src in $sandbox"
+echo "Mount $src from $sandbox"
 $mkdirprog $sandbox/usr/src
 $mountprog -r -t null $src $sandbox/usr/src
 
-echo "Mount /usr/pkgsrc in $sandbox"
+echo "Mount $pkgsrc from $sandbox"
 $mkdirprog $sandbox/usr/pkgsrc
 $mountprog -t null $pkgsrc $sandbox/usr/pkgsrc
 
 echo "Mounting $packages and $distfiles from $sandbox"
-$mkdirprog $packages $distfiles
+$mkdirprog $sandbox/$packages $sandbox/$distfiles
 $mountprog -t null $packages $sandbox/$packages
 $mountprog -t null $distfiles $sandbox/$distfiles
 
