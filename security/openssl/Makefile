@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2001/09/27 23:18:39 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2001/10/18 04:51:04 tron Exp $
 
 DISTNAME=		openssl-0.9.6
 PKGNAME=		${DISTNAME}nb2
@@ -12,7 +12,8 @@ COMMENT=		Secure Socket Layer and cryptographic library
 
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
-CONFLICTS=		SSLeay-[0-9]* ssleay-[0-9]* base64-[0-9]*
+CONFLICTS=		SSLeay-[0-9]* ssleay-[0-9]* base64-[0-9]* \
+			glimpse-[0-9]
 
 CRYPTO=			YES
 
