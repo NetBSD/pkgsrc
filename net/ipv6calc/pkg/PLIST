@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/04 15:59:22 hubertf Exp $
+bin/ipv6calc

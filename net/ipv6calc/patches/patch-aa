@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/04 15:59:22 hubertf Exp $
+
+--- libipv6calc.c.orig	Sun Mar  4 03:28:04 2001
++++ libipv6calc.c
+@@ -27,6 +27,12 @@
+ #ifndef _NETINET_IN_H
+ # include <linux/ipv6.h>
+ #endif
++#if defined(__NetBSD__)
++ /* work around incompatibilities between Linux (USAGI?) and KAME */
++#define s6_addr32		__u6_addr.__u6_addr32
++#define in6_u			__u6_addr
++#define u6_addr32		__u6_addr32
++#endif
+ #include "include/modifiedfromkernel/include/net/ipv6-split.h"
+ #include "include/modifiedfromkernel/net/ipv6/addrconf-split.c"
+ #include "ipv6calc.h"
