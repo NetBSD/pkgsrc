@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/30 22:51:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/11 05:12:56 hamajima Exp $
 #
 
 DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
@@ -10,16 +10,21 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.4/index.html
 COMMENT=		32-bit shared libraries for NetBSD 1.4 (and earlier) compatibility
 
-DEPENDS+=		netbsd32_compat15>=1.0:../netbsd32_compat15
-
 VERSION=		1.4.3.1
+PKGREVISION=		1
 
 .if ${MACHINE_ARCH} == "sparc64"
 MACHINE32_ARCH=	sparc
+DEPENDS+=		netbsd32_compat15>=1.0:../netbsd32_compat15
+.elif ${MACHINE_ARCH} == "x86_64"
+MACHINE32_ARCH=	i386
+DEPENDS+=		netbsd32_compat16>=1.0:../netbsd32_compat16
 .else
 MACHINE32_ARCH=	${MACHINE_ARCH}
 .endif
+
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-2*-x86_64
 
 NO_MTREE=		# defined
 NO_BUILD=		# defined
@@ -39,6 +44,11 @@ FILES_SUBST+=		LDCONFIG=${LDCONFIG}
 EMULSUBDIR=		emul/aout
 COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
 COMPAT_XLIBDIR=		${EMULSUBDIR}/usr/X11R6/lib
+
+PLIST_SRC+=		${PKGDIR}/PLIST
+.if exists(${PKGDIR}/PLIST.${MACHINE32_ARCH})
+PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE32_ARCH}
+.endif
 
 PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR} COMPAT_XLIBDIR=${COMPAT_XLIBDIR}
 
