@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/12/06 16:06:32 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/06 16:37:47 minskim Exp $
 
 DISTNAME=	xcircuit-3.3.0
 CATEGORIES=	cad graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://bach.ece.jhu.edu/~tim/programs/xcircuit/
+HOMEPAGE=	http://xcircuit.ece.jhu.edu/
 COMMENT=	Drawing program for X11 (especially for circuits)
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
