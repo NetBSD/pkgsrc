@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3271 2005/03/23 13:25:16 schmonz Exp $
+$NetBSD: TODO,v 1.3272 2005/03/23 13:32:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,7 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
-	o afterstep-2.00.03
+	o afterstep-2.00.04
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
@@ -465,6 +465,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
+	o geda-20050313
 	o gettext-0.14.1
 	o ghc-6.2.2
 	o ghostscript-8.00 (apfl)
@@ -579,6 +580,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.0
 	o leafpad-0.7.9
+	o lftp-3.1.1
 	o libcdio-0.72
 	o libcomprex-0.3.3
 	o libetpan-0.34b
@@ -1054,6 +1056,7 @@ Suggested package updates
 	o tkgate-1.8.5
 	o tkhylafax-3.2
 	o tkman-2.2
+	o tla-1.3.1-fix1
 	o tlf-0.9.22
 	o tmake-1.13
 	o tnef-1.3.2
