@@ -1,0 +1,29 @@
+.Dd November 9, 1998
+.Dt SETPAPERSIZE 1
+.Os NetBSD
+.Sh NAME
+.Nm setpapersize
+.Nd Set the default paper size for various packages
+.Sh SYNOPSIS
+.Nm
+PAPERSIZE
+.Op Package...
+.Sh DESCRIPTION
+The
+.Nm
+utility sets the default paper size for a number of packages.
+At the present time, these are the a2ps, ddd, enscript, magicfilter
+and psutils packages.
+If no package argument is given, all packages are assumed.
+The
+.Ar PAPERSIZE
+argument can be one of A4, Letter, or Letterdj.
+The
+.Xr getpapersize 1
+utility can be used to show the default paper size for the packages.
+.Pp
+The
+.Nm
+utility exits 0 on success, and >0 if an error occurs.
+.Sh SEE ALSO
+.Xr getpapersize 1

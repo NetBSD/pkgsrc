@@ -1,0 +1,65 @@
+#! /bin/sh
+#
+# $NetBSD: getpapersize,v 1.1.1.1 1998/11/09 17:55:22 agc Exp $
+#
+# Small shell script to show the default papersize for packages
+#
+
+if [ $# -eq 0 ]; then
+	pkgs="a2ps ddd enscript magicfilter psutils";
+else 
+	pkgs=$@
+fi
+
+set $pkgs
+while [ $# -gt 0 ]; do
+	case $1 in
+	a2ps)
+		f=@localbase@/etc/a2ps.cfg
+		if [ -e $f ]; then
+			echo -n "$1 has default papersize: "
+			awk '/^Options: --medium=/ { gsub(".*=", "", $0); print $0; }' $f
+		fi
+		;;
+	ddd)
+		f=@x11base@/lib/X11/app-defaults/Ddd
+		if [ -e $f ]; then
+			echo -n "$1 has default papersize: "
+			awk '/^@Ddd\*paperSize: / { gsub(".*:", "", $0); print $0; }' $f
+		fi
+		;;
+	enscript)
+		f=@localbase@/etc/enscript.cfg
+		if [ -e $f ]; then
+			echo -n "$1 has default papersize: "
+			awk '/^DefaultMedia:.*/ { gsub(".*:", "", $0); print $0; }' $f
+		fi
+		;;
+	magicfilter)
+		magicdir=@localbase@/libexec/magicfilter
+		if [ -e $magicdir ]; then
+			done=0
+			for f in $magicdir/*-filter; do
+				if [ $done -eq 0 ]; then
+					echo -n "$1 has default papersize: "
+					grep 'PAPERSIZE' $f | sed -e 's|\(.*\)-sPAPERSIZE=\([a-zA-Z0-9_]*\)\(.*\)|\2|' | tail -n 1
+					done=1
+				fi
+			done
+		fi
+		;;
+	psutils)
+		f=@localbase@/etc/psutils.cfg
+		if [ -e $f ]; then
+			echo -n "$1 has default papersize: "
+			awk '/^PAPERSIZE=/ { gsub(".*=", "", $0); print $0; }' $f
+		fi
+		;;
+	*)
+		echo "Warning: Package $1 not recognised"
+		;;
+	esac
+	shift 1
+done
+
+exit 0
