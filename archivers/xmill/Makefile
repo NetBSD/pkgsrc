@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/06/15 05:28:11 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/28 02:47:35 minskim Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.cs.washington.edu/homes/suciu/XMILL/
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Specialized compressor for XML
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
@@ -19,6 +21,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmill
