@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2000/08/31 05:39:25 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/01 08:55:11 veego Exp $
 #
 
 DISTNAME=		oaf-0.5.1
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=/unstable/sources/oaf/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/oaf/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
