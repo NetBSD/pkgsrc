@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.10 2002/12/16 09:18:57 salo Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.11 2002/12/18 06:18:15 schmonz Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -97,6 +97,11 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no	# GNU make is not standard
+.if exists(/usr/include/netinet6)
+_OPSYS_HAS_INET6=	yes	# IPv6 is standard
+.else
+_OPSYS_HAS_INET6=	no	# IPv6 is not standard
+.endif
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
