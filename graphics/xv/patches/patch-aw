@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.1 2002/07/29 13:02:24 tron Exp $
+$NetBSD: patch-aw,v 1.2 2002/08/09 18:06:36 drochner Exp $
 
---- xv.c.orig	Mon Jul 29 14:50:12 2002
-+++ xv.c	Mon Jul 29 14:51:19 2002
+--- xv.c.orig	Fri Aug  9 19:14:10 2002
++++ xv.c	Fri Aug  9 19:51:18 2002
 @@ -1872,11 +1872,13 @@
    if (filenum == LOADPIC) {
      fullname = GetDirFullName();
@@ -34,3 +34,12 @@ $NetBSD: patch-aw,v 1.1 2002/07/29 13:02:24 tron Exp $
  
      /* if fullname doesn't start with a '/' (ie, it's a relative path), 
         (and it's not LOADPIC and it's not the special case '<stdin>') 
+@@ -2233,7 +2239,7 @@
+   SetISTR(ISTR_INFO,formatStr);
+ 	
+   SetInfoMode(INF_PART);
+-  SetISTR(ISTR_FILENAME, 
++  SetISTR(ISTR_FILENAME, "%s",
+ 	  (filenum==DFLTPIC || filenum==GRABBED || frompipe)
+ 	  ? "<none>" : basefname);
+ 
