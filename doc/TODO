@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1595 2004/04/10 03:10:22 snj Exp $
+$NetBSD: TODO,v 1.1596 2004/04/10 06:26:35 snj Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,6 @@ Suggested package updates
 	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abcde-2.1.16
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550, bouyer]
 	o ap-python-2.7.10
