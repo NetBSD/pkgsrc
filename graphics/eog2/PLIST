@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/25 16:59:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/18 14:18:16 adam Exp $
 bin/eog
 lib/bonobo/servers/GNOME_EOG.server
 lib/bonobo/servers/GNOME_EOG_Collection.server
@@ -51,6 +51,7 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/eog.mo
@@ -62,6 +63,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/eog.mo
