@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/30 15:56:13 markd Exp $
 
 DISTNAME=	kdevelop-2.1.5_for_KDE_3.1
 PKGNAME=	kdevelop-base-2.1.5
@@ -27,7 +27,7 @@ DISTFILES+=	template-${template}-20030702.tar.gz
 SITES_template-${template}-20030702.tar.gz=	${MASTER_SITE_LOCAL:=kdevelop/}
 .endfor
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
@@ -67,6 +67,6 @@ CONFIGURE_ARGS+= \
 	--with-kdelibsdoc-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs \
 	--enable-kdoc3
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
