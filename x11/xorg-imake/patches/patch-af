@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
+
+--- config/cf/sun.cf.orig	2004-02-02 14:55:26.000000000 +1100
++++ config/cf/sun.cf
+@@ -19,6 +19,9 @@ XCOMM platform:  $XFree86: xc/config/cf/
+ #endif
+ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
+ 
++/* This is the XFree86 package - we want to build XFree86 on Solaris */
++#define BuildXFree86OnSparcSunOS YES
++
+ /*
+  * Compiler setup.  This sun.cf file knows what options to use with 
+  * certain compilers, including Sun C, CenterLine C, and gcc.  It 
