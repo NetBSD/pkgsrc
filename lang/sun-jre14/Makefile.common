@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.13 2003/08/13 10:22:56 seb Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/08/23 15:14:02 jschauma Exp $
 
-CATEGORIES=	lang
+CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
 
 MAINTAINER=	jschauma@NetBSD.org
