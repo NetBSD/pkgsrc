@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.26 2002/09/04 14:56:14 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.27 2002/09/16 10:43:24 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -24,6 +24,7 @@ case $hw_machine_arch in
 	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
 	    *[\(\ ]21164A[-\ ]*)	FLAGS="-mcpu=21164a"	;;
 	    *[\(\ ]2106[46][-\ ]*)	FLAGS="-mcpu=21064"	;;
+	    *[\(\ ]21264B[-\ ]*)	FLAGS="-mcpu=21264"	;;
 	esac
 	;;
 
