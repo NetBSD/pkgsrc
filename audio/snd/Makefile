@@ -3,7 +3,7 @@
 # Date created:				1998-02-22
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1 1998/02/22 23:20:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/05 15:32:52 hubertf Exp $
 #
 
 DISTNAME=		snd
@@ -18,6 +18,7 @@ LIB_DEPENDS=		Xpm.4.:${PORTSDIR}/graphics/xpm \
 			Xm.0.:${PORTSDIR}/x11/lesstif
 
 USE_X11=		YES
+REQUIRES_MOTIF=		YES
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
 
