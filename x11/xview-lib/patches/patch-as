@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2000/09/13 20:24:38 jlam Exp $
+
+--- util/Imakefile.orig	Tue Jun 29 01:14:22 1993
++++ util/Imakefile
+@@ -16,7 +16,7 @@
+ 
+ CONV_DIR = conversion
+ 
+-MSG_UTIL = xgettext msgfmt
++#MSG_UTIL = xgettext msgfmt
+ 
+ SUBDIRS = $(CPP_DIR) $(SOELIM_DIR) $(CONV_DIR) $(MSG_UTIL)
+ 
