@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2003/07/28 17:50:12 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2004/01/29 16:58:03 jmmv Exp $
 
---- util/fluxbox-generate_menu.orig	2003-07-28 01:53:14.000000000 +0200
-+++ util/fluxbox-generate_menu	2003-07-28 01:54:11.000000000 +0200
-@@ -101,7 +101,7 @@
- 
- # ugly code for solaris compat.
- case $(uname) in
--    Linux|*BSD)
-+    Linux)
-         find_it() {
-             which $1 > /dev/null 2>&1 && shift && $*
-             }
+--- util/startfluxbox.in.orig	2003-12-06 17:29:21.000000000 +0100
++++ util/startfluxbox.in
+@@ -6,7 +6,9 @@ elif [ -r ~/.fluxbox/startup ]; then
+     exec sh ~/.fluxbox/startup
+ else
+     if [ ! -d ~/.fluxbox ]; then
+-	mkdir -p ~/.fluxbox/{backgrounds,styles,pixmaps}
++	mkdir -p ~/.fluxbox/backgrounds
++	mkdir -p ~/.fluxbox/styles
++	mkdir -p ~/.fluxbox/pixmaps
+     fi
+     if [ ! -r ~/.fluxbox/startup ]; then
+         cat << EOF > ~/.fluxbox/startup

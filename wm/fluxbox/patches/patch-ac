@@ -1,17 +1,20 @@
-$NetBSD: patch-ac,v 1.4 2003/07/28 17:50:12 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2004/01/29 16:58:03 jmmv Exp $
 
---- src/fluxbox.cc.orig	Thu Jul 10 14:00:49 2003
+--- src/fluxbox.cc.orig	2004-01-13 15:31:15.000000000 +0100
 +++ src/fluxbox.cc
-@@ -629,7 +629,11 @@
+@@ -668,11 +668,11 @@ void Fluxbox::setupConfigFiles() {
  
      bool create_init = false, create_keys = false, create_menu = false;
  
--    string dirname = getenv("HOME")+string("/.")+string(m_RC_PATH) + "/";
-+    string dirname = getenv("HOME")+string("/.")+string(m_RC_PATH)
-+#if 0
-+                                                                  + "/" 
-+#endif
-+                                                                       ;
+-    string dirname = getenv("HOME") + string("/.") + string(m_RC_PATH) + "/";
++    string dirname = getenv("HOME") + string("/.") + string(m_RC_PATH);
      string init_file, keys_file, menu_file, slitlist_file;
-     init_file = dirname + m_RC_INIT_FILE;
-     keys_file = dirname + "keys";
+-    init_file = dirname + m_RC_INIT_FILE;
+-    keys_file = dirname + "keys";
+-    menu_file = dirname + "menu";
++    init_file = dirname + "/" + m_RC_INIT_FILE;
++    keys_file = dirname + "/" + "keys";
++    menu_file = dirname + "/" + "menu";
+ 
+     struct stat buf;
+ 
