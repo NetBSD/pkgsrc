@@ -1,0 +1,18 @@
+PForth is an ANSI style Forth designed to be portable across many
+platforms.  The 'P' in pForth stands for "Portable". PForth is based
+on a Forth kernel written in ANSI standard 'C'.
+
+PForth has been designed with portability as the primary design
+goal. As a result, pForth avoids any fancy UNIX calls. pForth also
+avoids using any clever and original ways of constructing the Forth
+dictionary. It just compiles its kernel from ANSI compatible 'C' code
+then loads ANS compatible Forth code to build the dictionary. Very
+boring but very likely to work on almost any platform.
+
+The pForth software code is dedicated to the public domain, and any
+third party may reproduce, distribute and modify the pForth software
+code or any derivative works thereof without any compensation or
+license. The pForth software code is provided on an "as is" basis
+without any warranty of any kind, including, without limitation, the
+implied warranties of merchantability and fitness for a particular
+purpose and their equivalents under the laws of any jurisdiction.
