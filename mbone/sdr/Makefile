@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/01/06 22:21:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/01/08 00:24:18 tron Exp $
 #
 
 DISTNAME=	sdr-2.5.8
@@ -6,7 +6,7 @@ CATEGORIES=	mbone tk80
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/experimental/2.5.8/
 
 MAINTAINER=	is@netbsd.org
-HOMEPAGE=	http://north.east.isi.edu/sdr/
+HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
