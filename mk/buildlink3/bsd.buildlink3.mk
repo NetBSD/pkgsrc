@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.63 2004/01/27 08:42:13 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.64 2004/01/27 12:19:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -429,11 +429,17 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 # BUILDLINK_FILES_CMD.<pkg>
 #	shell pipeline that outputs to stdout a list of files relative
 #	to ${BUILDLINK_PREFIX.<pkg>}.  The resulting files are to be
-#	symlinked into ${BUILDLINK_DIR}.  By default for overwrite
-#	packages, BUILDLINK_FILES_CMD.<pkg> outputs the contents of the
-#	include and lib directories in the package +CONTENTS, and for
-#	pkgviews packages, it outputs any libtool archives in lib
-#	directories.
+#	symlinked into ${BUILDLINK_DIR}.  By default, this takes the
+#	+CONTENTS of a <pkg> and filters it through
+#	${BUILDLINK_CONTENTS_FILTER.<pkg>}.
+#
+# BUILDLINK_CONTENTS_FILTER.<pkg>
+#	filter command that filters +CONTENTS input into a list of files
+#	relative to ${BUILDLINK_PREFIX.<pkg>} on stdout.  By default for
+#	overwrite packages, BUILDLINK_CONTENTS_FILTER.<pkg> outputs the
+#	contents of the include and lib directories in the package
+#	+CONTENTS, and for pkgviews packages, it outputs any libtool
+#	archives in lib directories.
 #
 # BUILDLINK_TRANSFORM.<pkg>
 #	sed arguments used to transform the name of the source filename
@@ -464,16 +470,16 @@ buildlink-${_pkg_}-cookie:
 
 .  if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&			\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
-BUILDLINK_FILES_CMD.${_pkg_}?=						\
-	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
-	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
+BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 	${GREP} 'lib.*/lib[^/]*\.la$$'
 .  else
+BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
+	${EGREP} '(include.*/|lib.*/lib[^/]*$$)'
+.  endif
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
-	${EGREP} '(include.*/|lib.*/lib[^/]*$$)'
-.  endif
+	${BUILDLINK_CONTENTS_FILTER.${_pkg_}}
 
 # _BLNK_FILES_CMD.<pkg> combines BUILDLINK_FILES_CMD.<pkg> and
 # BUILDLINK_FILES.<pkg> into one command that outputs all of the files
