@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/08/23 09:57:30 garbled Exp $
+# $NetBSD: Makefile,v 1.33 1998/08/23 11:25:54 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -31,7 +31,7 @@
     SUBDIR += golddig
     SUBDIR += icbm3d
     SUBDIR += imaze
-#    SUBDIR += jetpack
+    SUBDIR += jetpack
     SUBDIR += kdegames
 #    SUBDIR += klondike
     SUBDIR += lincity
