@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.7 2003/11/25 02:14:07 heinz Exp $
+$NetBSD: distinfo,v 1.8 2004/01/25 19:12:31 heinz Exp $
 
 SHA1 (./opera-7.23-20031119.1-static-qt.i386-en.rpm) = 7cbe7f5f780dcde06a5509e544142f5d5bfe5cd7
 Size (./opera-7.23-20031119.1-static-qt.i386-en.rpm) = 5166130 bytes
 SHA1 (opera-7.23-20031119.1-static-qt-sol8-sparc-local-en.tar.bz2) = fc3a1661e602a72ef446afd6e298594e01e77ad7
 Size (opera-7.23-20031119.1-static-qt-sol8-sparc-local-en.tar.bz2) = 5845007 bytes
+SHA1 (opera-7.23-20031119.1-static-qt.i386.freebsd-en.tar.bz2) = 690318be3c385848b00fe537ffefa0f1a92c2145
+Size (opera-7.23-20031119.1-static-qt.i386.freebsd-en.tar.bz2) = 4732147 bytes
