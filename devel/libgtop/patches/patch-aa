@@ -1,36 +1,35 @@
-$NetBSD: patch-aa,v 1.6 1999/08/30 08:54:03 jlam Exp $
+$NetBSD: patch-aa,v 1.7 1999/10/22 23:47:58 tron Exp $
 
---- configure.orig	Thu May 27 20:43:55 1999
-+++ configure	Sun Aug 29 18:59:43 1999
-@@ -2466,6 +2466,7 @@
- USE_SYMBOL_UNDERSCORE=${ac_cv_sys_symbol_underscore=no}
+--- configure.orig	Wed Sep 29 02:47:35 1999
++++ configure	Sat Oct 23 00:27:20 1999
+@@ -2254,6 +2254,7 @@
  
- # Always use our own libtool.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
-@@ -2697,6 +2698,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++if false; then
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+ test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+@@ -2406,6 +2407,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -5116,7 +5118,7 @@
+@@ -5627,6 +5629,7 @@
+ rm -f confcache
  
  
- 
--
 +if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -5651,6 +5654,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -5349,6 +5351,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
