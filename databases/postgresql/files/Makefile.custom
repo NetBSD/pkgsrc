@@ -1,8 +1,10 @@
-# $NetBSD: Makefile.custom,v 1.7 2001/06/21 21:40:07 jlam Exp $
+# $NetBSD: Makefile.custom,v 1.8 2004/01/21 18:41:27 jlam Exp $
 #
 # This file is included by Makefile.global, which is included by every
 # sub-Makefile in the build tree.  Makefiles for shared libraries include
 # Makefile.global then Makefile.shlib.
+
+pkglibdir = $(exec_prefix)/lib/postgresql
 
 ifdef INSTALLED_LIBPQ
 libpq = -lpq
