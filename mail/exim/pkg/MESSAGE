@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2000/08/04 14:55:10 ad Exp $
+
+To use exim, you will need to perform the following steps manually; it is
+inappropriate for this package to make the changes for you.
+
+1. Add a `mail' user: mail:*:8:6::0:0:Mail subsystem:/var/mail:/sbin/nologin
+2. Set the correct ownership and permissions on the exim log directory:
+   chown mail:mail /var/log/exim && chmod 750 /var/log/exim
+3. Read the documentation. Edit /usr/pkg/etc/exim/configure to taste.
+4. Back-up /etc/mailer.conf to /etc/mailer.conf.sendmail.
+   Copy /usr/pkg/etc/exim/mailer.conf.exim to /etc/mailer.conf.
+5. Set sendmail=NO in /etc/rc.conf. Add the folllowing to /etc/rc.local:
+   echo -n ' exim'; /usr/pkg/etc/rc.d/exim.sh
+6. Configuring log rotation is dependant on personal taste and the version of
+   NetBSD in use. See weekly.conf(5), newsyslog(8), exicyclog and eximstats.
+
+===========================================================================
