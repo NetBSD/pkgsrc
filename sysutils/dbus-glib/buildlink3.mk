@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/03/16 21:14:46 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/03/22 10:55:13 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 DBUS_GLIB_BUILDLINK3_MK:=	${DBUS_GLIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndbus-glib}
 BUILDLINK_PACKAGES+=	dbus-glib
 
 .if !empty(DBUS_GLIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.dbus-glib+=	dbus-glib>=0.22
+BUILDLINK_DEPENDS.dbus-glib+=	dbus-glib>=0.23.4
 BUILDLINK_PKGSRCDIR.dbus-glib?=	../../sysutils/dbus-glib
 .endif	# DBUS_GLIB_BUILDLINK3_MK
 
