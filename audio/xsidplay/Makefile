@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/08/31 12:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/15 02:15:11 dmcmahill Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
@@ -20,6 +20,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 
