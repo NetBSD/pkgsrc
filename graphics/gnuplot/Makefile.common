@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/06/26 06:40:08 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/06/29 18:10:53 adrianp Exp $
 #
 
 DISTNAME=		gnuplot-4.0.0
@@ -24,6 +24,7 @@ INFO_FILES=		gnuplot.info
 CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--with-plot=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+CONFIGURE_ARGS+=	--without-lisp-files
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
