@@ -1,0 +1,21 @@
+YPLOT is a program which combines the power of the Yorick programming
+language with the graphical capabilities of PLPlot. With YPLOT it is
+possible to create plots of both draft and publication quality very
+quickly and efficiently.
+
+YPLOT can do linear plots, log-log plots (with any variations of log
+and linear axes possible), 3D surface and mesh plots (there is a
+difference, really ;-), 3D line and scatter plots, grid lines, with
+lots of symbols and stroked fonts to choose from (all scalable).
+YPLOT gives the user full control over boxes drawn, captions, fonts
+and placement of labels.
+
+Plotting with YPLOT is fast due to the interpreted nature of YPLOT
+(which means decreased development time), and the efficiency of Yorick.
+
+Lots of output devices are available, including X11, Postscript,
+Laserjet printers, and PLPlot metafiles for later rendering.
+
+The packages also includes a tutorial and reference manual that
+demonstrates most of YPLOT's capabilities with explanations every step
+of the way!
