@@ -1,4 +1,4 @@
-transcode is a text console video-stream processing tool.
+transcode is a command line video-stream processing tool.
 It supports elementary video and audio frame transformations.
 Some example modules are included to enable import of MPEG-1/2,
 Digital Video, and other formats.  It also includes export
