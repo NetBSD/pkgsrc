@@ -1,16 +1,16 @@
 # New ports collection makefile for:    linux_lib
 # Version required:	2.1
-# Date created:         
+# Date created:         1997/12/04
 # Whom:                 erich@FreeBSD.org
 #
-# $NetBSD: Makefile,v 1.3 1998/01/22 10:26:39 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 05:05:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
-ONLY_FOR_ARCHS=	i386
 DISTNAME=	linux_lib-2.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	erich@FreeBSD.org
 
@@ -32,8 +32,8 @@ do-install:
 	@zcat ${DISTDIR}/${DISTNAME}.tar.gz |(cd ${PREFIX}; pax -r)
 
 post-install:
-	-${PREFIX}/sbin/ldconfig
+	-${LDCONFIG} || /usr/bin/true
 	${MKDIR} ${PREFIX}/usr/lib/zoneinfo
-	ln -sf /etc/localtime /${PREFIX}/usr/lib/zoneinfo/localtime
+	ln -sf /etc/localtime ${PREFIX}/usr/lib/zoneinfo/localtime
 
 .include <bsd.port.mk>
