@@ -1,9 +1,12 @@
-$NetBSD: patch-ac,v 1.1 1999/04/09 08:33:51 agc Exp $
+$NetBSD: patch-ac,v 1.2 2000/08/02 05:02:15 thorpej Exp $
 
 Make this compile on Solaris.
 
---- rtty.c	1999/04/09 08:29:25	1.1
-+++ rtty.c	1999/04/09 08:30:06
+Fix a bug where rtty would loop forever if its parent process
+(such as a shell) were to die and close rtty's standard input.
+
+--- rtty.c.orig	Fri Aug 23 15:25:28 1996
++++ rtty.c	Tue Aug  1 21:50:19 2000
 @@ -35,6 +35,10 @@
  #include <pwd.h>
  #include <termios.h>
@@ -15,3 +18,32 @@ Make this compile on Solaris.
  #include "rtty.h"
  #ifdef NEED_BITYPES_H
  # include "bitypes.h"
+@@ -267,11 +271,12 @@
+ tty_input(fd) {
+ 	static enum {base, need_cr, tilde} state = base;
+ 	u_char buf[1];
++	ssize_t cnt;
+ 
+ #if 0
+ 	fcntl(Tty, F_SETFL, fcntl(Tty, F_GETFL, 0)|O_NONBLOCK);
+ #endif
+-	while (1 == read(fd, buf, 1)) {
++	while (1 == (cnt = read(fd, buf, 1))) {
+ 		u_char ch = buf[0];
+ 
+ 		switch (state) {
+@@ -346,6 +351,14 @@
+ 			write(Log, buf, 1);
+ 		}
+ 	}
++
++	if (cnt == 0) {
++		/*
++		 * EOF -- get out now rather than loop forever.
++		 */
++		quit(0);
++	}
++
+ #if 0
+ 	fcntl(Tty, F_SETFL, fcntl(Tty, F_GETFL, 0)&~O_NONBLOCK);
+ #endif
