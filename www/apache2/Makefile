@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/11/10 01:09:10 epg Exp $
+# $NetBSD: Makefile,v 1.51 2004/11/22 07:12:53 jlam Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -25,8 +25,8 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--with-mpm=prefork
 
 # Apache Portable Runtime library configure options
-CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-apr-util=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,8 +48,7 @@ BUILD_DEFS+=		APACHE_MODULES
 APACHE_USER?=	www
 APACHE_GROUP?=	www
 
-SUEXEC_COMMENT?=	"@comment "
-.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+.if defined(APACHE_SUEXEC) && !empty(APACHE_SUEXEC:M[yY][eE][sS])
 APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=     /bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
@@ -61,14 +60,13 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 APACHE_MODULES+=	suexec
 CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=		APACHE_SUEXEC APACHE_SUEXEC_CONFIGURE_ARGS
-SUEXEC_COMMENT=		# empty
-
+PLIST_SUBST+=		SUEXEC_COMMENT=
+.else
+PLIST_SUBST+=		SUEXEC_COMMENT="@comment "
 .endif
 
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
-
-PLIST_SUBST+=		SUEXEC_COMMENT=${SUEXEC_COMMENT}
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
