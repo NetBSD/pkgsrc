@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2002/05/08 15:42:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.120 2002/05/14 18:02:16 jschauma Exp $
 #
 
 COMMENT=	Programming languages
@@ -92,7 +92,9 @@ SUBDIR+=	snobol
 SUBDIR+=	squeak
 SUBDIR+=	stalin
 SUBDIR+=	sun-jdk13
+SUBDIR+=	sun-jdk14
 SUBDIR+=	sun-jre13
+SUBDIR+=	sun-jre14
 SUBDIR+=	swi-prolog
 SUBDIR+=	tcl
 SUBDIR+=	tcl-expect
