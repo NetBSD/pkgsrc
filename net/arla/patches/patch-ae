@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+
+Do not install libutil.a and the header files bool.h, hash.h, heap.h, list.h,
+and log.h. There is a potential conflict with other libutils.
+
+--- util/Makefile.in.orig	Tue May 30 18:49:46 2000
++++ util/Makefile.in		Tue May 30 18:50:13 2000
+@@ -74,17 +74,8 @@
+ libutil_LIB:	$(libutil_OBJS)
+ 
+ install:	all
+-		$(MKINSTALLDIRS) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-		$(INSTALL_DATA) $(LIB) $(DESTDIR)$(libdir)/$(LIB)
+-		for i in $(HEADERS); do \
+-		  $(INSTALL_DATA) $(srcdir)/$$i $(DESTDIR)$(includedir)/$$i; \
+-		done
+ 
+ uninstall:
+-	rm -f $(DESTDIR)$(libdir)/$(LIB)
+-	for i in $(HEADERS); do \
+-	  rm $(DESTDIR)$(includedir)/$$i; \
+-	done
+ 
+ libutil.a:	$(libutil_OBJS)
+ 		$(AR) cr $@ $(libutil_OBJS)

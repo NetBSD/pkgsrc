@@ -1,0 +1,18 @@
+===============================================================================
+Arla now has been installed on your system.
+
+The cache directory used by arla is @ARLA_CACHE@.
+This directory should be on a local disk. You can change the location
+of the cache directory by setting the ARLA_CACHE environment variable
+(or by setting ARLA_CACHE in /etc/mk.conf) to the desired location prior
+to building arla.
+
+To complete the installation you'll have to configure arla.
+Default configuration files are installed in @PREFIX@/etc.
+
+At a minimum, to configure an arla client, copy
+@PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf}.default to
+@PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf} and customize them.
+Also, start arlad from rc.local, using the script provided in
+@PREFIX@/etc/rc.d/arlad.sh
+===============================================================================
