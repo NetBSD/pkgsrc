@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/02 04:00:55 grant Exp $
+bin/gmpc
+share/applications/gmpc.desktop
+share/gmpc/gmpc-tray.png
+share/gmpc/gmpc.glade
+share/gmpc/media-next.png
+share/gmpc/media-pause.png
+share/gmpc/media-play.png
+share/gmpc/media-prev.png
+share/gmpc/media-stop.png
+share/gmpc/tray.png
+share/pixmaps/gmpc.png
+@dirrm share/pixmaps
+@dirrm share/gmpc
+@dirrm share/applications
