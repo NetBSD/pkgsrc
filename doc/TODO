@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1655 2004/04/21 01:22:18 dillo Exp $
+$NetBSD: TODO,v 1.1656 2004/04/21 10:31:48 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -220,7 +220,6 @@ Suggested package updates
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
-	o honeyd-0.8b
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o icepref-2.3
