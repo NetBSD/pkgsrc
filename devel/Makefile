@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/01/26 22:56:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/22 18:38:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -40,6 +40,7 @@
     SUBDIR += mit-pthreads
 #    SUBDIR += mkmf
 #    SUBDIR += mprof
+    SUBDIR += ncurses
     SUBDIR += noweb
 #    SUBDIR += omniBroker
 #    SUBDIR += omniORB
