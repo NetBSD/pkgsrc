@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 1999/08/31 19:26:41 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2000/07/26 15:12:10 veego Exp $
 bin/sudo
-man/man5/sudoers.5
-man/man8/sudo.8
-man/man8/visudo.8
 sbin/visudo
 share/examples/sudo/sudoers
 @exec if [ ! -f /etc/sudoers ]; then cp %D/%F /etc/sudoers; fi; chown 0:0 /etc/sudoers; chmod 0440 /etc/sudoers
