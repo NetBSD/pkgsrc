@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+lib/libhfs.a
+lib/libhfs.so.1.0
+lib/librsrc.a
+lib/librsrc.so.1.0
+include/libhfs/apple.h
+include/libhfs/data.h
+include/libhfs/hfs.h
+include/libhfs/libhfs.h
+include/libhfs/librsrc.h
+include/libhfs/rsrc.h
+share/doc/libhfs/charset.txt
+share/doc/libhfs/libhfs.txt
+share/doc/libhfs/librsrc.txt
+@dirrm include/libhfs
+@dirrm share/doc/libhfs
