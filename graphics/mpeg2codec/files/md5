@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1998/09/28 18:10:27 tron Exp $
+$NetBSD: md5,v 1.2 2001/03/30 07:44:34 zuntum Exp $
 
-MD5 (mpeg2vidcodec_v12.tar.gz) = 4a66565979be0818bd8a41d948943451
+SHA1 (mpeg2vidcodec_v12.tar.gz) = 2ba56c46f3a70213e4f09417ad5340ef2b1e312e
