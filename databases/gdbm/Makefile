@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/08/25 18:38:21 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2002/09/11 00:50:04 schmonz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 INFO_FILES=		gdbm.info
 TEXINFO_OVERRIDE=	YES
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 post-extract:
 	${RM} -f ${WRKSRC}/gdbm.info
