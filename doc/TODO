@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2994 2005/02/04 22:35:03 adrianp Exp $
+$NetBSD: TODO,v 1.2995 2005/02/04 22:48:30 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ Suggested package updates
 	o krusader-1.51
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
-	o lablgtk-1.2.7
 	o latd-1.21
 	o latex2rtf-1.9.16a
 	o lavaps-2.7
