@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.2 2001/02/02 18:18:17 dmcmahill Exp $
+# $NetBSD: tflat,v 1.3 2001/02/06 17:57:11 dmcmahill Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,11 +43,11 @@ BEGIN {
 		exit(1);
 	}
 
-	if ( ARGV[1] ~/^-u$/ ) { 
+	if ( ARGV[1] == "-u" ) { 
 		up=1;
 	}
 	else{
-		if ( ARGV[1] ~/^-d$/ ) { up=0; }
+		if ( ARGV[1] == "-d" ) { up=0; }
 		else{ 
 			printf("tflat: unknown option  \"%s\"\n",ARGV[1]);
 			usage();
@@ -60,22 +60,40 @@ BEGIN {
 	#
 	# Read in the entire depends tree
 	# 
-
 	if (up){
-        	while(getline < InFile > 0){topdepends[$1] = topdepends[$1] " " $2 " " ;}
+        	while(getline < InFile > 0){
+			if ($1 in topdepends)
+				topdepends[$1] = topdepends[$1] " " $2 " " ;
+			else{
+				topdepends[$1] = " " $2 " ";
+			}
+
+			# Note that it is possible for a package "foo/bar" to never
+			# appear in $1.  In fact if foo/bar is not depended upon by
+			# anything and it has depends the it will not show up in $1
+			# however, we need to make sure we get a topdepends[foo/bar]
+			# entry so add it here if its not already there.
+			if (!($2 in topdepends))
+				topdepends[$2] = "";
+		}
 		depstr = " is depended on by: ";
 	}
 	else{
-        	while(getline < InFile > 0){topdepends[$2] = topdepends[$2] " " $1 " " ;}
+        	while(getline < InFile > 0){
+			if ($2 in topdepends)
+				topdepends[$2] = topdepends[$2] " " $1 " " ;
+			else
+				topdepends[$2] = " " $1 " " ;
+		}
 		depstr = " depends on: ";
 	}
 
+	close(InFile);
 	#
 	# Now recurse the tree to give a flattened depends list for each pkg
 	#
 
 
-	depth=0;
 	for (toppkg in topdepends){
 		find_all_depends(toppkg);
 	}
