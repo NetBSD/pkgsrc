@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1303 2004/01/15 17:17:53 reed Exp $
+$NetBSD: TODO,v 1.1304 2004/01/16 07:05:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -110,9 +110,10 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o SDL_gfx-2.0.10
+	o TeXmacs-1.0.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abcde-2.1.10
+	o abcde-2.1.11
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o asc-1.13.9
@@ -125,7 +126,7 @@ Suggested package updates
 	o blinkentools-2.5
 	o bochs-2.1
 	o boehm-gc-6.3alpha2
-	o bogofilter-0.15.13.1
+	o bogofilter-0.15.13.2
 	o bomberclone-0.11.0
 	o cervisia-2.0
 	o clisp-2.32
@@ -180,6 +181,7 @@ Suggested package updates
 	o gettext-0.13.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
+	o gimp-print-4.2.6
 	o gkrellm-2.1.22 [pkgsrc-wip]
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
 	o glib/gtk-2.3.1
@@ -197,11 +199,13 @@ Suggested package updates
 	o gtk-gnutella-0.93
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
+	o guile-pg-0.16 [pkg/24039]
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
 	o icepref-2.3
 	o inn-2.4.1
+	o iozone-3.217
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
@@ -236,7 +240,7 @@ Suggested package updates
 	o mimedefang-2.39 [markd]
 	o minicom-2.1
 	o mowitz-0.3.0
-	o moz-bin-plugger-1.4.2
+	o moz-bin-plugger-1.5
 	o mrproject-0.9.1
 	o mrtg-2.10.12
 	o multi-gnome-terminal-1.6.2
@@ -250,7 +254,7 @@ Suggested package updates
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3 [pkg/24034]
-	o nut-9.7
+	o nut-9.8
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
@@ -335,7 +339,9 @@ Suggested package updates
 	o xine-lib-1rc3a
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
+	o xmame-0.78.1
 	o xmcd-3.2.1
+	o xmess-0.78.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xnc-5.0.2
@@ -346,7 +352,7 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
-	o ysm-2.9.0
+	o ysm-2.9.2
 	o zenicb 1.31 (needs merge with lots of local changes)
 	o zsh-4.0.9
 
