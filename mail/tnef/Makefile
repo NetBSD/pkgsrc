@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:12:55 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/05 14:54:14 heinz Exp $
 #
 
-DISTNAME=	tnef-1.2.3.1
-PKGREVISION=	# empty1
+DISTNAME=	tnef-1.3.1
+PKGREVISION=	# empty
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
 
 MAINTAINER=	heinz@NetBSD.org
-HOMEPAGE=	http://world.std.com/~damned/software.html
+HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
