@@ -1,0 +1,56 @@
+--- src/makemake.in.orig	Sun Aug  9 21:27:13 1998
++++ src/makemake.in	Sun Sep  6 21:55:57 1998
+@@ -1034,6 +1034,9 @@
+     *) ;;
+   esac
+ fi
++if [ "$TSYSOS" = "netbsd" ] ; then # NetBSD
++      XCFLAGS=$XCFLAGS' -DNO_GENERATIONAL_GC'
++fi     
+ 
+ if [ $TSYS = sun4 -a $CROSS = false ] ; then
+   ARCH_K=`(arch -k) 2>/dev/null || uname -m 2>/dev/null` # kernel architecture, see arch(1)
+@@ -2326,7 +2329,7 @@
+   if [ $HOS = unix ] ; then
+     echotab "if test -d locale; then rm -rf locale; fi"
+     echotab "mkdir locale"
+-    echotab "(cd gettext/po && \$(MAKE) && \$(MAKE) install datadir=../.. localedir='\$\$(datadir)/locale' INSTALL_DATA=ln) || (rm -rf locale ; exit 1)"
++    echotab "(cd gettext/po && \$(MAKE) && \$(MAKE) install datadir=../.. localedir='\$\$(datadir)/locale' INSTALL_DATA=\"ln -f\") || (rm -rf locale ; exit 1)"
+   else
+     echotab "mkdir locale"
+     eval `grep ALL_LINGUAS= src/gettext/configure.in`
+@@ -2842,7 +2845,7 @@
+     fi
+     case "$fsstnd" in
+       gnu_ext)
+-        echotab "if [ ! -d \$(mandir)/html ] ; then mkdir \$(mandir)/html ; fi"
++        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
+         ;;
+       suse)
+         echotab "if [ ! -d \$(docdir) ] ; then mkdir \$(docdir) ; fi"
+@@ -2894,10 +2897,10 @@
+     fi
+     case "$fsstnd" in
+       gnu_ext)
+-        echotab "if [ ! -d \$(mandir)/html ] ; then mkdir \$(mandir)/html ; fi"
+-        echotab "\$(INSTALL_DATA) clisp.html \$(mandir)/html/clisp.html"
++        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
++        echotab "\$(INSTALL_DATA) clisp.html \$(prefix)/share/doc/clisp/clisp.html"
+         if [ $TERMINAL = readline ] ; then
+-          echotab "\$(INSTALL_DATA) clreadline.html \$(mandir)/html/clreadline.html"
++          echotab "\$(INSTALL_DATA) clreadline.html \$(prefix)/share/doc/clisp/clreadline.html"
+         fi
+         ;;
+       suse)
+@@ -2931,9 +2934,9 @@
+     fi
+     case "$fsstnd" in
+       gnu_ext)
+-        echotab "\$(RM) \$(mandir)/html/clisp.html"
++        echotab "\$(RM) \$(prefix)/share/doc/clisp/clisp.html"
+         if [ $TERMINAL = readline ] ; then
+-          echotab "\$(RM) \$(mandir)/html/clreadline.html"
++          echotab "\$(RM) \$(prefix)/share/doc/clisp/clreadline.html"
+         fi
+         ;;
+       suse)
