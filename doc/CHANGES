@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.622 2002/11/27 17:20:06 agc Exp $
+$NetBSD: CHANGES,v 1.623 2002/11/27 18:42:02 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3742,3 +3742,11 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated vile to 9.3 [agc 2002-11-27]
 	Updated xvile to 9.3 [agc 2002-11-27]
 	Added splint-3.0.1.6 [mjl 2002-11-27]
+	Updated zope25-ZPhotoSlides to 0.6 [drochner 2002-11-27]
+	Updated zope25-Formulator to 1.3.0 [drochner 2002-11-27]
+	Updated gimp-print to 4.2.4 [drochner 2002-11-27]
+	Updated zope25-AbracadabraObject to 1.5.0 [drochner 2002-11-27]
+	Updated zope25-PropertyObject to 1.2.1 [drochner 2002-11-27]
+	Updated zope25-PropertyFolder to 1.2.1 [drochner 2002-11-27]
+	Updated py-FourSuite to 0.12.0a3 [drochner 2002-11-27]
+	Updated gettext to 0.11.5 [drochner 2002-11-27]
