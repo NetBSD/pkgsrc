@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1918 2003/04/12 14:15:37 wiz Exp $
+$NetBSD: CHANGES,v 1.1919 2003/04/12 14:45:22 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-osd-2.2.0 [jmmv 2003-04-12]
 	Updated mew3 to 3.2 [uebayasi 2003-04-12]
 	Updated leim to 21.3 [wiz 2003-04-12]
+	Updated bins to 1.1.21nb1 [martti 2003-04-12]
