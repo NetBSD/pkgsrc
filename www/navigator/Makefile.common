@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2000/08/23 10:41:52 abs Exp $
+# $NetBSD: Makefile.common,v 1.20 2000/09/02 23:18:28 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -70,14 +70,8 @@ MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
 .endif
 #
 
-NS_VERS_SHORT=	${NS_VERS:S/.//}
-DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
-PKGNAME=	${BINNAME}-${NS_VERS}
-CATEGORIES=	www
-SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/${DIST_SDIR_NAME}
-ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
-
 MIRROR_DISTFILE=no
+NO_BUILD=	yes
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
@@ -86,9 +80,18 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
+CATEGORIES=	www
+PKGNAME=	${BINNAME}-${NS_VERS}
+DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
+
+.if (${BINNAME} != "netscape")
+
+NS_VERS_SHORT=	${NS_VERS:S/.//}
+SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/${DIST_SDIR_NAME}
+
 BUILD_DEFS+=	NS_ENCRYPTION
 DIST_SUBDIR=	netscape
-NO_BUILD=	yes
 
 WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
@@ -140,4 +143,4 @@ do-install:
 	cd ${MOZILLA_HOME} ; patch -s < ${FILESDIR}/bookmarks.patch
 	@${RM} -f ${MOZILLA_HOME}/bookmark.htm.orig
 
-.include "../../mk/bsd.pkg.mk"
+.endif
