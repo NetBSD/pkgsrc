@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6767 2004/08/02 16:52:29 recht Exp $
+$NetBSD: CHANGES,v 1.6768 2004/08/02 17:03:47 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3693,3 +3693,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated groff to 1.19.1nb1 [wiz 2004-08-02]
 	Updated getmail to 4.0.3 [schmonz 2004-08-02]
 	Updated grub to 0.95nb1 [recht 2004-08-02]
+	Updated python21 to 2.1.3nb3 [recht 2004-08-02]
+	Updated python21-pth to 2.1.3nb5 [recht 2004-08-02]
