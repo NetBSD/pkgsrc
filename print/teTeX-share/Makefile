@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/20 02:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/31 03:08:09 wiz Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -24,7 +24,7 @@ EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	cd ${PREFIX}/share/texmf; ${PAX} -crzf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} `${CAT} ${FILESDIR}/exclude`
+	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -cr `${CAT} ${FILESDIR}/exclude`
 
 post-install:
 	@cd ${PREFIX}/share/texmf/tex/latex/base && \

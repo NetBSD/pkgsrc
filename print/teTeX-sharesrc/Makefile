@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/20 02:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/31 03:08:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -28,7 +28,7 @@ EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	cd ${PREFIX}/share/texmf; ${PAX} -rzf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
+	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -r
 
 post-install:
 	@cd ${PREFIX}/share/texmf/source/latex/base && \
