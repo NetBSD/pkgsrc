@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2952 2003/07/31 09:18:16 abs Exp $
+$NetBSD: CHANGES,v 1.2953 2003/07/31 09:42:21 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3152,3 +3152,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed lukemftp [lukem 2003-07-31]
 	Added tnftp-20030731 [lukem 2003-07-31]
 	Updated fix4SA110rev2 to 1.0nb1 [abs 2003-07-31]
+	Updated mtree to 20030731 [grant 2003-07-31]
+	Updated pax to 20030731 [grant 2003-07-31]
