@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6981 2004/08/23 14:50:04 tv Exp $
+$NetBSD: CHANGES,v 1.6982 2004/08/23 15:18:20 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bozohttpd to 20040823 [mrg 2004-08-23]
 	Added kkbswitch-1.4.1 [markd 2004-08-23]
 	Removed guavac [tv 2004-08-23]
+	Updated fidogate to 4.4.9nb1 [tv 2004-08-23]
