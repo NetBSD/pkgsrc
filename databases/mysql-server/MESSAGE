@@ -1,10 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2003/05/06 17:40:45 jmmv Exp $
-
-The MySQL directory `${MYSQL_DATADIR}' should be owned by the
-user `${MYSQL_USER}' and group `${MYSQL_GROUP}'.  This can be done with:
-	chown -R ${MYSQL_USER}:${MYSQL_GROUP} ${MYSQL_DATADIR}
-
+$NetBSD: MESSAGE,v 1.7 2003/09/19 14:34:57 wiz Exp $
 
 If this is a new installation, please remember to set a password for
 the MySQL root user!  This is done by running both:
