@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.229 2002/10/12 06:18:54 rh Exp $
+$NetBSD: CHANGES,v 1.230 2002/10/12 07:33:26 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated evolution to 1.0.8nb4 [rh 2002-10-11]
 	Updated lsof to 4.65 [atatat 2002-10-11]
 	Added glchess-0.4.6 [rh 2002-10-12]
+	Updated glchess to 0.4.7 [rh 2002-10-12]
