@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.31 2001/10/02 23:08:17 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.32 2001/10/03 22:25:16 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -168,6 +168,8 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 
 .include "../../mk/bsd.prefs.mk"
 
+CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
+
 # REPLACE_LIBNAMES_SCRIPT runs sed with ${REPLACE_LIBNAMES_SED} as the
 # substitution expression on the files specified in $${replace_libnames}.
 # The following variables need to be predefined:
@@ -183,21 +185,29 @@ REPLACE_LIBNAMES_SCRIPT=						\
 			${ECHO_MSG} "$${message}";			\
 			cd ${WRKSRC};					\
 			for file in $${replace_libnames}; do		\
-				${ECHO_MSG} "	$${file}";		\
-				${SED}	${REPLACE_LIBNAMES_SED}		\
-					$${file} > $${file}.fixed;	\
-				if [ -x $${file} ]; then		\
-					${CHMOD} +x $${file}.fixed;	\
+				if ${CHECK_IS_TEXT_FILE}; then		\
+					${ECHO_MSG} "	$${file}";	\
+					${SED}	${REPLACE_LIBNAMES_SED}	\
+						$${file} > $${file}.fixed; \
+					if [ -x $${file} ]; then	\
+						${CHMOD} +x $${file}.fixed; \
+					fi;				\
+					${MV} -f $${file}.fixed $${file}; \
+					${ECHO} $${file} >> $${cookie};	\
 				fi;					\
-				${MV} -f $${file}.fixed $${file};	\
-				${ECHO} $${file} >> $${cookie};		\
 			done;						\
 		fi;							\
 	fi
 
 .if (${OBJECT_FMT} == "a.out")
+REPLACE_LIBNAME_PATTERNS+=	Makefile
+REPLACE_LIBNAME_PATTERNS+=	Makeconf
+REPLACE_LIBNAME_PATTERNS+=	*.mk
+REPLACE_LIBNAME_PATTERNS_FIND=	\
+	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-or -name !/:S/!/"/g:S/-or//1}
+
 REPLACE_LIBNAMES+=	\
-	`cd ${WRKSRC}; ${FIND} . -name "Makefile" -or -name "Makeconf" -or -name "*.mk" | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 .endif
 
 .if defined(REPLACE_LIBNAMES)
@@ -228,15 +238,16 @@ replace-libnames-makefiles:
 	${REPLACE_LIBNAMES_SCRIPT}
 .endif	# REPLACE_LIBNAMES
 
-# Note: This hack uses some libtool internals to correctly fix the references
-# to ${BUILDLINK_DIR} into ${LOCALBASE}.
-#
-.if defined(USE_LIBTOOL)
-LIBTOOL_ARCHIVES=	\
-	`cd ${WRKSRC}; ${FIND} . -name "*.lai" | ${SED} -e 's|^\./||' | ${SORT}`
+REPLACE_BUILDLINK_PATTERNS+=	*.lai
+REPLACE_BUILDLINK_PATTERNS+=	*-config
+REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
+REPLACE_BUILDLINK_PATTERNS+=	*.pc
+REPLACE_BUILDLINK_PATTERNS_FIND=	\
+	${REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-or -name !/:S/!/"/g:S/-or//1}
 
-REPLACE_BUILDLINK+=	${LIBTOOL_ARCHIVES}
-.endif
+REPLACE_BUILDLINK+=	\
+        `cd ${WRKSRC}; ${FIND} . ${REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+
 
 .if defined(REPLACE_BUILDLINK)
 post-build: replace-buildlink
@@ -257,16 +268,18 @@ replace-buildlink:
 			${ECHO_MSG} "Fixing directory references and library names:"; \
 			cd ${WRKSRC};					\
 			for file in ${REPLACE_BUILDLINK}; do		\
-				${ECHO_MSG} "	$${file}";		\
-				${SED}	${REPLACE_BUILDLINK_SED}	\
-					${REPLACE_BUILDLINK_POST_SED}	\
-					${REPLACE_LIBNAMES_SED}		\
-					$${file} > $${file}.fixed;	\
-				if [ -x $${file} ]; then		\
-					${CHMOD} +x $${file}.fixed;	\
+				if ${CHECK_IS_TEXT_FILE}; then		\
+					${ECHO_MSG} "	$${file}";	\
+					${SED}	${REPLACE_BUILDLINK_SED} \
+						${REPLACE_BUILDLINK_POST_SED} \
+						${REPLACE_LIBNAMES_SED}	\
+						$${file} > $${file}.fixed; \
+					if [ -x $${file} ]; then	\
+						${CHMOD} +x $${file}.fixed; \
+					fi;				\
+					${MV} -f $${file}.fixed $${file}; \
+					${ECHO} $${file} >> $${cookie};	\
 				fi;					\
-				${MV} -f $${file}.fixed $${file};	\
-				${ECHO} $${file} >> $${cookie};		\
 			done;						\
 		fi;							\
 	fi
