@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/18 15:20:24 veego Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/25 14:43:22 taca Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.13
@@ -19,6 +19,7 @@ NO_BUILD=	# defined
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PREFIX}/lib/perl5/site_perl/jcode.pl
+	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PERL5_SITELIB}/jcode.pl
 
 .include "../../mk/bsd.pkg.mk"
