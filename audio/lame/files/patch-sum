@@ -1,3 +1,4 @@
-$NetBSD: patch-sum,v 1.7 2000/02/08 16:54:41 garbled Exp $
+$NetBSD: patch-sum,v 1.8 2000/02/15 18:12:17 garbled Exp $
 
 MD5 (patch-aa) = 7f2e2c817e9e0bd65dbcda7f53736aee
+MD5 (patch-ab) = 1646d21bb070c5e8a43100200b130948
