@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/26 21:50:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/26 22:34:17 snj Exp $
 #
 
 DISTNAME=	gpsim-0.21.2
@@ -9,9 +9,9 @@ MAINTAINER=	snoonan@tbearsiberians.com
 HOMEPAGE=	http://www.dattalo.com/gnupic/gpsim.html
 COMMENT=	PIC emulator with X interface
 
-USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--with-exdbm=${BUILDLINK_PREFIX.eXdbm}
+USE_BUILDLINK3=	YES
+USE_LANGUAGES=	c c++
 
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
@@ -22,8 +22,8 @@ USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
 
 CONFLICTS=	eXdbm-[0-9]*
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../x11/gtk+extra/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk+extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
