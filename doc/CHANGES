@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1906 2003/04/11 16:23:05 gehenna Exp $
+$NetBSD: CHANGES,v 1.1907 2003/04/11 17:09:45 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.61 [jmmv 2003-04-11]
 	Added ircservices-5.0.16 [jmmv 2003-04-11]
 	Updated cvsync to 0.19.2 [gehenna 2003-04-11]
+	Added nettest-92.11.09 [cjep 2003-04-11]
