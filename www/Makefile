@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2003/01/05 04:14:52 rh Exp $
+# $NetBSD: Makefile,v 1.235 2003/02/03 20:27:21 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -32,6 +32,7 @@ SUBDIR+=	ap-ssl
 SUBDIR+=	ap-xslt
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-php4
+SUBDIR+=	ap2-subversion
 SUBDIR+=	apache
 SUBDIR+=	apache2
 SUBDIR+=	apache6
