@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2004/03/11 22:07:23 reed Exp $
+# $NetBSD: Makefile,v 1.123 2004/03/29 10:04:09 grant Exp $
 #
 
 COMMENT=	Databases
@@ -66,6 +66,7 @@ SUBDIR+=	p5-SQL-Statement
 SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
 SUBDIR+=	p5-postgresql
+SUBDIR+=	p5-sybperl
 SUBDIR+=	pgaccess
 SUBDIR+=	php4-dba
 SUBDIR+=	php4-dbase
@@ -112,6 +113,7 @@ SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
 SUBDIR+=	sqlite
 SUBDIR+=	sqsh
+SUBDIR+=	sqsh-x11
 SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tcl-postgresql
