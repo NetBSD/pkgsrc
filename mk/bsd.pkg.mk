@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1517 2004/10/13 15:31:31 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1518 2004/10/13 17:52:46 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4671,6 +4671,13 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
 		fi;							\
+		linklibs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^[^@].*\.so$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		for i in $${linklibs}; do				\
+			if ${TEST} -r $$i -a ! -x $$i; then		\
+				${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
+				${CHMOD} +x $$i;			\
+			fi;						\
+		done;							\
 		;;							\
 	Mach-O)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.dylib/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
