@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2004/11/30 16:59:30 taca Exp $
+# $NetBSD: Makefile,v 1.580 2004/12/02 21:08:03 dillo Exp $
 #
 
 COMMENT=	Development utilities
@@ -158,6 +158,7 @@ SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
 SUBDIR+=	gob
+SUBDIR+=	gob2
 SUBDIR+=	gobo-eiffel
 SUBDIR+=	gperf
 SUBDIR+=	gputils
