@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/25 14:12:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/26 10:11:58 xtraeme Exp $
 
-DISTNAME=	maradns-1.0.17
+DISTNAME=	maradns-1.0.18
 CATEGORIES=	net
 MASTER_SITES=	http://www.maradns.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,6 @@ CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
 
 post-install:
 	${MV} ${PREFIX}/doc/${DISTNAME} ${PREFIX}/share/doc/maradns
-	${RMDIR} ${PREFIX}/doc/
 	${MV} ${PREFIX}/share/doc/maradns/examples \
 		${PREFIX}/share/examples/maradns
 
