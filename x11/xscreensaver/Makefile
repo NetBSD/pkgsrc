@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/08/25 13:37:37 agc Exp $
+# $NetBSD: Makefile,v 1.30 1999/08/29 09:05:49 rh Exp $
 #
 
 DISTNAME=	xscreensaver-3.17
@@ -8,9 +8,9 @@ MASTER_SITES=	http://www.jwz.org/xscreensaver/
 MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.jwz.org/xscreensaver/
 
-DEPENDS=	xpm-3.4k:../../graphics/xpm	\
-		Mesa-3.0:../../graphics/Mesa	\
-		gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
+DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-shadow --with-zippy=/usr/games/fortune \
