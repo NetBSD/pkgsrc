@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+
+--- ../configure.in.orig	2004-04-17 07:28:02.000000000 +0900
++++ ../configure.in	2004-07-27 01:25:32.000000000 +0900
+@@ -933,6 +933,9 @@
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
+     MDCPUCFG_H=_freebsd.cfg
+     PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     ;;
+ 
+ *-hpux*)
+@@ -1409,6 +1412,7 @@
+     AC_DEFINE(XP_UNIX)
+     AC_DEFINE(NETBSD)
+     AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
+     USE_NSPR_THREADS=1
+     MDCPUCFG_H=_netbsd.cfg
+     PR_MD_CSRCS=netbsd.c
