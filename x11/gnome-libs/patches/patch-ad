@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 1999/05/04 20:31:32 tron Exp $
+$NetBSD: patch-ad,v 1.7 1999/07/15 07:57:50 tron Exp $
 
 --- libgnome/Makefile.in.orig	Wed Apr 28 02:57:58 1999
 +++ libgnome/Makefile.in	Tue May  4 19:26:57 1999
@@ -11,12 +11,3 @@ $NetBSD: patch-ad,v 1.6 1999/05/04 20:31:32 tron Exp $
  DATADIRNAME = @DATADIRNAME@
  DLLTOOL = @DLLTOOL@
  DL_LIB = @DL_LIB@
-@@ -118,7 +118,7 @@
- LIBGTKXMHTML_LIBS = @LIBGTKXMHTML_LIBS@
- LIBOBJS = @LIBOBJS@
- LIBSUPPORT = @LIBSUPPORT@
--LIBTOOL = @LIBTOOL@
-+LIBTOOL = @LIBTOOL@ ${A_OUT_LIBTOOL_FLAGS}
- LN_S = @LN_S@
- LTLIBOBJS = @LTLIBOBJS@
- MAINT = @MAINT@
