@@ -1,0 +1,16 @@
+--- imap/src/osdep/unix/env_unix.c.sma	Sun Jan 31 02:25:32 1999
++++ imap/src/osdep/unix/env_unix.c	Sun Jan 31 02:27:14 1999
+@@ -547,6 +547,13 @@
+ char *sysinbox ()
+ {
+   char tmp[MAILTMPLEN];
++  char *t;
++
++  if (!sysInbox) {
++    t = getenv("MAIL");
++    if (t != NULL)
++      sysInbox = cpystr(t);
++  }
+   if (!sysInbox) {		/* initialize if first time */
+     sprintf (tmp,"%s/%s",MAILSPOOL,myusername ());
+     sysInbox = cpystr (tmp);	/* system inbox is from mail spool */
