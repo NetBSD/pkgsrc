@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/03/29 05:05:46 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/04/20 19:19:23 jdolecek Exp $
 
 .if !defined(PHP4_BUILDLINK2_MK)
 PHP4_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		php4
 BUILDLINK_PKGBASE.php4?=	php
-BUILDLINK_DEPENDS.php4?=	php>=4.3.4
+BUILDLINK_DEPENDS.php4?=	php>=4.3.6
 BUILDLINK_PKGSRCDIR.php4?=	../../www/php4
 
 # This adds a build-dependency as php4 has no libraries.
