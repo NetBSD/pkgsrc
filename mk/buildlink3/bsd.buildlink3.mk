@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.94 2004/02/18 19:16:52 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.95 2004/02/19 07:41:44 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -133,8 +133,8 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 # see if it satisfies them all.  The key fact is the the strictest
 # dependency, when converted to a pkg name, will satisfy every dependency.
 #
-_BLNK_DEPENDS.${_pkg_}=		${BUILDLINK_DEPENDS.${_pkg_}:N*>=[0-9]*}
-_BLNK_GE_DEPENDS.${_pkg_}=	${BUILDLINK_DEPENDS.${_pkg_}:M*>=[0-9]*}
+_BLNK_DEPENDS.${_pkg_}=		# empty
+_BLNK_GE_DEPENDS.${_pkg_}=	${BUILDLINK_DEPENDS.${_pkg_}:N*{*:M*>=[0-9]*}
 _BLNK_STRICTEST_DEPENDS.${_pkg_}?=	none
 .      for _depend_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
 .        for _dep2pkg_ in ${_depend_:S/>=/-/}
@@ -161,8 +161,13 @@ _BLNK_STRICTEST_DEPENDS.${_pkg_}=	${_depend_}
 # If the dependencies simply conflict, then pass them on through to the
 # normal dependency handling code.
 #
-_BLNK_DEPENDS.${_pkg_}=		${BUILDLINK_DEPENDS.${_pkg_}}
+_BLNK_DEPENDS.${_pkg_}+=	${BUILDLINK_DEPENDS.${_pkg_}}
 .      else
+.        for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.          if empty(_BLNK_GE_DEPENDS.${_pkg_}:M${_depend_})
+_BLNK_DEPENDS.${_pkg_}+=	${_depend_}
+.          endif
+.        endfor
 _BLNK_DEPENDS.${_pkg_}+=	${_BLNK_STRICTEST_DEPENDS.${_pkg_}}
 .      endif
 #
