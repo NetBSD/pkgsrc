@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2004/02/23 12:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2004/04/11 18:29:34 jschauma Exp $
 #
 
 DISTNAME=	pkglint-3.68
@@ -28,45 +28,32 @@ DISTVER=	${DISTNAME:S/pkglint-//}
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1
 
+SUBST_FILES=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.1 pkglint.0
+SUBST_FILES+=	pkglint.pl plist-clash.pl
+
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-# This doesn't create readable manual pages. "mandoc" should be added
-# to zoularis.
-NROFF=		nroff -man
-.else
-NROFF=		nroff -mandoc
-.endif
-
-do-extract:
-	@${MKDIR} ${WRKSRC}/src
-.for FILE in lintpkgsrc.1 lintpkgsrc.pl pkglint.1 pkglint.pl plist-clash.pl
-	${CP} ${FILESDIR}/${FILE} ${WRKSRC}/src/${FILE}
-.endfor
-
 do-build:
-.for FILE in pkglint lintpkgsrc plist-clash
+	@${MKDIR} ${WRKSRC}/src
+.for FILE in ${SUBST_FILES}
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
 		-e 's|@PERL@|${PERL5}|g'		\
-		< ${WRKSRC}/src/${FILE}.pl 		\
-		> ${WRKSRC}/${FILE}
+		${FILESDIR}/${FILE} > ${WRKSRC}/${FILE}
 .endfor
-.for FILE in pkglint lintpkgsrc
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
-		-e 's|@MAKE@|${MAKE}|g'			\
-		< ${WRKSRC}/src/${FILE}.1		\
-		> ${WRKSRC}/${FILE}.1
-	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
-.endfor
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+   # the pre-generated man-pages are 'mandoc';  these OS need 'man'
+.  for FILE in lintpkgsrc pkglint
+	nroff -man ${WRKSRC}/${FILE}.1 > ${WRKSRC}/${FILE}.0
+.  endfor
+.endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkglint ${PREFIX}/bin/pkglint
-	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc ${PREFIX}/bin/lintpkgsrc
-	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash ${PREFIX}/bin/plist-clash
+	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${PREFIX}/bin/pkglint
+	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${PREFIX}/bin/lintpkgsrc
+	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${PREFIX}/bin/plist-clash
 	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/man/cat1
