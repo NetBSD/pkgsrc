@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.11 2000/08/26 16:41:49 wiz Exp $
+
+--- src/mixer.c.orig	Mon Jul 24 00:25:50 2000
++++ src/mixer.c
+@@ -265,6 +265,17 @@
+ mixer_devinfo_t *infos;
+ mixer_ctrl_t *values;
+ 
++char *
++catstr(char *p, char *q)
++{
++  char *r = malloc(strlen(p) + strlen(q) + 2);
++  strcpy(r, p);
++  strcat(r, ".");
++  strcat(r, q);
++  return r;
++}
++
++
+ void mixer_init(gint init_device_id)
+ {
+   int fd, i, ndev;
+@@ -306,7 +317,9 @@
+     if (infos[i].type == AUDIO_MIXER_VALUE) {
+       DeviceData *device = g_new0(DeviceData, 1);
+       device->device_id = i;
+-      device->device_name = infos[i].label.name;
++      device->device_name =
++	  catstr(infos[infos[i].mixer_class].label.name,
++		 infos[i].label.name);
+       device->stereo = 1;
+       device->recordable = 0;
+       device_list = g_list_append(device_list, device);
