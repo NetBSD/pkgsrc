@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1 1999/11/03 04:18:47 jlam Exp $
+
+--- lib/Xm/Makefile.in.orig	Mon Sep  6 17:13:31 1999
++++ lib/Xm/Makefile.in	Tue Nov  2 22:19:27 1999
+@@ -323,7 +323,6 @@
+ 
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am
