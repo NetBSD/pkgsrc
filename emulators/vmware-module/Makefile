@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/01/16 12:26:23 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/23 14:32:58 wiz Exp $
 
 DISTNAME=	vmware-netbsd-1.0
 PKGNAME=	vmware-module-1.0
 PKGREVISION=	1
 CATEGORIES=	emulators
-MASTER_SITES=   # empty
+MASTER_SITES=   # on ftp.netbsd.org and mirrors only
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	veego@netbsd.org
@@ -16,19 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-
-DOWNLOAD=	http://www.wasabisystems.com/vmware-survey.html
-
-_FETCH_MESSAGE=	\
-	${ECHO} "==============================================================="; \
-	${ECHO} "  The VMware kernel module must be fetched into \"${DISTDIR}\""; \
-	${ECHO} "  via the Web formular available under this URL:"; \
-	${ECHO} "  ${DOWNLOAD}"; \
-	${ECHO} "==============================================================="
+NO_SRC_ON_FTP=		already there
 
 # to override <bsd.own.mk>, MUST be set this way BEFORE bsd.prefs.mk
 BSDSRCDIR?=	/nonexistent
