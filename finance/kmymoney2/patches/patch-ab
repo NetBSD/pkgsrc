@@ -1,12 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/05 12:46:31 markd Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/15 13:58:51 markd Exp $
 
---- kmymoney2/dialogs/kbackupdlgdecl.h.orig	2003-01-06 14:33:09.000000000 -0500
-+++ kmymoney2/dialogs/kbackupdlgdecl.h
-@@ -39,6 +39,7 @@ public:
-     QCheckBox* mountCheckBox;
-     QPushButton* btnOK;
-     QPushButton* btnCancel;
-+    void languageChange();
+--- doc/en/Makefile.in.orig	2004-06-07 05:13:54.000000000 +1200
++++ doc/en/Makefile.in
+@@ -462,10 +462,10 @@ uninstall-am: uninstall-info-am
+ # the automatic KDE install installs this file as well,
+ # but we don't need it, so we remove immediately
+ # and install it with the man pages on this system
+-install-data-hook: kmymoney2.1.gz
++install-data-hook: kmymoney2.1
+ 	-rm -f $(DESTDIR)$(kde_htmldir)/$(KDE_LANG)/kmymoney2/kmymoney2.1
+ 	$(mkinstalldirs) $(DESTDIR)$(mandir)/man1/
+-	$(INSTALL_DATA) $(srcdir)/kmymoney2.1.gz $(DESTDIR)$(mandir)/man1/kmymoney2.1.gz
++	$(INSTALL_DATA) $(srcdir)/kmymoney2.1 $(DESTDIR)$(mandir)/man1/kmymoney2.1
  
- 
- protected:
+ kmymoney2.1.gz: kmymoney2.1
+ 	gzip -c -N kmymoney2.1 > kmymoney2.1.gz

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/04/26 02:44:47 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/15 13:58:51 markd Exp $
 
-DISTNAME=	kmymoney2-0.5.1
-PKGREVISION=	7
+DISTNAME=	kmymoney2-0.6
 CATEGORIES=	finance kde
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/kmymoney2/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jnr@cwru.edu
