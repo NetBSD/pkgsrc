@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2004/09/21 17:26:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2004/10/19 20:34:04 jmmv Exp $
 
 DISTNAME=	gnome-2.8.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -51,6 +52,7 @@ DEPENDS+=	gnome-utils>=2.8.0:../../misc/gnome2-utils
 DEPENDS+=	gnome2-user-docs>=2.8.0:../../misc/gnome2-user-docs
 DEPENDS+=	nautilus-cd-burner>=2.8.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	nautilus-media>=0.8.1:../../multimedia/nautilus-media
+DEPENDS+=	evolution-webcal>=2.0.0:../../time/evolution-webcal
 DEPENDS+=	evolution>=2.0.0:../../mail/evolution
 #DEPENDS+=	gnome-nettool>=0.99.3:../../net/gnome-nettool
 #DEPENDS+=	gnome-system-tools>=1.0.0:../../sysutils/gnome-system-tools
@@ -58,7 +60,6 @@ DEPENDS+=	evolution>=2.0.0:../../mail/evolution
 #DEPENDS+=	gnomemeeting>=1.0.2:../../net/gnomemeeting
 #DEPENDS+=	vino>=2.8.0:../../net/vino
 #DEPENDS+=	ximian-connector>=2.0.0:../../mail/ximian-connector
-#DEPENDS+=	evolution-webcal>=2.0.0:../../time/evolution-webcal
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
