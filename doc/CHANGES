@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4565 2004/01/23 08:43:17 skrll Exp $
+$NetBSD: CHANGES,v 1.4566 2004/01/23 08:59:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -417,3 +417,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mserv to 0.35nb7 [grant 2004-01-23]
 	Updated mserv-devel to 0.39anb1 [grant 2004-01-23]
 	Added tme-0.2 [skrll 2004-01-23]
+	Updated netscape to 20040123 [abs 2004-01-23]
+
