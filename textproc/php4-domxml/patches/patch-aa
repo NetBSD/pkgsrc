@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/02/11 09:33:43 manu Exp $
+--- php_domxml.c.orig	Fri Feb  8 17:19:05 2002
++++ php_domxml.c	Fri Feb  8 17:20:57 2002
+@@ -20,5 +20,6 @@
+ 
++#define IS_EXT_MODULE
+ 
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif
+@@ -88,8 +89,11 @@
+ #endif
+ 	{NULL, NULL, NULL}
+ };
+ 
++#ifndef COMPILE_DL_DOMXML
++ZEND_GET_MODULE(domxml)
++#endif /* COMPILE_DL_DOMXML */
+ 
+ static zend_function_entry php_domxmldoc_class_functions[] = {
+ 	PHP_FALIAS(root,	domxml_root,	NULL)
+ 	PHP_FALIAS(children,	domxml_children,	NULL)
