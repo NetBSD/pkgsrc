@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2000/06/14 07:30:24 kleink Exp $
+$NetBSD: patch-aa,v 1.9 2000/06/14 13:02:18 veego Exp $
 
 --- BuildTools/OS/NetBSD.orig	Tue Dec 29 18:39:50 1998
 +++ BuildTools/OS/NetBSD	Tue Jun 13 19:34:47 2000
@@ -7,9 +7,9 @@ $NetBSD: patch-aa,v 1.8 2000/06/14 07:30:24 kleink Exp $
 -define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
 -define(`confENVDEF', ` -DNETISO')
 +define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX ${LDAP_CONF}')
-+define(`confENVDEF', ` -DNETISO ${DB_ENVDEF} ${LDAP_ENVDEF}')
++define(`confENVDEF', ` -DNETISO -DTCPWRAPPERS ${DB_ENVDEF} ${LDAP_ENVDEF}')
  define(`confDEPEND_TYPE', `CC-M')
-+define(`confLIBS', `${DB_LIBS} ${LDAP_LIBS} ${LDFLAGS}')
++define(`confLIBS', `-lwrap ${DB_LIBS} ${LDAP_LIBS} ${LDFLAGS}')
 +define(`confEBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confMBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confSBINDIR', `${PREFIX}/sbin')
