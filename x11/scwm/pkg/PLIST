@@ -1,33 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/23 14:17:03 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/10/27 11:25:37 agc Exp $
 include/scwmexec.h
 lib/X11/scwm/system.scwmrc
 lib/libscwmexec.so.0.0
-lib/libscwmexec.so.0
-lib/libscwmexec.so
 lib/libscwmexec.a
 lib/scwm-modules/app/scwm/libxpm-menus.so.0.0
-lib/scwm-modules/app/scwm/libxpm-menus.so.0
-lib/scwm-modules/app/scwm/libxpm-menus.so
 lib/scwm-modules/app/scwm/libxpm-menus.a
 lib/scwm-modules/app/scwm/liboverlay-plane.so.0.0
-lib/scwm-modules/app/scwm/liboverlay-plane.so.0
-lib/scwm-modules/app/scwm/liboverlay-plane.so
 lib/scwm-modules/app/scwm/liboverlay-plane.a
 lib/scwm-modules/app/scwm/libpie-menus.so.0.0
-lib/scwm-modules/app/scwm/libpie-menus.so.0
-lib/scwm-modules/app/scwm/libpie-menus.so
 lib/scwm-modules/app/scwm/libpie-menus.a
 lib/scwm-modules/app/scwm/libbackground.so.0.0
-lib/scwm-modules/app/scwm/libbackground.so.0
-lib/scwm-modules/app/scwm/libbackground.so
 lib/scwm-modules/app/scwm/libbackground.a
 lib/scwm-modules/app/scwm/libc-animation.so.0.0
-lib/scwm-modules/app/scwm/libc-animation.so.0
-lib/scwm-modules/app/scwm/libc-animation.so
 lib/scwm-modules/app/scwm/libc-animation.a
 lib/scwm-modules/app/scwm/libscwmgtkhelper.so.0.0
-lib/scwm-modules/app/scwm/libscwmgtkhelper.so.0
-lib/scwm-modules/app/scwm/libscwmgtkhelper.so
 lib/scwm-modules/app/scwm/libscwmgtkhelper.a
 bin/scwm
 bin/scwmexec
