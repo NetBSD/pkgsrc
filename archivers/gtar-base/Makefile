@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/01/21 09:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/02/13 17:41:37 grant Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -27,11 +27,6 @@ CONFIGURE_ARGS+=	--with-catgets
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-.if ${OPSYS} == "Darwin"
-PLIST_SRC=	${.CURDIR}/PLIST.Darwin
-EXTRACT_SUFX=	.tar.gz
-.endif
-
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 PLIST_SUBST+=           GTAR_LINK=""
 .else
@@ -39,7 +34,7 @@ PLIST_SUBST+=           GTAR_LINK="@comment "
 .endif
 
 post-patch:
-	@${ECHO} '' >>${WRKSRC}/po/fr.po
+	@${TOUCH} ${WRKSRC}/po/fr.po
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
