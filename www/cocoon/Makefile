@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/14 02:05:20 jwise Exp $
 
-DISTNAME=	Cocoon-1.8
-PKGNAME=	cocoon-1.8
+DISTNAME=	Cocoon-1.8.2
+PKGNAME=	cocoon-1.8.2
 CATEGORIES=	www
 MASTER_SITES=	http://xml.apache.org/dist/cocoon/
 
@@ -14,7 +14,7 @@ COMMENT=	the Apache Project's XML/XSL based web publishing system
 # libraries will be tested heavily with cocoon, and if not usable will be
 # imported as -current packages.
 DEPENDS+=	xalan-j-1.2:../../textproc/xalan-j
-DEPENDS+=	fop-0.13.0:../../textproc/fop
+DEPENDS+=	fop-0.15.0:../../textproc/fop
 DEPENDS+=	jakarta-tomcat-*:../../www/jakarta-tomcat
 
 # In addition to the above requirements, cocoon will build in support for the
@@ -34,9 +34,11 @@ NO_CONFIGURE=
 USE_JAVA=	yes
 
 post-extract:
-	${RM} ${WRKSRC}/lib/fop_0_13_0.jar ${WRKSRC}/lib/servlet_2_2.jar \
+	${RM} ${WRKSRC}/lib/fop_0_15_0.jar ${WRKSRC}/lib/servlet_2_2.jar \
 		${WRKSRC}/lib/xalan_1_2_D02.jar ${WRKSRC}/lib/xerces_1_2.jar \
-		${WRKSRC}/lib/bsf.jar ${WRKSRC}/lib/bsfengines.jar
+		${WRKSRC}/lib/bsf.jar ${WRKSRC}/lib/bsfengines.jar \
+		${WRKSRC}/lib/xml.jar ${WRKSRC}/lib/xt.jar \
+		${WRKSRC}/lib/fesi.jar
 
 # Yes -- you have to run build.sh _twice_.  The first time triggers a bug in JDK-1.1 javac,
 # and the second time completes successfully.  While we're at it, note that we can't
@@ -55,6 +57,7 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/bin/cocoon.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/turbine-pool.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/lib/sax-bugfix.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/cocoon
 	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/cocoon ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/cocoon
