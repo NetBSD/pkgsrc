@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/06/20 21:06:19 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/05 18:33:30 wiz Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}
@@ -19,7 +19,7 @@ NO_BUILD=
 .include "../../mk/bsd.prefs.mk"
 
 # This installs in /usr to avoid dynamic linker annoyances
-LOCALBASE=		/usr 
+LOCALBASE=		/usr
 NO_MTREE=
 
 do-install:
