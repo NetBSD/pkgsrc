@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:22:58 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -212,7 +212,6 @@ share/kde/apps/konqlistview/kpartplugins/kimgalleryplugin.rc
 share/kde/apps/konqlistview/kpartplugins/smbmounterplugin.rc
 share/kde/apps/konqsidebartng/add/mplayer_add.desktop
 share/kde/apps/konqsidebartng/add/news_add.desktop
-share/kde/apps/konqsidebartng/kicker_entries/mplayer.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/google.png
 share/kde/apps/konqueror/kpartplugins/searchbar.rc
 share/kde/apps/konqueror/servicemenus/imageconverter.desktop
@@ -316,22 +315,22 @@ share/kde/services/renaudiodlg.desktop
 share/kde/services/renimagedlg.desktop
 share/kde/services/vimpart.desktop
 share/kde/services/webarchivethumbnail.desktop
-@comment dirrm share/kde/services/kaddressbook
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/22x22/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/config.kcfg
-@comment dirrm share/kde/config
+@comment in kde: @dirrm share/kde/services/kaddressbook
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/vimpart
 @comment dirrm share/kde/apps/noatun
 @dirrm share/kde/apps/mediacontrol/fulldecent
@@ -339,22 +338,19 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/mediacontrol/blueish
 @dirrm share/kde/apps/mediacontrol
 @dirrm share/kde/apps/ksig
-@comment dirrm share/kde/apps/konqueror/servicemenus
-@comment dirrm share/kde/apps/konqueror/kpartplugins
-@comment dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/apps/konqueror
-@dirrm share/kde/apps/konqsidebartng/kicker_entries
-@dirrm share/kde/apps/konqsidebartng/entries
-@dirrm share/kde/apps/konqsidebartng/add
-@dirrm share/kde/apps/konqlistview/kpartplugins
-@dirrm share/kde/apps/konqiconview/kpartplugins
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqueror/kpartplugins
+@comment in kdebase: @dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16/actions
+@comment in kdebase: @dirrm share/kde/apps/konqsidebartng/add
+@comment in kdebase: @dirrm share/kde/apps/konqlistview/kpartplugins
+@comment in kdebase: @dirrm share/kde/apps/konqiconview/kpartplugins
 @dirrm share/kde/apps/knewsticker/scripts
-@dirrm share/kde/apps/knewsticker
-@dirrm share/kde/apps/kicker/applets
-@comment dirrm share/kde/apps/khtml/kpartplugins
-@comment dirrm share/kde/apps/kcontrol/pics
+@unexec ${RMDIR} %D/share/kde/apps/knewsticker 2>/dev/null || ${TRUE}
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
+@comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @dirrm share/kde/apps/katexmltools
-@comment dirrm share/kde/apps/kate/scripts
+@comment in kde: @dirrm share/kde/apps/kate/scripts
 @dirrm share/kde/apps/kate/plugins/katexmltools
 @dirrm share/kde/apps/kate/plugins/katexmlcheck
 @dirrm share/kde/apps/kate/plugins/katetextfilter
@@ -365,12 +361,12 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/kate/plugins/katehtmltools
 @dirrm share/kde/apps/kate/plugins/katefll
 @dirrm share/kde/apps/kate/plugins/katecppsymbolviewer
-@comment dirrm share/kde/apps/kate/plugins
-@comment dirrm share/kde/apps/kaddressbook
+@comment in kde: @dirrm share/kde/apps/kate/plugins
+@comment in kde: @dirrm share/kde/apps/kaddressbook
 @dirrm share/kde/apps/fsview
 @dirrm share/kde/apps/atlantikdesigner
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/konq-plugins/webarchiver
 @dirrm share/doc/kde/HTML/en/konq-plugins/validators
 @dirrm share/doc/kde/HTML/en/konq-plugins/uachanger
@@ -387,6 +383,6 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/doc/kde/HTML/en/konq-plugins
 @dirrm share/doc/kde/HTML/en/kicker-applets
 @dirrm share/doc/kde/HTML/en/kate-plugins
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3

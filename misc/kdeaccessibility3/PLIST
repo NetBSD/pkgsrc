@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/21 12:43:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/12/10 06:24:58 markd Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -109,14 +109,14 @@ share/kde/icons/locolor/16x16/apps/kmouth.png
 share/kde/icons/locolor/22x22/apps/kmouth.png
 share/kde/icons/locolor/32x32/apps/kmag.png
 share/kde/icons/locolor/32x32/apps/kmouth.png
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/22x22/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/48x48/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/22x22/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/config
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kmouth/icons/hicolor/48x48/actions
 @dirrm share/kde/apps/kmouth/icons/hicolor/48x48
 @dirrm share/kde/apps/kmouth/icons/hicolor/32x32/actions
@@ -147,9 +147,9 @@ share/kde/icons/locolor/32x32/apps/kmouth.png
 @dirrm share/kde/apps/kmag/icons/hicolor
 @dirrm share/kde/apps/kmag/icons
 @dirrm share/kde/apps/kmag
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Applications
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Applications
 @dirrm share/doc/kde/HTML/en/kmouth
 @dirrm share/doc/kde/HTML/en/kmousetool
 @dirrm share/doc/kde/HTML/en/kmag
-@comment dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML/en
