@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.444 2000/05/31 01:07:14 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.445 2000/05/31 02:08:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1792,22 +1792,22 @@ pkg-su-deinstall: uptodate-pkgtools
 .if (${DEINSTALLDEPENDS} != "NO")
 .if (${DEINSTALLDEPENDS} != "ALL")
 # used for removing stuff in bulk builds
-root-install-flags+=	-r -R
+root-deinstall-flags+=	-r -R
 # used for "update" target
 .else
-root-install-flags+=	-r
+root-deinstall-flags+=	-r
 .endif
 .endif
 .ifdef PKG_VERBOSE
-root-install-flags+=	-v
+root-deinstall-flags+=	-v
 .endif
 
 root-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG} \
 	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}` ; \
 	if [ "$$found" != "" ]; then \
-		${ECHO} Running ${PKG_DELETE} ${root-install-flags} $$found ; \
-		${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
+		${ECHO} Running ${PKG_DELETE} ${root-deinstall-flags} $$found ; \
+		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
@@ -1816,7 +1816,7 @@ root-deinstall:
 	found=`${PKG_INFO} -e "${pkg}" || ${TRUE}` ; \
 	if [ "$$found" != "" ]; then \
 		${ECHO} Running ${PKG_DELETE} $$found ; \
-		${PKG_DELETE} $$found || ${TRUE} ; \
+		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .endfor
 .endif # DEINSTALLDEPENDS
