@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/29 14:04:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/29 22:57:41 zuntum Exp $
 #
 
 DISTNAME=	libdockapp-0.4.0
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	simple library to create dockapps for WindowMaker
 
-USE_BULDLINK_ONLY=	YES
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
