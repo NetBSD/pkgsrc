@@ -1,0 +1,5 @@
+PTH is a very portable POSIX/ANSI-C based library for Unix platforms which 
+provides non-preemptive scheduling for multiple threads of execution 
+("multithreading") inside server applications. All threads run in the same 
+address space of the server application, but each thread has it's own 
+individual program-counter, run-time stack, signal mask and errno variable. 
