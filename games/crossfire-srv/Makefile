@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/23 03:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/21 01:39:05 wiz Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -12,16 +12,12 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
 
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	dmalloc-[0-9]*:../../devel/dmalloc
-
 EXTRACT_ONLY=	${CF_SRC}
 
 CF_SRC=		crossfire-1.0.0.tar.bz2
 CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
-USE_XAW=	yes
-USE_XPM=	yes
+USE_BUILDLINK2=	yes
 USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -47,4 +43,8 @@ post-install:
 	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/var/crossfire
 	@${CHMOD} -R g+w ${LOCALBASE}/var/crossfire
 
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../devel/dmalloc/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
