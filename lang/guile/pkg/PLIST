@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/12/20 11:55:17 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/06/09 08:09:44 jlam Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -92,8 +92,10 @@ include/libguile/weaks.h
 info/data-rep.info
 @exec install-info %D/info/data-rep.info %D/info/dir
 lib/libguile.a
+lib/libguile.la
 lib/libguile.so.6.0
 lib/libguilereadline.a
+lib/libguilereadline.la
 lib/libguilereadline.so.0.0
 share/aclocal/guile.m4
 share/aclocal/qthreads.m4
