@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.290 1999/07/02 12:54:28 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.291 1999/07/02 18:04:53 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1901,13 +1901,16 @@ binpkg-list:
 	*)								\
 		cd ${PACKAGES}/../..;					\
 		for i in [1-9].*/*; do (				\
-			cd $$i/${PKGREPOSITORYSUBDIR} ; 		\
-			for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ;	\
-			do 						\
-				if [ -f "$$j" ] ; then			\
-					${ECHO} $$i/$$j; \
-				fi ;					\
-			done ) ; 					\
+			d=$$i/${PKGREPOSITORYSUBDIR} ; 			\
+			if [ -d "$d ]; then 				\
+				cd "$d" ; 				\
+				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ;	\
+				do 					\
+					if [ -f "$$j" ] ; then		\
+						${ECHO} $$i/$$j; 	\
+					fi ;				\
+				done ) ; 				\
+			fi ; 						\
 		done | ${AWK} -F/ '					\
 			{						\
 				release = $$1;				\
