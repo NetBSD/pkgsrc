@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/06/21 15:55:54 drochner Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/09/09 07:50:53 xtraeme Exp $
 #
 
 DISTNAME=		xine-lib-1-rc5
@@ -32,9 +32,10 @@ CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/lib/libXv.so)
-PLIST_SUBST+=		XV_WORKAROUND="@comment "
+PLIST_SUBST+=		HAVE_XV="@comment "
 .else
-PLIST_SUBST+=		XV_WORKAROUND=""
+CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
+PLIST_SUBST+=		HAVE_XV=
 .endif
 
 pre-configure::
