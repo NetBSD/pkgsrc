@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.17 2004/02/25 19:11:43 drochner Exp $
+$NetBSD: patch-ab,v 1.18 2004/07/31 21:01:54 kristerw Exp $
 
---- configure.orig	2003-03-18 15:19:12.000000000 +0100
-+++ configure	2004-02-25 20:04:08.000000000 +0100
-@@ -822,6 +822,7 @@
+--- configure.orig	Tue Mar 18 15:19:12 2003
++++ configure	Sat Jul 31 03:56:01 2004
+@@ -822,9 +822,13 @@
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
        arm-*-netbsd*)	machine=arm ;;
@@ -10,10 +10,17 @@ $NetBSD: patch-ab,v 1.17 2004/02/25 19:11:43 drochner Exp $
      esac
    ;;
  
-@@ -9124,6 +9125,22 @@
++  ## Darwin / Mac OS X
++  powerpc-apple-darwin* )
++    machine=powermac opsys=darwin ;;
+   ## OpenBSD ports
+   *-*-openbsd* )
+     opsys=openbsd
+@@ -9123,6 +9127,22 @@
+ 
  fi
  
- 
++
 +# NETBSD: NetBSD's newer run-time linker fix.
 +if test $opsys = netbsd; then
 +  if test -f /usr/lib/crti.o; then
@@ -29,7 +36,6 @@ $NetBSD: patch-ab,v 1.17 2004/02/25 19:11:43 drochner Exp $
 +
 +  fi
 +fi
-+
+ 
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
- CPPFLAGS="$REAL_CPPFLAGS"
