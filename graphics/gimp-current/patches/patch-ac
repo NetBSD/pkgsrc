@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+
+--- docs/Makefile.in.orig	Sat Nov 27 02:01:55 1999
++++ docs/Makefile.in	Sat Nov 27 02:00:13 1999
+@@ -357,7 +357,7 @@
+ install-exec-am:
+ install-exec: install-exec-am
+ 
+-install-data-am: install-info-am
++install-data-am: #HF# install-info-am
+ install-data: install-data-am
+ 
+ install-am: all-am
+@@ -365,7 +365,7 @@
+ install: install-am
+ uninstall-am: uninstall-info
+ uninstall: uninstall-am
+-all-am: Makefile $(INFO_DEPS)
++all-am: Makefile #HF# $(INFO_DEPS)
+ all-redirect: all-am
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+@@ -412,9 +412,8 @@
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-pdb_dump.texi: $(srcdir)/pdb_self_doc.el $(srcdir)/pdb_dump
+-	cd $(srcdir) && \
+-	@EMACS@ --batch -l pdb_self_doc.el -f make-docs-noargs
++pdb_dump.texi: $(srcdir)/pdb_self_doc $(srcdir)/pdb_dump
++	$(srcdir)/pdb_self_doc <$(srcdir)/pdb_dump >pdb_dump.texi
+ 
+ $(srcdir)/pdb_dump: $(top_srcdir)/app/*.c
+ 	$(top_builddir)/app/gimp --no-interface --batch '(gimp-procedural-db-dump "pdb_dump.tmp")' '(gimp-quit 0)' 
