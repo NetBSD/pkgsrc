@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- utils/util1/cs/Makefile.orig	2003-02-25 19:24:01.000000000 -0800
++++ utils/util1/cs/Makefile
+@@ -19,10 +19,10 @@ $(BINDIR):
+ 	mkdir -p -m 0755 $@
+ 
+ install: $(PGM1) $(PGM2) $(BINDIR)
+-	install -p -m 0755 $(PGM1) $(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(PGM1) $(BINDIR)
+ 
+ install-strip: $(PGM1) $(PGM2) $(BINDIR)
+-	install -p -m 0755 -s $(PGM1) $(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(PGM1) $(BINDIR)
+ 
+ uninstall:
+ 	rm -f $(BINDIR)/$(PGM1)

@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- plugins/Makefile.orig	2003-02-25 19:24:01.000000000 -0800
++++ plugins/Makefile
+@@ -32,7 +32,7 @@ $(PLGNDIR):
+ 	mkdir -p -m 0755 $@
+ 
+ install: $(PLUGIN) $(PLGNDIR)
+-	install -p -m 0755 $(PLUGIN) $(PLGNDIR)
++	$(BSD_INSTALL_DATA) $(PLUGIN) $(PLGNDIR)
+ ifneq ($(strip $(RTAUDIO_PLUGINS)),)
+ 	cd rtaudio ; make $@
+ endif

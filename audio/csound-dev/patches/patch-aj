@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- aiff.c.orig	2003-02-02 19:24:00.000000000 -0800
++++ aiff.c
+@@ -13,7 +13,7 @@ float benfloat(float x);
+ #if defined(__BEOS__) || defined(LINUX)
+ #include <unistd.h>
+ #else
+-#if !defined(mac_classic) && !defined( SYMANTEC ) && !defined( LINUX )
++#if !defined(mac_classic) && !defined( SYMANTEC ) && !defined( LINUX ) && !defined(__NetBSD__)
+ extern int write(int, const void*, unsigned int);
+ #endif
+ extern off_t lseek(int, off_t, int);

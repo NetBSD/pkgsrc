@@ -1,0 +1,8 @@
+Csound is a software synthesis package in the tradition of so-called
+music-N languages, among which the best-known is Music V.  It consists
+of an orchestra- and score-driven executable, written in C for
+portability.  Since Csound is a computational language, it is highly
+flexible and efficient; complexity is gained only at the expense of
+computation time.  Basically Csound reads some files and creates the
+result as a file on disk or, on faster machines, through a DAC in real
+time.
