@@ -1,13 +1,19 @@
-$NetBSD: patch-ak,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
+$NetBSD: patch-ak,v 1.3 2005/01/25 17:49:57 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/xf86cfg/Imakefile.orig	2004-09-14 10:59:24.000000000 +0200
-+++ programs/Xserver/hw/xfree86/xf86cfg/Imakefile	2004-09-14 11:00:01.000000000 +0200
-@@ -128,7 +128,7 @@
+--- programs/Xserver/hw/xfree86/xf86cfg/Imakefile.orig	2005-01-21 19:27:21.000000000 +0000
++++ programs/Xserver/hw/xfree86/xf86cfg/Imakefile	2005-01-21 19:41:06.000000000 +0000
+@@ -127,10 +127,11 @@
+ DLLIB = DlLibrary
  #endif
  
- LOCAL_LIBRARIES = $(XKBUILIB) $(XKBFILELIB) -lxf86config $(XXF86MISCLIB) \
+-LOCAL_LIBRARIES = $(XKBUILIB) $(XKBFILELIB) -lxf86config $(XXF86MISCLIB) \
 -		  $(XXF86VMLIB) $(XAWLIB) $(XMULIB) $(XTOOLLIB) \
++LOCAL_LIBRARIES = -lxf86config $(XXF86MISCLIB) \
 +		  $(XXF86VMLIB) -lXaw $(XMULIB) $(XTOOLLIB) \
  		  $(XPMLIB) $(EXTRAXAWCLIENTLIBS) $(LOADERLIB) $(DLLIB) \
- 		  $(XLIB) $(CURSESLIB) RegexLibrary -lm
+-		  $(XLIB) $(CURSESLIB) RegexLibrary -lm
++		  $(XLIB) $(CURSESLIB) RegexLibrary -lm \
++		  $(XKBUILIB) $(XKBFILELIB)
  
+ NormalProgramTarget($(PROG),$(OBJS),,$(LOCAL_LIBRARIES),)
+ InstallProgramWithFlags($(PROG),$(BINDIR),NullParameter)
