@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.4 2005/01/16 02:31:33 grant Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.5 2005/03/21 21:40:28 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -203,8 +203,8 @@
       <para>Interix is a POSIX compatible subsystem for the Windows NT kernel,
 	providing a Unix-like environment with a tighter kernel integration than
 	available with Cygwin.  It is part of the Windows Services for Unix
-	package, available for free for any licensed copy of Windows 2000, XP,
-	or 2003.  SFU can be downloaded from <ulink
+	package, available for free for any licensed copy of Windows 2000, XP
+	(not including XP Home), or 2003.  SFU can be downloaded from <ulink
 	url="http://www.microsoft.com/windows/sfu/">http://www.microsoft.com/windows/sfu/</ulink>.</para>
 
       <para>Services for Unix 3.5, current as of this writing, has been tested.  3.0
@@ -285,6 +285,12 @@
 	  NOT be used in conjunction with pkgsrc.  If you choose to use them at
 	  the same time as the pkgsrc packages, ensure that you use the proper
 	  pkg_* tools for each type of binary package.</para>
+
+	<para>The TERM setting used for DOS-type console windows (including those
+	  invoked by the csh and ksh startup shortcuts) is "interix".  Most systems
+	  don't have a termcap/terminfo entry for it, but the following .termcap
+	  entry provides adequate emulation in most cases:
+	  <programlisting>interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:</programlisting></para>
 
       </sect3>
     </sect2>
