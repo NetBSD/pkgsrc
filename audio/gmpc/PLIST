@@ -1,14 +1,24 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/08 15:40:53 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/11/29 20:45:42 wiz Exp $
 bin/gmpc
 share/applications/gmpc.desktop
+share/gmpc/add-browser.glade
 share/gmpc/gmpc-tray.png
 share/gmpc/gmpc.glade
+share/gmpc/gmpc.png
+share/gmpc/media-album.png
+share/gmpc/media-artist.png
+share/gmpc/media-audiofile.png
 share/gmpc/media-next.png
 share/gmpc/media-pause.png
 share/gmpc/media-play.png
 share/gmpc/media-prev.png
 share/gmpc/media-stop.png
-share/gmpc/tray.png
+share/gmpc/media-stream.png
+share/gmpc/open-location.glade
+share/gmpc/player-repeat.png
+share/gmpc/player-shuffle.png
+share/gmpc/playlist.glade
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gmpc.mo
 share/pixmaps/gmpc.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gmpc
