@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/23 22:25:29 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/05/28 16:40:34 minskim Exp $
 
-SHA1 (docbook-simple-1.1b1.zip) = f4e4ebc805643ee3b30ad7270c36da95b14c0c7a
-Size (docbook-simple-1.1b1.zip) = 33571 bytes
+SHA1 (docbook-simple-1.1b3.zip) = c736ed89ddc5aa42a6dbff744bba99cf97c55291
+Size (docbook-simple-1.1b3.zip) = 33867 bytes
