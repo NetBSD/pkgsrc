@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/07/05 16:54:19 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/07/06 07:12:47 tron Exp $
 
 DISTNAME=		gimp-1.1.24
 CATEGORIES=		graphics
@@ -37,6 +37,11 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 .if (${OBJECT_FMT} == ELF)
 LDFLAGS+=		-Wl,-E
+.else
+PLIST_SRC=		${WRKDIR}/PLIST
+
+post-build:
+	@${GREP} -vx lib/gimp/.*/modules/.*\.so.* ${PKGDIR}/PLIST >${PLIST_SRC}
 .endif
 
 post-install:
