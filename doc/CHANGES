@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9703 2005/03/31 16:45:28 taca Exp $
+$NetBSD: CHANGES,v 1.9704 2005/03/31 21:24:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1840,3 +1840,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bomberclone to 0.11.6 [wiz 2005-03-31]
 	Updated ruby18-base to 1.8.2nb1 [taca 2005-03-31]
 	Updated squid to 2.5.9nb2 [taca 2005-03-31]
+	Added p5-Net-Dev-MIBLoadOrder-1.1.0 [seb 2005-03-31]
