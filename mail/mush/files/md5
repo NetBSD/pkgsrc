@@ -1,10 +1,10 @@
-$NetBSD: md5,v 1.1 1998/09/04 18:33:46 christos Exp $
+$NetBSD: md5,v 1.2 1998/09/12 22:13:02 frueauf Exp $
 
-MD5 (mush-7.2.5.tar.Z) = ecf3ba537e9936d765e0113361052f75
-MD5 (patch-7.2.6-alpha-1) = 97fa466431171051bed08f5e5165137e
-MD5 (patch-7.2.6-alpha-2) = c7763ae91d3e469c34a1c77e60583a60
-MD5 (patch-7.2.6-alpha-3) = 5510ba98c510a09fca844f0cf0a48f9e
-MD5 (patch-7.2.6-beta-1) = 61627bba6aac5e5d6781205370649e35
-MD5 (patch-7.2.6-beta-2) = a864a84e515e0d38628049ce5160b46b
-MD5 (patch-7.2.6-beta-3) = a46a60543a46ab2ae76cd70c373b0b68
-MD5 (patch-7.2.6-beta-4) = 3f80887b12860b3a28cc1edf465f86bd
+MD5 (mush/mush-7.2.5.tar.Z) = ecf3ba537e9936d765e0113361052f75
+MD5 (mush/patch-7.2.6-alpha-1) = 97fa466431171051bed08f5e5165137e
+MD5 (mush/patch-7.2.6-alpha-2) = c7763ae91d3e469c34a1c77e60583a60
+MD5 (mush/patch-7.2.6-alpha-3) = 5510ba98c510a09fca844f0cf0a48f9e
+MD5 (mush/patch-7.2.6-beta-1) = 61627bba6aac5e5d6781205370649e35
+MD5 (mush/patch-7.2.6-beta-2) = a864a84e515e0d38628049ce5160b46b
+MD5 (mush/patch-7.2.6-beta-3) = a46a60543a46ab2ae76cd70c373b0b68
+MD5 (mush/patch-7.2.6-beta-4) = 3f80887b12860b3a28cc1edf465f86bd
