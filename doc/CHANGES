@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9059 2005/02/06 15:10:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.9060 2005/02/06 15:36:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -776,3 +776,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated opera7 to 7.54u2 [jdolecek 2005-02-06]
 	Added postgresql80 8.0.1 [jdolecek 2005-02-06]
 	Updated libIDL to 0.8.5 [jmmv 2005-02-06]
+	Updated libbonobo to 2.8.1 [jmmv 2005-02-06]
+	Updated libbonoboui to 2.8.1 [jmmv 2005-02-06]
