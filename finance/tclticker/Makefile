@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:36:38 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/28 01:50:41 grant Exp $
 #
 
 DISTNAME=	tclticker-1.1
-CATEGORIES=	finance tk80
+CATEGORIES=	finance tk
 MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tclticker/1.1/
 
 MAINTAINER=	tech-pkg@NetBSD.org
