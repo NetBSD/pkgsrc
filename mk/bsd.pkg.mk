@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.176 1998/10/13 14:51:31 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.177 1998/10/15 10:50:38 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -375,9 +375,11 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
+PKG_ADD?=	/usr/sbin/pkg_add
 PKG_CREATE?=	/usr/sbin/pkg_create
 PKG_DELETE?=	/usr/sbin/pkg_delete
 PKG_INFO?=	/usr/sbin/pkg_info
+
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
 .if defined(CONFLICTS)
@@ -413,6 +415,9 @@ MOTIFLIB?=	-L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCA
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 CAT?=		/bin/cat
+CHMOD?=		/bin/chmod
+CHOWN?=		/usr/sbin/chown
+CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
 ECHO?=		/bin/echo
 FALSE?=		/usr/bin/false
@@ -516,6 +521,26 @@ PATCH_SITES:=	${MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
+
+# Latest version of pkgtools required for this file.
+PKGTOOLS_REQD=		19980911
+
+# Check that we're using up-to-date pkg_* tools with this file.
+.ifndef _PKGTOOLS_VER
+_PKGTOOLS_VER!= /usr/bin/strings ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ "\$$NetBSD" { gsub("/", "", $$4); print $$4 }' | sort | tail -n 1
+.if ${_PKGTOOLS_VER} < ${PKGTOOLS_REQD}
+.BEGIN:
+	@case ${PKGNAME} in						\
+	pkg_install-*)							\
+		;;							\
+	*)								\
+		${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD}"; \
+		${ECHO} "The installed package tools were last updated on ${_PKGTOOLS_VER}"; \
+		${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
+		${FALSE} ;;						\
+	esac
+.endif # bad version date
+.endif # !defined _PKGTOOLS_VER
 
 MAINTAINER?=		packages@netbsd.org
 
