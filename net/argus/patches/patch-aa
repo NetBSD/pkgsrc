@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/01/11 13:11:12 markd Exp $
+
+--- Configure.orig	2004-03-23 04:58:18.000000000 +1200
++++ Configure
+@@ -155,7 +155,7 @@ perlmodule(){
+ }
+ 
+ 
+-path_perl=`findit perl`
++path_perl=$PERL
+ path_sendmail=`findit sendmail`
+ path_qpage=`findit qpage`
+ path_fping=`findit fping`
