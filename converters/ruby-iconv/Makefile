@@ -1,33 +1,23 @@
-# $NetBSD: Makefile,v 1.11 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/27 14:21:14 taca Exp $
 #
 
-DISTNAME=	iconv-0.5
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	${RUBY_DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-iconv-${RUBY_VERSION}
 CATEGORIES=	converters ruby
-MASTER_SITES=	http://nokada.jin.gr.jp/ruby/
+MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	# not available
+HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Iconv wrapper class for Ruby
 
-USE_BUILDLINK3= yes
+RUBY_VERSION_SUPPORTED=	18
+USE_BUILDLINK3=		yes
+USE_RUBY_EXTCONF=	yes
+DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
+WRKSRC=         	${RUBY_WRKSRC}/ext/iconv
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/iconv
 
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
-USE_RUBY_RD=	yes
-
-INSTALL_TARGET= site-install
-
-DOCS=		iconv.html rd.css
-
-post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/iconv
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/iconv
-.endfor
-
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
