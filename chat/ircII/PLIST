@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/09/13 03:12:16 mrg Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/11/15 12:14:18 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -297,8 +297,10 @@ share/irc/help/on/window@.GZ@
 share/irc/help/on/window_kill@.GZ@
 share/irc/help/on/window_list@.GZ@
 share/irc/help/on/window_swap@.GZ@
-share/irc/help/on/icb_status@.GZ@
 share/irc/help/on/icb_error@.GZ@
+share/irc/help/on/icb_motd@.GZ@
+share/irc/help/on/icb_status@.GZ@
+share/irc/help/on/icb_who@.GZ@
 share/irc/help/oper@.GZ@
 share/irc/help/parsekey@.GZ@
 share/irc/help/part@.GZ@
