@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.7 1999/06/15 22:24:13 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/02/05 14:18:30 wiz Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.php.net/pub/distributions/
+# This is needed because other pkgs .include this Makefile
+DISTFILES+=	${DISTNAME}.tar.gz
 
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.php.net/
 
-# This is needed because other pkgs .include this Makefile
-DISTFILES+=	${DISTNAME}.tar.gz
-PHP_VERSION=	3.0.7
-
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
+
+PHP_VERSION=	3.0.7
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
 DEPENDS+=	php-${PHP_VERSION}:../../www/php3
