@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.48 2004/12/22 21:39:25 jlam Exp $
+# $NetBSD: tools.mk,v 1.49 2004/12/30 09:47:01 minskim Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -389,6 +389,21 @@ ${TOOLS_DIR}/bin/make:
 		${MKDIR} ${.TARGET:H};					\
 		${LN} -sf $$src ${.TARGET};				\
 	fi
+.endif
+
+# Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
+# is defined.
+.if defined(USE_PERL5)
+override-tools: ${TOOLS_DIR}/bin/perl
+.  if !target(${TOOLS_DIR}/bin/perl)
+${TOOLS_DIR}/bin/perl:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	src="${PERL5}";							\
+	if [ -x $$src -a ! -f ${.TARGET} ]; then			\
+		${MKDIR} ${.TARGET:H};					\
+		${LN} -sf $$src ${.TARGET};				\
+	fi
+.  endif
 .endif
 
 # Always create a ${TOOLS_DIR}/bin/rpcgen to wrap the real rpcgen.
