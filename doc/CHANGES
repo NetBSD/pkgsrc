@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2416 2003/06/03 20:44:44 salo Exp $
+$NetBSD: CHANGES,v 1.2417 2003/06/03 22:32:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2302,3 +2302,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomecanvas to 2.2.1 [jmmv 2003-06-03]
 	Updated intltool to 0.26 [jmmv 2003-06-03]
 	Updated cpuflags to 0.44 [salo 2003-06-03]
+	Added p5-DBD-XBase-0.232 [salo 2003-06-03]
+	Updated p5-Cz-Cstools to 3.42nb1 [salo 2003-06-03]
