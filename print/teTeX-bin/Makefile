@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/10/08 04:46:34 deberg Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/02 01:32:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-hp2627win \
 		--with-mftalkwin \
 		--with-x11 \
-		--enable-a4 \
 		--with-libwww-config=${LOCALBASE}/bin/libwww-config \
 		--with-system-ncurses \
 		--with-ncurses-libdir=${LOCALBASE}/lib \
@@ -44,6 +43,10 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-system-zlib \
 		--with-zlib-libdir=/usr/lib \
 		--with-zlib-include=/usr/include
+.include "../../mk/bsd.prefs.mk"
+.if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
+CONFIGURE_ARGS+=--enable-a4
+.endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
