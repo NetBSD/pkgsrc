@@ -1,6 +1,8 @@
---- src/cpuintrf.c.orig	Fri Mar 26 10:03:35 1999
-+++ src/cpuintrf.c	Sun May  9 14:41:55 1999
-@@ -82,9 +82,34 @@
+$NetBSD: patch-am,v 1.2 1999/11/10 08:01:29 soren Exp $
+
+--- src/cpuintrf.c.orig	Thu Nov  4 09:13:49 1999
++++ src/cpuintrf.c	Wed Nov 10 07:26:25 1999
+@@ -94,13 +94,34 @@
  #define LOG(x)
  #endif
  
@@ -31,7 +33,11 @@
 +} cpuinfo_test;
 +
  /* How do I calculate the next power of two from CPUINFO_SIZE using a macro? */
--#define CPUINFO_ALIGN	(64-CPUINFO_SIZE)
+-#ifdef __LP64__
+-#define CPUINFO_ALIGN   (128-CPUINFO_SIZE)
+-#else
+-#define CPUINFO_ALIGN   (64-CPUINFO_SIZE)
+-#endif
 +
 +#define CPUINFO_ALIGN ((sizeof(cpuinfo_test) > 64 ? 128 : 64) - sizeof(cpuinfo_test))
  
