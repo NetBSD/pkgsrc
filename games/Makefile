@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2003/08/16 14:29:48 dillo Exp $
+# $NetBSD: Makefile,v 1.180 2003/08/16 15:34:23 drochner Exp $
 #
 
 COMMENT=	Games
@@ -117,6 +117,7 @@ SUBDIR+=	minami
 SUBDIR+=	mirrormagic
 SUBDIR+=	mirrormagic-sdl
 SUBDIR+=	moria
+SUBDIR+=	nagi
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
 SUBDIR+=	nethack-qt
