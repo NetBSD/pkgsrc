@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/27 21:26:21 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/01 13:02:42 wiz Exp $
 java/kaffe/include/jni.h
 java/kaffe/include/kaffe/java_lang_Object.h
 java/kaffe/include/kaffe/java_lang_String.h
@@ -14,36 +14,36 @@ java/kaffe/include/kaffe/jtypes.h
 java/kaffe/include/kaffe/native.h
 java/kaffe/lib/kjc.jar
 java/kaffe/lib/tools.jar
-java/kaffe/jre/lib/i386/libnative-1.0.7.so
-java/kaffe/jre/lib/i386/libnative.so
-java/kaffe/jre/lib/i386/libnative.la
-java/kaffe/jre/lib/i386/libio-1.0.7.so
-java/kaffe/jre/lib/i386/libio.so
-java/kaffe/jre/lib/i386/libio.la
-java/kaffe/jre/lib/i386/libnet-1.0.7.so
-java/kaffe/jre/lib/i386/libnet.so
-java/kaffe/jre/lib/i386/libnet.la
-java/kaffe/jre/lib/i386/libzip-1.0.7.so
-java/kaffe/jre/lib/i386/libzip.so
-java/kaffe/jre/lib/i386/libzip.la
-java/kaffe/jre/lib/i386/libmath-1.0.7.so
-java/kaffe/jre/lib/i386/libmath.so
-java/kaffe/jre/lib/i386/libmath.la
-java/kaffe/jre/lib/i386/libsecurity-1.0.7.so
-java/kaffe/jre/lib/i386/libsecurity.so
-java/kaffe/jre/lib/i386/libsecurity.la
-java/kaffe/jre/lib/i386/libmanagement-1.0.7.so
-java/kaffe/jre/lib/i386/libmanagement.so
-java/kaffe/jre/lib/i386/libmanagement.la
-java/kaffe/jre/lib/i386/libawt-1.0.7.so
-java/kaffe/jre/lib/i386/libawt.so
-java/kaffe/jre/lib/i386/libawt.la
-java/kaffe/jre/lib/i386/libmicrosoft-1.0.7.so
-java/kaffe/jre/lib/i386/libmicrosoft.so
-java/kaffe/jre/lib/i386/libmicrosoft.la
-java/kaffe/jre/lib/i386/libkaffevm-1.0.7.so
-java/kaffe/jre/lib/i386/libkaffevm.so
-java/kaffe/jre/lib/i386/libkaffevm.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libawt-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libawt.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libawt.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmicrosoft-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmicrosoft.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmicrosoft.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm-1.0.7.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.la
 java/kaffe/jre/lib/security/java.security
 java/kaffe/jre/lib/rt.jar
 java/kaffe/jre/lib/comm.jar
@@ -78,7 +78,7 @@ java/kaffe/share
 @dirrm java/kaffe/man/man1
 @dirrm java/kaffe/man
 @dirrm java/kaffe/jre/lib/security
-@dirrm java/kaffe/jre/lib/i386
+@dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
 @dirrm java/kaffe/jre/lib
 @dirrm java/kaffe/jre/bin
 @dirrm java/kaffe/jre
