@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+
+Shut up gcc.
+
+--- lib/ko/gensysname.c.orig	2005-03-22 14:43:34.000000000 +0100
++++ lib/ko/gensysname.c	2005-03-22 14:47:20.000000000 +0100
+@@ -230,7 +230,7 @@
+ static void
+ usage(void)
+ {
+-    arg_printusage(args, NULL, "[sysname]", 0);
++    arg_printusage(args, 0, "[sysname]", 0);
+     exit(1);
+     
+ }

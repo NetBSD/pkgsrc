@@ -1,10 +1,21 @@
-$NetBSD: patch-as,v 1.2 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-as,v 1.3 2005/03/25 17:40:25 wennmach Exp $
 
-Make arla compile on pmax. 
+Make arla compile on pmax.
+Make configure find com_err.h.
+Define LIB_com_err.
 
---- configure.orig	2004-11-15 11:13:02.000000000 -0500
-+++ configure	2004-12-22 20:35:37.000000000 -0500
-@@ -6558,10 +6558,19 @@
+--- configure.orig	2004-12-25 17:45:33.000000000 +0100
++++ configure	2005-03-22 15:01:20.000000000 +0100
+@@ -467,7 +467,7 @@
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT AS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP CANONICAL_HOST LEX LEXLIB LEX_OUTPUT_ROOT LN_S YACC EGREP SYMORDER DVI2PS TEXI2DVI TEXI2PDF TEXI2HTML DVIPS chmod GUILE_GTK X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS X11_TRUE X11_FALSE LIB_pthread_create LIB_sched_yield SYS BSDMAKE BSD_WERROR FREEBSD_GENSETDEFS COM_APPLE_KERNEL_BSD YDR_CPPFLAGS DFLY_TRUE DFLY_FALSE FBSD5_TRUE FBSD5_FALSE LINUX_IA64_TRUE LINUX_IA64_FALSE NNPFS_AFS_READDIR_TRUE NNPFS_AFS_READDIR_FALSE OSF1_TRUE OSF1_FALSE DCE_TRUE DCE_FALSE MACOSX_TRUE MACOSX_FALSE LWP_REDZONE_TRUE LWP_REDZONE_FALSE ARLA_KNFS LWP_PROCESS PLWP_LIB_FLAGS PLWP_INC_FLAGS LWP_C LWP_O LWP_H INCLUDE_readline LIB_readline LIB_tgetent LIB_el_init INC_sl LIB_sl DIR_sl SL_H DEPEND_sl ac_cv_prog_getconf editline_OBJS editline_dir GCC KERNEL_INCLUDE KERNEL_SRCS KERNEL_HDRS KERNEL_CPPFLAGS KERNEL_CFLAGS KERNEL_LD_FLAGS KERNEL_CC KERNEL_LD MODLOAD MODUNLOAD MODULE NNPFS_SUBDIR NNPFS_SRCS RXKAD_LIBS ARLACACHEDIR ARLACONFFILE MILKO_ROOT have_err_h_TRUE have_err_h_FALSE have_fnmatch_h_TRUE have_fnmatch_h_FALSE have_ifaddrs_h_TRUE have_ifaddrs_h_FALSE have_vis_h_TRUE have_vis_h_FALSE have_glob_h_TRUE have_glob_h_FALSE do_roken_rename_TRUE do_roken_rename_FALSE ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CXX CXXFLAGS ac_ct_CXX CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL LIB_db_create LIB_dbopen LIB_dbm_firstkey HAVE_DB1_TRUE HAVE_DB1_FALSE HAVE_DB3_TRUE HAVE_DB3_FALSE HAVE_NDBM_TRUE HAVE_NDBM_FALSE DBLIB LIB_NDBM INC_roken LIB_roken DIR_roken ROKEN_H WFLAGS WFLAGS_NOUNUSED WFLAGS_NOIMPLICITINT VOID_RETSIGTYPE LIB_socket LIB_gethostbyname LIB_syslog LIB_gethostbyname2 LIB_res_search LIB_res_nsearch LIB_dn_expand LIBOBJS LIB_getsockopt LIB_setsockopt LIB_hstrerror LIB_bswap16 LIB_bswap32 LIB_pidfile LIB_getaddrinfo LIB_getnameinfo LIB_freeaddrinfo LIB_gai_strerror LIB_crypt INCLUDES_roken ARLA_LOCAL_ROKEN_TRUE ARLA_LOCAL_ROKEN_FALSE NROFF GROFF CATMAN CATMAN_TRUE CATMAN_FALSE CATMANEXT KRB5_LIB_DIR KRB5_INC_DIR KRB5_INC_FLAGS KRB5_LIB_LIBS KRB5_LIB_FLAGS KRB4_LIB_DIR KRB4_INC_DIR KRB4_INC_FLAGS KRB4_LIB_LIBS KRB4_LIB_FLAGS KRB5_TRUE KRB5_FALSE KRB4_TRUE KRB4_FALSE KAFS_LIBS KAFS_CPPFLAGS RXKAD_TRUE RXKAD_FALSE AFS_EXTRA_OBJS AFS_EXTRA_LIBS AFS_EXTRA_LD AFS_EXTRA_DEFS AIX_EXTRA_KAFS LIB_res_init COMERR_CPPFLAGS VNODE_IF_H ARLA_CONF_HIGHVNODES ARLA_CONF_LOWVNODES ARLA_CONF_HIGHBYTES ARLA_CONF_LOWBYTES LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT AS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP CANONICAL_HOST LEX LEXLIB LEX_OUTPUT_ROOT LN_S YACC EGREP SYMORDER DVI2PS TEXI2DVI TEXI2PDF TEXI2HTML DVIPS chmod GUILE_GTK X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS X11_TRUE X11_FALSE LIB_pthread_create LIB_sched_yield SYS BSDMAKE BSD_WERROR FREEBSD_GENSETDEFS COM_APPLE_KERNEL_BSD YDR_CPPFLAGS DFLY_TRUE DFLY_FALSE FBSD5_TRUE FBSD5_FALSE LINUX_IA64_TRUE LINUX_IA64_FALSE NNPFS_AFS_READDIR_TRUE NNPFS_AFS_READDIR_FALSE OSF1_TRUE OSF1_FALSE DCE_TRUE DCE_FALSE MACOSX_TRUE MACOSX_FALSE LWP_REDZONE_TRUE LWP_REDZONE_FALSE ARLA_KNFS LWP_PROCESS PLWP_LIB_FLAGS PLWP_INC_FLAGS LWP_C LWP_O LWP_H INCLUDE_readline LIB_readline LIB_tgetent LIB_el_init INC_sl LIB_sl DIR_sl SL_H DEPEND_sl ac_cv_prog_getconf editline_OBJS editline_dir GCC KERNEL_INCLUDE KERNEL_SRCS KERNEL_HDRS KERNEL_CPPFLAGS KERNEL_CFLAGS KERNEL_LD_FLAGS KERNEL_CC KERNEL_LD MODLOAD MODUNLOAD MODULE NNPFS_SUBDIR NNPFS_SRCS RXKAD_LIBS ARLACACHEDIR ARLACONFFILE MILKO_ROOT have_err_h_TRUE have_err_h_FALSE have_fnmatch_h_TRUE have_fnmatch_h_FALSE have_ifaddrs_h_TRUE have_ifaddrs_h_FALSE have_vis_h_TRUE have_vis_h_FALSE have_glob_h_TRUE have_glob_h_FALSE do_roken_rename_TRUE do_roken_rename_FALSE ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CXX CXXFLAGS ac_ct_CXX CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL LIB_db_create LIB_dbopen LIB_dbm_firstkey HAVE_DB1_TRUE HAVE_DB1_FALSE HAVE_DB3_TRUE HAVE_DB3_FALSE HAVE_NDBM_TRUE HAVE_NDBM_FALSE DBLIB LIB_NDBM INC_roken LIB_roken DIR_roken ROKEN_H WFLAGS WFLAGS_NOUNUSED WFLAGS_NOIMPLICITINT VOID_RETSIGTYPE LIB_socket LIB_gethostbyname LIB_syslog LIB_gethostbyname2 LIB_res_search LIB_res_nsearch LIB_dn_expand LIBOBJS LIB_getsockopt LIB_setsockopt LIB_hstrerror LIB_bswap16 LIB_bswap32 LIB_pidfile LIB_getaddrinfo LIB_getnameinfo LIB_freeaddrinfo LIB_gai_strerror LIB_crypt LIB_com_err INCLUDES_roken ARLA_LOCAL_ROKEN_TRUE ARLA_LOCAL_ROKEN_FALSE NROFF GROFF CATMAN CATMAN_TRUE CATMAN_FALSE CATMANEXT KRB5_LIB_DIR KRB5_INC_DIR KRB5_INC_FLAGS KRB5_LIB_LIBS KRB5_LIB_FLAGS KRB4_LIB_DIR KRB4_INC_DIR KRB4_INC_FLAGS KRB4_LIB_LIBS KRB4_LIB_FLAGS KRB5_TRUE KRB5_FALSE KRB4_TRUE KRB4_FALSE KAFS_LIBS KAFS_CPPFLAGS RXKAD_TRUE RXKAD_FALSE AFS_EXTRA_OBJS AFS_EXTRA_LIBS AFS_EXTRA_LD AFS_EXTRA_DEFS AIX_EXTRA_KAFS LIB_res_init COMERR_CPPFLAGS VNODE_IF_H ARLA_CONF_HIGHVNODES ARLA_CONF_LOWVNODES ARLA_CONF_HIGHBYTES ARLA_CONF_LOWBYTES LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -6566,10 +6566,19 @@
    then
  	flags="$flags${flags:+ }-mno-fp-regs"
    fi
@@ -25,3 +36,20 @@ Make arla compile on pmax.
    NNPFS_SRCS='nnpfs_wrap-bsd.c nnpfs_common-bsd.c nnpfs_dev-common.c nnpfs_dev-bsd.c nnpfs_syscalls-common.c nnpfs_syscalls-wrap-bsd.c nnpfs_node-bsd.c nnpfs_vfsops-common.c nnpfs_vfsops-bsd.c nnpfs_vfsops-openbsd.c nnpfs_vnodeops-common.c nnpfs_vnodeops-bsd.c'
    NNPFS_SUBDIR=bsd
    KERNEL=/bsd
+@@ -53808,7 +53817,7 @@
+ 
+ 
+ 
+-for ac_header in ktypes.h com_err.h et/com_err.h
++for ac_header in ktypes.h com_err.h et/com_err.h krb5/com_err.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -64758,6 +64767,7 @@
+ s,@LIB_freeaddrinfo@,$LIB_freeaddrinfo,;t t
+ s,@LIB_gai_strerror@,$LIB_gai_strerror,;t t
+ s,@LIB_crypt@,$LIB_crypt,;t t
++s,@LIB_com_err@,$LIB_com_err,;t t
+ s,@INCLUDES_roken@,$INCLUDES_roken,;t t
+ s,@ARLA_LOCAL_ROKEN_TRUE@,$ARLA_LOCAL_ROKEN_TRUE,;t t
+ s,@ARLA_LOCAL_ROKEN_FALSE@,$ARLA_LOCAL_ROKEN_FALSE,;t t

@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.3 2005/03/25 17:40:25 wennmach Exp $
+
+--- lib/roken/snprintf.c.orig	2005-03-22 09:42:52.000000000 +0100
++++ lib/roken/snprintf.c	2005-03-22 09:47:40.000000000 +0100
+@@ -64,7 +64,7 @@
+   /* XXX - methods */
+ };
+ 
+-#if TEST_SNPRINTF
++#if defined(TEST_SNPRINTF)
+ #include "snprintf-test.h"
+ #endif /* TEST_SNPRINTF */
+ 
