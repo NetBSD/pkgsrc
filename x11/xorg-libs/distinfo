@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2005/01/07 16:57:36 reed Exp $
+$NetBSD: distinfo,v 1.10 2005/01/25 17:49:57 xtraeme Exp $
 
 SHA1 (X11R6.8.1-src1.tar.gz) = 027d16317e07d9df166c0176a1f28b2614f38cc9
 Size (X11R6.8.1-src1.tar.gz) = 30562401 bytes
@@ -16,7 +16,7 @@ SHA1 (patch-ag) = 178d556fa11818420cd685308cf179ee5f6f7dac
 SHA1 (patch-ah) = 4545d9fd50c2a7b6f5a04da330784eaf9a5373ad
 SHA1 (patch-ai) = 841c2e76c3934b9da967aaed1876b78d3fc0465e
 SHA1 (patch-aj) = 78855dfdafe76695290636e170f69b6685ad23e1
-SHA1 (patch-ak) = d600481936a6b141dc1247e1af2270e224b03b22
+SHA1 (patch-ak) = 623d8e4f9cab4451a38447e8954a78158c83dfaa
 SHA1 (patch-al) = cb82cecd7147da8edd19d9f38a0789f07cddea87
 SHA1 (patch-am) = a907d42a4d2a72871e165b99afdba81945d656c7
 SHA1 (patch-an) = 513f8746bb66c954decdd7f2ca00888175c72834
