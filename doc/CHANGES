@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6172 2004/06/06 23:51:36 tv Exp $
+$NetBSD: CHANGES,v 1.6173 2004/06/07 00:16:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated boost to 1.31.0 [tv 2004-06-06]
 	Added boost-thread-1.31.0 [tv 2004-06-06]
 	Added boost-python-1.31.0 [tv 2004-06-06]
+	Updated sdcc to 2.4.0 [xtraeme 2004-06-07]
