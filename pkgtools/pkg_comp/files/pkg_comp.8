@@ -1,7 +1,7 @@
-.\" $NetBSD: pkg_comp.8,v 1.7 2003/07/15 16:46:09 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.8 2003/07/18 12:21:39 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
-.\" Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
+.\" Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd December 24, 2002
+.Dd July 18, 2003
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -158,14 +158,31 @@ A list of packages to automatically build after the
 target.
 A package is in the form section/name, like misc/colorls.
 Defaults to nothing.
+.It MKCONF_VARS
+A list of variable names that will be appended to the generated
+.Pa /etc/mk.conf
+file, together with their values set in the configuration file.
+Its default value contains all variables listed here.
 .It PKG_SYSCONFBASE
 Base directory of configuration files.
 Defaults to
 .Pa /usr/pkg/etc .
+.It PKGVULNDIR
+Directory where the
+.Pa vulnerabilities
+file will be installed (inside the chroot).
+Defaults to
+.Pa /usr/pkg/share .
+.It REAL_PKGVULNDIR
+Directory where the system-wide
+.Pa vulnerabilities
+file resides (outside the chroot).
+Defaults to
+.Pa /usr/pkgsrc/distfiles .
 .It ROOTSHELL
 The shell of the root user.
 Defaults to
-.Pa /bin/sh .
+.Pa /bin/ksh .
 .It SETS
 A list of binary sets to be extracted inside
 .Sy DESTDIR .
@@ -176,17 +193,36 @@ A list of binary sets of the X Window system.
 This has the same behavior
 as
 .Sy SETS .
-If this variable is empty, no X Window is configured inside the chroot
+If this variable is set to
+.Ql no ,
+no X Window is configured inside the chroot
 jail and no other X variables take effect.
 Defaults to
 .Ql xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz xmisc.tgz xserver.tgz .
-.It USE_XF86_4
+.It USE_AUDIT_PACKAGES
 If set to
 .Ql yes ,
-sets specified in SETS_X11 contain X Window version 4.
-Has no effect if X is unconfigured.
+install the
+.Pa security/audit-packages
+package inside the chroot and let
+.Nm
+handle the
+.Pa vulnerabilities
+file automatically.
+This means that it will install the system-wide
+.Pa vulnerabilities
+file inside the chroot when needed, keeping both in sync.
 Defaults to
 .Ql yes .
+.It USE_GCC3
+If set to
+.Ql yes ,
+the GNU C Compiler version 3 will be installed inside the chroot
+environment and used to build all packages, using the
+.Pa lang/gcc3
+package.
+Defaults to
+.Ql no .
 .It USE_XPKGWEDGE
 If set to
 .Ql yes ,
@@ -295,16 +331,6 @@ Enters the chroot environment.
 If no arguments are given,
 .Va ROOTSHELL
 is executed, otherwise whatever you typed.
-.It removepkgs
-Remove all the packages in the chroot environment.
-It starts deleting packages with
-.Xr pkg_delete 1
-and then cleans the package tree and the database.
-This will rebuild
-.Sy MAKE_PACKAGES ,
-reinstall
-.Sy INSTALL_PACKAGES
-and xpkgwedge if they are specified in the configuration file.
 .It removeroot
 Remove the entire chroot tree.
 You should do it with this target because it
@@ -324,6 +350,11 @@ or pass package names through the command line.
 .El
 .Sh NOTES
 This program uses nullfs to create virtual copies of real trees inside the
+chroot environment.
+.Pp
+You need to install the
+.Pa security/audit-packages
+package in the host system if you want security checks to work inside the
 chroot environment.
 .Sh SEE ALSO
 .Xr pkg_delete 1 ,
