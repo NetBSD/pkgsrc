@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/22 20:57:38 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/03/29 05:43:30 jlam Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -7,7 +7,7 @@ _BLNK_LIBINTL_FOUND!=	\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
+BUILDLINK_VARS+=	_BLNK_LIBINTL_FOUND
 .endif
 
 _LIBINTL_H=	/usr/include/libintl.h
@@ -26,16 +26,15 @@ IS_BUILTIN.gettext!=	\
 # XXX Consider the native libintl to be gettext-lib-0.10.35nb1.
 # XXX
 BUILTIN_PKG.gettext=	gettext-lib-0.10.35nb1
-MAKEFLAGS+=		BUILTIN_PKG.gettext=${BUILTIN_PKG.gettext}
+BUILDLINK_VARS+=	BUILTIN_PKG.gettext
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.gettext=${IS_BUILTIN.gettext}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.gettext
+.endif	# IS_BUILTIN.gettext
 
-CHECK_BUILTIN.gettext?=	no
-.if !empty(CHECK_BUILTIN.gettext:M[yY][eE][sS])
-USE_BUILTIN.gettext=	yes
-.endif
+#.if defined(USE_BUILTIN.iconv) && !empty(USE_BUILTIN.iconv:M[nN][oO])
+#USE_BUILTIN.gettext=	no
+#.endif
 
 .if !defined(USE_BUILTIN.gettext)
 USE_BUILTIN.gettext?=	${IS_BUILTIN.gettext}
@@ -82,6 +81,9 @@ USE_BUILTIN.gettext=	no
 .    endif
 .  endif
 .endif	# USE_BUILTIN.gettext
+
+CHECK_BUILTIN.gettext?=	no
+.if !empty(CHECK_BUILTIN.gettext:M[nN][oO])
 
 .if !empty(USE_BUILTIN.gettext:M[nN][oO])
 _BLNK_LIBINTL=		-lintl
@@ -147,3 +149,5 @@ CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--without-libintl-prefix
 .  endif
 .endif
+
+.endif	# CHECK_BUILTIN.gettext

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/13 18:39:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:30 jlam Exp $
 
 .if !defined(_BLNK_LIBREADLINE_FOUND)
 _BLNK_LIBREADLINE_FOUND!=	\
@@ -7,7 +7,7 @@ _BLNK_LIBREADLINE_FOUND!=	\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBREADLINE_FOUND=${_BLNK_LIBREADLINE_FOUND}
+BUILDLINK_VARS+=	_BLNK_LIBREADLINE_FOUND
 .endif
 
 .if !defined(_BLNK_LIBEDIT_FOUND)
@@ -17,7 +17,7 @@ _BLNK_LIBEDIT_FOUND!=	\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBEDIT_FOUND=${_BLNK_LIBEDIT_FOUND}
+BUILDLINK_VARS+=	_BLNK_LIBEDIT_FOUND
 .endif
 
 _READLINE_H=		/usr/include/readline.h
@@ -54,16 +54,11 @@ _READLINE_MINOR!=							\
 		${_READLINE_HEADER}
 _READLINE_VERSION=	${_READLINE_MAJOR}.${_READLINE_MINOR}
 BUILTIN_PKG.readline=	readline-${_READLINE_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.readline=${BUILTIN_PKG.readline}
+BUILDLINK_VARS+=	BUILTIN_PKG.readline
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.readline=${IS_BUILTIN.readline}
-.endif
-
-CHECK_BUILTIN.readline?=	no
-.if !empty(CHECK_BUILTIN.readline:M[yY][eE][sS])
-USE_BUILTIN.readline=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.readline
+.endif	# IS_BUILTIN.readline
 
 .if !defined(USE_BUILTIN.readline)
 USE_BUILTIN.readline?=	${IS_BUILTIN.readline}
@@ -107,6 +102,9 @@ USE_BUILTIN.readline=	no
 .  endif
 .endif	# USE_BUILTIN.readline
 
+CHECK_BUILTIN.readline?=	no
+.if !empty(CHECK_BUILTIN.readline:M[nN][oO])
+
 .if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
 .  if !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
       !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
@@ -114,3 +112,5 @@ BUILDLINK_TRANSFORM+=		l:history:edit
 BUILDLINK_TRANSFORM+=		l:readline:edit:termcap
 .  endif
 .endif
+
+.endif	# CHECK_BUILTIN.readline

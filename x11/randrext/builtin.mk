@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:36 jlam Exp $
 
 _X11_EXTENSIONS_RANDR_H=	${X11BASE}/include/X11/extensions/randr.h
 
@@ -20,15 +20,10 @@ _RANDR_MINOR!=	\
 		${_X11_EXTENSIONS_RANDR_H}
 _RANDR_VERSION=	${_RANDR_MAJOR}${_RANDR_MINOR}
 BUILTIN_PKG.randrext=	randrext-${_RANDR_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.randrext=${BUILTIN_PKG.randrext}
+BUILDLINK_VARS+=	BUILTIN_PKG.randrext
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.randrext=${IS_BUILTIN.randrext}
-.endif
-
-CHECK_BUILTIN.randrext?=	no
-.if !empty(CHECK_BUILTIN.randrext:M[yY][eE][sS])
-USE_BUILTIN.randrext=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.randrext
+.endif	# IS_BUILTIN.randrext
 
 .if !defined(USE_BUILTIN.randrext)
 USE_BUILTIN.randrext?=	${IS_BUILTIN.randrext}
@@ -48,6 +43,9 @@ USE_BUILTIN.randrext!=		\
 .  endif
 .endif	# USE_BUILTIN.randrext
 
+CHECK_BUILTIN.randrext?=	no
+.if !empty(CHECK_BUILTIN.randrext:M[nN][oO])
+
 .if !empty(USE_BUILTIN.randrext:M[nN][oO])
 BUILDLINK_DEPENDS.randrext+=	randrext>=1.0
 .endif
@@ -56,3 +54,5 @@ BUILDLINK_DEPENDS.randrext+=	randrext>=1.0
 BUILDLINK_PREFIX.randrext=	${X11BASE}
 USE_X11=			yes
 .endif
+
+.endif	# CHECK_BUILTIN.randrext

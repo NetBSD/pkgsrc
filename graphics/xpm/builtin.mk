@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:32 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,15 +43,10 @@ _XPM_PATCH!=	\
 	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "") } /\#define[ 	]*XpmRevision/ { print alpha[$$3] }' ${_X11_XPM_H}
 _XPM_VERSION=		${_XPM_MAJOR}${_XPM_MINOR}${_XPM_PATCH}
 BUILTIN_PKG.xpm=	xpm-${_XPM_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.xpm=${BUILTIN_PKG.xpm}
+BUILDLINK_VARS+=	BUILTIN_PKG.xpm
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.xpm=${IS_BUILTIN.xpm}
-.endif	# USE_BUILTIN.xpm
-
-CHECK_BUILTIN.xpm?=	no
-.if !empty(CHECK_BUILTIN.xpm:M[yY][eE][sS])
-USE_BUILTIN.xpm=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.xpm
+.endif	# IS_BUILTIN.xpm
 
 .if !defined(USE_BUILTIN.xpm)
 USE_BUILTIN.xpm?=	${IS_BUILTIN.xpm}

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:28 jlam Exp $
 
 .if !defined(IS_BUILTIN.bzip2)
 IS_BUILTIN.bzip2=	no
@@ -10,13 +10,8 @@ IS_BUILTIN.bzip2!=							\
 		${ECHO} "no";						\
 	fi
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.bzip2=${IS_BUILTIN.bzip2}
-.endif
-
-CHECK_BUILTIN.bzip2?=	no
-.if !empty(CHECK_BUILTIN.bzip2:M[yY][eE][sS])
-USE_BUILTIN.bzip2=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.bzip2
+.endif	# IS_BUILTIN.bzip2
 
 .if !defined(USE_BUILTIN.bzip2)
 USE_BUILTIN.bzip2?=	${IS_BUILTIN.bzip2}

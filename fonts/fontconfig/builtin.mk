@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:30 jlam Exp $
 
 _FONTCONFIG_FONTCONFIG_H=	${X11BASE}/include/fontconfig/fontconfig.h
 _X11_TMPL=			${X11BASE}/lib/X11/config/X11.tmpl
@@ -31,15 +31,20 @@ _FONTCONFIG_REVISION!=	\
 _FONTCONFIG_VERSION=	\
 	${_FONTCONFIG_MAJOR}.${_FONTCONFIG_MINOR}.${_FONTCONFIG_REVISION}
 BUILTIN_PKG.fontconfig=	fontconfig-${_FONTCONFIG_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.fontconfig=${BUILTIN_PKG.fontconfig}
+BUILDLINK_VARS+=	BUILTIN_PKG.fontconfig
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.fontconfig=${IS_BUILTIN.fontconfig}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.fontconfig
+.endif	# IS_BUILTIN.fontconfig
 
-CHECK_BUILTIN.fontconfig?=	no
-.if !empty(CHECK_BUILTIN.fontconfig:M[yY][eE][sS])
-USE_BUILTIN.fontconfig=		yes
+.if defined(USE_BUILTIN.zlib) && !empty(USE_BUILTIN.zlib:M[nN][oO])
+USE_BUILTIN.fontconfig=	no
+.endif
+.if defined(USE_BUILTIN.freetype2) && !empty(USE_BUILTIN.freetype2:M[nN][oO])
+USE_BUILTIN.fontconfig=	no
+.endif
+.if defined(USE_BUILTIN.expat) && !empty(USE_BUILTIN.expat:M[nN][oO])
+USE_BUILTIN.fontconfig=	no
 .endif
 
 .if !defined(USE_BUILTIN.fontconfig)
@@ -60,6 +65,9 @@ USE_BUILTIN.fontconfig!=	\
 .  endif
 .endif	# USE_BUILTIN.fontconfig
 
+CHECK_BUILTIN.fontconfig?=	no
+.if !empty(CHECK_BUILTIN.fontconfig:M[nN][oO])
+
 .if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
 BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
@@ -73,3 +81,5 @@ USE_BUILTIN.expat=	yes
 USE_BUILTIN.freetype2=	yes
 USE_BUILTIN.zlib=	yes
 .endif
+
+.endif	# CHECK_BUILTIN.fontconfig
