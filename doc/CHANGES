@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1649 2003/03/15 18:22:21 kim Exp $
+$NetBSD: CHANGES,v 1.1650 2003/03/15 20:20:39 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1137,3 +1137,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated screen to 3.9.15 [hubertf 2003-03-15]
 	Updated libgtkhtml to 2.2.1 [jmmv 2003-03-15]
 	Updated roller to 1.13 [kim 2003-03-15]
+	Updated ja-vfxdvik to 22.40v.j1.14 [kei 2003-03-15]
+	Added ja-ptex-bin-3.1.2 [kei 2003-03-15]
+	Added ja-ptex-share-2.1 [kei 2003-03-15]
+	Added ja-jsclasses-0.0.0.20021127 [kei 2003-03-15]
+	Added ja-ptex-1.0 [kei 2003-03-15]
