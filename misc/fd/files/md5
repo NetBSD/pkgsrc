@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 2001/04/10 07:37:30 hubertf Exp $
+$NetBSD: md5,v 1.6 2001/04/11 21:09:33 hubertf Exp $
 
-MD5 (FD-1.03r.tar.gz) = 943d17ccc6257340c29db8362bac67fa
+SHA1 (FD-1.03r.tar.gz) = 51e1aae536c1fa086bcd94645a3f84ac43f661d0
