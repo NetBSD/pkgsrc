@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1927 2004/07/14 00:25:11 xtraeme Exp $
+$NetBSD: TODO,v 1.1928 2004/07/14 00:51:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -70,7 +70,7 @@ Suggested new packages
 	Digital video recorder
 	http://www.mythtv.org/
 
-	Asterisk [grant, itojun/PR22585 (0.4 release)]
+	Asterisk [grant, itojun/PR22585 (0.4 release), wip/asterisk]
 	PBX-in-a-box for Linux
 	http://www.asterisk.org/
 
