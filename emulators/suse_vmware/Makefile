@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/14 11:31:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		fileutils-4.1-154.i386
 PKGNAME=		suse_vmware-${SUSE_VERSION}
@@ -17,6 +17,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
+NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST=		EMULSUBDIR=${EMULSUBDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/14 11:31:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -14,9 +14,9 @@ DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
-USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
+NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		xshared.rpm

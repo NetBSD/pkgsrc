@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/14 11:31:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		libpng
 PKGREVISION=		1
@@ -16,9 +16,9 @@ DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
-USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
+NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../emulators/suse_linux/arch.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/14 11:31:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -19,6 +19,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
+NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		binutils.rpm cpp.rpm g77.rpm gcc.rpm gpp.rpm make.rpm
