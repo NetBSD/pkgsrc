@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 1999/09/15 18:26:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.18 1999/11/14 19:53:42 hubertf Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kattraction.kss
@@ -1711,3 +1711,5 @@ share/kde/wallpapers/wood1.jpg
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmbell
 @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm libexec/kde-cgi-bin
+@comment The following is not part of the KDE distrib:
+share/kde/icons/Daemon.png
