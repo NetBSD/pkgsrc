@@ -11,7 +11,7 @@
 +#elif defined(sparc)
 +#define ETH_DEV_NR      2
 +char *ETH_DEV[]={"le","ie"};
-+#elif defined(amiga)
++#elif defined(m68k)
 +#define ETH_DEV_NR      5
 +char *ETH_DEV[]={"bah","ed","es","le","qn"};
 +#else
