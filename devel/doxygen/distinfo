@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.4 2002/08/18 17:45:56 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2002/10/24 06:21:18 martti Exp $
 
-SHA1 (doxygen-1.2.10.src.tar.gz) = f23eb4c56b0a11cd9ee80b2cfee0ecd3022d7faa
-Size (doxygen-1.2.10.src.tar.gz) = 1658502 bytes
+SHA1 (doxygen-1.2.18.src.tar.gz) = fc9004d6b443e0d9531b218ec3d383da4766d9aa
+Size (doxygen-1.2.18.src.tar.gz) = 2364114 bytes
 SHA1 (patch-aa) = c5f0e9d025b4d4672a1ad1467bebd76506ca601d
-SHA1 (patch-ab) = d902e2657920c65217ef7a13b1b6e9152db04f71
-SHA1 (patch-ac) = 561b8fceb9ccd0ecaf04880a75a78e7af6e5ab37
-SHA1 (patch-ad) = 2a91c08ba337213b71dce823f0ea30478656f526
-SHA1 (patch-ae) = f3632d7f8c976ac11caf80ecdbaaecc79981e020
+SHA1 (patch-ab) = fad2b744772ac8961e6536e3bdb253544410dfb3
+SHA1 (patch-ac) = a1d2536b47106baa68372235fa50bd82b6ccddff
+SHA1 (patch-ad) = 2d8685345f52c3dab5255b28e837cd35e2aa6025
+SHA1 (patch-ae) = a2297eaa43b507f08fe6f5b88b17caa3480df7c8
 SHA1 (patch-af) = 7e9cac0f6a10389b9f20cdc5b7e4988588216734
+SHA1 (patch-ag) = e19c114bcae41a49aee1e024451d101475aaa48c
