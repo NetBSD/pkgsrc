@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.52 2004/01/17 06:22:20 grant Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.53 2004/01/20 05:56:34 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -376,7 +376,7 @@ bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ! ${PKG_INFO} -qe ${PKGNAME} ; then \
 			${DO} ${MAKE} install-depends ; \
-			${ECHO_MSG} "BULK> " ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
+			${ECHO_MSG} "BULK>" ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
