@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.38 2004/03/11 18:35:29 sketch Exp $
+dnl $NetBSD: configure.ac,v 1.39 2004/04/16 23:59:32 heinz Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -209,13 +209,13 @@ AC_CHECK_FUNC(sl_init, [
 		[:] , [AC_LIBOBJ(sl_init)])
 ])
 
-dnl Solaris 2.7 and 2.8 have statfs(2), but it is deprecated, and has a
-dnl different interface from NetBSD's statfs.
+dnl Solaris 2.7, 2.8 and UnixWare 7 have statfs(2), but it is deprecated,
+dnl and has a different interface from NetBSD's statfs.
 dnl
 pkg_use_nbcompat_statfs=yes
 AC_CHECK_FUNC(statfs, [
 	case $host_os in
-	irix*|sunos*|solaris*)
+	irix*|sunos*|solaris*|*UnixWare*)
 		AC_CHECK_FUNC(statvfs, [:], [
 			AC_MSG_ERROR(statfs can't be implemented correctly)
 		])
