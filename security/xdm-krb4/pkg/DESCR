@@ -1,4 +1,4 @@
-This is xdm-krb4-3.3.6.0, a Kerberos IV and AFS-aware version of xdm.
+This is xdm-krb4-3.3.6.1, a Kerberos IV and AFS-aware version of xdm.
 It is a downsized version of the xdm that comes with XFree86 version 3.3.6,
 with Kerberos IV functionality added.  
 
