@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.11 2004/06/27 20:06:24 dmcmahill Exp $
+
+--- src/af/xap/xp/xap_Draw_Symbol.cpp.orig	Wed May  7 17:40:40 2003
++++ src/af/xap/xp/xap_Draw_Symbol.cpp
+@@ -153,7 +153,7 @@ void XAP_Draw_Symbol::draw(void)
+ 	
+ 	for (i = 0; i < m_vCharSet.size(); i += 2)
+ 	{
+-		UT_UCSChar base = static_cast<UT_UCSChar>(reinterpret_cast<UT_uint32>(m_vCharSet[i]));
++		UT_UCSChar base = static_cast<UT_UCSChar>((UT_uint32)(m_vCharSet[i]));
+ 		size_t nb_chars = reinterpret_cast<size_t>(m_vCharSet[i + 1]);
+ 
+ 		for (UT_UCSChar j = base; j < base + nb_chars; ++j)
+@@ -194,11 +194,11 @@ UT_UCSChar XAP_Draw_Symbol::calcSymbolFr
+ 	UT_DEBUGMSG(("calcSymbolFromCoords(x = [%u], y = [%u]) =", ix, iy));
+ 	for (size_t i = 0; i < m_vCharSet.size(); i += 2)
+ 	{
+-		count += reinterpret_cast<UT_uint32>(m_vCharSet[i + 1]);
++		count += (UT_uint32)(m_vCharSet[i + 1]);
+ 		if (count > index)
+ 		{
+ 			UT_DEBUGMSG((" %u\n", static_cast<UT_uint32>(reinterpret_cast<UT_uint32>(m_vCharSet[i]) + index - count + reinterpret_cast<UT_uint32>(m_vCharSet[i + 1]))));
+-			return static_cast<UT_UCSChar>(reinterpret_cast<UT_uint32>(m_vCharSet[i]) + index - count + reinterpret_cast<UT_uint32>(m_vCharSet[i + 1]));
++			return static_cast<UT_UCSChar>((UT_uint32)(m_vCharSet[i]) + index - count + (UT_uint32)(m_vCharSet[i + 1]));
+ 		}
+ 	}
+ 
+@@ -227,8 +227,8 @@ void XAP_Draw_Symbol::calculatePosition(
+ 
+ 	for (size_t i = 0; i < m_vCharSet.size(); i += 2)
+ 	{
+-		UT_uint32 base = reinterpret_cast<UT_uint32>(m_vCharSet[i]);
+-		UT_uint32 size = reinterpret_cast<UT_uint32>(m_vCharSet[i + 1]);
++		UT_uint32 base = (UT_uint32)(m_vCharSet[i]);
++		UT_uint32 size = (UT_uint32)(m_vCharSet[i + 1]);
+ 		
+ 		if (base + size > c)
+ 		{
