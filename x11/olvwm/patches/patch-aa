@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/16 14:18:54 pooka Exp $
+
+--- Imakefile.orig	Tue Jan 13 22:23:54 1998
++++ Imakefile	Tue Jun  6 19:27:42 2000
+@@ -48,7 +48,11 @@
+ /**/#MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DIDENT
+ 
+ /**/# For a generic Solaris 2.x system, I'd suggest
+-MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DSVR4 -DSYSV -DIDENT -x O4
++/**/#MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DSVR4 -DSYSV -DIDENT -x O4
++
++/**/# For NetBSD the following is fine
++MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DREGEXP -DXPM -DIDENT -DMAXPID=30000 \
++	-DX11BASE=\"${X11BASE}\"
+ 
+ /**/#
+ /**/# Set MORELDFLAGS to any link options you want.  Be sure to add -lxpm if you
+@@ -57,8 +61,10 @@
+ /**/#MORELDFLAGS=-L${OPENWINHOME}/lib
+ /**/#
+ /**/# For Solaris 2.x, I'd suggest
+-MORELDFLAGS=-L${OPENWINHOME}/lib -R ${OPENWINHOME}/lib -lintl
++/**/#MORELDFLAGS=-L${OPENWINHOME}/lib -R ${OPENWINHOME}/lib -lintl
+ 
++/**/# For NetBSD the following is fine
++MORELDFLAGS=-lcompat -lXpm
+ 
+ /**/# No more changes needed
+ 
+@@ -93,7 +99,7 @@
+ SRCS	= atom.c client.c cmdstream.c cursors.c debug.c defaults.c dsdm.c \
+        environ.c error.c evbind.c events.c fontset.c gettext.c gif.c group.c \
+        helpsend.c i18n.c images.c info.c kbdfuncs.c list.c mem.c menu.c \
+-       moveresize.c notice.c ol_button.413.c ol_button.svr4.c olvwmrc.c \
++       moveresize.c notice.c ol_button.413.c ol_button.svr4.c \
+        olwm.c pixmap.c properties.c reduce.c resources.c screen.c \
+        selection.c services.c slave.c slots.c st.c states.c usermenu.c \
+        usleep.c virtual.c win.c winbusy.c winbutton.c wincolor.c winframe.c \

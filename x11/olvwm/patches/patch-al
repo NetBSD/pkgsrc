@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/06/16 14:18:57 pooka Exp $
+
+--- cursors.c.orig	Sat Jan  8 02:13:12 2000
++++ cursors.c	Sat Jan  8 02:12:21 2000
+@@ -278,7 +278,7 @@
+ 	    if (our_copy[0] == 'X')
+ 		font_file = "cursor";
+ 	    else if (our_copy[0] == 'O')
+-		font_file = "-sun-open look cursor-----12-120-75-75-p-455-sunolcursor-1";
++		font_file = "olcursor";
+ 	    createCursor(dpy, cmap, pointer, cursor_id, font_file, end, ptr);
+ 	}
+ 	else {

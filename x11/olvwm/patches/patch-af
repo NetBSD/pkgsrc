@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/06/16 14:18:55 pooka Exp $
+
+--- screen.c.orig	Sat Jan  8 00:34:00 2000
++++ screen.c	Sat Jan  8 00:34:05 2000
+@@ -157,6 +157,15 @@
+  *	Local Functions
+  *-------------------------------------------------------------------------*/
+ 
++static updateScreenWorkspaceColor();
++static updateScreenWindowColor();
++static updateScreenForegroundColor();
++static updateScreenBackgroundColor();
++static updateScreenBorderColor();
++static updateScreenInputFocusColor();
++static updateScreenGlyphFont();
++
++
+ /*
+  * makeScreenQuarks -- set up quarks for screen resources
+  */
