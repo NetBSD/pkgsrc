@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/21 19:00:38 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/25 15:23:41 yyamano Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -26,7 +26,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 post-patch:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 .include "../../mk/bsd.pkg.mk"
