@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3032 2003/08/12 23:33:24 kristerw Exp $
+$NetBSD: CHANGES,v 1.3033 2003/08/13 03:06:47 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3256,3 +3256,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grace to 5.1.12 [seb 2003-08-12]
 	Updated ast-ksh to 20030724 [kristerw 2003-08-12]
 	Updated static-ast-ksh to 20030724 [kristerw 2003-08-12]
+	Updated adzap to 20030811 [simonb 2003-08-13]
