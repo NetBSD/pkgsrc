@@ -1,0 +1,37 @@
+$NetBSD: patch-at,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/aliases.5.orig	Sun Feb  2 01:24:50 1997
++++ src/aliases.5	Sat Feb 12 23:28:27 2000
+@@ -34,7 +34,7 @@
+ .\"
+ .Dd February 1, 1997
+ .Dt ALIASES 5
+-.Os BSD 4
++.Os
+ .Sh NAME
+ .Nm aliases
+ .Nd aliases file for sendmail
+@@ -83,7 +83,6 @@
+ .Sh SEE  ALSO
+ .Xr newaliases 1 ,
+ .Xr dbopen 3 ,
+-.Xr dbm 3 ,
+ .Xr sendmail 8
+ .Rs
+ .%T "SENDMAIL Installation and Operation Guide"
+@@ -91,15 +90,6 @@
+ .Rs
+ .%T "SENDMAIL An Internetwork Mail Router"
+ .Re
+-.Sh BUGS
+-If you have compiled
+-.Xr sendmail
+-with DBM support instead of NEWDB,
+-you may have encountered problems in
+-.Xr dbm 3
+-restricting a single alias to about 1000 bytes of information.
+-You can get longer aliases by ``chaining''; that is, make the last name in
+-the alias be a dummy name which is a continuation alias.
+ .Sh HISTORY
+ The
+ .Nm

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- praliases/praliases.c.orig	Thu May 29 01:52:17 1997
++++ praliases/praliases.c	Sat Feb 12 23:28:27 2000
+@@ -67,7 +67,7 @@
+ #endif
+ 
+ 	filename = "/etc/aliases";
+-	while ((ch = getopt(argc, argv, "f:")) != EOF)
++	while ((ch = getopt(argc, argv, "f:")) != -1)
+ 		switch((char)ch) {
+ 		case 'f':
+ 			filename = optarg;

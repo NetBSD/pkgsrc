@@ -1,0 +1,12 @@
+$NetBSD: patch-az,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/map.c.orig	Tue Oct 21 14:28:06 1997
++++ src/map.c	Sat Feb 12 23:28:27 2000
+@@ -1139,6 +1139,7 @@
+ 			ndbm_map_store(map, "YP_LAST_MODIFIED", buf);
+ 
+ 			(void) gethostname(buf, sizeof buf);
++			buf[sizeof(buf) - 1] = '\0';
+ 			ndbm_map_store(map, "YP_MASTER_NAME", buf);
+ 
+ 			map->map_mflags = save_mflags;

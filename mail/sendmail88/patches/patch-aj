@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- makemap/Makefile.orig	Wed Jun 11 01:03:15 1997
++++ makemap/Makefile	Sat Feb 12 23:28:26 2000
+@@ -1,13 +1,10 @@
+ #	@(#)Makefile	8.4 (Berkeley) 6/10/97
+ 
+ PROG=	makemap
+-MAN8=	makemap.0
+-CFLAGS+=-I${.CURDIR}/../src -DNEWDB -DNOT_SENDMAIL
++MAN=	makemap.8
++CPPFLAGS+=-I${.CURDIR}/../src -DNEWDB -DNOT_SENDMAIL
+ 
+ SRCS=	makemap.c safefile.c
+ 
+-safefile.c: ${.CURDIR}/../src/safefile.c
+-	ln -s ${.CURDIR}/../src/safefile.c
+-
+-.include "../../Makefile.inc"
++.PATH: ${.CURDIR}/../src
+ .include <bsd.prog.mk>

@@ -1,0 +1,50 @@
+$NetBSD: patch-av,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/conf.c.orig	Mon Oct 20 17:41:38 1997
++++ src/conf.c	Sat Feb 12 23:28:27 2000
+@@ -1973,7 +1973,7 @@
+ 
+ /* Non Apollo stuff removed by Don Lewis 11/15/93 */
+ #ifndef lint
+-static char  rcsid[] = "@(#)$Id: patch-av,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $";
++static char  rcsid[] = "@(#)$Id: patch-av,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $";
+ #endif /* !lint */
+ 
+ #ifdef apollo
+@@ -2939,7 +2939,7 @@
+  * causing nast effects.
+  **************************************************************/
+ 
+-/*static char _id[] = "$Id: patch-av,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $";*/
++/*static char _id[] = "$Id: patch-av,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $";*/
+ static void	sm_dopr();
+ static char	*DoprEnd;
+ static int	SnprfOverflow;
+@@ -2997,7 +2997,7 @@
+ 
+ static void fmtstr __P((char *value, int ljust, int len, int zpad, int maxwidth));
+ static void fmtnum __P((long value, int base, int dosign, int ljust, int len, int zpad));
+-static void dostr __P(( char * , int ));
++static void dostr __P(( const char * , int ));
+ static char *output;
+ static void dopr_outch __P(( int c ));
+ static int	SyslogErrno;
+@@ -3218,7 +3218,7 @@
+ 
+ static void
+ dostr( str , cut)
+-     char *str;
++     const char *str;
+      int cut;
+ {
+   if (cut) {
+@@ -3315,8 +3315,7 @@
+ 	char *shell;
+ {
+ #if HASGETUSERSHELL
+-	register char *p;
+-	extern char *getusershell();
++	register const char *p;
+ 
+ 	if (shell == NULL || shell[0] == '\0' || wordinclass(user, 't') ||
+ 	    ConfigLevel <= 1)

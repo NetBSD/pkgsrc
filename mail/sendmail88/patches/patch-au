@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/arpadate.c.orig	Sun Feb  2 01:24:49 1997
++++ src/arpadate.c	Sat Feb 12 23:28:27 2000
+@@ -86,7 +86,7 @@
+ 	register struct tm *lt;
+ 	time_t t;
+ 	struct tm gmt;
+-	char *tz;
++	const char *tz;
+ 	static char b[43 + TZNAME_MAX];
+ 
+ 	/*

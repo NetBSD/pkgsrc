@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- contrib/bitdomain.c.orig	Fri Oct 27 16:22:19 1995
++++ contrib/bitdomain.c	Sat Feb 12 23:28:26 2000
+@@ -51,7 +51,7 @@
+ {
+     int opt;
+ 
+-    while ((opt = getopt(argc, argv, "o:")) != EOF) {
++    while ((opt = getopt(argc, argv, "o:")) != -1) {
+ 	switch (opt) {
+ 	case 'o':
+ 	    if (!freopen(optarg, "w", stdout)) {
