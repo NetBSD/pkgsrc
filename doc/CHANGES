@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4108 2003/12/14 21:37:34 jmmv Exp $
+$NetBSD: CHANGES,v 1.4109 2003/12/14 21:51:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5156,3 +5156,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated metacity to 2.6.3 [jmmv 2003-12-14]
 	Updated gtksourceview to 0.7.0nb4 [jmmv 2003-12-14]
 	Updated librsvg2 to 2.4.0 [jmmv 2003-12-14]
+	Updated eel2 to 2.4.1 [xtraeme 2003-12-14]
