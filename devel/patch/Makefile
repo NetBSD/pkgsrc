@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/24 19:47:28 seb Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/22 17:30:09 wiz Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -13,14 +13,11 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--program-prefix=g
-PROGRAM_PREFIX=		g
-.else
-PROGRAM_PREFIX=
+.if ${OPSYS} == "NetBSD" && defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
 
-PLIST_SUBST+=		PROGRAM_PREFIX=${PROGRAM_PREFIX}
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
