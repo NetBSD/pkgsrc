@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/01/10 14:56:45 jlam Exp $
+
+--- configure.orig	Mon May 12 11:28:20 2003
++++ configure
+@@ -3036,9 +3036,6 @@ fi
+ 
+ 
+ 
+-test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+-test "$localstatedir" = '${prefix}/var' && localstatedir='/var/heimdal'
+-
+ # Make sure we can run config.sub.
+ $ac_config_sub sun4 >/dev/null 2>&1 ||
+   { { echo "$as_me:$LINENO: error: cannot run $ac_config_sub" >&5
