@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/05/11 09:18:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 15:59:13 agc Exp $
 
 SHA1 (tirc-1.2.tar.gz) = eae51ae46282943a3c1a3aa134aaec9455e0f65b
+RMD160 (tirc-1.2.tar.gz) = 31ad3e1796e28a5cbadb1ff30c4753a72775968e
 Size (tirc-1.2.tar.gz) = 300089 bytes
