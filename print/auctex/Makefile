@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:58 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/19 22:23:45 jtb Exp $
 
-DISTNAME=	auctex-9.9p
+DISTNAME=	auctex-10.0g
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
 
@@ -27,13 +27,13 @@ INFO_FILES+=	auctex
 .endif
 
 PLIST_SUBST+=	LISPDIR=${LISPDIR} INFODIR=${INFODIR}
+MESSAGE_SUBST+=	LISPDIR=${LISPDIR}
 
 post-patch:
-	@for t in ${WRKSRC}/tex-site.el; do			\
+	${MV} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.orig
 	${SED} -e 's:@LISPDIR@:'${LISPDIR}':g'			\
 		-e 's:@TEX_PREFIX@:'${TEX_PREFIX}':g'		\
-		< $$t > $$t.tmp && ${MV} $$t.tmp $$t;		\
-	done
+	${WRKSRC}/tex-site.el.orig > ${WRKSRC}/tex-site.el
 	${CP} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.dist
 
 post-build:
@@ -47,11 +47,10 @@ do-install:
 .if !exists(${PREFIX}/${LISPDIR}/tex-site.el)
 	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${PREFIX}/${LISPDIR}
 .endif
-	@for e in auc-old.el bib-cite.el font-latex.el hilit-LaTeX.el	   \
+	for f in auc-old.el bib-cite.el font-latex.el hilit-LaTeX.el	   \
 	latex.el lpath.el multi-prompt.el tex-buf.el tex-info.el tex-jp.el \
 	tex.el texmathp.el; do						   \
-	i="${INSTALL_DATA} ${WRKSRC}/$$e* ${PREFIX}/${LISPDIR}/auctex/";   \
-	${ECHO} $$i; $$i;						   \
+	${INSTALL_DATA} ${WRKSRC}/$$f* ${PREFIX}/${LISPDIR}/auctex/; 	   \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}/auctex/style
 	${INSTALL_DATA} ${WRKSRC}/style/*.el* ${PREFIX}/${LISPDIR}/auctex/style
