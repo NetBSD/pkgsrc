@@ -1,21 +1,24 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.2 2002/10/18 11:32:12 martti Exp $
 
-DISTNAME=	vim-kde-6.1.141
-WRKSRC= 	${WRKDIR}/kvim-6.1.141/src
+DISTNAME=	kvim-${KVIM_VERSION}
+PKGNAME=	vim-kde-${KVIM_VERSION}
+WRKSRC= 	${WRKDIR}/kvim-${KVIM_VERSION}/src
 CATEGORIES=	editors kde
 MASTER_SITES=	http://download.kde.org/stable/apps/KDE3.x/utils/ \
 		http://freenux.org/kvim/
-DISTFILES=	kvim-6.1.141.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	Joe Reed <greyskyy@po.cwru.edu>
 HOMEPAGE=	http://www.freehackers.org/kvim
 COMMENT=	Vim editor (vi clone) with X11 KDE3 GUI
 
+KVIM_VERSION=	6.1.141
+
 CONFLICTS+=	vim-gtk-[0-9]* vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
 
 USE_BUILDLINK2=		YES
 
-GNU_CONFIGURE=          YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gui=kde
 CONFIGURE_ARGS+=	--enable-kde-toolbar
 CONFIGURE_ARGS+=	--with-features=huge
