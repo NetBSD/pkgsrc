@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/06 06:51:05 garbled Exp $
+bin/bochs
+lib/X11/fonts/misc/fonts.dir
+lib/X11/fonts/misc/hercules.bdf
+lib/X11/fonts/misc/vga.bdf
+lib/X11/fonts/misc/vga.pcf
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/misc
+@unexec %D/bin/mkfontdir %D/lib/X11/fonts/misc
+share/doc/bochs/00README
+share/doc/bochs/3rdparty.license.html
+share/doc/bochs/DOS.html
+share/doc/bochs/LICENSE
+share/doc/bochs/Linux.html
+share/doc/bochs/Minix.html
+share/doc/bochs/OldWindows95.html
+share/doc/bochs/WISHLIST
+share/doc/bochs/Windows31.html
+share/doc/bochs/Windows95.html
+share/doc/bochs/changelog.html
+share/doc/bochs/company.html
+share/doc/bochs/construction.html
+share/doc/bochs/debugger.html
+share/doc/bochs/developers.html
+share/doc/bochs/drawing_board.html
+share/doc/bochs/features.html
+share/doc/bochs/index.html
+share/doc/bochs/install.html
+share/doc/bochs/jbochs.html
+share/doc/bochs/licensing.html
+share/doc/bochs/mtools.html
+share/doc/bochs/undercon.gif
+share/doc/bochs/whatisbochs.html
+share/doc/bochs/win32.html
+share/bochs/bios/BIOS-bochs-980702a
+share/bochs/bios/VGABIOS-elpin-2.20
+share/bochs/bochsrc
+@dirrm share/doc/bochs
+@dirrm share/bochs/bios
+@dirrm share/bochs
+
