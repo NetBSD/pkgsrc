@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9469 2005/03/08 13:51:12 is Exp $
+$NetBSD: CHANGES,v 1.9470 2005/03/08 14:20:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.09 [abs 2005-03-07]
 	Updated osh to 050131 [adam 2005-03-08]
 	Updated sr to 2.3.3nb2 [is 2005-03-08]
+	Removed giflib [adam 2005-03-08]
