@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 00:03:29 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/23 20:52:09 seb Exp $
 bin/imapfilter
 man/man1/imapfilter.1
-man/man5/imapfilterrc.5
-share/examples/imapfilter/sample.imapfilterrc
+man/man5/imapfilter_config.5
+share/examples/imapfilter/sample.config.lua
+share/examples/imapfilter/sample.extend.lua
+share/imapfilter/auxiliary.lua
+share/imapfilter/interface.lua
+@dirrm share/imapfilter
 @dirrm share/examples/imapfilter
