@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:47:38 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/01 18:43:27 cjep Exp $
 #
 
 DISTNAME=	grpconst
@@ -16,6 +16,9 @@ COMMENT=	GAP package for finding isomorphism classes of finite groups
 NO_BUILD=	YES
 USE_BUILDLINK2=	YES
 GAP_PKG_NAME=	grpconst
+
+post-extract:
+	${RM} -f ${WRKSRC}/doc/.cvsignore
 
 do-install:
 	cd ${WRKDIR} && ${PAX} -rw ${GAP_PKG_NAME} ${GAP_PKG_ROOT}
