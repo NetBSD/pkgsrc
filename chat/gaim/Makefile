@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.42 2003/10/18 08:18:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2003/12/03 13:23:28 jmmv Exp $
 #
 
-DISTNAME=	gaim-0.71
+DISTNAME=	gaim-0.74
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
+
+PATCH_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/marcus/
+PATCHFILES=	${DISTNAME}-openssl.patch.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://gaim.sourceforge.net/
@@ -27,6 +31,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-nss
+CONFIGURE_ARGS+=	--disable-tcl
+CONFIGURE_ARGS+=	--disable-gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,7 +46,7 @@ CONFIGURE_ARGS+=	--disable-screensaver
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../security/gnutls/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/gtkspell/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../x11/startup-notification/buildlink2.mk"
