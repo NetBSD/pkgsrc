@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 20:27:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/18 15:03:30 jdolecek Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	# empty
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes
 
+# XXX the -rpath filter is somewhat ugly, and this should be eventually
+# fixed in NetBSD qmake template to not be necessary.
 post-configure:
 	cd ${WRKSRC} && (	\
 		${QTDIR}/bin/qmake qca-tls.pro -o Makefile.orig;	\
