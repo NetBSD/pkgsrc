@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- lookup.c.orig	Mon Oct 26 23:24:20 1998
++++ lookup.c	Mon Oct 26 23:25:41 1998
+@@ -212,22 +212,22 @@
+ 	    if (dp->word == (char *) -1)
+ 		dp->word = NULL;
+ 	    else
+-		dp->word = &hashstrings [ (int)(dp->word) ];
++		dp->word = &hashstrings [ (PTRSIZE)(dp->word) ];
+ 	    if (dp->next == (struct dent *) -1)
+ 		dp->next = NULL;
+ 	    else
+-		dp->next = &hashtbl [ (int)(dp->next) ];
++		dp->next = &hashtbl [ (PTRSIZE)(dp->next) ];
+ 	    }
+ 	}
+ 
+     for (i = numsflags + numpflags, entry = sflaglist; --i >= 0; entry++)
+ 	{
+ 	if (entry->stripl)
+-	    entry->strip = (ichar_t *) &hashstrings[(int) entry->strip];
++	    entry->strip = (ichar_t *) &hashstrings[(PTRSIZE) entry->strip];
+ 	else
+ 	    entry->strip = NULL;
+ 	if (entry->affl)
+-	    entry->affix = (ichar_t *) &hashstrings[(int) entry->affix];
++	    entry->affix = (ichar_t *) &hashstrings[(PTRSIZE) entry->affix];
+ 	else
+ 	    entry->affix = NULL;
+ 	}
