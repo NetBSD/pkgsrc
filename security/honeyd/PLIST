@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
+bin/honeyd
+bin/honeydctl
+etc/rc.d/honeyd
+include/honeyd/debug.h
+include/honeyd/hooks.h
+include/honeyd/plugins.h
+include/honeyd/plugins_config.h
+lib/honeyd/libhoneyd.so
+man/man1/honeydctl.1
+man/man8/honeyd.8
+share/doc/honeyd/README
+share/examples/honeyd/config.ethernet
+share/examples/honeyd/config.sample
+share/examples/honeyd/nmap.assoc
+share/examples/honeyd/nmap.prints
+share/examples/honeyd/pf.os
+share/examples/honeyd/xprobe2.conf
+@dirrm share/examples/honeyd
+@dirrm lib/honeyd
+@dirrm include/honeyd
