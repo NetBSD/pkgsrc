@@ -1,4 +1,4 @@
-# $NetBSD: gcc.buildlink2.mk,v 1.4 2003/07/22 01:00:25 kristerw Exp $
+# $NetBSD: gcc.buildlink2.mk,v 1.5 2003/08/21 16:16:46 gavan Exp $
 #
 # USE_GCC2
 #	If defined, use gcc from lang/gcc.
@@ -11,9 +11,9 @@ GCC_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_GCC3) && empty(PKGPATH:Mlang/gcc3)
+.if defined(USE_GCC3) && empty(PKGPATH:Mlang/gcc3) && empty(_PKGSRC_DEPS:Mgcc-3.*)
 .  include "../lang/gcc3/buildlink2.mk"
-.elif defined(USE_GCC2) && empty(PKGPATH:Mlang/gcc)
+.elif defined(USE_GCC2) && empty(PKGPATH:Mlang/gcc) && empty(_PKGSRC_DEPS:Mgcc-2.*)
 .  include "../lang/gcc/buildlink2.mk"
 .endif
 
