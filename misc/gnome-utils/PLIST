@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/07/17 13:46:49 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/01/12 06:49:37 rh Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -10,7 +10,6 @@ bin/gless
 bin/gnome-exe-handler
 bin/gsearchtool
 bin/gshutdown
-bin/gtt
 bin/guname
 bin/gw
 bin/logview
@@ -31,7 +30,6 @@ man/man1/gfontsel.1
 man/man1/gless.1
 man/man1/gnome-exe-handler.1
 man/man1/gsearchtool.1
-man/man1/gtt.1
 man/man1/guname.1
 man/man1/gw.1
 man/man1/logview.1
@@ -53,7 +51,6 @@ share/gcolorsel/glade/view-color-edit.glade
 share/gcolorsel/glade/view-color-generic-properties.glade
 share/gcolorsel/glade/view-color-grid-properties.glade
 share/gcolorsel/glade/view-color-list-properties.glade
-share/gnome/apps/Applications/gtt.desktop
 share/gnome/apps/System/gdiskfree.desktop
 share/gnome/apps/System/gshutdown.desktop
 share/gnome/apps/System/guname.desktop
@@ -495,53 +492,6 @@ share/gnome/help/gshutdown_util/es/license.sgml
 share/gnome/help/gshutdown_util/es/ln10.html
 share/gnome/help/gshutdown_util/es/topic.dat
 share/gnome/help/gshutdown_util/es/usage.html
-share/gnome/help/gtt/C/authors.html
-share/gnome/help/gtt/C/bugs.html
-share/gnome/help/gtt/C/dialogs.html
-share/gnome/help/gtt/C/docbook.css
-share/gnome/help/gtt/C/figures/gtt_mainwin.png
-share/gnome/help/gtt/C/figures/gtt_prefswin.png
-share/gnome/help/gtt/C/gtt.sgml
-share/gnome/help/gtt/C/index.html
-share/gnome/help/gtt/C/license.html
-share/gnome/help/gtt/C/ln10.html
-share/gnome/help/gtt/C/preferences.html
-share/gnome/help/gtt/C/stylesheet-images/caution.gif
-share/gnome/help/gtt/C/stylesheet-images/home.gif
-share/gnome/help/gtt/C/stylesheet-images/important.gif
-share/gnome/help/gtt/C/stylesheet-images/next.gif
-share/gnome/help/gtt/C/stylesheet-images/note.gif
-share/gnome/help/gtt/C/stylesheet-images/prev.gif
-share/gnome/help/gtt/C/stylesheet-images/tip.gif
-share/gnome/help/gtt/C/stylesheet-images/toc-blank.gif
-share/gnome/help/gtt/C/stylesheet-images/toc-minus.gif
-share/gnome/help/gtt/C/stylesheet-images/toc-plus.gif
-share/gnome/help/gtt/C/stylesheet-images/up.gif
-share/gnome/help/gtt/C/stylesheet-images/warning.gif
-share/gnome/help/gtt/C/topic.dat
-share/gnome/help/gtt/C/usage.html
-share/gnome/help/gtt/de/index.html
-share/gnome/help/gtt/de/topic.dat
-share/gnome/help/gtt/es/docbook.css
-share/gnome/help/gtt/es/figures/gtt_mainwin.png
-share/gnome/help/gtt/es/figures/gtt_prefswin.png
-share/gnome/help/gtt/es/gtt.sgml
-share/gnome/help/gtt/es/index.html
-share/gnome/help/gtt/es/ln10.html
-share/gnome/help/gtt/es/stylesheet-images/caution.gif
-share/gnome/help/gtt/es/stylesheet-images/home.gif
-share/gnome/help/gtt/es/stylesheet-images/important.gif
-share/gnome/help/gtt/es/stylesheet-images/next.gif
-share/gnome/help/gtt/es/stylesheet-images/note.gif
-share/gnome/help/gtt/es/stylesheet-images/prev.gif
-share/gnome/help/gtt/es/stylesheet-images/tip.gif
-share/gnome/help/gtt/es/stylesheet-images/toc-blank.gif
-share/gnome/help/gtt/es/stylesheet-images/toc-minus.gif
-share/gnome/help/gtt/es/stylesheet-images/toc-plus.gif
-share/gnome/help/gtt/es/stylesheet-images/up.gif
-share/gnome/help/gtt/es/stylesheet-images/warning.gif
-share/gnome/help/gtt/es/topic.dat
-share/gnome/help/gtt/es/usage.html
 share/gnome/help/guname/C/authors.html
 share/gnome/help/guname/C/docbook.css
 share/gnome/help/guname/C/figures/guname-cpuinfo.png
@@ -684,20 +634,6 @@ share/gnome/help/stripchart/es/stylesheet-images/up.gif
 share/gnome/help/stripchart/es/stylesheet-images/warning.gif
 share/gnome/help/stripchart/es/topic.dat
 share/gnome/help/stripchart/es/usage.html
-share/gtt/ghtml/C/bigtable.ghtml
-share/gtt/ghtml/C/invoice.ghtml
-share/gtt/ghtml/C/journal.ghtml
-share/gtt/ghtml/C/noproject.ghtml
-share/gtt/ghtml/C/primer.ghtml
-share/gtt/glade/interval_edit.glade
-share/gtt/glade/interval_popup.glade
-share/gtt/glade/journal.glade
-share/gtt/glade/not-implemented.glade
-share/gtt/glade/plugin.glade
-share/gtt/glade/prefs.glade
-share/gtt/glade/project_properties.glade
-share/gtt/glade/task_popup.glade
-share/gtt/glade/task_properties.glade
 share/idl/gsu.idl
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-utils.mo
@@ -708,6 +644,7 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-utils.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-utils.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-utils.mo
@@ -745,6 +682,7 @@ share/omf/gnome-utils/gcalc-es.omf
 share/omf/gnome-utils/gcalc-it.omf
 share/omf/gnome-utils/gcharmap-C.omf
 share/omf/gnome-utils/gcolorsel-C.omf
+share/omf/gnome-utils/gdialog-C.omf
 share/omf/gnome-utils/gdict-C.omf
 share/omf/gnome-utils/gdict-es.omf
 share/omf/gnome-utils/gdiskfree-C.omf
@@ -758,21 +696,19 @@ share/omf/gnome-utils/gsearchtool-C.omf
 share/omf/gnome-utils/gsearchtool-es.omf
 share/omf/gnome-utils/gsearchtool-it.omf
 share/omf/gnome-utils/gshutdown-C.omf
-share/omf/gnome-utils/gtt-C.omf
+share/omf/gnome-utils/gshutdown-es.omf
 share/omf/gnome-utils/guname-C.omf
 share/omf/gnome-utils/gw-C.omf
+share/omf/gnome-utils/logview-C.omf
 share/omf/gnome-utils/meat-grinder-C.omf
 share/omf/gnome-utils/stripchart-C.omf
 share/omf/gnome-utils/stripchart-es.omf
-share/omf/gnome-utils/gdialog-C.omf
-share/omf/gnome-utils/gshutdown-es.omf
-share/omf/gnome-utils/logview-C.omf
-share/pixmaps/gdiskfree-splash.png
-share/pixmaps/gdiskfree.png
 share/pixmaps/gcharmap-logo.png
 share/pixmaps/gcharmap-map-16.xpm
 share/pixmaps/gcharmap-map-big.xpm
 share/pixmaps/gdict.png
+share/pixmaps/gdiskfree-splash.png
+share/pixmaps/gdiskfree.png
 share/pixmaps/gnome-fontsel.png
 share/pixmaps/gnome-searchtool.png
 share/pixmaps/gnome-shutdown.png
@@ -785,10 +721,6 @@ share/stripchart/stripchart.params
 @dirrm share/pixmaps/logview
 @dirrm share/omf/gnome-utils
 @dirrm share/logview
-@dirrm share/gtt/glade
-@dirrm share/gtt/ghtml/C
-@dirrm share/gtt/ghtml
-@dirrm share/gtt
 @dirrm share/gnome/help/stripchart/es/stylesheet-images
 @dirrm share/gnome/help/stripchart/es/figures
 @dirrm share/gnome/help/stripchart/es
@@ -813,14 +745,6 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/guname/C/figures
 @dirrm share/gnome/help/guname/C
 @dirrm share/gnome/help/guname
-@dirrm share/gnome/help/gtt/es/stylesheet-images
-@dirrm share/gnome/help/gtt/es/figures
-@dirrm share/gnome/help/gtt/es
-@dirrm share/gnome/help/gtt/de
-@dirrm share/gnome/help/gtt/C/stylesheet-images
-@dirrm share/gnome/help/gtt/C/figures
-@dirrm share/gnome/help/gtt/C
-@dirrm share/gnome/help/gtt
 @exec ${MKDIR} %D/share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/figures
