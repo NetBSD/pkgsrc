@@ -1,7 +1,7 @@
-$NetBSD: md5,v 1.4 2000/12/17 13:05:42 tron Exp $
+$NetBSD: md5,v 1.5 2001/01/28 09:19:54 tron Exp $
 
 MD5 (suse64/aaa_dir.rpm) = fd3a18bf4b7c9d15fe77f3de4a20cc7e
-MD5 (suse64/shlibs.rpm) = 2e884e2e489bb8f5d6f5d78dfe086627
+MD5 (suse64/shlibs-2.1.3-155.i386.rpm) = bc03f1a6f32a66958128e9450e355698
 MD5 (suse64/libz.rpm) = d2f08151747e3747165468bdfc7ed077
 MD5 (suse64/bash.rpm) = 1f5d652686850fa7d6c5ad99b1ebf6a8
 MD5 (suse64/gppshare.rpm) = 88a7839aa2b48827dd2d1e483435d85e
