@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.36 2004/01/05 11:05:47 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.37 2004/01/05 21:50:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -295,14 +295,22 @@ BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .  endif
 .endfor
 #
-# Add the default view library directory to the runtime library search
+# Add the default view library directories to the runtime library search
 # path so that wildcard dependencies on library packages can always be
 # fulfilled through the default view.
 #
-.if (${_USE_RPATH} == "yes") && \
-    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib)
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
-.endif
+.for _pkg_ in ${_BLNK_PACKAGES}
+.  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
+.    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${LOCALBASE}\//}
+.      if exists(${_dir_})
+.        if (${_USE_RPATH} == "yes") && \
+	    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
+BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.        endif
+.      endif
+.    endfor
+.  endif
+.endfor
 #
 # Add the X11 library directory to the runtime library search path if
 # the package uses X11.
