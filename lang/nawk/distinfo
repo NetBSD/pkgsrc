@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:54 agc Exp $
 
-MD5 (nawk-20001115/awk.tar.gz) = e5764e4d582e093d1ea54bff6166989e
+SHA1 (nawk-20001115/awk.tar.gz) = 7c4ca5cd5477b38d76365625eaa49bda00d35282
+Size (nawk-20001115/awk.tar.gz) = 80865 bytes

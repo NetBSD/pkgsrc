@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:32:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:59 agc Exp $
 
-MD5 (itcl3.2.tar.gz) = b41ed909969eaa5f0a06ab698393760f
+SHA1 (itcl3.2.tar.gz) = 9e51a309414d4894f2bc7b33a1c44b51c7e1dbd5
+Size (itcl3.2.tar.gz) = 1498517 bytes
 SHA1 (patch-aa) = 92afb22172264dfcc35a39bc17e8b7ec8d67d517
 SHA1 (patch-ab) = c4a88c9581ad89ac54a037f5aab48e8e9e6d7d39
 SHA1 (patch-ac) = 938276eb303258a01e5979b03dda6a8cdabe004f

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:48 agc Exp $
 
-MD5 (awka-0.7.0.tar.gz) = aee2a6d23893ee8e7ed0eb801efddccf
+SHA1 (awka-0.7.0.tar.gz) = 2852974aeb5ce2a361c75b8fc3548bac81870c34
+Size (awka-0.7.0.tar.gz) = 381227 bytes

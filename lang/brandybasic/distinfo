@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:42 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:48 agc Exp $
 
-MD5 (b105.tgz) = 4eb56f6a404af180f101227b12da991b
+SHA1 (b105.tgz) = 9daeab869d3c4d4a7c49acb919d713ebda35c775
+Size (b105.tgz) = 324977 bytes

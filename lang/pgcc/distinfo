@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:55 agc Exp $
 
-MD5 (gcc-2.95.2.tar.gz) = 0e36957d734286e242e9697fd2806c4f
-MD5 (gcc-2.95.2.1-pgcc-2.95.2.1.diff.gz) = e25608592a02aae0a12941044e7b212e
+SHA1 (gcc-2.95.2.tar.gz) = c3da103de3fa97c78ccc1b4fdc29fa25bf26a6c8
+Size (gcc-2.95.2.tar.gz) = 12885815 bytes
+SHA1 (gcc-2.95.2.1-pgcc-2.95.2.1.diff.gz) = 37035c54e903511b4aea05f11e9fd6ba4e7cf261
+Size (gcc-2.95.2.1-pgcc-2.95.2.1.diff.gz) = 168420 bytes
 SHA1 (patch-aa) = bae789b2acbcae4cf8876d116c80ec8e4b3da359
 SHA1 (patch-ab) = f440c18447df47cf5dbe964a84ed1e287c33baff
 SHA1 (patch-ac) = 3dddca70bd3860afdfb066d4b59a144dd7c2a520

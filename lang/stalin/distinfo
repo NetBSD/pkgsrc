@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:32:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:58 agc Exp $
 
-MD5 (stalin.tar.Z) = d821a1abea9849da5b8a845efccfee46
+SHA1 (stalin.tar.Z) = 357d23f2805403d0d1f1cc4deb1bb8e512b86d04
+Size (stalin.tar.Z) = 7738319 bytes
 SHA1 (patch-aa) = cf1991353f00728d5db21ea4b83b9dfdb32a2ee6
 SHA1 (patch-ab) = 1dc86f98e00372235bea8d6764bccfbdca365366
 SHA1 (patch-ac) = d9bb97e5053a30379fdc2f3380a10b3fb28bab8a

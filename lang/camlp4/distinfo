@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:48 agc Exp $
 
-MD5 (camlp4-3.00.tar.gz) = 35d918bd70a7d325787346db33733973
+SHA1 (camlp4-3.00.tar.gz) = 82315fd4e616735ec8b5aef10593b7e8e31327e8
+Size (camlp4-3.00.tar.gz) = 216117 bytes
 SHA1 (patch-aa) = acffb1dea026add2e6f53ffdc478df09e52cc481
