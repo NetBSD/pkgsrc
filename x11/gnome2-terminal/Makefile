@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/10 08:00:02 cjep Exp $
 #
 
 DISTNAME=		gnome-terminal-2.0.1
@@ -17,6 +17,7 @@ BUILD_USES_MSGFMT=	YES
 USE_PERL5=		build
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_GMAKE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
