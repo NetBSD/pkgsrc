@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/17 13:51:10 mellon Exp $
+bin/spruce
+share/locale/da/LC_MESSAGES/spruce.mo
+share/locale/ko/LC_MESSAGES/spruce.mo
+share/locale/sv/LC_MESSAGES/spruce.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/spruce.mo
+share/locale/ru_RU/LC_MESSAGES/spruce.mo

@@ -1,0 +1,8 @@
+spruce - a MIME-aware, GNOME-based email program
+
+- Understands MIME, and can send and receive MIME attachments.
+- Can incorporate mail using POP
+- Doesn't understand unix-style maildrops (aah, youth...)
+- Has the beginnings of PGP support
+- Seems like it's actually pretty far along, and builds pretty cleanly,
+  which is unique so far in my experience with Gnome mailers... :'/

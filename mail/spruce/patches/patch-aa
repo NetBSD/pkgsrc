@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/17 13:51:10 mellon Exp $
+*** Makefile.in.old	Thu Dec 16 22:37:13 1999
+--- Makefile.in	Thu Dec 16 22:36:56 1999
+***************
+*** 105,111 ****
+  PROGRAMS =  $(bin_PROGRAMS)
+  
+  
+! DEFS = @DEFS@ -I. -I$(srcdir) -I.
+  CPPFLAGS = @CPPFLAGS@
+  LDFLAGS = @LDFLAGS@
+  LIBS = @LIBS@
+--- 105,111 ----
+  PROGRAMS =  $(bin_PROGRAMS)
+  
+  
+! DEFS = @DEFS@ -I. -I$(srcdir) -I. -I$(prefix)/include
+  CPPFLAGS = @CPPFLAGS@
+  LDFLAGS = @LDFLAGS@
+  LIBS = @LIBS@
