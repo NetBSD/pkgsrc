@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/19 17:25:57 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 17:36:18 wiz Exp $
 
 SHA1 (Gtk2-1.042.tar.gz) = eb10f8dbfa839b0465d365b62a2e11cbe9834275
+RMD160 (Gtk2-1.042.tar.gz) = 740933ea5e5d6ce122deb4c935e7777688d2c41a
 Size (Gtk2-1.042.tar.gz) = 526214 bytes

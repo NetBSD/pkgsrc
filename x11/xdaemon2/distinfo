@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:51 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 17:36:22 wiz Exp $
 
 SHA1 (xdaemon/xdaemon.png) = ee7960820646c6e351aee241d34067f17d9a8a10
+RMD160 (xdaemon/xdaemon.png) = 60fbb758ede9c156902bf805bc81d66bc5017876
 Size (xdaemon/xdaemon.png) = 25658 bytes
 SHA1 (xdaemon/xdaemon2.png) = 8bc4dfa53554d7e2f0ffdfcc935766935b94dc67
+RMD160 (xdaemon/xdaemon2.png) = 246de3e73a4278aec03d2268db0ffe1234497d6d
 Size (xdaemon/xdaemon2.png) = 16741 bytes
 SHA1 (xdaemon/Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
+RMD160 (xdaemon/Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
 Size (xdaemon/Daemon.README) = 2191 bytes

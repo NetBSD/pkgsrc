@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/12/29 11:01:38 recht Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 17:36:18 wiz Exp $
 
 SHA1 (pygtk-2.4.1.tar.bz2) = c0a24fd4a67e0fd58a7e5ceb00f5e8c0231cdd88
+RMD160 (pygtk-2.4.1.tar.bz2) = 5c381aec4342c4a1ddb1f0282c3a59e4b6610c6f
 Size (pygtk-2.4.1.tar.bz2) = 714469 bytes

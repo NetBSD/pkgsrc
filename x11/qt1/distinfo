@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/03/22 15:06:52 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:36:19 wiz Exp $
 
 SHA1 (qt-1.44.tar.gz) = 08848fe5534bb210b151a1d9f3480fe83c0053c1
+RMD160 (qt-1.44.tar.gz) = f15179396774f4038a082e984d8bdd4a7c4d1ae1
 Size (qt-1.44.tar.gz) = 2659999 bytes
 SHA1 (patch-aa) = b94f2fadee75696e0afb98cd2d0839d991f98573
 SHA1 (patch-ab) = 76d0ac60cd386518b5d8a48d15552abc5c8737ef

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/30 12:22:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 17:36:09 wiz Exp $
 
 SHA1 (compositeext-2.0.tar.bz2) = 2cea8b9863eda2ef5f58ca57114c486e0578fe2d
+RMD160 (compositeext-2.0.tar.bz2) = f374e6f1885a7efc9ba245cc4c4e78bfe6b1e136
 Size (compositeext-2.0.tar.bz2) = 41168 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2004/11/20 22:40:34 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 17:36:21 wiz Exp $
 
 SHA1 (xbindkeys-1.7.1.tar.gz) = 989e4ae10cb16928ed673cabca9fae2068b45556
+RMD160 (xbindkeys-1.7.1.tar.gz) = 002bb78eb91deee71ff6f82494dca5704595816c
 Size (xbindkeys-1.7.1.tar.gz) = 115892 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/11/28 05:57:21 taca Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:36:20 wiz Exp $
 
 SHA1 (ruby/ruby-gtk-0.34.tar.gz) = 395ed0396e5df0ae41383163b2ae2bdd51903604
+RMD160 (ruby/ruby-gtk-0.34.tar.gz) = 4339aad4ad732b2981a79003430af40ff5619704
 Size (ruby/ruby-gtk-0.34.tar.gz) = 283056 bytes
-SHA1 (patch-aa) = b9aa5335a9c5563b00c01559c4d047458a87339d

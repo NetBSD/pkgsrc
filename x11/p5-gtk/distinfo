@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2003/11/25 12:08:00 salo Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:36:18 wiz Exp $
 
 SHA1 (Gtk-Perl-0.7009.tar.gz) = a48680c4db2aef82247061265784383df320c221
+RMD160 (Gtk-Perl-0.7009.tar.gz) = 98449575c3e3a605d324c878cc5dee504cb7d0b6
 Size (Gtk-Perl-0.7009.tar.gz) = 447432 bytes
 SHA1 (patch-aa) = c15288af428dde6c97996c5f8e2904107062dca8
