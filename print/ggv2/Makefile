@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/02/18 20:52:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/25 06:34:01 rh Exp $
 #
 
-DISTNAME=		ggv-1.99.98
-PKGREVISION=		1
+DISTNAME=		ggv-2.0.0
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/1.99/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
@@ -21,6 +20,9 @@ USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS= 	ggv.schemas
 
