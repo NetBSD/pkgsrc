@@ -1,22 +1,22 @@
-$NetBSD: patch-ae,v 1.1 1998/12/29 17:53:11 tron Exp $
+$NetBSD: patch-ae,v 1.2 1999/03/07 11:31:47 tron Exp $
 
---- devel-docs/Makefile.in.orig	Wed Dec 16 10:57:31 1998
-+++ devel-docs/Makefile.in	Tue Dec 29 17:45:24 1998
-@@ -139,7 +139,7 @@
+--- devel-docs/Makefile.in.orig	Mon Mar  1 20:57:04 1999
++++ devel-docs/Makefile.in	Sun Mar  7 12:02:50 1999
+@@ -151,7 +151,7 @@
  
- SUBDIRS = ui-guide templates
+ SUBDIRS = ui-guide templates 
  
 -htmldir = $(prefix)/html
 +htmldir = $(prefix)/share/doc/gnome-libs/html
  html_DATA = gnome-dev-info.html
  
- TEXT_FILES =				\
-@@ -169,7 +169,7 @@
- 	libgnome.sgml			\
- 	$(TEXT_FILES)
+ TEXT_FILES =  	README.gtkcauldron				README.gtkcauldron_for_python			adding-file-manager-new-items.txt		adding-sounds.txt				api-comment-style.txt				gtk_dialog_cauldron.3				suggestions.txt					session-management.txt				mime-type-handling.txt
+@@ -163,7 +163,7 @@
+ EXTRA_DIST =  	gnome-doc-framework.txt			gnome-app-helper.sgml			gnome-canvas.sgml			gnome-dev-info.html			gnome-dev-info.sgml			gnome-app-helper.sgml			gnome-message-utils.sgml		x-concepts.sgml				libgnorba.sgml				gnome-mdi.sgml				libgnomeui.sgml				libgnome.sgml				$(TEXT_FILES)
  
--docdir   = $(prefix)/doc
-+docdir   = $(prefix)/share/doc/gnome-libs
+ 
+-docdir = $(prefix)/doc
++docdir = $(prefix)/share/doc/gnome-libs
  doc_DATA = $(TEXT_FILES)
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1999/01/16 03:26:12 tron Exp $
-bin/convertrgb
+@comment $NetBSD: PLIST,v 1.7 1999/03/07 11:31:47 tron Exp $
 bin/dns-helper
 bin/gconfigger
+bin/gnome-bug
 bin/libart-config
 bin/loadshlib
 bin/gnome-config
@@ -164,20 +164,20 @@ lib/gnomeConf.sh
 lib/libart_lgpl.a
 lib/libart_lgpl.so.2.0
 lib/libartConf.sh
-lib/libgnome.so.32.0
 lib/libgnome.a
-lib/libgnomesupport.so.0.0
+lib/libgnome.so.34.2
 lib/libgnomesupport.a
-lib/libgnomeui.so.34.0
+lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnorba.so.28.0
+lib/libgnomeui.so.39.0
 lib/libgnorba.a
-lib/libgnorbagtk.so.0.0
+lib/libgnorba.so.28.4
 lib/libgnorbagtk.a
-lib/libgtkxmhtml.so.1.0
+lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
+lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.2.0
+lib/libzvt.so.3.2
 lib/locale/de/LC_MESSAGES/gnome-libs.mo
 lib/locale/fr/LC_MESSAGES/gnome-libs.mo
 lib/locale/nl/LC_MESSAGES/gnome-libs.mo
@@ -198,6 +198,8 @@ lib/locale/ru/LC_MESSAGES/gnome-libs.mo
 lib/locale/hu/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
+share/doc/gnome-libs/adding-file-manager-new-items.txt
+share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/README.gtkcauldron
 share/doc/gnome-libs/README.gtkcauldron_for_python
 share/doc/gnome-libs/adding-sounds.txt
@@ -209,16 +211,26 @@ share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/mkstub
 share/doc/gnome-libs/suggestions.txt
 @exec mkdir -p %D/share/doc/gnome-libs/html
-share/idl/name-service.idl
-share/idl/gnome-factory.idl
 share/idl/Table.idl
+share/idl/base.idl
+share/idl/gnome-factory.idl
+share/idl/name-service.idl
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
+share/pixmaps/gnome-info.png
+share/pixmaps/gnome-error.png
+share/pixmaps/gnome-question.png
+share/pixmaps/gnome-warning.png
+share/pixmaps/gnome-default-dlg.png
 share/pixmaps/yes.xpm
 share/pixmaps/no.xpm
 share/gtkrc
 share/gtkrc.ja
 share/gtkrc.ko
+share/gtkrc.ru
+share/type-convert/gnome-make-postscript-mimes
+share/type-convert/type.convert
+share/type-convert/postscript.convert
 @dirrm etc/sound/events
 @dirrm etc/sound
 @dirrm include/libgnorba
@@ -234,6 +246,7 @@ share/gtkrc.ko
 @dirrm share/idl
 @dirrm share/mime-info
 @dirrm share/pixmaps
+@dirrm share/type-convert
 @exec mkdir -p @@LOCALSTATEDIR@@
 @unexec rm -rf @@LOCALSTATEDIR@@
 @dirrm lib/locale/ca/LC_MESSAGES
