@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 1998/08/07 11:54:29 frueauf Exp $
+
+--- Makefile.orig	Fri Aug  7 04:21:15 1998
++++ Makefile	Fri Aug  7 04:24:19 1998
+@@ -15,6 +15,6 @@
+ # spell list postscript file are installed. Change them to whatever is appropriate.
+-DESTDIR=/afs/andrew.cmu.edu/usr0/games
+-DESTBIN=$(DESTDIR)/bin/.unpriv/@sys
++DESTDIR=$(PREFIX)
++DESTBIN=$(DESTDIR)/bin
+ DESTMAN=$(DESTDIR)/man/man6
+-DESTLIB=$(DESTDIR)/lib/spellcast
++DESTLIB=$(DESTDIR)/share/doc/spellcast
+ 
+@@ -24,7 +24,7 @@
+ 
+-CFLAGS = -g -I/usr/local/include -I./bitmaps -DBODYFONT=$(FONT1) \
++CFLAGS = -O -I$(X11BASE)/include -I./bitmaps -DBODYFONT=$(FONT1) \
+ 	-DBODYFONT_ALT=$(FONT2) -DBODYFONT_ALT2=$(FONT3) -DTRANSCRIPTDIR=$(LOGDIR)
+-LFLAGS = -g
++LFLAGS = -Wl,-R$(X11BASE)/lib
+ 
+-XLIB = -L/usr/local/lib -lX11
++XLIB = -L$(X11BASE)/lib -lX11
+ 
+@@ -51,3 +51,3 @@
+ 	install -c spellcast.6 $(DESTMAN)
+-	-mkdir $(DESTLIB)
++	-mkdir -p $(DESTLIB)
+ 	install -c spelllist.ps $(DESTLIB)
