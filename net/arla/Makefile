@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/30 13:35:54 wennmach Exp $
 #
 
 DISTNAME=		arla-0.33
@@ -123,13 +123,6 @@ post-install:
 	fi
 	@${INSTALL} -c -o root -g wheel -m 444                                \
 		 ${FILESDIR}/fstab ${PREFIX}/share/examples/arla
-	@if ${GREP} afs /etc/fstab 2>/dev/null 1>&2 ; then                    \
-		${ECHO} "Not changing /etc/fstab";                            \
-	else                                                                  \
-		${ECHO} "Appending to /etc/fstab";                            \
-		${CAT} ${PREFIX}/share/examples/arla/fstab                    \
-			>> /etc/fstab;                                        \
-	fi
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad.sh               \
 		> ${PREFIX}/etc/rc.d/arlad.sh
 	@${ECHO} " "
