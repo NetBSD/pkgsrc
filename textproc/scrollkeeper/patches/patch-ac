@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/09/10 00:22:13 mycroft Exp $
+$NetBSD: patch-ac,v 1.2 2001/09/10 00:23:32 mycroft Exp $
 
---- get-cl.c.orig	Thu Mar 15 11:10:33 2001
-+++ get-cl.c	Mon Sep 10 00:16:56 2001
+--- cl/src/get-cl.c.orig	Thu Mar 15 11:10:33 2001
++++ cl/src/get-cl.c	Mon Sep 10 00:16:56 2001
 @@ -19,6 +19,7 @@
  #include <config.h>
  #include <sys/types.h>
@@ -19,8 +19,8 @@ $NetBSD: patch-ac,v 1.1 2001/09/10 00:22:13 mycroft Exp $
  
  static char **av;
  
---- install.c.orig	Thu Mar 15 11:10:33 2001
-+++ install.c	Mon Sep 10 00:17:09 2001
+--- cl/src/install.c.orig	Thu Mar 15 11:10:33 2001
++++ cl/src/install.c	Mon Sep 10 00:17:09 2001
 @@ -24,6 +24,7 @@
  #include <locale.h>
  #include <unistd.h>
@@ -38,8 +38,8 @@ $NetBSD: patch-ac,v 1.1 2001/09/10 00:22:13 mycroft Exp $
  
  static int verbose = 0;
  
---- uninstall.c.orig	Thu Mar 15 11:10:33 2001
-+++ uninstall.c	Mon Sep 10 00:17:21 2001
+--- cl/src/uninstall.c.orig	Thu Mar 15 11:10:33 2001
++++ cl/src/uninstall.c	Mon Sep 10 00:17:21 2001
 @@ -23,6 +23,7 @@
  #include <string.h>
  #include <unistd.h>
@@ -57,8 +57,8 @@ $NetBSD: patch-ac,v 1.1 2001/09/10 00:22:13 mycroft Exp $
  
  struct IdTab {
      int id;
---- update.c.orig	Thu Mar 15 11:10:33 2001
-+++ update.c	Mon Sep 10 00:17:33 2001
+--- cl/src/update.c.orig	Thu Mar 15 11:10:33 2001
++++ cl/src/update.c	Mon Sep 10 00:17:33 2001
 @@ -19,6 +19,7 @@
  #include <config.h>
  #include <sys/types.h>
