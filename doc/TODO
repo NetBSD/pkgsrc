@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2220 2004/10/14 17:15:38 salo Exp $
+$NetBSD: TODO,v 1.2221 2004/10/15 12:34:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,6 @@ Suggested package updates
 	o libnet-1.1.2.1
 	o libnids-1.19
 	o libole2-2.2.8
-	o libpng-1.2.7
 	o libsigc++-2.0.3
 	o libxml-2.6.14
 	o libxslt-1.1.11
