@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2004/11/06 18:32:19 jdolecek Exp $
+# $NetBSD: Makefile,v 1.80 2004/12/03 17:18:33 minskim Exp $
 #
 
 COMMENT=	Archivers
@@ -62,6 +62,7 @@ SUBDIR+=	stuffit
 SUBDIR+=	szip
 SUBDIR+=	unace
 SUBDIR+=	unace22
+SUBDIR+=	unalz
 SUBDIR+=	unarj
 SUBDIR+=	undms
 SUBDIR+=	unlzx
