@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 09:07:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/29 06:22:46 xtraeme Exp $
 
 DISTNAME=	X430src-1
 PKGNAME=	XFree86-man-${XF_VER}
 WRKSRC=		${WRKDIR}/xc/doc/man
-CATEGORIES=	x11
+CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
 
