@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2002/08/06 14:04:34 wiz Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+XPDFRC=${PKG_PREFIX}/etc/xpdfrc
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	sed -e "/orean/d" ${XPDFRC} > ${XPDFRC}.tmp
+	sed -e "/ksc5601/d" ${XPDFRC}.tmp > ${XPDFRC}
+	rm -f ${XPDFRC}.tmp
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
