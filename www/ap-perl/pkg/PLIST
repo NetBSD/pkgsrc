@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/04 17:25:13 tv Exp $
+etc/httpd/httpd.conf.modperl
 lib/httpd/mod_perl.so
 lib/perl5/man/man3/Apache.3
 lib/perl5/man/man3/Apache::Constants.3
@@ -98,11 +99,10 @@ lib/perl5/site_perl/mod_perl_method_handlers.pod
 lib/perl5/site_perl/mod_perl_traps.pod
 lib/perl5/site_perl/mod_perl_tuning.pod
 share/httpd/htdocs/manual/mod/mod_perl.html
-share/doc/mod_perl/httpd.conf.add
+@dirrm lib/perl5/site_perl/Apache/Constants
 @dirrm lib/perl5/site_perl/Apache
 @dirrm lib/perl5/site_perl/Bundle
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Connection
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Constants
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/File
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Log
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ModuleConfig
