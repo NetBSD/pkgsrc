@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/24 13:47:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/07 14:32:37 agc Exp $
 #
 
 DISTNAME=	Flan
@@ -11,6 +11,7 @@ HOMEPAGE=	http://picolibre.enst-bretagne.fr/projects/flan/index.html
 COMMENT=	Simulator for IP networks writen in Java
 
 USE_JAVA=	yes
+PKG_JVM=	sun-jdk13
 USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/src
