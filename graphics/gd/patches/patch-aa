@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2000/12/11 05:49:49 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2000/12/16 00:29:23 wiz Exp $
 
 --- Makefile.orig	Sat Jun  3 15:26:12 2000
 +++ Makefile
@@ -190,7 +190,7 @@ $NetBSD: patch-aa,v 1.9 2000/12/11 05:49:49 jlam Exp $
 +$(LIBGD): $(GD_OBJS) gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
 +	rm -f $(LIBGD)
 +	$(CC) -o $(LIBGD) $(GD_OBJS:.o=.lo) -rpath ${PREFIX}/lib \
-+		-version-info $(GD_MAJOR):$(GD_MINOR)
++		-version-info $(GD_MAJOR):$(GD_MINOR) -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib ${LIBS:C/${LIBGD}//g}
  
  clean:
 -	rm -f *.o *.a ${PROGRAMS} test/gdtest.jpg test/gdtest.wbmp
