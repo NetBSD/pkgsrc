@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/06/15 21:22:10 itojun Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/06/17 08:00:31 itojun Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpnet
@@ -23,6 +23,7 @@ share/examples/mgp/embed-jp.mgp
 share/examples/mgp/embed.mgp
 share/examples/mgp/gradation-jp.mgp
 share/examples/mgp/multilingual.mgp
+share/examples/mgp/sample-fr.mgp
 share/examples/mgp/sample-jp.mgp
 share/examples/mgp/sendmail6-jp.mgp
 share/examples/mgp/sendmail6.mgp
