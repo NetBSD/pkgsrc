@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: extract_instructions,v 1.3 2002/09/29 23:17:17 grant Exp $
+$NetBSD: extract_instructions,v 1.4 2002/10/01 03:55:45 jschauma Exp $
 
     Now running the Netscape 7 installation program.  Note that the
     installation requires the DISPLAY environment variable to be set.
@@ -8,8 +8,8 @@ $NetBSD: extract_instructions,v 1.3 2002/09/29 23:17:17 grant Exp $
 
     2) Choose 'Accept' on the End-User License Agreement (EULA)
 
-    3) Do not change settings from "Recommended" on the
-       next screen, but do change the  "Destination Directory" to:
+    3) On the next screen, select "@NS_INST@" and change the
+       "Destination Directory" to:
 
         @WRKSRC@/dest
 
