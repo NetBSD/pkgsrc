@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.132 2005/02/16 07:12:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.133 2005/02/17 23:31:07 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -528,7 +528,7 @@ EOF
 	# we need to handle the Makefile first to get some variables
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking Makefile.");
 	if (! -f "$opt_packagedir/Makefile") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "no Makefile in \"$opt_packagedir\".");
+		log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "file not found.");
 	} else {
 		checkfile_Makefile("Makefile") || log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "error while reading.");
 	}
@@ -585,7 +585,7 @@ EOF
 			}
 		}
 		if ($patches && ! -f "$opt_packagedir/$distinfo" ) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makepatchsum'.");
+			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "file not found. Please run '$conf_make makepatchsum'.");
 		}
 	}
 	if ($opt_check_extra) {
@@ -601,62 +601,59 @@ EOF
 	}
 
 	foreach my $i (@checker) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "checking $i.");
+		log_info($i, NO_LINE_NUMBER, "starting checks ...");
 		if (! -f "$opt_packagedir/$i") {
-			log_error(NO_FILE, NO_LINE_NUMBER, "no $i in \"$opt_packagedir\".");
+			log_error("$opt_packagedir/$i", NO_LINE_NUMBER, "file not found");
 		} else {
-			$checker{$i}->($i) || log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
+			$checker{$i}->($i) || log_warning($i, NO_LINE_NUMBER, "cannot open");
 			if ($i !~ /patches\/patch/) {
 				&checklastline($i) ||
-					log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
+					log_warning($i, NO_LINE_NUMBER, "cannot open");
 			}
 		}
+		log_info($i, NO_LINE_NUMBER, "finished checks ...");
 	}
 	if (-f "$opt_packagedir/$distinfo") {
 		if ( $seen_NO_CHECKSUM ) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "NO_CHECKSUM set, but $opt_packagedir/$distinfo exists. Please remove it.");
+			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "this file should not exist if NO_CHECKSUM is set");
 		}
 	} else {
 		if ( ! $seen_NO_CHECKSUM ) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makesum'.");
+			log_warning("$opt_packagedir/$distinfo", NO_LINE_NUMBER, "file not found. Please run '$conf_make makesum'.");
 		}
 	}
 	if (-f "$opt_packagedir/$filesdir/md5") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/md5 is deprecated -- run '$conf_make mdi' to generate distinfo.");
+		log_error("$opt_packagedir/$filesdir/md5", NO_LINE_NUMBER, "this file is deprecated -- run '$conf_make mdi' to generate distinfo.");
 	}
 	if (-f "$opt_packagedir/$filesdir/patch-sum") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/patch-sum is deprecated -- run '$conf_make mps' to generate distinfo.");
+		log_error("$opt_packagedir/$filesdir/patch-sum", NO_LINE_NUMBER, "this file is deprecated -- run '$conf_make mps' to generate distinfo.");
 	}
-	if (-f "$pkgdir/COMMENT") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
+	if (-f "$opt_packagedir/$pkgdir/COMMENT") {
+		log_error("$opt_packagedir/$pkgdir/COMMENT", NO_LINE_NUMBER, "this file is deprecated -- please use a COMMENT variable instead.");
 	}
 	if (-d "$opt_packagedir/pkg") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/pkg and its contents are deprecated!\n".
-			"\tPlease 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
+		log_error("$opt_packagedir/pkg", NO_LINE_NUMBER, "this directory and its contents are deprecated! Please 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
 	}
 	if (-d "$opt_packagedir/scripts") {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/scripts and its contents are deprecated! Please call the script(s)\n".
-			"\texplicitly from the corresponding target(s) in the pkg's Makefile.");
+		log_warning("$opt_packagedir/scripts", NO_LINE_NUMBER, "this directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 	if (! -f "$opt_packagedir/$pkgdir/PLIST"
 	    and ! -f "$opt_packagedir/$pkgdir/PLIST-mi"
 	    and ! $seen_PLIST_SRC
 	    and ! $seen_NO_PKG_REGISTER ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
+		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 	if ($opt_committer) {
-		if ($opt_warn_workdir && (scalar(@_ = <$opt_packagedir/work*/*>) || -d "$opt_packagedir/work*")) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to cleanup $opt_packagedir/work* ".
-				"before committing the package.");
+		foreach my $wrkdir (<$opt_packagedir/work*>) {
+			if ($opt_warn_workdir && -d $wrkdir) {
+				log_warning($opt_warn_workdir, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
+			}
 		}
-		if (scalar(@_ = <$opt_packagedir/*/*~>) || scalar(@_ = <$opt_packagedir/*~>)) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
-				"emacs backup files before committing the package.");
+		foreach my $backup (<$opt_packagedir/*~>, <$opt_packagedir/*/*~>) {
+			log_warning($backup, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
 		}
-		if (scalar(@_ = <$opt_packagedir/*/*.orig>) || scalar(@_ = <$opt_packagedir/*.orig>)
-		 || scalar(@_ = <$opt_packagedir/*/*.rej>) || scalar(@_ = <$opt_packagedir/*.rej>)) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
-				"patch backup files before committing the package.");
+		foreach my $orig (<$opt_packagedir/*/*.orig>, <$opt_packagedir/*.orig>, <$opt_packagedir/*/*.rej>, <$opt_packagedir/*.rej>) {
+			log_warning($orig, NO_LINE_NUMBER, "should be cleaned up before committing the package.");
 		}
 	}
 	return true;
@@ -1080,7 +1077,7 @@ sub readmakefile($) {
 			}
 			$seen_Makefile_include{$includefile} = true;
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
-				log_error(NO_FILE, NO_LINE_NUMBER, "do not include $includefile");
+				log_error($line->text, $line->lineno, "do not include $includefile");
 			}
 			if ($includefile =~ /\/mk\/bsd/) {
 				# we don't want to include the whole
@@ -1190,8 +1187,8 @@ sub checkfile_Makefile($) {
 
 	$tmp = 0;
 	$rawwhole = readmakefile($fname);
-	if ($rawwhole eq '') {
-		log_error(NO_FILE, NO_LINE_NUMBER, "can't read $opt_packagedir/$file");
+	if (!$rawwhole) {
+		log_error("$opt_packagedir/$file", NO_LINE_NUMBER, "cannot read");
 		return false;
 	}
 	else {
