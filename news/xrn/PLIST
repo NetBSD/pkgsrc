@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:48:36 jschauma Exp $
 bin/xrn
 lib/X11/app-defaults/XRn
-man/cat1/xrn.0
+${IMAKE_MAN_PATH}/xrn.${IMAKE_MANNEWSUFFIX}
 share/doc/xrn/COMMON-PROBLMS
 share/doc/xrn/COPYRIGHT
 share/doc/xrn/CREDITS
