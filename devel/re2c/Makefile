@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2004/06/12 08:55:05 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/10 18:52:29 wiz Exp $
 
-DISTNAME=	re2c-0.9.1
+DISTNAME=	re2c-0.9.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.netsw.org/softeng/compilerconstruct/re2c/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=re2c/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.tildeslash.org/
+HOMEPAGE=	http://re2c.org/
 COMMENT=	Deterministic Finite State Automaton generator
 
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
-ALL_TARGET=	default
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/re2c ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/re2c.1 ${PREFIX}/man/man1
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
