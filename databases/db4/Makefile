@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2003/05/29 23:14:08 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/10 09:54:41 wiz Exp $
 
-DISTNAME=	db-4.0.14
-PKGNAME=	db4-4.0.14
+DISTNAME=	db-4.1.25
+PKGNAME=	db4-4.1.25
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
+
+PATCHFILES=		patch.4.1.25.1
+PATCH_DIST_ARGS=	-d ${WRKDIR}/${DISTNAME} --forward --quiet -E ${PATCH_DIST_STRIP}
+PATCH_SITES=		http://www.sleepycat.com/update/4.1.25/
 
 MAINTAINER=	dolemite@wuli.nu
 HOMEPAGE=	http://www.sleepycat.com/
