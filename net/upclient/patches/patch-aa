@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/06/21 13:57:18 nra Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/28 10:32:46 wiz Exp $
 
 --- src/options.c	Sat Jun 16 14:15:04 2001
 +++ src/options.c	Tue Jun 19 10:48:25 2001
@@ -16,13 +16,3 @@ $NetBSD: patch-aa,v 1.4 2001/06/21 13:57:18 nra Exp $
        }
      }
    }
---- src/stats-bsd.c	Sat Jun 16 14:12:53 2001
-+++ src/stats-bsd.c	Tue Jun 19 10:47:04 2001
-@@ -21,6 +21,7 @@
- #include <sys/dkstat.h>
- #include <sys/sysctl.h>
- #include <sys/utsname.h>
-+#include <sys/sched.h>
- 
- /**
-  * @desc	Get statistics
