@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7400 2004/10/11 09:43:35 kim Exp $
+$NetBSD: CHANGES,v 1.7401 2004/10/11 09:48:26 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gedit to 2.8.1 [jmmv 2004-10-11]
 	Updated gnome2-games to 2.8.1 [jmmv 2004-10-11]
 	Added p5-Lchown-0.07 [kim 2004-10-11]
+	Updated libksba to 0.9.7 [shannonjr 2004-10-11]
