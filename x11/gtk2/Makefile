@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/07 15:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/07 22:53:33 wiz Exp $
 #
 
 DISTNAME=		gtk+-2.0.6
@@ -24,6 +24,9 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 
 .include "../../devel/atk/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
