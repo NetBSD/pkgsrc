@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/08/22 13:44:20 rh Exp $
+
+--- doc/NewsCache.info.orig	Thu Jan 14 20:24:53 1999
++++ doc/NewsCache.info	Sun Aug 22 14:03:42 1999
+@@ -1,6 +1,11 @@
+ This is Info file NewsCache.info, produced by Makeinfo version 1.68
+ from the input file NewsCache.texinfo.
+ 
++INFO-DIR-SECTION Net Utilities
++START-INFO-DIR-ENTRY
++* NewsCache: (NewsCache).  NewsCache Reference Manual.
++END-INFO-DIR-ENTRY
++
+    This is the NewsCache Reference Manual.
+ 
+    Copyright (C) 1998 Thomas Gschwind <tom@infosys.tuwien.ac.at>
