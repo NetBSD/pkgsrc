@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.33 2000/09/22 22:41:08 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.34 2000/09/26 15:57:05 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -17,7 +17,7 @@ $^W = 1;
 use strict;
 use Getopt::Std;
 use File::Find;
-my(	$pkgsrcdir,		# Base of pkgsrc tree
+my(	$pkgvars,		# ->{'PACKAGES'}, ->{'PKGSRCDIR'}
 	$pkgdistdir,		# Distfiles directory
 	%pkg,			# pkgname ->{'restricted'} and ->{'ver'}
 	%default_makefile_vars,	# Default vars set for Makefiles
@@ -63,15 +63,14 @@ if ($opt{'D'} && @ARGV)
     my($pkglint_flags);
 
     $pkglint_flags = '-v';
+    $pkgvars = &parse_mk_conf();
     if ($opt{'P'})
-	{ $pkgsrcdir = $opt{'P'}; } # Check /etc/mk.conf for PKGSRCDIR
-    else
-	{ $pkgsrcdir = &set_pkgsrcdir; } # Check /etc/mk.conf for PKGSRCDIR
+	{ $pkgvars->{'PKGSRCDIR'} = $opt{'P'}; }
 
     if ($opt{'M'})
 	{ $pkgdistdir = $opt{'M'}; } # override distfile dir
     else
-	{ $pkgdistdir = "$pkgsrcdir/distfiles"; } # default
+	{ $pkgdistdir = "$pkgvars->{'PKGSRCDIR'}/distfiles"; } # default
 
 
     if ($opt{'r'} && !$opt{'o'} && !$opt{'m'} && !$opt{'p'})
@@ -80,8 +79,8 @@ if ($opt{'D'} && @ARGV)
 	{
 	my(@baddist);
 
-	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgsrcdir, $opt{'o'},
-								$opt{'m'});
+	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgvars->{'PKGSRCDIR'},
+							$opt{'o'}, $opt{'m'});
 	if ($opt{'r'})
 	    {
 	    &safe_chdir("$pkgdistdir");
@@ -95,15 +94,11 @@ if ($opt{'D'} && @ARGV)
     #
     if ($opt{'p'} || $opt{'R'})
 	{
-	my($binpkgdir);
-
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
 	if ($opt{'K'})
-	    { $binpkgdir = $opt{'K'}; }
-	else
-	    { $binpkgdir = "$pkgsrcdir/packages"; }
-	@prebuilt_pkgdirs = ($binpkgdir);
+	    { $pkgvars->{'PACKAGES'} = $opt{'K'}; }
+	@prebuilt_pkgdirs = ($pkgvars->{'PACKAGES'});
 	while (@prebuilt_pkgdirs)
 	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
 	if ($opt{'r'})
@@ -117,17 +112,16 @@ if ($opt{'D'} && @ARGV)
     if ($opt{'d'})
 	{
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
 	&pkgsrc_check_depends;
 	}
-
     if ($opt{'i'} || $opt{'u'})
 	{
 	my(@pkgs, @bad, $pkg);
 
 	@pkgs = &list_installed_packages;
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
 	foreach $pkg ( @pkgs )
 	    {
 	    if ( $_ = &invalid_version($pkg) )
@@ -147,14 +141,14 @@ if ($opt{'D'} && @ARGV)
 
 		if (!defined($pkgdir))
 		    { &fail("Unable to determine directory for '$pkg'"); }
-		print "$pkgsrcdir/$pkgdir\n";
-		safe_chdir("$pkgsrcdir/$pkgdir");
+		print "$pkgvars->{'PKGSRCDIR'}/$pkgdir\n";
+		safe_chdir("$pkgvars->{'PKGSRCDIR'}/$pkgdir");
 		system('make fetch-list | sh');
 		}
 	    }
 	}
     if ($opt{'l'})
-	{ &pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
+	{ &pkglint_all_pkgsrc($pkgvars->{'PKGSRCDIR'}, $pkglint_flags); }
     }
 exit;
 
@@ -162,15 +156,15 @@ sub check_prebuilt_packages
     {
     if ($_ eq 'distfiles')
 	{ $File::Find::prune = 1; }
-    elsif (/(.*)\.tgz$/)
+    elsif (/(.+)-(\d.*)\.tgz$/)
 	{
-	if (!defined $pkg{$1})
+	if (!defined $pkg{$1}{$2})
 	    {
 	    if ($opt{'p'})
 		{ print "$File::Find::dir/$_\n"; }
 	    push(@old_prebuiltpackages, "$File::Find::dir/$_");
 	    }
-	elsif (defined $pkg{$1}->{'restricted'}) # XXX
+	elsif (defined $pkg{$1}{$2}->{'restricted'}) # XXX
 	    {
 	    if ($opt{'R'})
 		{ print "$File::Find::dir/$_\n"; }
@@ -327,11 +321,11 @@ sub list_pkgsrc_categories
 #
 sub list_pkgsrc_pkgdirs
     {
-    my($cat) = @_;
+    my($pkgsrcdir, $cat) = @_;
     my(@pkgdirs);
 
     if (! opendir(CAT, "$pkgsrcdir/$cat"))
-	{ die("Unable to opendir($pkgsrcdir/$cat): $!"); }
+	{ die("Unable to opendir($pkgsrcdir/cat): $!"); }
     @pkgdirs = sort grep($_ ne 'Makefile' && $_ ne 'pkg' && $_ ne 'CVS' &&
 					substr($_, 0, 1) ne '.', readdir(CAT));
     close(CAT);
@@ -738,7 +732,7 @@ sub pkglint_all_pkgsrc
     foreach $cat ( sort @categories )
 	{
 	&safe_chdir("$pkgsrcdir/$cat");
-	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
 	    if (-f "$pkgdir/Makefile")
 		{
@@ -783,7 +777,7 @@ sub scan_pkgsrc_makefiles
 
     foreach $cat ( sort @categories )
 	{
-	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
 	    my($vars);
 	    ($pkgname, $vars) =
@@ -844,7 +838,7 @@ sub scan_pkgsrc_distfiles_vs_md5
     $numpkg = 0;
     foreach $cat ( sort @categories )
 	{
-	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
 	    if (open(MD5, "$pkgsrcdir/$cat/$pkgdir/files/md5"))
 		{
@@ -909,15 +903,18 @@ sub scan_pkgsrc_distfiles_vs_md5
     @bad_distfiles;
     }
 
-sub set_pkgsrcdir # Parse /etc/mk.conf (if present) for PKGSRCDIR
+sub parse_mk_conf # Parse /etc/mk.conf (if present) for PKGSRCDIR and PACKAGES
     {
-    my($pkgsrcdir, $vars);
-	my($vars);
+    my($vars);
 
-    if (-f '/etc/mk.conf' && ($vars = &parse_makefile_vars('/etc/mk.conf')))
-	{ $pkgsrcdir = $vars->{'PKGSRCDIR'}; }
-    $pkgsrcdir ||= '/usr/pkgsrc';
-    $pkgsrcdir;
+    if (! -f '/etc/mk.conf' || !($vars = &parse_makefile_vars('/etc/mk.conf')))
+	{
+	my(%emptyvars);
+	$vars = \%emptyvars;
+	}
+    $vars->{'PKGSRCDIR'} ||= '/usr/pkgsrc';
+    $vars->{'PACKAGES'} ||= "$vars->{'PKGSRCDIR'}/packages";
+    $vars;
     }
 
 # Remember to update manual page when modifying option list
