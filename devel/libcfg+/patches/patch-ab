@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/10/04 12:25:59 hira Exp $
+$NetBSD: patch-ab,v 1.1 2004/10/06 10:17:06 grant Exp $
 
 --- src/Makefile.in.orig	2004-02-18 01:37:47.000000000 +0900
 +++ src/Makefile.in	2004-09-29 00:32:45.000000000 +0900
