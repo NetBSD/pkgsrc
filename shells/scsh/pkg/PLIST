@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2001/02/27 19:37:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/04/12 21:29:50 jtb Exp $
 bin/scsh
-include/scheme48.h
+include/scsh.h
 lib/scsh/big/array.scm
 lib/scsh/big/big-util.scm
 lib/scsh/big/bigbit.scm
