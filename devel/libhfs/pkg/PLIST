@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/14 17:38:59 wiz Exp $
 lib/libhfs.a
+lib/libhfs.la
 lib/libhfs.so.1.0
 lib/librsrc.a
+lib/librsrc.la
 lib/librsrc.so.1.0
 include/libhfs/apple.h
 include/libhfs/data.h
