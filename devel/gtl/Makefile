@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/14 06:51:16 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/19 18:06:03 jlam Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
@@ -8,7 +8,7 @@ MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
 
-DEPENDS+=		sgi-stl-*:../../devel/sgi-stl
+DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
 
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
