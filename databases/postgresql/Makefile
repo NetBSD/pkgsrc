@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2000/07/14 04:44:11 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2000/07/15 01:23:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -31,6 +31,9 @@ PGHOME=			${PREFIX}/${PGUSER}
 
 BUILD_DEFS=		PGUSER PGROUP
 PLIST_SUBST=		PGUSER=${PGUSER}
+PLIST_SRC+=		${PKGDIR}/PLIST
+PLIST_SRC+=		${PKGDIR}/PLIST.spi
+PLIST_SRC+=		${PKGDIR}/PLIST.dirrm
 
 CONFIGURE_ARGS+=	--without-perl --without-odbc --without-tcl
 CONFIGURE_ARGS+=	--with-includes="${LOCALBASE}/include"
@@ -62,6 +65,17 @@ pre-install:
 post-install:
 	cd ${PREFIX}/include/pgsql; ${RMDIR} -p port/netbsd
 
+	dirlist=`${GREP} "^@dirrm" ${PKGDIR}/PLIST.spi \
+	    | ${AWK} '{ print $$2 }'`; \
+	for dir in $$dirlist; do \
+		${INSTALL_DATA_DIR} ${PREFIX}/$$dir; \
+	done
+	filelist=`${GREP} "^include/pgsql/" ${PKGDIR}/PLIST.spi \
+	    | ${SED} "s,^include/pgsql/,,g"`; \
+	cd ${WRKSRC}/include; for file in $$filelist; do \
+		${INSTALL_DATA} $$file ${PREFIX}/include/pgsql/$$file; \
+	done
+	
 .for PROG in ecpg pg_dump pg_encoding pg_id pg_passwd pg_version postgres psql
 	strip ${PREFIX}/bin/${PROG}
 .endfor
