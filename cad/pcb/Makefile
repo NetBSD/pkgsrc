@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/21 06:49:25 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/21 06:53:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -24,7 +24,7 @@ PKG_SYSCONFSUBDIR=	pcb
 DOCDIR=			${PREFIX}/share/doc/pcb
 EGDIR=			${PREFIX}/share/examples/pcb
 INFODIR=		${PREFIX}/info
-M4DIR=			${PREFIX}/lib/x11/pcb/m4
+M4DIR=			${PREFIX}/lib/X11/pcb/m4
 
 INFO_FILES=	pcb.info
 CONF_FILES=	${EGDIR}/local.inc ${PKG_SYSCONFDIR}/local.inc
@@ -54,7 +54,7 @@ post-install:
 			printf("sinclude(user-config.inc)\n");		\
 			printf("sinclude(proj-config.inc)\n");		\
 		}							\
-		{
+		{							\
 			gsub(/^include\(/,"include(${M4DIR}/");		\
 			print;						\
 		}'							\
