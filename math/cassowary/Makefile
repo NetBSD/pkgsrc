@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/06/02 01:18:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/05 05:01:57 uebayasi Exp $
 #
 
 DISTNAME=		cassowary-0.60
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math
 MASTER_SITES=		http://www.cs.washington.edu/research/constraints/cassowary/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/05/06 16:21:20 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/05 05:01:56 uebayasi Exp $
 
 DISTNAME=	TeXmacs-1.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 

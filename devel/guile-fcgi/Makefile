@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/05 05:01:55 uebayasi Exp $
 
 DISTNAME=	guile-fcgi-0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.bgu.ru/%7Edsa/
 
@@ -12,7 +12,8 @@ COMMENT=	Guile interface to FastCGI
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
-#CONFIGURE_ARGS+=	--with-fcgi-includes=${PREFIX}/include
+CONFIGURE_ARGS+=--with-fcgi-includes=${BUILDLINK_PREFIX.fcgi}/include
+CONFIGURE_ARGS+=--with-fcgi-lib=${BUILDLINK_PREFIX.fcgi}/lib
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} guile-fcgi.x
