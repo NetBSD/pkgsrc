@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+
+--- lib/Imakefile.orig	Thu Mar 18 00:15:02 1999
++++ lib/Imakefile	Sun Mar 21 02:19:06 1999
+@@ -4,7 +4,7 @@
+ HEADER_INST = /include
+ 
+ XCOMM Xfree86
+-STD_INCLUDES = -I/usr/X11R6/include -I/usr/local/include
++STD_INCLUDES = -I${X11BASE}/include -I${LOCALBASE}/include
+ 
+ XCOMM Solaris
+ XCOMM STD_INCLUDES = -I/usr/openwin/include -I/usr/local/include
