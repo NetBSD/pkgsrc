@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/07/15 09:01:43 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2002/08/10 02:27:47 dmcmahill Exp $
 
 --- Imakefile.orig	Fri Nov 22 02:28:46 1996
 +++ Imakefile
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.4 2002/07/15 09:01:43 wiz Exp $
  
 -    XPMLIB 				= -L/usr/X11/lib -lXpm
 -    XPMINCLUDE 			= -I/usr/X11/include/X11
-+    XPMLIB 			= -L$(BUILDLINK_X11_DIR)/lib -lXpm
-+    XPMINCLUDE 			= -I$(BUILDLINK_X11_DIR)/include/X11
++    XPMLIB 			= -L$(BUILDLINK_DIR)/lib -lXpm
++    XPMINCLUDE 			= -I$(BUILDLINK_DIR)/include/X11
      XBOINGINCLUDE 		= -I./include
 -    LEVEL_INSTALL_DIR 	= $(XBOING_DIR)/levels
 +    LEVEL_INSTALL_DIR 		= $(XBOING_DIR)/levels
