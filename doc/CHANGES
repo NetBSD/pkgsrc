@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6886 2004/08/15 12:16:30 dillo Exp $
+$NetBSD: CHANGES,v 1.6887 2004/08/15 12:42:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated doclifter to 1.13 [wiz 2004-08-15]
 	Updated nut to 10.1 [wiz 2004-08-15]
 	Updated gens to 2.12rc3nb1 [dillo 2004-08-15]
+	Updated libcaca to 0.9 [wiz 2004-08-15]
