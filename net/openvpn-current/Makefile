@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 23:14:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 23:17:24 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0_beta15
@@ -36,15 +36,15 @@ PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR/config
+	${INSTALL_DATA_DIR} ${EGDIR}/config
 	cd ${WRKSRC}/sample-config-files; for file in *; do		\
 		${INSTALL_DATA} $$file ${EGDIR}/config;			\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR/scripts
+	${INSTALL_DATA_DIR} ${EGDIR}/scripts
 	cd ${WRKSRC}/sample-scripts; for file in *; do			\
 		${INSTALL_DATA} $$file ${EGDIR}/scripts;		\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR/keys
+	${INSTALL_DATA_DIR} ${EGDIR}/keys
 	cd ${WRKSRC}/sample-keys; for file in *; do			\
 		${INSTALL_DATA} $$file ${EGDIR}/keys;			\
 	done
