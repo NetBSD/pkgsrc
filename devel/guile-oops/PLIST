@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:26 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/14 15:31:40 tv Exp $
 bin/guile-oops
 include/goops-snarf.h
 include/goops.h
@@ -11,7 +11,6 @@ share/guile/oop/goops/composite-slot.scm
 share/guile/oop/goops/describe.scm
 share/guile/oop/goops/dispatch.scm
 share/guile/oop/goops/internal.scm
-share/guile/oop/goops/libgoopscore.la
 share/guile/oop/goops/save.scm
 share/guile/oop/goops/stklos.scm
 share/guile/oop/goops/util.scm
