@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/07/24 10:39:01 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/29 22:41:01 jlam Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -17,15 +17,6 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == SunOS)
-CPPFLAGS+=	-I${X11BASE}/include
-MAKE_ENV+=	OSSAUDIO_LIBS=
-.else
-MAKE_ENV+=	OSSAUDIO_LIBS=-lossaudio
-.endif
 
 post-patch:
 	@cd ${WRKSRC}/doc && for f in *; do				\
@@ -46,4 +37,5 @@ post-install:
 .include "../../devel/libdockapp/buildlink.mk"
 .include "../../wm/windowmaker/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

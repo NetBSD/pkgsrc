@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/29 22:41:23 jlam Exp $
 
---- configure.orig	Tue Apr 11 01:19:49 2000
-+++ configure	Sun Jul 30 21:38:11 2000
+--- configure.orig	Mon Apr 10 19:19:49 2000
++++ configure
 @@ -4810,7 +4810,7 @@
  if test "x$enable_fsstd" = "xyes"; then
  	ENLIGHTENMENT_ROOT=${datadir}/enlightenment
@@ -11,7 +11,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  	USE_FSSTD=yes
  else
  	ENLIGHTENMENT_ROOT=${prefix}/enlightenment
-@@ -5473,7 +5473,7 @@
+@@ -5317,7 +5317,6 @@
+   rm -f conf.imlibtest
+ 
+ 
+-LDFLAGS="$LDFLAGS -L$prefix/lib"
+ LDFLAGS="$LDFLAGS `echo $IMLIB_LIBS | sed 's/\(.*\)-lImlib.*/\1/'`"
+ LDFLAGS="$LDFLAGS `echo $IMLIB_LIBS | sed 's/.*-lImlib.*\(-L[^ ]*\).*$/\1/'`"
+ XTST_LIBS=""
+@@ -5473,7 +5472,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
@@ -20,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  cat > conftest.$ac_ext <<EOF
  #line 5479 "configure"
  #include "confdefs.h"
-@@ -5501,7 +5501,7 @@
+@@ -5501,7 +5500,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -29,7 +37,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  else
    echo "$ac_t""no" 1>&6
  
-@@ -5518,14 +5518,14 @@
+@@ -5518,14 +5517,14 @@
  
  
  
@@ -50,7 +58,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  cat > conftest.$ac_ext <<EOF
  #line 5531 "configure"
  #include "confdefs.h"
-@@ -5540,23 +5540,45 @@
+@@ -5540,23 +5539,45 @@
  EOF
  if { (eval echo configure:5542: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
@@ -105,7 +113,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  echo "Warning: Enlightenment requires the dl (dynamic loader) library"
  echo "to be supported on your platform for module support.  Modules"
  echo "have been disabled (this will affect functionality)"
-@@ -5564,9 +5586,8 @@
+@@ -5564,9 +5585,8 @@
  fi
  
  
@@ -116,7 +124,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Xtst'_'XTestGrabControl | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5574,7 +5595,7 @@
+@@ -5574,7 +5594,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXtst $X_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -125,7 +133,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5585,7 +5606,7 @@
+@@ -5585,7 +5605,7 @@
  XTestGrabControl()
  ; return 0; }
  EOF
@@ -134,7 +142,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5613,7 +5634,7 @@
+@@ -5613,7 +5633,7 @@
  fi
  
  echo $ac_n "checking for XTestQueryExtension in -lXtst""... $ac_c" 1>&6
@@ -143,7 +151,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Xtst'_'XTestQueryExtension | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5621,7 +5642,7 @@
+@@ -5621,7 +5641,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXtst $X_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -152,7 +160,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5632,7 +5653,7 @@
+@@ -5632,7 +5652,7 @@
  XTestQueryExtension()
  ; return 0; }
  EOF
@@ -161,7 +169,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5654,7 +5675,7 @@
+@@ -5654,7 +5674,7 @@
  
  
  echo $ac_n "checking for XkbQueryExtension in -lXext""... $ac_c" 1>&6
@@ -170,7 +178,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Xext'_'XkbQueryExtension | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5662,7 +5683,7 @@
+@@ -5662,7 +5682,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXext $X_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -179,7 +187,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5673,7 +5694,7 @@
+@@ -5673,7 +5693,7 @@
  XkbQueryExtension()
  ; return 0; }
  EOF
@@ -188,7 +196,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5697,7 +5718,7 @@
+@@ -5697,7 +5717,7 @@
  fi
  
  echo $ac_n "checking for XineramaQueryExtension in -lXinerama""... $ac_c" 1>&6
@@ -197,7 +205,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Xinerama'_'XineramaQueryExtension | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5705,7 +5726,7 @@
+@@ -5705,7 +5725,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXinerama $X_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -206,7 +214,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5716,7 +5737,7 @@
+@@ -5716,7 +5736,7 @@
  XineramaQueryExtension()
  ; return 0; }
  EOF
@@ -215,7 +223,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5753,7 +5774,7 @@
+@@ -5753,7 +5773,7 @@
  
  if test "x$enable_zoom" = "xyes"; then
  echo $ac_n "checking for XF86VidModeQueryExtension in -lXxf86vm""... $ac_c" 1>&6
@@ -224,7 +232,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Xxf86vm'_'XF86VidModeQueryExtension | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5761,7 +5782,7 @@
+@@ -5761,7 +5781,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lXxf86vm $X_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -233,7 +241,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5772,7 +5793,7 @@
+@@ -5772,7 +5792,7 @@
  XF86VidModeQueryExtension()
  ; return 0; }
  EOF
@@ -242,7 +250,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5808,7 +5829,7 @@
+@@ -5808,7 +5828,7 @@
  
  
  echo $ac_n "checking for mass_quantities_of_bass_ale in -lFridge""... $ac_c" 1>&6
@@ -251,7 +259,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Fridge'_'mass_quantities_of_bass_ale | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5816,7 +5837,7 @@
+@@ -5816,7 +5836,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lFridge  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -260,7 +268,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5827,7 +5848,7 @@
+@@ -5827,7 +5847,7 @@
  mass_quantities_of_bass_ale()
  ; return 0; }
  EOF
@@ -269,7 +277,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -5855,7 +5876,7 @@
+@@ -5855,7 +5875,7 @@
  fi
  
  echo $ac_n "checking for mass_quantities_of_any_ale in -lFridge""... $ac_c" 1>&6
@@ -278,7 +286,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  ac_lib_var=`echo Fridge'_'mass_quantities_of_any_ale | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -5863,7 +5884,7 @@
+@@ -5863,7 +5883,7 @@
    ac_save_LIBS="$LIBS"
  LIBS="-lFridge  $LIBS"
  cat > conftest.$ac_ext <<EOF
@@ -287,7 +295,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
-@@ -5874,7 +5895,7 @@
+@@ -5874,7 +5894,7 @@
  mass_quantities_of_any_ale()
  ; return 0; }
  EOF

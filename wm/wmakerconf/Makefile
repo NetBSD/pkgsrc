@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/23 21:00:07 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/29 22:41:26 jlam Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
@@ -14,9 +14,11 @@ USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		wraster="${GET_WRASTER_FLAGS}"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../wm/windowmaker/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

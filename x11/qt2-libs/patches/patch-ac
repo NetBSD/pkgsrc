@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2001/06/23 19:35:27 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2001/08/29 22:41:30 jlam Exp $
 
 --- configs/solaris-g++-static.in.orig	Wed Jun 13 04:56:50 2001
 +++ configs/solaris-g++-static.in
@@ -11,10 +11,10 @@ $NetBSD: patch-ac,v 1.3 2001/06/23 19:35:27 jlam Exp $
  
  # Compiling with support libraries
 -SYSCONF_CXXFLAGS_X11	= -I/usr/openwin/include
-+SYSCONF_CXXFLAGS_X11	= -I@X11BASE@/include
++SYSCONF_CXXFLAGS_X11	= -I@BUILDLINK_X11_DIR@/include
  SYSCONF_CXXFLAGS_QT	= -I$(QTDIR)/include
 -SYSCONF_CXXFLAGS_OPENGL	= 
-+SYSCONF_CXXFLAGS_OPENGL	= -I@BUILDLINK_DIR@/include -I@X11BASE@/include
++SYSCONF_CXXFLAGS_OPENGL	= -I@BUILDLINK_DIR@/include -I@BUILDLINK_X11_DIR@/include
  
  # Compiling YACC output
  SYSCONF_CXXFLAGS_YACC     = -Wno-unused -Wno-parentheses
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.3 2001/06/23 19:35:27 jlam Exp $
  # Linking with support libraries
  # X11
 -SYSCONF_LFLAGS_X11	= -L/usr/openwin/lib
-+SYSCONF_LFLAGS_X11	= -L@X11BASE@/lib
++SYSCONF_LFLAGS_X11	= -L@BUILDLINK_X11_DIR@/lib
  SYSCONF_LIBS_X11	= -lXext -lX11 -lm -lresolv -lsocket -lnsl
  # Qt, Qt+OpenGL
  SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.3 2001/06/23 19:35:27 jlam Exp $
  SYSCONF_LIBS_QT_OPENGL	= 
  # OpenGL
 -SYSCONF_LFLAGS_OPENGL	= 
-+SYSCONF_LFLAGS_OPENGL	= -L@BUILDLINK_DIR@/lib -L@X11BASE@/lib
++SYSCONF_LFLAGS_OPENGL	= -L@BUILDLINK_DIR@/lib -L@BUILDLINK_X11_DIR@/lib
  SYSCONF_LIBS_OPENGL	= -lGLU -lGL -lXmu
  # Yacc
  SYSCONF_LIBS_YACC	= 

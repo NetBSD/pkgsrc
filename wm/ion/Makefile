@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/30 09:01:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/29 22:41:24 jlam Exp $
 #
 
 DISTNAME=	ion-20010523
@@ -13,4 +13,5 @@ USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

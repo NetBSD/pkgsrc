@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2001/08/18 18:13:28 tron Exp $
+$NetBSD: patch-ab,v 1.7 2001/08/29 22:41:25 jlam Exp $
 
 --- configure.in.orig	Mon Jul 23 21:43:34 2001
 +++ configure.in	Sat Aug 18 19:57:49 2001
@@ -61,8 +61,8 @@ $NetBSD: patch-ab,v 1.6 2001/08/18 18:13:28 tron Exp $
  
 -LIBRARY_SEARCH_PATH="$lib_search_path"
 -HEADER_SEARCH_PATH="$inc_search_path"
-+LIBRARY_SEARCH_PATH="-L${BUILDLINK_DIR}/lib -L${X11BASE}/lib"
-+HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${X11BASE}/include"
++LIBRARY_SEARCH_PATH="-L${BUILDLINK_DIR}/lib -L${BUILDLINK_X11_DIR}/lib"
++HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${BUILDLINK_X11_DIR}/include"
  
  AC_SUBST(LIBRARY_SEARCH_PATH)
  AC_SUBST(HEADER_SEARCH_PATH)
