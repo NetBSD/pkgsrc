@@ -1,9 +1,18 @@
-$NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
+$NetBSD: patch-ak,v 1.5 2003/05/22 02:57:14 markd Exp $
 
---- klaptopdaemon/Makefile.in.orig	Fri Jan 17 08:58:07 2003
+--- klaptopdaemon/Makefile.in.orig	Thu May  8 00:08:46 2003
 +++ klaptopdaemon/Makefile.in
-@@ -245,20 +245,24 @@ qt_includes = @qt_includes@
- qt_libraries = @qt_libraries@
+@@ -91,7 +91,7 @@ KDE_USE_FINAL_FALSE = @KDE_USE_FINAL_FAL
+ KDE_USE_FINAL_TRUE = @KDE_USE_FINAL_TRUE@
+ KDE_XSL_STYLESHEET = @KDE_XSL_STYLESHEET@
+ 
+-LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
++LDFLAGS = $(all_libraries) $(KDE_RPATH) $(EXPORT_SYMBOLS_LDFLAGS)
+ LIBCOMPAT = @LIBCOMPAT@
+ LIBCRYPT = @LIBCRYPT@
+ LIBDL = @LIBDL@
+@@ -270,20 +270,24 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
 -lib_LTLIBRARIES = klaptopdaemon.la
@@ -32,16 +41,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  
  kcm_laptop_la_SOURCES = battery.cpp main.cpp pcmcia.cpp power.cpp warning.cpp \
  	portable.cpp acpi_config.cpp
-@@ -268,7 +272,7 @@ kcm_laptop_la_LIBADD = $(LIB_KFILE)
- 
- INCLUDES = $(all_includes)
- 
--LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
-+LDFLAGS = $(all_libraries) $(KDE_RPATH) $(EXPORT_SYMBOLS_LDFLAGS)
- 
- #>- kcm_laptop_la_METASOURCES = AUTO
- subdir = klaptopdaemon
-@@ -287,24 +291,32 @@ kcm_laptop_la_nofinal_OBJECTS = battery.
+@@ -310,49 +314,60 @@ kcm_laptop_la_nofinal_OBJECTS = battery.
  	warning.lo portable.lo acpi_config.lo
  @KDE_USE_FINAL_FALSE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_final_OBJECTS)
@@ -84,9 +84,8 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
 +klaptopdaemon_OBJECTS = klaptopdaemon_main.$(OBJEXT)
 +klaptopdaemon_DEPENDENCIES = libklaptopdaemon_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -314,25 +326,28 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/acpi_config.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/battery.Plo ./$(DEPDIR)/daemondock.Plo \
@@ -123,17 +122,17 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/laptop_daemon.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/notify.Plo ./$(DEPDIR)/pcmcia.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/portable.Plo ./$(DEPDIR)/power.Plo \
-@@ -358,7 +373,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -377,7 +392,7 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) \
 -	$(klaptopdaemon_SOURCES)
 +	$(libklaptopdaemon_main_la_SOURCES) $(klaptopdaemon_SOURCES)
  
- RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
- 	uninstall-info-recursive all-recursive install-data-recursive \
-@@ -366,7 +381,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
- 	uninstall-recursive check-recursive installcheck-recursive
+ RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
+ 	ps-recursive install-info-recursive uninstall-info-recursive \
+@@ -386,7 +401,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	check-recursive installcheck-recursive
  DIST_COMMON = README Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) $(klaptopdaemon_SOURCES)
@@ -141,7 +140,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -446,6 +461,8 @@ clean-libLTLIBRARIES:
+@@ -466,6 +481,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_laptop_la_LDFLAGS) $(kcm_laptop_la_OBJECTS) $(kcm_laptop_la_LIBADD) $(LIBS)
  klaptopdaemon.la: $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(klaptopdaemon_la_LDFLAGS) $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_LIBADD) $(LIBS)
@@ -150,7 +149,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -488,7 +505,8 @@ distclean-compile:
+@@ -508,7 +525,8 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/acpi_config.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/battery.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/daemondock.Plo@am__quote@
@@ -160,16 +159,16 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kpcmcia.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kpcmciainfo.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/laptop_daemon.Plo@am__quote@
-@@ -628,7 +646,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -684,7 +702,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=pcmcia.h power.h portable.h daemondock.h laptop_daemon.h kpcmciainfo.h main.h acpi_config.h warning.h kpcmcia.h notify.h configure.in.in battery.h version.h 
-+KDE_DIST=power.h Makefile.am.rej warning.h configure.in.in kpcmciainfo.h acpi_config.h battery.h version.h pcmcia.h portable.h daemondock.h main.h kpcmcia.h laptop_daemon.h notify.h 
++KDE_DIST=power.h warning.h configure.in.in kpcmciainfo.h acpi_config.h battery.h version.h pcmcia.h portable.h daemondock.h main.h kpcmcia.h laptop_daemon.h notify.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -778,9 +796,6 @@ uninstall-info: uninstall-info-recursive
+@@ -850,9 +868,6 @@ uninstall-info: uninstall-info-recursive
  messages:
  	$(XGETTEXT) $(klaptopdaemon_la_SOURCES) -o $(podir)/klaptopdaemon.pot
  	$(XGETTEXT) $(kcm_laptop_la_SOURCES) -o $(podir)/kcmlaptop.pot
@@ -179,7 +178,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -799,20 +814,32 @@ kpcmcia.moc: $(srcdir)/kpcmcia.h
+@@ -871,20 +886,32 @@ kpcmcia.moc: $(srcdir)/kpcmcia.h
  	$(MOC) $(srcdir)/kpcmcia.h -o kpcmcia.moc
  
  #>+ 3
@@ -216,7 +215,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  
  #>+ 3
  power.moc: $(srcdir)/power.h
-@@ -823,24 +850,12 @@ warning.moc: $(srcdir)/warning.h
+@@ -895,24 +922,12 @@ warning.moc: $(srcdir)/warning.h
  	$(MOC) $(srcdir)/warning.h -o warning.moc
  
  #>+ 3
@@ -242,7 +241,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -857,7 +872,7 @@ force-reedit:
+@@ -929,7 +944,7 @@ force-reedit:
  
  
  #>+ 11
@@ -251,7 +250,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  	@echo 'creating kcm_laptop_la.all_cpp.cpp ...'; \
  	rm -f kcm_laptop_la.all_cpp.files kcm_laptop_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kcm_laptop_la.all_cpp.final; \
-@@ -869,33 +884,33 @@ kcm_laptop_la.all_cpp.cpp: $(srcdir)/Mak
+@@ -941,33 +956,33 @@ kcm_laptop_la.all_cpp.cpp: $(srcdir)/Mak
  	rm -f kcm_laptop_la.all_cpp.final kcm_laptop_la.all_cpp.files
  
  #>+ 11
@@ -298,7 +297,7 @@ $NetBSD: patch-ak,v 1.4 2003/03/11 13:22:32 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -906,24 +921,24 @@ kde-rpo-clean:
+@@ -978,24 +993,24 @@ kde-rpo-clean:
  
  #>+ 23
  kpcmcia.o: kpcmcia.moc 
