@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:57 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/08 13:33:39 skrll Exp $
 
 DISTNAME=	kde-2.2.2
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE integrated X11 desktop
 
+DEPENDS+=	kdeartwork-2.2.2:../../misc/kdeartwork2
+DEPENDS+=	kdeaddons-2.2.2:../../misc/kdeaddons2
 DEPENDS+=	kdeadmin-2.2.2nb1:../../misc/kdeadmin2
 DEPENDS+=	kdegames-2.2.2nb1:../../games/kdegames2
 DEPENDS+=	kdegraphics-2.2.2nb1:../../graphics/kdegraphics2
