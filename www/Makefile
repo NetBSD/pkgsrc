@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2002/09/01 22:44:00 kim Exp $
+# $NetBSD: Makefile,v 1.208 2002/09/04 15:07:19 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -177,7 +177,10 @@ SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
 SUBDIR+=	zope
-#SUBDIR+=	zope25		# for testing thread enabled python
+SUBDIR+=	zope25
+SUBDIR+=	zope25-CMF
+SUBDIR+=	zope25-LocalFS
+SUBDIR+=	zope25-ZPhotoSlides
 SUBDIR+=	zope-confera
 
 .include "../mk/bsd.pkg.subdir.mk"
