@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/10/21 18:41:14 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/10/22 13:45:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -22,7 +22,11 @@ CONFIGURE_ARGS+= --with-screen=Xaw --with-xpm --with-perl --with-lib-dir=${X11BA
 INSTALL_TARGET=	install install-perl
 
 post-install:
-	@${ECHO} "You might want to copy the *.rc files from the source tree before"
-	@${ECHO} "doing \`${MAKE} clean'."
+	-@${MKDIR} -p ${PREFIX}/share/examples/xvile
+	@for f in filters/spell.rc filters/filters.rc		\
+		macros/digraphs.rc macros/pictmode.rc		\
+		macros/manpage.rc visvile/visvile.rc; do	\
+		${BSD_INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/examples/xvile; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
