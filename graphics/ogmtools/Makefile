@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/11 07:26:44 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/07 08:41:57 wiz Exp $
 #
 
-DISTNAME=	ogmtools-1.0.1
+DISTNAME=	ogmtools-1.0.2
 CATEGORIES=	graphics audio
 MASTER_SITES=	http://www.bunkus.org/videotools/ogmtools/
 EXTRACT_SUFX=	.tar.bz2
