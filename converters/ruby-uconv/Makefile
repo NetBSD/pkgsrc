@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/01/28 14:08:01 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:05 taca Exp $
 # FreeBSD: ports/japanese/ruby-uconv/Makefile,v 1.8 2001/01/30 19:26:22 knu Exp
 
 DISTNAME=	uconv-0.4.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters japanese ruby
 MASTER_SITES=	http://www.yoshidam.net/
 

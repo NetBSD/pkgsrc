@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/01/23 17:33:19 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/06 17:19:05 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-gdbm-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
