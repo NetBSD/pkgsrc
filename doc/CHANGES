@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9678 2005/03/29 16:25:05 seb Exp $
+$NetBSD: CHANGES,v 1.9679 2005/03/29 17:03:15 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1814,3 +1814,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated putty to 0.57 [wiz 2005-03-29]
 	Updated openexr to 1.2.2 [wiz 2005-03-29]
 	Updated amarok to 1.2.3 [seb 2005-03-29]
+	Updated posh to 0.3.14 [jmmv 2005-03-29]
