@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/04 15:06:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/09 14:00:57 wiz Exp $
 #
 
 DISTNAME=	slrn-0.9.7.4
@@ -10,6 +10,7 @@ MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-X --disable-inews --with-slrnpull \
@@ -21,6 +22,6 @@ CONFIGURE_ARGS+=--without-X --disable-inews --with-slrnpull \
 # together
 CONFIGURE_ENV+=	INSTALL=/usr/bin/install
 
-.include "../../devel/libslang/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
