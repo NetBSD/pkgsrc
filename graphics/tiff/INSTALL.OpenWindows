@@ -1,9 +1,9 @@
-# $NetBSD: INSTALL.OpenWindows,v 1.3 2003/08/30 23:01:31 jlam Exp $
+# $NetBSD: INSTALL.OpenWindows,v 1.4 2004/01/03 18:33:24 reed Exp $
 
-LIBTIFF="libtiff.so libtiff.so.3"
+LIBTIFF="libtiff.so.3 libtiff.so"
 
 case ${STAGE} in
-PRE-INSTALL)
+POST-INSTALL)
 	for lib in ${LIBTIFF}; do
 		src="${PKG_PREFIX}/lib/${lib}"
 		dest="${X11BASE}/lib/${lib}"

@@ -1,22 +1,13 @@
-$NetBSD: patch-ab,v 1.12 2002/03/05 10:33:36 martti Exp $
+$NetBSD: patch-ab,v 1.13 2004/01/03 18:33:24 reed Exp $
 
---- html/Makefile.in.orig	Tue Jul 17 15:13:37 2001
-+++ html/Makefile.in	Mon Mar  4 16:02:59 2002
-@@ -77,8 +77,6 @@
- 	v3.5.1.html		\
- 	v3.5.2.html		\
- 	v3.5.3.html		\
--	v3.5.4.html		\
--	v3.5.5.html		\
- 	${NULL}
- IMAGES=\
- 	images/back.gif		\
-@@ -86,6 +84,8 @@
- 	images/cat.gif		\
- 	images/cover.jpg	\
- 	images/cramps.gif	\
-+	images/dave.gif		\
-+	images/info.gif		\
- 	images/jello.jpg	\
- 	images/jim.gif		\
- 	images/note.gif		\
+--- libtiff/tiff.h.orig	Mon Oct  7 11:50:46 2002
++++ libtiff/tiff.h
+@@ -79,7 +79,7 @@ typedef	char int8;
+ typedef	unsigned char uint8;
+ typedef	short int16;
+ typedef	unsigned short uint16;	/* sizeof (uint16) must == 2 */
+-#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__)
++#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__) || defined(_LP64)
+ typedef	int int32;
+ typedef	unsigned int uint32;	/* sizeof (uint32) must == 4 */
+ #else

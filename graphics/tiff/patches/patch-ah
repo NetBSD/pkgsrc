@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2004/01/03 18:33:25 reed Exp $
+
+--- html/Makefile.in.orig	Wed Oct  2 08:14:34 2002
++++ html/Makefile.in
+@@ -86,6 +86,8 @@ HTMLFILES=\
+ 	v3.5.5.html		\
+ 	v3.5.6-beta.html	\
+ 	v3.5.7.html		\
++	v3.6.0.html		\
++	v3.6.1.html		\
+ 	${NULL}
+ IMAGES=\
+ 	images/back.gif		\
