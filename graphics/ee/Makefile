@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/22 22:02:33 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/08/29 12:48:58 rh Exp $
 #
 
 DISTNAME=		ee-0.3.8
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0/sources/ee/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS=		gnome-core-1.0.7:../../x11/gnome-core
+DEPENDS=		gnome-core-1.0.9:../../x11/gnome-core
 
 NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
