@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/17 20:59:19 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
-DISTNAME=       enscript-1.5.0
-PKGNAME=        enscript-${PAPERSIZE}-1.5.0
-CATEGORIES=	print
-MASTER_SITES=   ${MASTER_SITE_GNU}
+DISTNAME=		enscript-1.6.0
+PKGNAME=		enscript-${PAPERSIZE}-1.6.0
+CATEGORIES=		print
+MASTER_SITES=		${MASTER_SITE_GNU}
 
-MAINTAINER=	kline@thought.org
+MAINTAINER=		packages@netbsd.org
 
 MANUAL_PACKAGE_BUILD=	PAPERSIZE has to be set to Letter or A4
 GNU_CONFIGURE=		yes
@@ -15,13 +15,13 @@ CONFIGURE_ARGS+=	--disable-nls --with-media=${PAPERSIZE}
 CONFIGURE_ENV=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAKE_ENV+=		`${CAT} ${PAPER}`
 
-MAN1=		diffpp.1 enscript.1 sliceprint.1 states.1
+MAN1=			diffpp.1 enscript.1 sliceprint.1 states.1
 
 # If you want to build a static binary, uncomment the following line
-#LDFLAGS+=-static
+#LDFLAGS+=		-static
 
-PAPERSIZE?=	A4
-PAPER=		${.CURDIR}/${WRKDIR:T}/PaperSize
+PAPERSIZE?=		A4
+PAPER=			${.CURDIR}/${WRKDIR:T}/PaperSize
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
