@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/04 21:20:50 garbled Exp $
+--- Makefile.orig	Wed May  7 09:28:12 1997
++++ Makefile	Wed Nov  4 13:23:53 1998
+@@ -6,8 +6,9 @@
+ HPFLAGS = -O -D_HPUX_SOURCE
+ SUNFLAGS = -O
+ LINUXFLAGS = -O
++FREEBSDFLAGS= -O -DPREFIX=\"${PREFIX}/share/xworm\"
+ 
+-INCDIR = -I/usr/include/X11R5 -I/usr/include -I/usr/X11R6/include
++INCDIR = -I/usr/include/X11R5 -I/usr/include -I${PREFIX}/include
+ 
+ HPLINK = -L/usr/local/lib/X11R5 -lXt -lX11 -lm
+ SUNLINK = -L/usr/local/lib/X11R5 -lXt -lX11 -lm -lsocket -lnsl -lICE -lSM
+@@ -18,9 +19,10 @@
+ 	@echo " "
+ 	@echo "type:"
+ 	@echo " "
+-	@echo "  make hp     [HP/UX and similar systems]"
+-	@echo "  make sun    [Sun-Os/SUN systems]"
+-	@echo "  make linux  [linux systems]"
++	@echo "  make hp      [HP/UX and similar systems]"
++	@echo "  make sun     [Sun-Os/SUN systems]"
++	@echo "  make linux   [linux systems]"
++	@echo "  make freebsd [FreeBSD systems]"
+ 	@echo " "
+ 	@echo "xworm.font, xworm.grid and xworm.raw has to be in the same directory as xworm"
+ 	@echo "please check the Makefile if you have problems compiling the program"
+@@ -33,6 +35,9 @@
+ 
+ linux: xworm.c
+ 	$(CC) $(LINUXFLAGS) $(INCDIR) xworm.c -o xworm $(LINUXLINK)
++
++freebsd: xworm.c
++	$(CC) $(FREEBSDFLAGS) $(INCDIR) xworm.c -o xworm $(LINUXLINK)
+ 
+ clean:
+ 	rm -f core xworm
