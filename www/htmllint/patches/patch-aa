@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 05:13:04 kei Exp $
+
+--- faq.html.orig	Wed Jan 24 10:05:06 2001
++++ faq.html	Wed Jan 24 10:08:22 2001
+@@ -150,7 +150,7 @@
+ <dl compact class="faq">
+ <dt>Q<dd>サーバに <a href="http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/">w3m</a> をインストールしましたが Another HTML-lint で結果が表示されません。
+ <dt>A<dd>デフォルトで、-Mオプションを付けてw3mを呼び出すため、カラー機能を無効にしてコンパイルされたw3mでうまく動作しないようです。カラー機能を有効にするか、htmllint.env で
+-<pre class="pre-sample">    $W3M = '/usr/local/bin/w3m -dump -T text/html -e';</pre>
++<pre class="pre-sample">    $W3M = '@PREFIX@/bin/w3m -dump -T text/html -e';</pre>
+ などと -M のないオプションを指定してください(オプションの詳細はw3mを参照のこと)。
+ </dl>
+ 
