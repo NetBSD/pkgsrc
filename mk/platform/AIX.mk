@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.12 2005/03/18 18:16:35 tv Exp $
+# $NetBSD: AIX.mk,v 1.13 2005/03/29 08:17:42 garbled Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -138,8 +138,7 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_MANNEWSUFFIX=	0
 
-_DO_SHLIB_CHECKS=	no	# fixup PLIST for shared libs/run ldconfig
-                 	  	# doesn't work on AIX b/c no ldd.
+_DO_SHLIB_CHECKS=	yes
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
