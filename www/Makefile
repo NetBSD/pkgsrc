@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2004/02/05 17:35:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.293 2004/02/09 10:40:28 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -13,7 +13,6 @@ SUBDIR+=	MozillaFirebird-bin-flash
 SUBDIR+=	MozillaFirebird-bin-java
 SUBDIR+=	MozillaFirebird-bin-nightly
 SUBDIR+=	MozillaFirebird-bin-realplayer
-SUBDIR+=	MozillaFirebird-gtk2-bin
 SUBDIR+=	MozillaFirebird-gtk2-bin-nightly
 SUBDIR+=	adzap
 SUBDIR+=	amaya
@@ -80,6 +79,8 @@ SUBDIR+=	elinks04
 SUBDIR+=	emacs-w3m
 SUBDIR+=	epiphany
 SUBDIR+=	fcgi
+SUBDIR+=	firefox-bin
+SUBDIR+=	firefox-gtk2-bin
 SUBDIR+=	galeon
 SUBDIR+=	galway
 SUBDIR+=	glibwww
