@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 1998/12/05 03:30:03 tv Exp $
+# $NetBSD: Makefile,v 1.45 1998/12/28 20:22:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -28,6 +28,7 @@
 #    SUBDIR += gcc11
 #    SUBDIR += gdb
 #    SUBDIR += gdbtk
+    SUBDIR += gettext
     SUBDIR += gindent
     SUBDIR += glib
     SUBDIR += gmake
