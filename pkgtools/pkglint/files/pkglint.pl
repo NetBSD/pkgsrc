@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.56 2001/09/09 20:50:17 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.57 2001/10/30 18:53:02 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -628,6 +628,9 @@ sub checkmakefile {
 	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
 
 	$pkgdir = "pkg";
+	if (! -d "$portdir/$pkgdir") {
+	    $pkgdir = ".";
+	}
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
 	$pkgdir =~ s/\$\{.CURDIR\}/./;
 
