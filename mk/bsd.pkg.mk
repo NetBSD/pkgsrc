@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.365 1999/11/10 10:50:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.366 1999/11/12 10:34:47 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -480,7 +480,7 @@ LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
-PATCH?=		/usr/bin/patch -F0
+PATCH?=		/usr/bin/patch
 PAX?=		/usr/local/bsd/bin/pax
 PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
 PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
@@ -524,7 +524,7 @@ LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
-PATCH?=		/usr/bin/patch -F0
+PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PKG_ADD?=	/usr/sbin/pkg_add
 PKG_CREATE?=	/usr/sbin/pkg_create
@@ -1106,7 +1106,11 @@ do-patch:
 				if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
 					${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
 				fi;					\
-				${PATCH} ${PATCH_ARGS} < $$i || ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+				fuzz="";				\
+				${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
+				${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||	\
+					( ${ECHO} "!!! Fuzzy patch $$i !!!"; ${PATCH} ${PATCH_ARGS} < $$i) || \
+					( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 			done;						\
 			if [ "X$$fail" != "X" ]; then			\
 				${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \

@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.95 1999/11/10 10:37:12 agc Exp $
+# $NetBSD: mk.conf.example,v 1.96 1999/11/12 10:34:47 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -98,6 +98,12 @@
                                 # (Set by default in ftp(1) in NetBSD-current)
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#PATCH_FUZZ_FACTOR=		# Fuzz factor to use when applying patches
+                                # Will only be applied when using a patch
+                                # that understands -F
+                                # Possible: "-Fn" where n is a number, none
+                                # Default: none
 
 #ACCEPTABLE_LICENSES=	shareware no-commercial-use fee-based-commercial-use
                                 # Whitespace-delimited list of the types of
