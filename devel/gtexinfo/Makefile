@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/11/23 18:47:16 seb Exp $
+# $NetBSD: Makefile,v 1.32 2002/11/30 13:45:17 grant Exp $
 #
 
 DISTNAME=		texinfo-4.3
@@ -13,10 +13,10 @@ COMMENT=		GNU info file manipulation utilities
 
 USE_BUILDLINK2=		yes
 USE_GNU_GETTEXT=	yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 AUTOMAKE_PATTERNS+=	configure.ac
 AUTOMAKE_PATTERNS+=	config.in
 
