@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2001/11/14 11:49:52 agc Exp $
+
+Remember to set the timezone.
+
+--- src/cronolog.c	2001/11/14 11:45:22	1.1
++++ src/cronolog.c	2001/11/14 11:46:00
+@@ -242,6 +242,7 @@
+ 
+     DEBUG(("periodicity = %s\n", periods[periodicity]));
+ 
++    tzset();
+ 
+     /* Loop, waiting for data on standard input */
+ 
