@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2000/08/22 19:49:13 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2000/12/28 01:35:42 wiz Exp $
 
---- Makefile.orig	Sun Mar 22 18:09:38 1998
-+++ Makefile	Tue Aug 22 15:38:02 2000
-@@ -14,10 +14,10 @@
+--- Makefile.orig	Mon Mar 23 00:09:38 1998
++++ Makefile
+@@ -13,12 +13,12 @@
+ ##############################################################################
  
  # For NEXTSTEP/OPENSTEP:
 -CFLAGS = -Wall -O2 -traditional-cpp -g
@@ -18,7 +19,9 @@ $NetBSD: patch-aa,v 1.4 2000/08/22 19:49:13 dmcmahill Exp $
 +#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For Linux:
-@@ -33,8 +33,8 @@
+ #CFLAGS = -Wall -O2 -g
+@@ -32,10 +32,10 @@
+ #RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For NetBsd
 -#CFLAGS = -Wall -O2 -DNETBSD
@@ -31,10 +34,22 @@ $NetBSD: patch-aa,v 1.4 2000/08/22 19:49:13 dmcmahill Exp $
 +RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For HP-UX:
-@@ -68,5 +68,5 @@
+ # this "CFLAGS" line is for HP's cc, obviously. For gcc try "-Wall -O2"
+@@ -67,7 +67,7 @@
+ OFILES = proc.o sock.o rumba.o psinode.o kernel.o smb_abstraction.o fo_nfs.o
  
  .c.o:
 -	$(CC) $(CFLAGS) $(ARCH) -c -o $*.o $<
 +	$(CC) $(CFLAGS) -c -o $*.o $<
  
  all: $(NAME)
+ 
+@@ -75,7 +75,7 @@
+ 	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)" "CC=$(THE_CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
+ 
+ $(NAME): $(OFILES) nfs_dir
+-	$(CC) $(ARCH) -o $(NAME) $(OFILES) nfs/nfs.o $(LIBS)
++	$(CC) -o $(NAME) $(OFILES) nfs/nfs.o $(LIBS)
+ 
+ clean:
+ 	rm -f $(OFILES)
