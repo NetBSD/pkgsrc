@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2001/03/18 15:59:13 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/28 17:30:38 wiz Exp $
 
-DISTNAME=	micq-0.4.6.p1
-PKGNAME=	${DISTNAME:S/p//}
+DISTNAME=	micq-0.4.7
 CATEGORIES=	chat
 MASTER_SITES=	http://micq.ukeer.de/source/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	shell@shellhung.org
 HOMEPAGE=	http://micq.ukeer.de/
 COMMENT=	text-mode ICQ client
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.p/-p/}/src
+USE_GMAKE=	YES
+GNU_CONFIGURE=	YES
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/micq ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/micq
-	${INSTALL_MAN} ${WRKSRC}/../README ${PREFIX}/share/doc/micq
-	${INSTALL_MAN} ${WRKSRC}/../micq.1 ${PREFIX}/man/man1
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/doc/micq.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/micq.7 ${PREFIX}/man/man7
+	${INSTALL_MAN} ${WRKSRC}/doc/micqrc.5 ${PREFIX}/man/man5
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

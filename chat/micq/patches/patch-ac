@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/01/31 19:10:12 tron Exp $
+$NetBSD: patch-ac,v 1.2 2001/11/28 17:30:39 wiz Exp $
 
---- sendmsg.c.orig	Tue Jan 23 11:49:05 2001
-+++ sendmsg.c	Wed Jan 24 22:02:47 2001
-@@ -977,7 +977,7 @@
+--- src/sendmsg.c.orig	Thu Nov 22 00:32:01 2001
++++ src/sendmsg.c
+@@ -1087,7 +1087,7 @@
  {
-    char buf[450];
-    
--   sprintf( buf, "%s\xFE%s", url, description );
-+   snprintf( buf, sizeof(buf), "%s\xFE%s", url, description );
-    icq_sendmsg( sok, uin, buf, URL_MESS );
+     char buf[450];
+ 
+-    sprintf (buf, "%s\xFE%s", url, description);
++    snprintf (buf, sizeof(buf), "%s\xFE%s", url, description);
+     icq_sendmsg (sok, uin, buf, URL_MESS);
  }
  
