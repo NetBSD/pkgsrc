@@ -1,18 +1,23 @@
-$NetBSD: patch-aa,v 1.10 2002/01/15 23:52:11 rh Exp $
+$NetBSD: patch-aa,v 1.11 2002/04/25 12:17:05 agc Exp $
 
---- popt/configure.orig	Mon Jan  7 19:10:01 2002
+--- popt/configure.orig	Wed Mar 20 15:45:04 2002
 +++ popt/configure
-@@ -2277,13 +2277,6 @@
- 	echo "$ac_t""no" 1>&6
+@@ -7298,18 +7298,6 @@
+ echo "${ECHO_T}no" >&6
  fi
  
--echo $ac_n "checking for GNU xgettext""... $ac_c" 1>&6
--echo "configure:2282: checking for GNU xgettext" >&5
--xgettext --version 2>&1 | grep 'GNU gettext' >/dev/null 2>&1 || { echo "configure: error: 
+-echo "$as_me:7301: checking for GNU xgettext" >&5
+-echo $ECHO_N "checking for GNU xgettext... $ECHO_C" >&6
+-xgettext --version 2>&1 | grep 'GNU gettext' >/dev/null 2>&1 || { { echo "$as_me:7303: error:
 -*** GNU gettext is required. The latest version
--*** is always available from ftp://ftp.gnu.org/gnu/gettext/." 1>&2; exit 1; }
--echo "$ac_t""yes" 1>&6
+-*** is always available from ftp://ftp.gnu.org/gnu/gettext/." >&5
+-echo "$as_me: error:
+-*** GNU gettext is required. The latest version
+-*** is always available from ftp://ftp.gnu.org/gnu/gettext/." >&2;}
+-   { (exit 1); exit 1; }; }
+-echo "$as_me:7310: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
 -
  for ac_func in strerror mtrace
  do
- echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
