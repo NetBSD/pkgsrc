@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/26 18:02:40 agc Exp $
 
---- Makefile.orig	Mon Dec  4 15:45:02 2000
-+++ Makefile	Sat Jun  2 14:02:22 2001
-@@ -87,6 +87,7 @@
+--- Makefile.orig	Wed Apr  3 06:32:18 2002
++++ Makefile	Wed Jun 26 19:00:37 2002
+@@ -88,6 +88,7 @@
  	route.c vif.c timer.c mrt.c pim6.c pim6_proto.c rp.c crc.c trace.c\
  	cfparse.y cftoken.l
  CLEANFILES+= lex.yy.c y.tab.c y.tab.h
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
  
  .if (${OPSYS} == "BSD/OS")
  CC=	gcc
-@@ -121,6 +122,6 @@
+@@ -127,6 +128,12 @@
  
  realinstall:
  	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
@@ -18,3 +18,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
 +		${INSTALLFLAGS} ${.CURDIR}/pim6stat ${DESTDIR}${BINDIR}
  
  .include <bsd.prog.mk>
++
++.if ${OPSYS} == "NetBSD"
++.y.c:
++	${YACC.y} ${.IMPSRC}
++	mv y.tab.c ${.TARGET}
++.endif
