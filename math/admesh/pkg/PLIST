@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/10 04:44:57 jtb Exp $
+bin/admesh
+share/doc/admesh/ADMESH.DOC
+share/doc/admesh/README
+share/examples/admesh/block.stl
+@dirrm share/doc/admesh
+@dirrm share/examples/admesh
