@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2003/02/09 16:16:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/22 14:36:06 wiz Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
 PKGNAME=	PAM-0.77
 CATEGORIES=	security
 MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
-		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
+		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/ \
+		http://www.de.kernel.org/pub/linux/libs/pam/pre/library/ \
+		ftp://ftp.jp.kernel.org/pub/linux/libs/pam/pre/library/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
-COMMENT=	Pluggable Authentication Modules
+COMMENT=	Pluggable Authentication Modules (PAM)
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
@@ -30,6 +32,15 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${USE_LIBCRACK} == YES
+.include "../../security/libcrack/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-libcrack
+PLIST_SUBST+=		USE_LIBCRACK=
+.else
+CONFIGURE_ARGS+=	--without-libcrack
+PLIST_SUBST+=		USE_LIBCRACK="@comment "
+.endif
+
 .if defined(LDCONFIG) && !exists(${LDCONFIG})
 LDCONFIG=
 .endif
@@ -44,10 +55,22 @@ PKG_SYSCONFSUBDIR?=	pam
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CFILES=			access.conf pam_env.conf group.conf time.conf
+
+.if ${OPSYS} == "Linux"
+CFILES+=		limits.conf
+PLIST_SUBST+=		PAM_LIMITS=
+.else
+PLIST_SUBST+=		PAM_LIMITS="@comment "
+.endif
+
 CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASE}/pam.conf
 .for FILE in ${CFILES}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
+
+# this is so it won't try to interactively install any configs
+pre-build:
+	touch ${WRKSRC}/.quiet_install
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -57,8 +80,11 @@ post-install:
 		${EGDIR}/pam_env.conf
 	${INSTALL_DATA} ${WRKSRC}/modules/pam_group/group.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/modules/pam_time/time.conf ${EGDIR}
+.if ${OPSYS} == "Linux"
+	${INSTALL_DATA} ${WRKSRC}/security/modules/pam_limits/limits.skel \
+		${EGDIR}/limits.conf
+.endif
 	${INSTALL_DATA_DIR} ${DOCDIR}
 
 .include "../../databases/db/buildlink2.mk"
-.include "../../security/libcrack/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
