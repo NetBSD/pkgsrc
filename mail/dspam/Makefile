@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/20 19:41:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/07 15:18:34 recht Exp $
 #
 
 DISTNAME=	dspam-3.0.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -61,7 +62,7 @@ DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
 PKG_GROUPS=             ${DSPAM_GROUP}
-PKG_USERS=              ${DSPAM_GROUP}:${DSPAM_USER}
+PKG_USERS=              ${DSPAM_USER}:${DSPAM_GROUP}
 
 # Default options
 CONFIGURE_ARGS+=	--enable-chi-square
