@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.474 2002/11/06 21:54:05 heinz Exp $
+$NetBSD: CHANGES,v 1.475 2002/11/06 22:02:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3546,3 +3546,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated fetchmailconf to 4.6.2 [frueauf 2002-11-06]
 	Updated png to 1.2.5 [fredb 2002-11-06]
 	Updated spamassassin to 2.43nb1 [heinz 2002-11-06]
+	libxslt: Downgraded to 1.0.21 [tron 2002-11-06]
