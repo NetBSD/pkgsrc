@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/17 08:18:37 wiz Exp $
 #
 
-DISTNAME=	arch-1.0pre16
-PKGNAME=	arch-1.0.0.16
+DISTNAME=	arch1.0pre25
+PKGNAME=	arch-1.0.0.25
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 CATEGORIES=	devel
-MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
-		ftp://regexps.com/pub/src/arch/old/
+MASTER_SITES=	http://regexps.srparish.net/src/arch/
 
 MAINTAINER=	schmonz@netbsd.org
-HOMEPAGE=	http://www.regexps.com/
+HOMEPAGE=	http://arch.fifthvision.net/bin/view/Arch/WebHome
 COMMENT=	revision control system ideal for widely distributed development
 
 USE_GMAKE=	# defined
@@ -31,13 +30,5 @@ post-install:
 	${CP} -R ${WRKDIR}/${DISTNAME}/docs/html/* ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HTMLDIR}
 	${CHMOD} -R ugo-w ${HTMLDIR}
-
-	# Install arch examples.
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${CP} -R ${WRKDIR}/${DISTNAME}/docs/examples/* ${EXAMPLESDIR}
-	${RM} -rf ${EXAMPLESDIR}/browser/.arch-ids
-	${RM} -rf ${EXAMPLESDIR}/notifier/.arch-ids
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
-	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
 .include "../../mk/bsd.pkg.mk"
