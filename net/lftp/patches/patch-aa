@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2004/04/10 23:51:36 salo Exp $
+$NetBSD: patch-aa,v 1.7 2004/05/27 14:37:16 salo Exp $
 
---- src/Makefile.in.orig	2004-04-06 10:28:39.000000000 +0200
-+++ src/Makefile.in	2004-04-11 01:28:03.000000000 +0200
-@@ -831,7 +831,7 @@
+--- src/Makefile.in.orig	2004-05-21 14:32:31.000000000 +0200
++++ src/Makefile.in	2004-05-27 15:08:32.000000000 +0200
+@@ -833,7 +833,7 @@
  check: check-am
  all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(SCRIPTS)
  installdirs:
--	$(mkdir_p) $(DESTDIR)$(pkgverlibdir) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
-+	$(mkdir_p) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
+-	for dir in "$(DESTDIR)$(pkgverlibdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
++	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
  install: install-am
- install-exec: install-exec-am
- install-data: install-data-am
