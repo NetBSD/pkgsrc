@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3214 2005/03/08 23:51:05 xtraeme Exp $
+$NetBSD: TODO,v 1.3215 2005/03/09 21:18:36 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -495,6 +495,7 @@ Suggested package updates
 	o gnet-2.0.7
 	o gnet1-1.1.9
 	o gnocatan-0.8.1.30
+	o gnome-2.10.0 [jmmv]
 	o gnome-applets-1.4.1
 	o gnome-pilot-2.0.12
 	o gnome-utils-1.4.1.3
