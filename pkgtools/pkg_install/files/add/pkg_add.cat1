@@ -285,7 +285,11 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      PKG_PREFIX set to the installation prefix (see the --pp option above).
      This allows a package author to write a script that reliably performs
      some action on the directory where the package is installed, even if the
-     user might change it with the --pp flag to ppkkgg__aadddd.
+     user might change it with the --pp flag to ppkkgg__aadddd.  The scripts are also
+     called with the PKG_METADATA_DIR environment variable set to the location
+     of the _+_* meta-data files, and with the PKG_REFCOUNT_DBDIR environment
+     variable set to the location of the package reference counts database
+     directory.
 
 EENNVVIIRROONNMMEENNTT
      LOCALBASE   This is the location of the _v_i_e_w_b_a_s_e directory in which all
@@ -303,6 +307,12 @@ EENNVVIIRROONNMMEENNTT
                  URL.  The current directory may be indicated implicitly by an
                  empty directory name, or explicitly by a single period.  FTP
                  URLs may not end with a slash.
+
+     PKG_REFCOUNT_DBDIR
+                 Location of the package reference counts database directory.
+                 The default location is the path to the package database
+                 directory with ``.refcount'' appended to the path, e.g.
+                 _/_v_a_r_/_d_b_/_p_k_g_._r_e_f_c_o_u_n_t.
 
      PKG_TMPDIR  Staging directory for installing packages, defaults to
                  /var/tmp.  Set to directory with lots of free disk if you run
@@ -359,4 +369,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 2.0                     December 10, 2004                    NetBSD 2.0
+NetBSD 2.0                     February 4, 2005                     NetBSD 2.0
