@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 22:37:44 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/15 20:13:52 jlam Exp $
 include/blib-1.0/blib/beffects.h
 include/blib-1.0/blib/blib-directfb.h
 include/blib-1.0/blib/blib-gtk.h
@@ -58,10 +58,8 @@ lib/blib-1.0/modules/libbtetris.la
 lib/blib-1.0/modules/libbtetris.so
 lib/blib-1.0/modules/libbtext.la
 lib/blib-1.0/modules/libbtext.so
-lib/libb-1.0.so
 lib/libb-1.0.so.2
 lib/libb-1.0.so.2.0
-lib/libb-gtk-1.0.so
 lib/libb-gtk-1.0.so.2
 lib/libb-gtk-1.0.so.2.0
 lib/libb-gtk.a
