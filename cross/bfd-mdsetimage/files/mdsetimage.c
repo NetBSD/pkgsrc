@@ -1,8 +1,9 @@
-/*	$NetBSD: mdsetimage.c,v 1.1.1.1 1999/12/20 05:58:34 sakamoto Exp $	*/
-/*	NetBSD: mdsetimage.c,v 1.7 1998/08/27 18:03:44 ross Exp 	*/
+/* $NetBSD: mdsetimage.c,v 1.2 2001/03/23 13:02:40 sakamoto Exp $ */
+/* from: NetBSD: mdsetimage.c,v 1.15 2001/03/21 23:46:48 cgd Exp $ */
 
 /*
- * Copyright (c) 1996 Christopher G. Demetriou.  All rights reserved.
+ * Copyright (c) 1996 Christopher G. Demetriou
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -14,11 +15,12 @@
  *    documentation and/or other materials provided with the distribution.
  * 3. All advertising materials mentioning features or use of this software
  *    must display the following acknowledgement:
- *      This product includes software developed by Christopher G. Demetriou
- *	for the NetBSD Project.
+ *          This product includes software developed for the
+ *          NetBSD Project.  See http://www.netbsd.org/ for
+ *          information about NetBSD.
  * 4. The name of the author may not be used to endorse or promote products
- *    derived from this software without specific prior written permission
- *
+ *    derived from this software without specific prior written permission.
+ * 
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
  * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -29,6 +31,8 @@
  * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 
+ * <<Id: LICENSE,v 1.2 2000/06/14 15:57:33 cgd Exp>>
  */
 
 #include <sys/cdefs.h>
@@ -39,7 +43,7 @@ __COPYRIGHT(
 #endif /* not lint */
 
 #ifndef lint
-__RCSID("$NetBSD: mdsetimage.c,v 1.1.1.1 1999/12/20 05:58:34 sakamoto Exp $");
+__RCSID("$NetBSD: mdsetimage.c,v 1.2 2001/03/23 13:02:40 sakamoto Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -72,6 +76,12 @@ static int	find_md_root __P((bfd *, struct symbols symbols[]));
 
 int	verbose;
 
+static const char *progname;
+#undef setprogname
+#define	setprogname(x)	(void)(progname = (x))
+#undef getprogname
+#define	getprogname()	(progname)
+
 int
 main(argc, argv)
 	int argc;
@@ -85,6 +95,8 @@ main(argc, argv)
 	char *mappedkfile;
 	char *bfdname = NULL;
 	bfd *abfd;
+
+	setprogname(argv[0]);
 
 	while ((ch = getopt(argc, argv, "b:v")) != -1)
 		switch (ch) {
@@ -126,7 +138,7 @@ main(argc, argv)
 
 	if (fstat(kfd, &ksb) == -1)
 		err(1, "fstat %s", kfile);
-	if (ksb.st_size > SIZE_T_MAX)
+	if (ksb.st_size != (size_t)ksb.st_size)
 		errx(1, "%s too big to map", kfile);
 
 	if ((mappedkfile = mmap(NULL, ksb.st_size, PROT_READ | PROT_WRITE,
@@ -136,18 +148,18 @@ main(argc, argv)
 		fprintf(stderr, "mapped %s\n", kfile);
 
 	md_root_offset = md_root_symbols[X_MD_ROOT_IMAGE].offset;
-	md_root_size =
-	 bfd_get_32(abfd, &mappedkfile[md_root_symbols[X_MD_ROOT_SIZE].offset]);
+	md_root_size = bfd_get_32(abfd,
+	    &mappedkfile[md_root_symbols[X_MD_ROOT_SIZE].offset]);
 
 	if ((fsfd = open(fsfile, O_RDONLY, 0)) == -1)
 		err(1, "open %s", fsfile);
 	if (fstat(fsfd, &fssb) == -1)
 		err(1, "fstat %s", fsfile);
-	if (fssb.st_size > SIZE_T_MAX)
+	if (fssb.st_size != (size_t)fssb.st_size)
 		errx(1, "fs image is too big");
 	if (fssb.st_size > md_root_size)
-		errx(1, "fs image (%qd bytes) too big for buffer (%ld bytes)",
-		     (long long)fssb.st_size, (unsigned long)md_root_size);
+		errx(1, "fs image (%lld bytes) too big for buffer (%lu bytes)",
+		    (long long)fssb.st_size, (unsigned long)md_root_size);
 
 	if (verbose)
 		fprintf(stderr, "copying image from %s into %s\n", fsfile,
@@ -178,11 +190,10 @@ static void
 usage()
 {
 	const char **list;
-	extern const char *__progname;
 
 	fprintf(stderr,
-		"usage: %s [-b bfdname] [-v] kernel_file fsimage_file\n",
-		__progname);
+	    "usage: %s [-b bfdname] [-v] kernel_file fsimage_file\n",
+	    getprogname());
 	fprintf(stderr, "supported targets:");
 	for (list = bfd_target_list(); *list != NULL; list++)
 		fprintf(stderr, " %s", *list);
