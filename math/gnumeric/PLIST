@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/11/14 08:26:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/11/14 13:12:22 damon Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -55,15 +55,10 @@ lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
-share/gnome/help/gnumeric/C/autocorrect.html
-share/gnome/help/gnumeric/C/file-format.html
-share/gnome/help/gnumeric/C/filter.html
-share/gnome/help/gnumeric/C/fourier-analysis-tool.html
-share/gnome/help/gnumeric/C/goal-seek.html
-share/gnome/help/gnumeric/C/histogram-tool.html
 share/gnome/help/gnumeric/C/analysis-tools.html
 share/gnome/help/gnumeric/C/anova.html
 share/gnome/help/gnumeric/C/authors.html
+share/gnome/help/gnumeric/C/autocorrect.html
 share/gnome/help/gnumeric/C/autofill.html
 share/gnome/help/gnumeric/C/autosave.html
 share/gnome/help/gnumeric/C/cell-elements.html
@@ -75,9 +70,12 @@ share/gnome/help/gnumeric/C/data-and-time-formatting.html
 share/gnome/help/gnumeric/C/descriptive-statistics-tool.html
 share/gnome/help/gnumeric/C/editing-selections.html
 share/gnome/help/gnumeric/C/editing.html
+share/gnome/help/gnumeric/C/file-format.html
 share/gnome/help/gnumeric/C/files.html
+share/gnome/help/gnumeric/C/filter.html
 share/gnome/help/gnumeric/C/formatting.html
 share/gnome/help/gnumeric/C/formulas.html
+share/gnome/help/gnumeric/C/fourier-analysis-tool.html
 share/gnome/help/gnumeric/C/ftest-two-sample-for-variances-tool.html
 share/gnome/help/gnumeric/C/function-reference.html
 share/gnome/help/gnumeric/C/gnumeric-abs.html
@@ -421,6 +419,8 @@ share/gnome/help/gnumeric/C/gnumeric-yield.html
 share/gnome/help/gnumeric/C/gnumeric-yielddisc.html
 share/gnome/help/gnumeric/C/gnumeric-yieldmat.html
 share/gnome/help/gnumeric/C/gnumeric-ztest.html
+share/gnome/help/gnumeric/C/goal-seek.html
+share/gnome/help/gnumeric/C/histogram-tool.html
 share/gnome/help/gnumeric/C/images/add-decimals.png
 share/gnome/help/gnumeric/C/images/advanced-filter-1.png
 share/gnome/help/gnumeric/C/images/advanced-filter-2.png
@@ -600,16 +600,10 @@ share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List/autoformat.List.ba
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List/autoformat.List.green.xml
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List/autoformat.List.lila.xml
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List/autoformat.List.simple.xml
-share/gnumeric/${PKGVERSION}-bonobo/glade/anova-one.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/anova-two.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/fourier-analysis.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/goalseek.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/histogram.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/moving-averages.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/random-generation.glade
-share/gnumeric/${PKGVERSION}-bonobo/glade/regression.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/advanced-filter.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/analysis-tools.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/anova-one.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/anova-two.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/autocorrect.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/autoformat.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/autosave-prompt.glade
@@ -628,15 +622,21 @@ share/gnumeric/${PKGVERSION}-bonobo/glade/dialog-stf.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/dialog-zoom.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/font-sel.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/formula-guru.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/fourier-analysis.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/function-select.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/goalseek.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/graph-guru.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/hf-config.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/histogram.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/insert-cells.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/mean-tests.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/moving-averages.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/names.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/plugin-manager.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/print.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/random-generation.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/rank.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/regression.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/row-height.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/sampling.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/search-replace.glade
@@ -753,10 +753,22 @@ share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
+@dirrm share/oaf
+@dirrm share/mime-info
+@dirrm share/mc/templates
+@dirrm share/locale/zh_TW/LC_MESSAGES
+@dirrm share/locale/es_SV/LC_MESSAGES
+@dirrm share/locale/es_PE/LC_MESSAGES
+@dirrm share/locale/es_PA/LC_MESSAGES
+@dirrm share/locale/es_MX/LC_MESSAGES
+@dirrm share/locale/es_HN/LC_MESSAGES
+@dirrm share/locale/es_GT/LC_MESSAGES
+@dirrm share/locale/es_DO/LC_MESSAGES
+@dirrm share/locale/en_CA/LC_MESSAGES
+@dirrm share/locale/en_AU/LC_MESSAGES
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/glade
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/General
@@ -764,12 +776,9 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Colourful
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Classical
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates
-@dirrm share/gnumeric/${PKGVERSION}-bonobo
-@dirrm share/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
-@dirrm share/gnome/help/gnumeric
+@dirrm share/gnome/apps/Applications
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sylk
@@ -784,7 +793,4 @@ share/pixmaps/gnumeric/top_border
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/dif
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/derivatives
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo
-@dirrm lib/gnumeric
 @unexec rmdir %D/share/mc/templates >/dev/null 2>&1 || true
