@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+$NetBSD: patch-ae,v 1.2 2001/04/23 20:37:32 tron Exp $
 
---- epgctl/epgmain.c.orig	Sun Feb 11 13:14:54 2001
-+++ epgctl/epgmain.c	Sun Feb 18 20:12:55 2001
+--- epgui/epgmain.c.orig	Sat Apr 21 21:44:48 2001
++++ epgui/epgmain.c
 @@ -104,7 +104,12 @@
-        const char *dbdir  = ".";
+ static const char *dbdir  = ".";
  #else
  static const char *rcfile = "~/.nxtvepgrc";
 +#ifdef __NetBSD__
 +#include <paths.h>
-+       const char *dbdir  = _PATH_TMP "nxtvdb";
++static const char *dbdir  = _PATH_TMP "nxtvdb";
 +#else
-        const char *dbdir  = "/usr/tmp/nxtvdb";
+ static const char *dbdir  = "/usr/tmp/nxtvdb";
 +#endif
  #endif
  static int  videoCardIndex = -1;
