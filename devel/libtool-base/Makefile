@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/03/03 20:33:44 garbled Exp $
+# $NetBSD: Makefile,v 1.57 2005/03/03 22:30:15 garbled Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -23,6 +23,7 @@ TEST_TARGET=	check
 
 .if ${OPSYS} == "AIX"
 LDFLAGS+=       -Wl,-brtl
+CONFIGURE_ARGS+=    --disable-libtool-lock
 .endif
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
