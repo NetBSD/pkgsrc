@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2002/03/31 17:02:03 cjep Exp $
+$NetBSD: distinfo,v 1.3 2003/07/10 12:43:09 jtb Exp $
 
-SHA1 (tasp-vsipl/tvcp012401.tar.gz) = 5df92121bdbbb9af19d3ea724cec62e38976a04a
-Size (tasp-vsipl/tvcp012401.tar.gz) = 1497005 bytes
-SHA1 (patch-aa) = fdc514d8531956241ca2121a8c091b74efe11a05
-SHA1 (patch-ab) = 13d2cac3903d1013459c293d01b9bfe945002969
-SHA1 (patch-ac) = b02d41f79e2d9782e68fca00e84115c7938dd459
+SHA1 (tasp-vsipl/tvcpp0p8.tar.gz) = e1f0dc818458393807a7a5c6e3357305720039a8
+Size (tasp-vsipl/tvcpp0p8.tar.gz) = 1461591 bytes
+SHA1 (patch-aa) = 225d275620785928564b9db187fead28d535e839
+SHA1 (patch-ab) = b3f18f45ad52657ce4f8143f210aa9f3c9d3d7de
+SHA1 (patch-ac) = 8606c3c9a11877296ead19d49ac355f475e6fcb6
+SHA1 (patch-ad) = 1ea7f8f3fdb109d875e4d9d0e48e2c66d0b42c7f
+SHA1 (patch-ae) = 184601ba53dd39ab8b606217aeaac5a17a7ee465
