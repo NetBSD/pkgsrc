@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6626 2004/07/21 03:09:55 snj Exp $
+$NetBSD: CHANGES,v 1.6627 2004/07/21 03:57:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xchm to 0.9.3 [minskim 2004-07-21]
 	Updated clamav to 0.74 [xtraeme 2004-07-21]
 	Added steghide-0.5.1 [snj 2004-07-21]
+	Added clamsmtp-0.3 [xtraeme 2004-07-21]
