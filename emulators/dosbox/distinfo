@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 14:35:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2003/11/10 00:13:22 xtraeme Exp $
 
-SHA1 (dosbox-0.58.tar.gz) = 42174dee95fbdce7b0f9d74cf94faaf0fbd50440
-Size (dosbox-0.58.tar.gz) = 421487 bytes
+SHA1 (dosbox-0.60.tar.gz) = 4c95c5efa9e3a9ac1002c3af0a64e02d40cdd1fa
+Size (dosbox-0.60.tar.gz) = 540921 bytes
 SHA1 (patch-aa) = 474dc4e3c7f12b64279caa20ba97b51e19e9d2e5

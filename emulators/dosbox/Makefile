@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/07/26 21:41:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/11/10 00:13:22 xtraeme Exp $
 #
 
-DISTNAME=	dosbox-0.58
-PKGREVISION=	1
+DISTNAME=	dosbox-0.60
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
@@ -14,7 +13,8 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
 post-patch:
-	${SED} -e s,/usr/share,${PREFIX}, ${WRKSRC}/docs/dosbox.1 > ${WRKSRC}/docs/dosbox.1.sed
+	${SED} -e s,/usr/share,${PREFIX}/share, \
+		${WRKSRC}/docs/dosbox.1 > ${WRKSRC}/docs/dosbox.1.sed
 	${MV} ${WRKSRC}/docs/dosbox.1.sed ${WRKSRC}/docs/dosbox.1
 
 post-install:
