@@ -1,13 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2001/07/15 14:03:13 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2002/01/19 15:31:44 jlam Exp $
 
 --- GrabWeather.orig	Fri Apr 16 17:41:53 1999
 +++ GrabWeather
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!/usr/pkg/bin/perl
- 
- #
- #    Grabs the latest local weather conditions from the National Weather Service (NWS).
 @@ -38,19 +38,17 @@
  
      $StationID    = $ARGV[0];
