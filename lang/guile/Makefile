@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/11 07:16:47 xtraeme Exp $
 
 DISTNAME=		guile-1.6.4
 CATEGORIES=		lang
@@ -10,7 +10,7 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
 CONFLICTS=		guile14<1.4.1nb1
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 
@@ -27,7 +27,7 @@ INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
 
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
