@@ -1,10 +1,19 @@
-$NetBSD: patch-ak,v 1.1 2000/10/31 17:06:19 itojun Exp $
+$NetBSD: patch-ak,v 1.2 2002/08/19 19:20:33 seb Exp $
 
-use locally-built msgfmt.
+Use locally-built msgfmt. And fix locale directory.
 
---- po/Makefile.in.in-	Wed Nov  1 01:46:43 2000
-+++ po/Makefile.in.in	Wed Nov  1 01:47:00 2000
-@@ -30,9 +30,9 @@
+--- po/Makefile.in.in.orig	Wed Apr 29 03:53:09 1998
++++ po/Makefile.in.in
+@@ -20,7 +20,7 @@ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+ localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
++gnulocaledir = $(prefix)/$(PKGLOCALEDIR)/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po
+ 
+@@ -30,9 +30,9 @@ MKINSTALLDIRS = $(top_srcdir)/@MKINSTALL
  
  CC = @CC@
  GENCAT = @GENCAT@
