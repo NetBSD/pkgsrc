@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/01/21 14:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/01/21 21:13:22 wiz Exp $
 
 DISTNAME=       unarj-2.65
 PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	#
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.arjsoftware.com/
