@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/09/03 17:04:42 kim Exp $
+
+--- lib/arch/unix/Makefile.in.orig	Fri Jun  5 05:42:20 1998
++++ lib/arch/unix/Makefile.in	Fri Sep  3 12:36:20 1999
+@@ -20,7 +20,7 @@
+ 
+ CC = @CC@
+ 
+-LIBTOOL = $(top_builddir)/libtool
++LIBTOOL = @LIBTOOL@
+ MKINSTALLDIRS = $(srcdir)/../mkinstalldirs
+ 
+ version_info = @version_info@
