@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/08 20:15:46 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/04/09 09:57:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -8,6 +8,7 @@
 #    SUBDIR += donkey
 #    SUBDIR += fwtk
 #    SUBDIR += john
+    SUBDIR += gnupg
     SUBDIR += libident
     SUBDIR += nessus
     SUBDIR += nfsbug
