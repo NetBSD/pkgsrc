@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.6 2000/06/19 00:28:37 kim Exp $
+$NetBSD: patch-ai,v 1.7 2000/06/26 20:09:35 rh Exp $
 
---- src/ftpd.c.orig	Thu Oct 14 10:41:47 1999
-+++ src/ftpd.c	Sun Jun 18 20:24:20 2000
+--- src/ftpd.c.orig	Mon Jun 26 21:52:06 2000
++++ src/ftpd.c	Mon Jun 26 21:52:06 2000
 @@ -75,6 +75,7 @@
  #include <grp.h>
  #endif
