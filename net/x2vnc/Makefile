@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/24 09:42:52 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/04 14:57:49 hubertf Exp $
 #
 
-DISTNAME=       	x2vnc-1.2
+DISTNAME=       	x2vnc-1.4
 CATEGORIES=		net x11
 MASTER_SITES=   	http://fredrik.hubbe.net/
 
