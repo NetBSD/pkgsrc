@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.510 2002/11/13 14:26:38 wiz Exp $
+$NetBSD: CHANGES,v 1.511 2002/11/13 14:31:15 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3591,3 +3591,4 @@ Changes to the packages collection and infrastructure in 2002:
 		[itojun 2002-11-13]
 	Updated ImageMagick to 5.5.1.6 [wiz 2002-11-13]
 	Updated p5-PerlMagick to 5.5.1.6 [wiz 2002-11-13]
+	Updated jasper to 1.600.0nb1 [dillo 2002-11-13]
