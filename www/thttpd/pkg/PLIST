@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/07/27 12:47:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/08/01 18:47:50 tron Exp $
 etc/rc.d/thttpd.sh
 libexec/cgi-bin/redirect
 libexec/cgi-bin/phf
@@ -17,4 +17,5 @@ share/examples/thttpd.conf
 share/thttpd/index.html
 share/thttpd/sitedrivenby.gif
 @dirrm share/thttpd
-@dirrm libexec/cgi-bin
+@unexec rmdir %D/libexec/cgi-bin 2>/dev/null || true
+
