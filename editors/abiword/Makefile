@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/09/21 11:18:57 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2003/01/10 00:51:24 mycroft Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -7,7 +7,7 @@
 
 DISTNAME=	abiword-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
 
@@ -18,7 +18,7 @@ COMMENT=	Open Source cross-platform word processor
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
 DIST_SUBDIR=	abisuite
-ABIWORD_VERS=	1.0.2
+ABIWORD_VERS=	1.0.3
 
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined
