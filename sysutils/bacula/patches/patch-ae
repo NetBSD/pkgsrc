@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/06 16:17:38 mjl Exp $
+
+--- src/filed/Makefile.in.orig	2004-03-11 00:38:48.000000000 +0300
++++ src/filed/Makefile.in
+@@ -111,14 +111,14 @@ devclean: realclean
+ install: all
+ 	$(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd 
+ 	@srcconf=bacula-fd.conf; \
+-	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
++	if  test -f ${DESTDIR}${prefix}/share/examples/bacula/$$srcconf; then \
+ 	   destconf=$$srcconf.new; \
+ 	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
+ 	else \
+ 	   destconf=$$srcconf; \
+ 	fi; \
+-	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
+-	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${prefix}/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${prefix}/share/examples/bacula/$$destconf
+ 	@if test -f static-bacula-fd; then \
+ 	   $(INSTALL_PROGRAM) static-bacula-fd $(DESTDIR)$(sbindir)/static-bacula-fd; \
+ 	fi
