@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2000/11/09 03:34:14 hubertf Exp $
+$NetBSD: patch-aa,v 1.11 2001/12/15 08:31:08 martti Exp $
 
---- pico/makefile.neb.orig	Mon Jun 29 18:23:50 1998
-+++ pico/makefile.neb	Sun Sep 27 12:30:46 1998
-@@ -30,18 +30,13 @@
+--- pico/makefile.neb.orig	Tue Oct 23 22:19:07 2001
++++ pico/makefile.neb	Fri Dec 14 19:07:19 2001
+@@ -30,18 +30,14 @@
  RM=          rm -f
  LN=          ln -s
  MAKE=        make
@@ -10,20 +10,20 @@ $NetBSD: patch-aa,v 1.10 2000/11/09 03:34:14 hubertf Exp $
 +OPTIMIZE=    -O2
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       -g # -g -DDEBUG
++DEBUG=       -g
  
  STDCFLAGS=	-Dneb -DJOB_CONTROL -DPOSIX -DMOUSE
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
  
--# switches for library building
+ # switches for library building
 -LIBCMD=		ar
 -LIBARGS=	ru
 -RANLIB=		ranlib
 -
- LIBS=		$(EXTRALIBES) -ltermcap
+ LIBS=		$(EXTRALDFLAGS) -ltermcap
  
  OFILES=		attach.o basic.o bind.o browse.o buffer.o \
-@@ -55,17 +50,17 @@
+@@ -55,17 +51,17 @@
  # dependencies for the Unix versions of pico and libpico.a
  #
  all:		pico pilot
