@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.19 2005/03/29 06:36:19 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.20 2005/03/30 04:20:44 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -39,3 +39,5 @@ Pullup ticket 396 - requested by Manuel Bouyer
 build fix for xentools20
 Pullup ticket 398 - requested by Min Sik KIm
 portability fix for ish
+Pullup ticket 400 - requested by Thomas Klausner
+security fix for putty
