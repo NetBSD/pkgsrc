@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2001/03/04 16:10:43 tron Exp $
+# $NetBSD: Makefile,v 1.177 2001/03/04 17:55:45 tron Exp $
 #
 
 COMMENT=	Development utilities
@@ -22,6 +22,7 @@ SUBDIR+=	cervisia
 SUBDIR+=	cfitsio
 SUBDIR+=	chkpt
 SUBDIR+=	cmdline
+SUBDIR+=	c-cpp-reference
 SUBDIR+=	cscope
 SUBDIR+=	cvs
 SUBDIR+=	cvs2cl
