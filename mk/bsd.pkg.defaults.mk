@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.85 2002/08/31 19:51:17 fredb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.86 2002/09/01 04:59:05 schmonz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1085,6 +1085,26 @@ OPENSSH_GID?=		16
 # The GID of the OPENSSH_USER for OpenSSH with privilege separation.
 # Possible: any gid
 # Default: sshd
+
+P4USER?=	perforce
+# The unprivileged user for the Perforce server.
+# Possible: any user name
+# Default: perforce
+
+P4GROUP?=	p4admin
+# The group of the P4USER for the Perforce server.
+# Possible: any group name
+# Default: p4admin
+
+P4ROOT?=	/var/perforce
+# The directory where the Perforce server will store its depot.
+# Possible: any directory
+# Default: /var/perforce
+
+P4PORT?=	1666
+# The TCP port on which the Perforce server will listen.
+# Possible: any port
+# Default: 1666
 
 PALMOS_DEFAULT_SDK?=	3.5
 # Version of PalmOS SDK to use as default.
