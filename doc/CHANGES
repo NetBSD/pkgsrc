@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4007 2003/12/07 04:13:55 epg Exp $
+$NetBSD: CHANGES,v 1.4008 2003/12/07 13:29:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-bsddb3 to 4.1.1nb3 [epg 2003-12-07]
 	Updated p5-SVN-Web to 0.35 [epg 2003-12-07]
 	Added rapidsvn-0.4.0 [epg 2003-12-07]
+	Updated curl to 7.10.8 [wiz 2003-12-07]
