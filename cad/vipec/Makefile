@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/02/06 00:41:12 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2003/02/06 02:39:16 dmcmahill Exp $
 #
 
 DISTNAME=	ViPEC-3.1.3
@@ -16,6 +16,12 @@ USE_X11=		yes
 USE_GMAKE=		yes
 
 CONFLICTS+=		vipec-[0-9]*
+
+ALL_TARGET=		ALL
+
+do-configure:
+	cd ${WRKSRC}/src && tmake vipec "CONFIG+=release" -o Makefile
+	#cd ${WRKSRC}/src && tmake vipec "CONFIG+=debug" -o Makefile
 
 post-patch:
 	${SED} 's;@prefix@;${PREFIX};g' < ${FILESDIR}/vipec.sh.in > ${WRKDIR}/vipec.sh
