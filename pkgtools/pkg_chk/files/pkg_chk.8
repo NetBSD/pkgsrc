@@ -1,16 +1,16 @@
-.\"	$NetBSD: pkg_chk.8,v 1.7 2005/02/05 00:26:41 simonb Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.8 2005/02/28 00:43:48 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd November 30, 2004
+.Dd February 28, 2005
 .Dt PKG_CHK 1
 .Sh NAME
 .Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl aBbcfhiklnrsuv
+.Op Fl aBbcfhiklNnrsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
@@ -95,6 +95,10 @@ Will abort if a binary package is missing.
 This can be used (in conjunction with -U and -D) to determine what
 packages would need to be copied to a remote machine to ensure it
 was completely up to date.
+.It Fl N
+For each installed package, look if there is a newer version
+noted in PKGSRCDIR/doc/TODO.
+Good for finding packages to update.
 .It Fl n
 Display actions that would be taken, but do not change anything.
 .It Fl r
