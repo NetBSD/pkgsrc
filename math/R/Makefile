@@ -1,19 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2002/03/13 17:37:23 fredb Exp $
+# $NetBSD: Makefile,v 1.32 2002/04/23 01:14:49 markd Exp $
 
 DISTNAME=		R-1.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
-MASTER_SITES=		http://lib.stat.cmu.edu/R/CRAN/src/base/ \
-			http://cran.r-project.org/src/base/ \
-			ftp://cran.r-project.org/pub/R/src/base/ \
-			http://cran.stat.wisc.edu/src/base/ \
-			http://SunSITE.auc.dk/R/src/base/ \
-			ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN/src/base/ \
-			ftp://dola.snu.ac.kr/pub/R/CRAN/src/base/ \
-			http://stat.ethz.ch/CRAN/src/base/ \
-			http://www.stats.bris.ac.uk/R/src/base/ \
-			http://cran.at.r-project.org/src/base/ \
-			ftp://cran.at.r-project.org/pub/R/src/base/
+MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@netbsd.org
@@ -91,12 +81,18 @@ post-install:
 	  for dir in ${INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} \( -type f -or -type l \) -print; \
 	  done;								\
-	) | ${SORT} -u >> ${PLIST_SRC}
+	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
+	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
+	${SORT} -u >> ${PLIST_SRC}
 	( cd ${PREFIX};							\
 	  for dir in ${INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} -type d -print;		\
 	  done;								\
 	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
+	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
+	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
+	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
+	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
