@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1 1999/09/24 16:42:06 jlam Exp $
+$NetBSD: patch-ae,v 1.2 1999/11/15 17:59:48 rh Exp $
 
---- misc.c.orig	1999/06/02 19:23:56	1.1.1.1
-+++ misc.c	1999/06/03 12:44:50	1.2
-@@ -433,6 +433,9 @@
- #   if defined(LINUX) && defined(SPARC)
- 	GC_init_linuxsparc();
+--- misc.c.orig	Mon Nov 15 18:56:45 1999
++++ misc.c	Mon Nov 15 18:56:45 1999
+@@ -436,6 +436,9 @@
+ #   if defined(LINUX) && (defined(POWERPC) || defined(ALPHA) || defined(SPARC))
+ 	GC_init_linux_data_start();
  #   endif
 +#   if defined(NETBSD) && defined(__ELF__)
 +	GC_init_netbsd_elf();
