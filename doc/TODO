@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2251 2004/10/25 08:06:04 xtraeme Exp $
+$NetBSD: TODO,v 1.2252 2004/10/25 08:35:09 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -312,7 +312,6 @@ Suggested package updates
 	o libsigc++-2.0.3
 	o libtiff-3.7.0
 	o libxklavier-1.10 [breaks gnome-2.8]
-	o libxslt-1.1.11
 	o licq-1.2.7
 	o liferea-0.6.0
 	o lilypond-2.2
