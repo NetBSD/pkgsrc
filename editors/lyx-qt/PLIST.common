@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2003/03/22 17:13:46 jmmv Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/05/09 08:02:30 martti Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
@@ -17,6 +17,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lyx.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/lyx.mo
