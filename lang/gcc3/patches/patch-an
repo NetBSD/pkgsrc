@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2003/12/08 18:42:23 drochner Exp $
+$NetBSD: patch-an,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/ada/i-cstrea.ads.orig	2002-10-23 01:33:26.000000000 -0600
 +++ gcc/ada/i-cstrea.ads
