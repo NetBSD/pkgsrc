@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.2 1997/11/11 13:49:23 hubertf Exp $
+# New ports collection makefile for:    asclock
+# Version required:     10
+# Date created:         1997/11/11
+# Whom:                 Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>
+#
+# $NetBSD: Makefile,v 1.3 1998/01/24 23:59:08 hubertf Exp $
+#
 
-DISTNAME=	asclock
-PKGNAME=	asclock-10
-CATEGORIES=	x11
+DISTNAME=		asclock
+PKGNAME=		asclock-10
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_SUNSITE}
+MASTER_SITE_SUBDIR=	X11/clocks
+EXTRACT_SUFX=		.tgz
 
-MASTER_SITES=	ftp://sunsite.unc.edu/pub/Linux/X11/clocks/
-EXTRACT_SUFX=	.tgz
+MAINTAINER=		hubertf@netbsd.org
 
-LIB_DEPENDS=	Xpm\\.4:${PORTSDIR}/graphics/xpm
-
-MAINTAINER=	hubertf@netbsd.org
+LIB_DEPENDS=		Xpm\\.4:${PORTSDIR}/graphics/xpm
 
 # Choose language from:
 # 1) english [DEFAULT]
@@ -24,17 +30,17 @@ MAINTAINER=	hubertf@netbsd.org
 # 0) breton
 # a) french
 # b) czech
-LANG=1
+LANG?=1
 
 # Choose paneltype from:
 # 1) 8bit AfterStep-colors (47 colors) [DEFAULT]
 # 2) 8bit NeXTStep -colors (76 colors)
 # 3) 2bit greyscale        ( 4 colors)
-PANEL=1
+PANEL?=1
 
 USE_X11=	yes
 INSTALL_TARGET=	install install.man
 do-configure:
-		cd ${WRKSRC} ; ( echo ${LANG} ; echo ${PANEL} ) | ./configure
+		cd ${WRKSRC} ; ( ${ECHO} ${LANG} ; ${ECHO} ${PANEL} ) | ./configure
 
 .include <bsd.port.mk>
