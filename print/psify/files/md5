@@ -1,0 +1,6 @@
+$NetBSD: md5,v 1.1.1.1 1999/11/05 00:10:13 kim Exp $
+
+MD5 (psify/Makefile) = afaec5cd8b1be37f3ff0dcd214d9b277
+MD5 (psify/psify.c) = c931836a5d60436acc3dbe5bd00c0394
+MD5 (psify/psify.lex) = db28255eb30038d3052dd7b85078e1e6
+MD5 (psify/psify.man) = b3f035f0a27ab7183f00426f44b40cd1
