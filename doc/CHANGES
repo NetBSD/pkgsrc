@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.616 2002/11/27 10:18:31 wiz Exp $
+$NetBSD: CHANGES,v 1.617 2002/11/27 10:46:08 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added rmail-mime-1.13.0 [jschauma 2002-11-26]
 	Updated bmake to 3.1.14 [sjg 2002-11-26]
 	Updated pth to 1.4.1nb6 [skrll 2002-11-26]
+	Updated vile to 9.3 [agc 2002-11-27]
