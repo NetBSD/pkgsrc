@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/09/11 15:34:03 taca Exp $
+$NetBSD: distinfo,v 1.3 2004/11/27 15:45:57 taca Exp $
 
-SHA1 (ruby/mysql-ruby-2.4.5.tar.gz) = 30a4c4cd33531998cccfb26e336b15efdd7d87eb
-Size (ruby/mysql-ruby-2.4.5.tar.gz) = 16420 bytes
+SHA1 (ruby/mysql-ruby-2.5.1.tar.gz) = c65908c1c9d8c71f6592bfe12795b5006672b072
+Size (ruby/mysql-ruby-2.5.1.tar.gz) = 18843 bytes
 SHA1 (patch-aa) = 7134c3b1da98d89687ff4ef76d7c80cfe7ed9e4a
