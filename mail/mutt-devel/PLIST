@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/01 16:10:41 tron Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -19,7 +19,6 @@ share/doc/mutt/PGP-Notes.txt
 share/doc/mutt/README
 share/doc/mutt/README.SECURITY
 share/doc/mutt/README.SSL
-share/doc/mutt/README.UPGRADE
 share/doc/mutt/TODO
 share/doc/mutt/applying-patches.txt
 share/doc/mutt/devel-notes.txt
