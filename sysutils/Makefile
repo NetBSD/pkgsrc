@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2000/06/22 16:58:53 rh Exp $
+# $NetBSD: Makefile,v 1.66 2000/07/22 16:20:37 rh Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -14,7 +14,7 @@
     SUBDIR += bchunk
     SUBDIR += cdrdao
     SUBDIR += cdrecord
-#    SUBDIR += cdrecord-current		# disabled by default
+#    SUBDIR += cdrecord-current		# superseded by cdrecord
     SUBDIR += cfengine
     SUBDIR += cpogm
     SUBDIR += crashme
@@ -36,7 +36,7 @@
     SUBDIR += mc
     SUBDIR += memconf
     SUBDIR += mkhybrid
-#    SUBDIR += mkisofs
+#    SUBDIR += mkisofs			# currently part of cdrecord
     SUBDIR += mksunbootcd
     SUBDIR += mtools
     SUBDIR += osname
