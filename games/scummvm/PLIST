@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/12 00:38:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/10 12:48:46 wiz Exp $
 bin/scummvm
 man/man6/scummvm.6
+share/doc/scummvm/README
+@dirrm share/doc/scummvm
