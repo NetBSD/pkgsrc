@@ -1,45 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/29 01:18:33 abs Exp $
+$NetBSD: patch-aa,v 1.2 2002/07/18 00:10:07 abs Exp $
 
---- Makefile.orig	Thu Jun 21 21:58:46 2001
-+++ Makefile
-@@ -17,6 +17,10 @@
- # The next path is Linux specific
- CFLAGS += -I/usr/src/linux/include
+--- doc-bsd/Makefile.in.orig	Tue Jul  9 23:45:35 2002
++++ doc-bsd/Makefile.in
+@@ -87,13 +87,13 @@
  
-+PREFIX ?= /usr/local
-+INSTALL_PROGRAM ?= cp
-+INSTALL_DATA ?= cp
-+
- COMMON_SRC = pusb.c pool.c
- COMMON_OBJ = $(COMMON_SRC:%.c=%.o)
+ install : install-man
+ 	@test -d $(datadir)/doc/speedtouch || $(INSTALL) -c -d $(datadir)/doc/speedtouch
+-	@test -d $(prefix)/etc/rc.d || $(INSTALL) -c -d $(prefix)/etc/rc.d
+-	$(INSTALL) -m 0744 -o $(installuser) adsl.sh.sample $(prefix)/etc/rc.d
++	@test -d $(datadir)/examples/speedtouch || $(INSTALL) -c -d $(datadir)/examples/speedtouch
++	$(INSTALL) -m 0744 -o $(installuser) adsl.sh.sample $(datadir)/examples/speedtouch/adsl.sh
+ 	$(INSTALL) -m 0444 -o $(installuser) INSTALL $(datadir)/doc/speedtouch
+ 	$(INSTALL) -m 0444 -o $(installuser) INSTALL-de $(datadir)/doc/speedtouch
+ 	$(INSTALL) -m 0444 -o $(installuser) INSTALL-fr $(datadir)/doc/speedtouch
+ 	$(INSTALL) -m 0444 -o $(installuser) INSTALL-it $(datadir)/doc/speedtouch
+-	$(INSTALL) -m 0444 -o $(installuser) ppp.conf.sample $(datadir)/doc/speedtouch
++	$(INSTALL) -m 0444 -o $(installuser) ppp.conf.sample $(datadir)/examples/speedtouch/ppp.conf
+ 	$(INSTALL) -m 0444 -o $(installuser) FAQ $(datadir)/doc/speedtouch
+ 	$(INSTALL) -m 0444 -o $(installuser) FAQ-fr $(datadir)/doc/speedtouch
  
-@@ -44,12 +48,16 @@
- 
- clean:
- 	$(RM) $(PPPOA_BIN) $(MODEM_BIN) $(PPPOA_OBJ) $(MODEM_OBJ) \
--		$(COMMON_OBJ) $(DEP)
-+		$(COMMON_OBJ) $(DEP) ppp.conf.sample.out
- 
- install:
--	mkdir -p /usr/local/bin
--	cp $(MODEM_BIN) /usr/local/bin/$(MODEM_BIN)
--	cp $(PPPOA_BIN) /usr/local/bin/$(PPPOA_BIN)
-+	mkdir -p ${PREFIX}/sbin
-+	${INSTALL_PROGRAM} $(MODEM_BIN) ${PREFIX}/sbin/$(MODEM_BIN)
-+	${INSTALL_PROGRAM} $(PPPOA_BIN) ${PREFIX}/sbin/$(PPPOA_BIN)
-+	mkdir -p ${PREFIX}/share/examples/speedtouch
-+	sed "s:/usr/local:${PREFIX}:g" ppp.conf.sample > ppp.conf.sample.out
-+	${INSTALL_DATA} ppp.conf.sample.out ${PREFIX}/share/examples/speedtouch/ppp.conf
-+	${INSTALL_DATA} INSTALL-BSD ${PREFIX}/share/doc/speedtouch.txt
- #	mkdir -p /etc/ppp/peers
- #	cp adsl /etc/ppp/peers/adsl
- #	mkdir -p /etc/rc.d/init.d
-@@ -57,7 +65,7 @@
- #	( cd /etc/rc.d/init.d ; chkconfig adsl.sh on)
- 
- uninstall:
--	$(RM) /usr/local/bin/$(MODEM_BIN) /usr/local/bin/$(PPPOA_BIN)
-+	$(RM) ${PREFIX}/sbin/$(MODEM_BIN) ${PREFIX}/sbin/$(PPPOA_BIN)
- 
- # The target I used to make the speedtouch-DDMMYYYY.tar.gz
- targz:
