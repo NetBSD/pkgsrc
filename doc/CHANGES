@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5906 2004/05/11 13:36:10 wiz Exp $
+$NetBSD: CHANGES,v 1.5907 2004/05/11 17:46:47 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2474,3 +2474,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xscreensaver to 4.15 [wiz 2004-05-11]
 	Updated xscreensaver-demo to 4.15 [wiz 2004-05-11]
 	Updated xscreensaver-gnome to 4.15 [wiz 2004-05-11]
+	Updated mono to 0.91 [recht 2004-05-11]
+	Updated glitz to 0.1.2 [recht 2004-05-11]
+	Updated cairo to 0.1.23 [recht 2004-05-11]
+	Updated libgdiplus to 0.5 [recht 2004-05-11]
+	Updated winelib to 0.2 [recht 2004-05-11]
