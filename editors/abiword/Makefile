@@ -1,60 +1,71 @@
-# $NetBSD: Makefile,v 1.59 2003/11/04 23:00:00 reed Exp $
+# $NetBSD: Makefile,v 1.60 2003/12/26 18:26:59 wiz Exp $
 #
-# According to AbiSource's explanation of their trademark rights,
-# compilations/distributions of AbiWord not provided by AbiSource must
-# be named either "AbiWord Personal" or some name completely unlike
-# AbiSource's registered trademarks.
 
-DISTNAME=	abiword-${ABIWORD_VERS}
-PKGNAME=	abiword-personal-${ABIWORD_VERS}
-PKGREVISION=	3
-WRKSRC=		${WRKDIR}/${DISTNAME}/abi
-CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
+DISTNAME=		abiword-${DIST_VER}
+WRKSRC=			${WRKDIR}/${DISTNAME}/abi
+CATEGORIES=		editors
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 
-MAINTAINER=	dawszy@arhea.net
-HOMEPAGE=	http://www.abisource.com/
-COMMENT=	Open Source cross-platform word processor
+MAINTAINER=		xtraeme@NetBSD.org
+HOMEPAGE=		http://www.abisource.com/
+COMMENT=		Open Source cross-platform word processor
 
-DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
+BUILD_USES_MSGFMT=	yes
 
-DIST_SUBDIR=	abisuite
-ABIWORD_VERS=	1.0.5
+# GTK1 version and previous name of the GTK2 version
+CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
 
-USE_BUILDLINK2=	# defined
-USE_X11=	# defined
-USE_GMAKE=	# defined
-USE_GNU_ICONV=	# defined
-GNU_CONFIGURE=	# defined
-MAKEFILE=	GNUmakefile
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+USE_PERL5=		run
+USE_X11=		yes
 
-CONFIGURE_ARGS+=	--with-psiconv=${BUILDLINK_PREFIX.psiconv}
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
-CONFIGURE_ARGS+=	--without-libwmf
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+REPLACE_PERL=		user/wp/scripts/abw2html.pl
 
-OS_CFLAGS=	${CFLAGS}
+USE_GNU_ICONV=		yes # XXX
 
-.if exists(/usr/include/inttypes.h)
-OS_CFLAGS+=	-DHAVE_INTTYPE_H=1
+MAKEFILE=		GNUmakefile
+
+DIST_VER=		2.0.2
+
+CONFIGURE_ARGS+=	--enable-threads
+CONFIGURE_ARGS+=	--with-sys-wv
+CONFIGURE_ARGS+=	--with-libxml2
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-popt=${BUILDLINK_PREFIX.popt}
+CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
+
+PATCHDIR=		${.CURDIR}/../../editors/abiword2/patches
+PLIST_SRC=		${.CURDIR}/../../editors/abiword2/PLIST
+DESCR_SRC=		${.CURDIR}/../../editors/abiword2/DESCR
+DISTINFO_FILE=		${.CURDIR}/../../editors/abiword2/distinfo
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=			ABIWORD_USES_GUCHARMAP
+
+ABIWORD_USES_GUCHARMAP?=	NO
+
+.if !empty(ABIWORD_USES_GUCHARMAP:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=		--enable-gucharmap
+.include "../../fonts/gucharmap/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=		--disable-gucharmap
 .endif
 
-MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
-
-MAKE_FLAGS+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
-MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
-
+.include "../../converters/fribidi/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
-
-.if defined(ICONV_IS_GNU)
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-.endif
-
-.include "../../converters/psiconv/buildlink2.mk"
+.include "../../converters/wv/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../textproc/enchant/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/libglade2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
