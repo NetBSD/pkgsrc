@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/01/11 08:46:41 salo Exp $
+$NetBSD: patch-aa,v 1.7 2003/10/14 23:46:46 hubertf Exp $
 
---- Makefile.in.orig	Sun Oct 27 14:30:02 2002
-+++ Makefile.in	Sat Jan 11 09:37:05 2003
-@@ -53,10 +53,9 @@
+--- Makefile.in.orig	Sat Sep  6 15:15:17 2003
++++ Makefile.in
+@@ -55,11 +55,10 @@ install:
  		make installonly
  
  installonly:
@@ -10,9 +10,11 @@ $NetBSD: patch-aa,v 1.6 2003/01/11 08:46:41 salo Exp $
 -		install -m 755 ipv6calc/ipv6calc $(root)/bin/
 -		mkdir -p $(root)/usr/bin/
 -		install -m 755 ipv6logconv/ipv6logconv $(root)/usr/bin/
-+		${BSD_INSTALL_PROGRAM_DIR} $(root)/bin
-+		${BSD_INSTALL_PROGRAM} ipv6calc/ipv6calc $(root)/bin/
-+		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(root)/bin/
+-		install -m 755 ipv6logstats/ipv6logstats $(root)/usr/bin/
++		${BSD_INSTALL_PROGRAM_DIR} $(PREFIX)/bin
++		${BSD_INSTALL_PROGRAM} ipv6calc/ipv6calc $(PREFIX)/bin
++		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(PREFIX)/bin
++		${BSD_INSTALL_PROGRAM} ipv6logstats/ipv6logstats $(PREFIX)/bin
  
  getopt-make:
  		cd getopt/ && make
