@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.9 2002/12/11 12:21:25 tron Exp $
+$NetBSD: patch-aj,v 1.10 2003/04/10 14:56:21 fredb Exp $
 
 --- src/osdep/unix/Makefile.gss.orig	Wed Oct 23 17:23:36 2002
 +++ src/osdep/unix/Makefile.gss	Wed Oct 23 17:41:19 2002
@@ -26,4 +26,4 @@ $NetBSD: patch-aj,v 1.9 2002/12/11 12:21:25 tron Exp $
  
 +gss:
 +	echo "-I/usr/include/krb5" >> OSCFLAGS
-+	echo "-lgssapi -lkrb5 -lasn1 -lcrypto -lcom_err -lroken" >> LDFLAGS
++	echo "-lgssapi -lkrb5 -lasn1 -lcrypto ${GSS_EXTRA_LDFLAGS} -lcom_err -lroken" >> LDFLAGS
