@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/04/04 15:57:19 abs Exp $
+$NetBSD: distinfo,v 1.4 2002/06/19 10:43:57 abs Exp $
 
-SHA1 (htmlfix-1.02.tar.gz) = 1f0748c1b07fc7f57e5d92b3527fda06fca8545f
-Size (htmlfix-1.02.tar.gz) = 2127 bytes
+SHA1 (htmlfix-1.03.tar.gz) = d40bebc47d547a561f8e2e9849d087c099eb252b
+Size (htmlfix-1.03.tar.gz) = 2157 bytes
