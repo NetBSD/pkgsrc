@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2681 2003/07/04 19:22:09 chris Exp $
+$NetBSD: CHANGES,v 1.2682 2003/07/04 23:53:01 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2675,3 +2675,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcc3 to 3.3nb3 [seb 2003-07-04]
 	Updated nxtvepg to 2.5.2 [magick 2003-07-04]
 	Updated sylpheed to 0.9.3 [chris 2003-07-04]
+	Updated nmap to 3.30 [salo 2003-07-04]
+	Updated nmapfe to 0.9.5nb7 [salo 2003-07-04]
