@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/01 20:28:42 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
 #
 
@@ -12,6 +12,5 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	External MIME packer/unpacker
 
 WRKSRC=		${WRKDIR}/mpack
-MAKE_ENV=	PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
