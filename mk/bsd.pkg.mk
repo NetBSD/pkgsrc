@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1382 2004/02/09 01:52:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1383 2004/02/09 05:42:57 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4448,7 +4448,7 @@ print-pkg-size-this:
 		<${PLIST} 						\
 	| ${SORT} -u							\
 	| ${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/"			\
-	| ${XARGS} ${LS} -ld						\
+	| ${XARGS} -n 256 ${LS} -ld					\
 	| ${AWK} 'BEGIN { print("0 "); }				\
 		  { print($$5, " + "); }				\
 		  END { print("p"); }'					\
