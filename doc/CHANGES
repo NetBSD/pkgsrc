@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7703 2004/11/05 10:42:08 seb Exp $
+$NetBSD: CHANGES,v 1.7704 2004/11/05 11:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5080,3 +5080,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dopewars to 1.5.10 [adam 2004-11-05]
 	Updated net-snmp to 5.1.2nb2 [seb 2004-11-05]
 	Removed p5-SNMP [seb 2004-11-05]
+	Updated windowmaker to 0.91.0 [adam 2004-11-05]
