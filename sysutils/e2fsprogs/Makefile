@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/16 19:19:55 jschauma Exp $
 #
 
 DISTNAME=	e2fsprogs-1.19
@@ -13,6 +13,11 @@ HOMEPAGE=	http://web.mit.edu/tytso/www/linux/e2fsprogs.html
 COMMENT=	Second extended file system (ext2fs) management programs
 
 GNU_CONFIGURE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=--disable-fsck
+.endif
 
 .include "../../mk/bsd.pkg.mk"
