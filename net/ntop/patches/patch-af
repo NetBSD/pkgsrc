@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/08 21:30:25 kim Exp $
+
 --- pbuf.c.orig	Mon Aug  3 08:50:07 1998
 +++ pbuf.c	Sat Aug  8 17:22:28 1998
 @@ -100,7 +100,7 @@
