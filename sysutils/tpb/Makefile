@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/02/19 17:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/19 17:49:57 jmmv Exp $
 #
 
 DISTNAME=	tpb-0.6.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://savannah.nongnu.org/download/tpb/
 
@@ -13,11 +14,17 @@ ONLY_FOR_PLATFORM= *-*-i386
 
 USE_X11=	YES
 USE_BUILDLINK3=	YES
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/tpb
+CONF_FILES=	${EGDIR}/tpbrc ${PKG_SYSCONFDIR}/tpbrc
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tpb
-.for f in callback_example.sh nvram.txt tpbrc
+.for f in callback_example.sh nvram.txt
 	${INSTALL_DATA}	${WRKSRC}/doc/${f}	${PREFIX}/share/doc/tpb
 .endfor
 
