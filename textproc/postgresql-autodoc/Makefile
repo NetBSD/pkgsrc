@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:44 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/09 14:18:58 recht Exp $
 #
 
-VERS=		1.01
-DISTNAME=	postgresql_autodoc-${VERS}
-WRKSRC=         ${WRKDIR}
+DISTNAME=	postgresql_autodoc-1.12
+WRKSRC=		${WRKDIR}/postgresql_autodoc
 CATEGORIES=	textproc databases
-MASTER_SITES=	http://www.rbt.ca/autodoc/
+MASTER_SITES=	http://www.rbt.ca/autodoc/binaries/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.rbt.ca/autodoc/
 COMMENT=	Generate HTML, DOT, and XML description of database structure
 
-DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
+DEPENDS=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
+DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 
-#NO_CONFIGURE=	YES	# Configure needed for REPLACE_PERL
-NO_BUILD=	YES
-REPLACE_PERL=	postgresql_autodoc.pl
+USE_PERL5=	yes
+USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--datadir=${PREFIX}/share/${PKGBASE}
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/postgresql_autodoc.pl ${PREFIX}/bin/postgresql_autodoc
-
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
