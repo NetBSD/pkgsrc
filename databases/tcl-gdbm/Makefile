@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 16:55:02 minskim Exp $
 #
 
-DISTNAME=	tclgdbm-0.8
-PKGNAME=	tcl-gdbm-0.8
-PKGREVISION=	1
+DISTNAME=	tclgdbm-0.10
+PKGNAME=	tcl-gdbm-0.10
 CATEGORIES=	databases tcl
 MASTER_SITES=	http://www.graphviz.org/pub/tclgdbm/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Tcl interface to gdbm - GNU database manager
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl83
+DEPENDS+=	tcl>=8.4:../../lang/tcl
 DEPENDS+=	gdbm>=1.8.3:../../databases/gdbm
 
 GNU_CONFIGURE=		# defined
