@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/29 03:00:48 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/05 13:37:53 seb Exp $
 bin/zsh
 bin/${PKGNAME}
-@unexec ${INSTALL_INFO} --delete %D/info/zsh.info %D/info/dir
 info/zsh.info
-@exec ${INSTALL_INFO} %D/info/zsh.info %D/info/dir
 man/man1/zsh.1
 man/man1/zshall.1
 man/man1/zshbuiltins.1
