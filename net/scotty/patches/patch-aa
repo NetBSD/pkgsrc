@@ -1,29 +1,30 @@
-$NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
+$NetBSD: patch-aa,v 1.5 2000/07/05 12:34:00 he Exp $
 
---- Makefile.in.orig	Fri Jan 30 14:46:51 1998
-+++ Makefile.in	Fri Sep 18 18:15:41 1998
+--- ../unix/Makefile.in.dist	Fri Jan 30 15:46:51 1998
++++ ../unix/Makefile.in	Wed Jul  5 14:07:02 2000
 @@ -386,22 +386,28 @@
  
  TKI_OBJS =	$(TKI_GENERIC_OBJS)
  
+-all: @TARGET@
 +LIBTNM=		libtnm${TNM_VERSION}.a
 +LIBTKINED=	libtkined${TKI_VERSION}.a
 +LIBMAP=		libmap.a
-+
- all: @TARGET@
  
 -scotty: tnm$(SHLIB_SUFFIX) ntping straps scotty.o
 -	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
-+scotty: ${LIBTNM} ntping straps scotty.o
-+	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o ${LIBTNM:.a=.la} $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
++all: @TARGET@ scotty-wrap tkined-wrap
  
 -tnm$(SHLIB_SUFFIX): $(TNM_OBJS)
 -	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)
++scotty: ${LIBTNM} ntping straps scotty.o
++	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o ${LIBTNM:.a=.la} $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
+ 
+-tkined: tkined$(SHLIB_SUFFIX) tkined.in
 +#	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)
 +${LIBTNM}: $(TNM_OBJS)
 +	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${TNM_OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
- 
--tkined: tkined$(SHLIB_SUFFIX) tkined.in
++
 +tkined: ${LIBTKINED} tkined.in
  	@sed -e 's+%WISH%+$(TK_WISH)+' \
  	    -e 's+%TCL_VERSION%+$(TCL_VERSION)+' \
@@ -70,7 +71,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TKI_INSTALL_DIR) ; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -589,10 +594,13 @@
+@@ -589,10 +594,11 @@
  		fi; \
  	    done;
  	@echo "Installing tkined$(TNM_VERSION) and tkined$(TNM_VERSION)$(SHLIB_SUFFIX)"
@@ -78,17 +79,15 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
 -	@$(INSTALL_DATA) tkined$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
 -	@chmod 555 $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
 -	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
-+	@sed s,@PREFIX@,${prefix},g tkined.sh.in >tkined.sh
-+	@$(INSTALL) -m 555 ${UNIX_DIR}/tkined.sh ${BIN_INSTALL_DIR}/tkined
++	@$(INSTALL) -m 555 ${UNIX_DIR}/scotty-wrap ${BIN_INSTALL_DIR}/scotty
++	@$(INSTALL) -m 555 ${UNIX_DIR}/tkined-wrap ${BIN_INSTALL_DIR}/tkined
 +	@${LIBTOOL} --mode=install $(INSTALL) -m 555 $(UNIX_DIR)/tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
-+	@sed s,@PREFIX@,${prefix},g scotty.sh.in >scotty.sh
-+	@$(INSTALL) -m 555 ${UNIX_DIR}/scotty.sh ${BIN_INSTALL_DIR}/scotty
 +	@${LIBTOOL} --mode=install $(INSTALL_DATA) ${LIBTKINED:.a=.la} $(LIB_RUNTIME_DIR)
 +	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/libtkined$(TKI_VERSION).so.1.0"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
  	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
  
  tki-install-library:
-@@ -731,7 +739,7 @@
+@@ -731,7 +737,7 @@
  	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
  	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
  	@rm -f scotty ntping straps tkined
@@ -97,7 +96,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
  	@rm -f map.so tnmMap.o tnmMapUtil.o 
  	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
-@@ -786,8 +794,8 @@
+@@ -786,8 +792,8 @@
  		$(MAN8_INSTALL_DIR)/straps.8 \
  		$(BIN_INSTALL_DIR)/ntping \
  		$(MAN8_INSTALL_DIR)/ntping.8 \
@@ -108,7 +107,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  		$(TNM_INSTALL_DIR) $(TKI_INSTALL_DIR)
  
  bintar:
-@@ -802,77 +810,77 @@
+@@ -802,77 +808,83 @@
  #----------------------------------------------------------------
  
  ntping.o: $(TNM_NTPING_DIR)/ntping.c
@@ -130,6 +129,12 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  	@rm -f straps.bak || true
 -	$(LD) $(LD_FLAGS) -o straps straps.o $(LIBS)
 +	${LIBTOOL} --mode=link $(LD) $(LD_FLAGS) -o straps straps.o $(LIBS)
++
++scotty-wrap: scotty-wrap.c
++	${CC} -o scotty-wrap scotty-wrap.c
++
++tkined-wrap: tkined-wrap.c
++	${CC} -o tkined-wrap tkined-wrap.c
  
  scotty.o: $(UNIX_DIR)/scotty.c
 -	$(CC) -c $(TNM_CC_SWITCHES) -I. -I$(TNM_GENERIC_DIR) $(TCL_INCLUDES) $(UNIX_DIR)/scotty.c
@@ -209,7 +214,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  mount.x: $(TNM_GENERIC_DIR)/mount.x
  	cp $(TNM_GENERIC_DIR)/mount.x .
-@@ -881,10 +889,10 @@
+@@ -881,10 +893,10 @@
  	$(RPCGEN) mount.x
  
  mount_xdr.o: mount_xdr.c
@@ -222,7 +227,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  ether.x: $(TNM_GENERIC_DIR)/ether.x
  	cp $(TNM_GENERIC_DIR)/ether.x .
-@@ -893,10 +901,10 @@
+@@ -893,10 +905,10 @@
  	$(RPCGEN) ether.x
  
  ether_xdr.o: ether_xdr.c
@@ -235,7 +240,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  rstat.x: $(TNM_GENERIC_DIR)/rstat.x
  	cp $(TNM_GENERIC_DIR)/rstat.x .
-@@ -905,10 +913,10 @@
+@@ -905,10 +917,10 @@
  	$(RPCGEN) rstat.x
  
  rstat_xdr.o: rstat_xdr.c
@@ -248,7 +253,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  pcnfsd.x: $(TNM_GENERIC_DIR)/pcnfsd.x
  	cp $(TNM_GENERIC_DIR)/pcnfsd.x .
-@@ -917,61 +925,61 @@
+@@ -917,61 +929,61 @@
  	$(RPCGEN) pcnfsd.x
  
  pcnfsd_xdr.o: pcnfsd_xdr.c
@@ -329,7 +334,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  tnmGdmoScan.c: $(TNM_GDMO_DIR)/tnmGdmo.h $(TNM_GDMO_DIR)/tnmGdmoScan.l tnmGdmoParser.h 
  	$(LEX) $(TNM_GDMO_DIR)/tnmGdmoScan.l
-@@ -983,78 +991,78 @@
+@@ -983,78 +995,78 @@
  	mv -f y.tab.h tnmGdmoParser.h
  
  msqltcl.o: $(TNM_MSQL_DIR)/msqltcl.c
@@ -430,7 +435,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/18 17:45:09 agc Exp $
  
  tnmMibScan.c: $(TNM_SNMP_DIR)/tnmMib.h $(NEW_DIR)/tnmMibScan.l tnmMibYacc.h 
  	$(LEX) -PTnmMib $(NEW_DIR)/tnmMibScan.l
-@@ -1066,24 +1074,28 @@
+@@ -1066,24 +1078,28 @@
  	mv -f y.tab.h tnmMibYacc.h
  
  mib: tnmMibScan.o tnmMibYacc.o
