@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2000/10/15 07:39:45 wulf Exp $
 
---- configure.in.orig	Tue Jun  6 06:36:10 2000
-+++ configure.in	Fri Jun 23 03:53:52 2000
-@@ -810,6 +810,51 @@
-             COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
-         fi
+--- configure.in.orig	Wed Sep 27 15:45:33 2000
++++ configure.in	Mon Oct  2 13:23:58 2000
+@@ -939,6 +939,51 @@
+         # NetBSD does not define "unix"
+         CFLAGS="$CFLAGS -Dunix"
          ;;
 +    *-*-netbsd*)
 +        ARCH=netbsd
@@ -54,7 +54,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
      *-*-openbsd*)
          ARCH=openbsd
          CheckESD
-@@ -1147,6 +1192,7 @@
+@@ -1325,6 +1370,7 @@
  AM_CONDITIONAL(TARGET_SOLARIS, test $ARCH = solaris)
  AM_CONDITIONAL(TARGET_IRIX, test $ARCH = irix)
  AM_CONDITIONAL(TARGET_FREEBSD, test $ARCH = freebsd)
@@ -62,7 +62,18 @@ $NetBSD: patch-aj,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
  AM_CONDITIONAL(TARGET_OPENBSD, test $ARCH = openbsd)
  AM_CONDITIONAL(TARGET_AIX, test $ARCH = aix)
  AM_CONDITIONAL(TARGET_WIN32, test $ARCH = win32)
-@@ -1214,6 +1260,7 @@
+@@ -1341,6 +1387,10 @@
+   SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
+ fi
+
++if test $ARCH = netbsd; then
++  SDL_RLD_FLAGS="-Wl,-R\${exec_prefix}/lib -Wl,-R\${X11BASE}/lib"
++fi
++
+ dnl Output the video drivers we use
+ if test x$enable_video = xtrue; then
+     if test "$VIDEO_SUBDIRS" = ""; then
+@@ -1395,6 +1445,7 @@
  src/audio/irix/Makefile
  src/audio/linux/Makefile
  src/audio/macos/Makefile
