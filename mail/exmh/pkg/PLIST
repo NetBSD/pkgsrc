@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/08/13 14:06:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/01/13 09:17:43 agc Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
@@ -71,13 +71,9 @@ lib/${PKGNAME}/html/Sedit.html
 lib/${PKGNAME}/html/Seditpref.html
 lib/${PKGNAME}/html/blu-ball.gif
 lib/${PKGNAME}/html/copyright.html
-lib/${PKGNAME}/html/exmh-custom.n.html
 lib/${PKGNAME}/html/exmh-fans.html
 lib/${PKGNAME}/html/exmh-faq.html
-lib/${PKGNAME}/html/exmh-ref.n.html
-lib/${PKGNAME}/html/exmh-use.n.html
 lib/${PKGNAME}/html/exmh.README.html
-lib/${PKGNAME}/html/exmh.n.html
 lib/${PKGNAME}/html/exmh.pref.gif
 lib/${PKGNAME}/html/exmh.snap1.gif
 lib/${PKGNAME}/html/index.html
@@ -90,6 +86,19 @@ lib/${PKGNAME}/html/right-arrow.gif
 lib/${PKGNAME}/html/software.html
 lib/${PKGNAME}/html/whatis.html
 lib/${PKGNAME}/html/yel-ball.gif
+lib/${PKGNAME}/html/DSN-MDN.html
+lib/${PKGNAME}/html/Y2K.html
+lib/${PKGNAME}/html/bugfixes.html
+lib/${PKGNAME}/html/custom.html
+lib/${PKGNAME}/html/exmh.CHANGES.txt
+lib/${PKGNAME}/html/exmh.key.color.gif
+lib/${PKGNAME}/html/exmh.snap.10.99.gif
+lib/${PKGNAME}/html/guide.html
+lib/${PKGNAME}/html/mime.attack.html
+lib/${PKGNAME}/html/newfeatures.html
+lib/${PKGNAME}/html/pspbrwse.jbf
+lib/${PKGNAME}/html/reference.html
+lib/${PKGNAME}/html/tutorial.html
 lib/${PKGNAME}/html_cache.tcl
 lib/${PKGNAME}/html_content.tcl
 lib/${PKGNAME}/html_dpackage.tcl
@@ -123,12 +132,10 @@ lib/${PKGNAME}/mosaic.tcl
 lib/${PKGNAME}/msg.tcl
 lib/${PKGNAME}/msgShow.tcl
 lib/${PKGNAME}/partial.tcl
-lib/${PKGNAME}/pgp.tcl
 lib/${PKGNAME}/pgpEWN.tcl
 lib/${PKGNAME}/pgpExec.tcl
 lib/${PKGNAME}/pgpMatch.tcl
 lib/${PKGNAME}/pgpMisc.tcl
-lib/${PKGNAME}/pgpwww.tcl
 lib/${PKGNAME}/pick.tcl
 lib/${PKGNAME}/post.tcl
 lib/${PKGNAME}/preferences.tcl
@@ -168,6 +175,21 @@ lib/${PKGNAME}/widgetText.tcl
 lib/${PKGNAME}/widgets.tcl
 lib/${PKGNAME}/xns.tcl
 lib/${PKGNAME}/xnsgetmail.exp
+lib/${PKGNAME}/flagdown.mask
+lib/${PKGNAME}/flagspool.bitmap
+lib/${PKGNAME}/flagspool.mask
+lib/${PKGNAME}/flagup.mask
+lib/${PKGNAME}/ftp_get.tcl
+lib/${PKGNAME}/pgpBase.tcl
+lib/${PKGNAME}/pgpGpg.tcl
+lib/${PKGNAME}/pgpMain.tcl
+lib/${PKGNAME}/pgpOld.tcl
+lib/${PKGNAME}/pgpPgp2.tcl
+lib/${PKGNAME}/pgpPgp5.tcl
+lib/${PKGNAME}/pgpShared.tcl
+lib/${PKGNAME}/pgpWWW.tcl
+lib/${PKGNAME}/pop.tcl
+lib/${PKGNAME}/urlFace.tcl
 man/man1/exmh.1.gz
 @dirrm lib/${PKGNAME}/html
 @dirrm lib/${PKGNAME}
