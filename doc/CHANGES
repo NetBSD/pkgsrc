@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6705 2004/07/27 19:26:21 abs Exp $
+$NetBSD: CHANGES,v 1.6706 2004/07/27 22:08:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3604,4 +3604,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added miniSAPserver-0.2.4 [manu 2004-07-27]
 	Updated automake to 1.8.5 [wiz 2004-07-27]
 	Updated cpuflags to 0.73 [abs 2004-07-27]
-
+	Updated hpack to 0.79nb1 [minskim 2004-07-27]
