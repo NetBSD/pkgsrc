@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+
+--- log.c.orig	2003-04-25 20:20:55.000000000 +0300
++++ log.c
+@@ -133,7 +133,7 @@ int main(argc,argv)
+    ReportType[0]='\0';
+    UserTabFile[0]='\0';
+ 
+-   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
++   strcpy(AccessLog,SQUID_ACCESSLOG);
+    sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
+    strcpy(BgColor,"white");
+    strcpy(TxColor,"black");
+@@ -146,7 +146,7 @@ int main(argc,argv)
+    strcpy(HeaderBgColor,"blanchedalmond");
+    strcpy(FontSize,"-1");
+    strcpy(TempDir,"/tmp");
+-   strcpy(OutputDir,"/usr/local/etc/httpd/htdocs/squid-reports");
++   strcpy(OutputDir,SARG_REPORTSDIR);
+    strcpy(Ip2Name,"no");
+    strcpy(DateFormat,"u");
+    strcpy(OverwriteReport,"no");
