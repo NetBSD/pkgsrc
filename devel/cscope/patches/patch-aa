@@ -1,26 +1,30 @@
-$NetBSD: patch-aa,v 1.6 2001/06/20 03:19:21 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2001/10/03 14:57:21 seb Exp $
 
---- configure.orig	Wed May 10 15:39:50 2000
-+++ configure
-@@ -1344,7 +1344,6 @@
+--- configure.in.orig	Mon Jul  2 17:48:55 2001
++++ configure.in
+@@ -48,12 +48,12 @@
+ ])
+ 
+ 
++# configure's patch is hand-trimmed after regen from patched configure.in
++
+ dnl === BEGIN aclocal REPLACEMENT MACROS
+ dnl 
+ # ACNU_PROG_LEX fm AC_PROG_LEX 
+ # -----------  
+-dnl chg: probes for lib in /usr/local/lib
+-dnl sheesh you'd have thought that this was obvious enough to be done anyway
+ AC_DEFUN(ACNU_PROG_LEX,[
+ dnl   autoconf-2.14a
+ dnl    AH_CHECK_LIB(fl)dnl
+@@ -65,9 +65,7 @@
        flex*) ac_lib=fl ;;
        *) ac_lib=l ;;
        esac
 -      LDFLAGS='-L/usr/local/lib'
-       echo $ac_n "checking for yywrap in -l$ac_lib""... $ac_c" 1>&6
- echo "configure:1350: checking for yywrap in -l$ac_lib" >&5
- ac_lib_var=`echo $ac_lib'_'yywrap | sed 'y%./+-%__p_%'`
-@@ -1380,12 +1379,11 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  LEXLIB="-L/usr/local/lib -l$ac_lib"
-+  LEXLIB="-l$ac_lib"
- else
-   echo "$ac_t""no" 1>&6
- fi
- 
+-      AC_CHECK_LIB($ac_lib, yywrap, LEXLIB="-L/usr/local/lib -l$ac_lib")
 -      LDFLAGS=
++      AC_CHECK_LIB($ac_lib, yywrap, LEXLIB="-l$ac_lib")
      fi
-     
- 
+     AC_SUBST(LEXLIB)
+ ])

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2001/06/20 03:22:17 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/03 14:57:21 seb Exp $
 
-DISTNAME=	cscope-15.0bl2
-PKGNAME=	cscope-15.0.2
+DISTNAME=	cscope-15.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
 
@@ -13,16 +12,24 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-flex
 
-# Change references to <curses.h> to <ncurses.h> in the source files.
-NCURSES_SED=		-e "s|<curses.h>|<ncurses.h>|g"
+.include "../../mk/bsd.prefs.mk"
 
-post-extract:
-	cd ${WRKSRC}/src; for file in *.[ch]; do			\
-		${MV} -f $${file} $${file}.presubst;			\
-		${SED} ${NCURSES_SED} $${file}.presubst > $${file};	\
-		${RM} -f $${file}.presubst;				\
-	done
+.if ${OPSYS} == "SunOS"
+BUILD_DEPENDS+=		flex-*:../../devel/flex
+LEX=			${LOCALBASE}/bin/flex
+.endif
+
+CONFIGURE_ENV+=		LEX=${LEX}
+
+# touch some carefully selected auto* tools generated files to avoid
+# unnecessary regen of them after the pkg's patch had been applied
+pre-configure:
+	${TOUCH} ${WRKSRC}/aclocal.m4
+	${TOUCH} ${WRKSRC}/stamp-h.in
+	${TOUCH} ${WRKSRC}/Makefile.in ${WRKSRC}/contrib/Makefile.in \
+		${WRKSRC}/doc/Makefile.in ${WRKSRC}/src/Makefile.in
 
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
