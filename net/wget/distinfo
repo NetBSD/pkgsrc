@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/05/14 15:07:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2001/06/27 04:58:51 jlam Exp $
 
 SHA1 (wget-1.6.tar.gz) = 5561c716a38170acb782bd5b6abe064940d13e20
 Size (wget-1.6.tar.gz) = 670777 bytes
 SHA1 (wget-16-v6-20010508b.diff.gz) = b205d1b8bab1884518bee0104bc6e881e1f0a8ad
 Size (wget-16-v6-20010508b.diff.gz) = 23723 bytes
+SHA1 (patch-aa) = 98c944716c403d0501505fc52c69c898d7870ea5

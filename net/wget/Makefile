@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/05/14 15:07:54 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/06/27 04:58:51 jlam Exp $
 #
 
 DISTNAME=	wget-1.6
@@ -15,9 +15,11 @@ HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
 BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK_ONLY=	yes
 
 GNU_CONFIGURE=	yes
-USE_LIBINTL=	yes
+#USE_LIBINTL=	yes
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 INFO_FILES=	wget.info
 
@@ -38,4 +40,5 @@ CONFIGURE_ARGS+=        --disable-ipv6
 post-patch:
 	${TOUCH} ${WRKSRC}/configure
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
