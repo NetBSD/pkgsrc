@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/01/02 18:02:41 tron Exp $
+# $NetBSD: Makefile,v 1.35 2000/01/04 17:52:02 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -25,3 +25,8 @@ CFLAGS+=		-Dunix -I${LOCALBASE}/include -DxBSD
 LDFLAGS+=		-L${LOCALBASE}/lib
 
 .include "../../mk/bsd.pkg.mk"
+.if ${OPSYS} == "SunOS"
+PLIST_SUBST+=	LOCALEBASE=lib
+.else
+PLIST_SUBST+=	LOCALEBASE=share
+.endif

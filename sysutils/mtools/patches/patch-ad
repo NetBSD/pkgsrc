@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2000/01/04 17:49:43 bouyer Exp $
+
+--- floppyd_io.c.old	Mon Dec 13 18:10:17 1999
++++ floppyd_io.c	Mon Dec 13 18:10:36 1999
+@@ -21,7 +21,9 @@
+ 
+ /* ######################################################################## */
+ 
++#ifndef OS_solaris2
+ typedef unsigned long   ipaddr_t;
++#endif
+ typedef unsigned char Byte;
+ typedef unsigned long Dword;
+ 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/10/23 11:52:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/01/04 17:52:03 bouyer Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -72,28 +72,28 @@ lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
-share/locale/ca/LC_MESSAGES/mc.mo
-share/locale/cs/LC_MESSAGES/mc.mo
-share/locale/da/LC_MESSAGES/mc.mo
-share/locale/de/LC_MESSAGES/mc.mo
-share/locale/el/LC_MESSAGES/mc.mo
-share/locale/es/LC_MESSAGES/mc.mo
-share/locale/es_ES/LC_MESSAGES/mc.mo
-share/locale/fi/LC_MESSAGES/mc.mo
-share/locale/fr/LC_MESSAGES/mc.mo
-share/locale/hu/LC_MESSAGES/mc.mo
-share/locale/it/LC_MESSAGES/mc.mo
-share/locale/ja/LC_MESSAGES/mc.mo
-share/locale/ko/LC_MESSAGES/mc.mo
-share/locale/nl/LC_MESSAGES/mc.mo
-share/locale/no/LC_MESSAGES/mc.mo
-share/locale/pl/LC_MESSAGES/mc.mo
-share/locale/pt_BR/LC_MESSAGES/mc.mo
-share/locale/ro/LC_MESSAGES/mc.mo
-share/locale/ru/LC_MESSAGES/mc.mo
-share/locale/sv/LC_MESSAGES/mc.mo
-share/locale/wa/LC_MESSAGES/mc.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/ca/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/cs/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/da/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/de/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/el/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/es/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/es_ES/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/fi/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/fr/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/hu/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/it/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/ja/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/ko/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/nl/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/no/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/pl/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/ro/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/ru/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs
