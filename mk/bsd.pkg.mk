@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.312 1999/08/13 14:06:55 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.313 1999/08/13 18:27:19 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -529,7 +529,7 @@ FETCH_BEFORE_ARGS += -p
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
 	ftp://crl.dec.com/pub/X11/contrib/ \
-	ftp://ftp.eu.net/X11/contrib/ \
+	ftp://ftp.sunsite.auc.dk/pub/X/X.org/contrib/ \
 	ftp://ftp.uni-paderborn.de/pub/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
 
