@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.6 2004/04/27 12:30:23 markd Exp $
+
+--- loginrec.c.orig	2004-02-10 18:49:35.000000000 +1300
++++ loginrec.c
+@@ -720,8 +720,6 @@ construct_utmpx(struct logininfo *li, st
+ 	line_stripname(utx->ut_line, li->line, sizeof(utx->ut_line));
+ 	set_utmpx_time(li, utx);
+ 	utx->ut_pid = li->pid;
+-	/* strncpy(): Don't necessarily want null termination */
+-	strncpy(utx->ut_name, li->username, MIN_SIZEOF(utx->ut_name, li->username));
+ 
+ 	if (li->type == LTYPE_LOGOUT)
+ 		return;
+@@ -731,6 +729,8 @@ construct_utmpx(struct logininfo *li, st
+ 	 * for logouts.
+ 	 */
+ 
++	/* strncpy(): Don't necessarily want null termination */
++	strncpy(utx->ut_name, li->username, MIN_SIZEOF(utx->ut_name, li->username));
+ # ifdef HAVE_HOST_IN_UTMPX
+ 	strncpy(utx->ut_host, li->hostname, MIN_SIZEOF(utx->ut_host, li->hostname));
+ # endif

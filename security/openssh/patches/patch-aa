@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.32 2004/03/12 19:24:47 wiz Exp $
+$NetBSD: patch-aa,v 1.33 2004/04/27 12:30:23 markd Exp $
 
---- configure.orig	Tue Feb 24 07:22:59 2004
+--- configure.orig	2004-02-24 19:22:59.000000000 +1300
 +++ configure
 @@ -4803,6 +4803,9 @@ EOF
  	;;
@@ -23,7 +23,53 @@ $NetBSD: patch-aa,v 1.32 2004/03/12 19:24:47 wiz Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -17983,7 +17990,7 @@ echo "OpenSSH has been configured with t
+@@ -17009,12 +17016,20 @@ fi
+ rm -f conftest.$ac_objext conftest.$ac_ext
+ if test -z "$conf_utmpx_location"; then
+ 	if test x"$system_utmpx_path" = x"no" ; then
+-		cat >>confdefs.h <<\EOF
++		for f in /var/run/utmpx; do
++			if test -f $f ; then
++				conf_utmpx_location=$f
++			fi
++		done
++		if test -z "$conf_utmpx_location"; then
++			cat >>confdefs.h <<\EOF
+ #define DISABLE_UTMPX 1
+ EOF
+ 
++		fi
+ 	fi
+-else
++fi
++if test -n "$conf_utmpx_location"; then
+ 	cat >>confdefs.h <<EOF
+ #define CONF_UTMPX_FILE "$conf_utmpx_location"
+ EOF
+@@ -17069,12 +17084,20 @@ fi
+ rm -f conftest.$ac_objext conftest.$ac_ext
+ if test -z "$conf_wtmpx_location"; then
+ 	if test x"$system_wtmpx_path" = x"no" ; then
+-		cat >>confdefs.h <<\EOF
++		for f in /var/log/wtmpx; do
++			if test -f $f ; then
++				conf_wtmpx_location=$f
++			fi
++		done
++		if test -z "$conf_wtmpx_location"; then
++			cat >>confdefs.h <<\EOF
+ #define DISABLE_WTMPX 1
+ EOF
+ 
++		fi
+ 	fi
+-else
++fi
++if test -n "$conf_wtmpx_location"; then
+ 	cat >>confdefs.h <<EOF
+ #define CONF_WTMPX_FILE "$conf_wtmpx_location"
+ EOF
+@@ -17983,7 +18006,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
