@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/17 21:31:56 grant Exp $
+# $NetBSD: Makefile,v 1.50 2003/08/02 03:56:37 grant Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--without-curses-h
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
+
+USE_GNU_TOOLS=		awk
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,8 +67,5 @@ post-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
 		${PREFIX}/share/examples/ncurses++demo.cc
-
-# we need a working awk
-.include "../../lang/gawk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
