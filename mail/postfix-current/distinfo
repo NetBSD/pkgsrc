@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/04/14 12:55:20 minskim Exp $
+$NetBSD: distinfo,v 1.4 2004/04/20 17:50:40 taca Exp $
 
 SHA1 (postfix/postfix-2.0.19-20040312.tar.gz) = 68ade8c704c3c54ad6465d695ff9b8f0230e8758
 Size (postfix/postfix-2.0.19-20040312.tar.gz) = 1531471 bytes
@@ -11,6 +11,6 @@ SHA1 (patch-ad) = 60d98330d4b20508c03bb0bccebbe564ffea621f
 SHA1 (patch-ae) = 9ea314db37541a1a9c7765e000687c0fdef90d8e
 SHA1 (patch-af) = 9b0521751704fd1377d8215dc16a873c1d5ca032
 SHA1 (patch-ah) = 6beedd15ee3a7cfd46cf3ed0b9ee579b9906300b
-SHA1 (patch-ai) = 9afae33799d16fb44480580023df990036364592
+SHA1 (patch-ai) = eb9406c02f91d20201ebdcdc8bfadab506a1174f
 SHA1 (patch-bd) = 652b96357164208e39d322e84ee9a2ad2bd4ccc4
 SHA1 (patch-be) = dd00235af79a8d5e46a7d393e18840241bb685a8
