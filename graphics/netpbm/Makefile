@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2004/01/26 07:03:15 tron Exp $
+# $NetBSD: Makefile,v 1.89 2004/01/26 09:54:43 tron Exp $
 
 DISTNAME=	netpbm-10.11.8
 PKGREVISION=	1
@@ -31,14 +31,14 @@ STAGEDIR=	${WRKDIR}/staging
 GCC_REQD=		2.95.3
 .endif
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == SunOS
 MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
-BUILD_DEPENDS+=	flex>=2.5.4:../../devel/flex
 .else
 MAKE_ENV+=	NETWORKLD=""
 .endif
 
-.if (${OPSYS} == Linux && !exists(/usr/bin/flex)) || (${OPSYS} == "IRIX")
+.if (${OPSYS} == SunOS) || (${OPSYS} == IRIX) || \
+    (${OPSYS} == Linux && !exists(/usr/bin/flex))
 BUILD_DEPENDS+=	flex>=2.5.4:../../devel/flex
 .endif
 
