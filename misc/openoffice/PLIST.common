@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.common,v 1.1 2004/06/03 18:48:17 mrauch Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/06/05 12:22:47 mrauch Exp $
 OpenOffice.org1.1.1/LICENSE
 OpenOffice.org1.1.1/LICENSE.html
 OpenOffice.org1.1.1/README
 OpenOffice.org1.1.1/README.html
 OpenOffice.org1.1.1/THIRDPARTYLICENSEREADME.html
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/common.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/common.tree
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/custom.css
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/default.css
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/err.html
@@ -45,6 +46,7 @@ OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.jar
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.key
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.tree
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/schart.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/schart.tree
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.cfg
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.db
 OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.ht
