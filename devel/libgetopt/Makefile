@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/03/10 19:19:46 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/10 21:15:09 tv Exp $
 #
 
-DISTNAME=	libgetopt-1.4
+DISTNAME=	libgetopt-1.4.1
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/libgetopt
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(/usr/include/getopt.h) && empty(LOWER_OPSYS:Mirix5*)
-PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
+#PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -30,7 +30,7 @@ do-extract:
 
 do-build:
 	cd ${WRKSRC} && ${LIBTOOL} --mode=compile ${COMPILE.c} getopt_long.c
-	cd ${WRKSRC} && ${LIBTOOL} --mode=link ${LINK.c} -o libgetopt.la getopt_long.lo -version-info 5:0:4 -rpath ${PREFIX}/lib
+	cd ${WRKSRC} && ${LIBTOOL} --mode=link ${LINK.c} -o libgetopt.la getopt_long.lo -version-info 5:1:4 -rpath ${PREFIX}/lib
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libgetopt.la ${PREFIX}/lib/
