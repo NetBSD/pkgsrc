@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/05 23:22:51 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:39 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/07/12 22:59:19 steve Exp $
 
 DISTNAME=	pcre-4.5
@@ -15,9 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 TEST_TARGET=		test
 

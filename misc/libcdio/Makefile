@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/17 14:38:22 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=	libcdio-0.65
@@ -12,7 +12,6 @@ COMMENT=	CD-ROM access library
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libcdio.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libiso9660.pc.in
 GNU_CONFIGURE=		yes

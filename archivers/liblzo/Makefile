@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/09 20:25:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 17:21:32 jlam Exp $
 #
 
 DISTNAME=	lzo-1.08
@@ -14,8 +14,6 @@ COMMENT=	Portable lossless data compression library written in ANSI C
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # Don't spuriously detect zlib, as it's not needed for the library.
 CONFIGURE_ENV+=	ac_cv_lib_z_gzputs=no

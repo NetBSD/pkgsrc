@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/03 06:36:55 epg Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:39 jlam Exp $
 
 DISTNAME=		rapidsvn-0.5.0
 CATEGORIES=		devel x11
@@ -11,9 +11,7 @@ COMMENT=		Cross-platform Subversion GUI
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-svn-include=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib

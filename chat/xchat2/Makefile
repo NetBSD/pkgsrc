@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/10 16:59:21 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=	xchat-2.0.7
@@ -21,8 +21,6 @@ USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-textfe
 CONFIGURE_ARGS+=	--enable-tcl=no

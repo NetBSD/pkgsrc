@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:33 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -19,7 +19,6 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}	\
 			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis} \
 			--with-ao-prefix=${BUILDLINK_PREFIX.libao}

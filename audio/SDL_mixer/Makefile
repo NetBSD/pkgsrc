@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:32 jlam Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.5
@@ -18,8 +18,6 @@ USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CPPFLAGS=		-Dunix=1
 CFLAGS=			-DPREFIX=\"\\\"${PREFIX}\\\"\"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/03 05:27:03 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:45 jlam Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -20,7 +20,6 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"

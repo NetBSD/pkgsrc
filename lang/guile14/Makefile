@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:43 jlam Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -14,12 +14,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 NO_MTREE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/guile-readline/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
-
 USE_GNU_READLINE=	YES
 
 INFO_FILES=		guile.info

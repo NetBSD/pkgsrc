@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/09 12:03:27 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:42 jlam Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
 DISTNAME=	lcms-1.12
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--without-jpeg
