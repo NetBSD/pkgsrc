@@ -1,2 +1,4 @@
+# $NetBSD: Setup.in,v 1.3 1998/08/07 14:58:44 agc Exp $
+#
 *shared*
 _tkinter _tkinter.c tkappinit.c -DWITH_APPINIT -I@LOCALBASE@/include/tk8.0 -I@LOCALBASE@/include/tcl8.0 -I@X11BASE@/include -L@X11BASE@/lib -lX11 -L@LOCALBASE@/lib -ltk80 -ltcl80

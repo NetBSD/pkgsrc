@@ -1,2 +1,4 @@
+# $NetBSD: Setup.in,v 1.2 1998/08/07 14:58:43 agc Exp $
+#
 *shared*
 gdbm gdbmmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib -lgdbm
