@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/05/02 10:29:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2004/07/30 15:57:06 agc Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.1
@@ -35,9 +35,9 @@ SUPPORT_FILES+=	${EGDIR}/catalog.share.xml ${PREFIX}/share/xml/catalog
 BUILD_DIRS=	${WRKSRC}/work
 INSTALL_DIRS=	${WRKSRC}/work
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
-.if defined(USE_MIPSPRO) && !empty(USE_MIPSPRO:M[yY][eE][sS])
+.if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=	-c99
 .endif
 
