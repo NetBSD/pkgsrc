@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/06 09:45:38 cube Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/06 05:32:29 tv Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -45,6 +45,6 @@ INSTALLATION_DIRS+=	sbin
 .endif
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
