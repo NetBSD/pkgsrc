@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.485 2000/06/25 06:31:12 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.486 2000/06/26 01:19:09 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -1634,7 +1634,7 @@ root-install:
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.install_done
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 
 .if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out or none
@@ -2723,7 +2723,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.485 2000/06/25 06:31:12 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.486 2000/06/26 01:19:09 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
