@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9045 2005/02/05 14:31:52 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9046 2005/02/05 14:49:34 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ORBit2 to 2.12.1 [jmmv 2005-02-05]
 	Updated dcraw to 1.234 [seb 2005-02-05]
 	Update postgresql74 to 7.4.7 [jdolecek 2005-02-05]
+	Update postgresql73 to 7.3.9 [jdolecek 2005-02-05]
