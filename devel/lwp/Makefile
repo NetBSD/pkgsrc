@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/10/17 02:44:41 phil Exp $
+# $NetBSD: Makefile,v 1.13 2002/06/20 19:27:54 jlam Exp $
 #
 
-DISTNAME=	lwp-1.6
+DISTNAME=	lwp-1.9
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/ \
 		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
@@ -18,6 +18,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc* \
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK_ONLY=	YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"
