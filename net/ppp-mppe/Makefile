@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2003/12/01 17:23:24 cube Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/31 10:24:50 cube Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://cs.anu.edu.au/pub/software/ppp/
 
@@ -14,7 +14,7 @@ CONFLICTS+=	ppp-2.*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-OPENSSL_VERS=	0.9.6l
+OPENSSL_VERS=	0.9.6m
 OPENSSL_SRC=	${_PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 HAS_CONFIGURE=  yes
