@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.127 1998/07/24 14:13:46 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.128 1998/07/26 09:27:15 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1388,7 +1388,7 @@ checksum: fetch
 		(cd ${DISTDIR}; OK="true"; \
 		  for file in ${_CKSUMFILES}; do \
 			CKSUM=`${MD5} < $$file`; \
-			CKSUM2=`${AWK} '/^MD5 \('$$file'\)/{ print $$4 }' ${MD5_FILE}`; \
+			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file."; \
 				OK="false"; \
@@ -1404,7 +1404,7 @@ checksum: fetch
 			fi; \
 		  done; \
 		  for file in ${_IGNOREFILES}; do \
-			CKSUM2=`${AWK} '/\('$$file'\)/{ print $$4 }' ${MD5_FILE}`; \
+			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false"; \
