@@ -1,31 +1,20 @@
-$NetBSD: patch-aa,v 1.2 2002/09/06 06:45:09 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/11/15 15:27:59 lukem Exp $
 
---- src/plugin_xmms/Makefile.in.orig	Wed Jul  3 14:01:59 2002
-+++ src/plugin_xmms/Makefile.in
-@@ -102,7 +102,7 @@ FLaC__USIZE32 = @FLaC__USIZE32@
- FLaC__USIZE64 = @FLaC__USIZE64@
- INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+--- src/plugin_xmms/Makefile.am.orig	Tue Sep 10 06:11:30 2002
++++ src/plugin_xmms/Makefile.am
+@@ -32,7 +32,7 @@ INCLUDES = -I$(top_srcdir)/src
+ xmmsinputplugindir = @XMMS_INPUT_PLUGIN_DIR@
+ 
  # Don't build a static library
 -LIBTOOL = $(top_builddir)/libtool-disable-static
 +LIBTOOL = $(top_builddir)/libtool
- LN_S = @LN_S@
- NASM = @NASM@
- OBJDUMP = @OBJDUMP@
-@@ -134,7 +134,7 @@ xmmsinputplugindir = @XMMS_INPUT_PLUGIN_
  
  xmmsinputplugin_LTLIBRARIES = libxmms-flac.la
- libxmms_flac_la_SOURCES = plugin.c
--libxmms_flac_la_LIBADD = $(top_builddir)/src/libFLAC/libFLAC.la @XMMS_LIBS@
-+libxmms_flac_la_LIBADD = $(libdir)/libFLAC.la @XMMS_LIBS@
- #libxmms_flac_la_LIBADD = -L$(top_builddir)/src/libFLAC/.libs -lFLAC @XMMS_LIBS@
+ 
+@@ -52,5 +52,5 @@ endif
+ # for fix info see:
+ #   http://lists.freshrpms.net/pipermail/rpm-list/2002-April/000746.html
+ # the workaround is the extra '-L$(top_builddir)/src/libFLAC/.libs'
+-libxmms_flac_la_LIBADD = $(top_builddir)/src/plugin_common/libplugin_common.a $(top_builddir)/src/libFLAC/libFLAC.la -L$(top_builddir)/src/libFLAC/.libs @XMMS_LIBS@ @ID3LIB_LIBS@
++libxmms_flac_la_LIBADD = $(top_builddir)/src/plugin_common/libplugin_common.la $(libdir)/libFLAC.la @XMMS_LIBS@ @ID3LIB_LIBS@
  libxmms_flac_la_LDFLAGS = -module -avoid-version
- subdir = src/plugin_xmms
-@@ -142,7 +142,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
- CONFIG_CLEAN_FILES =
- LTLIBRARIES = $(xmmsinputplugin_LTLIBRARIES)
- 
--libxmms_flac_la_DEPENDENCIES = $(top_builddir)/src/libFLAC/libFLAC.la
-+libxmms_flac_la_DEPENDENCIES =
- am_libxmms_flac_la_OBJECTS = plugin.lo
- libxmms_flac_la_OBJECTS = $(am_libxmms_flac_la_OBJECTS)
- 
