@@ -1,12 +1,13 @@
 include ../Makefile.inc
 
 PACKAGE_D ?= gkrellmd
+GKRELLMD_INCLUDES = gkrellmd.h
 
 PKG_INCLUDE = `$(PKG_CONFIG) --cflags glib-2.0 gthread-2.0`
-PKG_LIB = `$(PKG_CONFIG) --libs glib-2.0 gthread-2.0`
+PKG_LIB = `$(PKG_CONFIG) --libs glib-2.0 gmodule-2.0 gthread-2.0`
 
-GLIB12_INCLUDE = `glib-config --cflags gthread`
-GLIB12_LIB = `glib-config --libs gthread`
+GLIB12_INCLUDE = `glib-config --cflags`
+GLIB12_LIB = `glib-config --libs glib gmodule`
 
 USE_GLIB12?=	no
 ifeq ($(glib12),1)
@@ -51,7 +52,7 @@ endif
 
 override CFLAGS += -Wall $(FLAGS)
 
-OBJS =	main.o monitor.o mail.o glib.o sysdeps-unix.o
+OBJS =	main.o monitor.o mail.o plugins.o glib.o utils.o sysdeps-unix.o
 
 all:	build
 
@@ -62,9 +63,11 @@ gkrellmd static: $(OBJS)
 
 install:
 	$(INSTALL_DIR) $(SINSTALLDIR)
-	$(INSTALL_DIR) $(SMANDIR)
 	$(INSTALL_BIN) $(STRIP) gkrellmd $(SINSTALLDIR)/$(PACKAGE_D)
+	$(INSTALL_DIR) $(SMANDIR)
 	$(INSTALL_DATA) ../gkrellmd.1 $(SMANDIR)/$(PACKAGE_D).1
+	$(INSTALL_DIR) $(INCLUDEDIR)/gkrellm2
+	$(INSTALL_DATA) $(GKRELLMD_INCLUDES) $(INCLUDEDIR)/gkrellm2
 
 uninstall:
 	rm -f $(SINSTALLDIR)/$(PACKAGE_D)
@@ -81,5 +84,7 @@ SYSDEPS = ../src/sysdeps/bsd-common.c ../src/sysdeps/bsd-net-open.c \
 main.o:		main.c gkrellmd.h
 monitor.o:	monitor.c gkrellmd.h 
 mail.o:		mail.c gkrellmd.h
+plugins.o:	plugins.c gkrellmd.h
 glib.o:		glib.c gkrellmd.h
+utils.o:	utils.c gkrellmd.h
 sysdeps-unix.o: sysdeps-unix.c gkrellmd.h ../src/gkrellm-sysdeps.h $(SYSDEPS)

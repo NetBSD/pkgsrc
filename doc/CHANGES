@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6146 2004/06/05 18:50:59 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6147 2004/06/05 18:57:37 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2800,3 +2800,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mew to 2.3nb1 [minskim 2004-06-05]
 	Added weechat-0.0.6 [xtraeme 2004-06-05]
 	Updated openmsx to 0.4.0nb1 [xtraeme 2004-06-05]
+	Updated gkrellm to 2.2.1 [cube 2004-06-05]
+	Updated gkrellm-server to 2.2.1 [cube 2004-06-05]
+	Updated gkrellm-share to 2.2.1 [cube 2004-06-05]
