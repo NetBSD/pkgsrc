@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2004/05/24 18:13:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2004/07/03 17:12:11 jmmv Exp $
 bin/gnumeric
 bin/ssconvert
 lib/bonobo/servers/GNOME_Gnumeric.server
@@ -752,7 +752,11 @@ share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/stock.xpm
 share/pixmaps/gnumeric/surface.xpm
 @dirrm share/pixmaps/gnumeric
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnumeric
+@comment in scrollkeeper: @dirrm share/omf
+@comment in xdg-dirs: @dirrm share/mime-info
+@dirrm share/mc/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C/figures
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/share/gnome/help/gnumeric/C
@@ -773,6 +777,8 @@ share/pixmaps/gnumeric/surface.xpm
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo
 @dirrm share/gnumeric
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/uihello
@@ -815,3 +821,4 @@ share/pixmaps/gnumeric/surface.xpm
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo
 @dirrm lib/gnumeric
+@comment in libbonobo: @dirrm lib/bonobo/servers
