@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.11 2003/01/25 03:21:30 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.12 2003/04/11 01:20:44 uebayasi Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -127,19 +127,19 @@ FOR.emacs20=		"@comment "
 FOR.xemacs215=		"@comment "
 FOR.xemacs211=		"@comment "
 .if ${_EMACS_VERSION} == "emacs21"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs21
+EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs
 FOR.emacs21=		""
 .if defined(EMACS_USE_LEIM)
-DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim21
+DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim
 .endif
 .elif ${_EMACS_VERSION} == "emacs21nox"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21nox}:../../editors/emacs21-nox11
+EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21nox}:../../editors/emacs-nox11
 FOR.emacs21nox=		""
 .if defined(EMACS_USE_LEIM)
-DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim21
+DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim
 .endif
 .elif ${_EMACS_VERSION} == "emacs20"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs20}:../../editors/emacs
+EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs20}:../../editors/emacs20
 FOR.emacs20=		""
 .if defined(EMACS_USE_LEIM)
 DEPENDS+=		${BUILDLINK_DEPENDS.leim20}:../../editors/leim20
