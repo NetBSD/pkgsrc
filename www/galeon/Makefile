@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/04/14 19:30:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.67 2004/04/27 01:15:59 wiz Exp $
 
 DISTNAME=	galeon-1.2.13
 PKGREVISION=	3
@@ -18,7 +18,7 @@ EVAL_PREFIX+=	ICONV_PREFIX=libiconv
 EVAL_PREFIX+=	GCONF_PREFIX=GConf
 
 USE_X11BASE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -34,17 +34,17 @@ CONFIGURE_ARGS+=	--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/moz
 			MOZILLA_CONFIG=${MOZ_LIBDIR}/mozilla-config
 CONFIGURE_ARGS+= --with-mozilla-snapshot=1.6b
 
-.include	"../../converters/libiconv/buildlink2.mk"
-.include	"../../devel/GConf/buildlink2.mk"
-.include	"../../devel/gettext-lib/buildlink2.mk"
-.include	"../../devel/libglade/buildlink2.mk"
-.include	"../../devel/oaf/buildlink2.mk"
-.include	"../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
-.include	"../../textproc/libxml/buildlink2.mk"
+.include	"../../converters/libiconv/buildlink3.mk"
+.include	"../../devel/GConf/buildlink3.mk"
+.include	"../../devel/gettext-lib/buildlink3.mk"
+.include	"../../devel/libglade/buildlink3.mk"
+.include	"../../devel/oaf/buildlink3.mk"
+.include	"../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
+.include	"../../textproc/libxml/buildlink3.mk"
 .include	"../../textproc/scrollkeeper/omf.mk"
-.include	"../../sysutils/gnome-vfs/buildlink2.mk"
-.include	"../../www/mozilla/buildlink2.mk"
-.include	"../../x11/gnome-libs/buildlink2.mk"
+.include	"../../sysutils/gnome-vfs/buildlink3.mk"
+.include	"../../www/mozilla/buildlink3.mk"
+.include	"../../x11/gnome-libs/buildlink3.mk"
 
 MOZ_LIBDIR=     ${MOZILLA_PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,${RPATH_FLAG}${MOZ_LIBDIR}
