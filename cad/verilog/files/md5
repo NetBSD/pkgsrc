@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/03/07 16:05:14 dmcmahill Exp $
+$NetBSD: md5,v 1.4 2000/06/22 03:15:32 dmcmahill Exp $
 
-MD5 (verilog-0.2.tar.gz) = 41f0a1cbc46b8b34df9f785f3c5c9ebd
+MD5 (verilog-0.3.tar.gz) = eebe52780df6adcc436942bc2de2969c
