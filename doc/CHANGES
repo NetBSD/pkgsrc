@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5668 2004/04/19 22:20:23 wiz Exp $
+$NetBSD: CHANGES,v 1.5669 2004/04/19 23:27:38 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added freeglut-2.2.0 [xtraeme 2004-04-19]
 	Updated gok to 0.10.2 [jmmv 2004-04-19]
 	Updated adzap to 20040408 [kleink 2004-04-19]
+	Added thunderbird-0.5 [taya 2004-04-19]
