@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.7 2000/06/20 06:06:48 jlam Exp $
+
+--- Makefile.shlib.orig	Thu Mar  9 12:07:32 2000
++++ Makefile.shlib	Tue Jun 20 00:31:34 2000
+@@ -274,6 +274,7 @@
+ install-shlib: $(shlib)
+ 	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/$(shlib)
+ ifneq ($(PORTNAME), win)
++ifdef ELF_SYSTEM
+ 	if [ "$(shlib)" != "lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)" ]; then \
+ 		cd $(LIBDIR); \
+ 		rm -f lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION); \
+@@ -284,6 +285,7 @@
+ 		rm -f lib$(NAME)$(DLSUFFIX); \
+ 		$(LN_S) $(shlib) lib$(NAME)$(DLSUFFIX); \
+ 	fi
++endif
+ endif
+ 
+ # Rule to delete shared library during "make clean"
