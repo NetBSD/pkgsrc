@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.10 2004/11/27 04:50:55 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.11 2004/11/28 08:00:51 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -189,11 +189,13 @@ ${WRKDIR}/.som_done: ${WRKDIR}
 	@${ECHO} ""
 	@${ECHO} "${PKG_SUPPORTED_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |	\
 		${_PKG_OPTIONS_WORDWRAP_FILTER}
+.    if !empty(PKG_OPTIONS)
 	@${ECHO} ""
 	@${ECHO} "The currently selected options are:"
 	@${ECHO} ""
 	@${ECHO} "${PKG_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |		\
 		${_PKG_OPTIONS_WORDWRAP_FILTER}
+.    endif
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
 	@${ECHO} "variables.  Their current value is shown:"
