@@ -1,0 +1,37 @@
+$NetBSD: patch-ax,v 1.1 2004/11/08 18:19:41 xtraeme Exp $
+
+--- scripts/Makefile.in.orig	2004-11-08 17:28:31.000000000 +0100
++++ scripts/Makefile.in	2004-11-08 17:30:26.000000000 +0100
+@@ -295,28 +295,12 @@
+ vio_libs = @vio_libs@
+ zlib_dir = @zlib_dir@
+ 
+-bin_SCRIPTS = @server_scripts@ \
+-			msql2mysql \
+-			mysql_config \
+-			mysql_fix_privilege_tables \
+-			mysql_fix_extensions \
+-			mysql_setpermission \
+-			mysql_secure_installation \
+-			mysql_zap \
+-			mysqlaccess \
+-			mysqlbug \
+-			mysql_convert_table_format \
+-			mysql_find_rows \
+-			mysqlhotcopy \
+-			mysqldumpslow \
+-			mysql_explain_log \
+-			mysql_tableinfo \
+-			mysqld_multi \
+-			make_win_src_distribution \
+-			make_win_binary_distribution \
++bin_SCRIPTS = msql2mysql mysql_config mysql_fix_privilege_tables \
++	      mysql_setpermission mysql_zap mysqlaccess mysqlbug \
++	      mysql_convert_table_format mysql_find_rows mysqlhotcopy \
++	      mysqldumpslow mysql_explain_log mysql_tableinfo \
+ 			mysql_create_system_tables
+ 
+-
+ EXTRA_SCRIPTS = make_binary_distribution.sh \
+ 			make_sharedlib_distribution.sh \
+ 			make_win_src_distribution.sh \
