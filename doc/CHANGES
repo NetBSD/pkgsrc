@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6698 2004/07/27 13:41:39 recht Exp $
+$NetBSD: CHANGES,v 1.6699 2004/07/27 13:43:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3594,4 +3594,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tnftp to 20030825nb1 [grant 2004-07-27]
 	Updated clamav to 0.75 [simonb 2004-07-27]
 	Updated arj to 3.10.21 [wiz 2004-07-27]
+	Updated scummvm to 0.6.1 [adam 2004-07-27]
 	Updated cyrus-imapd22 to 2.2.7 [recht 2004-07-27]
