@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/10/02 01:46:18 mcr Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/03 02:33:55 hubertf Exp $
 #
 
 DISTNAME=		Convert-PEM-0.06
@@ -10,11 +10,11 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module to read/write ASN.1-encoded PEM files
 
-DEPENDS+=		p5-MIME-Base64-*:../../converters/p5-MIME-Base64
-DEPENDS+=		p5-Convert-ASN1-*:../../textproc/p5-Convert-ASN1
-DEPENDS+=		p5-Digest-MD5-*:../../security/p5-Digest-MD5
-DEPENDS+=		p5-Crypt-DES-*:../../security/p5-Crypt-DES
-DEPENDS+=		p5-Crypt-DES_EDE3-*:../../security/p5-Crypt-DES_EDE3
+DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=		p5-Convert-ASN1-[0-9]*:../../textproc/p5-Convert-ASN1
+DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
+DEPENDS+=		p5-Crypt-DES_EDE3-[0-9]*:../../security/p5-Crypt-DES_EDE3
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Convert/PEM/.packlist
