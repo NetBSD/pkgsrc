@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.14 2001/12/19 21:32:32 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.15 2001/12/26 15:40:32 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -10,6 +10,8 @@
 
 .if !defined(BSD_PKG_INSTALL_MK)
 BSD_PKG_INSTALL_MK=	1
+
+.include "../../mk/bsd.prefs.mk"
 
 DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
 INSTALL_FILE=		${WRKDIR}/.INSTALL
