@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.4 2003/08/30 20:22:51 jlam Exp $
+# $NetBSD: INSTALL,v 1.5 2003/09/19 14:34:57 wiz Exp $
 
 case ${STAGE} in
 POST-INSTALL)
@@ -6,5 +6,6 @@ POST-INSTALL)
 	${ECHO} "Initializing MySQL databases..."
 	${ECHO} "-------------------------------"
 	${PKG_PREFIX}/bin/mysql_install_db --force
+	${CHOWN} -R @MYSQL_USER@:@MYSQL_GROUP@ @MYSQL_DATADIR@
 	;;
 esac
