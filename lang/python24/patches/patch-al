@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
+$NetBSD: patch-al,v 1.3 2004/12/19 05:45:39 grant Exp $
 
 --- configure.orig	2004-11-07 12:24:12.000000000 +1100
 +++ configure
@@ -40,7 +40,19 @@ $NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
  	    ;;
      esac
      ;;
-@@ -10295,7 +10310,7 @@ then
+@@ -10165,7 +10180,10 @@ fi
+ case "$enable_toolbox_glue" in
+ yes)
+ 	extra_machdep_objs="Python/mactoolboxglue.o"
+-	extra_undefs="-u _PyMac_Error"
++	case $ac_sys_release in
++	7*)	extra_undefs=;;
++	*)	extra_undefs="-u _PyMac_Error";;
++	esac
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define USE_TOOLBOX_OBJECT_GLUE 1
+@@ -10295,7 +10313,7 @@ then
  			LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
  		else
  			# No framework. Ignore undefined symbols, assuming they come from Python
@@ -49,7 +61,7 @@ $NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
  		fi ;;
  	Darwin/1.4*|Darwin/5.*|Darwin/6.*)
  		LDSHARED='$(CC) $(LDFLAGS) -bundle'
-@@ -10305,8 +10320,8 @@ then
+@@ -10305,8 +10323,8 @@ then
  			LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -60,7 +72,7 @@ $NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -10324,8 +10339,8 @@ then
+@@ -10324,8 +10342,8 @@ then
  				LDSHARED="$LDSHARED "'-Wl,-F$(PYTHONFRAMEWORKPREFIX) -framework $(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -71,7 +83,7 @@ $NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
  			fi
  		fi
  		;;
-@@ -10370,6 +10385,7 @@ then
+@@ -10370,6 +10388,7 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -79,7 +91,7 @@ $NetBSD: patch-al,v 1.2 2004/12/19 05:30:14 grant Exp $
  	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
-@@ -14297,6 +14313,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -14297,6 +14316,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include "confdefs.h"
