@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/13 13:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:49 grant Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/pub/local/scli/
 
-MAINTAINER=		seb@netbsd.org
+MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
 COMMENT=		SNMP command line interface
 

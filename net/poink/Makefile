@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/07/12 00:51:12 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:38 grant Exp $
 #
 
 DISTNAME=	poink-1.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	nosuid, absolutely secure version of ping utility
 
 NO_SRC_ON_FTP=	"Already in MASTER_SITE_LOCAL"

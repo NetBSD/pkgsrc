@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:53:59 grant Exp $
 
 DISTNAME=	xnc-4.4.7.src
 PKGNAME=	xnc-4.4.7
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.xnc.dubna.su/src/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://xnc.dubna.su/
 COMMENT=	File manager for X Window
 

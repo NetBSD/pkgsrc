@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:16:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:09 grant Exp $
 #
 
 DISTNAME=	bbpager-0.3.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://bbtools.thelinuxcommunity.org/sources/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://bbtools.thelinuxcommunity.org/available.phtml
 COMMENT=	pager for the blackbox window manager
 

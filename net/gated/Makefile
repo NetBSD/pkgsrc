@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/18 19:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:51:11 grant Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
 		http://www.zcu.cz/ftp/pub/security/merit/gated/ \
 		http://www.funet.fi/pub/unix/tcpip/gated/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
 

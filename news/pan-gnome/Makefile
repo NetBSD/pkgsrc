@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/13 13:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:10 grant Exp $
 #
 
 DISTNAME=	pan-0.11.4
@@ -7,7 +7,7 @@ CATEGORIES=	news gnome
 MASTER_SITES=	http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://pan.rebelbase.com/
 COMMENT=	Newsreader for Gnome
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:32 grant Exp $
 #
 
 DISTNAME=	hot-babe-0.1.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://dindinx.net/hotbabe/downloads/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://dindinx.net/hotbabe/
 COMMENT=	System monitor
 

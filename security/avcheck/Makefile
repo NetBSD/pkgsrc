@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:17:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:52:51 grant Exp $
 
 DISTNAME=	avcheck-0.9
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.corpit.ru/ftp/avcheck/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.corpit.ru/avcheck/
 COMMENT=	Mail content filter for SMTP servers
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/27 13:41:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:49 grant Exp $
 #
 
 DISTNAME=	wmWeather-1.31
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 CATEGORIES=	x11
 MASTER_SITES=	http://nis-www.lanl.gov/~mgh/WindowMaker/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 COMMENT=	WindowMaker DockApp showing local weather conditions
 

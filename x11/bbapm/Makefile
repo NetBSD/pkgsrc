@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/06 17:43:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:21 grant Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -9,7 +9,7 @@ DISTNAME=	bbapm-0.0.1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	APM monitor for Blackbox
 

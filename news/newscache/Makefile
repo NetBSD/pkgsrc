@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:17:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:08 grant Exp $
 #
 
 DISTNAME=	NewsCache-0.99.17
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://www.infosys.tuwien.ac.at/NewsCache/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.infosys.tuwien.ac.at/NewsCache/
 COMMENT=	Free cache server for USENET News
 

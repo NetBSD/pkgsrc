@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/03/29 12:43:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 22:57:05 grant Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -9,7 +9,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/clients
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 COMMENT=		OpenLook applications and man pages
 
 NOT_FOR_PLATFORM=       *-*-alpha       # it builds but everything segfaults...

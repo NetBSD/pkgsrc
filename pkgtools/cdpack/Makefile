@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:52:12 grant Exp $
 #
 
 DISTNAME=	cdpack-1.5
@@ -7,8 +7,8 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	dmcmahill@netbsd.org
-HOMEPAGE=	http://www.netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
+HOMEPAGE=	http://www.NetBSD.org
 COMMENT=	utility to create multi-cd binary package collections
 
 # for mkisofs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:16:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:01 grant Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	ical-2.2.1
 CATEGORIES=	time
 MASTER_SITES=	http://members.nbci.com/majahj/ical/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://members.nbci.com/majahj/ical/
 COMMENT=	Calendar application
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/13 11:43:25 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:36 grant Exp $
 #
 
 DISTNAME=	pen-0.10.1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://siag.nu/pub/pen/					\
 		ftp://siag.nu/pub/pen/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://siag.nu/pen/
 COMMENT=	load balancer for "simple" tcp based protocols
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:16 grant Exp $
 
 DISTNAME=		sawfish-themes-0.2
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		x11 wm
 DYNAMIC_MASTER_SITES=	yes
 DISTFILES=		${SAWFISH_THEMES}
 
-MAINTAINER=		jschauma@netbsd.org
+MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://themes.freshmeat.net/browse/926/
 COMMENT=		Themes for the sawfish window manager
 

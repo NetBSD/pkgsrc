@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/03/29 12:42:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/17 22:55:20 grant Exp $
 
 DISTNAME=       analog-5.32
 WRKSRC=		${WRKDISTDIR}/src
@@ -8,7 +8,7 @@ MASTER_SITES=   ${HOMEPAGE} \
 		http://www.statslab.cam.ac.uk/~sret1/analog/ \
 		http://www.gekko.de/analog/
 
-MAINTAINER=     tron@netbsd.org
+MAINTAINER=     tron@NetBSD.org
 HOMEPAGE=	http://www.analog.cx/
 COMMENT=	Extremely fast program for analysing WWW logfiles
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2003/06/03 19:22:24 epg Exp $
+# $NetBSD: Makefile.common,v 1.20 2003/07/17 22:55:42 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/mozilla
 MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/src/}
 CATEGORIES=	www
 
-MAINTAINER=	taya@netbsd.org
+MAINTAINER=	taya@NetBSD.org
 HOMEPAGE?=	http://www.mozilla.org/
 
 FILESDIR=	"../../www/mozilla/files"

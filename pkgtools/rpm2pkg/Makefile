@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 13:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 22:52:19 grant Exp $
 
 DISTNAME=	rpm2pkg-1.3
 PKGREVISION=			1
@@ -7,8 +7,8 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+MAINTAINER=	tron@NetBSD.org
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Convert RPM archives to NetBSD packages
 
 CONFLICTS+=	suse-base<=6.4

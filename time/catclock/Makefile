@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:16:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:54:58 grant Exp $
 #
 
 DISTNAME=	catclock
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www2.cenaath.cena.dgac.fr/ftp/decwindows/ \
 		ftp://sunsite.doc.ic.ac.uk/computing/graphics/systems/X11/contrib/vms/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Variant of the MIT xclock with a "cat" mode
 
 USE_BUILDLINK2=	yes

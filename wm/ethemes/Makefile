@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:15 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:11 grant Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -11,7 +11,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://e.themes.org/
 COMMENT=	Themes for the window manager Enlightenment
 

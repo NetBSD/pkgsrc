@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/29 23:14:10 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:55:11 grant Exp $
 #
 
 DISTNAME=	fluxbox-0.1.14
@@ -7,7 +7,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmcneill@netbsd.org
+MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/
 COMMENT=	Window Manager for X based on Blackbox
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/03/17 01:12:54 seb Exp $
+# $NetBSD: Makefile,v 1.32 2003/07/17 22:55:55 grant Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -9,7 +9,7 @@ SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
-MAINTAINER=	shell@netbsd.org
+MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://www.linpro.no/lwp/
 COMMENT=	perl5 library for WWW access
 

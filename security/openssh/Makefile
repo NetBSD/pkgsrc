@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2003/06/10 21:00:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.102 2003/07/17 22:53:01 grant Exp $
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh-3.6.1.2
@@ -13,7 +13,7 @@ MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.openssh.com/
 COMMENT=		Open Source Secure shell client and server (remote login program)
 

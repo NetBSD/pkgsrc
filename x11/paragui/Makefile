@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/13 20:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:56:39 grant Exp $
 #
 
 DISTNAME=		paragui-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		http://savannah.nongnu.org/download/paragui/stable.pkg/1.0.4/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.paragui.org/
 COMMENT=		cross-platform high-level application framework and GUI library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/04/10 01:28:31 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 22:56:08 grant Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:15 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:59 grant Exp $
 
 DISTNAME=	mhash-0.8.17
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mhash/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mhash.sourceforge.net/
 COMMENT=	hash algorithms library
 

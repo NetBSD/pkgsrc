@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2003/01/28 22:03:50 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:51:04 grant Exp $
 
 DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://burry.ca:4141/ddclient/
 COMMENT=	Client to update dynamic DNS entries
 
