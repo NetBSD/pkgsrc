@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/20 16:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/20 16:51:55 wiz Exp $
 #
 
 DISTNAME=	nasm-0.98.08
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://nasm.2y.net/nasm/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nasm.2y.net/
-COMMENT=	General-purpose x86 assembler
+COMMENT=	General-purpose x86 assembler (development version)
 
 BUILD_DEPENDS+=	perl>=5.0:../../lang/perl5
 
