@@ -1,10 +1,71 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.22 2001/11/21 23:01:56 abs Exp $
+# $Id: pkgchk.sh,v 1.23 2001/11/28 11:39:44 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
 PATH=/usr/sbin:${PATH}
+
+check_packages_installed()
+    {
+    UPDATE_TODO=
+    INSTALL_TODO=
+    MISMATCH_TODO=
+
+    for pkgdir in $* ; do
+
+	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
+	    echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
+	    continue
+	fi
+	cd $PKGSRCDIR/$pkgdir
+	if [ -n "$opt_B" ];then
+	    extract_make_vars PKGNAME FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
+	else
+	    extract_make_vars PKGNAME
+	fi
+	if [ -z "$PKGNAME" ]; then
+	    echo "Unable to extract PKGNAME for $pkgdir"
+	    exit 1
+	fi
+	if [ ! -d /var/db/pkg/$PKGNAME ];then
+	    echo_n "$PKGNAME: "
+	    pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
+	    pkginstalled=`pkg_info -e $pkg || true`
+	    INSTALL=
+	    if [ -n "$pkginstalled" ];then
+		echo_n "version mismatch - $pkginstalled"
+		MISMATCH_TODO="$MISMATCH_TODO $pkginstalled"
+		if [ -n "$opt_u" ]; then
+		    UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
+		fi
+	    else
+		echo_n "missing"
+		if [ -n "$opt_a" ] ; then
+		    INSTALL_TODO="$INSTALL_TODO $PKGNAME $pkgdir"
+		fi
+	    fi
+	    if [ -f $PACKAGES/All/$PKGNAME.tgz ] ;then
+		echo_n " (binary package available)"
+	    fi
+	    echo
+	else
+	    if [ -n "$opt_B" ];then
+		current_build_ver=`get_build_ver`
+		installed_build_ver=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
+		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
+		    echo "$PKGNAME: build version information mismatch"
+		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
+		    # should we mark this pkg to be updated if -u is given ??
+		elif [ -n "$opt_v" ];then
+		    echo "$PKGNAME: OK"
+		fi
+	    elif [ -n "$opt_v" ];then
+		echo "$PKGNAME: OK"
+	    fi
+	fi
+    done
+    }
 
 echo_n()
     {
@@ -54,9 +115,8 @@ extract_variables()
     fi
     }
 
-get_build_version()
+get_build_ver()
     {
-    extract_make_vars FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
     files=""
     for f in `pwd`/Makefile ${FILESDIR}/* ${PKGDIR}/*; do
 	if [ -f $f ];then
@@ -307,62 +367,18 @@ if [ -n "$opt_c" ];then
     `
 fi
 
-# Check packages are installed
+# Check $PKGDIRLIST packages are installed and correct version
 #
-for pkgdir in $PKGDIRLIST ; do
+check_packages_installed $PKGDIRLIST
 
-    if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
-	echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
-	continue
+if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
+    run_cmd "pkg_delete -r $MISMATCH_TODO"
+    if [ -n "$opt_a" ] ; then
+	echo "[ Rechecking packages after deletions ]"
+	check_packages_installed $PKGDIRLIST # May need to add more packages
     fi
-    cd $PKGSRCDIR/$pkgdir
-    # Use 'make x' rather than 'make all' to avoid potential licence errors
-    extract_make_vars PKGNAME
-    if [ -z "$PKGNAME" ]; then
-	echo "Unable to extract PKGNAME for $pkgdir"
-	exit 1
-    fi
-    if [ ! -d /var/db/pkg/$PKGNAME ];then
-	echo_n "$PKGNAME: "
-	pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
-	pkginstalled=`pkg_info -e $pkg || true`
-	INSTALL=
-	if [ -n "$pkginstalled" ];then
-	    echo_n "version mismatch - $pkginstalled"
-	    mismatch="$mismatch $pkginstalled"
-	    if [ -n "$opt_u" ]; then
-		UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
-	    fi
-	else
-	    echo_n "missing"
-	    if [ -n "$opt_a" ] ; then
-		INSTALL_TODO="$INSTALL_TODO $PKGNAME $pkgdir"
-	    fi
-	fi
-	if [ -f $PACKAGES/All/$PKGNAME.tgz ] ;then
-	    echo_n " (binary package available)"
-	fi
-	echo
-    else
-	if [ -n "$opt_B" ];then
-	    current_build_version=`get_build_version`
-	    installed_build_version=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
-	    if [ x"$current_build_version" != x"$installed_build_version" ];then
-		echo "$PKGNAME: build version information mismatch"
-		mismatch="$mismatch $PKGNAME"
-		# should we mark this pkg to be updated if -u is given ??
-	    elif [ -n "$opt_v" ];then
-		echo "$PKGNAME: OK"
-	    fi
-	elif [ -n "$opt_v" ];then
-	    echo "$PKGNAME: OK"
-	fi
-    fi
-done
-
-if [ -n "$opt_r" -a -n "$mismatch" ]; then
-    run_cmd "pkg_delete -r $mismatch"
 fi
+
 if [ -n "$UPDATE_TODO" ];then
     echo "[ Update... ]"
 
