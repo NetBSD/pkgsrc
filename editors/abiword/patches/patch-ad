@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2001/10/30 17:47:20 drochner Exp $
+$NetBSD: patch-ad,v 1.8 2001/11/26 13:08:25 martti Exp $
 
---- src/config/require/unix/Makefile.orig	Fri Aug 10 15:54:54 2001
-+++ src/config/require/unix/Makefile	Tue Oct 30 16:16:17 2001
-@@ -185,7 +185,7 @@
+--- src/config/require/unix/Makefile.orig	Fri Oct 26 00:43:46 2001
++++ src/config/require/unix/Makefile	Mon Nov 26 12:50:21 2001
+@@ -187,7 +187,7 @@
  		fi								
  
  else
