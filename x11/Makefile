@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2003/09/11 11:13:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.306 2003/09/12 17:21:34 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -40,6 +40,7 @@ SUBDIR+=	gnome-libs
 SUBDIR+=	gnome-panel
 SUBDIR+=	gnome-python
 SUBDIR+=	gnome-session
+SUBDIR+=	gnome-themes
 SUBDIR+=	gnome-users-guide
 SUBDIR+=	gnome1-panel
 SUBDIR+=	gnome1-session
@@ -53,6 +54,7 @@ SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
 SUBDIR+=	gtk--
 SUBDIR+=	gtk-engines
+SUBDIR+=	gtk-thinice-engines
 SUBDIR+=	gtk10
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2-engines
