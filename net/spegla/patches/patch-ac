@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/02/26 11:27:20 frueauf Exp $
+
+--- Makefile-orig	Sun Feb  7 22:49:59 1999
++++ Makefile	Fri Feb 26 12:11:47 1999
+@@ -12,4 +12,6 @@
+ CFLAGS+= -Wall 
+ LDADD+= -lcompat
+ 
++MANINSTALL= catinstall maninstall
++
+ .include <bsd.prog.mk>

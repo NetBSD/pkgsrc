@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/02/26 11:27:20 frueauf Exp $
+
+--- spegla.c-orig	Tue Feb  9 23:37:42 1999
++++ spegla.c	Fri Feb 26 12:09:22 1999
+@@ -27,7 +27,6 @@
+ 
+ /*$Id: patch-ab,v 1.1.1.1 1999/02/26 11:27:20 frueauf Exp $*/
+ 
+-#include <sys/errno.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/param.h>
+@@ -46,6 +45,7 @@
+ #	include <errno.h>
+ #endif
+ 
++#include <errno.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <stdarg.h>
