@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+etc/prayer.cf
+etc/prayer-accountd.cf
+etc/motd.html
+etc/welcome.html
+sbin/prayer
+sbin/prayer-session
+sbin/prayer-ssl-prune
+sbin/prayer-cyclog
+@dirrm certs

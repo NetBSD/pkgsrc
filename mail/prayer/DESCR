@@ -1,0 +1,19 @@
+Prayer is a small and fast HTTP to IMAP gateway written entirely in C.
+    * Uses persistent connections to IMAP server and support servers.
+    * Target folders remain SELECTed: not a simple-minded proxy.
+    * Full caching (including sort/thread cache) for each open folder.
+    * Up to five persistent IMAP connections (typically one or two in use):
+          o INBOX and one other folder
+          o Postponed message folder stream
+          o Preferences stream
+          o Folder transfer stream
+          o Various optimisations/sharing to minimise actual IMAP connections 
+    * Directory cache: single round trip to IMAP server for directory listing.
+    * Works well with UW IMAP server (even using Unix format mail folders). 
+    * Little discernible load on a Pentium III class system running Linux with
+      5,000 logins/day (400 logins/hour, 150 concurrent logins)
+    * Uses 10% to 20% of the CPU and 400 MBytes of RAM on a PIII class system
+      with 23,000 logins/day (1,700 logins/hour, 850 concurrent logins peak)
+    * Aggressive HTTP/1.0 and 1.1 connection caching to reduce SSL overhead.
+    * Optional gzip compression of pages tunable by IP address range.
+    * Minimal use of fixed length buffers in C source code. 
