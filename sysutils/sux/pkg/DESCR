@@ -1,0 +1,2 @@
+Sux tries to behave exactly like "su -m" and optionally
+calls sshsh to check for a working ssh agent connection.
