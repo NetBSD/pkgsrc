@@ -1,0 +1,24 @@
+PSPP is a program for statistical analysis of sampled data.  It interprets
+commands in the SPSS language and produces tabular output in ASCII, HTML,
+or PostScript format.  In previous releases, PSPP was known as Fiasco.
+
+A main goal of the PSPP project is compatibility with the SPSS language.
+PSPP also aims to be written better than the program it replaces.  Right
+now this includes: 
+
+  * High-quality output formatting: 
+      - Presentation-quality tables on devices that can handle it, such
+        as laser printers and raster displays.  This is currently implemented
+        through a PostScript driver and a simple HTML tables driver.
+      - Other devices, such as terminals and dot-matrix printers, are
+        supported through an ASCII driver.  IBM PC box-drawing
+        characters can also be used.  Bold and italics are supported
+        if the underlying device supports them.
+      - Output can be directed to multiple devices at once and
+        retain the unique output properties of each device.
+      - All this can be done on any operating system that PSPP supports.
+        Though the latest versions of what PSPP replaces support similar
+        functionality, they do so only under non-free Microsoft
+        operating systems. 
+  * Portability: PSPP is easy to port. It should be simple to port it
+        to any operating system having an ANSI C compiler. 
