@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1 2002/11/25 20:48:43 jlam Exp $
+
+--- doc/man/Makefile.in.orig	Mon Nov 25 12:45:23 2002
++++ doc/man/Makefile.in
+@@ -130,7 +130,7 @@ install-man3:
+ 	for i in $$list; do \
+ 	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
+ 	  else file=$$i; fi; \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/ggi$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man3dir)/$$inst"; \
+@@ -145,7 +145,7 @@ uninstall-man3:
+ 	  esac; \
+ 	done; \
+ 	for i in $$list; do \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/ggi$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " rm -f $(DESTDIR)$(man3dir)/$$inst"; \
+@@ -163,7 +163,7 @@ install-man7:
+ 	for i in $$list; do \
+ 	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
+ 	  else file=$$i; fi; \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/ggi$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man7dir)/$$inst"; \
+@@ -178,7 +178,7 @@ uninstall-man7:
+ 	  esac; \
+ 	done; \
+ 	for i in $$list; do \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/ggi$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " rm -f $(DESTDIR)$(man7dir)/$$inst"; \
