@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7076 2004/09/02 02:37:53 schmonz Exp $
+$NetBSD: CHANGES,v 1.7077 2004/09/02 08:24:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4168,3 +4168,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated verilog-current to 20040828 [dmcmahill 2004-09-01]
 	Updated memtester to 4.0.4 [schmonz 2004-09-02]
 	Updated getmail to 4.1.4 [schmonz 2004-09-02]
+	Updated djbdns-run to 20040902 [schmonz 2004-09-02]
