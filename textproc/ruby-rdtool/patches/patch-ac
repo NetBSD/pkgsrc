@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2004/03/07 04:40:26 taca Exp $
+$NetBSD: patch-ac,v 1.4 2004/11/27 15:28:30 taca Exp $
 
 --- rdtoolconf.rb.orig	2003-03-08 21:45:07.000000000 +0900
 +++ rdtoolconf.rb
-@@ -4,20 +4,32 @@
+@@ -4,28 +4,41 @@
  
  require 'mkmf'
  require 'rbconfig'
@@ -38,12 +38,32 @@ $NetBSD: patch-ac,v 1.3 2004/03/07 04:40:26 taca Exp $
  BIN_DIR = #{$bindir}
  SITE_RUBY = #{$siterubydir}
  RD_DIR = #{$rddir}
-@@ -25,7 +37,7 @@ RD_DIR = #{$rddir}
+ 
  RUBY = #{CONFIG["ruby_install_name"]}
  RUBY_OPT = -I.
- RACC = #{$racc}
+-RACC = #{$racc}
 -# RACC_OPT = -gv
++#RACC = #{$racc}
 +RACC_OPT = #{racc_opt}
++#RD_SUFFIX=
  
  RD_LIBS = rd/block-element.rb \\
            rd/complex-list-item.rb \\
+@@ -90,7 +103,7 @@ clean :
+ 	rm -f ./Makefile
+ 
+ install : rd2 $(RD_LIBS) $(PARSERS)
+-	@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0755, true)' rd2 $(BIN_DIR)
++	@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0755, true)' rd2 $(BIN_DIR)/rd2${RD_SUFFIX}
+ 	@$(RUBY) -r ftools -e 'File::makedirs(*ARGV)' $(SITE_RUBY)/rd
+ 	@$(RUBY) -r ftools -e "dest = ARGV[-1]; ARGV.each do |file| File::install(file, dest, 0644, true) if file != dest end" $(RD_LIBS) $(PARSERS) $(SITE_RUBY)/rd
+ 
+@@ -100,7 +113,7 @@ install-nonext : rd2 $(RD_LIBS) $(PARSER
+ 	@$(RUBY) -r ftools -e "dest = ARGV[-1]; ARGV.each do |file| File::install(file, dest, 0644, true) if file != dest end" $(RD_LIBS) $(PARSERS_NONEXT) $(SITE_RUBY)/rd
+ 
+ install-rmi2html : rmi2html.rb
+-	@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0755, true)' rmi2html.rb $(BIN_DIR)
++	@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0755, true)' rmi2html.rb $(BIN_DIR)/rmi2html${RD_SUFFIX}
+ 	@$(RUBY) -r ftools -e 'File::install(ARGV[0], ARGV[1], 0644, true)' rd/rd2rmi-lib.rb $(SITE_RUBY)/rd
+ 
+ dist :
