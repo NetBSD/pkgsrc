@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/07/11 10:39:09 drochner Exp $
+$NetBSD: distinfo,v 1.5 2002/01/19 16:06:40 drochner Exp $
 
 SHA1 (sg-0.7.0.tar.gz) = 2b5e07f4e6aacfbf6ca51f3f54e96debe8ed1f42
 Size (sg-0.7.0.tar.gz) = 677749 bytes
+SHA1 (patch-aa) = f63d16069f94d3c8f9f803edac256410cfe2d677
 SHA1 (patch-ab) = a8b55efd65d773785247c1c798fdcd1925ae0385
 SHA1 (patch-ac) = 603070a4dbdd2d98f94786408218d056eff9b8f4
