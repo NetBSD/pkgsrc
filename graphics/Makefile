@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2000/08/28 17:34:35 rh Exp $
+# $NetBSD: Makefile,v 1.89 2000/08/28 17:39:08 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -15,6 +15,7 @@
     SUBDIR += dxsamples
     SUBDIR += ee
     SUBDIR += fbm
+    SUBDIR += flashplayer
     SUBDIR += fly
     SUBDIR += fnlib
     SUBDIR += freetype
