@@ -1,21 +1,24 @@
-$NetBSD: patch-aa,v 1.1 1999/02/19 04:29:46 tv Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/10 14:33:08 dmcmahill Exp $
 
---- configure.orig	Thu Feb 18 22:54:51 1999
-+++ configure	Thu Feb 18 22:55:15 1999
-@@ -1302,6 +1302,7 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Mon Oct  4 12:11:17 1999
++++ configure	Sat Oct  9 13:41:14 1999
+@@ -1316,5 +1316,5 @@
  fi
  
+-
 +if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+@@ -1469,10 +1469,10 @@
  
-@@ -1347,7 +1348,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
 -
 +fi
  
- # Extract the first word of "gcc", so it can be a program name with args.
- set dummy gcc; ac_word=$2
+ echo $ac_n "checking for Cygwin environment""... $ac_c" 1>&6
