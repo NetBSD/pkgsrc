@@ -1,0 +1,54 @@
+$NetBSD: patch-ag,v 1.1 2001/02/27 08:20:26 skrll Exp $
+
+--- ltcf-cxx.sh.orig	Tue Feb  6 05:05:05 2001
++++ ltcf-cxx.sh
+@@ -290,7 +290,33 @@
+     esac
+     ;;
+   netbsd*)
+-    # NetBSD uses g++ - do we need to do anything?
++    if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      # Surely {pre|post}dep_objects should be added here!
++      archive_cmds='$LD -Bshareable -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
++      wlarc=
++      # Determine if we need to override the c++rt0 that is
++      # picked up by analysing output_verbose_link_cmds
++      if test -f ${PREFIX}/lib/c++rt0/c++rt0.o.PIC; then
++        cpprt0_file="${PREFIX}/lib/c++rt0/c++rt0.o.PIC"
++      else
++        cpprt0_file=
++      fi
++      hardcode_direct=yes
++      hardcode_libdir_flag_spec='-R$libdir'
++      hardcode_shlibpathvar_var=no
++    else
++      # Workround pre 1.5 gcc LIBGCC_SPEC problems.
++      if $CC -dumpspecs | grep -A1 libgcc | grep shared >/dev/null; then
++        archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      else
++        # This causes problems libgcc isn't available as a shared object.
++        archive_cmds='$LD -shared -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags -soname $soname' 
++        wlarc=
++      fi
++    fi
++    # Make sure that we don't add -lgcc back in via postdep.
++    output_verbose_link_cmds='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | egrep "\-L" | sed -e "s/-lgcc -lc -lgcc//"'
+     ;;
+   osf3*)
+     if test "$with_gcc" = yes && test "$with_gnu_ld" = no; then
+@@ -859,6 +885,14 @@
+ 
+     esac
+   done
++
++  case "$host_os" in
++  netbsd*)
++    if test -n "$cpprt0_file"; then
++      predep_objects=`eval echo $predep_objects | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
++    fi
++    ;;
++  esac
+ 
+   # Clean up.
+   rm -f a.out

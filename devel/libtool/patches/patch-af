@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2001/02/27 08:20:26 skrll Exp $
+
+--- ltcf-c.sh.orig	Sun Jan 28 05:05:02 2001
++++ ltcf-c.sh
+@@ -184,8 +184,15 @@
+       archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+       wlarc=
+     else
+-      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++     if $CC -dumpspecs | grep -A1 libgcc | grep shared >/dev/null; then
++       archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++       archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++     else
++       # This causes problems on some platforms because libgcc isn't
++       # available compiled -fPIC
++       archive_cmds='$LD -shared -o $lib /usr/lib/crtbeginS.o $libobjs $deplibs $linker_flags -soname $soname /usr/lib/crtendS.o'
++       wlarc=
++     fi
+     fi
+     ;;
+ 

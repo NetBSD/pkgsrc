@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.141 2001/02/17 15:09:51 skrll Exp $
+# $NetBSD: Packages.txt,v 1.142 2001/02/27 08:20:23 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -874,11 +874,15 @@ Here's how to use libtool in a pkg in seven simple steps:
    objects are changed to have a .lo extension.  Change OBJS as necessary.
    This automatically creates all of the .a, .so.major.minor, and ELF
    symlinks (if necessary) in the build directory. Be sure to include
-   the -version-info esp. when major and minor are zero, as libtool will
-   strip off the shared library version else. Also, any "-release" should
-   be removed, as it removes the version info as well.
+   the -version-info especially when major and minor are zero, as libtool
+   will otherwise strip off the shared library version.
 
-   PLIST gets all of the .a, .la and so, .so.major and .so.major.minor
+   The "-release" option has been disabled in the pkgsrc version of libtool
+   as it creates unnecessary differences between ELF and a.out platforms.
+
+   The -rpath argument is the install directory of the library being built.
+
+   PLIST should include all of the .a, .la and so, .so.major and .so.major.minor
    entries.
 
 4. When linking shared object (.so) files, i.e. files that are loaded via
@@ -929,6 +933,24 @@ The pkg's own libtool is made by ltconfig script at do-configure target.
 If USE_LIBTOOL and LTCONFIG_OVERRIDE are defined, the specified ltconfig is
 overridden, using the devel/libtool instead of the pkg's own libtool.
 
+If your package makes use of the platform independant method of loading
+dynamic shared objects libltdl then you should add USE_LTDL= yes to the
+Makefile.
+
+Some packages use libtool incorrectly so that the package may work or build
+on NetBSD. Some common errors are
+
+ * The inclusion of a shared object (-module) as a dependent library in an
+   executable or library. This in itself isn't a problem if one of two things
+   has been done.
+
+   1. The shared object is named correctly, i.e. libfoo.la and not foo.la
+
+   2. The -dlopen option is used when linking an executable.
+
+ * The use of libltdl without the correct calls to initialisation routines.
+   The function lt_dlinit() should be called and the macro 
+   LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
  6.4 Gotchas of FreeBSD ports
  ============================

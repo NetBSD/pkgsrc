@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.6 2001/02/11 10:12:04 skrll Exp $
+$NetBSD: patch-ac,v 1.7 2001/02/27 08:20:25 skrll Exp $
 
---- config.guess.orig	Fri May 26 18:30:02 2000
+--- config.guess.orig	Mon Aug 28 05:05:02 2000
 +++ config.guess
-@@ -76,33 +76,24 @@
+@@ -118,33 +118,24 @@
  	# compatibility and a consistent mechanism for selecting the
  	# object file format.
  	# Determine the machine/vendor (is the vendor relevant).
 -	case "${UNAME_MACHINE}" in
--	    amiga) machine=m68k-cbm ;;
+-	    amiga) machine=m68k-unknown ;;
 -	    arm32) machine=arm-unknown ;;
 -	    atari*) machine=m68k-atari ;;
 -	    sun3*) machine=m68k-sun ;;

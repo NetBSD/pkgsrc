@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/02/27 08:20:25 skrll Exp $
+
+--- libltdl/ltdl.c.orig	Sat Feb  3 05:05:05 2001
++++ libltdl/ltdl.c
+@@ -87,7 +87,7 @@
+ 
+ /* max. filename length */
+ #ifndef LT_FILENAME_MAX
+-#  define LT_FILENAME_MAX	1024
++#  define LT_FILENAME_MAX	2048
+ #endif
+ 
+ /* This is the maximum symbol size that won't require malloc/free */

@@ -1,42 +1,16 @@
-$NetBSD: patch-ab,v 1.15 2001/01/26 16:42:45 skrll Exp $
+$NetBSD: patch-ab,v 1.16 2001/02/27 08:20:25 skrll Exp $
 
---- ltmain.in.orig	Sat May 27 02:53:15 2000
-+++ ltmain.in
-@@ -819,6 +819,7 @@
-     old_convenience=
-     deplibs=
-     linkopts=
-+    wllinkopts=
- 
-     if test -n "$shlibpath_var"; then
-       # get the directories listed in $shlibpath_var
-@@ -1154,6 +1155,25 @@
- 	continue
- 	;;
- 
-+      -Wl,*)
-+       args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
-+       arg=
-+       IFS="${IFS=     }"; save_ifs="$IFS"; IFS=','
-+       for flag in $args; do
-+         IFS="$save_ifs"
-+         case "$flag" in
-+           *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-+           flag="\"$flag\""
-+           ;;
-+         esac
-+         arg="$arg $wl$flag"
-+         linkopts="$linkopts $flag"
-+         wllinkopts="$wllinkopts $wl$flag"
-+       done
-+       IFS="$save_ifs"
-+       arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
-+       ;;
-+
-       # Some other compiler flag.
-       -* | +*)
- 	# Unknown arguments in both finalize_command and compile_command need
-@@ -1656,7 +1676,7 @@
+--- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
++++ ltmain.sh
+@@ -946,7 +946,6 @@
+ 	  continue
+ 	  ;;
+ 	release)
+-	  release="-$arg"
+ 	  prev=
+ 	  continue
+ 	  ;;
+@@ -2397,7 +2396,7 @@
  
  	# Check that each of the things are valid numbers.
  	case "$current" in
@@ -45,7 +19,7 @@ $NetBSD: patch-ab,v 1.15 2001/01/26 16:42:45 skrll Exp $
  	*)
  	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -1665,7 +1685,7 @@
+@@ -2406,7 +2405,7 @@
  	esac
  
  	case "$revision" in
@@ -54,7 +28,7 @@ $NetBSD: patch-ab,v 1.15 2001/01/26 16:42:45 skrll Exp $
  	*)
  	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -1674,7 +1694,7 @@
+@@ -2415,7 +2414,7 @@
  	esac
  
  	case "$age" in
@@ -63,47 +37,13 @@ $NetBSD: patch-ab,v 1.15 2001/01/26 16:42:45 skrll Exp $
  	*)
  	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -1772,7 +1792,7 @@
- 	fi
- 
- 	# Remove version info from name if versioning should be avoided
--	if test "$avoid_version" = yes && test "$need_version" = no; then
-+	if test "$avoid_version" = yes; then
- 	  major=
- 	  versuffix=
- 	  verstring=""
-@@ -1799,6 +1819,9 @@
- 	  # rhapsody is a little odd...
- 	  deplibs="$deplibs -framework System"
- 	  ;;
-+        *-*-netbsd*)
-+	  # Don't link with libc until the a.out ld.so is fixed.
-+	  ;;
- 	*)
- 	  # Add libc to deplibs on all other systems.
- 	  deplibs="$deplibs -lc"
-@@ -2103,6 +2126,16 @@
- 	  $run eval '$echo "X$include_expsyms" | $SP2NL >> "$export_symbols"'
- 	fi
- 
-+	# Check whether we need to link in c++rt0.o on a.out because of
-+	# constructors/destructors
-+	if test -n "$ctor_check_cmd"; then
-+	  eval cmd=\"$ctor_check_cmd\"
-+	  #$show "$cmd"
-+	  if $run eval "$cmd" ; then
-+	    cppopts="$cpprt0"
-+	  fi
-+	fi
-+
- 	if test -n "$convenience"; then
- 	  if test -n "$whole_archive_flag_spec"; then
- 	    eval libobjs=\"\$libobjs $whole_archive_flag_spec\"
-@@ -2146,6 +2179,7 @@
- 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
- 	  eval flag=\"$thread_safe_flag_spec\"
- 	  linkopts="$linkopts $flag"
-+          wllinkopts="$wllinkopts $wl$flag"
- 	fi
- 
- 	# Do each of the archive commands.
+@@ -2612,6 +2611,9 @@
+ 	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos*)
+ 	    # these systems don't actually have a c library (as such)!
+ 	    ;;
++          *-*-netbsd*)
++            # Don't link with libc until the a.out ld.so is fixed.
++            ;;
+ 	  *)
+  	    # Add libc to deplibs on all other systems if necessary.
+  	    if test $build_libtool_need_lc = "yes"; then
