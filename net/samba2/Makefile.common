@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/11 00:41:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/11 21:52:46 jlam Exp $
 #
 # NOTE: This file is included by:
 #
@@ -20,8 +20,8 @@ MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
 .endfor
 EXTRACT_SUFX=		.tar.bz2
 
-DISTINFO_FILE?=		${.CURDIR}/../../net/samba/distinfo
-PATCHDIR?=		${.CURDIR}/../../net/samba/patches
+DISTINFO_FILE?=		${.CURDIR}/../../net/samba2/distinfo
+PATCHDIR?=		${.CURDIR}/../../net/samba2/patches
 
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
