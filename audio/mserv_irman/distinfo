@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/07/16 23:34:36 abs Exp $
+$NetBSD: distinfo,v 1.6 2004/11/06 01:48:51 abs Exp $
 
-SHA1 (mserv_irman-0.19.tbz) = effa5ad7fec7e9c76a83cc8b2f4ff2c86902dbca
-Size (mserv_irman-0.19.tbz) = 9185 bytes
+SHA1 (mserv_irman-0.20.tbz) = 7b1c85988ee57b83418a2fc4f5fc90889401711e
+Size (mserv_irman-0.20.tbz) = 9204 bytes
