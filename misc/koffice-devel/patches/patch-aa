@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/10/04 20:26:34 mycroft Exp $
+
+--- filters/karbon/msod/msodimport.cc.orig	2003-10-04 20:22:54.000000000 +0000
++++ filters/karbon/msod/msodimport.cc	2003-10-04 20:23:03.000000000 +0000
+@@ -30,7 +30,7 @@
+ #include <qpointarray.h>
+ 
+ typedef KGenericFactory<MSODImport, KoFilter> MSODImportFactory;
+-K_EXPORT_COMPONENT_FACTORY( libmsodimport, MSODImportFactory( "karbonmsodimport" ) );
++K_EXPORT_COMPONENT_FACTORY( libkarbonmsodimport, MSODImportFactory( "karbonmsodimport" ) );
+ 
+ const int MSODImport::s_area = 30505;
+ 
