@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2003/07/18 10:26:05 uebayasi Exp $
+$NetBSD: patch-aa,v 1.8 2003/07/22 03:58:53 uebayasi Exp $
 
 Index: AUTHORS
 ===================================================================
@@ -6807,6 +6807,7 @@ diff -N egg-sim-old.el
 -	    (setq j (1+ j)))
 -	  (insert (format "\n")))
 -	(setq i (1+ i))))))
+\ No newline at end of file
 Index: egg-sim.el
 ===================================================================
 RCS file: /cvs/tamago/tamago/egg-sim.el,v
@@ -6838,6 +6839,7 @@ diff -d -u -p -r1.1.1.1 -r1.2
  	    (setq j (1+ j)))
  	  (insert (format "\n")))
 -	(setq i (1+ i))))))
+\ No newline at end of file
 +	(setq i (1+ i))))))
 Index: egg-simv.el
 ===================================================================
@@ -6893,6 +6895,7 @@ diff -N egg-simv.el
 -"Y" ",2O(B" ",2V(B" ",2[(B" ",2}(B" ",2\(B" 
 -
 -",2p(B" ",1p(B"
+\ No newline at end of file
 Index: egg-util.el
 ===================================================================
 RCS file: egg-util.el
@@ -8317,6 +8320,7 @@ diff -d -u -p -r1.1.1.3 -r1.3
 -  (load-leim-list-except-this)
 -
 -  )
+\ No newline at end of file
 +;;; leim-list.el ends here.
 Index: menudiag.el
 ===================================================================
