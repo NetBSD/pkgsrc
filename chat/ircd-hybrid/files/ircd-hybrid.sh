@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ircd-hybrid,v 1.2 2002/07/06 20:36:58 tv Exp $
+# $NetBSD: ircd-hybrid.sh,v 1.1 2003/07/29 17:26:02 jmmv Exp $
 #
 # PROVIDE: ircdhybrid
 # REQUIRE: DAEMON
