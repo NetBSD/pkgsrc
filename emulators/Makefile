@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2003/04/19 07:14:39 rh Exp $
+# $NetBSD: Makefile,v 1.81 2003/04/28 23:18:18 jdolecek Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -57,6 +57,7 @@ SUBDIR+=	suse_audio
 SUBDIR+=	suse_base
 SUBDIR+=	suse_compat
 SUBDIR+=	suse_devel
+SUBDIR+=	suse_freetype2
 SUBDIR+=	suse_glx
 SUBDIR+=	suse_gtk
 SUBDIR+=	suse_libc5
