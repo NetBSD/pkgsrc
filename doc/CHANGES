@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6803 2004/08/05 17:50:05 schmonz Exp $
+$NetBSD: CHANGES,v 1.6804 2004/08/05 22:31:54 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3733,3 +3733,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated un-ttf to 20040804 [minskim 2004-08-04]
 	Added p5-Text-WikiFormat-0.72 [cube 2004-08-04]
 	Updated getmail to 4.0.6 [schmonz 2004-08-05]
+	Updated expat to 1.95.8 [recht 2004-08-05]
+	Updated fontconfig to 2.2.96 [recht 2004-08-05]
+	Updated Xft2 to 2.1.6 [recht 2004-08-05]
+	Updated Xfixes to 2.0.1 [recht 2004-08-05]
+	Updated fixesext to 2.0.1 [recht 2004-08-05]
+	Updated Xrender to 0.8.4 [recht 2004-08-05]
+	Updated py-PgSQL to 2.4nb2 [recht 2004-08-05]
