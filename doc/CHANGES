@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4605 2004/01/25 22:31:32 kleink Exp $
+$NetBSD: CHANGES,v 1.4606 2004/01/26 03:34:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfstt to 1.6nb1 [wiz 2004-01-25]
 	Updated libksba to 0.9.1nb1 [kleink 2004-01-25]
 	Updated libksba04 0.4.7nb1 [kleink 2004-01-25]
+	Updated balsa2 2.0.16 [rh 2004-01-26]
