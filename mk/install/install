@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.17 2002/11/17 08:58:51 salo Exp $
+# $NetBSD: install,v 1.18 2002/11/21 10:11:57 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -130,6 +130,7 @@ POST-INSTALL)
 				msgadd "#${dir}"
 			else
 				${MKDIR} "${dir}"
+				${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
 			fi
 		done
 		eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
@@ -145,10 +146,13 @@ POST-INSTALL)
 				fi
 				msgadd "#${dir} (o=${owner}, g=${group}, m=${mode})"
 			else
-				${MKDIR} "${dir}"
-				${CHOWN} "${owner}" "${dir}"
-				${CHGRP} "${group}" "${dir}"
-				${CHMOD} "${mode}" "${dir}"
+				if [ ! -d "${dir}" ]; then
+					${MKDIR} "${dir}"
+					${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+				fi
+				${CHOWN} -R "${owner}" "${dir}"
+				${CHGRP} -R "${group}" "${dir}"
+				${CHMOD} -R "${mode}" "${dir}"
 			fi
 		done
 	fi
