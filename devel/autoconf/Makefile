@@ -1,26 +1,30 @@
-# $NetBSD: Makefile,v 1.33 2002/08/25 21:49:38 jlam Exp $
-# FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
-#
+# $NetBSD: Makefile,v 1.34 2002/10/03 19:30:58 wiz Exp $
 
-DISTNAME=       autoconf-2.13
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=autoconf/}
+DISTNAME=		autoconf-2.54
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
-COMMENT=	Generates automatic source code configuration scripts
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
+COMMENT=		Generates automatic source code configuration scripts
 
-DEPENDS=	m4-1.4:../../devel/m4
+DEPENDS=		m4-1.4:../../devel/m4
 
+# The next line is for conflicts with old versions of this package,
+# which had autoconf-devel as PKGNAME.
 CONFLICTS=		autoconf-devel-[0-9]*
 
 USE_BUILDLINK2=		YES
+
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--without-lispdir
 CONFIGURE_ENV+=		AWK="${AWK}"
 M4=			${PREFIX}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
-TEXINFO_OVERRIDE=	YES
+
+PERL5_REQD=		5.6
+TEXINFO_REQD=		4.0
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/texinfo.mk"
