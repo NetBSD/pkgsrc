@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/06/18 23:58:07 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/30 18:40:15 wiz Exp $
 
-DISTNAME=		httpd-2.0.39
-PKGNAME=		apache-2.0.39
+DISTNAME=		httpd-${APACHE_VERSION}
+PKGNAME=		apache-${APACHE_VERSION}
+APACHE_VERSION=		2.0.39
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
@@ -10,9 +12,9 @@ MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		HTTP (Web) server, version 2
+COMMENT=		Apache HTTP (Web) server, version 2
 
-CONFLICTS=		apache-*modssl-[0-9]* apache-[0-9]* apache6-[0-9]*
+CONFLICTS=		apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
 BUILD_DEFS+=		USE_INET6
@@ -49,10 +51,11 @@ CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
 CONFIGURE_ARGS+=	--enable-so
 BUILD_DEFS+=		APACHE_MODULES
 
+APACHE_USER?=	www
+APACHE_GROUP?=	www
+
 SUEXEC_COMMENT?=	"@comment "
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-APACHE_SUEXEC_USER?=	www
-APACHE_SUEXEC_GROUP?=	nogroup
 APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/apache/htdocs
 APACHE_SUEXEC_PATH=     /bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
@@ -65,9 +68,10 @@ CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=		APACHE_SUEXEC APACHE_SUEXEC_CONFIGURE_ARGS
 SUEXEC_COMMENT=		# empty
 
-PKG_GROUPS=		${APACHE_SUEXEC_GROUP}
-PKG_USERS=		${APACHE_SUEXEC_USER}:${APACHE_SUEXEC_GROUP}::Apache\\ suEXEC\\ user
 .endif
+
+PKG_GROUPS=		${APACHE_GROUP}
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
 
 PLIST_SUBST+=		SUEXEC_COMMENT=${SUEXEC_COMMENT}
 
@@ -86,11 +90,7 @@ MAKE_DIRS=		${PREFIX}/share/httpd
 MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
 OWN_DIRS= 		/var/log/httpd
 OWN_DIRS+=		/var/db/httpd
-.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_SUEXEC_USER} ${APACHE_SUEXEC_GROUP} 0755
-.else
-OWN_DIRS_PERMS+=	/var/db/httpd/proxy nobody nobody 0755
-.endif
+OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
@@ -127,10 +127,8 @@ AP_CONF_FILE_SED+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
 AP_CONF_FILE_SED+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
 AP_CONF_FILE_SED+=	-e "s|logs/|/var/log/httpd/|g"
 AP_CONF_FILE_SED+=	-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g"
-.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_SUEXEC_USER}|g"
-AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_SUEXEC_GROUP}|g"
-.endif
+AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g"
+AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
 
 post-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
@@ -162,6 +160,5 @@ post-install:
 
 .include "../../lang/perl5/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"
-
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
