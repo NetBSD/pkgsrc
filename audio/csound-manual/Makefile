@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/19 08:54:25 wiz Exp $
 #
 
 DISTNAME=		csound-manual-4.10
@@ -17,7 +17,7 @@ DISTFILES=		ascii.zip \
 			spplmtxt.zip \
 			toots.zip
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.csound.org
 COMMENT=		Manuals and examples for Csound
 

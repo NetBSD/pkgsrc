@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/19 08:54:23 wiz Exp $
 #
 
 DISTNAME=		cabextract-0.6
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.kyz.uklinux.net/downloads/
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.kyz.uklinux.net/cabextract.php3
 COMMENT=		Microsoft cabinet (.CAB) file extractor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/13 13:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/19 08:54:25 wiz Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		http://www.reduz.com.ar/cheesetracker/
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
 COMMENT=		impulse tracker clone
 
