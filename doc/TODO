@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.567 2003/05/20 08:40:42 wiz Exp $
+$NetBSD: TODO,v 1.568 2003/05/20 11:56:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -101,7 +101,6 @@ Suggested package updates
 	o cronolog-1.6.2 [pkg/21465]
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
-	o curl-7.10.5
 	o cyrus-imapd21-2.1.13
 	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
@@ -116,6 +115,7 @@ Suggested package updates
 	o exim-4.12 [pkg/19850]
 	o exim-4.20
 	o festival-1.4.3
+	o filerunner-2.2.4 [pkg/21626]
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.40
