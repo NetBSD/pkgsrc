@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.299 2003/07/04 11:33:54 martti Exp $
+# $NetBSD: Packages.txt,v 1.300 2003/07/09 16:14:51 agc Exp $
 ###########################################################################
 
 			==========================
@@ -2508,6 +2508,20 @@ unless the "-f" option is used.
 If your package contains interpreted perl scripts, set REPLACE_PERL to
 ensure that the proper interpreter path is set. REPLACE_PERL should
 contain a list of scripts, relative to WRKSRC, that you want adjusted.
+
+ 10.34 Packages with hardcoded paths to other interpreters
+ =========================================================
+
+Your package may also contain scripts with hardcoded paths to other
+interpreters besides (or as well as) perl.  To correct the full
+pathname to the script interpreter, you need to set the following
+definitions in your Makefile (we shall use tclsh in this example):
+
+REPLACE_INTERPRETER+=	tcl
+_REPLACE.tcl.old=	.*/bin/tclsh
+_REPLACE.tcl.new=	${PREFIX}/bin/tclsh
+_REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed
+
 
  11 Submitting & Committing
  ==========================
