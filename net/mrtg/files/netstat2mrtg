@@ -1,0 +1,26 @@
+#! @PREFIX@/bin/perl
+
+$if = $ARGV[0];
+open(NET, "netstat -I $if -b|");
+while ($line = <NET>)
+{
+	chop $line;
+	if ($line =~ m|^.+<Link>[\s\t]+\S+[\s\t]+(\w+)[\s\t]+(\w+)$|)
+	{
+		print "$1\n";
+		print "$2\n";
+	}
+}
+close(NET);
+
+open(UP, "uptime|");
+while($line = <UP>)
+{
+	chop $line;
+	if ($line =~ m|^.*up\s+(.+),\s+\d+\suser.*|)
+	{
+		print "$1\n";
+	}
+}
+close(UP);
+print "$if\n";
