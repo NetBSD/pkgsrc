@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/04 12:58:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/06 11:19:33 hubertf Exp $
 #
 
 DISTNAME=		MyODBC-2.50.36
@@ -24,5 +24,10 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_GMAKE=		yes
+
+post-install:
+	${INSTAL_DATA_DIR} ${PREFIX}/share/doc/myodbc
+	${INSTAL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/myodbc
+	${INSTAL_DATA} ${WRKSRC}/README-WIN32 ${PREFIX}/share/doc/myodbc
 
 .include "../../mk/bsd.pkg.mk"
