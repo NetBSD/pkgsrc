@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.21.2.3 2003/10/22 22:58:36 jmc Exp $
+# $NetBSD: Makefile,v 1.21.2.4 2003/10/23 02:43:35 jmc Exp $
 
-DISTNAME=	horde-2.2.4-RC1
-PKGNAME=	horde-2.2.4rc1
-WRKSRC=		${WRKDIR}/horde-2.2.4
+DISTNAME=	horde-2.2.4
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
