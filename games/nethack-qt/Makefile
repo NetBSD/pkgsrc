@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/31 09:18:02 matthias Exp $
+# $NetBSD: Makefile,v 1.3 1998/12/29 19:42:09 tron Exp $
 #
 
 DISTNAME=		qnethack-3.2.2.1.0.1.src
@@ -11,7 +11,7 @@ HOMEPAGE=		http://trolls.troll.no/warwick/nethack/
 
 DEPENDS+=		nethack-lib-3.2.2:../nethack-lib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-DEPENDS+=		qt-1.40:../../x11/qt
+DEPENDS+=		qt-1.42:../../x11/qt
 
 USE_GMAKE=		yes
 WRKSRC=			../nethack-lib/${WRKDIR_BASENAME}/nethack-3.2.2
