@@ -1,0 +1,18 @@
+Release 2.0 of xp
+
+xp started as a filter to simply display stdin in an Athena text
+widget.  It grew to be a more general file displayer with an emphasis
+on ease of browsing and searching, but I've tried to keep its interface
+(and implementation) simple and make it useful in shell scripts.
+
+xp tries to be reasonably efficient in use of memory when displaying
+large files, given that the text widgets requires the whole file to be
+in memory, by using a read-only text widget and freeing memory when a
+file is no longer displayed (so if you go back to a previously
+displayed file it gets re-opened).
+
+xp incorporates Henry Spencer's implementation of egrep style regular
+expression matching. The xp distribution includes that part of the
+regexp distribution which it requires.
+
+gerry.tomlinson@ncl.ac.uk	November 1995
