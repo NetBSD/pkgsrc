@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/22 05:09:20 sakamoto Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/12 03:44:28 soren Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.0
@@ -18,7 +18,7 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_linux-6.1p1:../../emulators/suse_linux
+DEPENDS=	suse_linux>=6.1p1:../../emulators/suse_linux
 DISTNAME=	linux-ar-40
 #.elif (${MACHINE_ARCH} == "alpha")
 #.if !exists(/emul/osf1/sbin/loader)
