@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/12/28 02:47:48 reed Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/21 18:08:31 wiz Exp $
 
 DISTNAME=		cfs-1.4.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security
 MASTER_SITES=		http://www.crypto.com/software/
 
