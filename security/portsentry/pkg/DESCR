@@ -1,0 +1,22 @@
+PortSentry is designed to detect and respond to port scans against a
+target host in real-time.  Some of the more useful features include: 
+
++ Runs on TCP and UDP sockets to detect port scans against your
+system.  PortSentry is configurable to run on multiple sockets at the
+same time so you only need to start one copy to cover dozens of
+tripwired services. 
++ PortSentry will react to a port scan attempt by blocking the host in
+real-time.  This is done through configured options of either dropping
+the local route back to the attacker, using the Linux ipfwadm/ipchains
+command, *BSD ipfw command, and/or dropping the attacker host IP into
+a TCP Wrappers hosts.deny file automatically. 
++ PortSentry has an internal state engine to remember hosts that
+connected previously.  This allows the setting of a trigger value to
+prevent false alarms and detect "random" port probing. 
++ PortSentry will report all violations to the local or remote syslog
+daemons indicating the system name, time of attack, attacking host IP
+and the TCP or UDP port a connection attempt was made to.  When used
+in conjunction with Logcheck it will provide an alert to
+administrators through e-mail. 
++ Once a scan is detected your system will turn into a blackhole and
+disappear from the attacker.  This feature stops most attacks cold. 
