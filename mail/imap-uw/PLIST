@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/15 08:30:26 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/11 12:21:21 tron Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -42,13 +42,20 @@ sbin/mtest
 sbin/rimapd
 share/doc/imap-uw/BUILD
 share/doc/imap-uw/CONFIG
-share/doc/imap-uw/FAQ
+share/doc/imap-uw/FAQ.txt
+share/doc/imap-uw/FAQ.html
 share/doc/imap-uw/RELNOTES
 share/doc/imap-uw/SSLBUILD
 share/doc/imap-uw/Y2K
 share/doc/imap-uw/bugs.txt
 share/doc/imap-uw/calendar.txt
 share/doc/imap-uw/commndmt.txt
+share/doc/imap-uw/draft/imapbase.txt
+share/doc/imap-uw/draft/sort.txt
+share/doc/imap-uw/draft/thread.txt
+share/doc/imap-uw/draft/README
+share/doc/imap-uw/draft/binary.txt
+share/doc/imap-uw/draft/multapnd.txt
 share/doc/imap-uw/drivers.txt
 share/doc/imap-uw/formats.txt
 share/doc/imap-uw/imaprc.txt
@@ -78,6 +85,9 @@ share/doc/imap-uw/rfc/rfc2342.txt
 share/doc/imap-uw/rfc/rfc2359.txt
 share/doc/imap-uw/rfc/rfc2595.txt
 share/doc/imap-uw/rfc/rfc2683.txt
+share/doc/imap-uw/rfc/rfc2971.txt
+share/doc/imap-uw/rfc/rfc3348.txt
 @dirrm share/doc/imap-uw/rfc
+@dirrm share/doc/imap-uw/draft
 @dirrm share/doc/imap-uw
 @dirrm include/c-client
