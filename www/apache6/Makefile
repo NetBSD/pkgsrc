@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/26 16:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/05 14:01:12 wiz Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -84,7 +84,7 @@ BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC USE_INET6
 #		../${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
 #		../${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
 #		| ${PATCH} ${PATCH_ARGS}
-#	@cd ${WRKSRC} && tail +129 \
+#	@cd ${WRKSRC} && ${TAIL} +129 \
 #		../${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
 #		| ${PATCH} ${PATCH_ARGS}
 
