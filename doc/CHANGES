@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3994 2003/12/06 10:06:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.3995 2003/12/06 16:11:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4990,3 +4990,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgcrypt to 1.1.90 [xtraeme 2003-12-05]
 	Updated opencdk to 0.5.3 [xtraeme 2003-12-05]
 	Updated gnutls to 1.0.0 [xtraeme 2003-12-05] 
+	Updated wmbiff to 0.4.19 [tron 2003-12-06]
