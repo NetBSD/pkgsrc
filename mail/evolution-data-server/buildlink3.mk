@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/04/01 18:40:51 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/01 20:20:23 xtraeme Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 EVOLUTION_DATA_SERVER_BUILDLINK3_MK:=	${EVOLUTION_DATA_SERVER_BUILDLINK3_MK}+
@@ -12,7 +12,8 @@ BUILDLINK_PACKAGES+=	evolution-data-server
 
 .if !empty(EVOLUTION_DATA_SERVER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=0.0.90
-BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../local/evolution-data-server
+BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../mail/evolution-data-server
+.endif  # EVOLUTION_DATA_SERVER_BUILDLINK3_MK
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"
@@ -25,7 +26,5 @@ BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../local/evolution-data-server
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
-.endif	# EVOLUTION_DATA_SERVER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
