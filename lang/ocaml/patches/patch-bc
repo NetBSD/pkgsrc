@@ -1,0 +1,23 @@
+$NetBSD: patch-bc,v 1.1 2004/04/22 09:18:41 tron Exp $
+
+--- otherlibs/labltk/camltk/Makefile.orig	Fri Apr 26 15:57:38 2002
++++ otherlibs/labltk/camltk/Makefile	Thu Apr 22 10:34:37 2004
+@@ -21,14 +21,12 @@
+ 	$(MAKE) -f Makefile.gen clean
+ 
+ install: $(CAMLTKOBJS)
+-	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(CAMLTKOBJS:.cmo=.cmi) $(CWIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
+-	chmod 644 $(INSTALLDIR)/*.cmi
++	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(CAMLTKOBJS:.cmo=.cmi) $(CWIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
+ 
+ installopt: $(CAMLTKOBJSX)
+-	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(CAMLTKOBJSX) $(INSTALLDIR)
+-	chmod 644 $(INSTALLDIR)/*.cmx
++	@if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(CAMLTKOBJSX) $(INSTALLDIR)
+ 
+ .SUFFIXES :
+ .SUFFIXES : .mli .ml .cmi .cmx .cmo .mlp
