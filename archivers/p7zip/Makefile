@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/26 02:43:38 wiz Exp $
 #
 
-DISTNAME=		p7zip_4.12_src
-PKGNAME=		p7zip-4.12
+DISTNAME=		p7zip_4.13_src
+PKGNAME=		p7zip-4.13
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=		.tar.bz2
