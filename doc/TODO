@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2398 2004/11/19 19:01:47 wiz Exp $
+$NetBSD: TODO,v 1.2399 2004/11/19 19:03:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,6 @@ Suggested package updates
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o eukleides-1.0.1
 	o exmh-2.7.0
-	o faac-1.24.1
 	o fakeroot-1.1.5
 	o fd-2.06a
 	o fdgw-20040609
