@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.335 2002/10/01 17:44:13 drochner Exp $
+# $NetBSD: Makefile,v 1.336 2002/10/07 20:01:07 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -186,7 +186,6 @@ SUBDIR+=	pload
 SUBDIR+=	poink
 SUBDIR+=	polsms
 SUBDIR+=	poptop
-SUBDIR+=	ppp
 SUBDIR+=	ppp-mppe
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
