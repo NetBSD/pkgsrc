@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/22 17:17:50 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/26 08:08:28 jmmv Exp $
 #
 
 DISTNAME=	netbsd-www-1.0
@@ -16,8 +16,7 @@ EXTRACT_ONLY=	# defined
 NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
-NO_INSTALL=	# defined
 
-#do-install:	# empty
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
