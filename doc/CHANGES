@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6458 2004/07/06 07:52:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6459 2004/07/06 07:58:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdm to 2.6.0.3nb1 [jmmv 2004-07-05]
 	Added aranym-0.8.8beta [xtraeme 2004-07-06]
 	Added hlfl-0.60.1 [xtraeme 2004-07-06]
+	Added xwpe-1.5.29a [xtraeme 2004-07-06]
