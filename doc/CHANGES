@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1771 2003/03/25 18:27:03 atatat Exp $
+$NetBSD: CHANGES,v 1.1772 2003/03/26 04:51:03 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1313,3 +1313,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.15.2 [gehenna 2003-03-25]
 	Updated squid to 2.5.2 [taca 2003-03-25]
 	Updated pkgdepgraph to 2.3 [atatat 2003-03-25]
+	Updated pkgdepgraph to 2.4 [atatat 2003-03-26]
