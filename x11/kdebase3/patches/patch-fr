@@ -1,0 +1,12 @@
+$NetBSD: patch-fr,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kmenuedit/menufile.cpp.orig	2004-07-17 18:52:07.000000000 +0100
++++ kmenuedit/menufile.cpp
+@@ -27,6 +27,7 @@
+ 
+ #include "menufile.h"
+ 
++#undef truncate
+ 
+ #define MF_MENU		"Menu"
+ #define MF_PUBLIC_ID	"-//freedesktop//DTD Menu 1.0//EN"
