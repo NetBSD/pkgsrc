@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.55 2005/01/31 00:27:21 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.56 2005/02/01 10:41:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -119,3 +119,5 @@ Pullup ticket 254 - requested by Takahiro Kambe
 security fix for squid
 Pullup ticket 245 - requested by Jan Schaumann
 generate and upload checksums for bulk builds
+Pullup ticket 256 - requested by Takahiro Kambe
+distfiles fix for squid
