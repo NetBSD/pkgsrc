@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6639 2004/07/22 21:32:00 erh Exp $
+$NetBSD: CHANGES,v 1.6640 2004/07/23 00:34:04 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3509,3 +3509,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mapm-4.9.2 [drochner 2004-07-22]
 	Added gtklife-3.0 [drochner 2004-07-22]
 	Updated jakarta-tomcat to 5.0.27 [erh 2004-07-22]
+	Updated ucblogo to 5.3 [reed 2004-07-23]
