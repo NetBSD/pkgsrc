@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2001/04/07 20:44:14 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2001/04/09 04:09:48 jtb Exp $
 
 --- makeinc.in.orig	Thu Mar  8 23:55:48 2001
 +++ makeinc.in
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2001/04/07 20:44:14 jtb Exp $
 +DLDLIB = 
 +HDFINCLUDE = -I${HDF_PREFIX}/include/hdf -Dunix @HDFDEF@
 +HDFLIBS = -Wl,-R${HDF_PREFIX}/lib -L${HDF_PREFIX}/lib -lmfhdf -ldf -R${JPEG_PREFIX}/lib -L${JPEG_PREFIX}/lib -ljpeg -lz -lm
-+FLIBS = -Wl,-R${F2C_PREFIX}/lib -L${F2C_PREFIX}/lib -lf2c
++FLIBS = -lg2c
  EXTRALIBS = @EXTRALIBS@
  EXTRA_TARGETS = @EXTRA_TARGETS@
  
