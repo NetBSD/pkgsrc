@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2000/04/27 17:03:47 mycroft Exp $
+$NetBSD: patch-ad,v 1.6 2000/04/27 20:44:21 mycroft Exp $
 
 --- screens.c.orig	Mon Oct 21 14:18:25 1996
-+++ screens.c	Thu Apr 27 13:00:04 2000
-@@ -25,6 +25,7 @@
++++ screens.c	Thu Apr 27 16:41:05 2000
+@@ -25,14 +25,15 @@
  #include "cam.h" 
  
  #include <strings.h>
@@ -10,15 +10,16 @@ $NetBSD: patch-ad,v 1.5 2000/04/27 17:03:47 mycroft Exp $
  
  void finish(int sig)
  {
-@@ -33,6 +34,7 @@
-     endwin();
+     close_mixer();
+     echo();
+-    endwin();
      clear();
      refresh();
-+    reset_shell_mode();
++    endwin();
      if (sig != 0)
         exit(1);
  }
-@@ -40,19 +42,21 @@
+@@ -40,19 +41,21 @@
     
  void set_screen(void)
  {
@@ -47,7 +48,7 @@ $NetBSD: patch-ad,v 1.5 2000/04/27 17:03:47 mycroft Exp $
     mvaddstr(LINES-2,4,"Press 'h' for help");
  }
  
-@@ -64,17 +68,17 @@
+@@ -64,17 +67,17 @@
     mvaddstr(Y+1,X+8,"Left"); 
     mvaddstr(Y+2,X+8,"Right"); 
     attrset(COLOR_PAIR(COLOR_SLIDER) | A_ALTCHARSET);
@@ -73,7 +74,7 @@ $NetBSD: patch-ad,v 1.5 2000/04/27 17:03:47 mycroft Exp $
  }
  
  /*
-@@ -87,26 +91,27 @@
+@@ -87,21 +90,21 @@
  {
     if ((level == 1 ) || ( level == 2 )) { 
        attrset(A_NORMAL  | A_ALTCHARSET); 
@@ -101,13 +102,15 @@ $NetBSD: patch-ad,v 1.5 2000/04/27 17:03:47 mycroft Exp $
     }    
  }
  
- void init_screen(void)
- {
-+     def_shell_mode();
-      stdscr = initscr();
-      if ( (COLS < 80) || (LINES < 25) ) {
-         finish(0);
-@@ -181,9 +186,9 @@
+@@ -113,6 +116,7 @@
+         fprintf(stderr,"The screensize has to be minimum 80x25\n");
+         exit(1);
+      }
++     curs_set(0);
+      make_colors();
+ }
+ 
+@@ -181,9 +185,9 @@
     char ch; 
     touchwin(stdscr); 
     help_win = newwin(15,50,(LINES - 15) / 2,(COLS - 50) / 2);
