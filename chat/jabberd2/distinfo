@@ -1,36 +1,12 @@
-$NetBSD: distinfo,v 1.4 2004/11/29 17:54:03 abs Exp $
+$NetBSD: distinfo,v 1.5 2005/01/20 15:08:54 xtraeme Exp $
 
-SHA1 (jabberd-2.0s4/jabberd-2.0s4.tar.gz) = cb429db090982118f2b448499635ff14b91718b8
-Size (jabberd-2.0s4/jabberd-2.0s4.tar.gz) = 716819 bytes
-SHA1 (jabberd-2.0s4/patch-jedi8-sm-object_c) = 06d0737e93c3eee677c20fd2914b4dc70286acf6
-Size (jabberd-2.0s4/patch-jedi8-sm-object_c) = 341 bytes
-SHA1 (jabberd-2.0s4/patch-jedi-mysql-storage) = 4684a8f89f8f79b31d2fcd9c39929404d840e3ef
-Size (jabberd-2.0s4/patch-jedi-mysql-storage) = 1563 bytes
-SHA1 (jabberd-2.0s4/patch-base64) = 1fb446754e86fb5a4361f8be81063d77d1d06a9f
-Size (jabberd-2.0s4/patch-base64) = 4252 bytes
-SHA1 (jabberd-2.0s4/patch-sm-storage_db) = a42c3b75c719bf36148b4a03e05c10d23d8da30a
-Size (jabberd-2.0s4/patch-sm-storage_db) = 1264 bytes
-SHA1 (jabberd-2.0s4/patch-nad-escape) = 3e32fc737958afc2d5faa0134407d12b5cf841c9
-Size (jabberd-2.0s4/patch-nad-escape) = 1052 bytes
-SHA1 (jabberd-2.0s4/patch-jedi-pgsql-storage) = fb3226177bfafeced72a8c74c1594c4ed851d32c
-Size (jabberd-2.0s4/patch-jedi-pgsql-storage) = 2648 bytes
-SHA1 (jabberd-2.0s4/patch-memleaks) = 5d57fc737667ed39185dccc29d9174ae4ece85db
-Size (jabberd-2.0s4/patch-memleaks) = 969 bytes
-SHA1 (jabberd-2.0s4/patch-ns-fix) = 4b3b53cd54c7d93fd4f57a30bcf888fc96a6bf41
-Size (jabberd-2.0s4/patch-ns-fix) = 1193 bytes
-SHA1 (jabberd-2.0s4/patch-sm-nad-triplet) = feedb1b21dc526cf0e1b643c57663c0c7b75a66c
-Size (jabberd-2.0s4/patch-sm-nad-triplet) = 238 bytes
-SHA1 (jabberd-2.0s4/patch-mod_disco_publish) = ff87c23b48ed1a68f77f6757249ac173c1ab2039
-Size (jabberd-2.0s4/patch-mod_disco_publish) = 509 bytes
-SHA1 (jabberd-2.0s4/patch-sm-filter) = 4efd5fb4b5eca2b09eb475bd1be8d25ed6f72a47
-Size (jabberd-2.0s4/patch-sm-filter) = 12616 bytes
-SHA1 (jabberd-2.0s4/patch-c2s-buffers) = bc66b98f81d23d2314b5515cf2191be38985afaf
-Size (jabberd-2.0s4/patch-c2s-buffers) = 12112 bytes
+SHA1 (jabberd-2.0s6.tar.gz) = 10a160e804e3ace8f7f39174db6bfaabe50211f0
+Size (jabberd-2.0s6.tar.gz) = 724448 bytes
 SHA1 (patch-aa) = ff9a1aa6c39b7e96870d4f884de09be8307ac169
 SHA1 (patch-ab) = de1c8ec12b55117223bcca2071499c42ab145a34
 SHA1 (patch-ac) = 312a07fa6772956297789e15025e0ca0fad9ebb7
 SHA1 (patch-ad) = b7776cbd6553f3b3b2f9b20250b1368f196cb85d
 SHA1 (patch-ae) = a5edb31af022b682c96ceacee615999f6439662e
 SHA1 (patch-af) = aad84cbfba7c0519e32df1ed6f31fa8383d73393
-SHA1 (patch-ag) = 2b60461b16a419c69855478f282fa123c00fd54c
-SHA1 (patch-ah) = 332711288dc07c952726357d6d1d804216e5eb56
+SHA1 (patch-ag) = fda728bc2682c76376b68863797fcb085739a047
+SHA1 (patch-ai) = 207ea23701784272b8481a7f9b1cfee0c1887268
