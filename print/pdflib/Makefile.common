@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/04/27 11:45:07 recht Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 PKGREVISION=		1
@@ -36,6 +36,12 @@ CONFIGURE_ARGS+=	--enable-php=no
 CONFIGURE_ARGS+=	--enable-cxx=no
 
 CPPFLAGS+=		-Dunix
+
+SUBST_CLASSES+=		sed
+SUBST_STAGE.sed=	pre-configure
+SUBST_FILES.sed=	configure pdflib-config.in
+SUBST_SED.sed=		-e "s|^sed |${SED} |g"
+SUBST_SED.sed+=		-e "s| sed | ${SED} |g"
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
