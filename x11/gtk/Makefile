@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1999/08/28 09:36:31 rh Exp $
+# $NetBSD: Makefile,v 1.34 1999/10/07 03:57:51 jlam Exp $
 
 DISTNAME=	gtk+-1.2.4
 CATEGORIES=	x11
@@ -19,11 +19,16 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" X_LDFLAGS="${X_LDFLAGS}"
 
 INFO_FILES=	gdk.info gtk.info
 
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include				# libintl.h
+LDFLAGS=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
+
+# The following ensures that `gtk-config --libs' includes the correct linker
+# flags for linking the X11 libs.
+#
+X_LDFLAGS=	-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
 .include "../../mk/bsd.pkg.mk"
