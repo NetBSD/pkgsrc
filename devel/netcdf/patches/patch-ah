@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- ncgen/Makefile.orig	Sun Sep 27 20:11:07 1998
++++ ncgen/Makefile	Sun Sep 27 20:11:37 1998
+@@ -14,7 +14,7 @@
+ 		  ctest.c ctest ctest0.nc ctest1.cdl \
+ 		  ftest.f ftest ftest0.nc ftest1.cdl
+ 
+-lib_netcdf	= ../libsrc/libnetcdf.a
++lib_netcdf	= ../libsrc/libnetcdf.la
+ # Don't use "-L../libsrc -lnetcdf" in the following because that doesn't
+ # work on a CRAY T90 (sigh).
+ ld_netcdf	= $(lib_netcdf)
