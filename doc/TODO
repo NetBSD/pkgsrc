@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1321 2004/01/21 22:46:13 wiz Exp $
+$NetBSD: TODO,v 1.1322 2004/01/21 22:54:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -194,7 +194,6 @@ Suggested package updates
 	o gnumeric-1.2.5
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.14
-	o gsed-4.0.9
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4536 2004/01/21 22:46:13 wiz Exp $
+$NetBSD: CHANGES,v 1.4537 2004/01/21 22:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -379,3 +379,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xnodecor-0.1 [kristerw 2004-01-21]
 	Updated spamassassin to 2.63 [heinz 2004-01-21]
 	Updated iozone to 3.217 [wiz 2004-01-21]
+	Updated gsed to 4.09 [wiz 2004-01-21]
