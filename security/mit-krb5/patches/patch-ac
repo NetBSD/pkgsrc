@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+
+--- appl/telnet/telnetd/Makefile.in.orig	Mon Jun  9 17:57:11 2003
++++ appl/telnet/telnetd/Makefile.in
+@@ -58,8 +58,8 @@ OBJS=	telnetd.o \
+ 
+ all:: telnetd
+ 
+-telnetd: $(OBJS) $(PTY_DEPLIB) $(KRB4COMPAT_DEPLIBS) ../libtelnet/libtelnet.a
+-	$(CC_LINK) -o $@ $(OBJS) ../libtelnet/libtelnet.a $(PTY_LIB) $(KRB4COMPAT_LIBS)
++telnetd: $(OBJS) $(PTY_DEPLIB) $(KRB4COMPAT_DEPLIBS) ../libtelnet/libtelnet$(DEPSTLIBEXT)
++	$(CC_LINK) -o $@ $(OBJS) ../libtelnet/libtelnet$(DEPSTLIBEXT) $(PTY_LIB) $(KRB4COMPAT_LIBS)
+ 
+ clean::
+ 	$(RM) telnetd
