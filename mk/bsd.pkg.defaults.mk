@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.130 2003/02/16 23:56:12 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.131 2003/02/22 05:47:01 uebayasi Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1764,6 +1764,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_TEX_CTAN=	ftp://www.planetmirror.com.au/pub/tex-archive/
 #MASTER_SITE_SOURCEFORGE=ftp://www.planetmirror.com.au/pub/sourceforge/
 #MASTER_SITE_XCONTRIB=	ftp://www.planetmirror.com.au/pub/X11/contrib/
+#MASTER_SITE_XEMACS=	ftp://ftp.au.xemacs.org/pub/xemacs/
 #MASTER_SITE_BACKUP=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
 #			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 #MASTER_SITE_LOCAL=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
@@ -1777,6 +1778,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/
+#MASTER_SITE_XEMACS=	ftp://ftp.at.xemacs.org/editors/xemacs/
 #MASTER_SITE_BACKUP=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/
 
 # Denmark
@@ -1784,7 +1786,8 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_GNU=	ftp://ftp.sunsite.auc.dk/pub/gnu/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.sunsite.auc.dk/pub/languages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
-#MASTER_SITE_SUNSITE=	ftp://ftp.sunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_SUNSITE=	ftp://ftp.suaunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_XEMACS=	ftp://ftp.dk.xemacs.org/pub/emacs/xemacs/
 #MASTER_SITE_BACKUP=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/
 
 # Finland
@@ -1796,6 +1799,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/
 #MASTER_SITE_SUNSITE=	\
 #	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_XEMACS=	ftp://ftp.fi.xemacs.org/pub/mirrors/ftp.xemacs.org/pub/tux/xemacs/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
 
@@ -1820,6 +1824,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_SUSE=	\
 #	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/
+#MASTER_SITE_XEMACS=	ftp://ftp.jp.xemacs.org/pub/GNU/xemacs/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/ \
 #	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/
@@ -1838,7 +1843,9 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_SUSE=	\
 #	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/Mirrors/sunsite.unc.edu/pub/Linux/
-#MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
+#MASTER_SITE_XEMACS=	ftp://ftp.uk.xemacs.org/sites/ftp.xemacs.org/pub/xemacs/
+#MASTER_SITE_BACKUP=	\
+#	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
 #	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
 # USA
