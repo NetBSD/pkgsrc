@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.5 2003/02/08 06:47:52 yyamano Exp $
+# $NetBSD: genreadme.awk,v 1.6 2003/02/09 15:06:54 wiz Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -329,7 +329,7 @@ END {
 					gsub(/</, "\\\\\\&lt;", printurl);
 					gsub(/>/, "\\\\\\&gt;", printurl);
 					if (vulpkg[i] ~ "^" pkgbase"[-<>=]+[0-9]") {
-						vul =  sprintf("%s<STRONG><LI> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", 
+						vul =  sprintf("%s<LI><STRONG> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", 
 							  vul, nm, 
 							  vultype[i],
 							  url, printurl); 
