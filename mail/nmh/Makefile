@@ -3,6 +3,7 @@
 # Date created:		26 July 1997
 # Whom:			Scott Blachowicz <Scott.Blachowicz@seaslug.org>
 #
+# $NetBSD: Makefile,v 1.2 1997/11/19 13:58:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -33,6 +34,6 @@ post-patch:
 	${ECHO} > ${WRKSRC}/stamp-h.in
 
 post-install:
-	@PKG_PREFIX='${PREFIX}' ./pkg/INSTALL
+	@PKG_PREFIX='${PREFIX}' sh -f ./pkg/INSTALL
 
 .include <bsd.port.mk>
