@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.944 2002/03/10 17:15:29 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.945 2002/03/12 15:40:24 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3669,17 +3669,16 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -d ${FILESDIR} ]; then					\
-		files='${FILESDIR}/*';					\
-	else								\
-		files="";						\
-	fi;								\
-	${GREP} '\$$NetBSD' $$files ${PKGDIR}/* 2> /dev/null | ${SED} -e 's|^${_PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}; \
 	files="";							\
+	for f in ${FILESDIR}/* ${PKGDIR}/*; do				\
+		if [ -f "$$f" ]; then					\
+			files="$$files \"$$f\"";			\
+		fi;							\
+	done;								\
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		for f in `${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' < ${DISTINFO_FILE}`; do \
 			if [ -f ${PATCHDIR}/$$f ]; then			\
-				files="$$files ${PATCHDIR}/$$f";	\
+				files="$$files \"${PATCHDIR}/$$f\"";	\
 			fi;						\
 		done;							\
 	fi;								\
@@ -3688,14 +3687,11 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			case $$f in					\
 			*.orig|*.rej|*~) ;;				\
 			${PATCHDIR}/patch-local-*)			\
-				files="$$files $$f" ;;			\
+				files="$$files \"$$f\"" ;;		\
 			esac;						\
 		done;							\
 	fi;								\
-	case "$$files" in						\
-	"")	;;							\
-	*)	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${_PKGSRCDIR}/||' >> ${BUILD_VERSION_FILE};; \
-	esac
+	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${_PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
 .  for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=	${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor
