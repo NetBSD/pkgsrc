@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7597 2004/10/29 07:42:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7598 2004/10/29 08:16:17 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4902,6 +4902,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mtr-gtk to 0.65 [wiz 2004-10-27]
 	Updated p5-xmltv to 0.5.36 [adrianp 2004-10-27]
 	Updated pv to 0.8.6 [wiz 2004-10-28]
+	Updated libexif to 0.6.11 [drochner 2004-10-27]
 	Updated dspam to 3.2.0nb1 [xtraeme 2004-10-28]
 	Moved mysql-client to mysql3-client [xtraeme 2004-10-28]
 	Moved mysql-server to mysql3-server [xtraeme 2004-10-28]
