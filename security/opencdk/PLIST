@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/14 03:16:23 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/06 00:28:21 xtraeme Exp $
 bin/opencdk-config
 include/opencdk.h
 lib/libopencdk.a
 lib/libopencdk.la
 lib/libopencdk.so
-lib/libopencdk.so.6
-lib/libopencdk.so.6.1
+lib/libopencdk.so.8
+lib/libopencdk.so.8.0
 share/doc/html/opencdk/opencdk-api.html
 share/doc/opencdk/DETAILS
 share/examples/opencdk/minpg.c
