@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/01/10 22:29:38 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/12 21:09:28 tron Exp $
 
 DISTNAME=	vim-5.3
 CATEGORIES=	editors
@@ -10,8 +10,6 @@ DISTFILES=	vim-5.3-src.tar.gz vim-5.3-rt.tar.gz
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.vim.org/
-
-DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 
 LDFLAGS+=		"-L${LOCALBASE}/lib"
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
