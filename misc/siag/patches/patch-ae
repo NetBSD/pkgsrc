@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2000/01/10 01:24:39 wiz Exp $
 --- common/Makefile.in.BAK	Sat Apr 10 01:35:23 1999
 +++ common/Makefile.in	Sat Apr 10 01:35:38 1999
 @@ -94,7 +94,7 @@
