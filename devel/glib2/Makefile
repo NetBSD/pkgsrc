@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/10/30 03:09:30 rh Exp $
+# $NetBSD: Makefile,v 1.12 2002/11/15 16:31:06 wiz Exp $
 #
 
-DISTNAME=		glib-2.0.6
+DISTNAME=		glib-2.0.7
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
