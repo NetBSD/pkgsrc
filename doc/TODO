@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1830 2004/06/11 20:00:11 minskim Exp $
+$NetBSD: TODO,v 1.1831 2004/06/12 04:44:50 grant Exp $
 
 Suggested new packages
 ======================
@@ -296,6 +296,7 @@ Suggested package updates
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailman-2.1.5
+	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
