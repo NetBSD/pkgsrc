@@ -1,0 +1,15 @@
+$NetBSD: patch-gdb_defs,v 1.1.1.1 2004/06/03 11:16:42 shannonjr Exp $
+
+--- ./gdb/defs.h.orig	2003-05-07 04:54:34.000000000 -0600
++++ ./gdb/defs.h
+@@ -615,10 +615,6 @@ enum lval_type
+ 
+ struct frame_info;
+ 
+-/* From readline (but not in any readline .h files).  */
+-
+-extern char *tilde_expand (char *);
+-
+ /* Control types for commands */
+ 
+ enum misc_command_type
