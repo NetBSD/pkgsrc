@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/23 18:13:46 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/25 23:16:25 fredb Exp $
 share/texmf/doc/bagpipetex/README
 share/texmf/doc/bagpipetex/bagdoc.dvi
-share/texmf/doc/bagpipetex/bagdoc.pdf
 share/texmf/doc/bagpipetex/bagdoc.ps
 share/texmf/doc/bagpipetex/bagdoc.tex
 share/texmf/doc/bagpipetex/examples/BlackDonald.tex
@@ -10,7 +9,6 @@ share/texmf/doc/bagpipetex/examples/Green.tex
 share/texmf/doc/bagpipetex/examples/GreenTwo.tex
 share/texmf/doc/bagpipetex/examples/Washer.tex
 share/texmf/doc/bagpipetex/quickref.dvi
-share/texmf/doc/bagpipetex/quickref.pdf
 share/texmf/doc/bagpipetex/quickref.ps
 share/texmf/doc/bagpipetex/quickref.tex
 share/texmf/fonts/source/bagpipetex/beamn09.mf
