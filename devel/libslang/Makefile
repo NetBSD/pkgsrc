@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/08/25 19:22:32 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2002/09/21 11:29:41 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.5
@@ -16,10 +16,11 @@ MAINTAINER=    	packages@netbsd.org
 HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE= 	yes
-USE_LIBTOOL=	yes
-USE_GMAKE=	yes
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		# defined
+
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/autoconf/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/autoconf/config.sub
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/31 21:41:31 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 11:29:11 jlam Exp $
 #
 
 DISTNAME=	arcem0.50
@@ -16,6 +16,9 @@ COMMENT=	Dave Gilbert's Acorn Archimedes emulator
 
 WRKSRC=		${WRKDIR}/armul-arc
 
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/arcem
 	${INSTALL_DATA} ${WRKDIR}/linux.rom ${PREFIX}/share/arcem/ROM
@@ -28,5 +31,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.OrElse \
 				${PREFIX}/share/arcem/README.OrElse
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
