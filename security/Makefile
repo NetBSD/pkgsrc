@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2003/03/19 21:11:03 jlam Exp $
+# $NetBSD: Makefile,v 1.130 2003/03/19 22:29:30 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -16,6 +16,8 @@ SUBDIR+=	avcheck
 SUBDIR+=	cfs
 SUBDIR+=	crack
 SUBDIR+=	cy-login
+SUBDIR+=	cy2-login
+SUBDIR+=	cy2-ntlm
 SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-sasl2
 SUBDIR+=	ddos-scan
