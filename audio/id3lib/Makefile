@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 19:21:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/31 01:56:56 wiz Exp $
 #
 
-DISTNAME=	id3lib-3.8.0pre2
-PKGNAME=	id3lib-3.8.0.0.2
+DISTNAME=	id3lib-3.8.0
+PKGNAME=	id3lib-3.8.0.0.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3lib/}
 
@@ -13,9 +13,5 @@ COMMENT=	library for manipulating ID3v1 and ID3v2 tags
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-post-extract:
-	${MV} ${WRKSRC}/include/id3/strings.h \
-		${WRKSRC}/include/id3/id3strings.h
 
 .include "../../mk/bsd.pkg.mk"
