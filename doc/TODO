@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1597 2004/04/10 23:06:42 salo Exp $
+$NetBSD: TODO,v 1.1598 2004/04/10 23:53:09 salo Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o larswm-7.3
 	o lavaps-2.4
 	o leafnode-1.9.52
-	o lftp-3.0.1
 	o libcaca-0.9
 	o libesmtp-1.0.2
 	o libevent-0.8
