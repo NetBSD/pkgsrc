@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2000/04/24 04:32:48 itojun Exp $
+# $NetBSD: Makefile,v 1.70 2000/04/26 22:10:47 tron Exp $
 #
 
 DISTNAME=       fetchmail-5.3.8
@@ -13,13 +13,14 @@ HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
+USE_SSL=	yes
+CONFIGURE_ARGS+=--without-hesiod --with-ssl=${SSLBASE}
+CONFIGURE_ENV+=  LDFLAGS="${CFLAGS}"
 
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=--without-hesiod
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerberos=yes

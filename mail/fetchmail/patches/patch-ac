@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.9 2000/04/26 22:10:48 tron Exp $
+
+--- driver.c.orig	Fri Apr 21 08:52:38 2000
++++ driver.c	Thu Apr 27 00:07:34 2000
+@@ -1589,7 +1589,7 @@
+ 	    (void)sleep(1);
+ #if INET6_ENABLE
+ 	if ((mailserver_socket = SockOpen(realhost, 
+-			     ctl->server.service ? ctl->server.service : protocol->service,
++			     ctl->server.service ? ctl->server.service : ( ctl->use_ssl ? protocol->sslservice : protocol->service ),
+ 			     ctl->server.netsec, ctl->server.plugin)) == -1)
+ #else /* INET6_ENABLE */
+ 	if ((mailserver_socket = SockOpen(realhost, port, NULL, ctl->server.plugin)) == -1)
