@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/02/17 09:07:16 agc Exp $
+# $NetBSD: Makefile,v 1.26 2001/05/17 15:03:00 abs Exp $
 #
 
 VERSION=	1.1.8
@@ -39,7 +39,7 @@ NO_BUILD=	yes
 # since we change PREFIX:
 NO_MTREE=	yes
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i386
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
