@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2004/02/09 11:56:32 grant Exp $
+$NetBSD: patch-ac,v 1.10 2004/07/24 04:43:10 grant Exp $
 
 --- configure.orig	1998-09-29 06:50:23.000000000 +1000
 +++ configure
@@ -36,3 +36,12 @@ $NetBSD: patch-ac,v 1.9 2004/02/09 11:56:32 grant Exp $
  	echo "$ac_t""yes" 1>&6
  else
  	echo "$ac_t""no" 1>&6
+@@ -4065,7 +4062,7 @@ else
+    NBMAKEFILE=
+ fi
+ 
+-subdirs="popt"
++#subdirs="popt"
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF
