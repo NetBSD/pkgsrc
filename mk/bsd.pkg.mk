@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.238 1999/03/31 10:59:44 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.239 1999/04/01 07:29:14 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1462,13 +1462,14 @@ real-configure: _PORT_USE
 real-build: _PORT_USE
 	@${ECHO_MSG} "===>  Building for ${PKGNAME}"
 real-install: pkg-su-install
-	@${ECHO_MSG} "===>  Installing for ${PKGNAME}"
 real-package: _PORT_USE
 
 # sudo or priv are acceptable substitutes
 SU_CMD?=	${SU} - root -c
+PRE_ROOT_CMD?=	${TRUE}
 
 pkg-su-install:
+	@${ECHO_MSG} "===>  Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${.MAKEFLAGS} root-install;			\
@@ -1482,7 +1483,7 @@ pkg-su-install:
 			if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then	\
 				force="FORCE_PKG_REGISTER=1";		\
 			fi;						\
-			if [ "X${PRE_ROOT_CMD}" != "X" ]; then		\
+			if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then	\
 				${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 				${PRE_ROOT_CMD};			\
 			fi;                                             \
