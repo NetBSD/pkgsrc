@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 01:27:08 jtb Exp $
+bin/zile
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/zile.info
+info/zile.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/zile.info
+man/man1/zile.1
+share/zile/AUTODOC
+share/zile/FAQ
+share/zile/HELP
+share/zile/LATEST_VERSION
+share/zile/MINIHELP1
+share/zile/MINIHELP2
+share/zile/MINIHELP3
+share/zile/TUTORIAL
+share/zile/zilerc.sample
+@dirrm share/zile

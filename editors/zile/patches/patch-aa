@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/04 01:27:08 jtb Exp $
+
+--- doc/zile.info.orig	Thu Apr 25 14:08:45 2002
++++ doc/zile.info	Thu Apr 25 14:08:34 2002
+@@ -1,5 +1,10 @@
+ This is zile.info, produced by makeinfo version 4.0 from zile.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* Zile: (zile).		Zile is Lossy Emacs
++END-INFO-DIR-ENTRY
++
+ 
+ File: zile.info,  Node: Top,  Next: Overview,  Prev: (dir),  Up: (dir)
+ 
