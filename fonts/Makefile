@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/02/15 23:03:30 kei Exp $
+# $NetBSD: Makefile,v 1.49 2003/03/11 23:37:48 salo Exp $
 #
 
 COMMENT=	Fonts
@@ -20,6 +20,7 @@ SUBDIR+=	adobe-cmaps
 SUBDIR+=	arphic-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
+SUBDIR+=	biznet-iso8859-2
 SUBDIR+=	cyberbase-ttf
 SUBDIR+=	cyberbit-ttf
 SUBDIR+=	cyr-rfx-bulgarian-mik
