@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/01/28 06:51:01 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2001/01/28 13:19:28 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -7,7 +7,6 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
-
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +23,10 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 		--localstatedir=/var \
 		--with-randomdev=/dev/urandom
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
+# use external OpenSSL.  comment the following two lines out to use
+# OpenSSL shipped with BIND9.
+USE_SSL=	yes
+CONFIGURE_ARGS+=--with-openssl=${LOCALBASE}
 
 post-build:
 	${SED} \
