@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/05 08:10:40 proff Exp $
+bin/altavista
+bin/appwatch
+bin/ask
+bin/austlii
+bin/cite
+bin/cnn
+bin/currency
+bin/deja
+bin/excite
+bin/ftpsearch
+bin/google
+bin/ircsearch
+bin/linuxdoc
+bin/raging
+bin/rhyme
+bin/slashdot
+bin/sundocs
+bin/sunsolve
+bin/surfraw
+bin/thesaurus
+bin/weather
+bin/webster
+bin/xxx
+bin/yahoo
+etc/surfraw_elvi.list
+etc/surfraw.conf
