@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8853 2005/01/21 14:42:36 wiz Exp $
+$NetBSD: CHANGES,v 1.8854 2005/01/21 16:09:46 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -473,3 +473,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.7nb8 [taca 2005-01-21]
 	Updated unarj to 2.65 [wiz 2005-01-21]
 	Updated unarj to 2.65nb1 [wiz 2005-01-21]
+	Updated fortunes-de to 0.19 [drochner 2005-01-21]
+	Updated gcc3 to 3.3.5 [drochner 2005-01-21]
+	Updated py-reportlab to 1.20 [drochner 2005-01-21]
+	Updated yacas to 1.0.55 [drochner 2005-01-21]
