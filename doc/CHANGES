@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7075 2004/09/02 01:57:19 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7076 2004/09/02 02:37:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4166,3 +4166,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-gd to 1.3nb5 [darcy 2004-09-01]
 	Updated vice-1.15nb1 [wiz 2004-09-01]
 	Updated verilog-current to 20040828 [dmcmahill 2004-09-01]
+	Updated memtester to 4.0.4 [schmonz 2004-09-02]
+	Updated getmail to 4.1.4 [schmonz 2004-09-02]
