@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/27 18:07:53 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/29 04:54:50 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -15,12 +15,9 @@ BUILD_USES_MSGFMT=	# defined
 CONFLICTS+=		jpilot-libplugin-*
 
 USE_BUILDLINK_ONLY=	# defined
-USE_CONFIG_WRAPPER=	# defined
-
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 USE_X11=		# defined
-#USE_LIBINTL=		# defined
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_DIR}"

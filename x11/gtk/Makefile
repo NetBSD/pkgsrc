@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/06/26 16:30:58 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/06/29 04:54:56 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -15,10 +15,8 @@ BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
 REPLACE_BUILDLINK=	gtk-config
 
-#USE_LIBINTL=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
@@ -29,9 +27,6 @@ CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 
 INFO_FILES=		gdk.info gtk.info
-
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/glib/buildlink.mk"
 
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
@@ -69,4 +64,6 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gtk.m4 \
 	  ${LOCALBASE}/share/aclocal/gtk.m4
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

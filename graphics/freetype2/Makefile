@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/26 22:02:26 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/29 04:54:54 jlam Exp $
 #
 
 DISTNAME=	freetype-2.0.3
@@ -16,7 +16,6 @@ HOMEPAGE=	http://www.freetype.org/
 COMMENT=	font rendering engine and library API
 
 USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
 REPLACE_BUILDLINK=	freetype-config
 CHECK_FREETYPE2=	YES
 USE_GMAKE=		YES
