@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:30 wiz Exp $
-
-SHA1 (xpdf-0.92.tgz) = a3c1f2ffa9dffa64284106b00d10cf61c5ce22ce
-Size (xpdf-0.92.tgz) = 917813 bytes
-SHA1 (patch-aa) = dbac2c341499df0ab4c1e3e9c072eb14a5d78fed

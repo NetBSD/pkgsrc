@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/10/03 23:23:05 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2001/10/04 12:00:45 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -51,6 +51,7 @@ SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
 SUBDIR+=	transfig
+SUBDIR+=	xpdf
 SUBDIR+=	xpp
 
 .include "../mk/bsd.pkg.subdir.mk"
