@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5995 2004/05/20 20:51:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5996 2004/05/20 21:27:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added swi-prolog-packages-5.2.13 [hubertf 2004-05-20]
 	Updated exiftags to 0.99.1 [minskim 2004-05-20]
 	Added libstatgrab-0.10 [xtraeme 2004-05-20]
+	Updated mathomatic to 11.1c [minskim 2004-05-20]

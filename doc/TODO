@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1766 2004/05/20 21:05:09 wiz Exp $
+$NetBSD: TODO,v 1.1767 2004/05/20 21:27:25 minskim Exp $
 
 Suggested new packages
 ======================
@@ -295,7 +295,6 @@ Suggested package updates
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
-	o mathomatic-11.1c
 	o mhonarc-2.6.10
 	o micq-0.4.11
 	o midnight-commander-4.6.0
