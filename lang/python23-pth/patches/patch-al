@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.7 2004/06/02 12:29:28 recht Exp $
+$NetBSD: patch-al,v 1.8 2004/11/28 13:33:20 recht Exp $
 
---- configure.orig	2004-05-07 21:13:40.000000000 +0200
-+++ configure	2004-06-02 13:59:28.000000000 +0200
+--- configure.orig	Fri May  7 21:13:40 2004
++++ configure	Thu Nov 25 13:20:20 2004
 @@ -1318,7 +1318,7 @@
  mv confdefs.h.new confdefs.h
  
@@ -29,7 +29,56 @@ $NetBSD: patch-al,v 1.7 2004/06/02 12:29:28 recht Exp $
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -13855,6 +13857,7 @@
+@@ -3624,6 +3626,14 @@
+ 	  BLDLIBRARY='-L. -lpython$(VERSION)'
+ 	  RUNSHARED=DLL_PATH=`pwd`:${DLL_PATH:-/atheos/sys/libs:/atheos/autolnk/lib}
+ 	  ;;
++    Darwin*)
++         if test -z "$enable_framework"; then
++           LDLIBRARY='libpython$(VERSION).dylib'
++           BLDLIBRARY='-L. -lpython$(VERSION)'
++           RUNSHARED=DYLD_LIBRARY_PATH=`pwd`:${DYLD_LIBRARY_PATH}
++         fi
++         ;;
++
+   esac
+   # DG/UX requires some fancy ld contortions to produce a .so from an .a
+   case $MACHDEP in
+@@ -4021,7 +4031,12 @@
+ 	    ;;
+ 	# is there any other compiler on Darwin besides gcc?
+ 	Darwin*)
+-	    BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -mno-fused-madd"
++		if [[ `/usr/bin/arch` = 'ppc' ]]
++		then
++			BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -mno-fused-madd -fno-common"
++		else
++			BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -fno-common"
++		fi
+ 	    ;;
+     esac
+     ;;
+@@ -10082,7 +10097,7 @@
+ 			LDSHARED="$LDSHARED "'-framework $(PYTHONFRAMEWORK)'
+ 		else
+ 			# No framework. Ignore undefined symbols, assuming they come from Python
+-			LDSHARED="$LDSHARED -undefined suppress"
++			LDSHARED="$LDSHARED -flat_namespace -undefined suppress"
+ 		fi ;;
+ 	Darwin/*)
+ 		LDSHARED='$(CC) $(LDFLAGS) -bundle'
+@@ -10091,8 +10106,8 @@
+ 			LDSHARED="$LDSHARED "'-framework $(PYTHONFRAMEWORK)'
+ 		else
+ 			# No framework, use the Python app as bundle-loader
+-			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
+-			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
++			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 		fi ;;
+ 	Linux*|GNU*) LDSHARED='$(CC) -shared';;
+ 	dgux*) LDSHARED="ld -G";;
+@@ -13855,6 +13870,7 @@
  /* end confdefs.h.  */
  
  #include "confdefs.h"
