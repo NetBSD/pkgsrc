@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/28 22:18:39 jtb Exp $
-
---- /dev/null	Mon Feb 26 17:27:24 2001
-+++ hdf/Makefile
-@@ -0,0 +1,3 @@
-+SUBDIR+= src util
-+
-+.include <bsd.subdir.mk>
