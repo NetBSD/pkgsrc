@@ -1,0 +1,6 @@
+--- /dev/null	Tue Mar 13 03:03:39 2001
++++ Makefile	Wed Jul 11 15:10:50 2001
+@@ -0,0 +1,3 @@
++all:
++
++install:
