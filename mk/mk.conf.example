@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.126 2000/03/18 17:57:58 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.127 2000/03/18 19:55:24 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -526,22 +526,6 @@ PAPERSIZE=	A4
 # Possible: YES, or NO.
 # Default: NO
 
-#TRN_DOMAINNAME=
-# Used by trn as default domain name. Use '.' to have it determined at
-# runtime.
-# Possible: any domain or host, or '.'
-# Default: not defined
-
-#TRN_NNTPSERVER=
-# Used by trn as default news server.
-# Possible: any hostname
-# Default: not defined
-
-#TRN_ORGANIZATION=
-# Used by trn as default organization in news posting headers.
-# Possible: any string
-# Default: "none"
-
 #UPCLIENT_LOGIN=
 #UPCLIENT_PASSWORD=
 #UPCLIENT_HOSTID=
@@ -590,7 +574,7 @@ PAPERSIZE=	A4
 # Default: YES on IPv6-ready userland, not defined otherwise
 
 #USE_INN=
-# Used in nn to specify use of "inn" instead of "nntpclnt"
+# Used in nn and trn to specify use of "inn" instead of "nntpclnt"
 # package to provide "inews" binary.
 # Possible: not defined, YES
 # Default: not defined
