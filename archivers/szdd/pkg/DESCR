@@ -1,0 +1,14 @@
+SZDD is a weak LZSS compressor, which was used by Microsoft for many years
+in their installation software - all those files with a letter taken from
+the end of their extension, eg HELLO.EX_
+
+This package includes szddexpand which will decompress szdd files.
+Be careful, szddexpand overwrites the original compressed file.
+Do like so: szddexpand HELLO.EX_ && mv HELLO.EX_ HELLO.EXE
+
+SZDD was replaced with 'KWAJ' in the 1996 Microsoft Setup Toolkit.  This
+package does not grok the undocumented 'KWAJ' format.
+
+One day Johnathan Forbes decided to work for Microsoft, and sold them his
+LZX compression technology.  So now Microsoft uses LZX compression in their
+installation archives, under the guise of "CAB" files.
