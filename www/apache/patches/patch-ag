@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.6 2001/02/27 20:04:23 jdolecek Exp $
+
+--- src/os/unix/os.c.orig	Sat Jan 15 11:01:09 2000
++++ src/os/unix/os.c
+@@ -129,7 +129,12 @@
+ #elif defined(HAVE_DYLD)
+     NSUnLinkModule(handle,FALSE);
+ 
+-#else
++/*
++ * Work around Apache dlclose() bug, where shared objects may be
++ * dlclose()d before their cleanup procedures are called.
++ * This is needed so shared modules can be used. 
++ */
++#elif 0
+     dlclose(handle);
+ #endif
+ 
