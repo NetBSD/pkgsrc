@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 12:45:56 cube Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/30 06:50:16 uebayasi Exp $
 #
 
 VERS=		0.51b3
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://devhell.org/projects/elfsh/
 COMMENT=	ELF format exploration shell
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
