@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:19 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use socks5.
 #
@@ -16,7 +16,8 @@ SOCKS5_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.socks5?=	socks5>=1.0.2
 DEPENDS+=	${BUILDLINK_DEPENDS.socks5}:../../net/socks5
 
-BUILDLINK_PREFIX.socks5=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.socks5=socks5
+BUILDLINK_PREFIX.socks5_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.socks5=		include/socks.h
 BUILDLINK_FILES.socks5+=	lib/libsocks5.a
 BUILDLINK_FILES.socks5+=	lib/libsocks5_sh.*

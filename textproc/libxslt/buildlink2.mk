@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:27 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxslt.
 #
@@ -16,7 +16,8 @@ LIBXSLT_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.libxslt?=	libxslt>=1.0.7
 DEPENDS+=	${BUILDLINK_DEPENDS.libxslt}:../../textproc/libxslt
 
-BUILDLINK_PREFIX.libxslt=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.libxslt=libxslt
+BUILDLINK_PREFIX.libxslt_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libxslt=	include/breakpoint/*
 BUILDLINK_FILES.libxslt+=	include/libexslt/*
 BUILDLINK_FILES.libxslt+=	include/libxslt/*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:08:59 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libiconv.
 #
@@ -16,7 +16,8 @@ ICONV_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.iconv?=	libiconv>=1.5
 DEPENDS+=	${BUILDLINK_DEPENDS.iconv}:../../converters/libiconv
 
-BUILDLINK_PREFIX.iconv=		${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.iconv=libiconv
+BUILDLINK_PREFIX.iconv_DEFAULT=		${LOCALBASE}
 BUILDLINK_FILES.iconv=		include/iconv.h
 BUILDLINK_FILES.iconv+=		include/libcharset.h
 BUILDLINK_FILES.iconv+=		lib/libcharset.*

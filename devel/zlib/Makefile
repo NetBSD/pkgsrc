@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12.2.1 2002/05/11 02:09:06 jlam Exp $
+# $NetBSD: Makefile,v 1.12.2.2 2002/06/06 06:54:37 jlam Exp $
 
 DISTNAME=	zlib-1.1.4
 CATEGORIES=	devel
@@ -26,7 +26,5 @@ MAKEFILE=	lt.mk
 
 post-extract:
 	${CP} ${FILESDIR}/lt.mk ${WRKSRC}
-
-post-build: buildlink-libtool-fix
 
 .include "../../mk/bsd.pkg.mk"

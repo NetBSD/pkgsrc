@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36.2.1 2002/05/11 02:09:30 jlam Exp $
+# $NetBSD: Makefile,v 1.36.2.2 2002/06/06 06:54:54 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -107,9 +107,11 @@ post-install:
 # XXX
 # XXX     alpha
 # XXX
-# XXX has an optimization bug when compiling with -O2 that is tickled by
-# XXX ${WRKSRC}/kdeprint/management/kmiconview.cpp.
-# XXX ${WRKSRC}/kdecore/kwinmodule.cpp
+# XXX have an optimization bug when compiling with -O2 that is tickled by:
+# XXX
+# XXX	${WRKSRC}/kdeprint/management/kmiconview.cpp
+# XXX	${WRKSRC}/kdecore/kwinmodule.cpp
+#
 .if ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "alpha")
 CXXFLAGS:=	${CXXFLAGS:C/-O[0-9]*//g}

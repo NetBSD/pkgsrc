@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2002/03/13 17:38:01 fredb Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/06 06:54:56 jlam Exp $
 #
 
 PKGNAME=	qt2-docs-${QTVERSION}
 PKGREVISION=	2
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
-.include "../qt2-libs/Makefile.common"
-
-USE_BUILDLINK_ONLY=		yes
+USE_BUILDLINK2_ONLY=		yes
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=${QTVERSION}nb2
+
+.include "../qt2-libs/Makefile.common"
 
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
@@ -45,4 +45,5 @@ do-install:
 	done)
 
 .include "../../x11/qt2-libs/buildlink.mk"
+
 .include "../../mk/bsd.pkg.mk"

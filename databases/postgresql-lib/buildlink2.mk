@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:01 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use postgresql-lib.
 #
@@ -16,7 +16,8 @@ POSTGRESQL_LIB_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-{6.5.3*,7.0*,lib-*}
 DEPENDS+=	${BUILDLINK_DEPENDS.postgresql-lib}:../../databases/postgresql-lib
 
-BUILDLINK_PREFIX.postgresql-lib=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.postgresql-lib=postgresql-lib
+BUILDLINK_PREFIX.postgresql-lib_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.postgresql-lib=		include/pgsql/*/*/*.h
 BUILDLINK_FILES.postgresql-lib+=	include/pgsql/*/*.h
 BUILDLINK_FILES.postgresql-lib+=	include/pgsql/*.h

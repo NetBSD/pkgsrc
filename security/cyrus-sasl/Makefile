@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/01/31 20:42:09 jlam Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2002/06/06 06:54:48 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -12,7 +12,7 @@ COMMENT=		Simple Authentication and Security Layer
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-pwcheck=${PWCHECKDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/sasl
-CONFIGURE_ARGS+=	--with-rc4=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-rc4=${BUILDLINK_PREFIX.openssl}
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--enable-anon		# ANONYMOUS
@@ -63,9 +63,9 @@ CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 PLIST_SRC+=		${.CURDIR}/PLIST.plugins
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
-CONFIGURE_ARGS+=	--with-pam=${PREFIX}
+CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .endif
 
 PKG_GROUPS=		${CYRUS_GROUP}
@@ -97,6 +97,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

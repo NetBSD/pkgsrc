@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:16 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libtiff.
 #
@@ -16,7 +16,8 @@ TIFF_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.tiff?=	tiff>=3.5.4
 DEPENDS+=	${BUILDLINK_DEPENDS.tiff}:../../graphics/tiff
 
-BUILDLINK_PREFIX.tiff=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.tiff=tiff
+BUILDLINK_PREFIX.tiff_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.tiff=	include/tiff.h
 BUILDLINK_FILES.tiff+=	include/tiffconf.h
 BUILDLINK_FILES.tiff+=	include/tiffio.h

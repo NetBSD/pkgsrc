@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16.2.1 2002/05/11 02:09:32 jlam Exp $
+# $NetBSD: Makefile,v 1.16.2.2 2002/06/06 06:54:55 jlam Exp $
 
 PKGNAME=		qt2-designer-${QTVERSION}
 PKGREVISION=		2
@@ -22,4 +22,5 @@ do-install:
 		${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin
 
 .include "../../x11/qt2-libs/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

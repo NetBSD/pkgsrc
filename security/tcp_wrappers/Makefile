@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/29 01:12:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/06 06:54:50 jlam Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -12,7 +12,8 @@ COMMENT=	Monitor and filter incoming requests for network services
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
-USE_LIBTOOL=	YES
+USE_BUILDLINK2_ONLY=	# defined
+USE_LIBTOOL=		# defined
 
 ALL_TARGET=	sunos5
 
@@ -21,17 +22,16 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .endif
 
 do-install:
+	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_DATA} libwrap.la ${PREFIX}/lib
+	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_PROGRAM} \
+		tcpdmatch try-from safe_finger tcpdchk ${PREFIX}/bin
+	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
+	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
+	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/man/man3
+	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/man/man5
+	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/man/man8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcp_wrappers
-	cd ${WRKSRC} && \
-	${LIBTOOL} ${INSTALL_DATA} libwrap.la ${PREFIX}/lib && \
-	${LIBTOOL} ${INSTALL_PROGRAM} tcpdmatch try-from safe_finger tcpdchk \
-	  ${PREFIX}/bin && \
-	${INSTALL_DATA} tcpd.h ${PREFIX}/include && \
-	${LIBTOOL} ${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec && \
-	${INSTALL_DATA} *.3 ${PREFIX}/man/man3 && \
-	${INSTALL_DATA} *.5 ${PREFIX}/man/man5 && \
-	${INSTALL_DATA} *.8 ${PREFIX}/man/man8 && \
-	${INSTALL_DATA} README README.NIS README.ipv6 \
-	  ${PREFIX}/share/doc/tcp_wrappers
+	cd ${WRKSRC}; ${INSTALL_DATA} README README.NIS README.ipv6 \
+		${PREFIX}/share/doc/tcp_wrappers
 
 .include "../../mk/bsd.pkg.mk"
