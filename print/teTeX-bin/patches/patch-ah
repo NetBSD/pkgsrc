@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.3 2005/01/16 08:35:08 kei Exp $
+
+--- libs/xpdf/xpdf/Gfx.cc.orig	2005-01-04 16:23:02.000000000 +0900
++++ libs/xpdf/xpdf/Gfx.cc	2005-01-04 16:27:39.000000000 +0900
+@@ -2381,7 +2381,9 @@
+     haveMask = gFalse;
+     dict->lookup("Mask", &maskObj);
+     if (maskObj.isArray()) {
+-      for (i = 0; i < maskObj.arrayGetLength(); ++i) {
++      for (i = 0;
++	   i < maskObj.arrayGetLength() && i < 2*gfxColorMaxComps;
++	   ++i) {
+ 	maskObj.arrayGet(i, &obj1);
+ 	maskColors[i] = obj1.getInt();
+ 	obj1.free();
