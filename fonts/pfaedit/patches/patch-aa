@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/07/13 08:25:30 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/27 08:23:02 adam Exp $
 
---- pfaedit/Makefile.dynamic.in.orig	Mon Jun 30 15:41:04 2003
+--- pfaedit/Makefile.dynamic.in.orig	2004-02-01 03:57:29.000000000 +0000
 +++ pfaedit/Makefile.dynamic.in
 @@ -13,7 +13,7 @@ LIBTOOL = @LIBTOOL@
  CC = @CC@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/13 08:25:30 wiz Exp $
  X_11LIB = @X_11LIB@
  X_EXTRA_LIBS = @X_EXTRA_LIBS@
  X_PRE_LIBS = @X_PRE_LIBS@
-@@ -62,7 +62,7 @@ acorn2sfd: $(ACORNOBJS)
+@@ -70,7 +70,7 @@ splinerefigure.o: splinerefigure.c
  #this makes all the .ui files but wildcarding doesn't work too well if the
  # files don't exist.
  nomen.h pfaedit-ui.c pfaedit-en.ui: $(srcdir)/nomen-*.c makenomenh.c
