@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:20 agc Exp $
 
-MD5 (zenicb-19981202.tar.gz) = 542dc7145fa7645f879f382666c74e8e
+SHA1 (zenicb-19981202.tar.gz) = c700e51084a123e210a8aa7335ebc1b2464a85e7
+Size (zenicb-19981202.tar.gz) = 30833 bytes
 SHA1 (patch-aa) = f38b0c265df5300e43c4f688f671bd9fd2382880
