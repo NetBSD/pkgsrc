@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:04 recht Exp $
 
 DISTNAME=		python-gnutls-0.2
 PKGNAME=		${PYPKGPREFIX}${DISTNAME:S/python//}
 PKGREVISION=		3
-CATEGORIES=		security
+CATEGORIES=		security python
 MASTER_SITES=		http://home.o2w.net/~ivo/python-gnutls/dist/
 
 MAINTAINER=		minskim@NetBSD.org

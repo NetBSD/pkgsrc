@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/05/04 23:46:37 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/22 09:16:02 recht Exp $
 #
 
 DISTNAME=	csv-1.0
 PKGNAME=	${PYPKGPREFIX}-csv-1.0
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	http://www.object-craft.com.au/projects/csv/download/
 
 MAINTAINER=	recht@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/06/21 17:30:05 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/22 09:16:00 recht Exp $
 #
 
 DISTNAME=	CDDB-1.4
 PKGNAME=	${PYPKGPREFIX}-cddb-1.4
-CATEGORIES=	audio
+CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cddb-py/}
 
 MAINTAINER=	drochner@NetBSD.org

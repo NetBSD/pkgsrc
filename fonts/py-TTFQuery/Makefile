@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/19 00:43:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:01 recht Exp $
 #
 
 DISTNAME=		TTFQuery-0.2.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		fonts
+CATEGORIES=		fonts python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ttfquery/}
 
 MAINTAINER=		dotz@irc.pl

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/05/05 08:11:07 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:03 recht Exp $
 #
 
 DISTNAME=	email-2.5
 PKGNAME=	${PYPKGPREFIX}-mimelib-2.5
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/mimelib/}
 
 MAINTAINER=	tech-pkg@NetBSD.org

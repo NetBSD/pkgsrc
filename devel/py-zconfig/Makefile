@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/04/27 04:59:43 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/22 09:16:01 recht Exp $
 #
 
 DISTNAME=		ZConfig-1.0
 PKGNAME=		${PYPKGPREFIX}-zconfig-1.0
-CATEGORIES=		devel
+CATEGORIES=		devel python
 MASTER_SITES=		http://www.zope.org/Members/fdrake/zconfig/
 
 MAINTAINER=		tech-pkg@NetBSD.org

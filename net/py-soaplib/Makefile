@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/22 09:16:03 recht Exp $
 #
 
 DISTNAME=	soaplib-0.8-20000621
 PKGNAME=	${PYPKGPREFIX}-soaplib-0.8
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	http://www.pythonware.com/downloads/
 EXTRACT_SUFX=	.zip
 
