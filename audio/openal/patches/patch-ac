@@ -1,0 +1,61 @@
+$NetBSD: patch-ac,v 1.1 2004/12/01 13:59:43 adam Exp $
+
+--- src/Makefile.in.orig	2004-02-15 13:23:30.000000000 +0000
++++ src/Makefile.in
+@@ -81,12 +81,12 @@ VERSION=$(MAJOR_VERSION).$(MINOR_VERSION
+ %.o : %.nasm
+ 	$(NASM) -f elf -o $@ $<
+ %.o : %.c al_siteconfig.h ../config.h
+-	$(CC) $(DEFINES) $(INC) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --mode=compile $(CC) $(DEFINES) $(INC) $(CFLAGS) -c $< -o $@
+ 
+ %.def : %.a libopenal.a
+ 	dlltool -a $< --output-def $@
+ 
+-all: libopenal.a libopenal.$(SO_EXT) extensions $(TEST_PROGS)
++all: libopenal.la extensions $(TEST_PROGS)
+ 
+ clean:
+ 	-rm -f $(AL_OBJS)
+@@ -104,7 +104,7 @@ clean:
+ distclean: clean
+ 	rm -Rf Makefile
+ 
+-libopenal: libopenal.a libopenal.$(SO_EXT)
++libopenal: libopenal.la
+ 
+ libopenal.a: $(AL_OBJS) $(ALC_OBJS) $(AC_OBJS) $(ALUT_OBJS) extensions
+ 	ar cru libopenal.a \
+@@ -116,17 +116,12 @@ libopenal.a: $(AL_OBJS) $(ALC_OBJS) $(AC
+ 	$(RANLIB) libopenal.a
+ 
+ 
+-libopenal.so: $(AL_OBJS) $(ALC_OBJS) $(AC_OBJS) $(ALUT_OBJS) extensions
+-	$(CC) -shared \
+-		-Wl,"-soname,libopenal.so.$(MAJOR_VERSION)" \
+-		-o libopenal.so.$(VERSION) \
+-		$(LDFLAGS)     \
+-		$(AL_OBJS)     \
+-		$(ALC_OBJS)    \
+-		$(AC_OBJS)     \
+-		$(ALUT_OBJS)   \
+-		$(EXT_OBJS)    \
+-		$(LIBS)
++libopenal.la: $(AL_OBJS) $(ALC_OBJS) $(AC_OBJS) $(ALUT_OBJS) extensions
++	${LIBTOOL} --mode=link $(CC) -o libopenal.la $(LDFLAGS) \
++		$(AL_OBJS:.o=.lo) $(ALC_OBJS:.o=.lo) $(AC_OBJS:.o=.lo) \
++		$(ALUT_OBJS:.o=.lo) $(EXT_OBJS:.o=.lo) $(LIBS) \
++		-rpath ${PREEFIX}/lib \
++		-version-info $(MAJOR_VERSION):$(MINOR_VERSION)
+ 
+ libopenal.dll:  $(AL_OBJS) $(ALC_OBJS) $(AC_OBJS) $(ALUT_OBJS) libopenal.def \
+ 	extensions
+@@ -150,7 +145,7 @@ extensions: $(EXT_OBJS) $(EXT_DLL_OBJS)
+ 
+ 
+ $(EXT_OBJS): %.o : %.c ../config.h
+-	$(CC) $(DEFINES) $(INC) $(CFLAGS) -c $< -o $@
++	${LIBTOOL} --mode=compile $(CC) $(DEFINES) $(INC) $(CFLAGS) -c $< -o $@
+ 
+ $(EXT_DLL_OBJS): %.o : %.c ../config.h
+ 	$(CC) $(DEFINES) $(INC) -DOPENAL_EXTENSION $(CFLAGS) $< -shared -o $@
