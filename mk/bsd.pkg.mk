@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.545 2000/08/18 02:47:56 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.546 2000/08/18 22:43:19 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -269,9 +269,6 @@ FETCH_CMD?=		${LOCALBASE}/bsd/bin/ftp
 .else
 FETCH_CMD?=		/usr/bin/ftp
 .endif
-
-# By default, distfiles have no restrictions placed on them
-MIRROR_DISTFILE?=	yes
 
 TOUCH_FLAGS?=		-f
 
@@ -947,8 +944,10 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 IGNORE=	"is an interactive package"
 .elif (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
 IGNORE=	"is not an interactive package"
-.elif (defined(NO_CDROM) && defined(FOR_CDROM))
-IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
+.elif (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
+IGNORE=	"may not be placed in binary form on a CDROM: ${NO_BIN_ON_CDROM}"
+.elif (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
+IGNORE=	"may not be placed in source form on a CDROM: ${NO_SRC_ON_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
 IGNORE=	"is restricted: ${RESTRICTED}"
 .elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
@@ -1017,6 +1016,8 @@ BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
 BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS
 BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
 BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
+BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
+BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
 
 .if !target(all)
 all: build
@@ -2071,9 +2072,8 @@ mirror-distfiles:
 .if defined(NO_SRC_ON_FTP)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} distfile may not be made available through FTP:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_SRC_ON_FTP}."
-.endif
-.if (${MIRROR_DISTFILE} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
+.else
+	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
 .endif
 
 
