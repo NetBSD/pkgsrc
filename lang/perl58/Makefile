@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/10/01 20:52:26 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2004/10/28 08:22:48 jklos Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -46,6 +46,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILDING_PERL5=		yes
 PERL5_CONFIGURE=	no
 
+CFLAGS+=		-O
+
 USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
@@ -59,6 +61,7 @@ CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 TEST_TARGET=		test
+
 
 # Install Perl man3 pages into a private directory under the the normal
 # Perl installation.  Also install site-specific Perl man3 pages into a
@@ -276,7 +279,7 @@ pre-configure:
 # the list below to bypass the build of the statically-linked perl.
 #
 .if ${MKPIC} == "yes"
-.  for _arch_ in mipsel mipseb
+.  for _arch_ in mipsel mipseb powerpc
 .    if !empty(MACHINE_ARCH:M${_arch_})
 STATIC_PERL?=		no
 .    endif
