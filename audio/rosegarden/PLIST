@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/19 12:21:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/28 21:24:22 wiz Exp $
 bin/rosegarden
 lib/X11/app-defaults/Rosegarden
 lib/rosegarden/bin/editor
@@ -21,4 +21,3 @@ lib/rosegarden/synth-patches/std.sb
 @dirrm lib/rosegarden/example
 @dirrm lib/rosegarden/bin
 @dirrm lib/rosegarden
-
