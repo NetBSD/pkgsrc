@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL.OpenWindows,v 1.1 2001/07/08 13:01:44 tron Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	cd @X11BASE@/lib
+	if [ -f libtiff.so.3 ]
+	then
+		@MV@ libtiff.so.3 libtiff.so.3.ow
+		@LN@ -s @PREFIX@/lib/libtiff.so.3 
+	fi
+	;;
+
+POST-INSTALL)
+	;;
+
+DEINSTALL)
+	;;
+	
+POST-DEINSTALL)
+	cd @X11BASE@/lib
+	if [ -f libtiff.so.3.ow ]
+	then
+		@MV@ libtiff.so.3.ow libtiff.so.3
+	fi
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

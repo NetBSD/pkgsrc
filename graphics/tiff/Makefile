@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/06/18 21:32:24 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/07/08 13:01:44 tron Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -40,6 +40,8 @@ CONFIGURE_ENV+=	PREFIX="${PREFIX}"
 CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
 CONFIGURE_ENV+=	BUILDLINK_DIR="${BUILDLINK_DIR}"
 
+.include "../../mk/bsd.prefs.mk"
+
 pre-patch:
 	# reference correct relative man page when using .so
 	#
@@ -53,5 +55,20 @@ pre-patch:
 	${MV} ${WRKSRC}/tools/Makefile.in ${WRKSRC}/tools/Makefile.in.in
 	${SED}	-e "s,\(\$${CC} -o\),\$${LIBTOOL} \1,g" \
 		${WRKSRC}/tools/Makefile.in.in  > ${WRKSRC}/tools/Makefile.in
+
+.if defined(HAVE_OPENWINDOWS)
+INSTALL_FILE=	${WRKDIR}/INSTALL
+DEINSTALL_FILE=	${INSTALL_FILE}
+
+pre-build:
+	@${SED} -e 's#@LN@#${LN}#g' \
+	  -e 's#@MV@#${MV}#g' \
+	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  -e 's#@X11BASE@#${X11BASE}#g' \
+	  ${PKGDIR}/INSTALL.OpenWindows >${INSTALL_FILE}
+
+pre-install:
+	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+.endif
 
 .include "../../mk/bsd.pkg.mk"
