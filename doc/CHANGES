@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4191 2003/12/19 19:21:09 veego Exp $
+$NetBSD: CHANGES,v 1.4192 2003/12/19 23:42:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated qt3 to 3.2.3 [skrll 2003-12-19]
 	Updated xarchon to 0.60 [hubertf 2003-12-19]
 	Updated x11-links to 0.19 [veego 2003-12-19]
+	Updated artwiz-fonts to 1.3nb1 [jmmv 2003-12-19]
