@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.18 2003/09/13 17:07:47 jlam Exp $
+# $NetBSD: Makefile.in,v 1.19 2003/09/14 07:38:12 itohy Exp $
 #
 
 srcdir=		@srcdir@
@@ -36,8 +36,12 @@ all: nbcompat/nbtypes.h nbcompat/nbconfig.h $(LIB)
 .c.o: nbcompat/nbtypes.h
 	$(COMPILE) $(DEFS) -c $<
 
-$(LIB): $(OBJS)
-	$(AR) cr $@ $(OBJS)
+# Add dummy.o not to become totally empty, which some ld's don't like.
+$(LIB): $(OBJS) dummy.o
+	@set -x; case "$(OBJS)" in		\
+		*.*)	$(AR) cr $@ $(OBJS);;	\
+		*)	$(AR) cr $@ dummy.o;;	\
+		esac
 	$(RANLIB) $@
 
 nbcompat/nbconfig.h: nbcompat/config.h
