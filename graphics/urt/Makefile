@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2000/08/23 13:45:02 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2000/09/03 10:23:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub
+MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
 
 PATCH_SITES=	ftp://ptolemy.berkeley.edu/pub/misc/urt/
