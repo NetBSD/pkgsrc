@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.3 2004/02/01 10:11:39 jlam Exp $
+# $NetBSD: catalogs.mk,v 1.4 2004/02/01 10:12:58 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -56,7 +56,8 @@ USE_PKGINSTALL=	YES
 
 .if !empty(USE_BUILDLINK3:[yY][eE][sS])
 .  include "../../textproc/xmlcatmgr/buildlink3.mk"
-.elif empty(USE_BUILDLINK2:[nN][oO])
+.else
+USE_BUILDLINK2=	YES
 .  include "../../textproc/xmlcatmgr/buildlink2.mk"
 .endif
 
