@@ -3,7 +3,7 @@
 # Date created:         25 Nov 1994
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.3 1997/11/05 00:37:12 explorer Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 21:28:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
@@ -16,6 +16,7 @@ MAINTAINER=	hubertf@netbsd.org
 
 BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+
 GNU_CONFIGURE=	yes
 MAN1=		screen.1
 
