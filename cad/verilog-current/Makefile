@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/03/02 15:34:07 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2004/03/12 22:37:12 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -10,27 +10,23 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
-# turn this back on when ipal comes along a little further
-#DEPENDS+=	ipal-current>=20001210:../../cad/ipal-current
+PKG_INSTALLATION_TYPES=        overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
 
+USE_BUILDLINK3=	yes
+BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+= gperf>=2.7.2:../../devel/gperf
+
 SNAPDATE=	20040220
-USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
-#
-# for ipal.h
-#CPPFLAGS+=      -I${LOCALBASE}/include
-#CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 CONFIGURE_ARGS+=	--without-ipal
-YACC=			${LOCALBASE}/bin/bison
+YACC=		${LOCALBASE}/bin/bison
 TEST_DIRS=	${WRKSRC}
 TEST_TARGET=	check
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
