@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/12/14 23:18:15 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2002/01/06 19:41:28 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -25,7 +25,7 @@ USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
@@ -60,7 +60,8 @@ BUILD_DEFS+=		CUPS_USER CUPS_GROUP
 
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
-CUPS_CONFDIR=		${PKG_SYSCONFDIR}/cups
+PKG_SYSCONFSUBDIR=	cups
+CUPS_CONFDIR=		${PKG_SYSCONFDIR}
 CUPS_LOGDIR=		/var/log/cups
 CUPS_REQUESTS=		/var/spool/cups
 
