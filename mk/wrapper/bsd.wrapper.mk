@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.18 2005/01/11 18:08:20 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.19 2005/01/18 17:25:13 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -180,6 +180,8 @@ _WRAP_ALIASES.LD=	ld
 #
 _WRAP_ENV?=			PATH="${_WRAP_PATH}"; export PATH
 _WRAP_EMPTY_FILE?=		${WRAPPER_TMPDIR}/empty
+_WRAP_ARG_PP?=			${_WRAP_EMPTY_FILE}
+_WRAP_ARG_PP_MAIN?=		${WRAPPER_TMPDIR}/arg-pp-main
 _WRAP_ARG_SOURCE?=		${WRAPPER_TMPDIR}/arg-source
 _WRAP_BUILDCMD?=		${WRAPPER_TMPDIR}/buildcmd
 _WRAP_CACHE?=			${WRAPPER_TMPDIR}/cache
@@ -212,6 +214,8 @@ _UNWRAP_SED=		-f ${_WRAP_UNTRANSFORM_SEDFILE}
 _WRAPPER_SH.${_wrappee_}=		${WRAPPER_SRCDIR}/wrapper.sh
 _WRAP_ENV.${_wrappee_}?=		${_WRAP_ENV}
 _WRAP_EXTRA_ARGS.${_wrappee_}?=		# empty
+_WRAP_ARG_PP.${_wrappee_}?=		${_WRAP_ARG_PP}
+_WRAP_ARG_PP_MAIN.${_wrappee_}?=	${_WRAP_ARG_PP_MAIN}
 _WRAP_ARG_SOURCE.${_wrappee_}?=		${_WRAP_ARG_SOURCE}
 _WRAP_BUILDCMD.${_wrappee_}?=		${_WRAP_BUILDCMD}
 _WRAP_CACHE.${_wrappee_}?=		${_WRAP_CACHE}
@@ -235,8 +239,10 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
+_WRAP_ARG_PP.CC=	${WRAPPER_TMPDIR}/arg-pp-mipspro-cc
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-mipspro-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-mipspro-cc
+_WRAP_ARG_PP.CXX=	${_WRAP_ARG_PP.CC}
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
@@ -284,14 +290,18 @@ _WRAP_EXTRA_ARGS.CPP+=	-D_ALL_SOURCE
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-interix-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-interix-ld
+.elif ${OPSYS} == "Darwin"
+_WRAP_ARG_PP.CC=	${WRAPPER_TMPDIR}/arg-pp-darwin-gcc
+_WRAP_ARG_PP.CXX=	${_WRAP_ARG_PP.CC}
+_WRAP_ARG_PP.LD=	${_WRAP_ARG_PP.CC}
 .elif ${OPSYS} == "UnixWare"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .elif ${OPSYS} == "OSF1"
-_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
-_WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
 .endif
 
 # Filter to scrunch shell scripts by removing comments and empty lines.
@@ -314,6 +324,8 @@ _WRAP_SUBST_SED=							\
 _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_ENV@|${_WRAP_ENV.${_wrappee_}:Q}|g"		\
 	-e "s|@_WRAP_EXTRA_ARGS@|${_WRAP_EXTRA_ARGS.${_wrappee_}:Q}|g"	\
+	-e "s|@_WRAP_ARG_PP@|${_WRAP_ARG_PP.${_wrappee_}:Q}|g"		\
+	-e "s|@_WRAP_ARG_PP_MAIN@|${_WRAP_ARG_PP_MAIN.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_ARG_SOURCE@|${_WRAP_ARG_SOURCE.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_BUILDCMD@|${_WRAP_BUILDCMD.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_CACHE@|${_WRAP_CACHE.${_wrappee_}:Q}|g"		\
@@ -340,6 +352,8 @@ PKG_${_wrappee_}?=	${${_wrappee_}}
 do-wrapper: ${_WRAP_COOKIE.${_wrappee_}}
 ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAPPER_SH.${_wrappee_}}				\
+		${_WRAP_ARG_PP.${_wrappee_}}				\
+		${_WRAP_ARG_PP_MAIN.${_wrappee_}}			\
 		${_WRAP_ARG_SOURCE.${_wrappee_}}			\
 		${_WRAP_BUILDCMD.${_wrappee_}}				\
 		${_WRAP_CACHE.${_wrappee_}}				\
@@ -409,6 +423,18 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 .for _target_ in ${WRAPPER_TARGETS}
 do-wrapper: ${_target_}
 .endfor
+
+${WRAPPER_TMPDIR}/arg-pp-darwin-gcc:					\
+		${WRAPPER_SRCDIR}/arg-pp-darwin-gcc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/arg-pp-mipspro-cc:					\
+		${WRAPPER_SRCDIR}/arg-pp-mipspro-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/cmd-sink-aix-xlc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-aix-xlc
@@ -541,6 +567,13 @@ ${_WRAP_UNTRANSFORM_SEDFILE}: ${_WRAP_GEN_TRANSFORM}
 ${_WRAP_EMPTY_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.  endif
+
+.  if !target(${_WRAP_ARG_PP_MAIN.${_wrappee_}})
+${_WRAP_ARG_PP_MAIN.${_wrappee_}}: ${WRAPPER_SRCDIR}/arg-pp-main
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_ARG_SOURCE.${_wrappee_}})
