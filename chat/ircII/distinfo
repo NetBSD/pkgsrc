@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2002/10/17 12:56:10 wiz Exp $
+$NetBSD: distinfo,v 1.16 2002/11/15 12:14:18 mrg Exp $
 
-SHA1 (ircii-20020912.tar.bz2) = 27a79df8ac0626ccb7c57cff7bb8bb902d2c622f
-Size (ircii-20020912.tar.bz2) = 552957 bytes
+SHA1 (ircii-20021103.tar.bz2) = 222d0ba4fcdb48e86739c2ec639115d86975d85e
+Size (ircii-20021103.tar.bz2) = 554379 bytes
 SHA1 (patch-aa) = aff3a8c5ff05797b8617be2b4b57920913ae9ca2
-SHA1 (patch-ab) = e197246641ed58591ddf4607b31b1ee92497845b
 SHA1 (patch-ac) = 0afd36f3ad2247b0d42dfebab210822dd5dfe151
