@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/25 00:22:40 xtraeme Exp $
 
 MODNAME=		imap
 PKGREVISION=		1
 CATEGORIES+=		mail
 COMMENT=		PHP4 extension for IMAP (Internet Mailbox Access Protocol)
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../../www/php4/Makefile.module"
@@ -17,6 +17,6 @@ CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 
 LIBS+=			-lssl -lcrypto
 
-.include "../../mail/imap-uw/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../mail/imap-uw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
