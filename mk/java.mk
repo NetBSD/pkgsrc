@@ -1,4 +1,4 @@
-# $NetBSD: java.mk,v 1.3 2002/10/14 11:05:48 jlam Exp $
+# $NetBSD: java.mk,v 1.4 2002/10/14 11:48:04 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -19,6 +19,13 @@
 #
 # PKG_JVMS_ACCEPTED is a package-settable list of JVMs that may be used as
 #	possible dependencies for the package.
+#
+# TODO:
+#
+#	* Have some way to specify which JVMs are acceptable for each
+#	  platform, and use the intersection of these JVMs and the ones
+#	  listed in PKG_JVMS_ACCEPTED as the JVMS that may really be used.
+#	  Currently, we assume all of the JVMs are usable by all platforms.
 
 .if !defined(JAVA_MK)
 JAVA_MK=	# defined
@@ -32,8 +39,7 @@ USE_JAVA=	run
 .endif
 
 PKG_JVM_DEFAULT?=	# empty
-PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
-_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe
+PKG_JVMS_ACCEPTED?=	jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
 # default JVM.  Note that this has lower precedence than PKG_JVM_DEFAULT.
@@ -62,27 +68,8 @@ _PKG_JVM_DEFAULT?=	kaffe
 .  endif
 .endif
 
-# These lists are copied from the JVM package Makefiles.
-_ONLY_FOR_PLATFORMS.jdk= \
-	NetBSD-*-i386 Linux-*-i[3-6]86
-_ONLY_FOR_PLATFORMS.blackdown-jdk13= \
-	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
-	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc
-_ONLY_FOR_PLATFORMS.sun-jdk13= \
-	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
-_ONLY_FOR_PLATFORMS.sun-jdk14= \
-	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 Linux-*-i[3-6]86
-_ONLY_FOR_PLATFORMS.kaffe= \
-	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
-
 # Set the accepted JVMs for this platform.
-.for _jvm_ in ${_PKG_JVMS}
-.  for _pattern_ in ${_ONLY_FOR_PLATFORMS.${_jvm_}}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
-_PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
-.    endif
-.  endfor
-.endfor
+_PKG_JVMS_ACCEPTED=	${PKG_JVMS_ACCEPTED}
 
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.sun-jdk13=	sun-jdk13
