@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/12/14 04:34:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.51 2002/12/27 05:47:14 uebayasi Exp $
 
 DISTNAME=       imap-2002a.DEV.SNAP-0212051126
 PKGNAME=        imap-uw-2002.1rc1
@@ -29,7 +29,7 @@ ALL_TARGET=	lrh
 ALL_TARGET=	osx
 .else
 ALL_TARGET=	neb
-.if (${USE_KERBEROS} != "no")
+.if defined(USE_KERBEROS) && (${USE_KERBEROS} != "no")
 PKG_USE_KERBEROS=	#defined
 ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .endif
