@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/09/04 16:43:13 jlam Exp $
+$NetBSD: md5,v 1.2 1999/10/04 17:31:25 jlam Exp $
 
 MD5 (flash_linux.tar.gz) = 2962638158fb1f83fec4aa617405dd6a
+MD5 (flash_solaris.tar.gz) = 18fa8bc9445f7b5d18d49382e01812c8
