@@ -1,0 +1,118 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/02/15 19:43:22 pooka Exp $
+
+--- bwbasic.doc	Tue Oct 12 19:30:12 1993
++++ bwbasic.1	Fri Feb 11 22:42:36 2000
+@@ -1,33 +1,10 @@
+-
+-
+-
+-
+-               Bywater BASIC Interpreter/Shell, version 2.10
+-               ---------------------------------------------
+-
+-                    Copyright (c) 1993, Ted A. Campbell
+-                  for bwBASIC version 2.10, 11 October 1993
+-
+-
+-CONTENTS:
+-
+-   1. DESCRIPTION
+-   2. TERMS OF USE
+-   3. QUICK REFERENCE LIST OF COMMANDS AND FUNCTIONS
+-   4. GENERAL NOTES ON USAGE
+-   5. EXPANDED REFERENCE FOR COMMANDS AND FUNCTIONS
+-   6. PREDEFINED VARIABLES
+-   7. UNIMPLEMENTED COMMANDS AND FUNCTIONS
+-      and AGENDA FOR DEVELOPMENT
+-   8. THE STORY OF BYWATER BASIC
+-   9. COMMUNICATIONS
+-
+-   The author wishes to express his thanks to Mr. David MacKenzie, 
+-   who assisted in the development Unix installation and configuration
+-   for this version.
+-
+-
+-1. DESCRIPTION
++.Dd October 11, 1993
++.Dt bwBASIC 1
++.Os
++.Sh NAME
++.Nm bwBASIC
++.Nd BASIC Interpreter/Shell, version 2.10
++.Sh SYNOPSIS
+ 
+    The Bywater BASIC Interpreter (bwBASIC) implements a large
+    superset of the ANSI Standard for Minimal BASIC (X3.60-1978)
+@@ -60,7 +37,7 @@
+    offer further shell-processing capabilities.
+ 
+ 
+-2. TERMS OF USE:
++.Sh TERMS OF USE
+ 
+    This version of Bywater BASIC is released under the terms of the 
+    GNU General Public License (GPL), which is distributed with this 
+@@ -71,7 +48,7 @@
+    for information on which you should contact the author.
+ 
+ 
+-3. QUICK REFERENCE LIST OF COMMANDS AND FUNCTIONS
++.Sh QUICK REFERENCE LIST OF COMMANDS AND FUNCTIONS
+ 
+    Be aware that many of these commands and functions will not be
+    available unless you have set certain flags in the header files
+@@ -199,7 +176,7 @@
+    WRITE [# device-number,] element [, element ]....
+    
+ 
+-4. GENERAL NOTES ON USAGE:
++.Sh GENERAL NOTES ON USAGE
+ 
+    4.a. Interactive Environment
+ 
+@@ -305,7 +282,7 @@
+    aliases to allow Microsoft-style programs to be run.
+ 
+ 
+-5. EXPANDED REFERENCE FOR COMMANDS AND FUNCTIONS
++.Sh EXPANDED REFERENCE FOR COMMANDS AND FUNCTIONS
+ 
+    The "Dependencies" listed in the folowing reference materials
+    refers to flags that must be set to TRUE in bwbasic.h for the
+@@ -1636,7 +1613,7 @@
+    ------------------------------------------
+ 
+ 
+-6. PREDEFINED VARIABLES
++.Sh PREDEFINED VARIABLES
+ 
+    BWB.EDITOR$
+    BWB.FILES$
+@@ -1669,7 +1646,7 @@
+    (specifically CLS, LOCATE, and INKEY$) may be available. 
+ 
+ 
+-7. UNIMPLEMENTED COMMANDS AND FUNCTIONS, and AGENDA FOR DEVELOPMENT
++.Sh UNIMPLEMENTED COMMANDS AND FUNCTIONS, and AGENDA FOR DEVELOPMENT
+ 
+    There are some items not implemented that have been so long
+    a part of standard BASICs that their absence will seem surprising.
+@@ -1853,7 +1830,7 @@
+    ZONEWIDTH
+ 
+ 
+-8. THE STORY OF BYWATER BASIC
++.Sh THE STORY OF BYWATER BASIC
+ 
+    This program was originally begun in 1982 by my grandmother, Mrs.
+    Verda Spell of Beaumont, TX.  She was writing the program using
+@@ -1873,9 +1850,3 @@
+    bag and eventually managed to have it all copied over to a PC
+    diskette. I have revised it slightly prior to this release. You
+    should know, though, that I myself am an historian, not a programmer.
+-
+-
+-9. COMMUNICATIONS:
+-
+-   email:  tcamp@delphi.com
+-
