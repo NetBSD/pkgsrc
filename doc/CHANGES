@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8266 2004/12/05 08:33:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.8267 2004/12/05 08:33:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5768,6 +5768,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany-extensions to 1.4.3 [jmmv 2004-12-04]
 	Updated opencm to 0.1.2rc8 [jmmv 2004-12-04]
 	Updated python-mode to 4.6.54 [ben 2004-12-04]
-	Updated gice to 0.6.2 [jmmv 2004-12-04]
-	Updated hnb to 1.9.17 [jmmv 2004-12-04]
+	Updated gice to 0.6.2 [jmmv 2004-12-05]
+	Updated hnb to 1.9.17 [jmmv 2004-12-05]
 	Updated leafpad to 0.7.7 [jmmv 2004-12-05]
