@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.125 2004/08/05 03:04:34 jlam Exp $
 
 DISTNAME=		samba-3.0.5
 CATEGORIES=		net
@@ -64,7 +64,7 @@ USE_GNU_READLINE=	yes
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
-.include "Makefile.options"
+.include "options.mk"
 
 .if !defined(MKTEMP)
 MKTEMP!=	${TYPE} mktemp 2>&1 | \
