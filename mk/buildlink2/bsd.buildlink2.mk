@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.112 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.113 2004/02/08 02:59:14 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -479,10 +479,6 @@ _BLNK_WRAPPEES+=	LD
 .if !empty(USE_LANGUAGES:Mfortran) || defined(USE_FORTRAN)
 _BLNK_WRAPPEES+=	FC
 .endif
-.if defined(USE_LIBTOOL)
-PKGLIBTOOL=		${BUILDLINK_LIBTOOL}
-PKGSHLIBTOOL=		${BUILDLINK_SHLIBTOOL}
-.endif
 _BLNK_WRAPPEES+=	LIBTOOL SHLIBTOOL
 .if defined(USE_X11)
 IMAKE?=			${X11BASE}/bin/imake
@@ -498,10 +494,6 @@ _ALIASES.LD=		ld
 # _BLNK_WRAP_*.<wrappee> variables represent "template methods" of the
 
 # wrapper script that may be customized per wrapper:
-#
-# _BLNK_WRAP_SETENV.<wrappee> resets the value of CC, CPP, etc. in the
-#	configure and make environments (CONFIGURE_ENV, MAKE_ENV) so that
-#	they point to the wrappers.
 #
 # _BLNK_WRAP_{*CACHE*,*LOGIC*}.<wrappee> are parts of the wrapper script
 #	system as described in pkgsrc/mk/buildlink2/README.  The files not
@@ -546,7 +538,6 @@ _BLNK_UNTRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.untransform.sed
 #	generate the wrapper for the wrappee.
 #
 _BLNK_WRAPPER_SH.${_wrappee_}=	${.CURDIR}/../../mk/buildlink2/wrapper.sh
-_BLNK_WRAP_SETENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
 _BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=		${_BLNK_WRAP_SANITIZE_PATH}
 _BLNK_WRAP_ENV.${_wrappee_}=			${_BLNK_WRAP_ENV}
 _BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
@@ -559,27 +550,12 @@ _BLNK_WRAP_LOGIC.${_wrappee_}=			${_BLNK_WRAP_LOGIC_TRANSFORM}
 _BLNK_WRAP_POST_LOGIC.${_wrappee_}=		${_BLNK_EMPTY_FILE}
 .endfor
 
-# Don't bother adding AS, CPP to the configure or make environments as
-# adding them seems to break some GNU configure scripts.
-#
-_BLNK_WRAP_SETENV.AS=		# empty
-_BLNK_WRAP_SETENV.CPP=		# empty
-
-# Also override any F77 value in the environment when compiling Fortran
-# code.
-#
-_BLNK_WRAP_SETENV.FC+=		F77="${BUILDLINK_FC:T}"
-
-# Don't override the default LIBTOOL and SHLIBTOOL settings in the
-# environment, as they already correctly point to the correct values, and
-# don't sanitize the PATH because we want libtool to invoke the wrapper
+# Don't sanitize the PATH because we want libtool to invoke the wrapper
 # scripts, too.
 #
-_BLNK_WRAP_SETENV.LIBTOOL=	# empty
 _BLNK_WRAPPER_SH.LIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 #
-_BLNK_WRAP_SETENV.SHLIBTOOL=	# empty
 _BLNK_WRAPPER_SH.SHLIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
 
@@ -605,13 +581,6 @@ _BLNK_WRAP_PRIVATE_CACHE.SHLIBTOOL=	${_BLNK_WRAP_PRIVATE_CACHE.LIBTOOL}
 _BLNK_WRAP_PRIVATE_POST_CACHE.SHLIBTOOL= ${_BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL}
 _BLNK_WRAP_POST_LOGIC.SHLIBTOOL=	${_BLNK_WRAP_POST_LOGIC.LIBTOOL}
 
-# Allow BUILDLINK_SETENV.<wrappee> to override _BLNK_WRAP_SETENV.<wrappee>.
-.for _wrappee_ in ${_BLNK_WRAPPEES}
-.  if defined(BUILDLINK_SETENV.${_wrappee_})
-_BLNK_WRAP_SETENV.${_wrappee_}=	${BUILDLINK_SETENV.${_wrappee_}}
-.  endif
-.endfor
-
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
 #
@@ -626,11 +595,15 @@ buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
 buildlink-wrappers: ${_BLNK_FAKE_LA}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
-CONFIGURE_ENV+=	${_BLNK_WRAP_SETENV.${_wrappee_}}
-MAKE_ENV+=	${_BLNK_WRAP_SETENV.${_wrappee_}}
+.  if defined(PKG_${_wrappee_})
+_BLNK_PKG_${_wrappee_}=	${PKG_${_wrappee_}}
+.  else
+_BLNK_PKG_${_wrappee_}=	${${_wrappee_}}
+.  endif
 
 BUILDLINK_${_wrappee_}=	\
-	${BUILDLINK_DIR}/bin/${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+	${BUILDLINK_DIR}/bin/${_BLNK_PKG_${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+${_wrappee_}:=	${BUILDLINK_${_wrappee_}:T}
 
 _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"			\
@@ -670,7 +643,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
 		"Creating wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	wrappee="${${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}";	\
+	wrappee="${_BLNK_PKG_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
 	case $${wrappee} in						\
 	/*)	absdir=;						\
 		;;							\
@@ -700,7 +673,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
 	${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}		\
-		-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"		\
+		-e "s|@WRAPPEE@|$${absdir}${_BLNK_PKG_${_wrappee_}:Q}|g" \
 		> ${.TARGET};						\
 	${CHMOD} +x ${.TARGET}
 .endif
