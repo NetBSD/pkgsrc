@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 1999/02/10 14:53:34 frueauf Exp $
+$NetBSD: patch-ac,v 1.3 1999/05/22 22:07:04 tv Exp $
 
---- environ.c.orig	Tue Jun 22 22:07:20 1993
-+++ environ.c	Sat Dec 26 08:39:07 1998
-@@ -429,16 +429,23 @@
+--- environ.c.orig	Mon Sep 29 06:00:24 1997
++++ environ.c	Sat May 22 18:03:52 1999
+@@ -430,16 +430,17 @@
  
  #define SUBS_DEFINED
  
@@ -14,13 +14,8 @@ $NetBSD: patch-ac,v 1.2 1999/02/10 14:53:34 frueauf Exp $
 -#ifndef time_t
 -#define time_t long
 -#endif
-+/*#ifndef time_t
-+ #define time_t long
-+ #endif*/
-+
-+#include <sys/param.h>
- 
-+#if !(defined(BSD) && BSD >= 199306)
+-
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
  extern struct tm *localtime();
  extern time_t time();
  extern char   *strcpy();
@@ -29,7 +24,7 @@ $NetBSD: patch-ac,v 1.2 1999/02/10 14:53:34 frueauf Exp $
  
  FILE *
  file_open(name, mode)
-@@ -534,8 +541,12 @@
+@@ -535,8 +536,12 @@
  }
  
  long
@@ -43,7 +38,7 @@ $NetBSD: patch-ac,v 1.2 1999/02/10 14:53:34 frueauf Exp $
  #define NOONOFFSET    43200L
  #define SEC_IN_DAY    (24L * 60L * 60L)
  #define INV_VALUE     (SEC_IN_DAY + 1L)
-@@ -551,6 +562,7 @@
+@@ -552,6 +557,7 @@
      noontm = localtime(&noon);
      retval = NOONOFFSET - 60 * (60 * noontm->tm_hour - noontm->tm_min);
      return retval;
@@ -51,7 +46,7 @@ $NetBSD: patch-ac,v 1.2 1999/02/10 14:53:34 frueauf Exp $
  }
  
  long
-@@ -608,7 +620,8 @@
+@@ -609,7 +615,8 @@
      (uint) attribute;
      (uint) host;
  
