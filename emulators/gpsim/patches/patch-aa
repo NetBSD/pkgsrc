@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.3 2004/04/26 22:34:17 snj Exp $
+
+--- gui/Makefile.in.orig	2004-04-26 15:24:07.000000000 -0700
++++ gui/Makefile.in	2004-04-26 15:24:23.000000000 -0700
+@@ -116,9 +116,9 @@ libgpsimgui_la_LDFLAGS = @X_LDFLAGS@ @Y_
+ 
+ pixmapdir = $(datadir)/gpsim
+ 
+-CFLAGS = @CFLAGS@ -D DATADIR=\"~/.gpsim/\"
+-CXXFLAGS = @CXXFLAGS@ -D DATADIR=\"~/.gpsim/\"
+-CPPFLAGS = @CPPFLAGS@ -D DATADIR=\"~/.gpsim/\"
++CFLAGS = @CFLAGS@ -DDATADIR=\"~/.gpsim/\"
++CXXFLAGS = @CXXFLAGS@ -DDATADIR=\"~/.gpsim/\"
++CPPFLAGS = @CPPFLAGS@ -DDATADIR=\"~/.gpsim/\"
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
