@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/09 17:48:37 gehenna Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/29 00:43:38 gehenna Exp $
 bin/cvscan
+bin/cvsup2cvsync
 bin/cvsync
 bin/cvsyncd
 bin/rcscan
 bin/rcscmp
 man/man1/cvscan.1
+man/man1/cvsup2cvsync.1
 man/man1/cvsync.1
 man/man1/cvsyncd.1
 man/man1/rcscan.1
