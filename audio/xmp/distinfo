@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/12/22 17:05:51 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2003/09/22 09:30:03 tron Exp $
 
 SHA1 (xmp-2.0.4.tar.bz2) = 35c1578f2f6728aa2ec92f34ada050e328694167
 Size (xmp-2.0.4.tar.bz2) = 314820 bytes
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 9d4732f57cf045a3904b8d9627ccb866d39e0fb0
 SHA1 (patch-ac) = 0efcb2f094f149c56da96a6ba7ba9a59ed06dc4d
 SHA1 (patch-ad) = 7b2c1f5c10b4b8a766bcca7bc4d7d9f538e89db1
 SHA1 (patch-ae) = 251bd77372088b1e72a581c0c39e722aacb40a0e
+SHA1 (patch-af) = 96743b9d31adec688a0bcab05bd8b32a9e162a54
