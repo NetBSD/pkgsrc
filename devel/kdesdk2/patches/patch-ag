@@ -1,0 +1,37 @@
+$NetBSD: patch-ag,v 1.1 2004/06/13 20:53:14 kristerw Exp $
+
+--- poxml/swappo.cpp.orig	2004-06-13 22:25:51.000000000 +0200
++++ poxml/swappo.cpp	2004-06-13 22:36:02.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include "GettextParser.hpp"
+ #include <fstream>
++#include <iostream>
+ #include "GettextLexer.hpp"
+ 
+ int main(int argc, char **argv)
+@@ -12,13 +13,13 @@
+     MsgList translated;
+ 
+     try {
+-        ifstream s(argv[1]);
++        std::ifstream s(argv[1]);
+         GettextLexer lexer(s);
+         GettextParser parser(lexer);
+         translated = parser.file();
+ 
+-    } catch(exception& e) {
+-        cerr << "exception: " << e.what() << endl;
++    } catch(std::exception& e) {
++        std::cerr << "exception: " << e.what() << endl;
+         return 1;
+     }
+ 
+@@ -28,7 +29,7 @@
+         if ( !( *it ).msgstr.isEmpty() ) {
+             outputMsg("msgid", (*it).msgstr);
+             outputMsg("msgstr", (*it).msgid);
+-            cout << "\n";
++            std::cout << "\n";
+         }
+     }
+ 

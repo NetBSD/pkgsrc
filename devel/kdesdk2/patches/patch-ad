@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/06/13 20:53:14 kristerw Exp $
+
+--- kbabel/kbabeldict/modules/dbsearchengine/KDBSearchEngine.cpp.orig	2004-06-13 22:08:25.000000000 +0200
++++ kbabel/kbabeldict/modules/dbsearchengine/KDBSearchEngine.cpp	2004-06-13 22:09:38.000000000 +0200
+@@ -776,7 +776,7 @@
+ 
+ bool KDBSearchEngine::startSingleSearch(QString searchString,
+ 				     unsigned int pattern1Limit=0,unsigned int pattern2Limit=0,
+-				     bool inTranslation=false)
++				     bool inTranslation)
+ {
+   /*
+     Check Ret 
