@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/10/31 11:01:23 recht Exp $
+# $NetBSD: Makefile,v 1.52 2004/12/28 04:37:54 xtraeme Exp $
 
 DISTNAME=	libxslt-1.1.12
 PKGNAME=	${DISTNAME}
@@ -28,7 +28,18 @@ TEST_TARGET=		check
 
 BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.8
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libxslt
+PKG_SUPPORTED_OPTIONS=	crypto
+PKG_DEFAULT_OPTIONS+=	crypto
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcrypto)
+.  include "../../security/libgcrypt/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-crypto
+.else
+CONFIGURE_ARGS+=	--without-crypto
+.endif
+
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
