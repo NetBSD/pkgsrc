@@ -1,39 +1,36 @@
-@comment $NetBSD: PLIST,v 1.16 2000/11/26 21:09:01 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.17 2000/12/30 18:43:32 rh Exp $
 bin/gnumeric
 etc/CORBA/servers/gnumeric.gnorba
-lib/gnumeric/0.59/plugins/gnum_applix.la
-lib/gnumeric/0.59/plugins/gnum_applix.a
-lib/gnumeric/0.59/plugins/gnum_applix.so
-lib/gnumeric/0.59/plugins/gnum_dif.la
-lib/gnumeric/0.59/plugins/gnum_dif.a
-lib/gnumeric/0.59/plugins/gnum_dif.so
-lib/gnumeric/0.59/plugins/gnum_gb.la
-lib/gnumeric/0.59/plugins/gnum_gb.a
-lib/gnumeric/0.59/plugins/gnum_gb.so
-lib/gnumeric/0.59/plugins/gnum_html.la
-lib/gnumeric/0.59/plugins/gnum_html.a
-lib/gnumeric/0.59/plugins/gnum_html.so
-lib/gnumeric/0.59/plugins/gnum_lotus.la
-lib/gnumeric/0.59/plugins/gnum_lotus.a
-lib/gnumeric/0.59/plugins/gnum_lotus.so
-lib/gnumeric/0.59/plugins/gnum_numtheory.la
-lib/gnumeric/0.59/plugins/gnum_numtheory.a
-lib/gnumeric/0.59/plugins/gnum_numtheory.so
-lib/gnumeric/0.59/plugins/gnum_oleo.la
-lib/gnumeric/0.59/plugins/gnum_oleo.a
-lib/gnumeric/0.59/plugins/gnum_oleo.so
-lib/gnumeric/0.59/plugins/gnum_sc.la
-lib/gnumeric/0.59/plugins/gnum_sc.a
-lib/gnumeric/0.59/plugins/gnum_sc.so
-lib/gnumeric/0.59/plugins/gnum_sylk.la
-lib/gnumeric/0.59/plugins/gnum_sylk.a
-lib/gnumeric/0.59/plugins/gnum_sylk.so
-lib/gnumeric/0.59/plugins/gnum_xbase.la
-lib/gnumeric/0.59/plugins/gnum_xbase.a
-lib/gnumeric/0.59/plugins/gnum_xbase.so
-lib/gnumeric/0.59/plugins/gnum_xml2.la
-lib/gnumeric/0.59/plugins/gnum_xml2.a
-lib/gnumeric/0.59/plugins/gnum_xml2.so
+lib/gnumeric/0.61/plugins/gnum_applix.la
+lib/gnumeric/0.61/plugins/gnum_applix.a
+lib/gnumeric/0.61/plugins/gnum_applix.so
+lib/gnumeric/0.61/plugins/gnum_dif.la
+lib/gnumeric/0.61/plugins/gnum_dif.a
+lib/gnumeric/0.61/plugins/gnum_dif.so
+lib/gnumeric/0.61/plugins/gnum_html.la
+lib/gnumeric/0.61/plugins/gnum_html.a
+lib/gnumeric/0.61/plugins/gnum_html.so
+lib/gnumeric/0.61/plugins/gnum_lotus.la
+lib/gnumeric/0.61/plugins/gnum_lotus.a
+lib/gnumeric/0.61/plugins/gnum_lotus.so
+lib/gnumeric/0.61/plugins/gnum_numtheory.la
+lib/gnumeric/0.61/plugins/gnum_numtheory.a
+lib/gnumeric/0.61/plugins/gnum_numtheory.so
+lib/gnumeric/0.61/plugins/gnum_oleo.la
+lib/gnumeric/0.61/plugins/gnum_oleo.a
+lib/gnumeric/0.61/plugins/gnum_oleo.so
+lib/gnumeric/0.61/plugins/gnum_sc.la
+lib/gnumeric/0.61/plugins/gnum_sc.a
+lib/gnumeric/0.61/plugins/gnum_sc.so
+lib/gnumeric/0.61/plugins/gnum_sylk.la
+lib/gnumeric/0.61/plugins/gnum_sylk.a
+lib/gnumeric/0.61/plugins/gnum_sylk.so
+lib/gnumeric/0.61/plugins/gnum_xbase.la
+lib/gnumeric/0.61/plugins/gnum_xbase.a
+lib/gnumeric/0.61/plugins/gnum_xbase.so
+lib/gnumeric/0.61/plugins/gnum_xml2.la
+lib/gnumeric/0.61/plugins/gnum_xml2.a
+lib/gnumeric/0.61/plugins/gnum_xml2.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
 share/gnome/help/gnumeric/C/analysis-tools.html
@@ -525,68 +522,68 @@ share/gnome/help/gnumeric/C/toolbar-buttons.html
 share/gnome/help/gnumeric/C/topic.dat
 share/gnome/help/gnumeric/C/tutorials.html
 share/gnome/ui/gnumeric.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.3D.button.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.3D.list.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Classical.cool.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Classical.simple.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Classical.trendy.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Colourful.banana.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Colourful.black.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Colourful.blue.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Colourful.orange.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Colourful.vanilla.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Financial.basic.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Financial.desert.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Financial.ice.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Financial.modern.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.Financial.purple.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.General.advanced.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.General.basic.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.General.empty.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.General.table.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.List.basic.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.List.green.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.List.lila.xml
-share/gnumeric/0.59/autoformat-templates/autoformat.List.simple.xml
-share/gnumeric/0.59/glade/advanced-filter.glade
-share/gnumeric/0.59/glade/analysis-tools.glade
-share/gnumeric/0.59/glade/autocorrect-exceptions.glade
-share/gnumeric/0.59/glade/autocorrect.glade
-share/gnumeric/0.59/glade/autoformat.glade
-share/gnumeric/0.59/glade/autosave-prompt.glade
-share/gnumeric/0.59/glade/autosave.glade
-share/gnumeric/0.59/glade/cell-format.glade
-share/gnumeric/0.59/glade/cell-sort.glade
-share/gnumeric/0.59/glade/col-width.glade
-share/gnumeric/0.59/glade/delete-cells.glade
-share/gnumeric/0.59/glade/dialog-stf-export.glade
-share/gnumeric/0.59/glade/dialog-stf.glade
-share/gnumeric/0.59/glade/dialog-zoom.glade
-share/gnumeric/0.59/glade/font-sel.glade
-share/gnumeric/0.59/glade/formula-guru.glade
-share/gnumeric/0.59/glade/function-select.glade
-share/gnumeric/0.59/glade/graph-guru.glade
-share/gnumeric/0.59/glade/hf-config.glade
-share/gnumeric/0.59/glade/import.glade
-share/gnumeric/0.59/glade/insert-cells.glade
-share/gnumeric/0.59/glade/names.glade
-share/gnumeric/0.59/glade/plugin-manager.glade
-share/gnumeric/0.59/glade/print.glade
-share/gnumeric/0.59/glade/row-height.glade
-share/gnumeric/0.59/glade/sheet-order.glade
-share/gnumeric/0.59/glade/sheet-rename.glade
-share/gnumeric/0.59/glade/solver-options.glade
-share/gnumeric/0.59/glade/solver.glade
-share/gnumeric/0.59/glade/summary.glade
-share/gnumeric/0.59/glade/workbook-attr.glade
-share/gnumeric/0.59/idl/Gnumeric.idl
-share/gnumeric/0.59/idl/gnumeric-graphs.idl
-share/gnumeric/0.59/python/gnumeric_defs.py
-share/gnumeric/0.59/python/gnumeric_startup.py
-share/gnumeric/0.59/templates/invoice.gnumeric
-share/gnumeric/0.59/templates/loan.gnumeric
-share/gnumeric/0.59/templates/mileage.gnumeric
-share/gnumeric/0.59/templates/purchase_order.gnumeric
+share/gnumeric/0.61/autoformat-templates/autoformat.3D.button.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.3D.list.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Classical.cool.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Classical.simple.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Classical.trendy.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Colourful.banana.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Colourful.black.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Colourful.blue.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Colourful.orange.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Colourful.vanilla.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Financial.basic.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Financial.desert.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Financial.ice.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Financial.modern.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.Financial.purple.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.General.advanced.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.General.basic.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.General.empty.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.General.table.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.List.basic.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.List.green.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.List.lila.xml
+share/gnumeric/0.61/autoformat-templates/autoformat.List.simple.xml
+share/gnumeric/0.61/glade/advanced-filter.glade
+share/gnumeric/0.61/glade/analysis-tools.glade
+share/gnumeric/0.61/glade/autocorrect-exceptions.glade
+share/gnumeric/0.61/glade/autocorrect.glade
+share/gnumeric/0.61/glade/autoformat.glade
+share/gnumeric/0.61/glade/autosave-prompt.glade
+share/gnumeric/0.61/glade/autosave.glade
+share/gnumeric/0.61/glade/cell-format.glade
+share/gnumeric/0.61/glade/cell-sort.glade
+share/gnumeric/0.61/glade/col-width.glade
+share/gnumeric/0.61/glade/delete-cells.glade
+share/gnumeric/0.61/glade/dialog-stf-export.glade
+share/gnumeric/0.61/glade/dialog-stf.glade
+share/gnumeric/0.61/glade/dialog-zoom.glade
+share/gnumeric/0.61/glade/font-sel.glade
+share/gnumeric/0.61/glade/formula-guru.glade
+share/gnumeric/0.61/glade/function-select.glade
+share/gnumeric/0.61/glade/graph-guru.glade
+share/gnumeric/0.61/glade/hf-config.glade
+share/gnumeric/0.61/glade/import.glade
+share/gnumeric/0.61/glade/insert-cells.glade
+share/gnumeric/0.61/glade/names.glade
+share/gnumeric/0.61/glade/plugin-manager.glade
+share/gnumeric/0.61/glade/print.glade
+share/gnumeric/0.61/glade/row-height.glade
+share/gnumeric/0.61/glade/sheet-order.glade
+share/gnumeric/0.61/glade/sheet-rename.glade
+share/gnumeric/0.61/glade/solver-options.glade
+share/gnumeric/0.61/glade/solver.glade
+share/gnumeric/0.61/glade/summary.glade
+share/gnumeric/0.61/glade/workbook-attr.glade
+share/gnumeric/0.61/idl/Gnumeric.idl
+share/gnumeric/0.61/idl/gnumeric-graphs.idl
+share/gnumeric/0.61/python/gnumeric_defs.py
+share/gnumeric/0.61/python/gnumeric_startup.py
+share/gnumeric/0.61/templates/invoice.gnumeric
+share/gnumeric/0.61/templates/loan.gnumeric
+share/gnumeric/0.61/templates/mileage.gnumeric
+share/gnumeric/0.61/templates/purchase_order.gnumeric
 share/locale/ca/LC_MESSAGES/gnumeric.mo
 share/locale/cs/LC_MESSAGES/gnumeric.mo
 share/locale/da/LC_MESSAGES/gnumeric.mo
@@ -625,7 +622,7 @@ share/locale/zh_TW.Big5/LC_MESSAGES/gnumeric.mo
 share/mc/templates/gnumeric.desktop
 share/mime-info/gnumeric.keys
 share/mime-info/gnumeric.mime
-share/oaf/gnumeric.oafinfo
+share/oaf/GNOME_Gnumeric.oafinfo
 share/pixmaps/gnome-application-x-gnumeric.png
 share/pixmaps/gnome-application-x-xls.png
 share/pixmaps/gnome-gnumeric.png
@@ -683,18 +680,18 @@ share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
-@dirrm share/gnumeric/0.59/templates
-@dirrm share/gnumeric/0.59/python
-@dirrm share/gnumeric/0.59/idl
-@dirrm share/gnumeric/0.59/glade
-@dirrm share/gnumeric/0.59/autoformat-templates
-@dirrm share/gnumeric/0.59
+@dirrm share/gnumeric/0.61/templates
+@dirrm share/gnumeric/0.61/python
+@dirrm share/gnumeric/0.61/idl
+@dirrm share/gnumeric/0.61/glade
+@dirrm share/gnumeric/0.61/autoformat-templates
+@dirrm share/gnumeric/0.61
 @dirrm share/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
-@dirrm lib/gnumeric/0.59/plugins
-@dirrm lib/gnumeric/0.59
+@dirrm lib/gnumeric/0.61/plugins
+@dirrm lib/gnumeric/0.61
 @dirrm lib/gnumeric
 @unexec rmdir %D/share/mc/templates 2>/dev/null || true
 @unexec rmdir %D/share/mc 2>/dev/null || true
