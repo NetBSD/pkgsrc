@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/21 03:54:34 tv Exp $
 #
 
 DISTNAME=       depot-5.14
@@ -8,6 +8,7 @@ MASTER_SITES=   ftp://ftp.andrew.cmu.edu/pub/depot/alpha/
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	INSTALL=""
 
 MAN1=depot.1 fsi_generate.1 hintservice.1
 MAN5=depot.conf.5 depot.pref.5
