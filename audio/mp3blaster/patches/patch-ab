@@ -1,14 +1,212 @@
-$NetBSD: patch-ab,v 1.3 2002/11/22 17:02:05 jschauma Exp $
+$NetBSD: patch-ab,v 1.4 2003/09/30 09:44:00 cube Exp $
 
---- src/Makefile.in.orig	Fri Nov 22 11:24:37 2002
-+++ src/Makefile.in	Fri Nov 22 11:25:30 2002
-@@ -75,8 +75,7 @@
+--- src/Makefile.in.orig	2002-10-20 19:05:08.000000000 +0200
++++ src/Makefile.in
+@@ -59,6 +59,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ CC = @CC@
+ CXX = @CXX@
++LIBGETOPT = @LIBGETOPT@
+ LIBMPEGSOUND = @LIBMPEGSOUND@
+ LIBMYSQL = @LIBMYSQL@
+ LIBNMIXER = @LIBNMIXER@
+@@ -75,9 +76,9 @@ SID_LIBS = @SID_LIBS@
  SRCDIRS = @SRCDIRS@
  VERSION = @VERSION@
  
 -bin_PROGRAMS = mp3blaster mp3tag splay
--#bin_PROGRAMS		= mp3blaster mp3tag
-+bin_PROGRAMS		= mp3blaster mp3tag
- mp3blaster_SOURCES = fileman.cc 			  main.cc 			  scrollwin.cc 			  getopt.c 			  getopt1.c 			  fileman.h 			  genretab.h 			  getopt.h 				id3parse.cc 			  id3parse.h 			  mp3blaster.h 			  global.cc 			  global.h 			  config.cc 			  scrollwin.h 			  winitem.cc 			  winitem.h 			  mp3win.cc 			  mp3win.h 			  mp3item.cc 			  mp3item.h 				keybindings.h 				history.cc 				history.h 				getinput.cc 				getinput.h 				interface.cc 				interface.h
++bin_PROGRAMS = mp3blaster mp3tag
+ #bin_PROGRAMS		= mp3blaster mp3tag
+-mp3blaster_SOURCES = fileman.cc 			  main.cc 			  scrollwin.cc 			  getopt.c 			  getopt1.c 			  fileman.h 			  genretab.h 			  getopt.h 				id3parse.cc 			  id3parse.h 			  mp3blaster.h 			  global.cc 			  global.h 			  config.cc 			  scrollwin.h 			  winitem.cc 			  winitem.h 			  mp3win.cc 			  mp3win.h 			  mp3item.cc 			  mp3item.h 				keybindings.h 				history.cc 				history.h 				getinput.cc 				getinput.h 				interface.cc 				interface.h
++mp3blaster_SOURCES = fileman.cc 			  main.cc 			  scrollwin.cc 			  fileman.h 			  genretab.h 				id3parse.cc 			  id3parse.h 			  mp3blaster.h 			  global.cc 			  global.h 			  config.cc 			  scrollwin.h 			  winitem.cc 			  winitem.h 			  mp3win.cc 			  mp3win.h 			  mp3item.cc 			  mp3item.h 				keybindings.h 				history.cc 				history.h 				getinput.cc 				getinput.h 				interface.cc 				interface.h
  
  splay_SOURCES = splay.cc splay.h splay_common.cc
+ splay_DEPENDENCIES = ../mpegsound/libmpegsound.a
+@@ -85,9 +86,9 @@ splay_LDADD = @LIBMPEGSOUND@
+ mp3tag_SOURCES = id3parse.cc mp3tag.cc id3parse.h
+ mp3tag_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a
+ mp3tag_LDADD = @LIBMPEGSOUND@ @LIBMYSQL@
+-mp3blaster_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a
++mp3blaster_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a ../getopt/libgetopt.a
+ INCLUDES = -I$(top_srcdir)/mpegsound -I/usr/include/ncurses -I$(top_srcdir)/nmixer -I$(includedir)
+-mp3blaster_LDADD = @LIBMPEGSOUND@ @LIBNMIXER@ @NAS_LIBS@ @SID_LIBS@ @OGG_LIBS@ @NCURSES_LIBS@
++mp3blaster_LDADD = @LIBMPEGSOUND@ @LIBNMIXER@ @LIBGETOPT@ @NAS_LIBS@ @SID_LIBS@ @OGG_LIBS@ @NCURSES_LIBS@
+ EXTRA_DIST = FILES
+ CXXFLAGS = @CXXFLAGS@ @NAS_CFLAGS@ -DMP3BLASTER_DOCDIR=\"${pkgdatadir}\"
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -104,9 +105,8 @@ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-mp3blaster_OBJECTS =  fileman.o main.o scrollwin.o getopt.o getopt1.o \
+-id3parse.o global.o config.o winitem.o mp3win.o mp3item.o history.o \
+-getinput.o interface.o
++mp3blaster_OBJECTS =  fileman.o main.o scrollwin.o id3parse.o global.o \
++config.o winitem.o mp3win.o mp3item.o history.o getinput.o interface.o
+ mp3blaster_LDFLAGS = 
+ mp3tag_OBJECTS =  id3parse.o mp3tag.o
+ mp3tag_LDFLAGS = 
+@@ -124,8 +124,12 @@ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
++TAR = gtar
+ GZIP_ENV = --best
++DEP_FILES =  .deps/config.P .deps/fileman.P .deps/getinput.P \
++.deps/global.P .deps/history.P .deps/id3parse.P .deps/interface.P \
++.deps/main.P .deps/mp3item.P .deps/mp3tag.P .deps/mp3win.P \
++.deps/scrollwin.P .deps/splay.P .deps/splay_common.P .deps/winitem.P
+ SOURCES = $(mp3blaster_SOURCES) $(mp3tag_SOURCES) $(splay_SOURCES)
+ OBJECTS = $(mp3blaster_OBJECTS) $(mp3tag_OBJECTS) $(splay_OBJECTS)
+ 
+@@ -133,9 +137,9 @@ all: all-redirect
+ .SUFFIXES:
+ .SUFFIXES: .S .c .cc .o .s
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps src/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu src/Makefile
+ 
+-Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
++Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status $(BUILT_SOURCES)
+ 	cd $(top_builddir) \
+ 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+@@ -165,9 +169,6 @@ uninstall-binPROGRAMS:
+ 	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	done
+ 
+-.c.o:
+-	$(COMPILE) -c $<
+-
+ .s.o:
+ 	$(COMPILE) -c $<
+ 
+@@ -216,7 +217,7 @@ TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEP
+ 	  awk '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+ 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags -o $$here/TAGS $(ETAGS_ARGS) $$tags  $$unique $(LISP))
++	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+ 
+ mostlyclean-tags:
+ 
+@@ -232,6 +233,11 @@ distdir = $(top_builddir)/$(PACKAGE)-$(V
+ subdir = src
+ 
+ distdir: $(DISTFILES)
++	here=`cd $(top_builddir) && pwd`; \
++	top_distdir=`cd $(top_distdir) && pwd`; \
++	distdir=`cd $(distdir) && pwd`; \
++	cd $(top_srcdir) \
++	  && $(AUTOMAKE) --include-deps --build-dir=$$here --srcdir-name=$(top_srcdir) --output-dir=$$top_distdir --gnu src/Makefile
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+@@ -243,6 +249,56 @@ distdir: $(DISTFILES)
+ 	  fi; \
+ 	done
+ 
++DEPS_MAGIC := $(shell mkdir .deps > /dev/null 2>&1 || :)
++
++-include $(DEP_FILES)
++
++mostlyclean-depend:
++
++clean-depend:
++
++distclean-depend:
++	-rm -rf .deps
++
++maintainer-clean-depend:
++
++%.o: %.c
++	@echo '$(COMPILE) -c $<'; \
++	$(COMPILE) -Wp,-MD,.deps/$(*F).pp -c $<
++	@-cp .deps/$(*F).pp .deps/$(*F).P; \
++	tr ' ' '\012' < .deps/$(*F).pp \
++	  | sed -e 's/^\\$$//' -e '/^$$/ d' -e '/:$$/ d' -e 's/$$/ :/' \
++	    >> .deps/$(*F).P; \
++	rm .deps/$(*F).pp
++
++%.lo: %.c
++	@echo '$(LTCOMPILE) -c $<'; \
++	$(LTCOMPILE) -Wp,-MD,.deps/$(*F).pp -c $<
++	@-sed -e 's/^\([^:]*\)\.o[ 	]*:/\1.lo \1.o :/' \
++	  < .deps/$(*F).pp > .deps/$(*F).P; \
++	tr ' ' '\012' < .deps/$(*F).pp \
++	  | sed -e 's/^\\$$//' -e '/^$$/ d' -e '/:$$/ d' -e 's/$$/ :/' \
++	    >> .deps/$(*F).P; \
++	rm -f .deps/$(*F).pp
++
++%.o: %.cc
++	@echo '$(CXXCOMPILE) -c $<'; \
++	$(CXXCOMPILE) -Wp,-MD,.deps/$(*F).pp -c $<
++	@-cp .deps/$(*F).pp .deps/$(*F).P; \
++	tr ' ' '\012' < .deps/$(*F).pp \
++	  | sed -e 's/^\\$$//' -e '/^$$/ d' -e '/:$$/ d' -e 's/$$/ :/' \
++	    >> .deps/$(*F).P; \
++	rm .deps/$(*F).pp
++
++%.lo: %.cc
++	@echo '$(LTCXXCOMPILE) -c $<'; \
++	$(LTCXXCOMPILE) -Wp,-MD,.deps/$(*F).pp -c $<
++	@-sed -e 's/^\([^:]*\)\.o[ 	]*:/\1.lo \1.o :/' \
++	  < .deps/$(*F).pp > .deps/$(*F).P; \
++	tr ' ' '\012' < .deps/$(*F).pp \
++	  | sed -e 's/^\\$$//' -e '/^$$/ d' -e '/:$$/ d' -e 's/$$/ :/' \
++	    >> .deps/$(*F).P; \
++	rm -f .deps/$(*F).pp
+ info-am:
+ info: info-am
+ dvi-am:
+@@ -280,23 +336,24 @@ distclean-generic:
+ 
+ maintainer-clean-generic:
+ mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-compile \
+-		mostlyclean-tags mostlyclean-generic
++		mostlyclean-tags mostlyclean-depend mostlyclean-generic
+ 
+ mostlyclean: mostlyclean-am
+ 
+-clean-am:  clean-binPROGRAMS clean-compile clean-tags clean-generic \
+-		mostlyclean-am
++clean-am:  clean-binPROGRAMS clean-compile clean-tags clean-depend \
++		clean-generic mostlyclean-am
+ 
+ clean: clean-am
+ 
+ distclean-am:  distclean-binPROGRAMS distclean-compile distclean-tags \
+-		distclean-generic clean-am
++		distclean-depend distclean-generic clean-am
+ 
+ distclean: distclean-am
+ 
+ maintainer-clean-am:  maintainer-clean-binPROGRAMS \
+ 		maintainer-clean-compile maintainer-clean-tags \
+-		maintainer-clean-generic distclean-am
++		maintainer-clean-depend maintainer-clean-generic \
++		distclean-am
+ 	@echo "This command is intended for maintainers to use;"
+ 	@echo "it deletes files that may require special tools to rebuild."
+ 
+@@ -306,12 +363,13 @@ maintainer-clean: maintainer-clean-am
+ maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+ mostlyclean-compile distclean-compile clean-compile \
+ maintainer-clean-compile tags mostlyclean-tags distclean-tags \
+-clean-tags maintainer-clean-tags distdir info-am info dvi-am dvi check \
+-check-am installcheck-am installcheck install-exec-am install-exec \
+-install-data-am install-data install-am install uninstall-am uninstall \
+-all-redirect all-am all installdirs mostlyclean-generic \
+-distclean-generic clean-generic maintainer-clean-generic clean \
+-mostlyclean distclean maintainer-clean
++clean-tags maintainer-clean-tags distdir mostlyclean-depend \
++distclean-depend clean-depend maintainer-clean-depend info-am info \
++dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
++install-exec install-data-am install-data install-am install \
++uninstall-am uninstall all-redirect all-am all installdirs \
++mostlyclean-generic distclean-generic clean-generic \
++maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 			  @MP3B_MODULES@
+ 

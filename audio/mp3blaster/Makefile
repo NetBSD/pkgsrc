@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/28 09:13:55 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/30 09:43:59 cube Exp $
 
 DISTNAME=	mp3blaster-3.1.3
 PKGREVISION=	3
@@ -24,6 +24,12 @@ CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CONFIGURE_ARGS+=	--enable-newthreads
 .endif
+
+post-extract:
+	${MKDIR} ${WRKSRC}/getopt
+	${MV} ${WRKSRC}/nmixer/getopt.h ${WRKSRC}/nmixer/getopt.c ${WRKSRC}/nmixer/getopt1.c \
+		${WRKSRC}/getopt
+	${RM} ${WRKSRC}/src/getopt.h ${WRKSRC}/src/getopt.c ${WRKSRC}/src/getopt1.c
 
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
