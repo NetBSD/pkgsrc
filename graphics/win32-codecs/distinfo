@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/11/16 14:05:53 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/12/21 19:44:28 wiz Exp $
 
 SHA1 (w32codec-0.90pre7.tar.bz2) = 39fb5988b21d011b41e0625cc962dc22043db122
 Size (w32codec-0.90pre7.tar.bz2) = 4764177 bytes
+SHA1 (qt6dlls.tar.bz2) = 34bcd01742f79df790bda290b94236b5cbd1c007
+Size (qt6dlls.tar.bz2) = 2628353 bytes
