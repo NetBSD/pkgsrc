@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/10 10:37:27 mrg Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/21 15:29:50 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -12,7 +12,7 @@ COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*
 
-VERS=			20020310
+VERS=			20020321
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,7 +59,5 @@ post-install:
 		${ECHO} Compressing help files; \
 		${FIND} ${PREFIX}/share/irc/help -type f -print | ${XARGS} ${GZIP_CMD}; \
 	fi
-	${RM} -f ${PREFIX}/man/man1/irc.1
-	${LN} -s ircII.1 ${PREFIX}/man/man1/irc.1
 
 .include "../../mk/bsd.pkg.mk"
