@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.22 2002/02/27 04:41:23 yyamano Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.23 2002/03/14 02:28:23 lukem Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -79,7 +79,7 @@ _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no	# GNU make is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_PATCH_BACKUP_ARG=	-b	# switch to patch(1) to provide a backup file
+_PATCH_BACKUP_ARG=	-V simple -b 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 

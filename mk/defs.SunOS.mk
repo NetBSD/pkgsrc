@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.21 2002/02/27 04:41:23 yyamano Exp $
+# $NetBSD: defs.SunOS.mk,v 1.22 2002/03/14 02:28:23 lukem Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -82,7 +82,7 @@ _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no		# GNU make is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
-_PATCH_BACKUP_ARG= 	-z		# switch to patch(1) for backup file
+_PATCH_BACKUP_ARG= 	-V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
