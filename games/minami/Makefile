@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/18 05:03:04 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/09 20:37:08 tv Exp $
 #
 
 DISTNAME=	minami-1.0.2
@@ -16,5 +16,6 @@ REPLACE_PERL=	gen_act gen_dun gen_itm gen_scn minflag
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/minami ${PREFIX}/bin
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
