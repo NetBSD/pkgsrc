@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/30 14:30:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/08/16 14:52:28 wiz Exp $
 
-SHA1 (qvwm-1.1.10.tar.gz) = 85c5b10c481d2028282c29afa8c4c9673ccb6fdf
-Size (qvwm-1.1.10.tar.gz) = 426127 bytes
+SHA1 (qvwm-1.1.11.tar.gz) = 5b8eee3423492137414b69c1d636dfa50347f3a4
+Size (qvwm-1.1.11.tar.gz) = 429757 bytes
 SHA1 (patch-aa) = f6417e645c7a17e7f826cebea51ba34713071a9d
