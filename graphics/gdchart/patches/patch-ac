@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2003/06/23 15:56:12 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2003/06/24 08:04:24 adam Exp $
 
 --- makefile.orig	Tue Mar 11 04:03:06 2003
 +++ makefile
@@ -30,8 +30,8 @@ $NetBSD: patch-ac,v 1.5 2003/06/23 15:56:12 wiz Exp $
 -GD_INCL=../gd-1.8.4/
 -GD_LD=../gd-1.8.4/
 -GD_LIB=libgd.a
-+GD_INCL=${BUILDLINK_PREFIX.gd}/include
-+GD_LD=${BUILDLINK_PREFIX.gd}/lib
++GD_INCL=${BUILDLINK_PREFIX.gd}/include/
++GD_LD=${BUILDLINK_PREFIX.gd}/lib/
 +GD_LIB=libgd.so
  # if you're using gd2.x, use these lines
  # (it's typically built as a shared lib)
@@ -127,7 +127,7 @@ $NetBSD: patch-ac,v 1.5 2003/06/23 15:56:12 wiz Exp $
 -	ar cr libgdc.a gdc.o gdchart.o gdc_pie.o price_conv.o gifencode.o array_alloc.o
 -	ranlib libgdc.a
 +libgdchart.a: $(LIB_OBJS)
-+	$(LIBTOOL) --mode=link $(CC) -o libgdchart.la $(LIB_OBJS:.o=.lo) $(LDFLAGS) -lgd -version-info 0:11 -rpath $(PREFIX)
++	$(LIBTOOL) --mode=link $(CC) -o libgdchart.la $(LIB_OBJS:.o=.lo) -L${GD_LD} -lgd -version-info 0:11 -rpath $(PREFIX)/lib
  
  # --- supporting libraries ---
  # should be compile & installed separately
