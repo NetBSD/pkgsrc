@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/03/07 01:42:09 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/29 16:50:49 heinz Exp $
 #
 
-DISTNAME=		Net-DNS-0.46
+DISTNAME=		Net-DNS-0.47
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ndn
 CATEGORIES=		net perl5
@@ -12,7 +12,7 @@ MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.net-dns.org/
 COMMENT=		Perl5 module for DNS resolution
 
-BUILD_DEPENDS+=		p5-Test-Simple>=0.44:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=		{p5-Test-Simple>=0.44,perl{,-thread}>=5.8.0}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Digest-HMAC>=1.0:../../security/p5-Digest-HMAC
 DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5
