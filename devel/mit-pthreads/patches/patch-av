@@ -1,14 +1,13 @@
-$NetBSD: patch-av,v 1.1 1998/12/28 22:22:02 bad Exp $
-
---- /dev/null	Mon Oct 19 22:21:39 1998
-+++ machdep/syscall-template-sparc-netbsd-1.3.S	Mon Oct 19 22:36:44 1998
-@@ -0,0 +1,47 @@
+--- machdep/syscall-template-sparc-netbsd-1.3.S.orig	Thu Apr 12 06:57:20 2001
++++ machdep/syscall-template-sparc-netbsd-1.3.S	Thu Apr 12 07:20:31 2001
+@@ -0,0 +1,48 @@
 +/* ==== syscall.S ============================================================
 + * Copyright (c) 1994 Chris Provenzano, proven@mit.edu
 + * All rights reserved.
 + *
 + */
 +
++#include <machine/asm.h>
 +#include <sys/syscall.h>
 +
 +#ifdef SYS___sigsuspend14
@@ -19,9 +18,9 @@ $NetBSD: patch-av,v 1.1 1998/12/28 22:22:02 bad Exp $
 +#endif
 +
 +#define	SYSCALL(x)						\
-+	.globl _machdep_sys_##x;			\
++	.globl _C_LABEL(machdep_sys_##x);			\
 +										\
-+_machdep_sys_##x:;						\
++_C_LABEL(machdep_sys_##x):;						\
 +										\
 +	mov SYS_##x, %g1;   				\
 +	ta 0;								\
