@@ -12,3 +12,18 @@
  DLSUFFIX:.so
  YFLAGS:-d
  YACC:bison -y
+--- template/netbsd	1998/02/16 15:09:26	1.1
++++ template/netbsd	1998/02/16 15:09:57
+@@ -1,9 +1,9 @@
+ AROPT:cq
+ SHARED_LIB:-fpic -DPIC
+ CFLAGS:-O2 -pipe
+-SRCH_INC:/usr/local/include
+-SRCH_LIB:/usr/local/lib
+-USE_LOCALE:no
++SRCH_INC:${PREFIX}/include
++SRCH_LIB:${PREFIX}/lib
++USE_LOCALE:yes
+ DLSUFFIX:.so
+ YFLAGS:-d
+ YACC:
