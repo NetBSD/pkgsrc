@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ufsdiskimage,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+# $NetBSD: ufsdiskimage,v 1.2 2004/04/24 19:17:09 danw Exp $
 
 _getdevice_and_halfway_mount()
 {
@@ -102,5 +102,6 @@ main()
 	esac
 }
 
+PATH=${PATH}:/sbin:/usr/sbin
 main "$@"
 exit $?
