@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.33 2002/09/27 09:22:59 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.34 2002/09/27 12:21:41 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -72,17 +72,18 @@ LDFLAGS:=		${_BLNK_LDFLAGS} ${LDFLAGS}
 PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 
 # Add the proper dependency on each package pulled in by buildlink2.mk
-# files.  BUILDLINK_DEPMETHOD.<pkg> is either "full" or "build" to represent
-# either a full dependency or a build dependency on <pkg>.  By default,
+# files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
+# "build", and if any of that list if "full" then we use a full dependency
+# on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
 # we use a full dependency.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
 BUILDLINK_DEPMETHOD.${_pkg_}=	full
 .  endif
-.  if (${BUILDLINK_DEPMETHOD.${_pkg_}} == "full")
+.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
-.  elif (${BUILDLINK_DEPMETHOD.${_pkg_}} == "build")
+.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
 .  endif
 .  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
