@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2002/01/16 10:15:48 kleink Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/17 19:35:41 kleink Exp $
 
 --- scmxx.c.orig	Fri Jan  4 21:43:54 2002
-+++ scmxx.c	Wed Jan 16 11:11:25 2002
++++ scmxx.c	Thu Jan 17 20:06:43 2002
 @@ -35,7 +35,7 @@
  	char *SMSSLOT_p=SMSSLOT;
  	char *PIN_p=PIN;
@@ -11,3 +11,40 @@ $NetBSD: patch-ab,v 1.1 2002/01/16 10:15:48 kleink Exp $
  	struct option myoptions[]=
  	{	{"remove",0,0,'r'},{"send",0,0,'s'},{"get",0,0,'g'},
  		{"bitmap",2,0,'B'},{"midi",2,0,'M'},{"vcal",2,0,'C'},{"vcf",2,0,'F'},
+@@ -43,7 +43,7 @@
+ 		{"sms",2,0,'S'},{"sms-text",1,0,'t'},{"sms-nr",1,0,'n'},{"direct",0,0,0},
+ 		{"device",1,0,'d'},{"file",1,0,'f'},{"pipe",1,0,'p'},{"pin",1,0,0},
+ 		{"info",0,0,'i'},{"set-time",0,0,0},{"set-smsc",0,0,0},{"help",0,0,'h'},
+-		{"verbose",0,0,'v'},{"quiet",0,0,'q'},
++		{"verbose",0,0,'v'},{"quiet",0,0,'q'},{"speed",1,0,0},
+ 		{0,0,0,0}
+ 	};
+ 	
+@@ -61,6 +61,10 @@
+ 	if (getenv("SCMXX_TTY")!=NULL){
+ 		set_ttyport(getenv("SCMXX_TTY"));
+ 	}	
++	//using env. var. SCMXX_TTYSPEED
++	if (getenv("SCMXX_TTYSPEED")!=NULL){
++		set_ttyspeed(getenv("SCMXX_TTYSPEED"));
++	}
+ 	
+ 	while((arg=getopt_long(argc,argv,"rsgB::M::C::F::P:S::t:n:d:f:p:ivqh",myoptions,&option_index)) != -1){
+ 		switch (arg){
+@@ -134,6 +138,8 @@
+ 								if ((ACTION_TYPE==2 || ACTION_TYPE==3) && FILE_TYPE==5){ACTION_TYPE += 10;}
+ 							}else if(!strcmp(myoptions[option_index].name,"pin")){
+ 								if(optarg && strlen(optarg)<sizeof(PIN)){strcpy(PIN_p,optarg);}
++							}else if(!strcmp(myoptions[option_index].name,"speed")){
++								if(optarg){set_ttyspeed(optarg);}
+ 							}
+ 							break;			
+ 		}
+@@ -192,6 +198,7 @@
+ 	printf("Syntax: %s [Options] [Operation [Slot[SMS-Options]]]\n",me);
+ 	printf("Options:\n");
+ 	printf("--device <device>\t  -d\tspecify another than the compiled in device\n");
++	printf("--speed <speed>\t\t\tspecify the device's speed\n");
+ 	printf("--file <file>\t\t  -f\tspecify a file to use (instead of stdin/stdout)\n");
+ 	printf("--pipe <program>\t  -p\tspecify a pipe to use additionally to --file\n");
+ 	printf("--pin <pin>\t\t\tuse this pin if one is needed\n");
