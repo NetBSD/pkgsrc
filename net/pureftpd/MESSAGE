@@ -1,8 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:30 heinz Exp $
+$NetBSD: MESSAGE,v 1.3 2003/03/07 18:21:47 salo Exp $
 
-You may wish to:
-        cp ${PREFIX}/etc/rc.d/pure_ftpd /etc/rc.d/pure_ftpd
-        echo "pure_ftpd=YES" >> /etc/rc.conf
+To use pureftpd, you will need to perform the following steps:
 
+1. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
+   ${PREFIX}/etc/rc.d/pure_ftpd to /etc/rc.d/pure_ftpd and add
+
+	pure_ftpd=YES
+
+   to /etc/rc.conf. Other FTP servers should be disabled.
+
+2. Stop any other running FTP server. Now start pureftpd by issuing the
+   command
+
+	/etc/rc.d/pure_ftpd start
 ===========================================================================
