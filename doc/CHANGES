@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4111 2003/12/14 22:12:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4112 2003/12/14 22:18:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eel2 to 2.4.1 [xtraeme 2003-12-14]
 	Updated gnome2-user-docs to 2.4.1 [xtraeme 2003-12-14]
 	Updated gnome2-pixmaps to 2.4.1.1 [xtraeme 2003-12-14]
+	Updated gnome-mime-data to 2.4.0 [xtraeme 2003-12-14]
