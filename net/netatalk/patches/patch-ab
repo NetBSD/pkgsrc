@@ -1,18 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
 
---- include/Makefile.orig	Thu Oct  1 18:46:15 1998
-+++ include/Makefile	Thu Sep 17 21:46:49 1998
-@@ -1,11 +1,11 @@
--TARGETS=	atalk netatalk
-+TARGETS=	atalk
+--- bin/Makefile	Tue Feb 20 08:36:51 1996
++++ bin/Makefile	Mon Aug 30 06:47:41 1999
+@@ -9,7 +9,7 @@
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-	    DESTDIR="${DESTDIR}"
++	    ATALK_DESTDIR="${ATALK_DESTDIR}"
  
- INSTALL=	install
+ FRC:
  
- all :
+@@ -26,7 +26,7 @@
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" install); \
++		ATALK_DESTDIR="${ATALK_DESTDIR}" INSTALL="${INSTALL}" install); \
+ 	done
  
- install : all
--	-mkdir ${DESTDIR}
-+	-mkdir ${ATALK_DESTDIR}
- 	-mkdir ${INCDIR}
- 	for i in ${TARGETS}; do \
- 	    rm -rf ${INCDIR}/$$i ; \
+ clean:

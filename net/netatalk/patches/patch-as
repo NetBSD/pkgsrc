@@ -1,13 +1,13 @@
-$NetBSD: patch-as,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-as,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- man/man8/Makefile	1998/10/26 14:10:42	1.1
-+++ man/man8/Makefile	1998/10/26 14:10:55
-@@ -14,7 +14,7 @@
- 	-mkdir ${MANDIR}/man8
- 	for i in ${SRC} ; do \
- 	    rm -f ${MANDIR}/man8/$$i; \
--	    sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
-+	    sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
- 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
- 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
- 		-e s@:INCDIR:@${INCDIR}@ \
+--- libatalk/nbp/nbp_lkup.c	Tue Oct  7 14:21:57 1997
++++ libatalk/nbp/nbp_lkup.c	Mon Aug 30 06:47:43 1999
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <strings.h>
+ #include <netdb.h>

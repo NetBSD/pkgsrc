@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
 
---- Makefile.orig	Thu Oct  1 18:45:05 1998
-+++ Makefile	Sat Sep 26 10:49:57 1998
-@@ -1,22 +1,24 @@
+--- Makefile	Wed Dec 17 09:25:39 1997
++++ Makefile	Tue Aug 31 02:06:35 1999
+@@ -1,22 +1,26 @@
 -# Root of installation. Subdirectories will be ${DESTDIR}/etc,
 -# ${DESTDIR}/bin, and ${DESTDIR}/lib.
 -DESTDIR=/usr/local/atalk
@@ -34,10 +34,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
  # ${MANDIR}/man1, ${MANDIR}/man4, and ${MANDIR}/man8.
 -MANDIR=$(DESTDIR)/man
 +MANDIR=$(ATALK_DESTDIR)/man
++# for example config files
++EXAMPLEDIR=$(ATALK_DESTDIR)/share/examples/netatalk
  
  #SBINDIR=/usr/sbin
  #BINDIR=/usr/bin
-@@ -57,8 +59,9 @@
+@@ -57,8 +61,9 @@
  	cd sys/$$ARCH && ${MAKE} ${MFLAGS} \
  	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
  	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
@@ -45,7 +47,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
 -	    AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" $@
 +	    ATALK_DESTDIR="${ATALK_DESTDIR}" MANDIR="${MANDIR}" \
 +	    AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" LIBEXECDIR="${LIBEXECDIR}" \
-+	    OPTOPTS="${OPTOPTS}" $@
++	    OPTOPTS="${OPTOPTS}" EXAMPLEDIR="${EXAMPLEDIR}" $@
  
  FRC:
  
