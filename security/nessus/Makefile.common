@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2001/01/28 18:52:33 frueauf Exp $
+# $NetBSD: Makefile.common,v 1.7 2001/01/28 20:07:49 veego Exp $
 #
 # Common Makefile for:
 #  * nessus-core
@@ -10,20 +10,21 @@
 VERS=		1.0.7
 
 CATEGORIES=	security x11 net
-MASTER_SITES?=	ftp://ftp.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.cis.fed.gov/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
-		http://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.esiea.fr/pub/mirrors/nessus/nessus-${VERS}/src/ \
-		ftp://cvs.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://nessus.via.ecp.fr/nessus/nessus-${VERS}/src/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.chg.ru/pub/security/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.sekure.net/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.nectec.or.th/pub/mirrors/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.pt.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.au.nessus.org/pub/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.stuff.ca/pub/nessus/nessus-${VERS}/src/
+MASTER_SITES?=	ftp://ftp.nessus.org/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.cis.fed.gov/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/ \
+		http://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/ \
+		ftp://nessus.via.ecp.fr/nessus/nessus-${VERS}/ \
+		ftp://cvs.nessus.org/pub/nessus/nessus-${VERS}/ \
+		ftp://sunsite.cnlab-switch.ch/mirror/nessus/nessus-${VERS}/ \
+		ftp://ftp.chg.ru/pub/security/nessus/nessus-${VERS}/ \
+		ftp://ftp.sekure.net/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.nectec.or.th/pub/mirrors/nessus/nessus-${VERS}/ \
+		ftp://ftp.pt.nessus.org/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.au.nessus.org/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.stuff.ca/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.at.nessus.org/pub/nessus/nessus-${VERS}/ \
+		ftp://ftp.linux.org.tr/pub/security/nessus/nessus-${VERS}/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.nessus.org/
