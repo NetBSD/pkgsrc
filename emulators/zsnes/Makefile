@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/22 08:36:04 grant Exp $
 #
 
 DISTNAME=		zsnes136src
@@ -19,7 +19,7 @@ ALL_TARGET=		zsnes
 
 WRKSRC=			${WRKDIR}/zsnes-1.36/src
 GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 
