@@ -12,7 +12,7 @@ Fontconfig can:
   minimized).
 * efficiently and quickly find the fonts you need among the set of fonts
   you have installed, even if you have installed thousands of fonts,
-  while minimzing memory usage.
+  while minimizing memory usage.
 * be used in concert with the X Render Extension and FreeType to
   implement high quality, anti-aliased and subpixel rendered text on a
   display.
