@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8060 2004/11/27 11:15:04 gson Exp $
+$NetBSD: CHANGES,v 1.8061 2004/11/27 11:17:04 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5497,3 +5497,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-snack to 2.2.8 [gson 2004-11-27]
 	Updated wavesurfer to 1.7.4 [gson 2004-11-27]
 	Updated p5-Set-IntSpan to 1.08 [gson 2004-11-27]
+	Updated phppgadmin to 3.5 [jdolecek 2004-11-27]

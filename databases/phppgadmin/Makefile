@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/10/31 23:47:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/27 11:17:04 jdolecek Exp $
 
-DISTNAME=	phpPgAdmin-3.4.1
+DISTNAME=	phpPgAdmin-3.5
 PKGREVISION=	# empty
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
 CATEGORIES=	databases www
