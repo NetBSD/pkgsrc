@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1.2.1 2005/03/04 07:09:45 spz Exp $
+
+--- src/rpsl/config.sub.orig	2002-03-27 12:32:59.000000000 +0100
++++ src/rpsl/config.sub
+@@ -155,7 +155,7 @@ case $basic_machine in
+ 		| alpha | alphaev5 | alphaev56 | we32k | ns16k | clipper \
+ 		| i370 | sh | powerpc | powerpcle | 1750a | dsp16xx | pdp11 \
+ 		| mips64 | mipsel | mips64el | mips64orion | mips64orionel \
+-		| mipstx39 | mipstx39el \
++		| mipstx39 | mipstx39el | amd64 \
+ 		| sparc | sparclet | sparclite | sparc64 | v850)
+ 		basic_machine=$basic_machine-unknown
+ 		;;
