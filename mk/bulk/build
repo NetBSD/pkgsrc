@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.4 2000/09/29 04:28:50 hubertf Exp $
+# $NetBSD: build,v 1.5 2000/12/11 21:40:54 skrll Exp $
 #
 # Do builk build
 #
@@ -54,7 +54,7 @@ rm .l
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5-base ; make bulk-install )
-perl mk/bulk/post-build | mail -s "pkgsrc/`uname -p` bulk build results" $ADMIN
+perl mk/bulk/post-build | mail -s "pkgsrc/`uname -p` bulk build results `date +%F`" $ADMIN
 
 # Done!
 echo ""
