@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9387 2005/03/02 15:01:38 shannonjr Exp $
+$NetBSD: CHANGES,v 1.9388 2005/03/02 15:41:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1228,3 +1228,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated avrdude to 4.1.0nb2 [wiz 2005-03-02]
 	Updated papaya to 0.1.7nb2 [wiz 2005-03-02]
 	Updated dirmngr to 0.9.0nb1 [shannonjr 2005-03-02]
+	Updated glib2 to 2.6.3 [wiz 2005-03-02]
+	Updated gtk2+ to 2.6.4 [wiz 2005-03-02]
