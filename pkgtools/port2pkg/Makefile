@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 22:52:18 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/10 16:10:35 cjep Exp $
 #
 
 DISTNAME=	port2pkg-1.11
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
