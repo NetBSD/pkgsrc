@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/10/01 16:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2001/10/02 11:01:19 wiz Exp $
 #
 
 COMMENT=	Mathematics
@@ -39,6 +39,7 @@ SUBDIR+=	otter
 SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-Interpolate
 SUBDIR+=	p5-Math-MatrixReal
+SUBDIR+=	p5-Math-Pari
 SUBDIR+=	pari
 SUBDIR+=	pspp
 SUBDIR+=	py-Numeric
