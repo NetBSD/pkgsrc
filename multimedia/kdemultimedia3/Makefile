@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/01/26 15:47:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/05 07:43:30 markd Exp $
 
-DISTNAME=	kdemultimedia-3.1.5
-PKGREVISION=	2
+DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -9,7 +8,6 @@ CONFLICTS=	timidity-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-DEPENDS+=	xanim>=2.80.0:../../multimedia/xanim
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_BUILDLINK2=		YES
@@ -35,19 +33,11 @@ PTHREAD_OPTS+=	require
 
 UNLIMIT_RESOURCES+=	datasize
 
-FOO_MAIN_FILES= \
-	kaboodle/kaboodle_main.cpp \
-	kmix/kmix_main.cpp \
-	kmix/kmixctrl_main.cpp \
-	noatun/noatun_main.cpp
-
 .if !exists(${X11BASE}/lib/libXv.so)
 PLIST_SUBST+=		XV_WORKAROUND="@comment "
 .else
 PLIST_SUBST+=		XV_WORKAROUND=""
 .endif
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../audio/arts/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"

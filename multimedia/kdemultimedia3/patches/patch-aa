@@ -1,57 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:41:59 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
 
 --- configure.orig	Thu May  8 00:05:31 2003
 +++ configure
-@@ -27200,6 +27200,40 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
-   eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
-+ 
-+ 	lib=Xxf86dga
-+ 	shared_lib_found=no
-+ 	for i in ${LDFLAGS}; do
-+ 		case "$i" in
-+ 		-L*)
-+ 			dir=`echo $i | sed "s,^-L,,"`
-+ 			if [ -e $dir/lib${lib}.so ] ||
-+ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+ 				shared_lib_found=yes
-+ 				break;
-+ 			fi
-+ 		esac
-+ 	done
-+ 	if [ "$shared_lib_found" = "no" ]; then
-+ 		eval "ac_cv_lib_vm=no"
-+ 	fi
-+ 
-+ 	lib=Xxf86vm
-+ 	shared_lib_found=no
-+ 	for i in ${LDFLAGS}; do
-+ 		case "$i" in
-+ 		-L*)
-+ 			dir=`echo $i | sed "s,^-L,,"`
-+ 			if [ -e $dir/lib${lib}.so ] ||
-+ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+ 				shared_lib_found=yes
-+ 				break;
-+ 			fi
-+ 		esac
-+ 	done
-+ 	if [ "$shared_lib_found" = "no" ]; then
-+ 		eval "ac_cv_lib_vm=no"
-+ 	fi
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
-@@ -28947,7 +28981,7 @@ fi;
- 
- if test "x$au_enable_default" = xyes; then
-   case "$target" in
--    *-*-linux*|*-*-freebsd*|*-*-netbsd|*-*-bsdi2.1|*-*-bsdi3.?|*-*-bsdi4.?)
-+    *-*-linux*|*-*-freebsd*|*-*-netbsd*|*-*-bsdi2.1|*-*-bsdi3.?|*-*-bsdi4.?)
-       au_enable_oss=yes
-       ;;
-     *-*-bsdi2.0)
 @@ -33020,7 +33054,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio_main" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
