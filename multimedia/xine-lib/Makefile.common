@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/02/25 18:02:08 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/02/27 13:54:49 jmmv Exp $
 #
 
 DISTNAME=		xine-lib-1-rc0a
@@ -34,6 +34,7 @@ PLIST_SUBST+=		XV_WORKAROUND="@comment "
 PLIST_SUBST+=		XV_WORKAROUND=""
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
