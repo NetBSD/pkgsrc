@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2003/12/12 22:05:55 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2004/03/04 20:54:40 wiz Exp $
 
---- src/Makefile.in.orig	Thu Dec  4 01:29:22 2003
+--- src/Makefile.in.orig	Fri Feb 13 16:29:20 2004
 +++ src/Makefile.in
-@@ -226,7 +226,7 @@ cvs_SOURCES = \
+@@ -228,7 +228,7 @@ cvs_SOURCES = \
  cvs_LDADD = \
  	../diff/libdiff.a \
  	../lib/libcvs.a \
@@ -11,9 +11,9 @@ $NetBSD: patch-ac,v 1.7 2003/12/12 22:05:55 wiz Exp $
  
  
  # extra clean targets
-@@ -269,7 +269,7 @@ am_cvs_OBJECTS = add.$(OBJEXT) admin.$(O
- 	update.$(OBJEXT) version.$(OBJEXT) vers_ts.$(OBJEXT) \
- 	watch.$(OBJEXT) wrapper.$(OBJEXT) zlib.$(OBJEXT)
+@@ -272,7 +272,7 @@ am_cvs_OBJECTS = add.$(OBJEXT) admin.$(O
+ 	vers_ts.$(OBJEXT) watch.$(OBJEXT) wrapper.$(OBJEXT) \
+ 	zlib.$(OBJEXT)
  cvs_OBJECTS = $(am_cvs_OBJECTS)
 -cvs_DEPENDENCIES = ../diff/libdiff.a ../lib/libcvs.a ../zlib/libz.a
 +cvs_DEPENDENCIES = ../diff/libdiff.a ../lib/libcvs.a
