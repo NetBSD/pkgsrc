@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+--- unix/Makefile.orig	Fri Jul 22 08:37:08 1994
++++ unix/Makefile	Sun Jan 24 03:28:57 1999
+@@ -3,15 +3,17 @@
+ # LIBDIR must be the same directory defined in config.h
+ # OWNER is who you want the game to be chown to.
+ # GROUP is who you wnat the game to be chgrp to.
+-BINDIR = /home/zariski/grabiner/moria
+-LIBDIR = /home/zariski/grabiner/moria/files
+-OWNER = grabiner
+-GROUP = grad
++BINDIR = ${PREFIX}/bin
++LIBDIR = ${PREFIX}/share/games/moria
++SCOREFILE = /var/games/moria.scores
++
++GROUP = games
+ 
+ # For testing and debugging the program, it is best to use this line.
+ # CFLAGS = -g
+ # For playing the game, you may want to use this line
+-CFLAGS = -O
++#CFLAGS = -O
++CPPFLAGS+=-Dunix -DLIBDIR=\"${LIBDIR}\" -DMORIA_TOP=\"${SCOREFILE}\"
+ 
+ # For BSD Systems
+ CURSES = -lcurses -ltermcap
+@@ -45,6 +47,8 @@
+ LIBFILES = hours news origcmds.hlp owizcmds.hlp roglcmds.hlp rwizcmds.hlp \
+ 	version.hlp welcome.hlp
+ 
++all:	moria
++
+ moria : $(OBJS)
+ 	$(CC) -o moria $(CFLAGS) $(OBJS) $(CURSES) $(LFLAGS)
+ 
+@@ -57,22 +61,19 @@
+ TAGS : $(SRCS)
+ 	ctags -x $(SRCS) > TAGS
+ 
+-# you must define BINDIR and LIBDIR before installing
+-# assumes that BINDIR and LIBDIR exist
++CHGRP?=	/usr/bin/chgrp
++CHMOD?=	/bin/chmod
++TOUCH?=	/usr/bin/touch
++
+ install:
+-	chmod 755 $(BINDIR)
+-	cp moria $(BINDIR)
+-	chmod 4711 $(BINDIR)/moria
+-	chmod 711 $(LIBDIR)
+-	(cd files; cp $(LIBFILES) $(LIBDIR))
+-	(cd $(LIBDIR); chmod 444 $(LIBFILES))
+-	(cd $(LIBDIR); touch scores; chmod 644 scores)
+-	chown $(OWNER) $(BINDIR)/moria
+-	chgrp $(GROUP) $(BINDIR)/moria
+-	(cd $(LIBDIR); chown $(OWNER) $(LIBFILES) scores)
+-	(cd $(LIBDIR); chgrp $(GROUP) $(LIBFILES) scores)
+-# If you are short on disk space, or aren't interested in debugging moria.
+-#	strip $(BINDIR)/moria
++	${BSD_INSTALL_PROGRAM} moria ${BINDIR}
++	${CHGRP} ${GROUP} ${BINDIR}/moria
++	${CHMOD} g+s ${BINDIR}/moria
++	${BSD_INSTALL_DATA_DIR} ${LIBDIR}
++	( cd files; ${BSD_INSTALL_DATA} ${LIBFILES} ${LIBDIR} )
++	${TOUCH} ${LIBDIR}/scores.dist
++	${CHMOD} 664 ${LIBDIR}/scores.dist
++	${CHGRP} ${GROUP} ${LIBDIR}/scores.dist
+ 
+ clean:
+ 	rm -r *.o
