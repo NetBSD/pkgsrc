@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:56:51 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/09 08:32:13 tron Exp $
 
 DISTNAME=	xautolock-pl15
 PKGNAME=	xautolock-1.15
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tgz
