@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.55 2004/08/26 00:41:45 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.56 2004/08/27 06:29:09 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -132,7 +132,6 @@ _OPSYS_LIBTOOL_REQD=	1.4.20010614nb14 # base version of libtool required
 _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
-_OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 .if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
 _PATCH_CAN_BACKUP=	yes		# patch(1) can make backups

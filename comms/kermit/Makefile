@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/06/04 05:34:13 ben Exp $
+# $NetBSD: Makefile,v 1.55 2004/08/27 06:29:07 jlam Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -26,7 +26,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 # Set to empty
 SSLINC=		-I${WRKDIR}/.buildlink/include
-SSLLIB=		-L${WRKDIR}/.buildlink/lib -Wl,${RPATH_FLAG}${WRKDIR}/.buildlink/lib
+SSLLIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit

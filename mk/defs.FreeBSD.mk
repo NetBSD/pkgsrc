@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.42 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.43 2004/08/27 06:29:09 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -141,7 +141,6 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix

@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2004/08/05 00:23:32 dmcmahill Exp $
+$NetBSD: patch-am,v 1.6 2004/08/27 06:29:10 jlam Exp $
 
 --- xep/Makefile.aimk.orig	Fri Aug 29 14:17:48 1997
 +++ xep/Makefile.aimk
@@ -20,7 +20,7 @@ $NetBSD: patch-am,v 1.5 2004/08/05 00:23:32 dmcmahill Exp $
 -XLIBS		=	-lXaw -lXmu -lXext -lXt -lX11
 -XCFLAGS		=	-I/usr/local/X11R5/include -I/usr/local/X11/include \
 -				-L/usr/local/X11R5/lib -L/usr/local/X11/lib
-+XLIBS		=	-L${X11BASE}/lib -Wl,${RPATH_FLAG}$(X11BASE)/lib -lXaw -lXmu -lXext -lXt -lX11
++XLIBS		=	-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}$(X11BASE)/lib -lXaw -lXmu -lXext -lXt -lX11
 +XCFLAGS		=	-I${X11BASE}/include 
  
  HEADERS		=	$(SDIR)/hostc.h $(SDIR)/imp.h $(SDIR)/myalloc.h \

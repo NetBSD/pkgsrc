@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.1 2004/04/10 23:31:39 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.2 2004/08/27 06:29:07 jlam Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -30,8 +30,8 @@ GNUSTEP_LDIRS=	${GNUSTEP_LFLAGS:S/-L//g}
 GNUSTEP_IDIRS=	${GNUSTEP_IFLAGS:S/-I//g}
 GNUSTEP_BLDIRS=	${GNUSTEP_LDIRS:S/${PREFIX}\///g}
 GNUSTEP_BIDIRS=	${GNUSTEP_IDIRS:S/${PREFIX}\///g}
-.if empty(_USE_RPATH:M[nN][oO])
-GNUSTEP_RFLAGS=	${GNUSTEP_LFLAGS:S/-L/-Wl,${_OPSYS_RPATH_NAME}/g}
+.if !empty(_USE_RPATH:M[yY][eE][sS])
+GNUSTEP_RFLAGS=	${GNUSTEP_LFLAGS:S/-L/${COMPILER_RPATH_FLAG}/g}
 .else
 GNUSTEP_RFLAGS?=
 .endif

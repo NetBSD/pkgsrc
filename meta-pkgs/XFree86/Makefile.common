@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/08/16 12:30:04 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/08/27 06:29:08 jlam Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -151,8 +151,8 @@ USE_LANGUAGES=		c c++
 .  if !target(post-extract)
 
 GLOBAL_LDFLAGS=	-L${LOCALBASE}/lib -L${X11ROOT}/lib \
-		${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib \
-		${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
+		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib \
+		${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 post-extract:
 	@${SED} \
