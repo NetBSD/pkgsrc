@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:44:20 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/09 09:31:25 seb Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -29,8 +29,11 @@ BROKEN=Test required on NetBSD/i386 a.out
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv} --with-iconv-lib=iconv
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
+
+_WITH_ICONV_LIB=	${BUILDLINK_LIBICONV_LDADD:M-l*:C/-l//}
+LDFLAGS+=		${BUILDLINK_LIBICONV_LDADD}
 
 USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
@@ -43,3 +46,9 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(_WITH_ICONV_LIB)
+CONFIGURE_ARGS+=	--with-iconv-lib=${_WITH_ICONV_LIB}
+.else
+BUILDLINK_TRANSFORM+=	S:-liconv:
+.endif
