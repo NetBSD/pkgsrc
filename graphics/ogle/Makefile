@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/24 15:46:44 grant Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 15:46:44 grant Exp $
 
 DISTNAME=	mjpegtools-1.6.0
 PKGNAME=	mplex-1.6.0
@@ -11,7 +11,7 @@ COMMENT=	Multiplexes MPEG component streams into system layers
 
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_GCC_SHLIB=	yes

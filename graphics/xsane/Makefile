@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.43 2004/01/24 15:46:44 grant Exp $
 
 DISTNAME=	xsane-0.90
 PKGREVISION=	3
@@ -20,7 +20,7 @@ COMMENT=	New improved frontend for SANE
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

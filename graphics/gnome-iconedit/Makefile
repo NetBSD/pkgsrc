@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=		gnome-iconedit-1.2.0
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 
 post-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/03 18:49:42 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/01/24 15:46:43 grant Exp $
 
 DISTNAME=		ee-0.3.12
 PKGREVISION=		8
@@ -14,7 +14,7 @@ DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_X11BASE=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
