@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2004/02/11 12:17:58 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -41,12 +41,13 @@ _NEED_ICONV=		YES
 .if ${_NEED_ICONV} == "YES"
 # let other packages know that we're using the pkgsrc
 # GNU libiconv
-ICONV_IS_GNU=			YES
+ICONV_TYPE=			gnu
 BUILDLINK_PACKAGES+=		iconv
 EVAL_PREFIX+=			BUILDLINK_PREFIX.iconv=libiconv
 BUILDLINK_PREFIX.iconv_DEFAULT=	${LOCALBASE}
 _BLNK_ICONV_LDFLAGS=		-L${BUILDLINK_PREFIX.iconv}/lib -liconv
 .else
+ICONV_TYPE=			native
 BUILDLINK_PREFIX.iconv=		/usr
 .  if ${_BLNK_LIBICONV_FOUND} == "YES"
 _BLNK_ICONV_LDFLAGS=		-liconv
