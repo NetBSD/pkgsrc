@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/09/09 19:25:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/03/13 07:23:25 itojun Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -13,7 +13,7 @@ QPOPPER_FAC?=		LOCAL1
 QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
 DB_SUFFIX?=		db
 
-VERSION=		4.0.4
+VERSION=		4.0.5
 
 .include "../../mk/bsd.prefs.mk"
 
