@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/02 22:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 1999/02/04 22:16:00 tv Exp $
 #
 
 DISTNAME=		perl5.004_04
@@ -25,9 +25,8 @@ PATCHDIR=		../perl5/patches
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Dd_bincompat3=undef \
-			-Darchname=${MACHINE_ARCH}-netbsd -Dusemymalloc=false \
-			-Duseshrplib=true
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Duseshrplib=true \
+			-Darchname=${MACHINE_ARCH}-netbsd -Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 ALL_TARGET=		perl
 
