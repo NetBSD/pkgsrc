@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/16 13:28:40 tron Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/26 14:56:47 jmmv Exp $
 
 DISTNAME=	opera-plugins-1.0
 CATEGORIES=	www
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.opera.com/
 COMMENT=	Plugins for the Opera browser
 
 DEPENDS+=	opera>=5.999.1:../opera7
-DEPENDS+=	ns-flash>=5.0.47:../../graphics/ns-flash
+DEPENDS+=	ns-flash>=5.0.47:../../multimedia/ns-flash
 DEPENDS+=	suse_openmotif>=7.3:../../emulators/suse_openmotif
 
 EXTRACT_ONLY=	# empty
