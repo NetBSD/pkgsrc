@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 13:05:22 augustss Exp $
+bin/ircomm
+bin/irobex
+bin/irs
+bin/mkobexdate
+bin/mkobexmemo
+bin/mkobextel
+bin/mkobextodo
+man/man1/ircomm.1
+man/man1/irobex.1
+man/man1/irs.1
+man/man1/mkobexdate.1
+man/man1/mkobexmemo.1
+man/man1/mkobextel.1
+man/man1/mkobextodo.1
+man/cat1/ircomm.0
+man/cat1/irobex.0
+man/cat1/irs.0
+man/cat1/mkobexdate.0
+man/cat1/mkobexmemo.0
+man/cat1/mkobextel.0
+man/cat1/mkobextodo.0
