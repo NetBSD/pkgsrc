@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/19 20:29:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:21 agc Exp $
 
 SHA1 (tuxnes-0.75.tar.gz) = 1729cb3a33a5a3e0c8fa81a1341f912cd0b8d18b
+RMD160 (tuxnes-0.75.tar.gz) = d4a94e00f7c90cbf6fbf19537ede22aca05eeafd
 Size (tuxnes-0.75.tar.gz) = 198735 bytes
 SHA1 (patch-aa) = d907d8c64ffec0977160f61bf70eb5223a6fc1d2
 SHA1 (patch-ab) = b2acfc6915f30f28aadc5a9ddf780596c8120f72
