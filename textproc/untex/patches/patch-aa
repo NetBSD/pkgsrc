@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/18 09:35:40 itojun Exp $
+--- Makefile-	Wed Oct 18 18:24:04 2000
++++ Makefile	Wed Oct 18 18:24:28 2000
+@@ -4,4 +4,5 @@
+ MANDIR=/usr/local/man/man$(MANEXT)
+-CFLAGS=-O
++#CFLAGS=-O
+ 
++all: untex
+ untex: untex.c
