@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2318 2003/05/25 10:03:06 salo Exp $
+$NetBSD: CHANGES,v 1.2319 2003/05/25 10:18:21 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2144,3 +2144,14 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-mime-data to 2.2.0nb1 [jmmv 2003-05-25]
 	Updated fnlib to 0.5nb4 [salo 2003-05-25]
 	Updated enlightenment to 0.16.4nb3 [salo 2003-05-25]
+	Added swig-python-1.3.17 [epg 2003-05-25]
+	Added swig-build-1.3.17 [epg 2003-05-25]
+	Added apr-0.9.1.2.0.45 [epg 2003-05-25]
+	Updated apache2 to 2.0.45nb1 [epg 2003-05-25]
+	Added subversion-base-0.23.0 [epg 2003-05-25]
+	Added subversion-python-0.23.0 [epg 2003-05-25]
+	Updated ap2-subversion to 0.23.0 [epg 2003-05-25]
+	Updated subversion to 0.23.0 [epg 2003-05-25]
+	Updated neon to 0.23.9nb1 [epg 2003-05-25]
+	Updated cadaver to 0.21.0nb2 [epg 2003-05-25]
+	Removed apr-devel [epg 2003-05-25]
