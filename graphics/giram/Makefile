@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/23 00:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/30 10:04:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.1.2
@@ -17,7 +17,7 @@ DEPENDS+=	povray-*:../../graphics/povray
 USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	GTK_CONFIG="${X11BASE}/bin/gtk-config" \
+CONFIGURE_ENV=	GTK_CONFIG="${X11PREFIX}/bin/gtk-config" \
 		CFLAGS="-I${LOCALBASE}/include ${CFLAGS}"
 
 ALL_TARGET=	install-strip

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/20 13:39:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/30 10:04:48 agc Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -15,7 +15,7 @@ DEPENDS+=	readline-4.0:../../devel/readline
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
-			--with-gtk-prefix=${X11BASE}		\
+			--with-gtk-prefix=${X11PREFIX}		\
 			--enable-multibyte
 
 USE_X11BASE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/06 03:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/30 10:04:46 agc Exp $
 #
 
 DISTNAME=	xarchon-0.50
@@ -14,8 +14,8 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	esound-*:../../audio/esound
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-xpm-prefix=${X11BASE} \
-		--with-gtk-prefix=${X11BASE} \
+CONFIGURE_ARGS+=--with-xpm-prefix=${X11PREFIX} \
+		--with-gtk-prefix=${X11PREFIX} \
 		--with-esd-prefix=${LOCALBASE}
 
 .include "../../mk/bsd.prefs.mk"
