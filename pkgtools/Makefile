@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2002/07/15 09:22:48 seb Exp $
+# $NetBSD: Makefile,v 1.40 2002/08/06 05:59:56 jlam Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
 
 SUBDIR+=	bsdpak
-#SUBDIR+=	buildlink-x11	# Only under instruction of user
 SUBDIR+=	cdpack
 SUBDIR+=	createbuildlink
 SUBDIR+=	digest
