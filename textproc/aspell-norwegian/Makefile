@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:18 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/24 03:11:36 wiz Exp $
 #
 
-DISTNAME=	aspell-no-0.50-2
-PKGNAME=	${DISTNAME:C/no-(.*)-(.*)$/norwegian-\1.\2/}
-PKGREVISION=	2
+DISTNAME=	aspell-nb-0.50.1-0
+PKGNAME=	${DISTNAME:C/nb-(.*)-(.*)$/norwegian-\1.\2/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/no/}
+MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/nb/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -14,9 +13,6 @@ COMMENT=	Norwegian language support for aspell
 
 USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
-
-CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
-CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
