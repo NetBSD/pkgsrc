@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/06/29 22:53:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/07/07 07:05:40 rh Exp $
 bin/tgif
 lib/X11/tgif/eq4-2x.sym
 lib/X11/tgif/eq4-epstool.sym
@@ -11,5 +11,6 @@ lib/X11/tgif/tgificon.eps
 lib/X11/tgif/tgificon.obj
 lib/X11/tgif/tgificon.xbm
 lib/X11/tgif/tgificon.xpm
+lib/X11/doc/html/tgif.1.html
 man/cat1/tgif.0
 @dirrm lib/X11/tgif
