@@ -1,13 +1,14 @@
-$NetBSD: patch-ad,v 1.6 2000/08/06 15:43:35 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.7 2000/10/27 03:59:48 dmcmahill Exp $
 
 work around a c++ -O2 bug which is present on at least sparc 
 and pmax using egcs-1.1.1 
 
 --- Makefile.in.orig	Fri Jul 14 02:12:56 2000
 +++ Makefile.in	Sat Aug  5 17:43:55 2000
-@@ -116,4 +116,6 @@
+@@ -116,4 +116,7 @@
  
  parse.o dep/parse.d: parse.cc
++	@[ -d dep ] || mkdir dep
 +	$(CXX) -MD -c -I. $(CPPFLAGS)  $<
 +	mv parse.d dep/parse.d
  
