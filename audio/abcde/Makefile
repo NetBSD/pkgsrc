@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/12/03 21:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/20 00:33:12 hubertf Exp $
 
-DISTNAME=	abcde_2.0.orig
-PKGNAME=	abcde-2.0
+DISTNAME=	abcde_2.0.3.orig
+PKGNAME=	abcde-2.0.3
 CATEGORIES=	audio
 MASTER_SITES=	http://frantica.lly.org/~rcw/abcde/
 
