@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.9 2002/06/23 14:42:01 kent Exp $
+
+--- main.c~	Sat Apr  6 13:26:01 2002
++++ main.c
+@@ -46,6 +46,9 @@
+ #include <stdio.h>
+ #include <errno.h>
+ #include <pwd.h>
++#ifdef __NetBSD__
++# include <sys/sysctl.h>
++#endif
+ 
+ /*
+  * Processes which could not be checked -- usually due to permission
+@@ -137,7 +140,7 @@
+ 			for (i = 0; i < CmdIndx; i++) {
+ 				cmdp = (CmdList + i);
+ 				if ((cmdp->flags & CMD_FLAG_EXACT) != 0 &&
+-						STREQU(CMD, cmdp->cmd.cmdstr))
++						STRNEQU(CMD, cmdp->cmd.cmdstr, KI_MAXCOMLEN-8))
+ 					break;
+ 				else if ((cmdp->flags & CMD_FLAG_REGEX) != 0 &&
+ 						RegexMatch(CMD, cmdp) != 0)
