@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/12 11:29:43 zuntum Exp $
+$NetBSD: distinfo,v 1.4 2003/09/12 01:47:40 simonb Exp $
 
-SHA1 (gimageview-0.2.23.tar.gz) = 6621971468b31953640fba036dbeb644004fb4ba
-Size (gimageview-0.2.23.tar.gz) = 1342200 bytes
+SHA1 (gimageview-0.2.24.tar.gz) = 31bbcced3ac1985f830e2a2c44ce5bc36bd62efb
+Size (gimageview-0.2.24.tar.gz) = 1361585 bytes
