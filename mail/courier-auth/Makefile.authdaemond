@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.12 2004/07/14 20:07:07 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.13 2004/07/14 21:37:09 jlam Exp $
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
@@ -26,7 +26,7 @@ WRKSRC_FILES+=		Makefile.in courier.spec.in courier.sysvinit.in	\
 #
 WRKSRC_SUBDIRS=		afx bdbobj gdbmobj numlib soxwrap md5 sha1	\
 			libhmac random128 unicode rfc822 rfc1035	\
-			rfc2045 liblock
+			rfc2045 liblock liblog
 
 # These are the parts of courier that we will be building and installing.
 WRKSRC_SUBDIRS+=	makedat userdb authlib
