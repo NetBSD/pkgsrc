@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/03/04 09:06:20 tron Exp $
+# $NetBSD: Makefile,v 1.19 2001/03/05 13:52:41 skrll Exp $
 #
 
 DISTNAME=       XmHTML-1.1.7
@@ -19,6 +19,8 @@ USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 
 NO_CONFIGURE=	YES
+
+MAKE_ENV+=	CC=${CC}
 
 do-install:
 	${LIBTOOL} ${LIBTOOL_FLAGS} ${INSTALL_DATA} \
