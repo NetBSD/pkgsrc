@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 1999/03/29 16:03:19 sommerfe Exp $
+@comment $NetBSD: PLIST,v 1.22 1999/04/08 12:54:08 agc Exp $
 bin/emacs
 bin/emacs-20.3
 bin/emacs-etags
@@ -124,17 +124,17 @@ info/ccmode-1
 @unexec install-info --delete %D/info/ccmode %D/info/dir
 info/ccmode
 @exec   install-info          %D/info/ccmode %D/info/dir
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/vcdiff
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/rcs2log
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/hexl
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/emacsserver
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/yow
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/fakemail
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/cvtmail
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/movemail
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/sorted-doc
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/digest-doc
-libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/profile
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/vcdiff
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/rcs2log
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/hexl
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/emacsserver
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/yow
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/fakemail
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/cvtmail
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/movemail
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/sorted-doc
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/digest-doc
+libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/profile
 man/man1/emacs-ctags.1
 man/man1/emacs-etags.1
 man/man1/emacs.1
@@ -1385,6 +1385,6 @@ share/emacs/site-lisp/subdirs.el
 @exec mkdir -p %D/share/emacs/site-lisp
 @unexec rmdir %D/share/emacs/site-lisp 2>/dev/null || true
 @dirrm share/emacs
-@dirrm libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd
+@dirrm libexec/emacs/20.3/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @dirrm libexec/emacs/20.3
 @dirrm libexec/emacs
