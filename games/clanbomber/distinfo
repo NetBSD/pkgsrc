@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:19 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:11:55 agc Exp $
 
 SHA1 (clanbomber-1.01.tar.gz) = f28164abc3cfcda8b427a81ab0ea9ec6c3369220
+RMD160 (clanbomber-1.01.tar.gz) = dc7c589d754442bac38d848bd74dec2fa1a3c012
 Size (clanbomber-1.01.tar.gz) = 2022877 bytes
 SHA1 (patch-aa) = 4471ecf9ce9c85c3f3750182b285b51a8940d8ae
 SHA1 (patch-ab) = 5e927e07b9915c9505249931462dbd6218553dde

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2003/12/04 03:22:49 ben Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 23:11:57 agc Exp $
 
 SHA1 (fkiss-0.33.tar.gz) = df07895a6b2053ca505dce49f5a6ac3f745f4386
+RMD160 (fkiss-0.33.tar.gz) = a34f3fba759e64079b4926926af368c502dc35ae
 Size (fkiss-0.33.tar.gz) = 164697 bytes
 SHA1 (fkiss-0.33a.diff) = 03c686ab8282cfc6bd5bc07bad28e8718339b3ab
+RMD160 (fkiss-0.33a.diff) = f0d221efc08a4ad27312493def0911698909770d
 Size (fkiss-0.33a.diff) = 8909 bytes
 SHA1 (patch-ab) = b22fcd06b72b85ae413ecb970e43d76532ecc65e
 SHA1 (patch-ac) = db3e28fec1a4b1a7ff620023bbf6cf70b6dd99af

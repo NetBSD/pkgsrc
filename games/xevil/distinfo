@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/01/25 16:02:26 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 23:12:04 agc Exp $
 
 SHA1 (xevilsrc2.02r2.zip) = e9a262daffc7ee5c06196dc94cf35c199be86bbc
+RMD160 (xevilsrc2.02r2.zip) = dca82298ac2dfe66e4e92a02731bb6851563b67e
 Size (xevilsrc2.02r2.zip) = 1857315 bytes
 SHA1 (patch-aa) = 7421021c8b5f486a031959db9ac3e7a1197f7763
 SHA1 (patch-ab) = 10416465eb62f034b111971530f6c1897bce3266

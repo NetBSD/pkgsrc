@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/06/07 02:29:07 snj Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 23:11:55 agc Exp $
 
 SHA1 (bzflag-1.10.6.20040515.tar.gz) = 608b99791daf1236239102a50d3e6967f0d4f790
+RMD160 (bzflag-1.10.6.20040515.tar.gz) = cacbd25a093a1f52e1a6654d94cff831ef79554a
 Size (bzflag-1.10.6.20040515.tar.gz) = 4183614 bytes
 SHA1 (patch-aa) = 05df40eb0fbb7dbab583434f25709cb815469393
 SHA1 (patch-ab) = 4c5cf621c5f66768b61669087373e74233d179ab

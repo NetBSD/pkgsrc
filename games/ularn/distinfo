@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/04/15 21:17:08 ben Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 23:12:03 agc Exp $
 
 SHA1 (ularn.tar.gz) = abc5bbecca65968e9ddaf2a8d07ac5141009459d
+RMD160 (ularn.tar.gz) = 8560ec0f0fe0f800a4ca05f44ae6868164652251
 Size (ularn.tar.gz) = 142790 bytes
 SHA1 (patch-aa) = 1ce8bbbc05f275a832814b08c38bc6df066fe7b0
 SHA1 (patch-ab) = a45fec8456da7b2b1985dc2332ede80082b2dab4

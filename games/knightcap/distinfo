@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:29 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:11:59 agc Exp $
 
 SHA1 (KnightCap-3.6.tar.gz) = 923dc3e6b19f3b4b8c2d6236eb438388e68b878a
+RMD160 (KnightCap-3.6.tar.gz) = 83765c75bee566b552428d924815001c0be694b8
 Size (KnightCap-3.6.tar.gz) = 157943 bytes
 SHA1 (patch-aa) = 8be5487db04419c82e8fcb9569145303ab783ef2
 SHA1 (patch-ab) = ad31712d14e820521f38432eaa75be5a47a23693

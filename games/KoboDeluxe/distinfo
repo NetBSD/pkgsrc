@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/12 09:30:41 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:11:54 agc Exp $
 
 SHA1 (KoboDeluxe-0.4pre8.tar.gz) = 4f32cb42de0e1229fd74aeaa7956dcb23d0000ab
+RMD160 (KoboDeluxe-0.4pre8.tar.gz) = b163210e2eb2e5af4a965a76b46e402ea968f002
 Size (KoboDeluxe-0.4pre8.tar.gz) = 676204 bytes

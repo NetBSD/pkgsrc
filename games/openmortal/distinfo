@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/05/20 17:10:41 kristerw Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 23:12:01 agc Exp $
 
 SHA1 (openmortal-0.7.tar.bz2) = a7177012e1c0eb04f357aa9ff013e53c8f7b835c
+RMD160 (openmortal-0.7.tar.bz2) = 6a0fdd46445ed243db261227a93526b97c6f9d79
 Size (openmortal-0.7.tar.bz2) = 51197736 bytes
 SHA1 (patch-aa) = d18089a348fb7718bed0f47fbff7aaf772915340
 SHA1 (patch-ab) = 1f7f9075975994e76262df4d3153f1162cb40dd3

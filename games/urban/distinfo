@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/16 18:18:27 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:12:03 agc Exp $
 
 SHA1 (urban-1.5.2.tar.gz) = 3f388da8053a26cd34749aa6989cebd528925c2c
+RMD160 (urban-1.5.2.tar.gz) = f63be0cb0f09e84b31587d1d5cdc9a603521941f
 Size (urban-1.5.2.tar.gz) = 809513 bytes
 SHA1 (sound.tar.gz) = 828f93e1ac6ee43cb82fcd6290a62ba94d7ba18b
+RMD160 (sound.tar.gz) = 250815b664b9e3f8415c9850eeb00dce09e3006f
 Size (sound.tar.gz) = 8116030 bytes
 SHA1 (patch-aa) = eed2cef240eaf0bee47208918e27b65b6cd897f4
 SHA1 (patch-ab) = 52f943c7740e05de2f57a6e874d30cf11d5ac5f5

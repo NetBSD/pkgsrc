@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2004/10/07 12:45:07 markd Exp $
+$NetBSD: distinfo,v 1.19 2005/02/23 23:12:00 agc Exp $
 
 SHA1 (nethack-343-src.tgz) = c26537093c38152bc0fbcec20468d975b35f59fd
+RMD160 (nethack-343-src.tgz) = 42f600d24715a0b7e631b357c135761410b3ca95
 Size (nethack-343-src.tgz) = 3497458 bytes
 SHA1 (patch-aa) = 6439ddb86b4600aa39e6b52cabaf4f6696dd1023
 SHA1 (patch-ab) = 6c42d5c4c12e70651f14b08658169f6c00b420db

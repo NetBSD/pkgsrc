@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/07/27 15:33:08 jschauma Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:12:03 agc Exp $
 
 SHA1 (spider.tar.gz) = 384c43857b8a7322ba1c80bc37513415f75db482
+RMD160 (spider.tar.gz) = aedcf3e18eeefd98f475b2c2408f49b99f4f9ef0
 Size (spider.tar.gz) = 95318 bytes
 SHA1 (patch-aa) = 204b8d75f8583fe71f89f18dfdd1774cd2042b2f
 SHA1 (patch-ab) = 1ae99ebe79d79beee3bd0ebd62998f62c6fca51e

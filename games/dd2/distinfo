@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/03 03:20:19 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:11:56 agc Exp $
 
 SHA1 (dd2-0.2.1.tar.gz) = ae87caa53a4314a1e304cfa0940a9619dd91ed79
+RMD160 (dd2-0.2.1.tar.gz) = 20ffa3a1e2841a48300a8624b63ff2878ac77a97
 Size (dd2-0.2.1.tar.gz) = 286998 bytes
