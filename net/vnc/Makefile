@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/04/25 04:33:46 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2002/04/25 04:36:34 itojun Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -24,6 +24,7 @@ CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
 USE_PERL5=		yes
+USE_INET6=		yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
