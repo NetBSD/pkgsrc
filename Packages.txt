@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.18 1998/02/08 18:17:33 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.19 1998/02/27 02:46:29 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -583,7 +583,7 @@ the BSD definition, which is defined in <sys/param.h> on said systems.
 Unfortunately, it may not always be appropriate to include that header file
 without checking whether it's available:
 
-        #ifdef (defined(__unix__) || defined(unix)) && !defined(USG)
+        #if (defined(__unix__) || defined(unix)) && !defined(USG)
         #include <sys/param.h>
         #endif
 
