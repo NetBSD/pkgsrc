@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/06/03 20:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/05 22:51:25 jschauma Exp $
 #
 
-DISTNAME=		jgrasp164
-PKGNAME=		jgrasp-1.6.4
+DISTNAME=		jgrasp170
+PKGNAME=		jgrasp-1.7.0
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.eng.auburn.edu/pub/grasp/jgrasp/
 EXTRACT_SUFX=		.zip
@@ -21,7 +21,7 @@ do-build:
 	${CC} ${CFLAGS} -lutil -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
 		${WRKSRC}/src/linux_run.c
 	${CC} ${CFLAGS} -I${X11BASE}/include				\
-		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 		\
+		-L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib -lX11 		\
 		-o ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 			\
 		${WRKSRC}/src/linux_exec.c
 
