@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/07/15 02:49:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/05 19:04:44 jlam Exp $
 #
 
-DISTNAME=		guile-gtk-0.17
+DISTNAME=		guile-gtk-0.19
 CATEGORIES=		devel x11 gnome
 MASTER_SITES=		http://www.ping.de/sites/zagadka/guile-gtk/download/ \
 			http://erin.netpedia.net/download/ \
@@ -11,12 +11,13 @@ MASTER_SITES=		http://www.ping.de/sites/zagadka/guile-gtk/download/ \
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ping.de/sites/zagadka/guile-gtk/
 
-DEPENDS+=		gnome-core-*:../../x11/gnome-core
-DEPENDS+=		guile>=1.3.2:../../lang/guile
+DEPENDS+=		gtk+-1.2.*:../../x11/gtk
+DEPENDS+=		guile>=1.4:../../lang/guile
 
-GNU_CONFIGURE=		# defined
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.pkg.mk"
