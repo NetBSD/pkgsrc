@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/08 14:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/21 17:51:10 veego Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS= --enable-own-labels
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
 CFLAGS+=        -I${WRKSRC}/src -I${LOCALBASE}/include
