@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/11 23:16:27 snj Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -12,7 +12,7 @@ MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://tuxracer.sourceforge.net/
 COMMENT=	3D penguin racing game using OpenGL
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 CFLAGS+=	-DGLX_GLXEXT_PROTOTYPES
@@ -30,9 +30,9 @@ post-install:
 	cd ${PREFIX}/share/tuxracer && \
 		${FIND} . -type f -exec ${CHMOD} 444 {} \;
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
