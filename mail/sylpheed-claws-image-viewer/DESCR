@@ -1,4 +1,2 @@
 Using imlib, image-viewer allows Sylpheed-claws to display attached images in
 the visualisation panel.
-
-You must manually load the plugin through Configuration/Plugins.
