@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/19 23:43:23 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/03 15:50:24 rh Exp $
 #
 
 DISTNAME=	DBD-Pg-0.93
@@ -17,8 +17,8 @@ USE_PERL5=	YES
 PGUSER?=                pgsql
 PGPREFIX=               ${PREFIX}/${PGUSER}
 
-CONFIGURE_ENV+=		POSTGRES_INCLUDE=${PGPREFIX}/include
-CONFIGURE_ENV+=		POSTGRES_LIB=${PGPREFIX}/lib
+CONFIGURE_ENV+=		POSTGRES_INCLUDE=${PREFIX}/include/pgsql
+CONFIGURE_ENV+=		POSTGRES_LIB=${PREFIX}/lib
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${LOCALBASE}/bin/perl Makefile.PL
