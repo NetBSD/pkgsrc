@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/04/07 09:44:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.25 1999/04/09 10:55:33 agc Exp $
 
 DISTNAME=	samba-2.0.3
 CATEGORIES=	net
@@ -65,7 +65,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
 	if [ ! -d ${SAMBA_PRIVATE} ] ; then				\
 		${MKDIR} ${SAMBA_PRIVATE} ;				\
-		${CHOWN} ${BINOWN}:${BINGRP} ${SAMBA_PRIVATE} ;		\
+		${CHOWN} root:${BINGRP} ${SAMBA_PRIVATE} ;		\
 		${CHMOD} 700 ${SAMBA_PRIVATE} ;				\
 	fi
 	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ] ; then                   \
