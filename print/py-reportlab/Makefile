@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/08/29 15:15:37 recht Exp $
+# $NetBSD: Makefile,v 1.22 2004/08/29 15:17:47 recht Exp $
 #
 
 DISTNAME=	ReportLab_1_19
@@ -11,7 +11,7 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
 
-DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
+BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 
 WRKSRC=		${WRKDIR}/reportlab-1_19/reportlab/lib
 PYBINMODULE=	yes
