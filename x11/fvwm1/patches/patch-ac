@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 1998/09/16 18:05:06 garbled Exp $
+--- fvwm/alpha_header.h.orig	Wed Sep 16 08:30:50 1998
++++ fvwm/alpha_header.h	Wed Sep 16 08:31:22 1998
+@@ -11,8 +11,9 @@
+ #ifdef __GNUC__
+ extern size_t strlen(char *);
+ #endif
+-
++/*
+ extern int bzero(char *, int);
+ extern int gethostname (char *, int);
++*/
+ /**************************************************************************/
+ 
