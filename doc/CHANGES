@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1403 2003/02/16 17:24:56 grant Exp $
+$NetBSD: CHANGES,v 1.1404 2003/02/16 19:45:24 bad Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -707,3 +707,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ms-ttf to 20020306nb2 [jmmv 2003-02-16]
 	Added xchat2-2.0.0 [jmmv 2003-02-16]
 	Added udptunnel-1.1 [grant 2003-02-16]
+	Updated vmware-module to 1.2 [bad 2003-02-16]
