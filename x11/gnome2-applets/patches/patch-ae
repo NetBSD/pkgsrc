@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/12/29 12:05:20 xtraeme Exp $
+
+--- battstat/sounds/Makefile.in.orig	2003-12-13 15:42:24.000000000 -0600
++++ battstat/sounds/Makefile.in
+@@ -148,7 +148,7 @@ WARN_CXXFLAGS = @WARN_CXXFLAGS@
+ X_LIBS = @X_LIBS@
+ gnomelocaledir = @gnomelocaledir@
+ 
+-soundlistdir = $(sysconfdir)/sound/events
++soundlistdir = $(datadir)/examples/gnome-applets/sound/events
+ soundlist_in_files = battstat_applet.soundlist.in
+ soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
+ 

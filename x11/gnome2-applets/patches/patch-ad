@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/12/29 12:05:20 xtraeme Exp $
+
+--- mini-commander/src/Makefile.in.orig	2003-12-12 11:35:41.000000000 -0600
++++ mini-commander/src/Makefile.in
+@@ -646,7 +646,7 @@ $(server_in_files): $(server_in_files:.s
+ 
+ install-data-local:
+ 	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schemas_DATA) ;
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(top_builddir)/mini-commander/src/mc-install-default-macros
++#	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(top_builddir)/mini-commander/src/mc-install-default-macros
+ 
+ @INTLTOOL_SERVER_RULE@
+ 
