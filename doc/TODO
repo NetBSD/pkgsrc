@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1561 2004/03/31 14:46:24 skrll Exp $
+$NetBSD: TODO,v 1.1562 2004/03/31 16:02:48 kei Exp $
 
 Suggested new packages
 ======================
@@ -188,7 +188,6 @@ Suggested package updates
 	o fox-1.0.51
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
-	o gauche-0.7.4.1 [kei]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
