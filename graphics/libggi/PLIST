@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/17 07:57:51 he Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/20 22:39:03 wiz Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -141,11 +141,12 @@ lib/ggi/helper/helper_x_shm.la
 lib/ggi/helper/helper_x_shm.so
 lib/ggi/helper/helper_x_vidmode.a
 lib/ggi/helper/helper_x_vidmode.la
+lib/ggi/helper/helper_x_vidmode.so
 lib/libggi.a
 lib/libggi.la
 lib/libggi.so
 lib/libggi.so.2
-lib/libggi.so.2.4
+lib/libggi.so.2.0
 man/man1/cube3d.1
 man/man1/ggiteleserver.1
 man/man1/monitest.1
@@ -206,6 +207,7 @@ man/man3/ggiOpen.3
 man/man3/ggiPackColors.3
 man/man3/ggiPanic.3
 man/man3/ggiParseMode.3
+man/man7/display-mansync.7
 man/man3/ggiPrintMode.3
 man/man3/ggiPutBox.3
 man/man3/ggiPutHLine.3
