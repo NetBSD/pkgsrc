@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/04/28 02:37:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.37 2001/11/15 04:00:22 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -15,12 +15,15 @@ SUBDIR+=	geda
 SUBDIR+=	geda-docs
 SUBDIR+=	geda-symbols
 SUBDIR+=	geda-utils
+SUBDIR+=	gerbv
 SUBDIR+=	gnetlist
+SUBDIR+=	gnucap
 SUBDIR+=	gschem
 SUBDIR+=	gsymcheck
 SUBDIR+=	gwave
 SUBDIR+=	ipal-current
 SUBDIR+=	libgeda
+SUBDIR+=	mcalc
 SUBDIR+=	mpac
 SUBDIR+=	ng-spice
 SUBDIR+=	ntesla
