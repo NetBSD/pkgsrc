@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/01 18:07:48 wennmach Exp $
 
 SHA1 (squid-2.4.STABLE1-src.tar.gz) = 584eb15080f52ef406e3f66511dba406ec1a40c5
 SHA1 (squid-2.4.stable1-diskd_fixed_path.patch) = 1ec289b37d0640a8d16e691659acc3776632b321
@@ -8,7 +8,7 @@ SHA1 (squid-2.4.stable1-htcp_assertion_fix.patch) = afdbe390453cc65b375c6616be58
 SHA1 (squid-2.4.stable1-kill_parent_on_child_sigkill.patch) = c94ba4c220d31ea1612e5b1a84970de2c058f7a9
 SHA1 (squid-2.4.stable1-wrong_sign_on_timestamp_check.patch) = cde4530d0c9cd184b0d4c6774e4c20f81ab7179f
 SHA1 (patch-aa) = 3722daecfb5da7368860af51383759b20fbe1481
-SHA1 (patch-ab) = 5c742a358c5d13e6517b47d04adf9e52c93699d4
+SHA1 (patch-ab) = afb0c443c708d03fc7ab39120ae9a3c68d9e9b88
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
 SHA1 (patch-ad) = 03f76c2a781bff4b3a8680ee815f8c5dcbdd70d0
 SHA1 (patch-ae) = 5189de99c6f453ef58b97a4df54c065c87cf7e21
