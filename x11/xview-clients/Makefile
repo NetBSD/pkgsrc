@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/10/21 23:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/23 18:10:14 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -10,15 +10,12 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		jlam@netbsd.org
 
 DEPENDS+=		xview-lib>=3.2.1:../../x11/xview-lib
-# Need the following for xvmkmf
-DEPENDS+=		xview-config>=3.2.1nb1:../../x11/xview-config
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 EXTRACT_ELEMENTS=	${DISTNAME}/clients ${DISTNAME}/images
 WRKSRC=			${WRKDIR}/${DISTNAME}/clients
 USE_IMAKE=		# defined
-XMKMF=			${X11PREFIX}/bin/xvmkmf -a
 
 post-patch:
 	@cd ${WRKSRC};					\
