@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.595 2003/05/27 15:48:32 jmmv Exp $
+$NetBSD: TODO,v 1.596 2003/05/28 06:18:42 jlam Exp $
 
 Suggested new packages
 ======================
@@ -345,3 +345,7 @@ Suggested cleanups in pkgsrc
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if there is no
 	  good reason to install them into X11BASE.
+
+	o Remove patches to p5-* packages that strip MAN3POD definitions
+	  from Makefile.PL.  The perl packages now correctly install man
+	  pages, so this workaround isn't needed anymore.
