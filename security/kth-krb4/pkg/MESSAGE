@@ -1,0 +1,7 @@
+===============================================================================
+Kth-krb4 now has been installed on your system.
+
+To complete the installation you'll have to configure Kerberos.
+More information on how to configure Kerberos is available as info file.
+Sample files are installed in $prefix/share/examples/kth-krb4.
+===============================================================================
