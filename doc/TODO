@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1626 2004/04/16 22:16:50 jmmv Exp $
+$NetBSD: TODO,v 1.1627 2004/04/17 00:15:45 snj Exp $
 
 Suggested new packages
 ======================
@@ -127,7 +127,6 @@ Suggested package updates
 	o ImageViewer-0.6.3
 	o LPRng-3.8.26
 	o R-1.9.0
-	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o amanda-2.4.4p2 [pkg/24550, bouyer]
