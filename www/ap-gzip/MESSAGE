@@ -1,10 +1,13 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/04/01 17:44:43 tv Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/26 00:12:49 grant Exp $
 
-You will need to edit ${PREFIX}/etc/httpd/httpd.conf and add the following
-lines in order to use this module.
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
 
-LoadModule gzip_module lib/httpd/mod_gzip.so
-AddModule mod_gzip.c
+  LoadModule gzip_module lib/httpd/mod_gzip.so
+
+For more information, see
+
+	${PREFIX}/share/doc/mod_gzip
 
 =============================================================================
