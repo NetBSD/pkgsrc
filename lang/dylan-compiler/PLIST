@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/05 21:15:48 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/06 11:23:01 agc Exp $
 bin/d2c
 bin/dybug
 bin/mindy
 bin/mindycomp
 bin/mindyexec
-etc/aide.db
 include/runtime.h
 lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system-lib.dbc
 lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system.lib.du
