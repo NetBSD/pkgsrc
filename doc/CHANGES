@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9633 2005/03/25 22:05:47 kim Exp $
+$NetBSD: CHANGES,v 1.9634 2005/03/25 23:24:51 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1755,3 +1755,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jdk15 to 5.0.2 [tv 2005-03-25]
 	Updated sun-jre15 to 5.0.2 [tv 2005-03-25]
 	Added lbdb-0.29 [kim 2005-03-25]
+	Removed xspeakfree [kristerw 2005-03-25]
