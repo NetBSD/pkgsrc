@@ -1,4 +1,4 @@
-# 	$NetBSD: Makefile,v 1.1.1.1 1998/01/23 09:57:21 agc Exp $
+# 	$NetBSD: Makefile,v 1.2 1998/02/01 02:10:17 hubertf Exp $
 #
 # New ports collection makefile for:    rsync
 # Version required:     1.6.9
@@ -12,7 +12,7 @@ DISTNAME=	rsync-1.6.9
 CATEGORIES=	net
 MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
-		ftp://ftp.sunet.se/pub/unix/admin/rsync  \
+		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/pub/unix/network/rsync/
 
 MAINTAINER=     obrien@FreeBSD.org
