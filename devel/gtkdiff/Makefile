@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/16 17:57:43 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/15 13:02:57 rh Exp $
 #
 
-DISTNAME=	gtkdiff-1.3.0
+DISTNAME=	gtkdiff-1.6.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://www.ainet.or.jp/~inoue/software/gtkdiff/
 
