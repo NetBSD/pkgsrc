@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/04 19:32:15 proff Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/10 23:14:39 proff Exp $
 
-DISTNAME=	festival-doc-1.3.1
-WRKSRC=		${WRKDIR}/festdoc-1.3.1
+DISTNAME=	festival-doc-1.4.0.1
+WRKSRC=		${WRKDIR}/festdoc-1.4.0.1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.3.1/
-DISTFILES=	festdoc-1.3.1.tar.gz
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+DISTFILES=	festdoc-1.4.0.1.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
@@ -22,7 +22,7 @@ do-install:
 	@ cd ${WRKSRC} && info=`find . -name '*.info*' -type f` && \
 	  ${CP} $$info ${PREFIX}/info && \
 	  ${CP} -r ${WRKSRC}/* ${FDOC} && \
-	  cd ${FDOX} && \
+	  cd ${FDOC} && \
 	  ${RM} -f $$info
 
 .include "../../mk/bsd.pkg.mk"
