@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 22:35:59 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/25 15:39:31 taca Exp $
 
 DISTNAME=	samba-2.2.2
 #
@@ -17,7 +17,7 @@ MASTER_SITES=	ftp://ftp.samba.org/pub/samba/ \
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	PAM authentication against a Samba password database
 
-DEPENDS+=	samba>=2.0:../../net/samba
+DEPENDS+=	{samba>=2.0,ja-samba>=2.0}:../../net/samba
 
 USE_BUILDLINK_ONLY=	yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
