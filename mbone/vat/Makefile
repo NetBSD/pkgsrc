@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/09/08 00:39:02 jwise Exp $
+# $NetBSD: Makefile,v 1.34 2000/12/03 06:30:05 mycroft Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -13,8 +13,6 @@ HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		tk-8.3.2:../../x11/tk
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
-
-NOT_FOR_PLATFORM=	*-*-alpha	# filter.cc compiler error
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
