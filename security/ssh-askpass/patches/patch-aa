@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/11 05:22:58 jlam Exp $
+
+--- Imakefile.orig	Fri Jan  7 04:54:23 2000
++++ Imakefile	Fri Aug 11 00:49:33 2000
+@@ -1,8 +1,6 @@
+ NAME		= x11-ssh-askpass
+ CLASS		= SshAskpass
+ 
+-BINDIR		= /usr/local/libexec/ssh
+-
+ CAT		= cat
+ CHMOD		= chmod -c
+ CP		= cp -df

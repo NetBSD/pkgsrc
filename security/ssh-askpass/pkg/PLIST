@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/11 05:22:58 jlam Exp $
+bin/ssh-askpass
+bin/x11-ssh-askpass
+lib/X11/app-defaults/SshAskpass
+share/doc/ssh-askpass/README

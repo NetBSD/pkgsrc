@@ -1,0 +1,8 @@
+x11-ssh-askpass is a lightweight passphrase dialog for OpenSSH or other
+open variants of SSH. In particular, x11-ssh-askpass is useful with the
+Unix port of OpenSSH by Damien Miller, and Damien includes it in his RPM
+packages of OpenSSH.
+
+x11-ssh-askpass uses only the stock X11 libraries (libX11, libXt) for its
+user interface. This reduces its dependencies on external libraries (such
+as GNOME or Perl/Tk). See the README for further information.
