@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/01/24 14:57:59 grant Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/17 12:57:38 jlam Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -16,19 +16,18 @@ DEPENDS+=		psutils>=1.17:../../print/psutils
 
 WRKSRC=			${WRKDIR}/a2ps-4.13
 STRIP=			# empty
-USE_PERL5=		YES
-USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		yes
+USE_PERL5=		yes
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LPR=lpr
 CONFIGURE_ARGS+=	--with-medium="${PAPERSIZE}"
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
-AUTOMAKE_OVERRIDE=	NO
 
 EGDIR=			${PREFIX}/share/examples/a2ps
 CONF_FILES=		${EGDIR}/a2ps-site.cfg ${PKG_SYSCONFDIR}/a2ps-site.cfg
@@ -40,5 +39,5 @@ pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.info
 	${TOUCH} ${WRKSRC}/doc/*.dvi
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
