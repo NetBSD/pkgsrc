@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/10 12:51:53 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/10 15:38:11 mjl Exp $
 #
 
 DISTNAME=	XML-XQL-0.66
@@ -12,6 +12,8 @@ COMMENT=	Perl module to perform XQL queries on XML object trees
 DEPENDS+=	p5-XML-DOM-*:../p5-XML-DOM
 DEPENDS+=	p5-XML-Parser-2.*:../p5-XML-Parser
 DEPENDS+=	p5-Date-Manip-*:../../devel/p5-Date-Manip
+
+CONFLICTS+=	p5-libxml-enno-*
 
 USE_PERL5=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/XQL/.packlist
