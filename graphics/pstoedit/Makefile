@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/06/15 11:37:36 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/15 11:38:00 grant Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -29,6 +29,8 @@ CONFIGURE_ENV+=	AWK=${AWK} GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
 ALL_TARGET=
+
+LIBS.SunOS+=	-ldl
 
 post-extract:
 	cd ${WRKSRC} && ${LN} ../config/* .
