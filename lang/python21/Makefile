@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/04/09 04:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/15 12:10:49 drochner Exp $
 #
 
-DISTNAME=	Python-2.1.2
-PKGNAME=	python21-2.1.2
+DISTNAME=	Python-2.1.3
+PKGNAME=	python21-2.1.3
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.2/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
