@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:22:46 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/08 20:27:13 minskim Exp $
 #
 
 DISTNAME=	liveice
@@ -12,7 +12,7 @@ COMMENT=	Source client for Icecast
 
 DEPENDS+=	mpg123-0.5*:../../audio/mpg123
 DEPENDS+=	lame-3.*:../../audio/lame
-DEPENDS+=	tk>=8.0:../../x11/tk
+DEPENDS+=	tk>=8.0:../../x11/tk83
 
 GNU_CONFIGURE=	YES
 DIST_SUBDIR=	liveice-0.20001121
