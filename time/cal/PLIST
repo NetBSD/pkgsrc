@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:18:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/03 22:22:10 jmmv Exp $
 bin/cal
-etc/cal/calcol
-etc/cal/caldat
-@dirrm etc/cal
-man/man1/cal.1.gz
+man/man1/cal.1
+share/examples/cal/calcol
+share/examples/cal/caldat
+@dirrm share/examples/cal
