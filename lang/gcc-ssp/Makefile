@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:19:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/06 12:31:57 grant Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -120,7 +120,7 @@ post-install:
 # remove empy file and directories that show up when one
 # does make install; make deinstall; make install
 post-install:
-	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include && \
+	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include && \
 	${RM} -f fixed && \
 	${RMDIR} v7 v9
 .endif

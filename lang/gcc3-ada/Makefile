@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/07/06 12:15:03 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/06 12:31:58 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -57,9 +57,9 @@ ALL_TARGET=		bootstrap
 .  endif
 .endif
 
-# as this is named gcc3, use DISTNAME instead.
 GCC_PREFIX=	${PREFIX}/gcc3
-GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}
+GCC_VERSION=	${PKGVERSION:C|nb*||}
+GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${GCC_VERSION}
 
 #
 # Bootstrap section. Define something to make the pkg usable.
