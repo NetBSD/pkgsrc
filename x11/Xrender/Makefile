@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:38:24 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/30 15:15:43 grant Exp $
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	Xrender-${XRENDER_VERSION}
@@ -19,6 +19,13 @@ EXTRACT_ELEMENTS=	${DISTNAME}/Xrender
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+PLIST_SUBST+=		NOT_SUNOS="@comment "
+.else
+PLIST_SUBST+=		NOT_SUNOS=""
+.endif
+
+PLIST_SUBST+=
 _RENDER_H=		${X11BASE}/include/X11/extensions/render.h
 _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
 .if exists(${_RENDER_H}) && exists(${_X11_TMPL})
@@ -27,7 +34,7 @@ _IS_BUILTIN_XRENDER!=	${GREP} -c BuildRenderLibrary ${_X11_TMPL} || ${TRUE}
 _IS_BUILTIN_XRENDER=	0
 .endif
 
-.if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_XRENDER} != "0")
+.if ${X11PREFIX} == ${X11BASE} && ${_IS_BUILTIN_XRENDER} != "0"
 PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .endif
 
