@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/10/04 17:01:15 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/10/04 21:10:15 tron Exp $
 
 DISTNAME=		mtv-1.1.0.3
 CATEGORIES=		graphics
@@ -15,6 +15,7 @@ DEPENDS=		suse_xforms-6.1p1:../../emulators/suse_xforms
 DIST_SUBDIR=		mtv
 LICENSE=		fee-based-commercial-use
 MANCOMPRESSED=
+MIRROR_DISTFILE=	no
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
