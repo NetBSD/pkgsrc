@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/30 12:55:03 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/01 23:21:00 kristerw Exp $
 
 DISTNAME=		suse_vmware-${SUSE_VERSION}
 PKGNAME=		${DISTNAME}nb1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package to support running VMware
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
+DEPENDS+= 		suse_x11>=${SUSE_VERSION}:../suse_x11
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
