@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/15 16:40:45 drochner Exp $
+
+SHA1 (sip-x11-gpl-3.7.tar.gz) = 4527e8ad6ef138dc1f03c74b38a8b6b2b18e9ca1
+Size (sip-x11-gpl-3.7.tar.gz) = 178716 bytes
+SHA1 (patch-aa) = 0f92b512f57b4b3e2187aaaeb0d153341d70eabf
