@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.520 2002/11/14 04:27:49 kim Exp $
+$NetBSD: CHANGES,v 1.521 2002/11/14 17:08:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3610,3 +3610,13 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bind4 to 4.9.10nb1 [itojun 2002-11-14]
 	Updated bind8 to 8.3.3nb1 [itojun 2002-11-14]
 	Updated tmda to 0.64 [kim 2002-11-14]
+	Updated zope25-ZPhotoSlides to 0.5 [drochner 2002-11-14]
+	Updated zope25-Silva to 0.8.5 [drochner 2002-11-14]
+	Added zope25-Calendar-1.0.10 [drochner 2002-11-14]
+	Added zope25-AbracadabraObject-1.4.0 [drochner 2002-11-14]
+	Added zope25-PropertyObject-1.10 [drochner 2002-11-14]
+	Added zope25-PropertyFolder-1.10 [drochner 2002-11-14]
+	Added zope25-MetaPublisher-1.2.8 [drochner 2002-11-14]
+	Added zope25-ZWeather-0.0.1 [drochner 2002-11-14]
+	Added zope25-Photo-1.2.3 [drochner 2002-11-14]
+	Added zope25-CMFPlone-1.0beta3 [drochner 2002-11-14]
