@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.12 1999/09/13 02:44:47 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.13 1999/10/30 16:36:44 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -239,7 +239,7 @@ sub checkdescr {
 	}
 	if ($longlines > 0) {
 		&perror("WARN: $i includes lines that exceed $maxchars{$file} ".
-			"charactors.");
+			"characters.");
 	}
 	if ($tmp =~ /[\033\200-\377]/) {
 		&perror("WARN: pkg/DESCR includes iso-8859-1, or ".
