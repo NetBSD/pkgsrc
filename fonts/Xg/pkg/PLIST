@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/24 22:16:14 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/08 17:25:36 hubertf Exp $
 lib/X11/fonts/Xg/big5.4e00.16.pcf.Z
 lib/X11/fonts/Xg/big5.5000.16.pcf.Z
 lib/X11/fonts/Xg/big5.5200.16.pcf.Z
@@ -174,4 +174,4 @@ lib/X11/fonts/Xg/pelm.latineur.9.pcf.Z
 lib/X11/fonts/Xg/pelm.supsub.8.pcf.Z
 lib/X11/fonts/Xg/pelm.supsub.9.pcf.Z
 lib/X11/fonts/Xg/unicode.9.font
-@dirrm %D/lib/X11/fonts/Xg
+@dirrm lib/X11/fonts/Xg
