@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/10/14 12:00:56 markd Exp $
+# $NetBSD: Makefile,v 1.12 2002/11/02 00:24:18 wiz Exp $
 
 DISTNAME=	kde-2.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,7 @@ DEPENDS+=	kdeadmin-2.2.2nb1:../../misc/kdeadmin2
 DEPENDS+=	kdegames-2.2.2nb1:../../games/kdegames2
 DEPENDS+=	kdegraphics-2.2.2nb2:../../graphics/kdegraphics2
 DEPENDS+=	kdemultimedia-2.2.2nb1:../../audio/kdemultimedia2
-DEPENDS+=	kdenetwork-2.2.2nb2:../../net/kdenetwork2
+DEPENDS+=	kdenetwork-2.2.2nb3:../../net/kdenetwork2
 DEPENDS+=	kdepim-2.2.2nb2:../../misc/kdepim2
 DEPENDS+=	kdetoys-2.2.2nb1:../../games/kdetoys2
 DEPENDS+=	kdeutils-2.2.2nb1:../../misc/kdeutils2

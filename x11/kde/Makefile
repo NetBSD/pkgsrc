@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/03/13 17:37:57 fredb Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
+# $NetBSD: Makefile,v 1.29 2002/11/02 00:24:17 wiz Exp $
 #
 
 DISTNAME=	kde-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +12,7 @@ HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE integrated X11 desktop
 
 DEPENDS+=	kdeutils-1.1.2nb1:../../misc/kdeutils
-DEPENDS+=	kdenetwork-1.1.2nb1:../../net/kdenetwork
+DEPENDS+=	kdenetwork-1.1.2nb2:../../net/kdenetwork
 DEPENDS+=	kdegraphics-1.1.2nb1:../../graphics/kdegraphics
 DEPENDS+=	kdegames-1.1.2nb1:../../games/kdegames
 DEPENDS+=	kdemultimedia-1.1.2nb1:../../audio/kdemultimedia
