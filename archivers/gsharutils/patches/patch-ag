@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2000/12/19 04:36:56 itojun Exp $
+
+--- po/Makefile.in.in-	Tue Dec 19 13:30:14 2000
++++ po/Makefile.in.in	Tue Dec 19 13:31:03 2000
+@@ -126,3 +126,3 @@
+ 	  fi; \
+-	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
++	  lang=`echo $$cat | sed 's/\.[a-z]*$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \
+@@ -146,3 +146,3 @@
+ 	for cat in $$catalogs; do \
+-	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
++	  lang=`echo $$cat | sed 's/\.[a-z]*$$//'`; \
+ 	  rm -f $(localedir)/$$lang/LC_MESSAGES/$(PACKAGE)$(INSTOBJEXT); \
