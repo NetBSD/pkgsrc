@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1068 2003/11/26 05:48:22 grant Exp $
+$NetBSD: TODO,v 1.1069 2003/11/26 06:31:24 grant Exp $
 
 Suggested new packages
 ======================
@@ -344,6 +344,7 @@ Suggested package updates
 	o p5-HTML-Parser-3.34
 	o p5-MIME-Base64-2.21
 	o p5-Net-DNS-0.41 [heinz]
+	o p5-URI-1.27
 	o p5-razor-agents-2.36 [heinz]
 	o pdmenu-1.2.81
 	o php-4.3.4
