@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/01/04 23:46:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 2000/02/09 03:51:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -122,3 +122,27 @@ README-all.html:
 	@rm -f $@.npkgs
 	@rm -f $@.new
 	@rm -f $@.newsorted
+
+
+
+readme-ipv6:
+	@if [ -f README-IPv6.html ]; then \
+		mv README-IPv6.html README-IPv6.html.BAK ; \
+	fi
+	@${MAKE} README-IPv6.html
+	@if cmp -s README-IPv6.html README-IPv6.html.BAK  ; then \
+		mv README-IPv6.html.BAK README-IPv6.html ; \
+	else \
+		rm -f README-IPv6.html.BAK ; \
+	fi
+
+README-IPv6.html:
+	@grep -l USE_INET6 */*/Makefile | sed s,.Makefile,, >$@.pkgs
+	@fgrep -f $@.pkgs README-all.html | sort -t/ +1 >$@.trs
+	@cat templates/README.ipv6 \
+	| ${SED} \
+                -e '/%%TRS%%/r$@.trs' \
+                -e '/%%TRS%%/d' \
+		>$@
+	@${RM} $@.trs
+	@${RM} $@.pkgs
