@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2004/01/18 18:43:05 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/06 17:32:11 xtraeme Exp $
 
---- src/State.cpp.orig	Sun Jan 18 19:18:52 2004
-+++ src/State.cpp	Sun Jan 18 19:22:52 2004
-@@ -110,7 +110,11 @@
+--- src/State.cpp.orig	2004-03-06 18:20:58.000000000 +0100
++++ src/State.cpp	2004-03-06 18:22:07.000000000 +0100
+@@ -151,10 +151,10 @@
+ 		debug( "GetUserName failed: %d.\n", iResult );
+ 	}
+ #else
+-	int iResult = getlogin_r( m_acNick, 127 );
++	int iResult = (int)getlogin();
+ 	if ( iResult )
+ 	{
+-		debug( "getlogin_r failed: %d\n", iResult );
++		debug( "getlogin failed: %d\n", iResult );
+ 		strcpy( m_acNick, getenv("USER") );
+ 	}
+ #endif
+@@ -273,7 +273,11 @@
  void SState::Save()
  {
  	std::string sFilename = GetConfigFilename();
