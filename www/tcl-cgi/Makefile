@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/03 14:03:37 agc Exp $
 #
 
 DISTNAME=	cgi.tcl
 PKGNAME=	tcl-cgi-1.3.0
 WRKSRC=		${WRKDIR}/cgi.tcl-1.3
 CATEGORIES=	www
-MASTER_SITES=	http://expect.nist.gov/cgi.tcl/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/cgi.tcl/
