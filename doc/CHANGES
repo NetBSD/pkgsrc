@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1558 2003/03/05 10:14:20 wiz Exp $
+$NetBSD: CHANGES,v 1.1559 2003/03/05 12:02:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -948,3 +948,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated popa3d to 0.6.1 [wiz 2003-03-05]
 	Updated htmllint to 20030225 [wiz 2003-03-05]
 	Updated tnef to 1.2.0 [wiz 2003-03-05]
+	Updated leim to 20.7nb2 [wiz 2003-03-05]
