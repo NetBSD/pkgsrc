@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.22 2001/08/23 04:26:54 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/11/30 00:55:17 wiz Exp $
+#
 
 DISTNAME=       siag-3.1.20
 CATEGORIES=     misc textproc math
@@ -12,19 +13,18 @@ DEPENDS+=	gv-3.5.8:../../print/gv
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	guile>=1.3:../../lang/guile
 
-CONFIGURE_ARGS=	--with-x --with-guile --includedir=${PREFIX}/include
+CONFIGURE_ARGS=	--with-x --with-guile --includedir=${BUILDLINK_DIR}/include
 GNU_CONFIGURE=  YES
-USE_CURSES=	YES
-REPLACE_NCURSES=	${WRKSRC}/tsiag/window.c ${WRKSRC}/configure
+USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=	YES
-USE_X11=	YES
-USE_XAW=	YES
-USE_XPM=	YES
 
 CFLAGS+=	-Dunix
-LDFLAGS+=	-Wl,-R${X11BASE}/lib
 STRIPFLAG=
 
 XAW_TYPE?=	3d
 
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
