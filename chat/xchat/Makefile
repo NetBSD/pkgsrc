@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/09/24 20:04:02 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/26 18:48:53 tron Exp $
 
 DISTNAME=	xchat-1.8.3
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	chat x11 gnome
 MASTER_SITES=	${HOMEPAGE}files/source/1.8/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,21 @@ USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+BUILD_DEFS+=	USE_INET6
+
+.include "../../mk/bsd.prefs.mk"
+
+# IPv6 support
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+# SSL support
+.if defined(XCHAT_USE_SSL) && ${XCHAT_USE_SSL} == "YES"
+.include "../../security/openssl/buildlink.mk"
+CONFIGURE_ARGS+=	--enable-openssl=${BUILDLINK_DIR}
+.endif
 
 # Prevent invokation of "auto*" which caused build failures due to insufficient
 # arguments and environment.

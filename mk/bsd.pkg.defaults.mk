@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.3 2001/09/21 19:50:28 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.4 2001/09/26 18:48:53 tron Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1087,6 +1087,11 @@ XAW_TYPE?=standard
 # Used in various packages to specify that libXaw is used.
 # Possible: standard, 3d, xpm
 # Default: standard
+
+XCHAT_USE_SSL?=	YES
+# Enable SSL in xchat (for IRC server connections)
+# Possible: YES, NO
+# Default: YES
 
 #ZIP_ENCRYPTION=
 # Add encryption code to zip1
