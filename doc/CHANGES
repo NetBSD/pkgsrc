@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3715 2003/10/20 09:39:37 agc Exp $
+$NetBSD: CHANGES,v 1.3716 2003/10/20 15:30:04 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squidGuard to 1.2.0nb2 [jmmv 2003-10-19]
 	Added dmesg2gif-1.0 [hubertf 2003-10-20]
 	Updated gsharutils to 4.2.1nb2 [agc 2003-10-20]
+	Updated db3 to db3-3.11.2nb1 [agc 2003-10-20]
