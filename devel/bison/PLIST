@@ -1,20 +1,22 @@
-@comment $NetBSD: PLIST,v 1.8 2002/12/15 19:41:26 cjep Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/01/01 13:15:47 cjep Exp $
 bin/bison
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/bison.info
 info/bison.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/bison.info
 info/bison.info-1
 info/bison.info-2
 info/bison.info-3
 info/bison.info-4
 info/bison.info-5
 info/bison.info-6
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/bison.info
+info/bison.info-7
+lib/liby.a
 man/man1/bison.1
+share/bison/README
 share/bison/c.m4
 share/bison/glr.c
 share/bison/lalr1.cc
 share/bison/m4sugar/m4sugar.m4
-share/bison/m4sugar/version.m4
 share/bison/yacc.c
 @dirrm share/bison/m4sugar
 @dirrm share/bison
