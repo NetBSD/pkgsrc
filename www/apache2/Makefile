@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2002/06/01 13:18:01 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2002/06/01 14:21:47 tron Exp $
 
 DISTNAME=		httpd-2.0.36
 PKGNAME=		apache-2.0.36
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
+			ftp://ftp.fu-berlin.de/unix/network/www/apache/httpd/ \
 			http://www.netbsd.org/images/logos/
 
 MAINTAINER=		jlam@netbsd.org
