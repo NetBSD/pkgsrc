@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2004/02/21 01:42:34 minskim Exp $
+# $NetBSD: Makefile,v 1.295 2004/02/21 06:18:44 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -200,6 +200,7 @@ SUBDIR+=	povray
 SUBDIR+=	ppmtoxvpic
 SUBDIR+=	prag
 SUBDIR+=	pstoedit
+SUBDIR+=	py-biggles
 SUBDIR+=	py-gd
 SUBDIR+=	py-gdchart
 SUBDIR+=	py-gimp
