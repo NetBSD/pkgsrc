@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 1999/02/11 17:54:32 tv Exp $
+$NetBSD: patch-ac,v 1.6 2001/12/25 14:48:38 wiz Exp $
 
---- info/filesys.h.orig	Mon Aug  4 22:21:35 1997
-+++ info/filesys.h	Wed May  6 23:00:23 1998
-@@ -71,7 +71,7 @@
+--- info/filesys.h.orig	Wed Jul 22 00:25:44 1998
++++ info/filesys.h
+@@ -76,7 +76,7 @@
  
  /* The default value of INFOPATH. */
  #if !defined (DEFAULT_INFOPATH)
