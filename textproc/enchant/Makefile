@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/12/24 04:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/06 16:50:39 wiz Exp $
 #
 
-DISTNAME=		enchant-1.1.3
-PKGREVISION=		3
+DISTNAME=		enchant-1.1.5
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 
