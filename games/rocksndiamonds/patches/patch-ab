@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/20 01:23:05 wiz Exp $
 
 --- src/Makefile.orig	Sun Oct 24 18:51:53 1999
 +++ src/Makefile	Mon Jan  3 13:52:45 2000
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
  # SYSTEM = -DSYSV -Ae		# may be needed for HP-UX
  
 -CFLAGS = $(OPTIONS) $(SYSTEM) $(INCL) $(CONFIG)
-+CFLAGS += $(OPTIONS) $(SYSTEM) $(INCL) $(CONFIG)
++CFLAGS += $(SYSTEM) $(INCL) $(CONFIG)
  
  SRCS =	main.c		\
  	init.c		\
