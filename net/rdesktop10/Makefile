@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/23 03:12:25 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/25 10:12:37 wiz Exp $
 #
 
 DISTNAME=		rdesktop-1.0.0-pl19-8-0
@@ -11,7 +11,9 @@ MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.rdesktop.org/
 COMMENT=		Open-source Remote Desktop Protocol client
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
+USE_X11=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-openssl
@@ -19,7 +21,5 @@ CONFIGURE_ARGS+=	--with-openssl
 CFLAGS+=		-Icrypto
 LDFLAGS+=		-lcrypto
 
-USE_X11=		yes
-
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

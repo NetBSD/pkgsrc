@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/30 07:40:00 martti Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/25 10:00:57 wiz Exp $
 #
 
 DISTNAME=		isakmpd-20020830
@@ -14,6 +14,7 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
 
 ALL_TARGET=		depend all
+USE_BUILDLINK2=		YES
 
 WRKSRC=			${WRKDIR}/isakmpd
 
@@ -21,9 +22,9 @@ MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man
 
 post-patch:
 	@${ECHO_MSG} "Fixing references to buildlink directories"
-	@for i in `${FIND} ${WRKSRC} -name '*Makefile*'`; do		\
+	@for i in ${WRKSRC}/sysdep/netbsd/Makefile.sysdep; do		\
 		${MV} $${i} $${i}.orig;					\
-		${SED} "s+@BUILDLINK_DIR@+${BUILDLINK_DIR}+g"		\
+		${SED} "s+@BUILDLINK_PREFIX.openssl@+${BUILDLINK_PREFIX.openssl}+g" \
 			< $${i}.orig > $${i};				\
 	done
 	@${ECHO_MSG} "Fixing manual page references"
@@ -39,6 +40,6 @@ pre-install:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/isakmpd.sh ${PREFIX}/etc/rc.d/isakmpd
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
