@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/19 23:03:53 jlam Exp $
 lib/httpd/mod_ssl.so
 sbin/mkcert
 share/doc/mod_ssl/README.mkcert
-share/examples/mod_ssl/apache_start.conf
 share/examples/mod_ssl/ssl.crl/Makefile.crl
 share/examples/mod_ssl/ssl.crl/README.CRL
 share/examples/mod_ssl/ssl.crt/Makefile.crt
