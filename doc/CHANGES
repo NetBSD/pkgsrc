@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1566 2003/03/05 13:52:39 wiz Exp $
+$NetBSD: CHANGES,v 1.1567 2003/03/05 14:02:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -960,3 +960,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated arla to 0.35.12 [wennmach 2003-03-05]
 	Updated mowitz to 0.2.2 [wiz 2003-03-05]
 	Updated shorten to 3.5.1 [wiz 2003-03-05]
+	Updated gnuplot to 3.7.3 [wiz 2003-03-05]
