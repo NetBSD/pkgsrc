@@ -1,0 +1,4 @@
+Ruby HTML Split library
+
+It parse into array of tag and string, and result would be back to
+HTML by to_s method.
