@@ -1,14 +1,18 @@
-$NetBSD: patch-ae,v 1.2 2003/08/04 15:34:21 jtb Exp $
+$NetBSD: patch-ae,v 1.3 2004/06/14 11:47:36 kristerw Exp $
 
---- packages/pkg-bld.orig	1999-01-12 22:03:47.000000000 +0000
-+++ packages/pkg-bld	2003-08-04 13:55:10.000000000 +0100
-@@ -39,9 +39,14 @@
+--- packages/pkg-bld.orig	Tue Jan 12 22:03:47 1999
++++ packages/pkg-bld	Mon Jun 14 11:12:14 2004
+@@ -39,9 +39,18 @@
  M="`echo $PKG | sed 's/\./_/g'`"
  rsc -P src/pkg packages/$PKG/$P.mcf
  
 +if test "$PKG" = "db"
 +then
-+    echo "NOSTDINC=-I/usr/include" >> src/pkg/db/Makefile
++    # We need to add /usr/include first in the search path, but
++    # buildlink3 is helpful and removes it...  Fool buildlink
++    # by reaching it through a link...
++    ln -s /usr/include src/pkg/db/usrinclude
++    echo "NOSTDINC=-Iusrinclude" >> src/pkg/db/Makefile
 +fi
 +
  if test -d src/pkg/$PKG
