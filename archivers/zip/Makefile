@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/20 23:26:05 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/26 20:07:13 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -19,7 +19,7 @@ ALL_TARGET=	generic
 .if defined(ZIP_ENCRYPTION)
 DISTFILES+=	zcrypt27.zip
 EXTRACT_ONLY=	zip22.tar.gz
-FETCH_DEPENDS=	unzip:../../archivers/unzip
+BUILD_DEPENDS=	unzip:../../archivers/unzip
 RESTRICTED=	crypto
 MIRROR_DISTFILE=no
 
