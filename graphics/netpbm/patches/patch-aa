@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
+$NetBSD: patch-aa,v 1.30 2005/02/17 11:36:01 adam Exp $
 
---- Makefile.config.in.orig	2004-10-16 19:53:17.000000000 +0000
+--- Makefile.config.in.orig	2005-01-13 03:50:04.000000000 +0000
 +++ Makefile.config.in
 @@ -33,7 +33,7 @@ BUILD_FIASCO = Y
  #CC = gcc
@@ -106,7 +106,7 @@ $NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
  # OSF, Tru64:
  #TIFFLIB = /usr/local1/DEC/lib/libtiff.so
  #TIFFHDR_DIR = /usr/local1/DEC/include
-@@ -357,8 +383,8 @@ JPEGHDR_DIR =
+@@ -359,8 +385,8 @@ JPEGHDR_DIR =
  #JPEGLIB = libjpeg.so
  #JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
@@ -117,7 +117,7 @@ $NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
  # OSF, Tru64:
  #JPEGLIB = /usr/local1/DEC/libjpeg.so
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -382,8 +408,8 @@ PNGVER = 
+@@ -384,8 +410,8 @@ PNGVER = 
  #PNGLIB = libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/include/libpng$(PNGVER)
  # NetBSD:
@@ -128,7 +128,7 @@ $NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -393,8 +419,8 @@ PNGVER = 
+@@ -395,8 +421,8 @@ PNGVER = 
  # NONE for the PNG library, it doesn't matter what you specify here --
  # it won't get used.
  
@@ -139,7 +139,7 @@ $NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
  #ZLIB = libz.so
  
  # The JBIG lossless image compression library (aka JBIG-KIT):
-@@ -435,7 +461,7 @@ OMIT_NETWORK =
+@@ -437,7 +463,7 @@ OMIT_NETWORK =
  # built into the standard C library, so this can be null.  This is irrelevant
  # if OMIT_NETWORK is "y".
  
