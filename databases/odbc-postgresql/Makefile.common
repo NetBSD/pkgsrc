@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/07/17 21:28:25 grant Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/01/22 08:02:16 grant Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -30,7 +30,7 @@ DIST_VERS?=		7.2.3
 BASE_VERS?=		${DIST_VERS}
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES
 
