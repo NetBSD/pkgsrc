@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2002/12/25 15:11:20 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/26 20:58:59 jmmv Exp $
 
---- Makefile.in.orig	Thu Aug 29 06:41:25 2002
+--- Makefile.in.orig	2004-10-25 21:03:21.000000000 +0200
 +++ Makefile.in
-@@ -23,7 +23,7 @@ bindir = @bindir@
+@@ -141,7 +141,7 @@ prefix = @prefix@
+ program_transform_name = @program_transform_name@
  sbindir = @sbindir@
- libexecdir = @libexecdir@
- datadir = @datadir@
+ sharedstatedir = @sharedstatedir@
 -sysconfdir = @sysconfdir@
 +sysconfdir = @datadir@/examples/@PACKAGE@
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
- libdir = @libdir@
+ target_alias = @target_alias@
+ SUBDIRS = man po
+ 
