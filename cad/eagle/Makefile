@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 12:17:26 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:46:17 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME}-beta-lin
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.cadsoft.de/
+COMMENT=		easy to use printed circuit board editor
 
 DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 

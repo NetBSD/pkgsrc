@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/10/22 09:20:18 skrll Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/16 13:46:30 wiz Exp $
 #
 
 DISTNAME=	vipec-2.0.4
@@ -7,6 +7,7 @@ MASTER_SITES=	http://netfold.com/~vipec/public_ftp/stable/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.netfold.com/~vipec/
+COMMENT=	Network analyser for electrical networks
 
 DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
 

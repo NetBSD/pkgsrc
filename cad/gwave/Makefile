@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/31 18:09:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 13:46:23 wiz Exp $
 #
 
 DISTNAME=	gwave-20001123
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.cs.unc.edu/~tell/dist/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave/
+COMMENT=	viewer for spice-like simulator output and other analog data
 
 DEPENDS+=	guile-gtk>=0.19:../../devel/guile-gtk
 DEPENDS+=	plotutils-*:../../graphics/plotutils

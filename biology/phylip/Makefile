@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/18 22:46:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:41:30 wiz Exp $
 
 DISTNAME=	phylip
 PKGNAME=	phylip-3.573c
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://evolution.genetics.washington.edu/phylip.html
+COMMENT=	Phylogeny Inference Package
 
 RESTRICTED=		"No commercial distribution without a royalty agreement with the author"
 NO_SRC_ON_CDROM=	${RESTRICTED}
