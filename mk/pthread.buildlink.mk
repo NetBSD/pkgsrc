@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink.mk,v 1.6 2002/08/01 05:40:29 jlam Exp $
+# $NetBSD: pthread.buildlink.mk,v 1.7 2002/08/02 05:38:37 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -62,7 +62,6 @@
 #	.include "../../mk/pthread.buildlink.mk"
 #	.include "../../mk/bsd.pkg.mk"
 #
-#
 # The case where a package must use either the native pthread library or
 # some pthread package aside from the OPR is a special case of (2), e.g.,
 # if the required pthread package is "ptl2", then:
@@ -78,6 +77,14 @@
 #	.endif
 #
 #	.include "../../mk/bsd.pkg.mk"
+#
+# A package Makefile may add the word "optional" to PTHREAD_OPTS, which
+# will override the effects of any instance of the word "require".  This
+# should _only_ be used by those packages that can be built with or
+# without pthreads _independently_ of whether any of its dependencies need
+# pthreads.  Currently, this only only www/mozilla, which uses its own
+# threading library if native pthreads is unavailable, despite that it
+# uses GTK+, which _does_ need pthreads.
 #
 ###########################################################################
 #
@@ -102,6 +109,7 @@ _PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
 .include "../../mk/bsd.prefs.mk"
 
 PTHREAD_OPTS?=	# empty
+#
 # We check for a native pthreads implementation by checking for the presence
 # of /usr/include/pthread.h (we might want to make this check stricter).
 #
@@ -112,7 +120,7 @@ PTHREAD_TYPE=	native
 .else
 .  if !empty(PTHREAD_OPTS:Mnative)
 PTHREAD_TYPE=	none
-.    if !empty(PTHREAD_OPTS:Mrequire)
+.    if !empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
 IGNORE=		"${PKGNAME} requires a native pthreads implementation."
 .    endif
 .  else
@@ -122,7 +130,8 @@ PTHREAD_TYPE=	none
 PTHREAD_TYPE=	${_PKG_PTHREAD}
 .      endif
 .    endfor
-.    if (${PTHREAD_TYPE} == "none") && !empty(PTHREAD_OPTS:Mrequire)
+.    if (${PTHREAD_TYPE} == "none") && \
+	!empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
 IGNORE=		"${PKGNAME} requires a working pthreads implementation."
 .    endif
 .  endif
