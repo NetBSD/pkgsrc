@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/03/19 13:51:58 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/01 15:03:32 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -10,7 +10,7 @@
     SUBDIR += crashme
     SUBDIR += depot
 #    SUBDIR += idled
-#    SUBDIR += lsof
+    SUBDIR += lsof
 #    SUBDIR += manck
 #    SUBDIR += mei
     SUBDIR += mkisofs
