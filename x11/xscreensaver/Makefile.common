@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2002/04/05 12:05:31 skrll Exp $
+# $NetBSD: Makefile.common,v 1.30 2002/04/09 22:50:02 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-4.02
@@ -9,30 +9,25 @@ MASTER_SITES=		${HOMEPAGE} \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		gle-[0-9]*:../../graphics/gle
-DEPENDS+=		gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		libxml-1.8.16:../../textproc/libxml
-
-USE_MESA=		yes
 USE_X11BASE=		yes
-
-EVAL_PREFIX+=		GTKDIR=gtk+
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
-CONFIGURE_ARGS+=	--with-gl --with-gle
-CONFIGURE_ARGS+=	--with-gtk=${GTKDIR}
-CONFIGURE_ARGS+=	--with-jpeg=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-gl
+CONFIGURE_ARGS+=	--with-gle
+CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-gdk-pixbuf=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
+
 CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-shadow
-CONFIGURE_ARGS+=	--with-xml=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
+
 CONFIGURE_ENV+=		INSTALL=/usr/bin/install
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
-CONFIGURE_ENV+=		ac_cv_x_app_defaults="${X11PREFIX}/lib/X11/app-defaults"
-CONFIGURE_ENV+=		PERL="${PERL}" ac_cv_perl_version="${PERL_VERSION}"
+CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
+CONFIGURE_ENV+=		PERL="${PERL5}" ac_cv_perl_version="${PERL_VERSION}"
 MAKE_ENV+=		KDEDIR=${X11PREFIX}
 
 DISTINFO_FILE=		${.CURDIR}/../xscreensaver/distinfo
@@ -40,13 +35,12 @@ FILESDIR=		${.CURDIR}/../xscreensaver/files
 PATCHDIR=		${.CURDIR}/../xscreensaver/patches
 PKGDIR=			${.CURDIR}/../xscreensaver
 
-post-patch:
-	cd ${WRKSRC}/driver ; \
-	f=xscreensaver.kss ; \
-	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
-
 .include "../../mk/bsd.prefs.mk"
+
+.ifndef (PERL_VERSION)
+PERL_VERSION!=		if [ -x ${PERL5} ]; then ${PERL5} -e 'print $$]'; else ${ECHO} "5.006"; fi
+MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
+.endif
 
 .if (${OPSYS} == "NetBSD")
 .if defined(KERBEROS)
@@ -56,12 +50,13 @@ CONFIGURE_ARGS+=	--without-kerberos
 .endif
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+post-patch:
+	cd ${WRKSRC}/driver ; \
+	f=xscreensaver.kss ; \
+	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
 
-# this has to come after bsd.pkg.mk for ${ECHO}.
-
-PERL?=			${LOCALBASE}/bin/perl
-.ifndef (PERL_VERSION)
-PERL_VERSION!=		if [ -x ${PERL} ]; then ${PERL} -e 'print $$]'; else ${ECHO} "5.006"; fi
-MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
-.endif
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../graphics/gle/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"

@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.7 2002/04/06 11:16:44 wiz Exp $
+$NetBSD: patch-af,v 1.8 2002/04/09 22:50:02 jlam Exp $
 
---- configure.in.orig	Tue Mar 19 00:01:26 2002
+--- configure.in.orig	Mon Mar 18 18:01:26 2002
 +++ configure.in
 @@ -1512,7 +1512,7 @@
    if test "$have_kerberos5" = yes ; then
@@ -11,7 +11,23 @@ $NetBSD: patch-af,v 1.7 2002/04/06 11:16:44 wiz Exp $
    elif test "$have_kerberos" = yes ; then
      # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
      PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
-@@ -2988,7 +2988,7 @@
+@@ -2878,15 +2878,6 @@
+ DEPEND_DEFINES=
+ 
+ 
+-if test \! -z "$includedir" ; then 
+-  INCLUDES="$INCLUDES -I$includedir"
+-fi
+-
+-if test \! -z "$libdir" ; then
+-  LDFLAGS="$LDFLAGS -L$libdir"
+-fi
+-
+-
+ PREFERRED_DEMO_PROGRAM=xscreensaver-demo-Xm
+ ALL_DEMO_PROGRAMS=
+ if test "$have_motif" = yes; then
+@@ -2988,7 +2979,7 @@
    GTK_ICONDIR='$(GNOME_DATADIR)/pixmaps'
  elif test "$have_gtk" = yes; then
    # should this be "$(prefix)/share/pixmaps"? But /usr/X11R6/share/ is wrong...
