@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2262 2003/05/19 12:24:26 mjl Exp $
+$NetBSD: CHANGES,v 1.2263 2003/05/19 12:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1990,6 +1990,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated roundup to 0.5.7 [lukem 2003-05-18]
 	Updated automake to 1.7.5 [wiz 2003-05-18]
 	Updated golem to 0.0.5nb1 [abs 2003-05-18]
-	Updated p5-XML-DOM to 1.42 [mjl 2002-05-19]
-	Updated p5-Date-Manip to 5.40 [mjl 2002-05-19]
-	Updated p5-XML-XQL to 0.68 [mjl 2002-05-19]
+	Updated p5-XML-DOM to 1.42 [mjl 2003-05-19]
+	Updated p5-Date-Manip to 5.40 [mjl 2003-05-19]
+	Updated p5-XML-XQL to 0.68 [mjl 2003-05-19]
+	Updated mldonkey to 2.4.0 [wiz 2003-05-19]
