@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/08 17:52:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/08 18:01:14 jmmv Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -23,16 +23,15 @@ TKGATE_SITENAME=	Earth
 CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
 CONFIGURE_ENV+=		PREFIX="${PREFIX}"
 
-CONFIG_SUBST=		PREFIX="${PREFIX}"
-CONFIG_SUBST+=		LOCALBASE="${LOCALBASE}"
-CONFIG_SUBST+=		X11BASE="${X11BASE}"
-CONFIG_SUBST_SED=	${CONFIG_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-post-extract:
-	( cd ${WRKSRC} && ${MV} config.h config.h.in )
+SUBST_CLASSES+=		tkgate
+SUBST_MESSAGE.tkgate=	"Fixing paths in configuration files."
+SUBST_STAGE.tkgate=	pre-configure
+SUBST_FILES.tkgate=	config.h
+SUBST_SED.tkgate=	-e 's|@LOCALBASE@|${LOCALBASE}|g'
+SUBST_SED.tkgate+=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.tkgate+=	-e 's|@X11BASE@|${X11BASE}|g'
 
 do-configure:
-	${SED} ${CONFIG_SUBST_SED} ${WRKSRC}/config.h.in > ${WRKSRC}/config.h
 	${ECHO} "${TKGATE_SITENAME}" > ${WRKSRC}/sitename.txt
 	( cd ${WRKSRC} && ${CONFIGURE_ENV} ./configure )
 
