@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/03/02 06:14:48 kim Exp $
+$NetBSD: patch-ab,v 1.2 2000/03/17 20:48:56 kim Exp $
 
---- src/Makefile.in.orig	Sat May  9 22:19:20 1998
-+++ src/Makefile.in	Tue Mar  2 01:07:31 1999
-@@ -15,6 +15,7 @@
+--- src/Makefile.in.orig	Wed Mar 15 11:03:39 2000
++++ src/Makefile.in	Fri Mar 17 15:13:31 2000
+@@ -15,11 +15,12 @@
  
  INSTALL=@INSTALL@
  INSTALL_PROGRAM=@INSTALL_PROGRAM@
@@ -10,7 +10,13 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/03/02 06:14:48 kim Exp $
  INSTALL_DATA=@INSTALL_DATA@
  
  PROGS=		remind rem2ps
-@@ -48,11 +49,12 @@
+ SCRIPTS=	$(srcdir)/../scripts/kall $(srcdir)/../scripts/rem \
+-		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem.tcl
++		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem
+ 
+ MANS=		$(srcdir)/../man/kall.1 $(srcdir)/../man/rem.1 \
+ 		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
+@@ -49,11 +50,12 @@
  	@CC@ @LDFLAGS@ -o remind $(REMINDOBJS) @LIBS@
  
  install: all
