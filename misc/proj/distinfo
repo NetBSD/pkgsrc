@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2001/04/20 20:38:16 jtb Exp $
+$NetBSD: distinfo,v 1.4 2002/05/03 22:20:06 jtb Exp $
 
-SHA1 (proj-4.4.3.tar.gz) = 496d6ec8bd198d5cda6ddd6a406e4f6f4ad85374
-Size (proj-4.4.3.tar.gz) = 282160 bytes
+SHA1 (proj-4.4.5.tar.gz) = a417e0bc3fc8570e803b5ed0ac7e036db00d5b99
+Size (proj-4.4.5.tar.gz) = 286342 bytes
 SHA1 (proj-pdf-docs.tar.gz) = c83a154ac00058fba5097eb39cfc8d27706be4d8
 Size (proj-pdf-docs.tar.gz) = 6918448 bytes
+SHA1 (proj-nad27-1.1.tar.gz) = 0885c8ca5c9311bbe9c99faf8c2c51ded3b7dd23
+Size (proj-nad27-1.1.tar.gz) = 1816642 bytes
