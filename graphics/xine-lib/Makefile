@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/05 11:45:04 skrll Exp $
 #
 
 DISTNAME=		xine-lib-1-beta10
 PKGNAME=		${DISTNAME:S/-beta/.0rc/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -14,7 +14,9 @@ COMMENT=		multimedia player library
 BUILD_USES_MSGFMT=	YES
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=       win32-codecs>=011227:../../graphics/win32-codecs
+PLIST_SRC=		${PKGDIR}/PLIST.i386
 .endif
+PLIST_SRC+=		${PKGDIR}/PLIST
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
