@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/07/13 21:04:21 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/10/28 12:32:42 reed Exp $
 
---- ogg123/buffer.c.orig	2002-07-14 07:38:00.000000000 +0200
-+++ ogg123/buffer.c
-@@ -35,9 +35,9 @@
- #define MIN4(w,x,y,z)  MIN( MIN(w,x), MIN(y,z) )
- 
+--- ogg123/buffer.c.orig	2002-07-13 22:38:00.000000000 -0700
++++ ogg123/buffer.c	2003-10-28 02:32:10.000000000 -0800
+@@ -37,7 +37,7 @@
  /* Special debugging code.  THIS IS NOT PORTABLE! */
  #ifdef DEBUG_BUFFER
  FILE *debugfile;
@@ -13,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2003/07/13 21:04:21 wiz Exp $
  #else
  #define DEBUG(x, y...)
  #endif
-@@ -434,7 +435,9 @@ void buffer_destroy (buf_t *buf)
+@@ -434,7 +434,9 @@ void buffer_destroy (buf_t *buf)
  
    /* Cleanup pthread variables */
    pthread_mutex_destroy(&buf->mutex);
