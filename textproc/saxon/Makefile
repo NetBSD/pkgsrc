@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/13 04:19:55 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/13 05:16:18 jwise Exp $
 #
 
 DISTNAME=	saxon
-PKGNAME=	saxon-6.2.2
+PKGNAME=	saxon-6.0.2
 NO_WRKSUBDIR=
 CATEGORIES=	textproc www
-MASTER_SITES=	${HOMEPAGE}saxon6.2.2/
+MASTER_SITES=	${HOMEPAGE}saxon6.0.2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
@@ -21,7 +21,6 @@ NO_BUILD=
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/saxon.jar ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/saxon-fop.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java
 	(cd ${WRKSRC} && ${PAX} -r -w -s '/^doc/saxon/' doc ${PREFIX}/share/doc/java)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/saxon
