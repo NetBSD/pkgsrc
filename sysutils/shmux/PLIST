@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 00:32:03 hubertf Exp $
+bin/shmux
+man/man1/shmux.1
+share/shmux/mcmd.sh
