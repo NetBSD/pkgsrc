@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1472 2004/07/03 22:07:11 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1473 2004/07/03 22:11:56 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1786,6 +1786,10 @@ LOCKFILE=	${WRKDIR}/.lockfile
 _ACQUIRE_LOCK=								\
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
+	if ${TEST} "$$ppid" = ""; then					\
+		${ECHO} "No parent process ID found.";			\
+		${FALSE};						\
+	fi;								\
 	while true; do							\
 		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE} -a	\
 		     /var/run/dmesg.boot -nt ${LOCKFILE}; then		\
