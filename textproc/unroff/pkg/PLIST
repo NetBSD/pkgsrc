@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/03/31 12:55:44 agc Exp $
 bin/unroff
 man/man1/unroff.1.gz
 man/man1/unroff-html.1.gz
@@ -10,5 +11,12 @@ share/unroff/scm/troff.scm
 share/unroff/scm/html/common.scm
 share/unroff/scm/html/m.scm
 share/unroff/scm/html/man.scm
+share/unroff/scm/html/me.scm
 share/unroff/scm/html/ms.scm
 share/unroff/scm/misc/hyper.scm
+@dirrm share/unroff/scm/html
+@dirrm share/unroff/scm/misc
+@dirrm share/unroff/scm
+@dirrm share/unroff/misc
+@dirrm share/unroff/doc
+@dirrm share/unroff
