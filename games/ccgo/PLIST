@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/29 12:42:22 jmmv Exp $
 bin/ccgo
 man/man6/ccgo.6
 share/gnome/apps/Games/ccgo.desktop
@@ -19,3 +19,4 @@ share/pixmaps/ccgo/playing_icon.png
 share/pixmaps/ccgo/teaching_icon.png
 share/pixmaps/ccgo/white_stone.png
 @dirrm share/pixmaps/ccgo
+@comment in gnome-dirs: @dirrm share/gnome/apps/Games
