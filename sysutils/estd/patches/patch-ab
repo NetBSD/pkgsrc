@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1 2005/01/24 10:56:03 agc Exp $
+
+--- estd.c.orig	2004-07-22 16:03:58.000000000 +0200
++++ estd.c	2005-01-16 15:07:56.000000000 +0100
+@@ -110,7 +110,9 @@
+ {
+ 	if ((!daemonize) && (verbose))
+ 		printf("%i MHz\n", freq);
+-	if (sysctlbyname("machdep.est.frequency.target", NULL, NULL, &freq, sizeof(freq)) < 0) {
++	if ((sysctlbyname("machdep.est.frequency.target", NULL, NULL, &freq, sizeof(freq)) < 0)
++		&& (sysctlbyname("machdep.powernow.frequency.target", NULL, NULL, &freq, sizeof(freq)) < 0))
++	{
+ 		printf("estd: Cannot set CPU frequency (maybe you aren't root?)\n");
+ 		exit(1);
+ 	}
+@@ -191,7 +193,9 @@
+ 		}
+ 
+ 	/* get supported frequencies... */
+-	if (sysctlbyname("machdep.est.frequency.available", &frequencies, &freqsize, NULL, 0) < 0) {
++	if ((sysctlbyname("machdep.est.frequency.available", &frequencies, &freqsize, NULL, 0) < 0)
++		&& (sysctlbyname("machdep.powernow.frequency.available", &frequencies, &freqsize, NULL, 0) < 0))
++	{
+ 		printf("estd: Cannot get supported frequencies (maybe SpeedStep is not included in your kernel-config?)\n");
+ 		exit(1);
+ 	}
