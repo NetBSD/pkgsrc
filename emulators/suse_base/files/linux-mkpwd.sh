@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: linux-mkpwd.sh,v 1.1.1.1 1999/05/17 00:14:50 tron Exp $
+# $NetBSD: linux-mkpwd.sh,v 1.1 2001/10/25 20:58:51 agc Exp $
 
 SRCDIR=/etc
 DESTDIR=@@EMULDIR@@/etc
