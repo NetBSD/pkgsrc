@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/02/12 14:22:14 martin Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/14 20:04:07 abs Exp $
 bin/mserv
 bin/mservcmd
 bin/mservedit
@@ -9,4 +9,12 @@ lib/libmservplus.a
 man/man1/mserv.1
 man/man1/mservcmd.1
 share/mserv/english.lang
+share/mserv/webclient/README
+share/mserv/webclient/back.gif
+share/mserv/webclient/index.html
+share/mserv/webclient/main.cgi
+share/mserv/webclient/margin.cgi
+share/mserv/webclient/mserv.cgi
+share/mserv/webclient/mserv7.gif
+@dirrm share/mserv/webclient
 @dirrm share/mserv
