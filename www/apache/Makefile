@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/04 19:38:36 tv Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/05 11:09:23 frueauf Exp $
 #
 
 DISTNAME=       apache_1.3b7
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--enable-module=most --enable-module=auth_db \
 		--disable-module=auth_dbm --with-perl=${PREFIX}/bin/perl
 
-MAN1=	ab.1 apachectl.1 dbmmanage.1 htpasswd.1 htpasswd.1
+MAN1=	ab.1 apachectl.1 dbmmanage.1 htdigest.1 htpasswd.1
 MAN8=	apxs.8 httpd.8 logresolve.8 rotatelogs.8
 
 # Note that there is NO static compile module hook here.  This is intentional.
