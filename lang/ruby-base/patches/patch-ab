@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2002/01/22 17:05:21 taca Exp $
+
+--- configure.orig	Tue Dec 11 02:12:35 2001
++++ configure
+@@ -5648,6 +5648,7 @@
+ s%@setup@%$setup%g
+ s%@MINIRUBY@%$MINIRUBY%g
+ s%@PREP@%$PREP%g
++s%@X11BASE@%$X11BASE%g
+ s%@LIBRUBY_LDSHARED@%$LIBRUBY_LDSHARED%g
+ s%@LIBRUBY_DLDFLAGS@%$LIBRUBY_DLDFLAGS%g
+ s%@RUBY_INSTALL_NAME@%$RUBY_INSTALL_NAME%g
