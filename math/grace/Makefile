@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:30 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/28 05:41:02 jlam Exp $
 #
 
 DISTNAME=	grace-5.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/
 MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 
-DEPENDS+=	netcdf:../../devel/netcdf
+DEPENDS+=	netcdf>=3.4:../../devel/netcdf
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	png>=0.9.6:../../graphics/png
