@@ -1,39 +1,40 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/26 13:14:54 martti Exp $
 
-DISTNAME=	gphoto-2.0beta1
-PKGNAME=	gphoto-2.0.0.1
-PKGREVISION=	1
+DISTNAME=	gphoto2-2.0
+PKGNAME=	gphoto-2.0
+
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.gphoto.net/dist/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gphoto.org/gphoto2/
 COMMENT=	Download and view files from various digital cameras
 
-BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK_ONLY=	# XXX gphoto2 adds unneeded -L${LOCALBASE}/lib etc.
 
-USE_GMAKE=		yes
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-#LIBTOOL_OVERRIDE=	yes
-GNU_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	${WRKSRC}/build.sh
-CONFIGURE_ARGS+=	--with-html-dir=${LOCALBASE}/share/doc/html/gphoto2
+BUILD_USES_MSGFMT=	# defined
+
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-drivers=all
+CONFIGURE_ARGS+=	--with-doc-dir=${PREFIX}/share/doc/gphoto2
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/gphoto2
+CONFIGURE_ARGS+=	--without-pkgconfig
+CONFIGURE_ARGS+=	--without-fig2dev
+CONFIGURE_ARGS+=	--with-aalib
+CONFIGURE_ARGS+=	--with-cdk
+CONFIGURE_ARGS+=	--with-exif
+CONFIGURE_ARGS+=	--with-jpeg
+
+BUILDLINK_DEPENDS.libusb=   libusb>=0.1.5
+
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/cdk/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
-
-post-patch:
-	${RM} -f ${LTCONFIG_OVERRIDE} ;                         \
-	${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
-	        > ${LTCONFIG_OVERRIDE} ;                        \
-	${CHMOD} +x ${LTCONFIG_OVERRIDE} ;                      \
-
-pre-configure:
-	for i in `find ${WRKSRC} -name Makefile.in`;		\
-	do							\
-		${CP} $$i $$i.NB;				\
-		${SED} -e 's/\/\.libs//g' < $$i.NB > $$i;		\
-	done							\
-
-.include "../../devel/glib/buildlink.mk"
 .include "../../devel/libusb/buildlink.mk"
+.include "../../graphics/aalib/buildlink.mk"
+.include "../../graphics/libexif/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
