@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2002/05/12 10:26:24 rh Exp $
+# $NetBSD: Makefile,v 1.133 2002/05/17 11:40:31 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -60,6 +60,7 @@ SUBDIR+=	klavg
 SUBDIR+=	koncd
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
+SUBDIR+=	libirman
 SUBDIR+=	logrot
 SUBDIR+=	lsof
 SUBDIR+=	mc
