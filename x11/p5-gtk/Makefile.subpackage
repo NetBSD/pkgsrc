@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.subpackage,v 1.3 2003/09/04 07:34:59 wiz Exp $
+# $NetBSD: Makefile.subpackage,v 1.4 2003/11/25 12:08:00 salo Exp $
 #
 # makefile fragment for p5-gtk sub-packages.  you need to
 # set SUBPACKAGE before including this.
@@ -20,4 +20,5 @@ pre-configure:
 
 .include "../../lang/perl5/module.mk"
 .include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
