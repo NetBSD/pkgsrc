@@ -1,0 +1,11 @@
+--- catdoc.c.orig	Fri Jun  5 12:43:35 1998
++++ catdoc.c	Sat Jun 20 01:03:13 1998
+@@ -46,7 +46,7 @@
+ #define BUFFER_SIZE 16384
+ #endif
+ /* enable this define, if you don't want cyrillic code page translations */
+-/* #define LATIN1*/
++#define LATIN1
+ 
+ 
+ /* ......................................................... charsets ... */
