@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.64 2004/05/05 03:05:41 jschauma Exp $
+# $NetBSD: gcc.mk,v 1.65 2004/05/12 21:31:50 jschauma Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -137,6 +137,7 @@ CFLAGS+=	-Wno-import
 
 .if defined(ABI)
 CFLAGS+=	-mabi=${ABI:C/^32$/n&/}
+LDFLAGS+=	-mabi=${ABI:C/^32$/n&/}
 .endif
 
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
