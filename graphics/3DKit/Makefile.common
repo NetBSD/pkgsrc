@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/29 06:12:51 rh Exp $
+#
+
+DISTNAME=	3DKit-0.3.1r2
+CATEGORIES?=	graphics gnustep
+MASTER_SITES=	http://www.gnu.org/software/gnu3dkit/
+DIST_SUBDIR=	3DKit
+
+MAINTAINER?=	packages@netbsd.org
+HOMEPAGE?=	http://www.gnu.org/software/gnu3dkit/gnu3dkit.html
+
+DISTINFO_FILE?= ${.CURDIR}/../../graphics/3DKit/distinfo
+DESCR_SRC?=	${.CURDIR}/../../graphics/3DKit/DESCR
+
+NO_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
+USE_X11=	YES
+MAKEFILE=	GNUmakefile
