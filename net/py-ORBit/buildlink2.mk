@@ -1,9 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/08/09 12:51:02 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/08/17 18:10:36 recht Exp $
 
 .if !defined(PYORBIT_BUILDLINK2_MK)
 PYORBIT_BUILDLINK2_MK=	# defined
 
-PYTHON_VERSION_REQD=	22pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			pyorbit
