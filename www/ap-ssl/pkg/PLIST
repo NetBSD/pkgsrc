@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 1999/12/01 01:00:18 bad Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/07/21 16:59:31 tron Exp $
 etc/httpd/ssl.crl/Makefile.crl
 etc/httpd/ssl.crl/README.CRL
 etc/httpd/ssl.crt/Makefile.crt
 etc/httpd/ssl.crt/README.CRT
 etc/httpd/ssl.crt/ca-bundle.crt
-etc/httpd/ssl.crt/server.crt
 etc/httpd/ssl.crt/snakeoil-ca-dsa.crt
 etc/httpd/ssl.crt/snakeoil-ca-rsa.crt
 etc/httpd/ssl.crt/snakeoil-dsa.crt
 etc/httpd/ssl.crt/snakeoil-rsa.crt
 etc/httpd/ssl.csr/README.CSR
-etc/httpd/ssl.csr/server.csr
 etc/httpd/ssl.key/README.KEY
-etc/httpd/ssl.key/server.key
 etc/httpd/ssl.key/snakeoil-ca-dsa.key
 etc/httpd/ssl.key/snakeoil-ca-rsa.key
 etc/httpd/ssl.key/snakeoil-dsa.key
