@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2241 2003/05/15 23:04:27 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.2242 2003/05/16 01:47:47 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnet to 2.0.3 [wiz 2003-05-15]
 	Added puf-0.93.2.1 [salo 2003-05-15]
 	Updated boolean to 6.4 [dmcmahill 2003-05-15]
+	Added diffstat-1.33 [simonb 2003-05-16]
