@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/23 20:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/24 09:41:16 jlam Exp $
 
 DISTNAME=	wmessage-0.10
 CATEGORIES=	x11
@@ -8,8 +8,8 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.ozemail.com.au/~crn/wmessage/
 COMMENT=	WINGs based message viewer similar to xmessage
 
-DEPENDS+=	windowmaker>=0.64.0:../../wm/windowmaker
+USE_X11=		yes
+USE_BUILDLINK_ONLY=	yes
 
-USE_X11=	yes
-
+.include "../../wm/windowmaker/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
