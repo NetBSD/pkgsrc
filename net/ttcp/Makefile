@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/15 10:38:40 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 09:20:40 agc Exp $
 #
 
 DISTNAME=	ttcp
@@ -12,7 +12,10 @@ MAINTAINER=	thorpej@NetBSD.ORG
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
 
-# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
-# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef MANZ
+MANCOMPRESSED=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
