@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.14 2000/07/14 04:22:41 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/23 17:32:07 jlam Exp $
 #
 
-DISTNAME=	xpkgwedge-0.4
+DISTNAME=	xpkgwedge-1.0
 CATEGORIES=	pkgtools devel x11
-DISTFILES=	# none
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	jlam@netbsd.org
+HOMEPAGE=	http://www.netbsd.org/Documentation/netbsd/Packages.txt
 
-NO_CHECKSUM=	yes
-NO_BUILD=	yes
-NO_MTREE=	yes
-NO_WRKSUBDIR=	yes
-USE_IMAKE=	yes
+EXTRACT_ONLY=	# empty
+NO_CONFIGURE=	# defined
+NO_WRKSUBDIR=	# defined
+NO_CHECKSUM=	# defined
 
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 pre-extract:
@@ -23,18 +26,28 @@ pre-extract:
 		${FALSE}; \
 	fi
 
-pre-configure:
-	@${CP} ${FILESDIR}/Imakefile ${FILESDIR}/xpkgwedge.def ${WRKSRC}
+do-build:
+	${SED}  -e "s,@X11BASE@,${X11BASE},g" \
+		-e "s,@PREFIX@,${PREFIX},g" \
+		< ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
 
-pre-install:
-	@${SED} -e 's|@@PREFIX@@|${LOCALBASE}|g' < ${PKGDIR}/MESSAGE.pre \
-		> ${MESSAGE_FILE}
+post-build:
+	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
+		< ${PKGDIR}/MESSAGE.pre > ${MESSAGE_FILE}
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
+	${INSTALL_DATA} ${FILESDIR}/xpkgwedge.def ${PREFIX}/lib/X11/config
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
-
-# In order to force xpkgwedge to install into X11BASE, we forcibly override
-# the PREFIX definition.  _NO_ other pkg should do this.
-PREFIX=${X11BASE}
 
 # Clear the build dependencies list so that xpkgwedge will not be recursively
 # dependent on itself.
