@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/31 21:09:13 hwr Exp $
+bin/slrn
+man/man1/slrn.1
+@exec mkdir -p %D/share/slrn
+share/slrn/FAQ
+share/slrn/INSTALL
+share/slrn/README.GroupLens
+share/slrn/README.macros
+share/slrn/README.os2
+share/slrn/README.vms
+share/slrn/README.w95
+share/slrn/SCORE_FAQ
+share/slrn/VMS-SLRN.HLP
+share/slrn/help.txt
+share/slrn/pc-keys.txt
+share/slrn/score.sl
+share/slrn/score.txt
+share/slrn/slrn.1
+share/slrn/slrn.rc
+share/slrn/slrn.sl
+share/slrn/COPYRIGHT
+share/slrn/COPYING
+share/slrn/README
+share/slrn/changes.txt
+share/slrn/color.sl
+share/slrn/ispell.sl
+share/slrn/nn.sl
+share/slrn/posthook.sl
+share/slrn/tin-art.sl
+share/slrn/tin-group.sl
+share/slrn/ttyprint.sl
+share/slrn/util.sl
+share/slrn/xcomment.sl
+@dirrm share/slrn

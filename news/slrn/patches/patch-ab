@@ -1,0 +1,41 @@
+--- src/Makefile.in.orig	Tue Sep  8 14:59:21 1998
++++ src/Makefile.in	Sat Oct 31 21:27:37 1998
+@@ -62,7 +62,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ BINDIR = @bindir@
+-DOCDIR = $(prefix)/doc/slrn
++DOCDIR = $(prefix)/share/slrn
+ MANDIR = @mandir@
+ MACRODIR = @datadir@/slrn
+ #----------------------------------------------------------------------------
+@@ -118,19 +118,16 @@
+ distclean: clean
+ 	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
+ install: all $(BINDIR)
+-	$(INSTALL) -m 755 -o root -g root $(OBJDIR)/slrn $(BINDIR)
+-	-$(INSTALL) -m 755 -o root -g root $(OBJDIR)/slrnpull $(BINDIR)
+-	$(INSTALL) -d $(DOCDIR) -m 755 -o root -g root
+-	$(INSTALL) -m 644 -o root -g root ../doc/* $(DOCDIR)
+-	$(INSTALL) -m 644 -o root -g root ../COPYRIGHT $(DOCDIR)
+-	$(INSTALL) -m 644 -o root -g root ../COPYING $(DOCDIR)
+-	$(INSTALL) -m 644 -o root -g root ../README $(DOCDIR)
+-	$(INSTALL) -m 644 -o root -g root ../changes.txt $(DOCDIR)
+-	$(INSTALL) -m 644 -o root -g root ../doc/slrn.1 $(MANDIR)/man1
+-	$(INSTALL) -d $(DOCDIR)/slrnpull -m 755 -o root -g root
+-	$(INSTALL) -m 644 -o root -g root ../slrnpull/* $(DOCDIR)/slrnpull
+-	$(INSTALL) -d $(MACRODIR) -m 755 -o root -g root
+-	$(INSTALL) -m 644 -o root -g root ../macros/*.sl $(MACRODIR)
++	$(INSTALL) -c -m 755  $(OBJDIR)/slrn $(BINDIR)
++	$(INSTALL) -d $(DOCDIR) -m 755 
++	$(INSTALL) -c -m 644 ../doc/* $(DOCDIR)
++	$(INSTALL) -c -m 644  ../COPYRIGHT $(DOCDIR)
++	$(INSTALL) -c -m 644  ../COPYING $(DOCDIR)
++	$(INSTALL) -c -m 644  ../README $(DOCDIR)
++	$(INSTALL) -c -m 644  ../changes.txt $(DOCDIR)
++	$(INSTALL) -c -m 644  ../doc/slrn.1 $(MANDIR)/man1
++	$(INSTALL) -d $(MACRODIR) -m 755
++	$(INSTALL) -c -m 644 ../macros/*.sl $(MACRODIR)
+ $(BINDIR):
+ 	- ../mkinsdir.sh $(BINDIR)
+ # The symlinks target is for my own private use.  It simply creates the object
