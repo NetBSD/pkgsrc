@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/03 11:21:32 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/27 15:22:07 kleink Exp $
 
 DISTNAME=	python-ldap-1.10alpha3-src
 PKGNAME=	py-ldap-1.10a3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://sourceforge.net/projects/python-ldap/
 COMMENT=	LDAP client API for Python
 
 DEPENDS+=	python>=2.0:../../lang/python
-DEPENDS+=	openldap>=1.2.11:../../databases/openldap
+DEPENDS+=	openldap>=1.2.11:../../databases/openldap1
 
 WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
 GNU_CONFIGURE=	yes
