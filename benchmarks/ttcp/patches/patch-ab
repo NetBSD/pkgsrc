@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2001/04/17 11:57:42 tron Exp $
---- ttcp.c.orig	Fri Aug  6 15:30:21 1999
-+++ ttcp.c	Fri Aug  6 15:30:21 1999
+$NetBSD: patch-ab,v 1.2 2002/03/26 16:30:04 abs Exp $
+
+--- ttcp.c.orig	Thu Feb 27 21:30:23 1997
++++ ttcp.c
 @@ -55,6 +55,7 @@
  #include <arpa/inet.h>
  #include <netdb.h>
