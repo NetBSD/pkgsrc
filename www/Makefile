@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2003/09/11 09:03:08 agc Exp $
+# $NetBSD: Makefile,v 1.272 2003/09/27 14:13:07 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -97,6 +97,14 @@ SUBDIR+=	links
 SUBDIR+=	links-gui
 SUBDIR+=	lynx
 SUBDIR+=	lynx-current
+SUBDIR+=	MozillaFirebird-bin
+SUBDIR+=	MozillaFirebird-bin-acroread
+SUBDIR+=	MozillaFirebird-bin-acroread3
+SUBDIR+=	MozillaFirebird-bin-acroread5
+SUBDIR+=	MozillaFirebird-bin-flash
+SUBDIR+=	MozillaFirebird-bin-java
+SUBDIR+=	MozillaFirebird-bin-nightly
+SUBDIR+=	MozillaFirebird-bin-realplayer
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	mknmz-wwwoffle
@@ -155,14 +163,6 @@ SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libwww
-SUBDIR+=	phoenix-bin
-SUBDIR+=	phoenix-bin-acroread
-SUBDIR+=	phoenix-bin-acroread3
-SUBDIR+=	phoenix-bin-acroread5
-SUBDIR+=	phoenix-bin-flash
-SUBDIR+=	phoenix-bin-java
-SUBDIR+=	phoenix-bin-nightly
-SUBDIR+=	phoenix-bin-realplayer
 SUBDIR+=	php-FastTemplate
 SUBDIR+=	php3
 SUBDIR+=	php4
