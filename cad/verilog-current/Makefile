@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2001/09/27 23:17:47 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/10/24 12:27:11 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-20010630
-PKGNAME=	verilog-current-20010630
+DISTNAME=	verilog-20011020
+PKGNAME=	verilog-current-20011020
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
@@ -12,13 +12,17 @@ COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=	gperf-2.7.2:../../devel/gperf
-DEPENDS+=	ipal-current>=20001210:../../cad/ipal-current
+# turn this back on when ipal comes along a little further
+#DEPENDS+=	ipal-current>=20001210:../../cad/ipal-current
 
 CONFLICTS+=	verilog-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
-CPPFLAGS+=      -I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
+#
+# for ipal.h
+#CPPFLAGS+=      -I${LOCALBASE}/include
+#CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
+CONFIGURE_ARGS+=	--without-ipal
 
 .include "../../mk/bsd.pkg.mk"
