@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/06/02 15:57:47 yyamano Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/02 19:02:55 drochner Exp $
 
 .if !defined(GCC3_BUILDLINK2_MK)
 GCC3_BUILDLINK2_MK=	# defined
@@ -22,7 +22,10 @@ BUILDLINK_PREFIX.gcc=	${LOCALBASE}
 
 _GCC_SUBPREFIX=		gcc-3.3/
 _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
-_GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/3.3
+_GCC_LIBGCCDIR!= \
+  dirname `${_GCC_PREFIX}bin/gcc --print-libgcc-file-name`
+_GCC_ARCHSUBDIR= \
+  ${_GCC_LIBGCCDIR:S|^${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}||}
 _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
 BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
