@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 19:47:19 jmmv Exp $
+bin/menu2wm
+man/man1/menu2wm.1
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/PEOPLE
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
+share/examples/${PKGNAME}/ex1.xml
+@dirrm share/examples/${PKGNAME}
+@dirrm share/doc/${PKGNAME}
