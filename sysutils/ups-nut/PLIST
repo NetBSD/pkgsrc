@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/02/15 13:14:25 lukem Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/05 22:38:09 martin Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -9,31 +9,27 @@ etc/rc.d/upsdriver
 etc/rc.d/upslog
 etc/rc.d/upsmon
 libexec/nut/apcsmart
-libexec/nut/bcmxcp
 libexec/nut/belkin
-libexec/nut/bestfortress
+libexec/nut/belkinunv
 libexec/nut/bestuferrups
 libexec/nut/bestups
 libexec/nut/blazer
 libexec/nut/cyberpower
+libexec/nut/cyberpower1100
 libexec/nut/esupssmart
 libexec/nut/etapro
 libexec/nut/everups
 libexec/nut/fentonups
-libexec/nut/ferrups
 libexec/nut/genericups
-libexec/nut/hp
+libexec/nut/ippon
 libexec/nut/isbmex
 libexec/nut/liebert
 libexec/nut/masterguard
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
-libexec/nut/microdowell
-libexec/nut/newapc
 libexec/nut/oneac
 libexec/nut/powercom
 libexec/nut/safenet
-libexec/nut/sec
 libexec/nut/sms
 libexec/nut/tripplite
 libexec/nut/tripplitesu
@@ -45,32 +41,28 @@ man/man5/upsd.users.5
 man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
 man/man8/apcsmart.8
-man/man8/bcmxcp.8
 man/man8/belkin.8
-man/man8/bestfortress.8
+man/man8/belkinunv.8
 man/man8/bestuferrups.8
 man/man8/bestups.8
 man/man8/cyberpower.8
-man/man8/dummycons.8
-man/man8/energizerups.8
+man/man8/cyberpower1100.8
 man/man8/etapro.8
 man/man8/everups.8
 man/man8/fentonups.8
-man/man8/ferrups.8
 man/man8/genericups.8
+man/man8/ippon.8
 man/man8/isbmex.8
 man/man8/liebert.8
 man/man8/masterguard.8
 man/man8/mge-shut.8
 man/man8/mge-utalk.8
-man/man8/microdowell.8
-man/man8/newapc.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/powercom.8
 man/man8/safenet.8
-man/man8/sec.8
 man/man8/sms.8
+man/man8/snmp-ups.8
 man/man8/tripplite.8
 man/man8/tripplitesu.8
 man/man8/upsc.8
@@ -110,6 +102,7 @@ share/doc/nut/data-room.txt
 share/doc/nut/design.txt
 share/doc/nut/developers.txt
 share/doc/nut/driver.list
+share/doc/nut/ideas.txt
 share/doc/nut/new-drivers.txt
 share/doc/nut/new-names.txt
 share/doc/nut/osd-notify.txt
@@ -120,15 +113,11 @@ share/doc/nut/shutdown.txt
 share/doc/nut/snmp.txt
 share/doc/nut/sock-protocol.txt
 share/doc/nut/ssl.txt
-share/doc/nut/todo.txt
 share/doc/nut/upssched.txt
-share/examples/nut/ups.conf.sample
-share/examples/nut/upsd.conf.sample
-share/examples/nut/upsd.users.sample
-share/examples/nut/upsmon.conf.sample
-share/examples/nut/upssched.conf.sample
 share/nut/cmdvartab
+share/nut/driver.list
 @dirrm share/nut
+@exec ${MKDIR} %D/share/examples/nut
 @dirrm share/examples/nut
 @exec ${MKDIR} %D/share/doc/nut/drivers
 @dirrm share/doc/nut/drivers

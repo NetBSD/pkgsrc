@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2002/12/13 04:23:21 lukem Exp $
+$NetBSD: patch-aa,v 1.8 2004/04/05 22:38:09 martin Exp $
 
---- Makefile.in.orig	Sun Dec  8 12:04:24 2002
-+++ Makefile.in
-@@ -81,6 +81,7 @@
+--- Makefile.in.orig	2004-03-08 11:00:02.000000000 +0100
++++ Makefile.in	2004-04-05 03:30:50.000000000 +0200
+@@ -72,9 +72,10 @@
  	@echo "Run 'configure --with-cgi' before doing 'make cgi'."
  
  build-cgi:
 +	@cd common; $(MAKE); cd ..;
  	@cd clients; $(MAKE) cgi; cd ..;
  
- install-cgi: cgi install-cgi-dir install-dirs install-cgi-bin \
+-install-cgi: cgi install-cgi-dir install-dirs install-cgi-bin install-cgi-man
++install-cgi: cgi install-cgi-dir install-dirs install-cgi-conf install-cgi-bin install-cgi-man
+ 
+ install-cgi-dir:
+ 	if (test ! -d $(CGIPATH)) then \

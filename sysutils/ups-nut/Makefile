@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2004/02/15 13:14:25 lukem Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/05 22:38:09 martin Exp $
 #
 
-DISTNAME=		nut-1.4.1
-PKGNAME=		ups-nut-1.4.1
+DISTNAME=		nut-2.0.0
+PKGNAME=		ups-nut-2.0.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://random.networkupstools.org/source/1.4/
+MASTER_SITES=		http://random.networkupstools.org/source/2.0/
 
 MAINTAINER=		lukem@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
@@ -75,7 +75,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${NUT_DOCDIR}; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/driver.list ${NUT_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/data/driver.list ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${NUT_DOCDIR}/cables
 
