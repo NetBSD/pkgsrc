@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/17 19:29:22 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/17 08:07:12 salo Exp $
 lib/win32/3ivX.qtx
 lib/win32/AvidQTAVUICodec.qtx
 lib/win32/BeHereiVideo.qtx
@@ -23,6 +23,7 @@ lib/win32/avimszh.dll
 lib/win32/avizlib.dll
 lib/win32/clrviddd.dll
 lib/win32/cook3260.dll
+lib/win32/ctadp32.acm
 lib/win32/divx.dll
 lib/win32/divx_c32.ax
 lib/win32/divxa32.acm
@@ -51,6 +52,7 @@ lib/win32/m3jpeg32.dll
 lib/win32/m3jpegdec.ax
 lib/win32/mcdvd_32.dll
 lib/win32/mcmjpg32.dll
+lib/win32/mi-sc4.acm
 lib/win32/mpg4c32.dll
 lib/win32/mpg4ds32.ax
 lib/win32/msadp32.acm
