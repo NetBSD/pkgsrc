@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:06 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/14 15:45:37 christos Exp $
 bin/autoconf
-bin/autoheader
 bin/autoreconf
-bin/autoscan
+bin/autoheader
 bin/autoupdate
 bin/ifnames
+bin/autoscan
+bin/autom4te
 @unexec ${INSTALL_INFO} --delete %D/info/autoconf.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/standards.info %D/info/dir
 info/autoconf.info
@@ -12,30 +13,53 @@ info/standards.info
 @exec ${INSTALL_INFO} %D/info/autoconf.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
 man/man1/autoconf.1
-man/man1/autoheader.1
 man/man1/autoreconf.1
-man/man1/autoscan.1
+man/man1/autoheader.1
 man/man1/autoupdate.1
+man/man1/ifnames.1
+man/man1/autoscan.1
+man/man1/autom4te.1
 man/man1/config.guess.1
 man/man1/config.sub.1
-man/man1/ifnames.1
+share/autoconf/Autom4te/General.pm
+share/autoconf/Autom4te/Struct.pm
+share/autoconf/Autom4te/XFile.pm
+@dirrm share/autoconf/Autom4te
+share/autoconf/m4sugar/m4sugar.m4
+share/autoconf/m4sugar/m4sh.m4
+share/autoconf/m4sugar/version.m4
+share/autoconf/m4sugar/m4sugar.m4f
+share/autoconf/m4sugar/m4sh.m4f
+@dirrm share/autoconf/m4sugar
+share/autoconf/autoconf/autoconf.m4
+share/autoconf/autoconf/general.m4
+share/autoconf/autoconf/status.m4
+share/autoconf/autoconf/oldnames.m4
+share/autoconf/autoconf/specific.m4
+share/autoconf/autoconf/autoheader.m4
+share/autoconf/autoconf/autoupdate.m4
+share/autoconf/autoconf/autotest.m4
+share/autoconf/autoconf/lang.m4
+share/autoconf/autoconf/c.m4
+share/autoconf/autoconf/fortran.m4
+share/autoconf/autoconf/functions.m4
+share/autoconf/autoconf/headers.m4
+share/autoconf/autoconf/types.m4
+share/autoconf/autoconf/libs.m4
+share/autoconf/autoconf/programs.m4
+share/autoconf/autoconf/autoconf.m4f
+@dirrm share/autoconf/autoconf
+share/autoconf/autotest/autotest.m4
+share/autoconf/autotest/general.m4
+share/autoconf/autotest/autotest.m4f
+@dirrm share/autoconf/autotest
+share/autoconf/autoscan/headers
+share/autoconf/autoscan/libraries
+share/autoconf/autoscan/programs
+share/autoconf/autoscan/functions
+share/autoconf/autoscan/identifiers
+share/autoconf/autoscan/makevars
+@dirrm share/autoconf/autoscan
 share/autoconf/INSTALL
-share/autoconf/acfunctions
-share/autoconf/acfunctions.m4
-share/autoconf/acgeneral.m4
-share/autoconf/acheaders
-share/autoconf/acheaders.m4
-share/autoconf/acidentifiers
-share/autoconf/aclang.m4
-share/autoconf/aclibraries
-share/autoconf/acmakevars
-share/autoconf/acoldnames.m4
-share/autoconf/acprograms
-share/autoconf/acspecific.m4
-share/autoconf/actypes.m4
-share/autoconf/acversion.m4
-share/autoconf/autoconf.m4
-share/autoconf/autoconf.m4f
-share/autoconf/m4sh.m4
-share/autoconf/m4sugar.m4
+share/autoconf/autom4te.cfg
 @dirrm share/autoconf
