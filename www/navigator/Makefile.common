@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2001/04/07 07:31:41 tron Exp $
+# $NetBSD: Makefile.common,v 1.35 2001/04/30 23:18:54 kei Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -89,8 +89,6 @@ HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4
 BUILD_DEPENDS=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
 DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-EMULSUBDIR=	emul/linux
-EMULDIR=	${PREFIX}/${EMULSUBDIR}
 SORT=		sort
 RPM2PKG=	rpm2pkg
 RPM2PKGARGS=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
