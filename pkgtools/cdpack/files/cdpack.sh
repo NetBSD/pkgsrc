@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.2 2001/06/02 02:03:52 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.3 2001/06/23 04:08:04 dmcmahill Exp $
 #
 # Copyright (c) 2001 Dan McMahill, All rights reserved.
 #
@@ -55,7 +55,7 @@ mkdir $TMP
 
 usage(){
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog [-n] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
+	echo "Usage:      $prog [-n] [-R] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
 	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
 	echo "Please refer to the manual page for complete documentation."
 }
@@ -79,6 +79,7 @@ fullpath(){
     echo $x
 }
 
+ADD_README=no
 DUP=yes
 VERBOSE=no
 VERSION=no
@@ -94,7 +95,12 @@ do
 	-n) DUP=no
 	    shift
 	    ;;
-	    
+	   
+	# automatically generate a README.txt file for each CD-ROM
+	-R) ADD_README=yes
+	    shift
+	    ;;
+
 	# be verbose 
 	-v) VERBOSE=yes
 	    shift
@@ -377,7 +383,10 @@ ncds=0
 for cdname in `cat $cdlist`
 do
     (cd ${cddir}/${cdname} && cp $indexf .index)
-    (cd ${cddir}/${cdname} && cp $readme README.txt)
+
+    if [ $ADD_README = "yes" ]; then
+       (cd ${cddir}/${cdname} && cp $readme README.txt)
+    fi
 
     if [ $USE_XTRA = "yes" ]; then
 	for f in $extra/*
