@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2001/05/22 05:53:21 rh Exp $
+$NetBSD: distinfo,v 1.6 2001/08/11 18:26:56 rh Exp $
 
-SHA1 (bonobo-1.0.4.tar.gz) = ad69bfb5f355187bbb479672158da62577539413
-Size (bonobo-1.0.4.tar.gz) = 1463398 bytes
+SHA1 (bonobo-1.0.7.tar.gz) = aaecf84d58fc16f3059f90164c3f8295726d0ee5
+Size (bonobo-1.0.7.tar.gz) = 1544408 bytes
 SHA1 (patch-aa) = abb08c79e9971e755f4fef72bce46a88e9299397
 SHA1 (patch-ab) = dcb60df7c4eed7efbf8086135a9f1e6fdecc1d36
-SHA1 (patch-ac) = 8bb5ccbf3755172fc1b88ea8ff03f74839d30133
