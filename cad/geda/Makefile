@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 1999/02/19 14:26:57 rh Exp $
+# $NetBSD: Makefile,v 1.6 1999/03/01 13:16:24 rh Exp $
 #
 
-DISTNAME=	gEDA-19990124
+DISTNAME=	gEDA-19990226
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
 		http://www.geda.seul.org/dist/ \
 		http://www.geda.coelacanth.com/dist/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
 
 DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
