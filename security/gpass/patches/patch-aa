@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/29 08:01:24 jmmv Exp $
+
+--- Makefile.in.orig	2004-04-27 04:32:44.000000000 +0200
++++ Makefile.in
+@@ -129,7 +129,7 @@ install_sh = @install_sh@
+ 
+ SUBDIRS = intl po macros src data
+ 
+-gpassdocdir = ${prefix}/doc/gpass
++gpassdocdir = ${prefix}/share/doc/gpass
+ gpassdoc_DATA = \
+ 	README\
+ 	COPYING\
+@@ -143,7 +143,7 @@ gpassdoc_DATA = \
+ 
+ EXTRA_DIST = $(gpassdoc_DATA)
+ 
+-gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Applications
++gnomemenudir = $(datadir)/applications
+ gnomemenu_DATA = gpass.desktop
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
