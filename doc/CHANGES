@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5754 2004/04/27 13:09:47 adam Exp $
+$NetBSD: CHANGES,v 1.5755 2004/04/27 15:34:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openssh to 3.8.1nb2 [markd 2004-04-27]
 	Updated cairo 0.1.22 [adam 2004-04-27]
 	Updated foobillard to 3.0a [adam 2004-04-27]
+	Updated mklivecd-0.5 [xtraeme 2004-04-27]

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.8 2004/04/27 01:18:08 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.9 2004/04/27 15:34:19 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -45,7 +45,7 @@ CDRECORD="@PREFIX@/bin/cdrecord"
 #
 # Don't modify it! they are needed for booting grub
 MKISOFS_FIXED_ARGS="-no-emul-boot -boot-load-size 30 -boot-info-table"
-BOOTIMAGE="grub/stage2_eltorito"
+BOOTIMAGE="boot/grub/stage2_eltorito"
 GRUB_FILES="stage2_eltorito iso9660_stage1_5"
 
 trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
@@ -341,7 +341,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.8 2004/04/27 01:18:08 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.9 2004/04/27 15:34:19 xtraeme Exp $
 # 
 
 # PROVIDE: root
