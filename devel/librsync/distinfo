@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/08/14 12:02:04 abs Exp $
+$NetBSD: distinfo,v 1.3 2004/11/25 14:25:22 adam Exp $
 
-SHA1 (librsync-0.9.6.tar.gz) = 427856d33765c978e3a6392fb17b7adb2fcf02ff
-Size (librsync-0.9.6.tar.gz) = 353581 bytes
+SHA1 (librsync-0.9.7.tar.gz) = d575eb5cae7a815798220c3afeff5649d3e8b4ab
+Size (librsync-0.9.7.tar.gz) = 453802 bytes
