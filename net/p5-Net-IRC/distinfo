@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:27 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/01/26 06:51:17 martti Exp $
 
-SHA1 (Net-IRC-0.70.tar.gz) = 1fb14b604d473eff20bd5ee9da3ede799281b360
-Size (Net-IRC-0.70.tar.gz) = 56122 bytes
+SHA1 (Net-IRC-0.73.tar.gz) = 6fbefed220fa263097abd228018f8acc2b8fac5d
+Size (Net-IRC-0.73.tar.gz) = 56367 bytes
