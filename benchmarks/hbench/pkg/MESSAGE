@@ -1,3 +1,8 @@
-execute "run-hbench" to run the benchmark.
-There is a Makefile in your share/hbench/Results directory
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:04 wiz Exp $
+
+Execute "run-hbench" to run the benchmark.
+There is a Makefile in the ${PREFIX}/share/hbench/Results directory
 that can be used to format and summarize your results as well.
+
+======================================================================

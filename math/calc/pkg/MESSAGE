@@ -1,4 +1,5 @@
 ============================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:11 wiz Exp $
 
 To use calc add the following lines to your .emacs.el file.
 

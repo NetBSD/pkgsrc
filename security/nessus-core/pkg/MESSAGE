@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2000/07/30 11:13:09 frueauf Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:13 wiz Exp $
 
 Nessus may have placed some files in /var/nessus, ${PREFIX}/etc/nessus
 and ${PREFIX}/lib/nessus/reports. If you do not need these files any more,
@@ -8,3 +9,4 @@ be sure to remove them:
 	rm -fr ${PREFIX}/etc/nessus
 	rm -fr ${PREFIX}/lib/nessus/reports
 
+===========================================================================
