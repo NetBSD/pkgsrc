@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/12 00:46:58 dmcmahill Exp $
 
---- Makefile.am.orig	Fri May  7 12:46:47 2004
-+++ Makefile.am
-@@ -1,4 +1,4 @@
+--- src/hash/Makefile.am.orig	Thu Jul 22 18:46:36 2004
++++ src/hash/Makefile.am
+@@ -2,5 +2,5 @@
+ ##
+ 
 -AM_CFLAGS=-Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
-+AM_CFLAGS=-DDDR_DEBUG
++AM_CFLAGS= -DDDR_DEBUG
  
- SUBDIRS=src doc sym sch test
- 
+ INCLUDES=	-I$(srcdir)/../include
