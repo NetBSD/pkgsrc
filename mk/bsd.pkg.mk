@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.108 1998/07/06 15:10:49 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.109 1998/07/09 17:47:03 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -968,14 +968,15 @@ _PORT_USE: .USE
 .if make(real-install)
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
-	@for i in ${CONFLICTS}; do \
-		if pkg_info -e $$i; then \
-			${ECHO_MSG} "===>  ${PKGNAME} conflicts with already installed $$i."; \
+	@for i in "${CONFLICTS}"; do \
+		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
+			${ECHO_MSG} "===>  ${PKGNAME} conflicts with already installed pkg(s) "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`.; \
 			${ECHO_MSG} "      They install the same files into the same place, its therefor not"; \
-			${ECHO_MSG} "      usefull to install ${PKGNAME}. Please remove $$i first with"; \
+			${ECHO_MSG} "      usefull to install ${PKGNAME}. Please remove "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" first with"; \
 			${ECHO_MSG} "      pkg_delete(1)."; \
 			exit 1; \
 		fi; \
+		${RM} ${CAT} ${WRKDIR}/.CONFLICT.$$$$ ; \
 	done
 .endif
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
@@ -1518,10 +1519,10 @@ lib-depends:
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
-	@for dir in ${DEPENDS}; do					\
-		package=`${ECHO} $$dir | ${SED} -e 's/:.*//'`;		\
-		dir=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
-		if /usr/sbin/pkg_info -e $$package; then		\
+	@for dir in "${DEPENDS}"; do					\
+		package="`${ECHO} \"$$dir\" | ${SED} -e 's/:.*//'`";	\
+		dir=`${ECHO} '$$dir' | ${SED} -e 's/.*://'`;		\
+		if /usr/sbin/pkg_info -qe "$$package"; then		\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package";	\
 		else							\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package";	\
