@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.939 2003/10/12 04:51:19 grant Exp $
+$NetBSD: TODO,v 1.940 2003/10/13 12:11:24 grant Exp $
 
 Suggested new packages
 ======================
@@ -93,6 +93,17 @@ Suggested new packages
 	Server for Unreal Tournament first person shooter
 	http://files.sobservers.com/UnrealTournament/UTServerOnly/
 
+	p5-CGI-AppToolkit-0.051
+	Perl CGI application toolkit
+	${MASTER_SITE_PERL_CPAN:=CGI/}
+
+	p5-CGI-FormBuilder-2.12
+	Perl CGI Form builder
+	${MASTER_SITE_PERL_CPAN:=CGI/}
+
+	cvsd
+	Wrapper for cvs pserver
+	http://tiefighter.et.tudelft.nl/~arthur/cvsd/
 
 Suggested package updates
 =========================
@@ -242,9 +253,7 @@ Suggested package updates
 	o oss-3.9.8a
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
-	o p5-CGI-AppToolkit-0.051
 	o p5-CGI-Application-3.1
-	o p5-CGI-FormBuilder-2.12 [grant]
 	o p5-Net-DNS-0.41 [heinz]
 	o p5-razor-agents-2.36 [heinz]
 	o pdmenu-1.2.81
