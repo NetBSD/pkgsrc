@@ -1,3 +1,0 @@
-PREPENDDEF(`confENVDEF', ``-DNETINET6=1'')
-define(`confLINKS', `')
-define(`confMBINDIR', ``/usr/libexec/sendmail'')
