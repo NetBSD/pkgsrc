@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/02/03 16:00:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/05 10:03:45 wiz Exp $
 #
 
 DISTNAME=	htmllint
-PKGNAME=	htmllint-20030203
+PKGNAME=	htmllint-20030225
 CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
@@ -25,7 +25,7 @@ HTMLDIR=	${LOCALBASE}/share/httpd/htdocs/htmllint
 IMGDIR=		${HTMLDIR}/images
 
 post-patch:
-.for f in faq.html htmllintenv
+.for f in faq.html htmllintenv htmllint
 	@${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.orig; 			\
 	${SED} -e 's!@PREFIX@!${PREFIX}!g' < ${WRKSRC}/${f}.orig 	\
 		> ${WRKSRC}/${f}
