@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2003/01/06 09:15:50 martti Exp $
+$NetBSD: patch-ae,v 1.7 2004/03/05 22:59:32 grant Exp $
 
---- src/global/mail_params.h.orig	Mon Dec 23 20:33:09 2002
-+++ src/global/mail_params.h	Sat Dec 28 08:53:11 2002
-@@ -64,7 +64,7 @@
+--- src/global/mail_params.h.orig	2003-03-04 09:07:03.000000000 +1100
++++ src/global/mail_params.h
+@@ -64,7 +64,7 @@ extern uid_t var_owner_uid;
  extern gid_t var_owner_gid;
  
  #define VAR_SGID_GROUP		"setgid_group"
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.6 2003/01/06 09:15:50 martti Exp $
  extern char *var_sgid_group;
  extern gid_t var_sgid_gid;
  
-@@ -187,18 +187,18 @@
+@@ -187,18 +187,18 @@ extern char *var_queue_dir;
    */
  #define VAR_PROGRAM_DIR		"program_directory"
  #ifndef DEF_PROGRAM_DIR
@@ -33,3 +33,14 @@ $NetBSD: patch-ae,v 1.6 2003/01/06 09:15:50 martti Exp $
  #endif
  extern char *var_command_dir;
  
+@@ -324,6 +324,10 @@ extern char *var_send_canon_maps;
+ #define DEF_RCPT_CANON_MAPS	""
+ extern char *var_rcpt_canon_maps;
+ 
++#define VAR_CANON_ENV_RCPT	"canonicalize_envelope_recipient"
++#define DEF_CANON_ENV_RCPT	1
++extern bool var_canon_env_rcpt;
++
+ #define VAR_TRANSPORT_MAPS	"transport_maps"
+ #define DEF_TRANSPORT_MAPS	""
+ extern char *var_transport_maps;
