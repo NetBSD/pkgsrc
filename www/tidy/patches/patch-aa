@@ -1,21 +1,30 @@
-$NetBSD: patch-aa,v 1.3 2000/12/18 20:20:12 kim Exp $
+$NetBSD: patch-aa,v 1.4 2002/03/07 13:33:53 wiz Exp $
 
---- Makefile.orig	Fri Aug  4 12:21:20 2000
-+++ Makefile	Mon Dec 18 15:09:19 2000
-@@ -1,14 +1,8 @@
- # Makefile - for tidy
+--- Makefile.orig	Mon Jan 21 08:50:02 2002
++++ Makefile
+@@ -52,20 +52,20 @@
+ #  acknowledgment is not required but would be appreciated.
+ #
  
 -CC= gcc
 +#CC= gcc
  
--CFLAGS= -O
--
--# Makefile - for tidy
--
--CC= gcc
--
--CFLAGS= -O
-+CFLAGS+= -D__USE_MISC
+ INCLDIR= ./include/
+ SRCDIR= ./src/
+ OBJDIR= ./
  
- INSTALLDIR= /usr/local/
+ DEBUGFLAGS=-g -DDMALLOC
+-CFLAGS= -I $(INCLDIR)
++CFLAGS+= -I $(INCLDIR)
+ OTHERCFLAGS=
+-LIBS=-lc
++#LIBS=-lc
+ DEBUGLIBS=-ldmalloc
  
+-INSTALLDIR= /usr/local/
+-MANPAGESDIR= /usr/local/man/
++INSTALLDIR= ${PREFIX}/
++MANPAGESDIR= ${PREFIX}/man/
+ 
+ OFILES=		$(OBJDIR)attrs.o         $(OBJDIR)istack.o        $(OBJDIR)parser.o        $(OBJDIR)tags.o \
+ 		$(OBJDIR)entities.o      $(OBJDIR)lexer.o         $(OBJDIR)pprint.o        $(OBJDIR)clean.o \
