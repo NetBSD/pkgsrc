@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/02/28 10:33:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/03/01 04:03:09 itojun Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -103,9 +103,11 @@ share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html
 share/httpd/htdocs/manual/cgi_path.html
 share/httpd/htdocs/manual/configuring.html.en
+share/httpd/htdocs/manual/configuring.html.html
 share/httpd/htdocs/manual/configuring.html.ja.jis
 share/httpd/htdocs/manual/content-negotiation.html
 share/httpd/htdocs/manual/custom-error.html.en
+share/httpd/htdocs/manual/custom-error.html.html
 share/httpd/htdocs/manual/custom-error.html.ja.jis
 share/httpd/htdocs/manual/dns-caveats.html
 share/httpd/htdocs/manual/dso.html
@@ -113,13 +115,17 @@ share/httpd/htdocs/manual/ebcdic.html
 share/httpd/htdocs/manual/env.html
 share/httpd/htdocs/manual/footer.html
 share/httpd/htdocs/manual/handler.html.en
+share/httpd/htdocs/manual/handler.html.html
 share/httpd/htdocs/manual/handler.html.ja.jis
 share/httpd/htdocs/manual/header.html
 share/httpd/htdocs/manual/howto/cgi.html.en
+share/httpd/htdocs/manual/howto/cgi.html.html
 share/httpd/htdocs/manual/howto/cgi.html.ja.jis
 share/httpd/htdocs/manual/howto/footer.html
 share/httpd/htdocs/manual/howto/header.html
-share/httpd/htdocs/manual/howto/ssi.html
+share/httpd/htdocs/manual/howto/ssi.html.en
+share/httpd/htdocs/manual/howto/ssi.html.html
+share/httpd/htdocs/manual/howto/ssi.html.ja.jis
 share/httpd/htdocs/manual/images/apache_header.gif
 share/httpd/htdocs/manual/images/custom_errordocs.gif
 share/httpd/htdocs/manual/images/home.gif
@@ -131,11 +137,16 @@ share/httpd/htdocs/manual/images/mod_rewrite_fig2.gif
 share/httpd/htdocs/manual/images/pixel.gif
 share/httpd/htdocs/manual/images/sub.gif
 share/httpd/htdocs/manual/index.html.en
+share/httpd/htdocs/manual/index.html.fr
+share/httpd/htdocs/manual/index.html.html
 share/httpd/htdocs/manual/index.html.ja.jis
 share/httpd/htdocs/manual/install-tpf.html
 share/httpd/htdocs/manual/install.html.en
+share/httpd/htdocs/manual/install.html.fr
+share/httpd/htdocs/manual/install.html.html
 share/httpd/htdocs/manual/install.html.ja.jis
 share/httpd/htdocs/manual/invoking.html
+share/httpd/htdocs/manual/invoking.html.fr
 share/httpd/htdocs/manual/keepalive.html
 share/httpd/htdocs/manual/location.html
 share/httpd/htdocs/manual/man-template.html
@@ -165,6 +176,7 @@ share/httpd/htdocs/manual/misc/vif-info.html
 share/httpd/htdocs/manual/misc/windoz_keepalive.html
 share/httpd/htdocs/manual/mod/core.html
 share/httpd/htdocs/manual/mod/directive-dict.html.en
+share/httpd/htdocs/manual/mod/directive-dict.html.html
 share/httpd/htdocs/manual/mod/directive-dict.html.ja.jis
 share/httpd/htdocs/manual/mod/directives.html
 share/httpd/htdocs/manual/mod/footer.html
@@ -204,6 +216,7 @@ share/httpd/htdocs/manual/mod/mod_mime.html
 share/httpd/htdocs/manual/mod/mod_mime_magic.html
 share/httpd/htdocs/manual/mod/mod_mmap_static.html
 share/httpd/htdocs/manual/mod/mod_negotiation.html.en
+share/httpd/htdocs/manual/mod/mod_negotiation.html.html
 share/httpd/htdocs/manual/mod/mod_negotiation.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_proxy.html
 share/httpd/htdocs/manual/mod/mod_rewrite.html
@@ -216,6 +229,7 @@ share/httpd/htdocs/manual/mod/mod_userdir.html
 share/httpd/htdocs/manual/mod/mod_usertrack.html
 share/httpd/htdocs/manual/mod/mod_vhost_alias.html
 share/httpd/htdocs/manual/mod/module-dict.html.en
+share/httpd/htdocs/manual/mod/module-dict.html.html
 share/httpd/htdocs/manual/mod/module-dict.html.ja.jis
 share/httpd/htdocs/manual/mpeix.html
 share/httpd/htdocs/manual/multilogs.html
@@ -224,6 +238,7 @@ share/httpd/htdocs/manual/new_features_1_0.html
 share/httpd/htdocs/manual/new_features_1_1.html
 share/httpd/htdocs/manual/new_features_1_2.html
 share/httpd/htdocs/manual/new_features_1_3.html.en
+share/httpd/htdocs/manual/new_features_1_3.html.html
 share/httpd/htdocs/manual/new_features_1_3.html.ja.jis
 share/httpd/htdocs/manual/new_features_2_0.html
 share/httpd/htdocs/manual/process-model.html
@@ -245,6 +260,8 @@ share/httpd/htdocs/manual/readme-tpf.html
 share/httpd/htdocs/manual/search/manual-index.cgi
 share/httpd/htdocs/manual/sections.html
 share/httpd/htdocs/manual/server-wide.html.en
+share/httpd/htdocs/manual/server-wide.html.fr
+share/httpd/htdocs/manual/server-wide.html.html
 share/httpd/htdocs/manual/server-wide.html.ja.jis
 share/httpd/htdocs/manual/sourcereorg.html
 share/httpd/htdocs/manual/stopping.html
@@ -252,6 +269,7 @@ share/httpd/htdocs/manual/suexec.html
 share/httpd/htdocs/manual/suexec_1_2.html
 share/httpd/htdocs/manual/unixware.html
 share/httpd/htdocs/manual/upgrading_to_1_3.html
+share/httpd/htdocs/manual/urlmapping.html
 share/httpd/htdocs/manual/vhosts/details.html
 share/httpd/htdocs/manual/vhosts/details_1_2.html
 share/httpd/htdocs/manual/vhosts/examples.html
@@ -260,6 +278,7 @@ share/httpd/htdocs/manual/vhosts/footer.html
 share/httpd/htdocs/manual/vhosts/header.html
 share/httpd/htdocs/manual/vhosts/host.html
 share/httpd/htdocs/manual/vhosts/index.html.en
+share/httpd/htdocs/manual/vhosts/index.html.html
 share/httpd/htdocs/manual/vhosts/index.html.ja.jis
 share/httpd/htdocs/manual/vhosts/ip-based.html
 share/httpd/htdocs/manual/vhosts/mass.html
