@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/26 16:18:40 cube Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 19:14:54 wiz Exp $
 
 SHA1 (DateTime-0.25.tar.gz) = f168a0051872d5ca61b39c027c5a896876174056
+RMD160 (DateTime-0.25.tar.gz) = 7a8bd8cd8d7698504152cbcd95cfeae6f0a83d0a
 Size (DateTime-0.25.tar.gz) = 81993 bytes
