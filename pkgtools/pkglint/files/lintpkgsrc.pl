@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.42 2001/01/29 10:48:09 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.43 2001/03/15 15:10:23 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -765,7 +765,7 @@ sub parse_makefile_vars
 		$vars{$key} = $_;
 		$loop = 1;
 		}
-	    elsif ($vars{$key} =~ m#\${(\w+):([CS]/[^{}/]+/[^{}/]*/g?(|:[^{}]+))}#)
+	    elsif ($vars{$key} =~ m#\${(\w+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3g?(|:[^{}]+))}#)
 		{
 		my($left, $subvar, $right) = ($`, $1, $');
 		my(@patterns) = split(':', $2);
