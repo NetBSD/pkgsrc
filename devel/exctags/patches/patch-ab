@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
+$NetBSD: patch-ab,v 1.4 2002/03/06 16:45:02 seb Exp $
 
---- ctags.1.orig	Mon Dec 24 00:53:18 2001
+--- ctags.1.orig	Mon Feb 25 05:51:46 2002
 +++ ctags.1
 @@ -1,27 +1,27 @@
--.TH CTAGS 1 "Version 5.2" "Darren Hiebert"
-+.TH EXCTAGS 1 "Version 5.2" "Darren Hiebert"
+-.TH CTAGS 1 "Version 5.2.3" "Darren Hiebert"
++.TH EXCTAGS 1 "Version 5.2.3" "Darren Hiebert"
  
  
  .SH "NAME"
@@ -128,7 +128,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  aware that wildcards can match the slash character, '/'). You can determine if
  shell wildcards are available on your platfom by examining the output of the
  \fB--version\fP option, which will include "+wildcards" in the compiled
-@@ -543,7 +543,7 @@
+@@ -544,7 +544,7 @@
  
  .TP 5
  \fB--filter\fP[=\fIyes\fP|\fIno\fP]
@@ -137,7 +137,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  standard input and printing their tags to standard output on a file-by-file
  basis. If \fB--sorted\fP is enabled, tags are sorted only within the source
  file in which they are defined. File names are read from standard output in
-@@ -557,7 +557,7 @@
+@@ -558,7 +558,7 @@
  \fB--filter-terminator\fP=\fIstring\fP
  Specifies a string to print to standard output following the tags for each
  file name parsed when the \fB--filter\fP option is enabled. This may permit an
@@ -146,7 +146,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  file is finished. Note that if the file name read is a directory and
  \fB--recurse\fP is enabled, this string will be printed only one once at the
  end of all tags found for by descending the directory. This string will always
-@@ -628,7 +628,7 @@
+@@ -629,7 +629,7 @@
  support is available from the runtime library of your C compiler, then the
  file name pattern may contain the usual shell wildcards common on Unix (be
  sure to quote the option parameter to protect the wildcards from being
@@ -155,7 +155,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  if shell wildcards are available on your platfom by examining the output of
  the \fB--version\fP option, which will include "+wildcards" in the compiled
  feature list; otherwise, the file name patterns are matched against file names
-@@ -655,7 +655,7 @@
+@@ -656,7 +656,7 @@
  
  .TP 5
  \fB--language-force\fP=\fIlanguage\fP
@@ -164,7 +164,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  ignoring those files whose language cannot be determined (see
  \fBSOURCE FILES\fP, above). This option forces the specified \fIlanguage\fP
  (either built-in or user-defined) to be used for every supplied file instead
-@@ -691,7 +691,7 @@
+@@ -692,7 +692,7 @@
  Specifies whether "#line" directives should be recognized. These are present
  in the output of preprocessors and contain the line number, and possibly the
  file name, of the original source file(s) from which the preprocessor output
@@ -173,7 +173,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  generate tag entries marked with the file names and line numbers of their
  locations original source file(s), instead of their actual locations in the
  preprocessor output. The actual file names placed into the tag file will have
-@@ -702,7 +702,7 @@
+@@ -703,7 +703,7 @@
  generally only useful when used together with the \fB--excmd\fP=\fInumber\fP
  (\fB-n\fP) option. Also, you may have to use either the \fB--langmap\fP or
  \fB--language-force\fP option if the extension of the preprocessor output file
@@ -182,7 +182,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  
  .TP 5
  \fB--links\fP[=\fIyes\fP|\fIno\fP]
-@@ -719,7 +719,7 @@
+@@ -720,7 +720,7 @@
  list of supplied files is empty and no file list is specified with the
  \fB-L\fP option, then the current directory (i.e. ".") is assumed. Symbolic
  links are followed. If you don't like these behaviors, either explicitly
@@ -191,7 +191,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  instead. \fBNote:\fP This option is not supported on all platforms at present.
  It is available if the output of the \fB--help\fP option includes this option.
  See, also, the \fB--exclude\fP to limit recursion.
-@@ -769,13 +769,13 @@
+@@ -770,13 +770,13 @@
  .RE
  
  .RS 5
@@ -203,11 +203,11 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  compiled feature list.
  
 -For more information on the regular expressionss used by \fBctags\fP, see
-+For more information on the regular expressionss used by \fBexctags\fP, see
++For more information on the regular expressions used by \fBexctags\fP, see
  either the \fBregex(5,7)\fP man page, or the GNU info documentation for regex
  (e.g. "info regex").
  .RE
-@@ -799,14 +799,14 @@
+@@ -800,14 +800,14 @@
  .TP 5
  \fB--totals\fP[=\fIyes\fP|\fIno\fP]
  Prints statistics about the source files read and the tag file written during
@@ -224,7 +224,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  until after options are read from the configuration files (see \fBFILES\fP,
  below) and the \fBCTAGS\fP environment variable. However, if this option is
  the first argument on the command line, it will take effect before any options
-@@ -814,7 +814,7 @@
+@@ -815,7 +815,7 @@
  
  .TP 5
  \fB--version\fP
@@ -233,7 +233,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  guaranteed to always contain the string "Exuberant Ctags".
  
  
-@@ -824,7 +824,7 @@
+@@ -825,7 +825,7 @@
  through use of the \fB--<LANG>-type\fP option. The flags corresponding to each
  tag kind for each langauge are described below. Note that some languages
  and/or tag kinds may be implemented using regular expressions and may not be
@@ -242,7 +242,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  \fB--regex-<LANG>\fP option). Kinds are enabled by default
  except where noted (with "[off]").
  
-@@ -1229,7 +1229,7 @@
+@@ -1233,7 +1233,7 @@
  
  .SH "OPERATIONAL DETAILS"
  
@@ -251,13 +251,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  language of the file by applying the following three tests in order: if the
  file extension has been mapped to a language, if the file name matches a shell
  pattern mapped to a language, and finally if the file is executable and its
-@@ -1240,14 +1240,14 @@
- the tag file for each language object it is written to handle. See
- \fBTAG FILE FORMAT\fP, below, for details on these entries.
- 
--This implementation of \fBctags\fP imposes no formatting requirements on C
-+This implementation of \fBexctags\fP imposes no formatting requirements on C
- code as do legacy implementations. Older implementations of ctags tended to
+@@ -1249,9 +1249,9 @@
  rely upon certain formatting assumptions in order to help it resolve coding
  dilemmas caused by preprocessor conditionals.
  
@@ -269,7 +263,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  conditional (except in the special case of "#if 0", in which case it follows
  only the last branch). The reason for this is that failing to pursue only one
  branch can result in ambiguous syntax, as in the following example:
-@@ -1270,17 +1270,17 @@
+@@ -1274,17 +1274,17 @@
  }
  .RE
  
@@ -290,7 +284,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  double sets of parentheses in order to accept the following conditional
  construct:
  
-@@ -1441,12 +1441,12 @@
+@@ -1445,12 +1445,12 @@
  
  
  .SH "CAVEATS"
@@ -307,7 +301,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  such problems by using the \fB-I\fP option.
  
  White space is treated as a separator for file names and options read from
-@@ -1455,7 +1455,7 @@
+@@ -1459,7 +1459,7 @@
  supply file names or other options containing embedded white space (spaces,
  etc.) through these options.
  
@@ -316,7 +310,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  the \fB--excmd\fP option), it is entirely possible that the wrong line may be
  found by your editor if there exists another source line which is identical to
  the line containing the tag. The following example demonstrates this condition:
-@@ -1484,10 +1484,10 @@
+@@ -1488,10 +1488,10 @@
  
  
  .SH "BUGS"
@@ -329,7 +323,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  namespace specifier and always lists it as a class name in the scope portion
  of the extension fields. Also, if the function defintion is located in a
  separate file from than where the class is defined (the usual case), the
-@@ -1502,7 +1502,7 @@
+@@ -1506,7 +1506,7 @@
  .TP 8
  .B CTAGS
  If this environment variable exists, it will be expected to contain a set of
@@ -338,7 +332,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  configuration files listed in \fBFILES\fP, below, are read, but before any
  command line options are read. Options appearing on the command line will
  override options specified in this variable. Only options will be read from
-@@ -1513,7 +1513,7 @@
+@@ -1517,7 +1517,7 @@
  .TP 8
  .B ETAGS
  Similar to the \fBCTAGS\fP variable above, this variable, if found, will be
@@ -347,12 +341,12 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  try to use \fBCTAGS\fP instead.
  
  .TP 8
-@@ -1522,12 +1522,12 @@
+@@ -1526,12 +1526,12 @@
  specifies the directory in which to place temporary files. This can be useful
  if the size of a temporary file becomes too large to fit on the partition
  holding the default temporary directory defined at compilation time.
 -\fBctags\fP creates temporary files only if either (1) an emacs-style tag file
-+\fBExctags\fP creates temporary files only if either (1) an emacs-style tag file
++\fBexctags\fP creates temporary files only if either (1) an emacs-style tag file
  is being generated, (2) the tag file is being sent to standard output, or (3)
  the program was compiled to use an internal sort algorithm to sort the tag
  files instead of the the sort utility of the operating system. If the sort
@@ -362,7 +356,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  ignored.
  
  
-@@ -1544,10 +1544,10 @@
+@@ -1548,10 +1548,10 @@
  .I .ctags (ctags.cnf on MSDOS, MSWindows)
  .IP
  If any of these configuration files exist, each will be expected to contain a
@@ -375,7 +369,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  additional configuration file before any of those shown above, which will be
  indicated if the output produced by the \fB--version\fP option lists the
  "custom-conf" feature. Options appearing in the \fBCTAGS\fP environment
-@@ -1561,10 +1561,10 @@
+@@ -1565,10 +1565,10 @@
  
  .TP
  .I tags
@@ -388,7 +382,7 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  
  .SH "SEE ALSO"
  The official Exuberant Ctags web site at:
-@@ -1574,7 +1574,7 @@
+@@ -1578,7 +1578,7 @@
  .RE
  
  Also \fBex\fP(1), \fBvi\fP(1), \fBelvis\fP, or, better yet, \fBvim\fP, the
@@ -397,12 +391,3 @@ $NetBSD: patch-ab,v 1.3 2002/01/23 11:48:30 seb Exp $
  Pages web site at:
  
  .RS
-@@ -1602,7 +1602,7 @@
- 
- 
- .SH "CREDITS"
--This version of \fBctags\fP was originally derived from and inspired by the
-+This version of \fBexctags\fP was originally derived from and inspired by the
- ctags program by Steve Kirkendall <kirkenda@cs.pdx.edu> that comes with the
- Elvis vi clone (though virtually none of the original code remains).
- 
