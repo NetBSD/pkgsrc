@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1 2003/09/23 13:54:25 salo Exp $
+
+--- src/lib-mail/message-address.c.orig	2003-03-20 16:46:34.000000000 +0100
++++ src/lib-mail/message-address.c	2003-09-23 15:42:11.000000000 +0200
+@@ -252,14 +252,14 @@
+ 		} else if ((addr->name == NULL || *addr->name == '\0') &&
+ 			   addr->route == NULL) {
+ 			i_assert(addr->mailbox != NULL);
+-			i_assert(addr->domain != NULL);
+ 
+ 			str_append(str, addr->mailbox);
++			if (addr->domain != NULL) {
+ 			str_append_c(str, '@');
+ 			str_append(str, addr->domain);
++			}
+ 		} else {
+ 			i_assert(addr->mailbox != NULL);
+-			i_assert(addr->domain != NULL);
+ 
+ 			if (addr->name != NULL) {
+ 				str_append(str, addr->name);
+@@ -272,8 +272,10 @@
+ 				str_append_c(str, ':');
+ 			}
+ 			str_append(str, addr->mailbox);
++			if (addr->domain != NULL) {
+ 			str_append_c(str, '@');
+ 			str_append(str, addr->domain);
++			}
+ 			str_append_c(str, '>');
+ 		}
+ 
