@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/09/17 19:41:24 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:28:28 agc Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
@@ -13,6 +12,7 @@ COMMENT=	Interactive astronomical ephemeris program
 
 LICENSE=	no-commercial-use
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
 PERL_SCRIPTS=	astorb2edb.pl mpcorb2edb.pl
