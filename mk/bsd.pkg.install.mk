@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.43 2003/07/31 10:36:03 jmmv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.44 2003/08/30 18:42:36 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -265,6 +265,7 @@ FILES_SUBST+=		SETENV=${SETENV:Q}
 FILES_SUBST+=		SH=${SH:Q}
 FILES_SUBST+=		SORT=${SORT:Q}
 FILES_SUBST+=		SU=${SU:Q}
+FILES_SUBST+=		TEST=${TEST:Q}
 FILES_SUBST+=		TOUCH=${TOUCH:Q}
 FILES_SUBST+=		TR=${TR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
