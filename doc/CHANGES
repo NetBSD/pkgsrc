@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9693 2005/03/30 15:24:41 adam Exp $
+$NetBSD: CHANGES,v 1.9694 2005/03/30 15:43:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2005:
         Updated mklivecd to 0.11 [xtraeme 2005-03-30]
 	Added openttd-0.3.6 [wiz 2005-03-30]
 	Updated glpk to 4.8nb1 [adam 2005-03-30]
+	Added ruby-xmlscan-0.2.3 [minskim 2005-03-30]
