@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/12 18:14:02 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/29 12:16:34 drochner Exp $
 
-DISTNAME=	XMLWidgets-0.8.1
-PKGNAME=	zope25-XMLWidgets-0.8.1
+DISTNAME=	XMLWidgets-0.8.2
+PKGNAME=	zope25-XMLWidgets-0.8.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/faassen/XMLWidgets/
 EXTRACT_SUFX=	.tgz
