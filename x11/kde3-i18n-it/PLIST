@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/06/10 13:31:36 markd Exp $
 share/doc/kde/HTML/it/amor/common
 share/doc/kde/HTML/it/amor/index.cache.bz2
 share/doc/kde/HTML/it/amor/index.docbook
 share/doc/kde/HTML/it/artsbuilder/digitalaudio.docbook
+share/doc/kde/HTML/it/artsbuilder/glossary.docbook
+share/doc/kde/HTML/it/artsbuilder/helping.docbook
 share/doc/kde/HTML/it/artsbuilder/midiintro.docbook
 share/doc/kde/HTML/it/artsbuilder/porting.docbook
 share/doc/kde/HTML/it/artsbuilder/references.docbook
@@ -420,6 +422,9 @@ share/doc/kde/HTML/it/kmessedwords/kmw1.png
 share/doc/kde/HTML/it/kmessedwords/kmw2.png
 share/doc/kde/HTML/it/kmessedwords/kmw3.png
 share/doc/kde/HTML/it/kmessedwords/kmw4.png
+share/doc/kde/HTML/it/kmid/common
+share/doc/kde/HTML/it/kmid/index.cache.bz2
+share/doc/kde/HTML/it/kmid/index.docbook
 share/doc/kde/HTML/it/kmines/common
 share/doc/kde/HTML/it/kmines/index.cache.bz2
 share/doc/kde/HTML/it/kmines/index.docbook
@@ -1095,6 +1100,7 @@ share/kde/locale/it/LC_MESSAGES/knotify.mo
 share/kde/locale/it/LC_MESSAGES/kodo.mo
 share/kde/locale/it/LC_MESSAGES/kolf.mo
 share/kde/locale/it/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/it/LC_MESSAGES/kommander.mo
 share/kde/locale/it/LC_MESSAGES/kompare.mo
 share/kde/locale/it/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/it/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -1191,7 +1197,6 @@ share/kde/locale/it/LC_MESSAGES/kviewtemplateplugin.mo
 share/kde/locale/it/LC_MESSAGES/kviewviewer.mo
 share/kde/locale/it/LC_MESSAGES/kvoctrain.mo
 share/kde/locale/it/LC_MESSAGES/kwalletmanager.mo
-share/kde/locale/it/LC_MESSAGES/kwatchgnupg.mo
 share/kde/locale/it/LC_MESSAGES/kweather.mo
 share/kde/locale/it/LC_MESSAGES/kwifimanager.mo
 share/kde/locale/it/LC_MESSAGES/kwin.mo
@@ -1226,7 +1231,6 @@ share/kde/locale/it/LC_MESSAGES/libkickermenu_kdeprint.mo
 share/kde/locale/it/LC_MESSAGES/libkickermenu_konsole.mo
 share/kde/locale/it/LC_MESSAGES/libkickermenu_prefmenu.mo
 share/kde/locale/it/LC_MESSAGES/libkickermenu_recentdocs.mo
-share/kde/locale/it/LC_MESSAGES/libkleopatra.mo
 share/kde/locale/it/LC_MESSAGES/libkonq.mo
 share/kde/locale/it/LC_MESSAGES/libkpimexchange.mo
 share/kde/locale/it/LC_MESSAGES/libkscan.mo
@@ -1328,6 +1332,7 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kmoon
 @dirrm share/doc/kde/HTML/it/kmix
 @dirrm share/doc/kde/HTML/it/kmines
+@dirrm share/doc/kde/HTML/it/kmid
 @dirrm share/doc/kde/HTML/it/kmessedwords
 @dirrm share/doc/kde/HTML/it/kmenuedit
 @dirrm share/doc/kde/HTML/it/kmathtool

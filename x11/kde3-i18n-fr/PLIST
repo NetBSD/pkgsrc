@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/06/10 13:31:35 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -470,6 +470,9 @@ share/doc/kde/HTML/fr/kdf/index.cache.bz2
 share/doc/kde/HTML/fr/kdf/index.docbook
 share/doc/kde/HTML/fr/kdf/kdf.png
 share/doc/kde/HTML/fr/kdf/kdf_config.png
+share/doc/kde/HTML/fr/kdict/common
+share/doc/kde/HTML/fr/kdict/index.cache.bz2
+share/doc/kde/HTML/fr/kdict/index.docbook
 share/doc/kde/HTML/fr/kdm/common
 share/doc/kde/HTML/fr/kdm/index.cache.bz2
 share/doc/kde/HTML/fr/kdm/index.docbook
@@ -993,6 +996,8 @@ share/doc/kde/HTML/fr/kopete/common
 share/doc/kde/HTML/fr/kopete/index.cache.bz2
 share/doc/kde/HTML/fr/kopete/index.docbook
 share/doc/kde/HTML/fr/korganizer/common
+share/doc/kde/HTML/fr/korganizer/exchange-plugin.docbook
+share/doc/kde/HTML/fr/korganizer/group-scheduling.docbook
 share/doc/kde/HTML/fr/korganizer/i_copy.png
 share/doc/kde/HTML/fr/korganizer/i_cut.png
 share/doc/kde/HTML/fr/korganizer/i_edit_find.png
@@ -1014,6 +1019,7 @@ share/doc/kde/HTML/fr/korganizer/i_view_week.png
 share/doc/kde/HTML/fr/korganizer/i_view_work_week.png
 share/doc/kde/HTML/fr/korganizer/index.cache.bz2
 share/doc/kde/HTML/fr/korganizer/index.docbook
+share/doc/kde/HTML/fr/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/fr/korn/common
 share/doc/kde/HTML/fr/korn/index.cache.bz2
 share/doc/kde/HTML/fr/korn/index.docbook
@@ -1069,6 +1075,9 @@ share/doc/kde/HTML/fr/kpercentage/wellcome.png
 share/doc/kde/HTML/fr/kpf/common
 share/doc/kde/HTML/fr/kpf/index.cache.bz2
 share/doc/kde/HTML/fr/kpf/index.docbook
+share/doc/kde/HTML/fr/kpilot/common
+share/doc/kde/HTML/fr/kpilot/index.cache.bz2
+share/doc/kde/HTML/fr/kpilot/index.docbook
 share/doc/kde/HTML/fr/kpoker/common
 share/doc/kde/HTML/fr/kpoker/index.cache.bz2
 share/doc/kde/HTML/fr/kpoker/index.docbook
@@ -1426,6 +1435,9 @@ share/doc/kde/HTML/fr/lskat/index.docbook
 share/doc/kde/HTML/fr/noatun/common
 share/doc/kde/HTML/fr/noatun/index.cache.bz2
 share/doc/kde/HTML/fr/noatun/index.docbook
+share/doc/kde/HTML/fr/panelappearance/common
+share/doc/kde/HTML/fr/panelappearance/index.cache.bz2
+share/doc/kde/HTML/fr/panelappearance/index.docbook
 share/kde/apps/ktuberling/sounds/fr/bouche.wav
 share/kde/apps/ktuberling/sounds/fr/boucle-d-oreille.wav
 share/kde/apps/ktuberling/sounds/fr/chapeau.wav
@@ -1945,6 +1957,7 @@ share/kde/locale/fr/relecture_gui
 @comment dirrm share/kde/locale/fr
 @dirrm share/kde/apps/ktuberling/sounds/fr
 @comment dirrm share/kde/apps/ktuberling/sounds
+@dirrm share/doc/kde/HTML/fr/panelappearance
 @dirrm share/doc/kde/HTML/fr/noatun
 @dirrm share/doc/kde/HTML/fr/lskat
 @dirrm share/doc/kde/HTML/fr/lisa
@@ -1991,6 +2004,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kppp
 @dirrm share/doc/kde/HTML/fr/kpovmodeler
 @dirrm share/doc/kde/HTML/fr/kpoker
+@dirrm share/doc/kde/HTML/fr/kpilot
 @dirrm share/doc/kde/HTML/fr/kpf
 @dirrm share/doc/kde/HTML/fr/kpercentage
 @dirrm share/doc/kde/HTML/fr/kpdf
@@ -2092,6 +2106,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kedit
 @dirrm share/doc/kde/HTML/fr/kdvi
 @dirrm share/doc/kde/HTML/fr/kdm
+@dirrm share/doc/kde/HTML/fr/kdict
 @dirrm share/doc/kde/HTML/fr/kdf
 @dirrm share/doc/kde/HTML/fr/kdevelop
 @dirrm share/doc/kde/HTML/fr/kdesu
