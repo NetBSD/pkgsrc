@@ -1,9 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1999/08/29 14:20:44 rh Exp $
-
---- mini-utils/guname/Makefile.in.orig	Thu Jul 29 21:45:56 1999
-+++ mini-utils/guname/Makefile.in	Sun Aug 29 15:45:43 1999
-@@ -398,7 +398,7 @@
- mostlyclean distclean maintainer-clean
+--- mini-utils/guname/Makefile.in.orig	Fri May 19 23:25:05 2000
++++ mini-utils/guname/Makefile.in	Thu Jun  1 17:36:51 2000
+@@ -487,7 +487,7 @@
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
  
  
 -@GUNAME_CAPPLET_TRUE@install-data-local:

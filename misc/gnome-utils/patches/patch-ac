@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/06/01 16:10:55 rh Exp $
+
+--- configure.orig	Fri May 19 21:49:06 2000
++++ configure	Thu Jun  1 17:44:51 2000
+@@ -8453,7 +8453,7 @@
+     esac
+   done
+ 
+-  for ac_config_dir in gfloppy; do
++  for ac_config_dir in ; do
+ 
+     # Do not complain, so a configure script can configure whichever
+     # parts of a large source tree are present.
