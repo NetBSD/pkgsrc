@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/22 09:48:48 adam Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/23 22:44:00 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -60,6 +60,8 @@ pre-install:
 PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
 PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}.i386
 .  endif
+.else
+PLIST_SRC+=     ${.CURDIR}/PLIST.${OPSYS}
 .endif
 PLIST_SRC+=	${.CURDIR}/PLIST.common
 .if ${OPSYS} != "Darwin"
