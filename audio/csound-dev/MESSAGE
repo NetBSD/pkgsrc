@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/12/13 20:26:03 ben Exp $
+$NetBSD: MESSAGE,v 1.2 2003/12/13 20:30:53 ben Exp $
 
 This version of csound implements localization and realtime audio as
 plugins.  As a result you need to set the OPCDIR environment variable to
-${PREFIX}/lib/Csound and then run "csound32".  To properly play realtime
-audio, specify "-o devaudio" rather than "-o /dev/audio".
+${PREFIX}/lib/Csound.  The csound executable is named "csound32".  To
+play realtime audio, specify "-o devaudio" instead of "-o /dev/audio".
 
 ===========================================================================
