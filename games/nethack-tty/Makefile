@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 16:49:57 martti Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:14:57 wiz Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=		The tty/console based version of NetHack
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
 
-ALL_TARGET=		nethack
+BUILD_TARGET=		nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-tty
 

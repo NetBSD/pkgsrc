@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:18:15 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	YES
 
 CONFLICTS+=	gkrellm-share>=2.0
 
-ALL_TARGET=		netbsd
+BUILD_TARGET=		netbsd
 INSTALL_TARGET=		install_netbsd
 
 MAKE_ENV+=	PTHREAD_INC="-I${LOCALBASE}/include"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2004/10/31 00:53:10 minskim Exp $
+# $NetBSD: Makefile.common,v 1.36 2004/12/03 15:14:59 wiz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -34,17 +34,17 @@ INSTALLATION_DIRS+=	lib
 .if ${OPSYS} == "SunOS"
 .  if !empty(CC_VERSION:MSun)
 .    if ${SPARC_TARGET_ARCH} == "sparcv7"
-ALL_TARGET=             sunos5
+BUILD_TARGET=             sunos5
 .    elif ${SPARC_TARGET_ARCH} == "sparcv8"
-ALL_TARGET=             sunos5-v8
+BUILD_TARGET=             sunos5-v8
 .    elif ${SPARC_TARGET_ARCH} == "sparcv9"
-ALL_TARGET=             sunos5-v9
+BUILD_TARGET=             sunos5-v9
 .    endif
 .  else
-ALL_TARGET=             sunos5-gcc
+BUILD_TARGET=             sunos5-gcc
 .  endif
 .else
-ALL_TARGET=             pkgsrc
+BUILD_TARGET=             pkgsrc
 .endif
 
 pre-install:

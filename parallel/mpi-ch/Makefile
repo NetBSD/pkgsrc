@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=		mpich-1.2.5.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 .endif
 DEPENDS+=		tk>=8.3.0:../../x11/tk83
 
-ALL_TARGET=		ALL examples
+BUILD_TARGET=		ALL examples
 INSTALL_TARGET=		install-all
 USE_PERL5=		yes
 HAS_CONFIGURE=		yes

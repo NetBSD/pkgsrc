@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/30 03:41:54 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:04 wiz Exp $
 
 DISTNAME=	molden4.2
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -13,7 +13,7 @@ COMMENT=	Displaying MOLecular DENsity
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKEFILE=	makefile
-ALL_TARGET=	molden
+BUILD_TARGET=	molden
 
 USE_BUILDLINK3=		yes
 USE_X11=		# defined

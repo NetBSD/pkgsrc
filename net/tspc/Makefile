@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/10/02 05:38:14 jonb Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=	freenet6-client-1.0
@@ -23,7 +23,7 @@ TARGET=		${LOWER_OPSYS}8
 TARGET=		${LOWER_OPSYS}
 .endif
 
-ALL_TARGET=	all target="${TARGET}"
+BUILD_TARGET=	all target="${TARGET}"
 INSTALL_TARGET=	${ALL_TARGET}
 
 DOWNLOAD=	http://www.freenet6.net/cgi-bin/download.cgi?fn=${DISTNAME}${EXTRACT_SUFX}

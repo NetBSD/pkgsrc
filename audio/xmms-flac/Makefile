@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/15 22:56:50 ben Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:51 wiz Exp $
 #
 
 DISTNAME=	flac-1.1.1
@@ -24,9 +24,9 @@ CONFLICTS=	flac-xmms-[0-9]*
 
 #do-build:
 #	@cd ${XMMS_WRKSRC}/../plugin_common && ${SETENV} ${MAKE_ENV} \
-#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 #	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 
 do-install:
 	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
