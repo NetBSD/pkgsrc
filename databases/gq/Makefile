@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:28:09 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/04 12:57:24 xtraeme Exp $
 #
 
-DISTNAME=	gq-0.3.0
-PKGREVISION=	3
+DISTNAME=	gq-0.6.0
 CATEGORIES=	databases net
 MASTER_SITES=	http://biot.com/gq/download/ \
 		${MASTER_SITE_SOURCEFORGE:=gqclient/}
@@ -11,13 +10,22 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://biot.com/gq/
 COMMENT=	GTK-based LDAP client
 
-DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
+BUILD_USES_MSGFMT=	yes
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
-USE_BUILDLINK2=	YES
-USE_X11=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 
+LIBS+=			-ldes
+CONFIGURE_ARGS+=	--enable-browser-dnd
+CONFIGURE_ARGS+=	--with-ssl-prefix=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--enable-cache
+
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../databases/openldap/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
