@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/10/11 09:57:20 martti Exp $
+$NetBSD: distinfo,v 1.2 2001/12/20 10:05:49 martti Exp $
 
-SHA1 (radiusd-cistron-1.6.4.tar.gz) = df2b8790c09d077218685d1811dae0126cf0d2b9
-Size (radiusd-cistron-1.6.4.tar.gz) = 144054 bytes
-SHA1 (patch-aa) = 39ad1c632a8f4757acd2a45fcbd8302abf23d25f
-SHA1 (patch-ab) = ee7534f09d3a4391bf8e2e25abe57f18fcf61a0e
-SHA1 (patch-ac) = b5666314e0e049bf43e8ab96955fb565e9fc282d
-SHA1 (patch-af) = fac15b8bafe774eef0fb6cc3ffc9e5d143e20495
+SHA1 (radiusd-cistron-1.6.5.tar.gz) = 7887099977230db5e17a572a55a85747fdc0c8ca
+Size (radiusd-cistron-1.6.5.tar.gz) = 192854 bytes
+SHA1 (patch-aa) = 75e1c68a1732f9c9a4e4f81fba37c5823518cf4a
+SHA1 (patch-ab) = f0dc1a30b20c8057f56f3797b3252ea3a0f79f2b
+SHA1 (patch-ac) = 333090fb0d089774f59039215984962a4ffcce8a
+SHA1 (patch-af) = 4d9721cb866c98be64b8aca8675e1f192bca74d2

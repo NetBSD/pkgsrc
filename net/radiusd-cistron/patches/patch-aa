@@ -1,27 +1,32 @@
-$NetBSD: patch-aa,v 1.1 2001/10/11 09:57:21 martti Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/20 10:05:50 martti Exp $
 
---- src/Makefile.BSD.orig	Fri Jun 26 06:00:17 1998
-+++ src/Makefile.BSD	Fri Oct 23 13:32:18 1998
-@@ -3,9 +3,9 @@
+--- src/Makefile.BSD.orig	Fri Nov  9 17:03:23 2001
++++ src/Makefile.BSD	Thu Dec 20 10:46:40 2001
+@@ -3,9 +3,8 @@
  #
  #
  
 -CC	= gcc
 -CFLAGS	= -Wall -g -DNOSHADOW
--LDFLAGS	= # -s #tatic
-+#CC	= gcc
-+CFLAGS	+= -DNOSHADOW -DPREFIX=\"$(PREFIX)\"
-+LDFLAGS	= -s #tatic
+-LDFLAGS	= # -s
++CFLAGS	= -DNOSHADOW -DPREFIX=\"$(PREFIX)\"
++LDFLAGS	= -s
  LIBS	=
  LCRYPT	= -lcrypt
  
-@@ -15,7 +15,7 @@
+@@ -16,11 +15,11 @@
  #PAM	= -DPAM
  #PAMLIB	= -lpam
+ 
+-INSTALL = install
+-DINSTALL = mkdir -p
++INSTALL = install -c
++DINSTALL= install -d
  
 -BINDIR  = /usr/local/bin
 -SBINDIR = /usr/local/sbin
 +BINDIR  = $(PREFIX)/bin
 +SBINDIR = $(PREFIX)/sbin
+ MANDIR  = /usr/local/man
  
  .include "Make.inc"
