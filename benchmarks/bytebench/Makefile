@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/16 12:16:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/04 06:13:26 jlam Exp $
 
 DISTNAME=		byte
 PKGNAME=		bytebench-3.6
@@ -6,6 +6,11 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.cdrom.com/pub/unix-c/benchmarks/
 
 MAINTAINER=		root@garbled.net
+
+BENCHMARK_ENV+=		BINDIR=${WRKSRC}/pgms
+BENCHMARK_ENV+=		SCRPDIR=${WRKSRC}/pgms
+BENCHMARK_ENV+=		RESULTDIR=${WRKSRC}/results
+BENCHMARK_ENV+=		TESTDIR=${WRKSRC}/testdir
 
 post-patch:
 	${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/Run >${WRKSRC}/run-byte
@@ -20,7 +25,8 @@ do-install:
 
 benchmark:
 	@if [ `${ID} -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
-	@${WRKSRC}/run-byte | tee ${WRKSRC}/bytebench.out
+	@${SETENV} ${BENCHMARK_ENV} ${WRKSRC}/run-byte \
+		| tee ${WRKSRC}/bytebench.out
 
 results:
 	-@${MKDIR} /tmp/benches/`domainname`
