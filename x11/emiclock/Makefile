@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/20 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/03 13:45:21 wiz Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -15,10 +15,10 @@ USE_XAW=	yes
 
 .if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
 post-patch:
-	echo "#define USE_XAW3D" > ${WRKSRC}/xawconfig.h
+	${ECHO} "#define USE_XAW3D" > ${WRKSRC}/xawconfig.h
 .else
 post-patch:
-	echo "#undef USE_XAW3D" > ${WRKSRC}/xawconfig.h
+	${ECHO} "#undef USE_XAW3D" > ${WRKSRC}/xawconfig.h
 .endif
 
 post-install:
