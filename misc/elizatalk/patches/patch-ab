@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/03/01 13:02:11 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/10 12:02:54 drochner Exp $
 
---- splotch.c.orig	Mon Oct 23 04:37:56 2000
+--- splotch.c.orig	2000-10-23 13:37:56.000000000 +0200
 +++ splotch.c
 @@ -17,9 +17,12 @@
  #define NAME      "Eliza"    /* name of robot */
@@ -18,3 +18,60 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/03/01 13:02:11 jlam Exp $
  #define DEBUG 0                /* debug flag */
  #define VERBOSE 0              /* verbose errors */
  #define DEB 0
+@@ -40,7 +43,6 @@ FILE   *dfile;               /* file poi
+ int    maxtempl;             /* templ[maxtempl] is last entry */
+ int    oldkeywd[SP_HIST];    /* queue of indices of most recent keys */
+ 
+-char *strcasestr();
+ char *phrasefind();
+ char *lower();
+ 
+@@ -549,7 +551,7 @@ char *lower(s)
+ char  *s;
+ {
+   int i;
+-  char tmp[400];
++  static char tmp[400];
+   
+   for (i=0; s[i]; ++i)
+     tmp[i] = tolower(s[i]);
+@@ -642,30 +644,6 @@ char fname[50];
+ 
+ 
+ 
+-/*********************************
+-strcasestr()
+-**********************************/
+-char *strcasestr (s1, s2)
+-char *s1, *s2;
+-{
+-
+-        char n1[256], n2[256];
+-        int j;
+-
+-        for (j=0;s1[j] != '\0';j++)
+-                n1[j] = toupper (s1[j]);
+-        n1[j] = '\0';
+-        for (j=0;s2[j] != '\0';j++)
+-                n2[j] = toupper (s2[j]);
+-        n2[j] = '\0';
+-       
+-        return (strstr (n1, n2));
+-}
+-
+-
+-
+-
+-
+ 
+ 
+ 
+@@ -706,7 +684,7 @@ trytempl(question)
+ 	firstime=0;
+       }
+       else
+-	 key=strtok(key[strlen(key)], ":\n");
++	 key=strtok(0, ":\n");
+       if (key == NULL) {
+ 	done=1;
+ 	break;
