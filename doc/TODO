@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.997 2003/11/05 05:21:48 itojun Exp $
+$NetBSD: TODO,v 1.998 2003/11/05 13:17:18 recht Exp $
 
 Suggested new packages
 ======================
@@ -168,6 +168,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o echoping-5.0.1
+	o eclipse-2.1.2
 	o elk-3.99.5
 	o elm-me-2.4pl108
 	o enlightenment-0.16.5
