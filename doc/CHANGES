@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2679 2003/07/04 16:32:19 seb Exp $
+$NetBSD: CHANGES,v 1.2680 2003/07/04 16:37:59 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2673,3 +2673,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dovecot to 0.99.10 [salo 2003-07-04]
 	Updated gcc to 2.95.3nb3 [seb 2003-07-04]
 	Updated gcc3 to 3.3nb3 [seb 2003-07-04]
+	Updated nxtvepg to 2.5.2 [magick 2003-07-04]
