@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/08/09 11:32:32 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/18 13:23:13 minoura Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	w3-4.0b47
@@ -15,19 +15,14 @@ COMMENT=	World Wide Web browser for Emacs
 
 CONFIGURE_ARGS+=--enable-site-install
 
+# included in xemacs-packages
+EMACS_VERSIONS_ACCEPTED= emacs21 emacs21nox emacs20
 .include "../../mk/emacs.mk"
 
-.if ${EMACS_FLAVOR} == "xemacs"
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-xemacs
-CONFIGURE_ARGS+=--with-package-dir=${PREFIX}/lib/xemacs/xemacs-packages
-PLIST_SRC=	${PKGDIR}/PLIST.xemacs
-.else
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-emacs
 CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}/w3
 INFO_FILES=	w3.info w3-faq.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
-.endif
 
 .include "../../mk/bsd.pkg.mk"
