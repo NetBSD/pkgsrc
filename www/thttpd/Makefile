@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/17 12:55:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/22 18:34:54 jlam Exp $
 
 DISTNAME=	thttpd-2.25b
 CATEGORIES=	www
@@ -11,15 +11,19 @@ HOMEPAGE=	http://www.acme.com/software/thttpd/
 COMMENT=	Tiny/turbo/throttling HTTP server
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-GNU_CONFIGURE=	# defined
+
+USE_BUILDLINK3=	yes
+GNU_CONFIGURE=	yes
+USE_PKGINSTALL=	yes
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 BUILD_DEFS+=	USE_INET6
 
-USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
 RCD_SCRIPTS=	thttpd
+
+INSTALLATION_DIRS=	share/thttpd
 
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
@@ -31,13 +35,10 @@ pre-configure:
 	done
 
 post-build:
-	for FILE in thttpd.conf; do					\
-		${SED} ${FILES_SUBST_SED}				\
+	@for FILE in thttpd.conf; do					\
+		${SED}	${FILES_SUBST_SED}				\
 			${FILESDIR}/$${FILE} > ${WRKDIR}/$${FILE};	\
 	done
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/thttpd
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
