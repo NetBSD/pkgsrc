@@ -1,4 +1,4 @@
-/*	$NetBSD: lambd.c,v 1.1.1.1 2001/07/13 21:56:02 itojun Exp $	*/
+/*	$NetBSD: lambd.c,v 1.2 2001/07/18 06:47:37 itojun Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -36,16 +36,24 @@
 #include <stdio.h>
 #include <err.h>
 
+#include "lambio.h"
+
 #define BASEPORT	(0x378)
 
 int main __P((int, char **));
 void usage __P((void));
 void mainloop __P((unsigned long));
+void lsleep __P((unsigned long));
 int monitor __P((void));
 void led __P((int));
 
 int foreground = 0;
 int debug = 0;
+#ifdef __i386__
+int nohw = 0;
+#else
+const int nohw = 1;
+#endif
 
 int
 main(argc, argv)
@@ -55,10 +63,8 @@ main(argc, argv)
 	int ch;
 	unsigned long delay;
 	char *p, *ep;
-	unsigned long ioperm[1024 / sizeof(unsigned long) / 8];
-	int i, off, bit;
 
-	while ((ch = getopt(argc, argv, "df")) != -1) {
+	while ((ch = getopt(argc, argv, "dfn")) != -1) {
 		switch (ch) {
 		case 'd':
 			debug++;
@@ -66,11 +72,22 @@ main(argc, argv)
 		case 'f':
 			foreground++;
 			break;
+		case 'n':
+			nohw++;
+			break;
 		default:
 			usage();
 			exit(1);
 		}
 	}
+
+	if (!islamb()) {
+		if (debug)
+			fprintf(stderr, "it is not lamb\n");
+		nohw++;
+	} else
+		if (debug)
+			fprintf(stderr, "it is indeed lamb\n");
 
 	argc -= optind;
 	argv += optind;
@@ -91,19 +108,11 @@ main(argc, argv)
 		exit(1);
 	}
 
-	if (i386_get_ioperm(ioperm) < 0) {
-		err(1, "i386_get_ioperm");
-		/* NOTREACHED */
-	}
-	for (i = 0; i < 3; i++) {
-		off = (BASEPORT + i);
-		bit = off % (sizeof(ioperm[0]) * 8);
-		off /= (sizeof(ioperm[0]) * 8);
-		ioperm[off] &= ~(1 << bit);
-	}
-	if (i386_set_ioperm(ioperm) < 0) {
-		err(1, "i386_set_ioperm");
-		/* NOTREACHED */
+	if (!nohw) {
+		if (lamb_open() < 0) {
+			err(1, "lamb_open");
+			/* NOTREACHED */
+		}
 	}
 
 	if (!foreground)
@@ -127,27 +136,19 @@ void
 mainloop(delay)
 	unsigned long delay;
 {
-	unsigned int sec;
-
 	delay /= 2;
-	sec = delay / 1000000;
-	delay %= 1000000;
 
 	led(0);
 	while (1) {
 		if (monitor())
 			break;
 		led(1);
-		if (sec)
-			sleep(sec);
-		usleep(delay);
+		lsleep(delay);
 
 		if (monitor())
 			break;
 		led(0);
-		if (sec)
-			sleep(sec);
-		usleep(delay);
+		lsleep(delay);
 	}
 
 	led(0);
@@ -160,14 +161,27 @@ mainloop(delay)
 	}
 }
 
-/* returns 1 if shutdown button is pressed */
+void
+lsleep(usec)
+	unsigned long usec;
+{
+
+	sleep(usec / 1000000);
+	usleep(usec % 1000000);
+}
+
 int
 monitor()
 {
-	if ((inb(BASEPORT + 1) & 0x20) == 0)
-		return 1;
-	else
+	int i;
+
+	if (nohw)
 		return 0;
+
+	for (i = 0; i < 10; i++)
+		if (!lamb_reboot())
+			return 0;
+	return 1;
 }
 
 void
@@ -177,5 +191,8 @@ led(on)
 
 	if (debug)
 		fprintf(stderr, "led=%d\n", on);
-	outb(BASEPORT + 2, on ? 8 : 0);
+	if (nohw)
+		return;
+
+	lamb_led(on);
 }
