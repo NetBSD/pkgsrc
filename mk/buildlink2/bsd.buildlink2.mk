@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.9 2002/06/30 06:20:31 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.10 2002/06/30 08:55:40 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -486,7 +486,8 @@ ${BUILDLINK_${_wrappee_}}:						\
 	esac;								\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-		${SED}	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+		${SED}	-e "s|@WRKDIR@|${WRKDIR}|g"			\
+			-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
 			-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"	\
 			-e "s|@CAT@|${CAT:Q}|g"				\
 			-e "s|@ECHO@|${ECHO:Q}|g"			\
