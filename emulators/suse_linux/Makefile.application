@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.2 2002/04/04 12:10:08 tron Exp $
+# $NetBSD: Makefile.application,v 1.3 2002/04/04 20:31:30 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -13,7 +13,7 @@ SUSE_DIR_PREFIX=		suse
 SUSE_VERSION=			7.3
 .endif
 
-.if defined(RPM_FILES)
+.if defined(RPMFILES)
 .include "../../emulators/${SUSE_DIR_PREFIX}_linux/Makefile.common"
 .else
 .include "../../mk/bsd.pkg.mk"
