@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/23 03:57:12 dmcmahill Exp $
+
+--- Makefile.orig	Sun Nov 17 17:43:29 1996
++++ Makefile	Wed Dec 22 20:05:59 1999
+@@ -4,24 +4,21 @@
+ #
+ 
+-CC=        gcc
+-CCFLAG=    -O -g
+-LDFLAG=    -O -g
+-XINCLUDE=-I/usr/local/X11/include
++XINCLUDE=-I${X11BASE}/include/X11
+ 
+ 
+ # Set these to the right path to the forms library
+-XFORMSINC=-I/usr/local/X11/include
+-XFORMSLIB=-L/usr/local/X11/lib
++XFORMSINC=-I${X11BASE}/include
++XFORMSLIB=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
+ 
+ # SYSLIB=-lXpm -lX11 -lm
+ 
+ # for solaris you need the -lsocket
+-SYSLIB=-lXpm -lX11 -lm -lsocket
++SYSLIB=-lXpm -lX11 -lm 
+ 
+ # Flags the compiler will see
+ #########################################
+ 
+-CFLAGS=$(CCFLAG) $(XFORMSINC)  $(XINCLUDE)
+-LDFLAGS = $(LDFLAG)
++CFLAGS+= $(XFORMSINC)  $(XINCLUDE)
++LDFLAGS+= $(LDFLAG)
+ LIBS=$(XFORMSLIB) -lforms $(SYSLIB)
+ 

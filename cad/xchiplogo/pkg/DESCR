@@ -1,0 +1,10 @@
+Xchiplogo reads an ascii bitmap file, and converts it into a  
+magic  or cif file. It is a handy program for creating logos 
+of text or graphics for  putting  on  VLSI  chips.   At  the
+moment  it  accepts  the  B&W dithered format of XV as the 
+input. It has got quite a few options for resizing and  get-
+ting rid of many design rule errors that can be found in the
+bitmap file. It has  a smoothing, before and after an  error
+correction  step. The error correction step is pretty simple
+,don't expect miracles, but it works quite  fine  and  spe- 
+cially for text gives a reasonable output.  
