@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/01/24 13:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/26 10:30:51 agc Exp $
 #
 
 DISTNAME=	angband-3.0.1
@@ -31,7 +31,7 @@ CONFIGURE_ARGS=	--with-setgid=games --prefix=${PREFIX}
 # add spoiler files and clean up a bit
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/games/angband/lib/info
-	cd ${PREFIX}/share/games/angband/lib/info/ && ${PAX} -rzf ${DISTDIR}/${SPOILERFILE}
+	cd ${PREFIX}/share/games/angband/lib/info/ && ${PAX} -rOzf ${DISTDIR}/${SPOILERFILE}
 	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
 	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
