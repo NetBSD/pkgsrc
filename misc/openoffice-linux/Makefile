@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/25 16:57:57 mrauch Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/14 17:35:00 mrauch Exp $
 
 DISTNAME=		OOo_1.1.0_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.1.0
@@ -38,6 +38,7 @@ SUPPORT_FILES=          /dev/null /emul/linux/etc/mtab
 pre-install:
 	${CP} ${WRKSRC}/setup.ins ${WRKSRC}/setup.ins.orig
 	${SED}  -e "s|/usr/bin/soffice|${PREFIX}/bin/soffice.orig|g"	\
+		-e "s|/usr/lib||g"					\
 		<${WRKSRC}/setup.ins.orig >${WRKSRC}/setup.ins
 .     if ${OPSYS}=="NetBSD" && !exists(/emul/linux/etc/mtab)
 	${CP} /dev/null /emul/linux/etc/mtab
