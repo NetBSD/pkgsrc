@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2003/09/13 18:31:34 kim Exp $
+$NetBSD: patch-am,v 1.2 2004/05/13 18:14:34 adam Exp $
 
---- src/osdep/unix/env_unix.c.orig	Wed Apr 16 20:14:42 2003
-+++ src/osdep/unix/env_unix.c	Sat Sep 13 14:07:00 2003
-@@ -804,7 +804,7 @@
+--- src/osdep/unix/env_unix.c.orig	2004-04-27 19:53:16.000000000 +0000
++++ src/osdep/unix/env_unix.c
+@@ -818,7 +818,7 @@ char *sysinbox ()
  {
    char tmp[MAILTMPLEN];
    if (!sysInbox) {		/* initialize if first time */
