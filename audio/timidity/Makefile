@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2003/02/21 15:43:58 mycroft Exp $
+# $NetBSD: Makefile,v 1.37 2003/02/21 17:30:51 mycroft Exp $
 #
 
 DISTNAME=	TiMidity++-2.11.3
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     audio
 MASTER_SITES=	http://www.goice.co.jp/member/mo/timidity/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,4 +24,5 @@ USE_BUILDLINK2=	yes
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
