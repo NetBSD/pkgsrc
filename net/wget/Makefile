@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/12/01 01:00:55 grant Exp $
+# $NetBSD: Makefile,v 1.53 2002/12/01 01:04:03 grant Exp $
 
 DISTNAME=	wget-1.7
 PKGREVISION=	2
@@ -15,20 +15,20 @@ COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
 USE_PERL5=	build
 
-BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK2=		YES
+BUILD_USES_MSGFMT=	# defined
+USE_BUILDLINK2=		# defined
 
-USE_GMAKE=	YES
-GNU_CONFIGURE=	YES
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	# defined
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-EGDIR=		${PREFIX}/share/examples/wget
-CONF_FILES=	${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
+EGDIR=			${PREFIX}/share/examples/wget
+CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
 
-INFO_FILES=	wget.info
+INFO_FILES=		wget.info
 
-BUILD_DEFS+=    USE_INET6
+BUILD_DEFS+=    	USE_INET6
 
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
