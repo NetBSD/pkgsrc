@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/03 17:43:59 rh Exp $
+
+--- configure.orig	Thu Feb 25 12:01:40 1999
++++ configure	Thu Apr  8 11:39:35 1999
+@@ -1516,6 +1516,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1561,6 +1562,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -2403,10 +2405,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
