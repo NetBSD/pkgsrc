@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
+$NetBSD: patch-ah,v 1.2 2003/12/06 19:28:22 ben Exp $
 
---- extern.h.orig	Fri Jun 19 13:55:30 1992
-+++ extern.h	Sat Jan 13 21:29:33 2001
+--- extern.h.orig	1992-06-19 13:55:30.000000000 -0700
++++ extern.h
 @@ -2,19 +2,19 @@
  
  /* module: action.c */
@@ -32,7 +32,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  /* module: bill.c */
  
-@@ -24,53 +24,53 @@
+@@ -24,53 +24,53 @@ int letter3(void);
  int letter4(void);
  int letter5(void);
  int letter6(void);
@@ -115,7 +115,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  /* module: fortune.c */
  
-@@ -78,178 +78,178 @@
+@@ -78,178 +78,178 @@ char *fortune(char *);
  
  /* module: help.c */
  
@@ -136,7 +136,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
 -int lprintf();
 -int lprint(long);
 -int lwrite(char *, int);
-+void lprintf();
++void lprintf(char *, ...);
 +void lprint(long);
 +void lwrite(char *, int);
  long lgetc1(void);
@@ -403,7 +403,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  unsigned int sum(unsigned char *, int);
  
  /* module: scores.c */
-@@ -261,112 +261,112 @@
+@@ -261,112 +261,112 @@ int hashewon(void);
  long paytaxes(long);
  int winshou(void);
  int shou(int);
@@ -592,7 +592,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  /* module: bill.c */
  
-@@ -376,53 +376,53 @@
+@@ -376,53 +376,53 @@ int letter3();
  int letter4();
  int letter5();
  int letter6();
@@ -675,7 +675,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  /* module: fortune.c */
  
-@@ -430,178 +430,178 @@
+@@ -430,178 +430,178 @@ char *fortune();
  
  /* module: help.c */
  
@@ -696,7 +696,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
 -int lprintf();
 -int lprint();
 -int lwrite();
-+void lprintf();
++void lprintf(char *, ...);
 +void lprint();
 +void lwrite();
  long lgetc1();
@@ -963,7 +963,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  unsigned int sum();
  
  /* module: scores.c */
-@@ -613,96 +613,96 @@
+@@ -613,96 +613,96 @@ int hashewon();
  long paytaxes();
  int winshou();
  int shou();
@@ -1129,7 +1129,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  #endif /* __STD__ */
  
-@@ -718,20 +718,20 @@
+@@ -718,20 +718,20 @@ extern char savefilename[],scorefile[], 
  extern char objnamelist[],optsfile[],*potionname[],stealth[MAXX][MAXY];
  extern char *scrollname[],*spelcode[],*speldescript[];
  extern char *class[],course[],diagfile[],fortfile[],helpfile[];
@@ -1155,7 +1155,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  extern char ramboflag, compress;
  
  extern short hitp[MAXX][MAXY], ivenarg[], screen[MAXX][MAXY];
-@@ -739,6 +739,17 @@
+@@ -739,6 +739,17 @@ extern short iarg[MAXX][MAXY], lastnum;	
  
  extern int yrepcount,userid;
  extern int ipoint, iepoint;
