@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2000/02/05 20:05:24 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2004/10/13 18:50:13 tv Exp $
 
---- colorls.1.orig	Sat Nov 27 23:53:51 1999
-+++ colorls.1	Sat Nov 27 23:53:52 1999
-@@ -35,15 +35,23 @@
+--- colorls.1.orig	Wed Oct 13 14:49:05 2004
++++ colorls.1
+@@ -37,14 +37,22 @@
  .\"
  .Dd July 29, 1994
 -.Dt LS 1
@@ -30,9 +30,7 @@ $NetBSD: patch-ab,v 1.6 2000/02/05 20:05:24 wiz Exp $
 +.Pp
  For each operand that names a
  .Ar file
- of a type other than
-@@ -87,6 +95,12 @@
- a percent sign (%) after each whiteout,
+@@ -88,4 +96,10 @@ a percent sign (%) after each whiteout,
  and a vertical bar (|) after each that is a
  .Tn FIFO .
 +.It Fl G
@@ -43,9 +41,7 @@ $NetBSD: patch-ab,v 1.6 2000/02/05 20:05:24 wiz Exp $
 +some extra attributes (setuid bit set, etc.) are also displayed.
  .It Fl L
  If argument is a symbolic link, list the file or directory the link references
- rather than the link itself.
-@@ -318,6 +332,74 @@
- See
+@@ -319,4 +333,72 @@ See
  .Xr environ 7
  for more information.
 +.It LSCOLORS
@@ -118,4 +114,3 @@ $NetBSD: patch-ab,v 1.6 2000/02/05 20:05:24 wiz Exp $
 +background for setuid executables, etc.
  .El
  .Sh COMPATIBILITY
- The group field is now automatically included in the long listing for
