@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
+$NetBSD: patch-aa,v 1.6 2001/12/17 12:01:27 abs Exp $
 
---- checkbot.pl.orig	Thu Oct 25 20:46:42 2001
+--- checkbot.pl.orig	Mon Dec 17 10:55:56 2001
 +++ checkbot.pl
 @@ -49,6 +49,7 @@
           [B<--match> match string] [B<--exclude> exclude string]
@@ -10,49 +10,49 @@ $NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
           [B<--style> style file URL]
           [B<--mailto> email address]
           [B<--note> note] [B<--sleep> seconds] [B<--timeout> timeout]
-@@ -90,6 +91,11 @@
- 
- The I<match string> can be a perl regular expression.
- 
+@@ -95,6 +96,11 @@
+ underneath it, but not the HTML pages in the subdirectories of the
+ server, the I<match string> would be
+ "www.someserver.xyz/($|[^/]+.html)".
++ 
 +=item --match-url-base
 +
 +This option causes checkbot to use the site component of each url when
 +determining which pages are local.
-+
+ 
  =item --exclude <exclude string>
  
- URLs matching the I<exclude string> are considered to be external,
-@@ -97,6 +103,12 @@
+@@ -102,6 +108,12 @@
+ even if they happen to match the I<match string> (See option C<--match>).
  
  The I<exclude string> can be a perl regular expression.
- 
++ 
 +=item --skip <skip string>
 +
 +URLs matching the I<skip string> are not processed.
 +
 +The I<skip string> can be a perl regular expression.
-+
+ 
  =item --ignore <ignore string>
  
- If a URL has an error, and matches the I<ignore string>, its error
-@@ -262,7 +274,7 @@
+@@ -276,7 +288,7 @@
  
    # Get command-line arguments
    use Getopt::Long;
--  my $result = GetOptions(qw(debug help verbose url=s match=s exclude|x=s file=s style=s ignore|z=s mailto|M=s note|N=s proxy=s internal-only sleep=i timeout=i interval=i dontwarn=s enable-virtual));
-+  my $result = GetOptions(qw(debug help verbose url=s match=s exclude|x=s skip|x=s file=s style=s ignore|z=s mailto|M=s note|N=s proxy=s internal-only sleep=i timeout=i interval=i dontwarn=s enable-virtual match-url-base));
+-  my $result = GetOptions(qw(debug help verbose url=s match=s exclude|x=s file=s style=s ignore|z=s mailto|M=s note|N=s proxy=s internal-only sleep=i timeout=i interval=i dontwarn=s enable-virtual language=s));
++  my $result = GetOptions(qw(debug help verbose url=s match=s exclude|x=s file=s style=s ignore|z=s mailto|M=s note|N=s proxy=s internal-only sleep=i timeout=i interval=i dontwarn=s enable-virtual language=s match-url-base skip|x=s));
  
    # Handle arguments, some are mandatory, some have defaults
    &print_help if (($main::opt_help && $main::opt_help) 
-@@ -273,6 +285,7 @@
+@@ -287,6 +299,7 @@
    $main::opt_interval = 10800 unless defined $main::opt_interval and length $main::opt_interval;
    $main::opt_dontwarn = "xxx" unless defined $main::opt_dontwarn and length $main::opt_dontwarn;
    $main::opt_enable_virtual = 0 unless defined $main::opt_enable_virtual;
 +  $main::opt_match_url_base = 0 unless defined $main::opt_match_url_base;
-   # The default for opt_match will be set later, because we might want
-   # to muck with opt_url first.
- 
-@@ -362,7 +375,11 @@
+   # Set the default language and make sure it is a two letter, lowercase code
+   $main::opt_language = 'en' unless defined $main::opt_language;
+   $main::opt_language = lc(substr($main::opt_language, 0, 2));
+@@ -385,7 +398,11 @@
      my @matchurls;
      my $matchurl;
      foreach $matchurl (@starturls) {
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
      }
      $main::opt_match = '(' . join('|', @matchurls) . ')';
      print STDERR "--match defaults to $main::opt_match\n" if $main::opt_verbose;
-@@ -709,7 +726,9 @@
+@@ -737,7 +754,9 @@
      print OUT "<tr><th align=left>--url</th><td>Start URL(s)</td><td>",
                join(',', @starturls), "</td></tr>\n";
      print OUT "<tr><th align=left>--match</th><td>Match regular expression</td><td>$main::opt_match</td></tr>\n";
@@ -75,16 +75,16 @@ $NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
      print OUT "<tr><th align=left>--ignore</th><td>Ignore regular expression</td><td>$main::opt_ignore</td></tr>\n" if defined $main::opt_ignore;
      print OUT "<tr><th align=left>--dontwarn</th><td>Don't warn for these codes</td><td>$main::opt_dontwarn</td></tr>\n" if $main::opt_dontwarn ne 'xxx';
      print OUT "<tr><th align=left>--enable-virtual</th><td>Use virtual names only</td><td>yes</td></tr>\n" if $main::opt_enable_virtual;
-@@ -851,7 +870,7 @@
+@@ -879,7 +898,7 @@
  	  add_to_queue($url, $response->base);
  	  $doc_new++;
  	}
 -      } else {
 +      } elsif (!defined $main::opt_skip || $url !~ /$main::opt_skip/o) {
  	# Add this as an external link if we can check the protocol later
- 	if ($url =~ /^(http|ftp):/o) {
+ 	if ($url =~ /^(http|ftp|gopher):/o) {
  	  print EXTERNAL $url . "|" . $response->base . "\n";
-@@ -972,8 +991,12 @@
+@@ -1007,8 +1026,12 @@
  sub add_to_queue {
    my ($url, $parent) = @_;
  
@@ -99,19 +99,19 @@ $NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
  }
  
  sub print_server {
-@@ -1167,6 +1190,7 @@
+@@ -1204,7 +1227,9 @@
+   print "  --url url          Start URL\n";
    print "  --match match      Check pages only if URL matches `match'\n";
    print "                     If no match is given, the start URL is used as a match\n";
++  print "  --match-url-base   Use the site part of the url in --match\n";
    print "  --exclude exclude  Exclude pages if the URL matches 'exclude'\n";
 +  print "  --skip skip        Do not process pages if the URL matches 'skip'\n";
    print "  --ignore ignore    Do not list error messages for pages that the\n";
    print "                     URL matches 'ignore'\n";
    print "  --file file        Write results to file, default is checkbot.html\n";
-@@ -1179,8 +1203,9 @@
-   print "  --interval seconds Maximum time interval between updates (default 10800)\n";
-   print "  --dontwarn codes   Do not write warnings for these HTTP response codes\n";
+@@ -1219,7 +1244,7 @@
    print "  --enable-virtual   Use only virtual names, not IP numbers for servers\n";
-+  print "  --match-url-base   Use the site part of the url in --match\n";
+   print "  --language         Specify 2-letter language code for language negotiation\n";
    print "\n";
 -  print "Options --match, --exclude, and --ignore can take a perl regular expression\nas their argument\n\n";
 +  print "Options --match, --exclude, --skip, and --ignore can take a perl regular\nexpression as their argument\n\n";
