@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/03 20:35:31 jlam Exp $
 #
 
 DISTNAME=	plan-1.8.4
@@ -10,9 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
-USE_MOTIF=	YES
+USE_BUILDLINK_ONLY=	YES
+ALL_TARGET=		netbsd
 
-ALL_TARGET=	netbsd
+CFLAGS+=	-I${X11BASE}/include
 
 pre-install:
 	${INSTALL_DATA_DIR} ${X11PREFIX}/libexec/plan ${X11PREFIX}/share/plan \
@@ -23,4 +24,5 @@ pre-install:
 		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${X11PREFIX}/share/plan; \
 	done
 
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
