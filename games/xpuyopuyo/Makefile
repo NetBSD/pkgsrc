@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/03 00:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/21 13:43:36 wiz Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -9,13 +9,10 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
-
 AUTOMAKE_REQD=		1.4
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
-USE_XPM=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
@@ -32,5 +29,8 @@ pre-configure:
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}
 
+.include "../../audio/libmikmod/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
