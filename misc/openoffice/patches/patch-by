@@ -1,0 +1,16 @@
+$NetBSD: patch-by,v 1.1.1.1 2002/02/13 18:09:22 mrauch Exp $
+
+--- ../solenv/inc/tg_ext.mk.orig	Tue Jan  1 14:11:58 2002
++++ ../solenv/inc/tg_ext.mk
+@@ -145,7 +145,11 @@
+ .IF "$(GUI)"=="WNT"
+ 	+cd $(PACKAGE_DIR) && $(TYPE) $(BACK_PATH)$(PATCH_FILE_NAME) | tr -d "\015" | patch -b -p2 && $(TOUCH) $(PATCH_FLAG_FILE)
+ .ELSE           # "$(GUI)"=="WNT"
++.IF "$(OS)"=="NETBSD"
++	+cd $(PACKAGE_DIR) && $(TYPE) $(BACK_PATH)$(PATCH_FILE_NAME) | patch -p2 && $(TOUCH) $(PATCH_FLAG_FILE)
++.ELSE
+ 	+cd $(PACKAGE_DIR) && $(TYPE) $(BACK_PATH)$(PATCH_FILE_NAME) | patch -b -p2 && $(TOUCH) $(PATCH_FLAG_FILE)
++.ENDIF          # "$(OS)"=="NETBSD"
+ .ENDIF          # "$(GUI)"=="WNT"
+ .ENDIF			# "$(PATCH_FILE_NAME)"=="none" ||	"$(PATCH_FILE_NAME)"==""
+ 

@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+#	$NetBSD: soffice,v 1.1.1.1 2002/02/13 18:10:10 mrauch Exp $
+#
+SOINST=@@PREFIX@@/OpenOffice.org641
+[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org641
+
+if [ ! -d "$SOFFICE" ]; then
+	echo ""
+	echo "-----------------------------------------------------------------"
+	echo "  OpenOffice has not yet been set up for `whoami`."
+	echo "  Starting setup ...                                             "
+	echo ""
+	echo "  (If OpenOffice has already been set up for `whoami` or you"
+	echo "  want to install it someplace other than $SOFFICE"
+	echo "  please abort the installation procedure now, set the \$SOFFICE "
+	echo "  environment variable accordingly and rerun $0.)"
+	echo "-----------------------------------------------------------------"
+	echo ""
+
+# add an eventually existing java directory to $PATH to allow OO to 
+# automatically find it
+	export PATH=$PATH:@@PREFIX@@/java/bin
+
+	cd $SOINST
+	./setup
+
+	echo ""
+	echo "Done.  Starting OpenOffice ..."
+	echo ""
+fi
+
+# We've got a large number of shared libraries and other single files which 
+# have to be open for normal operation
+ulimit -n 1024
+
+exec ${SOFFICE}/soffice $*
