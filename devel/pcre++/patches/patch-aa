@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/26 22:09:50 zuntum Exp $
+
+--- doc/Makefile.in.orig	Wed Aug 25 01:38:04 2004
++++ doc/Makefile.in
+@@ -232,8 +232,8 @@ mostlyclean distclean maintainer-clean
+ 
+ 
+ install-data-local:
+-	$(INSTALL) -m 755 -d $(prefix)/doc/libpcre++-$(VERSION)
+-	$(INSTALL) -m 644 $(DOC_FILES) $(prefix)/doc/libpcre++-$(VERSION)/
++	$(INSTALL) -m 755 -d $(prefix)/share/doc/libpcre++
++	$(INSTALL) -m 644 $(DOC_FILES) $(prefix)/share/doc/libpcre++/
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
