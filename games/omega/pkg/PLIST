@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/28 02:28:23 proff Exp $
-@owner games
-@group games
-@mode 4711
+@comment $NetBSD: PLIST,v 1.3 2000/01/02 03:28:55 wiz Exp $
 bin/omega
-@mode 666
 share/omega/omega.hi
 share/omega/omega.log
-@mode 600
 share/omega/omegahi.bak
-@mode
 share/doc/omega/buglist.txt
 share/doc/omega/compile.all
 share/doc/omega/omega.txt
