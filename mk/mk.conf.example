@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.227 2001/06/10 15:12:05 taca Exp $
+# $NetBSD: mk.conf.example,v 1.228 2001/06/11 01:30:56 taca Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -815,6 +815,11 @@ PAPERSIZE=	A4
 # systems.
 # Possible:  Any rsh/ssh program.
 # Default:   /usr/bin/ssh if it exists, otherwise ${LOCALBASE}/bin/ssh
+
+#QPOPPER_FAC=
+# Used by qpopper package as the default syslog facility.
+# Possible: syslog(3)'s facility string without preceding "LOG_".
+# Default: LOCAL1
 
 #QPOPPER_USER=
 # Used by qpopper package as the owner of apop database and qpopauth
