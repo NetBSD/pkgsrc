@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1043 2002/09/06 08:10:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1044 2002/09/08 06:59:26 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2953,6 +2953,10 @@ info: uptodate-pkgtools
 # The 'check' target can be used to check an installed package.
 check: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check ${PKGWILDCARD}
+
+# The 'list' target can be used to list the files installed by a package.
+list: uptodate-pkgtools
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L ${PKGWILDCARD}
 
 # Run pkglint:
 lint:
