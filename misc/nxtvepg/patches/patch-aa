@@ -1,18 +1,20 @@
-$NetBSD: patch-aa,v 1.9 2002/11/24 17:23:40 magick Exp $
+$NetBSD: patch-aa,v 1.10 2002/12/15 11:28:55 magick Exp $
 
---- Makefile.orig	Tue Nov 19 20:03:24 2002
+--- Makefile.orig	Sun Dec 15 12:17:51 2002
 +++ Makefile
 @@ -33,34 +33,34 @@
  else
  
  ROOT    =
 -prefix  = /usr/local
-+prefix  = ${PREFIX}
++prefix  = ${X11PREFIX}
  exec_prefix = ${prefix}
- bindir  = $(ROOT)${exec_prefix}/bin
- mandir  = $(ROOT)${prefix}/man/man1
+-bindir  = $(ROOT)${exec_prefix}/bin
+-mandir  = $(ROOT)${prefix}/man/man1
 -resdir  = $(ROOT)/usr/X11R6/lib/X11
-+resdir  = $(ROOT)${X11PREFIX}/lib/X11
++bindir  = ${exec_prefix}/bin
++mandir  = ${prefix}/man/man1
++resdir  = ${X11PREFIX}/lib/X11
  
  # if you have perl set the path here, else just leave it alone
 -PERL    = /usr/bin/perl
@@ -35,8 +37,8 @@ $NetBSD: patch-aa,v 1.9 2002/11/24 17:23:40 magick Exp $
  # path to Tcl/Tk script library (Tk is usually in X11/lib/tk#.#)
 -DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk$(TCL_VER)\"
 -DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl$(TCL_VER)\"
-+DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"  
-+DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"  
++DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"
++DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"
  
  # enable use of multi-threading
 -DEFS   += -DUSE_THREADS
@@ -57,10 +59,10 @@ $NetBSD: patch-aa,v 1.9 2002/11/24 17:23:40 magick Exp $
  INST_DB_DIR  = $(ROOT)$(SYS_DBDIR)
  INST_DB_PERM = 0777
  endif
-@@ -112,14 +112,9 @@
- install: nxtvepg nxtvepg.1
+@@ -113,14 +113,9 @@
  	test -d $(bindir) || mkdirhier $(bindir)
  	test -d $(mandir) || mkdirhier $(mandir)
+ 	test -d $(resdir) || mkdirhier $(resdir)
 -ifndef USER_DBDIR
 -	test -d $(INST_DB_DIR) || mkdirhier $(INST_DB_DIR)
 -	chmod $(INST_DB_PERM) $(INST_DB_DIR)
@@ -72,7 +74,7 @@ $NetBSD: patch-aa,v 1.9 2002/11/24 17:23:40 magick Exp $
  
  .SUFFIXES: .c .o .tcl
  
-@@ -171,7 +166,7 @@
+@@ -172,7 +167,7 @@
  	cd .. && tar cf pc1.tar pc -X pc/tar-ex && bzip2 -f -9 pc1.tar
  	tar cf ../pc2.tar www ATTIC dsdrv?* tk8* tcl8* && bzip2 -f -9 ../pc2.tar
  
