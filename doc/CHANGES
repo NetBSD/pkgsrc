@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5192 2004/03/10 18:20:11 jlam Exp $
+$NetBSD: CHANGES,v 1.5193 2004/03/10 18:26:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed php3-pdflib [jlam 2004-03-10]
 	Removed php3-pgsql [jlam 2004-03-10]
 	Removed php3-snmp [jlam 2004-03-10]
+	Updated grhino to 0.9.0 [wiz 2004-03-10]
