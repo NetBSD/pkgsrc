@@ -1,9 +1,4 @@
-# New packages collection makefile for:		macutil
-# Version required:	2.0b3
-# Date created:		13 March 1998
-# Whom:			mycroft
-#
-# $NetBSD: Makefile,v 1.3 1998/03/16 10:44:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:08 agc Exp $
 
 DISTNAME=	macutil
 PKGNAME=	macutil-2.0b3
@@ -40,4 +35,4 @@ do-install:
 		       ${WRKSRC}/man/frommac.1 \
 		       ${WRKSRC}/man/macutil.1 ${PREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    splay
-# Version required:     0.3
-# Date created:         1 Apr 1997
-# Whom:                 junker@jazz.snu.ac.kr
-#
-# $NetBSD: Makefile,v 1.2 1997/11/01 00:56:26 augustss Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
@@ -17,4 +12,4 @@ MAINTAINER=		junker@jazz.snu.ac.kr
 
 GNU_CONFIGURE=		yes
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

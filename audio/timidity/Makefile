@@ -1,8 +1,4 @@
-# Makefile for:		timidity
-# Homepage:		http://www.cgs.fi/~tt/timidity/
-# Version required:     0.2i
-#
-# $NetBSD: Makefile,v 1.9 1998/03/20 07:07:31 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/15 10:38:11 agc Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -34,4 +30,4 @@ post-install:
 	cd ${PREFIX}/lib/timidity/patch && \
 	unzip -o -q -L ${DISTDIR}/${TIINS}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,4 @@
-# Makefile for:		nspmod
-# Version required:	0.1
-#
-# $NetBSD: Makefile,v 1.3 1998/03/20 06:41:17 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:10 agc Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -18,4 +15,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nspmod ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/nspmod.1 ${MANPREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

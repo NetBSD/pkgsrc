@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bzip2
-# Version required:	0.1pl2
-# Date created:		19 Nov 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.2 1998/01/09 09:58:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -23,4 +18,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/bzip2.1 ${PREFIX}/man/man1
 	ln ${PREFIX}/man/man1/bzip2.1 ${PREFIX}/man/man1/bunzip2.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
