@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.3 2003/05/25 09:31:29 epg Exp $
+
+--- tools/cgi/tweak-log.cgi.orig	Wed Jan 22 02:15:35 2003
++++ tools/cgi/tweak-log.cgi
+@@ -29,8 +29,8 @@ use CGI qw(:standard);
+ ###############################################################################
+ # Configuration Section
+ 
+-my $gSvnlookCmd = '/usr/local/bin/svnlook';
+-my $gSvnadminCmd = '/usr/local/bin/svnadmin';
++my $gSvnlookCmd = '/usr/pkg/bin/svnlook';
++my $gSvnadminCmd = '/usr/pkg/bin/svnadmin';
+ my $gReposPath = '/usr/www/repositories/svn';
+ my $gActionURL = './tweak-log.cgi';
+ my $gTempfilePrefix = '/tmp/tweak-cgi';
