@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/17 16:03:44 agc Exp $
 
-MD5 (enlightenment-conf-0.15.tar.gz) = ad87526c1e86088e5ba851c36eb70b13
+SHA1 (enlightenment-conf-0.15.tar.gz) = 05c9c716bf1de8a534728df82de40b7105c2598f
+Size (enlightenment-conf-0.15.tar.gz) = 438390 bytes

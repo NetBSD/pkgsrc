@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/17 16:03:45 agc Exp $
 
-MD5 (fvwm-1.24r.tar.gz) = 875733e77e285566197f4b50746aefc6
+SHA1 (fvwm-1.24r.tar.gz) = 89de9d7f0d9f63e9adffec7ac1f8be89ecbac9f4
+Size (fvwm-1.24r.tar.gz) = 325480 bytes
 SHA1 (patch-aa) = 62cb52e589edaedf7e15fc0c1b24ab587f8d1420
 SHA1 (patch-ab) = c5ee87e4d0f9887c0b8c0518847912925f463b10
 SHA1 (patch-ac) = dd88301ae8b7f8abd0bb0c3fcfa40e69b44218ea
