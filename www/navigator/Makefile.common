@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2004/07/27 08:00:50 tron Exp $
+# $NetBSD: Makefile.common,v 1.72 2004/12/14 19:03:26 minskim Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -239,7 +239,7 @@ do-install:
 .    endif
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 
-	${CHOWN} -R 0:0 ${MOZILLA_HOME}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 .  endif
 
