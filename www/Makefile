@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2003/01/01 07:06:09 jlam Exp $
+# $NetBSD: Makefile,v 1.234 2003/01/05 04:14:52 rh Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -90,6 +90,7 @@ SUBDIR+=	lynx-current
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	mknmz-wwwoffle
+SUBDIR+=	moz-linux-plugger
 SUBDIR+=	mozilla
 SUBDIR+=	mozilla-linux
 SUBDIR+=	mozilla-stable
