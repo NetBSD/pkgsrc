@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/09/23 12:38:44 markd Exp $
+$NetBSD: MESSAGE,v 1.2 2003/05/01 15:01:48 jmmv Exp $
 
 To use "${PKGNAME}" as the system's mail transport agent you have
-to install "${PREFIX}/etc/mailer.conf.sendmail" as global mailwrapper
-configuration file. The command below will do that for you:
+to install "${PREFIX}/share/examples/sendmail/mailer.conf" as global
+mailwrapper configuration file.  The command below will do that for you:
 
-ln -fs ${PREFIX}/etc/mailer.conf.sendmail /etc/mailer.conf
+ln -fs ${PREFIX}/share/examples/sendmail/mailer.conf /etc/mailer.conf
 ===========================================================================
