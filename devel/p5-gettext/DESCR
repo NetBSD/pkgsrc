@@ -1,0 +1,3 @@
+Locale::gettext is a perl5 module quickly written to gain access to
+the C library functions for internatialization. They work just like 
+the C versions.
