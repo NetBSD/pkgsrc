@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/22 10:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2004/07/30 16:20:33 agc Exp $
 
 DISTNAME=	gnutls-1.0.13
 CATEGORIES=	security devel
@@ -16,6 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
+MAKE_ENV+=		RM="${RM}"
 
 DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
