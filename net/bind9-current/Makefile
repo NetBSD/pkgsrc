@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/08/26 11:26:03 itojun Exp $
+# $NetBSD: Makefile,v 1.38 2002/10/25 11:56:13 wiz Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -18,6 +18,7 @@ DIST_SUBDIR=	bind/${BIND_VERSION}
 BUILD_DEFS+=	USE_INET6
 # No need to set USE_INET6, will auto-detect.
 
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/lib/bind/libtool
@@ -67,5 +68,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 	${INSTALL_SCRIPT} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
