@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2004/01/04 11:56:29 recht Exp $
+# $NetBSD: Makefile,v 1.223 2004/01/17 01:08:31 recht Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -55,6 +55,7 @@ SUBDIR+=	docbook-simple
 SUBDIR+=	docbook-website
 SUBDIR+=	docbook-xml
 SUBDIR+=	docbook-xsl
+SUBDIR+=	doclifter
 SUBDIR+=	dsssl-docbook-modular
 SUBDIR+=	dtdparse
 SUBDIR+=	eb
