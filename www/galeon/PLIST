@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.17 2003/06/19 17:11:52 taya Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2003/12/11 19:51:29 agc Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
 etc/gconf/schemas/galeon.schemas
 etc/sound/events/galeon.soundlist
-lib/galeon/components/libgaleon-xpcom.a
 lib/galeon/components/libgaleon-xpcom.la
 lib/galeon/components/libgaleon-xpcom.so
 man/man1/galeon.1
