@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/31 20:49:36 jschauma Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
-PKGREVISION=		1
 WRKSRC=			${WRKDIR}
 CATEGORIES=		devel lang
 MASTER_SITES=		ftp://pvs.csl.sri.com/pub/pvs/pvs${VERSION}/ \
@@ -10,9 +9,9 @@ MASTER_SITES=		ftp://pvs.csl.sri.com/pub/pvs/pvs${VERSION}/ \
 			ftp://ftp.informatik.uni-ulm.de/pub/KI/pvs/pvs${VERSION}/
 EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}-${MAINFILEEXT}${EXTRACT_SUFX} \
-			pvs-3.0-system${EXTRACT_SUFX} \
-			pvs-3.0-emacs19${EXTRACT_SUFX} \
-			pvs-3.0-libraries${EXTRACT_SUFX}
+			pvs-${VERSION}-system${EXTRACT_SUFX} \
+			pvs-${VERSION}-emacs19${EXTRACT_SUFX} \
+			pvs-${VERSION}-libraries${EXTRACT_SUFX}
 
 MAINTAINER=		jschauma@netbsd.org
 HOMEPAGE=		http://pvs.csl.sri.com/
@@ -20,11 +19,11 @@ COMMENT=		The PVS Specification and Verification System
 
 DEPENDS+=		teTeX>=1.0.7:../../print/teTeX
 
-VERSION=		3.0
+VERSION=		3.1
 NO_BUILD=		# defined
 CHECK_SHLIBS=		NO
 SHLIB_HANDLING=		NO
-USE_BUILDLINK2=		yes
+USE_BUILDLINK2=		YES
 
 LICENSE=        	pvs-license
 # not quite sure about this, but to be on the safe side:
@@ -39,7 +38,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-* Linux-*-* SunOS-*-*
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc") || ${OPSYS} != "SunOS"
-MAINFILEEXT=		redhat5
+MAINFILEEXT=		linux
 .else
 MAINFILEEXT=		solaris
 .endif
