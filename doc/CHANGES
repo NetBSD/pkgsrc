@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6309 2004/06/25 12:50:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.6310 2004/06/25 13:57:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.5 [jmmv 2004-06-25]
 	Updated gossip to 0.7.6 [jmmv 2004-06-25]
 	Updated xmms-musepack to 1.00 [jmmv 2004-06-25]
+	Added p7zip-0.80 [wiz 2004-06-25]
