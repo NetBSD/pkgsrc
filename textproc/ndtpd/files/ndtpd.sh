@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ndtpd.sh,v 1.1.1.1 2002/03/15 07:19:58 uebayasi Exp $
+# $NetBSD: ndtpd.sh,v 1.2 2002/04/02 15:59:50 uebayasi Exp $
 #
 # PROVIDE: ndtpd
 # REQUIRE: DAEMON
@@ -14,23 +14,26 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 name="ndtpd"
-rcvar=$name
-prog="@PREFIX@/sbin/ndtpd"
+rcvar="$name"
+prog=@PREFIX@/sbin/ndtpd
 pidfile=@NDTPD_RUNDIR@/ndtpd/ndtpd.pid
 
 case $1 in
 start)
-	{ @ECHO@ "Starting ${name}."; ${prog} >/dev/null 2>&1; } || {
+	@ECHO@ "Starting ${name}."
+	@MKDIR@ @NDTPD_RUNDIR@/ndtpd
+	${prog} >/dev/null 2>&1 || {
 		@ECHO@ "Configuration error?" >&2
-		@ECHO@ "Try @PREFIX@/sbin/ndtpdcheck" >&2
+		@ECHO@ "Try @PREFIX@/sbin/ndtpcheck" >&2
 		exit 1
 	}
 	;;
 stop)
+	@ECHO@ "Stopping ${name}."
 	if [ -f ${pidfile} ]; then
 		pid=`@HEAD@ -1 ${pidfile}`
-		@ECHO@ "Stopping ${name}."
 		kill -s TERM ${pid}
+		@RM@ -fr @NDTPD_RUNDIR@/ndtpd
 	else
 		@ECHO@ "${name} not running?"
 		exit 1
