@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.19 1998/02/27 02:46:29 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.20 1998/03/05 15:26:03 tron Exp $
 ###########################################################################
 
 			==========================
@@ -908,6 +908,20 @@ variables look like:
  ====================================
 
 See section 4.3 on how to remove RCS IDs from patch files. 
+
+
+ 9.9 Distribution Makefile compresses manual pages automatically
+ ===============================================================
+
+Some distribution files used to create our packages come with BSDish
+Makefiles that compress manual pages automatically if "MANZ" is defined.
+To avoid an error on "make install" because the manual pages can't be
+compressed by <bsd.port.mk> add this work arround to the package's Makefile:
+
+# MANZ is handled automatically
+.if defined(MANZ)
+MANCOMPRESSED=	1
+.endif
 
 
  10 Submitting
