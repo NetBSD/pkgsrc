@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1610 2003/03/10 23:03:22 wiz Exp $
+$NetBSD: CHANGES,v 1.1611 2003/03/10 23:07:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted jikes112 since the current version of jikes can be used with
 		wonka [skrll 2003-03-10]
 	Updated sodipodi to 0.31 [wiz 2003-03-10]
+	Updated naim to 0.11.5.6 [wiz 2003-03-10]
