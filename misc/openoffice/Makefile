@@ -1,48 +1,62 @@
-# $NetBSD: Makefile,v 1.45 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2004/05/03 20:56:35 mrauch Exp $
 
-DISTNAME=		openoffice-0.0.0.641
-PKGREVISION=		2
+DISTNAME=		openoffice-1.1.1
 CATEGORIES=		misc
-MASTER_SITES=		http://www.fs.tum.de/~mrauch/OpenOffice/download/
-DISTFILES=		oo_641_src.tar.bz2
+MASTER_SITES=		http://mirrors.isc.org/pub/openoffice/stable/1.1.1/\
+			http://ftp.stardiv.de/pub/OpenOffice.org/stable/1.1.1/\
+			ftp://ftp.ring.gr.jp/pub/misc/openoffice/stable/1.1.1/\
+			http://openoffice.mirrors.ilisys.com.au/\
+			http://www.ibiblio.org/pub/mirrors/openoffice/stable/1.1.1/\
+			http://gd.tuwien.ac.at/office/openoffice/stable/1.1.1/\
+			http://mirrors.sunsite.dk/openoffice/stable/1.1.1/\
+			ftp://ftp.funet.fi/pub/mirrors/openoffice.org/stable/1.1.1/\
+			http://ftp.leo.org/download/pub/comp/general/office/openoffice/stable/1.1.1/\
+			ftp://ftp.saix.net/pub/OpenOffice.org/stable/1.1.1/\
+			ftp://ftp.cyberfenix.net/pub/openoffice/stable/1.1.1/\
+			ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/stable/1.1.1/\
+			http://mirror.pacific.net.au/openoffice/\
+			ftp://ftp.ring.gr.jp/pub/misc/openoffice/stable/1.1.1/\
+			ftp://ftp.kr.freebsd.org/pub/openoffice/stable/1.1.1/\
+			http://www.fs.tum.de/~mrauch/OpenOffice/download/
+DISTFILES=		OOo_1.1.1p1_source.tar.bz2
 DISTFILES+=		gpc231.tar.Z
-DISTFILES+=		oo_moz_641.tar.gz
+DISTFILES+=		ooo_addons_111.tar.bz2
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
-SITES_oo_moz_641.tar.gz=ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
+SITES_ooo_addons_111.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/ 
 
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 
-WRKSRC=			${WRKDIR}/oo_641_src/config_office
-USE_BUILDLINK2=		yes
-
-.include "../../mk/bsd.prefs.mk"
-
-# OpenOffice requires gcc 2.95.2 or better.
-GCC_REQD+=		2.95.2
-
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
+
+WRKSRC=			${WRKDIR}/oo_1.1.1_src/config_office
+USE_BUILDLINK3=		yes
+GCC_REQD=		3.0
+USE_GCC_SHLIB=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
-PKG_JVMS_ACCEPTED=	sun-jdk13
+USE_PERL5=		build
+PTHREAD_OPTS+=		require
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5.3*-i386 NetBSD-1.5Z?-i386 \
-			NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--with-stlport4-home=${LOCALBASE}
-CONFIGURE_ARGS+= 	--with-jdk-home=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+= 	--enable-mozilla --disable-java
+CONFIGURE_ARGS+= 	--with-lang=ALL --with-dict=ALL
 
 TEMP?=			${WRKSRC}
+UNLIMIT_RESOURCES+=	datasize
 
 post-extract:
 # bring the two files from GPC into place
@@ -50,48 +64,32 @@ post-extract:
 	${CP} ${WRKDIR}/gpc231/gpc.h ${WRKSRC}/../external/gpc/
 # bring the NetBSD mozilla zip files into place
 	${CP} ${WRKDIR}/*.zip ${WRKSRC}/../moz/zipped/
-# convert \r\n-lineends in sablot-patch into unix-style \n first
-	${PERL5} -p -i.save -e 's/\r\n/\n/' 				\
-	    ${WRKSRC}/../sablot/Sablot-0.52.patch
-
-DISPLAY?=	#empty, if unset
-checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
-.  if exists(${X11BASE}/bin/Xvfb)
-	-${X11BASE}/bin/Xvfb :2 &
-DISPLAY= ':2'
-.  else
-	@${ECHO} "Error: Environment variable DISPLAY must be set"
-	@${ECHO} "       and point to a connectible X server."
-	@${FALSE}
-.  endif  #Xvfb
-.endif  #DISPLAY
-
-pre-build: checkforx
+	${CP} ${WRKDIR}/openintro_pkgsrc.bmp 				\
+		${WRKSRC}/../offmgr/res/openintro.bmp
 
 do-build:
-	${_ULIMIT_CMD}tcsh -c "setenv DISPLAY '${DISPLAY}'; \
-		cd ${WRKSRC}/.. && ./bootstrap && source *.Set && dmake"
+	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC}/.. && ./bootstrap && source *.Set && dmake"
 
-pre-install: checkforx
-	${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
-	    ${SED} -e 's#@@PREFIX@@#${PREFIX}#g'			\
-		<${FILESDIR}/oo_setup.resp 				\
-		>oo_setup.resp"
+pre-install:
+	${CP} ${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal/setup.ins 	\
+		${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal/setup.ins.orig
+	${SED}  -e "s|/usr/bin/soffice|${PREFIX}/bin/soffice.orig|g"	\
+		-e "s|/usr/lib||g"					\
+		<${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal/setup.ins.orig\
+		>${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal/setup.ins
 
 do-install:
-	-${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
-		  TEMP=${WRKDIR}; export TEMP;				\
-		  DISPLAY=${DISPLAY}; export DISPLAY;			\
-		  ./setup -r:oo_setup.resp"
-	@${SH} -c "if ! [ -x ${PREFIX}/OpenOffice.org641/setup ] ;	\
-	           then ${ECHO} 'Installation was not successful.';	\
-		   ${FALSE}; fi"
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g'				\
-	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
+	${SH} -c "cd ${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal; ./install --prefix=${PREFIX}"
+	${RM} -f ${PREFIX}/bin/soffice.orig
+	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
+		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
+.for i in scalc sdraw simpress swriter
+	${LN} -sf ${PREFIX}/OpenOffice.org1.1.1/program/$i ${PREFIX}/bin/$i
+.endfor
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/java-vm.mk"
+.include "../../mk/compiler.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
