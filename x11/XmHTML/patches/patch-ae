@@ -1,62 +1,13 @@
-$NetBSD: patch-ae,v 1.1 1999/10/31 12:08:27 mrg Exp $
+$NetBSD: patch-ae,v 1.2 1999/11/13 07:31:40 jlam Exp $
 
-diff -ru /tmp/XmHTML-1.1.5/src/Imakefile XmHTML-1.1.5/src/Imakefile
---- /tmp/XmHTML-1.1.5/src/Imakefile	Fri Jun  5 00:52:46 1998
-+++ XmHTML-1.1.5/src/Imakefile	Sun Oct 31 21:01:10 1999
-@@ -107,7 +107,7 @@
+--- tools/Makefile.orig	Wed Feb  3 19:43:27 1999
++++ tools/Makefile	Tue Nov  2 01:38:36 1999
+@@ -88,7 +88,7 @@
  
- XCOMM
- XCOMM Header files used by various other targets in the XmHTML source tree
--PUBHDRS  = XmHTMLfuncs.h LZWStream.h XCC.h miniparse.h stack.h
-+PUBHDRS  = XmHTMLfuncs.h LZWStream.h XCC.h miniparse.h stack.h icons.h
+ httpget::  httpget.o
+ 	$(RM) $@ \ 
+-	$(CC) -o $@ $(LDFLAGS) httpget.o -L../http -lhttp $(DMALLOCLIB)
++	$(CC) -o $@ $(LDFLAGS) httpget.o ../http/libhttp.la $(DMALLOCLIB)
  
- XCOMM
- XCOMM Header files generated during compilation (via mkStrings)
-@@ -160,8 +160,6 @@
- SRCS = $(BASESRCS) $(GENSRCS) $(EXTRASRC) $(DEBSRC)
- OBJS = $(BASEOBJS) $(GENOBJS) $(EXTRAOBJ) $(DEBOBJ)
- 
--INSTALLFLAGS = $(INSTINCFLAGS)
--
- #define DoSharedLib SharedLibXmHTML
- #define DoNormalLib NormalLibXmHTML
- #define DoDebugLib  DebugLibXmHTML
-@@ -298,17 +296,36 @@
- #else
- lib$(LIBNAME).so: lib$(LIBNAME).so.$(SOXMHTMLLIBREV)
- 	$(RM) $@
--	ln -s $@$(SOXMHTMLLIBREV) $@
-+	ln -s lib$(LIBNAME).so.$(SOXMHTMLLIBREV) $@
- #endif /* SGIArchitecture */
- 
-+#if defined (XmHTMLLibInstall) && XmHTMLLibInstall
-+InstallSharedLibrary($(LIBNAME),$(SOXMHTMLLIBREV),$(XMHTMLLIBDIR))
-+# if HasSharedData
-+InstallSharedLibraryData($(LIBNAME),$(SOXMHTMLLIBREV),$(XHMTHMLLIBDIR))
-+# endif
-+#endif
-+
- clean::
- 	$(RM) lib$(LIBNAME).so 
- #endif /* DoSharedLib */
- 
-+#if defined (XmHTMLLibInstall) && XmHTMLLibInstall
-+InstallLibrary($(LIBNAME),$(XMHTMLLIBDIR))
-+# if !defined (DoSharedLib)
-+#  if DoProfileLib
-+InstallLibrary($(LIBNAME)_p,$(XMHTMLLIBDIR))
-+#  endif
-+#  if DoDebugLib
-+InstallLibrary($(LIBNAME)_d,$(XMHTMLLIBDIR))
-+#  endif
-+# endif
-+#endif
-+
- #endif /* ProjectX < 6 */
- 
- XCOMM rule to install header files
--InstallMultiple($(INSTHDRS),$(XMHTMLINCDIR))
-+InstallMultipleFlags($(HEADERS),$(XMHTMLINCDIR),$(INSTINCFLAGS))
- 
- depend:: $(SRCS)
- 
+ # gif to gzf converter
+ gif2gzf:: gif2gzf.o LZWStream.o ImBuffer.o

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 1999/11/07 17:25:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/11/13 07:31:39 jlam Exp $
 #
 
-DISTNAME=       XmHTML-1.1.5
+DISTNAME=       XmHTML-1.1.7
 CATEGORIES=	x11
 MASTER_SITES=   http://www.xs4all.nl/~ripley/XmHTML/dist/
 
@@ -14,8 +14,15 @@ DEPENDS+=	png-1.0.3:../../graphics/png
 
 USE_X11=	yes
 USE_MOTIF=	yes
+USE_GMAKE=	yes
+USE_LIBTOOL=	yes
 
-do-configure:
-	@(cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF})
+NO_CONFIGURE=	yes
+
+do-install:
+	${LIBTOOL} ${LIBTOOL_FLAGS} ${INSTALL_DATA} \
+		${WRKSRC}/lib/libXmHTML.la ${PREFIX}/lib
+	${INSTALL_DATA_DIR} ${PREFIX}/include/XmHTML
+	${INSTALL_DATA} ${WRKSRC}/include/XmHTML/*.h ${PREFIX}/include/XmHTML
 
 .include "../../mk/bsd.pkg.mk"
