@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 18:38:13 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/02 08:41:22 jlam Exp $
 
 DISTNAME=	libogg-1.0
 PKGNAME=	libogg-1.0.0.8
@@ -16,10 +16,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-GCC_VERSION!=		gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as it generates bad ogg files.
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
