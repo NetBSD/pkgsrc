@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 16:15:29 jmmv Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	6
@@ -11,8 +11,6 @@ MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
-
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_BUILDLINK2=		YES
@@ -21,6 +19,7 @@ USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
+USE_DIRS+=		xdg-x11-1.1
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES

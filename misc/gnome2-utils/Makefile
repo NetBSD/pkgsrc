@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/01 19:09:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/14 16:15:25 jmmv Exp $
 #
 
 DISTNAME=		gnome-utils-2.6.0
@@ -11,11 +11,11 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME2 utilities and applications
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes

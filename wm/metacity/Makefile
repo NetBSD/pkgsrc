@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/04/01 18:35:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/14 16:15:28 jmmv Exp $
 #
 
 DISTNAME=	metacity-2.8.0
@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make

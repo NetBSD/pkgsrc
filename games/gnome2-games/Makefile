@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/04/06 15:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/14 16:15:23 jmmv Exp $
 
 DISTNAME=		gnome-games-2.6.0
 PKGREVISION=		1
@@ -10,12 +10,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
 
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		librsvg2-gtk2>=2.6.3:../../graphics/librsvg2-gtk2
 
 CONFLICTS=		xbill-[0-9]*
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
