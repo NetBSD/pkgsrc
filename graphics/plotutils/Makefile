@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/21 14:46:50 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2004/05/31 16:47:48 minskim Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.gnu.org/software/plotutils/plotutils.html
 COMMENT=		Programs and library for plotting scientific data
 
 CONFLICTS+=		plotutils-nox11-[0-9]*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 06:05:04 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/31 16:47:47 minskim Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	1
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 COMMENT=	IRC client written and programmable in perl
 
 DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # supports IPv6 (actually, af independent)
 BUILD_DEFS+=	USE_INET6
@@ -50,6 +52,8 @@ IRC_SERVER=	${DEFAULT_IRC_SERVER}
 .else
 IRC_SERVER=	us.undernet.org
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/sirc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 15:25:13 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/31 16:47:48 minskim Exp $
 
 DISTNAME=		ghostscript-fonts-6.0
 CATEGORIES=		fonts
@@ -21,6 +21,8 @@ GS_FONTS_STD=		ghostscript-fonts-std-6.0.tar.gz
 GS_FONTS_OTHER=		ghostscript-fonts-other-6.0.tar.gz
 
 CONFLICTS=		ghostscript-[0-5]* ghostscript-x11-[0-5]*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=		ghostscript
 EXTRACT_ONLY=		# empty
