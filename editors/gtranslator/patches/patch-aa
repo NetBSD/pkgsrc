@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/07/27 22:14:43 agc Exp $
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/21 04:20:56 xtraeme Exp $
 
 --- src/Makefile.in	2004/07/27 22:04:36	1.1
 +++ src/Makefile.in	2004/07/27 22:05:12
