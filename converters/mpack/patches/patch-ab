@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:40:16 agc Exp $
+$NetBSD: patch-ab,v 1.4 2001/08/20 02:15:37 jlam Exp $
 
---- unixos.c.orig	Thu Feb 16 22:39:50 1995
-+++ unixos.c	Thu Feb 26 00:59:01 1998
+--- unixos.c.orig	Thu Feb 16 16:39:50 1995
++++ unixos.c
 @@ -29,6 +29,7 @@
  #include <sys/types.h>
  #include <sys/param.h>
@@ -22,41 +22,3 @@ $NetBSD: patch-ab,v 1.3 1998/08/07 10:40:16 agc Exp $
      }
      strcat(buf, "/m-prts-");
      p = getenv("USER");
-*** unixpk.man.bak	Fri Feb 17 00:39:50 1995
---- unixpk.man	Mon Nov 11 10:19:46 1996
-***************
-*** 136,142 ****
-  .SH ENVIRONMENT
-  .TP
-  .B TMPDIR
-! Directory to store temporary files.  Default is /usr/tmp.
-  .TP
-  .B SPLITSIZE
-  Default value of the -m switch.
---- 136,142 ----
-  .SH ENVIRONMENT
-  .TP
-  .B TMPDIR
-! Directory to store temporary files.  Default is /var/tmp.
-  .TP
-  .B SPLITSIZE
-  Default value of the -m switch.
-*** unixunpk.man.bak	Fri Feb 17 00:39:50 1995
---- unixunpk.man	Mon Nov 11 10:19:59 1996
-***************
-*** 107,113 ****
-  .SH ENVIRONMENT
-  .TP
-  .B TMPDIR
-! Directory to store temporary files.  Default is /usr/tmp.
-  .SH FILES
-  .TP
-  .B $TMPDIR/m-prts-$USER/
---- 107,113 ----
-  .SH ENVIRONMENT
-  .TP
-  .B TMPDIR
-! Directory to store temporary files.  Default is /var/tmp.
-  .SH FILES
-  .TP
-  .B $TMPDIR/m-prts-$USER/
