@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/23 20:58:42 danw Exp $
 
 DISTNAME=		xevil1.5.1e
 PKGNAME=		xevil-1.5.1e
@@ -16,5 +16,6 @@ MAKE_ENV=		HOSTTYPE="netbsd" \
 
 WRKSRC=			${WRKDIR}
 USE_X11BASE=		yes
+USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.pkg.mk"
