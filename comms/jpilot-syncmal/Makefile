@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/02 17:38:09 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/22 06:20:28 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
@@ -13,6 +13,9 @@ COMMENT=		MAL synchronization plugin for J-Pilot
 
 DEPENDS+=		jpilot>=0.99:../../comms/jpilot
 
+USE_BUILDLINK_ONLY=	# defined
+USE_CONFIG_WRAPPER=	# defined
+
 GNU_CONFIGURE=		# defined
 USE_X11=		# defined
 USE_GMAKE=		# defined
@@ -22,17 +25,16 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 PLIST_SUBST+=		PLUGINSDIR=${PLUGINSDIR:S/${PREFIX}\///}
 
-EVAL_PREFIX+=		GTKDIR=gtk+
-EVAL_PREFIX+=		JPILOTDIR=jpilot
-EVAL_PREFIX+=		PILOTLINKDIR=pilot-link
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
+CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_DIR}"
 CONFIGURE_ARGS+=	--with-mal-source="${WRKSRC}/../malsync"
-CONFIGURE_ARGS+=	--with-plugin-prefix="${JPILOTDIR}/include/jpilot"
-CONFIGURE_ARGS+=	--with-pilot-prefix="${PILOTLINKDIR}"
+CONFIGURE_ARGS+=	--with-plugin-prefix="${BUILDLINK_DIR}/include/jpilot"
+CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_DIR}"
 
 CFLAGS+=		-D__unix__=1
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libsyncmal.so ${PLUGINSDIR}
 
+.include "../../comms/jpilot/buildlink.mk"
+.include "../../comms/pilot-link/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
