@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/03/12 11:27:16 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/06 07:38:36 zuntum Exp $
 
-DISTNAME=	scanssh-1.5
+DISTNAME=	scanssh-1.55
 CATEGORIES=	security
 MASTER_SITES=	http://www.monkey.org/~provos/				\
 		ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/scanssh/
