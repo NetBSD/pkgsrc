@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/04/07 01:53:24 kim Exp $
+# $NetBSD: Makefile,v 1.22 2001/04/13 04:18:34 kim Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -15,10 +15,15 @@ MAKE_ENV=	SHELL=/bin/sh
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME
+BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME PROCMAIL_TRUSTED_IDS
 
-.ifdef(PROCMAIL_MAILSPOOLHOME)
+PROCMAIL_TRUSTED_IDS?=\
+"root","daemon","uucp","mail","x400","network","list","slist","lists","news",0
+
 pre-configure:
+	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\
+	>> ${WRKSRC}/config.h
+.ifdef(PROCMAIL_MAILSPOOLHOME)
 	${ECHO} "#define MAILSPOOLHOME \"/${PROCMAIL_MAILSPOOLHOME}\""	\
 	>> ${WRKSRC}/src/authenticate.h
 .endif

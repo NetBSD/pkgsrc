@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.194 2001/04/09 00:33:06 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.195 2001/04/13 04:18:33 kim Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -693,6 +693,11 @@ PAPERSIZE=	A4
 # specify the name of the mailbox file.
 # Possible: Any valid filename, not defined
 # Default: not defined
+
+#PROCMAIL_TRUSTED_IDS=0
+# To allow all users to use the "-f" switch set this to 0.
+# Possible: A list of users, terminated by a zero.
+# Default: see Makefile
 
 #QPOPPER_SERVERMODE=
 # Used in qpopper package to enable server mode.
