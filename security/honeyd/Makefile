@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/04/30 17:26:23 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/13 11:04:21 adrianp Exp $
 #
 
 DISTNAME=	honeyd-0.8b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security net
 MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://niels.xtdnet.nl/honeyd/index.php
 COMMENT=	Small daemon that creates virtual hosts on a network
 
@@ -18,6 +18,9 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=	honeyd
 RCD_SCRIPTS=		honeyd
+
+CONFIGURE_ENV+=		_PATH_PYTHON=${PYTHONBIN}
+LIBS.Linux+=		-lutil
 
 DIST_CONF_FILES=	nmap.assoc xprobe2.conf nmap.prints \
 			config.ethernet pf.os
@@ -33,6 +36,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
+.include "../../lang/python/extension.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
