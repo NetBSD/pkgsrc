@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
+$NetBSD: patch-ae,v 1.8 2002/11/06 18:39:55 frueauf Exp $
 
---- po/cs.po.orig	Wed Oct  3 13:53:41 2001
-+++ po/cs.po	Tue Jan 22 21:35:57 2002
-@@ -70,7 +70,7 @@ msgstr "v hlavièce 'Received' byla nalez
+--- po/cs.po-orig	Fri Oct 18 14:40:36 2002
++++ po/cs.po	Wed Nov  6 19:32:01 2002
+@@ -70,7 +70,7 @@
  
  #: driver.c:863
  msgid "message delimiter found while scanning headers\n"
@@ -11,16 +11,16 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:999
  #, c-format
-@@ -131,7 +131,7 @@ msgstr ""
+@@ -131,7 +131,7 @@
  #: driver.c:1528
  #, c-format
- msgid "\t%d msg %d octets long skipped by fetchmail.\r\n"
--msgstr "\t%d. zpráva o délce %d v bajtech byla fetchmailem pøeskoèena.\r\n"
-+msgstr "\t%d. zpráva o délce %d bajtù byla fetchmailem pøeskoèena.\r\n"
+ msgid "\t%d msg %d octets long skipped by fetchmail.\n"
+-msgstr "\t%d. zpráva o délce %d v bajtech byla fetchmailem pøeskoèena.\n"
++msgstr "\t%d. zpráva o délce %d bajtù byla fetchmailem pøeskoèena.\n"
  
  #: driver.c:1595
  msgid "SIGPIPE thrown from an MDA or a stream socket error\n"
-@@ -359,7 +359,7 @@ msgstr "Stahuji z %s\n"
+@@ -359,7 +359,7 @@
  #: driver.c:1975
  #, c-format
  msgid "%d %s (%d seen) for %s"
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:1976 driver.c:1981
  msgid "messages"
-@@ -372,12 +372,12 @@ msgstr "zpráv"
+@@ -372,12 +372,12 @@
  #: driver.c:1980
  #, c-format
  msgid "%d %s for %s"
@@ -44,7 +44,7 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:1992
  #, c-format
-@@ -392,22 +392,22 @@ msgstr "Zprávu %d vynechávám, délka -1\n
+@@ -392,22 +392,22 @@
  #: driver.c:2115
  #, c-format
  msgid "skipping message %d (%d octets)"
@@ -73,7 +73,7 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:2189
  msgid "header "
-@@ -416,30 +416,30 @@ msgstr "v hlavièce "
+@@ -416,30 +416,30 @@
  #: driver.c:2247
  #, c-format
  msgid " (%d body octets) "
@@ -110,7 +110,7 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:2429
  msgid "socket"
-@@ -480,12 +480,12 @@ msgstr "nedefinovaná\n"
+@@ -480,12 +480,12 @@
  #: driver.c:2464
  #, c-format
  msgid "%s error while delivering to SMTP host %s\n"
@@ -125,7 +125,7 @@ $NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
  
  #: driver.c:2474
  #, c-format
-@@ -890,7 +890,7 @@ msgstr "ukonèen signálem %d\n"
+@@ -890,7 +890,7 @@
  #: fetchmail.c:1380
  #, c-format
  msgid "%s querying %s (protocol %s) at %s\n"
