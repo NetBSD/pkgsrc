@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/09 22:54:14 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/05 04:46:31 jmc Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -18,8 +18,8 @@ DEPENDS+=		apache{,6}-1.3.*:../../www/apache
 HAS_CONFIGURE=	# yes
 GNU_CONFIGURE=	# yes
 
-CONFIGURE_ARGS+=	--with-database=postgres
-CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/pgsql"
+CONFIGURE_ARGS+=	--with-database=postgres --with-mm=${PREFIX}
+CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/pgsql -I${PREFIX}/include/httpd"
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
