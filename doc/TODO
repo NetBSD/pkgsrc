@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.775 2003/08/10 11:23:28 recht Exp $
+$NetBSD: TODO,v 1.776 2003/08/10 14:45:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -88,7 +88,6 @@ Suggested package updates
 	o courier-auth-0.42.2 [pkg/22371]
 	o courier-imap-2.0 [pkg/22374]
 	o crafty-19.1
-	o crimsonfields-0.3.5
 	o crossfire-1.5.0
 	o csound-4.24.1
 	o cxref-1.5e

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3019 2003/08/10 11:37:13 rh Exp $
+$NetBSD: CHANGES,v 1.3020 2003/08/10 14:44:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3229,3 +3229,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-gtk2 to 1.99.17 [recht 2003-08-09]
 	Added offlineimap-4.0.0 [seb 2003-08-10]
 	Updated Gorm to 0.3.0 [rh 2003-08-10]
+	Updated crimsonfields to 0.3.5 [wiz 2003-08-10]
