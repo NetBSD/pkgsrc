@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.6 2004/01/31 21:58:52 recht Exp $
+# $NetBSD: xfree,v 1.7 2004/02/16 23:39:36 jlam Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -147,7 +147,6 @@ include/X11/Xaw/ViewportP.h
 include/X11/Xaw/XawImP.h
 include/X11/Xaw/XawInit.h
 include/X11/Xcms.h
-include/X11/Xcursor/Xcursor.h
 include/X11/Xdefs.h
 include/X11/Xdmcp.h
 include/X11/Xft/Xft.h
@@ -328,7 +327,6 @@ include/X11/extensions/Xdbe.h
 include/X11/extensions/Xdbeproto.h
 include/X11/extensions/Xext.h
 include/X11/extensions/Xinerama.h
-include/X11/extensions/Xrandr.h
 include/X11/extensions/Xv.h
 include/X11/extensions/XvMC.h
 include/X11/extensions/XvMClib.h
@@ -354,8 +352,6 @@ include/X11/extensions/multibuf.h
 include/X11/extensions/multibufst.h
 include/X11/extensions/panoramiXext.h
 include/X11/extensions/panoramiXproto.h
-include/X11/extensions/randr.h
-include/X11/extensions/randrproto.h
 include/X11/extensions/record.h
 include/X11/extensions/recordstr.h
 include/X11/extensions/saver.h
@@ -401,9 +397,6 @@ include/X11/fonts/fontenc.h
 include/X11/fonts/fsmasks.h
 include/X11/keysym.h
 include/X11/keysymdef.h
-include/fontconfig/fcfreetype.h
-include/fontconfig/fcprivate.h
-include/fontconfig/fontconfig.h
 include/xf86Optrec.h
 include/xf86Parser.h
 lib/libFS.a
@@ -473,13 +466,6 @@ lib/libXaw.6.dylib
 lib/libXaw.6.1.dylib
 lib/libXaw.7.dylib
 lib/libXaw.7.0.dylib
-lib/libXcursor.a
-lib/libXcursor.so
-lib/libXcursor.so.1
-lib/libXcursor.so.1.0
-lib/libXcursor.dylib
-lib/libXcursor.1.dylib
-lib/libXcursor.1.0.dylib
 lib/libXdmcp.a
 lib/libXdmcp.so
 lib/libXdmcp.so.6
@@ -559,17 +545,6 @@ lib/libXp.so.6.2
 lib/libXp.dylib
 lib/libXp.6.dylib
 lib/libXp.6.2.dylib
-lib/libXrandr.a
-lib/libXrandr.so
-lib/libXrandr.so.1
-lib/libXrandr.so.1.0
-lib/libXrandr.so.2
-lib/libXrandr.so.2.0
-lib/libXrandr.dylib
-lib/libXrandr.1.dylib
-lib/libXrandr.1.0.dylib
-lib/libXrandr.2.dylib
-lib/libXrandr.2.0.dylib
 lib/libXss.a
 lib/libXss.so
 lib/libXss.so.1
@@ -636,13 +611,6 @@ lib/libexpat.dylib
 lib/libexpat.1.dylib
 lib/libexpat.1.0.dylib
 lib/libfntstubs.a
-lib/libfontconfig.a
-lib/libfontconfig.so
-lib/libfontconfig.so.1
-lib/libfontconfig.so.1.0
-lib/libfontconfig.dylib
-lib/libfontconfig.1.dylib
-lib/libfontconfig.1.0.dylib
 lib/libfontenc.a
 lib/libfontenc.so
 lib/libfontenc.so.1
