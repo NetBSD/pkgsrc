@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1 1998/08/20 22:07:25 agc Exp $
+
+Install scripts correctly
+
+--- Makefile.in.orig	Sat Aug  8 23:10:55 1998
++++ Makefile.in	Sat Aug  8 23:11:08 1998
+@@ -48,7 +48,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -86,7 +86,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-SUBDIRS=libIDL src test
++SUBDIRS=libIDL src
+ 
+ bin_SCRIPTS=orbit-config
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -307,7 +307,7 @@
+ uninstall: uninstall-recursive uninstall-am
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='${INSTALL_SCRIPT}' install
+ installdirs: installdirs-recursive
+ 	$(mkinstalldirs)  $(DATADIR)$(bindir)
+ 
