@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
+$NetBSD: patch-an,v 1.5 2004/08/22 15:11:09 taca Exp $
 
---- configure.in.orig	2004-06-07 00:53:25.000000000 +0900
+--- configure.in.orig	2004-08-20 18:35:25.000000000 +0900
 +++ configure.in
 @@ -489,7 +489,7 @@ AC_ARG_ENABLE(snmp,
  [ if test "$enableval" = "yes" ; then
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
      AM_CONDITIONAL(USE_SNMP, true)
      SNMP_MAKEFILE=./snmplib/Makefile
      makesnmplib=snmplib
-@@ -1184,6 +1184,7 @@ AC_CHECK_HEADERS( \
+@@ -1207,6 +1207,7 @@ AC_CHECK_HEADERS( \
  	libc.h \
  	limits.h \
  	linux/netfilter_ipv4.h \
@@ -19,7 +19,7 @@ $NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
  	malloc.h \
  	math.h \
  	memory.h \
-@@ -1234,6 +1235,7 @@ AC_CHECK_HEADERS( \
+@@ -1257,6 +1258,7 @@ AC_CHECK_HEADERS( \
  	syslog.h \
  	time.h \
  	unistd.h \
@@ -27,7 +27,7 @@ $NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
  	utime.h \
  	varargs.h \
  	byteswap.h \
-@@ -1409,8 +1411,17 @@ AC_CHECK_TYPE(pid_t, int)
+@@ -1432,8 +1434,17 @@ AC_CHECK_TYPE(pid_t, int)
  AC_CHECK_TYPE(size_t, unsigned int)
  AC_CHECK_TYPE(ssize_t, int)
  AC_CHECK_TYPE(off_t, int)
@@ -47,7 +47,7 @@ $NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
  
  AC_CHECK_SIZEOF_SYSTYPE(off_t, 4)
  AC_CHECK_SIZEOF_SYSTYPE(size_t, 4)
-@@ -1614,8 +1625,8 @@ if test "$GCC" = "yes"; then
+@@ -1637,8 +1648,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	[2.95.[123]])
@@ -58,7 +58,7 @@ $NetBSD: patch-an,v 1.4 2004/06/06 16:01:03 taca Exp $
  		;;
  	esac
  fi
-@@ -1710,6 +1721,7 @@ AC_CHECK_FUNCS(\
+@@ -1733,6 +1744,7 @@ AC_CHECK_FUNCS(\
  	setrlimit \
  	getrlimit \
  	setsid \

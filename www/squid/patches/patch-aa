@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2003/03/25 17:44:23 taca Exp $
+$NetBSD: patch-aa,v 1.13 2004/08/22 15:11:09 taca Exp $
 
---- src/Makefile.in.orig	2003-02-12 11:03:14.000000000 +0900
+--- src/Makefile.in.orig	2004-06-08 20:37:22.000000000 +0900
 +++ src/Makefile.in
-@@ -378,14 +378,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+@@ -380,14 +380,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
  DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.12 2003/03/25 17:44:23 taca Exp $
  
  DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"
  
-@@ -836,20 +837,20 @@ CCDEPMODE = @CCDEPMODE@
+@@ -838,20 +839,20 @@ CCDEPMODE = @CCDEPMODE@
  uninstall-info-am:
  install-dataDATA: $(data_DATA)
  	@$(NORMAL_INSTALL)
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.12 2003/03/25 17:44:23 taca Exp $
  	done
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
-@@ -1048,7 +1049,7 @@ info-am:
+@@ -1050,7 +1051,7 @@ info-am:
  install-data-am: install-data-local install-dataDATA
  
  install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.12 2003/03/25 17:44:23 taca Exp $
  
  install-info: install-info-recursive
  
-@@ -1066,7 +1067,7 @@ mostlyclean-am: mostlyclean-compile most
+@@ -1068,7 +1069,7 @@ mostlyclean-am: mostlyclean-compile most
  
  uninstall-am: uninstall-binPROGRAMS uninstall-dataDATA uninstall-info-am \
  	uninstall-libexecPROGRAMS uninstall-local \
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.12 2003/03/25 17:44:23 taca Exp $
  
  uninstall-info: uninstall-info-recursive
  
-@@ -1149,19 +1150,12 @@ repl_modules.c: repl_modules.sh Makefile
+@@ -1151,19 +1152,12 @@ repl_modules.c: repl_modules.sh Makefile
  auth_modules.c: auth_modules.sh Makefile
  	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
  

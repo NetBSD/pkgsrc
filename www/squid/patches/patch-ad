@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2004/06/07 00:27:02 taca Exp $
+$NetBSD: patch-ad,v 1.7 2004/08/22 15:11:09 taca Exp $
 
---- errors/Makefile.in.orig	2003-12-01 19:13:57.000000000 +0900
+--- errors/Makefile.in.orig	2004-06-08 20:37:11.000000000 +0900
 +++ errors/Makefile.in
-@@ -116,7 +116,7 @@ am__quote = @am__quote@
+@@ -118,7 +118,7 @@ am__quote = @am__quote@
  install_sh = @install_sh@
  makesnmplib = @makesnmplib@
  
