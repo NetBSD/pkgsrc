@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.4 2003/10/07 19:35:34 hubertf Exp $
-
---- nidentd.orig	Sat May  4 14:53:01 2002
-+++ nidentd
+--- nidentd.orig	2002-05-04 14:53:01.000000000 +0200
++++ nidentd	2004-11-02 20:12:43.000000000 +0200
 @@ -2,8 +2,8 @@
  
  v_lsof="/usr/pkg/sbin/lsof -P -n -Di"
@@ -13,11 +11,13 @@ $NetBSD: patch-aa,v 1.4 2003/10/07 19:35:34 hubertf Exp $
  
  # Protocol independent
  
-@@ -40,7 +40,7 @@ if [ -n $qlport ] && [ -n $qrport ] && [
+@@ -39,8 +39,8 @@
+   then
      if [ $qlport -eq $lport ] && [ $qrport -eq $rport ]
        then
- 		masqip=`$v_ipnat -l | grep -e "MAP" -e " $qlport " -e " $qrport" | awk '{ print $2 }' | tr -c -d '.1234567890'`
+-		masqip=`$v_ipnat -l | grep -e "MAP" -e " $qlport " -e " $qrport" | awk '{ print $2 }' | tr -c -d '.1234567890'`
 -		hostn=`grep ^$masqip $v_nat_conf | awk -F: '{ print $2 }'`
++		masqip=`$v_ipnat -l | grep "MAP" | grep " $qlport " | grep " $qrport" | awk '{ print $2 }' | tr -c -d '.1234567890'`
 +		hostn=`grep ^"$masqip:" $v_nat_conf | awk -F: '{ print $2 }'`
          if [ $hostn ]
            then
