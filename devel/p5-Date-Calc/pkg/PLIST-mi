@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/12/28 12:08:17 simonb Exp $
+lib/perl5/man/man3/Date::Calc.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Date/Calc/.packlist
+lib/perl5/site_perl/Date/Calc.pm
