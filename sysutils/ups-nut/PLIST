@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/11/18 00:41:20 lukem Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/11/19 04:40:00 lukem Exp $
 bin/aeg
 bin/apcsmart
 bin/belkin
@@ -92,4 +92,3 @@ share/doc/nut/ups-trust425+625.txt
 share/doc/nut/upssched.txt
 @dirrm share/doc/nut/cables
 @dirrm share/doc/nut
-@dirrm etc/nut
