@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.248 2004/06/04 20:15:28 mrauch Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.249 2004/06/06 22:04:55 minskim Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -148,6 +148,11 @@ CROSSBASE?=	${LOCALBASE}/cross
 # Where "cross" category packages install
 # Possible: any path
 # Default: ${LOCALBASE}/cross
+
+VARBASE?=	/var
+# Where files containing local state information are installed
+# Possible: any path
+# Default: /var
 
 #X11BASE?=	/usr/X11R6
 # Where X11 is installed on the system.
@@ -564,10 +569,10 @@ AMANDA_USER?=	backup
 # Possible: any user name
 # Default: backup
 
-AMANDA_VAR?=	/var/amanda
+AMANDA_VAR?=	${VARBASE}/amanda
 # Specifies the directory in which amanda puts its logs and status
 # files. 
-# Default: /var/amanda
+# Default: ${VARBASE}/amanda
 
 #APACHE_CUSTOM_CFLAGS=
 # Used in apache and apache6 to pass extra CFLAGS to the compiler during
@@ -781,9 +786,9 @@ DEFANG_USER?=	defang
 # Possible: any user name
 # Default: defang
 
-DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
+DEFANG_SPOOLDIR?=	${VARBASE}/spool/MIMEDefang
 # Location of spool and quarantined files for the mimedefang package
-# Default: /var/amanda
+# Default: ${VARBASE}/spool/MIMEDefang
 
 #DEFAULT_IRC_SERVER=
 # Used in ircII to set the default irc server. 
@@ -1011,11 +1016,11 @@ GRUB_USE_UFS2?=		NO
 # Possible: yes or no.
 # Default: no.
 
-ICECAST_CHROOTDIR?=	  /var/chroot/icecast
+ICECAST_CHROOTDIR?=	  ${VARBASE}/chroot/icecast
 # Used in icecast2 to specify the chroot directory in which icecast
 # will be allowed to work.
 # Possible: Any valid directory
-# Default: /var/chroot/icecast
+# Default: ${VARBASE}/chroot/icecast
 
 #ICECAST_CHUNKLEN=512
 # If you want a larger backlog for each client, which will allow for
@@ -1060,15 +1065,15 @@ IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Possible: not defined, YES
 # Default: not defined
 
-IMDICTDIR?=	/var/dict
+IMDICTDIR?=	${VARBASE}/dict
 # Specify the directory for input method's dictionary installation.
 # Possible: any valid location
-# Default: /var/dict 
+# Default: ${VARBASE}/dict 
 
-INN_DATA_DIR?= /var/news
+INN_DATA_DIR?= ${VARBASE}/news
 # Used by inn to specify the data directory.
 # Possible: any path you like
-# Default: /var/news
+# Default: ${VARBASE}/news
 
 INN_USER?=	news
 # Used by inn to specify the username 
@@ -1149,28 +1154,28 @@ IRCD_HYBRID_USE_SYSLOG?=	NO
 # Possible: YES, NO
 # Default: NO
 
-IRCD_HYBRID_LPATH?=	/var/log/ircd-hybrid.log
+IRCD_HYBRID_LPATH?=	${VARBASE}/log/ircd-hybrid.log
 # Used by ircd-hybrid. Specify the pathname of the daemon logfile.
 # Note: only used if IRCD_HYBRID_USE_LOGFILE is "YES".
 # Possible: any path
-# Default: /var/log/ircd-hybrid.log
+# Default: ${VARBASE}/log/ircd-hybrid.log
 
-IRCD_HYBRID_FNAME_USERLOG?=	/var/log/ircd-hybrid.users.log
+IRCD_HYBRID_FNAME_USERLOG?=	${VARBASE}/log/ircd-hybrid.users.log
 # Used by ircd-hybrid. Specify the pathname of the user connections logfile.
 # IRCD_HYBRID_USE_SYSLOG should be set to "YES" for this logfile be used.
 # Possible: any path
-# Default: /var/log/ircd-hybrid.users.log
+# Default: ${VARBASE}/log/ircd-hybrid.users.log
 
-IRCD_HYBRID_FNAME_OPERLOG?=	/var/log/ircd-hybrid.opers.log
+IRCD_HYBRID_FNAME_OPERLOG?=	${VARBASE}/log/ircd-hybrid.opers.log
 # Used by ircd-hybrid. Specify the pathname of the operator connections
 # logfile.
 # Possible: any path
-# Default: /var/log/ircd-hybrid.opers.log
+# Default: ${VARBASE}/log/ircd-hybrid.opers.log
 
-IRCD_HYBRID_PPATH?=		/var/run/ircd-hybrid.pid
+IRCD_HYBRID_PPATH?=		${VARBASE}/run/ircd-hybrid.pid
 # Used by ircd-hybrid. Specify the pathname of the daemon pid file.
 # Possible: any path
-# Default: /var/run/ircd-hybrid.pid
+# Default: ${VARBASE}/run/ircd-hybrid.pid
 
 IRCD_HYBRID_SYSLOG_FACILITY?=	LOG_LOCAL4
 # Used by ircd-hybrid. Specify which syslog facility the daemon should use
@@ -1269,23 +1274,23 @@ JABBERD_GROUP?=	jabberd
 # Possible: any valid group
 # Default: jabberd
 
-JABBERD_LOGDIR?= /var/log/jabberd
+JABBERD_LOGDIR?= ${VARBASE}/log/jabberd
 # Used in jabberd to specify the default directory under which log
 # files are placed.
 # Possible: any directory
-# Default: /var/log/jabberd
+# Default: ${VARBASE}/log/jabberd
 
-JABBERD_SPOOLDIR?= /var/spool/jabberd
+JABBERD_SPOOLDIR?= ${VARBASE}/spool/jabberd
 # Used in jabberd to specify the default directory under which server
 # information is stored.
 # Possible: any directory
-# Default: /var/spool/jabberd
+# Default: ${VARBASE}/spool/jabberd
 
-JABBERD_PIDDIR?= /var/run/jabberd
+JABBERD_PIDDIR?= ${VARBASE}/run/jabberd
 # Used in jabberd to specify the default directory under which pid
 # files are placed.
 # Possible: any directory
-# Default: /var/run/jabberd
+# Default: ${VARBASE}/run/jabberd
 
 JAKARTA_HOME?= ${JAVA_HOME}/jakarta
 # Used by the www/jakarta-tomcat package to choose an install location
@@ -1385,10 +1390,10 @@ KERBEROS_PREFIX_CMDS?=	no
 # Possible:  a URL prefix
 # Default: none
 
-LEAFNODE_DATA_DIR?= /var/news
+LEAFNODE_DATA_DIR?= ${VARBASE}/news
 # Used by leafnode to specify the data directory.
 # Possible: any path you like
-# Default: /var/news
+# Default: ${VARBASE}/news
 # Note: default is the same as INN_DATA_DIR
 
 LEAFNODE_USER?=	news
@@ -1456,10 +1461,10 @@ MAJORDOMO_GROUP?= majordom
 # Possible: any
 # Default: majordom
 
-MAJORDOMO_TMPDIR?= /var/tmp
+MAJORDOMO_TMPDIR?= ${VARBASE}/tmp
 # Used by the majordomo package as the directory to store temp files.
 # Possible: any directory.
-# Default: /var/tmp
+# Default: ${VARBASE}/tmp
 
 MAJORDOMO_USER?= majordom
 # Used by majordomo package as the userid majordomo runs at.
@@ -1584,11 +1589,11 @@ MUTT_USE_SSL?= YES
 # Possible: any group name
 # Default: mysql
 
-#MYSQL_DATADIR?=	/var/mysql
+#MYSQL_DATADIR?=	${VARBASE}/mysql
 # Home directory of the mysql administrator and location of the
 # database files. 
 # Possible: any directory
-# Default: /var/mysql
+# Default: ${VARBASE}/mysql
 
 #MYSQL_CHARSET=		latin1
 # default character set of mysql.
@@ -1641,11 +1646,11 @@ NMH_PAGER?= more
 # Possible: not defined, YES
 # Default: not defined
 
-OPENSSH_CHROOT?=	/var/chroot/sshd
+OPENSSH_CHROOT?=	${VARBASE}/chroot/sshd
 # The chroot directory for OpenSSH with privilege separation. This directory
 # will be created and MUST be only readable by root.
 # Possible: any directory
-# Default: /var/chroot/sshd
+# Default: ${VARBASE}/chroot/sshd
 
 OPENSSH_USER?=		sshd
 # The unprivileged user for OpenSSH with privilege separation.
@@ -1677,10 +1682,10 @@ P4GROUP?=	p4admin
 # Possible: any group name
 # Default: p4admin
 
-P4ROOT?=	/var/perforce
+P4ROOT?=	${VARBASE}/perforce
 # The directory where the Perforce server will store its depot.
 # Possible: any directory
-# Default: /var/perforce
+# Default: ${VARBASE}/perforce
 
 P4PORT?=	1666
 # The TCP port on which the Perforce server will listen.
@@ -1852,10 +1857,10 @@ PVM_SSH?=	${LOCALBASE}/bin/ssh
 # Possible:  Any rsh/ssh program.
 # Default:   /usr/bin/ssh if it exists, otherwise ${LOCALBASE}/bin/ssh
 
-QMAILDIR?=	/var/qmail
+QMAILDIR?=	${VARBASE}/qmail
 # Specify the directory for qmail installation
 # Possible: any valid location
-# Default: /var/qmail
+# Default: ${VARBASE}/qmail
 
 QPOPPER_FAC?= LOCAL1
 # Used by qpopper package as the default syslog facility.
@@ -1879,11 +1884,11 @@ RASMOL_DEPTH?= 8
 # Possible: 8, 16, 32
 # Default: 8
 
-RPM_DB_PREFIX?=	/var/pkg
+RPM_DB_PREFIX?=	${VARBASE}/pkg
 # Used in the rpm package to note the prefix of the path to the RPM
 # databases.  The RPM databases are stored in ${RPM_DB_PREFIX}/lib/rpm.
 # Possible: any valid location, e.g. ${LOCALBASE}
-# Default: /var/pkg
+# Default: ${VARBASE}/pkg
 
 #SAWFISH_THEMES=
 # Specifies the DISTFILES for wm/sawfish-themes, to allow the user to choose
