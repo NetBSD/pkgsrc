@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.9 2003/08/21 02:06:15 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.10 2003/08/21 04:07:38 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -367,10 +367,5 @@ _COMPILER_LD_FLAG=		# pattern for Sun compilers
 .else
 _COMPILER_LD_FLAG=	-Wl,	# pattern for GCC and others
 .endif
-
-# The style of installation to be performed for the package.
-# Possible: overwrite, pkgviews
-#
-PKG_INSTALLATION_TYPE?=	overwrite
 
 .endif	# BSD_PKG_MK

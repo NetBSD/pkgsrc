@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.24 2003/08/21 02:06:13 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.25 2003/08/21 04:07:37 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -87,13 +87,37 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 
 INTERACTIVE_STAGE?=	none
 
+# The style of installation to be performed for the package.
+# Possible: overwrite, pkgviews
+#
+PKG_INSTALLATION_TYPE?=	overwrite
+
 # PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
-# "overwrite".  If we don't explicitly ask for "pkgviews", assume
 # "overwrite".
 #
 .if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
     (${PKG_INSTALLATION_TYPE} != "overwrite")
-PKG_FAIL_REASON=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
+PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
+.endif
+
+# The style of PLISTs that are used by the installed package.
+# Possible: dynamic, static
+#
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PLIST_TYPE?=		dynamic
+.else # ${PKG_INSTALLATION_TYPE} == "overwrite"
+PLIST_TYPE?=		static
+.endif
+
+# PLIST_TYPE can only be one of two values: "dynamic" or "static".  If we
+# don't explicitly ask for "static", assume "dynamic".
+#
+.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
+.endif
+
+.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
@@ -111,7 +135,7 @@ _USE_BUILDLINK3=	yes
 _USE_BUILDLINK3=	no
 .endif
 .if empty(USE_BUILDLINK2:M[nN][oO]) && empty(_USE_BUILDLINK3:M[nN][oO])
-PKG_FAIL_REASON=	"Please undefine USE_BUILDLINK2 when using pkgviews."
+PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 when using pkgviews."
 .endif
 
 .if defined(USE_IMAKE)
@@ -162,7 +186,9 @@ PKG_DBDIR=		${PKG_DBDIR_DFLT}
 PKG_DBDIR=		${DEPOTBASE}
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
-PLIST_SRC=		# empty, since we use dynamic PLIST generation
+.  if ${PLIST_TYPE} == "dynamic"
+PLIST_SRC=		# empty, since we're using a dynamic PLIST
+.  endif
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
 # in pkg_views(1).  It's used by the dynamic PLIST generator to skip
@@ -4722,7 +4748,7 @@ ${MESSAGE}: ${MESSAGE_SRC}
 #	the contents of ${PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.if ${PLIST_TYPE} == "dynamic"
 _PLIST_IGNORE_CMD=							\
 	( while read i; do						\
 		ignore=no;						\
