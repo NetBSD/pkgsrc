@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/16 01:20:53 rh Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/16 06:19:23 rh Exp $
 #
 
 DISTNAME=		gnustep-base-1.10.1
@@ -11,9 +11,6 @@ HOMEPAGE=		http://www.gnustep.org/
 COMMENT=		GNUstep SSL bundle
 
 BUILDLINK_DEPENDS.gnustep-base=	gnustep-base>1.10.1
-
-CONFLICTS+=		gnustep-base<1.9.1
-CONFLICTS+=		gnustep-base-1.10.1
 
 PTHREAD_LIBS=		-lpthread
 
