@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+
+SHA1 (pulsar-0.1.1.tar.bz2) = bc99f184809f42b312d23d76aa34f01db65ac823
+Size (pulsar-0.1.1.tar.bz2) = 149675 bytes
+SHA1 (patch-aa) = 7b6ee91a55ec8c583df2bd0a407e9e43bd9e2c3f
+SHA1 (patch-ab) = 9d6e97c0acf22b9da0de902c86ca46d091c16d54
+SHA1 (patch-ac) = 50c2f0a9af1dda1da9f538cfe188c025426ab79c
+SHA1 (patch-ad) = 1639d523b3f50959a273344f55f818249fbe06d9
+SHA1 (patch-ae) = de62aeb31eaef019a02e2ecfdf91b31d8eca1fea
+SHA1 (patch-af) = 4fe6b687d71f27dd7755ba4cf4608a4883ce3aa5
+SHA1 (patch-ag) = 5b257bf3d96283a3676cb8ed108a981a5f295b1b
