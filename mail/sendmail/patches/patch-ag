@@ -1,8 +1,0 @@
-$NetBSD: patch-ag,v 1.2 2000/08/18 12:43:55 itojun Exp $
---- sendmail/conf.h-	Fri Aug 18 21:39:32 2000
-+++ sendmail/conf.h	Fri Aug 18 21:39:43 2000
-@@ -63,3 +63,3 @@
- # define CHECK_WARNING	1	/* use ruleset for decision on delay warning */
--# define RCPT_HASH	1	/* use hash to check address duplicates */
-+# define RCPT_HASH	0	/* use hash to check address duplicates */
- /* ===========================  parameters  =========================== */
