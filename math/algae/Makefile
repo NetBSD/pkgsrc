@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:47:19 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 16:28:55 jtb Exp $
 
 DISTNAME=		algae-4.1.3
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=algae/}
 
