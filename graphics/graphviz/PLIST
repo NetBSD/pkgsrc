@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/28 13:49:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/01 18:33:41 seb Exp $
 bin/acyclic
 bin/ccomps
 bin/colorize
 bin/dot
 bin/dotty
+@comment bin/dynagraph
 bin/gc
 bin/gpr
+@comment bin/graphsearch
 bin/lefty
 bin/lneato
 bin/neato
@@ -17,6 +19,7 @@ bin/twopi
 bin/unflatten
 include/graphviz/aghdr.h
 include/graphviz/agraph.h
+include/graphviz/ast_common.h
 include/graphviz/cdt.h
 include/graphviz/dthdr.h
 include/graphviz/exgram.h
@@ -143,14 +146,15 @@ man/mann/tcldot.n
 man/mann/tkspline.n
 share/doc/graphviz/COPYING
 share/doc/graphviz/Dot.ref
-share/doc/graphviz/FAQ.html
 share/doc/graphviz/MINTERMS.txt
 share/doc/graphviz/dotguide.pdf
 share/doc/graphviz/dottyguide.pdf
-share/doc/graphviz/gd.html
 share/doc/graphviz/leftyguide.pdf
 share/doc/graphviz/neatoguide.pdf
-share/doc/graphviz/tcldot.html
+share/doc/html/graphviz/FAQ.html
+@comment share/doc/html/graphviz/dynagraph.html
+share/doc/html/graphviz/gd.html
+share/doc/html/graphviz/tcldot.html
 share/examples/graphviz/dge
 share/examples/graphviz/dge.README
 share/examples/graphviz/dge.example1.dot
@@ -253,6 +257,7 @@ share/graphviz/lefty/tree.lefty
 @dirrm share/graphviz
 @dirrm share/examples/graphviz/pathplan_data
 @dirrm share/examples/graphviz
+@dirrm share/doc/html/graphviz
 @dirrm share/doc/graphviz
 @dirrm lib/graphviz
 @dirrm include/graphviz
