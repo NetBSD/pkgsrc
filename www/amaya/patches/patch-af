@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.4 2002/07/01 02:23:17 kristerw Exp $
+--- ../config.h.in.orig	Mon Jul  1 02:52:16 2002
++++ ../config.h.in	Mon Jul  1 02:52:51 2002
+@@ -321,6 +321,9 @@
+ /* Define if you have the <unixlib.h> header file.  */
+ #undef HAVE_UNIXLIB_H
+ 
++/* Define if you have the <wchar.h> header file.  */
++#undef HAVE_WCHAR_H
++
+ /* Define if you have the dl library (-ldl).  */
+ #undef HAVE_LIBDL
+ 
