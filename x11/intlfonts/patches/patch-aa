@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/07 22:13:06 tron Exp $
+
+--- Makefile.orig	Mon Feb 22 15:42:45 1999
++++ Makefile	Mon Feb 22 15:43:55 1999
+@@ -1,8 +1,8 @@
+-INSTALLDIR = /usr/local/share/emacs/fonts
++INSTALLDIR = ${PREFIX}/lib/X11/fonts/intlfonts
+ 
+-BDFTOPCF = bdftopcf
+-MKFONTDIR = mkfontdir
+-COMPRESS =
++BDFTOPCF = ${PREFIX}/bin/bdftopcf
++MKFONTDIR = ${PREFIX}/bin/mkfontdir
++COMPRESS = gzip
+ 
+ SUBDIRS =	European Asian Chinese Japanese Ethiopic Misc
+ SUBDIRS_X =	Chinese-X Japanese-X Korean-X
+@@ -73,9 +73,6 @@
+ 	@if [ -d $@ -a ! -f making.all ] ; then \
+ 	  echo "Building ${INSTALLDIR}/fonts.dir..." ; \
+ 	  cd ${INSTALLDIR}; ${MKFONTDIR} ; \
+-	  echo "-----------------------------------------------------------------------" ; \
+-	  echo "Please read README for how to inform your X server about the new fonts." ; \
+-	  echo "-----------------------------------------------------------------------" ; \
+ 	else true ; fi
+ 
+ all:
+@@ -85,9 +82,6 @@
+ 	@rm -f making.all
+ 	echo "Building ${INSTALLDIR}/fonts.dir..."
+ 	cd ${INSTALLDIR}; $(MKFONTDIR)
+-	@echo "-----------------------------------------------------------------------"
+-	@echo "Please read README for how to inform your X server about the new fonts."
+-	@echo "-----------------------------------------------------------------------"
+ 
+ clean:
+ 	rm -fr ${SUBDIRS} ${SUBDIRS_X} ${SUBDIRS_BIG}
