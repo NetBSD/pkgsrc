@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/12 22:57:38 xtraeme Exp $
-#
+# $NetBSD: Makefile,v 1.10 2004/02/10 00:20:29 jlam Exp $
 
 DISTNAME=	gnutls-1.0.4
 CATEGORIES=	security devel
@@ -9,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
@@ -25,10 +24,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${EGDIR}
 
-.include "../../archivers/liblzo/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/libgcrypt/buildlink2.mk"
-.include "../../security/libtasn1/buildlink2.mk"
-.include "../../security/opencdk/buildlink2.mk"
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
+.include "../../security/opencdk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
