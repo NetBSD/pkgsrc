@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/08/04 21:36:52 minskim Exp $$)C
+$NetBSD: patch-aa,v 1.6 2004/08/04 21:42:36 minskim Exp $
 
 --- src/fe-gtk/fkeys.c.orig	2004-07-01 11:28:43.000000000 -0500
 +++ src/fe-gtk/fkeys.c
