@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: REQ,v 1.2 1999/09/19 04:24:56 jlam Exp $
+# $NetBSD: REQ,v 1.3 1999/09/19 17:05:31 jlam Exp $
 
 PGUSER=@PGUSER@
 PGGROUP=@PGGROUP@
@@ -17,6 +17,18 @@ then
 fi
 
 
+# Group... the default's shipped with NetBSD
+# We need to check that ${PGGROUP} exists before adding the user with
+# addnerd.
+#
+if grep "^${PGGROUP}:" /etc/group 2>&1 >/dev/null
+then
+	echo "Group '$PGGROUP' already exists, proceeding."
+else
+	echo "Please add group '$PGGROUP' to /etc/group before installing."
+	exit 1
+fi
+
 # use finger to be able to use NIS, ...
 if finger ${PGUSER} 2>&1 | grep >/dev/null "no such user"
 then
@@ -25,15 +37,4 @@ then
 	echo Done.
 else
 	echo "User '$PGUSER' already exists, proceeding."
-fi
-
-
-# Group... the default's shipped with NetBSD
-#
-if grep "^${PGGROUP}:" /etc/group 2>&1 >/dev/null
-then
-	echo "Group '$PGGROUP' already exists, proceeding."
-else
-	echo "Please add group '$PGGROUP' to /etc/group, then restart."
-	exit 1
 fi
