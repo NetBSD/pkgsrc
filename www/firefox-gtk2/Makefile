@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/03/10 12:58:13 taya Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/11 04:22:47 snj Exp $
 
 MOZILLA=	firefox-gtk2
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	0.8
-PKGREVISION=	1
+PKGREVISION=	2
 EXTRACT_SUFX=	.tar.bz2
 
 DISTNAME=	firefox-source-${MOZ_VER}
@@ -28,5 +28,6 @@ CONFIGURE_ARGS+=	--enable-extensions=default,-irc
 USE_GCC_SHLIB=		yes
 BUILD_MATHML=		# defined
 MOZILLA_USE_GTK2=	# defined
+MOZILLA_USE_XFT=	YES
 
 .include "../../www/mozilla/Makefile.common"
