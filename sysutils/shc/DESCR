@@ -1,0 +1,8 @@
+shc creates a stripped binary executable version of a shell script.
+
+shc itself is not a compiler such as cc, but rather it encodes and
+encrypts a shell script and generates C source code with the added
+expiration capability. It then uses the system compiler to compile a
+stripped binary which behaves exactly like the original script. Upon
+execution, the compiled binary will decrypt and execute the code with
+the shell -c option.

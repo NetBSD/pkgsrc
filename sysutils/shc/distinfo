@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/30 09:41:49 grant Exp $
+
+SHA1 (shc-3.7.tgz) = ad0532dd16ee4d34ea2485552cef07eeebfd0fcd
+Size (shc-3.7.tgz) = 18942 bytes
+SHA1 (patch-aa) = 1b09da15c37374a87b94085d4b49977b4fd12db7
