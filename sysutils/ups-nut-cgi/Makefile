@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/05 09:01:04 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/06 03:17:00 fredb Exp $
 #
 
 DISTNAME=		nut-0.44.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.exploits.org/nut/
 
 DEPENDS+=		gd-*:../../graphics/gd
 DEPENDS+=		ups-nut-0*:../ups-nut
-BUILD_DEPENDS+=		${LOCALBASE}/bin/${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 WRKSRC=			${WRKDIR}/nut-0.44.2
 

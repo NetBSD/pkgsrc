@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/05 09:00:58 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/06 03:16:57 fredb Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -8,7 +8,7 @@ MASTER_SITES=		http://xracer.annexia.org/files/
 MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://xracer.annexia.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=		jpeg-*:../../graphics/jpeg
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
@@ -30,7 +30,7 @@ CPPFLAGS+=		-I${LOCALBASE}/include
 CPPFLAGS+=		-I${X11BASE}/include
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf && ${LOCALBASE}/bin/automake --gnu --no-force
+	cd ${WRKSRC} && ${LOCALBASE}/bin/automake --gnu --no-force && ${LOCALBASE}/bin/autoconf
 
 pre-patch:
 .for perlfile in blender2track/xracer-blender2track.pl \
