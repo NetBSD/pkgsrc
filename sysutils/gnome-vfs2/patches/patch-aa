@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/07 03:04:06 rh Exp $
+
+--- libgnomevfs/gnome-vfs-job.h.orig	Thu Sep  5 18:37:46 2002
++++ libgnomevfs/gnome-vfs-job.h	Thu Sep  5 18:37:51 2002
+@@ -37,7 +37,6 @@
+ #include <libgnomevfs/gnome-vfs-async-ops.h>
+ #include <libgnomevfs/gnome-vfs-module-callback.h>
+ #include <libgnomevfs/gnome-vfs-module-callback-private.h>
+-#include <semaphore.h>
+ 
+ typedef struct GnomeVFSJob GnomeVFSJob;
+ 
