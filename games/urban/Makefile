@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/16 18:18:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/17 14:27:01 xtraeme Exp $
 #
 
 DISTNAME=	${DISTFILES}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://urban.worldonline.nl/files/linux/
 DISTFILES=	urban-1.5.2${EXTRACT_SUFX} sound${EXTRACT_SUFX}
 
 MAINTAINER=	xtraeme@NetBSD.org
-HOMEPAGE=	http://urban.worldonline.nl/files/linux/
+HOMEPAGE=	http://urban.worldonline.nl/
 COMMENT=	U.R.B.A.N The Cyborg Project
 
 USE_BUILDLINK3=		yes
