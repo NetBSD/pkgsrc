@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/12/09 13:53:38 sketch Exp $
+
+--- src/Makefile.in.orig	2003-12-09 13:41:53.060784000 +0000
++++ src/Makefile.in	2003-12-09 13:42:15.130080000 +0000
+@@ -66,7 +66,6 @@
+ # PHONY = don't look at file clean, -rm = start rm and ignore errors
+ .PHONY : clean proper install
+ install: all
+-	$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+ 	$(INSTALL) ../bin/$(PROGRAM) $(DESTDIR)$(bindir)
+ 	$(INSTALL) $(LIBPGMASCLIB) $(DESTDIR)$(libdir)
+ 	$(INSTALL) $(INCLUDEFILES) $(DESTDIR)$(includedir)
