@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/09 09:22:30 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/13 14:37:24 hubertf Exp $
 # New ports collection makefile for:	autoconf
 # Version required:     2.12
 # Date created:		7 October 1995
@@ -21,7 +21,7 @@ CONFIGURE_ENV=	M4=${PREFIX}/bin/gm4
 OPSYS!= 	uname -s
 
 .if (${OPSYS} == "NetBSD")
-BUILD_DEPENDS=	install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 .endif
 
 post-install:
