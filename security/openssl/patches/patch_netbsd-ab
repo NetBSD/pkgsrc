@@ -1,138 +1,108 @@
-*** Configure.orig	Sun Sep 24 10:27:37 2000
---- Configure	Sat Apr  7 12:56:24 2001
-***************
-*** 298,306 ****
-  "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
-  "linux-m68k",   "gcc:-DB_ENDIAN -DTERMIO -O2 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
-  "linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG::",
-- "NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
-- "NetBSD-m68",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
-- "NetBSD-x86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:",
-  "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}",
-  "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
-  "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
---- 298,303 ----
-***************
-*** 327,332 ****
---- 324,343 ----
-  "aix-cc",   "cc:-O -DAIX -DB_ENDIAN -qmaxmem=16384::(unknown)::BN_LLONG RC4_CHAR:::",
-  "aix-gcc",  "gcc:-O3 -DAIX -DB_ENDIAN::(unknown)::BN_LLONG RC4_CHAR:::",
-  
-+ # NetBSD
-+ "NetBSD-alpha", "gcc:-DTERMIOS -O3 -Wall::(unknown)::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2:",
-+ "NetBSD-arm32", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-i386", "gcc:-DBN_ASM -DL_ENDIAN -DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm:",
-+ "NetBSD-i386elf", "gcc:-DBN_ASM -DL_ENDIAN -DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm:",
-+ "NetBSD-m68k", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-mipseb", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-mipsel", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-ns32k", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-powerpc", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-sparc", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ "NetBSD-sparc64", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC1:",
-+ "NetBSD-vax", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+ 
-  #
-  # Cray T90 (SDSC)
-  # It's Big-endian, but the algorithms work properly when B_ENDIAN is NOT
-***************
-*** 458,463 ****
---- 469,475 ----
-  my $openssl_other_defines;
-  my $libs;
-  my $target;
-+ my $xmakelib="";
-  my $options;
-  my $symlink;
-  
-***************
-*** 548,558 ****
-  			{
-  			$libs.= "-lRSAglue -lrsaref ";
-  			$flags.= "-DRSAref ";
-  			$openssl_other_defines .= "#define RSAref\n";
-  			}
-  		elsif (/^[-+]/)
-  			{
-! 			if (/^-[lL](.*)$/)
-  				{
-  				$libs.=$_." ";
-  				}
---- 560,571 ----
-  			{
-  			$libs.= "-lRSAglue -lrsaref ";
-  			$flags.= "-DRSAref ";
-+ 			$xmakelib=" libRSAglue.a";
-  			$openssl_other_defines .= "#define RSAref\n";
-  			}
-  		elsif (/^[-+]/)
-  			{
-!  			if (/^-([lLR]|Wl,)(.*)$/)
-  				{
-  				$libs.=$_." ";
-  				}
-***************
-*** 768,775 ****
-  
-  if ($version =~ /(^[0-9]*)\.([0-9\.]*)/)
-  	{
-! 	$major=$1;
-! 	$minor=$2;
-  	}
-  
-  if ($shlib_version_number =~ /(^[0-9]*)\.([0-9\.]*)/)
---- 781,789 ----
-  
-  if ($version =~ /(^[0-9]*)\.([0-9\.]*)/)
-  	{
-! 	# XXX Openssl version is 0.9, not 1.0
-! 	$major=1;
-! 	$minor=0;
-  	}
-  
-  if ($shlib_version_number =~ /(^[0-9]*)\.([0-9\.]*)/)
-***************
-*** 782,787 ****
---- 796,805 ----
-  open(OUT,">$Makefile") || die "unable to create $Makefile:$!\n";
-  print OUT "### Generated automatically from Makefile.org by Configure.\n\n";
-  my $sdirs=0;
-+ my $is_elf="0";
-+ if ($target =~ /.*elf.*/) {
-+ 	$is_elf="1";
-+ }
-  while (<IN>)
-  	{
-  	chop;
-***************
-*** 793,798 ****
---- 811,817 ----
-  			}
-  		}
-  	$sdirs = 0 unless /\\$/;
-+ 	s/^IS_ELF=.*/IS_ELF=$is_elf/;
-  	s/^VERSION=.*/VERSION=$version/;
-  	s/^MAJOR=.*/MAJOR=$major/;
-  	s/^MINOR=.*/MINOR=$minor/;
-***************
-*** 826,831 ****
---- 845,863 ----
-  	s/^SHLIB_MARK1=.*/SHLIB_MARK1=$shared_mark1/;
-  	s/^SHLIB_MARK2=.*/SHLIB_MARK2=$shared_mark2/;
-  	s/^LIBS=.*/LIBS=libcrypto\.so\* libssl\.so\*/ if (!$no_shared);
-+ 	print OUT $_."\n";
-+ 	}
-+ close(IN);
-+ close(OUT);
-+ 
-+ rename("crypto/Makefile.ssl", "crypto/Makefile.org") unless -e "crypto/Makefile.org";
-+ open(IN, '<crypto/Makefile.org') || die "unable to read crypto/Makefile.org:$!\n";
-+ open(OUT,">crypto/Makefile.ssl") || die "unable to create crypto/Makefile.ssl:$!\n";
-+ 
-+ while (<IN>)
-+ 	{
-+ 	chop;
-+ 	s/^(.*)\${MAKELIB}(.*)$/$&$xmakelib/;
-  	print OUT $_."\n";
-  	}
-  close(IN);
+$NetBSD: patch_netbsd-ab,v 1.3 2001/05/11 22:14:11 tron Exp $
+
+--- Configure.orig	Sun Sep 24 17:27:37 2000
++++ Configure	Sat May 12 00:03:27 2001
+@@ -298,9 +298,6 @@
+ "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
+ "linux-m68k",   "gcc:-DB_ENDIAN -DTERMIO -O2 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
+ "linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG::",
+-"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-m68",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-x86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:",
+ "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}",
+ "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
+ "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
+@@ -327,6 +324,20 @@
+ "aix-cc",   "cc:-O -DAIX -DB_ENDIAN -qmaxmem=16384::(unknown)::BN_LLONG RC4_CHAR:::",
+ "aix-gcc",  "gcc:-O3 -DAIX -DB_ENDIAN::(unknown)::BN_LLONG RC4_CHAR:::",
+ 
++# NetBSD
++"NetBSD-alpha", "gcc:-DTERMIOS -O3 -Wall::(unknown)::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2:",
++"NetBSD-arm32", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-i386", "gcc:-DBN_ASM -DL_ENDIAN -DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm:",
++"NetBSD-i386elf", "gcc:-DBN_ASM -DL_ENDIAN -DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm:",
++"NetBSD-m68k", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-mipseb", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-mipsel", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-ns32k", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-powerpc", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-sparc", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-sparc64", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC1:",
++"NetBSD-vax", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++
+ #
+ # Cray T90 (SDSC)
+ # It's Big-endian, but the algorithms work properly when B_ENDIAN is NOT
+@@ -458,6 +469,7 @@
+ my $openssl_other_defines;
+ my $libs;
+ my $target;
++my $xmakelib="";
+ my $options;
+ my $symlink;
+ 
+@@ -548,11 +560,12 @@
+ 			{
+ 			$libs.= "-lRSAglue -lrsaref ";
+ 			$flags.= "-DRSAref ";
++			$xmakelib=" libRSAglue.a";
+ 			$openssl_other_defines .= "#define RSAref\n";
+ 			}
+ 		elsif (/^[-+]/)
+ 			{
+-			if (/^-[lL](.*)$/)
++ 			if (/^-([lLR]|Wl,)(.*)$/)
+ 				{
+ 				$libs.=$_." ";
+ 				}
+@@ -768,8 +781,9 @@
+ 
+ if ($version =~ /(^[0-9]*)\.([0-9\.]*)/)
+ 	{
+-	$major=$1;
+-	$minor=$2;
++	# XXX Openssl version is 0.9, not 1.0
++	$major=1;
++	$minor=0;
+ 	}
+ 
+ if ($shlib_version_number =~ /(^[0-9]*)\.([0-9\.]*)/)
+@@ -782,6 +796,10 @@
+ open(OUT,">$Makefile") || die "unable to create $Makefile:$!\n";
+ print OUT "### Generated automatically from Makefile.org by Configure.\n\n";
+ my $sdirs=0;
++my $is_elf="0";
++if ($target =~ /.*elf.*/) {
++	$is_elf="1";
++}
+ while (<IN>)
+ 	{
+ 	chop;
+@@ -793,6 +811,7 @@
+ 			}
+ 		}
+ 	$sdirs = 0 unless /\\$/;
++	s/^IS_ELF=.*/IS_ELF=$is_elf/;
+ 	s/^VERSION=.*/VERSION=$version/;
+ 	s/^MAJOR=.*/MAJOR=$major/;
+ 	s/^MINOR=.*/MINOR=$minor/;
+@@ -826,6 +845,19 @@
+ 	s/^SHLIB_MARK1=.*/SHLIB_MARK1=$shared_mark1/;
+ 	s/^SHLIB_MARK2=.*/SHLIB_MARK2=$shared_mark2/;
+ 	s/^LIBS=.*/LIBS=libcrypto\.so\* libssl\.so\*/ if (!$no_shared);
++	print OUT $_."\n";
++	}
++close(IN);
++close(OUT);
++
++rename("crypto/Makefile.ssl", "crypto/Makefile.org") unless -e "crypto/Makefile.org";
++open(IN, '<crypto/Makefile.org') || die "unable to read crypto/Makefile.org:$!\n";
++open(OUT,">crypto/Makefile.ssl") || die "unable to create crypto/Makefile.ssl:$!\n";
++
++while (<IN>)
++	{
++	chop;
++	s/^(.*)\${MAKELIB}(.*)$/$&$xmakelib/;
+ 	print OUT $_."\n";
+ 	}
+ close(IN);
