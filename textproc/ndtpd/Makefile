@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/03/15 17:15:03 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/02 15:59:50 uebayasi Exp $
 
 DISTNAME=	ndtpd-3.1.1
+PKGREVISION=	1
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/
 
@@ -23,14 +24,14 @@ CONFIGURE_ARGS+=--with-zlib
 MAKE_FLAGS+=	INSTALL_INFO=${INSTALL_INFO}
 # For INSTALL/DEINSTALL scripts.
 CONF_FILES=	${NDTPD_CONFDIR}/ndtpd.conf.sample ${NDTPD_CONFDIR}/ndtpd.conf
-OWN_DIRS=	${NDTPD_RUNDIR}/ndtpd
 RCD_SCRIPT=	ndtpd.sh
-# Will be used not only for INSTALL but also ndtpd.sh.
-FILES_SUBST+=	NDTPD_RUNDIR=${NDTPD_RUNDIR:Q}
+# Will be also used for ndtpd.sh.
+FILES_SUBST+=	NDTPD_RUNDIR=${NDTPD_RUNDIR}
 
 NDTPD_CONFDIR=	${PREFIX}/etc
 NDTPD_LOGDIR=	${DESTDIR}/var/log
 NDTPD_RUNDIR=	${DESTDIR}/var/run
+# XXX NDTPD actually uses ${NDTPD_RUNDIR}/ndtpd.
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ndtpd.sh >${WRKDIR}/ndtpd.sh
