@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 1999/04/25 18:47:49 tv Exp $
+# $NetBSD: Makefile,v 1.44 1999/05/20 20:09:50 tron Exp $
 #
 
 DISTNAME=	ImageMagick-4.2.2
@@ -18,7 +18,6 @@ MIRROR_DISTFILE= no
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.  Users may reenable
@@ -31,6 +30,6 @@ CONFIGURE_ARGS=	--without-perl \
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
-		${PREFIX}/share/ImageMagick/
+		${PREFIX}/share/ImageMagick
 
 .include "../../mk/bsd.pkg.mk"

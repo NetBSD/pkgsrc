@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/24 06:53:41 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/05/20 20:09:51 tron Exp $
 #
 
 DISTNAME=	kdegraphics-1.1
@@ -24,11 +24,6 @@ CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=  KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib" \
-                INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-		INSTALL="/usr/bin/install"
+		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/04/14 21:39:04 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/20 20:09:51 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -12,6 +12,5 @@ HOMEPAGE=		http://www.ngs.fi/mtr/genscript/
 DEPENDS+=		papersize-1.0:../../print/papersize
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 .include "../../mk/bsd.pkg.mk"

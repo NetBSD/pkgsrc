@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/01 23:03:38 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:53 tron Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -27,9 +27,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib" \
-		INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+		all_libraries="-L${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"

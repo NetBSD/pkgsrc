@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/02 14:35:58 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/20 20:09:52 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -23,7 +23,6 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 CONFIGURE_ARGS=	--without-gnome
 
 .include "../../mk/bsd.pkg.mk"

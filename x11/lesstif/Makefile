@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/02/20 22:48:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.38 1999/05/20 20:09:52 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -17,8 +17,7 @@ USE_X11BASE=	yes
 # disable this for debugging
 CONFIGURE_ARGS+=--enable-production
 
-CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-		VarHaveMan2html=0
+CONFIGURE_ENV=	CCFLAGS="-O -pipe" VarHaveMan2html=0
 
 pre-fetch:
 	@if [ -d ${X11BASE}/include/Xm ]; then 				\
