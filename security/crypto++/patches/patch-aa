@@ -1,26 +1,55 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/19 16:48:21 wiz Exp $
 
---- GNUmakefile.orig	2003-03-19 19:24:11.000000000 -0600
+--- GNUmakefile.orig	2004-06-20 11:22:24.000000000 +0200
 +++ GNUmakefile
 @@ -1,5 +1,5 @@
  # can't use -fno-rtti yet because it causes problems with exception handling in GCC 2.95.2
 -CXXFLAGS = -g
-+CXXFLAGS = ${CFLAGS}
- # Uncomment the next two lines to do a release build.
++#CXXFLAGS = -g
+ # Uncomment the following two lines to do a release build.
  # Note that you must define NDEBUG for your own application if you define it for Crypto++.
- # Also, make sure you run the validation tests and test your own program thoroughly
-@@ -47,16 +47,16 @@ OBJS = $(SRCS:.cpp=.o)
- TESTOBJS = bench.o test.o validat1.o validat2.o validat3.o adhoc.o datatest.o regtest.o
- LIBOBJS = $(filter-out $(TESTOBJS),$(OBJS))
+ # Make sure you run the validation tests and test your own program thoroughly
+@@ -22,9 +22,9 @@ ifeq ($(ISX86),1)
+ GCC33ORLATER = $(shell $(CXX) -v 2>&1 | grep -c "gcc version \(3.[3-9]\|[4-9]\)")
+ GAS210ORLATER = $(shell echo "" | $(AS) -v 2>&1 | grep -c "GNU assembler version \(2.[1-9][0-9]\|[3-9]\)")
+ 
+-ifeq ($(GCC33ORLATER) $(ISMINGW),1 0)	# MINGW32 is missing the memalign function
+-CXXFLAGS += -msse2
+-endif
++#ifeq ($(GCC33ORLATER) $(ISMINGW),1 0)	# MINGW32 is missing the memalign function
++#CXXFLAGS += -msse2
++#endif
+ 
+ ifeq ($(GAS210ORLATER),0)	# .intel_syntax wasn't supported until GNU assembler 2.10
+ CXXFLAGS += -DCRYPTOPP_DISABLE_X86ASM
+@@ -38,14 +38,14 @@ endif
+ 
+ ifeq ($(UNAME),)	# for DJGPP, where uname doesn't exist
+ CXXFLAGS += -mbnu210
+-else
+-CXXFLAGS += -pipe
++#else
++#CXXFLAGS += -pipe
+ endif
+ 
+ ifeq ($(UNAME),Darwin)
+ AR = libtool
+ ARFLAGS = -static -o
+-CXX = c++
++#CXX = c++
+ CXXFLAGS += -D__pic__
+ IS_GCC2 = $(shell $(CXX) -v 2>&1 | grep -c gcc-932)
+ ifeq ($(IS_GCC2),1)
+@@ -75,7 +75,7 @@ LIBIMPORTOBJS = $(LIBOBJS:.o=.import.o)
+ TESTIMPORTOBJS = $(TESTOBJS:.o=.import.o)
+ DLLTESTOBJS = dlltest.dllonly.o
  
 -all: cryptest.exe
 +all: cryptest
  
  clean:
--	$(RM) cryptest.exe libcryptopp.a $(LIBOBJS) $(TESTOBJS)
-+	$(RM) cryptest libcryptopp.a $(LIBOBJS) $(TESTOBJS)
- 
- libcryptopp.a: $(LIBOBJS)
+ 	$(RM) cryptest.exe libcryptopp.a $(LIBOBJS) $(TESTOBJS) cryptopp.dll libcryptopp.dll.a libcryptopp.import.a cryptest.import.exe dlltest.exe $(DLLOBJS) $(LIBIMPORTOBJS) $(TESTIMPORTOBJS) $(DLLTESTOBJS)
+@@ -84,7 +84,7 @@ libcryptopp.a: $(LIBOBJS)
  	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
  	$(RANLIB) $@
  

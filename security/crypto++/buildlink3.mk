@@ -1,7 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/03/19 16:48:21 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-CRYPTO++_BUILDLINK3_MK:=	${CRYPTO++_BUILDLINK3_MK}+
+CRYPTOPP_BUILDLINK3_MK:=	${CRYPTOPP_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	cryptopp
@@ -10,10 +10,10 @@ BUILDLINK_DEPENDS+=	cryptopp
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncryptopp}
 BUILDLINK_PACKAGES+=	cryptopp
 
-.if !empty(CRYPTO++_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.cryptopp+=	crypto++>=5.1
+.if !empty(CRYPTOPP_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.cryptopp+=	cryptopp>=5.1
 BUILDLINK_DEPMETHOD.cryptopp?=	build
-BUILDLINK_PKGSRCDIR.cryptopp?=	../../wip/cryptopp
-.endif	# CRYPTO++_BUILDLINK3_MK
+BUILDLINK_PKGSRCDIR.cryptopp?=	../../security/cryptopp
+.endif	# CRYPTOPP_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
