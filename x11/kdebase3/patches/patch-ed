@@ -1,17 +1,17 @@
-$NetBSD: patch-ed,v 1.2 2002/08/25 19:23:47 jlam Exp $
+$NetBSD: patch-ed,v 1.3 2003/01/02 09:12:36 skrll Exp $
 
---- kwin/clients/riscos/Makefile.in.orig	Mon May 13 23:57:57 2002
+--- kwin/clients/riscos/Makefile.in.orig	Fri Dec 27 18:19:11 2002
 +++ kwin/clients/riscos/Makefile.in
-@@ -302,7 +302,7 @@
- 	HelpButton.cpp \
- 	Static.cpp
+@@ -301,7 +301,7 @@ StickyButton.cpp \
+ HelpButton.cpp \
+ Static.cpp
  
 -kwin_riscos_la_LIBADD = ../../kwin.la
 +kwin_riscos_la_LIBADD = ../../libkwin.la
  kwin_riscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -328,7 +328,7 @@
+@@ -327,7 +327,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,12 +20,99 @@ $NetBSD: patch-ed,v 1.2 2002/08/25 19:23:47 jlam Exp $
  am_kwin_riscos_la_OBJECTS = Button.lo CloseButton.lo IconifyButton.lo \
  	LowerButton.lo Manager.lo MaximiseButton.lo StickyButton.lo \
  	HelpButton.lo Static.lo
-@@ -522,7 +522,7 @@
+@@ -664,40 +664,40 @@ kwin_riscos.la.closure: $(kwin_riscos_la
  
- #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
- #>+ 4
--KDE_DIST=Palette.h riscos.desktop 
-+KDE_DIST=riscos.desktop Palette.h 
  
- DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ #>+ 3
+-LowerButton.moc: $(srcdir)/LowerButton.h
+-	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
++Button.moc: $(srcdir)/Button.h
++	$(MOC) $(srcdir)/Button.h -o Button.moc
  
+ #>+ 3
+ StickyButton.moc: $(srcdir)/StickyButton.h
+ 	$(MOC) $(srcdir)/StickyButton.h -o StickyButton.moc
+ 
+ #>+ 3
+-MaximiseButton.moc: $(srcdir)/MaximiseButton.h
+-	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
++LowerButton.moc: $(srcdir)/LowerButton.h
++	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
+ 
+ #>+ 3
+-HelpButton.moc: $(srcdir)/HelpButton.h
+-	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
++IconifyButton.moc: $(srcdir)/IconifyButton.h
++	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
+ 
+ #>+ 3
+-Button.moc: $(srcdir)/Button.h
+-	$(MOC) $(srcdir)/Button.h -o Button.moc
++Manager.moc: $(srcdir)/Manager.h
++	$(MOC) $(srcdir)/Manager.h -o Manager.moc
+ 
+ #>+ 3
+-CloseButton.moc: $(srcdir)/CloseButton.h
+-	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
++HelpButton.moc: $(srcdir)/HelpButton.h
++	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
+ 
+ #>+ 3
+-Manager.moc: $(srcdir)/Manager.h
+-	$(MOC) $(srcdir)/Manager.h -o Manager.moc
++CloseButton.moc: $(srcdir)/CloseButton.h
++	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
+ 
+ #>+ 3
+-IconifyButton.moc: $(srcdir)/IconifyButton.h
+-	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
++MaximiseButton.moc: $(srcdir)/MaximiseButton.h
++	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  LowerButton.moc StickyButton.moc MaximiseButton.moc HelpButton.moc Button.moc CloseButton.moc Manager.moc IconifyButton.moc
++	-rm -f  Button.moc StickyButton.moc LowerButton.moc IconifyButton.moc Manager.moc HelpButton.moc CloseButton.moc MaximiseButton.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -714,7 +714,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-kwin_riscos_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/Button.cpp $(srcdir)/CloseButton.cpp $(srcdir)/IconifyButton.cpp $(srcdir)/LowerButton.cpp $(srcdir)/Manager.cpp $(srcdir)/MaximiseButton.cpp $(srcdir)/StickyButton.cpp $(srcdir)/HelpButton.cpp $(srcdir)/Static.cpp  StickyButton.moc Manager.moc IconifyButton.moc LowerButton.moc MaximiseButton.moc HelpButton.moc Button.moc CloseButton.moc
++kwin_riscos_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/Button.cpp $(srcdir)/CloseButton.cpp $(srcdir)/IconifyButton.cpp $(srcdir)/LowerButton.cpp $(srcdir)/Manager.cpp $(srcdir)/MaximiseButton.cpp $(srcdir)/StickyButton.cpp $(srcdir)/HelpButton.cpp $(srcdir)/Static.cpp  LowerButton.moc StickyButton.moc Button.moc Manager.moc IconifyButton.moc HelpButton.moc CloseButton.moc MaximiseButton.moc
+ 	@echo 'creating kwin_riscos_la.all_cpp.cpp ...'; \
+ 	rm -f kwin_riscos_la.all_cpp.files kwin_riscos_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kwin_riscos_la.all_cpp.final; \
+@@ -750,19 +750,19 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 17
+-Manager.lo: Manager.moc 
+-LowerButton.lo: LowerButton.moc 
+-IconifyButton.lo: IconifyButton.moc 
+-IconifyButton.o: IconifyButton.moc 
+-CloseButton.o: CloseButton.moc 
+-Manager.o: Manager.moc 
+ HelpButton.lo: HelpButton.moc 
+-Button.lo: Button.moc 
+-MaximiseButton.lo: MaximiseButton.moc 
+-LowerButton.o: LowerButton.moc 
+ StickyButton.lo: StickyButton.moc 
+-MaximiseButton.o: MaximiseButton.moc 
+-Button.o: Button.moc 
+ StickyButton.o: StickyButton.moc 
++Button.o: Button.moc 
++LowerButton.lo: LowerButton.moc 
++Button.lo: Button.moc 
++MaximiseButton.o: MaximiseButton.moc 
++IconifyButton.lo: IconifyButton.moc 
++MaximiseButton.lo: MaximiseButton.moc 
+ HelpButton.o: HelpButton.moc 
++Manager.o: Manager.moc 
++LowerButton.o: LowerButton.moc 
+ CloseButton.lo: CloseButton.moc 
++IconifyButton.o: IconifyButton.moc 
++Manager.lo: Manager.moc 
++CloseButton.o: CloseButton.moc 

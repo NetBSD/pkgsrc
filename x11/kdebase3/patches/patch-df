@@ -1,34 +1,45 @@
-$NetBSD: patch-df,v 1.5 2002/08/25 19:23:45 jlam Exp $
-
---- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Wed Aug 21 17:39:19 2002
-+++ ksysguard/ksysguardd/FreeBSD/netdev.c
-@@ -20,15 +20,14 @@
+--- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Tue Nov  5 02:41:09 2002
++++ ksysguard/ksysguardd/FreeBSD/netdev.c	Tue Nov 26 11:56:27 2002
+@@ -1,7 +1,7 @@
+ /*
+     KSysGuard, the KDE System Guard
+    
+-	Copyright (c) 2001 Tobias Koenig <tokoe@kde.org>
++	Copyright (c) 2001 Tobias Koenig <tokoe82@yahoo.de>
+     
+     This program is free software; you can redistribute it and/or
+     modify it under the terms of version 2 of the GNU General Public
+@@ -16,304 +16,269 @@
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+-	$Id: patch-df,v 1.6 2003/01/02 09:12:35 skrll Exp $
++	$Id: patch-df,v 1.6 2003/01/02 09:12:35 skrll Exp $
  */
  
--#include <fcntl.h>
+-#include <sys/types.h>
 +#include <sys/types.h> /* for sys/socket.h, ifaddrs.h */
 +#include <ifaddrs.h>
  #include <sys/socket.h>
 +#include <sys/param.h> /* for sys/sysctl.h */
-+#include <sys/sysctl.h>
+ #include <sys/sysctl.h>
+-#include <sys/time.h>
+-
 +#include <net/route.h>
  #include <net/if.h>
 -#include <net/if_mib.h>
+-
+-#include <fcntl.h>
 -#include <stdio.h>
 +#include <net/if_dl.h>
 +#include <stdlib.h>
  #include <string.h>
--#include <sys/sysctl.h>
--#include <sys/time.h>
--#include <sys/types.h>
 -#include <unistd.h>
--
  
  #include "Command.h"
-@@ -36,284 +35,250 @@
+ #include "ksysguardd.h"
  #include "netdev.h"
  
--
 +#define I_bytes 0
 +#define I_packs 1
 +#define I_errs 2
@@ -62,7 +73,7 @@ $NetBSD: patch-df,v 1.5 2002/08/25 19:23:45 jlam Exp $
 -	char *begin;
 -	static char sensor[100];
 -	static char interface[100];
--	static char* retval[2];
+-	static char *retval[2];
 -
 -	strncpy(tmp_cmd, cmd, 1024);
 -
@@ -78,10 +89,10 @@ $NetBSD: patch-df,v 1.5 2002/08/25 19:23:45 jlam Exp $
 -	begin++;
 -	strcpy(interface, begin);
 -	retval[0] = interface;
--
+ 
 -	return retval;
 -}
- 
+-
 -int numActivIfaces(void)
 -{
 -	int counter = 0;

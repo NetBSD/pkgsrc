@@ -1,8 +1,8 @@
-$NetBSD: patch-bv,v 1.1 2002/06/25 06:34:38 skrll Exp $
+$NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
 
---- noatun/modules/metatag/Makefile.in.orig	Sun Jun  9 12:28:50 2002
+--- noatun/modules/metatag/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ noatun/modules/metatag/Makefile.in
-@@ -295,7 +295,7 @@
+@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_metatag.
  noatun_metatag_la_SOURCES = metatag.cpp edit.cpp
  
  noatun_metatag_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bv,v 1.1 2002/06/25 06:34:38 skrll Exp $
  	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
  
  
-@@ -311,7 +311,7 @@
+@@ -310,7 +310,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_metatag_la_DEPENDENCIES = \
@@ -20,21 +20,42 @@ $NetBSD: patch-bv,v 1.1 2002/06/25 06:34:38 skrll Exp $
  	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
  am_noatun_metatag_la_OBJECTS = metatag.lo edit.lo
  #>- noatun_metatag_la_OBJECTS = $(am_noatun_metatag_la_OBJECTS)
-@@ -490,7 +490,7 @@
+@@ -622,16 +622,16 @@ noatun_metatag.la.closure: $(noatun_meta
  
- #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
- #>+ 4
--KDE_DIST=metatag.plugin HANDLED_ITEMS 
-+KDE_DIST=HANDLED_ITEMS metatag.plugin 
  
- DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ #>+ 3
+-metatag.moc: $(srcdir)/metatag.h
+-	$(MOC) $(srcdir)/metatag.h -o metatag.moc
+-
+-#>+ 3
+ edit.moc: $(srcdir)/edit.h
+ 	$(MOC) $(srcdir)/edit.h -o edit.moc
  
-@@ -663,7 +663,7 @@
- 	-rm -f  noatun_metatag_la_meta_unload.cpp
+ #>+ 3
++metatag.moc: $(srcdir)/metatag.h
++	$(MOC) $(srcdir)/metatag.h -o metatag.moc
++
++#>+ 3
+ clean-metasources:
+-	-rm -f  metatag.moc edit.moc
++	-rm -f  edit.moc metatag.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -648,7 +648,7 @@ force-reedit:
+ 
  
  #>+ 11
--noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp noatun_metatag_la_meta_unload.cpp   edit.moc metatag.moc 
-+noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp $(srcdir)/noatun_metatag_la_meta_unload.cpp   edit.moc metatag.moc 
+-noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp  metatag.moc edit.moc
++noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp  edit.moc metatag.moc
  	@echo 'creating noatun_metatag_la.all_cpp.cpp ...'; \
  	rm -f noatun_metatag_la.all_cpp.files noatun_metatag_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_metatag_la.all_cpp.final; \
+@@ -685,6 +685,6 @@ kde-rpo-clean:
+ 
+ #>+ 5
+ metatag.o: metatag.moc 
+-metatag.lo: metatag.moc 
+ edit.lo: edit.moc 
++metatag.lo: metatag.moc 
+ edit.o: edit.moc 

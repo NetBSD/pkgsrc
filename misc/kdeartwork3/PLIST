@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/25 03:09:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 09:12:27 skrll Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kbouboule.kss
@@ -2868,9 +2868,12 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/Locolor
 @dirrm share/kde/apps/kworldclock/maps/rainfall
 @dirrm share/kde/apps/kworldclock/maps/mggd
+@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock/maps/depths >/dev/null || true
 @dirrm share/kde/apps/kworldclock/maps/caida_bw
 @dirrm share/kde/apps/kworldclock/maps/caida
 @dirrm share/kde/apps/kworldclock/maps/bio
 @dirrm share/kde/apps/kworldclock/maps/alt
+@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock/maps >/dev/null || true
+@unexec ${RMDIR} -p %D hare/kde/apps/kworldclock >/dev/null || true
 @dirrm share/kde/apps/kwin/icewm-themes/Model
 @dirrm share/kde/apps/kwin/icewm-themes/MenschMaschine
