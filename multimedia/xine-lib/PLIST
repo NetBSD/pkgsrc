@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:03:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/11 17:26:02 jmmv Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -9,6 +9,7 @@ include/xine/buffer.h
 include/xine/compat.h
 include/xine/configfile.h
 include/xine/demux.h
+include/xine/info_helper.h
 include/xine/input_plugin.h
 include/xine/io_helper.h
 include/xine/metronom.h
@@ -23,7 +24,6 @@ include/xine/video_out.h
 include/xine/video_overlay.h
 include/xine/vo_scale.h
 include/xine/xine_buffer.h
-include/xine/xine_check.h
 include/xine/xine_internal.h
 include/xine/xine_plugin.h
 include/xine/xineintl.h
@@ -33,8 +33,8 @@ include/xine/xmlparser.h
 lib/libxine.a
 lib/libxine.la
 lib/libxine.so
-lib/libxine.so.7
-lib/libxine.so.7.0
+lib/libxine.so.9
+lib/libxine.so.9.1
 lib/pkgconfig/libxine.pc
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.a
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.so
@@ -116,8 +116,6 @@ lib/xine/plugins/1.0.0/xineplug_decode_spu.a
 lib/xine/plugins/1.0.0/xineplug_decode_spu.so
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.a
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.so
-lib/xine/plugins/1.0.0/xineplug_decode_spuogm.a
-lib/xine/plugins/1.0.0/xineplug_decode_spuogm.so
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.a
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.so
 lib/xine/plugins/1.0.0/xineplug_decode_svq1.a
@@ -200,6 +198,8 @@ lib/xine/plugins/1.0.0/xineplug_inp_stdin_fifo.a
 lib/xine/plugins/1.0.0/xineplug_inp_stdin_fifo.so
 lib/xine/plugins/1.0.0/xineplug_inp_vcd.a
 lib/xine/plugins/1.0.0/xineplug_inp_vcd.so
+lib/xine/plugins/1.0.0/xineplug_inp_vcdo.a
+lib/xine/plugins/1.0.0/xineplug_inp_vcdo.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_aa.a
 lib/xine/plugins/1.0.0/xineplug_vo_out_aa.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_none.a
@@ -218,19 +218,18 @@ share/doc/xine/README
 share/doc/xine/README.config_en
 share/doc/xine/README.dvb
 share/doc/xine/README.dxr3
-share/doc/xine/README.dxr3_pl
 share/doc/xine/README.freebsd
 share/doc/xine/README.irix
-share/doc/xine/README.mrl
 share/doc/xine/README.network_dvd
 share/doc/xine/README.opengl
-share/doc/xine/README.plugins
 share/doc/xine/README.solaris
 share/doc/xine/README.syncfb
-share/doc/xine/README.tvmode
-share/doc/xine/dataflow.dia
 share/doc/xine/faq/faq.html
 share/doc/xine/faq/faq.txt
+share/doc/xine/hackersguide/architecture.png
+share/doc/xine/hackersguide/hackersguide.html
+share/doc/xine/hackersguide/library.png
+share/doc/xine/hackersguide/overlays.png
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxine1.mo
@@ -243,37 +242,47 @@ share/xine/libxine1/fonts/cc-16.xinefont.gz
 share/xine/libxine1/fonts/cc-20.xinefont.gz
 share/xine/libxine1/fonts/cc-24.xinefont.gz
 share/xine/libxine1/fonts/cc-32.xinefont.gz
+share/xine/libxine1/fonts/cc-48.xinefont.gz
+share/xine/libxine1/fonts/cc-64.xinefont.gz
 share/xine/libxine1/fonts/cci-16.xinefont.gz
 share/xine/libxine1/fonts/cci-20.xinefont.gz
 share/xine/libxine1/fonts/cci-24.xinefont.gz
 share/xine/libxine1/fonts/cci-32.xinefont.gz
+share/xine/libxine1/fonts/cci-48.xinefont.gz
+share/xine/libxine1/fonts/cci-64.xinefont.gz
 share/xine/libxine1/fonts/cetus-16.xinefont.gz
 share/xine/libxine1/fonts/cetus-20.xinefont.gz
 share/xine/libxine1/fonts/cetus-24.xinefont.gz
 share/xine/libxine1/fonts/cetus-32.xinefont.gz
+share/xine/libxine1/fonts/cetus-48.xinefont.gz
+share/xine/libxine1/fonts/cetus-64.xinefont.gz
 share/xine/libxine1/fonts/mono-16.xinefont.gz
 share/xine/libxine1/fonts/mono-20.xinefont.gz
 share/xine/libxine1/fonts/mono-24.xinefont.gz
 share/xine/libxine1/fonts/mono-32.xinefont.gz
+share/xine/libxine1/fonts/mono-48.xinefont.gz
+share/xine/libxine1/fonts/mono-64.xinefont.gz
 share/xine/libxine1/fonts/sans-16.xinefont.gz
 share/xine/libxine1/fonts/sans-20.xinefont.gz
 share/xine/libxine1/fonts/sans-24.xinefont.gz
 share/xine/libxine1/fonts/sans-32.xinefont.gz
-share/xine/libxine1/fonts/sanshu-16.xinefont.gz
-share/xine/libxine1/fonts/sanshu-20.xinefont.gz
-share/xine/libxine1/fonts/sanshu-24.xinefont.gz
-share/xine/libxine1/fonts/sanshu-32.xinefont.gz
+share/xine/libxine1/fonts/sans-48.xinefont.gz
+share/xine/libxine1/fonts/sans-64.xinefont.gz
 share/xine/libxine1/fonts/serif-16.xinefont.gz
 share/xine/libxine1/fonts/serif-20.xinefont.gz
 share/xine/libxine1/fonts/serif-24.xinefont.gz
 share/xine/libxine1/fonts/serif-32.xinefont.gz
+share/xine/libxine1/fonts/serif-48.xinefont.gz
+share/xine/libxine1/fonts/serif-64.xinefont.gz
 @dirrm share/xine/libxine1/fonts
 @dirrm share/xine/libxine1
 @dirrm share/xine
+@dirrm share/doc/xine/hackersguide
 @dirrm share/doc/xine/faq
 @dirrm share/doc/xine
-@dirrm lib/xine/plugins/1.0.0/post
+@exec ${MKDIR} %D/lib/xine/plugins/1.0.0/vidix
 @dirrm lib/xine/plugins/1.0.0/vidix
+@dirrm lib/xine/plugins/1.0.0/post
 @dirrm lib/xine/plugins/1.0.0
 @dirrm lib/xine/plugins
 @dirrm lib/xine
