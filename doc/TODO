@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1985 2004/07/31 20:49:40 jlam Exp $
+$NetBSD: TODO,v 1.1986 2004/07/31 21:42:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o samba-2.2.9
 	o sawfish-1.3
 	o scm-5d9
-	o scmxx-0.7.2
 	o scribus-1.1.7
 	o sendfile-20010424
 	o sendmail-8.13.0 [pkgsrc-wip sendmail813]
