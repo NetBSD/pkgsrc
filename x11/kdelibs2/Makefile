@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/03/26 02:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2004/05/01 23:57:00 snj Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	11
@@ -9,7 +9,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 CONFLICTS=	arts-[1-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
@@ -36,7 +36,7 @@ PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.  include "../../print/cups/buildlink2.mk"
+.  include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 
 PLIST_SUBST+=		CUPS=
@@ -103,17 +103,17 @@ USE_PKGSRC_GCC=	# defined
 GCC_REQD+=	3.0
 .endif
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../audio/libaudiofile/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
