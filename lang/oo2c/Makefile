@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/02 23:32:39 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/03 20:44:41 jtb Exp $
 
 .if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "sparc64")
 DISTNAME=		oo2c_64-2.0.8
@@ -21,6 +21,15 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
+
+EVAL_PREFIX+=		LIBTOOL_PREFIX=libtool-base
+LIBTOOL_PREFIX_DEFAULT=	${LOCALBASE}
+
+pre-install:
+	for f in ${WRKSRC}/rsrc/OOC/oo2crc.xml; do			\
+		${SED} -e 's,${BUILDLINK_DIR},${LIBTOOL_PREFIX},g'	\
+		$$f > $$f.tmp && ${MV} $$f.tmp $$f;			\
+	done
 
 post-install:
 	cd ${PREFIX}/share/doc/html && ${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html oo2c
