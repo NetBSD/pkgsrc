@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6367 2004/06/28 13:50:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.6368 2004/06/28 13:58:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GConf2-ui to 2.6.2 [jmmv 2004-06-28]
 	Updated gconf-editor to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome2-applets to 2.6.2 [jmmv 2004-06-28]
+	Updated mathomatic to 11.2d [minskim 2004-06-28]
