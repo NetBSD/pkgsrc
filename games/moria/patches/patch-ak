@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 1999/10/16 06:20:07 simonb Exp $
+--- source/misc3.c.orig	Fri Jul 22 11:47:30 1994
++++ source/misc3.c	Sat Oct 16 15:35:05 1999
+@@ -283,7 +283,7 @@
+ {
+   vtype out_val;
+ 
+-  (void) sprintf(out_val, "%s: %6ld", header, num);
++  (void) sprintf(out_val, "%s:%7ld", header, num);
+   put_buffer(out_val, row, column);
+ }
+ 
