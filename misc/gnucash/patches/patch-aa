@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
+$NetBSD: patch-aa,v 1.4 2000/06/26 17:03:03 rh Exp $
 
---- configure.orig	Mon May  8 04:31:08 2000
-+++ configure	Wed May 10 10:03:47 2000
-@@ -2358,7 +2358,7 @@
+--- configure.orig	Mon Jun 26 09:54:12 2000
++++ configure	Mon Jun 26 18:33:29 2000
+@@ -3625,7 +3625,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -3892,7 +3892,7 @@
  		 INTLLIBS=$INTLDEPS
  		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
  		 nls_cv_header_intl=intl/libintl.h
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
  	       fi
  else
    echo "$ac_t""no" 1>&6
-@@ -2487,7 +2487,7 @@
+@@ -4021,7 +4021,7 @@
  	INTLLIBS=$INTLDEPS
  	LIBS=`echo $LIBS | sed -e 's/-lintl//'`
          nls_cv_header_intl=intl/libintl.h
@@ -20,7 +29,7 @@ $NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
        fi
  
              if test "$XGETTEXT" != ":"; then
-@@ -2504,7 +2504,7 @@
+@@ -4038,7 +4038,7 @@
      else
        DATADIRNAME=share
        nls_cv_header_intl=intl/libintl.h
@@ -29,15 +38,7 @@ $NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
      fi
      
      
-@@ -4787,6 +4787,7 @@
- s%@RANLIB@%$RANLIB%g
- s%@CC@%$CC%g
- s%@CPP@%$CPP%g
-+s%@LIBTOOL@%${LIBTOOL}%g
- s%@OPT_STYLE_INSTALL@%$OPT_STYLE_INSTALL%g
- s%@LOCALE_DIR@%$LOCALE_DIR%g
- s%@GNC_EXPANDED_LOCALE_DIR@%$GNC_EXPANDED_LOCALE_DIR%g
-@@ -5088,10 +5089,10 @@
+@@ -6397,10 +6397,10 @@
    set $ac_dests; ac_dest=$1; shift; ac_dests=$*
    set $ac_sources; ac_source=$1; shift; ac_sources=$*
  
@@ -51,7 +52,7 @@ $NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
    fi
    rm -f $ac_dest
  
-@@ -5109,15 +5110,15 @@
+@@ -6418,15 +6418,15 @@
    fi
  
    case "$srcdir" in
