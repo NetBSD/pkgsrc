@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:14 wiz Exp $
-
-SHA1 (eggdrop1.3.22.tar.gz) = 89bf98ac7fb77f567de68beac21bd848d0e569c2
-Size (eggdrop1.3.22.tar.gz) = 484423 bytes
-SHA1 (patch-aa) = c39d6f3525b7ed0c4ac6b52aa63659ca101199e1
-SHA1 (patch-ab) = 1895662d1d38fc755cce73d91dfc54eef0818be3
-SHA1 (patch-ac) = db7e416631b9217eb36ee77732e5c22b6b60f0ac
-SHA1 (patch-ad) = 7560ccf0fa9ada831be97a684219db38607b2536
-SHA1 (patch-ae) = 6f2d1d5a0e9553d2929fd1d5e82ecc9fc51ff641
