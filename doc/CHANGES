@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3922 2003/12/03 13:05:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.3923 2003/12/03 13:12:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xbindkeys-tk to 1.6.5 [jmmv 2003-12-03]
 	Added tsocks-1.7 [jmmv 2003-12-03]
 	Updated xmule to 1.7.1 [jmmv 2003-12-03]
+	Updated fastdep to 0.16 [jmmv 2003-12-03]
