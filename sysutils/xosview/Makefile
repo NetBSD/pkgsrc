@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/02/20 22:48:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 1999/04/07 10:09:18 agc Exp $
 #
 
 DISTNAME=       xosview-1.7.0.b
@@ -12,6 +12,10 @@ HOMEPAGE=	http://lore.ece.utexas.edu/~bgrayson/xosview.html
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+= --prefix=${PREFIX}
 USE_X11BASE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 BUILD_DEFS=	UVM
 
 # On arm32, with UVM, pmap.h contains a C++ keyword. Workaround this.
@@ -21,5 +25,11 @@ pre-build:
 		${SED} -e 's|virtual|virt|' /usr/include/machine/pmap.h \
 			> ${WRKSRC}/include/machine/pmap.h; 		\
 	fi
+
+.elif ${OPSYS} == "SunOS"
+DEPENDS+=	egcs-1.1.2:../../lang/egcs
+CONFIGURE_ENV+=	CXX=${LOCALBASE}/egcs/bin/g++
+USE_GMAKE=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
