@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/02 04:57:21 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/27 04:06:58 sakamoto Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5b2
@@ -38,10 +38,10 @@ INSTALL_TARGET=	instserver instclient
 
 post-patch:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
-		@${SED} -e 's|\(SUBDIRS = .*\) misc\(.*\)|\1\2|' \
-			-e 's|\(SERVERDIR = .*\) dic/phono\(.*\)|\1\2|' \
-			-e 's|\(CLIENTDIR = .*\) dic/phono misc|\1|' \
-			${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
+	@${SED} -e 's|\(SUBDIRS = .*\) misc\(.*\)|\1\2|' \
+		-e 's|\(SERVERDIR = .*\) dic/phono\(.*\)|\1\2|' \
+		-e 's|\(CLIENTDIR = .*\) dic/phono misc|\1|' \
+		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 
 do-configure:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF})
