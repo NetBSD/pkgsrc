@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.139 2005/03/06 13:30:48 taca Exp $
+# $NetBSD: Makefile,v 1.139.2.1 2005/04/01 06:38:08 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE9
 PKGNAME=	squid-2.5.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -13,7 +13,27 @@ PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
 PATCHFILES=	squid-2.5.STABLE9-setcookie.patch \
 		squid-2.5.STABLE9-ftp_EPLF.patch \
 		squid-2.5.STABLE9-ftp_base_href.patch \
-		squid-2.5.STABLE9-acl_error.patch
+		squid-2.5.STABLE9-acl_error.patch \
+		squid-2.5.STABLE9-date.patch \
+		squid-2.5.STABLE9-reload_into_ims.patch \
+		squid-2.5.STABLE9-delay_access_doc.patch \
+		squid-2.5.STABLE9-config_overflow.patch \
+		squid-2.5.STABLE9-bzero.patch \
+		squid-2.5.STABLE9-pid_t.patch \
+		squid-2.5.STABLE9-ctype.patch \
+		squid-2.5.STABLE9-defer_digest_fetch.patch \
+		squid-2.5.STABLE9-dup_content_length.patch \
+		squid-2.5.STABLE9-excess_data.patch \
+		squid-2.5.STABLE9-aufs.patch \
+		squid-2.5.STABLE9-long_basic_auth.patch \
+		squid-2.5.STABLE9-CONNECT_truncated.patch \
+		squid-2.5.STABLE9-LDAP_SUN_SDK.patch \
+		squid-2.5.STABLE9-disable_hostname_checks.patch \
+		squid-2.5.STABLE9-aufs_shutdown.patch \
+		squid-2.5.STABLE9-2GB.patch \
+		squid-2.5.STABLE9-rename_cleanup.patch \
+		squid-2.5.STABLE9-cachemgr_objects.patch \
+		squid-2.5.STABLE9-extaclauth.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
