@@ -1,24 +1,7 @@
-$NetBSD: patch-ag,v 1.9 2001/12/12 17:06:20 taca Exp $
+$NetBSD: patch-ag,v 1.10 2002/02/18 17:00:39 taca Exp $
 
 --- configure.orig	Thu Nov 29 08:56:25 2001
 +++ configure
-@@ -711,11 +711,11 @@
- REGEXLIB=''	# -lregex
- LIBREGEX=''	# libregex.a
- 
--if test "$libexecdir" = '${exec_prefix}/libexec' &&
--   test "$localstatedir" = '${prefix}/var'; then
--	libexecdir='${prefix}/libexec/squid'
--	localstatedir='${prefix}'
--fi
-+#if test "$libexecdir" = '${exec_prefix}/libexec' &&
-+#   test "$localstatedir" = '${prefix}/var'; then
-+#	libexecdir='${prefix}/libexec/squid'
-+#	localstatedir='${prefix}'
-+#fi
- 
- case "$host_os" in
- cygwin|cygwin32|os2)
 @@ -1428,7 +1428,7 @@
  #define SQUID_SNMP 1
  EOF
@@ -28,13 +11,69 @@ $NetBSD: patch-ag,v 1.9 2001/12/12 17:06:20 taca Exp $
      SNMP_OBJS='$(SNMP_OBJS)'
      SNMP_MAKEFILE=./snmplib/Makefile
      makesnmplib=snmplib
-@@ -4501,8 +4501,8 @@
+@@ -3668,39 +3668,37 @@
+ 
+ fi
+ 
+-echo $ac_n "checking for fd_mask""... $ac_c" 1>&6
+-echo "configure:3673: checking for fd_mask" >&5
+-if eval "test \"`echo '$''{'ac_cv_type_fd_mask'+set}'`\" = set"; then
++
++echo $ac_n "checking for fd_set""... $ac_c" 1>&6
++echo "configure:3673: checking for fd_set" >&5
++if eval "test \"`echo '$''{'ac_cv_have_fd_mask'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
++  
+   cat > conftest.$ac_ext <<EOF
+ #line 3678 "configure"
+ #include "confdefs.h"
+ #include <sys/types.h>
+-#if STDC_HEADERS
+-#include <stdlib.h>
+-#include <stddef.h>
+-#endif
++#include <sys/time.h>
++#include <sys/unistd.h>
++int main() {
++fd_mask fds;
++; return 0; }
+ EOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  egrep "(^|[^a-zA-Z_0-9])fd_mask[^a-zA-Z_0-9]" >/dev/null 2>&1; then
++if { (eval echo configure:3689: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+   rm -rf conftest*
+-  ac_cv_type_fd_mask=yes
++  ac_cv_have_fd_mask="yes"
+ else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
+   rm -rf conftest*
+-  ac_cv_type_fd_mask=no
++  ac_cv_have_fd_mask="no"
+ fi
+ rm -f conftest*
+ 
+ fi
+-echo "$ac_t""$ac_cv_type_fd_mask" 1>&6
+-if test $ac_cv_type_fd_mask = no; then
+-  cat >> confdefs.h <<\EOF
+-#define fd_mask int
+-EOF
+-
+-fi
+ 
++echo "$ac_t""$ac_cv_have_fd_mask" 1>&6
+ 
+ echo $ac_n "checking for socklen_t""... $ac_c" 1>&6
+ echo "configure:3707: checking for socklen_t" >&5
+@@ -4501,8 +4499,8 @@
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])
 -		echo "Removing -O for gcc on $host with GCC $GCCVER"
 -		CFLAGS="`echo $CFLAGS | sed -e 's/-O[0-9]*//'`"
-+		echo "Making -O[2-9] to -O for gcc on $host with GCC $GCCVER"
++		echo "Making -O\[2-9\] to -O for gcc on $host with GCC $GCCVER"
 +		CFLAGS="`echo $CFLAGS | sed -e 's/-O[0-9]*/-O/'`"
  		;;
  	esac
