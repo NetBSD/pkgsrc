@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/09/16 19:17:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/16 19:23:34 xtraeme Exp $
 #
 
 DISTNAME=	evilwm_0.99.15.orig
-PKGNAME=	evilwm-0.99.15
+PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=evilwm/}
