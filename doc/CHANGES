@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8801 2005/01/18 09:02:55 itojun Exp $
+$NetBSD: CHANGES,v 1.8802 2005/01/18 11:23:30 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated adzap to 20050106 [simonb 2005-01-18]
 	Updated kdeutils3 to 3.3.2nb1 [minskim 2005-01-18]
 	Updated cue to 20050110 [itojun 2005-01-18]
+	Updated ImageMagick to 6.1.8-8 [drochner 2005-01-18]
