@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/11 18:57:59 fredb Exp $
 #
 
 DISTNAME=		ascp-1.0.3
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.afterstep.org/apps/ascp/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://hubble.colorado.edu/~nwanua/htmldir/ascp.html
+HOMEPAGE=		http://www.princeton.edu/~ferguson/adw/ascp/
 COMMENT=		Configuration utility for AfterStep
 
 DEPENDS+=		afterstep-1.8.*:../../wm/afterstep
@@ -18,7 +18,9 @@ USE_X11=		yes
 
 CONFIGURE_ENV+=		GTK_CONFIG="${X11PREFIX}/bin/gtk-config"
 
-IGNORE=			"Not for Afterstep 1.8.x!"
+# XXX Fix me. The development (currently cvs only) version of ascp
+# XXX allegedly does work with afterstep-1.8.x.
+IGNORE=		"${PKGNAME} is only for afterstep-1.6.x (obsolete)"
 
 pre-configure:
 	${RM} ${WRKSRC}/config.cache
