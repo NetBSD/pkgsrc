@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/21 07:59:52 snj Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/20 21:12:15 snj Exp $
 bin/gqview
 man/man1/gqview.1
+share/applications/gqview.desktop
 share/gqview/README
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gqview.mo
@@ -29,4 +30,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gqview.mo
+share/pixmaps/gqview.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gqview
+@comment in xdg-dirs: @dirrm share/applications
