@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2002/10/21 06:12:54 jlam Exp $
+$NetBSD: patch-af,v 1.5 2002/11/01 00:26:30 jlam Exp $
 
 --- configure.orig	Fri Jul 27 19:53:11 2001
 +++ configure
@@ -67,14 +67,24 @@ $NetBSD: patch-af,v 1.4 2002/10/21 06:12:54 jlam Exp $
  for ac_prog in mawk gawk nawk awk
  do
  # Extract the first word of "$ac_prog", so it can be a program name with args.
-@@ -4179,6 +4157,44 @@ fi
+@@ -2284,6 +2262,9 @@ if test "$with_perl" = "no"; then
+ else
+     EXTRA_SUBDIRS="${EXTRA_SUBDIRS} perl"
+     PERL_SUBDIRS="imap"
++    eval `${PERL} -V:cccdlflags`
++    PERL_CCCDLFLAGS="$cccdlflags"
++    
+ fi
+ 
+ if test "$sievedir" != "no"; then
+@@ -4179,6 +4160,44 @@ fi
  
  	SASLFLAGS=""
  	LIB_SASL=""
 +	# Extract the first word of "sasl-config", so it can be a program name with args.
 +set dummy sasl-config; ac_word=$2
 +echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
-+echo "configure:4164: checking for $ac_word" >&5
++echo "configure:4167: checking for $ac_word" >&5
 +if eval "test \"`echo '$''{'ac_cv_path_SASL_CONFIG'+set}'`\" = set"; then
 +  echo $ac_n "(cached) $ac_c" 1>&6
 +else
@@ -112,7 +122,7 @@ $NetBSD: patch-af,v 1.4 2002/10/21 06:12:54 jlam Exp $
  
  	cmu_saved_CPPFLAGS=$CPPFLAGS
  	cmu_saved_LDFLAGS=$LDFLAGS
-@@ -4277,6 +4293,15 @@ fi
+@@ -4277,6 +4296,15 @@ fi
  	  LIB_SASL=""
  	  SASLFLAGS=""
  	fi
@@ -128,7 +138,15 @@ $NetBSD: patch-af,v 1.4 2002/10/21 06:12:54 jlam Exp $
  	
  	
  	
-@@ -5084,6 +5109,7 @@ s%@COMPILE_ET@%$COMPILE_ET%g
+@@ -5066,6 +5094,7 @@ s%@YACC@%$YACC%g
+ s%@LEX@%$LEX%g
+ s%@LEXLIB@%$LEXLIB%g
+ s%@PERL@%$PERL%g
++s%@PERL_CCCDLFLAGS@%$PERL_CCCDLFLAGS%g
+ s%@WITH_NONBLOCK@%$WITH_NONBLOCK%g
+ s%@WITH_GMTOFF@%$WITH_GMTOFF%g
+ s%@WITH_MAP@%$WITH_MAP%g
+@@ -5084,6 +5113,7 @@ s%@COMPILE_ET@%$COMPILE_ET%g
  s%@COM_ERR_LIBS@%$COM_ERR_LIBS%g
  s%@COM_ERR_LDFLAGS@%$COM_ERR_LDFLAGS%g
  s%@COM_ERR_CPPFLAGS@%$COM_ERR_CPPFLAGS%g
