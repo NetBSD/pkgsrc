@@ -1,0 +1,177 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/15 10:37:24 grant Exp $
+bin/backupschema
+bin/fields
+bin/fields-debug
+bin/query
+bin/query-debug
+bin/sqlr-cachemanager
+bin/sqlr-cachemanager-debug
+bin/sqlr-listener
+bin/sqlr-listener-debug
+bin/sqlr-scaler
+bin/sqlr-scaler-debug
+bin/sqlr-start
+bin/sqlr-start-debug
+bin/sqlr-stop
+bin/sqlrclient-config
+bin/sqlrclientwrapper-config
+bin/sqlrsh
+bin/sqlrsh-debug
+doc/sqlrelay/api/c++/sqlrclient.h.html
+doc/sqlrelay/api/c/sqlrclientwrapper.h.html
+doc/sqlrelay/api/java/allclasses-frame.html
+doc/sqlrelay/api/java/allclasses-noframe.html
+doc/sqlrelay/api/java/com/firstworks/sqlrelay/SQLRConnection.html
+doc/sqlrelay/api/java/com/firstworks/sqlrelay/SQLRCursor.html
+doc/sqlrelay/api/java/com/firstworks/sqlrelay/package-frame.html
+doc/sqlrelay/api/java/com/firstworks/sqlrelay/package-summary.html
+doc/sqlrelay/api/java/com/firstworks/sqlrelay/package-tree.html
+doc/sqlrelay/api/java/constant-values.html
+doc/sqlrelay/api/java/deprecated-list.html
+doc/sqlrelay/api/java/help-doc.html
+doc/sqlrelay/api/java/index-all.html
+doc/sqlrelay/api/java/index.html
+doc/sqlrelay/api/java/overview-tree.html
+doc/sqlrelay/api/java/package-list
+doc/sqlrelay/api/java/packages.html
+doc/sqlrelay/api/java/stylesheet.css
+doc/sqlrelay/api/perl/SQLRConnection.html
+doc/sqlrelay/api/perl/SQLRCursor.html
+doc/sqlrelay/api/perl/SQLRelay.html
+doc/sqlrelay/api/php/doc.html
+doc/sqlrelay/api/python/PySQLRClient.py.html
+doc/sqlrelay/api/python/PySQLRDB.py.html
+doc/sqlrelay/api/ruby/ruby.html
+doc/sqlrelay/api/ruby/rubydbi.html
+doc/sqlrelay/clientapis.html
+doc/sqlrelay/configuring.html
+doc/sqlrelay/connections.html
+doc/sqlrelay/css/styles.css
+doc/sqlrelay/gettingstarted/db2.html
+doc/sqlrelay/gettingstarted/interbase.html
+doc/sqlrelay/gettingstarted/lago.html
+doc/sqlrelay/gettingstarted/msql.html
+doc/sqlrelay/gettingstarted/mssqlserver.html
+doc/sqlrelay/gettingstarted/mysql.html
+doc/sqlrelay/gettingstarted/oracle.html
+doc/sqlrelay/gettingstarted/oracle/805.html
+doc/sqlrelay/gettingstarted/oracle/817.html
+doc/sqlrelay/gettingstarted/postgresql.html
+doc/sqlrelay/gettingstarted/sqlite.html
+doc/sqlrelay/gettingstarted/sybase.html
+doc/sqlrelay/gettingstarted/sybase/11.0.3.3.html
+doc/sqlrelay/gettingstarted/sybase/11.9.2.html
+doc/sqlrelay/index.html
+doc/sqlrelay/installing.html
+doc/sqlrelay/introduction.html
+doc/sqlrelay/introtowebdb.html
+doc/sqlrelay/invisible.gif
+doc/sqlrelay/oraclentier.html
+doc/sqlrelay/programming/binds.html
+doc/sqlrelay/programming/c++.html
+doc/sqlrelay/programming/c.html
+doc/sqlrelay/programming/java.html
+doc/sqlrelay/programming/perl.html
+doc/sqlrelay/programming/perldbi.html
+doc/sqlrelay/programming/php.html
+doc/sqlrelay/programming/python.html
+doc/sqlrelay/programming/pythondb.html
+doc/sqlrelay/programming/ruby.html
+doc/sqlrelay/programming/rubydbi.html
+doc/sqlrelay/programming/zope.html
+doc/sqlrelay/programming/zope/instance.gif
+doc/sqlrelay/programming/zope/management.gif
+doc/sqlrelay/programming/zope/resultset.gif
+doc/sqlrelay/programming/zope/sqlrelay.gif
+doc/sqlrelay/programming/zope/test.gif
+doc/sqlrelay/programming/zope/testzsqlmethod.gif
+doc/sqlrelay/programming/zope/zsqlmethod.gif
+doc/sqlrelay/programming/zope/zsqlmethodresultset.gif
+doc/sqlrelay/running.html
+etc/sqlrelay.conf.example
+etc/sqlrelay.dtd
+include/sqlrelay/private/bindvar.h
+include/sqlrelay/private/column.h
+include/sqlrelay/private/row.h
+include/sqlrelay/private/sqlrconnection.h
+include/sqlrelay/private/sqlrcursor.h
+include/sqlrelay/private/sqlrdefines.h
+include/sqlrelay/private/sqlrincludes.h
+include/sqlrelay/sqlrclient.h
+include/sqlrelay/sqlrclientwrapper.h
+lib/libsqlrclient-${PKGVERSION}.so.1
+lib/libsqlrclient-${PKGVERSION}.so.1.0.0
+lib/libsqlrclient.a
+lib/libsqlrclient.la
+lib/libsqlrclient.so
+lib/libsqlrclient_p-${PKGVERSION}.so.1
+lib/libsqlrclient_p-${PKGVERSION}.so.1.0.0
+lib/libsqlrclient_p.a
+lib/libsqlrclient_p.la
+lib/libsqlrclient_p.so
+lib/libsqlrclientwrapper-${PKGVERSION}.so.1
+lib/libsqlrclientwrapper-${PKGVERSION}.so.1.0.0
+lib/libsqlrclientwrapper.a
+lib/libsqlrclientwrapper.la
+lib/libsqlrclientwrapper.so
+lib/libsqlrclientwrapper_p-${PKGVERSION}.so.1
+lib/libsqlrclientwrapper_p-${PKGVERSION}.so.1.0.0
+lib/libsqlrclientwrapper_p.a
+lib/libsqlrclientwrapper_p.la
+lib/libsqlrclientwrapper_p.so
+lib/libsqlrconnection-${PKGVERSION}.so.1
+lib/libsqlrconnection-${PKGVERSION}.so.1.0.0
+lib/libsqlrconnection.a
+lib/libsqlrconnection.la
+lib/libsqlrconnection.so
+lib/libsqlrconnection_p-${PKGVERSION}.so.1
+lib/libsqlrconnection_p-${PKGVERSION}.so.1.0.0
+lib/libsqlrconnection_p.a
+lib/libsqlrconnection_p.la
+lib/libsqlrconnection_p.so
+lib/libsqlrutil-${PKGVERSION}.so.1
+lib/libsqlrutil-${PKGVERSION}.so.1.0.0
+lib/libsqlrutil.a
+lib/libsqlrutil.la
+lib/libsqlrutil.so
+lib/libsqlrutil_p-${PKGVERSION}.so.1
+lib/libsqlrutil_p-${PKGVERSION}.so.1.0.0
+lib/libsqlrutil_p.a
+lib/libsqlrutil_p.la
+lib/libsqlrutil_p.so
+man/man1/fields.1
+man/man1/query.1
+man/man1/query.py.1
+man/man1/sqlr-config-gtk.1
+man/man1/sqlrsh.1
+man/man8/sqlr-cachemanager.8
+man/man8/sqlr-connection.8
+man/man8/sqlr-ipclean.8
+man/man8/sqlr-listener.8
+man/man8/sqlr-scaler.8
+man/man8/sqlr-start.8
+man/man8/sqlr-stop.8
+@exec ${MKDIR} %D/var/sqlrelay/cache
+@dirrm var/sqlrelay/cache
+@dirrm var/sqlrelay
+@dirrm var
+@dirrm include/sqlrelay/private
+@dirrm include/sqlrelay
+@dirrm doc/sqlrelay/programming/zope
+@dirrm doc/sqlrelay/programming
+@dirrm doc/sqlrelay/gettingstarted/sybase
+@dirrm doc/sqlrelay/gettingstarted/oracle
+@dirrm doc/sqlrelay/gettingstarted
+@dirrm doc/sqlrelay/css
+@dirrm doc/sqlrelay/api/ruby
+@dirrm doc/sqlrelay/api/python
+@dirrm doc/sqlrelay/api/php
+@dirrm doc/sqlrelay/api/perl
+@dirrm doc/sqlrelay/api/java/com/firstworks/sqlrelay
+@dirrm doc/sqlrelay/api/java/com/firstworks
+@dirrm doc/sqlrelay/api/java/com
+@dirrm doc/sqlrelay/api/java
+@dirrm doc/sqlrelay/api/c++
+@dirrm doc/sqlrelay/api/c
+@dirrm doc/sqlrelay/api
+@dirrm doc/sqlrelay
