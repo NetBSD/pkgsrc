@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1327 2003/12/24 15:22:00 heinz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1328 2003/12/25 16:18:48 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4379,11 +4379,11 @@ print-pkg-size-this:
 	@${SHCOMMENT} "This pkg's files" ;				\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
 		/^@cwd/ { base = $$2 "/" }				\
-		/^@ignore/ { next }					\
-		NF == 1 { print base $$1 }'				\
+		/^@/ { next }						\
+		{ print base $$0 }'					\
 		<${PLIST} 						\
 	| ${SORT} -u							\
-	| ${SED} -e 's, ,\\ ,g'						\
+	| ${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/"			\
 	| ${XARGS} ${LS} -ld						\
 	| ${AWK} 'BEGIN { print("0 "); }				\
 		  { print($$5, " + "); }				\
