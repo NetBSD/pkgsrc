@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/14 22:06:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/04 12:05:07 mycroft Exp $
 bin/xmame
-lib/mame/xmamerc
-@dirrm lib/mame
 man/man6/xmame.6
+share/mame/xmamerc
+@dirrm share/mame
