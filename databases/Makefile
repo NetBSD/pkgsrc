@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2003/02/21 11:59:46 salo Exp $
+# $NetBSD: Makefile,v 1.94 2003/03/07 21:36:22 bouyer Exp $
 #
 
 COMMENT=	Databases
@@ -90,6 +90,7 @@ SUBDIR+=	ruby-postgresql
 SUBDIR+=	sdbm
 SUBDIR+=	sqlite
 SUBDIR+=	sqsh
+SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tcl-postgresql
 SUBDIR+=	tdb
