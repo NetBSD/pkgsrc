@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/05/01 21:15:06 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/23 21:32:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -41,7 +41,7 @@
 #    SUBDIR += p5-HTTPD-Tools
 #    SUBDIR += p5-WWW-Search
     SUBDIR += p5-libwww
-#    SUBDIR += squid11
+    SUBDIR += squid11
 #    SUBDIR += squid11-novm
 #    SUBDIR += vrweb
 #    SUBDIR += w3
