@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/11 05:54:12 xtraeme Exp $
 #
 
 DISTNAME=	Image-Imlib2-0.12
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 USE_PERL5=	run
 USE_X11=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 # If the X11 and Xext libraries are not weeded out,
 # they will be unresolved in the resulting .so
@@ -40,6 +40,6 @@ do-test:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
 
-.include "../../graphics/imlib2/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
