@@ -68,7 +68,7 @@
   */
 +/*
 + * Note: I changed this file and some Imakefiles to use the installed
-+ * libtiff in /usr/pkg instad FreeBSD. - Satoshi
++ * libtiff in /usr/local instad FreeBSD. - Satoshi
 + */
  #ifndef BuildLibTiff
  #define BuildLibTiff     YES
@@ -109,10 +109,10 @@
  #endif
  #ifndef TiffDir
 -#define TiffDir TOPDIR/libtiff
-+#define TiffDir /usr/pkg/lib
++#define TiffDir /usr/local/lib
 +#endif
 +#ifndef TiffIncDir
-+#define TiffIncDir /usr/pkg/include
++#define TiffIncDir /usr/local/include
  #endif
  
  /* Libraries: */
