@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9247 2005/02/21 15:50:04 taca Exp $
+$NetBSD: CHANGES,v 1.9248 2005/02/21 16:39:03 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed ruby-zlib [taca 2005-02-21]
 	Removed ruby-digest [taca 2005-02-21]
 	Removed ruby-openssl [taca 2005-02-21]
+	Updated dtcpclient-20040923nb1 [hamajima 2005-02-21]
