@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:58 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/03 14:05:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -14,6 +14,8 @@ USE_X11=	yes
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	pns
+
+.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/xpns
