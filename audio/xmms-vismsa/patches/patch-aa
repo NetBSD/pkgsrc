@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/18 02:52:20 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/23 14:12:46 jlam Exp $
 
 --- Makefile.orig	Fri Mar 23 23:36:18 2001
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/18 02:52:20 hubertf Exp $
 -OBJ = vismsa.o
 -INSTALL-DIR=`xmms-config --visualization-plugin-dir`
 -XMMS_DATADIR=`xmms-config --data-dir`
-+CFLAGS+= $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
++CFLAGS+= $(OPT) -Wall -fPIC `$(GTK_CONFIG) --cflags gthread`
 +#LFLAGS = -shared -fPIC -L/usr/local/lib
 +OBJ = vismsa.lo
 +INSTALL-DIR=`$(XMMS_CONFIG) --visualization-plugin-dir`
