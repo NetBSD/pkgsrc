@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6899 2004/08/16 06:24:31 minskim Exp $
+$NetBSD: CHANGES,v 1.6900 2004/08/16 06:53:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3856,3 +3856,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added un-core-ttf-1.0 [minskim 2004-08-16]
 	Added un-extra-ttf-1.0.1 [minskim 2004-08-16]
 	Removed un-ttf [minskim 2004-08-16]
+	Updated xchat to 2.4.0 [minskim 2004-08-16]
