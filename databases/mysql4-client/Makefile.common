@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2004/05/14 11:38:54 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/06/20 18:48:44 xtraeme Exp $
 
-DISTNAME=		mysql-4.0.18
+DISTNAME=		mysql-4.0.20
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.0/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.0/ \
@@ -27,8 +27,8 @@ MYSQL_DATADIR?=		/var/mysql
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
-USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
