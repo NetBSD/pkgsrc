@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3078 2003/08/22 13:49:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.3079 2003/08/23 13:34:29 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3308,3 +3308,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.17 [agc 2003-08-21]
 	Added gscmxx-0.4.1 [salo 2003-08-22]
 	Added fastdep-0.15 [jmmv 2003-08-22]
+	Removed 6to4 (renamed to hf6to4) [hubertf 2003-03-23]
+	Added hf6to4-1.0 [hubertf 2003-03-23]
