@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/01/02 09:12:25 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/20 10:03:49 skrll Exp $
 
 DISTNAME=	kdegraphics-3.0.5a
 CATEGORIES=	graphics
@@ -15,6 +15,12 @@ CONFIGURE_ARGS+=	--without-kamera	# requires gPhoto2, gpio
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+FOO_MAIN_FILES= \
+	kview/kview_main.cpp \
+	kuickshow/src/kuickshow_main.cpp
+
+.include "../../x11/kde3/Makefile.foo_main"
 
 #.include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"

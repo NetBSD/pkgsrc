@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/01/17 03:20:58 markd Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/20 10:04:18 skrll Exp $
 
 DISTNAME=	kdelibs-3.0.5a
 CATEGORIES=	x11
@@ -30,6 +30,30 @@ REPLACE_PERL= \
 
 PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize memorysize
+
+FOO_MAIN_FILES= \
+	arts/knotify/knotify_main.cpp \
+	dcop/dcopserver_main.cpp \
+	kconf_update/kconf_update_main.cpp \
+	kded/kbuildsycoca_main.cpp \
+	kded/kded_main.cpp \
+	kdeprint/management/kaddprinterwizard_main.cpp \
+	kio/misc/kio_uiserver_main.cpp \
+	kioslave/http/http_cache_cleaner_main.cpp \
+	kioslave/http/kcookiejar/kcookiejar_main.cpp
+
+.include "../../x11/kde3/Makefile.foo_main"
+
+FIXUP_FILES= \
+	kspell/ksconfig.cpp
+
+pre-configure:
+	@for i in ${FIXUP_FILES}; do \
+		${SED} -e 's:@LOCALBASE@:${LOCALBASE}:g' \
+		     ${WRKSRC}/$${i} > ${WRKSRC}/$${i}.fixup && \
+		${MV} ${WRKSRC}/$${i}.fixup ${WRKSRC}/$${i}; \
+	done
+
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink2.mk"
