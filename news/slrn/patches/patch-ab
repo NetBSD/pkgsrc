@@ -1,43 +1,37 @@
-$NetBSD: patch-ab,v 1.3 1999/05/18 22:01:36 mjl Exp $
+$NetBSD: patch-ab,v 1.4 2000/01/01 18:24:32 mjl Exp $
 
---- src/Makefile.in.orig	Tue May 18 23:42:20 1999
-+++ src/Makefile.in	Tue May 18 23:44:24 1999
-@@ -61,7 +61,7 @@
- prefix = @prefix@
+--- src/Makefile.in.orig	Thu Dec 23 18:24:38 1999
++++ src/Makefile.in	Sat Jan  1 19:04:34 2000
+@@ -62,7 +62,7 @@
  exec_prefix = @exec_prefix@
+ 
  BINDIR = @bindir@
 -DOCDIR = $(prefix)/doc/slrn
 +DOCDIR = $(prefix)/share/slrn
  MANDIR = @mandir@
  MACRODIR = @datadir@/slrn
- 
-@@ -128,19 +128,16 @@
- distclean: clean
- 	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
- install: all $(BINDIR)
--	$(INSTALL) -m 755 $(INSTALL_OWNER) $(OBJDIR)/slrn $(BINDIR)
--	-$(INSTALL) -m 755 $(INSTALL_OWNER) $(OBJDIR)/slrnpull $(BINDIR)
--	$(INSTALL) -d $(DOCDIR) -m 755 $(INSTALL_OWNER)
--	cd ../doc; $(INSTALL) -m 644 $(INSTALL_OWNER) $(README_FILES) $(DOCDIR)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../COPYRIGHT $(DOCDIR)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../COPYING $(DOCDIR)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../README $(DOCDIR)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../changes.txt $(DOCDIR)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../doc/slrn.1 $(MANDIR)/man1
--	$(INSTALL) -d $(DOCDIR)/slrnpull -m 755 $(INSTALL_OWNER)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../slrnpull/* $(DOCDIR)/slrnpull
--	$(INSTALL) -d $(MACRODIR) -m 755 $(INSTALL_OWNER)
--	$(INSTALL) -m 644 $(INSTALL_OWNER) ../macros/*.sl $(MACRODIR)
-+	$(INSTALL) -c -m 755  $(OBJDIR)/slrn $(BINDIR)
-+	$(INSTALL) -d $(DOCDIR) -m 755 
-+	-$(INSTALL) -c -m 644 ../doc/* $(DOCDIR)
-+	$(INSTALL) -c -m 644  ../COPYRIGHT $(DOCDIR)
-+	$(INSTALL) -c -m 644  ../COPYING $(DOCDIR)
-+	$(INSTALL) -c -m 644  ../README $(DOCDIR)
-+	$(INSTALL) -c -m 644  ../changes.txt $(DOCDIR)
-+	$(INSTALL) -c -m 644  ../doc/slrn.1 $(MANDIR)/man1
-+	$(INSTALL) -d $(MACRODIR) -m 755
-+	$(INSTALL) -c -m 644 ../macros/*.sl $(MACRODIR)
- $(BINDIR):
- 	- ../mkinsdir.sh $(BINDIR)
- # The symlinks target is for my own private use.  It simply creates the object
+ MKINSDIR = ../autoconf/mkinsdir.sh
+@@ -98,7 +98,7 @@
+ CONFIG_H = config.h
+ ALL_CFLAGS = $(CFLAGS) -Dunix -I$(SLANGINC) \
+  $(MISCINCLUDES) $(NNTPSERVERFILE) $(SLRNLIBDIR) $(SLRN_MACRO_DIR)
+-EXECLIBS = -L$(SLANGLIB) -lslang $(MISCLIBS) -lm
++EXECLIBS = -L$(SLANGLIB) -Wl,-R$(prefix)/lib -lslang $(MISCLIBS) -lm
+ DOT_O_DEPS = slrnfeat.h
+ server_O_DEP = clientlib.c spool.c nntp.c sltcp.c nntplib.c
+ chmap_O_DEP = chmap.h charmaps.h
+@@ -181,14 +181,6 @@
+ 	do \
+ 		echo $(INSTALL_DATA) $$i $(DEST_MANDIR)/man1/; \
+ 		$(INSTALL_DATA) $$i $(DEST_MANDIR)/man1/; \
+-		if [ "$$?" != "0" ]; then \
+-		  exit 1; \
+-		fi; \
+-	done
+-	@for i in $(SLRNPULL_DOCS); \
+-	do \
+-		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/slrnpull; \
+-		$(INSTALL_DATA) $$i $(DEST_DOCDIR)/slrnpull; \
+ 		if [ "$$?" != "0" ]; then \
+ 		  exit 1; \
+ 		fi; \
