@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/04/16 00:40:57 uebayasi Exp $
+$NetBSD: distinfo,v 1.3 2004/11/19 18:27:11 wiz Exp $
 
-SHA1 (flyspell-1.7c/flyspell.el) = ac0c66514e4f335b13a1c56875b945f4a61f93b3
-Size (flyspell-1.7c/flyspell.el) = 93025 bytes
+SHA1 (flyspell-1.7f.el) = b044510710c9bb98d015eb553ef9a441a4ee5251
+Size (flyspell-1.7f.el) = 93335 bytes
