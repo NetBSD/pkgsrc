@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:31 tron Exp $
-etc/mailer.conf.default
-@exec test -e /etc/mailer.conf || ln -sf %F /etc/mailer.conf
+@comment $NetBSD: PLIST,v 1.5 2003/05/01 12:10:12 jmmv Exp $
 man/cat5/mailer.conf.0.gz
 man/cat8/mailwrapper.0.gz
 man/man5/mailer.conf.5.gz
 man/man8/mailwrapper.8.gz
 sbin/mailwrapper
+share/examples/mailwrapper/mailer.conf
+@dirrm share/examples/mailwrapper
 @exec ${MKDIR} /usr/libexec/sendmail
 @exec mv -i /usr/sbin/sendmail /usr/libexec/sendmail </dev/null 2>/dev/null || ${TRUE}
 @exec ln -fs %D/sbin/mailwrapper /usr/bin/mailq
