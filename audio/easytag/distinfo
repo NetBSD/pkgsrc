@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.14 2003/05/08 12:26:00 wiz Exp $
+$NetBSD: distinfo,v 1.15 2003/05/23 21:02:58 wiz Exp $
 
 SHA1 (easytag-0.27.1.tar.bz2) = 0af982a22812c78d3343fa2bd6091603f7001e46
 Size (easytag-0.27.1.tar.bz2) = 1074679 bytes
+SHA1 (patch-aa) = 9beaac0acfc69164a11f405c675afa278bbe1b02
