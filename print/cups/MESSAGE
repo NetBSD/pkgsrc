@@ -1,5 +1,5 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/18 22:58:46 jlam Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2002/09/24 12:30:32 wiz Exp $
 
 You will need to also install print/ghostscript-esp{,-nox11} if you wish
 to print to non-Postscript printers.
@@ -7,4 +7,4 @@ to print to non-Postscript printers.
 You may want to backup /etc/printcap before starting CUPS for the first
 time, as the CUPS scheduler may overwrite this file with automatically
 generated content.
-==========================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-===============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:28:24 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:18 wiz Exp $
 
 Jitterbug now has successfully been installed on your system.
 
@@ -26,4 +26,4 @@ o Add an alias for ${JB_USER} to your mail aliases:
 o Append ${PREFIX}/etc/jitterbug/httpd.conf.add to your httpd.conf
   (typically ${PREFIX}/etc/httpd/httpd.conf) and restart your httpd.
 
-===============================================================================
+===========================================================================

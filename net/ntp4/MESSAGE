@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:57:09 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:26 wiz Exp $
 
 THERE ARE NO MAN PAGES. All installed documentation
 is accessible through
@@ -16,4 +16,4 @@ and online docs are viewable through NTP's home at
 or
 	http://www.eecis.udel.edu/~ntp/
 
-======================================================================
+===========================================================================
