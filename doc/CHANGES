@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2708 2003/07/09 14:36:16 abs Exp $
+$NetBSD: CHANGES,v 1.2709 2003/07/09 18:22:51 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2707,3 +2707,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apache2 to 2.0.47 [itojun 2003-07-09]
 	Updated cvsync to 0.23.8 [gehenna 2003-07-09]
 	Updated cpuflags to 0.53 [abs 2003-07-09]
+	Updated ircII to 20030709 [mrg 2003-07-09]
+	Updated bozohttpd to 20030622 [mrg 2003-07-09]
