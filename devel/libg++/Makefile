@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/17 09:37:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/22 11:05:03 agc Exp $
 #
 
 GXXVERSION=	2.8.1.1a	# used by internal Makefile
@@ -14,7 +14,7 @@ MAKE_ENV+=	GXXVERSION="${GXXVERSION}"
 PLIST_SRC=	${WRKSRC}/.PLIST
 
 MAN1=		gperf.1
-INFO_FILES=	gperf libg++
+INFO_FILES=	gperf.info libg++.info
 
 do-configure:
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
