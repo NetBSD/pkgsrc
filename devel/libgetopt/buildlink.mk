@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/05/24 09:13:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/05/25 04:49:15 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
@@ -36,24 +36,27 @@ BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 BUILDLINK_TARGETS+=	link-getopt-headers
 BUILDLINK_TARGETS+=	link-getopt-libs
 
-# This target links the getopt header into ${BUILDLINK_INCDIR}, which should
+# This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
 # 
 link-getopt-headers:
 	@${ECHO} "Linking getopt headers into ${BUILDLINK_INCDIR}."
 	@${MKDIR} ${BUILDLINK_INCDIR}
 	@${RM} -f ${BUILDLINK_INCDIR}/getopt.h
-	@${LN} -sf ${GETOPT_H} ${BUILDLINK_INCDIR}
+	@${LN} -sf ${GETOPT_H} ${BUILDLINK_INCDIR}/getopt.h
 
-# This target links the getopt libraries into ${BUILDLINK_LIBDIR}, which
-# should be searched first by the linker.
+# This target links the libraries into ${BUILDLINK_LIBDIR}, which should
+# be searched first by the linker.
 #
 link-getopt-libs:
 	@${ECHO} "Linking getopt libraries into ${BUILDLINK_LIBDIR}."
-	@${MKDIR} -p ${BUILDLINK_LIBDIR}
+	@${MKDIR} ${BUILDLINK_LIBDIR}
 .if defined(LIBGETOPT)
 	@for lib in ${LIBGETOPT}; do					\
-		dest=`${BASENAME} $${lib}`;				\
-		${LN} -sf $${lib} ${BUILDLINK_LIBDIR}/$${dest};         \
+		dest=${BUILDLINK_LIBDIR}/`${BASENAME} $${lib}`;		\
+		if [ -f $${lib} ]; then					\
+			${RM} -f $${dest};				\
+			${LN} -sf $${lib} $${dest};			\
+		fi;							\
 	done
 .endif
