@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.723 2002/12/08 04:23:27 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.724 2002/12/08 11:38:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sylpheed-claws to 0.8.6 [chris 2002-12-08]
 	Updated cyrus-imapd to 2.1.11 [chris 2002-12-08]
 	Added covered-current-20021127 [dmcmahill 2002-12-07]
+	Updated sysbuild to 1.3 [jmmv 2002-12-08]
