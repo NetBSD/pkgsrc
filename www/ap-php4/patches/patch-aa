@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2000/11/01 11:33:18 jdolecek Exp $
+
+--- configure.orig	Wed Nov  1 12:18:03 2000
++++ configure	Wed Nov  1 12:19:19 2000
+@@ -34521,7 +34521,7 @@ else
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-
++if false; then
+ echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
+ echo "configure:34527: checking for pam_start in -lpam" >&5
+ ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
+@@ -34566,6 +34566,8 @@ EOF
+ else
+   echo "$ac_t""no" 1>&6
+ fi
++
++fi # if false
+  
+ 
+ for ac_func in getcwd getwd
