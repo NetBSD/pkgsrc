@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/07/13 13:59:36 wiz Exp $
 
-SHA1 (gnocatan-0.6.1.tar.gz) = ee3e0933c15589d7c3f1ba8183a129d01d20981f
-Size (gnocatan-0.6.1.tar.gz) = 625157 bytes
+SHA1 (gnocatan-0.7.1.tar.gz) = 1a0e72cffdb5ad2cd70e7e16eea06fd803d67019
+Size (gnocatan-0.7.1.tar.gz) = 1639979 bytes
+SHA1 (patch-aa) = c5919dd1441b0570dc2b624b93b8aba21d836ae0
