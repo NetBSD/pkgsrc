@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/21 16:06:22 darcy Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:28 wiz Exp $
 
 SHA1 (mod_auth_pgsql-2.0.2b1.tar.gz) = 536c98eba309ae5bba1dfeab14406a42e768bb7a
+RMD160 (mod_auth_pgsql-2.0.2b1.tar.gz) = e59c01721c4b5e9b32180b3e6beb909553d81758
 Size (mod_auth_pgsql-2.0.2b1.tar.gz) = 15930 bytes

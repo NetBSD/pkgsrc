@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/01/24 13:59:47 wulf Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 14:08:32 wiz Exp $
 
 SHA1 (gateway-1.4.0.tar.bz2) = 095de9f42541d74cff30bba898383c84fcc629c3
+RMD160 (gateway-1.4.0.tar.bz2) = f38cffdc43574d706acad5f2d60f80f70512312d
 Size (gateway-1.4.0.tar.bz2) = 2132627 bytes
 SHA1 (patch-aa) = b629c1460039c47baba017c107baf4199a517341
 SHA1 (patch-ab) = 87aed599d51f03f57bb1ddb058afe34f18802d23
