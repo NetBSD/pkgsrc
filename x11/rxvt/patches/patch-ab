@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.6 2000/08/30 00:01:05 wiz Exp $
+
 --- doc/Makefile.in.orig	Sun Mar 12 06:26:26 2000
 +++ doc/Makefile.in	Mon May  8 05:11:35 2000
 @@ -38,7 +38,10 @@
