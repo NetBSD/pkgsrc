@@ -1,0 +1,22 @@
+--- mkisofs.c.old	Thu Jul  2 13:24:42 1998
++++ mkisofs.c	Thu Jul  2 14:06:03 1998
+@@ -459,19 +459,6 @@
+ 	usage();
+ 	exit(1);
+       }
+-#ifdef __NetBSD__
+-    {
+-	int resource;
+-    struct rlimit rlp;
+-	if (getrlimit(RLIMIT_DATA,&rlp) == -1) 
+-		perror("Warning: getrlimit");
+-	else {
+-		rlp.rlim_cur=33554432;
+-		if (setrlimit(RLIMIT_DATA,&rlp) == -1)
+-			perror("Warning: setrlimit");
+-		}
+-	}
+-#endif
+ #ifdef HAVE_SBRK
+   mem_start = (unsigned long) sbrk(0);
+ #endif
