@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/14 16:50:19 magick Exp $
 
 DISTNAME=	xemacs-21.5.16
 PKGREVISION=	1
@@ -37,6 +37,8 @@ WITH_WIDGETS=	--with-widgets=lucid
 
 .if defined(XEMACS_ESD) && (${XEMACS_ESD} == "YES")
 .  include "../../audio/esound/buildlink2.mk"
+.else
+CONFIGURE_ARGS += --with-sound=none
 .endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
