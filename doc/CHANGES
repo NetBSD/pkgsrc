@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4618 2004/01/28 03:57:54 grant Exp $
+$NetBSD: CHANGES,v 1.4619 2004/01/28 05:05:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added devilspie 0.3.1 [snj 2004-01-27]
 	Updated tmda to 1.0 [kim 2004-01-28]
 	Updated libdvdplay to 1.0.1nb1 [grant 2004-01-28]
+	Updated yaz to 2.0nb1 [grant 2004-01-28]
