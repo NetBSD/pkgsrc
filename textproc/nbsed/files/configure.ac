@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.2 2003/08/23 22:20:26 jschauma Exp $
+dnl $Id: configure.ac,v 1.3 2003/10/16 12:04:41 grant Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nb-sed],[20030823],[agc@netbsd.org])
+AC_INIT([nb-sed],[20031016],[agc@netbsd.org])
 AC_CONFIG_SRCDIR([main.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -37,6 +37,7 @@ AC_CHECK_FUNCS(setprogname)
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
+AC_C_INLINE
 AC_TYPE_SIZE_T
 
 # Checks for library functions.
@@ -121,6 +122,16 @@ AH_BOTTOM([
 # else
 #error You need either memcpy or bcopy
 # endif
+#endif
+
+#ifndef DEFFILEMODE
+# define DEFFILEMODE     (S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
+#endif
+
+#include <stdio.h>
+
+#ifndef HAVE_FGETLN
+char *fgetln(FILE *, size_t *);
 #endif
 ])
 
