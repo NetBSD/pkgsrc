@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/19 12:37:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/19 00:51:21 jlam Exp $
 bin/type1afm
 bin/xglyph
 include/t1lib.h
@@ -97,4 +97,4 @@ share/t1lib/Fonts/type1/eufm10.pfb
 @dirrm share/t1lib/Fonts
 @dirrm share/examples/t1lib
 @comment remove any rendered docs as well
-@unexec ${RM} -rf %D/share/doc/t1lib || true
+@unexec ${RM} -rf %D/share/doc/t1lib || ${TRUE}
