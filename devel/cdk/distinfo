@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/08/26 18:28:20 jlam Exp $
 
 SHA1 (latestCDK.tgz) = 0751eb6099d43e8d1f4e8b86d5684cc039310194
 Size (latestCDK.tgz) = 267523 bytes
@@ -8,4 +8,4 @@ SHA1 (patch-ad) = c21828919b4a20c21f70fd28464e67ac8d8ad13b
 SHA1 (patch-ae) = 92fdce7886c7ace9e97ca47921a86a2c7ed6e810
 SHA1 (patch-af) = a21d7f7121d054c58830ad04264c2f74912ffab4
 SHA1 (patch-ag) = 4de8de13346740c5b1a55e5f95195981c1372434
-SHA1 (patch-aj) = cb1848e70504eb69f12daa1b6bca70fa60265d0f
+SHA1 (patch-aj) = 2fc8cccfa2a7da1b11c77954fbbcda6de79ce70f
