@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/02 14:49:31 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/26 10:13:14 wiz Exp $
 
 DISTNAME=	dvdbackup-0.1.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/dvdbackup/src
 CATEGORIES=	graphics
 MASTER_SITES=	http://dvd-create.sourceforge.net/
