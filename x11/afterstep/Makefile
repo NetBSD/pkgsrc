@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/06/01 14:53:15 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2000/07/25 08:02:56 jlam Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -15,7 +15,7 @@ DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		rplay>=3.2.0b6:../../audio/rplay
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-DEPENDS+=		asclock-*:../../x11/asclock
+DEPENDS+=		asclock-[0-9]*:../../x11/asclock
 DEPENDS+=		xp-*:../../x11/xp
 
 GNU_CONFIGURE=		yes
