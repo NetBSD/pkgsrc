@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/10 09:13:31 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/20 08:55:52 sakamoto Exp $
 etc/rc.d/ja_freewnn
 man/ja_JP.EUC/man1/atod.1
 man/ja_JP.EUC/man1/atof.1
@@ -36,3 +36,4 @@ sbin/wdreg
 sbin/wnnkill
 sbin/wnnstat
 sbin/wnntouch
+share/wnn/ja_JP/jserverrc

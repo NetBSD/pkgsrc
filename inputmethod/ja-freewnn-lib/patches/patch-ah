@@ -1,0 +1,39 @@
+$NetBSD: patch-ah,v 1.1 2002/06/20 08:55:51 sakamoto Exp $
+
+--- Wnn/jd/Makefile.in.orig	Tue Mar 23 21:11:01 1999
++++ Wnn/jd/Makefile.in
+@@ -624,7 +624,7 @@
+ 
+ SUBDIRS = rk rk.vi
+ 
+-SERVERCDS = jserverrc hinsi.data
++SERVERCDS = jserverrc
+ 
+ HINSILINKS = hinsi.data
+ 
+@@ -767,6 +767,7 @@
+ clean::
+ 	$(RM) cvt_key_tbl.vt
+ 
++.if (${WNN_TARGET} == "SERVER")
+ install::  $(SERVERCDS)
+ 	@if [ -d $(DESTDIR)$(JWNNWNNDIR) ]; then set +x; \
+ 	else (set -x; $(MKDIRHIER) $(DESTDIR)$(JWNNWNNDIR)); fi
+@@ -775,7 +776,9 @@
+ 	for i in  $(SERVERCDS); do \
+ 	(set -x; $(INSTALL) $(INSTALLFLAGS) $(INSTDATFLAGS) $$i $(DESTDIR)$(JWNNWNNDIR)); \
+ 	done
++.endif
+ 
++.if (${WNN_TARGET} == "LIBRARY")
+ install::  $(CLIENTJDS1)
+ 	@if [ -d $(DESTDIR)$(JWNNWNNDIR) ]; then set +x; \
+ 	else (set -x; $(MKDIRHIER) $(DESTDIR)$(JWNNWNNDIR)); fi
+@@ -811,6 +814,7 @@
+ 	for i in  $(LIBJDS2); do \
+ 	(set -x; $(INSTALL) $(INSTALLFLAGS) $(INSTDATFLAGS) $$i $(DESTDIR)$(WNNWNNDIR)); \
+ 	done
++.endif
+ 
+ depend::
+ 
