@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1338 2003/02/12 01:03:45 atatat Exp $
+$NetBSD: CHANGES,v 1.1339 2003/02/12 07:23:45 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Device-Gsm-1.16 [mjl 2003-02-12]
 	Updated fvwm2 to 2.4.15nb2 [atatat 2003-02-12]
 	Updated mozilla to 1.2.1nb5 [atatat 2003-02-12]
+	Updated squirrelmail to 1.2.11 [martti 2003-02-12]
