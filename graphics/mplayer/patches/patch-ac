@@ -1,32 +1,29 @@
-$NetBSD: patch-ac,v 1.2 2001/12/25 18:02:08 wiz Exp $
---- dvdauth.c.orig	Thu Jun 21 04:06:40 2001
-+++ dvdauth.c	Mon Jul 30 22:10:09 2001
-@@ -74,6 +74,14 @@
-  * With the old libcss-0.1 api, we have to find out the LBA for
-  * a title for title authentication.
-  */
-+
-+int CSSDVDAuthTitlePath(DVDHandle hdl,unsigned char *key_title,char *path)
-+{
-+	int lba=path_to_lba(path);
-+	if (lba==-1) return -1;
-+	return CSSAuthTitle(hdl,key_title,lba);
-+}		
-+
- #ifdef __linux__
- #include <linux/fs.h>
- #include <errno.h>
-@@ -121,13 +129,6 @@
-     return lba;
- }
+$NetBSD: patch-ac,v 1.3 2001/12/26 00:58:05 zuntum Exp $
+
+--- Makefile.orig	Fri Oct 19 22:53:42 2001
++++ Makefile	Fri Oct 19 23:09:34 2001
+@@ -170,18 +170,17 @@
+ 	$(CC) $(CFLAGS) -g codec-cfg.c -o $(PRG_CFG) -DCODECS2HTML
  
--
--int CSSDVDAuthTitlePath(DVDHandle hdl,unsigned char *key_title,char *path)
--{
--	int lba=path_to_lba(path);
--	if (lba==-1) return -1;
--	return CSSAuthTitle(hdl,key_title,lba);
--}		
- 		
- 
- #else /*linux*/
+ install: $(ALL_PRG)
+-	if test ! -d $(BINDIR) ; then mkdir -p $(BINDIR) ; fi
+-	$(INSTALL) -m 755 -s $(PRG) $(BINDIR)/$(PRG)
++	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(PRG) $(BINDIR)
+ ifeq ($(GUI),yes)
+-	-ln -sf $(BINDIR)/$(PRG) $(BINDIR)/gmplayer
++ 	-ln -sf $(PRG) $(BINDIR)/gmplayer
+ endif
+-	if test ! -d $(MANDIR)/man1 ; then mkdir -p $(MANDIR)/man1; fi
+-	$(INSTALL) -c -m 644 DOCS/mplayer.1 $(MANDIR)/man1/mplayer.1
++	$(BSD_INSTALL_MAN) DOCS/mplayer.1 $(prefix)/man/man1/
+ ifeq ($(MENCODER),yes)
+-	$(INSTALL) -m 755 -s $(PRG_MENCODER) $(BINDIR)/$(PRG_MENCODER)
+-	$(INSTALL) -c -m 644 DOCS/mencoder.1 $(MANDIR)/man1/mencoder.1
++	$(BSD_INSTALL_PROGRAM) $(PRG_MENCODER) $(BINDIR)
++	$(BSD_INSTALL_MAN) DOCS/mencoder.1 $(prefix)/man/man1/
+ endif
+
+ ifeq ($(CSS_USE),yes)
+ 	@echo "Following task requires root privs. If it fails don't panic"
+ 	@echo "however it means you can't use fibmap_mplayer."
