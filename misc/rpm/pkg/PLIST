@@ -6,6 +6,7 @@ bin/rpm2cpio
 include/rpm/rpmlib.h
 include/rpm/dbindex.h
 include/rpm/header.h
+@dirrm include/rpm
 lib/librpm.a
 man/man8/rpm.8.gz
 man/man8/rpm2cpio.8.gz
