@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2002/07/17 17:41:25 wiz Exp $
+
+--- utils/ppsocket.cc.orig	Mon Apr 12 23:17:08 1999
++++ utils/ppsocket.cc
+@@ -198,7 +198,7 @@
+ 
+ ppsocket* ppsocket::accept(char* Peer, int MaxLen)
+ { 
+-  int len;
++  unsigned int len;
+   ppsocket* accepted;
+   char* peer;
+ 
