@@ -1,0 +1,231 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/22 06:27:04 mellon Exp $
+
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/XmHTML.cf XmHTML-1.1.5-hacked/XmHTML.cf
+*** XmHTML-1.1.5/XmHTML.cf	Sat Aug  8 05:59:31 1998
+--- XmHTML-1.1.5-hacked/XmHTML.cf	Thu Jan 21 01:33:21 1999
+***************
+*** 15,19 ****
+  XCOMM override it here.
+  XCOMM BUILDINCTOP=<path to root of the XmHTML source tree>
+! BUILDINCTOP=/home/newt/src/XmHTML/XmHTML
+  
+  XCOMM ----------------------------------------------------------------------
+--- 15,19 ----
+  XCOMM override it here.
+  XCOMM BUILDINCTOP=<path to root of the XmHTML source tree>
+! XCOMM BUILDINCTOP=/home/newt/src/XmHTML/XmHTML
+  
+  XCOMM ----------------------------------------------------------------------
+***************
+*** 50,54 ****
+  XCOMM wherever your X includes live) and /usr/X11R6/lib (or wherever your X
+  XCOMM libraries live)
+! XCOMM XPMINCLUDES  = -I$(INCROOT)
+  XCOMM XPMLIBRARIES = -L$(LIBDIR) -lXpm
+  
+--- 50,54 ----
+  XCOMM wherever your X includes live) and /usr/X11R6/lib (or wherever your X
+  XCOMM libraries live)
+! XPMINCLUDES  = -I${PREFIX}/include
+  XCOMM XPMLIBRARIES = -L$(LIBDIR) -lXpm
+  
+***************
+*** 61,66 ****
+  
+  #define IHaveJPEG YES
+! JPEGINC =
+! JPEGLIB = -ljpeg
+  
+  XCOMM PNG Support. Enabled by default.
+--- 61,66 ----
+  
+  #define IHaveJPEG YES
+! JPEGINC = -I${PREFIX}/include
+! JPEGLIB = -L${PREFIX}/lib -ljpeg
+  
+  XCOMM PNG Support. Enabled by default.
+***************
+*** 70,75 ****
+  
+  #define IHavePNG YES
+! PNGINC = 
+! PNGLIB = -lpng
+  
+  XCOMM zlib Support. Enabled by default. PNG support implies zlib.
+--- 70,75 ----
+  
+  #define IHavePNG YES
+! PNGINC =  -I${PREFIX}/include
+! PNGLIB = -L${PREFIX}/lib -lpng
+  
+  XCOMM zlib Support. Enabled by default. PNG support implies zlib.
+***************
+*** 79,84 ****
+  
+  #define IHaveZLIB YES
+! ZLIBINC = 
+! ZLIBLIB = -lz -lm
+  
+  XCOMM ----------------------------------------------------------------------
+--- 79,84 ----
+  
+  #define IHaveZLIB YES
+! ZLIBINC =  -I${PREFIX}/include
+! ZLIBLIB = -L${PREFIX}/lib -lz -lm
+  
+  XCOMM ----------------------------------------------------------------------
+***************
+*** 239,243 ****
+  EXTRA_DEFINES  = -DVERSION=$(VERSION) $(DEFINES) $(IMAGEDEFINES) $(REGDEF) \
+  $(DEBUG) $(DMALLOC)
+! EXTRA_INCLUDES = -I. -I$(BUILDINCTOP)/include $(IMAGEINCS) $(DMALLOCINC)
+  EXTRA_LIBRARIES= $(IMAGELIBS) $(DMALLOCLIB) $(SYSLIBS)
+  #endif
+--- 239,243 ----
+  EXTRA_DEFINES  = -DVERSION=$(VERSION) $(DEFINES) $(IMAGEDEFINES) $(REGDEF) \
+  $(DEBUG) $(DMALLOC)
+! EXTRA_INCLUDES = -I. -I$(TOP)/include $(IMAGEINCS) $(DMALLOCINC)
+  EXTRA_LIBRARIES= $(IMAGELIBS) $(DMALLOCLIB) $(SYSLIBS)
+  #endif
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/book/Imakefile XmHTML-1.1.5-hacked/book/Imakefile
+*** XmHTML-1.1.5/book/Imakefile	Mon Nov 10 19:11:19 1997
+--- XmHTML-1.1.5-hacked/book/Imakefile	Thu Jan 21 13:53:43 1999
+***************
+*** 25,37 ****
+  
+  #if DebugLibXmHTML
+!    XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML_d.a
+  #else
+  #if SharedLibXmHTML
+!    XMHTMLLIB = -L$(BUILDINCTOP)/src -lXmHTML
+  #else
+!    XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML.a
+  #endif
+  #endif
+! XCOMM    INCLUDES = -I$(BUILDINCTOP)/src $(DMALLOCINC)
+       DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+  
+--- 25,37 ----
+  
+  #if DebugLibXmHTML
+!    XMHTMLLIB = $(TOP)/src/libXmHTML_d.a
+  #else
+  #if SharedLibXmHTML
+!    XMHTMLLIB = -L$(TOP)/src -lXmHTML
+  #else
+!    XMHTMLLIB = $(TOP)/src/libXmHTML.a
+  #endif
+  #endif
+! XCOMM    INCLUDES = -I$(TOP)/src $(DMALLOCINC)
+       DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+  
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/examples/Imakefile XmHTML-1.1.5-hacked/examples/Imakefile
+*** XmHTML-1.1.5/examples/Imakefile	Thu Mar 12 17:53:27 1998
+--- XmHTML-1.1.5-hacked/examples/Imakefile	Thu Jan 21 13:26:02 1999
+***************
+*** 25,39 ****
+  
+  #if DebugLibXmHTML
+!    XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML_d.a
+     DEPLIB    = $(XMHTMLLIB)
+  #else
+  #if SharedLibXmHTML
+!    XMHTMLLIB = -L$(BUILDINCTOP)/src -lXmHTML
+  #else
+!    XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML.a
+     DEPLIB    = $(XMHTMLLIB)
+  #endif
+  #endif
+! XCOMM    INCLUDES = -I$(BUILDINCTOP)/include $(DMALLOCINC)
+       DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+  
+--- 25,39 ----
+  
+  #if DebugLibXmHTML
+!    XMHTMLLIB = $(TOP)/src/libXmHTML_d.a
+     DEPLIB    = $(XMHTMLLIB)
+  #else
+  #if SharedLibXmHTML
+!    XMHTMLLIB = -L$(TOP)/src -lXmHTML
+  #else
+!    XMHTMLLIB = $(TOP)/src/libXmHTML.a
+     DEPLIB    = $(XMHTMLLIB)
+  #endif
+  #endif
+! XCOMM    INCLUDES = -I$(TOP)/include $(DMALLOCINC)
+       DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+  
+***************
+*** 41,45 ****
+  XCOMM Richard's http client-side library (used by example_4)
+  XCOMM
+! HTTPLIB = -L$(BUILDINCTOP)/http -lhttp
+  
+  XCOMM required libraries
+--- 41,45 ----
+  XCOMM Richard's http client-side library (used by example_4)
+  XCOMM
+! HTTPLIB = -L$(TOP)/http -lhttp
+  
+  XCOMM required libraries
+***************
+*** 55,59 ****
+  
+  OBJS1 = example_1.o
+! OBJS2 = example_2.o $(MOBJS)
+  OBJS4 = example_4.o
+  
+--- 55,59 ----
+  
+  OBJS1 = example_1.o
+! OBJS2 = example_2.o $(MOBJS) history.o
+  OBJS4 = example_4.o
+  
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/src/Imakefile XmHTML-1.1.5-hacked/src/Imakefile
+*** XmHTML-1.1.5/src/Imakefile	Thu Jun  4 10:52:46 1998
+--- XmHTML-1.1.5-hacked/src/Imakefile	Thu Jan 21 13:50:59 1999
+***************
+*** 108,112 ****
+  XCOMM
+  XCOMM Header files used by various other targets in the XmHTML source tree
+! PUBHDRS  = XmHTMLfuncs.h LZWStream.h XCC.h miniparse.h stack.h
+  
+  XCOMM
+--- 108,112 ----
+  XCOMM
+  XCOMM Header files used by various other targets in the XmHTML source tree
+! PUBHDRS  = XmHTMLfuncs.h LZWStream.h XCC.h miniparse.h stack.h icons.h
+  
+  XCOMM
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/src/parse.c XmHTML-1.1.5-hacked/src/parse.c
+*** XmHTML-1.1.5/src/parse.c	Thu Sep 10 16:46:38 1998
+--- XmHTML-1.1.5-hacked/src/parse.c	Thu Jan 21 13:52:38 1999
+***************
+*** 139,143 ****
+  #include <XmHTML/HTMLWarnings.h>
+  #undef XmHTML_STRINGDEFINES
+! #include "icons.h"				/* W3C Working Draft WD-wwwicn-960729 */
+  #else
+  #include "toolkit.h"
+--- 139,143 ----
+  #include <XmHTML/HTMLWarnings.h>
+  #undef XmHTML_STRINGDEFINES
+! #include <XmHTML/icons.h>
+  #else
+  #include "toolkit.h"
+diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/tools/Imakefile XmHTML-1.1.5-hacked/tools/Imakefile
+*** XmHTML-1.1.5/tools/Imakefile	Wed Dec 10 23:10:42 1997
+--- XmHTML-1.1.5-hacked/tools/Imakefile	Thu Jan 21 13:48:24 1999
+***************
+*** 21,25 ****
+  #endif
+  
+! EXTRA_INCLUDES = -I. -I$(BUILDINCTOP)/include
+  
+  XCOMM dependency X libraries, required for reptype
+--- 21,25 ----
+  #endif
+  
+! EXTRA_INCLUDES = -I. -I$(TOP)/include
+  
+  XCOMM dependency X libraries, required for reptype
