@@ -1,15 +1,12 @@
-$NetBSD: patch-aa,v 1.8 2001/07/02 21:54:22 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2001/10/31 00:03:16 mjl Exp $
 
---- makefiles/Makefile.netbsd.orig	Fri Dec 10 18:07:06 1999
-+++ makefiles/Makefile.netbsd
-@@ -2,8 +2,8 @@
- AR=ar
- 
- # For editres, add -DEDITRES to CFLAGS and -lXmu to LIBS
--CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
-+CFLAGS+=-DUSE_DIRENT -DUSE_LPR_PRINT_CMD
+--- makefiles/Makefile.netbsd.orig	Sat Aug 18 01:02:55 2001
++++ makefiles/Makefile.netbsd	Wed Oct 31 00:18:05 2001
+@@ -9,6 +9,6 @@
+ #
+ CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
  ARFLAGS=-ur
 -LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
-+LIBS= ${LDFLAGS} ${MOTIFLIB} -lm -lXpm -lXext -lXt -lSM -lICE -lX11
++LIBS= ${LDFLAGS} ${MOTIFLIB} -L/usr/X11R6/lib -lm -lXpm -lXext -lXt -lSM -lICE -lX11
  
  include Makefile.common

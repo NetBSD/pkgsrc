@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2001/10/24 22:10:53 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/31 00:03:16 mjl Exp $
 
-DISTNAME=	nedit-5.1.1-src
-PKGNAME=	nedit-5.1.1
+VERS=		5.2
+DISTNAME=	nedit-${VERS}-src
+PKGNAME=	nedit-${VERS}
 CATEGORIES=	editors
-MASTER_SITES=	http://ftp.nedit.org/ftp/v5_1_1/
+MASTER_SITES=	http://ftp.nedit.org/ftp/v${VERS:S/./_/g}/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nedit.org/
@@ -17,10 +18,13 @@ WRKSRC=	${WRKDIR}/${PKGNAME}
 do-install:
 .for PROGRAM in nc nedit
 	${INSTALL_PROGRAM} ${WRKSRC}/source/${PROGRAM} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PROGRAM}.man ${PREFIX}/man/man1/${PROGRAM}.1
+	${INSTALL_MAN} ${WRKSRC}/doc/${PROGRAM}.man ${PREFIX}/man/man1/${PROGRAM}.1
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nedit
+	${INSTALL_DATA} ${WRKSRC}/ReleaseNotes ${PREFIX}/share/doc/nedit
+	${INSTALL_DATA} ${WRKSRC}/doc/faq.txt ${PREFIX}/share/doc/nedit
+	${INSTALL_DATA} ${WRKSRC}/doc/NEdit.ad ${PREFIX}/lib/X11/app-defaults/NEdit
 
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
