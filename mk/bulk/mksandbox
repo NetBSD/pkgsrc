@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.25 2003/09/02 07:00:05 jlam Exp $
+# $NetBSD: mksandbox,v 1.26 2004/01/20 01:01:56 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -70,7 +70,7 @@ Linux)
 	gtarprog=/bin/tar
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
-	mountflags="-t null"
+	mountflags="--bind"
 	mountprog=/sbin/mount
 	paxprog=""
 	sedprog=/bin/sed
@@ -183,6 +183,10 @@ SunOS)
 	if [ -f /usr/ucblib/ucblinks.awk -a -x /usr/ucb/ucblinks ]; then
 		/usr/ucb/ucblinks -r $sandbox
 	fi
+	;;
+Linux)
+	$cpprog /dev/MAKEDEV* $sandbox/dev
+	(cd $sandbox/dev; ./MAKEDEV generic)
 	;;
 *)
 	$cpprog /dev/MAKEDEV* $sandbox/dev
