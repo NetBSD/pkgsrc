@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/23 08:34:25 martti Exp $
+
+--- configure.orig	Sun Nov 11 02:51:35 2001
++++ configure	Fri Nov 23 11:39:10 2001
+@@ -6482,7 +6482,7 @@
+ 
+ 
+ 
+-XSLT_LIBDIR='-L${libdir}'
++XSLT_LIBDIR='-L${libdir} -Wl,-R${libdir}'
+ 
+ case ${host} in
+     *-*-solaris*)

@@ -1,0 +1,5 @@
+Libxslt is the XSLT C library developed for the Gnome project. XSLT itself is
+a an XML language to define transformation for XML. Libxslt is based on libxml2
+the XML C library developped for the Gnome project. It also implements most of
+the EXSLT set of extensions functions and some of Saxon's evaluate and
+expressions extensions.
