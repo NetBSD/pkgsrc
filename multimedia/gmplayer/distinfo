@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2004/07/02 17:07:21 drochner Exp $
+$NetBSD: distinfo,v 1.10 2004/07/03 11:00:00 wiz Exp $
 
 SHA1 (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 1e9f181589d6bf36e4c59ad013f8b5976447e702
 Size (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 4913390 bytes
@@ -8,10 +8,10 @@ SHA1 (mplayer-1.0rc4/AlienMind-1.2.tar.bz2) = a7796cf0827ceda4579edb918b864d783a
 Size (mplayer-1.0rc4/AlienMind-1.2.tar.bz2) = 131315 bytes
 SHA1 (mplayer-1.0rc4/BlueHeart-1.5.tar.bz2) = 3a32cc553c8abab8ef4129e00fa61215c37288e5
 Size (mplayer-1.0rc4/BlueHeart-1.5.tar.bz2) = 281091 bytes
-SHA1 (mplayer-1.0rc4/CornerMP-1.1.tar.bz2) = 676f528d370899617b0a53b86b01058b2c2262ba
-Size (mplayer-1.0rc4/CornerMP-1.1.tar.bz2) = 237264 bytes
-SHA1 (mplayer-1.0rc4/CornerMP-aqua-1.3.tar.bz2) = aaac4fb3878021ddd81045d43d64fcc82adfd041
-Size (mplayer-1.0rc4/CornerMP-aqua-1.3.tar.bz2) = 247755 bytes
+SHA1 (mplayer-1.0rc4/CornerMP-1.2.tar.bz2) = 630be3fa9aadff36c129b86980ba213638647abb
+Size (mplayer-1.0rc4/CornerMP-1.2.tar.bz2) = 232734 bytes
+SHA1 (mplayer-1.0rc4/CornerMP-aqua-1.4.tar.bz2) = 02c88db7b9ffbafcc04eeebcbfdc6a2993e688d0
+Size (mplayer-1.0rc4/CornerMP-aqua-1.4.tar.bz2) = 243204 bytes
 SHA1 (mplayer-1.0rc4/Cyrus-1.2.tar.bz2) = 420b079f9480fcba1da6085754ff9ea1f60401f2
 Size (mplayer-1.0rc4/Cyrus-1.2.tar.bz2) = 228490 bytes
 SHA1 (mplayer-1.0rc4/MidnightLove-1.6.tar.bz2) = 79c70c79e3916cf6f8d40d7e46aebe669e84b27e
