@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
-
---- vslib/unicon.h.BAK	Tue Jan 26 20:55:19 1999
-+++ vslib/unicon.h	Tue Jan 26 20:55:25 1999
-@@ -16,7 +16,7 @@
- #endif
+--- vfu/vfu.h.orig	Thu Feb  4 01:58:22 1999
++++ vfu/vfu.h	Thu Feb  4 01:56:21 1999
+@@ -18,6 +18,8 @@
+   #include <sys/stat.h>
+   #include <sys/wait.h>
  
- #ifdef _TARGET_LINUX_
--  #include <curses.h>
-+  #include <ncurses.h>
- #endif
- 
- ///////////////////////////////////////////////////////////////////////////
++  #include "target.h"
++
+   #ifdef _TARGET_NETBSD_
+     #include <sys/param.h>
+     #include <sys/mount.h>
