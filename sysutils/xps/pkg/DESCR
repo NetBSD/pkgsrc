@@ -1,0 +1,6 @@
+The xps program displays in an X Window the Unix processes as a tree 
+or forest, the roots of the tree are on the left-hand side and the 
+leaf processes (with no children) are on the right-hand side. The 
+status of each process (running, sleeping, stopped, etc.) can be 
+indicated by a color. Different users can appear as different colors 
+too.
