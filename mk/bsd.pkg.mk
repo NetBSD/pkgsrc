@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.536 2000/08/07 01:14:08 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.537 2000/08/07 10:23:38 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -2540,7 +2540,7 @@ install-run-depends: uptodate-pkgtools
 			${ECHO} "Installed package $$pkg is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
 			${ECHO} "Please update the $$pkg package to ${OBJECT_FMT}"; \
-			if [ "X${FATAL_OBJECT_FMT_SKEW}" != "no" ]; then \
+			if [ "X${FATAL_OBJECT_FMT_SKEW}" != "Xno" ]; then \
 				exit 1;					\
 			fi;						\
 		fi;							\
