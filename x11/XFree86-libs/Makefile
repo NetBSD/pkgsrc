@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/28 22:06:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/27 21:32:57 reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -19,8 +19,8 @@ DEPENDS=		imake>=4.4.0:../../x11/imake
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11PREFIX} == ${LOCALBASE}
-CONFLICTS+=		MesaLibs-[0-9]*
+.if ${X11ROOT} == ${LOCALBASE}
+CONFLICTS+=		MesaLib-[0-9]*
 .endif
 
 USE_BUILDLINK3=			yes
