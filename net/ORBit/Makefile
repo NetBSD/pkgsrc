@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/12/19 12:31:46 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/01/16 12:05:09 tron Exp $
 #
 
 DISTNAME=	ORBit-0.3.90
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/ORBit/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	glib-1.1.9:../../devel/glib
+DEPENDS+=	glib-1.1.12:../../devel/glib
 DEPENDS+=	gindent-1.9.1:../../devel/gindent
 
 CONFLICTS=	ORBit-*
