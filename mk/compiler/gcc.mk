@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.57 2004/03/10 05:13:38 dmcmahill Exp $
+# $NetBSD: gcc.mk,v 1.58 2004/03/12 06:09:12 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -131,7 +131,9 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
-.    if !empty(_LANGUAGES.gcc:Mc++)
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mobjc)
 USE_GCC_SHLIB?=		yes
 .    endif
 .  endif
@@ -168,6 +170,15 @@ MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
+USE_GCC_SHLIB?=		yes
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc3-objc)
+_IGNORE_GCC3OBJC=	yes
+MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
+.  endif
+.  if !defined(_IGNORE_GCC3OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
+_GCC_PKGSRCDIR+=	../../lang/gcc3-objc
+_GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
 USE_GCC_SHLIB?=		yes
 .  endif
 .endif
