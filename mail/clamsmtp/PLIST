@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/21 03:54:24 xtraeme Exp $
+man/man8/clamsmtpd.8
+sbin/clamsmtpd
