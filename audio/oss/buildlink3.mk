@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/07 01:14:43 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_INCDIRS.oss=		include lib/oss/include
 # If we are using audio/oss, then we don't need the NetBSD OSS
 # compatibility library.
 #
-BUILDLINK_TRANSFORM+=	S:-lossaudio:
+BUILDLINK_TRANSFORM+=	l:ossaudio:
 
 BUILDLINK_TARGETS+=	buildlink-oss-soundcard-h
 
