@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/24 23:27:26 cube Exp $
+
+--- gkrellm_snmp.c.orig	Thu Sep  6 22:15:30 2001
++++ gkrellm_snmp.c
+@@ -88,6 +88,7 @@
+ 	GtkTooltips             *tooltip;
+ };
+ 
++oid *snmp_parse_oid(const char *argv, oid *root, size_t *rootlen);
+ 
+ /*
+  * caller needs to free the returned gchar*
