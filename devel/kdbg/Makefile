@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/14 20:28:01 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/21 22:40:50 tron Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -12,7 +12,7 @@ BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	autoconf-2.13:../autoconf
 DEPENDS+=	automake-1.4:../automake
 DEPENDS+=	kdevelop-1.*:../kdevelop
-DEPENDS+=	png-1.*:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

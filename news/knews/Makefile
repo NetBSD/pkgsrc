@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/02/09 20:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.25 2000/03/21 22:40:56 tron Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0b1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.matematik.su.se/~kjj/
 
 DEPENDS+=	faces-1.6.1:../../mail/faces
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=	knews-1.0b0

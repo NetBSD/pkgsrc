@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/09 20:20:54 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/21 22:40:52 tron Exp $
 #
 
 DISTNAME=	gif2png-2.3.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.tuxedo.org/~esr/gif2png/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/gif2png/
 
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	INCLUDES="-I${PREFIX}/include"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/03/08 21:30:00 tron Exp $
+# $NetBSD: Makefile,v 1.19 2000/03/21 22:40:52 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.9
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.xemacs.org/
 USE_XAW=	yes
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 

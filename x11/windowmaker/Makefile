@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2000/02/09 20:20:59 tron Exp $
+# $NetBSD: Makefile,v 1.42 2000/03/21 22:40:59 tron Exp $
 
 DISTNAME=		WindowMaker-0.61.1
 PKGNAME=		windowmaker-0.61.1
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.windowmaker.org/
 DEPENDS+=		libproplist-0.9.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 

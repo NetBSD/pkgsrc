@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/02/10 12:05:25 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2000/03/21 22:40:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww-5.2.8:../../www/libwww
-DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 #XXX "black screen" fixed for 16-bit displays on mac68k, not verified on alpha.
