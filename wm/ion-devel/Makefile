@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 23:03:19 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/24 15:18:32 grant Exp $
 #
 
 DISTNAME=	ion-devel-20031211
@@ -16,7 +16,7 @@ BUILDLINK_DEPENDS.lua=	lua>=5.0.1
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 PKG_SYSCONFSUBDIR=	ion
 EGDIR=			${PREFIX}/share/examples/ion
