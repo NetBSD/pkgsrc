@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/12 15:50:18 adam Exp $
+
+SHA1 (lmarbles-1.0.7.tar.gz) = 25b0a635f53a3ab351247ac2820cbd6951d7050d
+Size (lmarbles-1.0.7.tar.gz) = 829635 bytes
+SHA1 (patch-aa) = b453e75a29848a470275d06bc97e9fe09a12e1b8
