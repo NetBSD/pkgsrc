@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/06 06:40:33 jlam Exp $
 
 DISTNAME=	cdparanoia-III-alpha9.7
 PKGNAME=	cdparanoia-3.a9.7
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.xiph.org/paranoia/
 
 GNU_CONFIGURE=	YES
 ALL_TARGET=	static
+MAKE_ENV+=	GCC=yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cdparanoia ${PREFIX}/bin
