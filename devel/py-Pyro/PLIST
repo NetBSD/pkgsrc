@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/31 10:13:56 darcy Exp $
-bin/es
-bin/genguid
-bin/ns
-bin/nsc
-bin/pyroc
-bin/rns
-bin/xnsc
-bin/wxnsc
-bin/esd
-bin/nsd
+@comment $NetBSD: PLIST,v 1.2 2005/01/07 16:17:42 darcy Exp $
+bin/es${PYVERSSUFFIX}
+bin/genguid${PYVERSSUFFIX}
+bin/ns${PYVERSSUFFIX}
+bin/nsc${PYVERSSUFFIX}
+bin/pyroc${PYVERSSUFFIX}
+bin/rns${PYVERSSUFFIX}
+bin/xnsc${PYVERSSUFFIX}
+bin/wxnsc${PYVERSSUFFIX}
+bin/esd${PYVERSSUFFIX}
+bin/nsd${PYVERSSUFFIX}
 ${PYSITELIB}/Pyro/EventService/Clients.py
 ${PYSITELIB}/Pyro/EventService/Clients.pyc
 ${PYSITELIB}/Pyro/EventService/Clients.pyo
