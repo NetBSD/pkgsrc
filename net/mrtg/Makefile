@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2004/12/31 10:08:42 minskim Exp $
+# $NetBSD: Makefile,v 1.57 2005/01/22 15:07:01 adrianp Exp $
 
-DISTNAME=	mrtg-2.10.15
-PKGREVISION=	2
+DISTNAME=	mrtg-2.11.1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -33,8 +32,13 @@ GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=	USE_INET6
+LDFLAGS+=	-lgd -lttf -lintl -ljpeg
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.include "../../net/p5-INET6/buildlink3.mk"
+.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-z-lib=${LOCALBASE}/lib
@@ -48,15 +52,21 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
 
-post-build:
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
-	    >${WRKDIR}/mrtg.conf.example
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/netstat2mrtg \
-	    >${WRKDIR}/netstat2mrtg
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/sys2mrtg \
-	    >${WRKDIR}/sys2mrtg
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/envstat2mrtg \
-	    >${WRKDIR}/envstat2mrtg
+SUBST_CLASSES+=		files
+SUBST_STAGE.files=	post-patch
+SUBST_FILES.files=	${WRKDIR}/mrtg.conf.example ${WRKDIR}/netstat2mrtg \
+			${WRKDIR}/sys2mrtg ${WRKDIR}/envstat2mrtg	
+SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.files=	"Fixing default configuration files."
+
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+
+post-extract:
+	@${CP} ${FILESDIR}/mrtg.conf.example ${WRKDIR}
+	@${CP} ${FILESDIR}/netstat2mrtg ${WRKDIR}
+	@${CP} ${FILESDIR}/sys2mrtg ${WRKDIR}
+	@${CP} ${FILESDIR}/envstat2mrtg ${WRKDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -92,7 +102,4 @@ do-install:
 	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$FILE ${PREFIX}/bin/mrtg$$FILE; \
 	done
 
-.include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
-.include "../../net/p5-INET6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
