@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/12/02 18:41:20 drochner Exp $
+
+--- include/btorder.h.orig	Mon Dec 10 10:54:27 2001
++++ include/btorder.h
+@@ -28,6 +28,7 @@
+ #include <sys/types.h>			/* try to load isa_defs.h on Solaris */
+ #define	_INCL_SYS_TYPES_H
+ #endif
++#include <machine/endian.h>
+ 
+ #ifndef _MCONFIG_H
+ #include <mconfig.h>			/* load bit/byte-oder from xmconfig.h*/
+@@ -108,7 +109,7 @@ error  Only one of _BIT_FIELDS_LTOH or _
+ #	if defined(__ppc__) || defined(ppc) || defined(__ppc) || \
+ 	   defined(__PPC) || defined(powerpc) || defined(__powerpc__)
+ 
+-#		if	defined(__BIG_ENDIAN__)
++#		if	defined(__BIG_ENDIAN__) || BYTE_ORDER == BIG_ENDIAN
+ #			define _BIT_FIELDS_HTOL
+ #		else
+ #			define _BIT_FIELDS_LTOH
