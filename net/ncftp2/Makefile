@@ -1,22 +1,32 @@
-# $NetBSD: Makefile,v 1.14 1999/07/06 08:06:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 1999/07/13 01:34:40 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
-DISTNAME=       ncftp-2.4.3
-CATEGORIES=	net
-MASTER_SITES=   ftp://ftp.ncftp.com/ncftp/
+DISTNAME=		ncftp-2.4.3
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.ncftp.com/ncftp/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.ncftp.com/ncftp/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.ncftp.com/ncftp/
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-extra-dirs
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=		ncurses-4.2:../../devel/ncurses
 .endif
-DEPENDS+=	readline-2.2:../../devel/readline
+
+.if exists(/usr/include/readline.h)
+CPPFLAGS+=		-DHAVE_LIBREADLINE=1
+CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
+CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
+CONFIGURE_ARGS+=	--disable-readline
+CONFIGURE_ENV+=		LIBS="-ledit"
+.else
+DEPENDS+=		readline-4.0:../../devel/readline
+.endif
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
@@ -28,8 +38,8 @@ CONFIGURE_ARGS+= 	--enable-socks5
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
-CPPFLAGS+=		-I${PREFIX}/include
-LDFLAGS+=		-L${PREFIX}/lib
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 do-install:
