@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6200 2004/06/11 13:00:34 kent Exp $
+$NetBSD: CHANGES,v 1.6201 2004/06/11 18:52:10 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2932,3 +2932,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kde3-i18n-hsb-3.2.3 [markd 2004-06-10]
 	Updated blender to 2.32nb2 [jmmv 2004-06-10]
 	Updated peace to 0.0.20040611 [kent 2004-06-11]
+	Updated subversion to 1.0.5 [epg 2004-06-11]
