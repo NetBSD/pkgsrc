@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1039 2003/11/17 12:06:27 xtraeme Exp $
+$NetBSD: TODO,v 1.1040 2003/11/17 14:37:48 salo Exp $
 
 Suggested new packages
 ======================
@@ -248,6 +248,7 @@ Suggested package updates
 	o icu-2.6.1 [recht]
 	o inn-2.4.0
 	o iozone-3.203
+	o ispell-slovak-0.2.1 [salo]
 	o isync-0.9.1 [pkg/22189]
 	o ivtools-1.1.1
 	o jakarta-tomcat-3.3.1a
