@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/10/01 23:43:16 itojun Exp $
+# $NetBSD: Makefile,v 1.9 2003/10/05 18:13:00 recht Exp $
 #
 
 DISTNAME=	p0f
@@ -8,8 +8,8 @@ MASTER_SITES=	http://lcamtuf.coredump.cx/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dawszy@arhea.net
-COMMENT=	Passive OS fingerprinting tool
 HOMEPAGE=	http://lcamtuf.coredump.cx/p0f.shtml
+COMMENT=	Passive OS fingerprinting tool
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
@@ -42,4 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${PREFIX}/share/examples/p0f
 	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${PREFIX}/man/man1
 
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
