@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/03/11 15:17:52 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
 MAINTAINER=	taca@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:11 taca Exp $
 
 DISTNAME=	htmlsplit102
 PKGNAME=	${RUBY_PKGNAMEPREFIX}htmlsplit-1.0.2
 PKGREVISION=	1
-CATEGORIES=	www
+CATEGORIES=	www ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 EXTRACT_SUFX=	.zip
 

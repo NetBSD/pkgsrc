@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2004/03/07 04:40:26 taca Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 PKGREVISION=	2
-CATEGORIES=	textproc
+CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www2.pos.to/~tosh/ruby/rdtool/archive/
 
 MAINTAINER=	taca@NetBSD.org

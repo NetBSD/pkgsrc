@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/03/12 10:21:33 taca Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/16 02:01:11 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap-${RUBY_PKGNAMEPREFIX}${VERSION}
-CATEGORIES=	www
+CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
 MAINTAINER=	taca@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/08/30 07:55:22 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/16 02:01:10 taca Exp $
 # FreeBSD: ports/devel/ruby-optparse/Makefile,v 1.10 2001/01/26 03:42:37 knu Exp
 
 DISTNAME=	optparse-0.12
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel ruby
 MASTER_SITES=	http://member.nifty.ne.jp/nokada/archive/
 
 MAINTAINER=	taca@NetBSD.org
