@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 09:09:11 lukem Exp $
+
+--- doc/normalize.1.orig	Mon Jul  9 05:58:46 2001
++++ doc/normalize.1	Thu Aug 16 19:08:22 2001
+@@ -82,7 +82,7 @@
+ level to \fILEV\fR. Setting \fILEV\fR to 1 (or 0dBFS) does no limiting
+ (clipping is done instead); setting \fILEV\fR to 0 does limiting on
+ all samples.  The default value is recommended unless you know what
+-you're doing.\n\
++you're doing.\n
+ 
+ .TP
+ .B -m\fR, \fB--mix\fR
