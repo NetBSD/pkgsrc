@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:51:24 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/09 01:08:28 hubertf Exp $
 
 DISTNAME=	nap-1.4.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nap/}
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://www.gis.net/~nite/
+HOMEPAGE=	http://nap.sourceforge.net/
 COMMENT=	Terminal based Napster client similar to ircII
 
 GNU_CONFIGURE=		YES
