@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/03/15 07:17:39 bouyer Exp $
+# $NetBSD: Makefile,v 1.26 2000/08/18 22:46:42 hubertf Exp $
 #
 
 DISTNAME=	sdr-2.7
@@ -10,10 +10,11 @@ HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
-MIRROR_DISTFILE=	no
-USE_GMAKE=	yes
-
 RESTRICTED=	"Uses encryption"
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+
+USE_GMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

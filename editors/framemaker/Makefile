@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/03/10 19:17:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:32 hubertf Exp $
 #
 
 DISTNAME=	fmlinux
@@ -19,10 +19,13 @@ HOMEPAGE=	http://www.adobe.com/products/framemaker/fmlinux.html
 DEPENDS+=        suse_linux>=6.1:../../emulators/suse_linux
 .endif
 
-MIRROR_DISTFILE=NO
+RESTRICTED=		"Distributed only by Adobe Inc."
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 NO_CONFIGURE=	YES
-NO_CDROM=	Distributed only by Adobe Inc.
 
 DIST_SUBDIR=	framemaker
 

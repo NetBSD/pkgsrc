@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/26 16:17:44 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:45 hubertf Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
@@ -11,7 +11,11 @@ HOMEPAGE=	http://service.real.com/firewall/fdev.html
 IS_INTERACTIVE=	yes
 
 LICENSE=		no-commercial-use
-MIRROR_DISTFILE=	no
+RESTRICTED=		${LICENSE}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DOWNLOAD=	http://proforma.real.com/mario/devzone/proxyform.html
 

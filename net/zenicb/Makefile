@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/04 18:50:36 martin Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/18 22:46:46 hubertf Exp $
 #
 
 DISTNAME=		zenicb-19981202
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		thorpej@netbsd.org
 
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 # XXX YUCK!  I really don't like this, but what else are we going to do?
 .include "../../mk/bsd.prefs.mk"
