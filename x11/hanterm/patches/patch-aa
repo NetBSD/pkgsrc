@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/30 03:02:23 itojun Exp $
+--- misc.c-	Sun Oct 29 18:04:16 2000
++++ misc.c	Sun Oct 29 18:04:33 2000
+@@ -903,11 +903,2 @@
+ {
+-#if defined(linux) && defined(__GLIBC__)
+-    extern const char *const sys_errlist[];
+-#else
+-#if (defined(BSD) && (BSD >= 199306))
+-    /* in *BSD, should be null because it is already declared */
+-#else
+-    extern char *sys_errlist[];
+-#endif
+-#endif
+     extern int sys_nerr;
