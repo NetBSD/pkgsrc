@@ -1,12 +1,12 @@
-$NetBSD: patch-ar,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ar,v 1.2 2002/08/28 13:49:38 seb Exp $
 
---- tcldot/demo/Makefile.am.orig	Fri Jul 27 18:30:40 2001
+--- tcldot/demo/Makefile.am.orig	Wed May 15 23:55:31 2002
 +++ tcldot/demo/Makefile.am
 @@ -2,7 +2,7 @@
  
  AUTOMAKE_OPTIONS = 1.4
  
--demodir = $(libdir)/@PACKAGE@/demo
+-demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
  demo_SCRIPTS = doted gcat
  demo_DATA = doted.README gcat.README

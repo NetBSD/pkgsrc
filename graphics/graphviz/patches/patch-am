@@ -1,42 +1,43 @@
-$NetBSD: patch-am,v 1.3 2002/04/19 18:42:34 seb Exp $
+$NetBSD: patch-am,v 1.4 2002/08/28 13:49:37 seb Exp $
 
---- tcldgr/Makefile.in.orig	Fri Apr 19 14:31:38 2002
+--- tcldgr/Makefile.in.orig	Mon Aug  5 05:11:29 2002
 +++ tcldgr/Makefile.in
-@@ -183,11 +183,7 @@
+@@ -185,10 +185,7 @@ Z_LIBS = @Z_LIBS@
  
  AUTOMAKE_OPTIONS = 1.4
  
--INCLUDES = @TCL_CFLAGS@ \
+-INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ \
 -	-I$(top_srcdir)/agraph \
 -	-I$(top_srcdir)/cdt \
--	-I$(top_srcdir)/tclhandle \
--	-I@TCLSH_EXEC_PREFIX@/include
-+INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/agraph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/tclhandle
+-	-I$(top_srcdir)/tclhandle
++INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ 	-I$(top_srcdir)/agraph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/tclhandle
  
  
- LIBS = 
-@@ -200,10 +196,7 @@
+ LIBS = @LIBS@
+@@ -201,11 +198,7 @@ man_MANS = tcldgr.n
  
  libtcldgr_la_SOURCES = dgedge.c dgnode.c dgr.c dgraph.c dgrutil.c dgr.h
  
--libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la \
--	../agraph/libagraph.la \
--	../cdt/libcdt.la \
+-libtcldgr_la_LIBADD = \
+-	../tclhandle/libtclhandle.la \
+-	../agraph/libagraphconvenience.la \
+-	../cdt/libcdtconvenience.la \
 -        ../tclstubs/libtclstubs.la
-+libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la 	../agraph/libagraph.la 	../cdt/libcdt.la         ${TCL_STUB_LIB_SPEC}
++libtcldgr_la_LIBADD =  	../tclhandle/libtclhandle.la 	../agraph/libagraphconvenience.la 	../cdt/libcdtconvenience.la 	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -224,7 +217,7 @@
+@@ -226,8 +219,7 @@ X_EXTRA_LIBS = @X_EXTRA_LIBS@
  X_PRE_LIBS = @X_PRE_LIBS@
  libtcldgr_la_LDFLAGS = 
  libtcldgr_la_DEPENDENCIES =  ../tclhandle/libtclhandle.la \
--../agraph/libagraph.la ../cdt/libcdt.la ../tclstubs/libtclstubs.la
-+../agraph/libagraph.la ../cdt/libcdt.la
+-../agraph/libagraphconvenience.la ../cdt/libcdtconvenience.la \
+-../tclstubs/libtclstubs.la
++../agraph/libagraphconvenience.la ../cdt/libcdtconvenience.la
  libtcldgr_la_OBJECTS =  dgedge.lo dgnode.lo dgr.lo dgraph.lo dgrutil.lo
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -242,7 +235,7 @@
+@@ -245,7 +237,7 @@ DIST_COMMON =  Makefile.am Makefile.in
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
@@ -45,7 +46,7 @@ $NetBSD: patch-am,v 1.3 2002/04/19 18:42:34 seb Exp $
  GZIP_ENV = --best
  SOURCES = $(libtcldgr_la_SOURCES)
  OBJECTS = $(libtcldgr_la_OBJECTS)
-@@ -483,7 +476,6 @@
+@@ -486,7 +478,6 @@ distdir: $(DISTFILES)
  	      || exit 1; \
  	  fi; \
  	done

@@ -1,12 +1,12 @@
-$NetBSD: patch-ax,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ax,v 1.2 2002/08/28 13:49:40 seb Exp $
 
---- tclpathplan/demo/pathplan_data/Makefile.am.orig	Thu Nov  2 20:10:05 2000
+--- tclpathplan/demo/pathplan_data/Makefile.am.orig	Wed May 15 23:55:31 2002
 +++ tclpathplan/demo/pathplan_data/Makefile.am
-@@ -5,7 +5,7 @@
+@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS = 1.4
  EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat \
  	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
  
--pathplanexampledir = $(libdir)/@PACKAGE@/demo/pathplan_data
+-pathplanexampledir = $(datadir)/@PACKAGE@/demo/pathplan_data
 +pathplanexampledir = $(prefix)/share/examples/@PACKAGE@/pathplan_data
  
  pathplanexample_DATA = $(EXAMPLES)

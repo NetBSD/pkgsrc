@@ -1,20 +1,10 @@
-$NetBSD: patch-ap,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ap,v 1.2 2002/08/28 13:49:37 seb Exp $
 
---- tcldot/Makefile.am.orig	Thu Feb 21 23:16:54 2002
+--- tcldot/Makefile.am.orig	Fri Aug  2 22:54:46 2002
 +++ tcldot/Makefile.am
-@@ -10,8 +10,7 @@
- 	-I$(top_srcdir)/graph \
- 	-I$(top_srcdir)/cdt \
- 	-I$(top_srcdir)/pathplan \
--	-I$(top_srcdir)/tclhandle \
--	-I@TCLSH_EXEC_PREFIX@/include
-+	-I$(top_srcdir)/tclhandle
- 
- LIBS = ${FT_LIBS} \
- 	${PNG_LIBS} \
-@@ -39,7 +38,7 @@
-         ../cdt/libcdt.la \
-         ../gd/libgd.la \
+@@ -36,7 +36,7 @@ libtcldot_la_LIBADD = \
+ 	../cdt/libcdtconvenience.la \
+ 	../gd/libgdconvenience.la \
  	../gdtclft/gdtclft.lo \
 -	../tclstubs/libtclstubs.la
 +	${TCL_STUB_LIB_SPEC}

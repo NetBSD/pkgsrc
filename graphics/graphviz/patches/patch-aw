@@ -1,17 +1,17 @@
-$NetBSD: patch-aw,v 1.3 2002/04/19 18:42:35 seb Exp $
+$NetBSD: patch-aw,v 1.4 2002/08/28 13:49:38 seb Exp $
 
---- tclpathplan/demo/Makefile.in.orig	Fri Apr 19 14:31:38 2002
+--- tclpathplan/demo/Makefile.in.orig	Mon Aug  5 05:11:33 2002
 +++ tclpathplan/demo/Makefile.in
-@@ -185,7 +185,7 @@
+@@ -187,7 +187,7 @@ AUTOMAKE_OPTIONS = 1.4
  
  SUBDIRS = pathplan_data
  
--demodir = $(libdir)/@PACKAGE@/demo
+-demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
  demo_SCRIPTS = pathplan
  demo_DATA = pathplan.README 
  
-@@ -202,7 +202,7 @@
+@@ -204,7 +204,7 @@ DIST_COMMON =  Makefile.am Makefile.in
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  

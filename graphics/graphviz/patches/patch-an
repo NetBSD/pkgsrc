@@ -1,12 +1,12 @@
-$NetBSD: patch-an,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-an,v 1.2 2002/08/28 13:49:37 seb Exp $
 
---- tcldgr/demo/Makefile.am.orig	Thu May  4 15:12:32 2000
+--- tcldgr/demo/Makefile.am.orig	Wed May 15 23:55:31 2002
 +++ tcldgr/demo/Makefile.am
 @@ -2,7 +2,7 @@
  
  AUTOMAKE_OPTIONS = 1.4
  
--demodir = $(libdir)/@PACKAGE@/demo
+-demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
  demo_SCRIPTS = ihi
  demo_DATA = ihi.README ihi.testdata

@@ -1,27 +1,31 @@
-# $NetBSD: Makefile,v 1.5 2002/04/19 18:42:33 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/28 13:49:35 seb Exp $
 #
 
-DISTNAME=	graphviz-1.8.5
+DISTNAME=	graphviz-1.8.9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.research.att.com/sw/tools/graphviz/
+HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 
 LICENSE=	graphviz-license
 
-GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
+USE_X11=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_DIR}/lib/tclConfig.sh
-CONFIGURE_ENV+=		TKCONFIG=${BUILDLINK_DIR}/lib/tkConfig.sh
+CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
+CONFIGURE_ENV+=		TKCONFIG=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		BUILDLINK_PREFIX_TCL=${BUILDLINK_PREFIX.tcl}
+CONFIGURE_ENV+=		BUILDLINK_PREFIX_TK=${BUILDLINK_PREFIX.tk}
 
-CONFIGURE_ARGS+=	--with-extraincludedir=${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--with-extralibdir=${BUILDLINK_DIR}/lib
+# Not yet...
+#CONFIGURE_ARGS+=	--with-dynagraph
+#UNLIMIT_RESOURCES=	datasize stacksize memorysize
 
 # clean up a bit to help package maintainer produce patch files
 post-extract:
@@ -37,11 +41,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/graphviz
 	${INSTALL_DATA} ${WRKSRC}/MINTERMS.txt ${PREFIX}/share/doc/graphviz
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
