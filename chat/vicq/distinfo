@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/12/30 11:37:47 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/03/19 16:04:05 itojun Exp $
 
-SHA1 (vicq-0.3.tar.bz2) = 856364e4ea389cf89d4e3622cf8fc26799dce1b4
-Size (vicq-0.3.tar.bz2) = 33748 bytes
+SHA1 (vicq-0.4.tar.bz2) = 7fd372c8f7aa06abf79731b1a7babb78670970ec
+Size (vicq-0.4.tar.bz2) = 47761 bytes
+SHA1 (patch-aa) = e7896096e45fe7cbea7ce6d7b3af976691910686
