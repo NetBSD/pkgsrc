@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/09 04:14:51 snj Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -23,7 +23,7 @@ CONFLICTS=	lyx-[0-9]*
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=	teTeX-bin>=1.0.7nb1:../../print/teTeX-bin
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		yes
 USE_X11=		yes
@@ -31,8 +31,8 @@ USE_GCC_SHLIB=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/xforms/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/xforms/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
