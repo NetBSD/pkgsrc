@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/01/25 04:15:44 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -90,7 +90,7 @@ MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib="${BUILDLINK_USE_BUILTIN.zlib}"
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.zlib+=	zlib>=1.2.1
+BUILDLINK_DEPENDS.zlib=	zlib>=1.2.1
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	zlib
 .  endif
