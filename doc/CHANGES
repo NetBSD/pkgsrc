@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7757 2004/11/07 21:44:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.7758 2004/11/08 04:32:20 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5153,3 +5153,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gxmame to 0.34bnb4 [kristerw 2004-11-07]
 	Updated wistumbler2 to 2.00pre9nb1 [jmmv 2004-11-07]
 	Added wistumbler2-gtk-2.00pre9 [jmmv 2004-11-07]
+	Updated flodo to v4 [mrg 2004-11-08]
