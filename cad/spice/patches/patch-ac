@@ -1,64 +1,33 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:35 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/10/01 17:05:15 dmcmahill Exp $
 
-*** src/bin/sconvert.c.orig	Tue Aug 19 17:44:17 1997
---- src/bin/sconvert.c	Tue Aug 19 17:47:11 1997
+*** src/include/misc.h.orig	Thu Dec  1 09:17:02 1994
+--- src/include/misc.h	Sun Mar 31 12:32:58 1996
 ***************
-*** 80,98 ****
-
-          case 1: printf("Input file: ");
-              (void) fflush(stdout);
-!             (void) gets(buf);
-              sf = copy(buf);
-              printf("Input type: ");
-              (void) fflush(stdout);
-!             (void) gets(buf);
-              f = buf[0];
-              printf("Output file: ");
-              (void) fflush(stdout);
-!             (void) gets(buf);
-              af = copy(buf);
-              printf("Output type: ");
-              (void) fflush(stdout);
-!             (void) gets(buf);
-              t = buf[0];
-              break;
-          default:
---- 80,98 ----
-
-          case 1: printf("Input file: ");
-              (void) fflush(stdout);
-!             (void) fgets(buf,BSIZE_SP,stdin);
-              sf = copy(buf);
-              printf("Input type: ");
-              (void) fflush(stdout);
-!             (void) fgets(buf,BSIZE_SP,stdin);
-              f = buf[0];
-              printf("Output file: ");
-              (void) fflush(stdout);
-!             (void) fgets(buf,BSIZE_SP,stdin);
-              af = copy(buf);
-              printf("Output type: ");
-              (void) fflush(stdout);
-!             (void) fgets(buf,BSIZE_SP,stdin);
-              t = buf[0];
-              break;
-          default:
-*** src/lib/fte/inp.c.orig	Tue Aug 19 17:38:25 1997
---- src/lib/fte/inp.c	Tue Aug 19 17:33:01 1997
+*** 86,92 ****
+--- 86,94 ----
+  extern char *realloc();
+  extern char *getenv();
+  extern int errno;
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
+  extern char *sys_errlist[];
++ #endif
+  extern char *getenv();
+  extern char *getwd();
+  extern int rand();
 ***************
-*** 666,672 ****
-
-      fprintf(cp_out, "run circuit? ");
-      fflush(cp_out);
-!     (void) gets(buf);
-      if (buf[0] != 'n') {
-        fprintf(cp_out, "running circuit\n");
-        com_run(NULL);
---- 666,672 ----
-
-      fprintf(cp_out, "run circuit? ");
-      fflush(cp_out);
-!     (void) fgets(buf,BSIZE_SP,stdin);
-      if (buf[0] != 'n') {
-        fprintf(cp_out, "running circuit\n");
-        com_run(NULL);
+*** 111,122 ****
+--- 111,124 ----
+  #    endif /* clearerr */
+  #  endif /* HAS_CLEARERR */
+  
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
+  #  ifndef bzero
+  extern int bzero();
+  #  endif
+  #  ifndef bcopy
+  extern void bcopy();
+  #  endif
++ #endif /* defined(__FreeBSD__) || defined(__NetBSD__) */
+  
+  #  ifndef index
+  #    ifdef HAS_INDEX
