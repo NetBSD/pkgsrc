@@ -1,24 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/02/17 01:45:31 jtb Exp $
+$NetBSD: MESSAGE,v 1.2 2003/02/17 05:20:20 salo Exp $
 
 To use nullmailer, you will need to perform the following steps:
 
-1. Create a ${PKG_SYSCONFDIR}/nullmailer/remotes file. The file should
-   contain a line with the name of your relay host and the
-   relay protocol to be used, eg.
+1. Create a ${PKG_SYSCONFDIR}/nullmailer/remotes file.
+   The file should contain a line with the name of your relay host
+   and the relay protocol to be used, eg.
 
 	smtp.relayhost.domain	smtp
 
-2. Back up /etc/mailer.conf and create a new mailer.conf with the
-   following lines
+2. Back up /etc/mailer.conf and copy nullmailer's own one from
+   ${PREFIX}/share/examples/nullmailer/mailer.conf
 
-	# Use "nullmailer" as replacement for "sendmail".
-	sendmail	${PREFIX}/libexec/nullmailer/sendmail
-	send-mail	${PREFIX}/libexec/nullmailer/sendmail
-	mailq		${PREFIX}/libexec/nullmailer/mailq
-
-3. Copy ${PKG_SYSCONFDIR}/rc.d/nullmailer to /etc/rc.d/nullmailer
-   and add
+3. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
+   ${PREFIX}etc/rc.d/nullmailer to /etc/rc.d/nullmailer and add
 
 	nullmailer=YES
 
