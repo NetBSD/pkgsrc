@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.54 2004/05/09 04:14:51 snj Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -19,7 +19,7 @@ DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
 WRKSRC=			${WRKDIR}/gs${GS_VERS}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
@@ -300,6 +300,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOCDIR}/${MJC_DRV}
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOCDIR}/${MJC_DRV}
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../print/ja-vflib-lib/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/ja-vflib-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
