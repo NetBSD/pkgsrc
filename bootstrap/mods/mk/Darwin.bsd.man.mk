@@ -1,4 +1,4 @@
-#	$NetBSD: Darwin.bsd.man.mk,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+#	$NetBSD: Darwin.bsd.man.mk,v 1.2 2004/08/01 16:56:18 schmonz Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -18,10 +18,14 @@ realinstall:	${MANINSTALL}
 .endif
 cleandir: cleanman
 
+.if exists(${DESTDIR}/usr/share/groff/1.18.1/tmac)
+TMACDIR?=	${DESTDIR}/usr/share/groff/1.18.1/tmac
+.else
 TMACDIR?=	${DESTDIR}/usr/share/groff/tmac
+.endif
 HTMLDIR?=	${DESTDIR}/usr/share/man
-CATDEPS?=	${TMACDIR}/tmac.andoc \
-		${TMACDIR}/tmac.doc
+CATDEPS?=	${TMACDIR}/mandoc.tmac \
+		${TMACDIR}/doc.tmac
 MANTARGET?=	cat
 NROFF?=		nroff -Tascii
 GROFF?=		groff -Tascii
