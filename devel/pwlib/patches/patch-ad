@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+--- Makefile.orig	Wed Aug 23 23:38:10 2000
++++ Makefile	Wed Aug 23 23:53:35 2000
+@@ -130,6 +130,10 @@
+ bothdepend :
+ 	$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) bothdepend ;)
+ 
++install :
++	$(MAKE) -C src/ptlib/$(TARGETDIR) install
++	$(MAKE) -C tools/asnparser install
++
+ ptlib:
+ 	$(MAKE) -C src/ptlib/$(TARGETDIR) both
+ 

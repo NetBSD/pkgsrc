@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+--- make/ptlib.mak.orig	Thu Aug 24 20:11:07 2000
++++ make/ptlib.mak	Thu Aug 24 20:11:41 2000
+@@ -38,7 +38,7 @@
+ PWLIBDIR=$(HOME)/pwlib
+ endif
+ 
+-include $(PWLIBDIR)/make/unix.mak
+-include $(PWLIBDIR)/make/common.mak
++include $(PWLIBDIR)/share/pwlib/make/unix.mak
++include $(PWLIBDIR)/share/pwlib/make/common.mak
+ 
+ # End of ptlib.mak
