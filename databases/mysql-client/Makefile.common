@@ -1,0 +1,55 @@
+# $NetBSD: Makefile.common,v 1.1 2001/05/02 08:22:28 jlam Exp $
+
+DISTNAME=		mysql-3.23.35
+CATEGORIES=		databases
+MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.23/ \
+			http://www.mysql.com/Downloads/MySQL-3.23/ \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.23/
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.mysql.com/
+
+EXTRACT_USING_PAX=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+
+MYSQL_DATADIR?=		/var/mysql
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
+CONFIGURE_ARGS+=	--with-named-z-libs=z
+CONFIGURE_ARGS+=	--with-libwrap
+CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
+CONFIGURE_ARGS+=	--without-perl
+
+# We always use our own readline, either system- or pkgsrc-supplied.
+CONFIGURE_ARGS+=	--without-readline
+
+# This forces mysql.info _not_ to be rebuilt.
+CONFIGURE_ARGS+=	--without-docs
+
+CONFIGURE_ARGS+=	--without-debug
+CONFIGURE_ARGS+=	--without-bench
+CONFIGURE_ARGS+=	--with-low-memory
+
+CPPFLAGS+=		-Dunix
+
+USE_PERL5=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+post-extract:
+	cd ${WRKSRC};							\
+	for dir in dbug heap isam merge mysys strings; do		\
+		${MV} $${dir}/Makefile.in $${dir}/Makefile.in.orig;	\
+		${SED} -e "/^install-exec:/s/install-pkglibLIBRARIES//"	\
+			$${dir}/Makefile.in.orig > $${dir}/Makefile.in;	\
+	done
+	cd ${WRKSRC}/scripts;						\
+	for file in mysql_install_db.sh safe_mysqld.sh; do		\
+		${MV} $${file} $${file}.orig;				\
+		${SED} -e "s,chown,${CHOWN},g"				\
+			$${file}.orig > $${file};			\
+		${RM} $${file}.orig;					\
+	done
