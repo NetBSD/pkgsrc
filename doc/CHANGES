@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9591 2005/03/23 23:15:12 markd Exp $
+$NetBSD: CHANGES,v 1.9592 2005/03/24 02:07:36 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1683,3 +1683,13 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kdelibdocs3 to 3.4.0 [markd 2005-03-23]
 	Updated kdevelop-base to 3.2.0 [markd 2005-03-23]
 	Updated kdevelop to 3.2.0 [markd 2005-03-23]
+	Updated gattrib to 20050313 [dmcmahill 2005-03-23]
+	Updated geda to 20050313 [dmcmahill 2005-03-23]
+	Updated geda-docs to 20050313 [dmcmahill 2005-03-23]
+	Updated geda-examples to 20050313 [dmcmahill 2005-03-23]
+	Updated geda-symbols to 20050313 [dmcmahill 2005-03-23]
+	Updated geda-utils to 20050313 [dmcmahill 2005-03-23]
+	Updated gnetlist to 20050313 [dmcmahill 2005-03-23]
+	Updated gschem to 20050313 [dmcmahill 2005-03-23]
+	Updated gsymcheck to 20050313 [dmcmahill 2005-03-23]
+	Updated libgeda to 20050313 [dmcmahill 2005-03-23]
