@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/29 19:25:50 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/08/04 17:28:23 jmc Exp $
 #
 # Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
 # number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
@@ -55,18 +55,32 @@ BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6g
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096G}
 .  endif
 
+# For 0.9.7a or 0.9.7b it must be installed as the package currently only
+# support through 0.9.6g
 .  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_097A}	# OpenSSL 0.9.7a
+.    if (${_OPENSSL_VERSION} != ${OPENSSL_VERSION_097A}) && (${_OPENSSL_VERSION} != OPENSSL_VERSION_097B})
+PKG_SKIP_REASON=	"OpenSSL 0.9.7a or higher not installed."
+.    else
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_097A}
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.7a
+.    endif
 .  else
+.    if (${_OPENSSL_VERSION} == ${OPENSSL_VERSION_097A}) || (${_OPENSSL_VERSION} == OPENSSL_VERSION_097B})
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_097A}
+.    endif
 .  endif
 
 .  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_097B}	# OpenSSL 0.9.7b
+.    if ${_OPENSSL_VERSION} != ${OPENSSL_VERSION_097B}
+PKG_SKIP_REASON=        "OpenSSL 0.9.7b or higher not installed."
+.    else
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_097B}
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.7b
+.    endif
 .  else
+.    if ${_OPENSSL_VERSION} == ${OPENSSL_VERSION_097B}
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_097B}
+.    endif
 .  endif
 
 .  for PATTERN in ${_VALID_SSL_VERSIONS}
