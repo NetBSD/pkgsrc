@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.49 1999/02/10 14:55:00 frueauf Exp $
+# $NetBSD: Packages.txt,v 1.50 1999/02/18 12:36:16 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -1336,14 +1336,14 @@ The file contents in this section must be used without the "> " prefix.
 > @comment <$>NetBSD<$>
 > bin/bison
 > man/man1/bison.1.gz
-> @unexec %D/bin/install-info --delete %D/info/bison.info %D/info/dir
+> @unexec install-info --delete %D/info/bison.info %D/info/dir
 > info/bison.info
 > info/bison.info-1
 > info/bison.info-2
 > info/bison.info-3
 > info/bison.info-4
 > info/bison.info-5
-> @exec %D/bin/install-info %D/info/bison.info %D/info/dir
+> @exec install-info %D/info/bison.info %D/info/dir
 > share/bison.simple
 > share/bison.hairy
 
