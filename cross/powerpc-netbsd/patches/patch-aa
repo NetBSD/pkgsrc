@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/01/06 01:20:28 tv Exp $
+
+--- gcc/config/xm-netbsd.h.orig	Tue Jan  5 16:59:00 1999
++++ gcc/config/xm-netbsd.h	Tue Jan  5 16:59:29 1999
+@@ -22,3 +22,8 @@
+    running NetBSD.  This file should not be specified as $xm_file itself;
+    instead $xm_file should be CPU/xm-netbsd.h, which should include both
+    CPU/xm-CPU.h and this file xm-netbsd.h.  */
++
++/* XXX: temp fix for HOST_WIDE_INT breakage with PowerPC target */
++#undef HOST_BITS_PER_LONG
++#define HOST_BITS_PER_LONG 4
++
