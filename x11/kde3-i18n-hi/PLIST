@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/10 13:31:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/21 16:02:41 markd Exp $
 share/kde/locale/hi/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/hi/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/hi/LC_MESSAGES/amor.mo
@@ -75,7 +75,6 @@ share/kde/locale/hi/LC_MESSAGES/katexmlcheck.mo
 share/kde/locale/hi/LC_MESSAGES/katexmltools.mo
 share/kde/locale/hi/LC_MESSAGES/katomic.mo
 share/kde/locale/hi/LC_MESSAGES/kaudiocreator.mo
-share/kde/locale/hi/LC_MESSAGES/kbabel.mo
 share/kde/locale/hi/LC_MESSAGES/kbackgammon.mo
 share/kde/locale/hi/LC_MESSAGES/kbattleship.mo
 share/kde/locale/hi/LC_MESSAGES/kbinaryclock.mo
@@ -228,7 +227,6 @@ share/kde/locale/hi/LC_MESSAGES/kfile_txt.mo
 share/kde/locale/hi/LC_MESSAGES/kfile_vcf.mo
 share/kde/locale/hi/LC_MESSAGES/kfile_wav.mo
 share/kde/locale/hi/LC_MESSAGES/kfile_xbm.mo
-share/kde/locale/hi/LC_MESSAGES/kfilereplace.mo
 share/kde/locale/hi/LC_MESSAGES/kfindpart.mo
 share/kde/locale/hi/LC_MESSAGES/kfloppy.mo
 share/kde/locale/hi/LC_MESSAGES/kfmclient.mo
@@ -240,7 +238,6 @@ share/kde/locale/hi/LC_MESSAGES/kget.mo
 share/kde/locale/hi/LC_MESSAGES/kghostview.mo
 share/kde/locale/hi/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/hi/LC_MESSAGES/kgpg.mo
-share/kde/locale/hi/LC_MESSAGES/kgpgcertmanager.mo
 share/kde/locale/hi/LC_MESSAGES/khangman.mo
 share/kde/locale/hi/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/hi/LC_MESSAGES/khexedit.mo
@@ -292,7 +289,6 @@ share/kde/locale/hi/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/hi/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/hi/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/hi/LC_MESSAGES/kmid.mo
-share/kde/locale/hi/LC_MESSAGES/kmidi.mo
 share/kde/locale/hi/LC_MESSAGES/kmines.mo
 share/kde/locale/hi/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/hi/LC_MESSAGES/kmix.mo
@@ -422,7 +418,6 @@ share/kde/locale/hi/LC_MESSAGES/kwriteconfig.mo
 share/kde/locale/hi/LC_MESSAGES/kxkb.mo
 share/kde/locale/hi/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/hi/LC_MESSAGES/kxsconfig.mo
-share/kde/locale/hi/LC_MESSAGES/kxsldbg.mo
 share/kde/locale/hi/LC_MESSAGES/libcalendarresources.mo
 share/kde/locale/hi/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/kde/locale/hi/LC_MESSAGES/libkcal.mo
@@ -460,7 +455,6 @@ share/kde/locale/hi/LC_MESSAGES/pitchablespeed.mo
 share/kde/locale/hi/LC_MESSAGES/ppdtranslations.mo
 share/kde/locale/hi/LC_MESSAGES/privacy.mo
 share/kde/locale/hi/LC_MESSAGES/qeditor.mo
-share/kde/locale/hi/LC_MESSAGES/quanta.mo
 share/kde/locale/hi/LC_MESSAGES/quicklauncher.mo
 share/kde/locale/hi/LC_MESSAGES/secpolicy.mo
 share/kde/locale/hi/LC_MESSAGES/spy.mo

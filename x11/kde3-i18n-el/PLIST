@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:40 markd Exp $
 share/kde/locale/el/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/el/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/el/LC_MESSAGES/amor.mo
@@ -61,6 +61,7 @@ share/kde/locale/el/LC_MESSAGES/katefll_plugin.mo
 share/kde/locale/el/LC_MESSAGES/katehelloworld.mo
 share/kde/locale/el/LC_MESSAGES/katehtmltools.mo
 share/kde/locale/el/LC_MESSAGES/kateinsertcommand.mo
+share/kde/locale/el/LC_MESSAGES/katekjswrapper.mo
 share/kde/locale/el/LC_MESSAGES/katemake.mo
 share/kde/locale/el/LC_MESSAGES/katemodeline.mo
 share/kde/locale/el/LC_MESSAGES/kateopenheader.mo
@@ -154,7 +155,6 @@ share/kde/locale/el/LC_MESSAGES/kdebugdialog.mo
 share/kde/locale/el/LC_MESSAGES/kdelibs.mo
 share/kde/locale/el/LC_MESSAGES/kdelibs_colors.mo
 share/kde/locale/el/LC_MESSAGES/kdelirc.mo
-share/kde/locale/el/LC_MESSAGES/kdepasswd.mo
 share/kde/locale/el/LC_MESSAGES/kdeprint.mo
 share/kde/locale/el/LC_MESSAGES/kdeprint_part.mo
 share/kde/locale/el/LC_MESSAGES/kdeprintfax.mo
@@ -200,6 +200,7 @@ share/kde/locale/el/LC_MESSAGES/kfile_pnm.mo
 share/kde/locale/el/LC_MESSAGES/kfile_po.mo
 share/kde/locale/el/LC_MESSAGES/kfile_ps.mo
 share/kde/locale/el/LC_MESSAGES/kfile_rfc822.mo
+share/kde/locale/el/LC_MESSAGES/kfile_rgb.mo
 share/kde/locale/el/LC_MESSAGES/kfile_rpm.mo
 share/kde/locale/el/LC_MESSAGES/kfile_tga.mo
 share/kde/locale/el/LC_MESSAGES/kfile_tiff.mo
@@ -333,6 +334,7 @@ share/kde/locale/el/LC_MESSAGES/ksystemtrayapplet.mo
 share/kde/locale/el/LC_MESSAGES/ksystraycmd.mo
 share/kde/locale/el/LC_MESSAGES/ktaskbarapplet.mo
 share/kde/locale/el/LC_MESSAGES/kteatime.mo
+share/kde/locale/el/LC_MESSAGES/ktexteditor_autobookmarker.mo
 share/kde/locale/el/LC_MESSAGES/ktexteditor_insertfile.mo
 share/kde/locale/el/LC_MESSAGES/ktexteditor_isearch.mo
 share/kde/locale/el/LC_MESSAGES/ktexteditor_kdatatool.mo
@@ -354,6 +356,7 @@ share/kde/locale/el/LC_MESSAGES/kvieweffectsplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewpresenterplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewtemplateplugin.mo
+share/kde/locale/el/LC_MESSAGES/kwatchgnupg.mo
 share/kde/locale/el/LC_MESSAGES/kweather.mo
 share/kde/locale/el/LC_MESSAGES/kwin.mo
 share/kde/locale/el/LC_MESSAGES/kwin4.mo
@@ -402,7 +405,6 @@ share/kde/locale/el/LC_MESSAGES/passwords.mo
 share/kde/locale/el/LC_MESSAGES/pitchablespeed.mo
 share/kde/locale/el/LC_MESSAGES/ppdtranslations.mo
 share/kde/locale/el/LC_MESSAGES/privacy.mo
-share/kde/locale/el/LC_MESSAGES/quanta.mo
 share/kde/locale/el/LC_MESSAGES/quicklauncher.mo
 share/kde/locale/el/LC_MESSAGES/secpolicy.mo
 share/kde/locale/el/LC_MESSAGES/spy.mo
@@ -412,6 +414,7 @@ share/kde/locale/el/LC_MESSAGES/timezones.mo
 share/kde/locale/el/LC_MESSAGES/tippecanoe.mo
 share/kde/locale/el/LC_MESSAGES/tyler.mo
 share/kde/locale/el/LC_MESSAGES/uachangerplugin.mo
+share/kde/locale/el/LC_MESSAGES/useraccount.mo
 share/kde/locale/el/LC_MESSAGES/userinfo.mo
 share/kde/locale/el/LC_MESSAGES/validatorsplugin.mo
 share/kde/locale/el/LC_MESSAGES/wakeup.mo
