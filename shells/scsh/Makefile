@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2001/10/02 11:07:15 seb Exp $
+# $NetBSD: Makefile,v 1.17 2002/04/01 03:13:41 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
 DISTNAME=		scsh-0.5.3
 CATEGORIES=		shells lang
-MASTER_SITES=		ftp://ftp-swiss.ai.mit.edu/pub/su/scsh/
+MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/0.5/
 
 MAINTAINER= 		packages@netbsd.org
-HOMEPAGE=		http://www.swiss.ai.mit.edu/ftpdir/scsh/
+HOMEPAGE=		http://www.scsh.net/
 COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 
 NOT_FOR_PLATFORM=	*-*-alpha	# Needs scheme
