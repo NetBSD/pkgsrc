@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/23 20:36:28 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/01 01:57:29 jtb Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
@@ -323,14 +323,14 @@ lib/tcl/iwidgets3.0.1/iwidgets.tcl
 lib/tcl/iwidgets3.0.1/pkgIndex.tcl
 lib/tcl/iwidgets3.0.1/license.terms
 lib/libitcl32.so
-lib/libitcl32.so.1
-lib/libitcl32.so.1.0
+lib/libitcl32.so.0
+lib/libitcl32.so.0.0
 lib/libitcl32.la
 lib/libitcl32.a
 lib/libitclstub32.a
 lib/libitk32.so
-lib/libitk32.so.1
-lib/libitk32.so.1.0
+lib/libitk32.so.0
+lib/libitk32.so.0.0
 lib/libitk32.la
 lib/libitk32.a
 lib/libitkstub32.a
@@ -358,7 +358,7 @@ man/mann/canvasprintbox.n
 man/mann/shell.n
 man/mann/canvasprintdialog.n
 man/mann/combobox.n
-man/mann/dialog.n
+man/mann/itcldialog.n
 man/mann/dialogshell.n
 man/mann/entryfield.n
 man/mann/feedback.n
@@ -366,7 +366,7 @@ man/mann/fileselectionbox.n
 man/mann/fileselectiondialog.n
 man/mann/hyperhelp.n
 man/mann/labeledwidget.n
-man/mann/menubar.n
+man/mann/itclmenubar.n
 man/mann/messagedialog.n
 man/mann/notebook.n
 man/mann/optionmenu.n
