@@ -1,0 +1,63 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
+
+--- ghc/lib/misc/SocketPrim.lhs	Wed Sep 15 09:06:26 1999
++++ ghc/lib/misc/SocketPrim.lhs	Tue Dec 14 13:00:08 1999
+@@ -941,10 +941,56 @@
+ 
+ #endif
+ 
++#if netbsd_TARGET_OS || netbsd_elf_TARGET_OS
++
++data Family = 
++       	AF_UNSPEC	-- unspecified 
++      |	AF_UNIX		-- local to host (pipes, portals) 
++      |	AF_INET		-- internetwork: UDP, TCP, etc. 
++      |	AF_IMPLINK	-- arpanet imp addresses 
++      |	AF_PUP		-- pup protocols: e.g. BSP 
++      |	AF_CHAOS	-- mit CHAOS protocols 
++      |	AF_NS		-- XEROX NS protocols 
++      |	AF_ISO		-- ISO protocols 
++--    |	AF_OSI is the same as AF_ISO
++      |	AF_ECMA		-- european computer manufacturers 
++      |	AF_DATAKIT	-- datakit protocols 
++      |	AF_CCITT	-- CCITT protocols, X.25 etc 
++      |	AF_SNA		-- IBM SNA 
++      | AF_DECnet	-- DECnet 
++      | AF_DLI		-- DEC Direct data link interface 
++      | AF_LAT		-- LAT 
++      |	AF_HYLINK	-- NSC Hyperchannel 
++      |	AF_APPLETALK	-- Apple Talk 
++      |	AF_ROUTE	-- Internal Routing Protocol 
++      |	AF_LINK		-- Link layer interface 
++      |	Pseudo_AF_XTP	-- eXpress Transfer Protocol (no AF) 
++      | AF_COIP         -- connection-oriented IP, aka ST II
++      | AF_CNT		-- Computer Network Technology
++      | Psuedo_AF_RTIP  -- Help Identify RTIP packets
++      | AF_IPX		-- Novell Internet Protocol
++      | AF_INET6	-- IPv6
++      | Pseudo_AF_PIP   -- Help Identify PIP packets
++      | AF_ISDN         -- Integrated Services Digital Network
++--    | AF_E164	is the same as AF_ISDN
++      | AF_NATM		-- native ATM access
++      | AF_ARP		-- (rev.) addr. res. prot. (RFC 826)
++      | Pseudo_AF_KEY   -- Internal key-management function
++      | Pseudo_AF_HDRCMPLT -- Used by BPF to not rewrite hdrs in iface output
++      | AF_MAX
++	deriving (Eq, Ord, Ix, Show)	
++
++packFamily = index (AF_UNSPEC, AF_MAX)
++unpackFamily family = (range (AF_UNSPEC, AF_MAX))!!family
++
++#endif
++
++
+ -- Alpha running OSF or a SPARC with SunOS, rather than Solaris.
+ 
+ #if osf1_TARGET_OS || osf3_TARGET_OS || sunos4_TARGET_OS || hpux_TARGET_OS || \
+-	aix_TARGET_OS || freebsd2_TARGET_OS || freebsd3_TARGET_OS
++	aix_TARGET_OS || freebsd2_TARGET_OS || freebsd3_TARGET_OS || \
++	netbsd_TARGET_OS || netbsd_elf_TARGET_OS
+ data SocketType = 
+ 	  Stream 
+ 	| Datagram
+diff -u -r old/fptools/ghc/rts/MBlock.c work.i386/fptools/ghc/rts/MBlock.c
