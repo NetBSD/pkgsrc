@@ -1,1 +1,1 @@
-#define STANDARD_PRELUDE_PATHNAME "@PREFIX@/lib/umb-scheme/prelude.scheme"
+#define STANDARD_PRELUDE_PATHNAME "@PREFIX@/share/umb-scheme/prelude.scheme"
