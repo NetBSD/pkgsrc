@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/01/19 21:39:34 tron Exp $
+# $NetBSD: Makefile,v 1.45 2001/01/23 15:38:27 dmcmahill Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -22,6 +22,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}"		# the build system runs
+#							# configure again...
 CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 INFO_FILES=		libIDL.info
