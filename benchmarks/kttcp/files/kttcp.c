@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.3 2002/06/30 19:25:47 thorpej Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.4 2002/06/30 21:45:06 thorpej Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -40,6 +40,7 @@
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <sys/time.h>
+#include <errno.h>
 #include <netdb.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -69,6 +70,32 @@ usage(void)
 	exit(1);
 }
 
+static unsigned long long
+get_bytes(const char *str)
+{
+	unsigned long long bytes;
+	char *cp;
+
+	bytes = strtoull(str, &cp, 10);
+	if (bytes == ULLONG_MAX && errno == ERANGE)
+		err(1, "%s", str);
+
+	if (cp[0] != '\0') {
+		if (cp[1] != '\0')
+			errx(1, "invalid byte count: %s", str);
+		if (cp[0] == 'k' || cp[0] == 'K')
+			bytes *= 1024;
+		else if (cp[0] == 'm' || cp[0] == 'M')
+			bytes *= 1024 * 1024;
+		else if (cp[0] == 'g' || cp[0] == 'G')
+			bytes *= 1024 * 1024 * 1024;
+		else
+			errx(1, "invalid byte count modifier: %s", str);
+	}
+
+	return (bytes);
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -81,7 +108,7 @@ main(int argc, char *argv[])
 	struct kttcp_io_args kio;
 	struct addrinfo hints, *addr, *res;
 	struct sockaddr_storage ss;
-	unsigned long long usecs, bytespersec, bitspersec, xmitsize;
+	unsigned long long ull, usecs, bytespersec, bitspersec, xmitsize;
 	char connecthost[NI_MAXHOST];
 	socklen_t slen;
 	const int one = 1;
@@ -106,10 +133,14 @@ main(int argc, char *argv[])
 			family = PF_INET6;
 			break;
 		case 'b':
-			bufsize = atoi(optarg);
+			ull = get_bytes(optarg);
+			if (ull > INT_MAX)
+				errx(1,
+				    "invalid socket buffer size: %s\n", optarg);
+			bufsize = ull;
 			break;
 		case 'n':
-			xmitsize = strtoll(optarg, NULL, 10);
+			xmitsize = get_bytes(optarg);
 			if (xmitsize > KTTCP_MAX_XMIT)
 				xmitsize = KTTCP_MAX_XMIT;
 			xmitset = 1;
@@ -173,6 +204,8 @@ main(int argc, char *argv[])
 	}
 	if (res == NULL)
 		err(2, "can't create socket");
+
+	printf("kttcp: socket buffer size: %d\n", bufsize);
 
 	if (cmd == KTTCP_IO_SEND) {
 		if (connect(s, res->ai_addr, res->ai_addrlen) < 0)
