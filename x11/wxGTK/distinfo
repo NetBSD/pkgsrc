@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2003/09/04 13:07:00 adam Exp $
+$NetBSD: distinfo,v 1.11 2003/09/09 11:54:55 recht Exp $
 
 SHA1 (wxGTK-2.4.1.tar.bz2) = 4aea0d24d755e7f1fa89d8198014790670a79437
 Size (wxGTK-2.4.1.tar.bz2) = 5348194 bytes
@@ -6,3 +6,4 @@ SHA1 (patch-aa) = 5602ed3a9c15eab638f270990b91edc844a1e6e3
 SHA1 (patch-ab) = f0799ad63b9bd39cf58295b6d93ce7b697190d8c
 SHA1 (patch-ac) = 793ba08af48412fea905fc203b0c7322e4bafe9c
 SHA1 (patch-ad) = 1ee314f895451dfab8bf56952ad2822b8530590f
+SHA1 (patch-af) = 8d6572d26108d6aa914c4f12b67db646e936b464
