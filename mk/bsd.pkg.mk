@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.772 2001/06/29 18:29:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.773 2001/06/30 03:36:48 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1513,6 +1513,15 @@ do-configure:
 .endif
 .if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
+.endif
+.if defined(USE_LIBTOOL) && defined(LIBTOOL_OVERRIDE)
+.for libtool in ${LIBTOOL_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	if [ -f ${libtool} ]; then \
+		${RM} -f ${libtool}; \
+		${LN} -sf ${LIBTOOL} ${libtool}; \
+	fi
+.endfor
 .endif
 .endif
 
