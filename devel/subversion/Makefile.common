@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2003/06/06 11:05:01 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/06/10 09:56:16 wiz Exp $
 
 DISTNAME=		subversion-${SVNVER}
+PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		epg@pretzelnet.org
