@@ -1,0 +1,6 @@
+These are the Python bindings for Qt.  You must also have the SIP Python
+bindings generator installed.
+
+The homepage is http://www.riverbankcomputing.co.uk/pyqt/.
+
+The homepage of SIP is http://www.riverbankcomputing.co.uk/sip/.

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/22 17:22:48 drochner Exp $
+bin/pylupdate${PYVERSSUFFIX}
+bin/pyuic${PYVERSSUFFIX}
+${PYSITELIB}/libqtcmodule.a
+${PYSITELIB}/libqtcmodule.la
+${PYSITELIB}/libqtcmodule.so
+${PYSITELIB}/libqtcmodule.so.1
+${PYSITELIB}/libqtcmodule.so.1.0
+${PYSITELIB}/qt.py
