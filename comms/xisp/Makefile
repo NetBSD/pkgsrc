@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/04/25 01:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/07 14:47:34 minskim Exp $
 #
 
-DISTNAME=		xisp-2.6p1
-PKGREVISION=		3
+DISTNAME=		xisp-2.7p1
 CATEGORIES=		comms x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/network/serial/} \
 			http://xisp.hellug.gr/release/ \
@@ -13,14 +12,13 @@ HOMEPAGE=		http://xisp.hellug.gr/
 COMMENT=		User-friendly X11 interface to pppd/chat
 
 USE_BUILDLINK3=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xisp
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xisp/
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/xisp/
 
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
 
