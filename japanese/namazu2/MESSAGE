@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1 2001/10/31 23:29:27 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:28 hubertf Exp $
 
 *WARNING*:
 
@@ -23,3 +24,4 @@ is referenced URLs and modified files in source tree.
 http://www.namazu.org/ml/namazu-users-ja/msg02073.html	pl/util.pl
 http://www.namazu.org/ml/namazu-devel-ja/msg02024.html	pl/htmlsplit.pl
 http://www.namazu.org/ml/namazu-devel-ja/msg02030.html	scripts/mknmz.in
+===========================================================================

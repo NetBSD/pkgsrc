@@ -1,4 +1,6 @@
-====
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:28 hubertf Exp $
+
 Note that some stuff that comes with the standard Ruby 1.6
 distribution is provided as separate package:
 
@@ -9,4 +11,5 @@ distribution is provided as separate package:
 	x11/ruby-tk:			Tk modules
 
 They could install with ruby meta package.
-====
+
+===========================================================================

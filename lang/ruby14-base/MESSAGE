@@ -1,4 +1,6 @@
-====
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:28 hubertf Exp $
+
 Note that some stuff that comes with the standard Ruby 1.4
 distribution is provided as separate ports:
 
@@ -13,4 +15,5 @@ They could install with ruby14 meta package.
 To use other ruby-* package with Ruby 1.4, build and install them with
 "RUBY_VER=1.4" defined (i.e. make RUBY_VER=1.4 install), although not
 all packages can't be used.
-====
+
+===========================================================================

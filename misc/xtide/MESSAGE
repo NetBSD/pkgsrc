@@ -1,3 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:29 hubertf Exp $
+
 You should copy the example xtide configuration file from
 ${PREFIX}/share/examples/xtide.conf to ${PREFIX}/etc/xtide.conf, and
 edit it to conform to your spacifications.
+
+===========================================================================
