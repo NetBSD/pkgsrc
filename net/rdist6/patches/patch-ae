@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.3 2001/03/12 19:06:51 kim Exp $
+$NetBSD: patch-ae,v 1.4 2004/05/31 02:18:44 kim Exp $
 
---- config/os-netbsd.h.orig	Mon Mar 12 13:16:18 2001
-+++ config/os-netbsd.h	Mon Mar 12 13:59:27 2001
+--- config/os-netbsd.h.orig	2001-03-12 13:16:18.000000000 -0500
++++ config/os-netbsd.h	2004-05-30 22:01:15.000000000 -0400
 @@ -45,6 +45,7 @@
   * Things we need
   */
@@ -10,3 +10,15 @@ $NetBSD: patch-ae,v 1.3 2001/03/12 19:06:51 kim Exp $
  
  /*
   * Set process args to messages that show up when running ps(1)
+@@ -86,7 +87,11 @@
+ /*
+  * Select the type of statfs() system call (if any).
+  */
++#if __NetBSD_Version__ < 200060000
+ #define STATFS_TYPE	STATFS_44BSD
++#else
++#define STATFS_TYPE	STATFS_SVR4
++#endif
+ 
+ /*
+  * Use f_fstypename in struct statfs.
