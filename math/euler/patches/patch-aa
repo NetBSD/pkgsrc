@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2002/06/27 03:50:48 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2003/04/29 22:22:45 jtb Exp $
 
---- main.c.orig	Wed Feb 20 08:59:59 2002
+--- main.c.orig
 +++ main.c
-@@ -389,7 +389,9 @@
+@@ -429,7 +429,9 @@
  	gettimer(TIMEOFDAY,&t);
  	return (t.tv_sec+t.tv_nsec/1000000000.0);
  #else
@@ -12,13 +12,3 @@ $NetBSD: patch-aa,v 1.3 2002/06/27 03:50:48 jtb Exp $
 +	return (double)(t.tms_utime+t.tms_stime)/CLK_TCK;
  #endif
  }
- 
-@@ -1308,7 +1310,7 @@
- 			break;
- 		case E_DOC: {
- 				char *browser;
--				browser = g_strconcat(prefs.browser," ",INSTALL_DIR,"/doc/euler/index.html &",NULL);
-+				browser = g_strconcat(prefs.browser," ",INSTALL_DIR,"/share/doc/euler/index.html &",NULL);
- 				system(browser);
- 				g_free(browser);
- 			}

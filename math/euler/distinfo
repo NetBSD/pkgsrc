@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/07/02 12:58:27 wiz Exp $
+$NetBSD: distinfo,v 1.5 2003/04/29 22:22:44 jtb Exp $
 
-SHA1 (euler-1.60.2.tar.gz) = 5cc5701639aa220b8108b4c5691c79de8ca5f235
-Size (euler-1.60.2.tar.gz) = 640913 bytes
-SHA1 (patch-aa) = 1d926a52a67b509ef41a182e8b774c6791fd9a78
-SHA1 (patch-ab) = 672014ec88ec5b6be7f6d5297136aa86733deb61
-SHA1 (patch-ac) = d9f17e01176fe1ce9784c8df3a0dfb4070e75612
+SHA1 (euler-1.60.6.tar.gz) = 30e9fe077b8c4b2cb61f72b618fcbe7054c67746
+Size (euler-1.60.6.tar.gz) = 769602 bytes
+SHA1 (patch-aa) = 98b8aa3441d5fa0ab822019ea9dc0446625e7072
+SHA1 (patch-ab) = 1705383882d30ab0d1574a9d6328ed9d843f089e
+SHA1 (patch-ac) = 578b456efe37219d4edbb5b7a27f671011b3c26c
