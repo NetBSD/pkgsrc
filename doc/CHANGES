@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3692 2003/10/14 23:46:46 hubertf Exp $
+$NetBSD: CHANGES,v 1.3693 2003/10/15 00:07:54 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4196,4 +4196,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated x11-links to 0.16 [veego 2003-10-13]
 	Updated exif to 0.6nb1 [salo 2003-10-14]
 	Updated udfclient to 0.1.1 [reinoud 2003-10-14]
+	Updated nethack to 3.4.2nb1 [pooka 2003-10-14]
+	Updated nethack-lib to 3.4.2nb1 [pooka 2003-10-14]
+	Updated nethack-qt to 3.4.2nb1 [pooka 2003-10-14]
+	Updated nethack-tty to 3.4.2nb1 [pooka 2003-10-14]
+	Updated nethack-x11 to 3.4.2nb1 [pooka 2003-10-14]
 	Updated ipv6calc to 0.46 [hubertf 2003-10-15]
