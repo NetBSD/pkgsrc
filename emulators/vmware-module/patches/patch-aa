@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+
+--- source/linuxrtc/Makefile	Tue Apr  3 02:03:20 2001
++++ source/linuxrtc/Makefile	Sun Jun 10 10:14:02 2001
+@@ -1,5 +1,5 @@
+ #S?=		/work/trees/current/sys
+-S?=		/work/trees/netbsd-1-5/sys
++S?=		${BSDSRCDIR}/sys
+ MKMAN=		no
+ KMOD?=		linuxrtc
+ SRCS=		rtc.c
+--- source/vmmon/Makefile	Tue Apr  3 01:05:04 2001
++++ source/vmmon/Makefile	Sun May 13 22:02:16 2001
+@@ -1,7 +1,7 @@
+ MKMAN=		no
+ KMOD=		vmmon
+ #S=		/work/trees/current/sys
+-S=		/work/trees/netbsd-1-5/sys
++S?=		${BSDSRCDIR}/sys
+ SRCS=
+ WARNS?=		1
+ 
+--- source/vmnet/Makefile	Tue Apr  3 00:54:50 2001
++++ source/vmnet/Makefile	Sun May 13 22:02:52 2001
+@@ -1,5 +1,5 @@
+ #S?=		/work/trees/current/sys
+-S?=		/work/trees/netbsd-1-5/sys
++S?=		${BSDSRCDIR}/sys
+ MKMAN=		no
+ KMOD?=		if_hub
+ SRCS=		if_hubmod.c

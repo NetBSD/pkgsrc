@@ -1,0 +1,75 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+
+--- rc.d/linuxrtc	Wed Apr  4 04:43:17 2001
++++ rc.d/linuxrtc	Sun Jun 10 13:55:56 2001
+@@ -2,6 +2,7 @@
+ #
+ 
+ # PROVIDE: linuxrtc
++# BEFORE: securelevel
+ 
+ . /etc/rc.subr
+ 
+@@ -13,8 +14,8 @@
+ 
+ load_rc_config $name
+ 
+-linuxrtc_lkm="$vmware_prefix/share/vmware/lkm/linuxrtc.o"
+-linuxrtc_post_script="$vmware_prefix/share/vmware/lkm/linuxrtc_post.sh"
++linuxrtc_lkm="@PREFIX@/lkm/linuxrtc.o"
++linuxrtc_post_script="@PREFIX@/lkm/linuxrtc_post.sh"
+ 
+ linuxrtc_prestart()
+ {
+--- rc.d/vmmon	Wed Apr  4 04:42:40 2001
++++ rc.d/vmmon	Sun Jun 10 13:56:04 2001
+@@ -2,6 +2,7 @@
+ #
+ 
+ # PROVIDE: vmmon
++# BEFORE: securelevel
+ 
+ . /etc/rc.subr
+ 
+@@ -13,8 +14,8 @@
+ 
+ load_rc_config $name
+ 
+-vmmon_lkm="$vmware_prefix/share/vmware/lkm/vmmon.o"
+-vmmon_post_script="$vmware_prefix/share/vmware/lkm/vmmon_post.sh"
++vmmon_lkm="@PREFIX@/lkm/vmmon.o"
++vmmon_post_script="@PREFIX@/lkm/vmmon_post.sh"
+ 
+ vmmon_prestart()
+ {
+--- rc.d/vmnet	Wed Apr  4 04:42:40 2001
++++ rc.d/vmnet	Sun Jun 10 13:56:12 2001
+@@ -2,6 +2,7 @@
+ #
+ 
+ # PROVIDE: vmnet
++# BEFORE: securelevel
+ 
+ . /etc/rc.subr
+ 
+@@ -13,8 +14,8 @@
+ 
+ load_rc_config $name
+ 
+-vmnet_lkm="$vmware_prefix/share/vmware/lkm/if_hub.o"
+-vmnet_post_script="$vmware_prefix/share/vmware/lkm/if_hub_post.sh"
++vmnet_lkm="@PREFIX@/lkm/if_hub.o"
++vmnet_post_script="@PREFIX@/lkm/if_hub_post.sh"
+ 
+ vmnet_prestart()
+ {
+--- rc.d/vmnetif	Wed Apr  4 04:43:19 2001
++++ rc.d/vmnetif	Sun Jun 10 13:37:57 2001
+@@ -2,6 +2,7 @@
+ 
+ # PROVIDE: vmnet-netifup
+ # REQUIRE: vmmon vmnet
++# BEFORE: securelevel
+ 
+ . /etc/rc.subr
+ 
