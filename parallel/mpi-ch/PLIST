@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/03 12:07:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/07 02:08:37 jschauma Exp $
 bin/clog2alog
 bin/clog_print
 bin/mpicc
@@ -1918,7 +1918,7 @@ share/examples/mpi-ch/test/topol/test.h
 share/examples/mpi-ch/test/topol/test.o
 share/examples/mpi-ch/test/topol/twod.f
 share/examples/mpi-ch/test/topol/twod2.f
-share/util/machines/machines.${LOWER_OPSYS}
+share/util/machines/machines.${MPICH_OPSYS}
 share/util/machines/machines.sample
 @dirrm share/util/machines
 @dirrm share/util
