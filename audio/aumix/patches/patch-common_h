@@ -1,0 +1,21 @@
+$NetBSD: patch-common_h,v 1.1.1.1 2000/07/14 10:37:18 rh Exp $
+
+--- src/common.h.orig	Mon Jun 26 22:51:42 2000
++++ src/common.h	Wed Jul 12 06:22:32 2000
+@@ -61,14 +61,14 @@
+  * Our `LOCAL_TEXT(STRING)' macro stands in for gettext (STRING)' when using
+  * NLS, and simply returns STRING otherwise.
+  */
+-#ifdef HAVE_NLS
++#if 1
+ #define LOCAL_TEXT(string) gettext (string)
+ #ifdef gettext_noop
+ #define LOCAL_TEXT_NOOP(string) gettext_noop(string)
+ #else
+ #define LOCAL_TEXT_NOOP(string) (string)
+ #endif				/* gettext_noop */
+-#ifdef HAVE_LIBINTL_H
++#if 1
+ #include <libintl.h>
+ #include <locale.h>
+ #endif				/* HAVE_LIBINTL_H */

@@ -1,0 +1,5 @@
+This program adjusts an audio mixer from X, the console, a terminal,
+the command line or a script.  Interactive use is with GTK+ and
+ncurses.
+
+Trevor Johnson <trevor@jpj.net>
