@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/01 05:48:05 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/31 13:05:13 wiz Exp $
 
 DISTNAME=	mp3blaster-3.1.1
 CATEGORIES=	audio
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.stack.nl/~brama/mp3blaster.html
 COMMENT=	MP3 console curses-based player
 
 PTHREAD_OPTS=	require
+USE_BUILDLINK2=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \
@@ -17,9 +18,8 @@ CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \
 		--with-oggvorbis \
 		--enable-newthreads
 
-.include "../../audio/libogg/buildlink.mk"
-.include "../../audio/libvorbis/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
