@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3998 2003/12/06 18:23:08 recht Exp $
+$NetBSD: CHANGES,v 1.3999 2003/12/06 18:30:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4994,3 +4994,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed plex86 [tron 2003-12-06]
 	Updated gal2 to 1.99.10 [recht 2003-12-06]
 	Added gtkhtml3-3.0.9 [recht 2003-12-06]
+	Updated autoconf to 2.59 [wiz 2003-12-06]
+	Updated automake to 1.7.9 [wiz 2003-12-06]
