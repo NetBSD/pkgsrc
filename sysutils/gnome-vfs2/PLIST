@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/14 19:47:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/06 19:09:35 jmmv Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
@@ -92,7 +92,7 @@ lib/libgnomevfs-2.a
 lib/libgnomevfs-2.la
 lib/libgnomevfs-2.so
 lib/libgnomevfs-2.so.400
-lib/libgnomevfs-2.so.400.1
+lib/libgnomevfs-2.so.400.2
 lib/pkgconfig/gnome-vfs-2.0.pc
 lib/pkgconfig/gnome-vfs-module-2.0.pc
 lib/vfs/2.0/extfs/README
