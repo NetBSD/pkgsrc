@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/06/10 01:47:15 shell Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/21 23:47:00 jlam Exp $
 
 DISTNAME=	pycurl-7.9.7
 PKGNAME=	${PYPKGPREFIX}-curl-7.9.7
@@ -14,5 +14,5 @@ DEPENDS+=	curl>=7.9.7:../../www/curl
 PYDISTUTILSPKG=	# defined
 PYBINMODULE=	# defined
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

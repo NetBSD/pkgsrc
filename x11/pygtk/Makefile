@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:59 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 23:47:02 jlam Exp $
 #
 
 DISTNAME=	pygtk-0.6.9
@@ -24,6 +24,6 @@ PY_PATCHPLIST=	yes
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

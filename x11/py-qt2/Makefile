@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/17 10:31:36 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:47:02 jlam Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -11,21 +11,23 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/pyqt/index.php
 COMMENT=	Python bindings for the Qt tooltit
 
-USE_LIBTOOL=	yes
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
+USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_BUILDLINK_ONLY=	yes
 
-HAVE_CONFIGURE=	YES
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --with-python=${PYTHONBIN} \
-		--with-qt-dir=${QT_BUILDLINK_DIR}
+HAVE_CONFIGURE=		# defined
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS=		--with-python=${PYTHONBIN} \
+			--with-qt-dir=${QTDIR}
 
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-.include "../../x11/py-qt2-sip/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
-.include "../../x11/qt2-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../lang/python/extension.mk"
+
+.include "../../x11/py-qt2-sip/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

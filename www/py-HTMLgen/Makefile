@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/05 19:44:53 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:47:00 jlam Exp $
 #
 
 DISTNAME=	HTMLgen
@@ -16,5 +16,5 @@ NO_BUILD=	yes
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/01/15 18:38:05 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2002/09/21 23:46:53 jlam Exp $
 
 DISTNAME=	Numeric-20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,5 +14,5 @@ PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUP=	setup_all.py
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

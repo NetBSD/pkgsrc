@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 16:24:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:54 jlam Exp $
 
 DISTNAME=	IPy-0.4
 PKGNAME=	${PYPKGPREFIX}-IP-0.4
@@ -11,5 +11,5 @@ COMMENT=	python module to handle IPv4 and IPv6 address
 
 PYDISTUTILSPKG=	# defined
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

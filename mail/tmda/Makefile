@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/31 23:08:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/21 23:46:53 jlam Exp $
 #
 
 DISTNAME=	tmda-0.61
@@ -66,6 +66,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/htdocs/*.html ${PREFIX}/${HTMLDIR}
 
-.include "../../lang/python/extension.buildlink.mk"
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

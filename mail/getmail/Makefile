@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/18 15:57:42 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/21 23:46:52 jlam Exp $
 #
 
 DISTNAME=	getmail-2.1.3
@@ -34,5 +34,5 @@ do-install:
 		${PREFIX}/libexec/getmail
 	${INSTALL_SCRIPT} ${WRKSRC}/getmail ${PREFIX}/bin
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

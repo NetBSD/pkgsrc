@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/17 20:47:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:49 jlam Exp $
 
 DISTNAME=	Plex1.1.2
 PKGNAME=	${PYPKGPREFIX}-plex-1.1.2
@@ -16,5 +16,5 @@ pre-configure:
 
 PYDISTUTILSPKG= # defined
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

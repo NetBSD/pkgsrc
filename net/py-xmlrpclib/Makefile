@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/17 11:31:57 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/21 23:46:55 jlam Exp $
 #
 
 DISTNAME=	xmlrpc-0.9.8-990621
@@ -21,5 +21,5 @@ do-install:
 		${INSTALL_DATA} $$f ${PREFIX}/${PYSITELIB}; \
 	done
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

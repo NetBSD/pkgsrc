@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/17 10:27:57 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/21 23:46:56 jlam Exp $
 #
 
 DISTNAME=	amkCrypto-0.1.3
@@ -22,5 +22,5 @@ do-configure:
 	${MV} -f ${WRKSRC}/setup.py.tmp ${WRKSRC}/setup.py
 
 .include "../../security/openssl/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/25 04:47:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/21 23:46:59 jlam Exp $
 #
 
 DISTNAME=	mxDateTime-1.3.0
@@ -38,5 +38,5 @@ do-install:
 		${WRKSRC}/mxDateTime/__init__.py* \
 		 ${PREFIX}/${PYSITELIB}/DateTime/mxDateTime
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/02 08:46:16 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:58 jlam Exp $
 #
 
 DISTNAME=	Memo-1.0.0
@@ -34,6 +34,6 @@ pre-install:
 do-install:
 	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/pygtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

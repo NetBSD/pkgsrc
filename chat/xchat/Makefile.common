@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/09/12 12:34:00 tron Exp $
+# $NetBSD: Makefile.common,v 1.4 2002/09/21 23:46:46 jlam Exp $
 
 DISTNAME=	xchat-1.8.10
 CATEGORIES=	chat x11
@@ -15,17 +15,19 @@ PATCHDIR=	${.CURDIR}/../xchat/patches
 PKGDIR=		${.CURDIR}/../xchat
 PLIST_SRC=	${.CURDIR}/../xchat/PLIST
 
-USE_GMAKE=	YES
-USE_PERL5=	YES
-USE_X11BASE=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
-CONFIGURE_ENV+=	pythonpath=${PYTHONBIN}
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+USE_BUILDLINK2=		YES
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_PERL5=		YES
 USE_GNU_GETTEXT=	YES
 BUILD_USES_MSGFMT=	YES
 
-BUILD_DEFS+=	USE_INET6 USE_SOCKS
+BUILD_DEFS+=		USE_INET6 USE_SOCKS
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		ac_cv_lib_intl_bindtextdomain='yes'
+CONFIGURE_ENV+=		pythonpath=${PYTHONBIN}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,6 +51,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
-.include "../../devel/glib/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../lang/python/application.buildlink.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/python/application.mk"

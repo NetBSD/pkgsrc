@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 16:26:44 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:59 jlam Exp $
 
 DISTNAME=	HappyDoc_r2_0
 PKGNAME=	${PYPKGPREFIX}-HappyDoc-2.0
@@ -18,5 +18,5 @@ WRKSRC=		${WRKDIR}/HappyDoc-r2_0
 post-extract:
 	${MV} ${WRKSRC}/happydoc ${WRKSRC}/happydoc${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

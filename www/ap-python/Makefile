@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/02/28 18:32:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 23:47:00 jlam Exp $
 #
 
 DISTNAME=		mod_python-2.7.6
@@ -32,6 +32,6 @@ post-install:
 		share/doc/html/ap-mod_python \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC} )
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../www/apache/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

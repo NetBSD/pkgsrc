@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/12 20:13:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:55 jlam Exp $
 #
 
 DISTNAME=	bg5pdf-1.0.0
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/bg5pdf
 post-extract:
 	${RM} -f ${WRKSRC}/bg5pdflib.so
 
-.include "../../lang/python/application.buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../print/pdflib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
