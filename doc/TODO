@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1286 2004/01/08 06:06:48 grant Exp $
+$NetBSD: TODO,v 1.1287 2004/01/08 06:14:49 grant Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,6 @@ Suggested package updates
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8c
 	o overnet-0.51.2 [pkg/23945]
-	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
