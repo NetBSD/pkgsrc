@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.124 2000/03/13 04:44:18 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.125 2000/03/13 14:24:29 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -207,6 +207,12 @@
 # Set this to "no" to stop the warning message being shown.
 # Possible: yes, no
 # Default: yes 
+
+#SMART_MESSAGES=yes
+# Display the make(1) target, and the current stack of packages being built,
+# when displaying messages during package builds.
+# Possible: defined, not defined
+# Default: not defined
 
 #
 #	Definitions used only in the packages collection
