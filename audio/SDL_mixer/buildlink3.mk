@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+SDL_MIXER_BUILDLINK3_MK:=	${SDL_MIXER_BUILDLINK3_MK}+
+
+.if !empty(SDL_MIXER_BUILDLINK3_MK:M\+)
+BUILDLINK_DEPENDS.SDL_mixer?=	SDL_mixer>=1.2.5nb1
+BUILDLINK_PKGSRCDIR.SDL_mixer?=	../../audio/SDL_mixer
+.endif	# SDL_MIXER_BUILDLINK3_MK
+
+.if !empty(BUILDLINK_DEPTH:M\+)
+BUILDLINK_DEPENDS+=	SDL_mixer
+.endif
+
+.if !empty(SDL_MIXER_BUILDLINK3_MK:M\+)
+BUILDLINK_PACKAGES+=		SDL_mixer
+BUILDLINK_INCDIRS.SDL_mixer?=	include/SDL
+
+.  include "../../devel/SDL/buildlink3.mk"
+.endif	# SDL_MIXER_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:C/\+$//}
