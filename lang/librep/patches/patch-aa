@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.4 2000/10/29 20:33:45 jlam Exp $
+
+--- install-aliases.orig	Tue Oct 17 20:52:03 2000
++++ install-aliases
+@@ -76,8 +76,9 @@
+ 	    ;;
+ 	  *)
+ 	    # make sure links are relative to their own directory
+-	    src=`strip_common_prefix "$dest" "$src"`
+-	    ln -s "${src}${suf}" "${destroot}/${dest}${suf}"
++	    # pkgsrc: not sure why this change is necessary...bug in /bin/sh?
++	    src1=`strip_common_prefix "$dest" "$src"`
++	    ln -s "${src1}${suf}" "${destroot}/${dest}${suf}"
+ 	    ;;
+ 	esac
+       fi
