@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2001/12/10 15:28:12 joda Exp $
+
+--- src/IO/http.c.orig	Tue Oct 16 17:53:53 2001
++++ src/IO/http.c	Mon Dec 10 16:20:42 2001
+@@ -211,6 +211,7 @@
+    SocketData_t *S = a_Klist_get_data(ValidSocks, (gint)Info->LocalKey);
+ 
+    /* Set remaining parms. */
++   memset(&name, 0, sizeof(sin));
+    name.sin_family = AF_INET;
+    name.sin_port = S->port ? htons(S->port) : htons(DILLO_URL_HTTP_PORT);
+    name.sin_addr.s_addr = htonl(S->ip_addr);
