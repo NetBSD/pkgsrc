@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/04/23 20:28:04 tron Exp $
+$NetBSD: distinfo,v 1.5 2001/04/23 20:30:40 tron Exp $
 
 SHA1 (dvdview1.1.0.tar.gz) = d3f6837f17834c5849f93308b994e70e056b0ffe
 Size (dvdview1.1.0.tar.gz) = 242440 bytes
 SHA1 (patch-aa) = 89b3ac7a3f4f5f3ed6722d6253f341ce849e6d37
-SHA1 (patch-ab) = 611df0fd92fa84b0f805203ba0bc496ea844fed5
+SHA1 (patch-ab) = 696d9c5515ec395800ab146cf2b5f3539faaafba
 SHA1 (patch-ac) = f6d7c9b7d8fa9369a302987f600b91011113e2cf
