@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.255 2002/10/14 18:18:51 tsarna Exp $
+$NetBSD: CHANGES,v 1.256 2002/10/15 03:39:00 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3259,3 +3259,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkg_tarup to 1.2 [hubertf 2002-10-14]
 	Added grep 2.5 [bouyer 2002-10-14]
 	Added py-jpCodecs-1.4.9 [tsarna 2002-10-14]
+	Updated kdbg to 1.2.6 [markd 2002-10-15]
