@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2002/01/07 16:38:32 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2002/12/19 00:53:48 wiz Exp $
 
---- configure.orig	Tue Dec 25 18:59:42 2001
+--- configure.orig	Sun Dec  1 17:16:10 2002
 +++ configure
-@@ -4440,7 +4441,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -10867,7 +10867,7 @@ if test "${ac_cv_lib_ffm_cos+set}" = set
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-   ac_save_LIBS="$LIBS"
+   ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lffm  $LIBS"
-+LIBS="-lffm -lm $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 4446 "configure"
++LIBS="-lffm  -lm $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
  #include "confdefs.h"
