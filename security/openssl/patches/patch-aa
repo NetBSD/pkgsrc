@@ -1,63 +1,24 @@
-$NetBSD: patch-aa,v 1.8 2002/07/28 05:36:30 schmonz Exp $
+$NetBSD: patch-aa,v 1.9 2002/08/04 15:47:46 fredb Exp $
 
---- config.orig	Thu Sep 21 05:23:14 2000
+--- config.orig	Sun Jun 16 05:32:14 2002
 +++ config
-@@ -83,6 +83,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
- 	echo "${MACHINE}-ibm-aix"; exit 0
- 	;;
- 
-+	Darwin:*)
-+	echo "`uname -p`-apple-darwin${RELEASE}"; exit 0
-+	;;
-+
-     dgux:*)
- 	echo "${MACHINE}-dg-dgux"; exit 0
- 	;;
-@@ -167,10 +171,14 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
-         echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
-         ;;
- 
--    NetBSD:*:*:*386*)
--        echo "`/usr/sbin/sysctl -n hw.model | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
-+    NetBSD:*:*:i386)
-+	if echo __ELF__ | cc -E - | grep -q __ELF__; then
-+	    echo "i386-whatever-netbsd"; exit 0
-+	else
-+	    echo "i386elf-whatever-netbsd"; exit 0
-+	fi
- 	;;
--
-+  
-     NetBSD:*)
- 	echo "${MACHINE}-whatever-netbsd"; exit 0
- 	;;
-@@ -330,6 +338,7 @@ else
+@@ -388,7 +388,7 @@
+   # does give us what we want though, so we use that.  We just just the
+   # major and minor version numbers.
+   # peak single digit before and after first dot, e.g. 2.95.1 gives 29
+-  GCCVER=`echo $GCCVER | sed 's/\([0-9]\)\.\([0-9]\).*/\1\2/'`
++  GCCVER=`echo $GCCVER | sed 's/[^.]*\([0-9]\)\.\([0-9]\).*/\1\2/'`
+ else
    CC=cc
  fi
- 
-+if false; then
- if [ "$SYSTEM" = "SunOS" ]; then
-   # check for WorkShop C, expected output is "cc: blah-blah C x.x"
-   CCVER=`(cc -V 2>&1) 2>/dev/null | \
-@@ -347,6 +356,7 @@ if [ "$SYSTEM" = "SunOS" ]; then
-     CC=sc3
-   fi
- fi
-+fi
- 
- if [ "${SYSTEM}-${MACHINE}" = "Linux-alpha" ]; then
-   # check for Compaq C, expected output is "blah-blah C Vx.x"
-@@ -454,9 +464,10 @@ case "$GUESSOS" in
-   alpha*-*-freebsd*) OUT="FreeBSD-alpha" ;;
+@@ -577,8 +577,8 @@
    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
    *-freebsd[1-2]*) OUT="FreeBSD" ;;
--  *86*-*-netbsd) OUT="NetBSD-x86" ;;
+   *86*-*-netbsd) OUT="NetBSD-x86" ;;
 -  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
 -  *-*-netbsd) OUT="NetBSD-sparc" ;;
-+  *86elf*-*-netbsd) OUT="NetBSD-i386elf" ;;
-+  *86-*-netbsd) OUT="NetBSD-i386" ;;
-+  *-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
-+  *-*-darwin*) OUT="Darwin" ;;
++  sun3*-*-netbsd) OUT="NetBSD-m68k" ;;
++  *-*-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
    *86*-*-openbsd) OUT="OpenBSD-x86" ;;
    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
    pmax*-*-openbsd) OUT="OpenBSD-mips" ;;

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2002/07/31 06:22:45 tron Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/08/04 15:47:44 fredb Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -25,85 +25,97 @@ OPENSSL_VERSION_096B=		0x0090602fL
 OPENSSL_VERSION_096D=		0x0090604fL
 OPENSSL_VERSION_096E=		0x0090605fL
 
-# Check for a usable installed version of OpenSSL.  Version must be greater
-# than 0.9.5a.  If a usable version isn't present, then use the pkgsrc
-# OpenSSL package.
+# Check for a usable installed version of OpenSSL. Version must be greater
+# than 0.9.6e, or else contain a fix for the 2002-07-30 security advisory.
+# If a usable version isn't present, then use the pkgsrc OpenSSL package.
 #
 .include "../../mk/bsd.prefs.mk"
-USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_095A}
-
-# Associate OpenSSL dependency with version number.
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_095A}
-BUILDLINK_DEPENDS.openssl=	{openssl-0.9.5a,openssl>=0.9.6}
-.else
-BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6
-.endif
-
 _NEED_OPENSSL=		YES
+
 .if ${OPSYS} == "Darwin"
 _OPENSSLV_H=		/usr/local/include/openssl/opensslv.h
+_SSL_H=			/usr/local/include/openssl/ssl.h
 .else
 _OPENSSLV_H=		/usr/include/openssl/opensslv.h
+_SSL_H=			/usr/include/openssl/ssl.h
 .endif
-.if exists(${_OPENSSLV_H})
+
+.if exists(${_OPENSSLV_H}) && exists(${_SSL_H})
+_IN_TREE_OPENSSL_HAS_FIX!=					\
+		${AWK} 'BEGIN { ans = "NO" }			\
+		/SSL_R_KEY_ARG_TOO_LONG/ { ans = "YES" }	\
+		END { print ans; exit 0 }' ${_SSL_H}
+
+. if ${_IN_TREE_OPENSSL_HAS_FIX} == "YES"
+USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_095A}
+. else
+USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096E}
+. endif
+
+# Associate OpenSSL dependency with version number.
+. if defined(USE_OPENSSL_VERSION)
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6e
+. endif
+
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
 				${_OPENSSLV_H}
 
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_095A}
 
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096}	# OpenSSL 0.9.6
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096}	# OpenSSL 0.9.6
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096}
-.else
+. else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096}
-.endif
+. endif
 
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096A}	# OpenSSL 0.9.6a
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096A}	# OpenSSL 0.9.6a
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096A}
-.else
+. else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096A}
-.endif
+. endif
 
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096B}	# OpenSSL 0.9.6b
+.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096B}	# OpenSSL 0.9.6b
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096B}
-.else
+.  else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096B}
-.endif
+.  endif
 
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096D}	# OpenSSL 0.9.6d
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096D}	# OpenSSL 0.9.6d
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096D}
-.else
+. else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096D}
-.endif
+. endif
 
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096E}	# OpenSSL 0.9.6e
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096E}	# OpenSSL 0.9.6e
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096E}
-.else
+. else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096E}
-.endif
+. endif
 
-.for PATTERN in ${_VALID_SSL_VERSIONS}
-.if ${_OPENSSL_VERSION:M${PATTERN}} != ""
+. for PATTERN in ${_VALID_SSL_VERSIONS}
+.  if ${_OPENSSL_VERSION:M${PATTERN}} != ""
 _NEED_OPENSSL=		NO
-.endif
-.endfor
-.endif	# exists(${_OPENSSLV_H})
+.  endif
+. endfor
+
+.endif  # exists(${_OPENSSLV_H}) && exists(${_SSL_H})
 
 .if ${_NEED_OPENSSL} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.openssl}:../../security/openssl
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openssl=openssl
 BUILDLINK_PREFIX.openssl_DEFAULT=	${LOCALBASE}
 SSLBASE=			${BUILDLINK_PREFIX.openssl}
-SSLCERTS=			${SSLBASE}/certs
 .else
-.if ${OPSYS} == "Darwin"
+. if ${OPSYS} == "Darwin"
 BUILDLINK_PREFIX.openssl=	/usr/local
 SSLBASE=			/usr/local
-.else
+. else
 BUILDLINK_PREFIX.openssl=	/usr
 SSLBASE=			/usr
+. endif
 .endif
+
 SSLCERTS=			/etc/openssl/certs
-.endif
 BUILD_DEFS+=			SSLBASE SSLCERTS
 
 BUILDLINK_FILES.openssl=	bin/openssl
