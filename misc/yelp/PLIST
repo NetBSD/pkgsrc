@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/15 14:28:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/31 12:02:38 jmmv Exp $
 bin/gnome-help
 bin/yelp
 lib/bonobo/servers/GNOME_Yelp.server
@@ -10,6 +10,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/yelp.mo
@@ -21,6 +22,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/yelp.mo
@@ -35,16 +37,19 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/yelp.mo
@@ -62,7 +67,9 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/yelp.mo
