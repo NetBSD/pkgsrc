@@ -1,0 +1,99 @@
+$NetBSD: patch-ac,v 1.1 2002/06/29 01:48:53 kristerw Exp $
+--- ux_audio_oss.c.orig	Wed Nov 22 07:31:17 2000
++++ ux_audio_oss.c	Sat Jun 29 03:25:37 2002
+@@ -86,12 +86,37 @@
+ 
+ static void play_sound(int volume, int repeats) {
+   struct sigaction sa;
++  int format = AFMT_U8;
++  int channels = 1;
+ 
+-  dsp_fd = open("/dev/dsp", O_WRONLY);
++  dsp_fd = open(SOUND_DEV, O_WRONLY);
+   if (dsp_fd < 0) {
+-    perror("/dev/dsp");
++    perror(SOUND_DEV);
+     _exit(1);
+   }
++
++	/* This section of code fixes the nasty problem of samples
++	 * being played with pops and scratches when used with a
++	 * non-Linux system implementing OSS sound.
++	*/
++  if (ioctl(dsp_fd, SNDCTL_DSP_SETFMT, &format) == -1) {
++    perror(SOUND_DEV);
++    exit(1);
++  }
++  if (format != AFMT_U8) {
++    fprintf(stderr, "bad sound format\n");
++    exit(1);
++  }
++  if (ioctl(dsp_fd, SNDCTL_DSP_CHANNELS, &channels) == -1) {
++    perror(SOUND_DEV);
++    exit(1);
++  }
++  if (channels != 1) {
++    fprintf(stderr, "bad channels\n");
++    exit(1);
++  }
++  /* End sound fix from Torbjorn Andersson */
++
+   ioctl(dsp_fd, SNDCTL_DSP_SPEED, &sample_rate);
+ 
+   if (volume != 255) {
+@@ -177,6 +202,7 @@
+   char *filename;
+   const char *basename, *dotpos;
+   int namelen;
++  int read_length;
+ 
+   if (sound_buffer != NULL && current_num == number)
+     return;
+@@ -211,27 +237,38 @@
+   fgetc(samples); fgetc(samples);
+   sound_length = fgetc(samples) << 8;
+   sound_length |= fgetc(samples);
++  sound_buffer = NULL;
+ 
++  if (sound_length > 0) {
+   sound_buffer = malloc(sound_length);
+-  if (! sound_buffer) {
++    if (!sound_buffer) {
+     perror("malloc");
+     return;
+   }
+-
+-  if (sound_length < 0 ||
+-      fread(sound_buffer, 1, sound_length, samples) < sound_length) {
+-    if (feof(samples))
+-      fprintf(stderr, "%s: premature EOF\n", filename);
+-    else {
++    read_length = fread(sound_buffer, 1, sound_length, samples);
++    if (read_length < sound_length) {
++      if (feof(samples)) {
++        /*
++         * One of the Sherlock samples trigger this for me, so let's make it
++         * a non-fatal error.
++         */
++        sound_buffer = realloc(sound_buffer, read_length);
++        if (! sound_buffer) {
++          perror("realloc");
++          return;
++        }
++        sound_length = read_length;
++      } else {
+       errno = ferror(samples);
+       perror(filename);
+-    }
+     free(sound_buffer);
+     sound_buffer = NULL;
+   }
+-
++    }
++  }
+   current_num = number;
+ }/* os_prepare_sample */
++
+ 
+ static void sigchld_handler(int signal) {
+   int status;
