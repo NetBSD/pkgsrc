@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2000/07/07 07:47:25 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2001/03/03 14:08:54 skrll Exp $
 
 --- configs/netbsd-g++-static.orig	Fri Feb 26 17:02:07 1999
-+++ configs/netbsd-g++-static	Thu Jun 15 12:37:34 2000
++++ configs/netbsd-g++-static
 @@ -1,5 +1,6 @@
  # Compiling
- SYSCONF_CXX		= g++
-+SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
+-SYSCONF_CXX		= g++
++SYSCONF_CXX		= c++
++SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile c++
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
@@ -25,7 +26,7 @@ $NetBSD: patch-aa,v 1.4 2000/07/07 07:47:25 skrll Exp $
  
  # Linking applications
 -SYSCONF_LINK		= g++
-+SYSCONF_LINK		= $(LIBTOOL) --mode=link g++
++SYSCONF_LINK		= $(LIBTOOL) --mode=link c++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
