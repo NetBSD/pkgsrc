@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/07 07:00:54 cjs Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/07 09:46:43 agc Exp $
 
 DISTNAME=	nProbe-source-1.3.1
 PKGNAME=	nprobe-1.3.1
@@ -16,6 +16,8 @@ WRKSRC=		${WRKDIR}/nProbe
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 ALL_TARGET=	nprobe
+
+INTERACTIVE_STAGE=	fetch
 
 # Uncomment this to make a demo version of nprobe.
 #CFLAGS+=	-DMAX_DEMO_FLOWS=1000 -DDEMO_MODE
