@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1 1999/02/25 17:08:34 sommerfe Exp $
+$NetBSD: patch-bb,v 1.2 1999/02/25 18:00:29 sommerfe Exp $
 
---- mh-utils.el.~1~	Thu Feb 25 01:31:26 1999
-+++ mh-utils.el	Thu Feb 25 11:21:45 1999
+--- lisp/mail/mh-utils.el.~1~	Thu Feb 25 01:31:26 1999
++++ lisp/mail/mh-utils.el	Thu Feb 25 11:21:45 1999
 @@ -38,12 +38,24 @@
  (defvar mh-lib nil
    "Directory containing the MH library.
