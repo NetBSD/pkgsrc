@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7428 2004/10/14 12:29:59 adam Exp $
+$NetBSD: CHANGES,v 1.7429 2004/10/14 13:44:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4711,3 +4711,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkhtml30 to 3.0.10nb2 [grant 2004-10-14]
 	Updated gaim to 1.0.1 [jmmv 2004-10-14]
 	Added xbomb-2.1a [adam 2004-10-14]
+	Updated mathomatic to 11.4b [minskim 2004-10-14]
