@@ -1,0 +1,4 @@
+Nessus is a free, open-sourced and easy-to-use security auditing
+tool for Linux, BSD and some other systems. It is multithreaded
+and plugin based, and has a nice X11 interface. The current version
+performs 180 security checks against the remote networks.
