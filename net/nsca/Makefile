@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:32 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/01 16:59:23 jmmv Exp $
 #
 
 DISTNAME=	nsca-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://netsaint.sourceforge.net/download/
 
@@ -13,11 +13,15 @@ COMMENT=	submit passive NetSaint checks results to another server
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
+
+EGDIR=		${PREFIX}/share/examples/ncsa
 
 do-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
 .for prg in nsca send_nsca
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${prg} ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/${prg}.cfg ${PREFIX}/etc/${prg}.cfg.sample
+	${INSTALL_DATA} ${WRKSRC}/${prg}.cfg ${EGDIR}
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nsca
 .for doc in Changelog README SECURITY
