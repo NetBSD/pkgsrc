@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2002/09/25 18:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.215 2002/10/01 18:11:56 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -184,11 +184,18 @@ SUBDIR+=	zope25
 SUBDIR+=	zope25-CMF
 SUBDIR+=	zope25-EasyImage
 SUBDIR+=	zope25-Formulator
+SUBDIR+=	zope25-Fortune
 SUBDIR+=	zope25-JPicture
+SUBDIR+=	zope25-KnowledgeKit
 SUBDIR+=	zope25-LocalFS
 SUBDIR+=	zope25-ParsedXML
 SUBDIR+=	zope25-Silva
+SUBDIR+=	zope25-Squishdot
+SUBDIR+=	zope25-TinyTablePlus
 SUBDIR+=	zope25-XMLWidgets
+SUBDIR+=	zope25-ZNavigator
 SUBDIR+=	zope25-ZPhotoSlides
+SUBDIR+=	zope25-ZWiki
+SUBDIR+=	zope25-Zippy
 
 .include "../mk/bsd.pkg.subdir.mk"
