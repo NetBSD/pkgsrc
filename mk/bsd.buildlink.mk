@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.25 2001/07/23 11:07:22 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.26 2001/07/24 11:47:28 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -129,8 +129,11 @@ _BUILDLINK_USE: .USE
 				else					\
 					${ECHO} "$${file} -> $${dest}" >> $${cookie}; \
 				fi;					\
+			else						\
+				${ECHO} "$${file}: not found" >> $${cookie}; \
 			fi;						\
 		done;							\
+		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
 # If a package uses only buildlink.mk files, then automatically set
