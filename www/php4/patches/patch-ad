@@ -1,8 +1,112 @@
-$NetBSD: patch-ad,v 1.12 2003/01/08 01:52:44 jlam Exp $
+$NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
 
---- configure.orig	Thu Sep  5 16:40:53 2002
-+++ configure
-@@ -5396,10 +5396,6 @@ EOF
+--- configure.orig	Thu Sep  5 19:40:53 2002
++++ configure	Sun Jan 12 09:17:58 2003
+@@ -3220,9 +3220,10 @@
+     { echo "configure: error: Please specify the path to the root of AOLserver using --with-aolserver=DIR" 1>&2; exit 1; }
+   fi
+   
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+   
+@@ -3772,9 +3773,10 @@
+   php_build_target=shared
+ 
+   
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+   echo "$ac_t""yes" 1>&6
+@@ -3951,9 +3953,10 @@
+ 	*** Pike include dir(s) used: $PIKE_INCLUDE_DIR
+ 	*** Pike version:             $PIKE_VERSION"
+         
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+ 
+@@ -4304,9 +4307,10 @@
+ 	fi
+ 	test -f "$ZEUSPATH/web/include/httpext.h" || { echo "configure: error: Unable to find httpext.h in $ZEUSPATH/web/include" 1>&2; exit 1; }
+ 	
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+ 	cat >> confdefs.h <<\EOF
+@@ -4424,9 +4428,10 @@
+   fi
+ 
+   
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+   cat >> confdefs.h <<\EOF
+@@ -4454,9 +4459,10 @@
+ 		{ echo "configure: error: You did not specify a directory" 1>&2; exit 1; }
+ 	fi
+ 	
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+ 	PHTTPD_DIR=$withval
+@@ -4565,9 +4571,10 @@
+ 	fi
+ 	test -f "$PI3PATH/PiAPI/PiAPI.h" || { echo "configure: error: Unable to find PiAPI.h in $PI3PATH/PiAPI" 1>&2; exit 1; }
+ 	
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+ 	cat >> confdefs.h <<\EOF
+@@ -4855,9 +4862,10 @@
+   php_build_target=shared
+ 
+     
+-  enable_experimental_zts=yes
+   if test "$pthreads_working" != "yes"; then
+-    { echo "configure: error: ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." 1>&2; exit 1; }
++      enable_experimental_zts=no
++  else
++      enable_experimental_zts=yes
+   fi
+ 
+     echo "$ac_t""yes" 1>&6
+@@ -5396,10 +5404,6 @@
  
    fi
  
@@ -13,7 +117,7 @@ $NetBSD: patch-ad,v 1.12 2003/01/08 01:52:44 jlam Exp $
  INCLUDES="$INCLUDES -I\$(top_builddir)/Zend"
  test -d /usr/ucblib && 
    if test "/usr/ucblib" != "/usr/lib"; then
-@@ -26847,19 +26843,10 @@ EOF
+@@ -26847,19 +26851,10 @@
  
  
    else
@@ -33,7 +137,7 @@ $NetBSD: patch-ad,v 1.12 2003/01/08 01:52:44 jlam Exp $
    echo "$ac_t""no" 1>&6
  
  fi
-@@ -67729,8 +67716,8 @@ program|static)
+@@ -67729,8 +67724,8 @@
      if test "$lib_build_shared" != "yes"; then
          enable_shared=no
      fi
@@ -44,7 +148,7 @@ $NetBSD: patch-ad,v 1.12 2003/01/08 01:52:44 jlam Exp $
  ;;
  shared)
      enable_static=no
-@@ -72831,7 +72818,7 @@ esac
+@@ -72831,7 +72826,7 @@
  
  TSRM_LIB='TSRM/libtsrm.la'
  TSRM_DIR=TSRM
@@ -53,7 +157,7 @@ $NetBSD: patch-ad,v 1.12 2003/01/08 01:52:44 jlam Exp $
  
  if test "$ZEND_EXPERIMENTAL_ZTS" = "yes"; then
    cat >> confdefs.h <<\EOF
-@@ -73625,7 +73612,7 @@ fi
+@@ -73625,7 +73620,7 @@
  
  if test "$enable_debug" != "yes"; then
    
