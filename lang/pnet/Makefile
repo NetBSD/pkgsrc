@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/14 08:03:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/14 08:22:45 xtraeme Exp $
 
 DISTNAME=	pnet-0.6.4
 CATEGORIES=	lang
@@ -21,6 +21,8 @@ USE_BUILDLINK3=	yes
 INFO_FILES=	pnettools.info
 
 PTHREAD_OPTS+=	require native
+
+CONFIGURE_ARGS+=	--enable-threads=posix
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
