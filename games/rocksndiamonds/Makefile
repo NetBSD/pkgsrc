@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/03 17:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/05 01:02:12 wiz Exp $
 #
 
 DISTNAME=		rocksndiamonds-1.4.0
@@ -14,13 +14,13 @@ USE_GMAKE=		YES
 SCORE_PATH=		/var/games/rocksndiamonds
 
 do-install:
-	${INSTALL_PROGRAM} -o ${BINOWN} -g games -m 2755 \
+	${INSTALL_PROGRAM} -o games -g games -m 2755 \
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
 	${MKDIR} ${PREFIX}/share/rocksndiamonds
 	cd ${WRKSRC} && ${PAX} -r -w sounds graphics levels \
 		${PREFIX}/share/rocksndiamonds/
-	${CHOWN} -R ${BINOWN}:games ${PREFIX}/share/rocksndiamonds
+	${CHOWN} -R games:games ${PREFIX}/share/rocksndiamonds
 	${MKDIR} ${SCORE_PATH}/scores
 	${CHMOD} 755 ${SCORE_PATH}
 	${CHMOD} 775 ${SCORE_PATH}/scores
@@ -35,6 +35,6 @@ do-install:
 		${MKDIR} ${SCORE_PATH}/scores/${directory} \
 		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
 .endfor
-	${CHOWN} -R ${BINOWN}:games ${SCORE_PATH}
+	${CHOWN} -R games:games ${SCORE_PATH}
 
 .include "../../mk/bsd.pkg.mk"
