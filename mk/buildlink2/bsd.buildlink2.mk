@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.101 2003/12/03 18:38:04 erh Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.102 2003/12/12 04:26:36 xtraeme Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -75,6 +75,7 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 #
 _BLNK_CACHE_ALL=	# empty
 _BLNK_CACHE_ALL+=	Darwin-6*-*
+_BLNK_CACHE_ALL+=	FreeBSD-*-*
 _BLNK_CACHE_ALL+=	IRIX-*-*
 _BLNK_CACHE_ALL+=	NetBSD-1.[5-9]*-*
 _BLNK_CACHE_ALL+=	SunOS-[25].[89]-*
