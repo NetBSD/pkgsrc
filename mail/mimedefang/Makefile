@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/11 14:12:49 markd Exp $
 
-DISTNAME=		mimedefang-2.24
+DISTNAME=		mimedefang-2.30
 CATEGORIES=		mail
 MASTER_SITES=		http://www.roaringpenguin.com/mimedefang/
 
@@ -60,11 +60,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/md-mx-ctrl ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang-multiplexor ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/watch-mimedefang ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${PREFIX}/man/man7
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${EGDIR}/mimedefang-filter
