@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/12 01:52:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/12 09:40:38 wiz Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
@@ -13,21 +13,21 @@ COMMENT=	Sybase SQL shell
 ALL_TARGET=		sqsh
 INSTALL_TARGET=		install install.man
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
-CONFIGURE_ENV+=		SYBASE="${BUILDLINK_DIR}/${SYBASE}"
+CONFIGURE_ENV+=		SYBASE="${BUILDLINK_PREFIX.freetds}/${SYBASE}"
 
 SYBASE=			freetds
-LDFLAGS+=		-Wl,-R${LOCALBASE}/${SYBASE}/lib
+LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.freetds}/${SYBASE}/lib
 
-CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_DIR}/include"
-CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_DIR}/lib"
+CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_PREFIX.readline}/include"
+CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_PREFIX.readline}/lib"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sqsh ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/sqsh.1 ${PREFIX}/man/man1/sqsh.1
 
-.include "../../databases/freetds/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
+.include "../../databases/freetds/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
