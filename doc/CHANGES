@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3575 2003/09/29 12:54:26 recht Exp $
+$NetBSD: CHANGES,v 1.3576 2003/09/29 17:09:31 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rdiff-backup to 0.12.5 [lukem 2003-09-29]
 	Updated bittorrent to 3.3 [hubertf 2003-09-29]
 	Updated roundup to 0.6.2 [recht 2003-09-29]
+	Updated openldap to 2.1.22nb1 [salo 2003-09-29]
