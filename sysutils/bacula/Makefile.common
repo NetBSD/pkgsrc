@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/12/18 20:58:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/01/15 08:33:23 jmmv Exp $
 #
 
 DISTNAME=		bacula-1.36.0
@@ -76,5 +76,4 @@ pre-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
