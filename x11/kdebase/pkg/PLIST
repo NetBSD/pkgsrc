@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/12/29 03:58:19 hubertf Exp $
 bin/kfmwarn
 bin/kfmclient
 bin/kioslave
@@ -341,7 +342,6 @@ share/mimelnk/application/x-tex-pk.kdelnk
 share/mimelnk/application/pdf.kdelnk
 share/mimelnk/application/x-tar.kdelnk
 share/mimelnk/application/x-trash.kdelnk
-share/mimelnk/application/x-zip.kdelnk
 share/mimelnk/application/x-core.kdelnk
 share/mimelnk/application/x-font.kdelnk
 share/mimelnk/application/x-java.kdelnk
@@ -661,35 +661,6 @@ cgi-bin/helpindex
 @dirrm share/mimelnk/audio
 @dirrm share/mimelnk/application
 @dirrm share/mimelnk
-@dirrm share/locale/sv/LC_MESSAGES
-@dirrm share/locale/sv
-@dirrm share/locale/ru/LC_MESSAGES
-@dirrm share/locale/ru
-@dirrm share/locale/pt/LC_MESSAGES
-@dirrm share/locale/pt
-@dirrm share/locale/pl/LC_MESSAGES
-@dirrm share/locale/pl
-@dirrm share/locale/nl/LC_MESSAGES
-@dirrm share/locale/nl
-@dirrm share/locale/it/LC_MESSAGES
-@dirrm share/locale/it
-@dirrm share/locale/hu/LC_MESSAGES
-@dirrm share/locale/hu
-@dirrm share/locale/fr/LC_MESSAGES
-@dirrm share/locale/fr
-@dirrm share/locale/fi/LC_MESSAGES
-@dirrm share/locale/fi
-@dirrm share/locale/es/LC_MESSAGES
-@dirrm share/locale/es
-@dirrm share/locale/el/LC_MESSAGES
-@dirrm share/locale/el
-@dirrm share/locale/de/LC_MESSAGES
-@dirrm share/locale/de
-@dirrm share/locale/da/LC_MESSAGES
-@dirrm share/locale/da
-@dirrm share/locale/cs/LC_MESSAGES
-@dirrm share/locale/cs
-@dirrm share/locale
 @dirrm share/icons/mini
 @dirrm share/icons
 @dirrm share/doc/HTML/en/kwm
