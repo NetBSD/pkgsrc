@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1999/10/07 17:41:55 tron Exp $
+# $NetBSD: Makefile,v 1.34 1999/12/06 21:00:12 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -21,6 +21,6 @@ CONFIGURE_ARGS=	"--with-qt-dir=${PREFIX}" \
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-                all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
+		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
