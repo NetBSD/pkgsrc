@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/17 00:43:10 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/26 14:43:16 hubertf Exp $
 sbin/silcd
 share/doc/silcd/CHANGES
 share/doc/silcd/COPYING
@@ -9,6 +9,7 @@ share/doc/silcd/INSTALL
 share/doc/silcd/README
 share/doc/silcd/TODO
 share/doc/silcd/silcd.conf.default
+share/doc/silcd/silcd.default
 share/doc/silcd/motd.txt.default
 share/doc/silcd/examples/README
 share/doc/silcd/examples/cell1_backup.conf
