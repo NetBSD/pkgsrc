@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/05/21 09:37:07 mrg Exp $
+# $NetBSD: Makefile,v 1.11 1999/09/27 17:52:15 fredb Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -37,9 +37,6 @@ ENABLE_TARGETS+=	alpha-netbsd \
 # which we use for the `sparc-netbsdelf' target
 #ENABLE_TARGETS+=	sparc64-elf
 
-post-extract:
-	@${RM} -rf ${WRKSRC}/gas
-
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
 	${MKDIR} ${BINDIR} ${PREFIX}/lib/ldscripts
@@ -65,7 +62,7 @@ do-install:
 ENABLE_TARGETS_LIST!=	${ECHO} "${ENABLE_TARGETS}" | ${SED} "s/[ 	][ 	]*/,/g;s/^,*//"
 
 .if defined(EXTRACT_USING_PAX)
-EXTRACT_ELEMENTS=	'-s|${FILESDIR}/exclude||'
+EXTRACT_ELEMENTS=	-c `cat ${FILESDIR}/exclude`
 .else
 EXTRACT_ELEMENTS=	-X ${FILESDIR}/exclude
 .endif
