@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2004/09/28 22:58:49 rh Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/12/20 22:44:31 xtraeme Exp $
 
-DISTNAME=		install_flash_player_6_${DISTUNAME}
+DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
 CATEGORIES=		www graphics
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
@@ -16,9 +16,9 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		6.0r79
+FLASH_VERS=		7.0r25
 DISTUNAME=		linux
-WRKNAME=		install_flash_player_6_${DISTUNAME}
+WRKNAME=		install_flash_player_7_${DISTUNAME}
 
 RESTRICTED=             "Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
