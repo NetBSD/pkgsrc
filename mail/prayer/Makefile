@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/12/28 02:47:45 reed Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/09 00:07:46 schmonz Exp $
 #
 
-DISTNAME=	prayer-1.0.8
-PKGREVISION=	5
+DISTNAME=	prayer-1.0.12
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -10,8 +9,8 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 
-USE_BUILDLINK3=	YES
-USE_PKGINSTALL=	YES
+USE_BUILDLINK3=	yes
+USE_PKGINSTALL=	yes
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
 PRAYER_USER=	prayer
@@ -29,14 +28,13 @@ PKG_SYSCONFSUBDIR=	prayer
 EGDIR=			${PREFIX}/share/examples/prayer
 
 RCD_SCRIPTS=		prayer
-RCD_SCRIPT_SRC.prayer=	${FILESDIR}/prayer.rc
 
 CONF_FILES=	${EGDIR}/prayer.cf ${PKG_SYSCONFDIR}/prayer.cf
 CONF_FILES+=	${EGDIR}/prayer-accountd.cf ${PKG_SYSCONFDIR}/prayer-accountd.cf
 CONF_FILES+=	${EGDIR}/motd.html ${PKG_SYSCONFDIR}/motd.html
 CONF_FILES+=	${EGDIR}/welcome.html ${PKG_SYSCONFDIR}/welcome.html
 
-VAR_PREFIX=	/var/spool/prayer
+VAR_PREFIX=	${VARBASE}/spool/prayer
 
 OWN_DIRS+=	${EGDIR}
 OWN_DIRS_PERMS+=${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
