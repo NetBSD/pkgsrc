@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/05/12 10:16:48 abs Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/05 22:54:10 wiz Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -14,7 +14,7 @@ COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 BUILDLINK_DEPENDS.gdbm=	gdbm>=1.8.0
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -28,9 +28,9 @@ TEXINFO_PATTERNS+=	Makedefs.in
 
 PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
-.include "../../databases/gdbm/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/gmp/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gmp/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
