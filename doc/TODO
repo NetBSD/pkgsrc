@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.581 2003/05/24 11:31:16 martin Exp $
+$NetBSD: TODO,v 1.582 2003/05/24 14:43:36 salo Exp $
 
 Suggested new packages
 ======================
@@ -70,7 +70,6 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abcde-2.1.0 [pkg/20633]
 	o abcde-2.1.4
-	o amaya-8.0 [pkg/21312]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
