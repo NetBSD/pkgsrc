@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/07 17:41:55 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/08 23:17:11 bad Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
@@ -8,7 +8,6 @@ MAINTAINER=	packages@netbsd.org
 
 MIRROR_DISTFILE=	no
 NO_CONFIGURE=		yes
-NO_PATCH=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 .if exists(/usr/sbin/mailwrapper)
