@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/17 23:32:34 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:52:30 wiz Exp $
 
-SHA1 (ap-bandwidth-2.0.5/mod_bandwidth.c) = 8578412656c630d87d36df28a5ce858201ea435c
-Size (ap-bandwidth-2.0.5/mod_bandwidth.c) = 43630 bytes
+SHA1 (ap-bandwidth-2.0.6/mod_bandwidth.c) = 96d4fb5a68bc56a310979fe68c322445f9f4fe56
+RMD160 (ap-bandwidth-2.0.6/mod_bandwidth.c) = e093a8a5de89a91d523bb0702e21c43046d5e48c
+Size (ap-bandwidth-2.0.6/mod_bandwidth.c) = 43653 bytes
