@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/18 01:50:46 hubertf Exp $
+
+--- autoconf/makeinfo.in.orig	Sat Aug 28 05:27:37 1999
++++ autoconf/makeinfo.in
+@@ -18,7 +18,7 @@
+ 		  $(PROFILE) -D__USE_FIXED_PROTOTYPES__ -D_GNU_SOURCE
+ CFLAGS_FOR_GCC	= -Wall -fstrict-prototypes
+ CFLAGS		= $(DEFINES) @gcc_cflags@ @CFLAGS@
+-LIBS		= @LIBS@ $(EFENCE)
++LIBS		= @LIBS@ -Wl,-R/usr/pkg/lib -L/usr/pkg/lib $(EFENCE)
+ SRCDIR		= src
+ 
+ #------------------- end user configurable section ------------------------#
+@@ -68,11 +68,7 @@
+ 	$(INSTALL) -s pdmenu $(INSTALL_PREFIX)/$(BINDIR)
+ 	$(INSTALL) doc/pdmenu.man $(INSTALL_PREFIX)/$(MANDIR)/man1/pdmenu.1 -m 0644
+ 	$(INSTALL) doc/pdmenurc.man $(INSTALL_PREFIX)/$(MANDIR)/man5/pdmenurc.5 -m 0644
+-	if [ -e $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc ]; then \
+-		echo "Backing up $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc to $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc.old .." ; \
+-		cp $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc.old ; \
+-	fi
+-	$(INSTALL) examples/pdmenurc $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc -m 0644
++	$(INSTALL) examples/pdmenurc $(INSTALL_PREFIX)/$(SYSCONFDIR)/pdmenurc.sample -m 0644
+ 	$(INSTALL) examples/showdir.pl $(INSTALL_PREFIX)/$(LIBDIR)
+ 	cd $(INSTALL_PREFIX)/$(LIBDIR) && $(LN_S) -f showdir.pl editdir.pl
+ 
