@@ -1,0 +1,12 @@
+diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	Sat Jun 22 06:40:13 2002
++++ ./nsprpub/pr/src/pthreads/ptio.c	Thu Sep 12 00:19:49 2002
+@@ -192,7 +192,7 @@
+ #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
+     || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
+     || defined(NTO) || defined(OPENBSD) || defined(DARWIN) \
+-    || defined(UNIXWARE)
++    || defined(UNIXWARE) || defined(NETBSD)
+ #define _PRSockOptVal_t void *
+ #else
+ #error "Cannot determine architecture"
