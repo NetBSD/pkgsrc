@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/07/19 00:08:41 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:27 wiz Exp $
 
 SHA1 (libapache-mod-auth-mysql_4.3.1.tar.gz) = c5563028ed6574fd087944ac0507009dfc14b749
+RMD160 (libapache-mod-auth-mysql_4.3.1.tar.gz) = d64278aa11030369071f586ff2ef60becf43c062
 Size (libapache-mod-auth-mysql_4.3.1.tar.gz) = 56247 bytes
 SHA1 (patch-aa) = c18f857317b5838c955ddfea501961e0e2a88e76
 SHA1 (patch-ab) = 0afe885fc1d1b5461b0423eef347fd72511be907

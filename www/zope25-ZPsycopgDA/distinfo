@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/07/22 18:12:21 drochner Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:08:42 wiz Exp $
 
 SHA1 (zope/psycopg-1.1.14.tar.gz) = dc941bf9e0f5145b5077bc53f3ed3f478548262c
+RMD160 (zope/psycopg-1.1.14.tar.gz) = 1125176a6bccae28d0259d27bc87056d4ec39b73
 Size (zope/psycopg-1.1.14.tar.gz) = 252001 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/12/05 15:41:16 he Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:08:35 wiz Exp $
 
 SHA1 (CGI-Application-3.31.tar.gz) = df63c94cacdf030dc4fd65a1837ce69630cda5e3
+RMD160 (CGI-Application-3.31.tar.gz) = 5dcdaf6eafbecef3b1136a2d1ad7221e2b155ded
 Size (CGI-Application-3.31.tar.gz) = 47517 bytes

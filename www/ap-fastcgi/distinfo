@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/10/28 21:01:50 cube Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 14:08:27 wiz Exp $
 
 SHA1 (mod_fastcgi-2.4.2.tar.gz) = a56be62a3f08262ae187989f5dacb3464a030e2e
+RMD160 (mod_fastcgi-2.4.2.tar.gz) = 83c01567bb9a6d39345573137408615260972e1e
 Size (mod_fastcgi-2.4.2.tar.gz) = 98295 bytes
 SHA1 (patch-aa) = a0f9456c2a0fe2791125f376a998940f4e4655a6
 SHA1 (patch-ab) = 257d7e2b65fedd630e85acfb77bb9b6ddd21c6bf

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/10 02:34:54 jschauma Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:30 wiz Exp $
 
 SHA1 (ganglia-3.0.0.tar.gz) = e669aa828e10a5f71e90c8226ba41566b5fb9e42
+RMD160 (ganglia-3.0.0.tar.gz) = 275223015556b7a0b32c1a2b2932a29061f3d847
 Size (ganglia-3.0.0.tar.gz) = 3389093 bytes
 SHA1 (patch-aa) = 8f16c03a3f6c4234e2fbb742f54f748ff18e52b4
 SHA1 (patch-ab) = e78f35ea283860b345db4a4247b28898034cd7fd
