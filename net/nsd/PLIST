@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/28 16:05:50 itojun Exp $
-sbin/nsd
-sbin/nsd-notify
-sbin/nsdc
-sbin/zonec
-man/man8/nsd.8
-man/man8/nsdc.8
-man/man8/zonec.8

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/26 19:38:05 jlam Exp $
-bin/aalib-x11-config
-include/aalib-x11.h
-lib/libaa-x11.a
-lib/libaa-x11.la
-lib/libaa-x11.so
-lib/libaa-x11.so.1
-lib/libaa-x11.so.1.4

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:59 zuntum Exp $
-lib/tcl/TclExpat-1.1/tclexpat.so
-lib/tcl/TclExpat-1.1/pkgIndex.tcl
-share/doc/tcl/TclExpat/README
-@dirrm lib/tcl/TclExpat-1.1
-@dirrm share/doc/tcl/TclExpat

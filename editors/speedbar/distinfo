@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/11 08:51:10 uebayasi Exp $
-
-SHA1 (speedbar-0.14beta4.tar.gz) = 58b246bab82d475c452ce3dea5a1d404ed1eca1f
-Size (speedbar-0.14beta4.tar.gz) = 114994 bytes
-SHA1 (patch-aa) = 0dfc29d15eaf43c13a942a8e40de2a8da6aeed16

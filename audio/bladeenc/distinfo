@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/12/14 00:39:58 jschauma Exp $
-
-SHA1 (bladeenc-0.94.2-src-stable.tar.gz) = 72f9b0600cbd2a19175ccb0cd8aa8e9c194bc87c
-Size (bladeenc-0.94.2-src-stable.tar.gz) = 142949 bytes
-SHA1 (patch-aa) = 6560446ae63234ad136ee869f25d0317c88d3e2d

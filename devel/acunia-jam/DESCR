@@ -1,6 +1,0 @@
-Jam/MR is a build utility like make(1).  It has its own expressive
-language which allows for portable Jamfiles capable of building
-large projects with multiple concurrent processes (although by
-default it uses a single process).
-
-This is a slightly modified version of jam from the guys at Acunia.

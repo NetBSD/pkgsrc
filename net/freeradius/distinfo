@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/03/12 05:56:49 jmc Exp $
-
-SHA1 (freeradius-0.7.tar.gz) = 8f44f1f9fedf69b71aa4aed9c0b7222d012ee8d6
-Size (freeradius-0.7.tar.gz) = 1659035 bytes
-SHA1 (patch-aa) = dc2c8c62ed2d11ebf682f7d9fcbaf7a410cbce0d
-SHA1 (patch-ab) = 26092b974a27151d69ab87ae7ba42e67aeef448b
-SHA1 (patch-ac) = 1abcc1f5282bface89cd71b2854218d2b60fdc97
-SHA1 (patch-ad) = 8317bd7e8fa2c9efbb89a89140f019de6effa0b4

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/10/22 13:42:28 zuntum Exp $
-
-SHA1 (daemontools-0.70.tar.gz) = e4af3b5e6fa5a85fb86fe8d80248421f0f8765ff
-Size (daemontools-0.70.tar.gz) = 36144 bytes
-SHA1 (daemontools-0.70-man-20001116.tar.gz) = 08fd1d5c1af4b620cc80116470468b2f92130d6c
-Size (daemontools-0.70-man-20001116.tar.gz) = 8279 bytes

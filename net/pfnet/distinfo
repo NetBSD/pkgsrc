@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:29 wiz Exp $
-
-SHA1 (fnet.pl-1.4.tar.gz) = 7c26e3a1a4115eacd2bc3bef8d09486c156abd20
-Size (fnet.pl-1.4.tar.gz) = 9548 bytes
-SHA1 (patch-aa) = 24310d7982662fb019ccbb7bf1371fe0f6fc7729

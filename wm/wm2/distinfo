@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/08/25 21:51:38 jlam Exp $
-
-SHA1 (wm2-4.tar.gz) = dd959e72eedca113b372ddf67b95260e25226a91
-Size (wm2-4.tar.gz) = 32807 bytes
-SHA1 (patch-aa) = 3abf330bd012205dbb6eeff06b0be28fe27835d3
-SHA1 (patch-ab) = 047f72483a5f7d250742a5d53aa8a48ca123558e
-SHA1 (patch-ac) = a944150c5e3b6fb82e7cb630e8289a91dcbf4639

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST-common,v 1.2 2003/03/02 20:18:50 jschauma Exp $
-bin/kinput2
-lib/X11/app-defaults/Kinput2
-${IMAKE_MAN_DIR}/kinput2.${IMAKE_MANNEWSUFFIX}

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:16 zuntum Exp $
-include/ghttp.h
-include/ghttp_constants.h
-lib/ghttpConf.sh
-lib/libghttp.a
-lib/libghttp.la
-lib/libghttp.so
-lib/libghttp.so.1
-lib/libghttp.so.1.0

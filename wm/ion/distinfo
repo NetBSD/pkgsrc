@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/03/07 01:25:09 salo Exp $
-
-SHA1 (ion-20020207.tar.gz) = 68c893de4843613138d09579da676c74526b7c4a
-Size (ion-20020207.tar.gz) = 157649 bytes
-SHA1 (patch-aa) = ae5fd844f89bf11d64f1f977219d70e8f868289c
-SHA1 (patch-ab) = fcebbfb40b218442e3ad9788f557c1b71d3a7de6
-SHA1 (patch-ac) = 302f20d54304164612d04636642a88d0565da75d
-SHA1 (patch-ad) = 0d63137de4e39cddad62e362ac6520ee5de6357f

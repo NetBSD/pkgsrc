@@ -1,7 +1,0 @@
-The Test::Cmd module is a Perl class for writing portable tests of
-external commands or scripts. Its key features include portable interfaces
-for file system interaction, including management and cleanup of one or
-more temporary working directories. This makes it extremely well-suited
-for testing programs or systems that rely on specific file system
-characteristics (time stamps, permissions, directory structures), yet which
-must operate on multiple operating systems.

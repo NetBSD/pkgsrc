@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:42 wiz Exp $
-
-SHA1 (xscavenger-140.tgz) = 173d57faf1485f4261bc1f002d5d80167ca6b4d8
-Size (xscavenger-140.tgz) = 153547 bytes
-SHA1 (patch-aa) = 387e4f8fc87f5cbc939d28f972b769506fe8d048
-SHA1 (patch-ab) = 57ab1655f7e748fc59d4f474393426a06ca06d36

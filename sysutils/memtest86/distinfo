@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/03/07 15:05:23 wiz Exp $
-
-SHA1 (memtest86-2.9.tar.gz) = fdddc9549e429cbef55e0d88f0e0807f98359b9b
-Size (memtest86-2.9.tar.gz) = 94658 bytes
-SHA1 (patch-aa) = 871b7ea0ed70c8a1754f03bf6458c44e88bae353
-SHA1 (patch-ab) = 297a1b9bdf2c7c1fa38fb69f7f185b3c8f800754

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:04 agc Exp $
-
-SHA1 (hfsutils-3.2.6.tar.gz) = 6d71dfb2c93c0d8082972d39f3f75ae53a438d5d
-Size (hfsutils-3.2.6.tar.gz) = 207697 bytes
-SHA1 (patch-aa) = bcd686f431220aafb994b4870974ae3157287b46

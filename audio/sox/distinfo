@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/25 09:14:06 wiz Exp $
-
-SHA1 (sox-12.17.4.tar.gz) = d6fba1e40b20f73334917d4aaab113b6066283cd
-Size (sox-12.17.4.tar.gz) = 417497 bytes
-SHA1 (patch-ab) = 0632e13e99f358e1a54a2a1d64f39aacf11d4a0f

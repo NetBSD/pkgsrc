@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.rsaref,v 1.1 2001/11/01 01:22:32 zuntum Exp $
-lib/libRSAglue.a

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:09 wiz Exp $
-
-SHA1 (arpd.tar.gz) = c23ea6f7fa1c442331bcf120f32d41f789ee369a
-Size (arpd.tar.gz) = 23400 bytes
-SHA1 (patch-aa) = ba2501cf1e3aae38836df4f193ec2e642e146aae
-SHA1 (patch-ab) = b0d53d1e32a7fe260a22f7d8018c13cccfaa7571
-SHA1 (patch-ac) = 565f484cc246984aeeb6f414882aa2ccc6e33872

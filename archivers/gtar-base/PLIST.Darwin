@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2002/12/22 01:34:38 wiz Exp $
-bin/${GNU_PROGRAM_PREFIX}tar
-man/man1/${GNU_PROGRAM_PREFIX}tar.1

@@ -1,7 +1,0 @@
-mytop was inspired by the system monitoring tool top. I routinely use top on
-Linux, FreeBSD, and Solaris. You are likely to notice features from each of
-them here.
-
-mytop will connect to a MySQL server and periodically run the SHOW PROCESSLIST
-and SHOW STATUS commands and attempt to summarize the information from them
-in a useful format.

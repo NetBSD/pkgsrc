@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:30 zuntum Exp $
-bin/ascii
-man/man1/ascii.1
-share/examples/ascii/ascii.cgi
-@dirrm share/examples/ascii

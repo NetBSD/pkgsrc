@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/09/14 18:47:16 jlam Exp $
-
-SHA1 (freeze-2.5.tar.gz) = 07b94508fcd95d35236a4090257aa402fd623812
-Size (freeze-2.5.tar.gz) = 36402 bytes
-SHA1 (patch-aa) = 659c035cddef121a2e971f82593f67a9a5bc100f
-SHA1 (patch-ab) = ee451389539442c392830c7da252ac836d4a5adf
-SHA1 (patch-ac) = 17b2b3b5514f7dea67ecfe969d8f6e988b5fad40

@@ -1,9 +1,0 @@
-$NetBSD$
-
---- Lib/shape.cc.orig	Wed Jun  7 19:11:08 2000
-+++ Lib/shape.cc
-@@ -24,2 +24,4 @@
- 
-+#include <math.h>
-+
- #ifdef RCSID

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:08 zuntum Exp $
-sbin/ntop
-man/man8/ntop.8

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/10/13 11:50:09 wiz Exp $
-
-SHA1 (IglooFTP-0.6.1.src.tar.gz) = ab56bc6c15dc81525b8e987ae5fc15e562f92eed
-Size (IglooFTP-0.6.1.src.tar.gz) = 300553 bytes
-SHA1 (patch-aa) = 8016e43c95b53c38a39acaeeac3c72876fc9004a
-SHA1 (patch-ab) = 7f3b7c383099e4889618f6dafcc76e320278aec9

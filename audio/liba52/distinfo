@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/08/30 23:43:07 wiz Exp $
-
-SHA1 (a52dec-0.7.4.tar.gz) = 79b33bd8d89dad7436f85b9154ad35667aa37321
-Size (a52dec-0.7.4.tar.gz) = 241507 bytes
-SHA1 (patch-aa) = f31a0e354ab7f1111c03196bf1a11d7caab0f1e9
-SHA1 (patch-ab) = 7673335451c9e58853cd0a543073dac2607114f8
-SHA1 (patch-ac) = eb8ef17e2fdb20e34a32c629415b77b123c5a625
-SHA1 (patch-ad) = 2186a4ac36cf44f021fbc1a4d8e7d31b96b71531

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/18 16:19:03 wiz Exp $
-lib/X11/fonts/local/fonts.alias
-lib/X11/fonts/local/kc8x15.pcf.gz
-lib/X11/fonts/local/kc12x24.pcf.gz
-lib/X11/fonts/local/kc15f.pcf.gz
-lib/X11/fonts/local/kc24f.pcf.gz
-@exec %D/bin/mkfontdir %D/lib/X11/fonts/local
-@unexec %D/bin/mkfontdir %D/lib/X11/fonts/local

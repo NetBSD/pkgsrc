@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/07/19 04:18:49 mycroft Exp $
-
-SHA1 (cdd-1.0nb3.tar.gz) = 333323444571f463501c206f9d9fd7dde09d12a6
-Size (cdd-1.0nb3.tar.gz) = 48699 bytes
-SHA1 (patch-aa) = c05087f9e00eee12f3fca7d326e1ecf261802f25
-SHA1 (patch-ab) = e126697b7ecc8a1d03fcc9db9d12d5667e3b787c
-SHA1 (patch-ac) = 39c609ac477981948f5f6822e188b52cd87d6489
-SHA1 (patch-ad) = 366d863c01f38056ef636a1f5e14632236d7fb77
-SHA1 (patch-ae) = fe2de6aa637a2832c066eb38f02fb9d438c1b78b

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:23 wiz Exp $
-
-SHA1 (finalbattle.0.0.tar.gz) = 36942d8bb0bd79b04cff52c085a0d1406973b965
-Size (finalbattle.0.0.tar.gz) = 86579 bytes
-SHA1 (patch-aa) = b1ebaa339a2697d41271b17d9d3c7e6b5b02512f
-SHA1 (patch-ab) = cad883f747d86f8526a9d1a9d6138a4f75e9d0ca

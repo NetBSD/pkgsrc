@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/27 22:32:16 salo Exp $
-lib/silc/modules/libfe_icb.la
-lib/silc/modules/libfe_icb.so
-lib/silc/modules/libicb_core.la
-lib/silc/modules/libicb_core.so
-share/doc/silc/README.icb

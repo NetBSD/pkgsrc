@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2003/05/31 07:24:39 uebayasi Exp $
-
-SHA1 (Canna36p3.tar.gz) = 183c4e160babd49d5d8c542fbf06db980e3965da
-Size (Canna36p3.tar.gz) = 1441598 bytes
-SHA1 (patch-aa) = 6f5bf45212cf1127cb8b2f8f0c5eb0c778e1a908
-SHA1 (patch-ab) = b203ad0cb1285ffed0037e0eced3ae298bec5eb9
-SHA1 (patch-ac) = 8f9f999eb8abd9c8e3d3e5c66cf55150ce700919
-SHA1 (patch-ad) = d4b5720c206f81124e0d53e71590de86f66c524c
-SHA1 (patch-af) = 2700fc8395895176c16562af66ea5bf0b13d4e10

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:11 zuntum Exp $
-bin/fort77
-man/man1/fort77.1

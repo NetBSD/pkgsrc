@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/26 17:22:48 cjep Exp $
-
-SHA1 (rox/Wrappers-1.0.2.tgz) = 2178bcc56eebb54b3033bf690b187c7cc0cd49d2
-Size (rox/Wrappers-1.0.2.tgz) = 68517 bytes
-SHA1 (patch-aa) = 78b70a1bab2b3778ac6fbd16eaea8d58e36e4df8

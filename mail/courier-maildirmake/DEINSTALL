@@ -1,6 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2002/01/23 02:21:20 jlam Exp $
-
-# Additional files that are may be created for courier-maildirmake.
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/autoresponsesquota"
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/maildirfilterconfig"
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/maildirshared"

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/23 08:46:06 jlam Exp $
-
-SHA1 (XML-Xerces-1.7.0-3.tar.gz) = dc86f655be431a0900dbb632bb86d59118bf54ea
-Size (XML-Xerces-1.7.0-3.tar.gz) = 148103 bytes
-SHA1 (patch-aa) = ad9dbf00b84cdad0ea5357ecb2261b65a0f4026c

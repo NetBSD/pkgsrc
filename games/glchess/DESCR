@@ -1,4 +1,0 @@
-  glChess is a 3D OpenGL based chess game using a GTK interface.  The aim
-is to be compatible with chess servers so you can use a 3D board rather
-than a 2D one.  Currently human vs. human and human vs. engine is possible.
-Possible chess engines to use are gnuchess and crafty.

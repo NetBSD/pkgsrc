@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/07 11:53:04 rh Exp $
-
-SHA1 (nslint-2.0.2.tar.gz) = 2dff2a10ed28140fb3aa2fcdb36889fcdd498d2f
-Size (nslint-2.0.2.tar.gz) = 59421 bytes
-SHA1 (patch-aa) = 782710a802e00a7e0beb5040ca6b7af53c816aa1
-SHA1 (patch-ab) = 9ca50cc941e4122a5477cd61e132f9351699e8af

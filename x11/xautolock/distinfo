@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:49 skrll Exp $
-
-SHA1 (xautolock-pl15.tgz) = 5bc632141a4cf76fb6453921f34c2f493a1ff08d
-Size (xautolock-pl15.tgz) = 39240 bytes
-SHA1 (patch-aa) = 5f7090a0d9b434da9ec07e651db7214b312b61df

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:33 jschauma Exp $
-bin/xmond
-bin/xmonui
-${IMAKE_MAN_DIR}/xmon.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xmond.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xmonui.${IMAKE_MANNEWSUFFIX}

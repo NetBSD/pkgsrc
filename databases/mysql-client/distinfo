@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2002/12/13 14:19:54 tron Exp $
-
-SHA1 (mysql-3.23.49.tar.gz) = 0256331c7aa9388955148f80cdca382f467ad1be
-Size (mysql-3.23.49.tar.gz) = 11844905 bytes
-SHA1 (patch-af) = 5c627852dd12807580825199cdbd9a1ebc320f33
-SHA1 (patch-al) = 8d8738a168233dcf968b02c7c48c0711342ea200

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/06/19 15:57:39 jlam Exp $
-
-SHA1 (emixer-0.05.5.tar.gz) = acae7acf3cd11633d1f800047287d9f52e8e7d02
-Size (emixer-0.05.5.tar.gz) = 19609 bytes
-SHA1 (patch-aa) = f6039822d61548ba93ec9db9b31380f14c36cdd8
-SHA1 (patch-ab) = a782737118c0ba6ae704a1839d93047a6f7e568e
-SHA1 (patch-ac) = 453d5510e1a0c342b7a69fe3033c4677f9f77db5
-SHA1 (patch-ad) = 7f4dcc7574c418c411efa8910961e5e6cf0b5fcb
-SHA1 (patch-ae) = 237b10820c528aa4fbcdef31331cd1b4d1098968

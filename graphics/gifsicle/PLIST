@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:01 zuntum Exp $
-bin/gifdiff
-bin/gifview
-bin/gifsicle
-man/man1/gifdiff.1
-man/man1/gifview.1
-man/man1/gifsicle.1

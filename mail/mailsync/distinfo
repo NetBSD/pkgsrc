@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/09 00:19:46 rh Exp $
-
-SHA1 (mailsync_4.3-2.tar.gz) = 239f58aeb98718de347c1b53682fb6add156b7e3
-Size (mailsync_4.3-2.tar.gz) = 20257 bytes
-SHA1 (patch-aa) = 2e18288d7549211ac0e77ee091fc24074d84d38f

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/13 20:11:46 nra Exp $
-
-SHA1 (cidr-current.tar.gz) = c543bec86e5786d19e59e262a8d3004d4aad0a71
-Size (cidr-current.tar.gz) = 16898 bytes
-SHA1 (patch-aa) = a3f79ba1297fd0eae212e1aa566993fa684107c9

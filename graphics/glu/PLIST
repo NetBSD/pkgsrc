@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2003/05/10 16:37:12 drochner Exp $
-include/GL/glu.h
-include/GL/glu_mangle.h
-lib/libGLU.so
-lib/libGLU.so.2
-lib/libGLU.so.2.501
-lib/libGLU.a
-lib/libGLU.la
-@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD-sparc,v 1.1 2002/03/14 14:54:48 wiz Exp $
-${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtbegin.o
-${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtbeginS.o
-${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtend.o
-${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtendS.o

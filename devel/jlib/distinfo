@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:24 wiz Exp $
-
-SHA1 (jlib-1.0.6.tar.gz) = f4dee54461d2ecc691fb7266c517e7780c95af35
-Size (jlib-1.0.6.tar.gz) = 148161 bytes
-SHA1 (patch-aa) = 41a81a4edc5817acd9f4567f50407b3774725062
-SHA1 (patch-ab) = cf37743298a993077255683f252b0ba4bd7abd3a

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/11/26 19:55:40 wiz Exp $
-
-SHA1 (asapm-2.11.tar.gz) = cd89c5557d76dbb19ee565435b533ab48f05f102
-Size (asapm-2.11.tar.gz) = 58729 bytes
-SHA1 (patch-aa) = 570d2240f6afbf78d3cd72e1c1b963beb7ae074d
-SHA1 (patch-ab) = 8796f1f6220ecdbd23d360bb18f721e1ef83febf

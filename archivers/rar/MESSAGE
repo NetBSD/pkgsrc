@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/12 17:05:15 wiz Exp $
-
-You must have COMPAT_12 as well as a.out support
-compiled into your kernel to use this program.
-
-===========================================================================

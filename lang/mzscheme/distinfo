@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/08/27 16:42:06 pooka Exp $
-
-SHA1 (mzscheme-200/mzscheme.src.unix.tar.gz) = f9712988bde29d7fd56c1d38abe0e9ebff44bc8d
-Size (mzscheme-200/mzscheme.src.unix.tar.gz) = 3535250 bytes
-SHA1 (patch-aa) = 96005b595f99487e238d00451e2442824dab7fa8
-SHA1 (patch-ah) = b1e23f33844f233ad4ae03149fda1f29fa0ad96b
-SHA1 (patch-aj) = 192fad84495de0f01d6c6c4d45288a6ba94be7fe

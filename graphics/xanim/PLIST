@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:25 jschauma Exp $
-bin/xanim
-${IMAKE_MAN_DIR}/xanim.${IMAKE_MANNEWSUFFIX}

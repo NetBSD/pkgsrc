@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.netbsd,v 1.3 2002/08/25 19:23:17 jlam Exp $
-lib/libcrypto.so
-lib/libcrypto.so.300
-lib/libcrypto.so.300.0
-lib/libssl.so
-lib/libssl.so.300
-lib/libssl.so.300.0

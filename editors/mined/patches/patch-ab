@@ -1,7 +1,0 @@
-$NetBSD: patch-ab,v 1.1 2003/07/01 15:52:37 agc Exp $
-
---- minedhlp.h	2003/06/17 16:34:13	1.1
-+++ minedhlp.h	2003/06/17 16:34:31
-@@ -1 +1 @@
--	helpfile = "/usr/local/share/help/mined.hlp";
-+	helpfile = PREFIX "/share/help/mined.hlp";

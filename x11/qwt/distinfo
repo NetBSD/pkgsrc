@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 21:52:43 jlam Exp $
-
-SHA1 (qwt-0.3.0.tar.gz) = 504940fbf25b058d258bba3589a22752a624847b
-Size (qwt-0.3.0.tar.gz) = 484675 bytes
-SHA1 (patch-aa) = e57c888c1c6ea486dfa24e84e7aaba72f406fa7e

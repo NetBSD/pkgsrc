@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 21:52:30 jlam Exp $
-
-SHA1 (aterm-0.4.2.tar.gz) = 8ce3f1fcdc12805068ff5acde6f130a22e1f5b9b
-Size (aterm-0.4.2.tar.gz) = 312730 bytes
-SHA1 (patch-aa) = 59cf8fe42bf4291b2a98c0d95170a02308197645
-SHA1 (patch-ab) = 9b4e6785912de338db958e9ad48c4cafcb344270
-SHA1 (patch-ac) = 28c79343079680251a013ec3fe364b01f5a5ccac
-SHA1 (patch-ad) = 0c87ee69672e98189afa2cfdcdd9691a1571f354
-SHA1 (patch-ae) = b4bbe033f29a8ee24cfff511fb59739d3582341d

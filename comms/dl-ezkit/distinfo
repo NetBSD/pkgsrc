@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/08/19 03:28:59 jlam Exp $
-
-SHA1 (dl-ezkit-0.8.1-bsd.tar.gz) = d134aef41f559e23d79eca85e15273d60135a7f0
-Size (dl-ezkit-0.8.1-bsd.tar.gz) = 32166 bytes
-SHA1 (patch-aa) = 8425dd855a7a6b99f2f2d7cef186e6cb0f2faaab
-SHA1 (patch-ab) = 6a8bd14cb90517ca3c859a0b89f762ed8f2e82fb
-SHA1 (patch-ac) = 2af79d096d52199e0e71008cd9d9cd7d351638d3

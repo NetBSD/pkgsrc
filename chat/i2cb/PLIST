@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
-bin/i2cb
-libdata/i2cb/bartender
-libdata/i2cb/confuse
-libdata/i2cb/echofile
-libdata/i2cb/sample.i2cbrc
-libdata/i2cbserverdb
-@dirrm libdata/i2cb

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:33 wiz Exp $
-
-SHA1 (omega-0.90-pa4.tar.gz) = 735c3ccfad4279facafa982090cf6a33bfe4b7d8
-Size (omega-0.90-pa4.tar.gz) = 339012 bytes
-SHA1 (patch-aa) = df5933dcc7098ba00f4b3002612b3318a9b09974
-SHA1 (patch-ab) = fe2960b28a3cd912c35edeb8a05087eb18d136f5

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/02 14:56:59 grant Exp $
-
-SHA1 (mozilla-sparc-sun-solaris2.8_1.4.tar.gz) = 062d09aa4d0c066e7399cde6cffc3ad7bab52a08
-Size (mozilla-sparc-sun-solaris2.8_1.4.tar.gz) = 17002950 bytes
-SHA1 (mozilla-i686-pc-linux-gnu-1.4.tar.gz) = cbc3f5fcef536e3f69fe8e4a51b52d1435ece049
-Size (mozilla-i686-pc-linux-gnu-1.4.tar.gz) = 12528153 bytes

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/26 04:07:48 jschauma Exp $
-bin/xdemineur
-${IMAKE_MAN_DIR}/xdemineur.${IMAKE_MANNEWSUFFIX}

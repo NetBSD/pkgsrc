@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/28 16:51:05 zuntum Exp $
-bin/mp3asm
-share/doc/mp3asm/README
-@dirrm share/doc/mp3asm

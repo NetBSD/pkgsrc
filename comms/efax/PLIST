@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:00 zuntum Exp $
-bin/efax
-bin/efix
-bin/fax
-man/man1/efax.1
-man/man1/efix.1
-man/man1/fax.1

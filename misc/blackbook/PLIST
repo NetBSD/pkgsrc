@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/03 09:44:12 wiz Exp $
-bin/blackbook
-share/icons/book64.xpm
-share/icons/book48.xpm
-@unexec ${RMDIR} %D/share/icons 2>/dev/null || ${TRUE}

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/10 09:54:59 sakamoto Exp $
-bin/canuum
-man/ja_JP.EUC/man1/canuum.1

@@ -1,9 +1,0 @@
-Small DES (Data Encryption Standard) standalone program.
-If you have openssl installed, you probably don't need this.
-However, for reverse compatibility with your previously
-encrypted data or with the SunOS des, you might want to keep
-this one around.  Plus, it compiles easily on PCs with djgpp.
-I've renamed all the installed files to be libdes, libdes.h,
-etc., to avoid conflicts with other packages.
-
-NetBSD package by: John Refling <refling@comet.lbl.gov>         

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/26 05:49:31 jlam Exp $
-
-SHA1 (tcpslice-1.2a1.tar.gz) = ff954089339d375ffa780a10a5df8d6033515126
-Size (tcpslice-1.2a1.tar.gz) = 59286 bytes
-SHA1 (patch-aa) = 05c59300a87d049bb67596e19527f61ea0d77b1c

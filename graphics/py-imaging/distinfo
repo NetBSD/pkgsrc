@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/06/27 10:11:59 drochner Exp $
-
-SHA1 (python/Imaging-1.1.4.tar.gz) = 611972b63272bf4967ca966848ba8ddda970abcc
-Size (python/Imaging-1.1.4.tar.gz) = 416338 bytes
-SHA1 (patch-aa) = fbc1fb67af7c024e379216e03993786365082dde
-SHA1 (patch-ab) = c5444ea51d49933d99dc568351dec7d0e0bea826

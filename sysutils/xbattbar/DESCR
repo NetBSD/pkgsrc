@@ -1,9 +1,0 @@
-Xbattbar shows the current (laptop) battery status in the X window
-environment. Battery status is obtained through the APM kernel module.
-The battery indicator of this program is very simple: a simple bar in
-the top/bottom of your display. With its color, it indicates the
-AC-line status (plugged in or off-line), and battery charging/remaining
-level. Also, in the case the mouse cursor enters to the indicator window,
-the popup diagnosis window comes up in the center of your display, and
-then, it shows the current AC line status and battery level in the popup
-window. This program is very small but fancy.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:05 zuntum Exp $
-include/mpeg.h
-lib/libmpeg_lib.a
-lib/libmpeg_lib.la
-lib/libmpeg_lib.so
-lib/libmpeg_lib.so.1
-lib/libmpeg_lib.so.1.3

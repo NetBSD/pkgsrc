@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:26 jschauma Exp $
-bin/xbmbrowser
-lib/X11/app-defaults/XbmBrowser
-lib/X11/app-defaults/XbmBrowser-color
-lib/X11/xbmbrowser/xbmbrowser.menu
-lib/X11/xbmbrowser/xbmbrowser.menu.tut
-${IMAKE_MAN_DIR}/xbmbrowser.${IMAKE_MANNEWSUFFIX}

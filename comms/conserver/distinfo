@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/05/22 06:35:03 wiz Exp $
-
-SHA1 (conserver-7.2.7.tar.gz) = e2dfe0d95ceab0e6c2db38161f540ec537d96132
-Size (conserver-7.2.7.tar.gz) = 200861 bytes
-SHA1 (patch-aa) = 01ab5e3430137e72b786164026785f91295232d4
-SHA1 (patch-ab) = e4fb98f61d6b6937e8989c9a15c2e7fbd26d8e05

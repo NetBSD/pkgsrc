@@ -1,8 +1,0 @@
-# $NetBSD: Makefile.Linux.i386,v 1.3 2003/06/11 13:35:09 grant Exp $
-#
-
-DISTNAME=	MozillaFirebird-0.6-i686-pc-linux-gnu
-MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/releases/0.6/
-
-PLATFORM=	linux
-PHOENIX_LIB=    ${PREFIX}/lib/MozillaFirebird-${PLATFORM}

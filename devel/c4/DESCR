@@ -1,4 +1,0 @@
-C4 provides a CVS like feel to Perforce's SCM system p4.  C4 is
-not a substitute for CVS, in that it does not try to mimic CVS's
-command set.  Rather, it provides a workspace (client) where every
-file is writable, and can be modified on an adhoc basis.

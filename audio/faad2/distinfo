@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/05 17:49:42 dillo Exp $
-
-SHA1 (faad2-1.1.tar.gz) = 8e5b7ce2df26807fc4c22f29d97992f8d0644074
-Size (faad2-1.1.tar.gz) = 1015577 bytes
-SHA1 (patch-aa) = 9f5876d1de2a757f70191bedd92047c93c31f19b
-SHA1 (patch-ab) = ca4cac680f5083e82915fa42e4ee0e80736004a4
-SHA1 (patch-ac) = 63cbf6c54be2c19bbed831450d2d751e34b50dc8

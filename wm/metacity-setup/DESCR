@@ -1,4 +1,0 @@
-metacity-setup is a graphical utility to configure the Metacity window
-manager, allowing you to change themes, focus settings, the number of
-workspaces, etc.  It is much easier than having to use gconftool or
-gconf-editor.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/07 15:20:31 jmmv Exp $
-
-SHA1 (dpbox-60000.tar.gz) = 73a55785f499324f57736c7fb3cc0bd1001facd3
-Size (dpbox-60000.tar.gz) = 957010 bytes
-SHA1 (patch-aa) = 8235aa600edffd952c1d932c0ee8011ba0896d08
-SHA1 (patch-ab) = abeee7b86844c8937792ef09a938caf232574fb3
-SHA1 (patch-ac) = faa4e5b32a31283e0ed7ed9730c026ccd5efffb4
-SHA1 (patch-ad) = 589a69328b5959f81b86739a6e3c32f6d1d71ffe
-SHA1 (patch-ae) = 9c8ac68bb2102f19d2dea85dbe18197c7ad2b864

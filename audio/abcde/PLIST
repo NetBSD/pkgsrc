@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/29 02:37:21 kim Exp $
-bin/abcde
-bin/cddb-tool
-share/examples/abcde/abcde.conf
-@dirrm share/examples/abcde
-man/man1/abcde.1
-man/man1/cddb-tool.1

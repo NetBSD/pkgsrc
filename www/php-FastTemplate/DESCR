@@ -1,9 +1,0 @@
-FastTemplate is a port of the Perl CGI::FastTemplate module to PHP, which
-is a very fast implementation of templates using simple variable
-interpolation.
-
-Templates are very useful for CGI programming, because adding HTML to your
-PHP code clutters your code and forces you to do any HTML modifications.
-By putting all of your HTML in seperate template files, you can let a
-graphic or interface designer change the look of your application without
-having to bug you, or let them muck around in your PHP code.

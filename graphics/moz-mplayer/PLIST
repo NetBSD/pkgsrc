@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/19 07:32:05 salo Exp $
-lib/mozilla/plugins/mplayerplug-in.so
-@unexec ${RMDIR} %D/lib/mozilla/plugins 2>/dev/null || ${TRUE}

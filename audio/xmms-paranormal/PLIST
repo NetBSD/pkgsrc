@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 00:56:50 hubertf Exp $
-bin/paranormal
-bin/pndoc
-lib/xmms/Visualization/libparanormal.a
-lib/xmms/Visualization/libparanormal.la
-lib/xmms/Visualization/libparanormal.so

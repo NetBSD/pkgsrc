@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/21 22:05:03 wiz Exp $
-
-SHA1 (ssystem-1.6.tar.gz) = b22f766159c8e9c861c23aa6ca47f374294a847a
-Size (ssystem-1.6.tar.gz) = 1037947 bytes
-SHA1 (patch-aa) = f44692941d5b001d6b3017a5a8af8c0e0aab00b7

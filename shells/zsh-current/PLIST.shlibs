@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.shlibs,v 1.1.1.1 2003/06/29 03:00:48 uebayasi Exp $
-lib/zsh/libzsh-${PKGVERSION}.so

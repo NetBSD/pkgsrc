@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:04 zuntum Exp $
-lib/libquadpack.a
-share/doc/quadpack/doc
-share/doc/quadpack/readme
-@dirrm share/doc/quadpack

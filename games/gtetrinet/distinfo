@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/27 15:44:13 jmmv Exp $
-
-SHA1 (gtetrinet-0.7.1.tar.gz) = 0a00fc9a2e0d435825f05990002f682bec3e6335
-Size (gtetrinet-0.7.1.tar.gz) = 389449 bytes
-SHA1 (patch-aa) = 3f9cb21459c9c505a58b3d28289b0d64a584b90a
-SHA1 (patch-ab) = 32a129ff2399f0192e7597f467da6941efe7f195

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/10 12:54:30 grant Exp $
-${PYSITELIB}/pyexpat.so

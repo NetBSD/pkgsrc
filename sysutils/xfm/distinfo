@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/04 16:44:55 cjep Exp $
-
-SHA1 (xfm-1.4.3.tar.gz) = 8d6235bb63e04491cc99603144b52884866b39e2
-Size (xfm-1.4.3.tar.gz) = 420962 bytes
-SHA1 (patch-aa) = 24ce4e78b18356db98ed2588f8da48380e1efd20
-SHA1 (patch-ab) = 7a0696915c97a25097e58726b44dbc4801a63b1e
-SHA1 (patch-ac) = 40a32177cc5b64a49a51ea9c77062bfdc77da75d
-SHA1 (patch-ad) = cf5cd1596d74b13796bd550463ddba0dec7d4578
-SHA1 (patch-ae) = 9e2a79a0a7becdca8bcdb30da457ef7b25ccd22d

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
-
-SHA1 (traceroute_991603.tar.Z) = 84a66a5acc87ca74a74c7a091f288f0886d71d2e
-Size (traceroute_991603.tar.Z) = 75111 bytes
-SHA1 (patch-aa) = 3370d57975369c049773e8fa1b31bbb5403c0dd9

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:17 wiz Exp $
-
-SHA1 (gtksamba-0.3.2pl1.tar.gz) = fade3acffed653ead08a7dfebc212ac06d28e439
-Size (gtksamba-0.3.2pl1.tar.gz) = 72575 bytes
-SHA1 (patch-aa) = 6f247eb1e11e16a0ddf9b8eab2334ebd269854e9
-SHA1 (patch-ab) = f6cd99939f51f0ad175545a818fb8ef6c27ae13c

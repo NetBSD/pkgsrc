@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/04/13 01:29:42 salo Exp $
-
-SHA1 (ndtpd-3.1.4.tar.gz) = 54b8c3499c47a7afed8efa1190e1a67ecfc7dcd6
-Size (ndtpd-3.1.4.tar.gz) = 547541 bytes
-SHA1 (patch-aa) = a271f7debee44169e186e064538ea07451aa33eb
-SHA1 (patch-ab) = 15334fa0332c5dc038b51451a2f99c822aac9199
-SHA1 (patch-ac) = 9ae0932c7587965f6835cbf5d48836d98e2402d9

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:03 zuntum Exp $
-bin/junkbuster
-man/man1/junkbuster.1
-share/examples/junkbuster/junkbuster.ini
-@dirrm share/examples/junkbuster

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/09 08:02:31 martti Exp $
-
-SHA1 (lyx-1.3.2.tar.gz) = 917cd132317e3510c1b9f965cf88ee3c8acf2179
-Size (lyx-1.3.2.tar.gz) = 7528733 bytes
-SHA1 (patch-aa) = 90a09a1adbb899cbaf063d4d7f46dc77f78a62da

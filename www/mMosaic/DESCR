@@ -1,5 +1,0 @@
-mMosaic  is  a  derivative  work  of  NCSA  XMosaic  2.7b4. You can
-use it as a simple browser. Now it supports <TABLE> and other
-supplementary tags (like <CENTER>). One level of <FRAME> is supported.
-mMosaic can run on an IPv6/IPv4 connected computer. Since release
-3.4.16 mMosaic is IPV6 and IPV4 able for both HTTP and FTP protocol.

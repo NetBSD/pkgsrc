@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:18 wiz Exp $
-
-SHA1 (icsi-finger-1.0.27.tar.Z) = 41f03c42269a402169000a6b08ba8c6330256861
-Size (icsi-finger-1.0.27.tar.Z) = 729351 bytes
-SHA1 (patch-aa) = 09aff5e24c2cf5ede8d8b70e805c88824e0ba88c
-SHA1 (patch-ab) = d8a719d78288aad8ab3a7159f332afdd59231ebb

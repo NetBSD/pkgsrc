@@ -1,8 +1,0 @@
-Xpkgwedge, not a "real" program in the traditional sense, is a hack that
-allows NetBSD users to compile X11 pkgs from pkgsrc and install them
-outside of the X11 tree - even if they use Imake - by using pkgxmkmf.
-
-Pkgxmkmf is a slightly modified xmkmf from the X11R6.3 release and supports
-finding config files in ${LOCALBASE}/lib/X11/config, if it exists, and in
-${X11BASE}/lib/X11/config.  In all other respects, it is identical to xmkmf.
-Please refer to xmkmf(1) for more information.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/14 18:34:08 cjep Exp $
-
-SHA1 (qadsl-final-1.2.tar.gz) = 3ec757d271c14e231d979fd8d3121ee21d8bd201
-Size (qadsl-final-1.2.tar.gz) = 12208 bytes
-SHA1 (patch-aa) = 4f9d6e829a7e9e3203de7fa5505b7f4ec0cc20f2
-SHA1 (patch-ab) = 737f0c0ff00dcdd9844837ed47c544beaec60f2b
-SHA1 (patch-ac) = be60cd44d541aea80a00026424ff0aa615bda353
-SHA1 (patch-ad) = f610a095c93fea89409af50a908c5f0948f39b85

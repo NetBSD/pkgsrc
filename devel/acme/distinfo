@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/29 18:30:30 dillo Exp $
-
-SHA1 (acme085_linux.tar.gz) = 8eb698e839eecea631b1eb3404071c02d2915474
-Size (acme085_linux.tar.gz) = 100590 bytes
-SHA1 (lib002.zip) = 699f85edec7e28feb7f50abbf4fc2380757bb4f1
-Size (lib002.zip) = 18197 bytes
-SHA1 (patch-aa) = b0131874ccfd8f7b43e9d25b363b6a7fdda502e3
-SHA1 (patch-ab) = ef30221626d8145cf8f8e67be3a0eb3e0495d006

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/04/10 10:18:03 wiz Exp $
-
-SHA1 (ogle-0.9.1.tar.gz) = 2a83428de224558408f2e943ee8ba5bb6e524ab9
-Size (ogle-0.9.1.tar.gz) = 479120 bytes
-SHA1 (patch-af) = 1cb724d3a580eecf8672594268b23768b296dff3
-SHA1 (patch-ag) = c6b5f73a0c2878b3d72cf373e7291f77378f557f
-SHA1 (patch-ah) = ab9f21bf068112575c19404de1c46a1aba92afd9
-SHA1 (patch-ai) = 32ca5020e831cabc978c31c4d853cc94ed994a1d

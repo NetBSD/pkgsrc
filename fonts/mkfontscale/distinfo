@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/08/12 20:15:37 tron Exp $
-
-SHA1 (mkfontscale-20020524.tar.gz) = 4c1f8bba8fd2a939a95d1ad18700320b7ec993b5
-Size (mkfontscale-20020524.tar.gz) = 8133 bytes
-SHA1 (patch-aa) = 7d83047966fc6c2eb691669e292b98dfac61a072

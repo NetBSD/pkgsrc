@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/15 02:15:11 dmcmahill Exp $
-
-SHA1 (xsidplay-1_5_4.tgz) = 998c8a327884a2519a61198cf116928abfd3fe86
-Size (xsidplay-1_5_4.tgz) = 362710 bytes
-SHA1 (patch-aa) = f842f79d01bf4bdc1c5ae5d4b05922b143828088
-SHA1 (patch-ab) = d7f307b76a7221d28c2a8c45698cba1fca1d0e25
-SHA1 (patch-ac) = 94187025d2f61e5cd6915d46958f087ed9fd4179

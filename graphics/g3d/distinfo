@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:12 wiz Exp $
-
-SHA1 (g3d-0.0.2.tar.gz) = 43bee375f1c5053b89110eda505a9a9eca3fa697
-Size (g3d-0.0.2.tar.gz) = 187640 bytes
-SHA1 (patch-aa) = 6d59d77a78070568ec883c454dbd604847b860a2
-SHA1 (patch-ab) = 785a24c0b275235d6c7eb47ec2ca19823f4f528f

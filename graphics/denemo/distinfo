@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:09 wiz Exp $
-
-SHA1 (denemo-0.5.4.tar.gz) = 66cdaeeb41239c490ee89e9b8e1fdd616a877bf9
-Size (denemo-0.5.4.tar.gz) = 188745 bytes
-SHA1 (patch-aa) = ae72b3d0fb595806bc9f6dd7d9be4d5ca9d17da6
-SHA1 (patch-ab) = 73ec89c5732c4dca4c1dbb3106783b844fae2a85

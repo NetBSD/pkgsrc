@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/06/10 06:49:08 cjep Exp $
-
-SHA1 (sftp-0.5.tar.gz) = e75571e46eda19da1b42fdd5d642822b3e302b84
-Size (sftp-0.5.tar.gz) = 26072 bytes
-SHA1 (patch-aa) = 1806fd8d4ddbf34d67aa139689aadf41b3e1bb3d

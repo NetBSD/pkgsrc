@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.2 2003/07/02 14:56:59 grant Exp $
-#
-
-DISTNAME=	mozilla-sparc-sun-solaris2.8_1.4
-
-DEPENDS+=	gtk+>=1.2:../../x11/gtk
-
-PLATFORM=	${LOWER_OPSYS}
-MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/05/24 07:51:35 uebayasi Exp $
-
-SHA1 (zenicb-19981202.tar.gz) = c700e51084a123e210a8aa7335ebc1b2464a85e7
-Size (zenicb-19981202.tar.gz) = 30833 bytes
-SHA1 (patch-aa) = 55f84c908156edeb8c02bc43950b6ce416345b90
-SHA1 (patch-ab) = 26e994ed66a0b0792f9741edaae5a2bf86e39345
-SHA1 (patch-ac) = a2ab8c0c13f440351d87be534c7500fe75f81cc6

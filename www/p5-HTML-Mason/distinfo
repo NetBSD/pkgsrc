@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/04/17 10:46:04 shell Exp $
-
-SHA1 (HTML-Mason-1.04.tar.gz) = 024d4cb606d6c8d28e785acdea5969ef62306f05
-Size (HTML-Mason-1.04.tar.gz) = 284069 bytes
-SHA1 (patch-aa) = c9e4b93e3991211a877717db7fa3e0a28ed90ff2

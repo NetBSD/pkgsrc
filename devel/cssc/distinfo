@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/19 22:08:28 seb Exp $
-
-SHA1 (CSSC-0.15alpha.pl0.tar.gz) = b20c672c631561e8c39d465a7fddea444964851f
-Size (CSSC-0.15alpha.pl0.tar.gz) = 625766 bytes
-SHA1 (patch-ab) = 648d6379637b791f6aea917e4d3c6379974f04f5

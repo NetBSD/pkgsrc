@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/29 06:15:34 rh Exp $
-share/GNUstep/Local/Headers/GLXKit/G3DGLXCamera.h
-share/GNUstep/Local/Headers/GLXKit/G3DGLXKit.h
-share/GNUstep/Local/Headers/GLXKit/G3DXEventHandler.h
-share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libGLXKit.so
-share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libGLXKit.so.0.0.1
-@dirrm share/GNUstep/Local/Headers/GLXKit

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:05 zuntum Exp $
-bin/gkermit
-man/man1/gkermit.1
-share/doc/gkermit/README
-@dirrm share/doc/gkermit

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/04 13:05:10 agc Exp $
-
-SHA1 (fdec-rs-405.tar.gz) = cf38c862af69b0bd1c76e5b182f6026bfe552250
-Size (fdec-rs-405.tar.gz) = 8437452 bytes
-SHA1 (linux-ar-405.tar.gz) = b504f9101de8a65d7bec968f41f6532c2c392b85
-Size (linux-ar-405.tar.gz) = 6144813 bytes
-SHA1 (sunsparc-rs-405.tar.gz) = 764d1257ec3e91bb1b169aae722e9665ae2805f9
-Size (sunsparc-rs-405.tar.gz) = 6557221 bytes
-SHA1 (patch-aa) = 0c7aa984ad67674d78497acd850fa3b7e404cc7b

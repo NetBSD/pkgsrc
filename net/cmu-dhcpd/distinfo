@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/18 22:06:01 abs Exp $
-
-SHA1 (CMU-dhcp-3.3.7+PU-9.tar.Z) = 9c7eb8f498eddd35d0eb9ceaa90451f06bb5cf27
-Size (CMU-dhcp-3.3.7+PU-9.tar.Z) = 752011 bytes
-SHA1 (patch-aa) = bbedb6f3c01d6459f5e0623e8e165ecef6d09374

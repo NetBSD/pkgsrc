@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:57 zuntum Exp $
-share/examples/tits.conf
-sbin/tits
-man/man8/tits.8
-man/cat8/tits.0

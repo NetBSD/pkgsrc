@@ -1,9 +1,0 @@
-$NetBSD: patch-ah,v 1.4 2002/10/03 15:46:58 abs Exp $
-
---- mserv/english.lang.orig	Thu Jul 13 23:14:11 2000
-+++ mserv/english.lang
-@@ -207,3 +207,4 @@ DELAY	636	The delay between tracks has b
- FILTER	637	Random play filter set to '%02' by %01 (%03 incl, %04 excl)
- NFILTER	638	Random play filter turned off by %01
- MEMORY	639	Out of memory
-+RESETGO	640	Server reset initiated by %01

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/07/02 18:22:42 jmmv Exp $
-
-SHA1 (upclient-4.2.1.23.tar.gz) = c6595959c6a5058b03ab7096a6bf9c0dbfa4285a
-Size (upclient-4.2.1.23.tar.gz) = 29386 bytes
-SHA1 (patch-aa) = 2e1dacd293b69e0d2338e1a316d7d1d7015447c2
-SHA1 (patch-ab) = dd1e318cee6e27fcf433b2123cf8f3f6ed8eb548
-SHA1 (patch-ac) = ffd0c20defee33e94d6ea03d8b319e1e4cb60d23
-SHA1 (patch-ad) = 3f80aa8eb580055f33f77062dd2e3e76f3ab11bd
-SHA1 (patch-ae) = 37bc453a9193635eb9e7062c40674c2308d8fc79

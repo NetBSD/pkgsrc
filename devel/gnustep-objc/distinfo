@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/04/01 08:31:37 rh Exp $
-
-SHA1 (gnustep-objc-1.2.3.tar.gz) = 317b1a14d387d0e5a65df6485cc5f8dcc5e0e84a
-Size (gnustep-objc-1.2.3.tar.gz) = 134417 bytes
-SHA1 (patch-aa) = ef2ef0e1b015d4a5a97b099628153e9fbb16b0fb

@@ -1,5 +1,0 @@
-Oggasm is a program that makes converting your mp3 collection into oggs
-at all but painless process. Using oggenc and mpg321(or mpg123), with perl
-glueing it all together, oggasm is able to go through an entire collection,
-identify id3 tags and then convert those mp3s into oggs while keeping
-the id3 tags intact.

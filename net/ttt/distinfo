@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:37 wiz Exp $
-
-SHA1 (ttt-1.6.tar.gz) = 6be658ed4d788f317c65cf8c55e05e406eaecf64
-Size (ttt-1.6.tar.gz) = 119619 bytes
-SHA1 (patch-aa) = af734fd301ebbcc5a32eae91e1b06c990c50e224
-SHA1 (patch-ab) = 07f3d9c6662a60ba194a3b3896990c49e4192a83

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/05/06 16:21:26 jmmv Exp $
-
-SHA1 (wmakerconf-2.8.1.tar.bz2) = 570021015265f3d44a144981e93ee6755ba9b943
-Size (wmakerconf-2.8.1.tar.bz2) = 446073 bytes
-SHA1 (patch-aa) = 73bf90a8c009325cd0dfbccc673bc45a07ca008c
-SHA1 (patch-ab) = 5b65a4eb480eeec18d5ee8357d1741480c5a193b
-SHA1 (patch-ac) = 074c96d12f7fe4cf770e5dc973b380e29d9094ce
-SHA1 (patch-ad) = 3a56d3117d8eb6b473a9bc82387b350a42751907

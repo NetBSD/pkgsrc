@@ -1,2 +1,0 @@
-Png2html takes a PNG image and transforms it pixel per pixel to a web
-page. It makes use of a text file supplied by the user to do the conversion.

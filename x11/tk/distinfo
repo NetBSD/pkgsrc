@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2003/03/16 18:37:43 jschauma Exp $
-
-SHA1 (tk8.3.4.tar.gz) = d52bf5cedb73e9b817ba8d6a2b00701f4f82fad2
-Size (tk8.3.4.tar.gz) = 2589635 bytes
-SHA1 (patch-aa) = 49fe346ebad9b4ded0f0c64727cea3cf22655678
-SHA1 (patch-ab) = b99c7a48dc525a45305ad6265735de56df4b5d9c
-SHA1 (patch-ac) = 172762efa65eb05345d70cf38893bc96b56a2481
-SHA1 (patch-ad) = 1815fc19986674cb2ea03a8d60cd1514ff47fba9

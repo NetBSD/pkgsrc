@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/27 22:33:51 jmmv Exp $
-
-SHA1 (libgsf-1.8.0.tar.bz2) = 3e2812e2afeebc168f6306ebb49dc4119a3bffc5
-Size (libgsf-1.8.0.tar.bz2) = 259399 bytes
-SHA1 (patch-aa) = 0fe549f9af39e108b88865d534b47cc43e15f66b
-SHA1 (patch-ab) = f991c03f992cc30276693a7add6aa3c6ea8f1af2

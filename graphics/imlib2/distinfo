@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/02/15 12:00:40 jmmv Exp $
-
-SHA1 (imlib2-1.0.6.tar.gz) = 79bd982eef1a18bf5df0407b50d1a38a6c57fd58
-Size (imlib2-1.0.6.tar.gz) = 688521 bytes
-SHA1 (patch-ab.new) = 605bdf9f45c26929a15826ac5a86a4b8787e2f9c
-SHA1 (patch-aa) = 41fab46215fb0c4ca305ba2c958990589279a073
-SHA1 (patch-ab) = 9ee42d4a2bf97a0ac21f6e9ba32490d92fafc260

@@ -1,4 +1,0 @@
-This cross-compile environment is for a.out NetBSD/m68k
-
-LIMITATIONS:
-	THIS PACKAGE WILL ONLY SUPPORT STATIC BINARIES.

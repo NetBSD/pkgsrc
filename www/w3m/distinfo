@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2003/02/27 02:31:27 uebayasi Exp $
-
-SHA1 (w3m-0.4-m17n-20030224.tar.gz) = 2d01918413f205edb1bb351acc4799792677a9e1
-Size (w3m-0.4-m17n-20030224.tar.gz) = 2433690 bytes
-SHA1 (patch-aa) = e40ad9fa0765041b605e86febd71d399b92fc4d1
-SHA1 (patch-ab) = c0c21616d1d3557453648107eca26eaa91af4741

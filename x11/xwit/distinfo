@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:08:02 skrll Exp $
-
-SHA1 (xwit-3.4.tar.gz) = 916f32c200f8bd5d30738b9added84612c1366ae
-Size (xwit-3.4.tar.gz) = 14536 bytes
-SHA1 (patch-aa) = cd63c5ad56acd9ce0c2ff8c3e278f33871a67b24

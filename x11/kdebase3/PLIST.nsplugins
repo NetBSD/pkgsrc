@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.nsplugins,v 1.4 2003/01/20 10:04:03 skrll Exp $
-bin/nspluginscan
-bin/nspluginviewer
-lib/kde3/libkcm_nsplugin.la
-lib/kde3/libkcm_nsplugin.so
-lib/libnsplugin.la
-lib/libnsplugin.so
-lib/libnsplugin.so.1
-lib/libnsplugin.so.1.1

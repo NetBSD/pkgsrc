@@ -1,9 +1,0 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
---- nroff/nroff.sh.orig	Fri May 28 17:03:23 1999
-+++ nroff/nroff.sh	Fri May 28 18:24:04 1999
-@@ -58,4 +58,4 @@
- 
- # This shell script is intended for use with man, so warnings are
- # probably not wanted.  Also load nroff-style character definitions.
--exec groff -Wall -mtty-char $T $opts ${1+"$@"}
-+exec jgroff -Wall -mtty-char $T $opts ${1+"$@"}

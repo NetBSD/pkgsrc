@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/07/10 08:45:32 adam Exp $
-
-SHA1 (madplay-0.15.0b.tar.gz) = c48de0499d9ce85856d0a3090df118d92d940e01
-Size (madplay-0.15.0b.tar.gz) = 459074 bytes
-SHA1 (patch-aa) = c4f9744cfc35a930477be889845f834e2eb2ad50

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:39 wiz Exp $
-
-SHA1 (xevil1.5.1e.tar.Z) = a4b1fc0264ddd9c73e60d28442f5328c1a1bc060
-Size (xevil1.5.1e.tar.Z) = 475173 bytes
-SHA1 (patch-aa) = 310dbab8e8921d4cef9e336052e8bbd0a32f704a
-SHA1 (patch-ab) = 1a733a118dee1aebc56b441df929315df328de20
-SHA1 (patch-ac) = 3562033cb5827af191e8c6fa2d42b380610651b6

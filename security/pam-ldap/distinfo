@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/07/13 21:35:15 wiz Exp $
-
-SHA1 (pam_ldap-150.tar.gz) = a3b602eff6e345174d84d2eafa9b9aba3c7779f7
-Size (pam_ldap-150.tar.gz) = 107203 bytes
-SHA1 (patch-aa) = adb8529d100ad1c3fd0e71666a3631884b50cc9a

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/14 06:49:04 tron Exp $
-
-SHA1 (BasiliskII_src_14032003.tar.bz2) = 935e00e1401fc5dfaad7ac7d54184265bab0aeb8
-Size (BasiliskII_src_14032003.tar.bz2) = 649594 bytes
-SHA1 (patch-aa) = e41d9a3a932bb312e2ea35372c4e46a45f0fcae9
-SHA1 (patch-ab) = 17c94164ece847bd5695e8fb79ff5132c3c53859

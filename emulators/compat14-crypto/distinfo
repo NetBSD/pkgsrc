@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/13 03:15:24 jdarrow Exp $
-
-SHA1 (compat14-crypto-i386-1.4.3.1.tar.gz) = 2b35c35de47b8c0be42813cb6e56e154e98ebfd5
-Size (compat14-crypto-i386-1.4.3.1.tar.gz) = 1729167 bytes
-SHA1 (compat14-crypto-sparc-1.4.3.1.tar.gz) = 41d5937f5e1f40193c6363a9978fe6373d43e679
-Size (compat14-crypto-sparc-1.4.3.1.tar.gz) = 1921545 bytes

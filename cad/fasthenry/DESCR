@@ -1,7 +1,0 @@
-FastHenry is a three-dimensional inductance extraction program.
-FastHenry computes the frequency dependent self and mutual inductances
-and resistances between conductors of complex shape.  The algorithm
-used in FastHenry is an acceleration of the mesh formulation approach.
-The linear system resulting from the mesh formulation is solved using
-a generalized minimal residual algorithm with a fast multipole
-algorithm to efficiently compute the iterates.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/31 11:02:29 abs Exp $
-
-SHA1 (dvdrtools-0.1.3.tar.bz2) = ec654042b669b06324e0dc46919426ea6588d613
-Size (dvdrtools-0.1.3.tar.bz2) = 1165042 bytes
-SHA1 (patch-aa) = 6463dd7852df43089724976c75a24ea41d9a66bc
-SHA1 (patch-ab) = 3ba572ffbe59a068e01e73af1035711c4a373578

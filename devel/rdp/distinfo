@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:44 wiz Exp $
-
-SHA1 (rdp1_5.zip) = 05a450d95aa306231a5762ddc292894f8b0c63f8
-Size (rdp1_5.zip) = 1234919 bytes
-SHA1 (patch-aa) = b424b87f71057c81a9d125cd063568ace051ec30

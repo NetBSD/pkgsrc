@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:38 zuntum Exp $
-bin/biew
-share/biew/biew.hlp
-share/biew/standard.skn
-share/biew/assembly.skn
-@dirrm share/biew
-share/doc/biew/biew_en.txt
-@dirrm share/doc/biew

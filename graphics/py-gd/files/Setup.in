@@ -1,8 +1,0 @@
-# $NetBSD: Setup.in,v 1.4 1999/11/02 19:48:57 jlam Exp $
-
-*shared*
-gd gdmodule.c \
-	-I@LOCALBASE@/include -I@X11BASE@/include -I@X11BASE@/include/X11 \
-	-L@LOCALBASE@/lib -R@LOCALBASE@/lib \
-	-L@X11BASE@/lib -R@X11BASE@/lib \
-	-lgd -lpng -lz -lttf -lintl -lXpm -lX11

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/06 19:48:08 wiz Exp $
-
-SHA1 (xrick-021212.tgz) = 1a84eac20a22ab86d2013cc1c8ff7e0097b4466a
-Size (xrick-021212.tgz) = 1648538 bytes
-SHA1 (patch-aa) = 8909335f91b738948bb1aba2a82c44685d6d0efe

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:35 agc Exp $
-
-SHA1 (mp3to.gz) = c7c088b5c02a33b86d8ad6e10fef75ceafbef2a5
-Size (mp3to.gz) = 550 bytes
-SHA1 (patch-aa) = 00612b652bfb8a469696381ba8ed9a8379cf730d

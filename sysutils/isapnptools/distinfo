@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/23 12:07:45 agc Exp $
-
-SHA1 (isapnptools-1.26.tgz) = 0b12b06ed60abe8d836fa8d4c1e20bd4b033d76c
-Size (isapnptools-1.26.tgz) = 231098 bytes
-SHA1 (patch-aa) = 150793665a3bb775a02a84a63ad69b244556ac28
-SHA1 (patch-ab) = e584c500e6262e37d67184a55e8f05cd5d55db14
-SHA1 (patch-ac) = 0696f3b6d091f5ae356973ed0277ca5700d6d22e
-SHA1 (patch-ad) = 6f431cfd99581742ded732dc5ec43d1722bc9a2c
-SHA1 (patch-ae) = baf6cf651f42f9359bc64ca377f249469b2463d5

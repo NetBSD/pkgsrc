@@ -1,3 +1,0 @@
-ketm is (or will be someday) an old-school 2d-scrolling shooter. Because it
-is based on SDL, it is no problem to port it to different plattforms. For
-the moment it runs on Linux (i386/PPC), FreeBSD, Win32 and BeOS.

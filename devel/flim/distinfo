@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/04/17 04:56:34 uebayasi Exp $
-
-SHA1 (flim-1.14.5.tar.gz) = b5a1a8fe382e2a225441fee2f5e583bdb89b775b
-Size (flim-1.14.5.tar.gz) = 178075 bytes
-SHA1 (patch-ab) = 3818258269cb432cb95fe02e22ed03f98400e31f
-SHA1 (patch-ac) = 62c3df484e393f798f16200a0970e7d7ea37b308

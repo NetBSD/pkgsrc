@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/05 10:57:05 mjl Exp $
-bin/elfsh
-lib/libelfsh.a
-lib/libelfsh.so
-include/libelfsh.h
-share/doc/elfsh/README
-share/doc/elfsh/libelfsh-ref.txt
-@unexec ${RMDIR} %D/share/doc/elfsh

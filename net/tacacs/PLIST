@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:16 zuntum Exp $
-sbin/tac_plus
-man/man8/tac_plus.8
-share/doc/tacacs/users_guide
-@dirrm share/doc/tacacs

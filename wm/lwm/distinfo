@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/17 16:03:46 agc Exp $
-
-SHA1 (lwm-1.00/lwm.tar.gz) = bd0e6d06c3c999f1364312fe6b505288dec9c12a
-Size (lwm-1.00/lwm.tar.gz) = 23609 bytes
-SHA1 (patch-aa) = 6b1dae47397b33f4071583338e33f5f410c9dd24

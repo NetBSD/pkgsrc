@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:00 zuntum Exp $
-bin/fd
-bin/fd-unicd.tbl
-man/man1/fd.1
-share/doc/fd/FAQ
-share/doc/fd/HISTORY
-share/doc/fd/README
-share/doc/fd/ToAdmin
-@dirrm share/doc/fd

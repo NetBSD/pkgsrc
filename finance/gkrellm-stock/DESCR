@@ -1,5 +1,0 @@
-GKrellStock is a plugin for GKrellM that displays given stock
-tickers (current point and net change).
-
-Uses perl script to get Quote information from given source
-(US, European, Australian, Canadian and Asian Markets).

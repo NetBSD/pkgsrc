@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 00:56:47 hubertf Exp $
-lib/xmms/Visualization/libiris.a
-lib/xmms/Visualization/libiris.la
-lib/xmms/Visualization/libiris.so

@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.2 2002/08/25 21:53:05 jlam Exp $
-
---- defaults/customize.csh.orig	Wed Jul 28 11:44:52 1999
-+++ defaults/customize.csh
-@@ -1,2 +1,3 @@
--set PREFIX = /usr/local
-+#set PREFIX = /usr/local
- set BINDIR = $PREFIX/bin
-+set CC = cc

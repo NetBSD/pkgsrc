@@ -1,7 +1,0 @@
-$NetBSD: t1lib.config.sample,v 1.1 2002/09/19 01:26:44 jlam Exp $
-This is a configuration file for t1lib
-
-FONTDATABASE=@PREFIX@/share/t1lib/FontDataBase
-ENCODING=@PREFIX@/share/t1lib/Fonts/enc
-AFM=@PREFIX@/share/t1lib/Fonts/afm:@LOCALBASE@/share/ghostscript/fonts
-TYPE1=@PREFIX@/share/t1lib/Fonts/type1:/usr/share/groff_font/devps:@LOCALBASE@/share/ghostscript/fonts

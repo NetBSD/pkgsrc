@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/06/03 22:35:39 jmmv Exp $
-
-SHA1 (ddd-3.3.1.tar.gz) = 60327a4097718acc1c095844d043dea0c14343ce
-Size (ddd-3.3.1.tar.gz) = 5820713 bytes
-SHA1 (patch-aa) = 6f8ce32d8aafd06cfa72e1dcb19d516183098a41
-SHA1 (patch-ab) = fcf7b99706479ea27d95649aa228efeb3eb042ff

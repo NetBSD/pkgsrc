@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/03/06 19:08:10 jlam Exp $
-
-SHA1 (rdesktop-1.2.0.tar.gz) = 9432ae527f35a332544cd56660b6d30cd09524b5
-Size (rdesktop-1.2.0.tar.gz) = 125674 bytes
-SHA1 (patch-aa) = 879d83dd83729e51028136f704dbc90f7a52cae1
-SHA1 (patch-ab) = 82e3f44c38cde9dcf8c0f6079b11222024e753ef

@@ -1,9 +1,0 @@
-$NetBSD: patch-am,v 1.1 2001/09/08 20:03:45 jlam Exp $
-
---- doc/man/man5/Imakefile.orig	Fri Sep  7 23:38:35 2001
-+++ doc/man/man5/Imakefile
-@@ -8,3 +8,4 @@
- InstallMotifManPage(Traits,5)
- InstallMotifManPage(UIL,5)
- InstallMotifManPage(WML,5)
-+InstallMotifManPage(mwmrc,5)

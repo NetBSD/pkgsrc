@@ -1,7 +1,0 @@
-The goal of the Subversion project is to build a version control system that
-is a compelling replacement for CVS in the open source community. The software
-is released under an Apache/BSD-style open source license.
-
-This package contains the Python bindings to the Subversion libraries
-and some programs that use them.  This includes cvs2svn, which
-converts CVS repositories to Subversion repositories.

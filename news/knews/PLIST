@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/03 02:56:01 jschauma Exp $
-bin/knews
-lib/X11/app-defaults/Knews
-${IMAKE_MAN_DIR}/knews.${IMAKE_MANNEWSUFFIX}

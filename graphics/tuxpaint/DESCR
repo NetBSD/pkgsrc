@@ -1,8 +1,0 @@
-"Tux Paint" is a drawing program for young children. It provides
-a simple interface and fixed canvas size, and will provide access
-to previous images using a thumbnail browser (e.g., no access to
-the underlying filesystem).
-
-Unlike popular drawing programs like "The GIMP," it has a very
-limited toolset. However, it provides a much simpler interface,
-and has entertaining, child-oriented additions such as sound effects.

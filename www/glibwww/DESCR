@@ -1,7 +1,0 @@
-  Glibwww comprises event register/unregister functions that use the glib
-event loop.  This makes lib www fit nicely into just about any gnome or
-gtk+ program.
-
-  This code may be useful for other people wanting to use libwww with gtk.
-
-  This code includes a nice bonobo control.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/03 22:22:10 jmmv Exp $
-
-SHA1 (cal-3.5.tar.gz) = 4be982ce4576db6e2db8f8006b7bffa016d6af9d
-Size (cal-3.5.tar.gz) = 47645 bytes
-SHA1 (patch-aa) = 37beac0349a79cc02851e88efdfa269505f6a64e
-SHA1 (patch-ab) = 32bea36394cf9747bccd52d4c0595a90b27fcf1c

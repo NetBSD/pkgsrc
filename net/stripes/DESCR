@@ -1,8 +1,0 @@
-Stripes is a Looking Glass implementation that works with Zebra and
-Cisco routers. A Looking Glass is a CGI script for viewing results of
-simple queries executed on remote routers.
-
-The queries and routers can be listed in a configuration file. This
-allows for easy deployment on multiple machines without having to
-modify the program itself. The configuration file is written in Perl,
-so it has a lot of power for adapting to its environment.

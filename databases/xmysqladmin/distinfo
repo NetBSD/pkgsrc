@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/04/17 04:45:11 fredb Exp $
-
-SHA1 (xmysqladmin-1.0.tar.gz) = 60697568fef51c2361a7a31262cb1691c25c3d46
-Size (xmysqladmin-1.0.tar.gz) = 65673 bytes
-SHA1 (patch-aa) = 64fd43bbbdf96614d7ac9121be21a3f1c30ced3c

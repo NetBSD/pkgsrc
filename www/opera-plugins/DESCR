@@ -1,3 +1,0 @@
-Opera 6.x supports loading Netscape 4.x plugins via a plugin wrapper.
-This package utilizies this feature to provide plugins for Opera.
-So far only the Shockwave Flash Plugin is known to work.

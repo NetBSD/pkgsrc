@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:59 skrll Exp $
-
-SHA1 (xscript.tar.Z) = 57d2d5fdcf05718eebc9532347be46ac07206030
-Size (xscript.tar.Z) = 122669 bytes
-SHA1 (patch-aa) = 988d5270563e03df0ec74d69d2379733076f9e04
-SHA1 (patch-ab) = b5b3df7f4952350ea3be15045151803742173a7a

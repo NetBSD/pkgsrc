@@ -1,8 +1,0 @@
-Nkf is a yet another kanji code converter between the different types
-of kanji codes out there.  It can convert between 7-bit JIS, MS-kanji
-(shifted-JIS) or EUC.
-
-One of the most unique facilities of nkf is that it guesses the input
-kanji code. It currently recognizes 7-bit JIS, MS-kanji (shifted-JIS)
-and EUC.  So users don't need to specify (or even know) the input
-kanji code type.

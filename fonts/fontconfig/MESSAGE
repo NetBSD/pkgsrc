@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2002/12/25 03:06:02 grant Exp $
-
-You will need to run 'fc-cache' as root to build the X11
-font cache before attempting to use applications which
-use ${PKGNAME}.
-
-===========================================================================

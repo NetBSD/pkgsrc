@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/12 14:34:29 grant Exp $
-bin/id3v2
-man/man1/id3v2.1

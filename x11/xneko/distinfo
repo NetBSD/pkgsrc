@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/06/08 10:43:56 abs Exp $
-
-SHA1 (xneko.tar.gz) = f1eef2fcad823dce959489f7f6aecd0bcf8155c7
-Size (xneko.tar.gz) = 21111 bytes
-SHA1 (patch-aa) = 0737a9715ec822e285ffbad17f57c2546b4ce565
-SHA1 (patch-ab) = f668f3858cb46a26d0a0897bd76adbd224c7179c

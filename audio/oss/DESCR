@@ -1,6 +1,0 @@
-Open Sound System(TM) (OSS) is the first attempt in unifying the digital
-audio architecture for UNIX.  OSS is a set of device drivers that provide a
-uniform API across all the major UNIX architectures.  It supports Sound
-Blaster or Windows Sound System compatible sound cards which can be plugged
-into any UNIX workstation supporting the ISA or PCI bus architecture.  OSS
-also supports workstations with on-board digital audio hardware.

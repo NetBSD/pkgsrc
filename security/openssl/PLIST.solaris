@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.solaris,v 1.2 2002/09/09 22:17:00 markd Exp $
-lib/libcrypto.so
-lib/libcrypto.so.300
-lib/libcrypto.so.300.0
-lib/libssl.so
-lib/libssl.so.300
-lib/libssl.so.300.0

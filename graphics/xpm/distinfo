@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2002/08/25 18:39:26 jlam Exp $
-
-SHA1 (xpm-3.4k.tar.gz) = a8eac19e5772bf7b3b177353686c1401fbf334bd
-Size (xpm-3.4k.tar.gz) = 148887 bytes
-SHA1 (patch-aa) = 86264a0d832382eef43af740f16bcdf9448f4573
-SHA1 (patch-ab) = 0c8f317cdbde27929790e46d1711ada5e454b79d
-SHA1 (patch-ac) = a0f1692ecfbf0160f5e5a5e3f31ac9398ff667b7
-SHA1 (patch-ad) = fb85487779cf5430224ae6f0a8cdc55350687eae

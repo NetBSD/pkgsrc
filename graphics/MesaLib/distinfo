@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2003/07/04 11:27:39 tron Exp $
-
-SHA1 (MesaLib-3.4.2.tar.bz2) = 1a41b61a29538127dbb0ab2882ac69554a0e9e37
-Size (MesaLib-3.4.2.tar.bz2) = 1380805 bytes
-SHA1 (MesaLib-5.0.1.tar.bz2) = efdda1b592065b714c4cc772d05f21f88b060799
-Size (MesaLib-5.0.1.tar.bz2) = 1661508 bytes
-SHA1 (patch-aa) = 7fa63dca0edfc41812b5432cbabd861ec52cec33
-SHA1 (patch-ac) = e4222d4a2f1cf6092cace568a2eff1aea7da581e

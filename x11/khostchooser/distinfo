@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/08/08 02:06:36 fredb Exp $
-
-SHA1 (khostchooser-0.3.tgz) = f15dec88f2433c9086a6fe3ac502f8d451d76448
-Size (khostchooser-0.3.tgz) = 97334 bytes
-SHA1 (patch-aa) = 3954a6deea2258f4782711ed19bc770af3feb129
-SHA1 (patch-ab) = b97c331b14fdd424073817e2e0e38fe977a42f14

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/04/10 21:15:56 jmc Exp $
-
-SHA1 (fcpackage.2_1.tar.gz) = b4d960ea1e2384f48aa9fed05e90ad4755da12be
-Size (fcpackage.2_1.tar.gz) = 544661 bytes
-SHA1 (patch-aa) = 72db2982e878c85f8d3a236a954bfd3de5e355e6

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/28 09:22:58 agc Exp $
-
-SHA1 (xmbmon201.tar.gz) = 96a8a4724ce8d26215956f943c76eba234de3741
-Size (xmbmon201.tar.gz) = 95967 bytes
-SHA1 (xmbmon201.netbsd.patch.gz) = f040e5c388ca513b7d2c07b7561ced034dd2a809
-Size (xmbmon201.netbsd.patch.gz) = 2520 bytes
-SHA1 (xmbmon201pl1.diff) = 1f554bc778dc962b9db43f3972441e8781f8ecb9
-Size (xmbmon201pl1.diff) = 993 bytes
-SHA1 (patch-aa) = 961134dea1c915d9436fff1cef48bbb2e40b5897

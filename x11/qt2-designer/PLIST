@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:24 zuntum Exp $
-qt2/bin/designer
-qt2/bin/uic
-qt2/lib/libqutil.a
-qt2/lib/libqutil.la
-qt2/lib/libqutil.so
-qt2/lib/libqutil.so.1
-qt2/lib/libqutil.so.1.0

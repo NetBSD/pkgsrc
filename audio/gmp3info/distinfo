@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/30 20:47:29 tron Exp $
-
-SHA1 (mp3info-0.8.4.tgz) = a291aa1c3c216f838f85c1148adbb69f7bf31d80
-Size (mp3info-0.8.4.tgz) = 38773 bytes
-SHA1 (patch-aa) = 8d371ae15a05bd3d4f52ad0b850b9e739fcb0b54

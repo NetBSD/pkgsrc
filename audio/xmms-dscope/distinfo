@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/09/21 01:34:50 jlam Exp $
-
-SHA1 (dscope-1.2.tar.gz) = 5a4750c0a8170c1e2d263df1212262b3adad1210
-Size (dscope-1.2.tar.gz) = 34353 bytes
-SHA1 (patch-aa) = 1dec86cbec9d870ee2586d3f209e4bbb7ecacfb5

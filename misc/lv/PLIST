@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:50 zuntum Exp $
-bin/lv
-bin/lgrep
-lib/lv/lv.hlp
-man/man1/lv.1
-@dirrm lib/lv

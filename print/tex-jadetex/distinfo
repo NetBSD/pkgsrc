@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/04 18:47:06 hubertf Exp $
-
-SHA1 (jadetex-2.20.zip) = 235d90328e6d5d7e231a7908ebfb1b132c3f6892
-Size (jadetex-2.20.zip) = 152421 bytes
-SHA1 (patch-aa) = c59aeec58f8def3e1a608e6a46ead1281f7ce96a

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/02/04 02:42:21 dmcmahill Exp $
-
-SHA1 (covered-20021214.tar.gz) = ce50b83beb52967f69842eaac605a68cb89a6198
-Size (covered-20021214.tar.gz) = 843925 bytes
-SHA1 (patch-aa) = e5b4e0f81899610c766879744010e885d2eec84a
-SHA1 (patch-ab) = 711dc0e2fe7f391c47195a7171daf3564db0fe18
-SHA1 (patch-ac) = 5174c7a46494063ced93eaf9cc2aeea1eaf1b8be

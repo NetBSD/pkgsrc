@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/05/09 23:58:51 jtb Exp $
-
-SHA1 (hdf5-1.4.5-post2.tar.gz) = 6ce6251dc7a4be4bfa1fb6002b6e790a5a23fd5d
-Size (hdf5-1.4.5-post2.tar.gz) = 3046682 bytes
-SHA1 (patch-aa) = 4f9e284a72a2b4f96eab9d38045f7bee9f7787ab

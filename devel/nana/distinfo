@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/23 11:32:01 seb Exp $
-
-SHA1 (nana-2.4.tar.gz) = a1679889fe43da2d25e70974ace6d1f2a44568e0
-Size (nana-2.4.tar.gz) = 345014 bytes
-SHA1 (patch-aa) = e16c34a228037451fba97f8fc653f9b9000149c0

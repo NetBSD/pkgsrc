@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:52 zuntum Exp $
-bin/gnuchess
-bin/gnuchessx
-lib/gnuchess/.directory
-share/doc/gnuchess/README
-@dirrm share/doc/gnuchess
-@dirrm lib/gnuchess

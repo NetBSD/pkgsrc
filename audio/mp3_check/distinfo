@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/11/14 23:19:29 jlam Exp $
-
-SHA1 (mp3_check-1.98.tar.gz) = 64f796d9b29fecb34ce05b05d75404aadd8fdb52
-Size (mp3_check-1.98.tar.gz) = 83098 bytes
-SHA1 (patch-ab) = 6c63b7addb3721d392a00d36e8efef8464b66ebd
-SHA1 (patch-ac) = f3e348cbab998e4247f5e6630e55966df8bc6899

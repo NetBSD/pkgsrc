@@ -1,7 +1,0 @@
-Psiconv can translate Psion Word files to HTML (either 3.2 or 4.0) or plain
-text, and it can translate Psion Sketch and MBM files to almost any graphic
-format. It is not yet perfect, but it can easily be extended. Psiconv-0.6.1
-includes the description of the Psion file formats, version 2.5.
-
-the Psion file formats description:
-	http://huizen.dds.nl/~frodol/psiconv/html/Index.html

@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/09/12 17:09:57 wiz Exp $
-
-You must set the environment variable MAGIC_HOME to ${PREFIX} to
-use the tools in this package.
-
-===========================================================================

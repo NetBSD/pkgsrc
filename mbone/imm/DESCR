@@ -1,8 +1,0 @@
-IMM has been designed to efficiently replicate files/file directories
-using a reliable dissemination protocol framework and provide archiving
-and post processing features.  The default mode of operation is for imm
-to receive and display compressed imagery files (e.g., jpg,gif) using
-xv or xloadimage as a post processor.
-
-The sdr plugin file from the earlier imm release has been integrated into
-the NetBSD sdr package.

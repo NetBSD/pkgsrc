@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:06 skrll Exp $
-sbin/arpwatch
-sbin/arpsnmp
-etc/ethercodes.dat
-man/man8/arpwatch.8
-man/man8/arpsnmp.8
-@exec ${MKDIR} /var/db/arpwatch
-@exec /usr/bin/touch /var/db/arpwatch/arp.dat

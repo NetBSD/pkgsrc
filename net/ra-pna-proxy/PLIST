@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:18 zuntum Exp $
-libexec/ra-pna-proxy
-man/man8/ra-pna-proxy.8
-share/doc/ra-pna-proxy/license.txt
-@dirrm share/doc/ra-pna-proxy

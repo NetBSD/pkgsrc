@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:21 wiz Exp $
-
-SHA1 (sscript-lib2.0.tar) = f2de038ea95f2b553b57c5694fa6cd2530b6af30
-Size (sscript-lib2.0.tar) = 30720 bytes
-SHA1 (patch-aa) = a055668a994db3d865867f28fc64f5072b47933e

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:54 zuntum Exp $
-lib/tcl/tclgdbm/libtclgdbm.a
-lib/tcl/tclgdbm/libtclgdbm.la
-lib/tcl/tclgdbm/libtclgdbm.so
-lib/tcl/tclgdbm/libtclgdbm.so.0
-lib/tcl/tclgdbm/libtclgdbm.so.0.0
-lib/tcl/tclgdbm/pkgIndex.tcl
-man/mann/tclgdbm.n
-@dirrm lib/tcl/tclgdbm

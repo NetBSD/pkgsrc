@@ -1,3 +1,0 @@
-CIA - Crude IP Accounting can read and process output from "tcpdump(1)"
-and "ipmon(8)", divide on accounts and print the balances of those
-accounts.

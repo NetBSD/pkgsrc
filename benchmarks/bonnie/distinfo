@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/06/09 00:25:12 grant Exp $
-
-SHA1 (bonnie.tar.gz) = f435ae56903883c8e3e011eb989783c8410f5ee3
-Size (bonnie.tar.gz) = 7140 bytes
-SHA1 (patch-aa) = 33ac03e1c70bba2aedf0482e23c16cf19956b47e
-SHA1 (patch-ac) = c05ff777135943cff5439010d6d3b420e9cc84a0

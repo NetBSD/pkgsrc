@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/23 22:27:05 seb Exp $
-
-SHA1 (pcl-cvs-2.9.9.tar.gz) = 7fb527a2a5b9c8ff8256682a11928497fc6cdf96
-Size (pcl-cvs-2.9.9.tar.gz) = 140016 bytes
-SHA1 (patch-aa) = 8c1339cb486c0a05e09ac3a32d2580cf5000eace

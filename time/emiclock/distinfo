@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/08/23 04:26:54 jlam Exp $
-
-SHA1 (emiclock-2.0.2.tar.gz) = e1c042d600faf59ecdb11f1199f1793282db90c1
-Size (emiclock-2.0.2.tar.gz) = 308682 bytes
-SHA1 (patch-aa) = 082873291d05709ecc392a3e6295078065aa1d30
-SHA1 (patch-ab) = 8c83e056bd03b0f493f91afd33ce572ed673511b
-SHA1 (patch-ac) = 4b020ac03c958d1ca44968c17b7d657edda77690
-SHA1 (patch-ad) = 21ddc7456641bf5a4c50b8d6f04b2874378cd868
-SHA1 (patch-ae) = 75250a553700eeacd5fcc6f71ed4477541cab6c0

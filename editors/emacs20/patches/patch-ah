@@ -1,17 +1,0 @@
-$NetBSD: patch-ah,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
-
---- src/fileio.c.orig	Tue May 16 20:02:13 2000
-+++ src/fileio.c	Sun Jun 18 09:19:08 2000
-@@ -3252,8 +3252,11 @@
-   return value;
- }
- 
--#ifdef unix
-+#ifdef __NetBSD__
-+#define unix 42
-+#endif
- 
-+#ifdef unix
- DEFUN ("unix-sync", Funix_sync, Sunix_sync, 0, 0, "",
-   "Tell Unix to finish all pending disk updates.")
-   ()

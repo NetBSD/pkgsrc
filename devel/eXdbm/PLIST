@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:18 zuntum Exp $
-include/eXdbmErrors.h
-include/eXdbmTypes.h
-include/eXdbm.h
-lib/libeXdbm.a
-share/doc/eXdbm/eXdbm.txt
-@dirrm share/doc/eXdbm

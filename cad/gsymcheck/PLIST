@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:23 zuntum Exp $
-bin/gsymcheck
-man/man1/gsymcheck.1
-share/gEDA/system-gsymcheckrc

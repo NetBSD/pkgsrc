@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/02 17:33:17 jmmv Exp $
-
-SHA1 (crack5.0.tar.gz) = e5e59d1e5e9e42c816a4dbd3f24cc13e16a31365
-Size (crack5.0.tar.gz) = 2964507 bytes
-SHA1 (patch-aa) = 014a04ba7aa50f8514d5219a3269feeccc684708
-SHA1 (patch-ab) = a60df3b47288abf28e44400e4035580da765e279
-SHA1 (patch-ac) = efa6903c59be394db1282d0760d55953a955e1ee
-SHA1 (patch-ad) = 49387a2aa147ff543d57e660dbe0d8b2861d8f52

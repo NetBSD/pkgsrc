@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/03 18:41:28 jschauma Exp $
-
-SHA1 (blender-2.27.tar.bz2) = 6dc871d6460b993620f7be4c5e8bb30433702c53
-Size (blender-2.27.tar.bz2) = 6038215 bytes
-SHA1 (BlenderManual.html.tar.gz) = be50eea42a8621538ef6648c3f4a1200eeca36f8
-Size (BlenderManual.html.tar.gz) = 10885618 bytes
-SHA1 (patch-aa) = 81ab593aa83062bbe529c3b641f2f852120daf99
-SHA1 (patch-ab) = 97495a347882a746238b65456c1e9d4bea38aa0e

@@ -1,9 +1,0 @@
-Shellscript that will take an URL of a source .tar.gz (or other)
-file, and perform some steps to generate a package:
-
- - setup a basic Makefile
- - run "make fetch" and "make makesum"
- - generate a dummy pkg/PLIST
- - run "make extract"
- - try to find out the WRKSRC (if needed)
- - try to find out of this package uses GNU auto-configure

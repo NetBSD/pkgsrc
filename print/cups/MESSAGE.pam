@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.pam,v 1.2 2002/09/24 12:30:32 wiz Exp $
-
-To authenticate for CUPS using PAM, add the contents of the file:
-
-        ${PREFIX}/share/examples/cups/cups.pam
-
-to your PAM configuration file.
-===========================================================================

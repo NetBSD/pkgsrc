@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/01/15 21:19:57 seb Exp $
-
-SHA1 (nvi-1.81.5.tar.bz2) = 63a5837cf9e726c10a9927323b451390e267765e
-Size (nvi-1.81.5.tar.bz2) = 1274353 bytes
-SHA1 (patch-aa) = 4dcab66a7326e2f25d50bf188d941c7961a5955d
-SHA1 (patch-ab) = d5cb1cccb2799bb21822dcd0e11d7208c60f40b6
-SHA1 (patch-ac) = 239764397e64323edfba6fcf4ae99846cebbdbe1
-SHA1 (patch-ad) = 3cdd8ea5ad6c9c4e6a2d1f77d0b28f80fae44fd0

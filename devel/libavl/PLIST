@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/23 11:18:23 seb Exp $
-include/avl.h
-include/avlt.h
-include/avltr.h
-include/rb.h
-info/avl.info
-lib/libavl.a

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/07/11 19:04:09 jmmv Exp $
-
-SHA1 (gnome-panel-2.2.2.2.tar.bz2) = c556c40044a9dfe640a656a9b40c8ced0167c365
-Size (gnome-panel-2.2.2.2.tar.bz2) = 2681490 bytes
-SHA1 (patch-ac) = fcb8a31916c1752f8779c926e988a518dd2ca006
-SHA1 (patch-ae) = 0e2b0efbce597d5517b05216ed3eaaa5ae5b7351

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/09/21 00:56:03 jlam Exp $
-
-SHA1 (SpiralSynth-0.1.7.tar.gz) = 8b66749b940c9dcfcd4a71c319ac233139014204
-Size (SpiralSynth-0.1.7.tar.gz) = 62393 bytes
-SHA1 (patch-aa) = 808568dac9ddd3331434a6a78bc9778fed635d13
-SHA1 (patch-ab) = eea5f0a97ccc796a176d48b2acfe61f6a455e51f
-SHA1 (patch-ad) = 207bc32f2991f99ba2e907a417d127f0073b3d24

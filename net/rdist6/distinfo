@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:31 wiz Exp $
-
-SHA1 (freerdist-0.92.tar.gz) = 84db4efd8d223a7e10d62e386349aa9236f71ae3
-Size (freerdist-0.92.tar.gz) = 135824 bytes
-SHA1 (patch-aa) = 0ea7d5838b7d491f2f599e0b53b195978bae2565
-SHA1 (patch-ab) = 3cd2de9d584e8aaa0cf4258c66ba027ff767a367
-SHA1 (patch-ac) = 78df932333c8742139368abb5d12b910d34e222c
-SHA1 (patch-ad) = 89500d25dc2fb34c0295836f7ab18433218c85ea
-SHA1 (patch-ae) = 5df68e7152f0a8c5922b94cdf3a3ba3e306250d7

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/19 15:03:36 drochner Exp $
-${PYLIB}/lib-dynload/ExpectPymodule.so
-share/examples/${PYPKGPREFIX}-expect/ask.py
-share/examples/${PYPKGPREFIX}-expect/glob.py
-share/examples/${PYPKGPREFIX}-expect/ping.py
-share/examples/${PYPKGPREFIX}-expect/telnet.py
-share/examples/${PYPKGPREFIX}-expect/xping.py
-@dirrm share/examples/${PYPKGPREFIX}-expect

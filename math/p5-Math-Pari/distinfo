@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/07/07 22:07:44 jtb Exp $
-
-SHA1 (Math-Pari-2.001804.tar.gz) = adb19ceb2acdf716869a519b0d75923c1276df83
-Size (Math-Pari-2.001804.tar.gz) = 100492 bytes
-SHA1 (patch-aa) = 30311d156b407eff4ba282484b45ebc13cfb56bb

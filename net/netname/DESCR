@@ -1,3 +1,0 @@
-netname returns the canonical network name of the given
-host on the standard output.  If no host is given, the
-name of the local machine is used.

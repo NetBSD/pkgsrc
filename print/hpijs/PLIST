@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 00:01:29 jlam Exp $
-bin/hpijs
-share/doc/html/hpijs/gs_hpijs.png
-share/doc/html/hpijs/hpijs_readme.html
-@dirrm share/doc/html/hpijs

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/27 19:05:54 jschauma Exp $
-lib/german.aff
-lib/german.hash
-lib/deutsch.aff
-lib/deutsch.hash

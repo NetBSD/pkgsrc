@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/05/02 07:57:31 zuntum Exp $
-
-SHA1 (ekg-1.0.tar.gz) = 38819519a45c106d45b1bde63637ff3ccddf1281
-Size (ekg-1.0.tar.gz) = 425682 bytes
-SHA1 (patch-aa) = c0d80e90836b7e03ddd5d30be8f64238f7251e25
-SHA1 (patch-ab) = 626765db378e40f08f459df3fb6c4649a5fdc53b

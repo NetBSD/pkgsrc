@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/05/24 11:23:08 salo Exp $
-
-SHA1 (giram-0.3.5.tar.gz) = f8ecdd1a954315cb9e1356af3b8a3b20fb9f9b41
-Size (giram-0.3.5.tar.gz) = 1028404 bytes
-SHA1 (patch-aa) = a575aba5e5bc501f62b7ccd409f3d45306e8b002
-SHA1 (patch-ab) = d26d581019ef91e42c93a4eee01d7b78b69e65f3

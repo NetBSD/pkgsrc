@@ -1,6 +1,0 @@
-This is a plugin for gkrellm that simply prints the current clock
-speed for users that own speed stepping processors.  It works on
-normal non-stepping processors also, but there isn't really any point
-in measuring the clock if it is the same every time you measure it, is
-there?  Included code from x86info to calculate an estimate clock
-speed.

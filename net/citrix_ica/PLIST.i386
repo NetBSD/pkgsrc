@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.i386,v 1.2 2002/08/05 00:34:56 dmcmahill Exp $
-lib/ICAClient/VDSCARD.DLL
-lib/ICAClient/pkginf/F.core.linuxx86
-lib/ICAClient/pkginf/Ver.core.linuxx86

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:11:05 agc Exp $
-
-SHA1 (tclgdbm-0.8.tar.gz) = c8d2116303351832dd98552ed94701693292224b
-Size (tclgdbm-0.8.tar.gz) = 111619 bytes
-SHA1 (patch-aa) = ebba0cbd712655eaf23e476a4c8b56079cea1f59
-SHA1 (patch-ab) = f27346a74617e018721530d7f30d499c336d23dd

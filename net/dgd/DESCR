@@ -1,8 +1,0 @@
-DGD (Dworkin's Generic Driver, also known as Dworkin's Game Driver)
-is an object-oriented programmable server.  It is a re-implementation
-from scratch of the LPMud server created by Lars Pensjoe.  However,
-rather than embracing and extending LPMud 3.1.2, the last version of
-LPMud created by Lars, DGD departs from LPMud at an earlier version,
-2.4.5.
-
-Please report bugs to <felix@dworkin.nl>.

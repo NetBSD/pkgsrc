@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/01/31 12:57:07 tron Exp $
-
-SHA1 (wmbiff-0.4.13.tar.gz) = 3e8efffb6a2d0456b88bc4f0f990ffaf41f8fa10
-Size (wmbiff-0.4.13.tar.gz) = 176897 bytes
-SHA1 (patch-aa) = 2007bd498ef54b6fc9779092bcf0771e41dec8e0
-SHA1 (patch-ab) = 297984c76e062f11ead42a2b834ab9dc81d2bdd5

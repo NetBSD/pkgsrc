@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/27 13:35:09 agc Exp $
-
-SHA1 (wmphoto-0.3a.tar.gz) = dbec1ddd49671bc915b6e9ce37462247557f7fb9
-Size (wmphoto-0.3a.tar.gz) = 19320 bytes
-SHA1 (patch-aa) = 53c1d2817e36b8cee04572edca295d0555e1e853

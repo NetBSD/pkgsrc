@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/30 13:24:58 damon Exp $
-
-SHA1 (gkrellweather-0.2.7.tar.gz) = 509ec48ee81022f22ebe8cfa01768bcc6db2a7a7
-Size (gkrellweather-0.2.7.tar.gz) = 17188 bytes
-SHA1 (patch-aa) = e1fed69e9ea938c1295bff7b06c29187c5a5ed4b

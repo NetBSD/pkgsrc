@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/02 22:44:46 jmmv Exp $
-bin/pkg-config
-man/man1/pkg-config.1
-share/aclocal/pkg.m4

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:39 zuntum Exp $
-lib/libport.a
-include/portlib.h

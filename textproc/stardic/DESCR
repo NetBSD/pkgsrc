@@ -1,8 +1,0 @@
-* an English-Chinese dictionary software for Unix;
-* about 50000 words, some have phonetic symbols;
-* rule match;
-* fetch word from screen;
-* no Chinese environment needed;
-
-If you want to start stardic with traditional Chinese font, type
-'stardic -ft'.

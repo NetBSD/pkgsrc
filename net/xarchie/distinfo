@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:41 wiz Exp $
-
-SHA1 (xarchie-2.0.10.tar.gz) = e791f32dbdcad1514fac2c6c7bf49843362ac5e8
-Size (xarchie-2.0.10.tar.gz) = 274360 bytes
-SHA1 (patch-aa) = 855419e702d717b11aebea335a53ddef5f95669a

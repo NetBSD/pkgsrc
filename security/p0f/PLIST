@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/12 01:10:59 zuntum Exp $
-bin/p0f
-share/doc/p0f.README
-share/doc/p0frep
-share/examples/p0f/p0f.fp
-@dirrm share/examples/p0f

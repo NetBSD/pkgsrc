@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/03/07 07:55:22 jmc Exp $
-
-SHA1 (pxe-1.2.tar.gz) = d298f5892e7a1cf36af5b6c82eba28d4a724f11c
-Size (pxe-1.2.tar.gz) = 44235 bytes
-SHA1 (patch-aa) = e7f36f61cbccda8fc8efedc706c7ecc8ed4a9e17

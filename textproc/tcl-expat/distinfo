@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/09/29 00:18:06 jwise Exp $
-
-SHA1 (TclExpat-1.1.tar.gz) = 232bb47305a471dc0f8bc52e684a04b7cf703b80
-Size (TclExpat-1.1.tar.gz) = 268538 bytes
-SHA1 (patch-aa) = 52e2f5a33eb8cf8aab9ed602a8a66f9123eba95c
-SHA1 (patch-ab) = 9985adb007741c36182d093a18c210c0230ac566

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.tls,v 1.3 2003/05/21 09:24:01 martti Exp $
-libexec/postfix/tlsmgr
-man/man8/tlsmgr.8
-share/doc/postfix/IPV6_README
-share/examples/postfix/sample-ipv6.cf
-share/examples/postfix/sample-tls.cf

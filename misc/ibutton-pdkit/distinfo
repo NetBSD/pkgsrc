@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:12 agc Exp $
-
-SHA1 (ulinuxgnu.zip) = 3c60908177c665fc10f56b6b81c39c6117b7d9d2
-Size (ulinuxgnu.zip) = 837059 bytes
-SHA1 (patch-aa) = 59a7106d544315cdebaf236edb81b32fccd83971

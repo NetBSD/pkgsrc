@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/07/13 10:39:40 wulf Exp $
-
-SHA1 (nas-1.6.src.tar.gz) = cba0fae4be38cdad9b84e79cbabb8cad2b44bbe0
-Size (nas-1.6.src.tar.gz) = 1099385 bytes
-SHA1 (patch-ab) = 777e5d1e9beaa1a4837a70e7dbc522eb1cb78f9c
-SHA1 (patch-ac) = 36f8ee0ec494e9d6a7994780c608c7a5fbf2114d
-SHA1 (patch-ad) = c8e77228282cdd4de5d9686e88a260e286c6bf80
-SHA1 (patch-ae) = f8ec2cb1809937aa7366ab65bee294e8affce543
-SHA1 (patch-af) = 3dfd09dad97549c69e44aac042ed971534926cca

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/10 19:50:11 jmmv Exp $
-
-SHA1 (gabber-0.8.8.tar.gz) = d2443b056404640bb5b360966b9c6223802617db
-Size (gabber-0.8.8.tar.gz) = 2206079 bytes
-SHA1 (patch-aa) = 89bdd406d61d45016ca0a84364eff25e70a707b6
-SHA1 (patch-ab) = 7e45af755011b298295375a8466358cdf2d90dd6
-SHA1 (patch-ac) = bdc8c9539ccc4f44ecd0d5f303c761c9923cb998

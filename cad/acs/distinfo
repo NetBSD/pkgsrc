@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/07/05 12:01:32 dmcmahill Exp $
-
-SHA1 (acs-0.29.tar.gz) = 0b02a1456871ed1cbed92c73ffe37c5ab32352f5
-Size (acs-0.29.tar.gz) = 1186938 bytes
-SHA1 (patch-aa) = cd42330811619814a29088145a559012f5e1a25a
-SHA1 (patch-ab) = af391bd5db0a367caed0e4891b842972ad9a29b7

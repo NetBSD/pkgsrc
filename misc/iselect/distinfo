@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/07/22 16:34:44 wiz Exp $
-
-SHA1 (iselect-1.2.0.tar.gz) = 42fcd53f0477a92e39ab370c438586dc46826436
-Size (iselect-1.2.0.tar.gz) = 74244 bytes
-SHA1 (patch-aa) = 3a92d9379753689d221300c51d86efadd00e971b
-SHA1 (patch-ab) = e100b569f69ba7641b1a73801c24e25c5bfbf958
-SHA1 (patch-ac) = 97f8c402a994341bf555582929152d78edcb3e64

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:59 zuntum Exp $
-bin/tidy
-man/man1/tidy.1
-share/doc/tidy/Overview.html
-share/doc/tidy/grid.gif
-share/doc/tidy/release-notes.html
-share/doc/tidy/tidy.gif
-@dirrm share/doc/tidy

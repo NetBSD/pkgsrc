@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/03/15 00:22:42 jmc Exp $
-
-SHA1 (vslisp-4.0-1.tar.gz) = ccd21360f6bd2a7f47638797a7a5d25d2f8cb797
-Size (vslisp-4.0-1.tar.gz) = 167403 bytes
-SHA1 (patch-aa) = 5a397669bed7663ccdbd86d57e7669a70d16b5e1
-SHA1 (patch-ab) = 645d4a4ffd6949b9406083744b71676220bf19be
-SHA1 (patch-ac) = 490975b1e19ee6aaaf05fb2ade1d79e805257540
-SHA1 (patch-ad) = a08e31d1c11aa8aae909c2641f4f80f4ca39413a
-SHA1 (patch-ae) = b39473d8008d48ba19fc980e374bc95c28996705

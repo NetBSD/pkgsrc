@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/23 11:54:03 wiz Exp $
-
-SHA1 (kdf-0.5.1.tgz) = 66f8fa8fde7ec9984e1c89d041df8a543ad06a74
-Size (kdf-0.5.1.tgz) = 193989 bytes
-SHA1 (patch-aa) = 0e1945b2fc33780ab6c156a23e5dcc7202ab171b
-SHA1 (patch-ab) = 8f7fa93665371eda1448317cd12db2e68c49034e
-SHA1 (patch-ac) = 297143df78c6939b6ed1f752b44d49e0415d64af
-SHA1 (patch-ad) = bc98f04ee70b716209805a4c4af62157dc6a9e6b
-SHA1 (patch-ae) = 8a97c64ee1916149b80c390877c1379e3997d62f

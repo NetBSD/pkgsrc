@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/05/24 18:27:16 martin Exp $
-
-SHA1 (wmpload-0.9.4.tar.gz) = 3a589b1b64ba57ea1a073e85b150784db2cb7f9b
-Size (wmpload-0.9.4.tar.gz) = 21461 bytes
-SHA1 (patch-aa) = 0a2588b498503683835356a4cf931a9debed68f5
-SHA1 (patch-ab) = 2bd0a6e27da3e79afa76c9164f3419756080d286

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 17:09:18 zuntum Exp $
-bin/Packer
-bin/critter
-bin/puckman
-man/man6/critter.6
-share/Critical_Mass/lg-criti.xm
-share/Critical_Mass/resource.dat
-@dirrm share/Critical_Mass

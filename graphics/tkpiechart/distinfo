@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:27 wiz Exp $
-
-SHA1 (tkpiechart-5.4.tar.gz) = 20f0b07f7421311c58b845e3ee4842411b3de87a
-Size (tkpiechart-5.4.tar.gz) = 45341 bytes
-SHA1 (patch-ac) = 7f4dbb5afe5e8173de644a9c895ddab4163a630e
-SHA1 (patch-ad) = 4947e8062164262b4028442d54fd2712766aa243
-SHA1 (patch-ae) = b9ea234844b67c038c5e131880e6afe535453790
-SHA1 (patch-af) = b5b7d00f4d18e93b90bc4408218bc19412ec7d41

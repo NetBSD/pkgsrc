@@ -1,4 +1,0 @@
-This package contains the German (german) dictionary for the
-interactive spelling checker ispell.
-Use with 'ispell -d german filename'; you probably also need
-the '-Tlatin1' option.

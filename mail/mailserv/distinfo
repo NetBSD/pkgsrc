@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/01 11:59:49 jmmv Exp $
-
-SHA1 (mailserv.tar.gz) = 3f00cf28775273937dba050a23907c501d3f7fe4
-Size (mailserv.tar.gz) = 26687 bytes
-SHA1 (patch-aa) = 8ee34039096ea7b94a24b87d93e49bf4b682e7d9

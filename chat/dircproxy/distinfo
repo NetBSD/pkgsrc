@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/02 15:20:07 jmmv Exp $
-
-SHA1 (dircproxy-1.0.5.tar.gz) = eaf159d2a1303f82e079940b381c0e71b9b90c28
-Size (dircproxy-1.0.5.tar.gz) = 217965 bytes
-SHA1 (patch-aa) = 9c59e9f4c0cfaca7a9e000eab2a8af1b6c16329f

@@ -1,4 +1,0 @@
-SMPEG is based on UC Berkeley's mpeg_play software MPEG decoder
-and SPLAY, an MPEG audio decoder created by Woo-jae Jung.  The
-current version is capable to play back MPEG video and sound on
-Pentium II based systems.

@@ -1,3 +1,0 @@
-This program will talk to usb based diamond mm products (with
-exception of the rio500, try rio500.sourceforge.net). This code
-will be maintained until the first release of libpdmp.

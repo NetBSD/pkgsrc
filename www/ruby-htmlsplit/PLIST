@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:45 zuntum Exp $
-${RUBY_SITELIBDIR}/htmlsplit.rb
-${RUBY_DOCDIR}/htmlsplit/ja/htmlsplit.html
-@dirrm ${RUBY_DOCDIR}/htmlsplit/ja
-@dirrm ${RUBY_DOCDIR}/htmlsplit
-${RUBY_EXAMPLESDIR}/htmlsplit/splittest.rb
-@dirrm ${RUBY_EXAMPLESDIR}/htmlsplit

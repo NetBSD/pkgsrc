@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/09/26 18:39:41 wiz Exp $
-
-SHA1 (gnome-print-0.36.tar.gz) = a1b2ada6b8ce432731233607ac2e3567ccae675e
-Size (gnome-print-0.36.tar.gz) = 1003090 bytes
-SHA1 (patch-ac) = 8a9e69c00e4c9440d7a57d86c3ee28d914a9f3ce

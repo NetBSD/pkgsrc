@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2003/02/05 03:57:13 jlam Exp $
-
-SHA1 (expat-1.95.6.tar.gz) = 1f062c91c6e51d3a91f9fdeacf202bb5b2b53d27
-Size (expat-1.95.6.tar.gz) = 291876 bytes
-SHA1 (patch-aa) = ece8cc6856144c27e680822f3c419a449dabbefc

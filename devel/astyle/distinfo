@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:10 wiz Exp $
-
-SHA1 (astyle_1.13.6.1.zip) = 4e0172fe30986d68c61b4a7c1638a1fc42ea0675
-Size (astyle_1.13.6.1.zip) = 61422 bytes
-SHA1 (patch-aa) = 963338c21b5015fd7a5284a57419557026ee8093

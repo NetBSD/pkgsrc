@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/05/22 05:48:14 jlam Exp $
-
-SHA1 (cdecl-2.5.tar.gz) = b955a0b95b635090360b19de888cb29d5c005296
-Size (cdecl-2.5.tar.gz) = 21435 bytes
-SHA1 (patch-aa) = 48cd50b6c1aee3286c9dabe2e21fbeccc1a03e3b
-SHA1 (patch-ab) = e8c9f70894ed5613234ed17b8c1c95c9b12afd7b

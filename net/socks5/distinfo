@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:34 wiz Exp $
-
-SHA1 (socks5-v1_0r2_tar.gz) = 57c6e3a17381ce48bed008a86442385dbc2d11de
-Size (socks5-v1_0r2_tar.gz) = 390331 bytes
-SHA1 (patch-aa) = 5960986bf8aa8e8abf96df90b4b9c1940b1adb98
-SHA1 (patch-ab) = 85e70c3a81ee5dc44af24f48fe4d3869c0985854

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/12 01:11:00 zuntum Exp $
-
-SHA1 (p0f-1.8.3.tgz) = 1fc476d23ad951d047c3b4f5abbf5078172642c0
-Size (p0f-1.8.3.tgz) = 29733 bytes
-SHA1 (patch-aa) = 247551da9cb6194577b4bab32e3b9b0355b13bbc

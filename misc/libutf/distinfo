@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/23 08:03:03 jmmv Exp $
-
-SHA1 (libutf-2.10.tar.gz) = 8dd0f6873112deaa5b5bf2a0554e28f9d8d4ddda
-Size (libutf-2.10.tar.gz) = 55099 bytes
-SHA1 (patch-aa) = 13ed8cf7d011e10f207d0d95a9d033b41251be44
