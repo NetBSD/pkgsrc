@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3355 2005/04/04 09:33:51 adam Exp $
+$NetBSD: TODO,v 1.3356 2005/04/04 09:35:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-IO-Zlib-1.04
-	o p5-Lchown-1.00
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Lexicon-0.48
 	o p5-MARC-1.38
