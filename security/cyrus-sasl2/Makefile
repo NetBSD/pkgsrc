@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/05 12:10:29 markd Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/08 22:13:14 jlam Exp $
 
 .include "Makefile.common"
 
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--enable-otp		# OTP
 CONFIGURE_ARGS+=	--enable-digest		# DIGEST-MD5
 CONFIGURE_ARGS+=	--with-rc4
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 BUILD_DEFS+=		USE_PAM SASL_USE_GSSAPI
 
@@ -27,8 +27,7 @@ CONFIGURE_ARGS+=	--with-devrandom=/dev/urandom
 
 # saslauthd needs to find libraries for different authentication mechanisms.
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
-BUILD_DEFS+=		USE_PAM
+.  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .endif
 

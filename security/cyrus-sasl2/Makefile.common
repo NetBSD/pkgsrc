@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2003/12/15 14:10:49 martti Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/01/08 22:13:14 jlam Exp $
 #
-# This Makefile fragment should be included _below_ and SASL_PLUGIN
+# This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
 DISTNAME=	cyrus-sasl-2.1.15
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -16,18 +15,23 @@ DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl2/distinfo
 FILESDIR=		${.CURDIR}/../cyrus-sasl2/files
 PATCHDIR=		${.CURDIR}/../cyrus-sasl2/patches
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(SASL_PLUGIN) && !empty(SASL_PLUGIN:M[yY][eE][sS])
-DEPENDS+=		cyrus-sasl>=2.1.12:../../security/cyrus-sasl2
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  if defined(DEFAULT_VIEW.cyrus-sasl)
+DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
+.  endif
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		SHLIBTOOL="${PKGSHLIBTOOL}"
-
-.include "../../mk/bsd.prefs.mk"
 
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator
@@ -37,8 +41,10 @@ CYRUS_GROUP?=		mail
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 
-HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
+_PLUGINDIR=		${VIEWBASE}/lib/sasl2
+
+HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
 # /var/run/saslauthd matches the default value in configure.
 SASLSOCKETDIR=		/var/run/saslauthd
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
@@ -49,7 +55,7 @@ BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
-CONFIGURE_ARGS+=	--with-plugindir=${PLUGINDIR}
+CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR}
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--disable-anon		# ANONYMOUS
