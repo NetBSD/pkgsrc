@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.5 2002/12/18 15:31:22 christos Exp $
+
+--- src/init.c.orig	Sun Mar 26 02:47:01 2000
++++ src/init.c	Wed Dec 18 10:29:05 2002
+@@ -895,9 +895,13 @@
+ /*
+  * Close all unused file descriptors.
+  * We don't want them, we don't need them.
++ * We keep stdout/stderr, and we will re-open stdin, because
++ * we want 0,1,2 open so that when pututxline() calls utmp_update
++ * which is set{u,g}id() the kernel does not complain.
+  */
+     for (i = 0; i < num_fds; i++) {
+-	if (i == STDERR_FILENO || i == cfd || i == tty_fd || i == Xfd)
++	if (i == STDOUT_FILENO || i == STDERR_FILENO
++	    || i == cfd || i == tty_fd || i == Xfd)
+ 	    continue;
+ 	close(i);
+     }
