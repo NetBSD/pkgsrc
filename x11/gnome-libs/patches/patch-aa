@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1 1998/09/04 22:14:26 agc Exp $
+
+Use our own version of libtool
+Set CPPFLAGS correctly so that it finds all the pre-req header files
+Comment out erroneous settings of the INSTALL variable.
+
+--- configure.orig	Fri Aug  7 02:01:30 1998
++++ configure	Fri Aug 14 14:59:42 1998
+@@ -78,6 +78,9 @@
+ # Initialize some other variables.
+ subdirs=
+ MFLAGS= MAKEFLAGS=
++CFLAGS="-I../intl -I$X11BASE/include -I$LOCALBASE/include"
++CPPFLAGS="-I../intl -I$X11BASE/include -I$LOCALBASE/include -I$LOCALBASE/include/giflib"
++LDFLAGS="-L$X11BASE/lib -L$LOCALBASE/lib"
+ # Maximum number of lines to put in a shell here document.
+ ac_max_here_lines=12
+ 
+@@ -1621,6 +1624,7 @@
+ 
+ 
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ 
+@@ -1700,6 +1704,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+@@ -6711,10 +6716,10 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
+-  case "$ac_given_INSTALL" in
+-  [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-  esac
++#  case "$ac_given_INSTALL" in
++#  [/$]*) INSTALL="$ac_given_INSTALL" ;;
++#  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
++#  esac
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
+@@ -6980,10 +6985,10 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
+-  case "$ac_given_INSTALL" in
+-        [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-        esac
++#  case "$ac_given_INSTALL" in
++#        [/$]*) INSTALL="$ac_given_INSTALL" ;;
++#        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
++#        esac
+ 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.
