@@ -1,6 +1,29 @@
-# $NetBSD: Interix.mk,v 1.8 2004/10/29 14:53:39 tv Exp $
+# $NetBSD: Interix.mk,v 1.9 2004/10/29 15:15:10 tv Exp $
 #
 # Variable definitions for the Interix operating system.
+
+# SHLIB BASE ADDRESSES:
+#
+# [tv] For reference, here's a list of shared library base address ranges used
+# throughout pkgsrc to cope with the fact that Interix has no proper 
+# support in the compiler.  This list will be kept updated for any new packages
+# also needing special handling.
+#
+# Fortunately, libtool covers most of this, and uses a randomized base address
+# selection as described below.  This randomized base address concept is used
+# again in a couple other places.
+#
+# * = currently uses fixed default of 0x10000000 and needs something better
+#     (this base address restricts how far sbrk() can go in memory, and of
+#     course, collides with everything else, requiring runtime RSS relocs)
+#
+# pkg		start		end		slotsize	#slots
+#
+# libtool-base	0x50000000	0x6fffffff	0x00040000	2048
+# netpbm	0x6b000000	0x6cffffff	0x00100000	32
+# openssl	0x5e000000	0x5fffffff	0x00100000	32
+# perl58	*
+# zsh		*
 
 AWK?=		/usr/contrib/bin/gawk
 BASENAME?=	/bin/basename
