@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2000/09/25 19:11:44 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2002/08/11 09:21:58 agc Exp $
 
 --- Makefile.orig	Thu Jan 13 21:04:47 2000
 +++ Makefile
-@@ -1,46 +1,14 @@
+@@ -1,46 +1,16 @@
 -# makefile for:		avltree
 -# version:		1.1
 -# Date created:		13 January 2000
@@ -24,15 +24,16 @@ $NetBSD: patch-aa,v 1.4 2000/09/25 19:11:44 skrll Exp $
  
 -avltree.o: 	avltree.c avltree.h
 -		$(CC) -c avltree.c
-+LIBDIR=		${PREFIX}/lib
-+MANDIR=		${PREFIX}/man
-+INCSDIR=	${PREFIX}/include
++NOLINT=	# defined
  
 -install:	libavltree.a
 -		install -c libavltree.a $(PREFIX)/lib
 -		install -c avltree.h $(PREFIX)/include
 -		gzip -c avltree.3 > $(PREFIX)/man/man3/avltree.3.gz
--
++LIBDIR=		${PREFIX}/lib
++MANDIR=		${PREFIX}/man
++INCSDIR=	${PREFIX}/include
+ 
 -##################
 -# additional stuff for test, benchmark; not installed
 -
