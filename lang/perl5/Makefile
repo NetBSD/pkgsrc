@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/12/05 05:31:12 reed Exp $
+# $NetBSD: Makefile,v 1.74 2004/01/05 22:15:14 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -17,7 +17,9 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		# defined
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
@@ -40,6 +42,10 @@ TEST_TARGET=		test
 #
 CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
 CONFIGURE_ARGS+=	-Dinstallsiteman3dir="${PERL5_SITEPERL}/man/man3"
+
+# The site directories are all relative to the perl view.
+CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
+CONFIGURE_ARGS+=	-Dinstallsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -113,10 +119,12 @@ CFLAGS=
 CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
+PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
 PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEPERL?=	${PREFIX}/lib/perl5/site_perl
-PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEPERL?=	${VIEWBASE}/lib/perl5/site_perl
+PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_DIST_VERS}
+PERL5_SITEARCH=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 
@@ -161,24 +169,28 @@ STATIC_PERL?=		NO
 .endif
 STATIC_PERL?=		YES
 
+WRKSRC_PERL5=		${WRKSRC}/perl
+
 .if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 STATIC_WRKDIR=		${WRKDIR}/static
 STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
+WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl
 
 post-build:
 	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
 .endif
 
 post-install:
-.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_DIST_VERS}
-	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${DISTNAME}/perl ${PREFIX}/bin/perl
-	${LN} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_DIST_VERS}
+	${INSTALL_PROGRAM} ${WRKSRC_PERL5} ${PREFIX}/bin/perl${PERL5_DIST_VERS}
+	${LN} -f ${PREFIX}/bin/perl${PERL5_DIST_VERS} ${PREFIX}/bin/perl
+.if !empty(_STRIPFLAG_INSTALL)
+	if [ -x ${PREFIX}/bin/a2p]; then				\
+		strip ${PREFIX}/bin/a2p;				\
+	fi
 .endif
-	strip ${PREFIX}/bin/a2p
-	strip ${PREFIX}/bin/perl
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
 	${RM} -f ${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
