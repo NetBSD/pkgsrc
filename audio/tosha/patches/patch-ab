@@ -1,14 +1,52 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:17 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/03/12 16:44:14 hubertf Exp $
 
---- tosha.c.orig	Thu Jul 16 12:22:42 1998
-+++ tosha.c	Thu Jul 16 12:23:05 1998
-@@ -183,7 +183,8 @@
+--- tosha.c.XXX	Fri Mar 12 17:41:08 1999
++++ tosha.c	Fri Mar 12 17:41:14 1999
+@@ -49,7 +49,8 @@
+ #include <sys/uio.h>
+ #include <sys/scsiio.h>
+ #include <unistd.h>
+-#include <scsi.h>
++#include <util.h>
++#include "scsi.h"
+ extern int errno;
+ 
+ /*
+@@ -93,7 +94,7 @@
+ #include "getlopt.h"
+ 
+ typedef unsigned char byte;
+-typedef unsigned long ulong;
++/*typedef unsigned long ulong;*/
+ 
+ struct scsireq *sreq;	/* SCSI device request structure */
+ int scsifd;		/* SCSI device file descriptor */
+@@ -182,7 +183,8 @@
  
  char *tracklstr	= "1-100";
  char *outname 	= "track%02d.pcm";
--char device[256];
+-char *device	= "/dev/cd0c";
 +char device_store[256];
 +char *device = device_store;
  int indexonly	= FALSE;
  int quiet	= FALSE;
  int verbose	= FALSE;
+@@ -464,6 +466,8 @@
+ 	int singlefile = FALSE;
+ 	int modechange = TRUE, denschange = 0;
+ 
++	(void) snprintf(device, sizeof(device), "/dev/cd0%c", getrawpartition() + 'a');
++
+ 	utils_init (argv[0]);
+ #ifdef DEBUG
+ 	fprintf (stderr, "%s: DEBUG mode is ON.\n", me);
+@@ -647,7 +651,8 @@
+ 					fprintf (stderr, "  Reading ...\r");
+ 			}
+ 			else {
+-				asprintf (&ofname, outname, i+1);
++				ofname = malloc(1000); /* XXX */
++				sprintf (ofname, outname, i+1);
+ 				if (!quiet)
+ 					fprintf (stderr, verbose ?
+ 						"  (output file: %s)\n" :
