@@ -1,8 +1,18 @@
-$NetBSD: distinfo,v 1.4 2003/10/02 20:14:23 tron Exp $
+$NetBSD: distinfo,v 1.5 2004/04/01 00:52:39 minskim Exp $
 
 SHA1 (ical-2.2.1.tar.gz) = ba6af590a4d81360f6933762f2adab0886bb4e5f
 Size (ical-2.2.1.tar.gz) = 261959 bytes
 SHA1 (patch-aa) = 238d2d4ce21cc60ec0eaae854aa722ca0486701d
 SHA1 (patch-ab) = 17ad50ae2815a56590ab9e8745f790782e3b18d4
-SHA1 (patch-ac) = 002612db5040469d0f316893a40eb067d94e677e
-SHA1 (patch-ad) = 8d77fd27aad3d6a19cbe1596d716eec78203c5ba
+SHA1 (patch-ac) = 8fc75ec309325eb46c0a024d99a3b6dfb3f26cae
+SHA1 (patch-ad) = 251c01e9922f6f6fb353b18a9c4c58c7ebde76ca
+SHA1 (patch-ae) = be5885bb63149db74dbddc95dd346fdbccc13087
+SHA1 (patch-af) = 48d148d37bba928e470e02037325bedb9b460406
+SHA1 (patch-ag) = c1fb1fdbca761f19b66ac8405d3e78d4a1e9076e
+SHA1 (patch-ah) = f80d4792d0f980c8b7606bdc9c78378bb18b3b21
+SHA1 (patch-ai) = 2379fc3829e6ec844f9ade5163e9243dc71c13ce
+SHA1 (patch-aj) = f41d1049e258ece3f0928f9be399111aac4391fc
+SHA1 (patch-ak) = bd9fd4cef88050a09c6765b9f483904808e470dd
+SHA1 (patch-al) = 39096e3102a81191c980c70efb5a44f1032d6f9e
+SHA1 (patch-am) = bdba66e18987c46482b13effa678952908beb536
+SHA1 (patch-an) = df67d141a4e08a8a525940777a37177a6849b356

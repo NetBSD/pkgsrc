@@ -1,0 +1,31 @@
+$NetBSD: patch-am,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- ical.h.orig	1996-02-09 21:17:36.000000000 -0600
++++ ical.h
+@@ -38,18 +38,18 @@ extern void trigger(Tcl_Interp*, char co
+ 
+ // Prototype for Tcl commands.
+ 
+-extern int Cmd_CreateCalendar	(ClientData, Tcl_Interp*, int, char*[]);
+-extern int Cmd_CreateNotice	(ClientData, Tcl_Interp*, int, char*[]);
+-extern int Cmd_CreateAppt	(ClientData, Tcl_Interp*, int, char*[]);
++extern int Cmd_CreateCalendar	(ClientData, Tcl_Interp*, int, const char*[]);
++extern int Cmd_CreateNotice	(ClientData, Tcl_Interp*, int, const char*[]);
++extern int Cmd_CreateAppt	(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+-extern int Cmd_Date		(ClientData, Tcl_Interp*, int, char*[]);
+-extern int Cmd_Time		(ClientData, Tcl_Interp*, int, char*[]);
++extern int Cmd_Date		(ClientData, Tcl_Interp*, int, const char*[]);
++extern int Cmd_Time		(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ /* Speedup routines. */
+-extern int Cmd_MonthDays	(ClientData, Tcl_Interp*, int, char*[]);
+-extern int Cmd_HiliteLoop	(ClientData, Tcl_Interp*, int, char*[]);
++extern int Cmd_MonthDays	(ClientData, Tcl_Interp*, int, const char*[]);
++extern int Cmd_HiliteLoop	(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ /* Convenience routines */
+-extern int Cmd_ExpandFileName	(ClientData, Tcl_Interp*, int, char*[]);
++extern int Cmd_ExpandFileName	(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ #endif /* _ICAL_H */
