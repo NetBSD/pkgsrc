@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/16 03:56:28 rh Exp $
+
+--- gmp/device.cc.orig	2002-10-31 07:25:00.000000000 +1000
++++ gmp/device.cc
+@@ -14,6 +14,7 @@ extern "C" {
+ #include <sys/fcntl.h>
+ #include <sys/wait.h>
+ #include <unistd.h>
++#include <signal.h>
+ }
+ 
+ using namespace gmp;
+@@ -356,7 +357,7 @@ bool Device::fork_child(const std::strin
+ 		close(c2p[0]);
+ 		close(c2p[1]);
+ 		// close(2); // close cerr
+-		char * shell = "/bin/bash";
++		char * shell = "/bin/sh";
+ 		std::string c = std::string("exec ") + n;
+ 		execl(shell, shell, "-c", c.c_str(), 0);
+ 		// exec failed!
