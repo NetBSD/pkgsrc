@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/12/28 21:35:04 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2002/12/28 22:34:13 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -36,6 +36,8 @@ CONF_FILES=	# empty
 CONF_FILES+=	${SAMPLECONFDIR}/${FILE}.default ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=	tomcat
+
+FILES_SUBST+=	JAVA_HOME=${PKG_JAVA_HOME}
 
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f

@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: tomcat.sh,v 1.7 2002/05/23 15:48:45 abs Exp $
+# $NetBSD: tomcat.sh,v 1.8 2002/12/28 22:34:14 jlam Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -12,7 +12,7 @@ PREFIX=@PREFIX@
 
 if [ -z "${JAVA_HOME}" ]
 then
-	JAVA_HOME=${PREFIX}/java
+	JAVA_HOME="@JAVA_HOME@"
 	export JAVA_HOME
 fi
 
