@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2000/07/06 16:24:49 dmcmahill Exp $
+
+allow sharing between different arch's which use the same processor
+Ie, use 'm68k' instead of 'amiga', 'mac68k', 'hp300', etc.
+
+--- configure.orig	Sat Jun  6 08:19:03 1998
++++ configure	Thu Jul  6 10:23:59 2000
+@@ -554,5 +554,5 @@
+ os=`uname -s`
+ version=`uname -r`
+-machine=`uname -m`
++machine=`uname -p`
+ 
+ case $os in
