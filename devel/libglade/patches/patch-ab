@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/07/31 19:06:09 rh Exp $
+$NetBSD: patch-ab,v 1.2 1999/08/01 19:43:35 tron Exp $
 
 --- doc/Makefile.in.orig	Sun Jun 20 17:52:23 1999
-+++ doc/Makefile.in	Fri Jul 30 20:04:05 1999
++++ doc/Makefile.in	Sun Aug  1 21:27:49 1999
+@@ -128,7 +128,7 @@
+ # The directory containing the source code (if it contains documentation).
+ DOC_SOURCE_DIR = $(top_srcdir)/glade
+ 
+-HTML_DIR = $(datadir)/gnome/html
++HTML_DIR = $(datadir)/doc
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ @GNOME_SUPPORT_TRUE@CFLAGS = $(GNOME_INCLUDEDIR) $(XML_CFLAGS)
 @@ -294,8 +294,6 @@
  	    echo '-- Installing '$$i ; \
  	    $(INSTALL_DATA) $$i $(TARGET_DIR); \
