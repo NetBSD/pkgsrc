@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/10 02:18:04 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -7,9 +7,9 @@ PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
 .  include "../../mk/bsd.prefs.mk"
 
 USE_PERL5?=	run
-PERL5_REQD?=	5.0
+PERL5_REQD+=	5.0
 
-BUILDLINK_DEPENDS.perl+=	perl>=${PERL5_REQD}
+BUILDLINK_DEPENDS.perl+=	perl>=${_PERL5_REQD}
 BUILDLINK_PKGSRCDIR.perl?=	${PERL5_PKGSRCDIR}
 
 .  if !empty(USE_PERL5:M[bB][uU][iI][lL][dD])
