@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.6 2003/11/27 17:38:29 abs Exp $
+$NetBSD: patch-ab,v 1.7 2004/11/14 21:55:29 snj Exp $
 
---- abcde.conf.orig	2003-11-05 16:07:09.000000000 +0000
-+++ abcde.conf
-@@ -131,7 +131,7 @@
- #NOCDDBQUERY=n
+--- abcde.conf.orig	2004-11-06 16:56:58.000000000 -0800
++++ abcde.conf	2004-11-14 13:12:13.000000000 -0800
+@@ -174,7 +174,7 @@
+ #ACTIONS=cddb,read,encode,tag,move,clean
  
  # CD device you want to read from
 -#CDROM=/dev/cdrom
