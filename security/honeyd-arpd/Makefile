@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/02 23:00:32 adrianp Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/arpd
 CATEGORIES=	security net
 MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://niels.xtdnet.nl/honeyd/index.php
 COMMENT=	ARP daemon for honeyd
 
