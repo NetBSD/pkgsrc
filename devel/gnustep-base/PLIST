@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/05 09:55:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/10 23:41:01 rh Exp $
 bin/openapp
-share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
-share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
@@ -26,7 +23,6 @@ share/GNUstep/System/Library/Headers/Foundation/NSCalendarDate.h
 share/GNUstep/System/Library/Headers/Foundation/NSCharacterSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSClassDescription.h
 share/GNUstep/System/Library/Headers/Foundation/NSCoder.h
-share/GNUstep/System/Library/Headers/Foundation/NSConcreteNumber.h
 share/GNUstep/System/Library/Headers/Foundation/NSConnection.h
 share/GNUstep/System/Library/Headers/Foundation/NSData.h
 share/GNUstep/System/Library/Headers/Foundation/NSDate.h
@@ -46,7 +42,9 @@ share/GNUstep/System/Library/Headers/Foundation/NSFormatter.h
 share/GNUstep/System/Library/Headers/Foundation/NSGeometry.h
 share/GNUstep/System/Library/Headers/Foundation/NSHashTable.h
 share/GNUstep/System/Library/Headers/Foundation/NSHost.h
+share/GNUstep/System/Library/Headers/Foundation/NSIndexSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSInvocation.h
+share/GNUstep/System/Library/Headers/Foundation/NSKeyedArchiver.h
 share/GNUstep/System/Library/Headers/Foundation/NSKeyValueCoding.h
 share/GNUstep/System/Library/Headers/Foundation/NSLock.h
 share/GNUstep/System/Library/Headers/Foundation/NSMapTable.h
@@ -63,6 +61,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSPortCoder.h
 share/GNUstep/System/Library/Headers/Foundation/NSPortMessage.h
 share/GNUstep/System/Library/Headers/Foundation/NSPortNameServer.h
 share/GNUstep/System/Library/Headers/Foundation/NSProcessInfo.h
+share/GNUstep/System/Library/Headers/Foundation/NSPropertyList.h
 share/GNUstep/System/Library/Headers/Foundation/NSProtocolChecker.h
 share/GNUstep/System/Library/Headers/Foundation/NSProxy.h
 share/GNUstep/System/Library/Headers/Foundation/NSRange.h
@@ -89,6 +88,7 @@ share/GNUstep/System/Library/Headers/GNUstepBase/GSFileHandle.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSIArray.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSIMap.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSLocale.h
+share/GNUstep/System/Library/Headers/GNUstepBase/GSLock.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSMime.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSObjCRuntime.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSUnion.h
@@ -111,6 +111,7 @@ share/GNUstep/System/Library/Headers/gnustep/base/GSFileHandle.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSIArray.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSIMap.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSLocale.h
+share/GNUstep/System/Library/Headers/gnustep/base/GSLock.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSMime.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSObjCRuntime.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSUnion.h
@@ -726,7 +727,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Zulu
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/TraditionalChinese.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-base.so
-share/GNUstep/System/Library/Libraries/libgnustep-base.so.1.8.0
+share/GNUstep/System/Library/Libraries/libgnustep-base.so.1.9.1
 share/GNUstep/System/Library/Makefiles/Additional/base.make
 share/GNUstep/System/Tools/autogsdoc
 share/GNUstep/System/Tools/cvtenc
@@ -781,5 +782,3 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Documentation/man/man8
 @dirrm share/GNUstep/System/Library/Documentation/man/man1
 @dirrm share/GNUstep/System/Library/DTDs
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle
