@@ -3,7 +3,8 @@
 # Date created:         17 October 1994
 # Whom:                 jmz
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:19:06 hubertf Exp $
+# $Id: Makefile,v 1.2 1997/10/27 02:46:40 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
 DISTNAME=       unzip-5.3.1
