@@ -1,0 +1,31 @@
+--- pine/abookcpy.c.orig	Sun Jul 19 00:20:02 1998
++++ pine/abookcpy.c	Sun Jul 19 00:22:20 1998
+@@ -48,6 +48,7 @@
+ void  trim_addrbook_data PROTO((MAILSTREAM *, int));
+ void  write_fake_headers PROTO((char *, char *, char *));
+ char *err_desc PROTO((int));
++#define err_desc(err) strerror(err)
+ 
+ int noshow_error = 0;
+ 
+@@ -411,20 +412,6 @@
+     rfc822_header(where, fake_env, fake_body);
+     mail_free_envelope(&fake_env);
+     mail_free_body(&fake_body);
+-}
+-
+-
+-extern char *sys_errlist[];
+-
+-char *
+-err_desc(err)
+-    int err;
+-{
+-    static char buffer[50];
+-
+-    strcpy(buffer, sys_errlist[err]);
+-
+-    return((char *)buffer);
+ }
+ 
+ 
