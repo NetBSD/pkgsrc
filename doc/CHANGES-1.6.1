@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.31 2003/06/19 00:13:06 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.32 2003/06/19 00:39:10 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -641,3 +641,14 @@ net/ethereal/patches/patch-ag			1.1 (new)
 	On solaris use gsed's buildlink2 to provide sed to configure/etc
 	(it requires GNU sed)
 	[salo, ticket #1280]
+
+chat/bitchx/Makefile				1.19
+chat/bitchx/distinfo				1.8
+chat/bitchx/patches/patch-aj			1.2
+
+	PKGREVISION++
+	- Fix major core bug with channel mode -k * on hybrid7 servers.  For
+	  more information see:  http://www.securityfocus.com/archive/1/321093
+
+	Patch from BitchX CVS.
+	[salo, ticket #1289]
