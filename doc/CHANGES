@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7668 2004/11/03 11:18:44 grant Exp $
+$NetBSD: CHANGES,v 1.7669 2004/11/03 13:14:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5037,3 +5037,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-XML-Filter-BufferText-1.01 [seb 2004-11-03]
 	Updated adjustkernel to 1.6 [hubrtf 2004-11-03]
 	Updated tuxpaint to 0.9.14nb1 [grant 2004-11-03]
+	Updated gd to 2.0.32 [adam 2004-11-03]
