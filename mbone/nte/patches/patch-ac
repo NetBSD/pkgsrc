@@ -1450,16 +1450,6 @@
 ! 	Tcl_DeleteFileHandler(fd);
   #endif
   }
-*** src/qfdes/qfDES-memory.c~	Wed Sep  4 09:16:14 1996
---- src/qfdes/qfDES-memory.c	Thu Mar  5 18:07:36 1998
-***************
-*** 11,14 ****
---- 11,15 ----
-  #define      _qfDES_memory_c_
-  
-+ #include <errno.h>
-  #include <stdio.h>
-  #include <memory.h>
 *** src/ui_init.c~	Thu Oct 17 12:20:23 1996
 --- src/ui_init.c	Thu Mar  5 18:03:16 1998
 ***************
@@ -1500,13 +1490,3 @@
 !     error "wrong version of Tk loaded ($tk_version): need 8.x"
   }
   unset a b
-*** src/ui_fns.c~	Thu Oct 31 10:33:03 1996
---- src/ui_fns.c	Thu Mar  5 20:38:49 1998
-***************
-*** 215,218 ****
---- 215,219 ----
-    user_copy(&me, &(cur_line->modifier));
-    cur_line->no_of_chars = strlen(argv[3]);
-+   cur_line->status = NORMAL;
-    strncpy(cur_line->line_data, argv[3], MAX_LINE_LEN);
-    queue_packet_for_sending(tx_fd, cur_line, cur_line->lineid, &sendq, LINEMSG);
