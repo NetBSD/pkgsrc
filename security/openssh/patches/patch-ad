@@ -1,7 +1,18 @@
-$NetBSD: patch-ad,v 1.8 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-ad,v 1.9 2005/03/07 23:29:49 tv Exp $
 
---- loginrec.c.orig	2004-08-15 11:12:52.000000000 +0200
+--- loginrec.c.orig	2004-08-15 05:12:52.000000000 -0400
 +++ loginrec.c
+@@ -406,8 +406,8 @@ login_set_addr(struct logininfo *li, con
+ int
+ login_write (struct logininfo *li)
+ {
+-#ifndef HAVE_CYGWIN
+-	if ((int)geteuid() != 0) {
++#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
++	if ((int)geteuid() != ROOTUID) {
+ 	  logit("Attempt to write login records by non-root user (aborting)");
+ 	  return 1;
+ 	}
 @@ -415,7 +415,7 @@ login_write (struct logininfo *li)
  
  	/* set the timestamp */

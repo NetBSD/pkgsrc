@@ -1,19 +1,24 @@
-$NetBSD: patch-al,v 1.4 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-al,v 1.5 2005/03/07 23:29:50 tv Exp $
 
---- openbsd-compat/getrrsetbyname.c.orig	2004-05-13 12:24:10.000000000 +0200
-+++ openbsd-compat/getrrsetbyname.c
-@@ -47,7 +47,7 @@
- 
- #include "includes.h"
- 
--#ifndef HAVE_GETRRSETBYNAME
-+#if !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX)
- 
- #include "getrrsetbyname.h"
- 
-@@ -578,4 +578,4 @@ count_dns_rr(struct dns_rr *p, u_int16_t
- 	return (n);
- }
- 
--#endif /* !defined(HAVE_GETRRSETBYNAME) */
-+#endif /* !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX) */
+--- auth1.c.orig	2004-08-12 08:40:25.000000000 -0400
++++ auth1.c
+@@ -244,7 +244,7 @@ do_authloop(Authctxt *authctxt)
+ 		}
+ #else
+ 		/* Special handling for root */
+-		if (authenticated && authctxt->pw->pw_uid == 0 &&
++		if (authenticated && authctxt->pw->pw_uid == ROOTUID &&
+ 		    !auth_root_allowed(get_authname(type)))
+ 			authenticated = 0;
+ #endif
+@@ -318,8 +318,8 @@ do_authentication(Authctxt *authctxt)
+ 	 * If we are not running as root, the user must have the same uid as
+ 	 * the server. (Unless you are running Windows)
+ 	 */
+-#ifndef HAVE_CYGWIN
+-	if (!use_privsep && getuid() != 0 && authctxt->pw &&
++#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
++	if (!use_privsep && getuid() != ROOTUID && authctxt->pw &&
+ 	    authctxt->pw->pw_uid != getuid())
+ 		packet_disconnect("Cannot change user when server not running as root.");
+ #endif

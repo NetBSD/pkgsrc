@@ -1,31 +1,85 @@
-$NetBSD: patch-ao,v 1.5 2004/08/04 06:43:53 minskim Exp $
+$NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
 
---- uidswap.c.orig	Mon Feb 23 20:17:30 2004
-+++ uidswap.c
-@@ -83,6 +83,7 @@ temporarily_use_uid(struct passwd *pw)
- 			xfree(saved_egroups);
+--- session.c.orig	2004-08-12 08:40:25.000000000 -0400
++++ session.c
+@@ -326,7 +326,7 @@ do_authenticated1(Authctxt *authctxt)
+ 				break;
+ 			}
+ 			debug("Received TCP/IP port forwarding request.");
+-			channel_input_port_forward_request(s->pw->pw_uid == 0, options.gateway_ports);
++			channel_input_port_forward_request(s->pw->pw_uid == ROOTUID, options.gateway_ports);
+ 			success = 1;
+ 			break;
+ 
+@@ -921,7 +921,7 @@ read_etc_default_login(char ***env, u_in
+ 	if (tmpenv == NULL)
+ 		return;
+ 
+-	if (uid == 0)
++	if (uid == ROOTUID)
+ 		var = child_get_env(tmpenv, "SUPATH");
+ 	else
+ 		var = child_get_env(tmpenv, "PATH");
+@@ -1020,7 +1020,7 @@ do_setup_env(Session *s, const char *she
+ #  endif /* HAVE_ETC_DEFAULT_LOGIN */
+ 		if (path == NULL || *path == '\0') {
+ 			child_set_env(&env, &envsize, "PATH",
+-			    s->pw->pw_uid == 0 ?
++			    s->pw->pw_uid == ROOTUID ?
+ 				SUPERUSER_PATH : _PATH_STDPATH);
+ 		}
+ # endif /* HAVE_CYGWIN */
+@@ -1124,6 +1124,18 @@ do_setup_env(Session *s, const char *she
+ 		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
+ 		read_environment_file(&env, &envsize, buf);
  	}
++
++#ifdef HAVE_INTERIX
++	{
++		/* copy standard Windows environment, then apply changes */
++		env_t *winenv = env_login(pw);
++		env_putarray(winenv, env, ENV_OVERRIDE);
++
++		/* swap over to altered environment as a traditional array */
++		env = env_array(winenv);
++	}
++#endif
++
+ 	if (debug_flag) {
+ 		/* dump the environment */
+ 		fprintf(stderr, "Environment:\n");
+@@ -1234,9 +1246,9 @@ do_nologin(struct passwd *pw)
+ void
+ do_setusercontext(struct passwd *pw)
+ {
+-#ifndef HAVE_CYGWIN
++#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
+ 	if (getuid() == 0 || geteuid() == 0)
+-#endif /* HAVE_CYGWIN */
++#endif /* !HAVE_CYGWIN && !HAVE_INTERIX */
+ 	{
  
-+#ifndef __INTERIX
- 	/* set and save the user's groups */
- 	if (user_groupslen == -1) {
- 		if (initgroups(pw->pw_name, pw->pw_gid) < 0)
-@@ -105,6 +106,7 @@ temporarily_use_uid(struct passwd *pw)
- 	/* Set the effective uid to the given (unprivileged) uid. */
- 	if (setgroups(user_groupslen, user_groups) < 0)
- 		fatal("setgroups: %.100s", strerror(errno));
-+#endif /* __INTERIX */
- #ifndef SAVED_IDS_WORK_WITH_SETEUID
- 	/* Propagate the privileged gid to all of our gids. */
- 	if (setgid(getegid()) < 0)
-@@ -152,8 +154,10 @@ restore_uid(void)
- 	setgid(getgid());
- #endif /* SAVED_IDS_WORK_WITH_SETEUID */
+ #ifdef HAVE_SETPCRED
+@@ -1271,11 +1283,13 @@ do_setusercontext(struct passwd *pw)
+ 			perror("setgid");
+ 			exit(1);
+ 		}
++# if !defined(HAVE_INTERIX)
+ 		/* Initialize the group list. */
+ 		if (initgroups(pw->pw_name, pw->pw_gid) < 0) {
+ 			perror("initgroups");
+ 			exit(1);
+ 		}
++# endif /* !HAVE_INTERIX */
+ 		endgrent();
+ # ifdef USE_PAM
+ 		/*
+@@ -1965,7 +1979,7 @@ session_pty_cleanup2(Session *s)
+ 		record_logout(s->pid, s->tty, s->pw->pw_name);
  
-+#ifndef __INTERIX
- 	if (setgroups(saved_egroupslen, saved_egroups) < 0)
- 		fatal("setgroups: %.100s", strerror(errno));
-+#endif /* __INTERIX */
- 	temporarily_use_uid_effective = 0;
- }
+ 	/* Release the pseudo-tty. */
+-	if (getuid() == 0)
++	if (getuid() == ROOTUID)
+ 		pty_release(s->tty);
  
+ 	/*

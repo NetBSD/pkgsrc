@@ -1,19 +1,13 @@
-$NetBSD: patch-ai,v 1.6 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-ai,v 1.7 2005/03/07 23:29:50 tv Exp $
 
---- dns.h.orig	Mon Nov 17 04:19:29 2003
-+++ dns.h
-@@ -31,6 +31,7 @@
- #ifndef DNS_H
- #define DNS_H
+--- openbsd-compat/bsd-misc.c.orig	2004-08-15 04:41:00.000000000 -0400
++++ openbsd-compat/bsd-misc.c
+@@ -122,7 +122,7 @@ int truncate(const char *path, off_t len
+ }
+ #endif /* HAVE_TRUNCATE */
  
-+#ifndef __INTERIX
- enum sshfp_types {
- 	SSHFP_KEY_RESERVED,
- 	SSHFP_KEY_RSA,
-@@ -52,5 +53,6 @@ enum sshfp_hashes {
- 
- int	verify_host_key_dns(const char *, struct sockaddr *, const Key *, int *);
- int	export_dns_rr(const char *, const Key *, FILE *, int);
-+#endif /* __INTERIX */
- 
- #endif /* DNS_H */
+-#if !defined(HAVE_SETGROUPS) && defined(SETGROUPS_NOOP)
++#if defined(SETGROUPS_NOOP)
+ /*
+  * Cygwin setgroups should be a noop.
+  */
