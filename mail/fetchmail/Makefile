@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2004/03/31 02:32:56 jlam Exp $
+# $NetBSD: Makefile,v 1.143 2004/07/09 12:34:53 drochner Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	2
@@ -72,7 +72,7 @@ post-configure:
 post-build:
 	for file in ${WRKSRC}/fetchmail.man; do				\
 		${MV} -f $$file $$file.tbl;				\
-		tbl $$file.tbl > $$file;				\
+		${TBL} $$file.tbl > $$file;				\
 	done
 
 post-install:
@@ -86,4 +86,5 @@ post-install:
 	done
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
