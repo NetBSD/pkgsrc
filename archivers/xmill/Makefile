@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/10 19:05:36 ben Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/14 14:57:02 ben Exp $
 
 DISTNAME=		xmill-0.9.1
 CATEGORIES=		archivers
@@ -11,6 +11,7 @@ COMMENT=		Specialized compressor for XML
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
 USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
