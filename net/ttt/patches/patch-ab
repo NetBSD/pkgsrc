@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/22 03:55:17 sakamoto Exp $
+--- configure.orig	Mon Apr 12 16:42:10 1999
++++ configure	Sun Apr 23 03:25:51 2000
+@@ -1871,5 +1871,5 @@
+ 
+ case $target in
+-  *-freebsd*)
++  *-freebsd*|*-netbsd*)
+     tclIncSpec="-I${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
+     tkIncSpec="-I${TK_PREFIX}/include/tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
+@@ -2464,5 +2464,11 @@
+ tttLibraries="${tttLibraries} ${LIBS}"
+ 
+-LDFLAGS=""
++case $target in 
++  *-netbsd*)    
++    ;;
++  *)
++    LDFLAGS=""  
++    ;;          
++esac
+ 
+ case $target in
