@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.4 2001/12/03 19:03:21 wiz Exp $
+.\"	$NetBSD: cpuflags.1,v 1.5 2001/12/24 13:25:47 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -26,6 +26,8 @@ variables. The first two are explicitly added to MAKE_ENV.
 The output of cpuflags
 .It CPU_DIR
 CPU_FLAGS with spaces stripped (eg: for use in PACKAGES)
+.It LOWER_CPU_DIR
+As CPU_FLAGS but all in lower case
 .It CFLAGS
 Has CPU_FLAGS appended
 .It CXXFLAGS
