@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/18 00:55:48 garbled Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/18 10:31:20 wiz Exp $
 #
 
 DISTNAME=       bonnie++-1.01
@@ -22,4 +22,3 @@ results:
 	-@${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
-
