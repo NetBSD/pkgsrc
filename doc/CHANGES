@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4254 2003/12/25 14:46:50 wiz Exp $
+$NetBSD: CHANGES,v 1.4255 2003/12/25 16:36:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5376,3 +5376,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tex-prosper-1.00.4 [jmmv 2003-12-25]
 	Updated gnupg to 1.2.4 [wiz 2003-12-25]
 	Updated nut to 9.5 [wiz 2003-12-25]
+	Updated squid to 2.5.4nb6 [taca 2003-12-25]
