@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/12/03 21:06:17 jschauma Exp $
+$NetBSD: distinfo,v 1.7 2004/06/24 17:31:43 drochner Exp $
 
 SHA1 (mpich-1.2.5.2.tar.gz) = a767e56bab24d08a13903493e627e987e1685f50
 Size (mpich-1.2.5.2.tar.gz) = 12383519 bytes
@@ -24,3 +24,4 @@ SHA1 (patch-bb) = 7f399ed3d4bbaf00b75ec3a5ce8f114e4c6bbd23
 SHA1 (patch-bc) = e89bbf9e1ef9f2aaa6b8000d170c5a158408988d
 SHA1 (patch-bd) = 7c96f575263fbe9adc0514ed64452db04cc68212
 SHA1 (patch-be) = d21a703dbe17a48fb940ce65fd232284a57ff3cf
+SHA1 (patch-ca) = 0fdb9a96df57bb8268d6d4e62e06794248cdbcf1
