@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/07/31 10:41:55 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2000/08/23 14:43:26 tron Exp $
 
 DISTNAME=		gnome-core-1.2.1
 CATEGORIES=		x11 gnome
@@ -31,6 +31,16 @@ CONFIGURE_ENV+=		ESD_CFLAGS="${ESD_CFLAGS}" \
 			ESD_LIBS="${ESD_LIBS}" \
 			LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 			CPPFLAGS="${CPPFLAGS}"
+
+PERL_SCRIPTS=		help-browser/gnome-convert help-browser/gnome-download
+
+post-patch:
+	cd ${WRKSRC}; \
+	for FILE in ${PERL_SCRIPTS}; do \
+	  ${CP} $$FILE $${FILE}.orig; \
+	  ${SED} -e 's#/usr/bin/perl#${LOCALBASE}/bin/perl#g' \
+	    <$${FILE}.orig >$$FILE; \
+	done
 
 post-install:
 	for lang in C da es it no; do \
