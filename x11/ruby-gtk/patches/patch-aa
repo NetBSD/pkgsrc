@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/06/30 15:23:02 taca Exp $
+$NetBSD: patch-aa,v 1.5 2001/12/16 08:18:18 jmc Exp $
 
 --- extconf.rb.orig	Thu Feb 15 17:49:31 2001
 +++ extconf.rb
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2001/06/30 15:23:02 taca Exp $
        if not version.chomp.empty?
  	config_libs, config_cflags = "--libs", "--cflags"
 -	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.split(/(-l.*)/)
-+	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.gsub("-Wl,", "").split(/(-l.*)/)
++	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.gsub("-Wl,", "").split(/( -l.*)/)
  	$libs = libs.join(' ') + ' ' + $libs
  	$CFLAGS = `#{config_cmd} #{config_cflags}`.chomp
  	break
