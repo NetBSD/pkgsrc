@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/04/11 15:13:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.42 2003/06/17 17:41:37 tron Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -47,6 +47,11 @@ CONFIGURE_ARGS+=	--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 
 .include "../../mk/bsd.prefs.mk"
+# sysutils/coreutils installs a 'readlink' program, so conflict with it if
+# GNU_PROGRAM_PREFIX == ''
+.if ${GNU_PROGRAM_PREFIX} == ""
+CONFLICTS+=		coreutils-[0-9]*
+.endif
 
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 CONFIGURE_ARGS+=	--enable-a4
