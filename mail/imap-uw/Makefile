@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2001/02/10 03:36:42 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/12 03:31:34 jlam Exp $
 
 DISTNAME=       imap-2000c
-PKGNAME=        imap-uw-2000c
+PKGNAME=        imap-uw-2000.0.3nb1
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -41,6 +41,7 @@ CCLIENT_INCS=	c-client.h env.h env_unix.h flstring.h fs.h ftl.h	\
 		newsrc.h nl.h nntp.h osdep.h pop3.h rfc822.h smtp.h	\
 		tcp.h utf8.h
 CCLIENT_LIB=	libc-client.la
+CCLIENT_PICLIB=	libc-client_pic.a
 CCLIENT_LIBS=	libc-client.a libc-client.la libc-client.so		\
 		libc-client.so.${CCLIENT_MAJOR}.${CCLIENT_MINOR}	\
 		libc-client.so.${CCLIENT_MAJOR}
@@ -88,14 +89,27 @@ post-extract:
 			$${file} > $${f};				\
 	done
 
+post-build:
+	${MKDIR} ${WRKDIR}/piclib
+	cd ${WRKDIR}/piclib;						\
+	for file in ${WRKSRC}/c-client/*.lo; do				\
+		base=`basename $${file} .lo`;				\
+		${LN} -sf $${file} $${base}.o;				\
+	done;								\
+	${RM} -f ${CCLIENT_PICLIB};					\
+	${AR} cru ${CCLIENT_PICLIB} *.o;				\
+	${RANLIB} ${CCLIENT_PICLIB}
+
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
 	cd ${WRKSRC}/c-client; ${INSTALL_DATA} ${CCLIENT_INCS} ${INC_DIR}
 	${INST_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${LIB_DIR}
-	cd ${LIB_DIR}; for file in ${CCLIENT_LIBS}; do		\
+	cd ${LIB_DIR}; for file in ${CCLIENT_LIBS}; do			\
 		f=`echo $${file} | ${SED} "s|libc-client|libimapuw|g"`;	\
 		[ -f $${file} ] && ${LN} -sf $${file} $${f};		\
 	done
+	${INSTALL_DATA} ${WRKDIR}/piclib/${CCLIENT_PICLIB} ${LIB_DIR}
+	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
