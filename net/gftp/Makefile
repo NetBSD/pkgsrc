@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/16 20:23:40 tron Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/21 15:07:22 wiz Exp $
 
 DISTNAME=	gftp-2.0.8
 CATEGORIES=	net
@@ -10,10 +10,10 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://gftp.seul.org/
 COMMENT=	multithreaded ftp client for *NIX based machines running X11R6
 
-DEPENDS+=	gtk+>=1.2.3:../../x11/gtk
-
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CFLAGS="-I${LOCALBASE}/include -D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
-USE_LIBINTL=	YES
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
