@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/24 22:10:46 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/21 02:09:35 jlam Exp $
 #
 
 DISTNAME=	vismsa-xmms-plugin-0.2
@@ -10,12 +10,12 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://a.godau.org/
 COMMENT=	vis plugin similar to the Spectrum Analyser from Open Cubic Player
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 
 pre-build:
-		cd ${WRKSRC} ; ${MAKE} clean
+	cd ${WRKSRC} ; ${MAKE} clean
 
-.include "../../audio/xmms/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
