@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1788 2003/03/27 21:09:05 jschauma Exp $
+$NetBSD: CHANGES,v 1.1789 2003/03/28 02:30:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pen to 0.10.0 [wiz 2003-03-27]
 	Updated apcupsd to 3.8.6 [bouyer 2003-03-27]
 	Updated mpich to 1.2.5.1.1 [jschauma 2003-03-27]
+	Updated ap-php4 to 4.2.3nb1 [salo 2003-03-28]
