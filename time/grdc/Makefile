@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/05 15:27:04 reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/05 15:34:33 wiz Exp $
 
 DISTNAME=		grdc-20031019
 CATEGORIES=		time
@@ -10,4 +10,5 @@ COMMENT=		Grand digital clock from FreeBSD-current games
 
 INSTALLATION_DIRS+=	bin man/man6
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
