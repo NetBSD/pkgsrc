@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2265 2004/10/27 17:59:59 adrianp Exp $
+$NetBSD: TODO,v 1.2266 2004/10/28 10:22:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.0
 	o mummer-3.15
-	o mysql-4.1.7
 	o namazu-2.0.13
 	o nap-1.5.2
 	o napshare-1.2
