@@ -6,8 +6,8 @@ $NetBSD$
  dnl $Header: configure.in.tk,v 1.2 96/05/16 01:03:40 van Exp $ (LBL)
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
-+tcldir=tcl8.0
-+tcllib=tcl80
++tcldir=tcl8.3
++tcllib=tcl83
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
@@ -131,8 +131,8 @@ $NetBSD$
  AC_SUBST(V_LIBRARY_TCL)
  
  AC_ARG_WITH(tk,	--with-tk=path	specify a pathname for tk, d=$withval, d="")
-+tkdir=tk8.0
-+tklib=tk80
++tkdir=tk8.3
++tklib=tk83
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
