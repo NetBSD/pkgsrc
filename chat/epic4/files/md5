@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.5 2001/03/26 15:39:30 zuntum Exp $
+$NetBSD: md5,v 1.6 2001/03/31 13:06:35 zuntum Exp $
 
 SHA1 (epic4-0.10.1.tar.bz2) = 88b026d5c94a02ddbae8188c761d91067651710b
 SHA1 (epic4pre2-help.tar.gz) = 673413e3cba17e69259fc13c5819f5cb727e9727
-SHA1 (epic4-0.9.16-ipv6-20010217.patch.gz) = 0661299bf47b696847ddd7635bdbc422908c9bd1
+SHA1 (epic4-0.10.1-ipv6-20010331.patch.gz) = 19abdd9fe5b155626ef8568f0e99372ba9d7ddd5
