@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1999/10/25 23:14:58 agc Exp $
+$NetBSD: md5,v 1.5 2000/04/17 10:55:03 jdolecek Exp $
 
-MD5 (catdoc-0.91.2.tar.gz) = edfaedb7b60ff6336b03f67c16dd4c60
+MD5 (catdoc-0.91.4.tar.gz) = bfc146724ad45ba1287eb5466882670a
