@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/12/08 00:15:22 chris Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/26 21:09:11 jmmv Exp $
 
 DISTNAME=	sylpheed-0.8.6claws
 PKGNAME=	sylpheed-claws-0.8.6
@@ -20,6 +20,7 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
