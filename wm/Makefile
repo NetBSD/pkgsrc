@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/12 13:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/14 12:49:59 skrll Exp $
 #
 
     SUBDIR += 9wm
@@ -15,7 +15,6 @@
     SUBDIR += icewm-gnome
     SUBDIR += lwm
     SUBDIR += olvwm
-    SUBDIR += pkg
     SUBDIR += sawfish
     SUBDIR += sawfish-replibs
     SUBDIR += scwm
