@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.6 2005/02/26 16:39:51 wiz Exp $
 
---- doc/Makefile.in.orig	Sat May 29 19:43:19 2004
+--- doc/Makefile.in.orig	2005-01-29 01:43:08.000000000 +0100
 +++ doc/Makefile.in
-@@ -374,6 +374,53 @@ distclean-libtool:
+@@ -378,6 +378,53 @@ distclean-libtool:
  	-rm -f libtool
  uninstall-info-am:
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
  man5dir = $(mandir)/man5
  install-man5: $(man5_MANS) $(man_MANS)
  	@$(NORMAL_INSTALL)
-@@ -548,7 +595,7 @@ check: check-am
+@@ -552,7 +599,7 @@ check: check-am
  all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) all-local
  
  installdirs:
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
  install: install-am
  install-exec: install-exec-am
  install-data: install-data-am
-@@ -599,7 +646,7 @@ install-exec-am:
+@@ -603,7 +650,7 @@ install-exec-am:
  
  install-info: install-info-am
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ab,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
  
  installcheck-am:
  
-@@ -624,7 +671,7 @@ ps-am:
+@@ -628,7 +675,7 @@ ps-am:
  uninstall-am: uninstall-docDATA uninstall-htmldocDATA uninstall-info-am \
  	uninstall-man
  
@@ -83,7 +83,7 @@ $NetBSD: patch-ab,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
  
  .PHONY: CTAGS GTAGS all all-am all-local check check-am clean \
  	clean-generic clean-libtool clean-local clean-noinstPROGRAMS \
-@@ -633,12 +680,12 @@ uninstall-man: uninstall-man5
+@@ -637,12 +684,12 @@ uninstall-man: uninstall-man5
  	info-am install install-am install-data install-data-am \
  	install-docDATA install-exec install-exec-am \
  	install-htmldocDATA install-info install-info-am install-man \
