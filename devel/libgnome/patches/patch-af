@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2003/02/15 17:01:43 jmmv Exp $
+
+--- libgnome/gnome-i18n.c.orig	2002-07-12 14:44:11.000000000 +0200
++++ libgnome/gnome-i18n.c
+@@ -69,6 +69,7 @@ unalias_lang (char *lang)
+   int i;
+   if (!alias_table)
+     {
++      read_aliases (LIBGNOME_DATADIR "/locale/locale.alias");
+       read_aliases ("/usr/share/locale/locale.alias");
+       read_aliases ("/usr/local/share/locale/locale.alias");
+       read_aliases ("/usr/lib/X11/locale/locale.alias");
