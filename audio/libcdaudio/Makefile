@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/03 22:09:04 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:14 rh Exp $
 #
 
 DISTNAME=	libcdaudio-0.99.1
@@ -11,6 +11,6 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://cdcd.undergrid.net/libcdaudio/
 
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/05/08 17:13:19 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/01 11:23:40 rh Exp $
 #
 
 DISTNAME=		pdflib-3.0
@@ -17,6 +17,6 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-tifflib=${PREFIX} \
 			--with-pnglib=${PREFIX}
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 
 .include "../../mk/bsd.pkg.mk"

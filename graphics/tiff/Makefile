@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/04/01 00:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2000/06/01 11:23:32 rh Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.libtiff.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR}
 

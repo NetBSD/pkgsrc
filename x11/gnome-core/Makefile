@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/05/31 21:23:38 tron Exp $
+# $NetBSD: Makefile,v 1.43 2000/06/01 11:23:44 rh Exp $
 
 DISTNAME=		gnome-core-1.2.0
 CATEGORIES=		x11 gnome
@@ -15,7 +15,7 @@ DEPENDS+=		libxml-*:../../textproc/libxml
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 
 LOCALSTATEDIR=		/var/gnome
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/06/01 11:23:32 rh Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
@@ -18,7 +18,7 @@ VFLIB_VERSION=		2.24.2
 PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION} \
 			VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
 
-USE_LIBTOOL=		# defined
+USE_PKGLIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined

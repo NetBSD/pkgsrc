@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/02/27 23:04:23 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:38 rh Exp $
 
 DISTNAME=		inn-2.2.2
 CATEGORIES=		news
@@ -14,7 +14,7 @@ CONFLICTS+=		nntpclnt-*
 INN_DATA_DIR?=		/var/news
 
 USE_PERL5=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--mandir=${PREFIX}/man \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/22 19:46:23 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:13 rh Exp $
 #
 
 DISTNAME=	lzo-1.06
@@ -13,6 +13,6 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://wildsau.idv.uni-linz.ac.at/mfx/lzo.html
 
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 
 .include "../../mk/bsd.pkg.mk"

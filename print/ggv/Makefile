@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/05/10 15:39:07 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:40 rh Exp $
 #
 
 DISTNAME=	ggv-0.50
@@ -13,7 +13,7 @@ DEPENDS+=	ghostscript-[6-9]*:../../print/ghostscript
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 USE_X11BASE=	YES
 
 pre-configure:

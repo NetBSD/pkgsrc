@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/05/26 05:37:00 rh Exp $
+# $NetBSD: Makefile,v 1.24 2000/06/01 11:23:20 rh Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -17,7 +17,7 @@ DEPENDS+=	pth>=1.3.2:../pth
 CONFLICTS=	gtk+-1.0.*
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 CONFIGURE_ARGS+=--includedir=${PREFIX}/include/glib
 LIBTOOL_FLAGS=	 --install-la
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include"

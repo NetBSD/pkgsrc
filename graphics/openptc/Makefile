@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/14 21:49:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:31 rh Exp $
 
 DISTNAME=		OpenPTC-x11-1.0.0-2
 PKGNAME=		OpenPTC-X11-1.0.02
@@ -12,7 +12,7 @@ DEPENDS+=		Hermes>=1.2.5:../../graphics/hermes
 
 WRKSRC=			${WRKDIR}/OpenPTC-x11-1.0.0
 
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_X11BASE=		yes

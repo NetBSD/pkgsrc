@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/03/21 22:40:53 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/06/01 11:23:28 rh Exp $
 
 DISTNAME=		gimp-1.1.18
 CATEGORIES=		graphics
@@ -19,7 +19,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE} \
 			--disable-perl \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/04/18 08:48:33 rh Exp $
+# $NetBSD: Makefile,v 1.27 2000/06/01 11:23:24 rh Exp $
 #
 
 DISTNAME=	pth-1.3.5
@@ -12,7 +12,7 @@ CONFLICTS=	pth-current-*
 # for PLIST
 VERS=		13.5
 
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-pthread
 PLIST_SUBST+=	VERS=${VERS}
