@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/26 18:45:48 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/11 19:49:44 tsarna Exp $
 
-DISTNAME=	MySQLdb-0.1.2
-PKGNAME=	py-mysqldb-0.1.2
+DISTNAME=	MySQLdb-0.1.3
+PKGNAME=	py-mysqldb-0.1.3
 CATEGORIES=	databases
-MASTER_SITES=	http://starship.python.net/crew/adustman/
+MASTER_SITES=	ftp://starship.python.net/pub/crew/adustman/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/crew/adustman/MySQLdb.html
