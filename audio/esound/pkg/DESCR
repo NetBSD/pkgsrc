@@ -1,0 +1,5 @@
+I am pleased to announce the preliminary release of the 
+Enlightened Sound Daemon (EsounD version 0.2) for Linux.  
+More details at http://www.netcom.com/~ericmit/EsounD.html.
+This program is designed to mix together several digitized 
+audio streams for playback by a single device.
