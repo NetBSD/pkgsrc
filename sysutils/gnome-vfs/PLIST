@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/01/09 09:47:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/03/21 23:36:46 wiz Exp $
 bin/gnome-vfs-config
 etc/vfs/modules/default-modules.conf
 include/gnome-vfs-1.0/libgnomevfs/gnome-vfs-application-registry.h
@@ -48,7 +48,6 @@ include/gnome-vfs-1.0/libgnomevfs/gnome-vfs-uri.h
 include/gnome-vfs-1.0/libgnomevfs/gnome-vfs-utils.h
 include/gnome-vfs-1.0/libgnomevfs/gnome-vfs-xfer.h
 include/gnome-vfs-1.0/libgnomevfs/gnome-vfs.h
-lib/charset.alias
 lib/gnome-vfs-1.0/include/gnome-vfs-file-size.h
 lib/libgnomevfs-pthread.a
 lib/libgnomevfs-pthread.la
