@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/26 20:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/03 06:35:11 itojun Exp $
 #
 
-DISTNAME=	snort-1.7
+DISTNAME=	snort-1.8p1
 CATEGORIES=	net security
 MASTER_SITES=	http://www.snort.org/Files/				\
 		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
@@ -25,17 +25,22 @@ ROOTGROUP=	root
 
 ROOTGROUP?=	wheel
 
+WRKSRC=		${WRKDIR}/snort
+
 post-install:
 	${INSTALL_DATA_DIR} -m 700 -o root -g ${ROOTGROUP} /var/log/snort
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort
-.for f in backdoor-lib ddos-lib finger-lib ftp-lib misc-lib netbios-lib \
-	overflow-lib ping-lib rpc-lib scan-lib smtp-lib telnet-lib \
-	web-lib webcf-lib webcgi-lib webfp-lib webiis-lib webmisc-lib
+.for f in backdoor.rules ddos.rules dns.rules dos.rules exploit.rules \
+	finger.rules ftp.rules icmp-info.rules icmp.rules info.rules \
+	local.rules misc.rules netbios.rules policy.rules rpc.rules \
+	rservices.rules scan.rules shellcode.rules smtp.rules sql.rules \
+	telnet.rules virus.rules web-cgi.rules web-coldfusion.rules \
+	web-frontpage.rules web-iis.rules web-misc.rules x11.rules
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/snort
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
 .for f in BUGS CREDITS README README.FLEXRESP README.PLUGINS \
- README.Spade README.Spade.Usage README.database README.tcpstream \
+ README.Spade README.Spade.Usage README.csv README.database README.tcpstream \
  README.xml NEWS RULES.SAMPLE USAGE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/snort
 .endfor
