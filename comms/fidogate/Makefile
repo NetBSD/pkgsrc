@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/01 11:23:16 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/14 13:55:04 wiz Exp $
 #
 
 DISTNAME=	fidogate-4.2.9
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.fido.de/fidogate/
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/fidogate
 
 INFO_FILES=	fidogate.info
