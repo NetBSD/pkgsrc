@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:41 seb Exp $
 bin/gfind
 bin/gxargs
 bin/glocate
@@ -6,11 +6,11 @@ bin/gupdatedb
 libexec/gfrcode
 libexec/gcode
 libexec/gbigram
-@unexec install-info --delete %D/info/find.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/find.info %D/info/dir
 info/find.info
 info/find.info-1
 info/find.info-2
-@exec install-info %D/info/find.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/find.info %D/info/dir
 man/cat1/gfind.1
 man/cat1/gxargs.1
 man/cat1/glocate.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/02/16 14:46:20 kent Exp $
+# $NetBSD: Makefile,v 1.35 2002/02/18 15:14:25 seb Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -97,6 +97,7 @@ post-install:
 	-${RMDIR} ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/v7
 .endif
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.

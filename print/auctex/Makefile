@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/03 22:16:52 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:37 seb Exp $
 
 DISTNAME=		auctex-10.0g
 CATEGORIES=		print
@@ -40,7 +40,7 @@ post-patch:
 
 post-build:
 	${RM} -f ${WRKSRC}/doc/auctex*
-	cd ${WRKSRC}/doc && ${MAKE} auctex
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} auctex
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}/auctex
@@ -58,4 +58,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/style/*.el* ${PREFIX}/${LISPDIR}/auctex/style
 	${INSTALL_DATA} ${WRKSRC}/doc/auctex* ${PREFIX}/${INFODIR}
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

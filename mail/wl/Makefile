@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/08 11:47:16 jun Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:29 seb Exp $
 
 DISTNAME=	wl-2.8.1
 CATEGORIES=	mail
@@ -35,4 +35,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/ja/$f ${EXAMPLESDIR}/ja
 .endfor
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

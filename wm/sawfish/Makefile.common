@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/10/22 02:34:38 mycroft Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/02/18 15:14:44 seb Exp $
 
 DISTNAME=		sawfish-${SF_VERS}
 SF_VERS=		1.0.1
@@ -21,4 +21,5 @@ GNU_CONFIGURE=		# defined
 FILESDIR=		${.CURDIR}/../../wm/sawfish/files
 PATCHDIR=		${.CURDIR}/../../wm/sawfish/patches
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

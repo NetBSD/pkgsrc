@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:51 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:33 seb Exp $
 bin/octave
 bin/octave-bug
 bin/mkoctfile
@@ -209,8 +209,8 @@ include/${PKGNAME}/oct-conf.h
 include/${PKGNAME}/oct-gperf.h
 @exec ln -s ${PKGNAME} %D/include/octave
 @unexec ${RM} -f %D/include/octave
-@unexec install-info --delete %D/info/octave.info %D/info/dir
-@unexec install-info --delete %D/info/liboctave.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/octave.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/liboctave.info %D/info/dir
 info/octave.info
 info/octave.info-1
 info/octave.info-10
@@ -228,8 +228,8 @@ info/liboctave.info
 info/liboctave.info-1
 info/liboctave.info-2
 info/liboctave.info-3
-@exec install-info %D/info/liboctave.info %D/info/dir
-@exec install-info %D/info/octave.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/liboctave.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/octave.info %D/info/dir
 lib/${PKGNAME}/libcruft.a
 lib/${PKGNAME}/liboctave.a
 lib/${PKGNAME}/liboctinterp.a

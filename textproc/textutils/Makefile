@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/12/30 11:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/18 15:14:43 seb Exp $
 # FreeBSD Id: ports/textproc/textutils/Makefile,v 1.7 1999/09/18 17:46:30 steve Exp
 
 DISTNAME=	textutils-2.0
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--program-prefix=g
 
 post-install:
-	install-info ${PREFIX}/info/textutils.info ${PREFIX}/info/dir
+	${INSTALL_INFO} ${PREFIX}/info/textutils.info ${PREFIX}/info/dir
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

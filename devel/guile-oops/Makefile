@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/27 13:43:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/18 15:14:12 seb Exp $
 #
 
 DISTNAME=	guile-oops-0.9.0
@@ -15,4 +15,5 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=            YES
 LTCONFIG_OVERRIDE=      ${WRKSRC}/ltconfig
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

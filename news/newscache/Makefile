@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/28 03:30:41 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/18 15:14:37 seb Exp $
 #
 
 DISTNAME=	NewsCache-0.99.17
@@ -11,4 +11,5 @@ COMMENT=	Free cache server for USENET News
 
 GNU_CONFIGURE=	YES
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

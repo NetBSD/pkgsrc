@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/30 05:45:17 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/02/18 15:14:23 seb Exp $
 
 DISTNAME=		cim-3.30
 CATEGORIES=		lang
@@ -24,4 +24,5 @@ SLDFLAGS=	${LDFLAGS:S/${BUILDLINK_DIR}/${LOCALBASE}/g}
 MAKE_ENV+=	AM_MAKEFLAGS='SCFLAGS="${SCFLAGS}" SLDFLAGS="${SLDFLAGS}"'
 
 .include "../../lang/perl5/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/10/27 07:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/02/18 15:14:39 seb Exp $
 #
 
 DISTNAME=	gnupg-1.0.6
@@ -49,4 +49,5 @@ PLIST_SUBST+=	IDEA="@comment "
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

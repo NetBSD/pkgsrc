@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:44 seb Exp $
 #
 
 DISTNAME=		wdiff-0.5
@@ -12,5 +12,7 @@ COMMENT=		Word-by-word diff
 GNU_CONFIGURE=		yes
 
 INFO_FILES+=		wdiff.info
+TEXINFO_OVERRIDE=	YES
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/26 20:19:49 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:44 seb Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -11,6 +11,7 @@ USE_X11BASE=		# defined
 
 CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 MAKE_ENV+=		LOCALEDIR=${LOCALEDIR}
+TEXINFO_OVERRIDE=	YES
 
 PLIST_SUBST+=		SF_VERS=${SF_VERS}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/11 11:42:26 martti Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/18 15:14:06 seb Exp $
 
 DISTNAME=	gnats-3.113.1
 CATEGORIES=	devel
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp \
 		--with-release-based
 USE_GMAKE=	yes
 USE_BISON=	yes
+TEXINFO_OVERRIDE=	YES
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
@@ -53,8 +54,8 @@ CONFIGURE_ENV=	SEND_PR=/dev/null
 INSTALL_TARGET=	install-gnats install-send-pr
 
 post-build:
-	(cd ${WRKSRC}/gnats;   ${MAKE} info)
-	(cd ${WRKSRC}/send-pr; ${MAKE} info)
+	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
+	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
 
 pre-install:
 	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
@@ -62,9 +63,10 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	(cd ${WRKSRC}/gnats;   ${MAKE} install-info)
-	(cd ${WRKSRC}/send-pr; ${MAKE} install-info)
-	install-info ${PREFIX}/info/gnats.info   ${PREFIX}/info/dir
-	install-info ${PREFIX}/info/send-pr.info ${PREFIX}/info/dir
+	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
+	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
+	${INSTALL_INFO} ${PREFIX}/info/gnats.info   ${PREFIX}/info/dir
+	${INSTALL_INFO} ${PREFIX}/info/send-pr.info ${PREFIX}/info/dir
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

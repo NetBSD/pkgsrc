@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/09 07:36:58 taca Exp $
-@unexec install-info --delete --info-dir=%D/info %D/info/ipadic-ja.info
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:23 seb Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ipadic-ja.info
 info/ipadic-ja.info
 info/ipadic-ja.info-1
 info/ipadic-ja.info-2
 info/ipadic-ja.info-3
-@exec install-info --info-dir=%D/info %D/info/ipadic-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ipadic-ja.info
 share/chasen/dic/ipadic/cforms.cha
 share/chasen/dic/ipadic/chadic.ary
 share/chasen/dic/ipadic/chadic.int

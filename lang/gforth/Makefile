@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/25 04:17:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/18 15:14:25 seb Exp $
 
 DISTNAME=		gforth-0.5.0
 CATEGORIES=		lang
@@ -28,4 +28,5 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:31 seb Exp $
 bin/mcsim
 bin/mod
-@unexec install-info --delete --info-dir=%D/info %D/info/mcsim
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mcsim
 info/mcsim
 info/mcsim-1
 info/mcsim-2
 info/mcsim-3
-@exec install-info --info-dir=%D/info %D/info/mcsim
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mcsim
 share/doc/html/mcsim/mcsim.html
 share/doc/mcsim/About-Datasets.txt
 share/doc/mcsim/About-Doc.txt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/27 22:22:22 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/18 15:14:29 seb Exp $
 
 DISTNAME=		fftw-2.1.3
 CATEGORIES=		math
@@ -16,5 +16,7 @@ CONFIGURE_ARGS+=	--enable-i386-hacks
 USE_FORTRAN=		yes
 USE_GMAKE=		yes
 INFO_FILES=		fftw.info
+TEXINFO_OVERRIDE=	YES
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

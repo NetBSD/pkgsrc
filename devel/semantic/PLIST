@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:15 seb Exp $
 ${LISPDIR}/semantic.el
 ${LISPDIR}/semantic.elc
 ${LISPDIR}/semantic-util.el
@@ -40,9 +40,9 @@ ${LISPDIR}/make.bnf
 ${LISPDIR}/java.bnf
 ${LISPDIR}/scheme.bnf
 ${LISPDIR}/semantic-load.el
-@unexec install-info --delete %D/info/semantic.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/semantic.info %D/info/dir
 info/semantic.info
 info/semantic.info-1
 info/semantic.info-2
-@exec install-info %D/info/semantic.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/semantic.info %D/info/dir
 @dirrm ${LISPDIR}

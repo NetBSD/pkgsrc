@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:50 zuntum Exp $
-@unexec	install-info --delete %D/info/slib.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:16 seb Exp $
+@unexec	${INSTALL_INFO} --delete %D/info/slib.info %D/info/dir
 info/slib.info
-@exec	install-info %D/info/slib.info %D/info/dir
+@exec	${INSTALL_INFO} %D/info/slib.info %D/info/dir
 share/doc/slib/FAQ
 share/doc/slib/README
 share/slib/Bev2slib.scm

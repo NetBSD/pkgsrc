@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/19 17:40:01 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/18 15:14:45 seb Exp $
 
 DISTNAME=	w3-4.0pre.46
 PKGNAME=	w3-4.0b46
@@ -31,4 +31,5 @@ INFO_FILES=	w3.info w3-faq.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .endif
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

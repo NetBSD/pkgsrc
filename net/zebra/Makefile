@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/11/29 19:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2002/02/18 15:14:36 seb Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -32,7 +32,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
-USE_GTEXINFO=		# defined
 USE_GMAKE=		# defined
 
 BUILD_DEFS+=		USE_INET6
@@ -55,9 +54,10 @@ pre-configure:
 #post-build:
 #	cd ${WRKSRC}/doc ; \
 #	${TOUCH} zebra.texi ; \
-#	makeinfo --no-split zebra.texi
+#	${MAKEINFO} --no-split zebra.texi
 
 post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

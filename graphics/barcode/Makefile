@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/12 21:32:53 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/18 15:14:20 seb Exp $
 #
 
 DISTNAME=	barcode-0.96
@@ -14,4 +14,5 @@ MAKE_ENV+=	AWK="${AWK}"
 
 INFO_FILES=	barcode.info
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

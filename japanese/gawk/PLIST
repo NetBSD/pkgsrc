@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:22 seb Exp $
 bin/jgawk
 bin/jigawk
-@unexec install-info --delete %D/info/gawk.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gawk.info %D/info/dir
 info/gawk.info
-@exec install-info %D/info/gawk.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/gawk.info %D/info/dir
 libexec/awk/grcat
 libexec/awk/pwcat
 man/man1/jgawk.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:43 seb Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -14,14 +14,14 @@ include/eb/error.h
 include/eb/font.h
 include/eb/text.h
 include/eb/zio.h
-@unexec install-info --delete --info-dir=%D/info %D/info/ebfont-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebfont.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebzip-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebzip.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip.info
 info/ebfont-ja.info
 info/ebfont.info
 info/ebinfo-ja.info
@@ -30,14 +30,14 @@ info/ebrefile-ja.info
 info/ebrefile.info
 info/ebzip-ja.info
 info/ebzip.info
-@exec install-info --info-dir=%D/info %D/info/ebzip-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebrefile.info
-@exec install-info --info-dir=%D/info %D/info/ebrefile-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebinfo.info
-@exec install-info --info-dir=%D/info %D/info/ebinfo-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebfont.info
-@exec install-info --info-dir=%D/info %D/info/ebfont-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebzip.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so

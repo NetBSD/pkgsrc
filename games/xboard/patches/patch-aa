@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/02/07 06:11:24 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2002/02/18 15:14:19 seb Exp $
 
---- Makefile.in.orig	Sat Dec 16 21:24:38 2000
+--- Makefile.in.orig	Tue Feb 20 05:02:22 2001
 +++ Makefile.in
-@@ -63,14 +63,14 @@
+@@ -63,16 +63,15 @@
  
  install: installdirs xboard zic2xpm cmail pxboard xboard.man cmail.man \
  		zic2xpm.man
@@ -14,6 +14,8 @@ $NetBSD: patch-aa,v 1.5 2001/02/07 06:11:24 jlam Exp $
 -	$(INSTALL_DATA) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
 -	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
 -	$(INSTALL_DATA) xboard.info $(infodir)/xboard.info
+-	-PATH=$$PATH:/sbin:/usr/sbin install-info \
+-		$(infodir)/xboard.info $(infodir)/dir
 +	$(BSD_INSTALL_PROGRAM) xboard $(bindir)/xboard
 +	$(BSD_INSTALL_PROGRAM) zic2xpm $(bindir)/zic2xpm
 +	$(BSD_INSTALL_SCRIPT) cmail $(bindir)/cmail
@@ -22,6 +24,7 @@ $NetBSD: patch-aa,v 1.5 2001/02/07 06:11:24 jlam Exp $
 +	$(BSD_INSTALL_MAN) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
 +	$(BSD_INSTALL_MAN) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
 +	$(BSD_INSTALL_DATA) xboard.info $(infodir)/xboard.info
- 	-PATH=$$PATH:/sbin:/usr/sbin install-info \
- 		$(infodir)/xboard.info $(infodir)/dir
++	$(INSTALL_INFO) $(infodir)/xboard.info $(infodir)/dir
  
+ installdirs: mkinstalldirs
+ 	$(srcdir)/mkinstalldirs $(bindir) $(mandir) $(man6dir) $(infodir)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:15 seb Exp $
 #
 
 DISTNAME=	semantic-1.4beta5
@@ -48,4 +48,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${OTHER_INFO}	\
 			${PREFIX}/info
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

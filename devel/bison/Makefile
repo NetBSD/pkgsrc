@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/02/10 19:05:56 tron Exp $
+# $NetBSD: Makefile,v 1.27 2002/02/18 15:14:07 seb Exp $
 
 DISTNAME=		bison-1.32
 CATEGORIES=		devel
@@ -20,4 +20,5 @@ CPPFLAGS+=		-Dunix		# for $TMPDIR parsing
 INFO_FILES=		bison.info
 
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

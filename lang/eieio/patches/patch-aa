@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2002/02/18 15:14:24 seb Exp $
+
+--- Makefile.orig	Mon Feb 19 18:43:10 2001
++++ Makefile
+@@ -12,7 +12,6 @@
+ EMACS=emacs
+ examples_LISP=tree.el call-tree.el chart.el eieio-speedbar.el
+ eieio_info_TEXINFOS=eieio.texi
+-MAKEINFO=makeinfo
+ test_LISP=eieio-tests.el
+ Misc_MISC=INSTALL
+ VERSION=0.16
+@@ -43,7 +42,7 @@
+ 	$(EMACS) -batch -l $@-compile-script -f batch-byte-compile $^
+ 
+ eieio.info: $(eieio_info_TEXINFOS)
+-	makeinfo -o $@ $<
++	$(MAKEINFO) -o $@ $<
+ 
+ test: $(test_LISP)
+ 	@echo "(add-to-list 'load-path nil)" > $@-compile-script

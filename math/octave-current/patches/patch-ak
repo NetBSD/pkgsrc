@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+$NetBSD: patch-ak,v 1.2 2002/02/18 15:14:32 seb Exp $
 
---- kpathsea/Makefile.in.orig	Thu Apr 27 10:05:26 2000
-+++ kpathsea/Makefile.in	Thu Apr 27 10:08:11 2000
+--- kpathsea/Makefile.in.orig	Mon May  4 18:36:19 1998
++++ kpathsea/Makefile.in
 @@ -148,6 +148,7 @@
  INSTALL_SCRIPT = $(INSTALL_PROGRAM)
  INSTALL_DATA = @INSTALL_DATA@
@@ -10,7 +10,15 @@ $NetBSD: patch-ak,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  INSTALL_LIBTOOL_PROG = INSTALL_PROGRAM='$(INSTALL_PROGRAM)' $(LIBTOOL) install-prog
  
  # Creating (symbolic) links.
-@@ -253,7 +254,7 @@
+@@ -189,7 +190,6 @@
+ # End of programs.make.
+ 
+ # texi.make -- making .dvi and .info from .texi.
+-MAKEINFO = makeinfo
+ MAKEINFO_FLAGS = --paragraph-indent=2 -I$(srcdir)
+ 
+ TEXI2DVI = texi2dvi
+@@ -253,7 +253,7 @@
  
  $(kpathsea): $(objects) klibtool.version
  	$(LIBTOOL) archive $(AR) $(ARFLAGS) $@ $(objects)

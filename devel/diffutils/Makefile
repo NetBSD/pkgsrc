@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:09 seb Exp $
 #
 
 DISTNAME=		diffutils-2.7
@@ -15,4 +15,5 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-prefix=g
 INFO_FILES=		diff.info
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

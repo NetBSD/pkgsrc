@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/01/06 02:10:56 tron Exp $
+# $NetBSD: Makefile,v 1.34 2002/02/18 15:14:37 seb Exp $
 #
 
 DISTNAME=		a2ps-4.13b
@@ -17,7 +17,6 @@ DEPENDS+=		psutils-1.17:../../print/psutils
 STRIP=			# empty
 USE_PERL5=		YES
 USE_GMAKE=		YES
-USE_GTEXINFO=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
 
@@ -32,4 +31,5 @@ pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.info
 	${TOUCH} ${WRKSRC}/doc/*.dvi
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:20 seb Exp $
 bin/.geomview-animate
 bin/.geomview-drawbdy
 bin/animate
@@ -18,7 +18,7 @@ bin/polymerge
 bin/togeomview
 bin/ucdtooff
 bin/vrml2oogl
-@unexec install-info --delete --info-dir=%D/info %D/info/geomview
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/geomview
 info/geomview
 info/geomview-1
 info/geomview-2
@@ -27,7 +27,7 @@ info/geomview-4
 info/geomview-5
 info/geomview-6
 info/geomview-7
-@exec install-info --info-dir=%D/info %D/info/geomview
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/geomview
 man/man1/anytooff.1
 man/man1/anytoucd.1
 man/man1/bdy.1

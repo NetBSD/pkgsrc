@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/10/22 03:48:12 mycroft Exp $
+# $NetBSD: Makefile,v 1.15 2002/02/18 15:14:02 seb Exp $
 
 DISTNAME=		libmikmod-3.1.9
 CATEGORIES=		audio
@@ -9,7 +9,6 @@ HOMEPAGE=		http://www.mikmod.org/
 COMMENT=		MikMod Sound Library
 
 USE_GMAKE=		# defined
-USE_GTEXINFO=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 USE_BUILDLINK_ONLY=	# defined
@@ -21,4 +20,5 @@ pre-build:
 	${RM} -f ${WRKSRC}/docs/mikmod.info*
 
 .include "../../audio/esound/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

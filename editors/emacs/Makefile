@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/10/06 22:04:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.45 2002/02/18 15:14:17 seb Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.7
@@ -47,4 +47,5 @@ pre-install:
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

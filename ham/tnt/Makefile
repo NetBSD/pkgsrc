@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/16 22:07:02 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/18 15:14:21 seb Exp $
 #
 
 DISTNAME=	tnt-1.9.1
@@ -17,4 +17,5 @@ GNU_CONFIGURE=	yes
 
 INFO_FILES=	tntdoc.info
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

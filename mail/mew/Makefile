@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/12/10 09:45:35 jun Exp $
+# $NetBSD: Makefile,v 1.45 2002/02/18 15:14:28 seb Exp $
 
 DISTNAME=	mew-2.1.51
 CATEGORIES=	mail
@@ -33,4 +33,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/$f ${PREFIX}/bin
 .endfor
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

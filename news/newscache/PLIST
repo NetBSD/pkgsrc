@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:37 seb Exp $
 bin/updatenews
 etc/newscache.conf-dist
-@unexec install-info --delete %D/info/NewsCache.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/NewsCache.info %D/info/dir
 info/NewsCache.info
-@exec install-info %D/info/NewsCache.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/NewsCache.info %D/info/dir
 man/man5/newscache.conf.5
 man/man8/NewsCache.8
 man/man8/NewsCacheClean.8

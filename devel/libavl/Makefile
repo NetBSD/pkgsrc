@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:13 seb Exp $
 #
 
 DISTNAME=	avl-1.4.0
@@ -12,4 +12,5 @@ COMMENT=	library for manipulation of balanced binary trees
 
 GNU_CONFIGURE=	YES
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

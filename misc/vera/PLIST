@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:48 zuntum Exp $
-@unexec install-info --delete %D/info/vera.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:34 seb Exp $
+@unexec ${INSTALL_INFO} --delete %D/info/vera.info %D/info/dir
 info/vera.info
 info/vera.info-1
 info/vera.info-2
@@ -12,4 +12,4 @@ info/vera.info-8
 info/vera.info-9
 info/vera.info-10
 info/vera.info-11
-@exec install-info %D/info/vera.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/vera.info %D/info/dir

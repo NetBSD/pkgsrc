@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/02/14 01:20:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2002/02/18 15:14:15 seb Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc NetBSD-*-vax SunOS-*-*
 
 GNU_CONFIGURE=		yes
-USE_GTEXINFO=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

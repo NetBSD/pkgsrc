@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/22 12:58:40 agc Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:30 seb Exp $
 #
 
 DISTNAME=	gsl-1.0
@@ -22,8 +22,8 @@ HOMEPAGE=	http://sources.redhat.com/gsl/
 COMMENT=	The GNU Scientific Library
 
 GNU_CONFIGURE=		yes
-USE_GTEXINFO=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/10/21 01:45:08 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2002/02/18 15:14:21 seb Exp $
 
 DISTNAME=		plplot-5.0.4
 CATEGORIES=		graphics
@@ -73,4 +73,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-html-0.4.1/*.html	\
 		${PREFIX}/share/doc/html/plplot
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:20 seb Exp $
 bin/hp2xx
 man/man1/hp2xx.1
-@unexec install-info --delete %D/info/hp2xx.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/hp2xx.info %D/info/dir
 info/hp2xx.info
-@exec install-info %D/info/hp2xx.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/hp2xx.info %D/info/dir

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:21 seb Exp $
 bin/double
 bin/graph
 bin/ode
@@ -67,9 +67,9 @@ share/tek2plot/scale.tek
 share/tek2plot/skymap.tek
 share/tek2plot/skymap2.tek
 share/tek2plot/usmap.tek
-@unexec install-info --delete %D/info/plotutils.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/plotutils.info %D/info/dir
 info/plotutils.info
-@exec install-info %D/info/plotutils.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/plotutils.info %D/info/dir
 @dirrm share/libplot
 @dirrm share/ode
 @dirrm share/pic2plot

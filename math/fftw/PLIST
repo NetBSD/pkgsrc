@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:23 zuntum Exp $
-@unexec install-info --delete %D/info/fftw.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:29 seb Exp $
+@unexec ${INSTALL_INFO} --delete %D/info/fftw.info %D/info/dir
 info/fftw.info
 info/fftw.info-1
 info/fftw.info-2
 info/fftw.info-3
 info/fftw.info-4
 info/fftw.info-5
-@exec install-info %D/info/fftw.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/fftw.info %D/info/dir
 include/fftw.h
 include/rfftw.h
 lib/libfftw.a

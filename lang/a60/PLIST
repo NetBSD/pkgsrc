@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:23 seb Exp $
 bin/a60
-@unexec install-info --delete %D/info/RRA60.info %D/info/dir
-@unexec install-info --delete %D/info/a60.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/RRA60.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/a60.info %D/info/dir
 info/RRA60.info
 info/a60.info
-@exec install-info %D/info/RRA60.info %D/info/dir
-@exec install-info %D/info/a60.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/RRA60.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/a60.info %D/info/dir
 man/man1/a60.1
 share/a60/a60-mkc.inc
 share/doc/a60/a60.ps

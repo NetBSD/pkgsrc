@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:38 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/02/18 15:14:29 seb Exp $
 
 SHA1 (calc-2.02f.tar.gz) = 1a1d54fb90725aacaf1c9308a94be4b813ac4880
 Size (calc-2.02f.tar.gz) = 831865 bytes
-SHA1 (patch-aa) = 14d11b1b7f8db0a8929a5ac632aa3571bee05652
+SHA1 (patch-aa) = 38688806fb5b62e7ac3ca1783376abfb79fd2bfe
 SHA1 (patch-ab) = f8634afae8f7236bcf2e4c232e5cd60d5500e0cb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/12/05 15:00:47 agc Exp $
+# $NetBSD: Makefile,v 1.20 2002/02/18 15:14:35 seb Exp $
 #
 
 DISTNAME=		arla-0.35.5
@@ -79,4 +79,5 @@ post-install:
 		> ${PREFIX}/etc/rc.d/arlad
 	@${ECHO} " "
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

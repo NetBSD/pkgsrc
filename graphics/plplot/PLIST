@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:21 seb Exp $
 bin/plplot-config
 bin/plrender
 bin/plserver
@@ -19,7 +19,7 @@ include/plplot/pltcl.h
 include/plplot/pltk.h
 include/plplot/plxwd.h
 include/plplot/tclMatrix.h
-@unexec install-info --delete --info-dir=%D/info %D/info/plplotdoc.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/plplotdoc.info
 info/plplotdoc.info
 info/plplotdoc.info-1
 info/plplotdoc.info-2
@@ -29,7 +29,7 @@ info/plplotdoc.info-5
 info/plplotdoc.info-6
 info/plplotdoc.info-7
 info/plplotdoc.info-8
-@exec install-info --info-dir=%D/info %D/info/plplotdoc.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/plplotdoc.info
 lib/libplcxxd.a
 lib/libplplotd.a
 lib/libtclmatrixd.a

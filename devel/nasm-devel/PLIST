@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:14 seb Exp $
 bin/nasm
 bin/ndisasm
 bin/rdfdump
@@ -10,7 +10,7 @@ bin/rdf2ihx
 bin/rdf2com
 man/man1/nasm.1
 man/man1/ndisasm.1
-@unexec install-info --delete %D/info/nasm.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/nasm.info %D/info/dir
 info/nasm.info
 info/nasm.info-1
 info/nasm.info-2
@@ -23,7 +23,7 @@ info/nasm.info-8
 info/nasm.info-9
 info/nasm.info-10
 info/nasm.info-11
-@exec install-info %D/info/nasm.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/nasm.info %D/info/dir
 share/doc/html/nasm/nasmdoc0.html
 share/doc/html/nasm/nasmdoc1.html
 share/doc/html/nasm/nasmdoc2.html

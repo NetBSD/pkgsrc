@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/11/29 01:12:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2002/02/18 15:14:41 seb Exp $
 #
 
 DISTNAME=	mtools-3.9.7
@@ -15,6 +15,7 @@ NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INFO_FILES=	mtools.info
+TEXINFO_OVERRIDE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,4 +42,5 @@ post-install:
 	${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}
 .endif
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

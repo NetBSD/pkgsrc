@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/08 09:36:51 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:17 seb Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -22,7 +22,6 @@ DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GTEXINFO=	yes
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath
@@ -40,6 +39,8 @@ CONFIGURE_ARGS+=	--canna --canna-includes=${LOCALBASE}/include --canna-libraries
 
 INFO_FILES=	antenews-jp canna-jp cl dired-x egg-jp emacs forms gnus mule \
 		mule-jp sc vip
+TEXINFO_OVERRIDE=	YES
+TEXINFO_PATTERNS+=	Makefile
 
 MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
 
@@ -48,4 +49,5 @@ post-patch:
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/info.patch
 	@${RM} -f ${WRKSRC}/info/*.orig
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:16 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:24 seb Exp $
 #
 
 DISTNAME=	eieio-0.16
@@ -38,4 +38,5 @@ do-install:
 			${PREFIX}/${LISPDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/20 16:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:14 seb Exp $
 #
 
 DISTNAME=	nasm-0.98.08
@@ -14,10 +14,13 @@ BUILD_DEPENDS+=	perl>=5.0:../../lang/perl5
 INSTALL_TARGET=	install_everything
 USE_GMAKE=	yes
 INFO_FILES=	nasm.info
+TEXINFO_OVERRIDE=	YES
+TEXINFO_PATTERNS+=	Makefile
 
 MAKE_ENV+=	PREFIX="${PREFIX}"			\
 		PERL5="${PERL5}"			\
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"	\
 		INSTALL_DATA="${INSTALL_DATA}"
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

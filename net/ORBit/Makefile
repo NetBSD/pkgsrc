@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2002/01/15 23:52:11 rh Exp $
+# $NetBSD: Makefile,v 1.73 2002/02/18 15:14:35 seb Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -36,4 +36,5 @@ AUTOMAKE_OVERRIDE=	NO	# Otherwise breaks 1.5 arm32
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
 .include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
