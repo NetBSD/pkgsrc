@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1537 2003/03/04 14:20:33 seb Exp $
+$NetBSD: CHANGES,v 1.1538 2003/03/04 14:42:27 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -912,3 +912,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libmilter to 8.12.8nb1 [seb 2003-03-04]
 	Updated wine to 20030219 [wiz 2003-03-04]
 	Removed sendmail88 [seb 2003-03-04]
+	Updated streamtuner to 0.9.1 [salo 2003-03-04]
