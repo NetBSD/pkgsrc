@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/02 21:31:36 jlam Exp $
 
-DISTNAME=		Archive-Tar-1.02
+DISTNAME=		Archive-Tar-1.10
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tar
 CATEGORIES=		archivers perl5
@@ -13,7 +13,8 @@ DEPENDS+=		p5-IO-Zlib-[0-9]*:../../devel/p5-IO-Zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK5=		YES
+USE_LANGUAGES=		# empty
+USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Archive/Tar/.packlist
 
 .include "../../lang/perl5/module.mk"
