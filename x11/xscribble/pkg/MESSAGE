@@ -1,7 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.2 2001/01/29 11:34:49 wiz Exp $
-
-To actually use xscribble, you need to copy
-${PREFIX}/share/examples/xscribble/*.cl into ~/.classifiers.
-
-======================================================================

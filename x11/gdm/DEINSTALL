@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:10:43 zuntum Exp $
+
+if [ "$2" != POST-DEINSTALL ]
+then
+	cd @@GDMCFGDIR@@
+	@@RM@@ -f Sessions/Default
+	for SOURCE in @@GDMCFGFILES@@
+	do
+		TARGET=${SOURCE%.default*}${SOURCE##*.default}
+		if cmp -s $SOURCE $TARGET
+		then
+			@@RM@@ -f $TARGET
+		fi
+	done
+fi
+
+exit 0

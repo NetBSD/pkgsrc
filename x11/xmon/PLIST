@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:20 zuntum Exp $
+bin/xmond
+bin/xmonui
+man/cat1/xmon.0
+man/cat1/xmond.0
+man/cat1/xmonui.0

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:05:19 agc Exp $
-bin/rxvt
-man/man1/rxvt.1.gz
