@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/07/22 02:45:46 tv Exp $
+# $NetBSD: Makefile,v 1.21 1998/07/31 17:51:21 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -16,7 +16,7 @@ CONFLICTS=	pine-3.96 pine-4.00
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
-	${SED} -e 's@/usr/local@${PREFIX}@' \
+	${SED} -e 's@/usr/local/lib/@${PREFIX}/etc/@' \
 		<${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
 	cd ${WRKSRC}/pico && ${MAKE} -f makefile.neb os.h
 
@@ -38,8 +38,8 @@ do-install:
 	    -e 's|^\(mail-directory\)=.*$$|\1=Mail|g' \
 	    -e 's|^\(feature-list\)=.*$$|\1=enable-mail-check-cue,enable-suspend,expanded-view-of-addressbooks,include-header-in-reply,include-text-in-reply,show-selected-in-boldface,signature-at-bottom|g' \
 	    -e 's|^\(sort-key\)=.*$$|\1=Arrival/Reverse|g' \
-	    >${PREFIX}/lib/pine.conf
-	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/lib/
+	    >${PREFIX}/etc/pine.conf
+	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/etc/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pine
 	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${PREFIX}/share/doc/pine/
 
