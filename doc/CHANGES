@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5548 2004/04/12 01:04:06 salo Exp $
+$NetBSD: CHANGES,v 1.5549 2004/04/12 02:04:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1920,3 +1920,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated afio to 2.5 [minskim 2004-04-12]
 	Added ishell-0.2 [minskim 2004-04-12]
 	Updated pkglint to 3.69 [salo 2004-04-12]
+	Updated tuxracer to 0.61nb6 [minskim 2004-04-12]

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 23:16:27 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/12 02:04:59 minskim Exp $
 #
 
 DISTNAME=	tuxracer-0.61
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxracer/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -32,7 +32,7 @@ post-install:
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../lang/tcl83/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
