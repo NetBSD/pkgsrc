@@ -1,0 +1,25 @@
+$NetBSD: patch-ap,v 1.1 2000/02/03 16:01:15 abs Exp $
+
+--- linuxdoom-1.10/m_swap.h.orig	Mon Dec 22 20:14:41 1997
++++ linuxdoom-1.10/m_swap.h	Thu Feb  3 01:33:56 2000
+@@ -28,14 +28,17 @@
+ #pragma interface
+ #endif
+ 
++#if BYTE_ORDER == BIG_ENDIAN
++#define __BIG_ENDIAN__ 1
++#endif
+ 
+ // Endianess handling.
+ // WAD files are stored little endian.
+ #ifdef __BIG_ENDIAN__
+-short	SwapSHORT(short);
+-long	SwapLONG(long);
++unsigned short	SwapSHORT(unsigned short);
++unsigned int	SwapLONG(unsigned int);
+ #define SHORT(x)	((short)SwapSHORT((unsigned short) (x)))
+-#define LONG(x)         ((long)SwapLONG((unsigned long) (x)))
++#define LONG(x)         ((int)SwapLONG((unsigned int) (x)))
+ #else
+ #define SHORT(x)	(x)
+ #define LONG(x)         (x)
