@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/10 18:11:19 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/11 01:36:24 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.7
@@ -147,7 +147,7 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 
 # Do IPV6 on systems which can support it.
 .if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ENV+=       CPPFLAGS=-DINET6
+CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
 .include "../../mk/bsd.pkg.mk"
