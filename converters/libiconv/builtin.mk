@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2004/04/26 04:53:23 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/06/04 05:21:14 reed Exp $
 
 .if !defined(_LIBICONV_FOUND)
 _LIBICONV_FOUND!=							\
@@ -86,6 +86,21 @@ _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
 USE_BUILTIN.iconv=	no
 .        endif
 .      endfor
+.    endif
+# XXX
+# XXX By default, assume that the native iconv on Linux systems using GLIBC
+# XXX supports GNU libiconv's API.
+# XXX
+# XXX Determine we are using the builtin iconv regardless of whether it's
+# XXX truly GNU libiconv.
+# XXX
+.    if (${OPSYS} == "Linux") && exists(${_ICONV_H})
+USE_BUILTIN.iconv!=	\
+	if ${GREP} -q "This file is part of the GNU C Library" ${_ICONV_H}; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
+	fi
 .    endif
 .  endif
 
