@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 1999/10/04 23:16:02 simonb Exp $
+$NetBSD: patch-ab,v 1.7 2000/07/20 11:12:07 agc Exp $
 
 --- 9term/9term.c.orig	Fri Jun  3 09:35:39 1994
 +++ 9term/9term.c	Fri Sep 26 16:45:48 1997
@@ -94,7 +94,7 @@ $NetBSD: patch-ab,v 1.6 1999/10/04 23:16:02 simonb Exp $
 -BINDIR=/usr/pgrad/matty/bin/$(cputype)
 +OS= -D_LIBXG_EXTENSION -DSUNOS
 +
-+SAMPATH=${PKGSRCDIR}/plan9/sam/${WRKDIR:T}
++SAMPATH=${PKGSRCDIR}/editors/sam/${WRKDIR:T}
 +
 +BINDIR=.			# where we'll install it
  
