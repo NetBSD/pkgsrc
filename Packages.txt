@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.37 1998/07/03 06:51:37 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.38 1998/07/13 15:37:12 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -988,10 +988,10 @@ preprocessor-like .if, .ifdef, or .ifndef statements:
  9.10 Is there a mailing list for pkg-related discussion?
  ========================================================
 
-We've agreed on using tech-userlevel@netbsd.org for discussing 
-package related issues. To subscribe do:
+Yes. We are using tech-pkg@netbsd.org for discussing package related
+issues. To subscribe do:
 
-    echo subscribe tech-userlevel | mail majordomo@netbsd.org
+    echo subscribe tech-pkg | mail majordomo@netbsd.org
 
 
  9.11 How do i tell "make fetch" to do passive FTP?
