@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/23 16:19:49 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/17 14:07:44 wiz Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
 include/gst.h
 include/gstpub.h
 include/gstconf.h
+@unexec install-info --delete %D/info/gst.info %D/info/dir
 info/gst.info
 info/gst.info-1
 info/gst.info-10
@@ -22,6 +23,7 @@ info/gst.info-6
 info/gst.info-7
 info/gst.info-8
 info/gst.info-9
+@exec install-info %D/info/gst.info %D/info/dir
 lib/libgst.a
 man/man1/gst.1
 share/gnu-smalltalk/kernel/Array.st
