@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/29 11:07:45 abs Exp $
 bin/gnome-vfs-config
 etc/gnome-vfs-mime-magic
 etc/vfs/modules/default-modules.conf
@@ -89,6 +89,8 @@ lib/vfs/modules/libfile.so
 lib/vfs/modules/libftp.a
 lib/vfs/modules/libftp.la
 lib/vfs/modules/libftp.so
+lib/vfs/modules/libftp.so.0
+lib/vfs/modules/libftp.so.0.0
 lib/vfs/modules/libgconf.a
 lib/vfs/modules/libgconf.la
 lib/vfs/modules/libgconf.so
@@ -104,6 +106,8 @@ lib/vfs/modules/libvfs-pipe.so
 lib/vfs/modules/libvfs-test.a
 lib/vfs/modules/libvfs-test.la
 lib/vfs/modules/libvfs-test.so
+lib/vfs/modules/libvfs-test.so.0
+lib/vfs/modules/libvfs-test.so.0.0
 lib/vfs/modules/libvfs-translate.a
 lib/vfs/modules/libvfs-translate.la
 lib/vfs/modules/libvfs-translate.so
