@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 00:24:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/16 16:22:58 jmmv Exp $
 
 DISTNAME=	gnome-base-2.4.2
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for basic components of the GNOME desktop
 
 DEPENDS+=	gdm>=2.4.4.7:../../x11/gdm
+DEPENDS+=	gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-panel>=2.4.2:../../x11/gnome-panel
 DEPENDS+=	gnome-session>=2.4.2:../../x11/gnome-session
 DEPENDS+=	gnome2-control-center>=2.4.0:../../x11/gnome2-control-center
