@@ -1,7 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
---- configure.orig	Sun Nov  5 10:07:38 2000
-+++ configure	Wed Mar 21 11:54:56 2001
-@@ -1407,7 +1407,7 @@
+$NetBSD: patch-ab,v 1.2 2004/03/11 17:43:50 minskim Exp $
+
+--- configure.orig	2000-11-05 12:07:38.000000000 -0600
++++ configure
+@@ -1357,7 +1357,7 @@ echo "$ac_t""$PYTH_vers" 1>&6
+ # _multiply_ the python version major version by one thousand, but minor
+ # version is only multiplied by one hundred (not really, but for m.n.p
+ # version numbers, it works)
+-PYTH_versnum=`echo $PYTH_vers | sed 's/b[0-9]//' |
++PYTH_versnum=`echo $PYTH_vers | sed 's/b[0-9]//;s/p/\./' |
+   sed 's/^[0-9]\./0&/;s/\.\([0-9]\)\./.0\1./g;s/\.\([0-9]\)$/\.0\1/;s/\.//g' |
+   sed 's/^\(....\)$/\100/'`
+ 
+@@ -1407,7 +1407,7 @@ if test -n "${EXP_LIB}"; then
      fi
    fi
  else
@@ -10,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
  fi
  echo "$ac_t""$EXP_LIB" 1>&6
  
-@@ -1542,7 +1542,7 @@
+@@ -1542,7 +1542,7 @@ case ${EXP_VERS} in
  esac
  case ${EXP_VERS} in
    5.31*|5.32*)
