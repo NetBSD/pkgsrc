@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/09 23:16:14 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/03/26 16:54:51 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use xmlcatmgr.
 #
@@ -27,7 +27,9 @@ BUILDLINK_DEPENDS.xmlcatmgr+=		xmlcatmgr>=2.0beta1
 BUILDLINK_PKGSRCDIR.xmlcatmgr?=		../../textproc/xmlcatmgr
 
 # Location of the xmlcatmgr binary program.
-XMLCATMGR=	${BUILDLINK_PREFIX.xmlcatmgr}/bin/xmlcatmgr
+EVAL_PREFIX+=			XMLCATMGR_PREFIX=xmlcatmgr
+XMLCATMGR_PREFIX_DEFAULT=	${LOCALBASE}
+XMLCATMGR=			${XMLCATMGR_PREFIX}/bin/xmlcatmgr
 
 # System-wide configurable catalogs.
 .if defined(PKG_SYSCONFDIR.xmlcatmgr) && !empty(PKG_SYSCONFDIR.xmlcatmgr)
