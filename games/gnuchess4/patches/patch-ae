@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+
+--- Makefile.in-orig	Mon Sep 28 08:41:13 1998
++++ Makefile.in	Mon Feb  8 08:52:59 1999
+@@ -127,7 +127,7 @@
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+-LIBDIR = $(prefix)/lib
++LIBDIR = $(prefix)/share/gnuchess
+ BINDIR = $(exec_prefix)/bin
+ MANDIR = $(prefix)/man/man6
+ MANEXT = .6
+@@ -156,6 +156,7 @@
+ 	$(INSTALL) postprint $(BINDIR)/postprint
+ 	$(INSTALL) gnuan $(BINDIR)/gnuan
+ 	$(INSTALL) game $(BINDIR)/game
++	mkdir $(LIBDIR)
+ 	$(INSTALL) $(srcdir)/../misc/gnuchess.lang $(LIBDIR)/gnuchess.lang
+ 	$(INSTALL) $(srcdir)/../book/eco.pgn $(LIBDIR)/eco.pgn
+ 	$(INSTALL) gnuchess.data $(LIBDIR)/gnuchess.data
