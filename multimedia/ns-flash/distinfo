@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 14:50:30 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/10/05 18:54:53 jdolecek Exp $
 
-SHA1 (flash/5.0r51/flash_linux.tar.gz) = 757b616634b3d9398d76437c5c41927fb91f0b9d
-Size (flash/5.0r51/flash_linux.tar.gz) = 568380 bytes
-SHA1 (flash/5.0r52/flash_solaris.tar.gz) = c6e71f85ad9dfb00814f3aa574c88d73ac987586
-Size (flash/5.0r52/flash_solaris.tar.gz) = 627444 bytes
+SHA1 (flash/7.0r25/install_flash_player_7_linux.tar.gz) = ae252d5b7b421d2f617f5b9ebb7acea210ecc37c
+Size (flash/7.0r25/install_flash_player_7_linux.tar.gz) = 987452 bytes
+SHA1 (flash/7.0r53/flash_player_7_solaris_sparc_r53.tar.gz) = c93a8109c6abb5647548112b177e32571955afb1
+Size (flash/7.0r53/flash_player_7_solaris_sparc_r53.tar.gz) = 1015384 bytes
