@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/04 11:09:46 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/04/05 08:45:01 jdolecek Exp $
 bin/camlrunm
 bin/mosml
 bin/mosmlc
 bin/mosmllex
 bin/mosmlyac
+lib/moscow_ml/AppleScript.sig
 lib/moscow_ml/Array.sig
 lib/moscow_ml/Array.ui
 lib/moscow_ml/Array.uo
@@ -31,6 +32,9 @@ lib/moscow_ml/Bool.uo
 lib/moscow_ml/Byte.sig
 lib/moscow_ml/Byte.ui
 lib/moscow_ml/Byte.uo
+lib/moscow_ml/Callback.sig
+lib/moscow_ml/Callback.ui
+lib/moscow_ml/Callback.uo
 lib/moscow_ml/Char.sig
 lib/moscow_ml/Char.ui
 lib/moscow_ml/Char.uo
@@ -195,6 +199,7 @@ lib/moscow_ml/Word8Vector.uo
 lib/moscow_ml/header
 lib/moscow_ml/helpsigs.val
 lib/moscow_ml/mosmlcmp
+lib/moscow_ml/mosmllex
 lib/moscow_ml/mosmllnk
 lib/moscow_ml/mosmltop
 libexec/moscow_ml/cutdeps
@@ -203,7 +208,9 @@ share/doc/moscow_ml/bugs
 share/doc/moscow_ml/copyrght.att
 share/doc/moscow_ml/copyrght.cl
 share/doc/moscow_ml/gpl2
-share/doc/moscow_ml/manual.dvi
+share/doc/moscow_ml/manual.pdf
+share/doc/moscow_ml/mosmlref.pdf
+share/doc/moscow_ml/mosmllib/AppleScript.html
 share/doc/moscow_ml/mosmllib/Array.html
 share/doc/moscow_ml/mosmllib/Array2.html
 share/doc/moscow_ml/mosmllib/Arraysort.html
@@ -213,6 +220,7 @@ share/doc/moscow_ml/mosmllib/Binarymap.html
 share/doc/moscow_ml/mosmllib/Binaryset.html
 share/doc/moscow_ml/mosmllib/Bool.html
 share/doc/moscow_ml/mosmllib/Byte.html
+share/doc/moscow_ml/mosmllib/Callback.html
 share/doc/moscow_ml/mosmllib/Char.html
 share/doc/moscow_ml/mosmllib/CharArray.html
 share/doc/moscow_ml/mosmllib/CharVector.html
@@ -222,6 +230,7 @@ share/doc/moscow_ml/mosmllib/Dynarray.html
 share/doc/moscow_ml/mosmllib/Dynlib.html
 share/doc/moscow_ml/mosmllib/FileSys.html
 share/doc/moscow_ml/mosmllib/Gdbm.html
+share/doc/moscow_ml/mosmllib/Gdimage.html
 share/doc/moscow_ml/mosmllib/General.html
 share/doc/moscow_ml/mosmllib/Help.html
 share/doc/moscow_ml/mosmllib/Int.html
@@ -236,6 +245,7 @@ share/doc/moscow_ml/mosmllib/Math.html
 share/doc/moscow_ml/mosmllib/Meta.html
 share/doc/moscow_ml/mosmllib/Mosml.html
 share/doc/moscow_ml/mosmllib/Mosmlcgi.html
+share/doc/moscow_ml/mosmllib/Mysql.html
 share/doc/moscow_ml/mosmllib/NJ93.html
 share/doc/moscow_ml/mosmllib/Nonstdio.html
 share/doc/moscow_ml/mosmllib/OS.html
@@ -245,10 +255,13 @@ share/doc/moscow_ml/mosmllib/Parsing.html
 share/doc/moscow_ml/mosmllib/Path.html
 share/doc/moscow_ml/mosmllib/Polygdbm.html
 share/doc/moscow_ml/mosmllib/Polyhash.html
+share/doc/moscow_ml/mosmllib/Postgres.html
 share/doc/moscow_ml/mosmllib/Process.html
 share/doc/moscow_ml/mosmllib/Random.html
 share/doc/moscow_ml/mosmllib/Real.html
+share/doc/moscow_ml/mosmllib/Regex.html
 share/doc/moscow_ml/mosmllib/SML90.html
+share/doc/moscow_ml/mosmllib/Socket.html
 share/doc/moscow_ml/mosmllib/Splaymap.html
 share/doc/moscow_ml/mosmllib/Splayset.html
 share/doc/moscow_ml/mosmllib/Splaytree.html
@@ -267,16 +280,19 @@ share/doc/moscow_ml/mosmllib/Word8Array.html
 share/doc/moscow_ml/mosmllib/Word8Vector.html
 share/doc/moscow_ml/mosmllib/idIndex.html
 share/doc/moscow_ml/mosmllib/index.html
-share/doc/moscow_ml/mosmlref.dvi
 share/doc/moscow_ml/recomp
 share/doc/moscow_ml/releases.txt
 share/examples/moscow_ml/Makefile
+share/examples/moscow_ml/Makefile.w32
 share/examples/moscow_ml/README
+share/examples/moscow_ml/Readme.w32
 share/examples/moscow_ml/calc/Lexer.lex
 share/examples/moscow_ml/calc/Makefile
+share/examples/moscow_ml/calc/Makefile.w32
 share/examples/moscow_ml/calc/Parser.grm
 share/examples/moscow_ml/calc/calc.sml
 share/examples/moscow_ml/cgi/Makefile
+share/examples/moscow_ml/cgi/Makefile.w32
 share/examples/moscow_ml/cgi/README
 share/examples/moscow_ml/cgi/README1
 share/examples/moscow_ml/cgi/README2
@@ -294,8 +310,8 @@ share/examples/moscow_ml/helpsigs/Htmlsigs.sig
 share/examples/moscow_ml/helpsigs/Htmlsigs.sml
 share/examples/moscow_ml/helpsigs/Lexer.lex
 share/examples/moscow_ml/helpsigs/Makefile
+share/examples/moscow_ml/helpsigs/Makefile.w32
 share/examples/moscow_ml/helpsigs/Parser.grm
-share/examples/moscow_ml/helpsigs/Parser.output
 share/examples/moscow_ml/helpsigs/Parsspec.sml
 share/examples/moscow_ml/helpsigs/Printbase.sml
 share/examples/moscow_ml/helpsigs/README
@@ -307,6 +323,7 @@ share/examples/moscow_ml/lexyacc/Data.sml
 share/examples/moscow_ml/lexyacc/Lexer.lex
 share/examples/moscow_ml/lexyacc/Main.sml
 share/examples/moscow_ml/lexyacc/Makefile
+share/examples/moscow_ml/lexyacc/Makefile.w32
 share/examples/moscow_ml/lexyacc/Parser.grm
 share/examples/moscow_ml/lexyacc/README
 share/examples/moscow_ml/lexyacc/cl/append.cl
@@ -326,12 +343,15 @@ share/examples/moscow_ml/manual/Evaluate.sig
 share/examples/moscow_ml/manual/Evaluate.sml
 share/examples/moscow_ml/manual/Expr.sml
 share/examples/moscow_ml/manual/Makefile
+share/examples/moscow_ml/manual/Makefile.w32
 share/examples/moscow_ml/manual/Reduce.sig
 share/examples/moscow_ml/manual/Reduce.sml
 share/examples/moscow_ml/manual/load
 share/examples/moscow_ml/mls/Makefile
+share/examples/moscow_ml/mls/Makefile.w32
 share/examples/moscow_ml/mls/mls.sml
 share/examples/moscow_ml/pretty/Makefile
+share/examples/moscow_ml/pretty/Makefile.w32
 share/examples/moscow_ml/pretty/ppexpr.sml
 share/examples/moscow_ml/small/README
 share/examples/moscow_ml/small/countperms.sml
@@ -342,8 +362,15 @@ share/examples/moscow_ml/small/roman.sml
 share/examples/moscow_ml/small/subsets.sml
 share/examples/moscow_ml/small/subsum.sml
 share/examples/moscow_ml/weak/Makefile
+share/examples/moscow_ml/weak/Makefile.w32
 share/examples/moscow_ml/weak/README
 share/examples/moscow_ml/weak/hashcons.sml
+share/examples/moscow_ml/webserver/Makefile
+share/examples/moscow_ml/webserver/README
+share/examples/moscow_ml/webserver/echoserver.sml
+share/examples/moscow_ml/webserver/minimalserver.sml
+share/examples/moscow_ml/webserver/mosmlserver.sml
+share/examples/moscow_ml/webserver/useit.sml
 @dirrm lib/moscow_ml
 @dirrm libexec/moscow_ml
 @dirrm share/doc/moscow_ml/mosmllib
@@ -359,4 +386,5 @@ share/examples/moscow_ml/weak/hashcons.sml
 @dirrm share/examples/moscow_ml/pretty
 @dirrm share/examples/moscow_ml/small
 @dirrm share/examples/moscow_ml/weak
+@dirrm share/examples/moscow_ml/webserver
 @dirrm share/examples/moscow_ml
