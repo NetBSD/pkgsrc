@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/08 16:41:51 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/08 16:42:37 seb Exp $
 
 DISTNAME=		gri-2.12.5
 CATEGORIES=		graphics
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gri/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://gri.sourceforge.net
+HOMEPAGE=		http://gri.sourceforge.net/
 COMMENT=		Language for scientific graphics applications
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
