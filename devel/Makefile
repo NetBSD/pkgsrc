@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2002/12/13 17:11:28 cjep Exp $
+# $NetBSD: Makefile,v 1.358 2002/12/13 20:44:13 cjep Exp $
 #
 
 COMMENT=	Development utilities
@@ -353,6 +353,7 @@ SUBDIR+=	tmake
 SUBDIR+=	tpasm
 SUBDIR+=	trio
 SUBDIR+=	tvision
+SUBDIR+=	ucl
 SUBDIR+=	uml
 SUBDIR+=	unidiff
 SUBDIR+=	unproven-pthreads
