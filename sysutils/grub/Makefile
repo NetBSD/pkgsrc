@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/11 22:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/16 00:52:19 wiz Exp $
 #
 
 DISTNAME=	grub-0.91
@@ -13,8 +13,9 @@ COMMENT=	GRand Unified Bootloader -- Boots *BSD, Linux, groks ffs, FAT, ext2
 # toolchain. Also it is only available for i386
 ONLY_FOR_PLATFORM=      NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
