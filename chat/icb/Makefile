@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/06/02 01:41:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/14 23:24:23 jlam Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -13,18 +13,16 @@ HOMEPAGE=		http://www.icb.net/
 COMMENT=		Internet CB - a mostly-defunct chat client
 
 NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-do-configure:
-	@cd ${WRKSRC}; \
-	${SED} -e s,@PREFIX@,${PREFIX},g ${FILESDIR}/config >${WRKSRC}/config
-.	if (${OPSYS} == "Darwin")
-	@${SED} -e s,-ltermcap,,g ${WRKSRC}/config >${WRKSRC}/config.new; \
-	${MV} -f ${WRKSRC}/config.new ${WRKSRC}/config
-.	endif
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	r:-ltermcap
+.endif
 
+do-configure:
+	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/config >${WRKSRC}/config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/icb/icb ${PREFIX}/bin
