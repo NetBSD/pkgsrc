@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1 2004/04/27 19:45:59 adam Exp $
+
+--- splash/SplashFTFontFile.h.orig	Tue Apr 27 21:32:38 2004
++++ splash/SplashFTFontFile.h
+@@ -15,6 +15,7 @@
+ #pragma interface
+ #endif
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include "SplashFontFile.h"
+ 
