@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/18 19:56:54 snj Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -12,7 +12,7 @@ COMMENT=		Przemek's Info Viewer
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
@@ -34,9 +34,9 @@ post-install:
 .if defined(PINFO_USE_NATIVE_CURSES) && ${PINFO_USE_NATIVE_CURSES} == "YES"
 CONFIGURE_ARGS+=	--with-vcurses
 .else
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
