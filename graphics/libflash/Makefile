@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/12/03 04:23:00 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/11 14:24:00 abs Exp $
 #
 
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	open source flash(tm) library
 
