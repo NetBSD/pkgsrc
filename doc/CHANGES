@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3259 2003/09/06 01:35:13 jlam Exp $
+$NetBSD: CHANGES,v 1.3260 2003/09/06 03:34:17 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated samba to 2.2.8anb3 [kim 2003-09-05]
 	Added menu2wm-0.1 [jmmv 2003-09-05]
 	Updated libnbcompat to 20030830 [jlam 2003-09-05]
+	Updated p5-Inline to 0.44 [kim 2003-09-06]
