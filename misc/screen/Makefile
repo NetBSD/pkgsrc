@@ -3,7 +3,7 @@
 # Date created:         25 Nov 1994
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.5 1998/02/10 20:35:34 tv Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/16 08:52:01 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
@@ -22,5 +22,7 @@ MAN1=		screen.1
 
 post-install:
 	@install-info ${PREFIX}/info/screen.info ${PREFIX}/info/dir
+	@${MKDIR} ${PREFIX}/share/examples/screen
+	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc ${PREFIX}/share/examples/screen/screenrc
 
 .include <bsd.port.mk>
