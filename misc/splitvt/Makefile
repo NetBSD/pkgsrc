@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:34 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/15 20:39:45 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
 #
 
 DISTNAME=		splitvt-1.6.3
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	utils/console
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
 MAINTAINER=		packages@netbsd.org
 

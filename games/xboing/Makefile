@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:57 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:42 tron Exp $
 #
 
 DISTNAME=		xboing2.4
 PKGNAME=		xboing-2.4
 CATEGORIES=		games x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	games
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.catt.rmit.edu.au/xboing/xboing.html

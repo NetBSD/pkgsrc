@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/04/09 21:11:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:43 tron Exp $
 #
 
 DISTNAME=		cdlabelgen-1.1.3
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.red-bean.com/~bwf/software/cdlabelgen/ \
 			ftp://ftp.red-bean.com/pub/bwf/ \
-			${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	utils/disk-management
+			${MASTER_SITE_SUNSITE:=utils/disk-management/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.red-bean.com/~bwf/software/cdlabelgen/

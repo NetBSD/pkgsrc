@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 1998/08/27 11:18:04 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:43 tron Exp $
 
 DISTNAME=		xli.1.16
 PKGNAME=		xli-1.16
 CATEGORIES=		graphics x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/}
 
 MAINTAINER=		packages@netbsd.org
 

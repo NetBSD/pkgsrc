@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/15 20:39:47 tron Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	system/printing
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
 MAINTAINER=	tron@netbsd.org
 

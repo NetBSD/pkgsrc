@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1998/12/05 03:50:46 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:47 tron Exp $
 #
 
 DISTNAME=		Apache-ASP-0.05
 PKGNAME=		p5-Apache-ASP-0.05
 CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
-MASTER_SITE_SUBDIR=	Apache/CHAMAS
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/CHAMAS/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Apache-ASP/ASP.html
