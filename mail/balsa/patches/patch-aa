@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2002/02/01 17:02:18 mjl Exp $
+$NetBSD: patch-aa,v 1.8 2002/03/11 00:13:10 jmc Exp $
 
---- configure.orig	Sun Jan 20 12:45:14 2002
-+++ configure	Fri Feb  1 14:12:02 2002
+--- configure.orig	Sun Jan 20 11:45:14 2002
++++ configure
 @@ -6593,7 +6593,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.7 2002/02/01 17:02:18 mjl Exp $
  cat > conftest.$ac_ext <<EOF
  #line 6599 "configure"
  #include "confdefs.h"
+@@ -6627,7 +6627,7 @@
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lpspell $LIBS"
++  LIBS="-lpspell -lm $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
 @@ -8131,7 +8131,7 @@
    cat conftest.$ac_ext >&5
    rm -rf conftest*
