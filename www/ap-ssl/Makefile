@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/04/24 13:45:52 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/04/26 21:18:53 tron Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.3-1.3.12
@@ -9,7 +9,6 @@ MASTER_SITES=	ftp://ftp.modssl.org/source/
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.modssl.org/
 
-DEPENDS+=	openssl>=0.9.5:../../security/openssl
 DEPENDS+=	apache-1.3.12:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
@@ -17,6 +16,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 CONFLICTS=	apache-1.3.[0123456789] apache-*modssl-* apache6-*
 
 HAS_CONFIGURE=	yes
+USE_SSL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +31,7 @@ fetch-depends:
 	@${FALSE}
 .endif
 
-CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs --with-ssl=${PREFIX}
+CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs --with-ssl=${SSLBASE}
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 CONFIGURE_ARGS+=	--with-rsa=${PREFIX}/lib
 .endif
