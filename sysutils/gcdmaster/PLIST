@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/12 00:25:29 wiz Exp $
 bin/gcdmaster
 man/man1/xcdrdao.1
 share/pixmaps/gcdmaster/gcdmaster.png
@@ -11,3 +11,5 @@ share/pixmaps/gcdmaster/pixmap_mixedcd.png
 share/pixmaps/gcdmaster/pixmap_open.png
 share/gnome/apps/Applications/gcdmaster.desktop
 @dirrm share/pixmaps/gcdmaster
+@unexec ${RMDIR} %D/share/gnome/apps/Applications 2> /dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps 2> /dev/null || ${TRUE}
