@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.play,v 1.1 2005/03/07 12:19:16 tv Exp $
+bin/play
+bin/rec
+man/man1/play.1
+man/man1/rec.1
