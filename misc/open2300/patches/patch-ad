@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1 2004/11/11 10:19:29 martin Exp $
+
+--- rw2300.h.orig	2004-04-14 03:41:10.000000000 +0200
++++ rw2300.h	2004-11-10 23:50:50.000000000 +0100
+@@ -283,14 +283,16 @@
+ void reset_06(WEATHERSTATION ws2300);
+ 
+ int read_data(WEATHERSTATION ws2300, int address, int number,
+-			  unsigned char *readdata, unsigned char *commanddata);
++			  unsigned char *readdata, unsigned char *commanddata,
++			  int verify_checksum);
+ 
+ int write_data(WEATHERSTATION ws2300, int address, int number,
+ 			   unsigned char encode_constant, unsigned char *writedata,
+ 			   unsigned char *commanddata);
+ 
+ int read_safe(WEATHERSTATION ws2300, int address, int number,
+-			  unsigned char *readdata, unsigned char *commanddata);
++			  unsigned char *readdata, unsigned char *commanddata,
++			  int verify_checksum);
+ 			  
+ int write_safe(WEATHERSTATION ws2300, int address, int number,
+ 			   unsigned char encode_constant, unsigned char *writedata,
