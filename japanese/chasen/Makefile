@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/09 05:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/09 07:40:46 taca Exp $
 #
 
 DISTNAME=	chasen-${CHASEN_VERSION}
@@ -21,5 +21,5 @@ NO_BUILD=	# defined
 
 do-install:	# empty
 
-.include "../chasen-base/Makefile.common"
+.include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"
