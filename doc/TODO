@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1604 2004/04/13 13:51:34 adam Exp $
+$NetBSD: TODO,v 1.1605 2004/04/13 14:35:59 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -135,6 +135,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o amanda-2.4.4p2 [pkg/24550, bouyer]
+	o anjuta-1.2.2
 	o ap-python-2.7.10
 	o aqsis-0.9.1
 	o arj-3.10.19
