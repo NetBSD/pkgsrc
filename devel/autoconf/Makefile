@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/12/23 19:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2003/01/19 00:23:27 wiz Exp $
 
 DISTNAME=		autoconf-2.57
 CATEGORIES=		devel
@@ -25,6 +25,8 @@ INFO_FILES=		autoconf.info standards.info
 
 PERL5_REQD=		5.6
 TEXINFO_REQD=		4.0
+
+AUTOMAKE_OVERRIDE=	NO
 
 # undo a rather stupid hack in the install step when --without-lispdir is used
 post-install:
