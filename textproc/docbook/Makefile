@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2004/06/05 00:01:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.31 2005/02/18 16:09:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
-DISTNAME=	docbook-4.2
-PKGREVISION=	4
+DISTNAME=	docbook-4.4
 CATEGORIES=	textproc
-MASTER_SITES=		http://www.oasis-open.org/docbook/sgml/4.2/
+MASTER_SITES=		http://www.oasis-open.org/docbook/sgml/4.4/
+SITES_docbook-4.3.zip=	http://www.oasis-open.org/docbook/sgml/4.3/
+SITES_docbook-4.2.zip=	http://www.oasis-open.org/docbook/sgml/4.2/
 SITES_docbk41.zip=	http://www.oasis-open.org/docbook/sgml/4.1/
 SITES_docbk40.zip=	http://www.oasis-open.org/docbook/sgml/4.0/
 SITES_docbk31.zip=	http://www.oasis-open.org/docbook/sgml/3.1/
 SITES_docbk30.zip=	http://www.oasis-open.org/docbook/sgml/3.0/
 SITES_docbk241.zip=	http://www.oasis-open.org/docbook/sgml/2.4.1/
 DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
-		docbook-4.2.zip
+		docbook-4.2.zip docbook-4.3.zip docbook-4.4.zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -33,13 +34,13 @@ INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
 
 SGML_CATALOGS=
-.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2
+.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2 4.3 4.4
 SGML_CATALOGS+=	${INSTDIR}/${ver}/catalog
 .endfor
 .undef ver
 
 do-build:
-.for ver in 241 30 31 40 41 42
+.for ver in 241 30 31 40 41 42 43 44
 	${CP} ${FILESDIR}/catalog${ver} ${WRKDIR}
 	${ECHO} "CATALOG \"${ISOCAT}\"" >> ${WRKDIR}/catalog${ver}
 .endfor
@@ -51,6 +52,8 @@ pre-install:
 	@[ -d ${INSTDIR}/4.0 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.0
 	@[ -d ${INSTDIR}/4.1 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.1
 	@[ -d ${INSTDIR}/4.2 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.2
+	@[ -d ${INSTDIR}/4.3 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.3
+	@[ -d ${INSTDIR}/4.4 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.4
 
 do-install:
 	#
@@ -90,6 +93,18 @@ do-install:
 	@(cd ${INSTDIR}/4.2; unzip ${DISTDIR}/docbook-4.2.zip)
 	@${INSTALL_DATA} ${WRKDIR}/catalog42 ${INSTDIR}/4.2/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.2/*
+	#
+	# 4.3:
+	#
+	@(cd ${INSTDIR}/4.3; unzip ${DISTDIR}/docbook-4.3.zip)
+	@${INSTALL_DATA} ${WRKDIR}/catalog43 ${INSTDIR}/4.3/catalog
+	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.3/*
+	#
+	# 4.4:
+	#
+	@(cd ${INSTDIR}/4.4; unzip ${DISTDIR}/docbook-4.4.zip)
+	@${INSTALL_DATA} ${WRKDIR}/catalog44 ${INSTDIR}/4.4/catalog
+	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.4/*
 	#
 	# General cleanup
 	#
