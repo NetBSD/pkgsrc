@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/12/11 16:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2004/12/15 14:57:58 wiz Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -61,7 +61,7 @@ MAKE_ENV+=		LANG=""
 
 TEST_TARGET=		test
 
-# Install Perl man3 pages into a private directory under the the normal
+# Install Perl man3 pages into a private directory under the normal
 # Perl installation.  Also install site-specific Perl man3 pages into a
 # private directory within site_perl.  This avoids manpage conflicts
 # between 3rd-party modules, the standard Perl library, and other
