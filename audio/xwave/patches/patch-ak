@@ -1,3 +1,4 @@
+$NetBSD: patch-ak,v 1.4 1999/12/25 23:58:59 wiz Exp $
 --- FWF/FWF.rules.orig	Thu Aug 13 01:27:07 1998
 +++ FWF/FWF.rules	Fri Oct 22 15:13:20 1999
 @@ -23,13 +23,11 @@
