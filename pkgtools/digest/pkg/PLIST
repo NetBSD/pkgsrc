@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $
+bin/digest
+man/man1/digest.1
+man/cat1/digest.0
