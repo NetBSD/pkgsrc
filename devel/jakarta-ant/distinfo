@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/04/19 17:25:50 jwise Exp $
+$NetBSD: distinfo,v 1.5 2003/03/22 02:18:39 wiz Exp $
 
-SHA1 (jakarta-ant-1.4.1-src.tar.gz) = dbd67d522b07018329c31a49d7ff2a4098ccbeed
-Size (jakarta-ant-1.4.1-src.tar.gz) = 1328414 bytes
+SHA1 (jakarta-ant-1.4.1-src.zip) = 57c3c3bcd0ca0efa6f02c218d8f0fd002ef88e20
+Size (jakarta-ant-1.4.1-src.zip) = 2144256 bytes
 SHA1 (patch-aa) = a088b90bab0e8cd9b6efcc74534cc1ef2eb2af78
