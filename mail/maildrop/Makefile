@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/24 01:24:01 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/10 11:35:47 markd Exp $
 
 DISTNAME=	maildrop-1.3.9
 EXTRACT_SUFX=	.tar.gz
@@ -10,7 +10,8 @@ USE_PERL5=	build
 DEPENDS+=	courier-maildirmake>=0.37.1:../../mail/courier-maildirmake
 
 USE_BUILDLINK2=	yes
-USE_GCC_SHLIB=	yes
+USE_DB185=	yes
+USE_LANGUAGES=	yes
 
 .include "../../mail/courier-auth/Makefile.common"
 
@@ -27,5 +28,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/maildroptips.txt ${DOCDIR}
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
