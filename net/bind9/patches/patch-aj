@@ -1,0 +1,12 @@
+--- lib/Makefile.in.orig	Tue Apr  6 18:29:00 2004
++++ lib/Makefile.in	Tue Apr  6 18:29:01 2004
+@@ -22,8 +22,8 @@
+ # Note: the order of SUBDIRS is important.
+ # Attempt to disable parallel processing.
+ .NOTPARALLEL:
+ .NO_PARALLEL:
+-SUBDIRS =	isc isccc dns isccfg lwres tests
++SUBDIRS =	bind isc isccc dns isccfg lwres tests
+ TARGETS =
+ 
+ @BIND9_MAKE_RULES@
