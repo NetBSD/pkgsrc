@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/11/17 16:28:34 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/11/24 16:53:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -18,6 +18,7 @@
     SUBDIR += pgp2
 #    SUBDIR += pidentd
     SUBDIR += py-crypto
+    SUBDIR += rc5des
     SUBDIR += rsaref
     SUBDIR += ssh
     SUBDIR += ssleay
