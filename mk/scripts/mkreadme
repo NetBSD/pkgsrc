@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.1 2003/01/04 21:13:37 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.2 2003/01/04 22:28:33 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -43,6 +43,7 @@ TMPDIR=${TMPDIR:-/tmp/mkreadme}
 PKGSRCDIR=${PKGSRCDIR:-/usr/pkgsrc}
 BMAKE=${BMAKE:-make}
 AWK=${AWK:-/usr/bin/awk}
+EXPR=${EXPR:-expr}
 
 usage(){
     echo "$prog - Generates README.html files for a pkgsrc tree"
@@ -368,11 +369,11 @@ if [ "x$restart" = "xno" ] ; then
 		    fi
 	    fi
 	    echo -n "."
-	    if [ `expr $npkg % 100 = 0` -eq 1 ]; then
+	    if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
 		echo " "
 		echo "$npkg"
 	    fi 
-	    npkg=`expr $npkg + 1`
+	    npkg=`${EXPR} $npkg + 1`
 	    cd $PKGSRCDIR
     done
 else
