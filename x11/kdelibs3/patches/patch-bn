@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
+$NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
 
---- kioslave/http/Makefile.in.orig	Tue Nov 26 08:57:39 2002
+--- kioslave/http/Makefile.in.orig	Thu Jan 23 12:30:40 2003
 +++ kioslave/http/Makefile.in
-@@ -273,19 +273,22 @@ LDFLAGS = $(all_libraries)
+@@ -293,7 +293,7 @@
  
  ####### Files
  bin_PROGRAMS = kio_http_cache_cleaner
@@ -10,7 +10,8 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
 +lib_LTLIBRARIES = libkio_http_cache_cleaner_main.la kio_http_cache_cleaner.la
  kde_module_LTLIBRARIES = kio_http.la
  
- kio_http_la_SOURCES = http.cc
+ kio_http_la_SOURCES = http.cc httpfilter.cc
+@@ -301,12 +301,15 @@
  kio_http_la_LIBADD = $(LIB_KIO) $(LIBZ)
  kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
  
@@ -30,10 +31,10 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
  kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version
  
  noinst_HEADERS = http.h
-@@ -305,31 +308,43 @@ am_kio_http_la_OBJECTS = http.lo
- #>- kio_http_la_OBJECTS = $(am_kio_http_la_OBJECTS)
- #>+ 1
- kio_http_la_OBJECTS = http.lo
+@@ -329,20 +332,28 @@
+ kio_http_la_nofinal_OBJECTS = http.lo httpfilter.lo
+ @KDE_USE_FINAL_FALSE@kio_http_la_OBJECTS = $(kio_http_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@kio_http_la_OBJECTS = $(kio_http_la_final_OBJECTS)
 -kio_http_cache_cleaner_la_DEPENDENCIES =
 -am_kio_http_cache_cleaner_la_OBJECTS = http_cache_cleaner.lo
 +kio_http_cache_cleaner_la_DEPENDENCIES = \
@@ -65,27 +66,33 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
- CPPFLAGS = @CPPFLAGS@
+@@ -350,15 +361,21 @@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/http.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner.Plo
--#>+ 3
--@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/dummy.Po $(DEPDIR)/http.Plo \
--@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/http.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner_main.Po
-+#>+ 5
-+@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/http.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner_main.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/http_cache_cleaner_main.Po
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/http.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/http.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/httpfilter.Plo
+-#>+ 7
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kio_http_la.all_cc.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/http.Plo \
++#>+ 11
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kio_http_la.all_cc.P  ./$(DEPDIR)/http.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/httpfilter.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/http.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/http.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/http_cache_cleaner_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/httpfilter.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -360,6 +375,7 @@ LINK = $(LIBTOOL) --mode=link $(CCLD) $(
+@@ -390,6 +407,7 @@
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kio_http_la_SOURCES) \
  	$(kio_http_cache_cleaner_la_SOURCES) \
@@ -93,7 +100,7 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
  	$(kio_http_cache_cleaner_SOURCES)
  DATA = $(kdelnk_DATA)
  
-@@ -372,7 +388,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -402,7 +420,7 @@
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -102,37 +109,37 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -445,6 +461,8 @@ clean-libLTLIBRARIES:
+@@ -482,6 +500,8 @@
  	$(CXXLINK) -rpath $(kde_moduledir) $(kio_http_la_LDFLAGS) $(kio_http_la_OBJECTS) $(kio_http_la_LIBADD) $(LIBS)
  kio_http_cache_cleaner.la: $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kio_http_cache_cleaner_la_LDFLAGS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_LIBADD) $(LIBS)
 +libkio_http_cache_cleaner_main.la: $(libkio_http_cache_cleaner_main_la_OBJECTS) $(libkio_http_cache_cleaner_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkio_http_cache_cleaner_main_la_LDFLAGS) $(libkio_http_cache_cleaner_main_la_OBJECTS) $(libkio_http_cache_cleaner_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -479,9 +497,10 @@ mostlyclean-compile:
+@@ -521,9 +541,10 @@
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/http.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/http_cache_cleaner.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/http_cache_cleaner_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/http_cache_cleaner_main.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/http.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/http_cache_cleaner.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/http_cache_cleaner_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/http_cache_cleaner_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/httpfilter.Plo@am__quote@
  
  distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -635,7 +654,7 @@ distclean-tags:
- 
+@@ -691,7 +712,7 @@
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=webdav.protocol http_cache_cleaner.desktop README.webdav THOUGHTS README.http_cache_cleaner webdavs.protocol rfc2617.txt rfc2616.txt http.protocol https.protocol 
-+KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop webdavs.protocol rfc2617.txt http.protocol webdav.protocol README.webdav https.protocol THOUGHTS rfc2616.txt 
+-KDE_DIST=webdav.protocol http_cache_cleaner.desktop README.webdav rfc2817.txt THOUGHTS README.http_cache_cleaner webdavs.protocol rfc2617.txt rfc2818.txt rfc2616.txt http.protocol https.protocol httpfilter.h rfc3253.txt rfc2518.txt 
++KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop rfc2817.txt httpfilter.h webdavs.protocol rfc3253.txt rfc2818.txt http.protocol webdav.protocol README.webdav https.protocol rfc2616.txt rfc2518.txt rfc2617.txt THOUGHTS 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -778,9 +797,6 @@ uninstall-info: uninstall-info-recursive
+@@ -840,9 +861,6 @@
  	uninstall-kdelnkDATA uninstall-libLTLIBRARIES \
  	uninstall-recursive
  
@@ -142,3 +149,13 @@ $NetBSD: patch-bn,v 1.4 2003/01/02 09:12:39 skrll Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
+@@ -919,7 +937,7 @@
+ 	-rm -f *.rpo
+ 
+ #>+ 5
++http.o: http.moc 
++httpfilter.lo: httpfilter.moc 
+ httpfilter.o: httpfilter.moc 
+ http.lo: http.moc 
+-httpfilter.lo: httpfilter.moc 
+-http.o: http.moc 

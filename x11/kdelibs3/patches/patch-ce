@@ -1,17 +1,17 @@
-$NetBSD: patch-ce,v 1.1 2003/02/08 11:13:13 dmcmahill Exp $
+$NetBSD: patch-ce,v 1.2 2003/03/11 13:10:39 markd Exp $
 
---- kioslave/file/Makefile.in.orig	Fri Feb  7 14:51:42 2003
+--- kioslave/file/Makefile.in.orig	Thu Jan 23 12:30:39 2003
 +++ kioslave/file/Makefile.in
-@@ -336,7 +336,7 @@ SOURCES = $(kio_file_la_SOURCES)
+@@ -358,7 +358,7 @@ SOURCES = $(kio_file_la_SOURCES)
  all: docs-am  all-am
  
  .SUFFIXES:
 -.SUFFIXES: .cc .lo .o .obj
 +.SUFFIXES: .cpp .cc .lo .o .obj
- 
- mostlyclean-libtool:
- 	-rm -f *.lo
-@@ -658,3 +658,35 @@ kde-rpo-clean:
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ #>- 	cd $(top_srcdir) && \
+ #>- 	  $(AUTOMAKE) --foreign  kioslave/file/Makefile
+@@ -698,3 +698,35 @@ kde-rpo-clean:
  #>+ 3
  file.lo: file.moc 
  file.o: file.moc 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2003/02/24 08:12:31 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/11 13:10:16 markd Exp $
 
-DISTNAME=	kdebase-3.0.5a
-PKGREVISION=	3
+DISTNAME=	kdebase-3.1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -20,14 +19,12 @@ CONFIGURE_ARGS+=	--without-pam
 CONFIGURE_ARGS+=	--without-cdparanoia
 CONFIGURE_ARGS+=	--without-lame
 CONFIGURE_ARGS+=	--without-vorbis
+CONFIGURE_ARGS+=	--without-java
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
-.if exists(/usr/include/machine/apmvar.h)
-CPPFLAGS+=		-D__NetBSD_APM__
-.endif
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
@@ -57,6 +54,12 @@ _KDE3_EXTRA_INCLUDES=	${LOCALBASE}/include:${X11BASE}/include:${BUILDLINK_PREFIX
 CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+
+.if ${OPSYS} == "NetBSD" && !exists(${X11BASE}/lib/libxkbfile.so)
+PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.a"
+.else
+PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.so"
+.endif
 
 ICONDIR=		share/kde/icons
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
+$NetBSD: patch-bg,v 1.4 2003/03/11 13:10:21 markd Exp $
 
---- khotkeys/khotkeys/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- khotkeys/khotkeys/Makefile.in.orig	Fri Jan 17 09:03:07 2003
 +++ khotkeys/khotkeys/Makefile.in
-@@ -289,16 +289,20 @@ x_includes = @x_includes@
+@@ -288,16 +288,20 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  
  bin_PROGRAMS = khotkeys
@@ -29,7 +29,7 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  khotkeys_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  autostart_DATA = khotkeys.desktop
-@@ -315,22 +319,27 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -314,22 +318,27 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -66,27 +66,27 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -338,13 +347,16 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -338,13 +347,16 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/khotkeys.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/khotkeys.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/main.Plo
 -#>+ 5
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/khotkeys_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/khotkeys.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/dummy.Po $(DEPDIR)/khotkeys.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/khotkeys.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Po $(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/khotkeys_la.all_cpp.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/khotkeys.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/khotkeys.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/khotkeys.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Po ./$(DEPDIR)/main.Plo
 +#>+ 7
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/libkhotkeys_main_la.all_cpp.P  $(DEPDIR)/khotkeys.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Po $(DEPDIR)/main.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/khotkeys.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/khotkeys_main.Po $(DEPDIR)/main.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  $(DEPDIR)/libkhotkeys_main_la.all_cpp.P  ./$(DEPDIR)/khotkeys.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Po ./$(DEPDIR)/main.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/khotkeys_skel.P  ./$(DEPDIR)/khotkeys.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/khotkeys_main.Po ./$(DEPDIR)/main.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
@@ -107,28 +107,28 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -420,6 +433,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -418,6 +431,8 @@ clean-libLTLIBRARIES:
+ 	done
  khotkeys.la: $(khotkeys_la_OBJECTS) $(khotkeys_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(khotkeys_la_LDFLAGS) $(khotkeys_la_OBJECTS) $(khotkeys_la_LIBADD) $(LIBS)
 +libkhotkeys_main.la: $(libkhotkeys_main_la_OBJECTS) $(libkhotkeys_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkhotkeys_main_la_LDFLAGS) $(libkhotkeys_main_la_OBJECTS) $(libkhotkeys_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -454,8 +469,9 @@ mostlyclean-compile:
+@@ -457,8 +472,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/khotkeys.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/khotkeys_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/khotkeys_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/khotkeys.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/khotkeys_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/khotkeys_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  
  distclean-depend:
-@@ -532,7 +548,7 @@ distclean-tags:
- 
+@@ -548,7 +564,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=khkglobalaccel.cpp khotkeys.desktop khkglobalaccel.h 
@@ -136,7 +136,7 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -647,30 +663,27 @@ uninstall-am: uninstall-autostartDATA un
+@@ -669,30 +685,27 @@ uninstall-am: uninstall-autostartDATA un
  	uninstall-am uninstall-autostartDATA uninstall-binPROGRAMS \
  	uninstall-info-am uninstall-libLTLIBRARIES
  
@@ -176,7 +176,7 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  #>+ 4
  clean-idl:
-@@ -688,33 +701,33 @@ force-reedit:
+@@ -710,33 +723,33 @@ force-reedit:
  
  
  #>+ 11
@@ -223,7 +223,7 @@ $NetBSD: patch-bg,v 1.3 2003/01/02 09:12:34 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -725,6 +738,6 @@ kde-rpo-clean:
+@@ -747,6 +760,6 @@ kde-rpo-clean:
  
  #>+ 5
  khotkeys.lo: khotkeys.moc 

@@ -1,0 +1,17 @@
+$NetBSD: patch-ev,v 1.1 2003/03/11 13:10:30 markd Exp $
+
+--- ksysguard/ksysguardd/NetBSD/apm.c.orig	Thu Oct  3 22:13:00 2002
++++ ksysguard/ksysguardd/NetBSD/apm.c
+@@ -19,6 +19,7 @@
+ 	$Id: patch-ev,v 1.1 2003/03/11 13:10:30 markd Exp $
+ */
+ 
++#ifdef __i386__
+ 
+ #include <fcntl.h>
+ #include <machine/apmvar.h>
+@@ -99,3 +100,4 @@
+ 	fprintf(CurrentClient, "Remaining battery time\t0\t0\tmin\n");
+ }
+ 
++#endif
