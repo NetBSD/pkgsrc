@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4515 2004/01/20 12:46:24 abs Exp $
+$NetBSD: CHANGES,v 1.4516 2004/01/20 13:47:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -352,4 +352,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-ldap to 2.0.0pre15 [cube 2004-01-20]
 	Updated rsync to 2.6.0 [grant 2004-01-20]
 	Updated galeon to 1.2.13nb2 [abs 2004-01-20]
+	Updated p5-HTML-Parser to 3.35 [abs 2004-01-20]
+	Updated p5-libwww to 5.76 [abs 2004-01-20]
 
