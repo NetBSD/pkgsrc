@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3641 2003/10/05 07:12:21 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3642 2003/10/05 08:06:53 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3944,6 +3944,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gp-0.26 [jschauma 2003-09-25]
 	Added hmmer-2.3.1 [jschauma 2003-09-25]
 	Added digger-20020314 [wiz 2003-09-25]
+	Updated libtool to 1.4.20010614nb15 [danw 2003-09-25]
+	Updated libtool-base to 1.4.20010614nb15 [danw 2003-09-25]
+	Updated libtool-info to 1.4.20010614nb15 [danw 2003-09-25]
 	Updated tits to 1.1.1 [agc 2003-09-26]
 	Updated maradns to 1.0.18 [xtraeme 2003-09-26]
 	Added fix-mime-charset-0.4.0 [wiz 2003-09-26]
