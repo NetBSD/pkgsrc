@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1869 2004/06/26 19:27:23 adrianp Exp $
+$NetBSD: TODO,v 1.1870 2004/06/26 20:41:19 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -271,7 +271,6 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o icepref-2.3
 	o idesk-0.5.6
-	o imp-3.2.4
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.218
