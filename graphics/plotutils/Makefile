@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/05/29 23:14:09 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/04 18:21:50 jschauma Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnu.org/software/plotutils/plotutils.html
 COMMENT=		Programs and library for plotting scientific data
 
 USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
 USE_GCC_SHLIB=		yes
 
 GNU_CONFIGURE=		yes
