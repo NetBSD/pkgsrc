@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2002/06/26 07:16:40 cjs Exp $
+$NetBSD: distinfo,v 1.2 2002/10/22 16:57:57 wiz Exp $
 
-SHA1 (check-0.8.3.tar.gz) = 714ab5de37c1fdc6bb2c2e5f41980610a7ec477d
-Size (check-0.8.3.tar.gz) = 133191 bytes
+SHA1 (check-0.8.4.tar.gz) = 4d5ced349ca76e2e945ab8b722d5007bc1b44860
+Size (check-0.8.4.tar.gz) = 134449 bytes
