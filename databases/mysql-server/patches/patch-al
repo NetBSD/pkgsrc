@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.4 2003/10/05 17:55:34 martti Exp $
+$NetBSD: patch-al,v 1.5 2004/01/07 08:02:18 cube Exp $
 
 --- include/my_pthread.h.orig	Thu Aug 28 13:26:47 2003
 +++ include/my_pthread.h	Thu Aug 28 13:28:45 2003
@@ -20,10 +20,10 @@ $NetBSD: patch-al,v 1.4 2003/10/05 17:55:34 martti Exp $
  #endif
  
  #ifndef HAVE_NONPOSIX_SIGWAIT
-+#if defined(__NetBSD__) && (__NetBSD_Version__ >= 106130000)
- #define my_sigwait(A,B) sigwait((A),(B))
-+#elif defined (__NetBSD__) && (__NetBSD_Version__ < 106130000)
++#if defined (__NetBSD__) && (__NetBSD_Version__ < 106130000)
 +#define my_sigwait(A,B) __pthread_sigwait((A),(B))
++#else
+ #define my_sigwait(A,B) sigwait((A),(B))
 +#endif
  #else
  int my_sigwait(const sigset_t *set,int *sig);
