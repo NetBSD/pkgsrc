@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2005/01/12 10:58:33 adam Exp $
+# $NetBSD: Makefile,v 1.29 2005/03/27 13:21:07 recht Exp $
 
 DISTNAME=	doxygen-1.4.1.src
 PKGNAME=	doxygen-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
 
