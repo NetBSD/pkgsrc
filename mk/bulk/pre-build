@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.19 2002/06/28 07:54:36 agc Exp $
+# $NetBSD: pre-build,v 1.20 2002/06/28 08:46:38 agc Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -42,7 +42,7 @@ fi
 #
 # Clean out everything and its mother
 #
-PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; make show-var VARNAME=PKG_DBDIR)` ;;
+PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; make show-var VARNAME=PKG_DBDIR)` 
 
 echo Removing all installed packages in ${PKG_DBDIR}
 
