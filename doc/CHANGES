@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.642 2002/11/29 17:55:48 drochner Exp $
+$NetBSD: CHANGES,v 1.643 2002/11/29 19:22:46 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3770,3 +3770,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-FileSystemSite-1.1 [drochner 2002-11-29]
 	Added zope25-colorz-1.0b2 [drochner 2002-11-29]
 	Updated zope25-Silva to 0.8.6.1 [drochner 2002-11-29]
+	Added tdb-1.0.6 [jmmv 2002-11-29]
