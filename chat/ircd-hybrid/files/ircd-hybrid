@@ -1,11 +1,12 @@
 #! /bin/sh
 #
-# $NetBSD: ircd-hybrid,v 1.1.1.1 2001/10/21 21:26:52 seb Exp $
+# $NetBSD: ircd-hybrid,v 1.2 2002/07/06 20:36:58 tv Exp $
 #
 # PROVIDE: ircdhybrid
 # REQUIRE: DAEMON
 
 name="ircdhybrid"
+rcvar=$name
 pidfile="@PPATH@"
 command="@SPATH@"
 conffile="@DPATH@ircd.conf"
