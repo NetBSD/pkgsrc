@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 09:07:09 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/22 16:36:10 wiz Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
@@ -24,7 +24,8 @@ WRKSRC=		${WRKDIR}/fptools
 # a number of non-i386 platforms, including solaris/sparc, osf/alpha
 # etc are supported natively by ghc. pkg support for those platforms
 # and their NetBSD varients is left as a mid-level exercise for the reader
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+# XXX: doesn't even work on ELF machines
+ONLY_FOR_PLATFORM= NetBSD-0.*-i386 NetBSD-1.[0-4]*-i386
 
 # Note:
 # 	- This package will bootstrap from pre-compiled C files.
