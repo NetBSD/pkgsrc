@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.978 2003/10/30 15:20:19 wiz Exp $
+$NetBSD: TODO,v 1.979 2003/10/30 15:27:27 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -142,6 +142,7 @@ Suggested package updates
 	o centericq-4.9.8
 	o cervisia-2.0
 	o clisp-2.31
+	o conglomerate-0.7.6
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.43.2
 	o courier-auth-0.42.2 [pkg/22371]
