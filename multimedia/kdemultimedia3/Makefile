@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/12/23 12:56:04 markd Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/06 13:02:59 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -11,8 +11,12 @@ DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
+USE_PKGINSTALL=		YES
 
 REPLACE_PERL=		kscd/workman2cddb.pl
+
+CONF_FILES+=		${PREFIX}/share/examples/kdemultimedia3/applications-merged/kde-multimedia-music.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/applications-merged/kde-multimedia-music.menu
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3.*)
