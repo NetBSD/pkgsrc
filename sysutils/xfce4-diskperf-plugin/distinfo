@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/07/07 11:26:05 martti Exp $
+$NetBSD: distinfo,v 1.3 2004/10/08 06:21:38 martti Exp $
 
-SHA1 (xfce4-diskperf-plugin-1.4.1.tar.gz) = 51e2653eda48895b9f6521b7850071f4a03fab87
-Size (xfce4-diskperf-plugin-1.4.1.tar.gz) = 314273 bytes
-SHA1 (patch-aa) = 3b244cfbcd7098bdcbd8b44ef9adc0d1aa38e732
+SHA1 (xfce4-diskperf-plugin-1.5.tar.gz) = 1c1f2bea61d48c5a5ac25dd072d5734af0491854
+Size (xfce4-diskperf-plugin-1.5.tar.gz) = 226767 bytes
