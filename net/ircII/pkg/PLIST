@@ -1,6 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/09 22:12:45 hubertf Exp $
 bin/irc-2.9_roof
+@exec 	ln -f %B/%f %B/irc
+@unexec	rm -f %B/irc
 bin/ircbug
-bin/irc
 bin/ircio
 bin/ircflush
 bin/wserv
@@ -280,6 +282,7 @@ lib/irc/help/dcc/talk
 lib/irc/help/dcc/tmsg
 lib/irc/help/load/action
 lib/irc/help/load/alias
+lib/irc/help/load/local
 lib/irc/help/load/autoop
 lib/irc/help/load/basical
 lib/irc/help/load/bigcheese
@@ -558,3 +561,16 @@ lib/irc/help/window/shrink
 lib/irc/help/window/stack
 lib/irc/help/window/swap
 lib/irc/help/window/window
+@dirrm lib/irc/help/alias
+@dirrm lib/irc/help/bind
+@dirrm lib/irc/help/ctcp
+@dirrm lib/irc/help/dcc
+@dirrm lib/irc/help/load
+@dirrm lib/irc/help/note
+@dirrm lib/irc/help/on
+@dirrm lib/irc/help/set
+@dirrm lib/irc/help/window
+@dirrm lib/irc/help
+@dirrm lib/irc/script
+@dirrm lib/irc/translation
+@dirrm lib/irc
