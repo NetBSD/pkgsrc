@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.3 2002/04/04 09:47:00 tron Exp $
+$NetBSD: distinfo,v 1.4 2002/11/25 11:01:15 schmonz Exp $
 
 SHA1 (suse73/glib.rpm) = 600c2dca76e8507c318ab7d597f15aab40c42163
 Size (suse73/glib.rpm) = 131869 bytes
 SHA1 (suse73/gtk.rpm) = 564d93f329369b278d2221722eade94f3197d9b0
 Size (suse73/gtk.rpm) = 819942 bytes
+SHA1 (suse73/ppc/glib.rpm) = 02371e023dc951400eeea7ec47db0372c83642ab
+Size (suse73/ppc/glib.rpm) = 146813 bytes
+SHA1 (suse73/ppc/gtk.rpm) = 0a5c8c07c5fc9b3cfa0f729c560f5780a40bf0b4
+Size (suse73/ppc/gtk.rpm) = 946515 bytes
