@@ -1,18 +1,19 @@
-$NetBSD: patch-af,v 1.4 2000/09/01 13:43:38 hubertf Exp $
+$NetBSD: patch-af,v 1.5 2002/10/26 19:43:46 bouyer Exp $
 
---- Local.config.orig	Sat Jun 27 19:43:56 1998
-+++ Local.config	Fri Sep  1 11:32:05 2000
-@@ -39,6 +39,9 @@
+--- Local.config.orig	Tue Jun 12 21:26:45 2001
++++ Local.config	Tue Oct 22 13:03:07 2002
+@@ -43,7 +43,10 @@
  
  #ifdef NetBSDArchitecture
  ARCH_DEFINES = -DHAVE_PARAM_H  
 +#ifdef arm32Architecture
 +CDEBUGFLAGS =
-+#endif
  #endif
++#endif
  
  #ifdef OS2Architecture
-@@ -101,11 +104,11 @@
+ ARCH_DEFINES = -DMISSING_STRCASECMP
+@@ -105,11 +108,11 @@
  XCOMM  You must have the XPM library.
  XCOMM  Make sure the path name to the library is correct.
  
@@ -26,15 +27,18 @@ $NetBSD: patch-af,v 1.4 2000/09/01 13:43:38 hubertf Exp $
  
  
  DEPENDFLAGS = -I./bitmaps
-@@ -133,11 +136,13 @@
+@@ -135,14 +138,14 @@
  
- #if defined(NetBSDArchitecture) || defined(BSD386Architecture)
+ XCOMM This should take care of everything needed for BSD.
+ 
+-#if defined(NetBSDArchitecture) || defined(BSD386Architecture)
  ARCH_DEFINES = -DHAVE_PARAM_H
 -TIFF_INCLUDE = -I/usr/local/include
 -TIFF_LIB     = -L/usr/local/lib -ltiff
 -JPEG_INCLUDE = -I/usr/local/include
 -JPEG_LIB     = -L/usr/local/lib -ljpeg
 -XPM_INCLUDE = -I/usr/X11R6/include/X11
+-#endif
 +TIFF_INCLUDE = -I${LOCALBASE}/include
 +TIFF_LIB     = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltiff
 +JPEG_INCLUDE = -I${LOCALBASE}/include
@@ -42,6 +46,6 @@ $NetBSD: patch-af,v 1.4 2000/09/01 13:43:38 hubertf Exp $
 +PNG_INCLUDE = -I${LOCALBASE}/include/png
 +PNG_LIB     = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpng -lz
 +XPM_INCLUDE = -I${XPMDIR}/include/X11
- #endif
  
  #if defined(FreeBSDArchitecture)
+ ARCH_DEFINES = -DHAVE_PARAM_H
