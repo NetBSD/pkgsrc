@@ -1,0 +1,7 @@
+NovaWM is a window manager for the X Window System (X11). It is developed
+with speed, size, and style in mind. NovaWM takes on its own style that
+is different than any window manager.
+
+NovaWM has its own toolkit that is much easier to understand and develop
+with than most others, though NovaWM itself does not use the toolkit to
+create its interface, reducing the dependency on other libraries.
