@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.4 2002/04/13 21:35:53 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2002/06/18 23:58:07 itojun Exp $
 
---- support/Makefile.in.orig	Mon Mar 25 04:50:41 2002
-+++ support/Makefile.in
-@@ -24,8 +24,10 @@
+--- support/Makefile.in.orig	Sat Jun 15 13:41:52 2002
++++ support/Makefile.in	Wed Jun 19 07:39:51 2002
+@@ -22,8 +22,10 @@
  	done
  	@if test -f "$(builddir)/envvars-std"; then \
- 	    cp -p envvars-std $(sbindir); \
+ 	    cp -p envvars-std $(DESTDIR)$(sbindir); \
 +	    if false; then \
- 	    if test ! -f $(sbindir)/envvars; then \
- 	        cp -p envvars-std $(sbindir)/envvars ; \
+ 	    if test ! -f $(DESTDIR)$(sbindir)/envvars; then \
+ 	        cp -p envvars-std $(DESTDIR)$(sbindir)/envvars ; \
 +	    fi ; \
  	    fi ; \
  	fi
