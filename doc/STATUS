@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.23 2003/10/18 10:49:13 grant Exp $
+$NetBSD: STATUS,v 1.24 2003/10/18 11:27:45 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -45,7 +45,7 @@ blank	-	Unknown
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
-audio/mpg123                                 Y      Y                  Y
+audio/mpg123                        Y        Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
 devel/gettext              Y        Y        Y      Y        Y         Y
 devel/libtool              Y        Y        Y      Y        Y         Y
