@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/09/20 02:08:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2004/09/22 22:37:27 dmcmahill Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Three-dimensional inductance extraction program
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 WRKSRC=			${WRKDIR}/fasthenry-3.0
 USE_BUILDLINK3=		yes

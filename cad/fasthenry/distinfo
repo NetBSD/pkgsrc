@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: distinfo,v 1.7 2004/09/22 22:37:27 dmcmahill Exp $
 
-SHA1 (fasthenry-3.0-12Nov96.tar.Z) = 7117fdbaad95929a8d98944dced48cfb3a9e39d0
-Size (fasthenry-3.0-12Nov96.tar.Z) = 1175247 bytes
+SHA1 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7117fdbaad95929a8d98944dced48cfb3a9e39d0
+Size (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 1175247 bytes
 SHA1 (patch-aa) = 91667d5dc882f6d2a0654d7d875f81e69372a595
 SHA1 (patch-ab) = 3d593630b697f10b1ca1528e1818ccc33c6db464
 SHA1 (patch-ac) = 0a35ee0bfdc460e8a262d5cdc1d80c5f8905340e
