@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/05/17 00:10:49 danw Exp $
+
+--- configure.orig	Tue Apr 13 22:49:27 2004
++++ configure
+@@ -23063,7 +23063,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+   cat >>confdefs.h <<_ACEOF
+ #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
+ _ACEOF
+- XF86MISC_LIBS="-lXxf86misc"
++ XF86MISC_LIBS="-lXxf86misc -lXext"
+ fi
+ 
+ done
