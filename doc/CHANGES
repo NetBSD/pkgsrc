@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2998 2003/08/05 13:39:57 wiz Exp $
+$NetBSD: CHANGES,v 1.2999 2003/08/05 15:15:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libexif-gtk to 0.3.3nb4 [adam 2003-08-05]
 	Updated libgphoto2 to 2.1.1nb3 [adam 2003-08-05]
 	Updated pcre to 4.3 [wiz 2003-08-05]
+	Updated rocksndiamonds to 3.0.0 [adam 2003-08-05]
