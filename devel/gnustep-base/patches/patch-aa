@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/27 10:58:44 rh Exp $
+
+--- configure.orig	Wed Sep 25 21:30:54 2002
++++ configure
+@@ -2400,12 +2400,12 @@ echo $ECHO_N "checking the Objective-C r
+ if test "$OBJC_RUNTIME_LIB" = "nx"; then
+   echo "$as_me:$LINENO: result: NeXT" >&5
+ echo "${ECHO_T}NeXT" >&6
+-  LIBOBJC='-lobjc'
++  LIBOBJC='-lobjc -lpthread -lpth'
+   CPPFLAGS="$CPPFLAGS -fnext-runtime -DNeXT_RUNTIME"
+ else
+   echo "$as_me:$LINENO: result: GNU" >&5
+ echo "${ECHO_T}GNU" >&6
+-  LIBOBJC='-lobjc'
++  LIBOBJC='-lobjc -lpthread -lpth'
+   CPPFLAGS="$CPPFLAGS -fgnu-runtime"
+ fi
+ 
+@@ -2428,7 +2428,7 @@ fi
+ # $GNUSTEP_HDIR are used before the standard ones
+ #
+ CPPFLAGS="$CPPFLAGS -I$GNUSTEP_HDIR"
+-LDFLAGS="$LDFLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR"
++LDFLAGS="$LDFLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -Wl,-R$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR -Wl,-R$GNUSTEP_LDIR"
+ 
+ #--------------------------------------------------------------------
+ # Check if Objective-C is installed
+@@ -11947,7 +11947,7 @@ fi;
+   cppflags_temp="$CPPFLAGS"
+ 
+   if test "$libiconv_libdir" != "no"; then
+-    CPPFLAGS="$CPPFLAGS -L$libiconv_libdir"
++    CPPFLAGS="$CPPFLAGS -Wl,-R$libiconv_libdir -L$libiconv_libdir"
+   fi
+ 
+   # BSDs install this lib as libgiconv
