@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/06/17 11:22:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/21 02:43:45 grant Exp $
 
 DISTNAME=	cue-snap-20010917
 PKGNAME=	cue-20010917
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 
 BUILD_DEFS+=	USE_INET6
 
-.if ${USE_INET6} == "YES"
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
