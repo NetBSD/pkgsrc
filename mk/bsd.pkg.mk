@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.13 2005/01/24 18:37:36 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.14 2005/01/24 18:50:16 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -35,7 +35,7 @@ MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 # Transform package Makefile variables and set defaults
 ############################################################################
 
-CHECK_FILES?=		YES	# run check-files after install
+CHECK_FILES?=		NO	# run check-files after install
 CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
 CLEANDEPENDS?=		NO
@@ -44,17 +44,6 @@ MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
 REINSTALL?=		NO	# reinstall upon update
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
-
-# A list of file names that will be skipped when analyzing file lists in
-# the check-files target.  This is useful to avoid getting errors triggered
-# by changes in directories not really handled by pkgsrc.
-CHECK_FILES_SKIP+=	emul/linux/proc
-
-CHECK_FILES_SKIP_CMD=
-.for name in ${CHECK_FILES_SKIP}
-CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
-.endfor
-.undef name
 
 ##### Variant spellings
 
@@ -2736,6 +2725,39 @@ check-shlibs:
 	fi
 .endif # NO_PKG_REGISTER
 
+# CHECK_FILES_SKIP is a list of file names that will be skipped when
+# analyzing file lists in the check-files target.  This is useful to
+# avoid getting errors triggered by changes in directories not really
+# handled by pkgsrc.
+#
+# We have to do this here, i.e., quite late in bsd.pkg.mk parsing, so
+# that the variables used in them are defined.  Otherwise we may get
+# problems with the 'for' expressions.
+.if defined(INFO_DIR)
+CHECK_FILES_SKIP+=	${PREFIX}/${INFO_DIR}/dir
+.endif
+CHECK_FILES_SKIP+=	${PREFIX}/emul/linux/proc
+
+.for e c in ${CONF_FILES} ${SUPPORT_FILES}
+CHECK_FILES_SKIP+=	${c}/.pkgsrc
+.endfor
+.for e c o g m in ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
+CHECK_FILES_SKIP+=	${c}/.pkgsrc
+.endfor
+.for d in ${MAKE_DIRS} ${OWN_DIRS}
+CHECK_FILES_SKIP+=	${d}
+.endfor
+.for d o g m in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
+CHECK_FILES_SKIP+=	${d}
+.endfor
+.undef e c d o g m
+
+CHECK_FILES_SKIP_CMD=
+.for name in ${CHECK_FILES_SKIP}
+CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
+.endfor
+.undef name
+
 # Check if the generated PLIST matches the list of really installed files.
 #
 .PHONY: check-files
@@ -2744,11 +2766,11 @@ check-files:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	errors=0;							\
 	diff -u ${WRKDIR}/.prefix.pre ${WRKDIR}/.prefix.post		\
-		>${WRKDIR}/.files.diff;					\
-	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} 's|^+${PREFIX}/||'	\
-		| ${SORT} >${WRKDIR}/.files.added;			\
-	${GREP} '^-/' ${WRKDIR}/.files.diff | ${SED} 's|^-${PREFIX}/||'	\
-		| ${SORT} >${WRKDIR}/.files.deleted;			\
+		>${WRKDIR}/.files.diff || ${TRUE};			\
+	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} "s|^+||" | ${SORT}	\
+		>${WRKDIR}/.files.added;				\
+	${GREP} '^-/' ${WRKDIR}/.files.diff | ${SED} "s|^-||" | ${SORT}	\
+		>${WRKDIR}/.files.deleted;				\
 	if ${TEST} `${WC} -l ${WRKDIR}/.files.deleted | 		\
 		${AWK} '{ print $$1; }'` -gt 0;				\
 	then								\
@@ -2757,7 +2779,8 @@ check-files:
 		${SED} "s|^|        |" <${WRKDIR}/.files.deleted;	\
 		errors=1;						\
 	fi;								\
-	${GREP} '^[A-Za-z]' ${PLIST} | ${SORT} >${WRKDIR}/.files.expected; \
+	${GREP} '^[A-Za-z]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" |	\
+		${SORT} >${WRKDIR}/.files.expected;			\
 	if ! ${CMP} -s ${WRKDIR}/.files.expected ${WRKDIR}/.files.added; then \
 		echo "*** The PLIST does not match installed files!";	\
 		echo "    The following files were not expected in ${PREFIX}:";\
