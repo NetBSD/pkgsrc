@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/25 21:34:10 jtb Exp $
+
+--- Makefile.in.orig	Sat Oct 28 12:00:42 2000
++++ Makefile.in
+@@ -16,7 +16,7 @@
+ # Subdirectories to make in:
+ 
+ LIBSUBDIRS = base utils
+-SUBDIRS = $(LIBSUBDIRS) examples
++SUBDIRS = $(LIBSUBDIRS)
+ 
+ all: all-recursive
+ 
