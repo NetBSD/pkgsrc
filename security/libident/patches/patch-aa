@@ -1,17 +1,22 @@
-$NetBSD: patch-aa,v 1.3 1999/03/12 15:58:09 tron Exp $
-
 --- Makefile.orig	Fri Jan 17 20:10:55 1997
-+++ Makefile	Fri Mar 12 16:56:54 1999
-@@ -8,7 +8,7 @@
++++ Makefile	Fri Mar 12 17:20:39 1999
+@@ -4,11 +4,12 @@
+ 
+ MAKE=make
+ SHELL=/bin/sh
+-RM=rm -f
  RANLIB=ranlib
- AR=ar cq
+-AR=ar cq
++RM=rm -f
++AR=${LIBTOOL} --mode=link cc -rpath ${PREFIX}/lib -version-info 0:22 -o
++CC=${LIBTOOL} --mode=compile cc
  
 -INSTROOT=/usr/local
 +INSTROOT=${PREFIX}
  LIBDIR=$(INSTROOT)/lib
  INCDIR=$(INSTROOT)/include
  MANDIR=$(INSTROOT)/man/man3
-@@ -19,7 +19,7 @@
+@@ -19,10 +20,10 @@
  # Add -DHAVE_ANSIHEADERS if your system have the ANSI C header files
  # needed for our purposes (stdlib, string, unistd).
  #
@@ -19,8 +24,12 @@ $NetBSD: patch-aa,v 1.3 1999/03/12 15:58:09 tron Exp $
 +#CFLAGS = -O
  
  LDLIBS =
- LIBIDENT = libident.a
-@@ -33,6 +33,7 @@
+-LIBIDENT = libident.a
++LIBIDENT = libident.la
+ 
+ OBJS = ident.o id_open.o id_close.o id_query.o id_parse.o support.o version.o
+ 
+@@ -33,6 +34,7 @@
  	@echo aix
  	@echo bsd
  	@echo bsd2.11
@@ -28,7 +37,35 @@ $NetBSD: patch-aa,v 1.3 1999/03/12 15:58:09 tron Exp $
  	@echo dynix
  	@echo hpux
  	@echo irix
-@@ -126,6 +127,8 @@
+@@ -52,8 +54,8 @@
+ 
+ $(LIBIDENT):	$(OBJS)
+ 	-$(RM) $(LIBIDENT)
+-	$(AR) $(LIBIDENT) $(OBJS)
+-	-$(RANLIB) $(LIBIDENT)
++	$(AR) $(LIBIDENT) $(OBJS:.o=.lo)
++#	-$(RANLIB) $(LIBIDENT)
+ 
+ testers: lookup-tester ident-tester
+ 
+@@ -82,13 +84,9 @@
+ #
+ 
+ install:
+-	-$(RM) $(LIBDIR)/$(LIBIDENT)
+-	cp $(LIBIDENT) $(LIBDIR)/$(LIBIDENT)
+-	-$(RANLIB) $(LIBDIR)/$(LIBIDENT)
+-	-$(RM) $(INCDIR)/ident.h
+-	cp ident.h $(INCDIR)/ident.h
+-	-$(RM) $(MANDIR)/ident.3
+-	cp ident.3 $(MANDIR)/ident.3
++	${LIBTOOL} --mode=install ${INSTALL_DATA} ${LIBIDENT} ${PREFIX}/lib
++	${INSTALL_DATA} ident.h ${INCDIR}/ident.h
++	${INSTALL_DATA} ident.3 ${MANDIR}/ident.3
+ 
+ clean:
+ 	-$(RM) $(LIBIDENT) ident-tester lookup-tester *~ core *.o \#*
+@@ -126,6 +124,8 @@
  bsd2.11:
  	@$(MAKE) all CC="$(CC)" CFLAGS="-O -DSIGRETURNTYPE=int -DHAVE_ANSIHEADERS"
  
