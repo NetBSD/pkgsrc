@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.120 2004/02/21 10:35:57 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.121 2004/03/29 05:42:58 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -127,6 +127,108 @@ LDFLAGS+=	${FLAG}
 #
 PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 
+_BLNK_PKGVAR?=		${PKGBASE:S/++$/xx/:S/+$//}
+
+# Try to include buildlink2.mk files for any dependencies that are already
+# installed on the system.  This tries to handle the situation where the
+# installed package and the package as it exists in pkgsrc have differing
+# lists of dependencies.  If the package directory has moved or been
+# removed from pkgsrc, then set BUILDLINK_INSTALLED_PKGSRCDIR.<pkg> to the
+# correct PKGPATH for that package or to the empty value if it has been
+# removed.
+#
+.if !defined(_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR})
+_BLNK_INSTALLED_DEPS=	# empty
+.  for _pkg_ in ${BUILDLINK_PACKAGES}
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
+.    if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
+_BLNK_INSTALLED_DEPS.${_pkg_}!=						\
+	pkg="${BUILDLINK_PKGBASE.${_pkg_}}-[0-9]*";			\
+	found=`${PKG_BEST_EXISTS} "$$pkg"`;				\
+	pkgdep=;							\
+	if [ -n "$$found" ]; then					\
+		pkgdep=`${PKG_INFO} -qf "$$found" | ${SED} -n "s/^@pkgdep[ 	]*//p"`; \
+	fi;								\
+	${ECHO} "$$pkgdep"
+_BLNK_INSTALLED_DEPS+=	${_BLNK_INSTALLED_DEPS.${_pkg_}}
+.    endif
+.  endfor
+_BLNK_INSTALLED_DEPPKGS=	# empty
+.  for _dep_ in ${_BLNK_INSTALLED_DEPS}
+_BLNK_TMP_PKGNAME!=	found=`${PKG_BEST_EXISTS} "${_dep_}"`; ${ECHO} "$$found"
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGNAME:C/-[^-]*$//}
+#
+# Map package names into buildlink package variable equivalents when it
+# differs from the PKGBASE for that package.
+#
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/++$/xx/:S/+$//}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/--$/mm/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^PAM$/pam/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^freetype-lib$/freetype/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^gettext-lib$/gettext/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libaudiofile$/audiofile/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libgetopt$/getopt/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libiconv$/iconv/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libtool-base$/libtool/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:C/^py[0-9][0-9][^-]*-/py-/}
+_BLNK_INSTALLED_PKGNAME.${_BLNK_TMP_PKGVAR}:=	${_BLNK_TMP_PKGNAME}
+_BLNK_INSTALLED_DEPPKGS:=						\
+	${_BLNK_INSTALLED_DEPPKGS:N${_BLNK_TMP_PKGVAR}}			\
+	${_BLNK_TMP_PKGVAR}
+.    undef _BLNK_TMP
+.    undef _BLNK_TMP_PKGVAR
+.    undef _BLNK_TMP_PKGNAME
+.  endfor
+_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}=	# empty
+.  for _pkg_ in ${_BLNK_INSTALLED_DEPPKGS}
+#
+# If BUILDLINK_PKGSRCDIR.<pkg> is already defined (by a previous inclusion
+# of <pkg>'s buildlink2.mk file), then make that the default value for
+# BUILDLINK_INSTALLED_PKGSRCDIR.<pkg>.  Otherwise, try to dig it out of
+# the +BUILD_INFO file of the installed package.
+#
+.    if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    endif
+.    if !defined(BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_})
+BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}!=				\
+	dir=`${PKG_INFO} -qB "${_BLNK_INSTALLED_PKGNAME.${_pkg_}}" | ${SED} -n "s/^PKGPATH=//p"`; ${ECHO} "../../$$dir"
+.    endif
+.    if exists(${BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}}/buildlink2.mk)
+_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}+=				\
+	${BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}}
+.    endif
+.  endfor
+.endif
+.for _dir_ in ${_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}}
+.  include "${_dir_}/buildlink2.mk"
+.endfor
+
+# Run through EVAL_PREFIX again in case we included any buildlink2.mk files
+# above and need to set BUILDLINK_PREFIX.<pkg> appropriately.
+#
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*//}_DEFAULT)
+${def:C/=.*//}_DEFAULT=	${X11PREFIX}
+.    endif
+.    if !defined(${def:C/=.*//})
+_depend_${def:C/=.*//}!=						\
+	${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
+.      if empty(_depend_${def:C/=.*//})
+${def:C/=.*//}=	${${def:C/=.*//}_DEFAULT}
+.      else
+_dir_${def:C/=.*//}!=							\
+	(${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) |			\
+	${AWK} '{ print $$2; exit }'
+${def:C/=.*//}=	${_dir_${def:C/=.*//}}
+MAKEFLAGS+=	${def:C/=.*//}=${_dir_${def:C/=.*//}}
+.      endif
+.    endif
+.  endfor
+.endif
+
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 #
 # Add the proper dependency on each package pulled in by buildlink2.mk
@@ -135,9 +237,7 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 # on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
 # we use a full dependency.
 #
-.  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
-BUILDLINK_DEPMETHOD.${_pkg_}=	full
-.  endif
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
 _BUILDLINK_RECMETHOD.${_pkg_}=	RECOMMENDED
@@ -164,8 +264,8 @@ ${_BUILDLINK_RECMETHOD.${_pkg_}}+= \
 # a list of all of the files installed by <pkg>.  This list is relative to
 # ${BUILDLINK_PREFIX.<pkg>}.
 #
-BUILDLINK_PLIST_CMD.${_pkg_}= \
-	${PKG_INFO} -f ${BUILDLINK_PKGBASE.${_pkg_}} |			\
+BUILDLINK_PLIST_CMD.${_pkg_}= 						\
+	${PKG_INFO} -f "${BUILDLINK_PKGBASE.${_pkg_}}-[0-9]*" |		\
 		${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p'
 .endfor
 
@@ -262,8 +362,9 @@ _BUILDLINK_USE: .USE
 			;;						\
 		esac;							\
 		pkg_prefix=;						\
-		if [ -n "${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}}" ]; then \
-			pkg_prefix=`${PKG_INFO} -qp ${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}} | ${AWK} '{ sub("${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}", "", $$2); sub("/", "", $$2); print $$2; exit }'`/; \
+		if [ -n "${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}}" ] && \
+		   ${PKG_INFO} -qe "${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}}-[0-9]*"; then \
+			pkg_prefix=`${PKG_INFO} -qp "${BUILDLINK_PKGBASE.${.TARGET:S/-buildlink//}}-[0-9]*" | ${AWK} '{ sub("${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}", "", $$2); sub("/", "", $$2); print $$2; exit }'`/; \
 		fi;							\
 		rel_files_cmd=;						\
 		if [ -n "${BUILDLINK_FILES_CMD.${.TARGET:S/-buildlink//}:Q}" ]; then \
