@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/30 07:29:08 skrll Exp $
+
+--- doc/Makefile.in.orig	Mon Jul 31 08:56:13 2000
++++ doc/Makefile.in
+@@ -80,7 +80,7 @@
+ 
+ man_MANS = jikes.1
+ 
+-docdir = $(prefix)/doc/${PACKAGE}-${VERSION}
++docdir = $(prefix)/share/doc/html/${PACKAGE}
+ 
+ doc_DATA = \
+ contrib.html \
