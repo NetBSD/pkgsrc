@@ -1,11 +1,21 @@
-$NetBSD: patch-ai,v 1.2.2.2 2003/03/02 10:13:06 agc Exp $
+$NetBSD: patch-ai,v 1.2.2.3 2003/03/02 10:43:12 agc Exp $
 
---- configure.orig	Sat Dec 21 06:44:21 2002
+--- configure.orig	Sat Dec 21 01:44:21 2002
 +++ configure
-@@ -22109,57 +22109,6 @@ cat >>confdefs.h <<EOF
+@@ -21496,7 +21496,7 @@ main ()
+ 
+  char buf[20];
+   buf[0]='\0';
+-  strlat(buf, "KDE function test", sizeof(buf));
++  strlcat(buf, "KDE function test", sizeof(buf));
+ 
+   ;
+   return 0;
+@@ -22108,57 +22108,6 @@ echo "${ECHO_T}$ac_cv_sizeof_unsigned_in
+ cat >>confdefs.h <<EOF
  #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
  EOF
- 
+-
 -  echo "$as_me:22112: checking sizeof(size_t) == sizeof(unsigned int)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned int)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
@@ -56,7 +66,6 @@ $NetBSD: patch-ai,v 1.2.2.2 2003/03/02 10:13:06 agc Exp $
 -
 -fi
 -rm -f conftest.$ac_objext conftest.$ac_ext
--
+ 
  for ac_header in fcntl.h sys/sysctl.h sys/param.h sys/time.h sys/types.h unistd.h
  do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
