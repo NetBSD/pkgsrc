@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.699 2003/07/12 01:40:55 zuntum Exp $
+$NetBSD: TODO,v 1.700 2003/07/12 01:47:44 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -139,7 +139,6 @@ Suggested package updates
 	o gpa-0.6.1
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
-	o grepmail-5.00
 	o gtetrinet-0.7.3
 	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
