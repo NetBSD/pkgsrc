@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.5 2004/01/25 16:57:57 mrauch Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.6 2004/02/14 17:38:14 mrauch Exp $
 
 DEPENDS+=               suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=               suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 .if !exists(/emul/linux/proc/curproc/cmdline) && !exists(/proc/curproc/cmdline)
-BROKEN=			please mount /emul/linux/proc or /proc
+PKG_FAIL_REASON=			please mount /emul/linux/proc or /proc
 .endif
 
 .include "../../emulators/suse_linux/Makefile.application"
