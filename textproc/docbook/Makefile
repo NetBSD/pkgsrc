@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2002/09/21 10:48:55 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/11 22:11:50 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
 DISTNAME=	docbook-4.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	\
 		http://www.oasis-open.org/docbook/sgml/4.2/ \
@@ -19,7 +20,7 @@ HOMEPAGE=	http://www.ora.com/davenport/
 COMMENT=	SGML DTD designed for computer documentation
 
 BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	iso8879-1986:../../textproc/iso8879
+DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 
 NO_MTREE=       yes
 USE_BUILDLINK2=	yes
@@ -86,5 +87,13 @@ do-install:
 	# General cleanup
 	#
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
+	#
+	# Register SGML catalogs
+	#
+.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2	
+	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
+		CATALOG ${INSTDIR}/${ver}/catalog
+.endfor
 
+.include "../../textproc/xmlcatmgr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
