@@ -1,0 +1,48 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/10/31 13:48:39 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CONFDIR=${PKG_PREFIX}/etc
+CONFFILES="surfraw.conf"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+
+	echo "Installing configuration files:"
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			cp ${FILE}.dist ${FILE}
+			chmod 644 ${FILE}
+		fi
+	done
+	cat << EOF
+===========================================================================
+Some files you might need to customize include the following:
+
+EOF
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		echo "	${FILE}"
+	done
+	cat << EOF
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
