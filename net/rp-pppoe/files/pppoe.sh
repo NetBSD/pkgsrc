@@ -1,11 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pppoe.sh,v 1.2 2003/01/16 09:28:01 grant Exp $
+# $NetBSD: pppoe.sh,v 1.3 2003/01/23 01:35:51 simonb Exp $
 #
 # PROVIDE: pppoe
 # REQUIRE: ipnat
 
 test -f /etc/ppp/pppoe.conf || exit 1
+CONFIG=/etc/ppp/pppoe.conf
 
 case $1 in
 start)
