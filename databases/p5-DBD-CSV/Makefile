@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/16 02:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:17:31 wiz Exp $
 #
 
 DISTNAME=	DBD-CSV-0.1022
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	packages@netbsd.org
 # HOMEPAGE=	http://
+COMMENT=	Access CSV files via DBI
 
 DEPENDS+=               p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=               p5-SQL-Statement>=0.1016:../../databases/p5-SQL-Statement

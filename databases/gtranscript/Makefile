@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/20 19:52:50 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 14:17:26 wiz Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -15,6 +15,7 @@ MASTER_SITES=	http://gtranscript.linuxbox.com/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtranscript.linuxbox.com/
+COMMENT=	SQL Database Client with GNOME frontend
 
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 DEPENDS+=	postgresql>=6.5.3:../../databases/postgresql

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/07 11:53:50 mjl Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 14:17:32 wiz Exp $
 #
 
 DISTNAME=	DBD-Pg-0.95
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.postgresql.org/
+COMMENT=	perl DBI/DBD driver for PostgreSQL databases
 
 DEPENDS+=	postgresql>=6.5.3:../../databases/postgresql
 DEPENDS+=	p5-DBI>=1.08:../../databases/p5-DBI

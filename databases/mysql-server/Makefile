@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/05 09:00:55 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 14:17:29 wiz Exp $
 #
 
 DISTNAME=		mysql-3.22.32
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.22/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
+COMMENT=		MySQL, a free SQL database (server)
 
 BUILD_DEPENDS=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client

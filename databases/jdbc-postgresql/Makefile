@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/27 23:10:47 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:17:27 wiz Exp $
 #
 
 DISTNAME=		postgresql-7.0.3
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
 
 MAINTAINER=		jwise@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
+COMMENT=		100% Java JDBC driver for PostgreSQL
 
 # No, we don't depend on postgresql.  This code base stands alone.
 

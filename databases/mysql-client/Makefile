@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/01/09 18:38:49 bad Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 14:17:28 wiz Exp $
 #
 
 DISTNAME=	mysql-3.22.32
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.mysql.com/MySQL-3.22/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mysql.com/
+COMMENT=	MySQL, a free SQL database (client)
 
 RESTRICTED=		"Restrictive license."
 NO_SRC_ON_CDROM=	${RESTRICTED}

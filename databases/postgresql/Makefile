@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2001/02/13 02:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2001/02/16 14:17:37 wiz Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
 .include "../../databases/postgresql/Makefile.common"
+
+COMMENT=		Robust, next generation, object-relational DBMS
 
 # NetBSD libedit's readline emulation doesn't support enough features, yet.
 DEPENDS+=		readline-*:../../devel/readline
