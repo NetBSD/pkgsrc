@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/12 09:46:04 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/10 02:22:50 jlam Exp $
 #
 
 DISTNAME=	sympa-3.4.2
@@ -31,7 +31,7 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-piddir=/var/run
 
-PERL5_REQD=	5.005
+PERL5_REQD+=	5.005
 
 PKG_GROUPS?=	sympa
 PKG_USERS?=	sympa:sympa
