@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2002/03/01 06:46:50 fredb Exp $
+$NetBSD: patch-aa,v 1.17 2002/03/19 15:34:32 wiz Exp $
 
---- configure.orig	Sun Feb 24 03:56:28 2002
+--- configure.orig	Tue Mar 19 00:42:35 2002
 +++ configure
-@@ -1544,7 +1544,7 @@
+@@ -1638,7 +1638,7 @@
  # implement the "install-strip" target properly (strip executables,
  # but do not try to strip scripts.)
  #
@@ -11,10 +11,10 @@ $NetBSD: patch-aa,v 1.16 2002/03/01 06:46:50 fredb Exp $
  
  # random libc stuff
  echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6
-@@ -7479,7 +7479,7 @@
+@@ -7584,7 +7584,7 @@
      /*)
       echo $ac_n "checking for XML headers""... $ac_c" 1>&6
- echo "configure:7493: checking for XML headers" >&5
+ echo "configure:7598: checking for XML headers" >&5
 -     d=$with_xml/include
 +     d=$with_xml/include/gnome-xml
       if test -d $d; then
