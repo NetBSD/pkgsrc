@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/04/16 16:55:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/25 20:10:00 tsarna Exp $
 
 DISTNAME=	MySQLmodule-1.4
 PKGNAME=	py-mysql-1.4
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	MySQLmodule-1.4${EXTRACT_SUFX}
 ALL_TARGET=	default
 
 do-configure:
-	${SED} -e 's,@PREFIX@,${PREFIX},' ${FILESDIR}/Setup.in \
+	${SED} -e 's,@PREFIX@,${PREFIX},g' ${FILESDIR}/Setup.in \
 		>${WRKSRC}/Setup.in
 	${CP} ${PREFIX}/lib/python1.5/config/Makefile.pre.in ${WRKSRC}
 	(cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot)
