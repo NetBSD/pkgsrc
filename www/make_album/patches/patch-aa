@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/26 08:00:58 lukem Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/12 23:34:46 lukem Exp $
 
 --- make_album.orig	Fri Sep 15 07:43:30 2000
-+++ make_album	Wed Dec 26 19:00:26 2001
++++ make_album
 @@ -1221,10 +1221,14 @@
  #
  sub read_cameras {
@@ -71,7 +71,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/12/26 08:00:58 lukem Exp $
  	}
  	print FILE "<br /><font size=\"-1\">".$x."x".$y." (best";
  	if ($x != $image{"master/$tag.tiff"}{"x"} || $y != $image{"master/$tag.tiff"}{"y"}) {
-@@ -1858,9 +1852,9 @@
+@@ -1563,6 +1557,7 @@
+ 		print FILE ", " if ($comma); $comma = 1;
+ 		print FILE "Focus: $m $f";
+ 		if ($f != 0
++			&& $f ne "infinite"
+ 			&& defined ($focal = $rexif->{"focal"})
+ 			&& $focal ne ""
+ 			&& ($aperture = $rexif->{"fstop"}) ne ""
+@@ -1858,9 +1853,9 @@
  
  %image = {};
  foreach $tag (@tags) {
@@ -83,7 +91,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/12/26 08:00:58 lukem Exp $
  				$image{"thumbs/$tag.jpg"}{"x"} = $1;
  				$image{"thumbs/$tag.jpg"}{"y"} = $2;
  			}
-@@ -1890,9 +1884,10 @@
+@@ -1890,9 +1885,10 @@
  		if ((! -f $file) && -f $file.".gz") {
  			$file = $file.".gz";
  		}
@@ -96,7 +104,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/12/26 08:00:58 lukem Exp $
  					$image{"master/$tag.tiff"}{"x"} = $1;
  					$image{"master/$tag.tiff"}{"y"} = $2;
  					$got_size = 1;
-@@ -1961,7 +1956,7 @@
+@@ -1961,7 +1957,7 @@
  		print INDEX "</td></tr>";
  	}
  	print INDEX "</table>";
