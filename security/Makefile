@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2003/12/04 00:34:59 heinz Exp $
+# $NetBSD: Makefile,v 1.147 2003/12/05 17:46:21 xtraeme Exp $
 #
 
 COMMENT=	Security tools
@@ -65,6 +65,7 @@ SUBDIR+=	nessus-libraries
 SUBDIR+=	nessus-plugins
 SUBDIR+=	netramet
 SUBDIR+=	nfsbug
+SUBDIR+=	nikto
 SUBDIR+=	opencdk
 SUBDIR+=	openssh
 SUBDIR+=	openssh+gssapi
