@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/31 21:58:23 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/16 07:26:49 recht Exp $
 bin/glav
 bin/img2mpg
 bin/jpeg2yuv
@@ -73,8 +73,8 @@ lib/libmjpegutils.a
 lib/libmmxsse.a
 lib/libmotion.a
 lib/pkgconfig/mjpegtools.pc
-man/man1/jpeg2yuv.1
 man/man1/img2mpg.1
+man/man1/jpeg2yuv.1
 man/man1/lav2mpeg.1
 man/man1/lav2wav.1
 man/man1/lav2yuv.1
