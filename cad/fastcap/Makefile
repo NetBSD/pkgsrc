@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/20 15:22:25 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/29 05:11:01 jlam Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
@@ -19,13 +19,13 @@ COMMENT=	Fast 3-D capacitance solver
 DIST_SUBDIR=	fastcap
 EXTRACT_ONLY=	fastcap-2.0-15Jul92.tar.Z
 
+USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
 
 .if (${MACHINE_ARCH} == arm32)
-.include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+=		CC=${CC}
+.  include "../../lang/gcc/buildlink2.mk"
 .endif
 
 do-install:
