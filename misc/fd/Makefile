@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:31 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/31 20:58:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
@@ -23,8 +23,9 @@ INSTALL_TARGET=	install
 do-configure:
 	cd ${WRKSRC} ; make config
 
-post-install:
-	@strip ${PREFIX}/bin/fd
-	cd ${WRKSRC} ; [ -f .fdrc ] && ${CP} .fdrc ${PREFIX}/etc/fdrc
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/fd ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/fd.1 ${PREFIX}/man/ja_JP.EUC/man1
+	${INSTALL_DATA} ${WRKSRC}/.fdrc ${PREFIX}/etc/fdrc
 
 .include "../../mk/bsd.pkg.mk"
