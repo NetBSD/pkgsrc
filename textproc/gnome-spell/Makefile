@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/02/15 18:26:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/15 18:39:22 jmmv Exp $
 
 DISTNAME=	gnome-spell-1.0.5
+PKGREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-spell/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Spell checking as you type like gtkspell
+
+DEPENDS=		gnome2-dirs>=1.3:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
