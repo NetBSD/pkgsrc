@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.170 2003/08/04 16:11:39 jmc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.171 2003/08/07 16:14:05 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -84,6 +84,11 @@ PKGSRC_SLEEPSECS?= 5
 # Automatically register shells in /etc/shells
 # Possible: YES, NO
 # Default: YES
+
+PKGSRC_MESSAGE_RECIPIENTS?=
+# login names of recipients of any MESSAGE files which will be mailed
+# Possible: any login names
+# Default: none
 
 PKGSRC_RUN_TEST?=	no
 # Run test target before install
