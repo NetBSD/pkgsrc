@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2003/08/30 22:51:27 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/12 12:07:18 uebayasi Exp $
 
-DISTNAME=	net-snmp-5.0.6
+DISTNAME=	net-snmp-5.0.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
@@ -19,7 +19,7 @@ NET_SNMP_SYS_CONTACT?=		default_user@contact.domain
 NET_SNMP_SYS_LOCATION?=		defaultlocation
 NET_SNMP_LOGFILE?=		/var/log/snmpd.log
 NET_SNMP_PERSISTENTDIR?=	/var/net-snmp
-NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs
+NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm3.0.0/mibs
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
@@ -28,11 +28,12 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" && empty(CFLAGS:U:M*-Dnetbsd1*)
 CFLAGS+=		-Dnetbsd1
 .endif
 
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ARGS+=	--enable-shared
 # net-snmp doesn't do IPv6 on Solaris
 .if (defined(USE_INET6) && (${USE_INET6} == "YES")) && ${OPSYS} != "SunOS"
@@ -45,14 +46,23 @@ IPV6H=			"@comment "
 PLIST_SUBST+=   	IPV6H=${IPV6H}
 CONFIGURE_ARGS+=	--with-defaults
 CONFIGURE_ARGS+=	--with-libwrap
+.if defined(NET_SNMP_USE_SSL) && ${NET_SNMP_USE_SSL} == "YES"
 CONFIGURE_ARGS+=	--with-openssl
+.endif
 CONFIGURE_ARGS+=	--with-sys-contact="${NET_SNMP_SYS_CONTACT}"
 CONFIGURE_ARGS+=	--with-sys-location="${NET_SNMP_SYS_LOCATION}"
-CONFIGURE_ARGS+=	--with-logfile="${NET_SNMP_LOGFILE}"
+#
+# NOTE:  if you specify a logfile then this file will be written to by
+# default and although it can be disabled on the command line, the
+# daemon must be stopped to cycle it properly.  Remember rc.d/snmpd
+# will use '-s' to enable standard syslog logging anyway.
+#
+CONFIGURE_ARGS+=	--without-logfile
 CONFIGURE_ARGS+=	--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}"
 .if !empty(NET_SNMP_MIBDIRS)
 CONFIGURE_ARGS+=	--with-mibdirs="${NET_SNMP_MIBDIRS}"
 .endif
+CONFIGURE_ARGS+=	--with-mib-modules="smux host"
 #
 # Using "dummy" values is technically not compliant with SNMP specs, but
 # otherwise, some tools, e.g. net/tcl-scotty, net/tkined, may ignore results
@@ -65,7 +75,7 @@ CONFIGURE_ARGS+=	--with-dummy-values
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 
-.if !exists(/usr/bin/lpstat)
+.if (${OPSYS} == "NetBSD") || !exists(/usr/bin/lpstat)
 CONFIGURE_ENV+=		ac_cv_path_LPSTAT_PATH=no
 .endif
 CONFIGURE_ENV+=		PERLPROG="${PERL5}"
@@ -100,7 +110,9 @@ post-install:
 		${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
 
 .include "../../lang/perl5/buildlink2.mk"
+.if defined(NET_SNMP_USE_SSL) && ${NET_SNMP_USE_SSL} == "YES"
 .include "../../security/openssl/buildlink2.mk"
+.endif
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
