@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:36:56 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/25 20:27:40 wiz Exp $
 #
 
 DISTNAME=	baekmuk-ttf-2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts korean
 MASTER_SITES=	ftp://ftp.mizi.com/pub/baekmuk/
 
@@ -14,7 +14,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
+FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/baekmuk-ttf
 
 do-install:
