@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:33 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/04/27 19:01:55 phil Exp $
 include/rvm/rds.h
 include/rvm/rvm.h
 include/rvm/rvm_segment.h
@@ -13,21 +13,21 @@ lib/librvm.la
 lib/librdslwp.la
 lib/librvmlwp.la
 lib/librds.so
-lib/librds.so.1
-lib/librds.so.1.0
+lib/librds.so.2
+lib/librds.so.2.1
 lib/librvm.so
-lib/librvm.so.1
-lib/librvm.so.1.0
+lib/librvm.so.2
+lib/librvm.so.2.1
 lib/librdslwp.so
-lib/librdslwp.so.1
-lib/librdslwp.so.1.0
+lib/librdslwp.so.2
+lib/librdslwp.so.2.1
 lib/librvmlwp.so
-lib/librvmlwp.so.1
-lib/librvmlwp.so.1.0
+lib/librvmlwp.so.2
+lib/librvmlwp.so.2.1
 lib/libseg.a
 lib/libseg.la
 lib/libseg.so
-lib/libseg.so.1
-lib/libseg.so.1.0
+lib/libseg.so.2
+lib/libseg.so.2.1
 sbin/rvmutl
 sbin/rdsinit
