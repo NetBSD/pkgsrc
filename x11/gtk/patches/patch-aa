@@ -1,18 +1,17 @@
-$NetBSD: patch-aa,v 1.11 1999/05/02 14:24:59 tron Exp $
+$NetBSD: patch-aa,v 1.12 1999/08/28 09:36:33 rh Exp $
 
---- configure.orig	Thu Mar 25 06:24:30 1999
-+++ configure	Fri Apr 16 21:30:53 1999
+--- configure.orig	Mon Aug 23 23:31:31 1999
++++ configure	Fri Aug 27 20:54:25 1999
 @@ -22,7 +22,7 @@
  #
  GTK_MAJOR_VERSION=1
  GTK_MINOR_VERSION=2
--GTK_MICRO_VERSION=2
--GTK_INTERFACE_AGE=0
-+GTK_MICRO_VERSION=14
-+GTK_INTERFACE_AGE=2
- GTK_BINARY_AGE=2
+-GTK_MICRO_VERSION=4
++GTK_MICRO_VERSION=15
+ GTK_INTERFACE_AGE=2
+ GTK_BINARY_AGE=4
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
-@@ -1599,6 +1599,7 @@
+@@ -1389,6 +1389,7 @@
  
  
  # Check for any special flags to pass to ltconfig.
@@ -20,7 +19,7 @@ $NetBSD: patch-aa,v 1.11 1999/05/02 14:24:59 tron Exp $
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
  test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
-@@ -1894,6 +1895,7 @@
+@@ -1541,6 +1542,7 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
@@ -28,7 +27,7 @@ $NetBSD: patch-aa,v 1.11 1999/05/02 14:24:59 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4506,7 +4508,7 @@
+@@ -4076,7 +4078,7 @@
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -37,7 +36,7 @@ $NetBSD: patch-aa,v 1.11 1999/05/02 14:24:59 tron Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
-@@ -7421,10 +7423,12 @@
+@@ -6990,10 +6992,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
