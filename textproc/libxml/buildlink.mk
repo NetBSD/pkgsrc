@@ -1,10 +1,10 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/01/13 11:45:31 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define BUILDLINK_DEPENDS.libxml to the dependency patthern
+# (1) Optionally define BUILDLINK_DEPENDS.libxml to the dependency pattern
 #     for the version of libxml desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
