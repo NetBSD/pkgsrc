@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/18 14:05:12 kei Exp $
 
---- htmllintenv.orig	Sat Jan 13 10:04:08 2001
-+++ htmllintenv	Wed Mar 14 13:03:36 2001
+--- htmllintenv.orig	Thu Feb  1 21:16:08 2001
++++ htmllintenv	Sun Mar 18 08:38:21 2001
 @@ -5,7 +5,7 @@
  #   アクセス権をうまく工夫して、他人から見えないようにしてください。
  
@@ -34,14 +34,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
 +$KANJICODE = 'JIS';    # JIS/EUC/SJIS/UTF8 のいずれか
  
  # Lynx (不要あるいは未実装ならコメントアウト)
--#$LYNX = '/usr/local/bin/lynx -dump -nolist';
-+#$LYNX = '@PREFIX@/bin/lynx -dump -nolist';
+-#$LYNX = '/usr/local/bin/lynx -dump -nolist -force_html';
++#$LYNX = '@PREFIX@/lynx -dump -nolist -force_html';
  
  # w3m (不要あるいは未実装ならコメントアウト)
  #   カラー機能のない場合 -M の指定は不可
- #   -e は EUC、Shift JIS なら -s
+-#   -e は EUC、Shift JIS なら -s
 -#$W3M = '/usr/local/bin/w3m -dump -T text/html -M -e';
-+#$W3M = '@PREFIX@/bin/w3m -dump -T text/html -M -e';
++#   -j は JIS、-e は EUC、Shift JIS なら -s
++#$W3M = '@PREFIX@/w3m -dump -T text/html -M -j';
  
  # 得点記録用ログファイル (不要ならコメントアウト)
  #   # の部分は年月に置き換わります

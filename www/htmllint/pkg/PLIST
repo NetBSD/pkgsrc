@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 05:13:04 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/18 14:05:12 kei Exp $
 bin/htmllint
 libexec/cgi-bin/htmllint.cgi
-libexec/cgi-bin/htmllint.env
+libexec/cgi-bin/htmllint.env.default
+@exec [ -f %D/htmllint.env ] || cp %D/htmllint.env.default %D/htmllint.env
 libexec/cgi-bin/htmllintrc
 libexec/cgi-bin/tagslist.cgi
 share/httpd/htdocs/htmllint/15445.dtd
@@ -77,6 +78,8 @@ share/httpd/htdocs/htmllint/imode.dtd
 share/httpd/htdocs/htmllint/imode.rul
 share/httpd/htdocs/htmllint/imode20.dtd
 share/httpd/htdocs/htmllint/imode20.rul
+share/httpd/htdocs/htmllint/imode30.dtd
+share/httpd/htdocs/htmllint/imode30.rul
 share/httpd/htdocs/htmllint/index.html
 share/httpd/htdocs/htmllint/introduction.html
 share/httpd/htdocs/htmllint/jpo.dtd
