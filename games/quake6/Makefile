@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/02 06:53:42 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/11 03:58:14 hubertf Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -22,6 +22,7 @@ post-extract:
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+# This pkg does not regard USE_INET6, but works fine with IPv6
 # "bindir" setting is very non-standard for GNU autoconf
 CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
 
