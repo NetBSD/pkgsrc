@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2268 2004/10/28 11:32:26 markd Exp $
+$NetBSD: TODO,v 1.2269 2004/10/28 14:27:27 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -350,8 +350,6 @@ Suggested package updates
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o grace-5.1.17
-	o gst-plugins-0.8.5
-	o gstreamer-0.8.7
 	o gtkballs-3.1.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.5
