@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2001/08/20 07:12:27 itojun Exp $
+$NetBSD: distinfo,v 1.7 2002/07/09 23:48:17 itojun Exp $
 
-SHA1 (zebra-0.92a.tar.gz) = 7dc3813dfe3c3a70f298cdbb0abefcb4663682d7
-Size (zebra-0.92a.tar.gz) = 1155814 bytes
-SHA1 (patch-aa) = ee8100984152dc69237b53977d63c506095cdfd2
-SHA1 (patch-ab) = 415ee0d3c18240165bfabc77d9fa6ff4c2e7ac34
-SHA1 (patch-ac) = 4bdc7ded7d39702529f774b8a809d33898c5559e
-SHA1 (patch-ad) = 7a9a1daa024b9efacefb3c469bc86dbbc36af47c
-SHA1 (patch-ae) = 0d255facaacd0521d9e5fe31698c1f7f5d4c7f61
-SHA1 (patch-af) = b3b879e8932196a8e3e9f6fe92815a817223aceb
+SHA1 (zebra-0.93a.tar.gz) = aa9d307a53adcd6e9b76003f230c4cd79eefba6b
+Size (zebra-0.93a.tar.gz) = 1335141 bytes
+SHA1 (patch-aa) = 689404752d3d793d9d2620303d6f3355f43e38cd
+SHA1 (patch-ab) = 6725c6034adaf5580186f46b7cd9e15c4de66db2
+SHA1 (patch-ac) = f6c10cd468cd89228202876de49981e664378cc7
+SHA1 (patch-ad) = fb20a6b64a9e07dd94bd62b01e4b2f17a437d840
+SHA1 (patch-ae) = bad18eda9b4ffd4cc22666b26573858e7de84a7d
+SHA1 (patch-af) = d045b85bfc8f8d5f6894e2333b0a799661997f90
 SHA1 (patch-ag) = 62b5e4f28c1d13cb1f9c772250529aefe0511f90

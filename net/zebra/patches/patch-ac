@@ -1,18 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2000/08/24 01:25:44 kim Exp $
+$NetBSD: patch-ac,v 1.2 2002/07/09 23:48:18 itojun Exp $
 
---- ospfd/Makefile.am.orig	Thu Aug 17 04:27:22 2000
-+++ ospfd/Makefile.am	Wed Aug 23 16:22:52 2000
-@@ -4,6 +4,8 @@
- DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
- INSTALL_SDATA=@INSTALL@ -m 600
+--- ospfd/Makefile.am.orig	Wed Jun 19 04:06:08 2002
++++ ospfd/Makefile.am	Wed Jul 10 08:34:31 2002
+@@ -30,15 +30,17 @@
+ 
+ EXTRA_DIST = $(sysconf_DATA) OSPF-MIB.txt OSPF-TRAP-MIB.txt
  
 +sysconfdatadir=$(datadir)/examples/zebra
 +
- noinst_LIBRARIES = libospf.a
- sbin_PROGRAMS = ospfd
- 
-@@ -30,14 +32,14 @@
- 
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
@@ -30,4 +25,3 @@ $NetBSD: patch-ac,v 1.1 2000/08/24 01:25:44 kim Exp $
 +	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
  	  fi; fi; \
  	done
- 
