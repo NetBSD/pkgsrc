@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.11 1998/05/06 09:33:22 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.12 1998/05/14 11:52:01 agc Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -53,7 +53,7 @@ _SUBDIRUSE: .USE
 		for dud in $$DUDS; do \
 			if [ $${dud} = $${entry} ]; then \
 				OK="false"; \
-				${ECHO_MSG} "===> ${DIRPRFX}$${entry} skipped"; \
+				${ECHO_MSG} "===> ${_THISDIR_}$${entry} skipped"; \
 			fi; \
 		done; \
 		if test -d ${.CURDIR}/$${entry}.${MACHINE}; then \
@@ -62,13 +62,13 @@ _SUBDIRUSE: .USE
 			edir=$${entry}; \
 		else \
 			OK="false"; \
-			${ECHO_MSG} "===> ${DIRPRFX}$${entry} non-existent"; \
+			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
 		fi; \
 		if [ "$$OK" = "" ]; then \
-			${ECHO_MSG} "===> ${DIRPRFX}$${edir}"; \
+			${ECHO_MSG} "===> ${_THISDIR_}$${edir}"; \
 			cd ${.CURDIR}/$${edir}; \
 			${MAKE} ${.TARGET:realinstall=install} \
-				DIRPRFX=${DIRPRFX}$$edir/; \
+				"_THISDIR_=${_THISDIR_}${edir}/" \
 		fi; \
 	done
 
@@ -107,7 +107,7 @@ readmes: readme _SUBDIRUSE
 .if !target(readme)
 readme:
 	@rm -f README.html
-	@make README.html
+	@${MAKE} README.html
 .endif
 
 .if defined(PORTSTOP)
@@ -119,13 +119,13 @@ README=	../templates/README.category
 HTMLIFY=	sed -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
 
 README.html:
-	@echo "===>  Creating README.html for ${.CURDIR:T}"
+	@echo "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}"
 	@> $@.tmp
 .for entry in ${SUBDIR}
 .if defined(PORTSTOP)
 	@echo -n '<a href="'${entry}/README.html'">'"`echo ${entry} | ${HTMLIFY}`"'</a>: ' >> $@.tmp
 .else
-	@echo -n '<a href="'${entry}/README.html'">'"`cd ${entry}; make package-name | ${HTMLIFY}`</a>: " >> $@.tmp
+	@echo -n '<a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: " >> $@.tmp
 .endif
 .if exists(${entry}/pkg/COMMENT)
 	@${HTMLIFY} ${entry}/pkg/COMMENT >> $@.tmp
@@ -148,5 +148,5 @@ README.html:
 		> $@
 	@rm -f $@.tmp $@.tmp2 $@.tmp3
 .for subdir in ${SUBDIR}
-	@cd ${subdir} && make readme
+	@cd ${subdir} && ${MAKE} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" readme
 .endfor
