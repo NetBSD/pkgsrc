@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/29 06:48:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/29 07:32:55 jlam Exp $
 #
 
 DISTNAME=	binutils-2.11.2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/directory/binutils.html
 COMMENT=	GNU binary utilities
+
+CONFLICTS=	ddd<=3.3	# libiberty.a
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
