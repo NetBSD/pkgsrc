@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2003/02/21 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/10 12:45:41 wiz Exp $
 #
 
-DISTNAME=	suck-4.3.1
+DISTNAME=	suck-4.3.2
 CATEGORIES=	news
-MASTER_SITES=	http://home.att.net/~bobyetman/ \
+MASTER_SITES=	http://www.sucknews.org/ \
 		${MASTER_SITE_SUNSITE:=system/news/transport/} \
 		ftp://tsx-11.mit.edu/pub/linux/sources/sbin/
 
 MAINTAINER=	drankin@bohemians.lexington.ky.us
-HOMEPAGE=	http://home.att.net/~bobyetman/
+HOMEPAGE=	http://www.sucknews.org/
 COMMENT=	Feed a local news server without a dedicated newsfeed
 
 GNU_CONFIGURE=	yes
