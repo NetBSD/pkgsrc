@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/31 22:32:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/04 18:53:54 xtraeme Exp $
 bin/quake3arena
-lib/lokigames/quake3arena/q3ded
 lib/lokigames/quake3arena/quake3arena
 lib/lokigames/quake3arena/baseq3/pak1.pk3
 lib/lokigames/quake3arena/baseq3/pak2.pk3

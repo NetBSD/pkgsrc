@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/08/31 22:32:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/04 18:53:54 xtraeme Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
+PKGREVISION=	1
 PKGNAME=	quake3arena-1.32b
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
@@ -54,7 +55,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/${DISTBINNAME} \
 		${LIBDIR}/${BINNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/q3ded ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/README-linux.txt ${SHAREDIR}/${BINNAME}-README
 
 	cd ${WRKSRC} && ${PAX} -rw baseq3 ${LIBDIR}
