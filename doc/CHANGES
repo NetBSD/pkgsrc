@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9089 2005/02/09 13:38:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.9090 2005/02/09 14:01:09 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -812,3 +812,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated py-pytables to 0.9.1 [markd 2005-02-09]
 	Added kftpgrabber-0.5.0 [markd 2005-02-09]
 	Updated gstreamer to 0.8.9 [jmmv 2005-02-09]
+	Updated nmap to 3.81 [salo 2005-02-09]
+	Updated nmapfe to 0.9.5nb20 [salo 2005-02-09]
