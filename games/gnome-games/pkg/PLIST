@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/18 23:20:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/21 01:28:51 jlam Exp $
 bin/GnomeScott
 bin/freecell
 bin/gataxx
@@ -22,10 +22,13 @@ etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
 include/gdkcardimage/gdk-card-image.h
 lib/gnome-stones/objects/libgnome-stones.a
+lib/gnome-stones/objects/libgnome-stones.la
 lib/gnome-stones/objects/libgnome-stones.so.0.0
 lib/gnome-stones/objects/libgnomekoban.a
+lib/gnome-stones/objects/libgnomekoban.la
 lib/gnome-stones/objects/libgnomekoban.so.0.0
 lib/libgdkcardimage.a
+lib/libgdkcardimage.la
 lib/libgdkcardimage.so.0.0
 share/gnibbles/level001.gnl
 share/gnibbles/level002.gnl
