@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2169 2003/05/07 12:45:15 wiz Exp $
+$NetBSD: CHANGES,v 1.2170 2003/05/07 13:19:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated acroread5 to 5.06nb3 [jmmv 2003-05-07]
 	Added cmake-1.6.6 [dmcmahill 2003-05-07]
 	Updated gnet to 2.0.2 [wiz 2003-05-07]
+	Updated groff to 1.19 [wiz 2003-05-07]
