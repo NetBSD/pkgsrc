@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.94 2004/01/10 22:31:51 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.95 2004/01/13 11:24:16 jmmv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1084,7 +1084,7 @@ EOF
 			"must come with version number, like \"foobaa-1.0\".");
 		if ($i =~ /_pl[0-9]*$/
 		 || $i =~ /_[0-9]*[A-Za-z]?[0-9]*(\.[0-9]*[A-Za-z]?[0-9]*)*$/) {
-			&perror("FATAL: you seem to using underline ".
+			&perror("FATAL: you seem to be using underline ".
 				"before version number in PKGNAME. ".
 				"it has to be hyphen.");
 		}
