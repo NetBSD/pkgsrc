@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+
+--- Makefile.in.orig	Sat Dec  2 17:18:03 2000
++++ Makefile.in	Thu Dec 14 13:01:11 2000
+@@ -5,7 +5,7 @@
+ BASEPATH    = $(INSTALLROOT)@prefix@
+ CONFPATH    = $(INSTALLROOT)@sysconfdir@
+ CGIPATH     = $(INSTALLROOT)@CGIPATH@
+-INSTALLDIRS = $(CONFPATH) $(CGIPATH) $(MODELPATH) $(BASEPATH)/@bindir@  $(BASEPATH)/@sbindir@ $(BASEPATH)/misc
++INSTALLDIRS = $(CONFPATH) $(MODELPATH) $(BASEPATH)/@bindir@  $(BASEPATH)/@sbindir@
+ STATEPATH   = $(INSTALLROOT)@STATEPATH@
+ 
+ SUBDIRS	= common models server clients man
