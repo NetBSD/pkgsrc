@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/06/05 11:56:31 dillo Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/06/16 01:14:33 dillo Exp $
 
 STELLA_VERSION=	1.3
 DISTNAME=	stella-${STELLA_VERSION}-src
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 USE_GNU_TOOLS+=	make
 USE_BUILDLINK3=	YES
 USE_INSTALL=	YES
+UNLIMIT_RESOURCES=datasize
 
 MAKEFILE=	makefile
 
