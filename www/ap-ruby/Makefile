@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/05/04 23:46:37 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/28 04:54:36 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
-PKGNAME=	ap-${RUBY_PKGNAMEPREFIX}${VERSION}
+PKGNAME=	ap-${RUBY_PKGPREFIX}-${VERSION}
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -10,30 +10,20 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
-USE_BUILDLINK3=	YES
-USE_PKGINSTALL=	YES
-APACHE_MODULE=	YES
-DIST_SUBDIR=	ruby
-USE_RUBY=	YES
-RUBY_REQD=	1.6
-VERSION=	1.0.7
+CONFLICTS+=		ap2-ruby*
 
-HAS_CONFIGURE=  yes
-CONFIGURE_SCRIPT= ./configure.rb
-CONFIGURE_ARGS=	--with-apxs="${APXS}" \
-		--with-eruby-includes="${BUILDLINK_PREFIX.ruby-eruby}/include" \
-		--with-eruby-libraries="${BUILDLINK_PREFIX.ruby-eruby}/lib"
-INSTALL_TARGET=	site-install
-
-FILES_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
-FILES_SUBST+=	RUBY_EXAMPLESDIR=${RUBY_EXAMPLESDIR}
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+APACHE_MODULE=		yes
+VERSION=		1.0.7
+HAS_CONFIGURE=  	yes
+INSTALL_TARGET=		site-install
+CONFIGURE_SCRIPT=	${RUBY} configure.rb
+CONFIGURE_ARGS=		--with-apxs="${APXS}" \
+	--with-eruby-includes="${BUILDLINK_PREFIX.ruby-eruby}/include" \
+	--with-eruby-libraries="${BUILDLINK_PREFIX.ruby-eruby}/lib"
 MESSAGE_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
-
 DOCS=		ChangeLog README.en README.ja
-HTMLDOCS=	classes.en.html directives.en.html faq.en.html \
-		index.en.html install.en.html \
-		classes.ja.jis.html directives.ja.jis.html faq.ja.jis.html \
-		index.ja.jis.html install.ja.jis.html
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,19 +38,18 @@ post-build:
 		${WRKSRC}/examples/httpd.conf > ${WRKDIR}/mod_ruby.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby/html
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mod_ruby
 .endfor
-.for f in ${HTMLDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${RUBY_DOCDIR}/mod_ruby
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/doc/*.rd  ${RUBY_DOCDIR}/mod_ruby
+	${INSTALL_DATA} ${WRKSRC}/doc/*.css  ${RUBY_DOCDIR}/mod_ruby/html
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html  ${RUBY_DOCDIR}/mod_ruby/html
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mod_ruby
 	${INSTALL_DATA} ${WRKDIR}/mod_ruby.conf  ${RUBY_EXAMPLESDIR}/mod_ruby
 
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../textproc/ruby-eruby/buildlink3.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../www/apache/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
