@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.23 2001/03/06 16:00:16 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.24 2001/03/10 10:53:15 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -150,7 +150,7 @@ PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 X11BASE?=               ${DESTDIR}/usr/openwin
 PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
-.elf (${OPSYS} == "Linux")
+.elif (${OPSYS} == "Linux")
 PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
 .endif
 
