@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2002/04/02 02:01:24 dmcmahill Exp $
+
+--- number.h.orig	Wed May 26 12:08:57 1999
++++ number.h
+@@ -65,6 +65,7 @@
+ 
+ Number * powNumber(Number *, Number *);
+ 
++Number * dbNumber(Number *, double);
+ Number * ripNumber(Number *, Number *);
+ 
+ Number * sinNumber(Number *);
