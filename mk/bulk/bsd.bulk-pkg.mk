@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.25 2001/05/03 21:19:55 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.26 2001/05/09 02:39:31 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -246,7 +246,7 @@ bulk-package:
 				if ! ${PKG_INFO} -qe $$pkgname ; then \
 					if [ -f $$pkgfile ]; then \
 						${ECHO_MSG} "BULK>  ${PKG_ADD} $$pkgfile"; \
-						${DO} ${PKG_ADD} $$pkgfile ; \
+						${DO} ${PKG_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
 					else \
 						${ECHO_MSG} "BULK> warning:  $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
