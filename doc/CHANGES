@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1032 2003/01/06 00:07:25 rh Exp $
+$NetBSD: CHANGES,v 1.1033 2003/01/06 07:45:06 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -118,8 +118,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-postgresql to 1.9.0nb1 [jlam 2003-01-05]
 	Updated php-pgsql to 3.0.18nb1 [jlam 2003-01-05]
 	Updated php-pgsql to 4.2.3nb1 [jlam 2003-01-05]
-	Updated py22-postgresql to 3.3nb1 [jlam 2003-01-05]
-	Updated py21pth-psycopg to 1.0.13nb1 [jlam 2003-01-05]
+	Updated py-postgresql to 3.3nb1 [jlam 2003-01-05]
+	Updated py-psycopg to 1.0.13nb1 [jlam 2003-01-05]
 	Updated ruby-DBD-postgresql to 0.0.12nb1 [jlam 2003-01-05]
 	Updated ruby-postgresql to 0.6.5nb1 [jlam 2003-01-05]
 	Updated courier-authpgsql to 0.37.1nb1 [jlam 2003-01-05]
