@@ -1,15 +1,16 @@
-$NetBSD: patch-ab,v 1.10 2001/12/25 15:10:50 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2002/08/25 21:50:51 mjl Exp $
 
---- configure.orig	Tue Dec 18 06:44:13 2001
-+++ configure
-@@ -8477,43 +8477,18 @@
- 	PO=""
- fi
+--- configure.orig	Tue Jul  2 02:37:46 2002
++++ configure	Sun Aug 25 00:59:32 2002
+@@ -9660,43 +9660,18 @@
  
--supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko nl no pl pt ro ru sk sv tr zh_CN zh_TW.Big5"
-+supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko nl no pl pt ro ru sk sv tr zh_CN"
- supported_wprefs_locales="bg cs de es et fi fr hr hu it ja ko pt ru sk zh_CN zh_TW.Big5"
- supported_wings_locales="cs sk"
+ 
+ 
+-supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko ms nl no pl pt ro ru sk sv tr zh_CN zh_TW.Big5"
+-supported_wprefs_locales="bg cs de es et fi fr hr hu it ja ko pt ru sk zh_CN zh_TW.Big5"
++supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko ms nl no pl pt ro ru sk sv tr zh_CN"
++supported_wprefs_locales="bg cs de es et fi fr hr hu it ja ko pt ru sk zh_CN"
+ supported_wings_locales="cs de sk"
  
 -for lang in $LINGUAS; do
 -	ok=0
@@ -54,8 +55,8 @@ $NetBSD: patch-ab,v 1.10 2001/12/25 15:10:50 wiz Exp $
 +	WINGSMOFILES="$WINGSMOFILES $lang.mo"
  done
  
- case $host_os in
-@@ -11544,8 +11519,8 @@
+ 
+@@ -13432,8 +13407,8 @@
      fi
  fi
  
@@ -64,5 +65,5 @@ $NetBSD: patch-ab,v 1.10 2001/12/25 15:10:50 wiz Exp $
 +LIBRARY_SEARCH_PATH="-L${BUILDLINK_DIR}/lib -L${BUILDLINK_X11_DIR}/lib"
 +HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${BUILDLINK_X11_DIR}/include"
  
- for ac_header in stdlib.h
- do
+ 
+ 
