@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/05 10:06:39 adam Exp $
 #
 
-DISTNAME=	gnustep-gui-0.8.5
-PKGREVISION=	2
+DISTNAME=	gnustep-gui-0.9.0
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -17,12 +16,9 @@ MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
-CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers
-CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers/gnustep
-LDFLAGS+=		-lossaudio
 
-.include "../../devel/gnustep-base/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../devel/gnustep-base/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
