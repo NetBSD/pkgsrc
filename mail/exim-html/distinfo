@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/11 13:21:07 ad Exp $
+
+SHA1 (exim-html-3.20.tar.gz) = f830eaa2b9bd8cc183b66fa1627ce14b15f51ccf
+Size (exim-html-3.20.tar.gz) = 699383 bytes
+SHA1 (patch-aa) = d019538f9b8a56521723c4d088b1002f30018a6c
