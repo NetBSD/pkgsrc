@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2002/05/21 17:57:04 tron Exp $
+$NetBSD: patch-aa,v 1.9 2002/09/15 06:51:37 kim Exp $
 
---- pty.c.orig	Mon Feb 11 13:44:18 2002
-+++ pty.c	Tue May 21 19:55:36 2002
-@@ -318,6 +318,47 @@
+--- pty.c.orig	Mon Feb 11 07:44:18 2002
++++ pty.c	Mon Aug  5 19:58:48 2002
+@@ -318,6 +318,45 @@
  
  /***************************************************************/
  
@@ -10,9 +10,7 @@ $NetBSD: patch-aa,v 1.8 2002/05/21 17:57:04 tron Exp $
 +#define PTY_DONE
 +
 +#include <sys/param.h>
-+
 +#include <string.h>
-+#include <util.h>
 +
 +int
 +OpenPTY(ttyn)
