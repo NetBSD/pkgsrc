@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/04/05 21:34:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/30 10:41:22 jmmv Exp $
 #
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
@@ -13,6 +13,7 @@ MAINTAINER=		joerg@gmx.net
 HOMEPAGE=		http://www.jedsoft.org/jed/
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/jed
@@ -24,5 +25,4 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/jed.conf ${EGDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../devel/libslang/buildlink2.mk"

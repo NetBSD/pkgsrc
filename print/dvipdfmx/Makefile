@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:16:20 martti Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/30 10:41:25 jmmv Exp $
 
 DISTNAME=	dvipdfmx-20021230
 PKGNAME=	dvipdfmx-0.0.0.20021230
@@ -17,6 +17,7 @@ CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 #CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
@@ -28,5 +29,4 @@ post-patch:
 .include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/05 19:05:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/30 10:41:24 jmmv Exp $
 #
 
 DISTNAME=	${BASENAME}-src-${VER}
@@ -23,6 +23,7 @@ _FETCH_MESSAGE= \
 BASENAME=	spread
 VER=		3.17.0
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 BUILD_DEPENDS+=        perl-[0-9]*:../../lang/perl5:build
@@ -61,5 +62,4 @@ post-install:
 	${INSTALL} -d -o ${SPREAD_USER} -g ${SPREAD_GROUP} -m 0750 ${RUNDIR}
 
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
