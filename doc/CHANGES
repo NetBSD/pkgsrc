@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8802 2005/01/18 11:23:30 drochner Exp $
+$NetBSD: CHANGES,v 1.8803 2005/01/18 13:38:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -403,3 +403,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kdeutils3 to 3.3.2nb1 [minskim 2005-01-18]
 	Updated cue to 20050110 [itojun 2005-01-18]
 	Updated ImageMagick to 6.1.8-8 [drochner 2005-01-18]
+	Updated awstats to 6.3 [minskim 2005-01-08]
