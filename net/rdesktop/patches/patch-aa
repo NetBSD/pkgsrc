@@ -1,18 +1,19 @@
-$NetBSD: patch-aa,v 1.8 2004/01/24 14:01:47 xtraeme Exp $
+$NetBSD: patch-aa,v 1.9 2005/03/23 15:24:11 xtraeme Exp $
 
---- Makefile.orig	2004-01-24 14:20:46.000000000 +0100
-+++ Makefile	2004-01-24 14:22:36.000000000 +0100
-@@ -48,23 +48,19 @@
- install: installbin installkeymaps installman
+--- Makefile.in.orig	2005-03-08 04:19:45.000000000 +0100
++++ Makefile.in	2005-03-08 04:21:35.000000000 +0100
+@@ -54,25 +54,21 @@
  
+ .PHONY: installbin
  installbin: rdesktop
 -	mkdir -p $(DESTDIR)/$(bindir)
 -	$(INSTALL) rdesktop $(DESTDIR)/$(bindir)
 -	strip $(DESTDIR)/$(bindir)/rdesktop
 -	chmod 755 $(DESTDIR)/$(bindir)/rdesktop
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(bindir)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)/$(bindir)
 +	$(BSD_INSTALL_PROGRAM) rdesktop $(DESTDIR)/$(bindir)
  
+ .PHONY: installman
  installman: doc/rdesktop.1
 -	mkdir -p $(DESTDIR)/$(mandir)/man1
 -	cp doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
@@ -20,6 +21,7 @@ $NetBSD: patch-aa,v 1.8 2004/01/24 14:01:47 xtraeme Exp $
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(mandir)/man1
 +	$(BSD_INSTALL_MAN) doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
  
+ .PHONY: installkeymaps
  installkeymaps:
 -	mkdir -p $(DESTDIR)/$(KEYMAP_PATH)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(KEYMAP_PATH)
@@ -32,5 +34,5 @@ $NetBSD: patch-aa,v 1.8 2004/01/24 14:01:47 xtraeme Exp $
 +	$(BSD_INSTALL_DATA) keymaps/common $(DESTDIR)/$(KEYMAP_PATH)
 +	$(BSD_INSTALL_DATA) keymaps/modifiers $(DESTDIR)/$(KEYMAP_PATH)
  
+ .PHONY: proto
  proto:
- 	cproto -DMAKE_PROTO -DWITH_OPENSSL -o proto.h *.c
