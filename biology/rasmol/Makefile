@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/09/29 01:32:05 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/25 03:37:23 jschauma Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	biology
 MASTER_SITES=	ftp://ftp.bernstein-plus-sons.com/software/
