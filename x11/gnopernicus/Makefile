@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/17 22:13:19 jmmv Exp $
 #
 
 DISTNAME=		gnopernicus-0.7.1
@@ -14,7 +14,7 @@ COMMENT=		Collection of accessibility apps for GNOME 2
 BUILD_USES_MSGFMT=	yes
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -39,10 +39,16 @@ GCONF2_SCHEMAS+=	brlmonitor.schemas
 GCONF2_SCHEMAS+=	gnopernicus.schemas
 GCONF2_SCHEMAS+=	remote.schemas
 
-.include "../../audio/gnome-speech/buildlink2.mk"
+.include "../../audio/gnome-speech/buildlink3.mk"
+.include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-mag/buildlink2.mk"
+.include "../../x11/gnome-mag/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
