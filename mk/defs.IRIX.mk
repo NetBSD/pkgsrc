@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.32 2003/09/02 06:59:45 jlam Exp $
+# $NetBSD: defs.IRIX.mk,v 1.33 2003/09/14 16:30:34 danw Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -118,6 +118,7 @@ _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_LIBTOOL_REQD=    1.4.20010614nb14 # base version of libtool required
 _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
+_OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
