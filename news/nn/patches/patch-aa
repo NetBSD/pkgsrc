@@ -1541,35 +1541,3 @@
   #endif	/* HAVE_TERMIO */
       rd_count = 0;
   }
-*** inews/inews.c.orig	Thu Nov 25 12:29:02 1993
---- inews/inews.c	Sat Apr 15 04:57:55 1995
-***************
-*** 293,305 ****
-  		}
-  
-  	fprintf(ser_wr_fp, ")\r\n");
-! 
-  #ifdef HIDDENNET
-  	/* Only the login name - nntp server will add uucp name */
-  	fprintf(ser_wr_fp, "Path: %s\r\n", passwd->pw_name);
-  #else /* HIDDENNET */
-  	fprintf(ser_wr_fp, "Path: %s!%s\r\n", host_name, passwd->pw_name);
-  #endif /* HIDDENNET */
-  }
-  
-  
---- 293,306 ----
-  		}
-  
-  	fprintf(ser_wr_fp, ")\r\n");
-! #ifndef FOR_NN
-  #ifdef HIDDENNET
-  	/* Only the login name - nntp server will add uucp name */
-  	fprintf(ser_wr_fp, "Path: %s\r\n", passwd->pw_name);
-  #else /* HIDDENNET */
-  	fprintf(ser_wr_fp, "Path: %s!%s\r\n", host_name, passwd->pw_name);
-  #endif /* HIDDENNET */
-+ #endif
-  }
-  
-  
