@@ -1,36 +1,23 @@
-$NetBSD: patch-aa,v 1.6 1998/09/04 19:17:18 bad Exp $
-
---- Makefile.orig	Mon Jun  1 02:29:04 1998
-+++ Makefile	Sun Aug  2 14:52:27 1998
-@@ -5,11 +5,11 @@
- ###########################################################################
+$NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
+--- Makefile.in.orig	Sat Feb  6 22:51:43 1999
++++ Makefile.in	Thu Feb 11 14:29:47 1999
+@@ -23,12 +23,11 @@
  
- # The base directory for all samba files
--BASEDIR = /usr/local/samba
-+BASEDIR = $(PREFIX)
- 
- # The base manpages directory to put the man pages in
- # Note: $(MANDIR)/man1, $(MANDIR)/man5 and $(MANDIR)/man8 must exist.
--MANDIR = /usr/local/man
-+MANDIR = $(PREFIX)/man
- 
- # The directories to put things in. If you use multiple
- # architectures or share the samba binaries across NFS then
-@@ -18,9 +18,11 @@
- #       normally only applies to nmbd and smbd
- #       SBINDIR implies a secure binary directory
- BINDIR = $(BASEDIR)/bin
--SBINDIR = $(BASEDIR)/bin
-+SBINDIR = $(BASEDIR)/sbin
- LIBDIR = $(BASEDIR)/lib
--VARDIR = $(BASEDIR)/var
+ BASEDIR= @prefix@
+ BINDIR = @bindir@
+-# we don't use sbindir because we want full compatibility with
+-# the previous releases of Samba
+-SBINDIR = @bindir@
++SBINDIR = @sbindir@
+ LIBDIR = @libdir@
+-VARDIR = @localstatedir@
+ MANDIR = @mandir@
 +ETCDIR?= $(BASEDIR)/etc
 +LOGDIR?= $(BASEDIR)/log
-+PRIVDIR?= $(BASEDIR)/private
  
  # The permissions to give the executables
  INSTALLPERMS = 0755
-@@ -45,17 +47,17 @@
+@@ -36,12 +35,12 @@
  # set these to where to find various files
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
@@ -39,56 +26,35 @@ $NetBSD: patch-aa,v 1.6 1998/09/04 19:17:18 bad Exp $
 -CONFIGFILE = $(LIBDIR)/smb.conf
 -LMHOSTSFILE = $(LIBDIR)/lmhosts
 -DRIVERFILE = $(LIBDIR)/printers.def
-+SMBLOGFILE = $(LOGDIR)/smb
-+NMBLOGFILE = $(LOGDIR)/nmb
+-PASSWD_PROGRAM = /bin/passwd
++SMBLOGFILE = $(LOGDIR)/log.smb
++NMBLOGFILE = $(LOGDIR)/log.nmb
 +CONFIGFILE = $(ETCDIR)/smb.conf
 +LMHOSTSFILE = $(ETCDIR)/lmhosts
 +DRIVERFILE = $(ETCDIR)/printers.def
- SMB_PASSWD = $(BINDIR)/smbpasswd
--SMB_PASSWD_FILE = $(BASEDIR)/private/smbpasswd
-+SMB_PASSWD_FILE = $(PRIVDIR)/smbpasswd
--WEB_ROOT = $(BASEDIR)
-+WEB_ROOT = $(BASEDIR)/http/htdocs
++PASSWD_PROGRAM = /usr/bin/passwd
+ # This is where smbpasswd et al go
+ PRIVATEDIR = @privatedir@
  
- # the directory where lock files go
--LOCKDIR = $(VARDIR)/locks
-+LOCKDIR?= $(VARDIR)/locks
+@@ -430,8 +429,8 @@
+ 	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
  
- # The directory where code page definition files go
- CODEPAGEDIR = $(LIBDIR)/codepages
-@@ -352,10 +354,10 @@
- # LIBSM =   
+ installbin: all installdirs
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
- 
--# This is for NetBSD. Add -DNETBSD_1_0 if you are using 1.0
-+# This is for NetBSD
- # contributed by noses@oink.rhein.de
--# FLAGSM = -DNETBSD -DSHADOW_PWD
--# LIBSM = -lcrypt 
-+FLAGSM = -DFAST_SHARE_MODES -DSHADOW_PWD -DNETGROUP -DALLOW_CHANGE_PASSWORD -DQUOTAS
-+LIBSM = -lcrypt 
- 
- # This is for NetBSD 1.3  
- # contributed by sean@fuzzymagic.com  
-@@ -824,8 +826,8 @@
- install: installbin installman installscripts installcp
- 
- installbin: all
--	@$(SHELL) $(srcdir)installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
--	@$(SHELL) $(srcdir)installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
-+	@$(SHELL) $(srcdir)installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
-+	@$(SHELL) $(srcdir)installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
- 
- installscripts:
- 	@$(SHELL) $(srcdir)installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -847,8 +849,8 @@
- 	@$(SHELL) $(srcdir)uninstallman.sh $(MANDIR) $(srcdir)
+ installscripts: installdirs
+ 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
+@@ -456,8 +455,8 @@
+ 	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:
--	@$(SHELL) $(srcdir)uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
--	@$(SHELL) $(srcdir)uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
-+	@$(SHELL) $(srcdir)uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
-+	@$(SHELL) $(srcdir)uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
+-	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
+-	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
++	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
  uninstallscripts:
- 	@$(SHELL) $(srcdir)uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
+ 	@$(SHELL) $(srcdir)/script/uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
