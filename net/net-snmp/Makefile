@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:17:55 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/05 10:33:07 seb Exp $
 
 DISTNAME=	net-snmp-5.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
@@ -23,6 +23,12 @@ NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/t
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+
+# The self-test of Perl modules only works after installation because perl
+# can't load the shared libraries from WRKSRC/
+# Until this is fixed you can test them after installation by doing
+# `make test TEST_TARGET=perltest'
+TEST_TARGET?=		test
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -80,6 +86,12 @@ CONFIGURE_ARGS+=	--with-dummy-values
 # older software to use net-snmp.
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
+#
+# Enable the perl modules build and installation
+#
+CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
+PERL5_CONFIGURE=	NO
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Bundle/NetSNMP/.packlist
 
 .if (${OPSYS} == "NetBSD") || !exists(/usr/bin/lpstat)
 CONFIGURE_ENV+=		ac_cv_path_LPSTAT_PATH=no
@@ -96,6 +108,7 @@ OSVERSION_SPECIFIC=	YES
 OWN_DIRS=	${PREFIX}/share/snmp
 RCD_SCRIPTS=	snmpd snmptrapd
 
+.include "../../lang/perl5/module.mk"
 .include "../../lang/perl5/buildlink3.mk"
 
 post-buildlink:
