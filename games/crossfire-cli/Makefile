@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/28 10:30:04 wiz Exp $
 #
 
 DISTNAME=	crossfire-client-0.95.8
@@ -39,6 +39,6 @@ post-install:
 	cd ${LOCALBASE}/share/cfclient && \
 	    ${GZCAT} ${DISTDIR}/${CF_RAW} | ${GTAR} xmf -
 	${INSTALL_DATA} ${WRKSRC}/def_keys ${LOCALBASE}/share/cfclient
-	@chown -R root:games ${LOCALBASE}/share/cfclient
+	@${CHOWN} -R root:games ${LOCALBASE}/share/cfclient
 
 .include "../../mk/bsd.pkg.mk"
