@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.596 2000/11/02 03:01:40 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.597 2000/11/02 12:17:03 mjl Exp $
 #
 # This file is in the public domain.
 #
@@ -710,7 +710,7 @@ PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # shared/dynamic motif libs
 .if defined(USE_MOTIF)
-MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
+MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
 .endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
