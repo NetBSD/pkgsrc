@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/11 04:00:17 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/24 15:00:16 jmc Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
 .include "../../mk/motif.buildlink2.mk"
 .endif
 .endif
+.else
+CONFIGURE_ARGS+=	--with-x=no
 .endif	# EMACS_USE_X
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
