@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2000/03/14 16:52:28 tron Exp $
 
---- plug-ins/common/mail.c.orig	Fri Nov 26 16:07:27 1999
-+++ plug-ins/common/mail.c	Fri Nov 26 16:08:37 1999
-@@ -92,7 +92,12 @@
-    *
+--- plug-ins/common/mail.c.orig	Mon Jan 31 04:13:01 2000
++++ plug-ins/common/mail.c	Mon Mar 13 23:55:20 2000
+@@ -91,7 +91,12 @@
+  *
   */
  #ifndef MAILER
 +#ifdef __NetBSD__
 +#include <paths.h>
 +#define MAILER _PATH_SENDMAIL
-+#else /* !__NetBSD__ */
++#else
  #define MAILER "/usr/lib/sendmail"
-+#endif /* __NetBSD__ */
++#endif
  #endif
  
  #ifndef UUENCODE
