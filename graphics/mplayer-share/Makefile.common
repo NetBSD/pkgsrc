@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.23 2003/02/07 18:33:07 fredb Exp $
+# $NetBSD: Makefile.common,v 1.24 2003/02/18 11:16:33 mrg Exp $
 
-MPLAYER_DIST_VERSION=	0.90rc3
+MPLAYER_DIST_VERSION=	0.90rc4
 #PKGREVISION=		0
 
 # This variable is used in all packages which depend on this package
 # XXX Add 10, as the "rc" version numbers were used up for the "pre" versions.
-MPLAYER_PKG_VERSION=	0.90rc13
+MPLAYER_PKG_VERSION=	0.90rc14
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		graphics
@@ -29,6 +29,7 @@ NO_SRC_ON_FTP=		"prohibited by USAs DMCA"
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
+USE_GNU_GETTEXT=	YES
 
 PTHREAD_OPTS+=		require
 
