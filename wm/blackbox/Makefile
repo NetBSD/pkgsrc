@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:22 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -12,8 +12,8 @@ COMMENT=	Small and fast X11R6 window manager
 
 DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 
+USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	YES
-USE_GCC_SHLIB=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 

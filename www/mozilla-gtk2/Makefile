@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/12 02:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/13 22:04:54 jlam Exp $
 
 PKGREVISION=	2
 MOZILLA=	mozilla-gtk2
@@ -16,7 +16,6 @@ SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
 
 COMMENT=	Full featured gecko-based browser built with GTK2
 
-USE_GCC_SHLIB=	yes
 BUILD_SVG=	# defined
 BUILD_MATHML=	# defined
 BUILD_CALENDAR=	# defined

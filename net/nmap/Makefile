@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/10/19 07:03:09 salo Exp $
+# $NetBSD: Makefile,v 1.39 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=	nmap-3.75
@@ -13,7 +13,6 @@ COMMENT=	Network/port scanner with OS detection
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
-USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 

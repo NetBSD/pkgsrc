@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/02 16:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=	groff-1.19.1
@@ -13,8 +13,8 @@ COMMENT=	GNU roff text processing suite
 DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
 DEPENDS+=	psutils>=1.17:../../print/psutils
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_GCC_SHLIB=		YES
 USE_PERL5=		YES
 USE_BUILDLINK3=		YES
 
