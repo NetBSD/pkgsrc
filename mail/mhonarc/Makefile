@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/09/16 13:17:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/21 20:13:32 adrianp Exp $
 #
 
-DISTNAME=	MHonArc-2.6.8
-PKGNAME=	mhonarc-2.6.8
+DISTNAME=	MHonArc-2.6.10
+PKGNAME=	mhonarc-2.6.10
 CATEGORIES=	mail
 MASTER_SITES=	http://www.oac.uci.edu/indiv/ehood/tar/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	Mailbox to HTML converter, suitable for list archives
 
 USE_PERL5=	YES
 
-NO_BUILD=
+NO_BUILD=	YES
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/mhonarc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/16 13:17:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/21 20:13:32 adrianp Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -214,6 +214,8 @@ share/doc/mhonarc/resources/addressmodifycode.html
 share/doc/mhonarc/resources/afs.html
 share/doc/mhonarc/resources/annotate.html
 share/doc/mhonarc/resources/archive.html
+share/doc/mhonarc/resources/attachmentdir.html
+share/doc/mhonarc/resources/attachmenturl.html
 share/doc/mhonarc/resources/authorbegin.html
 share/doc/mhonarc/resources/authorend.html
 share/doc/mhonarc/resources/authsort.html
@@ -316,6 +318,7 @@ share/doc/mhonarc/resources/msgprefix.html
 share/doc/mhonarc/resources/msgsep.html
 share/doc/mhonarc/resources/multipg.html
 share/doc/mhonarc/resources/news.html
+share/doc/mhonarc/resources/newsurl.html
 share/doc/mhonarc/resources/nextbutton.html
 share/doc/mhonarc/resources/nextbuttonia.html
 share/doc/mhonarc/resources/nextlink.html
