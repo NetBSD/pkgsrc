@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2001/07/01 00:04:24 taca Exp $
+# $NetBSD: Makefile,v 1.225 2001/07/01 12:47:35 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -194,7 +194,10 @@ SUBDIR+=	rdp
 SUBDIR+=	readline
 SUBDIR+=	rpc2
 SUBDIR+=	ruby-amstd
+SUBDIR+=	ruby-bsearch
+SUBDIR+=	ruby-filelock
 SUBDIR+=	ruby-mode
+SUBDIR+=	ruby-mutexm
 SUBDIR+=	ruby-optparse
 SUBDIR+=	ruby-readline
 #SUBDIR+=	ruby14-readline
