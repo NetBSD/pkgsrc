@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.5 2002/03/05 21:05:53 dmcmahill Exp $
 
 check for the fortran libs.  We need to check this way
 to keep compatibility with both f2c and f77 rather than
 hard coding something like "-lg2c".
 
+also honor {C,F,LD}FLAGS
+
 --- configure.in.orig	Mon Mar 26 07:08:33 2001
-+++ configure.in	Fri Mar 30 06:08:18 2001
++++ configure.in	Sun Mar  3 13:19:35 2002
 @@ -112,4 +112,12 @@
  fi
  
@@ -19,6 +21,27 @@ hard coding something like "-lg2c".
 +
  #############################################
  ## Compilers and options according to machine
+@@ -847,7 +855,7 @@
+     # C Compiler
+     #
+-    CC=cc
+-    CC_OPTIONS='-O2 -Dnetbsd'
+-    CC_LDFLAGS="-Wl,-R${X11BASE}/lib"
++    CC="${CC}"
++    CC_OPTIONS="${CFLAGS} -Dnetbsd"
++    CC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+     CC_PICFLAGS='-fPIC'
+     # check for --export-dynamic
+@@ -875,7 +883,7 @@
+    fi
+    FC="$F77"
+-   FC_OPTIONS='-O2'
++   FC_OPTIONS="${FFLAGS}"
+    FC_OPTIONS_O0=
+-   FC_LDFLAGS="-Wl,-R${X11BASE}/lib"
++   FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+    FC_PICFLAGS='-fPIC'
+    # check for --export-dynamic
 @@ -1339,4 +1347,5 @@
  AC_SUBST(LDFLAGS)
  AC_SUBST(LIBS)
