@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2003/09/18 08:34:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.213 2003/09/25 14:05:49 xtraeme Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -101,6 +101,7 @@ SUBDIR+=	kakasi
 SUBDIR+=	kbanner
 SUBDIR+=	kdoc
 SUBDIR+=	latex2html
+SUBDIR+=	libcroco
 SUBDIR+=	libunicode
 SUBDIR+=	libxml
 SUBDIR+=	libxml2
