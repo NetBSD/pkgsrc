@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/05 13:59:58 seb Exp $
 
 DISTNAME=	coreutils-5.0
 PKGREVISION=	2
@@ -18,6 +18,9 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PERL5=		build
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	coreutils.info
+
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
@@ -36,5 +39,4 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
