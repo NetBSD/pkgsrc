@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2000/10/26 11:17:35 abs Exp $
+$NetBSD: patch-ad,v 1.3 2002/03/15 00:07:37 fredb Exp $
 
 --- image/png.c.orig	Mon Mar 29 03:23:46 1999
 +++ image/png.c
@@ -36,7 +36,7 @@ $NetBSD: patch-ad,v 1.2 2000/10/26 11:17:35 abs Exp $
 +    png->info = (png_info *) png_create_info_struct(png->state);
      if (!png->info) {
 -        free_mem(png->state);
-+        png_destroy_read_struct(&png->state, &png->info, (png_info **)NULL);
++        png_destroy_read_struct(&png->state, NULL, (png_info **)NULL);
          return;
      }
  
