@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 1999/12/14 00:45:47 sakamoto Exp $
+# $NetBSD: Makefile,v 1.70 1999/12/14 01:50:17 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -89,7 +89,7 @@
     SUBDIR += xdemineur
 #    SUBDIR += xdino
     SUBDIR += xdoom
-#    SUBDIR += xemeraldia
+    SUBDIR += xemeraldia
     SUBDIR += xevil
 #    SUBDIR += xeyesplus
 #    SUBDIR += xfrisk
