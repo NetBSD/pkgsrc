@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/15 08:53:09 rh Exp $
+
+--- configure.orig	2003-03-15 17:21:21.000000000 +1000
++++ configure
+@@ -1679,7 +1679,7 @@ exec 5>>./config.log
+ 
+ 
+ 
+-subdirs="pcre"
++subdirs=""
+ 
+ 
+ trap '' 1 2 15
+@@ -1991,7 +1991,7 @@ if test "$no_recursion" != yes; then
+     esac
+   done
+ 
+-  for ac_config_dir in pcre; do
++  for ac_config_dir in ; do
+ 
+     # Do not complain, so a configure script can configure whichever
+     # parts of a large source tree are present.

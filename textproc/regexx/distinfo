@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/15 08:53:09 rh Exp $
+
+SHA1 (regexx-0.98.1.tar.gz) = 0ab71bd8d645d961d846445fd160b951e08d4514
+Size (regexx-0.98.1.tar.gz) = 422031 bytes
+SHA1 (patch-aa) = 15d40e8c78fe8b31aa144e92d44d125872240f15
+SHA1 (patch-ab) = 3ab2e37f530b2489c3837e0a55e27c33fba02757
+SHA1 (patch-ac) = 12aa1a37bdccff90a7a7e7244f44890584ddd012
