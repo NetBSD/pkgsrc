@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.13 2002/04/10 01:59:15 jlam Exp $
+
+--- configure.orig	Mon Jan 28 14:58:57 2002
++++ configure
+@@ -5866,8 +5866,8 @@
+ fi
+ 	if test x$gnome_cv_orbit_found = xyes; then
+ 		
+-		ORBIT_CFLAGS=`orbit-config --cflags client server`
+-		ORBIT_LIBS=`orbit-config --use-service=name --libs client server`
++		ORBIT_CFLAGS=`$ORBIT_CONFIG --cflags client server`
++		ORBIT_LIBS=`$ORBIT_CONFIG --use-service=name --libs client server`
+ 		
+ 		
+ 	else
+@@ -5884,8 +5884,8 @@
+   
+ 		gnome_cv_gnorba_found=no
+ 		if test x$gnome_cv_orbit_found = xyes; then
+-			GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
+-			GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
++			GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
++			GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
+ 			if test -n "$GNORBA_LIBS"; then
+ 				gnome_cv_gnorba_found=yes
+ 			fi
+@@ -5905,8 +5905,8 @@
+ fi
+ 	if test x$gnome_cv_orbit_found = xyes; then
+ 		
+-		GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
+-		GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
++		GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
++		GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
+ 		
+ 		
+ 	else
+@@ -8897,8 +8897,8 @@
+          
+             echo $ac_n "checking for Glade libraries >= 0.13""... $ac_c" 1>&6
+ echo "configure:8900: checking for Glade libraries >= 0.13" >&5
+-   if gnome-config --libs libglade > /dev/null 2>&1; then 
+-      vers=`gnome-config --modversion libglade | awk 'BEGIN { FS = "."; } { print $1 * 1000 + $2;}'`
++   if $GNOME_CONFIG --libs libglade > /dev/null 2>&1; then 
++      vers=`$GNOME_CONFIG --modversion libglade | awk 'BEGIN { FS = "."; } { print $1 * 1000 + $2;}'`
+       if test "$vers" -ge 13; then
+           echo "$ac_t""found" 1>&6
+       else
