@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/04 10:15:53 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/08/06 01:02:44 zuntum Exp $
 
 SHA1 (squidGuard-1.2.0.tar.gz) = 8eb27b6eb85a3f8ed073b12a593a2c9ad97d7478
 Size (squidGuard-1.2.0.tar.gz) = 1852737 bytes
-SHA1 (patch-aa) = fc3b201d9222aec50ad452af25100e108d660edc
+SHA1 (patch-aa) = 97b85010e7f9ca59aecbd85eab53c74d6f4fbb37
