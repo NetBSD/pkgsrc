@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2005/01/23 17:36:59 taca Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/24 03:06:57 taca Exp $
 
---- ext/tcltklib/tcltklib.c.orig	2004-12-23 13:16:42.000000000 +0900
-+++ ext/tcltklib/tcltklib.c
+--- tcltklib.c.orig	2004-12-23 13:16:42.000000000 +0900
++++ tcltklib.c
 @@ -4,7 +4,7 @@
   *              Oct. 24, 1997   Y. Matsumoto
   */
