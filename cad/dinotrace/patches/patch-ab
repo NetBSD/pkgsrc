@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/03/14 19:52:48 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2000/07/26 20:58:38 dmcmahill Exp $
 
-don't override CFLAGS
-
---- configure.in.orig	Fri Jan 21 15:39:29 2000
-+++ configure.in	Tue Mar  7 20:52:54 2000
-@@ -22,6 +22,4 @@
- 
+--- configure.in.orig	Mon May  1 17:41:26 2000
++++ configure.in	Wed Jul 26 16:17:40 2000
+@@ -23,8 +23,7 @@
  dnl Checks for programs.
+ dnl CFLAGS generally has a low optimization and -g.  Annoying, and too slow.
+ dnl This may need to be changed to support other compilers
 -CFLAGS="-O2 -g -Wall -DDEBUG"
 -CFLAGS="-O3"
++CFLAGS=${CFLAGS:-"-O3"}
  AC_PROG_CC
  AC_PROG_INSTALL
+ AC_PATH_PROG(PERL,perl)
