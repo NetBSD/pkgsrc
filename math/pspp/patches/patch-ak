@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2002/10/02 21:23:19 dillo Exp $
+$NetBSD: patch-ak,v 1.2 2003/07/29 13:21:57 jmmv Exp $
 
---- configure.orig	Wed Oct  2 23:18:02 2002
+--- configure.orig	2000-01-08 02:36:11.000000000 +0100
 +++ configure
 @@ -3611,46 +3611,8 @@ fi
  
@@ -123,12 +123,12 @@ $NetBSD: patch-ak,v 1.1 2002/10/02 21:23:19 dillo Exp $
  else
    echo "$ac_t""no" 1>&6
 +readline=no
-+fi
-+
  fi
  
 -if test "$ac_cv_lib_readline_readline" = yes; then
 -  for ac_hdr in readline/readline.h
++fi
++
 +if test "$have_readline" = yes; then
 +  LIBS="-l$readlinelib $LIBS"
 +  for ac_hdr in readline.h readline/readline.h
@@ -213,3 +213,12 @@ $NetBSD: patch-ak,v 1.1 2002/10/02 21:23:19 dillo Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -5573,7 +5615,7 @@ fi
+ 
+ 
+ if test "$ac_cv_prog_gcc" = yes; then
+-	CFLAGS="-g -Wall -W -Wno-uninitialized -Wwrite-strings \
++	CFLAGS="$CFLAGS -g -Wall -W -Wno-uninitialized -Wwrite-strings \
+ -Wstrict-prototypes -Wpointer-arith"
+ 	if test "$CC_OPTIONS" != ""; then
+ 		CFLAGS="$CFLAGS $CC_OPTIONS"
