@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2003/11/23 07:12:01 salo Exp $
+# $NetBSD: Makefile,v 1.53 2003/12/20 08:49:27 reed Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=ncurses/} \
 			ftp://dickey.his.com/ncurses/ \
@@ -45,12 +45,8 @@ PLIST_SUBST+=	TERMINFODIR="${TERMINFODIR}"
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 
-# Remove these manpages from the distribution so they won't get installed
-CURSES_NO_MAN=		clear.1 tput.1 tset.1
-
 post-configure:
 	cd ${WRKSRC}/man;					\
-	${RM} -f ${CURSES_NO_MAN};				\
 	for f in *.1m; do					\
 		${MV} -f $${f} `${BASENAME} $${f} .1m`.1; 	\
 	done;							\
