@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8798 2005/01/18 02:52:43 simonb Exp $
+$NetBSD: CHANGES,v 1.8799 2005/01/18 03:37:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -400,3 +400,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tex-musixtex to 112 [hubertf 2005-01-18]
 	Updates tex-bagpipetex to 3.01nb2 [hubertf 2005-01-18]
 	Updated adzap to 20050106 [simonb 2005-01-18]
+	Updated kdeutils3 to 3.3.2nb1 [minskim 2005-01-18]
+
