@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2003/03/29 12:40:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2003/06/09 19:01:12 jdc Exp $
 
 DISTNAME=	xmcd-3.0.2
+PKGREVISION=    1
 WRKSRC=		${WRKDIR}/xmcd-3.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
@@ -15,12 +16,14 @@ PATCH_DIST_STRIP=	-p1
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
-USE_NCURSES=		# cursor_normal, cursor_invisible (in ncurses in term.h)
 USE_IMAKE=		yes
 MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
 MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
 MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
 MAKE_ENV+=		SHELL=${SH}
+
+INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-*
+INCOMPAT_CURSES+=	NetBSD-1.6-* NetBSD-1.6.1-* NetBSD-1.6[A-S]-*
 
 ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
 XMCDDIR=	${PREFIX}/lib/X11/xmcd
