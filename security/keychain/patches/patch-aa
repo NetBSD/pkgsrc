@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/09/15 14:20:41 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/19 13:48:01 wiz Exp $
 
 --- keychain.orig	Mon Sep 10 04:42:47 2001
-+++ keychain	Tue Sep 11 08:30:24 2001
++++ keychain	Wed Sep 19 13:17:34 2001
+@@ -6,7 +6,7 @@
+ 
+ version=1.2
+ 
+-trap "" INT
++trap "" 2
+ PATH="/sbin:/usr/sbin:${PATH}"; export PATH;
+ KEYCHAIN_KEYS=""
+ for x in ${*}
 @@ -19,10 +19,11 @@
  	fi
  done
