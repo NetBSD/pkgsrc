@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2002/11/02 05:46:21 rh Exp $
+# $NetBSD: Makefile,v 1.347 2002/11/04 02:56:52 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -155,6 +155,7 @@ SUBDIR+=	libglade2
 SUBDIR+=	libgnome
 SUBDIR+=	libgnomeui
 SUBDIR+=	libgtop
+SUBDIR+=	libgtop2
 SUBDIR+=	libhfs
 SUBDIR+=	libmemmgr
 SUBDIR+=	libmm
