@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2004/01/03 18:49:50 reed Exp $
+# $NetBSD: Makefile,v 1.108 2004/01/11 00:33:03 jlam Exp $
 
 .include "Makefile.common"
 PKGREVISION=		6
@@ -7,7 +7,7 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
@@ -21,19 +21,19 @@ CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 REPLACE_PERL+=		script/findsmb.in
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink2.mk"
+.include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
 .endif
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink2.mk"
+.include "../../security/PAM/buildlink3.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
 .if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
 BUILD_DEFS+=		SAMBA_USE_LDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
@@ -114,7 +114,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
