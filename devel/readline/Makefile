@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/21 08:36:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 11:27:50 agc Exp $
 #
 
 DISTNAME=	readline-2.2
@@ -9,8 +9,6 @@ MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
-
-MAN3=		readline.3
 
 SCRIPTS_ENV+=	PLIST_SRC="${PLIST_SRC}"
 

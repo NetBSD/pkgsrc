@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/05 12:06:11 frueauf Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/22 11:27:48 agc Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -17,9 +17,6 @@ CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-MAN1=		cvs.1
-MAN5=		cvs.5
-MAN8=		cvsbug.8
 INFO_FILES=	cvs.info cvsclient.info
 
 post-install:

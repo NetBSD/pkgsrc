@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/04 16:13:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 11:27:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=	shanee@augusta.de
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 NO_BUILD=	yes
-MAN1=		tkcvs.1 tkdiff.1
 
 post-extract:
 	${CP} ${WRKSRC}/tkcvs/tkcvs.n ${WRKSRC}/tkcvs/tkcvs.1
