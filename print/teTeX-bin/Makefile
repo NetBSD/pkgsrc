@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/02/04 01:48:51 minskim Exp $
+# $NetBSD: Makefile,v 1.62 2005/03/01 23:03:04 dmcmahill Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -27,6 +27,16 @@ REPLACE_PERL=	texk/xdvik/t1mapper \
 # GNU_PROGRAM_PREFIX == ''
 .if ${GNU_PROGRAM_PREFIX} == ""
 CONFLICTS+=	coreutils-[0-9]*
+.endif
+
+.include "../../mk/compiler.mk"
+#
+.if ${OPSYS} == "SunOS"
+# If we are using gcc3, we need to link against libgcc_s, too.  This
+# ensures modules can resolve symbols they require from gcc.
+.  if !empty(CC_VERSION:Mgcc-3*)
+LDFLAGS+=	-lgcc_s
+.  endif
 .endif
 
 .if defined(PAPERSIZE)
