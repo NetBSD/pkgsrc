@@ -1,25 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.30 2005/01/28 06:30:59 jlam Exp $
-
-eval set -- ${PKG_USERS}
-for userset; do
-	user=`
-		IFS=":"
-		set -- ${userset}
-		${ECHO} "$1"
-	`
-	ALL_USERS="${ALL_USERS} \"${user}\""
-done
-eval set -- ${PKG_GROUPS}
-for groupset; do
-	group=`
-		IFS=":"
-		set -- ${groupset}
-		${ECHO} "$1"
-	`
-	ALL_GROUPS="${ALL_GROUPS} \"${group}\""
-done
+# $NetBSD: deinstall,v 1.31 2005/01/28 07:37:55 jlam Exp $
 
 eval set -- ${CONF_FILES} ${SUPPORT_FILES}
 while [ $# -gt 0 ]; do
@@ -115,35 +96,15 @@ POST-DEINSTALL)
 	case ${_PKG_CONFIG} in
 	YES)	${TEST} -x ./+DIRS && ./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
 	esac
+	case ${_PKG_CREATE_USERGROUP} in
+	YES)	${TEST} -x ./+USERGROUP && ./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
+	esac
 
-	if [ -n "${ALL_USERS}" -o -n "${ALL_GROUPS}" -o			\
-	     -n "${modified_files}" -o -n "${existing_dirs}" ]; then
+	if [ -n "${modified_files}" ]; then
 		${CAT} << EOF
 ===========================================================================
 If you won't be using ${PKGNAME} any longer, you may want to remove
 EOF
-		if [ -n "${ALL_USERS}" ]; then
-			${ECHO} ""
-			allusersmsg="  * the following users"
-			sep=":   "
-			eval set -- ${ALL_USERS}
-			for user; do
-				allusersmsg="${allusersmsg}${sep}${user}"
-				sep=", "
-			done
-			${ECHO} "${allusersmsg}"
-		fi
-		if [ -n "${ALL_GROUPS}" ]; then
-			${ECHO} ""
-			allgroupsmsg="  * the following groups"
-			sep=":  "
-			eval set -- ${ALL_GROUPS}
-			for group; do
-				allgroupsmsg="${allgroupsmsg}${sep}${group}"
-				sep=", "
-			done
-			${ECHO} "${allgroupsmsg}"
-		fi
 		if [ -n "${modified_files}" ]; then
 			${CAT} << EOF
 
@@ -166,7 +127,9 @@ EOF
 ===========================================================================
 EOF
 	fi
-	${TEST} -x ./+DIRS && ./+DIRS CHECK-REMOVE
+
+	${TEST} -x ./+USERGROUP && ./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+DIRS && ./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
 esac
 
