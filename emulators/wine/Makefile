@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/07/19 22:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2003/07/28 08:29:09 adam Exp $
 
 DISTNAME=		Wine-20030709
 PKGREVISION=		1
@@ -22,7 +22,7 @@ USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses
-CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=no
+CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 
 REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
