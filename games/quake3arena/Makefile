@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/28 10:28:28 wiz Exp $
 #
 
 DISTNAME=	linuxq3apoint-1.17.x86
@@ -51,6 +51,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/glibc-2.1/q3ded ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/bin/x86/glibc-2.1/libMesaVoodooGL.so.3.2 \
 		${LIBDIR}
+	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
+		${LIBDIR}/libMesaVoodooGL.so.3
+	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
+		${LIBDIR}/libMesaVoodooGL.so
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
 	cd ${WRKSRC} ; ${PAX} -rw baseq3 ${LIBDIR}
 	cd ${WRKSRC} ; ${PAX} -rw Help ${SHAREDIR}
