@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2004/07/01 15:17:21 recht Exp $
+
+--- ../mp/mp_fput.c.orig	2003-09-30 19:42:07.000000000 +0200
++++ ../mp/mp_fput.c	2004-07-01 15:32:08.000000000 +0200
+@@ -285,6 +285,7 @@
+ 		    bhp != NULL; bhp = SH_TAILQ_NEXT(bhp, hq, __bh))
+ 			if (bhp->priority != UINT32_T_MAX &&
+ 			    bhp->priority > MPOOL_BASE_DECREMENT)
++				bhp->priority -= MPOOL_BASE_DECREMENT;
+ 		MUTEX_UNLOCK(dbenv, &hp->hash_mutex);
+ 	}
+ }
