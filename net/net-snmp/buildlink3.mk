@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:56 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/11/05 10:33:07 seb Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NET_SNMP_BUILDLINK3_MK:=	${NET_SNMP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	net-snmp
 
 .if !empty(NET_SNMP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.net-snmp+=	net-snmp>=5.0.9nb3
-BUILDLINK_RECOMMENDED.net-snmp+=	net-snmp>=5.1.2nb1
+BUILDLINK_RECOMMENDED.net-snmp+=	net-snmp>=5.1.2nb2
 BUILDLINK_PKGSRCDIR.net-snmp?=	../../net/net-snmp
 .endif	# NET_SNMP_BUILDLINK3_MK
 
