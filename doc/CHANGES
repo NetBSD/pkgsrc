@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4557 2004/01/22 16:14:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.4558 2004/01/22 16:38:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xine-esound-1rc0a [jmmv 2004-01-22]
 	Updated kmplayer to 0.8.2rc5nb1 [jmmv 2004-01-22]
 	Updated kdemultimedia3 to 3.1.5nb1 [jmmv 2004-01-22]
+	Updated xawtv to 3.90nb1 [jmmv 2004-01-22]
