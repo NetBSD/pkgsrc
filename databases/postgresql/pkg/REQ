@@ -1,0 +1,37 @@
+#!/bin/sh
+
+PGUSER=@PGUSER@
+PGGROUP=@PGGROUP@
+ADDNERD=@LOCALBASE@/sbin/addnerd
+PREFIX=@PREFIX@
+
+
+PKG=$1
+STAGE=$2
+
+if [ "$STAGE" != "INSTALL" ];
+then
+	exit 0
+fi
+
+
+# use finger to be able to use NIS, ...
+if finger ${PGUSER} 2>&1 | grep >/dev/null "no such user"
+then
+	echo "Creating '$PGUSER' user ..."
+	${ADDNERD} -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
+	echo Done.
+else
+	echo "User '$PGUSER' already exists, proceeding."
+fi
+
+
+# Group... the default's shipped with NetBSD
+#
+if grep "^${PGGROUP}:" /etc/group 2>&1 >/dev/null
+then
+	echo "Group '$PGGROUP' already exists, proceeding."
+else
+	echo "Please add group '$PGGROUP' to /etc/group, then restart."
+	exit 1
+fi
