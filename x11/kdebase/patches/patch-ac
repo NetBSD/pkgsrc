@@ -1,5 +1,6 @@
-$NetBSD: patch-ac,v 1.6 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-ac,v 1.7 1999/12/11 23:21:51 jdolecek Exp $
 
+Pulled into KDE. jdolecek 1999-12-11
 --- ./kcontrol/info/info.cpp	Fri Jul 23 23:56:57 1999
 +++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kcontrol/info/info.cpp	Fri Nov 12 05:10:33 1999
 @@ -116,6 +116,8 @@
