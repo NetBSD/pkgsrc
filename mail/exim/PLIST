@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/23 22:07:54 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/17 06:20:36 grant Exp $
 man/man8/exim.8
 sbin/${DISTNAME}-1
 sbin/exicyclog
@@ -12,6 +12,7 @@ sbin/exim_lock
 sbin/exim_tidydb
 sbin/eximstats
 sbin/exinext
+sbin/exipick
 sbin/exiqgrep
 sbin/exiqsumm
 sbin/exiwhat
