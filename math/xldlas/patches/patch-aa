@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2002/04/17 04:45:15 fredb Exp $
+$NetBSD: patch-aa,v 1.4 2002/06/28 12:11:02 agc Exp $
 
---- Makefile.orig	Tue Apr  1 11:13:32 1997
-+++ Makefile
+--- Makefile.orig	Tue Apr  1 18:13:32 1997
++++ Makefile	Fri Jun 28 13:07:11 2002
 @@ -16,11 +16,11 @@
  #	want to remove the -DXFORMS86 declaration in the CCFLAG 
  #	assignment. 
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2002/04/17 04:45:15 fredb Exp $
 -COMMONLIBS	= -L/usr/X11R6/lib/ -lX11 -lm
 -SHAREDLIBS	= -lforms
 -STATICLIBS	= -lXpm /usr/X11R6/lib/libforms.a
-+CCFLAG		= ${CFLAGS} -DXFORMS86 -DPREFIX=\"${PREFIX}\" -I${PREFIX}/include -I${PREFIX}/include/X11
++CCFLAG		= ${CFLAGS} -DXFORMS86 -DPREFIX=\"${PREFIX}\" -I${PREFIX}/include -I${PREFIX}/include/X11 -I${X11BASE}/include
 +#CC		= gcc
 +COMMONLIBS	= -L${X11BASE}/lib/ -Wl,-R${X11BASE}/lib -lX11 -lm
 +SHAREDLIBS	= -lforms -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ljpeg -lXpm
