@@ -1,0 +1,5 @@
+NotLame is a high quality and fast MP3 encoder, based on the LAME
+patch. The quality is almost as good as the FhG encoder. LAME is
+a patch (it actually stands for LAME Ain't an MP3 Encoder), while
+NotLame is the executable after the patch has been applied to ISO
+sources and compiled.
