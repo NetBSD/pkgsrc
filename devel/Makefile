@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.502 2004/06/03 11:18:20 shannonjr Exp $
+# $NetBSD: Makefile,v 1.503 2004/06/03 21:44:30 shannonjr Exp $
 #
 
 COMMENT=	Development utilities
@@ -476,7 +476,6 @@ SUBDIR+=	z80-asm
 SUBDIR+=	zlib
 SUBDIR+=	gdb6
 SUBDIR+=	libiberty
-SUBDIR+=	florist
 SUBDIR+=	gdbada
 
 .include "../mk/bsd.pkg.subdir.mk"
