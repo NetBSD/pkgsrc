@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2002/10/21 13:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/27 23:45:48 jmmv Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 			http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
@@ -31,6 +32,7 @@ pre-configure:
 
 .include "../../audio/libmikmod/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

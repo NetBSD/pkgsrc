@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/12/18 14:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/27 23:45:48 jmmv Exp $
 
 DISTNAME=		dopewars-1.5.8
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
@@ -26,4 +27,5 @@ CONFIGURE_ARGS+=	--localstatedir=/var/games
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
