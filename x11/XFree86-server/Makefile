@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/01/31 16:55:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/02 14:16:44 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XFREE}
 DISTFILES=		X430src-1.tgz X430src-2.tgz \
@@ -23,6 +24,14 @@ XINSTALL_DIRS=		lib/font programs/Xserver
 XINSTALL_MAN_DIRS=	programs/Xserver
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_MANNEWSUFFIX}
+PLIST_SUBST+=		MANPAGE_LIB_SUFFIX=${IMAKE_MANNEWSUFFIX}
+.else
+PLIST_SUBST+=		MANPAGE_LIB_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
+PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
+.endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PLIST_SUBST+=		DRIMODULES=
