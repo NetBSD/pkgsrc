@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/04 17:47:58 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/13 12:14:08 wiz Exp $
 #
 
 DISTNAME=	System-0.1.2
@@ -12,11 +12,10 @@ HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	simple system monitor
 
 DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
-DEPENDS+=	libgtop>=1.0.12nb2:../../devel/libgtop
 
 DIST_SUBDIR=	rox
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
 WRKSRC=		${WRKDIR}/System/src
@@ -35,5 +34,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/src/System ${PREFIX}/libexec/rox
 	${CP} -Rf ${WRKDIR}/System ${APPDIR}
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../devel/libgtop/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

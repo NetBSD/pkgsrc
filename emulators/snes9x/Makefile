@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/08/01 05:48:11 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/13 12:09:13 wiz Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -14,6 +14,7 @@ COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 PTHREAD_OPTS=		require
@@ -61,5 +62,5 @@ MAKE_ENV+=	USBHID_H=1
 .endif
 .endif
 
-.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
