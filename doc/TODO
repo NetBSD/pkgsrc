@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.797 2003/08/30 13:40:45 xtraeme Exp $
+$NetBSD: TODO,v 1.798 2003/08/30 14:57:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -141,7 +141,7 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnucash-1.8.5
 	o gnuchess-5.06
-	o gnustep-0.8.8
+	o gnustep-0.8.9
 	o gpa-0.6.1
 	o gphoto2-2.1.2
 	o gq-0.6.0 [pkg/21284]
@@ -215,6 +215,7 @@ Suggested package updates
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
+	o nasm-0.98.37
 	o neXtaW-0.14.1
 	o neon-0.24.0
 	o nessus-2.0.7 [pkg/22356]
@@ -230,6 +231,7 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7l
+	o pan-0.14.1
 	o p5-GdGraph-1.43 [pkg/22463]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-Net-Server-0.85 [pkg/22542]
@@ -272,7 +274,7 @@ Suggested package updates
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
 	o tcl-tclcl-1.0b13 [pkg/22632]
-	o tcpreplay-1.4.4
+	o tcpreplay-1.4.5
 	o teapop-0.3.6
 	o tightvnc-1.2.9
 	o tin-1.6.1
