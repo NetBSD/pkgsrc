@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/07/17 21:40:49 grant Exp $
+# $NetBSD: Makefile,v 1.37 2004/04/24 00:25:41 wiz Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -11,18 +11,13 @@ COMMENT=		Tools and library routines for working with GIF images
 
 CONFLICTS=		libungif-[0-9]*
 
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
-
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
+USE_LIBTOOL=		# defined
 
 DOCDIR=			${PREFIX}/share/doc/giflib
 HTMLDIR=		${PREFIX}/share/doc/html/giflib
-
-.include "../../mk/bsd.prefs.mk"
 
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
