@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.94 2004/08/05 02:45:28 jlam Exp $
 
 DISTNAME=		openssl-0.9.6m
 SVR4_PKGNAME=		ossl
@@ -47,6 +47,10 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	rsaref
 .include "../../mk/bsd.options.mk"
 
+###
+### Use the RSA reference package instead of the built-in code for the
+### RSA algorithm (NOT RECOMMENDED!).
+###
 .if !empty(PKG_OPTIONS:Mrsaref)
 .  include "../../security/rsaref/buildlink3.mk"
 CONFIGURE_ARGS+=	rsaref
