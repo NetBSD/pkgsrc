@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.6 2003/03/10 23:41:55 taya Exp $
+# $NetBSD: moz-install,v 1.7 2003/05/13 10:23:19 markd Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -13,7 +13,7 @@ ${CHMOD} ${BINMODE} ${PREFIX}/bin/${MOZILLA}
 TMP_PLIST=${WRKDIR}/TMP_PLIST.$$
 trap "${RM} -f ${TMP_PLIST}" 1 2 15
 
-${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" < ${PLIST_SRC} > ${TMP_PLIST}
+${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" -e "s/\${SUNOSLIB}/${SUNOSLIB}/" < ${PLIST_SRC} > ${TMP_PLIST}
 
 # make directories 
 for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} ^@dirrm | ${SED} -e 's/^@dirrm//'` ; do
