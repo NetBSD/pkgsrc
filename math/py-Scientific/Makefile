@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/17 12:02:25 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/21 23:46:54 jlam Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	${PYPKGPREFIX}-Scientific-2.2
@@ -41,6 +41,6 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython \
 		${PREFIX}/bin/mpipython${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

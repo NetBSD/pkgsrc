@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.12 2002/09/20 22:53:21 jlam Exp $
+# $NetBSD: extension.mk,v 1.1 2002/09/21 23:47:03 jlam Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/01/22 18:47:14 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/21 23:47:00 jlam Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -46,5 +46,5 @@ do-install:
 		<${FILESDIR}/zope-shutdown.py >${PREFIX}/sbin/zope-shutdown
 	${CHMOD} 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
