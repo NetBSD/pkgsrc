@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/18 22:12:47 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/14 07:42:55 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -13,11 +13,10 @@ CONFLICTS+=		pstree-[0-9]*
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK_ONLY=	# defined
 
-.include "../../devel/libgetopt/buildlink.mk"
-
 # "make install" doesn't install the link from killall -> pidof.
 post-install:
 	${RM} -f ${PREFIX}/bin/pidof
 	${LN} -f ${PREFIX}/bin/killall ${PREFIX}/bin/pidof
 
+.include "../../devel/libgetopt/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
