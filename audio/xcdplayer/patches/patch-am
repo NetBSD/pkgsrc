@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.3 1999/09/06 16:37:43 tron Exp $
+$NetBSD: patch-am,v 1.4 1999/09/06 16:52:51 tron Exp $
 
---- top_setup.c.orig	Tue Jan 12 19:59:40 1993
-+++ top_setup.c	Mon Sep  6 18:37:05 1999
+--- top_setup.c.orig	Mon Sep  6 18:49:30 1999
++++ top_setup.c	Mon Sep  6 18:49:39 1999
 @@ -26,18 +26,8 @@
  # include "logo.xbm"
  
@@ -36,50 +36,71 @@ $NetBSD: patch-am,v 1.3 1999/09/06 16:37:43 tron Exp $
 -	{ "debug", "Debug", XtRBoolean, sizeof(Boolean), (Cardinal) &debug,
 -		  XtRBoolean, (caddr_t) &debug },
 +	{ "debug", "Debug", XtRBoolean, sizeof(Boolean), XtOffsetOf(AppData,debug),
-+		  XtRBoolean, "False" },
++		  XtRBoolean, &app_data.debug },
  	{ "displayTimer", "DisplayTimer", XtRBoolean, sizeof(Boolean),
 -		  (Cardinal) &display_timer, XtRBoolean,
 -		  (caddr_t) &display_timer },
 +		  XtOffsetOf(AppData,display_timer), XtRBoolean,
-+		  "True" },
++		  &app_data.display_timer },
  	{ "volBase", "VolBase", XtRFloat, sizeof(float),
 -		  (Cardinal) &volbase, XtRFloat, (caddr_t) &volbase },
-+		  XtOffsetOf(AppData,volbase), XtRFloat, "187.0" },
++		  XtOffsetOf(AppData,volbase), XtRFloat, &app_data.volbase },
  	{ "volPcent", "VolPcent", XtRFloat, sizeof(float),
 -		  (Cardinal) &volpcent, XtRFloat, (caddr_t) &volpcent },
-+		  XtOffsetOf(AppData,volpcent), XtRFloat, ".267" },
++		  XtOffsetOf(AppData,volpcent), XtRFloat, &app_data.volpcent },
  	{ "replayThreshold", "replayThreshold", XtRInt, sizeof(int),
 -		  (Cardinal) &replayThreshold, XtRInt, 
 -		  (caddr_t) &replayThreshold },
 +		  XtOffsetOf(AppData,replayThreshold), XtRInt, 
-+		  "4" },
++		  &app_data.replayThreshold },
  	{ "scanSkipInterval", "scanSkipInterval", XtRInt, sizeof(int),
 -		  (Cardinal) &scanSkipInterval, XtRInt, 
 -		  (caddr_t) &scanSkipInterval },
 +		  XtOffsetOf(AppData,scanSkipInterval), XtRInt, 
-+		  "1" },
++		  &app_data.scanSkipInterval },
  	{ "scanPauseInterval", "scanPauseInterval", XtRFloat, sizeof(float),
 -		  (Cardinal) &scanPauseInterval, XtRFloat, 
 -		  (caddr_t) &scanPauseInterval },
 +		  XtOffsetOf(AppData,scanPauseInterval), XtRFloat, 
-+		  ".062" },
++		  &app_data.scanPauseInterval },
  	{ "pauseSkipInterval", "pauseSkipInterval", XtRInt, sizeof(int),
 -		  (Cardinal) &pauseSkipInterval, XtRInt, 
 -		  (caddr_t) &pauseSkipInterval },
 +		  XtOffsetOf(AppData,pauseSkipInterval), XtRInt, 
-+		  "15" },
++		  &app_data.pauseSkipInterval },
  	{ "pausePauseInterval", "pausePauseInterval", XtRFloat, sizeof(float),
 -		  (Cardinal) &pausePauseInterval, XtRFloat, 
 -		  (caddr_t) &pausePauseInterval },
 +		  XtOffsetOf(AppData,pausePauseInterval), XtRFloat, 
-+		  ".500" },
++		  &app_data.scanPauseInterval },
  	{ "cdInfoDir", "cdInfoDir", XtRString, sizeof(String), 
 -		  (Cardinal) &cdInfoDir, XtRString, (caddr_t) NULL },
 +		  XtOffsetOf(AppData,cdInfoDir), XtRString, (caddr_t) NULL },
  };
  
  Widget
-@@ -123,12 +113,12 @@
+@@ -98,6 +88,20 @@
+ 	Arg		arg;
+ 	char		*s;
+ 
++	/*
++	 * set default values
++	 */
++
++	app_data.debug = False;
++	app_data.display_timer = True;
++	app_data.volbase = 187.0;
++	app_data.volpcent = 0.267;
++	app_data.replayThreshold = 4;
++	app_data.pauseSkipInterval = 15;
++	app_data.scanSkipInterval = 1;
++	app_data.scanPauseInterval = 0.062;
++	app_data.pausePauseInterval = 0.500;
++
+ 	XtToolkitInitialize();
+ 
+ 	appc = XtCreateApplicationContext();
+@@ -123,12 +127,12 @@
  	XtSetValues(top_shell, &arg, 1);
  	
  
