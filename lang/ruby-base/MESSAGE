@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2001/12/30 16:21:51 taca Exp $
+$NetBSD: MESSAGE,v 1.4 2004/02/11 19:13:04 sketch Exp $
 
-Note that some stuff that comes with the standard Ruby 1.6
-distribution is provided as separate package:
+Note that a number of packages which are installed as default with
+the Ruby 1.6 distribution are provided as separate packages:
 
 	databases/ruby-gdbm:		GDBM module
 	security/ruby-digest:		message digest module
@@ -10,6 +10,6 @@ distribution is provided as separate package:
 	x11/ruby-tcltklib:		Tcl/Tk libraries
 	x11/ruby-tk:			Tk modules
 
-They could install with ruby meta package.
+They can all be installed via the lang/ruby meta package.
 
 ===========================================================================
