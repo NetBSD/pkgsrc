@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/01/28 22:04:02 jlam Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
-#
+# $NetBSD: Makefile,v 1.39.2.1 2003/04/21 03:45:33 grant Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -15,7 +13,7 @@ COMMENT=	TeX distribution for UNIX compatible systems - executables
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
-DEPENDS+=	dialog-0.6z:../../misc/dialog
+DEPENDS+=	dialog-0.6z*:../../misc/dialog
 
 CONFLICTS+=	omega-[0-9]*
 
