@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/20 08:39:22 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/20 08:45:48 tron Exp $
 
 DISTNAME=	dictionary-1.8.2
+PKGNAME=	${DISTNAME:S/dictionary/emacs-dict-client/}
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
 
