@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/10 13:08:17 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/20 18:46:08 fredb Exp $
 
 MODNAME=		snmp
 CATEGORIES+=		net
-PKGREVISION=		# empty
+PKGREVISION=		1
 COMMENT=		PHP3 extension for SNMP database access
 
 .include "../../www/php3/Makefile.module"
 
-DEPENDS+=		ucd-snmp-[0-9]*:../../net/ucd-snmp
+DEPENDS+=		ucd-snmp-4.2.4*:../../net/ucd-snmp
 
 CONFIGURE_ARGS+=	--with-snmp=${LOCALBASE}
 MOD_CPPFLAGS+=		-I${LOCALBASE}/include/ucd-snmp
