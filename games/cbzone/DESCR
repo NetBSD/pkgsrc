@@ -2,7 +2,7 @@
 sources written by Justin S. Revenaugh.  This version is more
 flexible in that the number of opponents is user selectable.
 
-  Input to the the game is primarily through the mouse, although
+  Input to the game is primarily through the mouse, although
 some keyboard commands are accepted.  Mouse left button will
 fire a salvo; mouse right button will switch between low/high
 sensitivity (sensitivity determines how sensitive the joystick is to

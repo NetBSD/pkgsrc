@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS_UG,v 1.1 2004/01/29 06:03:15 jlam Exp $
+$NetBSD: PKGVIEWS_UG,v 1.2 2004/12/01 09:53:01 wiz Exp $
 
  0 User's Guide to pkgviews
  ==========================
@@ -44,7 +44,7 @@ Next you will need to add the following line to /etc/mk.conf:
 
 This creates pkgviews packages instead of overwrite packages for any
 packages that support it.  The packages that do support pkgviews
-can be identified by searching the package Makefile for the the
+can be identified by searching the package Makefile for the
 following line:
 
 	PKG_INSTALLATION_TYPES=	overwrite pkgviews
