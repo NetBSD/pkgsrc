@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/08/20 15:17:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.24 1998/08/25 11:06:52 agc Exp $
 
 DISTNAME=	gimp-1.0.0
 CATEGORIES=	graphics
@@ -11,7 +11,7 @@ MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gimp.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk+-1.0.4:../../x11/gtk
+DEPENDS+=	gtk+-1.0.4:../../x11/gtk10
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
