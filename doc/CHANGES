@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6903 2004/08/16 15:29:20 seb Exp $
+$NetBSD: CHANGES,v 1.6904 2004/08/16 15:35:09 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postgresql74-lib to 7.4.3nb1 [recht 2004-08-16]
 	Updated licq-gui-qt to 1.2.6nb4 [kristerw 2004-08-16]
 	Updated source-highlight to 1.10 [seb 2004-08-16]
+	Updated nail to 11.2 [cjep 2004-08-16]
