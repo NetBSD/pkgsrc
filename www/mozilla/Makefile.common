@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/12/25 09:21:42 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/12/31 04:33:21 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -115,7 +115,8 @@ CONFIGURE_ARGS+= --with-pthreads
 .endif
 
 .if ${MOZILLA_USE_XFT} == "YES"
-CONFIGURE_ARGS+= --enable-xft
+CONFIGURE_ARGS+=	--enable-xft
+BUILD_DEPENDS+=		pkgconfig>=0.10.0:../../devel/pkgconfig
 .include "../../fonts/Xft2/buildlink2.mk"
 .endif
 
