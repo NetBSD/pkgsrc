@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/19 19:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/26 14:26:55 zuntum Exp $
 
 DISTNAME=	gmodplay-0.08
 CATEGORIES=	audio
@@ -9,17 +9,15 @@ MAINTAINER=	collver@linuxfreemail.com
 HOMEPAGE=	http://rani.free.fr
 COMMENT=	MOD player for IT XM S3M MOD MTM STM FAR ULT 669 AMS DBM MDL OKT files
 
-DEPENDS+=	libslang>=1.4.4:../../devel/libslang
-DEPENDS+=	glib>=1.1:../../devel/glib
-
 # only runs correctly on little-endian machines
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax
 
-USE_GMAKE=	yes
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+
 # for libslang
-CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-lossaudio -lcurses
 
 do-install:
@@ -28,4 +26,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmodplay
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gmodplay
 
+.include "../../devel/libslang/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
