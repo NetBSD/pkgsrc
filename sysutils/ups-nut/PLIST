@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/17 15:50:56 lukem Exp $
 bin/aeg
 bin/apcsmart
 bin/belkin
@@ -10,6 +10,7 @@ bin/everups
 bin/fentonups
 bin/genericups
 bin/ipt-anzen
+bin/masterguard
 bin/mge-ellipse
 bin/mgeups
 bin/multilink
@@ -38,9 +39,19 @@ etc/nut/upsmon.conf.sample
 etc/nut/upssched.conf.sample
 etc/nut/upsset.conf.sample
 etc/rc.d/upsd
+man/man5/ups.conf.5
 man/man8/apcsmart.8
+man/man8/belkin.8
+man/man8/bestups.8
+man/man8/fentonups.8
 man/man8/nutupsdrv.8
 man/man8/powercom.8
+man/man8/upsc.8
+man/man8/upscmd.8
+man/man8/upsct.8
+man/man8/upsct2.8
+man/man8/upslog.8
+man/man8/upssched.8
 sbin/upsd
 sbin/upsmon
 sbin/upssched
@@ -52,6 +63,7 @@ share/doc/nut/belkin.txt
 share/doc/nut/big-servers.txt
 share/doc/nut/cables/powerware.txt
 share/doc/nut/cables/repotec.txt
+share/doc/nut/cables/sms.txt
 share/doc/nut/cables/victron.txt
 share/doc/nut/chroot.txt
 share/doc/nut/commands.txt
