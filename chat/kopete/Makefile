@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 15:56:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/22 07:49:20 grant Exp $
 #
 
 DISTNAME=	kopete-0.7.4
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
