@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/14 17:18:28 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/16 20:16:41 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/gtk--/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://lazy.ton.tut.fi/gtk--/gtk--.html
 
-DEPENDS+=	gtk+-1.2.0:../../x11/gtk
+DEPENDS+=	gtk+-1.2.1:../../x11/gtk
 BUILD_DEPENDS+=	gm4:../../devel/m4
 
 USE_LIBTOOL=	yes
