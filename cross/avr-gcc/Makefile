@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/22 18:09:12 wennmach Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/03 01:18:28 heinz Exp $
 # FreeBSD Id: ports/devel/avr-gcc/Makefile,v 1.24 2003/05/11 19:32:20 joerg Exp
 
 DISTNAME=		gcc-3.3.2003.05.11
@@ -12,9 +12,9 @@ DISTFILES=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX} \
 MAINTAINER=		karlj@mdstud.chalmers.se
 COMMENT=		GNU gcc-3.3 for Atmel AVR 8-bit RISC microcontrollers
 
-BUILD_DEPENDS+=		avr-binutils:../../cross/avr-binutils
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
-BUILD_DEPENDS+=		bison:../../devel/bison
+BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
+BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 EXTRACT_ONLY=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX}
 
