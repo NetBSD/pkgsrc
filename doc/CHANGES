@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7317 2004/10/02 10:14:03 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7318 2004/10/02 11:58:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4517,3 +4517,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gsmc-1.1 [dmcmahill 2004-10-02]
 	Updated oraedit to 0.1.4 [jdolecek 2004-10-02]
 	Added php4-shmop-4.3.9 [jdolecek 2004-10-02]
+	Updated intltool to 0.31.3 [jmmv 2004-10-02]
