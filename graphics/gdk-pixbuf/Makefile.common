@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2001/09/09 03:37:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2001/09/30 21:17:58 rh Exp $
 #
 
-DISTNAME=		gdk-pixbuf-0.10.1
+DISTNAME=		gdk-pixbuf-0.11.0
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
 
