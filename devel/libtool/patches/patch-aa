@@ -1,22 +1,18 @@
-$NetBSD: patch-aa,v 1.12 2000/08/26 07:35:19 veego Exp $
---- ./ltconfig.in.orig	Sat May 27 02:58:57 2000
-+++ ./ltconfig.in	Thu Jun 29 09:00:00 2000
-@@ -1194,11 +1194,20 @@
+$NetBSD: patch-aa,v 1.13 2000/09/14 10:20:46 skrll Exp $
+
+--- ltconfig.in.orig	Sat May 27 02:58:57 2000
++++ ltconfig.in
+@@ -1194,11 +1194,15 @@
  
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
 -      archive_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname -o $lib'
 -      archive_expsym_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+      if $CC -dumpspecs | grep 'c++rt0' >/dev/null; then
-+        # This a.out compiler supports the -shared option
-+        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $wllinkopts'
-+      else
-+        archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
-+        wlarc=
-+        if test -f /usr/lib/c++rt0.o; then
-+          # Add in C++ constructor/destructor support
-+          archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
-+        fi
++      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
++      wlarc=
++      if test -f /usr/lib/c++rt0.o; then
++        # Add in C++ constructor/destructor support
++        archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
 +      fi
      else
 -      archive_cmds='$LD -Bshareable $libobjs $deplibs $linkopts -o $lib'
@@ -26,21 +22,16 @@ $NetBSD: patch-aa,v 1.12 2000/08/26 07:35:19 veego Exp $
      fi
      ;;
  
-@@ -1392,9 +1401,22 @@
+@@ -1392,9 +1396,17 @@
  
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
 -      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'  # a.out
-+      if $CC -dumpspecs | grep 'c++rt0' > /dev/null; then
-+        # This a.out compiler supports the -shared option
-+        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $wllinkopts'
-+      else
-+        archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
-+        wl=
-+        if test -f /usr/lib/c++rt0.o; then
-+          # Add in C++ constructor/destructor support
-+          archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
-+        fi
++      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
++      wl=
++      if test -f /usr/lib/c++rt0.o; then
++        # Add in C++ constructor/destructor support
++        archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
 +      fi
      else
 +      # I don't think there are any ELF toolchains with non-gnu ld.
@@ -50,7 +41,7 @@ $NetBSD: patch-aa,v 1.12 2000/08/26 07:35:19 veego Exp $
      fi
      hardcode_libdir_flag_spec='${wl}-R$libdir'
      hardcode_direct=yes
-@@ -2012,6 +2034,9 @@
+@@ -2012,6 +2024,9 @@
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -60,7 +51,7 @@ $NetBSD: patch-aa,v 1.12 2000/08/26 07:35:19 veego Exp $
      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major ${libname}${release}.so ${libname}.so'
      soname_spec='${libname}${release}.so$major'
      dynamic_linker='NetBSD ld.elf_so'
-@@ -2069,6 +2094,6 @@
+@@ -2069,7 +2084,7 @@
    ;;
  
  solaris*)
