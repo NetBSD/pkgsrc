@@ -1,18 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2000/08/24 01:25:38 kim Exp $
+$NetBSD: patch-aa,v 1.6 2002/07/09 23:48:17 itojun Exp $
 
---- bgpd/Makefile.am.orig	Thu Aug 17 04:27:58 2000
-+++ bgpd/Makefile.am	Wed Aug 23 16:19:15 2000
-@@ -4,6 +4,8 @@
- DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
- INSTALL_SDATA=@INSTALL@ -m 600
+--- bgpd/Makefile.am.orig	Wed Jun 19 04:05:04 2002
++++ bgpd/Makefile.am	Wed Jul 10 08:34:31 2002
+@@ -30,15 +30,17 @@
+ 
+ EXTRA_DIST = $(sysconf_DATA) BGP4-MIB.txt
  
 +sysconfdatadir=$(datadir)/examples/zebra
 +
- noinst_LIBRARIES = libbgp.a
- sbin_PROGRAMS = bgpd
- #noinst_PROGRAMS = bgp_btoa
-@@ -36,14 +38,14 @@
- 
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
@@ -30,4 +25,3 @@ $NetBSD: patch-aa,v 1.5 2000/08/24 01:25:38 kim Exp $
 +	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
  	  fi; fi; \
  	done
- 

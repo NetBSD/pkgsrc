@@ -1,18 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2000/08/24 01:25:42 kim Exp $
+$NetBSD: patch-ab,v 1.4 2002/07/09 23:48:18 itojun Exp $
 
---- ospf6d/Makefile.am.orig	Thu Aug 17 04:27:37 2000
-+++ ospf6d/Makefile.am	Wed Aug 23 16:21:19 2000
-@@ -4,6 +4,8 @@
- DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
- INSTALL_SDATA=@INSTALL@ -m 600
+--- ospf6d/Makefile.am.orig	Sat Jun 29 15:20:39 2002
++++ ospf6d/Makefile.am	Wed Jul 10 08:34:31 2002
+@@ -34,15 +34,17 @@
+ 
+ EXTRA_DIST = $(sysconf_DATA)
  
 +sysconfdatadir=$(datadir)/examples/zebra
 +
- noinst_LIBRARIES = libospf6.a
- sbin_PROGRAMS = ospf6d
- 
-@@ -33,14 +35,14 @@
- 
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
@@ -30,4 +25,3 @@ $NetBSD: patch-ab,v 1.3 2000/08/24 01:25:42 kim Exp $
 +	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
  	  fi; fi; \
  	done
- 
