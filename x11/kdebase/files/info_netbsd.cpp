@@ -1,19 +1,21 @@
 /*
- * $NetBSD: info_netbsd.cpp,v 1.3 1999/07/19 21:57:29 hubertf Exp $
+ * $NetBSD: info_netbsd.cpp,v 1.4 1999/12/11 21:30:04 jdolecek Exp $
  *
  * info_netbsd.cpp is part of the KDE program kcminfo.  This displays
  * various information about the NetBSD system it's running on.
  *
- * This code is derived from code written by
- *	Jaromir Dolecek <dolecek@ics.muni.cz>
+ * Originally written by Jaromir Dolecek <dolecek@ics.muni.cz>. CPU info
+ * code has been imported from implementation of processor.cpp for KDE 1.0
+ * by David Brownlee <abs@NetBSD.org> as found in NetBSD packages collection.
+ * Hubert Feyer <hubertf@NetBSD.org> enhanced the sound information printing
+ * quite a lot, too.
  *
- * CPU info code has been imported from abs's processor.cpp implementation
- * for KDE 1.0 with only minor formatting changes
+ * The code is placed into public domain. Do whatever you want with it.
  */
 
 #define INFO_CPU_AVAILABLE
 #define INFO_IRQ_AVAILABLE
-/* #define INFO_DMA_AVAILABLE */ /* not really available */
+#define INFO_DMA_AVAILABLE
 #define INFO_PCI_AVAILABLE
 #define INFO_IOPORTS_AVAILABLE
 #define INFO_SOUND_AVAILABLE
@@ -201,7 +203,7 @@ bool GetInfo_IRQ (KTabListBox *lBox)
 
 bool GetInfo_DMA (KTabListBox *)
 {
-  return FALSE;
+  return false;
 }
 
 bool GetInfo_PCI (KTabListBox *lbox)
