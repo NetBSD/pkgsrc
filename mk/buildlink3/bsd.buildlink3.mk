@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.106 2004/03/10 19:42:27 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.107 2004/03/11 00:26:29 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -145,15 +145,16 @@ _BLNK_DEPENDS+=	${_pkg_}
 # We skip the dependency calculation for some phases since they never
 # use the dependency information.
 #
+.for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
+.endfor
 _BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
 .if empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
 _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
 _BLNK_ADD_TO.RECOMMENDED=	# empty
 .  for _pkg_ in ${_BLNK_DEPENDS}
-.    if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
-BUILDLINK_DEPMETHOD.${_pkg_}=	full
-.    endif
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 .    if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
 _BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
@@ -262,7 +263,8 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				<pkg> will work.
 #
 # BUILDLINK_INCDIRS.<pkg>,
-# BUILDLINK_LIBDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
+# BUILDLINK_LIBDIRS.<pkg>,
+# BUILDLINK_RPATHDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
 #				that should be added to the
 #				compiler/linker search paths; these
 #				directories are checked to see if they
@@ -343,6 +345,11 @@ BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib
+.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+BUILDLINK_RPATHDIRS.${_pkg_}?=	${BUILDLINK_LIBDIRS.${_pkg_}}
+.  else
+BUILDLINK_RPATHDIRS.${_pkg_}?=	# empty
+.  endif
 .endfor
 
 # BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS contain the proper -I...
@@ -386,9 +393,14 @@ BUILDLINK_CPPFLAGS+=	-I${_dir_}
 .        if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
 BUILDLINK_LDFLAGS+=	-L${_dir_}
 .        endif
-.        if (${_USE_RPATH} == "yes") && \
-	    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
-BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.      endif
+.    endfor
+.  endif
+.  if !empty(BUILDLINK_RPATHDIRS.${_pkg_}) && (${_USE_RPATH} == "yes")
+.    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
+.      if exists(${_dir_})
+.        if empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
+BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .        endif
 .      endif
 .    endfor
@@ -410,11 +422,10 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib
 # fulfilled through the default view.
 #
 .for _pkg_ in ${_BLNK_PACKAGES}
-.  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
-.    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${LOCALBASE}\//}
+.  if !empty(BUILDLINK_RPATHDIRS.${_pkg_}) && (${_USE_RPATH} == "yes")
+.    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${LOCALBASE}\//}
 .      if exists(${_dir_})
-.        if (${_USE_RPATH} == "yes") && \
-	    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
+.        if empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .        endif
 .      endif
@@ -425,8 +436,7 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 # Add the X11 library directory to the runtime library search path if
 # the package uses X11.
 #
-.if defined(USE_X11) && \
-    (${_USE_RPATH} == "yes") && \
+.if defined(USE_X11) && (${_USE_RPATH} == "yes") && \
     empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib)
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
 .endif
