@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2003/05/21 14:07:45 seb Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/12 06:59:30 wiz Exp $
 
-DISTNAME=	audit-packages-1.15
+DISTNAME=	audit-packages-1.16
 WRKSRC=		${WRKDIR}
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
@@ -10,22 +10,39 @@ MAINTAINER=	agc@netbsd.org
 COMMENT=	tools to show vulnerabilities in installed packages
 
 NO_CHECKSUM=    yes
-NO_BUILD=	yes
 NO_MTREE=	yes
 
-do-configure:
-	@for f in audit-packages download-vulnerability-list; do	\
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+# This doesn't create readable manual pages. "mandoc" should be added
+# to zoularis.
+NROFF=		nroff -man
+.else
+NROFF=		nroff -mandoc
+.endif
+
+do-build:
+	@for f in audit-packages audit-packages.8 \
+		download-vulnerability-list; do	\
 		${SED} -e 's|@PKGVULNDIR@|${PKGVULNDIR}|g' 		\
 			-e 's|@AWK@|${AWK}|g'				\
 			-e 's|@FETCH_CMD@|${FETCH_CMD}|g'		\
+			-e 's|@FETCH_CMD_SHORT@|${FETCH_CMD:T}|g'	\
+			-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'		\
 			-e 's|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g'	\
 			-e 's|@SH@|${SH}|g'				\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
+	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
 
 do-install:
 	@for f in audit-packages download-vulnerability-list; do	\
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;	\
 	done
+	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${PREFIX}/man/cat8
+	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${PREFIX}/man/man8
+	${LN} -s audit-packages.0 ${PREFIX}/man/cat8/download-vulnerability-list.0
+	${LN} -s audit-packages.8 ${PREFIX}/man/man8/download-vulnerability-list.8
 
 .include "../../mk/bsd.pkg.mk"
