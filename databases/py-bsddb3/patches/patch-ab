@@ -1,36 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/12/07 00:53:28 epg Exp $
+$NetBSD: patch-ab,v 1.3 2004/02/10 17:56:55 minskim Exp $
 
---- src/_db.c.orig	Sun Dec 22 03:44:32 2002
-+++ src/_db.c
-@@ -745,7 +745,8 @@ DBCursor_dealloc(DBCursorObject* self)
-     int err;
-     if (self->dbc != NULL) {
-         MYDB_BEGIN_ALLOW_THREADS;
--        err = self->dbc->c_close(self->dbc);
-+	if (self->mydb->db != NULL)
-+            err = self->dbc->c_close(self->dbc);
-         self->dbc = NULL;
-         MYDB_END_ALLOW_THREADS;
-     }
-@@ -1071,7 +1072,9 @@ DB_associate(DBObject* self, PyObject* a
-      * threads have already been initialized.
-      *  (see pybsddb-users mailing list post on 2002-08-07)
-      */
-+#ifdef WITH_THREAD
-     PyEval_InitThreads();
-+#endif
-     MYDB_BEGIN_ALLOW_THREADS;
- #if (DBVER >= 41)
-     err = self->db->associate(self->db,
-@@ -1620,6 +1623,7 @@ DB_open(DBObject* self, PyObject* args, 
- #endif
-     MYDB_END_ALLOW_THREADS;
-     if (makeDBError(err)) {
-+	self->db->close(self->db, 0);
-         self->db = NULL;
-         return NULL;
-     }
-@@ -4214,7 +4218,11 @@ DL_EXPORT(void) init_db(void)
+--- extsrc/_bsddb.c.orig	2004-01-14 02:50:28.000000000 -0600
++++ extsrc/_bsddb.c
+@@ -4363,7 +4363,11 @@ DL_EXPORT(void) init_bsddb(void)
      ADD_INT(d, DB_MAX_PAGES);
      ADD_INT(d, DB_MAX_RECORDS);
  
@@ -42,7 +14,7 @@ $NetBSD: patch-ab,v 1.2 2003/12/07 00:53:28 epg Exp $
      ADD_INT(d, DB_XA_CREATE);
  
      ADD_INT(d, DB_CREATE);
-@@ -4363,7 +4371,7 @@ DL_EXPORT(void) init_db(void)
+@@ -4512,7 +4516,7 @@ DL_EXPORT(void) init_bsddb(void)
      ADD_INT(d, DB_CHECKPOINT);
      ADD_INT(d, DB_CURLSN);
  #endif
