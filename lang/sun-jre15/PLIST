@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/05 22:09:23 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/06 01:42:35 tv Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -8,7 +8,6 @@ bin/sun15-rmid
 bin/sun15-rmiregistry
 bin/sun15-servertool
 bin/sun15-tnameserv
-java/sun-1.5/.pkgsrc
 java/sun-1.5/.systemPrefs/.system.lock
 java/sun-1.5/.systemPrefs/.systemRootModFile
 java/sun-1.5/CHANGES
@@ -34,8 +33,6 @@ java/sun-1.5/bin/servertool
 java/sun-1.5/bin/tnameserv
 java/sun-1.5/bin/unpack200
 java/sun-1.5/javaws/javaws
-java/sun-1.5/lib/.pkgsrc
-java/sun-1.5/lib/applet/.pkgsrc
 java/sun-1.5/lib/audio/soundbank.gm
 java/sun-1.5/lib/charsets.jar
 java/sun-1.5/lib/classlist
@@ -51,26 +48,26 @@ java/sun-1.5/lib/ext/localedata.jar
 java/sun-1.5/lib/ext/sunjce_provider.jar
 java/sun-1.5/lib/ext/sunpkcs11.jar
 java/sun-1.5/lib/flavormap.properties.default
-java/sun-1.5/lib/fontconfig.RedHat.2.1.bfc.default
-java/sun-1.5/lib/fontconfig.RedHat.2.1.properties.src.default
-java/sun-1.5/lib/fontconfig.RedHat.3.bfc.default
-java/sun-1.5/lib/fontconfig.RedHat.3.properties.src.default
-java/sun-1.5/lib/fontconfig.RedHat.8.0.bfc.default
-java/sun-1.5/lib/fontconfig.RedHat.8.0.properties.src.default
-java/sun-1.5/lib/fontconfig.RedHat.bfc.default
-java/sun-1.5/lib/fontconfig.RedHat.properties.src.default
-java/sun-1.5/lib/fontconfig.SuSE.bfc.default
-java/sun-1.5/lib/fontconfig.SuSE.properties.src.default
-java/sun-1.5/lib/fontconfig.Sun.2003.bfc.default
-java/sun-1.5/lib/fontconfig.Sun.2003.properties.src.default
-java/sun-1.5/lib/fontconfig.Sun.bfc.default
-java/sun-1.5/lib/fontconfig.Sun.properties.src.default
-java/sun-1.5/lib/fontconfig.Turbo.8.0.bfc.default
-java/sun-1.5/lib/fontconfig.Turbo.8.0.properties.src.default
-java/sun-1.5/lib/fontconfig.Turbo.bfc.default
-java/sun-1.5/lib/fontconfig.Turbo.properties.src.default
-java/sun-1.5/lib/fontconfig.bfc.default
-java/sun-1.5/lib/fontconfig.properties.src.default
+java/sun-1.5/lib/fontconfig.RedHat.2.1.bfc
+java/sun-1.5/lib/fontconfig.RedHat.2.1.properties.src
+java/sun-1.5/lib/fontconfig.RedHat.3.bfc
+java/sun-1.5/lib/fontconfig.RedHat.3.properties.src
+java/sun-1.5/lib/fontconfig.RedHat.8.0.bfc
+java/sun-1.5/lib/fontconfig.RedHat.8.0.properties.src
+java/sun-1.5/lib/fontconfig.RedHat.bfc
+java/sun-1.5/lib/fontconfig.RedHat.properties.src
+java/sun-1.5/lib/fontconfig.SuSE.bfc
+java/sun-1.5/lib/fontconfig.SuSE.properties.src
+java/sun-1.5/lib/fontconfig.Sun.2003.bfc
+java/sun-1.5/lib/fontconfig.Sun.2003.properties.src
+java/sun-1.5/lib/fontconfig.Sun.bfc
+java/sun-1.5/lib/fontconfig.Sun.properties.src
+java/sun-1.5/lib/fontconfig.Turbo.8.0.bfc
+java/sun-1.5/lib/fontconfig.Turbo.8.0.properties.src
+java/sun-1.5/lib/fontconfig.Turbo.bfc
+java/sun-1.5/lib/fontconfig.Turbo.properties.src
+java/sun-1.5/lib/fontconfig.bfc
+java/sun-1.5/lib/fontconfig.properties.src
 java/sun-1.5/lib/fonts/LucidaBrightDemiBold.ttf
 java/sun-1.5/lib/fonts/LucidaBrightDemiItalic.ttf
 java/sun-1.5/lib/fonts/LucidaBrightItalic.ttf
@@ -127,8 +124,6 @@ java/sun-1.5/lib/${MACHINE_ARCH}/server/libjvm.so
 java/sun-1.5/lib/${MACHINE_ARCH}/xawt/libmawt.so
 java/sun-1.5/lib/im/indicim.jar
 java/sun-1.5/lib/im/thaiim.jar
-java/sun-1.5/lib/images/.pkgsrc
-java/sun-1.5/lib/images/cursors/.pkgsrc
 java/sun-1.5/lib/images/cursors/cursors.properties.default
 java/sun-1.5/lib/images/cursors/invalid32x32.gif
 java/sun-1.5/lib/images/cursors/motif_CopyDrop32x32.gif
@@ -186,7 +181,6 @@ java/sun-1.5/lib/plugin.jar
 java/sun-1.5/lib/psfont.properties.ja.default
 java/sun-1.5/lib/psfontj2d.properties.default
 java/sun-1.5/lib/rt.jar
-java/sun-1.5/lib/security/.pkgsrc
 java/sun-1.5/lib/security/US_export_policy.jar
 java/sun-1.5/lib/security/cacerts
 java/sun-1.5/lib/security/java.policy
