@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/08 20:03:43 jlam Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp 
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp 
 
@@ -6,56 +6,118 @@ PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
 PKGNAME=	openmotif-${PKGVER}
 CATEGORIES=	x11
-MASTER_SITES=	ftp://openmotif.opengroup.org/pub/openmotif/R${PKGVER}/tars/ \
-		ftp://ftp.opengroup.org/pub/openmotif/R${PKGVER}/tars/ \
-		ftp://ftp.kddlabs.co.jp/X11/openmotif/R${PKGVER}/tars/
+MOTIF_SITES=	ftp://openmotif.opengroup.org/pub/openmotif/R${PKGVER}/ \
+		ftp://ftp.opengroup.org/pub/openmotif/R${PKGVER}/ \
+		ftp://ftp.kddlabs.co.jp/X11/openmotif/R${PKGVER}/
+MASTER_SITES=	${MOTIF_SITES:=tars/}
 
-PATCH_SITES=	ftp://openmotif.opengroup.org/pub/openmotif/R${PKGVER}/fixes/ \
-		ftp://ftp.opengroup.org/pub/openmotif/R${PKGVER}/fixes/ \
-		ftp://ftp.kddlabs.co.jp/X11/openmotif/R${PKGVER}/fixes/
-PATCHFILES=	patch1 patch2 patch3 patch4 patch5
-PATCH_DIST_STRIP=-p1
+PATCH_SITES=		${MOTIF_SITES:=fixes/}
+PATCHFILES=		patch1 patch2 patch3 patch4 patch5
+PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.opengroup.org/openmotif/
-COMMENT=	Open Motif
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.opengroup.org/openmotif/
+COMMENT=		Open Motif
 
-BROKEN=		"package overwrites and then deletes base system files (makedepend, host.def, etc)"
+CONFLICTS+=		lesstif-*
 
-CONFLICTS+=	lesstif-*
-DIST_SUBDIR=	openmotif
-WRKSRC=		${WRKDIR}/motif
-USE_X11BASE=	yes
-ALL_TARGET=	World
+DIST_SUBDIR=		openmotif
+WRKSRC=			${WRKDIR}/motif
+USE_X11BASE=		# defined
+USE_BUILDLINK_ONLY=	# defined
+ALL_TARGET=		World
 
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
+FILES_SUBST=		X11BASE=${X11BASE}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
+FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		LN=${LN:Q}
+FILES_SUBST+=		MV=${MV:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
+post-extract:
+	${CP} ${FILESDIR}/NoInstall.rules ${WRKSRC}/config/cf/NoInstall.rules
+	${CP} ${FILESDIR}/OpenMotif.def ${WRKSRC}/config/cf/Motif.def
+
+# 1) Fix the man pages to refer to the correct sections.
+# 2) Link Motif.* to OpenMotif.*.
+# 3) Change references to {Core,Object,Shell}.3 to X{Core,Object,Shell}.3 to
+#    avoid manpage conflicts with other packages.
+#
 post-patch:
-# fix sections
-	cd ${WRKSRC}/doc/man; for n in man1/*.1 man3/*.3 man4/*.4 man5/*.5 ; \
-		do ${SED} 's/user cmd/1/g; s/library call/3/g; s/special file/5/g; s/file formats/5/g;' $$n >$$n.new && ${MV} -f $$n.new $$n; done
-	${CP} -f ${WRKSRC}/doc/man/man4/mwmrc.4 ${WRKSRC}/doc/man/man5/mwmrc.5
-	cd ${WRKSRC}/config/cf && \
-	    for n in site.def Motif.tmpl host.def ; \
-		do ${SED} -e 's|%%PREFIX%%|${PREFIX}|g; s|%%X11BASE%%|${X11BASE}|g' $$n > $$n.new && ${MV} -f $$n.new $$n ; \
-	    done
+	cd ${WRKSRC}/doc/man;						\
+	for file in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
+		${SED}	-e "s|user cmd|1|g"				\
+			-e "s|library call|3|g"				\
+			-e "s|special file|5|g"				\
+			-e "s|file formats|5|g"				\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done;								\
+	${CP} -f man4/mwmrc.4 man5/mwmrc.5
+	cd ${WRKSRC}/config/cf;						\
+	files="Motif.rules Motif.tmpl";					\
+	for file in $${files}; do					\
+		dest="Open$${file}";					\
+		${RM} -f $${dest};					\
+		${LN} -s $${file} $${dest};				\
+	done
+	cd ${WRKSRC}/doc/man/man3;					\
+	for name in Core Object Shell; do                               \
+		${MV} -f $${name}.3 X$${name}.3;			\
+		files=`${GREP} -l ".fB$${name}.fP(3)" *.3`;		\
+		for file in $${files}; do				\
+			${MV} -f $${file} $${file}.presubst;		\
+			${SED} "s|\(.fB\)$${name}\(.fP(3)\)|\1X$${name}\2|g" \
+				$${file}.presubst > $${file};		\
+			${RM} -f $${file}.presubst;			\
+		done;							\
+	done
 
+# Link the appropriate directories since we're building OpenMotif outside
+# of the X11R6 source tree.
+#
 do-configure:
-	${CP} -f `ls ${X11BASE}/lib/X11/config/* | ${GREP} -v '\(Motif\|cde\|\/site.def\|host.def\)'` ${WRKDIR}/motif/config/cf
 	${MKDIR} ${WRKSRC}/imports/x11
-	cd ${WRKSRC}/imports/x11 && for i in bin include lib ; do \
-	    if [ -f $$i ] ; then ${RM} $$i; fi; \
-	    ${LN} -s ${X11BASE}/$$i $$i; \
+	cd ${WRKSRC}/imports/x11; for dir in bin include lib; do	\
+		if [ -e $${dir} ]; then					\
+			${RM} $${dir};					\
+		fi;							\
+		${LN} -s ${BUILDLINK_X11_DIR}/$${dir} $${dir};		\
 	done
 
-# tblize the manpages.
+# Filter the manpages through tbl.
 post-build:
-	for i in man1 man3 man5 ; do cd ${WRKSRC}/doc/man/$$i; \
-		for m in *.[135]; do tbl $$m > $$m.new && ${MV} -f $$m.new $$m; done; \
+	cd ${WRKSRC}/doc/man;						\
+	for file in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
+                tbl $${file} > $${file}.tblized;			\
+		${MV} -f $${file}.tblized $${file};			\
 	done
 
-# Install the manpages.
+pre-install:
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
+# Install the OpenMotif config files and manpages.
 post-install:
-	for i in man1 man3 man5 ; do cd ${WRKSRC}/doc/man/$$i; \
-	    for m in *.[135]; do ${INSTALL_MAN} $$m ${PREFIX}/man/$$i; done; \
+	cd ${WRKSRC}/config/cf;						\
+	files="Motif.def Motif.rules Motif.tmpl";			\
+	for file in $${files}; do					\
+		dest="${PREFIX}/lib/X11/config/Open$${file}";		\
+		${INSTALL_DATA} $${file} $${dest};			\
 	done
+	cd ${WRKSRC}/doc/man;						\
+	for file in man1/*.1 man3/*.3 man5/*.5; do			\
+		${INSTALL_MAN} $${file} ${PREFIX}/man/$${file};		\
+        done
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
