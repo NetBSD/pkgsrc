@@ -1,4 +1,4 @@
-.\"	$NetBSD: rpm2pkg.8,v 1.1 2001/01/28 10:44:39 manu Exp $
+.\"	$NetBSD: rpm2pkg.8,v 1.2 2001/01/31 06:21:41 jlam Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -39,7 +39,7 @@
 .Os
 .Sh NAME
 .Nm rpm2pkg
-.Nd RPM to BSD package convertion helper
+.Nd RPM to BSD package conversion helper
 .Sh SYNOPSIS
 .Nm
 .Op Fl d Ar directory
@@ -49,36 +49,36 @@
 .Ar rpm_file ...
 .Sh DESCRIPTION
 .Nm
-helps building BSD packages from RPM files by unpacking each specified
+helps in building BSD packages from RPM files by unpacking each specified
 .Ar rpm_file, 
 and by building a 
 .Ar package_list
-according to what was extraced. The
-.Ar packge_list
+according to what was extracted. The
+.Ar package_list
 has the format expected by the NetBSD package system.
 .Pp 
 .Nm 
-also provide a mecanism that helps selecting what is actually 
+also provides a mechanism that helps in selecting what is actually 
 extracted from the RPM files. It is therefore possible to reject files
-that are of no interest when building a BSD package. This is specially usefull for files that are to be extracted in
+that are of no interest when building a BSD package. This is especially
+useful for files that are to be extracted in
 .Pa /var
 or
-.Pa /etc
-directories.
+.Pa /etc .
 .Pp
 The following options are available:
 .Bl -tag -width indent
 .It Fl d Ar directory
 Change working directory to 
-.Ar directory
-.It Fl f Ar packge_list
+.Ar directory .
+.It Fl f Ar package_list
 Produce a NetBSD package list 
-.Ar packge_list
+.Ar package_list
 from what was actually extracted from the RPM files archives.
 .It Fl i Ar ignored_dir
 Do not extract files contained in the
 .Ar ignored_dir
-directory of the RPM files archives.
+directory of the RPM file's archives.
 .It Fl p Ar prefix
 Use 
 .Ar prefix 
@@ -99,24 +99,24 @@ This will extract
 and
 .Pa bar.rpm
 into 
-.Pa /usr/pkg/emul/linux.
-A Packing list, called 
+.Pa /usr/pkg/emul/linux .
+A packing list called 
 .Pa PLIST_DYNAMIC
 will be created, with pathnames relative to 
-.Pa /usr/pkg,
-because this is the directory we asked 
+.Pa /usr/pkg ,
+because this is the directory into which we asked 
 .Nm
-to change to with the
+to change with the
 .Fl d
 option.
 .Pp
 .Nm 
 will not extract files contained in the
-.Pa tmp,
-.Pa var,
-and
-.Pa /usr/tmp
-directories of the RPM files archives.
+.Pa tmp ,
+.Pa var ,
+or
+.Pa usr/tmp
+directories of the RPM file's archives.
 .Sh COMPATIBILITY
 .Nm 
 should work with any regular RPM file.
