@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4794 2004/02/11 23:11:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.4795 2004/02/12 00:10:30 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -789,3 +789,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated imlib2 to 1.1.0nb2 [xtraeme 2004-02-11]
 	Removed linuxls [jmmv 2004-02-11]
 	Added gnuls-5.0 [jmmv 2004-02-11]
+	Updated bochs to 2.1 [hubertf 2004-02-12]
