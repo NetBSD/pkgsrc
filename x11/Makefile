@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2004/11/25 11:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.371 2004/11/27 14:54:24 taca Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -203,6 +203,8 @@ SUBDIR+=	ruby-fox
 SUBDIR+=	ruby-gtk
 SUBDIR+=	ruby-tcltklib
 SUBDIR+=	ruby-tk
+SUBDIR+=	ruby16-tcltklib
+SUBDIR+=	ruby16-tk
 SUBDIR+=	rxvt
 SUBDIR+=	speyes
 SUBDIR+=	ssystem
