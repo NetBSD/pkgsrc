@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/02/18 16:40:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/02 22:06:02 hubertf Exp $
 #
 
-DISTNAME=	xtraceroute-0.8.12
+DISTNAME=	xtraceroute-0.8.14
 CATEGORIES=	net x11
 MASTER_SITES=	http://www.dtek.chalmers.se/~d3august/xt/dl/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+= --with-lib-MesaGL
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xtraceroute
-	${INSTALL_DATA} ${WRKDIR}/lib/hosts.cache    ${PREFIX}/share/xtraceroute/site_hosts.cache
-	${INSTALL_DATA} ${WRKDIR}/lib/networks.cache ${PREFIX}/share/xtraceroute/site_networks.cache
+	${INSTALL_DATA} ${WRKDIR}/hosts.cache    ${PREFIX}/share/xtraceroute/hosts.cache
+	${INSTALL_DATA} ${WRKDIR}/networks.cache ${PREFIX}/share/xtraceroute/networks.cache
 
 .include "../../mk/bsd.pkg.mk"
