@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.369 2002/10/27 03:12:05 chris Exp $
+$NetBSD: CHANGES,v 1.370 2002/10/27 06:48:44 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3398,3 +3398,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added guile-pg-0.07 [cjones 2002-10-26]
 	Updated gnupg to 1.2.1 [chris 2002-10-27]
 	Updated gpgme to 0.3.12 [chris 2002-10-27]
+	Updated xmms-crossfade to 0.2.9nb2 [rh 2002-10-27]
