@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/12/14 20:36:55 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/23 10:07:34 rxg Exp $
 #
 
-DISTNAME=	rox-1.2.0
-PKGREVISION=	11
+DISTNAME=	rox-2.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +10,9 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	RISC OS-like filer for X
 
-DEPENDS+=	rox-base>=1.0.2nb1:../../sysutils/rox-base
+DEPENDS+=	shared-mime-info>=0.9:../../databases/shared-mime-info
+
+CONFLICTS=	rox-base-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 DIST_SUBDIR=	rox
@@ -19,12 +20,8 @@ DIST_SUBDIR=	rox
 USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk2
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2/libxml
-
-.include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ENV+=		APP_DIR=${WRKDIR}/${DISTNAME}/ROX-Filer
+CONFIGURE_ARGS+=	--enable-rox --with-platform=${OPSYS}-${MACHINE_ARCH}
 
 post-patch:
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" < ${FILESDIR}/rox > \
@@ -41,6 +38,9 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/rox
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/ROX-Filer	\
 			${PREFIX}/libexec/rox
+	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/Choices/MIME-types
+	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/Choices/MIME-types/*	\
+			${PREFIX}/share/rox/Choices/MIME-types
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/ROX-Filer
 	cd ${WRKDIR}/${DISTNAME}/ROX-Filer && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Filer
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" <				\
@@ -48,5 +48,12 @@ do-install:
 		${PREFIX}/share/rox/ROX-Filer/AppRun
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/rox ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/rox.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/rox.xml	\
+			${PREFIX}/share/mime/packages
 
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
