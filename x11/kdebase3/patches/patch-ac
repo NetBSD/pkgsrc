@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2003/01/02 09:12:33 skrll Exp $
 
---- kate/app/Makefile.in.orig	Mon May 13 23:57:35 2002
+--- kate/app/Makefile.in.orig	Fri Dec 27 18:19:11 2002
 +++ kate/app/Makefile.in
-@@ -287,35 +287,45 @@
+@@ -286,35 +286,45 @@ qt_libraries = @qt_libraries@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
  
@@ -11,10 +11,10 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  bin_PROGRAMS = kate kwrite
  
 -#>- kate_la_SOURCES = kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp \
--#>- kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp \
--#>- katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp \
--#>- kateviewmanager.cpp kateviewspace.cpp katemain.cpp \
--#>- kateappIface.skel kateIface.skel kategrepdialog.cpp katefiledialog.cpp
+-#>- 	kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp \
+-#>- 	katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp \
+-#>- 	kateviewmanager.cpp kateviewspace.cpp katemain.cpp \
+-#>- 	kateappIface.skel kateIface.skel kategrepdialog.cpp katefiledialog.cpp
 -#>+ 5
 -kate_la_SOURCES=kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp \
 -	kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp \
@@ -22,11 +22,11 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
 -	kateviewmanager.cpp kateviewspace.cpp katemain.cpp \
 -	  kategrepdialog.cpp katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp
 +#>- libkate_main_la_SOURCES = kateapp.cpp kateconfigdialog.cpp \
-+#>- kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp \
-+#>- katefilelist.cpp katefileselector.cpp katemainwindow.cpp \
-+#>- katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp \
-+#>- kateviewspace.cpp katemain.cpp kateappIface.skel kateIface.skel \
-+#>- kategrepdialog.cpp katefiledialog.cpp
++#>- 	kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp \
++#>- 	katefilelist.cpp katefileselector.cpp katemainwindow.cpp \
++#>- 	katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp \
++#>- 	kateviewspace.cpp katemain.cpp kateappIface.skel kateIface.skel \
++#>- 	kategrepdialog.cpp katefiledialog.cpp
 +#>+ 6
 +libkate_main_la_SOURCES=kateapp.cpp kateconfigdialog.cpp \
 +	kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp \
@@ -34,12 +34,12 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
 +	katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp \
 +	kateviewspace.cpp katemain.cpp   \
 +	kategrepdialog.cpp katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp
-+
  
-+libkate_main_la_LIBADD = ../interfaces/libkateinterfaces.la -lkscript
-+libkate_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
 -kate_la_LIBADD = ../interfaces/libkateinterfaces.la -lkscript
++libkate_main_la_LIBADD = ../interfaces/libkateinterfaces.la -lkscript
++libkate_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
 +kate_la_SOURCES = dummy_main.cpp
 +kate_la_LIBADD = libkate_main.la
  kate_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
@@ -67,7 +67,7 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  kwrite_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
  INCLUDES = -DKATEPART_NOT_INSTALLED -I../interfaces $(all_includes)
-@@ -327,47 +337,57 @@
+@@ -326,45 +336,55 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -92,7 +92,7 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  	katefiledialog.lo
 -#>- kate_la_OBJECTS = $(am_kate_la_OBJECTS)
 +#>- libkate_main_la_OBJECTS = $(am_libkate_main_la_OBJECTS)
- #>+ 10
+ #>+ 9
 -kate_la_final_OBJECTS = kate_la.all_cpp.lo 
 -kate_la_nofinal_OBJECTS = kateapp.lo kateconfigdialog.lo \
 +libkate_main_la_final_OBJECTS = libkate_main_la.all_cpp.lo 
@@ -101,28 +101,24 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  	katefilelist.lo katefileselector.lo katemainwindow.lo \
  	katepluginmanager.lo katesplitter.lo kateviewmanager.lo \
  	kateviewspace.lo katemain.lo kategrepdialog.lo \
- 	katefiledialog.lo kateappIface_skel.lo kateIface_skel.lo \
--	kate_la_meta_unload.lo 
+ 	katefiledialog.lo kateappIface_skel.lo kateIface_skel.lo
 -@KDE_USE_FINAL_FALSE@kate_la_OBJECTS = $(kate_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kate_la_OBJECTS = $(kate_la_final_OBJECTS)
 -kwrite_la_DEPENDENCIES = ../interfaces/libkateinterfaces.la
 -am_kwrite_la_OBJECTS = kwritemain.lo katefiledialog.lo
 -#>- kwrite_la_OBJECTS = $(am_kwrite_la_OBJECTS)
-+	libkate_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkate_main_la_OBJECTS = $(libkate_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkate_main_la_OBJECTS = $(libkate_main_la_final_OBJECTS)
 +libkwrite_main_la_DEPENDENCIES = ../interfaces/libkateinterfaces.la
 +am_libkwrite_main_la_OBJECTS = kwritemain.lo katefiledialog.lo
 +#>- libkwrite_main_la_OBJECTS = $(am_libkwrite_main_la_OBJECTS)
- #>+ 5
+ #>+ 4
 -kwrite_la_final_OBJECTS = kwrite_la.all_cpp.lo 
--kwrite_la_nofinal_OBJECTS = kwritemain.lo katefiledialog.lo \
--	kwrite_la_meta_unload.lo 
+-kwrite_la_nofinal_OBJECTS = kwritemain.lo katefiledialog.lo
 -@KDE_USE_FINAL_FALSE@kwrite_la_OBJECTS = $(kwrite_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kwrite_la_OBJECTS = $(kwrite_la_final_OBJECTS)
 +libkwrite_main_la_final_OBJECTS = libkwrite_main_la.all_cpp.lo 
-+libkwrite_main_la_nofinal_OBJECTS = kwritemain.lo katefiledialog.lo \
-+	libkwrite_main_la_meta_unload.lo 
++libkwrite_main_la_nofinal_OBJECTS = kwritemain.lo katefiledialog.lo
 +@KDE_USE_FINAL_FALSE@libkwrite_main_la_OBJECTS = $(libkwrite_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkwrite_main_la_OBJECTS = $(libkwrite_main_la_final_OBJECTS)
  bin_PROGRAMS = kate$(EXEEXT) kwrite$(EXEEXT)
@@ -147,17 +143,39 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -375,7 +395,8 @@
+@@ -372,7 +392,8 @@ CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kateapp.Plo \
-+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy_main.Plo $(DEPDIR)/dummy_main.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/kateapp.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kateconfigdialog.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kateconfigplugindialogpage.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kateconsole.Plo \
-@@ -409,10 +430,11 @@
+-#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kateapp.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy_main.Plo $(DEPDIR)/dummy_main.Po \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kateapp.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kateconfigdialog.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kateconfigplugindialogpage.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kateconsole.Plo \
+@@ -387,8 +408,9 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kateviewmanager.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kateviewspace.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kwritemain.Plo
+-#>+ 31
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/kateappIface_skel.P $(DEPDIR)/kateIface_skel.P  $(DEPDIR)/kate_la.all_cpp.P $(DEPDIR)/kwrite_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kateapp.Plo \
++#>+ 33
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/kateappIface_skel.P $(DEPDIR)/kateIface_skel.P  $(DEPDIR)/libkate_main_la.all_cpp.P $(DEPDIR)/libkwrite_main_la.all_cpp.P  $(DEPDIR)/dummy_main.Plo $(DEPDIR)/dummy_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateapp.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateconfigdialog.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateconfigplugindialogpage.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateconsole.Plo \
+@@ -403,7 +425,8 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateviewmanager.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kateviewspace.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwritemain.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/kateappIface_skel.P $(DEPDIR)/kateIface_skel.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kateapp.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/kateappIface_skel.P $(DEPDIR)/kateIface_skel.P  $(DEPDIR)/dummy_main.Plo $(DEPDIR)/dummy_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kateapp.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kateconfigdialog.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kateconfigplugindialogpage.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kateconsole.Plo \
+@@ -438,10 +461,11 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -172,7 +190,7 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -463,6 +485,10 @@
+@@ -492,6 +516,10 @@ kate.la: $(kate_la_OBJECTS) $(kate_la_DE
  	$(CXXLINK) -rpath $(libdir) $(kate_la_LDFLAGS) $(kate_la_OBJECTS) $(kate_la_LIBADD) $(LIBS)
  kwrite.la: $(kwrite_la_OBJECTS) $(kwrite_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrite_la_LDFLAGS) $(kwrite_la_OBJECTS) $(kwrite_la_LIBADD) $(LIBS)
@@ -183,7 +201,7 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -500,7 +526,8 @@
+@@ -529,7 +557,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -193,16 +211,16 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kateapp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kateconfigdialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kateconfigplugindialogpage.Plo@am__quote@
-@@ -575,7 +602,7 @@
+@@ -604,7 +633,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=katemain.cpp katefileselector.h katemainwindow.cpp kateapp.h katefiledialog.h katesplitter.h kwritemain.h kategrepdialog.cpp kateconfigplugindialogpage.h kateappIface.h kateviewmanager.cpp katemain.h kateconfigdialog.h katefilelist.cpp katedocmanager.h kateIface.h kateviewspace.cpp kategrepdialog.h kateviewspace.h katesplitter.cpp katefileselector.cpp katepluginmanager.h kateconsole.h kateconsole.cpp katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.cpp katepluginmanager.cpp 
+-KDE_DIST=katefilelist.cpp katemain.cpp katefiledialog.h katepluginmanager.h katefileselector.h kateviewmanager.cpp kateviewspace.h kateconsole.cpp kateconfigdialog.h kwritemain.h katedocmanager.cpp katefilelist.h katefileselector.cpp kateconsole.h kateviewspace.cpp katemainwindow.cpp kateapp.h kategrepdialog.cpp katedocmanager.h katesplitter.cpp katemain.h kateconfigplugindialogpage.h katesplitter.h kateappIface.h katemainwindow.h katepluginmanager.cpp kateviewmanager.h kateIface.h kategrepdialog.h 
 +KDE_DIST=katemain.cpp katefileselector.h kateIface.h katemainwindow.cpp kateviewspace.cpp kateapp.h katefiledialog.h katesplitter.h kwritemain.h kategrepdialog.cpp kateappIface.h kateconfigplugindialogpage.h kateviewmanager.cpp kategrepdialog.h kateviewspace.h katesplitter.cpp katemain.h katefilelist.cpp kateconfigdialog.h katefileselector.cpp katepluginmanager.h kateconsole.h kateconsole.cpp katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.cpp katedocmanager.h katepluginmanager.cpp kateconfigplugindialogpage.cpp 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -689,23 +716,10 @@
+@@ -718,46 +747,37 @@ uninstall-am: uninstall-binPROGRAMS unin
  	tags uninstall uninstall-am uninstall-binPROGRAMS \
  	uninstall-info-am uninstall-libLTLIBRARIES
  
@@ -214,170 +232,155 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
  .NOEXPORT:
  
 -#>+ 9
--kateappIface.kidl: $(srcdir)/kateappIface.h $(DCOPIDL_DEPENDENCIES)
+-kateappIface.kidl: $(srcdir)/kateappIface.h $(DCOP_DEPENDENCIES)
 -	$(DCOPIDL) $(srcdir)/kateappIface.h > kateappIface.kidl || ( rm -f kateappIface.kidl ; /bin/false )
 -kateappIface_skel.cpp: kateappIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub kateappIface.kidl
--kateIface.kidl: $(srcdir)/kateIface.h $(DCOPIDL_DEPENDENCIES)
+-kateIface.kidl: $(srcdir)/kateIface.h $(DCOP_DEPENDENCIES)
 -	$(DCOPIDL) $(srcdir)/kateIface.h > kateIface.kidl || ( rm -f kateIface.kidl ; /bin/false )
 -kateIface_skel.cpp: kateIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub kateIface.kidl
--
++#>+ 3
++kateviewmanager.moc: $(srcdir)/kateviewmanager.h
++	$(MOC) $(srcdir)/kateviewmanager.h -o kateviewmanager.moc
+ 
  #>+ 3
- kateviewmanager.moc: $(srcdir)/kateviewmanager.h
- 	$(MOC) $(srcdir)/kateviewmanager.h -o kateviewmanager.moc
-@@ -766,6 +780,16 @@
+-kateconfigdialog.moc: $(srcdir)/kateconfigdialog.h
+-	$(MOC) $(srcdir)/kateconfigdialog.h -o kateconfigdialog.moc
++katesplitter.moc: $(srcdir)/katesplitter.h
++	$(MOC) $(srcdir)/katesplitter.h -o katesplitter.moc
+ 
+ #>+ 3
+-kateconsole.moc: $(srcdir)/kateconsole.h
+-	$(MOC) $(srcdir)/kateconsole.h -o kateconsole.moc
++katefileselector.moc: $(srcdir)/katefileselector.h
++	$(MOC) $(srcdir)/katefileselector.h -o katefileselector.moc
+ 
+ #>+ 3
+-katemainwindow.moc: $(srcdir)/katemainwindow.h
+-	$(MOC) $(srcdir)/katemainwindow.h -o katemainwindow.moc
++katefilelist.moc: $(srcdir)/katefilelist.h
++	$(MOC) $(srcdir)/katefilelist.h -o katefilelist.moc
+ 
+ #>+ 3
+-katedocmanager.moc: $(srcdir)/katedocmanager.h
+-	$(MOC) $(srcdir)/katedocmanager.h -o katedocmanager.moc
++kateconfigdialog.moc: $(srcdir)/kateconfigdialog.h
++	$(MOC) $(srcdir)/kateconfigdialog.h -o kateconfigdialog.moc
+ 
+ #>+ 3
+-kategrepdialog.moc: $(srcdir)/kategrepdialog.h
+-	$(MOC) $(srcdir)/kategrepdialog.h -o kategrepdialog.moc
++kateconfigplugindialogpage.moc: $(srcdir)/kateconfigplugindialogpage.h
++	$(MOC) $(srcdir)/kateconfigplugindialogpage.h -o kateconfigplugindialogpage.moc
+ 
+ #>+ 3
+-katefilelist.moc: $(srcdir)/katefilelist.h
+-	$(MOC) $(srcdir)/katefilelist.h -o katefilelist.moc
++katemainwindow.moc: $(srcdir)/katemainwindow.h
++	$(MOC) $(srcdir)/katemainwindow.h -o katemainwindow.moc
+ 
+ #>+ 3
+ kateapp.moc: $(srcdir)/kateapp.h
+@@ -772,32 +792,38 @@ kateviewspace.moc: $(srcdir)/kateviewspa
+ 	$(MOC) $(srcdir)/kateviewspace.h -o kateviewspace.moc
+ 
+ #>+ 3
+-katesplitter.moc: $(srcdir)/katesplitter.h
+-	$(MOC) $(srcdir)/katesplitter.h -o katesplitter.moc
+-
+-#>+ 3
+-kateviewmanager.moc: $(srcdir)/kateviewmanager.h
+-	$(MOC) $(srcdir)/kateviewmanager.h -o kateviewmanager.moc
++katefiledialog.moc: $(srcdir)/katefiledialog.h
++	$(MOC) $(srcdir)/katefiledialog.h -o katefiledialog.moc
+ 
+ #>+ 3
+-katefileselector.moc: $(srcdir)/katefileselector.h
+-	$(MOC) $(srcdir)/katefileselector.h -o katefileselector.moc
++katedocmanager.moc: $(srcdir)/katedocmanager.h
++	$(MOC) $(srcdir)/katedocmanager.h -o katedocmanager.moc
+ 
+ #>+ 3
+-katefiledialog.moc: $(srcdir)/katefiledialog.h
+-	$(MOC) $(srcdir)/katefiledialog.h -o katefiledialog.moc
++kategrepdialog.moc: $(srcdir)/kategrepdialog.h
++	$(MOC) $(srcdir)/kategrepdialog.h -o kategrepdialog.moc
+ 
+ #>+ 3
+-kateconfigplugindialogpage.moc: $(srcdir)/kateconfigplugindialogpage.h
+-	$(MOC) $(srcdir)/kateconfigplugindialogpage.h -o kateconfigplugindialogpage.moc
++kateconsole.moc: $(srcdir)/kateconsole.h
++	$(MOC) $(srcdir)/kateconsole.h -o kateconsole.moc
+ 
+ #>+ 3
  katepluginmanager.moc: $(srcdir)/katepluginmanager.h
  	$(MOC) $(srcdir)/katepluginmanager.h -o katepluginmanager.moc
  
 +#>+ 9
-+kateappIface.kidl: $(srcdir)/kateappIface.h $(DCOPIDL_DEPENDENCIES)
++kateappIface.kidl: $(srcdir)/kateappIface.h $(DCOP_DEPENDENCIES)
 +	$(DCOPIDL) $(srcdir)/kateappIface.h > kateappIface.kidl || ( rm -f kateappIface.kidl ; /bin/false )
 +kateappIface_skel.cpp: kateappIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub kateappIface.kidl
-+kateIface.kidl: $(srcdir)/kateIface.h $(DCOPIDL_DEPENDENCIES)
++kateIface.kidl: $(srcdir)/kateIface.h $(DCOP_DEPENDENCIES)
 +	$(DCOPIDL) $(srcdir)/kateIface.h > kateIface.kidl || ( rm -f kateIface.kidl ; /bin/false )
 +kateIface_skel.cpp: kateIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub kateIface.kidl
 +
  #>+ 3
  clean-metasources:
- 	-rm -f  kateviewmanager.moc katesplitter.moc katefileselector.moc katefilelist.moc kateconfigdialog.moc kateconfigplugindialogpage.moc katemainwindow.moc kateapp.moc kwritemain.moc kateviewspace.moc katefiledialog.moc katedocmanager.moc kategrepdialog.moc kateconsole.moc katepluginmanager.moc
-@@ -787,41 +811,41 @@
+-	-rm -f  kateconfigdialog.moc kateconsole.moc katemainwindow.moc katedocmanager.moc kategrepdialog.moc katefilelist.moc kateapp.moc kwritemain.moc kateviewspace.moc katesplitter.moc kateviewmanager.moc katefileselector.moc katefiledialog.moc kateconfigplugindialogpage.moc katepluginmanager.moc
++	-rm -f  kateviewmanager.moc katesplitter.moc katefileselector.moc katefilelist.moc kateconfigdialog.moc kateconfigplugindialogpage.moc katemainwindow.moc kateapp.moc kwritemain.moc kateviewspace.moc katefiledialog.moc katedocmanager.moc kategrepdialog.moc kateconsole.moc katepluginmanager.moc
  
+ #>+ 5
+ clean-idl:
+@@ -816,45 +842,45 @@ force-reedit:
  
- #>+ 12
--kate_la_meta_unload.cpp:  katefilelist.moc katefileselector.moc katesplitter.moc kateviewmanager.moc katemainwindow.moc kateconfigplugindialogpage.moc kateconfigdialog.moc kateapp.moc kateviewspace.moc katefiledialog.moc kateconsole.moc kategrepdialog.moc katedocmanager.moc katepluginmanager.moc
--	@echo 'creating kate_la_meta_unload.cpp'
--	@-rm -f kate_la_meta_unload.cpp
-+libkate_main_la_meta_unload.cpp:  katefilelist.moc katefileselector.moc katesplitter.moc kateviewmanager.moc katemainwindow.moc kateconfigplugindialogpage.moc kateconfigdialog.moc kateapp.moc kateviewspace.moc katefiledialog.moc kateconsole.moc kategrepdialog.moc katedocmanager.moc katepluginmanager.moc
-+	@echo 'creating libkate_main_la_meta_unload.cpp'
-+	@-rm -f libkate_main_la_meta_unload.cpp
- 	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_kate_la[] = {' > kate_la_meta_unload.cpp ;\
--		cat  katefilelist.moc katefileselector.moc katesplitter.moc kateviewmanager.moc katemainwindow.moc kateconfigplugindialogpage.moc kateconfigdialog.moc kateapp.moc kateviewspace.moc katefiledialog.moc kateconsole.moc kategrepdialog.moc katedocmanager.moc katepluginmanager.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kate_la_meta_unload.cpp ;\
--		echo '0};' >> kate_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> kate_la_meta_unload.cpp ;\
--		echo '_UNLOAD(kate_la)' >> kate_la_meta_unload.cpp ;\
--	else echo > kate_la_meta_unload.cpp; fi
-+		echo 'static const char * _metalist_libkate_main_la[] = {' > libkate_main_la_meta_unload.cpp ;\
-+		cat  katefilelist.moc katefileselector.moc katesplitter.moc kateviewmanager.moc katemainwindow.moc kateconfigplugindialogpage.moc kateconfigdialog.moc kateapp.moc kateviewspace.moc katefiledialog.moc kateconsole.moc kategrepdialog.moc katedocmanager.moc katepluginmanager.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkate_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkate_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkate_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkate_main_la)' >> libkate_main_la_meta_unload.cpp ;\
-+	else echo > libkate_main_la_meta_unload.cpp; fi
- 
- 
- #>+ 12
--kwrite_la_meta_unload.cpp:  kwritemain.moc katefiledialog.moc
--	@echo 'creating kwrite_la_meta_unload.cpp'
--	@-rm -f kwrite_la_meta_unload.cpp
-+libkwrite_main_la_meta_unload.cpp:  kwritemain.moc katefiledialog.moc
-+	@echo 'creating libkwrite_main_la_meta_unload.cpp'
-+	@-rm -f libkwrite_main_la_meta_unload.cpp
- 	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_kwrite_la[] = {' > kwrite_la_meta_unload.cpp ;\
--		cat  kwritemain.moc katefiledialog.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwrite_la_meta_unload.cpp ;\
--		echo '0};' >> kwrite_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> kwrite_la_meta_unload.cpp ;\
--		echo '_UNLOAD(kwrite_la)' >> kwrite_la_meta_unload.cpp ;\
--	else echo > kwrite_la_meta_unload.cpp; fi
-+		echo 'static const char * _metalist_libkwrite_main_la[] = {' > libkwrite_main_la_meta_unload.cpp ;\
-+		cat  kwritemain.moc katefiledialog.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwrite_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkwrite_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkwrite_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkwrite_main_la)' >> libkwrite_main_la_meta_unload.cpp ;\
-+	else echo > libkwrite_main_la_meta_unload.cpp; fi
- 
- 
- #>+ 3
- clean-moc-classes:
--	-rm -f  kate_la_meta_unload.cpp kwrite_la_meta_unload.cpp
-+	-rm -f  libkate_main_la_meta_unload.cpp libkwrite_main_la_meta_unload.cpp
  
  #>+ 11
--kate_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kateapp.cpp $(srcdir)/kateconfigdialog.cpp $(srcdir)/kateconfigplugindialogpage.cpp $(srcdir)/kateconsole.cpp $(srcdir)/katedocmanager.cpp $(srcdir)/katefilelist.cpp $(srcdir)/katefileselector.cpp $(srcdir)/katemainwindow.cpp $(srcdir)/katepluginmanager.cpp $(srcdir)/katesplitter.cpp $(srcdir)/kateviewmanager.cpp $(srcdir)/kateviewspace.cpp $(srcdir)/katemain.cpp $(srcdir)/kategrepdialog.cpp $(srcdir)/katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp kate_la_meta_unload.cpp   kateviewmanager.moc katesplitter.moc katefileselector.moc katefilelist.moc kateconfigdialog.moc kateconfigplugindialogpage.moc katemainwindow.moc kateapp.moc kwritemain.moc kateviewspace.moc katefiledialog.moc katedocmanager.moc kategrepdialog.moc kateconsole.moc katepluginmanager.moc 
-+kate_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dummy_main.cpp   kateviewmanager.moc katesplitter.moc katefileselector.moc katefilelist.moc kateconfigdialog.moc kateconfigplugindialogpage.moc katemainwindow.moc kateapp.moc kwritemain.moc kateviewspace.moc katefiledialog.moc katedocmanager.moc kategrepdialog.moc kateconsole.moc katepluginmanager.moc 
- 	@echo 'creating kate_la.all_cpp.cpp ...'; \
- 	rm -f kate_la.all_cpp.files kate_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kate_la.all_cpp.final; \
--	for file in kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp kateviewspace.cpp katemain.cpp kategrepdialog.cpp katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp kate_la_meta_unload.cpp ; do \
-+	for file in dummy_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kate_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kate_la.all_cpp.final; \
- 	done; \
-@@ -829,11 +853,11 @@
- 	rm -f kate_la.all_cpp.final kate_la.all_cpp.files
- 
- #>+ 11
--kwrite_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp $(srcdir)/katefiledialog.cpp kwrite_la_meta_unload.cpp  
-+kwrite_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dummy_main.cpp  
- 	@echo 'creating kwrite_la.all_cpp.cpp ...'; \
- 	rm -f kwrite_la.all_cpp.files kwrite_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kwrite_la.all_cpp.final; \
--	for file in kwritemain.cpp katefiledialog.cpp kwrite_la_meta_unload.cpp ; do \
-+	for file in dummy_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kwrite_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrite_la.all_cpp.final; \
- 	done; \
-@@ -841,11 +865,35 @@
- 	rm -f kwrite_la.all_cpp.final kwrite_la.all_cpp.files
- 
- #>+ 11
--kate.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+libkate_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kateapp.cpp $(srcdir)/kateconfigdialog.cpp $(srcdir)/kateconfigplugindialogpage.cpp $(srcdir)/kateconsole.cpp $(srcdir)/katedocmanager.cpp $(srcdir)/katefilelist.cpp $(srcdir)/katefileselector.cpp $(srcdir)/katemainwindow.cpp $(srcdir)/katepluginmanager.cpp $(srcdir)/katesplitter.cpp $(srcdir)/kateviewmanager.cpp $(srcdir)/kateviewspace.cpp $(srcdir)/katemain.cpp $(srcdir)/kategrepdialog.cpp $(srcdir)/katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp libkate_main_la_meta_unload.cpp  
+-kate_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kateapp.cpp $(srcdir)/kateconfigdialog.cpp $(srcdir)/kateconfigplugindialogpage.cpp $(srcdir)/kateconsole.cpp $(srcdir)/katedocmanager.cpp $(srcdir)/katefilelist.cpp $(srcdir)/katefileselector.cpp $(srcdir)/katemainwindow.cpp $(srcdir)/katepluginmanager.cpp $(srcdir)/katesplitter.cpp $(srcdir)/kateviewmanager.cpp $(srcdir)/kateviewspace.cpp $(srcdir)/katemain.cpp $(srcdir)/kategrepdialog.cpp $(srcdir)/katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp  kateconfigdialog.moc katemainwindow.moc kateconsole.moc katedocmanager.moc katefilelist.moc kategrepdialog.moc kateapp.moc kateviewspace.moc kateviewmanager.moc katesplitter.moc katefiledialog.moc katefileselector.moc kateconfigplugindialogpage.moc katepluginmanager.moc
+-	@echo 'creating kate_la.all_cpp.cpp ...'; \
+-	rm -f kate_la.all_cpp.files kate_la.all_cpp.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kate_la.all_cpp.final; \
++libkate_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kateapp.cpp $(srcdir)/kateconfigdialog.cpp $(srcdir)/kateconfigplugindialogpage.cpp $(srcdir)/kateconsole.cpp $(srcdir)/katedocmanager.cpp $(srcdir)/katefilelist.cpp $(srcdir)/katefileselector.cpp $(srcdir)/katemainwindow.cpp $(srcdir)/katepluginmanager.cpp $(srcdir)/katesplitter.cpp $(srcdir)/kateviewmanager.cpp $(srcdir)/kateviewspace.cpp $(srcdir)/katemain.cpp $(srcdir)/kategrepdialog.cpp $(srcdir)/katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp  katefilelist.moc katefileselector.moc katesplitter.moc kateviewmanager.moc katemainwindow.moc kateconfigplugindialogpage.moc kateconfigdialog.moc kateapp.moc kateviewspace.moc katefiledialog.moc kateconsole.moc kategrepdialog.moc katedocmanager.moc katepluginmanager.moc
 +	@echo 'creating libkate_main_la.all_cpp.cpp ...'; \
 +	rm -f libkate_main_la.all_cpp.files libkate_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkate_main_la.all_cpp.final; \
-+	for file in kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp kateviewspace.cpp katemain.cpp kategrepdialog.cpp katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp libkate_main_la_meta_unload.cpp ; do \
+ 	for file in kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp kateviewspace.cpp katemain.cpp kategrepdialog.cpp katefiledialog.cpp kateappIface_skel.cpp kateIface_skel.cpp ; do \
+-	  echo "#include \"$$file\"" >> kate_la.all_cpp.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kate_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkate_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkate_main_la.all_cpp.final; \
-+	done; \
-+	cat libkate_main_la.all_cpp.final libkate_main_la.all_cpp.files  > libkate_main_la.all_cpp.cpp; \
+ 	done; \
+-	cat kate_la.all_cpp.final kate_la.all_cpp.files > kate_la.all_cpp.cpp; \
+-	rm -f kate_la.all_cpp.final kate_la.all_cpp.files
++	cat libkate_main_la.all_cpp.final libkate_main_la.all_cpp.files > libkate_main_la.all_cpp.cpp; \
 +	rm -f libkate_main_la.all_cpp.final libkate_main_la.all_cpp.files
-+
-+#>+ 11
-+libkwrite_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp $(srcdir)/katefiledialog.cpp libkwrite_main_la_meta_unload.cpp  
+ 
+ #>+ 11
+-kwrite_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp $(srcdir)/katefiledialog.cpp  kwritemain.moc katefiledialog.moc
+-	@echo 'creating kwrite_la.all_cpp.cpp ...'; \
+-	rm -f kwrite_la.all_cpp.files kwrite_la.all_cpp.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kwrite_la.all_cpp.final; \
++libkwrite_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwritemain.cpp $(srcdir)/katefiledialog.cpp  kwritemain.moc katefiledialog.moc
 +	@echo 'creating libkwrite_main_la.all_cpp.cpp ...'; \
 +	rm -f libkwrite_main_la.all_cpp.files libkwrite_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkwrite_main_la.all_cpp.final; \
-+	for file in kwritemain.cpp katefiledialog.cpp libkwrite_main_la_meta_unload.cpp ; do \
+ 	for file in kwritemain.cpp katefiledialog.cpp ; do \
+-	  echo "#include \"$$file\"" >> kwrite_la.all_cpp.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrite_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkwrite_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkwrite_main_la.all_cpp.final; \
-+	done; \
-+	cat libkwrite_main_la.all_cpp.final libkwrite_main_la.all_cpp.files  > libkwrite_main_la.all_cpp.cpp; \
+ 	done; \
+-	cat kwrite_la.all_cpp.final kwrite_la.all_cpp.files > kwrite_la.all_cpp.cpp; \
+-	rm -f kwrite_la.all_cpp.final kwrite_la.all_cpp.files
++	cat libkwrite_main_la.all_cpp.final libkwrite_main_la.all_cpp.files > libkwrite_main_la.all_cpp.cpp; \
 +	rm -f libkwrite_main_la.all_cpp.final libkwrite_main_la.all_cpp.files
-+
-+#>+ 11
-+kate.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dummy_main.cpp  
- 	@echo 'creating kate.all_cpp.cpp ...'; \
- 	rm -f kate.all_cpp.files kate.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kate.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in dummy_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kate.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kate.all_cpp.final; \
- 	done; \
-@@ -853,11 +901,11 @@
- 	rm -f kate.all_cpp.final kate.all_cpp.files
- 
- #>+ 11
--kwrite.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+kwrite.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dummy_main.cpp  
- 	@echo 'creating kwrite.all_cpp.cpp ...'; \
- 	rm -f kwrite.all_cpp.files kwrite.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kwrite.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in dummy_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kwrite.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwrite.all_cpp.final; \
- 	done; \
-@@ -866,20 +914,20 @@
  
  #>+ 3
  clean-final:
--	-rm -f kate_la.all_cpp.cpp kwrite_la.all_cpp.cpp kate.all_cpp.cpp kwrite.all_cpp.cpp
-+	-rm -f kate_la.all_cpp.cpp kwrite_la.all_cpp.cpp libkate_main_la.all_cpp.cpp libkwrite_main_la.all_cpp.cpp kate.all_cpp.cpp kwrite.all_cpp.cpp
+-	-rm -f kate_la.all_cpp.cpp kwrite_la.all_cpp.cpp
++	-rm -f libkate_main_la.all_cpp.cpp libkwrite_main_la.all_cpp.cpp
  
  #>+ 2
  final:
@@ -397,4 +400,59 @@ $NetBSD: patch-ac,v 1.2 2002/08/25 19:23:36 jlam Exp $
 +	$(MAKE) libkate_main_la_OBJECTS="$(libkate_main_la_nofinal_OBJECTS)" libkwrite_main_la_OBJECTS="$(libkwrite_main_la_nofinal_OBJECTS)" install-am
  #>+ 3
  cvs-clean:
- 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+ 	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -864,33 +890,33 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 31
+-kategrepdialog.o: kategrepdialog.moc 
+-kateapp.o: kateapp.moc 
+-katesplitter.lo: katesplitter.moc 
+-kateconsole.lo: kateconsole.moc 
+-kategrepdialog.lo: kategrepdialog.moc 
+-katefileselector.lo: katefileselector.moc 
+-katesplitter.o: katesplitter.moc 
+-kwritemain.o: kwritemain.moc 
+-kateconfigplugindialogpage.lo: kateconfigplugindialogpage.moc 
++kwritemain.lo: kwritemain.moc 
++kateapp.lo: kateapp.moc 
+ kateconfigplugindialogpage.o: kateconfigplugindialogpage.moc 
+-katefileselector.o: katefileselector.moc 
+-katefiledialog.o: katefiledialog.moc 
+-kateconsole.o: kateconsole.moc 
+-kateviewmanager.o: kateviewmanager.moc 
+ katemainwindow.lo: katemainwindow.moc 
++kateconfigplugindialogpage.lo: kateconfigplugindialogpage.moc 
++kategrepdialog.o: kategrepdialog.moc 
++kateviewspace.o: kateviewspace.moc 
++katepluginmanager.lo: katepluginmanager.moc 
+ kateconfigdialog.o: kateconfigdialog.moc 
+-kwritemain.lo: kwritemain.moc 
+-kateviewmanager.lo: kateviewmanager.moc 
++katepluginmanager.o: katepluginmanager.moc 
++katefileselector.o: katefileselector.moc 
++kateconsole.o: kateconsole.moc 
++kateconsole.lo: kateconsole.moc 
++kategrepdialog.lo: kategrepdialog.moc 
++kateapp.o: kateapp.moc 
++katefilelist.o: katefilelist.moc 
+ katefiledialog.lo: katefiledialog.moc 
+ katemainwindow.o: katemainwindow.moc 
++katefiledialog.o: katefiledialog.moc 
++kateviewmanager.o: kateviewmanager.moc 
+ katedocmanager.lo: katedocmanager.moc 
++kateviewspace.lo: kateviewspace.moc 
++katesplitter.o: katesplitter.moc 
+ katedocmanager.o: katedocmanager.moc 
++kwritemain.o: kwritemain.moc 
++katefileselector.lo: katefileselector.moc 
++kateviewmanager.lo: kateviewmanager.moc 
+ kateconfigdialog.lo: kateconfigdialog.moc 
+-katepluginmanager.lo: katepluginmanager.moc 
+ katefilelist.lo: katefilelist.moc 
+-katepluginmanager.o: katepluginmanager.moc 
+-kateviewspace.o: kateviewspace.moc 
+-kateviewspace.lo: kateviewspace.moc 
+-kateapp.lo: kateapp.moc 
+-katefilelist.o: katefilelist.moc 
++katesplitter.lo: katesplitter.moc 

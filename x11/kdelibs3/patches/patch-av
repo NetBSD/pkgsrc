@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
+$NetBSD: patch-av,v 1.3 2003/01/02 09:12:39 skrll Exp $
 
---- kdeprint/management/Makefile.in.orig	Tue May 21 15:42:07 2002
+--- kdeprint/management/Makefile.in.orig	Tue Nov 26 08:57:39 2002
 +++ kdeprint/management/Makefile.in
-@@ -264,15 +264,19 @@
+@@ -264,15 +264,19 @@ x_libraries = @x_libraries@
  
  INCLUDES = -I$(top_srcdir)/kdefx -I$(top_srcdir)/kdeprint -I$(top_builddir)/kdeprint -I$(top_srcdir)/kio -I$(top_srcdir)/kfile -I$(top_srcdir) $(all_includes)
  
@@ -27,7 +27,7 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  kaddprinterwizard_la_LDFLAGS = -module -avoid-version $(all_libraries) $(KDE_RPATH)
  
  libkdeprint_management_la_SOURCES = \
-@@ -317,11 +321,18 @@
+@@ -317,11 +321,18 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -43,13 +43,13 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
 +libkaddprinterwizard_main_la_DEPENDENCIES = libkdeprint_management.la
 +am_libkaddprinterwizard_main_la_OBJECTS = kaddprinterwizard.lo
 +#>- libkaddprinterwizard_main_la_OBJECTS = \
-+#>- $(am_libkaddprinterwizard_main_la_OBJECTS)
++#>- 	$(am_libkaddprinterwizard_main_la_OBJECTS)
 +#>+ 1
 +libkaddprinterwizard_main_la_OBJECTS = kaddprinterwizard.lo
  libkdeprint_management_la_DEPENDENCIES = ../libkdeprint.la
  am_libkdeprint_management_la_OBJECTS = kmdbcreator.lo kmdriverdb.lo \
  	kmdriverdbwidget.lo kmiconview.lo kminfopage.lo kmmainview.lo \
-@@ -365,11 +376,11 @@
+@@ -364,11 +375,11 @@ libkdeprint_management_la_nofinal_OBJECT
  bin_PROGRAMS = kaddprinterwizard$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
@@ -64,20 +64,48 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -377,9 +388,10 @@
+@@ -376,9 +387,10 @@ CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/dummy.Po \
--	@AMDEP_TRUE@	$(DEPDIR)/jobitem.Plo \
-+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/jobitem.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Po \
- 	@AMDEP_TRUE@	$(DEPDIR)/kiconselectaction.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kmconfigcommand.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kmconfigdialog.Plo \
-@@ -437,6 +449,7 @@
+-#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/dummy.Po \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/jobitem.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/jobitem.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Po \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kiconselectaction.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kmconfigcommand.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kmconfigdialog.Plo \
+@@ -416,10 +428,11 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kxmlcommandselector.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/pluginaction.Plo $(DEPDIR)/sidepixmap.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/smbview.Plo
+-#>+ 81
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkdeprint_management_la.all_cpp.P  $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/dummy.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/jobitem.Plo \
++#>+ 83
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkdeprint_management_la.all_cpp.P  $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/jobitem.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kiconselectaction.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmconfigcommand.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmconfigdialog.Plo \
+@@ -457,9 +470,10 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kxmlcommandselector.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/pluginaction.Plo $(DEPDIR)/sidepixmap.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/smbview.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/dummy.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/jobitem.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/jobitem.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kiconselectaction.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmconfigcommand.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmconfigdialog.Plo \
+@@ -518,6 +532,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kaddprinterwizard_la_SOURCES) \
@@ -85,7 +113,7 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  	$(libkdeprint_management_la_SOURCES) \
  	$(kaddprinterwizard_SOURCES)
  DATA = $(dataicon_DATA)
-@@ -445,7 +458,7 @@
+@@ -526,7 +541,7 @@ HEADERS = $(kdeprint_HEADERS) $(noinst_H
  
  DIST_COMMON = $(kdeprint_HEADERS) $(noinst_HEADERS) Makefile.am \
  	Makefile.in
@@ -94,7 +122,7 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -494,6 +507,8 @@
+@@ -575,6 +590,8 @@ clean-libLTLIBRARIES:
  	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
  kaddprinterwizard.la: $(kaddprinterwizard_la_OBJECTS) $(kaddprinterwizard_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kaddprinterwizard_la_LDFLAGS) $(kaddprinterwizard_la_OBJECTS) $(kaddprinterwizard_la_LIBADD) $(LIBS)
@@ -103,7 +131,7 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  #>- libkdeprint_management.la: $(libkdeprint_management_la_OBJECTS) $(libkdeprint_management_la_DEPENDENCIES) 
  #>+ 2
  @KDE_USE_CLOSURE_TRUE@libkdeprint_management.la: libkdeprint_management.la.closure $(libkdeprint_management_la_OBJECTS) $(libkdeprint_management_la_DEPENDENCIES) 
-@@ -534,9 +549,10 @@
+@@ -615,9 +632,10 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/cjanuswidget.Plo@am__quote@
@@ -115,7 +143,16 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kiconselectaction.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmconfigcommand.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmconfigdialog.Plo@am__quote@
-@@ -797,9 +813,6 @@
+@@ -761,7 +779,7 @@ distclean-tags:
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=tileup.png tiledown.png side.png 
++KDE_DIST=side.png tiledown.png tileup.png 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -878,9 +896,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-dataiconDATA uninstall-info-am \
  	uninstall-kdeprintHEADERS uninstall-libLTLIBRARIES
  
@@ -125,59 +162,337 @@ $NetBSD: patch-av,v 1.2 2002/08/25 19:23:53 jlam Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -981,11 +994,11 @@
- 	-rm -f  libkdeprint_management_la_meta_unload.cpp
+@@ -895,140 +910,140 @@ libkdeprint_management.la.closure: $(lib
  
- #>+ 11
--kaddprinterwizard_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard.cpp  
-+kaddprinterwizard_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard_main.cpp  
- 	@echo 'creating kaddprinterwizard_la.all_cpp.cpp ...'; \
- 	rm -f kaddprinterwizard_la.all_cpp.files kaddprinterwizard_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaddprinterwizard_la.all_cpp.final; \
--	for file in kaddprinterwizard.cpp ; do \
-+	for file in kaddprinterwizard_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaddprinterwizard_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaddprinterwizard_la.all_cpp.final; \
- 	done; \
-@@ -993,6 +1006,18 @@
- 	rm -f kaddprinterwizard_la.all_cpp.final kaddprinterwizard_la.all_cpp.files
- 
- #>+ 11
-+libkaddprinterwizard_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard.cpp  
-+	@echo 'creating libkaddprinterwizard_main_la.all_cpp.cpp ...'; \
-+	rm -f libkaddprinterwizard_main_la.all_cpp.files libkaddprinterwizard_main_la.all_cpp.final; \
-+	echo "#define KDE_USE_FINAL 1" >> libkaddprinterwizard_main_la.all_cpp.final; \
-+	for file in kaddprinterwizard.cpp ; do \
-+	  echo "#include \"$$file\"" >> libkaddprinterwizard_main_la.all_cpp.files; \
-+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkaddprinterwizard_main_la.all_cpp.final; \
-+	done; \
-+	cat libkaddprinterwizard_main_la.all_cpp.final libkaddprinterwizard_main_la.all_cpp.files  > libkaddprinterwizard_main_la.all_cpp.cpp; \
-+	rm -f libkaddprinterwizard_main_la.all_cpp.final libkaddprinterwizard_main_la.all_cpp.files
-+
-+#>+ 11
- libkdeprint_management_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmdbcreator.cpp $(srcdir)/kmdriverdb.cpp $(srcdir)/kmdriverdbwidget.cpp $(srcdir)/kmiconview.cpp $(srcdir)/kminfopage.cpp $(srcdir)/kmmainview.cpp $(srcdir)/kmpages.cpp $(srcdir)/kmprinterview.cpp $(srcdir)/kmjobviewer.cpp $(srcdir)/jobitem.cpp $(srcdir)/kmpropwidget.cpp $(srcdir)/kmpropcontainer.cpp $(srcdir)/kmpropertypage.cpp $(srcdir)/kmpropgeneral.cpp $(srcdir)/cjanuswidget.cpp $(srcdir)/kmpropmembers.cpp $(srcdir)/kmpropbackend.cpp $(srcdir)/kmpropdriver.cpp $(srcdir)/kmlistview.cpp $(srcdir)/kminstancepage.cpp $(srcdir)/kmtimer.cpp $(srcdir)/kmwizard.cpp $(srcdir)/kmwizardpage.cpp $(srcdir)/kmwinfopage.cpp $(srcdir)/kmwpassword.cpp $(srcdir)/kmwsocketutil.cpp $(srcdir)/kmwbackend.cpp $(srcdir)/kmwsocket.cpp $(srcdir)/kmwdriver.cpp $(srcdir)/kmwdriverselect.cpp $(srcdir)/kmwdrivertest.cpp $(srcdir)/kmwinfobase.cpp $(srcdir)/kmwname.cpp $(srcdir)/kmwend.cpp $(srcdir)/kmwclass.cpp $(srcdir)/kmwlpd.cpp $(srcdir)/kmwfile.cpp $(srcdir)/kmdriverdialog.cpp $(srcdir)/kmwsmb.cpp $(srcdir)/smbview.cpp $(srcdir)/kmconfigdialog.cpp $(srcdir)/kmconfigpage.cpp $(srcdir)/kmconfiggeneral.cpp $(srcdir)/kmspecialprinterdlg.cpp $(srcdir)/kmwlocal.cpp $(srcdir)/kiconselectaction.cpp $(srcdir)/kmconfigpreview.cpp $(srcdir)/sidepixmap.cpp $(srcdir)/pluginaction.cpp $(srcdir)/kxmlcommanddlg.cpp $(srcdir)/kxmlcommandselector.cpp $(srcdir)/kmconfigcommand.cpp $(srcdir)/kmconfigfilter.cpp libkdeprint_management_la_meta_unload.cpp   kmmainview.moc kmdriverdbwidget.moc kmconfigpage.moc smbview.moc kmwsmb.moc cjanuswidget.moc kmlistview.moc pluginaction.moc kmconfiggeneral.moc kmwclass.moc kminstancepage.moc kmprinterview.moc kmiconview.moc kmpropcontainer.moc kmdbcreator.moc kmpropwidget.moc kmconfigdialog.moc kmwlocal.moc kmjobviewer.moc kmspecialprinterdlg.moc kiconselectaction.moc kmwsocketutil.moc kmconfigfilter.moc kxmlcommanddlg.moc kmpropertypage.moc kxmlcommandselector.moc kmwdrivertest.moc kmwsocket.moc kmwizard.moc kmdriverdb.moc kmtimer.moc kmwizardpage.moc kmdriverdialog.moc 
- 	@echo 'creating libkdeprint_management_la.all_cpp.cpp ...'; \
- 	rm -f libkdeprint_management_la.all_cpp.files libkdeprint_management_la.all_cpp.final; \
-@@ -1005,11 +1030,11 @@
- 	rm -f libkdeprint_management_la.all_cpp.final libkdeprint_management_la.all_cpp.files
- 
- #>+ 11
--kaddprinterwizard.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+kaddprinterwizard.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard_main.cpp  
- 	@echo 'creating kaddprinterwizard.all_cpp.cpp ...'; \
- 	rm -f kaddprinterwizard.all_cpp.files kaddprinterwizard.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaddprinterwizard.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in kaddprinterwizard_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaddprinterwizard.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaddprinterwizard.all_cpp.final; \
- 	done; \
-@@ -1018,7 +1043,7 @@
  
  #>+ 3
- clean-final:
--	-rm -f kaddprinterwizard_la.all_cpp.cpp libkdeprint_management_la.all_cpp.cpp kaddprinterwizard.all_cpp.cpp
-+	-rm -f kaddprinterwizard_la.all_cpp.cpp libkaddprinterwizard_main_la.all_cpp.cpp libkdeprint_management_la.all_cpp.cpp kaddprinterwizard.all_cpp.cpp
+-kmpropcontainer.moc: $(srcdir)/kmpropcontainer.h
+-	$(MOC) $(srcdir)/kmpropcontainer.h -o kmpropcontainer.moc
++kmmainview.moc: $(srcdir)/kmmainview.h
++	$(MOC) $(srcdir)/kmmainview.h -o kmmainview.moc
  
- #>+ 2
- final:
+ #>+ 3
+-kmwsocketutil.moc: $(srcdir)/kmwsocketutil.h
+-	$(MOC) $(srcdir)/kmwsocketutil.h -o kmwsocketutil.moc
++kmdriverdbwidget.moc: $(srcdir)/kmdriverdbwidget.h
++	$(MOC) $(srcdir)/kmdriverdbwidget.h -o kmdriverdbwidget.moc
+ 
+ #>+ 3
+-kmspecialprinterdlg.moc: $(srcdir)/kmspecialprinterdlg.h
+-	$(MOC) $(srcdir)/kmspecialprinterdlg.h -o kmspecialprinterdlg.moc
++kmconfigpage.moc: $(srcdir)/kmconfigpage.h
++	$(MOC) $(srcdir)/kmconfigpage.h -o kmconfigpage.moc
+ 
+ #>+ 3
+-kmconfigfilter.moc: $(srcdir)/kmconfigfilter.h
+-	$(MOC) $(srcdir)/kmconfigfilter.h -o kmconfigfilter.moc
++smbview.moc: $(srcdir)/smbview.h
++	$(MOC) $(srcdir)/smbview.h -o smbview.moc
+ 
+ #>+ 3
+-kmwclass.moc: $(srcdir)/kmwclass.h
+-	$(MOC) $(srcdir)/kmwclass.h -o kmwclass.moc
++kmwsmb.moc: $(srcdir)/kmwsmb.h
++	$(MOC) $(srcdir)/kmwsmb.h -o kmwsmb.moc
+ 
+ #>+ 3
+-kmconfigpage.moc: $(srcdir)/kmconfigpage.h
+-	$(MOC) $(srcdir)/kmconfigpage.h -o kmconfigpage.moc
++cjanuswidget.moc: $(srcdir)/cjanuswidget.h
++	$(MOC) $(srcdir)/cjanuswidget.h -o cjanuswidget.moc
+ 
+ #>+ 3
+-pluginaction.moc: $(srcdir)/pluginaction.h
+-	$(MOC) $(srcdir)/pluginaction.h -o pluginaction.moc
++kmlistview.moc: $(srcdir)/kmlistview.h
++	$(MOC) $(srcdir)/kmlistview.h -o kmlistview.moc
+ 
+ #>+ 3
+-kxmlcommanddlg.moc: $(srcdir)/kxmlcommanddlg.h
+-	$(MOC) $(srcdir)/kxmlcommanddlg.h -o kxmlcommanddlg.moc
++pluginaction.moc: $(srcdir)/pluginaction.h
++	$(MOC) $(srcdir)/pluginaction.h -o pluginaction.moc
+ 
+ #>+ 3
+-kmwizardpage.moc: $(srcdir)/kmwizardpage.h
+-	$(MOC) $(srcdir)/kmwizardpage.h -o kmwizardpage.moc
++kmconfiggeneral.moc: $(srcdir)/kmconfiggeneral.h
++	$(MOC) $(srcdir)/kmconfiggeneral.h -o kmconfiggeneral.moc
+ 
+ #>+ 3
+-kmdriverdbwidget.moc: $(srcdir)/kmdriverdbwidget.h
+-	$(MOC) $(srcdir)/kmdriverdbwidget.h -o kmdriverdbwidget.moc
++kmwclass.moc: $(srcdir)/kmwclass.h
++	$(MOC) $(srcdir)/kmwclass.h -o kmwclass.moc
+ 
+ #>+ 3
+-kmdbcreator.moc: $(srcdir)/kmdbcreator.h
+-	$(MOC) $(srcdir)/kmdbcreator.h -o kmdbcreator.moc
++kminstancepage.moc: $(srcdir)/kminstancepage.h
++	$(MOC) $(srcdir)/kminstancepage.h -o kminstancepage.moc
+ 
+ #>+ 3
+-kxmlcommandselector.moc: $(srcdir)/kxmlcommandselector.h
+-	$(MOC) $(srcdir)/kxmlcommandselector.h -o kxmlcommandselector.moc
++kmprinterview.moc: $(srcdir)/kmprinterview.h
++	$(MOC) $(srcdir)/kmprinterview.h -o kmprinterview.moc
+ 
+ #>+ 3
+-kmwdrivertest.moc: $(srcdir)/kmwdrivertest.h
+-	$(MOC) $(srcdir)/kmwdrivertest.h -o kmwdrivertest.moc
++kmiconview.moc: $(srcdir)/kmiconview.h
++	$(MOC) $(srcdir)/kmiconview.h -o kmiconview.moc
+ 
+ #>+ 3
+-kmmainview.moc: $(srcdir)/kmmainview.h
+-	$(MOC) $(srcdir)/kmmainview.h -o kmmainview.moc
++kmpropcontainer.moc: $(srcdir)/kmpropcontainer.h
++	$(MOC) $(srcdir)/kmpropcontainer.h -o kmpropcontainer.moc
+ 
+ #>+ 3
+-kmwizard.moc: $(srcdir)/kmwizard.h
+-	$(MOC) $(srcdir)/kmwizard.h -o kmwizard.moc
++kmdbcreator.moc: $(srcdir)/kmdbcreator.h
++	$(MOC) $(srcdir)/kmdbcreator.h -o kmdbcreator.moc
+ 
+ #>+ 3
+ kmpropwidget.moc: $(srcdir)/kmpropwidget.h
+ 	$(MOC) $(srcdir)/kmpropwidget.h -o kmpropwidget.moc
+ 
+ #>+ 3
+-cjanuswidget.moc: $(srcdir)/cjanuswidget.h
+-	$(MOC) $(srcdir)/cjanuswidget.h -o cjanuswidget.moc
+-
+-#>+ 3
+ kmconfigdialog.moc: $(srcdir)/kmconfigdialog.h
+ 	$(MOC) $(srcdir)/kmconfigdialog.h -o kmconfigdialog.moc
+ 
+ #>+ 3
+-kminstancepage.moc: $(srcdir)/kminstancepage.h
+-	$(MOC) $(srcdir)/kminstancepage.h -o kminstancepage.moc
++kmwlocal.moc: $(srcdir)/kmwlocal.h
++	$(MOC) $(srcdir)/kmwlocal.h -o kmwlocal.moc
+ 
+ #>+ 3
+-kiconselectaction.moc: $(srcdir)/kiconselectaction.h
+-	$(MOC) $(srcdir)/kiconselectaction.h -o kiconselectaction.moc
++kmjobviewer.moc: $(srcdir)/kmjobviewer.h
++	$(MOC) $(srcdir)/kmjobviewer.h -o kmjobviewer.moc
+ 
+ #>+ 3
+-kmdriverdialog.moc: $(srcdir)/kmdriverdialog.h
+-	$(MOC) $(srcdir)/kmdriverdialog.h -o kmdriverdialog.moc
++kmspecialprinterdlg.moc: $(srcdir)/kmspecialprinterdlg.h
++	$(MOC) $(srcdir)/kmspecialprinterdlg.h -o kmspecialprinterdlg.moc
+ 
+ #>+ 3
+-kmlistview.moc: $(srcdir)/kmlistview.h
+-	$(MOC) $(srcdir)/kmlistview.h -o kmlistview.moc
++kiconselectaction.moc: $(srcdir)/kiconselectaction.h
++	$(MOC) $(srcdir)/kiconselectaction.h -o kiconselectaction.moc
+ 
+ #>+ 3
+-kmwsmb.moc: $(srcdir)/kmwsmb.h
+-	$(MOC) $(srcdir)/kmwsmb.h -o kmwsmb.moc
++kmwsocketutil.moc: $(srcdir)/kmwsocketutil.h
++	$(MOC) $(srcdir)/kmwsocketutil.h -o kmwsocketutil.moc
+ 
+ #>+ 3
+-kmconfiggeneral.moc: $(srcdir)/kmconfiggeneral.h
+-	$(MOC) $(srcdir)/kmconfiggeneral.h -o kmconfiggeneral.moc
++kmconfigfilter.moc: $(srcdir)/kmconfigfilter.h
++	$(MOC) $(srcdir)/kmconfigfilter.h -o kmconfigfilter.moc
+ 
+ #>+ 3
+-kmwlocal.moc: $(srcdir)/kmwlocal.h
+-	$(MOC) $(srcdir)/kmwlocal.h -o kmwlocal.moc
++kxmlcommanddlg.moc: $(srcdir)/kxmlcommanddlg.h
++	$(MOC) $(srcdir)/kxmlcommanddlg.h -o kxmlcommanddlg.moc
+ 
+ #>+ 3
+-kmprinterview.moc: $(srcdir)/kmprinterview.h
+-	$(MOC) $(srcdir)/kmprinterview.h -o kmprinterview.moc
++kmpropertypage.moc: $(srcdir)/kmpropertypage.h
++	$(MOC) $(srcdir)/kmpropertypage.h -o kmpropertypage.moc
+ 
+ #>+ 3
+-smbview.moc: $(srcdir)/smbview.h
+-	$(MOC) $(srcdir)/smbview.h -o smbview.moc
++kxmlcommandselector.moc: $(srcdir)/kxmlcommandselector.h
++	$(MOC) $(srcdir)/kxmlcommandselector.h -o kxmlcommandselector.moc
+ 
+ #>+ 3
+-kmdriverdb.moc: $(srcdir)/kmdriverdb.h
+-	$(MOC) $(srcdir)/kmdriverdb.h -o kmdriverdb.moc
++kmwdrivertest.moc: $(srcdir)/kmwdrivertest.h
++	$(MOC) $(srcdir)/kmwdrivertest.h -o kmwdrivertest.moc
+ 
+ #>+ 3
+ kmwsocket.moc: $(srcdir)/kmwsocket.h
+ 	$(MOC) $(srcdir)/kmwsocket.h -o kmwsocket.moc
+ 
+ #>+ 3
+-kmtimer.moc: $(srcdir)/kmtimer.h
+-	$(MOC) $(srcdir)/kmtimer.h -o kmtimer.moc
++kmwizard.moc: $(srcdir)/kmwizard.h
++	$(MOC) $(srcdir)/kmwizard.h -o kmwizard.moc
+ 
+ #>+ 3
+-kmiconview.moc: $(srcdir)/kmiconview.h
+-	$(MOC) $(srcdir)/kmiconview.h -o kmiconview.moc
++kmdriverdb.moc: $(srcdir)/kmdriverdb.h
++	$(MOC) $(srcdir)/kmdriverdb.h -o kmdriverdb.moc
+ 
+ #>+ 3
+-kmpropertypage.moc: $(srcdir)/kmpropertypage.h
+-	$(MOC) $(srcdir)/kmpropertypage.h -o kmpropertypage.moc
++kmtimer.moc: $(srcdir)/kmtimer.h
++	$(MOC) $(srcdir)/kmtimer.h -o kmtimer.moc
+ 
+ #>+ 3
+-kmjobviewer.moc: $(srcdir)/kmjobviewer.h
+-	$(MOC) $(srcdir)/kmjobviewer.h -o kmjobviewer.moc
++kmwizardpage.moc: $(srcdir)/kmwizardpage.h
++	$(MOC) $(srcdir)/kmwizardpage.h -o kmwizardpage.moc
++
++#>+ 3
++kmdriverdialog.moc: $(srcdir)/kmdriverdialog.h
++	$(MOC) $(srcdir)/kmdriverdialog.h -o kmdriverdialog.moc
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  kmpropcontainer.moc kmwsocketutil.moc kmspecialprinterdlg.moc kmconfigfilter.moc kmwclass.moc kmconfigpage.moc pluginaction.moc kxmlcommanddlg.moc kmwizardpage.moc kmdriverdbwidget.moc kmdbcreator.moc kxmlcommandselector.moc kmwdrivertest.moc kmmainview.moc kmwizard.moc kmpropwidget.moc cjanuswidget.moc kmconfigdialog.moc kminstancepage.moc kiconselectaction.moc kmdriverdialog.moc kmlistview.moc kmwsmb.moc kmconfiggeneral.moc kmwlocal.moc kmprinterview.moc smbview.moc kmdriverdb.moc kmwsocket.moc kmtimer.moc kmiconview.moc kmpropertypage.moc kmjobviewer.moc
++	-rm -f  kmmainview.moc kmdriverdbwidget.moc kmconfigpage.moc smbview.moc kmwsmb.moc cjanuswidget.moc kmlistview.moc pluginaction.moc kmconfiggeneral.moc kmwclass.moc kminstancepage.moc kmprinterview.moc kmiconview.moc kmpropcontainer.moc kmdbcreator.moc kmpropwidget.moc kmconfigdialog.moc kmwlocal.moc kmjobviewer.moc kmspecialprinterdlg.moc kiconselectaction.moc kmwsocketutil.moc kmconfigfilter.moc kxmlcommanddlg.moc kmpropertypage.moc kxmlcommandselector.moc kmwdrivertest.moc kmwsocket.moc kmwizard.moc kmdriverdb.moc kmtimer.moc kmwizardpage.moc kmdriverdialog.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -1045,7 +1060,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-libkdeprint_management_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmdbcreator.cpp $(srcdir)/kmdriverdb.cpp $(srcdir)/kmdriverdbwidget.cpp $(srcdir)/kmiconview.cpp $(srcdir)/kminfopage.cpp $(srcdir)/kmmainview.cpp $(srcdir)/kmpages.cpp $(srcdir)/kmprinterview.cpp $(srcdir)/kmjobviewer.cpp $(srcdir)/jobitem.cpp $(srcdir)/kmpropwidget.cpp $(srcdir)/kmpropcontainer.cpp $(srcdir)/kmpropertypage.cpp $(srcdir)/kmpropgeneral.cpp $(srcdir)/cjanuswidget.cpp $(srcdir)/kmpropmembers.cpp $(srcdir)/kmpropbackend.cpp $(srcdir)/kmpropdriver.cpp $(srcdir)/kmlistview.cpp $(srcdir)/kminstancepage.cpp $(srcdir)/kmtimer.cpp $(srcdir)/kmwizard.cpp $(srcdir)/kmwizardpage.cpp $(srcdir)/kmwinfopage.cpp $(srcdir)/kmwpassword.cpp $(srcdir)/kmwsocketutil.cpp $(srcdir)/kmwbackend.cpp $(srcdir)/kmwsocket.cpp $(srcdir)/kmwdriver.cpp $(srcdir)/kmwdriverselect.cpp $(srcdir)/kmwdrivertest.cpp $(srcdir)/kmwinfobase.cpp $(srcdir)/kmwname.cpp $(srcdir)/kmwend.cpp $(srcdir)/kmwclass.cpp $(srcdir)/kmwlpd.cpp $(srcdir)/kmwfile.cpp $(srcdir)/kmdriverdialog.cpp $(srcdir)/kmwsmb.cpp $(srcdir)/smbview.cpp $(srcdir)/kmconfigdialog.cpp $(srcdir)/kmconfigpage.cpp $(srcdir)/kmconfiggeneral.cpp $(srcdir)/kmspecialprinterdlg.cpp $(srcdir)/kmwlocal.cpp $(srcdir)/kiconselectaction.cpp $(srcdir)/kmconfigpreview.cpp $(srcdir)/sidepixmap.cpp $(srcdir)/pluginaction.cpp $(srcdir)/kxmlcommanddlg.cpp $(srcdir)/kxmlcommandselector.cpp $(srcdir)/kmconfigcommand.cpp $(srcdir)/kmconfigfilter.cpp  kmdriverdialog.moc kmpropcontainer.moc kmlistview.moc kmwsocketutil.moc kmwsmb.moc kmconfiggeneral.moc kmprinterview.moc kmwlocal.moc smbview.moc kmspecialprinterdlg.moc kmconfigfilter.moc kmdriverdb.moc kmwclass.moc kmwsocket.moc kmconfigpage.moc pluginaction.moc kxmlcommanddlg.moc kmwizardpage.moc kmdriverdbwidget.moc kmdbcreator.moc kxmlcommandselector.moc kmwdrivertest.moc kmiconview.moc kmtimer.moc kmmainview.moc kmwizard.moc kmpropwidget.moc cjanuswidget.moc kmjobviewer.moc kmpropertypage.moc kmconfigdialog.moc kiconselectaction.moc kminstancepage.moc
++libkdeprint_management_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmdbcreator.cpp $(srcdir)/kmdriverdb.cpp $(srcdir)/kmdriverdbwidget.cpp $(srcdir)/kmiconview.cpp $(srcdir)/kminfopage.cpp $(srcdir)/kmmainview.cpp $(srcdir)/kmpages.cpp $(srcdir)/kmprinterview.cpp $(srcdir)/kmjobviewer.cpp $(srcdir)/jobitem.cpp $(srcdir)/kmpropwidget.cpp $(srcdir)/kmpropcontainer.cpp $(srcdir)/kmpropertypage.cpp $(srcdir)/kmpropgeneral.cpp $(srcdir)/cjanuswidget.cpp $(srcdir)/kmpropmembers.cpp $(srcdir)/kmpropbackend.cpp $(srcdir)/kmpropdriver.cpp $(srcdir)/kmlistview.cpp $(srcdir)/kminstancepage.cpp $(srcdir)/kmtimer.cpp $(srcdir)/kmwizard.cpp $(srcdir)/kmwizardpage.cpp $(srcdir)/kmwinfopage.cpp $(srcdir)/kmwpassword.cpp $(srcdir)/kmwsocketutil.cpp $(srcdir)/kmwbackend.cpp $(srcdir)/kmwsocket.cpp $(srcdir)/kmwdriver.cpp $(srcdir)/kmwdriverselect.cpp $(srcdir)/kmwdrivertest.cpp $(srcdir)/kmwinfobase.cpp $(srcdir)/kmwname.cpp $(srcdir)/kmwend.cpp $(srcdir)/kmwclass.cpp $(srcdir)/kmwlpd.cpp $(srcdir)/kmwfile.cpp $(srcdir)/kmdriverdialog.cpp $(srcdir)/kmwsmb.cpp $(srcdir)/smbview.cpp $(srcdir)/kmconfigdialog.cpp $(srcdir)/kmconfigpage.cpp $(srcdir)/kmconfiggeneral.cpp $(srcdir)/kmspecialprinterdlg.cpp $(srcdir)/kmwlocal.cpp $(srcdir)/kiconselectaction.cpp $(srcdir)/kmconfigpreview.cpp $(srcdir)/sidepixmap.cpp $(srcdir)/pluginaction.cpp $(srcdir)/kxmlcommanddlg.cpp $(srcdir)/kxmlcommandselector.cpp $(srcdir)/kmconfigcommand.cpp $(srcdir)/kmconfigfilter.cpp  kmmainview.moc kmdriverdbwidget.moc kmjobviewer.moc kmwlocal.moc kmconfigdialog.moc kmspecialprinterdlg.moc kiconselectaction.moc kmconfigpage.moc smbview.moc kmwsmb.moc cjanuswidget.moc kmconfigfilter.moc kmwsocketutil.moc kmlistview.moc kmpropertypage.moc kxmlcommanddlg.moc kxmlcommandselector.moc kmwdrivertest.moc kmwsocket.moc pluginaction.moc kmconfiggeneral.moc kmwclass.moc kminstancepage.moc kmprinterview.moc kmiconview.moc kmpropcontainer.moc kmwizard.moc kmdriverdb.moc kmtimer.moc kmdbcreator.moc kmdriverdialog.moc kmwizardpage.moc kmpropwidget.moc
+ 	@echo 'creating libkdeprint_management_la.all_cpp.cpp ...'; \
+ 	rm -f libkdeprint_management_la.all_cpp.files libkdeprint_management_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> libkdeprint_management_la.all_cpp.final; \
+@@ -1081,69 +1096,69 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 67
+-kmtimer.o: kmtimer.moc 
+-kmpropertypage.o: kmpropertypage.moc 
+-smbview.lo: smbview.moc 
+-kmdriverdialog.o: kmdriverdialog.moc 
+ kmmainview.o: kmmainview.moc 
+-kmwsmb.o: kmwsmb.moc 
+-kmwclass.lo: kmwclass.moc 
+-kmwsocket.o: kmwsocket.moc 
++kmpropcontainer.lo: kmpropcontainer.moc 
++kmmainview.lo: kmmainview.moc 
++kmpropwidget.o: kmpropwidget.moc 
++kmdbcreator.o: kmdbcreator.moc 
++kmwizardpage.lo: kmwizardpage.moc 
++kmwclass.o: kmwclass.moc 
+ kmwlocal.lo: kmwlocal.moc 
++kmconfigpage.o: kmconfigpage.moc 
++pluginaction.lo: pluginaction.moc 
+ kmwdrivertest.o: kmwdrivertest.moc 
+-kmpropertypage.lo: kmpropertypage.moc 
+-kmwlocal.o: kmwlocal.moc 
+-kxmlcommanddlg.lo: kxmlcommanddlg.moc 
+-kminstancepage.lo: kminstancepage.moc 
+-kiconselectaction.lo: kiconselectaction.moc 
+-kxmlcommandselector.lo: kxmlcommandselector.moc 
+-kmwsocket.lo: kmwsocket.moc 
+-kmmainview.lo: kmmainview.moc 
+-kxmlcommanddlg.o: kxmlcommanddlg.moc 
+-kmconfiggeneral.lo: kmconfiggeneral.moc 
+-kmlistview.lo: kmlistview.moc 
+-kmwsocketutil.lo: kmwsocketutil.moc 
++smbview.lo: smbview.moc 
+ kmconfigdialog.lo: kmconfigdialog.moc 
+-kmdriverdbwidget.lo: kmdriverdbwidget.moc 
+-kmdbcreator.lo: kmdbcreator.moc 
+-kmjobviewer.o: kmjobviewer.moc 
+-kmpropcontainer.lo: kmpropcontainer.moc 
+ kmwizardpage.o: kmwizardpage.moc 
+-kmwclass.o: kmwclass.moc 
++kmwdrivertest.lo: kmwdrivertest.moc 
++kiconselectaction.o: kiconselectaction.moc 
++kmiconview.o: kmiconview.moc 
++kmdriverdb.o: kmdriverdb.moc 
++kmpropcontainer.o: kmpropcontainer.moc 
++kmtimer.o: kmtimer.moc 
++kmjobviewer.o: kmjobviewer.moc 
++kmtimer.lo: kmtimer.moc 
++cjanuswidget.o: cjanuswidget.moc 
++kmwlocal.o: kmwlocal.moc 
++kmjobviewer.lo: kmjobviewer.moc 
+ kmdriverdbwidget.o: kmdriverdbwidget.moc 
+-pluginaction.lo: pluginaction.moc 
+-kxmlcommandselector.o: kxmlcommandselector.moc 
++kmconfiggeneral.lo: kmconfiggeneral.moc 
+ smbview.o: smbview.moc 
+-kmwdrivertest.lo: kmwdrivertest.moc 
+-kmspecialprinterdlg.o: kmspecialprinterdlg.moc 
+-kmprinterview.o: kmprinterview.moc 
+-kmwizardpage.lo: kmwizardpage.moc 
+-kmpropwidget.o: kmpropwidget.moc 
+ kmconfigdialog.o: kmconfigdialog.moc 
+-cjanuswidget.lo: cjanuswidget.moc 
++kmwsmb.lo: kmwsmb.moc 
++kiconselectaction.lo: kiconselectaction.moc 
++kxmlcommandselector.o: kxmlcommandselector.moc 
++kminstancepage.o: kminstancepage.moc 
++kmconfiggeneral.o: kmconfiggeneral.moc 
++kmwclass.lo: kmwclass.moc 
++kmdbcreator.lo: kmdbcreator.moc 
+ kmconfigfilter.lo: kmconfigfilter.moc 
+-kmconfigfilter.o: kmconfigfilter.moc 
+-pluginaction.o: pluginaction.moc 
+-kmiconview.o: kmiconview.moc 
+-kiconselectaction.o: kiconselectaction.moc 
++kmdriverdbwidget.lo: kmdriverdbwidget.moc 
++kmwsocketutil.lo: kmwsocketutil.moc 
++kminstancepage.lo: kminstancepage.moc 
+ kmwizard.lo: kmwizard.moc 
+-kmconfigpage.o: kmconfigpage.moc 
+-kmdbcreator.o: kmdbcreator.moc 
+-kmwsocketutil.o: kmwsocketutil.moc 
+-cjanuswidget.o: cjanuswidget.moc 
+-kmlistview.o: kmlistview.moc 
++kmpropwidget.lo: kmpropwidget.moc 
+ kmprinterview.lo: kmprinterview.moc 
+-kmtimer.lo: kmtimer.moc 
++kmwsocket.lo: kmwsocket.moc 
++cjanuswidget.lo: cjanuswidget.moc 
++kmwsmb.o: kmwsmb.moc 
++kmlistview.o: kmlistview.moc 
+ kmspecialprinterdlg.lo: kmspecialprinterdlg.moc 
+-kmdriverdb.lo: kmdriverdb.moc 
++pluginaction.o: pluginaction.moc 
++kxmlcommanddlg.lo: kxmlcommanddlg.moc 
++kxmlcommandselector.lo: kxmlcommandselector.moc 
++kmspecialprinterdlg.o: kmspecialprinterdlg.moc 
+ kmconfigpage.lo: kmconfigpage.moc 
+-kmdriverdb.o: kmdriverdb.moc 
+-kmjobviewer.lo: kmjobviewer.moc 
+-kmwizard.o: kmwizard.moc 
+-kmpropwidget.lo: kmpropwidget.moc 
+-kmconfiggeneral.o: kmconfiggeneral.moc 
+-kmwsmb.lo: kmwsmb.moc 
+ kmiconview.lo: kmiconview.moc 
+-kminstancepage.o: kminstancepage.moc 
+-kmpropcontainer.o: kmpropcontainer.moc 
++kxmlcommanddlg.o: kxmlcommanddlg.moc 
++kmconfigfilter.o: kmconfigfilter.moc 
++kmwsocketutil.o: kmwsocketutil.moc 
++kmdriverdb.lo: kmdriverdb.moc 
++kmprinterview.o: kmprinterview.moc 
++kmwsocket.o: kmwsocket.moc 
++kmpropertypage.o: kmpropertypage.moc 
+ kmdriverdialog.lo: kmdriverdialog.moc 
++kmlistview.lo: kmlistview.moc 
++kmdriverdialog.o: kmdriverdialog.moc 
++kmpropertypage.lo: kmpropertypage.moc 
++kmwizard.o: kmwizard.moc 

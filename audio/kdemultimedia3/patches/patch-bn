@@ -1,17 +1,17 @@
-$NetBSD: patch-bn,v 1.1 2002/06/25 06:34:36 skrll Exp $
+$NetBSD: patch-bn,v 1.2 2003/01/02 09:12:22 skrll Exp $
 
---- noatun/modules/kaiman/Makefile.in.orig	Sun Jun  9 12:21:18 2002
+--- noatun/modules/kaiman/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ noatun/modules/kaiman/Makefile.in
-@@ -301,7 +301,7 @@
+@@ -300,7 +300,7 @@ noatun_kaiman_la_SOURCES = \
  
  
  noatun_kaiman_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
 -noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
 +noatun_kaiman_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
- 	-lqtmcop -lkmedia2_idl -lsoundserver_idl
+                         -lqtmcop -lkmedia2_idl -lsoundserver_idl
  
  
-@@ -321,7 +321,7 @@
+@@ -320,7 +320,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_kaiman_la_DEPENDENCIES = \
@@ -20,21 +20,59 @@ $NetBSD: patch-bn,v 1.1 2002/06/25 06:34:36 skrll Exp $
  am_noatun_kaiman_la_OBJECTS = noatunui.lo style.lo userinterface.lo \
  	pref.lo
  #>- noatun_kaiman_la_OBJECTS = $(am_noatun_kaiman_la_OBJECTS)
-@@ -570,7 +570,7 @@
+@@ -574,7 +574,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kaimanui.rc kaiman.plugin SKIN-SPECS 
+-KDE_DIST=kaiman.plugin kaimanui.rc SKIN-SPECS 
 +KDE_DIST=kaimanui.rc SKIN-SPECS kaiman.plugin 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -768,7 +768,7 @@
- 	-rm -f  noatun_kaiman_la_meta_unload.cpp
+@@ -725,20 +725,20 @@ noatun_kaiman.la.closure: $(noatun_kaima
+ 
+ 
+ #>+ 3
+-userinterface.moc: $(srcdir)/userinterface.h
+-	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
++style.moc: $(srcdir)/style.h
++	$(MOC) $(srcdir)/style.h -o style.moc
+ 
+ #>+ 3
+ pref.moc: $(srcdir)/pref.h
+ 	$(MOC) $(srcdir)/pref.h -o pref.moc
+ 
+ #>+ 3
+-style.moc: $(srcdir)/style.h
+-	$(MOC) $(srcdir)/style.h -o style.moc
++userinterface.moc: $(srcdir)/userinterface.h
++	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  userinterface.moc pref.moc style.moc
++	-rm -f  style.moc pref.moc userinterface.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -755,7 +755,7 @@ force-reedit:
+ 
  
  #>+ 11
--noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp noatun_kaiman_la_meta_unload.cpp   style.moc pref.moc userinterface.moc 
-+noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp $(srcdir)/noatun_kaiman_la_meta_unload.cpp   style.moc pref.moc userinterface.moc 
+-noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp  userinterface.moc style.moc pref.moc
++noatun_kaiman_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatunui.cpp $(srcdir)/style.cpp $(srcdir)/userinterface.cpp $(srcdir)/pref.cpp  style.moc pref.moc userinterface.moc
  	@echo 'creating noatun_kaiman_la.all_cpp.cpp ...'; \
  	rm -f noatun_kaiman_la.all_cpp.files noatun_kaiman_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_kaiman_la.all_cpp.final; \
+@@ -791,9 +791,9 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 7
+-userinterface.lo: userinterface.moc 
+-style.lo: style.moc 
+ pref.lo: pref.moc 
++style.lo: style.moc 
+ userinterface.o: userinterface.moc 
+ style.o: style.moc 
+ pref.o: pref.moc 
++userinterface.lo: userinterface.moc 

@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.2 2002/08/25 19:23:39 jlam Exp $
+$NetBSD: patch-bm,v 1.3 2003/01/02 09:12:34 skrll Exp $
 
---- kicker/applets/launcher/Makefile.in.orig	Mon May 13 23:57:45 2002
+--- kicker/applets/launcher/Makefile.in.orig	Fri Dec 27 18:19:11 2002
 +++ kicker/applets/launcher/Makefile.in
-@@ -302,14 +302,14 @@
+@@ -301,14 +301,14 @@ lnk_DATA = quicklauncher.desktop
  EXTRA_DIST = $(lnk_DATA)
  
  launcher_panelapplet_la_LDFLAGS = $(all_libraries) -version-info 1:0:0 -module 
@@ -19,3 +19,50 @@ $NetBSD: patch-bm,v 1.2 2002/08/25 19:23:39 jlam Exp $
  am_launcher_panelapplet_la_OBJECTS = quicklauncher.lo quickbutton.lo \
  	quickaddappsmenu.lo
  #>- launcher_panelapplet_la_OBJECTS = $(am_launcher_panelapplet_la_OBJECTS)
+@@ -622,10 +622,6 @@ srcdoc:
+ .NOEXPORT:
+ 
+ #>+ 3
+-quickbutton.moc: $(srcdir)/quickbutton.h
+-	$(MOC) $(srcdir)/quickbutton.h -o quickbutton.moc
+-
+-#>+ 3
+ quickaddappsmenu.moc: $(srcdir)/quickaddappsmenu.h
+ 	$(MOC) $(srcdir)/quickaddappsmenu.h -o quickaddappsmenu.moc
+ 
+@@ -634,8 +630,12 @@ quicklauncher.moc: $(srcdir)/quicklaunch
+ 	$(MOC) $(srcdir)/quicklauncher.h -o quicklauncher.moc
+ 
+ #>+ 3
++quickbutton.moc: $(srcdir)/quickbutton.h
++	$(MOC) $(srcdir)/quickbutton.h -o quickbutton.moc
++
++#>+ 3
+ clean-metasources:
+-	-rm -f  quickbutton.moc quickaddappsmenu.moc quicklauncher.moc
++	-rm -f  quickaddappsmenu.moc quicklauncher.moc quickbutton.moc
+ 
+ #>+ 2
+ docs-am:
+@@ -648,7 +648,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-launcher_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/quicklauncher.cpp $(srcdir)/quickbutton.cpp $(srcdir)/quickaddappsmenu.cpp  quickbutton.moc quickaddappsmenu.moc quicklauncher.moc
++launcher_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/quicklauncher.cpp $(srcdir)/quickbutton.cpp $(srcdir)/quickaddappsmenu.cpp  quicklauncher.moc quickaddappsmenu.moc quickbutton.moc
+ 	@echo 'creating launcher_panelapplet_la.all_cpp.cpp ...'; \
+ 	rm -f launcher_panelapplet_la.all_cpp.files launcher_panelapplet_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> launcher_panelapplet_la.all_cpp.final; \
+@@ -684,9 +684,9 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 7
+-quicklauncher.lo: quicklauncher.moc 
++quicklauncher.o: quicklauncher.moc 
+ quickaddappsmenu.lo: quickaddappsmenu.moc 
+-quickbutton.lo: quickbutton.moc 
+ quickbutton.o: quickbutton.moc 
+-quicklauncher.o: quicklauncher.moc 
+ quickaddappsmenu.o: quickaddappsmenu.moc 
++quicklauncher.lo: quicklauncher.moc 
++quickbutton.lo: quickbutton.moc 

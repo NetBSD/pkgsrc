@@ -1,8 +1,8 @@
-$NetBSD: patch-bz,v 1.1 2002/06/25 06:34:39 skrll Exp $
+$NetBSD: patch-bz,v 1.2 2003/01/02 09:12:23 skrll Exp $
 
---- noatun/modules/net/Makefile.in.orig	Sun Jun  9 12:30:16 2002
+--- noatun/modules/net/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ noatun/modules/net/Makefile.in
-@@ -295,7 +295,7 @@
+@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_net.la
  noatun_net_la_SOURCES = net.cpp
  
  noatun_net_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bz,v 1.1 2002/06/25 06:34:39 skrll Exp $
  
  #>- noatun_net_la_METASOURCES = AUTO
  
-@@ -308,7 +308,8 @@
+@@ -307,7 +307,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,13 +20,11 @@ $NetBSD: patch-bz,v 1.1 2002/06/25 06:34:39 skrll Exp $
 +	$(top_builddir)/noatun/library/libnoatun_core.la
  am_noatun_net_la_OBJECTS = net.lo
  #>- noatun_net_la_OBJECTS = $(am_noatun_net_la_OBJECTS)
- #>+ 5
-@@ -654,7 +655,7 @@
- 	-rm -f  noatun_net_la_meta_unload.cpp
+ #>+ 1
+@@ -655,5 +656,5 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
- #>+ 11
--noatun_net_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/net.cpp noatun_net_la_meta_unload.cpp   net.moc 
-+noatun_net_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/net.cpp $(srcdir)/noatun_net_la_meta_unload.cpp   net.moc 
- 	@echo 'creating noatun_net_la.all_cpp.cpp ...'; \
- 	rm -f noatun_net_la.all_cpp.files noatun_net_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> noatun_net_la.all_cpp.final; \
+ #>+ 3
+-net.o: net.moc 
+ net.lo: net.moc 
++net.o: net.moc 

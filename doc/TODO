@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.119 2003/01/01 09:56:50 tron Exp $
+$NetBSD: TODO,v 1.120 2003/01/02 09:12:20 skrll Exp $
 
 Suggested new packages
 ======================
@@ -152,7 +152,6 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o johntheripper-1.6.32
 	o jpilot-0.99.2 [dillo]
-	o kde-3.0.5a [skrll]
 	o kdevelop-2.1.4 [3.0alpha1]
 	o koffice-1.2.1
 	o lbreakout2-2.4
