@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/03/19 04:43:41 tv Exp $
+
+--- archive.h.in.orig	Sat Feb 12 18:41:52 2005
++++ archive.h.in
+@@ -52,7 +52,9 @@ int		archive_api_feature(void);
+ const char *	archive_version(void);
+ 
+ #include <sys/types.h>  /* Linux requires this for off_t */
++#ifndef __INTERIX
+ #include <inttypes.h>  /* For int64_t */
++#endif
+ #include <unistd.h>  /* For ssize_t and size_t */
+ 
+ #define	ARCHIVE_BYTES_PER_RECORD	  512
