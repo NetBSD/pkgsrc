@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1 2002/02/28 18:28:15 jlam Exp $
+
+--- configure.in.orig	Thu Oct 19 04:54:17 2000
++++ configure.in
+@@ -29,15 +29,6 @@
+         CPPFLAGS="$CPPFLAGS -traditional-cpp"
+ fi
+ 
+-#
+-# Check for /usr/pkg/{lib,include} which is where NetBSD puts binary
+-# and source packages.  This should be harmless on other OSs.
+-#
+-if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
+-       CFLAGS="$CFLAGS -I/usr/pkg/include"
+-       LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
+-fi
+-
+ AC_HEADER_STDC
+ 
+ AC_MSG_CHECKING(for static Apache module support)
+@@ -140,10 +131,17 @@
+                             default search.],
+ [
+   if test "$withval" != "no" ; then
+-    if test -f "$withval/include/xmlparse.h" ; then
++    if test -f "$withval/include/expat.h" ; then
+         XML_DIR=$withval
+         XML_INCLUDE="$withval/include"
+         XML_LIB="$withval/lib"
++    fi
++    if test "$XML_DIR" = "" ; then
++      if test -f "$withval/include/xmlparse.h" ; then
++          XML_DIR=$withval
++          XML_INCLUDE="$withval/include"
++          XML_LIB="$withval/lib"
++      fi
+     fi
+     if test "$XML_DIR" = "" ; then
+       if test -f "$withval/include/xml/xmlparse.h" ; then

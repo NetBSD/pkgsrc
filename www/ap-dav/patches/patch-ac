@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/02/28 18:28:16 jlam Exp $
+
+--- dav_xmlparse.c.orig	Tue Oct 17 04:48:16 2000
++++ dav_xmlparse.c
+@@ -18,7 +18,7 @@
+ */
+ 
+ /* James Clark's Expat parser */
+-#include <xmlparse.h>
++#include <expat.h>
+ 
+ #include "httpd.h"
+ #include "http_protocol.h"
