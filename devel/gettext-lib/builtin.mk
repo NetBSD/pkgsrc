@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2004/04/01 18:33:20 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.6 2004/04/06 01:29:25 reed Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -14,13 +14,24 @@ _LIBINTL_H=	/usr/include/libintl.h
 
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS]) && exists(${_LIBINTL_H})
+.  if  exists(${_LIBINTL_H})
+.    if !empty(_BLNK_LIBINTL_FOUND:M[Nn][Oo])
 IS_BUILTIN.gettext!=	\
-	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_LIBINTL_H}; then \
+	if ${GREP} -q "This file is part of the GNU C Library" ${_LIBINTL_H}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
 	fi
+.    endif
+.    if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
+IS_BUILTIN.gettext!=	\
+ 	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_LIBINTL_H}; then \
+ 		${ECHO} "yes";						\
+ 	else								\
+ 		${ECHO} "no";						\
+ 	fi
+.    endif
+
 .    if !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
 # XXX
 # XXX Consider the native libintl to be gettext-lib-0.10.35nb1.
