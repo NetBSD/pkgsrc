@@ -1,0 +1,3 @@
+Libyahoo is the Yahoo! Messenger client library used by gtkyahoo, kyahoo,
+everybuddy, jabber, etc.  It encapsulates routines to speak the Yahoo!
+Instant Messenging protocol.
