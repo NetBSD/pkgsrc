@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.256 2002/10/15 03:39:00 markd Exp $
+$NetBSD: CHANGES,v 1.257 2002/10/15 10:19:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added grep 2.5 [bouyer 2002-10-14]
 	Added py-jpCodecs-1.4.9 [tsarna 2002-10-14]
 	Updated kdbg to 1.2.6 [markd 2002-10-15]
+	Updated popt to 1.7 [martti 2002-10-15]
