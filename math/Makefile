@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2001/02/08 10:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2001/02/10 04:13:28 jtb Exp $
 #
 
     SUBDIR += R
@@ -28,6 +28,7 @@
     SUBDIR += octave
     SUBDIR += odepack
     SUBDIR += otter
+    SUBDIR += p5-BigInteger
     SUBDIR += p5-MatrixReal
     SUBDIR += pspp
     SUBDIR += py-Numeric
