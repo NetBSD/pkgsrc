@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/17 04:35:55 fredb Exp $
+
+--- Makefile.in.orig	Mon Aug 31 13:40:14 1998
++++ Makefile.in	Sat Oct 16 02:31:06 1999
+@@ -42,7 +42,7 @@
+ HARDLINK =	ln -f
+ 
+ CC =		@CC@
+-INCLUDES =	@CPPFLAGS@ -Ilibhfs @TCL_INCLUDES@ @TK_INCLUDES@
++INCLUDES =	@CPPFLAGS@ @TCL_INCLUDES@ @TK_INCLUDES@
+ DEFINES =	@DEFS@
+ LIBOBJS =	@LIBOBJS@
+ LIBS =		@LIBS@
+@@ -51,7 +51,7 @@
+ TKLIBS =	@TK_LIB_SPEC@ @TCL_LIB_SPEC@ @TK_LIBS@
+ 
+ COPTS =		@CFLAGS@
+-LDOPTS =	@LDFLAGS@ -Llibhfs
++LDOPTS =	@LDFLAGS@
+ 
+ ### END OF USER CUSTOMIZATION #################################################
+ 
+@@ -67,11 +67,11 @@
+ TCLTARGETS =	hfssh hfs
+ TKTARGETS =	xhfs
+ 
+-LIBHFS =	libhfs/libhfs.a
+-INCHFS =	libhfs/hfs.h
++LIBHFS =
++INCHFS =
+ 
+-LIBRSRC =	librsrc/librsrc.a
+-INCRSRC =	librsrc/rsrc.h
++LIBRSRC =
++INCRSRC =
+ 
+ HFSUTIL =	hfsutil
+ HFSCK =		hfsck/hfsck
+@@ -125,15 +125,14 @@
+ 	done
+ 
+ install_tcl :: all_tcl
+-	for file in $(TCLTARGETS); do  \
+-		$(BININSTALL) $$file "$(BINDEST)/.";  \
+-	done
++	$(BININSTALL) hfssh "$(BINDEST)/."
++	$(LIBINSTALL) hfs "$(BINDEST)/."
+ 
+-	if [ -f "$(BINDEST)/hfs" ]; then  \
+-		sed -e '1d' "$(BINDEST)/hfs" > "$(BINDEST)/hfs.new";  \
+-		$(BININSTALL) "$(BINDEST)/hfs.new" "$(BINDEST)/hfs";  \
+-		rm -f "$(BINDEST)/hfs.new";  \
+-	fi
++#	if [ -f "$(BINDEST)/hfs" ]; then  \
++#		sed -e '1d' "$(BINDEST)/hfs" > "$(BINDEST)/hfs.new";  \
++#		$(BININSTALL) "$(BINDEST)/hfs.new" "$(BINDEST)/hfs";  \
++#		rm -f "$(BINDEST)/hfs.new";  \
++#	fi
+ 
+ 	for file in $(TCLDOCS); do  \
+ 		$(LIBINSTALL) doc/man/$$file  \
