@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/20 09:49:33 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 16:33:05 agc Exp $
 
 SHA1 (adodb400.tgz) = 40640dfee6c1bea52b5cb4a2bc908d89cf2c8be8
+RMD160 (adodb400.tgz) = 36f591906cee23e1c495d3cab3fe02a39d47e25c
 Size (adodb400.tgz) = 406010 bytes

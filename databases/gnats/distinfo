@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/11/14 10:59:58 soren Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 16:33:05 agc Exp $
 
 SHA1 (gnats-4.0.1.tar.gz) = 4139af3842ade6cdfe8b14eff50e49aff3d70c40
+RMD160 (gnats-4.0.1.tar.gz) = 9823920d3dc8fe9d70e47a3bc1c475776592b831
 Size (gnats-4.0.1.tar.gz) = 1477650 bytes
 SHA1 (patch-aa) = e7a000501277041a61475b5ad0df587e7a9d018d
 SHA1 (patch-ab) = 8f1b4c35629e70ed1a7c6e6ea0b9bb610cfd7d70
