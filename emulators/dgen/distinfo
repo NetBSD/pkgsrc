@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/25 04:53:23 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:18 agc Exp $
 
 SHA1 (dgen-sdl-1.23.tar.gz) = c37096e5dd7c9f2c2c75496769d6d2b610a3a488
+RMD160 (dgen-sdl-1.23.tar.gz) = ca5ac81b4c8436a63e8d776b182735ad63ffa77a
 Size (dgen-sdl-1.23.tar.gz) = 340556 bytes

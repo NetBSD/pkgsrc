@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/01/17 19:00:33 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 18:49:18 agc Exp $
 
 SHA1 (gpsim-20040826.tar.gz) = 799632050e48ae341070061aff42efeb079d50aa
+RMD160 (gpsim-20040826.tar.gz) = 173ef94f31814f3a7a2c478962eee39549a843f1
 Size (gpsim-20040826.tar.gz) = 1114098 bytes
 SHA1 (patch-aa) = 0f5bae7ef32e80070d0f033015dc3cdd0e36ea6c
 SHA1 (patch-ab) = 5def3db082263602c21620a817b0eb80dfe32d5a

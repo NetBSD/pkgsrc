@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/08/07 13:34:09 jdolecek Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse91/i586/libpng-1.2.5-182.7.i586.rpm) = 9a3c3425dc11c1805f23ce3bd5a76b369e4eea49
+RMD160 (suse91/i586/libpng-1.2.5-182.7.i586.rpm) = 6e0d487c768fe841fdf802339e257202078eb6dc
 Size (suse91/i586/libpng-1.2.5-182.7.i586.rpm) = 175528 bytes
