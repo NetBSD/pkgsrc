@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.135 2002/10/02 11:49:28 tron Exp $
+$NetBSD: CHANGES,v 1.136 2002/10/02 13:10:58 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3065,3 +3065,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pan to 0.11.4 [rh 2002-10-02]
 	Updated vmware-module to 1.0nb1 [uebayasi 2002-10-02]
 	Updated gauche to 0.6.3 [minoura 2002-10-02]
+	Updated apache to 2.0.42 [itojun 2002-10-02]
