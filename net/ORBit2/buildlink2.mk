@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/12/14 19:43:50 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/04/01 18:16:17 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use ORBit2.
 #
@@ -9,7 +9,7 @@
 ORBIT2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			ORBit2
-BUILDLINK_DEPENDS.ORBit2?=		ORBit2>=2.8.2
+BUILDLINK_DEPENDS.ORBit2?=		ORBit2>=2.10.0
 BUILDLINK_PKGSRCDIR.ORBit2?=		../../net/ORBit2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ORBit2=ORBit2
