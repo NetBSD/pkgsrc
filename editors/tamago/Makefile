@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2002/09/04 14:42:41 taca Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/23 16:56:02 taca Exp $
 
 DISTNAME=	tamago-4.0.6
-PKGREVISION=	1
+PKGNAME=	tamago-20020909
 CATEGORIES=	editors
 MASTER_SITES=	ftp://www.m17n.org/pub/tamago/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.m17n.org/tamago/
-COMMENT=	CJK characters inputting system for emacs-20+leim
-
-DEPENDS+=	emacs>=20.2:../../editors/emacs
-DEPENDS+=	leim>=20.2:../../editors/leim
+COMMENT=	CJK characters inputting system for emacs + leim
 
 GNU_CONFIGURE=	yes
+# XXX please someone adjust paths and PLIST for XEmacs...
+EMACS_VERSIONS_ACCEPTED= emacs21 emacs20
 
+.include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
