@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.17 2001/11/27 02:07:10 hubertf Exp $
+$NetBSD: patch-ab,v 1.18 2002/01/14 20:48:53 hubertf Exp $
 
---- configure.orig	Sat Oct 27 00:26:56 2001
+--- configure.orig	Thu Jan  3 21:40:19 2002
 +++ configure
 @@ -2290,7 +2290,6 @@
    FALSE_FALSE=
@@ -9,11 +9,12 @@ $NetBSD: patch-ab,v 1.17 2001/11/27 02:07:10 hubertf Exp $
 -localedir='${prefix}/share/locale'
  
  
- ALL_LINGUAS="cs de fr ja pt_BR"
-@@ -4121,6 +4120,8 @@
+ ALL_LINGUAS="cs de fr ja pt_BR zh_TW"
+@@ -4121,6 +4120,9 @@
  	< $srcdir/po/POTFILES.in > po/POTFILES
    
  
++
 +DATADIRNAME="${PKGLOCALEDIR}"
 +localedir='${prefix}/${DATADIRNAME}/locale'
  
