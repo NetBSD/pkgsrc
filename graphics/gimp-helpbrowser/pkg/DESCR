@@ -1,4 +1,0 @@
-XML based help file browser for the GNU Image Manipulation Program.
-
-Because this optional plugin requires several additional libraries
-it has been moved to a seperate package.
