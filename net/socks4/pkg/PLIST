@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/11 16:03:56 agc Exp $
+bin/rfinger
+bin/rwhois
+bin/rftp
+bin/rtelnet
+etc/socks.conf
+lib/libsocks4.a
+libexec/sockd
+man/man1/rfinger.1
+man/man1/rftp.1
+man/man1/rtelnet.1
+man/man1/rwhois.1
+man/man1/socks_clients.1
+man/man5/sockd.conf.5
+man/man5/sockd.route.5
+man/man5/socks.conf.5
+man/man8/sockd.8
