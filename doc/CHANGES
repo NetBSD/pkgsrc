@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8857 2005/01/21 21:17:05 wiz Exp $
+$NetBSD: CHANGES,v 1.8858 2005/01/21 22:53:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -480,3 +480,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmbdfed to 4.5 [kei 2005-01-21]
 	Updated gnome-vfs2 to 2.8.3nb3 [recht 2005-01-21]
 	Updated vcdimager-devel to 0.7.20nb3 [wiz 2005-01-21]
+	Updated festival-doc to 1.4.0.1nb2 [wiz 2005-01-21]
