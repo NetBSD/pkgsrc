@@ -1,154 +1,176 @@
-$NetBSD: patch-ab,v 1.7 2004/04/17 16:56:10 seb Exp $
+$NetBSD: patch-ab,v 1.8 2004/11/29 22:11:51 seb Exp $
 
---- configure.in.orig	2004-03-02 00:18:28.000000000 +0000
-+++ configure.in
+--- configure.ac.orig	2004-09-14 22:04:08.000000000 +0000
++++ configure.ac
 @@ -25,7 +25,10 @@ case "${target_os}" in
  	PATHSEPARATOR=":"
  	;;
    * ) # This sucks!  Whatever happened to standards for file system layout?
 -	DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/X11R6/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf";
 +	DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype:${X11PREFIX}/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf";
-+        if test x"$X11PREFIX" != x"$X11BASE"; then
-+            DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/TTF:${X11BASE}/lib/X11/fonts/Type1"
-+        fi
++	if test x"$X11PREFIX" != x"$X11BASE"; then
++		DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/TTF:${X11BASE}/lib/X11/fonts/Type1"
++	fi
  	PATHSEPARATOR=":"
  	;;
  esac
-@@ -202,52 +205,13 @@ fi
- #     AC_MSG_RESULT(no)
- # )
+@@ -206,71 +209,12 @@ dnl INCLUDES and LIBS for TCL
+ # start by assuming we have it
+ HAVE_TCL=1 
  
--dnl -----------------------------------
--dnl INCLUDES and LIBS for TCL
 -AC_ARG_WITH(tclsh,
--	 [  --with-tclsh=PROG       build graphviz for specific tclsh],
--	TCLSH=$withval,)
+-    [  --with-tclsh=PROG       build graphviz for specific tclsh],
+-    TCLSH=$withval,)
+-
 -if test "x$TCLSH" = "x"; then
--	AC_PATH_PROG(TCLSH,tclsh8.4)
--	if test "x$TCLSH" = "x"; then
--		AC_PATH_PROG(TCLSH,tclsh8.3)
--		if test "x$TCLSH" = "x"; then
--			AC_PATH_PROG(TCLSH,tclsh)
--		fi
--	fi
--fi
--TCL_VERSION_FOUND=`echo 'puts [[info tclversion]]' | $TCLSH`
--
--# can't assume ksh on all architectures
--# TCLSH_EXEC_PREFIX=${TCLSH%%/bin/tclsh.*}
--TCLSH_EXEC_PREFIX=`echo $TCLSH|sed -e 's%/bin/tclsh.*$%%'`
--
--if test -f ${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/tcl.h; then
--	TCL_INCLUDES="-I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND} -I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/generic"
--else
--if test "x${TCLSH_EXEC_PREFIX}" != "x/usr" -a -f ${TCLSH_EXEC_PREFIX}/include/tcl.h; then
--	TCL_INCLUDES=-I${TCLSH_EXEC_PREFIX}/include
--fi
--fi
--if test "x$TCL_INCLUDES" != "x" ; then
--	AC_MSG_RESULT([using tcl headers from $TCL_INCLUDES])
--fi
--AC_SUBST(TCL_INCLUDES)
--
--# Some systems don't have Tcl.  Don't build
--# the Tcl products if we don't have the library.
--if test -f ${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
--	TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh
--else
--if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
--	TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
--fi
+-    AC_PATH_PROG(TCLSH,tclsh8.4)
+-    if test "x$TCLSH" = "x"; then
+-        AC_PATH_PROG(TCLSH,tclsh8.3)
+-        if test "x$TCLSH" = "x"; then
+-            AC_PATH_PROG(TCLSH,tclsh)
+-        fi
+-    fi
 -fi
 -
- if test "x$TCLCONFIG" != "x"; then
-     AC_MSG_RESULT([using $TCLCONFIG])
-     file=${TCLCONFIG}
-     . $file
-+    # 
-+    TCLSH_EXEC_PREFIX="${TCL_EXEC_PREFIX}"
-+    TCL_INCLUDES="${TCL_INCLUDE_SPEC}"
-     # TCL STUBS support is required
-     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
- #        TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
-@@ -293,6 +257,7 @@ AC_SUBST(TCL_NEEDS_EXP_FILE)
- AC_SUBST(TCL_EXPORT_FILE_SUFFIX)
- AC_SUBST(TCL_LIBS)
- AC_SUBST(TCL_PREFIX)
+-if test "x$TCLSH" = "x"; then
+-    AC_MSG_WARN([Unable to find a tclsh. The Tcl packages will not be built])
+-    HAVE_TCL=0
+-fi
+-
+-if test "$HAVE_TCL" = "1"; then
+-    TCL_VERSION_FOUND=`echo 'puts [[info tclversion]]' | $TCLSH`
+-
+-    # can't assume ksh on all architectures
+-    # TCLSH_EXEC_PREFIX=${TCLSH%%/bin/tclsh.*}
+-    # so use sed instead
+-    TCLSH_EXEC_PREFIX=`echo $TCLSH|sed -e 's%/bin/tclsh.*$%%'`
+-
+-    if test -f ${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/tcl.h; then
+-        TCL_INCLUDES="-I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND} -I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/generic"
+-    else
+-        if test "x${TCLSH_EXEC_PREFIX}" != "x/usr" -a -f ${TCLSH_EXEC_PREFIX}/include/tcl.h; then
+-            TCL_INCLUDES=-I${TCLSH_EXEC_PREFIX}/include
+-        fi
+-    fi
+-    if test "x$TCL_INCLUDES" != "x" ; then
+-        AC_MSG_RESULT([using tcl headers from $TCL_INCLUDES])
+-    fi
+-    AC_SUBST(TCL_INCLUDES)
+-    save_CPPFLAGS=$CPPFLAGS
+-    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES"
++. ${TCLCONFIG}
++TCL_INCLUDES=${TCL_INCLUDE_SPEC}
 +AC_SUBST(TCL_INCLUDES)
- AC_SUBST(TCL_EXEC_PREFIX)
- AC_SUBST(TCL_SHLIB_CFLAGS)
- AC_SUBST(TCL_SHLIB_CXXFLAGS)
-@@ -321,58 +286,13 @@ AC_SUBST(TCL_STUB_LIB_SPEC)
- AC_SUBST(TCL_BUILD_STUB_LIB_PATH)
- AC_SUBST(TCL_STUB_LIB_PATH)
- 
--dnl -----------------------------------
--dnl INCLUDES and LIBS for TK
--AC_ARG_WITH(wish,
--	 [  --with-wish=PROG        build graphviz for specific wish],
--	WISH=$withval,)
--if test "x$WISH" = "x"; then
--	AC_PATH_PROG(WISH,wish8.4)
--	if test "x$WISH" = "x"; then
--		AC_PATH_PROG(WISH,wish8.3)
--		if test "x$WISH" = "x"; then
--			AC_PATH_PROG(WISH,wish)
--		fi
--	fi
+     AC_CHECK_HEADER(tcl.h,,[
+         AC_MSG_WARN([Unable to find header tcl.h. The Tcl packages will not be built])
+         HAVE_TCL=0])
+-    CPPFLAGS=$save_CPPFLAGS
 -fi
 -
+-if test "$HAVE_TCL" = "1"; then
+-    # Some systems don't have Tcl.  Don't build
+-    # the Tcl products if we don't have the library.
+-    if test -f ${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
+-        TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh
+-    else
+-        if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
+-            TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+-        fi
+-    fi
+-    if test "x$TCLCONFIG" != "x"; then
+-        AC_MSG_RESULT([using $TCLCONFIG])
+-        file=${TCLCONFIG}
+-            . $file
+-    else
+-        AC_MSG_WARN([Unable to find tclConfig.sh. The Tcl packages will not be built])
+-        HAVE_TCL=0
+-    fi
+-fi
+ 
+ if test "$HAVE_TCL" = "1"; then
+     # TCL STUBS support is required
+@@ -353,77 +297,13 @@ if test "$HAVE_TCL" = "0"; then
+ fi
+ 
+ HAVE_TK=$HAVE_TCL
+-                                                                                
+-if test "$HAVE_TK" = "1"; then
+-    AC_ARG_WITH(wish,
+-        [  --with-wish=PROG        build graphviz for specific wish],
+-        WISH=$withval,)
+-    if test "x$WISH" = "x"; then
+-        AC_PATH_PROG(WISH,wish8.4)
+-        if test "x$WISH" = "x"; then
+-    	    AC_PATH_PROG(WISH,wish8.3)
+-    	    if test "x$WISH" = "x"; then
+-                AC_PATH_PROG(WISH,wish)
+-            fi
+-        fi
+-    fi
+-    if test "x$WISH" = "x"; then
+-        AC_MSG_WARN([Unable to find a wish. The Tk packages will not be built])
+-        HAVE_TK=0
+-    fi
+-fi
 -
--#TK_VERSION_FOUND=`echo 'puts [[info tkversion]]' | $WISH`
--#
--# No such var as tkversion.  Use tclversion instead.
--TK_VERSION_FOUND=${TCL_VERSION_FOUND}
+-if test "$HAVE_TK" = "1"; then
+-    #TK_VERSION_FOUND=`echo 'puts [[info tkversion]]' | $WISH`
+-    #
+-    # No such var as tkversion.  Use tclversion instead.
+-    TK_VERSION_FOUND=${TCL_VERSION_FOUND}
+-    
+-    # can't assume ksh on all architectures
+-    # WISH_EXEC_PREFIX=${WISH%%/bin/tclsh.*}
+-    # so use sed instead
+-    WISH_EXEC_PREFIX=`echo $WISH|sed -e 's%/bin/wish.*$%%'`
 -
--# can't assume ksh on all architectures
--# WISH_EXEC_PREFIX=${WISH%%/bin/tclsh.*}
--WISH_EXEC_PREFIX=`echo $WISH|sed -e 's%/bin/wish.*$%%'`
--
--if test -f ${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/tk.h; then
+-    if test -f ${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/tk.h; then
 -	TK_INCLUDES="-I${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND} -I${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/generic"
--else
--if test "x${WISH_EXEC_PREFIX}" != "x/usr" -a -f ${WISH_EXEC_PREFIX}/include/tk.h; then
--	TK_INCLUDES=-I${WISH_EXEC_PREFIX}/include
--fi
--fi
--if test "x$TK_INCLUDES" != "x" ; then
+-    else
+-        if test "x${WISH_EXEC_PREFIX}" != "x/usr" -a -f ${WISH_EXEC_PREFIX}/include/tk.h; then
+-	    TK_INCLUDES=-I${WISH_EXEC_PREFIX}/include
+-        fi
+-    fi
+-    if test "x$TK_INCLUDES" != "x" ; then
 -	AC_MSG_RESULT([using tk headers from $TK_INCLUDES])
--fi
--AC_SUBST(TK_INCLUDES)
--
--# Some systems don't have Tcl.  Don't build
--# Some systems have Tcl, but not TK.  Don't build
--# the Tk products if we don't have the library.
--if test -f ${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh; then
--	TKCONFIG=${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh
--else
--if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
--	TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
--fi
--fi
--
- if test "x$TKCONFIG" != "x"; then
-     AC_MSG_RESULT([using $TKCONFIG])
-     file=${TKCONFIG}
-     . $file
-+    #
-+    WISH_EXEC_PREFIX="${TK_EXEC_PREFIX}"
-+    TK_INCLUDES="-I${TK_PREFIX}/include"
-     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
-         TK_PKGINDEX="tkspline/pkgIndex.tcl"
-     else
-@@ -414,6 +334,7 @@ AC_SUBST(TK_BUILD_STUB_LIB_SPEC)
- AC_SUBST(TK_STUB_LIB_SPEC)
- AC_SUBST(TK_BUILD_STUB_LIB_PATH)
- AC_SUBST(TK_STUB_LIB_PATH)
+-    fi
+-    AC_SUBST(TK_INCLUDES)
+-    save_CPPFLAGS=$CPPFLAGS
+-    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES $TK_INCLUDES"
++. ${TKCONFIG}
++TK_INCLUDES="-I${TK_PREFIX}/include"
 +AC_SUBST(TK_INCLUDES)
+     AC_CHECK_HEADER(tk.h,,[
+         AC_MSG_WARN([Unable to find header tk.h. The Tk packages will not be built])
+         HAVE_TK=0])
+-    CPPFLAGS=$save_CPPFLAGS
+-fi
  
- dnl -----------------------------------
- dnl Support for generic "extra" search paths for includes and libraries
-@@ -774,36 +695,12 @@ AC_MSG_RESULT(no)])
+-if test "$HAVE_TK" = "1"; then
+-    # Some systems don't have Tcl.  Don't build
+-    # Some systems have Tcl, but not TK.  Don't build
+-    # the Tk products if we don't have the library.
+-    if test -f ${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh; then
+-        TKCONFIG=${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh
+-    else
+-        if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
+-	    TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
+-        fi
+-    fi
+-    if test "x$TKCONFIG" != "x"; then
+-        AC_MSG_RESULT([using $TKCONFIG])
+-        file=${TKCONFIG}
+-        . $file
+-    else
+-        AC_MSG_WARN([Unable to find tkConfig.sh. The Tk packages will not be built])
+-        HAVE_TK=0
+-    fi
+-fi
+-                                                                                
+ #if test "$HAVE_TK" = "1"; then
+ #    # TK STUBS support is required (but support is indicated by TCL_SUPPORTS_STUBS)
+ #    if test "x${TCL_SUPPORTS_STUBS}" != "x1"; then
+@@ -1014,36 +894,12 @@ AC_MSG_RESULT(no)])
  
  # -----------------------------------
  # tclInt.h
