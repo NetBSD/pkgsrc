@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.229 2003/01/30 14:00:22 wiz Exp $
+$NetBSD: TODO,v 1.230 2003/01/30 18:00:43 salo Exp $
 
 Suggested new packages
 ======================
@@ -236,7 +236,6 @@ Suggested package updates
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
-	o sodipodi-0.29
 	o source-highlight-1.6.2
 	o speex-1.0rc2
 	o squeak-3.2 [fredb|pkg/17950]
