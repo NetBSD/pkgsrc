@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/07/31 14:23:01 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/07 16:38:32 wiz Exp $
 
---- frontend/Makefile.in.orig	Fri Jun 15 22:36:52 2001
-+++ frontend/Makefile.in	Tue Jul 31 13:43:59 2001
-@@ -157,7 +157,7 @@
- @WITH_BRHIST_FALSE@mp3x_SOURCES = @WITH_BRHIST_FALSE@mp3x.c gtkanal.c gpkplotting.c $(common_sources)
+--- frontend/Makefile.in.orig	Sun Nov 11 15:57:48 2001
++++ frontend/Makefile.in
+@@ -162,7 +162,7 @@
+ @WITH_BRHIST_FALSE@mp3x_SOURCES = mp3x.c gtkanal.c gpkplotting.c $(common_sources)
  
  CFLAGS = @CFLAGS@ @GTK_CFLAGS@ @FRONTEND_CFLAGS@
 -LDFLAGS = @LDFLAGS@ @FRONTEND_LDFLAGS@ -static
 +LDFLAGS = @LDFLAGS@ @FRONTEND_LDFLAGS@
  
- INCLUDES = -I$(top_srcdir)/libmp3lame -I$(top_srcdir)/include -I$(top_builddir)
+ mp3x_LDADD = $(LDADD) @GTK_LIBS@
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/07/31 14:23:01 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2002/01/07 16:38:32 wiz Exp $
 
---- doc/html/Makefile.in.orig	Thu Mar 15 19:58:56 2001
-+++ doc/html/Makefile.in	Tue Jul 31 13:33:31 2001
-@@ -109,9 +109,9 @@
+--- doc/html/Makefile.in.orig	Sun Nov 11 15:57:48 2001
++++ doc/html/Makefile.in
+@@ -106,9 +106,9 @@
  AUTOMAKE_OPTIONS = foreign ansi2knr
  
  docdir = $(datadir)/doc

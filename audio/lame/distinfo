@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/09/15 06:58:54 simonb Exp $
+$NetBSD: distinfo,v 1.5 2002/01/07 16:38:32 wiz Exp $
 
-SHA1 (lame3.89beta.tar.gz) = b11dc3c88be25d91145cd6b0dc8e6703ef5e169c
-Size (lame3.89beta.tar.gz) = 818839 bytes
-SHA1 (patch-aa) = 63e19d3ca7e2745337e708e375d5280c260eaa51
-SHA1 (patch-ab) = 94f3252c2aeedf9be3b74f185b428ec8a4e6e95c
-SHA1 (patch-ac) = 203427f0b455ab137301fee6d82c5adaba35d121
+SHA1 (lame-3.91.tar.gz) = 84759b675f000688cd287fb99a9b407d05df8da4
+Size (lame-3.91.tar.gz) = 873212 bytes
+SHA1 (patch-aa) = cfab96bd36d765cb31c1dcb5259553e10b72af8e
+SHA1 (patch-ab) = 9cde28d5ab39e3d10a832d49852d059c04af8419
+SHA1 (patch-ac) = d488e6fc8f98362a4750dede9e4c19bcded14ed3
