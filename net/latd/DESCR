@@ -6,4 +6,4 @@ programs enable network clients to reach serial devices connected
 to old LAT-only terminal servers, such as the DECserver 200/MC.
 
 This is a redistribution of the linux-decnet project's software,
-with NetBSD compatability added.
+with NetBSD compatibility added.
