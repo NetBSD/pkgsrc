@@ -1,0 +1,31 @@
+$NetBSD: patch-am,v 1.1 1998/10/18 22:11:41 tron Exp $
+
+--- sysdeps/bsd/procsignal.c.orig	Wed Sep  9 01:54:54 1998
++++ sysdeps/bsd/procsignal.c	Sun Oct 18 23:59:26 1998
+@@ -63,22 +63,22 @@
+ 	/* signal: mask of pending signals.
+ 	 *         pinfo [0].kp_proc.p_siglist
+ 	 */
+-	buf->signal = pinfo [0].kp_proc.p_siglist;
++	buf->signal = pinfo [0].kp_proc.p_siglist.__bits[0];
+ 
+ 	/* blocked: mask of blocked signals.
+ 	 *          pinfo [0].kp_proc.p_sigmask
+ 	 */
+-	buf->blocked = pinfo [0].kp_proc.p_sigmask;
++	buf->blocked = pinfo [0].kp_proc.p_sigmask.__bits[0];
+ 	
+ 	/* sigignore: mask of ignored signals.
+ 	 *            pinfo [0].kp_proc.p_sigignore
+ 	*/
+-	buf->sigignore = pinfo [0].kp_proc.p_sigignore;
++	buf->sigignore = pinfo [0].kp_proc.p_sigignore.__bits[0];
+ 	
+ 	/* sigcatch: mask of caught signals.
+ 	 *           pinfo [0].kp_proc.p_sigcatch
+ 	*/
+-	buf->sigcatch = pinfo [0].kp_proc.p_sigcatch;
++	buf->sigcatch = pinfo [0].kp_proc.p_sigcatch.__bits[0];
+ 
+ 	buf->flags = _glibtop_sysdeps_proc_signal;
+ }
