@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-md.static,v 1.1 1997/11/22 04:50:49 hubertf Exp $
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper/Dumper.a
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper/extralibs.ld
-@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper
+@comment $NetBSD: PLIST-md.static,v 1.2 1998/01/28 15:33:47 hubertf Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Data/Dumper/Dumper.a
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Data/Dumper/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Data/Dumper

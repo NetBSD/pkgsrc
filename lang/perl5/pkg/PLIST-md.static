@@ -1,30 +1,30 @@
-@comment $NetBSD: PLIST-md.static,v 1.1 1997/11/22 03:50:39 hubertf Exp $
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File/DB_File.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl/Fcntl.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO/IO.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File/NDBM_File.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode/Opcode.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX/POSIX.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File/SDBM_File.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File/extralibs.ld
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket/Socket.a
-lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket/extralibs.ld
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/pod
-@dirrm lib/perl5/<$ARCH>-netbsd/5.00404
-@dirrm lib/perl5/<$ARCH>-netbsd
+@comment $NetBSD: PLIST-md.static,v 1.2 1998/01/28 15:33:55 hubertf Exp $
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/DB_File.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl/Fcntl.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/IO/IO.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/IO/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/NDBM_File/NDBM_File.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/NDBM_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Opcode/Opcode.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Opcode/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/POSIX.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/SDBM_File/SDBM_File.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/SDBM_File/extralibs.ld
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Socket/Socket.a
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Socket/extralibs.ld
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/DB_File
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Fcntl
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/IO
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/NDBM_File
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Opcode
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/POSIX
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/SDBM_File
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Socket
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/pod
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd/5.00404
+@dirrm lib/perl5/${MACHINE_ARCH}-netbsd
 @dirrm lib/perl5

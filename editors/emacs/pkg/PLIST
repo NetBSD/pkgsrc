@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 09:59:35 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/01/28 15:33:49 hubertf Exp $
 bin/etags
 bin/ctags
 bin/emacsclient
@@ -112,17 +112,17 @@ info/viper-2
 info/viper-3
 info/viper-4
 info/viper-5
-libexec/emacs/20.2/<$ARCH>--netbsd/profile
-libexec/emacs/20.2/<$ARCH>--netbsd/digest-doc
-libexec/emacs/20.2/<$ARCH>--netbsd/sorted-doc
-libexec/emacs/20.2/<$ARCH>--netbsd/movemail
-libexec/emacs/20.2/<$ARCH>--netbsd/cvtmail
-libexec/emacs/20.2/<$ARCH>--netbsd/fakemail
-libexec/emacs/20.2/<$ARCH>--netbsd/yow
-libexec/emacs/20.2/<$ARCH>--netbsd/emacsserver
-libexec/emacs/20.2/<$ARCH>--netbsd/hexl
-libexec/emacs/20.2/<$ARCH>--netbsd/rcs2log
-libexec/emacs/20.2/<$ARCH>--netbsd/vcdiff
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/profile
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/digest-doc
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/sorted-doc
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/movemail
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/cvtmail
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/fakemail
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/yow
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/emacsserver
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/hexl
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/rcs2log
+libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/vcdiff
 man/man1/emacs.1
 man/man1/etags.1
 man/man1/ctags.1
@@ -1318,6 +1318,6 @@ share/emacs/20.2/lisp/COPYING
 @exec   f=%D/share/emacs/site-lisp ; [ ! -d $f ] && mkdir $f
 @unexec f=%D/share/emacs/site-lisp ; [ -d $f ] && rmdir $f
 @dirrm share/emacs
-@dirrm libexec/emacs/20.2/<$ARCH>--netbsd
+@dirrm libexec/emacs/20.2/${MACHINE_ARCH}--netbsd
 @dirrm libexec/emacs/20.2
 @dirrm libexec/emacs
