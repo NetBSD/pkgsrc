@@ -1,30 +1,45 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2004/05/25 21:49:26 wiz Exp $
 
---- libav/Makefile.orig Wed Aug 15 06:32:50 2001
-+++ libav/Makefile
-@@ -1,3 +1,4 @@
- include ../config.mak
--CFLAGS= $(OPTFLAGS) -Wall -g -I../libavcodec -DHAVE_AV_CONFIG_H
-+
-+CFLAGS= $(OPTFLAGS) -Wall -I../libavcodec -I$(LOCALBASE)/include -DHAVE_AV_CONFIG_H
+--- libavformat/Makefile.orig	2003-09-28 17:26:40.000000000 +0200
++++ libavformat/Makefile
+@@ -69,12 +69,14 @@ endif
  
-@@ -12,14 +13,17 @@
- 
- LIB= libav.a
+ SRCS := $(OBJS:.o=.c) $(PPOBJS:.o=.cpp)
  
 +install: all
 +	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(prefix)/lib
 +
- all: $(LIB)
+ all: $(LIB) $(SLIB)
  
- $(LIB): $(OBJS)
+ $(LIB): $(OBJS) $(PPOBJS)
  	rm -f $@
--	$(AR) rcs $@ $(OBJS)
-+	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(prefix)/lib
+-	$(AR) rc $@ $(OBJS) $(PPOBJS)
+-	$(RANLIB) $@
++	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo)  $(PPOBJS:.o=.lo) -rpath $(prefix)/lib $(LIBOSSAUDIO)
+ 
+ $(SLIB): $(OBJS)
+ ifeq ($(CONFIG_WIN32),yes)
+@@ -84,9 +86,6 @@ else
+ 	$(CC) $(SHFLAGS) -o $@ $(OBJS) $(PPOBJS) $(EXTRALIBS)
+ endif
+ 
+-depend: $(SRCS)
+-	$(CC) -MM $(CFLAGS) $^ 1>.depend
+-
+ ifeq ($(BUILD_SHARED),yes)
+ install: all install-headers
+ ifeq ($(CONFIG_WIN32),yes)
+@@ -112,11 +111,11 @@ install-headers:
+                 "$(prefix)/include/ffmpeg"
  
  %.o: %.c
 -	$(CC) $(CFLAGS) -c -o $@ $< 
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $< 
  
+ # BeOS: remove -Wall to get rid of all the "multibyte constant" warnings
+ %.o: %.cpp
+-	g++ $(subst -Wall,,$(CFLAGS)) -c -o $@ $< 
++	$(LIBTOOL) --mode=compile $(CXX) $(subst -Wall,,$(CFLAGS)) -c -o $@ $< 
+ 
  clean: 
- 	rm -f *.o *~ *.a 
+ 	rm -f *.o *.d .depend *~ *.a $(LIB)
