@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/16 17:21:34 drochner Exp $
 #
 
-DISTNAME=	psycopg-1.0.14
-PKGNAME=	${PYPKGPREFIX}-psycopg-1.0.14
-PKGREVISION=	2
+DISTNAME=	psycopg-1.1.11
+PKGNAME=	${PYPKGPREFIX}-psycopg-1.1.11
 CATEGORIES=	databases
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 
@@ -27,5 +26,5 @@ PY_PATCHPLIST=	yes
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink2.mk"
-.include "../../devel/pth/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
