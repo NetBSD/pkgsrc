@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/06/16 11:08:31 sakamoto Exp $
+$NetBSD: patch-aa,v 1.3 1999/06/17 01:04:29 sakamoto Exp $
 
 --- INSTALL.orig	Thu Nov  7 00:04:53 1996
 +++ INSTALL	Wed Nov 20 17:37:14 1996
@@ -11,15 +11,6 @@ $NetBSD: patch-aa,v 1.2 1999/06/16 11:08:31 sakamoto Exp $
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -486,7 +488,7 @@
-   SearchPlatformTar="$3"
-   CustomPlatformTar="$4"
- 
--  OutputLicense "$ReadLicense"
-+#  OutputLicense "$ReadLicense"
-   ReadLicense=""
- 
-   PrintRequiredFree "$ReadTar" "$SearchTar" "$CustomTar" \
 @@ -559,7 +561,7 @@
    *) ScriptDirectory="$CurrentDirectory"/"$ScriptDirectory" ;;
  esac
