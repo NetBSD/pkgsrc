@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.13 2003/08/23 01:54:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.14 2003/08/23 09:37:16 jlam Exp $
 
 ECHO_BUILDLINK_MSG=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
@@ -828,8 +828,8 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 
 .if !empty(_BLNK_SEED_CACHE:M[yY][eE][sS])
 #
-# Seed the transforming cache with obvious values that greatly speed
-# up the wrappers:
+# Seed the common transforming cache with obvious values that greatly
+# speed up the wrappers:
 #
 # Pass through all single letter options, because we don't touch those.
 #
@@ -848,16 +848,19 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL].|-[IL]./*|-[IL]..*|-[IL][!/]*
 _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
 .  endfor
 #
-_BLNK_RPATH_FLAGS=	${_COMPILER_LD_FLAG}-R
-_BLNK_RPATH_FLAGS+=	${_COMPILER_LD_FLAG}-rpath,
-_BLNK_RPATH_FLAGS+=	${_COMPILER_LD_FLAG}-rpath-link,
+_BLNK_RPATH_FLAGS=	${RPATH_FLAG}
+_BLNK_RPATH_FLAGS+=	-Wl,${RPATH_FLAG}
+.for _rflag_ in -Wl,-R -Wl,-rpath, -Wl,-rpath-link,
+.  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
+_BLNK_RPATH_FLAGS+=	${_rflag_}
+.  endif
+.endfor
 #
 # Allow all subdirs of ${_BLNK_ALLOWED_RPATHDIRS} to be in the runtime
 # library search path.
 #
 .  if ${_USE_RPATH} == "yes"
 .    for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
-_BLNK_CACHE_PASSTHRU_GLOB+=	-R${_dir_}|-R${_dir_}/*
 .      for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
 .      endfor
@@ -868,7 +871,6 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
 #
 _BLNK_CACHE_BLOCK_GLOB=		-[IL]/*
 .  if ${_USE_RPATH} == "yes"
-_BLNK_CACHE_BLOCK_GLOB:=	${_BLNK_CACHE_BLOCK_GLOB}|-R/*
 .    for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_BLOCK_GLOB:=	${_BLNK_CACHE_BLOCK_GLOB}|${_R_}/*
 .    endfor
