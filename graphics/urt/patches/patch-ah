@@ -1,0 +1,11 @@
+--- tools/into.c~	Wed Nov 25 23:51:32 1998
++++ tools/into.c	Wed Nov 25 23:58:09 1998
+@@ -75,7 +75,7 @@
+ 	exit(1);
+     }
+ 
+-    if ( (cp = rindex( argv[1], '/' )) != NULL )
++    if ( (cp = rle_rindex( argv[1], '/' )) != NULL )
+     {
+ 	c = *++cp;
+ 	*cp = 0;
