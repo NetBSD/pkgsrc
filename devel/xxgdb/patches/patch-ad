@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2001/11/22 14:37:27 tron Exp $
+$NetBSD: patch-ad,v 1.2 2004/06/12 12:44:33 grant Exp $
 
---- calldbx.c.orig	Tue Jun 20 00:11:00 1995
-+++ calldbx.c	Thu Nov 22 15:27:44 2001
-@@ -74,10 +74,6 @@
+--- calldbx.c.orig	1995-06-20 08:11:00.000000000 +1000
++++ calldbx.c
+@@ -74,11 +74,7 @@
  #include <string.h>
  #include <fcntl.h>
  #include "global.h"
@@ -14,7 +14,8 @@ $NetBSD: patch-ad,v 1.1 2001/11/22 14:37:27 tron Exp $
 +#include <termios.h>
  
  #ifdef CREATE_IO_WINDOW
-@@ -243,14 +240,7 @@
+ #include	<sys/socket.h>
+@@ -243,14 +239,7 @@ void calldbx(argc, argv)
  int argc;
  char *argv[];
  {
@@ -30,7 +31,7 @@ $NetBSD: patch-ad,v 1.1 2001/11/22 14:37:27 tron Exp $
      int  	  master;		/* file descriptor of master pty */
      int  	  slave; 		/* file descriptor of slave pty */
  #ifdef OLDBSD
-@@ -355,17 +345,10 @@
+@@ -355,17 +344,10 @@ char *argv[];
  	/*
  	 * (JBL)10MAY91 : use sgttyb if OLDSUN or generic BSD
  	 */ 
