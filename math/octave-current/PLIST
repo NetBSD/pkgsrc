@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/26 16:47:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/08 19:36:22 seb Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -307,27 +307,6 @@ include/octave-${PKGVERSION}/octave/vx-s-ccv.h
 include/octave-${PKGVERSION}/octave/vx-s-crv.h
 include/octave-${PKGVERSION}/octave/xdiv.h
 include/octave-${PKGVERSION}/octave/xpow.h
-info/liboctave.info
-info/liboctave.info-1
-info/liboctave.info-2
-info/liboctave.info-3
-info/octave.info
-info/octave.info-1
-info/octave.info-10
-info/octave.info-11
-info/octave.info-12
-info/octave.info-13
-info/octave.info-14
-info/octave.info-15
-info/octave.info-16
-info/octave.info-2
-info/octave.info-3
-info/octave.info-4
-info/octave.info-5
-info/octave.info-6
-info/octave.info-7
-info/octave.info-8
-info/octave.info-9
 lib/libcruft.a
 lib/libcruft.la
 lib/libcruft.so
