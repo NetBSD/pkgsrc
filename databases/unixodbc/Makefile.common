@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/09/30 02:51:36 tv Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/10/15 11:54:10 tv Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -57,7 +57,7 @@ fix-ltdl-and-lexlib:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
