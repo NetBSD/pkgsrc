@@ -1,0 +1,11 @@
+--- lib/regex.h.orig	Sun Jan 18 20:42:26 1998
++++ lib/regex.h	Sun Jan 18 20:42:56 1998
+@@ -473,7 +473,7 @@
+              unsigned num_regs, regoff_t *starts, regoff_t *ends));
+ 
+ /* 4.2 bsd compatibility.  */
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ extern char *re_comp _RE_ARGS ((_CONST_ char *));
+ extern int re_exec _RE_ARGS ((_CONST_ char *));
+ #endif

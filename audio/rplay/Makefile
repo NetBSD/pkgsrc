@@ -3,7 +3,8 @@
 # Date created:		16 March 1995  
 # Whom:			rmallory@csusb.edu
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:18:55 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/19 01:03:31 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
 DISTNAME=       rplay-3.2.0b6
@@ -15,19 +16,33 @@ MAINTAINER=	rmallory@csusb.edu
 LIB_DEPENDS=    gsm\\.1\\.0:${PORTSDIR}/audio/gsm
 
 HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
+CONFIGURE_ENV+=	RPLAY_TARGET=generic	# XXX
+#USE_GMAKE=	yes
 MAN1=           rplay.1 xrplay.1 rplayd.1 rptp.1
 MAN5=		rplay.conf.5 rplay.hosts.5 rplay.servers.5
 
+pre-configure:
+	for f in `find ${WRKDIR} -type f -print|xargs $[GREP} -l '/usr/local'`; do \
+		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
+	done
+	chmod +x ${WRKSRC}/configure
+
+post-build:
+	cd ${WRKSRC}/doc ; make info
+
 post-install:
 	@if [ ! -f ${PREFIX}/etc/rc.d/rplayd.sh ]; then \
-		echo "Installing ${PREFIX}/etc/rc.d/rplayd.sh startup file."; \
-		echo "#!/bin/sh" > ${PREFIX}/etc/rc.d/rplayd.sh; \
-		echo "[ -x /usr/local/sbin/rplayd ] && ( /usr/local/sbin/rplayd & ) && echo -n ' rplayd'" >> ${PREFIX}/etc/rc.d/rplayd.sh; \
+		${ECHO} "Installing ${PREFIX}/etc/rc.d/rplayd.sh startup file."; \
+		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/rplayd.sh; \
+		${ECHO} "[ -x ${PREFIX}/sbin/rplayd ] && ( ${PREFIX}/sbin/rplayd & ) && ${ECHO} -n ' rplayd'" >> ${PREFIX}/etc/rc.d/rplayd.sh; \
 		chmod 751 ${PREFIX}/etc/rc.d/rplayd.sh; \
 	fi
 	@if [ ! -f ${PREFIX}/etc/rplay.hosts ]; then \
-		echo localhost > ${PREFIX}/etc/rplay.hosts; \
+		${ECHO} localhost > ${PREFIX}/etc/rplay.hosts; \
 	fi
+	install-info ${PREFIX}/info/RPTP.info ${PREFIX}/info/dir
+	install-info ${PREFIX}/info/RPLAY.info ${PREFIX}/info/dir
+	install-info ${PREFIX}/info/rplay.info ${PREFIX}/info/dir
+	install-info ${PREFIX}/info/librplay.info ${PREFIX}/info/dir
 
 .include <bsd.port.mk>

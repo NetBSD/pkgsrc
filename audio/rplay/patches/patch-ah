@@ -1,0 +1,13 @@
+--- doc/rplay.texi.orig	Sun Jan 18 20:59:52 1998
++++ doc/rplay.texi	Sun Jan 18 21:05:01 1998
+@@ -2,6 +2,10 @@
+ @c %**start of header
+ @setfilename rplay.info
+ @settitle RPlay
++@dircategory Network Audio Systems
++@direntry
++* rplay: (rplay).              RPlay
++@end direntry
+ @iftex
+ @finalout
+ @end iftex
