@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4620 2004/01/28 08:51:18 markd Exp $
+$NetBSD: CHANGES,v 1.4621 2004/01/28 11:01:45 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -506,3 +506,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated yaz to 2.0nb1 [grant 2004-01-28]
 	Updated koffice to 1.3 [markd 2004-01-28]
 	Removed koffice-devel [markd 2004-01-28]
+	Updated mutt to 1.4.1nb4 [lukem 2004-01-28]
