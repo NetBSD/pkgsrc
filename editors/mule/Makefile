@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/05 23:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/05/31 15:19:55 seb Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -13,10 +13,10 @@ CONFLICTS=	emacs-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-DEPENDS+=	ja-FreeWnn-lib-1.10:../../japanese/freewnn-lib
+DEPENDS+=	ja-FreeWnn-lib-1.10:../../inputmethod/ja-freewnn-lib
 .endif
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-DEPENDS+=	Canna-lib>=3.5.2:../../japanese/canna-lib
+DEPENDS+=	Canna-lib>=3.5.2:../../inputmethod/canna-lib
 .endif
 
 WRKSRC=		${WRKDIR}/mule

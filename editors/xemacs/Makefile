@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/04/05 18:39:18 magick Exp $
+# $NetBSD: Makefile,v 1.48 2002/05/31 15:19:57 seb Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -59,7 +59,7 @@ WITH_XFACE=	--with-xface=no
 
 .if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
 WITH_CANNA=	--with-canna=yes
-DEPENDS+=	Canna-lib-3*:../../japanese/canna-lib
+DEPENDS+=	Canna-lib-3*:../../inputmethod/canna-lib
 .else
 WITH_CANNA=	--with-canna=no
 .endif
