@@ -1,31 +1,42 @@
-# $NetBSD: Makefile,v 1.16 2002/10/27 19:47:52 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/10 04:30:16 rh Exp $
+#
 
-DISTNAME=		pilot-link.0.9.5
-PKGNAME=		p5-pilot-link-0.1
-PKGREVISION=		1
-SVR4_PKGNAME=		p5pli
-CATEGORIES=		comms perl5
-MASTER_SITES=		http://www.gnu-designs.com/pilot-link/source/
-EXTRACT_SUFX=		.tar.bz2
+.include "../../comms/pilot-link/Makefile.common"
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.gnu-designs.com/pilot-link/
-COMMENT=		perl interface to pilot-link library
+PKGNAME=                p5-${DISTNAME}
 
+COMMENT=		perl bindings for pilot-link
+
+BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
+
+USE_X11=		YES
+USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDA/Pilot/.packlist
 
-EXTRACT_ELEMENTS=	${DISTNAME}/tools/Perl5
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
+CONFIGURE_ARGS+=	--with-perl=${PERL5}
+PERL5_CONFIGURE=	NO
+PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/PDA/Pilot/.packlist
 
-pre-configure:
-	@cd ${WRKSRC};							\
-	${SED}	-e "s|@prefix@|${PREFIX}|g"				\
-		-e "s|@exec_prefix@|${PREFIX}|g"			\
-		-e "s|@libdir@|${BUILDLINK_PREFIX.pilot-link-libs}/lib|g" \
-		-e "s|\(-I.*\)\(',\)|\1 ${CPPFLAGS}\2|"			\
-		Makefile.PL.in > Makefile.PL
+INSTALL_DIRS=		${WRKSRC}/bindings
+BUILD_DIRS+=		${WRKSRC}/src
+BUILD_DIRS+=		${INSTALL_DIRS}
+
+post-patch:
+	cd ${WRKSRC} &&							\
+	for mf in src/Makefile.in src/*/Makefile.in ; do		\
+		${CP} $$mf $$mf.old &&					\
+		${SED} -e 's|..top_builddir./lib[^/]*/\(lib[^\.]*\.la\)|${PREFIX}/lib/\1|g'	\
+			< $$mf.old > $$mf ;				\
+	done
+
+post-install:
+.for bin in ietf2datebook pilot-undelete sync-plan
+	cd ${WRKSRC}/src &&						\
+	${INSTALL_SCRIPT} ${bin} ${PREFIX}/bin
+.endfor
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
+
 .include "../../mk/bsd.pkg.mk"
