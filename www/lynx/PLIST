@@ -1,29 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/21 03:55:50 fredb Exp $
 bin/lynx
 man/man1/lynx.1
 share/locale/cs/LC_MESSAGES/lynx.mo
 share/locale/da/LC_MESSAGES/lynx.mo
 share/locale/de/LC_MESSAGES/lynx.mo
-share/locale/es/LC_MESSAGES/lynx.mo
 share/locale/fr/LC_MESSAGES/lynx.mo
-share/locale/it/LC_MESSAGES/lynx.mo
 share/locale/ja/LC_MESSAGES/lynx.mo
-share/locale/ko/LC_MESSAGES/lynx.mo
 share/locale/nl/LC_MESSAGES/lynx.mo
-share/locale/no/LC_MESSAGES/lynx.mo
-share/locale/pl/LC_MESSAGES/lynx.mo
-share/locale/pt/LC_MESSAGES/lynx.mo
 share/locale/pt_BR/LC_MESSAGES/lynx.mo
 share/locale/ru/LC_MESSAGES/lynx.mo
 share/locale/sl/LC_MESSAGES/lynx.mo
 share/locale/sv/LC_MESSAGES/lynx.mo
 share/lynx/lynx.cfg
+share/lynx/lynx.lss
 share/lynx/lynx_doc/CHANGES
 share/lynx/lynx_doc/COPYHEADER
 share/lynx/lynx_doc/COPYING
 share/lynx/lynx_doc/PROBLEMS
 share/lynx/lynx_doc/README
 share/lynx/lynx_doc/samples/blue-background.lss
+share/lynx/lynx_doc/samples/bright-blue.lss
 share/lynx/lynx_doc/samples/cernrules.txt
 share/lynx/lynx_doc/samples/installdirs.html
 share/lynx/lynx_doc/samples/jumpsUnix.html
@@ -34,6 +30,7 @@ share/lynx/lynx_doc/samples/lynx.lss
 share/lynx/lynx_doc/samples/mailcap
 share/lynx/lynx_doc/samples/mime.types
 share/lynx/lynx_doc/samples/mild-colors.lss
+share/lynx/lynx_doc/samples/mailto-form.pl
 share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
 share/lynx/lynx_doc/test/README.txt
@@ -72,8 +69,6 @@ share/lynx/lynx_help/keystrokes/scrolling_help.html.gz
 share/lynx/lynx_help/keystrokes/test_display.html.gz
 share/lynx/lynx_help/keystrokes/visited_help.html.gz
 share/lynx/lynx_help/keystrokes/xterm_help.html.gz
-@exec if [ ! -f %D/etc/lynx.cfg ]; then cp %D/share/lynx/lynx.cfg %D/etc/; fi
-@exec if [ ! -f %D/etc/lynx.lss ]; then cp %D/share/lynx/lynx_doc/samples/lynx.lss %D/etc/; fi
 @dirrm share/lynx/lynx_help/keystrokes
 @dirrm share/lynx/lynx_help
 @dirrm share/lynx/lynx_doc/samples
