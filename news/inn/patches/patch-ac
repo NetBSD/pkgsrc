@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 1999/07/29 21:15:47 tron Exp $
+$NetBSD: patch-ac,v 1.5 2000/07/03 13:46:43 veego Exp $
 
---- Makefile.global.in.orig	Tue Oct 13 14:23:08 1998
-+++ Makefile.global.in	Thu Jul 29 21:18:18 1999
-@@ -40,11 +40,11 @@
+--- Makefile.global.in	Mon Dec 13 14:18:37 1999
++++ Makefile.global.in	Mon Jul  3 11:31:41 2000
+@@ -40,7 +40,7 @@
  EXTRA_SRC = @EXTRA_SRC@
  
  OWNER		= -O @NEWSUSER@ -G @NEWSGRP@
@@ -11,10 +11,6 @@ $NetBSD: patch-ac,v 1.4 1999/07/29 21:15:47 tron Exp $
  NEWSGROUP	= @NEWSGRP@
  
  PATHNEWS = @prefix@
- PATHBIN = @prefix@/bin
- PATHETC = @ETCDIR@
- PATHLIB = @LIBDIR@
- PATHCONTROL = $(PATHBIN)/control
 @@ -61,10 +61,10 @@
  
  # Pick on of SOURCE, NROFF-PACK or NROFF-PACK-SCO
