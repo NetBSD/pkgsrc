@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/13 21:04:34 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/06 10:09:25 jdolecek Exp $
 bin/opera
 ${EMULSUBDIR}/usr/share/opera
 share/doc/opera/LICENSE
-share/doc/opera/README
 share/opera/buttons/default/abc.gif
 share/opera/buttons/default/buttons.ini
 share/opera/buttons/default/cascade.gif
