@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2064 2004/08/19 03:35:02 schmonz Exp $
+$NetBSD: TODO,v 1.2065 2004/08/19 16:47:58 ben Exp $
 
 Suggested new packages
 ======================
@@ -242,7 +242,6 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
 	o gimp-print-4.2.7
-	o glimmer-2.1.3
 	o glpk-4.6
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
