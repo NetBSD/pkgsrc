@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/06/12 04:38:24 sakamoto Exp $
+# $NetBSD: Makefile,v 1.51 2002/09/25 07:04:16 jlam Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -15,15 +15,9 @@ MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	XEmacs text editor version 21
 
-.include "../../databases/gdbm/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
+NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
-NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
-
-HAS_CONFIGURE=	YES
-USE_XPM=	YES
+USE_BUILDLINK2=	YES
 USE_X11=	YES
 
 BUILD_DEFS+=	USE_LDAP USE_XFACE
@@ -43,55 +37,62 @@ PLIST_SUBST+=	ELSUFX=''
 
 WITH_DIALOGS=	--with-dialogs=motif
 
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
-WITH_LDAP=	--with-ldap=yes
-.include "../../databases/openldap/buildlink.mk"
+.if defined(USE_LDAP) && (${USE_LDAP} == "YES")
+WITH_LDAP=	--with-ldap
+.  include "../../databases/openldap/buildlink2.mk"
 .else
-WITH_LDAP=	--with-ldap=no
+WITH_LDAP=	--without-ldap
 .endif
 
-.if defined(USE_XFACE) && ${USE_XFACE} == YES
-WITH_XFACE=	--with-xface=yes
-.include "../../mail/faces/buildlink.mk"
+.if defined(USE_XFACE) && (${USE_XFACE} == "YES")
+WITH_XFACE=	--with-xface
+.  include "../../mail/faces/buildlink2.mk"
 .else
-WITH_XFACE=	--with-xface=no
+WITH_XFACE=	--without-xface
 .endif
 
-.if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink.mk"
-WITH_CANNA=	--with-canna=yes
+.if defined(EMACS_CANNA) && (${EMACS_CANNA} == "YES")
+.  include "../../inputmethod/canna-lib/buildlink2.mk"
+WITH_CANNA=	--with-canna
 .else
-WITH_CANNA=	--with-canna=no
+WITH_CANNA=	--without-canna
 .endif
 
-CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
-			--with-clash-detection --with-mule=yes \
-			--with-ncurses=no --with-session=yes \
-			${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} \
-			${WITH_CANNA} \
-			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
-			--lockdir=/var/tmp/xemacs.lock \
-			--site-includes=${PREFIX}/include:${WRKDIR} \
-			--site-libraries=${PREFIX}/lib \
-			--with-msw=no
+.include "../../databases/gdbm/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
+INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
+
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-clash-detection
+CONFIGURE_ARGS+=	--with-mule=yes
+CONFIGURE_ARGS+=	--without-ncurses
+CONFIGURE_ARGS+=	--without-msw
+CONFIGURE_ARGS+=	--with-session=yes
+CONFIGURE_ARGS+=	${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
+CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
+CONFIGURE_ARGS+=	--lockdir=/var/tmp/xemacs.lock
+CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
+CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
-MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}" \
-			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}"
+MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-extract:
-	for FILE in ${EXTRA_FILES}; do \
-	  ${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$FILE; \
+	for FILE in ${EXTRA_FILES}; do					\
+		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$FILE; \
 	done
 
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
-
-pre-configure:
-	@${ECHO} "To compile in the support for LDAP, set the environment variable USE_LDAP."
-	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
-	@${MKDIR} ${WRKDIR}/sys
-	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
 
 post-install:
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
@@ -100,5 +101,4 @@ post-install:
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
 	fi
 
-.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
