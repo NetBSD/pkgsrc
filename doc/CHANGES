@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9467 2005/03/08 01:47:31 wiz Exp $
+$NetBSD: CHANGES,v 1.9468 2005/03/08 09:07:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2005:
 	bsd.pkg.mk: started freeze for pkgsrc-2005Q1 branch [agc 2005-03-07]
 	Updated dspam to 3.2.8 [xtraeme 2005-03-07]
 	Updated pkglint to 4.09 [abs 2005-03-07]
+	Updated osh to 050131 [adam 2005-03-08]
