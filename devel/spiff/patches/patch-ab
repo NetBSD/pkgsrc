@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/10/15 10:12:08 agc Exp $
+$NetBSD: patch-ab,v 1.2 2004/07/04 16:21:59 jschauma Exp $
 
 --- misc.h	2001/10/15 10:01:22	1.1
 +++ misc.h	2001/10/15 10:02:19
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/10/15 10:12:08 agc Exp $
  /*
  **	lines needed to shut up lint
  */
-+#if !(defined(BSD) && BSD >= 199306)
++#if !(defined(BSD) && BSD >= 199306) && !defined(__linux__)
  extern char *sprintf();
  extern char *strcat();
  extern char *strncat();
