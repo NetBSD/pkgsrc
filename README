@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.5 1998/04/30 20:58:13 frueauf Exp $
+$NetBSD: README,v 1.6 1998/07/13 15:42:41 hubertf Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -52,7 +52,8 @@ category and package directories.  You can then see what packages are
 available, along with a short (one-line) comment about the function of
 the package, and a pointer to a fuller description, by using a browser
 like lynx (see pkgsrc/www/lynx) or something like Mozilla
-(pkgsrc/www/mozilla), or Communicator.
+(pkgsrc/www/mozilla), or Communicator. This is also available online
+as ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README.html.
 
 Another way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory and type "make index". This
@@ -69,8 +70,6 @@ To see what binary packages are available, see:
 where <release> is the NetBSD release, and <arch> is the hardware
 architecture.
 
-See:
+For more information on the packages collection see:
 
 	http://www.netbsd.org/Documentation/netbsd/Packages.txt
-
-for more information on the packages collection.
