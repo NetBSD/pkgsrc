@@ -1,25 +1,25 @@
-$NetBSD: patch-ac,v 1.6 2001/08/09 19:03:19 jlam Exp $
+$NetBSD: patch-ac,v 1.7 2002/11/19 20:58:04 reinoud Exp $
 
---- ../amaya/Makefile.libwww.orig	Tue Aug 29 12:18:03 2000
+--- ../amaya/Makefile.libwww.orig	Mon Jun 17 10:10:03 2002
 +++ ../amaya/Makefile.libwww
-@@ -19,7 +19,6 @@
- AMAYA_LIBWWW_OPTION_LIBS=
+@@ -20,7 +20,6 @@ AMAYA_LIBWWW_OPTION_LIBS=
  
+ #MKP: added -lwwwdav
  AMAYA_LIBWWW_LIBS= \
 -		-L../$(LIBWWW)/Library/src/.libs \
  			-lwwwapp \
  			-lwwwhttp \
  			-lwwwxml \
-@@ -34,23 +33,19 @@
- 			-lwwwutils \
+@@ -36,23 +35,20 @@ AMAYA_LIBWWW_LIBS= \
  			-lwwwzip \
  			-lwwwftp \
+ 			$(WWWDAV) \
 -		-L../$(LIBWWW)/modules/md5/.libs \
+ 			-lmd5 \
+-		-L../$(LIBWWW)/modules/expat/xmlparse/.libs \
 +			-lwwwnews \
 +			-lwwwtelnet \
 +			-lwwwgopher \
- 			-lmd5 \
--		-L../$(LIBWWW)/modules/expat/xmlparse/.libs \
  			-lxmlparse \
 -		-L../$(LIBWWW)/modules/expat/xmltok/.libs \
  			-lxmltok
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.6 2001/08/09 19:03:19 jlam Exp $
 -		-I$(THOTDIR)../libwww/modules/expat/xmltok
 +AMAYA_LIBWWW_INCLUDES= -I${BUILDLINK_DIR}/include/w3c-libwww
  
--# this dependency calls the ../Makefile rule that compiles libwww
+ # this dependency calls the ../Makefile rule that compiles libwww
 -AMAYA_LIBWWW_SRC= ../libz.a amaya_comp_libwww
 +# Use an installed libwww library
 +AMAYA_LIBWWW_SRC= # empty
