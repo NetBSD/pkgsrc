@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/26 10:26:24 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/26 10:41:59 zuntum Exp $
 #
 
 DISTNAME=	smpeg-0.4.3
@@ -10,25 +10,11 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
 COMMENT=	SDL MPEG Player Library
 
-USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
-USE_GMAKE=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+DEPENDS+=	SDL>=1.1.5nb1:../../devel/SDL
+DEPENDS+=	gtk+-1.*:../../x11/gtk
 
-# Fix config scripts by removing buildlink directory references.
-post-build:
-	@cd ${WRKSRC};							\
-	config_scripts="smpeg-config";					\
-	for file in $${config_scripts}; do				\
-	${MV} -f $${file} $${file}.fixme;				\
-		${SED}  -e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-		-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"		\
-			$${file}.fixme > $${file};			\
-		${RM} -f $${file}.fixme;				\
-		${CHMOD} +x $${file};					\
-	done
+USE_GMAKE=	yes
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
