@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2004/11/25 13:13:14 adam Exp $
+
+--- configure.orig	2004-11-25 13:31:40.000000000 +0000
++++ configure
+@@ -27609,7 +27609,7 @@ cat <<EOF >get-wraster-flags
+ 
+ WCFLAGS="$inc_search_path"
+ WLFLAGS="$lib_search_path"
+-WLIBS="-lwraster $GFXLIBS $XLIBS -lm"
++WLIBS="-lwraster $GFXLIBS $XLIBS $XFTLIBS -lm"
+ 
+ usage="Usage: get-wraster-flags #lp#--cflags#rp# #lp#--ldflags#rp# #lp#--libs#rp#"
+ 
