@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/10 12:38:26 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/21 11:39:45 wulf Exp $
 
 bin/bluefish
 man/man1/bluefish.1
-share/pixmaps/bluefish_icon_xpm
+share/bluefish/bluefish_icon.xpm
 share/bluefish/php3_functions
 share/bluefish/ssi_functions
 share/bluefish/rxml_functions
@@ -13,3 +13,8 @@ share/locale/ru/LC_MESSAGES/bluefish.mo
 share/locale/es/LC_MESSAGES/bluefish.mo
 share/locale/ro/LC_MESSAGES/bluefish.mo
 share/locale/cs/LC_MESSAGES/bluefish.mo
+share/locale/el/LC_MESSAGES/bluefish.mo
+share/locale/en/LC_MESSAGES/bluefish.mo
+share/locale/ja/LC_MESSAGES/bluefish.mo
+share/locale/it/LC_MESSAGES/bluefish.mo
+@dirrm share/bluefish
