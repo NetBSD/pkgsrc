@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/08 13:53:24 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/08 15:31:36 wennmach Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -28,13 +28,13 @@ post-patch:
 pre-install:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
 		<${PKGDIR}/MESSAGE                                            \
-		>${MESSAGE_FILE}    
+		>${MESSAGE_FILE}
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${PKGDIR}/services.diff ${PREFIX}/share/examples/kth-krb4
+	${INSTALL_DATA} ${FILESDIR}/services.diff ${PREFIX}/share/examples/kth-krb4
 
 .include "../../mk/bsd.pkg.mk"
