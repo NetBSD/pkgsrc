@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/30 10:25:18 shannonjr Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/02 19:51:58 gavan Exp $
 #
 
 DISTNAME=	gpgme-1.0.1
@@ -41,7 +41,9 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 INFO_FILES=		gpgme.info
 
 .include "../../security/libgpg-error/buildlink3.mk"
+.if ${OPSYS} != "SunOS"
 .include "../../devel/librfuncs/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
 
 ##
