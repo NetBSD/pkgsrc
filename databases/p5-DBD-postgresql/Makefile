@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/01/17 16:41:37 mjl Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/20 19:47:20 mjl Exp $
 #
 
-VER=		1.21
+VER=		1.22
 DISTNAME=	DBD-Pg-${VER}
 PKGNAME=	p5-DBD-postgresql-${VER}
 # PKGREVISION=	3

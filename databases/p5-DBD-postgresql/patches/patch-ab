@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.2 2003/01/17 16:41:39 mjl Exp $
+$NetBSD: patch-ab,v 1.3 2003/04/20 19:47:21 mjl Exp $
 
---- dbdimp.h.orig	Wed Jan  8 23:08:17 2003
-+++ dbdimp.h	Fri Jan 17 17:25:12 2003
-@@ -23,6 +23,7 @@
-     int         init_commit;	/* initialize AutoCommit */
-     int         pg_auto_escape;	/* initialize AutoEscape */
-     int         pg_bool_tf;     /* do bools return 't'/'f' */
+--- dbdimp.h.orig	Tue Mar 25 23:17:00 2003
++++ dbdimp.h	Sun Apr 20 21:39:17 2003
+@@ -28,6 +28,7 @@
+ #ifdef SvUTF8_off
+     int         pg_enable_utf8;	/* should we attempt to make utf8 strings? */
+ #endif
 +    int         need_begin;	/* need a begin */
  };
  
