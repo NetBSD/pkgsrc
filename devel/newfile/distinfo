@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/03/22 03:22:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/11/27 15:58:22 taca Exp $
 
-SHA1 (newfile-1.0.7.tar.gz) = c183c2679e3262fc0ad0e7f90db998df42be94d8
-Size (newfile-1.0.7.tar.gz) = 129448 bytes
-SHA1 (patch-aa) = 95be72f2f3784fa70e5d444d5c14f61c66124eca
+SHA1 (ruby/newfile-1.0.14.tar.gz) = 247bf4e9d46a3d5715ffae71f0645bf19d00d03a
+Size (ruby/newfile-1.0.14.tar.gz) = 177411 bytes
+SHA1 (patch-aa) = c442c763b1f99961aef799c9cbe104e2a496a7f2
