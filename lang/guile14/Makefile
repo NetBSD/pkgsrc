@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/15 14:50:06 tv Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -26,7 +26,7 @@ BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/guile/1.4
 # is dl_open(3)'ed.
 CFLAGS+=		${PTHREAD_CFLAGS}
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
