@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/05 03:34:27 wulf Exp $
+include/dvdplay/dvdplay.h
+include/dvdplay/info.h
+include/dvdplay/nav.h
+include/dvdplay/state.h
+lib/libdvdplay.la
+lib/libdvdplay.so.0.1
+lib/libdvdplay.so.0
+lib/libdvdplay.so
+lib/libdvdplay.a
+@dirrm include/dvdplay
