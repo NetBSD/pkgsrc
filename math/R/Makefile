@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/08/26 23:52:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 1999/11/23 17:37:28 dmcmahill Exp $
 #
 
 DISTNAME=	R-0.64.2
@@ -18,11 +18,9 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://lib.stat.cmu.edu/R/CRAN/
 
-.if !exists(/usr/bin/f77)
-DEPENDS+=	f2c-19980913:../../lang/f2c
-.endif
 DEPENDS+=	readline-4.0:../../devel/readline
 
+USE_FORTRAN=	yes
 USE_X11=	yes
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
