@@ -1,0 +1,141 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/16 14:43:36 rh Exp $
+lib/perl5/man/man3/Bio::Parse.3
+lib/perl5/man/man3/Bio::Root::Err.3
+lib/perl5/man/man3/Bio::Root::IOManager.3
+lib/perl5/man/man3/Bio::Root::Object.3
+lib/perl5/man/man3/Bio::Root::Utilities.3
+lib/perl5/man/man3/Bio::Root::Vector.3
+lib/perl5/man/man3/Bio::Root::Xref.3
+lib/perl5/man/man3/Bio::Seq.3
+lib/perl5/man/man3/Bio::SimpleAlign.3
+lib/perl5/man/man3/Bio::Tools::AlignFactory.3
+lib/perl5/man/man3/Bio::Tools::Blast.3
+lib/perl5/man/man3/Bio::Tools::Blast::HSP.3
+lib/perl5/man/man3/Bio::Tools::Blast::HTML.3
+lib/perl5/man/man3/Bio::Tools::Blast::Run::LocalBlast.3
+lib/perl5/man/man3/Bio::Tools::Blast::Run::Webblast.3
+lib/perl5/man/man3/Bio::Tools::Blast::Sbjct.3
+lib/perl5/man/man3/Bio::Tools::Fasta.3
+lib/perl5/man/man3/Bio::Tools::RestrictionEnzyme.3
+lib/perl5/man/man3/Bio::Tools::SeqAnal.3
+lib/perl5/man/man3/Bio::Tools::SeqPattern.3
+lib/perl5/man/man3/Bio::Tools::WWW.3
+lib/perl5/man/man3/Bio::Tools::pSW.3
+lib/perl5/man/man3/Bio::UnivAln.3
+lib/perl5/man/man3/bioperl.3
+lib/perl5/site_perl/Bio/Parse.pm
+lib/perl5/site_perl/Bio/Root/Err.pm
+lib/perl5/site_perl/Bio/Root/Global.pm
+lib/perl5/site_perl/Bio/Root/IOManager.pm
+lib/perl5/site_perl/Bio/Root/Object.pm
+lib/perl5/site_perl/Bio/Root/Utilities.pm
+lib/perl5/site_perl/Bio/Root/Vector.pm
+lib/perl5/site_perl/Bio/Root/Xref.pm
+lib/perl5/site_perl/Bio/Seq.pm
+lib/perl5/site_perl/Bio/SimpleAlign.pm
+lib/perl5/site_perl/Bio/Tools/AlignFactory.pm
+lib/perl5/site_perl/Bio/Tools/Blast.pm
+lib/perl5/site_perl/Bio/Tools/Blast/CHANGES
+lib/perl5/site_perl/Bio/Tools/Blast/HSP.pm
+lib/perl5/site_perl/Bio/Tools/Blast/HTML.pm
+lib/perl5/site_perl/Bio/Tools/Blast/Run/LocalBlast.pm
+lib/perl5/site_perl/Bio/Tools/Blast/Run/Makefile.PL
+lib/perl5/site_perl/Bio/Tools/Blast/Run/Webblast.pm
+lib/perl5/site_perl/Bio/Tools/Blast/Run/postclient.pl
+lib/perl5/site_perl/Bio/Tools/Blast/Sbjct.pm
+lib/perl5/site_perl/Bio/Tools/Fasta.pm
+lib/perl5/site_perl/Bio/Tools/RestrictionEnzyme.pm
+lib/perl5/site_perl/Bio/Tools/SeqAnal.pm
+lib/perl5/site_perl/Bio/Tools/SeqPattern.pm
+lib/perl5/site_perl/Bio/Tools/WWW.pm
+lib/perl5/site_perl/Bio/Tools/pSW.pm
+lib/perl5/site_perl/Bio/UnivAln.pm
+lib/perl5/site_perl/auto/bp_sw/autosplit.ix
+lib/perl5/site_perl/bioperl.pod
+lib/perl5/site_perl/bp_sw.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Bio/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/bp_sw.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/bp_sw.so
+share/examples/bioperl/blast/blast_config.pl
+share/examples/bioperl/blast/blast_seq.pl
+share/examples/bioperl/blast/example.table1
+share/examples/bioperl/blast/example.table2
+share/examples/bioperl/blast/html.pl
+share/examples/bioperl/blast/out/blastn.2.gz
+share/examples/bioperl/blast/out/blastn.2.wu.gz
+share/examples/bioperl/blast/out/blastp.1.gcg.gz
+share/examples/bioperl/blast/out/blastp.1.gz
+share/examples/bioperl/blast/out/blastp.2.gz
+share/examples/bioperl/blast/out/blastp.2.nogap.gz
+share/examples/bioperl/blast/out/blastp.2.wu
+share/examples/bioperl/blast/out/blastp.205.gz
+share/examples/bioperl/blast/out/blastp.2a.gz
+share/examples/bioperl/blast/out/blastp.2b.gz
+share/examples/bioperl/blast/out/blastp.email.html.gz
+share/examples/bioperl/blast/out/blastx.2
+share/examples/bioperl/blast/out/blastx.2.email.gz
+share/examples/bioperl/blast/out/blastx.208.gz
+share/examples/bioperl/blast/out/tblastn.206.out.gz
+share/examples/bioperl/blast/parse.pl
+share/examples/bioperl/blast/parse2.pl
+share/examples/bioperl/blast/parse_multi.pl
+share/examples/bioperl/blast/parse_positions.pl
+share/examples/bioperl/blast/parse_stream.pl
+share/examples/bioperl/blast/print_blasts.pl
+share/examples/bioperl/blast/run.pl
+share/examples/bioperl/blast/seq/acc1.dna.fasta
+share/examples/bioperl/blast/seq/seqs.fasta
+share/examples/bioperl/blast/seq/yal011w.dna.fasta
+share/examples/bioperl/blast/seq/yel009c.fasta
+share/examples/bioperl/blast/seq/ymr284w.fasta
+share/examples/bioperl/blosum62.bla
+share/examples/bioperl/gon250.bla
+share/examples/bioperl/psw.pl
+share/examples/bioperl/restriction.pl
+share/examples/bioperl/rev_and_trans.pl
+share/examples/bioperl/root_object/Bar.pm
+share/examples/bioperl/root_object/Foo.pm
+share/examples/bioperl/root_object/Outer.pm
+share/examples/bioperl/root_object/destroy.pl
+share/examples/bioperl/root_object/error.out
+share/examples/bioperl/root_object/error.pl
+share/examples/bioperl/root_object/filehandle.out
+share/examples/bioperl/root_object/filehandle.pl
+share/examples/bioperl/root_object/io.out
+share/examples/bioperl/root_object/io.pl
+share/examples/bioperl/root_object/read.pl
+share/examples/bioperl/root_object/read.test
+share/examples/bioperl/root_object/read.test2
+share/examples/bioperl/root_object/read.test3
+share/examples/bioperl/root_object/utilities.pl
+share/examples/bioperl/root_object/vector/Person.pm
+share/examples/bioperl/root_object/vector/PersonManager.pm
+share/examples/bioperl/root_object/vector/vector.out
+share/examples/bioperl/root_object/vector/vector.pl
+share/examples/bioperl/seq/id.list
+share/examples/bioperl/seq/seq.fasta.gz
+share/examples/bioperl/seq/seq1.fasta
+share/examples/bioperl/seq/seq2.fasta
+share/examples/bioperl/seq/seqs1.pl
+share/examples/bioperl/seq/seqs2.pl
+share/examples/bioperl/seq/seqs3.pl
+share/examples/bioperl/seq/seqs4.pl
+share/examples/bioperl/seq/seqtools.pl
+share/examples/bioperl/seq_pattern.pl
+share/examples/bioperl/simplealign.pl
+@dirrm share/examples/bioperl/seq
+@dirrm share/examples/bioperl/root_object/vector
+@dirrm share/examples/bioperl/root_object
+@dirrm share/examples/bioperl/blast/seq
+@dirrm share/examples/bioperl/blast/out
+@dirrm share/examples/bioperl/blast
+@dirrm share/examples/bioperl
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Bio
+@dirrm lib/perl5/site_perl/auto/bp_sw
+@dirrm lib/perl5/site_perl/Bio/Tools/Blast/Run
+@dirrm lib/perl5/site_perl/Bio/Tools/Blast
+@dirrm lib/perl5/site_perl/Bio/Tools
+@dirrm lib/perl5/site_perl/Bio/Root
+@dirrm lib/perl5/site_perl/Bio
