@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2003/11/10 23:15:21 dmcmahill Exp $
 
---- Makefile.orig
+--- Makefile.orig	Fri Feb 15 15:47:09 2002
 +++ Makefile
-@@ -2,11 +2,11 @@
+@@ -1,12 +1,12 @@
+ ################## Configuration parameters
  # Compile using ocamlopt, to use ocamlc set TARGET=byte
- TARGET=opt
+-TARGET=opt
++#TARGET=opt
  # Library directory of hevea
 -LIBDIR=/usr/local/lib/hevea
 +LIBDIR=${PREFIX}/share/hevea
@@ -17,7 +19,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
  ############### End of configuration parameters
  SUF=
  #DIR=/usr/bin/
-@@ -18,7 +18,7 @@
+@@ -18,7 +18,7 @@ OCAMLFLAGS=
  OCAMLCI=${DIR}ocamlc$(SUF)
  OCAMLOPT=${DIR}ocamlopt$(SUF)
  OCAMLLEX=${DIR}ocamllex$(SUF)
@@ -26,7 +28,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
  
  ONLYESPONJA=emisc.cmo buff.cmo htmllex.cmo htmlparse.cmo htmltext.cmo pp.cmo util.cmo explode.cmo ultra.cmo esponja.cmo
  
-@@ -46,30 +46,30 @@
+@@ -46,30 +46,30 @@ byte:
  	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte cutfoot-fra.html cutfoot-eng.html
  
  install-lib:
@@ -75,7 +77,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
  
  
  hevea.byte: ${OBJS}
-@@ -103,7 +103,7 @@
+@@ -103,7 +103,7 @@ cutfoot-eng.html: cutfoot.tex html/hevea
  	HEVEADIR=. ; export HEVEADIR ; ${HEVEA} < cutfoot.tex | ${ESPONJA}> $@
  
  .SUFFIXES:
@@ -84,7 +86,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
  
  .mll.ml:
  	${OCAMLLEX} $<
-@@ -128,7 +128,7 @@
+@@ -128,7 +128,7 @@ clean: cleanbyte
  	rm -f *.byte *.opt
  	rm -f $(GENSRC)
  	rm -f *.o *.cmi *.cmo *.cmx *.o *.ppo *.ppi
