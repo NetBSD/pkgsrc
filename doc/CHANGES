@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1425 2003/02/17 18:51:38 jtb Exp $
+$NetBSD: CHANGES,v 1.1426 2003/02/17 21:53:40 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2003:
         Updated sqlite to 2.8.0 [agc 2003-02-17]
 	Added xvier-1.0 [zuntum 2003-02-17]
         Added gpc-2.1 [jtb 2003-02-17]
+	Added fbdesk-1.1.3 [jschauma 2003-02-17]
