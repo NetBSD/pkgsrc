@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/01 05:48:18 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/13 12:15:05 wiz Exp $
 
 DISTNAME=		ettercap-0.6.6.6
 CATEGORIES=		security net
@@ -12,15 +12,15 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-plugins \
 			--enable-https
 
+USE_BUILDLINK2=		yes
+
 # missing newpad()
 USE_NCURSES=		yes
 PTHREAD_OPTS+=		require
 
-CPPFLAGS+=		-I${LOCALBASE}/include -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
-
 post-install:
 			cd ${WRKSRC}/plugins ; ${MAKE_ENV} ${MAKE} install
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
