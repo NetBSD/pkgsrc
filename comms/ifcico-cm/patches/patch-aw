@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1 2001/02/21 18:50:37 tv Exp $
+$NetBSD: patch-aw,v 1.2 2001/02/21 20:40:57 tv Exp $
 
 --- misc/config-global.orig	Wed Feb 21 12:29:10 2001
 +++ misc/config-global	Wed Feb 21 12:33:02 2001
@@ -16,18 +16,18 @@ $NetBSD: patch-aw,v 1.1 2001/02/21 18:50:37 tv Exp $
  
  # Directory for incoming packets/files:
 -inbound		/var/spool/ifmail/inb
-+inbound		/var/spool/fido/bt/in
++inbound		/var/spool/bt/in
  # Directories for "listed" and "protected" sessions
 -listinbound	/var/spool/ifmail/inb
 -protinbound	/var/spool/ifmail/inb
-+listinbound	/var/spool/fido/bt/in
-+protinbound	/var/spool/fido/bt/pin
++listinbound	/var/spool/bt/in
++protinbound	/var/spool/bt/pin
  
  # Directory for outgoing packets (default domain and zone):
  # other zones will be like "/usr/spool/fnet/outb.003",
  # other domains will be like "/usr/spool/fnet/<domain>.<zone>"
 -outbound	/var/spool/ifmail/outb
-+outbound	/var/spool/fido/bt/out
++outbound	/var/spool/bt/out
  
  # If you specify this, outgoing arcmail files will go to `outbound',
  # but be reffered as being in dosoutbound' in the .flo files
