@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/30 23:40:54 xtraeme Exp $
+
+--- sounds/Makefile.in.orig	2004-03-22 01:34:35.000000000 +0100
++++ sounds/Makefile.in	2004-03-22 01:35:17.000000000 +0100
+@@ -209,7 +209,8 @@
+ 
+ galeon_SOUNDS = clicked.wav
+ 
+-soundlistdir = $(sysconfdir)/sound/events
++examplesdir = $(prefix)/share/examples/galeon-devel
++soundlistdir = $(examplesdir)/sound/events
+ soundlist_in_files = galeon.soundlist.in
+ soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
+ 
