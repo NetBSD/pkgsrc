@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/23 15:34:21 salo Exp $
+#
 
 DISTNAME=	cdparanoia-III-alpha9.8
 PKGNAME=	cdparanoia-3.0.9.8
@@ -10,14 +11,14 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.xiph.org/paranoia/
 COMMENT=	CDDA reading utility with extra data verification features
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --includedir=${PREFIX}/include/cdparanoia
+ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-*
+
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
-MAKE_ENV+=	GCC=yes
+GNU_CONFIGURE=	YES
 
-#do-install:
-#	${INSTALL_PROGRAM} ${WRKSRC}/cdparanoia ${PREFIX}/bin
-#	${INSTALL_MAN} ${WRKSRC}/cdparanoia.1 ${PREFIX}/man/man1
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/cdparanoia
+
+MAKE_ENV+=	GCC=yes
 
 .include "../../mk/bsd.pkg.mk"
