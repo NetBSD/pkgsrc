@@ -1,1 +1,3 @@
-$NetBSD: md5,v 1.11 2000/06/13 23:19:21 soren Exp $
+$NetBSD: md5,v 1.12 2000/06/17 22:14:01 tsarna Exp $
+
+MD5 (mozilla-source-M16.tar.bz2) = e23a9e9d90957caae3fe6c00f6168503
