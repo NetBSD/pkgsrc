@@ -1,5 +1,10 @@
-# $NetBSD: ld-post-cache,v 1.1.2.1 2003/08/14 13:16:49 jlam Exp $
-
+# $NetBSD: ld-post-cache,v 1.1.2.2 2003/08/16 07:26:50 jlam Exp $
+#
+# This file implements the default action of the "ld" private cache,
+# and tells the wrapper to skip the common cache lookup for all
+# arguments that start with "-Wl,"; they will instead be handled
+# directly by ld-post-logic.
+#
 -Wl,*)
 	skipcache=yes
 	;;
