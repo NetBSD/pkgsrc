@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/06/09 09:02:28 uebayasi Exp $
 
-SHA1 (elisp-manual-20-2.5.tar.gz) = e0a6e89828cc59a7701823c28012816edd0b8d60
-Size (elisp-manual-20-2.5.tar.gz) = 2186099 bytes
+SHA1 (elisp-manual-21-2.8.tar.gz) = 252fd99132f6b7c553a8737d9ba0a8b82636641c
+Size (elisp-manual-21-2.8.tar.gz) = 2455995 bytes
