@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/01/16 02:20:47 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/01/16 17:02:25 wiz Exp $
 
 .if !defined(GUILE14_BUILDLINK2_MK)
 GUILE14_BUILDLINK2_MK=	# defined
@@ -7,7 +7,7 @@ BUILDLINK_PACKAGES+=		guile14
 BUILDLINK_DEPENDS.guile14?=	guile14>=1.4nb1
 BUILDLINK_PKGSRCDIR.guile14?=	../../lang/guile14
 
-# Put only 'bin/guile' and 'bin/guild-config' at ${BUILDLINK_DIR}
+# Put only 'bin/guile' and 'bin/guile-config' at ${BUILDLINK_DIR}
 _GUILE14_BIN=		${BUILDLINK_PREFIX.guile14}/guile/1.4/bin/guile
 _GUILE14_BUILDLINK_BIN=	${BUILDLINK_DIR}/bin/guile
 _GUILE14_CONFIG=	${BUILDLINK_PREFIX.guile14}/guile/1.4/bin/guile-config
@@ -25,7 +25,7 @@ BUILDLINK_FILES.guile14+=		guile/1.4/lib/libguilereadline.*
 
 USE_GNU_READLINE=	# defined
 
-.include "../../devel/libtool/buildlink2.mk"	# For Librtdl
+.include "../../devel/libtool/buildlink2.mk"	# For libltdl
 .include "../../devel/readline/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	guile14-buildlink
