@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/27 11:05:05 grant Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/29 21:28:26 jmmv Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -581,6 +581,7 @@ share/examples/docbook-xsl/biblioentry.xsl
 share/examples/docbook-xsl/testtemplate.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
+share/xsl/docbook/catalog
 share/xsl/docbook/common/ChangeLog
 share/xsl/docbook/common/af.xml
 share/xsl/docbook/common/bg.xml
