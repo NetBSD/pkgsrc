@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/21 01:26:09 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 22:44:49 jmmv Exp $
 include/gtkhtml-2.0/libgtkhtml/css/cssmatcher.h
 include/gtkhtml-2.0/libgtkhtml/css/cssparser.h
 include/gtkhtml-2.0/libgtkhtml/css/cssstylesheet.h
@@ -74,7 +74,6 @@ lib/libgtkhtml-2.so
 lib/libgtkhtml-2.so.0
 lib/libgtkhtml-2.so.0.0
 lib/pkgconfig/libgtkhtml-2.0.pc
-@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || ${TRUE}
 @dirrm include/gtkhtml-2.0/libgtkhtml/view
 @dirrm include/gtkhtml-2.0/libgtkhtml/util
 @dirrm include/gtkhtml-2.0/libgtkhtml/layout/html
