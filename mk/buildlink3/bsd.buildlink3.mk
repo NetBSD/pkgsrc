@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.42 2004/01/07 20:45:59 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.43 2004/01/10 06:15:39 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -442,7 +442,7 @@ BUILDLINK_FILES_CMD.${_pkg_}?=						\
 _BLNK_FILES_CMD.${_pkg_}=	(
 _BLNK_FILES_CMD.${_pkg_}+=	${BUILDLINK_FILES_CMD.${_pkg_}};
 .for _filepattern_ in ${BUILDLINK_FILES.${_pkg_}}
-_BLNK_FILES_CMD.${_pkg_}+=	${LS} -1 ${_filepattern_};
+_BLNK_FILES_CMD.${_pkg_}+=	${LS} -1 ${_filepattern_} 2>/dev/null || ${TRUE};
 .endfor
 _BLNK_FILES_CMD.${_pkg_}+=	)
 
