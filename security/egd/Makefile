@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:38 jlam Exp $
 #
 
 DISTNAME=	egd-0.8
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.lothar.com/tech/crypto/
 COMMENT=	EGD: Entropy Gathering Daemon
 
-DEPENDS+=	p5-SHA-*:../../security/p5-SHA
+DEPENDS+=	p5-SHA-[0-9]*:../../security/p5-SHA
 
 USE_PERL5=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/egd/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/24 20:45:22 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:17:55 jlam Exp $
 
 DISTNAME=	gal-0.12
 CATEGORIES=	gnome devel
@@ -9,7 +9,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Application Libraries
 
-DEPENDS+=	libiconv-*:../../converters/libiconv
+DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
 DEPENDS+=	gnome-libs>=1.2.13:../../x11/gnome-libs
 DEPENDS+=	gnome-print>=0.28:../../print/gnome-print
 DEPENDS+=	gnome-vfs>=1.0:../../sysutils/gnome-vfs

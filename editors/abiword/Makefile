@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/08/29 22:41:09 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/09/27 23:17:58 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -16,7 +16,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
-DEPENDS+=	ispell-base-*:../../textproc/ispell-base
+DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
 USE_BUILDLINK_ONLY=	# defined
 

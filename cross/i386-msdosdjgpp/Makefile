@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/27 03:19:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:17:52 jlam Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.delorie.com/djgpp/
 COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
-BUILD_DEPENDS=		unzip-*:../../archivers/unzip
+BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=			${WRKDIR}/djgpp
 

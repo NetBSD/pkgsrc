@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2001/09/17 15:17:32 tron Exp $
+# $NetBSD: Makefile,v 1.77 2001/09/27 23:18:09 jlam Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 CATEGORIES=		graphics
@@ -9,7 +9,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Package for display and interactive manipulation of images
 
-CONFLICTS=		geomview-*    # both have a program named 'animate'
+CONFLICTS=		geomview-[0-9]*    # both have a program named 'animate'
 
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/04/02 20:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/09/27 23:17:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -13,8 +13,8 @@ HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gkermit-*:../../comms/gkermit
-DEPENDS+=	lrzsz-*:../../comms/lrzsz
+DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
+DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
 USE_LIBINTL=	yes
 USE_GMAKE=	yes

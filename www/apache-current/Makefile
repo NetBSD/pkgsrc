@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/14 15:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:51 jlam Exp $
 
 DISTNAME=		httpd-2_0_16-beta
 PKGNAME=		apache-2.0.16
@@ -11,7 +11,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.apache.org/
 COMMENT=		HTTP (Web) server, version 2
 
-CONFLICTS=		apache-*modssl-* apache-* apache6-* ap-*
+CONFLICTS=		apache-*modssl-[0-9]* apache-[0-9]*
+CONFLICTS+=		apache6-[0-9]* ap-[0-9]*
 
 # autodetect
 BUILD_DEFS+=		USE_INET6

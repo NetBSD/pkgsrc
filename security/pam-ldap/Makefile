@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:40 jlam Exp $
 #
 
 DISTNAME=	pam_ldap
@@ -13,8 +13,8 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	pluggable authentication module for LDAP directories
 
-DEPENDS+=	openldap-*:../../databases/openldap
-DEPENDS+=	PAM-*:../../security/PAM
+DEPENDS+=	openldap-[0-9]*:../../databases/openldap
+DEPENDS+=	PAM-[0-9]*:../../security/PAM
 
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${WRKSRC}

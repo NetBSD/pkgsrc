@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:55 jlam Exp $
 
 DISTNAME=		HTML-PrettyPrinter-0.03
 PKGNAME=		p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 COMMENT=		perl5 module for pretty-printing HTML
 
 DEPENDS+=		p5-HTML-Tree>=3.0:../../www/p5-HTML-Tree
-DEPENDS+=		p5-HTML-Tagset-*:../../www/p5-HTML-Tagset
+DEPENDS+=		p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/PrettyPrinter/.packlist

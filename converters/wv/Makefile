@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/29 22:41:08 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/09/27 23:17:51 jlam Exp $
 #
 
 DISTNAME=		wv-0.6.5
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.wvWare.com/
 COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
 
 # not detected by configure, causes conflicts with the one coming with wv
-#CONFLICTS+=		libgetopt-*
+#CONFLICTS+=		libgetopt-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 REPLACE_BUILDLINK=	wv-incconfig wv-libconfig

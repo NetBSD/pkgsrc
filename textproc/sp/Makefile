@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/27 23:18:47 jlam Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -15,8 +15,8 @@ MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://www.jclark.com/sp/
 COMMENT=	SGML System Conforming to International Standard ISO 8879
 
-CONFLICTS+=	jade-*
-CONFLICTS+=	opensp-*
+CONFLICTS+=	jade-[0-9]*
+CONFLICTS+=	opensp-[0-9]*
 
 MAKE_ENV+=	INSTALL="${INSTALL}"
 

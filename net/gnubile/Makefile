@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:27 jlam Exp $
 
 DISTNAME=	gnubile-0.20
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://gnutella.wego.com/
 COMMENT=	Unix Gnutella client for GNOME
 
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
 
 USE_GMAKE=	YES
 USE_X11=	YES

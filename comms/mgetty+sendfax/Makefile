@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/08/22 02:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/27 23:17:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
 COMMENT=	Handle external logins, send and receive faxes
 
-CONFLICTS=	hylafax-*
+CONFLICTS=	hylafax-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 INFO_FILES=	mgetty.info

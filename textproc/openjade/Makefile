@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 10:52:27 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:45 jlam Exp $
 # FreeBSD Id: ports/textproc/openjade/Makefile,v 1.30 2001/03/04 21:39:19 lioux Exp
 
 DISTNAME=	openjade-1.3
@@ -11,7 +11,7 @@ COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 
 BUILD_DEPENDS+=	perl>=5.6.0:../../lang/perl5:build
 
-CONFLICTS+=	opensp-*
+CONFLICTS+=	opensp-[0-9]*
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES

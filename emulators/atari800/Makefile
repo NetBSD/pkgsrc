@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/19 03:56:35 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:02 jlam Exp $
 
 DISTNAME=	Atari800-0.9.9a
 PKGNAME=	atari800-0.9.9a
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cas3.zlin.vutbr.cz/~stehlik/a800.htm
 COMMENT=	Atari 8-bit computer, 5200 console emulator
 
-BUILD_DEPENDS=	unzip-*:../../archivers/unzip
+BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 
 RESTRICTED=		"copyrighted ROM images"
 NO_SRC_ON_FTP=		${RESTRICTED}

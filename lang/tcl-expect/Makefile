@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:34 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:19 jlam Exp $
 #
 
 DISTNAME=	expect
@@ -12,7 +12,7 @@ COMMENT=	extensions to Tcl to support scripting of interactive programs
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
-CONFLICTS+=	expect-*
+CONFLICTS+=	expect-[0-9]*
 
 WRKSRC=		${WRKDIR}/expect-5.32
 DIST_SUBDIR=	expect-5.32.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/08 20:22:00 cjones Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:16 jlam Exp $
 #
 
 DISTNAME=	eieio-0.16
@@ -12,11 +12,11 @@ COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-*:../../editors/xemacs
+DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
 EMACS=			xemacs
 LISPDIR=		lib/xemacs/xemacs-packages/lisp/eieio
 .else
-DEPENDS+=	 	emacs-*:../../editors/emacs
+DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
 EMACS=			emacs
 LISPDIR=		share/emacs/site-lisp/eieio
 .endif

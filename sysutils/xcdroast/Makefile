@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/07 11:27:35 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:44 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha9
 PKGNAME=	xcdroast-0.98a9
@@ -9,7 +9,7 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	graphical user interface for the command-line cdrecord-tools
 
-DEPENDS+=	imlib-*:../../graphics/imlib
+DEPENDS+=	imlib-[0-9]*:../../graphics/imlib
 DEPENDS+=	cdrecord-1.10:../../sysutils/cdrecord
 
 USE_X11=	YES

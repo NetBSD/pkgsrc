@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/27 23:18:20 jlam Exp $
 #
 
 DISTNAME=	balsa-1.0.0
@@ -10,10 +10,10 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.balsa.net/
 COMMENT=	GNOME EMail client
 
-DEPENDS+=	libpspell-*:../../textproc/libpspell
-DEPENDS+=	pth-*:../../devel/pth
-DEPENDS+=	libproplist-*:../../devel/libproplist
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	libpspell-[0-9]*:../../textproc/libpspell
+DEPENDS+=	pth-[0-9]*:../../devel/pth
+DEPENDS+=	libproplist-[0-9]*:../../devel/libproplist
+DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes

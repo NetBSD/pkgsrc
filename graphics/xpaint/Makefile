@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/05/22 09:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2001/09/27 23:18:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 
 DISTNAME=       xpaint-2.6.1
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
 COMMENT=	Simple paint program
 
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.11:../../graphics/png
 

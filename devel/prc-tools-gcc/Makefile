@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/28 05:48:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/27 23:17:57 jlam Exp $
 #
 
 PKGNAME=	prc-tools-gcc-${PRC_TOOLS_VERS}
@@ -9,7 +9,7 @@ BASE_VERS=	2.95.2
 
 .include "../../devel/prc-tools/Makefile.common"
 
-BUILD_DEPENDS+=	autoconf-*:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
 DEPENDS+=	prc-tools-binutils>=2.0:../../devel/prc-tools-binutils
 
 ALL_TARGET=	all-gcc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/11 16:39:17 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:59 jlam Exp $
 #
 
 DISTNAME=	gnomemm-1.1.19
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ binding for the GNOME libraries
 
-DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=	libsigc++>=1.0.1:../../devel/libsigc++
 DEPENDS+=	gtk-->=1.2.5:../../x11/gtk--
 
