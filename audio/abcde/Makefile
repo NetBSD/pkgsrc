@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/11/29 02:37:21 kim Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/29 02:58:46 kim Exp $
 
 DISTNAME=	abcde-2.0.3
 PKGREVISION=	1
@@ -21,11 +21,11 @@ NO_BUILD=	# defined
 EGDIR=		${PREFIX}/share/examples/abcde
 
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
-MESSAGE_SUBST+=	PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-post-patch:
+pre-configure:
 	@cd ${WRKSRC} && for f in abcde abcde.1; do			\
-		${SED} "s,@PKG_SYSCONFBASE@,${PKG_SYSCONFBASE},"	\
+		${SED} "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"		\
 			$$f > $$f.tmp &&				\
 		${MV} $$f.tmp $$f;					\
 	done
