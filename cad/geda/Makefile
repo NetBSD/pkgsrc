@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/12/13 05:19:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/09 06:18:26 dmcmahill Exp $
 #
 
 DISTNAME=	gEDA-${PKGVERSION}
@@ -23,7 +23,7 @@ NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-PKGVERSION=	20021103
+PKGVERSION=	20030223
 
 do-install:	# empty
 
