@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 16:00:49 taca Exp $
 # FreeBSD: ports/devel/ruby-byaccr/Makefile,v 1.2 2000/11/03 15:49:06 knu Exp
 
 DISTNAME=	byaccr-0.1
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	ftp://ftp.idaemons.org/pub/distfiles/ruby/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	# none
+HOMEPAGE=	# not available
 COMMENT=	Parser generator for ruby based on 'Berkeley Yacc/Yacc for Java'
-
-DIST_SUBDIR=	ruby
-USE_RUBY=	yes
-
 EXAMPLES=	Makefile cal.y calfunc.rb main.rb
 
 post-install:
@@ -21,5 +17,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/byaccr
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
