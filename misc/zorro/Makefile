@@ -3,7 +3,8 @@
 # Date created:         03 Aug 1996
 # Whom:                 shanee@rabbit.augusta.de
 #
-# $Id: Makefile,v 1.2 1997/10/27 02:00:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 21:31:35 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
 DISTNAME=	zorro-1.1p8
@@ -18,8 +19,8 @@ LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
 NO_BUILD=	yes
 
 post-patch:
-	( cd ${WRKSRC} ; sed 's|/usr/local|'${PREFIX}'|g' \
-		<zorro >zorro.BAK ; mv zorro.BAK zorro )
+	( cd ${WRKSRC} ; ${SED} 's|/usr/local|'${PREFIX}'|g' \
+		<zorro >zorro.BAK ; ${MV} zorro.BAK zorro )
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
