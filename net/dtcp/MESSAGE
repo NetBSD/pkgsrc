@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/06/22 16:08:27 hamajima Exp $
+
+You can specify your password to connect to DTCP server.  If your password
+is found in ${PREFIX}/etc/dtcpc.auth, dtcpc don't ask you your password.
+The format is a collon separated list of the server name, the user name and
+password.
+===========================================================================
