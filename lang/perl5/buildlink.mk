@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/11/28 05:18:02 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/11/28 05:40:18 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -56,6 +56,7 @@ REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_DIR}|${LOCALBASE}|g"
 REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_X11_DIR}|${X11BASE}|g"
 
 PERL5OPT+=		-I${PERL5_ARCHLIB:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
+CONFIGURE_ENV+=		PERL5OPT="${PERL5OPT}"
 MAKE_ENV+=		PERL5OPT="${PERL5OPT}"
 .endif	# USE_BUILDLINK_ONLY
 
