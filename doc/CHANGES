@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.627 2002/11/28 07:44:08 jlam Exp $
+$NetBSD: CHANGES,v 1.628 2002/11/28 10:20:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3754,3 +3754,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated w3m to 0.3.2.1 [itojun 2002-11-28]
 	Added pdksh-5.2.14 [schmonz 2002-11-28]
 	Updated pdksh to 5.2.14nb1 [jlam 2002-11-28]
+	Updated mrtg to 2.9.26.2nb2 [tron 2002-11-28]
