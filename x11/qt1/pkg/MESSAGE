@@ -1,0 +1,10 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/03/23 21:27:41 dmcmahill Exp $
+
+Please note that this package is provided for those programs
+which will not work with newer versions of Qt.  To allow this
+package to coexist with newer versions of Qt the manual pages
+all have "_1" appended.  For example instead of 'man qwidget'
+you would use 'man qwidget_1' to get the Qt1 version of the
+manual page.  The header files have been installed in
+${PREFIX}/include/qt1 and the meta object compiler (moc) has
+been installed as "moc1".  
