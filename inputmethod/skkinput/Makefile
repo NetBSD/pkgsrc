@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:43:49 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/06 03:53:27 uebayasi Exp $
 
 DISTNAME=	skkinput-2.06.3
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	http://downloads.sourceforge.jp/skkinput2/1815/
+MASTER_SITES=	http://osdn.dl.sourceforge.jp/skkinput2/1815/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://skkinput2.sourceforge.jp/
