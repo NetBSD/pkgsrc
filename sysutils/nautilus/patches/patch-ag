@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2004/02/10 17:59:24 jmmv Exp $
+
+--- src/nautilus-application.c.orig	2003-10-21 14:52:52.000000000 +0200
++++ src/nautilus-application.c
+@@ -346,6 +346,8 @@ create_starthere_link_callback (gpointer
+ 		g_warning ("Failed to execute command '%s'\n", cmd);
+ 	}
+ 	
++	chmod(desktop_link_file, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
++
+ 	g_free (desktop_path);
+ 	g_free (desktop_link_file);
+ 	g_free (cmd);
