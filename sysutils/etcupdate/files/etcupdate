@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.8 2001/12/01 11:42:09 martti Exp $
+# $NetBSD: etcupdate,v 1.9 2001/12/04 12:34:38 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -357,17 +357,21 @@ if [ -z "${CONTINUE}" ]; then
 			echo "*** ERROR: Unable to find ${SRCDIR}/Makefile"
 			exit 1
 		fi
+		# Set the environment for make
+		MAKE_ENV=" 			\
+			DESTDIR=${TEMPROOT}	\
+			MAKE=make		\
+			MTREE=mtree		\
+			INSTALL_DONE=1		\
+			NO_SENDMAIL=1"
 		echo "*** Populating ${TEMPROOT} from ${SRCDIR}"
 		cd ${SRCDIR}
 		if [ -z "${VERBOSE}" ]; then
-			make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
-				INSTALL_DONE=1 NO_SENDMAIL=1		\
-				distribution > /dev/null
+			eval ${MAKE_ENV} make distribution > /dev/null
 		else
-			make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
-				INSTALL_DONE=1 NO_SENDMAIL=1		\
-				distribution
+			eval ${MAKE_ENV} make distribution
 		fi
+		[ $? -ne 0 ] && exit 1
 	elif [ ! -f "${TEMPROOT}/dev/MAKEDEV" ]; then
 		echo ""
 		echo "*** WARNING: ${TEMPROOT}/dev/MAKEDEV not found"
