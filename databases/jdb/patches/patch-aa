@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2003/12/15 20:18:33 bad Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/15 21:22:41 wiz Exp $
 
 --- dblib.pl.orig	Mon Oct 28 23:46:40 2002
 +++ dblib.pl	Mon Dec 15 21:04:54 2003
-@@ -2,7 +2,7 @@
- 
- #
- # dblib.pl
--# Copyright (C) 1991-1998 by John Heidemann <johnh@isi.edu>
-+# Copyright (C) 1991-2002 by John Heidemann <johnh@isi.edu>
- # $Id: patch-aa,v 1.3 2003/12/15 20:18:33 bad Exp $
- #
- # This program is distributed under terms of the GNU general
 @@ -330,7 +330,7 @@
  
  sub force_numeric {
