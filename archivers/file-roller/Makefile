@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:33 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/05 21:59:46 xtraeme Exp $
 #
 
-DISTNAME=	file-roller-2.4.1
-PKGREVISION=	2
+DISTNAME=	file-roller-2.4.2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.4/}
 
