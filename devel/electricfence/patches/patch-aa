@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1998/10/27 11:03:09 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/07/07 02:42:10 dmcmahill Exp $
 
---- Makefile.orig	Fri Jan 20 05:33:04 1995
-+++ Makefile	Tue Oct 27 10:55:46 1998
-@@ -1,12 +1,11 @@
+--- Makefile.orig	Fri Jan 20 00:33:04 1995
++++ Makefile	Thu Jul  6 16:59:59 2000
+@@ -1,11 +1,14 @@
 -ASFLAGS= -mips2
 +#ASFLAGS= -mips2
  CC= cc
@@ -10,16 +10,19 @@ $NetBSD: patch-aa,v 1.2 1998/10/27 11:03:09 agc Exp $
 -INSTALL= install
  MV= mv
  CHMOD= chmod
- CFLAGS= -g
+-CFLAGS= -g
 -LIB_INSTALL_DIR= /usr/lib
 -MAN_INSTALL_DIR= /usr/man/man3
++.if ${MACHINE_ARCH} == "mipsel"
++CFLAGS= -g -DPAGE_PROTECTION_VIOLATED_SIGNAL=SIGBUS
++.else
++CFLAGS= -g 
++.endif
 +LIB_INSTALL_DIR= ${PREFIX}/lib
 +MAN_INSTALL_DIR= ${PREFIX}/man/man3
  
  PACKAGE_SOURCE= README libefence.3 Makefile efence.h \
- 	efence.c page.c print.c eftest.c tstheap.c CHANGES
-@@ -39,10 +38,9 @@
- 	@ echo
+@@ -40,8 +43,7 @@
  
  install: libefence.a libefence.3
 -	$(MV) libefence.a $(LIB_INSTALL_DIR)
@@ -31,4 +34,3 @@ $NetBSD: patch-aa,v 1.2 1998/10/27 11:03:09 agc Exp $
 +	${INSTALL} -c -m 0644 -o root -g wheel libefence.3 $(MAN_INSTALL_DIR)/libefence.3
  
  clean:
- 	- rm -f $(OBJECTS) tstheap.o eftest.o tstheap eftest libefence.a \
