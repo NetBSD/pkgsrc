@@ -1,0 +1,8 @@
+$NetBSD: MESSAGE,v 1.1.1.1 1999/10/16 15:01:49 rh Exp $
+
+---------------------------------------------------------------------------
+   The gif2png package has been installed on your system.  Please note
+   that the included 'web2png' script was written in python, and will
+   therefore only work if you have installed the python language from
+   the package system (see category languages).
+---------------------------------------------------------------------------
