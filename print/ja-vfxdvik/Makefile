@@ -1,29 +1,38 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:01:06 seb Exp $
-#
+# $NetBSD: Makefile,v 1.2 2003/03/15 19:57:00 kei Exp $
 
-DISTNAME=	xdvik-22.15
-PKGNAME=	ja-vfxdvik-22.15
-PKGREVISION=	1
+DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
+PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
+PKGREVISION=	#
 CATEGORIES=	japanese print
-MASTER_SITES=	ftp://ftp.appi.keio.ac.jp/pub/xdvi/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdvi/} # not xdvik
 
-PATCH_SITES=	ftp://ftp.appi.keio.ac.jp/pub/xdvi/
-PATCHFILES=	xdvik-22.15-j1.04.patch.gz
+PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/tex/
+PATCHFILES=	${DISTNAME}-${XDVIK_JP_PATCH_VERS}.patch.gz
 PATCH_DIST_ARGS=-d ${WRKSRC} --quiet -E -p1
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	# no home page
+HOMEPAGE=	http://www.nn.iij4u.or.jp/~tutimura/tex/xdvi.html
 COMMENT=	xdvik with vflib
 
+XDVIK_ORIGINAL_VERS=	22.40v
+XDVIK_JP_PATCH_VERS=	j1.14
+
+.if defined(USE_TEXFAMILY)
 DEPENDS+=	TeXfamily>=1.2.1:../../print/texfamily
-DEPENDS+=	ja-vflib-lib-[0-9]*:../../print/ja-vflib-lib
+.else
+DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
+.endif
 
 XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
 
-USE_GMAKE=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-local-texmf=texmf.local \
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/config
+LIBTOOL_OVERRIDE=	${WRKSRC}/config/klibtool
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf.local \
 		--without-texinfo \
 		--without-dialog \
 		--disable-multiplatform \
@@ -32,14 +41,12 @@ CONFIGURE_ARGS+=--enable-local-texmf=texmf.local \
 		--with-hp2627win \
 		--with-mftalkwin \
 		--with-x11 \
-		--with-system-wwwlib=yes \
-		--with-libwww-config=${LOCALBASE}/bin/libwww-config \
+		--with-system-wwwlib \
 		--with-system-pnglib \
-		--with-pnglib-libdir=${LOCALBASE}/lib \
-		--with-pnglib-include=${LOCALBASE}/include \
+		--with-system-t1lib \
 		--with-system-zlib \
-		--enable-xdviprint=${LOCALBASE}/bin/vfxdviprint \
-		--enable-xdvietcdir=${LOCALBASE}/share/texmf.local/vfxdvi
+		--enable-xdviprint=${PREFIX}/bin/vfxdviprint \
+		--enable-xdvietcdir=${PREFIX}/share/texmf.local/vfxdvi
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
@@ -51,8 +58,8 @@ CONFIGURE_ARGS+=--enable-auto-core \
 		--with-zlib-libdir=/usr/lib \
 		--with-zlib-include=/usr/include
 .else
-CONFIGURE_ARGS+= --with-zlib-libdir=${LOCALBASE}/lib \
-		--with-zlib-include=${LOCALBASE}/include
+CONFIGURE_ARGS+= --with-zlib-libdir=${PREFIX}/lib \
+		--with-zlib-include=${PREFIX}/include
 .endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
@@ -65,4 +72,14 @@ do-build:
 do-install:
 	cd ${XDVI_DIR} && ${MAKE_PROGRAM} install
 
+.if defined(USE_TEXFAMILY)
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.else
+.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.endif
+.include "../../www/libwww/buildlink2.mk"
+.include "../../print/ja-vflib-lib/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../fonts/t1lib/buildlink2.mk"
+.include "../../devel/libtool/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
