@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/08 17:25:24 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/01/19 17:36:28 tron Exp $
 bin/gphoto-exifdump
 bin/qm100
 bin/qmxxx
@@ -72,3 +72,4 @@ share/gnome/apps/Graphics/gphoto.desktop
 @dirrm share/gphoto
 @dirrm share/doc/gphoto
 @dirrm lib/gphoto/drivers
+@dirrm lib/gphoto
