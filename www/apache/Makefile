@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/10/17 18:14:15 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2000/12/11 00:03:08 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -44,10 +44,12 @@ CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+APACHE_USER?=		www
 SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
-CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
+CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=${APACHE_USER} \
 			--suexec-safepath='${SUEXEC_PATH}'
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
+BUILD_DEFS+=		APACHE_USER
 .endif
 
 .if !defined(NOPIC)
