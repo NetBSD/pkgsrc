@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:46:33 wiz Exp $
 #
 
 DISTNAME=       emma-0.7-5
@@ -9,6 +9,7 @@ MASTER_SITES=   http://rainbow.mimuw.edu.pl/~la181249/
 
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://rainbow.mimuw.edu.pl/~la181249/
+COMMENT=	Money management program
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/06 03:16:57 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:34 wiz Exp $
 
 DISTNAME=	libctl-1.3
 CATEGORIES=	devel
@@ -6,6 +6,7 @@ MASTER_SITES=	http://superjdj.mit.edu/libctl/
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
+COMMENT=	Guile-based flexible control file library for scientific simulations
 
 DEPENDS+=	guile-[0-9]*:../../lang/guile
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
