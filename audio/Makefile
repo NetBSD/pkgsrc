@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2005/02/20 15:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2005/03/01 01:18:49 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -284,6 +284,7 @@ SUBDIR+=	xmms-sid
 SUBDIR+=	xmms-synaesthesia
 SUBDIR+=	xmms-tv-scope
 SUBDIR+=	xmms-vismsa
+SUBDIR+=	xmms-wma
 SUBDIR+=	xmmsctrl
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
