@@ -3,11 +3,11 @@
 # Date created:		30 July 1996
 # Whom:			Sander Vesik <sander@haldjas.folklore.ee>
 #
-# $Id: Makefile,v 1.2 1997/10/27 01:29:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:17:57 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/11/22 20:10:39 jseger Exp
 #
 
 DISTNAME=	tkcron-2.12
-DISTFILES=	tkcron-2.12.tcl.gz
 CATEGORIES=	misc tk80
 MASTER_SITES=	ftp://ftp.neosoft.com/languages/tcl/alcatel/code/
 EXTRACT_SUFX=	.tcl.gz
