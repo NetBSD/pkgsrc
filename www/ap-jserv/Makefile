@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/15 13:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/15 13:49:04 wiz Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -13,6 +13,8 @@ DEPENDS+=	apache>=1.3.9:../../www/apache
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
+
+.include "../../mk/bsd.prefs.mk"
 
 USE_JAVA=	yes
 USE_GMAKE=	yes
