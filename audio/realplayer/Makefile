@@ -1,17 +1,31 @@
-# $NetBSD: Makefile,v 1.11 2002/08/09 13:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/20 13:56:47 grant Exp $
 
-DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
 
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE} == "i386"
+DISTNAME=		rp8_linux20_libc6_i386_cs2
+.elseif ${MACHINE} == "sparc"
+DISTNAME=		rp8_solaris27_sparc_cs2
+.endif
+
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 
+.if ${OPSYS} == "NetBSD"
+. if ${MACHINE} == "i386"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+. elseif ${MACHINE} == "sparc"
+.  if !exists(/emul/svr4/usr/lib/ld.so)
+IGNORE=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+.  endif
+. endif
+.endif
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -19,7 +33,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
 
 CRYPTO=			# defined
 INTERACTIVE_STAGE=	fetch extract
@@ -40,8 +54,8 @@ MESSAGE_SUBST+=		REALPLAYER_HOME=${REALPLAYER_HOME}
 
 _FETCH_MESSAGE= \
 	    ${ECHO} "==============================================================="; \
-	    ${ECHO} "  RealPlayer 8 for Linux 2.x (libc6 i386, Self-Extracting) must"; \
-	    ${ECHO} "  be fetched into ${DISTDIR} from"; \
+	    ${ECHO} "  RealPlayer 8 (Self-Extracting) must be fetched"; \
+	    ${ECHO} "  into ${DISTDIR} from"; \
 	    ${ECHO} "  ${DOWNLOAD}."; \
 	    ${ECHO} "==============================================================="
 
