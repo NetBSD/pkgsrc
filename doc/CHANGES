@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2725 2003/07/11 10:29:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.2726 2003/07/11 10:44:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2742,3 +2742,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gabber to 0.8.8 [jmmv 2003-07-10]
 	Updated vm to 7.17 [jtb 2003-07-11]
 	Updated libgnome to 2.2.3 [jmmv 2003-07-11]
+	Updated libgnomeui to 2.2.2 [jmmv 2003-07-11]
