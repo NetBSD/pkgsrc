@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/06 09:43:31 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/12 16:21:13 agc Exp $
 
 NetBSD definition for makefile, and make solaris into SunOS so
 that we can use ${OPSYS}.
@@ -20,7 +20,7 @@ that we can use ${OPSYS}.
  LIBSIODDIR=$(LIBDIR)/siod
  CP_F=cp -f
  # -Wmissing-prototypes
-@@ -137,14 +137,25 @@
+@@ -137,16 +137,27 @@
  #       from /usr/lib/libSYBxxx.so -> /sybase/lib/libxxx.so
  #       for each shared library in /sybase/lib.
  
@@ -33,8 +33,8 @@ that we can use ${OPSYS}.
  	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD)" \
  	LD_EXE_FLAGS="-R $(LIBDIR) -R $(LIBSIODDIR)" \
  	LD_EXE_LIBS="-lm -lsocket -lnsl -lposix4 -dl" \
-+	LD_LIB_FLAGS="-G" \
-+	LD_LIB_LIBS="$(LD_EXE_LIBS)" \
+ 	LD_LIB_FLAGS="-G" \
+ 	LD_LIB_LIBS="$(LD_EXE_LIBS)" \
 +	SO="so" \
 +        build_driver
 +
@@ -42,9 +42,11 @@ that we can use ${OPSYS}.
 +	$(MAKE) $(LDLP) \
 +	PROGS="siod ndbm.so tar.so parser_pratt.so ss.so regex.so" \
 +	LD=ld \
-+	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD)" \
++	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD) -I${INCDIR}" \
 +	LD_EXE_FLAGS="-Wl,-R$(LIBDIR) -L${LIBDIR} -Wl,-R$(LIBSIODDIR) -L${LIBSIODDIR}" \
 +	LD_EXE_LIBS="-lm" \
- 	LD_LIB_FLAGS="-G" \
- 	LD_LIB_LIBS="$(LD_EXE_LIBS)" \
++	LD_LIB_FLAGS="-G" \
++	LD_LIB_LIBS="$(LD_EXE_LIBS) -lm -lcrypt" \
  	SO="so" \
+         build_driver
+ 
