@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
+bin/xcopilot
+man/man1/xcopilot.1
