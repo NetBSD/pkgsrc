@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2003/03/05 12:01:43 grant Exp $
+
+--- doc/autoconf.texi.orig	Tue Dec  3 18:16:32 2002
++++ doc/autoconf.texi
+@@ -100,7 +100,7 @@ published by the Free Software Foundatio
+ * Autoconf: (autoconf).         Create source code configuration scripts
+ @end direntry
+ 
+-@dircategory Individual utilities
++@dircategory GNU Autoconf
+ @direntry
+ * autoscan: (autoconf)autoscan Invocation.
+                                 Semi-automatic @file{configure.ac} writing
