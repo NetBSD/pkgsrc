@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1119 2003/12/03 21:07:59 jschauma Exp $
+$NetBSD: TODO,v 1.1120 2003/12/03 23:04:49 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -151,7 +151,6 @@ Suggested package updates
 	o cervisia-2.0
 	o clisp-2.31
 	o clusterit-2.2
-	o conglomerate-0.7.6
 	o conserver-8.0.7
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.2
