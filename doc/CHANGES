@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8542 2004/12/31 13:29:21 minskim Exp $
+$NetBSD: CHANGES,v 1.8543 2004/12/31 13:33:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6725,3 +6725,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated autoconf213 to 2.13nb1 [minskim 2004-12-31]
 	Updated a2ps to 4.13.0.2nb6 [minskim 2004-12-31]
 	Updated mysql-client to 4.0.22nb4 [minskim 2004-12-31]
+	Updated squid to 2.5.7nb4 [taca 2004-12-31]
