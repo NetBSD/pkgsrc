@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/25 01:19:19 snj Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -18,7 +18,7 @@ CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]*
 CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
 
 WRKSRC= 		${WRKDIR}/kvim-${KVIM_VERSION}/src
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 
 GNU_CONFIGURE=		YES
@@ -30,8 +30,8 @@ CONFIGURE_ARGS+=	--with-tlib=ncurses
 post-configure:
 	${TOUCH} ${WRKSRC}/auto/configure ${WRKSRC}/auto/config.mk
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../x11/kdebase3/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
