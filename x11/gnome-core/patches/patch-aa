@@ -1,26 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2000/05/30 19:39:22 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2000/06/21 00:47:45 jlam Exp $
 
---- configure.orig	Tue May 23 07:35:01 2000
-+++ configure	Sat May 27 15:36:54 2000
-@@ -2148,6 +2148,8 @@
- *) lt_target="$target" ;;
- esac
- 
-+if false; then
-+
- # Check for any special flags to pass to ltconfig.
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -2321,6 +2323,8 @@
- # clobbered by the next message.
- exec 5>>./config.log
- 
-+fi
-+
- missing_dir=`cd $ac_aux_dir && pwd`
- for ac_prog in flex lex
- do
-@@ -6586,6 +6590,9 @@
+--- configure.orig	Tue May 23 01:35:01 2000
++++ configure	Tue Jun 20 20:06:14 2000
+@@ -6586,6 +6586,9 @@
  s%@CATALOGS@%$CATALOGS%g
  s%@CATOBJEXT@%$CATOBJEXT%g
  s%@DATADIRNAME@%$DATADIRNAME%g
