@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/07 21:41:43 reed Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -18,19 +18,5 @@ GNU_CONFIGURE=	YES
 
 BUILD_TARGET=	all manlinks=so
 INSTALL_TARGET=	install manlinks=so
-
-do-patch:
-	f=${WRKSRC}/Makefile.in ; \
-	[ -f $$f.orig ] || ${CP} $$f $$f.orig ; \
-	${SED} \
-		'/scriptdir/s/INSTALL_PROGRAM/BSD_INSTALL_SCRIPT/' \
-		< $$f.orig >$$f
-
-# We avoid using a patch for disabling the install of the info
-# file.  The easy part is that "install-info" is not called so
-# we can simply remove the single installed info file.
-
-post-install:
-	-${RM} -f ${PREFIX}/info/gzip.info
 
 .include "../../mk/bsd.pkg.mk"
