@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/08 08:14:49 jlam Exp $
+bin/gnapfetch
+share/doc/gnapfetch/README
