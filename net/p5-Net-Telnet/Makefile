@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 17:11:03 martti Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/30 13:36:24 xtraeme Exp $
 #
 
-DISTNAME=	Net-Telnet-3.02
+DISTNAME=	Net-Telnet-3.03
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nte
 CATEGORIES=	net perl5
