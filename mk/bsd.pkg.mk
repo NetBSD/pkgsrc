@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.392 2000/01/14 11:39:31 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.393 2000/01/14 11:58:21 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2186,6 +2186,9 @@ _DEPENDS_USE:
 	@${DO_NADA}
 .endif
 
+# Tells whether to halt execution if the object formats differ
+FATAL_OBJECT_FMT_SKEW?= yes
+
 fetch-depends:	_DEPENDS_USE
 build-depends:	_DEPENDS_USE
 run-depends:	_DEPENDS_USE
@@ -2205,7 +2208,9 @@ misc-depends: uptodate-pkgtools
 			${ECHO} "Installed package $$package is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
 			${ECHO} "Please update the $$package package to ${OBJECT_FMT}"; \
-			exit 1;						\
+			if [ "X${FATAL_OBJECT_FMT_SKEW}" != "no" ]; then \
+				exit 1;					\
+			fi;						\
 		fi;							\
 		if [ `${ECHO} $$found | wc -w` -gt 1 ]; then		\
 			${ECHO} '***' "WARNING: Dependency on '$$package' expands to several installed packages " ; \
