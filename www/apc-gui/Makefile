@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/31 23:44:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/19 18:31:30 minskim Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -38,6 +38,5 @@ do-install:
 		${EGDIR}/apc_gui.conf
 	${CP} -R ${WRKSRC}/* ${APC_GUI_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${APC_GUI_DIR}
-	${CHMOD} -R a-w ${APC_GUI_DIR}
 
 .include "../../mk/bsd.pkg.mk"
