@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/10/21 21:19:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/22 02:34:39 mycroft Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
@@ -14,23 +14,31 @@ info/sawfish.info-5
 @exec install-info --info-dir=%D/info %D/info/sawfish.info
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.a
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.so
 share/control-center/Sawfish/.directory
 share/control-center/Sawfish/.order
@@ -78,8 +86,8 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sawfish.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sawfish.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/sawfish.mo
@@ -88,8 +96,8 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/sawfish.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/sawfish.mo
-${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/sawfish.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/sawfish.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/sawfish.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/sawfish.mo
 share/pixmaps/sawfish-appearance.png
 share/pixmaps/sawfish-edgeflip.png
 share/pixmaps/sawfish-focus.png

@@ -1,14 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2001/10/21 21:19:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/10/22 02:34:38 mycroft Exp $
 
 DISTNAME=		sawfish-${SF_VERS}
-SF_VERS=		1.0
+SF_VERS=		1.0.1
 CATEGORIES=		x11 gnome wm
-MASTER_SITES=		ftp://mirror.capital-internet.net/pub/sawmill/sawfish/ \
-			ftp://eprom.dhs.org/pub/mirrors/sawmill/ \
-			http://ftp.fi.muni.cz/pub/linux/sawmill/ \
-			ftp://ftp.dcs.warwick.ac.uk/people/John.Harper/ \
-			ftp://ftp.du.se/pub/mirrors/sawfish/ \
-			ftp://sawmill.sourceforge.net/pub/sawmill/
+MASTER_SITES=		http://prdownloads.sourceforge.net/sawmill/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://sawmill.sourceforge.net/
