@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.8 2005/02/10 13:39:15 grant Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.9 2005/03/08 01:22:41 xtraeme Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -1404,6 +1404,18 @@ pre-configure:
         latest available version; this way, the package benefits of any
         bug fixes that may have appeared since it was released.
         </para>
+    </sect2>
+
+
+    <sect2>
+        <title>Packages installing startup scripts</title>
+        <para>If a package contains a rc.d script, it won't be copied into
+        the startup directory by default, but you can enable it, by adding
+        the option <varname>PKG_RCD_SCRIPTS=YES</varname> in
+        <filename>/etc/mk.conf</filename>. This option will copy the scripts
+        into <filename>/etc/rc.d</filename> when a package is installed, and
+        it will automatically remove the scripts when the package is
+        deinstalled.</para>
     </sect2>
     
   </sect1>
