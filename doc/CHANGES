@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3332 2003/09/11 18:24:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.3333 2003/09/11 22:39:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3644,3 +3644,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added focal81-0 [drochner 2003-09-11]
 	Updated tavrasm to 1.19 [jmmv 2003-09-11]
 	Updated spamass-milter to 0.1.3anb2 [jmmv 2003-09-11]
+	Updated teTeX2-bin to 2.0.2nb4 [jmmv 2003-09-11]
