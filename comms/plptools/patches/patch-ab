@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/14 05:41:47 sakamoto Exp $
+
+--- ./plpnfsd/mp_mount.c.orig	Tue Jul  6 06:33:05 1999
++++ ./plpnfsd/mp_mount.c	Wed Jul 14 11:50:58 1999
+@@ -60,4 +60,14 @@
+ #endif				/* __FreeBSD__ */
+ 
++#ifdef __NetBSD__
++#include <sys/socket.h>
++#include <netinet/in.h>
++#include <arpa/inet.h>
++#include <sys/types.h>
++#include <unistd.h>
++#include <strings.h>
++#include <nfs/nfsmount.h>
++#endif /* __NetBSD__ */
++
+ #include <rpc/rpc.h>
+ #include "nfs_prot.h"
+@@ -418,5 +428,5 @@
+ 	nfs_args.hostname = PSIONHOSTNAME;
+ 	nfs_args.flags = NFSMNT_INT | NFSMNT_RETRANS | NFSMNT_TIMEO
+-	    | NFSMNT_NOCONN | NFSMNT_DUMBTIMR | NFSMNT_MYWRITE
++	    | NFSMNT_NOCONN | NFSMNT_DUMBTIMR
+ 	    | NFSMNT_WSIZE | NFSMNT_RSIZE;
+ #endif
