@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/01/15 22:30:50 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/01/16 12:59:48 hubertf Exp $
 man/man7/libggi.7
 man/man6/cube3d.6
 man/man3/ggiResourceMustAcquire.3
@@ -112,7 +112,7 @@ lib/ggi/default/color.la
 lib/ggi/default/color.so
 lib/ggi/default/stubs.la
 lib/ggi/default/stubs.so
-@dirrm lib/ggi/default
+@comment in libgii: @dirrm lib/ggi/default
 lib/ggi/display/xf86dga.la
 lib/ggi/display/xf86dga.so
 lib/ggi/display/X-misc.la
@@ -181,10 +181,10 @@ include/ggi/internal/ggidlinit.h
 include/ggi/internal/ggi-dl.h
 include/ggi/internal/dltypes.h
 include/ggi/internal/debug.h
-@dirrm include/ggi/internal
-@dirrm include/ggi
+@comment in libgii: @dirrm include/ggi/internal
+@comment in libgii: @dirrm include/ggi
 etc/ggi/libggi.conf
 etc/ggi/libggimisc.conf
-@dirrm etc/ggi
+@comment in libgii: @dirrm etc/ggi
 bin/monitest
 bin/cube3d
