@@ -1,10 +1,9 @@
-
-xvile is the X11 version of vile.  in addition to the capabilities
+XVile is the X11 version of vile. In addition to the capabilities
 listed below for the character-oriented version of vile, xvile offers
 scrollbars and more complete mouse integration.
 
-vile is a text editor which is extremely compatible with vi in terms of
-"finger feel".  in addition, it has extended capabilities in many areas,
+Vile is a text editor which is extremely compatible with vi in terms of
+"finger feel". In addition, it has extended capabilities in many areas,
 notably: 
 
 	multi-file editing and viewing
@@ -20,4 +19,3 @@ notably:
 	auxiliary utilities for man page and C program syntax highlighting
 	built-in macro language
 	portability to all UNIX platforms, VMS, DOS, Win32, OS/2
-
