@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/01 03:25:25 mycroft Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/08 13:16:44 grant Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -15,6 +15,8 @@ VERSION=	0.1.5
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
+
+LIBS.SunOS+=		-lsocket
 
 do-install:
 	cd ${WRKSRC}/cdrecord;						\
