@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/01/31 23:53:04 lukem Exp $
+$NetBSD: MESSAGE,v 1.3 2003/04/06 16:26:01 taca Exp $
 
 To activate postfix:
 
@@ -11,7 +11,7 @@ To activate postfix:
 If you are running NetBSD 1.5 (or newer), the existing /etc/rc.d/postfix
 can be forced to start ${PREFIX}/sbin/postfix instead of /usr/sbin/postfix,
 by adding the following lines to /etc/rc.conf.d/postfix:
-	required_files='${PREFIX}/etc/postfix/main.cf'
+	required_files='${PKG_SYSCONFDIR}/main.cf'
 	start_cmd='${PREFIX}/sbin/postfix start'
 	stop_cmd='${PREFIX}/sbin/postfix stop'
 	reload_cmd='${PREFIX}/sbin/postfix reload'
