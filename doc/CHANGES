@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1802 2003/03/29 21:57:21 salo Exp $
+$NetBSD: CHANGES,v 1.1803 2003/03/29 22:56:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1345,3 +1345,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libmilter to 8.12.9 [seb 2003-03-29]
 	Updated bitchx to 1.0.3.19nb1 [salo 2003-03-29]
 	Updated djbdns to 1.05nb2 [salo 2003-03-29]
+	Updated kdrill to 5.11.6nb1 [jmmv 2003-03-29]
+	Updated xrolodex to 1.5nb1 [jmmv 2003-03-29]
