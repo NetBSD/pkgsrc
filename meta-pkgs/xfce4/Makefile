@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/03/10 07:41:16 martti Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/10 11:53:37 xtraeme Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
+PKGREVISION=	1
 DISTFILES=	# empty
 CATEGORIES=	meta-pkgs
 COMMENT=	XFce4
@@ -15,22 +16,22 @@ NO_MTREE=	# defined
 do-install:	# empty
 
 # Basic stuff
-.include "../../graphics/xfce4-iconbox/buildlink2.mk"
-.include "../../print/xfce4-print/buildlink2.mk"
-.include "../../sysutils/xfce4-fm/buildlink2.mk"
-.include "../../wm/xfce4-wm/buildlink2.mk"
-.include "../../x11/xfce4-desktop/buildlink2.mk"
-.include "../../x11/xfce4-gtk2-engines/buildlink2.mk"
-.include "../../x11/xfce4-utils/buildlink2.mk"
-.include "../../x11/xfce4-panel/buildlink2.mk"
+.include "../../graphics/xfce4-iconbox/buildlink3.mk"
+.include "../../print/xfce4-print/buildlink3.mk"
+.include "../../sysutils/xfce4-fm/buildlink3.mk"
+.include "../../wm/xfce4-wm/buildlink3.mk"
+.include "../../x11/xfce4-desktop/buildlink3.mk"
+.include "../../x11/xfce4-gtk2-engines/buildlink3.mk"
+.include "../../x11/xfce4-utils/buildlink3.mk"
+.include "../../x11/xfce4-panel/buildlink3.mk"
 
 # Extras
-.include "../../audio/xfce4-mixer/buildlink2.mk"
-.include "../../sysutils/xfce4-fm-icons/buildlink2.mk"
-.include "../../sysutils/xfce4-systray/buildlink2.mk"
-.include "../../wm/xfce4-wm-themes/buildlink2.mk"
-.include "../../x11/xfce4-themes/buildlink2.mk"
-.include "../../x11/xfce4-toys/buildlink2.mk"
-.include "../../x11/xfce4-trigger-launcher/buildlink2.mk"
+.include "../../audio/xfce4-mixer/buildlink3.mk"
+.include "../../sysutils/xfce4-fm-icons/buildlink3.mk"
+.include "../../sysutils/xfce4-systray/buildlink3.mk"
+.include "../../wm/xfce4-wm-themes/buildlink3.mk"
+.include "../../x11/xfce4-themes/buildlink3.mk"
+.include "../../x11/xfce4-toys/buildlink3.mk"
+.include "../../x11/xfce4-trigger-launcher/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
