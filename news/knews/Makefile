@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/01/25 20:09:09 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/04 13:51:17 tron Exp $
 #
 
 DISTNAME=	knews-1.0b.0
@@ -10,7 +10,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.matematik.su.se/~kjj/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-1.0.2:../../graphics/png
+DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 USE_IMAKE=	yes
