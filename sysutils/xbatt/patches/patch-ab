@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1999/12/10 09:13:59 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/26 20:02:36 wiz Exp $
 
---- xbatt.c.orig	Fri Sep 18 21:03:05 1998
-+++ xbatt.c	Fri Dec 10 07:48:25 1999
+--- xbatt.c.orig	Fri Sep 18 14:03:05 1998
++++ xbatt.c
 @@ -219,6 +219,7 @@
  String fallback_resouces[] = {
      "*width: 39",
@@ -10,3 +10,11 @@ $NetBSD: patch-ab,v 1.1 1999/12/10 09:13:59 itohy Exp $
  };
  
  main(
+@@ -494,6 +495,7 @@
+ 
+ #ifdef __NetBSD__
+     struct apm_power_info info;
++    memset(&info, 0, sizeof(info));
+     if( ioctl(apmfd, APM_IOC_GETPOWER, &info) == -1 ) {
+ 	fprintf(stderr, "xbatt: ioctl APM_IOC_GETPOWER failed\n");
+ 	exit(1);
