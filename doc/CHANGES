@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1743 2003/03/22 15:35:29 wiz Exp $
+$NetBSD: CHANGES,v 1.1744 2003/03/22 16:09:42 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1260,3 +1260,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.8.11nb1 [chris 2003-03-22]
 	Added airportmodemutility-2.0 [tron 2003-03-22]
 	Updated osf1_lib to 1.1 [wiz 2003-03-22]
+	Removed zoularis [grant 2003-03-22]
