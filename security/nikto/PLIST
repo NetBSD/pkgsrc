@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/05 17:45:24 xtraeme Exp $
+bin/nikto
+share/doc/nikto/CHANGES.txt
+share/nikto/docs/CHANGES.txt
+share/doc/nikto/LICENSE.txt
+share/doc/nikto/README_plugins.txt
+share/doc/nikto/nikto_usage.html
+share/doc/nikto/nikto_usage.txt
+share/examples/nikto/config.txt.sample
+share/nikto/plugins/LW.pm
+share/nikto/plugins/nikto_apacheusers.plugin
+share/nikto/plugins/nikto_core.plugin
+share/nikto/plugins/nikto_headers.plugin
+share/nikto/plugins/nikto_httpoptions.plugin
+share/nikto/plugins/nikto_msgs.plugin
+share/nikto/plugins/nikto_mutate.plugin
+share/nikto/plugins/nikto_outdated.plugin
+share/nikto/plugins/nikto_passfiles.plugin
+share/nikto/plugins/nikto_plugin_order.txt
+share/nikto/plugins/nikto_realms.plugin
+share/nikto/plugins/nikto_robots.plugin
+share/nikto/plugins/nikto_user_enum_apache.plugin
+share/nikto/plugins/nikto_user_enum_cgiwrap.plugin
+share/nikto/plugins/outdated.db
+share/nikto/plugins/realms.db
+share/nikto/plugins/scan_database.db
+share/nikto/plugins/server_msgs.db
+share/nikto/plugins/servers.db
+@dirrm share/nikto/docs
+@dirrm share/nikto/plugins
+@dirrm share/nikto
+@dirrm share/doc/nikto
