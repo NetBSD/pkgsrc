@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 19:23:15 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/09/24 00:17:51 jlam Exp $
 #
 
 DISTNAME=		krb4-1.1.1
@@ -19,13 +19,16 @@ CONFLICTS+=		zephyr-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
-GNU_CONFIGURE=		yes
 
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--includedir=${PREFIX}/include/kerberosIV
 
-.include "../../mk/x11.buildlink.mk"
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+EXAMPLEDIR=		${PREFIX}/share/examples/kth-krb4
 
 # this hangs while compiling one of the files, at least with the
 # toolchain as of 1.5ZC (20020329)
@@ -34,10 +37,11 @@ BROKEN=			toolchain problems on sparc64 (1.5ZC, 20020329)
 .endif
 
 post-patch:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		<${WRKSRC}/lib/kafs/kafs.h                                    \
-		>${WRKSRC}/lib/kafs/kafs.h.sed
-	@${MV} ${WRKSRC}/lib/kafs/kafs.h.sed ${WRKSRC}/lib/kafs/kafs.h
+	@for file in ${WRKSRC}/lib/kafs/kafs.h; do			\
+		${SED}	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 # enable this once our autoconf has been upgraded to autoconf>=2.52:
 #pre-configure:
@@ -48,12 +52,12 @@ post-patch:
 #	${LOCALBASE}/bin/autoconf
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${PREFIX}/share/examples/kth-krb4
-	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${PREFIX}/share/examples/kth-krb4
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${EXAMPLEDIR}
+	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${EXAMPLEDIR}
+	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${EXAMPLEDIR}
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

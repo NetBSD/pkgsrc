@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/19 09:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/24 00:24:37 jlam Exp $
 #
 
 DISTNAME=	ssh-3.2.0
@@ -12,13 +12,14 @@ COMMENT=	Secure Shell client and server for V.2 SSH protocol
 
 CONFLICTS=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
 
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
-PKG_SYSCONFSUBDIR=	ssh2
 
 BUILD_DEFS+=		USE_INET6
 
 CRYPTO=			YES
+PKG_SYSCONFSUBDIR=	ssh2
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,10 +37,12 @@ SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
 CONFIGURE_ARGS+=	--without-daemonpam --without-clientpam
 CONFIGURE_ARGS+=	--without-ssh-agent1-compat
 CONFIGURE_ARGS+=	--without-ssh1-compat
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp-wrappers}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
+
 # Setting FOREIGN_ETCDIR to PKG_SYSCONFBASE may seem stupid
 # if PKG_SYSCONFDIR.${PKG_SYSCONFVAR} is set but it does no harm...
+#
 CONFIGURE_ARGS+=	--with-foreign-etcdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 
@@ -76,7 +79,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${FILE} ${EGDIR}
 .endfor
 
-.include "../../security/tcp_wrappers/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
