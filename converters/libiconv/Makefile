@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/01 20:24:17 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/29 14:36:55 agc Exp $
 #
 
 DISTNAME=		libiconv-1.8
@@ -11,7 +11,6 @@ COMMENT=		character set conversion library
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
