@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1 1999/01/01 22:08:26 garbled Exp $
+$NetBSD: patch-aw,v 1.2 1999/02/23 22:31:37 wrstuden Exp $
 --- etc/papd/session.c.orig	Fri Jan  1 15:05:42 1999
 +++ etc/papd/session.c	Fri Jan  1 15:06:01 1999
 @@ -3,6 +3,7 @@
@@ -9,3 +9,12 @@ $NetBSD: patch-aw,v 1.1 1999/01/01 22:08:26 garbled Exp $
  #include <sys/types.h>
  #include <sys/syslog.h>
  #include <sys/time.h>
+@@ -53,7 +54,7 @@
+     fd_set		fds;
+     char		cbuf[ 578 ];
+     int			i, cc, timeout = 0, readpending = 0;
+-    u_short		seq = 1, rseq = 1, netseq;
++    u_short		seq = 0, rseq = 1, netseq;
+     u_char		readport;
+ 
+     infile.pf_state = PF_BOT;
