@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:24:47 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/30 17:21:55 cjep Exp $
 #
 
 DISTNAME=	covered-${SNAPDATE}
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://covered.sourceforge.net
+HOMEPAGE=	http://covered.sourceforge.net/
 COMMENT=	Verilog code coverage analyzer
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
