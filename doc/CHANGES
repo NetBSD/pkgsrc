@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.102 2002/09/29 03:49:17 rh Exp $
+$NetBSD: CHANGES,v 1.103 2002/09/29 06:21:15 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3018,3 +3018,9 @@ Changes to the packages collection and infrastructure in 2002:
 	Added bktr2jpeg-1.0 [wiz 2002-09-29]
 	Added Pantomime-1.0.5 [rh 2002-09-29]
 	Added GNUMail-1.0.3 [rh 2002-09-29]
+	Added GeometryKit-0.3.1r2 [rh 2002-09-29]
+	Added RenderKit-0.3.1r2 [rh 2002-09-29]
+	Added GLXKit-0.3.1r2 [rh 2002-09-29]
+	Added GlutKit-0.3.1r2 [rh 2002-09-29]
+	Added SDLKit-0.3.1r2 [rh 2002-09-29]
+	Added 3DKit-0.3.1r2 [rh 2002-09-29]
