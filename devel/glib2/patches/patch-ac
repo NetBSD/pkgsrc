@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.8 2004/04/01 18:13:31 jmmv Exp $
+$NetBSD: patch-ac,v 1.9 2005/03/02 15:38:08 wiz Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=107626
 
---- gmodule/gmodule-dyld.c.orig	2002-03-02 21:30:33.000000000 +0100
+--- gmodule/gmodule-dyld.c.orig	2004-02-20 02:41:00.000000000 +0100
 +++ gmodule/gmodule-dyld.c
-@@ -116,7 +116,13 @@ _g_module_symbol (gpointer     handle,
+@@ -119,7 +119,13 @@ _g_module_symbol (gpointer     handle,
        if (NSIsSymbolNameDefined (symbol_name))
  	sym = NSLookupAndBindSymbol (symbol_name);
        else
