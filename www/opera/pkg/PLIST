@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/06 10:09:25 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/02/20 19:23:25 tron Exp $
 bin/opera
 ${EMULSUBDIR}/usr/share/opera
 share/doc/opera/LICENSE
@@ -9,6 +9,7 @@ share/opera/buttons/default/compose.gif
 share/opera/buttons/default/copy.gif
 share/opera/buttons/default/delete.gif
 share/opera/buttons/default/doccomp.gif
+share/opera/buttons/default/docim.gif
 share/opera/buttons/default/docerr.gif
 share/opera/buttons/default/dochtlst.gif
 share/opera/buttons/default/docload.gif
@@ -18,6 +19,7 @@ share/opera/buttons/default/docprog.gif
 share/opera/buttons/default/docsrch.gif
 share/opera/buttons/default/doctrsf.gif
 share/opera/buttons/default/document.gif
+share/opera/buttons/default/docunkn.gif
 share/opera/buttons/default/docunrd.gif
 share/opera/buttons/default/dropdown.gif
 share/opera/buttons/default/figprog.gif
@@ -136,11 +138,20 @@ share/opera/buttons/defsmall/tile.gif
 share/opera/buttons/defsmall/tilevert.gif
 share/opera/buttons/defsmall/update.gif
 share/opera/buttons/defsmall/url.gif
+share/opera/images/blank.gif
 share/opera/images/drive.gif
 share/opera/images/file.gif
 share/opera/images/folder.gif
 share/opera/images/link.gif
+share/opera/images/operabanner.png
 share/opera/opera.adr
+share/opera/opera.desktop
+share/opera/opera.wmconfig
+share/opera/opera.xpm
+share/opera/opera_16x16.png
+share/opera/opera_22x22.png
+share/opera/opera_32x32.png
+share/opera/opera_48x48.png
 share/opera/styles/about.css
 share/opera/styles/cache.css
 share/opera/styles/csr.css
@@ -149,6 +160,8 @@ share/opera/styles/drives.css
 share/opera/styles/email.css
 share/opera/styles/history.css
 share/opera/styles/im.css
+share/opera/styles/mime.css
+share/opera/styles/opf.css
 share/opera/styles/plugins.css
 share/opera/styles/wml.css
 @dirrm share/opera/styles
