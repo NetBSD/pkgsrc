@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/11/01 04:18:02 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/11/01 04:25:19 rh Exp $
 #
 # This Makefile fragment is included by packages that use btparse.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.btparse=btparse
 BUILDLINK_PREFIX.btparse_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.btparse+=	include/btparse.h
 BUILDLINK_FILES.btparse+=	lib/libbtparse.*
-
 
 BUILDLINK_TARGETS+=	btparse-buildlink
 
