@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 2000/03/30 11:56:32 wiz Exp $
+$NetBSD: md5,v 1.7 2001/04/13 16:39:43 wiz Exp $
 
-MD5 (bash-2.04.tar.gz) = 49b548a8b72a4c925ff26930e4c31c6c
-MD5 (bash-doc-2.04.tar.gz) = a9684d1095e7ea1adb8759c3f4fca13d
+SHA1 (bash-2.05.tar.gz) = 4418655ddc7bf6172f885bd3a54e7bfec77fec91
+SHA1 (bash-doc-2.05.tar.gz) = c07174e6f59730a925634a173541b4dbfcd5fdc1
