@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/02/08 13:11:27 markd Exp $
+$NetBSD: distinfo,v 1.4 2004/03/11 21:02:56 markd Exp $
 
 SHA1 (kmplayer-0.8.2.tar.bz2) = 8065064dedefcb77270fcd06ee3fe526fa3abd4c
 Size (kmplayer-0.8.2.tar.bz2) = 578369 bytes
 SHA1 (patch-aa) = 5e690e05c83610f3c7726d8229d72a8c877b4fa9
 SHA1 (patch-ab) = 333935386b0b465092ad42651d1078563da082b0
+SHA1 (patch-ac) = f172d8e60b8e672e595ae60322a05836fe11fb9e
