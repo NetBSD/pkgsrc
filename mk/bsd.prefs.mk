@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.120 2003/08/21 16:16:46 gavan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.121 2003/08/31 11:04:58 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -276,12 +276,18 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
-PKG_DBDIR?=	${DESTDIR}/var/db/pkg
-PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
-PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
-PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
-PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
-PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
+PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
+PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
+PKG_CREATE_CMD?=	${PKG_TOOLS_BIN}/pkg_create
+PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
+PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
+
+PKG_DBDIR?=		${DESTDIR}/var/db/pkg
+PKG_ADD?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADD_CMD}
+PKG_ADMIN?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
+PKG_CREATE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_CREATE_CMD}
+PKG_DELETE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_DELETE_CMD}
+PKG_INFO?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO} -V 2>/dev/null || echo 20010302
