@@ -1,18 +1,10 @@
-$NetBSD: distinfo,v 1.5 2001/05/22 10:31:07 abs Exp $
+$NetBSD: distinfo,v 1.6 2001/06/14 14:55:45 skrll Exp $
 
-SHA1 (libtool-ml-20010219.tar.gz) = e8a2da617bd6cd2adddc6693a1e7be0eceefcac1
-Size (libtool-ml-20010219.tar.gz) = 720382 bytes
-SHA1 (patch-aa) = ff537b5767f7fbd8b287cff1d079cb34ac68e346
-SHA1 (patch-ab) = 8e7c5b6e330ea5d5104874dedb046dd3d053dff6
-SHA1 (patch-ac) = 85ea8ee09d9cf2d2ea005042538466b68d754722
-SHA1 (patch-ad) = 8ca40b71f51a294fc4120ea75c3ee156c2f58abe
-SHA1 (patch-ae) = a390e23d205f7cd1a9f533427e63f636ee7ef58d
-SHA1 (patch-af) = c5aa39c4be10c7028168d2a39c25035e2c2bbfb2
-SHA1 (patch-ag) = e344f9bb8e42af588b337962e725540aa268c6f6
-SHA1 (patch-ah) = 742b24c1b9f64ca60d55ef2f92eabc65555990cf
-SHA1 (patch-ai) = 1ad95b88b8ae0c546bbb72566c94ad8abb4b8a58
-SHA1 (patch-aj) = 597c28fc779b9cf2b8e1ebb4afbc3c5fc3367ebd
-SHA1 (patch-ak) = 12df4e6e0add692fdd8ab817509a0a94c4da7093
-SHA1 (patch-al) = 0f52dca46ad4bbaff5f7ac936f1ef32b51278521
-SHA1 (patch-am) = ce2d0680ced8463f2f943d17c551bbac8cf7489e
-SHA1 (patch-an) = 244b17f7a0493c2f18ffa11f0bd9e34274bd1c56
+SHA1 (libtool-ml-20010614.tar.gz) = ff746666737e420592c3017d65bf4c47f1430dac
+Size (libtool-ml-20010614.tar.gz) = 784246 bytes
+SHA1 (patch-ac-new) = 61196acaa12edee0b1209b2ba7c6414453bfa438
+SHA1 (patch-aa) = 4789e2ec97fbb987ce74992c5e78e918f2156b49
+SHA1 (patch-ab) = 37846c9ff30a6c422abd5150466b06190a5976bd
+SHA1 (patch-ac) = 61196acaa12edee0b1209b2ba7c6414453bfa438
+SHA1 (patch-ad) = 6aab76688d0f55648e35adc45a3492ba9c87acfb
+SHA1 (patch-ag) = 95ffb845d931e5ca32cbe73759baf725d435da10
