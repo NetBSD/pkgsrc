@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.448 2003/12/31 00:07:48 kristerw Exp $
+# $NetBSD: Makefile,v 1.449 2003/12/31 00:13:35 kristerw Exp $
 #
 
 COMMENT=	Development utilities
@@ -26,8 +26,8 @@ SUBDIR+=	argtable
 SUBDIR+=	as31
 SUBDIR+=	asm2html
 SUBDIR+=	astyle
-SUBDIR+=	atk
 SUBDIR+=	at-spi
+SUBDIR+=	atk
 SUBDIR+=	autoconf
 SUBDIR+=	autoconf213
 SUBDIR+=	autogen
