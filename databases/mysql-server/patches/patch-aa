@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.7 2003/01/21 08:13:19 lukem Exp $
+$NetBSD: patch-aa,v 1.8 2003/09/28 09:03:53 jdolecek Exp $
 
---- Makefile.in.orig	Thu Feb 14 18:50:36 2002
-+++ Makefile.in	Mon Mar 18 14:48:56 2002
-@@ -184,7 +184,7 @@
+--- Makefile.in.orig	2002-06-03 12:45:17.000000000 +0200
++++ Makefile.in	2003-09-28 09:59:18.000000000 +0200
+@@ -185,7 +185,7 @@
  # These are built from source in the Docs directory
  EXTRA_DIST = INSTALL-SOURCE README 			COPYING COPYING.LIB MIRRORS
  
--SUBDIRS = include @docs_dirs@ @readline_dir@ 			@thread_dirs@ @sql_client_dirs@ 			@sql_server_dirs@ scripts tests man 			@bench_dirs@ support-files
+-SUBDIRS = include @docs_dirs@ @readline_dir@ 			@thread_dirs@ @sql_client_dirs@ 			@sql_server_dirs@ scripts tests man 			@bench_dirs@ support-files os2
 +SUBDIRS = @thread_dirs@ @sql_server_dirs@ tests @bench_dirs@ support-files
  
  
