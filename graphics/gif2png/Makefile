@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/03/04 09:06:11 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/13 09:08:56 zuntum Exp $
 #
 
-DISTNAME=	gif2png-2.4.0
+DISTNAME=	gif2png-2.4.2
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.tuxedo.org/~esr/gif2png/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/convert/}
@@ -13,11 +13,11 @@ COMMENT=	convert GIF files to PNG
 DEPENDS+=	png>1.0.9:../../graphics/png
 
 GNU_CONFIGURE=	YES
-MAKE_ENV+=	INCLUDES="-I${PREFIX}/include"
+MAKE_ENV+=	INCLUDES="-I${LOCALBASE}/include"
 
 post-install:
 	${SED} s:/usr/bin/python:${PREFIX}/bin/python: \
-	       <${PREFIX}/bin/web2png >${PREFIX}/bin/web2png.new
+	       ${PREFIX}/bin/web2png > ${PREFIX}/bin/web2png.new
 	${MV} ${PREFIX}/bin/web2png.new ${PREFIX}/bin/web2png
 	${CHMOD} +x ${PREFIX}/bin/web2png
 
