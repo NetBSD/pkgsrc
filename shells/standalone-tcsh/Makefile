@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/29 10:03:08 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/24 12:19:13 wiz Exp $
 #
 
 NO_MTREE=		YES
@@ -13,6 +13,7 @@ PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
 .include "../../shells/tcsh/Makefile"
 
 COMMENT:=		Standalone version of the Extended C-shell
+MAINTAINER=		agc@NetBSD.org
 
 PKG_INFO:=		${PKG_INFO}
 PKG_CREATE:=		${PKG_CREATE}
