@@ -1,0 +1,4 @@
+Password sniffer, plus sniffing tools for penetration testing.
+
+This package contains does not contain the X11 tool, webspy.
+It is in the dsniff package.
