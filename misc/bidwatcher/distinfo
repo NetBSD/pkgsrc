@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/22 05:38:22 jlam Exp $
+$NetBSD: distinfo,v 1.2 2001/10/07 08:29:43 tron Exp $
 
-SHA1 (bidwatcher-1.1.6.tar.gz) = a3ed0c6172ab10c97c06968dd68bbc5bee8e3738
-Size (bidwatcher-1.1.6.tar.gz) = 102643 bytes
-SHA1 (patch-aa) = 28cb696a8b55a96b60d543c05a5cea585f5ba1aa
+SHA1 (bidwatcher-1.3.0.tar.gz) = 2fc2d17d65aab43fd0b716cce3588207aebb8a68
+Size (bidwatcher-1.3.0.tar.gz) = 97828 bytes
