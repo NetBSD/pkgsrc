@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.9 2004/11/10 16:50:39 wiz Exp $	*/
+/*	$NetBSD: str.c,v 1.10 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.9 2004/11/10 16:50:39 wiz Exp $");
+__RCSID("$NetBSD: str.c,v 1.10 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -168,7 +168,7 @@ static const test_t	modifiers[] = {
 	{	"pl",		2,	Dot	},
 	{	"_",		1,	Dot	},
 	{	".",		1,	Dot	},
-        {	NULL,		0,	0	}
+	{	NULL,		0,	0	}
 };
 
 
@@ -325,7 +325,7 @@ static int
 alternate_match(const char *pattern, const char *pkg)
 {
 	char   *sep;
-	char    buf[FILENAME_MAX];
+	char    buf[MaxPathSize];
 	char   *last;
 	char   *alt;
 	char   *cp;
@@ -374,7 +374,7 @@ dewey_match(const char *pattern, const char *pkg)
 	char   *cp;
 	char   *sep;
 	char   *ver;
-	char    name[FILENAME_MAX];
+	char    name[MaxPathSize];
 	int	op;
 	int     n;
 
@@ -470,7 +470,7 @@ findmatchingname(const char *dir, const char *pattern, matchfn match, void *data
 	strip_txz(tmp_pattern, pat_sfx, pattern);
 	
 	while ((dp = readdir(dirp)) != (struct dirent *) NULL) {
-		char    tmp_file[FILENAME_MAX];
+		char    tmp_file[MaxPathSize];
 		
 		if (strcmp(dp->d_name, ".") == 0 ||
 		    strcmp(dp->d_name, "..") == 0)
@@ -566,7 +566,7 @@ findbestmatchingname_fn(const char *found, void *vp)
 char *
 findbestmatchingname(const char *dir, const char *pattern)
 {
-	char    buf[FILENAME_MAX];
+	char    buf[MaxPathSize];
 
 	buf[0] = '\0';
 	if (findmatchingname(dir, pattern, findbestmatchingname_fn, buf) > 0
@@ -626,7 +626,7 @@ note_whats_installed(const char *found, void *vp)
 {
 	char *note = vp;
 
-	(void) strlcpy(note, found, FILENAME_MAX);
+	(void) strlcpy(note, found, MaxPathSize);
 	return 0;
 }
 
@@ -638,7 +638,7 @@ add_to_list_fn(const char *pkg, void *vp)
 {
 	lpkg_head_t *pkgs = vp;
 	lpkg_t *lpp;
-	char fn[FILENAME_MAX];
+	char fn[MaxPathSize];
 
 	snprintf(fn, sizeof(fn), "%s/%s", _pkgdb_getPKGDB_DIR(), pkg);
 	if (isdir(fn) || islinktodir(fn)) {

@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.11 2004/08/20 20:09:53 jlam Exp $	*/
+/*	$NetBSD: main.c,v 1.12 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.11 2004/08/20 20:09:53 jlam Exp $");
+__RCSID("$NetBSD: main.c,v 1.12 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -58,7 +58,7 @@ Boolean File2Pkg = FALSE;
 Boolean Quiet = FALSE;
 char   *InfoPrefix = "";
 char   *BuildInfoVariable = "";
-char    PlayPen[FILENAME_MAX];
+char    PlayPen[MaxPathSize];
 size_t  PlayPenSize = sizeof(PlayPen);
 char   *CheckPkg = NULL;
 size_t  termwidth = 0;

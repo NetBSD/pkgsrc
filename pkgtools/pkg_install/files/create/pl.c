@@ -1,4 +1,4 @@
-/*	$NetBSD: pl.c,v 1.8 2004/08/06 16:57:03 jlam Exp $	*/
+/*	$NetBSD: pl.c,v 1.9 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.8 2004/08/06 16:57:03 jlam Exp $");
+__RCSID("$NetBSD: pl.c,v 1.9 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -50,8 +50,8 @@ __RCSID("$NetBSD: pl.c,v 1.8 2004/08/06 16:57:03 jlam Exp $");
 static void
 CheckSymlink(char *name, char *prefix, size_t prefixcc)
 {
-	char    newtgt[MAXPATHLEN];
-	char    oldtgt[MAXPATHLEN];
+	char    newtgt[MaxPathSize];
+	char    oldtgt[MaxPathSize];
 	char   *slash;
 	int     slashc;
 	int     cc;
@@ -124,8 +124,8 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 	plist_t *tmp;
 	plist_t *p;
 	char    buf[ChecksumHeaderLen + LegibleChecksumLen];
-	char    target[FILENAME_MAX + SymlinkHeaderLen];
-	char    name[FILENAME_MAX];
+	char    target[MaxPathSize + SymlinkHeaderLen];
+	char    name[MaxPathSize];
 	char   *cwd = home;
 	char   *srcdir = NULL;
 	int     dirc;
@@ -159,7 +159,7 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 			 * starts, it's ok to do this somewhere here
 			 */
 			if (update_pkgdb) {
-				char   *s, t[FILENAME_MAX];
+				char   *s, t[MaxPathSize];
 
 				(void) snprintf(t, sizeof(t), "%s%s%s",
 					cwd,
