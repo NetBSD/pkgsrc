@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7782 2004/11/09 10:07:09 salo Exp $
+$NetBSD: CHANGES,v 1.7783 2004/11/09 10:49:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.8 [grant 2004-11-09]
 	Updated curl to 7.12.2 [adam 2004-11-09]
 	Updated win32-codecs to 041107.1 [salo 2004-11-09]
+	Updated allegro to 4.1.16 [adam 2004-11-09]
