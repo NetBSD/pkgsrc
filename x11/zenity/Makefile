@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/06 22:07:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/22 11:15:21 jmmv Exp $
 #
 
 DISTNAME=	zenity-1.8
@@ -13,17 +13,19 @@ COMMENT=	Display GNOME dialogs from the command line
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
