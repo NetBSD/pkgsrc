@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2001/10/03 22:36:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/22 03:48:12 mycroft Exp $
 
 DISTNAME=		libmikmod-3.1.9
 CATEGORIES=		audio
-MASTER_SITES=		http://mikmod.darkorb.net/libmikmod/
+MASTER_SITES=		http://www.mikmod.org/files/libmikmod/
 
 MAINTAINER=		kuebart@mathematik.uni-ulm.de
-HOMEPAGE=		http://mikmod.darkorb.net/
+HOMEPAGE=		http://www.mikmod.org/
 COMMENT=		MikMod Sound Library
 
 USE_GMAKE=		# defined
