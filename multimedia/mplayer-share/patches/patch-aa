@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/06 18:33:10 salo Exp $
 
 --- configure.orig	2003-12-08 22:33:31.000000000 +0100
-+++ configure
-@@ -367,8 +367,8 @@ for ac_option do
++++ configure	2004-04-06 20:22:24.000000000 +0200
+@@ -367,8 +367,8 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -431,7 +431,7 @@ if test -z "$_target" ; then
+@@ -431,7 +431,7 @@
        case "`( uname -m ) 2>&1`" in
        i[3-9]86*|x86|x86pc|k5|k6|k6_2|k6_3|k6-2|k6-3|pentium*|athlon*|i586_i686|i586-i686) host_arch=i386 ;;
        ia64) host_arch=ia64 ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
        ppc) host_arch=ppc ;;
        alpha) host_arch=alpha ;;
        sparc*) host_arch=sparc ;;
-@@ -499,7 +499,7 @@ if test "$_skip_cc_check" != yes ; then
+@@ -499,7 +499,7 @@
   for _cc in "$_cc" gcc gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
    echocheck "$_cc version"
    cc_name=`( $_cc -v ) 2>&1 | tail -1 | cut -d ' ' -f 1`
@@ -31,7 +31,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
    if test "$?" -gt 0; then
      cc_version="not found"
    fi
-@@ -819,7 +819,7 @@ EOF
+@@ -610,7 +610,7 @@
+ 
+   pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -1`
+   pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -1`
+-  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
++  pfamily=`$_cpuinfo | grep -i 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+   pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+   pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+ 
+@@ -819,7 +819,7 @@
      _optimizing=''
      ;;
  
