@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/23 19:12:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/23 10:59:28 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}indent
 bin/${GNU_PROGRAM_PREFIX}texinfo2man
 man/man1/${GNU_PROGRAM_PREFIX}indent.1
-@unexec ${INSTALL_INFO} --delete %D/info/indent.info %D/info/dir
 info/indent.info
-@exec ${INSTALL_INFO} %D/info/indent.info %D/info/dir
 share/doc/indent/indent.html
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/indent.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/indent.mo

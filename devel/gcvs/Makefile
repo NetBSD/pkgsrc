@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/02 11:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/23 10:57:27 seb Exp $
 
 DISTNAME=		gcvs-1.0a7
 PKGREVISION=		1
@@ -15,7 +15,9 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-TEXINFO_OVERRIDE=	YES
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		yes
+INFO_FILES=		cvs.info cvsclient.info
 
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
 			--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
@@ -23,5 +25,4 @@ CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/06/02 01:20:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/23 10:59:28 seb Exp $
 #
 
 DISTNAME=	indent-2.2.8a
@@ -15,6 +15,7 @@ USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	indent.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -26,5 +27,4 @@ PLIST_SUBST+=	GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=	GNU_PROGRAM_PREFIX
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
