@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8704 2005/01/11 15:48:12 manu Exp $
+$NetBSD: CHANGES,v 1.8705 2005/01/11 16:49:46 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated eterm to 0.9.3 [adam 2005-01-11]
 	Updated pkg_notify to 0.4.1 [xtraeme 2005-01-11]
 	Added ap-auth-radius-1.5.7 [manu 2005-01-11]
+	Added p5-Digest-CRC-0.09 [tv 2005-01-11]
