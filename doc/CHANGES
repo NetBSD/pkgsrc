@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5228 2004/03/12 10:25:33 taca Exp $
+$NetBSD: CHANGES,v 1.5229 2004/03/12 10:37:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1434,3 +1434,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ruby-amrita [taca 2004-03-12]
 	Updated quirc to 0.9.84 [minskim 2004-03-12]
 	Updated ap2-ruby to 1.1.1nb2 [taca 2004-03-12]
+	Updated xdeview to 0.5.18nb2 [tron 2004-03-12]
