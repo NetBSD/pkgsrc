@@ -1,0 +1,3 @@
+The Point-to-Point Protocol (PPP) provides a standard way to establish
+a network connection over a serial link.  At present, this package
+supports IP and the protocols layered above IP, such as TCP and UDP.
