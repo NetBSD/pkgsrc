@@ -1,30 +1,49 @@
-# $NetBSD: Makefile,v 1.24 2001/12/26 23:03:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2002/03/15 04:10:20 junyoung Exp $
 
-DISTNAME=		Wine-981211
-PKGNAME=		wine-981211
+DISTNAME=		Wine-20020228
+PKGNAME=		wine-20020228
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
-MAINTAINER=		mycroft@netbsd.org
+MAINTAINER=		junyoung@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
-COMMENT=		Beta Windows (3.1x, 95, NT) emulator
+COMMENT=		Free implementation of Windows on Unix (still alpha)
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-dll
 USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--without-curses
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/wine.ini ${PREFIX}/etc/wine.conf.example
+# The Wine configure script has problems locating the freetype-config
+# script and the libraries in the buildlink directory, so explicitly
+# set the location of freetype-config and prepend all of the LDFLAGS
+# necessary to link against the libraries.
+#
+CONFIGURE_ENV+=		ft_devel=${FREETYPE_CONFIG}
+CONFIGURE_ENV+=		X_LIBS="${LDFLAGS}"
+LIBS+=			${LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OBJECT_FMT} == "ELF"
-BROKEN=			Does not work on ELF systems.
+.if defined(USE_CUPS) && (${USE_CUPS} == YES)
+.include "../../print/cups/buildlink.mk"
+BUILD_DEFS+=		USE_CUPS
 .endif
 
-.include "../../graphics/xpm/buildlink.mk"
+EGDIR=			${PREFIX}/share/examples/wine
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/documentation/samples;				\
+	${INSTALL_DATA} config ${EGDIR}/wine.conf;			\
+	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd;		\
+	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
+
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

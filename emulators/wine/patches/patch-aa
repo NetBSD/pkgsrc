@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.5 1999/11/27 21:24:47 rh Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/15 04:10:20 junyoung Exp $
 
---- Make.rules.in.orig	Sat Nov 27 22:17:20 1999
-+++ Make.rules.in	Sat Nov 27 22:17:20 1999
-@@ -33,6 +33,7 @@
- DIVINCL   = -I$(TOPSRCDIR)/include -I$(TOPOBJDIR)/include -I$(SRCDIR) -I.
- ALLCFLAGS = $(CFLAGS) $(DEFS) $(OPTIONS) $(DIVINCL) $(X_CFLAGS)
- LDCOMBINE = ld -r
-+LDSHARE   = @LDSHARE@
- AR        = ar rc
- RM        = rm -f
- MKDIR     = mkdir -p
+--- Make.rules.in.orig	Tue Jan 15 04:56:46 2002
++++ Make.rules.in	Sat Jan 26 21:08:41 2002
+@@ -31,7 +31,7 @@
+ X_CFLAGS  = @X_CFLAGS@
+ X_LIBS    = @X_LIBS@
+ XLIB      = @X_PRE_LIBS@ @XLIB@ @X_EXTRA_LIBS@
+-LIBS      = @LIBS@
++LIBS      = @LIBS@ -lc
+ YACC      = @YACC@
+ LEX       = @LEX@
+ LEXLIB    = @LEXLIB@
