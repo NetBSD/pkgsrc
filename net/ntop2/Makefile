@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2002/11/21 10:23:06 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/09 18:22:11 mycroft Exp $
 
-DISTNAME=		ntop-2.1
-PKGNAME=		ntop2-2.1
-PKGREVISION=		1
+DISTNAME=		ntop-2.1.54
+PKGNAME=		ntop2-2.1.54
+#PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ntop/}
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.ntop.org/
@@ -12,18 +13,27 @@ COMMENT=		shows network usage (similar to "top" for processes)
 
 CONFLICTS=		ntop-[0-9]*
 
-WRKSRC=                 ${WRKDIR}/ntop
+WRKSRC=                 ${WRKDIR}/${DISTNAME}/ntop
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=          yes
 USE_GNU_READLINE=	yes
 # --enable-micro-ntop causes compile to fail 
-CONFIGURE_ARGS+=	--disable-mysql
+CONFIGURE_ARGS+=	--enable-automake171
+CONFIGURE_ARGS+=	--with-pcap-root=${BUILDLINK_PREFIX.libpcap}
+CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}
+CONFIGURE_ARGS+=	--with-gdchart-root=${BUILDLINK_PREFIX.gdchart}
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PTHREAD_OPTS+=		require
+
+pre-configure:
+	cd ${WRKSRC} && ${ACLOCAL}
+	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --automake
+	cd ${WRKSRC} && ${AUTOMAKE} --add-missing
+	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../net/libpcap/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
@@ -32,4 +42,5 @@ PTHREAD_OPTS+=		require
 .include "../../graphics/gdchart/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
