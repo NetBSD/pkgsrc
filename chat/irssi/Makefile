@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/12/30 16:57:40 cjep Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/18 00:36:11 xtraeme Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -15,7 +15,7 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 # SSL support
 .if defined(IRSSI_USE_SSL) && !empty(IRSSI_USE_SSL:M[Yy][Ee][Ss])
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
@@ -57,5 +57,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${IRSSI_CONFIG}
 
-.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
