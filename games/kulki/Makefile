@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/24 01:30:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/24 02:11:53 zuntum Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -10,14 +10,15 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.cs.put.poznan.pl/adanilecki/
 COMMENT=	Simple logic game - "balls"
 
-DEPENDS+=	qt2>=2.2.3:../../x11/qt2
-
 WRKSRC=		${WRKDIR}/kulki
 
 USE_X11=	YES
 USE_GMAKE=	YES
 
-MAKE_ENV=	QTDIR="${X11BASE}/qt2" MOC="${QTDIR}/bin/moc" CXX="${CXX}" CP="${CP}"
+USE_BUILDLINK_ONLY=	YES
+
+MAKE_ENV=	QTDIR="${BUILDLINK_DIR}/qt2" MOC="${QTDIR}/bin/moc" CXX="${CXX}" CP="${CP}" \
+		CXXFLAGS="-I${QTDIR}/include"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kulki
@@ -28,4 +29,5 @@ do-install:
 	cd ${PREFIX}/share/kulki &&				\
 		( ${GUNZIP_CMD} -c ${WRKSRC}/images.tgz | ${GTAR} xf - )
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,20 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2001/06/24 01:30:39 zuntum Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/24 02:11:54 zuntum Exp $
 
 --- Makefile.orig	Thu Feb  8 19:27:43 2001
 +++ Makefile
-@@ -1,8 +1,6 @@
+@@ -1,8 +1,4 @@
 -DEBUG = #-g
 -GLIBS = -L/usr/X11/lib \
 -	-I$(QTDIR)/include -L$(QTDIR)/lib\
 -	-lqt -lX11 -lXext 
 -INSTALL = /usr/games/
-+LIBS =	-L$(X11BASE)/qt2/lib -Wl,-R$(X11BASE)/qt2/lib \
-+	-I$(X11BASE)/qt2/include -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -I$(LOCALBASE)/include \
-+	-lqt -lX11 -lXext
++LDFLAGS+=	-L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib -lqt -lX11 -lXext
  # obrazki w $(INSTALL)/images
  #
  #GLIBS= -L/mnt/sys2/xlib -lm -lX11 -lXext /usr/X11R6/lib/libqt.a \
-@@ -10,18 +8,17 @@
+@@ -10,18 +6,16 @@
  #	 /usr/X11R6/lib/libkfm.la /usr/X11R6/lib/libkfile.la \
  #	  /usr/X11R6/lib/libkfm.la /usr/lib/libpng.a \
  #	  /usr/lib/libjpeg.a 
@@ -32,17 +30,16 @@ $NetBSD: patch-aa,v 1.3 2001/06/24 01:30:39 zuntum Exp $
  
  %.o: %.cc
 -	g++ $(CFLAGS) $(DEBUG) $(GINCLUDE) -c $<
-+	$(CXX) $(CXXFLAGS) -DINSTALL=\"$(PREFIX)/share/kulki\" -L$(X11BASE)/lib -L$(X11BASE)/qt2/lib  \
-+		-I$(X11BASE)/qt2/include -c $<
++	$(CXX) $(CXXFLAGS) -DINSTALL=\"$(PREFIX)/share/kulki\" -c $<
  
  	
  GOB = main.o main_window.o szcanvas.o szsprite.o hscor.o 
-@@ -30,7 +27,7 @@
+@@ -30,7 +24,7 @@
  all: gui kulki
  
  kulki: gui
 -	g++ $(MOB) $(LOB) $(GLIBS) $(GOB) -o kulki && strip kulki
-+	$(CXX) $(MOB) $(LOB) $(LIBS) $(LDFLAGS) $(GOB) -o kulki
++	$(CXX) $(MOB) $(LOB) $(LDFLAGS) $(GOB) -o kulki
  	
  gui: $(MOB) $(GOB)
  
