@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/14 12:54:45 tron Exp $
 bin/nessus
 bin/nessus-mkrand
 include/nessus/config.h
@@ -18,7 +18,6 @@ man/man8/nessus-rmuser.8
 man/man8/nessusd.8
 sbin/nessus-adduser
 sbin/nessus-mkcert
-sbin/nessus-mkcert-client
 sbin/nessus-rmuser
 sbin/nessusd
 @exec ${MKDIR} %D/lib/nessus/reports
