@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/22 02:22:26 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/31 22:09:43 jwise Exp $
 # FreeBSD Id: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp
 
 DISTNAME=	ruby-1.4.6
@@ -16,21 +16,18 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/
 
 DEPENDS+=	ruby-1.4.*:../../lang/ruby
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
-TCL_LIB=	tcl80
-TK_LIB=		tk80
-TCL_DIR=	tcl8.0
-TK_DIR=		tk8.0
+TCL_LIB=	tcl83
+TK_LIB=		tk83
 
 USE_X11=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME}/ext
 CONFIGURE_ARGS+=--with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
 		--with-tcl-lib="${LOCALBASE}/lib" \
 		--with-tk-lib="${LOCALBASE}/lib" \
-		--with-tcl-include="${LOCALBASE}/include/${TCL_DIR}" \
-		--with-tk-include="${LOCALBASE}/include/${TK_DIR}" \
+		--with-tcl-include="${LOCALBASE}/include" \
+		--with-tk-include="${LOCALBASE}/include" \
 		--with-X11-dir="${X11BASE}"
 
 
