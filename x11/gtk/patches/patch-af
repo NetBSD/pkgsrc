@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1999/04/27 21:33:26 tron Exp $
+
+--- gtk-config.in.orig	Tue Feb  2 00:17:38 1999
++++ gtk-config.in	Tue Apr 27 23:17:01 1999
+@@ -104,7 +104,7 @@
+ 
+ if test "$echo_libs" = "yes"; then
+       my_glib_libs=
+-      libdirs=-L@libdir@
++      libdirs=-L@libdir@\ -Wl,-R@libdir@
+       for i in $glib_libs ; do
+         if test $i != -L@libdir@ ; then
+           if test -z "$my_glib_libs" ; then
