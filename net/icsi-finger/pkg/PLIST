@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/07/22 12:53:56 is Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/07/05 20:48:29 tron Exp $
 bin/gfinger
 sbin/gfingerd
 sbin/packet2ascii
@@ -32,3 +32,6 @@ share/examples/icsi-finger/targets/x-.users
 share/examples/icsi-finger/targets/x-help
 @dirrm share/examples/icsi-finger/targets
 @dirrm share/examples/icsi-finger
+@exec mkdir -p %D/etc/fingerdir/targets
+@dirrm etc/fingerdir/targets
+@dirrm etc/fingerdir
