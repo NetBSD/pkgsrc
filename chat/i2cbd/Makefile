@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/29 15:55:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/29 16:25:56 jmmv Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -9,29 +10,43 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
 
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+
 .include "../../mk/bsd.prefs.mk"
 
-ICBD_OWNER?=	root
-PLIST_SUBST+=	ICBD_OWNER=${ICBD_OWNER} \
-		CHOWN=${CHOWN} \
-		TOUCH=${TOUCH}
+BUILD_DEFS+=		ICBD_OWNER
+ICBD_OWNER?=		${ROOT_USER}
+PLIST_SUBST+=		ICBD_OWNER=${ICBD_OWNER}
+
+PKG_SYSCONFSUBDIR=	icbd
+EGDIR=			${PREFIX}/share/examples/i2cbd
+EGFILES=		motd icbd_help icbd.deny news.1 
+CONF_FILES_PERMS=
+.for f in ${EGFILES}
+CONF_FILES_PERMS+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f \
+			${ICBD_OWNER} ${ROOT_GROUP} 644
+.endfor
+.undef f
+
+SUPPORT_FILES_PERMS=	${EGDIR}/empty.log /var/log/icbd.log \
+			${ICBD_OWNER} ${ROOT_GROUP} 644
 
 post-extract:
-		-${RM} -f ${WRKSRC}/*/.depend
+	-${RM} -f ${WRKSRC}/*/.depend
+
+post-build:
+	${TOUCH} ${WRKDIR}/empty.log
+	${SED} -e 's,@PREFIX@,${PREFIX},' \
+		< ${WRKSRC}/etc/icbd.sh > ${WRKDIR}/icbd.sh
 
 post-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/etc/icbd
-		${CHOWN} ${ICBD_OWNER} ${PREFIX}/etc/icbd
-		${CHMOD} 755 ${PREFIX}/etc/icbd
-		for f in motd icbd_help icbd.deny news.1 ; do \
-			${INSTALL_DATA} ${WRKSRC}/etc/$$f ${PREFIX}/etc/icbd ; \
-		done
-		${CHOWN} -R ${ICBD_OWNER} ${PREFIX}/etc/icbd
-		${TOUCH} /var/log/icbd.log
-		${CHOWN} ${ICBD_OWNER} /var/log/icbd.log
-		${SED} \
-			-e 's,@PREFIX@,${PREFIX},' \
-			<${WRKSRC}/etc/icbd.sh  >${WRKDIR}/icbd.sh
-		${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
+	${INSTALL_DATA_DIR} ${EGDIR}
+.for f in ${EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/etc/$f ${EGDIR}
+.endfor
+.undef f
+	${INSTALL_DATA} ${WRKDIR}/empty.log ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
 
 .include "../../mk/bsd.pkg.mk"
