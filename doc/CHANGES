@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4411 2004/01/10 04:59:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4412 2004/01/10 05:19:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jwhois to 3.2.2nb2 [kleink 2004-01-10]
 	Updated cups to 1.1.20 [jlam 2004-01-10]
 	Updated gnome2-terminal to 2.4.2 [xtraeme 2004-01-10]
+	Updated gnome2-games to 2.4.1.1 [xtraeme 2004-01-10]
