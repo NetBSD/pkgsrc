@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.69 2001/12/26 19:16:59 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.70 2002/03/18 05:46:42 fredb Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -43,17 +43,21 @@ MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
 # Preload these for architectures not in all variations of bsd.own.mk.
 GNU_ARCH.alpha?=	alpha
+GNU_ARCH.arm26?=	arm
 GNU_ARCH.arm32?=	arm
 GNU_ARCH.i386?=		i386
 GNU_ARCH.i486?=		i386
 GNU_ARCH.i586?=		i386
 GNU_ARCH.i686?=		i386
+GNU_ARCH.m68000?=	m68010
 GNU_ARCH.m68k?=		m68k
 GNU_ARCH.mips?=		mipsel
 GNU_ARCH.mipseb?=	mipseb
 GNU_ARCH.mipsel?=	mipsel
 GNU_ARCH.ns32k?=	ns32k
 GNU_ARCH.powerpc?=	powerpc
+GNU_ARCH.sh3eb?=	sh
+GNU_ARCH.sh3el?=	shle
 GNU_ARCH.sparc?=	sparc
 GNU_ARCH.sparc64?=	sparc64
 GNU_ARCH.vax?=		vax
@@ -109,7 +113,7 @@ LOWER_VENDOR?=
 LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}
 
 # Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
 # from being created in bsd.own.mk.
@@ -140,6 +144,20 @@ OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
 .endif
+.endif
+
+.if ${OPSYS} == "NetBSD"
+. if ${OBJECT_FMT} == "ELF" && \
+    (${MACHINE_GNU_ARCH} == "arm" || \
+     ${MACHINE_ARCH} == "i386" || \
+     ${MACHINE_ARCH} == "m68k" || \
+     ${MACHINE_ARCH} == "m68000" || \
+     ${MACHINE_GNU_ARCH} == "sh" || \
+     ${MACHINE_GNU_ARCH} == "shle" || \
+     ${MACHINE_ARCH} == "sparc" || \
+     ${MACHINE_ARCH} == "vax")
+APPEND_ELF=		elf
+. endif
 .endif
 
 SHAREOWN?=		${DOCOWN}
