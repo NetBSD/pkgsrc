@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/04 16:43:19 itojun Exp $
+bin/gtk_wicontrol
