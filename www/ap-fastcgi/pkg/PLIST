@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/10/03 21:50:00 tv Exp $
+lib/apache/mod_fastcgi.so
+share/doc/mod_fastcgi/httpd.conf.example
+share/doc/mod_fastcgi/mod_fastcgi.html
