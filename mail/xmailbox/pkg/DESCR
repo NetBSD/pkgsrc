@@ -1,0 +1,68 @@
+README
+======
+
+The xmailbox program started out as an enhanced xbiff. However, the latest
+version includes support for sound effects and animation. The default
+functionality employs two images for the "mail in mailbox" and "no mail"
+states, in the form of XPM type 3 files. The default images are, respectively,
+that of an empty mailbox with its flag down, and that of an open mailbox,
+with its flag up and a letter visible inside. Animation can be enabled for
+playing up to 8 XPM files in repeated sequence.
+
+The application can also, optionally, play a sound through a workstation's
+audio device, instead of generating the default beep sound, whenever new
+mail arrives. The following sound packages/drivers are supported:
+
+    1) NCD audio server
+    2) Rplay sound package
+    3) Linux's Sun-compatible audio driver (/dev/audio)
+    4) Standard SUN audio driver (/dev/audio)
+    5) FreeBSD SUN-compatible audio driver (contributed by Brian Clapper - 
+       bmc@telebase.com)
+    6) Any external sound player (contributed by Laurent Martin -
+       martin@isia.cma.fr)
+
+By default, pressing any mouse button in the image forces xmailbox to 
+remember the current size of the mail file as being the "empty" size and 
+to change its image accordingly. In addition to this, the user can 
+optionally have xmailbox invoke his/her favourite mail retrieving program.
+
+This program is nothing more than a wrapper around the Mailbox widget
+included with the program's source distribution. Mailbox was derived by
+the Mailbox widget included with the Athena Widget Set. The first version
+of Mailbox was a hack based on the X11R5 Mailbox widget written by
+Jim Fulton, MIT X Consortium, and Ralph Swick, DEC/MIT Project Athena. The
+xmailbox source is very similar to xbiff.
+
+If you are planning to use the NCD Audio server or the rplay sound package, 
+you can obtain these packages from ftp.x.org in /contrib/netaudio and 
+/contrib/rplay respectively.  These packages provide network sound support.
+
+To build xmailbox:
+ 1. make any required changes in Imakefile, by specifying where the
+    XPM includes and libs are, as well as the desired audio interface,
+ 2. run xmkmf and then make.
+
+This program has been tested on Sun Sparc 2,5,10,20 & IPX under SunOS
+4.1.3 and 4.1.4, HP 9000/710 under HP-UX 9.01, and i86 PCs equipped with
+Soundblaster-16 audio cards (although any card supported by the kernel
+sound driver should work fine) under Linux 1.2.x, 1.3.x, and 2.0.x.
+
+NOTE: You'll need xpm-3.4 or higher in order to compile xmailbox.
+----  As of this writing, the latest version of xpm is 3.4; it can be
+      obtained from ftp.x.org (in directory contrib, file xpm-3.4.tar.gz).
+
+ Enjoy!
+
+ Dimitrios P. Bouras (dbouras@hol.gr) and
+ William K. W. Cheung (wcheung@mail.spiralcomm.com)
+
+-------------------------------------------------------------------------------
+THE AUTHORS (Dimitrios P. Bouras and William K. W. Cheung) MAKE NO
+REPRESENTATIONS ABOUT THE SUITABILITY OF THIS SOFTWARE FOR ANY PURPOSE.
+IT IS PROVIDED "AS IS" WITHOUT ANY EXPRESS OR IMPLIED WARRANTY.
+
+Xbiff IS COPYRIGHT 1988, X CONSORTIUM
+SEE X(1) FOR A FULL STATEMENT OF RIGHTS AND PERMISSIONS.
+-------------------------------------------------------------------------------
+
