@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/06/15 20:05:54 reinoud Exp $
+$NetBSD: distinfo,v 1.7 2004/06/15 23:19:50 reinoud Exp $
 
 SHA1 (firefox-source-0.8.tar.bz2) = 8282f17a8f51265a86923c03362bba629162bf05
 Size (firefox-source-0.8.tar.bz2) = 31102943 bytes
@@ -33,4 +33,4 @@ SHA1 (patch-bs) = e9434aadc52b0120dcfc80e57002152d2bd47605
 SHA1 (patch-bt) = a033b83ee633391ffc138442697fbe754ec92902
 SHA1 (patch-bu) = db33b8651e3cb1fbf9a18dbe78e1e8288cfda0ee
 SHA1 (patch-bv) = 4f23dfd885131ea866f31370f1421e7c19706860
-SHA1 (patch-bw) = a2dd1af3ddf7f16636b530e8c1787409e2b58158
+SHA1 (patch-bw) = fc3a518d3762be6e85104a6dc7fffd5ae1a463c8
