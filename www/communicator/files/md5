@@ -1,4 +1,5 @@
-$NetBSD: md5,v 1.4 1999/06/04 18:07:40 thorpej Exp $
+$NetBSD: md5,v 1.5 1999/06/14 21:43:34 cgd Exp $
 
+MD5 (communicator-v46-export.alpha-dec-osf4.0.tar.gz) = 94997739fbf2d5481c985e7240cf82ff
 MD5 (communicator-v46-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 5979e5a1d4096973388334d2606d2677
 MD5 (communicator-v46-export.x86-unknown-linuxglibc2.0.tar.gz) = 5d9be47cb503e9e7f27e206852b591bc
