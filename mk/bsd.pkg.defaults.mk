@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.153 2003/06/05 12:13:34 markd Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.154 2003/06/12 15:27:08 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -66,6 +66,14 @@ PKGSRC_SLEEPSECS?= 5
 # The following values are used to manage the packages collection as a whole.
 #
 
+#ABI=	
+# The ABI to be used, if supported by the Operating System and/or compiler.
+# Currently only used under IRIX and explicitly set during bootstrapping
+# Onlye change this if you really know what you're doing -- libraries of
+# one ABI can not be linked with libraries of another!
+# Possible: 64 (64 bit ABI), 32 (SGI's N32 ABI), undefined (SGI's old o32 ABI)
+# Default: determined during bootstrapping
+
 #PKG_DEVELOPER=	yes
 # Run a sanity check that package developers want:
 #  * run check-shlibs to see that all binaries will find their libs
@@ -101,7 +109,7 @@ CROSSBASE?=	${LOCALBASE}/cross
 # Where X11 is installed on the system.
 # (and the default install path of X11 pkgs)
 # Possible: any path
-# Default: /usr/X11R6, or /usr/openwin for Solaris
+# Default: /usr/X11R6, /usr/openwin for Solaris
 
 #MOTIFBASE?=	/usr/X11R6
 # Where Motif-2.0-compatible headers and libraries are installed
@@ -351,13 +359,38 @@ PATCH_FUZZ_FACTOR?= -F0
 # Possible: any Fortran compiler
 # Default: none
 
-.if ${OPSYS} == "SunOS"
-#IMAKE?=	${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
-# Sun ONE Studio (formerly known as WorkShop and Forte) compliers can be used
-# with:
-#IMAKE?=	${X11BASE}/bin/imake
-# Possible: any path and valid flags
-# Default: ${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+#IMAKE?=	${X11BASE}/bin/imake ${IMAKEOPTS}
+# The imake binary to invoke.
+# Possible: any path followed by any valid flags
+# Default: ${X11BASE}/bin/imake ${IMAKEOPTS}
+
+#IMAKEOPTS=
+# Options passed to imake(1).  The defaults ensure that imake finds the
+# correct commands.
+# Possible: any valid flags
+# Default:
+#  for SunOS:
+#          -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+#  for IRIX:
+#          -DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
+#          -DManUsr=${PREFIX}
+.if ${OPSYS} == "IRIX"
+#IMAKEOPTS?=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
+#               -DManUsr=${PREFIX}
+# ABI specific flags may be added during bootstrapping process or by hand:
+.  if defined(ABI)
+.    if ${ABI} == "32"
+#IMAKEOPTS+=	-DBuildN32
+.    else
+#IMAKEOPTS+=	-DBuild64bit
+.    endif
+.  endif
+# you may also wish to add ISA specific flags, such as "-DSgiISA32=4" if
+# you are compiling for mips4.
+.elif ${OPSYS} == "SunOS"
+#IMAKEOPTS?=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+# To use Sun ONE Studio (formerly known as WorkShop and Forte) compliers
+# set IMAKEOPTS tp the empty string
 .endif
 
 PRE_ROOT_CMD?=	${TRUE}

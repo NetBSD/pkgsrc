@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink2.mk,v 1.9 2003/06/08 22:47:28 jschauma Exp $
+# $NetBSD: xaw.buildlink2.mk,v 1.10 2003/06/12 15:27:09 jschauma Exp $
 
 .if !defined(XAW_BUILDLINK2_MK)
 XAW_BUILDLINK2_MK=	# defined
@@ -19,7 +19,7 @@ BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.Xaw3d}
 BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.neXtaw}
 .else
 BUILDLINK_PREFIX.Xaw?=	${X11BASE}
-LIBXAW?=		-L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib -lXaw
+LIBXAW?=		-L${X11BASE}/lib${ABI} -Wl,${RPATH_FLAG}${X11BASE}/lib${ABI} -lXaw
 .endif
 
 MAKE_ENV+=	LIBXAW="${LIBXAW}"
