@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/04/30 12:33:29 wiz Exp $
+
+SHA1 (binutils-2.11.2.tar.gz) = 4095688f3478e8d4693ad2b965008a49f033e08f
+Size (binutils-2.11.2.tar.gz) = 9934295 bytes
+SHA1 (binutils-NetBSD-diff-20020418.patch.bz2) = d3a2f7c22c0168821c2544a7485dc886bc3ad07c
+Size (binutils-NetBSD-diff-20020418.patch.bz2) = 121943 bytes
