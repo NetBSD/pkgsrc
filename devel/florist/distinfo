@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.3 2004/06/30 11:23:43 shannonjr Exp $
+
+SHA1 (florist-3.15p-src.tgz) = 1f901f25e4d3d450fa75cd8b0a200e3690282cd7
+Size (florist-3.15p-src.tgz) = 264898 bytes
+SHA1 (patch-c-posix.c) = 622d42742a78bad89f8367f92d4931450ec365e5
+SHA1 (patch-configure.in) = b6e182ae9db5960378c047bf84b3a3fe979027a7
+SHA1 (patch-posix-implementation.gpb) = 2b5c58039a2254e36aa450b9b1f69bd9f6d513b4
+SHA1 (patch-posix-io.adb) = 7a9d761e139c0265239cd56bc97366f60b03c80f
+SHA1 (patch-posix-message_queues.adb) = 5ef23709667be534df25de79fee5d9e1f59b537f
+SHA1 (patch-posix-permissions.adb) = 962377e3d5eb17da9e08c5a5448bdc76ee8d4bb9
+SHA1 (patch-posix-process_environment.adb) = 6b0227ef192134adcb78360a15b9cf1a465576f9
+SHA1 (patch-posix-process_identification.gpb) = c5f45e058e805ff576d8984f50e783dd77d9bd5b
+SHA1 (patch-posix-process_primitives.gpb) = 9bdba9b09b855c5a46ea3a2329a4c7a952314a18
+SHA1 (patch-posix-process_scheduling.adb) = 112cec272ebaf54d61547b13a421a59ac8130705
+SHA1 (patch-posix-process_times.adb) = 5f8468ae9fa9c1384fa75a7d4f1f3f469ba9409a
+SHA1 (patch-posix-signals.adb) = 1b6c29b51cbebb0970f9c0ee376d38fdf8dd4153
+SHA1 (patch-posix-supplement_to_ada_io.adb) = accafdb30808b498dfbaf6128227daa1dc71db65
+SHA1 (patch-posix-unsafe_process_primitives.gpb) = 4da2f7f5738500d68a5510f6016f4cc17683e83e
