@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5163 2004/03/08 22:18:02 wiz Exp $
+$NetBSD: CHANGES,v 1.5164 2004/03/08 23:21:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tk to 8.4.6 [minskim 2004-03-08]
 	Updated amule to 1.2.6 [jmmv 2004-03-08]
 	Updated oss to 3.9.8d [wiz 2004-03-08]
+	Removed TreeText [wiz 2004-03-08]
