@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/09 00:05:27 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/11 10:21:17 jmmv Exp $
 #
 
 DISTNAME=       awk
@@ -14,11 +14,15 @@ DIST_SUBDIR=	${PKGNAME}
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
-MAKEFLAGS+=	CC=${CC} YACC=${YACC} CFLAGS=${CFLAGS}
+MAKEFLAGS+=	CC=${CC} YACC=${YACC} CFLAGS=${CFLAGS:Q}
 ALL_TARGET=	a.out
+
+post-build:
+	${SED} -e 's|awk|nawk|g' -e 's/Awk/Nawk/g' \
+		${WRKSRC}/awk.1 > ${WRKSRC}/nawk.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/bin/nawk
-	${SED} -e 's|awk|nawk|g' ${WRKSRC}/awk.1 > ${PREFIX}/man/man1/nawk.1
+	${INSTALL_MAN} ${WRKSRC}/nawk.1 ${PREFIX}/man/man1/nawk.1
 
 .include "../../mk/bsd.pkg.mk"
