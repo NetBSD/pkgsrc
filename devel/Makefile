@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2002/12/14 00:19:50 cjep Exp $
+# $NetBSD: Makefile,v 1.360 2002/12/18 22:36:58 tsarna Exp $
 #
 
 COMMENT=	Development utilities
@@ -300,7 +300,6 @@ SUBDIR+=	py-expect
 SUBDIR+=	py-idle
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-logging
-SUBDIR+=	py-plex
 SUBDIR+=	py-readline
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
