@@ -1,14 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/02/24 01:30:05 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/04/11 21:32:00 jtb Exp $
 
---- dg/diagramchecks.h.orig	Thu Feb 22 17:24:21 2001
+--- dg/diagramchecks.h.orig	Fri Aug 27 14:11:46 1999
 +++ dg/diagramchecks.h
-@@ -23,7 +23,9 @@
+@@ -23,7 +23,6 @@
  #define _DIAGRAMCHECKS_H
  
  #include "bool.h"
-+#ifndef __NetBSD__
- #include <values.h>
-+#endif
+-#include <values.h>
  class Graph;
  class Diagram;
  class string;
