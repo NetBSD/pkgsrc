@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1010 2002/07/22 02:33:55 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1011 2002/07/22 22:00:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -204,7 +204,12 @@ BUILD_DEFS+=		KERBEROS
 
 PERL5_REQD?=		5.0
 .if defined(USE_PERL5)
+.  if ${OPSYS} == "Darwin"
+PERL5_REQD=		5.8.0
+DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl58
+.  else
 DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
+.  endif
 .  if exists(${PERL5})
 .    if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
 .      include "${LOCALBASE}/share/mk/bsd.perl.mk"
