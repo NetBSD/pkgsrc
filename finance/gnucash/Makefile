@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2003/10/30 16:23:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2003/11/12 01:31:49 salo Exp $
 
 DISTNAME=		gnucash-1.8.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}

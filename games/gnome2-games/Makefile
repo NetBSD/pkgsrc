@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/12 01:31:49 salo Exp $
 
 DISTNAME=		gnome-games-2.2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.2/}
 EXTRACT_SUFX=		.tar.bz2

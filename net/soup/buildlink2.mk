@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:53:00 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/11/12 01:31:51 salo Exp $
 #
 # This Makefile fragment is included by packages that use soup.
 #
@@ -9,7 +9,7 @@
 SOUP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			soup
-BUILDLINK_DEPENDS.soup?=		soup>=0.7.10nb4
+BUILDLINK_DEPENDS.soup?=		soup>=0.7.10nb5
 BUILDLINK_PKGSRCDIR.soup?=		../../net/soup
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.soup=soup

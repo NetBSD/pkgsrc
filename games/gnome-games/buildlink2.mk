@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/11/12 01:31:49 salo Exp $
 #
 # This Makefile fragment is included by packages that use gnome-games.
 #
@@ -9,7 +9,7 @@
 GNOME_GAMES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-games
-BUILDLINK_DEPENDS.gnome-games?=		gnome-games>=1.4.0.4nb7
+BUILDLINK_DEPENDS.gnome-games?=		gnome-games>=1.4.0.4nb8
 BUILDLINK_PKGSRCDIR.gnome-games?=		../../games/gnome-games
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-games=gnome-games

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:52:26 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/12 01:31:51 salo Exp $
 #
 
 DISTNAME=		ggv-2.0.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.0/}
 EXTRACT_SUFX=		.tar.bz2
