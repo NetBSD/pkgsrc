@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 09:37:44 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/23 19:53:48 wiz Exp $
 #
 
 DISTNAME=	gnut-0.4.20
@@ -9,8 +9,8 @@ MAINTAINER=	deberg@netbsd.org
 HOMEPAGE=	http://www.gnutelliums.com/linux_unix/gnut/
 COMMENT=	Text-mode Gnutella client
 
-#BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
-#BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
+#BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
+#BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 #DEPENDS+=	pth>=1.3.6:../../devel/pth
 
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
