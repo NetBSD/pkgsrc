@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/07 12:39:24 seb Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/11 12:47:17 seb Exp $
 
 DISTNAME=	pkgcvsupdate-0.3
 CATEGORIES=	pkgtools devel
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
+
+BROKEN=		"This version of pkgcvsupdate does not work in some situations, wait for a new one"
 
 .include "../../mk/bsd.prefs.mk"
 
