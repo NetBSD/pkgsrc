@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.164 1998/09/17 14:03:48 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.165 1998/09/17 15:47:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -365,6 +365,16 @@ INSTALL_FILE=		${PKGDIR}/INSTALL
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 .endif
 
+# Set REQ_FILE to be the name of any REQ file
+.if !defined(REQ_FILE) && exists(${PKGDIR}/REQ)
+REQ_FILE=		${PKGDIR}/REQ
+.endif
+
+# Set MESSAGE_FILE to be the name of any MESSAGE file
+.if !defined(MESSAGE_FILE) && exists(${PKGDIR}/MESSAGE)
+MESSAGE_FILE=		${PKGDIR}/MESSAGE
+.endif
+
 PKG_CMD?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
@@ -381,11 +391,11 @@ PKG_ARGS+=		-i ${INSTALL_FILE}
 .ifdef DEINSTALL_FILE
 PKG_ARGS+=		-k ${DEINSTALL_FILE}
 .endif
-.if exists(${PKGDIR}/REQ)
-PKG_ARGS+=		-r ${PKGDIR}/REQ
+.ifdef REQ_FILE
+PKG_ARGS+=		-r ${REQ_FILE}
 .endif
-.if exists(${PKGDIR}/MESSAGE)
-PKG_ARGS+=		-D ${PKGDIR}/MESSAGE
+.ifdef MESSAGE_FILE
+PKG_ARGS+=		-D ${MESSAGE_FILE}
 .endif
 .if !defined(NO_MTREE)
 PKG_ARGS+=		-m ${MTREE_FILE}
