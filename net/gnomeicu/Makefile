@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/06 15:27:36 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/27 06:34:49 tron Exp $
 
 DISTNAME=	gnomeicu-0.93
 CATEGORIES=	net gnome
@@ -14,5 +14,6 @@ DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
+USE_LIBINTL=	YES
 
 .include "../../mk/bsd.pkg.mk"
