@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.3 2003/01/18 04:28:57 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.4 2003/01/20 01:31:21 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -337,8 +337,7 @@ END {
 					i = i + 1;
 				}
 				if ( vul == "" ){
-					vul="<I>(no vulnerabilities known)"
-						"</I>";
+					vul="<I>(no vulnerabilities known)</I>";
 				}
 			}
 			
