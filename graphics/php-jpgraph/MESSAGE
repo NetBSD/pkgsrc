@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/11/27 22:34:19 jdolecek Exp $
+
+Do *not* edit "${PJDIR}/jpg-config.inc" to customize
+this package because it is a link which will removed during upgrades.
+The actual configuration file is "${PJCONFFILE}".
+
+To make php-jpgraph available for PHP scripts, make sure to
+add following directory to php.ini 'include_path':
+
+	${PJDIR}
+
+Usage examples are available in ${EXDIR}.
+
+===========================================================================
+
