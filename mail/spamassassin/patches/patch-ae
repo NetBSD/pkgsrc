@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2003/11/03 00:56:26 heinz Exp $
+$NetBSD: patch-ae,v 1.7 2003/12/02 12:36:00 grant Exp $
 
---- spamd/spamd.raw.orig	Thu Sep 11 03:05:22 2003
+--- spamd/spamd.raw.orig	2003-09-11 11:05:22.000000000 +1000
 +++ spamd/spamd.raw
 @@ -207,8 +207,8 @@ if ($opt{'auth-ident'}) {
  }
@@ -25,3 +25,27 @@ $NetBSD: patch-ae,v 1.6 2003/11/03 00:56:26 heinz Exp $
  
      # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
      chdir '/' or die "Can't chdir to /: $!\n";
+@@ -1341,7 +1342,7 @@ Options:
+  -a, --auto-whitelist, --whitelist  Use auto-whitelists
+  -c, --create-prefs                 Create user preferences files
+  -C path, --configpath=path         Path for default config files
+- --siteconfigpath=path              Path for site configs (def: /etc/mail/spamassassin)
++ --siteconfigpath=path              Path for site configs (def: @@LOCAL_RULES_DIR@@)
+  -d, --daemonize                    Daemonize
+  -h, --help                         Print usage message.
+  -i ipaddr, --listen-ip=ipaddr,...  Listen on the IP ipaddr (default: 127.0.0.1)
+@@ -1416,12 +1417,12 @@ Create user preferences files if they do
+ =item B<-C> I<path>, B<--configpath>=I<path>
+ 
+ Use the specified path for locating the distributed configuration files.
+-Ignore the default directories (usually C</usr/share/spamassassin> or similar).
++Ignore the default directories (usually C<@@DEF_RULES_DIR@@> or similar).
+ 
+ =item B<--siteconfigpath>=I<path>
+ 
+ Use the specified path for locating site-specific configuration files.  Ignore
+-the default directories (usually C</etc/mail/spamassassin> or similar).
++the default directories (usually C<@@LOCAL_RULES_DIR@@> or similar).
+ 
+ =item B<-d>, B<--daemonize>
+ 
