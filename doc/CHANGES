@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2653 2003/07/02 05:27:52 grant Exp $
+$NetBSD: CHANGES,v 1.2654 2003/07/02 09:04:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated smalltalk to 2.1.3 [jtb 2003-07-01]
 	Updated mozilla to 1.4 [taya 2003-07-02]
 	Updated gtexinfo to 4.6nb1 [grant 2003-07-02]
+	Added bitlbee-0.80 [jmmv 2003-07-02]
