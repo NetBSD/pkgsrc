@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 1999/04/17 01:55:55 mjl Exp $
+$NetBSD: patch-aa,v 1.5 1999/07/21 23:25:08 mjl Exp $
 
---- makemake.in.orig	Sun Aug  9 21:27:13 1998
-+++ makemake.in	Sun Sep  6 21:55:57 1998
-@@ -1034,6 +1034,9 @@
+--- makemake.in.orig	Thu Jan  7 16:23:48 1999
++++ makemake.in	Wed Jul 21 20:07:38 1999
+@@ -280,7 +280,7 @@
+      LIBTERMCAP='@LIBTERMCAP@'           # either '-ltermcap' or '-lncurses'
+      LIBDL='@LIBDL@'                     # either '-ldl' or ''
+      X_INCLUDES='@X_INCLUDES@'           # either '-I/usr/somewhere/include' or ''
+-     X_LIBS='@X_LIBS@'                   # either '-L/usr/somewhere/lib -lX11' or ''
++     X_LIBS='-Wl,-rpath ${X11BASE}/lib @X_LIBS@'                   # either '-L/usr/somewhere/lib -lX11' or ''
+      host='@host@'                       # something like 'sparc-sun-sunos4'
+      host_cpu='@host_cpu@'               # something like 'sparc'
+      host_vendor='@host_vendor@'         # something like 'sun'
+@@ -1056,6 +1056,9 @@
      *) ;;
    esac
  fi
@@ -12,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 1999/04/17 01:55:55 mjl Exp $
  
  if [ $TSYS = sun4 -a $CROSS = false ] ; then
    ARCH_K=`(arch -k) 2>/dev/null || uname -m 2>/dev/null` # kernel architecture, see arch(1)
-@@ -2326,7 +2329,7 @@
+@@ -2380,7 +2383,7 @@
    if [ $HOS = unix ] ; then
      echotab "if test -d locale; then rm -rf locale; fi"
      echotab "mkdir locale"
@@ -21,16 +30,16 @@ $NetBSD: patch-aa,v 1.4 1999/04/17 01:55:55 mjl Exp $
    else
      echotab "mkdir locale"
      eval `grep ALL_LINGUAS= src/gettext/configure.in`
-@@ -2842,7 +2845,7 @@
+@@ -2919,7 +2922,7 @@
      fi
      case "$fsstnd" in
        gnu_ext)
 -        echotab "if [ ! -d \$(mandir)/html ] ; then mkdir \$(mandir)/html ; fi"
 +        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
          ;;
-       suse)
+       suse | redhat | debian)
          echotab "if [ ! -d \$(docdir) ] ; then mkdir \$(docdir) ; fi"
-@@ -2894,10 +2897,10 @@
+@@ -2977,10 +2980,10 @@
      fi
      case "$fsstnd" in
        gnu_ext)
@@ -43,8 +52,8 @@ $NetBSD: patch-aa,v 1.4 1999/04/17 01:55:55 mjl Exp $
 +          echotab "\$(INSTALL_DATA) clreadline.html \$(prefix)/share/doc/clisp/clreadline.html"
          fi
          ;;
-       suse)
-@@ -2931,9 +2934,9 @@
+       suse | redhat | debian)
+@@ -3016,9 +3019,9 @@
      fi
      case "$fsstnd" in
        gnu_ext)
@@ -55,4 +64,4 @@ $NetBSD: patch-aa,v 1.4 1999/04/17 01:55:55 mjl Exp $
 +          echotab "\$(RM) \$(prefix)/share/doc/clisp/clreadline.html"
          fi
          ;;
-       suse)
+       suse | redhat | debian)
