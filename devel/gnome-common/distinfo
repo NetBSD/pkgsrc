@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/21 11:31:36 jmmv Exp $
+
+SHA1 (gnome-common-1.2.4.tar.gz) = 56dd1155e952f54582344d4c32a64bd4cb73755b
+Size (gnome-common-1.2.4.tar.gz) = 214003 bytes
+SHA1 (patch-aa) = c2d8df529884f1d76c9f529fa19ed59ff0944ed9
