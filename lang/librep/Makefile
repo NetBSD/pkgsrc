@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2001/10/21 11:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/22 02:23:53 mycroft Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
-REP_VERS=		0.14
+REP_VERS=		0.15
 CATEGORIES=		lang devel
-MASTER_SITES=		ftp://librep.sourceforge.net/pub/librep/
+MASTER_SITES=		http://prdownloads.sourceforge.net/librep/
 
 MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://librep.sourceforge.net/
@@ -21,6 +21,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
+CONFIGURE_ARGS+=	--enable-static
 
 PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
