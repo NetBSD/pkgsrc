@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/15 07:19:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/15 17:15:03 uebayasi Exp $
 
 DISTNAME=	ndtpd-3.1.1
 CATEGORIES=	textproc japanese
@@ -36,7 +36,7 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ndtpd.sh >${WRKDIR}/ndtpd.sh
 
 post-install:
-	@${INSTALL_DATA} ${WRKDIR}/ndtpd.sh ${PREFIX}/etc/rc.d/ndtpd.sh
+	@${INSTALL_SCRIPT} ${WRKDIR}/ndtpd.sh ${PREFIX}/etc/rc.d/ndtpd.sh
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../textproc/eb/buildlink.mk"
