@@ -6,7 +6,7 @@ export FMHOME PATH
 # We need portmapper to be running in 'insecure' mode.... wonderful :/
 #
 if [ -z "$FM_BYPASS_PORTMAP_CHECK" ] ; then
-    INSECURE_PORTMAP=`ps -xa -o command|grep '^portmap.*-.*i'`
+    INSECURE_PORTMAP=`ps -xa -o command|grep 'portmap.*-.*i'`
     if [ -z "$INSECURE_PORTMAP" ]; then
 	cat << END
 ABORTING: The linux FrameMaker binary requires portmap to be running in
