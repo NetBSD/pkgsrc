@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2002/06/18 12:10:27 agc Exp $
+# $NetBSD: Makefile,v 1.198 2002/06/20 15:45:01 jschauma Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -78,6 +78,7 @@ SUBDIR+=	libghttp
 SUBDIR+=	libwww
 SUBDIR+=	lhs
 SUBDIR+=	links
+SUBDIR+=	links-gui
 SUBDIR+=	lynx
 SUBDIR+=	lynx-current
 SUBDIR+=	make_album
