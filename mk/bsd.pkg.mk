@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1232 2003/08/08 08:43:37 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1233 2003/08/08 12:04:40 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -34,7 +34,7 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 # Makefile, which are usually not customizable.
 .PHONY: pre-extract build-defs-message
 pre-extract: build-defs-message
-.if !defined(PKGSRC_SHOW_BUILD_DEFS)
+.if ${PKGSRC_SHOW_BUILD_DEFS} != "YES" && ${PKGSRC_SHOW_BUILD_DEFS} != "yes"
 build-defs-message:
 .elif !target(build-defs-message)
 build-defs-message: ${WRKDIR}
