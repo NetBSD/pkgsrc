@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2004/11/05 17:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.356 2004/11/06 01:37:07 he Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -155,6 +155,7 @@ SUBDIR+=	opera-acroread5
 SUBDIR+=	opera-plugins
 SUBDIR+=	opera7
 SUBDIR+=	p5-Apache-ASP
+SUBDIR+=	p5-Apache-AuthCookie
 SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
 SUBDIR+=	p5-Apache-Filter
@@ -162,6 +163,7 @@ SUBDIR+=	p5-Apache-Gallery
 SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-Session
+SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-Apache-ePerl
 SUBDIR+=	p5-CGI
@@ -194,6 +196,7 @@ SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-HTTPD-User-Manage
+SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-SVN-Web
 SUBDIR+=	p5-Template-Extract
 SUBDIR+=	p5-Template-Generate
