@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/01/26 05:21:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 15:25:12 wiz Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5b2
@@ -12,6 +12,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
+COMMENT=	Kana-Kanji conversion system (server)
 
 DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
 

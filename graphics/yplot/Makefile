@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/14 11:52:10 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:38 wiz Exp $
 
 DISTNAME=		yplot-1.0.3
 CATEGORIES=		graphics math
@@ -6,6 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yplot/}
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://yplot.sourceforge.net/
+COMMENT=		Yorick interface to PLplot
 
 DEPENDS+=		yorick>=1.4:../../math/yorick
 DEPENDS+=		plplot>=5.0.2:../../graphics/plplot
