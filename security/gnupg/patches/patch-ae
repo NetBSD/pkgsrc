@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.4 2003/08/15 07:02:23 itojun Exp $
+
+ftp://ftp.kame.net/pub/kame/misc/gnupg-1.2.2-IPv6.diff.gz
+
+diff -u -r1.1.1.1 -r1.3
+--- configure.ac	15 Aug 2003 05:12:08 -0000	1.1.1.1
++++ configure.ac	15 Aug 2003 06:47:49 -0000	1.3
+@@ -586,7 +586,7 @@
+ AC_CHECK_FUNCS(strcasecmp strncasecmp ctermid)
+ AC_CHECK_FUNCS(memmove gettimeofday getrusage setrlimit clock_gettime)
+ AC_CHECK_FUNCS(atexit raise getpagesize strftime nl_langinfo setlocale)
+-AC_CHECK_FUNCS(waitpid wait4 sigaction sigprocmask rand pipe stat)
++AC_CHECK_FUNCS(waitpid wait4 sigaction sigprocmask rand pipe stat getaddrinfo)
+ AC_REPLACE_FUNCS(mkdtemp)
+ 
+ #

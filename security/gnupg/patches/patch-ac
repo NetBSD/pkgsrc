@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.13 2003/08/15 07:02:23 itojun Exp $
+
+ftp://ftp.kame.net/pub/kame/misc/gnupg-1.2.2-IPv6.diff.gz
+
+diff -u -r1.1.1.1 -r1.2
+--- config.h.in	15 Aug 2003 05:12:06 -0000	1.1.1.1
++++ config.h.in	15 Aug 2003 06:44:46 -0000	1.2
+@@ -537,3 +537,4 @@
+ 
+ #include "g10defs.h"
+ 
++#undef HAVE_GETADDRINFO
