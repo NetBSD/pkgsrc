@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-ac,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- 24bit.c.orig	Fri Jul 23 23:59:25 1999
 +++ 24bit.c	Mon Sep 15 22:49:14 2003

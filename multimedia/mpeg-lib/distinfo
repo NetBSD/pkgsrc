@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/04/24 00:49:45 wiz Exp $
+$NetBSD: distinfo,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 SHA1 (mpeg_lib-1.3.1.tar.gz) = 0ea4f8b31e4f316d99c2034d76619988f75147dc
 Size (mpeg_lib-1.3.1.tar.gz) = 152092 bytes
