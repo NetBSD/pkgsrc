@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2000/02/19 02:40:35 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2003/01/19 09:39:06 salo Exp $
 
 --- ./Makefile.X.orig	Wed Nov 20 03:19:24 1996
 +++ ./Makefile.X	Sat Feb 19 03:34:17 2000
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2000/02/19 02:40:35 wiz Exp $
  
  install-man:
 -	$(INSTALL) top.1 $(MANDIR)/top.$(MANEXT)
-+	${INSTALL_MAN} top.1 $(MANDIR)/top.$(MANEXT)
++	${BSD_INSTALL_MAN} top.1 $(MANDIR)/top.$(MANEXT)
  
  install-catman:
  	tbl top.1 | nroff -man > $(MANDIR)/top.$(MANEXT)
