@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/20 20:09:05 heinz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/21 07:57:07 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.43
 PKGNAME=	spamassassin-2.43
@@ -31,7 +31,7 @@ MAKE_PARAMS=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
 
 RCD_SCRIPTS=		spamd
-RCD_SCRIPT_SRC.spamd=	${WRKSRC}/spamd/netbsd-rc-script.sh
+RCD_SCRIPT_SRC.spamd=	${WRKDIR}/${DISTNAME}/spamd/netbsd-rc-script.sh
 
 EGDIR=			${PREFIX}/share/examples/spamassassin
 DOCDIR=			${PREFIX}/share/doc/spamassassin
