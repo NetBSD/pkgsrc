@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2001/06/11 02:05:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/21 21:40:08 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
-.include "../../devel/libgetopt/buildlink.mk"
 
 PKGNAME=		postgresql-server-${PG_VERS}
 PG_PKG_VERS=		# empty
 COMMENT=		PostgreSQL database server programs
+
+USE_BUILDLINK_ONLY=	# defined
+POSTGRESQL_LIB_REQD=	${PG_BASE_VERS}
+
+.include "../../devel/libgetopt/buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink.mk"
 
 DEPENDS+=		postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client
 
@@ -14,13 +19,6 @@ DEPENDS+=		postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client
 NOT_FOR_PLATFORM=	*-*-mips
 
 DIRS_TO_BUILD=		src/backend
-
-# The following is a hack to force ${BUILDLINK_DIR}/lib to the front of the
-# linker's library search path without having to patch a lot of Makefile.
-# It works because the PostgreSQL Makefiles invoke the linker with $(CFLAGS)
-# as well.
-#
-CFLAGS+=		-L${BUILDLINK_DIR}/lib
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
@@ -49,6 +47,24 @@ ADDGROUP=		groupadd
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+FILES_SUBST=		PREFIX=${PREFIX}
+FILES_SUBST+=		PGUSER=${PGUSER}
+FILES_SUBST+=		PGGROUP=${PGGROUP}
+FILES_SUBST+=		PGHOME=${PGHOME}
+
+FILES_SUBST+=		ADDUSER=${ADDUSER:Q}
+FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHGRP=${CHGRP:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		SU=${SU:Q}
+FILES_SUBST+=		TOUCH=${TOUCH:Q}
+
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 do-build:
 .for DIR in ${DIRS_TO_BUILD}
 	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
@@ -68,30 +84,9 @@ pre-install:
 		;;							\
 	esac
 
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@PGUSER@|${PGUSER}|g"				\
-		-e "s|@PGHOME@|${PGHOME}|g"				\
-		-e "s|@SU@|${SU}|g"					\
-		${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
-	${SED}	-e "s|@PGUSER@|${PGUSER}|g"				\
-		-e "s|@PGGROUP@|${PGGROUP}|g"				\
-		-e "s|@PGHOME@|${PGHOME}|g"				\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@PGUSER@|${PGUSER}|g"				\
-		-e "s|@PGGROUP@|${PGGROUP}|g"				\
-		-e "s|@PGHOME@|${PGHOME}|g"				\
-		-e "s|@ADDUSER@|${ADDUSER}|g"				\
-		-e "s|@ADDGROUP@|${ADDGROUP}|g"				\
-		-e "s|@CHGRP@|${CHGRP}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@GREP@|${GREP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@SU@|${SU}|g"					\
-		-e "s|@TOUCH@|${TOUCH}|g"				\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
