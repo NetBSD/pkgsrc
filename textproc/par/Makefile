@@ -3,6 +3,7 @@
 # Date created:         6 Aug 1997
 # Whom:                 mark@grondar.za
 #
+# $NetBSD: Makefile,v 1.2 1998/01/12 11:52:16 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/13 06:33:51 asami Exp
 #
 
