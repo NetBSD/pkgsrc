@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.1 2003/09/21 08:35:53 jmc Exp $
+
+--- crypto/ssh_3des.h.orig	2003-09-21 03:04:38.000000000 +0000
++++ crypto/ssh_3des.h	2003-09-21 03:05:29.000000000 +0000
+@@ -16,6 +16,7 @@
+ #ifndef _SSH_3DES_H
+ #define _SSH_3DES_H
+ 
++#include "openssl/opensslv.h"
+ #include "openssl/des.h"
+ #include "openssl/hmac.h"
+ 
+@@ -24,13 +25,23 @@
+ struct ssh_cipher;
+ 
+ typedef struct {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_key_schedule des_ks[3];
++	DES_cblock	 des_ivec[6];	/* Two directions, same key! */
++#else
+ 	des_key_schedule des_ks[3];
+ 	des_cblock	 des_ivec[6];	/* Two directions, same key! */
++#endif
+ } ssh_3des_t;
+ 
+ typedef struct {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_key_schedule des_ks[6];
++	DES_cblock	 des_ivec[2];
++#else
+ 	des_key_schedule des_ks[6];
+ 	des_cblock	 des_ivec[2];
++#endif
+ 	u_int8_t	 mac_key[2][16];
+ } ssh_des3_t;
+ 
