@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/19 10:08:59 drochner Exp $
+$NetBSD: distinfo,v 1.2 2002/09/11 22:36:52 wiz Exp $
 
-SHA1 (gnomemm-1.1.19.tar.gz) = c26de2405dd469d24ac1a7f4d63390e68d3278a9
-Size (gnomemm-1.1.19.tar.gz) = 288165 bytes
-SHA1 (patch-aa) = 1c9ddf16ee8ae1294112a47db081b803c314f69d
+SHA1 (gnomemm-1.2.2.tar.gz) = bdca04fd444e5e57733c6eb2a12682e72024c995
+Size (gnomemm-1.2.2.tar.gz) = 292603 bytes
