@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.2 2003/05/04 18:04:22 jmmv Exp $
+@comment $NetBSD: PLIST.pre,v 1.3 2003/05/06 16:26:27 jmmv Exp $
 Acrobat5/Browsers/netscape
 Acrobat5/Browsers/${PLATFORM}/nppdf.so
 Acrobat5/Reader/AcroVersion
@@ -50,5 +50,6 @@ Acrobat5/Resource/Font/TimesNewRoman-Italic
 Acrobat5/Resource/Font/ZapfDingbats
 Acrobat5/Resource/LICFONT.TXT
 Acrobat5/bin/acroread
+bin/acroread
 bin/acroread5
 lib/netscape/plugins/nppdf.so
