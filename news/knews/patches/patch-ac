@@ -1,0 +1,14 @@
+--- src/procs.c.orig	Fri Aug  2 12:52:44 1996
++++ src/procs.c	Sun Nov 30 18:32:48 1997
+@@ -75,7 +75,10 @@
+ 	    (ART_LIST_NODE *)XtMalloc(sizeof *temp);
+ 	temp->next  = NULL;
+ 	temp->first = 1;
+-	temp->last  = global.curr_group->last_art;
++	temp->last  = (global.curr_group->active_last_art >
++		       global.curr_group->last_art ) ?
++		       global.curr_group->active_last_art :
++		       global.curr_group->last_art;
+ 
+ 	if (res_process_xrefs())
+ 	    for (art = get_articles(main_thr) ; art ; art = art->next)
