@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.108 2004/02/02 10:26:42 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.109 2004/02/04 01:13:04 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -71,22 +71,21 @@ BUILDLINK_SHELL?=	${SH}
 #
 CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 
-# The caching code, which greatly speeds up the build process, works only
-# on certain platforms.
+# The caching code, which greatly speeds up the build process, doesn't
+# work completely correctly on certain platforms.
 #
-_BLNK_CACHE_ALL=	# empty
-_BLNK_CACHE_ALL+=	Darwin-6*-*
-_BLNK_CACHE_ALL+=	FreeBSD-*-*
-_BLNK_CACHE_ALL+=	IRIX-*-*
-_BLNK_CACHE_ALL+=	NetBSD-1.[5-9]*-*
-_BLNK_CACHE_ALL+=	SunOS-[25].[89]-*
+_BLNK_PARTIAL_CACHE_ONLY=	Darwin-5.*-*
 
-.for _pattern_ in ${_BLNK_CACHE_ALL}
+_BLNK_FULL_CACHING?=	YES
+.for _pattern_ in ${_BLNK_PARTIAL_CACHE_ONLY}
 .  if !empty(MACHINE_PLATFORM:M${_pattern_})
-CONFIGURE_ENV+=		BUILDLINK_CACHE_ALL=yes
-MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
+_BLNK_FULL_CACHING=	NO
 .  endif
 .endfor
+.if !empty(_BLNK_FULL_CACHING:M[yY][eE][sS])
+CONFIGURE_ENV+=		BUILDLINK_CACHE_ALL=yes
+MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
+.endif
 
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
