@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.209 2001/11/03 20:43:53 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.210 2001/11/03 21:02:46 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -717,50 +717,40 @@ are expected to be patch files, and they are applied after the "normal"
 pkgsrc patches are applied. 
 
 
- 4.4 pkg/*
- =========
+ 4.4 Other mandatory files
+ =========================
 
-This directory contains several files used to manage the creation of binary
-packages. Files from this directory are used in the binary package itself,
-and will thus be installed on other machines, so you should be aware that
-there is a wider audience than you might think for your comments and
-witticisms.
-
-
- 4.4.1 Mandatory files
- =====================
-
- * pkg/DESCR:
+ * DESCR:
    A multi-line description of the piece of software.  This should include
    any credits where they are due.  Please bear in mind that others do not
    share your sense of humour (or spelling idiosyncrasies), and that others
    will read everything that you write here.
 
- * pkg/PLIST:
+ * PLIST:
    This file governs the files that are installed on your system: all the
    binaries, manual pages, etc. There are other directives which may be
    entered in this file, to control the creation and deletion of
    directories, and the location of inserted files.
 
 
- 4.4.2 Optional files
- ====================
+ 4.5 Optional files
+ ==================
 
- * pkg/INSTALL:
+ * INSTALL:
    Shell script invoked twice during pkg_add. First time after package
    extraction and before files are moved in place, the second time after
    the files to install are moved in place. This can be used to do any
    custom procedures not possible with @exec commands in PLIST. See
    pkg_add(1) and pkg_create(1) for more information.
 
- * pkg/DEINSTALL:
+ * DEINSTALL:
    This script is executed before and after any files are removed.  It is
    this script's responsibility to clean up any additional messy details
    around the package's installation, since all pkg_delete knows is how to
    delete the files created in the original distribution. See pkg_delete(1)
    and pkg_create(1) for more information.
 
- * pkg/MESSAGE:
+ * MESSAGE:
    Display this file after installation of the package.
    Useful for things like legal notices on almost-free software, etc.
    Please note that you can modify variables in it easily by using
@@ -772,10 +762,10 @@ witticisms.
    
 	${SOMEVAR}
 	
-   in pkg/MESSAGE with "somevalue" before displaying the message.
+   in MESSAGE with "somevalue" before displaying the message.
 
 
- 4.5 work/*
+ 4.6 work/*
  ==========
 
 When you type "make" the distribution files are unpacked into this
@@ -787,7 +777,7 @@ at the shell prompt. Also, this directory is used to keep various
 timestamp files. 
 
 
- 4.6 files/*
+ 4.7 files/*
  ===========
 
 If you have any files that you wish to be placed in the package prior
@@ -845,7 +835,7 @@ to when dealing with the PLIST file (or files, see below!).
    file, the suffix ".gz" is appended/removed automatically for manpages
    according to MANZ and MANCOMPRESSED being set or not, see above for
    details. This modification of the PLIST file is done on a copy of it,
-   not pkg/PLIST itself.
+   not PLIST itself.
 
  * Semi-automatic PLIST generation:
    You can use the "make print-PLIST" command to output a PLIST that matches
@@ -1394,12 +1384,12 @@ perform the equivalent of:
    After a 'make install' from a new or upgraded pkg, this prints out an
    attempt to generate a new PLIST from a 'find -newer work/.extract_done'.
    An attempt is made to care for shared libs etc., but it is STRONGLY 
-   recommended to review the result before putting it into pkg/PLIST. On
+   recommended to review the result before putting it into PLIST. On
    upgrades, it's useful to diff the output of this command against an already
-   existing pkg/PLIST file.
+   existing PLIST file.
 
    If the package installs files via tar(1) or other methods that don't update
-   file access times, be sure to add these files manually to your pkg/PLIST,
+   file access times, be sure to add these files manually to your PLIST,
    as 'find -newer' won't catch them!
 
  * bulk-package:
@@ -1586,7 +1576,7 @@ debugging aids.
 
    You'll need to have pkgsrc/pkgtools/url2pkg installed for that.
  * Edit the Makefile as requested.
- * Fill in pkg/DESCR
+ * Fill in DESCR
  * ``make configure''
  * Add any dependancies glimpsed from the configure step to the package's
    Makefile.
@@ -1607,7 +1597,7 @@ debugging aids.
  * Generate a PLIST:
 
 	# make install
-	# make print-PLIST > pkg/PLIST
+	# make print-PLIST > PLIST
 	# make deinstall
 	# make install
 	# make deinstall
@@ -1617,7 +1607,7 @@ debugging aids.
 
 	# make print-PLIST
 
-   If this brings up any files that are missing in pkg/PLIST*, add them.
+   If this brings up any files that are missing in PLIST, add them.
  * Now that the PLIST is ok, install the package again and make a binary
    package:
    
@@ -2122,7 +2112,7 @@ commit of that file, it should be copied to
  10.22 What's the proper way to create an account from a package?
  ================================================================
 
-Look at what e.g. pkgsrc/sysutils/amanda-common/{Makefile,pkg/INSTALL} do.
+Look at what e.g. pkgsrc/sysutils/amanda-common/{Makefile,INSTALL} do.
 
 
  11 Submitting & Committing
@@ -2177,7 +2167,7 @@ source tree.  Also don't forget to add the new package to the
 category's Makefile.
 
 The commit message of the initial import should include part of the
-pkg/DESCR file, so people reading the mailing lists know what the package
+DESCR file, so people reading the mailing lists know what the package
 is/does.
 
 Please note all package updates/additions in doc/pkg-CHANGES! It's very
@@ -2247,7 +2237,7 @@ The file contents in this section must be used without the "> " prefix.
 	.include "../../mk/bsd.pkg.mk"
 
 
- 12.1.2 pkg/DESCR
+ 12.1.2 DESCR
  ================
 
 	GNU version of yacc.  Can make re-entrant parsers, and numerous other
@@ -2255,7 +2245,7 @@ The file contents in this section must be used without the "> " prefix.
 	of the NetBSD source tree is beyond me.
 
 
- 12.1.3 pkg/PLIST
+ 12.1.3 PLIST
  ================
 
 	@comment <$>NetBSD<$>
@@ -2282,7 +2272,7 @@ files. After installation it is quite easy to use, just change to the
 directory of the package you wish to examine and execute "pkglint":
 
 	% pkglint
-	OK: checking pkg/DESCR.
+	OK: checking ./DESCR.
 	OK: checking Makefile.
 	OK: checking distinfo.
 	OK: checking patches/patch-aa.
@@ -2303,7 +2293,7 @@ Create the directory where the package lives, plus any auxiliary directories:
 	# cd bison
 	# mkdir patches pkg
 
-Create Makefile, pkg/DESCR and pkg/PLIST as in section 11.1,
+Create Makefile, DESCR and PLIST as in section 11.1,
 then continue with fetching the distfile:
 
 	# make fetch
