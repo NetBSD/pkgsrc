@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/01/18 14:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.105 2005/01/24 20:48:05 tv Exp $
 
 DISTNAME=	netpbm-10.26.1
 CATEGORIES=	graphics
@@ -26,15 +26,6 @@ STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS=	-lsocket -lnsl
 MAKE_ENV+=	NETWORKLD="${LIBS}"
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
-.if ${MACHINE_ARCH} == "alpha"
-GCC_REQD+=      3.0
-.endif
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
