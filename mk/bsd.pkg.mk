@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1552 2004/12/31 13:13:56 minskim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1553 2005/01/10 08:30:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -363,8 +363,6 @@ DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
 .  endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
-CONFIGURE_ENV+=	F77="${F77}"
-CONFIGURE_ENV+=	FFLAGS="${FFLAGS:M*}"
 MAKE_ENV+=	F77="${F77}"
 MAKE_ENV+=	FC="${FC}"
 .endif
