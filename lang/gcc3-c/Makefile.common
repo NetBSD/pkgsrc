@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/02/01 14:05:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/02/06 01:42:29 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -59,7 +59,7 @@ USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
 .endif
 
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
-DEPENDS=		binutils>=2.13.2.1:../../devel/binutils
+DEPENDS+=		binutils>=2.13.2.1:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
 .endif
 
