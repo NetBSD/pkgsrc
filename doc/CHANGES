@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.812 2002/12/16 23:21:56 grant Exp $
+$NetBSD: CHANGES,v 1.813 2002/12/16 23:32:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3980,3 +3980,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gnome-panel to 2.0.11 [jmmv 2002-12-16]
 	Updated ploticus to 1.20 [grant 2002-12-17]
 	Updated star to 1.4.2 [grant 2002-12-17]
+	Updated whiteBOX to 0.5 [jmmv 2002-12-17]
