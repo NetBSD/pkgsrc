@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7259 2004/09/26 17:10:06 epg Exp $
+$NetBSD: CHANGES,v 1.7260 2004/09/26 17:16:44 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4450,3 +4450,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added svk-0.21 [epg 2004-09-26]
 	Updated rdesktop to 1.3.1nb2 [seb 2004-09-26]
 	Added p5-Data-UUID-0.11 [epg 2004-09-26]
+	Updated rapidsvn to 0.7.0 [epg 2004-09-26]
