@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/11 07:27:22 snj Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	4
@@ -14,7 +14,7 @@ HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 
 WRKSRC=			${WRKDIR}/vtun
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
@@ -59,8 +59,8 @@ do-install:
 	${RM} -f ${PREFIX}/man/man8/vtun.8
 	${LN} -s vtund.8 ${PREFIX}/man/man8/vtun.8
 
-.include "../../archivers/liblzo/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
