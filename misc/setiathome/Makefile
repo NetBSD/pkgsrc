@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/23 01:27:35 abs Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/10 18:19:09 abs Exp $
 #
 
 BASE_OS		= ${OS_VERSION:S/.//:C/\..*//}
+PKGVERSION	= 1.2
 .include "../../mk/bsd.prefs.mk"
 #
-.if (${MACHINE_ARCH} == "alpha")
+# .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
+.if ${OPSYS} == ${OPSYS}
+PKGVERSION=	1.3
+DISTNAME=	${PKGNAME}.sparc-sun-solaris2.6
+#
+.elif (${MACHINE_ARCH} == "alpha")
 .if (${BASE_OS} == 13)
 DISTNAME=	${PKGNAME}.alpha-unknown-netbsd1.3.3
 .else
@@ -29,7 +35,7 @@ DISTNAME=	${PKGNAME}.sparc-sun-netbsd1.3.3
 #
 .endif
 #
-PKGNAME=	setiathome-1.2
+PKGNAME=	setiathome-${PKGVERSION}
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/setiathome/ \
 		ftp://alien.ssl.berkeley.edu/pub/ \
@@ -41,6 +47,7 @@ HOMEPAGE=	http://setiathome.ssl.berkeley.edu/
 
 ONLY_FOR_PLATFORM= *-*-alpha *-*-arm *-*-i386 *-*-m68k *-*-sparc
 
+DIST_SUBDIR=    setiathome
 DECOMPRESS_CMD=	${CAT}
 NO_BUILD=	yes
 
