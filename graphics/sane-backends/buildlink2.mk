@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:54 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/20 21:18:41 bouyer Exp $
 
 .if !defined(SANE_BUILDLINK2_MK)
 SANE_BUILDLINK2_MK=	# defined
@@ -12,7 +12,9 @@ BUILDLINK_PREFIX.sane_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.sane=		include/sane/*.h
 BUILDLINK_FILES.sane+=		lib/libsane.*
 
-.include "../../devel/libusb/buildlink2.mk"
+.if (${OPSYS} != "SunOS")
+. include "../../devel/libusb/buildlink2.mk"
+.endif
 .include "../../graphics/jpeg/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	sane-buildlink
