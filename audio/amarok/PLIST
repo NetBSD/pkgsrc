@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/20 20:41:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/02/28 16:54:42 wiz Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -52,14 +52,33 @@ share/doc/kde/HTML/en/amarok/status_bar.png
 share/doc/kde/HTML/en/amarok/using.docbook
 share/doc/kde/HTML/en/amarok/vis_window.png
 share/doc/kde/HTML/ru/amarok/advanced.docbook
+share/doc/kde/HTML/ru/amarok/collection.png
 share/doc/kde/HTML/ru/amarok/common
 share/doc/kde/HTML/ru/amarok/config.docbook
+share/doc/kde/HTML/ru/amarok/config_appearance.png
+share/doc/kde/HTML/ru/amarok/config_collection.png
+share/doc/kde/HTML/ru/amarok/config_engine.png
+share/doc/kde/HTML/ru/amarok/config_general.png
+share/doc/kde/HTML/ru/amarok/config_osd.png
+share/doc/kde/HTML/ru/amarok/config_playback.png
+share/doc/kde/HTML/ru/amarok/config_scrobbler.png
+share/doc/kde/HTML/ru/amarok/context.png
+share/doc/kde/HTML/ru/amarok/coverman.png
+share/doc/kde/HTML/ru/amarok/equalizer.png
 share/doc/kde/HTML/ru/amarok/faq.docbook
 share/doc/kde/HTML/ru/amarok/feature_guide.docbook
+share/doc/kde/HTML/ru/amarok/file_browser.png
 share/doc/kde/HTML/ru/amarok/index.cache.bz2
 share/doc/kde/HTML/ru/amarok/index.docbook
+share/doc/kde/HTML/ru/amarok/menubar.png
+share/doc/kde/HTML/ru/amarok/pl_browser.png
+share/doc/kde/HTML/ru/amarok/pl_tip1.png
+share/doc/kde/HTML/ru/amarok/play_list.png
+share/doc/kde/HTML/ru/amarok/playlist_window.png
 share/doc/kde/HTML/ru/amarok/quick.docbook
 share/doc/kde/HTML/ru/amarok/requirements.docbook
+share/doc/kde/HTML/ru/amarok/rmb_menu.png
+share/doc/kde/HTML/ru/amarok/status_bar.png
 share/doc/kde/HTML/ru/amarok/using.docbook
 share/kde/apps/amarok/amarokui.rc
 share/kde/apps/amarok/amarokui_xmms.rc
@@ -76,6 +95,8 @@ share/kde/apps/amarok/icons/crystalsvg/16x16/actions/repeat_track.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/32x32/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/48x48/actions/player_playlist_2.png
+share/kde/apps/amarok/icons/crystalsvg/64x64/actions/random.png
+share/kde/apps/amarok/icons/crystalsvg/64x64/actions/repeat_playlist.png
 share/kde/apps/amarok/images/amarok_cut.png
 share/kde/apps/amarok/images/amarok_rocks.jpg
 share/kde/apps/amarok/images/audioscrobbler.png
@@ -111,12 +132,31 @@ share/kde/apps/amarok/scripts/alarm/README
 share/kde/apps/amarok/scripts/alarm/alarm.py
 share/kde/apps/amarok/scripts/playlist2html/Playlist.py
 share/kde/apps/amarok/scripts/playlist2html/PlaylistServer.py
+share/kde/apps/amarok/scripts/playlist2html/README
 share/kde/apps/amarok/scripts/playlist2html/playlist2html.py
 share/kde/apps/amarok/scripts/templates/amarok.rb
 share/kde/apps/amarok/scripts/templates/python_qt_template.py
 share/kde/apps/amarok/scripts/templates/ruby_qt_template.rb
+share/kde/apps/amarok/scripts/webcontrol/Globals.py
+share/kde/apps/amarok/scripts/webcontrol/Playlist.py
+share/kde/apps/amarok/scripts/webcontrol/README
+share/kde/apps/amarok/scripts/webcontrol/RequestHandler.py
+share/kde/apps/amarok/scripts/webcontrol/WebControl.py
+share/kde/apps/amarok/scripts/webcontrol/amarok_cut.png
+share/kde/apps/amarok/scripts/webcontrol/controlbackground.png
+share/kde/apps/amarok/scripts/webcontrol/main.css
+share/kde/apps/amarok/scripts/webcontrol/main.js
+share/kde/apps/amarok/scripts/webcontrol/player_end.png
+share/kde/apps/amarok/scripts/webcontrol/player_pause.png
+share/kde/apps/amarok/scripts/webcontrol/player_play.png
+share/kde/apps/amarok/scripts/webcontrol/player_start.png
+share/kde/apps/amarok/scripts/webcontrol/player_stop.png
+share/kde/apps/amarok/scripts/webcontrol/template.thtml
+share/kde/apps/amarok/scripts/webcontrol/vol_speaker.png
 share/kde/apps/amarok/themes/flat/stylesheet.css
 share/kde/apps/konqsidebartng/add/amarok.desktop
+share/kde/apps/konqsidebartng/entries/amarok.desktop
+share/kde/apps/konqsidebartng/kicker_entries/amarok.desktop
 share/kde/apps/konqueror/servicemenus/amarok_append.desktop
 share/kde/apps/profiles/amarok.profile.xml
 share/kde/config.kcfg/amarok.kcfg
@@ -128,17 +168,16 @@ share/kde/icons/crystalsvg/22x22/apps/amarok.png
 share/kde/icons/crystalsvg/32x32/apps/amarok.png
 share/kde/icons/crystalsvg/48x48/apps/amarok.png
 share/kde/icons/crystalsvg/64x64/apps/amarok.png
-share/kde/icons/crystalsvg/scalable/apps/amarok.svgz
 share/kde/services/amarok_artsengine_plugin.desktop
 share/kde/services/amarok_gstengine_plugin.desktop
 share/kde/services/amarok_void-engine_plugin.desktop
 share/kde/services/amarok_xine-engine.desktop
-share/kde/services/amarok_xineengine_plugin.desktop
 share/kde/servicetypes/amarok_plugin.desktop
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/br/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/amarok.mo
@@ -149,6 +188,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/amarok.mo
@@ -163,6 +203,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/amarok.mo
@@ -184,14 +225,19 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/apps/profiles
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kdebase: dirrm share/kde/apps/konqsidebartng/kicker_entries
+@comment in kdebase: dirrm share/kde/apps/konqsidebartng/entries
 @comment in kdebase: dirrm share/kde/apps/konqsidebartng/add
 @dirrm share/kde/apps/amarok/themes/flat
 @dirrm share/kde/apps/amarok/themes
+@dirrm share/kde/apps/amarok/scripts/webcontrol
 @dirrm share/kde/apps/amarok/scripts/templates
 @dirrm share/kde/apps/amarok/scripts/playlist2html
 @dirrm share/kde/apps/amarok/scripts/alarm
 @dirrm share/kde/apps/amarok/scripts
 @dirrm share/kde/apps/amarok/images
+@dirrm share/kde/apps/amarok/icons/crystalsvg/64x64/actions
+@dirrm share/kde/apps/amarok/icons/crystalsvg/64x64
 @dirrm share/kde/apps/amarok/icons/crystalsvg/48x48/actions
 @dirrm share/kde/apps/amarok/icons/crystalsvg/48x48
 @dirrm share/kde/apps/amarok/icons/crystalsvg/32x32/actions
