@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/29 18:01:24 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/09 19:25:12 drochner Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-${GCC_VERSION_DATE}
@@ -52,6 +52,11 @@ CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--enable-clocale=generic
+# GNU pth is useless here
+PTHREAD_OPTS=		native
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
+CONFIGURE_ARGS+=	--disable-threads
+.endif
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -59,10 +64,13 @@ USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 USE_MAKEINFO=		YES
 USE_NEW_TEXINFO=	YES
-PTHREAD_OPTS+=	require native
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+
+# ADA tasking strictly requires native threads
+PTHREAD_OPTS=	require native
+
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
 may be used:
