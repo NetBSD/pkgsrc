@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/26 22:59:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/28 21:35:04 jlam Exp $
 etc/rc.d/tomcat
 tomcat/KEYS
 tomcat/LICENSE
@@ -8,26 +8,20 @@ tomcat/bin/shutdown.sh
 tomcat/bin/startup.sh
 tomcat/bin/tomcat.sh
 tomcat/conf/build.xml
-tomcat/conf/jni_server.xml
 tomcat/conf/jni_server.xml.default
 tomcat/conf/jni_workers.properties
 tomcat/conf/manifest.servlet
 tomcat/conf/mod_jk.conf
 tomcat/conf/obj.conf
-tomcat/conf/server.xml
 tomcat/conf/server.xml.default
 tomcat/conf/test-tomcat.xml
-tomcat/conf/tomcat-users.xml
 tomcat/conf/tomcat-users.xml.default
 tomcat/conf/tomcat.conf
-tomcat/conf/tomcat.policy
 tomcat/conf/tomcat.policy.default
 tomcat/conf/tomcat.properties
 tomcat/conf/uriworkermap.properties
 tomcat/conf/web.dtd
-tomcat/conf/web.xml
 tomcat/conf/web.xml.default
-tomcat/conf/workers.properties
 tomcat/conf/workers.properties.default
 tomcat/conf/wrapper.properties
 tomcat/doc/AJPv13.html
