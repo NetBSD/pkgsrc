@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/11 07:25:10 jlam Exp $
 
 DISTNAME=	libesmtp-1.0.1
 PKGREVISION=	1
@@ -20,6 +20,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-all
 CONFIGURE_ARGS+=	--disable-isoc
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 # XXX Evil hack to deal with the openssl/des.h interface change
 # between 0.96 and 0.97
 # This pkg needs the old API. It includes <des.h> (by patch).
@@ -30,12 +33,11 @@ CONFIGURE_ARGS+=	--disable-isoc
 # b) Everything else - we have an old openssl or a pkg version
 #    which is backward-compatible. Create a symlink to find
 #    <openssl/des.h> as <des.h>.
+#
 post-buildlink:
 	if [ ! -f /usr/include/des.h ]; then \
-		${LN} -s ${BUILDLINK_DIR}/include/openssl/des.h \
+		${LN} -s ${SSLBASE}/include/openssl/des.h \
 			${BUILDLINK_DIR}/include; \
 	fi
 
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
