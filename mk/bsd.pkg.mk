@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1425 2004/03/19 00:03:55 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1426 2004/03/22 04:07:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -763,6 +763,17 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
 
+# If pkgsrc is supposed to ensure that tests are run before installation
+# of the package, then the build targets should be "build test", otherwise
+# just "build" suffices.  _PKGSRC_BUILD_TARGETS is used in the "all",
+# "install", and "uptodate-digest" targets.
+#
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+_PKGSRC_BUILD_TARGETS=	build test
+.else
+_PKGSRC_BUILD_TARGETS=	build
+.endif
+
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
 
@@ -775,6 +786,10 @@ uptodate-digest:
 	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
 		{ cd ${_PKGSRCDIR}/pkgtools/digest;			\
 		${MAKE} clean;						\
+		if [ -f ${DIGEST} ]; then				\
+			${MAKE} ${MAKEFLAGS} deinstall;			\
+		fi;							\
+		${MAKE} ${MAKEFLAGS} ${_PKGSRC_BUILD_TARGETS};		\
 		if [ -f ${DIGEST} ]; then				\
 			${MAKE} ${MAKEFLAGS} deinstall;			\
 		fi;							\
@@ -1520,11 +1535,7 @@ BUILD_DEFS+=	OSVERSION_SPECIFIC
 
 .PHONY: all
 .if !target(all)
-.  if ${PKGSRC_RUN_TEST} == "YES" || ${PKGSRC_RUN_TEST} == "yes"
-all: test
-.  else
-all: build
-.  endif
+all: ${_PKGSRC_BUILD_TARGETS}
 .endif
 
 .if !defined(DEPENDS_TARGET)
@@ -3190,11 +3201,7 @@ test: build ${TEST_COOKIE}
 
 .PHONY: install
 .if !target(install)
-.  if ${PKGSRC_RUN_TEST} == "YES" || ${PKGSRC_RUN_TEST} == "yes"
-install: uptodate-pkgtools build test ${INSTALL_COOKIE}
-.  else
-install: uptodate-pkgtools build ${INSTALL_COOKIE}
-.  endif
+install: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} ${INSTALL_COOKIE}
 .endif
 
 .PHONY: package
