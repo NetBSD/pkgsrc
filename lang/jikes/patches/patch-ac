@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2001/05/16 10:05:36 agc Exp $
+
+--- src/double.h	2001/05/16 08:56:03	1.1
++++ src/double.h	2001/05/16 08:56:55
+@@ -61,6 +61,8 @@
+ #ifndef Double_INCLUDED
+ #define Double_INCLUDED
+ 
++#include <sys/param.h>
++
+ #include "platform.h"
+ #include "long.h"
+ 
+@@ -112,7 +114,9 @@
+         POS_ZERO   = 0x00000000, // 0.0
+         NEG_INF    = 0xFF800000, // -Inf
+         POS_INF    = 0x7F800000, // +Inf
++#if !(defined(BSD) && BSD >= 199506)
+         NAN        = 0x7FC00000, // canonical NaN
++#endif
+         BYTE_MASK  = 0x000000FF, // mask off least significant byte
+         MAX_INT    = 0x7FFFFFFF, // maximum integer
+         MIN_INT    = 0x80000000, // minimum integer
