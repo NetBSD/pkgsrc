@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2000/02/16 22:02:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/14 16:51:35 mjl Exp $
 #
 
-DISTNAME=	Squeak2.6-src
-PKGNAME=	squeak-2.6
+DISTNAME=	Squeak2.7-src
+PKGNAME=	squeak-2.7
 CATEGORIES=	lang
-MASTER_SITES=	http://www-sor.inria.fr/~piumarta/squeak/unix/release/ \
-		ftp://ftp.cs.uni-magdeburg.de/pub/Smalltalk/Smalltalk/Squeak/unix/ \
-		ftp://ftp.cs.uni-magdeburg.de/pub/Smalltalk/Smalltalk/Squeak/unix/image/ \
-		http://www.nectar.com/distfiles/squeak/
-DISTFILES=	Squeak2.6-src.tar.gz Squeak2.6.image.gz Squeak2.6.changes.gz SqueakV2.sources.gz
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/SOR/users/piumarta/squeak/
+DISTFILES=	Squeak2.7-src.tar.gz Squeak2.7.image.gz Squeak2.7.changes.gz SqueakV2.sources.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.squeak.org/
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+
 DIST_SUBDIR=	squeak
-EXTRACT_ONLY=	Squeak2.6-src.tar.gz
+EXTRACT_ONLY=	Squeak2.7-src.tar.gz
 USE_X11=	yes
 USE_GMAKE=	yes
 NO_WRKSUBDIR=	yes
@@ -22,10 +21,13 @@ NO_WRKSUBDIR=	yes
 ALL_TARGET=	squeak
 MAKE_ENV+=	LIBS="-Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
+pre-configure:
+	cd ${WRKSRC}/conf; ${LOCALBASE}/bin/autoconf
+
 do-install:
 	${MKDIR} ${PREFIX}/share/squeak
 	${INSTALL_PROGRAM} ${WRKSRC}/`${WRKSRC}/conf/config.guess`/squeak ${PREFIX}/bin
-	for f in Squeak2.6.changes Squeak2.6.image SqueakV2.sources ; do		\
+	for f in Squeak2.7.changes Squeak2.7.image SqueakV2.sources ; do		\
 		${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/$$f.gz > ${PREFIX}/share/squeak/$$f; \
 	done
 
