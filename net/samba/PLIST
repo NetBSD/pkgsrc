@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/03/28 08:36:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/04/15 16:26:31 jmmv Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -32,6 +32,7 @@ lib/libnss_winbind.so
 lib/libnss_wins.so
 lib/libsmbclient.a
 lib/libsmbclient.so
+lib/libsmbclient.so.0
 lib/samba/charset/CP437.so
 lib/samba/charset/CP850.so
 lib/samba/de.msg
