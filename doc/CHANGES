@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6702 2004/07/27 15:43:21 recht Exp $
+$NetBSD: CHANGES,v 1.6703 2004/07/27 16:37:41 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3601,3 +3601,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm-share to 2.2.2 [cube 2004-07-27]
 	Updated gift to 0.11.6nb1 [recht 2004-07-27]
 	Updated gift-openft to 0.2.1.3 [recht 2004-07-27]
+	Added miniSAPserver-0.2.4 [manu 2004-07-27]

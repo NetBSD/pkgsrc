@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/07 20:53:25 seb Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/27 16:34:25 manu Exp $
 #
 
 COMMENT=	Multi-cast backBone applications
@@ -9,6 +9,7 @@ SUBDIR+=	mdp
 SUBDIR+=	nte
 SUBDIR+=	rat
 SUBDIR+=	rtptools
+SUBDIR+=	sapserver
 SUBDIR+=	sdr
 SUBDIR+=	vat
 SUBDIR+=	vic
