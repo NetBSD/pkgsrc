@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/02 20:32:38 wiz Exp $
+
+--- include/GTL/GTL.h.orig	Thu Feb  3 07:50:16 2000
++++ include/GTL/GTL.h	Mon Jul 31 00:30:39 2000
+@@ -133,6 +133,7 @@
+ #include <map>
+ #include <memory>
+ 
++#ifndef __STL_USE_STD_ALLOCATORS
+ /**
+  * @internal
+  */
+@@ -141,6 +142,7 @@
+ {
+ };
+ 
++#endif
+ #endif
+ 
+ //--------------------------------------------------------------------------
