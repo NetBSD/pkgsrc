@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5611 2004/04/16 16:12:14 martti Exp $
+$NetBSD: CHANGES,v 1.5612 2004/04/16 16:20:21 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2005,6 +2005,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qt3-mysql to 3.3.1 [recht 2004-04-15]
 	Updated qt3 to 3.3.1 [recht 2004-04-15]
 	Added quake2forge-0.2.1 [xtraeme 2004-04-15]
+	Added gnu-crypto-2.0.1 [tv 2004-04-16]
 	Updated libxfce4gui to 4.0.5
 	Updated libxfce4mcs to 4.0.5
 	Updated libxfce4util to 4.0.5
