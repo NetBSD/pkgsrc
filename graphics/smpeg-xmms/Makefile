@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 15:46:44 grant Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -13,7 +13,7 @@ COMMENT=	MPEG video plugin using SDL/smpeg as the backend
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -12,7 +12,7 @@ COMMENT=	3D modeller with a view of 3D modelling
 
 WRKSRC=		${WRKDIR}/g3d
 USE_LIBTOOL=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	yes
