@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/04/14 23:20:34 jtb Exp $
+# $NetBSD: Makefile,v 1.22 2001/07/27 10:50:48 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
 COMMENT=		Simple, extensible literate-programming tool
 
-DEPENDS=		icon-9.3.*:../../lang/icon
+DEPENDS=		icon>=9.3:../../lang/icon
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-sparc
 
