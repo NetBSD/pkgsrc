@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/18 08:44:16 mjl Exp $
+
+--- mt.c.orig	2003-04-18 10:27:59.000000000 +0200
++++ mt.c	2003-04-18 10:28:07.000000000 +0200
+@@ -5,7 +5,7 @@
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <limits.h>
+-#include <ncurses.h>
++#include <curses.h>
+ #include <regex.h>
+ #include <sched.h>
+ #include <signal.h>
