@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9687 2005/03/30 11:16:27 wiz Exp $
+$NetBSD: CHANGES,v 1.9688 2005/03/30 12:10:19 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libkver to 0.6 [seb 2005-03-30]
 	Updated xine-lib to 1.0nb1 [tron 2005-03-30]
 	Updated gnucash to 1.8.11nb2 [wiz 2005-03-30]
+	Updated sudo to 1.6.8pl7 [cube 2005-03-30]
