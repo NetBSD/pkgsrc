@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2003/01/10 13:32:05 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/01/27 12:54:55 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.59.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
 		ftp://ftp.marko.net/pub/gaim/
@@ -47,3 +47,4 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libc=yes
 
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"

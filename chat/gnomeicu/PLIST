@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:15 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/01/27 12:54:55 jmmv Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 etc/CORBA/servers/GnomeICU.gnorba
@@ -115,6 +115,9 @@ share/sounds/gnomeicu/message.wav
 @dirrm share/gnome/help/gnomeicu/C/images
 @dirrm share/gnome/help/gnomeicu/C
 @dirrm share/gnome/help/gnomeicu
+@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in gnome-dirs: @dirrm share/gnome/apps/Internet
+@comment in gnome-dirs: @dirrm share/gnome/apps
 @dirrm share/gnomeicu/icons/Default
 @dirrm share/gnomeicu/icons/Eyeballs
 @dirrm share/gnomeicu/icons/reDubbed
