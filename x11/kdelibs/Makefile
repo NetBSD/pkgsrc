@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/14 22:58:13 tron Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/19 21:09:23 tv Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/s
 MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	qt-1.33:../../x11/qt
+DEPENDS+=	qt-1.40:../../x11/qt
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 
 CONFLICTS=	kdelibs-2.1b kdelibs-3.1b kdelibs-4.1b
@@ -22,7 +22,7 @@ CONFIGURE_ARGS=	"--prefix=${PREFIX}" \
 		"--x-lib=${X11BASE}/lib -L${LOCALBASE}/lib" \
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
-		"--with-qt-includes=${X11BASE}/include/qt"
+		"--with-qt-includes=${PREFIX}/include/qt"
 CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

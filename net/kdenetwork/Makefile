@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/14 22:57:28 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/07/19 21:09:23 tv Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	tron@netbsd.org
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	qt-1.33:../../x11/qt
+DEPENDS+=	qt-1.40:../../x11/qt
 DEPENDS+=	uulib-0.5.13:../../converters/uulib
 DEPENDS+=	kdelibs-1.0:../../x11/kdelibs
 DEPENDS+=	kdesupport-1.0:../../converters/kdesupport
