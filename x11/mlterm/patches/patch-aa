@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
+
+--- src/Makefile.in	2001/12/21 11:13:54	1.1
++++ src/Makefile.in	2001/12/21 11:15:14
+@@ -31,11 +31,11 @@
+ CFLAGS=$(CFLAGS_LOCAL) @KIK_CFLAGS@ @MKF_CFLAGS@ @DEB_CFLAGS@ @IMLIB_CFLAGS@ \
+ 	@AA_CFLAGS@ @UCS4_CFLAGS@ @PTY_CFLAGS@ @CFLAGS@ \
+ 	-DLIBDIR=\"$(LIBDIR)\" -DLIBEXECDIR=\"$(LIBEXECDIR)\" -DSYSCONFDIR=\"$(SYSCONFDIR)\" \
+-	-I/usr/X11R6/include -I/usr/local/include
++	-I${X11BASE}/include -I${LOCALBASE}/include
+ LIBS=$(CFLAGS_LOCAL) \
+ 	@X_EXTRA_LIBS@ @XPG4_LIBS@ @DL_LIBS@ @IMLIB_LIBS@ @AA_LIBS@ \
+ 	$(LKIK) $(LMKF) -lX11 \
+-	-L/usr/X11R6/lib -L/usr/local/lib
++	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+ 
+ PROG = mlterm
+ 
