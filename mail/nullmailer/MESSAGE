@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/02/17 05:20:20 salo Exp $
+$NetBSD: MESSAGE,v 1.3 2004/04/23 22:43:20 reed Exp $
 
 To use nullmailer, you will need to perform the following steps:
 
@@ -13,7 +13,7 @@ To use nullmailer, you will need to perform the following steps:
    ${PREFIX}/share/examples/nullmailer/mailer.conf
 
 3. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
-   ${PREFIX}etc/rc.d/nullmailer to /etc/rc.d/nullmailer and add
+   ${RCD_SCRIPTS_EXAMPLEDIR}/nullmailer to /etc/rc.d/nullmailer and add
 
 	nullmailer=YES
 
