@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/02/17 18:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2001/03/13 04:41:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -12,15 +12,24 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet E-mail and News
 
+BUILD_DEFS+=	PINE_USE_LDAP
+
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS+=	pico-4.0:../../editors/pico
 DEPENDS+=	imap-uw>=2000:../../mail/imap-uw
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PINE_USE_LDAP) && ${PINE_USE_LDAP} == YES
+DEPENDS+=      openldap-*:../../databases/openldap
+LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP -I${PREFIX}/include"
+LDAPLIBS=      LDAPLIBS="-lldap -llber"
+.endif
 
 USE_LIBTOOL=	yes
 USE_SSL=	yes
 CONFIGURE_ENV+=	LT=${LIBTOOL}
 MAKE_ENV+=	LT=${LIBTOOL}
-#MAKE_ENV+=	STRIPFLAG=		# debug
 
 pre-patch:
 	# Make sure the imap lib that comes with pine isn't
@@ -36,7 +45,7 @@ do-configure:
 	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
 
 do-build:
-	cd ${WRKSRC} && ./build ${BUILDNAME} PREFIX=${PREFIX}
+	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS} PREFIX=${PREFIX}
 
 do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/pine ${PREFIX}/bin/
