@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/16 14:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/05/04 01:28:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
@@ -14,13 +14,13 @@ COMMENT=		Garbage collection and memory leak detection for C and C++
 USE_GMAKE=		# defined
 
 WRKSRC=			${WRKDIR}/gc
-MAKE_ENV+=		CP="${CP}" INSTALL_DATA="${INSTALL_DATA}" \
-			INSTALL_MAN="${INSTALL_MAN}"
+MAKE_ENV+=		COPTS="${CFLAGS}"
 
 ALL_TARGET=		BSD-pkg-all
 INSTALL_TARGET=		BSD-pkg-install
 
 .include "../../mk/bsd.prefs.mk"
+
 .if defined(EXTRACT_USING_PAX)
 EXTRACT_ELEMENTS=	-u
 .endif
@@ -33,7 +33,7 @@ post-extract:
 	${MV} ${WRKSRC}/gc.man ${WRKSRC}/gc.man.in
 
 pre-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" ${WRKSRC}/gc.man.in \
-		> ${WRKSRC}/gc.man
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		${WRKSRC}/gc.man.in > ${WRKSRC}/gc.man
 
 .include "../../mk/bsd.pkg.mk"
