@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/10/06 21:08:58 tron Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/07 20:05:53 tron Exp $
 
 DISTNAME=	rp-pppoe-3.3
 CATEGORIES=	net
@@ -15,16 +15,6 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PPPD=${PPPD}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M1.[0-4]*} != ""
-DEPENDS+=	ppp>=2.3.10:../ppp
-
-PPPD=		${LOCALBASE}/sbin/pppd
-.else
-PPPD=		/usr/sbin/pppd
-.endif
 
 post-build:
 	${SED} -e 's#$${PREFIX}#${PREFIX}#g' <${FILESDIR}/pppoe.sh \
