@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.25 2001/12/27 19:45:01 abs Exp $
+# $Id: pkgchk.sh,v 1.26 2001/12/31 13:58:29 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -377,7 +377,7 @@ fi
 check_packages_installed $PKGDIRLIST
 
 if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
-    run_cmd "pkg_delete -r $MISMATCH_TODO"
+    run_cmd "pkg_delete -r $MISMATCH_TODO" 1
     if [ -n "$opt_a" ] ; then
 	echo "[ Rechecking packages after deletions ]"
 	check_packages_installed $PKGDIRLIST # May need to add more packages
