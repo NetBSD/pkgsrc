@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.17 2001/11/21 14:10:07 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.18 2001/12/17 09:36:31 tron Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -48,7 +48,7 @@ PAX?=		/bin/pax
 PKGLOCALEDIR?=	lib
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
-SED?=		/usr/bin/sed
+SED?=		/usr/xpg4/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/ksh
 SORT?=		/usr/bin/sort
