@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
+$NetBSD: patch-ab,v 1.28 2005/01/05 09:15:29 adam Exp $
 
---- configure.orig	2004-11-19 18:49:51.000000000 +0000
+--- configure.orig	2004-12-07 00:23:45.000000000 +0000
 +++ configure
-@@ -2103,12 +2103,13 @@ fi
+@@ -2192,12 +2192,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2778,6 +2779,9 @@ fi
+@@ -2867,6 +2868,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*)
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -2810,13 +2814,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2899,13 +2903,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -39,9 +39,9 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
 -		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
- echo "configure:2822: checking for ELF" >&5
+ echo "configure:2911: checking for ELF" >&5
  		cat > conftest.$ac_ext <<EOF
-@@ -2831,11 +2833,20 @@ EOF
+@@ -2920,11 +2922,20 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -3451,16 +3462,16 @@ fi
+@@ -3540,16 +3551,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -85,7 +85,7 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -7282,7 +7293,7 @@ elif test "$SHARED_BUILD" = "0" || test 
+@@ -7430,7 +7441,7 @@ elif test "$SHARED_BUILD" = "0" || test 
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -94,7 +94,7 @@ $NetBSD: patch-ab,v 1.27 2004/11/26 10:30:01 adam Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -7312,13 +7323,19 @@ VERSION=${TCL_VERSION}
+@@ -7460,13 +7471,19 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
