@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2002/03/16 07:31:26 rh Exp $
+$NetBSD: patch-ac,v 1.5 2002/10/11 09:29:59 rh Exp $
 
---- shell/main.c.orig	Sat Dec 15 07:21:56 2001
+--- shell/main.c.orig	Tue Dec 18 02:21:02 2001
 +++ shell/main.c
-@@ -63,6 +63,23 @@
+@@ -63,6 +63,25 @@ static char *evolution_directory = NULL;
  static gboolean no_splash = FALSE;
  extern char *evolution_debug_log;
  
@@ -11,38 +11,40 @@ $NetBSD: patch-ac,v 1.4 2002/03/16 07:31:26 rh Exp $
 +#include <pthread.h>
 +
 +/*
-+ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ * Pth is non-preemptive, so we yield the processor periodically
 + */
 +
-+gint
++#ifdef _PTH_PTHREAD_H_
++static gint
 +pth_nbschedule (gpointer data)
 +{
-+	pthread_yield_np();
++	sched_yield();
 +
 +	return TRUE;
 +}
-+#endif
++#endif /* _PTH_PTHREAD_H_ */
++#endif /* __NetBSD__ */
 +
  
  static GtkWidget *
  quit_box_new (void)
-@@ -190,6 +207,10 @@
+@@ -190,6 +209,10 @@ idle_cb (void *data)
  
  	uri_list = (GSList *) data;
  
-+#ifdef __NetBSD__
-+	pthread_yield_np();
++#ifdef _PTH_PTHREAD_H_
++	sched_yield();
 +#endif
 +
  	shell = e_shell_new (evolution_directory, ! no_splash, &result);
  	g_free (evolution_directory);
  
-@@ -350,6 +371,10 @@
+@@ -350,6 +373,10 @@ main (int argc, char **argv)
  	}
  
  	gtk_idle_add (idle_cb, uri_list);
 +
-+#ifdef __NetBSD__
++#ifdef _PTH_PTHREAD_H_
 +	gtk_timeout_add (200, pth_nbschedule, NULL);
 +#endif
  

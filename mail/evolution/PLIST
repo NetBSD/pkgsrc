@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/07/15 18:25:49 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/10/11 09:29:59 rh Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -1340,3 +1340,5 @@ share/pixmaps/evolution.png
 @dirrm include/evolution
 @dirrm include/ename
 @dirrm include/camel
+@exec scrollkeeper-update
+@unexec scrollkeeper-update
