@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2001/05/05 19:51:13 jlam Exp $
-# FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
+# $NetBSD: Makefile,v 1.18 2001/06/10 17:41:01 wiz Exp $
 #
 
-DISTNAME=	uudeview-0.5.13
-PKGNAME=	xdeview-0.5.13
+DISTNAME=	uudeview-0.5.15
+PKGNAME=	xdeview-0.5.15
 CATEGORIES=	converters
-MASTER_SITES=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/Apps/frank/
+MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
+HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
-DEPENDS+=	uulib-0.5.13:../../converters/uulib
+DEPENDS+=	uulib-0.5.15:../../converters/uulib
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
@@ -25,13 +24,7 @@ CONFIGURE_ENV=	LDFLAGS=-s\
 ALL_TARGET=	xdeview
 INSTALL_TARGET=	install-tcl
 
-PORTDOCDIR=	${PREFIX}/share/doc/xdeview
-DOCFILES=	${FILESDIR}/porting.notes ${WRKSRC}/HOWTO
-
 post-install:
-	@${ECHO_MSG} "===>  Copying documents to ${PORTDOCDIR}"
-	@${INSTALL_DATA_DIR} ${PORTDOCDIR}
-	${INSTALL_DATA} ${DOCFILES} ${PORTDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
