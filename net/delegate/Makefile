@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/04/27 20:51:10 reed Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/09 15:17:24 adam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
-#
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
-PKGNAME=	delegate-8.5.2
-PKGREVISION=	1
+PKGNAME=	delegate-8.9.6
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://etlport.etl.go.jp/pub/DeleGate/ \
@@ -17,8 +15,9 @@ MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://ftp.netsw.org/netsw/Network/IP/Firewall/Proxy/delegate/ \
 		ftp://ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/ \
 		ftp://ftp.ecrc.de/ftp/data/ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@NetBSD.ORG
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/
 COMMENT=	General purpose TCP/IP proxy system
 
@@ -32,9 +31,8 @@ DELEGATE_MANAGER?=	root@localhost
 RCD_SCRIPTS=		delegated
 FILES_SUBST+=		ADMIN="${DELEGATE_MANAGER}"
 
-OWN_DIRS_PERMS+=	/var/spool/delegate/cache \
-			${ROOT_USER} ${ROOT_GROUP} 1777
-OWN_DIRS_PERMS+=	/var/spool/delegate-nobody nobody nobody 755
+OWN_DIRS_PERMS+=${VARBASE}/spool/delegate/cache ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=${VARBASE}/spool/delegate-nobody nobody nobody 755
 
 pre-build:
 	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
