@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.126 2004/08/08 06:13:02 taca Exp $
+# $NetBSD: Makefile,v 1.127 2004/09/08 08:51:31 xtraeme Exp $
 
 DISTNAME=		samba-3.0.5
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
-			ftp://samba.anu.edu.au/pub/samba/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
+			ftp://samba.anu.edu.au/pub/samba/old-versions/ \
+			ftp://ftp.sunet.se/pub/unix/utilities/samba/old-versions/
 COUNTRY_MIRRORS=	au1 ca fi fr it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
+MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/old-versions/
 .endfor
 #EXTRACT_SUFX=		.tar.bz2
 
