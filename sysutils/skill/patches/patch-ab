@@ -1,21 +1,23 @@
-$NetBSD: patch-ab,v 1.10 2002/06/28 10:45:32 abs Exp $
+$NetBSD: patch-ab,v 1.11 2003/09/23 13:58:37 wiz Exp $
 
 --- main.c.orig	Sat Apr  6 05:26:01 2002
-+++ main.c
-@@ -46,6 +46,12 @@ const char *CopyrightVersion = "%s %s\n\
++++ main.c	Tue Sep 23 10:53:01 2003
+@@ -46,7 +46,14 @@
  #include <stdio.h>
  #include <errno.h>
  #include <pwd.h>
 +#ifdef __NetBSD__
-+# include <sys/sysctl.h>
-+# ifndef KI_MAXCOMLEN	/* Pre 1.5 */
-+#  define       KI_MAXCOMLEN    24
-+# endif
++#include <sys/sysctl.h>
 +#endif
  
++#ifndef KI_MAXCOMLEN	/* Pre NetBSD/1.5.  Missing on !NetBSD */
++#define KI_MAXCOMLEN	24
++#endif
++
  /*
   * Processes which could not be checked -- usually due to permission
-@@ -137,7 +143,7 @@ main(argc, argv)
+  * problems (SunOS 4.1, SysVR4) -- are tallied in "MissedProcCnt".
+@@ -137,7 +144,7 @@
  			for (i = 0; i < CmdIndx; i++) {
  				cmdp = (CmdList + i);
  				if ((cmdp->flags & CMD_FLAG_EXACT) != 0 &&
