@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2004/08/14 00:29:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.115 2004/09/02 20:42:26 recht Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -78,11 +78,16 @@ SUBDIR+=	suse64_xforms
 SUBDIR+=	suse91_aspell
 SUBDIR+=	suse91_base
 SUBDIR+=	suse91_compat
+SUBDIR+=	suse91_expat
+SUBDIR+=	suse91_fontconfig
 SUBDIR+=	suse91_freetype2
 SUBDIR+=	suse91_gtk
+SUBDIR+=	suse91_gtk2
 SUBDIR+=	suse91_libjpeg
 SUBDIR+=	suse91_libpng
+SUBDIR+=	suse91_libtiff
 #SUBDIR+=	suse91_linux
+SUBDIR+=	suse91_locale
 SUBDIR+=	suse91_openmotif
 SUBDIR+=	suse91_x11
 SUBDIR+=	suse_audio
