@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/08/25 18:39:48 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/23 21:23:56 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
-PKGNAME=	PAM-0.75
+PKGNAME=	PAM-0.77
 CATEGORIES=	security
 MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
 		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
@@ -13,32 +13,35 @@ COMMENT=	Pluggable Authentication Modules
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
+USE_DB185=		yes
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-docdir=${PREFIX}/share/doc/PAM
 CONFIGURE_ARGS+=	--enable-includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--enable-mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--enable-sconfigdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-static-libpam
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2TXT=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2HTML=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2LATEX=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2PS=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
-CFLAGS+=		-DHAVE_UTMP_H=1
-CFLAGS+=		-fPIC
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:M*BSD)
+CFLAGS+=		-DUSE_GETLOGIN=1
+.endif
 MAKE_FLAGS+=		OS_CFLAGS="${CFLAGS}"
 
 PKG_SYSCONFSUBDIR?=	pam
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
 CFILES=			access.conf pam_env.conf group.conf time.conf
 CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASE}/pam.conf
 .for FILE in ${CFILES}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-
-post-extract:
-	cd ${WRKSRC}/doc;						\
-	if [ -f ${DISTNAME}-docs.tar.gz ]; then				\
-		${GZCAT} ${DISTNAME}-docs.tar.gz | ${GTAR} -xf -;	\
-	fi
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -49,14 +52,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/modules/pam_group/group.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/modules/pam_time/time.conf ${EGDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/doc; for file in modules/*.sgml; do		\
-		${INSTALL_DATA} $${file} ${DOCDIR};			\
-	done
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; for file in html/*.html; do			\
-		${INSTALL_DATA} $${file} ${HTMLDIR};			\
-	done
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../security/libcrack/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
