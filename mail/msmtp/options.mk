@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.4 2005/01/10 20:59:43 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 PKG_SUPPORTED_OPTIONS=	gnutls inet6 ssl gsasl nossl
 
 .if !defined(PKG_OPTIONS.msmtp)
-PKG_DEFAULT_OPTIONS+=	inet6 ssl
+PKG_DEFAULT_OPTIONS+=	ssl
 .endif
 
 .include "../../mk/bsd.options.mk"
