@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/23 07:48:03 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/23 08:16:26 minskim Exp $
 #
 
 DISTNAME=	bash-3.0
@@ -49,7 +49,10 @@ PKG_DEFAULT_OPTIONS+=	static
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
-PKG_SUPPORTED_OPTIONS=	static
+PKG_SUPPORTED_OPTIONS=	multibyte static
+.if !defined(PKG_OPTIONS.bash)
+PKG_DEFAULT_OPTIONS+=	multibyte
+.endif
 .include "../../mk/bsd.options.mk"
 
 ##
@@ -57,6 +60,13 @@ PKG_SUPPORTED_OPTIONS=	static
 ##
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static-link
+.endif
+
+##
+## Multibyte support
+##
+.if empty(PKG_OPTIONS:Mmultibyte)
+CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
 .endif
 
 post-install:
