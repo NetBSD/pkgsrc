@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4890 2004/02/17 23:04:29 heinz Exp $
+$NetBSD: CHANGES,v 1.4891 2004/02/17 23:26:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnopernicus to 0.7.1nb4 [jmmv 2004-02-17]
 	Added p5-Net-CIDR-Lite [heinz 2004-02-17]
 	Added p5-Mail-SPF-Query [heinz 2004-02-17]
+	Updated conglomerate to 0.7.12 [jmmv 2004-02-17]
