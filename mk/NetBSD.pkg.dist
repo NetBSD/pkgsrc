@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.6 1998/11/24 21:42:19 tron Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.7 1998/12/03 05:07:04 simonb Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -127,6 +127,8 @@
         ..
         examples
         ..
+	games
+        ..
 	locale
         ..
         misc
@@ -198,6 +200,10 @@
             ..
         ..
         skel
+        ..
+    ..
+    var
+        games
         ..
     ..
 ..
