@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.7 2003/07/25 12:33:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.8 2003/07/25 18:49:23 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -112,8 +112,14 @@ DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
 PLIST_SRC=		# empty, since we use dynamic PLIST generation
-_PLIST_IGNORE_FILES=	+*		# package metadata files
+#
+# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
+# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
+# adding the named files to the PLIST.
+#
+_PLIST_IGNORE_FILES=	+*			# package metadata files
 _PLIST_IGNORE_FILES+=	info/dir
+_PLIST_IGNORE_FILES+=	*[~#] *.OLD *.orig	# scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 
