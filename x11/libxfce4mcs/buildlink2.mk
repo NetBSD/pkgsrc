@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:57:16 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/03 05:34:08 martti Exp $
 #
 # This Makefile fragment is included by packages that use libxfce4mcs.
 #
@@ -9,7 +9,7 @@
 LIBXFCE4MCS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libxfce4mcs
-BUILDLINK_DEPENDS.libxfce4mcs?=		libxfce4mcs>=4.0.0
+BUILDLINK_DEPENDS.libxfce4mcs?=		libxfce4mcs>=4.0.1
 BUILDLINK_PKGSRCDIR.libxfce4mcs?=		../../x11/libxfce4mcs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxfce4mcs=libxfce4mcs

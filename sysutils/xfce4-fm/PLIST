@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:32:34 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:08 martti Exp $
 bin/fgr
 bin/scramble
 bin/xfapps
@@ -64,20 +64,26 @@ lib/xfce4/mcs-plugins/libxffmsettings.la
 lib/xfce4/mcs-plugins/libxffmsettings.so
 man/man1/fgr.1
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xffm.mo
 share/xfce4/doc/C/xffm.html
+share/xfce4/doc/fr/xffm.html
 share/xffm/AUTHORS
 share/xffm/applications.xml
 share/xffm/pixmaps/comp1.xpm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:44:37 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:09 martti Exp $
 lib/xfce4/mcs-plugins/keyboard_plugin.a
 lib/xfce4/mcs-plugins/keyboard_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.so
@@ -10,11 +10,13 @@ lib/xfce4/mcs-plugins/ui_plugin.la
 lib/xfce4/mcs-plugins/ui_plugin.so
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -25,8 +27,11 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-mcs-plugins.mo
 share/xfce4/doc/C/images/font_selection.png
@@ -34,4 +39,9 @@ share/xfce4/doc/C/images/keyboard_settings.png
 share/xfce4/doc/C/images/mouse_settings.png
 share/xfce4/doc/C/images/user_interface_settings.png
 share/xfce4/doc/C/xfce-mcs-plugins.html
+share/xfce4/doc/fr/images/font_selection.png
+share/xfce4/doc/fr/images/keyboard_settings.png
+share/xfce4/doc/fr/images/mouse_settings.png
+share/xfce4/doc/fr/images/user_interface_settings.png
+share/xfce4/doc/fr/xfce-mcs-plugins.html
 @dirrm lib/xfce4/mcs-plugins

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/26 10:41:17 martti Exp $
+$NetBSD: distinfo,v 1.2 2003/12/03 05:34:09 martti Exp $
 
-SHA1 (libxfce4util-4.0.0.tar.gz) = 864a99594c5aa22a35ff15e88dcffe64b5adedb4
-Size (libxfce4util-4.0.0.tar.gz) = 302972 bytes
+SHA1 (libxfce4util-4.0.1.tar.gz) = 11f22acf89188dadd5c4b6472a308e48285ace2d
+Size (libxfce4util-4.0.1.tar.gz) = 302996 bytes

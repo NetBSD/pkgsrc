@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/26 10:29:52 martti Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/03 05:34:08 martti Exp $
 
 .include "Makefile.common"
 
@@ -26,6 +26,8 @@ do-install:	# empty
 # Extras
 .include "../../audio/xfce4-mixer/buildlink2.mk"
 .include "../../graphics/xfce4-artwork/buildlink2.mk"
+.include "../../time/xfce4-datetime-plugin/buildlink2.mk"
+.include "../../sysutils/xfce4-diskperf-plugin/buildlink2.mk"
 .include "../../sysutils/xfce4-fm-icons/buildlink2.mk"
 .include "../../sysutils/xfce4-minicmd-plugin/buildlink2.mk"
 .include "../../sysutils/xfce4-netload-plugin/buildlink2.mk"
@@ -33,6 +35,8 @@ do-install:	# empty
 .include "../../sysutils/xfce4-systemload-plugin/buildlink2.mk"
 .include "../../sysutils/xfce4-systray/buildlink2.mk"
 .include "../../wm/xfce4-wm-themes/buildlink2.mk"
+.include "../../x11/xfce4-clipman-plugin/buildlink2.mk"
+.include "../../x11/xfce4-notes-plugin/buildlink2.mk"
 .include "../../x11/xfce4-themes/buildlink2.mk"
 .include "../../x11/xfce4-toys/buildlink2.mk"
 .include "../../x11/xfce4-trigger-launcher/buildlink2.mk"

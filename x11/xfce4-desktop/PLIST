@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:41:55 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:09 martti Exp $
 bin/xfdesktop
 etc/xfce4/menu.xml
 etc/xfce4/menu.xml.ca
@@ -6,6 +6,7 @@ etc/xfce4/menu.xml.de
 etc/xfce4/menu.xml.fr
 etc/xfce4/menu.xml.hu
 etc/xfce4/menu.xml.nl
+etc/xfce4/menu.xml.ta
 etc/xfce4/menu.xml.zh_CN
 etc/xfce4/menu.xml.zh_TW
 lib/xfce4/mcs-plugins/backdrop_settings.a
@@ -15,11 +16,13 @@ lib/xfce4/mcs-plugins/workspaces_settings.a
 lib/xfce4/mcs-plugins/workspaces_settings.la
 lib/xfce4/mcs-plugins/workspaces_settings.so
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfdesktop.mo
@@ -29,8 +32,11 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfdesktop.mo
 share/xfce4/backdrops/flower.png
@@ -47,4 +53,11 @@ share/xfce4/doc/C/images/xfdesktop-background.png
 share/xfce4/doc/C/images/xfdesktop-list.png
 share/xfce4/doc/C/images/xfdesktop-workspace.png
 share/xfce4/doc/C/xfdesktop.html
+share/xfce4/doc/fr/images/root_menu.png
+share/xfce4/doc/fr/images/root_menu2.png
+share/xfce4/doc/fr/images/select_bg_color.png
+share/xfce4/doc/fr/images/xfdesktop-background.png
+share/xfce4/doc/fr/images/xfdesktop-list.png
+share/xfce4/doc/fr/images/xfdesktop-workspace.png
+share/xfce4/doc/fr/xfdesktop.html
 @dirrm share/xfce4/backdrops
