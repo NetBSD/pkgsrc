@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/14 00:25:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/14 00:27:09 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s3
@@ -62,8 +62,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 CONF_FILES+=		${EGDIR}/roster.xml ${PKG_SYSCONFDIR}/roster.xml
 .undef f
-
-JABBERD_METHOD?=	mysql
 
 .if !empty(JABBERD_METHOD:Mdb)
 # # Directory to store the database files
