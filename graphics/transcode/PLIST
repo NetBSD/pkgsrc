@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/31 22:02:48 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/08/31 22:03:30 mycroft Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
