@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.441 2003/04/03 10:14:09 wiz Exp $
+$NetBSD: TODO,v 1.442 2003/04/03 12:13:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -158,7 +158,6 @@ Suggested package updates
 	o leim-21.3
 	o lesstif-0.93.41
 	o libole2-2.2.8
-	o libslang-1.4.9
 	o librsvg-2.2.2.1
 	o libxml-2.5.6
 	o libxslt-1.0.29
