@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:29 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/20 23:22:37 jlam Exp $
 
 .if !defined(RPM_BUILDLINK2_MK)
 RPM_BUILDLINK2_MK=	# defined
@@ -14,6 +14,8 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.rpm=rpm
 BUILDLINK_PREFIX.rpm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rpm=	include/rpm/*
 BUILDLINK_FILES.rpm+=	lib/librpm.a
+
+BUILDLINK_CPPFLAGS.rpm=	-I${BUILDLINK_PREFIX.rpm}/include/rpm
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 
