@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: innd.sh,v 1.10 2001/05/10 21:58:01 tron Exp $
+# $NetBSD: innd.sh,v 1.11 2001/07/29 05:11:26 tron Exp $
 #
 # PROVIDE: inn
 # REQUIRE: DAEMON
@@ -30,7 +30,12 @@ then
 	fi
 
 	case "$1" in
-	start | stop)
+	start )
+		echo "Starting INN."
+		su news -c "@@PREFIX@@/inn/bin/rc.news $1" >/dev/null
+		exit 0
+		;;
+	stop )
 		su news -c "@@PREFIX@@/inn/bin/rc.news $1"
 		exit 0
 		;;
