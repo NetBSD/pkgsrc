@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/01/24 15:13:19 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/05 10:39:10 uebayasi Exp $
 
-DISTNAME=	freepwing-1.4.3
+DISTNAME=	freepwing-1.4.4
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/freepwing/
 
