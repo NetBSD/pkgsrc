@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2003/11/10 16:27:37 kleink Exp $
+# $NetBSD: Makefile,v 1.107 2003/11/21 15:33:41 jlam Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
@@ -76,7 +76,15 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
-.if defined(USE_SASL) && ${USE_SASL} == "YES"
+.if defined(USE_SASL2) && ${USE_SASL2} == "YES"
+USING_SASL=YES
+.include "../../security/cyrus-sasl2/buildlink2.mk"
+CCARGS+=	-DUSE_SASL2_AUTH
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		-lsasl2
+BUILD_DEFS+=	USE_SASL2
+.elif defined(USE_SASL) && ${USE_SASL} == "YES"
 USING_SASL=YES
 .include "../../security/cyrus-sasl/buildlink2.mk"
 CCARGS+=	-DUSE_SASL_AUTH
@@ -86,18 +94,8 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
 BUILD_DEFS+=	USE_SASL
 .endif
 
-.if defined(USE_SASL2) && ${USE_SASL2} == "YES"
-USING_SASL=YES
-.include "../../security/cyrus-sasl2/buildlink2.mk"
-CCARGS+=	-DUSE_SASL2_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
-		-lsasl2
-BUILD_DEFS+=	USE_SASL2
-.endif
-
 .if defined(USING_SASL)
-PLIST_SRC+=	${WRKDIR}/PLIST.sasl
+PLIST_SRC+=	${PKGDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 .endif
@@ -124,6 +122,13 @@ SHAREDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
 CONF_FILES+=	${SHAREDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+.if defined(USING_SASL)
+.if defined(USE_SASL2)
+CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl2/smtpd.conf
+.else
+CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl/smtpd.conf
+.endif
+.endif
 CONF_FILES_PERMS=
 .for confscr in post-install postfix-files postfix-script
 CONF_FILES_PERMS+=	${SHAREDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
@@ -160,15 +165,13 @@ pre-install:
 	${CHMOD} 755 ${SHAREDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(USING_SASL)
-	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 .if defined(USE_SASL2)
-	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl2
-	${ECHO} lib/sasl2/smtpd.conf > ${WRKDIR}/PLIST.sasl
+	${ECHO} "pwcheck_method: auxprop" > ${WRKDIR}/smtpd.conf
 .else
-	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
-	${ECHO} lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
+	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 .endif
 .endif
+	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${SHAREDIR}
