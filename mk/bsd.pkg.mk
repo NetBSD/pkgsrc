@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1159 2003/03/30 05:06:49 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1160 2003/04/03 16:55:09 salo Exp $
 #
 # This file is in the public domain.
 #
@@ -501,6 +501,9 @@ MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
 .    endif
 .    if exists(${PKGDIR}/MESSAGE.${OPSYS})
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
+.    endif
+.    if exists(${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .    endif
 .    if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
