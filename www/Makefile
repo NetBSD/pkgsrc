@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2000/05/31 07:05:56 rh Exp $
+# $NetBSD: Makefile,v 1.84 2000/05/31 21:56:18 jwise Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -25,6 +25,7 @@
     SUBDIR += bozohttpd
     SUBDIR += cgilib
     SUBDIR += checkbot
+    SUBDIR += cocoon
     SUBDIR += communicator
     SUBDIR += galway
     SUBDIR += grail
