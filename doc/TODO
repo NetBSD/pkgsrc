@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.845 2003/09/10 12:43:03 markd Exp $
+$NetBSD: TODO,v 1.846 2003/09/10 20:06:07 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -262,6 +262,7 @@ Suggested package updates
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
+	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdg-validate-1.1.3 [pkg/22631]
 	o wine-20030813
 	o wmbiff-0.4.17
