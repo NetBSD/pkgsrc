@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/01/03 01:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/03 19:56:38 tron Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -20,6 +20,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
 			--with-vorbis-prefix=${BUILDLINK_DIR}		\
 			--with-ao-prefix=${BUILDLINK_DIR}
+
+PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
 # vorbis-tools needs a working pthreads implementation, and pth is proven
 # to work.
