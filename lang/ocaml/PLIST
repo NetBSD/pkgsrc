@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/14 18:10:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/19 02:23:42 jschauma Exp $
+bin/camlp4
+bin/camlp4o
+bin/camlp4r
 bin/labltk
+bin/mkcamlp4
 bin/ocaml
 bin/ocamlbrowser
 bin/ocamlc
@@ -7,10 +11,14 @@ bin/ocamlcp
 bin/ocamldebug
 bin/ocamldep
 bin/ocamllex
+bin/ocamlmklib
 bin/ocamlmktop
 bin/ocamlprof
 bin/ocamlrun
 bin/ocamlyacc
+bin/ocpp
+bin/odyl
+lib/ocaml/addlabels
 lib/ocaml/arg.cmi
 lib/ocaml/arg.ml
 lib/ocaml/arg.mli
@@ -19,6 +27,9 @@ lib/ocaml/arith_status.mli
 lib/ocaml/array.cmi
 lib/ocaml/array.ml
 lib/ocaml/array.mli
+lib/ocaml/arrayLabels.cmi
+lib/ocaml/arrayLabels.ml
+lib/ocaml/arrayLabels.mli
 lib/ocaml/big_int.cmi
 lib/ocaml/big_int.mli
 lib/ocaml/bigarray.cma
@@ -36,11 +47,73 @@ lib/ocaml/caml/callback.h
 lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/fail.h
+lib/ocaml/caml/intext.h
 lib/ocaml/caml/memory.h
 lib/ocaml/caml/misc.h
 lib/ocaml/caml/mlvalues.h
 lib/ocaml/camlheader
 lib/ocaml/camlheader_ur
+lib/ocaml/camlp4/ast2pt.cmi
+lib/ocaml/camlp4/camlp4.cma
+lib/ocaml/camlp4/camlp4_top.cma
+lib/ocaml/camlp4/camlp4o.cma
+lib/ocaml/camlp4/camlp4r.cma
+lib/ocaml/camlp4/crc.cmo
+lib/ocaml/camlp4/extfun.cmi
+lib/ocaml/camlp4/extfun.mli
+lib/ocaml/camlp4/fstream.cmi
+lib/ocaml/camlp4/fstream.mli
+lib/ocaml/camlp4/gramext.cmi
+lib/ocaml/camlp4/gramext.mli
+lib/ocaml/camlp4/gramlib.cma
+lib/ocaml/camlp4/grammar.cmi
+lib/ocaml/camlp4/grammar.mli
+lib/ocaml/camlp4/lib.sml
+lib/ocaml/camlp4/mLast.cmi
+lib/ocaml/camlp4/mLast.mli
+lib/ocaml/camlp4/ocpp.cmo
+lib/ocaml/camlp4/odyl.cma
+lib/ocaml/camlp4/odyl.cmo
+lib/ocaml/camlp4/pa_extend.cmo
+lib/ocaml/camlp4/pa_extend_m.cmo
+lib/ocaml/camlp4/pa_extfun.cmo
+lib/ocaml/camlp4/pa_format.cmo
+lib/ocaml/camlp4/pa_fstream.cmo
+lib/ocaml/camlp4/pa_ifdef.cmi
+lib/ocaml/camlp4/pa_ifdef.cmo
+lib/ocaml/camlp4/pa_lisp.cmo
+lib/ocaml/camlp4/pa_o.cmi
+lib/ocaml/camlp4/pa_o.cmo
+lib/ocaml/camlp4/pa_olabl.cmo
+lib/ocaml/camlp4/pa_oop.cmo
+lib/ocaml/camlp4/pa_op.cmo
+lib/ocaml/camlp4/pa_r.cmo
+lib/ocaml/camlp4/pa_rp.cmo
+lib/ocaml/camlp4/pa_ru.cmo
+lib/ocaml/camlp4/pa_sml.cmo
+lib/ocaml/camlp4/pcaml.cmi
+lib/ocaml/camlp4/pcaml.mli
+lib/ocaml/camlp4/plexer.cmi
+lib/ocaml/camlp4/plexer.mli
+lib/ocaml/camlp4/pr_depend.cmo
+lib/ocaml/camlp4/pr_dump.cmo
+lib/ocaml/camlp4/pr_extend.cmo
+lib/ocaml/camlp4/pr_extfun.cmo
+lib/ocaml/camlp4/pr_null.cmo
+lib/ocaml/camlp4/pr_o.cmo
+lib/ocaml/camlp4/pr_op.cmo
+lib/ocaml/camlp4/pr_r.cmo
+lib/ocaml/camlp4/pr_rp.cmo
+lib/ocaml/camlp4/q_MLast.cmo
+lib/ocaml/camlp4/q_phony.cmo
+lib/ocaml/camlp4/quotation.cmi
+lib/ocaml/camlp4/quotation.mli
+lib/ocaml/camlp4/spretty.cmi
+lib/ocaml/camlp4/spretty.mli
+lib/ocaml/camlp4/stdpp.cmi
+lib/ocaml/camlp4/stdpp.mli
+lib/ocaml/camlp4/token.cmi
+lib/ocaml/camlp4/token.mli
 lib/ocaml/char.cmi
 lib/ocaml/char.ml
 lib/ocaml/char.mli
@@ -72,6 +145,8 @@ lib/ocaml/genlex.mli
 lib/ocaml/graphics.cma
 lib/ocaml/graphics.cmi
 lib/ocaml/graphics.mli
+lib/ocaml/graphicsX11.cmi
+lib/ocaml/graphicsX11.mli
 lib/ocaml/hashtbl.cmi
 lib/ocaml/hashtbl.ml
 lib/ocaml/hashtbl.mli
@@ -136,6 +211,7 @@ lib/ocaml/labltk/wm.cmi
 lib/ocaml/lazy.cmi
 lib/ocaml/lazy.ml
 lib/ocaml/lazy.mli
+lib/ocaml/ld.conf
 lib/ocaml/lexing.cmi
 lib/ocaml/lexing.ml
 lib/ocaml/lexing.mli
@@ -150,12 +226,18 @@ lib/ocaml/libunix.a
 lib/ocaml/list.cmi
 lib/ocaml/list.ml
 lib/ocaml/list.mli
+lib/ocaml/listLabels.cmi
+lib/ocaml/listLabels.ml
+lib/ocaml/listLabels.mli
 lib/ocaml/map.cmi
 lib/ocaml/map.ml
 lib/ocaml/map.mli
 lib/ocaml/marshal.cmi
 lib/ocaml/marshal.ml
 lib/ocaml/marshal.mli
+lib/ocaml/moreLabels.cmi
+lib/ocaml/moreLabels.ml
+lib/ocaml/moreLabels.mli
 lib/ocaml/mutex.mli
 lib/ocaml/nat.cmi
 lib/ocaml/nat.mli
@@ -171,6 +253,8 @@ lib/ocaml/obj.mli
 lib/ocaml/oo.cmi
 lib/ocaml/oo.ml
 lib/ocaml/oo.mli
+lib/ocaml/outcometree.cmi
+lib/ocaml/outcometree.mli
 lib/ocaml/parsing.cmi
 lib/ocaml/parsing.ml
 lib/ocaml/parsing.mli
@@ -193,6 +277,7 @@ lib/ocaml/random.ml
 lib/ocaml/random.mli
 lib/ocaml/ratio.cmi
 lib/ocaml/ratio.mli
+lib/ocaml/scrapelabels
 lib/ocaml/set.cmi
 lib/ocaml/set.ml
 lib/ocaml/set.mli
@@ -202,6 +287,9 @@ lib/ocaml/sort.mli
 lib/ocaml/stack.cmi
 lib/ocaml/stack.ml
 lib/ocaml/stack.mli
+lib/ocaml/stdLabels.cmi
+lib/ocaml/stdLabels.ml
+lib/ocaml/stdLabels.mli
 lib/ocaml/std_exit.cmi
 lib/ocaml/std_exit.cmo
 lib/ocaml/std_exit.ml
@@ -215,6 +303,9 @@ lib/ocaml/stream.mli
 lib/ocaml/string.cmi
 lib/ocaml/string.ml
 lib/ocaml/string.mli
+lib/ocaml/stringLabels.cmi
+lib/ocaml/stringLabels.ml
+lib/ocaml/stringLabels.mli
 lib/ocaml/sys.cmi
 lib/ocaml/sys.ml
 lib/ocaml/sys.mli
@@ -227,6 +318,7 @@ lib/ocaml/threads/stdlib.cma
 lib/ocaml/threads/thread.cmi
 lib/ocaml/threads/threadUnix.cmi
 lib/ocaml/threads/threads.cma
+lib/ocaml/threads/unix.cma
 lib/ocaml/topdirs.cmi
 lib/ocaml/toplevellib.cma
 lib/ocaml/toploop.cmi
@@ -234,9 +326,17 @@ lib/ocaml/topmain.cmo
 lib/ocaml/unix.cma
 lib/ocaml/unix.cmi
 lib/ocaml/unix.mli
+lib/ocaml/unixLabels.cmi
+lib/ocaml/unixLabels.mli
 lib/ocaml/weak.cmi
 lib/ocaml/weak.ml
 lib/ocaml/weak.mli
+man/man1/camlp4.1
+man/man1/camlp4o.1
+man/man1/camlp4o.opt.1
+man/man1/camlp4r.1
+man/man1/camlp4r.opt.1
+man/man1/mkcamlp4.1
 man/man1/ocaml.1
 man/man1/ocamlc.1
 man/man1/ocamlc.opt.1
@@ -250,7 +350,11 @@ man/man1/ocamlopt.opt.1
 man/man1/ocamlprof.1
 man/man1/ocamlrun.1
 man/man1/ocamlyacc.1
-@dirrm lib/ocaml/caml
-@dirrm lib/ocaml/labltk
+man/man1/ocpp.1
 @dirrm lib/ocaml/threads
+@exec ${MKDIR} %D/lib/ocaml/shlibs
+@dirrm lib/ocaml/shlibs
+@dirrm lib/ocaml/labltk
+@dirrm lib/ocaml/camlp4
+@dirrm lib/ocaml/caml
 @dirrm lib/ocaml
