@@ -1,69 +1,537 @@
-$NetBSD: patch-df,v 1.2 2002/08/20 11:48:25 skrll Exp $
+$NetBSD: patch-df,v 1.3 2002/08/21 15:33:06 skrll Exp $
 
 --- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Tue Sep 18 15:03:53 2001
-+++ ksysguard/ksysguardd/FreeBSD/netdev.c
-@@ -20,4 +20,11 @@
- */
- 
-+#if defined(__NetBSD__)
-+#include <sys/types.h>
-+#include <sys/socket.h>
++++ ksysguard/ksysguardd/FreeBSD/netdev.c	Tue Aug 20 13:51:32 2002
+@@ -1,319 +1,263 @@
+-/*
+-    KSysGuard, the KDE System Guard
+-   
+-	Copyright (c) 2001 Tobias Koenig <tokoe82@yahoo.de>
+-    
+-    This program is free software; you can redistribute it and/or
+-    modify it under the terms of version 2 of the GNU General Public
+-    License as published by the Free Software Foundation.
+-
+-    This program is distributed in the hope that it will be useful,
+-    but WITHOUT ANY WARRANTY; without even the implied warranty of
+-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-    GNU General Public License for more details.
+-
+-    You should have received a copy of the GNU General Public License
+-    along with this program; if not, write to the Free Software
+-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+-
+-	$Id: patch-df,v 1.3 2002/08/21 15:33:06 skrll Exp $
+-*/
+-
+-#include <fcntl.h>
++#include <sys/types.h> /* for sys/socket.h, ifaddrs.h */
 +#include <ifaddrs.h>
-+#include <net/if.h>
-+#include <string.h>
-+#else
- #include <fcntl.h>
  #include <sys/socket.h>
-@@ -30,4 +37,5 @@
- #include <sys/types.h>
- #include <unistd.h>
-+#endif
++#include <sys/param.h> /* for sys/sysctl.h */
++#include <sys/sysctl.h>
++#include <net/route.h>
+ #include <net/if.h>
+-#include <net/if_mib.h>
+-#include <stdio.h>
++#include <net/if_dl.h>
++#include <stdlib.h>
+ #include <string.h>
+-#include <sys/sysctl.h>
+-#include <sys/time.h>
+-#include <sys/types.h>
+-#include <unistd.h>
+-
  
+ #include "Command.h"
+ #include "ksysguardd.h"
+ #include "netdev.h"
  
-@@ -84,4 +92,17 @@ int numActivIfaces(void)
- {
- 	int counter = 0;
+-
++#define I_bytes 0
++#define I_packs 1
++#define I_errs 2
++#define I_mcasts 3
++#define I_lost 4
+ typedef struct {
+ 	char name[32];
+-	u_long recBytes;
+-	u_long recPacks;
+-	u_long recErrs;
+-	u_long recDrop;
+-	u_long recMulticast;
+-	u_long sentBytes;
+-	u_long sentPacks;
+-	u_long sentErrs;
+-	u_long sentMulticast;
+-	u_long sentColls;
++	u_long recv[5],Drecv[5],sent[5],Dsent[5];
+ } NetDevInfo;
+ 
++#define LEN(X) (sizeof(X)/sizeof(X[0]))
 +
-+#if defined(__NetBSD__)
-+	struct ifaddrs *ifap, *ifa;
+ #define MAXNETDEVS 64
+-static NetDevInfo NetDevs[MAXNETDEVS];
++static NetDevInfo NetDevs[MAXNETDEVS], newval[MAXNETDEVS];
+ static int NetDevCnt = 0;
+ 
+-char **parseCommand(const char *cmd)
+-{
+-	char tmp_cmd[1024];
+-	char *begin;
+-	static char sensor[100];
+-	static char interface[100];
+-	static char* retval[2];
+-
+-	strncpy(tmp_cmd, cmd, 1024);
+-
+-	begin = rindex(tmp_cmd, '/');
+-	*begin = '\0';
+-	begin++;
+-	strcpy(sensor, begin);
+-	retval[1] = sensor;
+-
+-	begin = rindex(tmp_cmd, '/');
+-	*begin = '\0';
+-	begin = rindex(tmp_cmd, '/');
+-	begin++;
+-	strcpy(interface, begin);
+-	retval[0] = interface;
+ 
+-	return retval;
+-}
+-
+-int numActivIfaces(void)
+-{
+-	int counter = 0;
+-	int name[6];
+-	int num_iface, i;
++/* Read the system's traffic registers.
++ * Merely count the IFs if countp nonzero.
++ * Returns count of IFs read, or -1; the data are written into newval.
++ * Based on getifaddrs source; getifaddrs itself seems to
++ * compile incorrectly, omitting the traffic data. (It also
++ * does things this doesn't need, thus this is slightly more efficient.)
++ */
++static int readSys(int countp) {
+ 	size_t len;
+-	struct ifmibdata ifmd;
+-
+-	len = sizeof(num_iface);
+-	sysctlbyname("net.link.generic.system.ifcount", &num_iface, &len, NULL, 0);
+-
+-	for (i = 1; i < num_iface + 1; i++) {
+-		name[0] = CTL_NET;
+-		name[1] = PF_LINK;
+-		name[2] = NETLINK_GENERIC;
+-		name[3] = IFMIB_IFDATA;
+-		name[4] = i;
+-		name[5] = IFDATA_GENERAL;
+-
+-		len = sizeof(ifmd);
+-		sysctl(name, 6, &ifmd, &len, NULL, 0);
+-		if (ifmd.ifmd_flags & IFF_UP)
+-			counter++;
++	char *bfr, *ptr;
++	struct rt_msghdr *rtm;
++	NetDevInfo *nv;
++	static int mib[] = {
++		/* see sysctl(3): */
++		CTL_NET,
++    	PF_ROUTE,
++		0, /* `currently always 0' */
++		0, /* `may be set to 0 to select all address families' */
++    	NET_RT_IFLIST,
++		0 /* ignored but six levels are needed */
++	};
 +
-+	if (getifaddrs(&ifap) != 0)
-+		return 0;
-+
-+	for (ifa = ifap; ifa; ifa=ifa->ifa_next) {
-+		if (ifa->ifa_flags & IFF_UP)
-+			counter++;
-+	}
-+	freeifaddrs(ifap);
-+#else
- 	int name[6];
- 	int num_iface, i;
-@@ -105,4 +126,5 @@ int numActivIfaces(void)
- 			counter++;
++	if (-1==sysctl(mib, LEN(mib), NULL, &len, NULL, 0))
++		return -1;
++	if (!(bfr = malloc(len)))
++		return -1;
++	if (-1==sysctl(mib, LEN(mib), bfr, &len, NULL, 0)) {
++		free(bfr);
++		return -1;
  	}
-+#endif
++	nv = newval;
++	for (ptr=bfr; ptr<bfr+len; ptr+=rtm->rtm_msglen) {
++		struct if_msghdr *ifm;
++
++		rtm = (void*)ptr; /* chg ptr type to router msg */
++		if (rtm->rtm_version != RTM_VERSION) continue;
++		if (rtm->rtm_type != RTM_IFINFO) continue;
++		ifm = (void*)rtm; /* chg ptr type to interface msg */
++		if (!(ifm->ifm_flags & IFF_UP)) continue;
++
++		if (!countp) {
++			/* a sdl is concat'd to the if msg */
++			struct sockaddr_dl *sdl = (void*)(ifm+1);
++
++			/* copy and terminate the name */
++			/*fixme: check for overruns */
++			memcpy(nv->name, sdl->sdl_data, sdl->sdl_nlen);
++			nv->name[sdl->sdl_nlen] = 0;
++
++			/* copy the data */
++			nv->recv[I_bytes]  = ifm->ifm_data.ifi_ibytes;
++			nv->recv[I_packs]  = ifm->ifm_data.ifi_ipackets;
++			nv->recv[I_errs]   = ifm->ifm_data.ifi_ierrors;
++			nv->recv[I_mcasts] = ifm->ifm_data.ifi_imcasts;
++			nv->recv[I_lost]   = ifm->ifm_data.ifi_iqdrops;
++			nv->sent[I_bytes]  = ifm->ifm_data.ifi_obytes;
++			nv->sent[I_packs]  = ifm->ifm_data.ifi_opackets;
++			nv->sent[I_errs]   = ifm->ifm_data.ifi_oerrors;
++			nv->sent[I_mcasts] = ifm->ifm_data.ifi_omcasts;
++			nv->sent[I_lost]   = ifm->ifm_data.ifi_collisions;
++		}
  
- 	return counter;
-@@ -175,4 +197,16 @@ void exitNetDev(void)
- void updateNetDev(void)
- {
-+#if defined(__NetBSD__)
-+	struct ifaddrs *ifap, *ifa;
-+
-+	if (getifaddrs(&ifap) != 0)
-+		return;
-+
-+	for (ifa = ifap; ifa; ifa=ifa->ifa_next) {
-+		if (ifa->ifa_flags & IFF_UP)
-+			;
+-	return counter;
++		/*fixme: guard against buffer overrun */
++		nv++;
 +	}
-+	freeifaddrs(ifap);
-+#else
- 	int name[6];
- 	int num_iface, i;
-@@ -209,4 +243,5 @@ void updateNetDev(void)
- 		}
- 	}
-+#endif
++	free(bfr);
++	return nv-newval;
  }
  
++
++
++
+ /* ------------------------------ public part --------------------------- */
+ 
+-void initNetDev(void)
+-{
+-	int i;
+-	char monitor[1024];
++static void prVal(const char*, int);
++void printNetDevRecv(const char *cmd) { prVal(cmd,0); }
++void printNetDevSent(const char *cmd) { prVal(cmd,1); }
++
++static void prInfo(const char*, int);
++void printNetDevRecvInfo(const char *cmd) { prInfo(cmd,0); }
++void printNetDevSentInfo(const char *cmd) { prInfo(cmd,1); }
++
++static struct {
++	char *label;
++	cmdExecutor read, inform;
++	struct {
++		char *label, *info;
++		int index;
++	} op[5];
++} opTable[] = {
++	{"receiver",
++	 printNetDevRecv, printNetDevRecvInfo,
++	 {{"data", "Received Data\t0\t0\tB/s\n", I_bytes},
++	  {"packets", "Received Packets\t0\t0\tHz\n", I_packs},
++	  {"errors", "Receiver Errors\t0\t0\tHz\n", I_errs},
++	  {"multicast", "Received Multicast Packets\t0\t0\tHz\n", I_mcasts},
++	  {"drops", "Receiver Drops\t0\t0\tHz\n", I_lost}}},
++	{"transmitter",
++	 printNetDevSent, printNetDevSentInfo,
++     {{"data", "Sent Data\t0\t0\tB/s\n", I_bytes},
++	  {"packets", "Sent Packets\t0\t0\tHz\n", I_packs},
++	  {"errors", "Transmitter Errors\t0\t0\tHz\n", I_errs},
++	  {"multicast", "Sent Multicast Packets\t0\t0\tHz\n", I_mcasts},
++	  {"collisions", "Transmitter Collisions\t0\t0\tHz\n", I_lost}}}
++};
++
++
++static void prVal(const char *cmd, int N) {
++	char *p, *q, *r;
++	int i, d;
+ 
+-	updateNetDev();
+-	
+-	for (i = 0; i < NetDevCnt; i++) {
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/data", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevRecBytes, printNetDevRecBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/packets", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevRecBytes, printNetDevRecBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/errors", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevRecBytes, printNetDevRecBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/drops", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevRecBytes, printNetDevRecBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/multicast", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevRecBytes, printNetDevRecBytesInfo);
+-
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/data", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevSentBytes, printNetDevSentBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/packets", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevSentBytes, printNetDevSentBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/errors", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevSentBytes, printNetDevSentBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/multicast", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevSentBytes, printNetDevSentBytesInfo);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/collisions", NetDevs[i].name);
+-		registerMonitor(monitor, "integer", printNetDevSentBytes, printNetDevSentBytesInfo);
+-	}
++	if (!(p=rindex(cmd, '/')))
++		return;
++	*p=0;
++	q=rindex(cmd, '/');
++	*q=0;
++	r=rindex(cmd, '/');
++	r++;
++	for (d=NetDevCnt; d--; )
++		if (!strcmp(r, NetDevs[d].name))
++			break;
++	*q=*p='/';
++
++	if (-1 == d) return;
++
++	p++;
++	for (i=0; i<LEN(opTable[0].op); i++)
++		if (!strcmp(p, opTable[N].op[i].label))
++			fprintf(CurrentClient, "%lu",
++			 /*fixme: ugly and presumptuous */
++			 (N?NetDevs[d].Dsent:NetDevs[d].Drecv)[opTable[N].op[i].index]);
++	fprintf(CurrentClient, "\n");
+ }
+ 
+-void exitNetDev(void)
+-{
++
++static void prInfo(const char *cmd, int N) {
++	char *p, *q;
+ 	int i;
+-	char monitor[1024];
+ 
+-	for (i = 0; i < NetDevCnt; i++) {
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/data", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/packets", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/errors", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/drops", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/receiver/multicast", NetDevs[i].name);
+-		removeMonitor(monitor);
+-
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/data", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/packets", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/errors", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/multicast", NetDevs[i].name);
+-		removeMonitor(monitor);
+-		snprintf(monitor, sizeof(monitor), "network/interfaces/%s/transmitter/collisions", NetDevs[i].name);
+-		removeMonitor(monitor);
+-	}
+-}
++	if (!(p=rindex(cmd, '/'))) return;
++	p++;
+ 
+-void updateNetDev(void)
+-{
+-	int name[6];
+-	int num_iface, i;
+-	size_t len;
+-	struct ifmibdata ifmd;
++	q = p+strlen(p)-1;
++	if ('?' != *q) return;
++	*q=0;
++
++	for (i=0; i<LEN(opTable[0].op); i++)
++		if (!strcmp(p, opTable[N].op[i].label))
++			fputs(opTable[N].op[i].info, CurrentClient);
+ 
+-	len = sizeof(num_iface);
+-	sysctlbyname("net.link.generic.system.ifcount", &num_iface, &len, NULL, 0);
+-
+-	NetDevCnt = 0;
+-	for (i = 1; i < num_iface + 1; i++) {
+-		name[0] = CTL_NET;
+-		name[1] = PF_LINK;
+-		name[2] = NETLINK_GENERIC;
+-		name[3] = IFMIB_IFDATA;
+-		name[4] = i;
+-		name[5] = IFDATA_GENERAL;
+-
+-		len = sizeof(ifmd);
+-		sysctl(name, 6, &ifmd, &len, NULL, 0);
+-		if (ifmd.ifmd_flags & IFF_UP) {
+-			strncpy(NetDevs[NetDevCnt].name, ifmd.ifmd_name, 32);
+-			NetDevs[NetDevCnt].recBytes = ifmd.ifmd_data.ifi_ibytes - NetDevs[NetDevCnt].recBytes;
+-			NetDevs[NetDevCnt].recPacks = ifmd.ifmd_data.ifi_ipackets - NetDevs[NetDevCnt].recPacks;
+-			NetDevs[NetDevCnt].recErrs = ifmd.ifmd_data.ifi_ierrors - NetDevs[NetDevCnt].recErrs;
+-			NetDevs[NetDevCnt].recDrop = ifmd.ifmd_data.ifi_iqdrops - NetDevs[NetDevCnt].recDrop;
+-			NetDevs[NetDevCnt].recMulticast = ifmd.ifmd_data.ifi_imcasts - NetDevs[NetDevCnt].recMulticast;
+-			NetDevs[NetDevCnt].sentBytes = ifmd.ifmd_data.ifi_obytes - NetDevs[NetDevCnt].sentBytes;
+-			NetDevs[NetDevCnt].sentPacks = ifmd.ifmd_data.ifi_opackets - NetDevs[NetDevCnt].sentPacks;
+-			NetDevs[NetDevCnt].sentErrs = ifmd.ifmd_data.ifi_oerrors - NetDevs[NetDevCnt].sentErrs;
+-			NetDevs[NetDevCnt].sentMulticast = ifmd.ifmd_data.ifi_omcasts - NetDevs[NetDevCnt].sentMulticast;
+-			NetDevs[NetDevCnt].sentColls = ifmd.ifmd_data.ifi_collisions - NetDevs[NetDevCnt].sentColls;
+-			NetDevCnt++;
+-		}
+-	}
++	*q='?';
+ }
+ 
+-void checkNetDev(void)
+-{
+-	if (numActivIfaces() != NetDevCnt) {
+-		/* interface has been added or removed
+-		   so we do a reset */
+-		exitNetDev();
+-		initNetDev();
+-	}
+-}
+ 
+-void printNetDevRecBytes(const char *cmd)
+-{
++static void NDreg(int setp) {
+ 	int i;
+-	char **retval;
+-	
+-	retval = parseCommand(cmd);
+-	
+-	if (retval[0] == NULL || retval[1] == NULL)
+-		return;
+ 
+-	for (i = 0; i < NetDevCnt; i++) {
+-		if (!strcmp(NetDevs[i].name, retval[0])) {
+-			if (!strncmp(retval[1], "data", 4))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].recBytes);
+-			if (!strncmp(retval[1], "packets", 7))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].recPacks);
+-			if (!strncmp(retval[1], "errors", 6))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].recErrs);
+-			if (!strncmp(retval[1], "drops", 5))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].recDrop);
+-			if (!strncmp(retval[1], "multicast", 9))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].recMulticast);
++	for (i = 0; i<NetDevCnt; i++) {
++		int j;
++
++		for (j=0; j<LEN(opTable); j++) {
++			int k;
++
++			for (k=0; k<LEN(opTable[0].op); k++) {
++				char buffer[1024];
++
++				snprintf(buffer, sizeof(buffer),
++				 "network/interfaces/%s/%s/%s",
++				 NetDevs[i].name,
++				 opTable[j].label,
++				 opTable[j].op[k].label);
++
++				/* printf("%d %d %d %s\n",i,j,k,buffer); */
++
++				if (setp)
++					registerMonitor(buffer,
++					 "integer",
++					 opTable[j].read,
++					 opTable[j].inform);
++				else
++					removeMonitor(buffer);
++			}
+ 		}
+ 	}
+-
+-	fprintf(CurrentClient, "\n");
+ }
+ 
+-void printNetDevRecBytesInfo(const char *cmd)
+-{
+-	char **retval;
+-	
+-	retval = parseCommand(cmd);
+-	
+-	if (retval[1] == NULL)
+-		return;
++void initNetDev(void) {
++	int i;
++	updateNetDev();
++	for (i=LEN(NetDevs); i--;)
++		strcpy(NetDevs[i].name, newval[i].name);
++	NDreg(!0);
++}
+ 
+-	if (!strncmp(retval[1], "data", 4))
+-		fprintf(CurrentClient, "Received Data\t0\t0\tkBytes/s\n");
+-	if (!strncmp(retval[1], "packets", 7))
+-		fprintf(CurrentClient, "Received Packets\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "errors", 6))
+-		fprintf(CurrentClient, "Receiver Errors\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "drops", 5))
+-		fprintf(CurrentClient, "Receiver Drops\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "multicast", 9))
+-		fprintf(CurrentClient, "Received Multicast Packets\t0\t0\t1/s\n");
++void exitNetDev(void) {
++	NDreg(0);
+ }
+ 
+-void printNetDevSentBytes(const char *cmd)
+-{
+-	int i;
+-	char **retval;
+-	
+-	retval = parseCommand(cmd);
+-	
+-	if (retval[0] == NULL || retval[1] == NULL)
++void updateNetDev(void) {
++	NetDevInfo *p, *q;
++	int n;
++
++	if (-1==(n = readSys(0)))
+ 		return;
+ 
+-	for (i = 0; i < NetDevCnt; i++) {
+-		if (!strcmp(NetDevs[i].name, retval[0])) {
+-			if (!strncmp(retval[1], "data", 4))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].sentBytes);
+-			if (!strncmp(retval[1], "packets", 7))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].sentPacks);
+-			if (!strncmp(retval[1], "errors", 6))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].sentErrs);
+-			if (!strncmp(retval[1], "multicast", 9))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].sentMulticast);
+-			if (!strncmp(retval[1], "collisions", 10))
+-				fprintf(CurrentClient, "%lu", NetDevs[i].sentColls);
++	NetDevCnt = n;
++	/*fixme: assumes the interfaces are in the same order each time */
++	for (p=NetDevs, q=newval; n--; p++, q++) {
++		int i;
++		/* calculate deltas */
++		for (i=0; i<5; i++) {
++			p->Drecv[i] = q->recv[i]-p->recv[i];
++			p->recv[i]  = q->recv[i];
++			p->Dsent[i] = q->sent[i]-p->sent[i];
++			p->sent[i]  = q->sent[i];
+ 		}
+ 	}
+-
+-	fprintf(CurrentClient, "\n");
+ }
+ 
+-void printNetDevSentBytesInfo(const char *cmd)
+-{
+-	char **retval;
+-	
+-	retval = parseCommand(cmd);
+-	
+-	if (retval[1] == NULL)
+-		return;
+ 
+-	if (!strncmp(retval[1], "data", 4))
+-		fprintf(CurrentClient, "Sent Data\t0\t0\tkBytes/s\n");
+-	if (!strncmp(retval[1], "packets", 7))
+-		fprintf(CurrentClient, "Sent Packets\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "errors", 6))
+-		fprintf(CurrentClient, "Transmitter Errors\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "multicast", 9))
+-		fprintf(CurrentClient, "Sent Multicast Packets\t0\t0\t1/s\n");
+-	if (!strncmp(retval[1], "collisions", 10))
+-		fprintf(CurrentClient, "Transmitter Collisions\t0\t0\t1/s\n");
++void checkNetDev(void) {
++	if (readSys(!0) != NetDevCnt) {
++		/* interface has been added or removed
++		   so we do a reset */
++		exitNetDev();
++		initNetDev();
++	}
+ }
++
++
++/* eof */
