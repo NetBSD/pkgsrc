@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.512 2002/11/13 15:26:41 wiz Exp $
+$NetBSD: CHANGES,v 1.513 2002/11/13 19:28:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3596,3 +3596,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mplayer to 0.90rc10 [wiz 2002-11-13]
 	Updated gmplayer to 0.90rc10 [wiz 2002-11-13]
 	Updated mencoder to 0.90rc10 [wiz 2002-11-13]
+	Updated ImageMagick to 5.5.1.6nb1 [wiz 2002-11-13]
+	Updated psiconv to 0.8.2nb4 [wiz 2002-11-13]
+	Updated wv to 0.7.2nb2 [wiz 2002-11-13]
+	Updated autotrace to 0.29nb2 [wiz 2002-11-13]
+	Updated make_album to 1.6nb3 [wiz 2002-11-13]
