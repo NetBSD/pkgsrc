@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:22:47 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 17:22:19 xtraeme Exp $
 #
 
 DISTNAME=	mad-0.15.0b
@@ -14,11 +14,11 @@ DEPENDS+=	libmad>=0.15.0:../../audio/libmad
 DEPENDS+=	libid3tag>=0.15.0:../../audio/libid3tag
 DEPENDS+=	madplay>=0.15.0:../../audio/madplay
 
-USE_BUILDLINK2=	YES
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+NO_BUILDLINK=	YES
 
 do-install:	# empty
 
