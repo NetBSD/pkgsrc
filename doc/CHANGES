@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3341 2003/09/12 13:56:27 tron Exp $
+$NetBSD: CHANGES,v 1.3342 2003/09/12 15:12:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3653,3 +3653,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.21 [seb 2003-09-12]
 	Updated fetchmail to 6.2.4nb1 [jlam 2003-09-12]
 	Updated pine to 4.58 [tron 2003-09-12]
+	Updated rconfig to 0.17nb1 [abs 2003-09-12]
+
