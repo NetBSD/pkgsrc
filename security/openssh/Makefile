@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/11/09 09:18:23 itojun Exp $
+# $NetBSD: Makefile,v 1.32 2000/12/08 08:52:35 wiz Exp $
 #
 
 DISTNAME=		openssh-2.3.0p1
@@ -90,9 +90,11 @@ post-build:
 			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
 	done
 
+pre-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
-	PKG_PREFIX=${PREFIX} ${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
