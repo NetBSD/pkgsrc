@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/23 23:27:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/28 00:09:21 dmcmahill Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -19,11 +19,10 @@ CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 
-CONFIGURE_ARGS+=	--with-qt-includes=${X11BASE}/include/qt1 \
-			--with-qt-libs=${X11BASE}/lib \
+CONFIGURE_ARGS+=	"--with-qt-dir=${X11BASE}/qt1" \
 
-tst:
-	echo ${INSTALL}
+CONFIGURE_ENV+=	"QTDIR=${X11BASE}/qt1"
+CONFIGURE_ENV+=	"MOC=${X11BASE}/qt1/bin/moc"
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin

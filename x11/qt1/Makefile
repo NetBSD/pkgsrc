@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/28 00:09:19 dmcmahill Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -32,26 +32,33 @@ pre-build:
 	cd ${WRKSRC} && ${PATCH} <${FILESDIR}/enablegif.patch
 .endif
 
+QTPREFIX=${PREFIX}/qt1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc1 ${PREFIX}/bin/moc1
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt1.la ${PREFIX}/lib/
-	${INSTALL_DATA_DIR} ${PREFIX}/include/qt1
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/qt1/
-	${INSTALL_MAN} ${WRKSRC}/man/man1/moc.1 ${PREFIX}/man/man1/moc1.1
+	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
+	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib/
+	${LN} -fs ${QTPREFIX}/lib/libqt.so.1.44 ${PREFIX}/lib/libqt.so.1.44
+	${INSTALL_DATA_DIR} ${QTPREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include/
+	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man1
+	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/moc.1 ${QTPREFIX}/man/man1/moc.1
 	@cd ${WRKSRC}/man/man3; PAGES="`ls -1 | ${SED} -e 's,\.3qt$$,,'`"; \
 	(for PAGE in $$PAGES; do \
-	    ${ECHO} installing ${PREFIX}/man/man3/$${PAGE}_1.3; \
+	    ${ECHO} installing ${QTPREFIX}/man/man3/$${PAGE}.3; \
 	    set - X `head -1 $${PAGE}.3qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
-		${RM} -f ${PREFIX}/man/man3/$${PAGE}_1.3 ;\
-		${LN} -s `basename $$3 | ${SED} s/\.3qt$$/_1\.3/` \
-		${PREFIX}/man/man3/$${PAGE}_1.3; \
+		${RM} -f ${QTPREFIX}/man/man3/$${PAGE}.3 ;\
+		${LN} -s `basename $$3 | ${SED} s/\.3qt$$/\.3/` \
+		${QTPREFIX}/man/man3/$${PAGE}.3; \
 	    else \
 		${INSTALL_MAN} $${PAGE}.3qt \
-		${PREFIX}/man/man3/$${PAGE}_1.3; \
+		${QTPREFIX}/man/man3/$${PAGE}.3; \
 	    fi; \
 	 done)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/qt1
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${PREFIX}/share/doc/qt1/
+	${INSTALL_DATA_DIR} ${QTPREFIX}/share/doc/qt
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${QTPREFIX}/share/doc/qt/
 
 .include "../../mk/bsd.pkg.mk"

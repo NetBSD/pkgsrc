@@ -1,10 +1,16 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2000/03/23 21:27:41 dmcmahill Exp $
+$NetBSD: MESSAGE,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
 
 Please note that this package is provided for those programs
 which will not work with newer versions of Qt.  To allow this
-package to coexist with newer versions of Qt the manual pages
-all have "_1" appended.  For example instead of 'man qwidget'
-you would use 'man qwidget_1' to get the Qt1 version of the
-manual page.  The header files have been installed in
-${PREFIX}/include/qt1 and the meta object compiler (moc) has
-been installed as "moc1".  
+package to coexist with newer versions of Qt, it has been installed
+in ${PREFIX}/qt1/{bin,include,lib,man}.
+
+You should be able to select this version of Qt when compiling
+programs which use it by ensuring that
+
+1) QTDIR is set to ${PREFIX}/qt1
+
+2) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt1"
+
+3) you may also have to put ${PREFIX}/qt1/bin in your PATH
+
