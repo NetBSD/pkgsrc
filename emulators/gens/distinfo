@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/08/22 11:37:28 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 18:49:18 agc Exp $
 
 SHA1 (gens-rc3.tar.gz) = 6057564665007686c9ea8df364be3220499f9917
+RMD160 (gens-rc3.tar.gz) = d2a36a5bdca8948b12624cba15dab0c5b527a688
 Size (gens-rc3.tar.gz) = 658729 bytes
 SHA1 (patch-aa) = e6a4768963e9da1799b80e775f0637eb07b2ca5c
 SHA1 (patch-ab) = dd38b7ebcbadc0a3881397916c2444d4a2ac2e35

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/11 17:23:15 kristerw Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 18:49:22 agc Exp $
 
 SHA1 (xm71010s.lzh) = 1afad6f530e05545505582d47bb0aa92965e6f71
+RMD160 (xm71010s.lzh) = df1d96fa997c39ab6bbd0c9d3953a90cfbfb9efa
 Size (xm71010s.lzh) = 273065 bytes
 SHA1 (patch-aa) = fbff0be72f42200299bd11dae215955860eceed5
 SHA1 (patch-ab) = 09529a433f5ae6ebf2dedee1d4c29bee27819f75

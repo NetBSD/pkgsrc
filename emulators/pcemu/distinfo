@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/09/16 17:16:18 minskim Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 18:49:19 agc Exp $
 
 SHA1 (pcemu1.01alpha.tar.gz) = 4c0cf9b3b197e890fbc85dc85ca0d7c75eb145b3
+RMD160 (pcemu1.01alpha.tar.gz) = 2eb3ba91138d08946728a6dc1dee6482416c3a01
 Size (pcemu1.01alpha.tar.gz) = 316257 bytes
 SHA1 (patch-aa) = f53e918695b8929688b375c1af6f003b02ffa4ca
 SHA1 (patch-ab) = 6636736f76b956a2beb6490785b63f4a131c9c25
