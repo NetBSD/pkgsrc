@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/16 08:21:51 salo Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/03/22 01:00:59 salo Exp $
 bin/ekg
-bin/ekgsearch
 include/libgadu-config.h
 include/libgadu.h
 lib/libgadu.a
 lib/pkgconfig/libgadu.pc
 man/man1/ekg.1
-man/man1/ekgsearch.1
 man/pl/man1/ekg.1
-man/pl/man1/ekgsearch.1
 share/ekg/themes/arim.theme
 share/ekg/themes/dj.theme
 share/ekg/themes/eileen.theme
@@ -17,6 +14,7 @@ share/ekg/themes/feeg.theme
 share/ekg/themes/irc.theme
 share/ekg/themes/jamzed.theme
 share/ekg/themes/klith.theme
+share/ekg/themes/krzyk.theme
 share/ekg/themes/lcamtuf.theme
 share/ekg/themes/leon.theme
 share/ekg/themes/matik.theme
