@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8220 2004/12/03 12:31:46 wiz Exp $
+$NetBSD: CHANGES,v 1.8221 2004/12/03 12:38:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5718,3 +5718,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hugo to 3.1.01 [dillo 2004-12-02]
 	Updated eggdrop to 1.6.17 [adam 2004-12-03]
 	Updated spamass-milter to 0.2.0 [wiz 2004-12-03]
+	Updated napshare to 1.3 [wiz 2004-12-03]
