@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.4 1999/09/24 16:42:06 jlam Exp $
-
 --- Makefile.orig	Sat Sep 11 08:49:18 1999
-+++ Makefile	Tue Sep 21 02:41:39 1999
-@@ -9,14 +9,33 @@
++++ Makefile	Tue Oct 26 10:48:45 1999
+@@ -9,8 +9,8 @@
  # cord/de - builds dumb editor based on cords.
  ABI_FLAG=
  CC=cc $(ABI_FLAG)
@@ -13,10 +11,10 @@ $NetBSD: patch-aa,v 1.4 1999/09/24 16:42:06 jlam Exp $
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
  #  Under Irix 6, you will have to specify the ABI (-o32, -n32, or -64)
- #  if you use something other than the default ABI on your machine.
+@@ -18,6 +18,25 @@
  
  CFLAGS= -O -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DALL_INTERIOR_POINTERS -DSILENT
-+
+ 
 +LEAKFLAGS=$(CFLAGS) -DFIND_LEAK
 +
 +BSD-pkg-all: bsd-libgc.a bsd-libleak.a
@@ -35,9 +33,19 @@ $NetBSD: patch-aa,v 1.4 1999/09/24 16:42:06 jlam Exp $
 +	${INSTALL_DATA} libleak.a libgc.a ${PREFIX}/lib
 +	${INSTALL_DATA} gc.h gc_cpp.h ${PREFIX}/include
 +	${INSTALL_MAN} gc.man ${PREFIX}/man/man3/gc.3
- 
++
  # For dynamic library builds, it may be necessary to add flags to generate
  # PIC code, e.g. -fPIC on Linux.
+ 
+@@ -163,7 +182,7 @@
+     threadlibs.c if_mach.c if_not_there.c gc_cpp.cc gc_cpp.h weakpointer.h \
+     gcc_support.c mips_ultrix_mach_dep.s include/gc_alloc.h gc_alloc.h \
+     include/new_gc_alloc.h include/javaxfc.h sparc_sunos4_mach_dep.s \
+-    solaris_threads.h backptr.h $(CORD_SRCS)
++    sparc_netbsd_mach_dep.s solaris_threads.h backptr.h $(CORD_SRCS)
+ 
+ OTHER_FILES= Makefile PCR-Makefile OS2_MAKEFILE NT_MAKEFILE BCC_MAKEFILE \
+            README test.c test_cpp.cc setjmp_t.c SMakefile.amiga \
 @@ -202,8 +221,6 @@
  # not time-critical anyway.
  # Set SPECIALCFLAGS to -q nodirect_code on Encore.
@@ -68,3 +76,11 @@ $NetBSD: patch-aa,v 1.4 1999/09/24 16:42:06 jlam Exp $
  	echo > c++
  
  dyn_load_sunos53.o: dyn_load.c
+@@ -302,6 +324,7 @@
+ 	./if_mach SPARC SUNOS5 $(AS) -o mach_dep.o $(srcdir)/sparc_mach_dep.s
+ 	./if_mach SPARC SUNOS4 $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
+ 	./if_mach SPARC OPENBSD $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
++	./if_mach SPARC NETBSD $(AS) -o mach_dep.o $(srcdir)/sparc_netbsd_mach_dep.s
+ 	./if_not_there mach_dep.o $(CC) -c $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
+ 
+ mark_rts.o: $(srcdir)/mark_rts.c if_mach if_not_there $(UTILS)
