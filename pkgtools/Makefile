@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/05/18 23:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/01 11:36:01 skrll Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -21,6 +21,6 @@ SUBDIR+=	port2pkg
 SUBDIR+=	python-mk
 SUBDIR+=	rpm2pkg
 SUBDIR+=	url2pkg
-#SUBDIR+=	xpkgwedge	# Experimental - turn on at your own risk!
+#SUBDIR+=	xpkgwedge	# Only under instruction of user
 
 .include "../mk/bsd.pkg.subdir.mk"
