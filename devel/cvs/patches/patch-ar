@@ -1,0 +1,72 @@
+$NetBSD: patch-ar,v 1.1 1999/04/20 15:01:12 mycroft Exp $
+
+--- src/server.c.orig	Thu Aug  6 20:46:38 1998
++++ src/server.c	Tue Apr 20 10:28:06 1999
+@@ -597,31 +597,34 @@
+        nothing.  But for rsh, we need to do it now.  */
+     parse_config (CVSroot_directory);
+ 
+-    path = xmalloc (strlen (CVSroot_directory)
+-		    + sizeof (CVSROOTADM)
+-		    + sizeof (CVSROOTADM_HISTORY)
+-		    + 10);
+-    (void) sprintf (path, "%s/%s", CVSroot_directory, CVSROOTADM);
+-    if (!isaccessible (path, R_OK | X_OK))
+-    {
+-	save_errno = errno;
+-	pending_error_text = malloc (80 + strlen (path));
+-	if (pending_error_text != NULL)
+-	    sprintf (pending_error_text, "E Cannot access %s", path);
+-	pending_error = save_errno;
+-    }
+-    (void) strcat (path, "/");
+-    (void) strcat (path, CVSROOTADM_HISTORY);
+-    if (isfile (path) && !isaccessible (path, R_OK | W_OK))
+-    {
+-	save_errno = errno;
+-	pending_error_text = malloc (80 + strlen (path));
+-	if (pending_error_text != NULL)
+-	    sprintf (pending_error_text, "E \
++    if (!nolock)
++    {
++	path = xmalloc (strlen (CVSroot_directory)
++			+ sizeof (CVSROOTADM)
++			+ sizeof (CVSROOTADM_HISTORY)
++			+ 10);
++	(void) sprintf (path, "%s/%s", CVSroot_directory, CVSROOTADM);
++	if (!isaccessible (path, R_OK | X_OK))
++	{
++	    save_errno = errno;
++	    pending_error_text = malloc (80 + strlen (path));
++	    if (pending_error_text != NULL)
++		sprintf (pending_error_text, "E Cannot access %s", path);
++	    pending_error = save_errno;
++	}
++	(void) strcat (path, "/");
++	(void) strcat (path, CVSROOTADM_HISTORY);
++	if (isfile (path) && !isaccessible (path, R_OK | W_OK))
++	{
++	    save_errno = errno;
++	    pending_error_text = malloc (80 + strlen (path));
++	    if (pending_error_text != NULL)
++		sprintf (pending_error_text, "E \
+ Sorry, you don't have read/write access to the history file %s", path);
+-	pending_error = save_errno;
++	    pending_error = save_errno;
++	}
++	free (path);
+     }
+-    free (path);
+ 
+ #ifdef HAVE_PUTENV
+     env = malloc (strlen (CVSROOT_ENV) + strlen (CVSroot_directory) + 1 + 1);
+@@ -1759,6 +1762,9 @@
+     {
+ 	case 'n':
+ 	    noexec = 1;
++	    break;
++	case 'u':
++	    nolock = 1;
+ 	    break;
+ 	case 'q':
+ 	    quiet = 1;
