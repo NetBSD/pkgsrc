@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5741 2004/04/26 07:11:46 fredb Exp $
+$NetBSD: CHANGES,v 1.5742 2004/04/26 10:22:37 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2246,3 +2246,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added perl-thread-5.8.4 as perl58-thread [jlam 2004-04-26]
 	Updated mit-krb5 to 1.3.3 [jlam 2004-04-26]
 	Updated squeak to 3.6.3 [fredb 2004-04-26]
+	Updated nvtv to 0.4.7 [cube 2004-04-26]
+	Updated nvtv-gtk2 to 0.4.7 [cube 2004-04-26]
