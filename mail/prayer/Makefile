@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/10 18:19:33 abs Exp $
 #
 
 DISTNAME=	prayer-1.0.8
@@ -10,7 +10,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
@@ -48,10 +48,10 @@ post-patch:
 	${FIND} ${WRKSRC} -name CVS -type d -print | ${SORT} -r | \
 		${XARGS} ${RM} -r
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../mail/imap-uw/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../mail/imap-uw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
