@@ -3,7 +3,7 @@
 # Date created:		28 December 1996
 # Whom:			sommerfeld@alum.mit.edu
 #
-# $NetBSD: Makefile,v 1.2 1998/03/18 00:17:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/18 00:19:39 hubertf Exp $
 #
 
 DISTNAME=	pilot-link.0.8.11
@@ -21,5 +21,8 @@ do-configure:
 	@(cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" CFLAGS="${CFLAGS}" \
 	    INSTALL="/usr/bin/install -c -o ${BINOWN} -g ${BINGRP}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+
+post-install:
+	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
