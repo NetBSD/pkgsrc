@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 1998/11/07 10:52:29 tron Exp $
+$NetBSD: patch-aa,v 1.7 1999/02/15 21:34:49 tron Exp $
 
---- configure.orig	Fri Jul 10 20:35:52 1998
-+++ configure	Fri Nov  6 23:54:56 1998
-@@ -511,9 +511,9 @@
+--- configure.orig	Sat Feb  6 18:49:38 1999
++++ configure	Sun Feb 14 10:01:32 1999
+@@ -516,9 +516,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.6 1998/11/07 10:52:29 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -3429,37 +3429,37 @@
- echo "configure:3430: checking for KDE paths" >&5
+@@ -3921,37 +3921,37 @@
+ echo "configure:3922: checking for KDE paths" >&5
  
    if test -z "$kde_htmldir"; then
 -    kde_htmldir="\$(prefix)/share/doc/HTML"
@@ -42,7 +42,8 @@ $NetBSD: patch-aa,v 1.6 1998/11/07 10:52:29 tron Exp $
 +    kde_locale="\$(prefix)/share/kde/locale"
    fi
    if test -z "$kde_cgidir"; then
-     kde_cgidir="\$(exec_prefix)/cgi-bin"
+-    kde_cgidir="\$(exec_prefix)/cgi-bin"
++    kde_cgidir="\$(libexecdir)/kde-cgi-bin"
    fi
    if test -z "$kde_confdir"; then
 -    kde_confdir="\$(prefix)/share/config"
@@ -62,34 +63,16 @@ $NetBSD: patch-aa,v 1.6 1998/11/07 10:52:29 tron Exp $
    fi
    if test -z "$kde_bindir"; then
      kde_bindir="\$(exec_prefix)/bin"
-@@ -3868,7 +3868,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lpam_misc -lpam -ldl $LIBS"
-+LIBS="-lpam_misc -lpam $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 3874 "configure"
- #include "confdefs.h"
-@@ -3988,7 +3988,7 @@
-  test "x$pam_libraries" = xNONE && pam_libraries=$ac_pam_libraries
-  
-  if test ! "x$pam_includes" = xNONE && test ! "x$pam_libraries" = xNONE; then
--   ac_pam_libs="-lpam $PAM_MISC_LIB -ldl"
-+   ac_pam_libs="-lpam $PAM_MISC_LIB"
-    ac_cv_path_pam="no_pam= ac_pam_includes=$ac_pam_includes ac_pam_libraries=$ac_pam_libraries ac_pam_libs=\"$ac_pam_libs\""
-  else
-    ac_cv_path_pam="no_pam=yes"
-@@ -4106,7 +4106,7 @@
+@@ -4730,7 +4730,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lpam -ldl $LIBS"
 +LIBS="-lpam $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 4112 "configure"
+ #line 4736 "configure"
  #include "confdefs.h"
-@@ -4130,7 +4130,7 @@
+@@ -4754,7 +4754,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
