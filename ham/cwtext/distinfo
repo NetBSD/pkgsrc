@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/19 15:16:04 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2005/02/22 21:06:06 agc Exp $
 
 SHA1 (cwtext-0.91.tar.gz) = 756e9acda2e5fee8f4be06bf3835dd04f83b216c
+RMD160 (cwtext-0.91.tar.gz) = abd0ae6d611997282df9a4f9c3793eb18af253dd
 Size (cwtext-0.91.tar.gz) = 11802 bytes

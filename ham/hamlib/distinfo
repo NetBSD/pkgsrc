@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/11/23 11:21:07 wulf Exp $
+$NetBSD: distinfo,v 1.6 2005/02/22 21:06:06 agc Exp $
 
 SHA1 (hamlib-1.2.3.tar.gz) = 2914df511ea560c2a607575f415039efb71b1826
+RMD160 (hamlib-1.2.3.tar.gz) = 0acddccb106198930466bf5d4e1ad809c6bdedfa
 Size (hamlib-1.2.3.tar.gz) = 1397172 bytes
 SHA1 (patch-ac) = e4e9497186d5d8803a0fdb9993ec8ef664836abc
 SHA1 (patch-ad) = d94a0b7eaed4130a9513431bbadb4274429ad313
