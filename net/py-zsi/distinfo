@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/01/10 14:37:13 recht Exp $
+$NetBSD: distinfo,v 1.3 2004/01/10 14:47:29 recht Exp $
 
-SHA1 (py23pth-ZSI-1.4.1/ZSI-1.4.1.tar.gz) = e5629c96b1818fec3f15c66d0c47048aedce2ffa
-Size (py23pth-ZSI-1.4.1/ZSI-1.4.1.tar.gz) = 376882 bytes
+SHA1 (py-ZSI/ZSI-1.4.1.tar.gz) = e5629c96b1818fec3f15c66d0c47048aedce2ffa
+Size (py-ZSI/ZSI-1.4.1.tar.gz) = 376882 bytes
 SHA1 (patch-aa) = 030157c727a75304c76691742a7d1813b925c4ab
