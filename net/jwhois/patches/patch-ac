@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2004/08/17 16:38:11 kleink Exp $
+$NetBSD: patch-ac,v 1.8 2004/11/30 10:37:56 kleink Exp $
 
---- example/jwhois.conf.orig	2004-08-17 18:35:14.000000000 +0200
-+++ example/jwhois.conf	2004-08-17 18:35:44.000000000 +0200
-@@ -55,7 +55,33 @@
+--- example/jwhois.conf.orig	2004-11-30 11:19:19.000000000 +0100
++++ example/jwhois.conf	2004-11-30 11:27:55.000000000 +0100
+@@ -55,7 +55,39 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
  	#
@@ -31,18 +31,28 @@ $NetBSD: patch-ac,v 1.7 2004/08/17 16:38:11 kleink Exp $
 +	"^2001:4[23][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
 +	"^2001:4[45][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
 +	"^2001:4[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[89][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:4[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	# ...
++	"^2001:5[A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	# ...
++	"^2001:[89A][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
 +
 +	#
 +	# Historical IPv6 catch-all
  	#
  	".*:.*" = "whois.6bone.net";
  
-@@ -371,6 +397,8 @@
+@@ -371,6 +403,12 @@
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
  	"82.0.0.0/8" = "whois.ripe.net";
 +	"83.0.0.0/8" = "whois.ripe.net";
 +	"84.0.0.0/8" = "whois.ripe.net";
++	"85.0.0.0/8" = "whois.ripe.net";
++	"86.0.0.0/8" = "whois.ripe.net";
++	"87.0.0.0/8" = "whois.ripe.net";
++	"88.0.0.0/8" = "whois.ripe.net";
  	"150.217.0.0/16" = "whois.ripe.net";
  	"151.3.0.0/16" = "whois.ripe.net";
  	"151.4.0.0/15" = "whois.ripe.net";
