@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3107 2003/08/26 15:12:28 adam Exp $
+$NetBSD: CHANGES,v 1.3108 2003/08/26 15:33:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3343,3 +3343,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added utilisp-1.13 [itojun 2003-08-26]
 	Updated unzip to 5.50nb2 [tron 2003-08-26]
 	Updated rocksndiamonds to 3.0.2 [adam 2003-08-26]
+	Updated mirrormagic to 2.0.2 [adam 2003-08-26]
+	Updated mirrormagic-sdl to 2.0.2 [adam 2003-08-26]
