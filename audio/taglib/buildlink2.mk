@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/02/09 00:30:24 chris Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/09 00:42:45 chris Exp $
 #
 # This Makefile fragment is included by packages that use taglib.
 #
@@ -10,7 +10,7 @@ TAGLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			taglib
 BUILDLINK_DEPENDS.taglib?=		taglib>=1.0
-BUILDLINK_PKGSRCDIR.taglib?=		../../audio/TagLib
+BUILDLINK_PKGSRCDIR.taglib?=		../../audio/taglib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.taglib=taglib
 BUILDLINK_PREFIX.taglib_DEFAULT=	${LOCALBASE}
