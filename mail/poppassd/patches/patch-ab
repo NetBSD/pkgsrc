@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
+$NetBSD: patch-ab,v 1.2 2002/05/02 16:16:56 martti Exp $
 
---- password/Makefile.in.orig	Mon May  7 10:00:48 2001
-+++ password/Makefile.in
+--- password/Makefile.in.orig	Fri Apr  5 04:38:33 2002
++++ password/Makefile.in	Thu May  2 14:22:07 2002
 @@ -30,7 +30,7 @@
  VPATH           =   @srcdir@
  prefix          =   @prefix@
@@ -15,8 +15,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
  all: ${poppassd}
  
  install:
--	${INSTALL} -m 4755 -o root -g root poppassd ${installdir}/poppassd; \
-+	@${INSTALL} -m 4755 -o root -g wheel poppassd ${installdir}/poppassd; \
+-	${INSTALL} -m 4755 -o root -g 0 poppassd ${installdir}/poppassd; \
++	${INSTALL} -m 4755 -o root -g wheel poppassd ${installdir}/poppassd; \
  	echo "Installed poppassd as ${installdir}/poppassd" 
  
  poppassd: ${OBJS} ${common_dir}/libcommon.a

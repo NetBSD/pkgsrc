@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 03:37:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/05/02 16:16:55 martti Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -7,14 +7,14 @@ CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
 
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		qpopper4.0.3-ipv6-20010504.diff.gz
+PATCHFILES=		qpopper4.0.4-ipv6-20020502.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://www.eudora.com/qpopper/
 COMMENT=		Qualcomm's password change server mainly for Eudora
 
-VERSION=		4.0.3
+VERSION=		4.0.4
 USE_BUILDLINK_ONLY=	# defined
 CONFIGURE_ARGS+=	--enable-poppassd
 CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
