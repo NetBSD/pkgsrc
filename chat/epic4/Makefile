@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/08 14:20:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:51:22 wiz Exp $
 #
 
 DISTNAME=	epic4-0.9.16
@@ -21,6 +21,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	zuntum@eik.pl
 HOMEPAGE=	http://www.epicsol.org/
+COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
 EXTRACT_ONLY=	epic4-0.9.16.tar.gz
 

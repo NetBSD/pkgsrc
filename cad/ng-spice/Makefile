@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:46:26 wiz Exp $
 #
 
 DISTNAME=	ng-spice-rework-13
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ieee.ing.uniroma1.it/pub/ng-spice/distribution/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://ieee.ing.uniroma1.it/ngspice/
+COMMENT=	Next generation circuit simulation program
 
 .if !exists(/usr/include/getopt.h)
 DEPENDS+=       libgetopt-*:../../devel/libgetopt
