@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/12/14 06:03:54 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2000/12/14 16:40:57 tsarna Exp $
 
---- host-netbsd.c.orig	Thu Dec 14 05:49:45 2000
-+++ host-netbsd.c
+--- kernel/host-netbsd.c.orig	Thu Dec 14 05:49:45 2000
++++ kernel/host-netbsd.c
 @@ -25,7 +25,7 @@
  
  #undef NETBSD_PLEX86_DEBUG
