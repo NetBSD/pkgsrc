@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1999/07/08 17:30:00 itojun Exp $
+
 --- configure.in.orig	Wed Jul  7 07:44:35 1999
 +++ configure.in	Thu Jul  8 09:34:44 1999
 @@ -93,8 +93,6 @@
