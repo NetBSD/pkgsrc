@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2000/12/18 23:19:19 tsarna Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/10 18:35:52 tron Exp $
 #
 
     SUBDIR += binkd
+    SUBDIR += estic
     SUBDIR += fidogate
     SUBDIR += gkermit
     SUBDIR += hylafax
