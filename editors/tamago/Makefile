@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/11/23 16:56:02 taca Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/22 16:16:07 taca Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	tamago-20020909
@@ -12,6 +12,7 @@ COMMENT=	CJK characters inputting system for emacs + leim
 GNU_CONFIGURE=	yes
 # XXX please someone adjust paths and PLIST for XEmacs...
 EMACS_VERSIONS_ACCEPTED= emacs21 emacs20
+EMACS_USE_LEIM=	# defined
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
