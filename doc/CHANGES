@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1274 2003/01/29 12:22:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.1275 2003/01/29 12:28:46 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -474,3 +474,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jre14 to 1.0.1 [jlam 2003-01-29]
 	Updated sun-jdk14 to 1.0.1 [jlam 2003-01-29]
 	Updated gftp to 2.0.8nb2 [jmmv 2003-01-29]
+	Updated gtk2-pan to 0.13.3nb1 [jmmv 2003-01-29]
