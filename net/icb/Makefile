@@ -3,7 +3,7 @@
 # Date created:		18 March 1998
 # Whom:			cjs
 #
-# $NetBSD: Makefile,v 1.2 1998/03/19 11:46:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/20 00:09:18 tv Exp $
 #
 
 DISTNAME=		icb-5.0.5
@@ -12,12 +12,15 @@ MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
 MAINTAINER=		cjs@netbsd.org
 
+do-configure:
+	@cd ${WRKSRC}; \
+	${SED} -e s,@PREFIX@,${PREFIX},g ${FILESDIR}/config >${WRKSRC}/config
+
 do-install:
-	pwd
 	${INSTALL_PROGRAM} ${WRKSRC}/icb/icb ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/icbserverdb ${PREFIX}/libdata
+	${INSTALL_SCRIPT} ${WRKSRC}/icbserverdb ${PREFIX}/libdata
 	${INSTALL} -d ${PREFIX}/libdata/icb
-	${INSTALL_PROGRAM} ${WRKSRC}/sample.icbrc \
+	${INSTALL_SCRIPT} ${WRKSRC}/sample.icbrc \
 		${WRKSRC}/contrib/bartender \
 		${WRKSRC}/contrib/confuse \
 		${WRKSRC}/contrib/echofile \
