@@ -1,30 +1,70 @@
-$NetBSD: patch-ad,v 1.7 2001/05/03 13:22:50 skrll Exp $
+$NetBSD: patch-ad,v 1.8 2001/08/23 00:07:18 abs Exp $
 
---- configure.orig	Mon Mar 20 18:20:42 2000
-+++ configure	Thu May  3 14:15:41 2001
-@@ -486,7 +486,7 @@
+--- libtiff/Makefile.in.orig	Sun Nov 28 20:15:36 1999
++++ libtiff/Makefile.in
+@@ -35,12 +35,18 @@
+ #
+ SHELL	= @SCRIPT_SH@
+ NULL	=
+-CC	= @CCOMPILER@
++CCOMPILER = @CCOMPILER@
++CC	= ${LIBTOOL} ${CCOMPILER}
+ AR	= @AR@
+ AROPTS	= @AROPTS@
+ RANLIB	= @RANLIB@
+ INSTALL	= @INSTALL@
  
- checkCompiler()
- {
--    compiler=$1
-+    compiler="$*"
-     if isGNU $compiler; then
- 	ISGCC=yes
-     else
-@@ -512,7 +512,7 @@
-     $RM dummy dummy.o
-     capture $compiler -o dummy ${C_ANSI} dummy.c && {
- 	CC=$compiler;
--	test -z "${CCOMPILER-}" && CCOMPILER=`findApp $compiler $PATH`
-+	test -z "${CCOMPILER-}" && CCOMPILER=$compiler
- 	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
- 	return 0
-     }
-@@ -1661,6 +1661,7 @@
- 	    -[LR]/*)	echo "$i" ;;
- 	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
- 	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
-+	    -W*)	echo "$i" ;;
- 	    *)		echo "../$i" ;;
- 	    esac
- 	done) | tr '\012' ' '
++LIBJPEG = @LIBJPEG@
++LIBGZ = @LIBGZ@
++LIBPORT = @LIBPORT@
++MACHLIBS = @MACHDEPLIBS@
++
+ #
+ # If JPEG support is to be included and the Independent JPEG
+ # Software distribution is not installed then DIR_JPEG must
+@@ -135,7 +141,7 @@
+ 	tif_write.o \
+ 	tif_zip.o \
+ 	${NULL}
+-TARGETS	= libtiff.a
++TARGETS	= libtiff.la
+ 
+ all:	${TARGETS}
+ 	if [ @DSO@dso != nodso ]; then \
+@@ -144,9 +150,10 @@
+ 	    true; \
+ 	fi
+ 
+-libtiff.a: ${OBJS}
+-	${AR} ${AROPTS} libtiff.a $?
+-	${RANLIB} libtiff.a
++libtiff.la: ${OBJS}
++	${CC} -o $@ ${OBJS:.o=.lo} -rpath @DIR_LIB@			\
++		-version-info @DIST_MAJOR@:@DIST_MINOR@			\
++		${LIBJPEG} ${LIBGZ} ${LIBPORT} ${MACHLIBS}
+ 
+ #
+ # NB: The configure script verifies that the configured
+@@ -249,8 +256,13 @@
+ 	${CC} -c ${CFLAGS} ${SRCDIR}/tif_dir.c
+ tif_dirinfo.o: ${SRCDIR}/tif_dirinfo.c
+ 	${CC} -c ${CFLAGS} ${SRCDIR}/tif_dirinfo.c
++.if (${MACHINE_ARCH} == "sparc64")
++tif_dirread.o: ${SRCDIR}/tif_dirread.c
++	${CC} -c ${CFLAGS} -O0 ${SRCDIR}/tif_dirread.c
++.else
+ tif_dirread.o: ${SRCDIR}/tif_dirread.c
+ 	${CC} -c ${CFLAGS} ${SRCDIR}/tif_dirread.c
++.endif
+ tif_dirwrite.o: ${SRCDIR}/tif_dirwrite.c
+ 	${CC} -c ${CFLAGS} ${SRCDIR}/tif_dirwrite.c
+ tif_dumpmode.o: ${SRCDIR}/tif_dumpmode.c
+@@ -334,7 +346,7 @@
+ 	fi
+ install: all installHdrs
+ 	${INSTALL} -idb tiff.sw.dev -m 755 -dir @DIR_LIB@
+-	${INSTALL} -idb tiff.sw.dev -m 444 -F @DIR_LIB@ -O libtiff.a
++	${LIBTOOL} ${BSD_INSTALL_DATA} libtiff.la @DIR_LIB@
+ 	if [ @DSO@dso != nodso ]; then					\
+ 	    ${MAKE} installDSO;						\
+ 	else								\

@@ -1,22 +1,24 @@
-$NetBSD: patch-ae,v 1.4 2000/04/01 00:05:29 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2001/08/23 00:07:18 abs Exp $
 
---- html/Makefile.in.orig	Mon Mar 27 19:05:55 2000
-+++ html/Makefile.in	Fri Mar 31 23:47:24 2000
-@@ -76,8 +76,6 @@
- 	v3.5.1.html		\
- 	v3.5.2.html		\
- 	v3.5.3.html		\
--	v3.5.4.html		\
--	v3.5.5.html		\
- 	${NULL}
- IMAGES=\
- 	images/back.gif		\
-@@ -85,6 +83,8 @@
- 	images/cat.gif		\
- 	images/cover.jpg	\
- 	images/cramps.gif	\
-+	images/dave.gif		\
-+	images/info.gif		\
- 	images/jello.jpg	\
- 	images/jim.gif		\
- 	images/note.gif		\
+--- man/Makefile.in.orig	Tue Aug 21 08:44:42 2001
++++ man/Makefile.in
+@@ -336,8 +336,7 @@
+ 	 ${ECHO} 'install:';						\
+ 	 for i in *.1; do						\
+ 	    f=${MANAPPNAME};						\
+-	    ${ECHO} '	cd ..; ${INSTALL} -m 444 -F ${MAN}/${MANAPPS}	\
+-		-idb tiff.man.tools -src' apps/"$$i" '-O' "$$f";	\
++	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANAPPS}/$$f;	\
+ 	 done								\
+ 	)>apps/Makefile
+ lib/Makefile:
+@@ -348,8 +347,7 @@
+ 	 ${ECHO} 'install:';						\
+ 	 for i in *.3t; do						\
+ 	    f=${MANLIBNAME};						\
+-	    ${ECHO} '	cd ..; ${INSTALL} -m 444 -F ${MAN}/${MANLIB}	\
+-		-idb tiff.man.dev -src' lib/"$$i" '-O' "$$f";		\
++	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANLIB}/$$f;	\
+ 	 done								\
+ 	)>lib/Makefile
+ 
