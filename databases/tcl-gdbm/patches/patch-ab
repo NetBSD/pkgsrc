@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/09/05 15:01:29 jwise Exp $
---- configure.orig	Tue Sep  5 10:18:57 2000
-+++ configure	Tue Sep  5 10:19:11 2000
+$NetBSD: patch-ab,v 1.4 2001/03/05 12:35:33 skrll Exp $
+
+--- configure.orig	Thu Jun  8 20:35:03 2000
++++ configure
 @@ -1750,20 +1750,6 @@
  
  
