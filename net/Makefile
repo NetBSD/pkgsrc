@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 1999/09/22 21:16:42 kim Exp $
+# $NetBSD: Makefile,v 1.84 1999/10/05 14:18:31 kim Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -50,7 +50,8 @@
     SUBDIR += ircu
 #    SUBDIR += isc-dhcp
 #    SUBDIR += ivs
-   SUBDIR += kdenetwork
+    SUBDIR += jwhois
+    SUBDIR += kdenetwork
 #    SUBDIR += ldap
     SUBDIR += libpcap
 #    SUBDIR += libsocket++
