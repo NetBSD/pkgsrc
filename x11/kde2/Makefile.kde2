@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.kde2,v 1.1 2001/11/13 21:08:56 jlam Exp $
+# $NetBSD: Makefile.kde2,v 1.2 2001/12/02 18:55:11 jlam Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
-# those packages that use the recommended KDE2 configure and build
-# infrastructure.
+# KDE2-distributed packages (they all share common configure and build
+# settings).
 
 CATEGORIES+=	kde
 _KDE_VERSION=	2.2.1
