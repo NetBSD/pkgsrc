@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1012 2003/11/10 11:34:40 recht Exp $
+$NetBSD: TODO,v 1.1013 2003/11/10 12:04:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -136,7 +136,7 @@ Suggested package updates
 	o arch-1.1pre8
 	o aspell-0.50.4.1 [recht]
 	o atari800-1.3.1
-	o autoconf-2.58
+	o autoconf-2.58 [wiz]
 	o autogen-5.5.6
 	o avidemux-2.0.18
 	o avifile-devel-0.7.34-20030319
@@ -165,12 +165,13 @@ Suggested package updates
 	o cvs-1.11.9
 	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
+	o cxunzip-0.98 [pkg/23404]
 	o dante-1.1.14
 	o dctc-0.85.6
+	o disc-cover-1.5.3
 	o distcc-2.11.2
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
-	o dosbox-0.60
 	o dvipng-0.7
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
@@ -200,6 +201,7 @@ Suggested package updates
 	o gentoo-0.11.40
 	o gettext-0.12.1
 	o gforth-0.6.2
+	o gftp-2.0.16
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.21 [pkgsrc-wip]
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
@@ -215,6 +217,7 @@ Suggested package updates
 	o gnustep-0.9.0
 	o gnutls-0.8.12
 	o gpa-0.7.0
+	o gperiodic-2.0.7
 	o grace-5.1.12
 	o grepmail-5.21
 	o gsed-4.0.8 [seb]
