@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/12/10 22:38:41 heinz Exp $
+$NetBSD: distinfo,v 1.8 2004/01/18 22:36:52 heinz Exp $
 
-SHA1 (Net-DNS-0.42.tar.gz) = 048d9f969344de14e60e1d1c9f98e1b3e389ddae
-Size (Net-DNS-0.42.tar.gz) = 89794 bytes
-SHA1 (patch-aa) = 5c561f0db944452a6221b9befb1d19097cc6e497
+SHA1 (Net-DNS-0.45.tar.gz) = f23d8fb8e555c8055bd2a55927b65a68a21d6045
+Size (Net-DNS-0.45.tar.gz) = 94503 bytes
