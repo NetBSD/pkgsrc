@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD: /repoman/r/pcvs/ports/net/dtcp/files/dtcps.sh,v 1.1 2004/04/19 18:40:52 ume Exp $
-# $NetBSD: dtcps.sh,v 1.1.1.1 2004/06/05 07:43:25 hamajima Exp $
+# $NetBSD: dtcps.sh,v 1.2 2004/06/22 16:08:27 hamajima Exp $
 #
 
 # PROVIDE: dtcps
@@ -22,7 +22,7 @@ prefix=@PREFIX@
 #
 # DO NOT CHANGE THESE DEFAULT VALUES HERE
 #
-dtcps_enable=${dtcps_enable:-"NO"}		# Enable dtcps
+#dtcps=${dtcps:-"NO"}				# Enable dtcps
 #dtcps_program="${prefix}/sbin/dtcps"		# Location of dtcps
 dtcps_tunif=${dtcps_tunif:-""}			# tunnel interface
 dtcps_prefix=${dtcps_prefix:-""}		# prefix for host tunnel type
@@ -60,5 +60,5 @@ dtcps_prestart() {
 }
 
 load_rc_config $name
-command_args="-i ${dtcps_tunif} ${dtcps_flags} ${dtcps_prefix}"
+command_args="-i ${dtcps_tunif} ${dtcps_prefix}"
 run_rc_command "$1"
