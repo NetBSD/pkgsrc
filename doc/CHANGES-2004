@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.6 2005/03/26 10:04:46 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.7 2005/03/27 17:11:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6140,7 +6140,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Set-Scalar to 1.17nb1 [grant 2004-12-20]
 	Updated p5-SortVersions to 1.1nb1 [grant 2004-12-20]
 	Updated p5-Storable to 2.12nb1 [grant 2004-12-20]
-	Updated p5-Term-ProgressBar to r1nb1 [grant 2004-12-20]
+	Updated p5-Term-ProgressBar to 2.06r1nb1 [grant 2004-12-20]
 	Updated p5-Term-ReadKey to 2.21nb1 [grant 2004-12-20]
 	Updated p5-Term-ReadLine to 1.14nb2 [grant 2004-12-20]
 	Updated p5-Test-Builder-Tester to 1.01nb1 [grant 2004-12-20]
