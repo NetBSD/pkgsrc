@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2004/06/28 01:12:09 kristerw Exp $
+
+--- panel-plugin/xfce4-xkb-plugin.c.orig	Mon Jun 28 02:48:38 2004
++++ panel-plugin/xfce4-xkb-plugin.c	Mon Jun 28 02:50:08 2004
+@@ -87,7 +87,7 @@
+   
+   xkb_refresh_gui(xkb);
+ 
+-  char *initial_group = initialize_xkb(xkb);
++  initialize_xkb(xkb);
+ 
+   channel = g_io_channel_unix_new(get_connection_number());
+   source_id = g_io_add_watch(channel, G_IO_IN | G_IO_PRI, (GIOFunc) &gio_callback, (gpointer) xkb);
+@@ -113,10 +113,9 @@
+ }
+ 
+ static void xkb_free(Control *ctrl) {
++  t_xkb *xkb;
+   g_source_remove(source_id);
+   deinitialize_xkb();
+-
+-  t_xkb *xkb;
+ 
+   g_return_if_fail(ctrl != NULL);
+   g_return_if_fail(ctrl->data != NULL);
