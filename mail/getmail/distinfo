@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2003/10/29 11:55:27 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2004/03/29 08:16:38 snj Exp $
 
-SHA1 (getmail-3.2.1.tar.gz) = 6b5c55ed627c021f3d2764e64d41eb5c1f5d3134
-Size (getmail-3.2.1.tar.gz) = 67905 bytes
+SHA1 (getmail-3.2.2.tar.gz) = 16eaebf5641636a838a69771bcea7c5e11cb832b
+Size (getmail-3.2.2.tar.gz) = 69026 bytes
