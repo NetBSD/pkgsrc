@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2001/09/27 23:18:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2002/07/25 10:49:46 wiz Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
 
-FILESDIR=		${.CURDIR}/../../sysutils/mc/files
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/mc/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
 USE_GMAKE=		yes
