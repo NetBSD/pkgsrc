@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.1 2004/04/26 07:10:16 fredb Exp $
+
+--- platforms/unix/vm-sound-Sun/acinclude.m4	2003-02-09 10:35:06.000000000 -0600
++++ platforms/unix/vm-sound-Sun/acinclude.m4	2003-09-15 15:15:42.000000000 -0500
+@@ -3,11 +3,12 @@
+ AC_MSG_CHECKING([for SunOS/Solaris audio])
+ AC_TRY_COMPILE([#include <sys/audioio.h>],[AUDIO_SUNVTS;],[
+   AC_MSG_RESULT(yes)
+-  AC_DEFINE_UNQUOTED(HAVE_SYS_AUDIOIO_H,1)
++  AC_DEFINE_UNQUOTED(USE_SUN_AUDIO,1)
+ ],[
+   AC_TRY_COMPILE([#include <sun/audioio.h>],[AUDIO_SUNVTS;],[
+     AC_MSG_RESULT(yes)
+     AC_DEFINE_UNQUOTED(HAVE_SUN_AUDIOIO_H,1)
++    AC_DEFINE_UNQUOTED(USE_SUN_AUDIO,1)
+   ],[
+     AC_MSG_RESULT(no)
+     AC_PLUGIN_DISABLE
