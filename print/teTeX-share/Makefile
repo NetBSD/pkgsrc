@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/31 03:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/02/23 05:06:47 kei Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
+
+CONFLICTS+=	teTeX2-share-[2-9]*
 
 DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}
