@@ -1,3 +1,5 @@
-$NetBSD: md5,v 1.1.1.1 2000/12/27 16:53:09 hubertf Exp $
+$NetBSD: md5,v 1.2 2000/12/30 11:43:07 hubertf Exp $
 
-MD5 (epic4-0.9.9.tar.gz) = 68cdbb25a98c2f8b84a14ee20e083284
+MD5 (epic4-0.9.15.tar.gz) = 35b4d90cae95e3f9c0bd6146d7e68876
+MD5 (epic4pre2-help.tar.gz) = 176f77c1e372fc3ca184eca951cb86f5
+MD5 (epic4-0.9.15-ipv6-netbsd-20001230.patch.bz2) = c91cc3788bf00be5c711ed2aa23a1cf3
