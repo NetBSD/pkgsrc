@@ -1,24 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2003/09/11 12:40:24 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2004/03/11 14:01:34 jmmv Exp $
 
-gtksourceview-0.6.0 (the one in pkgsrc) is not compatible with this version
-of libgnomedb.
-
---- configure.orig	2003-09-11 01:02:05.000000000 +0200
-+++ configure
-@@ -21026,6 +21026,7 @@ fi
- 
- 
- 
-+if false; then
-   succeeded=no
- 
-   if test -z "$PKG_CONFIG"; then
-@@ -21120,6 +21121,8 @@ echo "${ECHO_T}$GTKSOURCEVIEW_LIBS" >&6
-   else
-      have_gtksourceview=no
-   fi
-+fi
-+have_gtksourceview=no
- 
- 
- 
+--- control-center/database-properties.desktop.in.orig	2003-01-10 03:47:56.000000000 +0100
++++ control-center/database-properties.desktop.in
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ _Name=Database configuration
+ _Comment=Configure your database environment
+-Icon=gnome-db.png
++Icon=libgnomedb/gnome-db.png
+ Exec=gnome-database-properties
+ Terminal=0
+ Type=Application
