@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2003/12/12 19:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.442 2003/12/17 06:26:32 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -271,6 +271,7 @@ SUBDIR+=	p5-Event
 SUBDIR+=	p5-Exception-Class
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
+SUBDIR+=	p5-File-DirSync
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Spec
