@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/12 11:56:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/28 15:19:11 jlam Exp $
 
 DISTNAME=	neXtaw-0.12
 CATEGORIES=	x11
@@ -7,7 +7,8 @@ MASTER_SITES=	http://siag.nu/pub/neXtaw/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11BASE=		# defined
 GNU_CONFIGURE=		# defined
 
 USE_LIBTOOL=		# defined
@@ -20,10 +21,10 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 GCC_VERSION!=           gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
+.  if (${GCC_VERSION:C/-.*$$//} == egcs)
 # "egcs" cannot be used, as this package tickles c++ compiler bugs
-.  include "../../lang/gcc/Makefile.gcc"
-.endif
+.    include "../../lang/gcc/Makefile.gcc"
+.  endif
 .endif
 
 post-install:
@@ -36,5 +37,4 @@ post-install:
 		${INSTALL_DATA} $${file} ${EGDIR};			\
 	done
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
