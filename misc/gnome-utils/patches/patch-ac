@@ -1,27 +1,155 @@
-$NetBSD: patch-ac,v 1.3 2001/04/07 20:52:45 rh Exp $
+$NetBSD: patch-ac,v 1.4 2001/10/13 08:30:25 rh Exp $
 
---- configure.in.orig	Tue Mar 13 03:16:11 2001
-+++ configure.in
-@@ -114,21 +114,7 @@
- dnl ******************** 
- dnl gfloppy
- dnl ********************
--build_gfloppy=true
--AC_CHECK_HEADER(linux/fd.h, AC_DEFINE(HAVE_LINUX_FD_H),
--		build_gfloppy=false
--                AC_MSG_WARN([*** gfloppy will not be built.]))
--# Check for the ext2fs library
--AC_CHECK_LIB(ext2fs, ext2fs_mkdir, x_libs="-lext2fs",
--  build_gfloppy=false
--  AC_MSG_WARN([
--*** libext2fs not found. You need e2fsprogs and e2fsprogs-devel installed to build gfloppy.]))
--# check for ext2fs header specific includes
--AC_CHECK_HEADER(ext2fs/ext2_io.h, ,
--  build_gfloppy=false
--  AC_MSG_WARN([
--*** ext2fs/ext2_io.h not found.  You need e2fsprogs-devel installed.]))
--AM_CONDITIONAL(BUILD_GFLOPPY, test "$build_gfloppy" = true)
-+AM_CONDITIONAL(BUILD_GFLOPPY, 0)
+--- configure.orig	Fri Oct  5 07:22:36 2001
++++ configure
+@@ -5223,13 +5223,13 @@
+ if { (eval echo configure:5224: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+   CATOBJEXT=.gmo
+-		   DATADIRNAME=share
++		   DATADIRNAME=${LOCALEDIR}
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=${LOCALEDIR}
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -5458,7 +5458,7 @@
+       # We need to process the po/ directory.
+       POSUB=po
+     else
+-      DATADIRNAME=share
++      DATADIRNAME=${LOCALEDIR}
+       nls_cv_header_intl=intl/libintl.h
+       nls_cv_header_libgt=intl/libgettext.h
+     fi
+@@ -6468,125 +6468,8 @@
+ fi
  
- dnl ********************
- dnl logview
+ 
+-build_gfloppy=true
+-ac_safe=`echo "linux/fd.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for linux/fd.h""... $ac_c" 1>&6
+-echo "configure:6475: checking for linux/fd.h" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 6480 "configure"
+-#include "confdefs.h"
+-#include <linux/fd.h>
+-EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:6485: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+-if test -z "$ac_err"; then
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=yes"
+-else
+-  echo "$ac_err" >&5
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=no"
+-fi
+-rm -f conftest*
+-fi
+-if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  cat >> confdefs.h <<\EOF
+-#define HAVE_LINUX_FD_H 1
+-EOF
+-
+-else
+-  echo "$ac_t""no" 1>&6
+-build_gfloppy=false
+-                echo "configure: warning: *** gfloppy will not be built." 1>&2
+-fi
+-
+-# Check for the ext2fs library
+-echo $ac_n "checking for ext2fs_mkdir in -lext2fs""... $ac_c" 1>&6
+-echo "configure:6513: checking for ext2fs_mkdir in -lext2fs" >&5
+-ac_lib_var=`echo ext2fs'_'ext2fs_mkdir | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lext2fs  $LIBS"
+-cat > conftest.$ac_ext <<EOF
+-#line 6521 "configure"
+-#include "confdefs.h"
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-/* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char ext2fs_mkdir();
+-
+-int main() {
+-ext2fs_mkdir()
+-; return 0; }
+-EOF
+-if { (eval echo configure:6532: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
+-fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+-
+-fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  x_libs="-lext2fs"
+-else
+-  echo "$ac_t""no" 1>&6
+ build_gfloppy=false
+-  echo "configure: warning: 
+-*** libext2fs not found. You need e2fsprogs and e2fsprogs-devel installed to build gfloppy." 1>&2
+-fi
+ 
+-# check for ext2fs header specific includes
+-ac_safe=`echo "ext2fs/ext2_io.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for ext2fs/ext2_io.h""... $ac_c" 1>&6
+-echo "configure:6558: checking for ext2fs/ext2_io.h" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 6563 "configure"
+-#include "confdefs.h"
+-#include <ext2fs/ext2_io.h>
+-EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:6568: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+-if test -z "$ac_err"; then
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=yes"
+-else
+-  echo "$ac_err" >&5
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=no"
+-fi
+-rm -f conftest*
+-fi
+-if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  :
+-else
+-  echo "$ac_t""no" 1>&6
+-build_gfloppy=false
+-  echo "configure: warning: 
+-*** ext2fs/ext2_io.h not found.  You need e2fsprogs-devel installed." 1>&2
+-fi
+ 
+ 
+ 

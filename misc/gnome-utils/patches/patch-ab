@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2000/09/03 11:15:45 wiz Exp $
---- mini-utils/guname/Makefile.in.orig	Fri May 19 23:25:05 2000
-+++ mini-utils/guname/Makefile.in	Thu Jun  1 17:36:51 2000
-@@ -487,7 +487,7 @@
- maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+$NetBSD: patch-ab,v 1.4 2001/10/13 08:30:25 rh Exp $
+
+--- mini-utils/guname/Makefile.in.orig	Fri Oct  5 20:39:48 2001
++++ mini-utils/guname/Makefile.in
+@@ -573,7 +573,7 @@
  
+ @XML_I18N_MERGE_DESKTOP_RULE@
  
--@GUNAME_CAPPLET_TRUE@install-data-local:
-+install-data-local:
+-@GUNAME_CAPPLET_TRUE@install-data-local: guname-capplet.desktop
++install-data-local: guname-capplet.desktop
  @GUNAME_CAPPLET_TRUE@	$(INSTALL_DATA) $(srcdir)/guname-capplet.desktop $(DESTDIR)$(datadir)/control-center/guname-capplet.desktop
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
