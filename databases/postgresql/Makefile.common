@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2001/09/07 08:49:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2001/10/06 21:41:30 veego Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -13,11 +13,11 @@ DISTNAME=		postgresql-${PG_DIST_VERS}
 CATEGORIES+=		databases
 MASTER_SITES=		http://www.postgresql.org/ftpsite/v${PG_DIST_VERS}/ \
 			ftp://ftp.PostgreSQL.org/pub/v${PG_DIST_VERS}/ \
-			ftp://ftp.de.postgresql.org/v${PG_DIST_VERS}/ \
-			ftp://ch.postgresql.org/mirror/postgresql/pub/v${PG_DIST_VERS}/ \
+			ftp://ftp.de.postgresql.org/pub/v${PG_DIST_VERS}/ \
+			ftp://ch.postgresql.org/mirror/postgresql/v${PG_DIST_VERS}/ \
 			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v${PG_DIST_VERS}/ \
 			ftp://looking-glass.usask.ca/pub/postgresql/v${PG_DIST_VERS}/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v${PG_DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/v${PG_DIST_VERS}/ \
 			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v${PG_DIST_VERS}/
 
 MAINTAINER=		jlam@netbsd.org
