@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/04/27 13:32:01 zuntum Exp $
+
+Don't forget to add "ZAxisMapping 4 5" to the Pointer Section
+of your XF86Config file!
+
+======================================================================
