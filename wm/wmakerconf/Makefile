@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:54 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/25 23:25:21 minskim Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
@@ -29,10 +29,10 @@ pre-configure:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/data/WMWmakerconf.in \
 		> ${WRKSRC}/data/WMWmakerconf
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libproplist/buildlink2.mk"
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../wm/windowmaker/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libproplist/buildlink3.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../wm/windowmaker/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
