@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.20 2000/01/26 15:25:26 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.21 2000/02/03 12:05:21 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -166,14 +166,28 @@ sub check_prebuilt_packages
     }
 
 # Dewey decimal verson number matching - or thereabouts
+# Also handles 'nb<N>' suffix (checked iff values otherwise identical)
 #
 sub dewey_cmp
     {
     my($match, $test, $val) = @_;
-    my($cmp, @matchlist, @vallist);
+    my($cmp, @matchlist, @vallist, $match_nb, $val_nb);
 
+    $match_nb = $val_nb = 0;
+    if ($match =~ /(.*)nb(\d+)/)	# Handle nb<N> suffix
+	{
+	$match = $1;
+	$match_nb = $2;
+	}
     @matchlist = split(/\D+/, $match);
+
+    if ($val =~ /(.*)nb(\d+)/)		# Handle nb<N> suffix 
+	{
+	$val = $1;
+	$val_nb = $2;
+	}
     @vallist = split(/\D+/, $val);
+
     $cmp = 0;
     while( ! $cmp && (@matchlist || @vallist))
 	{
@@ -184,6 +198,8 @@ sub dewey_cmp
 	else
 	    { $cmp = (shift @matchlist <=> shift @vallist) }
 	}
+    if (!$cmp)			# Iff otherwise identical, check nb suffix
+	{ $cmp = $match_nb <=> $val_nb; }
     eval "$cmp $test 0";
     }
 
@@ -333,7 +349,7 @@ sub package_globmatch
 
 	($pkg, $test, $matchver) = ($1, $2, $3);
 
-	if ($matchver =~ /[^\d.]/ )
+	if ($matchver !~ /^[\d.]+(nb\d+|)$/ )
 	    { $matchver = "invalid-dewey($test$matchver)"; }
 	elsif (defined($ver = $pkg2ver{$pkg}))
 	    {
