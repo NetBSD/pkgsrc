@@ -1,24 +1,23 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:35:57 agc Exp $
+$NetBSD: patch-ac,v 1.3 2002/06/27 15:52:13 agc Exp $
 
-*** obuffer.cc.orig	Thu Jun 23 05:14:36 1994
---- obuffer.cc	Tue Feb 14 04:17:17 1995
-***************
-*** 537,542 ****
---- 537,543 ----
-      }
-  
-    // turn NDELAY mode off:
-+ #ifndef __FreeBSD__	/* Our /dev/audio doesn't like non-blocking I/O */
-    int flags;
-    if ((flags = fcntl (fd, F_GETFL, 0)) < 0)
-    {
-***************
-*** 549,554 ****
---- 550,556 ----
-      perror ("fcntl F_SETFL on /dev/audio failed");
-      exit (1);
-    }
-+ #endif
-    return fd;
-  }
-  
+--- configuration.sh	2002/06/27 15:41:04	1.1
++++ configuration.sh	2002/06/27 15:41:40
+@@ -72,6 +72,18 @@
+      INCLUDEDIRS=
+      LIBRARIES=
+      AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
++  NetBSD*)
++     COMPILER=g++
++     COMPILERFLAGS='-O2 -DNETBSD'
++     INCLUDEDIRS=
++     LIBRARIES= 
++     AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
++  FreeBSD*)
++     COMPILER=g++
++     COMPILERFLAGS='-O2 -m486 -DLINUX -DDAMN_INTEL_BYTE_ORDER'
++     INCLUDEDIRS=
++     LIBRARIES= 
++     AUDIO_INCLUDES='#include <machine/soundcard.h>' ;;
+   Linux*)
+      COMPILER=g++
+      COMPILERFLAGS='-O2 -m486 -funroll-loops -DLINUX -DDAMN_INTEL_BYTE_ORDER'

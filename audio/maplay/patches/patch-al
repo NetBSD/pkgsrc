@@ -1,0 +1,52 @@
+$NetBSD: patch-al,v 1.1 2002/06/27 15:52:21 agc Exp $
+
+--- subband_layer_1.cc	2002/06/27 15:41:04	1.1
++++ subband_layer_1.cc	2002/06/27 15:41:40
+@@ -86,7 +86,7 @@
+ }
+ 
+ 
+-bool SubbandLayer1::read_sampledata (Ibitstream *stream)
++boolean SubbandLayer1::read_sampledata (Ibitstream *stream)
+ {
+   if (allocation)
+   {
+@@ -105,7 +105,7 @@
+ }
+ 
+ 
+-bool SubbandLayer1::put_next_sample (e_channels channels,
++boolean SubbandLayer1::put_next_sample (e_channels channels,
+ 				     SynthesisFilter *filter1, SynthesisFilter *)
+ {
+   if (allocation && channels != right)
+@@ -142,7 +142,7 @@
+ }
+ 
+ 
+-bool SubbandLayer1IntensityStereo::put_next_sample (e_channels channels,
++boolean SubbandLayer1IntensityStereo::put_next_sample (e_channels channels,
+ 	SynthesisFilter *filter1, SynthesisFilter *filter2)
+ {
+   if (allocation)
+@@ -231,9 +231,9 @@
+ }
+ 
+ 
+-bool SubbandLayer1Stereo::read_sampledata (Ibitstream *stream)
++boolean SubbandLayer1Stereo::read_sampledata (Ibitstream *stream)
+ {
+-  bool returnvalue = SubbandLayer1::read_sampledata (stream);
++  boolean returnvalue = SubbandLayer1::read_sampledata (stream);
+   if (channel2_allocation)
+   {
+     channel2_sample = real (stream->get_bits (channel2_samplelength));
+@@ -246,7 +246,7 @@
+ }
+ 
+ 
+-bool SubbandLayer1Stereo::put_next_sample (e_channels channels,
++boolean SubbandLayer1Stereo::put_next_sample (e_channels channels,
+ 					   SynthesisFilter *filter1, SynthesisFilter *filter2)
+ {
+   SubbandLayer1::put_next_sample (channels, filter1, filter2);
