@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/07 01:36:07 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/05 20:53:20 heinz Exp $
 #
 
 DISTNAME=		Sys-Hostname-Long-1.0
@@ -18,7 +18,8 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Sys/Hostname/Long/.packlist
 
 pre-configure:
-	@ ${RM} ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig
+	@ ${TEST} -r ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig && \
+	  ${RM} ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig ; :
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
