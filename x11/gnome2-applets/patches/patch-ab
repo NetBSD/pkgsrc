@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2003/12/29 12:05:20 xtraeme Exp $
+$NetBSD: patch-ab,v 1.3 2004/01/17 01:12:43 xtraeme Exp $
 
---- configure.orig	2003-10-26 20:27:25.000000000 +0000
-+++ configure	2003-10-26 20:29:06.000000000 +0000
-@@ -22265,7 +22265,8 @@
- case "$host" in
- *irix*) CDROM_HOST=irix; CDROM_LIBS="-lcdaudio -lmediad -lds";cd_device_path="/dev/cdrom";;
- *linux*) CDROM_HOST=linux;cd_device_path="/dev/cdrom";;
--*netbsd*) CDROM_HOST=netbsd;cd_device_path="/dev/rcd0";;
-+*freebsd*) CDROM_HOST=bsd;cd_device_path="/dev/acd0";;
-+*netbsd*|*openbsd*) CDROM_HOST=bsd;cd_device_path="/dev/rcd0d";;
- *solaris*) CDROM_HOST=solaris;cd_device_path="/vol/dev/aliases/cdrom0";cdplayer_type_sun=true;;
- esac
- case "$host" in
+--- mailcheck/Makefile.in.orig	2003-12-13 15:40:45.000000000 -0600
++++ mailcheck/Makefile.in
+@@ -198,7 +198,7 @@ MAILCHECK_BITMAPS = \
+ mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck
+ mailcheckbitmaps_DATA = $(MAILCHECK_BITMAPS)
+ 
+-soundlistdir = $(sysconfdir)/sound/events
++soundlistdir = $(datadir)/examples/gnome-applets/sound/events
+ soundlist_in_files = mailcheck.soundlist.in
+ soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
+ 
