@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.20 2004/07/13 14:12:03 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.21 2004/07/13 14:24:32 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -36,3 +36,5 @@ Pullup ticket 52, requested by Grant Beattie [agc 2004-07-13]
 	Solaris netpbm build fix
 Pullup ticket 53, requested by Lubomir Sedlacik [agc 2004-07-13]
 	Solaris arj build fix
+Pullup ticket 54, requested by Lubomir Sedlacik [agc 2004-07-13]
+	Solaris afio build fix
