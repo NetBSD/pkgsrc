@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/19 05:23:25 snj Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
@@ -11,7 +11,7 @@ MAINTAINER=	perry@NetBSD.org
 COMMENT=	Browse and select named X colors from rgb.txt
 
 WRKSRC=		${WRKDIR}/xcolorsel
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 XAW_TYPE?=	3d
 
@@ -22,5 +22,5 @@ XAW_TYPE?=	3d
 XAW_TYPE=	3d
 .endif
 
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
