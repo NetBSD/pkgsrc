@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 15:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/19 13:40:14 wiz Exp $
 
-DISTNAME=	cgoban-1.9.10
+DISTNAME=	cgoban-1.9.12
 CATEGORIES=	games
 MASTER_SITES=	http://www.igoweb.org/~wms/comp/cgoban/
 
