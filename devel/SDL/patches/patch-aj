@@ -1,8 +1,20 @@
-$NetBSD: patch-aj,v 1.6 2001/07/03 06:17:33 rh Exp $
+$NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
 
---- configure.in.orig	Mon Jun 18 17:21:38 2001
+--- configure.in.orig	Mon Jun 18 11:21:38 2001
 +++ configure.in
-@@ -410,7 +410,7 @@
+@@ -354,10 +354,7 @@
+                   , enable_nas=yes)
+     if test x$enable_audio = xyes -a x$enable_nas = xyes; then
+         AC_MSG_CHECKING(for NAS audio support)
+-        have_nas=no
+-        if test -r /usr/X11R6/include/audio/audiolib.h; then
+-            have_nas=yes
+-        fi
++        have_nas=yes
+         AC_MSG_RESULT($have_nas)
+         if test x$have_nas = xyes; then
+             CFLAGS="$CFLAGS -DNAS_SUPPORT"
+@@ -410,7 +407,7 @@
                    NASMFLAGS="-f win32"
                    ;;
                *)
@@ -11,16 +23,18 @@ $NetBSD: patch-aj,v 1.6 2001/07/03 06:17:33 rh Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -890,7 +890,7 @@
+@@ -889,8 +886,8 @@
+             pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
-             pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
+-            pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
 -            pthread_lib="-L/usr/pkg/lib -lpthread -lsem"
-+            pthread_lib="-L/usr/pkg/lib -lpthread"
++            pthread_cflags="-D_REENTRANT"
++            pthread_lib="-lpthread"
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1577,7 +1577,11 @@
+@@ -1577,7 +1574,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
@@ -33,7 +47,7 @@ $NetBSD: patch-aj,v 1.6 2001/07/03 06:17:33 rh Exp $
              COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
              COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -1956,6 +1960,10 @@
+@@ -1956,6 +1957,10 @@
  
  if test $ARCH = solaris; then
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
