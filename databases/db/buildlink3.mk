@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/22 08:58:59 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB2_BUILDLINK3_MK:=	${DB2_BUILDLINK3_MK}+
@@ -12,9 +12,11 @@ BUILDLINK_PKGSRCDIR.db?=	../../databases/db
 .if !defined(BUILDLINK_USE_BUILTIN.db)
 BUILDLINK_USE_BUILTIN.db=	NO
 .  if defined(USE_DB185)
-.    if exists(/usr/include/db.h)	# NetBSD, Darwin
+.    if exists(/usr/include/db.h)
+# NetBSD, Darwin
 BUILDLINK_USE_BUILTIN.db=	YES
-.    elif exists(/usr/include/db1/db.h)	# Linux
+.    elif exists(/usr/include/db1/db.h)
+# Linux
 BUILDLINK_USE_BUILTIN.db=	YES
 BUILDLINK_INCDIRS.db?=		include/db1
 BUILDLINK_TRANSFORM+=		l:db:db1
