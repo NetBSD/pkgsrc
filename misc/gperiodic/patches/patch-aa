@@ -1,37 +1,35 @@
-$NetBSD: patch-aa,v 1.3 2003/07/30 14:05:27 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/14 12:38:30 wiz Exp $
 
---- Makefile.orig	Fri Jul 25 09:26:15 2003
+--- Makefile.orig	2003-08-09 21:33:27.000000000 +0200
 +++ Makefile
-@@ -1,24 +1,22 @@
+@@ -1,8 +1,8 @@
 -CC=gcc
 -CFLAGS=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
 +CC?=gcc
 +CFLAGS+=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
  LIBS=`pkg-config --libs gtk+-2.0`
+-bindir ?= /usr/bin
+-datadir ?= /usr/share
++bindir ?= ${PREFIX}/bin
++datadir ?= ${PREFIX}/share
  
--.c.o:
--	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
-+all:	gperiodic
- 
- gperiodic: gperiodic.o
- 	$(CC) $(CFLAGS) -o gperiodic gperiodic.o $(LIBS)
--	strip gperiodic
- 
- gpdata.o: gpdata.c gperiodic.h
- 
+ .c.o:
+ 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
+@@ -16,12 +16,11 @@ gpdata.o: gpdata.c gperiodic.h
  gperiodic.o: gperiodic.c gperiodic.h table_data.h
  
  install:
--	make -C po/ install enable_nls=1
--	cp gperiodic /usr/local/bin
--	cp gperiodic.desktop /usr/share/applications
--	cp gperiodic.png /usr/share/pixmaps
--	cp gperiodic-crystal.png /usr/share/pixmaps
-+	cd po && ${MAKE} install enable_nls=1
-+	${BSD_INSTALL_PROGRAM} gperiodic ${PREFIX}/bin
+-	make -C po/ install enable_nls=1 datadir=$(datadir)
+-	install gperiodic $(bindir)
+-	install gperiodic.desktop $(datadir)/applications
+-	install gperiodic.png $(datadir)/pixmaps
+-	install gperiodic-crystal.png $(datadir)/pixmaps
+-	make clean
++	cd po && ${MAKE} install enable_nls=1 datadir=$(datadir)
++	${BSD_INSTALL_PROGRAM} gperiodic $(bindir)
 +	${BSD_INSTALL_DATA} gperiodic.desktop ${PREFIX}/share/gnome/apps/Applications
-+	${BSD_INSTALL_DATA} gperiodic.png ${PREFIX}/share/pixmaps
-+	${BSD_INSTALL_DATA} gperiodic-crystal.png ${PREFIX}/share/pixmaps
- 	make clean
++	${BSD_INSTALL_DATA} gperiodic.png $(datadir)/pixmaps
++	${BSD_INSTALL_DATA} gperiodic-crystal.png $(datadir)/pixmaps
+ 
  uninstall:
- 	rm /usr/local/bin/gperiodic
+ 	rm $(bindir)/gperiodic

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/14 12:38:30 wiz Exp $
 
-DISTNAME=		gperiodic-2.0.5
-PKGREVISION=		1
+DISTNAME=		gperiodic-2.0.7
 CATEGORIES=		misc x11
 MASTER_SITES=		http://www.acclab.helsinki.fi/~frantz/software/
 
@@ -18,6 +17,7 @@ USE_X11=		# defined
 USE_GMAKE=		# defined
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+ALL_TARGET=		gperiodic
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
