@@ -1,17 +1,16 @@
-# $NetBSD: Makefile.common,v 1.9 2004/03/07 01:34:04 snj Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/04/07 13:59:40 recht Exp $
 #
 
 DISTNAME=		xmbmon203
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
-#PATCH_SITES+=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
-#PATCHFILES+=		xmbmon201.netbsd.patch.gz xmbmon201pl1.diff
-PATCH_DIST_STRIP=	-p1
+PATCH_SITES+=		${MASTER_SITES}
+PATCHFILES+=		xmbmon200203temp23.diff
+PATCH_DIST_STRIP=	-p0
 
-MAINTAINER=		tech-pkg@NetBSD.org
-#HOMEPAGE=	
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
 
-#MAKEFILE=		Makefile.NetBSD
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 
