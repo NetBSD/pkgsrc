@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2003/02/14 22:50:04 hubertf Exp $
+$NetBSD: distinfo,v 1.8 2003/04/23 23:57:58 jmc Exp $
 
 SHA1 (opencm-0.1.2alpha4-1-src.tgz) = 2cbc2d38561a8b9e9deb2097edf1d807c8f0db3a
 Size (opencm-0.1.2alpha4-1-src.tgz) = 1387533 bytes
-SHA1 (patch-aa) = 1c4a79698baffb33401afd0efcdf706e4423044a
+SHA1 (patch-aa) = eccb4254283fa554b33a65a4f93a4a98889cdaaa
 SHA1 (patch-ab) = 63df5eecf9daedaf0250b4f34f6d48d93a229bfc
 SHA1 (patch-ac) = 132b7186f0cf2a3673d7e1b647fa4c81f799f39e
 SHA1 (patch-ad) = 86fbdccb618f8a713ae516f39eb6587db4621640
