@@ -1,0 +1,14 @@
+--- guage.c.orig	Fri Jan 23 17:37:12 1998
++++ guage.c	Fri Jan 23 17:37:12 1998
+@@ -38,6 +38,11 @@
+     char prompt_buf[1024];
+     WINDOW *dialog;
+ 
++    if (height < 0 || width < 0) {
++       fprintf(stderr, "\nAutosizing is impossible in dialog_textbox().\n");
++       return(-1);
++    }
++
+     /* center dialog box on screen */
+     x = (COLS - width) / 2;
+     y = (LINES - height) / 2;

@@ -1,0 +1,53 @@
+--- checklist.c.orig	Fri Jan 23 17:37:12 1998
++++ checklist.c	Fri Jan 23 18:15:04 1998
+@@ -64,7 +64,7 @@
+ 	int list_height, int item_no, const char * const * items, int flag,
+ 	int separate_output)
+ {
+-    int i, x, y, cur_x, cur_y, box_x, box_y;
++    int i, j, x, y, cur_x, cur_y, box_x, box_y;
+     int key = 0, button = 0, choice = 0, scroll = 0, max_choice, *status;
+     WINDOW *dialog, *list;
+ 
+@@ -83,6 +83,26 @@
+ 
+     max_choice = MIN (list_height, item_no);
+ 
++    /* Find length of longest item in order to center checklist */
++    check_x = 0;
++    item_x = 0;
++    for (i = 0; i < item_no; i++) {
++        check_x = MAX (check_x, strlen (items[i * 3])
++                       + strlen (items[i * 3 + 1]) + 6);
++        item_x = MAX (item_x, strlen (items[i * 3]));
++    }
++
++    /* Choose useful default height and width if they are negative */
++    if (height < 0)
++        height = strheight(prompt) + list_height + 4 + 2;
++    if (width < 0) {
++        i = strwidth(prompt);
++        j = ((title != NULL) ? strwidth(title) : 0);
++        width = MAX (i, j);
++        width = MAX (width, check_x + 4) + 4;
++    }
++    width = MAX (width, MIN_DIALOG_WIDTH);
++
+     /* center dialog box on screen */
+     x = (COLS - width) / 2;
+     y = (LINES - height) / 2;
+@@ -131,14 +151,6 @@
+     draw_box (dialog, box_y, box_x, list_height + 2, list_width + 2,
+ 	      menubox_border_attr, menubox_attr);
+ 
+-    check_x = 0;
+-    item_x = 0;
+-    /* Find length of longest item in order to center checklist */
+-    for (i = 0; i < item_no; i++) {
+-	check_x = MAX (check_x, strlen (items[i * 3])
+-		       + strlen (items[i * 3 + 1]) + 6);
+-	item_x = MAX (item_x, strlen (items[i * 3]));
+-    }
+     check_x = (list_width - check_x) / 2;
+     item_x = check_x + item_x + 6;
+ 
