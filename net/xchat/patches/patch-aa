@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/07/05 20:32:33 tron Exp $
+
+--- src/Makefile.in.orig	Mon Jun 28 06:46:12 1999
++++ src/Makefile.in	Mon Jul  5 22:18:02 1999
+@@ -110,7 +110,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ `orbit-config --libs client`
+ xchat_OBJECTS =  chanlist.o cfgfiles.o ctcp.o dcc.o dialog.o draw.o \
+ editlist.o fkeys.o gtkutil.o history.o inbound.o lastlog.o maingui.o \
+ menu.o notify.o outbound.o perl.o plugin.o rawlog.o server.o \
