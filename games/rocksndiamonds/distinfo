@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2002/02/02 11:59:54 jdolecek Exp $
+$NetBSD: distinfo,v 1.5 2002/02/19 06:25:57 jmc Exp $
 
 SHA1 (rocksndiamonds-2.0.0.tar.gz) = 50ce7b646187ce6e10a7e8ccf4c5ce16119f11ee
 Size (rocksndiamonds-2.0.0.tar.gz) = 2476309 bytes
-SHA1 (patch-aa) = 17cc33c87433eb05e640829210c2d612d4f43454
+SHA1 (patch-aa) = 6c0aa7635e09149ca1551afe635799276c873e37
 SHA1 (patch-ab) = 0485825f11f3d82357effd84d911d164d13373f0
 SHA1 (patch-ac) = 646a586346cbc7ea566a9b001be8e96131f13679
 SHA1 (patch-ad) = 213cc8d169ed448657f96e0adee8623f90f50335
 SHA1 (patch-ae) = fe84a2cfb4bcef854a8f79655e64ee68f771effe
 SHA1 (patch-af) = 30d4782a6345f52008955bd3d2bb3d705c7f28c0
-SHA1 (patch-ag) = 65fd9caab419f02b5c7e0dffb08b163f8cb473a4
-SHA1 (patch-ah) = 78e2cbb6a18402db980a62dfc21bfc7014f8cdcc
-SHA1 (patch-ai) = 4ab3a82b99c7bf93061770613da5f583cfc4fb25
-SHA1 (patch-aj) = 7baeca5d8797a25dfdc4caf6e7ac81f670ebaac7
+SHA1 (patch-ag) = 5ec96869ac15ec33966143dbd5d9d699bf294785
+SHA1 (patch-ah) = e0b783de268606d0572fbc6e3a17011cc90b54d6
+SHA1 (patch-ai) = 4607c87f276df311f06df9b9eb8888348c823a16
+SHA1 (patch-aj) = 9af1220fcbaddeeb623e5f2e7f91ce860cfe7f70
