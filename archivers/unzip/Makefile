@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51.2.1 2005/02/28 21:22:01 snj Exp $
+# $NetBSD: Makefile,v 1.51.2.2 2005/03/01 20:58:22 snj Exp $
 
 DISTNAME=	unzip552
 PKGNAME=	unzip-5.52
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 
@@ -11,6 +12,7 @@ COMMENT=	List, test and extract compressed files in a ZIP archive
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+DIST_SUBDIR=	${PKGNAME}	# Remove on next update.
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
