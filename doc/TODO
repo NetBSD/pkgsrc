@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2658 2004/12/05 09:05:30 adam Exp $
+$NetBSD: TODO,v 1.2659 2004/12/05 09:39:32 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o dctc-0.85.9
 	o ddd-3.3.9
 	o denemo-0.7.2a
-	o desktop-file-utils-0.9
 	o devIL-1.6.7
 	o devhelp-0.9.3
 	o devtodo-0.1.18
