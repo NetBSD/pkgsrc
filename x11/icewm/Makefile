@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/23 01:22:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/23 16:05:13 tron Exp $
 #
 
 DISTNAME=	icewm-1.0.1
@@ -11,11 +11,11 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://icewm.sourceforge.net/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-#DEPENDS+=	imlib-*:../../graphics/imlib
+
+CONFLICTS+=	icewm-gnome-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-#CONFIGURE_ARGS+=	--with-imlib
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/icewm
