@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1285 2003/09/15 10:27:12 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1286 2003/09/15 16:14:16 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -4762,7 +4762,6 @@ _MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$
 .  endif # MANZ
 .endif
 
-.if defined(MANINSTALL)
 _MANINSTALL_CMD= ${AWK} 'BEGIN{						\
 		start="^([^\/]*\/)*man\/([^\/]*\/)?";			\
 		end="[1-9ln]"; }					\
@@ -4771,9 +4770,6 @@ _MANINSTALL_CMD= ${AWK} 'BEGIN{						\
 		if (!"${MANINSTALL:Mcatinstall}" && 			\
 				match($$0, start "cat" end)) {next;}	\
 		print $$0; }' |
-.else
-_MANINSTALL_CMD=
-.endif
 
 .if defined(USE_IMAKE) && ${_PREFORMATTED_MAN_DIR} == "man"
 _IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
