@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+$NetBSD: patch-af,v 1.2 2003/05/26 06:53:09 martti Exp $
 
---- plugins/cram.c.orig	Sun Oct 27 14:17:33 2002
-+++ plugins/cram.c	Sun Oct 27 14:17:47 2002
-@@ -235,7 +235,7 @@
+--- plugins/cram.c.orig	2003-02-18 20:27:37.000000000 +0200
++++ plugins/cram.c	2003-05-21 09:11:53.000000000 +0300
+@@ -230,7 +230,7 @@
      HMAC_MD5_STATE md5state;
      int clear_md5state = 0;
      char *digest_str = NULL;
