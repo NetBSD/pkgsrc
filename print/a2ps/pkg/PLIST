@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/09 00:53:38 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/09 01:51:31 hubertf Exp $
 share/a2ps/README
 share/a2ps/ps/base.ps
 share/a2ps/ps/bw.pro
@@ -177,6 +177,7 @@ etc/a2ps.cfg
 bin/ogonkify
 bin/a2ps
 bin/composite
+include/liba2ps.h
 @unexec %D/bin/install-info --delete %D/info/a2ps.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/ogonkify.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/regex.info %D/info/dir
@@ -190,7 +191,6 @@ info/regex.info
 info/regex.info-1
 info/regex.info-2
 info/regex.info-3
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/a2ps.info %D/info/dir
 @exec %D/bin/install-info %D/info/ogonkify.info %D/info/dir
 @exec %D/bin/install-info %D/info/regex.info %D/info/dir
