@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7169 2004/09/19 13:03:28 wiz Exp $
+$NetBSD: CHANGES,v 1.7170 2004/09/19 13:41:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gss to 0.0.13 [wiz 2004-09-19]
 	Updated gsasl to 0.1.4 [wiz 2004-09-19]
 	Updated msmtp to 1.2.3 [wiz 2004-09-19]
+	Updated wl to 2.10.1 [wiz 2004-09-19]
