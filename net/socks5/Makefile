@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2002/04/05 11:41:09 fredb Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
+# $NetBSD: Makefile,v 1.23 2002/07/02 14:36:43 wiz Exp $
 #
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
 WRKSRC=		${WRKDIR}/socks5-v1.0r2
 CATEGORIES=	net security
-MASTER_SITES=	ftp://ftp.astec.co.jp/pub/security/socks/  \
-		ftp://ftp.ualg.pt/Linux/net/proxies/socks5/
+MASTER_SITES=	# empty -- manual fetch needed
 EXTRACT_SUFX=	_tar.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
-HOMEPAGE=	http://www.socks.nec.com/
+HOMEPAGE=	http://www.socks.nec.com/reference/socks5.html
 COMMENT=	SOCKS v5 application layer gateway and clients
 
 CONFLICTS=	socks4-[0-9]*
