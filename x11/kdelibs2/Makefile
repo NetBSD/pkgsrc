@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/10/15 22:46:21 skrll Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/26 13:57:59 skrll Exp $
 #
 
 DISTNAME=	kdelibs-2.2.1
@@ -33,15 +33,9 @@ MKDIRS=	\
 #	share/kde/icons/locolor/22x22/filesystems \
 #	share/kde/icons/locolor/22x22/actions/kde \
 
-PERLSCRIPTS= \
+REPLACE_PERL= \
 	${WRKSRC}/kio/proxytype.pl \
 	${WRKSRC}/kio/useragent.pl
-
-post-extract:
-	for f in ${PERLSCRIPTS}; do \
-		${SED} -e "s:^\#\!.*perl$$:\#\!${LOCALBASE}/bin/perl:" $$f > $$f.new; \
-		${MV} $$f.new $$f; \
-	done
 
 post-install:
 	for d in ${MKDIRS}; do \
