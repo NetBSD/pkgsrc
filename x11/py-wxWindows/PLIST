@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/25 21:12:51 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/08/27 15:03:27 drochner Exp $
 ${PYSITELIB}/wx/__init__.py
 ${PYSITELIB}/wx/__init__.pyc
 ${PYSITELIB}/wx/__init__.pyo
@@ -398,6 +398,10 @@ ${PYSITELIB}/wxPython/gizmos.py
 ${PYSITELIB}/wxPython/gizmos.pyc
 ${PYSITELIB}/wxPython/gizmos.pyo
 ${PYSITELIB}/wxPython/gizmosc.so
+${PYSITELIB}/wxPython/glcanvas.py
+${PYSITELIB}/wxPython/glcanvas.pyc
+${PYSITELIB}/wxPython/glcanvas.pyo
+${PYSITELIB}/wxPython/glcanvasc.so
 ${PYSITELIB}/wxPython/grid.py
 ${PYSITELIB}/wxPython/grid.pyc
 ${PYSITELIB}/wxPython/grid.pyo
@@ -644,6 +648,22 @@ ${PYSITELIB}/wxPython/misc.pyo
 ${PYSITELIB}/wxPython/misc2.py
 ${PYSITELIB}/wxPython/misc2.pyc
 ${PYSITELIB}/wxPython/misc2.pyo
+${PYSITELIB}/wxPython/ogl.py
+${PYSITELIB}/wxPython/ogl.pyc
+${PYSITELIB}/wxPython/ogl.pyo
+${PYSITELIB}/wxPython/oglbasic.py
+${PYSITELIB}/wxPython/oglbasic.pyc
+${PYSITELIB}/wxPython/oglbasic.pyo
+${PYSITELIB}/wxPython/oglc.so
+${PYSITELIB}/wxPython/oglcanvas.py
+${PYSITELIB}/wxPython/oglcanvas.pyc
+${PYSITELIB}/wxPython/oglcanvas.pyo
+${PYSITELIB}/wxPython/oglshapes.py
+${PYSITELIB}/wxPython/oglshapes.pyc
+${PYSITELIB}/wxPython/oglshapes.pyo
+${PYSITELIB}/wxPython/oglshapes2.py
+${PYSITELIB}/wxPython/oglshapes2.pyc
+${PYSITELIB}/wxPython/oglshapes2.pyo
 ${PYSITELIB}/wxPython/printfw.py
 ${PYSITELIB}/wxPython/printfw.pyc
 ${PYSITELIB}/wxPython/printfw.pyo
