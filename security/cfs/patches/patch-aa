@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/06/09 04:32:14 jlam Exp $
+$NetBSD: patch-aa,v 1.4.14.1 2004/07/29 21:54:34 agc Exp $
 
---- Makefile.orig	Thu May  3 11:29:21 2001
-+++ Makefile	Fri Jun  8 21:15:13 2001
+--- Makefile.orig	2001-05-04 04:29:21.000000000 +1000
++++ Makefile
 @@ -74,18 +74,19 @@
  #CC=cc
  #COPT=-O -DNOT_ANSI_C -DPROTOTYPES=0
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.4 2001/06/09 04:32:14 jlam Exp $
  
  # if you're a paranoid fascist, you might want to configure
  # default timeouts on the attach command.  If you do,
-@@ -229,7 +230,7 @@
+@@ -229,7 +230,7 @@ RINCLUDES=/usr/mab/rsaref/source
  # (3/3) CONFIGURE: one last thing
  #==========================================================================
  # finally, comment out the next line:
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.4 2001/06/09 04:32:14 jlam Exp $
  
  # now you're done with local configuration.
  
-@@ -322,6 +323,7 @@
+@@ -322,6 +323,7 @@ nfsproto_svr.c: nfsproto.x
  
  nfsproto.h: nfsproto.x
  	rpcgen $(RPCOPTS) -h -o nfsproto.h nfsproto.x
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.4 2001/06/09 04:32:14 jlam Exp $
  
  admproto_xdr.c: admproto.x
  	rpcgen $(RPCOPTS) -c -o admproto_xdr.c admproto.x 
-@@ -331,6 +333,7 @@
+@@ -331,6 +333,7 @@ admproto_svr.c: admproto.x
  
  admproto.h: admproto.x
  	rpcgen $(RPCOPTS) -h -o admproto.h admproto.x
@@ -53,3 +53,17 @@ $NetBSD: patch-aa,v 1.4 2001/06/09 04:32:14 jlam Exp $
  
  admproto_clnt.c: admproto.x
  	rpcgen $(RPCOPTS) -l -o admproto_clnt.c admproto.x 
+@@ -359,10 +362,10 @@ printout: $(SRCS) cfs.h mcg.h safer.h ad
+ 	$(PRINTCMD) $(SRCS) cfs.h mcg.h safer.h admproto.h nfsproto.h
+ 
+ install_cfs: cfsd cattach cdetach cmkdir
+-	install -m 0755 -c -o root cfsd $(ETCDIR)
+-	install -m 0755 -c -o root cattach cdetach cmkdir cpasswd cfssh \
++	${BSD_INSTALL} -m 0755 -c -o root cfsd $(ETCDIR)
++	${BSD_INSTALL} -m 0755 -c -o root cattach cdetach cmkdir cpasswd cfssh \
+                 cname ccat cmkkey $(BINDIR)
+-#	install -m 0755 i o $(BINDIR)
++#	${BSD_INSTALL} -m 0755 i o $(BINDIR)
+ 	@echo "Kill any running cfsd prior to restarting."
+ 	@echo "See the README file for more information."
+ 	@echo "Don't forget to install the man pages (*.[18])."

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2001/06/09 04:32:14 jlam Exp $
+$NetBSD: distinfo,v 1.4.14.1 2004/07/29 21:54:34 agc Exp $
 
 SHA1 (cfs-1.4.1.tar.gz) = be3f73b233149477b739456498c71b120d5f2fb5
 Size (cfs-1.4.1.tar.gz) = 98943 bytes
-SHA1 (patch-aa) = 7cb790ac11d0626728db113ad8cccb11bd72d75d
+SHA1 (patch-aa) = c22350cfbcec8ad23bcafd6d9bc5017fb098d259
 SHA1 (patch-ab) = 1ff2d2e32b87332ec66cc8f01299fa4b1ddac81a
 SHA1 (patch-ac) = 354290ff606fab97b73980e6e512f10ef1397f01
 SHA1 (patch-ad) = 2ed5967d59d8f91948b2dd9ed4b18c5073d63615
