@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/15 21:46:26 wennmach Exp $
+
+--- opcodes/Makefile.in.orig	Tue Jun  4 15:59:05 2002
++++ opcodes/Makefile.in	Tue Jun  4 15:58:47 2002
+@@ -702,7 +702,8 @@
+ 
+ install-am: all-am
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+-install: install-recursive
++#install: install-recursive
++install:
+ uninstall-am: uninstall-bfdlibLTLIBRARIES
+ uninstall: uninstall-recursive
+ all-am: Makefile $(LIBRARIES) $(LTLIBRARIES) config.h
