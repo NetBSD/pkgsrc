@@ -1,37 +1,36 @@
-$NetBSD: patch-ae,v 1.6 2001/01/28 02:05:37 jlam Exp $
+$NetBSD: patch-ae,v 1.7 2001/02/08 19:05:01 jlam Exp $
 
---- cups.sh.in.orig	Mon Jan 22 10:03:16 2001
-+++ cups.sh.in
-@@ -10,6 +10,12 @@
- #   description: Startup/shutdown script for the Common UNIX \
- #                Printing System (CUPS).
- #
-+#   NetBSD 1.5+ rcorder script lines.  The format of the following two
-+#   lines is very strict -- please don't add additional spaces!
-+#
-+# PROVIDE: cups
-+# REQUIRE: DAEMON
-+#
- #   Copyright 1997-2001 by Easy Software Products, all rights reserved.
- #
- #   These coded instructions, statements, and computer programs are the
-@@ -35,6 +41,9 @@
- 		IS_ON=/sbin/chkconfig
- 		;;
- 
-+	NetBSD*)
-+		IS_ON=:
+--- backend/usb.c.orig	Tue Feb  6 05:41:04 2001
++++ backend/usb.c
+@@ -398,7 +398,7 @@
+ #elif defined(__sun)
+ #elif defined(__hpux)
+ #elif defined(__osf)
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#elif defined(__FreeBSD__)
+   int   i;                      /* Looping var */
+   int   fd;                     /* File descriptor */
+   char  device[255];            /* Device filename */
+@@ -407,6 +407,22 @@
+   for (i = 0; i < 3; i ++)
+   {
+     sprintf(device, "/dev/unlpt%d", i);
++    if ((fd = open(device, O_WRONLY)) >= 0)
++    {
++      close(fd);
++      printf("direct usb:%s \"Unknown\" \"USB Port #%d\"\n", device, i + 1);
++    }
++  }
++#endif
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
++  int   i;                      /* Looping var */
++  int   fd;                     /* File descriptor */
++  char  device[255];            /* Device filename */
 +
- 	*)
- 		IS_ON=/bin/true
- 		;;
-@@ -57,6 +66,9 @@
- 		pid=`ps -e | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
- 		;;
- 	Linux)
-+		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
-+		;;
-+	NetBSD)
- 		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
- 		;;
- 	*)
++
++  for (i = 0; i < 3; i ++)
++  {
++    sprintf(device, "/dev/ulpt%d", i);
+     if ((fd = open(device, O_WRONLY)) >= 0)
+     {
+       close(fd);
