@@ -1,17 +1,16 @@
-$NetBSD: patch-ag,v 1.2 2001/04/08 10:55:22 itojun Exp $
+$NetBSD: patch-ag,v 1.3 2002/01/04 09:45:10 martti Exp $
 
---- build/rules.mk.orig	Tue Apr  3 09:29:42 2001
-+++ build/rules.mk	Sun Apr  8 12:05:48 2001
-@@ -79,9 +79,9 @@
- # Helper programs
+--- srclib/apr-util/xml/apr_xml.c.orig	Thu Jan  3 16:34:11 2002
++++ srclib/apr-util/xml/apr_xml.c	Thu Jan  3 16:34:26 2002
+@@ -63,11 +63,7 @@
  
- MKINSTALLDIRS = $(abs_srcdir)/build/mkdir.sh
--INSTALL = $(abs_srcdir)/build/install.sh -c
--INSTALL_DATA = $(INSTALL) -m 644
--INSTALL_PROGRAM = $(INSTALL) -m 755
-+#INSTALL = $(abs_srcdir)/build/install.sh -c
-+INSTALL_DATA = /bin/sh $(top_builddir)/libtool --mode=install ${BSD_INSTALL_DATA}
-+INSTALL_PROGRAM = /bin/sh $(top_builddir)/libtool --mode=install ${BSD_INSTALL_PROGRAM}
+ #include "apu_config.h"
  
- DEFS = -I. -I$(srcdir) -I$(top_srcdir)/server/mpm/$(MPM_NAME) -I$(top_srcdir)/modules/http
+-#ifdef APR_HAVE_OLD_EXPAT
+-#include "xmlparse.h"
+-#else
+ #include "expat.h"
+-#endif
+ 
+ #define DEBUG_CR "\r\n"
  
