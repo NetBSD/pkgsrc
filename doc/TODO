@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3100 2005/02/23 16:59:26 wiz Exp $
+$NetBSD: TODO,v 1.3101 2005/02/23 17:15:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o memtest86-3.2
 	o mergeant-0.52
 	o mew-4.2
-	o mgetty+sendfax-1.1.31
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5
 	o mimedefang-2.51
