@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2000/03/14 16:52:29 tron Exp $
+
+--- po-script-fu/Makefile.in.in.orig	Sun Feb 27 21:55:43 2000
++++ po-script-fu/Makefile.in.in	Tue Mar 14 17:08:27 2000
+@@ -19,7 +19,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po-script-fu
