@@ -1,9 +1,12 @@
 #!/bin/sh
-
-# $NetBSD: pgsql.sh.tmpl,v 1.7 2000/09/01 23:57:18 wiz Exp $
+#
+# $NetBSD: pgsql.sh.tmpl,v 1.8 2000/09/21 14:34:56 jlam Exp $
 # FreeBSD Id: pgsql.sh.tmpl,v 1.3 1997/10/05 21:00:49 andreas Exp
-
+#
 # pgsql.sh - postgresql startup file for NetBSD
+#
+# PROVIDE: pgsql
+# REQUIRE: DAEMON
 
 CMD=${1:-start}
 USER=@PGUSER@
