@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/01/23 20:15:35 tron Exp $
+# $NetBSD: Makefile,v 1.20 2002/02/01 02:48:05 mjl Exp $
 
 DISTNAME=		gnucash-1.6.5
 CATEGORIES=		finance
@@ -16,6 +16,11 @@ DEPENDS+=		guppi>=0.35.5nb1:../../math/guppi
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
 DEPENDS+=		popt>=1.5:../../devel/popt
 DEPENDS+=		swig-1.1p5:../../devel/swig
+DEPENDS+=		glib>=0.99.7:../../devel/glib
+DEPENDS+=		gdk-pixbuf>=0.2.5:../../graphics/gdk-pixbuf
+DEPENDS+=		gnome-print>=0.21:../../print/gnome-print
+BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
+
 
 LIBPERL5_REQD=		${PERL5_REQD}
 
