@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.30 2004/07/26 07:29:30 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.31 2004/07/26 07:40:04 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -56,4 +56,6 @@ Pullup ticket 63, requested by Grant Beattie [agc 2004-07-26]
 	Complete ticket 57 - security fix for apache2
 Pullup ticket 64, requested by Matthias Scheler [agc 2004-07-26]
 	Security fix for samba 3.0
+Pullup ticket 65, requested by Grant Beattie [agc 2004-07-26]
+	Solaris fix for ddclient
 
