@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/09 13:09:12 schmonz Exp $
 lib/libstunnel.la
 man/man8/stunnel.8
 man/man8/stunnel.fr.8
 man/man8/stunnel.pl.8
 sbin/stunnel
+sbin/stunnel3
 share/doc/stunnel/AUTHORS
 share/doc/stunnel/BUGS
 share/doc/stunnel/COPYING

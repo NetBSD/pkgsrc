@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2005/01/03 12:17:44 martti Exp $
+# $NetBSD: Makefile,v 1.47 2005/01/09 13:09:12 schmonz Exp $
 
 DISTNAME=		stunnel-4.07
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -23,6 +24,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 PKG_SYSCONFSUBDIR=	stunnel
 
 RCD_SCRIPTS=		stunnel
+REPLACE_PERL=		src/stunnel3.in
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
