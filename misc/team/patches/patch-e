@@ -1,0 +1,15 @@
+*** team.c.ORIG	Fri Dec 13 16:26:50 1996
+--- team.c	Fri Dec 13 16:28:14 1996
+***************
+*** 94,99 ****
+--- 94,103 ----
+  # undef F_SETLKW
+  #endif
+  
++ #ifdef __FreeBSD__
++ # undef F_SETLKW
++ #endif
++ 
+  #if (PCG)
+  # include "Extend.h"
+  # include "Here.h"
