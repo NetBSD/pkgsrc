@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.10 2004/10/29 15:15:50 tv Exp $
+# $NetBSD: Interix.mk,v 1.11 2004/11/16 16:21:40 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -111,7 +111,6 @@ _USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
 DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
 DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
-CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 

@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.5 2004/11/15 14:48:18 tv Exp $
+# $NetBSD: SunOS.mk,v 1.6 2004/11/16 16:21:40 tv Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -90,7 +90,6 @@ TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
-CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
