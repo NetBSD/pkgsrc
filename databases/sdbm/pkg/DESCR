@@ -1,0 +1,11 @@
+The sources accompanying this notice -- sdbm -- constitute the first
+public release (Dec.  1990) of a complete clone of the Berkeley UN*X ndbm
+library.  The sdbm library is meant to clone the proven functionality of
+ndbm as closely as possible, including a few improvements.  It is
+practical, easy to understand, and compatible.  The sdbm library is not
+derived from any licensed, proprietary or copyrighted software.
+
+The sdbm programming interface is totally compatible with ndbm and
+includes a slight improvement in database initialization.  It is also
+expected to be binary-compatible under most UN*X versions that support the
+ndbm library.
