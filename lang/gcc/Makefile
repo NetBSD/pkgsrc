@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/01/03 21:39:54 tron Exp $
+# $NetBSD: Makefile,v 1.33 2002/01/09 16:33:32 seb Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 # The platforms listed below are the only tested platforms so far.
 # If you get gcc working on other platforms, then please add them.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,6 +33,7 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 MESSAGE_SUBST+=		MAKE=${MAKE}
 PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
+PLIST_SUBST+=		GCC_VERSION=${PKGVERSION}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 
@@ -87,6 +88,12 @@ post-install:
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
+.else
+# remove empy file and directory that show up when one
+# does make install; make deinstall; make install
+post-install:
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/fixed
+	-${RMDIR} ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/v7
 .endif
 
 .include "../../mk/bsd.pkg.mk"
