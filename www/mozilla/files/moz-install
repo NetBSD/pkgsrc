@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.8 2004/01/17 00:04:49 taya Exp $
+# $NetBSD: moz-install,v 1.9 2004/06/01 15:01:17 taya Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -63,3 +63,10 @@ ${RM} -f ${TMP_PLIST}
 cd ${PREFIX}/lib/${MOZILLA}
 ${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regxpcom
 ${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome
+
+#
+# remove generated user conf directory (e.g. ${WRKSRC}/.mozilla)
+#
+if [ x"${TMPMOZCONFDIR}" != x ] ; then
+	${RM} -rf ${TMPMOZCONFDIR}
+fi
