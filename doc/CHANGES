@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.790 2002/12/14 23:29:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.791 2002/12/15 01:58:06 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3957,3 +3957,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libsamplerate-0.0.13 [jmmv 2002-12-14]
 	Updated sysbuild to 1.4 [jmmv 2002-12-14]
 	Updated pkg_comp to 1.2 [jmmv 2002-12-14]
+	Updated verilog to 0.7 [dmcmahill 2002-12-14]
