@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/09/08 19:52:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lesstif.
 #
@@ -18,37 +18,7 @@ LESSTIF_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.lesstif?=	lesstif>=0.91.4
-
-.include "../../mk/bsd.prefs.mk"
-
-# On Solaris, assume that /usr/dt contains a valid Motif 2.0-compatible
-# installation.
-#
-.if ${OPSYS} == "SunOS"
-_NEED_LESSTIF=	NO
-.else
-.if exists(${X11BASE}/include/Xm/Xm.h)
-_IS_LESSTIF!=	${EGREP} -c LESSTIF ${X11BASE}/include/Xm/Xm.h || ${TRUE}
-.if ${_IS_LESSTIF} == "0"
-_NEED_LESSTIF=	NO
-.else
-_NEED_LESSTIF=	YES
-.endif
-.else
-_NEED_LESSTIF=	YES
-.endif
-.endif
-
-.if ${_NEED_LESSTIF} == "YES"
-MOTIFBASE?=	${X11PREFIX}
 DEPENDS+=	${BUILDLINK_DEPENDS.lesstif}:../../x11/lesstif
-.else
-.if ${OPSYS} == "SunOS"
-MOTIFBASE?=	/usr/dt
-.else
-MOTIFBASE?=	${X11BASE}
-.endif
-.endif
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.lesstif=lesstif
 BUILDLINK_PREFIX.lesstif_DEFAULT=	${X11PREFIX}
@@ -62,14 +32,7 @@ BUILDLINK_FILES.lesstif+=	lib/libXm.*
 BUILDLINK_TARGETS.lesstif=	lesstif-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.lesstif}
 
-USE_X11=	# defined
-MAKE_ENV+=	MOTIFLIB="${MOTIFLIB}"
-LDFLAGS+=	-Wl,-R${MOTIFBASE}/lib
-.if defined(USE_BUILDLINK_X11)
-MOTIFLIB?=	-Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -lXm -lXp
-.else
-MOTIFLIB?=	-Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -L${X11BASE}/lib -lXm -lXp
-.endif
+MOTIFBASE=			${BUILDLINK_PREFIX.lesstif}
 
 pre-configure: ${BUILDLINK_TARGETS.lesstif}
 lesstif-buildlink: _BUILDLINK_USE
