@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4154 2003/12/17 06:27:46 grant Exp $
+$NetBSD: CHANGES,v 1.4155 2003/12/17 07:01:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-MailTools to 1.60 [grant 2003-12-16]
 	Updated xmms-mad to 0.5.5 [simonb 2003-12-17]
 	Added p5-File-DirSync-1.11 [grant 2003-12-17]
+	Updated xfce4-clipman-plugin to 0.4.0 [martti 2003-12-17]
