@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/29 15:15:16 jtb Exp $
 
-MD5 (xcircuit-2.2.0.tar.gz) = 12ce1ff6e585f08a72844df0b805d9fb
+SHA1 (xcircuit-2.2.0.tar.gz) = 8c7b04b4247486dd7de4ba3f1bcc33b21684024f
+Size (xcircuit-2.2.0.tar.gz) = 483533 bytes
 SHA1 (patch-aa) = ed0f98c1540a0ec079801675ae4964cde0102dc2
 SHA1 (patch-ab) = 40bf15d3609ddd6b457556690f26de5882372d5c
