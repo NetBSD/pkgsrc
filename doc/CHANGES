@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1261 2003/01/28 12:42:25 wiz Exp $
+$NetBSD: CHANGES,v 1.1262 2003/01/28 13:46:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glib2 to 2.2.0nb2 [tron 2003-01-28]
 	Updated docbook-website to 2.3nb2 [grant 2003-01-28]
 	Updated naim-0.11.5.3 [wiz 2003-01-28]
+	Updated dctc to 0.84.1 [wiz 2003-01-28]
