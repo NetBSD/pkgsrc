@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/09/27 13:20:25 heinz Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/01 00:24:15 heinz Exp $
 
---- lib/Razor2/Client/Config.pm.orig	Thu Nov 14 23:47:01 2002
+--- lib/Razor2/Client/Config.pm.orig	Mon Apr 21 21:59:56 2003
 +++ lib/Razor2/Client/Config.pm
-@@ -323,9 +323,11 @@ sub my_readlink {
+@@ -333,9 +333,11 @@ sub my_readlink {
          if ($fn =~ /^(.*)\/([^\/]+)$/) {
              my $dir = $1;
              $fn = readlink $fn;
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.1 2003/09/27 13:20:25 heinz Exp $
          }
      }
  }
-@@ -366,13 +368,13 @@ sub read_file {
+@@ -376,13 +378,13 @@ sub read_file {
          chomp; 
          next if /^\s*#/;
          if ($nothash) {
