@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.3 2001/06/23 04:08:04 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.4 2001/06/24 21:46:34 dmcmahill Exp $
 #
 # Copyright (c) 2001 Dan McMahill, All rights reserved.
 #
@@ -55,7 +55,7 @@ mkdir $TMP
 
 usage(){
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog [-n] [-R] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
+	echo "Usage:      $prog [-l logfile] [-n] [-R] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
 	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
 	echo "Please refer to the manual page for complete documentation."
 }
@@ -85,12 +85,18 @@ VERBOSE=no
 VERSION=no
 USE_XTRA=no
 USE_OTHERS=no
+mkisofslog=/dev/null
 
 while
     test -n "$1"
 do
     case "$1"
     in
+	# log file for the output of mkisofs -v -v
+	-l) mkisofslog=$2
+	    shift 2
+	    ;;
+
 	# do not duplicate packages to avoid inter-CD dependencies
 	-n) DUP=no
 	    shift
@@ -415,7 +421,7 @@ fi
 #
 volid=PackagesCD
 #mkisofs_flags="-f -l -r -J -L -volset-size $ncds -V $volid "
-mkisofs_flags="-f -l -r -J -L "
+mkisofs_flags="-v -v -f -l -r -J -L "
 
 echo "Creating the ISO images"
 cdn=1
@@ -424,8 +430,8 @@ do
     echo "----------- $cdname ----------"
     #mkisofs_flags2=" -volset-ID $cdname -volset-seqno $cdn "
     mkisofs_flags2=" -V ${volid}$cdn "
-    echo "(cd ${cddir} && mkisofs $mkisofs_flags $mkisofs_flags2 -o ${cdname}.iso $cdname)"
-    ( cd ${cddir} && mkisofs $mkisofs_flags $mkisofs_flags2 -o ${cdname}.iso $cdname )
+    echo "( cd ${cddir} && mkisofs $mkisofs_flags $mkisofs_flags2 -o ${cdname}.iso $cdname >> $mkisofslog 2>&1)"
+    ( cd ${cddir} && mkisofs $mkisofs_flags $mkisofs_flags2 -o ${cdname}.iso $cdname >> $mkisofslog 2>&1)
     if [ $? != 0 ]; then
 	echo "mkisofs failed"
 	clean_and_exit
