@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/25 14:17:24 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/05 20:14:28 jlam Exp $
 #
 
 DISTNAME=	psycopg-1.0.13
 PKGNAME=	${PYPKGPREFIX}-psycopg-1.0.13
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 
@@ -13,7 +14,7 @@ COMMENT=	PostgreSQL database adapter for Python
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --with-python=${PYTHONBIN}
 CONFIGURE_ARGS+= \
- --with-postgres-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql \
+ --with-postgres-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql\
  --with-postgres-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib
 # XXX ${PYSITELIB}/... doesn't get transformed by buildlink2
 CONFIGURE_ARGS+= --with-mxdatetime-includes=${BUILDLINK_DIR}/include
