@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/06/19 21:16:44 jwise Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/15 13:46:39 wiz Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -14,11 +14,9 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_JAVA=	yes
 USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${JAVA_HOME} \
@@ -26,5 +24,6 @@ CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${JAVA_HOME}
 	--with-servlets=${LOCALBASE}/share/httpd/servlets -enable-EAPI
 
 .include "../../mk/bsd.pkg.mk"
+
 JSDK_HOME=	${JAVA_HOME}/jsdk
 BUILD_DEFS+=	JSDK_HOME
