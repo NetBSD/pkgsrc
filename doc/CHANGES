@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4229 2003/12/23 10:12:49 cube Exp $
+$NetBSD: CHANGES,v 1.4230 2003/12/23 10:19:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gxmame-0.34b [xtraeme 2003-12-23]
 	Added gnome-acme-2.4.2 [xtraeme 2003-12-23]
 	Updated lftp to 2.6.11 [cube 2003-12-23]
+	Added jabberd-1.4.3 [xtraeme 2003-12-23]
