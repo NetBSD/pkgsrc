@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.4 2002/06/28 06:31:34 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.5 2002/06/28 15:27:40 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -571,8 +571,10 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-_BLNK_CHECK_PATTERNS+=	-e "-I${LOCALBASE}/" -e "-L${LOCALBASE}/"
-_BLNK_CHECK_PATTERNS+=	-e "-I${X11BASE}/" -e "-L${X11BASE}/"
+_BLNK_CHECK_PATTERNS+=	-e "-I${LOCALBASE}/[a-rt-z]"
+_BLNK_CHECK_PATTERNS+=	-e "-L${LOCALBASE}/[a-rt-z]"
+_BLNK_CHECK_PATTERNS+=	-e "-I${X11BASE}/"
+_BLNK_CHECK_PATTERNS+=	-e "-L${X11BASE}/"
 
 buildlink-check:
 	@if [ -f ${_BLNK_WRAP_LOG} ]; then				\
