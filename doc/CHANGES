@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1187 2003/01/21 20:09:51 rh Exp $
+$NetBSD: CHANGES,v 1.1188 2003/01/21 22:50:16 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -359,3 +359,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-psycopg to 1.0.14 [drochner 2003-01-21]
 	Updated zope25-ZPsycopgDA to 1.0.14 [drochner 2003-01-21]
 	Updated libgtop2 to 2.0.0nb2 [rh 2003-01-21]
+	Updated libtool to 1.4.20010614nb12 [grant 2003-01-21]
