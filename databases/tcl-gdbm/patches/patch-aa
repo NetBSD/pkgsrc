@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2001/03/05 12:35:33 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/11 16:55:02 minskim Exp $
 
---- Makefile.in.orig	Thu Jun  8 20:35:14 2000
+--- Makefile.in.orig	2001-02-10 18:24:24.000000000 -0600
 +++ Makefile.in
-@@ -35,7 +35,7 @@
+@@ -35,7 +35,7 @@ oldincludedir = /usr/include
  DESTDIR =
  
  pkgdatadir = $(datadir)/@PACKAGE@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 12:35:33 skrll Exp $
  pkgincludedir = $(includedir)/@PACKAGE@
  
  top_builddir = .
-@@ -127,7 +127,7 @@
+@@ -127,7 +127,7 @@ AUTOMAKE_OPTIONS = 1.4
  
  pkglib_LTLIBRARIES = libtclgdbm.la
  man_MANS = tclgdbm.n
@@ -20,15 +20,15 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 12:35:33 skrll Exp $
  pkgindex_DATA = pkgIndex.tcl
  
  # tclStubLib.c is a dummy file just to fool automake
-@@ -491,11 +491,6 @@
- 
- test:
+@@ -497,11 +497,6 @@ test:
+ torture:
  	echo 'load .libs/libtclgdbm.so Tclgdbm ; source torture.tcl' | tclsh@TCL_VERSION@
--
+ 
 -# override normal libtool rule
 -tclStubLib.lo : @TCL_STUB_LIB_PATH@
 -	ar -x @TCL_STUB_LIB_PATH@
 -	mv tclStubLib.o tclStubLib.lo
- 
+-
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
