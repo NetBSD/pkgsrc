@@ -1,0 +1,124 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
+
+--- mit-pthreads/pthreads/fd_kern.c.orig	Wed Nov 26 09:43:02 1997
++++ mit-pthreads/pthreads/fd_kern.c	Sat Mar 20 23:41:26 1999
+@@ -575,6 +575,7 @@
+ off_t __fd_kern_lseek(union fd_data fd_data, int f, off_t offset, int whence)
+ {
+ 	int fd = fd_data.i;
++	extern off_t machdep_sys_lseek(int, off_t, int);
+ 	off_t ret=machdep_sys_lseek(fd, offset, whence);
+ 	if ((long) ret < 0L && (long) ret >=  -255L)
+ 	{
+@@ -1096,7 +1097,11 @@
+ /* ==========================================================================
+  * bind()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int bind(int fd, const struct sockaddr *name, socklen_t namelen)
++#else
+ int bind(int fd, const struct sockaddr *name, int namelen)
++#endif
+ {
+ 	/* Not much to do in bind */
+ 	int ret;
+@@ -1118,7 +1123,11 @@
+ /* ==========================================================================
+  * connect()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int connect(int fd, const struct sockaddr *name, socklen_t namelen)
++#else
+ int connect(int fd, const struct sockaddr *name, int namelen)
++#endif
+ {
+   struct sockaddr tmpname;
+   int ret, tmpnamelen;
+@@ -1170,7 +1179,11 @@
+ /* ==========================================================================
+  * accept()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int accept(int fd, struct sockaddr *name, socklen_t *namelen)
++#else
+ int accept(int fd, struct sockaddr *name, int *namelen)
++#endif
+ {
+   int ret, fd_kern;
+ 
+@@ -1377,8 +1390,13 @@
+ /* ==========================================================================
+  * sendto()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++ssize_t sendto(int fd, const void * msg, size_t len, int flags,
++	       const struct sockaddr *to, socklen_t to_len)
++#else
+ ssize_t sendto(int fd, const void * msg, size_t len, int flags,
+ 	       const struct sockaddr *to, int to_len)
++#endif
+ {
+ 	return(sendto_timedwait(fd, msg, len, flags, to, to_len, NULL));
+ }
+@@ -1629,8 +1647,13 @@
+ /* ==========================================================================
+  * recvfrom()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++ssize_t recvfrom(int fd, void * buf, size_t len, int flags,
++  struct sockaddr * from, socklen_t * from_len)
++#else
+ ssize_t recvfrom(int fd, void * buf, size_t len, int flags,
+   struct sockaddr * from, int * from_len)
++#endif
+ {
+ 	return(recvfrom_timedwait(fd, buf, len, flags, from, from_len, NULL));
+ }
+@@ -1788,7 +1811,11 @@
+ /* ==========================================================================
+  * setsockopt()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int setsockopt(int fd, int level, int optname, const void * optval, socklen_t optlen)
++#else
+ int setsockopt(int fd, int level, int optname, const void * optval, int optlen)
++#endif
+ {
+    int ret;
+ 
+@@ -1810,7 +1837,11 @@
+ /* ==========================================================================
+  * getsockopt()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int getsockopt(int fd, int level, int optname, void * optval, socklen_t * optlen)
++#else
+ int getsockopt(int fd, int level, int optname, void * optval, int * optlen)
++#endif
+ {
+ 	int ret;
+ 
+@@ -1832,7 +1863,11 @@
+ /* ==========================================================================
+  * getsockname()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int getsockname(int fd, struct sockaddr * name, socklen_t * naddrlen)
++#else
+ int getsockname(int fd, struct sockaddr * name, int * naddrlen)
++#endif
+ {
+ 	int ret;
+ 
+@@ -1854,7 +1889,11 @@
+ /* ==========================================================================
+  * getpeername()
+  */
++#ifdef _OS_HAS_SOCKLEN_T
++int getpeername(int fd, struct sockaddr * peer, socklen_t * paddrlen)
++#else
+ int getpeername(int fd, struct sockaddr * peer, int * paddrlen)
++#endif
+ {
+ 	int ret;
+ 
