@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.155 1998/09/01 21:21:09 mellon Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.156 1998/09/04 10:08:27 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -255,7 +255,7 @@ EXTRACT_SUFX?=		.tar.gz
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
 .if (${OPSYS} == "NetBSD")
-MTREE_FILE=	/etc/mtree/BSD.pkg.dist
+MTREE_FILE=	${PKGSRCDIR}/mk/NetBSD.pkg.dist
 .else
 MTREE_FILE=	/etc/mtree/BSD.local.dist
 .endif
@@ -1070,7 +1070,6 @@ _PORT_USE: .USE
 	@if [ `id -u` = 0 ]; then \
 		if [ ! -f ${MTREE_FILE} ]; then \
 			${ECHO_MSG} "Error: mtree file \"${MTREE_FILE}\" is missing."; \
-			${ECHO_MSG} "Copy it from a suitable location (e.g., /usr/src/etc/mtree) and try again."; \
 			exit 1; \
 		else \
 			if [ ! -d ${PREFIX} ]; then \
