@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/07 11:14:10 wiz Exp $
+
+--- main.cpp.orig	2004-12-10 03:32:00.000000000 +0600
++++ main.cpp
+@@ -30,11 +30,9 @@ int main(int argc, char ** argv)
+ 		     qInstallPathTranslations());
+     app.installTranslator(&qtranslator);
+ 
+-    QString appdir   = app.applicationDirPath();
+     QString filename = QString("qnetwalk_") + QTextCodec::locale();
+     QTranslator translator(&app);
+-    if(!translator.load(filename, appdir + "/translations/"))
+-	translator.load(filename, appdir + "/../share/qnetwalk/translations/");
++	translator.load(filename, "@QNETWALK_TR@");
+     app.installTranslator(&translator);
+ 
+     MainWindow window;
