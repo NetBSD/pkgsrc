@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:07 agc Exp $
+
+SHA1 (openssh-2.5.2p2.tar.gz) = 64f1e350b435217aa55d0e97b4c7460145fd7090
+SHA1 (patch-ah) = 7b84bce66a52ae46d63cdcd915eb8397916f1ecc

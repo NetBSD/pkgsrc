@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:06 agc Exp $
+
+MD5 (nfsBugFerret.tgz) = cdf035724b3748930db304797076887f
+MD5 (nfsShell.c) = 93aa2bb72d679fdf45e784876480dc1f
+SHA1 (patch-aa) = f33808238acc255dbd08b9a26c521a4e78a01b3c
+SHA1 (patch-ab) = 92908f57337c9fd2857720f14027f426809c669a
+SHA1 (patch-ac) = fcf34bf55208f49215a219801b2be5c4ef55eded

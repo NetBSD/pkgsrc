@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:42 agc Exp $
+
+SHA1 (ipw-3.3a.tar.gz) = ca7943d263b9ace3951badeb4189e5aa9c2c8ddd
+SHA1 (patch-aa) = 21f8ca8ed7154833c19273b2a4e026dae5f74119

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:07 agc Exp $
+
+SHA1 (gcombust-0.1.42.tar.gz) = bc6782ae48338fa709eb70f3352c6764180f4b35
+SHA1 (patch-aa) = fa286f135553e7339e2dc97fbb343f68c43114ef

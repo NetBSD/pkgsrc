@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:04 agc Exp $
+
+MD5 (raproxy3.0b1.tar.gz) = 9a61790dfcb5d59a1ab51aef2b8a6c8a
+SHA1 (patch-aa) = 76d9d05a5c5de0549a10f7268672a5d929af8d06
+SHA1 (patch-ab) = 25e1e53b33a77bd80aca047cad14e722c2f282f9

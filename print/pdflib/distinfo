@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:44:04 agc Exp $
+
+MD5 (pdflib-3.03.tar.gz) = 693c76acb8881b554992786e81ada91b
+SHA1 (patch-ab) = c9a54acdc362a1a08d6ce921a231285426bec7ee
+SHA1 (patch-ad) = 00071b5e2e0b3d2284554ebfe246cb7963f23ce8

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:23 agc Exp $
+
+MD5 (sendfile-2.1a.tar.gz) = 436684ea7e76aec5d5ad5e321be06917
+SHA1 (patch-aa) = f50d62076fb4c2f2c0996b87add938e46934afe2
+SHA1 (patch-ab) = c74cf201573068d8e1afa8e285831181d1be789e
+SHA1 (patch-ac) = bd81d52fc1eada9170b48404f6c0d7779acdea84

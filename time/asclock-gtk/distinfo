@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:42 agc Exp $
+
+MD5 (asclock-gtk-2.1.10beta.tar.gz) = afa682d7954cb4d5c443202ffdd04b17
+SHA1 (patch-aa) = 9add6e7862a9cf61be94221fea3c44e6bd630c9b

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:51 agc Exp $
+
+MD5 (dclock.shar.Z) = c02279a04e7ca617b327bc4963920593
+SHA1 (patch-aa) = b246b08dfe0c1980f5488e25df7defd9e7e15ae6
+SHA1 (patch-ab) = a09a39fa57baa92ef50febfb060a0ab50febc4e2
+SHA1 (patch-ac) = 71ea6994b2466ca69a2e5a0b23bd944f94f182be

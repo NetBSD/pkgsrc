@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:24 agc Exp $
+
+MD5 (ngrep-1.39.tar.gz) = e373cc5edf26e96f59245e79c2d12586
+SHA1 (patch-aa) = ddc309b1e1c9e03d36037e81627adabd3bd28bd8

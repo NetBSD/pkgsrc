@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:22 agc Exp $
+
+MD5 (racoon-20010222a.tar.gz) = 9b550b2b909408134b5bd99ec1c81309
+SHA1 (patch-aa) = 586f7bd5129f3be88cb104244fba2b7b13a7b044
+SHA1 (patch-ab) = b4720f139e6fe9451cad50d00549af9b42851883
+SHA1 (patch-ac) = cd59c7c79ecceb04ba6351539c6cef58d48e5fd8
+SHA1 (patch-ad) = d4718088c04c72ccfe34c4b53ec4a2f830600877

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:47 agc Exp $
+
+MD5 (jwhois-2.4.1.tar.gz) = ca4716c2a8eea8d1f11a61d928397637
+SHA1 (patch-aa) = 649e4ff47b7ae8985573cd4bc53954d3cd4d5fe3
+SHA1 (patch-ab) = a96f530ef37c2afb199db5e1fbd21dd01bdaf23d

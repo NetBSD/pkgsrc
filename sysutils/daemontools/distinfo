@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:59 agc Exp $
+
+MD5 (daemontools-0.70.tar.gz) = c88e8c5e4453b4df41571f60eaa0baf3
+MD5 (daemontools-0.70-man.tar.gz) = fe0a7926131cd3ecb9d1b1266ace8f9f

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:27 agc Exp $
+
+SHA1 (Sharity-Light.1.2.tar.gz) = 4a8e93695b1772005e401c2aafbd3f5f70a3b30e
+SHA1 (patch-aa) = 349384306807e8d0e16334a2d9a7e7e0002ef8d1
+SHA1 (patch-ab) = 42c29cb072b38d887231f546a967ebd85b708048
+SHA1 (patch-ac) = 2087a294f04ff2cc4fc4edd1814807e6f01cd949

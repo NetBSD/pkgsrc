@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:15 agc Exp $
+
+MD5 (echoping-4.1.0.tar.gz) = b6bd1e286d617ce284da9ab3914ceff1
+SHA1 (patch-ab) = cc2e8339fe8cede33637f23db6f401e414a6a4c1

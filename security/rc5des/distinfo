@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:24 agc Exp $
+
+MD5 (rc5-mlg-004.tar.gz) = 4a5dc8b25676eaa6902e3d3f30856341
+SHA1 (patch-aa) = cf2eaeb6dcad327b9796fd4ad805af078c3302e2
+SHA1 (patch-ab) = 12346a67da9f227f1a7adf7af8be1060fb888493

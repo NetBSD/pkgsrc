@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:58 agc Exp $
+
+MD5 (libdes-4.04b.tar.gz) = c8d5c69f86c2eedb485583b0305284a1
+SHA1 (patch-aa) = bfd48af9872d6d884d31c119f4e5f3c64f6f9335
+SHA1 (patch-ab) = e5ec4626277b60f103594261f91d7dab2c9938ff
+SHA1 (patch-ac) = a1dc2b3b3726494b1b9f7c210322d2e60dccd621
+SHA1 (patch-ad) = a7f7527afc374489f2449ed6742c974c47bb22b4
+SHA1 (patch-ae) = aad951f81125eba388a7c45e79e46531f1a5c650
+SHA1 (patch-af) = b900ed25fa5d396a500998e803d3eadaa02e3fcb
+SHA1 (patch-ag) = 01e994b91989ba1f5a7cc7327c1edeee932031f2
