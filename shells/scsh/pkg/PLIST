@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/04/12 21:29:50 jtb Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/10/02 11:07:16 seb Exp $
 bin/scsh
 include/scsh.h
 lib/scsh/big/array.scm
@@ -32,7 +32,6 @@ lib/scsh/doc/NEWS
 lib/scsh/doc/RELEASE
 lib/scsh/doc/README
 lib/scsh/doc/scsh-manual/awk.tex
-lib/scsh/doc/scsh-manual/changes.tex
 lib/scsh/doc/scsh-manual/decls.tex
 lib/scsh/doc/scsh-manual/front.tex
 lib/scsh/doc/scsh-manual/intro.tex
@@ -130,8 +129,8 @@ lib/scsh/opt/expand.scm
 lib/scsh/opt/inline.scm
 lib/scsh/opt/tst.scm
 lib/scsh/scsh/rx/cond-package.scm
-lib/scsh/scsh/rx/let-match.scm
 lib/scsh/scsh/rx/loadem.scm
+lib/scsh/scsh/rx/re-match-syntax.scm
 lib/scsh/scsh/rx/modules.scm
 lib/scsh/scsh/rx/oldfuns.scm
 lib/scsh/scsh/rx/packages-old.scm
@@ -152,6 +151,12 @@ lib/scsh/scsh/rx/spencer.scm
 lib/scsh/scsh/rx/test.scm
 lib/scsh/scsh/lib/ccp-pack.scm
 lib/scsh/scsh/lib/ccp.scm
+lib/scsh/scsh/lib/char-package.scm
+lib/scsh/scsh/lib/cset-lib.scm
+lib/scsh/scsh/lib/string-package.scm
+lib/scsh/scsh/lib/cset-obsolete.scm
+lib/scsh/scsh/lib/cset-package.scm
+lib/scsh/scsh/lib/cset-tests.scm
 lib/scsh/scsh/lib/list-lib.scm
 lib/scsh/scsh/lib/list-pack.scm
 lib/scsh/scsh/lib/string-lib.scm
