@@ -1,26 +1,26 @@
-$NetBSD: patch-ab,v 1.3 2003/04/15 00:02:25 heinz Exp $
+$NetBSD: patch-ab,v 1.4 2003/05/22 11:41:03 abs Exp $
 
---- Makefile.PL.orig	Sun Mar 30 03:55:30 2003
-+++ Makefile.PL
-@@ -334,16 +334,17 @@
- 	./configure
+--- binaries.mk.in.orig	2002-12-19 13:19:08.000000000 +0000
++++ binaries.mk.in
+@@ -4,6 +4,7 @@ CFLAGS = @CFLAGS@
+ CCDLFLAGS = @CCDLFLAGS@
  
- inst_cfs: $(PKG_LOCAL_RULES_DIR) $(PKG_LOCAL_RULES_DIR)/local.cf
--	$(MKPATH) $(PKG_DEF_RULES_DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(PKG_DEF_RULES_DIR)
- 	$(RM_RF) $(PKG_DEF_RULES_DIR)/*
- 	$(PERL) build/preprocessor $(FIXVARS) -Irules -O$(PKG_DEF_RULES_DIR) $(RULES)
--	$(CHMOD) $(PERM_RWX) $(PKG_DEF_RULES_DIR)
-+	@ \# $(CHMOD) $(PERM_RWX) $(PKG_DEF_RULES_DIR)
+ LIBS = @LIBS@
++SSLLIBS = @SSLLIBS@
+ LDFLAGS = @LDFLAGS@
+ LDDLFLAGS = @LDDLFLAGS@
  
- $(PKG_LOCAL_RULES_DIR):
--	$(MKPATH) $@
-+	$(BSD_INSTALL_DATA_DIR) $@
+@@ -33,11 +34,11 @@ spamd/libspamc$(SHLIBEXT): $(LIBSPAMC_FI
  
- $(PKG_LOCAL_RULES_DIR)/local.cf: rules/local.cf
--	$(PERL) -e "use File::Copy; (-f '$@') or copy ('$?', '$@');"
-+	@ \# manage local.cf through pkgsrc .mk files
-+	@ \# $(PERL) -e "use File::Copy; (-f '$@') or copy ('$?', '$@');"
+ spamd/sslspamc$(EXE_EXT): $(SPAMC_FILES) $(LIBSPAMC_FILES)
+ 	$(CC) $(SSLCFLAGS) $(CFLAGS) $(SPAMC_FILES) $(LIBSPAMC_FILES) \
+-		-o $@ $(LDFLAGS) $(LIBS)
++		-o $@ $(LDFLAGS) $(SSLLIBS) $(LIBS)
  
- text_html_doc: made-doc-stamp
- 	$(NOOP)
+ spamd/libsslspamc$(SHLIBEXT): $(LIBSPAMC_FILES)
+ 	$(CC) $(SSLCFLAGS) $(CCDLFLAGS) $(LIBSPAMC_FILES) \
+-		-o $@ $(LDDLFLAGS) $(LIBS)
++		-o $@ $(LDDLFLAGS) $(SSLLIBS) $(LIBS)
+ 
+ qmail/qmail-spamc: $(QMAIL_SPAMC_FILES)
+ 	$(CC) $(CFLAGS) $(QMAIL_SPAMC_FILES) \

@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2003/04/15 00:02:26 heinz Exp $
+$NetBSD: patch-ag,v 1.5 2003/05/22 11:41:03 abs Exp $
 
---- tools/check_whitelist.orig	Thu Dec 19 20:05:01 2002
+--- tools/check_whitelist.orig	2002-12-19 19:05:01.000000000 +0000
 +++ tools/check_whitelist
-@@ -5,7 +5,8 @@
+@@ -5,7 +5,8 @@ use Fcntl;
  
  # must match line at top of lib/Mail/SpamAssassin/DBBasedAddrList.pm.
  # now off until 3.0
