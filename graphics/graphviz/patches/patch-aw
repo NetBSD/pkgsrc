@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.7 2004/11/29 22:11:51 seb Exp $
+$NetBSD: patch-aw,v 1.8 2005/03/19 09:13:57 seb Exp $
 
---- doc/Makefile.in.orig	2004-09-14 22:13:00.000000000 +0000
+--- doc/Makefile.in.orig	2005-03-18 11:36:02.000000000 +0000
 +++ doc/Makefile.in
-@@ -169,7 +169,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
+@@ -171,7 +171,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
  SORT = @SORT@
  STRIP = @STRIP@
  TCLINT_INCLUDES = @TCLINT_INCLUDES@
@@ -10,7 +10,7 @@ $NetBSD: patch-aw,v 1.7 2004/11/29 22:11:51 seb Exp $
  TCL_CFLAGS = @TCL_CFLAGS@
  TCL_DEFS = @TCL_DEFS@
  TCL_INCLUDES = @TCL_INCLUDES@
-@@ -195,7 +194,6 @@ TK_VERSION = @TK_VERSION@
+@@ -197,7 +196,6 @@ TK_VERSION = @TK_VERSION@
  TK_XINCLUDES = @TK_XINCLUDES@
  TOP_DIR = @TOP_DIR@
  VERSION = @VERSION@
@@ -18,9 +18,9 @@ $NetBSD: patch-aw,v 1.7 2004/11/29 22:11:51 seb Exp $
  WITH_MYLIBGD_FALSE = @WITH_MYLIBGD_FALSE@
  WITH_MYLIBGD_TRUE = @WITH_MYLIBGD_TRUE@
  WITH_TCL_FALSE = @WITH_TCL_FALSE@
-@@ -268,9 +266,9 @@ SUBDIRS = info
+@@ -270,9 +268,9 @@ SUBDIRS = info
  pdf = dotguide.pdf dottyguide.pdf leftyguide.pdf neatoguide.pdf
- html = build.html FAQ.html binlicense.htm
+ html = build.html FAQ.html index.html
  txt = Dot.ref latex_suggestions.txt
 -pdfdir = $(pkgdatadir)/doc/pdf
 -htmldir = $(pkgdatadir)/doc/html

@@ -1,9 +1,9 @@
-$NetBSD: patch-av,v 1.4 2004/11/29 22:11:51 seb Exp $
+$NetBSD: patch-av,v 1.5 2005/03/19 09:13:57 seb Exp $
 
---- doc/Makefile.am.orig	2004-09-14 18:10:11.000000000 +0000
+--- doc/Makefile.am.orig	2005-01-19 03:09:20.000000000 +0000
 +++ doc/Makefile.am
 @@ -7,9 +7,9 @@ pdf = dotguide.pdf dottyguide.pdf leftyg
- html = build.html FAQ.html binlicense.htm
+ html = build.html FAQ.html index.html
  txt = Dot.ref latex_suggestions.txt
  
 -pdfdir = $(pkgdatadir)/doc/pdf
