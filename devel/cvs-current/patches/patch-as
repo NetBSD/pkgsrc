@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/tag.c.orig	Tue Jul 14 21:59:02 1998
++++ src/tag.c	Tue Apr 20 10:15:05 1999
+@@ -851,7 +851,7 @@
+ 	/* The tags is valid but not mentioned in val-tags.  Add it.  */
+ 	datum value;
+ 
+-	if (noexec)
++	if (nolock)
+ 	{
+ 	    if (db != NULL)
+ 		dbm_close (db);

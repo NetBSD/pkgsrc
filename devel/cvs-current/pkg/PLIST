@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+bin/cvs
+bin/cvsbug
+bin/rcs2log
+@unexec	install-info --delete --info-dir=%D/info	%D/info/cvs.info
+@unexec	install-info --delete --info-dir=%D/info	%D/info/cvsclient.info
+info/cvs.info
+info/cvs.info-1
+info/cvs.info-2
+info/cvs.info-3
+info/cvs.info-4
+info/cvs.info-5
+info/cvs.info-6
+info/cvs.info-7
+info/cvs.info-8
+info/cvs.info-9
+info/cvsclient.info
+info/cvsclient.info-1
+info/cvsclient.info-2
+info/cvsclient.info-3
+@exec	install-info --info-dir=%D/info		%D/info/cvs.info
+@exec	install-info --info-dir=%D/info		%D/info/cvsclient.info
+share/cvs/contrib/README
+share/cvs/contrib/clmerge
+share/cvs/contrib/cln_hist
+share/cvs/contrib/commit_prep
+share/cvs/contrib/cvs_acls
+share/cvs/contrib/cvs2vendor
+share/cvs/contrib/cvscheck
+share/cvs/contrib/cvscheck.man
+share/cvs/contrib/intro.doc
+share/cvs/contrib/log
+share/cvs/contrib/log_accum
+share/cvs/contrib/mfpipe
+share/cvs/contrib/rcs-to-cvs
+share/cvs/contrib/rcs2log
+share/cvs/contrib/rcslock
+share/cvs/contrib/sccs2rcs
+@dirrm share/cvs/contrib
+@dirrm share/cvs
+man/man1/cvs.1
+man/man5/cvs.5
+man/man8/cvsbug.8

@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- Makefile.in.orig	Thu Jan 15 15:45:45 1998
++++ Makefile.in	Thu Mar 19 22:44:33 1998
+@@ -94,7 +94,7 @@
+ 
+ ### Subdirectories to run make in for the primary targets.
+ # Unix source subdirs, where we'll want to run lint and etags:
+-USOURCE_SUBDIRS = lib zlib diff src
++USOURCE_SUBDIRS = lib diff src
+ # All other subdirs:
+ SUBDIRS = ${USOURCE_SUBDIRS} man doc contrib tools \
+ 	windows-NT os2 emx macintosh vms
+@@ -187,21 +187,18 @@
+ .PHONY: check
+ check:
+ 	cd lib ; $(MAKE) $(FLAGS_TO_PASS)
+-	cd zlib ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd diff ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd src ; $(MAKE) $(FLAGS_TO_PASS) check
+ 
+ .PHONY: remotecheck
+ remotecheck:
+ 	cd lib ; $(MAKE) $(FLAGS_TO_PASS)
+-	cd zlib ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd diff ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd src ; $(MAKE) $(FLAGS_TO_PASS) remotecheck
+ 
+ .PHONY: installcheck
+ installcheck:
+ 	cd lib ; $(MAKE) $(FLAGS_TO_PASS)
+-	cd zlib ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd diff ; $(MAKE) $(FLAGS_TO_PASS)
+ 	cd src ; $(MAKE) $(FLAGS_TO_PASS) installcheck
+ 

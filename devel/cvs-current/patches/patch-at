@@ -1,0 +1,20 @@
+$NetBSD: patch-at,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/logmsg.c.orig	Sat Jan 10 12:46:19 1998
++++ src/logmsg.c	Sun May 23 09:32:11 1999
+@@ -587,6 +587,15 @@
+ 				  strlen (str_list) + strlen (p->key) + 5);
+ 		    (void) strcat (str_list, p->key);
+ 		    break;
++		case 't':
++		    str_list =
++			xrealloc (str_list,
++				  (strlen (str_list)
++				   + (li->tag ? strlen (li->tag) : 0)
++				   + 10)
++				  );
++		    (void) strcat (str_list, (li->tag ? li->tag : ""));
++		    break;
+ 		case 'V':
+ 		    str_list =
+ 			xrealloc (str_list,

@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/cvs.h.orig	Sun Jul 26 22:54:11 1998
++++ src/cvs.h	Tue Apr 20 10:15:03 1999
+@@ -383,6 +383,7 @@
+ 
+ extern int trace;		/* Show all commands */
+ extern int noexec;		/* Don't modify disk anywhere */
++extern int nolock;		/* Don't create locks */
+ extern int logoff;		/* Don't write history entry */
+ 
+ extern int top_level_admin;
