@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/14 05:55:18 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/14 07:38:29 jlam Exp $
 
 DISTNAME=	rpm2pkg-1.2
 CATEGORIES=	pkgtools
@@ -28,7 +28,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
 	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/man/man8
 
-.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
 .include "../../misc/rpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
