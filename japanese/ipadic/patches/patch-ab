@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/10 14:47:47 taca Exp $
+$NetBSD: patch-ab,v 1.2 2001/03/23 23:33:13 taca Exp $
 
---- configure.orig	Sat Dec  9 02:04:53 2000
+--- configure.orig	Fri Mar 23 02:51:03 2001
 +++ configure
-@@ -1003,7 +1003,7 @@
+@@ -1059,7 +1059,7 @@
  CHASEN_GENDATA="matrix.cha table.cha chadic.int chadic.pat chadic.ary"
  
  
