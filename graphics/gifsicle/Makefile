@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/29 22:41:17 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/22 00:18:56 jlam Exp $
 #
 
 DISTNAME=	gifsicle-1.29
@@ -9,8 +9,8 @@ MAINTAINER=	ben@wongs.net
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/gifsicle/
 COMMENT=	create, edit, and inspect GIFs from shell
 
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
