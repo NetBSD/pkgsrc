@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/02/23 23:56:32 nathanw Exp $
+
+--- mc68k/Makefile.in.orig	Tue Feb 23 18:33:06 1999
++++ mc68k/Makefile.in	Tue Feb 23 18:33:15 1999
+@@ -283,8 +283,8 @@
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-custom.c: fab_custom.c
+-	$(CC) -o fab_custom $<
++custom.c: fab_custom.o
++	$(CC) -o fab_custom $?
+ 	./fab_custom
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
