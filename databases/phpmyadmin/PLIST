@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/06 13:28:32 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/12/14 20:38:47 adrianp Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -9,6 +9,7 @@ share/doc/phpmyadmin/TODO
 share/doc/phpmyadmin/RELEASE-DATE-${DIST_VERSION}
 share/examples/phpmyadmin/config.inc.php
 share/examples/phpmyadmin/apache.conf
+share/phpmyadmin/ChangeLog
 share/phpmyadmin/Documentation.html
 share/phpmyadmin/browse_foreigners.php
 share/phpmyadmin/calendar.php
@@ -30,6 +31,7 @@ share/phpmyadmin/db_details_importdocsql.php
 share/phpmyadmin/db_details_links.php
 share/phpmyadmin/db_details_qbe.php
 share/phpmyadmin/db_details_structure.php
+share/phpmyadmin/db_operations.php
 share/phpmyadmin/db_printview.php
 share/phpmyadmin/db_search.php
 share/phpmyadmin/export.php
@@ -191,6 +193,7 @@ share/phpmyadmin/libraries/indexes.js
 share/phpmyadmin/libraries/ip_allow_deny.lib.php
 share/phpmyadmin/libraries/kanji-encoding.lib.php
 share/phpmyadmin/libraries/left.js
+share/phpmyadmin/libraries/mcrypt.lib.php
 share/phpmyadmin/libraries/mysql_charsets.lib.php
 share/phpmyadmin/libraries/ob.lib.php
 share/phpmyadmin/libraries/read_dump.lib.php
@@ -206,6 +209,8 @@ share/phpmyadmin/libraries/sqlvalidator.class.php
 share/phpmyadmin/libraries/sqlvalidator.lib.php
 share/phpmyadmin/libraries/string.lib.php
 share/phpmyadmin/libraries/tbl_change.js
+share/phpmyadmin/libraries/tbl_indexes.lib.php
+share/phpmyadmin/libraries/tbl_move_copy.php
 share/phpmyadmin/libraries/transformations.lib.php
 share/phpmyadmin/libraries/transformations/README
 share/phpmyadmin/libraries/transformations/TEMPLATE
@@ -237,6 +242,7 @@ share/phpmyadmin/scripts/convertcfg.pl
 share/phpmyadmin/scripts/create_tables.sql
 share/phpmyadmin/scripts/create_tables_mysql_4_1_2+.sql
 share/phpmyadmin/scripts/upgrade_tables_mysql_4_1_2+.sql
+share/phpmyadmin/server_binlog.php
 share/phpmyadmin/server_collations.php
 share/phpmyadmin/server_common.inc.php
 share/phpmyadmin/server_databases.php
@@ -273,9 +279,7 @@ share/phpmyadmin/themes.php
 share/phpmyadmin/themes/darkblue_orange/css/theme_left.css.php
 share/phpmyadmin/themes/darkblue_orange/css/theme_print.css.php
 share/phpmyadmin/themes/darkblue_orange/css/theme_right.css.php
-share/phpmyadmin/themes/darkblue_orange/img/arrow_ltr.gif
 share/phpmyadmin/themes/darkblue_orange/img/arrow_ltr.png
-share/phpmyadmin/themes/darkblue_orange/img/arrow_rtl.gif
 share/phpmyadmin/themes/darkblue_orange/img/arrow_rtl.png
 share/phpmyadmin/themes/darkblue_orange/img/asc_order.png
 share/phpmyadmin/themes/darkblue_orange/img/b_bookmark.png
@@ -396,9 +400,7 @@ share/phpmyadmin/themes/darkblue_orange/screen.png
 share/phpmyadmin/themes/original/css/theme_left.css.php
 share/phpmyadmin/themes/original/css/theme_print.css.php
 share/phpmyadmin/themes/original/css/theme_right.css.php
-share/phpmyadmin/themes/original/img/arrow_ltr.gif
 share/phpmyadmin/themes/original/img/arrow_ltr.png
-share/phpmyadmin/themes/original/img/arrow_rtl.gif
 share/phpmyadmin/themes/original/img/arrow_rtl.png
 share/phpmyadmin/themes/original/img/asc_order.png
 share/phpmyadmin/themes/original/img/b_bookmark.png
