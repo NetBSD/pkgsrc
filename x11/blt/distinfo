@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:36 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/12/16 07:39:10 jmc Exp $
 
 SHA1 (BLT2.4o.tar.gz) = bcec9ec0ddcf9f49d8f6de6f02e86988af41d2d2
 Size (BLT2.4o.tar.gz) = 1779872 bytes
-SHA1 (patch-aa) = 544b1b3399d4f0d5e56f2648b4fc8cd7c86f701a
-SHA1 (patch-ab) = b928b533c98921c7a001a66b64a3017e525d418a
+SHA1 (patch-aa) = bf5c376b509038037edaf1a756e95876004fdacd
 SHA1 (patch-ac) = 04f4866afc7677fd146fa91e278bf873616d57f4
 SHA1 (patch-ad) = 6a9d78ab895f6ef7625b50a869c11a05c4e2aba6
 SHA1 (patch-ae) = cf881e793e8a9aa385bab39b13bef3a76d0ac092
