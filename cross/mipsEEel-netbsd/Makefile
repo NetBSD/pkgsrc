@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/08/05 15:28:41 kent Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/16 07:28:48 kent Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -45,6 +45,7 @@ GCC_PATCH1=		${_DISTDIR}/gcc-${GCC_VERSION}.EE-linux.patch.bz2
 DISTFILES+=		gcc-ps2linux-0.9.1.patch.bz2
 GCC_PATCH2=		${_DISTDIR}/gcc-ps2linux-0.9.1.patch.bz2
 BUILD_DEPENDS+=		bison:../../devel/bison
+BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 
 
 pre-patch: binutils-patch gcc-patch
