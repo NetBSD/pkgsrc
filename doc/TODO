@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1104 2003/12/03 02:40:47 xtraeme Exp $
+$NetBSD: TODO,v 1.1105 2003/12/03 03:51:49 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o bitlbee-0.81a [xtraeme]
 	o bkedit-0.6.22
 	o blender-2.30
-	o bluefish-0.12
 	o bzflag-1.7g2
 	o centericq-4.9.9
 	o cervisia-2.0
