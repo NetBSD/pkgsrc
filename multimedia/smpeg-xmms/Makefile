@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/06/26 09:16:10 grant Exp $
+# $NetBSD: Makefile,v 1.1 2004/06/26 18:10:20 grant Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
 PKGREVISION=	3
-CATEGORIES=	graphics
+CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/
 
 MAINTAINER=	tech-pkg@NetBSD.org
