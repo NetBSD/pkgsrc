@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/02/17 15:20:47 snj Exp $
+$NetBSD: distinfo,v 1.6 2004/11/26 22:18:27 snj Exp $
 
-SHA1 (qiv-1.9-src.tgz) = 53d298bfc8ec6618f400f6663c69308d41f5ed2c
-Size (qiv-1.9-src.tgz) = 75507 bytes
-SHA1 (patch-aa) = 4c6ab772238b2789bc0e1d245edb3a189a56c93f
+SHA1 (qiv-2.0-src.tgz) = 46eef04c492b9f01d79eab7c2fec78b4edd13550
+Size (qiv-2.0-src.tgz) = 76561 bytes
+SHA1 (patch-aa) = bcf9b2b335db8235e46ec4a85df32cf945b185b5
