@@ -1,27 +1,21 @@
-# Ports collection makefile for:  libnet
-# Date created:			Sun Feb 3, 1999
-# Whom:				shipley@dis.org
-#
+# $NetBSD: Makefile,v 1.2 2000/08/11 08:05:59 itojun Exp $
 # $FreeBSD: ports/net/libnet/Makefile,v 1.8 2000/06/02 22:51:19 kris Exp $
 #
 
-PORTNAME=	libnet
-PORTVERSION=	1.0.1b
+DISTNAME=	libnet-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/
 
-MAINTAINER=	shipley@dis.org
-
-MAN3=		libnet.3
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.packetfactory.net/libnet/
 
 GNU_CONFIGURE=	yes
 
-WRKSRC=         ${WRKDIR}/Libnet-${PORTVERSION}
-MAN3=		libnet.3
+VERSION=	1.0.1b
+WRKSRC=         ${WRKDIR}/Libnet-${VERSION}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/libnet.3 ${PREFIX}/man/man3
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/libnet
 	@${MKDIR} ${PREFIX}/share/doc/libnet/html
 	@${MKDIR} ${PREFIX}/share/doc/libnet/html/examples
@@ -34,6 +28,5 @@ post-install:
 .for i in libnet-example-1.c libnet-example-2.c libnet-example-3.c libnet-example-4.c
 	${INSTALL_DATA} ${WRKSRC}/doc/html/examples/${i} ${PREFIX}/share/doc/libnet/html/examples
 .endfor
-.endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
