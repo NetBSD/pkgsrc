@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/05 23:54:19 xtraeme Exp $
+
+SHA1 (ezm3/ezm3-1.1-src.tar.bz2) = fbca999ef121c7893d3bb7480b538a54f72fad0e
+Size (ezm3/ezm3-1.1-src.tar.bz2) = 10705295 bytes
+SHA1 (ezm3/ezm3-1.1-FreeBSD4-boot.tar.bz2) = db12938fb76f6e8187b30c9c9db6ccf029100238
+Size (ezm3/ezm3-1.1-FreeBSD4-boot.tar.bz2) = 1365809 bytes
+SHA1 (ezm3/ezm3-1.1-NetBSDi386-boot.tar.bz2) = 1a8c10544fadc618012bd0efd7d9267f7b210ccc
+Size (ezm3/ezm3-1.1-NetBSDi386-boot.tar.bz2) = 1375659 bytes
+SHA1 (patch-aa) = fac6afee90c6d5518ccaf4a02e4846917a24136e
