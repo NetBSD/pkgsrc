@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2002/12/16 23:02:32 grant Exp $
+$NetBSD: distinfo,v 1.6 2004/05/15 11:16:45 grant Exp $
 
-SHA1 (plsrc210.tar.gz) = 9783528e23a365ea8e7ac86a3cda0e7034f39682
-Size (plsrc210.tar.gz) = 806288 bytes
-SHA1 (patch-aa) = 9f38da86b131566fdae8524c6bfc8861cf23d1cd
+SHA1 (pl221src.tar.gz) = 01ff416db8a5c1995231ce237e923379cbe6b4dd
+Size (pl221src.tar.gz) = 404260 bytes
+SHA1 (patch-aa) = 87c2cc5fc1f4dc2d684c999ca3e1de9055dafcc3
