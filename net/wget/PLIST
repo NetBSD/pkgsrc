@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/16 11:39:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/08/04 14:27:29 seb Exp $
 bin/wget
 man/man1/wget.1
-@unexec ${INSTALL_INFO} --delete %D/info/wget.info %D/info/dir
 info/wget.info
 info/wget.info-1
 info/wget.info-2
 info/wget.info-3
 info/wget.info-4
-@exec ${INSTALL_INFO} %D/info/wget.info %D/info/dir
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wget.mo
