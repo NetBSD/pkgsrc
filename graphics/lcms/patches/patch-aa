@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/10/25 21:43:21 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2005/01/17 12:11:46 adam Exp $
 
---- include/lcms.h.orig	2004-05-19 04:09:56.000000000 -0500
+--- include/lcms.h.orig	2004-12-13 09:00:59.000000000 +0000
 +++ include/lcms.h
-@@ -73,7 +73,7 @@
+@@ -74,7 +74,7 @@
  
  // Metroworks CodeWarrior
  
