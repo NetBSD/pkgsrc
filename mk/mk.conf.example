@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.204 2001/04/30 14:39:41 agc Exp $
+# $NetBSD: mk.conf.example,v 1.205 2001/05/06 12:48:56 rh Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -748,6 +748,11 @@ PAPERSIZE=	A4
 # for, since it only supports one at a time.
 # Possible: 8, 16, 32
 # Default: 8
+
+#SDL_USE_NAS=
+# Used in SDL package to enable use of the network audio system
+# Possible: defined, not defined
+# Default: not defined
 
 #SDIST_PAWD= pawd
 # If you are using amd you'll want to use pawd instead of pwd to derive
