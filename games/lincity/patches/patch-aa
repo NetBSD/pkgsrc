@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 1998/08/15 13:45:47 frueauf Exp $
+
+--- Makefile.orig	Mon Apr 14 11:13:47 1997
++++ Makefile	Fri Aug  7 05:38:58 1998
+@@ -3,3 +3,3 @@
+ #       This is where the binaries for LinCity will be placed.
+-LC_BINDIR = /usr/local/bin
++LC_BINDIR = $(X11BASE)/bin
+ #          for solaris you might choose...
+@@ -8,3 +8,3 @@
+ #       This is where the library/data files will be placed.
+-LC_LIBDIR = /usr/local/lib/lincity
++LC_LIBDIR = $(X11BASE)/share/lincity
+ #          for solaris you might choose...
+@@ -15,3 +15,3 @@
+ #       This is where the manpage will be placed.
+-LC_MANDIR = /usr/local/man/man6
++LC_MANDIR = $(X11BASE)/man/man6
+ LC_MANSUF = 6
+@@ -31,4 +31,4 @@
+ 
+-LC_XFLAGS = $(CFLAGS) -DLC_X11 
+-LC_XLIBS = -lXExExt -lXext -lX11
++LC_XFLAGS = $(CFLAGS) -I$(X11BASE)/include -DLC_X11 
++LC_XLIBS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lXExExt -lXext -lX11
+ 
+@@ -41,3 +41,3 @@
+ # line if yours is somewhere else.
+-LC_IMAKE_ARGS = -DUseInstalled -I/usr/X11R6/lib/X11/config
++LC_IMAKE_ARGS = -DUseInstalled -I$(X11BASE)/lib/X11/config
+ 
