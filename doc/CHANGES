@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7591 2004/10/28 14:27:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.7592 2004/10/28 14:35:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4935,3 +4935,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gst-plugins-png to 0.8.5 [jmmv 2004-10-28]
 	Updated gst-plugins-theora to 0.8.5 [jmmv 2004-10-28]
 	Updated gst-plugins-vorbis to 0.8.5 [jmmv 2004-10-28]
+	Updated ImageMagick to 6.1.2-3 [adam 2004-10-28]
