@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+
+--- configure.in.orig	Wed Oct 18 02:59:42 2000
++++ configure.in
+@@ -29,6 +29,7 @@
+ AC_SUBST(TRIANGLE_O)
+ AC_SUBST(ALPHA_SINCOS_O)
+ AC_SUBST(GMTLIB)
++AC_SUBST(NETCDF)
+ AC_SUBST(CC_OPT)
+ AC_SUBST(LD_OPT)
+ AC_SUBST(LDFLAGS)
+@@ -58,7 +59,11 @@
+ AC_CHECK_PROG(CSH, csh, csh, bash, )
+ AC_CHECK_PROG(LD, ld, ld, :)
+ AC_CHECK_PROG(AS, as, as, :)
++AC_CHECK_PROG(LIBTOOL, libtool, libtool, :)
+ AC_PROG_INSTALL
++AC_SUBST(INSTALL_PROGRAM)
++AC_SUBST(INSTALL_SCRIPT)
++AC_SUBST(INSTALL_DATA)
+ AC_PROG_AWK
+ AC_PROG_RANLIB
+ dnl
