@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1 2001/02/04 10:39:13 itojun Exp $
+
+--- bin/dnssec//Makefile.in-	Sun Feb  4 19:04:12 2001
++++ bin/dnssec//Makefile.in	Sun Feb  4 19:04:48 2001
+@@ -81,4 +81,4 @@
+ 
+ install:: ${TARGETS} installdirs
+ 	for t in ${TARGETS}; do ${LIBTOOL} ${INSTALL_PROGRAM} $$t ${DESTDIR}${sbindir}; done
+-	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man8; done
++	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man8; done
