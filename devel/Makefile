@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2002/08/25 19:41:41 gson Exp $
+# $NetBSD: Makefile,v 1.308 2002/08/27 08:08:52 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -302,6 +302,7 @@ SUBDIR+=	stooop
 SUBDIR+=	subversion
 SUBDIR+=	swig
 SUBDIR+=	tavrasm
+SUBDIR+=	tclcl
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tmake
