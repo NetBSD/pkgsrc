@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8048 2004/11/27 02:15:32 lukem Exp $
+$NetBSD: CHANGES,v 1.8049 2004/11/27 02:52:17 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.88 [kristerw 2004-11-27]
 	Updated xmess to 0.88 [kristerw 2004-11-27]
 	Updated cvsweb to 3.0.4 [lukem 2004-11-27]
+	Updated verilog-current to 20041004 [dmcmahill 2004-11-26]
