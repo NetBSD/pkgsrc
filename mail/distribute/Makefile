@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/02 10:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/02 11:36:24 agc Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -21,8 +21,6 @@ USE_PERL5=	YES
 WRKSRC=		${WRKDIR}/distribute-pl19
 MAN1=		distribute.1
 DIST_SUBDIR=	distribute
-# Compile time configuration required.
-IS_INTERACTIVE=	YES
 
 # customize below if you would like to
 # mail/majordomo likes this
