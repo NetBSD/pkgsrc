@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/11 11:30:02 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/22 13:09:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -15,8 +15,6 @@ CONFIGURE_SCRIPT=	Configure
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
 		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}" \
 		UVM=${UVM}
-
-MAN1=		top.1
 
 OPSYS!= uname -s
 .if (${OPSYS} == "FreeBSD")

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/03 13:50:58 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/22 13:07:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -17,7 +17,6 @@ DISTFILES=      bash-${V}.tar.gz bash-doc-${V}.tar.gz
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	Yes
-MAN1=		bash.1 bashbug.1
 USE_GTEXINFO=	yes
 
 pre-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/03 13:16:57 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 12:58:34 agc Exp $
 # $FreeBSD Id: Makefile,v 1.2 1997/07/21 19:28:46 max Exp
 #
 
@@ -12,7 +12,6 @@ EXTRACT_SUFX=	.gnutar.gz
 MAINTAINER=	tron@netbsd.org
 
 MAKE_ENV=	PWD=${WRKSRC}
-MAN8=		smbmount.8
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 13:07:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -11,7 +11,6 @@ MAINTAINER= 	packages@netbsd.org
 GNU_CONFIGURE=	yes
 
 ALL_TARGET=	enough
-MAN1=		scsh.1
 MAKE_ENV+=	INSTALL_PROGRAM='${INSTALL_PROGRAM}' \
 		INSTALL_SCRIPT='${INSTALL_SCRIPT}' \
 		INSTALL_DATA='${INSTALL_DATA}'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/06 17:03:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 13:14:31 agc Exp $
 
 DISTNAME=	wwwoffle-2.1c
 CATEGORIES=	www
@@ -9,10 +9,6 @@ MAINTAINER=	magick@bundy.lip.owl.de
 
 USE_GMAKE=	yes
 NO_CONFIGURE=	yes
-
-MAN1=	wwwoffle.1
-MAN5=	wwwoffle.conf.5
-MAN8=	wwwoffled.8
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/wwwoffle.sh \

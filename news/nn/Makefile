@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/05/22 08:51:32 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 13:00:14 agc Exp $
 # $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -11,10 +11,6 @@ MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/ \
 MAINTAINER=     tron@netbsd.org
 
 DEPENDS=	nntpclnt-1.6.1:../../news/nntpclnt
-
-MAN1=		nn.1 nncheck.1 nngoback.1 nngrab.1  nngrep.1 nnpost.1 \
-		nntidy.1 nnacct.1 nnadmin.1 nnstats.1 nnusage.1
-MAN8=		nnmaster.8 nnspew.8
 
 post-extract:
 	@${MV} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/06 23:48:20 tv Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/22 13:14:31 agc Exp $
 #
 
 DISTNAME=       apache_1.3.0
@@ -14,9 +14,6 @@ CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--sbindir=${PREFIX}/sbin --runtimedir=/var/run \
 		--enable-module=most --enable-module=auth_db \
 		--disable-module=auth_dbm --with-perl=${PREFIX}/bin/perl
-
-MAN1=	ab.1 apachectl.1 dbmmanage.1 htdigest.1 htpasswd.1
-MAN8=	apxs.8 httpd.8 logresolve.8 rotatelogs.8
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server

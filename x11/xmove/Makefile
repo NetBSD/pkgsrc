@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:58 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:06 agc Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -10,7 +10,6 @@ MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/xmove
 USE_IMAKE=	yes
-CAT1=		xmove.0 xmovectrl.0
 XMOVEDOCDIR=	${X11BASE}/share/doc/xmove
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/11 16:05:40 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 12:58:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -32,8 +32,6 @@ CONFIGURE_ARGS=	--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 		--with-srvpidfile=/var/run/socks5.pid \
 		--with-srvidtfile=/var/run/socks5.ident \
 		${EXTRA_CONFIGURE_ARGS}
-MAN1=		runsocks.1 socks5.1 stopsocks.1 socks5_clients.1
-MAN5=		libsocks5.conf.5 socks5.conf.5 socks5.passwd.5
 
 post-install:
 	ln -fs ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0

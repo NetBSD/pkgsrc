@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/17 20:59:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 13:04:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-nls --with-media=${PAPERSIZE}
 CONFIGURE_ENV=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAKE_ENV+=		`${CAT} ${PAPER}`
-
-MAN1=			diffpp.1 enscript.1 sliceprint.1 states.1
 
 # If you want to build a static binary, uncomment the following line
 #LDFLAGS+=		-static

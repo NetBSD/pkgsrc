@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/05/26 07:56:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 13:20:57 agc Exp $
 #
 
 DISTNAME=		asclock
@@ -35,8 +35,6 @@ PANEL?=1
 
 USE_X11=	yes
 INSTALL_TARGET=	install install.man
-
-CAT1=		asclock.0
 
 do-configure:
 	cd ${WRKSRC} ; ( ${ECHO} ${LANG} ; ${ECHO} ${PANEL} ) | ./configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/24 09:20:38 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 13:20:58 agc Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -18,8 +18,6 @@ USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --includedir=${LOCALBASE}/include \
 		--libdir=${LOCALBASE}/lib
-
-MAN1=		fvwm95.1
 
 post-install:
 		@${INSTALL_MAN}	${WRKSRC}/fvwm/fvwm95.man \

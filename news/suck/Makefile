@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/04/28 11:05:52 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 13:00:14 agc Exp $
 #
 
 DISTNAME=	suck-3.9.3
@@ -11,8 +11,6 @@ MAINTAINER=	root@garbled.net
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= --prefix=${LOCALBASE}
-
-MAN1=		rpost.1 suck.1 testhost.1 lmove.1
 
 post-patch:
 	@${CAT} ${WRKSRC}/Makefile.in | ${SED} \

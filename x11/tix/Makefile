@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/10 08:02:09 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:02 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -17,15 +17,6 @@ CONFIGURE_ARGS=	--enable-shared --enable-sam \
 		--with-tk="${PREFIX}/include/tk8.0"
 # this should probably be added to bsd.port.mk
 CONFIGURE_ENV+=	PREFIX=${PREFIX}
-MAN1=		tixwish.1
-MANN=		BtnBox.n Balloon.n ChkList.n Destroy.n ComboBox.n Control.n \
-		DItem.n DirDlg.n DirList.n DirTree.n FileBox.n EFileBox.n \
-		EFileDlg.n FileDlg.n FileEnt.n Form.n GetBool.n GetInt.n \
-		Grid.n HList.n InpOnly.n LabEntry.n Meter.n LabFrame.n \
-		ListNBK.n Mwm.n NBFrame.n NoteBook.n SHList.n PopMenu.n \
-		OptMenu.n PanedWin.n SListBox.n SText.n SWindow.n TList.n \
-		Select.n StdBBox.n TixIntro.n Tree.n Utils.n Wm.n compound.n \
-		pixmap.n tix.n
 
 pre-configure:
 	@(cd ${WRKSRC}/.. && \

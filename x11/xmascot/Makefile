@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:58 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 13:21:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/07 19:47:09 max Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=	Nakai@Mlab.t.u-tokyo.ac.jp
 OPSYS!=		uname -s
 
 USE_IMAKE=	yes
-CAT1=		xmascot.0
 
 .if (${OPSYS} != "NetBSD")
 MANCOMPRESSED=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/22 14:22:50 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:06 agc Exp $
 #
 
 DISTNAME=	fvwm-2.0.46
@@ -13,7 +13,6 @@ MAINTAINER=	tron@netbsd.org
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
 USE_IMAKE=	yes
-CAT1= 		xpmroot.0
 
 WRKSRC=		${WRKDIR}/fvwm-2.0.46/xpmroot
 

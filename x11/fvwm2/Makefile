@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/24 09:20:38 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 13:20:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -17,11 +17,6 @@ DEPENDS+=	xpm-3.4j:../../graphics/xpm
 RUN_DEPENDS=	xpmroot:../../x11/xpmroot
 
 USE_IMAKE=	yes
-CAT1= 		FvwmAudio.0 FvwmAuto.0 FvwmBacker.0 FvwmBanner.0 \
-		FvwmButtons.0 FvwmCascade.0 FvwmCpp.0 FvwmForm.0 \
-		FvwmIconBox.0 FvwmIconMan.0 FvwmIdent.0 FvwmM4.0 FvwmPager.0 \
-		FvwmSave.0 FvwmSaveDesk.0 FvwmScroll.0 FvwmTalk.0 FvwmTile.0 \
-		FvwmWinList.0 fvwm2.0
 
 # filenames.
 PATCH_FIXIT=	kits/patch/fix-2.0.46

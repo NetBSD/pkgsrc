@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/04/24 16:12:12 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 12:58:34 agc Exp $
 #
 
 DISTNAME=	rdist-6.1.4
@@ -11,8 +11,6 @@ RDIST6_NAME=	rdist6
 
 INSTALL_TARGET=	install install.man
 MAKE_ENV+=	RDIST6_NAME=${RDIST6_NAME}
-MAN1=		${RDIST6_NAME}.1
-MAN8=		rdistd.8
 
 post-install:
 	@strip ${PREFIX}/bin/${RDIST6_NAME}

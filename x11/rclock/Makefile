@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 13:20:59 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
@@ -17,6 +17,5 @@ CFLAGS+=		'-DMAIL_SPOOL=\"/var/mail/\"'
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 ALL_TARGET=		clock
-MAN1=			rclock.1
 
 .include "../../mk/bsd.pkg.mk"
