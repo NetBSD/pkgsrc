@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 13:41:32 drochner Exp $
+share/mk/bsd.python.mk
