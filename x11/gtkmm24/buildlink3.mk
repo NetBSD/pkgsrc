@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/04 13:55:14 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/12/02 09:24:01 adam Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -25,9 +25,9 @@ BUILDLINK_DEPENDS.gtkmm24+=	gtkmm24>=2.4.4
 BUILDLINK_PKGSRCDIR.gtkmm24?=	../../x11/gtkmm24
 .endif	# GTKMM24_BUILDLINK3_MK
 
-.include "../../devel/libsigc++2/buildlink3.mk"
-.include "../../devel/glibmm24/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glibmm24/buildlink3.mk"
+.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
