@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/27 14:36:01 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/23 11:53:13 jlam Exp $
 #
 
 DISTNAME=	cgilib-0.5
@@ -10,8 +10,8 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://www.infodrom.north.de/cgilib/
 COMMENT=	Common gateway interface library
 
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
-
 USE_RMAN=	yes
 
 .include "../../mk/bsd.prefs.mk"
