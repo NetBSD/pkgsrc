@@ -1,9 +1,9 @@
-# $NetBSD: squirrelmail.conf.dist,v 1.1 2001/02/12 15:15:44 jlam Exp $
+# $NetBSD: squirrelmail.conf.dist,v 1.2 2001/03/14 15:33:48 jlam Exp $
 #
 # SquirrelMail configuration file fragment for Apache
 
 <IfModule mod_alias.c>
-    Alias /mail/ "@SMDIR@/"
+    Alias /squirrelmail/ "@SMDIR@/"
 </IfModule>
 
 <Directory "@SMDIR@">
