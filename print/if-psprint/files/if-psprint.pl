@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl -w
 #
-# $NetBSD: if-psprint.pl,v 1.1.1.1 2000/10/16 12:19:07 abs Exp $
+# $NetBSD: if-psprint.pl,v 1.2 2000/10/17 11:12:37 abs Exp $
 # 
 #	Copyright (c) 2000 David Brownlee <abs@netbsd.org>. All rights
 #	reserved. Provided as-is without express or implied warranties.
@@ -9,36 +9,88 @@
 #	modification, are permitted provided the above copyright and this
 #	notice is retained.
 #
-# Print text, postscript, or native printer language to arbitrary printer,
-# designed as a quick for for the random printers that get hooked up to
-# the NetBSD server and random Windows boxes around the office...
-#
-#  Overview:
-#	- Overloads 'af' entry to contain printer type, and optional location.
-#	  in the form 'type[.model][/smb/smb_dest]'. 'ps' for no gs filter.
-#	- Reads first 1k and calls 'file' to determine filetype.
-#	- Builds a spool command based on filetype:
-#	   - If text and not postscript, use enscript text->postscript
-#	   - If enscripted or postscript, use gs postscript->printer_format
-#	   - Otherwise assumed to be native printer language (its your rope)
-#	- Open pipe to spool command, send first 1k, then rest of data
-#	- requires ghostscript, enscript, and samba if printing to smb hosts
-#
-#  Sample printcap entries: (Remember to create spool dir [sd])
-#
-#	HP deskjet named 'leaves' connected to smb host 'tea'.
-#	(using ghostscript 'hpdj' driver model 'unspec')
-#
-#	  leaves:\	
-#	    :sh:mx=0:if=@PREFIX@/libexec/if-psprint:lf=/var/log/lpd-errs:\
-#	    :lp=/dev/null:sd=/var/spool/lpd/leaves:af=hpdj.unspec/smb/tea/leaves
-#
-#	Canon bubblejet connected to /dev/lpa0 (using gs 'bjc800' driver)
-#
-#	  bubbly:\	
-#	    :sh:mx=0:if=@PREFIX@/libexec/if-psprint:lf=/var/log/lpd-errs:\
-#	    :lp=/dev/lpa0:sd=/var/spool/lpd/bubbly:af=bjc800
-#
+
+=head1 Overview
+
+if-psprint will ssend text, postscript, or native printer language to an
+arbitrary printer.
+
+Designed as a quick fix for the random printers that get hooked up to
+the NetBSD server and random Windows boxes around the office. Uses enscript
+to convert text to postscript, and ghostcript to convert to native printer
+language as required.
+
+=head1 Details
+
+=over 4
+
+=item *
+
+Overloads 'af' entry to contain printer type, and optional location.
+in the form 'type[.model][/smb/smb_dest]'. Use type 'ps' for no gs filter.
+
+=item *
+
+Reads first 1k and calls 'file' to determine filetype.
+
+=item *
+
+Builds a spool command based on filetype:
+
+=over 4
+
+=item *
+
+If text and not postscript, use enscript text->postscript
+
+=item *
+
+If enscripted or postscript, use gs postscript->printer_format
+
+=item *
+
+Otherwise assumed to be native printer language (its your rope)
+
+=back
+
+=item *
+
+Open pipe to spool command, send first 1k, then rest of data
+
+=item *
+
+requires ghostscript, enscript, and samba if printing to smb hosts
+
+=back
+
+=head1 Sample printcap entries
+
+(Remember to create spool dir [sd])
+
+=over 4
+
+=item *
+
+HP deskjet named 'leaves' connected to smb host 'tea'.
+(using ghostscript 'hpdj' driver model 'unspec')
+
+  leaves:\	
+    :if=@PREFIX@/libexec/if-psprint:lf=/var/log/lpd-errs:\
+    :sh:mx=0:lp=/dev/null:sd=/var/spool/lpd/leaves:\
+    :af=hpdj.unspec/smb/tea/leaves:
+
+=item *
+
+Canon bubblejet connected to /dev/lpa0 (using gs 'bjc800' driver)
+
+  bubbly:\	
+    :if=@PREFIX@/libexec/if-psprint:lf=/var/log/lpd-errs:\
+    :sh:mx=0:lp=/dev/lpa0:sd=/var/spool/lpd/bubbly:\
+    :af=bjc800:
+
+=back
+
+=cut
 
 $ENV{'PATH'}="@PREFIX@/bin:/usr/bin:/bin";
 
