@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/03/30 10:48:29 recht Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/18 23:52:02 recht Exp $
 #
 
-DISTNAME=	tla-1.2
-PKGREVISION=	1
+DISTNAME=	tla-1.2.1pre1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gnu-arch/}		\
+MASTER_SITES=	http://release.gnuarch.org/		\
+		${MASTER_SITE_GNU:=gnu-arch/}		\
 		http://regexps.srparish.net/src/tla/	\
 		http://arch.quackerhead.com/~lord/releases/tla/
 
@@ -19,7 +19,7 @@ DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 USE_GNU_TOOLS+=	make
 
-HAS_CONFIGURE=		# defined
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
@@ -28,8 +28,6 @@ CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 HTMLDIR=	${PREFIX}/share/doc/html/arch
-EXAMPLESDIR=	${PREFIX}/share/examples/arch
-LOCALDIR=	${PREFIX}/libexec/arch/local
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -37,7 +35,8 @@ post-extract:
 post-install:
 	# Install arch documentation.
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${CP} -R ${WRKDIR}/${DISTNAME}/src/docs-tla/html/* ${HTMLDIR}
+	cd ${WRKDIR}/${DISTNAME}/src/docs-tla/html && \
+		${PAX} -rwppm . ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HTMLDIR}
 	${CHMOD} -R ugo-w ${HTMLDIR}
 
