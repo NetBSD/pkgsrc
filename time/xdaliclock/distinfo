@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/25 12:06:05 tron Exp $
 
 SHA1 (xdaliclock-2.18.tar.gz) = 7b00a49cd4347b7088a56092cb4910e0d8775d00
 Size (xdaliclock-2.18.tar.gz) = 115041 bytes
 SHA1 (patch-aa) = b01a3035b87348b61b3da5e7506da6b731918b06
+SHA1 (patch-ab) = 1729414a95bde26e8a10607681034c0b22ef1416
