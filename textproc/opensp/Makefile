@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/28 16:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/30 13:57:46 wiz Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -10,10 +10,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://openjade.sourceforge.net/doc-1.4/index.htm
 
 DEPENDS+=	unproven-pthreads-[0-9]*:../../devel/unproven-pthreads
-
-# Sync these with devel/unproven-pthreads
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-m68k
 
 CONFLICTS+=     sp-*
 
