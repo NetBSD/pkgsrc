@@ -1,0 +1,15 @@
+$NetBSD: patch-bg,v 1.1 2000/04/27 14:44:24 mycroft Exp $
+
+--- common.c.orig	Sat Jun  1 08:20:19 1996
++++ common.c	Thu Apr 27 10:09:23 2000
+@@ -204,8 +204,8 @@
+   if (count > (1<<21))
+     {
+       ctl->cmsg(CMSG_FATAL, VERB_NORMAL, 
+-	   "Strange, I feel like allocating %d bytes. This must be a bug.",
+-	   count);
++	   "Strange, I feel like allocating %ld bytes. This must be a bug.",
++	   (long) count);
+     }
+   else if ((p=malloc(count)))
+     return p;
