@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/06 17:04:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/21 17:05:08 jmmv Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -147,7 +147,6 @@ share/${PKGNAME}/langs/natural/miss/english-polish-miss.scm
 share/${PKGNAME}/langs/natural/miss/english-portuguese-miss.scm
 share/${PKGNAME}/langs/natural/miss/english-romanian-miss.scm
 share/${PKGNAME}/langs/natural/miss/english-russian-miss.scm
-share/${PKGNAME}/langs/natural/miss/english-spanish-miss.scm
 share/${PKGNAME}/langs/natural/miss/english-swedish-miss.scm
 share/${PKGNAME}/langs/natural/miss/english-ukrainian-miss.scm
 share/${PKGNAME}/misc/convert/color.pro
@@ -362,6 +361,9 @@ share/${PKGNAME}/packages/header/header-seminar.ts
 share/${PKGNAME}/packages/header/mathematics/header-acmconf.ts
 share/${PKGNAME}/packages/header/mathematics/header-amsart.ts
 share/${PKGNAME}/packages/header/mathematics/header-jsc.ts
+share/${PKGNAME}/packages/header/title-book.ts
+share/${PKGNAME}/packages/header/title-generic.ts
+share/${PKGNAME}/packages/header/title-seminar.ts
 share/${PKGNAME}/packages/number/number-article.ts
 share/${PKGNAME}/packages/number/number-book.ts
 share/${PKGNAME}/packages/number/number-europe.ts
@@ -467,6 +469,7 @@ share/${PKGNAME}/progs/keyboard/russian/translit.scm
 share/${PKGNAME}/progs/keyboard/russian/yawerty.scm
 share/${PKGNAME}/progs/keyboard/wildcards.scm
 share/${PKGNAME}/progs/menu/basic-menus.scm
+share/${PKGNAME}/progs/menu/document-menu.scm
 share/${PKGNAME}/progs/menu/format-menu.scm
 share/${PKGNAME}/progs/menu/icon-menu.scm
 share/${PKGNAME}/progs/menu/insert-menu.scm
@@ -576,7 +579,6 @@ share/doc/TeXmacs/devel/style/keyboard/style-kbd.en.tm
 share/doc/TeXmacs/devel/style/standard/standard.en.tm
 share/doc/TeXmacs/devel/style/style-intro.en.tm
 share/doc/TeXmacs/devel/style/style.en.tm
-share/doc/TeXmacs/english/startup/upgrade-hist.tex
 share/doc/TeXmacs/fdl.txt
 share/doc/TeXmacs/index.en.tm
 share/doc/TeXmacs/main/config/man-config-kbd-modkeys.en.tm
@@ -664,10 +666,6 @@ share/doc/TeXmacs/main/styles/std-dtds/std-list-dtd.en.tm
 share/doc/TeXmacs/main/styles/std-dtds/std-markup-dtd.en.tm
 share/doc/TeXmacs/main/styles/std-dtds/std-math-dtd.en.tm
 share/doc/TeXmacs/main/styles/std-dtds/std-symbol-dtd.en.tm
-share/doc/TeXmacs/main/styles/std-dtds/tmdoc-dtd.en.tm
-share/doc/TeXmacs/main/styles/std-dtds/tmdoc-keyboard-dtd.en.tm
-share/doc/TeXmacs/main/styles/std-dtds/tmdoc-markup-dtd.en.tm
-share/doc/TeXmacs/main/styles/std-dtds/tmdoc-traversal-dtd.en.tm
 share/doc/TeXmacs/main/table/man-advanced-features.en.tm
 share/doc/TeXmacs/main/table/man-alignment.en.tm
 share/doc/TeXmacs/main/table/man-create-table.en.tm
@@ -708,10 +706,6 @@ share/doc/TeXmacs/main/text/man-text.en.tm
 @dirrm share/doc/TeXmacs/main/convert
 @dirrm share/doc/TeXmacs/main/config
 @dirrm share/doc/TeXmacs/main
-@exec ${MKDIR} %D/share/doc/TeXmacs/help
-@dirrm share/doc/TeXmacs/help
-@dirrm share/doc/TeXmacs/english/startup
-@dirrm share/doc/TeXmacs/english
 @dirrm share/doc/TeXmacs/devel/style/standard
 @dirrm share/doc/TeXmacs/devel/style/keyboard
 @dirrm share/doc/TeXmacs/devel/style/design
