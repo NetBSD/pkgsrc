@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/05/19 16:29:08 fredb Exp $
+# $NetBSD: Makefile,v 1.33 2002/05/20 14:04:43 fredb Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	customizable, extensible automatic printer filter
 
+# Any version will do:
+#
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
