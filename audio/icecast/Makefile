@@ -1,49 +1,65 @@
-# $NetBSD: Makefile,v 1.17 2004/01/08 19:58:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/08 20:49:39 xtraeme Exp $
 #
 
-DISTNAME=	icecast-1.3.12
-PKGREVISION=	1
-CATEGORIES=	audio
-MASTER_SITES=	http://www.icecast.org/releases/
+DISTNAME=		icecast-2.0.0
+CATEGORIES=		audio
+MASTER_SITES=		http://www.icecast.org/files/
 
-MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://www.icecast.org/
-COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://www.icecast.org/
+COMMENT=		Live streaming audio server
 
-USE_BUILDLINK2=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 
-RCD_SCRIPTS=		icecast
+LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
+
+BUILD_DEFS+=		ICECAST_CHROOTDIR
+
 PKG_SYSCONFSUBDIR=	icecast
+RCD_SCRIPTS=		icecast
 
-CONFIGURE_ARGS+=	--with-readline \
-			--with-libwrap \
-			--with-python \
-			--sysconfdir=${PKG_SYSCONFDIR}
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
-CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
-CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		${PTHREAD_LDFLAGS}
-LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
-LIBS+=			-lutil
-PTHREAD_OPTS+=		native
+ICECAST_LOGDIR?=	${ICECAST_CHROOTDIR}/log
+
+ICECAST_USER?=		icecast
+ICECAST_GROUP?=		icecast
+
+PKG_GROUPS=		${ICECAST_GROUP}
+PKG_USERS=		${ICECAST_USER}:${ICECAST_GROUP}::Icecast2\\ user
 
 EGDIR=			${PREFIX}/share/examples/icecast
-EGFILES=		groups.aut mounts.aut users.aut icecast.conf
+CONF_FILES=		${EGDIR}/icecast.xml ${PKG_SYSCONFDIR}/icecast.xml
 
-.for f in ${EGFILES}
-CONF_FILES+=		${EGDIR}/${f}.dist ${PKG_SYSCONFDIR}/${f}
+.for D in ${ICECAST_CHROOTDIR} ${ICECAST_LOGDIR}
+OWN_DIRS_PERMS+=	${D} ${ICECAST_USER} ${ICECAST_GROUP} 770
 .endfor
-.undef f
+.undef D
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../lang/python/application.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+post-extract:
+	@${MV} ${WRKSRC}/conf/icecast.xml.in ${WRKSRC}/conf/icecast.fixme
+
+post-install:
+	@( \
+	${SED} \
+		-e "s,@BASEDIR@,${ICECAST_CHROOTDIR},g" \
+		-e "s,@LOGDIR@,log/,g" \
+		-e "s,@WEBROOT@,${PREFIX}/share/icecast/web,g" \
+		-e "s,@ADMINROOT@,${PREFIX}/share/icecast/admin,g" \
+		-e "s,@PIDDIR@,${ICECAST_CHROOTDIR},g" \
+		-e "s,@ICECAST_USER@,${ICECAST_USER},g" \
+		-e "s,@ICECAST_GROUP@,${ICECAST_GROUP},g" \
+		${WRKSRC}/conf/icecast.fixme > ${WRKSRC}/conf/icecast.xml; \
+	${INSTALL_DATA_DIR} ${EGDIR}; \
+	${INSTALL_DATA} ${WRKSRC}/conf/icecast.xml ${EGDIR} \
+	)
+
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../www/curl/buildlink2.mk"
+
 .include "../../mk/pthread.buildlink2.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink2.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
