@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2004/03/26 02:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/14 16:15:30 jmmv Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
-
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
@@ -14,6 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
