@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/12/24 22:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.99 2004/12/25 22:11:26 jlam Exp $
 
 DISTNAME=	openssl-0.9.7e
 SVR4_PKGNAME=	ossl
@@ -55,7 +55,6 @@ CONFIGURE_ARGS+=	irix64-mips4-cc
 
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL="${PERL5}"
-CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 PLIST_OPSYS=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
 .if exists(${PLIST_OPSYS})
