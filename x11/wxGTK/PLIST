@@ -1,30 +1,37 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/31 17:44:21 jmmv Exp $
 bin/wx-config
-bin/wxgtk-config
+bin/wxgtk-2.4-config
 include/wx/accel.h
 include/wx/app.h
 include/wx/arrimpl.cpp
+include/wx/artprov.h
 include/wx/bitmap.h
 include/wx/bmpbuttn.h
 include/wx/brush.h
 include/wx/buffer.h
+include/wx/build.h
 include/wx/busyinfo.h
 include/wx/button.h
 include/wx/calctrl.h
 include/wx/caret.h
 include/wx/checkbox.h
 include/wx/checklst.h
+include/wx/chkconf.h
 include/wx/choicdlg.h
 include/wx/choice.h
 include/wx/clipbrd.h
+include/wx/clntdata.h
 include/wx/cmdline.h
+include/wx/cmdproc.h
 include/wx/cmndata.h
 include/wx/colordlg.h
 include/wx/colour.h
 include/wx/combobox.h
 include/wx/confbase.h
 include/wx/config.h
+include/wx/containr.h
 include/wx/control.h
+include/wx/cshelp.h
 include/wx/ctrlsub.h
 include/wx/cursor.h
 include/wx/dataobj.h
@@ -33,8 +40,11 @@ include/wx/datetime.h
 include/wx/datetime.inl
 include/wx/datstrm.h
 include/wx/db.h
+include/wx/dbgrid.h
+include/wx/dbkeyg.h
 include/wx/dbtable.h
 include/wx/dc.h
+include/wx/dcbuffer.h
 include/wx/dcclient.h
 include/wx/dcmemory.h
 include/wx/dcprint.h
@@ -46,6 +56,7 @@ include/wx/defs.h
 include/wx/dialog.h
 include/wx/dialup.h
 include/wx/dir.h
+include/wx/dirctrl.h
 include/wx/dirdlg.h
 include/wx/dnd.h
 include/wx/docmdi.h
@@ -53,14 +64,19 @@ include/wx/docview.h
 include/wx/dragimag.h
 include/wx/dynarray.h
 include/wx/dynlib.h
+include/wx/dynload.h
+include/wx/effects.h
 include/wx/encconv.h
 include/wx/event.h
 include/wx/expr.h
+include/wx/fdrepdlg.h
+include/wx/features.h
 include/wx/ffile.h
 include/wx/file.h
 include/wx/fileconf.h
 include/wx/filedlg.h
 include/wx/filefn.h
+include/wx/filename.h
 include/wx/filesys.h
 include/wx/font.h
 include/wx/fontdlg.h
@@ -75,38 +91,43 @@ include/wx/fs_zip.h
 include/wx/gauge.h
 include/wx/gdicmn.h
 include/wx/gdiobj.h
+include/wx/generic/accel.h
 include/wx/generic/calctrl.h
 include/wx/generic/caret.h
 include/wx/generic/choicdgg.h
 include/wx/generic/colrdlgg.h
 include/wx/generic/dcpsg.h
+include/wx/generic/dirctrlg.h
 include/wx/generic/dirdlgg.h
 include/wx/generic/dragimgg.h
+include/wx/generic/fdrepdlg.h
 include/wx/generic/filedlgg.h
 include/wx/generic/fontdlgg.h
 include/wx/generic/grid.h
+include/wx/generic/gridctrl.h
 include/wx/generic/gridg.h
 include/wx/generic/helpext.h
 include/wx/generic/helphtml.h
-include/wx/generic/helpwxht.h
-include/wx/generic/helpxlp.h
 include/wx/generic/imaglist.h
 include/wx/generic/laywin.h
 include/wx/generic/listctrl.h
 include/wx/generic/msgdlgg.h
 include/wx/generic/notebook.h
+include/wx/generic/paletteg.h
 include/wx/generic/panelg.h
-include/wx/generic/plot.h
 include/wx/generic/printps.h
 include/wx/generic/prntdlgg.h
 include/wx/generic/progdlgg.h
 include/wx/generic/sashwin.h
 include/wx/generic/scrolwin.h
+include/wx/generic/spinctlg.h
+include/wx/generic/splash.h
 include/wx/generic/splitter.h
 include/wx/generic/statusbr.h
 include/wx/generic/tabg.h
 include/wx/generic/textdlgg.h
-include/wx/generic/treectrl.h
+include/wx/generic/timer.h
+include/wx/generic/treectlg.h
 include/wx/generic/wizard.h
 include/wx/geometry.h
 include/wx/gifdecod.h
@@ -151,13 +172,13 @@ include/wx/gtk/menu.h
 include/wx/gtk/menuitem.h
 include/wx/gtk/minifram.h
 include/wx/gtk/notebook.h
-include/wx/gtk/palette.h
 include/wx/gtk/pen.h
+include/wx/gtk/popupwin.h
 include/wx/gtk/radiobox.h
 include/wx/gtk/radiobut.h
 include/wx/gtk/region.h
 include/wx/gtk/scrolbar.h
-include/wx/gtk/settings.h
+include/wx/gtk/scrolwin.h
 include/wx/gtk/slider.h
 include/wx/gtk/spinbutt.h
 include/wx/gtk/spinctrl.h
@@ -167,18 +188,20 @@ include/wx/gtk/statline.h
 include/wx/gtk/stattext.h
 include/wx/gtk/tbargtk.h
 include/wx/gtk/textctrl.h
+include/wx/gtk/tglbtn.h
 include/wx/gtk/timer.h
 include/wx/gtk/tooltip.h
+include/wx/gtk/toplevel.h
 include/wx/gtk/treectrl.h
 include/wx/gtk/wave.h
 include/wx/gtk/win_gtk.h
 include/wx/gtk/window.h
 include/wx/hash.h
+include/wx/hashmap.h
 include/wx/help.h
 include/wx/helpbase.h
 include/wx/helphtml.h
 include/wx/helpwin.h
-include/wx/helpxlp.h
 include/wx/html/forcelnk.h
 include/wx/html/helpctrl.h
 include/wx/html/helpdata.h
@@ -193,17 +216,21 @@ include/wx/html/htmprint.h
 include/wx/html/m_templ.h
 include/wx/html/winpars.h
 include/wx/icon.h
+include/wx/iconbndl.h
 include/wx/imagbmp.h
 include/wx/image.h
 include/wx/imaggif.h
+include/wx/imagiff.h
 include/wx/imagjpeg.h
 include/wx/imaglist.h
 include/wx/imagpcx.h
 include/wx/imagpng.h
 include/wx/imagpnm.h
 include/wx/imagtiff.h
+include/wx/imagxpm.h
 include/wx/intl.h
 include/wx/ioswrap.h
+include/wx/ipc.h
 include/wx/ipcbase.h
 include/wx/isql.h
 include/wx/isqlext.h
@@ -211,6 +238,7 @@ include/wx/joystick.h
 include/wx/layout.h
 include/wx/laywin.h
 include/wx/list.h
+include/wx/listbase.h
 include/wx/listbox.h
 include/wx/listctrl.h
 include/wx/listimpl.cpp
@@ -220,6 +248,7 @@ include/wx/matrix.h
 include/wx/mdi.h
 include/wx/memconf.h
 include/wx/memory.h
+include/wx/memtext.h
 include/wx/menu.h
 include/wx/menuitem.h
 include/wx/metafile.h
@@ -227,17 +256,18 @@ include/wx/mimetype.h
 include/wx/minifram.h
 include/wx/module.h
 include/wx/msgdlg.h
+include/wx/msgout.h
 include/wx/mstream.h
 include/wx/notebook.h
 include/wx/object.h
-include/wx/objstrm.h
 include/wx/odbc.h
 include/wx/ownerdrw.h
 include/wx/palette.h
 include/wx/panel.h
 include/wx/paper.h
 include/wx/pen.h
-include/wx/plot.h
+include/wx/platform.h
+include/wx/popupwin.h
 include/wx/print.h
 include/wx/printdlg.h
 include/wx/prntbase.h
@@ -252,6 +282,7 @@ include/wx/protocol/http.h
 include/wx/protocol/protocol.h
 include/wx/radiobox.h
 include/wx/radiobut.h
+include/wx/regex.h
 include/wx/region.h
 include/wx/resource.h
 include/wx/sashwin.h
@@ -260,15 +291,16 @@ include/wx/sckipc.h
 include/wx/sckstrm.h
 include/wx/scrolbar.h
 include/wx/scrolwin.h
-include/wx/serbase.h
 include/wx/settings.h
-include/wx/setup.h
 include/wx/sizer.h
 include/wx/slider.h
+include/wx/snglinst.h
 include/wx/socket.h
 include/wx/spinbutt.h
 include/wx/spinctrl.h
+include/wx/splash.h
 include/wx/splitter.h
+include/wx/stack.h
 include/wx/statbmp.h
 include/wx/statbox.h
 include/wx/statline.h
@@ -277,21 +309,28 @@ include/wx/statusbr.h
 include/wx/strconv.h
 include/wx/stream.h
 include/wx/string.h
+include/wx/sysopt.h
 include/wx/tab.h
 include/wx/tabctrl.h
 include/wx/taskbar.h
 include/wx/tbarbase.h
 include/wx/tbarsmpl.h
+include/wx/textbuf.h
 include/wx/textctrl.h
 include/wx/textdlg.h
 include/wx/textfile.h
+include/wx/tglbtn.h
 include/wx/thread.h
+include/wx/thrimpl.cpp
 include/wx/time.h
 include/wx/timer.h
 include/wx/tipdlg.h
+include/wx/tipwin.h
 include/wx/tokenzr.h
 include/wx/toolbar.h
 include/wx/tooltip.h
+include/wx/toplevel.h
+include/wx/treebase.h
 include/wx/treectrl.h
 include/wx/txtstrm.h
 include/wx/types.h
@@ -299,13 +338,16 @@ include/wx/unix/execute.h
 include/wx/unix/fontutil.h
 include/wx/unix/gsockunx.h
 include/wx/unix/mimetype.h
+include/wx/unix/utilsx11.h
 include/wx/url.h
 include/wx/utils.h
 include/wx/valgen.h
 include/wx/validate.h
 include/wx/valtext.h
 include/wx/variant.h
+include/wx/vector.h
 include/wx/version.h
+include/wx/volume.h
 include/wx/wave.h
 include/wx/wfstream.h
 include/wx/window.h
@@ -318,7 +360,7 @@ include/wx/wxchar.h
 include/wx/wxexpr.h
 include/wx/wxhtml.h
 include/wx/wxprec.h
-include/wx/xpmhand.h
+include/wx/xpmdecod.h
 include/wx/zipstrm.h
 include/wx/zstream.h
 lib/libwx_gtk.a
@@ -326,58 +368,66 @@ lib/libwx_gtk.la
 lib/libwx_gtk.so
 lib/libwx_gtk.so.0
 lib/libwx_gtk.so.0.1
-lib/wx/include/wx/gtk/setup.h
+lib/wx/include/gtk-2.4/wx/setup.h
+share/aclocal/wxwin.m4
 share/doc/wx/gtk/LICENSE
-share/doc/wx/gtk/SYMBOLS
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/wxstd.mo
-share/wx/afm/Cour.afm
-share/wx/afm/CourBo.afm
-share/wx/afm/CourBoO.afm
-share/wx/afm/CourO.afm
-share/wx/afm/Helv.afm
-share/wx/afm/HelvBo.afm
-share/wx/afm/HelvBoO.afm
-share/wx/afm/HelvO.afm
-share/wx/afm/TimesBo.afm
-share/wx/afm/TimesBoO.afm
-share/wx/afm/TimesO.afm
-share/wx/afm/TimesRo.afm
-share/wx/afm/Zapf.afm
-share/wx/gs_afm/Cour.afm
-share/wx/gs_afm/CourBo.afm
-share/wx/gs_afm/CourBoO.afm
-share/wx/gs_afm/CourO.afm
-share/wx/gs_afm/Helv.afm
-share/wx/gs_afm/HelvBo.afm
-share/wx/gs_afm/HelvBoO.afm
-share/wx/gs_afm/HelvO.afm
-share/wx/gs_afm/TimesBo.afm
-share/wx/gs_afm/TimesBoO.afm
-share/wx/gs_afm/TimesO.afm
-share/wx/gs_afm/TimesRo.afm
-share/wx/gs_afm/Zapf.afm
-@dirrm share/wx/gs_afm
-@dirrm share/wx/afm
-@dirrm share/wx
+share/wx/2.4/afm/Cour.afm
+share/wx/2.4/afm/CourBo.afm
+share/wx/2.4/afm/CourBoO.afm
+share/wx/2.4/afm/CourO.afm
+share/wx/2.4/afm/Helv.afm
+share/wx/2.4/afm/HelvBo.afm
+share/wx/2.4/afm/HelvBoO.afm
+share/wx/2.4/afm/HelvO.afm
+share/wx/2.4/afm/TimesBo.afm
+share/wx/2.4/afm/TimesBoO.afm
+share/wx/2.4/afm/TimesO.afm
+share/wx/2.4/afm/TimesRo.afm
+share/wx/2.4/afm/Zapf.afm
+share/wx/2.4/gs_afm/Cour.afm
+share/wx/2.4/gs_afm/CourBo.afm
+share/wx/2.4/gs_afm/CourBoO.afm
+share/wx/2.4/gs_afm/CourO.afm
+share/wx/2.4/gs_afm/Helv.afm
+share/wx/2.4/gs_afm/HelvBo.afm
+share/wx/2.4/gs_afm/HelvBoO.afm
+share/wx/2.4/gs_afm/HelvO.afm
+share/wx/2.4/gs_afm/TimesBo.afm
+share/wx/2.4/gs_afm/TimesBoO.afm
+share/wx/2.4/gs_afm/TimesO.afm
+share/wx/2.4/gs_afm/TimesRo.afm
+share/wx/2.4/gs_afm/Zapf.afm
+@dirrm share/wx/2.4/gs_afm
+@dirrm share/wx/2.4/afm
+@dirrm share/wx/2.4
+@unexec ${RMDIR} %D/share/wx 2>/dev/null || ${TRUE}
 @dirrm share/doc/wx/gtk
 @dirrm share/doc/wx
-@dirrm lib/wx/include/wx/gtk
-@dirrm lib/wx/include/wx
-@dirrm lib/wx/include
-@dirrm lib/wx
+@dirrm lib/wx/include/gtk-2.4/wx
+@dirrm lib/wx/include/gtk-2.4
+@unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
 @dirrm include/wx/unix
+@exec ${MKDIR} %D/include/wx/univ
+@dirrm include/wx/univ
 @dirrm include/wx/protocol
 @dirrm include/wx/html
 @dirrm include/wx/gtk
 @dirrm include/wx/generic
-@dirrm include/wx
+@unexec ${RMDIR} %D/include/wx 2>/dev/null || ${TRUE}

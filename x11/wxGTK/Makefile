@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.16 2003/01/10 08:00:21 cjep Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/31 17:44:21 jmmv Exp $
 #
 
-DISTNAME=		wxGTK-2.2.7
-PKGREVISION=		1
+DISTNAME=		wxGTK-2.4.0
 CATEGORIES=		x11
-MASTER_SITES=		ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/source/
+MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/2.4.0/
 
 MAINTAINER=		tsarna@netbsd.org
-HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/
+HOMEPAGE=		http://www.wxwindows.org
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-gtk
@@ -31,7 +29,6 @@ DOCDIR=			${PREFIX}/share/doc/wx/gtk
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DOCDIR}/LICENSE
-	${INSTALL_DATA} ${WRKSRC}/SYMBOLS.txt ${DOCDIR}/SYMBOLS
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
