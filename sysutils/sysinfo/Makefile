@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/31 11:14:31 zuntum Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-*      # only for Solaris, at the moment
 
 ALL_TARGET=		default
 INSTALL_TARGET=		install install.man
-MAKE_ENV+=		CPPFLAGS= CC=${CC}
+MAKE_ENV+=		CPPFLAGS="" CC="${CC}"
 
 post-build:
 	${CHMOD} -R o+rx ${WRKDIR}
