@@ -1,6 +1,5 @@
-$NetBSD: patch-aa,v 1.14 2004/05/02 20:05:53 jmmv Exp $
+$NetBSD: patch-aa,v 1.15 2004/07/09 15:30:16 jmmv Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=139567
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
@@ -23,24 +22,6 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -31049,13 +31050,13 @@ cat >>conftest.$ac_ext <<_ACEOF
- #ifndef RTLD_LAZY
- #  define RTLD_LAZY 0
- #endif
--int pthread_create;
-+int gettext;
- int main () {
-     void *handle, *global, *local;
--    global = &pthread_create;
--    handle = dlopen ("libpthread.so", RTLD_GLOBAL | RTLD_LAZY);
-+    global = &gettext;
-+    handle = dlopen ("libintl.so", RTLD_GLOBAL | RTLD_LAZY);
-     if (!handle) return 0;
--    local = dlsym (handle, "pthread_create");
-+    local = dlsym (handle, "gettext");
-     return global == local;
- }
- _ACEOF
 @@ -31091,6 +31092,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0

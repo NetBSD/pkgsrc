@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/06/04 17:52:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/07/09 15:30:16 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -75,22 +75,22 @@ lib/libglib-2.0.a
 lib/libglib-2.0.la
 lib/libglib-2.0.so
 lib/libglib-2.0.so.400
-lib/libglib-2.0.so.400.2
+lib/libglib-2.0.so.400.4
 lib/libgmodule-2.0.a
 lib/libgmodule-2.0.la
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.400
-lib/libgmodule-2.0.so.400.2
+lib/libgmodule-2.0.so.400.4
 lib/libgobject-2.0.a
 lib/libgobject-2.0.la
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.400
-lib/libgobject-2.0.so.400.2
+lib/libgobject-2.0.so.400.4
 lib/libgthread-2.0.a
 lib/libgthread-2.0.la
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.400
-lib/libgthread-2.0.so.400.2
+lib/libgthread-2.0.so.400.4
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
@@ -101,6 +101,7 @@ man/man1/glib-mkenums.1
 man/man1/gobject-query.1
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
+share/doc/glib/file-name-encodings.png
 share/doc/glib/glib-Arrays.html
 share/doc/glib/glib-Asynchronous-Queues.html
 share/doc/glib/glib-Atomic-Operations.html
@@ -244,6 +245,7 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/glib20.mo
