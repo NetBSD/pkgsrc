@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 12:27:06 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/27 14:01:14 itojun Exp $
 bin/troffcvt
 bin/tblcvt
 bin/tc2null
@@ -32,4 +32,11 @@ lib/troffcvt/rtf-spec-pc
 lib/troffcvt/rtf-spec-pca
 lib/troffcvt/text-specials
 lib/troffcvt/text-8-specials
+man/man1/tblcvt.1
+man/man1/unroff.1
+man/man1/troff2rtf.1
+man/man1/tc2html-toc.1
+man/man1/troff2html.1
+man/man1/tc2html.1
+man/man1/troffcvt.1
 @dirrm lib/troffcvt
