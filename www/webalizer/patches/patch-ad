@@ -1,14 +1,12 @@
-$NetBSD: patch-ad,v 1.6 2000/10/18 16:41:26 mjl Exp $
+$NetBSD: patch-ad,v 1.7 2001/12/01 15:08:03 jlam Exp $
 
---- Makefile.in.orig	Wed Oct 18 18:15:54 2000
-+++ Makefile.in	Wed Oct 18 18:18:05 2000
-@@ -23,8 +23,8 @@
- MANDIR = @mandir@/man1
+--- Makefile.in.orig	Tue Oct 17 00:15:53 2000
++++ Makefile.in
+@@ -24,7 +24,7 @@
  ETCDIR = @ETCDIR@
  CC     = @CC@
--CFLAGS = @CFLAGS@
+ CFLAGS = @CFLAGS@
 -LIBS   = @LIBS@
-+CFLAGS = @CFLAGS@ -DPREFIX=\"${PREFIX}\"
 +LIBS   = @LIBS@ -lpng -ljpeg -lz -lttf -lintl -lXpm -lX11
  DEFS   = -DETCDIR=\"@ETCDIR@\" @DEFS@ @OPTS@
  LDFLAGS= @LDFLAGS@
@@ -18,7 +16,7 @@ $NetBSD: patch-ad,v 1.6 2000/10/18 16:41:26 mjl Exp $
  	$(INSTALL_PROGRAM) webalizer ${BINDIR}/webalizer
  	$(INSTALL_DATA) webalizer.1 ${MANDIR}/webalizer.1
 -	$(INSTALL_DATA) sample.conf ${ETCDIR}/webalizer.conf.sample
-+	$(INSTALL_DATA) sample.conf ${PREFIX}/etc/webalizer.conf.sample
++	$(INSTALL_DATA) sample.conf ${PREFIX}/share/examples/webalizer.conf.sample
  	rm -f ${BINDIR}/webazolver
  	@LN_S@ ${BINDIR}/webalizer ${BINDIR}/webazolver
  

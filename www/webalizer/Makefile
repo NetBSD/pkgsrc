@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/12/01 02:26:24 briggs Exp $
+# $NetBSD: Makefile,v 1.16 2001/12/01 15:08:02 jlam Exp $
 #
 
 DISTNAME=	webalizer-2.01-06-src
@@ -9,26 +9,35 @@ MASTER_SITES=	ftp://ftp.mrunix.net/webalizer/ \
 		http://gd.tuwien.ac.at/infosys/logeval/webalizer/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	mjl@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mrunix.net/webalizer/
 COMMENT=	Web server log file analysis program
 
-DEPENDS+=	gd-1.*:../../graphics/gd
-DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
-WRKSRC=		${WRKDIR}/webalizer-2.01-06
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=  	YES
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-dns
+CONFIGURE_ENV+=		ac_cv_GDLIB=${BUILDLINK_DIR}/include
 
-USE_X11=	yes
-USE_XPM=	yes
-GNU_CONFIGURE=  yes
-CONFIGURE_ARGS=	--with-gd=${LOCALBASE}/include --with-gdlib=${LOCALBASE}/lib \
-		--enable-dns
+EGDIR=		${PREFIX}/share/examples
+CONF_FILES=	${EGDIR}/webalizer.conf.sample ${PKG_SYSCONFDIR}/webalizer.conf
 
-post-patch:
-	@for f in webalizer.1; do \
-		${SED} 's:@@prefix@@:'${PREFIX}':g' ${WRKSRC}/$$f \
-			>${WRKSRC}/$$f.new && \
-		${MV} ${WRKSRC}/$$f.new ${WRKSRC}/$$f; \
+post-build:
+	cd ${WRKSRC}; for file in sample.conf webalizer.1; do		\
+		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
 
+pre-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+
+.include "../../graphics/gd/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
