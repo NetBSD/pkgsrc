@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/22 09:18:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/24 14:45:15 danw Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -547,18 +547,12 @@ lib/ocaml/sys.mli
 lib/ocaml/thread.mli
 lib/ocaml/threadUnix.mli
 lib/ocaml/threads/condition.cmi
-lib/ocaml/threads/condition.cmx
 lib/ocaml/threads/event.cmi
 lib/ocaml/threads/mutex.cmi
 lib/ocaml/threads/thread.cmi
-lib/ocaml/threads/thread.cmx
 lib/ocaml/threads/threadUnix.cmi
-lib/ocaml/threads/threadUnix.cmx
 lib/ocaml/threads/threads.a
 lib/ocaml/threads/threads.cma
-lib/ocaml/threads/threads.cmxa
-lib/ocaml/threads/event.cmx
-lib/ocaml/threads/mutex.cmx
 lib/ocaml/topdirs.cmi
 lib/ocaml/toplevellib.cma
 lib/ocaml/toploop.cmi
