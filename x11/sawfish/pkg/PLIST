@@ -1,0 +1,439 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/01 04:13:30 danw Exp $
+bin/sawfish
+bin/sawfish-capplet
+bin/sawfish-client
+bin/sawfish-themer
+bin/sawfish-ui
+@unexec install-info --delete %D/info/sawfish.info %D/info/dir
+info/sawfish.info
+info/sawfish.info-1
+info/sawfish.info-2
+info/sawfish.info-3
+info/sawfish.info-4
+info/sawfish.info-5
+@exec install-info %D/info/sawfish.info %D/info/dir
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/DOC
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/flippers.la
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gradient.la
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gtk-style
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libflippers.a
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libflippers.so.0.0
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgradient.a
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgradient.so.0.0
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libplay-sample.a
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libplay-sample.so.0.0
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libselection.a
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libselection.so.0.0
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libx.a
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libx.so.0.0
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/play-sample.la
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/sawfish-menu
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/selection.la
+libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/x.la
+@dirrm libexec/sawfish/0.28.1/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/sawfish/0.28.1
+@dirrm libexec/sawfish
+share/control-center/Sawfish/.directory
+share/control-center/Sawfish/appearance-properties.desktop
+share/control-center/Sawfish/bindings-properties.desktop
+share/control-center/Sawfish/focus-properties.desktop
+share/control-center/Sawfish/match-properties.desktop
+share/control-center/Sawfish/maximize-properties.desktop
+share/control-center/Sawfish/misc-properties.desktop
+share/control-center/Sawfish/move-properties.desktop
+share/control-center/Sawfish/placement-properties.desktop
+share/control-center/Sawfish/sound-properties.desktop
+share/control-center/Sawfish/workspace-properties.desktop
+@dirrm share/control-center/Sawfish
+share/gnome/apps/Settings/Sawfish/.directory
+share/gnome/apps/Settings/Sawfish/appearance-properties.desktop
+share/gnome/apps/Settings/Sawfish/bindings-properties.desktop
+share/gnome/apps/Settings/Sawfish/focus-properties.desktop
+share/gnome/apps/Settings/Sawfish/match-properties.desktop
+share/gnome/apps/Settings/Sawfish/maximize-properties.desktop
+share/gnome/apps/Settings/Sawfish/misc-properties.desktop
+share/gnome/apps/Settings/Sawfish/move-properties.desktop
+share/gnome/apps/Settings/Sawfish/placement-properties.desktop
+share/gnome/apps/Settings/Sawfish/sound-properties.desktop
+share/gnome/apps/Settings/Sawfish/workspace-properties.desktop
+@dirrm share/gnome/apps/Settings/Sawfish
+share/gnome/wm-properties/Sawfish.desktop
+share/pixmaps/sawfish-appearance.png
+share/pixmaps/sawfish-edgeflip.png
+share/pixmaps/sawfish-focus.png
+share/pixmaps/sawfish-logo.png
+share/pixmaps/sawfish-matched.png
+share/pixmaps/sawfish-minmax.png
+share/pixmaps/sawfish-misc.png
+share/pixmaps/sawfish-moveresize.png
+share/pixmaps/sawfish-placement.png
+share/pixmaps/sawfish-shortcuts.png
+share/pixmaps/sawfish-tooltips.png
+share/pixmaps/sawfish-workspaces.png
+share/sawfish/0.28.1/lisp/3d-hack.jl
+share/sawfish/0.28.1/lisp/3d-hack.jlc
+share/sawfish/0.28.1/lisp/anim-outline.jl
+share/sawfish/0.28.1/lisp/anim-outline.jlc
+share/sawfish/0.28.1/lisp/audio-events.jl
+share/sawfish/0.28.1/lisp/audio-events.jlc
+share/sawfish/0.28.1/lisp/auto-raise.jl
+share/sawfish/0.28.1/lisp/auto-raise.jlc
+share/sawfish/0.28.1/lisp/autoload.jl
+share/sawfish/0.28.1/lisp/beos-window-menu.jl
+share/sawfish/0.28.1/lisp/beos-window-menu.jlc
+share/sawfish/0.28.1/lisp/compat.jl
+share/sawfish/0.28.1/lisp/compat.jlc
+share/sawfish/0.28.1/lisp/configure.jl
+share/sawfish/0.28.1/lisp/configure.jlc
+share/sawfish/0.28.1/lisp/cursors.jl
+share/sawfish/0.28.1/lisp/cursors.jlc
+share/sawfish/0.28.1/lisp/custom-defaults.jl
+share/sawfish/0.28.1/lisp/custom-defaults.jlc
+share/sawfish/0.28.1/lisp/custom.jl
+share/sawfish/0.28.1/lisp/custom.jlc
+share/sawfish/0.28.1/lisp/customize.jl
+share/sawfish/0.28.1/lisp/customize.jlc
+share/sawfish/0.28.1/lisp/cycle.jl
+share/sawfish/0.28.1/lisp/cycle.jlc
+share/sawfish/0.28.1/lisp/decode-events.jl
+share/sawfish/0.28.1/lisp/decode-events.jlc
+share/sawfish/0.28.1/lisp/describe.jl
+share/sawfish/0.28.1/lisp/describe.jlc
+share/sawfish/0.28.1/lisp/edge-flip.jl
+share/sawfish/0.28.1/lisp/edge-flip.jlc
+share/sawfish/0.28.1/lisp/edges.jl
+share/sawfish/0.28.1/lisp/edges.jlc
+share/sawfish/0.28.1/lisp/error-handler.jl
+share/sawfish/0.28.1/lisp/error-handler.jlc
+share/sawfish/0.28.1/lisp/focus.jl
+share/sawfish/0.28.1/lisp/focus.jlc
+share/sawfish/0.28.1/lisp/frames.jl
+share/sawfish/0.28.1/lisp/frames.jlc
+share/sawfish/0.28.1/lisp/functions.jl
+share/sawfish/0.28.1/lisp/functions.jlc
+share/sawfish/0.28.1/lisp/gnome-commands.jl
+share/sawfish/0.28.1/lisp/gnome-commands.jlc
+share/sawfish/0.28.1/lisp/gnome-int.jl
+share/sawfish/0.28.1/lisp/gnome-int.jlc
+share/sawfish/0.28.1/lisp/gnome-match.jl
+share/sawfish/0.28.1/lisp/gnome-match.jlc
+share/sawfish/0.28.1/lisp/gnome-menu.jl
+share/sawfish/0.28.1/lisp/gnome-menu.jlc
+share/sawfish/0.28.1/lisp/gnome.jl
+share/sawfish/0.28.1/lisp/gnome.jlc
+share/sawfish/0.28.1/lisp/group-funs.jl
+share/sawfish/0.28.1/lisp/group-funs.jlc
+share/sawfish/0.28.1/lisp/groups.jl
+share/sawfish/0.28.1/lisp/groups.jlc
+share/sawfish/0.28.1/lisp/grow-pack.jl
+share/sawfish/0.28.1/lisp/grow-pack.jlc
+share/sawfish/0.28.1/lisp/gtkrc.jl
+share/sawfish/0.28.1/lisp/gtkrc.jlc
+share/sawfish/0.28.1/lisp/help.jl
+share/sawfish/0.28.1/lisp/help.jlc
+share/sawfish/0.28.1/lisp/iconify.jl
+share/sawfish/0.28.1/lisp/iconify.jlc
+share/sawfish/0.28.1/lisp/ignore-window.jl
+share/sawfish/0.28.1/lisp/ignore-window.jlc
+share/sawfish/0.28.1/lisp/keymap.jl
+share/sawfish/0.28.1/lisp/keymap.jlc
+share/sawfish/0.28.1/lisp/keymaps.jl
+share/sawfish/0.28.1/lisp/keymaps.jlc
+share/sawfish/0.28.1/lisp/make-theme-preview.jl
+share/sawfish/0.28.1/lisp/make-theme-preview.jlc
+share/sawfish/0.28.1/lisp/make-theme.jl
+share/sawfish/0.28.1/lisp/make-theme.jlc
+share/sawfish/0.28.1/lisp/match-window.jl
+share/sawfish/0.28.1/lisp/match-window.jlc
+share/sawfish/0.28.1/lisp/maximize.jl
+share/sawfish/0.28.1/lisp/maximize.jlc
+share/sawfish/0.28.1/lisp/menus.jl
+share/sawfish/0.28.1/lisp/menus.jlc
+share/sawfish/0.28.1/lisp/move-cursor.jl
+share/sawfish/0.28.1/lisp/move-cursor.jlc
+share/sawfish/0.28.1/lisp/move-resize.jl
+share/sawfish/0.28.1/lisp/move-resize.jlc
+share/sawfish/0.28.1/lisp/mwm.jl
+share/sawfish/0.28.1/lisp/mwm.jlc
+share/sawfish/0.28.1/lisp/old-window-menu.jl
+share/sawfish/0.28.1/lisp/old-window-menu.jlc
+share/sawfish/0.28.1/lisp/open-look.jl
+share/sawfish/0.28.1/lisp/open-look.jlc
+share/sawfish/0.28.1/lisp/place-window.jl
+share/sawfish/0.28.1/lisp/place-window.jlc
+share/sawfish/0.28.1/lisp/play-audio.jl
+share/sawfish/0.28.1/lisp/play-audio.jlc
+share/sawfish/0.28.1/lisp/prompt-extras.jl
+share/sawfish/0.28.1/lisp/prompt-extras.jlc
+share/sawfish/0.28.1/lisp/prompt-wm.jl
+share/sawfish/0.28.1/lisp/prompt-wm.jlc
+share/sawfish/0.28.1/lisp/prompt.jl
+share/sawfish/0.28.1/lisp/prompt.jlc
+share/sawfish/0.28.1/lisp/raise-commands.jl
+share/sawfish/0.28.1/lisp/raise-commands.jlc
+share/sawfish/0.28.1/lisp/rects.jl
+share/sawfish/0.28.1/lisp/rects.jlc
+share/sawfish/0.28.1/lisp/sawmill-defaults.jl
+share/sawfish/0.28.1/lisp/sawmill-defaults.jlc
+share/sawfish/0.28.1/lisp/sawmill-gaol.jl
+share/sawfish/0.28.1/lisp/sawmill-gaol.jlc
+share/sawfish/0.28.1/lisp/sawmill.jl
+share/sawfish/0.28.1/lisp/sawmill.jlc
+share/sawfish/0.28.1/lisp/select-window.jl
+share/sawfish/0.28.1/lisp/select-window.jlc
+share/sawfish/0.28.1/lisp/server.jl
+share/sawfish/0.28.1/lisp/server.jlc
+share/sawfish/0.28.1/lisp/shade-hover.jl
+share/sawfish/0.28.1/lisp/shade-hover.jlc
+share/sawfish/0.28.1/lisp/shading.jl
+share/sawfish/0.28.1/lisp/shading.jlc
+share/sawfish/0.28.1/lisp/size-window.jl
+share/sawfish/0.28.1/lisp/size-window.jlc
+share/sawfish/0.28.1/lisp/slide-window.jl
+share/sawfish/0.28.1/lisp/slide-window.jlc
+share/sawfish/0.28.1/lisp/sm-common.jl
+share/sawfish/0.28.1/lisp/sm-common.jlc
+share/sawfish/0.28.1/lisp/sm-init.jl
+share/sawfish/0.28.1/lisp/sm-init.jlc
+share/sawfish/0.28.1/lisp/sm-load.jl
+share/sawfish/0.28.1/lisp/sm-load.jlc
+share/sawfish/0.28.1/lisp/sm-save.jl
+share/sawfish/0.28.1/lisp/sm-save.jlc
+share/sawfish/0.28.1/lisp/smart-placement.jl
+share/sawfish/0.28.1/lisp/smart-placement.jlc
+share/sawfish/0.28.1/lisp/stacking.jl
+share/sawfish/0.28.1/lisp/stacking.jlc
+share/sawfish/0.28.1/lisp/tooltips.jl
+share/sawfish/0.28.1/lisp/tooltips.jlc
+share/sawfish/0.28.1/lisp/transient.jl
+share/sawfish/0.28.1/lisp/transient.jlc
+share/sawfish/0.28.1/lisp/viewport-linear.jl
+share/sawfish/0.28.1/lisp/viewport-linear.jlc
+share/sawfish/0.28.1/lisp/viewport.jl
+share/sawfish/0.28.1/lisp/viewport.jlc
+share/sawfish/0.28.1/lisp/window-anim.jl
+share/sawfish/0.28.1/lisp/window-anim.jlc
+share/sawfish/0.28.1/lisp/window-history.jl
+share/sawfish/0.28.1/lisp/window-history.jlc
+share/sawfish/0.28.1/lisp/window-order.jl
+share/sawfish/0.28.1/lisp/window-order.jlc
+share/sawfish/0.28.1/lisp/window-outline.jl
+share/sawfish/0.28.1/lisp/window-outline.jlc
+share/sawfish/0.28.1/lisp/with-output.jl
+share/sawfish/0.28.1/lisp/with-output.jlc
+share/sawfish/0.28.1/lisp/wm-spec.jl
+share/sawfish/0.28.1/lisp/wm-spec.jlc
+share/sawfish/0.28.1/lisp/workspace.jl
+share/sawfish/0.28.1/lisp/workspace.jlc
+share/sawfish/0.28.1/lisp/x-cycle.jl
+share/sawfish/0.28.1/lisp/x-cycle.jlc
+share/sawfish/0.28.1/locale/da/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/de/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/en_GB/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/es/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/fi/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/fr/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/gl/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/ja/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/ko/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/nl/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/pl/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/pt_PT/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/sv/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/locale/tr/LC_MESSAGES/sawfish.mo
+share/sawfish/0.28.1/sounds/activate.wav
+share/sawfish/0.28.1/sounds/clicked.wav
+share/sawfish/0.28.1/sounds/gameover.wav
+share/sawfish/0.28.1/sounds/slide.wav
+share/sawfish/0.28.1/sounds/toggled.wav
+share/sawfish/0.28.1/themer.glade
+share/sawfish/0.28.1/themes/absolute-e/README
+share/sawfish/0.28.1/themes/absolute-e/README.gl
+share/sawfish/0.28.1/themes/absolute-e/README.ja
+share/sawfish/0.28.1/themes/absolute-e/README.pl
+share/sawfish/0.28.1/themes/absolute-e/bar_clicked_active.png
+share/sawfish/0.28.1/themes/absolute-e/bar_hilited_active.png
+share/sawfish/0.28.1/themes/absolute-e/bar_normal.png
+share/sawfish/0.28.1/themes/absolute-e/bar_normal_active.png
+share/sawfish/0.28.1/themes/absolute-e/theme.jl
+share/sawfish/0.28.1/themes/brushed-metal/README
+share/sawfish/0.28.1/themes/brushed-metal/README.gl
+share/sawfish/0.28.1/themes/brushed-metal/README.ja
+share/sawfish/0.28.1/themes/brushed-metal/README.pl
+share/sawfish/0.28.1/themes/brushed-metal/b1-.png
+share/sawfish/0.28.1/themes/brushed-metal/b1.png
+share/sawfish/0.28.1/themes/brushed-metal/b2-.png
+share/sawfish/0.28.1/themes/brushed-metal/b2.png
+share/sawfish/0.28.1/themes/brushed-metal/b3-.png
+share/sawfish/0.28.1/themes/brushed-metal/b3.png
+share/sawfish/0.28.1/themes/brushed-metal/b5-.png
+share/sawfish/0.28.1/themes/brushed-metal/b5.png
+share/sawfish/0.28.1/themes/brushed-metal/b6-.png
+share/sawfish/0.28.1/themes/brushed-metal/b6.png
+share/sawfish/0.28.1/themes/brushed-metal/b7-.png
+share/sawfish/0.28.1/themes/brushed-metal/b7.png
+share/sawfish/0.28.1/themes/brushed-metal/t1-.png
+share/sawfish/0.28.1/themes/brushed-metal/t1-b.png
+share/sawfish/0.28.1/themes/brushed-metal/t1.png
+share/sawfish/0.28.1/themes/brushed-metal/t1b.png
+share/sawfish/0.28.1/themes/brushed-metal/t2-.png
+share/sawfish/0.28.1/themes/brushed-metal/t2.png
+share/sawfish/0.28.1/themes/brushed-metal/t2s-.png
+share/sawfish/0.28.1/themes/brushed-metal/t2s.png
+share/sawfish/0.28.1/themes/brushed-metal/t3-.png
+share/sawfish/0.28.1/themes/brushed-metal/t3-b.png
+share/sawfish/0.28.1/themes/brushed-metal/t3.png
+share/sawfish/0.28.1/themes/brushed-metal/t3b.png
+share/sawfish/0.28.1/themes/brushed-metal/t4-.png
+share/sawfish/0.28.1/themes/brushed-metal/t4-b.png
+share/sawfish/0.28.1/themes/brushed-metal/t4.png
+share/sawfish/0.28.1/themes/brushed-metal/t4b.png
+share/sawfish/0.28.1/themes/brushed-metal/t5-.png
+share/sawfish/0.28.1/themes/brushed-metal/t5-b.png
+share/sawfish/0.28.1/themes/brushed-metal/t5.png
+share/sawfish/0.28.1/themes/brushed-metal/t5b.png
+share/sawfish/0.28.1/themes/brushed-metal/theme.jl
+share/sawfish/0.28.1/themes/gradient/README
+share/sawfish/0.28.1/themes/gradient/README.gl
+share/sawfish/0.28.1/themes/gradient/README.ja
+share/sawfish/0.28.1/themes/gradient/README.pl
+share/sawfish/0.28.1/themes/gradient/as_close-b.png
+share/sawfish/0.28.1/themes/gradient/as_close.png
+share/sawfish/0.28.1/themes/gradient/as_min-b.png
+share/sawfish/0.28.1/themes/gradient/as_min.png
+share/sawfish/0.28.1/themes/gradient/theme.jl
+share/sawfish/0.28.1/themes/gtk/README
+share/sawfish/0.28.1/themes/gtk/README.gl
+share/sawfish/0.28.1/themes/gtk/README.ja
+share/sawfish/0.28.1/themes/gtk/README.pl
+share/sawfish/0.28.1/themes/gtk/as_close-b.png
+share/sawfish/0.28.1/themes/gtk/as_close.png
+share/sawfish/0.28.1/themes/gtk/as_min-b.png
+share/sawfish/0.28.1/themes/gtk/as_min.png
+share/sawfish/0.28.1/themes/gtk/theme.jl
+share/sawfish/0.28.1/themes/microGUI/README
+share/sawfish/0.28.1/themes/microGUI/README.gl
+share/sawfish/0.28.1/themes/microGUI/README.ja
+share/sawfish/0.28.1/themes/microGUI/README.pl
+share/sawfish/0.28.1/themes/microGUI/TODO
+share/sawfish/0.28.1/themes/microGUI/bl.png
+share/sawfish/0.28.1/themes/microGUI/bottom.png
+share/sawfish/0.28.1/themes/microGUI/br.png
+share/sawfish/0.28.1/themes/microGUI/close_active.png
+share/sawfish/0.28.1/themes/microGUI/close_clicked.png
+share/sawfish/0.28.1/themes/microGUI/close_normal.png
+share/sawfish/0.28.1/themes/microGUI/left.png
+share/sawfish/0.28.1/themes/microGUI/maximize_active.png
+share/sawfish/0.28.1/themes/microGUI/maximize_clicked.png
+share/sawfish/0.28.1/themes/microGUI/maximize_normal.png
+share/sawfish/0.28.1/themes/microGUI/menu_active.png
+share/sawfish/0.28.1/themes/microGUI/menu_clicked.png
+share/sawfish/0.28.1/themes/microGUI/menu_normal.png
+share/sawfish/0.28.1/themes/microGUI/minimize_active.png
+share/sawfish/0.28.1/themes/microGUI/minimize_clicked.png
+share/sawfish/0.28.1/themes/microGUI/minimize_normal.png
+share/sawfish/0.28.1/themes/microGUI/right.png
+share/sawfish/0.28.1/themes/microGUI/t_bottom.png
+share/sawfish/0.28.1/themes/microGUI/t_bottom_left.png
+share/sawfish/0.28.1/themes/microGUI/t_bottom_right.png
+share/sawfish/0.28.1/themes/microGUI/t_close_active.png
+share/sawfish/0.28.1/themes/microGUI/t_close_clicked.png
+share/sawfish/0.28.1/themes/microGUI/t_close_normal.png
+share/sawfish/0.28.1/themes/microGUI/t_left.png
+share/sawfish/0.28.1/themes/microGUI/t_right.png
+share/sawfish/0.28.1/themes/microGUI/t_top.png
+share/sawfish/0.28.1/themes/microGUI/t_top_left.png
+share/sawfish/0.28.1/themes/microGUI/t_top_right.png
+share/sawfish/0.28.1/themes/microGUI/theme.jl
+share/sawfish/0.28.1/themes/microGUI/top_blue.png
+share/sawfish/0.28.1/themes/microGUI/top_blue_inactive.png
+share/sawfish/0.28.1/themes/microGUI/top_curves.png
+share/sawfish/0.28.1/themes/microGUI/top_curves_inactive.png
+share/sawfish/0.28.1/themes/microGUI/top_grey.png
+share/sawfish/0.28.1/themes/microGUI/top_left.png
+share/sawfish/0.28.1/themes/microGUI/top_left_inactive.png
+share/sawfish/0.28.1/themes/microGUI/top_left_inactive_s.png
+share/sawfish/0.28.1/themes/microGUI/top_left_s.png
+share/sawfish/0.28.1/themes/microGUI/top_right.png
+share/sawfish/0.28.1/themes/microGUI/top_right_s.png
+share/sawfish/0.28.1/themes/mono/README
+share/sawfish/0.28.1/themes/mono/README.gl
+share/sawfish/0.28.1/themes/mono/README.ja
+share/sawfish/0.28.1/themes/mono/README.pl
+share/sawfish/0.28.1/themes/mono/close-c.png
+share/sawfish/0.28.1/themes/mono/close.png
+share/sawfish/0.28.1/themes/mono/max-c.png
+share/sawfish/0.28.1/themes/mono/max.png
+share/sawfish/0.28.1/themes/mono/menu-c.png
+share/sawfish/0.28.1/themes/mono/menu.png
+share/sawfish/0.28.1/themes/mono/min-c.png
+share/sawfish/0.28.1/themes/mono/min.png
+share/sawfish/0.28.1/themes/mono/restore-c.png
+share/sawfish/0.28.1/themes/mono/restore.png
+share/sawfish/0.28.1/themes/mono/theme.jl
+share/sawfish/0.28.1/themes/simple/README
+share/sawfish/0.28.1/themes/simple/README.gl
+share/sawfish/0.28.1/themes/simple/README.ja
+share/sawfish/0.28.1/themes/simple/README.pl
+share/sawfish/0.28.1/themes/simple/as_close-b.png
+share/sawfish/0.28.1/themes/simple/as_close.png
+share/sawfish/0.28.1/themes/simple/as_min-b.png
+share/sawfish/0.28.1/themes/simple/as_min.png
+share/sawfish/0.28.1/themes/simple/theme.jl
+share/sawfish/0.28.1/themes/smaker/README
+share/sawfish/0.28.1/themes/smaker/README.gl
+share/sawfish/0.28.1/themes/smaker/README.ja
+share/sawfish/0.28.1/themes/smaker/README.pl
+share/sawfish/0.28.1/themes/smaker/bar_clicked_active.png
+share/sawfish/0.28.1/themes/smaker/bar_hilited_active.png
+share/sawfish/0.28.1/themes/smaker/bar_normal.png
+share/sawfish/0.28.1/themes/smaker/bar_normal_active.png
+share/sawfish/0.28.1/themes/smaker/close.png
+share/sawfish/0.28.1/themes/smaker/close_inv.png
+share/sawfish/0.28.1/themes/smaker/min.png
+share/sawfish/0.28.1/themes/smaker/min_inv.png
+share/sawfish/0.28.1/themes/smaker/theme.jl
+@dirrm share/sawfish/0.28.1/lisp
+@dirrm share/sawfish/0.28.1/locale/da/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/da
+@dirrm share/sawfish/0.28.1/locale/de/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/de
+@dirrm share/sawfish/0.28.1/locale/en_GB/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/en_GB
+@dirrm share/sawfish/0.28.1/locale/es/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/es
+@dirrm share/sawfish/0.28.1/locale/fi/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/fi
+@dirrm share/sawfish/0.28.1/locale/fr/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/fr
+@dirrm share/sawfish/0.28.1/locale/gl/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/gl
+@dirrm share/sawfish/0.28.1/locale/ja/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/ja
+@dirrm share/sawfish/0.28.1/locale/ko/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/ko
+@dirrm share/sawfish/0.28.1/locale/nl/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/nl
+@dirrm share/sawfish/0.28.1/locale/pl/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/pl
+@dirrm share/sawfish/0.28.1/locale/pt_PT/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/pt_PT
+@dirrm share/sawfish/0.28.1/locale/sv/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/sv
+@dirrm share/sawfish/0.28.1/locale/tr/LC_MESSAGES
+@dirrm share/sawfish/0.28.1/locale/tr
+@dirrm share/sawfish/0.28.1/locale
+@dirrm share/sawfish/0.28.1/sounds
+@dirrm share/sawfish/0.28.1/themes/absolute-e
+@dirrm share/sawfish/0.28.1/themes/brushed-metal
+@dirrm share/sawfish/0.28.1/themes/gradient
+@dirrm share/sawfish/0.28.1/themes/gtk
+@dirrm share/sawfish/0.28.1/themes/microGUI
+@dirrm share/sawfish/0.28.1/themes/mono
+@dirrm share/sawfish/0.28.1/themes/simple
+@dirrm share/sawfish/0.28.1/themes/smaker
+@dirrm share/sawfish/0.28.1/themes
+@dirrm share/sawfish/0.28.1
+@dirrm share/sawfish/sounds
+@dirrm share/sawfish/themes
+@dirrm share/sawfish
