@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.995 2002/06/23 02:23:23 kei Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.996 2002/06/23 03:15:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -964,7 +964,13 @@ CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
+#
+# CONFIGURE_PREFIX is the argument to the --prefix option passed to the
+# GNU configure script.
+#
+GNU_CONFIGURE_PREFIX?=	${PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
 .  if ${X11PREFIX} == ${LOCALBASE}
 .    if !defined(X11_BUILDLINK_MK)
