@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2002/10/08 14:15:53 martti Exp $
+$NetBSD: distinfo,v 1.7 2002/10/26 14:31:12 drochner Exp $
 
 SHA1 (koffice-1.2.tar.bz2) = 5a959033358a27e8c6e9f02a1d0405fb1bd06b52
 Size (koffice-1.2.tar.bz2) = 9321755 bytes
+SHA1 (patch-aa) = 6be458998e9ca7648b868c4c99a9e104d4780562
