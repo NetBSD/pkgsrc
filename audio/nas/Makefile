@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/04 01:31:55 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/09/13 18:03:30 fredb Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -14,5 +14,12 @@ USE_IMAKE=	# defined
 USE_X11BASE=	# defined
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC=	${PKGDIR}/PLIST.clients
+.if ${MACHINE_ARCH} == "i386"
+PLIST_SRC+=	${PKGDIR}/PLIST.voxware
+.endif
 
 .include "../../mk/bsd.pkg.mk"

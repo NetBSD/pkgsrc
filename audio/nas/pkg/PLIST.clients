@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/08/04 01:31:56 jlam Exp $
+@comment $NetBSD: PLIST.clients,v 1.1 2000/09/13 18:03:31 fredb Exp $
 bin/auconvert
 bin/auctl
 bin/audemo
@@ -14,7 +14,6 @@ bin/autool
 bin/auwave
 bin/checkmail
 bin/issndfile
-bin/nasd
 bin/playbucket
 bin/soundtoh
 include/audio/8svx.h
@@ -53,13 +52,10 @@ man/cat1/auplay.0
 man/cat1/aurecord.0
 man/cat1/auscope.0
 man/cat1/autool.0
-man/cat1/auvoxware.0
 man/cat1/auwave.0
 man/cat1/checkmail.0
 man/cat1/issndfile.0
 man/cat1/nas.0
-man/cat1/nasd.0
-man/cat1/nasd.conf.0
 man/cat1/playbucket.0
 man/cat1/soundtoh.0
 man/cat3/AuAnyEvent.0
@@ -192,6 +188,4 @@ man/cat3/SoundSeekFile.0
 man/cat3/SoundStringToFileFormat.0
 man/cat3/SoundTellFile.0
 man/cat3/SoundWriteFile.0
-share/examples/nas/nasd.conf.eg
-@dirrm share/examples/nas
 @dirrm include/audio
