@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/08/20 17:47:40 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/09/23 14:37:18 wennmach Exp $
 bin/aklog
 bin/amon
 bin/bos
@@ -117,6 +117,5 @@ share/examples/arla/services
 @unexec /bin/rm -rf ${ARLA_CACHE}
 @unexec /bin/rm -f /sbin/mount_xfs
 @dirrm share/examples/arla
-@dirrm lkm
 @dirrm include/rx
 @dirrm include/afs
