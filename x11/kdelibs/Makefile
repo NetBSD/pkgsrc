@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/08/19 15:25:51 agc Exp $
+# $NetBSD: Makefile,v 1.19 1998/08/20 10:05:55 thorpej Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -9,7 +9,6 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/s
 
 MAINTAINER=	tron@netbsd.org
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/libtool:../../devel/libtool
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	qt-1.40:../../x11/qt
 DEPENDS+=	giflib-3.0:../../graphics/giflib
@@ -23,6 +22,7 @@ CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${LOCALBASE}/include -I${LOCALBASE
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
+USE_LIBTOOL=	yes
 LIBTOOL_FLAGS=	 --install-la
 CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
 
