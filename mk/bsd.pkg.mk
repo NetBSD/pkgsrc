@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1122 2003/01/04 21:13:34 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1123 2003/01/04 22:20:47 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3628,38 +3628,43 @@ show-vulnerabilities-html:
 	fi
 
 
+# If PACKAGES is set to the default (../../packages), the current
+# ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
+# structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
+# The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
+# the target used to generate the README.html file.
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${MAKE} ${MAKEFLAGS} build-depends-list PACKAGE_NAME_TYPE=html | ${SORT} -u >> $@.tmp1
-	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=html | ${SORT} -u >> $@.tmp2
-	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
-	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
-	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
-	@${MAKE} ${MAKEFLAGS} show-vulnerabilities-html >> $@.tmp5
-	@[ -s $@.tmp5 ] || ${ECHO} "<I>(no vulnerabilities known)</I>" >> $@.tmp5
-	@${LS} -l ${DISTDIR}/vulnerabilities 2>&1 | ${AWK} 'NF > 7 { printf("at %s %s %s\n", $$6, $$7, $$8) }' >> $@.tmp6
-	@[ -s $@.tmp6 ] || ${ECHO} "<TR><TD><I>(no vulnerabilities list available)</I>" >> $@.tmp6
-	@${SED} -e 's|%%PORT%%|${PKGPATH}|g'				\
-		-e 's|%%PKG%%|${PKGNAME}|'				\
-		${SED_LICENSE_EXPR}					\
-		${SED_HOMEPAGE_EXPR}					\
-		-e '/%%VULNERABILITIES%%/r $@.tmp5'			\
-		-e '/%%VULNERABILITIES%%/d'				\
-		-e '/%%VULDATE%%/r $@.tmp6'				\
-		-e '/%%VULDATE%%/d'					\
-		-e "s/%%COMMENT%%/${COMMENT:S|/|\/|g:Q}/"		\
-		-e '/%%BUILD_DEPENDS%%/r $@.tmp1'			\
-		-e '/%%BUILD_DEPENDS%%/d'				\
-		-e '/%%RUN_DEPENDS%%/r $@.tmp2'				\
-		-e '/%%RUN_DEPENDS%%/d'					\
-		-e '/%%BIN_PKGS%%/r $@.tmp4'				\
-		-e '/%%BIN_PKGS%%/d'					\
-		${README_NAME} >> $@.tmp
-	@${CMP} -s $@.tmp $@ || 					\
-		{ ${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
-		${MV} -f $@.tmp $@; }
-	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp4 $@.tmp5 $@.tmp6
+	@${ENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
+	@if [ -e ${PACKAGES} ]; then					\
+		cd ${PACKAGES};						\
+		case `pwd` in						\
+			${_PKGSRCDIR}/packages)				\
+				MULTIARCH=no;				\
+				;;					\
+			*)						\
+				MULTIARCH=yes;				\
+				;;					\
+		esac;							\
+		cd ${.CURDIR} ;						\
+	fi;								\
+	${AWK} -f ../../mk/scripts/genreadme.awk \
+		builddependsfile=/dev/null \
+		dependsfile=/dev/null \
+		DISTDIR=${DISTDIR} \
+		MACHINE_ARCH=${MACHINE_ARCH} \
+		MULTIARCH=$$MULTIARCH \
+		OPSYS=${OPSYS} \
+		OS_VERSION=${OS_VERSION} \
+		PACKAGES=${PACKAGES} \
+		PKG_SUFX=${PKG_SUFX} \
+		PKG_URL=${PKG_URL} \
+		PKGREPOSITORYSUBDIR=${PKGREPOSITORYSUBDIR} \
+		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||} \
+		TMPDIR=${_TMPREADMEDIR} \
+		SINGLEPKG=${PKGPATH} \
+		$@.tmp1 
+	@${RM} $@.tmp1
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
