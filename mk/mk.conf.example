@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.231 2001/06/12 23:21:05 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.232 2001/06/20 14:32:56 nra Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -943,14 +943,6 @@ PAPERSIZE=	A4
 # set ${PREFIX} to /usr/local.  Use another path in such a case.
 # Possible: any valid path
 # Default: none
-
-#UPCLIENT_LOGIN=
-#UPCLIENT_PASSWORD=
-#UPCLIENT_HOSTID=
-# Used in the net/upclient package to set the login, password and
-# host-id of a host. See http://www.uptimes.net/ for more information!
-# Default: If unset, the package will go interactive, and ask for the
-# data, allowing the password to remain private.
 
 #USE_CANNA=
 # Used in kinput2 and nvi-m17n to enable Canna kana-kanji converter
