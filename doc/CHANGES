@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7769 2004/11/08 15:19:18 wiz Exp $
+$NetBSD: CHANGES,v 1.7770 2004/11/08 15:49:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkballs to 3.1.4 [adam 2004-11-08]
 	Updated ImageViewer to 0.6.3 [adam 2004-11-08]
 	Updated allegro to 4.1.14nb2 [wiz 2004-11-08]
+	Updated cooledit to 3.17.11 [adam 2004-11-08]
