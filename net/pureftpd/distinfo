@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/03/02 23:22:54 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/03/26 08:24:55 martti Exp $
 
-SHA1 (pure-ftpd-1.0.9.tar.bz2) = cf09298bc7f6692d7fa04e28ed4476d2b06f27e2
-Size (pure-ftpd-1.0.9.tar.bz2) = 365958 bytes
+SHA1 (pure-ftpd-1.0.10.tar.bz2) = 01dc926b380b0881181e0e6c6290368e07866309
+Size (pure-ftpd-1.0.10.tar.bz2) = 369940 bytes
