@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.248 2002/06/17 09:51:27 wiz Exp $
+# $NetBSD: Packages.txt,v 1.249 2002/06/17 21:46:04 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -867,8 +867,8 @@ to when dealing with the PLIST file (or files, see below!).
    their file. To handle this case, PLIST will be preprocessed before
    actually used, and the symbol "${MACHINE_ARCH}" will be replaced by
    what "uname -p" gives. The same is done if the string ${MACHINE_GNU_ARCH}
-   is embedded in PLIST somewhere - use this on packages that use GNU
-   autoconfigure.
+   is embedded in PLIST somewhere - use this on packages that have GNU
+   autoconf created configure scripts.
 
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
    the output of "uname -m", but that's no longer supported and has been
@@ -1723,11 +1723,11 @@ debugging aids.
  10 FAQs & features of the package system
  ========================================
 
- 10.1 Packages using GNU autoconfig
- ==================================
+ 10.1 Packages using GNU autoconf
+ ================================
 
-If your package uses GNU autoconf, add the following to your package's
-Makefile:
+If your package uses GNU autoconf created configure scripts, add the following
+to your package's Makefile:
 
 	GNU_CONFIGURE= yes
 
