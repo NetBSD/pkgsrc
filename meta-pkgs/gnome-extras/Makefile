@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2004/10/28 19:20:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/28 22:14:55 jmmv Exp $
 
-DISTNAME=	gnome-extras-2.8.1
+DISTNAME=	gnome-extras-2.8.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,23 +9,23 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for applications related to the GNOME desktop
 
-DEPENDS+=	abiword>=2.0.2:../../editors/abiword
-DEPENDS+=	balsa>=2.0.10:../../mail/balsa2
+DEPENDS+=	abiword>=2.0.14:../../editors/abiword
+DEPENDS+=	balsa>=2.2.6:../../mail/balsa2
 DEPENDS+=	conglomerate>=0.7.12:../../editors/conglomerate
-DEPENDS+=	epiphany-extensions>=1.4.0:../../www/epiphany-extensions
-DEPENDS+=	evolution>=1.4.6:../../mail/evolution
-DEPENDS+=	gaim>=0.77:../../chat/gaim
+DEPENDS+=	epiphany-extensions>=1.4.3:../../www/epiphany-extensions
+DEPENDS+=	evolution>=2.0.3:../../mail/evolution
+DEPENDS+=	gaim>=1.1.0:../../chat/gaim
 DEPENDS+=	glade2>=2.6.0:../../devel/glade2
-DEPENDS+=	gnome>=2.8.1:../../meta-pkgs/gnome
+DEPENDS+=	gnome>=2.8.2:../../meta-pkgs/gnome
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
-DEPENDS+=	gnome-themes-extras>=0.6:../../x11/gnome-themes-extras
-DEPENDS+=	gqview>=1.4.3:../../graphics/gqview
+DEPENDS+=	gnome-themes-extras>=0.7:../../x11/gnome-themes-extras
+DEPENDS+=	gqview>=1.4.5:../../graphics/gqview
 DEPENDS+=	mergeant>=0.12.1:../../databases/mergeant
 DEPENDS+=	pan>=0.14.2:../../news/pan
-DEPENDS+=	rhythmbox>=0.8.6:../../audio/rhythmbox
-DEPENDS+=	seahorse>=0.7.3nb11:../../security/seahorse
+DEPENDS+=	rhythmbox>=0.8.8:../../audio/rhythmbox
+DEPENDS+=	seahorse>=0.7.5:../../security/seahorse
 DEPENDS+=	xcdroast>=0.98a15:../../sysutils/xcdroast
-DEPENDS+=	xchat>=2.0.9:../../chat/xchat2
+DEPENDS+=	xchat>=2.4.1:../../chat/xchat2
 #DEPENDS+=	gnome-games-extra-data-2.8.x
 
 USE_X11=	yes
