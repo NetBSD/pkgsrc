@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/arch/unix/joy.h.orig	Sat May 25 19:22:33 2002
++++ src/arch/unix/joy.h
+@@ -55,6 +55,8 @@ extern int joystick_port_map[2];
+ #define JOYDEV_ANALOG_1     4
+ #define JOYDEV_DIGITAL_0    5
+ #define JOYDEV_DIGITAL_1    6
++#define JOYDEV_USB_0        7
++#define JOYDEV_USB_1        8
+ 
+ #endif
+ 

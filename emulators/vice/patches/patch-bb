@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/arch/unix/Makefile.am.orig	Sun Nov 23 16:09:36 2003
++++ src/arch/unix/Makefile.am
+@@ -36,6 +36,7 @@ libarch_a_SOURCES = \
+ 	icon.h \
+ 	joy.c \
+ 	joy.h \
++	joy_usb.c \
+ 	kbd.h \
+ 	mousedrv.c \
+ 	mousedrv.h \
