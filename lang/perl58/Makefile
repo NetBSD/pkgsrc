@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/04/24 21:04:43 tv Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/24 22:54:45 xtraeme Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -216,13 +216,13 @@ MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
 # unfortunately, hardcoded in quite a few places in Perl.  So let's substitute
 # what pkgsrc said instead.
 post-patch:
-.if ${PKGDIRMODE} != "755"
-.for f in installhtml installman installperl lib/ExtUtils/Install.pm
+.if defined(PKGDIRMODE) && empty(PKGDIRMODE:M755)
+.  for f in installhtml installman installperl lib/ExtUtils/Install.pm
 	cd ${WRKSRC} && \
 		${MV} -f $f $f.dirmode && \
 		${SED} -e 's/755/${PKGDIRMODE}/g;/umask(/d' \
 		$f.dirmode >$f
-.endfor
+.  endfor
 .endif
 
 # It's tough to guess which hints file will be used, so add our modifications
