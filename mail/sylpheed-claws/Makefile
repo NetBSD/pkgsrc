@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/09/03 18:19:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/28 11:38:51 xtraeme Exp $
 #
 
 DISTNAME=	sylpheed-0.9.4claws
+PKGREVISION=	1
 PKGNAME=	sylpheed-claws-0.9.4
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
@@ -13,7 +14,7 @@ COMMENT=	X based e-mail and netnews client
 
 BUILD_USES_MSGFMT=	yes
 
-CONFLICTS=		sylpheed-[0-9]*
+CONFLICTS=		sylpheed-[0-9]* sylpheed-gtk2-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
