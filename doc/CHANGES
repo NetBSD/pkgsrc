@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3261 2003/09/06 03:43:18 kim Exp $
+$NetBSD: CHANGES,v 1.3262 2003/09/06 03:52:55 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3555,3 +3555,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnbcompat to 20030830 [jlam 2003-09-05]
 	Updated p5-Inline to 0.44 [kim 2003-09-06]
 	Updated p5-libapreq to 1.2 [kim 2003-09-06]
+	Updated p5-Apache-Gallery to 0.6 [kim 2003-09-06]
