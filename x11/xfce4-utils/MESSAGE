@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/10/05 09:58:52 martti Exp $
+
+You may want to install one of these packages:
+
+  xscreensaver
+  xlockmore
+  xlockmore-lite
+
+Otherwise you might be unable to lock your screen.
+===========================================================================
