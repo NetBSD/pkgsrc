@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/25 15:07:36 kristerw Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
+USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-aalib
 CONFIGURE_ARGS+=	--disable-motif
