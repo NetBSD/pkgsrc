@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.604 2005/01/26 14:47:39 cube Exp $
+# $NetBSD: Makefile,v 1.605 2005/02/01 19:12:57 jschauma Exp $
 #
 
 COMMENT=	Development utilities
@@ -574,6 +574,7 @@ SUBDIR+=	unidiff
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
+SUBDIR+=	wide
 SUBDIR+=	w32api
 SUBDIR+=	xdelta
 SUBDIR+=	xxgdb
