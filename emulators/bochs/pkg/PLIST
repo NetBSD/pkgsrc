@@ -1,34 +1,32 @@
-@comment $NetBSD: PLIST,v 1.5 2000/09/05 16:55:42 fredb Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/12/14 14:39:46 kei Exp $
 bin/bochs
-share/bochs/doc/00README
-share/bochs/doc/3rdparty.license.html
-share/bochs/doc/DOS.html
-share/bochs/doc/LICENSE
-share/bochs/doc/Linux.html
-share/bochs/doc/Minix.html
-share/bochs/doc/OldWindows95.html
-share/bochs/doc/Windows31.html
-share/bochs/doc/Windows95.html
-share/bochs/doc/changelog.html
-share/bochs/doc/codingguidelines.html
-share/bochs/doc/configure.html
-share/bochs/doc/construction.html
-share/bochs/doc/cosimulation.html
-share/bochs/doc/debugger.html
-share/bochs/doc/developers.html
-share/bochs/doc/faq.html
-share/bochs/doc/features.html
-share/bochs/doc/fpu.html
-share/bochs/doc/guestNT.html
-share/bochs/doc/index.html
-share/bochs/doc/install.html
-share/bochs/doc/instrumentation.html
-share/bochs/doc/licensing.html
-share/bochs/doc/mtools.html
-share/bochs/doc/sound.html
-share/bochs/doc/undercon.gif
-share/bochs/doc/whatisbochs.html
-share/bochs/doc/win32.html
+share/doc/html/bochs/00README
+share/doc/html/bochs/3rdparty.license.html
+share/doc/html/bochs/DOS.html
+share/doc/html/bochs/Linux.html
+share/doc/html/bochs/Minix.html
+share/doc/html/bochs/OldWindows95.html
+share/doc/html/bochs/Windows31.html
+share/doc/html/bochs/Windows95.html
+share/doc/html/bochs/changelog.html
+share/doc/html/bochs/codingguidelines.html
+share/doc/html/bochs/configure.html
+share/doc/html/bochs/construction.html
+share/doc/html/bochs/cosimulation.html
+share/doc/html/bochs/debugger.html
+share/doc/html/bochs/developers.html
+share/doc/html/bochs/faq.html
+share/doc/html/bochs/features.html
+share/doc/html/bochs/fpu.html
+share/doc/html/bochs/guestNT.html
+share/doc/html/bochs/index.html
+share/doc/html/bochs/install.html
+share/doc/html/bochs/instrumentation.html
+share/doc/html/bochs/mtools.html
+share/doc/html/bochs/sound.html
+share/doc/html/bochs/undercon.gif
+share/doc/html/bochs/whatisbochs.html
+share/doc/html/bochs/win32.html
 share/bochs/bios/BIOS-bochs-990925a
 share/bochs/bios/VGABIOS-elpin-2.20
 share/bochs/xfonts/fonts.dir
@@ -36,7 +34,7 @@ share/bochs/xfonts/hercules.bdf
 share/bochs/xfonts/vga.bdf
 share/bochs/xfonts/vga.pcf
 share/bochs/bochsrc
-@dirrm share/bochs/doc
+@dirrm share/doc/html/bochs
 @dirrm share/bochs/bios
 @dirrm share/bochs/xfonts
 @dirrm share/bochs

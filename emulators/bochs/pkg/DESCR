@@ -1,6 +1,10 @@
-Bochs is a portable x86 PC emulation software package that emulates enough
-of the x86 CPU, related AT hardware, and BIOS to run DOS, Windows '95,
-Minix 2.0, and other OS's, all on your workstation. 
+(Quoted from http://www.bochs.com/)
 
-Though Bochs is commercial software, source code for Bochs is available on
-the Internet, provided you abide by the license with the source code.
+The program bochs is a highly portable open source x86 PC emulator
+written in C++, and runs on most popular platforms.  It includes
+emulation of the Intel x86 CPU, common IO devices, and a custom BIOS.
+Currently, bochs can be compiled to emulate a 386, 486 or Pentium CPU.
+Bochs is capable of running most Operating Systems inside the emulation
+including Linux, Windows'95, DOS, and recently Windows NT 4.
+
+Source code for bochs is available by anonymous FTP under the LGPL.
