@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.290 2003/02/21 11:45:34 mycroft Exp $
+$NetBSD: TODO,v 1.291 2003/02/21 11:50:04 martti Exp $
 
 Suggested new packages
 ======================
@@ -219,7 +219,6 @@ Suggested package updates
 	o php4-4.3.1
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
-	o postfix-2.0.4
 	o povray-3.5
 	o pth-2.0 [skrll]
 	o pureftpd-0.13a [pkg/19233]
