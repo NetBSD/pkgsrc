@@ -1,5 +1,4 @@
-/*	$Id: strdup.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $	*/
-/*	$NetBSD: strdup.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $	*/
+/*	$NetBSD: strdup.c,v 1.3 2003/09/06 23:03:05 grant Exp $	*/
 
 /*
  * Copyright (c) 1988, 1993

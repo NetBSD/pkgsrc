@@ -1,4 +1,4 @@
-/* $NetBSD: isblank.c,v 1.3 2003/06/30 15:13:17 grant Exp $ */
+/*	$NetBSD: isblank.c,v 1.4 2003/09/06 23:03:03 grant Exp $	*/
 
 #include "nbcompat.h"
 

@@ -1,4 +1,4 @@
-/*	$Id: err.c,v 1.1.1.1 2003/03/31 05:02:43 grant Exp $	*/
+/*	$NetBSD: err.c,v 1.2 2003/09/06 23:03:01 grant Exp $	*/
 
 /*
  * Copyright 1997-2000 Luke Mewburn <lukem@netbsd.org>.

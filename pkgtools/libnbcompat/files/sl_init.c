@@ -1,5 +1,4 @@
-/*	$Id: sl_init.c,v 1.1.1.1 2003/03/31 05:03:02 grant Exp $	*/
-/*	$NetBSD: sl_init.c,v 1.1.1.1 2003/03/31 05:03:02 grant Exp $	*/
+/*	$NetBSD: sl_init.c,v 1.2 2003/09/06 23:03:04 grant Exp $	*/
 
 /*-
  * Copyright (c) 1994, 1999 The NetBSD Foundation, Inc.
