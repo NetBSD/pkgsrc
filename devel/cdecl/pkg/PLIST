@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/11 12:53:17 agc Exp $
+bin/cdecl
+bin/c++decl
+man/man1/cdecl.1
+man/man1/c++decl.1
+share/doc/cdecl/testset
+share/doc/cdecl/testset++
+@dirrm share/doc/cdecl

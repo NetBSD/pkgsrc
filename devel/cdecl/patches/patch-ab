@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/11 12:53:17 agc Exp $
+
+Small portability mods.
+
+--- Makefile	1999/11/11 12:30:44	1.1
++++ Makefile	1999/11/11 12:32:11
+@@ -15,15 +15,17 @@
+ #
+ # add -DUSE_READLINE	To compile in support for the GNU readline library.
+ 
+-CFLAGS= -s -O2 -DUSE_READLINE
+-CC= gcc
++CFLAGS+= -I${PREFIX}/include -DUSE_READLINE
++CC= gcc
+ LIBS= -lreadline -ltermcap
+ ALLFILES= makefile cdgram.y cdlex.l cdecl.c cdecl.1 testset testset++
+-BINDIR= /usr/bin
+-MANDIR= /usr/man/man1
+-CATDIR= /usr/man/cat1
+-INSTALL= install -c
+-INSTALL_DATA= install -c -m 644
++BINDIR= ${PREFIX}/bin
++MANDIR= ${PREFIX}/man/man1
++CATDIR= ${PREFIX}/man/cat1
++#INSTALL= install -c
++INSTALL_DATA= ${BSD_INSTALL_DATA}
++
++all: cdecl
+ 
+ cdecl: c++decl
+ 	ln c++decl cdecl
+@@ -44,6 +46,7 @@
+ 
+ install: cdecl
+ 	$(INSTALL) cdecl $(BINDIR)
++	rm -f ${BINDIR}/c++decl
+ 	ln $(BINDIR)/cdecl $(BINDIR)/c++decl
+ 	$(INSTALL_DATA) cdecl.1 $(MANDIR)
+ 	$(INSTALL_DATA) c++decl.1 $(MANDIR)
