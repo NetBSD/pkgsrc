@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/10 12:51:48 itojun Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/23 06:50:45 rh Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -18,7 +18,7 @@ BUILD_DEFS+=	USE_INET6
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.0.0rc2
+BIND_VERSION=	9.0.0rc4
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mit-pthreads \
