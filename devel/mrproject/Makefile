@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/23 10:59:08 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/30 22:05:43 agc Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--without-python
 
 CFLAGS+=		-I${BUILDLINK_DIR}/include/gconf/1
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
+
+DEPENDS+=		skill-[0-9]*:../../sysutils/skill
 
 post-extract:
 	# This is an ugly hack to fix the missing file error in 0.5.1
