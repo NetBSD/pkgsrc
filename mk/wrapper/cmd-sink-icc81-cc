@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-icc81-cc,v 1.1 2005/02/16 10:59:03 grant Exp $
+# $NetBSD: cmd-sink-icc81-cc,v 1.2 2005/02/16 11:24:44 grant Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,6 +40,11 @@
 # packages can be used on systems that do not have these libraries
 # available.
 arg=-i-static
+$debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg"
+. $buildcmd
+
+# Always link against the Intel provided C++ runtime library.
+arg=-cxxlib-icc
 $debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg"
 . $buildcmd
 
