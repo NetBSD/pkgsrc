@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.8 2004/03/04 20:54:40 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2004/03/27 04:22:56 jlam Exp $
 
---- src/Makefile.in.orig	Fri Feb 13 16:29:20 2004
+--- src/Makefile.in.orig	Fri Feb 13 10:29:20 2004
 +++ src/Makefile.in
+@@ -146,7 +146,7 @@ target_alias = @target_alias@
+ # some namespace hackery going on that maybe shouldn't be.  Long term fix is to
+ # try and remove naming ocnflicts and fix Automake to allow particular includes
+ # to be attached only to particular object files.  Short term fix is either or.
+-INCLUDES = -I$(top_srcdir)/lib -I$(top_srcdir)/diff -I$(top_srcdir)/zlib $(includeopt)
++INCLUDES = -I$(top_srcdir)/lib -I$(top_srcdir)/diff $(includeopt)
+ 
+ bin_PROGRAMS = cvs
+ bin_SCRIPTS = cvsbug
 @@ -228,7 +228,7 @@ cvs_SOURCES = \
  cvs_LDADD = \
  	../diff/libdiff.a \
