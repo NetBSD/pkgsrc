@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+--- xglyph/Makefile.in.orig	Sat Aug 15 10:02:40 1998
++++ xglyph/Makefile.in	Wed Nov  4 19:37:15 1998
+@@ -15,7 +15,7 @@
+ #
+ # Modified by H.Kakugawa to use libtool
+ 
+-LIBTOOL   = ../libtool
++LIBTOOL   = @LIBTOOL@
+ SHELL     = /bin/sh
+ CC        = @CC@
+ CPP       = @CPP@
+@@ -66,8 +66,8 @@
+ SRCS = \
+ 	xglyph.c \
+ 
+-T1LIB  = ../lib/libt1.la
+-T1LIBX = ../lib/libt1x.la
++T1LIB  = -L${LOCALBASE}/lib -lt1
++T1LIBX = ../lib/.libs/libt1x.a
+ XAWLIB = -lXaw -lXt -lXmu
+ 
+ 
+@@ -76,7 +76,7 @@
+ 
+ xglyph: $(OBJS) ../lib/t1lib.h ../lib/t1libx.h
+ 	$(LIBTOOL) --mode=link \
+-		$(CC) -o xglyph $(OBJS) $(T1LIBX) $(T1LIB) \
++		$(CC) -o xglyph $(OBJS) $(LDFLAGS) $(T1LIBX) $(T1LIB) \
+ 			        $(X_LIBS) $(XAWLIB) $(XLIB) $(LDLIBS)
+ 
+ 
