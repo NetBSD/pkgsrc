@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.41 1999/05/10 04:08:23 sakamoto Exp $
+#	$NetBSD: Makefile,v 1.42 1999/06/15 04:33:11 itojun Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += astrolog
@@ -30,6 +30,7 @@
     SUBDIR += linuxls
     SUBDIR += logsurfer
     SUBDIR += lv
+    SUBDIR += magicpoint
 #   SUBDIR += mmv
     SUBDIR += most
 #   SUBDIR += mshell		# displays nothing, needs debugging - HF
