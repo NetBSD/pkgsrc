@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2001/11/20 15:15:15 martti Exp $
+$NetBSD: patch-aa,v 1.12 2001/12/28 07:22:30 tron Exp $
 
---- Makefile.in.orig	Sun Nov 11 19:09:51 2001
-+++ Makefile.in	Tue Nov 20 15:43:00 2001
+--- Makefile.in.orig	Sun Dec 23 20:03:25 2001
++++ Makefile.in	Fri Dec 28 08:13:29 2001
 @@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
@@ -9,9 +9,9 @@ $NetBSD: patch-aa,v 1.11 2001/11/20 15:15:15 martti Exp $
 -piddir=@localstatedir@/stunnel/
 +piddir=/var/run/
  ssldir=@ssldir@
+ openssl=$(ssldir)/bin/openssl
  PEM_DIR=@PEM_DIR@
- @SET_MAKE@
-@@ -21,7 +21,7 @@
+@@ -24,7 +24,7 @@
  LIBS=@LIBS@
  HEADERS=common.h prototypes.h client.h
  OBJS=client.o stunnel.o ssl.o protocol.o sthreads.o pty.o log.o options.o
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2001/11/20 15:15:15 martti Exp $
  
  WINGCC=i386-mingw32msvc-gcc 
  WINCFLAGS=-O2 -Wall -DUSE_WIN32=1 -DHAVE_OPENSSL=1 -DFD_SETSIZE=4096 -DVERSION=\"@VERSION@\" -I../openssl-0.9.6b/outinc
-@@ -30,7 +30,7 @@
+@@ -33,7 +33,7 @@
  
  # standard external rules
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.11 2001/11/20 15:15:15 martti Exp $
  
  install: all installdirs $(DESTFILES)
  
-@@ -59,7 +59,6 @@
+@@ -62,7 +62,6 @@
  
  installdirs: mkinstalldirs
  	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(PEM_DIR) $(piddir)
