@@ -1,11 +1,23 @@
-$NetBSD: patch-af,v 1.3 1999/12/22 13:25:42 dmcmahill Exp $
+$NetBSD: patch-af,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
 
---- ./routines/pvm/pvm_send.c.orig	Tue May 26 03:41:52 1998
-+++ ./routines/pvm/pvm_send.c	Mon Nov 22 21:40:45 1999
-@@ -18,5 +18,5 @@
- #include <stdlib.h>
- #include <string.h>
--#include "../../pvm3/include/pvm3.h"
-+#include "pvm3.h"
- #include "../machine.h"
- #include "../stack-c.h"
+libtool needs a tag for f77/f2c
+also be sure to link the fortran libs
+
+--- Makemex.in.orig	Tue May  9 06:46:04 2000
++++ Makemex.in	Sun Apr  1 21:44:35 2001
+@@ -20,4 +20,5 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
++FLIBS = @FLIBS@
+ 
+ INCLUDES= -I$(SCIDIR)/routines 
+@@ -30,7 +31,7 @@
+ 
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(QUIET) $(CC) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-FLTCOMPILE = $(LIBTOOL) --mode=compile $(QUIET) $(FC) $(FFLAGS)
++FLTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(QUIET) $(FC) $(FFLAGS)
+ 
+-LINK = $(LIBTOOL) --mode=link $(QUIET)  $(CC) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(QUIET)  $(CC) $(CFLAGS) $(LDFLAGS) $(FLIBS) -o $@
+ 
+ OBJECTS = $(LIBRARY)_gateway.lo $(OTHEROBJECTS:.o=.lo)
