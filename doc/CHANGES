@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5435 2004/04/03 21:37:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.5436 2004/04/04 16:13:29 magick Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1767,3 +1767,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kterm to 6.2.0nb7 [taca 2004-04-03]
 	Updated nvi-m17n to 1.79.19991117nb2 [yamt 2004-04-03]
 	Updated gst-plugins to 0.8.0nb1 [jmmv 2004-04-03]
+	Updated xemacs-current to 21.5.17 [magick 2004-04-04]
