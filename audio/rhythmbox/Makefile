@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 17:44:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/26 11:54:45 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.6.5
@@ -31,7 +31,7 @@ GCONF2_SCHEMAS=		rhythmbox.schemas
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../misc/gstreamer/buildlink2.mk"
+.include "../../multimedia/gstreamer/buildlink2.mk"
 .include "../../misc/gst-plugins/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"

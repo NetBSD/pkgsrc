@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/01/03 18:49:34 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/01/26 11:54:45 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gnome-media.
 #
@@ -19,8 +19,8 @@ BUILDLINK_FILES.gnome-media+=	lib/bonobo/servers/GNOME_Media_CDDBSlave2.server
 BUILDLINK_FILES.gnome-media+=	lib/libcddb-slave2.*
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../gnome-2.4/gst-plugins/buildlink2.mk"
-.include "../../gnome-2.4/gstreamer/buildlink2.mk"
+.include "../../multimedia/gst-plugins/buildlink2.mk"
+.include "../../multimedia/gstreamer/buildlink2.mk"
 .include "../../devel/GConf2-ui/buildlink2.mk"
 .include "../../devel/gail/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
