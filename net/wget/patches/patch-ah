@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2002/12/16 16:14:06 drochner Exp $
+
+--- configure.orig	Mon Dec 16 17:06:11 2002
++++ configure	Mon Dec 16 17:07:42 2002
+@@ -7178,7 +7178,7 @@
+   wget_save_LDFLAGS=$LDFLAGS
+   wget_save_CPPFLAGS=$CPPFLAGS
+ 
+-      CC="$SHELL ./libtool $CC"
++#      CC="$SHELL ./libtool $CC"
+ 
+             echo $ac_n "checking for dlopen in -ldl""... $ac_c" 1>&6
+ echo "configure:7185: checking for dlopen in -ldl" >&5
