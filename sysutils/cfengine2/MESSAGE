@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/08/18 23:03:44 ben Exp $
+
+To set up cfengine, install sysutils/cfengine2-doc and see:
+
+${PREFIX}/share/doc/html/cfengine/cfengine-Tutorial.html
+
+At a minimum, you will need:
+
+1. /var/cfengine/inputs/update.conf
+
+2. Manually add the "cfengine" service to /etc/services or
+   automate it in /var/cfengine/inputs/cfagent.conf:
+
+editfiles: 
+ 
+ { /etc/services 
+   
+   Backup "false"
+   AppendIfNoSuchLine "cfengine 5308/tcp # CFengine"
+ }
+
+
+===========================================================================
