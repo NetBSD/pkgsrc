@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/10 06:47:41 minskim Exp $
 #
 
 DISTNAME=		nabi-0.12
@@ -14,6 +14,12 @@ USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
+
+SUBST_CLASSES+=		options
+SUBST_MESSAGE.options=	"Removing incompatible compiler options."
+SUBST_STAGE.options=	post-patch
+SUBST_FILES.options=	IMdkit/Makefile.in src/Makefile.in
+SUBST_SED.options=	-e 's,-Wall,,g'
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
