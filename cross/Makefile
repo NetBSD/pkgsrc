@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/01/14 15:44:16 tsutsui Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/19 01:07:56 tsutsui Exp $
 
 #    SUBDIR += arm-netbsd
 #    SUBDIR += bfd-crunchide
@@ -10,6 +10,8 @@
 #    SUBDIR += i386-netbsd
 #    SUBDIR += i386-netbsdelf
 #    SUBDIR += m68k-netbsd
+#    SUBDIR += mipseb-netbsd
+#    SUBDIR += mipsel-netbsd
 #    SUBDIR += powerpc-netbsd
 #    SUBDIR += sparc-netbsdelf
 #    SUBDIR += sparc64-netbsd
