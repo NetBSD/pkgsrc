@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2002/09/11 23:07:51 rh Exp $
+
+--- modules/Makefile.am.orig	Sat Sep  7 18:19:01 2002
++++ modules/Makefile.am	Sat Sep  7 18:20:15 2002
+@@ -40,7 +40,7 @@
+ CDEMENU_LTLIBS =
+ endif
+ 
+-module_flags = -export_dynamic -avoid-version -module
++module_flags = -export_dynamic -avoid-version -module -L../libgnomevfs/.libs
+ modulesdir = $(libdir)/gnome-vfs-2.0/modules
+ 
+ modules_LTLIBRARIES =				\
