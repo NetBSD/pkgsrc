@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/14 19:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/27 01:31:04 jlam Exp $
 
 .include "Makefile.common"
 
@@ -58,6 +58,7 @@ PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${LOWER_OPSYS}
 # particular operating system.
 #
 LIBSWANTED.Darwin=	m c
+LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 
