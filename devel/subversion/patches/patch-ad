@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2003/06/18 13:26:26 epg Exp $
+$NetBSD: patch-ad,v 1.5 2003/08/15 19:27:45 recht Exp $
 
---- Makefile.in.orig	Mon Jun 16 08:19:41 2003
-+++ Makefile.in
-@@ -72,8 +72,9 @@ swig_py_libdir = @libdir@
- swig_java_libdir = @libdir@
+--- Makefile.in.orig	2003-08-14 14:21:35.000000000 +0200
++++ Makefile.in	2003-08-15 18:05:39.000000000 +0200
+@@ -74,8 +74,9 @@
+ swig_pl_libdir = @libdir@
  
  ### these possibly need further discussion
 -swig_pydir = @libdir@/svn-python/libsvn
@@ -12,5 +12,5 @@ $NetBSD: patch-ad,v 1.4 2003/06/18 13:26:26 epg Exp $
 +#swig_pydir = @libdir@/svn-python/svn
 +swig_pydir_extra = ${swig_pydir}
  swig_javadir = @libdir@/svn-java
+ swig_pldir = @libdir@/svn-perl
  
- ### should search for these...
