@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/11/30 17:21:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/12/11 06:08:58 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -41,16 +41,16 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.perl}
 _CONFIG_PM=		${PERL5_ARCHLIB}/Config.pm
 _BUILDLINK_CONFIG_PM=	${_CONFIG_PM:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
 
-_CPPFLAGS_LIBDIRS?=	${CPPFLAGS:M-I*:S/^-I//}
+_CPPFLAGS_INCDIRS?=	${CPPFLAGS:M-I*:S/^-I//}
 _LDFLAGS_LIBDIRS?=	${LDFLAGS:M-L*:S/^-L//}
 
 _CONFIG_PM_SED=	\
 	-e "/^libpth=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"		\
 	-e "/^libspath=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"	\
-	-e "/^locincpth=/s|${LOCALBASE}/include|${_CPPFLAGS_LIBDIRS}|g"	\
+	-e "/^locincpth=/s|${LOCALBASE}/include|${_CPPFLAGS_INCDIRS}|g"	\
 	-e "/^loclibpth=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"	\
-	-e "s|-I${LOCALBASE}/include|${CPPFLAGS}|g"			\
-	-e "s|-L${LOCALBASE}/lib|${LDFLAGS}|g"
+	-e "s|-I${LOCALBASE}/include|${CPPFLAGS:M-I*}|g"		\
+	-e "s|-L${LOCALBASE}/lib|${LDFLAGS:M-L*}|g"
 
 REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_DIR}|${LOCALBASE}|g"
 REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_X11_DIR}|${X11BASE}|g"
