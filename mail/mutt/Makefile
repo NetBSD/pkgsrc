@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2002/05/29 12:13:52 tron Exp $
+# $NetBSD: Makefile,v 1.80 2002/06/15 15:32:27 fredb Exp $
 
 DISTNAME=		mutt-1.4i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -28,12 +28,15 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(MUTT_USE_SLANG) && ${MUTT_USE_SLANG} != NO
-.include "../../devel/libslang/buildlink.mk"
+.if ${MUTT_USE_SLANG} == YES
+. include "../../devel/libslang/buildlink.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_DIR}
 .else
-.include "../../devel/ncurses/buildlink.mk"
+. include "../../devel/ncurses/buildlink.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
+. if ${MUTT_USE_NCURSES} == YES
+USE_NCURSES=		YES
+. endif
 .endif
 
 # There seems to be a problem using NetBSD's /bin/sh, so use /bin/ksh instead.
@@ -41,16 +44,14 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
-MUTT_USE_SSL?=		YES
-
-.if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
+.if ${MUTT_USE_SSL} == YES
 .include "../../security/openssl/buildlink.mk"
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
-BUILD_DEFS+=		MUTT_USE_SLANG MUTT_USE_SSL
+BUILD_DEFS+=		MUTT_USE_NCURSES MUTT_USE_SLANG MUTT_USE_SSL
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 EGDIR=			${PREFIX}/share/doc/mutt/samples
