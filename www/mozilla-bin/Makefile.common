@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/04 05:01:02 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/04 05:06:19 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -39,7 +39,7 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 # suffix gtk2 builds with -gtk2
 MOZ_EXTRA=	# empty
 .if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
-MOZ_EXTRA=	-gtk2
+MOZ_EXTRA?=	-gtk2
 .endif
 
 MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
