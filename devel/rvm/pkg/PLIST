@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/27 06:06:32 phil Exp $
+include/rvm/rds.h
+include/rvm/rvm.h
+include/rvm/rvm_segment.h
+include/rvm/rvm_statistics.h
+@dirrm include/rvm
+lib/librds.a
+lib/librvm.a
+lib/librdslwp.a
+lib/librvmlwp.a
+lib/librds.la
+lib/librvm.la
+lib/librdslwp.la
+lib/librvmlwp.la
+lib/librds.so.1.0
+lib/librvm.so.1.0
+lib/librdslwp.so.1.0
+lib/librvmlwp.so.1.0
+lib/libseg.a
+lib/libseg.la
+lib/libseg.so.1.0
+sbin/rvmutl
+sbin/rdsinit

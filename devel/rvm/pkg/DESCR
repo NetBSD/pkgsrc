@@ -1,0 +1,4 @@
+This package implements a recoverable virtual memory.  This is done
+using mmap and a transaction system so that a file can be mapped
+into VM and be remapped in another process and still have the 
+data, pointers, etc, still valid.
