@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1998/12/18 23:52:22 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/01/15 22:57:13 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
-DISTNAME=	glib-1.1.9
+DISTNAME=	glib-1.1.12
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.1/ \
