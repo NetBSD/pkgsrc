@@ -1,13 +1,26 @@
-$NetBSD: patch-al,v 1.4 2001/03/19 13:23:36 dmcmahill Exp $
+$NetBSD: patch-al,v 1.5 2004/08/23 15:18:02 tv Exp $
 
-alpha fixes...
-
---- src/common/log.c.orig	Wed Oct 18 17:53:57 2000
-+++ src/common/log.c	Mon Mar 19 07:37:02 2001
-@@ -138,5 +138,5 @@
+--- src/common/log.c.orig	2003-02-16 10:38:56.000000000 -0500
++++ src/common/log.c
+@@ -137,7 +137,7 @@ void log(const char *fmt, ...)
+ 	if(fp)
  	{
  	    fprintf(fp, "%s %s ",
 -		    date_buf(buf, sizeof(buf), DATE_LOG, (long *)0), logprog);
 +		    date_buf(buf, sizeof(buf), DATE_LOG, (time_t *)0), logprog);
  	    vfprintf(fp, *fmt == '$' ? fmt + 1 : fmt, args);
  	    if (*fmt == '$')
+ 		fprintf(fp, " (errno=%d: %s)", errno, strerror(errno));
+@@ -276,12 +276,5 @@ void log_file(char *name)
+  */
+ void log_program(char *name)
+ {
+-    char *p;
+-    
+     BUF_COPY(logprog, name);
+-
+-    if( (p = getenv("LOGFILE")) )
+-       log_file(p);
+-    if( (p = getenv("FIDOGATE_LOGFILE")) )
+-       log_file(p);
+ }
