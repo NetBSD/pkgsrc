@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:24 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/16 02:38:41 wiz Exp $
 
 DISTNAME=	python-ldap-1.10alpha3-src
 PKGNAME=	py-ldap-1.10a3
@@ -14,7 +14,7 @@ DEPENDS+=	python>=2.0:../../lang/python \
 WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
-MODPATH=	
+MODPATH=	# empty
 
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
