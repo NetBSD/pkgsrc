@@ -1,0 +1,229 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/11 07:39:15 lukem Exp $
+bin/roundup-admin
+bin/roundup-mailgw
+bin/roundup-server
+lib/python2.2/site-packages/roundup/__init__.py
+lib/python2.2/site-packages/roundup/__init__.pyc
+lib/python2.2/site-packages/roundup/admin.py
+lib/python2.2/site-packages/roundup/admin.pyc
+lib/python2.2/site-packages/roundup/backends/__init__.py
+lib/python2.2/site-packages/roundup/backends/__init__.pyc
+lib/python2.2/site-packages/roundup/backends/back_anydbm.py
+lib/python2.2/site-packages/roundup/backends/back_anydbm.pyc
+lib/python2.2/site-packages/roundup/backends/back_bsddb.py
+lib/python2.2/site-packages/roundup/backends/back_bsddb.pyc
+lib/python2.2/site-packages/roundup/backends/back_bsddb3.py
+lib/python2.2/site-packages/roundup/backends/back_bsddb3.pyc
+lib/python2.2/site-packages/roundup/backends/back_gadfly.py
+lib/python2.2/site-packages/roundup/backends/back_gadfly.pyc
+lib/python2.2/site-packages/roundup/backends/back_metakit.py
+lib/python2.2/site-packages/roundup/backends/back_metakit.pyc
+lib/python2.2/site-packages/roundup/backends/back_sqlite.py
+lib/python2.2/site-packages/roundup/backends/back_sqlite.pyc
+lib/python2.2/site-packages/roundup/backends/blobfiles.py
+lib/python2.2/site-packages/roundup/backends/blobfiles.pyc
+lib/python2.2/site-packages/roundup/backends/locking.py
+lib/python2.2/site-packages/roundup/backends/locking.pyc
+lib/python2.2/site-packages/roundup/backends/portalocker.py
+lib/python2.2/site-packages/roundup/backends/portalocker.pyc
+lib/python2.2/site-packages/roundup/backends/rdbms_common.py
+lib/python2.2/site-packages/roundup/backends/rdbms_common.pyc
+lib/python2.2/site-packages/roundup/backends/sessions.py
+lib/python2.2/site-packages/roundup/backends/sessions.pyc
+lib/python2.2/site-packages/roundup/cgi/MultiMapping.py
+lib/python2.2/site-packages/roundup/cgi/MultiMapping.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/ComputedAttribute.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/ComputedAttribute.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/Expressions.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/Expressions.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/MultiMapping.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/MultiMapping.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PageTemplate.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PageTemplate.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PathIterator.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PathIterator.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PythonExpr.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/PythonExpr.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/TALES.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/TALES.pyc
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/__init__.py
+lib/python2.2/site-packages/roundup/cgi/PageTemplates/__init__.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/HTMLParser.py
+lib/python2.2/site-packages/roundup/cgi/TAL/HTMLParser.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/HTMLTALParser.py
+lib/python2.2/site-packages/roundup/cgi/TAL/HTMLTALParser.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/TALDefs.py
+lib/python2.2/site-packages/roundup/cgi/TAL/TALDefs.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/TALGenerator.py
+lib/python2.2/site-packages/roundup/cgi/TAL/TALGenerator.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/TALInterpreter.py
+lib/python2.2/site-packages/roundup/cgi/TAL/TALInterpreter.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/TALParser.py
+lib/python2.2/site-packages/roundup/cgi/TAL/TALParser.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/XMLParser.py
+lib/python2.2/site-packages/roundup/cgi/TAL/XMLParser.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/__init__.py
+lib/python2.2/site-packages/roundup/cgi/TAL/__init__.pyc
+lib/python2.2/site-packages/roundup/cgi/TAL/markupbase.py
+lib/python2.2/site-packages/roundup/cgi/TAL/markupbase.pyc
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/Batch.py
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/Batch.pyc
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/Iterator.py
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/Iterator.pyc
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/__init__.py
+lib/python2.2/site-packages/roundup/cgi/ZTUtils/__init__.pyc
+lib/python2.2/site-packages/roundup/cgi/__init__.py
+lib/python2.2/site-packages/roundup/cgi/__init__.pyc
+lib/python2.2/site-packages/roundup/cgi/cgitb.py
+lib/python2.2/site-packages/roundup/cgi/cgitb.pyc
+lib/python2.2/site-packages/roundup/cgi/client.py
+lib/python2.2/site-packages/roundup/cgi/client.pyc
+lib/python2.2/site-packages/roundup/cgi/templating.py
+lib/python2.2/site-packages/roundup/cgi/templating.pyc
+lib/python2.2/site-packages/roundup/cgi/zLOG.py
+lib/python2.2/site-packages/roundup/cgi/zLOG.pyc
+lib/python2.2/site-packages/roundup/date.py
+lib/python2.2/site-packages/roundup/date.pyc
+lib/python2.2/site-packages/roundup/hyperdb.py
+lib/python2.2/site-packages/roundup/hyperdb.pyc
+lib/python2.2/site-packages/roundup/i18n.py
+lib/python2.2/site-packages/roundup/i18n.pyc
+lib/python2.2/site-packages/roundup/indexer.py
+lib/python2.2/site-packages/roundup/indexer.pyc
+lib/python2.2/site-packages/roundup/init.py
+lib/python2.2/site-packages/roundup/init.pyc
+lib/python2.2/site-packages/roundup/install_util.py
+lib/python2.2/site-packages/roundup/install_util.pyc
+lib/python2.2/site-packages/roundup/instance.py
+lib/python2.2/site-packages/roundup/instance.pyc
+lib/python2.2/site-packages/roundup/mailgw.py
+lib/python2.2/site-packages/roundup/mailgw.pyc
+lib/python2.2/site-packages/roundup/password.py
+lib/python2.2/site-packages/roundup/password.pyc
+lib/python2.2/site-packages/roundup/roundupdb.py
+lib/python2.2/site-packages/roundup/roundupdb.pyc
+lib/python2.2/site-packages/roundup/scripts/__init__.py
+lib/python2.2/site-packages/roundup/scripts/__init__.pyc
+lib/python2.2/site-packages/roundup/scripts/roundup_admin.py
+lib/python2.2/site-packages/roundup/scripts/roundup_admin.pyc
+lib/python2.2/site-packages/roundup/scripts/roundup_mailgw.py
+lib/python2.2/site-packages/roundup/scripts/roundup_mailgw.pyc
+lib/python2.2/site-packages/roundup/scripts/roundup_server.py
+lib/python2.2/site-packages/roundup/scripts/roundup_server.pyc
+lib/python2.2/site-packages/roundup/security.py
+lib/python2.2/site-packages/roundup/security.pyc
+lib/python2.2/site-packages/roundup/templates/__init__.py
+lib/python2.2/site-packages/roundup/templates/__init__.pyc
+lib/python2.2/site-packages/roundup/templates/builder.py
+lib/python2.2/site-packages/roundup/templates/builder.pyc
+lib/python2.2/site-packages/roundup/templates/classic/__init__.py
+lib/python2.2/site-packages/roundup/templates/classic/__init__.pyc
+lib/python2.2/site-packages/roundup/templates/classic/config.py
+lib/python2.2/site-packages/roundup/templates/classic/config.pyc
+lib/python2.2/site-packages/roundup/templates/classic/dbinit.py
+lib/python2.2/site-packages/roundup/templates/classic/dbinit.pyc
+lib/python2.2/site-packages/roundup/templates/classic/detectors/__init__.py
+lib/python2.2/site-packages/roundup/templates/classic/detectors/__init__.pyc
+lib/python2.2/site-packages/roundup/templates/classic/detectors/nosyreaction.py
+lib/python2.2/site-packages/roundup/templates/classic/detectors/nosyreaction.pyc
+lib/python2.2/site-packages/roundup/templates/classic/detectors/statusauditor.py
+lib/python2.2/site-packages/roundup/templates/classic/detectors/statusauditor.pyc
+lib/python2.2/site-packages/roundup/templates/classic/interfaces.py
+lib/python2.2/site-packages/roundup/templates/classic/interfaces.pyc
+lib/python2.2/site-packages/roundup/templates/classic_htmlbase.py
+lib/python2.2/site-packages/roundup/templates/classic_htmlbase.pyc
+lib/python2.2/site-packages/roundup/templates/minimal/__init__.py
+lib/python2.2/site-packages/roundup/templates/minimal/__init__.pyc
+lib/python2.2/site-packages/roundup/templates/minimal/config.py
+lib/python2.2/site-packages/roundup/templates/minimal/config.pyc
+lib/python2.2/site-packages/roundup/templates/minimal/dbinit.py
+lib/python2.2/site-packages/roundup/templates/minimal/dbinit.pyc
+lib/python2.2/site-packages/roundup/templates/minimal/detectors/__init__.py
+lib/python2.2/site-packages/roundup/templates/minimal/detectors/__init__.pyc
+lib/python2.2/site-packages/roundup/templates/minimal/interfaces.py
+lib/python2.2/site-packages/roundup/templates/minimal/interfaces.pyc
+lib/python2.2/site-packages/roundup/templates/minimal_htmlbase.py
+lib/python2.2/site-packages/roundup/templates/minimal_htmlbase.pyc
+lib/python2.2/site-packages/roundup/token.py
+lib/python2.2/site-packages/roundup/token.pyc
+lib/python2.2/site-packages/roundup/version_check.py
+lib/python2.2/site-packages/roundup/version_check.pyc
+share/doc/roundup/CHANGES.txt
+share/doc/roundup/COPYING.txt
+share/doc/roundup/FAQ.txt
+share/doc/roundup/README.txt
+share/doc/roundup/ZPL.txt
+share/doc/roundup/announcement.txt
+share/doc/roundup/customizing.txt
+share/doc/roundup/default.css
+share/doc/roundup/design.txt
+share/doc/roundup/developers.txt
+share/doc/roundup/features.txt
+share/doc/roundup/gadfly.txt
+share/doc/roundup/glossary.txt
+share/doc/roundup/images/edit.png
+share/doc/roundup/images/hyperdb.png
+share/doc/roundup/images/logo-acl-medium.png
+share/doc/roundup/images/logo-codesourcery-medium.png
+share/doc/roundup/images/logo-software-carpentry-standard.png
+share/doc/roundup/images/roundup-1.png
+share/doc/roundup/images/roundup.png
+share/doc/roundup/implementation.txt
+share/doc/roundup/index.txt
+share/doc/roundup/installation.txt
+share/doc/roundup/maintenance.txt
+share/doc/roundup/overview.html
+share/doc/roundup/spec.html
+share/doc/roundup/upgrading.txt
+share/doc/roundup/user_guide.txt
+share/roundup/cgi-bin/roundup.cgi
+share/roundup/templates/classic/html/_generic.help
+share/roundup/templates/classic/html/_generic.index
+share/roundup/templates/classic/html/_generic.item
+share/roundup/templates/classic/html/file.index
+share/roundup/templates/classic/html/file.item
+share/roundup/templates/classic/html/home
+share/roundup/templates/classic/html/home.classlist
+share/roundup/templates/classic/html/issue.index
+share/roundup/templates/classic/html/issue.item
+share/roundup/templates/classic/html/issue.search
+share/roundup/templates/classic/html/keyword.item
+share/roundup/templates/classic/html/msg.index
+share/roundup/templates/classic/html/msg.item
+share/roundup/templates/classic/html/page
+share/roundup/templates/classic/html/query.item
+share/roundup/templates/classic/html/style.css
+share/roundup/templates/classic/html/user.index
+share/roundup/templates/classic/html/user.item
+share/roundup/templates/classic/html/user.register
+share/roundup/templates/minimal/html/_generic.help
+share/roundup/templates/minimal/html/_generic.index
+share/roundup/templates/minimal/html/_generic.item
+share/roundup/templates/minimal/html/home
+share/roundup/templates/minimal/html/home.classlist
+share/roundup/templates/minimal/html/page
+share/roundup/templates/minimal/html/style.css
+share/roundup/templates/minimal/html/user.index
+share/roundup/templates/minimal/html/user.item
+share/roundup/templates/minimal/html/user.register
+@dirrm share/roundup/templates/minimal/html
+@dirrm share/roundup/templates/minimal
+@dirrm share/roundup/templates/classic/html
+@dirrm share/roundup/templates/classic
+@dirrm share/roundup/templates
+@dirrm share/roundup/cgi-bin
+@dirrm share/roundup
+@dirrm share/doc/roundup/images
+@dirrm share/doc/roundup
+@dirrm lib/python2.2/site-packages/roundup/templates/minimal/detectors
+@dirrm lib/python2.2/site-packages/roundup/templates/minimal
+@dirrm lib/python2.2/site-packages/roundup/templates/classic/detectors
+@dirrm lib/python2.2/site-packages/roundup/templates/classic
+@dirrm lib/python2.2/site-packages/roundup/templates
+@dirrm lib/python2.2/site-packages/roundup/scripts
+@dirrm lib/python2.2/site-packages/roundup/cgi/ZTUtils
+@dirrm lib/python2.2/site-packages/roundup/cgi/TAL
+@dirrm lib/python2.2/site-packages/roundup/cgi/PageTemplates
+@dirrm lib/python2.2/site-packages/roundup/cgi
+@dirrm lib/python2.2/site-packages/roundup/backends
+@dirrm lib/python2.2/site-packages/roundup
