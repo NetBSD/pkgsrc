@@ -1,0 +1,11 @@
+$NetBSD: patch-ai,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+NetBSD included Makefile for stdio stubs.
+
+--- /dev/null	Mon Nov  2 17:57:38 1998
++++ src/lib/sfio/Stdio_s/Makefile.inc	Mon Nov  2 17:26:59 1998
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/Stdio_s
++
++SRCS+=	stdgets.c stdopen.c stdprintf.c stdscanf.c stdsprintf.c stdvbuf.c \
++	stdputc.c stdgetc.c
