@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/28 19:13:24 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/10/27 07:00:53 jlam Exp $
 #
 
 DISTNAME=	gnupg-1.0.6
@@ -17,7 +17,6 @@ USE_BUILDLINK_ONLY=	yes
 CRYPTO=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-#USE_LIBINTL=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
