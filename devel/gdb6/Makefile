@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/03 18:48:48 shannonjr Exp $
 #
 
 DISTNAME=		gdb-6.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +19,10 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+GDB_SUBPREFIX=		gdb6
+GDB_PREFIX=		${PREFIX}/${GDB_SUBPREFIX}
+CONFIGURE_ARGS+=	--libdir=${GDB_PREFIX}/lib
+CONFIGURE_ARGS+=	--includedir=${GDB_PREFIX}/include
 
 USE_MAKEINFO=		yes
 INFO_FILES=		annotate.info bfd.info configure.info
