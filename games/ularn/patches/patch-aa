@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
+
+--- Configure.orig	Wed Jan 18 11:41:26 1995
++++ Configure	Sun Jan 28 16:18:39 2001
+@@ -58,7 +58,7 @@
+ medium=''
+ large=''
+ huge=''
+-ccflags=''
++ccflags='-g -Wall -Wno-comment'
+ ldflags=''
+ cc=''
+ n=''
+@@ -98,7 +98,7 @@
+ uncompress=''
+ imake=''
+ xmkmf=''
+-bindir=''
++bindir='XXXBINDIRXXX'
+ d_drand48=''
+ d_havetlib=''
+ termlib=''
+@@ -107,7 +107,7 @@
+ d_random=''
+ defcomp=''
+ imaketmpl=''
+-libdir=''
++libdir='XXXLIBDIRXXX'
+ mycompress=''
+ myuncompress=''
+ CONFIG=''
+@@ -187,7 +187,7 @@
+     c='\c'
+ fi
+ echo $n "Type carriage return to continue.  Your cursor should be here-->$c"
+-read ans
++#read ans
+ rm -f .echotmp
+ 
+ : now set up to do reads with possible shell escape and default assignment
+@@ -1361,6 +1361,8 @@
+     ;;
+ esac
+ 
++termlib="$termlib -lcompat"
++
+ echo " "
+ echo "End of configuration questions."
+ echo " "
+@@ -1520,7 +1522,7 @@
+ echo "If you didn't make any mistakes, then just type a carriage return here."
+ rp="If you need to edit config.sh, do it as a shell escape here:"
+ $echo $n "$rp $c"
+-. UU/myread
++#. UU/myread
+ case "$ans" in
+ '') ;;
+ *) : in case they cannot read
