@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/05/02 08:22:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/08 17:24:17 veego Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -7,7 +7,6 @@ bin/myisamchk
 bin/myisamlog
 bin/myisampack
 bin/mysql_install_db
-bin/mysqlbinlog
 bin/pack_isam
 bin/perror
 bin/replace
@@ -93,6 +92,9 @@ share/mysql/spanish/errmsg.sys
 share/mysql/spanish/errmsg.txt
 share/mysql/swedish/errmsg.sys
 share/mysql/swedish/errmsg.txt
+share/mysql/ukrainian/errmsg.sys
+share/mysql/ukrainian/errmsg.txt
+@dirrm share/mysql/ukrainian
 @dirrm share/mysql/swedish
 @dirrm share/mysql/spanish
 @dirrm share/mysql/slovak
