@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/30 23:07:45 jwise Exp $
+bin/tkcron
