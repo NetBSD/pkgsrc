@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.24 2005/02/25 14:46:51 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.25 2005/03/02 19:38:26 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -78,11 +78,14 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common
 .  endif
 .  if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.  elif exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+.  endif
+.  if exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
 PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  elif exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+.  endif
+.  if exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  elif exists(${PKGDIR}/PLIST)
+.  endif
+.  if exists(${PKGDIR}/PLIST)
 PLIST_SRC+=		${PKGDIR}/PLIST
 .  endif
 .  if exists(${PKGDIR}/PLIST.common_end)
@@ -1991,7 +1994,7 @@ _FETCH_FILE=								\
 			fi;						\
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
-					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
+					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1; exit}' ${DISTINFO_FILE}`; \
 					if [ -z "$$alg" ]; then		\
 						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
