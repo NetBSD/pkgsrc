@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/12/16 23:21:06 grant Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/26 18:04:33 jschauma Exp $
 #
 
 DISTNAME=	star-1.4.2
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/star/
+MASTER_SITES=	ftp://ftp.berlios.de/pub/star/
 
 MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html
