@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/23 22:02:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/29 20:17:15 jmmv Exp $
 bin/kopete
 include/ksettings/dialog.h
 include/ksettings/dispatcher.h
@@ -541,6 +541,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/ven/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kopete.mo
