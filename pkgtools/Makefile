@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2000/08/17 14:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2000/12/09 00:44:26 wiz Exp $
 #
 
+    SUBDIR += bsdpak
     SUBDIR += gensolpkg
 #   SUBDIR += pax		# Only needed on 1.3 systems
 #   SUBDIR += pkg_install	# Only install on demand of bsd.pkg.mk
