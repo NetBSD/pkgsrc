@@ -1,20 +1,34 @@
-# $NetBSD: Makefile,v 1.14 1999/08/15 11:07:13 tron Exp $
+# $NetBSD: Makefile,v 1.15 2000/01/23 10:41:09 itojun Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-3.6.1
-PKGNAME=	ucd-snmp-3.6.1p1
+DISTNAME=	ucd-snmp-4.0.1
+PKGNAME=	ucd-snmp-4.0.1
 CATEGORIES=	net
 MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/
+		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
+		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
+
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=	ucd-snmp-4.0.1-v6-20000121a.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.ece.ucdavis.edu/ucd-snmp/
+HOMEPAGE=	http://ucd-snmp.ucdavis.edu/
+
+BUILD_DEFS+=	USE_INET6
+.include "../../mk/bsd.prefs.mk"
 
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-defaults --with-libwrap --with-logfile="/var/log/snmpd"
+CONFIGURE_ARGS+=--enable-shared
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CONFIGURE_ARGS+=--enable-ipv6
+.else
+CONFIGURE_ARGS+=--disable-ipv6
+.endif
 
 # this might make it easier to use scotty's mibs, and local ones too
 CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
@@ -28,8 +42,6 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
-
-.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "NetBSD")
 CFLAGS+=	-Dnetbsd1

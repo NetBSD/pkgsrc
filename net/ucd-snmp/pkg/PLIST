@@ -1,27 +1,29 @@
-@comment $NetBSD: PLIST,v 1.5 1999/05/04 03:51:57 tv Exp $
-bin/snmpnetstat
-bin/snmpwalk
+@comment $NetBSD: PLIST,v 1.6 2000/01/23 10:41:11 itojun Exp $
+bin/encode_keychange
 bin/snmpbulkwalk
+bin/snmpcheck
+bin/snmpdelta
+bin/snmpget
+bin/snmpgetnext
+bin/snmpnetstat
+bin/snmpset
+bin/snmpstatus
+bin/snmptable
 bin/snmptest
 bin/snmptranslate
-bin/snmpget
-bin/snmpset
-bin/snmpgetnext
 bin/snmptrap
-bin/snmpstatus
-bin/snmpdelta
-bin/snmptable
-bin/snmpcheck
+bin/snmpusm
+bin/snmpwalk
 bin/tkmib
-include/ucd-snmp/acl.h
 include/ucd-snmp/asn1.h
-include/ucd-snmp/context.h
+include/ucd-snmp/callback.h
+include/ucd-snmp/default_store.h
 include/ucd-snmp/int64.h
 include/ucd-snmp/mib.h
 include/ucd-snmp/parse.h
-include/ucd-snmp/party.h
 include/ucd-snmp/snmp.h
 include/ucd-snmp/snmp_api.h
+include/ucd-snmp/snmp_alarm.h
 include/ucd-snmp/snmp_client.h
 include/ucd-snmp/snmp_debug.h
 include/ucd-snmp/snmp_impl.h
@@ -29,32 +31,32 @@ include/ucd-snmp/system.h
 include/ucd-snmp/ucd-snmp-config.h
 include/ucd-snmp/ucd-snmp-includes.h
 include/ucd-snmp/version.h
-include/ucd-snmp/view.h
 lib/libsnmp.a
 lib/libsnmp.so.0.0
-man/man1/snmpcmd.1
-man/man1/snmpget.1
-man/man1/snmpset.1
-man/man1/snmpwalk.1
 man/man1/snmpbulkwalk.1
-man/man1/snmpgetnext.1
-man/man1/snmptest.1
-man/man1/snmpnetstat.1
-man/man1/snmptranslate.1
-man/man1/snmpstatus.1
-man/man1/snmptrap.1
-man/man1/snmpdelta.1
+man/man1/snmpcmd.1
 man/man1/snmpd.1
+man/man1/snmpdelta.1
+man/man1/snmpget.1
+man/man1/snmpgetnext.1
+man/man1/snmpnetstat.1
+man/man1/snmpset.1
+man/man1/snmpstatus.1
 man/man1/snmptable.1
-man/man3/snmp_api.3
+man/man1/snmptest.1
+man/man1/snmptranslate.1
+man/man1/snmptrap.1
+man/man1/snmpusm.1
+man/man1/snmpwalk.1
 man/man3/mib_api.3
-man/man3/snmp_sess_api.3
 man/man3/read_config.3
-man/man5/variables.5
-man/man5/snmpd.conf.5
-man/man5/snmptrapd.conf.5
+man/man3/snmp_api.3
+man/man3/snmp_sess_api.3
 man/man5/snmp.conf.5
 man/man5/snmp_config.5
+man/man5/snmpd.conf.5
+man/man5/snmptrapd.conf.5
+man/man5/variables.5
 man/man8/snmptrapd.8
 sbin/snmpd
 sbin/snmptrapd
@@ -70,6 +72,11 @@ share/snmp/mibs/IANAifType-MIB.txt
 share/snmp/mibs/IF-MIB.txt
 share/snmp/mibs/IP-MIB.txt
 share/snmp/mibs/IPFWACC-MIB.txt
+share/snmp/mibs/IPV6-ICMP-MIB.txt
+share/snmp/mibs/IPV6-MIB.txt
+share/snmp/mibs/IPV6-TC.txt
+share/snmp/mibs/IPV6-TCP-MIB.txt
+share/snmp/mibs/IPV6-UDP-MIB.txt
 share/snmp/mibs/RFC1155-SMI.txt
 share/snmp/mibs/RFC1213-MIB.txt
 share/snmp/mibs/RFC1271-MIB.txt
@@ -93,6 +100,7 @@ share/snmp/mibs/UDP-MIB.txt
 @unexec /bin/rm -f %D/share/snmp/mibs/.index
 @exec mkdir -p %D/lib/snmp/dlmod
 @dirrm lib/snmp/dlmod
+@dirrm lib/snmp
 @dirrm share/snmp/mibs
 @dirrm share/snmp
 @dirrm share/examples/ucd-snmp

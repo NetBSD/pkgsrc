@@ -1,72 +1,83 @@
-$NetBSD: patch-ad,v 1.2 1999/08/15 10:12:52 tron Exp $
-
---- apps/Makefile.in.orig	Sat Mar  6 02:25:43 1999
-+++ apps/Makefile.in	Sun Aug 15 12:04:30 1999
-@@ -8,8 +8,8 @@
- SUBDIRS=  snmpnetstat
- TRAPSPECIAL=@trap_list_o@
+$NetBSD: patch-ad,v 1.3 2000/01/23 10:41:10 itojun Exp $
+--- apps/Makefile.in.orig	Fri Aug 13 07:16:43 1999
++++ apps/Makefile.in	Fri Jan 21 07:49:48 2000
+@@ -12,9 +12,11 @@
+ SBINTARG	= snmptrapd
+ SUBDIRS		= snmpnetstat
  
--USELIBS= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
--LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
+-USELIBS		= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
+-LOCAL_LIBS	= -L../snmplib 
+-LIBS		= $(CC_RUNTIME_ARG) -lsnmp @LIBS@
++#USELIBS		= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
 +USELIBS= ../snmplib/libsnmp.la
++#LOCAL_LIBS	= -L../snmplib 
++#LIBS		= $(CC_RUNTIME_ARG) -lsnmp @LIBS@
 +LIBS=	 ${USELIBS} @LIBS@
  
- PARSEOBJS=snmp_parse_args.o
+ PARSEOBJS	= snmp_parse_args.o
  
-@@ -24,40 +24,40 @@
+@@ -31,46 +33,46 @@
  	done
  
  snmpwalk:    snmpwalk.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpwalk.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpwalk.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpwalk.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpwalk.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpbulkwalk:    snmpbulkwalk.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpbulkwalk.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpbulkwalk.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpbulkwalk.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpbulkwalk.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmptranslate:    snmptranslate.o $(USELIBS)
--	${CC} -o $@ snmptranslate.o ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmptranslate.o ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmptranslate.o $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmptranslate.o $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpstatus:    snmpstatus.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpstatus.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpstatus.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpstatus.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpstatus.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpget:    snmpget.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpget.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpget.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpget.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpget.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpdelta:    snmpdelta.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpdelta.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpdelta.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpdelta.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpdelta.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmptable:    snmptable.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmptable.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmptable.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmptable.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmptable.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmptest:    snmptest.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmptest.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmptest.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmptest.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmptest.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmptrapd:    snmptrapd.o snmptrapd_handlers.o $(USELIBS)
--	${CC} -o $@ snmptrapd.o snmptrapd_handlers.o ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmptrapd.o snmptrapd_handlers.o ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmptrapd.o snmptrapd_handlers.o $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmptrapd.o snmptrapd_handlers.o $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
- snmptrap:    snmptrap.o $(TRAPSPECIAL) $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmptrap.o $(TRAPSPECIAL) $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmptrap.o $(TRAPSPECIAL) $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+ snmptrap:    snmptrap.o $(PARSEOBJS) $(USELIBS)
+-	${CC} -o $@ snmptrap.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmptrap.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpset:    snmpset.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpset.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpset.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpset.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpset.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
+ 
+ snmpusm:    snmpusm.o $(PARSEOBJS) $(USELIBS)
+-	${CC} -o $@ snmpusm.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpusm.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
  
  snmpgetnext:    snmpgetnext.o $(PARSEOBJS) $(USELIBS)
--	${CC} -o $@ snmpgetnext.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
-+	${LIBTOOL} ${CC} -o $@ snmpgetnext.o $(PARSEOBJS) ${LDFLAGS} ${LIBS} 
+-	${CC} -o $@ snmpgetnext.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ snmpgetnext.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
+ 
+ encode_keychange:    encode_keychange.o $(PARSEOBJS) $(USELIBS)
+-	${CC} -o $@ encode_keychange.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
++	${LIBTOOL} ${CC} -o $@ encode_keychange.o $(PARSEOBJS) $(LOCAL_LIBS) ${LDFLAGS} ${LIBS} 
+ 
  
  clean:
- 	rm -f *.o $(TARG) $(SBINTARG)
-@@ -69,8 +69,8 @@
+@@ -84,8 +86,8 @@
  	for i in $(SUBDIRS) ; do \
          ( cd $$i ; $(MAKE) install ) ; \
  	done
