@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/10 14:40:24 taya Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/13 08:57:54 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -63,7 +63,6 @@ lib/${MOZILLA}/components/libsystem-pref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtransformiix.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
-lib/${MOZILLA}/components/libtypeaheadfind.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuconv.${SO_SUFFIX}
 lib/${MOZILLA}/components/libucvmath.${SO_SUFFIX}
 lib/${MOZILLA}/components/libuniversalchardet.${SO_SUFFIX}
@@ -241,7 +240,6 @@ lib/${MOZILLA}/components/spellchecker.xpt
 lib/${MOZILLA}/components/toolkitprofile.xpt
 lib/${MOZILLA}/components/txmgr.xpt
 lib/${MOZILLA}/components/txtsvc.xpt
-lib/${MOZILLA}/components/typeaheadfind.xpt
 lib/${MOZILLA}/components/uconv.xpt
 lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
@@ -1802,7 +1800,6 @@ include/${MOZILLA}/txtsvc/nsITextService.h
 include/${MOZILLA}/txtsvc/nsITextServicesDocument.h
 include/${MOZILLA}/txtsvc/nsITextServicesFilter.h
 include/${MOZILLA}/txtsvc/nsTextServicesCID.h
-include/${MOZILLA}/typeaheadfind/nsITypeAheadFind.h
 include/${MOZILLA}/uconv/nsEncoderDecoderUtils.h
 include/${MOZILLA}/uconv/nsICharRepresentable.h
 include/${MOZILLA}/uconv/nsICharsetAlias.h
@@ -2320,7 +2317,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/ucvibm
 @dirrm include/${MOZILLA}/ucvcn
 @dirrm include/${MOZILLA}/uconv
-@dirrm include/${MOZILLA}/typeaheadfind
 @dirrm include/${MOZILLA}/txtsvc
 @dirrm include/${MOZILLA}/txmgr
 @dirrm include/${MOZILLA}/toolkitcomps
