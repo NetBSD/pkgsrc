@@ -1,0 +1,21 @@
+*** vncserver.orig	Tue Jul 28 16:16:07 1998
+--- vncserver	Tue Jul 28 16:17:02 1998
+***************
+*** 144,151 ****
+  
+  # Add font path and color database stuff here, e.g.:
+  #
+! # $cmd .= " -fp /usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+! # $cmd .= " -co /usr/lib/X11/rgb";
+  #
+  
+  foreach $arg (@ARGV) {
+--- 144,151 ----
+  
+  # Add font path and color database stuff here, e.g.:
+  #
+! $cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+! $cmd .= " -co /usr/X11R6/lib/X11/rgb";
+  #
+  
+  foreach $arg (@ARGV) {
