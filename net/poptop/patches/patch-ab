@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/23 17:18:12 kim Exp $
 
---- configure.orig	Sat Sep 25 20:10:12 1999
-+++ configure	Sat Sep 25 20:46:41 1999
+--- configure.orig	Sun Sep 24 21:29:23 2000
++++ configure	Sun Dec 23 12:10:15 2001
 @@ -21,6 +21,8 @@
    --with-pppd-ip-alloc    Let pppd allocate IP (and IPX) addresses "
  ac_help="$ac_help
@@ -203,7 +203,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
  set dummy ${MAKE-make}; ac_make=`echo "$2" | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_prog_make_${ac_make}_set'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -1153,12 +1155,12 @@
+@@ -1153,18 +1155,18 @@
  
  
  echo $ac_n "checking for working const""... $ac_c" 1>&6
@@ -218,6 +218,13 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
  #include "confdefs.h"
  
  int main() {
+ 
+ /* Ultrix mips cc rejects this.  */
+-typedef int charset[2]; const charset x = {0,0};
++typedef int charset[2]; const charset x;
+ /* SunOS 4.1.1 cc rejects this.  */
+ char const *const *ccp;
+ char **p;
 @@ -1207,7 +1209,7 @@
  
  ; return 0; }
@@ -244,7 +251,8 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
  #include "confdefs.h"
  
  int main() {
- } $ac_kw foo() {
+-} int $ac_kw foo() {
++} $ac_kw foo() {
  ; return 0; }
  EOF
 -if { (eval echo configure:1246: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
@@ -936,6 +944,15 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
+@@ -2534,7 +2536,7 @@
+ if test "$ac_cv_header_libintl_h" = yes; then
+   if test "$ac_cv_lib_c_gettext" = no; then
+     if test "$ac_cv_lib_intl_gettext" = yes; then
+-      XTRALIBS_MGR = "$XTRALIBS_MGR -lintl"
++      XTRALIBS_MGR="$XTRALIBS_MGR -lintl"
+     else
+       echo "Have libintl.h but no usable gettext!" 1>&2
+       exit 1
 @@ -2590,24 +2592,34 @@
  fi
  
