@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/12/11 00:26:45 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2005/03/19 15:32:25 jmmv Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		chat
 MASTER_SITES=		http://real.irssi.org/files/
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
@@ -21,6 +21,7 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
+			--with-proxy \
 			--without-ncurses \
 			--sysconfdir=${PKG_SYSCONFDIR}
 

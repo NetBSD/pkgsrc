@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/04 10:43:10 veego Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/03/19 15:32:25 jmmv Exp $
 bin/irssi
+lib/irssi/modules/libirc_proxy.la
 man/man1/irssi.1
 share/doc/irssi/botnet.txt
 share/doc/irssi/design.txt
@@ -156,5 +157,5 @@ share/irssi/themes/default.theme
 @dirrm share/irssi
 @dirrm share/examples/irssi
 @dirrm share/doc/irssi
-@unexec ${RMDIR} %D/lib/irssi/modules 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/irssi 2>/dev/null || ${TRUE}
+@dirrm lib/irssi/modules
+@dirrm lib/irssi
