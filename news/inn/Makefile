@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/01 19:07:53 jlam Exp $
 
 DISTNAME=		inn-2.3.1
 CATEGORIES=		news
@@ -57,7 +57,6 @@ post-build:
 	        ${FILESDIR}/innd.sh >${WRKDIR}/innd.sh
 .for FILE in DEINSTALL INSTALL
 	${SED} -e 's#@@INN_DATA_DIR@@#${INN_DATA_DIR}#g' \
-	       -e 's#@@PREFIX@@#${PREFIX}#g' \
 	        ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
 .endfor
 	for DIR in backends expire frontends innd innfeed lib nnrpd	\
@@ -82,6 +81,6 @@ post-install:
 	done
 	cd ${WRKSRC}/site && \
 	${INSTALL_SCRIPT} ${WRKDIR}/innd.sh ${PREFIX}/etc/rc.d/innd
-	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
