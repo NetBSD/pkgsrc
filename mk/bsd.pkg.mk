@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1585 2005/02/11 16:57:45 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1586 2005/02/11 17:00:07 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -180,7 +180,7 @@ PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
-    PKG_FAIL_REASON+="Circular dependency detected"
+PKG_FAIL_REASON+=	"Circular dependency detected"
 .endif
 
 # PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
@@ -258,12 +258,12 @@ PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced w
 .endif
 
 .if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
-. if !defined(OBJHOSTNAME)
+.  if !defined(OBJHOSTNAME)
 PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
-. elif !exists(${SHLOCK})
+.  elif !exists(${SHLOCK})
 PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
 PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
-. endif
+.  endif
 .endif
 
 # Allow variables to be set on a per-OS basis
