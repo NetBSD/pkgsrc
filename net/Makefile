@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2002/08/05 08:49:00 cjs Exp $
+# $NetBSD: Makefile,v 1.328 2002/08/06 01:49:07 cjs Exp $
 #
 
 COMMENT=	Networking tools
@@ -184,7 +184,6 @@ SUBDIR+=	ppp
 SUBDIR+=	ppp-mppe
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
-SUBDIR+=	pscan
 SUBDIR+=	publicfile
 SUBDIR+=	pureftpd
 SUBDIR+=	pxe
