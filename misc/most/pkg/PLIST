@@ -1,2 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:02:25 agc Exp $
 bin/most
 man/man1/most.1.gz

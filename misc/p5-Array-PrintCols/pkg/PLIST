@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:02:29 agc Exp $
 lib/perl5/site_perl/Array/PrintCols-1.2.pm
 lib/perl5/site_perl/Array/PrintCols.pm
 lib/perl5/man/man3/Array::PrintCols.3p.gz
