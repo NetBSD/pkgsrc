@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/08 23:00:33 tron Exp $
+
+--- src/Makefile.m4.orig	Sun Jan 24 00:51:41 1999
++++ src/Makefile.m4	Fri Apr  9 00:28:36 1999
+@@ -27,7 +27,7 @@
+ MAPDEF=	ifdef(`confMAPDEF', `confMAPDEF')
+ 
+ # environment definitions (e.g., -D_AIX3)
+-ENVDEF=	ifdef(`confENVDEF', `confENVDEF')
++ENVDEF=	ifdef(`confENVDEF', `confENVDEF') -DTCPWRAPPERS
+ 
+ # see also conf.h for additional compilation flags
+ 
+@@ -42,7 +42,7 @@
+ 
+ # libraries required on your system
+ #  delete -l44bsd if you are not running BIND 4.9.x
+-LIBS=	ifdef(`confLIBS', `confLIBS')
++LIBS=	ifdef(`confLIBS', `confLIBS') -lwrap
+ 
+ # location of sendmail binary (usually /usr/sbin or /usr/lib)
+ BINDIR=	${DESTDIR}ifdef(`confMBINDIR', `confMBINDIR', `/usr/sbin')
