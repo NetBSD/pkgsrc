@@ -1,0 +1,18 @@
+The Caml Light system comprises the following parts: 
+
+- An interactive system, based on a read-eval-print loop: the user enters
+  a phrase, the system compiles it and executes it on the fly, then print the
+  outcome of evaluation. The interactive system is great for learning the
+  language and testing programs. 
+- A batch compiler and linker, camlc, with a command-line interface similar to
+  the one of C compilers. The compiler produces standalone executable programs
+  that can later be invoked just as any other command on the system. It
+  integrates smoothly within the Unix programming environment
+  (make, Emacs, ...). 
+- A medium-sized standard library, providing a number of general-purpose
+  functions and implementations of a few essential data structures
+  (lists, arrays, hash tables, sets, ...). 
+- A tool to build libraries of frequently-used program modules. 
+- A parser generator and a lexical analyzer generator, in the style of lex and
+  yacc. 
+- Various programming tools and several interface libraries.
