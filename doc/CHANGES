@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1310 2003/02/03 20:29:19 drochner Exp $
+$NetBSD: CHANGES,v 1.1311 2003/02/03 23:49:05 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated htmllint to 20030203 [jschauma 2003-02-03]
 	Updated Xft2 to 2.1nb3 [wiz 2003-02-03]
 	Updated ap2-perl to 1.99.8 [drochner 2003-02-03]
+	Updated jdk to 1.1.8nb3 [jlam 2003-02-03]
