@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 1998/11/29 23:39:30 sommerfe Exp $
+$NetBSD: patch-ag,v 1.2 2001/03/16 13:58:58 wiz Exp $
 
---- AsyncIO.c	Thu May  2 02:51:00 1996
-+++ /tmp/AsyncIO.c	Sun Nov 29 18:28:44 1998
+--- AsyncIO.c.orig	Thu May  2 08:51:00 1996
++++ AsyncIO.c
 @@ -320,6 +320,7 @@
  		abort();
  	}
