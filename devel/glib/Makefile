@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.68 2004/02/19 17:48:17 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -57,30 +57,30 @@ GLIB_MICRO_VERSION=	${GLIB_VERSION:C/.*\.//}
 pre-configure:
 	@cd ${WRKSRC};							\
 	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
-	for f in $${files}; do					\
+	for f in $${files}; do						\
 		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
 			-e "s|@VERSION@|${GLIB_VERSION}|g"		\
-			$${f} > $${f}.fixed;			\
-		${MV} -f $${f}.fixed $${f};			\
+			$${f} > $${f}.fixed;				\
+		${MV} -f $${f}.fixed $${f};				\
 	done
 
 post-configure:
 	@cd ${WRKSRC};							\
 	files="config.status config.h glibconfig.h";			\
-	for f in $${files}; do					\
+	for f in $${files}; do						\
 		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
-			$${f} > $${f}.fixed;			\
+			$${f} > $${f}.fixed;				\
 		${MV} $${f}.fixed $${f};				\
 	done;								\
 	${CHMOD} +x config.status
 .if exists(/usr/include/sys/null.h)
 	@cd ${WRKSRC};							\
 	files="glib.h";							\
-	for f in $${files}; do					\
+	for f in $${files}; do						\
 		${SED}	-e "s|^#define.NULL.*|#include <sys/null.h>|"	\
-			$${f} > $${f}.fixed;			\
+			$${f} > $${f}.fixed;				\
 		${MV} $${f}.fixed $${f};				\
 	done
 .endif
