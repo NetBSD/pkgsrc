@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9138 2005/02/14 15:52:10 minskim Exp $
+$NetBSD: CHANGES,v 1.9139 2005/02/14 21:33:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated clamav to 0.83 [grant 2005-02-14]
 	Updated docbook-xsl to 1.68.1 [jmmv 2005-02-14]
 	Updated bibtex2html to 1.74nb1 [minskim 2005-02-14]
+	Updated conglomerate to 0.9.0 [jmmv 2005-02-14]
