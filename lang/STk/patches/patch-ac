@@ -1,14 +1,26 @@
-$NetBSD: patch-ac,v 1.1 2000/07/06 16:24:49 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2000/09/26 02:02:33 hubertf Exp $
 
-allow sharing between different arch's which use the same processor
-Ie, use 'm68k' instead of 'amiga', 'mac68k', 'hp300', etc.
-
---- configure.in.orig	Sat Jun  6 08:19:03 1998
-+++ configure.in	Thu Jul  6 10:24:09 2000
-@@ -15,5 +15,5 @@
+--- configure.in.orig	Sat Jun  6 14:19:03 1998
++++ configure.in
+@@ -14,7 +14,11 @@
+ # determine the kind of the machine which is running this script
  os=`uname -s`
  version=`uname -r`
 -machine=`uname -m`
++#
++# NetBSD:
++# allow sharing between different arch's which use the same processor
++# Ie, use 'm68k' instead of 'amiga', 'mac68k', 'hp300', etc.
 +machine=`uname -p`
  
  case $os in
+   Linux*) 
+@@ -125,7 +129,7 @@
+ 
+ if test "$x_libraries" != ""
+ then
+-   XLIBSW="-L$x_libraries"
++   XLIBSW="-L$x_libraries -Wl,-R$x_libraries"
+ fi
+ 
+ XLIBSW="$XLIBSW $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
