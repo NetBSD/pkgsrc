@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/09/22 06:11:37 garbled Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/12 23:20:10 frueauf Exp $
 #
 
 DISTNAME=		unix02b4
@@ -7,8 +7,6 @@ CATEGORIES=		emulators games x11
 MASTER_SITES=		http://internetter.com/titan/mess/
 EXTRACT_SUFX=		.tgz
 
-NOT_FOR_ARCHS=		alpha	#gcc lossage
-
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://internetter.com/titan/mess/
 
@@ -16,6 +14,8 @@ RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		xmess-0.1
+
+NOT_FOR_ARCHS=		alpha	#gcc lossage
 
 USE_X11=		yes
 USE_GMAKE=		yes
@@ -32,7 +32,7 @@ WRKSRC=			${WRKDIR}/xmess-0.2b4.1
 
 MESSDIR=		${PREFIX}/share/xmess
 .if exists(/usr/include/machine/joystick.h)
-NETBSD_JOYSTICK=	yes 
+NETBSD_JOYSTICK=	yes
 .else
 NETBSD_JOYSTICK=	no
 .endif
