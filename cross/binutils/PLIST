@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/02 00:57:15 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/02 01:59:23 kristerw Exp $
 include/ansidecl.h
 include/bfd.h
 include/symcat.h
@@ -1694,6 +1694,7 @@ lib/ldscripts/z8002.xu
 lib/libbfd.a
 lib/libbfd.la
 lib/libiberty.a
+lib/libintl.a
 lib/libopcodes.a
 lib/libopcodes.la
 libexec/binutils/addr2line
