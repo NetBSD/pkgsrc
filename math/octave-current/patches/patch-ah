@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.4 2005/01/12 06:02:29 jlam Exp $
+
+--- liboctave/f2c-main.c.orig	2002-04-03 19:44:22.000000000 -0500
++++ liboctave/f2c-main.c
+@@ -20,6 +20,10 @@ Software Foundation, 59 Temple Place - S
+ 
+ */
+ 
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
+ #include <assert.h>
+ 
+ 
