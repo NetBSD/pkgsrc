@@ -1,0 +1,96 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/06/06 05:13:49 kei Exp $
+
+--- texk/xdvik/Makefile.in.orig	Wed May 30 22:11:44 2001
++++ texk/xdvik/Makefile.in	Wed May 30 22:12:36 2001
+@@ -45,8 +45,9 @@
+ #   -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 (some may not be present).
+ x_link = $(LDLIBWWW) $(x_ldflags) $(x_tool_libs) $(x_pre_libs) $(x_ext_lib) -lX11 $(x_extra_libs)
+ 
+-LDLIBWWW=@LDLIBWWW@
++LDLIBWWW=$(shell libwww-config --libs)
+ LIBWWWCPPFLAGS=@LIBWWWCPPFLAGS@
++#LIBWWWCPPFLAGS=$(shell libwww-config --cflags)
+ LIBWWWDEP=@LIBWWWDEP@
+ LIBWWWDIR = ../../libs/libwww
+ LIBWWWSRCDIR = $(srcdir)/../../libs/libwww
+@@ -69,13 +70,13 @@
+   paper.o tategaki.o vfontmap.o \
+   $(ALLOCA)
+ 
+-program = xdvi.bin
++program = vfxdvi.bin
+ programs = $(program)
+ 
+-default all: $(programs) xdvi.1 xdviprint
++default all: $(programs) vfxdvi.1 vfxdviprint
+ 
+-$(program): $(kpathsea) $(objects) $(LIBWWWDEP)
+-	$(kpathsea_link) $(objects) $(x_link) $(VFLIB) $(LOADLIBES)
++$(program): $(kpathsea) $(objects)
++	$(link_command) $(objects) $(x_link) $(VFLIB) $(LOADLIBES)
+ 
+ squeeze: squeeze.o
+ 	$(link_command) squeeze.o $(LIBS) $(XLOADLIBES)
+@@ -83,10 +84,10 @@
+ psheader.c: psheader.txt squeeze
+ 	./squeeze $(srcdir)/psheader.txt $@
+ 
+-xdvi.1: xdvi.man sedscript
++vfxdvi.1: xdvi.man sedscript
+ 	sed -f sedscript <$(srcdir)/xdvi.man >$@
+ 
+-xdviprint: Makefile xdviprint.sample
++vfxdviprint: Makefile xdviprint.sample
+ 	if test -x /usr/bin/nawk; then \
+ 	  sed -e '/^## for @DVIFILTER@/,/^##/s/^# //' -e 's/awk/nawk/' \
+ 	      -e "s,/usr/local/share/texmf/xdvi,$(XDVIETCDIR)," \
+@@ -102,9 +103,6 @@
+ 	$(SHELL) $(srcdir)/mksedscript $(srcdir) pkpath sizes vfpath \
+ 	figpath headerpath $(DEFS) $(prog_cflags) >$@
+ 
+-$(LIBWWWDIR)/libwww.a:
+-	cd $(LIBWWWDIR); $(MAKE) $(makeargs) libwww.a
+-
+ # ac_include ../make/tkpathsea.mk
+ 
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+@@ -112,21 +110,21 @@
+ install: install-exec install-data
+ uninstall: uninstall-exec uninstall-data
+ 
+-install-exec: $(programs) xdviprint
++install-exec: $(programs) vfxdviprint
+ 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir)
+ 	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $(bindir) $$p; done
+-	$(INSTALL_SCRIPT) $(srcdir)/xdvi-sh $(scriptdir)/xdvi
++	$(INSTALL_SCRIPT) $(srcdir)/xdvi-sh $(scriptdir)/vfxdvi
+ 	if test "@XDVIPRINTCMD@" != no; then \
+ 	  if test ! -x @XDVIPRINTCMD@; then \
+-	    $(INSTALL_SCRIPT) $(srcdir)/xdviprint @XDVIPRINTCMD@; \
++	    $(INSTALL_SCRIPT) $(srcdir)/vfxdviprint @XDVIPRINTCMD@; \
+ 	  fi; \
+ 	fi
+ uninstall-exec:
+ 	for p in $(programs) xdvi; do rm -f $(bindir)/$$p; done
+ 
+-install-data: xdvi.1 vfontmap.sample
++install-data: vfxdvi.1 vfontmap.sample
+ 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(mandir) $(psheaderdir) $(XDVIETCDIR)
+-	$(INSTALL_DATA) xdvi.1 $(mandir)/xdvi.$(manext)
++	$(INSTALL_DATA) vfxdvi.1 $(mandir)/vfxdvi.$(manext)
+ 	if test ! -f $(XDVIETCDIR)/vfontmap; then \
+ 	  $(INSTALL_DATA) vfontmap.sample $(XDVIETCDIR)/vfontmap; \
+ 	fi
+@@ -158,12 +156,8 @@
+ clean::
+ 	rm -f *.flc
+ 
+-# clean::
+-#	test -f $(LIBWWWDIR)/Makefile && { cd $(LIBWWWDIR); $(MAKE) clean; } || true
+-
+ distclean::
+ 	rm -f psheader.c sedscript xdvi.1 *.flc
+-# 	test -f $(LIBWWWDIR)/Makefile && { cd $(LIBWWWDIR); $(MAKE) distclean; } || true
+ 
+ ac_include ../make/rdepend.mk
+ ac_include depend.make
