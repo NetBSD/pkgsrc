@@ -1,0 +1,25 @@
+$NetBSD: patch-at,v 1.1 2002/03/23 02:23:02 wiz Exp $
+
+--- soundio.c.orig	Thu Jan 24 03:32:47 2002
++++ soundio.c
+@@ -82,6 +82,9 @@
+ #  define _pclose pclose
+ # endif
+ #endif
++#ifdef NETBSDRTAUDIO
++#include "rtNetBSD.h"
++#endif
+ void (*spinrecv)(void), (*spoutran)(void), (*nzerotran)(long);
+ static void byterecv(void), charrecv(void),  alawrecv(void), ulawrecv(void),
+             shortrecv(void),longrecv(void), floatrecv(void);
+@@ -481,6 +484,10 @@
+              || strncmp(O.outfilename,"dac", 3) ==0
+ # ifdef LINUX
+              || strcmp(O.outfilename,"/dev/dsp") ==0
++# endif
++# ifdef BSD
++             || strncmp(O.outfilename,"/dev/audio",10) ==0
++             || strncmp(O.outfilename,"/dev/sound",10) ==0
+ # endif
+              || strcmp(O.outfilename,"dac") == 0) {
+ #ifdef WIN32

@@ -1,16 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+$NetBSD: patch-af,v 1.2 2002/03/23 02:23:00 wiz Exp $
 
---- LINUXaudio.c.orig	Sat Dec 16 21:44:39 2000
-+++ LINUXaudio.c	Sat Dec 16 21:46:10 2000
-@@ -21,7 +21,11 @@
+--- anal/pvoc/makef.orig	Sun Aug 19 21:49:21 2001
++++ anal/pvoc/makef
+@@ -7,7 +7,7 @@
+ OBJS =  main.o $T/pvanal.o $T/pvxanal.o $T/pvfileio.o $T/filopen.o \
+         $T/sfheader.o $T/mxfft.o \
+ 	$T/soundin.o $T/ulaw.o $T/aiff.o $T/wave.o $T/ieee80.o $T/memalloc.o \
+-	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winX11.o $T/winascii.o \
++	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winascii.o \
+ 	$T/winEPS.o $T/aifc.o $T/getstring.o
  
- #include <unistd.h>
- #include <sys/ioctl.h>
-+#ifdef BSD
-+#include <soundcard.h>
-+#else
- #include <sys/soundcard.h>
-+#endif
- #include "cs.h"
- #include "soundio.h"
- 
+ pvocs:	pvanal

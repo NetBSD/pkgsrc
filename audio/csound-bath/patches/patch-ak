@@ -1,12 +1,9 @@
-$NetBSD: patch-ak,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2002/03/23 02:23:01 wiz Exp $
 
---- aops.c.orig	Thu Apr  5 13:41:56 2001
-+++ aops.c	Thu Apr  5 13:42:30 2001
-@@ -1,8 +1,13 @@
- #include "cs.h"		/*					AOPS.C	*/
- #include "aops.h"
--#include <math.h>
-+#include <math.h>
+--- aops.c.orig	Wed Feb 13 13:25:18 2002
++++ aops.c
+@@ -3,6 +3,11 @@
+ #include <math.h>
  #include <time.h>
  
 +#ifdef LINUX
@@ -14,10 +11,10 @@ $NetBSD: patch-ak,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
 +#include <unistd.h>
 +#endif
 +
- static	double	eipt3=8.3333333, oct;
- #define	logtwo	(0.693147)
+ static  double  eipt3=8.3333333, oct;
+ #define logtwo  (0.693147)
  
-@@ -421,8 +426,6 @@
+@@ -433,8 +438,6 @@
  #ifdef LINUX
  void rtclock(EVAL *p)
  {
