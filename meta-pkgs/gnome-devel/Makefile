@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/22 20:33:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/11 16:54:32 jmmv Exp $
 
 DISTNAME=	gnome-devel-2.4.2
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for development utilities used in the GNOME desktop
 

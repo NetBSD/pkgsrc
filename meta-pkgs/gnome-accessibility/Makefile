@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/23 19:04:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/11 16:54:32 jmmv Exp $
 
 DISTNAME=	gnome-accessibility-2.4.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for accessibility applications of the GNOME desktop
 
