@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/08/29 21:41:14 jlam Exp $
+$NetBSD: patch-aa,v 1.5 1999/12/20 11:55:17 rh Exp $
 
---- configure.orig	Sun Aug  1 06:35:52 1999
-+++ configure	Sun Aug 29 13:26:34 1999
-@@ -1606,13 +1606,14 @@
+--- configure.orig	Sat Sep 25 16:50:16 1999
++++ configure	Sun Dec 19 13:25:45 1999
+@@ -1782,13 +1782,14 @@
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
  
@@ -16,5 +16,5 @@ $NetBSD: patch-aa,v 1.4 1999/08/29 21:41:14 jlam Exp $
 -
 +fi
  
- echo $ac_n "checking for AIX""... $ac_c" 1>&6
- echo "configure:1619: checking for AIX" >&5
+ echo $ac_n "checking for working const""... $ac_c" 1>&6
+ echo "configure:1795: checking for working const" >&5
