@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4017 2003/12/08 14:56:00 grant Exp $
+$NetBSD: CHANGES,v 1.4018 2003/12/08 15:41:28 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5021,3 +5021,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libvorbis to 1.0.1 [wiz 2003-12-08]
 	Updated vorbis-tools to 1.0.1 [wiz 2003-12-08]
 	Updated libnbcompat to 20031208 [grant 2003-12-08]
+	Added p5-Mail-ClamAV-0.04 [grant 2003-12-08]
