@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2542 2004/11/28 00:26:04 wiz Exp $
+$NetBSD: TODO,v 1.2543 2004/11/28 07:02:55 taca Exp $
 
 Suggested new packages
 ======================
@@ -1115,19 +1115,7 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rtcw-1.41.3
-	o ruby-1.8.1 [taca]
-	o ruby-bigfloat-1.2.1
-	o ruby-digest-1.8.1
-	o ruby-fcgi-0.8.5
 	o ruby-fox-1.2.0
-	o ruby-gsl-0.2.0
-	o ruby-gtk-0.34
-	o ruby-icmp-0.2.2
-	o ruby-mysql-2.5.1
-	o ruby-racc-1.4.4
-	o ruby-rexml-3.1.2
-	o ruby-rttool-0.1.8
-	o ruby-webunit-20040429
 	o rudiments-0.27
 	o rvm-1.9
 	o sablecc-2.18.2
