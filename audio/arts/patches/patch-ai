@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.4 2004/02/07 14:39:39 xtraeme Exp $
+
 --- flow/gsl/Makefile.in.orig	2004-01-26 18:20:17.000000000 +1100
 +++ flow/gsl/Makefile.in	2004-02-08 00:43:18.000000000 +1100
 @@ -446,7 +446,7 @@
