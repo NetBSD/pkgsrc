@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2001/11/27 02:07:10 hubertf Exp $
+$NetBSD: distinfo,v 1.7 2001/11/27 04:14:55 hubertf Exp $
 
-SHA1 (gqmpeg-0.10.0.tar.gz) = 3f3342eb8652fc78448241fd9093fee63dea0c96
-Size (gqmpeg-0.10.0.tar.gz) = 556531 bytes
+SHA1 (gqmpeg-0.11.0.tar.gz) = 1bb333ec38d7d80a3778bc68b90548a4a4e31b0d
+Size (gqmpeg-0.11.0.tar.gz) = 558653 bytes
 SHA1 (patch-aa) = e8fc5d86d12bd09091b791da8c071532f7be24b1
 SHA1 (patch-ab) = fffebb06c6c970e2072b284f7a10a3153dd89cbc
