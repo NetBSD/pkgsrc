@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/10/13 07:41:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/11/25 14:07:42 schmonz Exp $
 CHANGES
 COPYRIGHT
 INSTALL
@@ -57,8 +57,6 @@ lib/fonts/fonts.dir
 lib/i18n.jar
 lib/${BLACKDOWN_ARCH}/classic/Xusage.txt
 lib/${BLACKDOWN_ARCH}/classic/libjvm.so
-lib/${BLACKDOWN_ARCH}/client/Xusage.txt
-lib/${BLACKDOWN_ARCH}/client/libjvm.so
 lib/${BLACKDOWN_ARCH}/green_threads/libhpi.so
 lib/${BLACKDOWN_ARCH}/libJdbcOdbc.so
 lib/${BLACKDOWN_ARCH}/libawt.so
@@ -76,12 +74,9 @@ lib/${BLACKDOWN_ARCH}/libjsound.so
 lib/${BLACKDOWN_ARCH}/libmlib_image.so
 lib/${BLACKDOWN_ARCH}/libnet.so
 lib/${BLACKDOWN_ARCH}/libpreemptive_close.so
-lib/${BLACKDOWN_ARCH}/libsunwjit.so
 lib/${BLACKDOWN_ARCH}/libverify.so
 lib/${BLACKDOWN_ARCH}/libzip.so
 lib/${BLACKDOWN_ARCH}/native_threads/libhpi.so
-lib/${BLACKDOWN_ARCH}/server/Xusage.txt
-lib/${BLACKDOWN_ARCH}/server/libjvm.so
 lib/images/cursors/cursors.properties
 lib/images/cursors/invalid32x32.gif
 lib/images/cursors/motif_CopyDrop32x32.gif
@@ -125,9 +120,7 @@ man/man1/rmid.1
 man/man1/rmiregistry.1
 man/man1/tnameserv.1
 plugin/${BLACKDOWN_ARCH}/mozilla/javaplugin_oji.so
-plugin/${BLACKDOWN_ARCH}/netscape4/javaplugin.so
 plugin/${BLACKDOWN_ARCH}/netscape6
-@dirrm plugin/${BLACKDOWN_ARCH}/netscape4
 @dirrm plugin/${BLACKDOWN_ARCH}/mozilla
 @dirrm plugin/${BLACKDOWN_ARCH}
 @dirrm plugin
@@ -163,22 +156,19 @@ plugin/${BLACKDOWN_ARCH}/netscape6
 @dirrm lib/locale
 @dirrm lib/images/cursors
 @dirrm lib/images
-@dirrm lib/${BLACKDOWN_ARCH}/server
 @dirrm lib/${BLACKDOWN_ARCH}/native_threads
 @dirrm lib/${BLACKDOWN_ARCH}/green_threads
-@dirrm lib/${BLACKDOWN_ARCH}/client
 @dirrm lib/${BLACKDOWN_ARCH}/classic
 @dirrm lib/${BLACKDOWN_ARCH}
 @dirrm lib/fonts
 @exec ${MKDIR} %D/lib/ext
-@unexec ${RMDIR} -p %D/lib/ext 2>/dev/null || ${TRUE}
+@dirrm lib/ext
 @dirrm lib/cmm
 @dirrm lib/audio
 @exec ${MKDIR} %D/lib/applet
-@unexec ${RMDIR} -p %D/lib/applet 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/lib 2>/dev/null || ${TRUE}
+@dirrm lib/applet
+@dirrm lib
 @dirrm bin/${BLACKDOWN_ARCH}/native_threads
 @dirrm bin/${BLACKDOWN_ARCH}/green_threads
 @dirrm bin/${BLACKDOWN_ARCH}
 @dirrm bin
-@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}
