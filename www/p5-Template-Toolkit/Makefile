@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/04 04:26:44 snj Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.10
@@ -27,7 +27,7 @@ DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
 DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Template/.packlist
 
 MAKE_PARAMS=	TT_PREFIX=${PREFIX}/share/tt2 TT_ACCEPT=y
