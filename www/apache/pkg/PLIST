@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 1998/12/03 17:23:54 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/02/12 04:15:46 hubertf Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
 etc/httpd/access.conf.default
-@exec if [ ! -f %D/etc/httpd/access.conf ]; cp -p %D/etc/httpd/access.conf.default %D/etc/httpd/access.conf; fi
+@exec if [ ! -f %D/etc/httpd/access.conf ]; then cp -p %D/etc/httpd/access.conf.default %D/etc/httpd/access.conf; fi
 etc/httpd/httpd.conf.default
-@exec if [ ! -f %D/etc/httpd/httpd.conf ]; cp -p %D/etc/httpd/httpd.conf.default %D/etc/httpd/httpd.conf; fi
+@exec if [ ! -f %D/etc/httpd/httpd.conf ]; then cp -p %D/etc/httpd/httpd.conf.default %D/etc/httpd/httpd.conf; fi
 etc/httpd/magic.default
-@exec if [ ! -f %D/etc/httpd/magic ]; cp -p %D/etc/httpd/magic.default %D/etc/httpd/magic; fi
+@exec if [ ! -f %D/etc/httpd/magic ]; then cp -p %D/etc/httpd/magic.default %D/etc/httpd/magic; fi
 etc/httpd/mime.types.default
-@exec if [ ! -f %D/etc/httpd/mime.types ]; cp -p %D/etc/httpd/mime.types.default %D/etc/httpd/mime.types; fi
+@exec if [ ! -f %D/etc/httpd/mime.types ]; then cp -p %D/etc/httpd/mime.types.default %D/etc/httpd/mime.types; fi
 etc/httpd/srm.conf.default
-@exec if [ ! -f %D/etc/httpd/srm.conf ]; cp -p %D/etc/httpd/srm.conf.default %D/etc/httpd/srm.conf; fi
+@exec if [ ! -f %D/etc/httpd/srm.conf ]; then cp -p %D/etc/httpd/srm.conf.default %D/etc/httpd/srm.conf; fi
 include/httpd/alloc.h
 include/httpd/ap.h
 include/httpd/ap_compat.h
