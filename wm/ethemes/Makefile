@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:11 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/04 13:09:43 salo Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -6,7 +6,7 @@
 #
 
 DISTNAME=	ethemes-0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
@@ -18,7 +18,7 @@ COMMENT=	Themes for the window manager Enlightenment
 DEPENDS+=	enlightenment>=0.16.2:../../wm/enlightenment
 
 DIST_SUBDIR=	ethemes
-USE_X11BASE=	yes
+USE_X11=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
