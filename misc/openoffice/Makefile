@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/10/07 07:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/08 14:17:08 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -16,6 +16,7 @@ MAINTAINER=		mrauch@netbsd.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 
+NO_BUILDLINK2=		# arcane build procedure causes buildlink2 to not work
 PTHREAD_OPTS+=		require
 
 # OpenOffice requires gcc 2.95.2 or better,
