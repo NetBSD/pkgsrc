@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2340 2003/05/27 22:52:45 jlam Exp $
+$NetBSD: CHANGES,v 1.2341 2003/05/28 01:24:19 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2178,3 +2178,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated perl5 to 5.6.1nb8 [jlam 2003-05-27]
 	Updated perl58 to 5.8.0nb1 [jlam 2003-05-27]
 	Updated openslp to 1.0.11 [jlam 2003-05-27]
+	Updated ast-ksh to 2003-04-22 [uebayasi 2003-05-28]
