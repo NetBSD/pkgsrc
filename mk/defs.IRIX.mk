@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.14 2002/12/23 22:34:00 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.15 2002/12/23 23:03:23 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -75,7 +75,7 @@ XARGS?=		/sbin/xargs
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
-EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
+EXPORT_SYMBOLS_LDFLAGS?=		# Don't add symbols to the dynamic symbol table
 GROUPADD?=		${FALSE}
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
@@ -117,4 +117,4 @@ LOCALBASE?=             ${DESTDIR}/usr/pkg
 .if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 .endif
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+PKG_TOOLS_BIN?=		${LOCALBASE}/bin
