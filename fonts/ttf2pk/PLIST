@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/09 14:15:22 hubertf Exp $
+bin/ttf2pk
+bin/ttf2tfm
+man/man1/ttf2pk.1
+man/man1/ttf2tfm.1
+share/texmf/doc/ttf2pk/BUGS
+share/texmf/doc/ttf2pk/README
+share/texmf/doc/ttf2pk/TODO
+share/texmf/doc/ttf2pk/ttf2pk.doc
+share/texmf/doc/ttf2pk/ttfonts.map
+share/texmf/ttf2pk
+share/texmf/ttf2tfm/base/Big5.sfd
+share/texmf/ttf2tfm/base/ET5.enc
+share/texmf/ttf2tfm/base/EUC.sfd
+share/texmf/ttf2tfm/base/SJIS.sfd
+share/texmf/ttf2tfm/base/T1-WGL4.enc
+share/texmf/ttf2tfm/base/UBg5plus.sfd
+share/texmf/ttf2tfm/base/UBig5.sfd
+share/texmf/ttf2tfm/base/UGB.sfd
+share/texmf/ttf2tfm/base/UGBK.sfd
+share/texmf/ttf2tfm/base/UJIS.sfd
+share/texmf/ttf2tfm/base/UKS.sfd
+share/texmf/ttf2tfm/base/Unicode.sfd
+share/texmf/ttf2tfm/base/VPS.rpl
+share/texmf/ttf2tfm/base/ttfonts.map
+@dirrm share/texmf/ttf2tfm/base
+@dirrm share/texmf/ttf2tfm
+@dirrm share/texmf/doc/ttf2pk
