@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/09/03 14:55:05 itojun Exp $
+
+--- rfc1876.c-	Tue Sep  3 23:52:42 2002
++++ rfc1876.c	Tue Sep  3 23:53:02 2002
+@@ -39,7 +39,7 @@
+ 
+         val = mantissa * poweroften[exponent];
+ 
+-        (void) sprintf(retbuf,"%d.%.2d", val/100, val%100);
++        (void) sprintf(retbuf,"%lu.%.2lu", val/100, val%100);
+         return (retbuf);
+ }
+ 
