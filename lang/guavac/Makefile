@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/01/09 18:39:25 tv Exp $
+# $NetBSD: Makefile,v 1.8 1999/01/09 18:40:53 tv Exp $
 #
 
 DISTNAME=	guavac-1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/devel/compilers/guavac/ \
 		ftp://sunsite.auc.dk/pub/languages/java/guavac/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	# http://www.cs.berkeley.edu/~engberg/guavac/ no longer exists
+# HOMEPAGE=	http://www.cs.berkeley.edu/~engberg/guavac/ no longer exists
 
 HAVE_GCC27!=	${CXX} -v 2>&1 | grep '2\.7\.'; echo
 .if !empty(HAVE_GCC27)
