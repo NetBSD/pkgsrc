@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.2 2004/10/08 03:35:25 xtraeme Exp $
-${X11ROOT_PREFIX}/etc/rc.d/xprint
-${X11ROOT_PREFIX}/bin/kbd_mode
-${X11ROOT_PREFIX}/lib/modules/freebsd/libdrm.a
-${X11ROOT_PREFIX}/lib/modules/extensions/libdri.a
-${X11ROOT_PREFIX}/${MAN_DIR}/kbd_mode.${MAN_SUFFIX}
-@dirrm ${X11ROOT_PREFIX}/lib/modules/freebsd
-@dirrm ${X11ROOT_PREFIX}/etc/rc.d
