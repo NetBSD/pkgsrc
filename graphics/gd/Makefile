@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.9 1999/05/03 20:47:22 tv Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/26 15:26:26 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
-DISTNAME=       gd1.3
-PKGNAME=        gd-1.3p1
+DISTNAME=       gd-1.6.3
 CATEGORIES=	graphics
-MASTER_SITES=   ftp://www.boutell.com/pub/boutell/gd/
+MASTER_SITES=   http://www.boutell.com/gd/http/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.boutell.com/gd/
 
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
-pre-install:
-	${MKDIR} ${PREFIX}/include/gd
-	${MKDIR} ${PREFIX}/share/examples/gd
+DEPENDS+=	png-1.0.3:../../graphics/png
 
 .include "../../mk/bsd.pkg.mk"
