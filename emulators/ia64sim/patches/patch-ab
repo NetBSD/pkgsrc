@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/10 12:59:03 agc Exp $
+
+--- execute/b_unit.c	1999/12/10 12:50:27	1.1
++++ execute/b_unit.c	1999/12/10 12:51:23
+@@ -89,7 +89,7 @@
+             ip.q = b[b1].q;
+             add_hazard(PC_REG);
+             cfm.q = ar[AR_PFS].q & (((uint64)(1) << 37) - 1);
+-            ar[AR_EC] = (uint64)BITS(ar[AR_PFS],52,57);
++            ar[AR_EC].q = (uint64)BITS(ar[AR_PFS],52,57);
+             pop_stack_frame();
+          }
+          return IA_OK;
