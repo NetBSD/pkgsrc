@@ -5,7 +5,7 @@
 # PROVIDE: slpd
 # REQUIRE: DAEMON
 
-if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -e /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -16,11 +16,11 @@ command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="/etc/slp.conf"
 
-if [ ! -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
+	load_rc_config $name
+	run_rc_command "$1"
+else
 	@ECHO@ -n " ${name}"
-	exec ${command} ${slpd_flags} ${command_args}
+	${command} ${slpd_flags} ${command_args}
 fi
-
-load_rc_config $name
-run_rc_command "$1"

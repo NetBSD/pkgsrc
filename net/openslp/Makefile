@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/09/14 02:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/14 22:30:07 jlam Exp $
 
-DISTNAME=	openslp-1.0.2
+DISTNAME=	openslp-1.0.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 
@@ -8,40 +8,28 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.openslp.org/
 COMMENT=	Open-source implementation of the Service Location Protocol
 
-USE_BUILDLINK_ONLY=	# defined
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--sysconfdir=/etc
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
-FILES_SUBST=		PREFIX=${PREFIX}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		ECHO=${ECHO:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-DOCDIR=			${PREFIX}/share/doc/openslp
-EGDIR=			${PREFIX}/share/examples/openslp
-HTMLDIR=		${PREFIX}/share/doc/html/openslp
+CONF_FILES=		${EGDIR}/slp.conf ${PKG_SYSCONFDIR}/slp.conf
+CONF_FILES+=		${EGDIR}/slp.reg ${PKG_SYSCONFDIR}/slp.reg
+CONF_FILES+=		${EGDIR}/slp.spi ${PKG_SYSCONFDIR}/slp.spi
+RCD_SCRIPTS=		slpd
 
 post-extract:
-	${FIND} ${WRKSRC}/doc -name "CVS" -print | ${XARGS} ${RM} -rf
+	${FIND} ${WRKSRC} -name "CVS" -print | ${XARGS} ${RM} -rf
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/slpd.sh > ${WRKDIR}/slpd.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/slpd.sh > ${WRKDIR}/slpd.sh
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/slpd.sh ${PREFIX}/etc/rc.d/slpd
@@ -53,6 +41,6 @@ post-install:
 	cd ${WRKSRC}/doc; ${CP} -r html/* ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR} ${HTMLDIR}
 	${CHMOD} -R a-w ${DOCDIR} ${HTMLDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
