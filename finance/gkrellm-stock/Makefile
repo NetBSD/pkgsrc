@@ -1,30 +1,25 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:14:59 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/24 23:05:57 cube Exp $
+#
 
-DISTNAME=	gkrellstock-0.2
-PKGNAME=	gkrellm-stock-0.2
-PKGREVISION=	4
-CATEGORIES=	finance
-MASTER_SITES=	http://www.geocities.com/m_muthukumar/
+DISTNAME=		gkrellstock-0.5.1
+PKGNAME=		gkrellm-stock-0.5.1
+CATEGORIES=		finance
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkrellstock/}
 
-MAINTAINER=	damon@NetBSD.org
-HOMEPAGE=	http://www.geocities.com/m_muthukumar/gkrellstock.html
-COMMENT=	gkrellm stock ticker plugin
+MAINTAINER=		cube@NetBSD.org
+HOMEPAGE=		http://gkrellstock.sourceforge.net/
+COMMENT=		GKrellM2 stock ticker plugin
 
-DEPENDS+=       p5-finance-quote-1.*:../../finance/p5-finance-quote
+DEPENDS+=		p5-finance-quote>=1.08:../../finance/p5-finance-quote
 
-WRKSRC=		${WRKDIR}/gkrellStock-0.2
-USE_BUILDLINK2=	# defined
-USE_PERL5=	# defined
+WRKSRC=			${WRKDIR}/gkrellStock-0.5.1
+USE_BUILDLINK3=		yes
+ALL_TARGET=		gkrellstock.so
+REPLACE_PERL=		${WRKSRC}/GetQuote2
 
-do-configure:
-.for FILE in GetQuote Asia.pm
-	${CP} ${WRKSRC}/${FILE} ${WRKSRC}/${FILE}.ORIG
-	${SED} -e "s,/usr/bin/perl,${PERL5},g" \
-		< ${WRKSRC}/${FILE}.ORIG > ${WRKSRC}/${FILE}
-.endfor
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/gkrellstock.so ${PREFIX}/lib/gkrellm2/plugins
+	${INSTALL_SCRIPT} ${WRKSRC}/GetQuote2 ${PREFIX}/bin
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
-
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
