@@ -1,10 +1,6 @@
-#	$NetBSD: cross.mk,v 1.12 2002/10/03 14:26:45 wiz Exp $
-#	$PEACE: cross.mk,v 1.12 2002/08/21 02:48:24 kent Exp $
+#	$NetBSD: cross.mk,v 1.13 2003/04/27 13:50:09 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
-
-# Shared definitions for building a cross-compile environment.
-# We have to switch to COMMON/cross.mk when it is upgraded for the new gcc.
 
 DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 CATEGORIES+=		cross lang
@@ -30,9 +26,9 @@ pre-install-dirs:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 
 .if defined(USE_CROSS_BINUTILS)
-BINUTILS_DISTNAME=	binutils-2.13
+BINUTILS_DISTNAME=	binutils-030425
 DISTFILES+=		${BINUTILS_DISTNAME}.tar.bz2
-SITES_binutils-020711.tar.bz2=	ftp://ftp.netbsd.org/pub/NetBSD/misc/kent/
+SITES_binutils-030425.tar.bz2=	ftp://ftp.netbsd.org/pub/NetBSD/misc/kent/
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 #MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --data-dir=${TARGET_DIR}/share
@@ -120,7 +116,15 @@ gcc-configure:
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
 		INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		${WRKSRC}/configure --prefix=${PREFIX} \
+		${BU_WRKSRC}/configure --prefix=${PREFIX} \
+		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
+		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
+	@-mkdir ${WRKOBJ}/gcc
+	@cd ${WRKOBJ}/gcc && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
+		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
+		INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+		${WRKSRC}/gcc/configure --prefix=${PREFIX} \
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
 .if defined(GCC_FAKE_RUNTIME)
@@ -130,6 +134,8 @@ gcc-configure:
 .endif
 
 gcc-build:
+	${LN} -s ${AS_FOR_TARGET} ${WRKOBJ}/gcc/as
+	${LN} -s ${LD_FOR_TARGET} ${WRKOBJ}/gcc/ld
 	@cd ${WRKOBJ} && make all-libiberty all-binutils all-gas all-ld
 	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} all
 .if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
@@ -190,4 +196,4 @@ post-install-plist:
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
 
-EXTRACT_BEFORE_ARGS:=	-X ${COMMON_DIR}/exclude ${EXTRACT_BEFORE_ARGS}
+#EXTRACT_BEFORE_ARGS:=	-X ${COMMON_DIR}/exclude ${EXTRACT_BEFORE_ARGS}
