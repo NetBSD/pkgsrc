@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:10 agc Exp $
 
-MD5 (dgpsip-1.28.tar.gz) = 006f0792198e056598315b01aacb050d
+SHA1 (dgpsip-1.28.tar.gz) = e646fa8dfcb93a33cf374de00ba222c7499dde6a
+Size (dgpsip-1.28.tar.gz) = 63830 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:22 agc Exp $
 
-MD5 (vttest-20000208.tgz) = 6e916fb1c053bee278158445685e43cf
+SHA1 (vttest-20000208.tgz) = fd46a5439e084f842aec271e88fbe77a675ea68e
+Size (vttest-20000208.tgz) = 95023 bytes

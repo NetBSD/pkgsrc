@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:21 agc Exp $
 
-MD5 (siag-3.1.20.tar.gz) = 061d35cbdb718542a6fd6ba3279dafef
+SHA1 (siag-3.1.20.tar.gz) = 9c05e18e89aa226f31ddda7e3fdb5e7dff2e5cdc
+Size (siag-3.1.20.tar.gz) = 1178500 bytes
 SHA1 (patch-aa) = 5e622c2bf11f437d7406858e938ff4c3583598e7
 SHA1 (patch-ab) = 2f4d4b859ec3640a4f3400ee91a106e3c97ab143
 SHA1 (patch-ac) = e992b49ee27fd8b7baed479287d1b37bd98ad73d

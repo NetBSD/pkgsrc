@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:11 agc Exp $
 
-MD5 (fep.tar.gz) = 3e25e467383d09514c4a37c38d8bd632
+SHA1 (fep.tar.gz) = 73fa55337b12dba3b91c9895e2c9adbbdfa9d960
+Size (fep.tar.gz) = 40137 bytes
 SHA1 (patch-aa) = a24a99e7823e3e00a2356714b8bfed9224618d3a
 SHA1 (patch-ab) = 9f778dfbf3a2c427680edc50ee49bd42444d96f0
 SHA1 (patch-ac) = dca990ac75afa7f34ef9fbd1f58702d7a144a0e0

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:15 agc Exp $
 
-MD5 (lile-2.0.tar.z) = 70b3565053e31910abec207b3731a60a
+SHA1 (lile-2.0.tar.z) = 8969acd0de5599fee8fb2d1c49c4804f5ae25156
+Size (lile-2.0.tar.z) = 22901 bytes
 SHA1 (patch-aa) = d090527028e354d8c27ac0ca038ca935d774c19a
