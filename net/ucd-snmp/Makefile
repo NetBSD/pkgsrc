@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2003/07/17 22:51:58 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/07/30 21:04:58 jmmv Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ucd-snmp.ucdavis.edu/ \
@@ -17,6 +18,7 @@ BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK2=	# defined
 USE_PERL5=	build
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -52,6 +54,11 @@ CONFIGURE_ARGS+=	--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm
 CFLAGS+=	-Dnetbsd1
 .endif
 
+RCD_SCRIPTS=		snmpd snmptrapd
+
+PKG_SYSCONFSUBDIR=	snmp
+EGDIR=			${PREFIX}/share/examples/ucd-snmp
+
 # Deal with libwrap bogosity by providing these variables to programs which
 # do not supply them.
 #
@@ -83,16 +90,10 @@ pre-configure:
 	${MV} -f ${CONFIGURE_SCRIPT}.orig ${CONFIGURE_SCRIPT}
 .endif
 
-post-build:
-	${SED} 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/snmpd.sh > ${WRKDIR}/snmpd
-	${SED} 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/snmptrapd.sh > ${WRKDIR}/snmptrapd
-
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucd-snmp
-	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf ${PREFIX}/share/examples/ucd-snmp
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
-	${INSTALL_SCRIPT} ${WRKDIR}/snmpd ${PREFIX}/etc/rc.d
-	${INSTALL_SCRIPT} ${WRKDIR}/snmptrapd ${PREFIX}/etc/rc.d
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
