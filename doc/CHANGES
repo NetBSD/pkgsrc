@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8501 2004/12/28 23:18:08 adrianp Exp $
+$NetBSD: CHANGES,v 1.8502 2004/12/28 23:22:30 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6675,3 +6675,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-common to 2.8.0 [jmmv 2004-12-28]
 	Updated gnome-themes-extras to 0.8.0 [jmmv 2004-12-28]
 	Updated py-InlineEgg to 1.08 [adrianp 2004-12-28]
+	Updated tiff to 3.7.1 [reed 2004-12-28]
