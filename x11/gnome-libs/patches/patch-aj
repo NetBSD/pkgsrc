@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1999/05/01 15:10:42 tron Exp $
+
+--- gnome-config.in.orig	Mon Feb 15 19:05:33 1999
++++ gnome-config.in	Sat May  1 16:56:02 1999
+@@ -213,7 +213,7 @@
+     case "$i" in
+     # a library, save it for later, in reverse order
+     -l*) rev_libs="$i $rev_libs" ;;
+-    -L*|-R*)
++    -L*|-R*|-Wl,-R*)
+ 	if $libs_L; then
+ 	    case " $lib_L_flags " in
+ 	    *\ $i\ *) ;;			# already there
