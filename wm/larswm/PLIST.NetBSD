@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1.1.1 2003/02/15 19:14:09 jschauma Exp $
+man/cat1/larsclock.0
+man/cat1/larsremote.0
+man/cat1/larswm.0

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/15 19:14:09 jschauma Exp $
+
+SHA1 (larswm-7.2.8.tar.gz) = da84e020d579caafc83288edf45286add320b894
+Size (larswm-7.2.8.tar.gz) = 73710 bytes
+SHA1 (keyboard_refcard.pdf) = 855f0509cd3ce047c89b88a272fcfebec76bed92
+Size (keyboard_refcard.pdf) = 3861 bytes
+SHA1 (mouse_refcard.pdf) = df0e4cdad3d320f7395755e23d379cc047075372
+Size (mouse_refcard.pdf) = 3332 bytes
