@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/02/09 00:07:36 chris Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/02/19 17:54:05 wiz Exp $
 
 .if !defined(MUSICBRAINZ_BUILDLINK2_MK)
 MUSICBRAINZ_BUILDLINK2_MK=	# defined
@@ -14,7 +14,6 @@ BUILDLINK_FILES.musicbrainz+=	include/musicbrainz/*/*.h
 BUILDLINK_FILES.musicbrainz+=	lib/libmusicbrainz.*
 
 .include "../../textproc/expat/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	musicbrainz-buildlink
 
