@@ -1,7 +1,7 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:23:00 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/02/16 01:14:13 wiz Exp $
 
-IMPORTANT: make sure your kernel has COMPAT_13 and COMPAT_14 defined !
-   (maybe COMPAT_15 is needed on -current systems)
+IMPORTANT: Make sure your kernel has COMPAT_43, COMPAT_13, and COMPAT_14
+defined.  (COMPAT_15 may be needed on -current systems.)
 
-======================================================================
+===========================================================================
