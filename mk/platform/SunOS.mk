@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.2 2004/10/07 02:01:39 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.3 2004/10/12 08:38:19 uebayasi Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -101,9 +101,9 @@ ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
+ULIMIT_CMD_datasize?=	ulimit -d `${SETENV} LC_MESSAGES=C ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 # imake installs manpages in weird places
