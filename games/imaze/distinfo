@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:27 wiz Exp $
 
-MD5 (imaze-sounds.tar) = 6c042fe0afcc3399b31b25ce16d9fb3b
-MD5 (imaze1.3.tar.Z) = 1cfac4f65653dbd2ed43f8e842a9a374
+SHA1 (imaze-sounds.tar) = 976b1acb2da35f5c69c4d867873f65162ae33ecc
+Size (imaze-sounds.tar) = 516096 bytes
+SHA1 (imaze1.3.tar.Z) = 92938b445f649ab72c2e1ac902a9ddc56a273321
+Size (imaze1.3.tar.Z) = 233695 bytes
 SHA1 (patch-aa) = 2cf95af21b9d08e65b1d19677f5d12430c234c11
 SHA1 (patch-ab) = 19f3dfafa9126b3352b938610f77f1b7144a1aa3
 SHA1 (patch-ac) = dcd117f666f7f5b489e8469ca5e19c9d8464264f

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:18 wiz Exp $
 
-MD5 (cgoban-1.9.10.tar.gz) = a9e90f73791aca6719073af7404fc9bc
+SHA1 (cgoban-1.9.10.tar.gz) = 554af7b303469ef11af4dab5d94f967ad5b5628d
+Size (cgoban-1.9.10.tar.gz) = 337684 bytes
 SHA1 (patch-aa) = a05ba71100266ba658260d9545d4bfb4e897b114
