@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 1999/09/04 23:23:23 tron Exp $
+@comment $NetBSD: PLIST,v 1.18 1999/09/05 00:48:55 tron Exp $
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
 LessTif/Motif1.2/include/Mrm/MrmPrivate.h
@@ -123,10 +123,8 @@ LessTif/Motif1.2/include/Xm/XmP.h
 LessTif/Motif1.2/include/Xm/XmStrDefs.h
 LessTif/Motif1.2/include/Xm/XmosP.h
 LessTif/Motif1.2/lib/libMrm.a
-LessTif/Motif1.2/lib/libMrm.so
 LessTif/Motif1.2/lib/libMrm.so.1.2
 LessTif/Motif1.2/lib/libXm.a
-LessTif/Motif1.2/lib/libXm.so
 LessTif/Motif1.2/lib/libXm.so.1.2
 @dirrm LessTif/Motif1.2/lib
 @dirrm LessTif/Motif1.2/include/Xm
@@ -293,11 +291,11 @@ lib/X11/mwm/README
 lib/X11/mwm/alt.map
 lib/X11/mwm/system.mwmrc
 lib/libMrm.a
-lib/libMrm.so.1.2
 lib/libMrm.so.2.0
+lib/libMrm.so.1.2
 lib/libXm.a
-lib/libXm.so.1.2
 lib/libXm.so.2.0
+lib/libXm.so.1.2
 share/lesstif/AUTHORS
 share/lesstif/BUG-REPORTING
 share/lesstif/COPYING
