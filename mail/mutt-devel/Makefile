@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2002/01/18 15:04:59 tron Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/25 14:15:59 tron Exp $
 
-DISTNAME=		mutt-1.3.26i
+DISTNAME=		mutt-1.3.27i
 PKGNAME=		${DISTNAME:C/i$//}
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/
