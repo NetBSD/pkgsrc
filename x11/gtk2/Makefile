@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2003/01/04 17:29:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/04 20:01:18 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.2.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -23,6 +23,8 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASE}"
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
