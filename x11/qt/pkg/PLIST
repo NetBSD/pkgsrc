@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/07/19 21:09:23 tv Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/11/05 07:44:45 mycroft Exp $
 bin/moc
 include/qt/jri.h
 include/qt/jri_md.h
@@ -156,6 +156,7 @@ include/qt/qsemimodal.h
 include/qt/qshared.h
 include/qt/qsignal.h
 include/qt/qsignalmapper.h
+include/qt/qsignalslotimp.h
 include/qt/qsize.h
 include/qt/qslider.h
 include/qt/qsocketnotifier.h
@@ -192,7 +193,7 @@ include/qt/qwindow.h
 include/qt/qwindowdefs.h
 include/qt/qwmatrix.h
 lib/libqt.a
-lib/libqt.so.1.40
+lib/libqt.so.1.41
 man/man1/moc.1
 man/man3/QAccel.3
 man/man3/QApplication.3
@@ -232,6 +233,9 @@ man/man3/QDict.3
 man/man3/QDictIterator.3
 man/man3/QDir.3
 man/man3/QDoubleValidator.3
+man/man3/QDragMoveEvent.3
+man/man3/QDragObject.3
+man/man3/QDropEvent.3
 man/man3/QEvent.3
 man/man3/QFile.3
 man/man3/QFileDialog.3
@@ -358,6 +362,7 @@ man/man3/QToolBar.3
 man/man3/QToolButton.3
 man/man3/QToolTip.3
 man/man3/QToolTipGroup.3
+man/man3/QUrlDrag.3
 man/man3/QVBoxLayout.3
 man/man3/QValidator.3
 man/man3/QWMatrix.3
@@ -405,6 +410,9 @@ man/man3/qdict.3
 man/man3/qdictiterator.3
 man/man3/qdir.3
 man/man3/qdoublevalidator.3
+man/man3/qdragmoveevent.3
+man/man3/qdragobject.3
+man/man3/qdropevent.3
 man/man3/qevent.3
 man/man3/qfile.3
 man/man3/qfiledialog.3
@@ -531,6 +539,7 @@ man/man3/qtoolbar.3
 man/man3/qtoolbutton.3
 man/man3/qtooltip.3
 man/man3/qtooltipgroup.3
+man/man3/qurldrag.3
 man/man3/qvalidator.3
 man/man3/qvboxlayout.3
 man/man3/qwhatsthis.3
@@ -542,5 +551,5 @@ man/man3/qxtapplication.3
 man/man3/qxtwidget.3
 share/doc/qt/README
 share/doc/qt/README.QT
-@dirrm include/qt
 @dirrm share/doc/qt
+@dirrm include/qt

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 1998/09/01 14:29:28 agc Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
+# $NetBSD: Makefile,v 1.19 1998/11/05 07:44:45 mycroft Exp $
 #
 
-DISTNAME=	qt-1.40
+DISTNAME=	qt-1.41
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/linux/sunsite/Incoming/ \
 		ftp://ftp.kde.org/pub/qt/TGZ/ \
@@ -11,7 +10,7 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/linux/sunsite/Incoming/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
 
-CONFLICTS=	qt-1.33
+CONFLICTS=	qt-1.33 qt-1.40
 
 USE_X11=	yes
 USE_LIBTOOL=	yes
