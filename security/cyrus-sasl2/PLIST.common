@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2003/02/27 13:18:06 seb Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2003/03/19 22:24:21 jlam Exp $
 etc/rc.d/saslauthd
 include/sasl/hmac-md5.h
 include/sasl/md5.h
@@ -97,4 +97,3 @@ share/doc/html/cyrus-sasl/upgrading.html
 share/doc/html/cyrus-sasl/windows.html
 @dirrm share/doc/html/cyrus-sasl
 @dirrm include/sasl
-@unexec ${RM} -rf ${SASLSOCKETDIR}
