@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/27 12:24:55 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 P5_DBI_BUILDLINK3_MK:=	${P5_DBI_BUILDLINK3_MK}+
@@ -12,6 +12,9 @@ BUILDLINK_PACKAGES+=		p5-DBI
 BUILDLINK_DEPENDS.p5-DBI+=	p5-DBI>=1.30
 BUILDLINK_PKGSRCDIR.p5-DBI?=	../../databases/p5-DBI
 BUILDLINK_INCDIRS.p5-DBI?=	${PERL5_SUB_INSTALLSITEARCH}/auto/DBI
+
+# We want all of the arch-dependent DBI files.
+BUILDLINK_CONTENTS_FILTER.p5-DBI?=	${GREP} '/auto/DBI/'
 
 .  include "../../lang/perl5/buildlink3.mk"
 .endif	# P5_DBI_BUILDLINK3_MK
