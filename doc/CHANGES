@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1799 2003/03/29 12:35:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.1800 2003/03/29 19:58:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1341,3 +1341,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.17.1 [gehenna 2003-03-29]
 	Updated ja-samba to 2.2.7.1.1.1 [taca 2003-03-29]
 	Updated pkglint to 3.49 [wiz 2003-03-29]
+	Updated sendmail to 8.12.9 [seb 2003-03-29]
+	Updated libmilter to 8.12.9 [seb 2003-03-29]
