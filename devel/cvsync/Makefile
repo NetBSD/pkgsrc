@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/04/04 03:21:57 gehenna Exp $
+# $NetBSD: Makefile,v 1.20 2003/04/09 02:43:59 gehenna Exp $
 #
 
-DISTNAME=	cvsync-0.19.0
+DISTNAME=	cvsync-0.19.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.daemon-systems.org/cvsync/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gehenna@NetBSD.ORG
 HOMEPAGE=	http://www.daemon-systems.org/cvsync/
