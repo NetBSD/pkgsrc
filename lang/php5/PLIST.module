@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.module,v 1.1.1.1 2004/10/29 20:31:54 jdolecek Exp $
+${PHP_EXTENSION_DIR}/${MODNAME}.so
