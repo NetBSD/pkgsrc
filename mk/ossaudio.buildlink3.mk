@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink3.mk,v 1.2 2004/03/18 09:12:13 jlam Exp $
+# $NetBSD: ossaudio.buildlink3.mk,v 1.3 2004/11/18 04:00:50 xtraeme Exp $
 #
 # This file should be included by Makefiles for packages that use OSS.
 # By checking the value of HAVE_OSS after including this file, it's possible
@@ -30,7 +30,7 @@ HAVE_OSS?=	${_HAVE_OSS}
 .  include "../../audio/oss/buildlink3.mk"
 .else
 BUILDLINK_PREFIX.oss=	/usr
-.  if ${OPSYS} == "NetBSD"
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 LIBOSSAUDIO?=		-lossaudio
 DEVOSSAUDIO?=		/dev/audio
 DEVOSSSOUND?=		/dev/sound
