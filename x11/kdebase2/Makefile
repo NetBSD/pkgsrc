@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/05/01 09:46:36 skrll Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/04 11:26:06 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -13,6 +13,7 @@ DEPENDS+=	kdelibs-2.1nb1:../../x11/kdelibs2
 
 USE_XPM=	yes
 USE_MOTIF=	yes
+USE_MESA=	yes
 .include "../../x11/kde2/Makefile.part2"
 
 CONFIGURE_ARGS+=	--disable-greet-lib
@@ -22,6 +23,13 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 IMAKEDIR=	${WRKDIR}/imake
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_MESA} == "NO"
+EVAL_PREFIX+=	MESABASE=Mesa
+.else
+MESABASE=	${X11BASE}
+.endif
+CONFIGURE_ENV+=	GL_INCLUDE="${MESABASE}/include"
 
 .if ${OBJECT_FMT} == "a.out"
 BROKEN=		"This package doesn't build on a.out. This is being worked on."
