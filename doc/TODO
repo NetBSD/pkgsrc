@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2616 2004/12/01 12:35:56 markd Exp $
+$NetBSD: TODO,v 1.2617 2004/12/01 14:00:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -755,7 +755,6 @@ Suggested package updates
 	o oinkmaster-1.1
 	o oo2c-2.1.5
 	o open2300-1.8
-	o openal-20040816
 	o opencm-0.1.2alpha8.2
 	o opencobol-0.30
 	o openoffice-1.1.3
