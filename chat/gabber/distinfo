@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/10 14:16:06 agc Exp $
+
+SHA1 (gabber-0.8.7.tar.gz) = f12526a158bb132451fc210c28a41247c3ec7dc9
+Size (gabber-0.8.7.tar.gz) = 2141334 bytes
+SHA1 (patch-aa) = 89bdd406d61d45016ca0a84364eff25e70a707b6
+SHA1 (patch-ab) = 7e45af755011b298295375a8466358cdf2d90dd6
+SHA1 (patch-ac) = bdc8c9539ccc4f44ecd0d5f303c761c9923cb998
