@@ -1,22 +1,26 @@
-# $NetBSD: Makefile,v 1.16 1999/04/27 22:27:14 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/07/06 08:00:50 jlam Exp $
 
-DISTNAME=	vim-5.3
-CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.oce.nl/pub/vim/unix/ \
-		ftp://ftp.vim.org/pub/misc/editors/vim/unix/ \
-		ftp://uiarchive.uiuc.edu/pub/packages/vim/ \
-		ftp://ftp.progsoc.uts.edu.au/pub/vim/unix/
-DISTFILES=	vim-5.3-src.tar.gz vim-5.3-rt.tar.gz
+DISTNAME=		vim-5.3
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+CATEGORIES=		editors
+MASTER_SITES=		ftp://ftp.oce.nl/pub/vim/unix/ \
+			ftp://ftp.vim.org/pub/misc/editors/vim/unix/ \
+			ftp://uiarchive.uiuc.edu/pub/packages/vim/ \
+			ftp://ftp.progsoc.uts.edu.au/pub/vim/unix/
+DISTFILES=		vim-5.3-src.tar.gz vim-5.3-rt.tar.gz
+DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX} \
+			${DISTNAME}-rt${EXTRACT_SUFX}
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.vim.org/
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.vim.org/
 
-DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS=		ncurses-4.2:../../devel/ncurses
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes
 CONFIGURE_ARGS+=	--enable-gui=athena --with-tlib=ncurses
-LDFLAGS+=		"-L${LOCALBASE}/lib"
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
+LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
