@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/03/13 20:52:26 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/04/14 19:42:53 kim Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -41,6 +41,9 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 .include "../../mk/bsd.prefs.mk"
+
+APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+BUILD_DEFS+=		APACHE_SYSCONFDIR
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 APACHE_USER?=		www
@@ -108,6 +111,7 @@ pre-patch:
 
 pre-configure:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 post-build:
@@ -120,18 +124,26 @@ pre-install:
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
 		-e "s|@TRUE@|${TRUE}|g"					\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
 		-e "s|@CHOWN@|${CHOWN}|g"				\
 		-e "s|@CP@|${CP}|g"					\
 		-e "s|@MKDIR@|${MKDIR}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
 	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
+	for i in httpd.conf magic mime.types; do			\
+		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$$i.default	\
+			${PREFIX}/share/examples/httpd;			\
+		${RM} -f ${APACHE_SYSCONFDIR}/$$i.default;		\
+	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
