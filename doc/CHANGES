@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6900 2004/08/16 06:53:08 minskim Exp $
+$NetBSD: CHANGES,v 1.6901 2004/08/16 10:30:58 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added un-extra-ttf-1.0.1 [minskim 2004-08-16]
 	Removed un-ttf [minskim 2004-08-16]
 	Updated xchat to 2.4.0 [minskim 2004-08-16]
+	Updated postgresql74-lib to 7.4.3nb1 [recht 2004-08-16]
