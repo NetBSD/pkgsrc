@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.9 2004/02/05 21:26:16 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.10 2004/02/18 11:18:43 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -14,7 +14,8 @@
 #		distcc		distributed C/C++ (chainable)
 #		ccache		compiler cache (chainable)
 #		gcc		GNU
-#		mipspro		Silicon Graphics, Inc. MIPSpro
+#		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
+#		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
 #		sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 #				ONE Studio
 #
