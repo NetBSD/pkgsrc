@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/24 11:47:36 frueauf Exp $
+
 --- port.h.orig	Sun Aug 23 21:09:15 1998
 +++ port.h	Sun Aug 23 21:09:42 1998
 @@ -28,6 +28,9 @@
