@@ -9,3 +9,134 @@
  $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
  	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps doc/Makefile
 
+--- Makefile.in	1998/02/16 15:03:30	1.1
++++ Makefile.in	1998/02/16 15:04:32
+@@ -68,7 +68,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -411,7 +411,7 @@
+ all: all-recursive all-am
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs: installdirs-recursive
+ 	$(mkinstalldirs)  $(bindir) $(afmdir) $(psdir)
+ 
+--- ogonkify/Makefile.in	1998/02/16 15:45:09	1.1
++++ ogonkify/Makefile.in	1998/02/16 15:45:58
+@@ -68,7 +68,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -411,7 +411,7 @@
+ all: all-recursive all-am
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs: installdirs-recursive
+ 	$(mkinstalldirs)  $(bindir) $(afmdir) $(psdir)
+ 
+--- afm/Makefile.in	1998/02/16 16:21:37	1.1
++++ afm/Makefile.in	1998/02/16 16:22:17
+@@ -76,7 +76,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -257,7 +257,7 @@
+ all: Makefile $(SCRIPTS) $(DATA)
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs:
+ 	$(mkinstalldirs)  $(afmdir) $(afmdir)
+ 
+--- lib/Makefile.in	1998/02/16 16:22:56	1.1
++++ lib/Makefile.in	1998/02/16 16:23:50
+@@ -48,7 +48,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -243,8 +243,8 @@
+ 	$(mkinstalldirs) $(libdir)
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "$(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(libdir)/$$p"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(libdir)/$$p; \
++	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(libdir)/$$p"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 
+@@ -630,7 +630,7 @@
+ all: Makefile $(LTLIBRARIES) $(HEADERS)
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs:
+ 	$(mkinstalldirs)  $(libdir) $(includedir)
+ 
+--- contrib/emacs/Makefile.in	1998/02/16 17:01:34	1.1
++++ contrib/emacs/Makefile.in	1998/02/16 17:01:58
+@@ -72,7 +72,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -221,7 +221,7 @@
+ all: Makefile $(DATA)
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs:
+ 	$(mkinstalldirs)  $(lispdir)
+ 
+--- contrib/Makefile.in	1998/02/16 17:09:17	1.1
++++ contrib/Makefile.in	1998/02/16 17:09:50
+@@ -72,7 +72,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -292,7 +292,7 @@
+ all: all-recursive all-am
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs: installdirs-recursive
+ 	$(mkinstalldirs)  $(bindir)
+ 
