@@ -1,31 +1,18 @@
-$NetBSD: patch-ac,v 1.3 2002/11/07 15:07:46 fredb Exp $
+$NetBSD: patch-ac,v 1.4 2004/02/24 22:21:15 cube Exp $
 
---- src/disk.c.orig	Tue Jan  1 15:08:07 2002
-+++ src/disk.c
-@@ -446,10 +446,24 @@
- 	  * d.xfer value (number of transfers) but there a scaling problem:
- 	  * d.xfer is usually much more smaller thant d.dk_bytes... */
+--- src/gkrellm.h.orig	2003-03-10 06:59:37.000000000 +0100
++++ src/gkrellm.h
+@@ -115,11 +115,11 @@
  
-+	 /* Separate read/write stats were implemented in NetBSD 1.6K. */
-+
- 	 disk = (DiskMon *) list->data;
--	 disk->rblk = d.dk_bytes / 512;	/* block size hardcoded :
--					 * d.dk_byteshift is always 0 ?? */
-+#if __NetBSD_Version__ >= 106110000
-+	 /* d.dk_byteshift is not set in, or used, by the kernel as of
-+	  * NetBSD 1.6K, but maybe one day... In the meantime, NetBSD
-+	  * only supports a blocksize of 512 == 2^^9, so assume that. */
-+	 if (d.dk_byteshift == 0) {
-+	    disk->rblk = d.dk_rbytes >> 9;
-+	    disk->wblk = d.dk_wbytes >> 9;
-+	 } else {
-+	    disk->rblk = d.dk_rbytes / d.dk_byteshift;
-+	    disk->wblk = d.dk_wbytes / d.dk_byteshift;
-+	 }
-+#else
-+	 disk->rblk = d.dk_bytes >> 9;
- 	 disk->wblk = 0;
-+#endif
+ #define	LOCAL_THEMES_DIR		"/usr/local/share/gkrellm2/themes"
+ #if !defined(SYSTEM_THEMES_DIR)
+-#define	SYSTEM_THEMES_DIR		"/usr/share/gkrellm2/themes"
++#define	SYSTEM_THEMES_DIR		"@@PREFIX@@/share/gkrellm2/themes"
+ #endif
+ #define	LOCAL_PLUGINS_DIR		"/usr/local/lib/gkrellm2/plugins"
+ #if !defined(SYSTEM_PLUGINS_DIR)
+-#define	SYSTEM_PLUGINS_DIR		"/usr/lib/gkrellm2/plugins"
++#define	SYSTEM_PLUGINS_DIR		"@@PREFIX@@/lib/gkrellm2/plugins"
+ #endif
  
- 	 composite_disk->rblk += disk->rblk;
- 	 composite_disk->wblk += disk->wblk; /* useless, isn't it ? :-D */
+ #else
