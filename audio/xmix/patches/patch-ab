@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1999/02/10 14:55:33 frueauf Exp $
+
 diff -r -u ../../src/xmix-2.1/xmix.c ./xmix.c
 --- ../../src/xmix-2.1/xmix.c	Sun Jan 17 13:13:12 1999
 +++ ./xmix.c	Sun Jan 17 13:16:12 1999
