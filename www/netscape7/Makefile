@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2004/06/26 10:46:41 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/07/27 04:36:06 atatat Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MAJ}.${VERS_MIN}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -14,6 +14,8 @@ MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://channels.netscape.com/ns/browsers/default.jsp
 COMMENT=		Netscape Browser, Mail and Newsreader suite, version 7
+
+BUILD_DEPENDS=		binpatch>=1.0:../../pkgtools/binpatch
 
 RESTRICTED=		"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -81,6 +83,10 @@ pre-install:
 	@${ECHO} "@dirrm lib/netscape/netscape7" >> ${PLIST_SRC}
 	@${ECHO} "@unexec \$${RMDIR} %D/lib/netscape 2>/dev/null || \$${TRUE}" \
 		>> ${PLIST_SRC}
+
+post-build:
+	${SH} ../../www/netscape7/files/binpatch-x86-unknown-linux2.2.5-7.1.sh \
+	    ${LOCALBASE} ${WRKSRC}/dest/libsoftokn3.so
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/netscape/netscape7
