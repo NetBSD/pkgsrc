@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2066 2004/08/20 01:42:36 schmonz Exp $
+$NetBSD: TODO,v 1.2067 2004/08/21 11:36:18 recht Exp $
 
 Suggested new packages
 ======================
@@ -197,7 +197,6 @@ Suggested package updates
 	o crafty-19.5
 	o crossfire-1.5.0
 	o cscope-15.5
-	o curl-7.12.1
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
