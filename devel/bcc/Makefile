@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/25 20:40:07 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:29:39 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/11/18 11:22:35 asami Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=		bcc
 PKGNAME=		bcc-95.3.12
 CATEGORIES=		devel
 
-MAINTAINER=		tsarna@netbsd.org
+MAINTAINER=		tsarna@NetBSD.org
 COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
 
 NOT_FOR_PLATFORM=	*-*-alpha	# Severe LP64 problems

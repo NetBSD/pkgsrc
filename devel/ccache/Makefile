@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/07/05 22:06:36 chris Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:48 grant Exp $
 
 DISTNAME=	ccache-2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ccache.samba.org/ftp/ccache/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
 

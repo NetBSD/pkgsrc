@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/02 01:21:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/17 21:24:54 grant Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -7,7 +7,7 @@ CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/felt/
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://felt.sourceforge.net/
 COMMENT=		Free system for introductory level finite element analysis
 

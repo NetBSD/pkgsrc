@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/19 23:49:53 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:37 grant Exp $
 #
 
 DISTNAME=	automake-1.4-p6
@@ -6,7 +6,7 @@ PKGNAME=	automake14-1.4.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=automake/}
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator (old version)
 

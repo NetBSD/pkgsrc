@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/04/11 19:11:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 21:22:35 grant Exp $
 
 .include "Makefile.common"
 
 PKGREVISION=	1
 
-MAINTAINER=	lukem@netbsd.org
+MAINTAINER=	lukem@NetBSD.org
 
 .include "../../mk/bsd.pkg.mk"

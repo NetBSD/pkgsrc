@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/06/02 01:21:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/17 21:27:17 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	converters kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Mime library for the KDE integrated X11 desktop
 

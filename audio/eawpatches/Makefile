@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:21:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:22:06 grant Exp $
 #
 
 DISTNAME=	eawpats11_full
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.stardate.bc.ca/eawpatches/
 EXTRACT_SUFX=	.rar
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.stardate.bc.ca/eawpatches/html/
 COMMENT=	Eric A. Welsh' patches (audio samples) for TiMidity
 

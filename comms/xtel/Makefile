@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/26 03:58:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:27:04 grant Exp $
 #
 
 DISTNAME=	xtel-3.3.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	comms x11
 MASTER_SITES=	http://pficheux.free.fr/xtel/download/
 
-MAINTAINER=	bouyer@netbsd.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://pficheux.free.fr/xtel/
 COMMENT=	Minitel(r) emulator
 

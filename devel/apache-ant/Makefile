@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/06/03 17:00:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:29:27 grant Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -12,7 +12,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/source/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://ant.apache.org/
 COMMENT=	Apache Project's Java-Based make(1) replacement
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:21:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:22:31 grant Exp $
 
 DISTNAME=	Krio-19990721
 PKGNAME=	krio-19990721
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/Krio
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.13th-floor.org/pub/krio/
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       http://kyle.13th-floor.org/2.0/krio
 COMMENT=	kde front-end for managing the Rio PMP300 mp3 player
 

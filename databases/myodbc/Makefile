@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:21:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:28:21 grant Exp $
 #
 
 DISTNAME=		MyODBC-2.50.36
@@ -6,7 +6,7 @@ PKGNAME=		myodbc-2.50.36
 CATEGORIES=		databases
 MASTER_SITES=		http://www.mysql.com/Downloads/MyODBC/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		ODBC driver (server side) for MySQL
 

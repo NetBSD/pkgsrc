@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/13 21:04:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 21:23:39 grant Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	vorbis-tools-1.0.0.8
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
-MAINTAINER=	lukem@netbsd.org
+MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
 

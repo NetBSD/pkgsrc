@@ -3,7 +3,7 @@
 # Date created:		03 Jan 1995
 # Whom:			faulkner@mpd.tandem.com
 #
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:21:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:23:19 grant Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/15 23:14:14 obrien Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/ \
 		ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/dictionaries/cmudict/
 DISTFILES=	rsynth-2.0.tar.gz ${DICT_FILES}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/FAQ-complete
 COMMENT=	Public Domain Speech Synthesis System
 

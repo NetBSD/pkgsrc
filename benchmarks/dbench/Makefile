@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/17 15:11:44 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:24:38 grant Exp $
 #
 
 DISTNAME=	dbench-1.3
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://dnuc.polyn.kiae.su/pub/dbench/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://samba.org/ftp/tridge/dbench/README
 COMMENT=	Simulation of the Ziff-Davis netbench benchmark
 

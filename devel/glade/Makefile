@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2003/07/13 13:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/17 21:30:42 grant Exp $
 
 DISTNAME=	glade-0.6.4
 PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNOME:=sources/glade/0.6/}
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://glade.gnome.org/
 COMMENT=	User interface builder for GTK+
 

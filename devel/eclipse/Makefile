@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2003/06/03 17:02:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:30:22 grant Exp $
 #
 
 DISTNAME=	${PKGNAME}
 PKGNAME=	eclipse-2.1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/jschauma/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org
 COMMENT=	Java IDE
 

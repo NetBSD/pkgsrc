@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/22 05:44:37 dillo Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:21:55 grant Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 # was ftp://ftp.rasip.fer.hr/pub/mpeg/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	mycroft@netbsd.org
+MAINTAINER=	mycroft@NetBSD.org
 COMMENT=	another mp3 player
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

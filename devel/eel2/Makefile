@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:51:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:30:24 grant Exp $
 #
 
 DISTNAME=		eel-2.2.3.1
@@ -8,7 +8,7 @@ CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eel/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Eazel Extentions Library for GNOME2
 

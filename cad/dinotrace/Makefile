@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2003/07/15 09:48:35 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 21:24:48 grant Exp $
 #
 
 DISTNAME=	dinotrace-9.1k
 CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.com/ftp/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE= 	http://www.veripool.com/dinotrace/
 COMMENT=	tool for viewing the output of digital simulators
 

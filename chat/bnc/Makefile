@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/28 21:29:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:25:33 grant Exp $
 # FreeBSD Id: ports/irc/bnc/Makefile,v 1.9 2000/05/22 06:38:58 will Exp
 
 DISTNAME=	bnc2.8.6
@@ -8,7 +8,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://www.gotbnc.com/files/ \
 		ftp://ftp.ircadmin.net/bnc/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.gotbnc.com/
 COMMENT=	Simple IRC relay proxy with support for virtual hosting
 

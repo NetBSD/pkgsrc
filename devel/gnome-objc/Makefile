@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:30:50 grant Exp $
 #
 
 DISTNAME=	gnome-objc-1.0.40
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	devel lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-objc/1.0/}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Objective C API for gnome and gtk
 

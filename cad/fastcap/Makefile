@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/11 20:50:51 abs Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:24:52 grant Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
@@ -12,7 +12,7 @@ DISTFILES=	fastcap-2.0-15Jul92.tar.Z \
 		mtt.ps.Z \
 		tcad.ps.Z
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
 COMMENT=	Fast 3-D capacitance solver
 

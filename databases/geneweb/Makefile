@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:10 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:28:07 grant Exp $
 #
 
 DISTNAME=	geneweb-4.09
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
 COMMENT=	GeneWeb is a comprehensive genealogy database application
 

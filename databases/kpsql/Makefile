@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 17:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:28:19 grant Exp $
 #
 
 DISTNAME=	kpsql-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://www.mutinybaysoftware.com/downloads/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.mutinybaysoftware.com/kpsql.html
 COMMENT=	Interactive Query Tool for PostgreSQL
 

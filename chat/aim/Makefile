@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:25:32 grant Exp $
 
 DISTNAME=	aim-1.5.277
 WRKSRC=		${WRKDIR}
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.newaol.com/aimgen/73010/
 EXTRACT_SUFX=	-1.i386.rpm
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.aim.com/
 COMMENT=	AOL Instant Messenger (SM)
 

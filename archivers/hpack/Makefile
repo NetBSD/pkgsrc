@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/06/02 01:21:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 21:21:21 grant Exp $
 
 DISTNAME=       hpack79src
 PKGNAME=        hpack-0.79
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://src.doc.ic.ac.uk/packages/hpack/
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 COMMENT=	Multi-System Archiver with open keys PGP-based security
 
 USE_BUILDLINK2=	yes

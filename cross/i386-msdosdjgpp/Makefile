@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:21:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:27:56 grant Exp $
 #
 
 WRKSRC=			${WRKDIR}/djgpp
@@ -8,7 +8,7 @@ EXTRACT_ONLY=		# none of the djgpp files
 MASTER_SITES=		ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2/old/ \
 			ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2misc/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.delorie.com/djgpp/
 COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 

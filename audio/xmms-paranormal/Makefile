@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:50:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:24:16 grant Exp $
 #
 
 DISTNAME=	paranormal-0.2.0
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/paranormal/}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://paranormal.sourceforge.net/
 COMMENT=	Extremely customizable (pseudo-programmable) XMMS plugin
 

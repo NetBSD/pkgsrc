@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/13 13:51:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/17 21:30:35 grant Exp $
 
 DISTNAME=		gal-0.22
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gal/0.22/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Gnome Application Libraries
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2003/06/29 11:13:49 seb Exp $
+# $NetBSD: Makefile,v 1.30 2003/07/17 21:28:05 grant Exp $
 #
 
 DISTNAME=	gdbm-1.8.3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdbm/gdbm.html
 COMMENT=	The GNU database manager
 

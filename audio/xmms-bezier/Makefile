@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:23:54 grant Exp $
 #
 
 DISTNAME=	bezier-0.0.3
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://yossman.net/~kuroyi/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	OpenGL XMMS plugin
 
 GNU_CONFIGURE=	yes

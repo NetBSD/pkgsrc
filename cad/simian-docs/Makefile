@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:25:21 grant Exp $
 #
 
 DISTNAME=	simian_man_12_98
@@ -8,7 +8,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_mnl_ps_pdf/
 EXTRACT_SUFX=	.pdf
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_links.html
 COMMENT=	PDF manual for SIMIAN
 

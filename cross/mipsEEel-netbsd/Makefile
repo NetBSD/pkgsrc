@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:27:59 grant Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
 DISTVERSION=	1.0.0
 PKGREVISION=	1
 CATEGORIES+=	cross lang
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Cross-compiler for NetBSD/PlayStation2 kernel
 
 BZCAT=		/usr/bin/bzcat
@@ -21,7 +21,7 @@ PLIST_SUBST+=	SUBDIR="cross-ps2" TARGET_ARCH="${TARGET_ARCH}" \
 #
 # binutils
 #
-MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/binutils-2.9EE/
+MASTER_SITES+=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/binutils-2.9EE/
 DISTFILES+=		binutils-ps2linux-1.0.0.patch.bz2
 BINUTILS_PATCH1=	${_DISTDIR}/binutils-ps2linux-1.0.0.patch.bz2
 
@@ -33,7 +33,7 @@ EXTRACT_ONLY=		${BINUTILS_DISTNAME}.tar.gz
 #
 # gcc
 #
-MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/gcc-2.95.2EE/
+MASTER_SITES+=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/gcc-2.95.2EE/
 GCC_VERSION=		2.95.2
 GCC_DISTNAME=		gcc-${GCC_VERSION}
 GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}

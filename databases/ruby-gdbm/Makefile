@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:01 grant Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -7,7 +7,7 @@ WRKSRC=		${RUBY_WRKSRC}/ext/gdbm
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby extension to GDBM library
 
