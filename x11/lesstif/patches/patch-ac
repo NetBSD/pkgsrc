@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.13 2001/06/30 19:08:22 jlam Exp $
+$NetBSD: patch-ac,v 1.14 2001/09/19 16:50:40 drochner Exp $
 
---- clients/Motif-1.2/mwm/system.mwmrc.orig	Sun Jan 16 06:06:11 2000
-+++ clients/Motif-1.2/mwm/system.mwmrc
-@@ -4,7 +4,7 @@
+--- clients/Motif-1.2/mwm/system.mwmrc.orig	Wed Jun 13 22:39:25 2001
++++ clients/Motif-1.2/mwm/system.mwmrc	Wed Sep 19 17:45:08 2001
+@@ -5,7 +5,7 @@
  Menu DefaultRootMenu
  {
- 	"Root Menu"		f.title
+ 	"Root Menu"			f.title
 -	"New Window"		f.exec "xterm -e /bin/bash &"
 +	"New Window"		f.exec "xterm &"
  	"Shuffle Up"		f.circle_up
  	"Shuffle Down"		f.circle_down
- 	"Refresh"		f.refresh
+ 	"Refresh"			f.refresh
