@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/07 03:24:12 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/10 16:06:40 wiz Exp $
 
 .if !defined(LIBGLADE2_BUILDLINK2_MK)
 LIBGLADE2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libglade2
-BUILDLINK_DEPENDS.libglade2?=	libglade2>=2.0.1
+BUILDLINK_DEPENDS.libglade2?=	libglade2>=2.0.1nb1
 BUILDLINK_PKGSRCDIR.libglade2?=	../../devel/libglade2
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libglade2=libglade2

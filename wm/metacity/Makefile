@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/09 21:58:42 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/10 16:06:50 wiz Exp $
 #
 
 DISTNAME=	metacity-2.3.377
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://people.redhat.com/~hp/metacity/
 
