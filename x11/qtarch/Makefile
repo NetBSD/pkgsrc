@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2004/04/28 00:05:24 snj Exp $
+# $NetBSD: Makefile,v 1.23 2004/09/10 15:43:51 drochner Exp $
 #
 
-DISTNAME=	qtarch-2.1-1
-PKGNAME=	qtarch-2.1
-PKGREVISION=	1
+DISTNAME=	qtarch-2.2-1
+PKGNAME=	qtarch-2.2
 CATEGORIES=	x11 devel
-MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
+#MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtarch/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://qtarch.sourceforge.net/
