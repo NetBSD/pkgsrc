@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.41 2003/08/27 11:44:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.42 2003/08/28 19:12:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -833,7 +833,7 @@ RMAN?=			${X11BASE}/bin/rman
 .if !empty(_USE_RPATH:M[nN][oO])
 .  if defined(FIX_RPATH) && !empty(FIX_RPATH)
 .    for var in ${FIX_RPATH}
-.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link
+.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link --rpath --rpath-link
 ${var}:=	${${var}:N-Wl,${_rpath_flag}*:N${_rpath_flag}*}
 .      endfor
 .    endfor
