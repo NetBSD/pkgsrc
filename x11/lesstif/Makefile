@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2001/08/29 22:41:29 jlam Exp $
-
-.include "../../x11/lesstif/Makefile.common"
+# $NetBSD: Makefile,v 1.59 2001/09/09 03:37:02 jlam Exp $
 
 COMMENT=	API compatible clone of the OSF/Motif toolkit
+
+USE_BUILDLINK_ONLY=	# defined
+
+.include "Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-build-12
 CONFIGURE_ARGS+=	--enable-build-20
