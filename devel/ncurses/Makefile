@@ -3,7 +3,7 @@
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.4 1997/11/26 14:50:45 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/09 02:49:22 agc Exp $
 
 DISTNAME=	ncurses-1.9.9g
 WRKSRC=		${WRKDIR}/ncurses_1.9.9g
@@ -26,7 +26,7 @@ MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		curs_initscr.3 curs_inopts.3 curs_insch.3 \
 		curs_insstr.3 curs_instr.3 curs_kernel.3 curs_mouse.3 \
 		curs_move.3 curs_outopts.3 curs_overlay.3 curs_pad.3 \
-		curs_printw.3 curs_refresh.3 curs_resize.3 \
+		curs_printw.3 curs_refresh.3 \
 		curs_scanw.3 curs_scr_dmp.3 curs_scroll.3 curs_slk.3 \
 		curs_termattrs.3 curs_termcap.3 curs_terminfo.3 \
 		curs_touch.3 curs_util.3 curs_window.3 form.3 \
@@ -42,7 +42,8 @@ MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		menu_mark.3 menu_new.3 menu_opts.3 menu_pattern.3 \
 		menu_post.3 menu_userptr.3 menu_win.3 mitem_current.3 \
 		mitem_name.3 mitem_new.3 mitem_opts.3 mitem_userptr.3 \
-		mitem_value.3 mitem_visible.3 ncurses.3 panel.3 
+		mitem_value.3 mitem_visible.3 ncurses.3 panel.3 \
+		wresize.3
 MAN5=		terminfo.5 term.5
 MAN7=		term.7
 
