@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2001/10/25 20:58:50 agc Exp $
+# $NetBSD: Makefile,v 1.26 2002/02/21 17:27:05 martti Exp $
 
-DISTNAME=		suse_base-${SUSE_VERSION}nb3
+DISTNAME=		suse_base-${SUSE_VERSION}
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/} \
 			ftp://ftp.suse.com/pub/suse/i386/update/${SUSE_VERSION}/a1/
@@ -16,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aaa_dir.rpm shlibs-2.1.3-155.i386.rpm libz.rpm \
+RPMFILES=		aaa_dir.rpm shlibs-2.1.3-204.i386.rpm libz.rpm \
 			bash.rpm gppshare.rpm ncurses.rpm sh_utils.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
 
