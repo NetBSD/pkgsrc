@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7167 2004/09/19 12:32:58 wiz Exp $
+$NetBSD: CHANGES,v 1.7168 2004/09/19 12:50:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed quanta [markd 2004-09-19]
 	Removed quanta-docs [markd 2004-09-19]
 	Updated gss to 0.0.13 [wiz 2004-09-19]
+	Updated gsasl to 0.1.4 [wiz 2004-09-19]
