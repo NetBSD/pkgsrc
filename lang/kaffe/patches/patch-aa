@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2001/04/24 12:40:08 skrll Exp $
+$NetBSD: patch-aa,v 1.10 2002/02/27 01:34:56 tv Exp $
 
---- configure.orig	Mon Jul 24 20:47:29 2000
-+++ configure
+--- configure.orig	Mon Jul 24 15:47:29 2000
++++ configure	Thu Feb  7 19:45:02 2002
 @@ -3608,7 +3608,7 @@
  
  
@@ -11,3 +11,16 @@ $NetBSD: patch-aa,v 1.9 2001/04/24 12:40:08 skrll Exp $
  	KSAVE_LIBS="$LIBS"
  LIBS="$VM_LIBS $KSAVE_LIBS"
  echo $ac_n "checking for __moddi3 in -lgcc""... $ac_c" 1>&6
+@@ -4045,10 +4045,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char mpz_get_d();
++char __gmpz_get_d();
+ 
+ int main() {
+-mpz_get_d()
++__gmpz_get_d()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:4055: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
