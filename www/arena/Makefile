@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/02/10 09:24:39 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/02/10 10:47:44 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -23,7 +23,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
 USE_GMAKE=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 
 CONFIGURE_ARGS+=	--without-debug --with-arenarc-dir=${LOCALBASE}/etc
 CONFIGURE_ARGS+=	--with-libwww-include=${LOCALBASE}/include/w3c-libwww
