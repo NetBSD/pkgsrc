@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2002/12/03 19:38:22 drochner Exp $
+# $NetBSD: Makefile,v 1.231 2002/12/05 11:31:57 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -219,6 +219,7 @@ SUBDIR+=	zope25-ZWeatherApplet
 SUBDIR+=	zope25-ZWiki
 SUBDIR+=	zope25-Zippy
 SUBDIR+=	zope25-colorz
+SUBDIR+=	zope25-zopebook
 SUBDIR+=	zopeedit
 
 .include "../mk/bsd.pkg.subdir.mk"
