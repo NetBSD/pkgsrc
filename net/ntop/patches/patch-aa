@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/10/20 11:03:38 abs Exp $
+$NetBSD: patch-aa,v 1.6 2001/03/10 18:00:51 wiz Exp $
 
 --- Makefile.in.orig	Mon May  3 09:03:10 1999
 +++ Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2000/10/20 11:03:38 abs Exp $
  
  install:
 -	$(INSTALL) -m 6550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
-+	$(INSTALL) -m 550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
++	$(INSTALL) -m 555 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
  
  install-man:
  	$(INSTALL) -m 444 $(PROG).8 $(DESTDIR)$(MANDEST)/man8/$(PROG).8
