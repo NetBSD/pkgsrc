@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:49:47 rh Exp $
+include/ac3.h
+lib/libac3.a
