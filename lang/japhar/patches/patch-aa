@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/28 09:51:43 agc Exp $
+
+Use NetBSD pkglibtool
+
+--- configure	1999/10/19 10:58:12	1.1
++++ configure	1999/10/19 10:59:12
+@@ -1557,6 +1557,7 @@
+   ac_tool_prefix=
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1789,6 +1790,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -5973,8 +5975,8 @@
+    cat >conftestl.c <<\EOF &&
+ void japhar_test() {}
+ EOF
+-   ../libtool --mode=compile ${CC-cc} -c $CFLAGS $CPPFLAGS conftestl.c 1>&5 &&
+-   ../libtool --mode=link ${CC-cc} -shared -export-dynamic -no-undefined -rpath `pwd`/inst -version-info 1:0:0 $CFLAGS $CPPFLAGS $LDFLAGS conftestl.lo -o libconftest.la 1>&5 &&
++   ${LIBTOOL} --mode=compile ${CC-cc} -c $CFLAGS $CPPFLAGS conftestl.c 1>&5 &&
++   ${LIBTOOL} --mode=link ${CC-cc} -shared -export-dynamic -no-undefined -rpath `pwd`/inst -version-info 1:0:0 $CFLAGS $CPPFLAGS $LDFLAGS conftestl.lo -o libconftest.la 1>&5 &&
+    cat >conftest.c <<\EOF &&
+ #include <stdio.h>
+ /* We are here in a subdirectory, and need to use .. to find the file */
+@@ -6004,9 +6006,9 @@
+ }
+ EOF
+    ${CC-cc} -c $CFLAGS $CPPFLAGS conftest.c 1>&5 &&
+-   ../libtool --mode=link ${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.o $LIBS 1>&5 &&
++   ${LIBTOOL} --mode=link ${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.o $LIBS 1>&5 &&
+    mkdir inst &&
+-   ../libtool --mode=install cp libconftest.la `pwd`/inst/libconftest.la 1>&5
++   ${LIBTOOL} --mode=install cp libconftest.la `pwd`/inst/libconftest.la 1>&5
+    ) &&
+    libname=`. conftest.dir/inst/libconftest.la && echo $dlname` &&
+    test x"$libname"x != x""x &&
