@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.233 2004/04/21 21:09:32 cube Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.234 2004/04/22 15:58:26 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -860,6 +860,12 @@ FETCHMAIL_USE_SSL?=	YES
 FLOW_TOOLS_USE_MYSQL?=	NO
 # Used by flow-tools to enable support of flow records export
 # into a MySQL database.
+# Possible: YES, NO
+# Default: NO
+
+FLOW_TOOLS_USE_POSTGRESQL?=	NO
+# Used by flow-tools to enable support of flow records export
+# into a PostgreSQL database.
 # Possible: YES, NO
 # Default: NO
 
