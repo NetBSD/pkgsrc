@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3072 2003/08/20 08:31:13 grant Exp $
+$NetBSD: CHANGES,v 1.3073 2003/08/20 08:33:13 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3271,17 +3271,15 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnupg to 1.2.2nb2 [itojun 2003-08-15]
 	Added safecat-1.11 [zuntum 2003-08-15]
 	Added YoSucker-37 [wiz 2003-08-15]
-	Updated papersize to add support for gv. And fix a bug when
-		configuration file may be zero bytes. Increased
-		version to papersize-1.0.6. [reed 2003-08-15]
-	Update if-psprint to 1.7 [abs 2003-08-15]
-	Update subversion to 0.27.0 [recht 2003-08-15]
-	Update cyrus-sasl2 to 2.1.15 [recht 2003-08-16]
-	Update cyrus-imapd21 to 2.1.14 [recht 2003-08-16]
+	Updated papersize to 1.0.6 [reed 2003-08-15]
+	Updated if-psprint to 1.7 [abs 2003-08-15]
+	Updated subversion to 0.27.0 [recht 2003-08-15]
+	Updated cyrus-sasl2 to 2.1.15 [recht 2003-08-16]
+	Updated cyrus-imapd21 to 2.1.14 [recht 2003-08-16]
 	Removed phoenix (renamed to MozillaFirebird) [taya 2003-08-16]
 	Added MozillaFirebird-0.6.1 [taya 2003-08-16]
 	Added zoom-1.0.1pl1 [dillo 2003-08-16]
-	Update py-soappy to 0.10.2 [recht 2003-08-16]
+	Updated py-soappy to 0.10.2 [recht 2003-08-16]
 	Added freesci-0.3.4a [dillo 2003-08-16]
 	Updated xmame to 0.72.1 [kristerw 2003-08-16]
 	Updated xmess to 0.72.1 [kristerw 2003-08-16]
