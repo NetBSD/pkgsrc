@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.118 2004/10/13 15:35:55 taca Exp $
+# $NetBSD: Makefile,v 1.119 2004/11/28 16:33:58 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
-PKGREVISION=
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
 
-#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-#PATCHFILES=
-#PATCH_DIST_STRIP=       -p1
-#
+PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+PATCHFILES=	squid-2.5.STABLE7-half_closed_POST.patch \
+		squid-2.5.STABLE7-LDAP_version_documentation.patch \
+		squid-2.5.STABLE7_req_resp_header.patch \
+		squid-2.5.STABLE7-helper_shutdown.patch \
+		squid-2.5.STABLE7-non_blocking_disk.patch \
+		squid-2.5.STABLE7-blank_response.patch
+PATCH_DIST_STRIP=       -p1
+
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
