@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.3 1999/08/17 15:24:42 sommerfeld Exp $
+$NetBSD: patch-aq,v 1.4 1999/09/06 05:30:21 sommerfeld Exp $
 
 --- newchannels.c.orig	Wed May 12 07:19:27 1999
-+++ newchannels.c	Tue Aug 17 10:49:25 1999
++++ newchannels.c	Mon Sep  6 01:09:00 1999
 @@ -274,7 +274,7 @@
  #include "authfd.h"
  #include "emulate.h"
@@ -42,23 +42,20 @@ $NetBSD: patch-aq,v 1.3 1999/08/17 15:24:42 sommerfeld Exp $
                {
                  struct request_info req;
                  struct servent *serv;
-@@ -1919,6 +1921,7 @@
-   struct sockaddr_in sin;
-   char buf[255], *cp, *remote_host;
-   struct hostent *hp;
-+  int on = 1;
- 
-   /* Get remote channel number. */
-   remote_channel = packet_get_int();
-@@ -2110,6 +2113,7 @@
+@@ -2110,7 +2112,11 @@
  
   success:
    /* We have successfully obtained a connection to the real X display. */
-+  setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on));
- 
+-
++  {
++    int on = 1;
++    setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on));
++  }
++  
  #if defined(O_NONBLOCK) && !defined(O_NONBLOCK_BROKEN)
        (void)fcntl(sock, F_SETFL, O_NONBLOCK);
-@@ -2412,6 +2416,10 @@
+ #else /* O_NONBLOCK && !O_NONBLOCK_BROKEN */
+@@ -2412,6 +2418,10 @@
       ssh-agent connections on your system */
    old_umask = umask(S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH);
    
