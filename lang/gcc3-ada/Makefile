@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/11 14:15:58 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/21 18:28:17 drochner Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}
@@ -16,62 +16,44 @@ CONFIGURE_ARGS+=	--enable-languages="ada"
 #
 # To make things more interesting, we need a gcc with ada support to build
 # ada support.
-# The ADA_BOOT definition is used if the system compiler is not sufficient.
-# For pkg bootstrap, the ada capable gcc (probably cross-compiled)
-# can be anywhere.
-# GNATGCC_PREFIX assumes a standard gcc install tree layout.
-#GNATGCC_PREFIX=	/usr/pkg/gcc3
-
+# A gcc tree with compiler driver and gnatbind should be in ADA_BOOT_PATH.
+#ADA_BOOT_PATH=		/path/to/adagcc
 # Use this if a special compiler driver is needed to compile ada programs
 # (as seen in linux installations).
 #GNATGCC_ADA_DRIVER=	gnatgcc
 
-.if defined(GNATGCC_PREFIX)
-ADA_BOOT=	yes
-ADA_BOOT_CC=	${GNATGCC_PREFIX}/bin/gcc
-ADA_BOOT_CPP=	${GNATGCC_PREFIX}/bin/gcc -E
+.if defined(ADA_BOOT_PATH)
+
 .if defined(GNATGCC_ADA_DRIVER)
-ADA_BOOT_ADAC=	${GNATGCC_PREFIX}/bin/${GNATGCC_ADA_DRIVER}
+ADA_BOOT_ADAC=	${ADA_BOOT_PATH}/bin/${GNATGCC_ADA_DRIVER}
 .else
-ADA_BOOT_ADAC=	${GNATGCC_PREFIX}/bin/gcc
-.endif
-ADA_BOOT_PATH=	${GNATGCC_PREFIX}/bin
+ADA_BOOT_ADAC=	${ADA_BOOT_PATH}/bin/gcc
 .endif
 
-.if defined(ADA_BOOT)
+ADA_BOOT_GNATBIND=	${ADA_BOOT_PATH}/bin/gnatbind
 
-# probably some overkill here...
-
-CC=		${ADA_BOOT_CC}
-CPP=		${ADA_BOOT_CPP}
-PATH:=		${ADA_BOOT_PATH}:${PATH}
-
-EXTRA_ENV=	CC=${ADA_BOOT_CC:Q}
-EXTRA_ENV=	CC_FOR_BUILD=${ADA_BOOT_CC:Q}
-EXTRA_ENV+=	CPP=${ADA_BOOT_CPP:Q}
 EXTRA_ENV+=	ADAC=${ADA_BOOT_ADAC:Q}
-EXTRA_ENV+=	PATH=${ADA_BOOT_PATH}:${PATH}
-
 CONFIGURE_ENV+=	${EXTRA_ENV}
 MAKE_ENV+=	${EXTRA_ENV}
 
-.else # !ADA_BOOT
+.else # !ADA_BOOT_PATH
 
 # XXX No known system has ada in the main tree.
 ONLY_FOR_PLATFORM=	sorry_need_ada_compiler
 
-.endif # ADA_BOOT
+.endif # ADA_BOOT_PATH
 
 #
 # End of bootstrap section
 #
 
+post-buildlink:
+	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
+
 post-configure:
 	${TEST} -f ${WRKSRC}/gcc/ada/Makefile \
 	  || ${FALSE} # no ada bootstrap found by configure
-.if defined(ADA_BOOT) # ??? see install notes
 	(cd ${WRKSRC}/gcc/ada && ${TOUCH} treeprs.ads [es]info.h nmake.ad[bs])
-.endif
 
 do-build:
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} ada)
