@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2004/03/06 07:12:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.71 2004/03/07 10:41:03 jmmv Exp $
 #
 
 DISTNAME=		abiword-${DIST_VER}
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,6 +31,7 @@ MAKEFILE=		GNUmakefile
 
 DIST_VER=		2.0.4
 
+CONFIGURE_ARGS+=	--enable-gucharmap
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-sys-wv
 CONFIGURE_ARGS+=	--with-libxml2
@@ -38,18 +40,6 @@ CONFIGURE_ARGS+=	--with-popt=${BUILDLINK_PREFIX.popt}
 CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=			ABIWORD_USES_GUCHARMAP
-
-.if defined(ABIWORD_USES_GUCHARMAP) && \
-    !empty(ABIWORD_USES_GUCHARMAP:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=		--enable-gucharmap
-.include "../../fonts/gucharmap/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=		--disable-gucharmap
-.endif
-
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
@@ -57,6 +47,7 @@ CONFIGURE_ARGS+=		--disable-gucharmap
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
