@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/02 05:45:01 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/27 04:36:32 sakamoto Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
-MASTER_SITES=	ftp://ftp.omronsoft.co.jp/pub/FreeWnn/	\
+MASTER_SITES=	ftp://ftp.freewnn.org/pub/FreeWnn/	\
 		ftp://etlport.etl.go.jp/pub/FreeWnn/	\
 		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/	\
+		ftp://ftp.kddlabs.co.jp/Japan/Wnn/FreeWnn/	\
 		ftp://ftp.tomo.gr.jp/pub/FreeWnn/
 
 .if !defined(PKGNAME)
@@ -12,7 +13,7 @@ IGNORE=		"is FreeWnn base package. Use freewnn-lib/server packages"
 .endif
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://tomo.tomo.gr.jp/FreeWnn/
+HOMEPAGE=	http://www.freewnn.org/
 
 INSTALL_TARGET=	install install.man
 
