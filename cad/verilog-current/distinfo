@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/05/21 22:25:19 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2001/07/03 18:23:46 dmcmahill Exp $
 
-SHA1 (verilog-20010520.tar.gz) = a14f17991680daf767d09e35014ecaa30eafd7ab
-Size (verilog-20010520.tar.gz) = 588928 bytes
-SHA1 (patch-aa) = 536ba689041fde309cac493fa28fd631a1ced9e2
-SHA1 (patch-ab) = f051b29bf0e5cbc1be5b4aba9e82549db861d07d
+SHA1 (verilog-20010630.tar.gz) = ec59c07980134670b5ad69bb1b170618d0f3ef4c
+Size (verilog-20010630.tar.gz) = 613776 bytes
 SHA1 (patch-ad) = 3c035d32d011d81520e428e3dd9adae435fc63e7
