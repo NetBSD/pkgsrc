@@ -1,18 +1,12 @@
---- ckufio.c.orig	Thu Jun 18 05:15:10 1998
-+++ ckufio.c	Thu Jun 18 05:19:26 1998
-@@ -2961,6 +2961,14 @@
- 	}
-+#ifdef __NetBSD__
-+	time_stamp = localtime((time_t *)&tmx);
-+#else
- 	time_stamp = localtime(&tmx);
-+#endif
- 	if (!time_stamp)
- 	  return(-1);
-+#ifdef __NetBSD__
-+	if (localtime((time_t *)&tmx)->tm_isdst)
-+#else
- 	if (localtime(&tmx)->tm_isdst)
-+#endif
- 	  tmx -= 60L * 60L;		/* Adjust for daylight savings time */
-
+--- ckufio.c.orig	Mon Nov 25 01:20:49 1996
++++ ckufio.c	Sat Jun 20 22:37:35 1998
+@@ -2743,7 +2743,8 @@
+ 
+     /* and this should have been declared always through a header file */
+ #endif /* OS2 */
+-    long tmx, days;
++    time_t tmx;
++    long days;
+     int i, n, isleapyear;
+                    /*       J  F  M  A   M   J   J   A   S   O   N   D   */
+                    /*      31 28 31 30  31  30  31  31  30  31  30  31   */
