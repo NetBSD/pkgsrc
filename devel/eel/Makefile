@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 17:56:29 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/14 08:11:11 rh Exp $
 #
 
-DISTNAME=		eel-1.0
+DISTNAME=		eel-1.0.1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/eel/}/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.eazel.com/
 COMMENT=		Eazel Extenstions Library
 
-DEPENDS+=		librsvg-*:../../graphics/librsvg
+DEPENDS+=		librsvg>=1.0.1:../../graphics/librsvg
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
