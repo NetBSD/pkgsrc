@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/05/17 05:41:09 salo Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/22 15:39:31 jschauma Exp $
 #
 
-DISTNAME=	bbkeys-0.8.5
-PKGREVISION=	1
-CATEGORIES=	wm x11
+DISTNAME=	bbkeys-0.8.6
+CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 
 MAINTAINER=	jschauma@netbsd.org
