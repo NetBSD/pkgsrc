@@ -3,15 +3,15 @@
 # Date created:		08 Apr 1998
 # Whom:			fvdl
 #
-# $NetBSD: Makefile,v 1.3 1998/04/09 09:59:55 fvdl Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/09 10:05:50 fvdl Exp $
 #
 
 DISTNAME=	unix_19980331
 PKGNAME=	mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/1998-03-31/ \
-	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/1998-03-31/ \
-	ftp://mirror.aarnet.edu.au/pub/mozilla/mozilla/1998-03-31/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
+	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
+	ftp://mirror.aarnet.edu.au/pub/mozilla/mozilla/source/
 
 MAINTAINER=	fvdl@netbsd.org
 
