@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/02 20:37:31 jdolecek Exp $
+# $NetBSD: Makefile,v 1.28 2005/04/03 21:24:34 jdolecek Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -21,6 +21,9 @@ NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
+
+# force use of SuSE 7.3 base
+.include "../../emulators/suse_linux/vars.mk"
 
 .include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
