@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/08/29 14:47:07 recht Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/29 17:02:31 jmmv Exp $
 #
 
-DISTNAME=	posh_0.3.9
+DISTNAME=	posh_0.3.14
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
@@ -20,8 +20,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/posh
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/posh
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/posh
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/posh
+	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${PREFIX}/share/doc/posh
 
 .include "../../mk/bsd.pkg.mk"
