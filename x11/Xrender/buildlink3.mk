@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/02/05 07:06:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/02/05 07:17:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -29,11 +29,9 @@ BUILDLINK_IS_BUILTIN.Xrender!=						\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xrender="${BUILDLINK_IS_BUILTIN.Xrender}"
 .endif
 
-.if defined(PREFER_PKGSRC)
-.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:MXrender)
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:MXrender)
 BUILDLINK_USE_BUILTIN.Xrender=	NO
-.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[yY][eE][sS])

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/02/05 07:06:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/02/05 07:17:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -31,11 +31,9 @@ BUILDLINK_IS_BUILTIN.glu!=						\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.glu="${BUILDLINK_IS_BUILTIN.glu}"
 .endif
 
-.if defined(PREFER_PKGSRC)
-.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:Mglu)
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mglu)
 BUILDLINK_USE_BUILTIN.glu=	NO
-.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.glu:M[yY][eE][sS])
