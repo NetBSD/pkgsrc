@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/15 12:14:07 tv Exp $
 #
 
 DISTNAME=	gift-0.11.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,7 @@ LIBS+=			${PTHREAD_LDFLAGS}
 
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/lib/libgift.pc.in
 
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
