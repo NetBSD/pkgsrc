@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1289 2004/01/08 15:27:09 adam Exp $
+$NetBSD: TODO,v 1.1290 2004/01/08 16:10:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -151,7 +151,6 @@ Suggested package updates
 	o dante-1.1.14
 	o dctc-0.85.8
 	o ddd-3.3.8
-	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
 	o dvipdfmx-0.0.0.20031116 [pkg/23961]
 	o dylan-compiler-2.3.11
