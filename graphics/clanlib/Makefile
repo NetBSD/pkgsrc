@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/06/30 11:26:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.20 2001/08/23 15:55:26 jlam Exp $
 
 DISTNAME=		ClanLib-0.4.4
 CATEGORIES=		graphics games devel x11
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--enable-mesa
 CONFIGURE_ARGS+=	--disable-ggi
 CONFIGURE_ARGS+=	--disable-vidmode
 
-CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"# CC='cc ${CFLAGS} ${LDFLAGS}'
+CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 MAKE_ENV+=		X11BASE="${X11BASE}"
 
 post-patch:
@@ -39,6 +39,7 @@ post-patch:
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if ${OPSYS} == "NetBSD"
