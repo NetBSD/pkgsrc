@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/09 20:08:48 agc Exp $
+
+MD5 (nbtscan-1.0.2.tar.gz) = 5c1666a628054856b44f890dc9b42263
+SHA1 (patch-aa) = 966afcff134f2e35ee95854ceb8d8e17f6857bb9
+SHA1 (patch-ab) = af63ec9e4697bde08aa2ca6c6a21fcf755f56671
