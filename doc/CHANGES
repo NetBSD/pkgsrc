@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4730 2004/02/07 23:30:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.4731 2004/02/08 01:01:23 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-cjkcodecs-1.0.3 [minskim 2004-02-07]
 	Deleted py-koCodecs [minskim 2004-02-07]
 	Updated openbox to 3.1nb2 [jmmv 2004-02-07]
+	Updated gnupg to 1.2.4nb1 [kleink 2004-02-08]
