@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/06/26 14:51:00 dillo Exp $
+$NetBSD: patch-ab,v 1.5 2004/04/21 12:08:10 dillo Exp $
 
---- configure.in.orig	Fri Dec 13 16:22:13 2002
+--- configure.in.orig	Mon Mar 15 16:53:48 2004
 +++ configure.in
-@@ -267,6 +267,7 @@ AC_INIT(c/scheme48vm.c)
+@@ -269,6 +269,7 @@ AC_INIT(c/scheme48vm.c)
  
    ## NetBSD and FreeBSD ( and maybe 386BSD also)
    *-*-*bsd*|*-*-darwin* )
