@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.5 1999/08/30 08:54:03 jlam Exp $
+
+--- include/glibtop/procstate.h.orig	Tue Feb 23 06:43:11 1999
++++ include/glibtop/procstate.h	Sun Aug 29 19:50:34 1999
+@@ -36,6 +36,13 @@
+ 
+ #define GLIBTOP_MAX_PROC_STATE		4
+ 
++#define GLIBTOP_PROCESS_RUNNING			1
++#define GLIBTOP_PROCESS_INTERRUPTIBLE		2
++#define GLIBTOP_PROCESS_UNINTERRUPTIBLE		4
++#define GLIBTOP_PROCESS_ZOMBIE			8
++#define GLIBTOP_PROCESS_STOPPED			16
++#define GLIBTOP_PROCESS_SWAPPING		32
++
+ typedef struct _glibtop_proc_state	glibtop_proc_state;
+ 
+ /* Name and status */
