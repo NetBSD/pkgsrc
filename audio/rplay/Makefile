@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/03/08 10:53:55 agc Exp $
+# $NetBSD: Makefile,v 1.14 1999/12/28 04:20:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -21,7 +21,7 @@ pre-configure:
 	for f in `find ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
 		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
-	chmod +x ${WRKSRC}/configure
+	${CHMOD} +x ${WRKSRC}/configure
 
 post-build:
 	cd ${WRKSRC}/doc ; ${MAKE} info
@@ -31,7 +31,7 @@ post-install:
 		${ECHO} "Installing ${PREFIX}/etc/rc.d/rplayd.sh startup file."; \
 		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/rplayd.sh; \
 		${ECHO} "[ -x ${PREFIX}/sbin/rplayd ] && ( ${PREFIX}/sbin/rplayd & ) && ${ECHO} -n ' rplayd'" >> ${PREFIX}/etc/rc.d/rplayd.sh; \
-		chmod 751 ${PREFIX}/etc/rc.d/rplayd.sh; \
+		${CHMOD} 751 ${PREFIX}/etc/rc.d/rplayd.sh; \
 	fi
 	@if [ ! -f ${PREFIX}/etc/rplay.hosts ]; then \
 		${ECHO} localhost > ${PREFIX}/etc/rplay.hosts; \
