@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
+$NetBSD: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
 
---- /dev/null	Thu Feb 19 12:11:00 1998
-+++ machine/m_netbsd13.c	Thu Feb 19 12:11:22 1998
-@@ -0,0 +1,872 @@
+--- /dev/null	Tue Oct 13 11:23:39 1998
++++ machine/m_netbsd13.c	Tue Oct 13 11:25:35 1998
+@@ -0,0 +1,881 @@
 +/*
 + * top - a top users display for Unix
 + *
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
++ * $Id: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
 + */
 +
 +#include <sys/types.h>
@@ -335,7 +335,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
 +#else
 +    struct  vmmeter sum;
 +#endif
-+    struct  swapent *sep;
++    struct  swapent *sep, *seporig;
 +    int     totalsize, size, totalinuse, inuse, ncounted;
 +    int     rnswap, nswap;
 +
@@ -387,7 +387,10 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
 +	nswap = swapctl(SWAP_NSWAP, 0, 0);
 +	if (nswap < 1)
 +		break;
-+	sep = (struct swapent *)malloc(nswap * sizeof(*sep));
++	/*  Use seporig to keep track of the malloc'd memory
++	 *  base, as sep will be incremented in the for loop
++	 *  below.  */
++	seporig = sep = (struct swapent *)malloc(nswap * sizeof(*sep));
 +	if (sep == NULL)
 +		break;
 +	rnswap = swapctl(SWAP_STATS, (void *)sep, nswap);
@@ -404,9 +407,15 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:14:09 agc Exp $
 +	}
 +	memory_stats[4] = dbtob(totalinuse) / 1024;
 +	memory_stats[5] = dbtob(totalsize) / 1024 - memory_stats[4];
++	/*  Free here, before we malloc again in the next
++	 *  iteration of this loop.  */
++	if (seporig)
++		free(seporig);
 +    } while (0);
-+    if (sep)
-+	    free(sep);
++    /*  Catch the case where we malloc'd, but then exited the
++     *  loop due to nswap != rnswap.  */
++    if (seporig)
++	    free(seporig);
 +
 +    memory_stats[6] = -1;
 +
