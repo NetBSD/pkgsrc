@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/12 23:34:46 lukem Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/05 04:08:10 wiz Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -13,6 +13,7 @@ COMMENT=	Generate HTML albums of images
 
 MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
 
+USE_BUILDLINK2=	# defined
 USE_PERL5=	# defined
 REPLACE_PERL=	${MY_SCRIPTS}
 
@@ -28,6 +29,6 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/make_album; \
 	done
 
-.include "../../graphics/ImageMagick/buildlink.mk"
+.include "../../graphics/ImageMagick/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
