@@ -1,0 +1,35 @@
+$NetBSD: patch-ag,v 1.1 2000/06/30 17:07:36 danw Exp $
+
+Fix inspired by glibc, which gets it wrong.
+
+--- intl/l10nflist.c.orig	Fri Jun 23 03:25:01 2000
++++ intl/l10nflist.c	Fri Jun 23 03:26:32 2000
+@@ -349,8 +349,9 @@
+ 
+ /* Normalize codeset name.  There is no standard for the codeset
+    names.  Normalization allows the user to use any of the common
+-   names.  */
+-const char *
++   names.  The return value is dynamically allocated and has to be
++   freed by the caller.  */
++char *
+ _nl_normalize_codeset (codeset, name_len)
+      const unsigned char *codeset;
+      size_t name_len;
+@@ -381,14 +382,14 @@
+ 
+       for (cnt = 0; cnt < name_len; ++cnt)
+ 	if (isalpha (codeset[cnt]))
+-	  *wp++ = tolower (codeset[cnt]);
++	  *wp++ = _tolower (codeset[cnt]);
+ 	else if (isdigit (codeset[cnt]))
+ 	  *wp++ = codeset[cnt];
+ 
+       *wp = '\0';
+     }
+ 
+-  return (const char *) retval;
++  return retval;
+ }
+ 
+ 

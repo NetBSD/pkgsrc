@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2000/06/30 17:07:36 danw Exp $
+
+Fix for shared libintl
+
+--- intl/Makefile.in.orig	Fri Jun 23 03:38:59 2000
++++ intl/Makefile.in	Fri Jun 23 03:54:52 2000
+@@ -119,7 +119,7 @@
+ 	    $(top_srcdir)/mkinstalldirs $(libdir) $(includedir); \
+ 	  fi; \
+ 	  $(INSTALL_DATA) intlh.inst $(includedir)/libintl.h; \
+-	  $(INSTALL_DATA) libintl.a $(libdir)/libintl.a; \
++	  $(LIBTOOL) install -c libintl.la $(libdir); \
+ 	else \
+ 	  : ; \
+ 	fi
