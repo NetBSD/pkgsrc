@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2004/04/03 17:30:56 yamt Exp $
+
+--- ../common/options.c.orig	Tue Jul  3 22:53:06 2001
++++ ../common/options.c	Tue Jul  3 22:48:27 2001
+@@ -1088,7 +1088,7 @@
+ 	/* Copy the string edit options. */
+ 	for (cnt = rval = 0; cnt < O_OPTIONCOUNT; ++cnt) {
+ 		if (optlist[cnt].type != OPT_STR ||
+-		    F_ISSET(&optlist[cnt], OPT_GLOBAL))
++		    F_ISSET(&sp->opts[cnt], OPT_GLOBAL))
+ 			continue;
+ 		/*
+ 		 * If never set, or already failed, NULL out the entries --
+@@ -1131,7 +1131,7 @@
+ 
+ 	for (cnt = 0; cnt < O_OPTIONCOUNT; ++cnt) {
+ 		if (optlist[cnt].type != OPT_STR ||
+-		    F_ISSET(&optlist[cnt], OPT_GLOBAL))
++		    F_ISSET(&sp->opts[cnt], OPT_GLOBAL))
+ 			continue;
+ 		if (O_STR(sp, cnt) != NULL)
+ 			free(O_STR(sp, cnt));

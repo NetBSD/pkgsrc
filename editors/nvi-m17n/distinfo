@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/07/16 09:25:05 itojun Exp $
+$NetBSD: distinfo,v 1.5 2004/04/03 17:30:56 yamt Exp $
 
 SHA1 (nvi-1.79.tar.gz) = 65b49768783372609278ecedd63caa8c1547aa2a
 Size (nvi-1.79.tar.gz) = 1295401 bytes
@@ -8,4 +8,5 @@ SHA1 (patch-aa) = c246b1533dfbfc93ad9c0a8ea8cff5db157c9ee8
 SHA1 (patch-ab) = f7a382af11f200467ac994d90e108e97c7602b13
 SHA1 (patch-ac) = 738f4b3d51b6b39f2cc4b2cffeb1a1ea412aed89
 SHA1 (patch-ad) = 21b5df4bb13b248f6f1ffe7ca69d91a4eae83561
+SHA1 (patch-ae) = 9e84570d8afdc7c03f71712b9317fcbcc2fa7006
 SHA1 (patch-global) = 118bfdcefba77c37c07b29d0c68fb8bbf02cb10e
