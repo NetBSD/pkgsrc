@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/08/16 21:08:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/01 12:37:14 tron Exp $
 
 DISTNAME=	horde-2.2.4-RC1
 PKGNAME=	horde-2.2.4rc1
@@ -10,11 +10,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
 
-DEPENDS+=	php>4.0.0:../../www/php4
-DEPENDS+=	php-pcre>4.0.0:../../devel/php4-pcre
-DEPENDS+=	php-session>4.0.0:../../devel/php4-session
-DEPENDS+=	php-gettext>4.0.0:../../devel/php4-gettext
-DEPENDS+=	php-xml>4.0.0:../../textproc/php4-xml
+DEPENDS+=	php-gettext>=4.3.3:../../devel/php4-gettext
 
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
