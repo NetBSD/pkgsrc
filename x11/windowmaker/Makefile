@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/06/01 11:23:48 rh Exp $
+# $NetBSD: Makefile,v 1.50 2000/06/04 00:30:33 wiz Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
@@ -19,7 +19,8 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-usermenu \
@@ -54,9 +55,14 @@ post-extract:
 	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
 		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
 		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker
+	for manfile in ${WRKSRC}/doc/*.1x; \
+	do \
+		${MV} $${manfile} `${ECHO} $${manfile} | ${SED} "s/1x$$/1/"`; \
+	done;
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf; \
+		${LOCALBASE}/bin/automake --no-force
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/SoundSets
