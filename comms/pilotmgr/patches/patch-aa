@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/24 18:09:47 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/05/24 18:19:13 tron Exp $
 
 --- PilotMgr.pm.orig	Wed Mar 24 23:59:59 1999
-+++ PilotMgr.pm	Mon May 24 20:01:22 1999
++++ PilotMgr.pm	Mon May 24 20:16:54 1999
 @@ -604,14 +604,18 @@
      my ($image);
  
@@ -29,3 +29,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/05/24 18:09:47 tron Exp $
  	 "/dev/pilot", [],
  	 "Other...", []);
  
+@@ -1586,7 +1590,7 @@
+ 	do "$RCFILE";
+     }
+ 
+-    $PREFS->{'gPort'} = '/dev/ttya'
++    $PREFS->{'gPort'} = '/dev/pilot'
+ 	unless (exists $PREFS->{'gPort'});
+     $PREFS->{'gRate'} = '9600'
+ 	unless (exists $PREFS->{'gRate'});
