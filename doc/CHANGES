@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7299 2004/09/30 14:42:39 epg Exp $
+$NetBSD: CHANGES,v 1.7300 2004/09/30 22:14:06 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added Xcomposite-1.0.1 [wiz 2004-09-30]
 	Updated socat to 1.4.0.2 [adrianp 2004-09-30]
 	Updated subversion to 1.1.0 [epg 2004-09-30]
+	Added sun-jre15-5.0 [rh 2004-09-30]
