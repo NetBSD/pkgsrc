@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.2 1998/10/16 01:04:32 garbled Exp $
+$NetBSD: md5,v 1.3 1998/10/20 08:05:22 garbled Exp $
 
 MD5 (clusterit-1.1.tar.gz) = 754ef81597a6d8338b3539fbb40e014c
+MD5 (cluster-1.1.patch1) = 8a43c4ce242a843f0beed2bb3cc2115a
