@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2000/06/05 00:36:31 wiz Exp $
+
+--- pbm/pbmtoppa/Makefile.orig	Thu Jun  1 19:27:29 2000
++++ pbm/pbmtoppa/Makefile	Mon Jun  5 01:44:49 2000
+@@ -15,7 +15,7 @@
+ merge: pbmtoppa
+ 
+ pbmtoppa: pbmtoppa.o ppa.o pbm.o cutswath.o $(NETPBMLIBS) $(LIBOPT)
+-	$(CC) $(LDFLAGS) -o pbmtoppa pbmtoppa.o ppa.o pbm.o cutswath.o \
++	$(LD) $(LDFLAGS) -o pbmtoppa pbmtoppa.o ppa.o pbm.o cutswath.o \
+ 	  `$(LIBOPT) $(NETPBMLIBS)`
+ 
+ %.o: %.c
