@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.3 2005/01/17 12:19:13 kei Exp $
+$NetBSD: patch-ak,v 1.4 2005/01/24 15:22:16 kei Exp $
 
---- libs/xpdf/xpdf/XRef.cc.orig	Mon Nov  4 07:15:37 2002
-+++ libs/xpdf/xpdf/XRef.cc	Fri Oct 29 09:18:17 2004
+--- libs/xpdf/xpdf/XRef.cc.original	2005-01-24 23:15:21.000000000 +0900
++++ libs/xpdf/xpdf/XRef.cc	2005-01-24 23:15:57.000000000 +0900
 @@ -28,6 +28,7 @@
  #include "Error.h"
  #include "ErrorCodes.h"
@@ -55,3 +55,13 @@ $NetBSD: patch-ak,v 1.3 2005/01/17 12:19:13 kei Exp $
  	streamEnds = (Guint *)grealloc(streamEnds,
  				       streamEndsSize * sizeof(int));
        }
+@@ -481,6 +499,9 @@
+ 	} else {
+ 	  keyLength = 5;
+ 	}
++	if (keyLength > 16) {
++	  keyLength = 16;
++	}
+ 	permFlags = permissions.getInt();
+ 	if (encVersion >= 1 && encVersion <= 2 &&
+ 	    encRevision >= 2 && encRevision <= 3) {
