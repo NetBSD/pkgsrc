@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/09 17:05:46 hubertf Exp $
 #
 
 DISTNAME=	xhangglider-0.94.0
@@ -17,7 +17,7 @@ post-extract:
 	${TOUCH} ${WRKSRC}/xhangglider.man
 
 do-install:
-	cd ${WRKSRC} ; make install
-	cd ${WRKSRC} ; make install.dat
+	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} make install
+	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} make install.dat
 
 .include "../../mk/bsd.pkg.mk"
