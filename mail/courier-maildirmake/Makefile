@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/23 02:21:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/03 13:38:39 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 PKGREVISION?=	1
@@ -21,10 +21,8 @@ WRKSRC_SUBDIRS+=	maildir
 EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
 EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
 
-.if !defined(STRIPFLAG) || empty(STRIPFLAG:M-s)
+.if defined(STRIPFLAG) && !empty(STRIPFLAG:M-s)
 INSTALL_TARGET=		install-strip
-.else
-INSTALL_TARGET=		install
 .endif
 
 CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg

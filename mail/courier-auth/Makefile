@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/27 23:47:08 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/03 13:38:38 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -14,10 +14,8 @@ REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.authdaemond"
 
-.if !defined(STRIPFLAG) || empty(STRIPFLAG:M-s)
+.if defined(STRIPFLAG) && !empty(STRIPFLAG:M-s)
 INSTALL_TARGET=		install-strip
-.else
-INSTALL_TARGET=		install
 .endif
 
 GEN_FILES=		authdaemonrc
