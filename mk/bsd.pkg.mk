@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.26 2003/08/22 07:15:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.27 2003/08/23 03:59:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -128,9 +128,9 @@ BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
-USE_BUILDLINK2?=	no		# default to not using buildlink2
+USE_BUILDLINK2?=	no	# default to not using buildlink2
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_USE_BUILDLINK3=	yes
+_USE_BUILDLINK3=	yes	# pkgviews requires buildlink3
 .else
 _USE_BUILDLINK3=	no
 .endif
@@ -163,17 +163,22 @@ _OPSYS_NEEDS_XPKGWEDGE?=	yes
 _OPSYS_NEEDS_XPKGWEDGE?=	no
 .endif
 
-.if defined(USE_X11BASE)
-.  if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.  if defined(USE_X11BASE)
+.    if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
 BUILDLINK_X11PKG_DIR=	${LOCALBASE}
-.  endif
+.    endif
 PREFIX=			${X11PREFIX}
-.elif defined(USE_CROSSBASE)
+.  elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
-.else
+.  else
 PREFIX=			${LOCALBASE}
+.  endif
+.else # ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PREFIX=			${DEPOTBASE}/${PKGNAME}
+NO_MTREE=		yes
 .endif
 
 .if empty(DEPOT_SUBDIR)
@@ -184,11 +189,6 @@ PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 PKG_DBDIR=		${PKG_DBDIR_DFLT}
 .else # ${PKG_INSTALLATION_TYPE} == "pkgview"
 PKG_DBDIR=		${DEPOTBASE}
-PREFIX=			${DEPOTBASE}/${PKGNAME}
-NO_MTREE=		yes
-.  if ${PLIST_TYPE} == "dynamic"
-PLIST_SRC=		# empty, since we're using a dynamic PLIST
-.  endif
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
 # in pkg_views(1).  It's used by the dynamic PLIST generator to skip
@@ -565,21 +565,25 @@ DESCR_SRC?=		${PKGDIR}/DESCR
 .endif
 PLIST=			${WRKDIR}/.PLIST
 
+.if ${PLIST_TYPE} == "static"
 # Automatic platform dependent PLIST handling
-.if !defined(PLIST_SRC)
-.  if exists(${PKGDIR}/PLIST.common)
+.  if !defined(PLIST_SRC)
+.    if exists(${PKGDIR}/PLIST.common)
 PLIST_SRC=		${PKGDIR}/PLIST.common
-.    if exists(${PKGDIR}/PLIST.${OPSYS})
+.      if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.    endif
-.    if exists(${PKGDIR}/PLIST.common_end)
+.      endif
+.      if exists(${PKGDIR}/PLIST.common_end)
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
-.    endif
-.  elif exists(${PKGDIR}/PLIST.${OPSYS})
+.      endif
+.    elif exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
-.  else
+.    else
 PLIST_SRC=		${PKGDIR}/PLIST
+.    endif
 .  endif
+.elif # ${PLIST_TYPE} == "dynamic"
+PLIST_SRC=		# empty, since we're using a dynamic PLIST
 .endif
 
 DLIST=			${WRKDIR}/.DLIST
