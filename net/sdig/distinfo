@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/01/10 14:06:31 bouyer Exp $
+
+SHA1 (sdig-0.11.tar.gz) = 5e21c28a22c8ce4106b38b4490a6b10e870d06e2
+Size (sdig-0.11.tar.gz) = 21546 bytes
+SHA1 (mactable.gz) = afe9c24c45c5472c9e78d2a8d72fcdc18d43563d
+Size (mactable.gz) = 36490 bytes
+SHA1 (patch-aa) = 843620fd51fc2989713d14f652b8e39bd3018f4d
+SHA1 (patch-ab) = d33b3547f0316232368900d776af106ea51b8500
+SHA1 (patch-ac) = d2c90173e3476976518b27526bd0de68e7317ae0

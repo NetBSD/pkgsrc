@@ -1,0 +1,49 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/10 14:06:31 bouyer Exp $
+
+--- sdig.conf.orig	Fri May 18 15:05:13 2001
++++ sdig.conf	Sun Jan  6 18:33:55 2002
+@@ -49,12 +49,10 @@
+ #
+ # Enter the pathname to the Samba nmblookup program.
+ #
+-# This setting also must exist to query hostnames.  IP addresses can
++# This setting also must exist to query WINS hostnames.  IP addresses can
+ # still be used without it.
+-#
+-# Usual path is /usr/local/samba/bin
+ 
+-NMBLOOKUP /usr/local/samba/bin/nmblookup
++NMBLOOKUP ${PREFIX}/bin/nmblookup
+ 
+ # ---------------------------------------------------------------------------
+ # NBNAME <path to nbname binary>
+@@ -65,10 +63,8 @@
+ # servers will sanely answer queries from any source port.
+ #
+ # This is strictly to add extra information, and is optional.
+-#
+-# Installed by default into /usr/local/bin
+ 
+-NBNAME /usr/local/bin/nbname
++NBNAME ${PREFIX}/bin/nbname
+ 
+ # ---------------------------------------------------------------------------
+ # SNMPGET <path to snmpget program>
+@@ -76,10 +72,8 @@
+ # Enter the pathname to the Net-SNMP snmpget program.
+ #
+ # This does all the dirty work for us, and therefore is required.
+-#
+-# It usually installs to /usr/local/bin, so this default is generally OK.
+ 
+-SNMPGET /usr/local/bin/snmpget
++SNMPGET ${PREFIX}/bin/snmpget
+ 
+ # ---------------------------------------------------------------------------
+ # MACTABLE <path to MAC table file>
+@@ -92,4 +86,4 @@
+ # rarely changes.  If you want to use this feature, get it from the
+ # main web site: http://www.exploits.org/sdig/
+ 
+-MACTABLE /etc/mactable
++MACTABLE ${PREFIX}/share/misc/mactable
