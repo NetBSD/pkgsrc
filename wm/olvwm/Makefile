@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/21 20:39:21 agc Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/10 13:09:34 wiz Exp $
 #
 
 DISTNAME=	olvwm4.src4
@@ -10,13 +10,14 @@ MAINTAINER=	w.wnuk@zodiac.mimuw.edu.pl
 HOMEPAGE=	http://www.akula.com/~jadler/sdo/olvwm/index.html
 COMMENT=	Open Look Virtual Window Manager
 
-DEPENDS+=	xview-lib>=3.2.1nb1:../../x11/xview-lib
 DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
-USE_X11BASE=	# defined
+USE_BUILDLINK2=	# defined
 USE_IMAKE=	# defined
+USE_X11BASE=	# defined
 
 WRKSRC=		${WRKDIR}
 
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xview-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
