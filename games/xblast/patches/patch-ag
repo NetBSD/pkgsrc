@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- tkXBlast/setup.tcl.orig	Wed Dec 11 14:26:43 1996
++++ tkXBlast/setup.tcl	Tue Nov 10 01:07:26 1998
+@@ -48,19 +48,7 @@
+ set binPath [lindex $argv 1]
+ set tkLibPath [lindex $argv 2]
+ 
+-set wishCmd [testWish wish]
+-puts "Enter the path for \"wish\" on your system (default is \"$wishCmd\"):" 
+-
+-gets file0 newWishCmd
+-if {$newWishCmd != {}} {
+-    set wishCmd $newWishCmd
+-} else {
+-    if {$wishCmd == {}} {
+-	puts "Error: path for \"wish\" not defined."
+-	puts "Aborting programm"
+-	exit 1
+-    }
+-}
++set wishCmd [testWish wish8.0]
+ 
+ set version [versionWish $wishCmd]
+ puts "tk version is $version"
