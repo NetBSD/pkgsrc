@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/22 16:12:56 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/15 13:01:49 wiz Exp $
 #
 
 DISTNAME=	dbz
@@ -12,10 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://fonts.tom7.com/
 COMMENT=	Divide By Zero TrueType fonts created by Tom Murphy 7
 
-RESTRICTED=	"can't take the fonts and resell them on a CD"
-
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
+LICENSE=	limited-redistribution
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
