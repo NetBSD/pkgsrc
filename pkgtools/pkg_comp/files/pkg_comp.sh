@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.21 2004/06/10 09:16:48 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.22 2004/12/12 01:04:27 grant Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -106,7 +106,7 @@ env_setdefaults()
     : ${BUILD_TARGET:=package}
     : ${DISTRIBDIR:=/var/pub/NetBSD}
     : ${SETS:=base.tgz comp.tgz etc.tgz kern-GENERIC.tgz text.tgz}
-    : ${SETS_X11:=xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz xmisc.tgz xserver.tgz}
+    : ${SETS_X11:=xbase.tgz xcomp.tgz xetc.tgz xfont.tgz xmisc.tgz xserver.tgz}
     : ${REAL_SRC:=/usr/src}
     : ${REAL_SRC_OPTS:=-t null -o ro}
     : ${REAL_PKGSRC:=/usr/pkgsrc}
