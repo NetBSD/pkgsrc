@@ -1,0 +1,25 @@
+$NetBSD: patch-ak,v 1.1 2004/04/22 15:33:35 seb Exp $
+
+--- src/flow-export.c.orig	2003-12-04 05:55:31.000000000 +0000
++++ src/flow-export.c
+@@ -115,18 +115,18 @@ void usage(void);
+ struct jump format[] = {{format0}, {format1}, {format2}, {format3},
+                         {format4}, {format5}};
+ 
++int debug = 0;
++
+ int main(int argc, char **argv)
+ {
+   int i, format_index, ret, ascii_mask;
+   struct ftio ftio;
+   struct ftprof ftp;
+   struct options opt;
+-  int debug;
+ 
+   /* init fterr */
+   fterr_setid(argv[0]);
+ 
+-  debug = 0;
+   format_index = 0;
+   bzero(&opt, sizeof opt);
+   ascii_mask = 0;
