@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1999/09/13 03:33:34 simonb Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/13 10:05:58 tron Exp $
 
---- Makefile.orig	Sat Jul 24 07:50:33 1999
-+++ Makefile	Mon Sep 13 11:40:05 1999
+--- Makefile.orig	Fri Jul 23 23:50:33 1999
++++ Makefile	Mon Sep 13 11:58:06 1999
 @@ -4,7 +4,7 @@
  # Modified a number of times by Tord Jansson <tord.jansson@swipnet.se>
  
@@ -11,15 +11,16 @@ $NetBSD: patch-aa,v 1.1 1999/09/13 03:33:34 simonb Exp $
  LIBS=-lm
  
  # >>> Compiler options for GCC on SuperSparc Solaris <<<
-@@ -21,11 +21,17 @@
+@@ -21,11 +21,18 @@
  	huffman.o l3bitstream.o l3psy.o loop.o main.o mdct.o reservoir.o \
  	samplein.o strupr.o subs.o tables.o
  
 +all: bladeenc
 +
 +install: all
-+	$(BSD_INSTALL_PROGRAM) bladeenc $(BINDIR)
-+	$(BSD_INSTALL_MAN) bladeenc.html $(PREFIX)/share/doc
++	$(BSD_INSTALL_PROGRAM) bladeenc $(PREFIX)/bin
++	mkdir $(PREFIX)/share/doc/bladeenc
++	$(BSD_INSTALL_MAN) bladeenc.html $(PREFIX)/share/doc/bladeenc
 +
  bladeenc: $(OBJS)
 -	gcc -o $@ $^ $(LIBS)
