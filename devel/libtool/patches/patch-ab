@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
+$NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
 
---- ltmain.sh.orig	Mon Feb 18 17:38:48 2002
+--- ltmain.sh.orig	Thu Jun 14 05:06:50 2001
 +++ ltmain.sh
 @@ -211,6 +211,8 @@
    --mode) prevopt="--mode" prev=mode ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
    --quiet | --silent)
      show=:
      ;;
-@@ -494,11 +496,18 @@
+@@ -494,11 +496,21 @@
      # command doesn't match the default compiler.
      if test -n "$available_tags" && test -z "$tagname"; then
        case $base_compile in
@@ -25,7 +25,10 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
 +      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
 +	   case $base_compiler in
 +	   *cc)	tagname=CC ;;
-+	   *++)	tagname=CXX ;;
++	   *++)
++	     tagname=CXX
++	     eval "`sed -n -e '/^### BEGIN LIBTOOL TAG CONFIG: '$tagname'$/,/^### END LIBTOOL TAG CONFIG: '$tagname'$/p' < $0`"
++	     ;;
 +	   esac ;;
 +      esac
 +    fi
@@ -33,7 +36,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -528,8 +537,6 @@
+@@ -528,8 +540,6 @@
  #        else
  #          echo "$modename: using $tagname tagged configuration"
          fi
@@ -42,7 +45,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
      fi
  
      objname=`$echo "X$obj" | $Xsed -e 's%^.*/%%'`
-@@ -1528,11 +1535,18 @@
+@@ -1528,11 +1538,21 @@
      # command doesn't match the default compiler.
      if test -n "$available_tags" && test -z "$tagname"; then
        case $base_compile in
@@ -56,7 +59,10 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
 +      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
 +	   case $base_compiler in
 +	   *cc)	tagname=CC ;;
-+	   *++)	tagname=CXX ;;
++	   *++)
++	     tagname=CXX
++	     eval "`sed -n -e '/^### BEGIN LIBTOOL TAG CONFIG: '$tagname'$/,/^### END LIBTOOL TAG CONFIG: '$tagname'$/p' < $0`"
++	     ;;
 +	   esac ;;
 +      esac
 +    fi
@@ -64,7 +70,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -1562,8 +1576,6 @@
+@@ -1562,8 +1582,6 @@
  #       else
  #         echo "$modename: using $tagname tagged configuration"
          fi
@@ -73,7 +79,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
      fi
  
      if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then
-@@ -1619,9 +1631,11 @@
+@@ -1619,9 +1637,11 @@
      # Find all interdependent deplibs by searching for libraries
      # that are linked more than once (e.g. -la -lb -la)
      for deplib in $deplibs; do
@@ -88,7 +94,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
        libs="$libs $deplib"
      done
  
-@@ -1632,12 +1646,14 @@
+@@ -1632,12 +1652,14 @@
        # $postdeps and mark them as special (i.e., whose duplicates are
        # not to be eliminated).
        pre_post_deps=
@@ -109,7 +115,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
        pre_post_deps=
      fi
  
-@@ -1861,9 +1877,11 @@
+@@ -1861,9 +1883,11 @@
  	    tmp_libs=
  	    for deplib in $dependency_libs; do
  	      deplibs="$deplib $deplibs"
@@ -124,7 +130,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
  	      tmp_libs="$tmp_libs $deplib"
  	    done
  	  elif test $linkmode != prog && test $linkmode != lib; then
-@@ -1986,9 +2004,11 @@
+@@ -1986,9 +2010,11 @@
  	      # or/and link against static libraries
  	      newdependency_libs="$deplib $newdependency_libs"
  	    fi
@@ -139,7 +145,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
  	    tmp_libs="$tmp_libs $deplib"
  	  done # for deplib
  	  continue
-@@ -2287,9 +2307,11 @@
+@@ -2287,9 +2313,11 @@
  	  tmp_libs=
  	  for deplib in $dependency_libs; do
  	    newdependency_libs="$deplib $newdependency_libs"
@@ -154,7 +160,7 @@ $NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
  	    tmp_libs="$tmp_libs $deplib"
  	  done
  
-@@ -5053,7 +5075,7 @@
+@@ -5053,7 +5081,7 @@
        fi
  
        # Now prepare to actually exec the command.
