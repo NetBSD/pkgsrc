@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/10 00:04:18 jmc Exp $
 
 --- ./makefile.orig	Tue Apr  4 20:06:22 2000
 +++ ./makefile	Mon May 22 13:40:03 2000
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
  #DEFINES=-DUNIX -DULTRIX
  # HP_UX using c89	      :
 -DEFINES=-DUNIX -D_PROTOTYPES -D_INCLUDE_POSIX_SOURCE -D_XPG2 -DHP_UX
-+#DEFINES=-DUNIX -D_PROTOTYPES -D_INCLUDE_POSIX_SOURCE -D_XPG2 -DHP_UX
++DEFINES=-DUNIX -D_PROTOTYPES -D_INCLUDE_POSIX_SOURCE -D_XPG2
  # NeXT using cc 	      :
  #DEFINES=-DUNIX -DULTRIX -DNEXT
  # Linux 		      :
