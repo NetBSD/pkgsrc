@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:11:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/12/03 15:37:14 skrll Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -188,6 +188,11 @@ lib/libkcm_kmix.so
 lib/libkjofolui.a
 lib/libkjofolui.la
 lib/libkjofolui.so
+lib/libkmidpart.a
+lib/libkmidpart.la
+lib/libkmidpart.so
+lib/libkmidpart.so.1
+lib/libkmidpart.so.1.0
 lib/libkmixapplet.a
 lib/libkmixapplet.la
 lib/libkmixapplet.so

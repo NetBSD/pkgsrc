@@ -1,22 +1,22 @@
-$NetBSD: patch-bu,v 1.1 2001/10/15 22:46:03 skrll Exp $
+$NetBSD: patch-bu,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kicker/extensions/childpanel/Makefile.in.orig	Sat Sep  8 01:36:34 2001
+--- kicker/extensions/childpanel/Makefile.in.orig	Sat Nov 10 07:58:26 2001
 +++ kicker/extensions/childpanel/Makefile.in
-@@ -283 +283 @@
+@@ -282,7 +282,7 @@
+ libchildpanelextension_la_SOURCES=childpanelextension.cpp  childpanelextension_skel.cpp
+ #>- libchildpanelextension_la_METASOURCES = AUTO
+ libchildpanelextension_la_LDFLAGS = $(all_libraries) -version-info 1:0:0 -module 
 -libchildpanelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../kicker.la
 +libchildpanelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../libkicker.la
-@@ -303 +303 @@
+ 
+ noinst_HEADERS = childpanelextension.h
+ 
+@@ -302,7 +302,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libchildpanelextension_la_DEPENDENCIES =  ../../kicker.la
 +libchildpanelextension_la_DEPENDENCIES =  ../../libkicker.la
-@@ -488,11 +487,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libchildpanelextension_la_OBJECTS =  childpanelextension.lo
+ #>+ 5
+ libchildpanelextension_la_final_OBJECTS = libchildpanelextension_la.all_cpp.lo 

@@ -1,101 +1,137 @@
-$NetBSD: patch-cp,v 1.1 2001/10/15 22:46:06 skrll Exp $
+$NetBSD: patch-cp,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- konqueror/client/Makefile.in.orig	Sat Sep  8 01:36:39 2001
+--- konqueror/client/Makefile.in.orig	Sat Nov 10 07:58:30 2001
 +++ konqueror/client/Makefile.in
-@@ -277 +277 @@
+@@ -276,14 +276,18 @@
+ AM_CPPFLAGS = -DQT_NO_CAST_ASCII
+ 
+ bin_PROGRAMS = kfmclient
 -lib_LTLIBRARIES = kfmclient.la
 +lib_LTLIBRARIES = libkfmclient_main.la kfmclient.la
-@@ -280,3 +280,3 @@
+ 
+ INCLUDES = -I.. $(all_includes)
 -kfmclient_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -kfmclient_la_LIBADD = $(LIB_KFILE)
 -#>- kfmclient_la_SOURCES = kfmclient.cc KonquerorIface.stub KDesktopIface.stub
 +libkfmclient_main_la_LDFLAGS = $(all_libraries)
 +libkfmclient_main_la_LIBADD = $(LIB_KFILE)
 +#>- libkfmclient_main_la_SOURCES = kfmclient.cc KonquerorIface.stub KDesktopIface.stub
-@@ -284 +284,5 @@
+ #>+ 1
 -kfmclient_la_SOURCES=kfmclient.cc   KonquerorIface_stub.cc KDesktopIface_stub.cc
 +libkfmclient_main_la_SOURCES=kfmclient.cc   KonquerorIface_stub.cc KDesktopIface_stub.cc
 +
 +kfmclient_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +kfmclient_la_LIBADD = libkfmclient_main.la
 +kfmclient_la_SOURCES = kfmclient_main.cc
-@@ -292 +296 @@
+ 
+ noinst_HEADERS = kfmclient.h
+ #>- METASOURCES = AUTO
+@@ -291,9 +295,9 @@
+ KonquerorIface_DIR = $(srcdir)/..
+ KDesktopIface_DIR = $(top_srcdir)/kdesktop
+ 
 -kfmclient_SOURCES = dummy.cc
 +kfmclient_SOURCES = kfmclient_main.cc
-@@ -294 +298 @@
+ kfmclient_LDFLAGS = $(KDE_RPATH) $(all_libraries)
 -kfmclient_LDADD = kfmclient.la
 +kfmclient_LDADD = libkfmclient_main.la
-@@ -307,2 +311,2 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -306,21 +310,25 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -kfmclient_la_DEPENDENCIES = 
 -#>- kfmclient_la_OBJECTS =  kfmclient.lo
 +libkfmclient_main_la_DEPENDENCIES = 
 +#>- libkfmclient_main_la_OBJECTS =  kfmclient.lo
-@@ -310,5 +314,9 @@
+ #>+ 5
 -kfmclient_la_final_OBJECTS = kfmclient_la.all_cc.lo 
 -kfmclient_la_nofinal_OBJECTS = kfmclient.lo KonquerorIface_stub.lo KDesktopIface_stub.lo \
--kfmclient_la_meta_unload.lo 
+-	kfmclient_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kfmclient_la_OBJECTS = $(kfmclient_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kfmclient_la_OBJECTS = $(kfmclient_la_final_OBJECTS)
 +libkfmclient_main_la_final_OBJECTS = libkfmclient_main_la.all_cc.lo 
 +libkfmclient_main_la_nofinal_OBJECTS = kfmclient.lo KonquerorIface_stub.lo KDesktopIface_stub.lo \
-+libkfmclient_main_la_meta_unload.lo 
++	libkfmclient_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkfmclient_main_la_OBJECTS = $(libkfmclient_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkfmclient_main_la_OBJECTS = $(libkfmclient_main_la_final_OBJECTS)
 +kfmclient_la_DEPENDENCIES =  libkfmclient_main.la
 +#>- kfmclient_la_OBJECTS =  kfmclient_main.lo
 +#>+ 1
 +kfmclient_la_OBJECTS = kfmclient_main.lo
-@@ -318 +326 @@
+ bin_PROGRAMS =  kfmclient$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kfmclient_OBJECTS =  dummy.$(OBJEXT)
 +#>- kfmclient_OBJECTS =  kfmclient_main.$(OBJEXT)
-@@ -320,2 +328,2 @@
+ #>+ 1
 -kfmclient_OBJECTS = dummy.$(OBJEXT)
 -kfmclient_DEPENDENCIES =  kfmclient.la
 +kfmclient_OBJECTS = kfmclient_main.$(OBJEXT)
 +kfmclient_DEPENDENCIES =  libkfmclient_main.la
-@@ -342,2 +350,2 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -341,8 +349,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kfmclient_la_SOURCES) $(kfmclient_SOURCES)
 -OBJECTS = $(kfmclient_la_OBJECTS) $(kfmclient_OBJECTS)
 +SOURCES = $(libkfmclient_main_la_SOURCES) $(kfmclient_la_SOURCES) $(kfmclient_SOURCES)
 +OBJECTS = $(libkfmclient_main_la_OBJECTS) $(kfmclient_la_OBJECTS) $(kfmclient_OBJECTS)
-@@ -429,0 +438,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -429,6 +437,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkfmclient_main.la: $(libkfmclient_main_la_OBJECTS) $(libkfmclient_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkfmclient_main_la_LDFLAGS) $(libkfmclient_main_la_OBJECTS) $(libkfmclient_main_la_LIBADD) $(LIBS)
 +
-@@ -502,11 +512,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -609,3 +608,0 @@
+ kfmclient.la: $(kfmclient_la_OBJECTS) $(kfmclient_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kfmclient_la_LDFLAGS) $(kfmclient_la_OBJECTS) $(kfmclient_la_LIBADD) $(LIBS)
+ 
+@@ -597,9 +608,6 @@
+ 	mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cc:
 -	echo > dummy.cc
 -
-@@ -653,8 +650,8 @@
+ messages:
+ 	$(XGETTEXT) -kaliasLocal *.h *.cc -o $(podir)/kfmclient.pot
+ 
+@@ -641,28 +649,40 @@
+ 
+ 
+ #>+ 12
 -kfmclient_la_meta_unload.cc:  kfmclient.moc
 -	@echo 'creating kfmclient_la_meta_unload.cc'
 -	@-rm -f kfmclient_la_meta_unload.cc
--	@echo 'static const char * _metalist_kfmclient_la[] = {' > kfmclient_la_meta_unload.cc
--	@cat  kfmclient.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kfmclient_la_meta_unload.cc
--	@echo '0};' >> kfmclient_la_meta_unload.cc
--	@echo '#include <kunload.h>' >> kfmclient_la_meta_unload.cc
--	@echo '_UNLOAD(kfmclient_la)' >> kfmclient_la_meta_unload.cc
 +libkfmclient_main_la_meta_unload.cc:  kfmclient.moc
 +	@echo 'creating libkfmclient_main_la_meta_unload.cc'
 +	@-rm -f libkfmclient_main_la_meta_unload.cc
-+	@echo 'static const char * _metalist_libkfmclient_main_la[] = {' > libkfmclient_main_la_meta_unload.cc
-+	@cat  kfmclient.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkfmclient_main_la_meta_unload.cc
-+	@echo '0};' >> libkfmclient_main_la_meta_unload.cc
-+	@echo '#include <kunload.h>' >> libkfmclient_main_la_meta_unload.cc
-+	@echo '_UNLOAD(libkfmclient_main_la)' >> libkfmclient_main_la_meta_unload.cc
-@@ -665 +662,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kfmclient_la[] = {' > kfmclient_la_meta_unload.cc ;\
+-		cat  kfmclient.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kfmclient_la_meta_unload.cc ;\
+-		echo '0};' >> kfmclient_la_meta_unload.cc ;\
+-		echo '#include <kunload.h>' >> kfmclient_la_meta_unload.cc ;\
+-		echo '_UNLOAD(kfmclient_la)' >> kfmclient_la_meta_unload.cc ;\
+-	else echo > kfmclient_la_meta_unload.cc; fi
++		echo 'static const char * _metalist_libkfmclient_main_la[] = {' > libkfmclient_main_la_meta_unload.cc ;\
++		cat  kfmclient.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkfmclient_main_la_meta_unload.cc ;\
++		echo '0};' >> libkfmclient_main_la_meta_unload.cc ;\
++		echo '#include <kunload.h>' >> libkfmclient_main_la_meta_unload.cc ;\
++		echo '_UNLOAD(libkfmclient_main_la)' >> libkfmclient_main_la_meta_unload.cc ;\
++	else echo > libkfmclient_main_la_meta_unload.cc; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kfmclient_la_meta_unload.cc
 +	-rm -f  libkfmclient_main_la_meta_unload.cc
 +
@@ -110,24 +146,55 @@ $NetBSD: patch-cp,v 1.1 2001/10/15 22:46:06 skrll Exp $
 +	done; \
 +	cat libkfmclient_main_la.all_cc.final libkfmclient_main_la.all_cc.files  > libkfmclient_main_la.all_cc.cc; \
 +	rm -f libkfmclient_main_la.all_cc.final libkfmclient_main_la.all_cc.files
-@@ -668 +677 @@
+ 
+ #>+ 11
 -kfmclient_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kfmclient.cc KonquerorIface_stub.cc KDesktopIface_stub.cc kfmclient_la_meta_unload.cc   kfmclient.moc 
 +kfmclient_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kfmclient_main.cc  
-@@ -672 +681 @@
+ 	@echo 'creating kfmclient_la.all_cc.cc ...'; \
+ 	rm -f kfmclient_la.all_cc.files kfmclient_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kfmclient_la.all_cc.final; \
 -	for file in kfmclient.cc KonquerorIface_stub.cc KDesktopIface_stub.cc kfmclient_la_meta_unload.cc ; do \
 +	for file in kfmclient_main.cc ; do \
-@@ -680 +689 @@
+ 	  echo "#include \"$$file\"" >> kfmclient_la.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kfmclient_la.all_cc.final; \
+ 	done; \
+@@ -670,11 +690,11 @@
+ 	rm -f kfmclient_la.all_cc.final kfmclient_la.all_cc.files
+ 
+ #>+ 11
 -kfmclient.all_cc.cc: $(srcdir)/Makefile.in dummy.cc  
 +kfmclient.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kfmclient_main.cc  
-@@ -684 +693 @@
+ 	@echo 'creating kfmclient.all_cc.cc ...'; \
+ 	rm -f kfmclient.all_cc.files kfmclient.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kfmclient.all_cc.final; \
 -	for file in dummy.cc ; do \
 +	for file in kfmclient_main.cc ; do \
-@@ -693 +702 @@
+ 	  echo "#include \"$$file\"" >> kfmclient.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kfmclient.all_cc.final; \
+ 	done; \
+@@ -683,20 +703,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kfmclient_la.all_cc.cc kfmclient.all_cc.cc
 +	-rm -f libkfmclient_main_la.all_cc.cc kfmclient_la.all_cc.cc kfmclient.all_cc.cc
-@@ -697 +706 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kfmclient_la_OBJECTS="$(kfmclient_la_final_OBJECTS)" all-am
 +	$(MAKE) libkfmclient_main_la_OBJECTS="$(libkfmclient_main_la_final_OBJECTS)" all-am
-@@ -700 +709 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kfmclient_la_OBJECTS="$(kfmclient_la_final_OBJECTS)" install-am
++	$(MAKE) libkfmclient_main_la_OBJECTS="$(libkfmclient_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kfmclient_la_OBJECTS="$(kfmclient_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkfmclient_main_la_OBJECTS="$(libkfmclient_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kfmclient_la_OBJECTS="$(kfmclient_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkfmclient_main_la_OBJECTS="$(libkfmclient_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

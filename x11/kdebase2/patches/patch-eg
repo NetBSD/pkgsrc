@@ -1,25 +1,31 @@
-$NetBSD: patch-eg,v 1.1 2001/10/15 22:46:10 skrll Exp $
+$NetBSD: patch-eg,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/riscos/Makefile.in.orig	Sat Sep  8 01:36:50 2001
+--- kwin/clients/riscos/Makefile.in.orig	Sat Nov 10 07:58:38 2001
 +++ kwin/clients/riscos/Makefile.in
-@@ -280 +280 @@
+@@ -279,7 +279,7 @@
+ 
+ libkwinriscos_la_SOURCES =  Button.cpp CloseButton.cpp IconifyButton.cpp LowerButton.cpp Manager.cpp MaximiseButton.cpp StickyButton.cpp HelpButton.cpp Static.cpp
+ 
 -libkwinriscos_la_LIBADD = ../../kwin.la
 +libkwinriscos_la_LIBADD = ../../libkwin.la
-@@ -303 +303 @@
+ libkwinriscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -302,7 +302,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinriscos_la_DEPENDENCIES =  ../../kwin.la
 +libkwinriscos_la_DEPENDENCIES =  ../../libkwin.la
-@@ -335 +335 @@
+ #>- libkwinriscos_la_OBJECTS =  Button.lo CloseButton.lo IconifyButton.lo \
+ #>- LowerButton.lo Manager.lo MaximiseButton.lo StickyButton.lo \
+ #>- HelpButton.lo Static.lo
+@@ -334,7 +334,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=Palette.h riscos.desktop 
 +KDE_DIST=riscos.desktop Palette.h 
-@@ -495,11 +494,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

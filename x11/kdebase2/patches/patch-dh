@@ -1,93 +1,130 @@
-$NetBSD: patch-dh,v 1.1 2001/10/15 22:46:08 skrll Exp $
+$NetBSD: patch-dh,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kwin/Makefile.in.orig	Sat Sep  8 01:36:48 2001
+--- kwin/Makefile.in.orig	Sat Nov 10 07:58:36 2001
 +++ kwin/Makefile.in
-@@ -278 +278 @@
+@@ -277,15 +277,15 @@
+ SUBDIRS = . pics clients
+ 
+ bin_PROGRAMS = kwin
 -lib_LTLIBRARIES = kwin.la
 +lib_LTLIBRARIES = libkwin.la
-@@ -281 +281 @@
+ 
+ # workspace.cpp has to be first in order not to break --enable-final
 -#>- kwin_la_SOURCES = workspace.cpp atoms.cpp  client.cpp main.cpp 	tabbox.cpp options.cpp plugins.cpp events.cpp KWinInterface.skel 	killwindow.cpp kwinbutton.cpp
 +#>- libkwin_la_SOURCES = workspace.cpp atoms.cpp  client.cpp main.cpp 	tabbox.cpp options.cpp plugins.cpp events.cpp KWinInterface.skel 	killwindow.cpp kwinbutton.cpp
-@@ -283 +283 @@
+ #>+ 1
 -kwin_la_SOURCES=workspace.cpp atoms.cpp  client.cpp main.cpp 	tabbox.cpp options.cpp plugins.cpp events.cpp  	killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp
 +libkwin_la_SOURCES=workspace.cpp atoms.cpp  client.cpp main.cpp 	tabbox.cpp options.cpp plugins.cpp events.cpp  	killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp
-@@ -285,2 +285,2 @@
+ 
 -kwin_la_LIBADD = $(LIB_KDEUI) $(LIBXINERAMA)
 -kwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +libkwin_la_LIBADD = $(LIB_KDEUI) $(LIBXINERAMA)
 +libkwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
-@@ -294 +294 @@
+ 
+ include_HEADERS = KWinInterface.h
+ 
+@@ -293,7 +293,7 @@
+ kwininclude_HEADERS = options.h client.h workspace.h kwinbutton.h
+ 
+ kwin_SOURCES = kwin_main.cpp
 -kwin_LDADD = kwin.la 
 +kwin_LDADD = libkwin.la 
-@@ -319,2 +319,2 @@
+ kwin_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ KDE_ICON = kwin
+@@ -318,23 +318,23 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -kwin_la_DEPENDENCIES = 
 -#>- kwin_la_OBJECTS =  workspace.lo atoms.lo client.lo main.lo tabbox.lo \
 +libkwin_la_DEPENDENCIES = 
 +#>- libkwin_la_OBJECTS =  workspace.lo atoms.lo client.lo main.lo tabbox.lo \
-@@ -323,2 +323,2 @@
+ #>- options.lo plugins.lo events.lo killwindow.lo kwinbutton.lo
+ #>+ 6
 -kwin_la_final_OBJECTS = kwin_la.all_cpp.lo 
 -kwin_la_nofinal_OBJECTS = workspace.lo atoms.lo client.lo main.lo tabbox.lo \
 +libkwin_la_final_OBJECTS = libkwin_la.all_cpp.lo 
 +libkwin_la_nofinal_OBJECTS = workspace.lo atoms.lo client.lo main.lo tabbox.lo \
-@@ -326,3 +326,3 @@
--kwin_la_meta_unload.lo 
+ 	options.lo plugins.lo events.lo killwindow.lo kwinbutton.lo KWinInterface_skel.lo \
+-	kwin_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kwin_la_OBJECTS = $(kwin_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kwin_la_OBJECTS = $(kwin_la_final_OBJECTS)
-+libkwin_la_meta_unload.lo 
++	libkwin_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkwin_la_OBJECTS = $(libkwin_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkwin_la_OBJECTS = $(libkwin_la_final_OBJECTS)
-@@ -335 +335 @@
+ bin_PROGRAMS =  kwin$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
+ #>- kwin_OBJECTS =  kwin_main.$(OBJEXT)
+ #>+ 1
+ kwin_OBJECTS = kwin_main.$(OBJEXT)
 -kwin_DEPENDENCIES =  kwin.la
 +kwin_DEPENDENCIES =  libkwin.la
-@@ -356 +356 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -355,15 +355,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=NEWCOLORSCHEME.README stdclient_bitmaps.h tabbox.h hi48-app-kwin.png LICENSE main.h hi32-app-kwin.png pop.wav plugins.h killwindow.h kwinbindings.cpp events.h atoms.h eventsrc hi16-app-kwin.png 
 +KDE_DIST=plugins.h LICENSE killwindow.h main.h NEWCOLORSCHEME.README hi32-app-kwin.png tabbox.h hi48-app-kwin.png kwinbindings.cpp pop.wav stdclient_bitmaps.h events.h atoms.h eventsrc hi16-app-kwin.png 
-@@ -363,2 +363,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kwin_la_SOURCES) $(kwin_SOURCES)
 -OBJECTS = $(kwin_la_OBJECTS) $(kwin_OBJECTS)
 +SOURCES = $(libkwin_la_SOURCES) $(kwin_SOURCES)
 +OBJECTS = $(libkwin_la_OBJECTS) $(kwin_OBJECTS)
-@@ -451,2 +451,2 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -450,8 +450,8 @@
+ 
+ maintainer-clean-libtool:
+ 
 -kwin.la: $(kwin_la_OBJECTS) $(kwin_la_DEPENDENCIES)
 -	$(CXXLINK) -rpath $(libdir) $(kwin_la_LDFLAGS) $(kwin_la_OBJECTS) $(kwin_la_LIBADD) $(LIBS)
 +libkwin.la: $(libkwin_la_OBJECTS) $(libkwin_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkwin_la_LDFLAGS) $(libkwin_la_OBJECTS) $(libkwin_la_LIBADD) $(LIBS)
-@@ -593 +593 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -651,11 +650,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -859,8 +848,8 @@
+ 
+ mostlyclean-binPROGRAMS:
+ 
+@@ -847,33 +847,33 @@
+ 
+ 
+ #>+ 12
 -kwin_la_meta_unload.cpp:  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc
 -	@echo 'creating kwin_la_meta_unload.cpp'
 -	@-rm -f kwin_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kwin_la[] = {' > kwin_la_meta_unload.cpp
--	@cat  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwin_la_meta_unload.cpp
--	@echo '0};' >> kwin_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kwin_la_meta_unload.cpp
--	@echo '_UNLOAD(kwin_la)' >> kwin_la_meta_unload.cpp
 +libkwin_la_meta_unload.cpp:  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc
 +	@echo 'creating libkwin_la_meta_unload.cpp'
 +	@-rm -f libkwin_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkwin_la[] = {' > libkwin_la_meta_unload.cpp
-+	@cat  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwin_la_meta_unload.cpp
-+	@echo '0};' >> libkwin_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkwin_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkwin_la)' >> libkwin_la_meta_unload.cpp
-@@ -871 +860 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kwin_la[] = {' > kwin_la_meta_unload.cpp ;\
+-		cat  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kwin_la_meta_unload.cpp ;\
+-		echo '0};' >> kwin_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kwin_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kwin_la)' >> kwin_la_meta_unload.cpp ;\
+-	else echo > kwin_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkwin_la[] = {' > libkwin_la_meta_unload.cpp ;\
++		cat  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkwin_la_meta_unload.cpp ;\
++		echo '0};' >> libkwin_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkwin_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkwin_la)' >> libkwin_la_meta_unload.cpp ;\
++	else echo > libkwin_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kwin_la_meta_unload.cpp
 +	-rm -f  libkwin_la_meta_unload.cpp
-@@ -874,7 +863,7 @@
+ 
+ #>+ 11
 -kwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp kwin_la_meta_unload.cpp   workspace.moc client.moc tabbox.moc options.moc kwinbutton.moc plugins.moc 
 -	@echo 'creating kwin_la.all_cpp.cpp ...'; \
 -	rm -f kwin_la.all_cpp.files kwin_la.all_cpp.final; \
@@ -102,17 +139,37 @@ $NetBSD: patch-dh,v 1.1 2001/10/15 22:46:08 skrll Exp $
 +	for file in workspace.cpp atoms.cpp client.cpp main.cpp tabbox.cpp options.cpp plugins.cpp events.cpp killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp libkwin_la_meta_unload.cpp ; do \
 +	  echo "#include \"$$file\"" >> libkwin_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkwin_la.all_cpp.final; \
-@@ -882,2 +871,2 @@
+ 	done; \
 -	cat kwin_la.all_cpp.final kwin_la.all_cpp.files  > kwin_la.all_cpp.cpp; \
 -	rm -f kwin_la.all_cpp.final kwin_la.all_cpp.files
 +	cat libkwin_la.all_cpp.final libkwin_la.all_cpp.files  > libkwin_la.all_cpp.cpp; \
 +	rm -f libkwin_la.all_cpp.final libkwin_la.all_cpp.files
-@@ -899 +888 @@
+ 
+ #>+ 11
+ kwin.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kwin_main.cpp  
+@@ -889,20 +889,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kwin_la.all_cpp.cpp kwin.all_cpp.cpp
 +	-rm -f libkwin_la.all_cpp.cpp kwin.all_cpp.cpp
-@@ -903 +892 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kwin_la_OBJECTS="$(kwin_la_final_OBJECTS)" all-am
 +	$(MAKE) libkwin_la_OBJECTS="$(libkwin_la_final_OBJECTS)" all-am
-@@ -906 +895 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kwin_la_OBJECTS="$(kwin_la_final_OBJECTS)" install-am
++	$(MAKE) libkwin_la_OBJECTS="$(libkwin_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kwin_la_OBJECTS="$(kwin_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkwin_la_OBJECTS="$(libkwin_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kwin_la_OBJECTS="$(kwin_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkwin_la_OBJECTS="$(libkwin_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

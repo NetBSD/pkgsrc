@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 16:14:08 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/03 15:37:14 skrll Exp $
 
---- kmidi/Makefile.in.orig	Wed Feb 21 11:00:19 2001
-+++ kmidi/Makefile.in
-@@ -343,7 +343,7 @@
- resample_l.$(OBJEXT) resample_f.$(OBJEXT) midiapplication.$(OBJEXT) \
- kmidiframe.$(OBJEXT) kmidifiledlg.$(OBJEXT) \
- kmidi_meta_unload.o 
+--- kmidi/Makefile.in.orig	Sat Nov 10 21:15:03 2001
++++ kmidi/Makefile.in	Mon Nov 26 13:31:26 2001
+@@ -363,7 +363,7 @@
+ 	resample_l.$(OBJEXT) resample_f.$(OBJEXT) midiapplication.$(OBJEXT) \
+ 	kmidiframe.$(OBJEXT) kmidifiledlg.$(OBJEXT) \
+ 	kmidi_meta_unload.o 
 -kmidi_LDADD = $(LDADD)
 +kmidi_LDADD = $(LIBOSSAUDIO) $(LDADD)
  kmidi_DEPENDENCIES = 

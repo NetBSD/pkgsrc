@@ -1,107 +1,152 @@
-$NetBSD: patch-cn,v 1.1 2001/10/15 22:46:05 skrll Exp $
+$NetBSD: patch-cn,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- konqueror/Makefile.in.orig	Sat Sep  8 01:36:39 2001
+--- konqueror/Makefile.in.orig	Sat Nov 10 07:58:30 2001
 +++ konqueror/Makefile.in
-@@ -277 +277 @@
+@@ -276,7 +276,7 @@
+ 
+ SUBDIRS = . kfmexec client iconview dirtree listview keditbookmarks kfindpart shellcmdplugin about pics sidebar
+ 
 -lib_LTLIBRARIES = konqueror.la
 +lib_LTLIBRARIES = libkonqueror_main.la konqueror.la
-@@ -294 +294 @@
+ 
+ konqdatadir = $(kde_datadir)/konqueror
+ konqdata_DATA = konqueror.rc
+@@ -293,16 +293,20 @@
+ 
+ bin_PROGRAMS = konqueror
+ 
 -#>- konqueror_la_SOURCES = konq_main.cc 	    KonquerorIface.cc KonquerorIface.skel 	    KonqMainWindowIface.cc KonqMainWindowIface.skel 	    KonqViewIface.cc KonqViewIface.skel 	    konq_mainwindow.cc konq_guiclients.cc 	    konq_run.cc konq_view.cc konq_viewmgr.cc 	    konq_misc.cc 	    konq_frame.cc 	    konq_actions.cc 	    konq_profiledlg.cc 	    konq_factory.cc 		konq_combo.cc		    konq_browseriface.cc
 +#>- libkonqueror_main_la_SOURCES = konq_main.cc 	    KonquerorIface.cc KonquerorIface.skel 	    KonqMainWindowIface.cc KonqMainWindowIface.skel 	    KonqViewIface.cc KonqViewIface.skel 	    konq_mainwindow.cc konq_guiclients.cc 	    konq_run.cc konq_view.cc konq_viewmgr.cc 	    konq_misc.cc 	    konq_frame.cc 	    konq_actions.cc 	    konq_profiledlg.cc 	    konq_factory.cc 		konq_combo.cc		    konq_browseriface.cc
-@@ -296 +296 @@
+ #>+ 1
 -konqueror_la_SOURCES=konq_main.cc 	    KonquerorIface.cc  	    KonqMainWindowIface.cc  	    KonqViewIface.cc  	    konq_mainwindow.cc konq_guiclients.cc 	    konq_run.cc konq_view.cc konq_viewmgr.cc 	    konq_misc.cc 	    konq_frame.cc 	    konq_actions.cc 	    konq_profiledlg.cc 	    konq_factory.cc 		konq_combo.cc		    konq_browseriface.cc KonquerorIface_skel.cc KonqMainWindowIface_skel.cc KonqViewIface_skel.cc
 +libkonqueror_main_la_SOURCES=konq_main.cc 	    KonquerorIface.cc  	    KonqMainWindowIface.cc  	    KonqViewIface.cc  	    konq_mainwindow.cc konq_guiclients.cc 	    konq_run.cc konq_view.cc konq_viewmgr.cc 	    konq_misc.cc 	    konq_frame.cc 	    konq_actions.cc 	    konq_profiledlg.cc 	    konq_factory.cc 		konq_combo.cc		    konq_browseriface.cc KonquerorIface_skel.cc KonqMainWindowIface_skel.cc KonqViewIface_skel.cc
-@@ -298,0 +299,4 @@
+ 
+ 
 +libkonqueror_main_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +libkonqueror_main_la_LIBADD = ../libkonq/libkonq.la
 +
 +konqueror_la_SOURCES = konqueror_main.cc
-@@ -300 +304 @@
+ konqueror_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -konqueror_la_LIBADD = ../libkonq/libkonq.la
 +konqueror_la_LIBADD = libkonqueror_main.la ../libkonq/libkonq.la
-@@ -302,2 +306,2 @@
+ 
 -konqueror_SOURCES = dummy.cc
 -konqueror_LDADD = konqueror.la
 +konqueror_SOURCES = konqueror_main.cc
 +konqueror_LDADD = libkonqueror_main.la
-@@ -332,2 +336,2 @@
+ konqueror_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
+ data_DATA = konquerorsu.desktop kfmclient.desktop kfmclient_dir.desktop kfmclient_html.desktop
+@@ -331,29 +335,33 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -konqueror_la_DEPENDENCIES =  ../libkonq/libkonq.la
 -#>- konqueror_la_OBJECTS =  konq_main.lo KonquerorIface.lo \
 +libkonqueror_main_la_DEPENDENCIES =  ../libkonq/libkonq.la
 +#>- libkonqueror_main_la_OBJECTS =  konq_main.lo KonquerorIface.lo \
-@@ -339,2 +343,2 @@
+ #>- KonqMainWindowIface.lo KonqViewIface.lo konq_mainwindow.lo \
+ #>- konq_guiclients.lo konq_run.lo konq_view.lo konq_viewmgr.lo \
+ #>- konq_misc.lo konq_frame.lo konq_actions.lo konq_profiledlg.lo \
+ #>- konq_factory.lo konq_combo.lo konq_browseriface.lo
+ #>+ 9
 -konqueror_la_final_OBJECTS = konqueror_la.all_cc.lo 
 -konqueror_la_nofinal_OBJECTS = konq_main.lo KonquerorIface.lo \
 +libkonqueror_main_la_final_OBJECTS = libkonqueror_main_la.all_cc.lo 
 +libkonqueror_main_la_nofinal_OBJECTS = konq_main.lo KonquerorIface.lo \
-@@ -345,3 +349,7 @@
--konqueror_la_meta_unload.lo 
+ 	KonqMainWindowIface.lo KonqViewIface.lo konq_mainwindow.lo \
+ 	konq_guiclients.lo konq_run.lo konq_view.lo konq_viewmgr.lo \
+ 	konq_misc.lo konq_frame.lo konq_actions.lo konq_profiledlg.lo \
+ 	konq_factory.lo konq_combo.lo konq_browseriface.lo KonquerorIface_skel.lo KonqMainWindowIface_skel.lo KonqViewIface_skel.lo \
+-	konqueror_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@konqueror_la_OBJECTS = $(konqueror_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@konqueror_la_OBJECTS = $(konqueror_la_final_OBJECTS)
-+libkonqueror_main_la_meta_unload.lo 
++	libkonqueror_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkonqueror_main_la_OBJECTS = $(libkonqueror_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkonqueror_main_la_OBJECTS = $(libkonqueror_main_la_final_OBJECTS)
 +konqueror_la_DEPENDENCIES =  libkonqueror_main.la ../libkonq/libkonq.la
 +#>- konqueror_la_OBJECTS =  konqueror_main.lo
 +#>+ 1
 +konqueror_la_OBJECTS = konqueror_main.lo
-@@ -351 +359 @@
+ bin_PROGRAMS =  konqueror$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- konqueror_OBJECTS =  dummy.$(OBJEXT)
 +#>- konqueror_OBJECTS =  konqueror_main.$(OBJEXT)
-@@ -353,2 +361,2 @@
+ #>+ 1
 -konqueror_OBJECTS = dummy.$(OBJEXT)
 -konqueror_DEPENDENCIES =  konqueror.la
 +konqueror_OBJECTS = konqueror_main.$(OBJEXT)
 +konqueror_DEPENDENCIES =  libkonqueror_main.la
-@@ -376 +384 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -375,15 +383,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=konq_misc.h konq_browseriface.h DESIGN_config konq_viewmgr.h konq_mainwindow.h kfmclient_dir.desktop kfmclient_html.desktop kfmclient.desktop konq_view.h konq_actions.h Home.desktop konq_profiledlg.h DESIGN convert_kdelnk.sh profile_midnightcommander.desktop konqueror.rc profile_filemanagement.desktop IDEAS konqueror.desktop konq_run.h konq_main.h konquerorsu.desktop konqfilemgr.desktop konqbrowser.desktop profile_filepreview.desktop profile_webbrowsing.desktop konq_openurlrequest.h konqueror_config.desktop konq_guiclients.h KonqMainWindowIface.h konq_frame.h konq_factory.h version.h konq_combo.h KonqViewIface.h 
 +KDE_DIST=konqfilemgr.desktop DESIGN convert_kdelnk.sh konq_misc.h konq_browseriface.h DESIGN_config profile_midnightcommander.desktop konqueror_config.desktop konqueror.rc konqbrowser.desktop konq_viewmgr.h konq_guiclients.h profile_filemanagement.desktop konq_mainwindow.h kfmclient_dir.desktop kfmclient_html.desktop kfmclient.desktop konq_view.h konq_actions.h KonqMainWindowIface.h IDEAS konqueror.desktop konq_frame.h konq_factory.h version.h konq_run.h konq_combo.h konq_main.h profile_filepreview.desktop Home.desktop konquerorsu.desktop profile_webbrowsing.desktop konq_profiledlg.h konq_openurlrequest.h KonqViewIface.h 
-@@ -383,2 +391,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(konqueror_la_SOURCES) $(konqueror_SOURCES)
 -OBJECTS = $(konqueror_la_OBJECTS) $(konqueror_OBJECTS)
 +SOURCES = $(libkonqueror_main_la_SOURCES) $(konqueror_la_SOURCES) $(konqueror_SOURCES)
 +OBJECTS = $(libkonqueror_main_la_OBJECTS) $(konqueror_la_OBJECTS) $(konqueror_OBJECTS)
-@@ -470,0 +479,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -470,6 +478,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkonqueror_main.la: $(libkonqueror_main_la_OBJECTS) $(libkonqueror_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkonqueror_main_la_LDFLAGS) $(libkonqueror_main_la_OBJECTS) $(libkonqueror_main_la_LIBADD) $(LIBS)
 +
-@@ -674 +685 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -732,11 +742,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -883,3 +882,0 @@
+ konqueror.la: $(konqueror_la_OBJECTS) $(konqueror_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(konqueror_la_LDFLAGS) $(konqueror_la_OBJECTS) $(konqueror_la_LIBADD) $(LIBS)
+ 
+@@ -871,9 +882,6 @@
+ #konqueror_static_LDADD = konqueror.la *view/*.la dirtree/*.la $(libdir)/libkhtml.la
+ #konqueror_static_LDFLAGS = $(all_libraries) -static
+ 
 -dummy.cc:
 -	echo > dummy.cc
 -
-@@ -991,8 +988,8 @@
+ messages: rc.cpp
+ 	$(EXTRACTRC) */*.rc >> rc.cpp
+ 	$(EXTRACTRC) dirtree/history_module/*.ui >> rc.cpp
+@@ -979,28 +987,40 @@
+ 
+ 
+ #>+ 12
 -konqueror_la_meta_unload.cc:  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc
 -	@echo 'creating konqueror_la_meta_unload.cc'
 -	@-rm -f konqueror_la_meta_unload.cc
--	@echo 'static const char * _metalist_konqueror_la[] = {' > konqueror_la_meta_unload.cc
--	@cat  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> konqueror_la_meta_unload.cc
--	@echo '0};' >> konqueror_la_meta_unload.cc
--	@echo '#include <kunload.h>' >> konqueror_la_meta_unload.cc
--	@echo '_UNLOAD(konqueror_la)' >> konqueror_la_meta_unload.cc
 +libkonqueror_main_la_meta_unload.cc:  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc
 +	@echo 'creating libkonqueror_main_la_meta_unload.cc'
 +	@-rm -f libkonqueror_main_la_meta_unload.cc
-+	@echo 'static const char * _metalist_libkonqueror_main_la[] = {' > libkonqueror_main_la_meta_unload.cc
-+	@cat  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkonqueror_main_la_meta_unload.cc
-+	@echo '0};' >> libkonqueror_main_la_meta_unload.cc
-+	@echo '#include <kunload.h>' >> libkonqueror_main_la_meta_unload.cc
-+	@echo '_UNLOAD(libkonqueror_main_la)' >> libkonqueror_main_la_meta_unload.cc
-@@ -1003 +1000,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_konqueror_la[] = {' > konqueror_la_meta_unload.cc ;\
+-		cat  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> konqueror_la_meta_unload.cc ;\
+-		echo '0};' >> konqueror_la_meta_unload.cc ;\
+-		echo '#include <kunload.h>' >> konqueror_la_meta_unload.cc ;\
+-		echo '_UNLOAD(konqueror_la)' >> konqueror_la_meta_unload.cc ;\
+-	else echo > konqueror_la_meta_unload.cc; fi
++		echo 'static const char * _metalist_libkonqueror_main_la[] = {' > libkonqueror_main_la_meta_unload.cc ;\
++		cat  konq_view.moc konq_browseriface.moc konq_mainwindow.moc konq_profiledlg.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_run.moc konq_frame.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkonqueror_main_la_meta_unload.cc ;\
++		echo '0};' >> libkonqueror_main_la_meta_unload.cc ;\
++		echo '#include <kunload.h>' >> libkonqueror_main_la_meta_unload.cc ;\
++		echo '_UNLOAD(libkonqueror_main_la)' >> libkonqueror_main_la_meta_unload.cc ;\
++	else echo > libkonqueror_main_la_meta_unload.cc; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  konqueror_la_meta_unload.cc
 +	-rm -f  libkonqueror_main_la_meta_unload.cc
 +
@@ -116,24 +161,55 @@ $NetBSD: patch-cn,v 1.1 2001/10/15 22:46:05 skrll Exp $
 +	done; \
 +	cat libkonqueror_main_la.all_cc.final libkonqueror_main_la.all_cc.files  > libkonqueror_main_la.all_cc.cc; \
 +	rm -f libkonqueror_main_la.all_cc.final libkonqueror_main_la.all_cc.files
-@@ -1006 +1015 @@
+ 
+ #>+ 11
 -konqueror_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/konq_main.cc $(srcdir)/KonquerorIface.cc $(srcdir)/KonqMainWindowIface.cc $(srcdir)/KonqViewIface.cc $(srcdir)/konq_mainwindow.cc $(srcdir)/konq_guiclients.cc $(srcdir)/konq_run.cc $(srcdir)/konq_view.cc $(srcdir)/konq_viewmgr.cc $(srcdir)/konq_misc.cc $(srcdir)/konq_frame.cc $(srcdir)/konq_actions.cc $(srcdir)/konq_profiledlg.cc $(srcdir)/konq_factory.cc $(srcdir)/konq_combo.cc $(srcdir)/konq_browseriface.cc KonquerorIface_skel.cc KonqMainWindowIface_skel.cc KonqViewIface_skel.cc konqueror_la_meta_unload.cc   konq_view.moc konq_browseriface.moc konq_profiledlg.moc konq_mainwindow.moc konq_viewmgr.moc konq_actions.moc konq_combo.moc konq_guiclients.moc konq_frame.moc konq_run.moc 
 +konqueror_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/konqueror_main.cc  
-@@ -1010 +1019 @@
+ 	@echo 'creating konqueror_la.all_cc.cc ...'; \
+ 	rm -f konqueror_la.all_cc.files konqueror_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> konqueror_la.all_cc.final; \
 -	for file in konq_main.cc KonquerorIface.cc KonqMainWindowIface.cc KonqViewIface.cc konq_mainwindow.cc konq_guiclients.cc konq_run.cc konq_view.cc konq_viewmgr.cc konq_misc.cc konq_frame.cc konq_actions.cc konq_profiledlg.cc konq_factory.cc konq_combo.cc konq_browseriface.cc KonquerorIface_skel.cc KonqMainWindowIface_skel.cc KonqViewIface_skel.cc konqueror_la_meta_unload.cc ; do \
 +	for file in konqueror_main.cc ; do \
-@@ -1018 +1027 @@
+ 	  echo "#include \"$$file\"" >> konqueror_la.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konqueror_la.all_cc.final; \
+ 	done; \
+@@ -1008,11 +1028,11 @@
+ 	rm -f konqueror_la.all_cc.final konqueror_la.all_cc.files
+ 
+ #>+ 11
 -konqueror.all_cc.cc: $(srcdir)/Makefile.in dummy.cc  
 +konqueror.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/konqueror_main.cc  
-@@ -1022 +1031 @@
+ 	@echo 'creating konqueror.all_cc.cc ...'; \
+ 	rm -f konqueror.all_cc.files konqueror.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> konqueror.all_cc.final; \
 -	for file in dummy.cc ; do \
 +	for file in konqueror_main.cc ; do \
-@@ -1031 +1040 @@
+ 	  echo "#include \"$$file\"" >> konqueror.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> konqueror.all_cc.final; \
+ 	done; \
+@@ -1021,20 +1041,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f konqueror_la.all_cc.cc konqueror.all_cc.cc
 +	-rm -f libkonqueror_main_la.all_cc.cc konqueror_la.all_cc.cc konqueror.all_cc.cc
-@@ -1035 +1044 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) konqueror_la_OBJECTS="$(konqueror_la_final_OBJECTS)" all-am
 +	$(MAKE) libkonqueror_main_la_OBJECTS="$(libkonqueror_main_la_final_OBJECTS)" all-am
-@@ -1038 +1047 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) konqueror_la_OBJECTS="$(konqueror_la_final_OBJECTS)" install-am
++	$(MAKE) libkonqueror_main_la_OBJECTS="$(libkonqueror_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) konqueror_la_OBJECTS="$(konqueror_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkonqueror_main_la_OBJECTS="$(libkonqueror_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) konqueror_la_OBJECTS="$(konqueror_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkonqueror_main_la_OBJECTS="$(libkonqueror_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
