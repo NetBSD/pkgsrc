@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.907 2003/09/26 15:05:53 jmmv Exp $
+$NetBSD: TODO,v 1.908 2003/09/27 09:43:02 heinz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,7 @@ Suggested package updates
 	o sml-nj-110.43
 	o snd-6.12
 	o snes9x-1.41
-	o spamassassin-2.60
+	o spamassassin-2.60 [heinz]
 	o speex-1.0.2
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
