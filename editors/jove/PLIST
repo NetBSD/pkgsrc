@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/22 14:10:15 jmmv Exp $
 bin/jove
 bin/teachjove
-lib/jove/portsrv
 lib/jove/recover
+man/man1/jove.1
+man/man1/jovetool.1
+man/man1/teachjove.1
+man/man1/xjove.1
 share/jove/XTermresource
 share/jove/cmds.doc
 share/jove/jove.rc
@@ -22,7 +25,5 @@ share/jove/keychart.wyse
 share/jove/keychart.xterm
 share/jove/keychart.z29
 share/jove/teach-jove
-man/man1/jove.1
-man/man1/jovetool.1
-man/man1/teachjove.1
-man/man1/xjove.1
+@dirrm share/jove
+@dirrm lib/jove
