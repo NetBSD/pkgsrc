@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.5 2004/02/01 12:16:10 jlam Exp $
+# $NetBSD: gcc.mk,v 1.6 2004/02/01 14:11:01 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -8,7 +8,7 @@ GCC_REQD?=	2.8.0
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
 #
-_GCC_DIST_VERSION=	3.3
+_GCC_DIST_VERSION=	3.3.2
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
 _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
@@ -79,23 +79,47 @@ _GCC3_REQD:=	${_GCC_REQD}
 .if defined(_GCC2_REQD)
 _GCC_REQD:=		${_GCC2_REQD}
 _GCC_PKGBASE=		gcc
-_GCC_PKGSRCDIR=		../../lang/gcc
 .  if !empty(PKGPATH:Mlang/gcc)
-_IGNORE_GCC_REQD=	yes
-MAKEFLAGS+=		_IGNORE_GCC_REQD=yes
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  else
+_GCC_PKGSRCDIR=		../../lang/gcc
+_GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .  endif
 .elif defined(_GCC3_REQD)
 _GCC_REQD:=		${_GCC3_REQD}
-_GCC_PKGBASE=		gcc3
-_GCC_PKGSRCDIR=		../../lang/gcc3
-.  if !empty(PKGPATH:Mlang/gcc3)
-_IGNORE_GCC_REQD=	yes
-MAKEFLAGS+=		_IGNORE_GCC_REQD=yes
+_GCC_PKGBASE=		gcc3-c
+.  if !empty(PKGPATH:Mlang/gcc3-c)
+_IGNORE_GCC3C=		yes
+MAKEFLAGS+=		_IGNORE_GCC3C=yes
+.  else
+_GCC_PKGSRCDIR=		../../lang/gcc3-c
+_GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc3-c) || \
+      !empty(PKGPATH:Mlang/gcc3-c++) || \
+      !empty(PKGPATH:Mlang/gcc3-f77) || \
+      !(defined(USE_CXX) && !empty(USE_CXX:M[yY][eE][sS]))
+_IGNORE_GCC3CXX=	yes
+MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
+.  else
+_GCC_PKGSRCDIR+=	../../lang/gcc3-c++
+_GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc3-c) || \
+      !empty(PKGPATH:Mlang/gcc3-c++) || \
+      !empty(PKGPATH:Mlang/gcc3-f77) || \
+      !(defined(USE_FORTRAN) && !empty(USE_FORTRAN:M[yY][eE][sS]))
+_IGNORE_GCC3F77=	yes
+MAKEFLAGS+=		_IGNORE_GCC3F77=yes
+.  else
+_GCC_PKGSRCDIR+=	../../lang/gcc3-f77
+_GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 .  endif
 .endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
 
-.if defined(_IGNORE_GCC_REQD)
+.if defined(_IGNORE_GCC) || defined(_IGNORE_GCC3C)
 _USE_PKGSRC_GCC=	NO
 .endif
 
@@ -174,14 +198,18 @@ PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 # Add the dependency on GCC.
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 .  if empty(USE_BUILDLINK2:M[nN][oO])
-.    include "${_GCC_PKGSRCDIR}/buildlink2.mk"
-#.  elif !empty(USE_BUILDLINK3:M[yY][eE][sS])
-#.    include "${_GCC_PKGSRCDIR}/buildlink3.mk"
+.    for _dir_ in ${_GCC_PKGSRCDIR}
+.      include "${_dir_}/buildlink2.mk"
+.    endfor
+.  elif !empty(USE_BUILDLINK3:M[yY][eE][sS])
+.    for _dir_ in ${_GCC_PKGSRCDIR}
+.      include "${_dir_}/buildlink3.mk"
+.    endfor
 .  else
 .    if defined(USE_GCC_SHLIB)
-DEPENDS+=	${_GCC_DEPENDS}:${_GCC_PKGSRCDIR}
+DEPENDS+=	${_GCC_DEPENDENCY}
 .    else
-BUILD_DEPENDS+=	${_GCC_DEPENDS}:${_GCC_PKGSRCDIR}
+BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 .    endif
 .  endif
 .endif
@@ -193,8 +221,14 @@ BUILD_DEPENDS+=	${_GCC_DEPENDS}:${_GCC_PKGSRCDIR}
 .  if exists(${_GCC_PREFIX}bin/gcc)
 PATH:=		${_GCC_PREFIX}bin:${PATH}
 CC=		${_GCC_PREFIX}bin/gcc
+.  endif
+.  if exists(${_GCC_PREFIX}bin/cpp)
 CPP=		${_GCC_PREFIX}bin/cpp
+.  endif
+.  if exists(${_GCC_PREFIX}bin/g++)
 CXX=		${_GCC_PREFIX}bin/g++
+.  endif
+.  if exists(${_GCC_PREFIX}bin/g77)
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC:=	${F77}
 .  endif
