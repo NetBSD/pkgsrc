@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:48:10 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/27 17:07:36 grant Exp $
 
 DISTNAME=		zile-1.6.2
 PKGREVISION=		1
@@ -15,5 +15,5 @@ USE_BUILDLINK2= 	yes
 USE_MAKEINFO=		YES
 INFO_FILES=		zile.info
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

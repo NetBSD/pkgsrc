@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/24 23:04:09 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/27 17:07:36 grant Exp $
 #
 
 DISTNAME=		Level9_3.0_Source
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/level9.txt ${PREFIX}/share/doc/level9
 	${INSTALL_PROGRAM} ${WRKSRC}/level9 ${PREFIX}/bin
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
