@@ -1,8 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
+$NetBSD: patch-ac,v 1.2 2001/10/14 17:19:58 tron Exp $
 
 --- ../spunk/password.cc.orig	Thu Nov  7 18:06:48 1996
-+++ ../spunk/password.cc	Sat Feb 10 18:38:35 2001
-@@ -529,10 +529,10 @@
++++ ../spunk/password.cc	Sun Oct 14 19:09:32 2001
+@@ -525,14 +525,14 @@
+ 
+ 
+ 
+-static void EntryEditor (PasswordEntry* E, int& Abort, int& Changed)
++void EntryEditor (PasswordEntry* E, int& Abort, int& Changed)
  // Allow editing of one password entry
  {
      // ID's of the menue items
