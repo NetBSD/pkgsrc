@@ -1,13 +1,73 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:10:22 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/11/07 10:52:29 tron Exp $
 
---- configure.orig	Sat Jan 31 01:53:34 1998
-+++ configure	Thu Mar 19 23:21:34 1998
-@@ -1664,7 +1664,7 @@
- 
- 
+--- configure.orig	Fri Jul 10 20:40:11 1998
++++ configure	Sat Nov  7 10:11:11 1998
+@@ -501,9 +501,9 @@
+ # Prefer explicitly selected file to automatically selected ones.
+ if test -z "$CONFIG_SITE"; then
+   if test "x$prefix" != xNONE; then
+-    CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
++    CONFIG_SITE="$prefix/share/kde/config.site $prefix/etc/config.site"
+   else
+-    CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
++    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/etc/config.site"
+   fi
+ fi
+ for ac_site_file in $CONFIG_SITE; do
+@@ -1609,7 +1609,7 @@
+ CC=$CXX
+ CFLAGS="$CXXFLAGS"
  # Always use our own libtool.
 -LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +LIBTOOL='$(top_builddir)/libtool'
  
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
+@@ -3447,37 +3447,37 @@
+ echo "configure:3448: checking for KDE paths" >&5
  
- libtool_enable_shared=no
+   if test -z "$kde_htmldir"; then
+-    kde_htmldir="\$(prefix)/share/doc/HTML"
++    kde_htmldir="\$(prefix)/share/doc/kde/HTML"
+   fi
+   if test -z "$kde_appsdir"; then
+-    kde_appsdir="\$(prefix)/share/applnk"
++    kde_appsdir="\$(prefix)/share/kde/applnk"
+   fi
+   if test -z "$kde_icondir"; then
+-    kde_icondir="\$(prefix)/share/icons"
++    kde_icondir="\$(prefix)/share/kde/icons"
+   fi
+   if test -z "$kde_sounddir"; then
+-    kde_sounddir="\$(prefix)/share/sounds"
++    kde_sounddir="\$(prefix)/share/kde/sounds"
+   fi
+   if test -z "$kde_datadir"; then
+-    kde_datadir="\$(prefix)/share/apps"
++    kde_datadir="\$(prefix)/share/kde/apps"
+   fi
+   if test -z "$kde_locale"; then
+-    kde_locale="\$(prefix)/share/locale"
++    kde_locale="\$(prefix)/share/kde/locale"
+   fi
+   if test -z "$kde_cgidir"; then
+     kde_cgidir="\$(exec_prefix)/cgi-bin"
+   fi
+   if test -z "$kde_confdir"; then
+-    kde_confdir="\$(prefix)/share/config"
++    kde_confdir="\$(prefix)/share/kde/config"
+   fi
+   if test -z "$kde_mimedir"; then
+-    kde_mimedir="\$(prefix)/share/mimelnk"
++    kde_mimedir="\$(prefix)/share/kde/mimelnk"
+   fi
+   if test -z "$kde_toolbardir"; then
+-    kde_toolbardir="\$(prefix)/share/toolbar"
++    kde_toolbardir="\$(prefix)/share/kde/toolbar"
+   fi
+   if test -z "$kde_wallpaperdir"; then
+-    kde_wallpaperdir="\$(prefix)/share/wallpapers"
++    kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
+   fi
+   if test -z "$kde_bindir"; then
+     kde_bindir="\$(exec_prefix)/bin"

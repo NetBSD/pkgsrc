@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/11/06 05:15:41 mycroft Exp $
+# $NetBSD: Makefile,v 1.24 1998/11/07 10:52:29 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -31,7 +31,8 @@ CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 PLIST_SRC=	${WRKDIR}/PLIST
-PLIST_DIRS=	share/applnk share/apps/kappfinder share/icons share/mimelnk
+PLIST_DIRS=	share/kde/applnk share/kde/apps/kappfinder share/kde/icons \
+		share/kde/mimelnk
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

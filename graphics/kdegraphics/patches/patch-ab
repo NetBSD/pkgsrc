@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 1998/11/07 10:52:30 tron Exp $
+$NetBSD: patch-ab,v 1.1 1998/11/07 10:52:29 tron Exp $
 
---- configure.orig	Fri Jul 10 20:37:57 1998
-+++ configure	Fri Nov  6 23:04:59 1998
-@@ -501,9 +501,9 @@
+--- configure.orig	Fri Jul 10 20:37:17 1998
++++ configure	Sat Nov  7 11:19:12 1998
+@@ -505,9 +505,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
@@ -14,26 +14,8 @@ $NetBSD: patch-aa,v 1.8 1998/11/07 10:52:30 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -1688,6 +1688,8 @@
- ac_save_cflags="$CFLAGS"
- CC=$CXX
- CFLAGS="$CXXFLAGS"
-+
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1733,6 +1735,8 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
-+
-  CC=$ac_save_cc
- CFLAGS="$ac_save_cflags"
- 
-@@ -4691,37 +4695,37 @@
- echo "configure:4692: checking for KDE paths" >&5
+@@ -3471,37 +3471,37 @@
+ echo "configure:3472: checking for KDE paths" >&5
  
    if test -z "$kde_htmldir"; then
 -    kde_htmldir="\$(prefix)/share/doc/HTML"
