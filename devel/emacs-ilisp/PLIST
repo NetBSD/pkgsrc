@@ -1,0 +1,65 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 20:33:04 dillo Exp $
+share/doc/emacs-ilisp/INSTALLATION
+share/doc/emacs-ilisp/README
+share/emacs/site-lisp/ilisp/allegro.lisp
+share/emacs/site-lisp/ilisp/bridge.elc
+share/emacs/site-lisp/ilisp/cl-chs-init.lisp
+share/emacs/site-lisp/ilisp/cl-ilisp.lisp
+share/emacs/site-lisp/ilisp/cmulisp.lisp
+share/emacs/site-lisp/ilisp/comint-ipc.elc
+share/emacs/site-lisp/ilisp/completer.elc
+share/emacs/site-lisp/ilisp/extra/hyperspec.elc
+share/emacs/site-lisp/ilisp/guile-ilisp.scm
+share/emacs/site-lisp/ilisp/ilcompat.elc
+share/emacs/site-lisp/ilisp/ild.el
+share/emacs/site-lisp/ilisp/ilfsf20.elc
+share/emacs/site-lisp/ilisp/ilisp-acl.elc
+share/emacs/site-lisp/ilisp/ilisp-aut.elc
+share/emacs/site-lisp/ilisp/ilisp-chs.elc
+share/emacs/site-lisp/ilisp/ilisp-cl-easy-menu.el
+share/emacs/site-lisp/ilisp/ilisp-cl.elc
+share/emacs/site-lisp/ilisp/ilisp-cmp.elc
+share/emacs/site-lisp/ilisp/ilisp-cmt.elc
+share/emacs/site-lisp/ilisp/ilisp-cmu.elc
+share/emacs/site-lisp/ilisp/ilisp-def.elc
+share/emacs/site-lisp/ilisp/ilisp-dia.elc
+share/emacs/site-lisp/ilisp/ilisp-doc.elc
+share/emacs/site-lisp/ilisp/ilisp-ext.elc
+share/emacs/site-lisp/ilisp/ilisp-hi.elc
+share/emacs/site-lisp/ilisp/ilisp-hlw.elc
+share/emacs/site-lisp/ilisp/ilisp-hnd.elc
+share/emacs/site-lisp/ilisp/ilisp-imenu.el
+share/emacs/site-lisp/ilisp/ilisp-ind.elc
+share/emacs/site-lisp/ilisp/ilisp-inp.elc
+share/emacs/site-lisp/ilisp/ilisp-kcl.elc
+share/emacs/site-lisp/ilisp/ilisp-key.elc
+share/emacs/site-lisp/ilisp/ilisp-kil.elc
+share/emacs/site-lisp/ilisp/ilisp-low.elc
+share/emacs/site-lisp/ilisp/ilisp-luc.elc
+share/emacs/site-lisp/ilisp/ilisp-mnb.elc
+share/emacs/site-lisp/ilisp/ilisp-mod.elc
+share/emacs/site-lisp/ilisp/ilisp-mov.elc
+share/emacs/site-lisp/ilisp/ilisp-out.elc
+share/emacs/site-lisp/ilisp/ilisp-pkg.lisp
+share/emacs/site-lisp/ilisp/ilisp-prc.elc
+share/emacs/site-lisp/ilisp/ilisp-prn.elc
+share/emacs/site-lisp/ilisp/ilisp-rng.elc
+share/emacs/site-lisp/ilisp/ilisp-sbcl.elc
+share/emacs/site-lisp/ilisp/ilisp-sch.elc
+share/emacs/site-lisp/ilisp/ilisp-scheme-easy-menu.el
+share/emacs/site-lisp/ilisp/ilisp-snd.elc
+share/emacs/site-lisp/ilisp/ilisp-sym.elc
+share/emacs/site-lisp/ilisp/ilisp-utl.elc
+share/emacs/site-lisp/ilisp/ilisp-val.elc
+share/emacs/site-lisp/ilisp/ilisp-xfr.elc
+share/emacs/site-lisp/ilisp/ilisp-xls.elc
+share/emacs/site-lisp/ilisp/ilisp.elc
+share/emacs/site-lisp/ilisp/lispworks.lisp
+share/emacs/site-lisp/ilisp/lucid.lisp
+share/emacs/site-lisp/ilisp/mzscheme-ilisp.scm
+share/emacs/site-lisp/ilisp/sblisp.lisp
+share/examples/emacs-ilisp/ilisp.emacs
+@dirrm share/examples/emacs-ilisp
+@dirrm share/emacs/site-lisp/ilisp/extra
+@dirrm share/emacs/site-lisp/ilisp
+@dirrm share/doc/emacs-ilisp

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/11/15 20:33:04 dillo Exp $
+
+SHA1 (ilisp-5.11.tar.gz) = 6e4e29f15cf56f85ae63fecd204ec55548692c12
+Size (ilisp-5.11.tar.gz) = 219543 bytes
+SHA1 (patch-aa) = 87e96dde3d808add1b8048484d9f3342af33362c
