@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:12 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/20 11:36:02 kent Exp $
 #
 
 DISTNAME=		librsvg-1.0.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.levien.com/svg/
 COMMENT=		Raph's SVG library
 
 DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
-DEPENDS+=		freetype2>=2.0.1:../../graphics/freetype2
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -21,4 +20,5 @@ USE_X11BASE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CPPFLAGS+=		-I${LOCALBASE}/include
 
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
