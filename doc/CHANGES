@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9039 2005/02/05 00:29:45 adrianp Exp $
+$NetBSD: CHANGES,v 1.9040 2005/02/05 00:48:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated unison-devel to 2.9.20nb3 [adrianp 2005-02-04]
 	Updated ion to 20040729nb3 [cube 2005-02-04]
 	Updated labltk to 3.08.2 [adrianp 2005-02-04]
+	Updated cksfv to 1.3.3 [wiz 2005-02-05]
