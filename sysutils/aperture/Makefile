@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/11 11:17:55 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/15 06:10:25 jlam Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -22,7 +22,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 .BEGIN:
 	@if [ ! -f /sys/lib/libkern/libkern.h ]; then \
 	    ${ECHO_MSG} "==================================================="; \
-	    ${ECHO_MSG} "    Kernel sources are required to build LKMs."; \
+	    ${ECHO_MSG} "    Kernel sources for the version of the kernel"; \
+	    ${ECHO_MSG} "    you are running are required to build LKMs."; \
 	    ${ECHO_MSG} "    Please fetch them and make a link from /sys";  \
 	    ${ECHO_MSG} "    to the kernel source directory (typically"; \
 	    ${ECHO_MSG} "    /usr/src/sys)."; \
