@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2792 2004/12/28 23:18:08 adrianp Exp $
+$NetBSD: TODO,v 1.2793 2004/12/29 01:22:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1073,7 +1073,6 @@ Suggested package updates
 	o texi2html-1.70
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
-	o tiff-3.7.1 [reed]
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
 	o tk-8.4.9
