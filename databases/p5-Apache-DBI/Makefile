@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/06 10:34:37 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/06 11:13:53 recht Exp $
 #
 
 DISTNAME=	Apache-DBI-0.94
@@ -11,7 +11,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.symbolstone.org/technology/perl/DBI/index.html
 COMMENT=	DBI support for Apache+mod_perl
 
-DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
+DEPENDS+=	p5-DBI>=1.13:../../databases/p5-DBI
+DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/DBI/.packlist
