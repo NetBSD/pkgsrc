@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/10/03 09:17:08 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/03 10:43:19 jlam Exp $
 
 .if !defined(OSS_BUILDLINK2_MK)
 OSS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		oss
-BUILDLINK_DEPENDS.oss?=		oss>=3.97d
+BUILDLINK_DEPENDS.oss?=		oss>=3.97c
 BUILDLINK_PKGSRCDIR.oss?=	../../audio/oss
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.oss=oss
