@@ -1,0 +1,21 @@
+--- Makefile.in.orig	Sun May 10 23:52:59 1998
++++ Makefile.in	Fri Jul 31 02:26:57 1998
+@@ -27,3 +27,3 @@
+ CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@prefix@/\" $(SOUNDDEFS)
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -Wl,-R$(X11BASE)/lib @LDFLAGS@
+ LIBS = @LIBS@ libsprite/libsprite.a @X_LIBS@
+@@ -47,4 +47,3 @@
+ 	./mkinstalldirs $(prefix)
+-	$(INSTALL) $(TARGET) $(bindir)/$(TARGET)
+-	$(INSTALL) $(SOUNDSRV) $(prefix)/$(SOUNDSRV)
++	$(INSTALL) $(SOUNDSRV) $(TARGET) $(bindir)/
+ 	./mkinstalldirs $(prefix)/sounds
+@@ -54,3 +53,6 @@
+ 	touch $(prefix)/scores
+-	chmod 666 $(prefix)/scores
++	chown bin:games $(prefix)/scores
++	chown bin:games $(bindir)/$(TARGET)
++	chmod 2755 $(bindir)/$(TARGET)
++	chmod 664 $(prefix)/scores
+ 
