@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/03/24 20:27:13 dmcmahill Exp $
+
+--- glib/giochannel.c.orig	Fri Mar  8 10:50:54 2002
++++ glib/giochannel.c
+@@ -1730,7 +1730,7 @@
+ 
+   if (!channel->use_buffer)
+     {
+-      gint tmp_bytes;
++      glong tmp_bytes;
+       
+       g_assert (!channel->read_buf || channel->read_buf->len == 0);
+ 
+@@ -1922,7 +1922,7 @@
+ 
+   if (!channel->use_buffer)
+     {
+-      gint tmp_bytes;
++      glong tmp_bytes;
+       
+       g_assert (!channel->write_buf || channel->write_buf->len == 0);
+       g_assert (channel->partial_write_buf[0] == '\0');
