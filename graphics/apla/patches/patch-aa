@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/06/26 10:00:05 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/26 21:45:55 zuntum Exp $
 
 --- Makefile.orig	Tue May 22 12:51:09 2001
 +++ Makefile
-@@ -1,19 +1,18 @@
+@@ -1,20 +1,19 @@
  PROG=apla
  
  LOCALBASE?=/usr/pkg
@@ -24,8 +24,10 @@ $NetBSD: patch-aa,v 1.1 2001/06/26 10:00:05 zuntum Exp $
 -	`${LOCALBASE}/bin/sdl-config --libs`				\
 -	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib				\
 -	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib			\
+-	-lSDL_ttf -lttf -liconv -li386
 +LDFLAGS+=`${AVIFILE_CONFIG} --libs`					\
 +	`${SDL_CONFIG} --libs`						\
- 	-lSDL_ttf -lttf -liconv -li386
++	-lSDL_ttf -lfreetype -liconv -li386
  SRCS=main.cc cmdline.cc help.cc text.cc					\
  	${FONTLIBSRCS}
+ 
