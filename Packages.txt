@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.172 2001/07/16 11:06:48 jlam Exp $
+# $NetBSD: Packages.txt,v 1.173 2001/07/17 21:19:37 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1603,6 +1603,13 @@ through ${BUILDLINK_DIR}.  If the required dependency pattern for a package
 differs from the default specified in the package's buildlink.mk file, then
 it may be set by defining BUILDLINK_DEPENDS.<pkgname> in the Makefile to
 the dependency pattern required.
+
+Packages will still need LDFLAGS to be set to include the appropriate rpath
+settings in order for built packages to find libraries.  LDFLAGS should
+still contain -Wl,-R${LOCALBASE}/lib, and -Wl,-R${X11BASE}/lib if the
+package requires the X11 libraries.  -Wl,-R should never refer to a
+${BUILDLINK_DIR} library directory, and all such references should be
+purged from the build.
 
 A package that builds correctly with USE_BUILDLINK_ONLY set should have
 that setting added to its Makefile to note that it doesn't use any
