@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/28 06:27:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/09/17 21:48:23 tron Exp $
 bin/gtm_applet
 bin/gtm
 etc/sound/events/gtm.soundlist
@@ -32,6 +32,5 @@ share/sounds/gtm/complete.wav
 share/sounds/gtm/start.wav
 share/applets/Network/gtm_applet.desktop
 @dirrm share/sounds/gtm
-@dirrm share/gnome/help/gtm/C/images
 @dirrm share/gnome/help/gtm/C
 @dirrm share/gnome/help/gtm
