@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:13 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/10/02 15:02:33 tv Exp $
 
 --- src/Makefile.in.orig	Sun Jul 19 14:30:55 1998
 +++ src/Makefile.in	Sun Jul 19 16:51:42 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:18:13 agc Exp $
  ####### Compiler, tools and options
  
 -CC	=	$(SYSCONF_CC)
-+CC	=	$(LOCALBASE)/bin/libtool $(SYSCONF_CC)
++CC	=	$(LIBTOOL) $(SYSCONF_CC)
  CFLAGS	=	$(SYSCONF_CFLAGS_QT) $(SYSCONF_CFLAGS_X11) $(SYSCONF_CFLAGS) $(SYSCONF_CFLAGS_LIB)
  LFLAGS	=	$(SYSCONF_LFLAGS_X11) $(SYSCONF_LFLAGS)
  LIBS	=	$(SYSCONF_LIBS_X11)
