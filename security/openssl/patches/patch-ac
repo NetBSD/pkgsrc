@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2002/08/10 04:50:33 fredb Exp $
+$NetBSD: patch-ac,v 1.7 2002/08/19 18:34:56 fredb Exp $
 
 --- Configure.orig	Thu Aug  8 16:12:40 2002
 +++ Configure
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.6 2002/08/10 04:50:33 fredb Exp $
 +"NetBSD-mipsel", "gcc:-DTERMIOS -O2 -Wall -DL_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-ns32k", "gcc:-DTERMIOS -O2 -Wall -DL_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-powerpc", "gcc:-DTERMIOS -O2 -Wall -DB_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
-+"NetBSD-sparc",	"gcc:-DTERMIOS -O2 -mv8 -Wall -DB_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++"NetBSD-sparc",	"gcc:-DTERMIOS -O2 -Wall -DB_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-sparc64", "gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib:SIXTY_FOUR_BIT_LONG DES_INT DES_RISC1::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-vax", "gcc:-DTERMIOS -O2 -Wall -DL_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-x86",	"gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
