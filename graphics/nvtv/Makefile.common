@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/10/05 09:16:16 cube Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/10/05 09:45:51 jmmv Exp $
+
 DISTNAME=	nvtv-0.4.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
