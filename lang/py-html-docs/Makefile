@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1999/04/14 05:56:45 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/01 20:14:46 tsarna Exp $
 #
 
-DISTNAME=	html-1.5.2b2
-PKGNAME=	py-html-docs-1.5.2b2
+DISTNAME=	html-1.5.2
+PKGNAME=	py-html-docs-1.5.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/doc/
 EXTRACT_SUFX=	.tgz
