@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/05/10 01:17:28 rh Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/30 16:26:45 dmcmahill Exp $
 #
 
-DISTNAME=		glib-2.0.1
+DISTNAME=		glib-2.0.4
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 PKGREVISION=		1
 CATEGORIES=		devel
