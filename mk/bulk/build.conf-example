@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.3 2000/09/15 22:27:16 hubertf Exp $
+# $NetBSD: build.conf-example,v 1.4 2000/11/17 16:59:01 hubertf Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -23,7 +23,7 @@ arch=`uname -m`
 # Where our pkgsrc is located
 USR_PKGSRC="/usr/pkgsrc"
 
-# As which user to run "cvs updates"
+# As which user to run "cvs updates". Leave empty for no update.
 CVS_USER="yourlogin"
 
 # Proxies (optional):
