@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/13 07:33:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/29 10:58:50 jlam Exp $
 bin/appletviewer
 bin/install-jar
 bin/jar
@@ -68,7 +68,7 @@ jre/lib/microsoft.jar
 jre/lib/pjava.jar
 jre/lib/rmi.jar
 jre/lib/rt.jar
-jre/lib/security/java.security
+jre/lib/security/java.security.default
 jre/lib/servlet.jar
 lib/kjc.jar
 lib/tools.jar
@@ -77,12 +77,8 @@ man/man1/kaffe.1
 @dirrm man/man1
 @dirrm man
 @dirrm lib
-@dirrm jre/lib/security
 @dirrm jre/lib/${MACHINE_ARCH}
-@dirrm jre/lib
 @dirrm jre/bin
-@dirrm jre
 @dirrm include/kaffe
 @dirrm include
 @dirrm bin
-@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}

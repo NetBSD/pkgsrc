@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2003/01/26 01:00:22 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2003/01/29 10:58:50 jlam Exp $
 #
 
 DISTNAME=		kaffe-1.0.7
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.0.x-production/
 
@@ -9,9 +10,10 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-USE_BUILDLINK2=		YES
-USE_X11=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_X11=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
@@ -21,7 +23,14 @@ GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix
 
 JVM_HOME=		${LOCALBASE}/java/kaffe
-NO_MTREE=		# defined, since we change PREFIX below
+NO_MTREE=		yes	# since we change PREFIX below
+
+OWN_DIRS=	${PREFIX}
+OWN_DIRS+=	${PREFIX}/jre
+OWN_DIRS+=	${PREFIX}/jre/lib
+OWN_DIRS+=	${PREFIX}/jre/lib/security
+SUPPORT_FILES=	${PREFIX}/jre/lib/security/java.security.default	\
+		${PREFIX}/jre/lib/security/java.security
 
 .include "../../mk/bsd.prefs.mk"
 
