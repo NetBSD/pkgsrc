@@ -1,0 +1,32 @@
+$NetBSD: patch-ai,v 1.1 1999/03/11 09:48:43 tron Exp $
+
+--- src/main.c.orig	Thu Aug 13 00:39:33 1998
++++ src/main.c	Thu Mar 11 10:38:24 1999
+@@ -40,6 +40,7 @@
+ int quiet = 0;
+ int trace = 0;
+ int noexec = 0;
++int readonlyfs = 1;
+ int logoff = 0;
+ 
+ /* Set if we should be writing CVSADM directories at top level.  At
+@@ -456,6 +457,10 @@
+     }
+     if (getenv (CVSREAD_ENV) != NULL)
+ 	cvswrite = 0;
++    if (getenv (CVSREADONLYFS_ENV)) {
++        readonlyfs = 1;
++        logoff = 1;
++    }
+ 
+     /* Set this to 0 to force getopt initialization.  getopt() sets
+        this to 1 internally.  */
+@@ -823,7 +828,7 @@
+ 		}
+ 		(void) strcat (path, "/");
+ 		(void) strcat (path, CVSROOTADM_HISTORY);
+-		if (isfile (path) && !isaccessible (path, R_OK | W_OK))
++		if (!readonlyfs && isfile (path) && !isaccessible (path, R_OK | W_OK))
+ 		{
+ 		    save_errno = errno;
+ 		    error (0, 0, "Sorry, you don't have read/write access to the history file");

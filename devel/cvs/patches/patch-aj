@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1999/03/11 09:48:43 tron Exp $
+
+--- src/server.c.orig	Fri Aug  7 02:46:38 1998
++++ src/server.c	Thu Mar 11 10:41:30 1999
+@@ -612,7 +612,7 @@
+     }
+     (void) strcat (path, "/");
+     (void) strcat (path, CVSROOTADM_HISTORY);
+-    if (isfile (path) && !isaccessible (path, R_OK | W_OK))
++    if (!readonlyfs && isfile (path) && !isaccessible (path, R_OK | W_OK))
+     {
+ 	save_errno = errno;
+ 	pending_error_text = malloc (80 + strlen (path));
