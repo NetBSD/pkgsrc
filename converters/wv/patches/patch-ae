@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/10/16 15:14:23 rh Exp $
+
+--- iconv/Makefile.in.orig	Mon Oct 16 16:42:29 2000
++++ iconv/Makefile.in
+@@ -21,7 +21,7 @@
+ 
+ CFLAGS = @CFLAGS@ @DEFS@ -I$(srcdir)/ -I$(srcdir)/../
+ 
+-CFLAGS += \
++CFLAGS += ${CPPFLAGS} \
+         -I$(srcdir)/../libole2/ \
+         -I$(srcdir)/../glib-wv/
+               

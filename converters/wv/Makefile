@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2000/09/02 17:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/10/16 15:14:22 rh Exp $
 #
 
-DISTNAME=		wv-0.5.44
+DISTNAME=		wv-0.6.0
 CATEGORIES=		converters
-MASTER_SITES=		http://www.csn.ul.ie/~caolan/publink/mswordview/development/
+MASTER_SITES=		http://download.sourceforge.net/wvware/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wvWare.com/
@@ -15,10 +15,11 @@ DEPENDS+=		ImageMagick>=5.2.2:../../graphics/ImageMagick
 # not detected by configure, causes conflicts with the one coming with wv
 CONFLICTS+=		libgetopt-*
 
-USE_X11=		# defined
+USE_X11=		YES
+USE_XPM=		YES
 
 WRKSRC=			${WRKDIR}/wv
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 
 EVAL_PREFIX=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--with-Magick=${LOCALBASE}
@@ -27,15 +28,23 @@ CONFIGURE_ARGS+=	--with-ttf=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-wmf=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-xpm=${XPMDIR}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-MAKE_ENV+=		RM="${RM}"
+MAKE_ENV+=		RM="${RM} -f"
 
-CPPFLAGS+=		-I${LOCALBASE}/include		# png.h
+CPPFLAGS+=		-I${LOCALBASE}/include
+CPPFLAGS+=		-I${LOCALBASE}/include/magick
+CPPFLAGS+=		-I${LOCALBASE}/include/libwmf
+MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 pre-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} {} \;
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	#cd ${WRKSRC} && autoconf
+
+post-configure:
+	#cd ${WRKSRC} && ${RM} -rf magick &&				\
+	#${LN} -s ${PREFIX}/include/magick .
+	#cd ${WRKSRC} && ${LN} -s ${PREFIX}/include/magick/config.h magick
 
 post-install:
 	${TOUCH} ${PREFIX}/share/wv/ttf/.directory
