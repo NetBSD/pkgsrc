@@ -1,0 +1,68 @@
+$NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
+
+--- configure.orig	Fri Mar 24 21:14:00 2000
++++ configure
+@@ -28,6 +28,8 @@
+ ac_help="$ac_help
+   --with-csops            add CSOps standard options"
+ ac_help="$ac_help
++  --with-nbsdops          add NetBSD standard options"
++ac_help="$ac_help
+   --without-passwd        don't use passwd/shadow file for authentication"
+ ac_help="$ac_help
+   --with-skey             enable S/Key support "
+@@ -819,6 +821,23 @@
+ fi
+ 
+ 
++# Check whether --with-nbsdops or --without-nbsdops was given.
++if test "${with_nbsdops+set}" = set; then
++  withval="$with_nbsdops"
++  case $with_nbsdops in
++    yes)	echo 'Adding NetBSD standard options'
++		CHECKSIA=false
++		with_ignore_dot=yes
++		with_env_editor=yes
++		with_tty_tickets=yes
++		;;
++    no)		;;
++    *)		echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
++		;;
++esac
++fi
++
++
+ # Check whether --with-passwd or --without-passwd was given.
+ if test "${with_passwd+set}" = set; then
+   withval="$with_passwd"
+@@ -7712,7 +7731,9 @@
+ #define HAVE_KERB5 1
+ EOF
+ 
+-    if test -f "/usr/local/include/krb5.h"; then
++    if test -f "/usr/include/krb5/krb5.h"; then
++	CPPFLAGS="$CPPFLAGS -I/usr/include/krb5";
++    elif test -f "/usr/local/include/krb5.h"; then
+ 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+     elif test -f "/usr/local/kerberos/include/krb5.h"; then
+ 	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
+@@ -7722,7 +7743,9 @@
+ 	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
+     fi
+ 
+-    if test -f "/usr/local/lib/libkrb5.a"; then
++    if test -f "/usr/lib/libkrb5.a"; then
++	SUDO_LDFLAGS="${SUDO_LDFLAGS}";
++    elif test -f "/usr/local/lib/libkrb5.a"; then
+ 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
+     elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
+ 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
+@@ -7732,7 +7755,7 @@
+ 	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
+     fi
+ 
+-    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lk5crypto -lcom_err"
++    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lasn1 -lcrypto -lroken -lcom_err"
+     AUTH_OBJS="${AUTH_OBJS} kerb5.o"
+ fi
+ 
