@@ -1,0 +1,17 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/02/23 04:59:25 kei Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${CAT} << EOT
+===========================================================================
+You may consider running ${PKG_PREFIX}/bin/texconfig to adjust for your
+local environment, e.g. configure font generation to use a temporary
+directory.
+
+For further information have a look at ${PKG_PREFIX}/share/texmf/doc/tetex/.
+===========================================================================
+EOT
+	;;
+esac

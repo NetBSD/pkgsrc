@@ -1,0 +1,92 @@
+$NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
+
+--- texk/tetex/texconfig.orig	Sun Feb 16 04:04:56 2003
++++ texk/tetex/texconfig	Fri Feb 21 10:25:36 2003
+@@ -7,8 +7,6 @@
+ # Thomas Esser, te@dbs.uni-hannover.de
+ # Copyright: Thomas Esser, 1994, 1995, 1996, 1997, 1999, 2002. Public domain.
+ 
+-# You may override DIALOG_TERMINFO and DIALOG_TERM in your environment.
+-
+ version=teTeX
+ #version='TeX Live'
+ 
+@@ -192,29 +190,11 @@
+   cleanup
+   exit 1
+ }
+-
+-# Some systems have their own dialog. Use it then and do not use
+-# faked TERM and TERMINFO variables when calling that dialog.
+-find_dialogtype()
+-{
+-  { u=`uname -s`; } 2>/dev/null
+-  case "$u" in
+-    FreeBSD|Linux)
+-      test -f /usr/bin/whiptail && DIALOG_PROG=/usr/bin/whiptail
+-      test -f /usr/bin/dialog && DIALOG_PROG=/usr/bin/dialog
+-      test -f /bin/dialog && DIALOG_PROG=/bin/dialog
+-      ;;
+-  esac
+-}
+  
+ run_dialog()
+ {
+   test -z "$NO_CLEAR" && tty >/dev/null 2>&1 && clear;
+-  if test -n "$DIALOG_PROG"; then
+-    $DIALOG_PROG --title "$version setup utility" ${1+"$@"}
+-  else
+-    TERM=$DIALOG_TERM TERMINFO=$DIALOG_TERMINFO tcdialog --title "$version setup utility" ${1+"$@"}
+-  fi
++  dialog --title "$version setup utility" "$@"
+ }
+ 
+ check_environ()
+@@ -293,22 +273,6 @@
+   echo "Done." >&2
+ }
+ 
+-check_terminal()
+-{
+-  terminfo=${DIALOG_TERMINFO-/usr/lib/terminfo}
+-
+-  test -f $terminfo/`echo $DIALOG_TERM | sed 's/\(.\).*/\1/'`/$DIALOG_TERM \
+-    && return
+-
+-  cat >&2 <<eof
+-TERM=$DIALOG_TERM is not supported by your terminfo system.
+-See terminfo(5), tic(1m) and term(5) for help.
+-
+-$progname failed. Program aborted.
+-eof
+-  exit_return 1
+-}
+-
+ fix_pager_more()
+ {
+   case "$PAGER" in
+@@ -1737,7 +1701,6 @@
+ needsCleanup=false
+ find_echo
+ find_fmt
+-find_dialogtype
+ check_environ
+ require_binary kpsewhich pwd
+ 
+@@ -1813,8 +1776,6 @@
+ 
+ # The fallback directory for private scripts and config files.
+ : ${TEXMF=`kpsewhich -expand-var '$TEXMF'`}
+-: ${DIALOG_TERMINFO=$TC_TEXMFMAIN/texconfig}
+-: ${DIALOG_TERM=generic}
+ 
+ formats=$TC_VARTEXMF/web2c
+ xdvi_app_dir=$TC_VARTEXMF/xdvi
+@@ -1975,7 +1936,6 @@
+ # fmtutil --missing
+ # texlinks --multiplatform
+ 
+-check_terminal
+ cat <<eof
+ 
+ The interactive texconfig utility will be started now. Make sure your
