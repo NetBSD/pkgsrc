@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.5 1999/09/03 19:45:12 drochner Exp $
---- lib/config/Makefile.in.orig	Sun Aug 15 11:51:22 1999
-+++ lib/config/Makefile.in	Sun Aug 15 11:51:50 1999
-@@ -114,7 +114,7 @@
- MAINTAINERCLEANFILES = Makefile.in
- bin_SCRIPTS = mxmkmf
- 
--configdir = $(libdir)/X11/config
-+configdir = $(libdir)/X11/lesstif
- config_DATA = Imake.tmpl Motif.rules Motif.tmpl
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../include/LTconfig.h
+$NetBSD: patch-ab,v 1.6 1999/11/03 04:18:47 jlam Exp $
+
+--- clients/Motif-1.2/mwm/system.mwmrc.orig	Wed Jan 13 10:11:05 1999
++++ clients/Motif-1.2/mwm/system.mwmrc	Tue Nov  2 22:16:16 1999
+@@ -4,7 +4,7 @@
+ Menu DefaultRootMenu
+ {
+ 	"Root Menu"		f.title
+-	"New Window"		f.exec "xterm -e /bin/bash &"
++	"New Window"		f.exec "xterm &"
+ 	"Shuffle Up"		f.circle_up
+ 	"Shuffle Down"		f.circle_down
+ 	"Refresh"		f.refresh

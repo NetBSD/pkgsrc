@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 1999/11/03 04:18:47 jlam Exp $
+
+--- lib/config/Makefile.in.orig	Mon Sep  6 17:13:30 1999
++++ lib/config/Makefile.in	Tue Nov  2 22:16:17 1999
+@@ -116,7 +116,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ bin_SCRIPTS = mxmkmf
+ 
+-configdir = $(libdir)/X11/config
++configdir = $(libdir)/X11/lesstif
+ config_DATA = Imake.tmpl Motif.rules Motif.tmpl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/LTconfig.h
