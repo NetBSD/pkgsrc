@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/07/08 12:47:04 tron Exp $
+$NetBSD: patch-ab,v 1.7 2000/07/11 09:53:11 agc Exp $
 
 --- Makefile.orig	Sat Jul  8 14:25:27 2000
 +++ Makefile	Sat Jul  8 14:28:16 2000
@@ -363,7 +363,7 @@ $NetBSD: patch-ab,v 1.6 2000/07/08 12:47:04 tron Exp $
 +#  Dell Unix (Interactive 386/ix): $(X11LIBDIR) -lX11 -linet
 +#  AT&T's XWIN:                    $(X11LIBDIR) -lX11_s -lc_s -lnsl_s -lpt
 +#
-+X11LIBS		= -L/usr/X11R6/lib -lX11
++X11LIBS		= -L@x11base@/lib -lX11
 +XVIEWLIBS	= $(XVIEWLIBDIR) -lxview -lolgx -lX11
 +
 +help:
@@ -428,7 +428,7 @@ $NetBSD: patch-ab,v 1.6 2000/07/08 12:47:04 tron Exp $
 +				$(MANDIR)/man$(MANSECT)/faces.$(MANSECT)
 +		install -c -m 444 face_update.1 \
 +				$(MANDIR)/man$(MANSECT)/face_update.$(MANSECT)
-+		install -c -m 444 -o bin Faces.ad /usr/X11R6/lib/X11/app-defaults/Faces
++		install -c -m 444 -o bin Faces.ad @x11prefix@/lib/X11/app-defaults/Faces
 +
 +clean:
 +		(cd compface; $(MAKE) $(MAKEOPTS) clean)
