@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/10/31 09:01:25 grant Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/10/31 09:24:27 grant Exp $
 
 DISTNAME=		mysql-4.1.7
 CATEGORIES=		databases
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=        --with-openssl
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
