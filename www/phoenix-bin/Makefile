@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/25 14:14:36 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/18 07:31:13 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -35,21 +35,22 @@ do-install:
 	@${RM} -f ${PHOENIX_LIB}/plugins/libnullplugin.so
 
 post-install:
+# this build for Solaris wants exactly 'libgtk-1.2.so.0', etc.
+.if ${OPSYS} == "SunOS"
+	@cd ${PHOENIX_LIB} && \
+	${LN} -s ${LOCALBASE}/lib/libglib.*so* .;			\
+	${LN} -s ${LOCALBASE}/lib/libgmodule.*so* .;			\
+	${LN} -s ${X11BASE}/lib/libgdk.*so* .;				\
+	${LN} -s ${X11BASE}/lib/libgtk.*so* .;				\
+	${LN} -s libgtk.so libgtk-1.2.so.0;				\
+	${LN} -s libgdk.so libgdk-1.2.so.0;				\
+	${LN} -s libglib.so libglib-1.2.so.0
+.endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/phoenix-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${PHOENIX_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
-# this build for Solaris wants exactly 'libgtk-1.2.so.0'
-.if ${OPSYS} == "SunOS"
-	@cd ${PHOENIX_LIB} && \
-	${LN} -s ${LOCALBASE}/lib/libglib.so libglib-1.2.so.0; \
-	${LN} -s ${X11BASE}/lib/libgdk.so libgdk-1.2.so.0; \
-	${LN} -s ${X11BASE}/lib/libgtk.so libgtk-1.2.so.0
-.  for _lib_ in glib gdk gtk
-	@${ECHO} lib/MozillaFirebird-${PLATFORM}/lib${_lib_}-1.2.so.0 >> ${PLIST_SRC}
-.  endfor
-.endif
 	@${FIND} ${PHOENIX_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
