@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:49 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/11 10:45:58 agc Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -13,10 +13,10 @@ USE_PERL5=		yes
 
 post-patch:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.bak
-	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' -e 's|@X11BASE@|${X11BASE}|g' \
+	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' -e 's|@X11BASE@|${X11PREFIX}|g' \
 		< ${WRKSRC}/Imakefile.bak > ${WRKSRC}/Imakefile
 
 pre-install:
-	${MKDIR} ${X11BASE}/libexec/titrax
+	${MKDIR} ${X11PREFIX}/libexec/titrax
 
 .include "../../mk/bsd.pkg.mk"
