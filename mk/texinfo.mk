@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.16 2003/07/31 13:50:13 seb Exp $
+# $NetBSD: texinfo.mk,v 1.17 2003/07/31 13:55:24 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -61,12 +61,11 @@ FILES_SUBST+=		INSTALL_INFO=${INSTALL_INFO:Q}
 FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
 .endif # INFO_FILES
 
-# When not using buildlink2 set INSTALL_INFO in environment to ${ECHO}
+# When not using buildlink2 set INSTALL_INFO in environment to ${TRUE}
 # so the package build/install step does not register itself the info
 # files as this is the job of the INSTALL script.
-# WARNING: this is far from being failsafe.
-# When not using buildlink2 patch files so that install-info is _not_
-# run are likely to be needed.
+# This is far from being 100% robust but it is "Mostly Harmless"
+# when it fails to catch some install-info invocations.
 .if !empty(USE_BUILDLINK2:M[nN][oO])
 CONFIGURE_ENV+=		INSTALL_INFO="${TRUE}"
 MAKE_ENV+=		INSTALL_INFO="${TRUE}"
