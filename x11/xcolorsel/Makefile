@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/08/23 04:26:55 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/08/23 19:22:50 jlam Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
@@ -11,6 +11,7 @@ COMMENT=	Browse and select named X colors from rgb.txt
 
 WRKSRC=		${WRKDIR}/xcolorsel
 USE_IMAKE=	yes
+XAW_TYPE?=	3d
 
 .include "../../mk/bsd.prefs.mk"
 
