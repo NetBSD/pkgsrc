@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/25 04:18:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.27 2001/03/12 18:05:24 fredb Exp $
 
 DISTNAME=	wwwoffle-2.6
 CATEGORIES=	www
@@ -18,7 +18,7 @@ COMMENT=	WWW proxy with support for offline browsing
 USE_GMAKE=	yes
 NO_CONFIGURE=	yes
 
-PLIST_SUBST+=	GTAR=${GTAR}
+PLIST_SUBST+=	GTAR="${GTAR}" MKDIR="${MKDIR}" PREFIX="${PREFIX}"
 
 BUILD_DEFS+=	USE_INET6
 
@@ -29,14 +29,23 @@ MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
 .endif
 
 post-build:
+	cd ${WRKSRC}/html/search/htdig/scripts; \
+	for f in wwwoffle-ht*; do \
+		${MV} $$f $$f.old; \
+		${SED} -e '/htsearch/s#^#${PREFIX}/libexec/cgi-bin/#' \
+		  -e 's#/usr/local#${PREFIX}#' <$$f.old >$$f; \
+		${RM} $$f.old; \
+	done
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffle.sh \
 	  >${WRKDIR}/wwwoffle.sh
+	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffled \
+	  >${WRKDIR}/wwwoffled
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/wwwoffle
 	if [ -d /var/wwwoffle ]; then \
 	  ${RM} -rf /var/wwwoffle/html.old; \
-	  ${INSTALL_DATA_DIR} /var/wwwoffle/http; \
+	  ${INSTALL_DATA_DIR} /var/wwwoffle/prevtime1; \
 	fi
 
 post-install:
@@ -47,10 +56,23 @@ post-install:
 	  ${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
 	    ${PREFIX}/etc/wwwoffle/wwwoffle.conf.default; \
 	fi
+	${INSTALL_PROGRAM} ${WRKSRC}/convert-cache ${PREFIX}/sbin/convert-cache
+	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config.pl ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d/wwwoffle
-	${CHOWN} -R -h ${BINOWN}:${BINGRP} /var/wwwoffle
+	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffled ${PREFIX}/etc/rc.d
 	# directories other than html are automatically created at run time
-	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz	\
-	  var/wwwoffle/html var/wwwoffle/outgoing
+	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz var/wwwoffle/html
+	@${ECHO}
+	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
+	@${ECHO}
+	@${ECHO} Attention pkgsrc source users:
+	@${ECHO}
+	@${ECHO} If your are upgrading from an older version of wwwoffle,
+	@${ECHO} your cache will not be converted automatically. Please do
+	@${ECHO} so by executing the command
+	@${ECHO} \"${PREFIX}/libexec/convert-cache /var/wwwoffle\".
+	@${ECHO}
+	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
+	@${ECHO}
 
 .include "../../mk/bsd.pkg.mk"
