@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1 1998/08/23 06:22:18 garbled Exp $
+*** machdep/engine-i386-netbsd-1.0.c	1997/10/13 10:50:59	1.1
+--- machdep/engine-i386-netbsd-1.0.c	1997/10/13 10:53:31
+***************
+*** 42,45 ****
+--- 42,47 ----
+  #endif
+  
++ 
++ #include "config.h"
+  #include <sys/types.h>
+  #include <sys/socket.h>
+***************
+*** 217,218 ****
+--- 219,229 ----
+  }  
+  
++ #if defined(HAVE_SYSCALL_GETDENTS)
++ /* ==========================================================================
++  * machdep_sys_getdirentries()
++  */
++ int machdep_sys_getdirentries(int fd, char * buf, int len, int * seek)
++ {
++ 	return(machdep_sys_getdents(fd, buf, len));
++ }
++ #endif
