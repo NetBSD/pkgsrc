@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/15 02:58:50 dmcmahill Exp $
+
+--- src/md.h.orig	Sat Jun 30 03:20:53 2001
++++ src/md.h	Thu Jul  5 06:40:14 2001
+@@ -46,5 +46,5 @@
+ };
+ /*--------------------------------------------------------------------------*/
+-#if defined(__unix__)
++#if defined(__unix__) || defined(UNIX)
+ /* usual but non-standard collection of includes */
+ #include <unistd.h>	  /* chdir, access, getcwd */
