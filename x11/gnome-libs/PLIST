@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/14 14:33:02 drochner Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -570,7 +570,6 @@ share/type-convert/postscript.convert
 share/type-convert/type.convert
 @dirrm share/type-convert
 @dirrm share/mime-info
-@dirrm share/idl
 @dirrm share/gtk-doc/html/libart
 @dirrm share/gtk-doc/html
 @dirrm share/gtk-doc
