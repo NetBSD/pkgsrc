@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/22 17:22:48 drochner Exp $
+
+--- build.py.orig	2003-07-05 12:52:49.000000000 +0200
++++ build.py	2003-07-22 11:44:51.000000000 +0200
+@@ -162,12 +162,13 @@
+     global pyFullVers, pyVersNr
+ 
+     pyFullVers = string.split(sys.version)[0]
++    pyFullVersn = string.replace(pyFullVers, 'p', '.');
+ 
+-    vl = string.split(re.findall("[0-9.]*",pyFullVers)[0],".")
++    vl = string.split(re.findall("[0-9.]*",pyFullVersn)[0],".")
+     major = vl[0]
+     minor = vl[1]
+ 
+-    pyVers = major + "." + minor
++    pyVers = sys.version[0:3]
+     pyVersNr = int(major) * 10 + int(minor)
+ 
+     global platMake, platCopy, platMkdir, platRmdir
+@@ -592,7 +593,7 @@
+         incdirs = incdirs + " " + escape(qtIncDir)
+ 
+     # Find the QScintilla header files.
+-    if qtVersion >= 0x030000:
++    if 0:
+         global sciIncDir
+ 
+         if not sciIncDir:
+@@ -717,7 +718,7 @@
+     print "Type 'no' to decline the terms of the license."
+     print
+ 
+-    while 1:
++    while 0:
+         try:
+             resp = raw_input("Do you accept the terms of the license? ")
+         except:
+@@ -959,7 +960,7 @@
+     tuneCompiler()
+ 
+     # Check which PyQt modules will build.
+-    if qtVersion >= 0x020000:
++    if 0:
+         inform("Checking which additional PyQt modules to build.");
+ 
+         tryModule("qtcanvas","qcanvas.h","QCanvas()")
