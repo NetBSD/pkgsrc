@@ -1,21 +1,18 @@
-$NetBSD: patch-ad,v 1.1 2002/04/03 20:38:35 rh Exp $
+$NetBSD: patch-ad,v 1.2 2003/02/18 14:39:04 jmmv Exp $
 
---- cl/src/uninstall.c.orig	Thu Mar 15 21:10:33 2001
-+++ cl/src/uninstall.c
-@@ -23,6 +23,7 @@
- #include <string.h>
- #include <unistd.h>
- #include <sys/stat.h>
-+#include <sys/param.h>
- #include <libintl.h>
- #include <locale.h>
- #include <scrollkeeper.h>
-@@ -31,7 +32,7 @@
+--- Makefile.in.orig	2003-01-23 07:11:56.000000000 +0100
++++ Makefile.in
+@@ -536,13 +536,6 @@ dist-hook: scrollkeeper.spec
  
- #define _(String) gettext (String)
+ # Build/rebuild the catalog
+ install-data-hook:
+-	rm -rf $(DESTDIR)$(scrollkeeper_localstate_dir)
+-	$(mkinstalldirs) $(DESTDIR)$(scrollkeeper_localstate_dir)
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log
+-	PATH="$(PATH):$(DESTDIR)$(bindir)" ; \
+-		echo "`date +\"%b %d %X\"` Installing ScrollKeeper `scrollkeeper-config --version`..." >> $(DESTDIR)$(localstatedir)/log/scrollkeeper.log
+-	PATH="$(PATH):$(DESTDIR)$(bindir)" ; \
+-		$(DESTDIR)$(bindir)/scrollkeeper-rebuilddb -q -p $(DESTDIR)$(scrollkeeper_localstate_dir)
  
--#define PATHLEN		256
-+#define PATHLEN		MAXPATHLEN
- 
- struct IdTab {
-     int id;
+ # Remove generated files
+ uninstall-local:

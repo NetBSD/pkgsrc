@@ -1,41 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2002/04/03 20:38:35 rh Exp $
+$NetBSD: patch-ac,v 1.4 2003/02/18 14:39:04 jmmv Exp $
 
---- cl/src/install.c.orig	Thu Mar 15 21:10:33 2001
-+++ cl/src/install.c
-@@ -24,6 +24,7 @@
- #include <locale.h>
- #include <unistd.h>
- #include <sys/stat.h>
-+#include <sys/param.h>
- #include <errno.h>
- #include <libintl.h>
- #include <dirent.h>
-@@ -34,7 +35,7 @@
- #define _(String) gettext (String)
+--- config/Makefile.in.orig	2003-01-23 07:11:59.000000000 +0100
++++ config/Makefile.in
+@@ -141,7 +141,7 @@ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
  
- #define SEP		"|"
--#define PATHLEN		256
-+#define PATHLEN		MAXPATHLEN
+-pkgconfigdir = $(sysconfdir)
++pkgconfigdir = $(datadir)/examples/scrollkeeper
  
- static int verbose = 0;
- 
-@@ -512,7 +513,7 @@
- 	{
- 	    char source_file[PATHLEN], target_file[PATHLEN];
- 	
--	    sprintf(command, "mkdir %s/%s", scrollkeeper_dir, dir_ent->d_name);
-+	    sprintf(command, "mkdir -p %s/%s", scrollkeeper_dir, dir_ent->d_name);
- 	    system(command);
- 	    sprintf(source_file, "%s/scrollkeeper_cl.xml", source_path);
- 	    sprintf(target_file, "%s/%s/scrollkeeper_cl.xml", 
-@@ -610,7 +611,9 @@
-     stat(toc_dir, &buf);
-     if (!S_ISDIR(buf.st_mode))
-     {
--        sprintf(command, "mkdir %s", toc_dir);
-+        sprintf(command, "rm -f %s", toc_dir);
-+	system(command);
-+        sprintf(command, "mkdir -p %s", toc_dir);
- 	system(command);
-     }
+ pkgconfig_DATA = scrollkeeper.conf
  
