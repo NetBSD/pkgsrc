@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2001/07/24 07:47:18 taca Exp $
+
+--- WL-ELS.orig	Tue Nov 21 01:36:15 2000
++++ WL-ELS
+@@ -78,7 +78,7 @@
+    (cons WLDIR WL-MODULES)
+    (if (module-installed-p 'bbdb)
+        (cons UTILSDIR (list 'bbdb-wl)))
+-   (if (exec-installed-p "imput")
+-       (cons UTILSDIR (list 'im-wl)))
++;; (if (exec-installed-p "imput")
++;;     (cons UTILSDIR (list 'im-wl)))
+    (if wl-install-utils
+        (cons UTILSDIR UTILS-MODULES))))
