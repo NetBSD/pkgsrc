@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2004/11/09 08:21:26 grant Exp $
+@comment $NetBSD: PLIST,v 1.27 2004/11/30 15:24:43 xtraeme Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -280,6 +280,7 @@ share/samba/swat/help/Samba-HOWTO-Collection/idmap-sid2uid.png
 share/samba/swat/help/Samba-HOWTO-Collection/idmap-store-gid2sid.png
 share/samba/swat/help/Samba-HOWTO-Collection/idmap-uid2sid.png
 share/samba/swat/help/Samba-HOWTO-Collection/idmap_winbind_no_loop.png
+share/samba/swat/help/Samba-HOWTO-Collection/idmapper.html
 share/samba/swat/help/Samba-HOWTO-Collection/index.html
 share/samba/swat/help/Samba-HOWTO-Collection/install.html
 share/samba/swat/help/Samba-HOWTO-Collection/integrate-ms-networks.html
