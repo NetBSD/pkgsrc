@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/09 04:29:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/03/23 15:46:43 mjl Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
@@ -252,13 +252,17 @@ share/gnucash/scm/testbed.scm
 share/gnucash/scm/text-export.scm
 share/gnucash/scm/utilities.scm
 share/gnucash/scm/xml-generator.scm
-share/locale/de/LC_MESSAGES/gnucash.mo
-share/locale/en_GB/LC_MESSAGES/gnucash.mo
-share/locale/es/LC_MESSAGES/gnucash.mo
-share/locale/fr/LC_MESSAGES/gnucash.mo
-share/locale/it/LC_MESSAGES/gnucash.mo
-share/locale/ru/LC_MESSAGES/gnucash.mo
-share/locale/sv/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnucash.mo
 @dirrm share/gnucash/scm/srfi
 @dirrm share/gnucash/scm/report
 @dirrm share/gnucash/scm/qif-import
