@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2001/06/12 20:33:09 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2001/06/13 06:20:28 explorer Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.5
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-sysvsem
 CONFIGURE_ARGS+=	--enable-sysvshm
 CONFIGURE_ARGS+=	--enable-wddx
+CONFIGURE_ARGS+=	--enable-sockets
 
 # The following two modules are bogus to include, but we need it to maintain
 # version/capability compatibility with older binary packages of ap-php4.
