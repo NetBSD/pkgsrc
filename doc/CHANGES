@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9660 2005/03/28 02:02:48 wiz Exp $
+$NetBSD: CHANGES,v 1.9661 2005/03/28 09:39:56 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1791,3 +1791,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Text-Shellwords to 1.07 [wiz 2005-03-27]
 	Added shapelib-1.2.10 [wiz 2005-03-27]
 	Updated dnstop to 20050203 [wiz 2005-03-27]
+	Removed cyrus-sasl [jlam 2005-03-28]
+	Removed cy-login [jlam 2005-03-28]
