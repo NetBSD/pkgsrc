@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/25 10:48:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/25 16:57:43 grant Exp $
 #
 
 DISTNAME=	Python-2.2.2
@@ -17,8 +17,6 @@ GNU_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
-PLIST_SRC=	${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} \
-		${PKGDIR}/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-pth

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/12/23 16:25:30 cjep Exp $
+# $NetBSD: Makefile,v 1.40 2002/12/25 16:59:58 grant Exp $
 
 DISTNAME=	screen-3.9.13
 CATEGORIES=	misc
@@ -20,10 +20,6 @@ CONFIGURE_ARGS+=	--enable-telnet
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
-.endif
-
 post-patch:
 	@for file in etc/etcscreenrc doc/screen.1; do 			\
 	${MV} ${WRKSRC}/$$file ${WRKSRC}/$$file.orig;			\
@@ -35,7 +31,7 @@ post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
 		${PREFIX}/share/examples/screen/screenrc
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 	cd ${WRKSRC}/terminfo &&					\
 	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo			\
 		/usr/5bin/tic screeninfo.src

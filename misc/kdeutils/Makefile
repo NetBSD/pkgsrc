@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/09/01 04:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.47 2002/12/25 16:59:03 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -29,7 +29,6 @@ CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	DO_NOT_COMPILE=kab
-PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
