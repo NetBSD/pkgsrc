@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.196 2001/09/29 23:15:45 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.197 2001/09/30 22:10:33 abs Exp $
 ###########################################################################
 
 			==========================
@@ -1491,6 +1491,10 @@ perform the equivalent of:
    to be used by people who may wish to upgrade many packages on a single
    host, and can be invoked from the top-level pkgsrc Makefile by using the
    target "show-host-specific-pkgs"
+
+ * show-installed-depends:
+   This target shows which installed packages match the current package's
+   DEPENDS. Useful if out of date DEPENDS are causing build problems.
 
  * check-shlibs:
    After a package is installed, check all it's binaries and (on ELF 
