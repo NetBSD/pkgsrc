@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- drivers/tk.c.orig	Sat Oct 21 14:27:37 2000
++++ drivers/tk.c
+@@ -1881,7 +1881,7 @@
+ 
+ /* Create the main window without mapping it */
+ 
+-    *w = Tk_CreateMainWindow(interp, display, basename, classname);
++    *w = TkCreateMainWindow(interp, display, basename, classname);
+ 
+     if (*w == NULL) {
+ 	fprintf(stderr, "%s\n", (interp)->result);

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- bindings/tcl/tclMain.c.orig	Sat Oct 21 14:23:43 2000
++++ bindings/tcl/tclMain.c
+@@ -244,7 +244,7 @@
+ 	if (fgets(buffer, 1000, stdin) == NULL) {
+ 	    if (ferror(stdin)) {
+ 		if (errno == EINTR) {
+-		    if (tcl_AsyncReady) {
++		    if (Tcl_AsyncReady) {
+ 			(void) Tcl_AsyncInvoke((Tcl_Interp *) NULL, 0);
+ 		    }
+ 		    clearerr(stdin);
