@@ -1,14 +1,11 @@
-# $NetBSD: Makefile.common,v 1.16 2004/05/23 01:44:10 grant Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/05/23 01:44:58 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
 CATEGORIES=		www
 
-.if ${MOZILLA} == "MozillaFirebird"
-MOZILLA_SHORT=		firebird
-MOZ_DIR=		${MOZ_VER}
-.elif ${MOZILLA} == "mozilla"
+.if ${MOZILLA} == "mozilla"
 MOZILLA_SHORT=		${MOZILLA}
 MOZ_DIR=		mozilla${MOZ_VER}
 .else
