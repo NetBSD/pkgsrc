@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2001/03/15 13:33:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.184 2001/03/15 18:06:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -123,6 +123,7 @@ SUBDIR+=	p5-Devel-SmallProf
 SUBDIR+=	p5-Devel-Symdump
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
+SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-IO-stringy
