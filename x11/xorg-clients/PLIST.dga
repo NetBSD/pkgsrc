@@ -1,0 +1,2 @@
+${X11ROOT_PREFIX}/bin/dga
+${X11ROOT_PREFIX}/${MAN_DIR}/dga.${MAN_SUFFIX}
