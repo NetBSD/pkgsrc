@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/22 10:48:01 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/23 07:48:03 minskim Exp $
 #
 
 DISTNAME=	bash-3.0
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -25,14 +26,6 @@ INFO_FILES=		bash.info
 
 PKG_SHELL=		${PREFIX}/bin/bash
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(OPSYS:MNetBSD) && empty(OS_VERSION:M1.[56]*)
-CONFIGURE_ARGS+=	--enable-multibyte
-.else
-CONFIGURE_ARGS+=	--disable-multibyte
-.endif
-
 # All features enabled by default.
 CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--enable-progcomp
@@ -48,6 +41,8 @@ CONFIGURE_ARGS+=	--enable-cond-regexp
 CONFIGURE_ARGS+=	--enable-alias
 CONFIGURE_ARGS+=	--enable-brace-expansion
 CONFIGURE_ARGS+=	--enable-array-variables
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	static
