@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/09/13 18:31:32 kim Exp $
+# $NetBSD: Makefile,v 1.69 2003/09/16 19:16:44 jmmv Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -58,6 +58,7 @@ CCLIENT_MFILES=	src/imapd/Makefile					\
 		src/mtest/Makefile					\
 		src/osdep/unix/Makefile
 
+MESSAGE_SUBST+=	SSLCERTS="${SSLCERTS}"
 PLIST_SUBST+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
 PLIST_SUBST+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
 
