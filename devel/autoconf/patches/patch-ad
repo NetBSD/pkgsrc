@@ -1,0 +1,11 @@
+--- configure.BAK	Wed Sep  8 17:36:21 1999
++++ configure	Wed Sep  8 17:36:27 1999
+@@ -583,7 +583,7 @@
+ done
+ test -n "$M4" || M4="m4"
+ 
+-for ac_prog in mawk gawk nawk awk
++for ac_prog in gawk nawk awk mawk
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
