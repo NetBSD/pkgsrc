@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/20 15:17:08 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1998/09/02 22:32:23 tron Exp $
 #
 
 DISTNAME=	pyth151
@@ -6,6 +6,7 @@ PKGNAME=	python-1.5.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	python
 
 PATCH_SITES=	http://www.python.org/1.5/patches-1.5.1/
 PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
