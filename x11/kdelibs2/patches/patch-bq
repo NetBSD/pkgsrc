@@ -1,0 +1,65 @@
+$NetBSD: patch-bq,v 1.1 2001/11/13 21:09:07 jlam Exp $
+
+--- kio/file/file.cc.orig	Tue Sep  4 19:08:16 2001
++++ kio/file/file.cc
+@@ -42,6 +42,8 @@
+ #ifdef HAVE_VOLMGT
+ #include <volmgt.h>
+ #include <sys/mnttab.h>
++#else
++#include <kstddirs.h>
+ #endif
+ 
+ #include <kio/ioslave_defaults.h>
+@@ -1071,24 +1073,31 @@
+     QCString point = QFile::encodeName( shellQuote(_point) );
+     QCString fstype = _fstype;
+     QCString readonly = _ro ? "-r" : "";
++    QString path = getenv("PATH");
++    path.append(":/usr/sbin:/sbin");
++    QString mountProg = KGlobal::dirs()->findExe("mount", path);
++
++    if (mountProg.isEmpty()) {
++        mountProg = "mount";
++    }
+ 
+     // Two steps, in case mount doesn't like it when we pass all options
+     for ( int step = 0 ; step <= 1 ; step++ )
+     {
+         // Mount using device only if no fstype nor mountpoint (KDE-1.x like)
+         if ( !_dev.isEmpty() && _point.isEmpty() && fstype.isEmpty() )
+-            buffer.sprintf( "mount %s 2>%s", dev.data(), tmp );
++            buffer.sprintf( "%s %s 2>%s", mountProg.latin1(), dev.data(), tmp );
+         else
+           // Mount using the mountpoint, if no fstype nor device (impossible in first step)
+           if ( !_point.isEmpty() && _dev.isEmpty() && fstype.isEmpty() )
+-            buffer.sprintf( "mount %s 2>%s", point.data(), tmp );
++            buffer.sprintf( "%s %s 2>%s", mountProg.latin1(), point.data(), tmp );
+           else
+             // mount giving device + mountpoint but no fstype
+             if ( !_point.isEmpty() && !_dev.isEmpty() && fstype.isEmpty() )
+-              buffer.sprintf( "mount %s %s %s 2>%s", readonly.data(), dev.data(), point.data(), tmp );
++              buffer.sprintf( "%s %s %s %s 2>%s", mountProg.latin1(), readonly.data(), dev.data(), point.data(), tmp );
+             else
+               // mount giving device + mountpoint + fstype
+-              buffer.sprintf( "mount %s -t %s %s %s 2>%s", readonly.data(),
++              buffer.sprintf( "%s %s -t %s %s %s 2>%s", mountProg.latin1(), readonly.data(),
+                               fstype.data(), dev.data(), point.data(), tmp );
+ 
+         kdDebug(7101) << buffer << endl;
+@@ -1232,7 +1241,14 @@
+ 		return;
+ 	}
+ #else
+-    buffer.sprintf( "umount %s 2>%s", QFile::encodeName(_point).data(), tmp );
++    QString path = getenv("PATH");
++    path.append(":/usr/sbin:/sbin");
++    QString umountProg = KGlobal::dirs()->findExe("umount", path);
++
++    if (umountProg.isEmpty()) {
++        umountProg = "umount";
++    }
++    buffer.sprintf( "%s %s 2>%s", umountProg.latin1(), QFile::encodeName(_point).data(), tmp );
+     system( buffer.ascii() );
+ #endif /* HAVE_VOLMGT */
+ 
