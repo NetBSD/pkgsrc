@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2004/04/24 21:00:07 danw Exp $
+$NetBSD: patch-ag,v 1.8 2004/11/28 13:00:17 recht Exp $
 
---- modules/Makefile.in.orig	Mon Mar 22 13:47:17 2004
-+++ modules/Makefile.in
-@@ -270,7 +270,7 @@ modules_LTLIBRARIES = \
+--- modules/Makefile.in.orig	Thu Oct 28 16:16:58 2004
++++ modules/Makefile.in	Sat Nov 27 20:52:14 2004
+@@ -291,7 +291,7 @@
  
  # Not currently supported
  #	libnfs.la
