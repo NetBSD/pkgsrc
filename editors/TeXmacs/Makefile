@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/27 09:53:43 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/27 10:27:01 rh Exp $
 
 DISTNAME=	TeXmacs-1.0.0.2-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -9,9 +9,9 @@ MAINTAINER=	jmmv@hispabsd.org
 HOMEPAGE=	http://www.texmacs.org
 COMMENT=	GNU TeXmacs (free scientific text editor)
 
-DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 DEPENDS+=	teTeX>=1.0:../../print/teTeX
 DEPENDS+=	guile>=1.4:../../lang/guile
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 ALL_TARGET=	TEXMACS
 
