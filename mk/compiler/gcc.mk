@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.4 2004/02/01 07:54:33 jlam Exp $
+# $NetBSD: gcc.mk,v 1.5 2004/02/01 12:16:10 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -111,7 +111,7 @@ _GCC_VERSION!=	${CC} -dumpversion
 .    else
 _GCC_VERSION=	0
 .    endif
-_GCC_TEST_DEPENDS=	gcc>=${GCC_REQD}
+_GCC_TEST_DEPENDS=	gcc>=${_GCC_REQD}
 _GCC_PKG=		gcc-${_GCC_VERSION}
 _USE_PKGSRC_GCC!=	\
 	if ${PKG_ADMIN} pmatch '${_GCC_TEST_DEPENDS}' ${_GCC_PKG}; then	\
