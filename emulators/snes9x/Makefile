@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/09 16:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/09 17:25:54 wiz Exp $
 
 DISTNAME=		s9xs129
 PKGNAME=		snes9x-1.29
@@ -11,9 +11,6 @@ MAINTAINER=		jmcneill@invisible.yi.org
 HOMEPAGE=		http://www.snes9x.com/
 
 BUILD_DEPENDS+=		nasm:../../devel/nasm
-
-# for now, only builds on i386/ELF
-ONLY_FOR_PLATFORM=	NetBSD-1.4[A-Z]*-i386 NetBSD-1.[5-9]*-i386
 
 USE_X11=		yes
 USE_GMAKE=		yes
@@ -33,9 +30,16 @@ do-install:
 
 .include "../../mk/bsd.pkg.mk"
 
+.if ( ${MACHINE_ARCH} == "i386" )
 .if ( ${OBJECT_FMT} == "a.out" )
 MAKE_ENV+=	FILEFORMAT=aoutb
-MAKE_FLAGS+=	_ASM_UNDERBARS=1
+MAKE_ENV+=	_ASM_UNDERBARS=1
 .else
 MAKE_ENV+=	FILEFORMAT=elf
+# use assembler part only for ELF, since it doesn't link on a.out
+MAKE_ENV+=	ZSNESFX=1
+MAKE_ENV+=	ASMCPU=1
+.endif
+# XXX: this check should be redone -- DGA doesn't only exist on i386
+MAKE_ENV+=	NETBSD_USE_DGA=1
 .endif
