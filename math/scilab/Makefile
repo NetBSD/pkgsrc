@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2003/09/17 19:40:48 grant Exp $
+# $NetBSD: Makefile,v 1.43.2.1 2003/12/30 23:18:21 agc Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
@@ -71,9 +71,12 @@ post-extract:
 .endfor
 
 # delete some .orig files that got created by patching
+# also fix the libtool link
 post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.in.orig
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
+	${LN} -s ${LIBTOOL} ${PREFIX}/lib/${SCIBASE}/libtool
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 USE_PKGSRC_GCC=		# defined
