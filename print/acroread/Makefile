@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/01/05 17:59:17 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/17 17:51:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
+COMMENT=	View, distribute and print PDF documents
 
 IS_INTERACTIVE=	YES
 RESTRICTED=	"Original installer required to redistribute."

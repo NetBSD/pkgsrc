@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/14 13:27:32 itojun Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:49:46 wiz Exp $
 #
 
 DISTNAME=		isakmpd-20010214
@@ -7,6 +7,7 @@ CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 MAINTAINER=		itojun@kame.net
+COMMENT=		OpenBSD IKE daemon
 
 DEPENDS+=		gmp-*:../../devel/gmp
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/01/17 10:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/17 17:49:57 wiz Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.openssl.org/source/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
+COMMENT=		Secure Socket Layer and cryptographic library
 
 CONFLICTS=		SSLeay-* ssleay-*
 

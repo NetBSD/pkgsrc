@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/10/20 14:45:58 rh Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:49:41 wiz Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.win.tue.nl/pub/security/  \
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.users.dircon.co.uk/~crypto/
+COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/21 13:35:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:50:06 wiz Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.theorygroup.com/Software/RID/
+COMMENT=	Remote Intrusion Detection to track down compromised hosts
 
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/12/17 09:28:23 rh Exp $
+# $NetBSD: Makefile,v 1.36 2001/02/17 17:51:43 wiz Exp $
 #
 
 DISTNAME=		gnome-print-0.25
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-print/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
+COMMENT=		Prototype implementation of the Gnome Printing Architecture
 
 DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.5:../../textproc/libxml

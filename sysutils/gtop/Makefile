@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2001/02/13 11:47:05 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 17:42:14 wiz Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
 
 MAINTAINER=		tron@netbsd.org
+COMMENT=		GNOME system monitor - top like, memory graphs, processes detailed view
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake

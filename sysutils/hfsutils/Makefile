@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/17 04:38:15 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:14 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
 MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
+COMMENT=	Command Line Interface HFS (not HFS+) disk access tools
 
 DEPENDS=	libhfs-3.2.6:../../devel/libhfs
 
