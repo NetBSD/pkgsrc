@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/04/28 08:59:36 wennmach Exp $
+$NetBSD: patch-aa,v 1.5 2000/05/02 18:48:42 danw Exp $
 --- configure.orig	Sun Jan 30 03:26:06 2000
 +++ configure	Wed Apr 26 20:36:07 2000
 @@ -5180,7 +5180,7 @@
@@ -24,31 +24,3 @@ $NetBSD: patch-aa,v 1.4 2000/04/28 08:59:36 wennmach Exp $
    echo "configure: warning: $warn_termlibs" 1>&2
  fi
  
-@@ -6182,7 +6180,6 @@
- # ./install, which can be erroneously created by make from ./install.sh.
- echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
- echo "configure:6185: checking for a BSD compatible install" >&5
--if test -z "$INSTALL"; then
- if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-@@ -6221,7 +6218,6 @@
-     # removed, or if the path is relative.
-     INSTALL="$ac_install_sh"
-   fi
--fi
- echo "$ac_t""$INSTALL" 1>&6
- 
- # Use test -z because SunOS4 sh mishandles braces in ${var-val}.
-@@ -7209,10 +7205,7 @@
-       *) # Relative path.
-         ac_sub_cache_file="$ac_dots$cache_file" ;;
-       esac
--  case "$ac_given_INSTALL" in
--        [/$]*) INSTALL="$ac_given_INSTALL" ;;
--        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
--        esac
-+    ac_given_INSTALL="${INSTALL}"  
- 
-       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
-       # The eval makes quoting arguments work.

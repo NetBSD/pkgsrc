@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/20 11:58:46 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/05/02 18:48:39 danw Exp $
 
 --- configure.orig	Sun Oct 17 01:16:57 1999
 +++ configure	Sun Dec 19 18:46:02 1999
@@ -36,16 +36,3 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/20 11:58:46 rh Exp $
     LIBTOOL_IS_WINNING="#t"
     echo "$ac_t""yes" 1>&6
  else
-@@ -2854,10 +2856,12 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
-+if false; then
-   case "$ac_given_INSTALL" in
-   [/$]*) INSTALL="$ac_given_INSTALL" ;;
-   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-   esac
-+fi
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"
