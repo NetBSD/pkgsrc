@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.6 2000/03/02 22:17:00 wiz Exp $
+$NetBSD: patch-ag,v 1.7 2000/03/03 23:56:42 tron Exp $
 
---- ./vfs/extfs/uzip.in.orig	Tue Dec  7 00:49:56 1999
-+++ ./vfs/extfs/uzip.in	Thu Mar  2 22:25:30 2000
+--- vfs/extfs/uzip.in.orig	Tue Dec  7 00:49:56 1999
++++ vfs/extfs/uzip.in	Thu Mar  2 22:25:30 2000
 @@ -7,7 +7,7 @@
  #
  #
