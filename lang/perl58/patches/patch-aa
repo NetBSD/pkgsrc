@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2004/01/05 11:25:14 salo Exp $
+
+--- lib/ExtUtils/MM_Unix.pm.orig	2003-09-21 12:06:24.000000000 +0200
++++ lib/ExtUtils/MM_Unix.pm	2003-11-22 21:53:24.000000000 +0100
+@@ -1127,9 +1127,9 @@
+ 	# or -R to add paths to the run-time library search path.
+ 	if ($Config{'useshrplib'}) {
+ 	    if ($Config{'lddlflags'} =~ /-Wl,-R/) {
+-		$libs .= ' -L$(PERL_INC) -Wl,-R$(INSTALLARCHLIB)/CORE -lperl';
++		$libs .= ' -L$(PERL_INC) -Wl,-R$(INSTALLARCHLIB)/CORE -Wl,-R$(PERL_ARCHLIB)/CORE -lperl';
+ 	    } elsif ($Config{'lddlflags'} =~ /-R/) {
+-		$libs .= ' -L$(PERL_INC) -R$(INSTALLARCHLIB)/CORE -lperl';
++		$libs .= ' -L$(PERL_INC) -R$(INSTALLARCHLIB)/CORE -R$(PERL_ARCHLIB)/CORE -lperl';
+ 	    }
+ 	}
+     }
