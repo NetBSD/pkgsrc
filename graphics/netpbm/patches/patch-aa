@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
+$NetBSD: patch-aa,v 1.26 2003/09/07 17:22:16 jschauma Exp $
 
---- Makefile.config.in.orig	Wed Oct 16 03:17:21 2002
-+++ Makefile.config.in	Wed Jun 11 15:29:48 2003
+--- Makefile.config.in.orig	Tue Oct 15 10:17:21 2002
++++ Makefile.config.in	Sun Sep  7 12:39:12 2003
 @@ -33,7 +33,7 @@
  #CC = gcc
  # Note that 'cc' is usually an alias for whatever is the main compiler
@@ -29,7 +29,18 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # If you don't want to strip the binaries, just leave it null:
  #STRIPFLAG = 
  
-@@ -131,7 +131,7 @@
+@@ -83,7 +83,9 @@
+ AR = ar
+ RANLIB = ranlib
+ # IRIX, SCO don't have Ranlib:
+-#RANLIB = true
++ifeq ($(OPSYS),IRIX)
++RANLIB = ar rs
++endif
+ LEX = flex
+ # Solaris:
+ # LEX = flex -e
+@@ -131,7 +133,7 @@
  # Solaris, SunOS, NetBSD:
  #NEED_RUNTIME_PATH = Y
  
@@ -38,7 +49,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # Eunice users may want to use -noshare so that the executables can
  # run standalone:
  #LDFLAGS = -noshare
-@@ -171,6 +171,14 @@
+@@ -171,6 +173,14 @@
  #AIX:
  #LDSHLIB = ???
  
@@ -53,7 +64,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # On older systems, you have to make shared libraries out of position
  # independent code, so you need -fpic or fPIC here.  (The rule is: if
  # -fpic works, use it.  If it bombs, go to fPIC).  On newer systems,
-@@ -188,11 +196,15 @@
+@@ -188,11 +198,19 @@
  CFLAGS_SHLIB = 
  # Solaris or SunOS with gcc, and NetBSD:
  #CFLAGS_SHLIB = -fpic
@@ -67,10 +78,14 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
 +CFLAGS_SHLIB = -fno-common
 +endif
 +
++ifeq ($(OPSYS),IRIX)
++CFLAGS_SHLIB = -KPIC
++endif
++
  # SHLIB_CLIB is the link option to include the C library in a shared library,
  # normally "-lc".  On typical systems, this serves no purpose.  On some,
  # though, it causes information about which C library to use to be recorded
-@@ -244,8 +256,8 @@
+@@ -244,8 +262,8 @@
  #TIFFLIB = libtiff.so
  #TIFFHDR_DIR = /usr/include/libtiff
  #NetBSD:
@@ -81,7 +96,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # OSF, Tru64:
  #TIFFLIB = /usr/local1/DEC/lib/libtiff.so
  #TIFFHDR_DIR = /usr/local1/DEC/include
-@@ -273,8 +285,8 @@
+@@ -273,8 +291,8 @@
  #JPEGLIB = libjpeg.so
  #JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
@@ -92,7 +107,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # OSF, Tru64:
  #JPEGLIB = /usr/local1/DEC/libjpeg.so
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -297,8 +309,8 @@
+@@ -297,8 +315,8 @@
  #PNGLIB = libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/include/libpng$(PNGVER)
  # NetBSD:
@@ -103,7 +118,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -308,8 +320,8 @@
+@@ -308,8 +326,8 @@
  # NONE for the PNG library, it doesn't matter what you specify here --
  # it won't get used.
  
@@ -114,7 +129,7 @@ $NetBSD: patch-aa,v 1.25 2003/06/11 07:10:47 wiz Exp $
  #ZLIB = libz.so
  
  # The JBIG lossless image compression library (aka JBIG-KIT):
-@@ -337,7 +349,7 @@
+@@ -337,7 +355,7 @@
  # network functions is the option in ppmtompeg to run it on multiple
  # computers simultaneously.
  
