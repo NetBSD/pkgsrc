@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2004/03/08 20:29:43 minskim Exp $
+$NetBSD: patch-ad,v 1.5 2004/10/01 13:35:53 adam Exp $
 
---- configure.in.orig	2003-11-21 14:17:23.000000000 -0600
+--- configure.in.orig	2004-07-29 21:57:48.000000000 +0000
 +++ configure.in
 @@ -249,6 +249,10 @@ if test "x${x_libraries}" != "x"; then
  fi
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.4 2004/03/08 20:29:43 minskim Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -376,11 +380,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
+@@ -361,11 +365,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
  if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
      if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
  	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
