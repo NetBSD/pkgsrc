@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/07/18 02:19:26 rh Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/23 03:05:16 dmcmahill Exp $
 #
 
-DISTNAME=		atk-1.0.2
+DISTNAME=		atk-1.0.3
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
