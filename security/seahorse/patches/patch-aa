@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1 2003/02/15 11:04:25 jmmv Exp $
+
+--- data/Makefile.in.orig	2003-02-15 11:33:21.000000000 +0100
++++ data/Makefile.in
+@@ -118,7 +118,7 @@ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_in_files = seahorse.schemas.in
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+ 
+@@ -300,13 +300,6 @@ uninstall-am: uninstall-desktopDATA unin
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+ install-data-local:
+-	@GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) gconftool-2 \
+-		--makefile-install-rule $(schemas_DATA) || \
+-		(echo ;\
+-		echo "*****************************************************"; \
+-		echo "Installation of schemas failed, install them manually"; \
+-		echo "*****************************************************";)
+-	@true
+ 
+ @INTLTOOL_DESKTOP_RULE@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
