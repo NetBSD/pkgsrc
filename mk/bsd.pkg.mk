@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.968 2002/04/25 00:02:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.969 2002/04/25 21:58:55 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1127,6 +1127,8 @@ all: build
 DEPENDS_TARGET=	package
 .  elif make(update)
 DEPENDS_TARGET=	update
+.  elif make(bin-install)
+DEPENDS_TARGET=	bin-install
 .  else
 DEPENDS_TARGET=	reinstall
 .  endif
@@ -3119,7 +3121,8 @@ bin-install:
 		if ! ${PKG_INFO} -qe ${PKGNAME} ; then 			\
 			${SHCOMMENT} Cycle through some FTP server here ;\
 			${ECHO_MSG} "Installing from source" ;		\
-			${MAKE} ${MAKEFLAGS} package &&			\
+			${MAKE} ${MAKEFLAGS} package 			\
+				DEPENDS_TARGET=${DEPENDS_TARGET} &&	\
 			${MAKE} ${MAKEFLAGS} clean ;			\
 		fi ; \
 	fi
