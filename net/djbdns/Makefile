@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2001/10/22 19:11:12 zuntum Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/13 23:12:15 zuntum Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
 CATEGORIES=	net
 MASTER_SITES=	http://cr.yp.to/djbdns/					\
 		ftp://cr.yp.to/djbdns/					\
-		ftp://ftp.innominate.org/gpa/djb/			\
+		ftp://ftp.innominate.org/pub/pape/djb/			\
 		http://www.hungry.com/~fn/				\
 		http://tinydns.org/
 DISTFILES=	${DISTNAME}.tar.gz					\
-		${DISTNAME}-man.tar.gz					\
+		${DISTNAME}-man-20010212.tar.gz				\
 		dnscache-log.pl.txt					\
 		tinydns-log.pl.txt
 
