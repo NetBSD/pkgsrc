@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
+
+SHA1 (twin-src-3.1.14.tar.gz) = b1652f07adcc2c98948a4458480b2d8436cc893f
+Size (twin-src-3.1.14.tar.gz) = 2216218 bytes
+SHA1 (patch-aa) = da04ff7d0e7b2644b6bed81817189dcd9192dae1
+SHA1 (patch-ab) = f54fb80ba0c45e11e446aa652596768304b1f580
+SHA1 (patch-ac) = ead087b78674b30c076f132d71c3d372c77f0e1f
+SHA1 (patch-ad) = baf4144bf251e5eef3613fc7b2a4cc9168fa7292
+SHA1 (patch-ae) = 284da616e3e55716b2eb1faa0e86c16c3643d230
+SHA1 (patch-af) = 818f91cce6010145756221b90bd3461557c53d9a
+SHA1 (patch-ag) = 2f6f51e9f837920c7d0db11686071a6de2d66887

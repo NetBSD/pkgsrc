@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
+
+--- configure.in.orig	Sun Jan 14 00:23:50 2001
++++ configure.in	Sun May 13 09:37:19 2001
+@@ -147,6 +147,10 @@
+ 	TARGET=freebsd
+ 	;;
+ 
++   i*86-*-netbsd* )
++	TARGET=netbsd
++	;;
++
+    i*86-*-linux* )
+ 	TARGET=linux
+ 	;;
+@@ -349,6 +353,11 @@
+    powerpc-*-linux* )
+ 	# egcs still broken on ppc
+ 	TWIN_CFLAGS=-g
++	;;
++
++   i*86-*-netbsd* )
++	LIBTWIN_LDFLAGS="$LDFLAGS $LIBTWIN_LDFLAGS"
++	DLL_LDFLAGS="$LDFLAGS $DLL_LDFLAGS"
+ 	;;
+ esac
+ 
