@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/07/25 00:21:16 grant Exp $
-# FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
+# $NetBSD: Makefile,v 1.23 2004/08/17 11:10:27 adrianp Exp $
 #
 
-DISTNAME=	tcptrace-6.4.2
+DISTNAME=	tcptrace-6.6.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcptrace.org/download/
 
