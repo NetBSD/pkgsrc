@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3821 2003/11/12 14:42:57 salo Exp $
+$NetBSD: CHANGES,v 1.3822 2003/11/12 14:50:10 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4506,9 +4506,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-openssl to 0.1.4.1nb1 [jschauma 2003-11-12]
 	Updated racoon to 20030826anb1 [jschauma 2003-11-12]
 	Updated pyca to 0.6.6.20031021nb1 [jschauma 2003-11-12]
-	Updated py22pth-m2crypto to 0.11nb1 [jschauma 2003-11-12]
-	Updated py22-amkCrypto to 1.9a6nb1 [jschauma 2003-11-12]
-	Updated php-openssl to 4.3.3nb1 [jschauma 2003-11-12]
+	Updated py-m2crypto to 0.11nb1 [jschauma 2003-11-12]
+	Updated py-amkCrypto to 1.9a6nb1 [jschauma 2003-11-12]
+	Updated php4-openssl to 4.3.3nb1 [jschauma 2003-11-12]
 	Updated p5-Crypt-SSLeay to 0.51nb1 [jschauma 2003-11-12]
 	Updated p5-Net-SSLeay to 1.25nb1 [jschauma 2003-11-12]
 	Updated openssh to 3.7.1.2nb2 [jschauma 2003-11-12]
