@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/03/08 19:40:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/04/11 16:08:00 xtraeme Exp $
 #
 
 DISTNAME=	easytag-0.30
@@ -17,12 +17,12 @@ BUILD_USES_MSGFMT=	yes	# xgettext, really
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-.include "../../audio/flac/buildlink2.mk"
-.include "../../audio/id3lib/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/id3lib/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
