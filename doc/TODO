@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1264 2004/01/01 19:07:30 salo Exp $
+$NetBSD: TODO,v 1.1265 2004/01/01 20:07:00 salo Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,6 @@ Suggested package updates
 	o xerces-c-2.4.0 [heinz?]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
-	o xfstt-1.6
 	o xine-lib-1rc3a
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
