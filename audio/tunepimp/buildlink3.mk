@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:10 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/07 16:36:47 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TUNEPIMP_BUILDLINK3_MK:=	${TUNEPIMP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	tunepimp
 
 .if !empty(TUNEPIMP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.tunepimp+=	tunepimp>=0.3.0
-BUILDLINK_RECOMMENDED.tunepimp+=	tunepimp>=0.3.0nb1
+BUILDLINK_RECOMMENDED.tunepimp+=	tunepimp>=0.3.0nb2
 BUILDLINK_PKGSRCDIR.tunepimp?=	../../audio/tunepimp
 .endif	# TUNEPIMP_BUILDLINK3_MK
 
