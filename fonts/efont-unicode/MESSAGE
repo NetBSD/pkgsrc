@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:29:57 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2002/10/15 12:17:05 kei Exp $
 
 You can tell one existing X session on the installed host to use the
 new "efont-unicode" fonts with:
@@ -27,6 +27,6 @@ For example:
 		  ${PREFIX}/lib/X11/fonts/Type1/,
 		  ${PREFIX}/lib/X11/fonts/100dpi/,
 		  ${PREFIX}/lib/X11/fonts/75dpi/,
-		  ${PREFIX}/lib/X11/fonts/efont-unicode/
+		  ${PREFIX}/lib/X11/fonts/efont/
 
 ===========================================================================
