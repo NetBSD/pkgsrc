@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/12/03 16:53:20 ben Exp $
+
+In order to enable mod_chroot in your Apache installation, you need to add
+the following to your httpd.conf file:
+
+	LoadModule chroot_module lib/httpd/mod_chroot.so
+
+Please also refer to the documentation in:
+
+	${PREFIX}/share/doc/mod_chroot/
+
+===========================================================================
