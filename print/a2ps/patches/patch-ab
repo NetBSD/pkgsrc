@@ -1,0 +1,14 @@
+--- ogonkify/doc/ogonkify.texi.orig	Sat May  9 03:23:39 1998
++++ ogonkify/doc/ogonkify.texi	Sat May  9 03:24:47 1998
+@@ -16,6 +16,11 @@
+ @author Juliusz Chroboczek
+ @end titlepage
+ 
++@dircategory Internet support
++@direntry
++* Ogonkify: (ogonkify).              Font creation and PostScript output.
++@end direntry
++
+ 
+ @node Top, License, (dir), (dir)
+ 
