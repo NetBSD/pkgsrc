@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:44:32 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/03 22:14:46 kristerw Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
 CATEGORIES=	editors
 MASTER_SITES=	http://cooledit.sourceforge.net/
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://cooledit.sourceforge.net/
 COMMENT=	Full-featured text editor
 
