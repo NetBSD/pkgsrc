@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/05/07 15:25:13 cjep Exp $
+# $NetBSD: Makefile,v 1.48 2004/05/09 08:25:00 mrauch Exp $
 
 DISTNAME=		openoffice-1.1.1
 CATEGORIES=		misc
@@ -69,6 +69,10 @@ post-extract:
 
 do-build:
 	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC}/.. && ./bootstrap && source *.Set && dmake"
+
+post-build:
+	@${ECHO_MSG} "Please ignore the warning above that the project gtk"
+	@${ECHO_MSG} "could not be found. Your build completed successfully."
 
 pre-install:
 	${CP} ${WRKSRC}/../instsetoo/unxbsdi2.pro/01/normal/setup.ins 	\
