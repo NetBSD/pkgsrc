@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.67 2002/12/16 09:29:57 tron Exp $
+$NetBSD: TODO,v 1.68 2002/12/16 09:58:49 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,7 @@ Suggested package updates
 	o gphoto-2.1.1
 	o grub-0.93
 	o gtkmm-2.1.0
-	o guile-1.6.0
+	o guile-1.6.1
 	o htmldoc-1.8.23
 	o hpijs-1.3 [pkg/19213]
 	o icewm-1.2.2
@@ -224,6 +224,7 @@ Suggested package updates
 	o star-1.4.2
 	o stunnel-4.03 [pkg/19310]
 	o suck-4.3.1
+	o swig-1.3.17
 	o tcl/tk-8.4.1 [bjoern]
 	o ted-2.12
 	o tightvnc-1.2.7
