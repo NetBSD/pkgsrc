@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2000/02/01 02:30:35 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2002/01/02 10:01:36 hubertf Exp $
 
---- WinQuake/snd_linux.c	Tue Dec 21 18:40:36 1999
-+++ ../work/WinQuake/snd_linux.c	Thu Jan 20 21:52:45 2000
+--- winquake/snd_linux.c	Tue Dec 21 18:40:36 1999
++++ ../work/winquake/snd_linux.c	Thu Jan 20 21:52:45 2000
 @@ -25,15 +6,33 @@
  #include <sys/mman.h>
  #include <sys/shm.h>

@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.4 2000/10/05 05:53:36 jlam Exp $
+$NetBSD: patch-ai,v 1.5 2002/01/02 10:01:36 hubertf Exp $
 
---- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
-+++ WinQuake/Makefile.linuxi386
+--- winquake/makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
++++ winquake/makefile.linuxi386
 @@ -25,29 +25,31 @@
  endif
  NOARCH=noarch
  
 -MOUNT_DIR=/grog/Projects/WinQuake
-+MOUNT_DIR=${WRKSRC}/WinQuake
++MOUNT_DIR=${WRKSRC}/winquake
  MASTER_DIR=/grog/Projects/QuakeMaster
 -MESA_DIR=/usr/local/src/Mesa-2.6
 +#MESA_DIR=/usr/local/src/Mesa-2.6
@@ -66,16 +66,16 @@ $NetBSD: patch-ai,v 1.4 2000/10/05 05:53:36 jlam Exp $
 -	$(BUILDDIR)/bin/glquake \
 -	$(BUILDDIR)/bin/glquake.glx \
 -	$(BUILDDIR)/bin/glquake.3dfxgl \
--	$(BUILDDIR)/bin/quake.x11
 +#TARGETS=$(BUILDDIR)/bin/squake \
 +#	$(BUILDDIR)/bin/glquake \
 +#	$(BUILDDIR)/bin/glquake.glx \
 +#	$(BUILDDIR)/bin/glquake.3dfxgl \
 +#	$(BUILDDIR)/bin/quake.x11
- 	# $(BUILDDIR)/bin/unixded
++# $(BUILDDIR)/bin/unixded
 +
 +TARGETS=$(BUILDDIR)/bin/glquake.glx \
-+	$(BUILDDIR)/bin/quake.x11
+ 	$(BUILDDIR)/bin/quake.x11
+-	# $(BUILDDIR)/bin/unixded
 +
 +#TARGETS=$(BUILDDIR)/bin/quake.x11
  
