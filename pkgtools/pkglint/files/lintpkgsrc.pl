@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.64 2001/12/27 19:13:14 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.65 2002/01/03 11:04:50 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -24,6 +24,7 @@ my(	$pkglist,		# list of Pkg packages
 	%vuln,			# vulnerability data
 	@matched_prebuiltpackages,# List of obsolete prebuilt package paths
 	@prebuilt_pkgdirs,	# Use to follow symlinks in prebuilt pkgdirs
+	%prebuilt_pkgdir_cache,	# To avoid symlink loops in prebuilt_pkgdirs
 	);
 
 $ENV{PATH} .= ':/usr/sbin';
@@ -118,6 +119,7 @@ if ($opt{D} && @ARGV)
 	if ($opt{p} || $opt{O} || $opt{R})
 	    { scan_pkgsrc_makefiles($pkgsrcdir); }
 	@prebuilt_pkgdirs = ($default_vars->{PACKAGES});
+	%prebuilt_pkgdir_cache = ();
 	while (@prebuilt_pkgdirs)
 	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
 	if ($opt{r})
@@ -293,8 +295,20 @@ sub check_prebuilt_packages
 	    }
 
 	}
-    elsif (-l $_ && -d $_)
-	{ push(@prebuilt_pkgdirs, readlink($_)); }
+    elsif (-d $_)
+	{
+	if ($prebuilt_pkgdir_cache{"$File::Find::dir/$_"})
+	    { $File::Find::prune = 1; return; }
+	$prebuilt_pkgdir_cache{"$File::Find::dir/$_"} = 1;
+	if (-l $_)
+	    {
+	    my($dest) = readlink($_);
+	    if (substr($dest, 0, 1) ne '/')
+		{ $dest = "$File::Find::dir/$dest"; }
+	    if (!$prebuilt_pkgdir_cache{$dest})
+		{ push(@prebuilt_pkgdirs, $dest); }
+	    }
+	}
     }
 
 # Dewey decimal verson number matching - or thereabouts
