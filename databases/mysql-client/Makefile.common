@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2003/10/05 17:55:13 martti Exp $
+# $NetBSD: Makefile.common,v 1.20 2003/11/03 12:21:40 gavan Exp $
 
 DISTNAME=		mysql-3.23.58
 CATEGORIES=		databases
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 
 EXTRACT_USING_PAX=	# defined
+USE_GCC_SHLIB=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,7 +60,7 @@ CXXFLAGS+=		-DHAVE_CURSES_H
 
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
 
 post-extract:
