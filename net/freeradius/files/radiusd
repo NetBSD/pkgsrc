@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# PROVIDE: radiusd
+# REQUIRE: network
+
+name="radiusd"
+command="/usr/pkg/sbin/radiusd"
+pidfile="/ust/pkg/var/run/radiusd/radiusd.pid"
+
+if [ ! -d /etc/rc.d ]
+then
+	echo -n ' ${name}'
+	exec ${command} ${smbd_flags} ${command_args}
+fi
+
+. /etc/rc.subr
+
+load_rc_config $name
+run_rc_command "$1"
