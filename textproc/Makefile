@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2003/03/15 08:53:51 rh Exp $
+# $NetBSD: Makefile,v 1.195 2003/04/10 13:22:36 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -192,7 +192,6 @@ SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-xml
 SUBDIR+=	texi2html
 SUBDIR+=	texi2roff
-SUBDIR+=	textutils
 SUBDIR+=	troffcvt
 SUBDIR+=	unroff
 SUBDIR+=	untex
