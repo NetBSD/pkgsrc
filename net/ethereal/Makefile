@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2002/04/04 18:44:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.58 2002/04/05 07:53:13 tron Exp $
 
 DISTNAME=		ethereal-0.9.3
 CATEGORIES=		net
@@ -9,8 +9,6 @@ MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		ucd-snmp>=4.1.2:../../net/ucd-snmp
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
 USE_X11=		YES
