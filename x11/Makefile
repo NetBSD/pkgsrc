@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2004/03/12 13:11:33 cjep Exp $
+# $NetBSD: Makefile,v 1.344 2004/04/02 11:53:56 jmmv Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -50,7 +50,7 @@ SUBDIR+=	gnome-panel
 SUBDIR+=	gnome-python
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-themes
-SUBDIR+=	gnome-themes-extra
+SUBDIR+=	gnome-themes-extras
 SUBDIR+=	gnome-users-guide
 SUBDIR+=	gnome1-panel
 SUBDIR+=	gnome1-session
