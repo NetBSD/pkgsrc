@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/16 20:59:32 tron Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -10,12 +10,14 @@ include/libxml2/libxml/catalog.h
 include/libxml2/libxml/debugXML.h
 include/libxml2/libxml/encoding.h
 include/libxml2/libxml/entities.h
+include/libxml2/libxml/globals.h
 include/libxml2/libxml/hash.h
 include/libxml2/libxml/list.h
 include/libxml2/libxml/nanoftp.h
 include/libxml2/libxml/nanohttp.h
 include/libxml2/libxml/parser.h
 include/libxml2/libxml/parserInternals.h
+include/libxml2/libxml/threads.h
 include/libxml2/libxml/tree.h
 include/libxml2/libxml/uri.h
 include/libxml2/libxml/valid.h
@@ -33,7 +35,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.6
-lib/libxml2.so.6.6
+lib/libxml2.so.6.10
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
