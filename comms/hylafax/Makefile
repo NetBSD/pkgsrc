@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2001/04/23 15:06:10 abs Exp $
+# $NetBSD: Makefile,v 1.18 2001/07/07 22:17:40 bad Exp $
 #
 
 DISTNAME=	hylafax-4.1beta3
 PKGNAME=	hylafax-4.1b3
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
-		ftp://ftp.sisis.de/pub/hylafax/source/ \
-		ftp://ftp.uni-bremen.de/pub/mirrors/ftp.hylafax.org/pub/hylafax/source/
+		ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
 
 PATCH_SITES=   http://www.hylafax.org/patches/
 PATCHFILES=    hfaxd-vulnerability.patch
