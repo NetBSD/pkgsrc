@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/03/15 08:05:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2002/06/12 01:14:49 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
-DISTNAME=	eb-3.2.1
+DISTNAME=	eb-3.2.2
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/

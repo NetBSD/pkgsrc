@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/03/22 03:57:54 uebayasi Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/06/12 01:14:49 uebayasi Exp $
 #
 # This Makefile fragment is included by packages that use EB.
 #
@@ -17,14 +17,28 @@ EB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-# 3.2.0 had an 'appendix' bug, so bump the base version.
-BUILDLINK_DEPENDS.eb?=	eb>=3.2.1
+# <=3.2.1 packages didn't fix eb.conf.
+BUILDLINK_DEPENDS.eb?=	eb>=3.2.2
 DEPENDS+=	${BUILDLINK_DEPENDS.eb}:../../textproc/eb
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.eb=eb
-#BUILDLINK_PREFIX.png_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.eb=	include/eb/*.h
 BUILDLINK_FILES.eb+=	lib/libeb.*
+BUILDLINK_FILES.eb+=	etc/eb.conf
+
+# Fixing etc/eb.conf.
+#	- Paths to headers/libraries are defined in eb.conf.  Fix them.
+#	- Most packages use --with-eb-conf=... configure option to find
+#	  eb.conf file.  Make sure if this is valid.
+_CONFIGURE_PREREQ+=	eb-conf-buildlink-subst
+BUILDLINK_SUBST_MESSAGE.eb-conf=	\
+	"Fixing eb.conf file."
+BUILDLINK_SUBST_FILES.eb-conf=	\
+	${BUILDLINK_DIR}/etc/eb.conf
+BUILDLINK_SUBST_SED.eb-conf=	\
+	-e "s|-\([IL]\)${LOCALBASE}/|-\1${BUILDLINK_DIR}/|g"
+eb-conf-buildlink-subst: _BUILDLINK_SUBST_USE
+CONFIGURE_ARGS+=--with-eb-conf=${BUILDLINK_DIR}/etc/eb.conf
 
 BUILDLINK_TARGETS.eb=	eb-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.eb}
