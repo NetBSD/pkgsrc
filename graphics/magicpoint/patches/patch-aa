@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 1998/11/11 06:28:40 garbled Exp $
 *** draw.c.orig	Mon Aug 24 20:37:32 1998
 --- draw.c	Mon Aug 24 20:37:35 1998
 ***************
