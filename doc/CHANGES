@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4265 2003/12/27 23:06:14 wiz Exp $
+$NetBSD: CHANGES,v 1.4266 2003/12/27 23:14:42 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5390,3 +5390,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated isync to 0.9.2 [seb 2003-12-27]
 	Updated spamassassin to 2.61 [heinz 2003-12-27]
 	Added snownews-1.4.2 [wiz 2003-12-27]
+	Added blib-1.0.2 [salo 2003-12-27]
+	Added blinkentools-2.2 [salo 2003-12-27]
+	Added blinkenthemes-0.8 [salo 2003-12-27]
+	Added blinkensim-2.2 [salo 2003-12-27]
+	Added blccc-1.99 [salo 2003-12-27]
