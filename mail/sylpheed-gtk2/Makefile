@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:12:55 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/21 21:27:29 xtraeme Exp $
 #
 
-DISTNAME=	sylpheed-0.9.12-gtk2-20040622
-PKGNAME=	sylpheed-gtk2-0.9.12.0.1
-PKGREVISION=	1
+DISTNAME=	sylpheed-0.9.12-gtk2-20040918
+PKGNAME=	sylpheed-gtk2-0.9.12.20040918
 CATEGORIES=	mail x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-gtk2/}
 
@@ -30,16 +29,8 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
 
 PKG_SYSCONFSUBDIR=	sylpheed
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=		USE_INET6 USE_OPENLDAP USE_JPILOT
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .if empty(FACES_IS_INSTALLED)
@@ -48,19 +39,30 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .  include "../../mail/faces/buildlink3.mk"
 .endif
 
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-CONFIGURE_ARGS+=	--enable-ldap
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-
-.if defined(USE_JPILOT) && ${USE_JPILOT} == YES
-CONFIGURE_ARGS+=	--enable-jpilot
-.include "../../comms/pilot-link-libs/buildlink3.mk"
-.include "../../comms/jpilot/buildlink3.mk"
-.endif
-
 EGDIR=		${PREFIX}/share/examples/sylpheed
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sylpheed-gtk2
+PKG_SUPPORTED_OPTIONS=	jpilot openldap inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mjpilot)
+CONFIGURE_ARGS+=	--enable-jpilot
+.  include "../../comms/pilot-link-libs/buildlink3.mk"
+.  include "../../comms/jpilot/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenldap)
+CONFIGURE_ARGS+=	--enable-ldap
+.  include "../../databases/openldap/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
