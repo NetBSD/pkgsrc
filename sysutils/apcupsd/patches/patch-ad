@@ -1,14 +1,101 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+$NetBSD: patch-ad,v 1.2 2000/08/05 07:31:18 jlam Exp $
 
---- apcreports.c	Wed Apr  7 18:06:41 1999
-+++ apcreports.c	Sun Jul 18 19:48:17 1999
-@@ -58,7 +58,9 @@
- 
- #include <stdio.h>
- #include <unistd.h>
-+#ifndef __NetBSD__
- #include <getopt.h>
-+#endif /* __NetBSD__ */
- #include <stdlib.h>
- #include <stdarg.h>
- #include <fcntl.h>
+--- installs/powersc.in.orig	Thu Jul 29 03:46:32 1999
++++ installs/powersc.in	Sat Aug  5 02:52:40 2000
+@@ -26,66 +26,68 @@
+ case "$1" in
+ 	POWEROUT)
+ 		printf "Warning!  There are power problems." | $WALL
++		/usr/bin/logger -p user.info -t powersc "Warning there are Power problems."
+ 		;;
+ 	ONBATTERY)
+ 		printf "Power Failure! Running on UPS." | $WALL
++		/usr/bin/logger -p user.info -t powersc "Power Failure! Running on UPS."
+ 		;;
+ 	FAILING)
+-		printf "Battery Power Failed -- Normal Shutdown.\n" | $WALL
++		printf "Battery power failed -- Normal shutdown.\n" | $WALL
++		/usr/bin/logger -p user.info -t powersc "Battery power failed -- Normal shutdown."
+ 		;;
+ 	TIMEOUT)
+ 		printf "On-line battery timeout -- Normal Shutdown.\n" | $WALL
++		/usr/bin/logger -p user.info -t powersc "On-line battery timeout -- Normal Shutdown."
+ 		;;
+ 	LOADLIMIT)
+ 		printf "Battery load limits reached -- Normal Shutdown.\n" | $WALL
++		/usr/bin/logger -p user.info -t powersc "Battery load limits reached -- Normal Shutdown."
+ 		;;
+ 	RUNLIMIT)
+ 		printf "Battery run time limits reached -- Normal Shutdown.\n" | $WALL
++		/usr/bin/logger -p user.info -t powersc "Battery run time limits reached -- Normal Shutdown."
+ 		;;
+ 	DOSHUTDOWN)
+-		printf "Beginning Shutdown Sequence!" | $WALL
+-		ps x | gawk '{ if (($5 == "init") && ($1 == "1")) print $6 }' \
+-			| cut -f2 -d[ | cut -f1 -d] \
+-			> /tmp/run.level.power
+ 		if [ -f $POWERPID ]
+ 		then
+ 			exit 0
+ 		else
+ 			echo $$ > $POWERPID
+-			$SHUTDOWN -h now
++			$SHUTDOWN -h now "$0: beginning normal UPS initiated shutdown..."
+ 		fi
+ 		;;
+ 	MAINSBACK | WAITASEC)
+ 		printf "Power has returned." | $WALL
++		/usr/bin/logger -p user.info -t powersc "Power has returned."
+ 		if [ -f $POWERPID ]; then
+ 			printf "Attempting to cancel shutdown." | $WALL
++			/usr/bin/logger -p user.info -t powersc "Attempting to cancel shutdown."
+ 			kill $(cat $POWERPID)
+ 			rm -f $POWERPID
+-			init $(cat /tmp/run.level.power)
+ 		fi
+ 		;;
+ 	ANNOYME)
+-		printf "Power Problems!  Please Log Off Now!" | $WALL
++		printf "Power Problems!  Please logout now!" | $WALL
++		/usr/bin/logger -p user.info -t powersc "Power Problems!  Please logout now!"
+ 		;;
+ 	EMERGENCY)
+-		printf "Possible battery failure -- Emergency Shutdown!" | $WALL
+-		$SHUTDOWN -h now
++		$SHUTDOWN -h now "$0: Emergency shutdown, UPS Batteries have failed"
+ 		;;
+ 	CHANGEME)
+-		printf "Emergency -- Batteries Have Failed!\nChange Them NOW!" | $WALL
++		printf "Emergency -- Batteries have failed!\nChange them as soon as possible!" | $WALL
++		/usr/bin/logger -p user.info -t powersc "Emergency -- Batteries have failed!  Change them as soon as possible!"
+ 		;;
+ 	REMOTE)
+-		printf "Remote Calls -- Normal Shutdown.\nBeginning Shutdown Sequence!" | $WALL
+-		$SHUTDOWN -h now
++		$SHUTDOWN -h now "Remote UPS calls -- Normal shutdown.  Beginning shutdown sequence!"
+ 		;;
+ 	KILL)	sleep 1
+ 		$APCUPSD killpower
+ 		sleep 10
+ 		;;
+ 	INIT)	rm -f $POWERPID
+-		rm -f /etc/powerfail
+-		rm -f /etc/powerstatus
+-		rm -f /etc/nologin
++		rm -f /var/run/powerfail
++		rm -f /var/run/apcupsd.status
+                 [ "$2" = "" ] && echo -n "Starting APCUPSD Power Management: "
+ 		$APCUPSD
+ 		[ "$2" = "" ] && echo "apcupsd"
+@@ -103,9 +105,8 @@
+ 		kill $(cat $APCPID)
+ 		rm -f $APCPID
+ 		rm -f $POWERPID
+-		rm -f /etc/powerfail
+-		rm -f /etc/powerstatus
+-		rm -f /etc/nologin
++		rm -f /var/run/powerfail
++		rm -f /var/run/apcupsd.status
+ 		sleep 10
+ 		$APCUPSD
+ 		[ "$2" = "" ] && echo "apcupsd"

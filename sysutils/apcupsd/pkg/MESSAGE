@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2000/08/05 07:31:24 jlam Exp $
+
+NOTE:  With most APC cables you must put a "local" flag in /etc/ttys for
+       the port you connect your UPS to, and run "ttyflags -a" to turn it
+       on the first time.
+===========================================================================

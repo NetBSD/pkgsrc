@@ -1,28 +1,54 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+$NetBSD: patch-af,v 1.2 2000/08/05 07:31:19 jlam Exp $
 
---- apcupsd.c.orig	Wed Apr  7 18:06:41 1999
-+++ apcupsd.c	Fri Jan  7 18:55:53 2000
-@@ -100,7 +100,9 @@
+--- Makefile.in.orig	Thu Jul 29 03:46:32 1999
++++ Makefile.in	Sat Aug  5 02:59:43 2000
+@@ -13,7 +13,7 @@
  
- #include <stdio.h>
- #include <unistd.h>
-+#ifndef __NetBSD__
- #include <getopt.h>
-+#endif /* __NetBSD__ */
- #include <stdlib.h>
- #include <stdarg.h>
- #include <fcntl.h>
-@@ -290,13 +292,6 @@
-  * it should close them.
-  *********************************************************************/
- void terminate (int sig) {
--	/*
--	 * XXX - Is someone able to explain me why here we find a sleep for 10
--	 * seconds ?
--	 *
--	 * -RF
--	 */
--	sleep(10);
- #ifdef NEW_THREADS
- 	restore_signals();
- #endif /* NEW_THREADS */
+ # Ultrix 2.2 make doesn't expand the value of VPATH.
+ srcdir = @srcdir@
+-libdir = @libdir@/apcupsd
++#libdir = @libdir@/apcupsd
+ VPATH = @srcdir@
+ 
+ CC = @CC@
+@@ -67,6 +67,8 @@
+ 
+ # Program to install `make'.
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++# Program to install scripts
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ # Program to install the man page.
+ INSTALL_DATA = @INSTALL_DATA@
+ # Generic install program.
+@@ -134,11 +136,10 @@
+ dummy:
+ 
+ .c.o:
+-	$(CC) $(defines) -c $(CPFLAGS) -I$(srcdir) -I$(srcdir)/include -I$(srcdir)/lib @INTLINCLUDE@ $(CEFLAGS) $(CFLAGS) $<
++	$(CC) $(defines) -c $(CPFLAGS) -I$(srcdir) -I$(srcdir)/include -I$(srcdir)/lib @INTLINCLUDE@ $(CEFLAGS) $(CFLAGS) -o $@ $<
+ 
+ # For some losing Unix makes.
+ SHELL = /bin/sh
+-MAKE = make
+ 
+ tagsrcs = $(srcs)
+ TAGS: $(tagsrcs)
+@@ -159,15 +160,15 @@
+ 
+ install-apcupsd:
+ 	@echo "Creating installation directories..." 
+-	$(SHELL) ${srcdir}/mkinstalldirs $(sbindir) $(mandir) $(libdir)
++	$(SHELL) ${srcdir}/mkinstalldirs $(sbindir) $(mandir)
+ 	@echo "Installing apcupsd binary..."
+ 	$(INSTALL_PROGRAM) ./apcupsd $(sbindir)/apcupsd
+ 	@echo "Installing apcaccess binary..."
+ 	$(INSTALL_PROGRAM) ./apcaccess $(sbindir)/apcaccess
+ 	@echo "Installing powersc script..."
+-	$(INSTALL_PROGRAM) installs/powersc $(sbindir)/powersc
++	$(INSTALL_SCRIPT) installs/powersc $(sbindir)/powersc
+ 	@echo "Installing manual page..."
+-	$(INSTALL_DATA) $(srcdir)/doc/apcupsd.man $(mandir)/apcupsd.$(manext)
++	$(INSTALL_DATA) $(srcdir)/doc/apcupsd.$(manext) $(mandir)/apcupsd.$(manext)
+ 	@echo "Installing language catalogs..."
+ 	@POMAKE@ install
+ 

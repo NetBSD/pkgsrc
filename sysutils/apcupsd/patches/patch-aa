@@ -1,52 +1,102 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/05 07:31:17 jlam Exp $
 
---- Makefile.orig	Wed Apr  7 18:06:41 1999
-+++ Makefile	Tue Jul 20 18:36:50 1999
-@@ -85,7 +85,7 @@
- 
- SHELL     = /bin/sh
- ECHO      = echo
--MAKE      = make
-+MAKE      ?= make
- CHOWN     = chown
- CHMOD     = chmod
- CP        = cp
-@@ -120,6 +120,7 @@
- #*                                                                          *
- #****************************************************************************
- 
-+all: netbsd
- default :
- 	@$(ECHO)
- 	@$(ECHO) "Usage: make <system-type>"
-@@ -201,7 +202,7 @@
- 	@$(ECHO) >> .ver
- 	@$(ECHO) \#ifndef __$(OS)__ >> .ver
- 	@$(ECHO) \#define __$(OS)__ >> .ver
--	@$(ECHO) \#endif /*\ __$(OS)__ *\/ >> .ver
-+	@$(ECHO) \#endif /*\ __$(OS)__\ \*\/ >> .ver
- 	@$(ECHO) >> .ver
- 	@if [ -d /usr/include/ncurses ]; then \
- 		if [ -f /usr/include/ncurses/curses.h ]; then \
-@@ -227,7 +228,7 @@
- 			$(ECHO) \#undef __CURSES__ >> .ver; \
- 	fi
- 	@$(ECHO) >> .ver
--	@$(ECHO) \#endif /*\_APC_VERSION_H *\/ >> .ver
-+	@$(ECHO) \#endif /*\_APC_VERSION_H\ \*\/ >> .ver
- 	@$(MV) -f .ver $@
- 
- ifdef MUSIC
-@@ -301,6 +302,12 @@
- 	@$(MAKE) depend $(APCUPSD) \
- 		OS="freebsd" \
- 		CC="cc"
-+
-+netbsd :
-+	@$(MAKE) depend $(APCUPSD) \
-+		OS="netbsd" \
-+		CC="cc"
-+
- 
- # Generic: Generic BSD-ish system running gcc
- 
+--- doc/apcupsd.man.orig	Thu Jul 29 03:46:32 1999
++++ doc/apcupsd.man	Sat Aug  5 02:52:40 2000
+@@ -8,13 +8,13 @@
+ .SH NAME
+ apcupsd \- daemon for Most APCC's UPS support under Linux
+ .SH SYNOPSIS
+-.B /sbin/apcupsd 
++.B @@PREFIX@@/sbin/apcupsd 
+ .br
+-.B /sbin/powersc
++.B @@PREFIX@@/sbin/powersc
+ .br
+ .B /etc/apcupsd.conf
+ .br
+-.B /sbin/apcaccess
++.B @@PREFIX@@/bin/apcaccess
+ .SH DESCRIPTION
+ .LP
+ This daemon can be used for controlling the APC SmartUPS. During a power
+@@ -23,7 +23,7 @@
+ about this fact. If power is not restored, a system shutdown will follow
+ when the battery is exausted, a timeout (seconds) expires, or runtime
+ minutes based on internal values based on power consumption rates. The
+-whole shutdown is now made by script calls to the "/sbin/powersc"
++whole shutdown is now made by script calls to the "@@PREFIX@@/sbin/powersc"
+ file called by "apcupsd", so no changes in the inittab are necessary.
+ There is now no communication between "apcupsd" and init(1) process.
+ .LP
+@@ -46,7 +46,7 @@
+ .SH CONFIGURATION
+ It is necessary to write configuration info to the file "/etc/apcupsd.conf".  
+ This file is a plain ASCII file and you can use your favorite editor for
+-configuration. For simple configuration, see enclosed sample file.
++configuration. For simple configuration, see sample file in @@PREFIX@@/etc
+ .LP 
+ Configuration commands in 
+ .B /etc/apcupsd.conf
+@@ -54,7 +54,7 @@
+ .LP
+ .B  CONTROL
+ -- <path|filename>
+-.B /sbin/powersc
++.B @@PREFIX@@/sbin/powersc
+ .br
+ Name of control script called by "apcupsd".
+ .LP
+@@ -121,7 +121,7 @@
+ -- <name of serial port>
+ .br
+ Please specify which device is used for UPS communication.
+-The default is /dev/ttyS[0|1|2|3].
++The default is /dev/tty0[0|1|2|3].
+ .LP
+ .B  LOCKFILE
+ -- <path to lockfile>
+@@ -163,7 +163,7 @@
+ -- <time in seconds>
+ .br
+ Please specify time in seconds for "apcupsd" to update the psuedo
+-proc fs file "/etc/apcupsd.status". This rate is reset if there is
++proc fs file "/var/run/apcupsd.status". This rate is reset if there is
+ a power state change.
+ .LP
+ This will be replaced with "apcaccess 'status'" calls. This will prevent
+@@ -173,7 +173,7 @@
+ -- <time in seconds>
+ .br
+ Please specify time in seconds for "apcupsd" to update the log file
+-"/var/log/apcupsd.log". This rate is reset if there is a power state change.
++"/var/log/apcupsd". This rate is reset if there is a power state change.
+ .br
+ Future additions will allow one to select the location of the logfile.
+ .LP
+@@ -487,14 +487,14 @@
+ .B /etc/apcupsd.conf
+ - configuration file.
+ .br
+-.B /etc/apcupsd.status
++.B /var/run/apcupsd.status
+ - psuedo procfs-type file.
+ .br
+-.B /var/log/apcupsd.log
++.B /var/log/apcupsd
+ - the UPS status is logged.
+ .SH FILE FORMAT
+ .br
+-Both "apcupsd.log" and "apcupsd.status" are simple ascii files with
++Both "apcupsd" and "apcupsd.status" are simple ascii files with
+ several floating point numbers on one line. The format varies based
+ on the type of UPS that you are using.
+ .LP
+@@ -570,7 +570,7 @@
+ .br
+ BATTSTAT : BatteryStatus
+ .LP
+-.B /var/log/apcupsd.log
++.B /var/log/apcupsd
+ .br
+ .B SmartUPS and MatrixUPS Smart Signals
+ .br

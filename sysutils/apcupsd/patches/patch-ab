@@ -1,14 +1,39 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/05 07:31:18 jlam Exp $
 
---- apcaction.c	Wed Apr  7 18:06:41 1999
-+++ apcaction.c	Sun Jul 18 19:48:13 1999
-@@ -59,7 +59,9 @@
- 
- #include <stdio.h>
- #include <unistd.h>
-+#ifndef __NetBSD__
- #include <getopt.h>
-+#endif /* __NetBSD__ */
- #include <stdlib.h>
- #include <stdarg.h>
- #include <fcntl.h>
+--- examples/apcupsd.conf.orig	Wed May 26 12:22:25 1999
++++ examples/apcupsd.conf	Sat Aug  5 02:52:40 2000
+@@ -3,7 +3,7 @@
+ # "apcupsd" POSIX config file
+ #
+ # CONTROL <string>
+-CONTROL /sbin/powersc
++CONTROL @@PREFIX@@/sbin/powersc
+ #
+ # UPSCABLE [ simple | smart |
+ #            940-00(20B,23A,24B,24C,24G,95A,95C) |
+@@ -26,10 +26,10 @@
+ UPSMODE disable
+ #
+ #DEVICE <string> /dev/<serial port>
+-DEVICE /dev/ttyS0
++DEVICE /dev/tty01
+ #
+ #LOCKFILE <path to lockfile>
+-LOCKFILE /var/lock
++LOCKFILE /var/spool/lock
+ #
+ #ACCESS <string> [ true | false ] Enable Access Support
+ ACCESS true
+@@ -44,10 +44,10 @@
+ NOLOGON timeout
+ #
+ # PROCFS <int> <120> <0> disables <update rate procfs-type of current status>
+-PROCFS 0
++PROCFS 60
+ #
+ # LOGGING <int> <500> <0> disables <rate update log file of current status>
+-LOGGING 0
++LOGGING 60
+ #
+ # TIMEOUT <time is seconds to run on UPS, powerfails>
+ TIMEOUT 900

@@ -1,20 +1,35 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2000/08/05 07:31:18 jlam Exp $
 
---- apchttp.c	Wed Apr  7 18:06:41 1999
-+++ apchttp.c	Sun Jul 18 19:50:58 1999
-@@ -70,7 +70,6 @@
+--- include/apc_defines.h.orig	Thu Jul 29 04:47:46 1999
++++ include/apc_defines.h	Sat Aug  5 02:52:40 2000
+@@ -68,6 +68,12 @@
+ #define PWRFAIL			"/var/run/powerfail"
+ #endif /* __freebsd__ */
  
- #include <ctype.h>
- #include <errno.h>
--#include <netinet/in.h>
- #include <signal.h>
- #include <stdio.h>
- #include <stdlib.h>
-@@ -80,6 +79,7 @@
- #include <sys/types.h>
- #include <time.h>
- #include <unistd.h>
-+#include <netinet/in.h>
++#ifdef __NetBSD__
++# define APCCONF		"/etc/apcupsd.conf"
++# define UPS_STAT		"/var/run/apcupsd.status"
++# define PWRFAIL		"/var/run/powerfail"
++#endif /* __NetBSD__ */
++
+ #ifndef APCCONF
+ #define APCCONF			"/etc/apcupsd.conf"
+ #endif
+@@ -82,7 +88,7 @@
  
- /* apc includes */
- #include <apc_version.h>
+ #define NOLOGIN			"/etc/nologin"
+ #define APCPID			"/var/run/apcupsd.pid"
+-#define LOG_FILE		"/var/log/apcupsd.log"
++#define LOG_FILE		"/var/log/apcupsd"
+ 
+ #if USE_TMP_DIRECTORY
+ #define APC_RE_NET		"/tmp/apcupsd.re-net"
+@@ -91,7 +97,7 @@
+ #endif /* USE_TMP_DIRECTORY */
+ 
+ #define APC_LOCK_PREFIX		"/LCK.."
+-#define LOCK_DEFAULT		"/var/lock"
++#define LOCK_DEFAULT		"/var/spool/lock"
+ 
+ #define APC_MAGIC		"apcupsd-linux-4.0"
+ 
