@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/11/19 11:24:28 martti Exp $
-#
+# $NetBSD: Makefile,v 1.35 2002/11/28 08:57:41 tron Exp $
 
 DISTNAME=	mrtg-2.9.26b
 PKGNAME=	mrtg-2.9.26.2
@@ -20,6 +19,7 @@ COMMENT=	The Multi-Router Traffic Grapher
 
 DEPENDS=	gd>=1.8.4nb1:../../graphics/gd
 
+USE_BUILDLINK2=	YES
 USE_PERL5=	YES
 PERL5_REQD=	5.6.0
 USE_X11=	YES
@@ -80,4 +80,5 @@ do-install:
 	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$FILE ${PREFIX}/bin/mrtg$$FILE; \
 	done
 
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
