@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/20 17:22:16 agc Exp $
+
+Generalise to use ${PREFIX}
+
+--- Makefile	2001/12/20 17:05:40	1.1
++++ Makefile	2001/12/20 17:05:56
+@@ -1,6 +1,6 @@
+ # RBD Makefile - installation only
+ 
+-INSTALL_DIR = /usr/local/bin
++INSTALL_DIR = ${PREFIX}/bin
+ 
+ PERL_SCRIPTS = \
+ 	column compute dataent etbl headchg jointbl lst2tbl \

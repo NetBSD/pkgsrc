@@ -1,0 +1,4 @@
+RDB is a fast, portable Relational Database Management System without
+arbitrary limits (other than memory and processor speed). It uses the
+"operator/stream" DBMS paradigm. The operators are Unix filters (i.e.
+they read STDIN and write STDOUT), so they can be connected by pipes.
