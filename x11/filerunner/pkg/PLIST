@@ -1,3 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 1998/03/08 21:19:30 tron Exp $
+bin/fr
 lib/FileRunner/FAQ
 lib/FileRunner/HISTORY
 lib/FileRunner/QuickStart.txt
@@ -29,6 +31,5 @@ lib/FileRunner/bitmaps/toggle.bit
 lib/FileRunner/bitmaps/up.bit
 lib/FileRunner/bitmaps/update.bit
 lib/FileRunner/bitmaps/xterm.bit
-bin/fr
 @dirrm lib/FileRunner/bitmaps
 @dirrm lib/FileRunner
