@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/06/02 01:18:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.59 2003/06/08 20:14:28 grant Exp $
 
 DISTNAME=       imap-2002b
 PKGNAME=        imap-uw-2002.2
@@ -29,8 +29,8 @@ ALL_TARGET=	lrh
 ALL_TARGET=	osx
 .else
 ALL_TARGET=	neb
-. if defined(USE_KERBEROS) && (${USE_KERBEROS} != "no")
-PKG_USE_KERBEROS=	#defined
+. if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
+PKG_USE_KERBEROS=	# defined
 ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
 # NetBSD-1.5 didn't have "des_new_random_key" in libcrypto
@@ -76,7 +76,7 @@ ALL_TARGET+=	SSLTYPE="unix"
 
 # reduce optimization level on alpha to avoid compiler bugs
 .if ${OPSYS} == "NetBSD"
-.  if (${MACHINE_ARCH} == "alpha")
+.  if ${MACHINE_ARCH} == "alpha"
 CPPFLAGS:=      ${CPPFLAGS:C/-O[0-9]*/-O/g}
 CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+= CPPFLAGS="${CPPFLAGS}"
