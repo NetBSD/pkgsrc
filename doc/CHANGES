@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5911 2004/05/12 18:53:24 bouyer Exp $
+$NetBSD: CHANGES,v 1.5912 2004/05/12 19:27:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2493,3 +2493,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted amanda-dev-client [bouyer 2004-05-12]
 	Deleted amanda-dev-server [bouyer 2004-05-12]
 	Deleted amanda-dev-plot [bouyer 2004-05-12]
+	Updated cvs2svn to 0.947 [seb 2004-05-12]
