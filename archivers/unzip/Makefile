@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/02/21 12:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2002/02/27 04:45:57 yyamano Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -19,7 +19,7 @@ USE_BUILDLINK_ONLY=	# defined
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz -s"
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC}"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
