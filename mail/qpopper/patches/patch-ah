@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 1999/07/08 17:11:57 itojun Exp $
+$NetBSD: patch-ah,v 1.3 1999/07/09 15:58:34 itojun Exp $
 
---- /dev/null	Wed May 13 18:16:48 1998
-+++ sockunion.h	Wed May 13 17:57:27 1998
-@@ -0,0 +1,12 @@
+--- sockunion.h.orig	Fri Jul  9 08:18:22 1999
++++ sockunion.h	Fri Jul  9 08:20:21 1999
+@@ -0,0 +1,14 @@
 +union sockunion {
 +	struct sockinet {
 +		u_char si_len;
@@ -10,7 +10,9 @@ $NetBSD: patch-ba,v 1.1 1999/07/08 17:11:57 itojun Exp $
 +		u_short si_port;
 +	} su_si;
 +	struct sockaddr_in  su_sin;
++#ifdef INET6
 +	struct sockaddr_in6 su_sin6;
++#endif
 +};
 +#define su_len	su_si.si_len
 +#define su_family	su_si.si_family
