@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6109 2004/06/03 16:21:14 minskim Exp $
+$NetBSD: CHANGES,v 1.6110 2004/06/03 19:13:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated joe to 3.1 [adam 2004-06-03]
 	Updated exctags to 5.5.4 [uebayasi 2004-06-03]
 	Updated libstroke to 0.5.1 [minskim 2004-06-03]
+	Updated gaim to 0.78nb1 [minskim 2004-06-03]
