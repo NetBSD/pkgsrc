@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.998 2002/06/30 15:01:47 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.999 2002/07/02 11:26:06 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -62,6 +62,8 @@ PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
+
+INTERACTIVE_STAGE?=	none
 
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
@@ -1036,13 +1038,6 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 ################################################################
 # Many ways to disable a package.
 #
-# If we're in BATCH mode and the package is interactive, or we're
-# in interactive mode and the package is non-interactive, skip
-# all the important targets. The reason we have two modes is that
-# one might want to leave a build in BATCH mode running overnight,
-# then come back in the morning and do _only_ the interactive ones
-# that required your intervention.
-#
 # Ignore packages that can't be resold if building for a CDROM.
 #
 # Don't build a package if it's restricted and we don't want to
@@ -1057,12 +1052,6 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 ################################################################
 
 .if !defined(NO_IGNORE)
-.  if (defined(IS_INTERACTIVE) && defined(BATCH))
-IGNORE+= "${PKGNAME} is an interactive package"
-.  endif
-.  if (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
-IGNORE+= "${PKGNAME} is not an interactive package"
-.  endif
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
 IGNORE+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
@@ -1342,14 +1331,31 @@ do-fetch:
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
-.    for fetchfile in ${_ALLFILES}
-.      if defined(_FETCH_MESSAGE)
+.    if (${INTERACTIVE_STAGE:Mfetch} == "fetch")
+.      for fetchfile in ${_ALLFILES}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	file="${fetchfile}";						\
+	if [ ! -f ${DISTDIR}/$$file ]; then				\
+		${ECHO} "*** This package requires user intervention to download the distfiles"; \
+		${ECHO} "*** Please fetch the distfiles manually and place them in"; \
+		${ECHO} "*** ${DISTDIR}";				\
+		[ ! -z "${MASTER_SITES}" ] &&				\
+			${ECHO} "*** The distfiles are available from ${MASTER_SITES}";	\
+		[ ! -z "${HOMEPAGE}" ] && 				\
+			${ECHO} "*** See ${HOMEPAGE} for more details";	\
+		${ECHO};						\
+		${FALSE};						\
+	fi
+.      endfor
+.    else
+.      for fetchfile in ${_ALLFILES}
+.        if defined(_FETCH_MESSAGE) 
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	file="${fetchfile}";						\
 	if [ ! -f ${DISTDIR}/$$file ]; then				\
 		${_FETCH_MESSAGE};					\
 	fi
-.      else
+.        else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${_DISTDIR};							\
 	file="${fetchfile}";						\
@@ -1358,8 +1364,9 @@ do-fetch:
 	sites="${ORDERED_SITES}";					\
 	${_CHECK_DIST_PATH};						\
 	${_FETCH_FILE};
-.      endif # defined(_FETCH_MESSAGE)
-.    endfor
+.        endif # defined(_FETCH_MESSAGE)
+.      endfor
+.    endif # INTERACTIVE_STAGE == fetch
 .  endif # !empty(_ALLFILES)
 .endif
 
@@ -2479,11 +2486,32 @@ ${EXTRACT_COOKIE}:
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
 ${CONFIGURE_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
+	@${ECHO} "*** The configuration stage of this package requires user interaction"
+	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} configure\""
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
+.endif
+
 ${BUILD_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
+	@${ECHO} "*** The build stage of this package requires user interaction"
+	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
+.endif
+
 ${INSTALL_COOKIE}:
+.if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
+	@${ECHO} "*** The installation stage of this package requires user interaction"
+	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
+	@${FALSE}
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install
+.endif
+
 ${PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
 
