@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2002/10/26 17:05:30 frueauf Exp $
 
---- io.c.orig	Tue Jul 17 12:39:11 2001
-+++ io.c
+--- io.c.orig	Tue Jul 17 21:39:11 2001
++++ io.c	Sat Oct 26 18:44:59 2002
 @@ -16,6 +16,14 @@
  #include <sys/wait.h>
  #include <signal.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  #if defined(linux) || defined(__FreeBSD__)
  # include <sys/soundcard.h>
  # include <sys/ioctl.h>
-@@ -996,22 +1004,22 @@ GList *get_dsp_devices() {
+@@ -996,22 +1004,22 @@
  GList *dsp;
  GList *loop;
  struct stat buf;
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  	/* check if the user has any special audio-hardware running,
  	   which set the AUDIODEV-environment-variable */
  	audiodev = getenv("AUDIODEV");
-@@ -1066,15 +1074,15 @@ gchar *audiodev;
+@@ -1066,15 +1074,15 @@
  gchar *gen_mix_from_dspdev(gchar *dsp, gchar *ret) {
  gchar tmp[MAXLINE];
  struct stat buf;
@@ -64,7 +64,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  		strcpy(tmp,dsp+8);
  		g_snprintf(tmp2,MAXLINE,"/dev/mixer%s",tmp);
  
-@@ -1084,7 +1092,7 @@ gchar tmp2[MAXLINE];
+@@ -1084,7 +1092,7 @@
  		}	
  	}	
  #endif
@@ -73,7 +73,16 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  
  	g_snprintf(tmp,MAXLINE,"%s%s",dsp,"ctl");
  
-@@ -2362,10 +2370,10 @@ gint count;
+@@ -1991,7 +1999,7 @@
+ 		}
+ 
+ 		/* startup child */
+-		if (execl("/bin/sh", "sh", "-c", cmd ,NULL) < 0) {
++		if (execl("/bin/sh", "sh", "-c", cmd ,(void *)NULL) < 0) {
+ 			g_error("execl error\n");
+ 		}
+  
+@@ -2362,10 +2370,10 @@
  
  gint query_mixer() {
  gint mix;
@@ -86,7 +95,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  audio_info_t ainfo;
  #endif
  #ifdef hpux
-@@ -2380,7 +2388,7 @@ struct audio_gains again;
+@@ -2380,7 +2388,7 @@
  		return -1;
  	}
  
@@ -95,7 +104,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2400,7 +2408,7 @@ struct audio_gains again;
+@@ -2400,7 +2408,7 @@
  	return ((val & 0x7f) + ((val >> 8) & 0x7f))/2;
  
  #endif
@@ -104,7 +113,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDONLY);
-@@ -2450,7 +2458,7 @@ struct audio_gains again;
+@@ -2450,7 +2458,7 @@
  
  gint set_mixer(gint val) {
  gint mix;
@@ -113,7 +122,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  audio_info_t ainfo;
  #endif
  #ifdef hpux
-@@ -2464,7 +2472,7 @@ struct audio_gains again;
+@@ -2464,7 +2472,7 @@
  		return -1;
  	}
  
@@ -122,7 +131,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2482,7 +2490,7 @@ struct audio_gains again;
+@@ -2482,7 +2490,7 @@
  	close(mix);
  
  #endif 
@@ -131,7 +140,7 @@ $NetBSD: patch-ac,v 1.4 2002/09/26 12:29:56 jlam Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_WRONLY);
-@@ -3275,6 +3283,9 @@ gint ret,found;
+@@ -3275,6 +3283,9 @@
  		/* got the message that no medium is present?
  		   in this case, ignore return code */ 
  		if (strstr(line,"medium not present")) {
