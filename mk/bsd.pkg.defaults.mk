@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.4 2001/09/26 18:48:53 tron Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.5 2001/10/01 04:16:43 tv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -300,11 +300,11 @@ PATCH_FUZZ_FACTOR?= -F0
 # Possible: any shell commands
 # Default: none
 
-SU_CMD?=${SU} - root -c
+#SU_CMD=
 # Command to perform before "make install", if the user does not have
 # an effective uid of 0.  A possible substitute is "sudo -u root"
 # Possible: su, sudo, or priv, with appropriate arguments
-# Default: ${SU} - root -c
+# Default: ${SU} root -c
 
 FATAL_OBJECT_FMT_SKEW?=yes
 # If there is a pre-requisite package, which has a different object format
