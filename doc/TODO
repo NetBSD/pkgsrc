@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.728 2003/07/17 09:02:32 adam Exp $
+$NetBSD: TODO,v 1.729 2003/07/18 10:51:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -154,7 +154,6 @@ Suggested package updates
 	o lavaps-2.3
 	o lcms-1.0.9
 	o leafnode-1.9.42
-	o lesstif-0.93.44
 	o libgda-0.90.0
 	o libgnomedb-0.90.0
 	o licq-1.2.7
