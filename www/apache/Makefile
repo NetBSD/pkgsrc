@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/05/11 20:26:23 tron Exp $
+# $NetBSD: Makefile,v 1.35 1999/06/05 20:32:17 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -90,7 +90,9 @@ post-install:
 	  ${MKDIR} ${PREFIX}/lib/httpd
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .for FILE in man/man8/suexec.8 sbin/suexec
-	@${TEST} -e ${PREFIX}/${FILE} && ${ECHO} ${FILE} >>${PLIST_SRC}
+	@if [ -e ${PREFIX}/${FILE} ]; then \
+	  ${ECHO} ${FILE} >>${PLIST_SRC}; \
+	fi
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
