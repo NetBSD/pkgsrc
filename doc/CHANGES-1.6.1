@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.14 2003/04/16 15:10:23 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.15 2003/04/16 15:23:52 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -417,3 +417,25 @@ net/samba/distinfo				1.28
 	of Samba up to and including Samba 2.2.8 are vulnerable. An active
 	exploit of the bug has been reported in the wild.
 	[cjep, ticket #1251]
+
+chat/ircII/Makefile				1.21-1.22
+chat/ircII/PLIST				1.12
+chat/ircII/distinfo				1.17-1.18
+
+	update to ircii 20030314.  changes since ircII 20021103:
+
+	  o  server's added by /server are no longer removed if they fail to
+	     connect.
+	  o  SEVERAL REMOTE HOLES FIXED in ctcp, status & other code
+	  o  fix ICB /msg to names starting with a /.  you can now /msg
+	     \/oink to send a message to "/oink".  if you previously were
+	     able to /msg \oink you now have to /msg \\oink.
+	  o  arithmetic "|" now works properly
+	  o  fix ICB /msg with a user the same name as the channel
+	  o  fix ICB group's and user's with comma's in them
+	  o  /notify and /timer always go to level crap now
+	  o  fix nickname response lossage
+	  o  fix $connect() hich was broken recently
+	  o  fix "irc -h" which was broken recently
+	  o  fix "dcc close raw" which was broken recently
+	[aymeric, ticket #1254]
