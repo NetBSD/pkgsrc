@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/04/25 13:23:36 frueauf Exp $
-bin/lintpkgsrc
-bin/portlint
-bin/plist-clash
-man/man1/portlint.1
