@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/05 02:36:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/11/16 18:25:24 wiz Exp $
+bin/wmftoeps
 bin/wmftofig
 bin/wmftopng
 bin/xwmf
@@ -17,6 +18,8 @@ include/libwmf/myxpm.h
 include/libwmf/wmfapi.h
 lib/libXwmf.a
 lib/libdib.a
+lib/libeps.a
+lib/libepswmf.a
 lib/libgdwmf.a
 lib/libwmf.a
 lib/libxfig.a
@@ -82,6 +85,7 @@ share/doc/html/libwmf/SetViewportExt.html
 share/doc/html/libwmf/SetViewportOrg.html
 share/doc/html/libwmf/SetWindowExt.html
 share/doc/html/libwmf/SetWindowOrg.html
+share/doc/html/libwmf/StretchDib.html
 share/doc/html/libwmf/TextOut.html
 share/doc/html/libwmf/dibs.html
 share/doc/html/libwmf/esc.html
