@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.8 2005/02/13 04:33:24 reed Exp $
+# $NetBSD: AIX.mk,v 1.9 2005/02/16 08:03:44 grant Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -10,7 +10,7 @@ CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
-CPP?=       ${LOCALBASE}/bin/cpp
+CPP?=		${LOCALBASE}/bin/cpp
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
@@ -19,7 +19,7 @@ ECHO_N?=	${ECHO} -n
 .if exists(${LOCALBASE}/bin/egrep)
 EGREP?=		${LOCALBASE}/bin/egrep
 .else
-EGREP?=     /usr/bin/grep -E
+EGREP?=		/usr/bin/grep -E
 .endif
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
@@ -27,7 +27,7 @@ FETCH_CMD?= ${LOCALBASE}/bin/ftp
 .if exists(${LOCALBASE}/bin/fgrep)
 FGREP?=		${LOCALBASE}/bin/fgrep
 .else
-FGREP?=     /usr/bin/grep -F
+FGREP?=		/usr/bin/grep -F
 .endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
@@ -50,7 +50,7 @@ HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 #.if ${INSTALL} == "install"
-INSTALL=   ${LOCALBASE}/bin/install-sh
+INSTALL=	${LOCALBASE}/bin/install-sh
 #.endif
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
@@ -63,7 +63,7 @@ MV?=		/bin/mv
 NICE?=		/usr/bin/nice
 PATCH?=		${LOCALBASE}/bin/gpatch
 .if exists(${LOCALBASE}/bin/pax)
-PAX?=       ${LOCALBASE}/bin/pax
+PAX?=		${LOCALBASE}/bin/pax
 .else
 PAX?=		/bin/pax
 .endif
@@ -114,7 +114,7 @@ NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
-ROOT_GROUP?=	system
+ROOT_GROUP?=		system
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
