@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.897 2003/09/24 07:56:43 xtraeme Exp $
+$NetBSD: TODO,v 1.898 2003/09/24 08:16:02 grant Exp $
 
 Suggested new packages
 ======================
@@ -59,6 +59,24 @@ Suggested new packages
 	xmltv
 	TV viewing manager
 	http://xmltv.sourceforge.net/
+
+	MythTV
+	Digital video recorder
+	http://www.mythtv.org/
+
+	Asterisk [grant]
+	PBX-in-a-box for Linux
+	http://www.asterisk.org/
+
+	sqlrelay [grant]
+	SQL connection pooling and sharing library, supports various
+	different backends and provides APIs for many popular languages
+	http://sqlrelay.sourceforge.net/
+
+	Unreal Tournament server [grant]
+	Server for Unreal Tournament first person shooter
+	http://files.sobservers.com/UnrealTournament/UTServerOnly/
+
 
 Suggested package updates
 =========================
