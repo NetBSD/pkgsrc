@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/01 12:31:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/01 12:58:33 agc Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
@@ -13,7 +13,6 @@ NO_CHECKSUM=    yes
 NO_PATCH=       yes
 NO_CONFIGURE=   yes
 NO_BUILD=	yes
-NO_MTREE=	yes
 
 do-install:
 	${SED} -e 's|\$${PKG_INFO}|${PKG_INFO}|'			\
