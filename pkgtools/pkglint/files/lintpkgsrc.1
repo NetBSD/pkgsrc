@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.4 1999/08/01 18:34:41 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.5 1999/12/18 14:53:33 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -28,6 +28,8 @@ Set pkgsrcdir - otherwise
 .Em PKGSRCDIR .
 .It Fl h
 Basic help and usage.
+.It Fl D Ar path
+Parse Makefiles and output contents (Useful for debugging).
 .It Fl d
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current
