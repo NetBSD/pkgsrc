@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 1999/04/13 15:31:05 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/01 17:05:14 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
 DISTNAME=	sp3f4.kit
-PKGNAME=	spice-3f5
+PKGNAME=	spice-3f5.1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
@@ -11,13 +11,15 @@ EXTRACT_SUFX=   .tar.Z
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://infopad.eecs.berkeley.edu/~icdesign/SPICE/
 
+DEPENDS+=	readline-4.0:../../devel/readline
+
 # documentation in ftp://ic.eecs.berkeley.edu/pub/Spice3/um.3f3.ps
 
-#		These are included as patch-ab
+#		These are included as patch-ae
 #PATCH_SITES=	ftp://ilpsoft.eecs.berkeley.edu/pub/SPICE3F5/
 #PATCHFILES=	grid.patch newcoms.patch spsmp.patch
 
-USE_X11BASE=	yes
+USE_X11=	yes
 NO_WRKSUBDIR=	yes
 
 do-configure:
@@ -49,12 +51,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${PREFIX}/man/man3/mfb.3
 
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/spice3
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
 
 .include "../../mk/bsd.pkg.mk"
-
-x:
-.if exists(${PACKAGES})
-	ls -lad ${PACKAGES}
-.endif
