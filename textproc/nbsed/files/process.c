@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.4 2003/10/16 12:04:41 grant Exp $	*/
+/*	$NetBSD: process.c,v 1.5 2004/06/13 13:11:41 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.4 2003/10/16 12:04:41 grant Exp $");
+__RCSID("$NetBSD: process.c,v 1.5 2004/06/13 13:11:41 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -593,7 +593,7 @@ regsub(SPACE *sp, char *string, char *src)
 	char c, *dst;
 
 #define	NEEDSP(reqlen)							\
-	if (sp->len >= sp->blen - (reqlen) - 1) {			\
+	if (sp->len + (reqlen) + 1 >= sp->blen) {			\
 		sp->blen += (reqlen) + 1024;				\
 		sp->space = sp->back = xrealloc(sp->back, sp->blen);	\
 		dst = sp->space + sp->len;				\
