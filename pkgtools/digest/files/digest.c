@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.3 2001/07/09 21:42:30 hubertf Exp $ */
+/*	$NetBSD: digest.c,v 1.4 2001/08/07 22:14:53 wiz Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.3 2001/07/09 21:42:30 hubertf Exp $");
+__RCSID("$NetBSD: digest.c,v 1.4 2001/08/07 22:14:53 wiz Exp $");
 #endif
 
 #include <sys/types.h>
@@ -242,19 +242,19 @@ main(int argc, char **argv)
 		return EXIT_FAILURE;
 	}
 	if ((alg = find_algorithm(argv[optind])) == NULL) {
-		(void) fprintf(stderr, "No such algorithm `%s'", argv[optind]);
+		(void) fprintf(stderr, "No such algorithm `%s'\n", argv[optind]);
 		exit(EXIT_FAILURE);
 	}
 	rval = EXIT_SUCCESS;
 	if (argc == optind + 1) {
 		if (!(*alg->func)(NULL)) {
-			(void) fprintf(stderr, "stdin");
+			(void) fprintf(stderr, "stdin\n");
 			rval = EXIT_FAILURE;
 		}
 	} else {
 		for (i = optind + 1 ; i < argc ; i++) {
 			if (!(*alg->func)(argv[i])) {
-				(void) fprintf(stderr, "%s", argv[i]);
+				(void) fprintf(stderr, "%s\n", argv[i]);
 				rval = EXIT_FAILURE;
 			}
 		}
