@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4900 2004/02/18 12:03:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.4901 2004/02/18 13:41:53 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fltk to 1.1.4 [ben 2004-02-18]
 	Updated xlog to 0.9.1 [wulf 2004-02-18]
 	Updated gnome-libs to 1.4.2nb2 [jmmv 2004-02-18]
+	Updated bozohttpd to 20040218 [mrg 2004-02-18]
