@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.53 2005/02/06 23:10:09 kristerw Exp $
 #
 
-DISTNAME=		vice-1.15
-PKGREVISION=		2
+DISTNAME=		vice-1.16
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
