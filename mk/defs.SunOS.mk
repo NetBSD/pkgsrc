@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.73 2003/12/16 22:54:13 heinz Exp $
+# $NetBSD: defs.SunOS.mk,v 1.74 2003/12/16 23:07:42 heinz Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -47,6 +47,7 @@ LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 LS?=		/usr/bin/ls
 M4?=		/usr/ccs/bin/m4
+MAIL?=		/usr/bin/mailx
 MKDIR?=		/usr/bin/mkdir -p
 .if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
