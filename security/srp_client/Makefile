@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/05 06:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/30 16:30:24 danw Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -16,7 +16,7 @@ MASTER_SITES=		ftp://paris.arcot.com/pub/srp/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://srp.stanford.edu/srp/
 
-DEPENDS+=		gmp-2.0.2:../../devel/gmp
+DEPENDS+=		gmp>=2.0.2:../../devel/gmp
 
 RESTRICTED=             "Crypto; export-controlled"
 MIRROR_DISTFILE=        no
