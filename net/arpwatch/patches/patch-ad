@@ -1,30 +1,12 @@
-$NetBSD: patch-ad,v 1.4 1999/04/07 13:01:18 agc Exp $
+$NetBSD: patch-ad,v 1.5 2001/08/24 11:37:08 abs Exp $
 
-Make sure we find libpcap in the correct place on Solaris
-
---- configure	1999/04/07 11:56:33	1.1
-+++ configure	1999/04/07 12:01:01
-@@ -2183,7 +2183,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lpcap  $LIBS"
-+LIBS="-L$LOCALBASE/lib -lpcap  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 2189 "configure"
- #include "confdefs.h"
-@@ -2207,12 +2207,12 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  libpcap="-lpcap"
-+  libpcap="-L$LOCALBASE/lib -lpcap"
- else
-   echo "$ac_t""no" 1>&6
- fi
+--- arpwatch.h.orig	Fri Aug 24 12:26:38 2001
++++ arpwatch.h
+@@ -2,5 +2,7 @@
  
--	    if test $libpcap = FAIL ; then
-+	    if test "X$libpcap" = "XFAIL" ; then
- 		    { echo "configure: error: see the INSTALL doc for more info" 1>&2; exit 1; }
- 	    fi
-     else
+ #define ARPFILE "arp.dat"
++#ifndef ETHERCODES
+ #define ETHERCODES "ethercodes.dat"
++#endif
+ #define CHECKPOINT (15*60)		/* Checkpoint time in seconds */
+ 

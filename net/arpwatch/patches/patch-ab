@@ -1,37 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1998/11/04 17:25:12 mycroft Exp $
+$NetBSD: patch-ab,v 1.5 2001/08/24 11:37:08 abs Exp $
 
---- Makefile.in.orig	Wed Jul 29 01:16:45 1998
-+++ Makefile.in	Wed Nov  4 12:12:31 1998
-@@ -30,8 +30,10 @@
- BINDEST = @sbindir@
- # Pathname of directory to install the man page
- MANDEST = @mandir@
-+# Pathname of directory to install ethernet vendor codes
-+ETCDEST = $(prefix)/etc
- # Pathname of directory to install database file
--ARPDIR = $(prefix)/arpwatch
-+ARPDIR = /var/db/arpwatch
- 
- # VPATH
- srcdir = @srcdir@
-@@ -44,7 +46,8 @@
- CC = @CC@
- CCOPT = @V_CCOPT@
- INCLS = -I. @V_INCLS@
--DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\"
-+DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\" \
-+       -DETHERCODES=\"$(ETCDEST)/ethercodes.dat\"
- 
- # Standard CFLAGS
- CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
-@@ -109,8 +112,8 @@
- 	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
- 
- install: force
--	$(INSTALL) -m 555 -o bin -g bin arpwatch $(DESTDIR)$(BINDEST)
--	$(INSTALL) -m 555 -o bin -g bin arpsnmp $(DESTDIR)$(BINDEST)
-+	$(INSTALL) arpwatch $(DESTDIR)$(BINDEST)
-+	$(INSTALL) arpsnmp $(DESTDIR)$(BINDEST)
- 
- install-man: force
- 	$(INSTALL) -m 444 -o bin -g bin $(srcdir)/arpwatch.8 \
+--- arpsnmp.8.orig	Sun Sep 17 21:34:48 2000
++++ arpsnmp.8
+@@ -69,7 +69,7 @@
+ .na
+ .nh
+ .nf
+-/usr/operator/arpwatch - default directory
++/var/db/arpwatch - default directory
+ arp.dat - ethernet/ip address database
+ ethercodes.dat - vendor ethernet block list
+ .ad

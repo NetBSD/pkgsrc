@@ -1,53 +1,22 @@
-$NetBSD: patch-ae,v 1.1 2000/06/09 09:06:56 bouyer Exp $
+$NetBSD: patch-ae,v 1.2 2001/08/24 11:37:08 abs Exp $
 
---- arpwatch.c.orig	Fri Jun  9 09:51:11 2000
-+++ arpwatch.c	Fri Jun  9 09:54:14 2000
-@@ -119,6 +119,7 @@
- extern int optind;
- extern int opterr;
- extern char *optarg;
-+int aflag = 0;
- 
- int
- main(int argc, char **argv)
-@@ -147,9 +148,12 @@
- 	interface = NULL;
- 	rfilename = NULL;
- 	pd = NULL;
--	while ((op = getopt(argc, argv, "df:i:r:")) != EOF)
-+	while ((op = getopt(argc, argv, "adf:i:r:")) != EOF)
- 		switch (op) {
- 
-+		case 'a':
-+			aflag++;
-+			break;
- 		case 'd':
- 			++debug;
- #ifndef DEBUG
-@@ -340,7 +344,7 @@
- 	BCOPY(SPA(ea), &sia, 4);
- 
- 	/* Watch for bogons */
--	if ((sia & netmask) != net) {
-+	if (aflag == 0 && (sia & netmask) != net) {
- 		dosyslog(LOG_INFO, "bogon", sia, sea, sha);
- 		return;
- 	}
-@@ -489,7 +493,7 @@
- 	BCOPY(SPA(ea), &sia, 4);
- 
- 	/* Watch for bogons */
--	if ((sia & netmask) != net) {
-+	if (aflag == 0 && (sia & netmask) != net) {
- 		dosyslog(LOG_INFO, "bogon", sia, sea, sha);
- 		return;
- 	}
-@@ -623,6 +627,7 @@
- 
- 	(void)fprintf(stderr, "Version %s\n", version);
- 	(void)fprintf(stderr,
--	    "usage: %s [-d] [-f datafile] [-i interface] [-r file]\n", prog);
-+	    "usage: %s [-a] [-d] [-f datafile] [-i interface] [-r file]\n",
-+	    prog);
- 	exit(1);
- }
+--- configure.orig	Wed May 16 19:26:11 2001
++++ configure
+@@ -2183,7 +2183,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpcap  $LIBS"
++LIBS="-L$LOCALBASE/lib -lpcap  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2189 "configure"
+ #include "confdefs.h"
+@@ -2211,7 +2211,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lbl_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  libpcap="-lpcap"
++  libpcap="-L$LOCALBASE/lib -lpcap"
+ else
+   echo "$ac_t""no" 1>&6
+ fi
