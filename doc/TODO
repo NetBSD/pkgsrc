@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3005 2005/02/07 15:23:14 wiz Exp $
+$NetBSD: TODO,v 1.3006 2005/02/07 15:57:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -303,12 +303,13 @@ Suggested package updates
 	o arnold-20040104
 	o arpwatch-2.1a13
 	o asapm-2.13
+	o aspell-danish-1.4.47
 	o aspell-faroese-0.2.20
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o at-spi-1.6.2
 	o auctex-11.54
-	o autogen-5.6.5
+	o autogen-5.6.6
 	o avidemux-2.0.36
 	o avl-2.0.1
 	o avr-libc-1.2.0
@@ -356,6 +357,7 @@ Suggested package updates
 	o cint-5.15
 	o cjk-lyx-1.3.3
 	o clamav-0.81 [pkg/29139]
+	o clamav-0.82
 	o clanlib-0.7.8
 	o classpath-0.13
 	o classpath-gui-0.13
@@ -416,7 +418,7 @@ Suggested package updates
 	o dpkg-1.10.25
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.52.1
-	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
+	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.35
@@ -507,6 +509,7 @@ Suggested package updates
 	o gnome-print-0.37
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
+	o gnucash-1.8.11
 	o gnucash-docs-1.8.5
 	o gnutls-1.2.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -629,6 +632,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
 	o libtecla-1.6.1
+	o libtool-1.5.12
 	o licq-core-1.3.0
 	o liferea-0.9.0b
 	o links-2.1pre16
@@ -662,6 +666,7 @@ Suggested package updates
 	o minicom-2.1
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
+	o mkvtoolnix-1.0.2
 	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
@@ -677,6 +682,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-2.75
 	o mrproject-0.9.1
 	o mserv-devel-0.41
+	o msmtp-1.3.6
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.5
@@ -758,7 +764,6 @@ Suggested package updates
 	o p5-Font-AFM-1.19
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
-	o p5-HTML-Parser-3.44
 	o p5-HTMLObject-2.24
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
@@ -833,7 +838,6 @@ Suggested package updates
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-Piece-2.00.01
 	o p5-Tree-Simple-1.14
-	o p5-URI-1.35
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.08
 	o p5-Want-0.08
@@ -1037,6 +1041,7 @@ Suggested package updates
 	o strace-4.5.8
 	o streamtuner-0.99.99
 	o subtitleripper-0.3.4
+	o sudo-1.6.8pl7
 	o swfdec-0.3.2
 	o swi-prolog-5.5.2
 	o swig-build-1.3.24 [newer versions break subversion]
@@ -1057,6 +1062,7 @@ Suggested package updates
 	o tct-1.15
 	o tdir-1.67
 	o tds-1.6.2
+	o teTeX-3.0
 	o teapop-0.3.8
 	o ted-2.17
 	o tela-2.01
@@ -1159,12 +1165,13 @@ Suggested package updates
 	o xmmsctrl-1.8
 	o xmon-1.5.6
 	o xnap-2.5r3
-	o xpad-2.1
+	o xpad-2.2
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrn-9.02
 	o xscreensaver-4.19
 	o xskat-4.0
+	o xterm-200
 	o xtide-2.8.1
 	o xtraceroute-0.9.1
 	o xtux-20030306
