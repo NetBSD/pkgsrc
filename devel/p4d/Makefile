@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2002/09/01 02:25:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 02:26:08 schmonz Exp $
 #
 
 DISTNAME=	p4d
