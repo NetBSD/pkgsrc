@@ -1,28 +1,34 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 10:35:45 jmmv Exp $
 #
 
-DISTNAME=		monotone-0.14
-PKGREVISION=	1
-CATEGORIES=		devel
-MASTER_SITES=		http://www.venge.net/monotone/
+DISTNAME=	monotone-0.15
+CATEGORIES=	devel
+MASTER_SITES=	http://www.venge.net/monotone/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.venge.net/monotone/
-COMMENT=		Distributed revision control system
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.venge.net/monotone/
+COMMENT=	Free distributed version control system
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
+INFO_FILES=		monotone.info
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
+USE_MAKEINFO=		yes
+
 CONFIGURE_ARGS+=	--with-bundled-lua=no
 CONFIGURE_ARGS+=	--with-bundled-sqlite=no
+CONFIGURE_ENV+=		BOOST_TOOLSET=${BOOST_TOOLSET}
 
-# XXX need rules for other compilers
-BUILD_ENV+=	BLIBSF="-gcc"
+CPPFLAGS+=		-D__unix__ -D__unix
 
-# XXX This pkg doesn't need threads. Just the "configure"
-# script is too stupid (it adds -pthread to CFLAGS).
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite/buildlink3.mk"
+.include "../../devel/boost/buildlink3.mk"
+.include "../../devel/boost/toolset.mk"
 .include "../../devel/boost-thread/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../databases/sqlite/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
