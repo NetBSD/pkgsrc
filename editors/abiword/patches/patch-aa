@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2004/11/22 13:31:46 adam Exp $
+$NetBSD: patch-aa,v 1.7 2005/01/11 11:09:27 adam Exp $
 
---- configure.orig	2004-10-24 04:15:56.000000000 +0000
+--- configure.orig	2004-12-13 10:28:57.000000000 +0000
 +++ configure
-@@ -3852,7 +3852,7 @@ case "$OS_NAME" in
+@@ -4114,7 +4114,7 @@ case "$OS_NAME" in
  		WARNING_CFLAGS=""
  		;;
- 	*BSD)
+ 	*BSD|DragonFly)
 -		WARNING_CFLAGS="-Wall -pedantic -ansi -D_BSD_SOURCE -pipe"
 +		WARNING_CFLAGS="-Wall -D_BSD_SOURCE -pipe"
  		;;

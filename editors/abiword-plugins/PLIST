@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/22 13:32:01 adam Exp $
-lib/AbiWord-2.0/plugins/libAbiApplix.la
-lib/AbiWord-2.0/plugins/libAbiBMP.la
-lib/AbiWord-2.0/plugins/libAbiBZ2.la
-lib/AbiWord-2.0/plugins/libAbiClarisWorks.la
-lib/AbiWord-2.0/plugins/libAbiCommand.la
-lib/AbiWord-2.0/plugins/libAbiDocBook.la
-lib/AbiWord-2.0/plugins/libAbiEML.la
-lib/AbiWord-2.0/plugins/libAbiGdkPixbuf.la
-lib/AbiWord-2.0/plugins/libAbiJPEG.la
-lib/AbiWord-2.0/plugins/libAbiKWord.la
-lib/AbiWord-2.0/plugins/libAbiNroff.la
-lib/AbiWord-2.0/plugins/libAbiLaTeX.la
-lib/AbiWord-2.0/plugins/libAbiMSWrite.la
-lib/AbiWord-2.0/plugins/libAbiWML.la
-lib/AbiWord-2.0/plugins/libAbiXHTML.la
-lib/AbiWord-2.0/plugins/libAbiXSLFO.la
-@dirrm lib/AbiWord-2.0/plugins
-@dirrm lib/AbiWord-2.0
+@comment $NetBSD: PLIST,v 1.3 2005/01/11 11:09:36 adam Exp $
+lib/AbiWord-2.2/plugins/libAbiApplix.la
+lib/AbiWord-2.2/plugins/libAbiBMP.la
+lib/AbiWord-2.2/plugins/libAbiBZ2.la
+lib/AbiWord-2.2/plugins/libAbiClarisWorks.la
+lib/AbiWord-2.2/plugins/libAbiCommand.la
+lib/AbiWord-2.2/plugins/libAbiDocBook.la
+lib/AbiWord-2.2/plugins/libAbiEML.la
+lib/AbiWord-2.2/plugins/libAbiGdkPixbuf.la
+lib/AbiWord-2.2/plugins/libAbiJPEG.la
+lib/AbiWord-2.2/plugins/libAbiKWord.la
+lib/AbiWord-2.2/plugins/libAbiNroff.la
+lib/AbiWord-2.2/plugins/libAbiLaTeX.la
+lib/AbiWord-2.2/plugins/libAbiMSWrite.la
+lib/AbiWord-2.2/plugins/libAbiWML.la
+lib/AbiWord-2.2/plugins/libAbiXHTML.la
+lib/AbiWord-2.2/plugins/libAbiXSLFO.la
+@dirrm lib/AbiWord-2.2/plugins
+@dirrm lib/AbiWord-2.2
