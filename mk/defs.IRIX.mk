@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.12 2002/12/16 09:18:57 salo Exp $
+# $NetBSD: defs.IRIX.mk,v 1.13 2002/12/18 06:18:14 schmonz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -97,6 +97,11 @@ USERADD?=		${FALSE}
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no		# GNU make is not standard
+.if exists(/usr/include/netinet6)
+_OPSYS_HAS_INET6=	yes		# IPv6 is standard
+.else
+_OPSYS_HAS_INET6=	no		# IPv6 is not standard
+.endif
 _OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available

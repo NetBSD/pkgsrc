@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.41 2002/12/16 09:18:57 salo Exp $
+# $NetBSD: defs.Linux.mk,v 1.42 2002/12/18 06:18:14 schmonz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -87,6 +87,11 @@ ZOULARISBASE?=		/usr/pkg
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
+.if exists(/usr/include/netinet6)
+_OPSYS_HAS_INET6=	yes	# IPv6 is standard
+.else
+_OPSYS_HAS_INET6=	no	# IPv6 is not standard
+.endif
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
