@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540 2004/11/17 22:55:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1541 2004/11/25 21:33:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -348,6 +348,14 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
 .    endif   # exists($PERL5)
 .  endif     # !defined(PERL5_*)
 .endif       # USE_PERL5 == run
+
+# _DLOPEN_REQUIRE_PTHREADS is defined by dlopen.buildlink3.mk.
+.if defined(_DLOPEN_REQUIRE_PTHREADS) && \
+    !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
+.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
+.    include "../../mk/pthread.buildlink3.mk"
+.  endif
+.endif
 
 .if defined(USE_FORTRAN)
 .  if !exists(/usr/bin/f77)
