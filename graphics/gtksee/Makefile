@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/11/29 11:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/27 22:50:45 wiz Exp $
 #
 
-DISTNAME=		gtksee-0.5.2
-PKGREVISION=		2
+DISTNAME=		gtksee-0.5.6
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://download.berlios.de/gtksee/
 
@@ -19,7 +18,7 @@ USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
 post-install:
-	${INSTALL_MAN} ${FILESDIR}/gtksee.1 ${PREFIX}/man/man1/gtksee.1
+	${INSTALL_MAN} ${WRKSRC}/man/gtksee.1 ${PREFIX}/man/man1/gtksee.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtksee
 	${INSTALL_DATA} ${WRKSRC}/README  ${PREFIX}/share/doc/gtksee
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/gtksee
