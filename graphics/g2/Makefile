@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/11/29 01:12:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/27 23:57:17 seb Exp $
 
 DISTNAME=		g2-0.40
 PKGREVISION=		1
@@ -13,19 +13,15 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-ALL_TARGET=		depend all
-
-USE_PERL5=		#defined
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/G2/.packlist
+PERL5_CONFIGURE=	NO
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/g2_perl
+BUILD_DIRS=		${WRKSRC} ${WRKSRC}/g2_perl
 
-post-configure:
-	cd ${WRKSRC}/g2_perl; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-post-build:
-	cd ${WRKSRC}/g2_perl && ${MAKE}
+post-configure: perl5-configure
 
 post-install:
-	cd ${WRKSRC}/g2_perl && ${MAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/g2
 	cd ${WRKSRC} && ${INSTALL_DATA} doc/g2_ref.txt COPYING README	\
 		${PREFIX}/share/doc/g2
@@ -33,4 +29,5 @@ post-install:
 	cd ${WRKSRC}/demo && ${INSTALL_DATA} demo_f.f g2_test.c penguin.c \
 		simple_PS.c simple_X11.c ${PREFIX}/share/examples/g2
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
