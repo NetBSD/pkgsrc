@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2209 2004/10/10 17:45:24 snj Exp $
+$NetBSD: TODO,v 1.2210 2004/10/12 00:13:37 heinz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ Suggested package updates
 	o snownews-1.5.4
 	o source-highlight-1.11
 	o sox-12.17.5
-	o spamassassin-3.0.0
 	o sqlite-3.0.7
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
