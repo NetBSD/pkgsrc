@@ -1,4 +1,4 @@
-/*	$NetBSD: gen_subs.c,v 1.2 2003/06/24 06:44:59 grant Exp $	*/
+/*	$NetBSD: gen_subs.c,v 1.3 2003/06/24 14:09:21 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -38,6 +38,7 @@
  */
 
 #include "nbcompat.h"
+#include "pwcache.h"
 
 #ifdef HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -47,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)gen_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: gen_subs.c,v 1.2 2003/06/24 06:44:59 grant Exp $");
+__RCSID("$NetBSD: gen_subs.c,v 1.3 2003/06/24 14:09:21 jschauma Exp $");
 #endif
 #endif /* not lint */
 
