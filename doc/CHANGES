@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6160 2004/06/06 08:30:00 agc Exp $
+$NetBSD: CHANGES,v 1.6161 2004/06/06 12:32:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2815,4 +2815,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added applerecords-0.4 [agc 2004-06-06]
 	Added libopendaap-0.2.1 [agc 2004-06-06]
 	Updated gnome-media to 2.6.2nb1 [jmmv 2004-06-06]
+	Added silc-toolkit-0.9.12 [salo 2004-06-06]
 	Updated audit-packages to 1.32 [agc 2004-06-06]
