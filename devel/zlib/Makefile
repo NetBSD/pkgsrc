@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 21:34:17 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/05 11:44:01 jlam Exp $
 
 DISTNAME=	zlib-1.1.4
 PKGREVISION=	1
@@ -12,19 +12,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gzip.org/zlib/
 COMMENT=	General purpose data compression library
 
-BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
+USE_LIBTOOL=		# defined
 HAS_CONFIGURE=		# defined
-NOT_FOR_PLATFORM=	NetBSD-1.[4-9]*-* # in base NetBSD system
-
-# To avoid circular dependences we must not use "USE_LIBTOOL" but
-# depend on the "libtool-base" package manually.
-#
-LIBTOOL=	${LOCALBASE}/bin/libtool
-PKGLIBTOOL=	${BUILDLINK_LIBTOOL}
-CONFIGURE_ENV+=	LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=	LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
+INSTALLATION_DIRS=	include lib
 
 post-extract:
 	${CP} ${FILESDIR}/lt.mk ${WRKSRC}
