@@ -1,20 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/04/22 16:50:02 christos Exp $
+$NetBSD: patch-af,v 1.2 2004/05/14 13:30:34 adam Exp $
 
---- configure.in.orig	Sat Sep  6 02:41:25 2003
-+++ configure.in	Thu Apr 22 11:26:53 2004
-@@ -1362,6 +1362,8 @@
-     AC_CHECK_FUNCS(AES_cfb128_encrypt)
- fi
- 
-+AC_CHECK_LIB(des, des_cbc_encrypt)
-+
- dnl Check for libraries that the agent needs
- dnl saving old libraries
- NONAGENTLIBS=$LIBS
-
---- configure.orig	Sat Sep  6 03:22:58 2003
-+++ configure	Thu Apr 22 11:26:56 2004
-@@ -8524,6 +8524,54 @@
+--- configure.orig	2004-03-20 07:13:55.000000000 +0000
++++ configure
+@@ -11205,6 +11205,53 @@ fi
  
  fi
  
@@ -27,7 +15,7 @@ $NetBSD: patch-af,v 1.1 2004/04/22 16:50:02 christos Exp $
 +  ac_save_LIBS="$LIBS"
 +LIBS="-ldes  $LIBS"
 +cat > conftest.$ac_ext <<EOF
-+#line 8537 "configure"
++#line 11217 "configure"
 +#include "confdefs.h"
 +/* Override any gcc2 internal prototype to avoid an error.  */
 +/* We use char because int might match the return type of a gcc2
@@ -65,7 +53,6 @@ $NetBSD: patch-af,v 1.1 2004/04/22 16:50:02 christos Exp $
 +  echo "$ac_t""no" 1>&6
 +fi
 +
-+
+ # Check for libraries that the agent needs
+ # saving old libraries
  NONAGENTLIBS=$LIBS
- 
- _cppflags="${CPPFLAGS}"
