@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2441 2004/11/25 10:04:59 adam Exp $
+$NetBSD: TODO,v 1.2442 2004/11/25 14:15:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -507,8 +507,6 @@ Suggested package updates
 	o gift-0.11.7
 	o gift-fasttrack-0.8.7
 	o gift-openft-0.2.1.4
-	o gimp-print-cups-4.2.7
-	o gimp-print-escputil-4.2.7
 	o gkrellm-volume-2.1.13
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
