@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/04/12 02:32:38 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/25 20:47:00 minskim Exp $
 
-DISTNAME=	db2latex-0.7
-PKGREVISION=	1
+DISTNAME=	db2latex-xsl-0.8pre1
+PKGNAME=	${DISTNAME:S/xsl-//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=db2latex/}
 
@@ -18,22 +18,22 @@ USE_LANGUAGE=	# empty
 
 DOCDIR=		${PREFIX}/share/doc/db2latex
 XSLDIR=		${PREFIX}/share/xsl/db2latex
-EGDIR=		${PREFIX}/share/examples/db2latex
 
-XML_CATALOGS=	${XSLDIR}/catalog
+XML_ENTRIES=	system "http://db2latex.sourceforge.net/xsl/docbook.xsl" \
+		${PREFIX}/share/xsl/db2latex/docbook.xsl
+
+.include "../../textproc/xmlcatmgr/catalogs.mk"
+
+post-extract:
+	cd ${WRKSRC} && ${FIND} . -name "*\**" -exec ${RM} {} \;
 
 do-install:
-	cd ${WRKSRC} && ${FIND} . -name "*.orig" -exec ${RM} {} \;
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc && ${PAX} -rwpm . ${DOCDIR}
 	cd ${WRKSRC} && ${PAX} -rwpm AUTHOR COPYING COPYRIGHT README \
 		TODO VERSION ${DOCDIR}
-	cd ${WRKSRC}/xsl && ${PAX} -rwpm slides ${DOCDIR}
-	cd ${WRKSRC}/xsl && ${PAX} -rwpm *.xsl *.dtd *.xml common ${XSLDIR}
-	cd ${WRKSRC}/xsl/sample && ${PAX} -rwpm . ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/catalog ${XSLDIR}/catalog
+	cd ${WRKSRC}/xsl && ${PAX} -rwpm . ${XSLDIR}
 
-.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
