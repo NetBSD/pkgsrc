@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/08/26 21:18:58 frueauf Exp $
+
+--- cutpaste.c.orig	Wed Aug 19 10:08:28 1998
++++ cutpaste.c	Wed Aug 19 10:09:33 1998
+@@ -31,4 +31,8 @@
+  */
+ 
++/* DAN added the following 2 lines for NetBSD-1.3 */
++#include <unistd.h>
++#include <stdlib.h>
++
+ #include <stdio.h>
+ #include <string.h>
