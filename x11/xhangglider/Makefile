@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 1999/12/06 01:34:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/12 12:27:01 dent Exp $
 #
 
 DISTNAME=	xhangglider-0.94.0
 CATEGORIES=	x11
-MASTER_SITES=	http://plaza.harmonix.ne.jp/~redstar/
+MASTER_SITES=	http://www.netfort.gr.jp/~take/linux/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://plaza.harmonix.ne.jp/~redstar/xhang-en.html
+HOMEPAGE=	http://www.netfort.gr.jp/~take/linux/xhang-en.html
 
 USE_IMAKE=	yes
 BUILD_ENV+=	PREFIX=${PREFIX}
