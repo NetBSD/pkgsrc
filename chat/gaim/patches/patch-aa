@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2004/01/11 20:54:08 jmmv Exp $
+$NetBSD: patch-aa,v 1.17 2004/01/27 01:24:52 recht Exp $
 
 --- src/protocols/oscar/ft.c.orig	2004-01-05 02:34:04.000000000 +0100
 +++ src/protocols/oscar/ft.c
