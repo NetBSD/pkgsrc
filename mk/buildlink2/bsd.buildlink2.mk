@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.79 2003/01/25 07:57:21 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.80 2003/04/11 18:13:09 jmc Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -729,7 +729,9 @@ ${BUILDLINK_${_wrappee_}}:						\
 			case $${dir} in					\
 			*${BUILDLINK_DIR}*)				\
 				;;					\
-			*)	if [ -x $${dir}/$${wrappee} ]; then	\
+			*)	if [ -f $${dir}/$${wrappee} ] ||	\
+				   [ -h $${dir}/$${wrappee} ] &&	\
+				   [ -x $${dir}/$${wrappee} ]; then	\
 					absdir=$${dir}/;		\
 					wrappee=$${absdir}$${wrappee};	\
 					break;				\
