@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.18 2001/06/28 22:37:02 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.19 2001/06/29 04:17:19 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -125,6 +125,14 @@ _BUILDLINK_USE: .USE
 		done;							\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
+
+# If a package uses only buildlink.mk files, then automatically set
+# USE_CONFIG_WRAPPER to use config script wrappers for packages that
+# have them.
+#
+.if defined(USE_BUILDLINK_ONLY)
+USE_CONFIG_WRAPPER=	# defined
+.endif
 
 BUILDLINK_CONFIG_WRAPPER_SED=						\
 		-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"		\
