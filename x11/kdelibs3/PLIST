@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/27 07:10:13 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/27 07:15:58 skrll Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -598,9 +598,9 @@ lib/kde3/plugins/styles/kthemestyle.so
 lib/kde3/plugins/styles/light.a
 lib/kde3/plugins/styles/light.la
 lib/kde3/plugins/styles/light.so
-lib/kded.a
-lib/kded.la
-lib/kded.so
+${KDED_WORKAROUND}lib/kded.a
+${KDED_WORKAROUND}lib/kded.la
+${KDED_WORKAROUND}lib/kded.so
 lib/kio_http_cache_cleaner.a
 lib/kio_http_cache_cleaner.la
 lib/kio_http_cache_cleaner.so
