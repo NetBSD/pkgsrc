@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/07/24 18:29:35 fredb Exp $
+$NetBSD: md5,v 1.2 1999/07/27 17:45:16 fredb Exp $
 
-MD5 (ntp-4.0.94a.tar.gz) = 97d386da34a6eb255ccb1565692ec61d
+MD5 (ntp-4.0.94b.tar.gz) = aabadf6a9cd65047c47a434c8f330572
