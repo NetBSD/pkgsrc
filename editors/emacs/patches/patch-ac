@@ -45,7 +45,7 @@
 +    {							\
 +      int slave;					\
 +      SIGMASKTYPE mask;					\
-+      mask = sigblockx (SIGCHLD);			\
++      mask = sigblock (sigmask (SIGCHLD));		\
 +      if (-1 == openpty (&fd, &slave, pty_name, 0, 0))	\
 +	fd = -1;					\
 +      else						\
