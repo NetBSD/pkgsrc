@@ -1,7 +1,19 @@
-$NetBSD: distinfo,v 1.66 2004/10/13 15:35:55 taca Exp $
+$NetBSD: distinfo,v 1.67 2004/11/28 16:33:58 taca Exp $
 
 SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2004101300/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-half_closed_POST.patch) = 7e9259e60535185c04f060077b7e6ad6ff6defdf
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-half_closed_POST.patch) = 805 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-LDAP_version_documentation.patch) = b7b585d021a7b990c360b4e2f5c41d133dd3f8b7
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-LDAP_version_documentation.patch) = 1170 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7_req_resp_header.patch) = e1b595a3a682492f49550c8955f2853be588c16c
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7_req_resp_header.patch) = 1696 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-helper_shutdown.patch) = d05018ee7e5dbf9359430280f570baf037817010
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-helper_shutdown.patch) = 11579 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-non_blocking_disk.patch) = 73ccc1c594bcbf359dcf2e44c36e4ea802cbab6e
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-non_blocking_disk.patch) = 431 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-blank_response.patch) = b5d323d54f1e901ab6218a6fc2dc3162a865e198
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-blank_response.patch) = 723 bytes
 SHA1 (patch-aa) = 8d760f58175cdb62af453fd1b07783859fa0bcf9
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
