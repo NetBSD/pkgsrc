@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9405 2005/03/03 04:55:36 epg Exp $
+$NetBSD: CHANGES,v 1.9406 2005/03/03 10:28:26 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1249,6 +1249,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-I18N-LangTags to 0.35 [wiz 2005-03-02]
 	Updated p5-Locale-Maketext to 1.09 [wiz 2005-03-02]
 	Updated p5-Locale-Maketext-Lexicon to 0.47 [wiz 2005-03-02]
+	Updated sr to 2.3.3nb1 to 0.47 [is 2005-03-02]
 	Added p5-ExtUtils-AutoInstall-0.61 [epg 2005-03-03]
 	Added p5-Class-Autouse-1.16 [epg 2005-03-03]
 	Updated p5-SVN-Simple to 0.27 [epg 2005-03-03]
