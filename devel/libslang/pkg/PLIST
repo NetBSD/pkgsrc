@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 1998/02/02 08:59:48 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/15 11:44:46 agc Exp $
 lib/libslang.a
 lib/libslang.so.0.9938
 @exec rm -f %D/libslang.so.99.3[348]
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 include/slcurses.h
 include/slang.h

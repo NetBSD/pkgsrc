@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/22 10:55:22 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/15 11:39:47 agc Exp $
 include/mysql/readline.h
 include/mysql/chardefs.h
 include/mysql/keymaps.h
@@ -76,8 +76,6 @@ man/man1/mysql.1
 info/mysql.info
 @exec %D/bin/install-info %D/info/mysql.info %D/info/dir
 @exec %D/bin/mysql_install_db
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 @dirrm include/mysql
 @dirrm lib/mysql
 @dirrm share/mysql/english

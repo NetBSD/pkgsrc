@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/04/15 10:38:25 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/15 11:22:53 agc Exp $
 #
 
 DISTNAME=       MesaLib-2.6
@@ -46,6 +46,9 @@ do-install:
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
-	${LDCONFIG} || ${TRUE}
+	${LN} -f ${PREFIX}/lib/libMesaGL.so.2.6 ${PREFIX}/lib/libGL.so.2.6
+	${LN} -f ${PREFIX}/lib/libMesaGLU.so.2.6 ${PREFIX}/lib/libGLU.so.2.6
+	${LN} -f ${PREFIX}/lib/libMesaGL.a ${PREFIX}/lib/libGL.a
+	${LN} -f ${PREFIX}/lib/libMesaGLU.a ${PREFIX}/lib/libGLU.a
 
 .include "../../mk/bsd.pkg.mk"
