@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/01 10:30:55 wiz Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
@@ -25,7 +25,6 @@ post-patch:
 	(cd ${WRKSRC}/src && \
 	${MV} Config.h Config.h.dist && \
 	${SED} 's+^\(#define[	 ]*XBEEBROOT[	 ]*\)[^	 ].*$$+\1"${PREFIX}/${XBEEBROOT}/"+' Config.h.dist > Config.h)
-testt:
 	${SED} -e 's+@XBEEBROOT@+${XBEEBROOT}+g' \
 		-e 's+@PREFIX@+${PREFIX}+g' \
 		${FILESDIR}/xbeeb.1 > ${MAN_PAGE}
