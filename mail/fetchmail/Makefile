@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2004/07/09 12:34:53 drochner Exp $
+# $NetBSD: Makefile,v 1.144 2004/07/22 17:04:28 drochner Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	2
@@ -19,6 +19,7 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
+USE_TBL=		yes
 
 BUILD_DEFS+=		USE_INET6
 LDFLAGS+=		${CFLAGS}
@@ -86,5 +87,4 @@ post-install:
 	done
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
